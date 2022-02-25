@@ -1,0 +1,10 @@
+- name: M365 Office LTI
+  href: index.md
+- name: LTI'Microsoft OneDrive Canvas ile kullanma
+  href: onedrive-lti.md
+- name: Canvas ile Microsoft Teams sınıflarını kullanma
+  href: teams-classes-with-canvas.md
+- name: Canvas ile Microsoft Teams toplantılarını kullanma
+  href: teams-meetings-with-canvas.md
+- name: Blackboard Microsoft Teams Ultra Öğrenme ile diğer sınıflara da yer yok
+  href: teams-classes-with-blackboard.md
