@@ -1,0 +1,68 @@
+### YamlMime:FAQ
+metadata:
+  title: Merkezi Dağıtım SSS
+  f1.keywords:
+  - NOCSH
+  ms.author: kwekua
+  author: kwekua
+  manager: scotv
+  audience: Admin
+  ms.topic: article
+  ms.service: o365-administration
+  ms.localizationpriority: medium
+  ms.collection:
+  - M365-subscription-management
+  - Adm_O365
+  - Adm_NonTOC
+  - Adm_TOC
+  ms.custom: AdminSurgePortfolio
+  search.appverid:
+  - BCS160
+  - MET150
+  - MOE150
+  description: Merkezi Dağıtım hakkında sık sorulan soruların yanıtlarını gözden Microsoft 365 yönetim merkezi.
+  ms.openlocfilehash: 72e57729d13a1d78c2589f942b09bc4779e21db7
+  ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/06/2021
+  ms.locfileid: "62973590"
+title: Merkezi Dağıtım SSS
+summary: Office 365 Merkezi Dağıtım, kuruluş içinde kullanıcılara ve gruplara Office eklentilerinin (Word, Excel, PowerPoint ve Outlook) dağıtımının önerilen yoludur. Ancak kuruluş, bu makalede ana hatlarıyla açıklanan Merkezi Dağıtım'ı kullanmak için tüm gereksinimleri karşılamaktadır.
+sections:
+- name: Yok sayıldı
+  questions:
+  - question: >
+      Kuruluşum Merkezi Dağıtım için ayarlanmış olup olduğunu nasıl bilebilirsiniz?
+    answer: "Eklentilerin merkezi dağıtımı, kullanıcıların Kurumlar için Microsoft 365 Uygulamaları kullanmalarını (ve kuruluş oturum açma kimlik bilgilerini kullanarak Office'te oturum açmalarını) ve posta kutularına sahip Exchange Online gerektirir. Abonelik dizininiz başka bir dizinde veya başka bir Azure Active Directory. \n \nMerkezi Dağıtım yalnızca çevrimiçi posta kutuları için kullanılabilir. Şirket içi posta kutularına veya posta kutularına Exchange desteklemez.\n\nAboneliğinizin uygun [olup olmadığını belirlemek için Merkezi](centralized-deployment-of-add-ins.md#centralized-deployment-compatibility-checker)  Dağıtım Uyumluluk Denetleyicisi'ni kullanabilirsiniz. \n  \n"
+  - question: >
+      Merkezi Dağıtım ile eklenti kullanıcı atamalarını nasıl hedef ayasınız?
+    answer: "Merkezi Dağıtım tek tek kullanıcılara, gruplara ve kiracıya herkesin atamalarını destekler. Merkezi Dağıtım, üst düzey gruplarda veya üst grubu olmayan gruplarda bulunan kullanıcılar için kullanılabilir, ancak iç içe gruplarda veya üst grupları olan gruplarda yer alan kullanıcılar için kullanılamaz. Merkezi Dağıtım, merkezi gruplar, dağıtım listeleri Azure Active Directory güvenlik grupları Office 365 grupların da bir bölümü olur. \n\nDaha kolay yönetim için bireysel kullanıcı ataması yerine grup atamalarını kullanmak daha iyidir.\n \nDiğer ayrıntılar için bkz. [Kullanıcı ve Grup atamaları](./centralized-deployment-of-add-ins.md?view=o365-worldwide#user-and-group-assignments).\n \n"
+  - question: "Eklentilerin tüm kullanıcılara göstermesi ne kadar zaman alır? \n"
+    answer: "Bir eklentinin tüm kullanıcılara göstermesi 24 saat kadar sürebilir. Eklenti güncelleştirmeleri, açma ve kapatma ya da eklenti kaldırma değişiklikleri de aynı miktarda zaman alır. \n"
+  - question: >
+      Yönetici olarak, kuruluşum için eklentilere kullanıcı erişimini nasıl yönetebilirim?
+    answer: >
+      Eklentilerin kullanıcılara, gruplara veya tüm kuruluşa kolay dağıtımını yapmak için yöneticilerin Merkezi Dağıtım kullanmalarını öneririz.
+
+
+      Kullanıcı erişimini yönetme hakkında daha fazla bilgi için bkz:
+       - [Office Mağazası'nın tüm istemcilerde Outlook.](./manage-addins-in-the-admin-center.md#prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook)
+       - [Kullanıcıların eklentilerini yükp yönetecek yöneticileri ve kullanıcıları Outlook](/Exchange/specify-who-can-install-and-manage-add-ins-2013-help)
+  - question: "Merkezi Dağıtım, yöneticilere eklentilerin dağıtım yöntemini seçme Outlook sağlayacak mı? \n"
+    answer: "Evet. Merkezi Dağıtım, yöneticilere eklenti dağıtımı sırasında eklentiler için Outlook iki dağıtım yönteminden birini seçme esnekliği sağlar:\n         \n**Uygun** Kullanıcılar, Yönetici tarafından yönetilen Outlook Giriş > Daha Fazla Eklenti **Edin'i > eklentiyi yükleyebilir**.\n \n**İsteğe bağlı** Eklenti, atanan kullanıcılara otomatik olarak dağıtılır, ancak kullanıcılar bunu kaldırmayı seçebilir.\n    \n"
+  - question: "Yöneticiler İş Hattı (LOB) eklentilerini güncelleştirer mi? \n"
+    answer: "Evet. Yöneticiler, yönetici dağıtılmış LOB eklentilerinin meta veri değişikliklerini desteklemek için yeni bir bildirim dosyası yükleyebilir. Eklenti, sonraki güncelleştirme güncelleştirmesinde Office başlatılır. Web uygulaması her an değişebilir.\n \nDaha fazla bilgi [için bkz. iş hattı eklenti.](./manage-addins-in-the-admin-center.md)  \n"
+  - question: "Yöneticiler eklentileri kapatıyor mu? \n"
+    answer: >
+      Evet. Yöneticiler, Microsoft yönetim merkezinden tüm kullanıcılar için dağıtacakları eklentileri açmak veya kapatmak için.
+
+
+      Daha fazla bilgi için Eklenti [durumları'ne bakın](./manage-addins-in-the-admin-center.md#add-in-states).
+  - question: >
+      Yöneticiler eklentileri silebilir veya kaldırabilir mi?
+    answer: "Evet. Yöneticiler, Tüm kullanıcılar için dağıtıldıları eklentileri Microsoft yönetim merkezinden silebilir.\n\nDaha fazla bilgi için bkz [. Eklentiyi silme](./manage-addins-in-the-admin-center.md#delete-an-add-in). \n  \n"
+  - question: "Yöneticiler Merkezi Dağıtım'ı kullanarak Office Store'dan ücretli eklentiler dağıtıyor mu? \n"
+    answer: "Hayır. Şu anda Merkezi Dağıtım'ı kullanarak Office Mağazası'nda ücretli eklentileri dağıtaamalısınız. \n \nÜcretli eklenti için ISV Geliştirici'ye bir bildirim dosyası veya URL talep etmek için bu eklentiye ulaşmanızı öneririz. Kiracı yöneticisi Bundan sonra Merkezi Dağıtım'ı kullanarak eklentiyi LOB eklentileri olarak dağıtabilirsiniz.\n   \n"
+  - question: "Kuruluşum için eklentileri yönetmek için hangi yönetici rolüne ihtiyacım var? \n"
+    answer: "Genel Yönetici, eklenti yönetim yaşam döngüsüne tam erişime sahip olarak önerilen bir roldür. Microsoft 365 İş aboneliğinizi satın alan kişi sizseniz, Genel yöneticisiniz.\n\nAboneliğiniz, kurum içinde diğer kullanıcılara atayabilirsiniz bir dizi yönetici rolüyle birlikte gelir. Her bir yönetici rolü, sık kullanılan iş işlevlerine yöneliktir ve kuruluş izinleri olan kişilerin çalışma sayfasında belirli görevleri gerçekleştirmelerine Microsoft 365 yönetim merkezi.  \n \nDaha fazla bilgi için bkz. [Yönetici rolleri atama](../add-users/assign-admin-roles.md?view=o365-worldwide)."

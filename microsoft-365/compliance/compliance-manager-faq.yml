@@ -1,0 +1,112 @@
+### YamlMime:FAQ
+metadata:
+  title: Microsoft Uyumluluk Yöneticisi SSS
+  f1.keywords:
+  - NOCSH
+  ms.author: v-jgriffee
+  author: jmgriffee
+  manager: laurawi
+  audience: Admin
+  ms.topic: article
+  ms.service: O365-seccomp
+  ms.localizationpriority: medium
+  ms.collection: M365-security-compliance
+  search.appverid:
+  - MOE150
+  - MET150
+  description: Kuruluşların risk değerlendirmelerini basitleştirmelerine ve otomatik hale getirlerine yardımcı olan Microsoft Uyumluluk Yöneticisi hakkında sık sorulan soruların yanıtlarını bulun.
+  ms.openlocfilehash: d1abfc3cb951197927b13cf1e15a3481a302cf68
+  ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/06/2021
+  ms.locfileid: "62973749"
+title: Uyumluluk Yöneticisi ile ilgili sık sorulan sorular
+summary: ''
+sections:
+- name: Yok sayıldı
+  questions:
+  - question: >
+      Uyumluluk Yöneticisi ve Uyumluluk Puanı aynı mı yoksa farklı mı?
+    answer: >
+      Artık tek bir çözüm var: Uyumluluk Yöneticisi. Bu bölüm aşağıda temel genel bakışla başlayarak geçiş sürecinde size yol sağlar. Ayrıca, doğrudan aşağıdaki bölümlerden bir bölüme atlamanız yararlı olabilir:
+
+
+      - [Kuruluşunda birincil olarak Microsoft Hizmet Güveni Portalı'nın içinde bulunan Uyumluluk Yöneticisi (klasik veya genel önizleme sürümleri) kullanılır.](#your-organization-regularly-used-compliance-manager-in-the-service-trust-portal)
+
+
+      - [Kuruluşun öncelikli olarak uyumluluk merkezinde bulunan Uyumluluk Puanı (genel önizleme) Microsoft 365 uyumluluk merkezi](#your-organization-used-compliance-score-public-preview-in-the-microsoft-365-compliance-center)
+
+
+      - [Organizasyonunız Uyumluluk Yöneticisi'nde yeni](#youre-new-to-compliance-manager
+
+      )
+
+      ### <a name="the-basics"></a>Temel bilgiler
+
+
+      Microsoft Uyumluluk Yöneticisi, Microsoft Hizmet Güveni Portalı'nın içinde bir uyumluluk yönetimi çözümü olarak başladı.  Uyumluluk çözümleri ilk kez ilk kez Microsoft 365 uyumluluk merkezi bu konum için daha kolay, daha kolay tasarıma sahip yeni bir deneyim geliştirdik. Uyumluluk Puanı genel önizlemesi, Kasım 2019 Microsoft 365 uyumluluk merkezi'da yayınlandı. Uyumluluk Puanı, Uyumluluk Yöneticisi ile aynı arka uç paylaşarak müşterilerin her iki yerde de çalışmasına olanak sağlar. Kasım 2019'dan itibaren, yeni işlevler sağladığımız ve müşteri geri bildirimlerine yanıt vermemiz için çeşitli güncelleştirmeler yayımladık.
+
+
+      Eylül 2020'de Microsoft 365 uyumluluk merkezi Yöneticisi'nin genel kullanılabilirliği bu gelişim durumunu tamamlar. Uyumluluk Yöneticisi, birleşik,  uçtan  uç uyumluluk çözümüdür. Uyumluluk puanınız, Uyumluluk Yöneticisi'nin önemli bir bileşeni olarak kalır.
+
+
+      Uyumluluk [Yöneticisi'nin](https://aka.ms/compliancemanager/GAblog) GA sürümüyle ilgili yeni şeyler hakkında daha fazla bilgi edinmek için bu blog gönderisi'ni okuyun.
+
+
+      ### <a name="your-organization-regularly-used-compliance-manager-in-the-service-trust-portal"></a>Organizasyonunız Hizmet Güveni Portalı'nın Uyumluluk Yöneticisi'ni düzenli olarak kullandı
+
+
+      Hizmet Güveni Portalı'nda Uyumluluk Yöneticisi'ni kullandıysanız, artık tüm kuruluş verileriniz portalında Uyumluluk Yöneticisi'nde Microsoft 365 uyumluluk merkezi vardırhttps://compliance.microsoft.com/compliancemanager. Uyumluluk Yöneticisi'nin yeni konumunuzla çalışmaya devam etmek için, önceki konumdaki yer işaretlerini güncellemek dışında herhangi bir şey yapmaya gerek yoktur. Tüm değerlendirmelerinizi ve diğer verilerinizi sizin için bir araya getirdik.
+
+
+      Uyumluluk Yöneticisi'ne (önizleme) artık Hizmet Güveni Portalı'nın erişilememektedir ve bu yöneticiye yönlendiren tüm bağlantılar sizi Güvenlik Merkezi'nde yeni Microsoft 365 uyumluluk merkezi.
+
+
+      Uyumluluk Yöneticisi'nin önceki sürümlerinde eylemleri tamamlama (artık "geliştirme eylemleri" olarak adlandırılır) ve değerlendirmeler oluşturma gibi her şey yeni Uyumluluk Yöneticisi'nde yapılabilir. 150'den fazla yeni değerlendirme şablonu ekledik ve şablon oluşturma sürecini iyileştirdi. Gelecek sürümlerde daha fazla geliştirme ekleeceğiz.
+
+
+      Aşağıda bazı yararlı kaynaklar verilmiştir:
+
+
+      - [Yeni Uyumluluk Yöneticisi deneyiminize aşinalık elde edin](compliance-manager-setup.md#understand-the-compliance-manager-dashboard)
+
+      - [Uyumluluk Yöneticisi'nin izinlerini ve diğer kurulum bilgilerini yeni giriş](compliance-manager-setup.md#who-can-access-compliance-manager)
+
+      - [Yeni alan hakkında daha fazla bilgi Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center.md)
+
+
+      ### <a name="your-organization-used-compliance-score-public-preview-in-the-microsoft-365-compliance-center"></a>Kuruluş uyumluluk penceresinde Uyumluluk Puanı'nın (genel önizleme) Microsoft 365 uyumluluk merkezi
+
+
+      Genel önizlemede Uyumluluk Puanı kullandıysanız, Uyumluluk Yöneticisi'nin büyük ölçüde aynı göründüğünü ve notların panoda göze çarpan bir şekilde göründüğünü fark edebilirsiniz. GA sürümüyle, artık değerlendirmelerde şablon oluşturma Microsoft 365 uyumluluk merkezi gibi bazı değerlendirme yönetim işlevlerini gerçekleştirmek için görevden ayrılmaya gerek yoktur. Tüm işlevler artık tek bir yerdedir. Uyumluluk Puanı'nın önizleme sürümünde sahip olduğunuz veriler, Uyumluluk Yöneticisi'nin GA sürümünde kalır.
+
+
+      Uyumluluk Puanı pano görünüme filtre uygulamanız, yeni Uyumluluk Yöneticisi'nin Eylül ayında dağıtıldığında bu filtrelerin sıfır olduğunu unutmayın. Tüm filtreleri yeniden uygulamanız gerekir.
+
+
+      Uyumluluk Yöneticisi'nin yeni lisans koşulları da var. Lisanslama hakkında aşağıdaki soruya bakın.
+
+
+      ### <a name="youre-new-to-compliance-manager"></a>Uyumluluk Yöneticisi'nde yenisiniz
+
+
+      Uyumluluk Yöneticisi, uyumluluk etkinliklerini yönetmek ve izlemek için Microsoft 365 uyumluluk merkezi çözümüdür. Uyumluluk yolculuğunuza başlamak için harika bir yerdir, çünkü ziyaret ilk ziyareti sırasında size uyumluluk sonrası ile ilgili ilk değerlendirmeyi yapacaktır. Aşağıda daha fazlasını öğrenmeye başlamak için iyi yerler verilmiştir:
+
+
+      - [Uyumluluk Yöneticisi'ne genel bir bakış elde edin](compliance-manager.md)
+
+      - [Aşamalar olarak bilgili olmak için hızlı başlangıç kılavuzumızı kullanın](compliance-manager-quickstart.md)
+
+      - [Yeni alan hakkında daha fazla bilgi Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center.md)
+  - question: >
+      Uyumluluk Yöneticisi'ni kullanmak için lisans gereksinimleri var mı?
+    answer: >
+      Evet. Uyumluluk Yöneticisi'nin GA sürümü yeni lisans koşulları içerir. Office 365 ve Microsoft 365 lisansı olan tüm kuruluşlar ve ABD Kamu Community (GCC) Orta, GCC Yüksek ve Savunma Bölümü (DoD) müşterileri, Uyumluluk Yöneticisi'ne erişim sahibi olur. Ancak, kurum tarafından kullanılabilen değerlendirmeler ve değerlendirme şablonlarını nasıl yönet seçtiğiniz lisans sözleşmenize bağlıdır. Ayrıntılar için [Microsoft 365 ve uyumluluk için lisanslama kılavuzuna](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance) bakın.
+  - question: >
+      Yüksek bir puanım varsa, bu tamamen uyumlu olduğumu mu ifade etti?
+    answer: >
+      Hayır. Uyumluluk puanınız, veri koruma ve mevzuat standartlarıyla ilgili riskleri azaltmaya yardımcı olacak önerilen eylemleri tamamlama ilerlemenizi ölçür. Belirli bir standart veya düzenlemeyle ilgili olarak, kurumsal uyumluluğun mutlak bir ölçüsüdür. Uyumluluk Yöneticisi ve uyumluluk puanınız hiçbir şekilde garanti olarak yorumlanmaz.
+  - question: >
+      Microsoft dışı ürünlerde Uyumluluk Yöneticisi'ni kullanabilir miyim?
+    answer: Uyumluluk Yöneticisi yalnızca Microsoft bulut hizmetleri için sürekli izleme ve önerilen eylemler sağlarken, üçüncü taraf hizmetleriniz için Uyumluluk Yöneticisi'ne özel değerlendirmeler  eklersiniz. Bu şekilde, dijital varlıklarınız genelinde tüm denetimleri yönetmenize yardımcı olmak için Microsoft Uyumluluk Yöneticisi'ni SaaS uyumluluk yönetim aracı olarak kullanabilirsiniz.

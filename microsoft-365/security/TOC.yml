@@ -1,0 +1,52 @@
+- name: Microsoft 365 güvenliği
+  href: index.yml
+  expanded: true
+  items:
+    - name: Kullanmaya başlayın
+      items:
+        - name: Microsoft 365 Sıfır Güveni dağıtım planı
+          href: microsoft-365-zero-trust.md
+        - name: Evden çalışmayı desteklemek için en önemli görevler
+          href: top-security-tasks-for-remote-work.md
+    - name: Sıfır Güven kimliği ve cihaz erişimi yapılandırmaları
+      items:
+        - name: Genel bakış
+          href: ./office-365-security/microsoft-365-policies-configurations.md
+        - name: Önkoşul çalışması
+          href: ./office-365-security/identity-access-prerequisites.md
+        - name: Ortak kimlik ve cihaz erişimi ilkeleri
+          href: ./office-365-security/identity-access-policies.md
+        - name: Konuk ve dış kullanıcılar için ilkeler
+          href: ./office-365-security/identity-access-policies-guest-access.md
+        - name: Erişim Teams için önerilen ilkeler
+          href: ./office-365-security/teams-access-policies.md
+        - name: Erişim Exchange ilkeleri için önerilenler
+          href: ./office-365-security/secure-email-recommended-policies.md
+        - name: Erişim SharePoint ilkeleri için önerilenler
+          href: ./office-365-security/sharepoint-file-access-policies.md
+        - name: SaaS uygulamaları için Bulut Uygulamaları için Önerilen Defender ilkeleri
+          href: ./office-365-security/mcas-saas-access-policies.md
+        - name: Sürekli erişim değerlendirme
+          href: ./office-365-security/microsoft-365-continuous-access-evaluation.md
+    - name: Microsoft 365 Defender belgeleri
+      items:
+        - name: Microsoft 365 Defender
+          href: ./defender/index.yml
+        - name: Office 365 için Defender
+          href: ./office-365-security/index.yml
+        - name: Uç Nokta için Defender
+          href: ./defender-endpoint/index.yml
+        - name: Kimlik için Defender
+          href: /defender-for-identity
+        - name: Bulut Uygulamaları için Defender
+          href: /cloud-app-security
+        - name: İş için Defender
+          href: ./defender-business/index.yml
+    - name: Microsoft 365 Kurumsal
+      href: ../enterprise/index.yml
+    - name: Microsoft 365 kurumsal
+      href: ./index.yml
+    - name: Microsoft 365 Uyumluluğu
+      href: ../compliance/index.yml
+    - name: Belgelerde etkin Office yönetme
+      href: active-content-in-trusted-docs.md

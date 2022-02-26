@@ -1,0 +1,122 @@
+- name: Microsoft SharePoint Syntex
+  href: index.md
+- name: Özel modeller
+  items:
+    - name: Belgeyi anlama
+      items:
+        - name: Genel bakış
+          href: document-understanding-overview.md
+        - name: Modeller arasındaki farklar
+          href: difference-between-document-understanding-and-form-processing-model.md
+        - name: Örnek modeli içeri aktarma
+          href: learn-about-document-understanding-models-through-the-sample-model.md
+        - name: İçerik merkezi oluşturma
+          href: create-a-content-center.md
+        - name: Sınıflandırıcı oluşturma
+          href: create-a-classifier.md
+        - name: Modeli çoğaltma
+          href: duplicate-a-model.md
+        - name: Modeli yeniden adlandırma
+          href: rename-a-model.md
+        - name: Ayıklaıcı oluşturma
+          href: create-an-extractor.md
+        - name: Ayıklayı yeniden adlandırma
+          href: rename-an-extractor.md
+        - name: Açıklama türleri
+          href: explanation-types-overview.md
+        - name: Açıklama şablonlarını kullanma
+          href: explanation-templates.md
+        - name: Belge anlama modeli uygulama
+          href: apply-a-model.md
+        - name: Modeli yayımlama ve keşfetme
+          href: model-discovery.md
+        - name: Bekletme etiketi uygulama
+          href: apply-a-retention-label-to-a-model.md
+        - name: Duyarlılık etiketi uygulama
+          href: apply-a-sensitivity-label-to-a-model.md
+        - name: Model kullanım analizi
+          href: model-usage-analytics.md
+        - name: Ayıklaıcı oluştururken terim deposu taksonomilerinden faydalanma
+          href: leverage-term-store-taxonomy.md
+        - name: SharePoint Syntex modunda çalışma
+          href: accessibility-mode.md
+    - name: Form işleme
+      items:
+        - name: Genel bakış
+          href: form-processing-overview.md
+        - name: Modeller arasındaki farklar
+          href: difference-between-document-understanding-and-form-processing-model.md
+        - name: Form işleme modeli oluşturma
+          href: create-a-form-processing-model.md
+        - name: Bekletme etiketi uygulama
+          href: apply-a-retention-label-to-a-model.md
+        - name: Model kullanım analizi
+          href: model-usage-analytics.md
+- name: Önceden oluşturulmuş modeller
+  items:
+    - name: Genel bakış
+      href: prebuilt-overview.md
+    - name: Önceden oluşturulmuş fatura ve makbuz modelleri
+      href: prebuilt-models.md
+    - name: Bekletme etiketi uygulama
+      href: apply-a-retention-label-to-a-model.md
+    - name: Model kullanım analizi
+      href: model-usage-analytics.md
+- name: İçerik derlemesi
+  items:
+    - name: İçerik derlemesi kullanarak belge oluşturma
+      href: content-assembly.md
+- name: Meta veri araması
+  items:
+    - name: Belge kitaplıklarında meta veri arama
+      href: metadata-search.md
+- name: Taksonomi
+  items:
+    - name: SKOS kullanarak içeri aktarma
+      href: import-term-set-skos.md
+    - name: SKOS biçimlendirme başvurusu
+      href: skos-format-reference.md
+    - name: İçerik türünü hub'a it
+      href: push-content-type-to-hub.md
+    - name: Terim deposu raporları
+      href: term-store-analytics.md
+- name: Kurulum ve yönetim
+  items:
+    - name: Lisanslama SharePoint Syntex
+      href: syntex-licensing.md
+    - name: Ayarlama SharePoint Syntex
+      href: set-up-content-understanding.md
+    - name: İçerik merkezi oluşturma
+      href: create-a-content-center.md
+    - name: PowerShell SharePoint Syntex'i yönetme
+      items:
+        - name: Genel bakış
+          href: powershell-syntex-intro.md
+        - name: Modelleri dışarı ve içeri aktarma
+          href: powershell-syntex-import-export.md
+        - name: Modelleri yayımlama
+          href: powershell-syntex-publishing.md
+        - name: Model tarafından işleme isteği
+          href: powershell-syntex-processing.md
+        - name: Model açıklamalarla çalışma
+          href: powershell-syntex-explanations.md
+- name: Benimseme
+  items:
+    - name: Benimsemeye başlama
+      href: adoption-getstarted.md
+    - name: Senaryolar ve kullanım örnekleri
+      href: adoption-scenarios.md
+    - name: Deneme sürümü çalıştırma
+      href: trial-syntex.md
+    - name: Sözleşmeleri iş Microsoft 365
+      items:
+        - name: Genel bakış
+          href: solution-manage-contracts-in-microsoft-365.md
+        - name: Adım 1. SharePoint Syntex
+          href: solution-manage-contracts-step1.md
+        - name: Adım 2. E-Microsoft Teams
+          href: solution-manage-contracts-step2.md
+        - name: Adım 3. Power Automate'i Power Automate
+          href: solution-manage-contracts-step3.md
+- name: Genişletilebilirlik
+  href: /sharepoint/dev/apis/syntex/syntex-model-rest-api

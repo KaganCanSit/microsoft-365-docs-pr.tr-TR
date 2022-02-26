@@ -1,0 +1,188 @@
+- name: Microsoft Yönetilen Masaüstü
+  href: index.yml
+  items:
+    - name: Microsoft Yönetilen Masaüstü nedir?
+      href: intro/index.md
+      items:
+        - name: Microsoft Yönetilen Masaüstü ve Windows 11
+          href: intro/win11-overview.md
+        - name: Roller ve sorumluluklar
+          href: intro/roles-and-responsibilities.md
+        - name: Microsoft Yönetilen Masaüstü'nden Teknolojiler
+          href: intro/technologies.md
+        - name: Microsoft Yönetilen Masaüstü ve ITIL
+          href: MMD-and-ITSM.md
+        - name: Uyumluluk
+          href: intro/compliance.md
+    - name: Microsoft Yönetilen Masaüstü hizmet açıklaması
+      href: service-description/index.md
+      items:
+        - name: Desteklenen bölgeler
+          href: service-description/regions-languages.md
+        - name: Cihazlar
+          href: null
+          items:
+            - name: Cihaz gereksinimleri
+              href: service-description/device-requirements.md
+            - name: Cihaz resimleri
+              href: service-description/device-images.md
+            - name: Cihaz adları
+              href: service-description/device-names.md
+            - name: Cihaz hizmetleri
+              href: service-description/device-services.md
+            - name: Cihaz profilleri
+              href: service-description/profiles.md
+            - name: Cihaz dağıtım grupları
+              href: service-description/deployment-groups.md
+            - name: Cihaz yapılandırması
+              href: service-description/device-policies.md
+        - name: Güvenlik teknolojileri
+          href: service-description/security.md
+        - name: Güvenlik işlemleri
+          href: service-description/security-operations.md
+        - name: Gizlilik
+          href: service-description/privacy-personal-data.md
+        - name: Güncelleştirmeler
+          href: service-description/updates.md
+        - name: Yönetici desteği
+          href: service-description/support.md
+        - name: Kullanıcı desteği
+          href: service-description/user-support.md
+        - name: İşlemler ve izleme
+          href: service-description/operations-and-monitoring.md
+        - name: Tanılama günlükleri
+          href: service-description/diagnostic-logs.md
+        - name: Uygulama gereksinimleri
+          href: service-description/mmd-app-requirements.md
+        - name: Uygulama denetimi
+          href: service-description/app-control.md
+        - name: Hizmet değişiklikleri ve iletişim
+          href: service-description/servicechanges.md
+        - name: Hizmet planı özel durumları
+          href: service-description/customizing.md
+        - name: Paylaşılan cihazlar
+          href: service-description/shared-devices.md
+    - name: Microsoft Yönetilen Masaüstü'ne kayıt için hazır olun
+      href: get-ready/index.md
+      items:
+        - name: Microsoft Yönetilen Masaüstü için önkoşullar
+          href: get-ready/prerequisites.md
+        - name: Hazırlık değerlendirme araçlarını kullanma
+          href: get-ready/readiness-assessment-tool.md
+          items:
+            - name: Çevrimiçi hazırlık değerlendirme aracı tarafından bulunan sorunları düzeltme
+              href: get-ready/readiness-assessment-fix.md
+            - name: İndirilebilir hazırlık değerlendirme denetleyicisi
+              href: get-ready/readiness-assessment-downloadable.md
+        - name: Konuk hesapları için önkoşullar
+          href: get-ready/guest-accounts.md
+        - name: Ağı hazırlama
+          href: get-ready/network.md
+        - name: Sertifikaları ve ağ profillerini hazırlama
+          href: get-ready/certs-wifi-lan.md
+        - name: Şirket içi kaynaklara erişimi hazırlama
+          href: get-ready/authentication.md
+        - name: Uygulamaları hazırlama
+          href: get-ready/apps.md
+          items:
+            - name: Microsoft Consulting Services ile çalışma
+              href: get-ready/apps-MCS.md
+        - name: Eşlenmiş sürücüleri hazırlama
+          href: get-ready/mapped-drives.md
+        - name: Yazdırma kaynaklarını hazırlama
+          href: get-ready/printing.md
+        - name: Cihaz adlarını adresle
+          href: get-ready/address-device-names.md
+    - name: Microsoft Yönetilen Masaüstü ile çalışmaya başlama
+      href: get-started/index.md
+      items:
+        - name: Yönetici portalına erişme
+          href: get-started/access-admin-portal.md
+        - name: Yönetici portalında yönetici kişilerini ekleme ve doğrulama
+          href: get-started/add-admin-contacts.md
+        - name: Kayıt sonrasında ayarları ayarlama
+          href: get-started/conditional-access.md
+        - name: Lisans atama
+          href: get-started/assign-licenses.md
+        - name: Dağıtım Intune Şirket Portalı
+          href: get-started/company-portal.md
+        - name: Durum Enterprise'i etkinleştirme
+          href: get-started/enterprise-state-roaming.md
+        - name: Kullanıcı deneyimini yerelleştirme
+          href: get-started/localization.md
+        - name: Yeni cihazları doğrulama
+          href: get-started/validate-device.md
+        - name: Cihazları ayarlama
+          href: get-started/set-up-devices.md
+          items:
+            - name: Yeni cihazları kendiniz kaydettirin
+              href: get-started/register-devices-self.md
+              items:
+                - name: İş Ortakları'nın cihazları kaydetme adımları
+                  href: get-started/register-devices-partner.md
+            - name: Mevcut cihazları kendiniz kaydettirin
+              href: get-started/register-reused-devices-self.md
+        - name: Kullanıcı desteği özelliklerini etkinleştirme
+          href: get-started/enable-support.md
+        - name: Kullanıcılarınızı cihazları kullanmaya hazır hale get get your users
+          href: get-started/get-started-devices.md
+        - name: AutoPilot ve Kayıt Durumu Sayfası ile ilk çalıştırma deneyimi
+          href: get-started/esp-first-run.md
+        - name: Windows 10 konumu hizmeti
+          href: get-started/device-location.md
+        - name: Uygulama denetimi ile çalışmaya başlama
+          href: get-started/get-started-app-control.md
+        - name: Uygulamaları dağıtma
+          href: get-started/deploy-apps.md
+          items:
+            - name: Microsoft Project ve Microsoft Visio
+              href: get-started/project-visio.md
+            - name: Microsoft Edge
+              href: get-started/edge-browser-app.md
+            - name: Microsoft 365 Uygulamaları için Enterprise
+              href: get-started/m365-apps.md
+            - name: Microsoft Teams
+              href: get-started/teams.md
+            - name: Microsoft OneDrive
+              href: get-started/onedrive.md
+    - name: Microsoft Yönetilen Masaüstü ile çalışma
+      href: working-with-managed-desktop/index.md
+      items:
+        - name: Raporlarla çalışma
+          href: working-with-managed-desktop/reports.md
+          items:
+            - name: Cihaz stok raporu
+              href: working-with-managed-desktop/device-inventory-report.md
+            - name: Cihaz durumu raporu
+              href: working-with-managed-desktop/device-status-report.md
+            - name: Windows güncelleştirmeleri raporu
+              href: working-with-managed-desktop/security-updates-report.md
+            - name: Uygulama kullanımı raporu
+              href: working-with-managed-desktop/app-usage-report.md
+            - name: Hizmet ölçümleri raporu
+              href: working-with-managed-desktop/service-metrics-report.md
+        - name: Yönetici desteği
+          href: working-with-managed-desktop/admin-support.md
+        - name: Kullanıcı desteği
+          href: working-with-managed-desktop/end-user-support.md
+        - name: Uygulamaları yönetme
+          href: working-with-managed-desktop/manage-apps.md
+        - name: Uygulama denetimi ile çalışma
+          href: working-with-managed-desktop/work-with-app-control.md
+        - name: Cihaz profilini değiştirme
+          href: working-with-managed-desktop/change-device-profile.md
+        - name: Dağıtım grubuna cihaz atama
+          href: working-with-managed-desktop/assign-deployment-group.md
+        - name: Cihazları kaldır
+          href: working-with-managed-desktop/remove-devices.md
+        - name: Yapılandırılabilir ayarlar
+          href: working-with-managed-desktop/config-setting-overview.md
+          items:
+            - name: Yapılandırılabilir ayarlar başvurusu
+              href: working-with-managed-desktop/config-setting-ref.md
+            - name: Yapılandırılabilir ayarları dağıtma
+              href: working-with-managed-desktop/config-setting-deploy.md
+        - name: Microsoft Yönetilen Masaüstü ile Windows 11'i önizleme ve test edin
+          href: working-with-managed-desktop/test-win11-mmd.md
+    - name: Microsoft Yönetilen Masaüstü belgeleri için değişiklik geçmişi
+      href: change-history-managed-desktop.md

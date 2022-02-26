@@ -1,0 +1,84 @@
+- name: İş aboneliklerini yönetme
+  href: index.yml
+- name: Microsoft 365 yönetim yardım merkezi
+  href: ../admin/index.yml
+- name: Deneyin veya satın alın
+  items:
+    - name: Microsoft 365'i deneme veya satın alma
+      href: try-or-buy-microsoft-365.md
+    - name: Eklentileri satın alma veya yönetme
+      href: buy-or-edit-an-add-on.md
+    - name: Yardım için İş Microsoft 365
+      href: ../admin/misc/business-assist.md
+    - name: Depolama alanı ekleme
+      href: add-storage-space.md
+- name: Abonelikleri yönetme
+  items:
+    - name: Abonelikleri yükseltme
+      href: subscriptions/upgrade-to-different-plan.md
+    - name: Aboneliğinizi yenileme
+      href: subscriptions/renew-your-subscription.md
+    - name: Aboneliğinizi yeniden etkinleştirme
+      href: subscriptions/reactivate-your-subscription.md
+    - name: Aboneliğinizi iptal etme
+      href: subscriptions/cancel-your-subscription.md
+    - name: Aboneliğimin süresi dolarsa ne olur?
+      href: subscriptions/what-if-my-subscription-expires.md
+    - name: Üçüncü taraf uygulama aboneliklerini yönetme
+      href: manage-saas-apps.md
+    - name: Self servis satın almaları yönetme (Kullanıcılar)
+      href: subscriptions/manage-self-service-purchases-users.md
+    - name: Self servis satın almaları yönetme (Yönetici)
+      href: subscriptions/manage-self-service-purchases-admins.md
+- name: Lisansları yönetme
+  items:
+    - name: Abonelik lisansları satın alma veya kaldırma
+      href: licenses/buy-licenses.md
+    - name: Kullanıcılara lisans atama
+      href: ../admin/manage/assign-licenses-to-users.md
+    - name: Kullanıcıların lisans atamalarını kaldırma
+      href: ../admin/manage/remove-licenses-from-users.md
+    - name: Kullanıcıları farklı bir aboneliğe taşıma
+      href: subscriptions/move-users-different-subscription.md
+    - name: ISV uygulama lisanslarını yönetme
+      href: licenses/manage-third-party-app-licenses.md
+    - name: Otomatik talep ilkelerini yönetme
+      href: licenses/manage-auto-claim-policies.md
+    - name: Abonelikleri ve lisansları anlama
+      href: licenses/subscriptions-and-licenses.md
+- name: Faturalar ve ödemeler
+  items:
+    - name: Fatura ekstrenizi veya faturanızı görüntüleme
+      href: billing-and-payments/view-your-bill-or-invoice.md
+    - name: Faturanızı veya faturanızı anlama
+      href: billing-and-payments/understand-your-invoice2.md
+    - name: Aboneliğinizi ödeme
+      href: billing-and-payments/pay-for-your-subscription.md
+    - name: Ödeme yöntemlerini yönetme
+      href: billing-and-payments/manage-payment-methods.md
+    - name: Faturalama sıklığını değiştirme
+      href: billing-and-payments/change-payment-frequency.md
+    - name: Fatura bildirimlerini ve fatura eklerini yönetme
+      href: billing-and-payments/manage-billing-notifications.md
+    - name: Ödeme profillerini anlama
+      href: billing-and-payments/manage-billing-profiles.md
+    - name: Fatura adreslerinizi değiştirme
+      href: billing-and-payments/change-your-billing-addresses.md
+    - name: Ödeme Hizmetleri Yönergeleri 2 ve Güçlü Müşteri Kimlik Doğrulaması Hakkında
+      href: billing-and-payments/psd2.md
+    - name: Hesabınıza Stoping Tax (Stoping Tax) için kredi talepte bulundurabilirsiniz
+      href: billing-and-payments/withholding-tax-credit-global.md
+- name: Fatura hesapları
+  items:
+    - name: Fatura hesaplarını anlama
+      href: manage-billing-accounts.md
+    - name: Bir kiracıyı fatura hesabınızla ilişkilendirme
+      href: /microsoft-store/manage-mpsa-software-microsoft-store-for-business
+- name: İş ortaklarıyla ilişkileri yönetme
+  href: manage-partners.md
+- name: İş ortağı ayrıcalıklarını gözden geçirme
+  href: review-partner-admin-privileges.md
+- name: Hesabı kapatma
+  href: close-your-account.md
+- name: Destek ekibine başvurun
+  href: ../admin/get-help-support.md

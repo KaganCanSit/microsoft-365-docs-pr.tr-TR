@@ -1,0 +1,726 @@
+# [Uç Nokta için Microsoft Defender](index.yml)
+
+## [Genel bakış]()
+### [Uç Nokta için Microsoft Defender nedir?](microsoft-defender-endpoint.md)
+### [Uç Nokta Plan 1 için Defender'ı Plan 2 ile karşılaştırma](defender-endpoint-plan-1-2.md)
+### [En düşük gereksinimler](minimum-requirements.md)
+### [Uç nokta için Microsoft Defender'daki güncelleştirmeler](whats-new-in-microsoft-defender-endpoint.md)
+### [Önizleme özellikleri](preview.md)
+### [Veri depolama ve gizlilik](data-storage-privacy.md)
+### [Genel bakış Microsoft Defender Güvenlik Merkezi](use.md)
+### [Uç Nokta Plan 1 için Defender]()
+#### [Genel bakış](defender-endpoint-plan-1.md)
+#### [Kurulum ve yapılandırma](mde-p1-setup-configuration.md)
+#### [Başlarken](mde-plan1-getting-started.md)
+#### [Bakım ve işlemler](mde-p1-maintenance-operations.md)
+### [ABD Kamu müşterileri için Uç Nokta için Microsoft Defender](gov.md)
+### [Windows olmayan platformlarda Uç Nokta Windows Defender](non-windows.md)
+
+
+## [Özellikleri değerlendirme](evaluation-lab.md)
+
+## [Dağıtımı planlama](deployment-strategy.md)
+
+## [Dağıtım kılavuzu]()
+### [Dağıtım aşamaları](deployment-phases.md)
+### [Aşama 1: Hazırlama](prepare-deployment.md)
+### [Aşama 2: Ayarlama](production-deployment.md)
+### [Aşama 3: Ekleme]()
+#### [Eklemeye genel bakış](onboarding.md)
+#### [Dağıtım halkaları](deployment-rings.md)
+#### [Microsoft Endpoint Configuration Manager kullanarak işe Microsoft Endpoint Configuration Manager](onboarding-endpoint-configuration-manager.md)
+#### [Microsoft Endpoint Manager kullanarak işe Microsoft Endpoint Manager](onboarding-endpoint-manager.md)
+
+## [Geçiş kılavuzları](migration-guides.md)
+### [Uç Nokta için Defender'a Taşı](switch-to-mde-overview.md)
+#### [Aşama 1: Hazırlama](switch-to-mde-phase-1.md)
+#### [Aşama 2: Kurulum](switch-to-mde-phase-2.md)
+#### [Aşama 3: Ekleme](switch-to-mde-phase-3.md)
+#### [Sorun giderme](switch-to-mde-troubleshooting.md)
+### [Geçiş sonrasında Uç Nokta için Defender'ı yönetme](manage-mde-post-migration.md)
+#### [Intune kullanma (önerilir)](manage-mde-post-migration-intune.md)
+#### [Yapılandırma Yöneticisi'ni kullanma](manage-mde-post-migration-configuration-manager.md)
+#### [Grup İlkesi kullanma](manage-mde-post-migration-group-policy-objects.md)
+#### [PowerShell, WMI veya BAŞKA BIR MPCmdRun.exe](manage-mde-post-migration-other-tools.md)
+#### [Sunucu geçişi senaryoları](server-migration.md)
+
+## [Cihazları yapılandırma ve ekleme]()
+### [Cihazları ekleme ve Uç nokta özellikleri için Microsoft Defender'ı yapılandırma](onboard-configure.md)
+
+
+### [Windows ve Windows Sunucusunda Uç Nokta için Microsoft Defender]()
+#### [Yeni uç noktaları oluşturmak için Windows araçları ve yöntemleri](configure-endpoints.md)
+#### [Cihaz Windows cihaz ve Windows ekleme]()
+
+##### [Windows'in önceki sürümlerini Windows](onboard-downlevel.md)
+
+
+##### [Cihaz Windows cihaz ve Windows ekleme]()
+###### [R2 Windows Server 2012 2016, Semi-Annual Kanalı, 2019 ve 2022'ye ekleme](configure-server-endpoints.md)
+###### [Yerel Windows kullanarak cihazları ekleme](configure-endpoints-script.md)
+###### [Grup Windows kullanarak cihaz ekleme](configure-endpoints-gp.md)
+###### [Microsoft Endpoint Configuration Manager kullanarak Windows cihaz Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md)
+###### [Mobil Windows Yönetim araçlarını kullanarak cihazları ekleme](configure-endpoints-mdm.md)
+###### [Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını ekleme](configure-endpoints-vdi.md)
+###### [Windows 10 Windows Sanal Masaüstü'ne çok oturumlu cihazları ekleme](onboard-windows-multi-session-device.md)
+
+
+
+
+#### [Bulut için Microsoft Defender ile tümleştirme](azure-server-integration.md)
+
+#### [İnternet erişimi olmayan cihazları ekleme](onboard-offline-machines.md)
+#### [Yeni eklenen bir cihazda algılama testi çalıştırma](run-detection-test.md)
+#### [Cihazlarda benzetimi yapılan saldırılar çalıştırın](attack-simulations.md)
+#### [Ara sunucu ve İnternet bağlantısı ayarlarını yapılandırma](configure-proxy-internet.md)
+#### [Ekleme veya işe kapatma bildirim kuralı oluşturma](onboarding-notification.md)
+
+
+
+### [Diğer İşletim Sistemlerinde Uç Nokta için Microsoft Defender]()
+#### [Windows olmayan cihazları ekleme](configure-endpoints-non-windows.md)
+
+#### [macOS'ta Uç Nokta için Microsoft Defender]()
+##### [macOS'ta Uç Nokta için Microsoft Defender'a Genel Bakış](microsoft-defender-endpoint-mac.md)
+##### [What's New](mac-whatsnew.md)
+
+##### [Dağıtma]()
+###### [Microsoft Intune tabanlı dağıtım](mac-install-with-intune.md)
+###### [JAMF Pro tabanlı dağıtım]()
+####### [MacOS'ta Jamf ve Jamf kullanarak Uç Nokta için Microsoft Defender Pro](mac-install-with-jamf.md)
+####### [Jamf Pro'de oturum açma](mac-install-jamfpro-login.md)
+####### [Cihaz gruplarını ayarlama](mac-jamfpro-device-groups.md)
+####### [İlkeleri ayarlama](mac-jamfpro-policies.md)
+####### [Cihazları kaydetme](mac-jamfpro-enroll-devices.md)
+
+###### [Farklı bir Mobil Cihaz Yönetimi (MDM) sistemiyle dağıtım](mac-install-with-other-mdm.md)
+###### [El ile dağıtım](mac-install-manually.md)
+##### [Güncelleştirme](mac-updates.md)
+
+##### [Yapılandır]()
+###### [Dışlamaları yapılandırma ve doğrulama](mac-exclusions.md)
+###### [Tercihleri ayarlama](mac-preferences.md)
+###### [İstenmeyen Olabilecek Uygulamaları algıla ve engelle](mac-pua.md)
+###### [Cihaz denetimi]()
+####### [Cihaz denetimine genel bakış](mac-device-control-overview.md)
+####### [JAMF örnekleri](mac-device-control-jamf.md)
+####### [Intune örnekleri](mac-device-control-intune.md)
+###### [Taramaları zamanlama](mac-schedule-scan.md)
+
+##### [Sorun giderme]()
+###### [Yükleme sorunlarını giderme](mac-support-install.md)
+###### [Performans sorunlarını giderme](mac-support-perf.md)
+###### [Bulut bağlantısı sorunlarını giderme](troubleshoot-cloud-connect-mdemac.md)
+###### [Çekirdek uzantısı sorunlarını giderme](mac-support-kext.md)
+###### [Lisans sorunlarını giderme](mac-support-license.md)
+
+##### [Gizlilik](mac-privacy.md)
+##### [Kaynaklar](mac-resources.md)
+
+
+#### [Linux'ta Uç Nokta için Microsoft Defender]()
+##### [Linux'ta Uç Nokta için Microsoft Defender'a Genel Bakış](microsoft-defender-endpoint-linux.md)
+##### [What's New](linux-whatsnew.md)
+##### [Dağıtma]()
+###### [El ile dağıtım](linux-install-manually.md)
+###### [Sunucu tabanlı dağıtım](linux-install-with-puppet.md)
+###### [Ansible based deployment](linux-install-with-ansible.md)
+###### [Linux'ta Linux'ta Linux'ta Endpoint için Deploy Defender](linux-deploy-defender-for-endpoint-with-chef.md)
+
+##### [Güncelleştirme](linux-updates.md)
+
+##### [Yapılandır]()
+###### [Dışlamaları yapılandırma ve doğrulama](linux-exclusions.md)
+###### [Statik ara sunucu yapılandırması](linux-static-proxy-configuration.md)
+###### [Tercihleri ayarlama](linux-preferences.md)
+###### [İstenmeyen Olabilecek Uygulamaları algıla ve engelle](linux-pua.md)
+###### [Linux'ta Uç Nokta için Microsoft Defender ile taramaları zamanlama](linux-schedule-scan-mde.md)
+###### [Uç Nokta (Linux) için Microsoft Defender güncelleştirmesini zamanlama](linux-update-MDE-Linux.md)
+
+
+##### [Sorun giderme]()
+###### [Yükleme sorunlarını giderme](linux-support-install.md)
+###### [Aracı durumu sorunlarını araştırma](health-status.md)
+###### [Bulut bağlantı sorunlarını giderme](linux-support-connectivity.md)
+###### [RHEL 6 yükleme sorunlarını giderme](linux-support-rhel.md)
+###### [Performans sorunlarını giderme](linux-support-perf.md)
+###### [Eksik olay sorunlarını giderme](linux-support-events.md)
+
+##### [Gizlilik](linux-privacy.md)
+##### [Kaynaklar](linux-resources.md)
+
+#### [Mobil Tehdit Savunması]()
+##### [Mobil Tehdit Savunmasına Genel Bakış](mtd.md)
+
+##### [Android'de Uç Nokta için Microsoft Defender]()
+###### [Android'de Uç Nokta için Microsoft Defender'a Genel Bakış](microsoft-defender-endpoint-android.md)
+###### [Yenilikler](android-whatsnew.md)
+
+###### [Dağıtma]()
+####### [Android'de Uç Nokta için Microsoft Defender'ı Microsoft Intune](android-intune.md)
+
+###### [Yapılandır]()
+####### [Android'de Uç Nokta için Microsoft Defender özelliklerini yapılandırma](android-configure.md)
+####### [Uygulama koruma ilkesi kullanarak Uç nokta risk işaretleri için Microsoft Defender'ı yapılandırma](android-configure-mam.md)
+
+###### [Gizlilik]()
+####### [Android'de Uç Nokta için Microsoft Defender - Gizlilik bilgileri](android-privacy.md)
+
+###### [Sorun giderme]()
+####### [Sorun giderme](android-support-signin.md)
+
+##### [iOS'ta Uç Nokta için Microsoft Defender]()
+###### [iOS'ta Uç Nokta için Microsoft Defender'a Genel Bakış](microsoft-defender-endpoint-ios.md)
+###### [What's New](ios-whatsnew.md)
+
+###### [Dağıtma]()
+####### [Intune aracılığıyla iOS'ta Uç Nokta için Microsoft Defender'ı dağıtma](ios-install.md)
+####### [Kaydı olmayan cihazlar için iOS'ta Uç Nokta için Microsoft Defender'ı dağıtma](ios-install-unmanaged.md)
+
+###### [iOS özelliklerini yapılandırma](ios-configure-features.md)
+
+###### [SSS ve Sorun Giderme](ios-troubleshoot.md)
+
+###### [Gizlilik](ios-privacy.md)
+
+
+### [Farklı cihazlar üzerinde Uç Nokta yapılandırma ayarları için Microsoft Defender'ı Microsoft Endpoint Manager](security-config-management.md)
+
+### [Ekleme sorunlarını giderme]()
+#### [Ekleme sırasında sorunları giderme](troubleshoot-onboarding.md)
+#### [Abonelik ve portal erişimi sorunlarını giderme](troubleshoot-onboarding-error-messages.md)
+#### [Güvenlik yapılandırması yönetimi ekleme sorunlarını giderme](troubleshoot-security-config-mgt.md)
+
+
+
+
+
+### [Portal ayarlarını yapılandırma]()
+#### [Tercihleri ayarlama](preferences-setup.md)
+#### [Genel]()
+##### [Veri depolama konumunu doğrulama ve veri bekletme ayarlarını güncelleştirme](data-retention-settings.md)
+##### [Uyarı bildirimlerini yapılandırma](configure-email-notifications.md)
+##### [Güvenlik açığı e-posta bildirimlerini yapılandırma](configure-vulnerability-email-notifications.md)
+##### [Gelişmiş özellikleri yapılandırma](advanced-features.md)
+
+#### [İzinler]()
+##### [Portala erişmek için temel izinleri kullanma](basic-permissions.md)
+##### [RBAC kullanarak portal erişimini yönetme](rbac.md)
+###### [Rolleri oluşturma ve yönetme](user-roles.md)
+###### [Cihaz grupları oluşturma ve yönetme](machine-groups.md)
+###### [Cihaz etiketlerini oluşturma ve yönetme](machine-tags.md)
+
+#### [Kurallar]()
+##### [Gizleme kurallarını yönetme](manage-suppression-rules.md)
+##### [Gösterge oluşturma](manage-indicators.md)
+###### [Dosyalar için göstergeler oluşturma](indicator-file.md)
+###### [URL'ler ve URL'ler/etki alanları için göstergeler oluşturma](indicator-ip-domain.md)
+###### [Sertifikalar için göstergeler oluşturma](indicator-certificates.md)
+###### [Göstergeleri yönetme](indicator-manage.md)
+##### [Otomasyon dosyası yüklemelerini yönetme](manage-automation-file-uploads.md)
+##### [Otomasyon klasörü dışlamalarını yönetme](manage-automation-folder-exclusions.md)
+
+#### [Cihaz yönetimi]()
+##### [Ekleme cihazları](onboard-configure.md)
+##### [Çıkartan cihazlar](offboard-machines.md)
+##### [Cihazlarınızı doğru yapılandırıldığından emin olun](configure-machines.md)
+##### [Cihaz ekleme izleme ve artırma](configure-machines-onboarding.md)
+
+#### [Saat Microsoft Defender Güvenlik Merkezi ayarlarını yapılandırma](time-settings.md)
+
+## [Tehditleri algılama ve uç noktaları koruma]()
+### [Tehdit & güvenlik açığı yönetimi]()
+#### [Genel bakış](next-gen-threat-and-vuln-mgt.md)
+#### [Başlarken]()
+##### [İzinler & önkoşulları](tvm-prerequisites.md)
+##### [Desteklenen işletim sistemleri platformları ve yetenekleri](tvm-supported-os.md)
+##### [Cihaz değeri atama](tvm-assign-device-value.md)
+#### [Güvenlik nedenlerinizi değerlendirin]()
+##### [Pano içgörüleri](tvm-dashboard-insights.md)
+##### [Pozlama puanı](tvm-exposure-score.md)
+##### [Cihazlar için Microsoft Güvenli Puan](tvm-microsoft-secure-score-devices.md)
+#### [Güvenliğin getirilerini geliştirin & riski azaltma]()
+##### [Adres güvenliği önerileri](tvm-security-recommendation.md)
+##### [Güvenlik açıklarını düzeltme](tvm-remediation.md)
+##### [Güvenlik önerileri için özel durumlar](tvm-exception.md)
+##### [Destek sonu yazılımlarını planlama](tvm-end-of-support-software.md)
+##### [Sıfır günlük güvenlik açıklarını azaltmak](tvm-zero-day-vulnerabilities.md)
+#### [Cihazlarınız güvenlik açıklarını anlama]()
+##### [Yazılım envanteri](tvm-software-inventory.md)
+##### [Kuruluşumda güvenlik açıkları](tvm-weaknesses.md)
+##### [Etkinlik zaman çizelgesi](threat-and-vuln-mgt-event-timeline.md)
+##### [Korumasız cihazlar raporu](tvm-vulnerable-devices-report.md)
+##### [Açığa çıkarılan cihazlar için tek bir şey avı](tvm-hunt-exposed-devices.md)
+
+### [Cihaz bulma]()
+#### [Cihaz keşfine genel bakış](device-discovery.md)
+#### [Cihaz bulma'yi yapılandırma](configure-device-discovery.md)
+#### [IoT tümleştirmesi için Microsoft Defender](enable-microsoft-defender-for-iot-integration.md)
+#### [Corelight veri tümleştirmesini etkinleştirme](corelight-integration.md)
+#### [Cihaz bulma hakkında SSS](device-discovery-faq.md)
+
+### [Ağ cihazları](network-devices.md)
+
+### [Uç Nokta için Microsoft Defender'da ana bilgisayar güvenlik duvarı bildirimi](host-firewall-reporting.md)
+
+### [Saldırı yüzeyini azaltma]()
+#### [Saldırı yüzeyini azaltmaya genel bakış](overview-attack-surface-reduction.md)
+#### [Saldırı yüzeyini azaltma (ASR) kuralları]()
+##### [ASR kuralları hakkında bilgi](attack-surface-reduction.md)
+##### [Saldırı yüzeyini azaltma (ASR) kuralları dağıtım kılavuzu]()
+###### [ASR kuralları dağıtım önkoşulları](attack-surface-reduction-rules-deployment.md)
+###### [1. Adım: ASR kuralları dağıtımını planlama](attack-surface-reduction-rules-deployment-plan.md)
+###### [2. Adım: ASR kurallarını test edin](attack-surface-reduction-rules-deployment-test.md)
+###### [3. Adım: ASR kurallarını uygulama](attack-surface-reduction-rules-deployment-implement.md)
+###### [4. Adım: ASR kurallarını işlem durumaleştirme](attack-surface-reduction-rules-deployment-operationalize.md)
+##### [ASR kuralları başvurusu](attack-surface-reduction-rules-reference.md)
+##### [ASR kurallarını etkinleştirme alternatif yapılandırma yöntemleri](enable-attack-surface-reduction.md)
+##### [Saldırı yüzeyini azaltma hakkında SSS](attack-surface-reduction-faq.yml)
+#### [Denetimli klasör erişimi]()
+##### [Klasörleri koruma](controlled-folders.md)
+##### [Denetimli klasör erişimini değerlendirme](evaluate-controlled-folder-access.md)
+##### [Denetimli klasör erişimini etkinleştirme](enable-controlled-folders.md)
+##### [Denetimli klasör erişimini özelleştirme](customize-controlled-folders.md)
+#### [Exploit protection]()
+##### [Cihazları açıklardan koruma](exploit-protection.md)
+##### [Exploit protection evaluation](evaluate-exploit-protection.md)
+##### [Exploit Protection'i etkinleştirme](enable-exploit-protection.md)
+##### [Exploit Protection'i özelleştirme](customize-exploit-protection.md)
+##### [Exploit Protection yapılandırmalarını içeri aktarma, dışarı aktarma ve dağıtma](import-export-exploit-protection-emet-xml.md)
+##### [Exploit protection reference](exploit-protection-reference.md)
+#### [Ağ koruması]()
+##### [Ağın koruma](network-protection.md)
+##### [Ağ korumasını değerlendirme](evaluate-network-protection.md)
+##### [Ağ korumasını açma](enable-network-protection.md)
+
+### Yeni nesil koruma
+#### [Yeni nesil korumaya genel bakış](next-generation-protection.md)
+##### [Genel bakış Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-windows.md)
+##### [Birlikte daha iyi: Microsoft Defender Virüsten Koruma uç nokta için Microsoft Defender ve](why-use-microsoft-defender-antivirus.md)
+##### [Birlikte daha iyi: Microsoft Defender Virüsten Koruma ve Office 365](office-365-microsoft-defender-antivirus.md)
+#### [Değerlendirme Microsoft Defender Virüsten Koruma](evaluate-microsoft-defender-antivirus.md)
+#### [Microsoft Defender Virüsten Koruma yapılandırma](configure-microsoft-defender-antivirus-features.md)
+#### [Bulut koruması ve Microsoft Defender Virüsten Koruma](cloud-protection-microsoft-defender-antivirus.md)
+##### [Bulut koruması neden açık olmalı?](why-cloud-protection-should-be-on-mdav.md)
+##### [Bulut korumasını açma](enable-cloud-protection-microsoft-defender-antivirus.md)
+##### [Bulut koruma düzeyini belirtme](specify-cloud-protection-level-microsoft-defender-antivirus.md)
+##### [Bulut koruması ve örnek gönderim](cloud-protection-microsoft-antivirus-sample-submission.md)
+#### [Ağ bağlantılarını yapılandırma Microsoft Defender Virüsten Koruma doğrulama](configure-network-connections-microsoft-defender-antivirus.md)
+#### [Değişiklik korumasıyla güvenlik ayarlarını koruma](prevent-changes-to-security-settings-with-tamper-protection.md)
+#### [Bloğu ilk görüşte açma](configure-block-at-first-sight-microsoft-defender-antivirus.md)
+#### [Bulut engelleme zaman aşımı dönemini yapılandırma](configure-cloud-block-timeout-period-microsoft-defender-antivirus.md)
+#### [Davranışsal, ikill ve gerçek zamanlı korumayı yapılandırma](configure-protection-features-microsoft-defender-antivirus.md)
+#### [İstenmeyen olabilecek uygulamaları algılama ve engelleme](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)
+#### [Grup İlkesi'Microsoft Defender Virüsten Koruma her zaman açık korumayı etkinleştirme ve yapılandırma](configure-real-time-protection-microsoft-defender-antivirus.md)
+#### [Düzeltme algılamaları için Microsoft Defender Virüsten Koruma yapılandırma](configure-remediation-microsoft-defender-antivirus.md)
+#### [Taramaları Microsoft Defender Virüsten Koruma yapılandırma](schedule-antivirus-scans.md)
+##### [Grup İlkesini kullanarak taramaları zamanlama](schedule-antivirus-scans-group-policy.md)
+##### [PowerShell kullanarak taramaları zamanlama](schedule-antivirus-scans-powershell.md)
+##### [WMI kullanarak taramaları zamanlama](schedule-antivirus-scans-wmi.md)
+#### [2010'da sınırlı düzenli tarama Microsoft Defender Virüsten Koruma](limited-periodic-scanning-microsoft-defender-antivirus.md)
+#### [Performans ayarlamaları Microsoft Defender Virüsten Koruma](tune-performance-defender-antivirus.md)
+#### [Diğer güvenlik ürünleriyle uyumluluk](microsoft-defender-antivirus-compatibility.md)
+
+#### [Virüsten koruma ve kötü amaçlı yazılımlardan koruma güncelleştirmelerini alın](manage-updates-baselines-microsoft-defender-antivirus.md)
+##### [Koruma güncelleştirmeleri için kaynakları Microsoft Defender Virüsten Koruma yönetme](manage-protection-updates-microsoft-defender-antivirus.md)
+##### [Koruma güncelleştirmelerinin ne zaman indirildikten ve uygulanmalıdır? zamanlamayı yönetme](manage-protection-update-schedule-microsoft-defender-antivirus.md)
+##### [Microsoft Defender güncelleştirmeleri için aşamalı olarak geçiş işlemini yönetme](manage-gradual-rollout.md)
+##### [Microsoft Defender güncelleştirmeleri için aşamalı olarak uygulama işlemini yapılandırma](configure-updates.md)
+##### [Güncel Microsoft Defender Virüsten Koruma uç noktaları yönetmek için güncelleştirmeleri ve taramaları yönetme](manage-outdated-endpoints-microsoft-defender-antivirus.md)
+##### [Olay tabanlı zorunlu güncelleştirmeleri yönetme](manage-event-based-updates-microsoft-defender-antivirus.md)
+##### [Mobil cihazlar ve sanal makineler (VM) güncelleştirmelerini yönetme](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
+
+#### [Microsoft Defender Virüsten Koruma için postalarınızı yönetme](configuration-management-reference-microsoft-defender-antivirus.md)
+##### [Microsoft Endpoint Manager'i yönetmek için Microsoft Defender Virüsten Koruma](use-intune-config-manager-microsoft-defender-antivirus.md)
+##### [Grubu yönetmek için Grup İlkesi Microsoft Defender Virüsten Koruma](use-group-policy-microsoft-defender-antivirus.md)
+##### [PowerShell cmdlet'lerini kullanarak Microsoft Defender Virüsten Koruma](use-powershell-cmdlets-microsoft-defender-antivirus.md)
+##### [Diğer Windows yönetmek için Araç Yönetimi Aracı'Microsoft Defender Virüsten Koruma](use-wmi-microsoft-defender-antivirus.md)
+##### [Bilgileri yönetmek mpcmdrun.exe Araç Kutusu Microsoft Defender Virüsten Koruma](command-line-arguments-microsoft-defender-antivirus.md)
+##### [Uç noktalarda görünen bildirimleri yapılandırma](configure-notifications-microsoft-defender-antivirus.md)
+##### [Kullanıcıların, ilke ayarlarını yerel olarak Microsoft Defender Virüsten Koruma değiştirip değiştiremezseniz](configure-local-policy-overrides-microsoft-defender-antivirus.md)
+##### [Kullanıcıların bir kullanıcı arabirimini görebilir mi yoksa Microsoft Defender Virüsten Koruma mi olduğunu belirtme](prevent-end-user-interaction-microsoft-defender-antivirus.md)
+
+#### [Dağıtım ve rapor Microsoft Defender Virüsten Koruma](deploy-manage-report-microsoft-defender-antivirus.md)
+##### [Diğer uygulamaları dağıtma ve Microsoft Defender Virüsten Koruma](deploy-microsoft-defender-antivirus.md)
+##### [Sanal masaüstü Microsoft Defender Virüsten Koruma (VDI) ortamında dağıtım kılavuzu](deployment-vdi-microsoft-defender-antivirus.md)
+##### [Raporla ilgili Microsoft Defender Virüsten Koruma](report-monitor-microsoft-defender-antivirus.md)
+
+#### [Taramalar ve düzeltme](review-scan-results-microsoft-defender-antivirus.md)
+##### [Taramalarda isteğe bağlı olarak Microsoft Defender Virüsten Koruma çalıştırma](run-scan-microsoft-defender-antivirus.md)
+##### [Hızlı taramanın sonuçlarını Microsoft Defender Çevrimdışı gözden geçirme](microsoft-defender-offline.md)
+##### [Tarama Microsoft Defender Virüsten Koruma yapılandırma](configure-advanced-scan-types-microsoft-defender-antivirus.md)
+##### [Karantinaya alınmış dosyaları yeni Microsoft Defender Virüsten Koruma](restore-quarantined-files-microsoft-defender-antivirus.md)
+
+#### [Microsoft Defender Virüsten Koruma dışlamaları](configure-exclusions-microsoft-defender-antivirus.md)
+##### [Dosya uzantısına ve klasör konumuna bağlı dışlamalar](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+##### [İşlemler tarafından açılan dosyalar için dışlamalar](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+##### [Windows Server için dışlamalar](configure-server-exclusions-microsoft-defender-antivirus.md)
+##### [Kaçınılması gereken yaygın hatalar](common-exclusion-mistakes-microsoft-defender-antivirus.md)
+
+#### Sorun giderme Microsoft Defender Virüsten Koruma
+##### [Güncelleştirme Microsoft Defender Virüsten Koruma raporlama sorunlarını giderme](troubleshoot-reporting.md)
+##### [Performans sorunlarını giderme](troubleshoot-performance-issues.md)
+##### [Sorunları gidermek için olay günlüklerini ve hata kodlarını Microsoft Defender Virüsten Koruma](troubleshoot-microsoft-defender-antivirus.md)
+##### [Üçüncü Microsoft Defender Virüsten Koruma çözümden ilerlerken sorun giderme](troubleshoot-microsoft-defender-antivirus-when-migrating.md)
+
+#### [Web koruması]()
+##### [Web korumasına genel bakış](web-protection-overview.md)
+##### [Web tehdit koruması]()
+###### [Web tehdit korumasına genel bakış](web-threat-protection.md)
+###### [Web güvenliğini izleme](web-protection-monitoring.md)
+###### [Web tehditlerine yanıt verme](web-protection-response.md)
+##### [Web içeriği filtreleme](web-content-filtering.md)
+
+#### [Cihaz Denetimi]()
+##### [Çıkarılabilir Depolama Koruması](device-control-removable-storage-protection.md)
+##### [Çıkarılabilir Depolama Access Denetimi](device-control-removable-storage-access-control.md)
+##### [Cihaz Yüklemesi](mde-device-control-device-installation.md)
+##### [Cihaz Denetimi Yazıcı Koruması](printer-protection.md)
+##### [Cihaz Denetimi Raporları](device-control-report.md)
+
+#### [Davranışsal engelleme ve engelleme]()
+##### [Davranışsal engelleme ve engelleme](behavioral-blocking-containment.md)
+##### [İstemci davranışı engelleme](client-behavioral-blocking.md)
+##### [Geri bildirim döngüsü engelleme](feedback-loop-blocking.md)
+
+
+### [Uç nokta için Microsoft Defender'da hatalı pozitif/negatifleri adresle](defender-endpoint-false-positives-negatives.md)
+
+
+### [Cihaz yapılandırmasını yönetme]()
+
+#### [Güvenlik taban çizgisine uyumluluğu artırma](configure-machines-security-baseline.md)
+#### [Saldırı yüzeyini azaltma kuralı dağıtımını ve algılamalarını en iyi duruma getirme](configure-machines-asr.md)
+
+## [Tehditleri araştırma ve yanıtlama]()
+### [Uç nokta algılama ve yanıt]()
+#### [Uç nokta algılama ve yanıta genel bakış](overview-endpoint-detection-response.md)
+#### [Güvenlik işlemleri panosu](security-operations-dashboard.md)
+#### [Olay sırası]()
+##### [Olaylar kuyruğu görüntüleme ve düzenleme](view-incidents-queue.md)
+##### [Olayları yönetme](manage-incidents.md)
+##### [Olayları araştırma](investigate-incidents.md)
+
+#### [Uyarılar sırası]()
+##### [Microsoft 365 Defender'de uyarılar sırası](alerts-queue-endpoint-detection-response.md)
+##### [Uyarılar kuyruğu görüntüleme ve düzenleme](alerts-queue.md)
+##### [Uyarıları gözden geçirme](review-alerts.md)
+##### [Uyarıları yönetme](manage-alerts.md)
+##### [Uyarıları araştırma](investigate-alerts.md)
+##### [Dosyaları araştırma](investigate-files.md)
+##### [Cihazları araştır](investigate-machines.md)
+##### [IP adresini araştırma](investigate-ip.md)
+##### [Etki alanını araştırma](investigate-domain.md)
+###### [İleri gelen sunuculardan sonra oluşan bağlantı olaylarını araştırma](investigate-behind-proxy.md)
+##### [Kullanıcı hesabını araştırma](investigate-user.md)
+
+#### [Cihazlar listesi]()
+##### [Cihazlar listesini görüntüleme ve düzenleme](machines-view-overview.md)
+##### [Cihaz zaman çizelgesi olay bayrakları](device-timeline-event-flag.md)
+##### [Cihaz grubunu ve etiketlerini yönetme](machine-tags.md)
+
+#### [Yanıt eylemleri gerçekleştir]()
+##### [Cihazda yanıt eylemleri gerçekleştirin]()
+###### [Cihazlarda yanıt eylemleri](respond-machine-alerts.md)
+###### [Etiketleri yönetme](respond-machine-alerts.md#manage-tags)
+###### [Otomatik araştırma başlatma](respond-machine-alerts.md#initiate-automated-investigation)
+###### [Canlı Yanıt oturumu başlatma](respond-machine-alerts.md#initiate-live-response-session)
+###### [Soruşturma paketini topla](respond-machine-alerts.md#collect-investigation-package-from-devices)
+###### [Virüsten koruma taraması çalıştırma](respond-machine-alerts.md#run-microsoft-defender-antivirus-scan-on-devices)
+###### [Uygulama yürütmeyi kısıtla](respond-machine-alerts.md#restrict-app-execution)
+###### [Cihazları ağdan ayırma](respond-machine-alerts.md#isolate-devices-from-the-network)
+###### [Tehdit uzmanına danışın](respond-machine-alerts.md#consult-a-threat-expert)
+###### [İşlem merkezinde etkinlik ayrıntılarını denetleme](respond-machine-alerts.md#check-activity-details-in-action-center)
+
+##### [Dosyada yanıt eylemleri gerçekleştirin]()
+###### [Dosyalarda yanıt eylemleri](respond-file-alerts.md)
+###### [Ağ içinde dosyaları durdurma ve karantinaya alın](respond-file-alerts.md#stop-and-quarantine-files-in-your-network)
+###### [Dosyayı karantinadan geri yükleme](respond-file-alerts.md#restore-file-from-quarantine)
+###### [Dosyayı engellemek veya dosyaya izin vermek için göstergeler ekleme](respond-file-alerts.md#add-indicator-to-block-or-allow-a-file)
+###### [Tehdit uzmanına danışın](respond-file-alerts.md#consult-a-threat-expert)
+###### [İşlem merkezinde etkinlik ayrıntılarını denetleme](respond-file-alerts.md#check-activity-details-in-action-center)
+###### [Dosya indirme veya toplama](respond-file-alerts.md#download-or-collect-file)
+###### [Derin çözümleme](respond-file-alerts.md#deep-analysis)
+
+#### [Düzeltme eylemlerini görüntüleme ve onaylama](manage-auto-investigation.md)
+##### [Otomatik soruşturmaların ayrıntılarını ve sonuçlarını görüntüleme](auto-investigation-action-center.md)
+
+#### [Canlı yanıt kullanan varlıkları araştırma]()
+##### [Cihazlardaki varlıkları araştırma](live-response.md)
+##### [Canlı yanıt komut örnekleri](live-response-command-examples.md)
+
+#### [Olay yanıtını önceliklendirmek için duyarlılık etiketlerini kullanma](information-protection-investigation.md)
+
+#### [Raporlama]()
+##### [Power BI - API kullanımı - Örnekler](api-power-bi.md)
+##### [Tehdit koruması raporları](threat-protection-reports.md)
+#### [Cihaz durumu ve uyumluluk raporları](machine-reports.md)
+
+### [Gelişmiş av]()
+#### [Gelişmiş ava genel bakış](advanced-hunting-overview.md)
+#### [Şemayı anlama](advanced-hunting-schema-reference.md)
+#### [DeviceAlertEvents](advanced-hunting-devicealertevents-table.md)
+
+### [Tehdit analizine genel bakış](threat-analytics.md)
+#### [Analist raporunu okuma](threat-analytics-analyst-reports.md)
+
+### [EDR modunda çalışma](edr-in-block-mode.md)
+
+### [Otomatik araştırma ve yanıt (AIR)]()
+#### [AIR'e Genel Bakış](automated-investigations.md)
+#### [AIR'de otomasyon düzeyleri](automation-levels.md)
+#### [AIR özelliklerini yapılandırma](configure-automated-investigations-remediation.md)
+
+### [Microsoft Tehdit Uzmanları]()
+#### [Microsoft Tehdit Uzmanları genel bakış](microsoft-threat-experts.md)
+#### [Yeni özellikleri Microsoft Tehdit Uzmanları ve yönetme](configure-microsoft-threat-experts.md)
+
+
+
+## Başvuru
+### [Tehdit zekası kavramlarını anlama](threat-indicator-concepts.md)
+### [Diğer Microsoft çözümleriyle tümleştirmeyi yapılandırma]()
+#### [Koşullu erişimi yapılandırma](configure-conditional-access.md)
+#### [Bulut Uygulamaları tümleştirmesi için Microsoft Defender'ı yapılandırma](microsoft-cloud-app-security-config.md)
+### [Yönetim ve API'ler]()
+#### [Yönetime ve API'lere genel bakış](management-apis.md)
+#### [API sürüm notları](api-release-notes.md)
+#### [Uç Nokta API için Microsoft Defender]()
+##### [Başlarken]()
+###### [Uç Nokta API lisansı ve koşulları için Microsoft Defender](api-terms-of-use.md)
+###### [Uç Nokta API'leri için Microsoft Defender'a erişme](apis-intro.md)
+###### [Merhaba Dünya](api-hello-world.md)
+###### [Uygulama bağlamıyla erişim elde](exposed-apis-create-app-webapp.md)
+###### [Kullanıcı bağlamıyla erişim elde](exposed-apis-create-app-nativeapp.md)
+
+
+
+##### [Uç Nokta API'leri Şeması için Microsoft Defender]()
+###### [Uç Nokta API'leri için desteklenen Microsoft Defender](exposed-apis-list.md)
+###### [Yaygın REST API hata kodları](common-errors.md)
+###### [Gelişmiş Av](run-advanced-query-api.md)
+
+###### [Uyarı]()
+####### [Uyarı yöntemleri ve özellikleri](alerts.md)
+####### [Liste uyarıları](get-alerts.md)
+####### [Uyarı oluştur](create-alert-by-reference.md)
+####### [Toplu güncelleştirme uyarıları](batch-update-alerts.md)
+####### [Güncelleştirme Uyarısı](update-alert.md)
+####### [Uyarı bilgilerini kimlikle al](get-alert-info-by-id.md)
+####### [Uyarı ilgili etki alanları bilgilerini al](get-alert-related-domain-info.md)
+####### [Uyarı ilgili dosya bilgilerini al](get-alert-related-files-info.md)
+####### [Uyarıyla ilgili IP'ler hakkında bilgi al](get-alert-related-ip-info.md)
+####### [Uyarı ile ilgili cihaz bilgilerini al](get-alert-related-machine-info.md)
+####### [Uyarı ilgili kullanıcı bilgilerini al](get-alert-related-user-info.md)
+
+
+###### [Güvenlik açıkları ve güvenli yapılandırma değerlendirmeleri]()
+####### [Değerlendirme yöntemlerini ve özelliklerini dışarı aktarma](get-assessment-methods-properties.md)
+####### [Güvenli yapılandırma değerlendirmesini dışarı aktarma](get-assessment-secure-config.md)
+####### [Yazılım envanteri değerlendirmesini dışarı aktarma](get-assessment-software-inventory.md)
+####### [Yazılım açıkları değerlendirmesini dışarı aktarma](get-assessment-software-vulnerabilities.md)
+
+###### [Otomatik Araştırma]()
+####### [Araştırma yöntemleri ve özellikleri](investigation.md)
+####### [Liste İncelemesi](get-investigation-collection.md)
+####### [Araştırma Al](get-investigation-object.md)
+####### [Araştırmayı Başlat](initiate-autoir-investigation.md)
+
+###### [Etki alanı]()
+####### [Etki alanıyla ilgili uyarıları al](get-domain-related-alerts.md)
+####### [Etki alanıyla ilgili makineleri al](get-domain-related-machines.md)
+####### [Etki alanı istatistiklerini al](get-domain-statistics.md)
+
+###### [Dosya]()
+####### [Dosya yöntemleri ve özellikleri](files.md)
+####### [Dosya bilgilerini al](get-file-information.md)
+####### [Dosyayla ilgili uyarıları al](get-file-related-alerts.md)
+####### [Dosyayla ilgili makineler al](get-file-related-machines.md)
+####### [Dosya istatistiklerini al](get-file-statistics.md)
+
+###### [Göstergeler]()
+####### [Gösterge yöntemleri ve özellikleri](ti-indicator.md)
+####### [Liste Göstergeleri](get-ti-indicators-collection.md)
+####### [Gönderme Göstergesi](post-ti-indicator.md)
+####### [İçeri Aktarma Göstergesi](import-ti-indicators.md)
+####### [Silme Göstergesi](delete-ti-indicator-by-id.md)
+
+###### [IP]()
+####### [IP ile ilgili uyarıları al](get-ip-related-alerts.md)
+####### [IP istatistiklerini al](get-ip-statistics.md)
+
+
+###### [Makine]()
+####### [Makine yöntemleri ve özellikleri](machine.md)
+####### [Liste makineleri](get-machines.md)
+####### [Makineye kimlikle sahip olmak](get-machine-by-id.md)
+####### [Kullanıcılarda makine günlüğünü al](get-machine-log-on-users.md)
+####### [Makineyle ilgili uyarıları al](get-machine-related-alerts.md)
+####### [Yüklü yazılımı al](get-installed-software.md)
+####### [Bulunan güvenlik açıklarını elde eder](get-discovered-vulnerabilities.md)
+####### [Güvenlik önerileri al](get-security-recommendations.md)
+####### [Makine etiketleri ekleme veya kaldırma](add-or-remove-machine-tags.md)
+####### [IP'ye göre makineler bulma](find-machines-by-ip.md)
+####### [Makinelerini etikete göre bulma](find-machines-by-tag.md)
+####### [Eksik KB'leri al](get-missing-kbs-machine.md)
+####### [Cihaz değerini ayarlama](set-device-value.md)
+####### [Makine güncelleştirme](update-machine-method.md)
+
+
+
+###### [Makine Eylemi]()
+####### [Makine Eylemi yöntemleri ve özellikleri](machineaction.md)
+####### [Makine Eylemlerini Listele](get-machineactions-collection.md)
+####### [Makine Eylemi Al](get-machineaction-object.md)
+####### [Soruşturma paketini topla](collect-investigation-package.md)
+####### [Araştırma paketi SAS URI'lerini al](get-package-sas-uri.md)
+####### [Canlı yanıt sonucu al](get-live-response-result.md)
+####### [Makinesi yalıt](isolate-machine.md)
+####### [Makineye yalıtımdan çıkış](unisolate-machine.md)
+####### [Uygulama yürütmeyi kısıtla](restrict-code-execution.md)
+####### [Uygulama kısıtlamalarını kaldırma](unrestrict-code-execution.md)
+####### [Virüsten koruma taraması çalıştırma](run-av-scan.md)
+####### [Canlı yanıt çalıştır](run-live-response.md)
+####### [Offboard makinesi](offboard-machine-api.md)
+####### [Dosyayı durdurma ve karantinaya alın](stop-and-quarantine-file.md)
+####### [Makine eylemini iptal etme](cancel-machine-action.md)
+
+###### [Öneri]()
+####### [Öneri yöntemleri ve özellikleri](recommendation.md)
+####### [Tüm önerileri listele](get-all-recommendations.md)
+####### [Kimlikle öneriyi al](get-recommendation-by-id.md)
+####### [Yazılıma göre öneri al](list-recommendation-software.md)
+####### [Öneriye göre liste makineleri](get-recommendation-machines.md)
+####### [Öneriye göre açıkları listele](get-recommendation-vulnerabilities.md)
+
+###### [Düzeltme etkinliği]()
+####### [Düzeltme etkinliği yöntemleri ve özellikleri](get-remediation-methods-properties.md)
+####### [Kimlikle bir düzeltme etkinliği elde](get-remediation-one-activity.md)
+####### [Tüm düzeltme etkinliklerini listele](get-remediation-all-activities.md)
+####### [Bir düzeltme etkinliğinin açık cihazları listesi](get-remediation-exposed-devices-activities.md)
+
+###### [Puan]()
+####### [Puan yöntemleri ve özellikleri](score.md)
+####### [Makine grubuna göre açık kalma puanı listesi](get-machine-group-exposure-score.md)
+####### [Pozlama puanı elde](get-exposure-score.md)
+####### [Cihazın güvenli puanını al](get-device-secure-score.md)
+
+###### [Yazılım]()
+####### [Yazılım yöntemleri ve özellikleri](software.md)
+####### [Liste yazılımı](get-software.md)
+####### [Yazılımı kimlikle al](get-software-by-id.md)
+####### [Liste yazılım sürümü dağıtımı](get-software-ver-distribution.md)
+####### [Yazılıma göre liste makineleri](get-machines-by-software.md)
+####### [Yazılıma göre açıkları listele](get-vuln-by-software.md)
+####### [Eksik KB'leri al](get-missing-kbs-software.md)
+
+###### [Kullanıcı]()
+####### [Kullanıcı yöntemleri](user.md)
+####### [Kullanıcıyla ilgili uyarıları al](get-user-related-alerts.md)
+####### [Kullanıcıyla ilgili makineler al](get-user-related-machines.md)
+
+###### [Güvenlik Açığı]()
+####### [Güvenlik açığı yöntemleri ve özellikleri](vulnerability.md)
+####### [Liste güvenlik açıkları](get-all-vulnerabilities.md)
+####### [Makine ve yazılıma göre güvenlik açıklarını listele](get-all-vulnerabilities-by-machines.md)
+####### [Kimlik ile güvenlik açığını karşıla](get-vulnerability-by-id.md)
+####### [Güvenlik açığına göre liste makineleri](get-machines-by-vulnerability.md)
+
+##### [API'leri kullanma - Örnekler]()
+###### [Power Automate](api-microsoft-flow.md)
+###### [Power BI](api-power-bi.md)
+###### [Python Kullanarak Gelişmiş Av](run-advanced-query-sample-python.md)
+###### [PowerShell kullanarak Gelişmiş Av](run-advanced-query-sample-powershell.md)
+###### [OData Sorgularını Kullanma](exposed-apis-odata-samples.md)
+
+
+#### [Ham veri akışı API'si]()
+##### [Ham veri akışı](raw-data-export.md)
+##### [Azure Events hub'a gelişmiş av etkinliklerini akışla izle](raw-data-export-event-hub.md)
+##### [Depolama hesabınıza gelişmiş av etkinliklerini akışla izle](raw-data-export-storage.md)
+
+#### [SIEM tümleştirmesi]()
+##### [SIEM araçlarını Uç Nokta için Microsoft Defender ile tümleştirin](configure-siem.md)
+##### [SIEM aracı tümleştirme sorunlarını giderme](troubleshoot-siem.md)
+
+#### [API'& iş ortakları]()
+##### [İş ortağı uygulamaları](partner-applications.md)
+##### [Bağlı uygulamalar](connected-applications.md)
+##### [API gezgini](api-explorer.md)
+
+#### [Rol tabanlı erişim denetimi]()
+##### [RBAC kullanarak portal erişimini yönetme](rbac.md)
+##### [Rolleri oluşturma ve yönetme](user-roles.md)
+##### [Cihaz grupları oluşturma ve yönetme]()
+###### [Cihaz gruplarını kullanma](machine-groups.md)
+###### [Cihaz etiketlerini oluşturma ve yönetme](machine-tags.md)
+
+
+
+
+
+
+
+### [Yönetilen güvenlik hizmeti sağlayıcısı (MSSP) tümleştirmesi]()
+#### [Yönetilen güvenlik hizmeti sağlayıcısı tümleştirmesi yapılandırma](configure-mssp-support.md)
+#### [Desteklenen yönetilen güvenlik hizmeti sağlayıcıları](mssp-list.md)
+#### [Portala MSSP erişimi ver](grant-mssp-access.md)
+#### [MSSP müşteri portalına erişme](access-mssp-portal.md)
+#### [Uyarı bildirimlerini yapılandırma](configure-mssp-notifications.md)
+#### [İş ortağı uygulaması erişimi al](exposed-apis-create-app-partners.md)
+#### [Müşteri kiracısı uyarılarını getirme](fetch-alerts-mssp.md)
+#### [Yönetilen güvenlik hizmeti sağlayıcısı fırsatı](mssp-support.md)
+### [İş ortağı tümleştirme senaryoları]()
+#### [Teknik iş ortağı fırsatları](partner-integration.md)
+#### [Uç nokta iş ortağı için Microsoft Defender'a olun](get-started-partner-integration.md)
+### [Tümleştirmeler]()
+#### [Uç Nokta tümleştirmeleri için Microsoft Defender](threat-protection-integration.md)
+#### [Koşullu erişimle kullanıcıları, verileri ve cihazları koruma](conditional-access.md)
+#### [Bulut Uygulamaları için Microsoft Defender tümleştirmeye genel bakış](microsoft-cloud-app-security-integration.md)
+
+### [Web görünümüne genel Windows koruması]()
+#### [Windows tümleştirmesi](information-protection-in-windows-overview.md)
+
+### [Uç Nokta Güvenlik Merkezi için Microsoft Defender'Community erişme](community.md)
+
+### [Yararlı kaynaklar](helpful-resources.md)
+
+## [Sorun giderme]()
+### [Algılayıcı durumu sorunlarını giderme]()
+#### [Algılayıcı durumunu denetleme](check-sensor-status.md)
+#### [Sağlıksız algılayıcıları düzelt](fix-unhealthy-sensors.md)
+#### [Etkin olmayan cihazlar](fix-unhealthy-sensors.md#inactive-devices)
+#### [Yanlış yapılandırılmış cihazlar](fix-unhealthy-sensors.md#misconfigured-devices)
+#### [Olay Görüntüleyicisi ile makinelerde algılayıcı olaylarını ve hatalarını gözden geçirme](event-error-codes.md)
+
+### [İstemci Çözümleyicisi'ni kullanarak algılayıcı sistem durumu sorunlarını giderme]()
+#### [İstemci çözümleyicisi genel bakış](overview-client-analyzer.md)
+#### [İstemci çözümleyicisini indirme ve çalıştırma](download-client-analyzer.md)
+#### [Çözümleyicide istemci çözümleyicisini Windows](run-analyzer-windows.md)
+#### [macOS veya Linux'ta istemci çözümleyicisini çalıştırın](run-analyzer-macos-linux.md)
+#### [Windows'ta gelişmiş sorun giderme için veri Windows](data-collection-analyzer.md)
+#### [Çözümleyici HTML raporunu anlama](analyzer-report.md)
+#### [İstemci çözümleyicisi aracı hakkında geri bildirim sağlama](analyzer-feedback.md)
+
+ 
+
+### [Uç nokta hizmet sorunları için Microsoft Defender'da sorun giderme]()
+#### [Hizmet sorunlarını giderme](troubleshoot-mdatp.md)
+#### [Uç nokta desteği için Microsoft Defender'a başvurun](contact-support.md)
+
+### [Canlı yanıt sorunlarını giderme](troubleshoot-live-response.md)
+
+### [LiveAnalyzer kullanarak destek günlüklerini toplama](troubleshoot-collect-support-log.md)
+
+### [Saldırı yüzeyini azaltma sorunlarını giderme]()
+#### [Ağ koruması](troubleshoot-np.md)
+#### [Saldırı yüzeyini azaltma kuralları](troubleshoot-asr.md)
+#### [Saldırı yüzeyini azaltma kurallarına geçiş](migrating-asr-rules.md)
+
+# [Microsoft 365 Defender belgeleri]()
+## [Microsoft 365 Defender](../defender/index.yml)
+## [Office 365 için Defender](../office-365-security/index.yml)
+## [Kimlik için Defender](/defender-for-identity/)
+## [Bulut Uygulamaları için Defender](/cloud-app-security/)
+## [İş için Defender](../defender-business/index.yml)
+
