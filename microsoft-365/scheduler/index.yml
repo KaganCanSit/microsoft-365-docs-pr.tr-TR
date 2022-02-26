@@ -1,0 +1,35 @@
+### YamlMime:Hub
+title: Program için Zamanlayıcı Microsoft 365
+summary: Web siteyi kullanarak toplantı zamanlaması için Microsoft 365 Zamanlayıcı'nın nasıl ayar Cortana.
+brand: m365
+metadata:
+  title: Program için Zamanlayıcı Microsoft 365
+  description: Web siteyi kullanarak toplantı zamanlaması için Microsoft 365 Zamanlayıcı'nın nasıl ayar Cortana.
+  ms.service: exchange-online
+  ms.topic: hub-page
+  author: AshaIyengar21
+  ms.author: v-aiyengar
+  manager: serdars
+  audience: Admin
+  ms.date: 04/23/2021
+additionalContent:
+  sections:
+    - items:
+        - title: Program için Zamanlayıcı nedir Microsoft 365?
+          summary: 'For Scheduler for Microsoft 365 özellikleri, kimin ve nasıl faydaları olduğunu öğrenin.'
+          url: scheduler-overview.md
+        - title: Güven ve gizlilik
+          summary: Web uygulamaları için Zamanlayıcı'nın Microsoft 365 ve Gizliliğinizin korunarak korunmasını nasıl sağlar hakkında bilgi edin.
+          url: scheduler-trust-privacy.md
+        - title: Program için Zamanlayıcı'ya Microsoft 365
+          summary: Program için Scheduler'ın neleri ayarlaması Microsoft 365.
+          url: scheduler-setup.md
+        - title: Program için Scheduler'Microsoft 365
+          summary: Daha fazla bilgi için Scheduler'ın Microsoft 365.
+          url: scheduler-using.md
+        - title: Dinamik yinelenen toplantılar zamanlama
+          summary: 'Dinamik yinelenen toplantıları zamanlama hakkında daha fazla bilgi edinmek için:'
+          url: scheduler-recurring-meetings.md
+        - title: Zamanlayıcı hakkında SSS
+          summary: Zamanlama'da sık sorulan sorular ve Microsoft 365.
+          url: scheduler-faqs.md

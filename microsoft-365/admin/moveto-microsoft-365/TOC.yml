@@ -1,0 +1,22 @@
+- name: Google Workspace'den Başka bir Microsoft 365
+  items:
+    - name: Genel bakış
+      href: move-from-google-workspace-overview.md
+    - name: Microsoft 365’e kaydolma
+      href: /admin-overview/sign-up-for-office-365?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
+    - name: Google Microsoft 365 ayarlama
+      href: set-up-microsoft-365-forgoogle.md
+    - name: Mobil cihazlar için güvenlik Windows ayarlama
+      href: ../setup/secure-win-10-pcs.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
+    - name: Google Workspace Etki Alanı Ekleme
+      href: add-google-domain.md
+    - name: Uygulama Office yükleme ve Microsoft Teams
+      href: ../setup/install-applications.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
+    - name: 'E-postayı, takvimi ve kişileri başka bir Microsoft 365'
+      href: migrate-email.md
+    - name: Bağlan'e Microsoft 365
+      href: connect-domain-tom365.md
+    - name: Herkesin verilerini taşımak için Geçiş Yöneticisi'ni kullanma
+      href: migrate-files-migration-manager.md
+    - name: Google Workspace'i iptal etme
+      href: cancel-google.md

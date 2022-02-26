@@ -1,0 +1,116 @@
+### YamlMime:Landing
+title: İş için Microsoft Defender
+summary: İş için Microsoft Defender şu anda önizlemede ve istekte etmek için kaydolan müşterilere ve IT İş Ortaklarına aşamalı olarak aşamalı olarak tüm müşterilere aşamalı olarak gönderilir. Önümüzdeki haftalarda bir ilk müşteri ve iş ortağı kümesi sunuyoruz ve genel kullanılabilirlik durumuna kadar önizlemeyi genişleteceğiz. Önizlemenin bir dizi ilk senaryoyla başlat olacağını ve düzenli olarak özellikler ekley olacacaz.
+metadata:
+  title: İş için Microsoft Defender belgeleri
+  description: İş için Microsoft Defender'a genel bakış ve kurulum bilgilerine bakın
+  ms.prod: 365-security
+  ms.technology: mdb
+  ms.topic: landing-page
+  ms.collection:
+  - SMB
+  - M365-security-compliance
+  - m365-initiative-defender-business
+  ms.custom: intro-hub-or-landing
+  author: denisebmsft
+  ms.author: deniseb
+  ms.date: 02/08/2022
+  ms.openlocfilehash: e612ef906d7e095fc3b95cccd09a90565818c717
+  ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 02/09/2022
+  ms.locfileid: "62970631"
+landingContent:
+- title: Genel bakış
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: İş için Defender nedir?
+      url: mdb-overview.md
+    - text: Basitleştirilmiş yapılandırma işlemi
+      url: mdb-simplified-configuration.md
+    - text: Küçük ve orta ölçekli işletmeler için planları karşılaştırma
+      url: compare-mdb-m365-plans.md
+    - text: Microsoft 365 Lighthouse ile tümleştirme
+      url: mdb-lighthouse-integration.md
+- title: Kullanmaya başlayın
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: İş için Defender'ı al
+      url: get-defender-business.md
+    - text: Kurulum sihirbazını kullanma
+      url: mdb-use-wizard.md
+    - text: Portalda gezinme
+      url: mdb-get-started.md
+    - text: Threat & Vulnerability Management panosu'nızı görüntüleme
+      url: mdb-view-tvm-dashboard.md
+    - text: Öğreticileri ve benzetimleri deneyin
+      url: mdb-tutorials.md
+- title: Ayarlama ve yapılandırma
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Kuruluma genel bakış
+      url: mdb-setup-configuration.md
+    - text: 1. Adım - Gereksinimleri gözden geçirme
+      url: mdb-requirements.md
+    - text: 2. Adım - Roller ve izinler atama
+      url: mdb-roles-permissions.md
+    - text: 3. Adım - E-posta bildirimlerini ayarlama
+      url: mdb-email-notifications.md
+    - text: 4. Adım - Cihazları ekleme
+      url: mdb-onboard-devices.md
+    - text: 5. Adım - Güvenlik ayarlarını yapılandırma
+      url: mdb-view-edit-policies.md
+- title: Tehditleri görüntüleme ve yanıtlama
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Olayları görüntüleme ve yönetme
+      url: mdb-view-manage-incidents.md
+    - text: Tehditleri yanıtlama ve azaltmak
+      url: mdb-respond-mitigate-threats.md
+    - text: Düzeltme eylemlerini gözden geçirme
+      url: mdb-review-remediation-actions.md
+    - text: Raporları görüntüleme ve kullanma
+      url: mdb-reports.md
+- title: Güvenlik ilkelerini yönetme
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: İlkeleri görüntüleme, düzenleme ve oluşturma
+      url: mdb-view-edit-create-policies.md
+    - text: Güvenlik duvarı ilkeleri için kuralları yönetme
+      url: mdb-custom-rules-firewall.md
+  - linkListType: reference
+    links:
+    - text: İlke sırası
+      url: mdb-policy-order.md
+    - text: Yeni nesil koruma ayarları
+      url: mdb-next-gen-configuration-settings.md
+    - text: Güvenlik duvarı ayarları
+      url: mdb-firewall.md
+- title: Cihazları yönet
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Cihazları görüntüleme ve yönetme
+      url: mdb-manage-devices.md
+    - text: Cihaz grupları oluşturma
+      url: mdb-create-edit-device-groups.md
+    - text: Cihazları ekleme
+      url: mdb-onboard-devices.md
+- title: Yardım ve destek
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Yardım almak veya de destek ile iletişim kurmak
+      url: mdb-get-help.md
+    - text: Sık sorulan sorular
+      url: mdb-faq.yml
+    - text: Sorun giderme
+      url: mdb-troubleshooting.yml
+    - text: Microsoft 365 Lighthouse
+      url: /microsoft-365/lighthouse/m365-lighthouse-overview

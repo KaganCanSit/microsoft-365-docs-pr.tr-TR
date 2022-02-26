@@ -1,0 +1,94 @@
+### YamlMime:Landing
+title: Microsoft 365 belgeleri
+summary: Microsoft 365 Defender portalı, birden çok güvenlik teknolojilerini tek bir kapsamlı yönetim konsolunda birleştir ve kurumunuzu korumaya yardımcı olacak geliştirmeler sunar.
+metadata:
+  title: Microsoft 365 belgeleri
+  description: 'Uç nokta için Microsoft Defender hakkında bilgi: Uç noktaları siber tehditlerden nasıl korur ve güvenlik işlem ekiplerine tehditleri düzeltme özellikleri sağlar.'
+  services: office-365-security-compliance
+  ms.prod: m365-security
+  ms.technology: m365d
+  ms.topic: landing-page
+  ms.collection: m365-security-compliance
+  author: mjcaparas
+  ms.author: macapara
+  ms.date: 02/05/2021
+  ms.localizationpriority: high
+  ms.openlocfilehash: 199f3005de41d8b97b6ae110740d687d5d4692e9
+  ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 11/19/2021
+  ms.locfileid: "62970599"
+landingContent:
+- title: Microsoft 365 Defender
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Giriş Microsoft 365 Defender
+      url: defender/microsoft-365-defender.md
+- title: Ücretsiz denemelerle başlama
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Değerlendirme Microsoft 365 Defender
+      url: defender/eval-overview.md
+    - text: Microsoft 365 Defender pilot playbook
+      url: defender/eval-overview.md
+- title: Uzaktan iş gücünüzün güvenliğini sağlama
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Uzaktan iş gücünüzün güvenliğini sağlama
+      url: /enterprise-mobility-security/remote-work/
+- title: Kimlik için Microsoft Defender
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Kimlik için Microsoft Defender nedir?
+      url: /azure-advanced-threat-protection/what-is-atp
+    - text: Kimlik mimarisi için Microsoft Defender
+      url: /azure-advanced-threat-protection/atp-architecture
+- title: Office 365 için Defender
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Office 365 için Defender nedir?
+      url: office-365-security/defender-for-office-365.md
+    - text: Office 365 hizmet açıklaması için Defender
+      url: /office365/servicedescriptions/office-365-advanced-threat-protection-service-description
+- title: Uç Nokta için Microsoft Defender
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Uç Nokta için Microsoft Defender nedir?
+      url: defender-endpoint/microsoft-defender-endpoint.md
+    - text: Microsoft Defender Güvenlik Merkezi portalına genel bakış
+      url: defender-endpoint/portal-overview.md
+- title: Bulut için Microsoft Defender
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Bulut için Microsoft Defender nedir?
+      url: /azure/security-center/security-center-intro
+    - text: Desteklenen özellikler
+      url: /azure/security-center/security-center-services
+- title: Bulut Uygulamaları için Microsoft Defender
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Bulut Uygulamaları için Microsoft Defender nedir?
+      url: /cloud-app-security/what-is-cloud-app-security
+    - text: Bulut Uygulamaları için Microsoft Defender ile çalışmaya başlama
+      url: /cloud-app-security/getting-started-with-cloud-app-security
+- title: Güvenlik yönetimi
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Skoru güvenli hale
+      url: defender/microsoft-secure-score.md
+- title: Microsoft Sentinel
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Microsoft Sentinel nedir?
+      url: /azure/sentinel/overview

@@ -1,0 +1,129 @@
+### YamlMime:Landing
+title: Office 365 belgeleri için Microsoft Defender
+summary: E-postanızı ve işbirliği araçlarınızı daha iyi korumak Office 365 için Defender for Office 365 güçlü güvenlik çözümleri hakkında bilgi alın.
+metadata:
+  title: Office 365 için Microsoft Defender güvenlik belgeleri
+  description: E-postanızı ve işbirliği araçlarınızı daha iyi korumak Office 365 için Defender for Office 365 güçlü güvenlik çözümleri hakkında bilgi alın.
+  services: office-365-security-compliance
+  ms.prod: m365-security
+  ms.technology: mdo
+  ms.topic: landing-page
+  ms.collection: m365-security-compliance
+  ms.custom: intro-hub-or-landing
+  author: mjcaparas
+  ms.author: macapara
+  ms.date: 04/13/2021
+  ms.localizationpriority: high
+  ms.openlocfilehash: c132c68ba56dedd7ae38ba4c922f815f316bb062
+  ms.sourcegitcommit: 36a19d80fe3f053df0fec398a7ff2dfc777f9730
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 12/30/2021
+  ms.locfileid: "62970608"
+landingContent:
+- title: Office 365 & Exchange Online Protection için Defender
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Office 365 güvenliğine genel bakış
+      url: overview.md
+    - text: EOP'de Önceden belirlenmiş güvenlik ilkeleri ve Güvenlik için Defender ile Office 365
+      url: preset-security-policies.md
+- title: Office 365 için Defender ile çalışmaya Office 365
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Tehditlere karşı koruma
+      url: protect-against-threats.md
+    - text: EOP ve Office 365 için Microsoft Defender'da önceden ayarlanmış güvenlik Office 365
+      url: preset-security-policies.md
+    - text: Office 365 için Microsoft Defender'daki Office 365
+      url: whats-new-in-defender-for-office-365.md
+- title: Defender'ı Office 365
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Defender'ı Office 365
+      url: office-365-evaluation.md
+    - text: Geçiş Exchange Online Protection
+      url: switch-to-eop-from-google-postini-the-barracuda-spam-and-virus-firewall-or-cisco.md
+- title: E-posta Kimlik Doğrulaması korumasını ayarlama
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: SPF'yi, sanallık engellemeye yardımcı olacak şekilde ayarlama
+      url: set-up-spf-in-office-365-to-help-prevent-spoofing.md
+    - text: Özel etki alanınıza gönderilen giden e-postayı doğrulamak için DKIM kullanma
+      url: use-dkim-to-validate-outbound-email.md
+    - text: E-postayı doğrulamak için DMARC kullanma
+      url: use-dmarc-to-validate-email.md
+- title: Ayarlama Exchange Online Protection
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Exchange Online Protection genel bakış
+      url: exchange-online-protection-overview.md
+    - text: EOP ve Güvenlik ayarları için Microsoft Defender Office 365 önerilen ayarlar
+      url: recommended-settings-for-eop-and-office365.md
+- title: Engelleme
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Kiracınızı Microsoft 365 güvenliği için yapılandırma
+      url: tenant-wide-setup-for-increased-security.md
+    - text: Office 365 için EOP ve Defender'da yapılandırma çözümleyicisi Office 365
+      url: configuration-analyzer-for-security-policies.md
+    - text: Saldırı benzetimi eğitimi ile içgörüler edinin
+      url: attack-simulation-training-insights.md
+- title: Algılama
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Exchange Online'ta posta akış kuralları (aktarım kuralları)
+      url: /exchange/security-and-compliance/mail-flow-rules/mail-flow-rules
+    - text: Tehdit İzleyicileri
+      url: threat-trackers.md
+    - text: Güvenlik ve Uyumluluk Merkezi'nde akıllı & öngörüler
+      url: reports-and-insights-in-security-and-compliance.md
+- title: Araştır
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Tehdit Gezgini'nde görünümler ve gerçek zamanlı algılamalar
+      url: threat-explorer-views.md
+    - text: Yardım için Microsoft Defender'da Kampanya Office 365
+      url: campaigns.md
+    - text: Dosyada teslim edilen kötü amaçlı e-postaları Office 365
+      url: investigate-malicious-email-that-was-delivered.md
+    - text: Office 365 raporları için Defender'ı görüntüleme
+      url: view-reports-for-mdo.md
+- title: EOP'de araştırma
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: EOP'de raporlama ve ileti izleme
+      url: reporting-and-message-trace-in-exchange-online-protection.md
+    - text: Yönetici denetim günlüğünü görüntüleme
+      url: /exchange/security-and-compliance/exchange-auditing-reports/view-administrator-audit-log
+- title: Yanıtla
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Posta ile teslim edilen kötü amaçlı e-postaları Office 365
+      url: remediate-malicious-email-delivered-office-365.md
+    - text: Güvenliği Tehlikeye E-posta Hesabını Yanıtlama
+      url: responding-to-a-compromised-email-account.md
+    - text: Kuralları ve Outlook Form Ekleme Saldırılarını Düzeltme
+      url: detect-and-remediate-outlook-rules-forms-attack.md
+    - text: Hatalı Pozitif/Yanlış NegatifLeri Gönderme
+      url: admin-submission.md
+- title: Otomatik
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Office 365 için Defender'da Otomatik Araştırma ve Yanıt (AIR) nasıl Office 365
+      url: automated-investigation-response-office.md
+    - text: Başlarken Defender'da AIR ile Office 365
+      url: office-365-air.md
+    - text: AIR ile güvenliği ihlal edilmiş kullanıcı hesaplarıyla ilgili adres
+      url: address-compromised-users-quickly.md

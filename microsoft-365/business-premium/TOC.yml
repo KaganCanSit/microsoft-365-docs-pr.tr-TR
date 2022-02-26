@@ -1,0 +1,70 @@
+- name: Microsoft 365 Business Premium
+  items:
+    - name: Genel bakış
+      href: index.md
+    - name: Microsoft 365 İş Ekstra’yı edinin
+      href: get-microsoft-365-business-premium.md
+    - name: Kampanyalar Microsoft 365 daha fazla yardım edinin
+      href: get-microsoft-365-campaigns.md
+    - name: Microsoft 365 verilerinizi nasıl korur?
+      href: m365-campaigns-users.md
+- name: Kurulum ve oturum açma
+  items:
+    - name: Genel bakış
+      href: microsoft-365-campaigns-setup-overview.md
+    - name: Kaydol
+      href: m365-campaigns-sign-up.md
+    - name: (yalnızca ilk kez)
+      href: ../business/set-up.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
+    - name: Oturum açın
+      href: m365-campaigns-sign-in.md
+    - name: Oturum açma sayfasını özelleştirme
+      href: m365-customize-sign-in.md
+    - name: Kullanıcıları ekleme
+      href: ../admin/add-users/add-users.md?bc=%2fmicrosoft-365%2fcampaigns%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fcampaigns%2ftoc.json
+- name: Güvenlik korumasıyla çarpma
+  items:
+    - name: Genel bakış
+      href: m365-campaigns-security-overview.md
+    - name: Yönetici hesaplarını koruma
+      href: m365-campaigns-protect-admin-accounts.md
+    - name: Verilerinize erişimi koruma
+      href: m365-campaigns-conditional-access.md
+    - name: Kötü amaçlı yazılıma ve diğer tehditlere karşı koruma
+      href: m365-campaigns-increase-protection.md
+- name: Tüm personel için cihaz kurulumu
+  items:
+    - name: Çok faktörlü kimlik doğrulamasını ayarlama
+      href: m365-campaigns-multifactor-authentication.md
+    - name: Mobil cihazları ayarlama
+      href: ../business/set-up-mobile-devices.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
+    - name: PC ve Mac'leri koruma
+      href: m365-campaigns-protect-pcs-macs.md
+    - name: Yönetilen cihazları Windows ayarlama
+      href: ../business/set-up-windows-devices.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
+- name: Tüm personel için e-postayı koruma
+  items:
+    - name: Kimlik avına ve diğer saldırılara karşı koruma
+      href: m365-campaigns-phishing-and-attacks.md
+    - name: Şifreli e-posta gönderme
+      href: send-encrypted-email.md
+- name: Güvenli bir şekilde işbirliği yapma ve paylaşma
+  items:
+    - name: İşbirliği Teams oluşturma
+      href: create-teams-for-collaboration.md
+    - name: Toplantı ayarlama
+      href: set-up-meetings.md
+    - name: Dosya ve video paylaşma
+      href: share-files-and-videos.md
+    - name: Organizasyonunız için bir İletişim sitesi oluşturma
+      href: create-communications-site.md
+- name: Cihazlarda kampanya verilerini sıfırlama veya kaldırma
+  items:
+    - name: Kampanyayı veya iş verilerini kaldırma
+      href: ../business/remove-company-data.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
+    - name: Cihazları fabrika ayarlarına sıfırlama
+      href: ../business/reset-devices-to-factory-settings.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
+- name: Güvenlik olayı yönetimi
+  items:
+    - name: Güvenliği ihlal edilmiş bir e-posta hesabını yanıtlama
+      href: ../security/office-365-security/responding-to-a-compromised-email-account.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json

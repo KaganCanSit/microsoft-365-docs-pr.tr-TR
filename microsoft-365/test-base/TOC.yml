@@ -1,0 +1,44 @@
+- name: Test Temel belgeleri
+  href: index.yml
+- name: Genel bakış
+  items:
+    - name: Test Tabanı nedir?
+      href: overview.md
+- name: Hızlı Başlangıç
+  items:
+    - name: Test Temel Hesabı Oluştur
+      href: createAccount.md
+    - name: Paket Oluşturma
+      href: buildpackage.md
+    - name: Paketi Karşıya Yükleme
+      href: uploadApplication.md
+    - name: Upload Ikili & Bağımlılıkları
+      href: binaries.md
+    - name: Test Görevlerini Ayarlama
+      href: testtask.md
+    - name: Sınama Seçeneklerini Ayarlama
+      href: testoptions.md
+    - name: Gözden Geçir
+      href: review.md
+    - name: Paket kılavuzu
+      href: contentguideline.md
+    - name: Uygulama/Test kuralları
+      href: rules.md
+- name: Nasıl bilgili kılavuzlar
+  items:
+    - name: Sunucu uygulama testi
+      href: server.md
+    - name: İşlevsel test
+      href: functional.md
+    - name: Özellik güncelleştirmesi doğrulaması
+      href: feature.md
+    - name: Bellek Regresyon Çözümlemesi
+      href: memory.md
+    - name: CPU Regresyon Çözümlemesi
+      href: cpu.md
+    - name: SDK & API
+      href: sdkapi.md
+- name: Başvuru
+  items:
+    - name: Sık Sorulan Sorular
+      href: faq.md

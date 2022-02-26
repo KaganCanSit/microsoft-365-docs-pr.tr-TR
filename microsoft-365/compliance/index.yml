@@ -1,0 +1,87 @@
+### YamlMime:Landing
+title: Microsoft 365 uyumluluğu belgeleri
+summary: Yasal veya mevzuat standartlarına uyması gerekiyorsa, uyumluluk hakkında daha fazla bilgi edinmek için buradan Microsoft 365.
+metadata:
+  title: Microsoft 365 uyumluluğu belgeleri
+  description: Bu sayfa, uyumluluk özellikleriyle ilgili bazı önemli konuların Microsoft 365 içerir. Uyumlulukla ilgili daha fazla bilgi edinmek için buradan Microsoft 365.
+  services: office-365-security-compliance
+  ms.service: O365-seccomp
+  ms.subservice: subservice
+  ms.topic: landing-page
+  ms.collection: m365-security-compliance
+  ms.custom: intro-hub-or-landing
+  author: robmazz
+  ms.author: robmazz
+  ms.date: 09/20/2019
+  ms.localizationpriority: high
+  ms.openlocfilehash: 2e29c9e97a266fdf2ea4b6c712c400143971f447
+  ms.sourcegitcommit: d7cdbdda9b829c49caa3105eb47d3f26b88a5daf
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 01/03/2022
+  ms.locfileid: "62970611"
+landingContent:
+- title: Yönetimle ilgili bilgi & yönetme
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Verilerinizi bilebilirsiniz
+      url: information-protection.md#know-your-data
+    - text: Verilerinizi koruyun
+      url: information-protection.md#protect-your-data
+    - text: Veri kaybını önleme
+      url: information-protection.md#prevent-data-loss
+    - text: Verilerinizi yönetme
+      url: manage-information-governance.md
+    - text: 'Learning yolu: Bilgi korumasını ve idareyi yönetme'
+      url: /learn/paths/m365-compliance-information
+- title: Insider risklerini yönetme
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Insider risk yönetimi
+      url: insider-risk-management.md
+    - text: İletişim uyumluluğu
+      url: communication-compliance.md
+    - text: Bilgi engelleri
+      url: information-barriers.md
+    - text: Ayrıcalıklı erişim yönetimi
+      url: privileged-access-management-overview.md
+    - text: Müşteri Kasası
+      url: customer-lockbox-requests.md
+- title: Keşfetme ve yanıtlama
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Gelişmiş eKeşif
+      url: overview-ediscovery-20.md
+    - text: Core eKovery
+      url: ./get-started-core-ediscovery.md
+    - text: İçerik arama
+      url: search-for-content.md
+    - text: Denetim
+      url: search-the-audit-log-in-security-and-compliance.md
+- title: Mevzuat uyumluluğu ile çalışmaya başlama
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Uyumluluk Yöneticisi
+      url: compliance-manager.md
+    - text: GDPR uyumluluk eylem planı
+      url: /compliance/regulatory/gdpr-action-plan
+    - text: ISO uyumluluk eylem planı
+      url: /compliance/regulatory/iso-action-plan
+    - text: NIST uyumluluk eylem planı
+      url: /compliance/regulatory/nist-action-plan
+- title: Uyumluluk çözümlerini dağıtma
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Sıfır Güven ile verilerin güvenliğini sağlama
+      url: /security/zero-trust/data
+    - text: MIP çözümünü dağıtma
+      url: information-protection-solution.md
+    - text: Veri gizliliği düzenlemeleri için bilgi korumasını dağıtma
+      url: ../solutions/information-protection-deploy.md
+    - text: Bilgi koruma ve uyumluluk çizimleri
+      url: ../solutions/productivity-illustrations.md#microsoft-365-information-protection-and-compliance-capabilities

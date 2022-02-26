@@ -1,0 +1,113 @@
+### YamlMime:Landing
+title: Uç nokta belgeleri için Microsoft Defender
+summary: Uç Nokta için Microsoft Defender koruma, ihlal sonrası algılama, otomatik araştırma ve yanıt sağlar.
+metadata:
+  title: Uç nokta belgeleri için Microsoft Defender
+  description: Uç Nokta için Microsoft Defender hakkında bilgi edinmek ve cihazları korumak, kötü amaçlı etkinlikleri algılamak ve tehditleri düzeltmek için yerleşik güvenlik özelliklerini en üst düzeye çıkarmak# Gerekli; arama sonuçlarında görüntülenen makale açıklaması. < 160 karakter.
+  services: office-365-security-compliance
+  ms.prod: m365-security
+  ms.technology: mde
+  ms.topic: landing-page
+  ms.collection: m365-security-compliance
+  ms.custom: intro-hub-or-landing
+  author: mjcaparas
+  ms.author: macapara
+  ms.date: 10/18/2021
+  ms.localizationpriority: high
+  ms.openlocfilehash: d141c9f8b6109bd55bd64e5839db552fc13588de
+  ms.sourcegitcommit: 36a19d80fe3f053df0fec398a7ff2dfc777f9730
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 12/30/2021
+  ms.locfileid: "62970605"
+landingContent:
+- title: Uç Nokta için Microsoft Defender
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Uç Nokta için Microsoft Defender nedir?
+      url: microsoft-defender-endpoint.md
+    - text: Uç Nokta Planı 1 için Defender nedir?
+      url: defender-endpoint-plan-1.md
+    - text: Uç Nokta Plan 1 için Defender'ı Plan 2 ile karşılaştırma
+      url: defender-endpoint-plan-1-2.md
+  - linkListType: whats-new
+    links:
+    - text: Uç Nokta için Microsoft Defender'daki güncelleştirmeler
+      url: whats-new-in-microsoft-defender-endpoint.md
+    - text: Uç Nokta Planı 1 için Microsoft Defender'ı Anma
+      url: defender-endpoint-plan-1.md
+  - linkListType: video
+    links:
+    - text: Genel Bakış videosu
+      url: https://www.microsoft.com/videoplayer/embed/RE4vnC4?rel=0
+- title: Hizmeti & dağıtmayı değerlendirme
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Uç Nokta için Microsoft Defender'ı Değerlendirme
+      url: evaluation-lab.md
+    - text: Dağıtımınızı planlama
+      url: deployment-strategy.md
+  - linkListType: deploy
+    links:
+    - text: Dağıtım kılavuzu
+      url: deployment-phases.md
+    - text: Desteklenen cihazları ekleme
+      url: onboard-configure.md
+    - text: Uç Nokta Planı 1 için Defender'ı ayarlama ve yapılandırma
+      url: mde-p1-setup-configuration.md
+  - linkListType: how-to-guide
+    links:
+    - text: Geçiş kılavuzu
+      url: migration-guides.md
+  - linkListType: video
+    links:
+    - text: Ekleme videosu
+      url: https://www.microsoft.com/videoplayer/embed/RE4bGqr
+- title: Güvenlik işlemleri
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Uç nokta algılama ve yanıt
+      url: overview-endpoint-detection-response.md
+    - text: Davranışsal engelleme ve engelleme
+      url: behavioral-blocking-containment.md
+    - text: Otomatik araştırma ve yanıt (AIR)
+      url: automated-investigations.md
+    - text: Gelişmiş av
+      url: advanced-hunting-overview.md
+    - text: Microsoft Tehdit Uzmanları
+      url: microsoft-threat-experts.md
+    - text: Tehdit analizleri
+      url: threat-analytics.md
+- title: Diğer platformlarda Uç Nokta için Microsoft Defender'ı kullanma
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Mac'te Uç Nokta için Microsoft Defender
+      url: microsoft-defender-endpoint-mac.md
+    - text: iOS'ta Uç Nokta için Microsoft Defender
+      url: microsoft-defender-endpoint-ios.md
+    - text: Linux'ta Uç Nokta için Microsoft Defender
+      url: microsoft-defender-endpoint-linux.md
+    - text: Android'de Uç Nokta için Microsoft Defender
+      url: microsoft-defender-endpoint-android.md
+- title: Başvuru
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Yönetim ve API'ler
+      url: management-apis.md
+    - text: İş ortağı tümleştirmesi
+      url: partner-integration.md
+- title: Güvenlik yönetimi
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Tehdit & güvenlik açığı yönetimi
+      url: next-gen-threat-and-vuln-mgt.md
+    - text: Saldırı yüzeyini azaltma
+      url: overview-attack-surface-reduction.md
+    - text: Yeni nesil koruma
+      url: next-generation-protection.md

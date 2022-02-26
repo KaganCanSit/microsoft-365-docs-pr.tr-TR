@@ -1,0 +1,74 @@
+### YamlMime:Hub
+title: Microsoft 365 belgeleri ve kaynakları için belgeler
+summary: Çalışma yollarınızı dönüştüren akıllı bulut hizmetleriyle sınıf içinde en iyi üretkenlik uygulamaları.
+brand: m365
+metadata:
+  title: Microsoft 365 belgeleri ve kaynakları için belgeler
+  description: 'IT profesyonelleri, bilgi çalışanları ve iş ortakları için Microsoft 365 kaynakları ve belgeler hakkında bilgi alın.'
+  services: service
+  ms.prod: microsoft-365-enterprise
+  ms.service: O365-seccomp
+  ms.topic: hub-page
+  ms.collection:
+    - M365-subscription-management
+    - Adm_TOC
+  author: robmazz
+  ms.author: robmazz
+  ms.date: 07/28/2020
+highlightedContent:
+  items:
+    - title: Kurumsal Microsoft 365 bilgi
+      itemType: get-started
+      url: microsoft-365-overview.md
+    - title: Daha fazla bilgiyle dağıtımınızı FastTrack
+      itemType: quickstart
+      url: 'https://www.microsoft.com/fasttrack/microsoft-365'
+    - title: IT profesyonellerinizi ve yöneticilerinizi eğitin
+      itemType: learn
+      url: /learn/m365/
+conceptualContent:
+  title: Kurumsal ve diğer Microsoft 365 kaynakları hakkında yardım al
+  summary: 'Kurumsal Microsoft 365, özellikleri ve hizmetleri için diğer özellikleri keşfedin.'
+  items:
+    - title: Önemli öğeleri dağıtma
+      links:
+        - url: deploy-identity-solution-overview.md
+          itemType: how-to-guide
+          text: Kimlik altyapısı
+        - url: /windows/deployment/
+          itemType: get-started
+          text: Windows 10 Enterprise
+        - url: /deployoffice/plan-microsoft-365-apps
+          itemType: deploy
+          text: Microsoft 365 Kurumsal Uygulamaları
+        - url: /intune/fundamentals/planning-guide
+          itemType: deploy
+          text: Microsoft Intune
+    - title: Kurumsal Microsoft 365 yönetme
+      links:
+        - url: /windows/deployment/update/
+          itemType: how-to-guide
+          text: Windows 10 Enterprise
+        - url: /deployoffice/overview-update-channels
+          itemType: concept
+          text: Microsoft 365 Kurumsal Uygulamaları
+        - url: /intune/apps/app-management
+          itemType: get-started
+          text: Intune ile uygulamalar
+        - url: /office365/
+          itemType: get-started
+          text: Microsoft 365 hizmetleri
+additionalContent:
+  sections:
+    - title: Ek kaynaklar
+      summary: Diğer özellikler ve kaynaklar hakkında Microsoft 365 fazla bilgi öğrenin.
+      items:
+        - title: Microsoft 365 uyumluluğu
+          summary: 'Kuruluşun bilgileri yönetmesi, risklere karşı korunmasına ve yasal veya mevzuat standartlarına uymalarına yardımcı olur.'
+          url: ../compliance/index.yml
+        - title: Microsoft 365 güvenliği
+          summary: Güçlü güvenlik hizmetleri ve çözümleri ile saldırı yüzeyleri arasında organizasyonlarınızı koruyun.
+          url: ../security/index.yml
+        - title: Microsoft 365 topluluğu
+          summary: Bağlan ve uzmanlarla Microsoft Tech ekibi arasında işbirliği yapın ve en Community yöntemleri Microsoft 365 paylaşın.
+          url: 'https://techcommunity.microsoft.com/t5/Microsoft-365/ct-p/microsoft365'
