@@ -1,0 +1,57 @@
+### YamlMime:FAQ
+metadata:
+  title: Sıraya alınan, ertelenen ve geri dönen iletiler için SSS
+  f1.keywords:
+  - NOCSH
+  ms.author: chrisda
+  author: chrisda
+  manager: dansimp
+  ms.date: 
+  audience: ITPro
+  ms.topic: troubleshooting
+  ms.localizationpriority: medium
+  ms.assetid: 9d015a0d-52a0-484d-9a08-121d04f973d3
+  ms.custom:
+  - seo-marvel-apr2020
+  description: EOP) filtreleme işlemi sırasında sıraya alınan, ertelenmiş veya geri dönen iletiler hakkında en Exchange Online Protection soruların yanıtlarını bulabilirsiniz.
+  ms.technology: mdo
+  ms.prod: m365-security
+  ms.openlocfilehash: 4de909072409b1ee01adb79ecb8f324b76c6a2fd
+  ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/06/2021
+  ms.locfileid: "62985181"
+title: Sıraya alınan, ertelenen ve geri dönen iletiler için SSS
+summary: >
+  [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+
+
+  **Geçerli olduğu yer:**
+
+  - [Exchange Online Protection](exchange-online-protection-overview.md)
+
+  - [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+
+  - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
+
+
+  Bu konu başlığı, grup (EOP) filtreleme işlemi sırasında sıraya alınan, ertelenmiş veya geri dönen iletiler Exchange Online Protection sorulan soruların yanıtlarını sağlar.
+sections:
+- name: Yok sayıldı
+  questions:
+  - question: >
+      Posta kuyruğa alma nedendir?
+    answer: >
+      Hizmet, teslim için alıcı sunucusuna bağlantı alamasa da, iletiler sıraya gönderilir veya ertelenmiş olur. Alıcı ağına 500 seri hatası döndürülürse bu ileti ertelemez.
+  - question: >
+      İleti nasıl ertelenmiş olabilir?
+    answer: >
+      İletiler, alıcı sunucusuyla bağlantı kurama geldiğinde ve alıcının sunucusu bağlantıda zaman çıkma, bağlantı reddedildi veya 400 seri hatası gibi "geçici hata" döndüren durumlarda sınanacak. 500 seri hatası gibi kalıcı bir hata varsa, ileti gönderene döndürülür.
+  - question: >
+      İleti ne kadar süre ertelenme süresinde kalır ve yeniden deneme aralığı nedir?
+    answer: >
+      Ertelenen mesajlar 1 gün boyunca kuyruklarımızda kalacaktır. İleti yeniden deneme deneme denemeleri, alıcının posta sisteminden geri alınan hataya dayalıdır. İlk birkaç erteleme süresi 15 dakika veya daha kısadır ve sonraki yeniden deneme süresi (sonraki yarım düzine kadar), birden çok tekrarlı denemede aralığı 60 dakika en fazla 60 dakikaya kadar artırarak devam eder. Aralık süresi genişletmesi dinamiktir ve kuyruk boyutları ve iç ileti önceliği gibi birden çok değişkeni dikkate alır. Temel olarak, başlamak için 15 dakika (veya daha az) zaman alır ve sonraki birkaç saat içinde buradan en fazla 60 dak.
+  - question: >
+      E-posta sunucunuz geri yüklendikten sonra, sıraya alınan iletiler nasıl dağıtılır?
+    answer: E-posta sunucunuz geri yüklendikten sonra, sıraya alınan tüm iletiler, sunucu kullanılamayacak duruma geldiğinde alınıldı ve sıraya alındıktan sonra sıraya alındıktan sonra otomatik olarak işlenir.

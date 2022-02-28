@@ -1,0 +1,203 @@
+### YamlMime:FAQ
+metadata:
+  title: Ürün anahtarları Sık Sorulan Sorular
+  ms.author: cmcatee
+  author: cmcatee-MSFT
+  manager: scotv
+  ms.reviewer: racheg, armanv
+  ms.date: 07/22/2021
+  audience: Admin
+  ms.topic: article
+  ms.service: o365-administration
+  ms.custom: commerce_vl
+  ms.localizationpriority: medium
+  description: Ürün anahtarları Sık Sorulan Sorular
+  ms.openlocfilehash: 3a1ca8e666ab710cfd0554a4050ab69d750936d3
+  ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/06/2021
+  ms.locfileid: "62983491"
+title: Ürün anahtarları Sık Sorulan Sorular
+summary: ''
+sections:
+- name: Genel
+  questions:
+  - question: >
+      Ürün anahtarları nedir?
+    answer: >
+      Ürün anahtarı, belirli bir toplu lisans programı altında lisans sahibi olduğunuz bir yazılım ürününü kullanmana olanak sağlar. Ürünlerde listelenen ürün anahtarları Microsoft 365 yönetim merkezi yalnızca toplu lisans ürünleriyle kullanılmalıdır ve yalnızca sizin tarafından kullanılmak üzere tasarlanmıştır.
+
+
+      Çevrimiçi Hizmet Etkinleştirme (OSA) anahtarı, Microsoft Online Services aboneliklerini etkinleştirmek için kullanılan tek kullanımlık ürün anahtarıdır.
+
+
+      Daha fazla bilgi için bkz. [Açık programlar için Çevrimiçi Hizmet Etkinleştirme SSS](/licensing/online-service-activation-faq).
+  - question: >
+      Ürün anahtarlarını kayıtta nasıl Microsoft 365 yönetim merkezi?
+    answer: "1. Oturum açma Microsoft 365 yönetim merkezi. \n2. BillingYour **productsVolume** >  >  **licensing** >  seçeneğine gidin& tuşlarına **basın > üzerine** gelin ve Anahtarları görüntüle'yi **seçin**.\n\nHer ürün için ürün anahtarı bilgilerini, lisans türünü (Toplu Lisanslama Anahtarı, Anahtar Yönetim Merkezi (KMS) ve Birden Çok Etkinleştirme Anahtarı (MAK)) ve kullanılan ve kullanılabilir MAK etkinleştirme sayısını bulursanız.\n\nYerel **bir sürücüye lisans için** görüntülenen anahtarları indirmek için Tüm ürün anahtarlarını indir'i seçin.\n"
+  - question: >
+      Daha fazla ürün SQL Server bulamıyorum?
+    answer: >
+      Bu SQL anahtarı yönetim merkezinde görüntülenmek yerine yazılımın etkinleştirme sihirbazına eklenir ve yükleme sırasında otomatik olarak algılanır. Daha fazla bilgi için Bkz[. SQL Server Kılavuzu](/sql/database-engine/install-windows/install-sql-server).
+
+
+      ANAHTARı, ISO dosyasını SQL merkezinden indirip >. \x64 klasör > DefaultSetup.ini dosya. Yeni sürüm yüklemeden veya yükseltmeden önce herhangi bir sürümü SQL emin olun. Ürün yükleme veya çevrimiçi hizmet etkinleştirme sırasında teknik sorunları giderme konusunda yardım gerekirse, bir Teknik Destek isteği göndererek Microsoft Teknik [Destek'e başvurun](https://support.microsoft.com/oas).
+  - question: >
+      Toplu Lisanslama satın alma için nasıl ürün anahtarı bulamıyorum?
+    answer: "Sözleşmeniz anahtar gerektiren bir ürüne erişim yetkisi verirse, bu anahtarları **BillingYour** >  **productsVolume** >  **licensingDownloads** >  ürün & **bulabilirsiniz**. \n\nBununla birlikte, bazı ürünler için ürün anahtarı gerekli değildir. Bu bilgiler, İndirmeler ve Anahtarlar kataloğunda ürün açıklamasında listelenir.\n\nÜrününüz için anahtar gerektir olup olmadığını belirlemek için Ürün etkinleştirme [ve anahtar bilgileri'ne gidin](https://licensingapps.microsoft.com/product-activation). Ürünleri Bul altında bir ürün seçin veya ürün adını arayın.\n"
+  - question: >
+      Kurulum anahtarı nedir?
+    answer: >
+      Etkinleştirmeyi atlayarak ürünün kilidini açmak için her ürün/sürüm bileşimi için bir kurulum anahtarı kullanılır. Kurulum anahtarını iki şekilde edinebilirsiniz:
+
+        - **Fiziksel ödeme** Fiziksel gerçekleştirme yoluyla alınan ürünler için kurulum anahtarı medya sleeve'in üzerine yazdırılır.
+        - **İndirme gerçekleştirme** Yönetim merkezinden indirilerek alınan ürünlerde, kurulum anahtarı indirme ekranında görüntülenir ve şu metinle birlikte gösterebilirsiniz: İndirme için kullanılabilen bazı ürünler için kurulum anahtarları gerekir. Ürün yüklemesi sırasında gereken kurulum anahtarına dikkat edin. Kurulum tuşları hakkında daha fazla bilgi için bkz [KMS istemci kurulum tuşlarını kullanma](/windows-server/get-started/kmsclientkeys).
+  - question: >
+      Hangi ürün anahtarlarının sözleşmelerimin ilişkilendirildi?
+    answer: >
+      Toplu Lisans ürün anahtarları, Microsoft İlişki Özeti'niz altında listelenen lisans [kimlikleri için sağlanır](/licensing/license-faq). Bu İlişki Özeti Toplu Lisanslama Hizmeti Merkezi'ndedir. Daha fazla bilgi için [Lisans Kimliği nedir? bağlantısına bakın](/licensing/license-faq#what-is-a-licensing-id). Birkaç Lisans kimlik'iniz olabilir:
+
+        - Kurumsal Anlaşma (EA) ve Select Plus müşterileri ürün havuzu başına ürün anahtarlarını alır (Sistemler, Sunucular ve Uygulamalar).
+        - Müşterilerin satın alma tahminlerine göre ürün havuzu başına ürün anahtarlarını (Sistemler, Sunucular ve Uygulamalar) almaları için Sözleşme'yi seçin.
+        - Açık Lisans müşterileri ve Open Value müşterileri, lisans satın almalarına bağlı olarak uygun ürün anahtarlarını alır.
+
+      Daha fazla bilgi için bkz. Lisans [Özeti hakkında SSS](/licensing/license-faq).
+
+
+      > [!NOTE]
+
+      > Tüm müşterilerin, ürün anahtarlarını yeniden görüntüleme ve düşürme amacıyla kullanma hakkı vardır. Artı, Üç Kurumsal Anlaşma (EA) seçeneğini ve Eğitim ve destek için sınırlı değerlendirme haklarına sahip müşterileri seçin. Daha fazla bilgi için bkz [. Ürün lisans özeti](/licensing/learn-more/volume-licensing-briefs).
+- name: Toplu etkinleştirme
+  questions:
+  - question: >
+      Toplu etkinleştirme nedir?
+    answer: >
+      Toplu etkinleştirme, toplu lisans programı altında lisansa sahip işletim sistemlerini çalıştıran bilgisayarlarda Windows etkinleştirme işlemini otomatikleştirmeye ve yönetmenize yardımcı olan yapılandırılabilir bir çözümdür. Toplu etkinleştirme, toplu lisans sözleşmelerinde satılan ve toplu etkinleştirmeyi destekleyen Office paketleri de dahil olmak üzere Microsoft'un diğer yazılımları için de kullanılır. Daha fazla bilgi için bkz.:
+        - [Toplu etkinleştirmeyi yönetmek için Office](/deployoffice/vlactivation/tools-to-manage-volume-activation-of-office)
+        - [Windows 10 için Toplu Etkinleştirme](/windows/deployment/volume-activation/volume-activation-windows-10)
+
+      Toplu etkinleştirme yalnızca Toplu Lisanslama programı kapsamında yer alan sistemler için geçerlidir ve etkinleştirme için kesin bir araç olarak kullanılır. Bu, lisans faturalaması veya faturalamayla ilgili değildir.
+
+
+      Toplu etkinleştirme, toplu etkinleştirmeleri tamamlamak için iki yol sağlar. Müşteriler, kuruluşlarında sistemleri etkinleştirmek için anahtar türlerinden birini veya her ikisini birden kullanılabilir:
+        - Anahtar Yönetim Merkezi (KMS) kuruluşların, sistemleri kendi ağlarında etkinleştirmelerine olanak sağlar.
+        - Çoklu Etkinleştirme Anahtarı (MAK) Microsoft tarafından barındırılan etkinleştirme hizmetlerini kullanarak sistemleri tek tek etkinleştirir.
+  - question: >
+      Bu Anahtar Yönetim Merkezi (KMS)?
+    answer: >
+      KMS, kuruluşların ürün etkinleştirme için tek tek bilgisayarların Microsoft'a bağlanması gerekenleri ortadan kaldırarak kendi ağları içindeki sistemleri etkinleştirmelerine olanak sağlayan bir etkinleştirme hizmetidir. Adanmış bir sistem gerektirmez ve başka hizmetler sağlayan bir sistemde birlikte barındırabilirsiniz.
+
+
+      KMS ortamında en az sayıda fiziksel veya sanal bilgisayar gerektirir. Etkinleştirme eşikleri olarak adlandırılan bu minimumlar, diğer müşteriler tarafından kolayca karşı Enterprise ayarlanır.
+
+        - Daha fazla bilgi için etkinleştirme Windows
+          - Windows Server çalıştıran sunucuları etkinleştirmek için, kuruluşta en az 5 Windows vardır.
+          - Organizasyonda, iş yerinde çalışan istemci sistemlerini etkinleştirmek için en az 25 Windows.
+        - Daha fazla bilgi için etkinleştirme Office
+          - Yüklü veya yüklü ürünleri etkinleştirmek için, Office sürümünü çalıştıran en az 5 Office bilgisayarınız KMS.
+
+      Etkinleştirme eşikleri hakkında daha fazla bilgi için Toplu Etkinleştirme [Planlama Kılavuzu'ne bakın](/windows/deployment/volume-activation/volume-activation-windows-10).
+  - question: >
+      Ana KMS nedir?
+    answer: >
+      Bir KMS anahtarı, microsoft etkinleştirme sunucusuyla KMS ana bilgisayarı etkinleştirmek için kullanılır ve her ana bilgisayar için 10 etkinleştirme ile en çok 6 KMS ana bilgisayarı etkinleştirebilirsiniz. Her KMS ana bilgisayar sınırsız sayıda bilgisayarı etkinleştirebilirsiniz.
+  - question: >
+      Açık Lisans KMS müşteriler için Microsoft 365 yönetim merkezi anahtar neden görüntülenmiyor?
+    answer: "KMS etkinleştirme için tercih edilen yöntem Çoklu Etkinleştirme Anahtarı (MAK) kullanımıyla artık Açık sözleşmelere önceden atanmamış anahtardır.\n\nKSM anahtarları, Windows Server, işletim sistemi ve diğer işletim sistemi için minimum etkinleştirme eşiğini KMS müşterilere özel Office. Özel durum isteği göndermek için, Microsoft Desteği'ne bir web formu isteği gönderin.\n\nBir özel durum talep etmek için VLSC Yöneticisi, Anahtar Yönetici veya Anahtar Görüntüleyici izinlerine sahip olmalı ve aşağıdaki bilgileri sağlayabilirsiniz:\n  \n  - Sözleşme / Kayıt Numarası veya Lisans Kimliği ve Yetkilendirme.\n  - Ürün Adı (sürüm ve sürüm dahil).\n  - Ürün anahtarının son 5 karakteri.\n  - Gerekli ana bilgisayar etkinleştirme sayısıdır.\n  - İşletmeyi gerekçelendirme veya dağıtım nedeni.\n"
+  - question: >
+      Daha fazla ev sahibine ihtiyacım KMS olur?
+    answer: "6'dan fazla ana KMS etkinleştirmek için ek etkinleştirme etkinleştirmelerine gerek KMS, destek için destek için bir web Microsoft 365 yönetim merkezi gönderin. \n\nBir özel durum talep etmek için VLSC Yöneticisi, Anahtar Yönetici veya Anahtar Görüntüleyici izinlerine sahip olmalı ve aşağıdaki bilgileri sağlayabilirsiniz:\n  \n  - Sözleşme / Kayıt Numarası veya Lisans Kimliği ve Yetkilendirme.\n  - Ürün Adı (sürüm ve sürüm dahil).\n  - Ürün anahtarının son 5 karakteri.\n  - Gerekli ana bilgisayar etkinleştirme sayısıdır.\n  - İşletmeyi gerekçelendirme veya dağıtım nedeni.\n"
+  - question: >
+      Çoklu Etkinleştirme Anahtarı (MAK) nedir?
+    answer: >
+      Çoklu Etkinleştirme Anahtarı (MAK), Microsoft etkinleştirme sunucusuyla bağlantı gerektiren Microsoft tarafından barındırılan etkinleştirme hizmetlerini kullanarak, sistemleri tek seferlik olarak etkinleştirir. Bilgisayarlar etkinleştirildikten sonra Microsoft ile artık iletişim gerekmez.
+
+
+      **Önemli** İzin verilen MAK etkinleştirmelerinin sayısı Toplu Lisans sözleşmenizi temel almaktadır.
+  - question: >
+      Sağlanan MAK etkinleştirme sayısı neden satın alınan lisans sayısıyla eşlemştir?
+    answer: >
+      Müşterilerin Birden Çok Etkinleştirme KMS (MAK) etkinleştirmesi için KMS kullanmalarını öneririz. KMS ölçekli dağıtımlar için tercih edilen etkinleştirme yöntemidir. Satın alınan lisanslar, müşteri satın alma fiyatlandırma düzeyi ve Toplu Lisanslama programı gibi her MAK ile ilişkili etkinleştirme sayısını birçok faktör belirler.
+
+
+      Bir ürün için kullanılabilen etkinleştirme sayısı, her zaman satın alınan lisans sayısıyla eşleşmez. Genelde, bazı ürünlerinizi yeniden yüklemeniz ve etkinleştirmeniz gerekebilir diye daha fazla etkinleştirme alırsınız. Lisans sayısını görüntülemek için sözleşmenizin Lisans Özeti bölümüne bakın.
+  - question: >
+      MAK etkinleştirme sınırları için nasıl bir artış talep  yapabilirim?
+    answer: "MAK etkinleştirme miktarına kadar olan artışlar web formu aracılığıyla talep edilebilir ve özel olarak ver edilebilir. Kanada ve ABD için Toplu Lisanslama [Desteği İstekleri gönderin](https://support.microsoft.com/supportrequestform/2afa6f15-b710-db46-909a-8346017c802f). Diğer tüm ülkeler için bir Destek [Web Formu gönderin](/licensing/contact-us). \n\nMAK etkinleştirme sınırı talep etmek için VLSC Yöneticisi, Anahtar Yönetici veya Anahtar Görüntüleyici izinlerine sahip olmalı ve aşağıdaki bilgileri sağlayabilirsiniz:\n\n  - Sözleşme/Kayıt Numarası veya Lisans Kimliği ve Yetkilendirme.\n  - Ürün Adı (sürüm ve sürüm dahil).\n  - Ürün anahtarının son 5 karakteri.\n  - Gerekli ana bilgisayar etkinleştirme sayısıdır.\n  - İşletmeyi gerekçelendirme veya dağıtım nedeni.\n"
+  - question: >
+      Çoklu Etkinleştirme Anahtarı (MAK) kullanarak lisansları nasıl etkinleştirim?
+    answer: >
+      MAK kullanarak lisansları iki şekilde etkinleştirebilirsiniz:
+
+        - MAK Bağımsız Etkinleştirme Her bilgisayar, etkinleştirmeyi tamamlamak için web veya telefonu kullanarak tek tek Microsoft'a bağlanır.
+        - MAK Ara Sunucu Etkinleştirme Tek bağlantılı Microsoft çevrimiçi veya telefonla birden çok bilgisayar adına merkezi bir etkinleştirme isteği yapılır. Bu yöntem, Windows Otomatik Yükleme Seti'Toplu Etkinleştirme Yönetim Aracı (WAIK) bir parçası olan Windows (VAMT) kullanır. VAMT, BT Profesyonellerinin MAK kullanarak Toplu Etkinleştirme işlemini otomatikleştirmelerine ve merkezi olarak yönetmelerine olanak sağlar ve MAK'ta etkinleştirme sayısına bir denetim içerir.
+  - question: >
+      En iyi Toplu Etkinleştirme Yönetim Aracı (VAMT)?
+    answer: >
+      Genel Toplu Etkinleştirme Yönetim Aracı (VAMT), ağ yöneticilerinin ve diğer BT uzmanlarının Windows, Microsoft Office için toplu ve perakende olarak etkinleştirme sürecini otomatikleştirmelerini ve merkezi olarak yönetmelerini ve diğer Microsoft ürünlerini seçmelerini sağlayan bir araçtır. VAMT Etkinleştirme, Birden Çok Etkinleştirme Anahtarı (MAK) veya Birden Çok Etkinleştirme Anahtarı (MAK) veya Windows Anahtar Yönetim Merkezi (Birden KMS. VAMT, Microsoft Yönetim Konsolu (MMC) 3.0'ın gerekli olduğu standart bir Microsoft Yönetim Konsolu (MMC) ek bileşenidir.
+
+
+      Bu bilgiler VAMT için bkz:
+
+        - [Toplu Etkinleştirme Yönetim Aracı (VAMT) Teknik Başvuru](/windows/deployment/volume-activation/volume-activation-management-tool)
+        - [Etkinleştirmeyi Yönetme Toplu Etkinleştirme Yönetim Aracı (VAMT)](/previous-versions/tn-archive/ff686876(v=technet.10))
+        - İndir [Toplu Etkinleştirme Yönetim Aracı (VAMT)](https://www.microsoft.com/download/details.aspx?id=11936)
+  - question: >
+      Windows istemcilerini etkinleştirmek için KMS ana bilgisayarı olarak Windows ne Windows gerekir?
+    answer: "Etkinleştirme yöntemi olarak Windows (Anahtar Yönetim Merkezi) KMS kullanarak dağıtım yöntemini kullanırsanız, şunları unutmayın:\n  \n  - Windows Server, etkinleştirmesi için KMS ana bilgisayar olarak Windows.\n  - başka Windows makinelerinin KMS için bir düzeltme eki almak için bir Windows anahtarı gerekir. En son düzeltme eki için bkz[. KMS bilgisayarı](/deployoffice/vlactivation/configure-a-kms-host-computer-for-office) kullanarak toplu lisanslı sürümlerini etkinleştirmek için Office. \n\nWindows Server'ı ana bilgisayar KMS, şunlarıabilirsiniz:\n  \n  - Ana KMS ana bilgisayarı Windows yükseltin.\n  - Makineye, Windows Server 2003'e indir.\n  - Ana KMS toplu sürüm Windows makinede çalıştırın.\n  - Windows Server sanal makinesi çalıştırın.\n"
+  - question: >
+      Office, Project ve Visio için Toplu Etkinleştirme hakkında ne Visio?
+    answer: >
+      Aşağıdaki Toplu Etkinleştirme değişiklikleri Toplu Etkinleştirme, etkinleştirme Office Project ve Visio:
+        - Office KMS Ana Bilgisayar, herhangi bir Office veya uygulamayı etkinleştirir.
+        - Etkinleştirme için Office KMS anahtar yük olmalı ve kullanılmalıdır.
+
+      Etkinleştirme yöntemi olarak Office Anahtar Yönetim Merkezi (KMS) kullanarak dağıtım yöntemini kullanırsanız, şunları unutmayın:
+        - Windows Server'ı Office ana bilgisayar KMS kullanarak e-KMS.
+        - İstemcilerin etkinleştirilmesine izin vermek için düzeltme Office kullanılamaz.
+
+      Windows Server 2008'i ana bilgisayar KMS kullanıyorsanız:
+        - Ana KMS ana bilgisayarı Windows yükseltin.
+        - Makineye, Windows Server'ın eski bir sürümüne indir.
+        - WINDOWS bilgisayarınızda KMS çalıştırın.
+        - Windows Server'ın daha yeni bir sürümünde Windows Server sanal Windows çalıştırın.
+  - question: >
+      Windows Terminal Server ve Uzak Masaüstü Hizmeti'Windows Terminal RDS) nasıl etkinleştirim?
+    answer: >
+      Sunucu medyanızı VLSC'den indirdikten sonra ürün etkinleştirme sihirbazını kullanarak etkinleştirebilirsiniz. VLSC'de toplu lisans anahtarı veya ürün ayarlama anahtarı bulmanız gerek yok. Tüm etkinleştirme sihirbazı adımları tamamlandıktan sonra, Sunucudan verileri doğrulamak için internet üzerinden Microsoft Clearing House'a bağlanmaları istenir. Alternatif olarak, çevrimdışı sunucular için etkinleştirme sihirbazı telefon veya web etkinleştirmesi sağlar.
+
+
+      Başlamak için, sunucuya Uzak Masaüstü Lisanslama rolü atatın (**StartAdministrative** >  **ToolsServer** >  Manager) ve sonra Uzak Masaüstü Lisans Yöneticinizden RDS Hizmeti'ni etkinleştirin. **StartAdministrative** >  **ToolsRemote** >  **Masaüstü Hizmetleri'ni** ve sonra Uzak Masaüstü **/Terminal Lisans Yöneticisi'ni seçin**.
+
+
+      Etkinleştirme sırasında Lisans Programı ve Sözleşme Numarasını seçmeniz istenmektedir. Açık Lisans müşterileri için Yetkilendirme Numaranızı girin. MPSA için Satın Alma Hesabı Numarasını girin (MPSA Sözleşmesi numarasını girin). CAL lisanslarınızı satın almak için kullanılan Lisans Kimliğinin program türünden emin değilseniz **VLSC İlişki** Özeti'ne gidin ve Üst **Program sütununa** bakın.
+
+
+      Terminal Sunucusu lisansı hakkında bilgi için bkz. [Terminal Server lisansı](/troubleshoot/windows-server/remote/terminal-server-licensing). Uzak masaüstü lisanslama rolünü yükleme ve lisans sunucusunu etkinleştirme hakkında bilgi için bkz. [Uzak Masaüstü](/windows-server/remote/remote-desktop-services/rds-activate-license-server) Hizmetleri lisans sunucusunu etkinleştirme ve RDS lisansı sunucusu olduğundan [RDS'ye bağlanamıyor.](/troubleshoot/windows-server/remote/cannot-connect-rds-no-license-server)
+  - question: >
+      Aynı sahiplik yapısına sahip olan kuruluşlar bir ürünü dağıtmak için aynı anahtarı kullanabilir mi?
+    answer: >
+      Lisans uyumluluğu ve varlık yönetimi önemli etkinleştirmeden bağımsızdır. Müşterilerin belirli bir Lisans kimliği (sözleşme, kayıt, bağlı kuruluş veya lisans) altında sağlanan anahtarları kullanmak zorunda değillerdir. Üst kuruluşun bireysel bir sözleşmesi varsa, ürünün üst ve alt kuruluşlar arasında dağıtımı için aynı anahtarı kullanabilir. Bu esneklik müşterilerin sözleşmelere/lisanslara özgü anahtarları veya herkes için tek bir anahtar kümesi kullanarak dağıtım resimlerini merkezi olarak yönetmelerini sağlar.
+  - question: >
+      Yeniden görüntüleme haklarımı kullanmak için Toplu Lisans Anahtarlarımı kullanabilir miyim?
+    answer: >
+      Evet. Yeniden görüntüleme hakları tüm Microsoft Toplu Lisans müşterilerine vetir. Bu haklar kapsamında müşteriler, Toplu Lisanslama medyası üzerinden yapılan kopyalar orijinal lisanslı ürünle aynı ise, anlaşmaları kapsamında sağlanan medyayı kullanarak Orijinal Donanım Üreticisi (OEM) veya Tam Paketli Ürün (FPP) lisanslı kopyalarını yeniden sınflamalarını sağlanacaktır. Toplu Lisans müşterisi olarak, Toplu Lisans Anahtarlarını ürün anahtarı sayfasında bulabilir veya Microsoft Etkinleştirme Merkezi aracılığıyla [anahtarlarınızı talep edebilirsiniz](https://licensingapps.microsoft.com/product-activation).
+
+
+      > [!NOTE]
+
+      > Açık Lisans müşterisiysiniz, ürün medyalarına erişmek ve ürün anahtarı almak için yeniden görüntüye almak istediğiniz ürünün en az bir birimini satın alasınız.
+
+
+      Yeniden görüntüleme hakları hakkında daha fazla bilgi için bkz. [Ürün lisans özeti](/licensing/learn-more/volume-licensing-briefs).
+  - question: >
+      Anahtarlarımı yerel bir dosyaya nasıl indirebilirim?
+    answer: "Aşağıdaki Microsoft 365 yönetim merkezi, ürün anahtarlarını daha sonra kullanmak üzere yerel bir dosyaya indirme seçeneği sunar. İndirmeler ve Anahtarlar sayfasından ürün anahtarlarını indirseniz, dosya yönetim merkezi profilinizde sözleşmelerle ilişkilendirilmiş tüm Toplu Lisans Anahtarlarını içerir. Öte yandan, Anahtarları İlişki Özeti sayfasındaki Lisans Kimliği görünümünden indirirken, dosyada yalnızca görüntülemekte olduğunuz Lisans Kimliği'ne ilişkin anahtarlar yer amektedir.\n\nİndirilebilir ürün anahtarı dosyası sekmeyle ayrılmış biçimdedir ve Excel veya metin düzenleyicisinde açılabilir. Bunlar, dosyaya dahil edilen sütunlardır: **Lisans** Kimliği, Üst **Program****, Kuruluş**, **Ürün****, Ürün** **Anahtarı, Tür** ve **MAK Etkinleştirmeleri-Kullanılan/Kullanılabilir, Lisanslar ve OSA Durumu**. \n\nİndirilen dosyayı aynı dosyada Excel şu adımları tamamlayın:\n  1. Diğer Microsoft Excel.\n  2. Dosya **Aç'ı** >  seçin ve ardından indirilen CSV dosyasını seçin.\n  3. **Sınırlandırılmış (varsayılan**) seçeneğini ve ardından Sekmeyle **ayrılmış** 'ı seçin (tüm verilerin tek bir sütunda görüntülemesini önlemek için).\n  4. **Bitir'i** seçin. \n\nDosya .CSV Dosya Excel ve veriler ayrı sütunlarda görüntülenir.\n"
+- name: Destek
+  questions:
+  - question: >
+      Destek ile nasıl iletişime geçim?
+    answer: >
+      Microsoft 365 yönetim merkezi, telefonla veya web formuyla destekle iletişim kurabilirsiniz. Microsoft, web formu gönderimlerini 24 saat içinde yanıtlar. De destek ile iletişime geç için bkz. [Bize Başvurun](/licensing/contact-us).
+additionalContent: "\n## <a name=\"additional-resources\"></a>Ek kaynaklar\n\n- [İndirmeler hakkında SSS](downloads-faq.yml)\n\n- [Programları aç için çevrimiçi hizmet etkinleştirme hakkında SSS](online-service-activation-faq.yml)"

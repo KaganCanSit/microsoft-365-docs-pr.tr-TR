@@ -1,0 +1,110 @@
+### YamlMime:FAQ
+metadata:
+  title: EOP genel SSS
+  f1.keywords:
+  - NOCSH
+  ms.author: chrisda
+  author: chrisda
+  manager: dansimp
+  ms.date: 
+  audience: ITPro
+  ms.topic: troubleshooting
+  ms.localizationpriority: medium
+  ms.assetid: 9dbff00a-474e-4452-aeb5-5be9a6b8c6d5
+  ms.custom:
+  - seo-marvel-apr2020
+  description: Bulutta barındırılan e-posta filtreleme hizmeti Exchange Online Protection en yaygın soruların yanıtlarını alın.
+  ms.technology: mdo
+  ms.prod: m365-security
+  ms.openlocfilehash: d768d523a875be6b4db159e4b91f559cc4050ba4
+  ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/06/2021
+  ms.locfileid: "62988710"
+title: EOP genel SSS
+summary: >
+  [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+
+
+  **Geçerli olduğu yer:**
+
+  -  [Exchange Online Protection tek başına](exchange-online-protection-overview.md)
+
+
+  Burada, bulutta barındırılan e-posta filtreleme Exchange Online Protection hakkında en yaygın soruları yanıtlarız. Sık sorulan diğer sorular (SSS) konuları için aşağıdaki bağlantılara gidin:
+
+
+  - [Sıraya alınan, ertelenen ve geri dönen iletiler için SSS](eop-queued-deferred-and-bounced-messages-faq.yml)
+
+
+  - [Temsilci ile yönetim hakkında SSS](delegated-administration-faq.yml)
+
+
+  - [İstenmeyen posta koruması hakkında SSS](anti-spam-protection-faq.yml)
+
+
+  - [Karantina SSS](quarantine-faq.yml)
+
+
+  - [Kötü amaçlı yazılımdan koruma hakkında SSS](anti-malware-protection-faq-eop.yml)
+
+
+  - [İleti İzleme SSS](/exchange/monitoring/trace-an-email-message/message-trace-faq)
+sections:
+- name: Yok sayıldı
+  questions:
+  - question: >
+      EOP nedir?
+    answer: >
+      EOP, müşterileri istenmeyen postalardan ve kötü amaçlı yazılımdan korumak ve özel ilke kuralları uygulamak için bulutta barındırılan bir e-posta filtreleme hizmetidir. EOP, çeşitli posta Microsoft 365 EOP aboneliklerine Exchange Online dahildir. EOP, şirket içi e-posta ortamlarının korunmasına yardımcı olmak için tek başına bir teklif olarak da kullanılabilir.
+  - question: >
+      EOP deneme sürümüne nasıl kaydol olur veya EOP satın alırim?
+    answer: >
+      Web üzerinden bir EOP deneme sürümüne kaydolma veya EOP'i ilk [Exchange Online Protection satın alma](https://products.office.com/exchange/exchange-email-security-spam-protection). Deneme satın alma işlevinin ücretli abonelikle aynı olduğunu, ancak Exchange Enterprise [CAL with Services](https://products.office.com/exchange/microsoft-exchange-server-licensing-licensing-overview) abonelik planı ile sağlanan ek özellikleri de içerir.
+  - question: >
+      EOP'nin fiyatı nedir?
+    answer: >
+      EOP kullanıcı tarafından lisanslandı. En son fiyatlandırma bilgileri için aşağıdaki [Exchange Online Protection bakın](https://products.office.com/exchange/exchange-email-security-spam-protection).
+  - question: >
+      EOP'nin üretime konması ne kadar zaman alır?
+    answer: >
+      MX kaydınızı değiştirerek EOP hizmetinizi ayarlama ve [EOP](/exchange/standalone-eop/set-up-your-eop-service) aracılığıyla posta akışınızı ayarlama'da belirtilen adımlara göre filtreleme hemen başlar. MX kaydının DNS yoluyla yayılması 24-48 saat kadar sürebilir. Bu işlem sırasında istediğiniz zaman koruma ayarlarınızın ince ayarını yapabilirsiniz.
+  - question: >
+      EOP'i kullanmak için EOP'Microsoft 365 tüm özelliklerini kullanmam gerekir mi? Yalnızca EOP korumasına sahip olmak istiyorum, hepsi bu kadar mı?
+    answer: >
+      EOP kullanarak şirket içi posta kutularınızı, posta kutunuzu bu posta kutusunun başka hiçbir özelliği Microsoft 365. Bu, tek başına abonelik olarak bilinir. EOP özelliklerinin listesi, Genel Hizmet [Açıklaması'Exchange Online Protection bulunabilir](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description).
+  - question: >
+      EOP aracılığıyla e-Microsoft 365 için kaydola bir kiracıya neden ihtiyacım var?
+    answer: >
+      Microsoft 365, bir kiracıdan erişilebilen bir ürün ve hizmet koleksiyonuna verilen Microsoft 365 adıdır. Kiracıyı, Microsoft 365 filtreleme lisansları ek eklentiniz olan başlangıç noktası olarak düşünebilirsiniz.
+  - question: >
+      EOP'nin bilinen sorunları ve beklenen çözümlerini bulamıyorum bir iletişim portalı var mı? Yeni özelliklere ne olacak?
+    answer: >
+      Microsoft 365 yönetim merkezi, bu bilgilerin bir kaçıdır. Hizmet Düzeyi Etkinliği sizi etkiliyorsa, oturum açma sonrasında bir iletişim uyarısı (genellikle çan simgesiyle birlikte) Microsoft 365 yönetim merkezi. Herhangi bir öğeye uygun şekilde okumanız ve bu öğeler üzerinde uygun eylemlerde çalışmanız önerilir.
+
+
+      Yeni EOP özellikleriyle ilgili olarak, [Microsoft 365 yönelik yol haritası](https://www.microsoft.com/microsoft-365/roadmap?filters=O365), yaklaşan yeni özellikler hakkında bilgi bulmak için iyi bir kaynaktır. Ayrıca, Web günlükleri web sitesine yeni özellikler hakkında blog makaleleri [Microsoft 365 paylaştırız](https://www.microsoft.com/microsoft-365/blog/).
+  - question: >
+      Hizmet eski sürümler (Exchange 2010 gibi) ve Exchange Server olmayan ortamlarla Exchange çalışıyor mu?
+    answer: >
+      Evet, hizmet sunucu tanılama aracıdır ve herhangi bir SMTP posta aktarım aracısı ile kullanılabilir.
+  - question: >
+      Hangi boyuttaki kuruluş hizmeti kullanabilir?
+    answer: >
+      Her boyutta. EOP ağı, organizasyonu ne kadar hızlı büyürse büyüsun, büyümenizi karşılamak için yeterli kapasiteye sahiptir.
+  - question: >
+      EOP'i ayarlamak için hangi izinlere ihtiyacım var?
+    answer: >
+      EOP'yi yapılandırmak için genel yönetici veya Şirket Yöneticisi Exchange (Kuruluş Yönetimi rol grubu) üyesi olmak gerekir.
+  - question: >
+      Verilerimin ve özel bilgilerimin güvende olduğunu nasıl bilebilirsiniz?
+    answer: >
+      Hizmet Düzeyi Sözleşmeleri (SLA) hakkında bilgiler de dahil olmak üzere verilerinizin ve özel bilgilerin güvenliğini sağlamak üzere attığımız adımlar hakkında daha fazla bilgi edinmek için Güvenlik Merkezi'ne [Office 365 gidin](https://www.microsoft.com/trust-center).
+  - question: >
+      İleti boyutu sınırlamaları gibi, farkında olmak gereken bir sınır var mı?
+    answer: >
+      Evet. EOP'de sınırlar hakkında daha fazla bilgi için bkz. [Exchange Online Protection.](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-limits)
+  - question: >
+      EOP PowerShell'i destekliyor mu?
+    answer: "Evet, tam EOP işlevselliği PowerShell ile kullanılabilir: Exchange Online Posta Kutuları olan kuruluşlar için Exchange Online PowerShell; tek başına EOP kuruluşları için tek başına EOP PowerShell. Daha fazla bilgi için bkz[. PowerShell Exchange Online](/powershell/exchange/exchange-online-powershell) [PowerShell'Exchange Online Protection.](/powershell/exchange/exchange-online-protection-powershell)"

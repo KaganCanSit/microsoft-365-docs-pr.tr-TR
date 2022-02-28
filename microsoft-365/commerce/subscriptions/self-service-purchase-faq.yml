@@ -1,0 +1,134 @@
+### YamlMime:FAQ
+metadata:
+  title: Self servis satın alma hakkında SSS
+  f1.keywords:
+  - NOCSH
+  ms.author: cmcatee
+  author: cmcatee-MSFT
+  manager: scotv
+  ms.reviewer: mijeffer, pablom
+  audience: Admin
+  ms.topic: article
+  ms.service: o365-administration
+  ms.localizationpriority: medium
+  ms.collection: M365-subscription-management
+  ms.custom:
+  - AdminSurgePortfolio
+  - aka.ms/self-service-purchase-faq
+  - commerce_ssp
+  search.appverid:
+  - MET150
+  description: Self servis satın almalar hakkında sık sorulan soruların yanıtlarını bulabilirsiniz.
+  ms.date: 09/15/2020
+  ms.openlocfilehash: 603f50b95ef16e7484f87bcb437416f258073165
+  ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 10/06/2021
+  ms.locfileid: "62985363"
+title: Self servis satın alma hakkında SSS
+summary: >
+  Self servis satın alma, kullanıcılara yeni teknolojileri deneme ve büyük kuruluşları için son derece faydalı çözümler geliştirme fırsatı verir. Merkezi tedarik ve IT ekipleri, şirket aracılığıyla self servis satın alma çözümleri satın alan ve dağıtan tüm <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">kullanıcıları Microsoft 365 yönetim merkezi</a>. Yöneticiler, PowerShell aracılığıyla self servis satın almaları ürün başına özel olarak kapatabilirsiniz. Daha fazla bilgi edinmek için [bkz. MSCommerce PowerShell modülü için AllowSelfServicePurchase kullanma](allowselfservicepurchase-powershell.md).
+
+
+  Self servis satın alma, Power Platform (Power BI, Power Apps ve Power Automate), Project ve Visio.
+
+
+  > [!NOTE]
+
+  > Self servis satın alma, Hindistan'da ya da kamu veya eğitim müşterileri için kullanılamaz. Project ve Visio Brezilya'da ve Kongo Demokratik Cumhuriyeti'nde self servis satın alma için çeşitli hizmetler ve hizmetler kullanılamaz.
+sections:
+- name: Self servis satın alma yapma
+  questions:
+  - question: >
+      Müşteri self servis satın alma nasıl yapar?
+    answer: >
+      Müşteriler, ürün web sitelerinden veya uygulama içi satın alma istemlerinden çevrimiçi olarak self servis satın alma siparişi kullanabilir. Müşterilerden, var olan bir E-posta (AD) kiracılarında yer alan bir kullanıcı olduğundan emin olmak için Azure Active Directory girmeleri istenmektedir. Ardından, Azure AD kimlik bilgilerini kullanarak oturum açmaları istenir. Oturum açmanın ardından, müşteriden kaç abonelik satın almak ve kredi kartıyla ödeme yapmak istenmektedir. Satın alma işlemi tamamlandığında aboneliklerini kullanmaya başlayabilirler. Satın alan kişinin, ürüne kuruluş <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> lisans atayanın bulunduğu sitenin sınırlı bir görünümüne erişimi vardır.
+  - question: >
+      Self servis satın almalar için ödeme seçenekleri nedir?
+    answer: >
+      Şu anda kullanılabilen tek ödeme yöntemi kredi kartıdır. Faturalama aracılığıyla ödeme desteklenmiyor.
+  - question: >
+      Who self servis satın alma yoluyla satın alabilir misiniz?
+    answer: >
+      Yönetilen bir Azure AD kiracısı içinde konuk olmayan kullanıcı hesabı olan tüm kullanıcılar kendi kendine satın alma yapmaları için bir neden olabilir. Self servis satın alma, kamu veya eğitim kuruluşları olan kiracılar tarafından kullanılamaz. Bu durum, organizasyonunız için geçerlise self servis satın alma işleminizi kontrol etmek için ek işlem gerekmez.
+
+
+      Self servis alışveriş için uygun olmayan kuruluşlar veya pazarlarda yer alan kullanıcılar, kendi IT yöneticilerine başvurabileceklerini isteyen bir ileti görebilirler.
+  - question: >
+      Konuk kullanıcılar self servis alışveriş yoluyla satın alabilir mi?
+    answer: >
+      Hayır, konuk kullanıcılar konuk olduğu bir kiracıda self servis satın alma işlemini tamamlayamayacaktır.
+  - question: >
+      Kullanıcılar bir şirket içi Active Directory'den self servis satın alma yoluyla eşit alabilir mi?
+    answer: >
+      Kullanıcının uygun bir Azure AD kiracıda etkin bir kullanıcı hesabı varsa, kendi kendine satın alma işlemini tamamlar.
+  - question: >
+      Who self servis satın almacılar lisans atayabilirsiniz?
+    answer: >
+      Self servis satın almacılar, lisansları yalnızca aynı Azure AD kiracısı üzerinden kullanıcılara atayabilirsiniz. Satın alan kişi lisans atamaya <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi görünümüne</a> erişimi vardır. Satın almacılar, self servis satın alma yoluyla satın aldıkları ürünlere lisans atayabilirsiniz ve bu lisansları yalnızca aynı Azure AD kiracısı içinde yer alan kullanıcılara atayabilirsiniz.
+  - question: >
+      Self servis satın almacı, satın almalarını nerede görebilir ve yönetebilir?
+    answer: >
+      Self servis satın almacılar, satın almalarını web sitelerinin sınırlı <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>. Satın almacılar her zaman tüm Kullanıcı Ve Dynamics çevrimiçi uygulamalarına yerleşik olarak bulunan uygulama başlatıcıda bulunan Yönetici kutucuğunu kullanarak Microsoft 365 merkezine erişim elde ederler. Satın almacılar yaptıkları satın almaları  görüntüde kullanabilir, aynı hizmete başka abonelikler satın alabilir ve bu abonelikler için kuruluşun diğer kullanıcılarına lisans atayabilirsiniz. Buna ek olarak, satın almacılar faturalarını görüntüp ödeyebilirsiniz, ödeme yöntemini güncelleştirebilirsiniz ve aboneliklerini iptal edebilir.
+- name: Fiyatlandırma
+  questions:
+  - question: >
+      Self servis satın almaların fiyatı nedir?
+    answer: >
+      Self servis satın alma ürünleri için fiyatlandırma Microsoft web sitesinden alınabilir. Kullanıcılar self servis alışverişte yer alan ödeme deneyiminin bir parçası olarak da fiyatlar görüntülenir. Bu fiyatlar, kuruluşun merkezi satın almalar yaparken veya iş ortağı aracılığıyla sunulan fiyatların ödemelerinden farklı olabilir.
+  - question: >
+      Who sorumlu kişi kimdir?
+    answer: >
+      Aboneliği self servis satın alma yoluyla satın alan kişi, satın alma koşullarına ve fiyatlandırmalarına göre faturalandır ve ödemeden sorumlu olan kişidir.
+- name: Yönetici becerileri
+  questions:
+  - question: >
+      Yöneticinin self servis satın almalarda hangi özellikleri vardır?
+    answer: >
+      Yöneticiler kuruluşlarında yapılan tüm self servis satın almaları ilgili kuruluşta <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>. Her self servis satın alma için ürünü, satın alan adını, satın alınan abonelikleri, son kullanma tarihini, sipariş geçmişini, satın alma fiyatını ve atanan kullanıcıları görebilirler. Power Platform Yönetim Merkezi'nde, yöneticiler self servis satın alma kapasitelerini de  bakabilirsiniz. Yöneticiler, kuruluşlarında gerekli olursa PowerShell aracılığıyla self servis satın almaları ürün temelinde kapatabilirsiniz. Yöneticiler, self servis satın alma yoluyla veya merkezi olarak satın alınan ürünler üzerinden aynı veri yönetimi ve erişim ilkelerine sahip olur.
+
+
+      Yöneticiler ayrıca, kuruluşlarına sahip kullanıcıların self servis satın almalar yapmak için sahip olup olmadığını da kontrol etmelerini sağlar. Daha fazla bilgi için bkz [. MSCommerce PowerShell modülü için AllowSelfServicePurchase kullanma](allowselfservicepurchase-powershell.md).
+  - question: >
+      Microsoft, self servis satın alma özelliğini etkinleştirerek veri idaresi ve uyumluluğuna nasıl uyum sağlar?
+    answer: >
+      Yöneticiler, veri idaresi ve uyumluluk gereksinimlerine bağlı olarak kiracılarında hangi hizmet ve ürünlerin sağlanamıyor üzerinde denetim sahibi olur. Kuruluş tarafından açık olan tüm veri yönetimi ve erişim ilkeleri, satın alınan self servis kullanılabilir hizmetlere uygulanır.
+  - question: >
+      Who satın alımlarda oluşturulan ürün verilerine sahip olan kullanıcı var mı?
+    answer: >
+      Self servis satın alma yoluyla satın alınan ürünlerden oluşturulan veriler, kuruluşa aittir ve denetim altındadır.
+  - question: >
+      Self servis satın alma yoluyla yapılan satın almaları nasıl merkezi hale nasıl yapabilirim?
+    answer: >
+      Yöneticiler mevcut sözleşmeler ve self servis satın alma işlemlerine atanan kullanıcılar için fiyatlandırmayla mevcut lisansları ataabilir veya self servis ürünlerin ek aboneliklerini satın alabilir. Bu merkezi olarak satın alınan bu lisansları atadikten sonra yöneticiler, satın almacılardan mevcut aboneliklerini iptal etmelerini talep edebilir.
+  - question: >
+      Yönetici self servis satın almaları nerede görebilir?
+    answer: >
+      Genel yöneticiler ve faturalama yöneticileri, fatura sayfasındaki Ürünleriniz sayfasında self servis  >  satın alma **yoluyla satın** <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">alınan abonelikleri Microsoft 365 yönetim merkezi</a>. Ürün listesini filtre kullanarak, yalnızca merkezi tedarik yoluyla satın alınan abonelikleri gösterebilir veya self servis satın alma yoluyla satın alınan abonelikleri ekleyebilirsiniz.
+
+
+      Yöneticiler ürün, satın almacı adı, satın alınan abonelik, son kullanma tarihi, sipariş geçmişi, satın alma fiyatı ve atanan kullanıcıları görebilir.
+- name: Destek ve eğitim
+  questions:
+  - question: >
+      Müşterilerin IT departmanlarının veya iş ortaklarının self servis satın alma yoluyla satın alınan ürünleri desteklemesi bekleniyor mu?
+    answer: >
+      IT departmanlarının ve iş ortaklarının self servis satın alma yoluyla satın alınan ürünler için destek sağlamaları beklenmmektedir. Microsoft, self servis satın almacılar için standart destek sağlar.
+  - question: >
+      Self servis satın almacı desteği ararsa, müşterinin Premier Destek olaylarını kullanır mı?
+    answer: >
+      Self servis satın almacılar, self servis satın alımlarında destek almak için müşterinin Premier Destek olaylarını kullanmaz.
+  - question: >
+      Kullanıcıların self servis satın alma yoluyla satın alınan ürünler hakkında nasıl eğitim almaları bekleniyor?
+    answer: >
+      Ürün web sitelerinde kullanıcılar için kapsamlı eğitim sağlanır. Ürünler, doğrudan diğer kullanıcılardan yanıt ve ipuçları almaya yardımcı olacak öğrenme, belge, örnek ve güçlü topluluklar sağlar.
+  - question: >
+      Kullanıcı kuruluşdan ayrılırsa self servis alışverişe ne olur?
+    answer: >
+      Self servis satın alma ürününü ilk satın alan kişi kuruluştan ayrılırsa, geçerli kullanıcılar abonelik süresince ürünü tam kullanmaya devam eder. Satın alan doğrudan iptal edene veya yönetici müşteri desteği aracılığıyla aboneliğin iptalini talep edene kadar abonelik etkin kalır. Yöneticiler ayrıca, iptal edilen aboneliğin kullanıcılarına merkezi olarak satın alınan bir lisans atamayı da seçebilir.
+- name: İş Ortakları
+  questions:
+  - question: >
+      Self servis satın almalarda Microsoft'un iş ortaklarının rolü nedir?
+    answer: Temsili yönetim ayrıcalıklarına sahip iş ortakları, kuruluşta self servis satın almaları <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank"></a>tıpkı bir yönetici gibi Microsoft 365 yönetim merkezi görebilir. İş ortakları, self servis satın alma yoluyla satın alınan ürünleri merkezi hale etmek isteyen bir kuruluşu desteklemeye yardımcı olabilir. Buna ek olarak, iş ortakları, self servis alışverişin özelliklerini genişletmeye yönelik çözümler de sunabilirsiniz.
