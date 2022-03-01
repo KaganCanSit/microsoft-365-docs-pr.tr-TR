@@ -1,0 +1,108 @@
+---
+title: Liste yazılım sürümü dağıtımı
+description: Kuruluş yazılım sürümü dağıtımının listesini verir
+keywords: api'ler, grafik api'si, desteklenen api'ler, get, yazılım sürümü dağıtımı, Uç nokta tvm api için Microsoft Defender
+ms.prod: m365-security
+ms.mktglfcycl: deploy
+ms.sitesec: library
+ms.pagetype: security
+ms.author: dolmont
+author: DulceMontemayor
+ms.localizationpriority: medium
+manager: dansimp
+audience: ITPro
+ms.collection: M365-security-compliance
+ms.topic: article
+MS.technology: mde
+ms.custom: api
+ms.openlocfilehash: 5c2c743981f27cb59250815cefa2ed4a34fda93f
+ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "62996496"
+---
+# <a name="list-software-version-distribution"></a>Liste yazılım sürümü dağıtımı
+
+[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
+
+**Aşağıdakiler için geçerlidir:** 
+- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+
+> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+
+[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
+
+[!include[Improve request performance](../../includes/improve-request-performance.md)]
+
+[!include[Prerelease information](../../includes/prerelease.md)]
+
+Kuruluş yazılım sürümü dağıtımının listesini verir.
+
+## <a name="permissions"></a>İzinler
+
+Bu API'yi çağrı yapmak için aşağıdaki izinlerden biri gerekir. İzinleri seçme de dahil olmak üzere daha fazla bilgi edinmek için bkz [. Uç nokta API'leri için Microsoft Defender'ı](apis-intro.md) kullanma.
+
+İzin türü|İzin|İzin görünen adı
+:---|:---|:---
+Uygulama|Software.Read.All|'Tehdit ve Güvenlik Açığı Yönetimi Yazılımı bilgilerini okuma'
+Temsilcili (iş veya okul hesabı)|Software.Read|'Tehdit ve Güvenlik Açığı Yönetimi Yazılımı bilgilerini okuma'
+
+## <a name="http-request"></a>HTTP isteği
+
+```http
+GET /api/Software/{Id}/distributions
+```
+
+## <a name="request-headers"></a>Üstbilgi isteği
+
+|Name|Tür|Açıklama
+|---|---|---|
+|Yetkilendirme|Dize|Taşıyıcı {token}. **Gerekli**.
+
+## <a name="request-body"></a>İstek gövdesi
+
+Boş
+
+## <a name="response"></a>Yanıt
+
+Başarılı olursa, bu yöntem gövdesinde yazılım dağılımı verileri listesiyle birlikte 200 Tamam döndürür.
+
+## <a name="example"></a>Örnek
+
+### <a name="request-example"></a>İstek örneği
+
+burada isteğin bir örneği ve sağlanmaktadır.
+
+```http
+GET https://api.securitycenter.microsoft.com/api/Software/microsoft-_-edge/distributions
+```
+
+### <a name="response-example"></a>Yanıt örneği
+
+Yanıtın bir örneği:
+
+```json
+
+{
+    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Distributions",
+    "value": [
+        {
+            "version": "11.0.17134.1039",
+            "installations": 1,
+            "vulnerabilities": 11
+        },
+        {
+            "version": "11.0.18363.535",
+            "installations": 750,
+            "vulnerabilities": 0
+        }
+        ...
+    ]
+}
+```
+
+## <a name="related-topics"></a>İlgili konular
+
+- [Risk Tabanlı Tehdit & Güvenlik Açığı Yönetimi](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)
+- [Tehdit & Güvenlik Açığı yazılım envanteri](/microsoft-365/security/defender-endpoint/tvm-software-inventory)
