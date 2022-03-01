@@ -1,0 +1,77 @@
+### YamlMime:FAQ
+metadata:
+  title: Temel Hareketlilik ve Güvenlik ile ilgili sık sorulan sorular (SSS)
+  f1.keywords:
+  - NOCSH
+  ms.author: kwekua
+  author: kwekua
+  manager: scotv
+  audience: Admin
+  ms.topic: reference
+  ms.service: o365-administration
+  ms.localizationpriority: medium
+  ms.collection:
+  - M365-subscription-management
+  - Adm_O365
+  - Adm_TOC
+  ms.custom:
+  - AdminSurgePortfolio
+  - admindeeplinkEXCHANGE
+  search.appverid:
+  - MET150
+  description: Temel Hareketlilik ve Güvenlik hakkında sık sorulan sorular.
+  ms.openlocfilehash: cf95c02fcd3acb3ded119559812cab8ce90316ec
+  ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 12/13/2021
+  ms.locfileid: "63018761"
+title: Temel Hareketlilik ve Güvenlik ile ilgili sık sorulan sorular (SSS)
+summary: Bu makale, aynı zamanda mobil cihazları aynı yerde yönetmenize ve güvenliklerini sağlamanıza yardımcı olan Temel Mobil Kullanım ve Güvenlik Microsoft 365. Sorunuzun yanıtını bulamazsanız sayfaya bir yorum yazarak farkında olmamızı sağlayın ki biz de sorunuzu bu makaleye eklemeyi değerlendirebilelim.
+sections:
+- name: Yok sayıldı
+  questions:
+  - question: >
+      Temel Mobil Kullanım ve Güvenlik'i nasıl elde musunuz? Bunu en son Microsoft 365 yönetim merkezi
+    answer: >
+      1.  Temel Mobil Kullanım ve Güvenlik'i etkinleştirmek için [Office 365 Ve Uyumluluk &](https://protection.office.com/) gidin.
+
+
+      2.  Cihaz yönetimi için Veri kaybı önleme > gidin.
+  - question: >
+      Temel Mobil Kullanım ve Güvenlik'te cihaz yönetimiyle çalışmaya nasıl başlatabilirsiniz?
+    answer: "Temel Hareketlilik ve Güvenlik ile çalışmaya başlamanın dört adımı vardır: \n\n1. Mobil Kullanım ve Güvenlik'i etkinleştirmek için Güvenlik [Office 365'& edin](https://protection.office.com/).\n\n2. Cihaz ilkeleri için Cihaz yönetimi > önleme'> gidin.\n    \n3. Cihaz yönetimi ilkeleri oluşturun ve bunları güvenlik gruplarında ayarlanmış kullanıcı gruplarına uygulayabilirsiniz. Başlangıç olarak ilkeleri küçük bir test grubuna dağıtmayı öneririz. Daha fazla bilgi için temel [Hareketlilik ve Güvenlik içinde cihaz güvenliği ilkeleri oluşturma.](create-device-security-policies.md)\n\n4. Onlara ilke uygulanmış olan kullanıcılardan, kendi cihazlarını kendi verilerine erişmeye Microsoft 365 istenir. Daha fazla bilgi için bkz [. Temel Mobil Kullanım ve Güvenlik kullanarak mobil cihazınızı kaydetme](enroll-your-mobile-device.md).\n\nDaha fazla ayrıntı için bkz [. Temel Mobil Kullanım ve Güvenlik Ayarlama](set-up.md).\n"
+  - question: >
+      Temel Mobil Kullanım ve Güvenlik'i ayarlamaya çalışıyorum, ancak takılmış gibi görünüyor. Hizmet Microsoft 365 durumu, bir süredir "sağ" durumunu gösteriyor. Ne yapabilirim?
+    answer: >
+      Hizmeti sizin için hazır hale almak biraz zaman alacak. Sağlama tamamlandığında, Temel Mobil Kullanım ve Güvenlik sayfasını görebilirsiniz. 24 saat beklediysanız ve durum hala sağ sürüyorsa, lütfen Destek ile iletişime geçin, sorunun ne olduğunu anlamanıza yardımcı oluruz.
+  - question: >
+      Cihaz kaydı başarısız olursa ne yapabilirim?
+    answer: "Cihazın kaydını alma konusunda sorun ediyorsanız, önce şunları kontrol edin:\n\n- Cihazın, önceden başka bir mobil cihaz yönetim sağlayıcısına (örneğin Intune) kaydolmamış olduğundan emin olun.\n\n- Cihazın doğru tarih ve saate ayarlanmış olduğundan emin olun.\n\n- Cihazda farklı bir WiFi veya hücresel ağa geçiş.\n\n- Android veya iOS cihazlarda, Intune Şirket Portalı uygulamayı kaldırın ve yeniden yükleyin.\n    \nKayıt işlemi hala çalışmıyorsa Temel Mobil Kullanım [ve Güvenlik Sorunlarını Giderme'ye bakın](troubleshoot.md).\n"
+  - question: >
+      Intune ile Temel Mobil Kullanım ve Güvenlik arasındaki fark nedir?
+    answer: >
+      Temel Hareketlilik ve Güvenlik Intune hizmeti tarafından barındırıldı. Bu, Intune hizmetlerinin bir alt kümesidir ve Microsoft 365 cihazları yönetmek için bulut tabanlı yerleşik bir çözümdür. Intune veya Microsoft 365 için Temel Mobil Kullanım ve Güvenlik kullanmanın size en uygun olup olduğuna karar vermenize yardımcı olacak iki hizmeti yan yana karşılaştırma için bkz. Temel Mobil Kullanım Güvenliği ile [Intune](choose-between-basic-mobility-and-security-and-intune.md) arasında seçim seçme.
+  - question: >
+      Temel Hareketlilik ve Güvenlik için ilkeler nasıl çalışır? Bunları nasıl kurumum? Devre dışı bırak?
+    answer: >
+      Temel Mobil Kullanım ve Güvenlik için ilk kurulumu tamamlandıktan sonra, İlkeler oluşturabilir ve bunları Güvenlik ve Uyumluluk Merkezi'nde kullanıcı & uygulanır. İlkeler, kullanıcıların cihazlarını belirli bir veriye erişmek için kullanamadan önce cihazlarını Temel Mobil Kullanım ve Güvenlik'e Microsoft 365 gerekir. Ayarlanacak ilkeler mobil cihazlara yönelik ayarları, örneğin parolaların ne sıklıkta sıfırlanacaklarını veya veri şifrelemenin gerekli olup olmadığını belirler. Daha fazla bilgi için bkz[. Temel Mobil Kullanım ve Güvenlik ile Cihaz Güvenliği ve Güvenlik Microsoft 365 uyumluluk merkezi](create-device-security-policies.md) [.](../../compliance/microsoft-365-compliance-center.md)
+
+
+      Cihaz ilkelerini oluşturma ve dağıtmaya yönelik adım adım yönergeler için bkz. Temel Mobil Kullanım ve [Güvenlik'te cihaz güvenliği ilkeleri oluşturma](create-device-security-policies.md).
+
+
+      Belirli bir kullanıcı grubunu ilkelerden etkilenenler dışında tutmak için, bu kullanıcıları dışlama grubuna  eklemeniz gerekir.
+  - question: >
+      Mobil cihaz yönetiminden Exchange ActiveSync Mobil Kullanım ve Güvenlik'e Microsoft 365?
+    answer: >
+      Mobil cihazları yönetmek için zaten Exchange ActiveSync ilkeler kullanıyorsanız Temel Mobil Kullanım ve Güvenlik'i ayarlamak için aşağıdaki adımları takip edin ve Temel Mobil Kullanım ve Güvenlik'i kullanmaya başlayabilirsiniz. Daha fazla bilgi için bkz [. Kullanıcı ve cihaz erişimini koruma](../../compliance/protect-access-to-data-and-services.md) ve [Temel Mobil Kullanım ve Güvenlik Ayarlama](set-up.md).
+
+
+      Temel Mobil Kullanım ve Güvenlik'te oluşturduğunuz ilkeleri kullanıcı gruplarına uygulasanız, bu ilkeler söz Exchange ActiveSync yönetim merkezinde daha önce oluşturduğunuz Exchange ActiveSync mobil cihaz posta kutusu ilkelerini <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange</a> ve cihaz erişim kurallarını geçersiz kılar.
+
+
+      Cihaz Temel Mobil Kullanım ve Güvenlik'e Exchange ActiveSync, cihaza Exchange ActiveSync mobil cihaz posta kutusu ilkesi veya cihaz erişim kuralı yoksayılır.
+  - question: >
+      Temel Hareketlilik ve Güvenlik'i ayarladım ama şimdi kaldırmak istiyorum. Adımlar nedir?
+    answer: Ne yazık ki, bu ayarlamayı tamamladikten sonra yalnızca "unprovision" Basic Mobility and Security (Temel Mobil Kullanım ve Güvenlik) yok. Ancak, kullanıcı güvenlik gruplarını, oluşturduğunuz cihaz ilkelerinden kaldırarak kullanıcı grupları için kaldırabilirsiniz. Cihaz ilkelerini kaldırarak bu özelliği devre dışı bırakarak, yerinde ve zorunlu kılınmamalarını sabilirsiniz. Daha fazla bilgi için bkz [. Temel Hareketlilik ve Güvenlik'i kapatma](turn-off.md).

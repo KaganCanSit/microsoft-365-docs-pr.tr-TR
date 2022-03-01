@@ -1,0 +1,177 @@
+### YamlMime:FAQ
+metadata:
+  title: Karantinaya alınmış iletiler hakkında SSS
+  f1.keywords:
+  - NOCSH
+  ms.author: chrisda
+  author: chrisda
+  manager: dansimp
+  ms.date: 
+  audience: ITPro
+  ms.topic: troubleshooting
+  ms.localizationpriority: medium
+  search.appverid:
+  - MET150
+  ms.assetid: c440b2ac-cafa-4be5-ba4c-14278a7990ae
+  ms.collection:
+  - M365-security-compliance
+  - m365initiative-defender-office365
+  description: Yöneticiler, Exchange Online Protection'da (EOP) karantinaya alınan iletiler hakkında sık Exchange Online Protection yanıtları  bakabilirsiniz.
+  ms.custom: seo-marvel-apr2020
+  ms.technology: mdo
+  ms.prod: m365-security
+  ms.openlocfilehash: 839469f1aa872ff89c4dd488ed441cf51c911a8d
+  ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 01/12/2022
+  ms.locfileid: "63033367"
+title: Karantinaya alınmış iletiler hakkında SSS
+summary: >
+  [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+
+
+  **Geçerli olduğu yer:**
+
+  - [Exchange Online Protection](exchange-online-protection-overview.md)
+
+  - [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+
+  - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
+
+
+  Bu konu başlığı altında, Exchange Online'te posta kutusu olan Microsoft 365 kuruluşların veya posta kutuları olmayan tek başına Exchange Online Protection (EOP) kuruluşlarının e-posta iletileri karantinaya alınmış Exchange Online yanıtlar sağlar.
+
+
+  İstenmeyen posta koruması hakkında sorular ve yanıtlar için bkz. [İstenmeyen posta koruması hakkında SSS](anti-spam-protection-faq.yml).
+
+
+  Kötü amaçlı yazılımdan koruma hakkında sorular ve yanıtlar için bkz. Kötü amaçlı [yazılımdan koruma hakkında SSS](anti-malware-protection-faq-eop.yml).
+
+
+  E-postayla mücadele koruması hakkında sorular ve yanıtlar için bkz. [Yanlışlık önleme koruması hakkında SSS](anti-spoofing-protection-faq.yml).
+sections:
+- name: Yok sayıldı
+  questions:
+  - question: >
+      Kötü amaçlı yazılım için karantinaya alınmış iletileri nasıl yönetebilirim?
+    answer: >
+      Varsayılan olarak, kötü amaçlı yazılım için karantinaya alınmış iletileri yalnızca yöneticiler yönetebilir. Daha fazla bilgi için bkz [. Karantinaya alınmış iletileri ve dosyaları yönetici olarak yönetme](manage-quarantined-messages-and-files.md).
+
+
+      Ancak yöneticiler, kullanıcılar için daha fazla özellik _tanımlayan kötü_ amaçlı yazılımdan koruma ilkeleri oluşturabilir ve karantina ilkeleri uygulayabilir. Daha fazla bilgi için bkz. [Karantina ilkeleri](quarantine-policies.md).
+  - question: >
+      İstenmeyen postayı nasıl karantinaya alım?
+    answer: >
+      Varsayılan olarak, istenmeyen posta veya toplu e-posta olarak sınıflandırılmış iletiler istenmeyen posta filtresiyle kullanıcının posta kutusuna teslim edilir ve Gereksiz E-posta klasörüne taşınır. Ancak, istenmeyen posta veya toplu e-posta iletilerini karantinaya almak için istenmeyen posta önleme ilkelerini yapılandırabilirsiniz. Daha fazla bilgi için bkz. [EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).
+  - question: >
+      Kullanıcılara karantinaya nasıl erişim ve yapabilirim?
+    answer: >
+      Bir kullanıcının karantinada kendi iletilerine erişmek için geçerli bir hesabı olmalıdır. Tek başına EOP için, kullanıcıların EOP'de posta kullanıcıları olarak temsil edildiklerini (el ile oluşturulan veya dizin eşitlemesi ile oluşturulan) gerekir. Tek başına EOP ortamlarında kullanıcıları yönetme hakkında daha fazla bilgi için bkz. [Posta kullanıcılarını tek başına EOP'de yönetme](/exchange/standalone-eop/manage-mail-users-in-eop).
+  - question: >
+      Son kullanıcılar karantinada hangi iletilere erişim sağlar?
+    answer: >
+      Karantina ilkeleri, kullanıcıların karantinaya alınmış iletilere, iletinin neden karantinaya alınıp [erişene erişe olmadığını tanımlar (desteklenen özellikler için](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features)). Daha fazla bilgi için bkz. [Karantina ilkeleri](quarantine-policies.md).
+
+
+      Varsayılan olarak, kullanıcılar alıcısı olduğu aşağıdaki karantinaya alınmış ileti türlerine erişim sağlar:
+
+
+      - **İstenmeyen posta önleme ilkeleri**: İstenmeyen posta, toplu e-posta ve kimlik avı iletileri (kimlik avı iletileri yüksek düzeyde değildir).
+
+      - **Kimlik avı önleme ilkeleri: Sahte e-posta** gönderenler, kullanıcı kimliğe bürünme koruması (Office 365 için Defender), etki alanı kimliğe bürünme koruması (Office 365 için Defender) ve posta kutusu zekası koruması (Office 365 için Defender).
+
+
+      Daha fazla bilgi için bkz [. Kullanıcı olarak karantinaya alınmış iletileri bulma ve serbest bırakma](find-and-release-quarantined-messages-as-a-user.md).
+
+
+      Varsayılan olarak, son kullanıcılar alıcı olduğu aşağıdaki karantinaya alınmış ileti türlerine erişebilirsiniz:
+
+
+      - **İstenmeyen posta önleme ilkeleri**: Yüksek güven kimlik avı.
+
+      - **Kötü amaçlı yazılımdan koruma ilkeleri**
+
+      - **Kasa (Office 365 için Defender)**: Kasa Ekler ilkelerinden ve Kasa Eklerinden gelen e-posta iletileri SharePoint, OneDrive ve Microsoft Teams.
+
+      - **Posta akış kuralları (aktarım kuralları)**: Posta akışı kurallarında iletiyi barındırılan karantinaya teslim **e-posta** eylemi nedeniyle karantinaya alınmış iletiler.
+
+
+      Daha fazla bilgi için bkz [. Karantinaya alınmış iletileri ve dosyaları yönetici olarak yönetme](manage-quarantined-messages-and-files.md).
+  - question: >
+      İletiler ne kadar süre karantinada tutulur?
+    answer: >
+      İletinin neden karantinaya alındığına bağlıdır. Daha fazla bilgi için bkz. [EOP'de karantinaya alınmış iletiler ve Office 365](quarantine-email-messages.md).
+  - question: >
+      Bir defada birden çok karantinaya alınmış iletiyi serbest bırakarak veya rapor musunuz?
+    answer: >
+      Microsoft 365 Defender portalında, bir defada en çok 100  ileti seçer ve yayımlarsınız.
+
+
+      Yöneticiler, karantinaya alınmış iletileri toplu olarak bulup serbest bırakmak ve toplu olarak hatalı pozitif sonuçlar rapor etmek için Exchange Online PowerShell'de [veya](/powershell/module/exchange/get-quarantinemessage) tek başına EOP PowerShell'de [Get-QuarantineMessage ve Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage) cmdlet'lerini kullanabilir.
+  - question: >
+      Karantinaya alınmış iletiler için aramalarda joker karakterler destek var mı? Belirli bir etki alanı için karantinaya alınmış iletileri arayabilir miyim?
+    answer: >-
+      Joker karakterler portalda Microsoft 365 Defender. Örneğin, bir göndereni ararken tam e-posta adresini belirtmeniz gerekir. Ancak, aynı PowerShell veya tek Exchange Online EOP PowerShell'de joker karakter kullanabilirsiniz.
+
+
+      Örneğin, aşağıdaki PowerShell kodunu Not Defteri'ne kopyalayın ve .ps1 kolayca bulunabilirsiniz (örneğin, C:\Data\QuarantineRelease.ps1).
+
+
+      Ardından, [PowerShell veya Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) Exchange Online Protection bağlanın ve betiği çalıştırmak için aşağıdaki komutu çalıştırın:[](/powershell/exchange/connect-to-exchange-online-protection-powershell)
+
+
+      ```powershell
+
+      & C:\Data\QuarantineRelease.ps1
+
+      ```
+
+
+      Betik aşağıdaki eylemleri yapar:
+
+
+      - Fabrikam etki alanındaki tüm gönderenlerden istenmeyen posta olarak karantinaya alınmış, işaretlenmemiş iletileri bulun. En fazla 50.000 sonuç (50 sayfa, 1000 sonuç) olabilir.
+
+      - Sonuçları bir CSV dosyasına kaydedin.
+
+      - Eşleşen karantinaya alınmış iletileri tüm özgün alıcılara bırakın.
+
+
+      ```powershell
+
+      $Page = 1
+
+      $List = $null
+
+
+      Do
+
+      {
+
+      Write-Host "Getting Page " $Page
+
+
+      $List = (Get-QuarantineMessage -Type Spam -PageSize 1000 -Page $Page | where {$_.Released -like "False" -and $_.SenderAddress -like "*fabrikam.com"})
+
+      Write-Host "                     " $List.count " rows in this page match"
+
+      Write-Host "                                                             Exporting list to appended CSV for logging"
+
+      $List | Export-Csv -Path "C:\Data\Quarantined Message Matches.csv" -Append -NoTypeInformation
+
+
+      Write-Host "Releasing page " $Page
+
+      $List | foreach {Release-QuarantineMessage -Identity $_.Identity -ReleaseToAll}
+
+
+      $Page = $Page + 1
+
+
+      } Until ($Page -eq 50)
+
+      ```
+
+
+      Bir iletiyi yayımladıktan sonra, yeniden yayımlanamazsınız.

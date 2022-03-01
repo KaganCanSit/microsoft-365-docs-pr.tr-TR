@@ -1,0 +1,178 @@
+### YamlMime:FAQ
+metadata:
+  title: Microsoft 365 İş Ekstra sık sorulan sorular 
+  description: Küçük ve orta ölçekli işletmeler (KOBİ) için tasarlanmış yeni bir çözüm olan Microsoft 365 İş hakkında en sık sorulan sorulara yanıtlar bulun. 
+  author: efrene
+  f1.keywords:
+  - NOCSH
+  ms.author: efrene
+  ms.topic: article
+  ms.prod: microsoft-365-business
+  ms.collection: M365-subscription-management
+  ms.custom: AdminSurgePortfolio
+  ms.localizationpriority: medium
+  audience: microsoft-business 
+  keywords: Microsoft 365 Business Premium, Microsoft 365, SMB, FAQ, frequently asked questions, answers, business
+  ms.date: 07/21/2020
+  ms.openlocfilehash: 1719a51ebcb5863a2ddc09f4dbfde0873dba3766
+  ms.sourcegitcommit: db62fce58867c7e5c8029b66966e792da3103b89
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 12/23/2021
+  ms.locfileid: "63019144"
+title: Microsoft 365 İş Ekstra sık sorulan sorular
+summary: ''
+sections:
+- name: Genel
+  questions:
+  - question: Microsoft 365 İş Ekstra nedir?
+    answer: "Microsoft 365, küçük ve orta ölçekli işletmeler için sınıfının en iyisi üretkenlik araçlarını, güvenlik ve cihaz yönetimi özelliklerini bir araya getiren tümleşik bir çözümdür. İçindekiler:\n\n**Bir dizi iş üretkenliği ve işbirliği aracı**:\n\n- Word, Excel, PowerPoint, Outlook, OneNote, Publisher ve Access\n- Exchange, OneDrive, Skype Kurumsal, Microsoft Teams ve SharePoint.\n         \n**Enterprise sınıf cihaz yönetimi ve güvenlik özellikleri**:\n\n- Plan 1 ve Daha Fazla Güvenlik için Microsoft Defender ile kimlik avı ve gelişmiş kötü amaçlı yazılım gibi dış tehditlere Office 365 yardımcı Microsoft Defender Exploit Guard.\n- Veri kaybını önleme ilkeleri ve Azure Information Protection Plan 1 ile hassas bilgilere nasıl erişileceğini ve bu bilgilerin nasıl aktarılacağını denetlemeye ve yönetmeye yardımcı olur.\n- Exchange Online Arşivleme ile verilerinizi korumanıza, saklamanıza ve yedeklemenize yardımcı olur.\n- Intune Uygulama Koruma ile Office ve diğer mobil uygulamalar için uygulama koruması.\n- Intune cihaz Windows 10 ile PC, macOS ve mobil cihazlar için cihaz yönetimi.\n- Çok faktörlü kimlik doğrulama, kendi kendine parola sıfırlama ve koşullu erişim ile kimlik koruması.\n- Cihazlar arasında şirket verilerini koruma&mdash;, cihazlar arasında tutarlı güvenlik yapılandırması; Microsoft Defender Virüsten Koruma ve güncel olan sayfadır.\n\n**Basitleştirilmiş cihaz dağıtımı ve kullanıcı kurulumu**:\n\n- Kullanıcıları ve cihazları ayarlamak ve yönetmek için tek yönetici konsolu\n- Windows 10 bilgisayarlarda Office uygulamalarını otomatik yükleme.\n- Her zaman güncel Office + Windows 10.\n- Windows AutoPilot ile bilgisayarların kolay dağıtımı.\n\n**Diğer yetkilendirmeler**:\n\n- Microsoft 365 İş Ekstra müşterilerinin Windows Sanal Masaüstü ve Office Paylaşılan Bilgisayar Etkinleştirmesi özelliklerine de erişimi vardır. Daha fazla [Microsoft 365 için Küçük ve Orta Ölçekli İşletme blog](https://techcommunity.microsoft.com/t5/Microsoft-365-Business-Blog/bg-p/Microsoft365BusinessBlog) gönderilerini okuyun. Ayrıca [Microsoft 365 İş hizmet açıklaması](/office365/servicedescriptions/office-365-platform-service-description/office-365-platform-service-description) makalesine bakın.          \n"
+  - question: Kimler Microsoft 365 İş Ekstra’yı benimsemeyi düşünmelidir?
+    answer: "Microsoft 365 İş Ekstra, size şu olanakları sunan kapsamlı, bulut tabanlı güvenlik çözümüdür:\n\n- İşletmenizi gelişmiş kimlik avı ve fidye yazılımı korumasıyla gelişmiş siber tehditlere karşı savunma.\n- Verilerin onları görme yetkisi olmayan biriyle yanlışlıkla paylaşılmasını önlemek için şifreleme kullanarak hassas bilgilere erişimi denetleme.\n- İşletmenize bağlanan cihazların güvenliğini sağlama ve iOS, Android, Windows ve Mac cihazlarındaki verilerinizin güvenli ve Windows cihazlarınızın güncel kalmasına yardımcı olma.\n\nMicrosoft 365 İş Ekstra; yönetim, faturalandırma ve 7/24 destek için size tanıdık bir konum sağlamak amacıyla Office 365 ile tamamen tümleşiktir. 300’den az çalışanı olan işletmeler için yerleşik kurumsal sınıf teknolojiden oluşur. \n"
+  - question: İşletmem için Microsoft 365 İş Ekstra’yı nasıl edinebilirim?
+    answer: >
+      Microsoft 365 İş Ekstra bir [Microsoft İş Ortağı](https://www.microsoft.com/solution-providers/search) aracılığıyla ya da doğrudan [Microsoft](https://www.microsoft.com//microsoft-365/business)’tan satın alınabilir. Doğrudan Microsoft’tan ya da bir Microsoft İş Ortağı yoluyla satın almayı seçerken personel özelliğinizi ve BT altyapısını koruma isteğinizi göz önünde bulundurmalısınız. Bir Microsoft İş Ortağı, Microsoft çözümleri de dahil olmak üzere BT altyapınızı dağıtmanıza ve yönetmenize yardımcı olabilir.
+  - question: Microsoft 365 İş Ekstra’nın maliyeti ne kadardır?
+    answer: Microsoft 365 İş Ekstra, doğrudan Microsoft’tan satın alınmışsa _yıllık sözleşme_ bazında kullanıcı başına aylık 20 ABD Doları olarak sunulmuştur. Bir Microsoft İş Ortağı aracılığıyla satın alındığında, fiyatlandırma iş ortağının sağladığı hizmetlere ve Microsoft 365 İş Ekstra için sunduğu fiyatlandırma modeline göre değişebilir.
+  - question: Bir müşterinin kaç tane Microsoft 365 İş Ekstra lisansına sahip olabileceği ile ilgili bir kota var mı?
+    answer: >
+      Microsoft 365 İş Ekstra, düşük ila orta BT karmaşıklık gereksinimlerine sahip küçük ila orta ölçekli işletmeler için tasarlanmıştır. Müşteriler, kuruluşları için 300’e kadar Microsoft 365 İş Ekstra lisansı satın alabilirler. Müşteriler bulut aboneliklerini istedikleri gibi kullanabilirler. Bunun sonucunda, BT gereksinimlerine bağlı olarak müşteriler aynı hesaba Microsoft 365 Kurumsal lisansları ekleyebilirler.
+
+
+      Microsoft 365 İş Ekstra ve Microsoft 365 Kurumsal, uygulamaları ve verileri güvenli hale getirmek ve yönetmek için farklı özellikler kullandığından, müşteriler birden fazla abonelik türünden oluşan bir ortam düşündüklerinde çeşitli abonelikleri en iyi şekilde nasıl yönetip güvenli hale getireceklerine karar vermek için güvendikleri BT danışmanlarıyla çalışmalıdırlar.
+  - question: Microsoft 365 İş Ekstra’yı diğer Microsoft aboneliği teklifleriyle birleştirebilir miyim?
+    answer: Evet, müşteriler kendi Microsoft 365 İş Ekstra aboneliklerini Azure, Dynamics 365, Enterprise Mobility + Security ve Office 365 planları ve eklentileriyle birleştirebilirler.
+  - question: İşletmemdeki herkesin bir Microsoft 365 İş Ekstra aboneliği olması gerekli mi?
+    answer: >
+      Hayır, herkesin bir Microsoft 365 İş Ekstra aboneliği olması gerekmiyor; ancak güvenlik ve yönetim avantajları yalnızca Microsoft 365 İş Ekstra aboneliği ile yönetilen cihazlara sahip kullanıcılar için kullanılabilir.
+
+
+      Bir BT ortamının standartlaştırılması, zaman içinde bakım ve güvenlik maliyetlerini azaltmaya yardımcı olur ve işletmelerin ulaşmak için çaba harcamaları gereken bir durumdur. Ancak, bazı küçük ve orta ölçekli müşterilerin donanımlarını uzun sürelerle yükseltirken yazılımlarını öncelikli olarak güncellediklerini fark ettik. İşletmeler Ekstra’yı kuruluşlarının bir bölümüne dağıtabilir, ancak hassas kurumsal verilerin en iyi koruması ve tutarlı iş birliği deneyimleri için tüm kullanıcılara dağıtım önerilir.
+  - question: Bugün çalıştırdığın donanım ve yazılımın Microsoft 365 İş Ekstra ile uyumlu olup olmadığını nasıl öğrenebilirim?
+    answer: >
+      Bugün çalıştırdığınız donanım Windows 7 Pro veya daha yenisini çalıştırıyorsa Microsoft 365 İş Ekstra’nın minimum gereksinimlerini büyük olasılıkla karşılayacaktır. Cortana, Windows Hello ve çoklu dokunma gibi belirli Windows 10 özellikleri, yalnızca daha yeni bilgisayarlarda kullanılabilen belirli donanımlar gerektirir. Ayrıntılar için [Windows 10 Pro sistem gereksinimlerine](https://www.microsoft.com/windows/windows-10-specifications) bakın.
+
+
+      Var olan masaüstü (Win32) uygulama uyumluluğu, herhangi bir değişiklik olmadan çalışan en çok uygulamayı bulundurduğu için Windows 10’da güçlüdür. Müşteriler ve güvenilir BT danışmanları, Microsoft 365 İş Ekstra’ya sorunsuz geçişi sağlamak üzere [Windows 10 uyumluluğu](/windows/deployment/planning/windows-10-compatibility#recommended-application-testing-process) için önerilen uygulama test işlemini okumalı ve [Office sistem gereksinimlerini](https://products.office.com/office-system-requirements#subscription-plans-section) gözden geçirmelidir.
+  - question: Windows 10 Business nedir?
+    answer: >
+      Windows 10 Business, Windows 10 Pro'yu tamamlayıcı nitelikte bir bulut hizmetleri ve cihaz yönetimi kümesidir ve Microsoft 365 İş Ekstra’nın merkezi yönetimine ve güvenlik denetimlerine olanak sağlar.
+
+
+      Ayrıca Windows 10 Business, Denetimli Klasör Erişimi ve web tabanlı tehditlere yönelik Ağ Koruması gibi bazı premium Microsoft Defender özellikleriyle birlikte gelir. Ayrıca, yeni Windows 10 bilgisayarların dağıtımını kolaylaştıran bir hizmet olan Windows AutoPilot’u içerir.
+
+
+      Windows 7, 8 ve 8.1 Professional lisanslı cihazlarınız varsa Microsoft 365 İş Ekstra, Windows 10 Business’ı dağıtmak için bir ön koşul olan Windows 10 Pro’ya yükseltme olanağını sunar.
+
+      > [!IMPORTANT]
+
+      > Yükseltme yaparken özgün ürün anahtarını sağlamanız gerekir, aksi takdirde yükseltme çalışmaz.
+  - question: Microsoft 365 İş Ekstra, Kendi Cihazınızı Getirin (KCG) ilkemizi desteklemeye nasıl yardımcı olur?
+    answer: >
+      Birçok çalışan, her bir amaç için birden çok cihaz taşımak yerine kişisel ve iş bilgilerine erişmek amacıyla kendi cep telefonlarını veya tabletlerini kullanmayı tercih ediyor. Ortak alanlarda iş amacıyla kişisel cihazların kullanımı, iş bilgilerinin yanlış ellere geçmesi riskini artırır. Birçok rakip mobil veri koruma çözümü, kullanıcıların kendi cihazlarında belirli bir moda geçmelerini ya da izinsiz giriş yaptığı düşünülen ve bu nedenle kullanıcıların kullanmaktan kaçındığı başka bir karmaşık mekanizma kullanmalarını gerektirir.
+
+
+      Microsoft 365 İş Ekstra, çalışanların kendi kişisel cihazlarını iş için kullanmalarına olanak tanırken işletmenin bu cihazların iş bilgilerine erişmesini, bu bilgileri saklamasını ve/veya paylaşmasını önlemesini sağlayarak müşterilere basit ama güçlü araçlar sunar. Özellikle:
+
+
+      - **Office mobil uygulamaları için Uygulama Koruması**, hizmete önceden belirlenmiş bir süre boyunca bağlanmadıktan sonra iş verilerini otomatik olarak silme gibi ilkeleri zorlayarak, bilgilerin yalnızca OneDrive İş’te depolanmasını gerektirerek, Office uygulamalarına erişmek için PIN/parmak izi doğrulaması gerektirerek ve şirket verilerinin bir Office uygulamasından kişisel uygulamalara kopyalanmasını önleyerek iOS ve Android mobil cihazlarındaki e-posta, takvim, kişiler ve belgeler gibi Office verilerini korumaya yardımcı olur. Intune yoluyla diğer mobil uygulamalar için mobil uygulama yönetimi, Microsoft 365 İş Ekstra aboneleri için de kullanılabilir.
+
+
+      - Mobil bilgisayarlar **için Windows 10** Yönetimi, işletmelere kötü amaçlı yazılıma karşı Microsoft Defender Virüsten Koruma koruma, otomatik güncelleştirmeler ve belirli bir süre sonrasında ekranları kapatma gibi özellikleri ayarlamayı ve zorunlu kmalarını sağlar. Ayrıca, kayıp veya çalıntı Windows 10 cihazlarından yönetim merkezi yoluyla iş uygulamaları ve verileri tamamen silinebilir.
+
+
+      - **iOS, Android ve macOS &** için Cihaz Yönetimi, işletmelerin iOS, Android, Windows ve macOS cihazlarını içeren farklı bir cihaz ekosistemini güvenli bir şekilde yönetmeye yardımcı olur.
+  - question: Microsoft 365 İş Ekstra, kuruluşumdaki bilgisayarları kötü amaçlı saldırılardan korumaya nasıl yardımcı olur?
+    answer: >
+      Microsoft 365 İş Ekstra yönetilen bilgisayarlar, Microsoft Defender Virüsten Koruma olan Microsoft Defender Virüsten Koruma korumalıdır. Bu, tüm diğer çözümlerden daha fazla bilgisayarı virüslere, kötü amaçlı yazılımlara, casus yazılımlara ve diğer tehditlere karşı koruyan Windows 10’daki bir numaralı virüsten koruma özelliğidir. Tüm Microsoft 365 İş Ekstra, kuruluşlar mobil cihazlarında Microsoft Defender Virüsten Koruma korumanın çalışır ve her zaman güncel olmasını Windows 10 sağlar.
+
+
+      Windows 10 Business, yeni Microsoft Defender Exploit Guard engelleme özellikleri olan Özellikler'i de içerir. Denetimli klasör erişimi gibi özelliklerden biri, klasörleri kilitleyerek ve yetkisiz uygulamaların kullanıcının önemli dosyalarına erişmesini önleyerek fidye yazılımlarını durdurur.
+  - question: Microsoft 365 İş Standart, Microsoft 365 İş Ekstra ve Microsoft 365 Kurumsal arasındaki fark nedir?
+    answer: >
+      Microsoft’un küçük ila orta ölçekli müşterilerin masaüstlerini ve cihaz altyapılarını yükseltirken değerlendirebilecekleri, her biri güçlü özellikler ve işlevsellik getiren çeşitli üretkenlik ve güvenlik yönetimi teklifleri vardır.
+
+
+      **Microsoft 365 İş Standart**, Office 365 uygulamaları ve hizmetleriyle sınıfının en iyisi üretkenliği sunar, ancak Microsoft 365 İş Ekstra’nın uygulama koruması ve cihaz yönetimi özelliklerini içermez.
+
+
+      **Microsoft 365 İş Ekstra**, işletmenizin gelişmiş siber tehditlere karşı korunmasına yardımcı olmak, verilerinizi korumak ve cihazlarınızı yönetmek için gelişmiş güvenlik özellikleriyle Office 365 uygulamalarını ve hizmetlerini birleştirir. Cihaz ve veri ilkelerinin yönetilebileceği basitleştirilmiş bir yönetim konsolu içerir. Çoğu küçük-orta ölçekli işletme, Microsoft 365 İş Ekstra ile en iyi şekilde hizmet alabilir.
+
+
+      **Microsoft 365 Kurumsal**, Microsoft 365 İş Ekstra üzerinden artırılmış uyumluluk ve güvenlik yönetimi düzeyleri sunan bir lisans planları kümesidir ve kurumsal müşteriler ile 300’ü aşkın kullanıcıya sahip müşteriler için tasarlanmıştır. Ayrıca, Microsoft 365 Kurumsal planları, iş zekası ve analiz araçları içeren ek işlevler sağlar.
+  - question: Office 365 planımı Microsoft 365 İş Ekstra’ya geçirebilir miyim?
+    answer: Evet, müşteriler koşullara uyan bir Office 365 planından Microsoft 365 İş Ekstra’ya geçiş yapabilirler. Müşterinin geçerli planına bağlı olarak aylık ücretlerde azalma veya artma olabilir.
+  - question: Microsoft 365 İş Ektra hangi bölgelerde kullanılabilir?
+    answer: >
+      Microsoft 365 İş Ekstra, Office 365’in kullanılabildiği tüm iş ortakları ve müşteriler için kullanılabilir. [Diller, ülkeler ve bölgeler için Office 365 uluslararası kullanılabilirliği](https://products.office.com/business/international-availability) listesine bakın.
+  - question: Teklifi değerlendirmek için kullanabileceğim bir Microsoft 365 İş Ekstra deneme sürümü var mı?
+    answer: CSP’ler için bir Microsoft 365 İş Ekstra deneme sürümü bulunur. Doğrudan müşterilere yönelik deneme sürümü daha sonra çıkacaktır.
+  - question: Microsoft 365 İş Ekstra’yı kuruluşları içinde çalıştırmadan önce müşterilerin ve iş ortaklarının bilmeleri gerekenler nelerdir?
+    answer: >
+      Masaüstü bilgisayarlarının tüm özelliklerini deneyimle Microsoft 365 İş Ekstra müşteriler mevcut masaüstlerinde Windows 7, 8.1 veya 10 Pro <sup>2'de</sup> çalıştırmaktadırlar. Var olan Windows 10 Pro bilgisayarları henüz çalıştırmıyorsa Creators Update çalıştırmalıdır.
+- name: Dağıtım
+  questions:
+  - question: Microsoft 365 İş Ekstra dağıtımını planlarken müşteriler neleri göz önünde bulundurmalıdır?
+    answer: "Başarılı bir Microsoft 365 İş Ekstra dağıtımına giden en doğrudan yol, bir Microsoft İş Ortağı ile birlikte çalışmaktır. Çok çeşitli müşteri senaryoları üzerinde kapsamlı eğitim ve deneyime sahiptir ve ortamınızı ve gereksinimlerinizi anlamak üzere en iyi şekilde donatılmıştır. \n"
+  - question: Microsoft 365 İş Ekstra, Microsoft Intune’un tüm özelliklerini içeriyor mu?
+    answer: Evet, Microsoft 365 İş Ekstra iOS, Android, macOS ve diğer platformlar arası cihaz yönetimi için Tam Intune özelliklerini kullanma lisansına sahip olur. Microsoft 365 İş Ekstra'ta basitleştirilmiş yönetim konsolunda yer alan, üçüncü taraf uygulama yönetimi, Wi-Fi profillerinin yapılandırması ve VPN sertifikaları gibi özellikler tam Intune konsolunda yönetilebilir.
+  - question: P1 Azure Active Directory (Azure AD) Premium birlikte geliyor mu Microsoft 365 İş Ekstra?
+    answer: Evet, Azure AD Premium P1 Microsoft Business İş'e Premium.
+  - question: Microsoft 365 İş Ekstra müşterilerin Mac’leri yönetmesine olanak sağlar mı?
+    answer: Intune; iOS, Android, mobil cihazlar ve macOS Windows bir şekilde yönetmenize yardımcı olur.
+  - question: Windows AutoPilot nedir?
+    answer: >
+      Windows AutoPilot, yeni Windows 10 bilgisayarların dağıtımını kolaylaştıran bir hizmettir. Bu işlem, Microsoft 365 İş Ekstra’nın merkezi yönetim denetimlerinden yararlanarak, son kullanıcı Microsoft 365 İş Ekstra’da &mdash;BT cihaza hiç dokunmadan&mdash; önce ilk kez oturum açtığında yapılabilir. Windows AutoPilot’ı Windows 10 Professional Creators Update (veya daha yenisini) çalıştıran ve fabrika ayarlarına sıfırlanmış var olan bilgisayarlar için de kullanabilirsiniz. AutoPilot Windows ilgili ayrıntıları bu Haziran [2017 blog gönderisinde bulabilirsiniz](https://blogs.technet.microsoft.com/windowsitpro/2017/06/29/modernizing-windows-deployment-with-windows-autopilot/).
+- name: Uyumluluk
+  questions:
+  - question: Microsoft 365 İş Ekstra’ya Office 365 eklentileri ekleyebilir miyim?
+    answer: Microsoft 365 İş Standart’a eklenebilen tüm eklentiler Microsoft 365 İş Ekstra’ya eklenebilir. Başka bir ifadeyle, Office 365 Bulut Uygulamaları Güvenliği Uyumluluk, Tehdit İstihbaratı, MyAnalytics, Power BI Pro ve Sesli Konferans satın alınabilir.
+  - question: Microsoft 365 İş Ekstra’ya Telefon Sistemi ve Arama Planları ekleyebilir miyim?
+    answer: >
+      Evet, Business Voice aboneliği satın alınabilir. [Business Voice](/microsoftteams/business-voice/whats-business-voice), 300 kullanıcıya kadar küçük ve orta ölçekli işletmeler için Telefon Sistemi, Sesli Konferans, Yurtiçi Çağrı Planı ve daha fazlasını paket olarak tasarlanan bir telefon çözümüdür. Telefon Sistemi sesli mesaj, arayan kimliği, arama parkı, arama iletme, otomatik santraller ve arama sıraları gibi özelliklerden de farklı olabilir. <br> Business Voice'ın ülkeniz veya bölgeniz için kullanılabilir olup olmadığını bulmak için bkz. İş Sesi [için ülke ve bölge kullanılabilirliği](/microsoftteams/business-voice/country-region-availability). Fiyatlandırma bilgileri için bkz. [İşletmeler için Ses Fiyatlandırması](https://go.microsoft.com/fwlink/?linkid=2127221).
+  - question: Müşterilerin Microsoft 365 İş Ekstra için Microsoft Defender'ı kullanabilir mi?
+    answer: >
+      Evet, uç nokta için Microsoft Defender bir kullanıcıdan satın Microsoft 365 İş Ekstra eklentileri olarak [Microsoft Bulut Çözümü Sağlayıcısı](https://partner.microsoft.com/membership/cloud-solution-provider/find-a-provider).
+- name: İş ortağı fırsatı
+  questions:
+  - question: Microsoft İş Ortağı olmanın fırsatları ve avantajları hakkında daha fazla bilgiyi nereden edinebilirim?
+    answer: >
+      Microsoft iş ortağı olmayan BT hizmet sağlayıcıları Microsoft Bulut Çözümü Sağlayıcısı programı hakkında daha fazla bilgiyi şuradan edinebilir: <https://partner.microsoft.com/membership/cloud-solution-provider>
+  - question: Microsoft 365 İş Ekstra’nın nasıl satılacağını nereden öğrenebilirim?
+    answer: >
+      Şu anda Office 365 satan iş ortakları, Microsoft 365 İş Ekstra’yı satmak için aynı danışma satış yöntemlerini kullanabilir. Bunun yanı sıra, Microsoft 365 İş Ekstra’nın tam değerini müşteriyle ilgili bir biçimde etkili şekilde iletmek amacıyla müşterilerin var olan masaüstü ortamını, Active Directory bağımlılığını, taşınabilirliği ve güvenlik gereksinimlerini anlamak için satış ekibinize yönelik daha fazla kaynak ve eğitim sunuyoruz. Bu kaynakları Office İş Ortağı portalında bulabilirsiniz: <https://www.microsoft.com/microsoft-365/partners>
+  - question: Microsoft 365 İş Ekstra iş ortaklarının karlılığı artırmasına nasıl yardımcı olabilir?
+    answer: >
+      Microsoft 365 İş Ekstra, iş ortaklarının daha fazla operasyonel verimlilik yoluyla maliyetleri azaltmasına ve ek hizmetlerin satışı yoluyla geliri artırmasına yardımcı olur. The Forrester Research, Microsoft 365 İş Ekstra Toplam Ekonomik Etki (Total Economic Impact - TEI) Çalışması, Haziran 2017 (https://www.microsoft.com/microsoft-365/partners/PartnerTEI), Microsoft 365 İş Ekstra’nın iş ortağı karlılığına olumlu etkisi olacağını göstermektedir.
+
+
+      TEI çalışmasında iş ortakları Microsoft 365 İş Ekstra ile şunları beklediklerini bildirmiştir:
+
+
+      - \[Tek seferlik\] dağıtımda ve danışmanlık hizmetleri gelirinde %20 artış
+
+      - Yönetilen hizmetlerin bağlanma oranında %10 artış
+
+      - Danışma ve \[süregelen\] yönetilen hizmetlerin kar marjlarında (daha düşük maliyetlerden) %8 artış
+  - question: Microsoft 365 İş Ekstra’yı satmak, dağıtmak ve desteklemek için iş ortakları hangi kaynakları kullanabilir?
+    answer: >
+      Microsoft, CSP iş ortaklarına Microsoft 365 İş Ekstra’yı pazarlamak, satmak ve desteklemek üzere geniş bir kaynak seçkisi sunar. Bunlar <https://www.microsoft.com/microsoft-365/partners> adresinde bulunabilir.
+  - question: Microsoft 365 İş Ekstra iş ortaklarına hangi satışa teşvik fırsatlarını sunuyor?
+    answer: >
+      Microsoft 365 İş Ekstra, ek hizmetleri satmak ve var olan ürün ve hizmetleri yükseltmek amaçlı sağlam ve güvenilir bir platform oluşturarak iş ortaklarının müşteriyle olan güvenilir danışman konumlarını korumalarına olanak tanır. Microsoft 365 İş Ekstra; Exchange Server, Exchange Online veya Microsoft 365 İş Temel kullanan müşterilerle bir yükseltme görüşmesi yapma fırsatı sunar. İş Ortakları aynı zamanda artırılmış yönetilen hizmetlerden ve/veya kullanıcı başına destek ücretlerinden daha fazla gelir elde edebilir.
+
+
+      Microsoft 365 İş Ekstra’da bulunan yeni Windows AutoPilot özelliğiyle, dağıtım lojistiği ve maliyetleri nedeniyle yeni Windows cihazlarını satmaya isteksiz olan iş ortakları bu fırsatı çok daha çekici bulacaktır. Şirket içi ve mobil cihazlarının güvenliğinden emin olan müşteriler de Dynamics 365 gibi diğer hizmetlere yatırım yapabilir.
+  - question: İş ortakları diğer Microsoft planları üzerinden Microsoft 365 İş Ekstra’yı satmalı mıdır?
+    answer: Bir Microsoft Bulut Çözümü Sağlayıcısı her zaman müşteri işletmesinin gereksinimlerine ve bütçesine en uygun planı satmalıdır.  Örneğin, bir müşterinin gizlilik ve güvenlik düzenlemelerine uyması gerekiyorsa bir CSP, Microsoft 365 İş Ekstra’nın yanı sıra müşterinin gereksinimlerini karşılamaya yardımcı olacak eklentileri satabilir ya da Microsoft 365 İş Kurumsal SKU’ları tarafından sağlanan gelişmiş güvenlik ve yönetim önerebilir.
+  - question: Müşterilerimin bazıları orijinal olmayan cihazlara sahip; Microsoft 365 İş Ekstra bu cihazları orijinal hale getirecek mi?
+    answer: Microsoft 365 İş Ekstra, Windows’un orijinal olmayan sürümlerini orijinal hale getirmez. Microsoft 365 İş Ekstra; Windows 7, 8 veya 8.1 Pro çalıştıran müşterilere Windows 10 Pro’nun en son, orijinal sürümüne yükseltme olanağı sunarak bir yükseltme avantajı sağlar.
+  - question: GDPR nedir ve Microsoft 365 İş Ekstra uyumluluk yükümlülükleri ile müşterilere nasıl yardımcı olur?
+    answer: >
+      Genel Veri Koruma Yönetmeliği (GDPR), Avrupa Birliği’nde (AB) ikamet edenlere "kişisel verileri" üzerinde daha fazla denetim veren ve kuruluşların bu kişisel verilerin bütünlüğünü korumasını gerektiren yeni ve kapsamlı bir gizlilik yasasıdır. GDPR, AB’de ikamet edenlere bağlı kişisel verileri denetleyen veya işleyen kuruluşların yalnızca GDPR’nin kişisel veri işleme gereksinimlerini karşılayan üçüncü taraf veri işleyicilerini kullanmalarını gerektirir.  Mart 2017’de, Microsoft bu güvenceleri sağlayan sözleşme garantilerini kullanılabilir hale getirdi. Microsoft'un ek GDPR yükümlülüklerini karşılamalarına nasıl yardımcı olduğu konusunda soruları olan müşteriler, Microsoft 365 İş Ekstra'te kullanılabilen gelişmiş uyumluluk ve güvenlik özellikleri (örneğin, Azure Information Protection, veri kaybını önleme, Office 365 için Defender, gibi) ve diğer paketleri (örneğin, Microsoft 365 Kurumsal E5). Daha fazla bilgi için [www.microsoft.com/gdpr](https://www.microsoft.com/gdpr) adresine gidin.
+additionalContent: >-
+  ## <a name="footnotes"></a>Dipnotlar
+
+  **1** ABD, Birleşik Krallık ve Kanada'da kullanılabilir.
+
+  **2** 7 Windows 8.1 Pro çalıştıran cihazlar, Windows 10 Pro önizlemesi içinde Microsoft 365 İş Ekstra için uygundur.

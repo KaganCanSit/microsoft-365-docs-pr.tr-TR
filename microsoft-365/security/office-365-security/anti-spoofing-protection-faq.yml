@@ -1,0 +1,99 @@
+### YamlMime:FAQ
+metadata:
+  title: Anti-spoing protection SSS
+  f1.keywords:
+  - NOCSH
+  ms.author: chrisda
+  author: chrisda
+  manager: dansimp
+  ms.date: 
+  audience: ITPro
+  ms.topic: troubleshooting
+  ms.localizationpriority: medium
+  search.appverid:
+  - MET150
+  ms.assetid: 
+  ms.collection:
+  - M365-security-compliance
+  - m365initiative-defender-office365
+  description: Yöneticiler, Exchange Online Protection'de (EOP) yapılan bir e-postada, sık sorulan soruları ve yanıtları  bakabilirsiniz.
+  ms.technology: mdo
+  ms.prod: m365-security
+  ms.openlocfilehash: a9380bb72fdcae4b4847d4dd624c560fd0e7db5c
+  ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 02/06/2022
+  ms.locfileid: "63016504"
+title: Anti-spoing protection SSS
+summary: >
+  [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+
+
+  **Geçerli olduğu yer:**
+
+  - [Exchange Online Protection](exchange-online-protection-overview.md)
+
+  - [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+
+  - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
+
+
+  Bu makalede, Exchange Online'te posta kutusu olan Microsoft 365 kuruluşları veya posta kutuları olmayan tek başına Exchange Online Protection (EOP) kuruluşlarına yönelik, Exchange Online hakkında sık sorulan sorular ve Exchange Online ve yanıtlar yer almaktadır.
+
+
+  İstenmeyen posta koruması hakkında sorular ve yanıtlar için bkz. [İstenmeyen posta koruması hakkında SSS](anti-spam-protection-faq.yml).
+
+
+  Kötü amaçlı yazılımdan koruma hakkında sorular ve yanıtlar için bkz. Kötü amaçlı [yazılımdan koruma hakkında SSS](anti-malware-protection-faq-eop.yml)
+sections:
+- name: Yok sayıldı
+  questions:
+  - question: >
+      Microsoft neden gereksiz kimliği doğrulanmamış gelen e-postayı seçti?
+    answer: >
+      Microsoft, kimliği doğrulanmamış gelen e-postaya izin verme riskinin, yasal gelen e-posta kaybetme riskten daha yüksek olduğuna inanıyor.
+  - question: >
+      Kimliği doğrulanmamış gelen e-posta gereksiz olarak işaretlenir mi, geçerli e-postanın istenmeyen posta olarak işaretlenir mi?
+    answer: >
+      Microsoft 2018'de bu özelliği etkinleştirdikten sonra bazı hatalı pozitif sonuçlar oldu (iyi iletiler kötü olarak işaretlendi). Bununla birlikte, zamanla gönderenler gerekliliklere göre ayarlanır. Kimlik e-postası olarak yanlış tanımlanamayan iletilerin sayısı çoğu e-posta yolu için yok sayıldı.
+
+
+      Microsoft, yeni e-posta kimlik doğrulaması gereksinimlerini müşterilere dağıtmadan birkaç hafta önce benimsedi. İlk başta kesintiler yaşansa da aşamalı olarak reddedildi.
+  - question: >
+      Office 365 için Defender olmayan Microsoft 365 müşterilere akıllı Office 365?
+    answer: >
+      Evet. Ekim 2018'den beri, e-posta kutusu olan tüm kuruluşlar, Exchange Online posta kutuları olmayan tek başına EOP Exchange Online kullanılabilir.
+  - question: >
+      İstenmeyen veya istenmeyen posta olmayan iletileri Microsoft'a nasıl geri bildirebilirsiniz?
+    answer: >
+      Bkz [. İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).
+  - question: >
+      Yöneticiyim ve e-posta etki alanımda yer alan iletilerin kaynaklarının hepsini bilmiyorum!
+    answer: >
+      Bkz [. E-postanız için tüm kaynakları bilmiyorsanız](email-validation-and-authentication.md#you-dont-know-all-sources-for-your-email).
+  - question: >
+      Kuruluşumda yapılan bir hatayla mücadele korumasını devre dışı bırak olursam ne olur?
+    answer: >
+      Poing anti-spoing protection özelliğini devre dışı bırakmama öneririz. Korumayı devre dışı bırakmak, kuruluşta daha fazla kimlik avı ve istenmeyen posta iletilerinin teslim  olmasına olanak sağlar. Kimlik avının tümleri kimlik avı değildir ve sahte e-postaların hepsi kaçırlanmaz. Ancak, risk daha yüksek olacaktır.
+
+
+      Artık Bağlayıcılar [için](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) İyileştirilmiş Filtreleme kullanılabilir olduğu için, e-postanız EOP'den önce başka bir hizmet aracılığıyla yönlendirildi ancak artık e-postanız başka bir hizmet aracılığıyla yönlendirildi.
+  - question: >
+      Kimlik sahtesi koruması, tüm kimlik avlarından korunmam anlamına mı geliyor?
+    answer: >
+      Ne yazık ki, hayır. Saldırganlar diğer teknikleri (örneğin, güvenliği tehlikeye atılmış hesaplar veya ücretsiz e-posta hizmetlerde hesaplar) kullanmaya uyum sağlar. Bununla birlikte, kimlik avı korumaları, bu diğer kimlik avı yöntemlerinin daha iyi algılarını sağlamak için çok daha iyi çalışır. EOP'nin koruma katmanları birlikte çalışır ve birbirinin üzerine uygulanır.
+  - question: >
+      Diğer büyük e-posta hizmetleri kimliği doğrulanmamış gelen e-postayı engellesin mi?
+    answer: >
+      Neredeyse tüm büyük e-posta hizmetleri geleneksel SPF, DKIM ve DMARC denetimlerini uygulama. Bazı hizmetlerde daha sıkı denetimleri vardır, ancak kimliği doğrulanmamış e-postaları engellemek ve bunları kimliksiz iletiler olarak kabul etmek için EOP'nin sayısı azdır. Öte yandan, sektör özellikle kimlik avı sorunu nedeniyle kimliği doğrulanmamış e-postayla ilgili sorunlar konusunda daha fazla bilgi olmaya devam ediyor.
+  - question: >
+      Kimliksüzlik önlemeyi etkinleştirirseniz Gelişmiş İstenmeyen Posta Filtresi ayarını "SPF kaydı: zor başarısız" ('MarkAsSpamSpfRecordFail') etkinleştirmem gerekir mi?
+    answer: >
+      Hayır. Bu ASF ayarı artık gerekli değildir. Anti-spoofing protection, hem SPF'nin zor başarısız olduğunu hem de çok daha geniş bir ölçüt kümesi olduğunu dikkate almaktadır. Kimlik sahtesi önleme özelliği etkinse ve **SPF kaydı: sabit** başarısız (_MarkAsSpamSpfRecordFail_) açıksa, büyük olasılıkla daha fazla yanlış pozitif sonuç eldeirsiniz.
+
+
+      İstenmeyen posta veya kimlik avı iletisi algılamak için neredeyse hiç ek avantaj sağladığından ve bunun yerine büyük ölçüde hatalı pozitif sonuçlar üretmesi açısından bu özelliği devre dışı bırakmanızı öneririz. Daha fazla bilgi için bkz. [EOP'de Gelişmiş İstenmeyen Posta Filtresi (ASF) ayarları](advanced-spam-filtering-asf-options.md).
+  - question: >
+      Gönderen Yeniden Yazma Düzeni iletili e-postayı düzeltmeye yardımcı olur mu?
+    answer: SRS yalnızca iletili e-posta sorununu kısmen düzeltir. SMTP **MAIL FROM'un** yeniden yazarak, SRS iletili iletinin SPF'yi bir sonraki hedefe geçtiğinden emin olabilir. Bununla birlikte, adres mektup birleştirmeyi önlemede **MAIL FROM** veya DKIM imzalama etki alanı (veya diğer sinyaller) ile birlikte Gelen adresi temel alın olduğundan, SRS iletili e-postanın ele alındı olarak işaretlanmasını önlemek yeterli olmaz.

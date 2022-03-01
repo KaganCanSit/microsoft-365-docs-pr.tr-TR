@@ -1,0 +1,153 @@
+### YamlMime:FAQ
+metadata:
+  title: Veri taşıma genel SSS
+  ms.author: kvice
+  author: kelleyvice-msft
+  manager: laurawi
+  audience: ITPro
+  ms.topic: article
+  ms.service: o365-administration
+  ms.localizationpriority: medium
+  search.appverid:
+  - MET150
+  ms.assetid: 1f01bc6f-5d37-4d14-bdd3-9d94a1e23e14
+  f1.keywords:
+  - NOCSH
+  description: Temel verileri yeni bir veri merkezi coğrafi olarak taşıma hakkında sık sorulan soruların (SSS) Office 365 bulabilirsiniz.
+  ms.custom: seo-marvel-mar2020
+  ms.openlocfilehash: a180e6599da2ccb4f1f564c62afa894dc905b93c
+  ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 01/12/2022
+  ms.locfileid: "63028418"
+title: Veri taşıma genel SSS
+summary: Burada, geri kalan temel müşteri verilerini yeni bir veri merkezi coğrafi olarak taşımayla ilgili genel soruların yanıtları ve açıklanır.
+sections:
+- name: Yok sayıldı
+  questions:
+  - question: >
+      Hangi müşteriler taşıma talep etmek için uygundur?
+    answer: >
+      Yeni Microsoft 365 merkezi için uygun bir ülkeyi seçen mevcut ve ticari müşteriler taşıma isteğinde  olabilir. Program yalnızca uygun iş yükleri için kalan temel müşteri verilerini ilgili Microsoft 365 veri merkezi coğrafi olarak geçirmek üzere Microsoft 365 kiracısına atanmış uygun bir Microsoft 365 ülke koduna sahip kiracılar için mevcuttur. Ülkeye uygunluğu [onaylamak için lütfen Veri](request-your-data-move.md) taşıma talebiniz nasıl talep edilebilir? sayfasına bakın. 
+  - question: >
+      Çekirdek Müşteri Verilerini nasıl tanımlay yapabiliriz?
+    answer: >
+      Temel müşteri verileri, Microsoft Online Services Koşulları'nın tanımlanan müşteri veri alt kümesine [başvuran bir terimdir](https://aka.ms/ost):
+
+      - Exchange Online kutusu içeriğini (e-posta gövdesi, takvim girdileri ve e-posta eklerinin içeriği) kaydetme
+
+      - SharePoint Online site içeriği ve bu site içinde depolanan dosyalar
+
+      - OneDrive İş'a yüklenen OneDrive İş
+  - question: >
+      Geçiş işlemi kapsamındaki Teams nedir?
+    answer: >
+      Exchange Online, SharePoint Online ve OneDrive İş'e ek olarak; Microsoft, Teams verilerini yerel veri merkezine geçirir.
+
+      - Teams mesajları ve kanal iletileri de dahil olmak üzere tüm sohbet mesajlarını içerir.
+
+      - Teams kullanılan resimleri seçin.
+
+
+      Teams dosyalarınız SharePoint Online'da Teams sohbet dosyaları da OneDrive İş. Sesli mesaj, takvim ve kişiler diğer dosyalarda Exchange Online. Birçok durumda Exchange Online, SharePoint Online ve OneDrive İş müşteri tarafından yerel veri merkezinde coğrafi olarak zaten kullanılır ve uygun müşteri ülkeleri için Microsoft 365 geçiş programının bir parçası olur.
+  - question: >
+      Kiracımda temel müşteri verileri yeni coğrafi verilerimde depolanacak şekilde geçiş işleminin hangi noktada tamamlandığı?
+    answer: >
+      Exchange Online ve SharePoint Online/OneDrive İş arasındaki paylaşılan bağımlılıklar nedeniyle, her iki hizmet de geçirilene kadar hiçbir geçişin tamamlanmayacak olması kabul edilir. Exchange Online çevrimiçi SharePoint/çevrimiçi OneDrive İş, genellikle birbirinden bağımsız olarak ayrı zamanlarda geçirilir. Her hizmet geçişi tamamlandığında müşteri kiracı yöneticileri İleti Merkezi'nde onay alır ve her hizmetin rest konumdaki çekirdek müşteri verilerini onaylamak için herhangi bir zamanda Yönetim Merkezi'nde veri konumu kartını layabilir.
+  - question: >
+      Taşıma sırasında müşteri verilerimin güvende olduğundan ve hizmet kesintileri yaşamayacak şekilde nasıl emin olursunuz?
+    answer: >
+      Veri hareketleri, son kullanıcıları çok az etkileyen bir arka uç hizmet işlemidir. Etkilenmiyor olabilir özellikler, Verileriniz taşıma sırasında [ve sonrasında altında listelenir](during-and-after-your-data-move.md). Müşterilerin taşıma sırasında hazır veya izlemesi gereken hiçbir şey kalmaması için kullanılabilirlik için Microsoft Çevrimiçi Hizmetler Hizmet Düzeyi Sözleşmesi'ne [(SLA)](https://go.microsoft.com/fwlink/p/?LinkId=523897) bağlı kalın.
+
+
+      Tüm Microsoft 365 hizmetleri veri merkezlerinde aynı sürümleri çalıştırmıştır, dolayısıyla tutarlı işlevlerden emin olabilirsiniz. Hizmetiniz bu işlem boyunca tam olarak desteklemektedir.
+  - question: >
+      Farklı coğrafi konumlarda farklı hizmetlerin yerlerinin olması neleri etkiler?
+    answer: >
+      Bazı yeni Microsoft 365, mevcut müşterilerin ve taşıma işleminin ortasındaki müşteriler için farklı coğrafi konumlarda yer alıyor olabilir. Hizmetlerimiz birbirinden bağımsız olarak çalışır ve böyle bir durumda kullanıcı deneyiminin hiçbir etkisi olmaz.Bununla birlikte, veri ikameti açısından hem Exchange Online hem de SharePoint Online/OneDrive İş aynı veri merkezi coğrafi olarak geçirilene kadar kiracı geçişi tamamlandı olarak kabul edilir.
+  - question: >
+      Temel müşteri verilerim nerede?
+    answer: >
+      Müşteri kiracı yöneticileri, özel olarak kiracıları için her hizmet için ayrı ayrı müşteri konumlarında temel müşteri verilerini onaylamak üzere herhangi bir anda Yönetim Merkezi'nde veri konumu kartını layabilir.Ayrıca, yeni kiracılar için konum konumlarını, Office 365 müşteri verilerini içeren Microsoft 365 etkileşimli veri merkezi haritalarının veri merkezi coğrafi konumlarının [](https://office.com/datamaps), veri merkezlerinin ve konumlarının konumunu, geçerli varsayılan temel müşteri verilerine başvuru olarak yayımlarız. Kalan müşteri verilerinizin konumunu, müşteri profilinde yer alan Kuruluş Profiliniz altındaki Veri Konumu bölümünden Microsoft 365 yönetim merkezi.  
+  - question: >
+      Ne zaman taşıma isteğinda  olabilirim?
+    answer: >
+      Veri merkeziniz [için coğrafi olarak desteklenen zaman çerçeveleri için](request-your-data-move.md) lütfen Verilerinizi taşıma isteğinde bulunabilirsiniz.
+  - question: >
+      Taşınmayı nasıl talep  edilebilirim?
+    answer: >
+      Uygun müşteriler kendi sayfalarında bir sayfa [Microsoft 365 yönetim merkezi](https://admin.microsoft.com/). Taşıma [isteğiyle ilgili yönergeler için lütfen](request-your-data-move.md) bkz. Verilerinizi taşıma isteği.
+  - question: >
+      Taşıma isteğindekten sonra seçimimi değiştirebilir miyim?
+    answer: >
+      İsteğinizi gönderdikten sonra sizi bu işlemden kaldırmamız mümkün değildir.
+  - question: >
+      Son tarihten önce taşıma isteğinde olursam ne olur?
+    answer: >
+      Açık kayıt döneminden sonra geçiş isteklerini kabul etmiyoruz.
+  - question: >
+      Daha iyi bir ağ performansı elde etmek için verilerimi taşımak istediğimde ne olacak?
+    answer: >
+      Veri merkezine fiziksel Microsoft 365 yakınlık, daha iyi bir ağ performansı garanti edilemez. Son kullanıcı ile son kullanıcı arasındaki ağ performansını etkileyen birçok faktör ve Microsoft 365 vardır. Bu ve performans ayarı hakkında daha fazla bilgi için bkz. Daha fazla bilgi için bkz. Daha fazla [bilgi için Microsoft 365](network-planning-and-performance.md).
+  - question: >
+      Tüm hizmetler verilerini aynı gün içinde mi hareket ettirsin?
+    answer: >
+      Her hizmet bağımsız olarak taşınır ve büyük olasılıkla verilerini farklı zamanlarda taşır.
+  - question: >
+      Verilerimin ne zaman taşın olacağını seçebilir miyim?
+    answer: >
+      Müşteriler belirli bir tarihi seçememektedir, taşımalarını geciktirememektedir ve taşımalar için belirli bir tarih veya zaman çerçevesi paylaşamaz.
+  - question: >
+      Verilerim ne zaman taşınacak?
+    answer: >
+      Veri hareketleri, son kullanıcıları çok az etkileyen bir arka uç işlemidir. Genel olarak işletilen ve otomatik bir ortamda veri taşıma işlemleri gerçekleştirmemiz gereken karmaşıklık, duyarlık ve ölçek kiracınız veya tek bir kiracı için bir veri taşıma işleminin tamamlanması beklenende verileri paylaşmamızı yasaklar. Veri taşıma tamamlandığında, müşteriler İleti Merkezi'nde katılımcı hizmetlere göre bir onay mesajı alırlar.
+  - question: >
+      Veriler taşınırken kullanıcılar hizmetlere erişirken ne olur?
+    answer: >
+      Her [hizmet için veri taşıma işleminin](during-and-after-your-data-move.md) belirli bölümleri sırasında sınırlı olan özelliklerin tam listesi için bkz. Verileri taşıma işlemi sırasında ve sonrasında.
+  - question: >
+      Taşıma işleminin tamam olduğunu nasıl bilim?
+    answer: >
+      Her Microsoft 365 veri taşımanın tamamlandıktan sonra onay için İleti Merkezi'ne göz Microsoft 365. Her hizmetin verileri taşındığında, bir tamamlama bildirimi yayınlaacağız ve böylece üç tamamlama bildirimi olur: Exchange Online, SharePoint Online ve Skype Kurumsal Online için. Ayrıca, geri kalan müşteri verilerinizin konumunu, müşteri profilinde yer alan Kuruluş Profiliniz altındaki Veri Konumu bölümünden Microsoft 365 yönetim merkezi.  
+  - question: >
+      Yeni Microsoft 365 merkezlerinden birinin müşterisiyim, ancak oturum a olduğumda farklı bir ülke seç olduğumu biliyorum. Yeni veri merkezi coğrafi olarak nasıl taşınabilirsiniz?
+    answer: >
+      Kiracınız ile ilişkilendirilmiş kayıt ülkesini değiştirmek mümkün değildir. Bunun yerine, yeni bir abonelikle Microsoft 365 bir kiracı oluşturmanız, kullanıcılarınızı ve verilerinizi el ile yeni kiracıya taşımanız gerekir.
+  - question: >
+      Geçiş sırasında e-postayla veri geçişi Microsoft 365 durumda Exchange Online olur?
+    answer: >
+      Bu çok yaygın bir senaryodur ve tam olarak desteklenen bir senaryodur.  Veri merkezi coğrafi olarak bulut geçişi, şirket içi ile bulut posta kutusu geçişlerini engellemez.
+  - question: >
+      Bazı kullanıcıları pilot olarak uygulamam gerekir mi?
+    answer: >
+      Bağlantı test etmek için ayrı bir deneme kiracısı oluşturabilirsiniz, ancak deneme kiracısı, var olan kiracıyla hiçbir şekilde birleştiri değildir.
+  - question: >
+      Microsoft'un verilerimi taşıması için beklemek istemiyorum. Yeni bir kiracı oluşturularak kendim taşınacağım.
+    answer: >
+      Evet, ancak bu işlem Microsoft'un veri taşımayı gerçekleştirecek olması gibi sorunsuz olmaz.
+
+
+      Yeni veri merkezi coğrafi olarak kullanılabilir olduktan sonra yeni bir kiracı oluşturmanız, yeni kiracının yeni coğrafi olarak barındırlıklarını sağlar. Bu yeni kiracı önceki kiracıdan tamamen ayrıdır ve tüm kullanıcı posta kutularını, site içeriğini, etki alanı adlarını ve diğer tüm verileri taşıma sizin sorumluluğundadır. Kiracı adını bir kiracıdan diğerine taşınamaya dikkat etme. Kullanıcılarınız için tüm ayarları, verileri ve abonelikleri taşımaya hazır olurken, Microsoft tarafından sağlanan taşıma programını beklemenizi öneririz.
+  - question: >
+      Müşteri verilerim zaten yeni bir veri merkezi coğrafi olarak taşındı. Geri mi taşınmam gerekiyor?
+    answer: >
+      Hayır, bu mümkün değildir. Yeni coğrafi veri merkezlerine taşınan müşteriler geri taşınamaz. Herhangi bir coğrafi coğrafi bölge müşterisi olarak, daha önce olduğu gibi hizmet, performans ve güvenlik denetimleriyle aynı kaliteyi elde edersiniz. [Microsoft 365 Multi Geo](https://aka.ms/multi-geo) eklenti olarak kullanılabilir ve tek bir kiracının birden çok uydu coğrafi alanı oluşturmasına ve kullanıcı verilerini bu coğrafi bölgelere taşımasına olanak sağlar.
+  - question: >
+      Yeni Microsoft 365 merkezlerinde barındırılan kiracılar, ülke dışından kullanıcılar tarafından kullanılabilir mi?
+    answer: >
+      Evet. Microsoft, dünyanın her yanında 35 ülkede 130'dan fazla konumda 2.700'den fazla İnternet Servis Sağlayıcısı (ISS) ile eşlik sözleşmesiyle genel İnternet bağlantıları olan büyük bir küresel ağ sunar. Kullanıcılar İnternet'in neresinde olduklarını her yerden veri merkezlerine erişebilirsiniz.
+  - question: >
+      Kiracım Multi Geo eklentiyi yapılandırdı. Microsoft 365 Taşıma Programı'nın kiracısına yine kaydolabilirsiniz mi? Varsayılan coğrafi konumu değiştirmek ve uydu bölgesinde yer alan herhangi bir kullanıcının varsayılan coğrafi olarak yeni bölgeye taşınmasini sağlar musunuz?
+    answer: >
+      Evet, kiracınız kaydolmaya uygundur, ancak [Multi-Geo'u](https://aka.ms/multi-geo) yapılandırmış olan müşteriler için kiracı düzeyinde taşıma tamamen destek gerektir etmemektedir.
+
+
+      SharePoint Online'OneDrive İş veritabanı, bu program aracılığıyla yeni veri merkezi coğrafi olarak kiracı düzeyinde geçirilmez. Müşteri yöneticisi Multi-Geo OneDrive İş herhangi bir kullanılabilir bölgeye taşınacak şekilde paylaşımlar yapılandırabilirsiniz, ancak kiracı için Multi-Geo yapılandırıldığında kiracının varsayılan konumu değiştirilemez.
+
+
+      Geçişi kabul etmek zorunda olan müşteriler için - tüm posta Exchange Online posta kutularını geçerli varsayılan coğrafi konumuzdan yeni yerel veri merkezinize coğrafi olarak taşımız ve varsayılan veri Exchange Online güncelleştiriz. Multi Geo uydu bölgelerinde uydu bölgesi verilerine uygun şekilde yapılandırılan hiçbir EXO posta kutusunu, uydu bölgesi veri ikametine uygun şekilde taşımayacak.  Teams çok coğrafi yapılandırmaya sahip müşteriler için sohbet hizmeti kiracı geçişleri, kiracı geçişleri Exchange Online.
+  - question: "Kiracımda dağıtılan ortak klasörler var. Taşıma sırasında veya sonrasında ortak klasör erişimini nasıl etkiler? \n"
+    answer: >
+      Ortak klasörlerin taşıması sırasında veya sonrasında ortak klasörlere erişen son kullanıcıların hiçbir etkisi yoktur. Ancak, tüm ortak klasör posta kutuları aynı bölgeye taşınana kadar Exchange Yönetim Merkezi aracında ortak klasörler yönetim için kullanılamıyor olabilir. Diğer ayrıntılar [için lütfen bu](https://aka.ms/pfxrf) makaleyi kontrol edin.
+additionalContent: "\n## <a name=\"related-topics\"></a>İlgili konular\n  [Temel verileri yeni veri Microsoft 365 coğrafi olarak taşıma](moving-data-to-new-datacenter-geos.md)\n\n  [Verilerinizin taşınması nasıl gerekir?](request-your-data-move.md)\n\n  [Microsoft 365 Multi Geo](https://aka.ms/multi-geo)\n\n  [Microsoft 365 veri merkezi haritası](https://office.com/datamaps)\n\n  [Microsoft 365 Desteği](../admin/get-help-support.md)\n\n  [Veriler için yeni veri merkezi coğrafi Microsoft Dynamics CRM Online](/power-platform/admin/new-datacenter-regions)\n\n  [Bölgeye göre Azure hizmetleri](https://azure.microsoft.com/regions/)"

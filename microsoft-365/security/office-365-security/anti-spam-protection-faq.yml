@@ -1,0 +1,245 @@
+### YamlMime:FAQ
+metadata:
+  title: İstenmeyen posta koruması hakkında SSS
+  f1.keywords:
+  - NOCSH
+  ms.author: chrisda
+  author: chrisda
+  manager: dansimp
+  audience: ITPro
+  ms.topic: troubleshooting
+  ms.localizationpriority: medium
+  search.appverid:
+  - MET150
+  ms.assetid: c534a35d-b121-45da-9d0a-ce738ce51fce
+  ms.collection:
+  - M365-security-compliance
+  - m365initiative-defender-office365
+  ms.custom:
+  - seo-marvel-apr2020
+  description: Yöneticiler EOP'de (EOP) istenmeyen posta koruması hakkında sık sorulan soruları Exchange Online Protection yanıtlarını  bakabilirsiniz.
+  ms.technology: mdo
+  ms.prod: m365-security
+  ms.openlocfilehash: 6932c56b79f03f142c8551c9fdf7661765f194bf
+  ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 02/06/2022
+  ms.locfileid: "63016507"
+title: İstenmeyen posta koruması hakkında SSS
+summary: >
+  [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+
+
+  **Geçerli olduğu yer:**
+
+  - [Exchange Online Protection](exchange-online-protection-overview.md)
+
+  - [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+
+  - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
+
+
+  Bu konu başlığı altında, Exchange Online'ta posta kutuları olan Microsoft 365 kuruluşları için veya posta kutuları olmayan tek başına Exchange Online Protection (EOP) kuruluşlarına istenmeyen posta koruması hakkında sık sorulan Exchange Online Protection yanıtlar Exchange Online ve yanıtlar sağlanmıştır.
+
+
+  Karantina hakkında sorular ve yanıtlar için bkz. Karantina [SSS](quarantine-faq.yml).
+
+
+  Kötü amaçlı yazılımdan koruma hakkında sorular ve yanıtlar için bkz. Kötü amaçlı [yazılımdan koruma hakkında SSS](anti-malware-protection-faq-eop.yml).
+
+
+  E-postayla mücadele koruması hakkında sorular ve yanıtlar için bkz. [Yanlışlık önleme koruması hakkında SSS](anti-spoofing-protection-faq.yml).
+sections:
+- name: Yok sayıldı
+  questions:
+  - question: >
+      Varsayılan olarak, istenmeyen posta tarafından algılanan bir iletiye ne olur?
+    answer: >
+      **Gelen iletiler için:** İstenmeyen postaların çoğunluğu, kaynak e-posta sunucusunun IP adresine bağlı olan bağlantı filtreleme yoluyla silinir. İstenmeyen posta önleme ilkeleri (istenmeyen posta filtresi ilkeleri veya içerik filtresi ilkeleri olarak da bilinir), iletileri istenmeyen posta, toplu veya kimlik avı olarak inceler ve sınıflandırın. Varsayılan olarak, istenmeyen posta veya toplu olarak sınıflandırılmış iletiler alıcının Gereksiz E-posta klasörüne teslim edilirken, kimlik avı olarak sınıflandırılan iletiler de karantinaya alınır. Varsayılan istenmeyen posta önleme ilkesi değiştirebilir (tüm alıcılar için geçerlidir) veya belirli kullanıcı grupları için daha sıkı ayarlar içeren özel istenmeyen posta önleme ilkeleri oluşturabilirsiniz (örneğin, yöneticilere gönderilen istenmeyen postayı karantinaya alırsınız). Daha fazla bilgi için bkz [. İstenmeyen posta](configure-your-spam-filter-policies.md) önleme ilkelerini [yapılandırma ve önerilen istenmeyen posta önleme ilkesi ayarları](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
+
+
+      > [!IMPORTANT]
+
+      > EOP'nin şirket içi Exchange posta kutularını koruyor olduğu karma dağıtımlarda, iletilere eklenen EOP istenmeyen posta filtreleme üst bilgilerini algılamak için şirket içi Exchange kuruluş içinde iki Exchange posta akışı kuralı (aktarım kuralları olarak da bilinir) yapılandırmanız gerekir. Ayrıntılar için bkz. [EOP'yi karma ortamlarda gereksiz E-posta klasörüne istenmeyen posta teslim edecek şekilde yapılandırma](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
+
+       **Giden iletiler için:** İleti, yüksek riskli teslim havuzuna yönlendirildi [](high-risk-delivery-pool-for-outbound-messages.md) veya teslim edilmiyor raporunda (NDR veya geri dönen ileti olarak da bilinir) gönderene döndürülür. Giden istenmeyen posta koruması hakkında daha fazla bilgi için bkz. [Giden istenmeyen posta denetimleri](outbound-spam-controls.md).
+  - question: >
+      Sıfır günlük istenmeyen posta çeşitleme nedir ve hizmet tarafından nasıl ele alınır?
+    answer: >
+      Sıfır gün istenmeyen posta çeşitleni, daha önce bilinmeyen ve hiç yakalanmamış istenmeyen posta çeşitlemiştir. Bu nedenle istenmeyen posta önleme filtrelerimiz henüz bunu algılamak için ekleyebilirsiniz. Sıfır gün içinde bir istenmeyen posta örneği, istenmeyen posta analistlerimiz tarafından yakalanır ve çözümlendikten sonra, istenmeyen posta sınıflandırma ölçütlerine uygunsa istenmeyen posta önleme filtrelerimiz algılenecek şekilde güncelleştirilir ve artık "sıfır gün" olarak kabul edilir.
+
+
+      > [!NOTE]
+
+      > Sıfır gün içinde istenmeyen posta çeşitleni gibi bir ileti alırsanız, hizmeti geliştirmemıza yardımcı olmak için lütfen İletileri ve dosyaları Microsoft'a bildirme makalesinde açıklanan yöntemlerden birini kullanarak iletiyi [Microsoft'a gönderin](report-junk-email-messages-to-microsoft.md).
+  - question: >
+      İstenmeyen posta önleme koruması sağlamak için hizmeti yapılandırmam gerekiyor mu?
+    answer: >
+      Hizmete kaydolarak etki alanlarınızı eklemeniz sonrasında istenmeyen posta filtreleme otomatik olarak etkinleştirilir. Varsayılan olarak, istenmeyen posta filtreleme ek yapılandırmaya gerek kalmadan sizi koruyacak şekilde ayarlanmıştır (karma ortamlardaki tek başına EOP tek başına müşterileri için önceden not edilen özel durum dışında). Yönetici olarak, varsayılan istenmeyen posta filtreleme ayarlarını düzenerek kuruma en uygun ayarları düzenleyebilirsiniz. Daha ayrıntılı bilgi için, ayrıca, belirtilen kullanıcılara, gruplara veya etki alanlarına uygulanan istenmeyen posta önleme ilkeleri ve giden istenmeyen posta önleme ilkeleri de oluşturabilirsiniz. Özel ilkeler her zaman varsayılan ilkeden önceliğe sahiptir, ancak özel ilkelerinizin önceliğini (yani çalışma sırası) değiştirebilirsiniz.
+
+
+      Daha fazla bilgi için, aşağıdaki konulara bakın:
+
+
+      [EOP ve Microsoft Defender için önerilen güvenlik Office 365 ayarları](recommended-settings-for-eop-and-office365.md)
+
+
+      [EOP'de bağlantı filtrelemeyi yapılandırma](configure-the-connection-filter-policy.md)
+
+
+      [EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md)
+
+
+      [Giden istenmeyen posta ilkesi yapılandırma](configure-the-outbound-spam-policy.md)
+  - question: >
+      İstenmeyen posta önleme ilkesinde değişiklik olursa, bu ilkede yapılan değişikliklerimi kaydetmem ne kadar zaman alır?
+    answer: >
+      Değişikliklerin etkili bir şekilde hepsi 1 saat kadar zaman alabiliyor.
+  - question: >
+      Toplu e-posta filtreleme otomatik olarak etkinleştirilsin mi?
+    answer: >
+      Evet. Toplu e-posta hakkında daha fazla bilgi için [bkz. Gereksiz e-posta ile toplu e-posta arasındaki fark nedir?](what-s-the-difference-between-junk-email-and-bulk-email.md)
+  - question: >
+      Hizmet URL filtrelemesi sağlar mı?
+    answer: >
+      Evet, hizmetin ileti içindeki URL'leri denetler bir URL filtresi vardır. Bilinen istenmeyen posta veya kötü amaçlı içerikle ilişkilendirilmiş URL'ler algılanırsa, ileti istenmeyen posta olarak işaretlenir.
+  - question: >
+      Hizmeti kullanan müşteriler Microsoft'a hatalı negatif (istenmeyen posta) ve hatalı pozitif (istenmeyen posta olmayan) iletiler nasıl gönderebilir?
+    answer: >
+      İstenmeyen ve istenmeyen posta olmayan iletiler çeşitli yollarla analiz için Microsoft'a gönderebilirsiniz. Daha fazla bilgi için bkz [. İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).
+  - question: >
+      İstenmeyen posta raporları almak için neleri edinim?
+    answer: >
+      Evet, örneğin çalışma sayfalarından bir istenmeyen posta algılama raporu Microsoft 365 yönetim merkezi. Bu rapor, istenmeyen posta hacmini benzersiz iletilerin sayısı olarak gösterir. Raporlama hakkında daha fazla bilgi için aşağıdaki bağlantılara bakın:
+
+
+      Exchange Online: [İzleme, Raporlama ve İleti İzleme seçeneklerini Exchange Online](/exchange/monitoring/monitoring)
+
+
+      Tek başına EOP müşterileri: [Rapor ve ileti izleme Exchange Online Protection](reporting-and-message-trace-in-exchange-online-protection.md)
+  - question: >
+      Birisi bana bir ileti gönderdi ve bulamıyorum. Bunun istenmeyen posta olarak algılandığından şüpheleniyoruz. Bunu bulmak için kullanabileceğim bir araç var mı?
+    answer: >
+      Evet, ileti izleme aracı, e-posta iletilerini hizmetten geçtiklerine göre takip etmek için onlara neler olduğunu bulmanızı sağlar. İletinin neden istenmeyen posta olarak işaretlenen bir ileti olduğunu bulmak için ileti izleme aracını kullanma hakkında daha fazla bilgi için bkz. [İleti istenmeyen posta olarak mı işaretlendi?](/exchange/monitoring/trace-an-email-message/message-trace-faq#was-a-message-marked-as-spam)
+  - question: >
+      Kullanıcılarım giden istenmeyen posta gönderirse, hizmet postamı kısıtlar (fiyat sınırı) sağlar mı?
+    answer: >
+      Belirli bir zaman dilimi içinde hizmet aracılığıyla bir kullanıcıdan gönderilen postanın yarısından fazlası (örneğin, saat başına) EOP tarafından istenmeyen posta olarak belirlenirse, kullanıcının ileti göndermesi engellenir. Çoğu durumda, giden iletinin istenmeyen posta olduğu belirlenirse, bu ileti yüksek riskli teslim havuzuna yönlendirilen ve bu da normal giden IP havuzun engellenenler listesine eklenme olasılığını azaltır.
+
+
+      Gönderenin giden istenmeyen posta göndermesi engellenmişse, belirtilen e-posta adresine bildirim gönderebilirsiniz. Bu ayar hakkında daha fazla bilgi için bkz [. Giden istenmeyen posta ilkesi yapılandırma](configure-the-outbound-spam-policy.md).
+  - question: >
+      Bu hizmetle birlikte üçüncü taraf istenmeyen posta önleme ve kötü amaçlı yazılımdan koruma sağlayıcılarını Exchange Online?
+    answer: >
+      Evet. MX kaydınızı Microsoft'a yönlendirmenizi önerse de, e-postanızı önce Microsoft dışında bir yere yönlendirmenin yasal iş nedenlerinin olduğunu fark ettim.
+
+
+      - **Gelen**: MX kayıtlarınızı üçüncü taraf sağlayıcıyı işaret ediyor şekilde değiştirebilir ve daha fazla işlem için iletileri EOP'ye yönlendirebilirsiniz. Daha fazla bilgi için bkz[. Aşağıdaki bağlantılarda bağlayıcılar için gelişmiş Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
+
+
+      - **Giden**: Ana bilgisayar yönlendirmeyi, Microsoft 365 üçüncü taraf sağlayıcıya doğru yapılandırabilirsiniz.
+  - question: >
+      Microsoft'un kimlik avı dolandırıcılığına karşı nasıl koruyacağım konusunda herhangi bir belge var mı?
+    answer: >
+      Evet. Daha fazla bilgi için bkz [. İnternette gizliliğinizi koruma](https://support.microsoft.com/help/4091455)
+  - question: >
+      İstenmeyen posta ve kötü amaçlı yazılım iletileri, bunları gönderen olarak araştırılıyor veya hukuki yaptırım varlıklarına aktarılıyor mu?
+    answer: >
+      İstenmeyen posta ve kötü amaçlı yazılım algılama ve kaldırmaya odaklanan hizmet, bazen özellikle tehlikeli veya kötü amaçlı istenmeyen posta veya saldırı kampanyaları üzerinde araştırmamız ve failleri takipmiz olabilir. Bu, istenmeyen posta gönderen bir botnet'i almak, istenmeyen postaların hizmeti (giden e-posta göndermek için kullanıyorsa) kullanımına engel olmak ve bu bilgileri hukuki yaptırım kararına göndermek için yasal ve dijital olay birimlerimizle birlikte çalışmayı içeriyor olabilir.
+  - question: >
+      Postanın teslim olmasını sağlayacak en iyi giden posta uygulamalarından hangileridir?
+    answer: >
+      Aşağıda sunulan yönergeler, giden e-posta iletilerini göndermeye yönelik en iyi yöntemlerdir.
+
+
+      - **Kaynak e-posta etki alanı DNS'de çözülmalıdır.**
+
+        Örneğin, gönderen kişi user@fabrikam ise etki alanı fabrikam 192.0.43.10 IP adresine çözüler.
+
+        Gönderen etki alanının DNS'de A-kaydı ve MX kaydı yoksa, hizmet iletinin içeriğinin istenmeyen posta olup olmadığı önemsiz posta olsa da değil, iletiyi daha yüksek riskli teslim havuzuna yönlendirecektir. Daha yüksek riskli teslim havuzu hakkında daha fazla bilgi için bkz. [Giden iletiler için yüksek riskli teslim havuzu](high-risk-delivery-pool-for-outbound-messages.md).
+
+      - **Giden e-posta sunucusunun ters DNS (PTR) girdisi olması gerekir.**
+
+        Örneğin, e-posta kaynağı IP adresi 192.0.43.10 ise, ters DNS girişi `43-10.any.icann.org`.' olur.
+
+      - **HELO/EHLO ve MAIL FROM komutları tutarlı olmalı ve IP adresi yerine etki alanı adı olarak olmalıdır.**
+
+        HELO/EHLO komutu, gönderen IP adresinin ters DNS'sini eşecek şekilde yapılandırıldığından, etki alanı ileti üstbilgilerinin çeşitli bölümleri arasında aynı kalır.
+
+      - **DNS'de düzgün SPF kayıtlarının ayar olduğundan emin olmak.**
+
+        SPF kayıtları, bir etki alanı tarafından gönderilen postanın aslında bu etki alanını gönderdiğini ve kimlik doğru olmadığını doğrulama mekanizmasıdır. SPF kayıtları hakkında daha fazla bilgi için aşağıdaki bağlantılara bakın:
+
+        [SPF'yi, sanallık engellemeye yardımcı olacak şekilde ayarlama](set-up-spf-in-office-365-to-help-prevent-spoofing.md)
+
+        [Etki alanları SSS](../../admin/setup/domains-faq.yml#how-can-i-validate-spf-records-for-my-domain)
+
+      - **DKIM ile e-posta imzalayarak, gevşek kurallılık ile imzalarsınız.**
+
+        Gönderen, İletilerini Etki Alanı Anahtarları Tanımlanan Posta (DKIM) kullanarak imzalamak isterse ve hizmet üzerinden giden posta göndermek isterse, rahat üst bilgi kurallılaştırma algoritmasıyla imza at olmalıdır. Katı üst bilgi kurallı biçimde imzanın imzalanması, hizmetten geçerken imzayı geçersiz hale başlatabilirsiniz.
+
+      - **Etki alanı sahiplerinin WHOIS veritabanında doğru bilgilere sahip olması gerekir.**
+
+        Bu, etki alanı sahiplerini tanımlar ve kararlı ana şirket, kişi noktası ve ad sunucularını girerek onlarla nasıl bağlantı kuracağız?
+
+      - **Toplu posta gönderenler için, Gönderen: adı iletiyi kimin gönderdiğini yansıtmalı, ancak iletinin konu satırı iletinin ne hakkında olduğunu kısaca özetle açıklamalı.**
+
+        İleti gövdesi teklifin, hizmetin veya ürünün net bir göstergesine sahip olması gerekir. Örneğin, gönderen Contoso şirketi için toplu posta gönderiyorsa, e-postaNın Gönderen ve Konu bilgileri aşağıdaki gibi olur:
+
+        > Marketing@contoso.com <br> Konu: Noel mevsimi için yeni güncelleştirilmiş katalog!
+
+        Aşağıdaki örnekte, açıklayıcı bir ifade değildir ve bu, ne yapmaları gerekenlere örnektir:
+
+        > Buradan: user@hotmail.com <br> Konu: Kataloglar
+
+      - **Birçok alıcıya toplu posta gönderiyorsanız ve ileti bülten biçimindese, iletinin en altında abonelikten çıkmanın bir yolu olmalıdır.**
+
+        Abonelikten çıkma seçeneği aşağıdakine benzer:
+
+        > Bu ileti example@contoso.com tarafından sender@fabrikam.com. Profili/E-posta Adresi Iletişim | **SafeUnsubscribe**&trade; | Gizlilik İlkesi
+
+      - **Toplu e-posta gönderiliyorsa, liste alım işlemi çift kabul kullanılarak yapılmalıdır. Toplu postaciysanız, çift kabul etmek endüstrinin en iyi uygulamasıdır.**
+
+        Çift kabul, bir kullanıcının pazarlama postası için iki işlemle kaydolmasını gerektirme uygulamasıdır:
+
+        1. Kullanıcı daha önce işaretlenmemiş bir onay kutusuna tıkladığında, marketten başka teklifler veya e-posta iletileri almayı kabul ediyor.
+
+        2. Pazarlamacı kullanıcının sağladığı e-posta adresine, onaylarını tamamlayan zaman duyarlı bir bağlantıya tıklamalarını isteyen bir onay e-postası gönderdiği ikinci bir kez.
+
+        Çift kabul etmek, toplu e-posta gönderenleri için iyi bir üne sahiptir.
+
+      - **Toplu gönderenler, sorumlu tutulacakları saydam içerik oluşturmaları gerekir:**
+
+        1. Alıcıların göndereni adres defterine eklemesini isteği verbiage, bu tür bir eylemin teslime yönelik bir garanti olmadığını açıkça ifade etmek gerekir.
+
+        2. İletinin gövdesinde yönlendirmeleri oluşturmak için tutarlı bir bağlantı stili kullanın.
+
+        3. Büyük resim, ek veya yalnızca resimden oluşan iletiler göndermeyin.
+
+        4. İzleme piksellerini (web hataları veya işaretleri) kullanırken, bunların genel gizlilik veya P3P ayarlarınıza açık bir şekilde ifade edin.
+
+      - **Giden geri dönen iletileri biçimlendirin.**
+
+        Teslim durumu bildirim iletileri (teslim edililmeyen raporlar, NDR'ler veya geri dönen iletiler olarak da bilinir) oluşturmak için, gönderenlerin [RFC 3464'te](https://www.ietf.org/rfc/rfc3464.txt) belirtilen geri dönenin biçimini izlemesi gerekir.
+
+      - **Var olmayan kullanıcıların geri dönen e-posta adreslerini kaldırın.**
+
+        E-posta adresinin artık kullanıla olmadığını belirten bir NDR alırsanız, var olmayan e-posta diğer adını listeden kaldırın. E-posta adresleri zaman içinde değişir ve kişiler bazen bunları atar.
+
+      - **Hotmail'in Akıllı Ağ Veri Hizmetleri (SNDS) programını kullanın.**
+
+        Hotmail, gönderenlerin son kullanıcılar tarafından gönderilen şikayetleri denetlemelerini sağlayan Akıllı Ağ Veri Hizmetleri adlı bir program kullanır. SNDS, Hotmail'e teslim sorunlarını gidermek için birincil portaldır.
+  - question: >
+      İstenmeyen posta filtrelemeyi nasıl kapat yapabilirim?
+    answer: >-
+      E-posta Microsoft 365'a teslim edilmeden önce taramak için üçüncü taraf koruma hizmeti veya cihaz kullanırsanız, gelen iletiler için çoğu istenmeyen posta filtresini atlamak için bir posta akış kuralı (aktarım kuralı olarak da bilinir) kullanabilirsiniz. Yönergeler için bkz [. İletilerde istenmeyen posta güven düzeyini (SCL) ayarlamak için posta akışı kurallarını kullanma](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
+
+
+      İstenmeyen posta filtresini atlamak için posta akış kuralı kullanırsanız, yüksek güveni olan kimlik avı iletileri yine filtrelenmiş olur. EOP'nin diğer özellikleri etkilenmez (örneğin, iletiler her zaman kötü amaçlı yazılım için taranır).
+
+
+      Microsoft 365'a teslim edilene kadar e-postayı taramak için üçüncü taraf bir koruma hizmeti veya cihaz kullanıyorsanız, Microsoft 365'daki algılama, raporlama ve soruşturma özelliklerinin ileti kaynaklarını doğru tanımlay olması için Bağlayıcılar için Gelişmiş Filtreleme'yi de (atlama *listesi olarak da* bilinir) etkinleştirmeniz gerekir. Daha fazla bilgi için bkz [. Bağlayıcılar için Gelişmiş Filtreleme](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
+
+
+      SecOps posta kutuları veya kimlik avı benzetimleri için istenmeyen posta filtrelemeyi atlamanız gerekirse, posta akış kurallarını kullanmayın. Daha fazla bilgi için bkz. Kullanıcılara üçüncü taraf kimlik avı benzetimlerinin ve filtrelenmemiş [iletilerin SecOps posta kutularına teslimi yapılandırma](configure-advanced-delivery.md).
