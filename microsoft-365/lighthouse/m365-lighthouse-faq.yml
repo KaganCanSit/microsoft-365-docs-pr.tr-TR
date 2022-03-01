@@ -1,0 +1,102 @@
+### YamlMime:FAQ
+metadata:
+  title: Microsoft 365 Lighthouse sorulan sorular (SSS)
+  f1.keywords: NOCSH
+  ms.author: sharik
+  author: SKjerland
+  manager: scotv
+  audience: Admin
+  ms.topic: article
+  ms.prod: microsoft-365-lighthouse
+  ms.localizationpriority: medium
+  ms.collection:
+  - M365-subscription-management
+  - Adm_O365
+  ms.custom:
+  - AdminSurgePortfolio
+  - M365-Lighthouse
+  search.appverid: MET150
+  description: Microsoft 365 Lighthouse kullanarak Yönetilen Hizmet Sağlayıcıları (MSP)'ler için, sık sorulan soruların (SSS) yanıtlarını Microsoft 365 Lighthouse.
+  ms.openlocfilehash: 948b4584f2f10cdfd3f709cfe007d1367ba110a9
+  ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 12/09/2021
+  ms.locfileid: "63008902"
+title: Microsoft 365 Lighthouse sorulan sorular (SSS)
+summary: >
+  > [!NOTE]
+
+  > Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
+
+
+  Bu makale, bu konuda sık sorulan soruların (SSS) yanıtlarını Microsoft 365 Lighthouse.
+
+
+  Sorunun yanıtını bulamazsanız bir yorum bırakarak bize bunu haber veririz, biz de bunu bu makaleye ekleriz.
+sections:
+- name: Yok sayıldı
+  questions:
+  - question: Bu ne Microsoft 365 Lighthouse?
+    answer: >
+      Microsoft 365 Lighthouse, Küçük ve orta ölçekli işletme (SMB) müşterileri için Yönetilen Hizmet Sağlayıcılarının (MSP) cihazları, verileri ve kullanıcıları küçük ve orta ölçekli işletme (SMB) müşterileri için güvenli ve yönetmeye yardımcı olan bir Microsoft 365 İş Ekstra Microsoft 365 E3.  Lighthouse, SMB'ler için uyarlanmış güvenlik yapılandırma taban çizgilerini önererek ve tüm müşteri ortamlarında çok kiracılı görünümler sağlayarak kiracıları işe alımları kolaylaştırır. Daha fazla bilgi için bkz[. Genel Microsoft 365 Lighthouse](m365-lighthouse-overview.md).
+  - question: Deniz Feneri ile Azure Microsoft 365 Lighthouse arasındaki fark nedir?
+    answer: >
+      Microsoft 365 Lighthouse, Azure Microsoft 365 hizmetleri yerine diğer hizmetlere odaklandı. Azure Lighthouse, Azure portalda yerleşik olarak yer alırken ve IT ortaklarının Azure için birden çok kiracıyı yönetmesine olanak sağlarken, Microsoft 365 Lighthouse MSP'lerin birden çok kiracıyı veya müşteri kiracılarını birden Microsoft 365 İş Ekstra Microsoft 365 E3 tek başına bir portaldır. Bu konuda daha fazla Microsoft 365 Lighthouse için bkz. Genel [bakış Microsoft 365 Lighthouse](m365-lighthouse-overview.md). Azure Lighthouse hakkında daha fazla bilgi için bkz [. Azure Lighthouse nedir?](/azure/lighthouse/overview)
+  - question: Bu ücretin Microsoft 365 Lighthouse nedir?
+    answer: >
+      Aynı hizmetleri ve bağlı cihazları yönetmek için Deniz Feneri'nin Önizleme Microsoft 365 İş Ekstra Microsoft 365 E3 ek ücret yoktur. Deniz Feneri şu anda Önizleme'dedir ve küçük - orta ölçekli işletmelere hizmet veren ve müşterileri ile Bulut Çözümü Sağlayıcısı (CSP) ilişkisi olan MSP'ler tarafından kullanılabilir. Dolaylı sağlayıcıların şu anda Deniz Feneri tarafından destekçi olmadığını unutmayın. Daha fazla bilgi için bkz[. Microsoft 365 Lighthouse](m365-lighthouse-requirements.md).
+  - question: Microsoft 365 Lighthouse'i kullanmak Microsoft 365 Lighthouse?
+    answer: >
+      Geçerli gereksinimlerin listesi için bkz. Yeni [sistem Microsoft 365 Lighthouse](m365-lighthouse-requirements.md).
+  - question: Hangi ülke ve bölgelerde Microsoft 365 Lighthouse kullanılabilir?
+    answer: >
+      Deniz Feneri, Çin ve İsrail Yönetimi Microsoft 365 tüm ülkelerde kullanılabilir. Öte yandan, Deniz Feneri'nde cihaz yönetimi ve tehdit yönetimi gibi özellikler Microsoft Intune'ye dayandırmada ve kullanıcı yönetimi de Azure Active Directory'e (Azure AD) güvenmekte ve Intune ve Azure AD'nin bazı ülke ve bölgelerde kullanılamıyor olabilir. Kullanılabilirlik durumu, Azure AD Microsoft 365 Intune uygunluk durumunun tam listesi için bkz. [Uluslararası kullanılabilirlik](https://www.microsoft.com/microsoft-365/business/international-availability).
+
+
+      Deniz feneri, ulusal bulutlarda kullanılamaz.
+  - question: İş için nasıl kaydol Microsoft 365 Lighthouse?
+    answer: >
+      Deniz Feneri'ne kaydolmak için CSP programına kaydolmanız gerekir. Şu anda dolaylı sağlayıcıları destekleye ala bir şey yok. Kaydolma yönergeleri için bkz. İş için [Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md). CSP programı hakkında daha fazla bilgi edinmek için csp programına [Bulut Çözümü Sağlayıcısı bakın](/partner-center/csp-overview).
+  - question: Kaydolmayı bitirdim, neden hiç müşteri kiracı verisi göremiyorum?
+    answer: >
+      Müşteri kiracı verilerini Deniz Feneri'nin içinde yüklemesi 48 saate kadar sürebilir. Eklemeyi tamamlayana kadar 48'den fazla zaman kullandıysanız lütfen yardım için Destek ekibimize başvurun. Ekleme tamamlandıktan sonra bunları bilgili ve ilgili ekran görüntüleriyle günlükler sağlayacaksınız. Daha fazla bilgi için bkz[. Destek almak için Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+  - question: Neden bazı müşteri kiracıları için verileri görüyorum, ancak diğerleri bu şekilde görmüyor?
+    answer: >
+      Müşteri kiracı verilerin Deniz Feneri'nde gösternsin mi, iş ortaklarının İş Ortağı Merkezi aracılığıyla müşterilerle Temsilci Yönetici Ayrıcalıkları (DAP) kurması gerekir. Daha fazla bilgi için, [İş Ortağı Merkezi'nde müşteriyle bayi ilişkisi isteğinde bulunabilirsiniz](/partner-center/request-a-relationship-with-a-customer). Kiracıların ayrıca, en az bir Microsoft 365 İş Ekstra Microsoft 365 E3 ve kiracılarında en az 500 lisanslı kullanıcı olması gerekir. Daha fazla bilgi için Bkz[. Kiracılar Microsoft 365 Lighthouse](m365-lighthouse-requirements.md) [ve Kiracılar Microsoft 365 Lighthouse genel bakış](m365-lighthouse-tenants-page-overview.md).
+  - question: Kiracılar için belirli kiracıları aynı kiracıda görmek Microsoft 365 Lighthouse?
+    answer: >
+      Deniz Feneri'nde belirli kiracıları ve onların verilerini görmek istemiyorsanız, bu kiracıları devre dışı abilirsiniz. Kiracıyı devre dışı bırakma için şu adımları izleyin:
+
+
+      1. Sol **gezinti bölmesinde** Kiracılar'ı seçerek **Kiracılar sayfasını** açın.
+
+      1. Devre dışı bırakılması istediğiniz kiracıyı bulun, kiracı adının yanındaki üç noktayı seçin ve sonra Kiracıyı devre dışı **bırak'ı seçin**.
+
+      1. Görüntülenen onay iletisinde, kiracıyı **devre dışı bırakma** için Onayla'ya tıklayın.
+          > [!NOTE]
+          > Kiracıyı devre dışı bıraktırdıktan sonra, devre dışı bırakma işlemi tamamlandıktan sonra kiracı üzerinde eylemde bulundurz. Devre dışı bırakmanın tamamlanması 48 saat kadar sürebilir.
+
+      Kiracılar hakkında daha fazla bilgi edinmek için [kiracılar Microsoft 365 Lighthouse genel bakış sayfasına bakın](m365-lighthouse-tenants-page-overview.md).
+  - question: Müşteri Microsoft 365 Lighthouse kiracımda başka abonelikler varsa kiracım yeni abonelikler Microsoft 365 İş Ekstra çalışacak Microsoft 365 E3?
+    answer: >
+      Deniz Feneri, kullanıcıları için kullanılabilir lisansları olan Microsoft 365 İş Ekstra Microsoft 365 E3 kiracıları yönetmenize yardımcı olur. İş hizmeti lisansı veya E3 lisansına sahip Premium müşteri kiracılarında Deniz Feneri işlevselliği sınırlı olacaktır. Örneğin, bir kullanıcının Intune içeren bir lisansı yoksa, bu kullanıcının cihazları, cihaz uyumluluk durumu ve tehdit durumu kullanılamaz; ve kullanıcının Azure AD P1 içeren bir lisansı yoksa, bu kullanıcının parolası ve oturum açma yönetimi kullanılamaz. Daha fazla bilgi için bkz[. Microsoft 365 Lighthouse](m365-lighthouse-requirements.md).
+  - question: bulutta müşteri Bulut PC'lerini yönetmeye nasıl Microsoft 365 Lighthouse?
+    answer: >
+      Deniz Feneri'nin kullanımı gereksinimlerini karşılarsanız, Deniz Feneri'nde müşteri Bulut PC'lerini yönetmek için uygun olursanız. Geçerli gereksinimlerin listesi için bkz. Yeni [sistem Microsoft 365 Lighthouse](m365-lighthouse-requirements.md).
+  - question: Müşterilerim için Windows 365 (Bulut bilgisayar) lisanslarını nereden satın aiyum?
+    answer: >
+      Tüm kullanılabilir Microsoft Windows kanalları aracılığıyla bir5 lisansı satın alınabilir. Satın alınan bir lisans, bir Bulut bilgisayar satın alımıyla eşdeğerdir. Şu anda, her kullanıcıya aynı SKU türünde yalnızca bir Bulut bilgisayarı atanabilir, ancak farklı SKU türlerinden olan birden çok Bulut bilgisayara atanabilir. En iyi Windows 365 planlarını ve fiyatlarını karşılaştırmak için bkz[. Size en uygun Windows 365 Cloud PC'i edinin](https://www.microsoft.com/windows-365/business/compare-plans-pricing).
+  - question: Nasıl yardım ve destek yapabilirim?
+    answer: >
+      Deniz Feneri'nde **?** simgesini seçin. Buradan kendi kendine yardım makalelerine erişin veya destek ile iletişime geçin. Yardım ve destek seçenekleri hakkında daha fazla bilgi için bkz. Destek [almak için yardım ve Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+  - question: Nereden geri bildirim ve fikir gönderebilirsiniz?
+    answer: >-
+      Geri bildirimleriniz bizim için önemlidir! Geri bildirim göndermenin birkaç farklı yolu vardır:
+
+
+      - Geri Bildirim [Microsoft 365 Lighthouse gidin](https://aka.ms/m365lighthouseuservoice). Deniz Feneri ve 365 özellikleri Windows konuşmalar başlatabilirsiniz, diğer iş ortakları veya Microsoft çalışanları için sorular gönderebilirsiniz, geri bildirim ve özellik fikirleri sebilirsiniz.
+
+      - Deniz Feneri'nin sağ üst köşesindeki Geri Bildirim simgesini seçin.
+
+      - Deniz Feneri'nde geri bildirim göndermenizi isteyen bazen (ayda bir değil) açılır pencereye yanıt verin.

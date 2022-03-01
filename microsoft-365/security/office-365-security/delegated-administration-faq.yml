@@ -1,0 +1,54 @@
+### YamlMime:FAQ
+metadata:
+  title: Temsilci ile yönetim hakkında SSS
+  f1.keywords:
+  - NOCSH
+  ms.author: chrisda
+  author: chrisda
+  manager: dansimp
+  ms.date: 
+  audience: ITPro
+  ms.topic: troubleshooting
+  ms.localizationpriority: medium
+  ms.assetid: d6a87ce8-2c22-433a-b430-5eab14f6afdc
+  ms.custom:
+  - seo-marvel-apr2020
+  description: Yöneticiler, Microsoft iş ortakları ve satıcıları için proje sayfasında temsili yönetim görevleriyle Microsoft 365 sık sorulan soruları ve yanıtları  bakabilirsiniz.
+  ms.technology: mdo
+  ms.prod: m365-security
+  ms.openlocfilehash: 7f011829110481f6cd7b9238deadccad0d2a1264
+  ms.sourcegitcommit: b6ab10ba95e4b986065c51179ead3810cc1e2a85
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 12/15/2021
+  ms.locfileid: "63018864"
+title: Temsilci ile yönetim hakkında SSS
+summary: >
+  [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+
+
+
+  Bu makalede, Microsoft iş ortakları ve bayileri için microsoft iş ortaklarına ve satıcılara Microsoft 365 yönetim görevleriyle ilgili sık sorulan soruların ve yanıtların yer almaktadır. Temsilci ile yönetim, diğer kiracılar (Exchange Online Protection) ayarlarını yönetebilme olanağını içerir.
+sections:
+- name: Yok sayıldı
+  questions:
+  - question: >
+      Ben bir satıcıyım ve müşteri kiracılarımı yönetmem gerekiyor. Bu nasıl çalışır?
+    answer: >
+      Bir Microsoft iş ortağı veya bayinizse ve bir Microsoft Bulut Çözümü Sağlayıcısı (CSP) olmak için oturum aldıysanız, müşterinizin kendi kuruluşlarında temsili yönetim  Microsoft 365 alabilirsiniz. Daha fazla bilgi için aşağıdaki makalelere bakın:
+
+
+      - [Bulut Çözümü Sağlayıcısı programı](/partner-center/csp-overview)
+
+      - [Müşterinin hizmetini veya aboneliğini yönetmek için izin alın](/customers-revoke-admin-privileges).
+  - question: >
+      Ben bir müşteriyim, satıcı değil. Alt adımlarını temsili yöneticiyi nasıl kuracak?
+    answer: >
+      Temsilci ile yönetim yalnızca bayiler ve iş ortakları tarafından kullanılabilir. Bununla birlikte, alt(şirketler) ilkeleri uygulamanıza yardımcı olacak örnek bir PowerShell betiği vardır. Daha fazla bilgi için bkz [. Birden çok kiracıya EOP ayarları uygulamak için örnek betik](/exchange/standalone-eop/sample-script-standalone-eop-settings-to-multiple-tenants).
+  - question: >
+      Alt yöneticimin ilkemi değiştirmesini önlenebilir miyim?
+    answer: >
+      Hayır. Microsoft 365 şu anda bu özelliğine sahip değildir.
+  - question: >
+      Tüm alt adımlarda birleştirilmiş raporlama elde  miyim?
+    answer: Yönetmekte olduğu şirketler arasında birleştirilmiş raporlama, raporlarda Microsoft 365 yönetim merkezi değildir. Ancak, Raporlara [Microsoft](/graph/overview) Graph.
