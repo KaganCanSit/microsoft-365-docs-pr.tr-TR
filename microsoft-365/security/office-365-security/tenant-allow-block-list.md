@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, güvenlik portalında yer alan Kiracı İzin Ver/Engelleme Listesi'nin izinlerini ve bloklarını yönetmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d7e3e56ccdaa59b39a6f65a63684b5b715db352e
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: e27da44a38162955df252e29c1754c93a2dc8967
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63034270"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63318571"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelleme Listesini Yönetme
 
@@ -120,18 +120,21 @@ Tüm izin ve blokları yönetmek için bkz. Kiracı İzin Verme [/](manage-tenan
    - **Gönderenler**:
      - **Değer**: Gönderenin etki alanı veya e-posta adresi.
      - **Eylem**: İzin Ver **veya Engelle** **değeri.**
+     - **Değiştiren**
      - **Son güncelleştirme**
      - **Kaldırma günü**
      - **Notlar**
    - **URL'ler**:
      - **Değer**: URL.
      - **Eylem**: İzin Ver **veya Engelle** **değeri.**
+     - **Değiştiren**
      - **Son güncelleştirme**
      - **Kaldırma günü**
      - **Notlar**
    - **Dosyalar**
      - **Değer**: Dosya karması.
      - **Eylem**: İzin Ver **veya Engelle** **değeri.**
+     - **Değiştiren**
      - **Son güncelleştirme**
      - **Kaldırma günü**
      - **Notlar**
@@ -229,7 +232,7 @@ Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Get-TenantAllowBlock
 
 ## <a name="url-syntax-for-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesi için URL söz dizimi
 
-- IP4v ve IPv6 adreslerine izin verilir, ancak TCP/UDP bağlantı noktaları izin verilmez.
+- IPv4 ve IPv6 adreslerine izin verilir, ancak TCP/UDP bağlantı noktaları izin verilmez.
 
 - Dosya adı uzantılarına izin verilmez (örneğin, test.pdf).
 
@@ -268,7 +271,7 @@ Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Get-TenantAllowBlock
 
 - URL girdileri tüm protokollere geçerli olduğundan, protokol içeren URL girdileri (örneğin, `http://`, `https://``ftp://`veya ) başarısız olur.
 
-- Bir kullanıcı adı veya parola desteklenmiyor veya gerekli değildir.
+- Kullanıcı adı veya parola desteklenmiyor veya gerekli değildir.
 
 - Tırnak (' veya ") geçersiz karakterlerdir.
 

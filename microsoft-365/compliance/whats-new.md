@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 description: Uyumluluk merkezine yeni çözümler eklemek, geri bildirimleriniz temel alınarak mevcut özellikleri güncelleştirmek veya yeni ve güncelleştirilmiş belgeler çıkarmak olabilir; Microsoft 365 sürekli değişen uyumluluk ortamını takip içinde kalmanıza yardımcı olur. Bu ay neler olduğunu takipte bulun.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: bfbae00812400b211abdda9d7310179cc65e2c15
-ms.sourcegitcommit: d4797cfc15c732f1a7ef21e4f944e672a7170f9a
+ms.openlocfilehash: 15a97fc419bc6e4264f3c3cd0bbe389b79e5c2f0
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63016661"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326979"
 ---
 # <a name="whats-new-in-microsoft-365-compliance"></a>Uyumlulukla ilgili Microsoft 365.
 
@@ -40,6 +40,29 @@ ms.locfileid: "63016661"
 > - [Microsoft 365 Defender'daki Microsoft 365 Defender](../security/defender/whats-new.md)
 >
 > Ayrıca, [Microsoft 365,](https://www.microsoft.com/microsoft-365/roadmap) piyasaya Microsoft 365, geliştirme aşamasında olan, iptal edilen veya daha önce yayımlanan özellikler hakkında bilgi edinmek için Yol Haritası'Microsoft 365 ziyaret edin.
+
+## <a name="february-2022"></a>Şubat 2022
+
+### <a name="ediscovery"></a>eKbulma
+
+- [Advanced eDiscovery'ta](advanced-ediscovery-communications-library.md) özel iş iletişim şablonlarını yönetme - eBulma yöneticileri artık kuruluşta herhangi bir durumda kullanılmaktadır ve özel Advanced eDiscovery şablonları oluşturabilir.
+- [Advanced eDiscovery'te](advanced-ediscovery-issuing-officers.md) sorumluları yönetme - eBulma yöneticileri, kuruluşta herhangi bir dava halinde özel kişi iletişimlerine atanabilir, Advanced eDiscovery sorumluların listesini ekleyebilir.
+
+### <a name="information-governance-and-records-management"></a>Bilgi yönetimi ve kayıt yönetimi
+
+- [Bekletme ilkeleri ve](retention.md#adaptive-or-static-policy-scopes-for-retention) bekletme etiketi ilkeleri için uyarlanabilir kapsamlar artık genel olarak kullanılabilir (GA). Uyarlanabilir bir [](retention-settings.md#to-configure-an-adaptive-scope) kapsam yapılandırma yönergeleri, artık SharePoint site kapsamları hakkında daha fazla bilgi içerir: Özel site özelliklerini kullanmak için blog gönderisi başvurusu ve gelişmiş sorgu oluşturucusıyla belirli site türlerini eklemek veya dışarıda tutmak için SiteTemplate site özelliğini kullanma.
+- [Bilgi Yönetimi](retention.md#policy-lookup) çözümünde ilke araması artık genel olarak kullanılabilir (GA.
+- Kullanıcıların [Get-PnPTenant ve Set-PnPTenant'tan](/powershell/module/sharepoint-pnp/get-pnptenant) AllowFilesWithKeepLabelToDeletedSPO ve AllowFilesWithKeepLabelToBeDeletedODB kullanarak SharePoint ve OneDrive'daki etiketli öğeleri silmesine olanak sağlayan kayıt yönetimi ayarının PowerShell []( /powershell/module/sharepoint-pnp/set-pnptenant)alternatifi.
+
+### <a name="sensitivity-labels"></a>Duyarlılık etiketleri
+
+- Yeni kılavuz Office bilgisayarlar için Azure Information Protection (AIP) birleşik etiketleme istemcisini kullanıyorsanız, Office uygulamaları için [AIP eklentisinde MIP](sensitivity-labels-aip.md) yerleşik etiketlemeyi neden Windows gerekir. Bu sayfada, bu uygulamaların yeni özel önizlemesi hakkında Office vardır.
+- Otomatik etiketleme [ilkeleri için yeni ayarlar](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange):
+  - E-posta için her zaman eşlenmiş bir duyarlılık etiketi uygulama ve kuruluş dışından alınan e-postaya şifreleme uygulama için ek ayarlar.
+  - Belirli örnekler (kullanıcılar, gruplar, siteler) için dışlamalar, yeni Dışarıda Bırakıldı seçeneği dahil edilenler için varsayılan olarak belirtilmiş olduğunda **desteklemektedir**. 
+- Şimdi önizlemede: En düşük sürümlere sahipken mobil cihazlar ([](sensitivity-labels-coauthoring.md)iOS ve Android) birlikte yazma desteği sağlar ve bu önizlemeyi kabul edin.
+- Varsayılan paylaşım bağlantı türünü ayarlama desteği belge ve çalışma sayfalarındaki tek tek SharePoint OneDrive. Daha fazla bilgi için, aynı adres ve sitelerde site ve belgeler için varsayılan paylaşım bağlantı türünü yapılandırmak üzere duyarlılık SharePoint [OneDrive]( sensitivity-labels-default-sharing-link.md).
+- Teams yönetim merkezi artık kapsayıcı etiketlerini (Gruplar grubu siteleri kapsamındaki duyarlılık etiketleri) & destekliyor.
 
 ## <a name="january-2022"></a>Ocak 2022
 
@@ -247,47 +270,5 @@ Aşağıdaki yeni makaleler eklendi:
 ### <a name="sensitivity-labels"></a>Duyarlılık etiketleri
 - [Birlikte yazma](sensitivity-labels-coauthoring.md) ve Otomatik Kaydetme artık genel olarak Windows (Güncel Kanal veya Aylık Enterprise Kanalından) ve macOS'ta (en düşük 16.51 sürümü) Windows 2107'nin en düşük sürümü) için kullanıma sunulmaktadır.
 - Yerleşik etiketlerin Office için uygulamanın kullanımı: Varsayılan etiket ayarı artık hem var olan belgeleri hem de yeni belgeleri destekler. Bu davranış değişikliği, Azure Information Protection birleşik etiketleme istemcisinde eşlik sağlar. Uygulama başına ve en düşük sürümler için uygulama başına uygulama sürümü hakkında daha fazla [](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint) bilgi için Word, Excel özellikleri tablosuna PowerPoint.
-- Kapsayıcı etiketleri artık [PowerShell gelişmiş ayarlarını kullanarak varsayılan paylaşım bağlantısı ayarlarını destekliyor](sensitivity-labels-teams-groups-sites.md#configure-settings-for-the-default-sharing-link-for-a-site-by-using-powershell-advanced-settings).
+- Kapsayıcı etiketleri artık [PowerShell gelişmiş ayarlarını kullanarak varsayılan paylaşım bağlantısı ayarlarını destekliyor](sensitivity-labels-teams-groups-sites.md#configure-settings-for-the-default-sharing-link-type-for-a-site-by-using-powershell-advanced-settings).
 - Yerleşik [etiketleme için](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) minimum desteklenen sürümleri listeleen özellikler tablolarında artık Geçerli Kanal, Aylık Kanal ve Enterprise Kanalı için sürümler Semi-Annual Enterprise vardır.
-
-## <a name="august-2021"></a>Ağustos 2021
-
-### <a name="app-governance"></a>Uygulama yönetimi
-- [Uyarı içgörüleri için genişletilmiş girdiler](app-governance-anomaly-detection-alerts.md#collection-alerts). Artık uygulama yönetimiyle ilgili olarak kullanılabilen ek uyarı içgörülerini açıklamak için yeni girdiler eklenmiştir.
-
-### <a name="communication-compliance"></a>İletişim uyumluluğu
-- [İletişim uyumluluk kanalları,](communication-compliance-channels.md) özel sohbetlerde ve kanallarda modern ekleri taramak için Teams önizleme özelliği desteği ekledi.
-
-### <a name="compliance--service-assurance"></a>Uyumluluk & hizmet güvencesi
-
-- [Hizmet güvencesi](/compliance/) , sertifikalar ve uygulanabilirlik ifadelerine yönelik içerik güncelleştirmelerini üç aylık olarak incele ile güncelleştirilmiştir:
-  - Mimari
-  - Denetim günlüğü
-  - Şifreleme ve anahtar yönetimi
-  - Kimlik ve erişim yönetimi
-  - Microsoft 365 yönetimi
-  - Ağ güvenliği
-  - Gizlilik
-  - Süreklilik ve süreklilik
-  - Risk yönetimi
-  - Güvenlik geliştirme ve işlem
-  - Güvenlik izleme
-  - Sağlayıcı yönetimi
-  - Güvenlik açığı yönetimi
-
-### <a name="data-loss-prevention"></a>Veri Kaybını Önleme
-
-- [Veri kaybı önleme ilke başvurusu](dlp-policy-reference.md). İlkeleri oluşturma konusunda size yardımcı olmak için yeni bir ilke başvurusu sayfası eklendi.
-
-### <a name="insider-risk-management"></a>Insider risk yönetimi
-- [Insider risk yönetimi tarayıcı sinyali algılaması hakkında bilgi edin ve yapılandırabilirsiniz](insider-risk-management-browser-support.md). Edge ve Chrome tarayıcılarında tarayıcı sinyali algılamayı yapılandırmak için önizleme özelliği.
-
-### <a name="retention-and-records-management"></a>Bekletme ve kayıt yönetimi
-- [Bir öğenin bekletme ilkelerine yönelik kavramları ve örnekleri](retention-flowchart.md) tamamlayıcı şekilde ne zaman korunacaklarını veya kalıcı olarak silineceklerini belirlemek için akış çizelgesi.
-
-### <a name="sensitivity-labels"></a>Duyarlılık etiketleri
-- [Siteler](apply-sensitivity-label-automatically.md) ve ilkeler için daha yüksek desteklenen numaralar içeren otomatik etiket ilkelerine yönelik iyileştirmeler, tüm OneDrive ve SharePoint siteleri için destek ve URL ile her siteye girmek yerine kullanılabilir SharePoint sitelerini seçme özelliği ve benzetim geliştirmeleri.
-- Mobil uygulamalarda otomatik Office duyarlılık etiketi ayarı artık Tam Veri [Eşleşmesi'ni (EDM) destekliyor](apply-sensitivity-label-automatically.md#custom-sensitive-information-types-with-exact-data-match).
-- Varsayılan etiketler artık daha uzun süre [(Power BI) uzatıldı](/power-bi/admin/service-security-sensitivity-label-default-label-policy).
-- Etkinlik gezgininde Web üzerinde Outlook denetim olayları tam olarak [](data-classification-activity-explorer-available-events.md) sunulmaktadır ve bu da, yerleşik etiketlere kullanıcı etkinliğinin artık tüm platform genelinde tüm Office olduğu anlamına gelir.
-- Desteklenen [özellikler](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) tablolarında, Windows için en düşük sürümlerin Güncel Kanal için olduğunu netleştirmek için yeni bir dipnot ve yeni sürümlerde baştaki sıfırları atan eski sürümleri daha kolay karşılaştıran bir ipucu yer almaktadır.

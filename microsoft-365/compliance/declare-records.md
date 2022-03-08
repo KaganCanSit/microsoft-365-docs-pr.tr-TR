@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bekletme etiketlerini kullanarak kayıtları bildirin.
-ms.openlocfilehash: 7c1599bd40059559b9e0d19383a08fe2382e6442
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+ms.openlocfilehash: 93e51698109819f4743dd4b5b45f5a5177739a2a
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63010869"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324851"
 ---
 # <a name="declare-records-by-using-retention-labels"></a>Bekletme etiketlerini kullanarak kayıtları bildir
 
@@ -69,6 +69,11 @@ Tam yönergeler için:
 
 - [İçeriklere otomatik olarak bekletme etiketi uygulama](apply-retention-labels-automatically.md) (mevzuat kayıtları için desteklenmiyor)
 
+## <a name="tenant-setting-for-editing-record-properties"></a>Kayıt özelliklerini düzenlemek için kiracı ayarı
+
+SharePoint ve OneDrive'te öğeleri kayıt olarak (mevzuat kayıtları yerine) beyan etmek için bekletme etiketleri kullanıyorsanız, kullanıcıların 0 bayttan büyük dosyalar olduğunda kilitli bir kaydın özelliklerini düzenlemelerine olanak sağlayan varsayılan kiracı ayarını değiştirmeniz gerekip gerek olmadığını düşünün.[](record-versioning.md)
+
+Bu varsayılanı değiştirmek için Microsoft 365 uyumluluk merkezi [](https://compliance.microsoft.com/) > **Cords yönetimiAcords** >  yönetim **ayarlarıRetention** >  >  etiketleri Kayıt özelliklerinin düzenlenmesine izin ver ve sonra Kullanıcıların kayıt özelliklerini düzenlemesine izin ver ayarını devre dışı **bırak**.
 
 ## <a name="applying-the-configured-retention-label-to-content"></a>Yapılandırılmış bekletme etiketini içeriğe uygulama
 
@@ -95,4 +100,4 @@ Bu olayları arama hakkında daha fazla bilgi için bkz. Güvenlik ve Uyumluluk 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Kayıt yönetimi tarafından desteklenen senaryoların listesi için bkz. [Kayıt yönetimi için genel senaryolar](get-started-with-records-management.md#common-scenarios).
+Kayıt sürümü kaydetmeyi kullanarak [başka bir dosyada veya başka bir dosyada depolanan SharePoint kullanabileceğiniz OneDrive](record-versioning.md).

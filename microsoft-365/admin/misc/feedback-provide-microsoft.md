@@ -10,12 +10,12 @@ ms.topic: article
 ms.service: o365-administration
 ms.localizationpriority: medium
 description: Microsoft'a Microsoft ürünleri ve hizmetleri hakkında geri bildirim sağlamanın farklı yolları hakkında bilgi öğrenin.
-ms.openlocfilehash: 0aba87571f4b4fddb38f9cd5cae526d62d2e2c64
-ms.sourcegitcommit: c2b5ce3150ae998e18a51bad23277cedad1f06c6
+ms.openlocfilehash: 6e21c143a48ddf643461f8c471d8fd063edabd5c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "63005030"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63325915"
 ---
 # <a name="learn-about-how-to-provide-feedback-to-microsoft"></a>Microsoft’a geri bildirim gönderme hakkında bilgi edinin
 
@@ -114,8 +114,7 @@ Topluluk geri bildirimlerini moderation Microsoft çalışanları veya onaylı s
 
 ## <a name="data-handling-and-privacy"></a>Veri İşleme ve Gizlilik
 
-Microsoft ürünlerini ve hizmetlerini kullanırken, en değerli varlıklardan biri olan verilerinizden birini bize güvenerek anlayabilirsiniz.  Bize gelen geri bildirimlerin Microsoft yönetim kuralları altında depolandıktan ve ele geçirildik olduğundan ve yalnızca onaylanan kullanımlar için erişile olduğundan emin oluruz.  E-postanızı, sohbetlerinizi, dosyalarınızı veya diğer kişisel içeriğinizi size uygun reklam göndermek için kullanmayız.  Veri topladığımızda, bu verileri kullanarak deneyimlerinizi daha iyi hale sağlıyoruz.  Microsoft gizlilik ilkesi.
-Ürünlerimizi ve hizmetlerini geliştirmemize yardımcı olmak için bize geri bildiriminiz için teşekkür ederiz.  Sizin için çok teşekkür edersiniz. Topluluğun bir parçası olduğunuz için teşekkür ederiz!
+Microsoft ürünlerini ve hizmetlerini kullanırken, en değerli varlıklardan biri olan verilerinizden birini bize güvenerek anlayabilirsiniz.  Bize gelen geri bildirimlerin Microsoft yönetim kuralları altında depolandıktan ve ele geçirildik olduğundan ve yalnızca onaylanan kullanımlar için erişile olduğundan emin oluruz.  E-postanızı, sohbetlerinizi, dosyalarınızı veya diğer kişisel içeriğinizi size uygun reklam göndermek için kullanmayız.  Veri topladığımızda, bu verileri kullanarak deneyimlerinizi daha iyi hale sağlıyoruz. Topluluğun bir parçası olduğunuz için teşekkür ederiz!
 
 ## <a name="have-feedback-about-the-new-feedback-web-portal"></a>Yeni Geri Bildirim web portalı hakkında geri bildiriminiz mi var?
 

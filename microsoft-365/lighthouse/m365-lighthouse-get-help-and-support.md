@@ -1,6 +1,6 @@
 ---
 title: Destek almak için yardım ve Microsoft 365 Lighthouse
-f1.keywords: NOCSH
+f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
@@ -16,34 +16,32 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse, yardım ve destek almak için öğrenin.
-ms.openlocfilehash: 554747fa7360892c7ea8c52e31dc0f4e2bc18589
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 24420874314c67b621a53f8eb06e22a49137d380
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984322"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63314371"
 ---
 # <a name="get-help-and-support-for-microsoft-365-lighthouse"></a>Destek almak için yardım ve Microsoft 365 Lighthouse 
 
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
+Yardım gerekirse, çeşitli seçenekler kullanılabilir. İlk olarak, bilinen bir sorun olup olduğunu kontrol edin:
 
-Yardım gerekirse, çeşitli seçenekler kullanılabilir. Başlangıç olarak müşteri kiracı hizmetlerinin geçerli durumunu denetleme:
+- Müşteri kiracı hizmetlerinin geçerli durumunu gözden geçirme:
 
-1. Deniz Feneri'nin sol gezinti bölmesinde Hizmet **durumu'ni seçin**.
-2. Mevcut ve geçmiş sorunlar hakkında ayrıntılı bilgileri görüntüye tıklayın.
+    1. Deniz Feneri'nin sol gezinti bölmesinde Hizmet **durumu'ni seçin**. 
+    2. Mevcut ve geçmiş sorunlar hakkında ayrıntılı bilgileri görüntüye tıklayın.
 
-Deniz Feneri kiracı hizmetlerinin geçerli durumunu kontrol etmek için:
+- Deniz Feneri kiracı hizmetlerinin geçerli durumunu gözden geçirme:
 
-1. Microsoft 365 yönetim merkezi gidin<a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a>.
-2. Sol gezinti bölmesinde **HealthService** **health öğesini** >  seçin.
-3. Hizmet listesinde, en son **Microsoft 365 bulun** ve pakette tüm hizmetleri gösterecek şekilde genişletin.
-4. E **Microsoft 365 Lighthouse** bulun ve durumu kontrol edin.
+    1. Microsoft 365 yönetim merkezi gidin<a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a>.
+    2. Sol gezinti bölmesinde **HealthService** **health öğesini** >  seçin.
+    3. Hizmet listesinde, en son **Microsoft 365 bulun** ve pakette tüm hizmetleri gösterecek şekilde genişletin.
+    4. E **Microsoft 365 Lighthouse** bulun ve durumu kontrol edin.
 
-Hizmet durumu panolarının ikisinde de listelenmiyor bir sorunla yaşıyorsanız, kendi kendine yardım seçeneklerini görüntülemek veya bir hizmet isteği oluşturmak için bu makaledeki yönergeleri izleyin.
+- Sorunun, Bu sorunlar ile ilgili bilinen [sorunlar altında listelenmiş olup Microsoft 365 Lighthouse](/office365/troubleshoot/microsoft-365-lighthouse/lighthouse-known-issues).
 
-> [!NOTE]
-> Deniz Feneri Önizleme devam ederken destek İngilizce ile sınırlıdır.
+Bu kaynaklarda listelenmiyor bir sorunla yaşıyorsanız, kendi kendine yardım seçeneklerini görüntülemek veya hizmet isteği oluşturmak için bu makaledeki yönergeleri izleyin.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -81,4 +79,6 @@ Hizmet durumu panolarının ikisinde de listelenmiyor bir sorunla yaşıyorsanı
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)
+[Dosyanın bilinen Microsoft 365 Lighthouse](m365-lighthouse-known-issues.md) sorunları (makale)\
+[Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)\
+[E-postada sorunları ve hata iletilerini sorun giderme Microsoft 365 Lighthouse](m365-lighthouse-troubleshoot.md) (makale)

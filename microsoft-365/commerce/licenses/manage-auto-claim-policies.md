@@ -2,10 +2,10 @@
 title: Otomatik talep ilkelerini yönetme
 f1.keywords:
 - CSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
-ms.review: yinggiy, pablom
+ms.reviewer: yinggiy, pablom
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -14,30 +14,21 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
-- AdminSurgePortfolio
 - commerce_licensing
+- AdminSurgePortfolio
 description: Belirli uygulamalar için otomatik olarak lisans atayanın otomatik talep ilkelerinin nasıl oluşturul ve yönetilir öğrenin.
 search.appverid: MET150
 ms.date: 04/06/2021
-ms.openlocfilehash: 28d05e0e3b1d1e8692672bf741a612ebee02e39f
-ms.sourcegitcommit: dc26169e485c3a31e1af9a5f495be9db75c49760
+ms.openlocfilehash: d6cb3d78de914e84e831947089aeadf277e72ddf
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "62990015"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63321103"
 ---
 # <a name="manage-auto-claim-policies"></a>Otomatik talep ilkelerini yönetme
 
 Otomatik talep ilkesi, kullanıcıların bir uygulamada ilk kez oturum alıkan bir ürün için otomatik olarak lisans talep  ettiğine olanak sağlar. Yönetici olarak, kullanıcılara genellikle el ile veya grup tabanlı lisanslama kullanarak lisans atarsınız. Otomatik talep ilkelerini kullanarak, kullanıcıların otomatik olarak lisans talep  ettiği ürünleri yönetirsiniz. Ayrıca, bu lisansların hangi ürünlerden gelip gelmelerini de kontrolabilirsiniz.
-
-Otomatik talep ilkesi oluşturduk sonra, ilkeyi yönetmek için aşağıdaki görevleri gerçekleştirebilirsiniz:
-
-- [İlkeyi açma veya kapatma](#turn-a-policy-on-or-off)
-- [İlke kolay adını düzenleme](#edit-the-policy-friendly-name)
-- [Yedek ürünler ekleme veya kaldırma](#add-or-remove-backup-products)
-- [Uygulama ve hizmet atamayı yönetme](#change-the-assigning-apps-and-services)
-- [Atama siparişlerini değiştirme](#change-the-assigning-order-for-backup-products)
-- [İlke raporunu görüntüleme](#view-an-auto-claim-policy-report)
 
 > [!IMPORTANT]
 > Otomatik talep e-posta ilkeleri şu anda yalnızca Microsoft Teams. Gelecekte daha fazla ürün kullanılabilir olacaktır.

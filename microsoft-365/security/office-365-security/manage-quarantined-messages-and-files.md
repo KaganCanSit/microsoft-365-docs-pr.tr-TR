@@ -19,12 +19,12 @@ ms.custom:
 description: Yöneticiler, Exchange Online Protection'da (EOP) kullanıcılar için karantinaya alınmış iletileri görüntülemeyi ve yönetmeyi öğrenebilir. Office 365 için Microsoft Defender'a sahip kuruluşlarda yöneticiler SharePoint Online, OneDrive İş ve Microsoft Teams'te karantinaya alınmış dosyaları yönetebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1c216a84caefc783293cc1a4ce5b76357f4353a5
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 7787943ad16a3ae641b475b01b7e1dd8bb7f51d2
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021802"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63318221"
 ---
 # <a name="manage-quarantined-messages-and-files-as-an-admin-in-eop"></a>EOP'de yönetici olarak karantinaya alınmış iletileri ve dosyaları yönetme
 
@@ -63,7 +63,7 @@ karantinaya alınmış iletileri Microsoft 365 Defender portalında veya PowerSh
   - **Görünüm'de Yalnızca Görüntüleme** [kuruluş Exchange Online rol](/Exchange/permissions-exo/permissions-exo#role-groups) grubu, özel salt okunur erişim de sağlar.
   - <sup>\*</sup>[Microsoft 365 Defender portalında](permissions-microsoft-365-security-center.md#email--collaboration-roles-in-the-microsoft-365-defender-portal) **E-posta &** işbirliği rollerinde yer alan Karantina Yöneticisi rol grubunun üyelerinin, Exchange Online PowerShell'de karantina yordamları gerçekleştirmek için [Exchange Online'te](/Exchange/permissions-exo/permissions-exo#role-groups) Skrya Yönetimi rol grubunun üyesi Exchange Online gerekir. 
 
-- Karantinaya alınan iletiler, karantinaya alındıklarına bağlı olarak varsayılan bir süre boyunca korunur. Bekletme süresi dolduğunda, iletiler otomatik olarak silinir ve kurtarılamaz. Daha fazla bilgi için bkz. [EOP'de karantinaya alınmış e-posta iletileri ve Offie 365 için Defender](quarantine-email-messages.md).
+- Karantinaya alınan iletiler, karantinaya alındıklarına bağlı olarak varsayılan bir süre boyunca korunur. Bekletme süresi dolduğunda, iletiler otomatik olarak silinir ve kurtarılamaz. Daha fazla bilgi için bkz. [EOP'de karantinaya alınmış e-posta iletileri ve Office 365](quarantine-email-messages.md).
 
 ## <a name="use-the-microsoft-365-defender-portal-to-manage-quarantined-email-messages"></a>Karantinaya alınmış Microsoft 365 Defender iletilerini yönetmek için kullanıcı portalını kullanma
 
@@ -175,7 +175,7 @@ Listeden karantinaya alınmış bir ileti belirttikten sonra, ayrıntılar ileti
   - Aşağıdaki seçeneklerden birini belirleyin:
     - **Tüm alıcılara sürüm**
     - **Belirli alıcılara sürüm**: Görüntülenen Alıcılar **kutusunda alıcıları** seçin
-  - **Bu iletinin bir kopyasını diğer alıcılara gönderin**: Bu seçeneği belirleyin, görüntülenen Alıcılar kutusuna alıcı e-posta **adreslerini girin** .
+  - **Bu iletinin bir kopyasını diğer alıcılara gönderme**: Bu seçeneği belirtin ve görüntülenen Alıcılar kutusuna alıcının **e-posta** adreslerini girin.
 
     > [!NOTE]
     > İletinin bir kopyasını diğer alıcılara göndermek için, iletiyi özgün alıcılardan en az biri olarak bırakmanız gerekir (Tüm alıcıların için serbest bırak'ı veya Belirli  alıcılara **bırak'ı seçin**).

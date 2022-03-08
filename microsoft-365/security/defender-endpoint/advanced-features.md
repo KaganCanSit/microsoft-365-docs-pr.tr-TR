@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 0d0faebdf3b815bdca968cdd790767c5d36179b6
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 56a836e14051e3f621fb42fd518fb2cf5efe8bed
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998164"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63327707"
 ---
 # <a name="configure-advanced-features-in-defender-for-endpoint"></a>Uç Nokta için Defender'da gelişmiş özellikleri yapılandırma
 
@@ -47,6 +47,9 @@ Kötü amaçlı olabilecek dosyalardan daha iyi korunacak ve güvenlik soruştur
 Hizmetin otomatik araştırma ve düzeltme özelliklerinden yararlanmak için bu özelliği kullanın. Daha fazla bilgi için bkz [. Otomatik araştırma](automated-investigations.md).
 
 ## <a name="live-response"></a>Canlı yanıt
+
+> [!NOTE]
+> Canlı yanıt için **, Uç nokta** portalı için Microsoft Defender'da gelişmiş ayarlar bölümünde etkinleştiremeden önce Otomatik araştırma'nın açık olması gerekir.
 
 Uygun izinlere sahip kullanıcıların cihazlarda canlı yanıt oturumu başlat olması için bu özelliği kullanın.
 
@@ -180,10 +183,6 @@ Bu ayarın etkinleştirilmesi, bulut uygulaması kullanımında daha derin bir g
 
 > [!NOTE]
 > Bu özellik [KB4493441](https://support.microsoft.com/help/4493441)), [Windows 10](https://www.microsoft.com/cloud-platform/enterprise-mobility-security) sürüm 1803 (KB4493464 ile birlikte işletim sistemi derlemesi 17134.704 ile Windows 10 sürüm 17134.704) ile çalışan cihazlarda Enterprise Mobility + Security için E5 lisansıyla birlikte Windows 10, sürüm 1809 [](https://support.microsoft.com/help/4493464)  ([KB4489899](https://support.microsoft.com/help/4489899) ile birlikte işletim sistemi derlemesi 17763.379), sonraki Windows 10 veya 11 Windows.
-
-## <a name="microsoft-secure-score"></a>Microsoft Güvenli Puan
-
-Yeni Portalda Uç Nokta için Microsoft Defender'ı Microsoft Güvenli Puanı'Microsoft 365 Defender iletir. Bu özelliğin açması, Microsoft Güvenli Puanı'nın cihazın güvenlik mezrası içinde görünürlüğünü sağlar. Forwarded data is stored and processed in the location as your Microsoft Secure Score data.
 
 ### <a name="enable-the-microsoft-defender-for-endpoint-integration-from-the-microsoft-defender-for-identity-portal"></a>Kimlik için Microsoft Defender portalında Uç Nokta tümleştirmesi için Microsoft Defender'ı etkinleştirme
 

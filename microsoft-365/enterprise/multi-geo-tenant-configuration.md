@@ -15,12 +15,12 @@ f1.keywords:
 ms.custom: seo-marvel-apr2020
 ms.localizationpriority: medium
 description: Bu makalede uydu konumları ekleme ve Multi-Geo için kiracınızı yapılandırma Microsoft 365 öğrenin.
-ms.openlocfilehash: 232791705dacfa9442304434559b67a4b01ca7dd
-ms.sourcegitcommit: 19e16b16f144159b55bb4c544403e3642b69e335
+ms.openlocfilehash: 9842ff2295a64f544940f579d732c688735ae341
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "63015242"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312089"
 ---
 # <a name="microsoft-365-multi-geo-tenant-configuration"></a>Microsoft 365 Multi-Geo kiracı yapılandırması
 
@@ -44,17 +44,15 @@ Verileri depolamak istediğiniz her coğrafi konum için bir uydu konumu eklemen
 
 Uydu konumu eklemek için
 
-1. SharePoint yönetim merkezini açın.
+1. SharePoint yönetim merkezini açın. ve Geo <a href="https://go.microsoft.com/fwlink/?linkid=2185076" target="_blank">**konumlar'a gidin**</a>.
 
-2. Coğrafi **konumlar sekmesine** gidin.
+1. Konum **ekle'yi seçin**.
 
-3. Konum **ekle'ye tıklayın**.
+1. Eklemek istediğiniz konumu seçin ve sonra da Sonraki'yi **seçin**.
 
-4. Eklemek istediğiniz konumu seçin ve ardından Sonraki'ye **tıklayın**.
+1. Coğrafi konumla kullanmak istediğiniz etki alanını yazın ve ekle'yi **seçin**.
 
-5. Coğrafi konumla kullanmak istediğiniz etki alanını yazın ve Ekle'ye **tıklayın**.
-
-6. **Kapat**'a tıklayın.
+1. **Kapat**'ı seçin.
 
 Sağlama, kiracının boyutuna bağlı olarak birkaç saat ile 72 saat arasında sürebilir. Uydu konumunun sağlanması tamamlandıktan sonra bir e-posta onayı alırsınız. Yeni coğrafi konum, OneDrive yönetim merkezinin Coğrafi konumlar sekmesindeki haritada  mavi görüntülendiğinde, kullanıcıların tercih ettiği veri konumunu bu coğrafi konuma ayarlamaya devam edebilirsiniz. 
 

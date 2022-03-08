@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 2bf43507b624cc1dae78534d579d01c1f2cef096
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 14d45f4ac22a9707b380d817cb89da1bbee562e2
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62997510"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326517"
 ---
 # <a name="web-content-filtering"></a>Web içeriği filtreleme
 
@@ -248,6 +248,8 @@ Bir zaman aralığı seçmek için sayfanın sol üst kısmında yer alan zaman 
 ### <a name="known-issues-and-limitations"></a>Bilinen sorunlar ve sınırlamalar
 
 Yalnızca Microsoft Edge OS yapılandırması Sunucu (**cmd** \> **SystemInfo** \> **OS Yapılandırması) ise yalnızca bu yapılandırmayı destekler**. Ağ Koruması yalnızca, desteklenen üçüncü taraf tarayıcılarda trafiğin güvenliğini sağlamaktan sorumlu olan Sunucu cihazlarında Denetleme modunda desteklenir.
+
+Yalnızca Microsoft Edge desteği vardır ve Azure Sanal Masaüstü çoklu oturum Windows 10 ağ üzerinde Ağ Koruması desteklanmaz.
 
 Ağ Koruması şu anda SSL incelemesini desteklememektedir ve bunun sonucunda web sitelerine Web İçeriği Filtreleme tarafından izin verilen ve normalde engellenmiş olabilir. TLS el sıkışması gerçekleştikten sonra şifrelenmiş trafikte görünürlüğün olmamasından ve bazı yönlendirmelerin ayrıştırılama kabiliyetinden dolayı sitelere izin verilmeyecektir.  Bu, bazı web tabanlı posta oturum açma sayfalarından posta kutusu sayfasına yeniden yönlendirmeleri içerir. Kabul edilen geçici çözüm olarak, kullanıcıların siteye erişe olduğundan emin olmak için oturum açma sayfası için özel bir engelleme göstergesi oluşturabilirsiniz. Bu, onların aynı web sitesiyle ilişkilendirilmiş diğer hizmetlere erişimini engell olabilir. 
 

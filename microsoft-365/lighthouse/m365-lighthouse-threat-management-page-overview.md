@@ -16,17 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP) Microsoft 365 Lighthouse Tehdit yönetimi sayfası hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: 6eb5ed0c37295a7683b2eb16068f96f912aefb91
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: e57163ba462e241c74a96db78fe701c024a037ff
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984486"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63329890"
 ---
 # <a name="microsoft-365-lighthouse-threat-management-page-overview"></a>Microsoft 365 Lighthouse Yönetimi sayfasına genel bakış 
-
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
 
 **Aşağıdakiler için geçerlidir:**
 
@@ -40,13 +37,13 @@ Müşteri kiracılarınızı tehditlere karşı güvenlik Microsoft 365 Lighthou
   
 Tehdit yönetimi sayfasının Genel Bakış sekmesinde, dikkat gereken alanları tanımlamak için tüm kiracılar genelinde virüsten koruma durumunu izleyebilirsiniz.
 
-:::image type="content" source="../media/m365-lighthouse-threat-management-page-overview/threatmanagement-overview-tab.png" alt-text="Genel Bakış sekmesinin.>.":::
+:::image type="content" source="../media/m365-lighthouse-threat-management-page-overview/threatmanagement-overview-tab.png" alt-text="Genel Bakış sekmesinin ekran görüntüsü.":::
 
 ## <a name="threats-tab"></a>Tehdit sekmesi
 
 Tehdit yönetimi sayfasının Tehditler sekmesinde tüm kiracılar genelinde Etkin, Risk Azaltma, Çözümlenmiş ve İzin Verilen tehditlerini görebilirsiniz. Ayrıca, hangi cihazların, kullanıcıların veya kiracıların etkilendiğini öğrenmek için her tehdide filtre uygulama ve inerek tüm kiracılar genelinde birden çok tehdityi aynı anda düzeltmeniz de gerekir.
 
-:::image type="content" source="../media/m365-lighthouse-threat-management-page-overview/threatmanagement-threats-tab.png" alt-text="Varsayılan temel sayfası.temel sayfasının ekran >.":::
+:::image type="content" source="../media/m365-lighthouse-threat-management-page-overview/threatmanagement-threats-tab.png" alt-text="Varsayılan taban çizgisi sayfasının ekran görüntüsü.":::
   
 Tehditleri şu ölçütlerle filtreleysiniz:
 

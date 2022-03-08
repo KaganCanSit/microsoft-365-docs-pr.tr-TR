@@ -18,14 +18,16 @@ search.appverid:
 - MBS150
 - MET150
 ms.assetid: bad352ff-d5d2-45d8-ac2a-6cb832f10e73
-ms.custom: seo-marvel-apr2020
+ms.custom:
+- seo-marvel-apr2020
+- admindeeplinkSPO
 description: Bir betiği çalıştırarak sitelerde yer alan posta kutularını & OneDrive İş bir eBulma durumuyla ilişkilendirilmiş yeni bir tutma durumuna nasıl Microsoft 365 uyumluluk merkezi.
-ms.openlocfilehash: c2b73fdb665acde92676270f0a32918a6072eb5c
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: fd11ccb6c262cd0e31a65d2a1f95d5dbcd92869c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62977678"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63314567"
 ---
 # <a name="use-a-script-to-add-users-to-a-hold-in-a-core-ediscovery-case"></a>Core eKovery durumunda kullanıcıları tik olarak tutmak için betik kullanma
 
@@ -83,7 +85,7 @@ Bu adımda betiği çalıştırınca, sizden aşağıdaki bilgileri istenir. Bet
   
 - **Kullanıcı kimlik bilgileriniz:** Betik, PowerShell ile Güvenlik ve Uyumluluk Merkezi'ne & kimlik bilgilerinizi kullanır. Ayrıca, kullanıcı listesi için SharePoint Online'a erişmek OneDrive İş bu kimlik bilgilerini kullanır.
 
-- **Etki SharePoint adı:** Betik, SharePoint yönetim merkezine bağlanasını için bu adı girmenizi istiyor. Ayrıca, kuruluş url'leri OneDrive alanı adını kullanır. Örneğin, yönetim merkezinizin URL'si `https://contoso-admin.sharepoint.com` ve yönetim merkezinin URL'si OneDrive `https://contoso-my.sharepoint.com``contoso` ise, betik sizden etki alanı adınızı isteminde geldiğinde siz de girersiniz.
+- **SharePoint etki SharePoint adı:** Betik, yönetim merkezinden bağlana kadar bu <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">adı SharePoint istiyor</a>. Ayrıca, kuruluş url'leri OneDrive alanı adını kullanır. Örneğin, yönetim merkezinizin URL'si `https://contoso-admin.sharepoint.com` ve yönetim merkezinin URL'si OneDrive `https://contoso-my.sharepoint.com``contoso` ise, betik sizden etki alanı adınızı isteminde geldiğinde siz de girersiniz.
 
 - **Vakanın adı:** Var olan bir vakanın adı. Betik, bu vakayla ilişkilendirilmiş yeni bir tutma oluşturacak.
 

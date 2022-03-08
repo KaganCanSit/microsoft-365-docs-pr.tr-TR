@@ -4,7 +4,7 @@ description: Özellikler için Çift Anahtar Şifrelemesi hakkında sık Microso
 author: kccross
 ms.author: krowley
 manager: laurawi
-ms.date: 12/11/2020
+ms.date: 02/28/2022
 ms.topic: conceptual
 ms.service: information-protection
 audience: Admin
@@ -12,12 +12,12 @@ ms.reviewer: esaggese
 ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
-ms.openlocfilehash: 8cdc4d71609430dd7bcb19edc3b55c49a3b9401d
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 269937e78ffee6956df5a4dc8dc978fa30043912
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988104"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320991"
 ---
 # <a name="double-key-encryption-frequently-asked-questions"></a>Double Key Encryption frequently asked questions
 

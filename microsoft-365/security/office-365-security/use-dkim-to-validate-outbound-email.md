@@ -20,12 +20,12 @@ ms.custom:
 description: Özel etki alanınız üzerinden gönderilen iletilerin hedef e-posta sistemleri tarafından güveni sağ Microsoft 365 etki alanıyla birlikte DomainKeys Identified Mail (DKIM) kullanmayı öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1740d910f95a0076da34b7a08e66853fb7cca598
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 25333a1616bb1f4e4e529c17813bdd58f4c768b4
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63032510"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312957"
 ---
 # <a name="use-dkim-to-validate-outbound-email-sent-from-your-custom-domain"></a>Özel etki alanınıza gönderilen giden e-postayı doğrulamak için DKIM kullanma
 
@@ -91,13 +91,11 @@ DkIM'yi yapılandırmak için etki alanınız eklendiktan sonra aşağıdaki ad�
 
 ![Seçilen bir etki alanıyla Microsoft 365 Defender portalında DKIM sayfası.](../../media/126996261-2d331ec1-fc83-4a9d-a014-bd7e1854eb07.png)
 
-2. Adım: DKIM tuşları oluştur'a tıklayın.
+2. Adım: Iki durumlu düğmeyi Etkinleştir'e **kaydırın**. CNAME kayıtlarını eklemenizi belirten bir açılır pencere görüntülenir.
 
-![DKIM tuşları oluştur düğmesiyle etki alanı ayrıntıları geçici adı.](../../media/127001645-4ccf89e6-6310-4a91-85d6-aaedbfd501d3.png)
+![DKIM'yi etkinleştirmek için iki durumlu düğmeyi Etkin'e kaydırın.](../../media/126995186-9b3fdefa-a3a9-4f5a-9304-1099a2ce7cef.png)
 
 3. Adım: Açılan pencerede gösterilen CNAMES'i kopyalama
-
-![CNAM'leri Yayımla açılan penceresinde kopyalama için iki CNAME kaydı vardır.](../../media/127001787-3cce2c29-e0e4-4712-af53-c51dcba33c46.png)
 
 4. Adım: Kopyalanan CNAME kayıtlarını DNS hizmet sağlayıcınızda yayımlayın.
 
@@ -398,6 +396,9 @@ DKIM'yi bir kez ayardan sonra, SPF'yi daha önce ayarlamadıysanız bunu yapsan�
 Ardından, bkz. [**E-postayı doğrulamak için DMARC kullanma**](use-dmarc-to-validate-email.md). [İstenmeyen posta önleme iletisi üst bilgileri](anti-spam-message-headers.md), DKIM denetimlerinden Microsoft 365 kullanılan söz dizimi ve üst bilgi alanlarını içerir.
 
 **Bu test DKIM** imzalama yapılandırmasının doğru yapılandırıldığından ve doğru DNS girdilerinin yayımlanmış olduğunu doğrular.
+
+> [!NOTE]
+> Bu özellik, bir Microsoft 365 yönetici hesabı gerektirir. Bu özellik, Microsoft 365 Government, 21Vianet tarafından yürütülen Microsoft 365 veya Microsoft 365 Almanya'da kullanılamaz.
 
 <div class="nextstepaction">
 <p><a href="https://admin.microsoft.com/AdminPortal/?searchSolutions=DKIM#/homepage" data-linktype="external">Testleri Çalıştırma: DKIM</a></p>

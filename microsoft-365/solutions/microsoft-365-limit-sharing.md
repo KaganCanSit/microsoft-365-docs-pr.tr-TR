@@ -19,15 +19,16 @@ f1.keywords: NOCSH
 ms.custom:
 - admindeeplinkMAC
 - admindeeplinkTEAMS
+- admindeeplinkSPO
 ms.localizationpriority: high
 recommendations: false
 description: Aynı dosyada paylaşımı sınırlama veya devre dışı bırakma Microsoft 365.
-ms.openlocfilehash: a34a1a457ed9c53f6393d65617f8ac0d9e611209
-ms.sourcegitcommit: d7cdbdda9b829c49caa3105eb47d3f26b88a5daf
+ms.openlocfilehash: b2e327d5a5c670ada389a3dfceb2775e516ac2aa
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2022
-ms.locfileid: "63021582"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323479"
 ---
 # <a name="limit-sharing-in-microsoft-365"></a>Dosyada paylaşımı Microsoft 365
 
@@ -110,12 +111,13 @@ Erişim isteklerini kapatmak için
 Site için etki alanlarına izin vererek veya engelleyerek site paylaşımını belirli etki alanlarıyla sınırlandırabilirsiniz.
 
 Site paylaşımını etki alanına göre sınırlamak için
-1. Yönetim merkezinde SharePoint altında Etkin **siteler'e tıklayın**.
-2. Yapılandırmak istediğiniz siteye tıklayın.
-3. İlkeler **sekmesinde** , Dış **paylaşım'ın altında Düzenle'ye** **tıklayın**.
+
+1. Yönetim merkezinde SharePoint altında Etkin <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a>.
+2. Yapılandırmak istediğiniz siteyi seçin.
+3. İlkeler **sekmesinde** , Dış **paylaşım'ın altında Düzenle'yi** **seçin**.
 4. Dış **paylaşım için gelişmiş ayarlar'ın** altında Etki alanına **göre paylaşımı sınırla'ya tıklayın**.
-5. İzin vermek veya engellemek istediğiniz etki alanlarını ekleyin ve ardından Kaydet'e **tıklayın**.
-6. **Kaydet**'e tıklayın.
+5. İzin vermek veya engellemek istediğiniz etki alanlarını ekleyin ve ardından Kaydet'i **seçin**.
+6. **Kaydet**'i seçin.
 
     ![İzin verilen etki alanları site düzeyi ayarının ekran görüntüsü.](../media/limit-site-sharing-by-domain.png)
 
@@ -144,18 +146,19 @@ Site, dosya ve klasör paylaşımını sahiplerle sınırlamak için
 Dosyaların ve klasörlerin kuruluş SharePoint veya OneDrive paylaşımını engellemek için, tüm kuruluşta veya tek bir site için konuk paylaşımını kapatabilirsiniz.
 
 Bir konuk SharePoint paylaşımını kapatmak için
-1. Genel yönetim SharePoint altında, **İlkeler'in altında** Paylaşım'a **tıklayın**.
+
+1. Yönetim merkezinde SharePoint İlkeler'in **altında** Paylaşım'ı <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**seçin**</a>.
 2. Dış **paylaşım'ın** altında, SharePoint için Yalnızca **kuruluşta yer alan kişiler'e sürükleyin**.
-3. **Kaydet**'e tıklayın.
+3. **Kaydet**'i seçin.
 
     ![Kuruluş SharePoint olarak ayarlanmış paylaşım ayarlarının ekran görüntüsü.](../media/sharepoint-tenant-sharing-off.png)
 
 
 Sitede konuk paylaşımını kapatmak için
-1. Yönetim merkezinde SharePoint altında Etkin **siteler'e tıklayın**.
-2. Yapılandırmak istediğiniz siteye tıklayın.
-3. İlkeler **sekmesinde** , Dış **paylaşım'ın altında Düzenle'ye** **tıklayın**.
-4. Dış **paylaşım'ın** altında Yalnızca **kuruluşta olan kişiler'i seçin** ve Kaydet'e **tıklayın**.
+1. Yönetim merkezinde SharePoint altında Etkin <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a>.
+2. Yapılandırmak istediğiniz siteyi seçin.
+3. İlkeler **sekmesinde** , Dış **paylaşım'ın altında Düzenle'yi** **seçin**.
+4. Dış **paylaşım'ın** altında Yalnızca **kuruluşta olan kişiler'i seçin ve** sonra da Kaydet'i **seçin**.
 
     ![Yalnızca SharePoint olarak ayarlanmış site düzeyinde paylaşım ayarlarının ekran görüntüsü.](../media/sharepoint-site-external-sharing-settings-off.png)
 
@@ -164,17 +167,19 @@ Kullanıcıya sol üst bilgi sekmesinden kullanıcıya OneDrive ve Dış paylaş
 Kuruluş dışındaki kullanıcılarla paylaşıma izin vermek istiyor, ancak herkesin kimlik doğrulamasından emin olmak için tüm kuruluş için veya tek bir site için *Herkes (anonim* paylaşım) bağlantılarını devre dışı edebilirsiniz.
 
 Kuruluş *düzeyindeki herkes* bağlantılarını kapatmak için
-1. Genel yönetim SharePoint altında, **İlkeler'in altında** Paylaşım'a **tıklayın**.
+
+1. Yönetim merkezinde SharePoint İlkeler'in **altında** Paylaşım'ı <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**seçin**</a>.
 2. Dış **paylaşım'ın** altında Yer SharePoint yeni ve mevcut **konuklar'a sürükleyin**.
-3. **Kaydet**'e tıklayın.
+3. **Kaydet**'i seçin.
 
     ![Yeni ve SharePoint olarak ayarlanmış kuruluş düzeyi paylaşım ayarlarının ekran görüntüsü.](../media/sharepoint-guest-sharing-new-existing-guests.png)
 
 Site için *herkes* bağlantılarını kapatmak için
-1. Yönetim merkezinde SharePoint altında Etkin **siteler'e tıklayın**.
-2. Yapılandırmak istediğiniz siteye tıklayın.
-3. İlkeler **sekmesinde** , Dış **paylaşım'ın altında Düzenle'ye** **tıklayın**.
-4. Dış **paylaşım'ın** altında Yeni **ve mevcut konuklar'ı** seçin ve Kaydet'e **tıklayın**.
+
+1. Yönetim merkezinde SharePoint altında Etkin <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a>.
+2. Yapılandırmak istediğiniz siteyi seçin.
+3. İlkeler **sekmesinde** , Dış **paylaşım'ın altında Düzenle'yi** **seçin**.
+4. Dış **paylaşım'ın** altında Yeni **ve mevcut konuklar'ı** ve ardından Kaydet'i **seçin**.
 
     ![Yeni ve SharePoint olarak ayarlanmış site düzeyinde paylaşım ayarlarının ekran görüntüsü.](../media/sharepoint-site-external-sharing-settings-new-existing-guests.png)
 

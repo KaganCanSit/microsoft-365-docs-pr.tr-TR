@@ -28,12 +28,12 @@ ms.assetid: dd6a1fef-ec4a-4cf4-a25a-bb591c5811e3
 description: Bir kuruluşu Kasa ve kötü amaçlı URL'ler kullanan diğer saldırılara karşı korumak için Office 365 için Defender'daki Bağlantılar koruması hakkında bilgi edinebilirsiniz. Bağlantıları Teams Kasa ve Bağlantı iletilerinin Kasa bakın.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: fc043da2763bf6984062bec903e4f2df7bd6d10d
-ms.sourcegitcommit: cde34d38bdfb6335b980f1c48c6b218da6a64bf8
+ms.openlocfilehash: 736efeb805e45170ec6471b57fc35005d0a12311
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2022
-ms.locfileid: "63014083"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320333"
 ---
 # <a name="safe-links-in-microsoft-defender-for-office-365"></a>Kasa için Microsoft Defender'daki Office 365
 
@@ -56,6 +56,8 @@ Kasa Bağlantılar koruması aşağıdaki konumlarda kullanılabilir:
   
   > [!NOTE]
   > Kasa Posta özelliği etkin ortak klasörlerde Bağlantılar çalışmıyor.
+  >
+  > Kasa Bağlantıları yalnızca HTTP/S) ve FTP biçimlerini destekler.
 
 - **Microsoft Teams**: Kasa, grup sohbeti Teams kanallarında yer alan bağlantılar için Bağlantılar koruması da Kasa tarafından kontrol edilir.
 
@@ -302,7 +304,7 @@ Yeni veya var olan bağlantılar ilkelerinde listeye girişler Kasa için bkz. Y
 
 **Notlar**:
 
-- Aşağıdaki istemciler, Bağlantılar ilkelerinde aşağıdaki URL'leri **yeniden yazmama** Kasa tanımaz. İlkelere dahil olan kullanıcıların, şu istemcilerde tarama yapılan bağlantıların sonuçlarına Kasa URL'lere erişimi engel olabilir:
+- Aşağıdaki istemciler, Bağlantılar ilkelerinde aşağıdaki URL'leri **yeniden yazmama** Kasa tanımaz. İlkelere dahil olan kullanıcıların, şu istemcilerde şu bağlantıları tarayın Kasa URL'lere erişimi engel olabilir:
   - Microsoft Teams
   - Office web uygulamaları
 

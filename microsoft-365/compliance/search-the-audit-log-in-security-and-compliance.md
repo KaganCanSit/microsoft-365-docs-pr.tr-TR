@@ -21,12 +21,12 @@ description: Bu Microsoft 365 uyumluluk merkezi, birleşik denetim günlüğünd
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 5d5c7820a28977bb894c30915dc26f12016bb58c
-ms.sourcegitcommit: 559df2c86a7822463ce0597140537bab260c746a
+ms.openlocfilehash: 71b7bb5d5588f19ff4134c133377b3e9ca83c780
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "63015307"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63319357"
 ---
 # <a name="search-the-audit-log-in-the-compliance-center"></a>Uyumluluk merkezinde denetim günlüğünde arama yapın
 
@@ -201,7 +201,7 @@ Denetim günlüğünde arama ve arama Microsoft 365.
 
 4. Arama **ölçütlerinizi** kullanarak arama çalıştırmak için Ara'ya tıklayın.
 
-   Arama sonuçları yüklenir ve birkaç dakika sonra yeni bir sayfada görüntülenir. Arama tamamlandığında, bulunan sonuç sayısı görüntülenir. 150 olaylık artışlarla en çok 5.000 olay görüntülenir. Arama ölçütlerine uyan 5.000'den fazla olay varsa, en son 5.000 olay görüntülenir.
+   Arama sonuçları yüklenir ve birkaç dakika sonra yeni bir sayfada görüntülenir. Arama tamamlandığında, bulunan sonuç sayısı görüntülenir. 150 olaylık artışlarla en çok 50.000 olay görüntülenir.
 
    ![Arama tamamlendikten sonra sonuç sayısı görüntülenir.](../media/986216f1-ca2f-4747-9480-e232b5bf094c.png)
 
@@ -217,11 +217,11 @@ Denetim günlüğünde arama ve arama Microsoft 365.
 
 - Geçerli **arama ölçütlerini** temizlemek için Temizle'ye tıklayın. Tarih aralığı, varsayılan değer olan son yedi gün değerine döner. Ayrıca, tüm seçili **etkinlikleri iptal etmek için Tüm etkinliklerin sonuçlarını göstermek için** de Tüm temizle'yi tıklatın.
 
-- 5.000 sonuç bulunursa, büyük olasılıkla arama ölçütlerine uyan 5.000'den çok olay olduğunu varsayabilirsiniz. Daha az sonuç elde etmek için arama  \> ölçütlerini daraltarak aramaya yeniden çalıştırabilirsiniz veya Sonuçları dışarı aktar Tüm sonuçları indir'i seçerek tüm arama sonuçlarını dışarı **aktarabilirsiniz**.
+- 50.000 sonuç bulunursa, büyük olasılıkla arama ölçütlerine uyan 50.000'den çok olay olduğunu varsayabilirsiniz. Daha az sonuç elde etmek için arama  \> ölçütlerini daraltarak aramaya yeniden çalıştırabilirsiniz veya Sonuçları dışarı aktar Tüm sonuçları indir'i seçerek tüm arama sonuçlarını dışarı **aktarabilirsiniz**.
 
 ### <a name="step-2-view-the-search-results"></a>2. Adım: Arama sonuçlarını görüntüleme
 
-Denetim günlüğü aramanın sonuçları Denetim günlüğü **araması sayfasındaki** **Sonuçlar'ın altında** görüntülenir. Daha önce de belirtildiği gibi, 150 olaylık artışlarla en çok 5.000 (en yeni) olay görüntülenir. Daha fazla olay görüntülemek için, Sonuçlar bölmesindeki kaydırma çubuğunu kullanabilir  veya **Shift + End** tuşlarına basarak sonraki 150 olayları görüntüleyebilirsiniz.
+Denetim günlüğü aramanın sonuçları Denetim günlüğü **araması sayfasındaki** **Sonuçlar'ın altında** görüntülenir. Daha önce de belirtildiği gibi, 150 olaylık artışlarla en çok 50.000 (en yeni) olay görüntülenir. Sonraki 150 olayları **görüntülemek için kaydırma çubuğunu kullanın veya Shift + End** tuşlarına basın.
 
 Sonuçlar, arama tarafından döndürülen her olay hakkında aşağıdaki bilgileri içerir:
 
@@ -430,7 +430,7 @@ Aşağıdaki tabloda, SharePoint Online ve OneDrive İş'de dosya ve sayfa etkin
 
 |Kolay ad|Operation|Açıklama|
 |:-----|:-----|:-----|
-|Dosyaya erişildi|FileAccessed|Kullanıcı veya sistem hesabı bir dosyaya erişmektedir.|
+|Dosyaya erişildi|FileAccessed|Kullanıcı veya sistem hesabı bir dosyaya erişmektedir. Kullanıcı bir dosyaya eriştirilsin mi, fileAccessed olayı sonraki beş dakika boyunca aynı kullanıcı için yeniden aynı dosya için günlüğe kaydedilmez.|
 |(yok)|FileAccessedExtended|Bu durum, "Dosyaya erişildi" (FileAccessed) etkinliğiyle ilgilidir. Aynı kişi bir dosyaya uzun bir süre boyunca (3 saate kadar) sürekli olarak erişenin FileAccessedExtended etkinliği günlüğe kaydedilir. <br/><br/> FileAccessedExtended etkinliklerinin günlüğe kaydediliş amacı, bir dosyaya sürekli olarak erişilirken günlüğe kaydedilen FileAccessed etkinlikleri sayısını azaltmaktır. Bu, aynı kullanıcı etkinliğine karşı birden çok FileAccessed kaydı gürültünün azaltılmasına ve başlangıçtaki (ve daha önemli olan) FileAccessed etkinliğine odaklanmanıza yardımcı olur.|
 |Dosyanın bekletme etiketi değiştirildi|ComplianceSettingChanged|Belgeye uygulanmış veya belgeden kaldırılmış bir bekletme etiketi. Bir bekletme etiketi el ile veya otomatik olarak iletiye uygulandığında bu olay tetiklenir.|
 |Kayıt durumu kilitli olarak değiştirildi|LockRecord|Belgeyi kayıt kilitli olarak sınıflara alan bir bekletme etiketinin kayıt durumu. Bu, belgenin değiştirilile veya silinemez olduğu anlamına gelir. Yalnızca site için katılımcı izni atanan kullanıcılar belgenin kayıt durumunu değiştirebilir.|
@@ -446,7 +446,7 @@ Aşağıdaki tabloda, SharePoint Online ve OneDrive İş'de dosya ve sayfa etkin
 |Dosyada kötü amaçlı yazılım algılandı|FileMalwareDetected|SharePoint virüsten koruma altyapısı bir dosyada kötü amaçlı yazılım algılar.|
 |Dosya kullanıma alındı|FileCheckOutDiscarded|Kullanıcı kullanıma alınmış bir dosyayı atmış (veya geri almış) . Bu, kullanıma alındıklarında dosya üzerinde yaptığı tüm değişikliklerin atılmış olduğu ve belgenin belge kitaplığında sürümüne kaydedilene kadar geçerli olduğu anlamına gelir.|
 |İndirilen dosya|FileDownloaded|Kullanıcı siteden bir belge indirildi.|
-|Dosya değiştirildi|FileModified|Kullanıcı veya sistem hesabı, siteden bir belgenin içeriği veya özellikleri üzerinde değişiklik gösterir.|
+|Dosya değiştirildi|FileModified|Kullanıcı veya sistem hesabı, siteden bir belgenin içeriği veya özellikleri üzerinde değişiklik gösterir. Aynı kullanıcı aynı belgenin içeriğinde veya özelliklerinde değişiklik olduğunda sistem, başka bir FileModified olayı için günlük oluşturmadan önce beş dakika bekler.|
 |(yok)|FileModifiedExtended|Bu durum, "Değiştirilmiş dosya" (FileModified) etkinliğiyle ilgilidir. Aynı kişi bir dosyayı uzun bir süre boyunca (3 saate kadar) sürekli olarak değiştiren FileModifiedExtended etkinliği günlüğe kaydedilir. <br/><br/> FileModifiedExtended etkinliklerinin günlüğe kaydedilme amacı, bir dosya sürekli olarak değiştirildiğinde günlüğe kaydedilen FileModified etkinlikleri sayısını azaltmaktır. Bu, aynı kullanıcı etkinliğine uygun olması için birden fazla FileModified kaydı gürültünün azaltılmasına ve başlangıçtaki (ve daha önemli olan) FileModified etkinliğine odaklanmanıza yardımcı olur.|
 |Dosya taşındı|FileMoved|Kullanıcı bir belgeyi sitenin geçerli bulunduğu konumdan yeni bir konuma taşır.|
 |(yok)|FilePreviewed|Kullanıcı site sitesinde veya site SharePoint önizlemede OneDrive İş görüntüdedir. Bu olaylar genellikle, resim galerisini görüntüleme gibi tek bir etkinliği temel alan yüksek hacimlerde gerçekleşir.|
@@ -459,9 +459,9 @@ Aşağıdaki tabloda, SharePoint Online ve OneDrive İş'de dosya ve sayfa etkin
 |Dosya yeniden adlandırıldı|FileRenamed|Kullanıcı siteden bir belgeyi yeniden adlandırdı.|
 |Dosya geri yüklendi|FileRestored|Kullanıcı sitenin geri dönüşüm kutusunu kullanarak bir belgeyi geri yükledi.|
 |Dosya karşıya yüklendi|FileUploaded|Kullanıcı sitedeki bir klasöre belge yükledi.|
-|Sayfa görüntülandı|PageViewed|Kullanıcı sitede bir sayfayı görüntüler. Bu, Web tarayıcısı kullanarak belge kitaplığında yer alan dosyaları görüntülemeyi içermez.|
+|Sayfa görüntülandı|PageViewed|Kullanıcı sitede bir sayfayı görüntüler. Bu, Web tarayıcısı kullanarak belge kitaplığında yer alan dosyaları görüntülemeyi içermez. Kullanıcı sayfayı görüntülenin, sonraki beş dakika boyunca aynı sayfa için aynı kullanıcı için PageViewed olayı yeniden günlüğe kaydedilmez.|
 |(yok)|PageViewedExtended|Bu durum, "Sayfa görüntü edildi" (PageViewed) etkinliğiyle ilgilidir. Aynı kişi bir web sayfasını uzun bir süre boyunca (3 saate kadar) sürekli olarak görüntülerken PageViewedExtended etkinliği günlüğe kaydedilir. <br/><br/> PageViewedExtended etkinliklerinin günlüğe kaydedilme amacı, bir sayfa sürekli olarak görüntü olduğunda günlüğe kaydedilen PageViewed etkinlikleri sayısını azaltmaktır. Bu, aynı kullanıcı etkinliğine yönelik birden fazla PageViewed kaydı gürültünün azaltılmasına ve başlangıçtaki (ve daha önemli olan) PageViewed etkinliğine odaklanmanıza yardımcı olur.|
-|İstemci tarafından sinyal gelen görünümü|ClientViewSignaled|Kullanıcının istemcisi (web sitesi veya mobil uygulama gibi) belirtilen sayfanın kullanıcı tarafından görüntümüş olduğunu sinyalini verdi. Bu etkinlik genellikle bir sayfa için PagePrefetched etkinliği takip eden günlüğe kaydedilir. <br/><br/>**NOT**: ClientViewSignaled olayları sunucu tarafından değil istemci tarafından sinyallenenin olması nedeniyle, olayın sunucu tarafından günlüğe kaydedilmeyebilir ve dolayısıyla denetim günlüğünde görünmeyebilirsiniz. Ayrıca denetim kaydında yer alan bilgilerin güvenilir olması da mümkün olabilir. Bununla birlikte, kullanıcının kimliği sinyali oluşturmak için kullanılan belirteç tarafından doğrulanmış olduğundan, ilgili denetim kaydında listelenen kullanıcının kimliği doğrudur. |
+|İstemci tarafından sinyal gelen görünümü|ClientViewSignaled|Kullanıcının istemcisi (web sitesi veya mobil uygulama gibi) belirtilen sayfanın kullanıcı tarafından görüntümüş olduğunu sinyalini verdi. Bu etkinlik genellikle bir sayfa için PagePrefetched etkinliği takip eden günlüğe kaydedilir. <br/><br/>**NOT**: ClientViewSignaled olayları sunucu tarafından değil istemci tarafından sinyallenenin olması nedeniyle, olayın sunucu tarafından günlüğe kaydedilmeyebilir ve dolayısıyla denetim günlüğünde görünmeyebilirsiniz. Ayrıca denetim kaydında yer alan bilgilerin güvenilir olması da mümkün olabilir. Bununla birlikte, kullanıcının kimliği sinyali oluşturmak için kullanılan belirteç tarafından doğrulanmış olduğundan, ilgili denetim kaydında listelenen kullanıcının kimliği doğrudur. Sistem, aynı kullanıcının istemcisi sayfanın kullanıcı tarafından yeniden görüntülmüş olduğunu işaret ediyorken, aynı olayın günlüğe kaydedilemeden önce beş dakika bekler.|
 |(yok)|PagePrefetched|Kullanıcının istemcisi (web sitesi veya mobil uygulama gibi), kullanıcının göz atarak performansı iyileştirmesine yardımcı olmak için belirtilen sayfayı talep etmiştir. Bu olay, sayfa içeriğine kullanıcının istemcisine hizmet olduğunu göstermek için günlüğe kaydedilir. Bu olay kullanıcının sayfaya gezinen tam bir göstergesi değildir. <br/><br/> Sayfa içeriği istemci tarafından işlenen zaman (kullanıcının isteğine göre) ClientViewSignaled olayı oluşturul etmelidir. İstemcilerin bazıları önceden getiri olduğunu gösterirken bazıları önceden getirileri desteklemez ve bu nedenle bazı önceden getirileri PageViewed etkinlikleri olarak günlüğe kaydedilebilirsiniz.|
 ||||
 
@@ -543,7 +543,7 @@ Aşağıdaki tabloda, kullanıcıların SharePoint Online'da listeler ve liste �
 |Güncelleştirilmiş liste öğesi|ListItemUpdated|Kullanıcı bir veya SharePoint değiştirerek bir liste öğesini güncellemiştir.|
 |Site sütunu güncelleştirildi|SiteColumnUpdated|Kullanıcı bir veya SharePoint değiştirerek site sütununu güncellemiştir.|
 |Güncelleştirilmiş site içerik türü|SiteContentTypeUpdated|Kullanıcı bir veya birden çok özelliği değiştirerek site içerik türünü güncellemiştir.|
-|Görüntülenen liste öğesi|ListItemViewed|Bir kullanıcı bir liste SharePoint görüntüledi.|
+|Görüntülenen liste öğesi|ListItemViewed|Bir kullanıcı bir liste SharePoint görüntüledi. Kullanıcı liste öğesini görüntülenin, sonraki beş dakika boyunca aynı liste öğesi için aynı kullanıcı için ListItemViewed olayı yeniden günlüğe kaydedilmez.|
 ||||
 
 ### <a name="sharing-and-access-request-activities"></a>Paylaşım ve erişim isteği etkinlikleri

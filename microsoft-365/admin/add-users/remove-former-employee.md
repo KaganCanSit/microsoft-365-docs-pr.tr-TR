@@ -27,12 +27,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Eski bir çalışanı iş yerlerinden kaldırmak ve kuruluş verilerini Microsoft 365 için bu çözümde yer alan adımları izleyin.
-ms.openlocfilehash: dcbaa1282ee462fd991f04df74008d823a7b621d
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 799a946c85da94fcc3d9e53a4015697d124192ce
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019454"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315183"
 ---
 # <a name="overview-remove-a-former-employee-and-secure-data"></a>Genel bakış: Eski çalışanı kaldırma ve verilerin güvenliğini sağlama
 
@@ -55,22 +55,6 @@ Bu serinin adımlarını tamamlamak için, bu özellikleri Microsoft 365 kullana
 |Outlook|Pst dosyalarını içeri aktarma, posta kutusu ekleme |
 |Active Directory|Karma ortamlarda kullanıcıları kaldırma |
 
-## <a name="watch-delete-a-user"></a>İzle: Kullanıcı silme
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FOfR?autoplay=false]
-
-Bir çalışan şirketten ayrıldığında bu çalışanı iş için Microsoft 365 kaldırmanız gerekir. Bunu öncesinde, bu kullanıcının şirket dosyalarına erişimini engellemeniz, oluşturduğu belgeleri korumalı ve kullanıcı kaldırmayla ilişkilendirilmiş diğer birkaç yönetici görevlerini gerçekleştirebilirsiniz.
-
-1. Yönetim merkezinde Kullanıcılar'ı **ve ardından** Etkin **kullanıcılar'ı seçin**.
-1. Kaldırmak istediğiniz kullanıcı seçin ve sonra da Kullanıcı **sil'i seçin**.
-1. Lisanslarını kaldırmak için ve e-posta diğer adlarını kaldırmak için onay kutusunu işaretleyin.
-1. Başka bir kullanıcıya eski çalışanın e-postası için erişim vermek için kutuyu işaretleyin ve Bir kullanıcı seçin **ve e-posta seçeneklerini ayarlayın**.
-1. İlişkili e-posta diğer adlarını kaldırmak için, diğer **adların yanındaki X'i** seçin.
-1. Paylaşılan posta kutusu bilgilerini gözden geçirip Son'a **seçin**.
-1. Seçeneklerinizin doğru ayar olduğunu onaylayın ve Ata ve **dönüştür'e tıklayın**.
-1. Sonuçlarınızı gözden geçirerek Kapat'ı **seçin**.
-
-Bir kullanıcıyı kaldırdikten sonra, hesabını geri yüklemek için 30 gün kadar süre vardır.
 
 ## <a name="solution-remove-a-former-employee"></a>Çözüm: Eski bir çalışanı kaldırma
 
@@ -93,6 +77,22 @@ Bir kullanıcıyı kaldırdikten sonra, hesabını geri yüklemek için 30 gün 
 |[6. Adım - Eski bir Microsoft 365 lisansını kaldırma ve silme](remove-former-employee-step-6.md)|Lisansı kaldırdığınızda, başka birine atayabilirsiniz. Öte yandan, lisansı silebilir ve bu şekilde başka birini işe alana kadar lisans için ödeme yapmazsınız.  <p> Lisansı kaldırdığınızda veya sildiğinizde, kullanıcının eski e-postası, kişileri ve takvimi **30 gün** boyunca korunur, sonrasında kalıcı olarak silinir. Lisansı kaldırır veya siler ancak hesabı silmezseniz, kullanıcının OneDrive'da bulunan içeriğine 30 gün geçtikten sonra bile erişebilirsiniz.  |
 |[7. Adım - Eski çalışanın kullanıcı hesabını silme](remove-former-employee-step-7.md)|Bu işlem, hesabı yönetim merkezinden kaldırır. Ortamı temiz tutmanızı sağlar.|
 
+ ## <a name="watch-delete-a-user"></a>İzle: Kullanıcı silme
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FOfR?autoplay=false]
+
+Bir çalışan şirketten ayrıldığında bu çalışanı iş için Microsoft 365 kaldırmanız gerekir. Bunu öncesinde, bu kullanıcının şirket dosyalarına erişimini engellemeniz, oluşturduğu belgeleri korumalı ve kullanıcı kaldırmayla ilişkilendirilmiş diğer birkaç yönetici görevlerini gerçekleştirebilirsiniz.
+
+1. Yönetim merkezinde Kullanıcılar'ı **ve ardından** Etkin **kullanıcılar'ı seçin**.
+1. Kaldırmak istediğiniz kullanıcı seçin ve sonra da Kullanıcı **sil'i seçin**.
+1. Lisanslarını kaldırmak için ve e-posta diğer adlarını kaldırmak için onay kutusunu işaretleyin.
+1. Başka bir kullanıcıya eski çalışanın e-postası için erişim vermek için kutuyu işaretleyin ve Bir kullanıcı seçin **ve e-posta seçeneklerini ayarlayın**.
+1. İlişkili e-posta diğer adlarını kaldırmak için, diğer **adların yanındaki X'i** seçin.
+1. Paylaşılan posta kutusu bilgilerini gözden geçirip Son'a **seçin**.
+1. Seçeneklerinizin doğru ayar olduğunu onaylayın ve Ata ve **dönüştür'e tıklayın**.
+1. Sonuçlarınızı gözden geçirerek Kapat'ı **seçin**.
+
+Bir kullanıcıyı kaldırdikten sonra, hesabını geri yüklemek için 30 gün kadar süre vardır.
 ## <a name="related-content"></a>İlgili içerik
 
 [Bir kullanıcı geri yükleme](restore-user.md) (makale)\

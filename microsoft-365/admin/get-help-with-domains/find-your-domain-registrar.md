@@ -2,8 +2,8 @@
 title: Etki alanı kayıt şirketinizi bulma
 f1.keywords:
 - CSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -21,12 +21,12 @@ search.appverid:
 - GEA150
 ms.assetid: b5b633ba-1e56-4a98-8ff5-2acaac63a5c8
 description: InterNIC aramasını kullanarak etki alanı kayıt şirketinizi ve DNS barındırma sağlayıcınızı bulmayı öğrenin.
-ms.openlocfilehash: 41ed3268f41f3a20ad3166ddfe6cca9d711821c6
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: c7802067bc3d8397d9f7b7ddf0f6cda4dd57c38b
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973594"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316877"
 ---
 # <a name="find-your-domain-registrar"></a>Etki alanı kayıt şirketinizi bulma
 

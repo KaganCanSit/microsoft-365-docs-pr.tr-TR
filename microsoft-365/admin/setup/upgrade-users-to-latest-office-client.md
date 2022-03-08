@@ -3,7 +3,7 @@ title: Office 2010 sürümüne yükseltme - Microsoft 365 yönetici Microsoft 36
 f1.keywords:
 - NOCSH
 ms.author: kwekua
-author: kwekuako
+author: kwekua
 manager: scotv
 audience: Admin
 ms.service: o365-administration
@@ -24,12 +24,12 @@ ms.custom:
 ms.assetid: f6b00895-b5fd-4af6-a656-b7788ea20cbb
 description: E-posta istemcisini Microsoft Office kullanıcılar için Office son istemciye yükseltmeyi öğrenin.
 ms.topic: article
-ms.openlocfilehash: 0dad3c22e9011dd0453f719178d94ef67138220c
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 7994fb10d00484f2c211f4443d2030fa71003d5f
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988111"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63321705"
 ---
 # <a name="upgrade-your-microsoft-365-for-business-users-to-the-latest-office-client"></a>Kurumsal kullanıcıları Microsoft 365 son istemciye yükseltme Office yükseltme
 

@@ -24,14 +24,17 @@ search.appverid:
 - MET150
 ms.assetid: f3433b6b-02f7-447f-9d62-306bf03638b0
 description: Android veya iOS cihazlarınıza Microsoft 365 İş Ekstra koruma ayarlarını doğrulamayı öğrenin.
-ms.openlocfilehash: 100c4f759578100ae94df24bb7009f4e76a6eb02
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 85d98a4741299327c0e88735cb9593e129fdc929
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983843"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313755"
 ---
 # <a name="validate-app-protection-settings-on-android-or-ios-devices"></a>Android veya iOS cihazlarda uygulama koruma ayarlarını doğrulama
+
+> [!NOTE]
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Bu teklif, cihazlar için ek güvenlik özellikleri sağlar. [İş için Defender hakkında daha fazla bilgi öğrenin](../../security/defender-business/mdb-overview.md).
 
 Android veya iOS cihazlarında uygulama koruma ayarlarını doğrulamak için aşağıdaki bölümlerde verilen yönergeleri izleyin.
   
@@ -47,7 +50,7 @@ Uygulamaları korumak amacıyla [Android cihazları için uygulama yapılandırm
     
 2. Kurulum **sırasında oluşturduğunuz ayarlarda Android** için uygulama ilkesi'ne veya oluşturduğunuz başka bir ilkeye tıklayın ve örneğin, Android için zorunlu Outlook doğrulayın. 
     
-    ![Shows all the apps for which this policy protects files.](../../media/b3be3ddd-f683-4073-8d7a-9c639a636a2c.png)
+    ![Bu ilkenin dosyaları koruyan tüm uygulamaları gösteren ekran görüntüsü.](../../media/b3be3ddd-f683-4073-8d7a-9c639a636a2c.png)
   
 ### <a name="validate-require-a-pin-or-a-fingerprint-to-access-office-apps"></a>Office uygulamalarına erişim için PIN veya parmak izi isteme doğrulaması
 
@@ -69,7 +72,7 @@ Uygulamaları korumak amacıyla [Android cihazları için uygulama yapılandırm
     
 2. İlke tarafından belirtilen sayıda yanlış PIN girin. PIN Deneme Sınırına Ulaşıldı uyarılarını ve **PIN'i sıfırlamayı** sizen bir istem görüntüler. 
     
-    ![After too many incorrect PIN attempts, you need to reset your PIN.](../../media/fca6fcb4-bb5c-477f-af5e-5dc937e8b835.png)
+    ![Çok fazla yanlış PIN denemesi sonrasında PIN'inizi sıfırlamanız gerektiğini gösteren ekran görüntüsü.](../../media/fca6fcb4-bb5c-477f-af5e-5dc937e8b835.png)
   
 3. **PIN'i Sıfırla**'ya basın. Kullanıcının kimlik bilgileriyle ve ardından yeni bir PIN Microsoft 365 İş Ekstra oturum açmanız istenir.
     
@@ -136,7 +139,7 @@ Uygulamaları korumak amacıyla [iOS cihazları için uygulama yapılandırmalar
     
 2. Kurulum **sırasında oluşturduğunuz ayarlarda iOS** için uygulama ilkesi'ne veya oluşturduğunuz başka bir ilkeye tıklayın ve örneğin, iOS için zorunlu Outlook doğrulayın. 
     
-    ![Shows all the apps for which this policy protects files.](../../media/842441b8-e7b1-4b86-9edd-d94d1f77b6f4.png)
+    ![Bu ilkenin dosyaları koruyan tüm uygulamaları gösteren ekran görüntüsü.](../../media/842441b8-e7b1-4b86-9edd-d94d1f77b6f4.png)
   
 ### <a name="validate-require-a-pin-to-access-office-apps"></a>Office uygulamalarına erişmek için PIN istemeyi doğrulama
 
@@ -158,7 +161,7 @@ Uygulamaları korumak amacıyla [iOS cihazları için uygulama yapılandırmalar
     
 2. İlke tarafından belirtilen sayıda yanlış PIN girin. PIN Deneme Sınırına Ulaşıldı uyarılarını ve **PIN'i sıfırlamayı** sizen bir istem görüntüler. 
     
-    ![After too many incorrect PIN attempts, you need to reset your PIN.](../../media/fab5c089-a4a5-4e8d-8c95-b8eed1dfa262.png)
+    ![Çok fazla yanlış girişimden sonra ekran görüntüsü uyarı PIN'i sıfırlama.](../../media/fab5c089-a4a5-4e8d-8c95-b8eed1dfa262.png)
   
 3. **Tamam**'a basın. Kullanıcının kimlik bilgileriyle ve ardından yeni bir PIN Microsoft 365 İş Ekstra oturum açmanız istenir.
     
@@ -202,5 +205,7 @@ Uygulamaları korumak amacıyla [iOS cihazları için uygulama yapılandırmalar
     
 4. Giriş ekranından **Fotoğraflar** uygulamasını açın. Şifreli bir resmin (birden çok resim dosyası eki kaydettiyseniz daha fazla olabilir) kaydedildiğini, ancak şifrelenmiş olduğunu görürsünüz. 
     
----
 
+## <a name="see-also"></a>Ayrıca bkz.
+
+[kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](../security-and-compliance/secure-your-business-data.md)

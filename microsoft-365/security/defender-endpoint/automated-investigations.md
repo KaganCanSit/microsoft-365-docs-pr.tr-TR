@@ -7,8 +7,8 @@ ms.technology: mde
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
-author: JoeDavies-MSFT
-ms.author: josephd
+author: dansimp
+ms.author: dansimp
 ms.date: 11/24/2021
 ms.localizationpriority: medium
 manager: dansimp
@@ -19,12 +19,12 @@ ms.collection:
 ms.topic: how-to
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs
 ms.custom: AIR
-ms.openlocfilehash: 547356fadc05c2359b4c6cd639bc22110bf8be93
-ms.sourcegitcommit: babc2dad1c0e08a9237dbe4956ffd21c0214db83
+ms.openlocfilehash: 31b2a7b41c26bdba22e6f364e517471e31e9115c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014342"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313027"
 ---
 # <a name="overview-of-automated-investigations"></a>Otomatik soruşturmalara genel bakış
 
@@ -84,7 +84,10 @@ Bekleyen veya tamamlanan tüm düzeltme eylemleri İşlem merkezinde [izlanır](
 
 ## <a name="requirements-for-air"></a>AIR gereksinimleri
 
-Kuruluşta Uç Nokta için Defender olmalıdır (bkz. Uç Nokta [için Microsoft Defender için en düşük gereksinimler](minimum-requirements.md).
+Kuruluşta Uç Nokta için Defender olmalıdır (Bkz. Uç Nokta [için Microsoft Defender için en düşük gereksinimler](minimum-requirements.md)).
+
+> [!NOTE]
+> Otomatik araştırma ve yanıt, pasif Microsoft Defender Virüsten Koruma etkin modda çalıştırıldığı için otomatik araştırma ve yanıt gerektirir. Otomatik Microsoft Defender Virüsten Koruma devre dışı bırakılır veya kaldırılırsa, Otomatik Araştırma ve Yanıt düzgün çalışmaz.
 
 Şu anda, AIR yalnızca aşağıdaki işletim sistemi sürümlerini destekler:
 

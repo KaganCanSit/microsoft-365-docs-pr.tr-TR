@@ -2,8 +2,8 @@
 title: İş Microsoft 365 el ile değiştirme
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: jkinma, jmueller
 audience: Admin
@@ -14,18 +14,18 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
-- AdminSurgePortfolio
 - commerce_subscriptions
+- AdminSurgePortfolio
 search.appverid: MET150
 description: Yeni abonelik satın alarak ve hem aboneliklerin liste hem de etkin olmasını sağlayarak abonelikleri el ile değiştirebilirsiniz.
 ROBOTS: NOINDEX
 ms.date: 03/17/2021
-ms.openlocfilehash: 12ff6bdec77e6407d1b854dc7a5fd78f0401c253
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: adc76ff3fbfa5fd81893f0b260e76018288350f1
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "63012830"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63328435"
 ---
 # <a name="change-plans-manually"></a>Planları el ile değiştirme
 

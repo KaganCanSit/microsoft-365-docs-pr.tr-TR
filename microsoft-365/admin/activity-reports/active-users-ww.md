@@ -1,7 +1,7 @@
 ---
-title: En Microsoft 365 Kullanıcılar raporunu değerlendirme
-ms.author: pebaum
-author: pebaum
+title: Microsoft 365 Etkin Kullanıcılar raporunu değerlendirme
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: overview
@@ -21,17 +21,17 @@ search.appverid:
 - MOE150
 - GEA150
 ms.assetid: fc1cf1d0-cd84-43fd-adb7-a4c4dfa8112d
-description: Rapor Raporu'Microsoft 365 Raporları panosu kullanarak bir Etkin Kullanıcılar raporunu nasıl Microsoft 365 yönetim merkezi ve kaç ürün lisansının kullanılıyor olduğunu öğrenin.
-ms.openlocfilehash: 793f83e28c396add9046f2c464efbdfef2b291f8
-ms.sourcegitcommit: 3140e2866de36d57a27d27f70d47e8167c9cc907
+description: Rapor Raporları panosunda Microsoft 365 Raporları panosu kullanarak bir Etkin Kullanıcılar raporunu nasıl Microsoft 365 yönetim merkezi ve kaç ürün lisansının kullanılıyor olduğunu öğrenin.
+ms.openlocfilehash: 9f8b9f12782727121a878cfa353e42291d340688
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2021
-ms.locfileid: "62973861"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312901"
 ---
-# <a name="assess-the-microsoft-365-active-users-report"></a>En Microsoft 365 Kullanıcılar raporunu değerlendirme
+# <a name="assess-the-microsoft-365-active-users-report"></a>Microsoft 365 Etkin Kullanıcılar raporunu değerlendirme
 
-Raporlar Microsoft 365 panosu, etkinliğin kurum genelindeki ürünlerini gösterir. Bu pano sayesinde her bir üründeki etkinliklerle ilgili daha ayrıntılı bilgi edinmek için ürün düzeyinde raporları ayrıntılı olarak inceleyebilirsiniz. [Raporlara genel bakış konusuna](activity-reports.md) göz atın.
+Rapor Microsoft 365 panosu, kurum kurum genelindeki ürünlerde etkinliğin genel görünümünü gösterir. Bu pano sayesinde her bir üründeki etkinliklerle ilgili daha ayrıntılı bilgi edinmek için ürün düzeyinde raporları ayrıntılı olarak inceleyebilirsiniz. [Raporlara genel bakış konusuna](activity-reports.md) göz atın.
   
 Örneğin, kuruluşunuzdaki bireyler tarafından kaç ürün lisansının kullanımda olduğunu öğrenmek için **Etkin Kullanıcılar** raporunu kullanabilir ve hangi kullanıcıların hangi lisansları kullandığı konusunda bilgi edinmek için detaya gidebilirsiniz. Bu rapor yöneticilerin kapasitenin altında kullanılan ürünleri ya da ek eğitime veya bilgiye ihtiyacı olan kullanıcıları belirlemesine yardımcı olabilir. 
 
@@ -42,7 +42,7 @@ Raporlar Microsoft 365 panosu, etkinliğin kurum genelindeki ürünlerini göste
 
 ## <a name="interpret-the-active-users-report"></a>Etkin Kullanıcılar raporunu yorumlama
 
-Etkin kullanıcılar sekmesini seçerek Office 365 kullanıcı **görüntüleyebilirsiniz.**<br/>![Microsoft 365 - Microsoft Office 365 kullanıcı sayısıdır.](../../media/56fe2e54-76ad-49e5-886f-1344c2697258.png)
+Etkin kullanıcılar sekmesini seçerek Office 365 kullanıcı **görüntüleyebilirsiniz.**<br/>![Microsoft 365- Etkin Microsoft Office 365 sağlar.](../../media/56fe2e54-76ad-49e5-886f-1344c2697258.png)
 
 - Etkin Kullanıcılar raporu, son 7 gün, 30 gün, 90 gün veya 180 günlük eğilimler için görüntülenebilir. Bununla birlikte, raporda belirli bir günü görüntülersanız tablo geçerli tarihten (raporun oluşturulma tarihi değil) itibaren 28 güne kadar olan verileri gösterir.
 
@@ -58,10 +58,10 @@ Hizmetler etkinlik grafiğinde, X ekseni belirtilen dönemde kullanıcılarını
 
 - Göstergede bir öğe seçerek grafikte gördüğünüz seriyi filtrenin ekleyebilirsiniz. Bu seçim değiştirildiğinde kılavuz tablosundaki bilgiler değişmez.
 
-- Ayrıca, Dışarı Aktar bağlantısını seçerek rapor Excel .csv bir Excel .csv dışarı aktarabilirsiniz. Bu işlem tüm kullanıcıların verilerini dışarı aktarır ve daha fazla çözümleme yapmak için basit sıralama ve filtreleme işlemlerini kullanmanıza olanak tanır. 2000'den az kullanıcınız varsa, raporun kendi içindeki tabloda sıralama ve filtreleme yapabilirsiniz. 2000'den çok kullanıcınız varsa, filtrelemek ve sıralamak için verileri dışarı aktarmanız gerekir.
+- Ayrıca, Dışarı Aktar bağlantısını seçerek rapor Excel .csv bir çalışma dosyasına da aktarabilirsiniz. Bu işlem tüm kullanıcıların verilerini dışarı aktarır ve daha fazla çözümleme yapmak için basit sıralama ve filtreleme işlemlerini kullanmanıza olanak tanır. 2000'den az kullanıcınız varsa, raporun kendi içindeki tabloda sıralama ve filtreleme yapabilirsiniz. 2000'den çok kullanıcınız varsa, filtrelemek ve sıralamak için verileri dışarı aktarmanız gerekir.
 
 - Kılavuz tabloda hangi bilgilerin görüntüleneceğini sütun denetimleriyle değiştirebilirsiniz.
-21Vianet tarafından çalıştırılan bir aboneliğiniz varsa bunu Yammer.
+21Vianet tarafından çalıştırılan bir aboneliğiniz varsa bu, aboneliğinizin Yammer.
 
 
 

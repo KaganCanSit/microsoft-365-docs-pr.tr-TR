@@ -1,9 +1,9 @@
-- name: İş için Microsoft Defender (önizleme)
+- name: İş için Microsoft Defender
   href: index.yml
   items:
     - name: Genel bakış
       items:
-        - name: İş için Microsoft Defender (önizleme) nedir?
+        - name: İş için Microsoft Defender nedir?
           href: mdb-overview.md
         - name: Basitleştirilmiş yapılandırma işlemi
           href: mdb-simplified-configuration.md
@@ -13,7 +13,7 @@
           href: mdb-lighthouse-integration.md
     - name: Kullanmaya başlayın
       items:
-        - name: İş için Defender'ı (önizleme) al
+        - name: İş için Defender'ı al
           href: get-defender-business.md
         - name: Kurulum sihirbazını kullanma
           href: mdb-use-wizard.md
@@ -35,7 +35,7 @@
           href: mdb-email-notifications.md
         - name: 4. Adım - Cihazları ekleme
           href: mdb-onboard-devices.md
-        - name: 5. Adım - Güvenlik ayarlarınızı yapılandırma
+        - name: 5. Adım - Güvenlik ilkelerinizi yapılandırma
           href: mdb-configure-security-settings.md
     - name: Algılanan tehditleri görüntüleme ve yanıtlama
       items:
@@ -73,5 +73,7 @@
           href: mdb-faq.yml
         - name: Sorun giderme
           href: mdb-troubleshooting.yml
+        - name: Microsoft 365 Business Premium
+          href: /microsoft-365/business-premium
         - name: Microsoft 365 Lighthouse
           href: /microsoft-365/lighthouse/m365-lighthouse-overview

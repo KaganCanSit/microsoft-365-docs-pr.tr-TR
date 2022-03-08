@@ -14,16 +14,17 @@ ms.collection:
 - m365initiative-externalcollab
 ms.custom:
 - seo-marvel-apr2020
+- admindeeplinkSPO
 ms.localizationpriority: medium
 f1.keywords: NOCSH
 recommendations: false
 description: Konuklarla işbirliği Microsoft 365 bir siteyi ayarlamak için SharePoint yapılandırma adımları hakkında bilgi alın.
-ms.openlocfilehash: 64c325873514171c858ffa24637e57d2b94a93e9
-ms.sourcegitcommit: 6722f66915dfe30c3d0ade97b3e9080a9592251b
+ms.openlocfilehash: 7187149324f88c64570549429f86291320431566
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "62990625"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63318547"
 ---
 # <a name="collaborate-with-guests-in-a-site"></a>Bir sitede konuklarla işbirliği yapma
 
@@ -85,23 +86,23 @@ Kimliği doğrulanmamış dosya ve klasör paylaşımına izin vermek için Herk
 
 Kuruluş SharePoint paylaşım ayarlarını ayarlamak için
 
-1. Gezinti Microsoft 365 yönetim merkezi Yönetim merkezleri'nin altındaki Gezinti **Bölmesi'nde Yer'e** **SharePoint**.
-2. Gezinti SharePoint bölmesindeki İlkeler'in altında **Paylaşım'a** **tıklayın**.
+1. Gezinti Microsoft 365 yönetim merkezi, Yönetim merkezleri altında, Sol gezinti **bölmesindeKimlik'i SharePoint**.
+2. SharePoint yönetim merkezinde, sol gezinti bölmesinde, İlkeler'in **altında Paylaşım'ı** <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**seçin**</a>.
 3. Dış paylaşım için dış SharePoint Herkes veya Yeni **ve var olan** **konuklar olarak ayarlayın**.
-4. Değişiklikler yaptıysanız Kaydet'e **tıklayın**.
+4. Değişiklik yaptıysanız Kaydet'i **seçin**.
 
 ## <a name="create-a-site"></a>Site oluşturma
 
 Sonraki adım, konuklarla işbirliği yapmak için kullanmayı planlayın siteyi oluşturmaktır.
 
 Site oluşturmak için
-1. Yönetim merkezinde SharePoint altında Etkin **siteler'e tıklayın**.
-2. **Oluştur'a tıklayın**.
-3. Ekip **sitesi'ne tıklayın**.
+1. Yönetim merkezinde SharePoint altında Etkin <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a>.
+2. **Oluştur**’u seçin.
+3. Ekip **sitesi'ne seçin**.
 4. Bir site adı yazın ve Grup sahibi (site sahibi) için bir ad girin.
 5. Gelişmiş **ayarlar'ın** altında, bu sitenin genel mi yoksa özel site mi olacağını seçin.
-6. **İleri**'ye tıklayın.
-7. **Son**'a tıklayın.
+6. **İleri**'yi seçin.
+7. **Bitir'i** seçin.
 
 Kullanıcıları daha sonra davetacağız. Daha sonra, bu site için site düzeyinde paylaşım ayarlarını denetlemeniz önemlidir.
 
@@ -116,21 +117,22 @@ Duyarlılık etiketlerini, [site site sitelerinin dış paylaşım ayarlarını 
 ![Site dış SharePoint ayarlarının ekran görüntüsü.](../media/sharepoint-site-external-sharing-settings.png)
 
 Site düzeyinde paylaşım ayarlarını ayarlamak için
-1. Genel SharePoint, sol gezinti bölmesinde Siteler'i genişletin **ve Etkin** **siteler'e tıklayın**.
+1. Genel SharePoint, sol gezinti bölmesinde Siteler'i genişletin **ve Etkin** <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a>.
 2. Paylaşmak istediğiniz siteyi seçin.
-3. ... öğesini ve Paylaşım'ı **tıklatın**.
+3. ... öğesini ve ardından Paylaşım'ı **seçin**.
 4. Paylaşımın Herkes veya Yeni ve mevcut **konuklar** **olarak ayarlanmış olduğundan emin olmak**.
-5. Değişiklikler yaptıysanız Kaydet'e **tıklayın**.
+5. Değişiklik yaptıysanız Kaydet'i **seçin**.
 
 ## <a name="invite-users"></a>Kullanıcıları davet et
 
 Konuk paylaşım ayarları artık yapılandırılmıştır, böylece sitenize iç kullanıcıları ve konukları eklemeye başlayabilirsiniz. Site erişimi ilişkili Microsoft 365 Grubu aracılığıyla denetlenmektedir, dolayısıyla biz de kullanıcıları bu gruba ekliyoruz.
 
 Bir gruba iç kullanıcıları davet etmek için
+
 1. Kullanıcı eklemek istediğiniz siteye gidin.
-2. Sağ **üstteki** Üye sayısına göre Üyeler bağlantısına tıklayın.
-3. Üye **ekle'ye tıklayın**.
-4. Siteye davet etmek istediğiniz kullanıcıların adlarını veya e-posta adreslerini yazın ve Ardından Kaydet'e **tıklayın**.
+2. Sağ **üst** köşede üye sayısını ifadeen Üyeler bağlantısı'ı seçin.
+3. Üye **ekle'yi seçin**.
+4. Siteye davet etmek istediğiniz kullanıcıların adlarını veya e-posta adreslerini yazın ve ardından Kaydet'i **seçin**.
 
 Konuklar bu siteden eklenmiştir. Bunları, Bir Veri Ekle'yi kullanarak Web üzerinde Outlook. Bu nedenle, konukları gruba eklemek ve davet etmek için önkoşul olarak **URL sütununda sitenin URL'sini**  tıklatın ve siteye özgü sayfaya gidin. Bu sayfada Uygulama başlatıcı **simgesine tıklayın ve** Başlatıcı'yı **Outlook**. Bu, aşağıda açıklanan yordamın açıklandığı bir gruba konuk davet edebilirsiniz.
 

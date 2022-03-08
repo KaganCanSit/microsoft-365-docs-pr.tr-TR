@@ -15,12 +15,12 @@ ms.collection:
 ms.custom: AdminSurgePortfolio
 search.appverid: MET150
 description: Virüslerin Microsoft Defender Virüsten Koruma, kötü amaçlı yazılımlar Windows yazılımlara ve casus yazılımlar gibi yazılım tehditlerine karşı nasıl korumaları olduğunu öğrenin.
-ms.openlocfilehash: 969cd707e40c9c7f665089cc1b9b6ddd45583982
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: c11ce9a2f38f1ecb7f47cd5b74e710d92c8ffbe0
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984476"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63325663"
 ---
 # <a name="threats-detected-by-microsoft-defender-antivirus"></a>Güvenlik tarafından algılanan Microsoft Defender Virüsten Koruma
 
@@ -83,7 +83,7 @@ Farklı tehditlerle ilgili daha fazla bilgi edinmek Microsoft Güvenlik Zekası 
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Mobil cihazların Windows 10 güvenlidir](/misc/secure-windows-10-devices.md) (makale)\
+[Mobil cihazların Windows güvenlidir](/misc/m365bp-secure-windows-devices) (makale)\
 [Microsoft Defender Virüsten Koruma](/windows/security/threat-protection/microsoft-defender-antivirus/evaluate-microsoft-defender-antivirus) (makale)\
 [Gerçek zamanlı ve buluta teslim edilen virüsten korumayı](/mem/intune/user-help/turn-on-defender-windows#turn-on-real-time-and-cloud-delivered-protection) açma (makale)\
 [Microsoft Defender Virüsten Koruma uygulamasından Windows Güvenliği ve kullanma](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-security-center-antivirus) (makale)\

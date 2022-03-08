@@ -9,12 +9,12 @@ ms.collection: M365-modern-desktop
 ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: 597d2b4dac5dde464688e545d8ccd1e39e33bee2
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: 65056fc913b88ce0594c9a8b1a89bd2e92b221af
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016518"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326811"
 ---
 # <a name="enable-enterprise-state-roaming"></a>Durum Enterprise'i etkinleştirme
 
@@ -34,6 +34,6 @@ Enterprise Dolaşım, Microsoft Yönetilen Masaüstü hizmeti için kullanıcıl
 3. [Lisans atama](assign-licenses.md).
 4. [Dağıtım Intune Şirket Portalı](company-portal.md).
 5. Dolaşım Enterprise Etkinleştir (bu konu).
-6. [Cihazları ayarlayın](set-up-devices.md).
+6. [Cihazları hazırlayın](prepare-devices.md).
 7. [Kullanıcılarınızı cihazları kullanmaya hazır hale hazırlayın](get-started-devices.md).
 8. [Uygulamaları dağıtın](deploy-apps.md).

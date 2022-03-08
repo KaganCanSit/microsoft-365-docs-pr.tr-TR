@@ -16,17 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP) için Microsoft 365 Lighthouse hizmet durumunu görüntülemeyi öğrenin.
-ms.openlocfilehash: b7361865e0ad3f070e128207a92669f3515e9969
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: 21315d0ea616fcd2865879d9d8aec66b17830208
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63027530"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324613"
 ---
 # <a name="view-tenant-service-health"></a>Kiracı hizmet durumunu görüntüleme
-
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
 
 Aynı kiracıda, yönetmekte olduğu kiracıların hizmet durumunu Microsoft 365 Lighthouse. Hizmet durumu; Microsoft Intune, Azure Active Directory (Azure AD) kimlik hizmetleri ve mobil cihaz yönetimi (MDM) bulut hizmetleri gibi çeşitli hizmetlere yönelik olayları ve tavsiyeleri içerir. Ayrıca, yönetilen kiracılardan kaç tanenizin olaylardan etkilendiğini de görebilirsiniz. Örneğin, kiracılardan biri sorun yaşıyorsa, Hizmet durumu sayfasını kontrol edip bunun çözüm için devam eden bilinen bir sorun mu yoksa yakın zamanda yapılan bir değişikliğin onları etki edip e-postayla ilgili bir sorun olup olmadığını öğrenebilirsiniz. Bu, sorun giderme ve destek aramalarını azaltma zamandan tasarruf sağlar.
 
@@ -60,7 +57,8 @@ Hizmet durumunu görüntülemek için, iş ortağı kiracısında şu özellik k
 
 4. Sorun ayrıntıları bölmesinde, sorun türü, etkilenen kiracılar, kullanıcı etkisi ve sorun geçmişi gibi ayrıntılı bilgileri gözden geçirebilirsiniz.
 
-Kiracı **etkilenenler sekmesinde** , etkilenen kiracıların listesini ortak ayrılmış değerler (.cvs) dosyasına aktararak destek ekipleriyle paylaşabilirsiniz.
+Kiracı **etkilenenler sekmesinde** , etkilenen kiracıların listesini bir virgülle ayrılmış değerler (.csv) dosyasına aktarabilir ve böylelikle bu dosyayı destek ekipleriyle paylaşabilirsiniz.
 
 ## <a name="related-content"></a>İlgili içerik
-[Hizmet durumunu denetleme Microsoft 365](/microsoft-365/enterprise/view-service-health) (makale)
+[Hizmet durumunu denetleme Microsoft 365](/microsoft-365/enterprise/view-service-health) (makale)\
+[E-Microsoft 365 Lighthouse](m365-lighthouse-known-issues.md) bilinen sorunlar (makale)

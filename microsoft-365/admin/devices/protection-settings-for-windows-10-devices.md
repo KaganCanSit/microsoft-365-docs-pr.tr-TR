@@ -1,13 +1,11 @@
 ---
 title: Mobil cihazlarınız için uygulama koruma Windows 10 ayarlama
-f1.keywords:
-- NOCSH
 ms.author: sharik
 author: skjerland
 manager: scotv
 audience: Admin
 ms.topic: article
-f1_keywords:
+f1.keywords:
 - Win10AppPolicy
 - O365E_Win10AppPolicy
 - BCS365_Win10AppPolicy
@@ -30,16 +28,19 @@ search.appverid:
 - MOE150
 ms.assetid: 02e74022-44af-414b-9d74-0ebf5c2197f0
 description: Uygulama yönetimi ilkelerini oluşturma ve düzenleme ve kullanıcılarının kişisel cihazlarında iş dosyalarını koruma Windows 10 öğrenin.
-ms.openlocfilehash: 6370f2c21ce9f8de1223d5445c87abf197c0cf89
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 3a565586be4d0dfec308b2dad3b068e01774b161
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984118"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313797"
 ---
 # <a name="set-or-edit-application-protection-settings-for-windows-10-devices"></a>Cihazlar için uygulama koruma ayarlarını Windows 10 düzenleme
 
 Bu makale diğer Microsoft 365 İş Ekstra.
+
+> [!NOTE]
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Bu teklif, cihazlar için ek güvenlik özellikleri sağlar. [İş için Defender hakkında daha fazla bilgi öğrenin](../../security/defender-business/mdb-overview.md).
 
 ## <a name="edit-an-app-management-policy-for-windows-10"></a>E-Windows 10 için uygulama yönetimi Windows 10
 
@@ -72,3 +73,7 @@ Kullanıcılarınızın işle ilgili görevleri gerçekleştirdikleri kişisel W
   
 11. Next decide **Who will get these settings?** If you don't want to use the default **All Users** security group, choose **Change**, choose the security groups who will get these settings \> **Select**.
 12. Son olarak, **Ekle**'yi seçerek ilkeyi kaydedin ve cihazlarınıza atayın.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](../security-and-compliance/secure-your-business-data.md)

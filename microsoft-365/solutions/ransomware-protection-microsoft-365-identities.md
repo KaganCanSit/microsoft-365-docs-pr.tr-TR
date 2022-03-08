@@ -1,9 +1,9 @@
 ---
 title: Adım 3. Kimlikleri koruma
-author: JoeDavies-MSFT
+author: dansimp
 f1.keywords:
 - NOCSH
-ms.author: josephd
+ms.author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: article
@@ -17,12 +17,12 @@ ms.collection:
 ms.custom: seo-marvel-jun2020
 keywords: fidye yazılımı, insan tarafından işletilen fidye yazılımı, insan tarafından işletilen fidye yazılımı, HumOR, extortion saldırısı, fidye yazılımı saldırı, şifreleme, cryptovirology, sıfır güven
 description: Kullanıcı kaynaklarınızı fidye yazılımı saldırılarından korumak için güvenli oturum açma Microsoft 365 Koşullu Erişim'i kullanın.
-ms.openlocfilehash: 57fad156a4e7b97d3029c224059041d692224ed2
-ms.sourcegitcommit: 23a90ed17cddf3b0db8d4084c8424f0fabd7b1de
+ms.openlocfilehash: 548e0649d7180ef39f693049210a91c1e0dce312
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63015444"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320235"
 ---
 # <a name="step-3-protect-identities"></a>Adım 3. Kimlikleri koruma
 

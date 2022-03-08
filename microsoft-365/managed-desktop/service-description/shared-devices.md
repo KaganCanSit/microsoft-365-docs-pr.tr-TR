@@ -9,12 +9,12 @@ ms.localizationpriority: normal
 ms.collection: M365-modern-desktop
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: 3682087e47db062240b001e8631f73ae8cbc1cda
-ms.sourcegitcommit: 966344e1aa442a4d10a0fb05f56badd38c833bb2
+ms.openlocfilehash: 45729a40ecab2548b3125559ac3a971e5134f190
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2022
-ms.locfileid: "63015561"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320809"
 ---
 # <a name="shared-devices"></a>Paylaşılan cihazlar
 
@@ -49,12 +49,12 @@ Paylaşılan cihaz modu şu durumlarda iyi bir tercih değildir:
 
 İster siz ister bir iş ortağının kaydı işlemektedir, paylaşılan cihaz modunu kullanmayı seçebilirsiniz.
 
-Cihazları kendiniz kaydedıyorsanız, Yeni cihazları kendiniz kaydetme'de adımları [](../get-started/register-devices-self.md)izleyin ve ardından bunları Modern Çalışma Alanı Cihazları **- Paylaşılan** Cihaz Modu grubuna ekleyin.
+Cihazları kendiniz kaydedıyorsanız, El ile kayıt'daki adımları izleyin [](../get-started/manual-registration.md)ve ardından bunları Modern Çalışma Alanı Cihazları **- Paylaşılan Cihaz Modu grubuna** ekleyin.
 
 > [!WARNING]
 > Var olan Microsoft Yönetilen Masaüstü cihazlarını yalnızca bu gruba ekleyerek paylaşılan cihaz moduna dönüştürmeye çalışmayın. Uygulanan ilkeler, olası OneDrive kalıcı olarak kaybolabilir.
 
-Cihazları iş ortağı kaydı için aldıysanız, aşağıdaki tabloda gösterildiği gibi İş Ortakları için Adımlar'da cihazları [kaydetme ama](../get-started/register-devices-partner.md) grup etiketinin sonuna **-Paylaşılan** ekleme'de yer alan adımları izleyin:
+Cihazları iş ortağı kaydı için aldıysanız, aşağıdaki tabloda gösterildiği gibi İş [](../get-started/partner-registration.md)ortağı kaydı ama **-Shared'ın** grup etiketine eklemesi adımlarını izleyin:
 
 | Cihaz profili | AutoPilot grup etiketi (standart mod) | Grup etiketi (paylaşılan cihaz modu) |
 | ----- | ----- | ----- |
@@ -125,7 +125,7 @@ Microsoft Yönetilen Masaüstü paylaşılan Şirket Portalı modundaki cihazlar
 > [!CAUTION]
 > Şirket Portalı uygulamaları, cihaz gruplarına atanan uygulamaları kullanılabilir olarak desteklemez.
 
-### <a name="redeployment-of-microsoft-365-apps-for-enterprise"></a>Kurumlar için Microsoft 365 Uygulamaları'in yeniden Kurumlar için Microsoft 365 Uygulamaları
+### <a name="redeployment-of-microsoft-365-apps-for-enterprise"></a>Microsoft 365 Uygulamaları için Microsoft 365 Uygulamaları yeniden Enterprise
 
 Genel önizleme sırasında, Microsoft 365 Uygulamaları yeniden dağıtılması gerekirse, kullanıcıların aracı yüklemesini ve bu cihaza yüklemesini Kurumlar için Microsoft 365 Uygulamaları için yerel destek personeliyle iletişime geçleri gerekir.
 

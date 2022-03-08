@@ -17,12 +17,12 @@ ms.custom:
 description: Yöneticiler, EOP'de (EOP) gelen iletilere izin vermek için kullanılabilen ve tercih Exchange Online Protection bilgi edinebilirsiniz.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 6c1aa754790ccf0787a7ee79b0add0d7f5e17ca7
-ms.sourcegitcommit: c11d4a2b9cb891ba22e16a96cb9d6389f6482459
+ms.openlocfilehash: 3c12511a3e5b4011765f744e714086cbb7924c7b
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62996463"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63317115"
 ---
 # <a name="create-safe-sender-lists-in-eop"></a>EOP'de güvenilir gönderen listeleri oluşturma
 
@@ -46,13 +46,13 @@ Posta akış kuralları, yalnızca doğru iletilere izin verilirken en fazla esn
 
 > [!IMPORTANT]
 >
-> - Kötü amaçlı yazılım veya yüksek güvenli kimlik avı olarak tanımlanan iletiler, güvenli gönderen listesi seçeneği ne olursa olsun her zaman karantinaya alınır.
+> - Kötü amaçlı yazılım veya yüksek güvenli kimlik avı olarak tanımlanan iletiler, güvenli gönderen listesi seçeneği ne olursa olsun her zaman karantinaya alınır. Daha fazla bilgi için bu [bağlantıda varsayılan olarak güvenli Office 365](secure-by-default.md).
 >
-> - Güvenilir gönderen listelerini kullanarak *istenmeyen posta* filtrelemeyle ilgili özel durumları yakından takip etmek için dikkatli olun.
+> - Güvenilir gönderen listelerini kullanarak _istenmeyen posta_ filtrelemeyle ilgili özel durumları yakından takip etmek için dikkatli olun.
 >
 > - Hatalı pozitif sonuçlarla (iyi e-posta kötü işaretlenmiştir) yardımcı olması için güvenilir gönderen listelerini kullanabilirsiniz, ancak mümkünse kaçınılması gereken geçici bir çözüm olarak güvenilir gönderen listelerini kullanmayı göz önünde bulundurabilirsiniz. Güvenilir gönderen listelerini kullanarak hatalı pozitif sonuçlar yönetimi önerilmez, çünkü istenmeyen posta filtreleme özel durumları nedeniyle kuruluş kimlik sahtesi ve diğer saldırılara açık olabilir. Hatalı pozitif sonuçlar yönetmek için güvenilir gönderen listelerini kullanmayı merak ediyorsanız, bu konuda bilgili olmalı ve İletileri ve dosyaları [Microsoft'a](report-junk-email-messages-to-microsoft.md) bildirme konusunu hazır tutmanız gerekir.
 >
-> - Etki alanının kimliği doğrulanmamış e-posta göndermesine izin vermek (kimlik kimlik doğrulaması korumasını atlama) ancak istenmeyen posta önleme ve kötü amaçlı yazılımdan koruma denetimlerini atlamama [](learn-about-spoof-intelligence.md) izin vermek için kimliksiz kimlik doğrulaması içgörüsini ve Kiracı İzin Ver/Engelleme Listesi'ne göz [atabilirsiniz](tenant-allow-block-list.md).
+> - Etki alanının kimliği doğrulanmamış e-posta göndermesine izin vermek (kimlik kimlik doğrulaması korumasını atlama) ancak istenmeyen posta önlemeyi ve diğer korumaları atlamasını engellemek için kimliksiz kimlik doğrulaması içgörüsini ve Kiracı İzin Ver/Engelleme Listesi'i [kullanabilirsiniz](tenant-allow-block-list.md).[](learn-about-spoof-intelligence.md)
 >
 > - EOP ve Outlook, iletinin göndereni belirlemek için farklı ileti özelliklerini inceler. Daha fazla bilgi için, bu [makalenin devam bölümündeki Toplu e-posta için](#considerations-for-bulk-email) dikkate alınacak noktalar bölümüne bakın.
 >
@@ -82,7 +82,7 @@ Aşağıdaki örnekte, istenmeyen posta filtrelemeyi atlamak için e-contoso.com
 
    > [!IMPORTANT]
    >
-   > - Hiçbir zaman posta akışı kurallarını, istenmeyen *posta* filtrelemeyi atlama koşulu olarak yalnızca gönderen etki alanıyla yapılandırma. Bunu yapmak *,* saldırganların gönderen etki alanını kimlik doğrulaması yapma (veya tam e-posta adresinin kimliğine bürünme), tüm istenmeyen posta filtrelemelerini atlama ve iletinin alıcının Gelen Kutusu'na ulaşabilmesi için gönderen kimlik doğrulamasını atlama olasılığını önemli ölçüde artırır.
+   > - Hiçbir zaman posta akışı kurallarını, istenmeyen _posta_ filtrelemeyi atlama koşulu olarak yalnızca gönderen etki alanıyla yapılandırma. Bunu yapmak _,_ saldırganların gönderen etki alanını kimlik doğrulaması yapma (veya tam e-posta adresinin kimliğine bürünme), tüm istenmeyen posta filtrelemelerini atlama ve iletinin alıcının Gelen Kutusu'na ulaşabilmesi için gönderen kimlik doğrulamasını atlama olasılığını önemli ölçüde artırır.
    >
    > - Sahip olduğunuz etki alanlarını (kabul edilen etki alanları olarak da bilinir) veya popüler etki alanlarını (örneğin, microsoft.com) posta akış kurallarında koşullar olarak kullanmayın. Bunu yapmak yüksek risk kabul edilir çünkü saldırganların e-posta gönderme fırsatları oluşturur ve aksi halde filtrelenmiş olur.
    >
@@ -126,7 +126,7 @@ Daha önce açıklandığı gibi posta akışı kurallarını kullanasanız, bir
 
 ## <a name="use-allowed-sender-lists-or-allowed-domain-lists"></a>İzin verilen gönderenler listelerini veya izin verilen etki alanı listelerini kullanma
 
-İstenmeyen posta önleme ilkesinde izin verilen gönderenler listesini veya izin verilen etki alanı listesini kullanmak en az tercih edilen seçenektir. Gönderenler tüm *istenmeyen postayı* , kimlik sahtesini ve kimlik avı korumasını ve gönderen kimlik doğrulamasını (SPF, DKIM, DMARC) atlayarak mümkünse bu seçeneği engellemeniz gerekir. Bu yöntem, yalnızca geçici test için en iyi yöntemdir. Ayrıntılı adımlar, [EOP'de istenmeyen posta ilkelerini yapılandırma başlığında](configure-your-spam-filter-policies.md) bulunabilir.
+İstenmeyen posta önleme ilkesinde izin verilen gönderenler listesini veya izin verilen etki alanı listesini kullanmak en az tercih edilen seçenektir. Gönderenler tüm _istenmeyen postayı_ , kimlik sahtesini ve kimlik avı korumasını ve gönderen kimlik doğrulamasını (SPF, DKIM, DMARC) atlayarak mümkünse bu seçeneği engellemeniz gerekir. Bu yöntem, yalnızca geçici test için en iyi yöntemdir. Ayrıntılı adımlar, [EOP'de istenmeyen posta ilkelerini yapılandırma başlığında](configure-your-spam-filter-policies.md) bulunabilir.
 
 Bu listeler için en yüksek sınır yaklaşık 1000 girdidir; Ancak portala yalnızca 30 giriş girebilirsiniz. PowerShell kullanarak 30'dan fazla giriş eklemeniz gerekir.
 
@@ -138,7 +138,7 @@ Bu listeler için en yüksek sınır yaklaşık 1000 girdidir; Ancak portala yal
 
 ## <a name="considerations-for-bulk-email"></a>Toplu e-posta için dikkate alınacak noktalar
 
-Standart SMTP e-posta iletisi, ileti *zarfı ve ileti* içeriğilerinden oluşur. İleti zarfı, iletiyi SMTP sunucuları arasında ileterek teslim etmek için gereken bilgileri içerir. İleti içeriği, ileti üst bilgisi alanlarını (toplu olarak *ileti üst bilgisi* denir) ve ileti gövdeyi içerir. İleti zarfı RFC 5321'de ve ileti üst bilgisi de RFC 5322'de açıklanmıştır. alıcılar hiçbir zaman gerçek ileti zarfını görmez, çünkü ileti iletim süreci tarafından oluşturulur ve aslında iletinin bir parçası değildir.
+Standart SMTP e-posta iletisi, ileti _zarfı ve ileti_ içeriğilerinden oluşur. İleti zarfı, iletiyi SMTP sunucuları arasında ileterek teslim etmek için gereken bilgileri içerir. İleti içeriği, ileti üst bilgisi alanlarını (toplu olarak _ileti üst bilgisi_ denir) ve ileti gövdeyi içerir. İleti zarfı RFC 5321'de ve ileti üst bilgisi de RFC 5322'de açıklanmıştır. alıcılar hiçbir zaman gerçek ileti zarfını görmez, çünkü ileti iletim süreci tarafından oluşturulur ve aslında iletinin bir parçası değildir.
 
 - Adres `5321.MailFrom` (MAIL **FROM** adresi, P1 göndereni veya zarf gönderen olarak da bilinir), iletinin SMTP iletiminde kullanılan e-posta adresidir. Bu **e-posta** adresi normalde ileti üst bilgisinde Dönüş Yolu üst bilgi alanına kaydedilir (ancak gönderen farklı bir **Dönüş Yolu e-posta** adresi ataması mümkündür). İleti teslim edilene kadar teslim edileme raporunun (NDR veya geri dönen ileti olarak da bilinir) alıcısı olur.
 - Gönderen `5322.From` adresi veya P2 göndereni olarak da bilinir), Gönderen üst bilgisi alanında yer alan e-posta adresidir ve e-posta istemcisinde görüntülenen gönderenin e-posta adresidir. 

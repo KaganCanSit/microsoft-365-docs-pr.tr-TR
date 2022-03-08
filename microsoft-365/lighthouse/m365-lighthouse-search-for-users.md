@@ -16,17 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse, kullanıcı arama yapmayı öğrenin.
-ms.openlocfilehash: 05ac38ef684adbefd0d08756b8ce5006c5c65aa2
-ms.sourcegitcommit: efb333ce0772265da91632110acba39acfbe0bde
+ms.openlocfilehash: 26f259295eaa3cc89309de78b6aea3700a492961
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "62997095"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315099"
 ---
 # <a name="search-for-users"></a>Kullanıcı arama
-
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
 
 Microsoft 365 Lighthouse, tüm etkin kiracılarda belirli bir kullanıcıyı aramanızı sağlar. Bu sayede, farklı kiracılarda gezinmek zorunda kalmadan bir kullanıcıyı hızla bulabilirsiniz.
 

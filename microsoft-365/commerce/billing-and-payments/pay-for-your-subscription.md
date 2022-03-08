@@ -2,8 +2,8 @@
 title: Aboneliğiniz için ödeme
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: jkinma, jmueller
 audience: Admin
@@ -14,21 +14,21 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 search.appverid: MET150
-description: İş aboneliğinizin ödemesini yapmak için kredi kartı veya banka Microsoft 365 kullanın ya da bazı durumlarda faturayla ödeme yapmak için kullanabilirsiniz.
+description: Microsoft 365 İş aboneliğinizin ödemesini yapmak için kredi kartı veya banka hesabı kullanın ya da bazı durumlarda faturayla ödeme yapmak gerekir.
 ms.custom:
+- commerce_billing
 - okr_SMB
 - fwlink 808700 for SEPA UI glink 906 for older uI
 - AdminSurgePortfolio
-- commerce_billing
 - business_assist
 - AdminTemplateSet
 ms.date: 10/28/2021
-ms.openlocfilehash: 839c7e94a2a89b20eef0779f44d864d69ed3a746
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: fb6948c59505eaa3316dab73708658f7b31c43e7
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011975"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326307"
 ---
 # <a name="how-to-pay-for-your-subscription"></a>Aboneliğiniz için ödeme
 

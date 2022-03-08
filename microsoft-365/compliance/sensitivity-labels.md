@@ -22,12 +22,12 @@ description: Hassas içeriği sınıflandırmak ve korumak Microsoft Bilgi Korum
 ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
-ms.openlocfilehash: 9c1eb0e7ba8f1c9388dd61f5e3433e47f9cd0cf4
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 1c7ec0f9411d767e588e391eb7eb94ec95a219fb
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63033336"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312215"
 ---
 # <a name="learn-about-sensitivity-labels"></a>Duyarlılık etiketleri hakkında bilgi edinin
 
@@ -104,11 +104,13 @@ Bir e-postaya veya belgeye duyarlılık etiketi uygulandıktan sonra, bu etiket 
     
     ![Belgeye uygulanan filigran ve üst bilgi.](../media/Sensitivity-label-watermark-header.png)
     
+    Dinamik işaretler, değişkenler kullanılarak da de kullanılabilir. Örneğin, üst bilgi, alt bilgi veya filigrana etiket adını veya belge adını ekleyin. Daha fazla bilgi için bkz [. Değişkenlerle dinamik işaretler](sensitivity-labels-office-apps.md#dynamic-markings-with-variables).
+    
     İçerik işaretleri uygulandığında denetlemeniz mi gerekiyor? Bkz[. Office uygulamaları içerik işaretleme ve şifreleme uygulamaz](sensitivity-labels-office-apps.md#when-office-apps-apply-content-marking-and-encryption).
     
-    Tüm uygulamalar, değişkenler kullanarak dinamik işaretlemeleri destekler, ancak bazıları desteklemez. Örneğin, üst bilgi, alt bilgi veya filigrana etiket adını veya belge adını ekleyin. Daha fazla bilgi için bkz [. Değişkenlerle dinamik işaretler](sensitivity-labels-office-apps.md#dynamic-markings-with-variables).
+    Belirli belgeleri temel alan şablonlarınız veya iş akışlarınız varsa, etiketi kullanıcılara açık hale gelmeden önce bu belgeleri seçtiğiniz içerik işaretleriyle test edin. Dikkat etmek gereken bazı dize uzunluğu kısıtlamaları:
     
-    Dize uzunluğu: Filigranlar 255 karakterle sınırlıdır. Üstbilgi ve altbilgiler, üstbilgiler ve altbilgiler hariç 1024 Excel. Excel üst bilgi ve alt bilgiler için toplam 255 karakter sınırlaması vardır, ancak bu sınır, biçimlendirme kodları gibi görünür olmayan karakterleri içerir. Sınıra ulaşıldısa, bu sınıra girersiniz dizesi Excel.
+    Filigranlar 255 karakterle sınırlıdır. Üstbilgi ve altbilgiler, üstbilgiler ve altbilgiler hariç 1024 Excel. Excel üst bilgi ve alt bilgiler için toplam 255 karakter sınırlaması vardır, ancak bu sınır, biçimlendirme kodları gibi görünür olmayan karakterleri içerir. Sınıra ulaşıldısa, bu sınıra girersiniz dizesi Excel.
 
 - **Duyarlılık etiketlerini Microsoft Teams**, site grupları ve diğer sitelerle kullanma özelliğini etkinleştirirken, Microsoft 365 ve grup gibi [SharePoint koruyun](sensitivity-labels-teams-groups-sites.md).
     
@@ -119,6 +121,8 @@ Bir e-postaya veya belgeye duyarlılık etiketi uygulandıktan sonra, bu etiket 
     ![Gerekli etiketin atanma istemi.](../media/Sensitivity-label-Prompt-for-required-label.png)
     
     Bir duyarlılık etiketi 2012 veya daha fazla duyarlılık etiketi 2012'yi düzenlerken dosya ve **e-posta** ayarlarını otomatik olarak etiketleme hakkında daha fazla bilgi için bkz. Office için içeriğe otomatik olarak duyarlılık etiketi uygulama ve [Azure Purview'da](/azure/purview/create-sensitivity-label) etiketleme.[](apply-sensitivity-label-automatically.md)
+
+- **Site ve tek tek belgeler için** SharePoint bağlantı türünü ayarlayın. Kullanıcıların aşırı paylaşımını önlemeye yardımcı olmak için, [](sensitivity-labels-default-sharing-link.md) kullanıcılar belge paylaşımından veya belge paylaşımından veya belge paylaşımından SharePoint ve OneDrive.
 
 ### <a name="label-scopes"></a>Etiket kapsamları
 
@@ -237,30 +241,16 @@ Kullanıcı veya grup için beklediğiniz etiket veya etiket ilkesi ayar davran�
 
 ## <a name="sensitivity-labels-and-azure-information-protection"></a>Duyarlılık etiketleri ve Azure Information Protection
 
-Windows bilgisayarlarında Microsoft 365 Uygulamaları etiketlerini kullanırken, Office uygulamalarına veya [Azure Information Protection](/azure/information-protection/rms-client/aip-clientv2) istemcisine yerleşik olarak yer alan etiketlemeyi kullanabilirsiniz.
+Windows, macOS, iOS ve Android Microsoft 365 Uygulamaları'de yerleşik olarak yer alan duyarlılık etiketleri, kullanıcılara tutarlı bir etiketleme deneyimi sunmak için bu cihazlar arasında çok benzer bir görünümde çalışır. Bununla birlikte, Windows bilgisayarlarda Azure [Information Protection (AIP) istemcisini de kullanabilirsiniz](/azure/information-protection/rms-client/aip-clientv2). Bu istemci artık [bakım modundadır](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/announcing-aip-unified-labeling-client-maintenance-mode-and/ba-p/3043613).
 
-Yerleşik etiketler Azure Information Protection istemcisi tarafından Office bir eklenti kullanmamalarının nedeni, daha fazla kararlılık ve daha iyi performanstan yararlanmalarıdır. Ayrıca, gelişmiş sınıflayıcılar gibi en son özellikleri de desteklerler.
-
-Varsayılan olarak, Azure Information Protection istemcisi yüklü olduğunda bu uygulamalarda yerleşik etiketleme kapalıdır. Bu varsayılan davranışı değiştirmek ve Office uygulamalarınız için yerleşik etiketleri kullanmak için bkz. Office Yerleşik etiketleme istemcisini ve [Azure Information Protection istemcisini kullanma](sensitivity-labels-office-apps.md#office-built-in-labeling-client-and-the-azure-information-protection-client).
-
-Azure Information Protection istemcisini Office uygulamalarına bağlı ancak devre dışı bırakarak Azure Information Protection istemcisini duyarlılık etiketleriyle kullanma avantajından yararlanabilirsiniz:
-
-- Şirket içinde depolanan hassas bilgileri keşfeden ve isteğe bağlı olarak bu içeriği etiketleyen bir tarayıcı
-
-- Kullanıcıların tüm dosya türlerine etiket uygulayabilecekleri Dosya Gezgini'nde sağ tıklatma seçenekleri
-
-- Metin, resim veya PDF belgelerinin şifrelenmiş dosyalarını görüntüleyen bir görüntüleyici
-
-- Şirket içi dosyalarda hassas bilgileri bulmak ve bu dosyalarda etiketler ve şifrelemeler uygulamak veya kaldırmak için bir PowerShell modülü.
-
-Azure Information Protection'ı yeni başladıysanız bkz[. Azure Information Protection belgelerinden](/azure/information-protection/rms-client/use-client#choose-your-windows-labeling-solution) Windows etiketlerin etiket çözümünü seçme.
+AIP istemcisini kullanıyorsanız, Office uygulamaları için AIP eklentisinde neden [MIP](sensitivity-labels-aip.md) yerleşik etiketleme'yi seçerek Office bilgisayarlarına uygun etiket tercihlerinizi Windows öğrenin.
 
 ### <a name="azure-information-protection-labels"></a>Azure Information Protection etiketleri
 
 > [!NOTE]
 > Azure portalında Azure Information Protection etiketleri için etiket yönetimi **31 Mart 2021'de kullanım dışıdır**. Resmi kullanımdan kullanımdan [kullanımdan kullanımdandan daha fazla bilgi için:](https://techcommunity.microsoft.com/t5/azure-information-protection/announcing-timelines-for-sunsetting-label-management-in-the/ba-p/1226179)
 
-Kiracınız henüz birleşik etiketleme platformunda [değilse, duyarlılık](/azure/information-protection/faqs#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform) etiketlerini kullanamadan önce birleşik etiketlemeyi etkinleştirmeniz gerekir. Yönergeler için bkz [. Azure Information Protection etiketlerini birleştirilmiş duyarlılık etiketlerine geçirme](/azure/information-protection/configure-policy-migrate-labels). 
+Kiracınız henüz birleşik etiketleme platformunda [değilse, duyarlılık](/azure/information-protection/faqs#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform) etiketlerini kullanamadan önce birleşik etiketlemeyi etkinleştirmeniz gerekir. Yönergeler için bkz [. Azure Information Protection etiketlerini birleştirilmiş duyarlılık etiketlerine geçirme](/azure/information-protection/configure-policy-migrate-labels).
 
 ## <a name="sensitivity-labels-and-the-microsoft-information-protection-sdk"></a>Duyarlılık etiketleri ve Microsoft Bilgi Koruması SDK
 

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender İş & (önizleme)'de Threat & Güvenlik Açığı Yönetimi panoyu görüntüleme
+title: microsoft Defender for Business& da Threat & Vulnerability Management panosu görüntüleme
 description: Tehdit tehditini, & üzerinde & öğeleri görmek & Tehdit Güvenlik Açığı Yönetimi panosunda kullanın.
 search.appverid: MET150
 author: denisebmsft
@@ -17,24 +17,26 @@ ms.collection:
 - SMB
 - M365-security-compliance
 ms.custom: intro-get-started
-ms.openlocfilehash: abc50e2e37f8884bbca043320de0ad02c310f41a
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: 013617f9fb1982a110fcc31dab709e8b95c77c00
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63016717"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313013"
 ---
-# <a name="use-your-threat--vulnerability-management-dashboard-in-microsoft-defender-for-business-preview"></a>Microsoft Defender İş & (önizleme) 'de Threat & Vulnerability Management panosun kullanın
+# <a name="use-your-threat--vulnerability-management-dashboard-in-microsoft-defender-for-business"></a>microsoft Defender for Business& da Threat & Güvenlik Açığı Yönetimi panoyu kullanma
 
 > [!IMPORTANT]
-> İş için Microsoft Defender şu anda önizlemede ve istekte etmek için buraya kaydolan müşterilere ve IT [İş Ortaklarına aşamalı](https://aka.ms/mdb-preview) olarak aşamalı olarak aşamalı olarak sunulmaktadır. Önümüzdeki haftalarda bir ilk müşteri ve iş ortağı kümesi sunuyoruz ve genel kullanılabilirlik durumuna kadar önizlemeyi genişleteceğiz. Önizlemenin bir dizi ilk [senaryoyla başlat olacağını](mdb-tutorials.md#try-these-preview-scenarios) ve düzenli olarak özellikler ekley olacacaz.
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-İş için Microsoft Defender (önizleme), güvenlik ekibinin zaman ve çabasını & bir Tehdit Güvenlik Açığı Yönetimi panosu içerir. Açığa çıkacak puanı sağlamanın yanı sıra, açık cihazlar ve güvenlik önerileriyle ilgili bilgileri de görüntüebilirsiniz. Threat & Güvenlik Açığı Yönetimi panoyu kullanarak:
+İş için Microsoft Defender, güvenlik & zaman ve çabanızı kaydetmek üzere tasarlanmış bir Tehdit Güvenlik Açığı Yönetimi panosu içerir. Açığa çıkacak puanı sağlamanın yanı sıra, açık cihazlar ve güvenlik önerileriyle ilgili bilgileri de görüntüebilirsiniz. Threat & Güvenlik Açığı Yönetimi panoyu kullanarak:
 
 - Kuruluş cihazlarıyla ilişkilendirilmiş olan pozlama puanınızı görüntüleme
+
 - Cihazlarla iletişimi olumsuzlama, güvenlik duvarı korumasını açma veya güvenlik duvarı tanımlarını güncelleştirme gibi en önemli güvenlik Microsoft Defender Virüsten Koruma görüntüleme
+
 - Karantinaya gönderilmiş dosyalar veya cihazlarda bulunan güvenlik açıkları gibi düzeltme etkinliklerini görüntüleme
 
 Nasıl çalıştığını görmek mi istiyor musunuz? Uç Nokta için [Microsoft Defender'da Tehdit & Güvenlik Açığı Yönetimi'nin açık olduğu bu videoyu izleyin](../defender-endpoint/microsoft-defender-endpoint.md).
@@ -43,10 +45,15 @@ Nasıl çalıştığını görmek mi istiyor musunuz? Uç Nokta için [Microsoft
 
 Tehdit Güvenlik Açığı Yönetimi hakkında daha fazla & için bkz. Uç Nokta için [Microsoft Defender'güvenlik açığı yönetimi Tehdit ve Güvenlik Açığı Yönetimi](../defender-endpoint/next-gen-threat-and-vuln-mgt.md).
 
+>
+> **Bir dakika mı kaldı?**
+> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+>
+
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [İş için Microsoft Defender'daki öğreticiler ve benzetimler (önizleme)](mdb-tutorials.md)
+- [İş için Microsoft Defender'daki öğreticiler ve benzetimler](mdb-tutorials.md)
 
-- [Cihazları İş için Microsoft Defender'a ekleme (önizleme)](mdb-onboard-devices.md)
+- [Cihazları İş için Microsoft Defender'a ekleme](mdb-onboard-devices.md)
 
-- [İş için Microsoft Defender'da ilkeleri görüntüleme veya düzenleme (önizleme)](mdb-view-edit-create-policies.md)
+- [İş için Microsoft Defender'da ilkeleri görüntüleme veya düzenleme](mdb-view-edit-create-policies.md)

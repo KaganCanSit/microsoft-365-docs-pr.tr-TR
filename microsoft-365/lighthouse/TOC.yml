@@ -2,7 +2,7 @@
   items:
     - name: Genel bakış Microsoft 365 Lighthouse
       href: m365-lighthouse-overview.md
-    - name: E-Microsoft 365 Lighthouse
+    - name: Sistem gereksinimleri Microsoft 365 Lighthouse
       href: m365-lighthouse-requirements.md
 - name: Kullanmaya başlayın
   items:
@@ -12,6 +12,8 @@
   items:
     - name: Portal güvenliğini yapılandırma
       href: m365-lighthouse-configure-portal-security.md
+    - name: Rolleri ayarlama
+      href: m365-lighthouse-set-up-roles.md
     - name: Denetim günlüklerini gözden geçirme
       href: m365-lighthouse-review-audit-logs.md
 - name: Taban çizgileriyle müşterileri koruma
@@ -42,6 +44,8 @@
       href: m365-lighthouse-reset-user-password.md
     - name: Kullanıcı arama
       href: m365-lighthouse-search-for-users.md
+    - name: Riskli kullanıcıları görüntüleme ve yönetme
+      href: m365-lighthouse-view-manage-risky-users.md
 - name: Cihazları yönet
   items:
     - name: Cihaz uyumluluğu sayfasına genel bakış
@@ -54,11 +58,15 @@
   items:
     - name: Tehdit yönetimi sayfasına genel bakış
       href: m365-lighthouse-threat-management-page-overview.md
-    - name: Güvenlik tehditlerini Microsoft Defender Virüsten Koruma
+    - name: Tehditlere ve tehditlere Microsoft Defender Virüsten Koruma
       href: m365-lighthouse-mitigate-threats.md
 - name: Yardım ve destek al
   items:
     - name: Yardım ve destek al
       href: m365-lighthouse-get-help-and-support.md
+    - name: Bilinen sorunlar
+      href: m365-lighthouse-known-issues.md
+    - name: Sorunları ve hata iletilerini giderme ve çözme
+      href: m365-lighthouse-troubleshoot.md
     - name: Sık sorulan sorular (SSS)
       href: m365-lighthouse-faq.yml

@@ -20,12 +20,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 24a910fee1b6a8b502e42f17f002b286e4fbf337
-ms.sourcegitcommit: 39838c1a77d4e23df56af74059fb95970223f718
+ms.openlocfilehash: 9d60d2f117d5d386eb83b0bbd102265921b5078e
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63010766"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63318249"
 ---
 # <a name="learn-about-communication-compliance-in-microsoft-365"></a>E-Microsoft 365'de iletişim uyumluluğu hakkında bilgi Microsoft 365
 
@@ -99,7 +99,7 @@ Yerleşik düzeltme iş akışları, kuruluş ilke eşleşmeleri olan iletileri 
 - **Tam ve yinelenen algılamaya** yakın: Tam olarak eşleşen iletişim uyumluluk ilkelerini taramaya ek olarak, yinelenen algılamaya yakın gruplar inceleme sürecinizi hızlandırmak için metin açısından benzer terimleri ve iletileri bir arada kullanır.
 - **Optik karakter tanıma (OCR) (önizleme)**: E-posta veya sohbet iletilerine eklenen veya eklenen resimlerdeki yazdırılan ve el yazısı metinleri tarayın, Microsoft Teams araştıryın.
 - **Yeni filtreler**: Gönderen, alıcı, tarih, etki alanları ve daha birçok alan için ileti filtreleriyle ilke uyarılarını daha hızlı araştırın ve düzeltme.
-- **Geliştirilmiş ileti görünümleri**: Araştırma ve düzeltme eylemleri, yeni ileti kaynağı, metin ve ek açıklama görünümleriyle artık daha hızlı. Düzeltme eylemleri sürerken ileti ekleri tam bağlam sağlamak üzere artık değiştirilebilir.
+- **Geliştirilmiş ileti görünümleri**: Araştırma ve düzeltme eylemleri, yeni ileti kaynağı ve metin görünümleriyle artık daha hızlı. Düzeltme eylemleri sürerken ileti ekleri tam bağlam sağlamak üzere artık değiştirilebilir.
 - **Kullanıcı geçmişi**: Geçmiş bildirimler ve ilke eşleşmelerine yönelik yükseltmeler gibi tüm kullanıcı iletisi düzeltme etkinliklerinin geçmiş görünümü, gözden geçirenlere düzeltme iş akışı işlemi sırasında daha fazla bağlam sağlar. Kullanıcılar için ilk kez veya yinelenen ilke eşleşmeleri artık arşivlenir ve kolayca değiştirilebilir.
 - **Desen algılanan bildirim**: Birçok taciz ve rahatsız etme eylemi zaman içinde lanır ve kullanıcı tarafından aynı davranışın tekrar tekrar gerçekleştirilmesi gerekir. Uyarı ayrıntılarında görüntülenen yeni bildirim deseni, bu uyarılara ve bu tür davranışlara dikkat çekmeye yardımcı olur.
 - **Çeviri**: Düzeltme iş akışında çeviri desteğini kullanarak sekiz dilde ileti ayrıntılarını hızla araştırabilirsiniz. Diğer dillerdeki iletiler otomatik olarak gözden geçirenin görüntü diline dönüştürülür.
@@ -158,7 +158,7 @@ Bu adımda, iletişim uyumluluk ilkelerinize uyması olarak algılanan sorunlar�
 
 - **Uyarılar**: İleti bir ilke koşuluyla eş olduğunda, otomatik olarak bir uyarı oluşturulur. Her uyarı için, durumu, önem derecesini, algılanan saati ve bir durum Advanced eDiscovery durumunu görebilirsiniz. Yeni uyarılar, iletişim uyumluluğu giriş sayfasında ve **Uyarılar** sayfasında görüntülenir ve önem derecesine göre listelenir.
 - **Sorun yönetimi**: Her uyarı için, iletide algılanan sorunu düzeltmek için yeni işlemler gerçekleştirebilirsiniz.
-- **Belge gözden** geçirme: Bir sorun incelenme sırasında, algılanan sorunu düzgün değerlendirmeye yardımcı olması için iletinin çeşitli görünümlerini kullanabilirsiniz. Görünümler konuşma özetini, yalnızca metinleri, açıklamalı metni ve iletişim konuşmanın ayrıntılı görünümlerini içerir.
+- **Belge gözden** geçirme: Bir sorun incelenme sırasında, algılanan sorunu düzgün değerlendirmeye yardımcı olması için iletinin çeşitli görünümlerini kullanabilirsiniz. Görünümler konuşma özetini, yalnızca metinleri ve iletişim konuşmanın ayrıntılı görünümlerini içerir.
 - **Kullanıcı etkinlik geçmişini gözden** geçirme: İlke eşleşmeleri için kullanıcı iletisi etkinliklerinin geçmişini ve geçmiş bildirimler ve yükseltmeler gibi düzeltme eylemlerini görüntüleme.
 - **Filtreler**: Gözden geçirmek istediğiniz ileti uyarılarını hızla daraltmak için gönderen, alıcı, tarih ve konu gibi filtreleri kullanın.
 

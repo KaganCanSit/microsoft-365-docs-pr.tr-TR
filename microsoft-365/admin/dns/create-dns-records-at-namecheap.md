@@ -2,13 +2,13 @@
 title: Bağlan Namecheap'a DNS kayıtlarınızı Microsoft 365
 f1.keywords:
 - CSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
-localization_priority: Normal
+ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
 - M365-subscription-management
@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: 54ae2002-b38e-43a1-82fa-3e49d78fda56
 description: Microsoft için Namecheap'da etki alanlarınızı doğrulamayı ve e-posta, Skype Kurumsal Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
-ms.openlocfilehash: 31938656e17104d1388b53c05b6ccf3af9afc30f
-ms.sourcegitcommit: da11ffdf7a09490313dfc603355799f80b0c60f9
+ms.openlocfilehash: 146b76ef95a725faa3457eaf1795b153133cef92
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2021
-ms.locfileid: "62988845"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315001"
 ---
 # <a name="connect-your-dns-records-at-namecheap-to-microsoft-365"></a>Bağlan Namecheap'a DNS kayıtlarınızı Microsoft 365
 

@@ -1,6 +1,6 @@
 ---
 title: Cihaz stok raporu
-description: ''
+description: Bu makalede Cihaz envanteri raporu açıklanmıştır
 keywords: Microsoft Yönetilen Masaüstü, Microsoft 365, hizmet, belgeler
 ms.service: m365-md
 author: tiaraquan
@@ -9,12 +9,12 @@ ms.collection: M365-modern-desktop
 ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: 531410fb840675dc8930078570aab84e9a1f1425
-ms.sourcegitcommit: a6651b841f111ea2776cab88bf2c80f805fa8e09
+ms.openlocfilehash: d5710fafd57c0c43419eb1a8ed31d2cba5c62084
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "63016254"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63319928"
 ---
 # <a name="device-inventory-report"></a>Cihaz stok raporu
 

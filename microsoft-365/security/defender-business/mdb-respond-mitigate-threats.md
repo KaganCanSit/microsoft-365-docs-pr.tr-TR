@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender İş'te (önizleme) tehditlere yanıt verme ve tehditlerini azaltmak
+title: İş için Microsoft Defender'da tehditleri yanıtlama ve azaltmak
 description: Tehdit algılandığında, bu tehditlere yanıt vermek ve onları azaltmak için eylem gerçekleştirabilirsiniz.
 search.appverid: MET150
 author: denisebmsft
@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 02/07/2022
+ms.date: 02/24/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -17,21 +17,21 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 85c6262a03541b2aa0f79c69e60d9ebaec71bbe8
-ms.sourcegitcommit: cafca45069819a44c7cf8c67f6c1e105de1b3393
+ms.openlocfilehash: 50a759c4f84aee72b376ff9126c54d381f4a373f
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "63027576"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63327791"
 ---
-# <a name="respond-to-and-mitigate-threats-in-microsoft-defender-for-business-preview"></a>Microsoft Defender İş'te (önizleme) tehditlere yanıt verme ve tehditlerini azaltmak
+# <a name="respond-to-and-mitigate-threats-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da tehditleri yanıtlama ve azaltmak
 
 > [!IMPORTANT]
-> İş için Microsoft Defender şu anda önizlemede ve istekte etmek için buraya kaydolan müşterilere ve IT [İş Ortaklarına aşamalı](https://aka.ms/mdb-preview) olarak aşamalı olarak aşamalı olarak sunulmaktadır. Önümüzdeki haftalarda bir ilk müşteri ve iş ortağı kümesi sunuyoruz ve genel kullanılabilirlik durumuna kadar önizlemeyi genişleteceğiz. Önizlemenin bir dizi ilk [senaryoyla başlat olacağını](mdb-tutorials.md#try-these-preview-scenarios) ve düzenli olarak özellikler ekley olacacaz.
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-Bu Microsoft 365 Defender portalı, güvenlik ekibimizin algılanan tehditlere yanıt vermelerini ve bu tehditleri azaltmak için olanak sağlar. Bu makale, İş için Defender (önizleme) kullanımıyla ilgili bir örnekte size yol göstermeyi açıklar.
+Bu Microsoft 365 Defender portalı, güvenlik ekibimizin algılanan tehditlere yanıt vermelerini ve bu tehditleri azaltmak için olanak sağlar. Bu makalede, İş için Defender'ı nasıl kullanabileceğiniz örnek olarak açıklanmıştır.
 
 >
 > **Bir dakika mı kaldı?**
@@ -66,6 +66,6 @@ Bu Microsoft 365 Defender portalı, güvenlik ekibimizin algılanan tehditlere y
 
 - [İşlem merkezinde düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
 
-- [İş için Microsoft Defender'da cihazları yönetme (önizleme)](mdb-manage-devices.md)
+- [İş için Microsoft Defender'da cihazları yönetme](mdb-manage-devices.md)
 
-- [İş için Microsoft Defender'da olayları görüntüleme ve yönetme (önizleme)](mdb-view-manage-incidents.md)
+- [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)

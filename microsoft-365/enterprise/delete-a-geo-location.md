@@ -9,20 +9,22 @@ ms.topic: article
 ms.service: o365-solutions
 f1.keywords:
 - NOCSH
-ms.custom: seo-marvel-mar2020
+ms.custom:
+- seo-marvel-mar2020
+- admindeeplinkSPO
 ms.collection: Strat_SP_gtc
 ms.localizationpriority: medium
 description: Multi-Geo'da bir uydu Microsoft 365 silmeyi öğrenin. Uydu konumu silindiğinde, tüm kullanıcı verileri de kalıcı olarak silinir.
-ms.openlocfilehash: 71bf501fe90cc5f8f29f8bc95a7d18da50ebf9cc
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 37bb98637c2a66f5b140f4669a6158e59b08fdcc
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983505"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63319971"
 ---
 # <a name="delete-a-satellite-location-in-microsoft-365-multi-geo"></a>Multi-Geo'da Microsoft 365 uydu konumunu silme
 
-Bir uydu konuma artık ihtiyacınız yoksa, bu konumu yönetim merkezinden kiracı SharePoint silebilirsiniz.
+Bir uydu konumu artık size gerek kalmadı ise bu konumu yönetim merkezinden <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint silebilirsiniz</a>.
 
 > [!WARNING]
 > Uydu konumdaki tüm kullanıcı verileri kalıcı olarak silinir. Bu, grup OneDrive İş da dahil olmak SharePoint tüm içerik, Exchange ve posta Microsoft 365 içerir. Uydu konumunu smeden önce, tüm verileri başka bir uydu konuma veya merkezi konuma geçirmeniz gerekir. Bu eylem geri alınamaz.
@@ -33,14 +35,12 @@ Uydu konumlarını yalnızca genel yöneticiler silebilir.
 
 Uydu konumunu silmek için
 
-1. SharePoint yönetim merkezini açma
+1. SharePoint yönetim merkezini açın ve Coğrafi <a href="https://go.microsoft.com/fwlink/?linkid=2185076" target="_blank">**konumlar sekmesine** gidin</a>.
 
-2. Coğrafi **konumlar sekmesine** gidin.
+1. Haritada, silmek istediğiniz coğrafi konumu seçin.
 
-3. Haritada, silmek istediğiniz coğrafi konuma tıklayın.
+1. Konumu **sil'i seçin**.
 
-4. Konumu **sil'e tıklayın**.
+1. Onay onay kutularını seçerek silme işlemini onaylayın.
 
-5. Onay onay kutularını seçerek silme işlemini onaylayın.
-
-6. **Sil**'e tıklayın.
+1. **Sil'i seçin**.

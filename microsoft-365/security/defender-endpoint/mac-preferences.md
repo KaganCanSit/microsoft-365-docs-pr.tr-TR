@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 07e91e5b2cb93a6ba876510b558761f95489f496
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: cb3f38b861f85849165be330e03fe1d96a9c708c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011857"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326713"
 ---
 # <a name="set-preferences-for-microsoft-defender-for-endpoint-on-macos"></a>macOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlama
 
@@ -554,6 +554,26 @@ Kullanıcıların Microsoft'a geri bildirim gönderip gönderemezseniz, 'a gidip
 |**Olası değerler**|etkin (varsayılan) <p> devre dışı|
 |**Açıklamalar**|Uç nokta sürüm 101.19.61 veya üzerinde Microsoft Defender'da kullanılabilir.|
 |||
+
+
+
+#### <a name="control-sign-in-to-consumer-version-of-microsoft-defender"></a>Microsoft Defender'ın tüketici sürümünde oturum açma denetimi
+
+Kullanıcıların Microsoft Defender'ın tüketici sürümünde oturum açmasını isteyip istemeyebilirsiniz.
+
+<br>
+
+****
+
+|Bölüm|Değer|
+|---|---|
+|**Etki alanı**|`com.microsoft.wdav`|
+|**Anahtar**|consumerExperience|
+|**Veri türü**|Dize|
+|**Olası değerler**|etkin (varsayılan) <p> devre dışı|
+|**Açıklamalar**|Uç nokta sürüm 101.60.18 veya üzerinde Microsoft Defender'da kullanılabilir.|
+|||
+
 
 ### <a name="endpoint-detection-and-response-preferences"></a>Uç nokta algılama ve yanıt tercihleri
 

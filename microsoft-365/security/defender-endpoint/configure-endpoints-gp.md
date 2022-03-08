@@ -16,12 +16,12 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.date: 12/07/2021
 ms.technology: mde
-ms.openlocfilehash: 9c71591d48f24f0e434afe510c4eab711ee5f858
-ms.sourcegitcommit: f8267a0860de62dbd53ebb8a151a8e71a8ccda6a
+ms.openlocfilehash: 3b20242247e33f8550ce4d153c2f2618c64d7007
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63016630"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324347"
 ---
 # <a name="onboard-windows-devices-using-group-policy"></a>Grup Windows kullanarak diğer cihazları ekleme 
 
@@ -301,6 +301,12 @@ Bilgisayar Yapılandırma **İlkeleri** \> **Yönetim** \> **Şablonları ve Bil
 :::image type="content" source="images/gpo-maps-join-ms-maps.png" alt-text="microsoft maps'a katılın.":::
 
 :::image type="content" source="images/send-file-sample-further-analysis-require.png" alt-text="Daha fazla çözümleme yapmak gerektiğinde Dosya Gönder örneği.":::
+
+> [!NOTE]
+> Tüm **örnekleri gönder seçeneği** ikili dosyalar/betikler/belgeler için en iyi çözümlemeyi sağlar ve bu da güvenlik mezbenizi artırır.
+Güvenli **örnekler gönder seçeneği** çözüm edülen ikili dosya/betik/belge türünü sınırlar ve güvenlik postürlerini azalttır. 
+
+Daha fazla bilgi için bkz[.](enable-cloud-protection-microsoft-defender-antivirus.md) Microsoft Defender Virüsten Koruma'de bulut korumasını açma ve E-posta'da bulut [koruması ve Microsoft Defender Virüsten Koruma.](cloud-protection-microsoft-antivirus-sample-submission.md)
 
 ### <a name="check-for-signature-update"></a>İmza güncelleştirmesini denetleme
 

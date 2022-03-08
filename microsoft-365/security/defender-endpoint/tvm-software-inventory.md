@@ -16,25 +16,34 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: b0e32fe31b69149bac4bac1796a0260763e9a078
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: e6bf614730caa9060a334c0a01c2dfe64b24df78
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998056"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63325291"
 ---
 # <a name="software-inventory---threat-and-vulnerability-management"></a>Yazılım envanteri - Tehdit ve Güvenlik Açığı Yönetimi
+
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
+
 - [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Tehdit ve güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
+[!include[Prerelease information](../../includes/prerelease.md)]
+
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
-Genel Platform'daki Tehdit ve Güvenlik Açığı Yönetimi envanteri, resmi Ortak Platform Numaralarında (CPE) yer alan, organizasyonumda bilinen [yazılımların bir listesidir](https://nvd.nist.gov/products/cpe). Resmi CPE olmayan yazılım ürünleri, yayımlanmış güvenlik açıklarına sahip değildir. Ayrıca satıcının adı, zayıf noktaların sayısı, tehdit ve açık cihaz sayısı gibi ayrıntıları da içerir.
+Yazılım envanteri, Tehdit ve Güvenlik Açığı Yönetimi bilinen yazılımların listesidir. Yazılım envanteri sayfasındaki varsayılan filtre resmi Ortak Platform Numaralara [(CPE) sahip tüm yazılımları görüntüler](https://nvd.nist.gov/products/cpe). Görünüm, satıcının adı, zayıf noktaların sayısı, tehdit ve açık cihaz sayısı gibi ayrıntıları içerir.
+
+**CPE Kullanılabilir filtresini kaldırabilir**, daha fazla görünürlük elde etmek ve kuruluşlarınız genelinde tüm yüklü yazılımlarda arama kapsamınızı artırabilirsiniz. Bu, CPE olmayan yazılımlar dahil olmak üzere tüm yazılımların artık yazılım envanter listesinde görüntüleniyor olduğu anlamına gelir.
+
+> [!NOTE]
+> CPE'ler güvenlik açığı yönetimi tarafından yazılımı ve güvenlik açıklarını tanımlamak için kullanılırken, CPE olmayan yazılım ürünleri yazılım stok sayfasında gösterse bile, bunlar Tehdit ve Güvenlik Açığı Yönetimi tarafından ve açıklardan yararlanma, açık cihaz sayısı ve zayıf kalma gibi bilgiler tarafından desteklanmaz.
 
 ## <a name="how-it-works"></a>Nasıl çalışır?
 
@@ -44,7 +53,7 @@ Gerçek zamanlı olduğu için dakikalar içinde güvenlik açığı bilgilerini
 
 ## <a name="navigate-to-the-software-inventory-page"></a>Yazılım stoku sayfasına gidin
 
-Yazılım envanteri sayfasına erişmek için, **portalda yer** alan gezinti Tehdit ve Güvenlik Açığı Yönetimi Yazılım envanteri [Microsoft 365 Defender seçin](portal-overview.md).
+Yazılım envanteri sayfasına erişmek için, **portalda yer** alan Tehdit ve Güvenlik Açığı Yönetimi menüsünde Yazılım [envanteri Microsoft 365 Defender seçin](portal-overview.md).
 
 Yazılımları, cihazlar listesinden tek tek cihazlar sayfalarında belirli [cihazlarda görüntüleme](machines-view-overview.md).
 
@@ -55,15 +64,15 @@ Yazılımları, cihazlar listesinden tek tek cihazlar sayfalarında belirli [cih
 
 Yazılım **envanteri** sayfası, satıcı adı, bulunanlar, onlarla ilişkilendirilmiş tehdit, açık cihazlar, etkilenme puanına etki ve etiketler dahil olmak üzere ağ üzerinde yüklü yazılımların listesiyle açılır.
 
-Liste görünümünü yazılımda bulunan zayıflıklara, onlarla ilişkilendirilmiş tehditlere ve yazılımın destek sonuna ulaşıp ulaşmamış olduğu gibi etiketlere göre filtreleebilirsiniz.
+Varsayılan olarak, görünüm Ürün Kodu **(CPE) ile filtrelenmiştir: Kullanılabilir**. Ayrıca, liste görünümünü yazılımda bulunan zayıflıklara, onlarla ilişkilendirilmiş tehditlere ve yazılımın destek sonuna ulaşıp ulaşmamış olduğu gibi etiketlere göre filtreleebilirsiniz.
 
-:::image type="content" alt-text="Yazılım envanteri giriş sayfası örneği." source="images/tvm-software-inventory.png" lightbox="images/tvm-software-inventory.png":::
+:::image type="content" alt-text="Yazılım envanteri giriş sayfası örneği." source="images/software-inventory-page.png" lightbox="images/tvm-software-inventory.png":::
 
 Araştırmak istediğiniz yazılımı seçin. Sayfada bilgilerin daha küçük bir görünümüne sahip bir açılır panel açılır. Araştırmanın daha derine inip Yazılım sayfasını aç'ı seçin veya Yanlış raporu bildir'i seçerek teknik **tutarsızlıkları bayrakla atabilirsiniz**.
 
 ### <a name="software-that-isnt-supported"></a>Desteklenen olmayan yazılım
 
-Şu anda tehdit ve tehdit tarafından destek & güvenlik açığı yönetimi yazılım stoku sayfasında yer alan yazılım. Desteklenem, yalnızca sınırlı veriler kullanılabilir. "Zayıf" bölümündeki "Kullanılamaz" seçeneğiyle desteklenmeyen yazılıma göre filtre uygulama.
+Şu anda tehdit ve tehdit tarafından desteklenen & güvenlik açığı yönetimi yazılım stoku sayfasında yer alan yazılımlar olabilir. Desteklenem, yalnızca sınırlı veriler kullanılabilir. "Zayıf" bölümündeki "Kullanılamaz" seçeneğiyle desteklenmeyen yazılıma göre filtre uygulama.
 
 :::image type="content" alt-text="Desteklenmeyen yazılım filtresi." source="images/tvm-unsupported-software-filter.png" lightbox="images/tvm-unsupported-software-filter.png":::
 
@@ -74,13 +83,11 @@ Aşağıda, yazılımın destekli olmadığını gösterir:
 - Yan panele ve yazılım sayfasına eklenen bilgilendirme metni
 - Yazılım sayfasında güvenlik önerileri, bulunan güvenlik açıkları veya olay zaman çizelgesi bölümleri bulun olmayacaktır
 
-Şu anda CPE olmayan ürünler yazılım envanteri sayfasında gösterilmez; yalnızca cihaz düzeyindeki yazılım envanteri içinde gösterilir.
-
 ## <a name="software-inventory-on-devices"></a>Cihazlarda yazılım envanteri
 
 Mobil Microsoft 365 Defender gezinti bölmesinde Cihaz envanterine **[gidin](machines-view-overview.md)**. Cihaz sayfasını açmak için cihazın adını seçin (Bilgisayar1 gibi), ardından yazılım envanteri sekmesini seçerek  cihazda var olan bilinen tüm yazılımların listesini görüntüleyin. Daha fazla bilgili açılır öğesini açmak için belirli bir yazılım girdisini seçin.
 
-Yazılım şu anda yazılım tarafından desteklenemeyebilir ve cihaz Tehdit ve Güvenlik Açığı Yönetimi. Bununla birlikte, yalnızca sınırlı veriler kullanılabilir. Yazılımın desteklenmiyor olup olmadığını bilirsiniz, çünkü "Zayıf" sütununda "Kullanılamaz" ifadesini gösterir.
+Yazılım, şu anda yazılım destekçisi tarafından desteklenemeyebilir ve cihaz Tehdit ve Güvenlik Açığı Yönetimi. Bununla birlikte, yalnızca sınırlı veriler kullanılabilir. Yazılımın desteklenmiyor olup olmadığını bilirsiniz, çünkü "Zayıf" sütununda "Kullanılamaz" ifadesini gösterir.
 
 CPE olmayan yazılımlar cihaza özgü bu yazılım envanteri altında da gösterebilirsiniz.
 
@@ -102,7 +109,7 @@ Yazılım sayfalarını birkaç farklı şekilde görüntüleyebilirsiniz:
 
  Belirli bir yazılımın tüm ayrıntılarını ve aşağıdaki bilgileri birlikte tam bir sayfa görüntülenir:
 
-- Satıcı bilgilerini içeren yan panel, kuruluşta yazılımın yaygın kullanımı (yüklü olduğu cihaz sayısı ve yama sağ olmayan cihazlar dahil), açıkta açık bulunan cihazlar, kullanılabilir olup olmadığı ve açıkları açık olan cihazlar, açıklardan yararlanma puanınızı etkiler.
+- Satıcı bilgilerini içeren yan panel, kuruluşta yazılımın yaygın kullanımı (yüklü olduğu cihaz sayısı ve yama sağ olmayan cihazlar dahil), kullanılabilir olup olmadığı ve açıkta açık bulunan cihazlar, açıkları açık olup olmadığı ve etkilenme puanına etkiler.
 - Güvenlik açıklarının ve hatalı yapılandırmaların sayısını ve önem derecesini gösteren veri görselleştirmeleri. Ayrıca, maruz kalan cihazların sayısına sahip grafikler.
 - Şu tür bilgileri gösteren sekmeler:
   - Zayıflıklar ve güvenlik açıkları için ilgili güvenlik önerileri tanımlanır.
@@ -114,12 +121,21 @@ Yazılım sayfalarını birkaç farklı şekilde görüntüleyebilirsiniz:
 
 ## <a name="report-inaccuracy"></a>Rapor yanlışlığı
 
-Belirsiz, yanlış veya eksik bilgiler gördüğünüzde hatalı bir pozitif sonuç bildirebilirsiniz. Daha önce düzeltmiş olan güvenlik önerilerini de bildirebilirsiniz.
+Hatalı güvenlik açığı bilgileri ve değerlendirme sonuçları gördüğünüzde hatalı rapor edin.
 
 1. Yazılım envanteri sayfasında yazılım açılır sayfasını açın.
 2. Hatalı **bildir'i seçin**.
-3. Açılır bölmeden açılan menüden yanlış kategoriyi seçin, e-posta adresinizi girin ve yanlışlıklarla ilgili ayrıntıları girin.
-4. **Gönder'i seçin**. Geri bildiriminiz tüm uzmanlara Tehdit ve Güvenlik Açığı Yönetimi gönderilir.
+3. Uçarak çıkış bölmesinden rapor etmek istediğiniz sorunu seçin:
+
+    - bir yazılım ayrıntısı yanlış
+    - yazılım, kuruluşumda herhangi bir cihaza yüklü değil
+    - Yüklü veya açık cihaz sayısı yanlış
+
+4. Yanlışlık hakkında istenen ayrıntıları doldurun. Bu, bildiriyor olduğunuz soruna bağlı olarak değişir.
+
+![Rapor yanlışlığı](images/report-inaccuracy-software.png)
+
+5. **Gönder'i seçin**. Geri bildiriminiz tüm uzmanlara Tehdit ve Güvenlik Açığı Yönetimi gönderilir.
 
 ## <a name="related-articles"></a>İlgili makaleler
 

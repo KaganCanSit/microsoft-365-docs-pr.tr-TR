@@ -18,12 +18,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 36707b372467bebdee5c5bcee114511ce7c385d1
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: 9cc2b77c9983fecc6e58be515fe316c6c5239fef
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63010176"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63317787"
 ---
 # <a name="detect-channel-signals-with-communication-compliance"></a>İletişim uyumluluğuyla kanal sinyallerini algılama
 
@@ -45,7 +45,7 @@ Modern ek tarama, aşağıdaki dosya türlerinde destekler:
 
 Modern ekler için ayıklanan metin, ilkeye yönelik Bekleyen uyarılar panosunda **ilişkilendirilmiş** iletiye dahil edilir. Bir ekin ayıklanan metni, ekin dosya adı (ve biçim uzantısı) ve dosya .txt olarak adlandırılmıştır. Örneğin,ContosoBusinessPlan.docxadlı ekin ayıklanan *metni,ContosoBusinessPlan.docx.txt* **için Bekleyen** uyarılar panosunda ek olarak ** görünebilir.
 
-Kaynak, Düz metin veya Ek Açıklama görünümlerinden ayrıntıları *görüntülemek* için *ayıklanan* *ek metnini* seçin. Gözden geçirmenin ardından, komut çubuğu denetimlerini kullanarak ek metnini çözebilir veya bu metin üzerinde eyleme geçebilirsiniz. Eki, iletişim uyumluluğu gözden geçirme işleminin dışında gözden geçirmek için indirme seçeneğiniz de vardır.
+Kaynak ve Düz metin görünümlerde ayrıntıları görüntülemek için *ayıklanan ek* *metnini* seçin. Gözden geçirmenin ardından, komut çubuğu denetimlerini kullanarak ek metnini çözebilir veya bu metin üzerinde eyleme geçebilirsiniz. Eki, iletişim uyumluluğu gözden geçirme işleminin dışında gözden geçirmek için indirme seçeneğiniz de vardır.
 
 Aşağıdaki grup yönetimi yapılandırmalarını kullanarak tek tek kullanıcı sohbetlerini ve kanal iletişimlerini denetleme Teams:
 

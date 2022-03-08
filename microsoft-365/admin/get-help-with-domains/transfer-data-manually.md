@@ -2,8 +2,8 @@
 title: İki hesap arasında verileri el ile aktarma
 f1.keywords:
 - NOCSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 ms.assetid: 7dc5d983-84b2-4802-bef0-602ae1780a42
 description: Planı veya şirket adını değiştirdiğini ya da Microsoft 365 birden çok aboneliği tek bir abonelikte birleştirmişken, iki farklı hesap arasında el ile veri aktarmayı öğrenin.
-ms.openlocfilehash: aea01982d9cb6a42f382a23a50baf2e1bfa041cc
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: 7d6cb9e055fd27e8f9b0a26e7ff4bfffa97421ae
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62996045"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316723"
 ---
 # <a name="transfer-data-manually-between-two-accounts"></a>İki hesap arasında verileri el ile aktarma
 

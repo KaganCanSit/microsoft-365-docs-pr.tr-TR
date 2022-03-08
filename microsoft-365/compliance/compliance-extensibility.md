@@ -20,12 +20,12 @@ ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
 description: Üçüncü taraf veri bağlayıcıları ve Microsoft Microsoft 365 API'leri kullanarak uyumluluk çözümlerini genişletmeyi Graph öğrenin.
-ms.openlocfilehash: 1127064394e5b4873adb046e2b0540b361064c9d
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 0632de40141b86e6dfdebf3f5c3a97ca50219357
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019529"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63330545"
 ---
 # <a name="microsoft-365-compliance-and-microsoft-priva-extensibility"></a>Microsoft 365 Uyumluluğu ve Microsoft Priva genişletilebilirliği
 
@@ -49,7 +49,7 @@ Dosyada kullanılabilen çoğu veri bağlayıcısı Microsoft 365 uyumluluk merk
 
 Microsoft'un iş ortaklarından biri tarafından sağlanan Microsoft 365 uyumluluk merkezi bağlayıcıları için bağlayıcı dağıtmadan önce, kuruluşla iş ilişkisine gerek vardır.
 
-Üçüncü taraf veri bağlayıcıları için lisans gereksinimleri için, güvenlik ve uyumlulukla ilgili lisanslama Microsoft 365 "Veri bağlayıcıları" [& bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+Üçüncü taraf veri bağlayıcıları için yol gösterici bilgiler ve gereksinimler için, güvenlik ve uyumluluk - Hizmet Açıklamaları ve Microsoft 365 kılavuzunda yer alan "& bağlayıcıları" [bölümüne | Microsoft Docs](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
 ## <a name="apis"></a>API'ler
 

@@ -1,9 +1,9 @@
 ---
 title: Karma çalışma için altyapınızı ayarlama Microsoft 365
-author: JoeDavies-MSFT
+author: dansimp
 f1.keywords:
 - NOCSH
-ms.author: josephd
+ms.author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: article
@@ -19,12 +19,12 @@ ms.collection:
 ms.custom: seo-marvel-jun2020
 keywords: evden çalışma, evden çalışma, karma, uzaktan çalışan, karma iş, uzak çalışanlar, karma bağlantı, uzaktan erişim, telekom, telework, teleworking, teleworking, mobil iş, uzaktan iş, her yerden çalışma, esnek çalışma
 description: Karma çalışanlarının güvenli bir şekilde şirket içi kaynaklara ve kaynak kullanımına erişmesi için altyapı katmanlarında Microsoft 365 geçin.
-ms.openlocfilehash: 0370d30584021ab8560a24c7e54e3a7c7aadeb1f
-ms.sourcegitcommit: 23a90ed17cddf3b0db8d4084c8424f0fabd7b1de
+ms.openlocfilehash: 87d72307f3e6a2b254bdbde21d07fc146806b89d
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63015350"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63318585"
 ---
 # <a name="set-up-your-infrastructure-for-hybrid-work-with-microsoft-365"></a>Karma çalışma için altyapınızı ayarlama Microsoft 365
 

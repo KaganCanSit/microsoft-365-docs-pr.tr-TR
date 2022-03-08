@@ -15,12 +15,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
 description: Yöneticilerin Hızlı Bloomberg sohbet aracından Hızlı Bloomberg sohbet aracından içeri aktarma ve arşivlemek için veri bağlayıcısı ayarlamayı ve bu bağlayıcıyı Microsoft 365.
-ms.openlocfilehash: 7e7f955745b3c0b95040561497ee29228a150c5e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 14495a219ce73b8d0cd4e937b4feae9aa2210da1
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62977685"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313335"
 ---
 # <a name="set-up-a-connector-to-archive-instant-bloomberg-data"></a>Instant Bloomberg verilerini arşivlemek için bir bağlayıcı ayarlama
 
@@ -72,7 +72,7 @@ Instant Bloomberg verilerini arşivlemek için gereken bazı uygulama adımları
 
 - Instant Bloomberg bağlayıcısı, bir günde toplam 200.000 öğe içeri aktarabilirsiniz. SFTP sitesinde 200.000'den fazla öğe varsa, bu öğelerin hiçbiri Microsoft 365.
 
-- 3. Adımda Instant Bloomberg bağlayıcısı oluşturan (ve 1. adımda ortak anahtarları ve IP adresini indiren kullanıcı) Outlook'ta Posta Kutusu İçeri/Dışarı Aktarma rolüne Exchange Online. Bunun için, sayfanın en son **sayfasındaki Veri bağlayıcıları** sayfasına bağlayıcı Microsoft 365 uyumluluk merkezi. Varsayılan olarak, bu rol herhangi bir rol grubuna Exchange Online. Posta Kutusu İçeri/Dışarı Aktarma rolünü, aynı kuruluşta Kuruluş Yönetimi rol grubuna Exchange Online. Veya bir rol grubu oluşturabilir, Posta Kutusu İçeri/Dışarı Aktarma rolü atayabilirsiniz ve sonra da uygun kullanıcıları üye olarak  eklersiniz. Daha fazla bilgi için,"[Rol gruplarını](/Exchange/permissions-exo/role-groups#create-role-groups) farklı bir [](/Exchange/permissions-exo/role-groups#modify-role-groups) grupta yönetme" makalesinde Rol grupları oluşturma veya Rol gruplarını değiştirme Exchange Online.
+- 3. Adımda Instant Bloomberg bağlayıcısı oluşturan (ve 1. adımda ortak anahtarları ve IP adresini indiren kullanıcı) Veri Bağlayıcısı Yöneticisi rolüne atanmıştır. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
 ## <a name="set-up-a-connector-using-public-keys"></a>Ortak tuşları kullanarak bağlayıcı ayarlama
 

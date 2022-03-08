@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 090c43ea1d2d9f2d158f94d1e509490c3faf4799
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 58ba49a49b41d80bacb31efa780530e44a146fc1
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63012000"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326769"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender'daki güncelleştirmeler
 
@@ -28,6 +28,11 @@ ms.locfileid: "63012000"
 
 **Aşağıdakiler için geçerlidir:**
 - [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+
+## <a name="1015880-30122012158800"></a>101.58.80 (30.122012.15880.0)
+
+- Komut satırı aracı artık karantinaya alınmış dosyaları, dosyanın başlangıçta algılandığından farklı bir konuma geri yüklemeyi destekler. Bu, aracılığıyla yapılabilir `mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`.
+- Hata düzeltmeleri
 
 ## <a name="1015662-30121122156620"></a>101.56.62 (30.121122.15662.0)
 

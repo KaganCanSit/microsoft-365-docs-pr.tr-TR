@@ -13,12 +13,12 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: a34e876e1ea6f9be9004609daf8afeec97cc4fbb
-ms.sourcegitcommit: 7fd1bcbd8246501029837e3ea92adea64c3406e1
+ms.openlocfilehash: e56fb2e550adb870ed096f90c7d8d9b90c1de249
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2022
-ms.locfileid: "63010118"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63314713"
 ---
 # <a name="investigate-insider-risk-management-activities"></a>Insider risk yönetimi etkinliklerini araştırma
 
@@ -54,7 +54,7 @@ Insider risk yönetimi uyarıları, Insider risk yönetimi ilkelerde tanımlanan
 
 Uyarıların riskli etkinliklere yönelik ayrıntıları, bağlamı ve ilgili içeriği nasıl sağ çıkartır ve araştırma sürecinizi daha etkili hale nasıl getirebilirsiniz hakkında genel bir bakış için [Insider Risk](https://www.youtube.com/watch?v=KgmpxBLJLPI) Yönetimi Uyarıları Önceliği Deneyimi videosuna göz atabilirsiniz.
 
-Insider riski **Uyarı panosu,** insider risk ilkeleri tarafından oluşturulan uyarıları görüntülemeye ve bu uyarılara karşı harekete geçebilirsiniz. Her rapor pencere öğesi, son 30 günlük bilgileri görüntüler.
+Insider riski **Uyarı panosu,** insider risk ilkeleri tarafından oluşturulan uyarıları görüntülemeye ve bu uyarılara karşı harekete geçebilirsiniz. Her rapor pencere öğesi, son 30 günle ilgili bilgileri görüntüler.
 
 - **Gözden geçirmesi gereken toplam** uyarılar: Uyarı önem derecesine göre çözümleme de içinde olmak üzere, gözden geçirmesi gereken uyarıların toplam sayısı ve önem düzeyi listelenir.
 - **Son 30** gün içinde uyarıları açma: İlke tarafından oluşturulan toplam uyarı sayısı yüksek, orta ve düşük uyarı önem düzeyine göre sıralanmış, son 30 gün içinde eştir.
@@ -73,11 +73,11 @@ Insider riski **Uyarı panosu,** insider risk ilkeleri tarafından oluşturulan 
 Uyarıları aşağıdaki durumlardan biri için öncelik durumuna göre düzeltin:
 
 - **Onaylandı**: Yeni veya mevcut bir vakaya onaylandı ve atanmış bir uyarı.
-- **Reddedildi**: Triyaklık sürecinde bir uyarı " olarak yok sayıldı.
+- **Reddedildi**: Triyaklık sürecinde bir uyarı " olarak yok sayıldı. Gelecekteki başvurular için veya gözden geçiren diğer kullanıcılara ek bağlam sağlamak için uyarı yok sayma nedenini sekleyebilirsiniz ve kullanıcının uyarı geçmişinde bulunan notları ekleyebilirsiniz. Bu nedenler beklenen etkinliklerden, etkili olmayan etkinliklerden oluşabilir; bunun nedeni kullanıcının uyarı etkinliklerinin sayısını veya uyarı notlarla ilgili bir nedenin azaltılmasıdır. Sınıflandırma seçimlerinde *bu kullanıcı için Etkinlik* *beklendiği,* Etkinliğin daha fazla araştırılması için yeterince etkili olduğu ve bu kullanıcı için uyarılar çok fazla etkinlik *içermesi neden oluyor*.
 - **Gözden geçirmesi** gerekiyor: Değerlendirme eylemlerinin henüz gerçekleştirilememiş olduğu yeni bir uyarı.
 - **Çözümlendi**: Kapalı ve çözülen bir davanın parçası olan uyarı.
 
-Uyarı risk puanları çeşitli risk etkinliği göstergelerinden otomatik olarak hesaplanır. Bu göstergeler, risk etkinliğinin türünü, etkinlik tekrar sayısının ve sıklığını, kullanıcı risk etkinliğinin geçmişini ve etkinlik etkinliğinin ciddiliğini artırabilecek etkinlik risklerinin de eksini içerir. Uyarı risk puanı, her uyarı için bir risk önem düzeyine göre programlı bir atamaya devam ediyor ve özelleştirilene değil. Uyarılar artmış olarak kalır ve risk etkinlikleri uyarıya tahakkukya devam ederse, risk önem düzeyi artabilir. Risk analistleri ve tahminler, uyarı risk önem derecesine uygun olarak uyarıların önceliğinin kuruma aittir ve standartlara uygun olarak kullanabilir.
+Uyarı risk puanları çeşitli risk etkinliği göstergelerinden otomatik olarak hesaplanır. Bu göstergeler, risk etkinliğinin türünü, etkinlik tekrar sayısının ve sıklığını, kullanıcı risk etkinliğinin geçmişini ve etkinlik etkinliğinin ciddiliğini artırabilecek etkinlik risklerinin de eksini içerir. Uyarı risk puanı, her uyarı için bir risk önem düzeyine göre programlı bir atamaya devam ediyor ve özelleştirilene değil. Uyarılar artmış olarak kalır ve risk etkinlikleri uyarıya tahakkukya devam ederse, risk önem düzeyi artabilir. Risk analistleri ve tahminler, uyarı risk önem derecelerini, uyarıların kurumnizin risk ilkelerine ve standartlarına uygun olarak öncellemede yardımcı olmak için kullanabilir.
 
 Uyarı risk önem düzeyi şu şekildedir:
 
@@ -93,6 +93,7 @@ Kuruluşta etkin Insider risk yönetimi ilkelerinin sayısına ve türüne bağl
 - **Önem derecesi**: Uyarı listesini filtrelemek için bir veya daha fazla uyarı riski önem düzeyi seçin. Seçenekler *Yüksek, Orta* *ve* *Düşük'tür*.
 - **Algılanan saat**: Uyarının ne zaman oluşturulduğunda başlangıç ve bitiş tarihlerini seçin. Bu filtre, başlangıç tarihinde SAAT 00:00 ile bitiş tarihinde UTC 00:00 arasındaki uyarıları arar. Belirli bir günün uyarılarını filtrelemek için, Başlangıç tarihi alanına günün tarihini ve Bitiş tarihi  alanına da sonraki **günün tarihini** girin.
 - **İlke**: Seçili ilkeler tarafından oluşturulan uyarıları filtrelemek için bir veya birden çok ilke seçin.
+- **Risk faktörleri**: Uyarı listesini filtrelemek için daha fazla risk faktörü seçin. Seçenekler *Kümülatif filtreleme etkinlikleri**, Etkinlikler* öncelik içeriğini, *Sıralı* etkinlikleri ve Etkinlikler izin *verilmeyen etki alanlarını içerir*.
 
 ## <a name="search-alerts-on-the-alert-dashboard"></a>Uyarı panosunda arama uyarıları
 
@@ -116,31 +117,68 @@ Insider risk uyarılarını öncelik durumuna almak için aşağıdaki adımlar�
 
 1. Daha [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimi'ne gidin** ve Uyarılar **sekmesini** seçin.
 2. Uyarılar **panosunda**, önceliklerini almak istediğiniz uyarıyı seçin.
-3. Uyarı **ayrıntıları sayfasında** , uyarıyla ilgili bilgileri gözden geçirebilirsiniz; ayrıca uyarıyı onaylayabilir ve yeni bir vaka oluşturabilir, uyarıyı onaylayabilir ve mevcut bir vakaya ekleyebilir ya da uyarıyı yok sayabilirsiniz. Bu sayfa ayrıca, Yüksek, Orta veya Düşük olarak listelenmiş, uyarının geçerli durumunu ve uyarı önem düzeyi düzeyini de içerir. Uyarının önem düzeyi, önemli değilse zamanla artabilir veya azalacaktır.
+3. Uyarı **ayrıntıları sayfasında** , uyarıyla ilgili bilgileri gözden geçirebilirsiniz. Uyarıyı onaylayabilir ve yeni vaka oluşturabilir, uyarıyı onaylayabilir ve var olan bir vakaya ekleyebilir ya da uyarıyı reddedin. Bu sayfa ayrıca, Yüksek, Orta veya Düşük olarak listelenmiş, uyarının geçerli durumunu ve uyarı önem düzeyi düzeyini de içerir. Uyarının önem düzeyi, önemli değilse zamanla artabilir veya azalacaktır.
 
-    Uyarı ayrıntıları **sayfasındaki sekmeler** uyarı için daha fazla bilgi sağlar:
-    - **Özet**: Bu sekme, uyarıyla ilgili genel bilgiler içerir.
-        - **Tetikleyen olay nedir?**: İlkeden kullanıcının etkinliğine risk puanları atamayı başlatmayı istemiyle en son tetikleyen olayı görüntüler.
-        - **Bu uyarıyı oluşturan etkinlik**: Uyarının oluşturulmaya neden olduğu etkinlik değerlendirme süresinde en üst risk etkinliğini ve ilke eşleşmesini görüntüler.
-        - **Bu uyarıda etkinlikle ilgili risk** öngörüleri: Uyarıyla ilgili risk öngörülerinin sayısını görüntüler. Bazı örnekler, uyarının sıralı etkinlikler, kümülatif sızıntı etkinlik riski, izin verilmeyen etki alanlarına sahip etkinlikleri içeren etkinlikler, öncelik içeriği bulunan etkinlikleri veya kullanıcının sıra dışı etkinliklerini içerdiği durumlarla ilgili örneklerdir.
-        - **Kullanıcı ayrıntıları**: Uyarıya atanan kullanıcı hakkında genel bilgileri görüntüler. Anonimleştirme etkinleştirildiyse, kullanıcı adı, e-posta adresi, diğer ad ve kuruluş alanları anonimleştirilmiştir.
-        - **Uyarı ayrıntıları**: Uyarının oluşturulma süresini, uyarıyı oluşturan ilkeler listelenir ve uyarıdan oluşturulan durum listelenir. Yeni uyarılar için Olay **alanında Yok** görüntülenir.
-        - **Algılanan içerik**: Uyarı için risk etkinlikleriyle ilişkili içeriği içerir ve önemli alanlara göre etkinlik olaylarını özetler. Etkinlik bağlantısı seçerek Etkinlik gezgini açılır ve etkinlikle ilgili daha fazla ayrıntı görüntülenir.
-    - **Etkinlik gezgini**: Bu sekme Etkinlik **gezginini açar**. Daha fazla bilgi için, bu makalenin sonraki bölümüne bakın.
+Uyarı hakkında daha fazla bilgi için Uyarı ayrıntıları sayfasındaki aşağıdaki bölümleri ve sekmeleri kullanın:
 
-## <a name="retention-and-item-limits"></a>Bekletme ve öğe sınırları
+### <a name="headersummary-section"></a>Üstbilgi/Özet bölümü
 
-Insider risk yönetimi uyarılarının yaşı, riskli etkinliği en aza indirmeye değer olarak çoğu kuruluşta azalarak devam ediyor. Buna karşılık, etkin durumlar ve ilişkili yapılar (uyarılar, içgörüler, etkinlikler) kuruluşlar için her zaman değerlidir ve otomatik bir son kullanma tarihi olmaması gerekir. Bu, etkin bir vakayla ilişkilendirilmiş herhangi bir kullanıcı için etkin durumdaki gelecekteki tüm uyarıları ve yapıları içerir.
+Bu bölüm, kullanıcı ve uyarıyla ilgili genel bilgiler içerir. Bu bilgiler bağlam içerisinde kullanılabilir ve kullanıcı için uyarıya dahil edilen algılanan etkinlik hakkında ayrıntılı bilgileri gözden geçirebilirsiniz:
 
-Sınırlı geçerli değer sağlayan eski öğelerin sayısını en aza indirmeye yardımcı olmak için aşağıdaki bekletme ve sınırlar insider risk yönetimi uyarıları, vakaları ve kullanıcı etkinliği raporları için geçerlidir:
+- **Bu uyarıyı oluşturan etkinlik**: Uyarının oluşturulmaya neden olduğu etkinlik değerlendirme süresinde en üst risk etkinliğini ve ilke eşleşmesini görüntüler.
+- **Olayı tetikleyen**: İlkenin kullanıcının etkinliğine risk puanları atamayı başlatmayı başlatan en son tetikleyen olayı görüntüler.
+- **Kullanıcı profili**: Uyarıya atanan kullanıcı hakkında genel bilgileri görüntüler. Anonimleştirme etkinleştirildiyse, kullanıcı adı, e-posta adresi, diğer ad ve kuruluş alanları anonimleştirilmiştir.
+- **Kullanıcı uyarı geçmişi**: Son 30 gün boyunca kullanıcının uyarılarının listesini görüntüler. Kullanıcının tüm uyarı geçmişini görüntülemek için bir bağlantı içerir.
 
-|**Öğe**|**Bekletme/Sınır**|
-|:-------|:------------------|
-| İhtiyaçlar gözden geçirme durumu ile uyarılar | Uyarı oluşturmadan 120 gün sonra otomatik olarak silindi |
-| Etkin durumlar (ve ilişkili yapılar) | Belirsiz bekletme, asla süresi dolmaz |
-| Çözülen vakalar (ve ilişkili yapıtlar) | Olay çözümünden 120 gün sonra otomatik olarak silinir |
-| En fazla etkin vaka sayısı | 100 |
-| Kullanıcı etkinlikleri raporları | Etkinlik algılamadan 120 gün sonra otomatik olarak silindi |
+### <a name="all-risk-factors"></a>Tüm risk etmenleri
+
+Bu sekme, kullanıcının uyarı etkinliğine ilgili risk faktörlerinin özetini açar. Risk faktörleri, incelemeniz sırasında bu kullanıcının etkinliğinin ne kadar riskli olduğunu belirlemenize yardımcı olabilir. Risk faktörleri aşağıdakilerin özetlerini içerir:
+
+- **En çok yapılan filtreleme etkinlikleri**: Uyarı için en yüksek sayıya veya etkinliklere sahip filtreleme etkinliklerini görüntüler.
+- **Kümülatif filtreleme etkinlikleri**: Kümülatif filtreleme etkinlikleriyle ilişkili olayları görüntüler.
+- **Etkinlik dizisi:** Risk dizileriyle ilişkilendirilmiş algılanan etkinlikleri görüntüler.
+- **Bu kullanıcı için olağan dışı** etkinlik: Olağan dışı kabul edilen ve her zamanki etkinliklerinden bir şey kabul edilen kullanıcının etkinliklerini görüntüler.
+- **Öncelik içeriği**: Öncelik içeriğiyle ilişkili etkinlikleri görüntüler.
+- **Izin verilmeyen etki alanları**: Izin verilmeyen etki alanlarıyla ilişkilendirilmiş olayların etkinliklerini görüntüler.
+- **Sistem durumu kaydı erişimi**: Sistem durumu kayıtlarına erişimle ilişkilendirilmiş olaylar için etkinlikleri görüntüler.
+
+Bu filtrelerle yalnızca bu risk etmenlerine sahip uyarıları görebilir, ancak uyarı oluşturan etkinlik bu kategorilerin hiçbirine düşmeebilir. Örneğin, yalnızca kullanıcı bir dosyayı USB cihazına kopyalayalır diye sıralı etkinlikler içeren bir uyarı oluşturulmuş olabilir.
+
+### <a name="content-detected"></a>Algılanan içerik
+
+Tüm risk faktörleri **sekmesindeki bölüm** , uyarı için risk etkinlikleriyle ilişkili içeriği içerir ve önemli alanlara göre etkinlik olaylarını özetler. Etkinlik bağlantısı seçerek Etkinlik gezgini açılır ve etkinlikle ilgili daha fazla ayrıntı görüntülenir.
+
+### <a name="activity-explorer"></a>Etkinlik gezgini
+
+Bu sekme Etkinlik gezginini açar. Daha fazla bilgi için, bu makalenin Etkinlik gezgini bölümüne bakın.
+
+### <a name="user-activity"></a>Kullanıcı etkinliği
+
+Kullanıcı **etkinliği grafiği** , insider risk yönetimi çözümünde uyarılara ve vakalara karşı iç risk çözümlemesi ve soruşturma için en güçlü araçlardan biridir. Bu sekme, tüm uyarıların geçmiş zaman çizelgesi, uyarı ayrıntıları, kullanıcının geçerli risk puanı ve risk olaylarının dizisi de içinde olmak üzere kullanıcı için tüm etkinliklerin hızlı gözden geçirisini sağlayacak şekilde yapılandırılmıştır.  
+
+![Insider risk yönetimi kullanıcı etkinliği.](../media/insider-risk-user-activities.png)
+
+1. **Zaman filtreleri**: Varsayılan olarak, Kullanıcı etkinliği grafiğinde görüntülenen son üç etkinlik aylarıdır. Kabarcık grafiğinde *6* Ay, *3* Ay veya *1 Ay sekmelerini* seçerek grafik görünümünü kolayca filtrelayabilirsiniz.
+2. **Risk uyarısı etkinliği ve ayrıntıları**: Risk etkinlikleri, Kullanıcı etkinliği grafiğinde görsel olarak renkli kabarcıklar olarak görüntülenir. Kabarcıklar, farklı risk kategorileri için oluşturulur ve. Her risk etkinliğinin ayrıntılarını görüntülemek için bir kabarcık seçin. Ayrıntılar şunlardır:
+    - **Risk** etkinliğinin tarihi.
+    - **Risk etkinliği kategorisi**. Örneğin, *kuruluşun dışından gönderilen ekleri içeren e-posta* veya *SharePoint Online'dan indirilen e-SharePoint.*
+    - **Uyarının** risk puanı. Bu puan, uyarı riski önem düzeyine göre sayısal puandır.
+    - Uyarıyla ilişkili olayların sayısı. Risk etkinliğiyle ilişkili her dosya veya e-postanın bağlantıları da kullanılabilir.
+3.  **Filtreler ve sıralama (önizleme)**:
+    - **Risk kategorisi**: Etkinlikleri aşağıdaki risk kategorilerine göre filtrele: Risk puanları olan *> 15 (* sıralı olmadığı sürece) ve *Sıra* etkinlikleri.
+    - **Etkinlik Türü**: Etkinlikleri aşağıdaki türlere göre filtrele: *Access*, *Silme*, *Koleksiyon*, *Exfiltration,Filtre*, *Obfuscation* ve *Security*.
+    - **Sıralama düzeni**: Zaman çizelgesi etkinliklerini, Tarihin tarihine *veya Risk puanına* göre *listele*.
+4. **Risk sırası (önizleme)**: Riskli etkinliklerin kronolojik sırası, risk araştırmanın ve bu ilişkili etkinliklerin belirlenmesi, kurum açısından bir bütün olarak riski değerlendirmenin önemli bir kısmıdır. İlgili uyarı etkinlikleri, bu etkinliklerin daha büyük bir risk alanıyla ilişkilendiril vurgulu olduğu bağlantı çizgileri ile görüntülenir. Etkinliklerin bu görünümü, yalıtılmış veya tek başına etkinlikler olarak görüntülenilebilecek risk etkinlikleri için kelime anlamıyla "noktaları birbirine bağlama" yardımcı olabilir. İlişkili tüm risk etkinliklerinin ayrıntılarını görüntülemek için sırayla herhangi bir kabarcık seçin. Ayrıntılar şunlardır:
+
+    - **Sıranın** adı.
+    - **Sıranın** **tarih veya** tarih aralığı.
+    - **Dizi için** risk puanı. Bu puan, dizide ilgili her etkinlik için birleştirilmiş uyarı risk önem düzeyi düzeylerinin sırasının sayısal puanıdır.
+    - **Dizide yer alan her uyarıyla ilişkilendirilmiş olay sayısı**. Risk etkinliklerinin her biri ile ilişkilendirilmiş her dosya veya e-postanın bağlantıları da mevcuttur.
+    - **Etkinlikleri sırayla gösterme**. Sırayı kabarcık grafiğinde vurgu çizgisi olarak görüntüler ve ilgili tüm uyarıları sırayla görüntülemek için uyarı ayrıntılarını genişleter.
+
+4. **Risk etkinliği gösterge**: Kullanıcı etkinliği grafiğinin alt kısmında, renk kodlu bir gösterge her uyarı için risk kategorisini hızla belirlemenize yardımcı olur.
+5. **Risk etkinliği kronolojisi**: Vakayla ilişkilendirilmiş tüm risk uyarılarının tam kronolojik listesi, buna karşılık gelen uyarı balonunda bulunan tüm ayrıntılar da dahil olmak üzere listelenir.
+6. **Olay eylemleri**: Vakayı çözmeye yönelik seçenekler, olay eylemi araç çubuğundadır. Bir vakayı görüntülerken bir vakayı çözüme kavuşturabilirsiniz, kullanıcıya e-posta bildirimi gönderebilir veya veri veya kullanıcı soruşturması için durumu en iyi şekilde ifade edin.
 
 ## <a name="activity-explorer"></a>Etkinlik gezgini
 
@@ -157,12 +195,13 @@ Etkinlik kapsamını ve Risk içgörü filtrelerini kullanarak aşağıdaki alan
     - Bu kullanıcı için tüm puanlı etkinlikler
     - Bu uyarıda yalnızca puanlı etkinlik
 
-- **Risk içgörü** filtreleri: Risk puanları atanan tüm ilkeler için geçerli etkinlik filtreleri.
-    - Kümülatif filtreleme etkinlikleri
-    - Öncelik içeriği olan olayı içerir
-    - Izin verilmeyen etki alanına sahip olayı içerir
-    - Sıralı etkinlikler
+- **Risk faktörü filtreleri**: Risk puanları atan tüm ilkelere uygulanan risk faktörü etkinliği filtreleri Bu filtreler, kapsam içinde kullanıcılar için tüm ilkelere yönelik tüm etkinliği içerir.
     - Alışılmış dışı etkinlik
+    - Öncelikli içeriğe sahip olayları içerir
+    - Izin verilmeyen etki alanına sahip olayları içerir
+    - Sıralı etkinlikler
+    - Kümülatif filtreleme etkinlikleri
+    - Durum kaydı erişim etkinlikleri
 
 ![Insider risk yönetimi etkinlik gezginine genel bakış.](../media/insider-risk-activity-explorer.png)
 
@@ -173,7 +212,7 @@ Etkinlik **gezginini kullanmak için** aşağıdaki adımları tamamlayın:
 3. Uyarılar ayrıntı **bölmesinde Genişletilmiş görünümü** **aç'ı seçin**.
 4. Seçili uyarının sayfasında Etkinlik gezgini **sekmesini** seçin.
 
-Etkinlik gezgininde etkinlikleri gözden geçirerek, tahminler ve analistler belirli bir etkinliği seçerek etkinlik ayrıntıları bölmesini açabilir. Bölmede, uyarı üç aydan fazla süre önce uyarılarını ve analistlerin kullanabileceği etkinlik hakkında ayrıntılı bilgiler görüntülenir. Ayrıntılı bilgiler uyarı için bağlam sağlar ve uyarıyı tetikleyen risk etkinliğinin tam kapsamını belirlemeye yardımcı olabilir.
+Etkinlik gezgininde etkinlikleri gözden geçirerek, tahminler ve analistler belirli bir etkinliği seçerek etkinlik ayrıntıları bölmesini açabilir. Bölmede, uyarı üç aydan fazla süre önce uyarılarını ve analistlerin kullanabileceği etkinlik hakkında ayrıntılı bilgiler görüntülenir. Ayrıntılı bilgiler uyarı için bağlam sağlar ve uyarıyı tetikleyen risk etkinliğinin tam kapsamını belirlemede yardımcı olabilir.
 
 Etkinlik zaman çizelgesinden bir etkinliğin olaylarını seçenlerken, gezginde görüntülenen etkinliklerin sayısı zaman çizelgesinde listelenen etkinlik etkinliklerinin sayısıyla eşleşmez. Bu farkın neden ortaya çıkabilir örnekleri:
 
@@ -193,6 +232,20 @@ Uyarı gözden geçirildik ve triya göre sıralandı olarak, risk etkinliğini 
 5. Yeni **bir vaka oluşturmak** için Büyük/küçük harf oluştur'a veya büyük **/** küçük harf oluşturmadan iletişim kutusunu kapatmak için İptal'e seçin.
 
 Olay oluşturulduktan sonra, tahminler ve analistler vakayı yönetebilir ve buna göre eylemde  davranır. Daha fazla bilgi için [Insider risk yönetimi durum makalesine](insider-risk-management-cases.md) bakın.
+
+## <a name="retention-and-item-limits"></a>Bekletme ve öğe sınırları
+
+Insider risk yönetimi uyarılarının yaşı, riskli etkinliği en aza indirmeye değer olarak çoğu kuruluşta azalarak devam ediyor. Buna karşılık, etkin durumlar ve ilişkili yapılar (uyarılar, içgörüler, etkinlikler) kuruluşlar için her zaman değerlidir ve otomatik bir son kullanma tarihi olmaması gerekir. Bu, etkin bir vakayla ilişkilendirilmiş herhangi bir kullanıcı için etkin durumdaki gelecekteki tüm uyarıları ve yapıları içerir.
+
+Sınırlı geçerli değer sağlayan eski öğelerin sayısını en aza indirmeye yardımcı olmak için aşağıdaki bekletme ve sınırlar insider risk yönetimi uyarıları, vakaları ve kullanıcı etkinliği raporları için geçerlidir:
+
+|**Öğe**|**Bekletme/Sınır**|
+|:-------|:------------------|
+| İhtiyaçlar gözden geçirme durumu ile uyarılar | Uyarı oluşturmadan 120 gün sonra otomatik olarak silindi |
+| Etkin durumlar (ve ilişkili yapılar) | Belirsiz bekletme, asla süresi dolmaz |
+| Çözülen vakalar (ve ilişkili yapıtlar) | Olay çözümünden 120 gün sonra otomatik olarak silinir |
+| En fazla etkin vaka sayısı | 100 |
+| Kullanıcı etkinlikleri raporları | Etkinlik algılamadan 120 gün sonra otomatik olarak silindi |
 
 ## <a name="get-help-managing-your-insider-risk-alert-queue"></a>Insider risk uyarı kuyruğunızı yönetme ile ilgili yardım al
 

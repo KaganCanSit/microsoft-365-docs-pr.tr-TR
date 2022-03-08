@@ -2,8 +2,8 @@
 title: Fiyatı düşürmek için promosyon kodunuzu kullanma
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: drjones, jmueller
 audience: Admin
@@ -14,18 +14,18 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
+- commerce_purchase
 - AdminSurgePortfolio
 - okr_SMB
-- commerce_purchase
-search.appverid: MET150 S
+search.appverid: MET150
 description: Fiyatı düşürmek için Microsoft 365 aboneliğinize promosyon kodu uygulama ve hata durumunda promosyon kodu sorunlarını giderme hakkında bilgi alın.
 ms.date: 03/17/2021
-ms.openlocfilehash: ac7d07406ff25c5f32d269567e418cd94f540d0f
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 08a5df42de5c230ef7f0945e40c13262e0ae2bb7
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983723"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63325411"
 ---
 # <a name="use-your-promo-code-to-reduce-price"></a>Fiyatı düşürmek için promosyon kodunuzu kullanma
 

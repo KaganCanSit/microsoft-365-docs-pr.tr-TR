@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: bc7b18088d25e47cd214da2df94ff5eb524f2e78
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: e0e2490fb9026ff23e55990930ddedeb48144b92
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63014159"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315981"
 ---
 # <a name="investigate-entities-on-devices-using-live-response"></a>Canlı yanıtı kullanan cihazlardaki varlıkları araştırma
 
@@ -221,7 +221,7 @@ Araştıran bir cihazdan dosya almak istediğiniz senaryolar için komutu kullan
 > Aşağıdaki dosya boyutu sınırları geçerlidir:
 >
 > - `getfile` sınır: 3 GB
-> - `fileinfo` sınır: 10 GB
+> - `fileinfo` sınır: 30 GB
 > - `library` sınır: 250 MB
 
 ### <a name="download-a-file-in-the-background"></a>Arka planda dosya indirme
@@ -351,6 +351,7 @@ Oturum **sırasında cihazda** kullanılan komutları görmek için Komut günl�
 
 - Canlı yanıt oturumları bir defada 25 canlı yanıt oturumuyla sınırlıdır.
 - Canlı yanıt oturumunun etkin olmayan zaman aşımı değeri 30 dakikadır.
+- Her bir canlı yanıt komutlarının 30 dakika sınırlaması olan ' `findfile``run`ve ' dışında 10 `getfile`dakika süre sınırı vardır.
 - Bir kullanıcı en çok 10 eşzamanlı oturum başlatabilirsiniz.
 - Bir cihaz aynı anda yalnızca bir oturumda olabilir.
 - Aşağıdaki dosya boyutu sınırları geçerlidir:

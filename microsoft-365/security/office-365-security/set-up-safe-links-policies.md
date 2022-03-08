@@ -19,12 +19,12 @@ ms.custom: ''
 description: Yöneticiler, İş için Microsoft Defender'daki Bağlantılar ilkelerini ve Kasa Bağlantıları Kasa görüntülemeyi, oluşturmayı, değiştirmeyi ve Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2b4435dc8cf7cb560d565e6457f18b7f00e38bd0
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 7d4cbaccab3eca371114eec92fe1bf89b2c0e353
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021590"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312985"
 ---
 # <a name="set-up-safe-links-policies-in-microsoft-defender-for-office-365"></a>Destek için Microsoft Defender Kasa da Bağlantılar ilkelerini Office 365
 
@@ -83,7 +83,7 @@ PowerShell Exchange Online tek başına EOP PowerShell'de, ilkeyi ve kuralı ayr
 
 - Bağlantılar ilkeleri hakkında önerilen ayarlarımız Kasa, bağlantı [ilkesi Kasa'ne bakın](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
 
-- Yeni veya güncelleştirilmiş ilkenin uygulanması için 30 dakika kadar bekleyin.
+- Yeni veya güncelleştirilmiş ilkenin uygulanması için 6 saate kadar izin verme.
 
 - [İş için Microsoft Defender'a sürekli yeni özellikler Office 365](defender-for-office-365.md#new-features-in-microsoft-defender-for-office-365). Yeni özellikler eklendiklerine göre, mevcut Özellikler ve Bağlantılar ilkeleriniz için Kasa gerekir.
 

@@ -11,14 +11,15 @@ search.appverid: ''
 ms.collection:
 - enabler-strategic
 - m365initiative-syntex
+ms.custom: admindeeplinkSPO
 ms.localizationpriority: medium
 description: Microsoft SharePoint Syntex'da sınıflandırıcının nasıl oluşturul SharePoint Syntex.
-ms.openlocfilehash: 1fe4200c68d6458d20a71b834bd2a0b08319ecb2
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 5e9be6065e0328a412e73680a0200ea7929c8011
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988156"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324879"
 ---
 # <a name="create-a-classifier-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'de sınıflandırıcı oluşturma
 
@@ -61,7 +62,7 @@ Modelinizi oluşturmanın ilk adımı, modelinize bir ad vermektir:
 
 Bir model oluştururken, aynı zamanda yeni bir site içerik türü de oluşturuyor oluruz. İçerik türü, ortak özelliklere sahip olan ve bu belirli içerik için sütun veya meta veri özellikleri koleksiyonunu paylaşan bir belge kategorisini temsil eder. SharePoint türleri İçerik Türleri galerisi [aracılığıyla yönetilir](https://support.microsoft.com/office/create-or-customize-a-site-content-type-27eb6551-9867-4201-a819-620c5658a60f). Bu örnek için, modeli oluştururken yeni bir Sözleşme Yenileme içerik *türü oluşturuyoruz* .
 
-Bu **modeli,** şemasını kullanmak üzere İçerik Türleri galerisinde var olan bir kurumsal içerik türüyle eşlemek SharePoint Gelişmiş ayarlar'ı seçin. Enterprise türleri İçerik Türü Merkezi'nde, SharePoint yönetim merkezinde depolanır ve kiracının tüm sitelerine dağıtımda kullanılır. Tanımlama ve sınıflandırmaya yardımcı olmak üzere şemasından yararlanan mevcut bir içerik türünü kullansanız da modelinizi tanımları olan dosyalardan bilgi ayıklayması için eğitin.</br>
+Bu **modeli,** şemasını kullanmak üzere İçerik Türü galerisinde var olan bir kurumsal içerik türüyle <a href="https://go.microsoft.com/fwlink/?linkid=2185074" target="_blank">eşlemek</a> SharePoint Gelişmiş ayarlar'ı seçin. Enterprise türleri İçerik Türü Merkezi'nde, SharePoint yönetim merkezinde depolanır ve kiracının tüm sitelerine dağıtımda kullanılır. Tanımlama ve sınıflandırmaya yardımcı olmak üzere şemasından yararlanan mevcut bir içerik türünü kullansanız da modelinizi tanımları olan dosyalardan bilgi ayıklayması için eğitin.</br>
 
 ![Gelişmiş ayarlar'a tıklayın.](../media/content-understanding/advanced-settings.png)
 

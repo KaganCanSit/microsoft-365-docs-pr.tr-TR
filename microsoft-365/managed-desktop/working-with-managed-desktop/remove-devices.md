@@ -11,16 +11,16 @@ ms.collection: M365-modern-desktop
 manager: dougeby
 ms.topic: article
 audience: Admin
-ms.openlocfilehash: c4be03b7ba86449a875e268adbbdfbf1d4625aab
-ms.sourcegitcommit: af73b93a904ce8604be319e8dc7cadaf65d50534
+ms.openlocfilehash: 82e14fbd2bc991505c84d219c0624f52791376d3
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "63010088"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324585"
 ---
 # <a name="remove-devices"></a>Cihazları kaldır
 
-Yönetim portalını kullanarak cihazları Microsoft Yönetilen Masaüstü yönetiminden kaldırabilirsiniz. Bu eylem kalıcıdır, ancak kayıt adımlarını takiperek bunları Microsoft Yönetilen Masaüstü'ne [tekrar kaydettirebilirsiniz](../get-started/register-devices-self.md).
+Yönetim portalını kullanarak cihazları Microsoft Yönetilen Masaüstü yönetiminden kaldırabilirsiniz. Bu eylem kalıcıdır, ancak el ile kayıt adımlarını takiparak bunları Microsoft Yönetilen [Masaüstü'ne tekrar kaydettirebilirsiniz](../get-started/manual-registration.md).
 
 Bir cihazı kaldırsanız, aşağıdakilerin hepsi gerçekleşir:
 

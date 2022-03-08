@@ -17,15 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 ms.custom:
+- admindeeplinkCOMPLIANCE
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 description: Microsoft 365'de kayıt yönetimiyle, bekletme, kayıt bildirimi ve yoklamayı yöneten bir dosya planına bekletme zamanlamalarınızı uygulayabilirsiniz.
-ms.openlocfilehash: d5d4752e76a2a39b1c5fafab964d13ce11873e9b
-ms.sourcegitcommit: f5854c27de231d446e13a45b56c6bcd018175c52
+ms.openlocfilehash: c7546216a935960e5c4b66b37bb3308d0a69e89e
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63014070"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324823"
 ---
 # <a name="learn-about-records-management-in-microsoft-365"></a>Microsoft 365'de kayıt yönetimi hakkında bilgi Microsoft 365
 
@@ -91,9 +92,9 @@ Standart bekletme etiketinde bekletme ayarları ve eylemleri vardır, ancak içe
 
 Dipnotlar:
 
-<sup>1</sup> Varsayılan olarak izin verilir ama 0 bayt'tan büyük dosyalar için kiracı ayarı tarafından engellenemez: Microsoft 365 uyumluluk merkezi >  >  Kayıt yönetimi **ayarları'nın** >  Kayıt yönetimi  düğümüne gidin Kayıt özelliklerini düzenlemeye izin ver ve sonra Kullanıcıların kayıt özelliklerini düzenlemesine izin ver ayarını **kapatın.**
+<sup>1</sup> Kilitli kaydın özelliklerine varsayılan olarak izin verilir, ancak [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/) >  **Decords yönetimiRecords** >  yönetim **ayarlarıRetention** >  **labelsAlt** >  özelliklerini düzenlemeye izin ver.
 
-<sup>2</sup> SharePoint ve OneDrive için, Microsoft 365 uyumluluk merkezi >  >  Kayıt **yönetimiDecords** >  yönetim **ayarlarıRetention etiketleriDeletion** >  **of items**
+<sup>2</sup> SharePoint ve OneDrive etiketli öğelerin silinmesi [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/) >  **Cords yönetimiRecords** >  >  yönetim **ayarlarıRetention etiketleriDeletion** >  of items altında kiracı ayarı **olarak engellenmiş olabilir**.
 
 Belge eki olan bir liste öğesine bekletme etiketi uygulayabilirsiniz, bu belge bekletme ayarlarını devralmaz ve liste öğesinden silinebilir. Buna karşılık, bu liste öğesi bir bekletme etiketiyle kayıt olarak bildirmişse, belge eki bekletme ayarlarını devralabilir ve silinemez.
 

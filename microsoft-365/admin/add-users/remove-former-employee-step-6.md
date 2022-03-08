@@ -25,14 +25,14 @@ search.appverid:
 - MET150
 - MOE150
 description: Eski bir çalışanın lisansını Microsoft 365 için bu adımları izleyin.
-ms.openlocfilehash: 52ab851c88d05c33de58d28d566a46b5e8b1710b
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: b724e8d65c990396ad376544de86d4ffd0cb5fdc
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019451"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315169"
 ---
-# <a name="step-6---remove-the-microsoft-365-license-from-a-former-employee"></a>6. Adım - Eski Microsoft 365 kullanıcı lisansını kaldırma
+# <a name="step-6---remove-and-delete-the-microsoft-365-license-from-a-former-employee"></a>6. Adım - Eski bir Microsoft 365 lisansını kaldırma ve silme
 
 Birisi organizasyondan ayrıldığında lisans için ödeme yapmak istemiyorsanız bu kişinin Microsoft 365 lisansını kaldırmanız ve sonra aboneliğiniz üzerinden silmeniz gerekir. Silmedığınız bir lisansı başka bir kullanıcıya attebilirsiniz.
 

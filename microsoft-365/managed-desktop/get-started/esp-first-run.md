@@ -10,12 +10,12 @@ audience: ITpro
 ms.topic: article
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-ms.openlocfilehash: 813355d57f24f9cafcb97b73b5fde641800634ec
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: ff4e7dc306ea3a017cb94261673d1325bc7cf94e
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016601"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324599"
 ---
 # <a name="first-run-experience-with-autopilot-and-the-enrollment-status-page"></a>AutoPilot ve Kayıt Durumu Sayfası ile ilk çalıştırma deneyimi
 
@@ -23,7 +23,7 @@ Microsoft Yönetilen Masaüstü, kullanıcılarınıza Windows ilk çalıştırm
 
 ## <a name="initial-deployment"></a>İlk dağıtım
 
-ESP deneyimini sağlamak için cihazları Microsoft Yönetilen Masaüstü hizmetine kaydetmelisiniz. Kayıt hakkında daha fazla bilgi için bkz [. Yeni cihazları kendiniz kaydetme veya](../get-started/register-devices-self.md) [Cihazları kaydetme iş ortakları için adımlar](../get-started/register-devices-partner.md).
+ESP deneyimini sağlamak için cihazları Microsoft Yönetilen Masaüstü hizmetine kaydetmelisiniz. Kayıt hakkında daha fazla bilgi için bkz. [El ile kayıt](../get-started/manual-registration.md) veya [İş ortağı kaydı](../get-started/partner-registration.md).
 Kayıt Durumu Sayfası ve Önceden sağlanan dağıtım için AutoPilot, Microsoft Yönetilen Masaüstü'de varsayılan olarak etkindir.
 
 ## <a name="autopilot-profile-settings"></a>AutoPilot profil ayarları
@@ -130,7 +130,7 @@ Farklı bir cihaz adı şablonu istemeniz iyi olabilir. Bununla birlikte, Dağı
 1. Dağıtım ve [Intune Şirket Portalı](company-portal.md).
 1. [Lisans atama](assign-licenses.md).
 1. [Uygulamaları dağıtın](deploy-apps.md).
-1. [Cihazları ayarlayın](set-up-devices.md).
+1. [Cihazları hazırlayın](prepare-devices.md).
 1. AutoPilot ve Kayıt Durumu Sayfası ile ilk çalıştırma deneyimini ayarlayın (bu makale).
 1. [Kullanıcı desteği özelliklerini etkinleştirin](enable-support.md).
 1. [Kullanıcılarınızı cihazları kullanmaya hazır hale hazırlayın](get-started-devices.md).

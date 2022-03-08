@@ -16,12 +16,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.collection:
 - M365-subscription-management
-ms.openlocfilehash: bff8af115f23db7fe152ed6ee06e62d128f2b9e4
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+ms.openlocfilehash: a368102b6cb4eabaadd459fd185d18e3a7dc7381
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63009976"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323409"
 ---
 # <a name="cross-tenant-mailbox-migration-preview"></a>Kiracılar arası posta kutusu geçişi (önizleme)
 
@@ -214,7 +214,16 @@ Aboneliğin kiracı kimliğini almak için abonelik oturum Microsoft 365 yöneti
 Hedef kiracıda oluşturduğunuz kiracılar arası geçiş uç noktasına [Test-MigrationServerAvailability](/powershell/module/exchange/Test-MigrationServerAvailability) cmdlet'ini çalıştırarak kiracılar arası posta kutusu geçiş yapılandırmasını doğruabilirsiniz.
 
    > [!NOTE]
-   > Test-MigrationServerAvailability -Endpoint "[kiracılar arası geçiş uç noktanın adı]" -TestMailbox "[geçiş kapsamınıza kapsamındaki kaynak posta kutusunun[e-posta adresi]"
+   >
+   > - Hedef kiracı:
+   > 
+   > Test-MigrationServerAvailability -Endpoint "[kiracılar arası geçiş uç noktanın adı]"
+   >
+   > Get-OrganizationRelationship | fl name, DomainNames, MailboxMoveEnabled, MailboxMoveCapability
+   >
+   > - Kaynak kiracı:
+   > 
+   > Get-OrganizationRelationship | fl name, DomainNames, MailboxMoveEnabled, MailboxMoveCapability 
 
 ### <a name="move-mailboxes-back-to-the-original-source"></a>Posta kutularını özgün kaynağına geri taşıma
 

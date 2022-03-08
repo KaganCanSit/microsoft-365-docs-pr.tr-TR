@@ -1,7 +1,7 @@
 ### YamlMime:FAQ
 metadata:
-  title: Microsoft 365 İş Ekstra sık sorulan sorular 
-  description: Küçük ve orta ölçekli işletmeler (KOBİ) için tasarlanmış yeni bir çözüm olan Microsoft 365 İş hakkında en sık sorulan sorulara yanıtlar bulun. 
+  title: Microsoft 365 İş Ekstra sık sorulan sorular
+  description: Küçük ve orta ölçekli işletmeler (KOBİ) için tasarlanmış yeni bir çözüm olan Microsoft 365 İş hakkında en sık sorulan sorulara yanıtlar bulun.
   author: efrene
   f1.keywords:
   - NOCSH
@@ -11,22 +11,22 @@ metadata:
   ms.collection: M365-subscription-management
   ms.custom: AdminSurgePortfolio
   ms.localizationpriority: medium
-  audience: microsoft-business 
+  audience: microsoft-business
   keywords: Microsoft 365 Business Premium, Microsoft 365, SMB, FAQ, frequently asked questions, answers, business
-  ms.date: 07/21/2020
-  ms.openlocfilehash: 1719a51ebcb5863a2ddc09f4dbfde0873dba3766
-  ms.sourcegitcommit: db62fce58867c7e5c8029b66966e792da3103b89
+  ms.date: 02/25/2022
+  ms.openlocfilehash: dd5a011e57f590251e046fd2663db259c98486bf
+  ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 12/23/2021
-  ms.locfileid: "63019144"
+  ms.lasthandoff: 03/08/2022
+  ms.locfileid: "63312570"
 title: Microsoft 365 İş Ekstra sık sorulan sorular
 summary: ''
 sections:
 - name: Genel
   questions:
   - question: Microsoft 365 İş Ekstra nedir?
-    answer: "Microsoft 365, küçük ve orta ölçekli işletmeler için sınıfının en iyisi üretkenlik araçlarını, güvenlik ve cihaz yönetimi özelliklerini bir araya getiren tümleşik bir çözümdür. İçindekiler:\n\n**Bir dizi iş üretkenliği ve işbirliği aracı**:\n\n- Word, Excel, PowerPoint, Outlook, OneNote, Publisher ve Access\n- Exchange, OneDrive, Skype Kurumsal, Microsoft Teams ve SharePoint.\n         \n**Enterprise sınıf cihaz yönetimi ve güvenlik özellikleri**:\n\n- Plan 1 ve Daha Fazla Güvenlik için Microsoft Defender ile kimlik avı ve gelişmiş kötü amaçlı yazılım gibi dış tehditlere Office 365 yardımcı Microsoft Defender Exploit Guard.\n- Veri kaybını önleme ilkeleri ve Azure Information Protection Plan 1 ile hassas bilgilere nasıl erişileceğini ve bu bilgilerin nasıl aktarılacağını denetlemeye ve yönetmeye yardımcı olur.\n- Exchange Online Arşivleme ile verilerinizi korumanıza, saklamanıza ve yedeklemenize yardımcı olur.\n- Intune Uygulama Koruma ile Office ve diğer mobil uygulamalar için uygulama koruması.\n- Intune cihaz Windows 10 ile PC, macOS ve mobil cihazlar için cihaz yönetimi.\n- Çok faktörlü kimlik doğrulama, kendi kendine parola sıfırlama ve koşullu erişim ile kimlik koruması.\n- Cihazlar arasında şirket verilerini koruma&mdash;, cihazlar arasında tutarlı güvenlik yapılandırması; Microsoft Defender Virüsten Koruma ve güncel olan sayfadır.\n\n**Basitleştirilmiş cihaz dağıtımı ve kullanıcı kurulumu**:\n\n- Kullanıcıları ve cihazları ayarlamak ve yönetmek için tek yönetici konsolu\n- Windows 10 bilgisayarlarda Office uygulamalarını otomatik yükleme.\n- Her zaman güncel Office + Windows 10.\n- Windows AutoPilot ile bilgisayarların kolay dağıtımı.\n\n**Diğer yetkilendirmeler**:\n\n- Microsoft 365 İş Ekstra müşterilerinin Windows Sanal Masaüstü ve Office Paylaşılan Bilgisayar Etkinleştirmesi özelliklerine de erişimi vardır. Daha fazla [Microsoft 365 için Küçük ve Orta Ölçekli İşletme blog](https://techcommunity.microsoft.com/t5/Microsoft-365-Business-Blog/bg-p/Microsoft365BusinessBlog) gönderilerini okuyun. Ayrıca [Microsoft 365 İş hizmet açıklaması](/office365/servicedescriptions/office-365-platform-service-description/office-365-platform-service-description) makalesine bakın.          \n"
+    answer: "Microsoft 365, küçük ve orta ölçekli işletmeler için sınıfının en iyisi üretkenlik araçlarını, güvenlik ve cihaz yönetimi özelliklerini bir araya getiren tümleşik bir çözümdür. İçindekiler:\n\n**Bir dizi iş üretkenliği ve işbirliği aracı**:\n\n- Word, Excel, PowerPoint, Outlook, OneNote, Publisher ve Access\n- Exchange, OneDrive, Skype Kurumsal, Microsoft Teams ve SharePoint.\n         \n**Enterprise sınıf cihaz yönetimi ve güvenlik özellikleri**:\n\n- Plan 1 ve İş için Microsoft Defender ile kimlik avı ve gelişmiş kötü amaçlı yazılımlara karşı Office 365 koruma sağlar.\n- Veri kaybını önleme ilkeleri ve Azure Information Protection Plan 1 ile hassas bilgilere nasıl erişileceğini ve bu bilgilerin nasıl aktarılacağını denetlemeye ve yönetmeye yardımcı olur.\n- Exchange Online Arşivleme ile verilerinizi korumanıza, saklamanıza ve yedeklemenize yardımcı olur.\n- Intune Uygulama Koruma ile Office ve diğer mobil uygulamalar için uygulama koruması.\n- Intune cihaz Windows 10 ile PC, macOS ve mobil cihazlar için cihaz yönetimi.\n- Çok faktörlü kimlik doğrulama, kendi kendine parola sıfırlama ve koşullu erişim ile kimlik koruması.\n- Cihazlar arasında şirket verilerini koruma&mdash;, cihazlar arasında tutarlı güvenlik yapılandırması; Microsoft Defender Virüsten Koruma ve güncel olan sayfadır.\n\n**Basitleştirilmiş cihaz dağıtımı ve kullanıcı kurulumu**:\n\n- Kullanıcıları ve cihazları ayarlamak ve yönetmek için tek yönetici konsolu\n- Windows 10 bilgisayarlarda Office uygulamalarını otomatik yükleme.\n- Her zaman güncel Office + Windows 10.\n- Windows AutoPilot ile bilgisayarların kolay dağıtımı.\n\n**Diğer yetkilendirmeler**:\n\n- Microsoft 365 İş Ekstra müşterilerinin Windows Sanal Masaüstü ve Office Paylaşılan Bilgisayar Etkinleştirmesi özelliklerine de erişimi vardır. Daha fazla [Microsoft 365 için Küçük ve Orta Ölçekli İşletme blog](https://techcommunity.microsoft.com/t5/Microsoft-365-Business-Blog/bg-p/Microsoft365BusinessBlog) gönderilerini okuyun. Ayrıca [Microsoft 365 İş hizmet açıklaması](/office365/servicedescriptions/office-365-platform-service-description/office-365-platform-service-description) makalesine bakın.          \n"
   - question: Kimler Microsoft 365 İş Ekstra’yı benimsemeyi düşünmelidir?
     answer: "Microsoft 365 İş Ekstra, size şu olanakları sunan kapsamlı, bulut tabanlı güvenlik çözümüdür:\n\n- İşletmenizi gelişmiş kimlik avı ve fidye yazılımı korumasıyla gelişmiş siber tehditlere karşı savunma.\n- Verilerin onları görme yetkisi olmayan biriyle yanlışlıkla paylaşılmasını önlemek için şifreleme kullanarak hassas bilgilere erişimi denetleme.\n- İşletmenize bağlanan cihazların güvenliğini sağlama ve iOS, Android, Windows ve Mac cihazlarındaki verilerinizin güvenli ve Windows cihazlarınızın güncel kalmasına yardımcı olma.\n\nMicrosoft 365 İş Ekstra; yönetim, faturalandırma ve 7/24 destek için size tanıdık bir konum sağlamak amacıyla Office 365 ile tamamen tümleşiktir. 300’den az çalışanı olan işletmeler için yerleşik kurumsal sınıf teknolojiden oluşur. \n"
   - question: İşletmem için Microsoft 365 İş Ekstra’yı nasıl edinebilirim?

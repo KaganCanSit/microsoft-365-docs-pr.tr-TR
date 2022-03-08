@@ -15,16 +15,16 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.custom: ''
 description: Laboratuvar Seti ve Dağıtım Laboratuvarı Seti'Windows Office hakkında bilgi alın.
-ms.openlocfilehash: 5a62e32e60a8c52a2c7a59200573c52b0543ab78
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: 7f91fdbd72a496d06377259387f53fbe923f1981
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016493"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63314455"
 ---
 # <a name="windows-and-office-365-deployment-lab-kit"></a>Windows ve Office 365 dağıtım laboratuvar seti
 
-Windows ve Office 365 dağıtım laboratuvarı seti, Windows 10 Enterprise veya Windows 11 işletim sistemi çalıştıran masaüstlerini planlamanıza, test etmeye ve doğrulamanıza yardımcı Enterprise ve Kurumlar için Microsoft 365 Uygulamaları. Kit kapağında laboratuvarlar Microsoft Endpoint Configuration Manager, Office Customization Tool, OneDrive, AutoPilot Windows gibi daha fazlasını içerir. Bu set, masaüstü yükseltmeleri için hazırlanan kuruluşlar için kesinlikle önerilir. Laboratuvar, yalıtılmış bir ortam olarak dağıtım aracı güncelleştirmelerini keşfetmek ve dağıtımla ilgili otomasyonu test etmek için de idealdir.
+Windows ve Office 365 dağıtım laboratuvarı seti, Windows 10 Enterprise veya Windows 11 işletim sistemi çalıştıran masaüstlerini planlamanıza, test etmeye ve doğrulamanıza yardımcı Enterprise ve Kurumlar için Microsoft 365 Uygulamaları. Kit kapağında Microsoft Endpoint Configuration Manager, OneDrive, AutoPilot Windows daha fazlasını kullanan laboratuvarlar. Bu set, masaüstü yükseltmeleri için hazırlanan kuruluşlar için kesinlikle önerilir. Laboratuvar, yalıtılmış bir ortam olarak dağıtım aracı güncelleştirmelerini keşfetmek ve dağıtımla ilgili otomasyonu test etmek için de idealdir.
 
 **Windows 10 için Windows 11 sürümü, Microsoft Değerlendirme Merkezi'nde ücretsiz indirilebilir.**
 
@@ -39,7 +39,7 @@ Laboratuvar, etki alanına katılmış masaüstü istemcileri, etki alanı denet
 |Windows 10 Laboratuvar  |Windows 11 Laboratuvar  |
 |---------|---------|
 |Windows 10 Enterprise, Sürüm 21H1      | Windows 11 Enterprise        |
-|Microsoft Endpoint Configuration Manager, Sürüm 2103     |  Microsoft Endpoint Configuration Manager, Sürüm 2111      | 
+|Microsoft Uç Nokta Yapılandırma Yöneticisi, Sürüm 2103     |  Microsoft Endpoint Configuration Manager, Sürüm 2111      | 
 |Windows Değerlendirme ve Dağıtım Seti'Windows 10     |  Windows Değerlendirme ve Dağıtım Seti Windows 11      | 
 |Windows Server 2019     |  Windows Server 2022      | 
 
@@ -101,7 +101,7 @@ Ayrıntılı laboratuvar kılavuzları birçok dağıtım ve yönetim senaryosun
 [Windows 11 ve Office 365 laboratuvar seti indirin](https://www.microsoft.com/evalcenter/evaluate-windows-11-office-365-lab-kit)
 
 > [!NOTE]
-> Bu içeriği indirmek için lütfen geniş bant İnternet bağlantısı kullanın ve otomatik sağlama için yaklaşık 30 dakika bekleyin. Laboratuvar ortamı en az 16 GB kullanılabilir bellek ve 150 GB boş disk alanı gerektirir. En iyi performans için 32 GB kullanılabilir bellek ve 300 GB boş alan önerilir. Laboratuvar Windows 10 15 Şubat 2022'de sona erer. 11 Windows laboratuvarı 11 Nisan 2022'de sona erer. Yeni sürümler sona ermeden önce yayımlanacak.
+> Bu içeriği indirmek için lütfen geniş bant İnternet bağlantısı kullanın ve otomatik sağlama için yaklaşık 30 dakika bekleyin. Laboratuvar ortamı en az 16 GB kullanılabilir bellek ve 150 GB boş disk alanı gerektirir. En iyi performans için 32 GB kullanılabilir bellek ve 300 GB boş alan önerilir. Laboratuvar Windows 10 16 Mayıs 2022'de sona erecek. 11 Windows laboratuvarı 11 Nisan 2022'de sona erer. Yeni sürümler sona ermeden önce yayımlanacak.
 
 ## <a name="additional-guidance"></a>Ek kılavuz
 

@@ -2,8 +2,8 @@
 title: Lisans satın alma veya kaldırma
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: argani, nicholak
 audience: Admin
@@ -14,21 +14,21 @@ ms.collection:
 - M365-subscription-management
 - Adm_o365
 ms.custom:
+- commerce_licensing
 - okr_SMB
 - AdminSurgePortfolio
 - manage_licenses
-- commerce_licensing
 - AdminTemplateSet
 - adminvideo
 search.appverid: MET150
 description: İşletmeler için İşletmeler aboneliğinize daha fazla lisans satın almak veya lisans Microsoft 365 için bu adımları kullanın.
 ms.date: 09/16/2021
-ms.openlocfilehash: 2341fdb66d680a0e8b61b7cffe0670f668b57267
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: 8520aa57caa53fde0fcbbb677eb4277baeed651a
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62996020"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63328463"
 ---
 # <a name="buy-or-remove-licenses"></a>Lisans satın alma veya kaldırma
 

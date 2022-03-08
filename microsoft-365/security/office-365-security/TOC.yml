@@ -8,13 +8,13 @@
           href: overview.md
         - name: Office 365 için Defender
           href: defender-for-office-365.md
-        - name: Office 365 için Defender'da adım adım tehdit Office 365
+        - name: Office 365 için Defender'da adım adım tehdit koruması
           href: protection-stack-microsoft-defender-for-office365.md
         - name: Defender'ı Office 365
           href: office-365-evaluation.md
         - name: Office 365 için Defender'daki Office 365
           href: whats-new-in-defender-for-office-365.md
-        - name: Office 365 portalında Microsoft 365 Defender için Defender
+        - name: Microsoft 365 Defender portalında Office 365 için Defender
           href: ../defender/microsoft-365-security-center-mdo.md
         - name: Exchange Online Protection
           items:
@@ -24,7 +24,7 @@
               href: mail-flow-in-eop.md
             - name: Karantina
               href: quarantine-email-messages.md
-        - name: 'Kasa, E-SharePoint, OneDrive için Ekleri Microsoft Teams'
+        - name: 'Kasa, Bağlantı SharePoint OneDrive için Ekleri Microsoft Teams'
           href: turn-on-mdo-for-spo-odb-and-teams.md
         - name: Microsoft 365 Defender portalına genel bakış
           href: ../defender/microsoft-365-defender.md
@@ -48,7 +48,7 @@
           href: anti-spoofing-protection.md
         - name: Kasa için Defender'da Ekleri Office 365
           href: safe-attachments.md
-        - name: Kasa Defender'daki Bağlantılara Office 365
+        - name: Kasa için Defender'daki Bağlantıları Office 365
           href: safe-links.md
         - name: Giden istenmeyen posta koruması
           href: outbound-spam-controls.md
@@ -58,8 +58,6 @@
           href: office-365-ti.md
         - name: Office 365 Olayı Yanıtı
           href: office365-security-incident-response-overview.md
-        - name: 'Kuruluş Kampanyaları, Kar Amacı Gütmeyen Kuruluşlar ve Diğer Çevik Kuruluşlar için Microsoft Güvenlik Kılavuzu'
-          href: microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md
     - name: Dağıtma
       items:
         - name: Tehditlere karşı koruma
@@ -68,7 +66,7 @@
           href: integrate-office-365-ti-with-mde.md
         - name: Microsoft 365 Defender portalında izinler
           href: permissions-microsoft-365-security-center.md
-        - name: Güvenlik ve Uyumluluk Merkezi& İzinler
+        - name: Güvenlik ve Uyumluluk & İzinler
           href: permissions-in-the-security-and-compliance-center.md
         - name: SIEM sunucu tümleştirmesi
           href: siem-server-integration.md
@@ -76,7 +74,7 @@
           href: siem-integration-with-office-365-ti.md
         - name: Varsayılan olarak güvenli
           href: secure-by-default.md
-        - name: Güvenlik için Defender'da kimlik avı koruma ilkelerini Office 365
+        - name: Kimlik avı koruması ilkelerini kimlik avı için Defender'da Office 365
           href: configure-mdo-anti-phishing-policies.md
         - name: EOP'de kimlik avı önleme ilkelerini yapılandırma
           href: configure-anti-phishing-policies-eop.md
@@ -94,7 +92,7 @@
           href: configure-junk-email-settings-on-exo-mailboxes.md
         - name: Bağlantı filtrelemeyi yapılandırma
           href: configure-the-connection-filter-policy.md
-        - name: Web için Defender'Kasa Bağlantılar'ın genel ayarlarını Office 365
+        - name: Gizlilik ayarları için Defender'Kasa Bağlantılar'ın genel ayarlarını Office 365
           href: configure-global-settings-for-safe-links.md
         - name: Giden istenmeyen posta filtrelemeyi yapılandırma
           href: configure-the-outbound-spam-policy.md
@@ -104,13 +102,13 @@
           href: Create-safe-sender-lists-in-office-365.md
         - name: E-posta kimlik doğrulaması
           href: email-validation-and-authentication.md
-        - name: Kullanıcılara Güvenlik ve Uyumluluk Merkezi'& erişme izni verme
+        - name: Kullanıcılara Güvenlik ve Uyumluluk Merkezi'& verme
           href: grant-access-to-the-security-and-compliance-center.md
-        - name: Kasa için Defender'da Belgeleri Office 365
+        - name: Kasa için Defender'da Belgeler Office 365
           href: safe-docs.md
         - name: Yeni yönetim Kasa Defender'da Bağlantılar ilkelerini Office 365
           href: set-up-safe-links-policies.md
-        - name: Ekleri Kasa Defender'da Ekleri ayarlama Office 365
+        - name: Office 365 için Defender'da Kasa ilkeleri ayarlama
           href: set-up-safe-attachments-policies.md
         - name: 'SPF''yi, sanallık engellemeye yardımcı olacak şekilde ayarlama'
           href: set-up-spf-in-office-365-to-help-prevent-spoofing.md
@@ -130,9 +128,9 @@
           href: install-app-guard.md
     - name: Geçir
       items:
-        - name: Üçüncü taraf koruma hizmetlerinden veya cihazından Güvenlik için Defender'a Office 365
+        - name: Üçüncü taraf koruma hizmetlerinden veya cihazdan Güvenlik için Defender'a Office 365
           items:
-            - name: Üçüncü taraf koruma hizmetlerinden veya cihazından Güvenlik için Defender'a Office 365
+            - name: Üçüncü taraf koruma hizmetlerinden veya cihazdan Güvenlik için Defender'a Office 365
               href: migrate-to-defender-for-office-365.md
             - name: 'Geçiş Aşaması 1: Hazırlama'
               href: migrate-to-defender-for-office-365-prepare.md
@@ -232,9 +230,9 @@
           href: impersonation-insight.md
         - name: Bilgi yok denen bilgi içgörü
           href: learn-about-spoof-intelligence.md
-        - name: EOP'de Raporlar ve Office 365
+        - name: EOP ve Office 365 için Defender'da raporlar
           items:
-            - name: EOP'de Raporlar ve Office 365
+            - name: EOP ve Office 365 için Defender'da raporlar
               href: reporting-and-message-trace-in-exchange-online-protection.md
             - name: E-posta güvenlik raporlarını görüntüleme
               href: view-email-security-reports.md
@@ -242,9 +240,9 @@
               href: view-reports-for-mdo.md
             - name: Güvenlik ve Uyumluluk Merkezi'nde posta & görüntüleme
               href: view-mail-flow-reports.md
-        - name: Güvenlik ve Uyumluluk Merkezi'nde posta & öngörüleri
+        - name: Güvenlik ve Uyumluluk Merkezi'nde & öngörüleri
           items:
-            - name: Güvenlik ve Uyumluluk Merkezi'nde posta & öngörüleri
+            - name: Güvenlik ve Uyumluluk Merkezi'nde & öngörüleri
               href: mail-flow-insights-v2.md
             - name: Otomatik iletili iletiler içgörü
               href: mfi-auto-forwarded-messages-report.md
@@ -278,7 +276,7 @@
               href: admin-submission.md
             - name: Rapor İletisi'yi ve Rapor Kimlik Avı eklentilerini etkinleştirme
               href: enable-the-report-message-add-in.md
-            - name: Hatalı pozitif ve hatalı negatifleri Outlook
+            - name: Negatif sonuçlarda hatalı pozitif ve yanlış negatif Outlook
               href: report-false-positives-and-false-negatives.md
             - name: Kullanıcıların Microsoft'a ne bildirimini görmek için posta akışı kurallarını kullanma
               href: /exchange/security-and-compliance/mail-flow-rules/use-rules-to-see-what-users-are-reporting-to-microsoft
@@ -288,7 +286,7 @@
       items:
         - name: Güvenliği tehlikeye atılmış kullanıcı hesaplarını hızla algılama ve bu hesaplara adresle
           href: address-compromised-users-quickly.md
-        - name: 'Bu Destek''te, Kötü Amaçlı İzin Ver''i algıla ve Office 365'
+        - name: Bu Yetkileri Diğer Kullanıcılar için Algıla ve Düzeltmek Office 365
           href: detect-and-remediate-illicit-consent-grants.md
         - name: Yeni Bir Görünümde Kuralları Outlook Özel Form Ekleme Saldırılarını Algıla ve Office 365
           href: detect-and-remediate-outlook-rules-forms-attack.md
@@ -296,11 +294,11 @@
           href: air-report-false-positives-negatives.md
         - name: Bildirilen iletiler için yönetici incelemesi
           href: admin-review-reported-message.md
-        - name: Fidye yazılımı saldırılarından kurtar
+        - name: Uzun süre önce yapılan yazılım saldırılarından kurtarma
           href: recover-from-ransomware.md
         - name: Kötü amaçlı e-postaları düzeltme
           href: remediate-malicious-email-delivered-office-365.md
-        - name: E-posta Hesabında Güvenliği Tehlikeye E-posta Hesabına Office 365
+        - name: Hesapta Güvenliği Tehlikeye E-posta Hesabı Office 365
           href: responding-to-a-compromised-email-account.md
         - name: Bekleyen eylemleri gözden geçirme ve onaylama (veya reddetme)
           href: air-review-approve-pending-completed-actions.md
@@ -312,6 +310,8 @@
           href: manage-quarantined-messages-and-files.md
         - name: Karantina ilkeleri
           href: quarantine-policies.md
+        - name: Paylaşılan posta kutularından karantinaya alınan iletileri serbest bırakma
+          href: view-and-release-quarantined-messages-from-shared-mailboxes.md
         - name: Engellenen kullanıcıları Kısıtlanmış Kullanıcılar portaldan kaldırma
           href: removing-user-from-restricted-users-portal-after-spam.md
         - name: Kendinizi engellenen gönderenler listesinden kaldırmak için liste portalını kullanın
@@ -340,7 +340,7 @@
           href: help-and-support-for-eop.md
         - name: Microsoft 365'a gönderilen postanın sorunlarını giderme
           href: troubleshooting-mail-sent-to-office-365.md
-        - name: 'Microsoft 365, SPF''yi spoofingi önlemek için nasıl kullanır?'
+        - name: How Microsoft 365 uses SPF to prevent spoofing
           href: how-office-365-uses-spf-to-prevent-spoofing.md
         - name: 'Kimlik Office 365, kimlik avını önlemek için From adresini nasıl doğrular?'
           href: how-office-365-validates-the-from-address.md

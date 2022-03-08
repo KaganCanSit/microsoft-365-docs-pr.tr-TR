@@ -17,13 +17,15 @@ search.appverid:
 - MET150
 ms.assetid: 239ce6eb-4e81-42db-bf86-a01362fed65c
 description: E-SharePoint ve belge kitaplıklarını korumak için Microsoft Azure Active Directory Rights Management Services (RMS) aracılığıyla SharePoint Online IRM'yi kullanmayı öğrenin.
-ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: f40977e453b228eddc745a6d29e3f5d119276abe
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.custom:
+- seo-marvel-apr2020
+- admindeeplinkSPO
+ms.openlocfilehash: 8c0f60ad1a571ba13ba83e3e92c1b5aca6535bb1
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985698"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63311641"
 ---
 # <a name="set-up-information-rights-management-irm-in-sharepoint-admin-center"></a>Set up Information Rights Management (IRM) in SharePoint admin center
 
@@ -39,7 +41,7 @@ Hak Yönetimi hizmetini etkinleştirdikten sonra, IRM'SharePoint yönetim merkez
     
 2. Uygulama başlatıcı simgesini seçin. ![Uygulama başlatıcı simgesi Office 365.](../media/e5aee650-c566-4100-aaad-4cc2355d909f.png) seçin ve sol üstteki **Yönetici'yi** seç Microsoft 365 yönetim merkezi. (Yönetici kutucuğunu görmüyorsanız, kuruluş içinde yönetici izinlerine sahip değilseniz.) 
     
-3. Sol bölmede Yönetim merkezleri **merkezi'ni SharePoint**\>.
+3. Sol bölmede Yönetim merkezleri **ve yönetim** \> <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint seçin</a>.
     
 4. Sol bölmede **ayarlar'ı ve** ardından klasik ayarlar **sayfasını seçin**.
     

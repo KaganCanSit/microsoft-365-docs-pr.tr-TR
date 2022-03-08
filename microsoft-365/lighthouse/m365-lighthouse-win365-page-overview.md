@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 Lighthouse Windows 365 (Bulut BILGISAYARLAR) sayfasına genel bakış
-f1.keywords: NOCSH
+f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
@@ -16,17 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Microsoft 365 Lighthouse kullanarak Yönetilen Hizmet Sağlayıcıları (MSP)'ler için, Windows 365 (Bulut PC) sayfası hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: a0d828a382000502f6700d585624b967a740ff36
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 60b96974e0070e4a151484a162c3eafc18d0bf4a
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983832"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315533"
 ---
 # <a name="windows-365-cloud-pcs-page-overview"></a>Windows 365 (Bulut BILGISAYARLAR) sayfasına genel bakış  
-
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
   
 Windows 365, Microsoft Endpoint Manager (MEM) yöneticilerinin Windows lisansına sahip olan kullanıcıları için Bulut PC'leri hazırlamalarına ve yönetmelerine olanak sağlayan bulut tabanlı bir hizmettir. Windows 365, cihaz yönetimi için MEM ile ve tüm müşteri kiracılarında Bulut bilgisayarların iş Microsoft 365 Lighthouse için Microsoft 365 Lighthouse ile tamamen tümleşiktir.
 

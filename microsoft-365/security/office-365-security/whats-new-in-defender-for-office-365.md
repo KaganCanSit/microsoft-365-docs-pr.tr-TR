@@ -21,12 +21,12 @@ ms.custom: seo-marvel-apr2020
 ms.reviewer: vippand
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 30ee5d69db08dc4471bf6aa59558a934734e2f54
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: 5ae288b2d7dbaec9f66a501f7177741a5df48d0c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62996594"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323955"
 ---
 # <a name="whats-new-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'daki Office 365
 
@@ -51,8 +51,12 @@ Diğer Microsoft Defender güvenlik ürünleriyle ilgili yeniliklerle ilgili dah
 - [Identity için Microsoft Defender'daki güncelleştirmeler](/defender-for-identity/whats-new)
 - [Microsoft Cloud App Security'daki Microsoft Cloud App Security](/cloud-app-security/release-notes)
 
+## <a name="march-2022"></a>Mart 2022
 
-## <a name="decemberjanuary-2021"></a>Aralık/Ocak 2021
+- [Office 365 için Microsoft Defender'da](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/streamlining-the-submissions-experience-in-microsoft-defender/ba-p/3152080) gönderi deneyimi kolaylaştırıldı: Deneyiminizi daha basit hale getirmek için yeni birleşik ve akıcı gönderim işleminin tanıtımı.
+
+
+## <a name="january-2022"></a>Ocak 2022
 
 - [Office 365 için Microsoft Defender](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/updated-hunting-and-investigation-experiences-for-microsoft/ba-p/3002015) için Güncelleştirilmiş Av ve Soruşturma Deneyimleri: Office 365 için Defender'daki deneyimler için e-posta özet panelinin tanıtımı, tehdit Gezgini ve Gerçek zamanlı algılamalar için deneyim güncelleştirmeleri.
 

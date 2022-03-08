@@ -1,8 +1,8 @@
 ---
 title: Kuruluş için sürekli erişim Microsoft 365 - Microsoft 365 değerlendirme
 description: Microsoft 365 Azure AD ve Azure AD için koşullu erişim değerlendirmenin etkin kullanıcı oturumlarını nasıl önceden sonlandırıyor ve yakın zamanda kiracı ilkesi değişikliklerini nasıl zorunlu olduğunu açıklar.
-ms.author: josephd
-author: JoeDavies-MSFT
+ms.author: dansimp
+author: dansimp
 manager: dansimp
 ms.prod: m365-security
 ms.topic: article
@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 376b15a6faa84b26ab7e48356e54c0456da16072
-ms.sourcegitcommit: aac7e002ec6e10a41baa2d0bd38614b0ed471a70
+ms.openlocfilehash: 255618508559e989a356ab404429bc4d87bfe2c6
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63009999"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324543"
 ---
 # <a name="continuous-access-evaluation-for-microsoft-365"></a>Web için sürekli erişim Microsoft 365
 

@@ -1,6 +1,6 @@
 ---
-title: Microsoft Endpoint Manager kullanarak işe Microsoft Endpoint Manager
-description: Microsoft Endpoint Manager kullanarak Uç Nokta için Microsoft Defender'a nasıl Microsoft Endpoint Manager
+title: Microsoft Endpoint Manager kullanarak ekleme
+description: Microsoft Endpoint Manager kullanarak Uç Nokta için Microsoft Defender'a nasıl ek yapılandırmayı öğrenin
 keywords: ekleme, yapılandırma, dağıtma, dağıtım, uç nokta yöneticisi, Uç nokta için Microsoft Defender, koleksiyon oluşturma, uç nokta algılama yanıtı, yeni nesil koruma, saldırı yüzeyini azaltma, microsoft uç nokta yöneticisi
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -17,14 +17,14 @@ ms.collection:
 - m365solution-scenario
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 0f1e9c88c003551ca74c76d6348465f52fdbd171
-ms.sourcegitcommit: cde34d38bdfb6335b980f1c48c6b218da6a64bf8
+ms.openlocfilehash: 261cb8af0f1fbb4c118aca649945f66015f1d25c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2022
-ms.locfileid: "63014094"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322791"
 ---
-# <a name="onboarding-using-microsoft-endpoint-manager"></a>Microsoft Endpoint Manager kullanarak işe Microsoft Endpoint Manager
+# <a name="onboarding-using-microsoft-endpoint-manager"></a>Microsoft Endpoint Manager kullanarak ekleme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
@@ -44,21 +44,19 @@ Planlama [başlığında](deployment-strategy.md) , cihazları hizmete eklemeye 
 
 Uç Nokta için Defender çeşitli uç noktaların ve araçların onboarding'i destekler ama bu makale bunları desteklemez. Diğer desteklenen dağıtım araçları ve yöntemleri kullanılarak genel ekleme hakkında bilgi için bkz. [Eklemeye genel bakış](onboarding.md).
 
-[Microsoft Endpoint Manager](/mem/endpoint-manager-overview), çeşitli hizmetleri bire bir veren bir çözüm platformudur. Bu, çeşitli [Microsoft Intune](/mem/intune/fundamentals/what-is-intune)
-
-tabanlı cihaz yönetimi.
+[Microsoft Endpoint Manager](/mem/endpoint-manager-overview) çeşitli hizmetleri veren bir çözüm platformudur. Microsoft [Intune tabanlı cihaz](/mem/intune/fundamentals/what-is-intune) yönetimini içerir.
 
 Bu konu başlığı, kullanıcıları şu konuda yönlendirmektedir:
 
-- 1. Adım: ŞU cihazlarda yapılandırmaları atamak için Microsoft Endpoint Manager MEM) içinde bir grup oluşturarak cihazları hizmete ekleme
-- 2. Adım: Defender'ı Uç Nokta özellikleri için yapılandırma Microsoft Endpoint Manager
+- 1. Adım: Microsoft Uç Nokta Yöneticisi'nde (MEM) yapılandırmaları atamak için bir grup oluşturarak cihazları hizmete ekleme
+- 2. Adım: Microsoft Uç Nokta Yöneticisi'ni kullanarak Uç nokta özellikleri için Defender'ı yapılandırma
 
-Bu ekleme kılavuzu, bu kılavuzu kullanırken atılması gereken aşağıdaki temel Microsoft Endpoint Manager:
+Bu ekleme kılavuzu, Microsoft Endpoint Manager'ı kullanırken atılması gereken aşağıdaki temel adımlarda size yol sağlar:
 
 - [Hedef cihazları veya kullanıcıları tanımlama](#identify-target-devices-or-users)
-  - Grup oluşturma Azure Active Directory (Kullanıcı veya Cihaz)
+  - Azure Active Directory grubu oluşturma (Kullanıcı veya Cihaz)
 - [Yapılandırma Profili Oluşturma](#step-2-create-configuration-policies-to-configure-microsoft-defender-for-endpoint-capabilities)
-  - Bu Microsoft Endpoint Manager, her özellik için ayrı bir ilke oluşturma konusunda size yol edeceğiz.
+  - Microsoft Endpoint Manager'da, her özellik için ayrı bir ilke oluşturma konusunda size yol edeceğiz.
 
 ## <a name="resources"></a>Kaynaklar
 
@@ -68,7 +66,7 @@ Burada, sürecin kalan kalanı için size gereken bağlantılar ve ardından:
 - [Microsoft 365 Defender](https://security.microsoft.com)
 - [Intune Güvenlik taban çizgisi](/mem/intune/protect/security-baseline-settings-defender-atp#microsoft-defender)
 
-Çalışma hakkında daha fazla Microsoft Endpoint Manager için şu kaynaklara bakın:
+Microsoft Endpoint Manager hakkında daha fazla bilgi için şu kaynaklara bakın:
 
 - [Microsoft Endpoint Manager sayfası](/mem/)
 - [Intune ve ConfigMgr'in yakınsamasıyla ilgili blog gönderisi](https://www.microsoft.com/microsoft-365/blog/2019/11/04/use-the-power-of-cloud-intelligence-to-simplify-and-accelerate-it-and-the-move-to-a-modern-workplace/)
@@ -81,7 +79,7 @@ Burada, sürecin kalan kalanı için size gereken bağlantılar ve ardından:
 Bu bölümde, yapılandırmalarınızı atamak için bir test grubu oluşturuz.
 
 > [!NOTE]
-> Intune, Azure Active Directory yönetmek için Azure AD) gruplarında çalışır. Intune yöneticisi olarak, grupları kuruluş ihtiyaçlarını karşılamak için kurebilirsiniz.
+> Intune, cihazları ve kullanıcıları yönetmek için Azure Active Directory (Azure AD) gruplarını kullanır. Intune yöneticisi olarak, grupları kuruluş ihtiyaçlarını karşılamak için kurebilirsiniz.
 >
 > Daha fazla bilgi için bkz [. Kullanıcıları ve cihazları düzenlemek için grup ekleme](/mem/intune/fundamentals/groups-add).
 
@@ -92,12 +90,12 @@ Bu bölümde, yapılandırmalarınızı atamak için bir test grubu oluşturuz.
 2. Yeni **Grup > Gruplar'a açın**.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal1 Microsoft Endpoint Manager resmi.](images/66f724598d9c3319cba27f79dd4617a4.png)
+    > ![Microsoft Endpoint Manager portalının1 resmi.](images/66f724598d9c3319cba27f79dd4617a4.png)
 
 3. Ayrıntıları girin ve yeni grup oluşturun.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal2 Microsoft Endpoint Manager resmi.](images/b1e0206d675ad07db218b63cd9b9abc3.png)
+    > ![Microsoft Endpoint Manager portalı2 görüntüsü.](images/b1e0206d675ad07db218b63cd9b9abc3.png)
 
 4. Test kullanıcınızı veya cihazınızı ekleyin.
 
@@ -108,7 +106,7 @@ Bu bölümde, yapılandırmalarınızı atamak için bir test grubu oluşturuz.
 7. Test kullanıcınızı veya cihazınızı bulun ve seçin.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal3 Microsoft Endpoint Manager resmi.](images/149cbfdf221cdbde8159d0ab72644cd0.png)
+    > ![Microsoft Endpoint Manager portalının3 resmi.](images/149cbfdf221cdbde8159d0ab72644cd0.png)
 
 8. Test grubunuz artık test etmek için bir üyeye sahip.
 
@@ -132,46 +130,46 @@ Ardından, farklı türde uç nokta güvenlik ilkeleri oluşturarak devam edersi
 2. Uç nokta **algılama ve > uç nokta güvenlik durumu'ne gidin**. Profil **Oluştur'a tıklayın**.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal4 Microsoft Endpoint Manager resmi.](images/58dcd48811147feb4ddc17212b7fe840.png)
+    > ![Microsoft Endpoint Manager portalı4 resmi.](images/58dcd48811147feb4ddc17212b7fe840.png)
 
-3. Platform **altında, Oluştur Windows 10 da Profil - Uç nokta algılama ve yanıt > seçin**.
+3. Platform **altında, Windows 10 ve Sonraki Bir Sürümü, Profil - Uç nokta algılama ve** yanıt ayarları'> seçin.
 
 4. Bir ad ve açıklama girin, ardından Sonraki'yi  **seçin**.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal5'Microsoft Endpoint Manager resmi.](images/a5b2d23bdd50b160fef4afd25dda28d4.png)
+    > ![Microsoft Endpoint Manager portalı5 resmi.](images/a5b2d23bdd50b160fef4afd25dda28d4.png)
 
 5. Gerekli ayarları ve ardından Sonraki'yi  **seçin**.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal6'Microsoft Endpoint Manager resmi.](images/cea7e288b5d42a9baf1aef0754ade910.png)
+    > ![Microsoft Endpoint Manager portalı6'nın resmi.](images/cea7e288b5d42a9baf1aef0754ade910.png)
 
     > [!NOTE]
     > Bu örnekte, uç nokta için Defender intune ile zaten tümleştirilmiş olarak bu otomatik doldurulmuştu. Tümleştirme hakkında daha fazla bilgi için bkz. [Intune'da Uç Nokta için Microsoft Defender'ı Etkinleştirme](/mem/intune/protect/advanced-threat-protection-configure#to-enable-microsoft-defender-atp).
     >
     > Aşağıdaki resim, Uç Nokta için Microsoft Defender Intune ile tümleşik DEĞIL olduğunda göreceğiz resmin bir örneğidir:
     >
-    > ![Portal7'Microsoft Endpoint Manager resmi.](images/2466460812371ffae2d19a10c347d6f4.png)
+    > ![Microsoft Endpoint Manager portalı7'nin resmi.](images/2466460812371ffae2d19a10c347d6f4.png)
 
 6. Gerekirse kapsam etiketleri ekleyin ve ardından Sonraki'yi  **seçin**.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal8 Microsoft Endpoint Manager resmi.](images/ef844f52ec2c0d737ce793f68b5e8408.png)
+    > ![Microsoft Endpoint Manager portalı8 resmi.](images/ef844f52ec2c0d737ce793f68b5e8408.png)
 
 7. Eklemek istediğiniz grupları seçin seçeneğine **tıklayarak test grubu ekleyin** ve ardından Sonraki'yi  **seçin**.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal9'Microsoft Endpoint Manager resmi.](images/fc3525e20752da026ec9f46ab4fec64f.png)
+    > ![Microsoft Endpoint Manager portalı9 resmi.](images/fc3525e20752da026ec9f46ab4fec64f.png)
 
 8. Gözden geçir ve kabul et, ardından Oluştur'a  **seçin**.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal10 Microsoft Endpoint Manager resmi.](images/289172dbd7bd34d55d24810d9d4d8158.png)
+    > ![Microsoft Endpoint Manager portalı10 resmi.](images/289172dbd7bd34d55d24810d9d4d8158.png)
 
 9. Tamamlanmış ilkenizi görüntüabilirsiniz.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal11 Microsoft Endpoint Manager görüntüsü.](images/5a568b6878be8243ea2b9d82d41ed297.png)
+    > ![Microsoft Endpoint Manager portalı11 resmi.](images/5a568b6878be8243ea2b9d82d41ed297.png)
 
 ### <a name="next-generation-protection"></a>Yeni nesil koruma
 
@@ -180,39 +178,39 @@ Ardından, farklı türde uç nokta güvenlik ilkeleri oluşturarak devam edersi
 2. Virüsten Koruma **ve İlke > Uç >'e gidin**.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal12 Microsoft Endpoint Manager görüntüsü.](images/6b728d6e0d71108d768e368b416ff8ba.png)
+    > ![Microsoft Endpoint Manager portalı12 görüntüsü.](images/6b728d6e0d71108d768e368b416ff8ba.png)
 
-3. Platform **- Windows 10 ve Sonraki - Windows - Oluştur'Microsoft Defender Virüsten Koruma > seçin**.
+3. **Platform - Windows 10 ve Sonraki Sürümü - Windows ve Profil - Microsoft Defender Virüsten Koruma'> seçin**.
 
 4. Ad ve açıklama girin, ardından Sonraki'yi  **seçin**.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal13 Microsoft Endpoint Manager görüntüsü.](images/a7d738dd4509d65407b7d12beaa3e917.png)
+    > ![Microsoft Endpoint Manager portalı13 resmi.](images/a7d738dd4509d65407b7d12beaa3e917.png)
 
-5. Yapılandırma ayarları **sayfasında**: Sistem yapılandırması için Microsoft Defender Virüsten Koruma yapılandırmaları ayarlayın (Bulut Koruması, Dışlamalar, Real-Time ve Düzeltme).
+5. Yapılandırma ayarları **sayfasında**: Microsoft Defender Virüsten Koruma (Bulut Koruması, Dışlamalar, Koruma ve Düzeltme) için Real-Time yapılandırmaları ayarlayın.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal14 Microsoft Endpoint Manager resmi.](images/3840b1576d6f79a1d72eb14760ef5e8c.png)
+    > ![Microsoft Endpoint Manager portalı14 resmi.](images/3840b1576d6f79a1d72eb14760ef5e8c.png)
 
 6. Gerekirse kapsam etiketleri ekleyin ve ardından Sonraki'yi  **seçin**.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal15 Microsoft Endpoint Manager resmi.](images/2055e4f9b9141525c0eb681e7ba19381.png)
+    > ![Microsoft Endpoint Manager portalı15 resmi.](images/2055e4f9b9141525c0eb681e7ba19381.png)
 
 7. Dahil etmek istediğiniz grupları seçin, test grubunuza attay ın ardından Sonraki'yi  **seçin**.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal16 Microsoft Endpoint Manager resmi.](images/48318a51adee06bff3908e8ad4944dc9.png)
+    > ![Microsoft Endpoint Manager portalı16 resmi.](images/48318a51adee06bff3908e8ad4944dc9.png)
 
 8. Gözden geçir ve oluştur'a ve ardından Oluştur'a  **seçin**.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal17 Microsoft Endpoint Manager resmi.](images/dfdadab79112d61bd3693d957084b0ec.png)
+    > ![Microsoft Endpoint Manager portalı17'nin resmi.](images/dfdadab79112d61bd3693d957084b0ec.png)
 
 9. Oluşturduğunuz yapılandırma ilkesi buradadır.
 
     > [!div class="mx-imgBorder"]
-    > ![Portal18 Microsoft Endpoint Manager resmi.](images/38180219e632d6e4ec7bd25a46398da8.png)
+    > ![Microsoft Endpoint Manager portalı18 resmi.](images/38180219e632d6e4ec7bd25a46398da8.png)
 
 ### <a name="attack-surface-reduction---attack-surface-reduction-rules"></a>Saldırı Yüzeyini Azaltma - Saldırı yüzeyini azaltma kuralları
 
@@ -360,10 +358,10 @@ Test cihazınıza yapılandırma ilkesi uygulandığını onaylamak için, her y
     > [!div class="mx-imgBorder"]
     > [![Hizmetler paneli2'nin görüntüsü.](images/a621b699899f1b41db211170074ea59e.png)](images/a621b699899f1b41db211170074ea59e.png#lightbox)
 
-3. Hizmetler cihazda çalışıyor olduktan sonra, bu cihazda Microsoft Defender Güvenlik Merkezi.
+3. Hizmetler cihazda çalıştır kullandıktan sonra portalda Microsoft 365 Defender.
 
     > [!div class="mx-imgBorder"]
-    > [![Resim Microsoft Defender Güvenlik Merkezi.](images/df0c64001b9219cfbd10f8f81a273190.png)](images/df0c64001b9219cfbd10f8f81a273190.png#lightbox)
+    > [![Portal resmi Microsoft 365 Defender.](images/df0c64001b9219cfbd10f8f81a273190.png)](images/df0c64001b9219cfbd10f8f81a273190.png#lightbox)
 
 ### <a name="confirm-next-generation-protection"></a>Yeni nesil korumayı onayla
 

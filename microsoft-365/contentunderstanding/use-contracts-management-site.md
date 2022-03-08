@@ -12,14 +12,13 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-ROBOTS: NOINDEX, NOFOLLOW
 description: Microsoft web sitesinde Sözleşme Yönetimi site şablonunu sağlamayı, kullanmayı ve özelleştirmeyi SharePoint Syntex.
-ms.openlocfilehash: 649596392cf2d7a8fc90ffc479d8875c69f26ffe
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: e5629dd370899d504e9b64ef577a06ebf1bd3777
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015549"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320473"
 ---
 # <a name="use-the-contracts-management-site-template-for-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex için Sözleşme Yönetimi site SharePoint Syntex
 
@@ -31,7 +30,7 @@ Sözleşme Yönetimi sitesi, kuruluş değerini en üst düzeye çıkarmanıza y
 
 Sözleşme Yönetimi sitesi önceden doldurulmuş sayfaları, web bölümlerini ve site gezintisini içerir. Site, kendi markasını, çalışan bilgilerini, ilke ve planlama bilgilerini, iş akışını, kişilerini ve kaynaklarını bir olacak şekilde özelleştirilebilir.
 
-Site, belgeleri sınıflandırmak ve meta SharePoint Syntex ayıklamak için belge kitaplıklarında çalışan bir SharePoint Syntex modelinin gücünü kullanır. Site, hızla başlamanız için önceden oluşturulmuş belge kitaplıkları sağlar, ancak gerektiğinde kendi kitaplıklarınızı da oluşturabilirsiniz. Site aşağıdaki öne çıkan kitaplıkları içerir:
+Site, belgeleri sınıflandırmak ve meta SharePoint Syntex ayıklamak için SharePoint kitaplığında çalışan bir SharePoint modelinin gücünü kullanır. Site, hızla başlamanız için önceden oluşturulmuş belge kitaplıkları sağlar, ancak gerektiğinde kendi kitaplıklarınızı da oluşturabilirsiniz. Site aşağıdaki öne çıkan kitaplıkları içerir:
 
 - **Bölgeler** – Sözleşme belgelerini coğrafi bölgeye, ülkeye veya bölgeye göre sınıflandırın.
 
@@ -41,7 +40,7 @@ Site, belgeleri sınıflandırmak ve meta SharePoint Syntex ayıklamak için bel
 
 - **İstemciler** – Müşteri bilgilerini tek bir uygun konumda bulun.
 
-- **Modeller** – Belgeleri sınıflandırmak ve meta verileri ayıklamak için bu model kitaplığını kullanın. Kullanıcılar ihtiyaçlarına uygun olarak kendi modellerini oluşturabilir ve bunları bu kitaplara ekleyebilir.
+- **Modeller** – Belgeleri sınıflandırmak ve meta verileri ayıklamak için bu kitaplıkta modeli kullanın. Kullanıcılar ihtiyaçlarına uygun olarak kendi modellerini oluşturabilir ve bunları bu kitaplara ekleyebilir.
 
 - **Örnek sözleşme kitaplığı** – Sınıflandırılmış ve SharePoint Syntex modeli kullanılarak ayıklanan meta SharePoint Syntex bulun. 
 
@@ -99,6 +98,16 @@ Sözleşmeler Yönetimi sitesi için site gezintisi sizin denetiminiz var. Aşa�
 - Belirli [kullanıcılara yönelik belirli](https://support.microsoft.com/office/target-navigation-news-and-files-to-specific-audiences-33d84cb6-14ed-4e53-a426-74c38ea32293) gezinti bağlantılarını hedeflemek için hedef kitle hedeflemeyi kullanın. 
 - [Gerekirse istenmeyen](https://support.microsoft.com/office/delete-a-page-from-a-sharepoint-site-1d4197b8-31b6-460d-906b-3fb492a51db1) sayfaları silin.
 
+
+### <a name="add-other-workflows"></a>Diğer iş akışlarını ekleme
+
+SözleşmeLer Yönetimi sitesi, başlamak istediğiniz bileşenleri içerir, ancak aşağıdakiler gibi ek bileşenleri de  dahil edebilirsiniz:
+
+- Sözleşme [Power Automate kitaplığına](/power-automate/getting-started) yeni bir sözleşme eklendiğinde iş akışını tetikleyen **bir iş akışı** kullanın.
+- Ek SharePoint Syntex [modelleri oluşturma](/microsoft-365/contentunderstanding/#models).
+- Şablonlar [kitaplığında](content-assembly.md) içerik derleme **özelliğini** kullanın.
+- Sözleşmenin [diğer bileşenleriyle](solution-manage-contracts-in-microsoft-365.md) birlikte SharePoint Syntex kullanarak sözleşme yönetimi Microsoft 365.
+
 ## <a name="share-the-site-with-others"></a>Siteyi başkalarla paylaşma
 
 [Sitenizi başkalarını paylaşın](https://support.microsoft.com/office/share-a-site-958771a8-d041-4eb8-b51c-afea2eae3658). Sözleşme Yönetimi sitenin yaygın olarak tanınması ve benimsenmiş olduğundan emin olmak için, organizasyonum'daki diğer çalışanlarla ortak çalışmanız.
@@ -111,6 +120,3 @@ Sözleşme Yönetimi sitesini yönetmede önemli başarı etmenleri:
 - Giriş sayfasındaki [içeriği geliştirmek](https://support.microsoft.com/office/view-usage-data-for-your-sharepoint-site-2fa8ddc2-c4b3-4268-8d26-a772dc55779e) , gezintiyi güncelleştirmek veya netlik için içeriği yeniden yazmak için site analizinden içgörüleri kullanın.
 - İçeriğin yeni ve hala ilgili olduğundan emin olmak için Sözleşme Yönetimi sitesini gereken şekilde gözden geçirebilirsiniz.
 
-## <a name="see-also"></a>Ayrıca bkz.
-
-[Yeni bir çözüm kullanarak Microsoft 365 yönetin](solution-manage-contracts-in-microsoft-365.md)

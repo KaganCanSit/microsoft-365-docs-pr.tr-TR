@@ -2,8 +2,8 @@
 title: Aboneliğinizi yeniden etkinleştirme
 f1.keywords:
 - CSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: jkinma, jmueller
 audience: Admin
@@ -14,20 +14,20 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
+- commerce_subscriptions
 - TopSMBIssues
 - fwlink 874703
 - AdminSurgePortfolio
-- commerce_subscriptions
 - AdminTemplateSet
 search.appverid: MET150
 description: Abonelik süresi dolduğunda, devre dışı bırakılmıştır veya iptal edilmişse ya da abonelik dönemi ortasında iptal ettiyseniz, yöneticiler aboneliği yeniden etkinleştirebilirsiniz.
 ms.date: 04/07/2021
-ms.openlocfilehash: 913069e83654e77948650fc85efbdc1daed4985c
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: 05c472cad513f96f39c4f9cfeb90182ed02a4fe5
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62996056"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316513"
 ---
 # <a name="reactivate-your-subscription"></a>Aboneliğinizi yeniden etkinleştirme
 
@@ -60,6 +60,6 @@ Aboneliği yeniden etkinleştirmek için Genel veya Faturalama yöneticisi siz o
 
 ## <a name="related-content"></a>İlgili içerik
 
-[İşletmeler için Microsoft 365 aboneliği deneyin veya satın alın](../try-or-buy-microsoft-365.md) (makale)\
-[İş Microsoft 365 yenileme](renew-your-subscription.md) (makale)\
+[Microsoft 365 İş aboneliğini deneme veya satın alma](../try-or-buy-microsoft-365.md) (makale)\
+[İş için Microsoft 365'i yenileme](renew-your-subscription.md) (makale)\
 [Aboneliğinizi iptal etme](cancel-your-subscription.md) (makale)

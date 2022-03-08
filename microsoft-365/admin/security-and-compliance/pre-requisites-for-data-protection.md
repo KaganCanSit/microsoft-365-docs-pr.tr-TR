@@ -24,16 +24,19 @@ search.appverid:
 - MET150
 ms.assetid: 7770e280-3a6c-436f-a157-b008a2744f51
 description: İşletmeler için Mobil Cihaz ve kullanıcı cihazlarında Microsoft 365 verilerini koruma gereksinimleri hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: 32247f097b5e8759126fc6f06dd4d613b9a6b8db
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 5a2dc9a60e3aa9161880ae50dbf135b2740e12a0
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985334"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322583"
 ---
 # <a name="prerequisites-for-protecting-data-on-devices-with-microsoft-365-for-business"></a>Cihazlardaki verileri iş için Microsoft 365 için önkoşullar
 
 Bu makale diğer Microsoft 365 İş Ekstra.
+
+> [!NOTE]
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Bu teklif, cihazlar için ek güvenlik özellikleri sağlar. [İş için Defender hakkında daha fazla bilgi öğrenin](../../security/defender-business/mdb-overview.md).
 
 İş için uygun bir iş için Microsoft 365 için ayarlamanın ilk adımı, önkoşulları karşılaya hazır olduğundan emin olmaktır.
   
@@ -50,3 +53,7 @@ Bu makale diğer Microsoft 365 İş Ekstra.
     Google Android 4.0 ve sonrası (Samsung KNOX Standard 4.0 ve sonrası dahil). Daha fazla bilgi için [bkz. Intune tarafından desteklenen cihazlar](/mem/intune/fundamentals/supported-devices-browsers).
     
 - Kullanıcı bilgisayarlarında Office uygulamalarınız varsa Office istemci yüklemesi için hazırlanma [](../misc/prepare-for-office-client-deployment.md) makalesini okuyun. Microsoft 365 2016'nın kullanıcı bilgisayarlarına yüklenmesi için Office Microsoft 365'i ayarlamadan önce atılması gereken adımları anlamanız gerekir.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](secure-your-business-data.md)

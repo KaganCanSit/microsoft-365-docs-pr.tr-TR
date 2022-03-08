@@ -15,12 +15,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
 description: Yöneticilerin Twitter verilerini yerel bir bağlayıcıya aktaracak yerel bir bağlayıcı ayarlamayı ve bu bağlayıcıyı Microsoft 365.
-ms.openlocfilehash: 0be302a3e26b92ff08941720fad57b811922de3c
-ms.sourcegitcommit: b1a2b09edbcfcc62ff3f1ecf5bd8adb1afa344c8
+ms.openlocfilehash: 959cdd49d229334f3129eb21505c4489d23ded4f
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "63019142"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320641"
 ---
 # <a name="set-up-a-microsoft-connector-to-archive-twitter-data-preview"></a>Twitter verilerini arşivlemek için bir Microsoft bağlayıcısı ayarlama (önizleme)
 
@@ -47,7 +47,7 @@ Kuruluş Twitter hesabından verileri içeri aktaracak ve arşivleyen bir bağla
 
 - Twitter bağlayıcısı, bir günde toplam 200.000 öğeyi içeri aktarabilirsiniz. Bir günde 200.000'den fazla Twitter öğesi varsa, bu öğelerden hiçbiri başka bir Microsoft 365.
 
-- Twitter bağlayıcısı ayar yapan kullanıcıya Microsoft 365 uyumluluk merkezi (Adım 5'te) Twitter bağlayıcısında Posta Kutusu İçeri/Dışarı Aktarma rolü Exchange Online. Varsayılan olarak, bu rol herhangi bir rol grubuna Exchange Online. Posta Kutusu İçeri/Dışarı Aktarma rolünü, aynı kuruluşta Kuruluş Yönetimi rol grubuna Exchange Online. Veya bir rol grubu oluşturabilir, Posta Kutusu İçeri/Dışarı Aktarma rolü atayabilirsiniz ve sonra da uygun kullanıcıları üye olarak  eklersiniz. Daha fazla bilgi için,"[Rol gruplarını](/Exchange/permissions-exo/role-groups#create-role-groups) farklı bir [](/Exchange/permissions-exo/role-groups#modify-role-groups) grupta yönetme" makalesinde Rol grupları oluşturma veya Rol gruplarını değiştirme Exchange Online.
+- Twitter bağlayıcısını web sayfasında Microsoft 365 uyumluluk merkezi (5. Adımda) kullanıcıya Veri Bağlayıcısı Yöneticisi rolü atanabilir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
 ## <a name="step-1-create-an-app-in-azure-active-directory"></a>1. Adım: Azure Active Directory'de uygulama oluşturma
 

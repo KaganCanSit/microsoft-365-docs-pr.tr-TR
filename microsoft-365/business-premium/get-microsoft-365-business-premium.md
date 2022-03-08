@@ -23,18 +23,18 @@ search.appverid:
 - BCS160
 - MET150
 description: Şirket Microsoft 365 İş Ekstra, e-posta, veri ve iletişimlere yönelik siber güvenlik tehditlerine karşı korunması için güvenlik önlemleri alın.
-ms.openlocfilehash: 041202327c82ddffa02660acf9eb6127d65ada2a
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 2e6ad120407a7bc84e089b997c990e04d438ab29
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011810"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63318515"
 ---
 # <a name="how-to-get-microsoft-365-business-premium"></a>Nasıl Microsoft 365 İş Ekstra
 
 Bu makalede, şirketinize nasıl Microsoft 365 İş Ekstra anlatılar açıklanmıştır. Şunları seçebilirsiniz:
 
-- [Kendi başına Microsoft 365 İş Ekstra satın alma veya deneme](#get-microsoft-365-business-premium-on-your-own)
+- [Kendi başına deneme Microsoft 365 İş Ekstra satın alma](#get-microsoft-365-business-premium-on-your-own)
 - [Çözüm sağlayıcısıyla çalışma](#work-with-a-microsoft-solution-provider-to-get-microsoft-365-business-premium)
 
 ## <a name="get-microsoft-365-business-premium-on-your-own"></a>Kendi Microsoft 365 İş Ekstra işlerinizi buradan devam

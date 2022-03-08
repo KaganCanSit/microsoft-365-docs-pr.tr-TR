@@ -16,12 +16,12 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 25dcabfcf569b2a5d8e842a12be210936402aa4f
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: e21d2904ec2afdcd57b69267f99af6a0726dca56
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63016679"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63314637"
 ---
 # <a name="get-started-with-insider-risk-management"></a>Insider risk yönetimiyle çalışmaya başlama
 
@@ -80,7 +80,7 @@ Insider risk yönetimini yapılandırmaya başlamaya başlama için listeden bir
 > [!IMPORTANT]
 > Rol gruplarınızı yapılandırdikten sonra, rol grubu izinlerin kuruluş genelinde atanan kullanıcılara uygulamak 30 dakika kadar sürebilir.
 
-Insider risk yönetimi özelliklerini yönetmek için başlangıç izinlerini yapılandırmak için kullanılan altı rol grubu vardır. **Insider risk yönetimini** Microsoft 365 uyumluluk merkezi menü seçeneği olarak kullanılabilir yapmak ve bu yapılandırma adımlarını devam etmek için, aşağıdaki rollerden veya rol gruplarından biri size atanmış olması gerekir:
+Insider risk yönetimi özelliklerini yapılandırmak için kullanılan altı rol grubu vardır. **Insider risk yönetimini** Microsoft 365 uyumluluk merkezi menü seçeneği olarak kullanılabilir yapmak ve bu yapılandırma adımlarını devam etmek için, aşağıdaki rollerden veya rol gruplarından biri size atanmış olması gerekir:
 
 - Azure Active Directory [*Yönetici rolü*](/azure/active-directory/roles/permissions-reference#global-administrator)
 - Azure Active Directory [*Uyumluluk Yöneticisi*](/azure/active-directory/roles/permissions-reference#compliance-administrator) rolü
@@ -89,27 +89,29 @@ Insider risk yönetimi özelliklerini yönetmek için başlangıç izinlerini ya
 - *Insider Risk Yönetimi* rol grubu
 - *Insider Risk Yönetimi Yönetici* rol grubu
 
-Aşağıdaki rollerin üyeleri, *Insider Risk Management Admin rol grubuyla aynı çözüm izinlerine* sahip olur:
+Insider risk yönetimi ilkelerini ve uyarılarını nasıl yönetmek istediğinize bağlı olarak, farklı Insider risk yönetimi özellikleri kümelerini yönetmek için kullanıcıları belirli rol gruplarına atamanız gerekir. Insider risk yönetimi özelliklerinin farklı alanlarını yönetmek için, belirli rol gruplarına farklı uyumluluk sorumluluklarına sahip kullanıcılar atama seçeneğiniz vardır. Ya da belirlenen yöneticiler, analistler, tahminler ve görüntüleyiciler için tüm kullanıcı hesaplarını Insider Risk Management rol grubuna atamaya karar veabilirsiniz. Uyumluluk yönetimi gereksinimlerinize en uygun şekilde tek bir rol grubu veya birden çok rol grubu kullanın.
+
+Insider risk yönetimiyle çalışırken, bu rol grubu seçenekleri ve çözüm eylemleri arasında seçim yapabilirsiniz:
+
+|**Eylemler**|**Insider Risk Yönetimi**|**Insider Risk Yönetimi Yöneticisi**|**İçeriden Risk Yönetimi Analistleri**|**İçeriden Risk Yönetimi Araştırmacıları**|**Insider Risk Yönetimi Denetçileri**|
+|:----------|:--------------------------|:--------------------------------|:-----------------------------------|:----------------------------------------|:-----------------------------------|
+| İlkeleri ve ayarları yapılandırma | Evet | Evet | Hayır | Hayır | Hayır |
+| Access analiz içgörüleri | Evet | Evet | Evet | Hayır | Hayır |
+| Access & araştırma uyarıları | Evet | Hayır | Evet | Evet | Hayır |
+| Vakaları & Access araştıracak | Evet | Hayır | Evet | Evet | Hayır |
+| Access & Gezgini'ni görüntüde görüntüleme | Evet | Hayır | Hayır | Evet | Hayır |
+| Bildirim şablonlarını yapılandırma | Evet | Hayır | Evet | Evet | Hayır |
+| Denetim & görüntüleme | Evet | Hayır | Hayır | Hayır | Evet |
+
+>[!IMPORTANT]
+>*Insider Risk Yönetimi veya Insider Risk Yönetimi* Yöneticisi rol gruplarında (seçtiğiniz seçen bağlı olarak) her zaman en az bir kullanıcınız olduğundan emin olun; böylelikle, insider risk yönetimi yapılandırmanız belirli kullanıcılar kuruluş içinden ayrılırsa "sıfır yönetici" senaryosuna girilamaz.
+
+Aşağıdaki rollerin üyeleri kullanıcıları Insider risk yönetimi rol gruplarına ata atayar ve *Insider Risk Management Admin* rol grubuna dahil edilenlerle aynı çözüm izinlerine sahip olabilir:
 
 - Azure Active Directory *Yönetici*
 - Azure Active Directory *Uyumluluk Yöneticisi*
 - Microsoft 365 uyumluluk merkezi *Yönetimi*
 - Microsoft 365 uyumluluk merkezi *Uyumluluk Yöneticisi*
-
-> [!IMPORTANT]
-> *Insider Risk Yönetimi veya Insider Risk Yönetimi* Yöneticisi rol gruplarında (seçtiğiniz seçen bağlı olarak) her zaman en az bir kullanıcınız olduğundan emin olun; böylelikle, insider risk yönetimi yapılandırmanız belirli kullanıcılar kuruluş içinden ayrılırsa "sıfır yönetici" senaryosuna girilamaz.
-
-Insider risk yönetimi ilkelerini ve uyarılarını nasıl yönetmek istediğinize bağlı olarak, farklı Insider risk yönetimi özellikleri kümelerini yönetmek için kullanıcıları belirli rol gruplarına atamanız gerekir. Insider risk yönetimi özelliklerinin farklı alanlarını yönetmek için, belirli rol gruplarına farklı uyumluluk sorumluluklarına sahip kullanıcılar atama seçeneğiniz vardır. Ya da belirlenen yöneticiler, analistler, tahminler ve görüntüleyiciler için tüm kullanıcı hesaplarını *Insider Risk Management rol grubuna atamaya* karar veabilirsiniz. Uyumluluk yönetimi gereksinimlerinize en uygun şekilde tek bir rol grubu veya birden çok rol grubu kullanın.
-
-Insider risk yönetimini yapılandırarak ve yapılandırarak bu çözüm rol grubu seçeneklerinden birini belirleyin:
-
-| **Rol grubu** | **Rol izinleri** |
-| :------------- | :------------------- |
-| **Insider Risk Yönetimi** | Tek bir grupta, organizasyon için insider risk yönetimini yönetmek üzere bu rol grubunu kullanın. Belirlenen yöneticiler, analistler, analistler ve denetçiler için tüm kullanıcı hesaplarını ekleyerek, insider risk yönetimi izinlerini tek bir grupta yapılandırabilirsiniz. Bu rol grubu tüm Insider risk yönetimi izin rollerini ve ilişkili izinleri içerir. Insider risk yönetimiyle hızlı bir şekilde çalışmaya başlamanın en kolay yolu bu yapılandırmadır ve ayrı kullanıcı grupları için tanımlanmış ayrı izinlere ihtiyacı olan kuruluşlara iyi uyum sağlar. **_Bu yapılandırmayı kullanırken,_** ilkelerinizin beklendiği gibi çalışması ve kullanıcının ilkeleri oluştur ve düzenley çalışması, çözüm ayarlarını yapılandırması ve ilke durumu uyarılarını gözden geçirmesi için her zaman en az bir kullanıcı bu rol grubuna atanmış olduğundan emin olun.|
-| **Insider Risk Yönetimi Yöneticisi** | Başlangıçta Insider risk yönetimini yapılandırmak ve daha sonra Insider risk yöneticilerini tanımlı bir grupla ayırmak için bu rol grubunu kullanın. Bu rol grubunda yer alan kullanıcılar analiz içgörülerini etkinleştirebilirsiniz ve  görüntüp, insider risk yönetimi ilkelerini, genel ayarları ve rol grubu atamalarını oluşturabilir, okuyabilir, güncelleştirebilirsiniz ve silebilirler. **_Bu yapılandırmayı kullanırken,_** ilkelerinizin beklendiği gibi çalışması ve kullanıcının ilkeleri oluştur ve düzenley çalışması, çözüm ayarlarını yapılandırması ve ilke durumu uyarılarını gözden geçirmesi için her zaman en az bir kullanıcı bu rol grubuna atanmış olduğundan emin olun. |
-| **İçeriden Risk Yönetimi Analistleri** | Insider risk durumu analistleri gibi davranacak kullanıcılara izin atamak için bu grubu kullanın. Bu rol grubunda yer alan kullanıcılar tüm Insider risk yönetimi uyarılarına, vakalara, çözümleme içgörülerine ve bildirim şablonlarına erişim iznine sahip olabilir. Insider riski olan İçerik gezginine erişamaz. |
-| **İçeriden Risk Yönetimi Araştırmacıları** | Insider risk verisi devam ediyor gibi davranacak kullanıcılara izin atamak için bu grubu kullanın. Bu rol grubunda yer alan kullanıcılar tüm Insider risk yönetimi uyarılarına, olaylarına, bildirim şablonlarına ve tüm durumlarda İçerik Gezgini'ne erişim iznine sahip olabilir. |
-| **Insider Risk Yönetimi Denetçileri** | Insider risk yönetimi etkinliklerini denetlenecek kullanıcılara izin atamak için bu grubu kullanın. Bu rol grubunda yer alan kullanıcılar Insider risk denetim günlüğüne erişim sağlar. Bu rol grubunda yer alan kullanıcılar önerilen eylemler (önizleme) özelliğine erişamaz ve bu özelliği kullanamaz.|
 
 > [!NOTE]
 > Bu rol grupları şu anda etkin bir Privileged Identity Management desteklenmiyor. PIM hakkında daha fazla bilgi edinmek için bkz. [PiM'de Azure AD Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-how-to-add-role-to-user).
@@ -246,7 +248,7 @@ Insider risk [yönetimi tümleştirmesi için Uç Nokta için Defender'ı](/wind
 4. İlke **zaman çerçeveleri** sayfasında, bir insider [](insider-risk-management-settings.md#policy-timeframes) risk ilkesine uygun eşleşmeyi tetikleyen kullanıcı için geçerli olacak ilke zaman çerçevelerini seçin.
 5. Akıllı **algılamalar sayfasında** , Insider risk ilkeleri için aşağıdaki ayarları yapılandırabilirsiniz:
     - [Dosya türü dışlamaları](insider-risk-management-settings.md#file-type-exclusions)
-    - [Sıra dışı dosya etkinliği eşikleri](insider-risk-management-settings.md#threshold-for-unusual-file-activity)
+    - [Alışılmış dışı etkinlikler için puanı artırmak için günlük en az etkinlik sayısı](insider-risk-management-settings.md#minimum-number-of-daily-events-to-boost-score-for-unusual-activity)
     - [Ses düzeyi uyarısı](insider-risk-management-settings.md#alert-volume)
     - [Uç nokta uyarısı durumu için Microsoft Defender](insider-risk-management-settings.md#microsoft-defender-for-endpoint-preview)
     - [Etki alanı ayarları](insider-risk-management-settings.md#domains)
@@ -274,7 +276,7 @@ Insider risk yönetimi ilkeleri atanmış kullanıcıları içerir ve uyarılar 
     - **Açıklama (isteğe bağlı)**: İlke için bir açıklama girin.
 
 6. Devam etmek **için Sonraki'yi** seçin.
-7. Kullanıcılar ve **gruplar sayfasında**, İlkeye  dahil edilecek kullanıcıları veya grupları tanımlamak  veya öncelikli kullanıcı tabanlı bir şablon seçtiyseniz belirli kullanıcıları ve grupları dahil edin'i veya Belirli kullanıcıları ve grupları dahil edin'i seçin; Öncelik kullanıcı **grupları ekle veya düzenle'yi seçin**. **İlkenin risk puanlarını** atamaya başlamak için Tüm kullanıcılar ve grupları dahil etmek üzere, Kuruluşta tüm kullanıcılar ve grupların olaylarını tetikleyen olayları tetikle'yi seçin. Belirli kullanıcılar **ve gruplar dahil öğesini seçerek** , ilkeye hangi kullanıcı ve grupların atan lisanslarını tanımlayabilirsiniz. Konuk kullanıcı hesapları destek değildir.
+7. Kullanıcılar ve **gruplar sayfasında**, İlkeye  dahil edilecek kullanıcıları veya grupları tanımlamak  veya öncelikli kullanıcı tabanlı bir şablon seçtiyseniz belirli kullanıcıları ve grupları dahil edin'i veya Belirli kullanıcıları ve grupları dahil edin'i seçin; Öncelik kullanıcı **grupları ekle veya düzenle'yi seçin**. **İlkenin risk puanlarını** atamaya başlamak için Tüm kullanıcılar ve grupları dahil etmek üzere, Kuruluşta tüm kullanıcılar ve grupların olaylarını tetikleyen olayları tetikle'yi seçin. Belirli kullanıcılar **ve gruplar dahil öğesini seçerek** , ilkeye hangi kullanıcı ve grupların atan lisanslarını tanımlayabilirsiniz. Konuk kullanıcı hesapları destek desteklemez.
 8. Devam etmek **için Sonraki'yi** seçin.
 9. **Önceliklendirmek için içerik** sayfasında, öncelikleri belirlemek için kaynakları atabilirsiniz (gerekirse), bu kaynaklar için yüksek önem düzeyi uyarısı oluşturma ihtimali artar. Aşağıdaki seçeneklerden birini seçin:
 

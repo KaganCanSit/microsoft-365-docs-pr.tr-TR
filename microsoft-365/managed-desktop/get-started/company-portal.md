@@ -9,12 +9,12 @@ ms.collection: M365-modern-desktop
 ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: 48d9129689a820816dffe65355fa913fd0742864
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: c7edc974bfd4a4f0d2d9611c80d0996aebc3ddb7
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016479"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326874"
 ---
 # <a name="install-intune-company-portal-on-devices"></a>Cihazlarına Intune Şirket Portalı yükleme
 
@@ -60,7 +60,7 @@ Kuruluş için BIR YÖNETICI olarak, kullanıcılarınızı kuruluş içinde bu 
 1. Dağıtım ve atama Intune Şirket Portalı (bu makale).
 1. [Lisans atama](assign-licenses.md).
 1. [Uygulamaları dağıtın](deploy-apps.md).
-1. [Cihazları ayarlama](set-up-devices.md)
+1. [Cihazları hazırlama](prepare-devices.md)
 1. [AutoPilot ve Kayıt Durumu Sayfası ile ilk çalıştırma deneyimini ayarlayın](esp-first-run.md).
 1. [Kullanıcı desteği özelliklerini etkinleştirin](enable-support.md).
 1. [Kullanıcılarınızı cihazları kullanmaya hazır hale hazırlayın](get-started-devices.md).

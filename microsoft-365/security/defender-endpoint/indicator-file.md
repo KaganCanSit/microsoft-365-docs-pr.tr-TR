@@ -15,12 +15,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 2ee262e2a42bcf4bd03a6d1204b60412d60740d5
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: 32de72a201dbb88c9fc0c6d7e61825bf8083fbf9
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63016332"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63325551"
 ---
 # <a name="create-indicators-for-files"></a>Dosyalar için göstergeler oluşturma
 
@@ -65,7 +65,7 @@ Bu özellik kötü amaçlı yazılımdan (veya kötü amaçlı olabilecek dosyal
 
 2. Dosya **karmaları sekmesini** seçin.
 
-3. Gösterge **ekle'yi seçin**.
+3. Öğe **ekle'yi seçin**.
 
 4. Aşağıdaki ayrıntıları belirtin:
     - Gösterge - Varlık ayrıntılarını belirtin ve göstergenin sona erme tarihini tanımlayın.
@@ -148,6 +148,9 @@ Sertifika ve Dosya IoC ilke işleme çakışması aşağıdaki sırayı izlemekt
 - Dosyaya izin verme dosyası IoC ilkesi tarafından izin veriliyorsa, İzin **Ver**
 - Else if the file is blocked by ASR rules, CFA, AV, SmartScreen, then **Block**
 - Else **Allow** (uygulama denetimi Windows Defender AppLocker & geçer, IoC kuralı geçerli değildir)
+
+>[!NOTE]
+> Microsoft Defender Virüsten Koruma Olarak Ayarlanmış ancak Uç Nokta için Defender İzin Ver olarak ayarlanmış **durumlarda, ilke** varsayılan olarak İzin Ver'i **kullanır**.
 
 Aynı zorlama türü ve hedefine sahip çakışan dosya IoC ilkeleri varsa, daha güvenli (yani daha uzun) karma ilkesi uygulanır. Örneğin, her iki karma türü de aynı dosyayı tanımlarsa, SHA-256 dosya karma IoC ilkesi MD5 dosya karma IoC ilkesine göre kazanır.
 

@@ -2,8 +2,8 @@
 title: Uyumluluk Yöneticisi için Microsoft Uyumluluk Yapılandırması Çözümleyicisi
 f1.keywords:
 - NOCSH
-ms.author: v-jgriffee
-author: jmgriffee
+ms.author: chvukosw
+author: chvukosw
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Uyumluluk Yöneticisi ile hızla kullanmaya devam etmek için Microsoft Uyumluluk Yapılandırma Çözümleyicisi'ni nasıl kullanabileceğinizi anlama.
-ms.openlocfilehash: 2e0327a11067a4e474831d95b2c74c4c289086ce
-ms.sourcegitcommit: dc26169e485c3a31e1af9a5f495be9db75c49760
+ms.openlocfilehash: 3c5230a8a9998c4b924e5a9d4a9565ae1c97db89
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "62990007"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63325117"
 ---
 # <a name="microsoft-compliance-configuration-analyzer-for-compliance-manager-preview"></a>Uyumluluk Yöneticisi için Microsoft Uyumluluk Yapılandırması Çözümleyicisi (önizleme)
 

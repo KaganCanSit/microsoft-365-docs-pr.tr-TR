@@ -2,8 +2,8 @@
 title: İş ortağı ilişkilerini yönetme
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: tugu, jmueller
 audience: Admin
@@ -14,18 +14,18 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
-- AdminSurgePortfolio
 - commerce_subscriptions
+- AdminSurgePortfolio
 - admindeeplinkMAC
 search.appverid: MET150
 description: Microsoft sertifikalı çözüm sağlayıcıları (iş ortakları) ile birlikte çalışarak, kuruluş veya okulunuz için ürün ve hizmetleri satın almayı ve yönetmeyi öğrenin.
 ms.date: 02/04/2022
-ms.openlocfilehash: c34fa968ddea199b19d6589e9337a086f64e7099
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: c07267989e8df7203cced6c3a21ffd9aa667347f
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016509"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63328981"
 ---
 # <a name="manage-partner-relationships"></a>İş ortağı ilişkilerini yönetme
 
@@ -98,3 +98,5 @@ Bir iş ortağının yönetici rollerini istediğiniz zaman kaldırabilirsiniz. 
 3. İş ortağının adını içeren satırı seçin.
 4. İş ortağı sayfasında Rolleri **kaldır'ı seçin**.
 5. Rolleri kaldır **? iletişim kutusunda** Evet'i **seçin**.
+
+Rolleri kaldır seçeneğini **görmüyorsanız İş** Ortağı [Merkezi'ne ulaşın](https://partner.microsoft.com/support).

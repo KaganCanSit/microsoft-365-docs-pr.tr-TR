@@ -13,17 +13,15 @@ author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection:
-- M365-security-compliance
-- m365initiative-m365-defender
+ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 6b345eb898b84de9f15772e11fdc92e1af5dde6a
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: ab6a23d1f2c8893a86fb6432ab9fece95a10006c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62974105"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322891"
 ---
 # <a name="understand-the-client-analyzer-html-report"></a>İstemci çözümleyiciSI HTML raporunu anlama
 
@@ -41,11 +39,11 @@ Raporu anlamak için aşağıdaki örneği kullanın.
 
 - En üstte, başvuru için betik sürümü ve betik çalışma zamanı listelenir
 - Cihaz **Bilgileri bölümünde** , çözümleyicinin çalıştır çalıştır olduğu cihazı benzersiz bir şekilde tanımlamak için temel işletim sistemi ve cihaz tanımlayıcıları gösterilir.
-- Uç **Nokta Güvenlik Ayrıntıları**, uç nokta ve algılayıcı işleme dahil uç nokta ile ilgili süreçler Microsoft Defender Virüsten Koruma Microsoft Defender hakkında genel bilgiler sağlar. Önemli işlemler beklendiği gibi çevrimiçi yoksa renk kırmızıya değiştirir.
+- Uç **Nokta Güvenlik Ayrıntıları**, uç nokta ve algılayıcı işlem dahil uç nokta ile ilgili süreçler Microsoft Defender Virüsten Koruma Microsoft Defender hakkında genel bilgiler sağlar. Önemli işlemler beklendiği gibi çevrimiçi yoksa renk kırmızıya değiştirir.
 
   ![Ayrıntılı istemci çözümleyicisi sonucu görüntüsü](images/85f56004dc6bd1679c3d2c063e36cb80.png)
 
--   Uç **Nokta Güvenlik Ayrıntıları**, uç nokta ve algılayıcı işleme dahil uç nokta ile ilgili süreçler Microsoft Defender Virüsten Koruma Microsoft Defender hakkında genel bilgiler sağlar. Önemli işlemler beklendiği gibi çevrimiçi yoksa renk kırmızıya değiştirir.
+-   Uç **Nokta Güvenlik Ayrıntıları**, uç nokta ve algılayıcı işlem dahil uç nokta ile ilgili süreçler Microsoft Defender Virüsten Koruma Microsoft Defender hakkında genel bilgiler sağlar. Önemli işlemler beklendiği gibi çevrimiçi yoksa renk kırmızıya değiştirir.
 
   ![Ayrıntılı istemci çözümleyicisi ayrıntılı sonucu görüntüsü.](images/85f56004dc6bd1679c3d2c063e36cb80.png)
 

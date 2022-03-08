@@ -8,8 +8,8 @@ ms.sitesec: library
 ms.pagetype: security
 f1.keywords:
 - NOCSH
-ms.author: josephd
-author: JoeDavies-MSFT
+ms.author: dansimp
+author: dansimp
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -21,12 +21,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: dee9c4a51175f9fbeac8b6d21f29490081258ba0
-ms.sourcegitcommit: 22cae7ec541268d519d45518c32f22bf5811aec1
+ms.openlocfilehash: 08178a1672e3bdd5b124138f698b42be8181373a
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62974166"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63325509"
 ---
 # <a name="alert-grading-for-suspicious-inbox-forwarding-rules"></a>Şüpheli gelen kutusu iletme kuralları için uyarı notlama
 
@@ -189,7 +189,7 @@ CloudAppEvents
 ## <a name="recommended-actions"></a>Önerilen eylemler
 
 1. Kötü amaçlı gelen kutusu kuralını devre dışı bırakma. 
-2. Kullanıcının hesap kimlik bilgilerini sıfırlayın. Ayrıca, bulut uygulamaları (Azure AD) Kimlik Koruması'nden güvenlik sinyalleri alan Bulut Uygulamaları için Microsoft Defender ile kullanıcı Azure Active Directory güvenliğinin ihlal edilmiş olup olduğunu doğruabilirsiniz.
+2. Kullanıcının hesap kimlik bilgilerini sıfırlayın. Ayrıca, Bulut Uygulamaları için Microsoft Defender'la kullanıcı hesabının güvenliğinin ihlal edilmiş olup olduğunu doğruabilirsiniz ve bu da Azure Active Directory (Azure AD) Identity Protection'dan güvenlik sinyallerini alır.
 3. Etkiyi alan kullanıcı tarafından gerçekleştirilen diğer kötü amaçlı etkinlikleri arama.
 4. Kiracıda, güvenliği tehlikeye atılmış diğer kullanıcıları bulmak için aynı IP'den veya aynı ISS'den (ISS seyrek ortaya çıktı ise) gelen diğer şüpheli etkinlikleri denetleme.
 

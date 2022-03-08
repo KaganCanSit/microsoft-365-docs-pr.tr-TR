@@ -16,12 +16,12 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 description: Bu makale, hassas bilgi türlerine ve hassas öğeleri tanımlamak için sosyal güvenlik, kredi kartı veya banka hesabı numarası gibi hassas bilgileri nasıl algılalarına genel bir bakış sağlar
-ms.openlocfilehash: 6bc15ae90d591e2f2c4e432dce025201c9f13c18
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: fbe23bbb6c639857367cc0b8467f6084e9116af1
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015521"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63318851"
 ---
 # <a name="learn-about-sensitive-information-types"></a>Hassas bilgi türleri hakkında bilgi
 
@@ -42,7 +42,6 @@ Microsoft çok sayıda önceden yapılandırılmış SIT sağlar veya kendi nız
 - [Bekletme etiketleri](retention.md)
 - [Insider risk yönetimi](insider-risk-management.md)
 - [İletişim uyumluluğu](communication-compliance.md)
-- [İç risk yönetimi](insider-risk-management-solution-overview.md)
 - [Otomatik etiketleme ilkeleri](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-for-office-apps)
 - [Microsoft Priva](/privacy/priva)
 
@@ -50,7 +49,7 @@ Microsoft çok sayıda önceden yapılandırılmış SIT sağlar veya kendi nız
 
 ### <a name="built-in-sensitive-information-types"></a>Yerleşik hassas bilgi türleri
 
-Bu SIT'ler Microsoft tarafından varsayılan olarak uyumluluk konsolunda oluşturulur. Bu SIT'ler düzenlenemez, ancak şablon olarak kullanılabilir ve özel hassas bilgi türleri oluşturmak için kopyalanır.
+Bu SIT'ler Microsoft tarafından varsayılan olarak uyumluluk konsolunda oluşturulur. Bu SIT'ler düzenlenemez, ancak şablon olarak kullanılabilir ve özel hassas bilgi türleri oluşturmak için kopyalanır. Tüm [SI'ların tam listesi için](sensitive-information-type-entity-definitions.md) Bkz. Hassas bilgi türü varlık tanımları.
 
 ### <a name="named-entity-sensitive-information-types"></a>Adlandırılmış varlık duyarlı bilgi türleri
 
@@ -86,7 +85,7 @@ Her hassas bilgi türü varlığa şu alanlar tanımlanır:
 
 ![Kanıt ve yakınlık penceresi diyagramı.](../media/dc68e38e-dfa1-45b8-b204-89c8ba121f96.png)
 
-Güven düzeyleri hakkında daha fazla bilgi edinmek için bu videoyu izleyin
+Güven düzeyleri hakkında daha fazla bilgi edinmek için bu kısa videoyu izleyin.
 
 
  > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Hx60]  

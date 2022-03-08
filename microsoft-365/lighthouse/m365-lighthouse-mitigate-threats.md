@@ -16,17 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: MICROSOFT 365 LIGHTHOUSE kullanan Yönetilen Hizmet Sağlayıcıları (MSP)'ler için, güvenlik tehditlerini azaltmak Microsoft Defender Virüsten Koruma.
-ms.openlocfilehash: 3d7eeb54c6f11e73bca71271faa7c09b30627ec2
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+ms.openlocfilehash: 297c35104ae58efb1b7c58d3d1968158d42c0fce
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63018806"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315519"
 ---
 # <a name="mitigate-threats-with-microsoft-defender-antivirus"></a>Tehditlere ve tehditlere Microsoft Defender Virüsten Koruma
-
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
 
 Microsoft 365 Lighthouse, iş ortaklarının tüm kiracılar genelinde tehditleri araştırmasına ve azaltmak için olanak sağlar. Ayrıca cihazlara virüsten koruma taramaları başlatabilirsiniz, cihazların en son Microsoft Defender Virüsten Koruma güncelleştirmelerini alıyor olduğundan emin olabilir ve virüsten koruma taramalarından sonra bekleyen eylemleri gözden geçirebilirsiniz. Deniz Feneri yalnızca daha sonraki bir Windows 10 çalışan cihazları destekler.
 
@@ -136,4 +133,4 @@ Ayrıca, listeden her cihaz adının yanındaki onay kutusunu seçin ve ardında
 [Tehdit yönetimi sayfasına genel bakış ](m365-lighthouse-threat-management-page-overview.md) (makale)\
 [Microsoft Intune'de uyumluluk](/mem/intune/protect/create-compliance-policy) ilkesi oluşturma (makale)\
 [Microsoft Defender Virüsten Koruma](/mem/intune/user-help/turn-on-defender-windows) (makale)\
-[Microsoft Güvenlik Zekası](https://www.microsoft.com/wdsi/threats)
+[Microsoft Güvenlik Zekası](https://www.microsoft.com/wdsi/threats) (web sayfası)

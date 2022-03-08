@@ -12,12 +12,12 @@ ms.author: tiaraquan
 ms.topic: article
 audience: Admin, ITPro
 ms.localizationpriority: medium
-ms.openlocfilehash: a381bc70e73bf3bbb9f654f5d5dfffd2047f8ab5
-ms.sourcegitcommit: 9f0e84835121ce6228fdc69182c24be7ad1cb20e
+ms.openlocfilehash: c70b15a3d35dc4b19c5961e9fbe0404780c12309
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015458"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63330265"
 ---
 # <a name="privacy"></a>Gizlilik
 
@@ -77,7 +77,7 @@ Microsoft Yönetilen Masaüstü tarafından kullanılan veriler, Azure Active Di
 
 ### <a name="microsoft-intune"></a>Microsoft Intune
 
-Microsoft Intune işlemlerini ve hizmetlerini desteklemek için microsoft Yönetilen Masaüstü'ne veri toplar, işler ve paylaşımlar sağlar. Intune'da toplanan veriler hakkında daha fazla bilgi için bkz [. Intune'da veri toplama](/mem/intune/protect/privacy-data-collect) 
+Microsoft Intune işlemlerini ve hizmetlerini desteklemek için microsoft Yönetilen Masaüstü'ne veri toplar, işler ve paylaşımlar sağlar. Intune'da toplanan veriler hakkında daha fazla bilgi için bkz [. Intune'da veri toplama](/mem/intune/protect/privacy-data-collect)
 
 Veri konumlarını daha Microsoft Intune için bkz. [Müşteri verilerinizin Microsoft 365 nerede depolanır](/microsoft-365/enterprise/o365-data-locations). Intune, müşteri verileri için yönetici tarafından yapılan depolama konumu seçimlerine saygılıdır.
 

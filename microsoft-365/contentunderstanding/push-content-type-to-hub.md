@@ -11,13 +11,14 @@ search.appverid: ''
 ms.collection:
 - enabler-strategic
 - m365initiative-syntex
+ms.custom: admindeeplinkSPO
 ms.localizationpriority: high
-ms.openlocfilehash: 7e5acdde2d60db88b68273d0f1158ae1694a523e
-ms.sourcegitcommit: 282f3a58b8e11615b3e53328e6b89a6ac52008e9
+ms.openlocfilehash: 4a7a84023f3155c2b6f1405a3da5d8c5776d0047
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "63019060"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322065"
 ---
 # <a name="push-content-types-to-a-hub"></a>İçerik türlerini hub'a itme
 
@@ -34,7 +35,7 @@ Bu özelliğin çalışması için, yayımlanan içerik türlerinin zaten yayım
 
 İçerik türlerini hub'lara itmek için
 
-1. genel yönetim SharePoint, İçerik **hizmetleri'ni genişletin ve** ardından İçerik türü **galerisi'ni seçin**.
+1. genel yönetim SharePoint, İçerik **hizmetleri'ni genişletin ve** ardından İçerik türü <a href="https://go.microsoft.com/fwlink/?linkid=2185074" target="_blank">**galerisi'ni seçin**</a>.
 2. Hub'lara itmek istediğiniz içerik türünü seçin.
 3. Komut **çubuğunda** Düzenle'yi seçin.
 4. Merkez **siteleri seç'i seçin**.

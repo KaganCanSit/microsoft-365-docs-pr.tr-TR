@@ -25,12 +25,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Güvenlik 365 Windows 10 bilgisayarlarında güvenlik sağlamayı Microsoft 365 İş Ekstra.
-ms.openlocfilehash: bc970928c9e82bfefcc5a8f87007f14ef431c122
-ms.sourcegitcommit: 2ea2105d40b60a87fc9aa30f392a73a3a9db6d99
+ms.openlocfilehash: 03573a117658b10ee5510da1188e4a05b188d8dc
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2021
-ms.locfileid: "63007241"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316639"
 ---
 # <a name="secure-windows-10-computers"></a>Bilgisayarlarda Windows 10 sağlama
 
@@ -58,7 +58,7 @@ Microsoft 365 Business'da cihaz korumasını ayardikten sonra, bilgisayarların�
 
     Sayfanın üst kısmında, **Başla'ya tıklayın**.
 
-4. Güvenli **Windows 10 altında**, açmak istediğiniz seçenekleri belirleyin. Ayarlar hakkında daha fazla bilgi için Bu [cihazlarda Windows 10 makalesine](../misc/secure-windows-10-devices.md) bakın. 
+4. Güvenli **Windows 10 altında**, açmak istediğiniz seçenekleri belirleyin. 
     
     Çoğu kuruluş için buradaki seçenekler iyi bir güvenlik düzeyi sunar; bununla birlikte, kuruluşta daha karmaşık güvenlik ihtiyaçları varsa, güvenlik taban çizgilerini kullanarak güvenlik güvenlik Windows 10 kullanabilirsiniz. Daha fazla bilgi için bkz[. Mobil cihazlarınız için Windows 10 taban Windows 10 bakın](/mem/intune/protect/security-baselines).   
 

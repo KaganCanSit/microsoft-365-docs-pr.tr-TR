@@ -22,16 +22,18 @@ search.appverid:
 - MOE150
 ms.assetid: 9fa2539a-2211-41fd-85a0-bc37b9619ca4
 description: Parolanızı saldırılara karşı daha güvenli hale getirin, ortak parolaları yasaklar ve risk tabanlı çok faktörlü kimlik doğrulamasını etkinleştirin.
-ms.openlocfilehash: a77d6a157c3691739ee7f5a024796f1f203241e8
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 46e6c4ba163df0693630896b8db17b4eefe9828a
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019458"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312584"
 ---
 # <a name="password-policy-recommendations"></a>Parola ilkesi önerileri
 
 Kuruluşun yöneticisi olarak, kuruluşta kullanıcılar için parola ilkesi ayarlama sizin sorumluluğundadır. Parola ilkesi ayarlama karmaşık ve kafa karıştırıcı olabilir ve bu makalede, parola saldırılarına karşı organizasyonlarınızı daha güvenli hale yapmaya yönelik öneriler sağlar.
+
+Microsoft bulut tabanlı hesaplarda değiştirilene kadar önceden tanımlanmış bir parola ilkesi vardır. Sadece parolanın süresi dolana ve parolaların süresinin bitip dolmayıncaya kadar olan günlerin sayısıdır. 
   
 Bu parolaların kullanım Microsoft 365 belirlemek için bkz. Parola süre sonu ilkesi [ayarlama Microsoft 365](../manage/set-password-expiration-policy.md).
 

@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Yöneticiler Word, Excel ve PowerPoint dosyaları için Word, SharePoint duyarlılık OneDrive.
-ms.openlocfilehash: a77721175962acbddbaae393aef49d16b96a9215
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: 08c3daab9195e98c3b099255f1e7fb38a2324c33
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62999092"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320025"
 ---
 # <a name="enable-sensitivity-labels-for-office-files-in-sharepoint-and-onedrive"></a>SharePoint ve Office dosyaları için duyarlılık OneDrive
 
@@ -73,7 +73,7 @@ Windows'ta OneDrive eşitleme uygulamasının 19.002.0121.0008 veya sonraki sür
 
 ## <a name="limitations"></a>Sınırlamalar
 
-- SharePoint ve OneDrive, bu dosyalar PowerQuery verileri, özel eklentiler tarafından depolanan veriler ya da Kapak Sayfası Özellikleri, içerik türü şemaları, özel Belge Bilgileri Paneli ve Özel XSN gibi özel XML bölümleri içeriyorsa, Office masaüstü uygulamaları tarafından etiketlenen ve şifrelenmiş bazı dosyaları işleyebilirsiniz. Bu sınırlama, karşıya yüklendiklerine Belge [Kimliği eklenmiş](https://support.microsoft.com/office/enable-and-configure-unique-document-ids-ea7fee86-bd6f-4cc8-9365-8086e794c984) olan dosyalar için de geçerlidir.
+- SharePoint ve OneDrive, bu dosyalar PowerQuery verileri, özel eklentiler tarafından depolanan veriler ya da Kapak Sayfası Özellikleri, içerik türü şemaları, özel Belge Bilgileri Paneli ve Özel XSN gibi özel XML bölümleri içeriyorsa, Office masaüstü uygulamaları tarafından etiketlenen ve şifrelenmiş bazı dosyaları işleyebilirsiniz. Bu sınırlama, kaynakça içeren [dosyalar ve](https://support.microsoft.com/en-us/office/create-a-bibliography-citations-and-references-17686589-4824-4940-9c69-342c289fa2a5) karşıya yüklendiklerinde Belge Kimliği eklenmiş olan dosyalara da uygulanır.[](https://support.microsoft.com/office/enable-and-configure-unique-document-ids-ea7fee86-bd6f-4cc8-9365-8086e794c984)
 
     Bu dosyalar için, daha sonra dosyalarda açılmaları için şifreleme olmadan bir etiket Web üzerinde Office veya kullanıcılardan dosyaları kendi masaüstü uygulamaları içinde açmalarını talimat edin. Yalnızca iş dosyalarında etiketlenen ve Web üzerinde Office dosyalar etkilenmez.
 

@@ -18,12 +18,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 10a184e6ce36129a84197cc02caae3b96625e39a
-ms.sourcegitcommit: 6dcc3b039e0f0b9bae17c386f14ed2b577b453a6
+ms.openlocfilehash: a9a17c6e336704cfe09e1c864e9700a4492e8c87
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63018993"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63328029"
 ---
 # <a name="devicetvmsoftwareinventory"></a>DeviceTvmSoftwareInventory
 
@@ -57,7 +57,7 @@ Gelişmiş av şemasında yer alan diğer tablolar hakkında bilgi için bkz. [g
 | `SoftwareVersion` | `string` | Yazılım ürününün sürüm numarası |
 | `EndOfSupportStatus` | `string` | Yazılım ürününün yaşam döngüsü aşamasını belirtilen destek sonu (EOS) veya kullanım ömrü sonu (EOL) tarihine göre gösterir |
 | `EndOfSupportDate` | `string` | Yazılım ürününün destek sonu (EOS) veya ömür sonu (EOL) tarihi |
-
+| `ProductCodeCpe` | `string` | CPE'nin bulunduğu yerde yazılım ürününün CPE'i veya 'kullanılamaz' |
 
 
 ## <a name="related-topics"></a>İlgili konular

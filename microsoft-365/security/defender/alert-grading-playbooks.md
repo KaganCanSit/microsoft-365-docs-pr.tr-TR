@@ -9,8 +9,8 @@ ms.sitesec: library
 ms.pagetype: security
 f1.keywords:
 - NOCSH
-ms.author: josephd
-author: JoeDavies-MSFT
+ms.author: dansimp
+author: dansimp
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -23,12 +23,12 @@ ms.custom:
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
 ms.technology: m365d
-ms.openlocfilehash: fe0beb88cf613a5a966fc0534dfa4def715e81d2
-ms.sourcegitcommit: e3bff611439354e6339bb666a88682078f32ec13
+ms.openlocfilehash: 129a4f2efd9a47c09535be3ba0f56504f3da697c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "62974138"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63328015"
 ---
 # <a name="alert-grading-playbooks"></a>Playbooks'a not verme uyarısı
 
@@ -50,7 +50,7 @@ Güvenlik araştırmacısı veya güvenlik işlemleri merkezi (SOC) analisti ola
 
 ## <a name="microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender
 
-[Güvenlik için Microsoft Defender Office 365](/microsoft-365/security/office-365-security/defender-for-office-365) e-posta iletileri, bağlantılar (URL'ler) ve işbirliği araçları tarafından ortaya atacak kötü amaçlı tehditlere karşı korur. Office 365 Defender şunları içerir:
+[Microsoft Defender For Office 365](/microsoft-365/security/office-365-security/defender-for-office-365), e-posta iletileri, bağlantılar (URL'ler) ve işbirliği araçları tarafından tehditlere karşı organizasyonlarınızı korur. Defender for Office 365 şunları içerir:
 
 - Tehdit koruması ilkeleri
 
@@ -99,4 +99,4 @@ Aşağıdaki tehditlere karşı uyarıları daha hızlı şekilde puanlayacak ad
 - [Şüpheli gelen kutusu işleme kuralları](alert-grading-playbook-inbox-manipulation-rules.md)
 - [Şüpheli gelen kutusu iletme kuralları](alert-grading-playbook-inbox-forwarding-rules.md)
 
-Güvenlik [portalında uyarıların](investigate-alerts.md) nasıl incelenecekleri hakkında bilgi için bkz. Microsoft 365 Defender bakın.
+Güvenlik [portalında uyarıları](investigate-alerts.md) inceleme hakkında bilgi için bkz. Microsoft 365 Defender.

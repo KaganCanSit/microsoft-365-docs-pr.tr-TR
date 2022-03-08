@@ -15,30 +15,27 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: Yönetilen Hizmet Sağlayıcıları (MSP) Microsoft 365 Lighthouse, kiracı listenizi yönetmeyi öğrenin.
-ms.openlocfilehash: c2a1bfe65f2002f6b8c6548eabea5dc450366c32
-ms.sourcegitcommit: cd3f5e3b7fea37fdcd8c811d01afd60ea68301ca
+description: Microsoft 365 Deniz Feneri kullanan Yönetilen Hizmet Sağlayıcıları (MSP)'ler için kiracı listenizi yönetmeyi öğrenin.
+ms.openlocfilehash: 3c62761bdb5fbed08be07e909d465aa0a790ff97
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "62997105"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63330433"
 ---
 # <a name="manage-your-tenant-list"></a>Kiracı listenizi yönetme
 
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
-
-Kiracı listenizi yeni bir Microsoft 365 Lighthouse yönetmenize yardımcı olmak için, kiracınıza özel etiketler uygulayabilirsiniz. Bu etiketler kiracılarınızı düzenlemek için kullanılabilir ve ilgili kiracı kümelerinin var olan görünümlerini ve içgörülerini filtrelemenize yardımcı olabilir. Etiketlerinizi Kiracılar sayfasından yönetebilirsiniz. Oluşturulduktan ve atandıktan sonra Kiracılar, Kullanıcılar, Cihazlar, Tehdit yönetimi ve Windows 365 sayfalarının içindeki verileri bir etikete göre filtreebilirsiniz.
+Kiracı listenizi Microsoft 365 Deniz Feneri'nde yönetmenize yardımcı olmak için kiracınıza özel etiketler uygulayabilirsiniz. Bu etiketler kiracılarınızı düzenlemek için kullanılabilir ve ilgili kiracı kümelerinin var olan görünümlerini ve içgörülerini filtrelemenize yardımcı olabilir. Etiketlerinizi Kiracılar sayfasından yönetebilirsiniz. Oluşturulduktan ve atandıktan sonra Kiracılar, Kullanıcılar, Cihazlar, Tehdit yönetimi ve Windows 365 sayfalarının içindeki verileri bir etikete göre filtreleyebilirsiniz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
 Kiracı etiketlerini yönetmek için:
 
-- Sistem [gereksinimlerini Microsoft 365 Lighthouse](m365-lighthouse-requirements.md).
+- [Microsoft 365 Deniz Feneri gereksinimlerini karşılar](m365-lighthouse-requirements.md).
 
-- Bu makaleye kaydolma makalesinde ana [hatlarıyla açıklanan Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md) tamamlama.
+- [Microsoft 365 Deniz Feneri'ne kaydol makalesinde açıklanan işlemleri](m365-lighthouse-sign-up.md) tamamlama.
 
-- Portal güvenlik makalesinde ana [hatlarıyla açıklanan Microsoft 365 Lighthouse tamamlama](m365-lighthouse-configure-portal-security.md).
+- [Microsoft 365 Deniz Feneri portalını yapılandırma güvenlik makalesinde açıklanan işlemleri](m365-lighthouse-configure-portal-security.md) tamamlama.
 
 - İş ortağı kiracısı genel yöneticisi olun.
 
@@ -78,7 +75,8 @@ Kiracı etiketlerini yönetmek için:
 
 Kiracıya zaten atanmış olan etiketlerde, etiket adının sağda bir onay işareti olur. Ayrıca etiket atamak için, listede her kiracının yanındaki onay kutusunu işaretleyin, Etiket Ata'ya tıklayın ve ardından listeden bir etiket seçin.
 
-**NOT**: En fazla 30 benzersiz Etiket oluşturabilir ve bunları gerektiğinde çok kiracıya atabilirsiniz.
+> [!NOTE]
+> En çok 30 benzersiz Etiket oluşturabilir ve bunları gerektiğinde çok kiracıya atabilirsiniz.
 
 ## <a name="delete-a-tag"></a>Etiket silme
 
@@ -108,6 +106,6 @@ Etiketleri oluşturduktan ve atadikten sonra, kiracılarınızı filtrelemek iç
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Oturum açma için Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md) (makale)  
-[Microsoft 365 Lighthouse uyumluluğu sayfasına genel bakış](m365-lighthouse-device-compliance-page-overview.md) (makale)  
-[Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)
+[Microsoft 365 Deniz Feneri'ne kaydolma](m365-lighthouse-sign-up.md) (makale)  
+[Microsoft 365 Deniz Feneri Cihazı uyumluluğu sayfasına genel bakış](m365-lighthouse-device-compliance-page-overview.md) (makale)  
+[Microsoft 365 Deniz Feneri SSS](m365-lighthouse-faq.yml) (makale)

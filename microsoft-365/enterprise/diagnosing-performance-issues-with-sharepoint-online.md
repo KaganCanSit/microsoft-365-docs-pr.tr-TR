@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 ms.assetid: 3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86
 description: Bu makalede, Internet Explorer geliştirici araçlarını kullanarak SharePoint Online sitenize ilişkin genel sorunları nasıl tanıyabilirsiniz?
-ms.openlocfilehash: acd5fc05f933e5d47b5bb14c2d3317ea3a6e0186
-ms.sourcegitcommit: 2ea2105d40b60a87fc9aa30f392a73a3a9db6d99
+ms.openlocfilehash: a3ad33b147a20cd5b072f7f3ccc1b9272a58ef54
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2021
-ms.locfileid: "63007240"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63321509"
 ---
 # <a name="diagnosing-performance-issues-with-sharepoint-online"></a>SharePoint Online ile ilgili performans SharePoint tanılama
 
@@ -48,6 +48,9 @@ Bu konu başlığında, performans sorunlarını tanılamak için bu yöntemleri
 > Yöneticiyseniz ve SharePoint'de performansla ilgili sorun yapıyorsanız, aşağıdaki Testleri Çalıştır'ı seçin.  Bu seçim Merkezi'nde Site ve Sayfa Performansı tanılamasını Microsoft 365 Yönetici. Bu testler yapılandırmanızı kontrol eder ve kiracınız için performans iyileştirmeye yardımcı SharePoint sonraki adımları hızla önerebilir.
 >> [!div class="nextstepaction"]
 >> [Testleri Çalıştırma: Test SharePoint Denetleme](https://aka.ms/PillarSiteandPagePerf)
+
+> [!NOTE] 
+> Bu özellik 21Vianet tarafından Microsoft 365 veya Almanya Microsoft 365 tarafından işletilen Microsoft 365 için kullanılamaz.
   
 ## <a name="using-the-f12-tool-bar-to-diagnose-performance-in-sharepoint-online"></a>SharePoint Online'da performansı tanılamak için F12 araç çubuğunu kullanma
 <a name="F12ToolInfo"> </a>

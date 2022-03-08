@@ -4,8 +4,8 @@ f1.keywords:
 - NOCSH
 - fwlink 2135143
 - India-only
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: drjones, jmueller
 audience: Admin
@@ -21,12 +21,12 @@ search.appverid: MET150
 description: Microsoft Teams Ücretsiz'den işletmeler için yeni bir Microsoft 365 yükseltmeyi öğrenin.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.date: 07/08/2020
-ms.openlocfilehash: 1382ec4e272b7bede184f47ebbaf64780907b40e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: a767eb058490f35b58c2e9ab549539afc610a4e7
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988107"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63321369"
 ---
 # <a name="upgrade-from-microsoft-teams-free-to-microsoft-365-for-business"></a>İşletmeler için Microsoft Teams Ücretsiz'den Microsoft 365'e yükseltme
 

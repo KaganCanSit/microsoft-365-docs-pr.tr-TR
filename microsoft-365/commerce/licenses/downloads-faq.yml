@@ -1,8 +1,8 @@
 ### YamlMime:FAQ
 metadata:
   title: İndirmeler Hakkında Sık Sorulan Sorular
-  ms.author: cmcatee
   author: cmcatee-MSFT
+  ms.author: cmcatee
   manager: scotv
   ms.reviewer: racheg, armanv
   ms.date: 07/22/2021
@@ -12,12 +12,12 @@ metadata:
   ms.custom: commerce_vl
   ms.localizationpriority: medium
   description: İndirmeleri hakkında sık Microsoft 365 yönetim merkezi sorulan sorular.
-  ms.openlocfilehash: 5ac5fb32f968902e772c5f98beb425d74f154ac8
-  ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+  ms.openlocfilehash: ea42562d13184ef002699db35902a58127c4279f
+  ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/06/2021
-  ms.locfileid: "62973573"
+  ms.lasthandoff: 03/08/2022
+  ms.locfileid: "63322317"
 title: İndirmeler Hakkında Sık Sorulan Sorular
 summary: ''
 sections:
@@ -25,7 +25,7 @@ sections:
   questions:
   - question: >
       Yazılım indirme gereksinimleri ne Microsoft 365 yönetim merkezi?
-    answer: "İndirmeyi planlayan ürünler için bir lisans satın almalı ve yüklemenin tamamlanması için her lisans için geçerli bir ürün anahtarına erişiminiz olmalıdır. Ürünleri indirmeden önce lisans sözleşmenizi doğrulayın.\n\nYönetim merkezinde oturum gidip Ürününüz'e  >  gidip Ürün açıklaması sayfasındaki Ürünler'e > **bulabilirsiniz**. \n\n> [!NOTE]\n> Tüm ürünler için ürün anahtarı gerekli değildir.\n"
+    answer: "İndirmeyi planlayan ürünler için bir lisans satın almalı ve yüklemenin tamamlanması için her lisans için geçerli bir ürün anahtarına erişiminiz olmalıdır. Ürünleri indirmeden önce lisans sözleşmenizi doğrulayın.\n\nYönetim merkezinde oturum gidip Ürünlerinizİyseniz sayfasına  >  gidip Ürün açıklamasını doldurarak > **bulabilirsiniz**. \n\n> [!NOTE]\n> Tüm ürünler için ürün anahtarı gerekli değildir.\n"
   - question: >
       Yönetim merkezinden hangi ürünleri indirebilirim?
     answer: >
@@ -61,9 +61,9 @@ sections:
         - Project Sunucusu
   - question: "E-Office Mac? \n"
     answer: >
-      Office 365'in toplu lisanslama Office Mac çalıştırmak için aşağıdaki dosyaları indirmeli ve yüklelisiniz:
+      Office 365'in toplu lisanslama Office Mac çalıştırmak için aşağıdaki dosyaları indirmeniz ve yüklemeniz gerekir:
         - [Dosyanın indirme dosyasında bulunan Toplu Lisans (VL)](/deployoffice/mac/volume-license-serializer) Seri Office Mac paketi.
-        - En [Office Mac paketi](/officeupdates/update-history-office-for-mac#most-current-packages-for-office-for-mac). Tek tek uygulamalar için yükleyici paketi dosyalarına aşağıdaki Microsoft 365 yönetim merkezi. Office Mac toplu lisans sürümünü etkinleştirmek için VL Serileştiricisi kullanılır ve ürün anahtarı Office Mac.
+        - En [Office Mac paketi](/officeupdates/update-history-office-for-mac#most-current-packages-for-office-for-mac). Tek tek uygulamalar için yükleyici paketi dosyalarına aşağıdaki Microsoft 365 yönetim merkezi. Office Mac toplu lisans sürümünü etkinleştirmek için VL Serileştiricisi bir ürün anahtarı gerektirmez, çünkü toplu lisans sürümü Office Mac.
   - question: >
       Yönetim merkezinde ürünleri nasıl indirebilirim?
     answer: "Yönetim merkezinde ürünleri indirmek için:\n1. Toplu **Lisanslama'ya** tıklayın ve ardından ürünü veya İndirmeleri **görüntüle'yi seçin**.\n2. **İndir'in** altında bir bileşen seçin ve bir indirme eylemi veya indirme simgesi seçin. \n\nYönetim merkezinde indirmelere erişmek için, aşağıdaki rollerden birini atadığınız kurum daki bir VLSC yöneticisi size erişim sair olabilir:\n  - Yönetici\n  - İndir\n  - Yazılım Güvencesi Yöneticisi\n"
@@ -89,7 +89,7 @@ sections:
       Windows işletim sistemine sahip bir bilgisayar kullanıyorsanız CD-R veya DVD-R yazmanız için ek yazılıma ihtiyacınız yok. İndirdiğiniz ISO dosyasına çift tıklayın ve Ardından Resim Yazıcı Sihirbazı'nın adımlarını izleyin.
 
 
-      Windows dışında bir işletim sistemi kullanıyorsanız ek yazılımlara ihtiyacınız olabilir. Bilgisayarınızda CD/DVD yazıcı varsa, yazılım büyük olasılıkla bilgisayarınıza yüklenir. ÇOĞU CD-R/DVD-R yazma yazılımı, resim dosyasından disk oluşturmanıza olanak sağlar. Bu özel özellikle erişmek için **Resmi CD'ye Kopyala** veya **Resmi Yaz gibi** bir menü öğesi seçin.
+      Başka herhangi bir işletim sistemini kullanıyorsanız Windows yazılıma ihtiyacınız olabilir. Bilgisayarınızda CD/DVD yazıcı varsa, yazılım büyük olasılıkla bilgisayarınıza yüklenir. ÇOĞU CD-R/DVD-R yazma yazılımı, resim dosyasından disk oluşturmanıza olanak sağlar. Bu özel özellikle erişmek için **Resmi CD'ye Kopyala** veya **Resmi Yaz gibi** bir menü öğesi seçin.
   - question: >
       ISO dosyalarını sanal bir cihaz olarak nasıl bağlar ve bu dosyalara erişim?
     answer: >
@@ -98,7 +98,7 @@ sections:
 
       > [!NOTE]
 
-      > Bu yaklaşım yalnızca küçük veya küçük sistem yükseltmeleri gibi uygulamaları Office için tavsiye edilebilir. Yükleme sırasında sanal sürücü kaybolduğu için işletim sistemini bu yaklaşımı kullanarak yükeesiniz.
+      > Bu yaklaşım, yalnızca küçük veya küçük sistem yükseltmeleri Office uygulamaları yüklemek için tavsiye edilebilir. Yükleme sırasında sanal sürücü kaybolduğu için işletim sistemini bu yaklaşımı kullanarak yükeesiniz.
   - question: >
       İndirilen ürünler için nasıl destek almak yapabilirim?
     answer: >

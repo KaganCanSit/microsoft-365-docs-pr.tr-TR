@@ -10,18 +10,18 @@ ms.localizationpriority: medium
 author: denisebmsft
 ms.author: deniseb
 ms.custom: nextgen
-ms.date: 10/18/2021
-ms.reviewer: pauhijbr, ksarens
+ms.date: 02/22/2022
+ms.reviewer: pauhijbr, ksarens, mkaminska
 manager: dansimp
 ms.technology: mde
 ms.topic: how-to
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 91e3acee5fb3ab2542c2beed4681f07959e9fe05
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 96827430b8d2fe1b45b9839ffe87eb5aa5571b93
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62997520"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326601"
 ---
 # <a name="configure-scheduled-quick-or-full-microsoft-defender-antivirus-scans"></a>Zamanlanmış hızlı veya tam ekran taramalarını Microsoft Defender Virüsten Koruma yapılandırma
 
@@ -48,14 +48,11 @@ Her zaman açık, gerçek zamanlı koruma ve isteğe bağlı virüsten koruma ta
 
 Zamanlanmış taramaları ayar hazırlarken, taramanın tam tarama mı yoksa hızlı tarama mı olacağını belirtsiniz. Çoğu durumda, hızlı tarama önerilir.
 
-<br>
-
-****
+<br/><br/>
 
 |Hızlı tarama|Tam tarama|Özel tarama|
 |---|---|---|
-|(Önerilen) Hızlı tarama, kayıt defteri anahtarları ve bilinen başlangıç klasörleri gibi sistemle başlamak üzere kötü amaçlı yazılım kaydedilmiş Windows tüm konumlara göz atıyor. <p> Her zaman açık, gerçek zamanlı korumayla birlikte, açıldığında ve kapatılan dosyaları gözden birleştiren ve kullanıcı bir klasöre her defa geldiğinde hızlı tarama, sistemle ve çekirdek düzeyinde kötü amaçlı yazılımla başlayan kötü amaçlı yazılımlara karşı güçlü koruma sağlar. <p> Çoğu durumda, hızlı tarama yeterli olur ve zamanlanmış taramalar için önerilen seçenektir.|Tam tarama, hızlı bir tarama çalıştırarak başlar ve ardından takılan tüm sabit disklerin ve çıkarılabilir/ağ sürücülerinin sıralı dosya tarama işlemiyle devam eder (tam tarama bunu yapacak şekilde yapılandırılmışsa). <p> Tam taramanın tamamlanması, taranacak verilerin miktarına ve türüne bağlı olarak birkaç saat veya gün sürebilir. <p> Tam tarama tamamlandığında, yeni güvenlik zekası kullanılabilir ve yeni güvenlik zekası ile başka hiçbir tehdit algılanmaz olduğundan emin olmak için yeni bir tarama gereklidir. <p> Tam taramaya katılan zaman ve kaynaklar nedeniyle, Microsoft genel olarak tam taramalar zamanlamayı önerilmez.|Özel tarama, belirttiğiniz dosya ve klasörlerde çalışan hızlı bir taramadır. Örneğin, bir USB sürücüsüne veya cihazınızın yerel sürücüsüne belirli bir klasörü taramayı tercih edebilirsiniz.|
-|
+|(Önerilen) Hızlı tarama, kayıt defteri anahtarları ve bilinen başlangıç klasörleri gibi sistemle başlamak üzere kötü amaçlı yazılım kaydedilmiş Windows tüm konumlara göz atıyor. <br/><br/>Her zaman açık, gerçek zamanlı korumayla birlikte, açıldığında ve kapatılan dosyaları gözden birleştiren ve kullanıcı bir klasöre her defa geldiğinde hızlı tarama, sistemle ve çekirdek düzeyinde kötü amaçlı yazılımla başlayan kötü amaçlı yazılımlara karşı güçlü koruma sağlar.<br/><br/>Çoğu durumda, hızlı tarama yeterli olur ve zamanlanmış taramalar için önerilen seçenektir.|Tam tarama, hızlı bir tarama çalıştırarak başlar ve ardından takılan tüm sabit disklerin ve çıkarılabilir/ağ sürücülerinin sıralı dosya tarama işlemiyle devam eder (tam tarama bunu yapacak şekilde yapılandırılmışsa).<br/><br/>Tam taramanın tamamlanması, taranacak verilerin miktarına ve türüne bağlı olarak birkaç saat veya gün sürebilir.<br/><br/>Tam tarama tamamlandığında, yeni güvenlik zekası kullanılabilir ve yeni güvenlik zekası ile başka hiçbir tehdit algılanmaz olduğundan emin olmak için yeni bir tarama gereklidir.<br/><br/>Tam taramaya katılan zaman ve kaynaklar nedeniyle, Microsoft genel olarak tam taramalar zamanlamayı önerilmez.|Özel tarama, belirttiğiniz dosya ve klasörlerde çalışır. Örneğin, bir USB sürücüsüne veya cihazınızın yerel sürücüsüne belirli bir klasörü taramayı seçebilirsiniz.|
 
 > [!NOTE]
 > Varsayılan olarak, hızlı taramalar USB sürücüler gibi çıkarılabilir cihazlarda çalışır.
@@ -63,10 +60,7 @@ Zamanlanmış taramaları ayar hazırlarken, taramanın tam tarama mı yoksa hı
 ## <a name="how-do-i-know-which-scan-type-to-choose"></a>Hangi tarama türünü seç olduğumu nasıl bilim?
 
 Tarama türünü seçmek için aşağıdaki tabloyu kullanın.
-
-<br>
-
-****
+<br/><br/>
 
 |Senaryo|Önerilen tarama türü|
 |---|---|
@@ -74,7 +68,6 @@ Tarama türünü seçmek için aşağıdaki tabloyu kullanın.
 |Kötü amaçlı yazılım gibi tehditler tek bir cihazda algılanır|Hızlı tarama <p> Çoğu durumda, hızlı taramalar algılanan kötü amaçlı yazılımları yakalar ve temizler.|
 |Bir isteğe bağlı [tarama çalıştırmak istiyor](run-scan-microsoft-defender-antivirus.md)|Hızlı tarama|
 |USB sürücüsü gibi taşınabilir bir cihazın kötü amaçlı yazılım içermeyer|Özel tarama <p> Özel tarama belirli konumları, klasörleri veya dosyaları seçmenize olanak sağlar ve hızlı bir tarama çalıştırır.|
-|
 
 ## <a name="what-else-do-i-need-to-know-about-quick-and-full-scans"></a>Hızlı ve tam taramalar hakkında başka neleri bileceğim?
 

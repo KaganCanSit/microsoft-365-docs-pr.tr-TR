@@ -1,9 +1,9 @@
 ---
 title: Adım 1. Güvenlik taban çizgilerini yapılandırma
-author: JoeDavies-MSFT
+author: dansimp
 f1.keywords:
 - NOCSH
-ms.author: josephd
+ms.author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: article
@@ -17,12 +17,12 @@ ms.collection:
 ms.custom: seo-marvel-jun2020
 keywords: fidye yazılımı, insan tarafından işletilen fidye yazılımı, insan tarafından işletilen fidye yazılımı, HumOR, extortion saldırısı, fidye yazılımı saldırı, şifreleme, cryptovirology, sıfır güven
 description: Önemli kaynaklarınızı fidye yazılımı saldırılarından Microsoft 365 için güvenlik taban çizgilerini kullanın.
-ms.openlocfilehash: 66218d15a36faa510bd246b46dbc0dcd0f9948fb
-ms.sourcegitcommit: 23a90ed17cddf3b0db8d4084c8424f0fabd7b1de
+ms.openlocfilehash: 22092994765e9015421c21f2ee057c63463d594d
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63015445"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320193"
 ---
 # <a name="step-1-configure-security-baselines"></a>Adım 1. Güvenlik taban çizgilerini yapılandırma
 

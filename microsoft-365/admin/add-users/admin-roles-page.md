@@ -4,28 +4,29 @@ f1.keywords:
 - NOCSH
 ms.author: kwekua
 author: kwekua
-manager: svidican
+manager: scotv
 audience: Admin
 ms.topic: overview
 ms.service: o365-administration
 ms.localizationpriority: medium
 ms.collection:
 - M365-subscription-management
-- Adm_O365
+- Adm_O365W
 ms.custom:
 - AdminSurgePortfolio
 - AdminTemplateSet
+- admindeeplinkSPO
 search.appverid:
 - BCS160
 - MET150
 - MOE150
 description: Yönetici rolleri iş işlevleriyle eşler ve yönetim merkezinde belirli görevlerin izinleri sağlar. Örneğin, Hizmet yöneticisi Microsoft’a destek bileti açar.
-ms.openlocfilehash: 8232e95649ac894e8a024a2d2ac4e7b4261cb1f2
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 813cc178b572be5a6b1abc28d355ede020918c55
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983736"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315253"
 ---
 # <a name="get-started-with-the-roles-page"></a>Roller sayfasını çalışmaya başlama
 
@@ -78,7 +79,7 @@ Azure, Microsoft 365 ve Office 365 hizmetleri için destek isteği oluşturması
 
 ### <a name="sharepoint-admin"></a>SharePoint yöneticisi
 
-Bir ekip aboneliği Microsoft 365 ekip sitesi otomatik olarak oluşturulur ve genel yönetici birincil site koleksiyonu yöneticisi olarak ayarlanır. Kullanıcı SharePoint merkezi'ne erişmek istediğiniz kullanıcılara yönetici SharePoint attayabilirsiniz. Yönetici rolüne SharePoint kullanıcılar site koleksiyonlarını oluşturabilir ve yönetebilir, site koleksiyonu yöneticilerini adan ve kullanıcı profillerini yönetebilir. Yönetici rolüne SharePoint kullanıcılar gruplarınızı yönetebilir Microsoft 365 Microsoft desteği aracılığıyla destek isteklerini açabilir. [Daha fazla bilgi edinin](/sharepoint/sharepoint-admin-role)
+Bir ekip aboneliği Microsoft 365 ekip sitesi otomatik olarak oluşturulur ve genel yönetici birincil site koleksiyonu yöneticisi olarak ayarlanır. Yönetim SharePoint erişimlerini istediğiniz kullanıcılara yönetici rolü SharePoint <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">attayabilirsiniz</a>. Yönetici rolüne SharePoint kullanıcılar site koleksiyonlarını oluşturabilir ve yönetebilir, site koleksiyonu yöneticilerini adan ve kullanıcı profillerini yönetebilir. Yönetici rolüne SharePoint kullanıcılar gruplarınızı yönetebilir Microsoft 365 Microsoft desteği aracılığıyla destek isteklerini açabilir. [Daha fazla bilgi edinin](/sharepoint/sharepoint-admin-role)
 
 ### <a name="teams-service-admin"></a>Teams yöneticisi
 

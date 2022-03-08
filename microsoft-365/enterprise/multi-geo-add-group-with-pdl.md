@@ -12,21 +12,23 @@ f1.keywords:
 ms.collection: Strat_SP_gtc
 ms.localizationpriority: medium
 description: Çok coğrafi bir ortamda Microsoft 365 tercih edilen veri konumuyla kaynak grubu oluşturma hakkında bilgi öğrenin.
-ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 6ce4ed337b07206e6508a5955edc2c264586df4b
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.custom:
+- seo-marvel-apr2020
+- admindeeplinkSPO
+ms.openlocfilehash: 7de00ad0d94cda0a47f4981d78ebc07cedab6ada
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62996130"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63318809"
 ---
 # <a name="create-a-microsoft-365-group-with-a-specific-preferred-data-location"></a>Belirli bir Microsoft 365 veri konumuyla Veri Grubu oluşturma
 
 Çok coğrafi bir ortamdaki kullanıcılar Microsoft 365 Grubu oluşturduklarında, grup tercih edilen veri konumu (PDL) otomatik olarak kullanıcınınkiyle ayarlanır. Genel, SharePoint grupları Exchange Yöneticiler kendi oluşturdukları herhangi bir bölgede grup oluşturabilir. 
 
-Belirli bir PDL'ye sahip bir grup oluşturmanız gerekirse, bunu SharePoint yönetim merkezinden veya Microsoft PowerShell cmdlet'i aracılığıyla Exchange Online New-UnifiedGroup aracılığıyla da yapabiliriz. Bunu yapmak için, hem grup posta kutusu SharePoint grupla ilişkilendirilmiş olan posta kutusu, belirtilen PDL içinde sağlandı.
+Belirli bir PDL'ye sahip bir grup oluşturmanız gerekirse, bunu <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">yapmak için SharePoint</a> yönetim merkezinden veya Microsoft PowerShell cmdlet'inden Exchange Online New-UnifiedGroup kullanabilirsiniz. Bunu yapmak için, hem grup posta kutusu SharePoint grupla ilişkilendirilmiş olan posta kutusu, belirtilen PDL içinde sağlandı.
 
-Belirttiğiniz PDL Microsoft 365 BIR Grup Oluşturmak için, grup sitesini oluşturmak istediğiniz coğrafi konumda SharePoint yönetim merkezine gidin.
+Belirttiğiniz PDL Microsoft 365 BIR Grup Oluşturmak için, <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">grup sitesini oluşturmak istediğiniz coğrafi konumda SharePoint</a> yönetim merkezine gidin.
 
 Örneğin:
 

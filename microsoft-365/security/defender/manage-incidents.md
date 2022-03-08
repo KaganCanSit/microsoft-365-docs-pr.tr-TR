@@ -8,25 +8,25 @@ ms.sitesec: library
 ms.pagetype: security
 f1.keywords:
 - NOCSH
-ms.author: josephd
-author: JoeDavies-MSFT
+ms.author: dansimp
+author: dansimp
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection:
 - M365-security-compliance
-- m365initiative-m365-defender
+- m365-initiative-defender-endpoint
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: b9cc3e0ab911515d010b1a6e7feaac5cff8aed51
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: 3418eac69930819fdb0e3fd8d1bae80312f89a9f
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015529"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326419"
 ---
 # <a name="manage-incidents-in-microsoft-365-defender"></a>Olayları iş yer Microsoft 365 Defender
 
@@ -48,7 +48,7 @@ Olaylarınızı şöyle yönetebilirsiniz:
 - [Olay etiketleri ekleme](#add-incident-tags)
 - [Olayı kullanıcı hesabına atama](#assign-an-incident)
 - [Bunları çözme](#resolve-an-incident)
-- [Sınıflandırmasını ve belirlemesini ayarlama](#set-the-classification-and-determination)
+- [Sınıflandırmasını belirtme](#specify-the-classification)
 - [Açıklama ekleme](#add-comments)
 
 Olayları, Bir olayın Olay yönetme **bölmesinden** yönetebilirsiniz. İşte bir örnek.
@@ -95,11 +95,16 @@ Olay düzeltildise, iki durumlu **düğmeyi sağa taşımak** için Olayı çöz
 
 Çözümlenmezse bir olay Etkin olarak **görüntülenir**.
 
-## <a name="set-the-classification-and-determination"></a>Sınıflandırmayı ve belirlemeyi ayarlama
+## <a name="specify-the-classification"></a>Sınıflandırmayı belirtme
 
-Olay sınıflandırması, Sınıflandırma alanından yapılandırılan doğru bir uyarı mı yoksa yanlış uyarı **mı olduğuyla ilgilidir** . 
+Sınıflandırma **alanında** , olayın aşağıdaki gibi bir olay olup olmadığını belirtirsiniz:
 
-Bu doğru bir uyarıysa, Karar alanı ile bunun ne tür bir tehdit **olduğunu da** belirtebilirsiniz. Tehdit türünü belirtmek, güvenlik ekibinin tehdit düzenlerini görmelerine ve organizasyonunu onlardan savunmaya yardımcı olur. 
+- **Ayarlanmaz** (varsayılan).
+- **Bir tehdit** türünde gerçek pozitif sonuç. Gerçek bir tehditi doğru gösteren olaylar için bu sınıflandırmayı kullanın. Tehdit türünü belirtmek, güvenlik ekibinin tehdit düzenlerini görmelerine ve organizasyonunu onlardan savunmaya yardımcı olur.
+- **Bilgilendirme, etkinlik türüyle** beklenen etkinlik. Güvenlik testleri, kırmızı ekip etkinliği ve güvenilir uygulamalarla kullanıcılardan beklenen alışılmışın dışında bir davranış için olayları sınıflandırmak üzere bu kategorideki seçenekleri kullanın.
+- **Teknik olarak** yanlış ve yanıltıcı olduğundan, sizin karartılan olay türleri için hatalı pozitif sonuçlar yoksayılabilir.
+
+Olayları sınıflama, durumunu ve türünü belirtme, zaman içinde daha iyi Microsoft 365 Defender algılama belirlemesi sağlamak için gerekli ayarlamaları yapmak için gerekli ayarlamaları yapmak için yardımcı olur.
 
 ## <a name="add-comments"></a>Açıklama ekleme
 

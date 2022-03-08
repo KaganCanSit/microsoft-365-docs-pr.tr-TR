@@ -1,13 +1,11 @@
 ---
 title: Ayarlama Microsoft 365 İş Ekstra
-f1.keywords:
-- NOCSH
 ms.author: kwekua
 author: kwekua
 manager: scotv
 audience: Admin
 ms.topic: article
-f1_keywords:
+f1.keywords:
 - O365E_M365SetupBanner
 - BCS365_M365SetupBanner
 ms.service: o365-administration
@@ -32,12 +30,12 @@ search.appverid:
 - MET150
 ms.assetid: 6e7a2dfd-8ec4-4eb7-8390-3ee103e5fece
 description: Etki alanı ve kullanıcı ekleme Microsoft 365 İş Ekstra, güvenlik ilkelerini ayarlama ve daha fazlası için kurulum adımlarını keşfedin.
-ms.openlocfilehash: adfb65a5dcbba398ea398a17f605e12c17375c5c
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+ms.openlocfilehash: b4d12d34e535a58c952a752fca63af6f67e30a61
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63018772"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312397"
 ---
 # <a name="set-up-microsoft-365-business-premium-in-the-setup-wizard"></a>Kurulum Microsoft 365 İş Ekstra ayarları
 

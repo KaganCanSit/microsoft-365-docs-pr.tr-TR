@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Yöneticiler, elektronik sağlık kayıtlarının (EHR) verilerini sağlık sisteminden içeri aktarması için bir veri bağlayıcısı Microsoft 365. Bu sayede, çalışanlarının hasta verilerine yetkisiz erişim etkinliğini algılamanıza yardımcı olmak için Insider risk yönetimi ilkelerde EHR verilerini kullanabilirsiniz.
-ms.openlocfilehash: 1be80dea0bd5692f07edbe34df1bf61cd85f3337
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: 7fac743afe76e0cc3f5ae44cbd1236a2f7b3c0d3
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63010144"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63327035"
 ---
 # <a name="set-up-a-connector-to-import-healthcare-ehr-audit-data-preview"></a>Sağlık EHR denetim verilerini (önizleme) içeri aktarma için bir bağlayıcı ayarlama
 
@@ -39,7 +39,7 @@ Sağlık bağlayıcısı ayarlama, aşağıdaki görevlerden oluşur:
 
 ## <a name="before-you-set-up-the-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-- Adım 3'te Sağlık bağlayıcısı oluşturan kullanıcıya, bu bağlayıcıda Posta Kutusu İçeri/Dışarı Aktarma rolü Exchange Online. Varsayılan olarak, bu rol herhangi bir rol grubuna Exchange Online. Posta Kutusu İçeri/Dışarı Aktarma rolünü, aynı kuruluşta Kuruluş Yönetimi rol grubuna Exchange Online. Yeni bir rol grubu oluşturabilir, Posta Kutusu İçeri/Dışarı Aktarma rolü atayabilirsiniz ve sonra da uygun kullanıcıları üye olarak  eklersiniz. Daha fazla bilgi için,"[Rol gruplarını](/Exchange/permissions-exo/role-groups#create-role-groups) farklı bir [](/Exchange/permissions-exo/role-groups#modify-role-groups) grupta yönetme" makalesinde Rol grupları oluşturma veya Rol gruplarını değiştirme Exchange Online.
+- 3. Adımda Sağlık bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanabilir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
 - Verilerinizin, kuruma yönelik sağlık EHR sisteminden (günlük olarak) nasıl alın ya da dışarı aktarın, sonra da 2. Adımda açıklanan bir metin dosyası oluşturmanız gerekir. 4. Adımda çalıştırdınız betik, metin dosyasındaki verileri API uç noktasına iletir.
 

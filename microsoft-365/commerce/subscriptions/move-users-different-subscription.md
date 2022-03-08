@@ -2,8 +2,8 @@
 title: Kullanıcıları farklı bir aboneliğe taşıma
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: micurn, nicholak
 audience: Admin
@@ -14,18 +14,18 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
+- commerce_subscriptions
 - AdminSurgePortfolio
 - manage_licenses
-- commerce_subscriptions
 search.appverid: MET150
 description: Kullanıcıları abonelikler arasında taşımayı öğrenin.
 ms.date: 07/01/2020
-ms.openlocfilehash: 3ae6aa20c684c2745ef280c51a1203ae87f8da40
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: f1aff383bb4e83b7cefae0f6d15c496ab3117919
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62996075"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326279"
 ---
 # <a name="move-users-to-a-different-subscription"></a>Kullanıcıları farklı bir aboneliğe taşıma
 
@@ -33,7 +33,7 @@ Birden fazla aboneliğiniz varsa, bir abonelik için lisansı olan kullanıcıla
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Lisansları atamak için Genel, Lisans veya Kullanıcı yöneticisi olmak gerekir. Daha fazla bilgi için bkz[. Microsoft 365 rolleri hakkında](../../admin/add-users/about-admin-roles.md).
+Lisansları atamak için Genel, Lisans veya Kullanıcı yöneticisi olmak gerekir. Daha fazla bilgi için bkz [. Microsoft 365 yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
 
 ## <a name="move-users-to-a-different-subscription"></a>Kullanıcıları farklı bir aboneliğe taşıma
 
@@ -66,5 +66,5 @@ Kullanılmayan lisansları diğer kullanıcılara yeniden atamayacaksanız[, ger
 [Kullanıcılara lisans atama](../../admin/manage/assign-licenses-to-users.md) (makale)\
 [Aboneliğinizin lisanslarını kaldırma](../licenses/buy-licenses.md) (makale)\
 [Planları el ile değiştirme](change-plans-manually.md) (makale)\
-[İş için Microsoft 365'ta abonelikleri ve lisansları anlama](../licenses/subscriptions-and-licenses.md) (makale)\
-[İşletmeler için Microsoft 365 abonelik satın alma](../try-or-buy-microsoft-365.md) (makale)
+[Microsoft 365 İş'te abonelikleri ve lisansları anlama](../licenses/subscriptions-and-licenses.md) (makale)\
+[Başka bir Microsoft 365 İş aboneliği satın alma](../try-or-buy-microsoft-365.md) (makale)

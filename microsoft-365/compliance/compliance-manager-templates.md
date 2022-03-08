@@ -2,8 +2,8 @@
 title: Microsoft Uyumluluk Yöneticisi'nde değerlendirme şablonlarıyla çalışma
 f1.keywords:
 - NOCSH
-ms.author: v-jgriffee
-author: jmgriffee
+ms.author: chvukosw
+author: chvukosw
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Uyumluluk Yöneticisi'nde değerlendirme oluşturmak için şablonları kullanmayı ve yönetmeyi anlıyoruz. Biçimlendirilmiş bir dosya kullanarak şablon oluşturma Excel değiştirme.
-ms.openlocfilehash: 99e243e86c66babd9a983ae6df891f4094cdbb83
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 6885008e58c1e1289723a6d8c1ee4e04d16740b0
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "62989983"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63317731"
 ---
 # <a name="learn-about-assessment-templates-in-compliance-manager"></a>Uyumluluk Yöneticisi'nde değerlendirme şablonları hakkında bilgi
 
@@ -36,7 +36,11 @@ ms.locfileid: "62989983"
 
 Şablon, Uyumluluk Yöneticisi'nde değerlendirme oluşturmaya ilişkin denetimlerin çerçevesidir. Kapsamlı şablon kümemiz, kuruluşta verilerin toplanması ve kullanımının geçerli olduğu ulusal, bölgesel ve sektöre özgü gereksinimlere uyum içinde yer almaktadır.
 
-Şablonlara, EU GDPR şablonu ve ISO/IEC 27701:2019 şablonu gibi temel sertifika veya düzenlemeleriyle aynı adı kullanarak başvururuz. Uyumluluk Yönetimi farklı ürün türlerini değerlendirmek için kullanalir, her şablon iki sürümde gelir: biri Microsoft 365 gibi önceden tanımlanmış bir ürün için geçerli olan ve seçtiğiniz ürüne uyacak şekilde uyarlanmış evrensel sürüm.
+## <a name="template-versions-microsoft-and-universal"></a>Şablon sürümleri: Microsoft ve evrensel
+
+Şablonlara, EU GDPR şablonu ve ISO/IEC 27701:2019 şablonu gibi temel sertifika veya düzenlemeleriyle aynı adı kullanarak başvururuz.
+
+Uyumluluk Yönetimi, farklı ürün türlerini değerlendirmek için kullanılabilir. Taban çizgisinin dışında tüm şablonlar, Microsoft 365 gibi önceden tanımlanmış bir ürün için geçerli olan en az bir sürümde ve diğer ürünlere uyacak şekilde uyarlanmış evrensel sürümde gelir. Evrensel şablonlardan gelen değerlendirmeler daha genelleştirilmiştir, ancak çok yönlülük sözlerine daha geniştir, çünkü birden çok üründe kuruma uyumluluğu kolayca izlemenize yardımcı olur.
 
 ABD Kamu Community (GCC) Orta, GCC Yüksek ve Savunma Bölümü (DoD) müşterilerinin şu anda evrensel şablonları kullanamamaktadır.
 

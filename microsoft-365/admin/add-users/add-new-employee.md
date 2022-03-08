@@ -2,8 +2,8 @@
 title: İş yernize yeni bir Microsoft 365
 f1.keywords:
 - NOCSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 ms.assetid: 9cdfa29d-7681-4af2-a79d-3e72e7ab9778
 description: E-posta, Microsoft 365 uygulamaları ve diğer uygulamalar için Skype Office ekleyin.
-ms.openlocfilehash: 870339abe3f06d9ed819836993e6fdb7a772084b
-ms.sourcegitcommit: b6ab10ba95e4b986065c51179ead3810cc1e2a85
+ms.openlocfilehash: 2ff9b3dcd4843a4493e5f3bb3bb8e783c45ce1ab
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63018849"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315239"
 ---
 # <a name="add-a-new-employee-to-microsoft-365"></a>İş yernize yeni bir Microsoft 365
 

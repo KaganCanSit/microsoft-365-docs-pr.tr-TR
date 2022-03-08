@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir soruşturma veya davayla ilgili içeriği korumak için Microsoft 365 çekirdek eKbulma durumuyla ilişkilendirilmiş bir tutma oluşturabilirsiniz.
-ms.openlocfilehash: 486abd6c47082f320a5fa743ac053f29f6591054
-ms.sourcegitcommit: a6651b841f111ea2776cab88bf2c80f805fa8e09
+ms.openlocfilehash: 0d80197becdeb07c917602ff27a1ad9b2c882029
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "63027277"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322121"
 ---
 # <a name="create-an-ediscovery-hold"></a>eBulma ayrımı oluşturma
 
@@ -88,7 +88,7 @@ Bir web sitesi içinde bulunan belgelere sorgu tabanlı bir eBulma  yer değişt
 
 - Sorgu tabanlı bir tutma, başlangıçta sitenin tüm belgelerini silindikten sonra kısa bir süre için korur. Bu, bir belge silindiğinde, sorgu tabanlı saklama ölçütüne eşleşmese bile Saklama kitaplığına taşınacak anlamına gelir. Ancak, sorgu tabanlı saklamayla eşleşmemiş olan silinmiş belgeler, Saklama Kitaplığı'nı işlemeye devam ediyor bir süreölçer işi tarafından kaldırılır. Süreölçer işi düzenli olarak çalışır ve Saklama Kitaplığı'nın tüm belgelerini sorgu tabanlı eKbulma bekletmeleri (ve diğer bekletme ve bekletme ilkeleri türleri) ile karşılar. Süreölçer işi, sorgu tabanlı tutmayla eşleşmeden belgeleri siler ve bunu yapacak belgeleri korur.
 
-- Sorgu tabanlı saklama, belirli bir klasör veya sitedeki belgeleri tutma ya da başka bir konum tabanlı saklama ölçütleri kullanılarak hedefli saklamayı gerçekleştirmek için kullanılma kullanılmalıdır. Bunu yapmak için size gereken sonuçları elde edemeyen sonuçlar olabilir. Site belgelerini korumak için anahtar sözcükler, tarih aralıkları veya diğer belge özellikleri gibi konum tabanlı olmayan tutma ölçütleri kullanmalarını öneririz.
+- Sorgu tabanlı saklama, belirli bir klasör veya sitedeki belgeleri tutma ya da başka bir konum tabanlı saklama ölçütleri kullanma gibi hedefli saklamayı gerçekleştirmek için kullanılmaması gerekir. Bunu yapmak için size gereken sonuçları elde edemeyen sonuçlar olabilir. Site belgelerini korumak için anahtar sözcükler, tarih aralıkları veya diğer belge özellikleri gibi konum tabanlı olmayan tutma ölçütleri kullanmalarını öneririz.
 
 ## <a name="ediscovery-hold-statistics"></a>eBulma tutma istatistikleri
 
@@ -221,14 +221,16 @@ Aşağıdaki tabloda eBulma davaları ve vaka ayrımları için sınırlar liste
   | Sınırın açıklaması | Sınır |
   |:-----|:-----|
   |Bir kuruluş için en fazla vaka sayısı.  <br/> |Sınır yok  <br/> |
-  |Bir kuruluş için eKbulma 10 için en fazla 10 günlük 12011 süresi.  <br/> |10,000  <br/> |
+  |Kuruluş için eBulma tutma ilkelerinin sayısı üst sayısı. Bu sınır, Core eKovery ve Advanced eDiscovery durumlarında birleştirilmiş toplam tutma Advanced eDiscovery içerir.  <br/> |10.0001<sup></sup>  <br/> |
   |Tek bir eBulma ayrımsinde en fazla posta kutusu sayısı. Bu sınır, birleştirilmiş toplam kullanıcı posta kutusu ve Kullanıcı Grupları, Posta Microsoft 365, Posta Kutusu Microsoft Teams posta Yammer içerir.  <br/> |1,000  <br/> |
   |Tek bir eBulma ayrımlarında en fazla site sayısı. Bu sınır, birleştirilmiş toplam OneDrive İş sitesi, SharePoint sitesi ve Microsoft 365 Grupları, Site Grupları, Microsoft Teams ve Yammer içerir.  <br/> |100  <br/> |
-  |eBulma giriş sayfasında görüntülenen vaka sayısı üst sayısı ve olaydaki 10/1000 ve Üzerinde Arama ve Dışarı Aktar sekmelerinde görüntülenen en fazla öğe sayısı. <sup>1</sup> |1,000|
+  |eBulma giriş sayfasında görüntülenen vaka sayısı üst sayısı ve olaydaki 10/1000 ve Üzerinde Arama ve Dışarı Aktar sekmelerinde görüntülenen en fazla öğe sayısı.  |1.0002<sup></sup>|
   |||
 
    > [!NOTE]
-   > <sup>1</sup> 1.000'den çok olay, 1000'den fazla olay, 1000 olay, arama veya dışarı aktarmanın listesini görüntülemek için ilgili Office 365 Güvenlik ve Uyumluluk PowerShell & cmdlet'ini kullanabilirsiniz:
+   > <sup>1</sup> Tek tutma ilkesinde 1.000'den fazla posta kutusunu veya 100 siteyi yerine koyarak, sistem gerektiğinde tutma ölçeğini otomatik olarak ölçeklendirin. Bu, sistemin veri konumlarını tek bir tutma ilkesine eklemek yerine, birden çok tutma ilkesine otomatik olarak ekley sayılır. Bununla birlikte, kuruluş başına 10.000 vaka tutma politikası sınırı yine de geçerlidir.
+   >
+   > <sup>2</sup> 1.000'den fazla olay, 1000'den fazla vaka, arama veya dışarı aktarmanın listesini görüntülemek için ilgili Güvenlik ve Uyumluluk & PowerShell cmdlet'ini kullanabilirsiniz:
    >
    > - [Get-ComplianceCase](/powershell/module/exchange/get-compliancecase)
    > - [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy)

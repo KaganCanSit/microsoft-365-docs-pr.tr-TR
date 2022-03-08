@@ -2,11 +2,11 @@
 title: Cihazlar için lisansları yönetme
 f1.keywords:
 - CSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: shegu, nicholak
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: o365-administration
 ms.localizationpriority: medium
@@ -15,17 +15,17 @@ ms.collection:
 - Adm_O365
 description: Cihazlarla kullanım için gruplara lisans atamayı öğrenin.
 ms.custom:
+- commerce_licensing
 - AdminSurgePortfolio
 - okr_SMB
-- commerce_licensing
 search.appverid: MET150
 ms.date: 08/27/2021
-ms.openlocfilehash: 674874a6e27afa6e08ca4ee77de4ecac51796de8
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: fd452cb52a1c65a59e478fb80438ac95a57e8bf6
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985326"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63311795"
 ---
 # <a name="manage-licenses-for-devices"></a>Cihazlar için lisansları yönetme
 

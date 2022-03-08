@@ -2,13 +2,13 @@
 title: Bağlan için Amazon Web Services'da (AWS) DNS kayıtlarınızı Microsoft 365
 f1.keywords:
 - CSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
-localization_priority: Normal
+ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
 - M365-subscription-management
@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: 7a2efd75-0771-4897-ba7b-082fe5bfa9da
 description: Microsoft için Amazon Web Services'de (AWS) etki alanlarınızı doğrulamayı ve e-posta, Skype Kurumsal Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
-ms.openlocfilehash: 27b1659a1a5e870a46a08786973ba857dc9ce939
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 49b2d36c6902617238973099621b59aba7dbc58e
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989879"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313573"
 ---
 # <a name="connect-your-dns-records-at-amazon-web-services-aws-to-microsoft-365"></a>Bağlan için Amazon Web Services'da (AWS) DNS kayıtlarınızı Microsoft 365
 

@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2393950b97c8f8f6a6c625d8f31487d08c9c1cb7
-ms.sourcegitcommit: f5854c27de231d446e13a45b56c6bcd018175c52
+ms.openlocfilehash: 08ab4e4e0d85dec56de8285659cead3e1dfcb468
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63014071"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63321341"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Portalda e-posta Microsoft 365 Defender görüntüleme
 
@@ -75,7 +75,7 @@ Filtre'ye tıklar ve beliren açılır grafikte aşağıdaki  değerlerden birin
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
+Güvenliği ihlal **edilmiş kullanıcılar** sayfasında Zamanlama ![oluştur simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
 
 ![Güvenliği ihlal edilmiş kullanıcılar raporu rapor görünümü.](../../media/compromised-users-report-activity-view.png)
 
@@ -112,7 +112,7 @@ Filtre'ye tıklar ve beliren açılır grafikte aşağıdaki  değerlerden birin
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
+Zamanlamayı **Exchange raporu sayfasında** Zamanlama oluştur ![simgesine tıklayın.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
 
 ### <a name="chart-breakdown-by-severity"></a>Önem Düzeyine göre grafik çözümlemesi
 
@@ -143,7 +143,7 @@ Filtre'ye tıklar ve beliren açılır grafikte aşağıdaki  değerlerden birin
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
+Zamanlamayı **Exchange raporu sayfasında** Zamanlama oluştur ![simgesine tıklayın.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
 
 ## <a name="forwarding-report"></a>Rapor iletme
 
@@ -164,13 +164,13 @@ Raporu aşağıdaki portalda görüntülemek için Microsoft 365 Defender E-post
 
 Posta **Akışı durum raporu sayfasında** , Tür **sekmesi** varsayılan olarak seçilidir. Grafikte belirtilen tarih aralığı için aşağıdaki bilgiler görüntülenir:
 
-- **İyi posta**
+- **İyi posta**: İstenmeyen posta olmadığını belirlediği ya da kullanıcı veya kuruluş ilkeleri tarafından izin verilen e-posta.
 - **Toplam**
-- **Kötü amaçlı yazılım**
-- **Kimlik avı e-postası**
-- **İstenmeyen posta**
-- **Edge koruması**
-- **kural iletileri**
+- **Kötü amaçlı** yazılım: Çeşitli filtreler tarafından kötü amaçlı yazılım olarak engellenen e-posta.
+- **Kimlik avı e-postası**: Çeşitli filtreler tarafından kimlik avı olarak engellenen e-posta.
+- **İstenmeyen** posta: Çeşitli filtreler tarafından istenmeyen posta olarak engellenen e-posta.
+- **Kenar koruması**: EOP veya Office 365 için Defender tarafından değerlendirilmeden önce kenar/çevre tarafından reddedilen e-Office 365.
+- **Kural iletileri**: Posta akış kuralları (aktarım kuralları olarak da bilinir) tarafından gereğini yapılan e-posta iletileri.
 
 Grafiğin altındaki ayrıntılar tablosu aşağıdaki bilgileri gösterir:
 
@@ -196,14 +196,14 @@ Filtre'ye tıklar ve beliren açılır grafikte aşağıdaki  değerlerden birin
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasına geri dönüp Daha fazla ayrıntı için **Kategori seç'e tıklarsanız** aşağıdaki değerler arasında seçim yapabilirsiniz:
+Posta Akışı **durum raporu sayfasına geri dönerek** , diğer ayrıntılar için Kategori **seç'e tıklarsanız** aşağıdaki değerlerden birini seçebilirsiniz:
 
 - **Kimlik avı e-postası**: Bu seçim sizi Tehdit [koruması durumu raporuna alır](view-email-security-reports.md#threat-protection-status-report).
 - **E-postada** kötü amaçlı yazılım: Bu seçim sizi [Tehdit koruması durumu raporuna alır](view-email-security-reports.md#threat-protection-status-report).
 - **İstenmeyen posta** algılamaları: Bu seçim sizi [İstenmeyen Posta Algılamaları raporuna alır](view-email-security-reports.md#spam-detections-report).
 - **Edge engellenmiş istenmeyen** posta: Bu seçim sizi [İstenmeyen Posta Algılamaları raporuna alır](view-email-security-reports.md#spam-detections-report).
 
-Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur ve](#schedule-report)** Dışarı ![Aktar simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
+Posta **Akışı durum raporu sayfasında** Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur ve](#schedule-report)** Dışarı ![Aktar simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
 
 ### <a name="direction-view-for-the-mailflow-status-report"></a>Posta Akışı durum raporu için yön görünümü
 
@@ -228,14 +228,14 @@ Filtre'ye tıklar ve beliren açılır grafikte aşağıdaki  değerlerden birin
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasına geri dönüp Daha fazla ayrıntı için **Kategori seç'e tıklarsanız** aşağıdaki değerler arasında seçim yapabilirsiniz:
+Posta Akışı **durum raporu sayfasına geri dönerek** , diğer ayrıntılar için Kategori **seç'e tıklarsanız** aşağıdaki değerlerden birini seçebilirsiniz:
 
 - **Kimlik avı e-postası**: Bu seçim sizi Tehdit [koruması durumu raporuna alır](view-email-security-reports.md#threat-protection-status-report).
 - **E-postada** kötü amaçlı yazılım: Bu seçim sizi [Tehdit koruması durumu raporuna alır](view-email-security-reports.md#threat-protection-status-report).
 - **İstenmeyen posta** algılamaları: Bu seçim sizi [İstenmeyen Posta Algılamaları raporuna alır](view-email-security-reports.md#spam-detections-report).
 - **Edge engellenmiş istenmeyen** posta: Bu seçim sizi [İstenmeyen Posta Algılamaları raporuna alır](view-email-security-reports.md#spam-detections-report).
 
-Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **Zamanlama oluştur ve** Dışarı ![Aktar simgesi.](../../media/m365-cc-sc-download-icon.png) **Dışarı** aktar düğmeleri kullanılabilir.
+Posta **Akışı durum raporu sayfasında** Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **Zamanlama oluştur ve** Dışarı ![Aktar simgesi.](../../media/m365-cc-sc-download-icon.png) **Dışarı** aktar düğmeleri kullanılabilir.
 
 ### <a name="mailflow-view-for-the-mailflow-status-report"></a>Posta Akışı durum raporu için posta akışı görünümü
 
@@ -291,11 +291,11 @@ Filtre'ye tıklar ve beliren açılır grafikte aşağıdaki  değerlerden birin
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasına geri dönarak, görüntülenen Posta Akışı  eğilimleri açılır penceresinde eğilim grafiklerini görmek için **Eğilimleri göster'e** tıkleyebilirsiniz.
+Posta Akışı durum **raporu sayfasına geri dönebilirsiniz** ve görüntülenen Posta Akışı  eğilimleri açılır iletisinde eğilim grafiklerini görmek **için Eğilimleri** göster'e tıkleyebilirsiniz.
 
 ![Posta Akışı durum raporu'daki Posta Akışı görünümünde posta akışı eğilimleri akışı.](../../media/mail-flow-status-report-mailflow-view-show-trends.png)
 
-Ana rapor sayfasında Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **Dışarı** Aktar düğmesi kullanılabilir.
+Posta **Akışı durum raporu sayfasında** Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **Dışarı** Aktar düğmesi kullanılabilir.
 
 ## <a name="malware-detections-report"></a>Kötü amaçlı yazılım algılamaları raporu
 
@@ -359,7 +359,7 @@ Grafiğin altındaki ayrıntılar tablosu aşağıdaki bilgileri gösterir:
 
 Bileşik kimlik doğrulama sonuç kodları hakkında daha fazla bilgi için bkz. [İstenmeyen posta önleme ileti üst bilgileri Microsoft 365](anti-spam-message-headers.md).
 
-Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
+Hesap **tanıma algılamaları sayfasında** Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
 
 ## <a name="submissions-report"></a>Gönderiler raporu
 
@@ -397,7 +397,7 @@ Filtre'ye tıklar ve beliren açılır grafikte aşağıdaki  değerlerden birin
 
 Grafiğin altındaki ayrıntılar tablosu aynı bilgileri gösterir ve Çözümleme için gönderildi sekmesindeki E-posta  ve işbirliği Gönderimleri'nde  yer alan Çözümleme için **gönderildi** \> sekmesindeki & veya Özelleştir **seçeneklerini içerir**. Daha fazla bilgi için bkz [. Microsoft'a yönetici gönderimlerini görüntüleme](admin-submission.md#view-admin-submissions-to-microsoft).
 
-Ana rapor sayfasında Dışarı **[Aktar düğmesi](#export-report)** kullanılabilir.
+Gönderiler **sayfasında** Dışarı **[Aktar](#export-report)** düğmesi kullanılabilir.
 
 ![Yeni portalda Gönderiler Microsoft 365 Defender.](../../media/submissions-report-page.png)
 
@@ -521,7 +521,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
+Tehdit **koruması durumu sayfasında** Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
 
 ### <a name="view-data-by-email--spam-and-chart-breakdown-by-detection-technology"></a>Verileri Algılama Teknolojisine Göre E-posta \> İstenmeyen Posta'ya ve Grafik Çözümlemesi'ne göre görüntüleme
 
@@ -572,7 +572,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
+Tehdit **koruması durumu sayfasında** Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
 
 ### <a name="view-data-by-email--malware-and-chart-breakdown-by-detection-technology"></a>Verileri E-posta Kötü Amaçlı Yazılımına \> ve Grafik Çözümlemesi'ne göre Algılama Teknolojisine göre görüntüleme
 
@@ -625,7 +625,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
+Koruma **durumu sayfasında Zamanlama** oluştur ![simgesine tıklayın.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
 
 ### <a name="chart-breakdown-by-policy-type"></a>İlke türüne göre grafik çözümleme
 
@@ -695,7 +695,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
+Tehdit **koruması durumu sayfasında** Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
 
 ### <a name="chart-breakdown-by-delivery-status"></a>Teslim durumuna göre grafik çözümlemesi
 
@@ -768,7 +768,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
+Tehdit **koruması durumu sayfasında** Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
 
 ### <a name="view-data-by-content--malware"></a>Verileri İçerik Kötü Amaçlı Yazılımına göre \> görüntüleme
 
@@ -797,7 +797,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
+Tehdit **koruması durumu sayfasında** Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
 
 ### <a name="view-data-by-system-override-and-chart-breakdown-by-reason"></a>Verileri Sistem geçersiz kılma ve Neden'e göre Grafik çözümlemeye göre görüntüleme
 
@@ -843,7 +843,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasında Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** Aktar düğmesi kullanılabilir.
+Tehdit **koruması durumu sayfasında** Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** Aktar düğmesi kullanılabilir.
 
 ### <a name="view-data-by-system-override-and-chart-breakdown-by-delivery-location"></a>Verileri Sistem geçersiz kılma ve Teslim konumuna göre Grafik kırılım'a göre görüntüleme
 
@@ -900,7 +900,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasında Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** Aktar düğmesi kullanılabilir.
+Tehdit **koruması durumu sayfasında** Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** Aktar düğmesi kullanılabilir.
 
 ## <a name="top-malware-report"></a>En üst kötü amaçlı yazılım raporu
 
@@ -919,13 +919,13 @@ En üst **kötü amaçlı yazılım** raporu sayfasında, pasta grafiğin daha b
 
 Filtre'ye **tıklarsanız**, Başlangıç tarihi ve Bitiş tarihi **ile bir tarih** aralığı **belirtsiniz**.
 
-Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur ve](#schedule-report)** Dışarı ![Aktar simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
+Üst kötü **amaçlı yazılım** sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur ve](#schedule-report)** Dışarı ![Aktar simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
 
 ![En üst kötü amaçlı yazılım raporu görünümü.](../../media/top-malware-report-view.png)
 
 ## <a name="top-senders-and-recipients-report"></a>En çok gönderenler ve alıcılar raporu
 
-En **üst düzey gönderenler ve alıcı** raporu hem EOP'de hem de Office 365 için Defender'da kullanılabilir; bununla birlikte, raporlar farklı veriler içerir. Örneğin, EOP müşterileri en çok kötü amaçlı yazılım, istenmeyen posta ve kimlik avı (kimlik avı) alıcılarıyla ilgili bilgileri iletiyi iletiyi sınar ancak [Kasa](safe-attachments.md) Ekler veya kimliğe bürünme koruması tarafından algılanan kimlik avı hakkında bilgileri [görüntülemez](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+En **çok gönderenler ve alıcılar** raporu hem EOP'de hem de Office 365 için Defender'da kullanılabilir; bununla birlikte, raporlar farklı veriler içerir. Örneğin, EOP müşterileri en çok kötü amaçlı yazılım, istenmeyen posta ve kimlik avı (kimlik avı) alıcılarıyla ilgili bilgileri iletiyi iletiyi sınar ancak [Kasa](safe-attachments.md) Ekler veya kimliğe bürünme koruması tarafından algılanan kimlik avı hakkında bilgileri [görüntülemez](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 En **Çok gönderenler** ve alıcılar, eOP tarafından algılanan iletiler için en yüksek alıcıların yanı sıra en çok gelen iletilerin yanı sıra koruma özellikleri için de EOP ve Defender Office 365 gösterir. Varsayılan olarak, rapor son haftanın verilerini gösterir, ancak son 90 gün için de veriler kullanılabilir.
 
@@ -958,7 +958,7 @@ Filtre'yi tıklatıp Başlangıç tarihi ve Bitiş tarihi'yi **seçerek hem** gr
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-Ana rapor sayfasında Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **Dışarı** Aktar düğmesi kullanılabilir.
+Üst **gönderenler ve alıcılar sayfasında** Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **Dışarı** Aktar düğmesi kullanılabilir.
 
 ![İlk gönderenler ve alıcılar raporunda En çok posta gönderenler görünümü için verileri gösterme.](../../media/top-senders-and-recipients-report-view.png)
 
@@ -1022,7 +1022,7 @@ Grafiğin altındaki ayrıntılar tablosu aşağıdaki bilgileri gösterir:
 - **İstenmeyen posta bildir**'
 - **Tetikleyici soruşturma** (Office 365 için Defender)
 
-Ana rapor sayfasında Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** Aktar düğmesi kullanılabilir.
+Kullanıcı **ileti bildirdi sayfasında** Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** Aktar düğmesi kullanılabilir.
 
 ## <a name="what-permissions-are-needed-to-view-these-reports"></a>Bu raporları görüntülemek için hangi izinler gereklidir?
 
@@ -1043,7 +1043,7 @@ Raporlarınıza veri görmüyorsanız, kullanmakta olduğu filtreleri denetleyin
 
 ## <a name="schedule-report"></a>Rapor zamanlama
 
-1. Ana rapor sayfasında Zamanlama oluştur simgesine ![tıklayın.](../../media/m365-cc-sc-create-icon.png) **Zamanlama oluşturma**.
+1. Belirli bir raporun ana sayfasında Zamanlama oluştur simgesine ![tıklayın.](../../media/m365-cc-sc-create-icon.png) **Zamanlama oluşturma**.
 2. **Zamanlanmış rapor oluştur** sihirbazı açılır. Zamanlanmış **ad raporu sayfasında** Ad değerini gözden geçirin **veya özelleştirin** ve ardından Sonraki'ye **tıklayın**.
 3. Tercihleri **ayarla sayfasında** aşağıdaki ayarları yapılandırabilirsiniz:
    - **Sıklık**: Aşağıdaki değerlerden birini seçin:
@@ -1095,7 +1095,7 @@ Raporlarınıza veri görmüyorsanız, kullanmakta olduğu filtreleri denetleyin
 
 ## <a name="request-report"></a>Rapor isteği
 
-1. Ana rapor sayfasında Rapor isteği simgesine ![tıklayın.](../../media/m365-cc-sc-download-icon.png) **Rapor isteği.**
+1. Belirli bir raporun ana sayfasında Rapor isteği simgesine ![tıklayın.](../../media/m365-cc-sc-download-icon.png) **Rapor isteği.**
 2. **Isteğe bağlı rapor oluştur sihirbazı** açılır. isteğe **bağlı ad raporu sayfasında, Ad** değerini gözden geçirin **veya özelleştirin** ve ardından Sonraki'ye **tıklayın**.
 3. Tercihleri **ayarla sayfasında** , aşağıdaki ayarları gözden geçirin veya yapılandıryın:
    - **Başlangıç tarihi**: Raporun ne zaman yenil olduğu. Varsayılan değer bir ay önce.
@@ -1132,9 +1132,7 @@ Raporlarınıza veri görmüyorsanız, kullanmakta olduğu filtreleri denetleyin
 
 ## <a name="export-report"></a>Raporu dışarı aktarma
 
-1. Ana rapor sayfasında Dışarı Aktar simgesine ![tıklayın.](../../media/m365-cc-sc-download-icon.png) **Dışarı aktar** (bu bağlantı varsa).
-
-Ana rapor sayfasına tıklarsanız, aşağıdaki **ayarları yapılandırabilirsiniz** bir Dışarı aktarma koşulları açılır sayfası görüntülenir:
+Belirli bir raporun ana sayfasında, Dışarı Aktar simgesine ![tıklayın.](../../media/m365-cc-sc-download-icon.png) **Dışarı aktar** (bu bağlantı varsa). Aşağıdaki **ayarları yapılandırabilirsiniz** bir Dışarı aktarma koşulları açılır açılır:
 
 - **Dışarı aktarıla bir görünüm** seçin: Aşağıdaki değerlerden birini seçin:
   - **Özet**: Son 90 gün için veriler kullanılabilir.

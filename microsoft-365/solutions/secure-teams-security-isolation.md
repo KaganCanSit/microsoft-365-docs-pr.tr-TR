@@ -15,14 +15,15 @@ ms.collection:
 ms.custom:
 - Ent_Solutions
 - admindeeplinkCOMPLIANCE
+- admindeeplinkSPO
 recommendations: false
 description: Güvenlik için benzersiz bir duyarlılık etiketi olan bir ekip oluşturma hakkında bilgi öğrenin.
-ms.openlocfilehash: 293ac9a1a28757dacba39d30e619ac41be786e04
-ms.sourcegitcommit: ab5368888876d8796da7640553fc8426d040f470
+ms.openlocfilehash: 2ca2e6320ddd119c4dcb20db2f816c9e9a4453ae
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "62990586"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324403"
 ---
 # <a name="configure-a-team-with-security-isolation"></a>Ekibi güvenlik yalıtlığı ile yapılandırma
 
@@ -160,11 +161,11 @@ Duyarlılık etiketini yayımlamak için:
 Etiket yayımlandıktan sonra, konuk paylaşımının ve yönetilen cihaz ayarlarının etkili olması için etiketi bir ekiple birlikte uygulamanız gerekir. Bu, SharePoint merkezinde yapılır. Etiket yayımlandıktan sonra kullanılabilir olması biraz zaman alsa da bunu unutmayın.
 
 Duyarlılık etiketini uygulamak için
-1. SharePoint [merkezini açın](https://admin.microsoft.com/sharepoint).
-2. **Siteler'in** altında Etkin **siteler'e tıklayın**.
-3. Ekiple ilişkilendirilmiş siteye tıklayın.
-4. **İlkeler sekmesindeki** **Duyarlılık'ın altında** Düzenle'ye **tıklayın**.
-5. Oluşturduğunuz etiketi seçin ve kaydet'e **tıklayın**.
+
+1. Site yönetim SharePoint açın ve **Siteler'in altında Etkin** <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a>.
+1. Ekiple ilişkilendirilmiş siteyi seçin.
+1. **İlkeler sekmesindeki** **Duyarlılık'ın altında** Düzenle'yi **seçin**.
+1. Oluşturduğunuz etiketi seçin ve sonra da Kaydet'i **seçin**.
 
 ## <a name="sharepoint-settings"></a>SharePoint ayarları
 
@@ -186,13 +187,13 @@ Etiketi oluşturulduğunda seçtiğiniz konuk paylaşım ayarı (yalnızca ekip 
 Ayrıca, dosya ve klasörleri yanlışlıkla hedeflenenden daha geniş bir hedef kitleye paylaşma riskini azaltmak için varsayılan paylaşım bağlantı türünü güncelleştirecektir.
 
 Site ayarlarını güncelleştirmek için
-1. SharePoint [merkezini açın](https://admin.microsoft.com/sharepoint).
-2. **Siteler'in** altında Etkin **siteler'e tıklayın**.
-3. Ekiple ilişkilendirilmiş siteye tıklayın.
-4. **İlkeler sekmesinde**, Dış **paylaşım'ın altında** Düzenle'ye **tıklayın**.
-5. Hassas etiketi oluşturulduğunda konuk paylaşımına izin verdiysanız Yeni ve mevcut **konuklar'ın seçili olduğundan** emin olun. Etiketi oluşturulduğunda paylaşıma izin vermediysiniz, Yalnızca **kuruluşta yer alan kişiler'i seçin**.
-6. Varsayılan paylaşım bağlantı türü'nin altında Kuruluş **düzeyi ayarıyla aynı onay kutusunu temizleyin** ve Varolan erişimi olan **kişiler'i seçin**.
-7. **Kaydet**'e tıklayın.
+
+1. Site yönetim SharePoint açın ve Siteler'in **altında** Etkin <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a>
+1. Ekiple ilişkilendirilmiş siteyi seçin.
+1. **İlkeler sekmesindeki** Dış **paylaşım'ın altında** Düzenle'yi **seçin**.
+1. Hassas etiketi oluşturulduğunda konuk paylaşımına izin verdiysanız Yeni ve mevcut **konuklar'ın seçili olduğundan** emin olun. Etiketi oluşturulduğunda paylaşıma izin vermediysiniz, Yalnızca **kuruluşta yer alan kişiler'i seçin**.
+1. Varsayılan paylaşım bağlantı türü'nin altında Kuruluş **düzeyi ayarıyla aynı onay kutusunu temizleyin** ve Varolan erişimi olan **kişiler'i seçin**.
+1. **Kaydet**'i seçin.
 
 #### <a name="private-channels"></a>Özel kanallar
 

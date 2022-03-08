@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Erişimi ve kullanımı kısıtlaarak verilerinizi koruyan şifreleme için duyarlılık etiketlerini yapılandırabilirsiniz.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 6e7ab69717256be5d95e69d2342fbe78b00531c5
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: 2e337ef74975bd761de89b4aaae03379344efeed
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016496"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63311907"
 ---
 # <a name="restrict-access-to-content-by-using-sensitivity-labels-to-apply-encryption"></a>Şifreleme uygulamak için duyarlılık etiketlerini kullanarak içeriğe erişimi kısıtlama
 
@@ -193,6 +193,8 @@ Belirli kullanıcılara izinler ve böylelikle yalnızca o kişilerin etiketli i
 - Kimliği doğrulanmış tüm kullanıcılar. Bu ayarı seçmeden önce [gereksinimlerini ve sınırlamalarını](#requirements-and-limitations-for-add-any-authenticated-users) anlıyoruz.
 
 - Azure AD'de belirli kullanıcı veya e-posta etkin güvenlik Microsoft 365, dağıtım grubu veya [Microsoft 365 grubu (Office 365](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601) grubu) olabilir. Grup Microsoft 365 statik veya dinamik [üyelikleri olabilir](/azure/active-directory/users-groups-roles/groups-create-rule). bu grup türü Azure AD ile eşitlenmedi ve e-posta etkin olmayan bir güvenlik grubu kullanamaylarından dolayı [Exchange'tan](/Exchange/recipients/dynamic-distribution-groups/dynamic-distribution-groups) dinamik dağıtım grubu kullanamayabilirsiniz.
+    
+    Bu seçenek için desteklenen belirtilen bir grup içinde, şifrelenmiş içeriği açmadan önce [](/azure/information-protection/prepare#azure-information-protection-requirements-for-user-accounts) her kullanıcının kimliği Azure Information Protection hizmeti tarafından tek tek doğrulanır.
 
 - Herhangi bir e-posta adresi veya etki alanı. Bu seçeneği, başka bir kuruluşta Azure AD kullanan tüm kullanıcıları belirtmek için o kuruluştan herhangi bir etki alanı adı girerek belirtin. Bu seçeneği, sosyal sağlayıcılar için ad, etki alanı adı veya posta **gmail.com hotmail.com girerek** **outlook.com**. 
 
@@ -429,7 +431,7 @@ En hassas belgelerinizi ve e-postalarınızı şifrelemek, yalnızca yetkili ki�
 
 - Yetkili kullanıcılar Office uygulamalarına şifrelenmiş belgeleri açtıklarında, uygulamalarının üst kısmında sarı ileti çubuğunda etiket adını ve açıklamasını görebilirler. Şifreleme izinleri kuruluş dışındaki kullanıcılara genişletilende, belge açıldığında bu ileti çubuğunda görünür olacak etiket adlarını ve açıklamalarını dikkatle gözden geçirin.
 
-- Birden çok kullanıcının şifreli bir dosyayı aynı anda düzenlemesi için, hepsi şifreli dosya Web için Office.  Veya Windows Mac için, duyarlılık etiketleriyle şifrelenmiş dosyalar için [](sensitivity-labels-coauthoring.md) birlikte yazma özelliği etkinleştirmişsinizdir ve kullanıcılar Word, Excel ve PowerPoint'PowerPoint.[](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint) Durum böyle değilse ve dosya zaten açıksa:
+- Birden çok kullanıcının şifreli bir dosyayı aynı anda düzenlemesi için, hepsinin Web için Office kullanıyor olması veya duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazma özelliğini etkinleştirmiş olması gerekir ve tüm kullanıcıların bu özelliği destekleyen [Office](sensitivity-labels-coauthoring.md#prerequisites) uygulamaları vardır.[](sensitivity-labels-coauthoring.md) Durum böyle değilse ve dosya zaten açıksa:
 
   - Office uygulamalarında (Windows, Mac, Android ve iOS), kullanıcılar Kullanımda Dosyası iletisiyle birlikte dosyayı kullanıma alan  kişinin adını görüyor. Daha sonra salt okunur bir kopyayı  görüntülemelerini, dosyanın bir kopyasını kaydedlayıp düzenlemelerini ve dosya kullanılabilir olduğunda bildirim almalarını sağlarlar.
   - Web için Office'de, kullanıcılar belgeyi diğer kullanıcılarla birlikte düzenleyemediklerini ifadean bir hata iletisi görüyorlar. Böylece Okuma Görünümünde **Aç'ı da açabilirler**.

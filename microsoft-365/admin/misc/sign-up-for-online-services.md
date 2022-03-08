@@ -2,8 +2,8 @@
 title: Kuruluşunuzdaki başka biri etki alanınıza kaydolduysa, etki alanınız kullanımda olabilir
 f1.keywords:
 - NOCSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -20,12 +20,12 @@ search.appverid:
 - MOE150
 ms.assetid: 4f374dc7-b96c-49c7-80ed-554716ba0138
 description: 'İş veya okul e-postasını, kendi IT bölümü olmadan Microsoft çevrimiçi hizmetlerinde kaydolmak için kullanmayı öğrenin. '
-ms.openlocfilehash: eaae0c10f818e6fdd1cd702b84b2826bf2f5b7ea
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: adcbad88e098a06d5220e10a0c6d365b47bd2303
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985042"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63319819"
 ---
 # <a name="your-domain-may-be-in-use-if-someone-else-signed-up-with-it"></a>Başka biri etki alanıyla kayıt ettiyse etki alanınız kullanımda olabilir
 

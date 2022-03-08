@@ -1,5 +1,5 @@
 ---
-title: Etki alanına katılmış Windows 10 cihazları işletmeler için Kurumsal tarafından yönetil Microsoft 365 etkinleştirme
+title: Etki alanına katılmış Windows 10 cihazlarını kurumsal cihazlar tarafından yönetil Microsoft 365 etkinleştirme
 f1.keywords:
 - CSH
 ms.author: efrene
@@ -25,17 +25,20 @@ ms.custom:
 search.appverid:
 - BCS160
 - MET150
-description: Yalnızca birkaç adımda Microsoft 365 Active-Directory'ye katılmış yerel Windows 10 cihazlarını korumayı öğrenin.
-ms.openlocfilehash: f0af270bc46d09de84e57ffb63c3b72e351c5bfa
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Yalnızca birkaç adımda Microsoft 365 Active-Directory'ye katılmış yerel Windows 10 cihazlarında etki alanı etkinleştirmeyi öğrenin.
+ms.openlocfilehash: b12acbfbc9ff6e25c846d512781d8b72edf3f2fe
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973583"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63327931"
 ---
 # <a name="enable-domain-joined-windows-10-devices-to-be-managed-by-microsoft-365-business-premium"></a>Etki alanına katılmış Windows 10 cihazları başka bir kullanıcı tarafından yönetil Microsoft 365 İş Ekstra
 
-Kuruluşta şirket Windows Server Active Directory kullanıyorsa, Windows 10 cihazlarınızı korumak için Microsoft 365 İş Ekstra'i kurabilirsiniz ve bu sırada yerel kimlik doğrulaması gerektiren şirket içi kaynaklara erişimi de koruyabilirsiniz.
+> [!NOTE]
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Bu teklif, cihazlar için ek güvenlik özellikleri sağlar. [İş için Defender hakkında daha fazla bilgi öğrenin](../../security/defender-business/mdb-overview.md).
+
+Kuruluşta şirket Windows Server Active Directory kullanıyorsa, Microsoft 365 İş Ekstra cihazlarınızı korumak için Windows 10'i ayarp yerel kimlik doğrulaması gerektiren şirket içi kaynaklara erişimi de koruyabilirsiniz.
 Bu korumayı ayarlamak için Azure **AD'ye katılan Karma cihazları kullanabilirsiniz**. Bu cihazlar hem şirket içi Active Directory'nize hem de kullanıcılarınıza Azure Active Directory.
 
 ## <a name="watch-configure-hybrid-azure-active-directory-join"></a>İzle: Karma kimlik Azure Active Directory yapılandırma
@@ -47,22 +50,22 @@ Bu videoda, bunu en yaygın senaryo için ayarlama adımları açıklanan ve aş
 ## <a name="before-you-begin"></a>Başlamadan önce
 
 - Azure AD hizmetleriyle kullanıcıları Azure AD'ye Bağlan.
-- Azure AD Kurumsal Bağlan (OU) eşitlemeyi tamamlama.
-- Eşitle hesabı olan tüm etki alanı kullanıcılarının lisanslarının olduğundan Microsoft 365 İş Ekstra.
+- Azure AD kurumsal Bağlan (OU) eşitlemeyi tamamlama.
+- Eşitleyilen tüm etki alanı kullanıcılarının lisanslarının olduğundan emin Microsoft 365 İş Ekstra.
 
 Adımlar [için bkz. Etki alanı kullanıcılarını Microsoft](manage-domain-users.md) ile eşitleme.
 
 ## <a name="1-verify-mdm-authority-in-intune"></a>1. Intune'da MDM Yetkilisini doğrulama
 
-Genel [Endpoint Manager](https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/EnrollmentMenu/overview) gidin ve Microsoft Intune Cihaz kaydı'na **tıklayın, ardından** Genel Bakış sayfasında **MDM yetkilisinin** **Intune olduğundan emin olun**.
+Endpoint Manager'a gidin ve Microsoft Intune kaydı'na **tıklayın, ardından** Genel Bakış sayfasında **MDM yetkilisinin** **Intune olduğundan emin olun**.[](https://endpoint.microsoft.com/#blade/Microsoft_Intune_Enrollment/EnrollmentMenu/overview) 
 
 - **MDM yetkilisi Yok** **ise**, **MDM yetkilisini** tıklatın ve bunu **Intune olarak ayarlayın**.
 - **MDM** yetkilisi **Microsoft Office 365** ise **DevicesEnroll**  >  cihazlar'a gidin ve **intune MDM** yetkilisini eklemek için sağlarda yer alan **MDM** yetkili ekle iletişim kutusunu kullanın (**MDM** Yetkili Ekle iletişim kutusu yalnızca **MDM** Yetkilisi Ekle seçeneği Microsoft Office 365).
 
 ## <a name="2-verify-azure-ad-is-enabled-for-joining-computers"></a>2. Bilgisayarları birleştirme için Azure AD'nin etkinleştirildiğinden emin olun
 
-- Yönetim merkezi'ne gidin ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> Yönetim **Azure Active Directory** listesinden Genel Azure Active Directory'ı seçin (**Azure Active Directory'ı** seçin). 
-- Uygulama Azure Active Directory **gidin, Cihazlar'ı** ve **Azure Active Directory** **Ayarlar'ı seçin**.
+- Yönetim merkezine gidin ve Yönetim <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> Azure Active Directory listesinden Bir Azure Active Directory'ı **seçin (****Azure Active Directory'ı** seçin). 
+- Azure Active Directory **yönetim merkezinde Cihazlar '****a Azure Active Directory** Cihazlar'ı **ve ardından Cihaz** **ayarları'ı seçin**.
 - **VerifyUsers may join devices to Azure AD** is enabled 
     1. Tüm kullanıcıları etkinleştirmek için, Herkes olarak **ayarlayın**.
     2. Belirli kullanıcıları etkinleştirmek için, belirli bir **kullanıcı** grubunu etkinleştirmek üzere Seçili olarak ayarlayın.
@@ -71,11 +74,11 @@ Genel [Endpoint Manager](https://endpoint.microsoft.com/#blade/Microsoft_Intune_
 
 ## <a name="3-verify-azure-ad-is-enabled-for-mdm"></a>3. MDM için Azure AD'nin etkinleştirildiğinden emin olun
 
-- Yönetim merkezine gidip Uç Nokta Yönetimi'ni <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> **seçin** (Uç nokta görünmüyorsa  **Endpoint Manager'i** seçin)
-- Genel **Microsoft Endpoint Manager, Cihazlar,Windows** >  >  **Windows Yazdırma** >  **Kaydı'na gidin**.
+- Yönetim  merkezine gidip Uç Nokta **Yönetimi'ni**<a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> seçin (Uç nokta görünmüyorsa **Endpoint Manager'i** seçin)
+- Genel **Microsoft Endpoint Manager Merkezinde Cihazlar,Windows** >  **Windows** >  **Yeni** >  **Kayıt'a gidin**.
 - MDM kullanıcı kapsamının etkinleştirildiğinden emin olun.
 
-    1. Tüm bilgisayarları kaydetmek için, Azure AD'ye katılmış tüm kullanıcı bilgisayarlarını ve kullanıcılar Windows'e iş hesabı ekleyeni yeni bilgisayarlara otomatik olarak kaydeden Tüm Windows.
+    1. Tüm bilgisayarları kaydetmek için, Azure AD'ye katılmış tüm kullanıcı bilgisayarlarını ve kullanıcılar Windows'e iş hesabı eklensin, yeni bilgisayarlar otomatik olarak kaydedilir.
     2. Belirli bir **kullanıcı** grubunun bilgisayarlarını kaydetmek için Bazıları olarak ayarlayın.
         -  Azure AD'de eşitlenen istenen etki alanı kullanıcılarını bir güvenlik [grubuna ekleyin](../create-groups/create-groups.md).
         -  Bu **güvenlik grubu için** MDM kullanıcı kapsamını etkinleştirmek için Grupları seç'i seçin.
@@ -91,7 +94,7 @@ Install-Module SecMgmt
 ```
 
 > [!IMPORTANT]
-> Bu modülü, Azure AD Bağlan çalıştıran Windows Server'a yüklemeniz önerilir.
+> Bu modülü, Azure AD Windows Server ile çalışan Bağlan.
 
 Gerekli hizmet bağlantı noktası ve grup ilkesi oluşturmak için  [, Başlat-SecMgmtHybirdDeviceEnrollment](https://github.com/microsoft/secmgmt-open-powershell/blob/master/docs/help/Initialize-SecMgmtHybirdDeviceEnrollment.md) cmdlet'ini çağırmış olursunuz. Bu görevi yerine Microsoft 365 İş Ekstra yönetici kimlik bilgileriniz gerekir. Kaynakları oluşturmak için hazır olduğunda, aşağıdakini çağırın:
 
@@ -100,7 +103,7 @@ PS C:\> Connect-SecMgmtAccount
 PS C:\> Initialize-SecMgmtHybirdDeviceEnrollment -GroupPolicyDisplayName 'Device Management'
 ```
 
-İlk komut Microsoft bulut ile bağlantı kuracak ve sizden istendiğinde genel yönetici Microsoft 365 İş Ekstra belirtecek.
+İlk komut Microsoft bulut ile bağlantı kuracak ve sizden istendiğinde genel yönetici Microsoft 365 İş Ekstra bilgilerinizi belirtir.
 
 ## <a name="5-link-the-group-policy"></a>5. Grup İlkesini Bağlama
 
@@ -109,7 +112,7 @@ PS C:\> Initialize-SecMgmtHybirdDeviceEnrollment -GroupPolicyDisplayName 'Device
 
 ## <a name="get-the-latest-administrative-templates"></a>En son Yönetim Şablonlarını Al
 
-Otomatik **MDM kaydı varsayılan Azure AD** kimlik bilgilerini kullanarak etkinleştir ayarını görmüyorsanız, bunun nedeni Windows 10, sürüm 1803 veya sonraki sürümlerde ADMX'in yüklü olması olabilir. Sorunu düzeltmek için şu adımları izleyin (Not: en son MDM.admx geriye dönük uyumlu):
+Varsayılan Azure AD kimlik bilgilerini kullanarak otomatik **MDM** kaydı etkinleştir ayarını görmüyorsanız, bunun nedeni Windows 10, sürüm 1803 veya sonraki sürümlerde ADMX'in yüklü olması olabilir. Sorunu düzeltmek için şu adımları izleyin (Not: en son MDM.admx geriye dönük uyumlu):
 
 1. İndir: [Ekim 2020 Güncelleştirmesi'Windows 10 Yönetim Şablonları (.admx)](https://www.microsoft.com/download/102157)
 2. Paketi Etki Alanı Denetleyicisi'ne yükleyin.
@@ -123,6 +126,6 @@ Bu noktada, Varsayılan Azure AD kimlik bilgilerini kullanarak otomatik **MDM ka
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Etki alanı kullanıcılarını yeni Microsoft 365](manage-domain-users.md) (makale)\
+[Etki alanı kullanıcılarını Microsoft 365](manage-domain-users.md) (makale)\
 [Yönetim merkezinde grup oluşturma](../create-groups/create-groups.md) (makale)\
-[Öğretici: Yönetilen etki Azure Active Directory için karma etki alanlarını yapılandırma](/azure/active-directory/devices/hybrid-azuread-join-managed-domains) (makale)
+[Öğretici: Yönetilen etki Azure Active Directory için karma etki alanlarını yapılandırma](/azure/active-directory/devices/hybrid-azuread-join-managed-domains) (makale) İş planları için güvenlik [sağlamanın Microsoft 365 10 yolu](../security-and-compliance/secure-your-business-data.md)

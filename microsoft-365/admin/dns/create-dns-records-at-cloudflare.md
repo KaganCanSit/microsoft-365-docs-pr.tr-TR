@@ -2,13 +2,13 @@
 title: Bağlan Cloudflare'da DNS kayıtlarınızı Microsoft 365
 f1.keywords:
 - CSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
-localization_priority: Normal
+ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
 - M365-subscription-management
@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: 84acd4fc-6eec-4d00-8bed-568f036ae2af
 description: Microsoft için Cloudflare'de etki alanlarınızı doğrulamayı ve e-posta, Skype Kurumsal Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
-ms.openlocfilehash: ba27148eb14dac6cd82c1e1613c1a8cd88944c1c
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 5cf6483c7f560f5ab3ed2074dbaebf6c893dca3e
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989872"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63314931"
 ---
 # <a name="connect-your-dns-records-at-cloudflare-to-microsoft-365"></a>Bağlan Cloudflare'da DNS kayıtlarınızı Microsoft 365
 

@@ -1,9 +1,9 @@
 ---
 title: Adım 4. Cihazları koruma
-author: JoeDavies-MSFT
+author: dansimp
 f1.keywords:
 - NOCSH
-ms.author: josephd
+ms.author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: article
@@ -17,12 +17,12 @@ ms.collection:
 ms.custom: seo-marvel-jun2020
 keywords: fidye yazılımı, insan tarafından işletilen fidye yazılımı, insan tarafından işletilen fidye yazılımı, HumOR, extortion saldırısı, fidye yazılımı saldırı, şifreleme, cryptovirology, sıfır güven
 description: MDA Windows MAM sağlayıcısı olarak Intune'i kullanın ve Windows 10 kaynaklarınızı fidye yazılımlarına karşı korumak için Microsoft 365 özelliklerini kullanın.
-ms.openlocfilehash: 918dc75d11157bf6358e68a13d04c9a84c0a3837
-ms.sourcegitcommit: 23a90ed17cddf3b0db8d4084c8424f0fabd7b1de
+ms.openlocfilehash: 0d7b9a5e125c3f0478948340dce5677a3ae65395
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63015448"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63318081"
 ---
 # <a name="step-4-protect-devices"></a>Adım 4. Cihazları koruma
 

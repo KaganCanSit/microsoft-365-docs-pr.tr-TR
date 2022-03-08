@@ -2,8 +2,8 @@
 title: E4 müşterileri Office 365 önemli bilgiler
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: jkinma, jmueller
 audience: Admin
@@ -14,19 +14,19 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
-- customer-email
 - commerce_subscriptions
+- customer-email
 - admindeeplinkMAC
 search.appverid: MET150
 description: Yeni E4 aboneliği olan müşterilerin planlarını yükseltme veya değiştirme Office 365 bilgiler.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.date: 08/14/2020
-ms.openlocfilehash: 74ae379a1a159c85c4a2b58bd018acb2690e3332
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 13ee5f028e8b1d45494e64b6405100a5404acd8c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984658"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63317968"
 ---
 # <a name="important-information-for-office-365-e4-customers"></a>E4 müşterileri Office 365 önemli bilgiler
 

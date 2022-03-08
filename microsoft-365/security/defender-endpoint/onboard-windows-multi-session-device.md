@@ -15,12 +15,12 @@ ms.custom: nextgen
 ms.reviewer: ''
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: d09898b29b9efda6b6911e9542d75d36a8e38f7e
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: d97326987af49b9bac44b3578884c72d756d5595
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021593"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324067"
 ---
 # <a name="onboard-windows-multi-session-devices-in-azure-virtual-desktop"></a>Azure Windows Masaüstü'ne çok oturumlu cihazları ekleme
 
@@ -156,6 +156,10 @@ Ayrıca, FSlogix kullanıcı profillerini kullanıyorsanız, aşağıdaki dosyal
 
 Lisanslama notu: Windows Enterprise çoklu oturum kullanırken, gereksinimlerinize bağlı olarak tüm kullanıcıların Uç Nokta için Microsoft Defender (kullanıcı başına), Windows Enterprise E5, Microsoft 365 Güvenliği veya Güvenlik lisansları aracılığıyla lisanslandır Microsoft 365 E5 ya da sanal makinenin Bulut için Microsoft Defender aracılığıyla lisansını edin.
 Uç Nokta için Microsoft Defender Lisans gereksinimleri bağlantısında bulunabilir: [Lisans gereksinimleri](minimum-requirements.md#licensing-requirements).
+
+### <a name="known-issues-and-limitations"></a>Bilinen sorunlar ve sınırlamalar
+
+Birden Microsoft Edge oturumda web filtrelemesi yalnızca Windows 10 için destek sağlar.
 
 #### <a name="related-links"></a>İlgili Bağlantılar
 

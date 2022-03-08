@@ -3,8 +3,8 @@ title: Office 365 için Microsoft Defender'da otomatik araştırma ve Office 365
 keywords: AIR, autoIR, Uç Nokta için Microsoft Defender, otomatik, araştırma, yanıt, düzeltme, tehdit, gelişmiş, tehdit, koruma
 f1.keywords:
 - NOCSH
-author: JoeDavies-MSFT
-ms.author: josephd
+author: dansimp
+ms.author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: article
@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-mar2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 469a85866f722539c35bcc0305aa1e8fc39d58be
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: e01fe2bdc5765c77500ae98e9c8177a35c683fca
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021797"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324571"
 ---
 # <a name="automated-investigation-and-response-air-in-microsoft-defender-for-office-365"></a>İş için Microsoft Defender'da otomatik araştırma ve yanıt (AIR) Office 365
 

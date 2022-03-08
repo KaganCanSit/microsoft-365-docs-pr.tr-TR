@@ -9,12 +9,12 @@ ms.collection: M365-modern-desktop
 ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: 86e2645891afef2523fb8dc80ec0d9a59b094fc4
-ms.sourcegitcommit: d4797cfc15c732f1a7ef21e4f944e672a7170f9a
+ms.openlocfilehash: a5ff8a9a662eb442b7a18726463f14e914d4a133
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63016642"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63317550"
 ---
 # <a name="adjust-settings-after-enrollment"></a>Kayıt sonrasında ayarları ayarlama
 
@@ -61,7 +61,7 @@ Bu sorguda, kiracı `@TENANT` etki alanı adınızla değiştirin.
 1. Dağıtım ve [Intune Şirket Portalı](company-portal.md).
 1. [Lisans atama](assign-licenses.md).
 1. [Uygulamaları dağıtın](deploy-apps.md).
-1. [Cihazları ayarlayın](set-up-devices.md).
+1. [Cihazları hazırlayın](prepare-devices.md).
 1. [AutoPilot ve Kayıt Durumu Sayfası ile ilk çalıştırma deneyimini ayarlayın](esp-first-run.md).
 1. [Kullanıcı desteği özelliklerini etkinleştirin](enable-support.md).
 1. [Kullanıcılarınızı cihazları kullanmaya hazır hale hazırlayın](get-started-devices.md).

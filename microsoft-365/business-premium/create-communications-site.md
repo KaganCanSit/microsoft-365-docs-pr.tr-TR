@@ -18,17 +18,18 @@ ms.custom:
 - Adm_O365
 - MiniMaven
 - MSB365
+- admindeeplinkSPO
 search.appverid:
 - BCS160
 - MET150
 - MOE150
 description: Kampanyanız veya iş için kampanyanız SharePoint bir iletişim sitesi oluşturmak için neden ve nasıl yeni bir iletişim Microsoft 365.
-ms.openlocfilehash: 8e65a508a215049279834b553bba09422375aa59
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: d2634f8793c142cc34d6c1708481aa8e4df3184b
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011794"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326335"
 ---
 # <a name="create-a-communications-site-in-sharepoint"></a>Web sitesinde iletişim sitesi SharePoint
 
@@ -64,4 +65,4 @@ PDF ve PDF PowerPoint aşağıdaki bağlantılar tabloid biçiminde (genel muhas
 
 ## <a name="admin-settings"></a>Yönetici ayarları
 
-**+** Site oluştur bağlantısını görmüyorsanız, kendi kendine site oluşturma, kendi kendine site oluşturma Microsoft 365. Ekip sitesi oluşturmak için, kuruluşta yönetim Microsoft 365 kişiye ulaşın. Microsoft 365 yöneticisiyseniz, SharePoint Online yönetim merkezinden bir site oluşturmak için bkz. [SharePoint Online'da site](/sharepoint/manage-site-creation) oluşturma, yeni [SharePoint](/sharepoint/manage-sites-in-new-admin-center) SharePoint yönetim merkezinde siteleri yönetme.
+**+** Site oluştur bağlantısını görmüyorsanız, kendi kendine site oluşturma, kendi kendine site oluşturma Microsoft 365. Ekip sitesi oluşturmak için, kuruluşta yönetim Microsoft 365 kişiye ulaşın. Microsoft 365 yöneticisiyseniz, SharePoint [Online'da kendi kendine site](/sharepoint/manage-site-creation) oluşturulmasını etkinleştirmek için bkz. SharePoint Online'da site oluşturma ve SharePoint yönetim merkezinden site oluşturmak için [](/sharepoint/manage-sites-in-new-admin-center) <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">yeni SharePoint SharePoint</a> yönetim merkezinde siteleri yönetme.

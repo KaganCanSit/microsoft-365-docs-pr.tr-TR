@@ -8,7 +8,7 @@ ms.sitesec: library
 ms.pagetype: security
 f1.keywords:
 - NOCSH
-ms.author: macapara
+ms.author: siosulli
 author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
@@ -20,12 +20,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 56c7c2ab6a8023be8a570c5b33c64112d8545df1
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 9045c9a425b78f46d39ebb63664b693bf40252c4
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63019441"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63314398"
 ---
 # <a name="device-discovery-overview"></a>Cihaz keşfine genel bakış
 
@@ -52,7 +52,7 @@ Cihaz bulmayla ilgili hızlı bir genel bakış için bu videoyu izleyin:
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWORdQ]
 
-Bu özellikle birlikte, mevcut Tehdit ve Güvenlik Açığı Yönetimi deneyimi kapsamında, Uç Nokta için Microsoft Defender'a cihazları eklemeye yönelik bir güvenlik önerisi mevcuttur.
+Bu özellikle birlikte, mevcut Cihaz ekleme deneyiminin bir parçası olarak Uç Nokta için Microsoft Defender'a cihazları eklemeye Tehdit ve Güvenlik Açığı Yönetimi öneride bulunabilirsiniz.
 
 ## <a name="discovery-methods"></a>Bulma yöntemleri
 
@@ -72,21 +72,23 @@ Bulma ayarlarınızı değiştirebilir ve özelleştirebilirsiniz. Daha fazla bi
 > [!NOTE]
 > Keşif altyapısı, şirket ağına alınan ağ olaylarını şirket ağının dışından ayırt edicidir. Şirket ağlarına bağlı değil cihazlar, cihaz envanteri içinde keşfed olmaz veya listelenmiyor.
 
-## <a name="device-inventory"></a>Cihaz Envanteri
+## <a name="device-inventory"></a>Cihaz envanteri
 
-Uç Nokta için Microsoft Defender tarafından henüz ekli veya güvenlik altına alınmış olan cihazlar, Uç Noktalar sekmesinde Cihaz Envanteri'nden listelenir.
+Uç nokta için Microsoft Defender tarafından henüz ekli ve güvenlik altına alınmış olan cihazlar, Bilgisayarlar ve Mobil sekmesindeki cihaz envanteri içinde listelenir.
 
-Cihaz envanteri listesinde ekleme durumu olarak adlandırılan ve aşağıdaki değerlerden herhangi birini elde eden bir filtre kullanabilirsiniz:
+Bu cihazları değerlendirmek için, cihaz stoku listesinde Aşağıdaki değerlerden herhangi birini bulunduran Ekleme durumu adlı bir filtre kullanabilirsiniz:
 
 - Ekli: Uç nokta, Uç Nokta için Microsoft Defender'a ekli olarak gönderilir.
 - Kullanılabilir: Uç nokta ağda keşfedildi ve İşletim Sistemi Uç Nokta için Microsoft Defender tarafından desteklenen bir işletim sistemi olarak tanımlanır, ancak şu anda ekli değildir. Bu cihazları işe eklemenizi kesinlikle öneririz.
 - Desteklenmiyor: Uç nokta ağda bulundu ancak Uç Nokta için Microsoft Defender tarafından desteklenmiyor.
 - Yetersiz bilgi: Sistem, cihazın desteklanabilirliğini belirleyemedi. Ağ'daki diğer cihazlarda standart bulmanın etkinleştirilmesi, bulunan öznitelikleri zenginleştirebilirsiniz.
 
-![Cihaz stoku panosunun resmi.](images/2b62255cd3a9dd42f3219e437b956fb9.png)
+![Cihaz stoku panosunun resmi.](images/device-discovery-inventory.png)
 
 > [!TIP]
 > Yönetimi olmayan cihazları cihaz stok listesinden dışarıda tutmak için her zaman filtre uygulayabilirsiniz. Ayrıca, yönetimi olmayan cihazları filtrelemek için API sorgularında ekleme durumu sütununu da kullanabilirsiniz.
+
+Daha fazla bilgi için bkz. [Cihaz envanteri](machines-view-overview.md).
 
 ## <a name="network-device-discovery"></a>Ağ cihazı bulma
 
@@ -134,16 +136,6 @@ DeviceNetworkEvents
 | where ActionType == "ConnectionAcknowledged" or ActionType == "ConnectionAttempt"
 | take 10
 ```
-
-## <a name="changed-behavior"></a>Değiştirilmiş davranış
-
-Aşağıdaki bölümde, bu özellik etkinleştirildiğinde Uç Nokta ve Kullanıcı Portalı için Microsoft Defender <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> yaptığınız değişiklikler listelenir.
-
-1. Uç nokta için Microsoft Defender'a ekli olmadığınız cihazların cihaz envanteri, gelişmiş arama ve API sorgularında görünmesi bekmektedir. Bu, sorgu sonuçlarının boyutunu önemli ölçüde artırır.
-    1. Gelişmiş Sındır'daki "CihazBilgileri" ve "DeviceNetworkInfo" tabloları artık bulunan cihazı bulunduracak. "OnboardingStatus" özniteliğini kullanarak bu cihazları filtreyi atabilirsiniz.
-    2. Bulunan cihazların Streaming API sorgu sonuçlarında görünmesi bekleniyor. Sorgunuzda filtreyi kullanarak bu cihazları `OnboardingStatus` filtrenin dışında da filtresini sebilirsiniz.
-2. Unmanaged devices will beassigned to existing device groups based on the defined criteria.
-3. Ender durumlarda, Standart bulma, ağ monitörleri veya güvenlik araçlarında uyarıları tetikler. Bu tür olaylarla sık sık karşılaşılan sorunları önlemeye yardımcı olmak için lütfen geri bildirim gönderin. Belirli hedefleri veya alt ağların tamamını, Standart bulma tarafından etkin bir şekilde hedeflenen ağların dışında tutabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

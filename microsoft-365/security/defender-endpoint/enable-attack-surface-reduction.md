@@ -17,12 +17,12 @@ ms.topic: how-to
 ms.collection: m365solution-scenario
 ms.custom: admindeeplinkDEFENDER
 ms.date: 1/18/2022
-ms.openlocfilehash: ec961261c798075e0e38b08a8c8952ca5c51b07b
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 9f5d721148bdbd70347868d8e237a8454b33c346
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011973"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312103"
 ---
 # <a name="enable-attack-surface-reduction-rules"></a>Saldırı yüzeyini azaltma kurallarını etkinleştirin
 
@@ -162,6 +162,7 @@ ASR kurallarını etkinleştirmeye ilişkin aşağıdaki yordamlar, dosyaları v
 
    - **Platformda,** Sonraki **Windows 10 seçin**
    - Profil **türü olarak** **Şablonlar'ı seçin**
+   - ASR kuralları zaten Uç nokta güvenliği üzerinden ayarlanmışsa, **Profil türü'ne Göre Ayarlar** **seçin**.
 
    **Özel'i** ve ardından Oluştur'a **seçin**.
 

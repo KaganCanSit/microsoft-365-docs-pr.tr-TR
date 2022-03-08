@@ -9,18 +9,20 @@ ms.topic: article
 ms.service: o365-solutions
 f1.keywords:
 - NOCSH
-ms.custom: seo-marvel-apr2020
+ms.custom:
+- seo-marvel-apr2020
+- admindeeplinkSPO
 ms.collection:
 - Strat_SP_gtc
 - SPO_Content
 ms.localizationpriority: medium
 description: Yöneticiler, çok coğrafi bir ortamda SharePoint ve OneDrive yönetmeyi öğrenebilir.
-ms.openlocfilehash: 31d361b2936c3d7bceca7137499c659030717eba
-ms.sourcegitcommit: 986ea76ecaceb5fe6b9616e553003e3c5b0df2e7
+ms.openlocfilehash: 126b5de915fba7168b3895bbb05ccef6dcad749b
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "63010816"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312061"
 ---
 # <a name="administering-a-multi-geo-environment"></a>Çok coğrafi ortamı yönetme
 
@@ -28,7 +30,7 @@ Burada, hizmetlerin çok coğrafi Microsoft 365 nasıl çalışmaktadır?
 
 ## <a name="administrator-experience"></a>Yönetici deneyimi
 
-Bu [SharePoint yönetim](https://admin.microsoft.com/sharepoint) merkezinde, sol gezinti bölmesinde coğrafi  konumlar sekmesinin yer alan ve coğrafi konumlarınızı görüntüleyebilirsiniz ve yönetebilirsiniz. Kiracınız için coğrafi konum eklemek veya silmek üzere bu sayfayı kullanın.
+Bu SharePoint yönetim merkezinin sol gezinti bölmesinde coğrafi konumlar sekmesi vardır ve coğrafi konumlarınızı görüntüleyebilirsiniz ve yönetebilirsiniz.<a href="https://go.microsoft.com/fwlink/?linkid=2185076" target="_blank"></a> Kiracınız için coğrafi konum eklemek veya silmek üzere bu sayfayı kullanın.
 
 ## <a name="audit-log-search"></a>Denetim günlüğü araması
 

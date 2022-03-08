@@ -2,8 +2,8 @@
 title: İşletmeler Microsoft 365 yenileme
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: jkinma, jmueller
 audience: Admin
@@ -14,19 +14,19 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
+- commerce_subscriptions
 - SaRA
 - AdminSurgePortfolio
-- commerce_subscriptions
 - AdminTemplateSet
 search.appverid: MET150
 description: Yinelenen faturalamayı kapatarak veya Microsoft 365 abonelikleri için çoğu aboneliği yenilemeyi öğrenin.
 ms.date: 05/04/2021
-ms.openlocfilehash: 2fe78acab6423bbedefe2cad9dc7ae7ae3efe449
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: b50e92bf71d4c172b55aa69db33fc3572d660684
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62996055"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63330167"
 ---
 # <a name="renew-microsoft-365-for-business"></a>İşletmeler Microsoft 365 yenileme
 
@@ -60,7 +60,7 @@ Aboneliğiniz ürün anahtarıyla ön ödemeli ödendiğinde, abonelik süresini
 
 2. Yinelenen faturalamayı yönetmek istediğiniz aboneliği seçin.
 3. Abonelik ayrıntıları sayfasında, Abonelik ve ödeme **ayarları'nın altında Yinelenen** faturalamayı **düzenle'yi seçin**.
-4. Yinelenen faturalama **ayarlarını düzenle bölmesinde Aç****, Aç,** ancak **bir kez yenile'yi veya** **Kapat'ı seçin**.
+4. Yinelenen **faturalamayı düzenle bölmesinde** Aç **, Aç,** ancak **bir kez yenile'yi veya** **Kapat'ı seçin**.
 5. **Kaydet**'i seçin.
 
     > [!NOTE]

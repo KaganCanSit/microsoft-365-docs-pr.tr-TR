@@ -2,8 +2,8 @@
 title: Etki alanı adı satın alma
 f1.keywords:
 - NOCSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -24,12 +24,12 @@ search.appverid:
 - GEA150
 ms.assetid: 1561140a-16a9-4a02-822d-a989250e479d
 description: Microsoft 365'de etki alanı adı satın almayı Microsoft 365.
-ms.openlocfilehash: 77270f7ba045d58ae29092437d3356371a40dc38
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 8b9c4cea91caf91b5797515314342a7967af96d1
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019455"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316989"
 ---
 # <a name="buy-a-domain-name"></a>Etki alanı adı satın alma
 

@@ -2,8 +2,8 @@
 title: Kişisel bir e Office 365-posta adresiyle oturum açma
 f1.keywords:
 - NOCSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: 20816b8b-8b21-458f-81c1-320b8116597e
 ROBOTS: NOINDEX
 description: 'Özel etki alanı eklemek Office 365 e-posta adresinizle e-posta adresinizle oturum açma hakkında bilgi alın. '
-ms.openlocfilehash: ffac363aa8caaa1d8791499479f040e84b3fdfd4
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: df681f8a59e25d418d56b82310da7229f5180432
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984479"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312425"
 ---
 # <a name="signing-up-for-office-365-with-a-personal-email-address"></a>Kişisel bir e Office 365-posta adresiyle oturum açma
 

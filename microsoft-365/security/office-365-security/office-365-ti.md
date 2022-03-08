@@ -21,12 +21,12 @@ ms.custom:
 description: Microsoft Defender'daki tehdit soruşturması ve yanıt özellikleri hakkında bilgi Office 365 öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e14cda205405b90a73689bde59fcccf22095f2df
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: ce7541010999b87e49880446594a79593a16a30a
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021746"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312971"
 ---
 # <a name="threat-investigation-and-response"></a>Tehdit soruşturması ve yanıt
 
@@ -61,6 +61,17 @@ Tehditleri çözümlemek, zaman içinde saldırı hacmini görmek ve tehdit aile
 ![Tehdit gezgini.](../../media/7a7cecee-17f0-4134-bcb8-7cee3f3c3890.png)
 
 Bu raporu şu adreste görüntülemek ve Microsoft 365 Defender portalında görüntülemek için, <https://security.microsoft.com>E-posta ve **işbirliği &** \> **gidin**. Doğrudan Gezgin sayfasına gitmek **için de** bunu kullanın <https://security.microsoft.com/threatexplorer>.
+
+## <a name="office-365-threat-intelligence-connection"></a>Office 365 Tehdit İstihbaratı bağlantısı
+
+Bu özelliğin kullanılabilir olması için, etkin bir Office 365 E5 veya Tehdit İstihbaratı eklentiniz olması gerekir. Daha fazla bilgi için, Office 365 Kurumsal E5 ürün sayfasına bakın.
+
+Bu özelliği açık durumdayken, Office 365 için Microsoft Defender'dan Microsoft 365 Defender'e veri Office 365 posta kutuları ve diğer cihazlar arasında kapsamlı bir güvenlik Windows yönetebilirsiniz.
+
+> [!NOTE]
+> Bu özelliği etkinleştirmek için uygun lisansa sahip olmak gerekir.
+
+Threat Intelligence içinde bağlamsal cihaz tümleştirmesi Office 365 için Güvenlik ve Uyumluluk panosunda Uç Nokta için Defender ayarlarını etkinleştirmeniz & gerekir.
 
 ### <a name="incidents"></a>Olaylar
 

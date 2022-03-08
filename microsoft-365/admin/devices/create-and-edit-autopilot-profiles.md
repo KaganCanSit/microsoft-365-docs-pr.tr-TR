@@ -28,14 +28,17 @@ search.appverid:
 - MOE150
 ms.assetid: 5cf7139e-cfa1-4765-8aad-001af1c74faa
 description: AutoPilot profilini oluşturma ve bir cihaza uygulamanın yanı sıra profili düzenlemeyi veya silmeyi ya da cihazdan profili kaldırmayı öğrenin.
-ms.openlocfilehash: 481c59797a1959ed72dbe5c7b81f5d2480def490
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 91df801fb1833c9bfe5f1112e6a3cd5fc8efcf5d
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984123"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313853"
 ---
 # <a name="create-and-edit-autopilot-profiles"></a>AutoPilot profillerini oluşturma ve düzenleme
+
+> [!NOTE]
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Bu teklif, cihazlar için ek güvenlik özellikleri sağlar. [İş için Defender hakkında daha fazla bilgi öğrenin](../../security/defender-business/mdb-overview.md).
 
 ## <a name="create-a-profile"></a>Profil oluşturma
 
@@ -85,3 +88,6 @@ Bir profili bir cihaza atadıktan sonra, cihazı daha önce bir kullanıcıya ve
     
 2. Bir cihaz adının yanındaki onay kutusunu seçin ve Cihaz panelindeki Atanan profil  açılan listesinden **Yok'a** \> **tıklayın**.
     
+## <a name="see-also"></a>Ayrıca bkz.
+
+[kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](../security-and-compliance/secure-your-business-data.md)

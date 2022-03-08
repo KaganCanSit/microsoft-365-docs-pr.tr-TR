@@ -2,8 +2,8 @@
 title: Self servis satın almaları yönetme (Kullanıcılar)
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: mijeffer, pablom
 audience: Admin
@@ -12,22 +12,22 @@ ms.service: o365-administration
 ms.localizationpriority: medium
 ms.collection: M365-subscription-management
 ms.custom:
-- AdminSurgePortfolio
 - commerce_ssp
+- AdminSurgePortfolio
 search.appverid:
 - MET150
 description: Kullanıcılar, kendi self servis satın almalarını yönetmeyi öğrenebilir.
 ms.date: 03/17/2021
-ms.openlocfilehash: 86b147ebd81842dee4aa15795650dee9c0f3fe5c
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: bf3404a900872090048b6b092d97f81fd5fd7c5a
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62999094"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316527"
 ---
 # <a name="manage-self-service-purchases-users"></a>Self servis satın almaları yönetme (Kullanıcılar)
 
-Bir kullanıcı olarak, belirli ürünlere abonelikler satın alabilir ve bu abonelikler için ekibinize lisans atabilirsiniz. Kendi kendine yapılan satın almalar için ödeme yapmak sizin sorumluluğundadır. Aboneliklerinizi aynı anda aynı Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">yönetebilirsiniz admin.microsoft.com</a>.
+Bir kullanıcı olarak, belirli ürünlere abonelikler satın alabilir ve bu abonelikler için ekibinize lisans atabilirsiniz. Kendi kendine yapılan satın almalar için ödeme yapmak sizin sorumluluğundadır. Aboneliklerinizi, genel merkezin Microsoft 365 yönetim <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">admin.microsoft.com.</a>
 
 Yöneticinizin, satın alan tüm abonelikleri salt okunur olarak görüntülemesi gerekir. Satın aldığınız her abonelik için ürünü, satın alan adını, satın alınan abonelikleri, son kullanma tarihini, satın alma fiyatını ve atanmış kullanıcıları görebilirler.
 

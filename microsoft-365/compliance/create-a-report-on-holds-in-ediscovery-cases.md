@@ -1,5 +1,5 @@
 ---
-title: eBulma olaylarında 10 ayrı tutan rapor oluşturma
+title: eBulma holds raporu oluşturmak için betik kullanma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -20,16 +20,16 @@ ms.assetid: cca08d26-6fbf-4b2c-b102-b226e4cd7381
 ms.custom:
 - seo-marvel-apr2020
 description: eBulma servis örnekleriyle ilişkilendirilmiş tüm esnalar hakkında bilgi içeren bir rapor oluşturma hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: 953b2aaa1b133d79b82f17e5f75603947cc5d6d7
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 568d4fa351879d271004d0f0749881f3de4b4a49
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988106"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63319483"
 ---
-# <a name="create-a-report-on-holds-in-ediscovery-cases"></a>eBulma olaylarında 10 ayrı tutan rapor oluşturma
+# <a name="use-a-script-to-create-a-report-on-holds-in-ediscovery-cases"></a>eBulma durumlarında 10 ayrı tutan rapor oluşturmak için betik kullanma
 
-Bu makaledeki betik, eBulma yöneticilerinin ve eBulma yöneticilerinin, Office 365 veya Microsoft 365'daki uyumluluk merkezinde eBulma servisleriyle ilişkilendirilmiş tüm beklemelerle ilgili bilgileri içeren bir rapor oluşturmalarını sağlar. Raporda, bir tutma durumunda yer alan dosyanın adı, beklemede tutulan içerik konumları ve tutmanın sorgu tabanlı olup olmadığı gibi bilgiler yer almaktadır. Hiçbir mızrı olmayan durumlar varsa, betik, var olan durumlar listesi olan ek bir rapor sağlar.
+Bu makaledeki betik, eBulma yöneticilerinin ve eBulma yöneticilerinin, kuruluş içinde Core ve Advanced eDiscovery servis servisleriyle ilişkilendirilmiş tüm beklemeler hakkında bilgi içeren bir rapor oluşturmalarını Microsoft 365 uyumluluk merkezi. Raporda, bir tutma durumunda yer alan dosyanın adı, beklemede tutulan içerik konumları ve tutmanın sorgu tabanlı olup olmadığı gibi bilgiler yer almaktadır. Hiçbir mızrı olmayan durumlar varsa, betik, var olan durumlar listesi olan ek bir rapor sağlar.
 
 Rapora [dahil edilen](#more-information) bilgilerin ayrıntılı açıklaması için Daha fazla bilgi bölümüne bakın.
 
@@ -61,12 +61,13 @@ Güvenlik ve Uyumluluk Merkezi PowerShell& e bağlandıktan sonra, bir sonraki a
    " "
    #prompt users to specify a path to store the output files
    $time=get-date
-   $Path = Read-Host 'Enter a file path to save the report to a .csv file'
+   $Path = Read-Host 'Enter a folder path to save the report to a .csv file (filename is created automatically)'
    $outputpath=$Path+'\'+'CaseHoldsReport'+' '+$time.day+'-'+$time.month+'-'+$time.year+' '+$time.hour+'.'+$time.minute+'.csv'
    $noholdsfilepath=$Path+'\'+'CaseswithNoHolds'+' '+$time.day+'-'+$time.month+'-'+$time.year+' '+$time.hour+'.'+$time.minute+'.csv'
    #add case details to the csv file
    function add-tocasereport{
    Param([string]$casename,
+   [String]$casetype,
    [String]$casestatus,
    [datetime]$casecreatedtime,
    [string]$casemembers,
@@ -84,6 +85,7 @@ Güvenlik ve Uyumluluk Merkezi PowerShell& e bağlandıktan sonra, bir sonraki a
    )
    $addRow = New-Object PSObject
    Add-Member -InputObject $addRow -MemberType NoteProperty -Name "Case name" -Value $casename
+   Add-Member -InputObject $addRow -MemberType NoteProperty -Name "Case type" -Value $casetype
    Add-Member -InputObject $addRow -MemberType NoteProperty -Name "Case status" -Value $casestatus
    Add-Member -InputObject $addRow -MemberType NoteProperty -Name "Case members" -Value $casemembers
    Add-Member -InputObject $addRow -MemberType NoteProperty -Name "Case created time" -Value $casecreatedtime
@@ -98,12 +100,12 @@ Güvenlik ve Uyumluluk Merkezi PowerShell& e bağlandıktan sonra, bir sonraki a
    Add-Member -InputObject $addRow -MemberType NoteProperty -Name "Hold query" -Value $ContentMatchQuery
    Add-Member -InputObject $addRow -MemberType NoteProperty -Name "Hold created time (UTC)" -Value $holdcreatedtime
    Add-Member -InputObject $addRow -MemberType NoteProperty -Name "Hold changed time (UTC)" -Value $holdchangedtime
-   $allholdreport = $addRow | Select-Object "Case name","Case status","Hold name","Hold enabled","Case members", "Case created time","Case closed time","Case closed by","Exchange locations","SharePoint locations","Hold query","Hold created by","Hold created time (UTC)","Hold last changed by","Hold changed time (UTC)"
+   $allholdreport = $addRow | Select-Object "Case name","Case type","Case status","Hold name","Hold enabled","Case members", "Case created time","Case closed time","Case closed by","Exchange locations","SharePoint locations","Hold query","Hold created by","Hold created time (UTC)","Hold last changed by","Hold changed time (UTC)"
    $allholdreport | export-csv -path $outputPath -notypeinfo -append -Encoding ascii
    }
    #get information on the cases and pass values to the case report function
    " "
-   write-host "Gathering a list of cases and holds..."
+   write-host "Gathering a list of Core eDiscovery cases and holds..."
    " "
    $edc =Get-ComplianceCase -ErrorAction SilentlyContinue
    foreach($cc in $edc)
@@ -112,7 +114,7 @@ Güvenlik ve Uyumluluk Merkezi PowerShell& e bağlandıktan sonra, bir sonraki a
    if($cc.status -eq 'Closed')
    {
    $cmembers = ((Get-ComplianceCaseMember -Case $cc.name).windowsLiveID)-join ';'
-   add-tocasereport -casename $cc.name -casestatus $cc.Status -caseclosedby $cc.closedby -caseClosedDateTime $cc.ClosedDateTime -casemembers $cmembers
+   add-tocasereport -casename $cc.name -casetype $cc.casetype -casestatus $cc.Status -caseclosedby $cc.closedby -caseClosedDateTime $cc.ClosedDateTime -casemembers $cmembers
    }
    else{
    $cmembers = ((Get-ComplianceCaseMember -Case $cc.name).windowsLiveID)-join ';'
@@ -122,7 +124,38 @@ Güvenlik ve Uyumluluk Merkezi PowerShell& e bağlandıktan sonra, bir sonraki a
    foreach ($policy in $policies)
    {
    $rule=Get-CaseHoldRule -Policy $policy.name
-   add-tocasereport -casename $cc.name -casemembers $cmembers -casestatus $cc.Status -casecreatedtime $cc.CreatedDateTime -holdname $policy.name -holdenabled $policy.enabled -holdcreatedby $policy.CreatedBy -holdlastmodifiedby $policy.LastModifiedBy -ExchangeLocation (($policy.exchangelocation.name)-join ';') -SharePointLocation (($policy.sharePointlocation.name)-join ';') -ContentMatchQuery $rule.ContentMatchQuery -holdcreatedtime $policy.WhenCreatedUTC -holdchangedtime $policy.WhenChangedUTC
+   add-tocasereport -casename $cc.name -casetype $cc.casetype -casemembers $cmembers -casestatus $cc.Status -casecreatedtime $cc.CreatedDateTime -holdname $policy.name -holdenabled $policy.enabled -holdcreatedby $policy.CreatedBy -holdlastmodifiedby $policy.LastModifiedBy -ExchangeLocation (($policy.exchangelocation.name)-join ';') -SharePointLocation (($policy.sharePointlocation.name)-join ';') -ContentMatchQuery $rule.ContentMatchQuery -holdcreatedtime $policy.WhenCreatedUTC -holdchangedtime $policy.WhenChangedUTC
+   }
+   }
+   else{
+   write-host "No hold policies found in case:" $cc.name -foregroundColor 'Yellow'
+   " "
+   [string]$cc.name | out-file -filepath $noholdsfilepath -append
+   }
+   }
+   }
+   #get information on the cases and pass values to the case report function
+   " "
+   write-host "Gathering a list of Advanced eDiscovery cases and holds..."
+   " "
+   $edc =Get-ComplianceCase -CaseType Advanced -ErrorAction SilentlyContinue
+   foreach($cc in $edc)
+   {
+   write-host "Working on case :" $cc.name
+   if($cc.status -eq 'Closed')
+   {
+   $cmembers = ((Get-ComplianceCaseMember -Case $cc.name).windowsLiveID)-join ';'
+   add-tocasereport -casename $cc.name -casestatus -casetype $cc.casetype $cc.Status -caseclosedby $cc.closedby -caseClosedDateTime $cc.ClosedDateTime -casemembers $cmembers
+   }
+   else{
+   $cmembers = ((Get-ComplianceCaseMember -Case $cc.name).windowsLiveID)-join ';'
+   $policies = Get-CaseHoldPolicy -Case $cc.Name | %{ Get-CaseHoldPolicy $_.Name -Case $_.CaseId -DistributionDetail}
+   if ($policies -ne $NULL)
+   {
+   foreach ($policy in $policies)
+   {
+   $rule=Get-CaseHoldRule -Policy $policy.name
+   add-tocasereport -casename $cc.name -casetype $cc.casetype -casemembers $cmembers -casestatus $cc.Status -casecreatedtime $cc.CreatedDateTime -holdname $policy.name -holdenabled $policy.enabled -holdcreatedby $policy.CreatedBy -holdlastmodifiedby $policy.LastModifiedBy -ExchangeLocation (($policy.exchangelocation.name)-join ';') -SharePointLocation (($policy.sharePointlocation.name)-join ';') -ContentMatchQuery $rule.ContentMatchQuery -holdcreatedtime $policy.WhenCreatedUTC -holdchangedtime $policy.WhenChangedUTC
    }
    }
    else{
@@ -156,7 +189,7 @@ Güvenlik ve Uyumluluk Merkezi PowerShell& e bağlandıktan sonra, bir sonraki a
 
    Betik, tüm eBulma davaları hakkında kuruluş bilgilerini toplamaya başlar. Betik çalışırken rapor dosyasına erişin. Betik tamamlandıktan sonra, son oturumda onay Windows PowerShell görüntülenir. Bu ileti görüntülendikten sonra, 4. Adımda belirttiğiniz klasördeki rapora erişebilirsiniz. Raporun dosya adıdır `CaseHoldsReport<DateTimeStamp>.csv`.
 
-   Bunun yanı sıra, betik 2013'lerde 1500'den fazla özel durum raporu bulundurarak rapor oluşturur. Bu raporun dosya adıdır `CaseswithNoHolds<DateTimeStamp>.csv`.
+   Buna ek olarak, betik 10 100 2013'e kadar olan vakaların listesinin yer olduğu bir rapor da oluşturur. Bu raporun dosya adıdır `CaseswithNoHolds<DateTimeStamp>.csv`.
 
    Bu betiği çalıştırma örneği CaseHoldsReport.ps1.
 
@@ -167,6 +200,8 @@ Güvenlik ve Uyumluluk Merkezi PowerShell& e bağlandıktan sonra, bir sonraki a
 Olay, bu makaledeki betiği çalıştırarak oluşturulan ve her tutma hakkında aşağıdaki bilgileri içerir. Daha önce de belirtildiği gibi, bir eBulma Yöneticisi olarak, kurumda tüm esnat bilgilerini iade etmek için bir eBulma Yöneticisi olmak gerekir. Servis servis servis adayları hakkında daha fazla bilgi için bkz. [eBulma servis örnekleri](./get-started-core-ediscovery.md).
 
 - Tutma adı ve ile ilişkilendirilmiş eBulma dava adı.
+
+- Tutmanın bir Çekirdek veya Çekirdek durumundan Advanced eDiscovery olabilir.
 
 - eBulma olaylarının etkin veya kapalı olup olmadığı.
 

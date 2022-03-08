@@ -1,9 +1,9 @@
 ---
 title: Yazılım kiracınız için fidye yazılımı Microsoft 365 dağıtın
-author: JoeDavies-MSFT
+author: dansimp
 f1.keywords:
 - NOCSH
-ms.author: josephd
+ms.author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: article
@@ -18,12 +18,12 @@ ms.collection:
 ms.custom: seo-marvel-jun2020
 keywords: fidye yazılımı, insan tarafından işletilen fidye yazılımı, insan tarafından işletilen fidye yazılımı, HumOR, extortion saldırısı, fidye yazılımı saldırı, şifreleme, cryptovirology, sıfır güven
 description: Yazılım kaynaklarınızı fidye yazılımlarına Microsoft 365 için koruma adımlarını takip edin.
-ms.openlocfilehash: 634888ac603be17265733c4443a69495015296d7
-ms.sourcegitcommit: 23a90ed17cddf3b0db8d4084c8424f0fabd7b1de
+ms.openlocfilehash: c356a0e3fac83c77a7e1eb1eda6e169405f43863
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63015351"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324417"
 ---
 # <a name="deploy-ransomware-protection-for-your-microsoft-365-tenant"></a>Yazılım kiracınız için fidye yazılımı Microsoft 365 dağıtın
 

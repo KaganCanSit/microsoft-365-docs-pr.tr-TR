@@ -13,14 +13,14 @@ ms.topic: article
 ms.custom: nextgen
 ms.reviewer: ''
 manager: dansimp
-ms.date: 12/17/2021
+ms.date: 02/27/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 616dde760ab24d12efe5c4621a1ee1829cb1798f
-ms.sourcegitcommit: 59b1b0abfde30a8f2d8210b696aac3dc9183544e
+ms.openlocfilehash: be22c80e51551b5de2a2aeed2f0dff0db9a8481f
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "63019108"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323661"
 ---
 # <a name="configure-and-validate-exclusions-based-on-file-extension-and-folder-location"></a>Dosya uzantısını ve klasör konumunu temel alarak dışlamaları yapılandırma ve doğrulama
 
@@ -197,6 +197,7 @@ Dosya adı veya klasör `*``?`yolu dışlama listesinde öğe tanımlarken joker
 > Bu joker karakterler için önemli sınırlamalar ve kullanım senaryoları vardır:
 >
 > - Ortam değişken kullanımı makine değişkenleriyle ve NT AUTHORITY\SYSTEM hesabı olarak çalışan işlemler için geçerli olanlar ile sınırlıdır.
+> - Girdi başına en fazla altı joker karakter kullanabilirsiniz.
 > - Sürücü harfi yerine joker karakter kullanılamaz.
 > - Klasör dışlamada `*` bir yıldız işareti, tek bir klasör için geçerli durumdadır. Belirtilmemiş adlarla `\*\` birden çok iç içe klasör göstermek için birden çok örnek kullanın.
 > - Şu anda Microsoft Endpoint Configuration Manager karakterleri (veya gibi) desteklemez `*` `?`.

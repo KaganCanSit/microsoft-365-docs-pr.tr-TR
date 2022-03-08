@@ -16,12 +16,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: a2e17e5b7a2a5a5a7abed9c7f2a3f42c0cf63b37
-ms.sourcegitcommit: 986ea76ecaceb5fe6b9616e553003e3c5b0df2e7
+ms.openlocfilehash: 7045ff8931def0f7aef2c1ac40ea76ec839c7ad0
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "63010796"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312687"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-on-ios"></a>iOS'ta Uç Nokta için Microsoft Defender'ı Dağıtma
 
@@ -164,6 +164,8 @@ Bu adım VPN profilini ayarerek ekleme işlemini basitler. Sıfır dokunmatik ve
 > [!IMPORTANT]
 > Bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabilir, önceden satın alınan ürünle ilgilidir. Microsoft, burada sağlanan bilgilerle ilgili olarak açık veya zımni hiçbir garanti vermez.
 
+> [!NOTE]
+> Sıfır dokunma, kullanıcıya yakınlık (kullanıcısız cihazlar veya paylaşılan cihazlar) olmadan kayıtlı iOS cihazlarda yapılandırılamaz.
 
 Yöneticiler, sessizce dağıtım yapmak ve etkinleştirmek üzere Uç Nokta için Microsoft Defender'ı yapılandırmış olabilir. Bu akışta, yönetici bir dağıtım profili oluşturur ve kullanıcıya yalnızca yüklemeyle ilgili bir bilgi olur. Kullanıcının uygulamayı açması gerekmeden Uç Nokta için Defender otomatik olarak yüklenir. Kayıtlı iOS cihazlarda Uç Nokta için Defender'ın sıfır dokunmatik veya sessiz dağıtımının kurulumu için aşağıdaki adımları izleyin:
 

@@ -12,18 +12,17 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-ROBOTS: NOINDEX, NOFOLLOW
 description: Microsoft web sitesinde İçerik Merkezi site şablonunu sağlamayı ve kullanmayı SharePoint Syntex.
-ms.openlocfilehash: 342a8b42b8aa8a9bb60867f57379ce00db068c17
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: 2650b98decc7977c4343f75b27ed46e2381abdef
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015483"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63314553"
 ---
 # <a name="use-the-content-center-site-template-for-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex için İçerik Merkezi site SharePoint Syntex
 
-İçerik SharePoint Syntex Merkezi sitesi, kullanıcı özelliklerini daha iyi anlamanıza yardımcı SharePoint tasarlanmış, kullanıma hazır bir site SharePoint Syntex şablonudur.
+İçerik SharePoint Syntex Sitesi, kullanıcı özelliklerini daha iyi anlamanıza yardımcı olmak SharePoint üzere tasarlanmış, kullanıma hazır bir yönerge SharePoint Syntex şablonudur.
 
 Kendi modellerinizi oluşturmak ve eğitmek için ihtiyacınız olan araçlar ve bilgiler size tanıtıldı. Bundan sonra bu siteyi merkezi bir içerik deposu olarak veya kendi içerik modellerinizi yönetmek için denetim merkezi SharePoint Syntex kullanabilirsiniz.
 

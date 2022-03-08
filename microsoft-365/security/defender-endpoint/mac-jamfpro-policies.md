@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 981e2afc2bfe3ff27bf5be492c98f96229a6deab
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 23420223102eafeab7783f7b81ac60c06670626c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011989"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326377"
 ---
 # <a name="set-up-the-microsoft-defender-for-endpoint-on-macos-policies-in-jamf-pro"></a>Jamf sitesinde macOS'ta Uç Nokta için Microsoft Defender ilkelerini Pro
 
@@ -54,7 +54,7 @@ Aşağıdaki adımları benimsersiniz:
 
 2. İşletim sistemi olarak macOS'u ve dağıtım yöntemi olarak mobil Microsoft Intune Yönetim / Mobil Cihaz Yönetimi'Microsoft Intune seçin.
 
-    ![Resim Microsoft Defender Güvenlik Merkezi.](images/onboarding-macos.png)
+    ![Portal resmi Microsoft 365 Defender.](images/onboarding-macos.png)
 
 3. Ekleme **paketini indir (Yükleme)** seçeneğini WindowsDefenderATPOnboardingPackage.zip.
 

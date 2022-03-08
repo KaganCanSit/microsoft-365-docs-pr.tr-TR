@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: d4052ef2e73b7b81630c8013e17cad533383b215
-ms.sourcegitcommit: b71a8fdda2746f18fde2c94d188be89f9cab45f2
+ms.openlocfilehash: 3179ab18ab27bb41f5c0b1577d73ff48b3470b98
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2021
-ms.locfileid: "63019135"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326083"
 ---
 # <a name="configure-microsoft-defender-for-endpoint-on-ios-features"></a>iOS'ta Uç Nokta için Microsoft Defender'ı yapılandırma
 
@@ -47,7 +47,9 @@ Uç Nokta için Microsoft Defender, yönetilemeyen ve yönetilen cihazlarabrokl�
 
 ## <a name="web-protection-and-vpn"></a>Web Koruması ve VPN
 
-Varsayılan olarak, iOS'ta Uç Nokta için Defender web koruma özelliğini içerir ve sağlar. [Web koruması,](web-protection-overview.md) cihazların web tehditlerine karşı güvenliğini korumaya ve kullanıcıları kimlik avı saldırılarından korumaya yardımcı olur. iOS'ta Uç Nokta için Defender bu korumayı sağlamak için VPN kullanır. Bu yerel bir VPN'tir ve geleneksel VPN'den farklı olarak ağ trafiği cihazın dışına gönderilmez.
+Varsayılan olarak, iOS'ta Uç Nokta için Defender web koruma özelliğini içerir ve sağlar. [Web koruması,](web-protection-overview.md) cihazların web tehditlerine karşı güvenliğini korumaya ve kullanıcıları kimlik avı saldırılarından korumaya yardımcı olur. Web Koruması kapsamında Kimlik avıyla mücadele ve özel göstergelerin (URL ve IP adresleri) desteklenelerine dikkat edin. Web İçeriği Filtreleme şu anda iOS'ta desteklenmiyor.
+
+iOS'ta Uç Nokta için Defender bu özelliği sağlamak için VPN kullanır. Bu yerel bir VPN'tir ve geleneksel VPN'den farklı olarak ağ trafiği cihazın dışına gönderilmez.
 
 Varsayılan olarak etkin durumdayken VPN'yi devre dışı bırakmanızı gerektiren bazı durumlar olabilir. Örneğin, VPN yapılandırıldığında çalışmayan bazı uygulamaları çalıştırmak istiyor olun. Böyle durumlarda, aşağıdaki adımları takip edin ve VPN'yi cihazdan devre dışı bırakmayı seçebilirsiniz:
 

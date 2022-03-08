@@ -2,8 +2,8 @@
 title: Adım 5. Karma çalışan üretkenlik uygulamalarını ve hizmetlerini dağıtma
 f1.keywords:
 - NOCSH
-author: JoeDavies-MSFT
-ms.author: josephd
+author: dansimp
+ms.author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: article
@@ -17,12 +17,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 description: Kullanıcılarınızı e-posta, Teams, Exchange, SharePoint ve diğer Microsoft 365 olanaklarla Microsoft 365 olanak.
-ms.openlocfilehash: 97a0342347d848a27a8402b5b8506536c95c55c9
-ms.sourcegitcommit: 23a90ed17cddf3b0db8d4084c8424f0fabd7b1de
+ms.openlocfilehash: 31f3c25aa536dce42dfd3ee8677271f1523eb75a
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63015349"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312915"
 ---
 # <a name="step-5-deploy-hybrid-worker-productivity-apps-and-services"></a>Adım 5. Karma çalışan üretkenlik uygulamalarını ve hizmetlerini dağıtma
 

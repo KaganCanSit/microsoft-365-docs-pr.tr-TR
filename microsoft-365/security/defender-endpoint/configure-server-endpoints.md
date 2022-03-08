@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: b04cd69afbf2c7804d8d559e1343336abc792cdc
-ms.sourcegitcommit: 966344e1aa442a4d10a0fb05f56badd38c833bb2
+ms.openlocfilehash: 2979216cb87982210ac33dd8e273702f8bc18bf0
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2022
-ms.locfileid: "63015570"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63328099"
 ---
 # <a name="onboard-windows-servers-to-the-microsoft-defender-for-endpoint-service"></a>Uç Windows için Microsoft Defender hizmetine ek sunucu ekleme
 
@@ -57,6 +57,9 @@ Sunucuları başarılı bir şekilde ekleme için aşağıdaki genel adımları 
 
 **Windows Server 2012 R2 ve Windows Server 2016 (Önizleme)**
 
+>[!IMPORTANT]
+> Bu işlevselliği kullanmak için önizleme özelliklerinin önizlemesini Microsoft 365 Defender uç noktalar bölümünde açabilirsiniz. Gelişmiş özellikler [Microsoft 365 Defender > Ayarlar > Uç >'ne gidin ve](https://security.microsoft.com/preferences2/integration) Önizleme özelliklerini açma.
+
 - Yükleme ve ekleme paketlerini indirme
 - Yükleme paketini uygulama
 - İlgili araç için ekleme adımlarını izleyin
@@ -89,6 +92,14 @@ Yeni birleşik çözüm paketi, bağımlılıkları ve yükleme adımlarını ka
 - [Otomatik Araştırma ve Yanıt (AIR)](/microsoft-365/security/defender-endpoint/automated-investigations)
 - [Tamper Protection](/microsoft-365/security/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection)
 
+Birleşik çözüm, işe kullandığınız sunucuya bağlı olarak, Microsoft Defender Virüsten Koruma ve/veya EDR olarak yüklenir. Aşağıdaki tablo hangi bileşenin yük olduğunu ve varsayılan olarak nelerin yerleşik olduğunu gösterir.
+
+|Sunucu sürümü|AV|EDR|
+|----|----|----|
+|Windows Server 2012 R2 SP1|![Evet.](images/svg/check-yes.svg)|![Evet.](images/svg/check-yes.svg)|
+|Windows Server 2016|Yerleşik|![Evet.](images/svg/check-yes.svg)|
+|Windows Server 2019 veya sonraki bir sonrakini yükleme|Yerleşik|Yerleşik|
+
 Sunucularınızı daha önce MMA kullanarak ekleme yaptıysanız, yeni çözüme geçiş için [Sunucu](server-migration.md) geçişi'de sağlanan yönergeleri izleyin.
 
 >[!NOTE]
@@ -98,8 +109,10 @@ Sunucularınızı daha önce MMA kullanarak ekleme yaptıysanız, yeni çözüme
 
 Aşağıdaki özel bilgiler, Windows Server 2012 R2 ve 2016 için yeni birleşik çözüm paketinde geçerlidir:
 
-- Proxy sunucusundaki Uç nokta hizmeti [URL'leri için Microsoft Defender'a erişimi etkinleştir](/microsoft-365/security/defender-endpoint/configure-proxy-internet?enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server) seçeneğinde belirtilen bağlantı gereksinimlerini karşılar. Bunlar, Windows Server 2019'unkilerle eşdeğerdir.
+- Proxy sunucusundaki Uç nokta hizmeti [URL'leri için Microsoft Defender'a erişimi etkinleştir](/microsoft-365/security/defender-endpoint/configure-proxy-internet?enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server) seçeneğinde belirtilen bağlantı gereksinimlerini karşılar. Bunlar, Windows Server 2019'unkilerle eşdeğerdir. 
+- Statik TelemetryProxyServer kullanılırken ve sertifika iptal listesi (CRL) URL'lerine SYSTEM hesabı bağlamından erişiken buluta yönelik Windows Server 2012 R2 bağlantısıyla ilgili bir sorunu araştırıyoruz. Bunun hemen risk azaltması, bu tür bağlantı sağlayan alternatif bir ara sunucu seçeneğini kullanmak veya SİSM hesap bağlamında WinInet ayarı üzerinden aynı proxy'yi yapılandırmaktır.
 - Daha önce, Windows Server 2016'da (Microsoft Monitoring Agent MMA) kullanımına, Defender bulut hizmetleriyle bağlantı sağlamak için OMS / Log Analytics ağ geçidinin kullanımına izin veridi. Windows Server 2019, Windows Server 2022 ve Windows 10'de Uç Nokta için Microsoft Defender gibi yeni çözüm bu ağ geçidini desteklemez.
+
 - Yükleme Windows Server 2016, Microsoft Defender Virüsten Koruma, etkin ve güncel olduğunu doğrulayın. Windows Update'i kullanarak en son platform sürümünü indirip yükleyebilirsiniz. Alternatif olarak, güncelleştirme paketini [Microsoft Update](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) Kataloğu'dan veya [MMPC'den el ile indirebilirsiniz](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).  
 - R2 Windows Server 2012 de, kullanıcı arabirimi veya Microsoft Defender Virüsten Koruma. Buna ek olarak, programda kullanıcı Windows Server 2016 yalnızca temel işlemlere izin verir. Bir cihazda yerel olarak işlem yapmak için PowerShell, WMI ve Diğer Adlar ile [Uç Nokta için Microsoft Defender'ı yönetme MPCmdRun.exe](/microsoft-365/security/defender-endpoint/manage-mde-post-migration-other-tools). Sonuç olarak, kullanıcıdan bir karar aldığı veya belirli bir görevi gerçekleştirmesi istendiğinde olduğu gibi, özellikle kullanıcı etkileşimini temel alan özellikler beklendiği gibi çalışmayabilirsiniz. Koruma özelliğini etkiley sürece, kullanıcı arabirimini devre dışı bırakmanız veya etkinleştirmeniz ya da yönetilen sunucu üzerinde kullanıcı etkileşimi gerektirmeniz önerilir.
 - Saldırı Yüzeyini Azaltma kurallarının hepsi tüm işletim sistemlerinde kullanılamaz. Saldırı [Yüzeyini Azaltma (ASR) kuralları'ne bakın](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules).
@@ -154,7 +167,6 @@ Daha fazla bilgi için bkz [. Bulut için Microsoft Defender ile Tümleştirme](
 
 Makinelerinizi en son aylık toplama paketiyle tamamen [güncelleştirmeniz](https://support.microsoft.com/topic/october-12-2021-kb5006714-monthly-rollup-4dc4a2cd-677c-477b-8079-dcfef2bda09e) varsa, ek **önkoşul** yoktur.
 
-
 Yükleyici paketi, aşağıdaki bileşenlerin bir güncelleştirme aracılığıyla zaten yüklü olup olduğunu kontrol edin:
 
 - [Müşteri deneyimi ve tanılama telemetrisi güncelleştirmesi](https://support.microsoft.com/help/3080149/update-for-customer-experience-and-diagnostic-telemetry)
@@ -166,6 +178,10 @@ En Son Toplu Güncelleştirme (LCU) ile makinenizi tümüyle güncelleştirme d�
 
 > [!NOTE]
 > 4.10 ile başlayan bir sürüm numarası Windows Defender'ın yerleşik sürümünü kullanılabilir en son platforma başarıyla güncelleştirmek için, bir hizmet yığını güncelleştirmesi ve 20 Eylül 2018'e eşit veya daha sonra (KB4457127 (OS Derlemesi 14393.2515) son Toplu Güncelleştirme (LCU) uygulanmış olmalıdır.
+
+**Üçüncü taraf güvenlik çözümleriyle çalışmanın önkoşulları**
+
+Üçüncü taraf kötü amaçlı yazılımlardan koruma çözümü kullanmayı amaçlı kullanıyorsanız, pasif Microsoft Defender Virüsten Koruma çalıştırmaniz gerekir. Yükleme ve ekleme işlemi sırasında pasif moduna ayarlamayı unutmayın.
 
 **Windows Server 2012 R2 ve 2016'da Uç Nokta için Microsoft Defender'a yeni güncelleştirme paketi**
 

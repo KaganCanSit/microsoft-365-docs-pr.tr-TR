@@ -2,8 +2,8 @@
 title: Microsoft Uyumluluk Yöneticisi ile çalışmaya başlama
 f1.keywords:
 - NOCSH
-ms.author: v-jgriffee
-author: jmgriffee
+ms.author: chvukosw
+author: chvukosw
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Uyumluluk Yöneticisi kullanıcı izinlerini ve rollerini ayarlayın ve eylemlerin otomatik testlerini ayarlayın. Kullanıcı geçmişini yönetin ve pano görünümlerinizi filtreleyin.
-ms.openlocfilehash: fc7e82880cec01f7d3fd0051f75600948e51cdcc
-ms.sourcegitcommit: d4797cfc15c732f1a7ef21e4f944e672a7170f9a
+ms.openlocfilehash: 070c8fea309ea7c01b82be068acc40a7dcb830ff
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63016646"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63330489"
 ---
 # <a name="get-started-with-compliance-manager"></a>Uyumluluk Yöneticisi'ni çalışmaya başlama
 
@@ -121,13 +121,17 @@ Uyumluluk Yöneticisi ayarları, Microsoft 365 uyumluluk merkezi eylemlerini oto
 
 ### <a name="set-up-automated-testing"></a>Otomatik test ayarlama
 
-Uyumluluk Yöneticisi'nde bazı geliştirme eylemleri de Microsoft Güvenli Puanı [tarafından izlenir](../security/defender/microsoft-secure-score.md). Ortak olarak izlenen eylemlerin otomatik testini kurabilirsiniz, bu da bir eylemin Güvenli Puan'da test ve güncelleştirildiğinde, bu sonuçların Uyumluluk Yöneticisi'nde aynı eylemlerle eşitlenmesi ve uyumluluk puanınıza eşitlenmesi anlamına gelir.
+Uyumluluk Yöneticisi, bilgi idaresi, bilgi koruma Microsoft 365 veri kaybını önleme, iletişim uyumluluğu ve insider risk yönetimi dahil olmak üzere, diğer uyumluluk çözümlerinden gelen sinyalleri algılar. Her geliştirme eyleminin ayrıntılar sayfasında, Test sekmesindeki  Test mantığı alanı, eylemin uyumluluk puanınızı geçmesi ve bu puandan puan kazan olması için diğer çözümde nelerin gerekli olduğunu gösterir.
 
-Otomatik test, Uyumluluk Yöneticisi'ni yeni edinen kuruluşlar için varsayılan olarak açıktır. Güvenlik Puanı'nın veya Microsoft 365 Office 365 ilk dağıtımda, Güvenli Puan'ın verileri tümüyle toplaması ve uyumluluk puanınıza faktör oluşturması yaklaşık yedi gün sürer.  Otomatik test açık olduğunda, eylemin test tarihi güncelleştirilmez, ancak test durumu güncelleştirilir. Yeni değerlendirmeler oluşturulduğunda, puanlar otomatik olarak Microsoft denetim puanlarını ve Güvenli Puan tümleştirmesini içerir.
+Uyumluluk Yöneticisi, Microsoft Güvenli Puanı tarafından da izlenen tamamlayıcı geliştirme eylemlerinden [sinyaller de algılar](../security/defender/microsoft-secure-score.md). Uyumluluk Yöneticisi bu sinyalleri kullanarak sizin için bazı geliştirme eylemlerini otomatik olarak test eder ve bu da uyumluluk etkinliklerinizin verimliliğini en üst düzeye çıkarmanıza yardımcı olur. Geliştirme eylemi başarıyla test edilmiş ve uygulanmışsa, genel uyumluluk puanınıza kredi uygulanan tam puan alırsınız.
+
+Her geliştirme eyleminin ayrıntılar sayfasında
+
+Otomatik test, Uyumluluk Yöneticisi'ni yeni edinen kuruluşlar için varsayılan olarak açıktır. Verilerinizi veya verilerinizi ilk Microsoft 365 Office 365, verileri tümüyle toplamak ve uyumluluk puanınıza faktörünü almak yaklaşık yedi gün sürer. Otomatik test açık olduğunda, eylemin test tarihi güncelleştirilmez, ancak test durumu güncelleştirilir. Yeni değerlendirmeler oluşturulduğunda, puanlar otomatik olarak Microsoft denetim puanlarını ve Güvenli Puan tümleştirmesini içerir.
+
+#### <a name="manage-automated-testing-settings"></a>Otomatik test ayarlarını yönetme
 
 Organizasyon genel yöneticisi otomatik test ayarlarını istediğiniz zaman değiştirebilir. Genel geliştirme eylemleri için otomatik sınamayı kapatabilirsiniz veya tek tek eylemler için açabilirsiniz. Otomatik test ayarlarınızı değiştirmek için aşağıdaki yönergeleri izleyin.
-
-#### <a name="to-manage-your-automated-testing-settings"></a>Otomatik test ayarlarınızı yönetmek için:
 
 1. Arama <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> Seçenekler'Microsoft 365 uyumluluk merkezi.
 
@@ -142,6 +146,10 @@ Organizasyon genel yöneticisi otomatik test ayarlarını istediğiniz zaman de�
 6. Ayarlarınızı **kaydetmek için** Kaydet'i seçin. Ekrannizin en üstünde, seçiminizin kaydedldığını haber alan bir onay iletisi alırsınız. Bir hata bildirimi alırsanız yeniden deneyin.
 
 **Not:** Tüm eylemler için otomatik güncelleştirmeleri yalnızca genel yönetici açamaz veya kapatabilirsiniz. Uyumluluk Yöneticisi Yöneticisi tek tek eylemler için otomatik güncelleştirmeleri açabilirsiniz, ancak genel olarak tüm eylemler için açamaz.
+
+**Daha fazla bilgi edinin**
+- [Sürekli izlemenin uyumluluk puanınıza nasıl katkıda olduğu hakkında daha fazla bilgi edinin](compliance-score-calculation.md#how-compliance-manager-continuously-assesses-controls).
+- [Geliştirme eylemi için test kaynağı atama hakkında daha fazla bilgi öğrenin](compliance-manager-improvement-actions.md#update-testing-source).
 
 ### <a name="manage-user-history"></a>Kullanıcı geçmişini yönetme
 
@@ -279,16 +287,17 @@ Filtreleri kaldırmak için:
 
 ### <a name="view-your-improvement-actions"></a>Geliştirme eylemlerinizi görüntüleme
 
-Uyumluluk Yöneticisi panosu önemli geliştirme **işlemlerinizi gösterir.** Geliştirme eylemlerinizin hepsini görüntülemek için panoda geliştirme eylemleri sekmesini seçin. Bu sekme sizi geliştirme eylemleri sayfasına getirir. Geliştirme eylemleri sayfanıza almak için Pano'da bulunan önemli geliştirme eylemleri listesinin altındaki Tüm geliştirme eylemlerini görüntüle'yi de seçebilirsiniz.
+Uyumluluk Yöneticisi panosu önemli geliştirme işlemlerinizi gösterir. Geliştirme eylemlerinizin hepsini görüntülemek için panoda geliştirme eylemleri  sekmesini seçin. Bu sekme sizi geliştirme eylemleri sayfasına getirir. Geliştirme eylemleri sayfanıza **almak için Pano'da** bulunan önemli geliştirme eylemleri listesinin altındaki Tüm geliştirme eylemlerini görüntüle'yi de seçebilirsiniz.
 
 Geliştirme eylemleri sayfası, kurum tarafından yönetilen tüm geliştirme eylemlerini gösterir. Microsoft tarafından yönetilen eylemler her değerlendirme içinde bunlardan bakabilirsiniz (Microsoft eylemleri hakkında daha [fazla bilgi).](compliance-manager-assessments.md#microsoft-actions-tab)
 
-Geliştirme eylemleri sayfasındaki uzun bir eylem listesi varsa, görünüme filtre uygulamanız yararlı olabilir. Eylemler **listesinin** sağ üst köşesindeki Filtre'yi seçin. Filtreler açılır **bölmesi** görüntülendiğinde, düzenleme ve standartlar, çözüm ve gruba göre ölçütlerinizi seçin. Sağ üst köşedeki Grup'a **seçerek** de görünümlerinizi özelleştirebilirsiniz. Açılan menüden gruba, çözüme, kategoriye, eylem türüne veya duruma göre görüntülemek için öğesini seçin.
+Geliştirme eylemleri sayfasındaki uzun bir eylem listesi varsa, görünüme filtre uygulamanız yararlı olabilir. Eylemler **listesinin** sağ üst köşesindeki Filtre'yi seçin. Filtreler **açılır** bölmesi görüntülendiğinde, kullanılabilir seçeneklerden ölçütlerinizi seçin. Sağ üst köşedeki Grup'a **seçerek** de görünümlerinizi özelleştirebilirsiniz. Açılan menüden gruba, çözüme, kategoriye, eylem türüne veya duruma göre görüntülemek için öğesini seçin.
 
 Bu sayfanın varsayılan görünümü, Geçirilen test durumu ile geliştirme eylemleri **görüntülemez**. Sınamayı geçmiş eylemleri görüntülemek için, Filtreler **uçarak** çıkış bölmesinde Geçirilen kutusunu işaretleyin. Yalnızca puanınıza doğru Geçirilen **sayımın test** durumuna sahip eylemler. Bazı eylemler bekleyen bir güncelleştirme **etiketi gösterebilir.** Geliştirme eylemleri [güncelleştirmeleri hakkında daha fazla bilgi alın](compliance-manager-improvement-actions.md#accepting-updates-to-improvement-actions).
 
 Geliştirme eylemleri sayfası, her geliştirme işlemi için aşağıdaki veri noktalarını gösterir:
 
+- **Ürünler**: değerlendirilen ürün.
 - **Elde edilen** puanlar: eylemi tamamlayarak elde edilen toplamdan elde edilen puan sayısı
 - **Yasal** düzenlemeler: Eylemle ilgili düzenlemeler veya standartlar
 - **Grup**: eylemi atadığı grup
@@ -296,16 +305,19 @@ Geliştirme eylemleri sayfası, her geliştirme işlemi için aşağıdaki veri 
 - **Değerlendirmeler**: Eylemi içeren değerlendirmeler
 - **Kategoriler**: ilgili veri koruma kategorisi (örneğin, bilgileri koruma, cihazları yönetme vb.)
 - **Test durumu**:
-    - **Yok** – durum güncelleştirmesi kaydedildi
-    - **Değerlendirildi** - test başlamadı
-    - **Başarılı** - uygulama başarıyla test edildi
-    - **Düşük risk başarısız** oldu - test başarısız oldu, düşük risk
-    - **Orta risk başarısız** oldu - test başarısız oldu, orta risk
-    - **Yüksek risk başarısız oldu** - test başarısız oldu, yüksek risk
-    - **Kapsam dışında** – eylem değerlendirme kapsamına değildir ve puanınızı etkilemez
-    - **Algılanmaz-** el ile test için bir eylemin uygulanmış olduğunu, ancak test edile olmadığını gösterir; otomatik test için, bir eylemin otomasyon sonucu için beklediğini gösterir
-    - **Algılanamadı** - otomatik durum belirlenemedi
-    - **Kısmen test edildi** – kısmi puanlama ile otomatik puanlama
+  - **Yok** – durum güncelleştirmesi kaydedildi
+  - **Değerlendirildi** - test başlamadı
+  - **Başarılı** - uygulama başarıyla test edildi
+  - **Düşük risk başarısız** oldu - test başarısız oldu, düşük risk
+  - **Orta risk başarısız** oldu - test başarısız oldu, orta risk
+  - **Yüksek risk başarısız oldu** - test başarısız oldu, yüksek risk
+  - **Kapsam dışında** – eylem değerlendirme kapsamına değildir ve puanınızı etkilemez
+  - **Algılanmaz-** el ile test için bir eylemin uygulanmış olduğunu, ancak test edile olmadığını gösterir; otomatik test için, bir eylemin otomasyon sonucu için beklediğini gösterir
+  - **Algılanamadı** - otomatik durum belirlenemedi
+  - **Kısmen test edildi** – kısmi puanlama ile otomatik puanlama
+- **Eylem türü**: geliştirme eyleminin teknik bir işlem olup olmadığını gösterir; yani bir çözüm veya ürün içinde uygulanıp uygulanamayacaktır ya da teknik çözüm dışında uygulanacak teknik olmayan bir eylemdir
+- **Atanan**: Bu eylemin atandığı kişi (varsa)
+- **Test kaynağı**: Eylem için test kaynağının el ile mi yoksa otomatik olarak mı yoksa üst öğeden mi devralınan olduğunu gösterir
 
 **Daha fazla bilgi:** [Geliştirme eylemleri atama ve üzerinde çalışma yapmayı öğrenin](compliance-manager-improvement-actions.md).
 
@@ -320,7 +332,7 @@ Uyumluluk Yöneticisi pano üzerinde Çözümler sekmesini **seçerek** çözüm
 Çözüm görünümlerinizi filtrelemek için:
 
 1. Değerlendirme **listenizin** sol üst köşesindeki Filtre'yi seçin.
-2. Filtreler **çıkış bölmesinde** , istediğiniz ölçütlerin (standartlar ve düzenlemeler, çözüm, eylem türü, Uyumluluk Yöneticisi grubu, kategori) yanına bir denetim ekleyin.
+2. Filtreler **giriş bölmesinde** , istediğiniz ölçütlerin (düzenlemeler, çözümler, eylem türleri, gruplar, kategoriler) yanına bir denetim ekleyin.
 3. Uygula **düğmesini** seçin. Filtre bölmesi kapanır ve filtrelenmiş görünüm gösterilir.
 
 Ayrıca, değerlendirme listenizin üstündeki Grup açılır menüsünden gruplama türünü seçerek gruba, ürüne veya düzenlemeye göre değerlendirmeleri görmek için  görünümde değişiklik yapabilirsiniz.

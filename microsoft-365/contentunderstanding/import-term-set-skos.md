@@ -9,14 +9,15 @@ ms.prod: microsoft-365-enterprise
 ms.topic: article
 ms.service: ''
 ms.collection: enabler-strategic
+ms.custom: admindeeplinkSPO
 search.appverid: ''
 ms.localizationpriority: high
-ms.openlocfilehash: 6f472754484d7bb41485b94d65689009d2c615fd
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: c7a23b8da32f5ae9132a41661a1141f34df48a6b
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985157"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63318207"
 ---
 # <a name="import-a-term-set-using-a-skos-based-format"></a>SKOS tabanlı bir biçim kullanarak terim kümesi içeri aktarma
 
@@ -24,7 +25,7 @@ Terim kümelerini SKOS tabanlı bir biçim kullanarak içeri aktarabilirsiniz. B
 
 İçeri aktarma dosyalarınızı 20.000'den az terimle tutmanızı öneririz. Daha büyük dosyaların geçerlilik ve içeri aktarma için alınma süresi artabilir.
 
-1. Yönetim merkezinde SharePoint **hizmetleri'ni genişletin ve Terim** **deposu'ne tıklayın**.
+1. Yönetim merkezinde SharePoint **hizmetleri'ni genişletin ve Terim** <a href="https://go.microsoft.com/fwlink/?linkid=2185073" target="_blank">**deposu'ni seçin**</a>.
 
 2. Terim grubunu seçin ve terim grubunu içeri aktarın.
 

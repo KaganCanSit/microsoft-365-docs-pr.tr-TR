@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-may2020
 - seo-marvel-jun2020
 description: Normalde, kayıt yönetimi çözümünün bir parçası olarak, tanım olası bir olayla bekletme dönemini başlatmak için bir bekletme etiketi yapılandırabilirsiniz.
-ms.openlocfilehash: c4195f7e5a859cf5a1078566728be5b8567cf5b9
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: ad5fb2ef567525fa021acb0388ebc5cc98b1148c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016528"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313307"
 ---
 # <a name="start-retention-when-an-event-occurs"></a>Bir olay oluştuğunda bekletmeyi başlatma
 
@@ -120,7 +120,7 @@ Bekletme ayarlarını **tanımla sayfasına geri** dönerek, Bekletme dönemini 
 ### <a name="step-3-publish-or-auto-apply-the-event-based-retention-labels"></a>3. Adım: Olay tabanlı bekletme etiketlerini yayımlama veya otomatik olarak uygulama
 
 Aynı herhangi bir bekletme etiketi gibi, el ile veya otomatik olarak içeriğe uygulanması için olay tabanlı bir etiketi yayımlamanız veya otomatik olarak uygulamanız gerekir:
-- [Bekletme etiketleri oluşturma ve bunları uygulamalarda uygulama](create-apply-retention-labels.md)
+- [Bekletme etiketlerini yayımlama ve uygulamalarda uygulama](create-apply-retention-labels.md)
 - [İçeriği otomatik olarak bekletme etiketi uygulama](apply-retention-labels-automatically.md)
 
 ### <a name="step-4-enter-an-asset-id"></a>4. Adım: Varlık kimliği girme

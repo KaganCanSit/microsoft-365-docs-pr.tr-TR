@@ -1,8 +1,8 @@
 ---
 title: E-posta için önerilen güvenli e-posta ilkeleri - Microsoft 365 kurumsal e-posta | Microsoft Docs
 description: Microsoft'un e-posta ilkelerinin ve yapılandırmalarının nasıl uygulanacakları konusunda önerilerine yönelik ilkeleri açıklar.
-ms.author: josephd
-author: JoeDavies-MSFT
+ms.author: dansimp
+author: dansimp
 manager: Laurawi
 ms.prod: m365-security
 ms.topic: article
@@ -20,12 +20,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 5f60816754dd90699a211a8f75baf448ba490924
-ms.sourcegitcommit: aac7e002ec6e10a41baa2d0bd38614b0ed471a70
+ms.openlocfilehash: b708d7aa993bdcd74b6fe00f633e3f7933ff04b8
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63010004"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63321747"
 ---
 # <a name="policy-recommendations-for-securing-email"></a>E-postanın güvenliğini sağlamak için ilke önerileri
 

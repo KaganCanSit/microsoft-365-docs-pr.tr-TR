@@ -17,17 +17,16 @@ ms.custom:
 - intro-get-started
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP)'ler için, hizmet sağlayıcılarına nasıl Microsoft 365 Lighthouse.
-ms.openlocfilehash: 7eceb0ee205e7de99a7943ba05e6c07f66bd491e
-ms.sourcegitcommit: 36a19d80fe3f053df0fec398a7ff2dfc777f9730
+ms.openlocfilehash: 2607a131908a06ec4b7072cbf718739e1db00ad7
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/30/2021
-ms.locfileid: "63021417"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326965"
 ---
 # <a name="sign-up-for-microsoft-365-lighthouse"></a>Oturum açma için Microsoft 365 Lighthouse
 
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse kaydolmak için bu makaledeki yönergeleri izleyin.
+Bu makalede, iş için kaydolma yönergeleri Microsoft 365 Lighthouse. Microsoft 365 Lighthouse, Küçük ve orta ölçekli işletme (SMB) müşterileri için Yönetilen Hizmet Sağlayıcılarının (MSP) cihazları, verileri ve kullanıcıları küçük ve orta ölçekli işletme (SMB) müşterileri için güvenli ve yönetmeye yardımcı olan bir Microsoft 365 İş Ekstra Microsoft 365 E3. 
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -37,7 +36,7 @@ ms.locfileid: "63021417"
 
 ## <a name="steps-to-sign-up-for-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse'a kaydolma adımları
 
-1. oturum açma Microsoft 365 yönetim merkezi iş <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> ortağı kiracı kimlik bilgilerinizi kullanarak oturum açma. 
+1. oturum açma Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> iş ortağı kiracı kimlik bilgilerinizi kullanarak oturum açma. 
 
 1. **BillingPurchase** >  **ServicesOther** >  **Services'a gidin**.
 
@@ -45,7 +44,7 @@ ms.locfileid: "63021417"
 
     Hizmetleri satın alma hata sayfasıyla karşılaşırsanız, sayfanın **alt** kısmında Ürünleri görüntüle'yi seçin.
 
-1. İş **Ortakları Microsoft 365 Lighthouse Önizleme altında Ayrıntılar'ı** **seçin**. 
+1. **Seçenekler'Microsoft 365 Lighthouse** Ayrıntılar'ı **seçin**. 
 
 1. Satın **Al'ı seçin**.
 

@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: eb926624-018b-4486-bf11-5fba6ee4d645
 description: İş için Microsoft'a taşımanın gereksinimleri ve dikkate Microsoft 365 öğrenin.
-ms.openlocfilehash: 831b8c20363e8c8d2339fe05edcd949ffc8c2cbb
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+ms.openlocfilehash: 1012e854d514212ae3c5c970347255936ea94f1a
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63014408"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312733"
 ---
 # <a name="plan-your-setup-of-microsoft-365-for-business"></a>Microsoft 365 Kurumsal kurulumlarınızı planlama
 
@@ -146,3 +146,7 @@ Daha büyük kuruluşlar için veya Skype Kurumsal, şirket içi veya karma dağ
   - **Bir [Microsoft iş ortağıyla](https://go.microsoft.com/fwlink/?linkid=391089)** çalışmayı düşünün. Zaman eksikse veya ileri düzey gereksinimleri varsa (binlerce dosyanın buluta Microsoft 365 başka yazılımlarla entegre olması gibi) deneyimli bir iş ortağının büyük yardımı olabilir. 
 
 - **50'den daha fazla çalışanınız varsa** dağıtımınıza yardımcı olmak üzere [FastTrack Ekleme Merkezi](https://go.microsoft.com/fwlink/?LinkId=517115)'ni kullanabilirsiniz.
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](../security-and-compliance/secure-your-business-data.md)

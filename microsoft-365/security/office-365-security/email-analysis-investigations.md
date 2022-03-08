@@ -2,8 +2,8 @@
 title: Office 365 için Microsoft Defender ile ilgili araştırmalarda e-posta Office 365
 f1.keywords:
 - NOCSH
-author: JoeDavies-MSFT
-ms.author: josephd
+author: dansimp
+ms.author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: article
@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-mar2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 93855320f21d537fdd03e81424b6105575f37485
-ms.sourcegitcommit: 07405a81513d1c63071a128b9d5070d3a3bfe1cd
+ms.openlocfilehash: 5737a2d1974805dc55b85b7ff8f4117cbc1da898
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63006788"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63318193"
 ---
 # <a name="email-analysis-in-investigations-for-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender ile ilgili araştırmalarda e-posta Office 365
 

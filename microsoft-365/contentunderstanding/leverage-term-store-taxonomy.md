@@ -11,14 +11,15 @@ search.appverid: ''
 ms.collection:
 - enabler-strategic
 - m365initiative-syntex
+ms.custom: admindeeplinkSPO
 ms.localizationpriority: medium
 description: Microsoft web sitesinde belgenizin anlama modelinde bir ayıklaıcı oluştururken terim deposu taksonomisini SharePoint Syntex.
-ms.openlocfilehash: dd064a1e93692f79b5cfc5417b0b5b09df09c9fd
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 909f26026ddf26163a12e1d14c1790f4af93a160
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62986726"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63328813"
 ---
 # <a name="leverage-term-store-taxonomy-when-creating-an-extractor-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'ta bir ayıklaıcı oluştururken terim deposu taksonomisini SharePoint Syntex
 
@@ -36,7 +37,7 @@ SharePoint Syntex kullanarak belgenizin anlama modelinde bir ayıklaıcı ekleye
 
 ## <a name="use-a-managed-metadata-column-in-your-extractor"></a>Ayıklaıcıda Yönetilen meta veri sütunu kullanma
 
-Terim kümeleri, yönetim merkezinin Yönetilen Meta Veri hizmetleri (MMS) terim SharePoint yapılandırılır. Aşağıdaki örnekte, Sözleşme *Hizmetleri* [terim kümesi](/sharepoint/managed-metadata#term-set) Creative gibi çeşitli terimleri içerecek şekilde *yapılandırılmıştır*.  Terimin üç eş anlamlısı *(Tasarım**, Grafik* ve *Topografi*) olduğunu ve eş anlamlıların Yaratıcı olarak çevril olması gerektiğini *ayrıntılarıyla gösterir*. 
+Terim kümeleri, yönetim merkezinin Yönetilen Meta Veri hizmetleri (MMS) <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">terim SharePoint yapılandırılır</a>. Aşağıdaki örnekte, Sözleşme *Hizmetleri* [terim kümesi](/sharepoint/managed-metadata#term-set) Creative gibi çeşitli terimleri içerecek şekilde *yapılandırılmıştır*.  Terimin üç eş anlamlısı *(Tasarım**, Grafik* ve *Topografi*) olduğunu ve eş anlamlıların Yaratıcı olarak çevril olması gerektiğini *ayrıntılarıyla gösterir*. 
 
    ![Terim kümesi.](../media/content-understanding/term-store.png)</br>
 

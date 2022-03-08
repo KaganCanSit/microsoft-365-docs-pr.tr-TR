@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 1f096433534abb91b9cb14b8db2737dacf566624
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 50b30d38a42aab37c295a9f65bd070dd9613927c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62997513"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312689"
 ---
 # <a name="vulnerable-devices-report---threat-and-vulnerability-management"></a>Korumasız cihazlar raporu - Tehdit ve Güvenlik Açığı Yönetimi
 
@@ -76,7 +76,7 @@ Her işletim sisteminde, yazılım güvenlik açıkları nedeniyle ortaya çıka
 
 Her bir sürümde, Windows 10 veya Windows 11 sürümüne sahip olan ve korumasız uygulamalar veya işletim sistemi nedeniyle açığa çıkaran cihaz sayısı.
 
-![Aynı sürüme göre geçerli korumasız cihazların bir Windows 10 ve zaman içinde aynı sürüme göre zayıf Windows 10 gösteren bir grafik.](images/tvm-report-version.png)lightbox="images/tvm-report-version.png"::
+:::image type="content" alt-text="Aynı sürüme göre geçerli korumasız cihazların bir Windows 10 ve zaman içinde aynı sürüme göre zayıf Windows 10 gösteren bir grafik." source="images/tvm-report-version.png" lightbox="images/tvm-report-version.png":::
 
 ## <a name="related-topics"></a>İlgili konular
 

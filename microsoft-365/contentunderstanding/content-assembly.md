@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Microsoft Web Sitesinde içerik derlemesi kullanarak belgeleri ve diğer içerikleri otomatik olarak SharePoint Syntex.
-ms.openlocfilehash: 9f8a02a845afa93282158051eb746e0cb9a0171d
-ms.sourcegitcommit: 39838c1a77d4e23df56af74059fb95970223f718
+ms.openlocfilehash: f2e8c601e8a7242524cb323d099975f6600cce05
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63010763"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63318893"
 ---
 # <a name="create-documents-using-content-assembly-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'ta içerik derlemesi kullanarak belgeler oluşturma
 
@@ -150,7 +150,7 @@ Sıfırdan başlamak *zorunda kalmadan* hızlıca benzer belgeler oluşturmak i�
       - Aynı listeyle ilişkilendirilmiş yer tutucuların kaydını benzersiz olarak tanımlayabilecekse, yer tutucu değerlerini otomatik doldurma.
 
 > [!NOTE]
-> - Şu anda şablon Microsoft Word yalnızca .docx belge (uzantı) desteği vardır. Belgeyi karşıya yüklemeden önce, Word belgesinde Değişiklikleri izle'nin veya **açıklamalar özelliği etkinleştirilmemiş** olduğundan emin olun. Belgeniz, resimler için metin yer tutucuları içeriyorsa, metnin kaydırılmış olduğundan emin olur.
+> - Şu anda şablon Microsoft Word yalnızca .docx belge (uzantı) desteği vardır. Belgeyi karşıya yüklemeden önce, Word belgesinde Değişiklikleri izle'nin veya **açıklamalar özelliği etkinleştirilmemiş** olduğundan emin olun. Belgeniz, resimler için metin yer tutucuları içeriyorsa, metnin kaydırılmış olduğundan emin olur. Şu anda **Word'de İçerik** Denetimlerini desteklemez. İçerik denetimlerinin olduğu bir Word belgesinde şablon oluşturmak için, lütfen modern bir şablon oluşturmadan önce bu şablonları kaldırın.
 >- Şablon ve belge tek bir belge kitaplığıyla ilişkilendirildi. Şablonu başka bir belge kitaplığında kullanmak için, şablonu o belge kitaplığında yeniden oluşturmanız gerekir.
 >- Modern şablonu oluşturmak için kullanılan karşıya yüklenen belge ayrı bir kopya olarak kaydedilir ve belge kitaplığının /forms dizinine yerleştirilir. Diskte özgün dosya etkilenmez.
 >- Yalnızca metin için yer tutucular oluşturabilirsiniz. Şu anda resimler, akıllı resimler, tablolar ve madde işareti listeleri desteklenemİ değildir.

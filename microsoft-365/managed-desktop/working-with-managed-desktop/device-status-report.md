@@ -9,12 +9,12 @@ ms.collection: M365-modern-desktop
 ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: 14c83d007d2506e0e85c156f4d738f78f91fad75
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: be685d39bbda3b96f689c13a3bc3485c011f1ec8
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63010159"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63319887"
 ---
 # <a name="device-status-report"></a>Cihaz durumu raporu
 
@@ -42,4 +42,4 @@ Cihaz durumunu aşağıdaki etiketleri kullanarak bildirebilirsiniz:
 | Etkin | Kullanılan cihazlar. <ul><li>En son güvenlik güncelleştirmesi sürümü için etkinlik ölçütlerine (altı saat, iki sürekli) karşılaştılar.</li> <li>Son beş günde en Microsoft Intune bir kez iade ettik.</li></ul> |
 | Eşitlendi | Son 28 gün içinde kullanılan ve Intune ile iade yapılan cihazlar.
 | Eşit değil | Son 28 gündür Intune ile birlikte kullanılmaya devam ediyor ancak iade ettirilen cihazlar. |
-| Diğer | Etiket, genellikle cihaz kaydı sırasında meydana gelen çeşitli hata durumlarını bir araya döndürür. Daha fazla bilgi için bkz. [Cihaz kaydı sorunlarını giderme](../get-started/register-devices-self.md#troubleshooting-device-registration). |
+| Diğer | Etiket, genellikle cihaz kaydı sırasında meydana gelen çeşitli hata durumlarını bir araya döndürür. Daha fazla bilgi için bkz. [Cihaz kaydı sorunlarını giderme](../get-started/manual-registration.md#troubleshooting-device-registration). |

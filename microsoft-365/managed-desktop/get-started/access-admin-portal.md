@@ -10,16 +10,16 @@ audience: ITPro
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 manager: dougeby
-ms.openlocfilehash: 89170c4479af29e9a4b3f46fa3b44ae2fcfa5500
-ms.sourcegitcommit: d4797cfc15c732f1a7ef21e4f944e672a7170f9a
+ms.openlocfilehash: aee590f7479119ee7e8679b1048a691f156ccc77
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62973882"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315085"
 ---
 # <a name="access-the-admin-portal"></a>Yönetici portalına erişme
 
-Microsoft Yönetilen Masaüstü hizmetine ağ geçidiniz [Microsoft Endpoint Manager](https://endpoint.microsoft.com/). Cihaz yönetimi için bu portalın özelliklerini biliyorsanız, aşağıdaki Microsoft Endpoint Manager [bakın](/mem/).
+Microsoft Yönetilen Masaüstü hizmetine ağ geçidiniz [Microsoft Endpoint Manager](https://endpoint.microsoft.com/). Cihaz yönetimi için bu portalın özelliklerine yabancısanız, aşağıdaki Microsoft Endpoint Manager [bakın](/mem/).
 
 > [!NOTE]
 > [Microsoft Endpoint Manager](https://endpoint.microsoft.com/) tarayıcılar desteklenir:
@@ -28,13 +28,13 @@ Microsoft Yönetilen Masaüstü hizmetine ağ geçidiniz [Microsoft Endpoint Man
 > - Chrome (en son sürüm)
 > - Firefox (en son sürüm)
 
-Microsoft Yönetilen Masaüstü yönetim özelliklerine erişmek için, yönetim hesabınız için belirli izinler Microsoft Endpoint Manager.
+Yönetim hesabınız, Microsoft Yönetilen Masaüstü yönetim özelliklerine erişmek için belirli izinlere Microsoft Endpoint Manager.
 
 Rol tabanlı erişim denetimi kullanarak, kuruluş içinde bu özelliklere yönetici erişimini yönetsiniz. Microsoft Azure Active Directory Yönetim portalı içinde farklı özelliklere daha ayrıntılı denetim sağlamak için çeşitli yönetici rolleri (Azure AD) ve yerleşik Microsoft Yönetilen Masaüstü rolleri kullanılabilir. Bu roller hakkında daha Azure Active Directory için bkz. [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
 
 Çeşitli Microsoft ürünleri ve hizmetleri için geçerli olan Azure AD yönetici rollerinden farklı olarak, yerleşik roller Microsoft Yönetilen Masaüstü'ne özeldir ve yalnızca bu hizmetin Yönetici özelliklerine erişimi garanti altına alır. Yöneticiler, var olan yönetici hesaplarına Microsoft Yönetilen Masaüstü izinlerini eklemek için kullanıcılara tek tek veya Azure AD yönetici rolleri ile birlikte yerleşik roller atayabilirsiniz.
 
-## <a name="azure-active-directory-roles-with-microsoft-managed-desktop-access"></a>Azure Active Directory Yönetilen Masaüstü erişimiyle daha fazla rol
+## <a name="azure-active-directory-roles-with-microsoft-managed-desktop-access"></a>Azure Active Directory Microsoft Yönetilen Masaüstü erişimi ile daha fazla rol
 
 | Azure AD rolü | Microsoft Yönetilen Masaüstü izinleri |
 | ----- | ----- |
@@ -48,7 +48,7 @@ Rol tabanlı erişim denetimi kullanarak, kuruluş içinde bu özelliklere yöne
 Yönetici rollerini atamayla ilgili Azure Active Directory için [bkz. Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
 
 > [!IMPORTANT]
-> Yalnızca Genel Yönetici rolünün, kurumlarınızı Microsoft Yönetilen *Masaüstü'ne* kaydetmek için gerekli izinleri vardır. Farklı rollere Azure Active Directory, kullanıcı hesaplarına çeşitli kullanıcılar için ayrıcalıklar ve Microsoft hizmetleri. Microsoft Yönetilen Masaüstü ile kaydı tamamladıktan sonra, bu rolü her zaman diğer görevlerinizi tamamlamak için *gereken* en az ayrıcalıkla kullan olmanız gerekir.
+> Yalnızca Genel Yönetici rolünün, kurumlarınızı Microsoft Yönetilen *Masaüstü'ne* kaydetmek için gerekli izinleri vardır. Farklı rollere Azure Active Directory, kullanıcı hesaplarına çeşitli kullanıcılar için ayrıcalıklar Microsoft hizmetleri. Microsoft Yönetilen Masaüstü ile kaydı tamamladıktan sonra, bu rolü her zaman diğer görevlerinizi tamamlamak için *gereken* en az ayrıcalıkla kullan olmanız gerekir.
 
 ## <a name="built-in-roles-provided-by-microsoft-managed-desktop"></a>Microsoft Yönetilen Masaüstü tarafından sağlanan yerleşik roller
 
@@ -70,7 +70,7 @@ Yerleşik rollerin kolay yönetimi için, her özel rol için "Modern Çalışma
 
 **Kullanıcıları şu güvenlik gruplarından birini atamak için:**
 
-1. Portala Microsoft Endpoint Manager gidin.
+1. Microsoft Endpoint Manager gidin.
 2. Sol bölmede Gruplar'ı **seçin**.
 3. Modern **Çalışma Alanı Rollerini** arayın ve atamak istediğiniz rolle ilişkilendirilmiş grubu seçin.
 4. Sol **tarafta** Üyeler'i seçin ve ardından komut çubuğunda **+ Üye** ekle'yi seçin.
@@ -84,8 +84,8 @@ Yerleşik rollerin kolay yönetimi için, her özel rol için "Modern Çalışma
 
 **Var olan bir gruba yerleşik rollerden birini veya birden fazlasını atamak için:**
 
-1. [Devam'a portal.azure.com](https://portal.azure.com/).
-2. Diğer uygulamaları **arayın Enterprise açın**.
+1. Devam etmek [için portal.azure.com](https://portal.azure.com/).
+2. Enterprise **uygulamaları arayın Enterprise açın**.
 3. Uygulama türü **filtresini** Microsoft Uygulamaları olarak _değiştirerek_ Uygula'ya **tıklayın**.
 4. Modern Çalışma Alanı Müşteri _API'lerini arayın ve seçin_.
 5. Sol **tarafta bölmeden** Kullanıcılar ve gruplar'ı seçin ve ardından + Kullanıcı/ **grup ekle'yi seçin**.
@@ -98,10 +98,10 @@ Yerleşik rollerin kolay yönetimi için, her özel rol için "Modern Çalışma
 1. Access yönetici portalı (bu makale).
 1. [Yönetici portalında yönetici kişilerini ekleyin ve doğrulayın](add-admin-contacts.md).
 1. [Kayıt sonrasında ayarları ayarlayın](conditional-access.md).
-1. Diğer uygulamaları dağıtın [ve Intune Şirket Portalı](company-portal.md).
+1. Dağıtım ve [Intune Şirket Portalı](company-portal.md).
 1. [Lisans atama](assign-licenses.md).
 1. [Uygulamaları dağıtın](deploy-apps.md).
-1. [Cihazları ayarlayın](set-up-devices.md).
+1. [Cihazları hazırlayın](prepare-devices.md).
 1. [AutoPilot ve Kayıt Durumu Sayfası ile ilk çalıştırma deneyimini ayarlayın](esp-first-run.md).
 1. [Kullanıcı desteği özelliklerini etkinleştirin](enable-support.md).
 1. [Kullanıcılarınızı cihazları kullanmaya hazır hale hazırlayın](get-started-devices.md).

@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: ee2aadd844eebf6da436c1d6d02b6244f093bfd6
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: d9f1b4619670c1998dbac584bf7ef4e1d1f940b6
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63014176"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63314231"
 ---
 # <a name="assess-your-security-posture-with-microsoft-secure-score"></a>Microsoft Güvenli Puanı ile güvenlik nedenlerinizi değerlendirin
 
@@ -97,7 +97,7 @@ Herhangi bir durumu seçin ve iyileştirme işlemiyle ilgili notları kaydedin.
 
 #### <a name="threat--vulnerability-management-improvement-actions"></a>Tehdit & güvenlik açığı yönetimi geliştirme eylemleri
 
-"Cihaz" kategorisindeki geliştirme eylemleri için durumları seçesiniz. Bunun yerine, işlem yapmak için ilgili [güvenlik Tehdit ve Güvenlik Açığı Yönetimi ilgili güvenlik](/windows/security/threat-protection/microsoft-defender-atp/tvm-security-recommendation) [Microsoft Defender Güvenlik Merkezi](/windows/security/threat-protection/microsoft-defender-atp/use) yönlendirildiniz. Seçtiğiniz özel durum ve gerekçelendirme, bu portala özeldir. Microsoft Güvenli Puanı portalında sunumz.
+"Cihaz" kategorisindeki geliştirme eylemleri için durumları seçesiniz. Bunun yerine, işlem yapmak için gereken güvenlik [Tehdit ve Güvenlik Açığı Yönetimi ilgili güvenlik](/windows/security/threat-protection/microsoft-defender-atp/tvm-security-recommendation) Microsoft 365 Defender yönlendirildiniz. Seçtiğiniz özel durum ve gerekçelendirme, bu portala özeldir. Microsoft Güvenli Puanı portalında sunumz.
 
 #### <a name="completed-improvement-actions"></a>Tamamlanmış geliştirme eylemleri
 

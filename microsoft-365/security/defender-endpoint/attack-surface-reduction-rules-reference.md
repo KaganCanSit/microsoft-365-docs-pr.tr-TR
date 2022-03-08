@@ -17,12 +17,12 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: f6672bfe090458de9ffecae77b656b6f4a8a912d
-ms.sourcegitcommit: 559df2c86a7822463ce0597140537bab260c746a
+ms.openlocfilehash: 5ffbe15fe9fa06e7c06546f9452d6c4f2bddfc39
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "63015306"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63329621"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Saldırı yüzeyini azaltma kuralları başvurusu
 
@@ -62,7 +62,7 @@ Aşağıdaki tabloda, şu anda ön kullanım öncesi olarak satışa devam eden 
 |[E-posta istemcisi ve web postası yürütülebilir içeriğini engelleme](#block-executable-content-from-email-client-and-webmail) | E | E |
 |[Yürütülebilir dosyaların yaygın bir yaş veya güvenilir liste ölçütüne uygun olmadıkça çalıştırmalarını engelleme](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion) | E | E |
 |[Kapatılaabilecek betikleri yürütmeyi engelleme](#block-execution-of-potentially-obfuscated-scripts) | E | E |
-|[JavaScript veya VBScript'in indirilen yürütülebilir içeriği başlatmalarını engelleme](#block-javascript-or-vbscript-from-launching-downloaded-executable-content) | E | N |
+|[JavaScript veya VBScript'in indirilen yürütülebilir içeriği başlatmalarını engelleme](#block-javascript-or-vbscript-from-launching-downloaded-executable-content) | N | N |
 |[Yürütülebilir Office yürütülebilir içerik oluşturmalarını engelleme](#block-office-applications-from-creating-executable-content) | E | E |
 |[Diğer Office başka işlemlere kod eklemelerini engelleme](#block-office-applications-from-injecting-code-into-other-processes)  | E | E |
 |[Alt Office, iletişim uygulamasının oluşturulmasını engelleme](#block-office-communication-application-from-creating-child-processes) | E | E |

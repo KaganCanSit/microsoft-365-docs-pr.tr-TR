@@ -16,12 +16,12 @@ ms.collection:
 description: Yöneticiler, güvenlik portalında Kiracı İzin Ver/Engelleme Listesi'ni nasıl yapılandıracaklarını öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: cb4bdef35928a3a2672c6897676d3c90932bd7ec
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+ms.openlocfilehash: 4cca466ce4862cc93ec7521bf6bd00fe960f06a9
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63010875"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63317437"
 ---
 # <a name="add-blocks-in-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelle Listesine blok ekleme
 
@@ -104,7 +104,7 @@ ms.locfileid: "63010875"
 - Yalnızca _kimlik_ doğrulanmamış kullanıcının ve etki alanı çifti  içinde tanımlandığı üzere gönderme altyapısının birleşimine özel olarak kimlik doğrulama izni verilir veya bu altyapı engellenir.
 - Bir etki alanı çifti için bir izin verme veya engelleme girdisi yapılandırıldığında, bu etki alanı çiftinin iletileri artık kimlik bilgileri bilgisinde görünmez.
 - Kimliği doğru gönderenlerin girdilerinin süresi hiçbir zaman dolmaz.
-- Poof, hem izin verme hem de engellemeyi destekler. URL yalnızca izin ver'i destekler.
+- Poof, hem izin verme hem de engellemeyi destekler.
 
 1. Microsoft 365 Defender portalında, İlkeler ve kurallar **& Kuralları** \> **Tehdit** \> **İlkeleri** bölümü Kiracı İzin \> Verme **/Engelleme Listeleri'ne gidin**.
 

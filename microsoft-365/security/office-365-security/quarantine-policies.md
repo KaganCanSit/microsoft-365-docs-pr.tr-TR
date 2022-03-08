@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, kullanıcıların karantinaya alınmış iletilerde neler yapasını denetlemek için karantina ilkelerini kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 9e5efbedc4ea2f53e1a612ba4ccab74433314508
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: 8f015951fec4ea8fb9d433c8b48ccb26cd9e1222
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016527"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63321299"
 ---
 # <a name="quarantine-policies"></a>Karantina ilkeleri
 
@@ -199,7 +199,7 @@ Bu örnek, önceki tabloda açıklandığı gibi Sınırlı erişim izinlerini a
 New-QuarantinePolicy -Name LimitedAccess -EndUserQuarantinePermissionsValue 27 -EsnEnabled $true
 ```
 
-Özel izinler için, istediğiniz izinlere karşılık gelen ikili değeri almak için önceki tabloyu kullanın. İkili değeri ondalık değere dönüştürin ve _EndUserQuarantinePermissionsValue parametresi için ondalık değeri_ kullanın.
+Özel izinler için, istediğiniz izinlere karşılık gelen ikili değeri almak için önceki tabloyu kullanın. İkili değeri ondalık değere dönüştürin ve _EndUserQuarantinePermissionsValue parametresi için ondalık değeri_ kullanın. Parametre değeri için ikili değeri kullanmayın.
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. New-QuarantinePolicy](/powershell/module/exchange/new-quarantinepolicy).
 

@@ -2,8 +2,8 @@
 title: DNS kayıtlarınızı yönetirken Office 365 IÇIN DNS kayıtları oluşturma
 f1.keywords:
 - CSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -21,12 +21,12 @@ ms.assetid: 0669bf14-414d-4f51-8231-6b710ce7980b
 ROBOTS: NOINDEX
 description: 'DNS kayıtlarınızı yönetirken 21Vianet tarafından Office 365 DNS kayıtları oluşturma hakkında bilgi öğrenin. '
 monikerRange: o365-21vianet
-ms.openlocfilehash: 0b84926dbedf90752c994e76695c2d18d92fb9c4
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: b1254ed341fb73f17f457798f14d01d89063f920
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985012"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313462"
 ---
 # <a name="create-dns-records-for-office-365-when-you-manage-your-dns-records"></a>DNS kayıtlarınızı yönetirken Office 365 IÇIN DNS kayıtları oluşturma
 

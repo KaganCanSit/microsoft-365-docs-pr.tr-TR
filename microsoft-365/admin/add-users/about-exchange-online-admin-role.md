@@ -2,8 +2,8 @@
 title: En Exchange Online rolü hakkında
 f1.keywords:
 - NOCSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: overview
@@ -22,20 +22,20 @@ search.appverid:
 - GEA150
 ms.assetid: 097ae285-c4af-4319-9770-e2559d66e4c8
 description: Exchange-posta kutularını çevrimiçi yöneticiler yönetir. Örneğin, kullanıcının posta kutusunda silinmiş öğeleri kurtarabilirsiniz.
-ms.openlocfilehash: f889b2c482734518d1a73802c3422c13bc5c4a59
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+ms.openlocfilehash: f046d9d85c677d0793d2b991736185b49f4174e9
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "62973868"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315337"
 ---
 # <a name="about-the-exchange-online-admin-role"></a>En Exchange Online rolü hakkında
 
-E-posta Microsoft 365 yardımcı olmak için kullanıcılara, [](assign-admin-roles.md) yönetim merkezinden kurum e-postalarını ve posta <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">kutularını yönetme Exchange atabilirsiniz</a>. Bunu yapmak için kullanıcıları en iyi yönetici rolüne Exchange gerekir.
+E-posta Microsoft 365 yardımcı olmak için kullanıcılara, yönetim [](assign-admin-roles.md) merkezinden kurum e-postalarını ve posta kutularını <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">yönetme Exchange atabilirsiniz</a>. Bunu, kullanıcıya en son yönetici rolü Exchange gerekir.
   
- **İpucu**: Birisini yönetici rolüne Exchange, hizmet yöneticisi rolüne de attayabilirsiniz. Bu şekilde, web hizmet Microsoft 365 yönetim merkezi durumu, değişiklik Exchange Online bildirimleri gibi önemli bilgileri görebilirler.
+ **İpucu**: Birisini yönetici rolüne Exchange, hizmet yöneticisi rolüne de attayabilirsiniz. Bu şekilde, web hizmet Microsoft 365 yönetim merkezi durumu, değişiklik Exchange Online sürüm bildirimleri gibi önemli bilgileri görebilirler.
 
-Kullanıcıların şu önemli görevlerden bazıları yönetici rolüne Exchange:
+Kullanıcıların bir yönetici rolüne atanmalarının bazı önemli görevleri Exchange vardır:
   
 - [Recover deleted items in a user mailbox - Admin Help](/Exchange/recipients-in-exchange-online/manage-user-mailboxes/recover-deleted-messages)
 
@@ -51,17 +51,17 @@ Kullanıcıların şu önemli görevlerden bazıları yönetici rolüne Exchange
 
 - Grup Microsoft 365 yönetme
 
-## <a name="exchange-online-role-groups"></a>Exchange Online grupları
+## <a name="exchange-online-role-groups"></a>Exchange Online gruplarının sonları
 
 Büyük bir organizasyonuz varsa, Exchange yöneticisi kullanıcı atamayı ve bu rol Exchange olabilir. Yönetici bir rol grubuna kullanıcı eklese, kullanıcıya belirli iş işlevlerini gerçekleştirme izinleri olur; yalnızca bu grubun üyeleri bunu yapar.
   
- Örneğin, Exchange yöneticisi, belirli ölçütlere uyan veriler için posta kutularında arama gerçekleştirecek olan birisini Bulma Yönetimi rol grubuna ata olabilir. Daha fazla bilgi edinmek için Rol [Gruplarını Yönetme Exchange Online](/exchange/permissions-exo/permissions-exo) [İzinler'e bakın](/exchange/manage-role-groups-exchange-2013-help).
+ Örneğin, Exchange yöneticisi, belirli ölçütlere uyan veriler için posta kutularında arama gerçekleştirecek olan birisini Bulma Yönetimi rol grubuna ata olabilir. Daha fazla bilgi edinmek için Rol [Gruplarını Yönetme Exchange Online](/exchange/permissions-exo/permissions-exo) [ve İzinler'e bakın](/exchange/manage-role-groups-exchange-2013-help).
   
 ## <a name="learn-about-other-admin-roles"></a>Diğer yönetici rolleri hakkında bilgi
 
 - [Yönetici Microsoft 365 hakkında](about-admin-roles.md)
 
-- [En SharePoint Online yönetici rolü hakkında](/sharepoint/sharepoint-admin-role)
+- [SharePoint Online yönetici rolü hakkında](/sharepoint/sharepoint-admin-role)
 
 - [En Skype Kurumsal rolü hakkında](/skypeforbusiness/skype-for-business-online)
 

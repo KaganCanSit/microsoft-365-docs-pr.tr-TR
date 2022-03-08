@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
 description: Dosya planı, bekletme etiketleri için gelişmiş yönetim özellikleri sağlar.
 ms.custom: seo-marvel-may2020
-ms.openlocfilehash: 464cbe5af7ea08755ec3d49949d4707448566b27
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+ms.openlocfilehash: 2e028bae676b949c662a86178bac5e8ccdc557bf
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63010840"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63317717"
 ---
 # <a name="use-file-plan-to-create-and-manage-retention-labels"></a>Bekletme etiketlerini oluşturmak ve yönetmek için dosya planını kullanma
 
@@ -117,9 +117,9 @@ Bu **isteğe bağlı** tanımlayıcıların her biri için Seç'i seçerseniz, i
 
 1. Dosya planı **sayfasında +** Etiket **oluşturRetention etiketi'ne tıklayın**  > 
 
-2. Yapılandırma işleminin yönergelerini izleyin.
+2. Yapılandırma işleminin yönergelerini izleyin. Hangi adı seçtiğinize dikkat edin, çünkü etiket kaydedildikten sonra bu değiştirilemez.
     
-    
+    Bekletme ayarları hakkında daha fazla bilgi için bkz[. Ayarlar saklama ve silme hakkında daha fazla bilgi.](retention-settings.md#settings-for-retaining-and-deleting-content)
     
     Kayıtları beyan etmek üzere bekletme etiketini kullanmak için **Öğeleri kayıt olarak** işaretle veya Öğeleri mevzuat kaydı **olarak işaretle'yi seçin**. Daha fazla bilgi için bkz [. Bekletme etiketlerini kayıtları bildir olacak şekilde yapılandırma](declare-records.md#configuring-retention-labels-to-declare-records).
 
@@ -129,7 +129,7 @@ Bu **isteğe bağlı** tanımlayıcıların her biri için Seç'i seçerseniz, i
 
 ## <a name="edit-retention-labels"></a>Bekletme etiketlerini düzenleme
 
-Mevcut bir bekletme etiketini düzenlemek için, Dosya Planı sayfasından  etiketi seçin ve ardından Etiket açıklamasını ve uygun  ayarları değiştirmenizi sağlayan Bekletmeyi düzenle işlemini başlatmak için Etiketi düzenle seçeneğini belirleyin.
+Mevcut bir bekletme etiketini düzenlemek için, Dosya Planı sayfasından  etiketi seçin ve ardından Etiket açıklamasını ve uygun  ayarları değiştirmenizi sağlayan bekletmeyi düzenleme işlemini başlatmak için Etiketi düzenle seçeneğini belirleyin.
 
 Etiket oluşturulduktan ve kaydedildikten sonra bazı ayarlar değiştirilemez. Bu ayarlar şunlardır:
 - Bekletme süresi dışında bekletme etiketi adı ve bekletme ayarları. Bununla birlikte, bekletme süresi öğelerin etiketli olduğu zamanların dayandır olduğu bekletme dönemini değiştiremezsiniz.

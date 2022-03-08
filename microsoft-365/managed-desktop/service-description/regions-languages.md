@@ -12,24 +12,24 @@ ms.collection: M365-modern-desktop
 manager: dougeby
 ms.topic: article
 audience: Admin
-ms.openlocfilehash: 83ba5e60d77cd4b68834efeceb4572639348d122
-ms.sourcegitcommit: a6651b841f111ea2776cab88bf2c80f805fa8e09
+ms.openlocfilehash: 65517399425fa71b2d4123da6103f9f15784db38
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "63027289"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63327245"
 ---
 # <a name="microsoft-managed-desktop-supported-regions"></a>Microsoft Yönetilen Masaüstü desteklenen bölgeler
 
-Bu makalede, Microsoft Yönetilen Masaüstü'nü kullanabileceğiniz bölgeler ve desteklenen bölgeler hakkında ayrıntılar yer sağlar. Kullanıcı deneyimi için Microsoft Yönetilen Masaüstü tarafından desteklenen diller hakkında daha fazla bilgi için bkz. [Kullanıcılar için cihazları yerelleştirme](../get-started/localization.md).
+Bu makalede hangi bölgelerin Microsoft Yönetilen Masaüstü'nü desteklemesi hakkında ayrıntılar ve bilgi sağlar.
 
-Microsoft Yönetilen Masaüstü hizmetine kesintisiz olarak bu bölgelerin dışındaki yönetilen cihazları kullanmaya devam edebilirsiniz. Örneğin, Birleşik Krallık'ta çalışan bir çalışan, Asya, Avrupa veya Güney Amerika'ya seyahat ederken güvenli bir şekilde çalışır ve kendi yönetilen cihazlarında güncelleştirmeleri alır.
+Microsoft Yönetilen Masaüstü hizmetine kesintisiz olarak bu bölgelerin dışındaki yönetilen cihazları kullanmaya devam edebilirsiniz. Örneğin, Birleşik Krallık'daki bir çalışan Güvenli bir şekilde çalışarak Asya, Avrupa veya Güney Amerika'ya seyahat ederken kendi yönetilen cihazlarında güncelleştirmeleri alıyor olabilir.
 
-Kullanıcı ve yönetici deneyimlerinde Microsoft Yönetilen Masaüstü tarafından desteklenen diller hakkında daha fazla bilgi için bkz. [Kullanıcı deneyimini yerelleştirme](../get-started/localization.md).
+Microsoft Yönetilen Masaüstü tarafından desteklenen diller hakkında daha fazla bilgi için bkz [. Kullanıcılar için cihazları yerelleştirme](../get-started/localization.md).
 
 Microsoft Yönetilen Masaüstü ile kullanıcı desteği hakkında daha fazla bilgi için bkz. [Microsoft Yönetilen Masaüstü desteği](support.md).
 
-## <a name="availability-of-the-service"></a>Hizmetin kullanılabilirliği
+## <a name="service-availability"></a>Hizmet kullanılabilirliği
 
 Aşağıdaki ülkelerdeki kuruluşlar Microsoft Yönetilen Masaüstü'ne abone olabilir:
 
@@ -47,4 +47,3 @@ Aşağıdaki ülkelerdeki kuruluşlar Microsoft Yönetilen Masaüstü'ne abone o
 - İzlanda
 - Avustralya
 - Yeni Zelanda
-

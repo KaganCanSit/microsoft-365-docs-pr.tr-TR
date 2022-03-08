@@ -16,12 +16,12 @@ f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
 description: Bu makalede, Karma Modern Kimlik Doğrulama hakkında bilgi edinecek ve şirket içi kimlik doğrulaması ve sunucularında Skype Kurumsal önkoşulları Exchange olacak.
-ms.openlocfilehash: f0abb01b7a03405f576a12766b21b3c36113004d
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: efce3b5a04f2e9500330cab87d7ba8e62ca49db0
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015206"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312873"
 ---
 # <a name="hybrid-modern-authentication-overview-and-prerequisites-for-using-it-with-on-premises-skype-for-business-and-exchange-servers"></a>Karma modern kimlik doğrulamasına genel bakış ve bunu şirket içi şirket içi sunucularla ve şirket içi sunucularla Skype Kurumsal için Exchange önkoşullar
 
@@ -169,7 +169,8 @@ Devam etmek için önce bu öğeleri doğrulayın ve listenizi kapatın:
     > [!NOTE]
     > Karma modern kimlik doğrulaması, Karma [Aracı'da desteklenmiyor](/exchange/hybrid-deployment/hybrid-agent).
 
-  - Hem şirket içi test kullanıcısını hem de Office 365'te oturum alıkan karma bir test kullanıcısını (Skype Kurumsal Skype ile modern kimlik doğrulamayı kullanmak için) ve Microsoft Outlook'te (Exchange ile modern kimlik doğrulamayı kullanmak istiyorsanız) oturum aça olduğundan emin olun.
+  - Hem şirket içi test kullanıcısını hem de Office 365'te yer alan karma test kullanıcısını (Skype ile modern kimlik doğrulamayı kullanmak için) ve Microsoft Outlook'de (Exchange ile modern kimlik doğrulamayı kullanmak istediğiniz) Skype Kurumsal masaüstü istemcisinde oturum aça olduğundan emin olun.
+  - SignInOptions ayarının Microsoft Office en kısıtlayıcı ayarına yapılandırılmamış olduğundan emin olun. Daha fazla bilgi için bkz[. İnternet'e Office izin verme](/office365/troubleshoot/access-management/office-feature-disabled).
 
 ## <a name="what-else-do-i-need-to-know-before-i-begin"></a>Başlamadan önce başka ne bil ihtiyacım var?
 <a name="BKMK_Whatelse"> </a>

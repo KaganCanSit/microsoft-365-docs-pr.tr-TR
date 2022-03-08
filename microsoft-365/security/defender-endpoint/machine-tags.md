@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: d4e429ca851a21c3ad4863d11dd90d7223d9c6b3
-ms.sourcegitcommit: 2b9d40e888ff2f2b3385e2a90b50d719bba1e653
+ms.openlocfilehash: 65df8553f5ee3b7dd7876557398e0d4aa22c7bd5
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "62996997"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323535"
 ---
 # <a name="create-and-manage-device-tags"></a>Cihaz etiketlerini oluşturma ve yönetme
 
@@ -31,7 +31,7 @@ ms.locfileid: "62996997"
 
 > Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Mantıksal bir grup ilişkisi oluşturmak için cihazlara etiketler ekleyin. Cihaz etiketleri, ağın uygun şekilde eşlenmesini destekleyerek bağlamı yakalamak için farklı etiketler eklemenize ve bir olayın parçası olarak dinamik liste oluşturmayı etkinleştirmenizi sağlar. Etiketler, Cihazlar liste görünümünde filtre **olarak veya** cihazları grupla için kullanılabilir. Cihaz grupları hakkında daha fazla bilgi için bkz. [Cihaz grupları oluşturma ve yönetme](machine-groups.md).
+Mantıksal bir grup ilişkisi oluşturmak için cihazlara etiketler ekleyin. Cihaz etiketleri, ağın uygun şekilde eşlenmesini destekleyerek bağlamı yakalamak için farklı etiketler eklemenize ve bir olayın parçası olarak dinamik liste oluşturmayı etkinleştirmenizi sağlar. Etiketler, Cihaz envanteri görünümünde **filtre olarak veya** cihazları grupla için kullanılabilir. Cihaz grupları hakkında daha fazla bilgi için bkz. [Cihaz grupları oluşturma ve yönetme](machine-groups.md).
 
 Cihazlara aşağıdaki yöntemleri kullanarak etiket ebilirsiniz:
 
@@ -49,12 +49,12 @@ API kullanarak cihaz etiketleri eklemek için bkz. [Cihaz etiketleri API'si ekle
 
    - **Güvenlik işlemleri panosu** - Etkin uyarıları olan en üstteki cihazlar bölümünden cihazın adını seçin.
    - **Uyarıları kuyruğu** - Uyarılar kuyruğundan cihaz simgesinin yanındaki cihaz adını seçin.
-   - **Cihaz listesi** - Cihaz listesinden cihaz adını seçin.
+   - **Cihaz envanteri** - Cihazlar listesinden cihaz adını seçin.
    - **Arama kutusu** - Açılan menüden Cihaz'ı seçin ve cihaz adını girin.
 
      Ayrıca, uyarı sayfasına dosya ve IP görünümleri aracılığıyla da ulaşabilirsiniz.
 
-2. Yanıt eylemleri satırından **Etiketleri Yönet**'i seçin.
+2. Yanıt **eylemleri satırından** Etiketleri yönet'i seçin.
 
     :::image type="content" alt-text="Etiketleri yönet düğmesinin resmi." source="images/manage-tags-option.png":::
 
@@ -62,7 +62,7 @@ API kullanarak cihaz etiketleri eklemek için bkz. [Cihaz etiketleri API'si ekle
 
     :::image type="content" alt-text="Cihaza etiket ekleme resmi1." source="images/create-new-tag.png":::
 
-Etiketler cihaz görünümüne eklenir ve cihazlar liste görünümüne **de yansıtılmaktadır** . Daha sonra ilgili cihaz **listesini** görmek için Etiketler filtresini kullanabilirsiniz.
+Etiketler cihaz görünümüne eklenir ve Cihazlar envanter görünümüne **de yansıt** yansıtılmaktadır. Daha sonra ilgili cihaz **listesini** görmek için Etiketler filtresini kullanabilirsiniz.
 
 > [!NOTE]
 > Filtreleme, parantez içeren etiket adlarına göre çalışmayabilirsiniz.

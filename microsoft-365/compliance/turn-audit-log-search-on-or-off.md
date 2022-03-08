@@ -20,12 +20,12 @@ search.appverid:
 ms.assetid: e893b19a-660c-41f2-9074-d3631c95a014
 ms.custom: seo-marvel-apr2020
 description: Yöneticilerin denetim günlüğünde arama yapma özelliğini etkinleştirmek veya devre dışı bırakmak için Microsoft 365 uyumluluk merkezi Denetim günlüğü araması özelliğini etkinleştirme veya devre dışı bırakma.
-ms.openlocfilehash: 9c0d523d05393b73f627bc9ac17568b2a0ec25ad
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: e36fe410ed75522b0d531f2f9f7901b78f4974eb
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63005453"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316121"
 ---
 # <a name="turn-auditing-on-or-off"></a>Denetimi açma veya kapatma
 
@@ -54,6 +54,9 @@ Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
 ```
 
 `True` _UnifiedAuditLogIngestionEnabled özelliği için bir_ değer denetimin açık olduğunu gösterir. Değeri, `False` denetimin açık olmadığını gösterir.
+
+> [!NOTE]
+> Exchange Online PowerShell'de önceki komutu Exchange Online emin olun. Bu komutu çalıştırmak için Güvenlik & Uyumluluk PowerShell'i kullanaasiniz.
 
 ## <a name="turn-on-auditing"></a>Denetimi açma
 

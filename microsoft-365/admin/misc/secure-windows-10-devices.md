@@ -1,13 +1,11 @@
 ---
 title: Windows 10 cihazlarının güvenliğini sağlama
-f1.keywords:
-- CSH
 ms.author: sharik
 author: skjerland
 manager: scotv
 audience: Admin
 ms.topic: conceptual
-f1_keywords:
+f1.keywords:
 - O365E_BCSSetup4WindowsConfig
 ms.service: o365-administration
 ms.localizationpriority: medium
@@ -28,12 +26,12 @@ search.appverid:
 ROBOTS: NO INDEX, NO FOLLOW
 ms.assetid: 21e5551f-fa35-4f13-9418-f80d668b6a2b
 description: İş veya okul hesaplarında oturum Windows 10 ilgili cihaza varsayılan cihaz ilkesi ayarlarını yapılandırma hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: 1a39fdad31de5e4aef2fa5bbc4995d9c4c8bbb90
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 88453ee07c21038a6d4ca190471f22f200658c1a
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985014"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63327497"
 ---
 # <a name="secure-windows-10-devices"></a>Windows 10 cihazlarının güvenliğini sağlama
 

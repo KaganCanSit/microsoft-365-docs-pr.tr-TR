@@ -18,14 +18,15 @@ ms.collection:
 ms.custom:
 - Ent_Solutions
 - admindeeplinkTEAMS
+- admindeeplinkSPO
 recommendations: false
 description: Temel koruma düzeyiyle ekipleri dağıtmayı öğrenin.
-ms.openlocfilehash: ac16f3a1fd70cca22d0cc44e326d173b30cff77f
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 21fe46a9df9b67c41ff2c0a21fbbe175295e1fdf
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988629"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312747"
 ---
 # <a name="configure-teams-with-baseline-protection"></a>Taban çizgisi korumasıyla ekipleri yapılandırma
 
@@ -68,10 +69,10 @@ Office 365 gruplarında ve SharePoint'te konuk paylaşımı varsayılan olarak a
 Dosyalarınızı veya klasörlerinizi yanlışlıkla kuruluş dışındaki kişiler ile paylaşma riskini azaltmak için, SharePoint için varsayılan paylaşım bağlantısını Yalnızca SharePoint *olarak değiştirmenizi öneririz*. (Kullanıcıların dışarıdan paylaşması gerekirse ve konuk paylaşımını etkinleştirdiysek, paylaştığınızda bağlantı türünü değiştirmeye devam etmek için bu özelliği kullanabilirler.)
 
 Varsayılan paylaşım bağlantısını değiştirmek için
-1. SharePoint [merkezini açın](https://admin.microsoft.com/sharepoint).
-2. **İlkeler'in** altında **Paylaşım'a tıklayın**.
-3. Dosya **ve klasör bağlantıları'nın altında** Yalnızca **kuruluşta olan kişiler'i seçin**.
-4. **Kaydet**'e tıklayın.
+
+1. Yönetim merkezini açın SharePoint altında **Paylaşım'ı** <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**seçin**</a>.
+1. Dosya **ve klasör bağlantıları'nın altında** Yalnızca **kuruluşta olan kişiler'i seçin**.
+1. **Kaydet**'i seçin.
 
 En iyi konuk paylaşımı deneyimi için, [Azure AD B2B ile SharePoint ve OneDrive tümleştirmeyi etkinleştirmenizi de öneririz](/sharepoint/sharepoint-azureb2b-integration-preview).
 

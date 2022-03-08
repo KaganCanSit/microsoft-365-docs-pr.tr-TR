@@ -4,12 +4,12 @@ description: dosya dahil
 author: mjcaparas
 ms.service: microsoft-365-enterprise
 ms.author: macapara
-ms.openlocfilehash: 126454f65f8f0e92161f1d51321390ffb60c1308
-ms.sourcegitcommit: bcea69bacd1b48827bd60af2880909593a1609a4
+ms.openlocfilehash: 2d48c4066cc1cde102fc395d7c532d26ea2a4db0
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "62997195"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63331561"
 ---
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -48,7 +48,8 @@ Cihazların aşağıdaki uç noktalara erişimi olmalıdır:
 
 Uç nokta güvenlik yönetimi için Microsoft Defender ilkeleri aşağıdaki cihaz platformlarında destekler:
 
-- Windows 10 Professional/Enterprise ([KB5006738 ile](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541))
+- Windows 10 Pro/Enterprise ([KB5006738 ile](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541))
+- Windows 11.Pro/Enterprise
 - Windows Server 2012 Cihazlar için [Microsoft Defender ile Down-Level](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview) R2
 - [Windows Server 2016 Cihazlar için Microsoft Defender ile Down-Level güncelleştirme](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2019 ([KB5006744 ile](https://support.microsoft.com/topic/october-19-2021-kb5006744-os-build-17763-2268-preview-e043a8a3-901b-4190-bb6b-f5a4137411c0))

@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Yöneticiler, Plan 2'ye yönelik Microsoft Defender'daki Saldırı benzetimi eğitimini kullanarak kimlik avı saldırılarının benzetimini yapmayı ve kullanıcılarını kimlik avı engellemesi konusunda Office 365 öğrenebilirsiniz.
 ms.technology: mdo
-ms.openlocfilehash: 065b456d5a53a4d803c67ac0ac6ddc270391851a
-ms.sourcegitcommit: 7fd1bcbd8246501029837e3ea92adea64c3406e1
+ms.openlocfilehash: 31c8fd7b0369e5af522cd79b9bee7c5ee8460cc5
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2022
-ms.locfileid: "63010139"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63329649"
 ---
 # <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'daki Saldırı benzetimi eğitimi ile kimlik avı saldırılarının benzetimini Office 365
 
@@ -361,6 +361,7 @@ Aşağıdaki ayarlar kullanılabilir:
     - **Başlatma saati seçin**
 - **Benzetimi sona erdirecek gün sayısını yapılandırma**: Varsayılan değer 2'dir.
 - **Bölgeyi biliyorsanız saat dilimi teslimini** etkinleştirin: Çalışanlarınızı bölgelerine göre çalışma saatleri içinde sanal saldırı iletileri teslim edin.
+- **Drive-by technique interstitial data toplanmış** sayfasını görüntüleme: Sürücü-BU URL tekniği saldırılarına yönelik yer paylaşımını gösterebilirsiniz. Yer paylaşımını gizlemek ve doğrudan giriş sayfasına gitmek için, bu seçeneğin de-işaretleyin.
 
 Bitirdikten sonra, Sonraki'ne **tıklayın**.
 

@@ -15,12 +15,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: Yöneticiler, teknik destek almak için kuruluşlarının fiziksel destek sisteminden verileri içeri aktaracak bir veri bağlayıcısı Microsoft 365. Bu sayede, bu verileri Insider risk yönetimi ilkelerde kullanarak, belirli kullanıcılar tarafından organizasyon için olası bir iç tehdit olduğunu belirten belirli kullanıcılar tarafından fiziksel binalara erişimi algılamanıza yardımcı olur.
-ms.openlocfilehash: 7eddede8b98d1b676e51a95e4fed3787f56d0bf0
-ms.sourcegitcommit: 99067d5eb1fa7b094e7cdb1f7be65acaaa235a54
+ms.openlocfilehash: e70217fa98e283883ab70bbe924d6f01f27613b4
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2022
-ms.locfileid: "63010076"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312229"
 ---
 # <a name="set-up-a-connector-to-import-physical-badging-data-preview"></a>Fiziksel belgeleme verilerini içeri aktaracak şekilde bağlayıcı ayarlama (önizleme)
 
@@ -40,7 +40,10 @@ Fiziksel bir bağlantı bağlayıcısı ayarlama, aşağıdaki görevlerden olu�
 
 ## <a name="before-you-set-up-the-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-- 3. Adımda fiziksel badging bağlayıcısı oluşturan kullanıcıya, Kimlik Bilgileri'nde Posta Kutusu İçeri/Dışarı Aktarma rolü Exchange Online. Varsayılan olarak, bu rol herhangi bir rol grubuna Exchange Online. Posta Kutusu İçeri/Dışarı Aktarma rolünü, aynı kuruluşta Kuruluş Yönetimi rol grubuna Exchange Online. Yeni bir rol grubu oluşturabilir, Posta Kutusu İçeri/Dışarı Aktarma rolü atayabilirsiniz ve sonra da uygun kullanıcıları üye olarak  eklersiniz. Daha fazla bilgi için,"[Rol gruplarını](/Exchange/permissions-exo/role-groups#create-role-groups) farklı bir [](/Exchange/permissions-exo/role-groups#modify-role-groups) grupta yönetme" makalesinde Rol grupları oluşturma veya Rol gruplarını değiştirme Exchange Online.
+- 3. Adımda fiziksel badging bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanabilir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+
+   > [!NOTE]
+   > Data Connector Yönetici rolü şu anda US Government GCC High ve DoD ortamlarında desteklenmiyor. Bu nedenle, GCC High ve DoD ortamlarında İk bağlayıcısını oluşturan kullanıcıya, çalışma alanı içinde Posta Kutusu İçeri/Dışarı Aktarma rolü Exchange Online. Varsayılan olarak, bu rol herhangi bir rol grubuna Exchange Online. Posta Kutusu İçeri/Dışarı Aktarma rolünü, aynı kuruluşta Kuruluş Yönetimi rol grubuna Exchange Online. Yeni bir rol grubu oluşturabilir, Posta Kutusu İçeri/Dışarı Aktarma rolü atayabilirsiniz ve sonra da uygun kullanıcıları üye olarak  eklersiniz. Daha fazla bilgi için,"[Rol gruplarını](/Exchange/permissions-exo/role-groups#create-role-groups) farklı bir [](/Exchange/permissions-exo/role-groups#modify-role-groups) grupta yönetme" makalesinde Rol grupları oluşturma veya Rol gruplarını değiştirme Exchange Online.
 
 - Verilerinizin, kurumnizin fiziksel belgeleme sisteminden (günlük olarak) nasıl alın ya da dışarı aktarın, sonra da 2. Adımda açıklanan bir JSON dosyası oluşturmanız gerekir. 4. Adımda çalıştırdınız betik, JSON dosyasındaki verileri API uç noktasına iletir.
 

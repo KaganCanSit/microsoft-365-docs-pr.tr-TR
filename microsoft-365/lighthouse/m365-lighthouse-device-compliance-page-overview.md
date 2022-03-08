@@ -16,17 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse, Cihaz uyumluluğu sayfası hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: d1c4cb8fde2d3f653e77020e4ad29f70da266a06
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: 76cb914b878b3da8236e91ddda538cb13fa3aa8c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62996589"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63317605"
 ---
 # <a name="microsoft-365-lighthouse-device-compliance-page-overview"></a>Microsoft 365 Lighthouse Uyumluluğu sayfasına genel bakış
-
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
 
 Microsoft 365 Lighthouse, Sol gezinti bölmesindeKimlik uyumluluğu sayfasını açmak için Cihazlar'ı seçerek Intune cihaz uyumluluğu ile ilgili içgörüleri ve bilgileri tüm müşteri kiracılarınız için görüntülemenize olanak tanır. Bu sayfadan kiracılar genelinde uyumluluk durumuna genel bir bakış elde edebilirsiniz, her kiracının cihazlarının listesini ekleyebilirsiniz ve uyumluluk ilkeleriyle ayarları hakkında durum raporlarına bakabilirsiniz.
 

@@ -1,5 +1,5 @@
 ---
-title: Engellenen gönderenler listesinden kendinizi kaldırma
+title: Engellenen gönderenler listesinden kendinizi kaldırın ve 5.7.511 Erişim engellendi hatalarına neden olun
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -17,17 +17,17 @@ ms.collection:
 - m365initiative-defender-office365
 ms.custom:
 - seo-marvel-apr2020
-description: Bu makalede, sizi engellenen gönderenler listesinden kaldırmak için deliste Microsoft 365 kullanmayı öğrenirsiniz.
+description: Bu makalede, sizi engellenen gönderenler listesinden kaldırmak için deliste Microsoft 365 kullanmayı öğrenirsiniz. Bu, 5.7.511 Erişim reddedildi hatalarına verilen en iyi yanıttır.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: bdbc1efb9e22186a9a7f6d9814f27dea9709636a
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: 36187288b2a7acf1a852e6c203cbb84035ba5d7a
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016478"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320249"
 ---
-# <a name="use-the-delist-portal-to-remove-yourself-from-the-blocked-senders-list"></a>Kendinizi engellenen gönderenler listesinden kaldırmak için liste portalını kullanın
+# <a name="use-the-delist-portal-to-remove-yourself-from-the-blocked-senders-list-and-address-57511-access-denied-errors"></a>Kendinizi engellenen gönderenler listesinden kaldırmak ve 5.7.511 Access'in reddedilen hatalarına karşı adres olarak liste kaldırma portalını kullanma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "63016478"
 - [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-E-posta adresi aynı adreste olan bir alıcıya e-posta göndermeye çalışsanız hata iletisi Microsoft 365? Hata iletisini almamanız gerektiğini düşünüyorsanız, liste portalını kullanarak kendinizi engellenen gönderenler listesinden kaldırabilirsiniz.
+E-posta adresi Microsoft 365 olan bir alıcıya e-posta göndermeye çalışsanız da hata iletisi alıyor musunuz (örneğin ve 5.7.511 Erişim reddedildi)? Hata iletisini almamanız gerektiğini düşünüyorsanız, liste portalını kullanarak kendinizi engellenen gönderenler listesinden kaldırabilirsiniz.
 
 ## <a name="what-is-the-blocked-senders-list"></a>Engellenen gönderenler listesi nedir?
 
@@ -44,7 +44,7 @@ Microsoft, müşterilerini istenmeyen posta, kimlik avı ve kimlik avı saldır�
 
 Aşağıdakine benzer bir hata içeren bir e-posta iletisine yanıt geldiğinde, listeye eklenmiştir bilginiz olur:
 
-> 550 5.7.606-649 Erişim engellendi, IP göndermeyi yasakladı [_IP adresi_]; Bu listeden kaldırma isteğide etmek için lütfen yönergeleri <https://sender.office.com/> ziyaret edin ve takip edin. Daha fazla bilgi için bkz[. E-posta teslimi olmayan raporlar Exchange Online](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online).
+> 550 5.7.606-649 Erişim reddedildi, IP göndermeyi yasakladı [_IP adresi_] (ör. 5.7.511 Erişim reddedildi): Bu listeden kaldırma isteğide etmek için lütfen yönergeleri ziyaret <https://sender.office.com/> edin ve takip edin. Daha fazla bilgi için bkz[. E-posta teslimi olmayan raporlar Exchange Online](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online).
 
 burada  _IP adresi_ , posta sunucusunun çalıştır yer alan bilgisayarın IP adresidir.
 
@@ -56,7 +56,7 @@ Gönderenlerin engellenen gönderenler listesine yer eklemesi için iyi nedenler
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMhvD]
 
 
-## <a name="to-use-delist-portal-to-remove-yourself-from-the-blocked-senders-list"></a>Liste portalını kullanarak kendinizi engellenen gönderenler listesinden kaldırmak için
+## <a name="to-use-delist-portal-to-remove-yourself-from-the-blocked-senders-list-after-errors-like-57511-access-denied"></a>Liste portalını kullanarak kendinizi engellenen gönderenler listesinden kaldırmak için (5.7.511 Erişimi reddedildi gibi hatalardan sonra)
 
 1. Web tarayıcısında, ' gidin <https://sender.office.com>.
 
@@ -81,7 +81,7 @@ Gönderenlerin engellenen gönderenler listesine yer eklemesi için iyi nedenler
 
 [IP'nin engellenmiş olarak korunmasını önlemek için bkz. EOP'de](create-safe-sender-lists-in-office-365.md) güvenilir gönderen listeleri ve [EOP'de](outbound-spam-controls.md) Giden istenmeyen posta koruması oluşturma.
 
-### <a name="what-about-error-code-57511"></a>Hata kodu 5.7.511 ne olacak?
+### <a name="how-do-fix-error-code-57511"></a>Hata kodu 5.7.511'i düzeltme
  
 Kendi gönderdiniz e-posta iletisi teslimi konusunda sorun olduğunda, Microsoft 365 veya Office 365 size bir e-posta gönderir. Size gelen e-posta, DSN veya geri dönen ileti olarak da bilinen bir teslim durumu bildirimidir. En yaygın türe teslim edil raporu (NDR) denir ve bu rapor size bir iletinin teslim edile olmadığını söyler. Bazı durumlarda, Microsoft'un IP'niz üzerinden gelen trafik üzerinde ek soruşturmalar yürütmesi gerekir ve NDR kodu 5.7.511'i alıyorsanız,list portalını kullanasınız.
  

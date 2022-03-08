@@ -15,20 +15,17 @@ ms.custom:
 - AdminSurgePortfolib
 - M365-Lighthouse
 search.appverid: MET150
-description: Yönetilen Hizmet Sağlayıcıları (MSP) Microsoft 365 Lighthouse, kullanıcının oturum açmasını engellemeyi öğrenin.
-ms.openlocfilehash: 6fbdad9849b27e60243ace59651b9e5211829a68
-ms.sourcegitcommit: efb333ce0772265da91632110acba39acfbe0bde
+description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP)'ler için, kullanıcıların oturum a açmasını engellemek için güvenliğin ihlal edilmiş olduğunu düşünüyorsanız bir kullanıcı hesabını engellemeyi öğrenin.
+ms.openlocfilehash: be9089ef8c3a86b68ce5370d28a6e9be4472cce0
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "62997096"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320851"
 ---
 # <a name="block-user-sign-in"></a>Kullanıcının oturum açmasını engelle
 
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
-
-Güvenliğin ihlal olduğunu düşünüyorsanız kullanıcı hesabını engelleyebilirsiniz. Bir kişi engellenmişsa, o hesapta oturum açması hemen engellenir. Oturumları açıksa, 60 dakika içinde tüm iş Microsoft hizmetleri otomatik olarak oturumları açılır. Bu, hesabın posta almalarını durdurmaz ve herhangi bir veri silemez.
+Güvenliğin ihlal olduğunu düşünüyorsanız kullanıcı hesabını engelleyebilirsiniz. Bir kullanıcı hesabını engelle hesap, herkesin bu hesapta oturum açmasını hemen engeller. Kullanıcı oturum açmayı deniyorsa, 60 dakika içinde tüm Microsoft 365 oturumları otomatik olarak kapanır. Bir kullanıcı hesabının engellenmesi hiçbir veri silemez ve hesabın posta almalarını durdurmaz.
 
 ## <a name="block-sign-in-for-a-user"></a>Kullanıcının oturum açmasını engelleme
 
@@ -46,13 +43,13 @@ Güvenliğin ihlal olduğunu düşünüyorsanız kullanıcı hesabını engelley
 
 7. **Kaydet**'i seçin.
 
-## <a name="block-risky-users"></a>Riskli kullanıcıları engelleme
+## <a name="block-sign-in-for-risky-users"></a>Riskli kullanıcılar için oturum açma engelleme
 
 1. Deniz Feneri'nin sol gezinti bölmesinde Kullanıcılar'ı **seçin**.
 
 2. Riskli **kullanıcılar sekmesini** seçin.
 
-3. Listeden riskli kullanıcı seçin.
+3. Listeden riskli bir kullanıcı seçin.
 
 4. Kullanıcı ayrıntıları bölmesinde, Oturum açma **engelleme'yi seçin**.
 

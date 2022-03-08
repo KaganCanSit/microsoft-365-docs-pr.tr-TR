@@ -12,17 +12,17 @@ ms.collection:
 - m365solution-3tiersprotection
 - m365solution-securecollab
 - m365initiative-externalcollab
-ms.custom: ''
+ms.custom: admindeeplinkSPO
 ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: Kuruluş dışındaki kişiler ile dosya paylaştığınızda yanlışlıkla bilgilerin maruz kalmalarını sınırlamayı öğrenin.
-ms.openlocfilehash: 4c60f77f7f7807395a503ce083795e76398d99b4
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: c1bf6424e2be70118dd2d85671a857a8a33ef2f9
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62986708"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63329065"
 ---
 # <a name="limit-accidental-exposure-to-files-when-sharing-with-people-outside-your-organization"></a>Kuruluş dışından kişilerle paylaşım sırasında dosyalarda yanlışlıkla açık kalma sürelerini sınırlama
 
@@ -43,7 +43,8 @@ Herkes bağlantılarını devre *dışı bıraksanız* bile kullanıcılar Belir
 Gereksinimlerinize bağlı olarak, belirli siteler için veya tüm *organizasyonunız* için Herkes bağlantılarını devre dışı abilirsiniz.
 
 Sizin için herkes *bağlantılarını* kapatmak için
-1. Yönetim SharePoint sol gezinti bölmesinde, Paylaşım'a **tıklayın**.
+
+1. SharePoint yönetim merkezinde, sol gezinti bölmesinde Paylaşım'ı <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**seçin**</a>.
 2. Dış SharePoint ayarlarını Yeni ve var **olan konuklar olarak ayarlayın**.
 
    ![Site dış paylaşım ayarları SharePoint düzeyi ayarlarının ekran görüntüsü.](../media/sharepoint-organization-external-sharing-controls-new-users.png)
@@ -51,14 +52,15 @@ Sizin için herkes *bağlantılarını* kapatmak için
 3. **Kaydet**'e tıklayın.
 
 Site için *herkes* bağlantılarını kapatmak için
-1. Genel SharePoint, sol gezinti bölmesinde Siteler'i genişletin **ve Etkin** **siteler'e tıklayın**.
+
+1. Genel SharePoint, sol gezinti bölmesinde Siteler'i genişletin **ve Etkin** <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a>.
 2. Yapılandırmak istediğiniz siteyi seçin.
-3. Şeritte Paylaşım'a **tıklayın**.
+3. Şeritte Paylaşım'ı **seçin**.
 4. Paylaşımın Yeni ve mevcut konuklar **olarak ayar olduğundan emin olmak**.
 
    ![Sitenin dış paylaşım SharePoint düzeyi ayarlarının ekran görüntüsü.](../media/sharepoint-site-external-sharing-settings.png)
 
-5. Değişiklikler yaptıysanız Kaydet'e **tıklayın**.
+5. Değişiklik yaptıysanız Kaydet'i **seçin**.
 
 ## <a name="domain-filtering"></a>Etki alanı filtreleme
 
@@ -71,7 +73,8 @@ Reddedenler listesiyle, etki alanlarının listesini belirtebilirsiniz; bu liste
 İzin ver ve reddet listeleri yalnızca konuklarla paylaşımı etkiler. Kullanıcılar, devre dışı olmadığınız Herkes bağlantılarını kullanarak yasak etki *alanlarını* kullanan kullanıcılarla paylaşımda ılabilir. Etki alanı izin verme ve reddetme listelerinde en iyi sonuçları elde etmek için yukarıda *açıklandığı gibi Herkes* bağlantılarını devre dışı bırakmayı göz önünde bulundurabilirsiniz.
 
 Etki alanı izin verme veya reddedilenler listesi ayarlamak için
-1. Yönetim SharePoint sol gezinti bölmesinde, Paylaşım'a **tıklayın**.
+
+1. SharePoint yönetim merkezinde, sol gezinti bölmesinde Paylaşım'ı <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**seçin**</a>
 2. Dış **paylaşım için gelişmiş ayarlar'ın** altında Dış paylaşımı **etki alanına göre sınırla onay** kutusunu seçin.
 3. Etki alanı **ekle'ye tıklayın**.
 4. Etki alanlarını engellemek isteyip istemediklerini seçin, etki alanlarını yazın ve Tamam'a **tıklayın**.
@@ -87,7 +90,8 @@ Etki alanına göre paylaşımı SharePoint ve OneDrive'den daha yüksek bir dü
 Dosyaların, klasörlerin ve sitelerin paylaşımını belirli bir güvenlik grubunun üyeleriyle, kuruluş dışındaki çalışanlarla sınırlandırabilirsiniz. Bu özellik, dış paylaşımı etkinleştirmek, ancak onay iş akışı veya istek süreciyle etkinleştirmek istediğiniz durumlarda kullanışlıdır. Alternatif olarak, kullanıcılarınızı güvenlik grubuna eklenmeden ve dış paylaşıma izin verilmeden önce bir eğitim kursını tamamlamalarını gerektirmeniz gerekir.
 
 Dış paylaşımı bir güvenlik grubunun üyeleriyle sınırlamak için
-1. Genel SharePoint [, sol gezinti](https://admin.microsoft.com/sharepoint) bölmesinde, İlkeler'in **altında Paylaşım'a** **tıklayın**.
+
+1. Genel SharePoint, sol gezinti bölmesinde, İlkeler'in altında **Paylaşım'ı** <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**seçin**</a>.
 2. Dış **paylaşım'ın** altında Diğer **dış paylaşım ayarları'nın genişletin**.
 
 3. Yalnızca **belirli güvenlik gruplarında yer alan kullanıcıların dışarıdan paylaşıma izin ver'i seçin ve** sonra da Güvenlik gruplarını **yönet'i seçin**.

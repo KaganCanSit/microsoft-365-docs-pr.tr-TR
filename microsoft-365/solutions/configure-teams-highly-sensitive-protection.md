@@ -17,14 +17,15 @@ ms.collection:
 - m365solution-securecollab
 ms.custom:
 - Ent_Solutions
+- admindeeplinkSPO
 recommendations: false
 description: Çok hassas veriler için korumayla ekipleri dağıtmayı öğrenin.
-ms.openlocfilehash: 27d2183a3f6f5f43f4461bc83fe3b33ac9f4f56e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 053f92f0a3f7551d747c81b13b3832798c7e953c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984314"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312604"
 ---
 # <a name="configure-teams-with-protection-for-highly-sensitive-data"></a>Çok hassas veriler için ekipleri koruma ile yapılandırma
 
@@ -129,12 +130,11 @@ Ayrıca, kimlerin özel [kanal oluştura](/MicrosoftTeams/teams-policies) onu ko
 
 Site varsayılan paylaşım bağlantı türünü güncelleştirmek için
 
-1. SharePoint [merkezini açın](https://admin.microsoft.com/sharepoint).
-2. **Siteler'in** altında Etkin **siteler'e tıklayın**.
-3. Ekiple ilişkilendirilmiş siteye tıklayın.
-4. **İlkeler sekmesinde**, Dış **paylaşım'ın altında** Düzenle'ye **tıklayın**.
-5. Varsayılan paylaşım bağlantı türü'nin altında Kuruluş **düzeyi ayarıyla aynı onay kutusunu temizleyin** ve Varolan erişimi olan **kişiler'i seçin**.
-6. **Kaydet**'e tıklayın.
+1. Site yönetim SharePoint açın ve **Siteler'in altında Etkin** <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a>.
+1. Ekiple ilişkilendirilmiş siteyi seçin.
+1. **İlkeler sekmesindeki** Dış **paylaşım'ın altında** Düzenle'yi **seçin**.
+1. Varsayılan paylaşım bağlantı türü'nin altında Kuruluş **düzeyi ayarıyla aynı onay kutusunu temizleyin** ve Varolan erişimi olan **kişiler'i seçin**.
+1. **Kaydet**'i seçin.
 
 #### <a name="private-channels"></a>Özel kanallar
 

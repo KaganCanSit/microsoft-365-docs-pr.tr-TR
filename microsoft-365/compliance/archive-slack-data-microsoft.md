@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 localization_priority: Normal
 ms.collection: M365-security-compliance
 description: Microsoft tarafından sağlanan Slack eKbulma veri bağlayıcısı ayar kullanmayı ve anlık ileti verilerini içeri aktarmayı ve arşivlemeyi öğrenin.
-ms.openlocfilehash: 71369f2330193120f252d108641e99434c9fba78
-ms.sourcegitcommit: 27eb93a7d46bcbb9c948a50b0a8481ffd3832ca0
+ms.openlocfilehash: 58401130726a7211eaad5b5c25985b534b68b0b8
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/28/2021
-ms.locfileid: "63019148"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312369"
 ---
 # <a name="set-up-a-connector-to-archive-slack-ediscovery-data-preview"></a>Slack eK bulma verilerini arşivlemek için bağlayıcı ayarlama (önizleme)
 
@@ -41,9 +41,9 @@ Aşağıdaki genel bakış makalesinde, Microsoft veri bağlayıcısı kullanara
 
 - Veri bağlayıcısı oluşturan kullanıcıya Slack kuruluşunda **Kuruluş sahipleri** uygulama rolü atanmalıdır. Daha fazla bilgi için bkz [. Slack'te rol türleri](https://slack.com/intl/en-gb/help/articles/360018112273-Types-of-roles-in-Slack).
 
-- Kuruluşun Slack kurumsal hesabının kullanıcı adını ve parolasını alın. Bu kimlik bilgilerini, veri bağlayıcısını  oluşturmada bu hesapta oturum açma için kullanırsınız. Ayrıca, Slack kuruluşunda çoklu oturum açma (SSO) kullanmak üzere yapılandırılan otomatik kullanıcı hazırlamayı yapılandırmanız da önerilir.
+- Kuruluşun Slack kurumsal hesabının kullanıcı adını ve parolasını alın. Bu kimlik bilgilerini, veri bağlayıcısını  oluşturmada bu hesapta oturum açma için kullanırsınız. Ayrıca, Slack kuruluşunda çoklu oturum açma (SSO) kullanmak üzere yapılandırılan otomatik kullanıcı hazırlamayı yapılandırmanız da önerilir. [Güvenlik ve Uyumluluk & rolleri](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Slack eKbulma bağlayıcısı oluşturan kullanıcının, aynı programda Posta Kutusu İçeri/Dışarı Aktarma rolüne atan Exchange Online. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Varsayılan olarak, bu rol ilgili gruptaki bir rol grubuna Exchange Online. Posta Kutusu İçeri/Dışarı Aktarma rolünü, aynı kuruluşta Kuruluş Yönetimi rol grubuna Exchange Online. Veya bir rol grubu oluşturabilir, Posta Kutusu İçeri/Dışarı Aktarma rolü atayabilirsiniz ve sonra da uygun kullanıcıları üye olarak  eklersiniz. Daha fazla bilgi için,"[Rol gruplarını](/Exchange/permissions-exo/role-groups#create-role-groups) farklı bir [](/Exchange/permissions-exo/role-groups#modify-role-groups) grupta yönetme" makalesinde Rol grupları oluşturma veya Rol gruplarını değiştirme Exchange Online.
+- Slack eK bulma bağlayıcısını oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanabilir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
 ## <a name="step-1-create-a-slack-ediscovery-connector"></a>1. Adım: Slack eK bulma bağlayıcısı oluşturma
 

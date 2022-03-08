@@ -16,17 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP) Microsoft 365 Lighthouse Kiracılar sayfası hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: 7cddf67bce3a568ea0b5259b7012a7263012d18b
-ms.sourcegitcommit: 2ea2105d40b60a87fc9aa30f392a73a3a9db6d99
+ms.openlocfilehash: 23f151664455c35bb2fcc191d774ead00927e830
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2021
-ms.locfileid: "63007222"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63329999"
 ---
 # <a name="microsoft-365-lighthouse-tenants-page-overview"></a>Microsoft 365 Lighthouse Kiracılar sayfasına genel bakış
-
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
 
 Microsoft 365 Lighthouse, sol gezinti bölmesinde Kiracılar'ı seçerek Kiracılar  sayfasını açarak kiracı hesaplarını yönetmenizi sağlar. Kiracılar sayfası tüm kiracıların listesini içerir. Kişi ayrıntıları ve dağıtım durumu gibi ayrıntılı bilgileri görüntülemek için kiracıyı seçin.
 
@@ -36,7 +33,6 @@ Kiracılar sayfası aşağıdaki seçenekleri de içerir:
 - **Etiketleri Yönet:** Etiket eklemek, düzenlemek veya silmek için öğesini seçin.
 - **Etiket Atama:** Bir kiracıya etiket atamak için seçin.
 - **Arama:** Listede belirli bir kiracıyı hızla bulmak için anahtar sözcükleri girin.
-
 
 :::image type="content" source="../media/m365-lighthouse-tenants-page-overview/tenant-page-overview.png" alt-text="Kiracı sayfasının ekran görüntüsü.":::
 
@@ -49,26 +45,26 @@ Kiracınız Deniz Feneri ekleme [gereksinimlerini](m365-lighthouse-requirements.
 Kiracı listesi şunları sağlar:
 
 - Kiracıları etkin, etkin değil ve uygun olmayana göre otomatik olarak sırala.
-- Kiracı listesini dışarı aktarma
-- Etiketleri atama ve yönetme
-- Kiracıları adına göre arama
+- Kiracı listesini dışarı aktarın.
+- Etiketleri ata ve yönet.
+- Kiracıları adına göre arama.
 - Kiracıları durum, temsilcili yönetim ayrıcalığı (DAP) ve etiketlere göre filtrele.
 
-Kiracıyı etkinleştirmek veya etiketleri görüntülemek ve yönetmek için kiracı adının yanındaki üç noktayı seçin. Kiracı adını seçerek veya kiracıya atanmış etiketlerden birini seçerek kiracıları tek tek görüntüebilirsiniz.
+Kiracıyı etkinleştirmek veya etiketleri görüntülemek ve yönetmek için kiracı adının yanındaki üç noktayı (diğer eylemler) seçin. Kiracı adını seçerek veya kiracıya atanmış etiketlerden birini seçerek kiracıları tek tek görüntüebilirsiniz.
 
 ## <a name="tenant-status"></a>Kiracı durumu
 
-Aşağıdaki tabloda farklı durumları ve anlamları gösterir.
+Aşağıdaki tabloda farklı durumları ve anlamları gösterir.<br><br>
 
-| Durum                                | Açıklama                                         |
-|---------------------------------------|-----------------------------------------------------|
-| Etkin                                | Ekleme ve veri akışı başlatıldı.               |
-| Etkin değil                              | Kiracı artık etkin değil.                         |
-| İşlemde                            | Kiracı bulundu, ancak tam olarak eklemedi.         |
-| Uygun değil, Temsilci erişimi gerekiyor | Temsili Yönetici Ayrıcalıkları (DAP) kurulumu gereklidir. |
-| Uygun değil, Eksik gerekli lisans  | Kiracının gerekli lisansı yoktur.              |
-| Uygun değil, Kullanıcı sayısı aşıldı       | Kiracıda izin verilenden daha fazla kullanıcı var.                 |
-| Uygun değil, Sözleşme türü             | Kiracının bir sözleşmesi yok.                    |
+| Durum                                   | Açıklama                                                                                             |
+|------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| Etkin                                   | Kiracı ekleme ve veri akışı başlatıldı.                                                           |
+| Etkin değil                                 | Kiracı MSP'nin isteği üzerine çıkarıldı ve artık Deniz Feneri'nde yönetilmiyor.           |
+| İşlemde                               | Kiracı bulundu ancak tam olarak eklemedi.                                                              |
+| Uygun değil - DAP veya GDAP ayar değil    | İş ortağı, kiracıyla birlikte ayarlanmış temsilci (DAP) veya ayrıntılı temsilci (GDAP) yönetici ayrıcalıklarına sahip olmalıdır. |
+| Uygun değil - Gerekli lisans eksik | Kiracının gerekli lisansı yoktur.                                                               |
+| Uygun değil - Kullanıcı sayısı aşıldı         | Kiracıda izin verilenden daha fazla kullanıcı var.                                                                     |
+| Uygun değil - Coğrafi denetim başarısız oldu            | İş ortağı ve müşteri aynı coğrafi konumda yer a olmalıdır.                                       |
 
 Kiracıyı devre dışı bırakıncaya kadar, devre dışı bırakma işlemi tamamlandıktan sonra kiracı üzerinde eyleme geçesiniz. Devre dışı bırakmanın tamamlanması 48 saat kadar sürebilir. Kiracıyı yeniden etkinleştirmeye karar verirsiniz, verilerin yeniden 48 saat kadar sürebilir.
 
@@ -79,11 +75,9 @@ Kiracılarınızı düzenlemeye ve var olan görünümleri kolayca filtrelemeye 
 > [!NOTE]
 > Tüm kiracılarda en çok 30 etiket oluşturabilirsiniz.
 
-
 ## <a name="tenant-details-page"></a>Kiracı ayrıntıları sayfası
 
 Ayrıntılı kiracı bilgilerini görüntülemek için kiracı listesinden bir kiracı seçin. Kiracı ayrıntıları sayfası kişi bilgilerini ve dağıtım planı durumunu içerir.
-
 
 :::image type="content" source="../media/m365-lighthouse-tenants-page-overview/tenant-details-page.png" alt-text="Kiracı ayrıntıları sayfasının ekran görüntüsü.":::
 
@@ -93,7 +87,7 @@ Genel Bakış sekmesinde kiracıya genel bakış, iletişim bilgileri ve hizmet 
 
 #### <a name="tenant-overview-card"></a>Kiracı genel bakış kartı
 
-Kiracıya genel bakış kartı kiracı hakkında kendi hesaplarından bilgi Microsoft 365 sağlar.
+Kiracıya genel bakış kartı kiracı hakkında kendi hesaplarından bilgi Microsoft 365 sağlar.<br><br>
 
 | Kiracı Bilgileri    | Açıklama|
 |-----------------------|------------------|
@@ -120,13 +114,12 @@ Ayrıntıları düzenlemek veya mevcut bir kişinin adını silmek için, listed
 
 #### <a name="microsoft-365-usage-card"></a>Microsoft 365 kartı
 
-Deniz Feneri, bir Microsoft 365 dahil olmak üzere her bir hizmetin lisanslı ve etkin kullanımı dahil olmak üzere çeşitli hizmetler kullanımına genel bakış sağlar. Etkin, son 28 günde hizmette en az bir kez oturum alan kullanıcı veya cihaz sayısını gösterir. Değişiklik, etkin kullanıcılar ve cihazlarda geçen aydan bu yana yapılan değişikliği gösterir.
+Deniz Feneri, bir Microsoft 365 dahil olmak üzere her bir hizmetin lisanslı ve etkin kullanımı dahil olmak üzere çeşitli hizmetler kullanımına genel bakış sağlar. Etkin, son 28 günde hizmette en az bir kez oturummış olan kullanıcı veya cihaz sayısını gösterir. Değişiklik, etkin kullanıcılar ve cihazlarda geçen aydan bu yana yapılan değişikliği gösterir.
 
 Sayfa Microsoft 365 kartı iki bölümden oluşur:
 
-- Microsoft 365 Lighthouse etkin hizmetler – Deniz Feneri portalı içinde yönetillayabilecek hizmetler.
-- Ek Microsoft 365 Hizmetleri – Microsoft 365 paketine dahil olan, ancak şu anda Microsoft 365 Lighthouse portalında yönetil Microsoft 365 Lighthouse Hizmetler.
-
+- **Microsoft 365 Lighthouse etkinleştiren hizmetler:** Deniz Feneri portalı içinde yönetilen hizmetler.
+- **Ek Microsoft 365 Hizmetleri:** Microsoft 365 paketine dahil olan ancak şu anda Microsoft 365 Lighthouse portalında yönetil ifade edilir.
 
 ### <a name="deployment-plans-tab"></a>Dağıtım Planları sekmesi
 

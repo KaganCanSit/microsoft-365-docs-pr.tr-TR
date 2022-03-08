@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: 37cdbb02-a24a-4093-8bdb-2a7f0b3a19ee
 description: Posta kutularına ek arşiv depolama sağlayan otomatik genişleyen arşivleme Exchange Online öğrenin.
-ms.openlocfilehash: 527eea4f0fe97ba689cb70bddb78091112e1f353
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+ms.openlocfilehash: 1b4b8d81868cc97fc8e8faf5b0dc449e4c07a868
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63010834"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63328869"
 ---
 # <a name="learn-about-auto-expanding-archiving"></a>Otomatik genişleyen arşivleme hakkında bilgi
 
@@ -94,9 +94,9 @@ Otomatik genişletilmiş bir arşivde depolanan iletilere Outlook veya Web üzer
 
 - Otomatik olarak genişletilmiş depolama alanında öğeleri silebilirsiniz. Bununla birlikte, posta kutusunda otomatik genişleyen arşivleme etkinleştirildikten sonra bir öğeyi kurtarmak için Silinmiş Öğeleri Kurtar özelliğini kullanaabilirsiniz.
 
-- Otomatik genişletilmiş arşivleme için arama web'Outlook (OWA) kullanılabilir. Çevrimiçi Arşiv'e benzer şekilde, ek depolama alanına taşınmış öğeleri arayabilirsiniz. OWA'da arama kapsamı olarak arşiv seçildiğinde, tüm arşivlerde (otomatik genişletilmiş arşivler de içinde) ve buna karşılık gelen alt klasörlerde arama yapılacaktır.
+- Otomatik genişletilmiş arşivleme için arama web'Outlook (OWA) kullanılabilir. Çevrimiçi Arşiv'e benzer şekilde, ek depolama alanına taşınmış öğeleri arayabilirsiniz. OWA'da arama kapsamı olarak arşiv seçildiğinde, tüm arşivlerde (otomatik genişletilmiş arşivler de içinde) ve buna karşılık gelen alt klasörlerde arama yapılacaktır. Yalnızca bulut arşiv örneğinde (birincil posta kutusu hala şirket içinde) otomatik genişletilmiş arşiv özelliği için aramanın desteklene olmadığını unutmayın.
 
-- Otomatik olarak genişletilmiş arşiv araması Geçerli Kanalda (Outlook) Masaüstünde kullanılabilir. Bu önizlemede, Geçerli Posta Kutusu kapsamı kullanılabilir ve böylece otomatik olarak genişletilmiş arşivde aramanızı sağlar. Bu özellik ve diğer destek Microsoft Arama daha fazla bilgi için bkz. Outlook Windows hangi [Exchange Online kullanır Microsoft Arama](https://techcommunity.microsoft.com/t5/outlook-global-customer-service/how-outlook-for-windows-connected-to-exchange-online-utilizes/ba-p/1715045). 
+- Otomatik olarak genişletilmiş arşiv araması Aylık Outlook Kanalında Outlook için Windows'de Enterprise sunulmaktadır. Bu güncelleştirmeyle Geçerli Posta Kutusu kapsamı kullanılabilir, böylelikle otomatik olarak genişletilmiş arşivde aramanızı sağlar. Yalnızca bulut arşiv örneğinde (birincil posta kutusu hala şirket içinde) otomatik genişletilmiş arşiv özelliği için aramanın desteklene olmadığını unutmayın. Bu özellik ve diğer destek Microsoft Arama daha fazla bilgi için bkz. Outlook Windows hangi [Exchange Online kullanır Microsoft Arama](https://techcommunity.microsoft.com/t5/outlook-global-customer-service/how-outlook-for-windows-connected-to-exchange-online-utilizes/ba-p/1715045). 
 
 - Otomatik genişletilmiş bir arşiv Outlook öğe sayıları (Outlook ve Web üzerinde Outlook' içinde) ve Okundu/Okunmadı sayıları doğru olmayabilir.
 

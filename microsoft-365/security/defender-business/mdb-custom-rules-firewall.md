@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 02/07/2022
+ms.date: 02/24/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -16,24 +16,24 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 2200c32d910a5afd20a8ff01c6e24625d72ae21c
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: 7df23c9f823f5c3c0435743f7a05cf4421704b32
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63016709"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63329803"
 ---
-# <a name="manage-your-custom-rules-for-firewall-policies-in-microsoft-defender-for-business-preview"></a>Microsoft Defender İş'te (önizleme) güvenlik duvarı ilkeleri için özel kurallarınızı yönetme
+# <a name="manage-your-custom-rules-for-firewall-policies-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da güvenlik duvarı ilkeleri için özel kurallarınızı yönetme
 
 > [!IMPORTANT]
-> İş için Microsoft Defender şu anda önizlemede ve istekte etmek için buraya kaydolan müşterilere ve IT [İş Ortaklarına aşamalı](https://aka.ms/mdb-preview) olarak aşamalı olarak aşamalı olarak sunulmaktadır. Önümüzdeki haftalarda bir ilk müşteri ve iş ortağı kümesi sunuyoruz ve genel kullanılabilirlik durumuna kadar önizlemeyi genişleteceğiz. Önizlemenin bir dizi ilk [senaryoyla başlat olacağını](mdb-tutorials.md#try-these-preview-scenarios) ve düzenli olarak özellikler ekley olacacaz.
+> İş için Microsoft Defender 1 Mart 2022'den itibaren Microsoft 365 İş Ekstra müşterilerine sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
 
-İş için Microsoft Defender (önizleme), cihazlarınızı istenmeyen ağ trafiğinden korumaya yardımcı olan güvenlik duvarı ilkelerini içerir. Güvenlik duvarı ilkeleriniz için özel durumlar tanımlamak üzere özel kurallar kullanabilirsiniz. Başka bir ifadeyle, belirli bağlantıları engellemek veya buna izin vermek için özel kurallar kullanabilirsiniz.
+İş için Microsoft Defender, cihazlarınızı istenmeyen ağ trafiğine karşı korumaya yardımcı olan güvenlik duvarı ilkeleri içerir. Güvenlik duvarı ilkeleriniz için özel durumlar tanımlamak üzere özel kurallar kullanabilirsiniz. Başka bir ifadeyle, belirli bağlantıları engellemek veya buna izin vermek için özel kurallar kullanabilirsiniz.
 
-Güvenlik duvarı ilkeleri ve ayarları hakkında daha fazla bilgi edinmek için bkz. [İş için Microsoft Defender'da (önizleme) Güvenlik Duvarı](mdb-firewall.md).
+Güvenlik duvarı ilkeleri ve ayarları hakkında daha fazla bilgi edinmek için bkz. [İş için Microsoft Defender'da Güvenlik Duvarı](mdb-firewall.md).
 
 **Bu makalede şunların nasıl olduğu açıklanmıştır**:
 
@@ -41,9 +41,14 @@ Güvenlik duvarı ilkeleri ve ayarları hakkında daha fazla bilgi edinmek için
 - [Güvenlik duvarı ilkesi için özel bir kural düzenleme](#edit-a-custom-rule-for-a-firewall-policy)
 - [Özel kuralı silme](#delete-a-custom-rule)
 
+>
+> **Bir dakika mı kaldı?**
+> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+>
+
 ## <a name="create-a-custom-rule-for-a-firewall-policy"></a>Güvenlik duvarı ilkesi için özel kural oluşturma
 
-1. Erişim portalına Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com) ) ve oturum açın.
+1. Microsoft 365 Defender portalına ([https://security.microsoft.com](https://security.microsoft.com)) gidin ve oturum açın.
 
 2. **EndpointsDevice** >  **yapılandırmasına gidin** ve ilke listesini gözden geçirin.
 
@@ -66,7 +71,7 @@ Güvenlik duvarı ilkeleri ve ayarları hakkında daha fazla bilgi edinmek için
 
 ## <a name="edit-a-custom-rule-for-a-firewall-policy"></a>Güvenlik duvarı ilkesi için özel bir kural düzenleme
 
-1. Erişim portalına Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com) ) ve oturum açın.
+1. Microsoft 365 Defender portalına ([https://security.microsoft.com](https://security.microsoft.com)) gidin ve oturum açın.
 
 2. **EndpointsDevice** >  **yapılandırmasına gidin** ve ilke listesini gözden geçirin.
 
@@ -91,7 +96,7 @@ Güvenlik duvarı ilkeleri ve ayarları hakkında daha fazla bilgi edinmek için
 
 ## <a name="delete-a-custom-rule"></a>Özel kuralı silme
 
-1. Erişim portalına Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com) ) ve oturum açın.
+1. Microsoft 365 Defender portalına ([https://security.microsoft.com](https://security.microsoft.com)) gidin ve oturum açın.
 
 2. **EndpointsDevice** >  **yapılandırmasına gidin** ve ilke listesini gözden geçirin.
 
@@ -105,8 +110,8 @@ Güvenlik duvarı ilkeleri ve ayarları hakkında daha fazla bilgi edinmek için
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [İş için Microsoft Defender'da olayları görüntüleme ve yönetme (önizleme)](mdb-view-manage-incidents.md)
+- [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)
 
-- [Microsoft Defender İş'te (önizleme) tehditlere yanıt verme ve tehditlerini azaltmak](mdb-respond-mitigate-threats.md)
+- [İş için Microsoft Defender'da tehditleri yanıtlama ve azaltmak](mdb-respond-mitigate-threats.md)
 
 - [İşlem merkezinde düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)

@@ -2,8 +2,8 @@
 title: Farklı bir iş planına yükseltme
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: jkinma, jmueller
 audience: Admin
@@ -14,19 +14,19 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
+- commerce_subscriptions
 - SaRA
 - AdminSurgePortfolio
-- commerce_subscriptions
 - AdminTemplateSet
 search.appverid: MET150
 description: Planları yükseltmenin en kolay yolu yönetim merkezinin Yükseltme sekmesini kullanmaktır. Bununla birlikte, Yükselt sekmesi her zaman desteklenmiyor.
 ms.date: 04/21/2021
-ms.openlocfilehash: 82bd20b70a5f199f7daead8084f70d985efe52ad
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: 17e1a35d096762e1645fd4e7143935578cfc1a79
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62996077"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63329271"
 ---
 # <a name="upgrade-to-a-different-plan"></a>Başka bir plana yükseltme
 

@@ -19,12 +19,12 @@ ms.collection:
 recommendations: false
 description: Veri kaybını önleme (DLP) ilkesine bir ilke ipucunun, kullanıcıya DLP ilkesiyle çakışan içerikle çalıştığını haber verme hakkında bilgi öğrenin.
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: 227a6438bf1eb645e5bd85acfafeb8222d0b1427
-ms.sourcegitcommit: 542e6b5d12a8d400c3b9be44d849676845609c5f
+ms.openlocfilehash: 52bb2fba47c5588dc6a44eb5f8e1d7b745e69e70
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "63005002"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63319385"
 ---
 # <a name="data-loss-prevention-policy-tips-reference"></a>Veri Kaybı Önleme ilke ipuçları başvurusu
 
@@ -32,23 +32,20 @@ Web Access'Outlook DLP ilkesi ipuçları, aşağıdakiler dışında, bir DLP il
 
 **Koşullar:**
 
-- Gönderen:
-- GönderenIn Etki Alanı:
 - Alıcı,
 - Üst bilgi sözcük veya tümcecik içeriyor
 - Üst bilgi eşleşme düzenleri
-- Belge boyutu eşit veya büyüktür
 - İleti türü:
-- İletinin önem öneme sahip olduğu
 - İçerik karakter kümesi sözcükler içeriyor
-- Konu veya gövde sözcük veya tümcecik içeriyor
-- Konu veya gövde desenlerini eşler
-- İçerik karakter kümesi sözcükler içeriyor
-- İçerik alındı
 - Gönderen ilke ipucu geçersiz k oldu mu
 - İleti boyutu eşittir veya büyüktür
 - Sender AD özniteliği sözcük veya tümcecik içeriyor
 - Sender AD özniteliği desenlere eşler
+- Gönderen IP aralıkları
+- Recipient AD özniteliği sözcük veya tümcecik içeriyor
+- Recipient AD özniteliği desenlere eşler
+- Belge adı sözcük veya tümcecik içeriyor
+- Belge adı desenlere eşler
 - Belge içeriği sözcükler veya tümcecikler içerir
 - Belge içeriği desenlere eşler
 

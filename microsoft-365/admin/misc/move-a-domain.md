@@ -2,8 +2,8 @@
 title: Yöneticisi olmayan bir hesapta doğrulanmış bir etki alanını taşıma
 f1.keywords:
 - CSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: b9707ec8-2247-4e25-9bad-f11ddbc686e4
 description: Etki alanını hesaptan kaldırmak ve etki alanını hesabınıza eklemek için, yöneticisi olmayan bir hesaba katılmayı öğrenin.
-ms.openlocfilehash: 3902853ea070f09e975b16a730d2b58209858853
-ms.sourcegitcommit: cde34d38bdfb6335b980f1c48c6b218da6a64bf8
+ms.openlocfilehash: 7b7befdae4279b4b08ff076b88ed552b2bc411c3
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2022
-ms.locfileid: "63014107"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326350"
 ---
 # <a name="move-a-domain-verified-in-an-unmanaged-account"></a>Yöneticisi olmayan bir hesapta doğrulanmış bir etki alanını taşıma
 

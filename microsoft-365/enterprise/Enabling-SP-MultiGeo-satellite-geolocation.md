@@ -15,19 +15,19 @@ ms.collection:
 - SPO_Content
 ms.localizationpriority: medium
 description: Bu makalede, Genel veya SharePoint uydu coğrafi konumlarında SharePoint Multi-Geo hakkında bilgi sağlar.
-ms.openlocfilehash: e48e6feedfab47f6faa17cadcff1d858bced4379
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: b542c1ee77c7b4ca7a6179bac5ce5eaa1090606a
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985557"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63330447"
 ---
 # <a name="enabling-sharepoint-multi-geo-in-your-satellite-geo-location"></a>Uydu SharePoint Multi-Geo coğrafi konumdaki konumları etkinleştirme
 
 Bu makale **, SharePoint Multi-Geo** 27 Mart 2019'da genel kullanıma hazır hale gelmeden ve uydu coğrafi konumlarında SharePoint Multi-Geo'i etkinleştirmemiş olan Genel ya da SharePoint Multi-Geo yöneticilerine yöneliktir. SharePoint 
 
 >[!Note]
->**27** Mart'tan sonra yeni bir coğrafi konum eklediysanız, bu yönergeleri gerçekleştirmeniz gerekli değildir çünkü yeni coğrafi konumunuz coğrafi konum bilgi işlemlerinde OneDrive SharePoint Multi-Geo.
+>**27 Mart 2019'dan** sonra yeni bir coğrafi konum eklediysanız, yeni coğrafi konumunuz coğrafi konum bilgi ve görev için zaten etkinleştirildiğinden bu yönergeleri OneDrive SharePoint Multi-Geo.
 
 Bu yönergeler, çok coğrafi SharePoint uydu kullanıcılarının O365'te hem uydu hem de OneDrive SharePoint Multi-Geo olanaklarını kullanmalarını sağlayacaktır. 
 

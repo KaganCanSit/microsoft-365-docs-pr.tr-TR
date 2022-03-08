@@ -1,13 +1,13 @@
 ---
-title: İş için Microsoft Defender'da cihazları yönetme (önizleme)
-description: Microsoft Defender for Business'da (önizleme) cihazları yönetmeyi öğrenin
+title: İş için Microsoft Defender'da cihazları yönetme
+description: İş için Microsoft Defender'da cihazları yönetmeyi öğrenin
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 02/14/2022
+ms.date: 02/24/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -17,26 +17,29 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 498fa3824ec1e022cbf0abcb0c7789e5e236262e
-ms.sourcegitcommit: 007822d16e332522546e948f5c216327254a4d49
+ms.openlocfilehash: e0c564fda55393d9f60bd79081a309bde1e87f02
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63015324"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63329355"
 ---
-# <a name="manage-devices-in-microsoft-defender-for-business-preview"></a>İş için Microsoft Defender'da cihazları yönetme (önizleme)
+# <a name="manage-devices-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da cihazları yönetme
 
 > [!IMPORTANT]
-> İş için Microsoft Defender şu anda önizlemede ve istekte etmek için buraya kaydolan müşterilere ve IT [İş Ortaklarına aşamalı](https://aka.ms/mdb-preview) olarak aşamalı olarak aşamalı olarak sunulmaktadır. Önümüzdeki haftalarda bir ilk müşteri ve iş ortağı kümesi sunuyoruz ve genel kullanılabilirlik durumuna kadar önizlemeyi genişleteceğiz. Önizlemenin bir dizi ilk [senaryoyla başlat olacağını](mdb-tutorials.md#try-these-preview-scenarios) ve düzenli olarak özellikler ekley olacacaz.
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-İş için Microsoft Defender'da (önizleme), cihazları aşağıdaki gibi yönetebilirsiniz:
+İş için Microsoft Defender'da cihazları aşağıdaki gibi yönetebilirsiniz:
 
 - [Risk düzeyini, pozlama düzeyini ve](#view-the-list-of-onboarded-devices) sağlık durumunu görmek için, yerleşik cihazların listesini görüntüleme
+
 - [Tehdit algılamaları olan](#take-action-on-a-device-that-has-threat-detections) bir cihazda eyleme geç
-- [İş için Defender'a bir cihaz ekleme (önizleme)](#onboard-a-device)  
-- [İş için Defender'dan bir cihaz çıkar (önizleme)](#offboard-a-device)
+
+- [İş için Defender'a bir cihaz ekleme](#onboard-a-device)  
+
+- [İş için Defender'dan bir cihaz çıkartan](#offboard-a-device)
 
 >
 > **Bir dakika mı kaldı?**
@@ -53,7 +56,7 @@ ms.locfileid: "63015324"
 
 3. Bir cihazı seçerek çıkış panelini açın. Bu panelden, cihazın durumu hakkında daha fazla bilgi edinebilirsiniz ve harekete geçebilirsiniz. 
 
-   Henüz hiç cihaz listelenmiyorsa cihazları İş için [Microsoft Defender'a (önizleme) ekleme](mdb-onboard-devices.md)
+   Henüz hiç cihaz listelenmiyorsa cihazları İş için [Microsoft Defender'a ekleme](mdb-onboard-devices.md)
 
 ## <a name="take-action-on-a-device-that-has-threat-detections"></a>Tehdit algılamaları olan bir cihazda eyleme geç
 
@@ -69,7 +72,7 @@ ms.locfileid: "63015324"
 
 ## <a name="onboard-a-device"></a>Bir cihaz ekleme
 
-Bkz [. Cihazları İş için Microsoft Defender'a (önizleme) ekleme](mdb-onboard-devices.md).
+Bkz [. Cihazları İş için Microsoft Defender'a ekleme](mdb-onboard-devices.md).
 
 ## <a name="offboard-a-device"></a>Cihaz çıkartan
 
@@ -77,9 +80,9 @@ Bkz [. Cihaz çıkarma](mdb-onboard-devices.md#offboarding-a-device).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [İş için Microsoft Defender'da olayları görüntüleme ve yönetme (önizleme)](mdb-view-manage-incidents.md)
+- [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)
 
-- [Microsoft Defender İş'te (önizleme) tehditlere yanıt verme ve tehditlerini azaltmak](mdb-respond-mitigate-threats.md)
+- [İş için Microsoft Defender'da tehditleri yanıtlama ve azaltmak](mdb-respond-mitigate-threats.md)
 
 - [İşlem merkezinde düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
 

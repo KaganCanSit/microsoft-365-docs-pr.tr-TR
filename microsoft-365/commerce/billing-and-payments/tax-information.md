@@ -2,8 +2,8 @@
 title: Vergi Bilgileri
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: tugu, jmueller
 audience: Admin
@@ -16,17 +16,17 @@ ms.collection:
 search.appverid: MET150
 description: 'Farklı bölgelerde işletmeler için aboneliğiniz için ne kadar vergi Microsoft 365 ücret alın aylık öğrenin. '
 ms.custom:
+- commerce_billing
 - okr_SMB
 - AdminSurgePortfolio
-- commerce_billing
 - AdminTemplateSet
 ms.date: 03/17/2021
-ms.openlocfilehash: 391a3f3d59b5583a89db4e0b2a3d54b3e488f729
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: 421abe7b69323be783831d9ce5de45c21ec98536
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62999042"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313405"
 ---
 # <a name="tax-information"></a>Vergi bilgileri
 

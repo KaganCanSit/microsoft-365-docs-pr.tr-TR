@@ -112,16 +112,23 @@
           href: get-started/localization.md
         - name: Yeni cihazları doğrulama
           href: get-started/validate-device.md
-        - name: Cihazları ayarlama
-          href: get-started/set-up-devices.md
+        - name: Cihazları hazırlama
+          href: null
           items:
-            - name: Yeni cihazları kendiniz kaydettirin
-              href: get-started/register-devices-self.md
+            - name: Kullanmaya başlayın
+              href: get-started/prepare-devices.md
+            - name: Cihaz kaydı
+              href: null
               items:
-                - name: İş Ortakları'nın cihazları kaydetme adımları
-                  href: get-started/register-devices-partner.md
-            - name: Mevcut cihazları kendiniz kaydettirin
-              href: get-started/register-reused-devices-self.md
+                - name: Cihaz kayıt yöntemleri
+                  href: get-started/device-registration-methods.md
+                  items:
+                    - name: El ile kayıt
+                      href: get-started/manual-registration.md
+                    - name: İş ortağı kaydı
+                      href: get-started/partner-registration.md
+                    - name: Mevcut cihazlar için el ile kayıt
+                      href: get-started/manual-registration-existing-devices.md
         - name: Kullanıcı desteği özelliklerini etkinleştirme
           href: get-started/enable-support.md
         - name: Kullanıcılarınızı cihazları kullanmaya hazır hale get get your users
@@ -184,5 +191,5 @@
               href: working-with-managed-desktop/config-setting-deploy.md
         - name: Microsoft Yönetilen Masaüstü ile Windows 11'i önizleme ve test edin
           href: working-with-managed-desktop/test-win11-mmd.md
-    - name: Microsoft Yönetilen Masaüstü belgeleri için değişiklik geçmişi
+    - name: Değişiklik geçmişi
       href: change-history-managed-desktop.md

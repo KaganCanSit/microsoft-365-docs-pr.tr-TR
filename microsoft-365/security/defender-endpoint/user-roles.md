@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: a959edf1eaefcb25fd3fb8279e7e03d317c4f12e
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 6f853df2d37cc41b2effb55ff10418af67df2bd6
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62997555"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324081"
 ---
 # <a name="create-and-manage-roles-for-role-based-access-control"></a>Rol tabanlı erişim denetimi için roller oluşturma ve yönetme
 
@@ -76,7 +76,7 @@ Aşağıdaki adımlar, iş yerlerinde roller oluşturmanıza Microsoft 365 Defen
     > [!NOTE]
     > Bu ayar yalnızca Uç nokta yöneticisi (varsayılan) için Microsoft Defender rolünde kullanılabilir.
 
-- **Bulut için Defender'da** güvenlik ayarlarını yönetme - Uyarı gizleme ayarlarını yapılandırma, otomasyon için klasör dışlamalarını yönetme, ekleme ve çıkarılmış cihazları yönetme, e-posta bildirimlerini yönetme, değerlendirme laboratuvarı yönetme
+- **Güvenlik Merkezi'nde** güvenlik ayarlarını yönetme - Uyarı gizleme ayarlarını yapılandırma, otomasyon için klasör dışlamalarını yönetme, cihaz ekleme ve çıkarılmış cihazları ekleme, e-posta bildirimlerini yönetme ve değerlendirme laboratuvarı yönetme
 
 - **Canlı yanıt özellikleri**
   - **Temel** komutlar:

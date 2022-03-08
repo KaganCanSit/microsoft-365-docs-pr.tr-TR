@@ -11,14 +11,15 @@ search.appverid: ''
 ms.collection:
 - enabler-strategic
 - m365initiative-syntex
+ms.custom: admindeeplinkSPO
 ms.localizationpriority: medium
 description: aynı dosyada form işleme modeli SharePoint Syntex.
-ms.openlocfilehash: b6ccede1de62fbba0e111eb7d9d805b4998e9652
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+ms.openlocfilehash: 6048eabe8bb57da40d940923e313bd496ec1ecec
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63016435"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63330503"
 ---
 # <a name="create-a-form-processing-model-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da form işleme modeli oluşturma
 
@@ -74,13 +75,13 @@ Form işleme modeli oluşturmanın ilk adımı, modeli isimlerini, yeni içerik 
 
         - Varolan bir **liste'yi** seçerseniz **, Seçili liste** kutusunda kullanmak istediğiniz listeyi seçin.
 
-4. Form işleme modeli  oluşturma işlemi sırasında, yeni bir içerik SharePoint oluşturmanız gerekir. İçerik SharePoint türü, ortak özelliklere sahip olan ve bu belirli içerik için sütun veya meta veri özellikleri koleksiyonunu paylaşan bir belge kategorisini temsil eder. SharePoint türleri yönetim merkezinden SharePoint yönetilir.
+4. Form işleme modeli  oluşturma işlemi sırasında, yeni bir içerik SharePoint oluşturmanız gerekir. İçerik SharePoint türü, ortak özelliklere sahip olan ve bu belirli içerik için sütun veya meta veri özellikleri koleksiyonunu paylaşan bir belge kategorisini temsil eder. SharePoint türleri yönetim <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">merkezinden SharePoint yönetilir</a>.
 
    Bu modeli, İçerik Türleri galerisinde var olan bir içerik SharePoint eşlemek için Gelişmiş **ayarlar'ı seçin**.
 
     ![Formlar için model oluştur panelinde Gelişmiş ayarları gösteren ekran görüntüsü.](../media/content-understanding/new-form-model-advanced-settings.png) 
 
-   1. İçerik **türü bölümünde** , yeni içerik türü oluşturmak mı yoksa var olan içerik türünü kullanmak mı istediğinize karar seçin. 
+   1. İçerik <a href="https://go.microsoft.com/fwlink/?linkid=2185074" target="_blank">türü galerisinde</a>, yeni içerik türü oluşturmak mı yoksa var olan bir içerik türünü mi kullanmak için bunu seçin. 
 
    2. Var olan bir içerik türünü kullanmak için Birini **seç'i** seçin ve sonra da listeden bir içerik türü seçin.
 

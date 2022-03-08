@@ -2,8 +2,8 @@
 title: Microsoft Üretkenlik Puanı - İletişim
 f1.keywords:
 - NOCSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 - MOE150
 description: İletişim - Kişiler deneyimi Üretkenlik Puanı ayrıntıları.
-ms.openlocfilehash: 96303783afd9a77d4f490e412f0c182dc040d079
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 3755f3e8c0ab482a2726d1e132d6e2296df08dc7
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983493"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63325929"
 ---
 # <a name="communication--people-experiences"></a>İletişim – Kişiler deneyimleri
 

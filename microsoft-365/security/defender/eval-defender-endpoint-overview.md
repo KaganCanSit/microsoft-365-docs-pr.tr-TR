@@ -1,5 +1,5 @@
 ---
-title: Mimariyi gözden geçirmek de dahil olmak üzere Uç nokta için Microsoft Defender'ı genel bakış değerlendirme
+title: Adım 4. Mimariyi gözden geçirmek de dahil olmak üzere Uç nokta için Microsoft Defender'ı genel bakış değerlendirme
 description: Deneme laboratuvarı veya pilot Microsoft 365 Defender için ayarlama adımları. Güvenlik çözümünün, kuruluşta cihazları, kimlikleri, verileri ve uygulamaları korumak üzere nasıl tasarlanarak tasarlanarak tasarlan olduğunu test edin ve deneyim edin.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -22,14 +22,14 @@ ms.collection:
 - m365solution-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 1eaca5f9902b9617e47cc70d270f569d3a9dc60a
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: 24600644e08bdc2b0a208d68d6da1078543bd2bd
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63014199"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63325957"
 ---
-# <a name="evaluate-microsoft-defender-for-endpoint-overview"></a>Uç nokta için Microsoft Defender'ı değerlendirmeye genel bakış
+# <a name="step-4-evaluate-microsoft-defender-for-endpoint-overview"></a>Adım 4. Uç nokta için Microsoft Defender'ı değerlendirmeye genel bakış
 
 **Aşağıdakiler için geçerlidir:**
 

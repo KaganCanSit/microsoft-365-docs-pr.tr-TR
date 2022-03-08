@@ -2,8 +2,8 @@
 title: Etki alanı nedir?
 f1.keywords:
 - CSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -23,12 +23,12 @@ ms.custom:
 - AdminSurgePortfolio
 - AdminTemplateSet
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 7d3c38b3c9ff89bed613413405fec54718ebdd42
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: eb7ba8a7f9ddcec9d222921e6e6171ea229e0064
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989924"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316695"
 ---
 # <a name="what-is-a-domain"></a>Etki alanı nedir?
 

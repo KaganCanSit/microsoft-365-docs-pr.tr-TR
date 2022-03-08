@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: efrene
 author: efrene
 manager: scotv
-ms.date: 10/31/2017
+ms.date: 02/25/2022
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -23,16 +23,19 @@ search.appverid:
 ROBOTS: NO INDEX, NO FOLLOW
 ms.assetid: ed34fff3-2881-4ed4-9906-1ba6bb8dd804
 description: Bilgisayarınıza 32 bit Office uygulamalarını otomatik olarak Windows 10 ve güncel tutma hakkında bilgi edinin.
-ms.openlocfilehash: f57f9538f859136179491620f1ce11ca17981068
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: aa14aa9407f7115e31f01a8e20ea1324a23452ec
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984665"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63321173"
 ---
 # <a name="prepare-for-office-client-deployment-by-microsoft-365-for-business"></a>İşletmeler için Office istemci dağıtımına Microsoft 365 hazırlama
 
 Bu makale diğer Microsoft 365 İş Ekstra.
+
+> [!NOTE]
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Bu teklif, cihazlar için ek güvenlik özellikleri sağlar. [İş için Defender hakkında daha fazla bilgi öğrenin](../../security/defender-business/mdb-overview.md).
 
 ## <a name="prepare-to-automatically-install-office-apps-to-client-computers"></a>İstemci bilgisayarlara Office uygulamalarını otomatik olarak yükleme hazırlığı
 

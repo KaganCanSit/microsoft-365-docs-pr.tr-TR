@@ -14,16 +14,17 @@ ms.collection:
 - m365initiative-externalcollab
 ms.custom:
 - seo-marvel-apr2020
+- admindeeplinkSPO
 ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: Bu makalede, kimliği doğrulanmamış kullanıcılarla dosya ve klasörleri paylaşmaya yönelik en iyi yöntemler hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: 40bf61820f28656e6f038e76f066e9b122b30177
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: ffe1219c468deef8c78e51e410e862ec52532483
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62959923"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323843"
 ---
 # <a name="best-practices-for-sharing-files-and-folders-with-unauthenticated-users"></a>Kimliği doğrulanmamış kullanıcılarla dosya ve klasör paylaşmak için en iyi yöntemler
 
@@ -42,21 +43,19 @@ Herkes *bağlantısının* süresi dolduğunda artık içeriğe erişmek için k
 
 Kuruluş genelindeki herkes bağlantıları için son kullanma tarihi ayarlamak için
 
-1. SharePoint [merkezini açın](https://admin.microsoft.com/sharepoint).
-2. Sol gezintide İlkeler'i **genişletin ve** Paylaşım'a **tıklayın**.
-3. Herkes **bağlantıları için süre sonu ve izin seçeneklerini belirleyin'in** altında Bu bağlantıların süresi bu kadar gün içinde **dolmaz onay** kutusunu seçin.</br>
-   ![Kuruluş düzeyi SharePoint bağlantı süre sonu ayarlarının ekran görüntüsü.](../media/sharepoint-organization-anyone-link-expiration.png)
-4. Kutuya gün sayısını yazın ve kaydet'e **tıklayın**.
+1. Yönetim merkezini SharePoint, İlkeler'i **genişletin ve** sonra Paylaşım'ı <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**seçin**</a>.
+1. Herkes **bağlantıları için süre sonu ve izin seçeneklerini belirleyin'in** altında Bu bağlantıların süresi bu kadar gün içinde **dolmaz onay** kutusunu seçin.</br>
+   ![Kuruluş düzeyindeki SharePoint bağlantı süre sonu ayarlarının ekran görüntüsü.](../media/sharepoint-organization-anyone-link-expiration.png)
+1. Kutuya gün sayısını yazın ve kaydet'e **tıklayın**.
 
 Belirli bir siteki Herkes bağlantıları için son kullanma tarihi ayarlamak için
 
-1. SharePoint [merkezini açın](https://admin.microsoft.com/sharepoint).
-2. Sol gezintide, **Siteler'i genişletin** ve etkin siteler'e **tıklayın**.
-3. Değiştirmek istediğiniz siteyi seçin ve Paylaşım'a **tıklayın**.
-4. Herkes **bağlantıları için gelişmiş ayarlar'ın** altında, **Herkes bağlantılarının süre** sonu **altında, Kuruluş düzeyi ayarıyla aynı onay** kutusunu temizleyin.</br>
+1. Site yönetim SharePoint açın, **Siteler'i genişletin ve** ardından Etkin <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a>.
+1. Değiştirmek istediğiniz siteyi ve sonra Paylaşım'ı **seçin**.
+1. Herkes **bağlantıları için gelişmiş ayarlar'ın** altında, **Herkes bağlantılarının süre** sonu **altında, Kuruluş düzeyi ayarıyla aynı onay** kutusunu temizleyin.</br>
    ![Site düzeyinde SharePoint bağlantı süre sonu ayarlarının ekran görüntüsü.](../media/sharepoint-organization-anyone-link-expiration-site.png)
-5. Bu **bağlantıların süresi bu kadar gün içinde dolacak** seçeneğini belirleyin ve kutuya gün sayısını yazın.
-6. **Kaydet**'e tıklayın.
+1. Bu **bağlantıların süresi bu kadar gün içinde dolacak** seçeneğini belirleyin ve kutuya gün sayısını yazın.
+1. **Kaydet**'i seçin.
 
 Herkes bağlantısının *süresi dolduğunda* dosya veya klasörün yeni bir Herkes bağlantısıyla yeniden *paylaşılana kadar olduğunu* unutmayın.
 
@@ -70,9 +69,8 @@ Kimliği doğrulanmamış paylaşıma izin vermek istiyor, ancak kimliği doğru
 
 Kuruluş genelindeki herkes bağlantısına izinler ayarlamak için
 
-1. SharePoint [merkezini açın](https://admin.microsoft.com/sharepoint).
-2. Sol gezintide, Paylaşım'a **tıklayın**.
-3. " **Herkes" bağlantıları için gelişmiş ayarlar'ın** altında, kullanmak istediğiniz dosya ve klasör izinlerini seçin.</br>
+1. Yönetim SharePoint açın ve Paylaşım'ı <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**seçin**</a>.
+1. " **Herkes" bağlantıları için gelişmiş ayarlar'ın** altında, kullanmak istediğiniz dosya ve klasör izinlerini seçin.</br>
    ![Kuruluş düzeyi SharePoint Bağlantı izinleri ayarlarının ekran görüntüsü.](../media/sharepoint-organization-anyone-link-permissions.png)
 
 Herkes *bağlantısı* Görüntüle olarak **ayarlanmışsa**, kullanıcılar yine de dosyaları ve klasörleri konuklarla paylaşabilir ve belirli kişiler bağlantılarını kullanarak düzenleme *izinleri* düzenleyebilir. Bu bağlantılar, kuruluş dışından kişilerin konuk olarak kimlik doğrulamasını gerektirir ve bu bağlantılarla paylaşılan dosya ve klasörlerde konuk etkinliğini izleyebilir ve izleyebilirsiniz.
@@ -84,23 +82,22 @@ Herkes *paylaşımı* , sizin için etkinleştirildiğinde, varsayılan paylaş�
 Varsayılan bağlantı ayarını yalnızca kuruluş içindeki kişiler için işe yarar bir bağlantıyla değiştirerek bu riski azaltabilirsiniz. Kimliği doğrulanmamış kullanıcılarla paylaşmak isteyen kullanıcıların bu seçeneği özellikle seçmeleri gerekir.
 
 Kuruluşun varsayılan dosya ve klasör paylaşımı bağlantısını ayarlamak için
-1. SharePoint [merkezini açın](https://admin.microsoft.com/sharepoint).
-2. Sol gezintide, Paylaşım'a **tıklayın**.
-3. Dosya **ve klasör bağlantıları'nın altında** Yalnızca **kuruluşta olan kişiler'i seçin**.
+1. Yönetim SharePoint açın ve Paylaşım'ı <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**seçin**</a>.
+1. Dosya **ve klasör bağlantıları'nın altında** Yalnızca **kuruluşta olan kişiler'i seçin**.
 
    ![Varsayılan bağlantı SharePoint ayarının ekran görüntüsü.](../media/sharepoint-default-sharing-link-company-link.png)
 
-4. **Kaydet'e tıklayın**
+1. **Kaydet'i seçin**
 
 Belirli bir site için varsayılan dosya ve klasör paylaşım bağlantısını ayarlamak için
-1. SharePoint [merkezini açın](https://admin.microsoft.com/sharepoint).
-2. Sol gezintide, **Siteler'i genişletin** ve etkin siteler'e **tıklayın**.
-3. Değiştirmek istediğiniz siteyi seçin ve Paylaşım'a **tıklayın**.
-4. Varsayılan **paylaşım bağlantı türü'nin** altında Kuruluş **düzeyi ayarıyla aynı onay kutusunu** temizleyin.
 
-   ![Site SharePoint varsayılan bağlantı türü ayarlarının ekran görüntüsü.](../media/sharepoint-organization-anyone-link-permissions-site.png)
+1. Site yönetim SharePoint açın, **Siteler'i genişletin ve** ardından Etkin <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a>.
+1. Değiştirmek istediğiniz siteyi ve sonra Paylaşım'ı **seçin**.
+1. Varsayılan **paylaşım bağlantı türü'nin** altında Kuruluş **düzeyi ayarıyla aynı onay kutusunu** temizleyin.
 
-5. Yalnızca **kuruluşta olan kişiler seçeneğini belirtin ve** Kaydet'e **tıklayın**.
+   ![Site SharePoint bağlantı türü ayarlarının ekran görüntüsü.](../media/sharepoint-organization-anyone-link-permissions-site.png)
+
+1. Yalnızca **kuruluşta olan kişiler'i seçin** ve sonra da Kaydet'i **seçin**.
 
 ## <a name="prevent-unauthenticated-sharing-of-sensitive-content"></a>Hassas içeriğin kimliği doğrulanmamış paylaşımını önleme
 
@@ -111,7 +108,7 @@ DLP kuralı oluşturmak için
 2. İlke **oluştur'a tıklayın**.
 3. **Özel'i seçin** ve Sonraki'ne **tıklayın**.
 4. İlke için bir ad yazın ve Sonraki'ye **tıklayın**.
-5.  **İlkenin geçerli olduğu konumlar sayfasında,** site ve hesap ekleme SharePoint tüm ayarları kapatın OneDrive'e **tıklayın**.
+5. **İlkenin uygulanıyor olduğu** konumlar sayfasında, site ve hesap ekleme  SharePoint tüm ayarları kapatın ve **OneDrive'e** **tıklayın**.
 6. İlke **ayarlarını tanımla sayfasında** , Sonraki'ne **tıklayın**.
 7. Gelişmiş **DLP kurallarını özelleştir sayfasında** Kural **oluştur'a tıklayın** ve kural için bir ad yazın.
 8. **Koşullar'ın** altında Koşul **ekle'ye tıklayın** ve İçerik **içeriği'ne tıklayın**.
@@ -119,8 +116,8 @@ DLP kuralı oluşturmak için
 
    ![Durum seçeneklerinin, hassas bilgi türlerinin, duyarlılık etiketlerinin ve bekletme etiketlerinin ekran görüntüsü.](../media/limit-accidental-exposure-dlp-conditions.png)
 
-10. **Eylemler'in** altında **Eylem ekle'ye** tıklayın **ve Bu konumda erişimi kısıtla veya içeriği Microsoft 365 seçin**.
-11. Belirli **konumlarda erişimi kısıtla veya Microsoft 365** onay kutusunu seçin ve ardından "Bağlantısı olan herkes" seçenekleri yoluyla yalnızca içeriğe erişim izni verilen **kişiler'i** seçin.
+10. **Eylemler'in** altında **Eylem ekle'ye** tıklayın **ve Bu konumlarda erişimi kısıtla veya içeriği Microsoft 365 seçin**.
+11. Microsoft 365 konumlarında erişimi kısıtla veya içeriği şifrele onay kutusunu seçin ve ardından "Bağlantıya sahip olan herkes" seçenekleriyle yalnızca içeriğe erişim izni verilen **kişiler'i** seçin.
 
       ![DLP kuralı eylem seçeneklerinin ekran görüntüsü.](../media/limit-accidental-exposure-dlp-anyone-links.png)
 
@@ -130,7 +127,7 @@ DLP kuralı oluşturmak için
 
 ## <a name="protect-against-malicious-files"></a>Kötü amaçlı dosyalara karşı koruma
 
-Anonim kullanıcıların dosyaları karşıya yüklemesine izin veri olduğunda, birinin kötü amaçlı dosyayı karşıya yükleme riski size artar. Microsoft 365'te, *güvenli olmayan Office 365* karşıya yüklenen dosyaları otomatik olarak taramak ve dosyaları karantinaya almak için Office 365 için Defender'daki Kasa Ekleri özelliğini kullanabilirsiniz.
+Anonim kullanıcıların dosyaları karşıya yüklemesine izin veri olduğunda, birinin kötü amaçlı dosyayı karşıya yükleme riski size artar. Daha Microsoft 365'de, *güvenli Kasa* olmayan karşıya yüklenen dosyaları otomatik olarak taramak ve karantinaya almak için Office 365 için Defender'daki Kasa Ekleri özelliğini kullanabilirsiniz.
 
 Güvenli ekleri açmak için
 1. Güvenlik [ve Uyumluluk Kasa AtP](https://protection.office.com/safeattachmentv2) Ekleri sayfasını açın.
@@ -139,13 +136,13 @@ Güvenli ekleri açmak için
 
    ![Güvenlik ve Uyumluluk Merkezi'nde güvenli ekler ayarının ekran görüntüsü.](../media/safe-attachments-setting.png)
 
-4. İsteğe bağlı olarak Belgeler Kasa i de açabilirsiniz ve ardından Kaydet'e **tıklayın.**
+4. İsteğe bağlı olarak, Kasa'i de açabilirsiniz ve ardından Kaydet'e **tıklayın.**
 
-Ek [rehberlik için bkz. SharePoint, OneDrive ve](../security/office-365-security/mdo-for-spo-odb-and-teams.md) Microsoft Teams için [ATP ve SharePoint,](../security/office-365-security/turn-on-mdo-for-spo-odb-and-teams.md) OneDrive ve Microsoft Teams için ATP'yi açma.
+Ek [rehberlik için SharePoint, OneDrive ve Microsoft Teams için ATP'ye](../security/office-365-security/mdo-for-spo-odb-and-teams.md) bakın SharePoint, OneDrive ve Microsoft Teams için [ATP'yi](../security/office-365-security/turn-on-mdo-for-spo-odb-and-teams.md) açma.
 
 ## <a name="add-copyright-information-to-your-files"></a>Dosyalarınıza telif hakkı bilgileri ekleme
 
-Microsoft 365 Uyumluluk yönetim merkezinde duyarlılık etiketleri kullanıyorsanız, etiketlerinizi, bu belgelerinize otomatik olarak filigran veya üst bilgi ya da alt bilgi ekecek şekilde Office yapılandırabilirsiniz. Bu şekilde, paylaşılan dosyaların telif hakkı veya diğer sahiplik bilgilerini içerdiğindan emin olun.
+Microsoft 365 Uyumluluk yönetim merkezinde duyarlılık etiketleri kullanıyorsanız, etiketlerinizi daha küçük belgelere filigran veya üst bilgi ya da alt bilgi eklemek için Office yapılandırabilirsiniz. Bu şekilde, paylaşılan dosyaların telif hakkı veya diğer sahiplik bilgilerini içerdiğindan emin olun.
 
 Etiketli dosyaya alt bilgi eklemek için
 

@@ -2,8 +2,8 @@
 title: ServiceNow ile destek tümleştirmeyi yapılandırma - Temel Kimlik Doğrulama
 f1.keywords:
 - NOCSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -17,12 +17,12 @@ ROBOTS: NOINDEX, NOFOLLOW
 search.appverid:
 - MET150
 description: ServiceNow için Kapsam Sertifikalı uygulama yükleme ve yapılandırma kılavuzu.
-ms.openlocfilehash: cf9b5149847b51d9d701a49e32624ada3f708a17
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: 23fab410b17cea9635c63b0ed0e4225d158dfdc8
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63010185"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323857"
 ---
 # <a name="configure-support-integration-with-servicenow---basic-authentication"></a>ServiceNow ile destek tümleştirmeyi yapılandırma - Temel Kimlik Doğrulama
 
@@ -201,6 +201,16 @@ Bu adımlar, ServiceNow örneğiniz ve destek hizmetleriniz arasında tümleşti
     En Microsoft 365 tümleştirme uygulaması, tümleştirmenin çalıştığını sağlamak için testler yürütür. Yapılandırmayla ilgili bir sorun varsa, neyin düzeltilecek şekilde olması gerektiğini bir hata iletisiyle açıklar. Aksi takdirde, uygulama hazır olur.
      :::image type="content" source="../../media/ServiceNow-guide/snowbasic-9.png" lightbox="../../media/ServiceNow-guide/snowbasic-9.png" alt-text="Grafik kullanıcı arabirimi, metin, uygulama, e-posta Açıklaması otomatik olarak oluşturulur":::
 
+1. \[ServiceNow Yönetici\] Var olan bir kullanıcı için Microsoft desteği tümleştirmesini etkinleştirin.
+
+    Microsoft 365 rollerinden biri olan kullanıcı için destek tümleştirmesi etkinleştirilmiştir:
+
+    - xmiomsm365assis.insightsuser\_\_\_\_
+
+    - xmiomsm365assis.administrator\_\_\_
+
 1. \[İsteğE\] BAĞLı [Role sahip x_mioms_m365_assis.administrator bağlantısı] Hesabı Microsoft 365 Yönetici.
+
     Herhangi bir kullanıcı x_mioms_m365_assis.administrator rolüne sahipse ve bir Microsoft 365 destek vakasını yönetmek için farklı Microsoft 365 hesapları kullanıyorsa, bu kullanıcının Microsoft 365 yönetici e-postasını ayarlamak için Microsoft 365 > Bağlantı Hesabı Microsoft 365 e gitmeleri gerekir.
+    
     :::image type="content" source="../../media/ServiceNow-guide/ServiceNow-guide-image21.png" alt-text="Grafik kullanıcı arabirimi, metin, uygulama Açıklaması otomatik olarak oluşturulur":::

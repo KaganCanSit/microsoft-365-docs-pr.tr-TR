@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Duyarlılık etiketi  oluşturduktan sonra, dosyalara ve e-postalara otomatik olarak bir etiket atayabilirsiniz veya kullanıcılardan önerdiğiniz etiketi seçmelerini istenebilirsiniz.
-ms.openlocfilehash: 6802947e786f13a577a6f3bf58ea3001599ee4d8
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: f617338448b71541d5ab0d914ab1a3198d4f486c
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011893"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63319663"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>Otomatik olarak içeriğe duyarlılık etiketi uygulama
 
@@ -311,7 +311,7 @@ Her durumda, eşlenmiş dosyalar hesap kalıcı olarak OneDrive etiketlenmiş ol
 
 5. Otomatik etiketleme ilkenizi adla **: Otomatik** olarak uygulanan etiketi, konumları ve koşulları tanımlamak için benzersiz bir ad ve isteğe bağlı olarak bir açıklama girin.
 
-6. Etiketin **uygulanıyor olduğu** konumları seçin sayfası için: Konum, Konum, Konum ve Konum Exchange SharePoint'OneDrive. Seçtiğiniz konumlarda varsayılan olarak Tüm'leri **tutmak** istemiyorsanız, belirli örnekleri seçmek için bağlantıyı seçin. Sonra Da **Sonraki'yi seçin**.
+6. Etiketin **uygulanıyor olduğu** konumları seçin sayfası için: Konum, Konum, Konum ve Konum Exchange SharePoint'OneDrive. Seçtiğiniz konumlarda varsayılan olarak Tüm seçeneğini kullanmak istemiyorsanız,  dahil etmek istediğiniz belirli örnekleri seçmek için bağlantıyı seçin veya hariç tutulacak belirli örnekleri seçmek için bağlantıyı seçin. Sonra Da **Sonraki'yi seçin**.
 
     ![Otomatik etiketleme yapılandırması için konumlar sayfasını seçin.](../media/locations-auto-labeling-wizard.png)
     

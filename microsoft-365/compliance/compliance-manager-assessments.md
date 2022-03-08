@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Uyumluluk Yöneticisi'nde, organizasyonunız için önemli olan yasal düzenlemeler ve sertifikalara ilişkin gereksinimleri karşılamanıza yardımcı olacak değerlendirmeler sağlayın.
-ms.openlocfilehash: 950178b638b020e9d44301db3a335c73bbb55311
-ms.sourcegitcommit: d4797cfc15c732f1a7ef21e4f944e672a7170f9a
+ms.openlocfilehash: 59f2bd89a798567d51c3e28fda574e7b9f0ba326
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63016645"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63319539"
 ---
 # <a name="build-and-manage-assessments-in-compliance-manager"></a>Uyumluluk Yöneticisi'nde değerlendirmeleri oluşturma ve yönetme
 
@@ -180,9 +180,11 @@ Denetimlerin ve [geliştirme eylemlerinin nasıl izlen yaptıkları ve puanland�
 
 Değerlendirme için bir güncelleştirme kullanılabilir olduğunda, bir bildirim alır ve güncelleştirmeyi kabul etme veya daha sonra erteleme seçeneğiniz olur.
 
+Güncelleştirmeler, Microsoft şablonlarına dayalı değerlendirmeler için kullanılabilir. Örneğin, microsoft şablonlarıyla kullanım Microsoft 365. Organizasyonunız diğer ürünleri değerlendirmek için evrensel şablonlar kullanıyorsa, devralma desteklenmiyor olabilir. Daha fazla bilgi için bkz [. Değerlendirme şablonlarını genişletme](compliance-manager-templates-extend.md).
+
 ### <a name="what-causes-an-update"></a>Güncelleştirmeye neden olan nedir?
 
-Değerlendirme güncelleştirmesi, puanlamayı etkileyen temel şablon değişiklikleri olduğunda oluşur. Değişiklikler, denetim eşlemesini veya mevzuat değişikliklerine veya ürün değişikliklerine dayalı olarak diğer kılavuzu ayarlamayı içeriyor olabilir. Değerlendirme güncelleştirmeleri, (örneğin, özel bir şablonun yanı sıra Microsoft'tan da değiştirildiğinde [) sizin](compliance-manager-templates-modify.md) organizasyondan kaynakleştirilebilir.
+Değerlendirme güncelleştirmesi, puanlamayı etkileyen temel şablon değişiklikleri olduğunda oluşur. Değişiklikler, denetim eşlemesini veya mevzuat değişikliklerine veya ürün değişikliklerine dayalı olarak diğer kılavuzu ayarlamayı içeriyor olabilir. Değerlendirme güncelleştirmeleri, hem sizin (örneğin, bir [özel şablonun](compliance-manager-templates-modify.md) değiştirildiğinde) hem de Microsoft'tan kaynaklandığını gösterir.
 
 Microsoft uzattıktan sonra bir Uyumluluk Yöneticisi şablonunu güncellerse, değerlendirmeniz bu güncelleştirmeleri kabul ettiyken devralacak. Değerlendirmeniz, genişletilen değerlendirmeye uygulanan ek öznitelikleri korur.
 

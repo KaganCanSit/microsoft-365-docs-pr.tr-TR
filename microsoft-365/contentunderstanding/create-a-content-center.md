@@ -8,17 +8,18 @@ audience: admin
 ms.topic: article
 ms.prod: microsoft-365-enterprise
 search.appverid: ''
+ms.custom: admindeeplinkSPO
 ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Microsoft SharePoint Syntex'da içerik merkezi oluşturma hakkında bilgi SharePoint Syntex.
-ms.openlocfilehash: e44ed9433562bdfe8da471bd08c4711bc405b92d
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 0bab102ae440b8cf2c797458e7602c61794d0d06
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988592"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63311599"
 ---
 # <a name="create-a-content-center-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da içerik merkezi oluşturma
 
@@ -46,7 +47,7 @@ Bir SharePoint yöneticisi, yönetim merkezi site hazırlama paneli aracılığ�
 
 Yeni içerik merkezi oluşturmak için:
 
-1. Microsoft 365 yönetim merkezi Yönetim Merkezi Etkin [SharePoint **sayfasına** gidin](https://admin.microsoft.com/sharepoint?page=siteManagement&modern=true).
+1. Microsoft 365 yönetim merkezi Yönetim Merkezi'nde <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">etkin SharePoint'> **gidin**</a>.
 
 2. Etkin Siteler **sayfasında Oluştur'a** **tıklayın ve** Diğer seçenekler'i **seçin**.
 
@@ -59,7 +60,7 @@ Yeni içerik merkezi oluşturmak için:
 
 5. **Bitti'yi seçin**.
  
-İçerik merkezi sitesi oluşturdukta, bu sitenin Yönetim **Merkezi'nin** Etkin siteler SharePoint görünür. 
+İçerik merkezi sitesi oluşturdukta, bu sitenin Site Yönetim <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**Merkezi'nde**</a> Etkin SharePoint gösterilir. 
 
 ### <a name="give-access-to-additional-users"></a>Ek kullanıcılara erişim verme
  

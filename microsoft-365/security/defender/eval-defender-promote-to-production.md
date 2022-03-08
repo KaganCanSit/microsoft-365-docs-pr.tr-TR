@@ -1,5 +1,5 @@
 ---
-title: Değerlendirme ortamınızı Microsoft 365 Defender üretim ortamına tanıtma
+title: Adım 7. Değerlendirme ortamınızı Microsoft 365 Defender üretim ortamına tanıtma
 description: Bu makaleyi, Bulut Uygulamaları için MDI, MDO, MDE ve Defender evallarını Microsoft 365 Defender veya M365D'de canlı ortamınıza tanıtmak için kullanın.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -20,14 +20,14 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: e4b852ef7f252033a67e6aa3f1f8183400c18bdb
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 47f36d965c9b2b6ef5f106c590e47fe0251163d8
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63034406"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323983"
 ---
-# <a name="promote-your-microsoft-365-defender-evaluation-environment-to-production"></a>Değerlendirme ortamınızı Microsoft 365 Defender üretime tanıtma
+# <a name="step-7-promote-your-microsoft-365-defender-evaluation-environment-to-production"></a>Adım 7. Değerlendirme ortamınızı Microsoft 365 Defender üretime tanıtma
 
 **Aşağıdakiler için geçerlidir:**
 - Microsoft 365 Defender

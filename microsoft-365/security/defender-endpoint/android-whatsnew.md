@@ -11,16 +11,15 @@ author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection:
-- m365-security-compliance
+ms.collection: m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 1e235329fa57a703ab678049dd0da2d4f135de99
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: d250fefbdcc2c268563b6321ee7d91eca4881063
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "62974171"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63328701"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-android"></a>Android'de Uç Nokta için Microsoft Defender'daki güncelleştirmeler
 
@@ -47,7 +46,7 @@ Sürüm Derlemesi: 1.0.3501.0301 Sürüm ayı: Uç Nokta için Kasım 2021 Micro
 **Bu, organizasyonlarınızı nasıl etkiler:** Bu değişiklikler, Android 11 veya sonraki bir sürümü çalıştıran cihazlarda Uç Nokta için Microsoft Defender'ı ve 1.0.3501.0301 veya daha sonraki derlemeleri yayım yapmak için Uç Nokta için Defender'ı kullanıyorsanız yürürlüğe girecektir.
 
 > [!NOTE]
-> Yeni depolama izinleri yönetici tarafından Izinler alanı aracılığıyla 'Otomatik Onayla' olarak Microsoft Endpoint Manager. Kullanıcının bu izine erişim sağlamak için işlem ihtiyacı vardır.
+> Yeni depolama izinleri, yönetici tarafından izinler aracılığıyla "Otomatik Onayla" olarak yapılandır Microsoft Endpoint Manager. Kullanıcının bu izine erişim sağlamak için işlem ihtiyacı vardır.
 
 - **Kullanıcı deneyimi:** Kullanıcılar, uygulama güvenliği için izinlerin eksik olduğunu belirten bir bildirim alır. Kullanıcı bu izni yoksayıyorsa, cihazda 'Uygulama güvenliği' işlevi kapalı olur. Kullanıcı izni kabul etmez veya reddetmezse, cihazı kilitlerken veya uygulamayı aken onay olana kadar istem almaya devam eder.
 
@@ -58,7 +57,7 @@ Sürüm Derlemesi: 1.0.3501.0301 Sürüm ayı: Uç Nokta için Kasım 2021 Micro
 
 1.0.3501.0301 veya daha sonraki bir sürümü oluşturmak için Uç Nokta için Defender'ı güncelleştirildikten sonra istendiğinde kullanıcılarınızı ve yardım masasına (uygulan uygulansa) bilgilendirin. İzinleri kabul etmek için kullanıcıların:
 
-1. Uç nokta için Defender uygulama içinde bildirimine dokunun veya Uç nokta için Defender uygulamasını açın. Kullanıcılar gereken izinleri listeen bir ekran görebilirler. İzin işaretinin yanında yeşil bir onay Depolama eksik.
+1. Uç nokta için Defender uygulama içinde bildirimine dokunun veya Uç nokta için Defender uygulamasını açın. Kullanıcılar gereken izinleri listeen bir ekran görebilirler. Bu iznin yanında yeşil bir onay Depolama eksik.
 
 2. **Başlat'a dokunun**.
 

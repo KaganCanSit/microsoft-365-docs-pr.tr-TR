@@ -4,7 +4,7 @@ description: DKE, çok hassas verileri koruyarak anahtarın tam kontrolünü kor
 author: kccross
 ms.author: krowley
 manager: laurawi
-ms.date: 01/29/2021
+ms.date: 02/28/2022
 ms.topic: conceptual
 ms.service: information-protection
 audience: Admin
@@ -13,12 +13,12 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: dd445fae8f344be68726fd9dda6457badc18f5c5
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: b16733a1d42ca245f096038f567be6fbd0c3fb2a
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63026635"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320613"
 ---
 # <a name="double-key-encryption-for-microsoft-365"></a>Double Key Encryption for Microsoft 365
 
@@ -505,7 +505,7 @@ DKE hizmetini kaydetmek için:
    Örneğin: `https://mydkeservicetest.com`
 
    - Girdiğiniz URL, DKE hizmetinizin dağıtıldı olduğu ana bilgisayar adı ile eşleşmeli.
-   - Etki alanı kayıtlı bir etki [alanı olmalıdır](/azure/active-directory/develop/reference-breaking-changes#appid-uri-in-single-tenant-applications-will-require-use-of-default-scheme-or-verified-domains).
+   - Etki alanı, doğrulanmış bir etki [alanı olmalıdır](/azure/active-directory/develop/reference-breaking-changes#appid-uri-in-single-tenant-applications-will-require-use-of-default-scheme-or-verified-domains).
    - Yerel olarak test etmek için Visual Studio kullanın`https://localhost:5001`.
    - Her durumda, düzen **https olması gerekir**.
 
@@ -581,7 +581,7 @@ DKE'yi ayarlamayı bitirdikten sonra, HYOK etiketlerini kullanarak koruma altın
 
 Son derece düzenlemeye tabi endüstrilerde yer alan bazı müşteriler için, yazılım tabanlı anahtarlar kullanan bu standart başvuru uygulamasının gelişmiş uyumluluk yükümlülükleri ve müşterilerimizin yerine getirilene kadar yeterli olmadığını fark ediyoruz. DKE hizmetsinde aşağıdakiler gibi gelişmiş anahtar yönetimi seçeneklerini desteklemek için üçüncü taraf donanım güvenlik modülü (HSM) satıcılarla ortaklıkdık:
 
- - [Güven](https://www.entrust.com/digital-security/hsm/services/packaged-services/double-key-encryption-integration#:~:text=Entrust%20Double%20Key%20Encryption%20for%20Microsoft%20AIP%2C%20offered,trust%20for%20the%20protection%20of%20sensitive%20cryptographic%20keys.)
+- [Güven](https://www.entrust.com/digital-security/hsm/services/packaged-services/double-key-encryption-integration#:~:text=Entrust%20Double%20Key%20Encryption%20for%20Microsoft%20AIP%2C%20offered,trust%20for%20the%20protection%20of%20sensitive%20cryptographic%20keys.)
 
 - [Thales](https://cpl.thalesgroup.com/cloud-security/encryption/double-key-encryption)
 

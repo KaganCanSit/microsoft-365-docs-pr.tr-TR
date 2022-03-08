@@ -9,12 +9,12 @@ ms.collection: M365-modern-desktop
 ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: 7e4ee96fb336205633430f34111d3d845c1f0e6e
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+ms.openlocfilehash: d0c8dbb71a56701cb5ca75aadb1a5bcc7290844f
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63016438"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323367"
 ---
 # <a name="deploy-apps-to-devices"></a>Uygulamaları cihazlara dağıtma
 
@@ -117,7 +117,7 @@ Kullanıcılarınızı bu gruplara şu kişilerden birini ekleyin:
 1. Dağıtım ve [Intune Şirket Portalı](company-portal.md).
 1. [Lisans atama](assign-licenses.md).
 1. Uygulamaları dağıtın (bu makale).
-1. [Cihazları ayarlayın](set-up-devices.md).
+1. [Cihazları hazırlayın](prepare-devices.md).
 1. [AutoPilot ve Kayıt Durumu Sayfası ile ilk çalıştırma deneyimini ayarlayın](esp-first-run.md).
 1. [Kullanıcı desteği özelliklerini etkinleştirin](enable-support.md).
 1. [Kullanıcılarınızı cihazları kullanmaya hazır hale hazırlayın](get-started-devices.md).

@@ -16,16 +16,17 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 - admindeeplinkTEAMS
+- admindeeplinkSPO
 ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: Konuk ekibin Microsoft 365, konuşma ve belgelerle işbirliği yapmak için gerekli yapılandırma adımları hakkında bilgi Teams.
-ms.openlocfilehash: 4128f6cd5293972dd7383eed0802f7969f488d8a
-ms.sourcegitcommit: 6722f66915dfe30c3d0ade97b3e9080a9592251b
+ms.openlocfilehash: bb6ccf4f3e17192d86675d99072eca8b836973e2
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "62990622"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324557"
 ---
 # <a name="collaborate-with-guests-in-a-team"></a>Ekipte konuklarla işbirliği yapma
 
@@ -110,10 +111,10 @@ Kimliği doğrulanmamış kullanıcılarla dosya ve klasör paylaşımına izin 
 
 Kuruluş SharePoint paylaşım ayarlarını ayarlamak için
 
-1. Gezinti <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>, Yönetim merkezleri altında, Gezinti **Bölmesi'nin altında** **Ekle'SharePoint**.
-2. SharePoint yönetim merkezinde, sol gezinti bölmesinde İlkeler'i genişletin **ve Paylaşım'a** **tıklayın**.
+1. Gezinti <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>, sol gezinti bölmesindeki Yönetim **merkezleri'nin altında** **Seçenekler'i SharePoint**.
+2. SharePoint yönetim merkezinde, sol gezinti bölmesinde İlkeler'i **genişletin ve sonra** Paylaşım'ı <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**seçin**</a>.
 3. Dış paylaşım için dış SharePoint Herkes veya Yeni **ve var olan** **konuklar olarak ayarlayın**.
-4. Değişiklikler yaptıysanız Kaydet'e **tıklayın**.
+4. Değişiklik yaptıysanız Kaydet'i **seçin**.
 
 
 ## <a name="sharepoint-organization-level-default-link-settings"></a>SharePoint düzeyinde varsayılan bağlantı ayarlarını değiştirme
@@ -133,9 +134,9 @@ Kullanıcılar dosya ve klasör paylaştığında varsayılan olarak seçilen a�
 
 Kuruluş düzeyinde SharePoint bağlantı ayarlarını ayarlamak için
 
-1. Yönetim merkezinde Paylaşım SharePoint gidin.
+1. Yönetim <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**merkezinde Paylaşım**</a> SharePoint gidin.
 2. Dosya **ve klasör bağlantıları'nın** altında, kullanmak istediğiniz varsayılan paylaşım bağlantısını seçin.
-3. Değişiklikler yaptıysanız Kaydet'e **tıklayın**.
+3. Değişiklik yaptıysanız Kaydet'i **seçin**.
 
 ## <a name="create-a-team"></a>Ekip oluşturma
 
@@ -158,11 +159,11 @@ Bu ekip için istediğiniz erişim türüne izin vermek için site düzeyinde pa
 ![Site dış SharePoint ayarlarının ekran görüntüsü.](../media/sharepoint-site-external-sharing-settings.png)
 
 Site düzeyinde paylaşım ayarlarını ayarlamak için
-1. Gezinti SharePoint bölmesinde Siteler'i genişletin **ve Etkin** **siteler'e tıklayın**.
+1. Gezinti SharePoint gezinti bölmesinde Siteler'i genişletin ve **Etkin** <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a>.
 2. Yeni oluşturduğunuz ekip için siteyi seçin.
-3. ... ve **Paylaşım'ı seçin**.
+3. Şu seçeneği seçin: ... ve **Paylaşım'ı seçin**.
 4. Paylaşımın Herkes veya Yeni ve mevcut **konuklar** **olarak ayarlanmış olduğundan emin olmak**.
-5. Değişiklikler yaptıysanız Kaydet'e **tıklayın**.
+5. Değişiklik yaptıysanız Kaydet'i **seçin**.
 
 ## <a name="invite-users"></a>Kullanıcıları davet et
 

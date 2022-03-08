@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Kuruluşun verilerini korumaya yardımcı olmak ama nereden başlayacağınıza emin değil misiniz? Etiketleme yolculuğunuza yardımcı olacak bazı pratik kılavuzu okuyun.
-ms.openlocfilehash: b5d7a6c18f112b7f35aa2599ff2639894a735f9b
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: adc939d44715bcfaeb97cdbfa530f55a5aeecd4e
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63014165"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322093"
 ---
 # <a name="get-started-with-sensitivity-labels"></a>Duyarlılık etiketleriyle çalışmaya başlama
 
@@ -99,6 +99,7 @@ Tüm senaryolarda duyarlılık etiketleri [ve ilkeleri oluşturma ve yapılandı
 |Belgeler şifrelenirken birlikte yazma ve otomatik Office masaüstü uygulamalarını kullanma | [Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazma özelliği etkinleştirme](sensitivity-labels-coauthoring.md)
 |Belgelere ve e-postalara otomatik olarak duyarlılık etiketleri uygulama | [Otomatik olarak içeriğe duyarlılık etiketi uygulama](apply-sensitivity-label-automatically.md)|
 |Teams ve SharePoint'de içeriği korumak için duyarlılık Teams kullanın |[Site oluşturma, Microsoft Teams grupları Microsoft 365 duyarlılık SharePoint kullanma](sensitivity-labels-teams-groups-sites.md)|
+|Aynı adres ve sitedeki siteler ve tek tek belgeler için varsayılan paylaşım bağlantı türünü yapılandırmak SharePoint OneDrive |[Site ve site ve belgeleriniz için varsayılan paylaşım bağlantısını ayarlamak üzere duyarlılık SharePoint OneDrive](sensitivity-labels-default-sharing-link.md)|
 |Bir çalışma kitaplığında tanımlanan belgelerin otomatik olarak sınıflandırılması ve korunması için belge anlama modeline duyarlılık SharePoint etiket ekleme |[Microsoft SharePoint Syntex'da bir modele duyarlılık SharePoint Syntex](/microsoft-365/contentunderstanding/apply-a-sensitivity-label-to-a-model)|
 |Belirli bir duyarlılık etiketiyle dosya veya e-posta paylaşımı konusunda kullanıcıları engelleme veya uyarma |[DLP ilkelerde duyarlılık etiketlerini koşullar olarak kullanma](dlp-sensitivity-label-as-condition.md) |
 |Belirli bir duyarlılık etiketine sahip dosyaları veya e-postaları korumak veya silmek için bekletme etiketi uygulama|[İçeriği tutmak veya silmek için otomatik olarak bekletme etiketi uygulama](apply-retention-labels-automatically.md) |

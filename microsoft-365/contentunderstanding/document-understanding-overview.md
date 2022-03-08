@@ -14,12 +14,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Microsoft SharePoint Syntex'da belgeyi anlama hakkında bilgi SharePoint Syntex.
-ms.openlocfilehash: 0c72c4e0d3865a7247db78760d02a51f7f91dbcf
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: 4c4910ac2cec9688af60c6999e67e1be41701ef3
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016521"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322597"
 ---
 # <a name="document-understanding-overview-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da belgeyi anlama genel bakış
 
@@ -113,6 +113,7 @@ Belge anlama modelleri aşağıdaki dosya türlerini destekler:
 ### <a name="supported-languages"></a>Desteklenen diller
 
 Belge anlama modelleri aşağıdaki dilleri destekler:
+- English
 - French
 - German
 - Italian

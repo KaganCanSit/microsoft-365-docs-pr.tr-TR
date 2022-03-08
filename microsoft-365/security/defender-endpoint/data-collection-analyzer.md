@@ -1,5 +1,5 @@
 ---
-title: Windows'da gelişmiş sorun giderme için veri Windows
+title: Windows'da gelişmiş sorun giderme için veri toplama
 description: Karmaşık sorun giderme senaryolarında veri toplamak üzere istemci çözümleyicisini kullanmayı öğrenin
 keywords: bilgi toplama, mdeclientanalyzer sorunlarını giderme, gelişmiş sorun giderme
 ms.prod: m365-security
@@ -13,19 +13,17 @@ author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection:
-- M365-security-compliance
-- m365initiative-m365-defender
+ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 06d201d6f3604580ad9543616c48e526f63bac83
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: 513432dfb24af89451c4d8290ce5fde0951819b9
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016535"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322709"
 ---
-# <a name="data-collection-for-advanced-troubleshooting-on-windows"></a>Windows'da gelişmiş sorun giderme için veri Windows
+# <a name="data-collection-for-advanced-troubleshooting-on-windows"></a>Windows'da gelişmiş sorun giderme için veri toplama
 
 **Aşağıdakiler için geçerlidir:**
 - [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -38,11 +36,11 @@ Microsoft destek uzmanlarıyla işbirliği yapmak üzere daha karmaşık senaryo
 ![Komut satırda istemci çözümleyicisi parametrelerinin görüntüsü.](images/d89a1c04cf8441e4df72005879871bd0.png)
 
 > [!NOTE]
-> Herhangi bir gelişmiş sorun giderme parametresi kullanıldığında, çözümleyici ilgili destek [ günlükleriniMpCmdRun.exe](/microsoft-365/security/defender-endpoint/command-line-arguments-microsoft-defender-antivirus) için Microsoft Defender Virüsten Koruma aratır.
+> Herhangi bir gelişmiş sorun giderme parametresi kullanıldığında, çözümleyici Microsoft Defender Virüsten Koruma [MpCmdRun.exe](/microsoft-365/security/defender-endpoint/command-line-arguments-microsoft-defender-antivirus) destek günlüklerini toplamak için çözümleyiciyi aratır.
 
-**-h** - Standart [Windows ek olarak](/windows-hardware/test/wpt/wpr-command-line-options) ayrıntılı bir genel performans izlemesi toplamak için Performans Kaydedicisi'ne çağrılar.
+**-h** - Standart günlük [kümesine ek](/windows-hardware/test/wpt/wpr-command-line-options) olarak ayrıntılı bir genel performans izlemesi toplamak için Windows Performans Kaydedicisi'ne çağrılar.
 
-**-l** - Hafif bir perfmon [Windows](/windows-server/remote/remote-desktop-services/rds-rdsh-performance-counters) izlemek için yerleşik Performans İzleyicisi'ne çağrılar. Zaman içinde oluşan ancak isteğe bağlı olarak yeniden üreti güç performans düşüşü sorunlarının tanılaması sırasında bu yararlı olabilir.
+**-l** - Hafif bir perfmon [izlemesi](/windows-server/remote/remote-desktop-services/rds-rdsh-performance-counters) toplamak için yerleşik Windows Performans İzleyicisi'ne çağrılar. Zaman içinde oluşan ancak isteğe bağlı olarak yeniden üreti güç performans düşüşü sorunlarının tanılaması sırasında bu yararlı olabilir.
 
 **-c** - Gerçek [zamanlı dosya sisteminin,](/sysinternals/downloads/procmon) kayıt defterinin ve süreç/iş parçacığı etkinliğinin gelişmiş izlenmesi için süreç izlemesine çağrılar. Bu özellikle çeşitli uygulama uyumluluk senaryolarında sorun giderirken kullanışlıdır.
 
@@ -50,7 +48,7 @@ Microsoft destek uzmanlarıyla işbirliği yapmak üzere daha karmaşık senaryo
 
 **-b** - '-c' ile aynıdır, ancak işlem izleme izlemesi bir sonraki başlatma sırasında başlatılır ve yalnızca -b yeniden kullanılırken durdurulur.
 
-**-a** - Virüsten koruma [Windows](/windows-hardware/test/wpt/wpr-command-line-options) (MsMpEng.exe) ile ilgili yüksek CPU sorunlarını çözümlemeye özgü ayrıntılı bir performans izlemesi toplamak için Performans Kaydedicisi'ne MsMpEng.exe.
+**-a** - Virüsten koruma işlemiyle (MsMpEng.exe) ilgili yüksek CPU sorunlarının çözümlemesine özgü ayrıntılı bir performans izlemesi toplamak için [Windows](/windows-hardware/test/wpt/wpr-command-line-options) Performans Kaydedicisi'ne MsMpEng.exe.
 
 **-v** - En ayrıntılı [ -MpCmdRun.exe bayraklarıyla](/windows/security/threat-protection/microsoft-defender-antivirus/command-line-arguments-microsoft-defender-antivirus) birlikte virüsten koruma yazılımı veya komut satırı bağımsız değişkenlerini kullanır.
 
@@ -58,7 +56,7 @@ Microsoft destek uzmanlarıyla işbirliği yapmak üzere daha karmaşık senaryo
 
 **-q** - Uç nokta DLPDiagnose.ps1 DLP için temel yapılandırmayı ve gereksinimleri doğrulayan çözümleyici 'Araçlar' dizininden gelen arama betiği kullanılır.
 
-**-d** - **MsSenseS**.exe (Windows Server 2016 eski işletim sistemi) ve ilgili işlemlerin bellek dökümü toplar.
+**-d** - **MsSenseS**.exe (Windows Server 2016 veya daha eski işletim sistemi) ve ilgili işlemlerin bellek dökümü toplar.
 
 - \* Bu bayrak, yukarıda belirtilen bayraklarla birlikte kullanılabilir.
 - \*\*[PPL korumalı işlemlerin](/windows-hardware/drivers/install/early-launch-antimalware) bellek dökümü yakalaması MsSense.exe MsMpEng.exe şu anda çözümleyici tarafından desteklenmiyor.

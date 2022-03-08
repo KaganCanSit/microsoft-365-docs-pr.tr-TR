@@ -18,12 +18,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Uç nokta veri kaybını önleme (EPDLP) konumlarında kullanmak üzere Microsoft 365 kaybı önleme (DLP) ilkelerini yapılandırmayı öğrenin.
-ms.openlocfilehash: 0f663ac949419c3a726a0af23eba4a0f14928515
-ms.sourcegitcommit: af73b93a904ce8604be319e8dc7cadaf65d50534
+ms.openlocfilehash: 5fc271028e4c20d431c4535fcdbf902bf17cdbb4
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "63010089"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63311851"
 ---
 # <a name="using-endpoint-data-loss-prevention"></a>Uç nokta veri kaybını önlemeyi kullanma
 
@@ -465,7 +465,7 @@ Bu senaryoda, dosyaları Çok Gizli duyarlılık **etiketiyle** eşitlemek OneDr
 - [DLP ilkesi oluşturma, sınama ve ayarlama](create-test-tune-dlp-policy.md)
 - [Etkinlik gezgini ile çalışmaya başlama](data-classification-activity-explorer.md)
 - [Uç Nokta için Microsoft Defender](/windows/security/threat-protection/)
-- [Makine makineniz için ekleme araçları Windows 10 yöntemleri](/microsoft-365/compliance/dlp-configure-endpoints)
+- [11 Windows 10 cihaz Windows cihaz ekleme ve cihaz ekleme Microsoft 365 genel bakış](/microsoft-365/compliance/device-onboarding-overview)
 - [Microsoft 365 aboneliği](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1)
 - [Azure Active Directory (AAD) bir araya](/azure/active-directory/devices/concept-azure-ad-join)
 - [Temel Microsoft Edge yeni Chromium](https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium)

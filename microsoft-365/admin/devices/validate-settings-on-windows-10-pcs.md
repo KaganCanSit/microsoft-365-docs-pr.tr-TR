@@ -27,18 +27,21 @@ search.appverid:
 - MET150
 ms.assetid: fae8819d-7235-495f-9f07-d016f545887f
 description: İşletmeler için Microsoft 365 koruma ayarlarının kullanıcılarınızı ve cihazlarınızı etkileyeni doğrulamayı Windows 10 öğrenin.
-ms.openlocfilehash: 311da3efec8cd3ad57e722aea5a8c3888d1af7b0
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: be25acb8414705c48a8763a0530ec2a70565de83
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983842"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313601"
 ---
 # <a name="validate-device-protection-settings-for-windows-10-pcs"></a>Bilgisayarlar için cihaz koruma Windows 10 doğrulama
 
+> [!NOTE]
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Bu teklif, cihazlar için ek güvenlik özellikleri sağlar. [İş için Defender hakkında daha fazla bilgi öğrenin](../../security/defender-business/mdb-overview.md).
+
 ## <a name="verify-that-windows-10-device-policies-are-set"></a>Cihaz ilkelerinin Windows 10 ayar olduğunu doğrulama
 
-Cihaz [ilkelerini ayarladikten](protection-settings-for-windows-10-pcs.md) sonra, ilkenin kullanıcıların cihazlarında etkiliksi birkaç saat sürebilir. İlkelerin, kullanıcıların cihazlarında çeşitli ekranlara Windows Ayarlar ilkelerin etkili olduğunu onaylayın. Kullanıcılar mobil cihazlarında Güncelleştirme Windows ve Windows Defender Virüsten Koruma ayarlarını değiştire Windows 10, birçok seçenek gri görünür.
+Cihaz [ilkelerini ayarladikten](protection-settings-for-windows-10-pcs.md) sonra, ilkenin kullanıcıların cihazlarında etkiliksi birkaç saat sürebilir. İlkelerin, kullanıcıların cihazlarında çeşitli ekranlara Windows Ayarlar ilkelerin etkili olduğunu onaylayın. Kullanıcılar mobil cihazlarında Windows Update Microsoft Defender Virüsten Koruma ayarlarını değiştire Windows 10, çoğu seçenek gri görünür.
   
 1. Şu **ayarlara Ayarlar** \> **Update &amp; Windows** \> **Yeniden** \> **Başlatma seçenekleri'ne** gidin ve tüm ayarların gri renkte görüntü olduğunu onaylayın. 
     
@@ -63,4 +66,5 @@ Cihaz [ilkelerini ayarladikten](protection-settings-for-windows-10-pcs.md) sonra
 ## <a name="related-content"></a>İlgili içerik
 
 [Microsoft 365 belgeleri ve kaynakları için belgeler](/admin)\
-[Windows 10 bilgisayarlarında cihaz yapılandırmalarını ayarlama](protection-settings-for-windows-10-pcs.md)
+[PC'lerde cihaz Windows 10 yapılandırmalarını ayarlamaİsneden](protection-settings-for-windows-10-pcs.md)
+ [iş planları için güvenlik Microsoft 365 10 yolu](../security-and-compliance/secure-your-business-data.md)

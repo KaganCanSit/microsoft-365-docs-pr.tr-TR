@@ -9,12 +9,12 @@ manager: dougeby
 ms.topic: article
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-ms.openlocfilehash: f04329d17516c26ea2353d03403eba726ce5b9c3
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+ms.openlocfilehash: 93f2ef3f7815260fc52e7ba65451d7e8d50bc88a
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63016459"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63314343"
 ---
 # <a name="enable-user-support-features"></a>Kullanıcı desteği özelliklerini etkinleştirme
 
@@ -33,7 +33,7 @@ ms.locfileid: "63016459"
 1. Dağıtım ve [Intune Şirket Portalı](company-portal.md).
 1. [Lisans atama](assign-licenses.md).
 1. [Uygulamaları dağıtın](deploy-apps.md).
-1. [Cihazları ayarlayın](set-up-devices.md).
+1. [Cihazları hazırlayın](prepare-devices.md).
 1. [AutoPilot ve Kayıt Durumu Sayfası ile ilk çalıştırma deneyimini ayarlayın](esp-first-run.md).
 1. Kullanıcı desteği özelliklerini etkinleştir (bu makale).
 1. [Kullanıcılarınızı cihazları kullanmaya hazır hale hazırlayın](get-started-devices.md).

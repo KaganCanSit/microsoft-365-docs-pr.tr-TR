@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Masaüstü, mobil ve web için Office uygulamalarının duyarlılık etiketlerini yönetmeye ilişkin BILGI.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: efd28dbe00960c2644c476f6cd689c79385eed9d
-ms.sourcegitcommit: 007822d16e332522546e948f5c216327254a4d49
+ms.openlocfilehash: b251789795cbb55cd5d79dc686449e4c87aa6f9f
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63015340"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316135"
 ---
 # <a name="manage-sensitivity-labels-in-office-apps"></a>Office uygulamalarında duyarlılık etiketlerini yönetme
 
@@ -33,9 +33,9 @@ Uygulamalarda duyarlılık etiketlerini başarıyla yönetmenize yardımcı olma
 
 ## <a name="labeling-client-for-desktop-apps"></a>Masaüstü uygulamaları için etiketleme istemcisi
 
-Windows Mac için Office masaüstü uygulamalarına yerleşik olarak Windows duyarlılık etiketlerini kullanmak için, Office. Bu etiket istemcisi, Office 2016 veya Office 2019 gibi tek başına Office desteklemez.
+Windows Mac için Office masaüstü uygulamalarına yerleşik olarak Windows duyarlılık etiketlerini kullanmak için, Office. Bu etiket istemcisi bazen "Kalıcı" olarak da adlandırılan Office tek başına Office desteklemez.
 
-Office'in bu tek başına sürümleriyle duyarlılık etiketlerini Windows, [Azure Information Protection birleşik etiketleme istemcisini yükleyin](/azure/information-protection/rms-client/aip-clientv2).
+Office abonelik sürümleri için Kurumlar için Microsoft 365 Uygulamaları'e yükselte Windows, [Azure Information Protection birleşik etiketleme istemcisini kullanabilirsiniz](/azure/information-protection/rms-client/aip-clientv2).
 
 ## <a name="support-for-sensitivity-label-capabilities-in-apps"></a>Uygulamalarda duyarlılık etiketi özellikleri desteği
 
@@ -72,16 +72,12 @@ Listelenen sayılar, her Office için gereken en düşük uygulama sürümü say
 |[Değişkenlerle dinamik işaretler](#dynamic-markings-with-variables)                                              | Güncel Kanal: 2010+ <br /><br> Aylık Enterprise Kanalı: 2010+ <br /><br> Semi-Annual Enterprise: 2102+ | 16.42+     | 2.42+ | 16.0.13328+ | [Evet - kabul etmek](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[İzinleri şimdi ata](encryption-sensitivity-labels.md#assign-permissions-now)                                 | Güncel Kanal: 1910+ <br /><br> Aylık Enterprise Kanalı: 1910+ <br /><br> Semi-Annual Enterprise Kanalı: 2002+ | 16.21+     | 2.21+ | 16.0.11231+ | [Evet - kabul etmek](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Kullanıcıların izin atamasına izin ver: <br /> - Kullanıcılara sor](encryption-sensitivity-labels.md#let-users-assign-permissions)                     |Güncel Kanal: 2004+ <br /><br> Aylık Enterprise Kanalı: 2004+ <br /><br> Semi-Annual Enterprise: 2008+ | 16.35+   | Gözden geçirme altında   | Gözden geçirme altında         | Gözden geçirme altında                                                        |
-|[Etiketle ilgili kullanıcı etkinliğini denetleme](#auditing-labeling-activities)                      | Güncel Kanal: 2011+ <br /><br> Aylık Enterprise Kanalı: 2011+ <br /><br> Semi-Annual Enterprise Kanalı: 2108+ | 16.43+ | 2.46+ | 16.0.13628+ | Evet <sup>\*</sup>                                                        |
+|[Etiketle ilgili kullanıcı etkinliğini denetleme](#auditing-labeling-activities)                      | Güncel Kanal: 2011+ <br /><br> Aylık Enterprise Kanalı: 2011+ <br /><br> Semi-Annual Enterprise Kanalı: 2108+ | 16.43+ | 2.46+ | 16.0.13628+ | Evet |
 |[Kullanıcıların e-postalarına ve belgelerine etiket uygulamalarını gerektirme](#require-users-to-apply-a-label-to-their-email-and-documents)   | Güncel Kanal: 2101+ <br /><br> Aylık Enterprise Kanalı: 2101+ <br /><br> Semi-Annual Enterprise Kanalı: 2108+ | 16.45+         | 2.47+ | 16.0.13628+ | [Evet - kabul etmek](sensitivity-labels-sharepoint-onedrive-files.md)                                            
 |[Otomatik olarak içeriğe duyarlılık etiketi uygulama](apply-sensitivity-label-automatically.md) <br /> - Hassas bilgi türlerini kullanma                    | Güncel Kanal: 2009+ <br /><br> Aylık Enterprise Kanalı: 2009+ <br /><br> Semi-Annual Enterprise: 2102+ | 16.44+ | Gözden geçirme altında | Gözden geçirme altında | [Evet - kabul etmek](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Otomatik olarak içeriğe duyarlılık etiketi uygulama](apply-sensitivity-label-automatically.md) <br /> - Eğitilebilir sınıflayıcıları kullanma                    | Güncel Kanal: 2105+ <br /><br> Aylık Enterprise Kanalı: 2105+ <br /><br> Semi-Annual Enterprise Kanalı: 2018+ | 16.49+ | Gözden geçirme altında | Gözden geçirme altında | [Evet - kabul etmek](sensitivity-labels-sharepoint-onedrive-files.md) |
-|[Etiketli ve şifrelenmiş belgeler için birlikte yazma](sensitivity-labels-coauthoring.md) ve Otomatik Kaydetme desteği | Güncel Kanal: 2107+ <br /><br> Aylık Enterprise Kanalı: 2107+ <br /><br> Semi-Annual Enterprise: 2202+ |  16.51+ | Gözden geçirme altında | Gözden geçirme altında | [Evet - kabul etmek](sensitivity-labels-sharepoint-onedrive-files.md) |
-|
+|[Etiketli ve şifrelenmiş belgeler için birlikte yazma](sensitivity-labels-coauthoring.md) ve Otomatik Kaydetme desteği | Güncel Kanal: 2107+ <br /><br> Aylık Enterprise Kanalı: 2107+ <br /><br> Semi-Annual Enterprise: 2202+ |  16.51+ | Önizleme: Kabul etmek için 2,58+[](sensitivity-labels-coauthoring.md#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) | Önizleme: Kabul etmek için 16.0.14931+[](sensitivity-labels-coauthoring.md#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) | [Evet - kabul etmek](sensitivity-labels-sharepoint-onedrive-files.md) |
 
-**Dipnotlar:**
-
-<sup>\*</sup> Şu anda bir etiketi kaldırmak veya sınıflandırma düzeyini düşürmek için yaslama metninin yuvarlanması
 
 ### <a name="sensitivity-label-capabilities-in-outlook"></a>Outlook'daki duyarlılık Outlook
 
@@ -131,32 +127,9 @@ Bu ayar Windows Office uygulamalarına özgü olduğundan, Windows'ta duyarlıl�
 
 ### <a name="office-built-in-labeling-client-and-the-azure-information-protection-client"></a>Office etiketleme istemcisini ve Azure Information Protection istemcisini içerir
 
-Kullanıcıların Windows bilgisayarlarına [Azure Information Protection](/azure/information-protection/rms-client/aip-clientv2) istemcisi yüklenmişse, varsayılan olarak onları destekleyen [Windows Office etiketler kapalıdır](#labeling-client-for-desktop-apps). Yerleşik etiketler Azure Information Protection istemcisi tarafından Office bir eklenti kullanmamalarının nedeni, daha fazla kararlılık ve daha iyi performanstan yararlanmalarıdır. Ayrıca, gelişmiş sınıflayıcılar gibi en son özellikleri de desteklerler.
+Kullanıcıların Windows bilgisayarlarında [Azure Information Protection (AIP)](/azure/information-protection/rms-client/aip-clientv2) istemcisi yüklüyse, onları destekleyen Windows Office varsayılan olarak [yerleşik etiketler kapalıdır](#labeling-client-for-desktop-apps). AIP istemcisi tarafından kullanılan yerleşik Office bir eklenti kullanmamalarının nedeni, daha fazla kararlılık ve daha iyi performanstır. Ayrıca, gelişmiş sınıflayıcılar gibi en son özellikleri de desteklerler.
 
-Azure Information Protection istemcisini kaldırmak yerine, Azure Information Protection eklentisini kendi uygulamanıza yüklemesini Office öneririz. Ardından, Office uygulamaları içinde yerleşik etiketleme avantajlarından ve Azure Information Protection istemcisinin farklı uygulamaların dışında dosyaları etiketleme avantajlarını Office. Örneğin, Azure Information Protection istemcisi Dosya Gezgini'ni ve PowerShell'i kullanarak tüm dosya türlerini etiketli olabilir. Uygulama dışında desteklenen etiket özellikleri hakkında daha fazla bilgi Office bkz. [Duyarlılık etiketleri ve Azure Information Protection](sensitivity-labels.md#sensitivity-labels-and-azure-information-protection).
-
-Windows Office uygulamalarına Azure Information Protection istemci eklentisini yüklemesini engellemek için, [Office 2013 ve Office 2016](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) programlarının grup ilkesi ayarları nedeniyle Hiçbir Eklenti yüklenmedi altında belgelenmiş olarak yönetilen eklentilerin Grup İlkesi ayar listesini kullanın.
-
-Yerleşik etiketlemeyi Windows Office uygulamalarınız için Microsoft Word 2016, Excel 2016, PowerPoint 2016 ve Outlook 2016 Azure Information Protection istemcisi için aşağıdaki program tanımlayıcılarını (ProgID) belirtin ve seçeneği 0 olarak ayarlayın: Eklenti her zaman devre dışıdır **(engellendi)**
-
-|Uygulama  |ProgID  |
-|---------|---------|
-|Word     |     `MSIP.WordAddin`    |
-|Excel     |  `MSIP.ExcelAddin`       |
-|PowerPoint     |   `MSIP.PowerPointAddin`      |
-|Outlook | `MSIP.OutlookAddin` |
-| | | 
-
-Grup İlkesi kullanarak veya Office bulut [ilkesi hizmetini kullanarak bu ayarı dağıtın](/DeployOffice/overview-office-cloud-policy-service).
-
-> [!IMPORTANT]
-> Grup İlkesi ayarını kullanıyorsanız Duyarlılık etiketlerini uygulamak ve görüntülemek için **Office'te** Duyarlılık özelliğini kullanın ve bunu **1** olarak ayarlarsanız, bazı durumlarda Azure Information Protection istemcisinin yine de Office uygulamalarına yüklenebilirsiniz. Eklentinin her uygulamaya yüklenmesini engellemek bu durumdan engellenmesine neden olur.
-
-Alternatif olarak Word, Excel, PowerPoint ve Microsoft Azure'den Microsoft Azure Information Office **Protection** eklentisini etkileşimli olarak devre dışı Outlook. Bu yöntem tek bir bilgisayar ve geçici test için uygundur. Yönergeler için bkz[. Programlarda eklentileri görüntüleme, yönetme Office yükleme](https://support.office.com/article/16278816-1948-4028-91e5-76dca5380f8d). 
-
-Hangi yöntemi seçerseniz seçin, uygulamalar yeniden başlatıldığında Office geçerli olur.
-
-Azure Information Protection istemcisi ve Office yerleşik etiketleme istemcisi tarafından desteklenen özellikler hakkında ayrıntılı bilgi için bkz. Azure Information Protection belgelerinden [Windows](/azure/information-protection/rms-client/use-client#choose-your-windows-labeling-solution) etiketleme çözümlerinizi seçme.
+AIP istemcisiyle seçenekleri etiketleme hakkında daha fazla bilgi edinmek için bkz. Office uygulamaları için AIP eklentisinde yerleşik [MIP etiketlemeyi seçme.](sensitivity-labels-aip.md)
 
 ## <a name="office-file-types-supported"></a>Office dosya türleri destekle
 
@@ -427,7 +400,14 @@ Outlook uygulaması zorunlu etiketlemeyi kapatmayı desteklemediğinde: Kullanı
 
 Duyarlılık etiketi etkinlikleri tarafından oluşturulan denetim olayları hakkında bilgi için, Uyumluluk merkezinde denetim günlüğünde arama yapın bölümünde yer [](search-the-audit-log-in-security-and-compliance.md#sensitivity-label-activities) alan Duyarlılık etiketi etkinlikleri [bölümüne bakın](search-the-audit-log-in-security-and-compliance.md).
 
-Bu denetim bilgileri, duyarlılık etiketlerinizin nasıl kullanılmış [](data-classification-content-explorer.md) olduğunu ve bu [](data-classification-activity-explorer.md) etiketli içeriğin nerede yer alıyor olduğunu anlamanıza yardımcı olmak için içerik gezgininde ve etkinlik gezgininde görsel olarak temsil edilen bilgilerdir. Denetim günlüğü kayıtlarını dışarı aktararak ve yapılandırarak, güvenlik bilgileri ve olay yönetimi (SIEM) yazılımı tercihi ile [özel raporlar da oluşturabilirsiniz](export-view-audit-log-records.md).
+Bu denetim bilgileri, duyarlılık etiketlerinizin nasıl kullanılmış [](data-classification-content-explorer.md) olduğunu ve bu [](data-classification-activity-explorer.md) etiketli içeriğin nerede yer alıyor olduğunu anlamanıza yardımcı olmak için içerik gezgininde ve etkinlik gezgininde görsel olarak temsil edilen bilgilerdir. 
+
+Denetim günlüğü kayıtlarını dışarı aktararak ve yapılandırarak, güvenlik bilgileri ve olay yönetimi (SIEM) yazılımı tercihi ile [özel raporlar da oluşturabilirsiniz](export-view-audit-log-records.md). Daha büyük ölçekli raporlama çözümleri için Bkz. [Office 365 Etkinlik API'si başvurusu](/office/office-365-management-api/office-365-management-activity-api-reference).
+
+> [!TIP]
+> Özel raporlar oluşturmanıza yardımcı olmak için aşağıdaki blog gönderileri'ne bakın:
+> - [Microsoft 365 O365 Yönetim API'si aracılığıyla uyumluluk denetim günlüğü etkinlikleri - Bölüm 1](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-365-compliance-audit-log-activities-via-o365/ba-p/2957171)
+> - [Microsoft 365 O365 Yönetim API'si aracılığıyla uyumluluk denetim günlüğü etkinlikleri - Bölüm 2](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-365-compliance-audit-log-activities-via-o365/ba-p/2957297)
 
 ## <a name="end-user-documentation"></a>Son kullanıcı belgeleri
 

@@ -9,12 +9,12 @@ ms.collection: M365-modern-desktop
 ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: 454bc457603b64916bfdaf947d867404bd6569db
-ms.sourcegitcommit: d4797cfc15c732f1a7ef21e4f944e672a7170f9a
+ms.openlocfilehash: ed1867ee1ea27010d29d19edd18ef12febe6eb2e
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63016640"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63317563"
 ---
 # <a name="assign-licenses"></a>Lisans atama
 
@@ -32,7 +32,7 @@ Lisans atamada zorluk yaşadıysanız Yönetici desteğine [başvurun](../workin
 1. Dağıtım ve [Intune Şirket Portalı](company-portal.md).
 1. Lisans atama (bu makale).
 1. [Uygulamaları dağıtın](deploy-apps.md).
-1. [Cihazları ayarlayın](set-up-devices.md).
+1. [Cihazları hazırlayın](prepare-devices.md).
 1. [AutoPilot ve Kayıt Durumu Sayfası ile ilk çalıştırma deneyimini ayarlayın](esp-first-run.md).
 1. [Kullanıcı desteği özelliklerini etkinleştirin](enable-support.md).
 1. [Kullanıcılarınızı cihazları kullanmaya hazır hale hazırlayın](get-started-devices.md).

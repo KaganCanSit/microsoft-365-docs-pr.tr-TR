@@ -13,14 +13,14 @@ ms.author: deniseb
 ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
-ms.collection: m365initiative-m365-defender
+ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 77c27d268a8f25c047f562a3cfc125092e64d2c7
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: acf474f472450456014a581366c8860d87607a79
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63010919"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322653"
 ---
 # <a name="turn-on-network-protection"></a>Ağ korumasını açma
 

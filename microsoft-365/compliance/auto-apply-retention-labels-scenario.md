@@ -12,17 +12,19 @@ ms.localizationpriority: high
 ms.collection:
 - M365-security-compliance
 - SPO_Content
-ms.custom: admindeeplinkCOMPLIANCE
+ms.custom:
+- admindeeplinkCOMPLIANCE
+- admindeeplinkSPO
 search.appverid:
 - MOE150
 - MET150
 description: SharePoint'ta belgelerin yaşam döngüsünü yönetmek için içeriği sınıflandırmak, etiketleri otomatik olarak uygulamak ve bekletme dönemini başlatmak için olay tabanlı bekletmeyi kullanmak üzere meta verileri kullanarak bekletme etiketlerini nasıl kullanabilirsiniz?
-ms.openlocfilehash: 586f9074628ed3c4c272715378b1ba413ebdd3ec
-ms.sourcegitcommit: dc26169e485c3a31e1af9a5f495be9db75c49760
+ms.openlocfilehash: 35c43a96e07fe52d9e5e0cc0a72195353b6f5da6
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "62990017"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63327175"
 ---
 # <a name="use-retention-labels-to-manage-the-lifecycle-of-documents-stored-in-sharepoint"></a>Başka bir veritabanında depolanan belgelerin yaşam döngüsünü yönetmek için bekletme SharePoint
 
@@ -148,7 +150,7 @@ Temel olarak, "son Microsoft 365 Durumu ve Belge Türü Ürün Belirtimi olan  t
 
 İçerik SharePoint olduğunda, her site sütunu için otomatik olarak gezinilen özellikler üretir. Bu senaryo için, Belge Türü ve **Durum özellikleriyle** **ilgileniyoruz** . Kitaplıkta doğru içerik türüne sahip belgelere ve gezinilen özellikleri oluşturmak için site sütunlarının arama için doldurulması gerekiyor.
 
-SharePoint merkezinde Arama yapılandırmasını açın ve gezinilen özellikleri görüntülemek ve yapılandırmak için Arama Şemasını  Yönet'i seçin.
+SharePoint <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">merkezinde Arama yapılandırmasını</a> açın ve gezinilen özellikleri görüntülemek ve **yapılandırmak için Arama** Şemasını Yönet'i seçin.
 
 ![Arama şemasında gezinilen özellikler.](../media/SPRetention8.png)
 
@@ -179,7 +181,7 @@ Gezinilen ve yönetilen özellikler hakkında daha fazla bilgi için bkz. [Share
 
 KQL, arama sorgularında gezinilen özellikleri kullanmaz. Yönetilen özelliği kullanmaktadır. Normal bir arama senaryosunda, bir yönetilen özellik oluşturduk ve bu özelliği ihtiyacımız olan gezinilen özellik ile eşleriz. Bununla birlikte, bekletme etiketlerini otomatik uygularken, özel yönetilen özellikler değil, yalnızca KQL'de önceden tanımlanmış yönetilen özellikler belirtebilirsiniz. Kullanabileceğiniz *RefinableString00* - *RefinableString199* dizesi için sistemde önceden tanımlanmış bir dizi yönetilen özellik vardır. Tam liste için varsayılan [kullanılmamış yönetilen özellikler'e bakın](/sharepoint/manage-search-schema#default-unused-managed-properties). Bu varsayılan yönetilen özellikler genellikle arama iyileştiricileri tanımlamak için kullanılır.
 
-KQL sorgusunun ürün belgesi içeriğine otomatik olarak doğru bekletme etiketini uygulaması için, **gezinilen özellikleri owsDocx0020Type\_\_\_* ve *owsStatus\_\_** ile iki iyileştirilebilir yönetilen özellikle eşleyiz. Bu senaryoya uygun test ortamımızda **RefinableString00** ve **RefinableString01** kullanılamaz. Bunu, genel yönetim merkezinde **Arama Şemasını** **Yönetme'de** Yönetilen SharePoint bakarak belirledik.
+KQL sorgusunun ürün belgesi içeriğine otomatik olarak doğru bekletme etiketini uygulaması için, **gezinilen özellikleri owsDocx0020Type\_\_\_* ve *owsStatus\_\_** ile iki iyileştirilebilir yönetilen özellikle eşleyiz. Bu senaryoya uygun test ortamımızda **RefinableString00** ve **RefinableString01** kullanılamaz. Bunu, genel yönetim merkezinde **Arama Şemasını** **Yönetme'de** Yönetilen <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint bakarak belirledik</a>.
 
 [![Arama şemasında yönetilen özellikler.](../media/SPRetention12.png) ](../media/SPRetention12.png#lightbox)
 

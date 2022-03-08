@@ -1,5 +1,5 @@
 ---
-title: Bilgileri Arşivle için bağlayıcı ayarlamaErini aynı Microsoft 365
+title: Microsoft 365'te verileri arşivlemek için bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,23 +11,23 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: 17a-4 FactSet DataParser bağlayıcısı ayar kullanmayı ve bu bağlayıcıyı kullanarak Bilgi Kümesi verilerini içeri aktarmayı ve arşivlemeyi Microsoft 365.
-ms.openlocfilehash: 974bf2ab0111d1417d46553482244502a6758a26
-ms.sourcegitcommit: 36a19d80fe3f053df0fec398a7ff2dfc777f9730
+description: Microsoft 365'te verileri içeri aktarma ve arşivlemek için 17a-4 FactSet DataParser bağlayıcısı ayarlamayı ve kullanmayı öğrenin.
+ms.openlocfilehash: 8c3728e1866d67b2ec7972b2a8857a2ba045022f
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/30/2021
-ms.locfileid: "63021500"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326223"
 ---
 # <a name="set-up-a-connector-to-archive-factset-data"></a>Gerçek Ayarla verilerini arşivlemek için bağlayıcı ayarlama
 
-FactSet platformundan verileri kendi Microsoft 365 posta kutularına içeri aktarmak ve arşivlemek için [FactSet DataParser'ı](https://www.17a-4.com/factset-dataparser/) 17a-4 LLC Microsoft 365 kullanın. DataParser, üçüncü taraf bir veri kaynağından öğeleri yakalayan ve bu öğeleri başka bir öğeye aktaran bir FactSet bağlayıcısı Microsoft 365. FactSet DataParser bağlayıcısı, FactSet verilerini e-posta iletisi biçimine dönüştürür ve sonra bu öğeleri aynı Microsoft 365.
+FactSet platformundan Microsoft 365 kuruluşunun kullanıcı posta kutularına veri almak ve arşivlemek için 17a-4 LLC'den [FactSet DataParser'ı](https://www.17a-4.com/factset-dataparser/) kullanın. DataParser, üçüncü taraf bir veri kaynağından öğeleri yakalayan ve bu öğeleri Microsoft 365'e aktaran bir FactSet bağlayıcısı içerir. FactSet DataParser bağlayıcısı, FactSet verilerini e-posta iletisi biçimine dönüştürür ve sonra bu öğeleri Microsoft 365'te kullanıcı posta kutularına alır.
 
-Bilgi Kümesi verileri kullanıcı posta kutularında depolanıyorsa, mahkeme Microsoft 365, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi uyumluluk özelliklerini uygulayabilirsiniz. Verileri başka bir kuruluşta içeri aktararak ve arşiv Microsoft 365 için FactSet bağlayıcısı kullanmak, kurum kuruluş ve mevzuat ilkeleriyle uyumlu kalmalarına yardımcı olabilir.
+Bilgi Kümesi verileri kullanıcı posta kutularında depolanıyorsa, Mahkeme Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft 365 uyumluluk özelliklerini uygulayabilirsiniz. Microsoft 365'te verileri içeri aktarmanız ve arşivlemeniz için FactSet bağlayıcısı kullanmak, kurum gerek resmi ve mevzuat ilkeleriyle uyumlu kalmalarına yardımcı olabilir.
 
 ## <a name="overview-of-archiving-factset-data"></a>Bilgi Kümesi verilerini arşivlemeye genel bakış
 
-Aşağıdaki genel bakış makalesinde, Veri Kümesi'nin içinde verileri arşivlemek için veri bağlayıcısı kullanma işlemi Microsoft 365.
+Aşağıdaki genel bakış makalesinde, Microsoft 365'te verileri arşivlemek için veri bağlayıcısı kullanma işlemi açıkılmaktadır.
 
 ![FactSet data from 17a-4 için arşivleme iş akışı.](../media/FactSetDataParserConnectorWorkflow.png)
 
@@ -35,7 +35,7 @@ Aşağıdaki genel bakış makalesinde, Veri Kümesi'nin içinde verileri arşiv
 
 2. Düzenli aralıklarla, FactSet öğeleri DataParser tarafından toplanır. DataParser, iletinin içeriğini de e-posta iletisi biçimine dönüştürür.
 
-3. Microsoft 365 uyumluluk merkezi'ta oluştursanız bile FactSet DataParser bağlayıcısı DataParser'a bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konuma bağlar.
+3. Microsoft 365 uyumluluk merkezinde oluşturdukları FactSet DataParser bağlayıcısı DataParser'a bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarıyor.
 
 4. Kullanıcı posta kutularında, Gelen Kutusu **klasöründeki FactSet DataParser** adlı bir alt klasör oluşturulur ve FactSet öğeleri bu klasöre aktarılır. Bağlayıcı, E-posta özelliğinin değerini kullanarak hangi posta kutusuna öğe *aktarılamayacaklarını* belirler. Her Bilgi Kümesi öğesi, her katılımcının e-posta adresiyle doldurulan bu özelliği içerir.
 
@@ -43,13 +43,13 @@ Aşağıdaki genel bakış makalesinde, Veri Kümesi'nin içinde verileri arşiv
 
 - Microsoft bağlayıcıları için bir DataParser hesabı oluşturun. Bunu yapmak için [17a-4 LLC ile iletişime geçin](https://www.17a-4.com/contact/). Bağlayıcıyı 1. Adımda  oluşturdukta bu hesapta oturum açın.
 
-- 1. Adımda FactSet DataParser bağlayıcısı oluşturan (ve 3. Adımda tamamlayan) kullanıcı, bu bağlayıcıda Posta Kutusu İçeri/Dışarı Aktarma rolüne atan Exchange Online. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Varsayılan olarak, bu rol ilgili gruptaki bir rol grubuna Exchange Online. Posta Kutusu İçeri/Dışarı Aktarma rolünü, aynı kuruluşta Kuruluş Yönetimi rol grubuna Exchange Online. Veya bir rol grubu oluşturabilir, Posta Kutusu İçeri/Dışarı Aktarma rolü atayabilirsiniz ve sonra da uygun kullanıcıları üye olarak  eklersiniz. Daha fazla bilgi için,"[Rol gruplarını](/Exchange/permissions-exo/role-groups#create-role-groups) farklı bir [](/Exchange/permissions-exo/role-groups#modify-role-groups) grupta yönetme" makalesinde Rol grupları oluşturma veya Rol gruplarını değiştirme Exchange Online.
+- 1. Adımda FactSet DataParser bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanabilir. Bu rol, Microsoft 365 uyumluluk **merkezinin Veri** bağlayıcıları sayfasında bağlayıcı eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için [, Microsoft 365](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) uyumluluk merkezinde İzinler'in "Özel bir rol grubu oluşturma" bölümüne bakın.
 
-- Bu 17a-4 veri bağlayıcısı, ABD GCC tarafından Microsoft 365 ortamlarda kullanılabilir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu 17a-4 veri bağlayıcısı, Microsoft 365 ABD Kamu Bulutu'nın GCC ortamlarında kullanılabilir. Üçüncü taraf uygulamaları ve hizmetleri, microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde kuruluş müşteri verilerini depolamayı, iletip işlemeyi ve bu nedenle Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
 
 ## <a name="step-1-set-up-a-factset-dataparser-connector"></a>1. Adım: FactSet DataParser bağlayıcısı ayarlama
 
-İlk adım, ana sayfada Veri bağlayıcıları sayfasına erişmek ve Microsoft 365 uyumluluk merkezi için bir 17a-4 bağlayıcısı oluşturmaktır.
+İlk adım, Microsoft 365 uyumluluk merkezinde Veri bağlayıcıları sayfasına erişmek ve FactSet verileri için bir 17a-4 bağlayıcısı oluşturmaktır.
 
 1. Veri bağlayıcılarıFactSet  > <https://compliance.microsoft.com>**DataParser'a gidin ve bu öğeye tıklayın**.
 
@@ -67,11 +67,11 @@ FactSet DataParser bağlayıcıyı yapılandırmak için 17a-4 Desteği ile çal
 
 ## <a name="step-3-map-users"></a>3. Adım: Kullanıcıları eşleme
 
-FactSet DataParser bağlayıcısı, verileri Microsoft 365 e-posta adreslerine aktarmadan önce kullanıcıları otomatik olarak kendi Microsoft 365.
+FactSet DataParser bağlayıcısı, verileri Microsoft 365'e aktarmadan önce kullanıcıları otomatik olarak Microsoft 365 e-posta adresleriyle eşler.
 
 ## <a name="step-4-monitor-the-factset-dataparser-connector"></a>4. Adım: FactSet DataParser bağlayıcılarını izleme
 
-Bir FactSet DataParser bağlayıcısı oluşturdukta, bağlayıcının durumunu hemen Microsoft 365 uyumluluk merkezi.
+FactSet DataParser bağlayıcısı oluşturdukta, Bağlayıcı durumunu Microsoft 365 uyumluluk merkezinde görüntüebilirsiniz.
 
 1. Sol gezinti <https://compliance.microsoft.com> çubuğunda **Veri bağlayıcıları'na** gidin ve bu bağlayıcılara tıklayın.
 

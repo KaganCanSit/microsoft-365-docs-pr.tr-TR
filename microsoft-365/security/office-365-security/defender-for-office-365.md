@@ -20,12 +20,12 @@ ms.custom:
 description: Office 365 için Microsoft Defender Kasa, Kasa Bağlantılar, gelişmiş kimlik avı önleme araçları, raporlama araçları ve tehdit zekası özellikleri içerir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b6756ba1c0315bb2b89c272d8153715cffe8f976
-ms.sourcegitcommit: 19e16b16f144159b55bb4c544403e3642b69e335
+ms.openlocfilehash: f78194541db8221aad1243966ddee6b6dc071d7d
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "63015254"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63317059"
 ---
 # <a name="microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender
 
@@ -81,7 +81,7 @@ Aşağıdaki tabloda her plana nelerin dahil olduğu özetlenmiştir.
 
 |Office 365 için Defender Plan 1|Office 365 için Defender Plan 2|
 |---|---|
-|Yapılandırma, koruma ve algılama özellikleri: <ul><li>[Kasa Ekleri Kaydetme](safe-attachments.md)</li><li>[Güvenli Bağlantılar](safe-links.md)</li><li>[Kasa, Bağlantı SharePoint OneDrive için Ekleri Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li><li>[Kimlik avı için Defender'da kimlik avı koruması Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>[Gerçek zamanlı algılamalar](threat-explorer.md)</li></ul>|Plan 1 Office 365 için Defender <p> --- artı --- <p> Otomasyon, araştırma, düzeltme ve eğitim özellikleri: <ul><li>[Tehdit İzleyicileri](threat-trackers.md)</li><li>[Tehdit Gezgini](threat-explorer.md)</li><li>[Otomatik araştırma ve yanıt](office-365-air.md)</li><li>[Saldırı benzetimi eğitimi](attack-simulation-training.md)</li><li>[Microsoft 365 Defender sıyrıda arama](advanced-hunting-overview.md)</li><li>[Microsoft 365 Defender Olayları](investigate-incidents.md)</li><li>[Microsoft 365 Defender uyarıları](investigate-alerts.md)</li></ul>|
+|Yapılandırma, koruma ve algılama özellikleri: <ul><li>[Kasa Ekleri Kaydetme](safe-attachments.md)</li><li>[Güvenli Bağlantılar](safe-links.md)</li><li>[Kasa, Bağlantı SharePoint OneDrive için Ekleri Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li><li>[Kimlik avı için Defender'da kimlik avı koruması Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>[Gerçek zamanlı algılamalar](threat-explorer.md)</li></ul>|Plan 1 Office 365 için Defender <p> --- artı --- <p> Otomasyon, araştırma, düzeltme ve eğitim özellikleri: <ul><li>[Tehdit İzleyicileri](threat-trackers.md)</li><li>[Tehdit Gezgini](threat-explorer.md)</li><li>[Otomatik araştırma ve yanıt](office-365-air.md)</li><li>[Saldırı benzetimi eğitimi](attack-simulation-training.md)</li><li>[E-Microsoft 365 Defender'de gelişmiş avla tehditlere karşı önceden Microsoft 365 Defender](../defender/advanced-hunting-overview.md)</li><li>[E-Microsoft 365 Defender'de olayları araştır](../defender/investigate-incidents.md)</li><li>[E-postada uyarıları Microsoft 365 Defender](../defender/investigate-alerts.md)</li></ul>|
 
 
 - Office 365 için Microsoft Defender Plan 2 Office 365 E5, Office 365 A5 ve Microsoft 365 E5.

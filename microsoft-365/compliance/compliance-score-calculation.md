@@ -2,8 +2,8 @@
 title: Uyumluluk puanı hesaplaması
 f1.keywords:
 - NOCSH
-ms.author: v-jgriffee
-author: jmgriffee
+ms.author: chvukosw
+author: chvukosw
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -15,12 +15,12 @@ search.appverid:
 - MET150
 description: Microsoft Uyumluluk Yöneticisi'nin, risklere yönelik işlemlere dayalı olarak kişiselleştirilmiş bir puanı nasıl hesapta olduğunu an edin ve uyumluluk kalitenizi geliştirin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: b3b250391d04a8bf7388c761bcb00fe7cf99a4a5
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 9c6667ad9be6164639e65e23fb136de1bc196f60
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983487"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320039"
 ---
 # <a name="compliance-score-calculation"></a>Uyumluluk puanı hesaplaması
 
@@ -55,9 +55,9 @@ Her kuruluşun belirli ihtiyaçları olduğundan, Uyumluluk Yöneticisi riski m�
 
 ## <a name="how-compliance-manager-continuously-assesses-controls"></a>Uyumluluk Yöneticisi denetimleri sürekli nasıl değerlendirir
 
-Uyumluluk Yöneticisi teknik işlem Microsoft 365 otomatik olarak tarar ve sistem ayarlarınızı sürekli ve otomatik olarak günceller. Microsoft Güvenli Puanı, izleme yapan temel altyapıdır.
+Uyumluluk Yöneticisi, bazı yapılandırmaların geliştirme eylemi uygulama gereksinimlerini ne zaman Microsoft 365 yardımcı olacak, bu ayarları otomatik olarak sizin ortamınıza tanımlar. Uyumluluk Yöneticisi, bilgi yönetimi, bilgi koruma, iletişim uyumluluğu ve insider risk yönetimi dahil olmak üzere, dağıt dağıtılmış diğer uyumluluk çözümlerinden sinyaller algılar ve ayrıca tamamlayıcı geliştirme eylemlerinin Microsoft Güvenli Puanı izlemesinden faydalanr.
 
-Eylem durumunuz panoda her 24 saatte bir güncelleştirilir. Bir denetim uygulama önerisinde bulunduktan sonra, normalde sonraki gün denetim durumunun güncelleştirilmiş olduğunu da edersiniz.
+Eylem durumunuz, değişikliğin olduğu 24 saat içinde panoda güncelleştirilir. Bir denetim uygulama önerisinde bulunduktan sonra, normalde sonraki gün denetim durumunun güncelleştirilmiş olduğunu da edersiniz.
 
 Örneğin, Azure AD portalında Multi-Factor Authentication'i (MFA) etkinleştirirseniz, Uyumluluk Yöneticisi ayarı algılar ve denetim erişimi çözümü ayrıntılarına yansıttır. Buna karşılık, MFA'yı açmadısanız Uyumluluk Yöneticisi bu işlemi sizin için önerilen bir işlem olarak bayrakla bayrakla işaretleri.
 
@@ -91,20 +91,20 @@ Her 5 grubun her birsinde teknik olmayan bir eylemi başarıyla tamamladıysanı
 Bu puanlama mantığı, eylemlerin organizasyonda nasıl uygulandığını ve test edildiklerinin en doğru muhasebeini sağlamak için tasarlanmıştır.
 
 ### <a name="how-score-values-are-determined"></a>Puan değerleri nasıl belirlenir
- 
+
 Eylemlere, zorunlu veya imtiyazlı olup olmadığı ve bunların engelli, tedbirli veya düzeltici olup olmadığı bağlı olarak bir puan değeri atanır.
 
 ### <a name="mandatory-and-discretionary-actions"></a>Zorunlu ve irde bağlı eylemler
 
- - **Zorunlu eylemler** bilerek veya yanlışlıkla atlanır. Zorunlu eylem örneği, parola uzunluğu, karmaşıklığı ve süre sonu gereksinimlerini ayaran merkezi olarak yönetilen bir parola ilkesidir. Kullanıcıların sisteme erişmek için bu gereksinimleri izlemesi gerekir.
+- **Zorunlu eylemler** bilerek veya yanlışlıkla atlanır. Zorunlu eylem örneği, parola uzunluğu, karmaşıklığı ve süre sonu gereksinimlerini ayaran merkezi olarak yönetilen bir parola ilkesidir. Kullanıcıların sisteme erişmek için bu gereksinimleri izlemesi gerekir.
   
- - **İsteğe bağlı eylemler** , kullanıcıların bir ilkeyi anması ve ilkeye bağlı kalmasını sağlar. Örneğin, kullanıcıların bilgisayarlarından ayrıldıklarında bilgisayarlarını kilitlemelerini gerektiren bir ilke, kullanıcıya dayandırılacağı için i İsteğe bağlı bir eylemdir.
+- **İsteğe bağlı eylemler** , kullanıcıların bir ilkeyi anması ve ilkeye bağlı kalmasını sağlar. Örneğin, kullanıcıların bilgisayarlarından ayrıldıklarında bilgisayarlarını kilitlemelerini gerektiren bir ilke, kullanıcıya dayandırılacağı için i İsteğe bağlı bir eylemdir.
   
 ### <a name="preventative-detective-and-corrective-actions"></a>Preventative, bire bir, bire bir düzeltme eylemleri
   
- - **Belirli risklere yönelik** engelleme eylemleri. Örneğin, şifreleme kullanarak yerinde bilgileri korumak saldırılara ve ihlallere karşı önlem almaktır. Görevlerin ayrımı, faiz çakışmasını ve dolandırıcılığa karşı korumayı yönetmek için önlem önlemdir.
+- **Belirli risklere yönelik** engelleme eylemleri. Örneğin, şifreleme kullanarak yerinde bilgileri korumak saldırılara ve ihlallere karşı önlem almaktır. Görevlerin ayrımı, faiz çakışmasını ve dolandırıcılığa karşı korumayı yönetmek için önlem önlemdir.
   
- - **Eylem eylemleri** , riski temsil eden ya da izinsizleri veya ihlalleri tespit etmek için gerektirilenleri belirlemek için sistemleri etkin bir şekilde takip eder. Örnek olarak sistem erişimi denetimi ve ayrıcalıklı yönetim eylemleri örnek olarak verilmiştir. Mevzuat uyumluluğu denetimleri, süreç sorunlarını bulmak için kullanılmaktadır.
+- **Eylem eylemleri** , riski temsil eden ya da izinsizleri veya ihlalleri tespit etmek için gerektirilenleri belirlemek için sistemleri etkin bir şekilde takip eder. Örnek olarak sistem erişimi denetimi ve ayrıcalıklı yönetim eylemleri örnek olarak verilmiştir. Mevzuat uyumluluğu denetimleri, süreç sorunlarını bulmak için kullanılmaktadır.
   
 - **Düzeltme eylemleri,** güvenlik olaylarının olumsuz etkilerini minimum düzeyde tutmaya, anında efekti azaltmak ve mümkünse hasarları tersine çevirmek için düzeltme eylemi yapmaya çalışabilirsiniz. Gizlilik olayı yanıtı, bir ihlal sonrasında zararları sınırlandıran ve sistemleri faaliyet durumuna geri yüklemek için yapılan bir düzeltici eylemdir.
   

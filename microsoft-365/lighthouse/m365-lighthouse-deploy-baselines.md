@@ -16,26 +16,24 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: MICROSOFT 365 LIGHTHOUSE kullanarak Yönetilen Hizmet Sağlayıcıları (MSP)'ler için, temelleri Microsoft 365 Lighthouse öğrenin.
-ms.openlocfilehash: c4cef0b966e1c35d5b8d4f282e5eeee4cb76a998
-ms.sourcegitcommit: 6e43aeff217afe97876137b1ead8df26db6e9937
+ms.openlocfilehash: fa443fa025f0a1ffba6a230427797755611328a3
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "63015315"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324638"
 ---
 # <a name="deploy-microsoft-365-lighthouse-baselines"></a>Temel Microsoft 365 Lighthouse dağıtma 
 
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
-
-Microsoft 365 Lighthouse, kullanıcıların, cihazların ve verilerin müşteri kiracıları içinde güvenliğini sağlamak için standart yönetilen kiracı yapılandırmalarını dağıtmanıza izin verir. Deniz Feneri ile standart olarak gelen altı varsayılan taban çizgisi yapılandırma vardır:
+Microsoft 365 Lighthouse, kullanıcıların, cihazların ve verilerin müşteri kiracıları içinde güvenliğini sağlamak için standart yönetilen kiracı yapılandırmalarını dağıtmanıza izin verir. Deniz Feneri ile standart olarak gelen yedi varsayılan taban çizgisi yapılandırmaları vardır:
 
 - Yöneticiler için MFA gerektirme
 - Son kullanıcılar için MFA gerektirme
 - Eski Kimlik Doğrulamayı Engelle
 - Cihaz Kaydı Ayarlama Microsoft Endpoint Manager – Azure AD Katılma
-- Defender Virüsten Koruma ilkesi Windows yapılandırma
-- Mobil cihazlar için Uyumluluk Windows yapılandırma
+- Windows için Defender Virüsten Koruma Windows 10 ve sonrası için yapılandırma
+- Güvenlik Duvarı'nı güvenlik Windows 10 yapılandırma
+- Uyumluluk İlkesini Uyumluluk Windows 10 ve sonrası için yapılandırma
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -43,9 +41,9 @@ Sizin ve müşteri kiracıların, Kiracı gereksinimleri altında listelenen [ge
 
 ## <a name="learn-more-about-the-default-baseline"></a>Varsayılan taban çizgisi hakkında daha fazla bilgi
 
-Taban **Çizgisi sayfasını** açmak için sol gezinti bölmesinde Taban Çizgisi'ni seçin. Varsayılan taban çizgisinin Önceden Varsayılan kiracı grubuna (tüm kiracılar) eklenmiştir. Varsayılan temel yapılandırmalarını görüntülemek için, **Temeli görüntüle'yi** seçerek Varsayılan temel sayfasını açın. Yapılandırmalar, dağıtım adımları olarak listelenmiştir. Dağıtım ayrıntılarını ve kullanıcı etkisini görüntülemek için herhangi bir dağıtım adımlarını seçin.
+Deniz **Feneri'nde** sol gezinti bölmesinde Taban Çizgisi'ni seçerek Taban Çizgisi sayfasını açın. Varsayılan taban çizgisinin Önceden Varsayılan kiracı grubuna (tüm kiracılar) eklenmiştir. Varsayılan temel yapılandırmalarını görüntülemek için, **Temeli görüntüle'yi** seçerek Varsayılan temel sayfasını açın. Yapılandırmalar, dağıtım adımları olarak listelenmiştir. Dağıtım ayrıntılarını ve kullanıcı etkisini görüntülemek için herhangi bir dağıtım adımlarını seçin.
 
-:::image type="content" source="../media/m365-lighthouse-deploy-baselines/default-baseline-page.png" alt-text="Varsayılan temel sayfası.temel sayfasının ekran >.":::
+:::image type="content" source="../media/m365-lighthouse-deploy-baselines/default-baseline-page.png" alt-text="Varsayılan taban çizgisi sayfasının ekran görüntüsü.":::
 
 ## <a name="deploy-a-baseline-configuration"></a>Temel yapılandırmayı dağıtma  
 
@@ -57,9 +55,11 @@ Taban **Çizgisi sayfasını** açmak için sol gezinti bölmesinde Taban Çizgi
 
 4. Dağıtım adımı sayfasını açmak için bir dağıtım adımı seçin.
 
-5. Seçili **dağıtım** adımını kiracıya uygulamak için Uygula'ya seçin. Dağıtım adımı "Bu eylem el ile bir adım gerektirir" ifadesini gösteriyorsa, dağıtım adımının doğru uygulanması için el ile adımı tamamlamalısınız.
+5. Seçilen **dağıtım adımını kiracıya** uygulamak için Gözden Geçir ve Uygula'ya seçin. Dağıtım adımı "Bu eylem el ile bir adım gerektirir" ifadesini gösteriyorsa, dağıtım adımının doğru uygulanması için el ile adımı tamamlamalısınız.
 
 ## <a name="related-content"></a>İlgili içerik
 
 [Standart kiracı yapılandırmalarını dağıtmak için taban çizgilerini kullanmaya genel bakış](m365-lighthouse-deploy-standard-tenant-configurations-overview.md) (makale)\
-[Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)
+[Microsoft 365 Kiracılar sayfasına genel bakış](m365-lighthouse-tenants-page-overview.md) (makale)\
+[Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)\
+[Portal Microsoft 365 Lighthouse yapılandırma](m365-lighthouse-configure-portal-security.md) (makale) 

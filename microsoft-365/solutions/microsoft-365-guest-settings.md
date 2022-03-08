@@ -16,15 +16,16 @@ f1.keywords: NOCSH
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkTEAMS
+- admindeeplinkSPO
 ms.localizationpriority: high
 recommendations: false
 description: Kuruluş dışından kişilerle paylaşımı etkileyebilecek Microsoft 365 paylaşım ayarları hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: bf0a85f43733ac90d55dde9ded38efd273a9c485
-ms.sourcegitcommit: d7cdbdda9b829c49caa3105eb47d3f26b88a5daf
+ms.openlocfilehash: 2b6aac7a02c6c7c5feda041a2b06147c67dfa285
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2022
-ms.locfileid: "63021583"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316541"
 ---
 # <a name="microsoft-365-guest-sharing-settings-reference"></a>Microsoft 365 konuk paylaşımı ayarları başvurusu
 
@@ -68,7 +69,7 @@ Grup Microsoft 365 yönetim merkezi paylaşmak ve grupları paylaşmak için kur
 
 | Ayar | Default | Açıklama |
 |:-----|:-----|:-----|
-|Kullanıcıların kuruluşa yeni konuk eklemesine izin verme|On|Evet olarak **ayarlanırsa**, Azure AD üyeleri Azure AD aracılığıyla konukları davetlayabilir; hayır olarak **ayarlanırsa**, olamazlar. Evet **olarak ayarlanırsa**, Microsoft 365 Grubu üyeleri konukları sahip onayıyla davetlayabilir; Hayır olarak ayarlanırsa Microsoft 365 Grubu üyeleri sahip onayı olan konukları davetlayabilir, ancak sahiplerin onay için genel yönetici olması gerekir. <p> Üyeler davet **etme,** konuk yerine Azure AD'de bulunan üyelere başvurur ve davette yer alan site veya grup üyelerini Microsoft 365. <p> Bu, Kurumsal ilişkiler **ayarları içinde Üyeler davet** Azure Active Directory aynıdır.|
+|Kullanıcıların kuruluşa yeni konuk eklemesine izin verme|On|Evet olarak **ayarlanırsa**, Azure AD üyeleri Azure AD aracılığıyla konukları davetlayabilir; hayır olarak **ayarlanırsa**, olamazlar. Evet olarak **ayarlanmazsa**, Microsoft 365 üyeleri konukları sahip onayıyla davetlayabilir. Microsoft 365 grubu üyeleri sahip onayı olan konukları davetlayabilir ancak sahipleri onaylamak için genel yönetici olmalı. <p> Üyeler davet **etme,** konuk yerine Azure AD'de bulunan üyelere başvurur ve davette yer alan site veya grup üyelerini Microsoft 365. <p> Bu, Kurumsal ilişkiler **ayarları içinde Üyeler davet** Azure Active Directory aynıdır.|
 
 ### <a name="microsoft-365-groups"></a>Microsoft 365 Grupları
 
@@ -148,7 +149,7 @@ Bu ayarlar, kuruluşta tüm siteleri etkiler. Bunlar doğrudan grup Microsoft 36
 
 OneDrive sitelerin hiyerarşisi bir SharePoint olduğundan, kuruluş düzeyindeki paylaşım ayarları aynı diğer sitelerde olduğu gibi OneDrive siteleri de SharePoint etkiler.
 
-**Gezinti:** SharePoint merkezi > Paylaşımı
+**Gezinti:** SharePoint merkezi > <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Paylaşımı**</a>
 
 ![Kuruluş düzeyi SharePoint ayarlarının ekran görüntüsü.](../media/external-sharing.png)
 
@@ -159,7 +160,7 @@ OneDrive sitelerin hiyerarşisi bir SharePoint olduğundan, kuruluş düzeyindek
 
 ### <a name="sharepoint-and-onedrive-advanced-sharing-settings"></a>SharePoint paylaşım OneDrive ayarlarına tıklayın ve tıklayın
 
-**Gezinti:** SharePoint merkezi > Paylaşımı
+**Gezinti:** SharePoint merkezi > <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Paylaşımı**</a>
 
 ![Kuruluş düzeyi SharePoint paylaşım ayarlarının ekran görüntüsü.](../media/external-sharing.png)
 
@@ -176,7 +177,7 @@ OneDrive sitelerin hiyerarşisi bir SharePoint olduğundan, kuruluş düzeyindek
 
 Dosya ve klasörler SharePoint ve OneDrive'de paylaşılırken, alıcılara dosya veya klasörün kendi kendilerine doğrudan erişim vermek yerine, dosya veya klasör üzerinde izinleri olan bir bağlantı gönderilir. Çeşitli türlerde bağlantılar vardır ve kullanıcılara sunulan dosya veya klasörü paylaştıklarına varsayılan bağlantı türünü seçebilirsiniz. Herkes bağlantıları için izinleri ve süre sonu *seçeneklerini de kullanabilirsiniz* .
 
-**Gezinti:** SharePoint merkezi > Paylaşımı
+**Gezinti:** SharePoint merkezi > <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Paylaşımı**</a>
 
 ![Kuruluş düzeyi SharePoint klasörleri paylaşma ayarlarının ekran görüntüsü.](../media/sharepoint-organization-files-folders-sharing-settings.png)
 
@@ -199,7 +200,10 @@ Aynı dosyada yer alan her site için konuk paylaşım SharePoint. Bu ayar hem s
 
 Sitenin duyarlılık etiketi uygulanmışsa, bu etiket dış paylaşım ayarlarını denetimine sahip olabilir. Daha fazla bilgi için bkz. Site site sitelerine, [gruplara ve sitelere Microsoft Teams Microsoft 365 için duyarlılık SharePoint kullanma](../compliance/sensitivity-labels-teams-groups-sites.md).
 
-**Gezinti:** SharePoint siteleri > için Yönetim Merkezi'> Dış paylaşımı > İlkeler > siteyi seçin
+> [!NOTE]
+> Kanal sitelerinin paylaşım ayarları yalnızca [Set-SPOSite](/powershell/module/sharepoint-online/set-sposite) PowerShell cmdlet'i kullanılarak değiştirilebilir.
+
+**Gezinti:** SharePoint siteler > <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**için Yönetim**</a> Merkezi'> dış paylaşımı > **İlkeler** > **siteyi seçin**
 
 ![Site dış SharePoint ayarlarının ekran görüntüsü.](../media/sharepoint-site-external-sharing-settings.png)
 
@@ -211,7 +215,7 @@ Sitenin duyarlılık etiketi uygulanmışsa, bu etiket dış paylaşım ayarlar�
 
 Bağlantı türü ve izinleri için varsayılan ayarları ve her site için Herkes bağlantıları *için süre sonu* ayarlarını kullanabilirsiniz. Site düzeyinde ayar olduğunda, bu ayarlar kuruluş düzeyi ayarlarını geçersiz kılar. Herkes bağlantıları *kuruluş* düzeyinde devre dışı bırakılırsa *, Herkes* site düzeyinde kullanılabilir bir bağlantı türü olmayacaktır.
 
-**Gezinti:** SharePoint siteleri > için Yönetim Merkezi'> Dış paylaşımı > İlkeler > siteyi seçin
+**Gezinti:** SharePoint siteler > <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**için Yönetim**</a> Merkezi'> dış paylaşımı > **İlkeler** > **siteyi seçin**
 
 ![Site SharePoint bağlantı paylaşım ayarlarının ekran görüntüsü.](../media/sharepoint-site-link-sharing-settings.png)
 

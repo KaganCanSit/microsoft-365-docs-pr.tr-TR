@@ -15,14 +15,15 @@ ms.custom:
 - Ent_TLGs
 - admindeeplinkMAC
 - admindeeplinkDEFENDER
+- admindeeplinkSPO
 ms.assetid: 1aa9639b-2862-49c4-bc33-1586dda636b8
 description: Test Laboratuvarı Kılavuzu'Microsoft 365 test Microsoft 365 için güvenlik Microsoft 365 ayarlarını etkinleştirin.
-ms.openlocfilehash: 5d431bba21c02daf2ec5af384e2d4fde53ab6edb
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: bf64bb23192eb4a4d2b3700a2b0c4390efc1f53e
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63006764"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63327917"
 ---
 # <a name="increased-microsoft-365-security-for-your-microsoft-365-for-enterprise-test-environment"></a>Kurumsal Microsoft 365 ortamınız için Microsoft 365 güvenliğinizi artırmış
 
@@ -59,8 +60,8 @@ Modern kimlik doğrulamayı desteklemez, bu uygulamalara kimlik ve cihaz erişim
   - Sanal kurumsal sınama ortamını Microsoft 365, CLIENT1 sanal makinesine bağlanmak için [Azure portalını](https://portal.azure.com) kullanın ve ardından İSTEMCI1'den oturum açın.
  
 2. Yeni **Gezinti Microsoft 365 yönetim merkezi,** sol gezinti **bölmesindeki** Yönetim merkezleri'nin altında Seçenekler'e **SharePoint**.
-3. Yeni yönetim merkezi **SharePoint Access denetimi** için **İlkeler> tıklayın**.
-4. Modern **kimlik doğrulamasını desteklemez uygulamalar'a tıklayın, Erişimi** **engelle'yi seçin ve** ardından Kaydet'e **tıklayın**.
+3. Yeni Yönetim **merkezi SharePoint PoliciesAccess** **denetimi'ni** >  <a href="https://go.microsoft.com/fwlink/?linkid=2185071" target="_blank">**seçin**</a>.
+4. Modern **kimlik doğrulamasını desteklemez uygulamalar'ı seçin, Erişimi** **engelle'yi ve** ardından Kaydet'i **seçin**.
 
 
 ### <a name="enable-defender-for-office-365-for-sharepoint-onedrive-for-business-and-microsoft-teams"></a>SharePoint, OneDrive İş ve Office 365 için Defender'ı Microsoft Teams

@@ -16,17 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Çok Faktörlü Kimlik Doğrulaması kullanılarak Yönetilen Hizmet Microsoft 365 Lighthouse(MSP)'ler için, çok faktörlü kimlik doğrulamasını yönetmeyi öğrenin.
-ms.openlocfilehash: 4587dffbe45eacaf62c49d0c84aeef86455980e1
-ms.sourcegitcommit: 3140e2866de36d57a27d27f70d47e8167c9cc907
+ms.openlocfilehash: 5ab430e464fb2d20f9a911818f9fd6cb077d849e
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2021
-ms.locfileid: "62988834"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326139"
 ---
 # <a name="manage-multifactor-authentication"></a>Çok faktörlü kimlik doğrulamasını yönetme
-
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
 
 Azure Active Directory (Azure AD) Multi-Factor Authentication (MFA), ikinci bir kimlik doğrulama biçimi kullanarak veri ve uygulamalara erişimi korumaya, başka bir güvenlik katmanı sağlar. Çok Faktörlü Kimlik Doğrulaması sekmesi kiracılar arasında MFA etkinleştirmesi durumu hakkında ayrıntılı bilgi sağlar. MFA gerektiren hangi Koşullu Erişim ilkelerinin zaten yapılandırılmış olduğu ve hangi kullanıcıların henüz MFA için kayıtlı olmadığını da içeren diğer ayrıntıları görmek için listeden herhangi bir kiracıyı seçin.
 
@@ -56,7 +53,7 @@ Koşullu Erişim aracılığıyla MFA'yi etkinleştirmek için bkz [. Öğretici
 
 ## <a name="notify-users-who-arent-registered-for-mfa"></a>MFA için kayıtlı olmayan kullanıcıları bilgilendirme
 
-1. Deniz Feneri'nin sol bölmesinde Kullanıcılar'ı **seçin**.
+1. Deniz Feneri'nin sol gezinti bölmesinde Kullanıcılar'ı **seçin**.
 
 2. Multifactor **Authentication sekmesini** seçin.
 

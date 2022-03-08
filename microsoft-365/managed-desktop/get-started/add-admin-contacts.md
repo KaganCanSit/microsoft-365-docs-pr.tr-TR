@@ -9,12 +9,12 @@ ms.collection: M365-modern-desktop
 ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: b5f52c1aee2586d325149c6656674fef16200773
-ms.sourcegitcommit: d4797cfc15c732f1a7ef21e4f944e672a7170f9a
+ms.openlocfilehash: 5668dcb0dd2b7f48a52fd2377dec3d666d17a013
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "62973883"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315463"
 ---
 # <a name="add-and-verify-admin-contacts-in-the-admin-portal"></a>Yönetici portalında yönetici kişilerini ekleme ve doğrulama
 
@@ -58,10 +58,10 @@ Bir Destek isteği gönderdiğinizde [yönetici kişileri gerekir](../service-de
 1. Access [yönetici portalı](access-admin-portal.md).
 1. Yönetici portalında yönetici kişilerini ekleyin ve doğrulayın (bu makale).
 1. [Kayıt sonrasında ayarları ayarlayın](conditional-access.md).
-1. Diğer uygulamaları dağıtın [ve Intune Şirket Portalı](company-portal.md).
+1. Dağıtım ve [Intune Şirket Portalı](company-portal.md).
 1. [Lisans atama](assign-licenses.md).
 1. [Uygulamaları dağıtın](deploy-apps.md).
-1. [Cihazları ayarlayın](set-up-devices.md).
+1. [Cihazları hazırlayın](Prepare-devices.md).
 1. [AutoPilot ve Kayıt Durumu Sayfası ile ilk çalıştırma deneyimini ayarlayın](esp-first-run.md).
 1. [Kullanıcı desteği özelliklerini etkinleştirin](enable-support.md).
 1. [Kullanıcılarınızı cihazları kullanmaya hazır hale hazırlayın](get-started-devices.md).

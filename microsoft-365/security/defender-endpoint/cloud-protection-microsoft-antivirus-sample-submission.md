@@ -13,14 +13,14 @@ manager: dansimp
 ms.custom: nextgen
 ms.technology: mde
 ms.topic: article
-ms.date: 10/18/2021
+ms.date: 02/24/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 3ffd18a0b2a0e81f2f3a425434f5e786d8dc598d
-ms.sourcegitcommit: 2b9d40e888ff2f2b3385e2a90b50d719bba1e653
+ms.openlocfilehash: 9df9c387f24671d6790d9219590eeac490f2f1aa
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "62997014"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63328141"
 ---
 # <a name="cloud-protection-and-sample-submission-in-microsoft-defender-antivirus"></a>E-postada bulut koruması ve örnek Microsoft Defender Virüsten Koruma
 
@@ -140,3 +140,5 @@ Uç Nokta için Defender'ın, diğer senaryolarda bulut korumasıyla ilgili bir 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Yeni nesil korumaya genel bakış](next-generation-protection.md)
+
+[Düzeltme algılamaları için Microsoft Defender Virüsten Koruma yapılandırma.](configure-remediation-microsoft-defender-antivirus.md)

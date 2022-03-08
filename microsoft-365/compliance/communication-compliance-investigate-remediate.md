@@ -19,12 +19,12 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 071fd765542c9906d4f4e5335c12617c7ea45e28
-ms.sourcegitcommit: efb333ce0772265da91632110acba39acfbe0bde
+ms.openlocfilehash: fc236ea646e9da487c5e2e1178ddf9ca460cb4ae
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "62997092"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63325145"
 ---
 # <a name="investigate-and-remediate-communication-compliance-alerts"></a>İletişim uyumluluk uyarılarını araştırma ve düzeltme
 
@@ -128,7 +128,6 @@ Uyarıları veya yapılandırmış olduğunuz filtrelemeyi gözden geçirmek iç
 - **Ekler**: Bu seçenek, ilke koşullarına uygun modern ekleri incelemeye olanak sağlar. Modern eklerin içeriği metin olarak ayıklanır ve ilke için Bekleyen uyarılar panosunda görüntülenir. Daha fazla bilgi için, İletişim [uyumluluğu özellik başvurusuna bakın](/microsoft-365/compliance/communication-compliance-channels).
 - **Kaynak**: Bu görünüm, web tabanlı ileti platformlarının çoğunda yaygın olarak görülen standart ileti görünümüdur. Üst bilgi normal stilde biçimlendirilen ve ileti gövdesi, biriktirilen grafik dosyalarını ve sözcük kaydırılmış metni destekler. [İlke için optik karakter tanıma (OCR)](communication-compliance-policies.md#optical-character-recognition-ocr) etkinse, ilke koşulluyla eşan basılı veya el yazısı metin içeren resimler bu görünümde ilişkili ileti için alt öğe olarak görüntülenecektir.
 - **Düz metin**: Metin görünümü iletinin yalnızca satır numaralı metin görünümünü görüntüler ve ilgili iletişim uyumluluk ilkesinde belirtilen hassas bilgi türü terimleri veya anahtar sözcükler için iletilerde ve eklerde anahtar sözcük vurgulaması içerir. Anahtar sözcük vurgulama, ilgi alanı için uzun iletileri ve ekleri hızla taramanıza yardımcı olabilir. Bazı durumlarda, vurgulanan metin yalnızca ilke koşullarıyla eşleşen iletiler için eklerde olabilir. Anahtar sözcük vurgulama, bir ilkeye atanmış yerleşik sınıflayıcılar tarafından tanımlanan terimler için desteklenmiyor. Eklenmiş dosyalar görüntülenmez ve bu görünümü satır numaralama, birden çok gözden geçiren kişi arasında ilgili ayrıntılara başvurmak için yararlıdır.
-- **Açıklama Ekle**: Bu görünüm, gözden geçirenlerin doğrudan ileti görünümüne kaydedilen ileti üzerine ek açıklama eklemesine olanak sağlar. İlke [için OCR](communication-compliance-policies.md#optical-character-recognition-ocr) etkinleştirildiyse, ilke koşullu biçimlendirmesine uygun basılı veya el yazısı metin içeren resimler bu görünümde ilişkili ileti için alt öğe olarak iletiyi görüntüler ve ek açıklama etkinleştirilmiş olabilir.
 - **Konuşma (önizleme)**: Sohbet Microsoft Teams için kullanılabilir, bu görünümde gözden geçirenlerin konuşma bağlamında etkinliği görüntülemelerine yardımcı olmak için uyarı iletisi öncesinde ve sonrasında en çok beş ileti görüntülenir. Bu bağlam gözden geçirenlerin iletileri hızla değerlendirmelerine ve daha bilinçli ileti çözümü kararları almalarına yardımcı olur. Tüm satır içi resimler, emojiler ve çıkartmalar da dahil olmak üzere konuşmalara gerçek zamanlı ileti eklemeleri Teams. İletilere resim veya metin dosyası ekleri görüntülenmez. Düzenlenen iletiler için veya konuşma penceresinden silinen iletiler için bildirimler otomatik olarak görüntülenir. İleti çözümlenirken, ilişkili konuşma iletileri çözülen iletiyle birlikte tutmaz. Konuşma iletileri, uyarı iletisi tanımlandıktan sonra 60 gün boyunca kullanılabilir.
 - **Kullanıcı geçmişi**: Kullanıcı geçmişi görünümü, iletiyi gönderen kullanıcı için herhangi bir iletişim uyumluluk ilkesi tarafından oluşturulan diğer tüm uyarıları görüntüler.
 - **Desen algılanan bildirim**: Zaman içinde birçok rahatsız etme ve rahatsız etme eylemi ve kullanıcının aynı davranışı tekrar tekrar gerçekleştirerek tekrar gerçekleştir: Desen *algılandı* bildirimi uyarı ayrıntılarında görüntülenir ve uyarıya dikkat çeker. Modellerin algılanması ilke temelindedir ve gönderen tarafından aynı alıcıya en az iki iletinin gönderildiği son 30 gün içerisinde davranışı değerlendirir. Şüpheliler ve gözden geçirenler bu bildirimi, uyarıyı uygun şekilde değerlendirmek üzere tekrarlanan davranışı belirlemek için kullanabilir.

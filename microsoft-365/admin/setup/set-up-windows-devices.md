@@ -30,12 +30,12 @@ search.appverid:
 - MET150
 ms.assetid: 2d7ff45e-0da0-4caa-89a9-48cabf41f193
 description: Merkezi yönetim Windows ve güvenlik Windows 10 Pro için Microsoft 365 İş Ekstra çalıştıran cihazları ayarlayın.
-ms.openlocfilehash: 40577f2130c185f8a98a3c8f873da80233e56cf0
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: 0a6fa4178e3aeb2e77d744283bfcf671d0df1f3d
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62999109"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322625"
 ---
 # <a name="set-up-windows-devices-for-microsoft-365-business-premium-users"></a>Mobil Windows cihazları Microsoft 365 İş Ekstra ayarlama
 
@@ -129,8 +129,7 @@ Azure AD'ye katılmış Windows 10 cihazlarınızı, Windows 10 Business aboneli
   
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Mobil cihazlarınızı ayarlamak için bkz. Microsoft 365 İş Ekstra için mobil cihazları [ayarlama, Cihaz](set-up-mobile-devices.md) koruma veya uygulama koruma ilkelerini ayarlamak için bkz. [Microsoft 365 yönetme](/admin/index.yml).
-  
-## <a name="related-content"></a>İlgili içerik
+Mobil cihazlarınızı ayarlamak için bkz. [Mobil cihazları kullanıcılar için Microsoft 365 İş Ekstra ayarlama](set-up-mobile-devices.md), 
 
-[Microsoft 365 eğitim videoları için giriş](../../business-video/index.yml) (bağlantı sayfası)
+Korumayı artırmak için bkz[. İş planları için güvenliği sağlamanın Microsoft 365 10 yolu](../security-and-compliance/secure-your-business-data.md).
+  

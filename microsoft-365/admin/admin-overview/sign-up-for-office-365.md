@@ -2,8 +2,8 @@
 title: Kaydolma - Yönetici Yardımı
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: seemg, pablom
 audience: Admin
@@ -16,11 +16,11 @@ ms.collection:
 - TRN_SMB
 - Adm_TOC
 ms.custom:
+- commerce_signup
 - TRN_M365B
 - OKR_SMB_Videos
 - okr_SMB
 - AdminSurgePortfolio
-- commerce_signup
 - AdminTemplateSet
 - adminvideo
 - intro-get-started
@@ -29,12 +29,12 @@ search.appverid:
 ROBOTS: NOINDEX
 description: Bu oturum açma işlemi için kayıt sürecine başlamadan önce neleri Office 365.
 ms.date: 03/17/2021
-ms.openlocfilehash: bb74ab42bb16cc2d8b3a97850ae9be17600bfc9a
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 045540074b42b528c07d638d643f0d1b74e1f724
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019459"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315897"
 ---
 # <a name="how-to-sign-up---admin-help"></a>Kaydolma - Yönetici Yardımı
 

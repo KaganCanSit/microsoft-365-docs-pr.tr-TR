@@ -1,8 +1,8 @@
 ---
 title: Ortak Sıfır Güven kimliği ve cihaz erişim ilkeleri - Microsoft 365 erişimi için | Microsoft Docs
 description: Önerilen Sıfır Güven kimliği ve cihaz erişimi ilkeleri ile yapılandırmalarını açıklar.
-ms.author: josephd
-author: JoeDavies-MSFT
+ms.author: dansimp
+author: dansimp
 manager: dansimp
 ms.prod: m365-security
 ms.topic: article
@@ -20,12 +20,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 90bdb8dbbb90009b10015591732d0257789884cd
-ms.sourcegitcommit: aac7e002ec6e10a41baa2d0bd38614b0ed471a70
+ms.openlocfilehash: 08d15cacdd6b391759aeb1a22abd91c98376cd17
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63009993"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63321761"
 ---
 # <a name="common-zero-trust-identity-and-device-access-policies"></a>Ortak Sıfır Güven kimliği ve cihaz erişimi ilkeleri
 

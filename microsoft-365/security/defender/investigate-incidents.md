@@ -8,8 +8,8 @@ ms.sitesec: library
 ms.pagetype: security
 f1.keywords:
 - NOCSH
-ms.author: josephd
-author: JoeDavies-MSFT
+ms.author: dansimp
+author: dansimp
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -23,12 +23,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 1dd603ae4f9f694b3b17794a71d1d5cc44800584
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: 0bab6d8aa8aaef29b67ed8460f2d48e65cd24aa1
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63014029"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63314329"
 ---
 # <a name="investigate-incidents-in-microsoft-365-defender"></a>E-Microsoft 365 Defender'de olayları araştır
 
@@ -82,7 +82,7 @@ Uyarılar **sekmesinde** , olayla ilgili uyarılar için uyarı kuyruğunı ve o
 
 - Önem Derecesi.
 - Uyarıya katılan varlıklar.
-- Uyarıların kaynağı (Kimlik için Microsoft Defender, Uç Nokta için Microsoft Defender, Office 365 için Microsoft Defender, Bulut Uygulamaları için Defender ve Uygulama Yönetimi).
+- Uyarıların kaynağı (Kimlik için Microsoft Defender, Uç Nokta için Microsoft Defender, Office 365 için Microsoft Defender, Bulut Uygulamaları için Defender ve uygulama yönetimi eklentileri).
 - Birbirine bağlı bağlantının nedeni.
 
 İşte bir örnek.
@@ -119,14 +119,14 @@ Cihazlar **sekmesi** olayla ilgili tüm cihazları listeler. İşte bir örnek.
 
 :::image type="content" source="../../media/investigate-incidents/incident-devices.png" alt-text="Olay için Cihazlar sayfası örneği." lightbox="../../media/investigate-incidents/incident-devices.png":::
 
-Cihazın ayrıntılarını, dizin verilerini, etkin uyarıları ve oturum açmış kullanıcıları görmek için cihazın onay işaretini seçin. Uç nokta cihaz envanteri için Microsoft Defender'da cihaz ayrıntılarını görmek için cihazın adını seçin. İşte bir örnek.
+Cihazın ayrıntılarını, dizin verilerini, etkin uyarıları ve oturum açmış kullanıcıları görmek için cihazın onay işaretini seçin. Uç nokta cihaz envanteri için Defender'da cihaz ayrıntılarını görmek için cihazın adını seçin. İşte bir örnek.
 
-:::image type="content" source="../../media/investigate-incidents/incident-devices-details.png" alt-text="Uç Nokta için Microsoft Defender için cihazlar sayfası örneği." lightbox="../../media/investigate-incidents/incident-devices-details.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-devices-details.png" alt-text="Uç Nokta için Defender için bir cihazlar sayfası örneği." lightbox="../../media/investigate-incidents/incident-devices-details.png":::
 
 Cihaz sayfasında, cihaz hakkında tüm uyarıları, zaman çizelgesi ve güvenlik önerileri gibi ek bilgiler topleyebilirsiniz. Örneğin, Zaman Çizelgesi sekmesinde  makine zaman çizelgesinde ilerleyerek, makinede gözlemlenen tüm olayları ve davranışları, uyarılarla kesişen kronolojik sırayla görüntüleyebilirsiniz.
 
 > [!TIP]
-> Bir cihaz sayfasında isteğe bağlı taramalar da edebilirsiniz. Mobil Microsoft 365 Defender Uç noktalar ve **Cihaz > seçin**. Uyarıları olan bir cihaz seçin ve virüsten koruma taraması çalıştırın. Virüsten koruma taramaları gibi eylemler izde gelir ve Cihaz **envanteri sayfasında** görünür. Daha fazla bilgi için bkz[. Cihazlarda Microsoft Defender Virüsten Koruma taramayı çalıştırma](/microsoft-365/security/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices).
+> Bir cihaz sayfasında isteğe bağlı taramalar da edebilirsiniz. Mobil Microsoft 365 Defender Uç noktalar ve **Cihaz > seçin**. Uyarıları olan bir cihaz seçin ve virüsten koruma taraması çalıştırın. Virüsten koruma taramaları gibi eylemler izde gelir ve Cihaz **envanteri sayfasında** görünür. Daha fazla bilgi edinmek için bkz [. Cihazlarda Defender Virüsten Koruma taraması çalıştırma](/microsoft-365/security/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices).
 
 ## <a name="users"></a>Kullanıcılar
 
@@ -145,11 +145,11 @@ Posta **Kutuları** sekmesi, olayın parçası veya ilgili olduğu belirlenen t�
 
 :::image type="content" source="../../media/investigate-incidents/incident-mailboxes.png" alt-text="Olay için Posta Kutuları sayfası örneği." lightbox="../../media/investigate-incidents/incident-mailboxes.png":::
 
-Etkin uyarıların listesini görmek için posta kutusunun onay işaretini seçebilirsiniz. Windows için Microsoft Defender'a ilişkin Gezgin sayfasında ek posta kutusu ayrıntılarını görmek için posta kutusu Office 365.
+Etkin uyarıların listesini görmek için posta kutusunun onay işaretini seçebilirsiniz. Office 365 için Defender'a ilişkin Gezgin sayfasında ek posta kutusu ayrıntılarını görmek için posta kutusu Office 365.
 
 ## <a name="investigations"></a>İncelemeler
 
-Araştırma **sekmesi** , bu olayda [uyarılar tarafından](m365d-autoir.md) tetiklenen tüm otomatik soruşturmaları listeler. Otomatik soruşturmalar, otomatik araştırmalarınızı Uç Nokta için Microsoft Defender ve Office 365 için Defender'da çalıştıracak şekilde yapılandırmanıza bağlı olarak, düzeltme eylemleri gerçekleştirecek veya eylemlerin analist onayı için Office 365.
+Araştırma **sekmesi** , bu olayda [uyarılar tarafından](m365d-autoir.md) tetiklenen tüm otomatik soruşturmaları listeler. Otomatik soruşturmalar, otomatik araştırmalarınızı uç nokta için Defender ve Office 365 için Defender'da çalıştıracak şekilde yapılandırmanıza bağlı olarak, düzeltme eylemleri gerçekleştirecek veya eylemlerin analist onayı için Office 365.
 
 :::image type="content" source="../../media/investigate-incidents/incident-investigations.png" alt-text="Bir olay için Araştırma sayfası örneği." lightbox="../../media/investigate-incidents/incident-investigations.png":::
 

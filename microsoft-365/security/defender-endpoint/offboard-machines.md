@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 19f4b517682fa58bde7253c074dc4402f6f95bf9
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: c2ec837ebc9fef0aabd2810dbd22db24597c52da
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998023"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322611"
 ---
 # <a name="offboard-devices-from-the-microsoft-defender-for-endpoint-service"></a>Uç nokta için Microsoft Defender hizmetinin offboard cihazları
 
@@ -49,7 +49,7 @@ Tercih ettiğiniz dağıtım yöntemine bağlı olarak ilgili yönergeleri izley
 >
 > Buna ek olarak, son 30 gün içinde etkin olunan cihazlar, kurum una açık kalma puanını ve Cihazlar için Microsoft Güvenli Puanı'Tehdit ve Güvenlik Açığı Yönetimi olan veriler üzerinde faktör faktöre bağlı değildir. [](tvm-exposure-score.md)
 >
-> Yalnızca etkin cihazları görüntülemek için durum, cihaz etiketleri [veya](machines-view-overview.md#health-state) makine [gruplarına göre](machine-tags.md) [filtreyi kaldırabilirsiniz](machine-groups.md).
+> Yalnızca etkin cihazları görüntülemek için algılayıcıların durumuna [, cihaz](machines-view-overview.md#use-filters-to-customize-the-device-inventory-views) etiketlerine veya [makine gruplarına](machine-tags.md) göre [filtre edebilirsiniz](machine-groups.md).
 
 ## <a name="offboard-windows-devices"></a>Offboard Windows cihazlar
 

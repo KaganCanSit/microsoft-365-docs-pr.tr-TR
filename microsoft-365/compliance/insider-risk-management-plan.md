@@ -13,12 +13,12 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 824a31780a377fc91d834db6d37068a425428ec8
-ms.sourcegitcommit: 39838c1a77d4e23df56af74059fb95970223f718
+ms.openlocfilehash: 3a1a2fcebdc097b1402d866a2af59d3caac633d3
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63010764"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315603"
 ---
 # <a name="plan-for-insider-risk-management"></a>Insider risk yönetimini planlama
 
@@ -49,41 +49,29 @@ Belirli bölgeleri, rolleri veya bölmeleri içeren olay incelemelerine katılan
 
 ## <a name="plan-for-the-review-and-investigation-workflow"></a>gözden geçirme ve soruşturma iş akışını planlama
 
-Uyarıları ve vakaları takip etmek ve gözden geçirmek için özel paydaşları seçerek proje [Microsoft 365 uyumluluk merkezi.](https://compliance.microsoft.com) Insider risk yönetiminde kullanılabilen farklı rol gruplarına farklı proje katılımcılarını nasıl atayacaklarını anlarından emin olun.
+Insider risk yönetimi ilkelerini ve uyarılarını nasıl yönetmek istediğinize bağlı olarak, farklı Insider risk yönetimi özellikleri kümelerini yönetmek için kullanıcıları belirli rol gruplarına atamanız gerekir. Insider risk yönetimi özelliklerinin farklı alanlarını yönetmek için, belirli rol gruplarına farklı uyumluluk sorumluluklarına sahip kullanıcılar atama seçeneğiniz vardır. Ya da belirlenen yöneticiler, analistler, tahminler ve görüntüleyiciler için tüm kullanıcı hesaplarını Insider Risk Management rol grubuna atamaya karar veabilirsiniz. Uyumluluk yönetimi gereksinimlerinize en uygun şekilde tek bir rol grubu veya birden çok rol grubu kullanın.
 
-> [!IMPORTANT]
-> Rol gruplarınızı yapılandırdikten sonra, rol grubu izinlerin kuruluş genelinde atanan kullanıcılara uygulamak 30 dakika kadar sürebilir.
+Insider risk yönetimiyle çalışırken, bu rol grubu seçenekleri ve çözüm eylemleri arasında seçim yapabilirsiniz:
 
-Insider risk yönetimi özelliklerini yönetmek için başlangıç izinlerini yapılandırmak için kullanılan altı rol grubu vardır. **Insider risk yönetimini** Microsoft 365 uyumluluk merkezi menü seçeneği olarak kullanılabilir yapmak ve bu yapılandırma adımlarını devam etmek için, aşağıdaki rollerden veya rol gruplarından biri size atanmış olması gerekir:
+|**Eylemler**|**Insider Risk Yönetimi**|**Insider Risk Yönetimi Yöneticisi**|**İçeriden Risk Yönetimi Analistleri**|**İçeriden Risk Yönetimi Araştırmacıları**|**Insider Risk Yönetimi Denetçileri**|
+|:----------|:--------------------------|:--------------------------------|:-----------------------------------|:----------------------------------------|:-----------------------------------|
+| İlkeleri ve ayarları yapılandırma | Evet | Evet | Hayır | Hayır | Hayır |
+| Access analiz içgörüleri | Evet | Evet | Evet | Hayır | Hayır |
+| Access & araştırma uyarıları | Evet | Hayır | Evet | Evet | Hayır |
+| Vakaları & Access araştıracak | Evet | Hayır | Evet | Evet | Hayır |
+| Access & Gezgini'ni görüntüde görüntüleme | Evet | Hayır | Hayır | Evet | Hayır |
+| Bildirim şablonlarını yapılandırma | Evet | Hayır | Evet | Evet | Hayır |
+| Denetim & görüntüleme | Evet | Hayır | Hayır | Hayır | Evet |
 
-- Azure Active Directory [*Yönetici rolü*](/azure/active-directory/roles/permissions-reference#global-administrator)
-- Azure Active Directory [*Uyumluluk Yöneticisi*](/azure/active-directory/roles/permissions-reference#compliance-administrator) rolü
-- Microsoft 365 uyumluluk merkezi [*Yönetimi*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) rol grubu
-- Microsoft 365 uyumluluk merkezi [*Yöneticisi rol*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) grubu
-- *Insider Risk Yönetimi* rol grubu
-- *Insider Risk Yönetimi Yönetici* rol grubu
+>[!IMPORTANT]
+>*Insider Risk Yönetimi veya Insider Risk Yönetimi* Yöneticisi rol gruplarında (seçtiğiniz seçen bağlı olarak) her zaman en az bir kullanıcınız olduğundan emin olun; böylelikle, insider risk yönetimi yapılandırmanız belirli kullanıcılar kuruluş içinden ayrılırsa "sıfır yönetici" senaryosuna girilamaz.
 
-Aşağıdaki rollerin üyeleri, *Insider Risk Management Admin rol grubuyla aynı çözüm izinlerine* sahip olur:
+Aşağıdaki rollerin üyeleri kullanıcıları Insider risk yönetimi rol gruplarına ata atayar ve *Insider Risk Management Admin* rol grubuna dahil edilenlerle aynı çözüm izinlerine sahip olabilir:
 
 - Azure Active Directory *Yönetici*
 - Azure Active Directory *Uyumluluk Yöneticisi*
 - Microsoft 365 uyumluluk merkezi *Yönetimi*
 - Microsoft 365 uyumluluk merkezi *Uyumluluk Yöneticisi*
-
-> [!IMPORTANT]
-> *Insider Risk Yönetimi veya Insider Risk Yönetimi* Yöneticisi rol gruplarında (seçtiğiniz seçen bağlı olarak) her zaman en az bir kullanıcınız olduğundan emin olun; böylelikle, insider risk yönetimi yapılandırmanız belirli kullanıcılar kuruluş içinden ayrılırsa "sıfır yönetici" senaryosuna girilamaz.
-
-Insider risk yönetimi ilkelerini ve uyarılarını nasıl yönetmek istediğinize bağlı olarak, farklı Insider risk yönetimi özellikleri kümelerini yönetmek için kullanıcıları belirli rol gruplarına atamanız gerekir. Insider risk yönetimi özelliklerinin farklı alanlarını yönetmek için, belirli rol gruplarına farklı uyumluluk sorumluluklarına sahip kullanıcılar atama seçeneğiniz vardır. Ya da belirlenen yöneticiler, analistler, tahminler ve görüntüleyiciler için tüm kullanıcı hesaplarını *Insider Risk Management rol grubuna atamaya* karar veabilirsiniz. Uyumluluk yönetimi gereksinimlerinize en uygun şekilde tek bir rol grubu veya birden çok rol grubu kullanın.
-
-Insider risk yönetimini yapılandırarak ve yapılandırarak bu çözüm rol grubu seçeneklerinden birini belirleyin:
-
-| **Rol grubu** | **Rol izinleri** |
-| :------------- | :------------------- |
-| **Insider Risk Yönetimi** | Tek bir grupta, organizasyon için insider risk yönetimini yönetmek üzere bu rol grubunu kullanın. Belirlenen yöneticiler, analistler, analistler ve denetçiler için tüm kullanıcı hesaplarını ekleyerek, insider risk yönetimi izinlerini tek bir grupta yapılandırabilirsiniz. Bu rol grubu tüm Insider risk yönetimi izin rollerini ve ilişkili izinleri içerir. Insider risk yönetimiyle hızlı bir şekilde çalışmaya başlamanın en kolay yolu bu yapılandırmadır ve ayrı kullanıcı grupları için tanımlanmış ayrı izinlere ihtiyacı olan kuruluşlara iyi uyum sağlar. **_Bu yapılandırmayı kullanırken,_** ilkelerinizin beklendiği gibi çalışması ve kullanıcının ilkeleri oluştur ve düzenley çalışması, çözüm ayarlarını yapılandırması ve ilke durumu uyarılarını gözden geçirmesi için her zaman en az bir kullanıcı bu rol grubuna atanmış olduğundan emin olun.|
-| **Insider Risk Yönetimi Yöneticisi** | Başlangıçta Insider risk yönetimini yapılandırmak ve daha sonra Insider risk yöneticilerini tanımlı bir grupla ayırmak için bu rol grubunu kullanın. Bu rol grubunda yer alan kullanıcılar analiz içgörülerini etkinleştirebilirsiniz ve  görüntüp, insider risk yönetimi ilkelerini, genel ayarları ve rol grubu atamalarını oluşturabilir, okuyabilir, güncelleştirebilirsiniz ve silebilirler. **_Bu yapılandırmayı kullanırken,_** ilkelerinizin beklendiği gibi çalışması ve kullanıcının ilkeleri oluştur ve düzenley çalışması, çözüm ayarlarını yapılandırması ve ilke durumu uyarılarını gözden geçirmesi için her zaman en az bir kullanıcı bu rol grubuna atanmış olduğundan emin olun. |
-| **İçeriden Risk Yönetimi Analistleri** | Insider risk durumu analistleri gibi davranacak kullanıcılara izin atamak için bu grubu kullanın. Bu rol grubunda yer alan kullanıcılar tüm Insider risk yönetimi uyarılarına, vakalara, çözümleme içgörülerine ve bildirim şablonlarına erişim iznine sahip olabilir. Insider riski olan İçerik gezginine erişamaz. |
-| **İçeriden Risk Yönetimi Araştırmacıları** | Insider risk verisi devam ediyor gibi davranacak kullanıcılara izin atamak için bu grubu kullanın. Bu rol grubunda yer alan kullanıcılar tüm Insider risk yönetimi uyarılarına, olaylarına, bildirim şablonlarına ve tüm durumlarda İçerik Gezgini'ne erişim iznine sahip olabilir. |
-| **Insider Risk Yönetimi Denetçileri** | Insider risk yönetimi etkinliklerini denetlenecek kullanıcılara izin atamak için bu grubu kullanın. Bu rol grubunda yer alan kullanıcılar Insider risk denetim günlüğüne erişim sağlar. |
 
 ## <a name="understand-requirements-and-dependencies"></a>Gereksinimleri ve bağımlılıkları anlama
 

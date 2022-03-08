@@ -2,8 +2,8 @@
 title: Şirket içi yöneticiyi teslim alma gerçekleştirme
 f1.keywords:
 - CSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: b9707ec8-2247-4e25-9bad-f11ddbc686e4
 description: Kendi kendine kullanıcı Microsoft 365'de self servis kayıt tarafından oluşturulan, yöneticisi olmayan bir hesabın hesabını almak için e-posta ve etki alanı sahipliğinizi doğrulamayı Microsoft 365.
-ms.openlocfilehash: 1201ea967fb829e43433cb5ed49f073b1d862728
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 06197bb5326cbd19fcd9174554007577e7086dc6
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019471"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320165"
 ---
 # <a name="perform-an-internal-admin-takeover"></a>Şirket içi yöneticiyi teslim alma gerçekleştirme
 

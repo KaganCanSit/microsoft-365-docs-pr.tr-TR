@@ -9,8 +9,8 @@ ms.sitesec: library
 ms.pagetype: security
 f1.keywords:
 - NOCSH
-ms.author: josephd
-author: JoeDavies-MSFT
+ms.author: dansimp
+author: dansimp
 ms.date: 07/09/2021
 ms.localizationpriority: medium
 manager: dansimp
@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 2569349bd5255f47ebca710263dfd7510aee817b
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: e534211008ea560642ba306844b9223170ac0140
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63014153"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323227"
 ---
 # <a name="review-architecture-requirements-and-key-concepts-for-microsoft-defender-for-identity"></a>Kimlik için Microsoft Defender'da mimari gereksinimlerini ve temel kavramları gözden geçirin
 
@@ -76,7 +76,7 @@ Aşağıdaki tabloda, Identity için Microsoft Defender'ı değerlendirirken, ya
 | Ağ Adı Çözümlemesi    |  Ağ Adı Çözümlemesi (NNR), MDI işlevselliğinin ağ trafiği, Windows etkinlikleri, ETW vb. temel alınan etkinliklerini yakalayan ve bu ham verileri her etkinlikte yer alan ilgili bilgisayarlarla ilişkili olarak bir bütün olarak ifade eden bir bileşenidir.       | [Ağ Adı Çözümlemesi nedir?](/defender-for-identity/nnr-policy)      |
 | Raporlar    | Kimlik raporları için Defender, sistem ve varlık durumu bilgilerini sağlayan raporları zamanlamanız veya hemen indirmeniz için olanak sağlar.  Ortamınıza algılanan sistem durumu, güvenlik uyarıları ve olası lateral movement paths hakkında raporlar oluşturabilirsiniz.   | [Kimlik Raporları için Microsoft Defender ](/defender-for-identity/reports)       |
 | Rol grupları    | Kimlik için Defender, yöneticiler, Kullanıcılar ve Görüntüleyiciler'i de içeren, kuruluşa özgü güvenlik ve uyumluluk ihtiyaçlarına göre verileri korumak için rol tabanlı gruplar ve temsilci erişimi sağlar.        |  [Kimlik rol grupları için Microsoft Defender](/defender-for-identity/role-groups)       |
-| Yönetim portalı    |  Güvenlik portalına Microsoft 365 Defender, şüpheli etkinlikleri izlemek ve yanıtlamak için Identity portal cab için Defender kullanılır.      | [Kimlik için Microsoft Defender portalıyla çalışma](/defender-for-identity/workspace-portal)        |
+| Yönetim portalı    |  Şüpheli etkinlikleri izlemek Microsoft 365 Defender bu portala ek olarak Kimlik için Defender portalı da kullanılabilir.      | [Kimlik için Microsoft Defender portalıyla çalışma](/defender-for-identity/workspace-portal)        |
 | Bulut Uygulamaları tümleştirmesi için Microsoft Defender   | Bulut Uygulamaları için Microsoft Defender, kullanıcı varlık davranış analizini (UEBA) karma bir ortamda (hem bulut uygulaması hem de şirket içi) sağlamak için Identity için Microsoft Defender ile tümleştirilmiştir   | Identity tümleştirmesi için Microsoft Defender  |
 | | | |
 

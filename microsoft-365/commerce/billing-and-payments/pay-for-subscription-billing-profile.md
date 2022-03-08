@@ -2,8 +2,8 @@
 title: Aboneliğiniz için bir fatura profiliyle ödeme
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: jkinma, jmueller
 audience: Admin
@@ -16,16 +16,16 @@ ms.collection:
 search.appverid: MET150
 description: Aboneliğinizin ödemesi için bir fatura profiliyle hangi ödeme seçeneklerinin mevcut olduğunu öğrenin.
 ms.custom:
+- commerce_billing
 - okr_SMB
 - AdminSurgePortfolio
-- commerce_billing
 ms.date: 10/29/2021
-ms.openlocfilehash: 8e7e53ae188a8b91dbe6ceb1d6db79997348e134
-ms.sourcegitcommit: e3bff611439354e6339bb666a88682078f32ec13
+ms.openlocfilehash: 42b0852e61e81228d1094bad575e6439c3c77745
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014346"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63321537"
 ---
 # <a name="how-to-pay-for-your-subscription-with-a-billing-profile"></a>Aboneliğiniz için ödeme profiliyle ödeme
 

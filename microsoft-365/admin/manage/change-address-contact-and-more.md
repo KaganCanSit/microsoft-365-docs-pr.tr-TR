@@ -2,8 +2,8 @@
 title: Kuruluşunuzun adresini, teknik iletişim bilgilerini ve daha fazlasını değiştirme
 f1.keywords:
 - CSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: tugu, jmueller
 audience: Admin
@@ -15,19 +15,19 @@ ms.collection:
 - Adm_O365
 - Adm_TOC
 ms.custom:
+- commerce_billing
 - AdminSurgePortfolio
-- commcerce_billing
 - AdminTemplateSet
 - admindeeplinkMAC
 search.appverid: MET150
 description: Kuruluş profilinizde kuruluş adı, adresi, telefonu, teknik kişi ve e-posta gibi değişiklikler yapın.
 ms.date: 02/11/2022
-ms.openlocfilehash: bec86787c3918bf794345178a15c9401bdc7ae06
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 4c5fdda4a2f089afc7e63a570290fdc08dc46440
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011963"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316653"
 ---
 # <a name="change-your-organizations-address-technical-contact-and-more"></a>Kuruluşunuzun adresini, teknik iletişim bilgilerini ve daha fazlasını değiştirme
   

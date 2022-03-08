@@ -2,8 +2,8 @@
 title: Aboneliğim sonlandığında verilerime ve erişimime ne olur?
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: jkinma, jmueller
 audience: Admin
@@ -14,18 +14,18 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
-- AdminSurgePortfolio
 - commerce_subscriptions
+- AdminSurgePortfolio
 - AdminTemplateSet
 search.appverid: MET150
 description: İş aboneliğinizin süresi dolduğunda, Microsoft 365 veya siz iptal ettiyken verilerinize ne olduğunu öğrenin.
 ms.date: 09/16/2021
-ms.openlocfilehash: 0f31665c64ca3c8ffee50069b607d27ffbf48d20
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: 8baebd55217dd5cd38228cca26a7504e5021f06b
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63014296"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322191"
 ---
 # <a name="what-happens-to-my-data-and-access-when-my-microsoft-365-for-business-subscription-ends"></a>İşletmeler için aboneliğimin süresi sona erdiğinde verilerime Microsoft 365 ne olur?
 

@@ -15,12 +15,12 @@ ms.collection:
 ms.custom: AdminSurgePortfolio
 search.appverid: MET150
 description: Mobil cihazlarınıza güvenlik tarafından algılanan tehditleri Microsoft Defender Virüsten Koruma ve yönetmeyi Windows 10 öğrenin.
-ms.openlocfilehash: 30c2114a3605c73214f773414fe64e18522d9093
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: e0e0613ad7805b8c4bde221aa2192c788fb75106
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985333"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324291"
 ---
 # <a name="review-detected-threats-and-take-action"></a>Algılanan tehditleri gözden geçirme ve önlem alma
 
@@ -114,3 +114,9 @@ Aşağıdaki tabloda, bu tabloda sizin 2013'te Microsoft Endpoint Manager.<br><b
 ## <a name="how-to-submit-a-file-for-malware-analysis"></a>Kötü amaçlı yazılım çözümlemesi için dosya gönderme
 
 Kaçırılmış olduğunu ya da yanlış olarak kötü amaçlı yazılım olarak sınıflandırılmış olduğunu bildiğiniz bir dosyanız varsa, kötü amaçlı yazılım çözümlemesi yapmak için bu dosyayı Microsoft'a gönderebilirsiniz. Kullanıcılar ve IT yöneticileri çözümleme için dosya gönderebilirsiniz. 'ı ziyaret edin [https://www.microsoft.com/wdsi/filesubmission](https://www.microsoft.com/wdsi/filesubmission).
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](secure-your-business-data.md)
+
+[İşletmeler için Microsoft Defender'a](../../security/defender-business/mdb-overview.md) genel bakış (1 Mart 2022 Microsoft 365 İş Ekstra'den itibaren işletmeler için Defender İş tarafından müşterilere sunulmaktadır)

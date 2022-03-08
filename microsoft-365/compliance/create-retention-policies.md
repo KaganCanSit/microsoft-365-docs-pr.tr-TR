@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Kullanıcıların e-posta, belgeler ve konuşmalarda kendi oluşturanın içeriğinin kontrolünü etkin bir şekilde tutmak için bekletme ilkesi kullanın. Istemediklerden kurtulun ve istemediklerden kurtulun.
-ms.openlocfilehash: 115dcce1e99583ab0c3345da683be0b826b24ff7
-ms.sourcegitcommit: 22cae7ec541268d519d45518c32f22bf5811aec1
+ms.openlocfilehash: 37e94d43f2cfeab0e1135c42de34726ee5895714
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "63027591"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320599"
 ---
 # <a name="create-and-configure-retention-policies"></a>Bekletme ilkeleri oluşturma ve yapılandırma
 
@@ -214,15 +214,23 @@ Bekletme ilkesi  oluşturmanız ve göndermeniz, bekletme ilkesinin uygulanması
   
 ![Bekletme ilkesi ne zaman yürürlüğe girecek? diyagramı.](../media/retention-policy-timings.png)
 
-İlk olarak, bekletme ilkesi seçtiğiniz konumlara dağıtılmalı ve sonra da içeriğe uygulanmalıdır. İstediğiniz zaman uyumluluk merkezinde Bekletme ilkeleri sayfasından ilkeyi seçerek **bekletme ilkesi** dağıtım durumunu kontrol edebilirsiniz. Uç uç bölmesinde **Kapalı durumunu (Hata)** ve konumların ayrıntılarında ilkenin dağıtılması beklenenden uzun zaman alıyor (SharePoint için) veya ilkeyi yeniden dağıtmayı (OneDrive için) denemek için, [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
+İlk olarak, bekletme ilkesi seçtiğiniz konumlara dağıtılmalı ve sonra da içeriğe uygulanmalıdır. İstediğiniz zaman uyumluluk merkezinde Bekletme ilkeleri sayfasından ilkeyi seçerek **bekletme ilkesi** dağıtım durumunu kontrol edebilirsiniz. Uç uç bölmesinde, durumla ilgili (Hata **)** durumunu görüyorsanız ve konumlara ilişkin ayrıntılarda ilkenin dağıtılması beklenenden uzun süre alıyor veya ilkeyi yeniden dağıtmayı denemek için [, Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) veya [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırarak ilke dağıtımını yeniden deneyin:
 
 1. [Bağlan ve Uyumluluk & PowerShell'e.](/powershell/exchange/connect-to-scc-powershell)
 
-2. Aşağıdaki komutu çalıştırın:
+2. Aşağıdaki komutlardan birini çalıştırın:
     
-    ```PowerShell
-    Set-RetentionCompliancePolicy -Identity <policy name> -RetryDistribution
-    ```
+    - Özel kanal iletilerinin Teams **ilke konumları için**, **Yammer iletilerini ve topluluk** **Yammer mesajlarını iletin**:
+    
+        ```PowerShell
+        Set-AppRetentionCompliancePolicy -Identity <policy name> -RetryDistribution
+        ```
+    
+    - E-posta gönderme, site Exchange **, kanal** **SharePoint gibi** diğer tüm **ilke Teams için**:
+    
+        ```PowerShell
+        Set-RetentionCompliancePolicy -Identity <policy name> -RetryDistribution
+        ```
 
 ## <a name="updating-retention-policies"></a>Bekletme ilkelerini güncelleştirme
 

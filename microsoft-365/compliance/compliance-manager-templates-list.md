@@ -2,8 +2,8 @@
 title: Microsoft Uyumluluk Yöneticisi şablon listesi
 f1.keywords:
 - NOCSH
-ms.author: v-jgriffee
-author: jmgriffee
+ms.author: chvukosw
+author: chvukosw
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Uyumluluk Yöneticisi ulusal, bölgesel ve endüstriyle ilgili düzenlemeler, standartlar ve yasalara uygun değerlendirmeler oluşturmak için şablonlar sağlar.
-ms.openlocfilehash: 7ea918b1273335c39866d2de684acf9a2be076b7
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: ec728c5dcc29bd2817069e09b327d7035b38a724
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021610"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316177"
 ---
 # <a name="compliance-manager-templates-list"></a>Uyumluluk Yöneticisi şablon listesi
 
@@ -39,7 +39,9 @@ ms.locfileid: "63021610"
 
 ## <a name="list-of-templates-and-where-to-find-them"></a>Şablonların listesi ve bunları nerede bulabilirsiniz
 
-Aşağıda, Uyumluluk Yöneticisi'nde yer alan şablonların tam listesi verilmiştir. Aşağıdaki şablon adlarında yer alan bağlantılar, sizi bu standart, düzenleme veya yasa hakkında mevcut olan ilgili belgelere götürmektedir.
+Aşağıda, Uyumluluk Yöneticisi'nde yer alan şablonların tam listesi verilmiştir. Şablon adları ilişkili düzenleme veya sertifikayla eşler. Kullanılabilir olduğu zaman, aşağıdaki şablon adlarında yer alan bağlantılar sizi bu standart, düzenleme veya yasayla ilgili belgelere götürmektedir.
+
+Her şablon (taban çizgisi dışında) Microsoft 365 gibi belirli bir ürünle kullanmak üzere tasarlanmış en az bir sürümde ve tercihi diğer ürünleri değerlendirmek için kullanabileceğiniz evrensel sürümü içerir. Şablon seçenekleri hakkında daha fazla bilgi edinmek için değerlendirme [şablonları hakkında bilgi edinmek için bkz](compliance-manager-templates.md).
 
 Ayrıca, Uyumluluk Yöneticisi'nde tek tek şablonları seçerek bu şablonlarla ilgili daha fazla bilgi edinebilirsiniz ve bu şablonların düzenleme ve özelliklerinin açıklaması da yer almaktadır. Özet **için** Hakkında bölümünü okuyun.
 

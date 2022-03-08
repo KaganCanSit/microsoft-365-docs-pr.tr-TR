@@ -1,13 +1,13 @@
 ---
-title: İş için Microsoft Defender'da (önizleme) roller ve izinler atama
-description: İş için Microsoft Defender'da (önizleme) roller ve izinler atamayı öğrenin
+title: İş için Microsoft Defender'da roller ve izinler atama
+description: İş için Microsoft Defender'da roller ve izinler atamayı öğrenin
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 02/07/2022
+ms.date: 02/24/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -16,17 +16,17 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 134b5ec8bcd390cc7f7908a09be5c2d1bd85169c
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: 4dce33caf6976dc891daf365aeb0235d81753fdb
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63027484"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63325804"
 ---
-# <a name="assign-roles-and-permissions-in-microsoft-defender-for-business-preview"></a>İş için Microsoft Defender'da (önizleme) roller ve izinler atama
+# <a name="assign-roles-and-permissions-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da roller ve izinler atama
 
 > [!IMPORTANT]
-> İş için Microsoft Defender şu anda önizlemede ve istekte etmek için buraya kaydolan müşterilere ve IT [İş Ortaklarına aşamalı](https://aka.ms/mdb-preview) olarak aşamalı olarak aşamalı olarak sunulmaktadır. Önümüzdeki haftalarda bir ilk müşteri ve iş ortağı kümesi sunuyoruz ve genel kullanılabilirlik durumuna kadar önizlemeyi genişleteceğiz. Önizlemenin bir dizi ilk [senaryoyla başlat olacağını](mdb-tutorials.md#try-these-preview-scenarios) ve düzenli olarak özellikler ekley olacacaz.
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
@@ -34,7 +34,7 @@ Microsoft 365 Defender portalında İş için Microsoft Defender'ı yapılandır
 
 ## <a name="what-to-do"></a>Ne yapmalı?
 
-1. [İş için Defender(önizleme) özelliğinde roller hakkında bilgi sahibi olur.](#roles-in-defender-for-business)
+1. [İş için Defender'daki roller hakkında bilgi edinmek için:](#roles-in-defender-for-business)
 
 2. [Güvenlik ekibinin rol atamalarını görüntüleme veya düzenleme](#view-or-edit-role-assignments).
 
@@ -48,11 +48,11 @@ Microsoft 365 Defender portalında İş için Microsoft Defender'ı yapılandır
 
 ## <a name="roles-in-defender-for-business"></a>İş için Defender'daki Roller
 
-Aşağıdaki tabloda, İş için Defender'da (önizleme) atanabilir üç rol açık almaktadır. [Yönetici rolleri hakkında daha fazla bilgi edinin](../../admin/add-users/about-admin-roles.md). <br/><br/>
+Aşağıdaki tabloda, İş için Defender'da atanabilir üç rol açık almaktadır. [Yönetici rolleri hakkında daha fazla bilgi edinin](../../admin/add-users/about-admin-roles.md). <br/><br/>
 
 | İzin düzeyi | Açıklama |
 |:---|:---|
-| **Genel yöneticiler** (genel yöneticiler olarak da adlandırılır) <br/><br/> *En iyi uygulama olarak, genel yöneticilerin sayısını sınırlayın.* | Genel yöneticiler her türlü görevi gerçekleştirebilir. İş için Microsoft Defender (önizleme) Microsoft 365 için organizasyona oturum veren kişi, varsayılan olarak genel yöneticidir. <br/><br/> Genel yöneticiler tüm kullanıcı portalları genelinde ayarlara erişim Microsoft 365 değiştirebilir. Örneğin: <br/>- Microsoft 365 yönetim merkezi ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)) |
+| **Genel yöneticiler** (genel yöneticiler olarak da adlandırılır) <br/><br/> *En iyi uygulama olarak, genel yöneticilerin sayısını sınırlayın.* | Genel yöneticiler her türlü görevi gerçekleştirebilir. microsoft Defender for Business veya Microsoft 365 için organizasyona oturum veren kişi varsayılan olarak genel yöneticidir. <br/><br/> Genel yöneticiler tüm kullanıcı portalları genelinde ayarlara erişim Microsoft 365 değiştirebilir. Örneğin: <br/>- Microsoft 365 yönetim merkezi ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)) |
 | **Güvenlik yöneticileri** (güvenlik yöneticileri olarak da adlandırılır) | Güvenlik yöneticileri aşağıdaki görevleri gerçekleştirebilir: <br/>- Güvenlik ilkelerini görüntüleme ve yönetme <br/>- Güvenlik tehditlerini ve uyarılarını görüntüleme ve yönetme (bu etkinlikler, uç noktalarda yanıt eylemlerinin yer almalarını içerir) <br/>- Güvenlik bilgilerini ve raporlarını görüntüleme |
 | **Güvenlik gözetmeni** | Güvenlik okuyucuları aşağıdaki görevleri gerçekleştirebilir: <br/>- Güvenlik ilkelerini görüntüleme <br/>- Güvenlik tehditlerini ve uyarıları görüntüleme <br/>- Güvenlik bilgilerini ve raporlarını görüntüleme  |
 
@@ -85,4 +85,4 @@ Aşağıdaki tabloda, İş için Defender'da (önizleme) atanabilir üç rol aç
 
 - [3. Adım: E-posta bildirimlerini ayarlama](mdb-email-notifications.md)
 
-- [4. Adım: Cihazları İş için Microsoft Defender'a ekleme (önizleme)](mdb-onboard-devices.md)
+- [4. Adım: Cihazları İş için Microsoft Defender'a ekleme](mdb-onboard-devices.md)

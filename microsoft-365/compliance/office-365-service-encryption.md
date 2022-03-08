@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: Strat_O365_Enterprise
 description: 'Özet: Verinin daha iyi bir şekilde Microsoft Office 365.'
-ms.openlocfilehash: b83b55afab2d9901e03a311d603b5b316531580a
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 54bae9fa0203d76c598c4dee337ee15f24a2fc24
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983486"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63317647"
 ---
 # <a name="service-encryption"></a>Hizmet Şifrelemesi
 
@@ -29,7 +29,7 @@ Toplu şifrelemenin yanı sıra, Exchange Online, Microsoft Teams, SharePoint On
 Microsoft, hizmet şifrelemesi için kök anahtarlar da dahil olmak üzere tüm şifreleme anahtarlarını yönetir. Bu seçenek şu anda Exchange Online Online ve SharePoint için varsayılan olarak OneDrive İş. Müşteri Anahtarı'nın kullanımına eklemeye karar vermedikçe, Microsoft tarafından yönetilen anahtarlar varsayılan hizmet şifrelemesi sağlar. Daha sonraki bir tarihte, veri temizleme yolunu takip etmeden Müşteri Anahtarı'nın kullanımına son vermenizi sağlarsanız, Microsoft tarafından yönetilen anahtarlar kullanılarak verileriniz şifrelenmiş olarak kalır. Verileriniz en azından bu varsayılan düzeyde her zaman şifrelenir. 
 
 ## <a name="customer-key"></a>Müşteri Anahtarı
-Hizmet şifrelemesi ile kullanılan kök anahtarları sağlar ve bu anahtarları Azure Anahtar Kasasını kullanarak yönetirsiniz. Microsoft diğer tüm anahtarları yönetir. Bu seçenek Müşteri Anahtarı olarak adlandırılan bu seçenek, şu anda Exchange Online, SharePoint Online ve OneDrive İş. (Daha önce BYOK ile Gelişmiş Şifreleme olarak adlandırılır. Bkz[. İlk duyuru için Office 365 saydamlık](https://blogs.office.com/2015/04/21/enhancing-transparency-and-control-for-office-365-customers/) ve denetimi geliştirme.)
+Hizmet şifrelemesi ile kullanılan kök anahtarları sağlar ve bu anahtarları Azure Anahtar Kasasını kullanarak yönetirsiniz. Microsoft diğer tüm anahtarları yönetir. Bu seçenek Müşteri Anahtarı olarak adlandırılan bu seçenek, şu anda Exchange Online, SharePoint Online ve OneDrive İş. (Daha önce BYOK ile Gelişmiş Şifreleme olarak adlandırılır. Bkz[. İlk duyuru için Office 365 saydamlık](https://www.microsoft.com/en-us/microsoft-365/blog/2015/04/21/enhancing-transparency-and-control-for-office-365-customers/) ve denetimi geliştirme.)
 
 Hizmet şifreleme çeşitli avantajlar sağlar:
 

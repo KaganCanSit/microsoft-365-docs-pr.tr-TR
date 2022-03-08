@@ -2,8 +2,8 @@
 title: Microsoft Uyumluluk Yöneticisi için Excel şablonu verilerini E-posta'da biçimlendirme
 f1.keywords:
 - NOCSH
-ms.author: v-jgriffee
-author: jmgriffee
+ms.author: chvukosw
+author: chvukosw
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Uyumluluk Yöneticisi'nde Excel şablonları için değerlendirme verileriyle nasıl çalışııı anlıyoruz.
-ms.openlocfilehash: 899dd42401bb4c7acceb1db5bfe5816b383ae16b
-ms.sourcegitcommit: be074f57e33c811bb3857043152825209bc8af07
+ms.openlocfilehash: 755716e67589b2f002fcaec7458f502ff945c318
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "62988800"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320585"
 ---
 # <a name="format-assessment-template-data-in-excel-for-microsoft-compliance-manager"></a>Microsoft Uyumluluk Yöneticisi için Excel şablonu verilerini E-posta'da biçimlendirme
 
@@ -81,10 +81,10 @@ Elektronik tablonuzu şablon verileriyle doldururken, elektronik tablonun yukar�
 
 - **actionTitle**: Bu, eyleminizin başlığıdır ve gerekli bir alandır. Sağlayma başlığı benzersiz olmalıdır. **Önemli**: Sahip olduğunuz ve zaten var olan bir eyleme (örneğin, başka bir şablonda) başvurursanız ve sonraki sütunlarda bu öğelerin herhangi birini değiştirirsanız, bu değişiklikler diğer şablonlarda da aynı eyleme yalıtır.
 
-- **implementationType**: Bu gerekli alanda, aşağıdaki üç uygulama türü arasında listelenmiştir:
-- **İşlem** - kuruluş sistemlerinin, varlıklarının, verilerin ve personelinin gizliliğini, bütünlüğünü ve kullanılabilirliğini korumak için kişiler ve süreçler tarafından uygulanan eylemler (örnek: güvenlik farkındalığı ve eğitim)
-- **Teknik** - kuruluş sistemlerinin ve verilerin gizliliğini, bütünlüğünü ve kullanılabilirliğini korumak için bilgi sisteminin donanım, yazılım veya üretici yazılımı bileşenlerinde bulunan teknoloji ve mekanizmalar kullanılarak tamamlayan eylemler (örneğin: çok faktörlü kimlik doğrulaması)
-- **Belgeler** - Kurumsal sistemlerin, varlıkların, verilerin ve personelin gizliliğini, bütünlüğünü ve kullanılabilirliğini korumak için gereken denetimleri belirleyen ve belirleyen belgelenmiş ilkeler ve yordamlar aracılığıyla uygulanan eylemler (örnek: bilgi güvenliği ilkesi)
+- **implementationType**: Bu gerekli alanda, aşağıdaki üç uygulama türü arasında listelenin: 
+  1) **İşlem** - kuruluş sistemlerinin, varlıklarının, verilerin ve personelinin gizliliğini, bütünlüğünü ve kullanılabilirliğini korumak için kişiler ve süreçler tarafından uygulanan eylemler (örnek: güvenlik farkındalığı ve eğitim).      
+  2) **Teknik** - eylemler, kuruluş sistemleri ve verilerin gizliliğini, bütünlüğünü ve kullanılabilirliğini korumak için bilgi sisteminin donanım, yazılım veya üretici yazılımı bileşenlerinde bulunan teknoloji ve mekanizmalar kullanılarak tamamlanır (örneğin: çok faktörlü kimlik doğrulaması).
+  3) **Belgeler** - Kurumsal sistemlerin, varlıkların, verilerin ve personelin gizliliğini, bütünlüğünü ve kullanılabilirliğini korumak için gereken denetimleri belirleyen ve belirleyen belgelenmiş ilkeler ve yordamlar aracılığıyla uygulanan eylemler (örnek: bilgi güvenliği ilkesi).
 
 - **actionScore**: Bu gerekli alanda, eyleminiz için sayısal bir puan değeri girin. Değer 1 ile 99 arasında bir tam sayı olmalı; 0, null veya boş olamaz. Sayı ne kadar yüksekse, uyumluluk postuzlarınızı geliştirmeye de o kadar büyük bir değer verir. Aşağıdaki resimde Uyumluluk Yöneticisi'nin denetimleri nasıl puanla ilgili olduğu gösterilmiştir:
 

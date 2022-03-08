@@ -1,8 +1,8 @@
 ---
 title: Kimlik ve cihaz erişim ilkelerinin uygulanması için önkoşullar çalışması - Microsoft 365 erişimi için | Microsoft Docs
 description: Bu makalede, Sıfır Güven kimliği ve cihaz erişimi ilkeleri ile yapılandırmalarını kullanmak için karşılamanız gereken önkoşullar açıklanmıştır.
-ms.author: josephd
-author: JoeDavies-MSFT
+ms.author: dansimp
+author: dansimp
 manager: dansimp
 ms.prod: m365-security
 ms.topic: article
@@ -19,12 +19,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: ba9694be615f0c669ed0b9c319909551ccf02315
-ms.sourcegitcommit: aac7e002ec6e10a41baa2d0bd38614b0ed471a70
+ms.openlocfilehash: 1dbcfbff2a45cd3dfbc453f84eaa73e178174aee
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63009991"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312019"
 ---
 # <a name="prerequisite-work-for-implementing-zero-trust-identity-and-device-access-policies"></a>Sıfır Güven kimliği ve cihaz erişim ilkelerinin uygulanması için önkoşul çalışma
 

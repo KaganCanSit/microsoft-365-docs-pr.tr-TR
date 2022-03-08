@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: sharik
 author: skjerland
 manager: scotv
-ms.date: 8/13/2018
+ms.date: 02/27/2022
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -27,14 +27,17 @@ search.appverid:
 - MET150
 ms.assetid: aad21b1a-c775-469a-b89c-c5d1d59d27db
 description: Intune ayarlarına nasıl Microsoft 365 İş Ekstra özellikleri olduğunu öğrenin. Abonelik Size Intune ayarlarını değiştirme lisansı sağlar.
-ms.openlocfilehash: 144a49f6c6463e7562c6509c981ab56b4702453c
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 33dfb7b53e048f258c1974ced046deaad41f5ce2
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984120"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313769"
 ---
 # <a name="how-do-protection-features-in-microsoft-365-business-premium-map-to-intune-settings"></a>Intune ayarlarıyla Microsoft 365 İş Ekstra özellikleri nasıl eşler
+
+> [!NOTE]
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Bu teklif, cihazlar için ek güvenlik özellikleri sağlar. [İş için Defender hakkında daha fazla bilgi öğrenin](../../security/defender-business/mdb-overview.md).
 
 ## <a name="android-and-ios-application-protection-settings"></a>Android ve iOS uygulama koruma ayarları
 
@@ -109,3 +112,7 @@ Intune ayarını bulmak için, Microsoft 365 İş Ekstra yönetici kimlik bilgil
 |Kullanıcıların Microsoft'tan Windows ipucu ve reklam almasına izin ver  <br/> |**Windows altında**, bu ayar kapalı olarak ayarlanmışsa tüm **spotları** Microsoft 365 İş Ekstra.  <br/> |
 |Windows 10 cihazları otomatik olarak güncelleştir  <br/> | Bu ayar, **Microsoft Intune Hizmet güncelleştirmeleri** \> **- Güncelleştirme Windows 10**' için, **İlkeyi Windows 10'i** \> ve sonra Özellikler Güncelleştirme **ayarları'Ayarlar**.  <br/>  Ayar Microsoft 365 İş Ekstra Olarak **ayarlanmışsa**, aşağıdaki tüm ayarlar ayarlanır:  <br/> **Hizmet dalı** CB olarak **ayarlanır** (bu, CB'de kapalıyken CBB Microsoft 365 İş Ekstra.  <br/> **Microsoft ürün güncelleştirmeleri** seçeneği **İzin ver** olarak ayarlanır.  <br/> **Windows sürücüleri** seçeneği **İzin ver** olarak ayarlanır.  <br/> **Otomatik güncelleştirme davranışı** seçeneği **Bakım zamanında otomatik yükle** olarak ayarlanır ve:  <br/> **Etkin saatlerin başlangıcı** için **06:00** ayarlanır.  <br/> **Etkin saatlerin sonu** için **22:00** ayarlanır.  <br/> **Kalite güncelleştirmesi erteleme süresi (gün)** için **0** ayarlanır.  <br/> **Özellik güncelleştirmesi erteleme süresi (gün)** için **0** ayarlanır.  <br/> **Teslimi iyileştirme indirme modu** için **Aynı NAT arkasında eşleme ile karışık HTTP** ayarlanır.  <br/> |
 |||
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](../security-and-compliance/secure-your-business-data.md)

@@ -2,8 +2,8 @@
 title: Etki alanını kaldırma
 f1.keywords:
 - NOCSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -25,12 +25,12 @@ search.appverid:
 - GEA150
 ms.assetid: f09696b2-8c29-4588-a08b-b333da19810c
 description: Eski bir etki alanını eski etki alanında Microsoft 365 ve kullanıcıları ve grupları başka bir etki alanına taşımayı veya aboneliğinizi iptal etmeyi öğrenin.
-ms.openlocfilehash: 875858804912ab75d0a5a0bab45c9bb1614c82ca
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 3da47275e090296c9b192b4bd60ad19dd8cf4149
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011812"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316835"
 ---
 # <a name="remove-a-domain"></a>Etki alanını kaldırma
 
@@ -115,6 +115,9 @@ Kullanıcıları başka bir etki alanına taşımak için PowerShell de kullanab
 
 ::: moniker range="o365-worldwide"
 
+> [!NOTE]
+> Özel etki alanını kaldıransanız, devam etmeden [önce bkz. Özel etki](#remove-a-custom-domain) alanını kaldırma.
+
 1. Yönetim merkezinde Etki Alanları'Ayarlar  \> gidin.<a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank"></a>
 
 ::: moniker-end
@@ -130,6 +133,35 @@ Kullanıcıları başka bir etki alanına taşımak için PowerShell de kullanab
 3. Sağ bölmede Kaldır'ı **seçin**.
 
 4. Ek bilgi istemlerini izleyin ve ardından Kapat'ı **seçin**.
+
+
+
+
+### <a name="remove-a-custom-domain"></a>Özel etki alanını kaldırma
+
+Aboneliğinizi iptal ediyorsanız ve özel bir etki alanı kullanıyorsanız, aboneliğinizi iptal etmek için önce birkaç ek adım gerekir. 
+
+#### <a name="change-your-domain-nameserver-records-if-needed"></a>Etki alanı ad sunucusu kayıtlarınızı değiştirme (gerekirse)
+
+Özel bir etki alanı ayarsanız, etki alanının diğer hizmetlerle birlikte çalışması için DNS kayıtlarını Microsoft 365 eklediysiniz. Etki alanını kaldırmadan önce, etki alanı MX kaydınız gibi DNS kayıtlarını DNS ana güncelleştirmesi gerekir.
+
+Örneğin, DNS ana  makinenizin MX kaydını değiştirebilirsiniz. Etki alanınıza gönderilen e-posta microsoft adresinize gönderilmez ve bunun yerine yeni e-posta sağlayıcınıza gider. (MX kaydı, etki alanınıza yönlendirilen e-postanın nereye gönderileceğini belirler.)
+
+- Ad sunucusu (NS) kayıtlarınız [Microsoft 365](../../admin/setup/add-domain.md) ad sunucularını işaret ediyorsa, NS kayıtlarınızı yeni DNS ana makinenize işaret edecek şekilde değiştirmeden (bkz. 2. Adım) MX kaydında yapılan değişiklikler etkili olmaz.
+
+- MX kaydını güncelleştirmeden önce, kullanıcılarınıza e-postalarını değiştirmeyi plan istediğiniz tarihi ve kullanmayı planlay istediğiniz yeni e-posta sağlayıcısını haber ve girin. Ayrıca, kullanıcılarınız mevcut Microsoft e-postalarını yeni sağlayıcıya taşımak isteyen kullanıcıların bazı ek adımlar atılması gerekir.
+
+- MX kaydını değiştirdığınız gün, verilerinizi kaydetmeye ve gerekirse MX [kaydını](/microsoft-365/commerce/subscriptions/cancel-your-subscription#save-your-data) [Office emin olun](/microsoft-365/commerce/subscriptions/cancel-your-subscription#uninstall-office-optional).
+
+#### <a name="update-your-domain-mx-and-other-dns-records-if-youre-using-a-custom-domain"></a>Etki alanı MX ve diğer DNS kayıtlarınızı güncelleştirme (özel bir etki alanı kullanıyorsanız)
+
+Etki alanınızı ayarlayacakken ad sunucusu (NS) kayıtlarınızı Microsoft 365'e değiştirdiysiniz, kullanmayı planlasanız DNS ana bilgisayarlarında MX kaydınızı ve diğer DNS kayıtlarınızı ayarlamalı veya güncelleştirmeli ve sonra NS kaydınızı bu DNS ana bilgisayarıyla değiştirmalısınız.
+
+Etki alanınız ayarlanırken NS kayıtlarını değiştirmedıysanız, MX kaydını değiştir adlarını değiştirmiyorsanız postanız hemen yeni adrese çalışmaya başlar.
+
+NS kayıtlarınızı değiştirmek için bkz[. Herhangi bir etki alanı kayıt şirketiyle Microsoft 365 ad sunucularını değiştirme](../../admin/get-help-with-domains/change-nameservers-at-any-domain-registrar.md).
+
+
 
 ## <a name="how-long-does-it-take-for-a-domain-to-be-removed"></a>Etki alanının kaldırılması ne kadar sürer?
 

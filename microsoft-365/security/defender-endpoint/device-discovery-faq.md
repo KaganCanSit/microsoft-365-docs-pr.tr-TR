@@ -13,17 +13,15 @@ author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection:
-- M365-security-compliance
-- m365initiative-m365-defender
+ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: e364a2cffcd1c18c3d220e0747010a855fafed2a
-ms.sourcegitcommit: babc2dad1c0e08a9237dbe4956ffd21c0214db83
+ms.openlocfilehash: 530846d4a7c18900f0697806bb656aa653b71947
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014327"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326181"
 ---
 # <a name="device-discovery-frequently-asked-questions"></a>Cihaz bulma ile ilgili sık sorulan sorular
 
@@ -49,7 +47,7 @@ Gelişmiş özellikler sayfası aracılığıyla cihaz bulma'ya kapatma [seçene
 
 Uç nokta için Microsoft Defender'a alınan bu modda uç noktalar, toplanan verileri zenginleştirmek için (uygun olmayan ağ trafiği miktarıyla) ağda gözlemlenen cihazları etkin bir şekilde gözlemlenebilir. Yalnızca temel bulma modu tarafından gözlemlenen cihazlar standart modda etkin bir şekilde gözlenir. Bu mod, güvenilir ve tutarlı bir cihaz stoku için kesinlikle önerilir. Bu modu devre dışı bırakmayı ve Temel bulma modunu seçerseniz, büyük olasılıkla yalnızca ağ bağlantınız içinde, bağlantıların sınırlı görünürlüğünü kazanırsınız.
 
- Standart mod, daha fazla cihaz bulmak için ağ üzerinde sorgular kullanan yaygın bulma protokollerinin yanı sıra pasif yöntemi kullanılarak ovservedilenleri de kullanır.
+ Standart mod aynı zamanda pasif yöntemi kullanılarak gözlemlenenlere ek olarak daha fazla cihaz bulmak için ağda sorgular kullanan yaygın bulma protokolleri kullanır.
 
 ## <a name="can-i-control-which-devices-perform-standard-discovery"></a>Hangi cihazların Standart keşif gerçekleştireceklerini kontrol  olabilir miyim?
 
@@ -90,7 +88,7 @@ Cihaz bulma, ağ üzerindeki cihazları bulmak için pasif yöntemleri kullandı
 
 Mevcut bilgilerin güncel olduğundan emin olmak için cihaz özelliklerinde yapılan değişiklikler gözlenirse (normalde, üç haftalık bir dönemde en fazla bir kez cihaz cihaza sahip değildir)
 
-## <a name="my-security-tool-raised-alert-on-unicastscannerps1-or-port-scanning-activity-initiated-by-it-what-should-i-do"></a>Güvenlik aracım tarafından başlatılan UnicastScanner.ps1 tarama veya bağlantı noktası tarama etkinliği hakkında uyarı aldı, ne yapabilirim?
+## <a name="my-security-tool-raised-alert-on-unicastscannerps1--psscript_guidps1-or-port-scanning-activity-initiated-by-it-what-should-i-do"></a>Güvenlik aracım tarafından başlatılan UnicastScanner.ps1 / PSScript_{GUID}.ps1 veya bağlantı noktası tarama etkinliği hakkında uyarı aldı, ne yapabilirim?
 
 Etkin olasılık betikleri Microsoft tarafından imzalanmıştır ve güvenlidir. Dışlama listeniz için aşağıdaki yolu ekleyebilirsiniz: `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps1`
 

@@ -2,13 +2,13 @@
 title: Bağlan godaddy'de DNS kayıtlarınızı Microsoft 365
 f1.keywords:
 - CSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
-localization_priority: Normal
+ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
 - M365-subscription-management
@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 ms.assetid: f40a9185-b6d5-4a80-bb31-aa3bb0cab48a
 description: Microsoft için GoDaddy'de etki alanlarınızı doğrulamayı ve e-posta, Skype Kurumsal Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
-ms.openlocfilehash: ac71bbe1c57e1471e1ff343df75f034cc15c5901
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 728fd6cc34517213b338e3da07e6a275a1a727d3
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989866"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313559"
 ---
 # <a name="connect-your-dns-records-at-godaddy-to-microsoft-365"></a>Bağlan godaddy'de DNS kayıtlarınızı Microsoft 365
 

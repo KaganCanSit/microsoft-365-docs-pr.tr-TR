@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: ''
 description: Bir olayda verileri çözümlemek, sorgulamak, görüntülemek, etiketlemek ve dışarı aktararak gözden geçirme kümelerini Advanced eDiscovery öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 16c6e8aa5f3cf278b90ab7fd338bcac203b7489a
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: a3aa836782dd464be2e62ca729efd85484c8aebf
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988599"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315617"
 ---
 # <a name="manage-review-sets-in-advanced-ediscovery"></a>Gözden geçirme kümelerini Advanced eDiscovery
 
@@ -57,3 +57,6 @@ Ayrı bir olayda gözden geçirme kümesine veri eklemenin üç Advanced eDiscov
 2. [Gözden Microsoft 365 olmayan verileri gözden geçirme kümesine yükleme](load-non-Office-365-data-into-a-review-set.md)
 
 3. [Başka bir gözden geçirme kümesinden gözden geçirme kümesine veri ekleme](add-data-to-review-set-from-another-review-set.md)
+
+> [!NOTE]
+> Gözden geçirme kümesinden öğe silemezsiniz ve gözden geçirme kümelerini bir vakadan silemezsiniz. Gözden geçirme kümesi silmek (ve kümenin verilerini silmek) için, gözden geçirme Advanced eDiscovery büyük/küçük harflerini silmeniz gerekir. Daha fazla bilgi için bkz[. Vakayı kapatma Advanced eDiscovery silme](close-or-delete-case.md).

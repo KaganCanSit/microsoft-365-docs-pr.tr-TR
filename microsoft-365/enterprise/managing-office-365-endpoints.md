@@ -18,12 +18,12 @@ ms.custom:
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: Kurumsal kuruluş ağ mimarisiyle Office 365 uç noktalarını yönetmeyi öğrenin.
-ms.openlocfilehash: 96aa778316fcaa5994d408c869e8566e465a07d1
-ms.sourcegitcommit: da11ffdf7a09490313dfc603355799f80b0c60f9
+ms.openlocfilehash: 5d5e51b789ef0336a2e7aaa6a923ca2957ea6edf
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2021
-ms.locfileid: "62988849"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63314539"
 ---
 # <a name="managing-office-365-endpoints"></a>Kullanıcı Office 365 yönetme
 
@@ -151,7 +151,7 @@ Hakkında daha fazla bilgi Office 365 IP görüyor musunuz?
 <a name="bkmk_cname"> </a>
 ### <a name="some-office-365-urls-point-to-cname-records-instead-of-a-records-in-the-dns-what-do-i-have-to-do-with-the-cname-records"></a>Bazı Office 365 URL'ler DNS'te A kayıtları yerine CNAME kayıtlarını işaret ettir. CNAME kayıtlarıyla ne yapabilirim?
 
-İstemci bilgisayarların bir bulut hizmetine bağlanmak için bir veya birden çok IP adresi (es) içeren bir DNS A veya AAAA kayıt t)şapkası olması gerekir. Bir dosyada yer alan bazı URL Office 365 A veya AAAA kayıtları yerine CNAME kayıtlarını gösterir. Bu CNAME kayıtları aracıdır ve zincirde birkaç kayıt olabilir. Her zaman BIR IP Adresi için A veya AAAA kaydına çözüm bu kayıt çözümleyiciler. Örneğin, IP adresi bilgi dizisini sonuç olarak çözen aşağıdaki DNS _IP_1:_
+İstemci bilgisayarların bir bulut hizmetine bağlanmak için bir veya birden çok IP adresi (es) içeren bir DNS A veya AAAA kaydına ihtiyacı vardır. Bir dosyada yer alan bazı URL Office 365 A veya AAAA kayıtları yerine CNAME kayıtlarını gösterir. Bu CNAME kayıtları aracıdır ve zincirde birkaç kayıt olabilir. Her zaman BIR IP Adresi için A veya AAAA kaydına çözüm bu kayıt çözümleyiciler. Örneğin, IP adresi bilgi dizisini sonuç olarak çözen aşağıdaki DNS _IP_1:_
 
 ```console
 serviceA.office.com -> CNAME: serviceA.domainA.com -> CNAME: serviceA.domainB.com -> A: IP_1

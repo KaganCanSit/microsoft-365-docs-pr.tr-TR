@@ -2,8 +2,8 @@
 title: Kurumda self servis kayıt kullanma
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: seemg, pablom
 audience: Admin
@@ -14,18 +14,18 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
+- commerce_signup
 - AdminSurgePortfolio
 - okr_SMB
-- commerce_signup
 search.appverid: MET150
 description: Yeni self Microsoft 365 ve Microsoft Power Apps, Microsoft Power Automate ve Dynamics 365 Finans gibi self servis kayıt programları hakkında bilgi öğrenin.
 ms.date: 03/17/2021
-ms.openlocfilehash: 87f432be0659d03a1e8f77b682997dc32d1dc111
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 67f0955a4485ea0f668b143f485b34cf2935404b
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985043"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63319865"
 ---
 # <a name="using-self-service-sign-up-in-your-organization"></a>Kurumda self servis kayıt kullanma
 

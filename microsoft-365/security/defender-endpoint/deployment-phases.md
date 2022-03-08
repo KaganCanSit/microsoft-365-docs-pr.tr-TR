@@ -17,12 +17,12 @@ ms.collection:
 - m365solution-overview
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 8463d4b9c330d65ad36d60f20e93fbf00d95959e
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 5715a796e0c7b78ae369f074b5edcb6ccfc8ae90
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998071"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63330573"
 ---
 # <a name="deployment-phases"></a>Dağıtım aşamaları
 
@@ -81,8 +81,8 @@ Tüm bu özellikler Uç nokta lisans sahipleri için Microsoft Defender'da kulla
 
 ### <a name="in-scope"></a>Kapsamda
 
-- Uç noktaları Microsoft Endpoint Manager için Microsoft Endpoint Manager ve bağlantı noktalarının kullanımı ve özellikleri yapılandırma
-- Uç Nokta Özellikleri (uç noktada algılama ve yanıtlama) özellikleri EDR Defender'ı etkinleştirme
+- Uç noktaları hizmete ekleme ve özellikleri yapılandırma için Microsoft Endpoint Manager ve Microsoft Endpoint Configuration Manager'ın Kullanımı
+- Uç nokta algılama ve yanıt (EDR) özellikleri için Defender'ı etkinleştirme
 - Uç nokta uç nokta koruma platformu (EPP) özellikleri için Defender'ı etkinleştirme
   - Yeni nesil koruma
   - Saldırı yüzeyini azaltma

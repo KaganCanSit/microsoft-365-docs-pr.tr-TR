@@ -3,8 +3,8 @@ title: İş için Microsoft Defender'da düzeltme eylemlerini gözden Office 365
 keywords: AIR, autoIR, Uç Nokta için Microsoft Defender, otomatik, araştırma, yanıt, düzeltme, tehdit, gelişmiş, tehdit, koruma
 f1.keywords:
 - NOCSH
-author: JoeDavies-MSFT
-ms.author: josephd
+author: dansimp
+ms.author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: how-to
@@ -20,12 +20,12 @@ description: Plan 2'ye ilişkin Microsoft Defender'da otomatik soruşturma ve ya
 ms.technology: mdo
 ms.prod: m365-security
 ms.date: 06/10/2021
-ms.openlocfilehash: bc8c99a547e4f30e10575e8353afd6ca02bf233b
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 35e9293fa83b86fb80c1c907fbf3a0769e323503
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021701"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63318627"
 ---
 # <a name="review-and-manage-remediation-actions-in-office-365"></a>E-postada düzeltme eylemlerini gözden Office 365
 

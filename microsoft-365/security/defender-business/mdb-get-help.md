@@ -1,5 +1,5 @@
 ---
-title: İş için Microsoft Defender (önizleme) ile ilgili yardım ve destek al
+title: İş için Microsoft Defender ile ilgili yardım ve destek almak
 f1.keywords: NOCSH
 ms.author: deniseb
 author: denisebmsft
@@ -14,25 +14,25 @@ ms.collection:
 - M365-security-compliance
 search.appverid: MET150
 ms.reviewer: inbadian, shlomiakirav
-description: İş için Microsoft Defender'da (önizleme) yardım almak veya de destek ile iletişim kurmak için nasıl bu konuda bilgi bulabilirsiniz
-ms.date: 02/07/2022
-ms.openlocfilehash: 70810b62dc896fa5c080b32ca1c0adf5a6ed6427
-ms.sourcegitcommit: cafca45069819a44c7cf8c67f6c1e105de1b3393
+description: İş için Microsoft Defender'da yardım almak veya de destek ile iletişim kurmak için nasıl bu konuda bilgi bulabilirsiniz
+ms.date: 02/24/2022
+ms.openlocfilehash: 49d93af068b5231da516b54d001d587cd513da10
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "63027574"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323045"
 ---
-# <a name="get-help-and-support-for-microsoft-defender-for-business-preview"></a>İş için Microsoft Defender (önizleme) ile ilgili yardım ve destek al
+# <a name="get-help-and-support-for-microsoft-defender-for-business"></a>İş için Microsoft Defender ile ilgili yardım ve destek almak
 
 > [!IMPORTANT]
-> İş için Microsoft Defender şu anda önizlemede ve istekte etmek için buraya kaydolan müşterilere ve IT [İş Ortaklarına aşamalı](https://aka.ms/mdb-preview) olarak aşamalı olarak aşamalı olarak sunulmaktadır. Önümüzdeki haftalarda bir ilk müşteri ve iş ortağı kümesi sunuyoruz ve genel kullanılabilirlik durumuna kadar önizlemeyi genişleteceğiz. Önizlemenin bir dizi ilk [senaryoyla başlat olacağını](mdb-tutorials.md#try-these-preview-scenarios) ve düzenli olarak özellikler ekley olacacaz.
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
 ## <a name="get-help-and-support"></a>Yardım ve destek al
 
-İş için Microsoft Defender (önizleme) ile ilgili yardıma ihtiyacınız varsa, ekranın sağ üst köşesinde Yardım simgesini (?) seçin. Soru veya sorunlarınızı yazın. Hızlı yanıtlar veya yardım makaleleri gibi çeşitli seçenekler listelenir.
+İş için Microsoft Defender ile ilgili yardıma ihtiyacınız varsa, ekranın sağ üst köşesindeki Yardım simgesini (?) seçin. Soru veya sorunlarınızı yazın. Hızlı yanıtlar veya yardım makaleleri gibi çeşitli seçenekler listelenir.
 
 Sorusunun yanıtını görmüyorsanız bir destek bileti açsanız bilesiniz.
 
@@ -43,6 +43,6 @@ Sorusunun yanıtını görmüyorsanız bir destek bileti açsanız bilesiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İş için Microsoft Defender (önizleme) - Sık sorulan sorular ve yanıtlar](mdb-faq.yml)
+- [İş için Microsoft Defender - Sık sorulan sorular ve yanıtlar](mdb-faq.yml)
 
-- [İş için Microsoft Defender (önizleme) sorun giderme](mdb-troubleshooting.yml) 
+- [İş için Microsoft Defender sorun giderme](mdb-troubleshooting.yml) 

@@ -16,17 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse kendi kendine parola sıfırlamayı yönetmeyi öğrenin.
-ms.openlocfilehash: b8367d2ed2c088d56425b08c6da5dfd55fcd84b8
-ms.sourcegitcommit: 2ea2105d40b60a87fc9aa30f392a73a3a9db6d99
+ms.openlocfilehash: f9f8ef9a3c81281629c378fb4b55cd4c9a839c1d
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2021
-ms.locfileid: "63007236"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63311571"
 ---
 # <a name="manage-self-service-password-reset"></a>Kendi kendine parola sıfırlamayı yönetme
-
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
 
 Microsoft 365 Lighthouse, iş ortaklarının kendi kendine Azure Active Directory (Azure AD) parola sıfırlamayı (SSPR) yönetmelerini sağlar. SSPR, kullanıcılara yönetici veya yardım masası katılımı olmazken parolalarını değiştirme veya sıfırlama olanağı verir. Kullanıcının hesabı kilitliyse veya parolasını unutursa, kendi engellemesini kaldırmak ve işe dönmek için istemleri takip eder. Bu özellik, kullanıcı cihazında veya bir uygulamada oturum alayama geldiğinde yardım masası aramalarını ve üretkenlik kaybını azaltır.
 

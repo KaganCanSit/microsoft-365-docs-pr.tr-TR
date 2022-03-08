@@ -14,16 +14,17 @@ ms.collection:
 - m365initiative-externalcollab
 ms.custom:
 - seo-marvel-apr2020
+- admindeeplinkSPO
 ms.localizationpriority: medium
 f1.keywords: NOCSH
 recommendations: false
 description: Bu makalede, aynı proje ve proje projesinde konuklarla belge üzerinde nasıl SharePoint OneDrive.
-ms.openlocfilehash: 7c58b9ef4fdc759c5afa1920083dd1875fad17f1
-ms.sourcegitcommit: 6722f66915dfe30c3d0ade97b3e9080a9592251b
+ms.openlocfilehash: f27c47403e63c19bf341c69d8dffbe2ea450e1d4
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "62990621"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324440"
 ---
 # <a name="collaborate-with-guests-on-a-document"></a>Konuklarla belge üzerinde işbirliği yapma
 
@@ -72,9 +73,9 @@ Kimlik SharePoint ve OneDrive kimliği doğrulanmamış dosya ve klasör paylaş
 Kuruluş SharePoint paylaşım ayarlarını ayarlamak için
 
 1. Gezinti Microsoft 365 yönetim merkezi Yönetim merkezleri'nin altındaki Gezinti **Bölmesi'nde Yer'e** **SharePoint**.
-2. Gezinti SharePoint bölmesindeki İlkeler'in altında **Paylaşım'a** **tıklayın**.
+2. SharePoint yönetim merkezinde, sol gezinti bölmesinde, İlkeler'in **altında Paylaşım'ı** <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**seçin**</a>.
 3. Dış paylaşım için, SharePoint veya OneDrive veya Yeni ve var **olan konuklar** **olarak ayarlayın**. (Bu OneDrive izin verilenden fazla izin SharePoint.
-4. Değişiklikler yaptıysanız Kaydet'e **tıklayın**.
+4. Değişiklik yaptıysanız Kaydet'i **seçin**.
 
 ## <a name="sharepoint-organization-level-default-link-settings"></a>SharePoint düzeyinde varsayılan bağlantı ayarlarını değiştirme
 
@@ -93,7 +94,7 @@ Aşağıdaki türlerden herhangi biri için bağlantı seçin ve bu bağlantı k
 
 Kuruluş düzeyi SharePoint OneDrive ayarlarını değiştirmek için
 
-1. Yönetim merkezinde Paylaşım SharePoint gidin.
+1. Yönetim <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**merkezinde Paylaşım**</a> SharePoint gidin.
 2. Dosya **ve klasör bağlantıları'nın** altında, kullanmak istediğiniz varsayılan paylaşım bağlantısını seçin.
 3. Değişiklikler yaptıysanız Kaydet'e **tıklayın**.
 
@@ -122,7 +123,7 @@ Bir sitedeki dosya ve klasörleri paylaşıyorsanız SharePoint site için site 
 
 Site düzeyinde paylaşım ayarlarını ayarlamak için
 
-1. Gezinti SharePoint bölmesinde Siteler'i genişletin **ve Etkin** **siteler'e tıklayın**.
+1. Gezinti SharePoint gezinti bölmesinde Siteler'i genişletin ve **Etkin** <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a>.
 2. Dosyaları ve klasörleri konuklarla paylaşmak istediğiniz siteyi seçin.
 3. Seçilen sitenin olduğu satır boyunca sağa doğru kaydırın ve Dış paylaşım sütununda herhangi bir **yere** tıklayın.
 4. Açılan sayfada İlkeler **sekmesine tıklayın** .

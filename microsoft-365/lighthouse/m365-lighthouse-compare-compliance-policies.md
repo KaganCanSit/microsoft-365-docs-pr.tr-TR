@@ -16,17 +16,14 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse, cihaz uyumluluk ilkesi ayarlarını karşılaştırmayı öğrenin.
-ms.openlocfilehash: 5e4fc396e2ea1e1cce576f6064f4239179db33cc
-ms.sourcegitcommit: 6e43aeff217afe97876137b1ead8df26db6e9937
+ms.openlocfilehash: 30645ef4d59fcdee0d994ae709ff9bb45fc21b09
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "63015313"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320375"
 ---
 # <a name="compare-device-compliance-policy-settings"></a>Cihaz uyumluluk ilkesi ayarlarını karşılaştırma
-
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
 
 Microsoft 365 Lighthouse, kiracılar genelinde uyumluluk ilkelerini tek bir görünümde görüntülemenize olanak sağlar. İlkeleri karşılaştırarak kiracılar arasında güvenliği ve standardlaştırmayı sabilirsiniz. Yapılandırılmış ayarları (yapılandırılmamış olan ayarlarla), yapılandırmalarında farklı olan ayarları veya eşleşmelerini görmek için görünümlere filtre  edebilirsiniz. Ayrıca, ilkeler arasında nasıl karşılaştır olduklarını görmek için belirli ayarları da arayabilirsiniz.
 

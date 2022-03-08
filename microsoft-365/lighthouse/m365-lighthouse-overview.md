@@ -17,23 +17,20 @@ ms.custom:
 - intro-overview
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP'ler) için, Microsoft 365 Lighthouse bir konumda müşteri kiracılarını güvenlik altına alımanıza ve yönetmenize nasıl yardımcı olduğunu öğrenin.
-ms.openlocfilehash: d7e2d67b62f8db9d767154ea6049e52a496bc4e7
-ms.sourcegitcommit: 36a19d80fe3f053df0fec398a7ff2dfc777f9730
+ms.openlocfilehash: 5b4792bf60de688bc36b33b40aa09f6e882ffc2d
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/30/2021
-ms.locfileid: "63021533"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63311543"
 ---
 # <a name="overview-of-microsoft-365-lighthouse"></a>Genel bakış Microsoft 365 Lighthouse
-
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
 
 Microsoft 365 Lighthouse, Küçük ve orta ölçekli işletme (SMB) müşterileri için Yönetilen Hizmet Sağlayıcılarının (MSP) cihazları, verileri ve kullanıcıları küçük ve orta ölçekli işletme (SMB) müşterileri için güvenli ve yönetmeye yardımcı olan bir Microsoft 365 İş Ekstra Microsoft 365 E3. 
 
 Deniz Feneri, SMB müşterilerine uyarlanan güvenlik yapılandırma taban çizgilerini önererek ve tüm müşteri ortamlarında çok kiracılı görünümler sağlayarak Microsoft 365 İş Ekstra ve Microsoft 365 E3 kiracılarını işe alımları kolaylaştırır. Deniz Feneri ile MSP'ler müşterilerinin yönetimini ölçeklendirin, en önemlilere odaklanın, riskleri hızla bulun ve araştırın, müşterilerinin iyi durumda ve güvenli bir durumda olması için önlem alın.
 
-Deniz Feneri kullanarak diğer hizmetleri ve bağlı cihazları yönetmek Microsoft 365 ek ücret yoktur. Deniz Feneri şu anda Önizleme'dedir ve Bulut Çözümü Sağlayıcısı (CSP) programına kaydolan ve SMB müşterilerine Microsoft 365 İş Ekstra veya Microsoft 365 E3 sunulmaktadır.
+Deniz Feneri kullanarak diğer hizmetleri ve bağlı cihazları yönetmek Microsoft 365 ek ücret yoktur. Deniz feneri, Bulut Çözümü Sağlayıcısı (CSP) programına kaydolan ve SMB aboneliği olan SMB müşterilerine Microsoft 365 İş Ekstra veya Microsoft 365 E3 kullanılabilir.
 
 Deniz Feneri'nin, microsoft CSP kanal iş ortakları tarafından müşterisi Microsoft 365 İş Ekstra veya Microsoft 365 E3 de desteklemektedir. Bu, doğrudan Microsoft'la ve dolaylı bir sağlayıcı (distributor) üzerinden işlem yapan CSP iş ortaklarını içerir. 
 
@@ -67,4 +64,4 @@ Lighthouse, MSP'lerin şu ölçekte Microsoft 365 uç noktaları güvenlik altı
 [Microsoft 365 Lighthouse Kiracılar sayfasına genel bakış](m365-lighthouse-tenants-page-overview.md) (makale)   
 [Microsoft 365 Lighthouse uyumluluğu sayfasına genel bakış](m365-lighthouse-device-compliance-page-overview.md) (makale)   
 [Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)   
-[İş için Microsoft Defender](../security/defender-business/index.yml)
+[İş için Microsoft Defender](../security/defender-business/index.yml) (bağlantı sayfası)

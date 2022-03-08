@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu makalede, Core eKovery'i kullanmaya nasıl Microsoft 365. eBulma izinlerini atadığınız ve vakayı oluşturduktan sonra, üyeleri ekleyebilir, eBulma dırları oluşturabilir ve sonra araştırmanıza uygun içeriği arayabilir ve dışarı aktarabilirsiniz.
-ms.openlocfilehash: 0e6e29ced6e6dfb535d169cbf5c41193d5d46cfd
-ms.sourcegitcommit: ab5368888876d8796da7640553fc8426d040f470
+ms.openlocfilehash: ff2baf1e4844532ba53f3aa32ae02b7a7c49f00e
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "62990598"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320529"
 ---
 # <a name="get-started-with-core-ediscovery-in-microsoft-365"></a>Microsoft 365'de Core eKover'ı Microsoft 365
 
@@ -55,11 +55,11 @@ Core eDiscovery için Lisanslama için uygun kuruluş aboneliği ve kullanıcı 
   
   Lisans atama hakkında bilgi için bkz. [Kullanıcılara lisans atama](../admin/manage/assign-licenses-to-users.md).
 
-Lisanslama hakkında bilgi için:
+Güvenlik ve uyumluluk hakkında bilgi ve rehberlik için:
 
-- Karşılaştırma tablosunda eBulma ve denetim Microsoft 365 [indirin ve bakın](https://go.microsoft.com/fwlink/?linkid=2139145).
+- Karşılaştırma tablosunda eBulma ve denetim Microsoft 365 [indirin ve bakın](https://aka.ms/M365EnterprisePlans).
 
-- Güvenlik ve [Uyumluluk & açıklamasına bakın](/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center).
+- Güvenlik [Microsoft 365 uyumluluğu için en iyi & - Hizmet Açıklamaları ve | Microsoft Docs](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
 ## <a name="step-2-assign-ediscovery-permissions"></a>2. Adım: eBulma izinleri atama
 
@@ -129,7 +129,7 @@ Sıradaki adım bir olay oluşturmak ve Core eKovery'i kullanmaya başlamaktır.
 
     Ayrıca, rol gruplarını bir vakanın üyeleri olarak da  eklemeyi seçebilirsiniz. Rol **grupları'nın altında** **Ekle'ye tıklayın**. Yalnızca bir vakaya üyesi olduğunuz rol gruplarını at at at başlatıldı. Bunun nedeni, rol gruplarının eBulma vakalarına kimlerin üye ataytaya bir denetiminde yer atay diğer bir nedenidir.
 
-4. Vakanın üyesi olarak eklenilen kişiler veya rol grupları listesinde, eklemek istediğiniz kişilerin (veya rol gruplarının) adının sollarına tıklayın. Üye olarak eklen isteyen çok sayıda kişi veya rol grubunuz varsa, listede belirli bir kişiyi veya  rol grubunu aramak için Arama kutusunu kullanın.
+4. Vakanın üyesi olarak eklenilen kişiler veya rol grupları listesinde, eklemek istediğiniz kişilerin (veya rol gruplarının) adının sollarına tıklayın. Üye olarak eklen isteyen çok sayıda kişi veya rol grubunuz varsa, listede belirli bir kişiyi veya rol  grubunu aramak için Ara kutusunu kullanın.
   
 5. Vakanın üyesi olarak eklemek istediğiniz kişi veya rol gruplarını seçin ve ardından Kaydet'e tıklarken yeni üyeleri veya rol gruplarını kaydedin.
 
@@ -156,4 +156,4 @@ Temel eBulma'ya başlamanız için, ilgi alanlarına sahip kişiler için eBulma
 
    - Bir sorguyu düzeltin ve arama yeniden çalıştırabilirsiniz.
 
-3. **[Arama sonuçlarını dışarı aktarın ve indirin](export-content-in-core-ediscovery.md)**. Araştırmanız ile ilgili verileri aratır ve bu verileri bulan kişiler tarafından araştırma Office 365 gözden geçirikten sonra dışarı aktarabilirsiniz. Verileri dışarı aktarma, iki adımlı bir işlemdir. İlk adım, arama sonuçlarının tam olarak doğru şekilde dışarı Office 365. Bu işlem, aramanın sonuçlarını Microsoft tarafından sağlanan bir Azure Bulut Depolama Depolama musunuz? Sıradaki adım, içeriği yerel bir bilgisayara indirmek için eBulma Dışarı Aktarma aracını kullanmaktır. Dışarı aktarıldı veri dosyalarına ek olarak, dışarı aktarma paketinin içinde de dışarı aktarma raporu, özet rapor ve hata raporu yer alır.
+3. **[Arama sonuçlarını dışarı aktarın ve indirin](export-content-in-core-ediscovery.md)**. Araştırmanız ile ilgili verileri aratır ve bu verileri bulan kişiler tarafından araştırma Office 365 gözden geçirikten sonra dışarı aktarabilirsiniz. Verileri dışarı aktarma, iki adımlı bir işlemdir. İlk adım, arama sonuçlarının tam olarak doğru şekilde dışarı Office 365. Bu işlem, aramanın sonuçlarını Microsoft tarafından sağlanan bir Azure Bulut Depolama Depolama musunuz? Sıradaki adım, içeriği yerel bir bilgisayara indirmek için eBulma Dışarı Aktarma aracını kullanmaktır. Dışarı aktarıldı veri dosyalarına ek olarak, dışarı aktarma paketi bir dışarı aktarma raporu, özet rapor ve bir hata raporu içerir.

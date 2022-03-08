@@ -2,10 +2,10 @@
 title: Birden çok uygulamada ISV uygulama lisanslarını Microsoft 365 yönetim merkezi
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
-ms.reviewer: argani
+ms.reviewer: argani, nicholak
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -14,18 +14,18 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
-- AdminSurgePortfolio
 - commerce_licensing
+- AdminSurgePortfolio
 search.appverid:
 - MET150
 description: Yazılım lisanslarında bağımsız yazılım satıcısı (ISV) uygulamalarının lisanslarını Microsoft 365 yönetim merkezi.
 ms.date: 06/15/2021
-ms.openlocfilehash: 4738c0fa2c21c189922087e54d8b00260cd68c93
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 8530a9bdc13ec0ebee0857b8cfcd47b498460409
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985325"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63328995"
 ---
 # <a name="manage-isv-app-licenses-in-the-microsoft-365-admin-center"></a>Birden çok uygulamada ISV uygulama lisanslarını Microsoft 365 yönetim merkezi
 

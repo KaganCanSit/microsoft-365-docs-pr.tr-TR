@@ -9,12 +9,12 @@ metadata:
   ms.service: bookings
   ms.localizationpriority: medium
   description: Microsoft Bookings ile ilgili sık sorulan sorular.
-  ms.openlocfilehash: fc48e3d15ea7e1b38c1a7458e3509ab803ea8a35
-  ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+  ms.openlocfilehash: 5532248b44bdda524399ce713377f5565f20eb7c
+  ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 02/14/2022
-  ms.locfileid: "63019482"
+  ms.lasthandoff: 03/08/2022
+  ms.locfileid: "63318067"
 title: Microsoft Bookings Sık Sorulan Sorular
 summary: ''
 sections:
@@ -344,4 +344,4 @@ sections:
 
 
       Uzun bir süre boyunca bu hatayı hala görüyorsanız veya sık görüyorsanız, lütfen de destekle iletişime geçin.
-additionalContent: "\n## <a name=\"additional-resources\"></a>Ek kaynaklar\n\n- [Microsoft Bookings kuruluşlar bloguna uygunluk durumunu genişletiyor](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-expands-availability-in-enterprises/ba-p/1214065)\n\n- [Microsoft Bookings Works videosu](https://support.office.com/article/microsoft-bookings-69c45b78-6de4-4f28-9449-cdcc18b7ae45)\n\n- [Microsoft Bookings'i kullanmaya başlama](get-access.md)\n\n- [Microsoft Bookings'i açma veya kapatma](turn-bookings-on-or-off.md)\n\n- [Kullanıcıları tek tek veya toplu olarak ekleme](../admin/add-users/add-users.md)\n\n- [Bookings'e personel ekleme](add-staff.md)\n\n- [Şablon tanımlandıktan sonra otomatik hale gelen API bileşenleri](/graph/api/bookingbusiness-post-bookingbusinesses)\n\n- [Görüntüleme için Bookings Takvimi'nin URL'si](https://outlook.office.com/bookings/calendar)\n\n- [Bookings uyumluluk ilkeleri](/compliance/regulatory/gdpr-dsr-Office365#bookings)\n\n- [Rezervasyon sayfanızı özelleştirme ve yayımlama](customize-booking-page.md)\n\n- [Kiracı Posta Kutusu yapılandırması](/powershell/module/exchange/get-accepteddomain)\n\n- [Group Bookings](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-now-supports-online-meetings-and-group/ba-p/1214120)\n\n- [Bookings ölçümleri ve etkinlik izleme](metrics-and-activity-tracking.md)\n\n- [M365 Genel Yol Haritası](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=bookings)\n\n- [UserVoice aracılığıyla geri bildirim gönderme](https://outlook.uservoice.com/forums/314907-microsoft-bookings/suggestions/39505261-365-admins-should-have-full-access-to-all-bookings)"
+additionalContent: "\n## <a name=\"additional-resources\"></a>Ek kaynaklar\n\n- [Microsoft Bookings kuruluşlar bloguna uygunluk durumunu genişletiyor](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-expands-availability-in-enterprises/ba-p/1214065)\n\n- [Microsoft Bookings Works videosu](https://support.office.com/article/microsoft-bookings-69c45b78-6de4-4f28-9449-cdcc18b7ae45)\n\n- [Microsoft Bookings'i kullanmaya başlama](get-access.md)\n\n- [Microsoft Bookings'i açma veya kapatma](turn-bookings-on-or-off.md)\n\n- [Kullanıcıları tek tek veya toplu olarak ekleme](../admin/add-users/add-users.md)\n\n- [Bookings'e personel ekleme](add-staff.md)\n\n- [Şablon tanımlandıktan sonra otomatik hale gelen API bileşenleri](/graph/api/bookingbusiness-post-bookingbusinesses)\n\n- [Görüntüleme için Bookings Takvimi'nin URL'si](https://outlook.office.com/bookings/calendar)\n\n- [Bookings uyumluluk ilkeleri](/compliance/regulatory/gdpr-dsr-Office365#bookings)\n\n- [Rezervasyon sayfanızı özelleştirme ve yayımlama](customize-booking-page.md)\n\n- [Kiracı Posta Kutusu yapılandırması](/powershell/module/exchange/get-accepteddomain)\n\n- [Group Bookings](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-now-supports-online-meetings-and-group/ba-p/1214120)\n\n- [Bookings ölçümleri ve etkinlik izleme](metrics-and-activity-tracking.md)\n\n- [M365 Genel Yol Haritası](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=bookings)"

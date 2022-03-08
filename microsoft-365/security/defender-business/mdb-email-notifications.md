@@ -7,26 +7,25 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 02/07/2022
+ms.date: 02/24/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
 ms.reviewer: inbadian, shlomiakirav
 f1.keywords: NOCSH
-ms.openlocfilehash: 5a6d896b3b18b4eea0721197c0a4766add4a20b6
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: 86588289a4a94a46ddca6022b12a70ac6965a904
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63016708"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63329691"
 ---
 # <a name="set-up-email-notifications"></a>E-posta bildirimlerini ayarlama
 
 > [!IMPORTANT]
-> İş için Microsoft Defender şu anda önizlemede ve istekte etmek için buraya kaydolan müşterilere ve IT [İş Ortaklarına aşamalı](https://aka.ms/mdb-preview) olarak aşamalı olarak aşamalı olarak sunulmaktadır. Önümüzdeki haftalarda bir ilk müşteri ve iş ortağı kümesi sunuyoruz ve genel kullanılabilirlik durumuna kadar önizlemeyi genişleteceğiz. Önizlemenin bir dizi ilk [senaryoyla başlat olacağını](mdb-tutorials.md#try-these-preview-scenarios) ve düzenli olarak özellikler ekley olacacaz.
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
-
 
 Güvenlik ekipleriniz için e-posta bildirimlerini kurabilirsiniz. Daha sonra, uyarılar oluşturulur veya yeni güvenlik açıkları keşfedilirse, güvenlik ekibi belirsiz kişilerine otomatik olarak bu uyarıyı yapılır. 
 
@@ -38,6 +37,11 @@ Güvenlik ekipleriniz için e-posta bildirimlerini kurabilirsiniz. Daha sonra, u
 
 3. [Sonraki adımlarınıza devam edin](#next-steps).
 
+
+>
+> **Bir dakika mı kaldı?**
+> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+>
 
 ## <a name="types-of-email-notifications"></a>E-posta bildirimi türleri
 
@@ -51,9 +55,9 @@ E-posta bildirimlerini ayarsanız, aşağıdaki tabloda açıklandığı gibi ik
 > [!TIP]
 > **Güvenlik ekibinin yeni uyarıları veya güvenlik açıklarını bulmanın tek yolu e-posta bildirimleri değildir**.
 > 
-> E-posta bildirimleri, güvenlik ekibinizi gerçek zamanlı olarak bilgi sahibi tutmaya yardımcı olacak kullanışlı bir yol sağlar. Ama başka da var! Örneğin, güvenlik ekibiniz Microsoft 365 Defender portalında ()[https://security.microsoft.com](https://security.microsoft.com) her oturum aişında kartları yeni tehditleri, uyarıları ve güvenlik açıklarını vurgulayan kartlar görebilir. İş için Defender (önizleme), güvenlik ekibinin oturum açması sırasında önem verdiği önemli bilgileri vurgulanacak şekilde tasarlanmıştır.
+> E-posta bildirimleri, güvenlik ekibinizi gerçek zamanlı olarak bilgi sahibi tutmaya yardımcı olacak kullanışlı bir yol sağlar. Ama başka da var! Örneğin, güvenlik ekibiniz Microsoft 365 Defender portalında ()[https://security.microsoft.com](https://security.microsoft.com) her oturum aişında kartları yeni tehditleri, uyarıları ve güvenlik açıklarını vurgulayan kartlar görebilir. İş için Defender, oturum açmaları hemen güvenlik ekibinin önem verdiği önemli bilgileri vurgular.
 > 
-> Güvenlik ekibinin bilgileri görüntülemek için **gezinti bölmesinde** Olaylar'ı da seçmesi gerekir. Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da (önizleme) olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md).
+> Güvenlik ekibinin bilgileri görüntülemek için **gezinti bölmesinde** Olaylar'ı da seçmesi gerekir. Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md).
 
 ## <a name="view-and-edit-email-notifications"></a>E-posta bildirimlerini görüntüleme ve düzenleme
 
@@ -75,5 +79,4 @@ Kuruluşun e-posta bildirimi ayarlarını görüntülemek veya düzenlemek için
 
 Şu şekilde devam edin:
 
-- [4. Adım: Cihazları İş için Microsoft Defender'a ekleme (önizleme)](mdb-onboard-devices.md)
-
+- [4. Adım: Cihazları İş için Microsoft Defender'a ekleme](mdb-onboard-devices.md)

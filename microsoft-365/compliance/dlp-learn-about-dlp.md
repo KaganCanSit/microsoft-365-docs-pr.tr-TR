@@ -15,12 +15,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Veri kaybı önleme ilkelerini ve araçlarını kullanarak hassas Microsoft 365 korumayı öğrenin ve DLP yaşam döngüsü boyunca bir tur atabilirsiniz.
-ms.openlocfilehash: 4d6cd204a6aafc261e6648d6f81ea359a5fcdfb8
-ms.sourcegitcommit: e3bff611439354e6339bb666a88682078f32ec13
+ms.openlocfilehash: f64fa30ed0f2eddae03a14451c55f95c9e4249a3
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014364"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63317689"
 ---
 # <a name="learn-about-data-loss-prevention"></a>Veri kaybını önleme hakkında bilgi
 
@@ -143,7 +143,7 @@ konum | include/exclude by|
 |Exchange-posta gönderme| dağıtım grupları|
 |SharePoint siteleri |siteler |
 |OneDrive hesapları |hesaplar veya dağıtım grupları |
-|Teams ve kanal iletilerini gönderme |hesaplar |
+|Teams ve kanal iletilerini gönderme |hesap veya dağıtım grubu |
 |Windows 10, Windows 11 ve macOS (Catalina 10.15 ve daha yüksek) cihazlar |kullanıcı veya grup |
 |Microsoft Cloud App Security |örnek |
 |Şirket içi depolar| depo dosyası yolu|

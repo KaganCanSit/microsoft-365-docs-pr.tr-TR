@@ -14,12 +14,12 @@ manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
-ms.openlocfilehash: 988632e84614b49262c9cc7b8a74b493c1a48b01
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: b063d8435817d7dd64c3febf6e3399f3876ef894
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63014174"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63319833"
 ---
 # <a name="become-a-microsoft-defender-for-endpoint-partner"></a>Uç nokta iş ortağı için Microsoft Defender'a olun
 
@@ -39,7 +39,7 @@ Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz den
 
 ## <a name="step-2-fulfill-the-solution-validation-and-certification-requirements"></a>2. Adım: Çözüm doğrulama ve sertifika gereksinimlerini karşılamak
 
-Teknoloji iş ortaklarının tümleştirme çalışmalarını onaylarının en iyi yolu, ortak bir müşterinin önerilen tümleştirme tasarımını onaylamasıdır (müşteri Microsoft Defender Güvenlik Merkezi'daki İş Ortağı Uygulaması sayfasındaki İş Ortağı Öneri seçeneğini kullanabilir[](https://securitycenter.microsoft.com/interoperability/partners)) ve bunu test etmek ve Uç nokta için Microsoft Defender ekibine indirmiş olabilir.
+Teknoloji iş ortaklarının tümleştirme çalışmalarını onaylarının en iyi yolu, ortak bir müşterinin önerilen tümleştirme tasarımını onaylamasını sağlamaktır  (\(müşteri, Microsoft 365 Defender'daki İş Ortağı Uygulaması sayfasında İş Ortağı ve API > [](https://security.microsoft.com/interoperability/partnersapps)\) İş Ortağı uygulamaları önerin seçeneğini kullanabilir ve uç nokta için Microsoft Defender ekibi tarafından test edilebilir ve indirilebilir.
 
 Uç Nokta için Microsoft Defender ekibi tümleştirmeyi gözden geçirip onaylarsa sizi Microsoft Akıllı Güvenlik Birliği'nde iş ortağı olarak dahil edileceksiniz.
 

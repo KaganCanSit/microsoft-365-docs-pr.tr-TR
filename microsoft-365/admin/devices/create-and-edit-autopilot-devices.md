@@ -27,14 +27,17 @@ search.appverid:
 - MOE150
 ms.assetid: 0f7b1d7c-4086-4331-8534-45d7886f9f34
 description: Microsoft 365 İş Ekstra'da AutoPilot kullanarak cihazları karşıya Microsoft 365 İş Ekstra. Bir cihaza veya cihaz grubuna profil atabilirsiniz.
-ms.openlocfilehash: 96034ca50da114adca60169ae29da5948793b498
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 784db256bb5dae16739722566b6f7a9c8511a678
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984124"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313895"
 ---
 # <a name="create-and-edit-autopilot-devices"></a>AutoPilot cihazlarını oluşturma ve düzenleme
+
+> [!NOTE]
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Bu teklif, cihazlar için ek güvenlik özellikleri sağlar. [İş için Defender hakkında daha fazla bilgi öğrenin](../../security/defender-business/mdb-overview.md).
 
 ## <a name="upload-a-list-of-devices"></a>Cihaz listesini karşıya yükleme
 
@@ -63,3 +66,7 @@ Cihazlar şu gereksinimleri karşılamalıdır:
 2. **Cihaz** panelinde, **Atanan profil** açılan listesinden bir profil seçin. 
     
     Henüz hiç profiliniz yoksa, yönergeler için bkz. [AutoPilot profillerini oluşturma ve düzenleme](create-and-edit-autopilot-profiles.md). 
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](../security-and-compliance/secure-your-business-data.md)

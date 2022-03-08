@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Size gerekenleri korumanıza ve neye ihtiyacınız olmadığını silmeye yardımcı olan bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: b0d179a412a2e0470db844a7e9b422c8ae89db34
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: ac57859d7f27b22060b88189e79d386791535c9e
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63010147"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63319399"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi
 
@@ -264,13 +264,38 @@ Bekletme etiketleri kullanıcılar tarafından veya otomatik olarak uygulanan i�
 
 ### <a name="combining-retention-policies-and-retention-labels"></a>Bekletme ilkelerini ve bekletme etiketlerini birleştirme
 
-Yalnızca bekletme ilkelerini veya yalnızca bekletme etiketlerini kullanma arasında seçim yapmak zorunda değilsiniz. Her iki yöntem de birlikte ve hatta daha kapsamlı bir çözüm için birbirini tamamlayıcı nitelikte kullanılabilir. Örneğin:
+Yalnızca bekletme ilkelerini veya yalnızca bekletme etiketlerini kullanma arasında seçim yapmak zorunda değilsiniz. Her iki yöntem de birlikte ve hatta daha kapsamlı bir çözüm için birbirini tamamlayıcı nitelikte kullanılabilir.
+
+Aşağıdaki örnekler, aynı konum için bekletme ilkelerini ve bekletme etiketlerini birleştirmenin yollarından yalnızca bazılarıdır.
+
+Bekletme ilkelerinin ve bekletme etiketlerinin birlikte nasıl çalışması ve birleştirilmiş sonuçlarının nasıl belirlenecekleri hakkında daha fazla bilgi için, bu sayfada bekletme ilkelerini ve öncelikleri açıklayan [bölüme bakın](#the-principles-of-retention-or-what-takes-precedence).
+
+**Kullanıcıların otomatik silme işlemini geçersiz k olduğu bir örnek**
+
+Senaryo: Varsayılan olarak, kullanıcıların hesaplarında yer alan OneDrive beş yıl sonra otomatik olarak silinir, ancak kullanıcıların belirli belgeler için bunu geçersiz kılma seçeneğine sahip olması gerekir.
 
 1. İçeriği son değiştirildikten beş yıl sonra otomatik olarak silen bir bekletme ilkesi oluşturabilir ve yapılandırmış olursunuz ve bu ilkeyi tüm OneDrive uygulayabilirsiniz.
 
 2. İçeriği sonsuza kadar tutan bir bekletme etiketi oluşturabilir ve yapılandırabilirsiniz ve bunu tüm hesaplarda yayımlay etiketi ilkesine OneDrive gerekir. Bu etiketi, beş yıl sonra değiştirilmezse otomatik silme işleminin dışında tutulacak belirli belgelere nasıl el ile uygulayacaklarını kullanıcılara açıklarsınız.
 
-Bekletme ilkelerinin ve bekletme etiketlerinin birlikte nasıl çalışması ve birleştirilmiş sonuçlarının nasıl belirlenecekleri hakkında daha fazla bilgi için, bekletme ilkeleri ve öncelik alınan ilkeleri açıklayan bir sonraki bölüme bakın.
+**Daha uzun süre öğeleri tutma örneği**
+
+Senaryo: Varsayılan olarak, SharePoint öğeleri otomatik olarak korunur ve beş yıl sonra silinir, ancak belirli kitaplıklarda yer alan belgeler on yıl süreyle tutulmelidir.
+
+1. İçeriği beş yıl sonra otomatik olarak alıkoyan ve silen bir bekletme ilkesi oluşturabilir ve yapılandırabilirsiniz, sonra da bu ilkeyi tüm SharePoint grupların Microsoft 365 uygulayabilirsiniz.
+
+2. İçeriği on yıl süreyle otomatik olarak alıkoyan bir bekletme etiketi oluşturabilir ve yapılandırabilirsiniz. Bu etiketi site SharePoint yayımlamanız gerekir; böylelikle, belirli belge kitaplıklarında yer alan tüm öğeler tarafından devralınacak varsayılan etiket olarak uygulayabilirler.
+
+**Daha kısa bir süre içinde öğeleri silme örneği**
+
+Senaryo: Varsayılan olarak, e-postalar korunur, ancak on yıl sonra otomatik olarak silinir. Ancak, ön e-posta kodu adı olan belirli bir projeyle ilgili e-postalar, bir yıl sonra otomatik olarak silinmelidir.
+
+1. On yıl sonra içeriği otomatik olarak silen bir bekletme ilkesi oluşturabilir ve yapılandırabilirsiniz ve bu ilkeyi tüm alıcıların Exchange uygulayabilirsiniz.
+
+2. Bir yıl sonra içeriği otomatik olarak senen bir bekletme etiketi oluşturabilir ve yapılandırabilirsiniz. İlgili e-postalara bu etiketi uygulama seçenekleri şunlardır:
+    - Anahtar sözcük olarak proje kodu adını kullanarak içeriği tanımlayan bir otomatik etiketleme ilkesi oluşturabilir ve bu ilkeyi tüm alıcıların Exchange uygulayabilirsiniz
+    - Etiketi yayımlar ve projede yer alan kullanıcılara bu etiketin geçerli olduğu bir Etiket Outlook otomatik kural oluşturma hakkında bilgi
+    - Etiketi yayımlar ve kullanıcılara projeyle ilgili tüm e-postalar için Outlook'de klasör oluşturmalarını ve yayımlanmış etiketi klasöre uygulamalarını ve ardından projeyle ilgili tüm e Outlook leri bu klasöre taşımak için bir Outlook kuralı oluşturmalarını sağlarsınız.
 
 ## <a name="how-long-it-takes-for-retention-settings-to-apply"></a>Bekletme ayarlarının geçerlik süresi
 

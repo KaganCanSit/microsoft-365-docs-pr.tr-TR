@@ -1,5 +1,5 @@
 ---
-title: Pilot ortamdaki bir Microsoft 365 Defender kullanarak inceleme ve yanıtlama
+title: 6. Adım. Pilot ortamdaki bir Microsoft 365 Defender kullanarak inceleme ve yanıtlama
 description: Kullanıcılara cihazları, kimlikleri, Microsoft 365 Defender ve uygulamaları korumalarını öğretecek şekilde tasarlanmış güvenlik çözümünü denemek için deneme laboratuvarı veya pilot ortamında saldırı benzetimleri ayarlayın.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -10,8 +10,8 @@ ms.pagetype: security
 f1.keywords:
 - NOCSH
 ms.localizationpriority: medium
-ms.author: josephd
-author: JoeDavies-MSFT
+ms.author: dansimp
+author: dansimp
 ms.date: 07/09/2021
 manager: dansimp
 audience: ITPro
@@ -21,14 +21,14 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 46facb53ebffb26095a9de4cab60d255285cc949
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: e7dafa34daed763bc0da11e5cd11f80b791db508
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015545"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63318725"
 ---
-# <a name="investigate-and-respond-using-microsoft-365-defender-in-a-pilot-environment"></a>Pilot ortamdaki bir Microsoft 365 Defender kullanarak inceleme ve yanıtlama
+# <a name="step-6-investigate-and-respond-using-microsoft-365-defender-in-a-pilot-environment"></a>6. Adım. Pilot ortamdaki bir Microsoft 365 Defender kullanarak inceleme ve yanıtlama
 
 **Aşağıdakiler için geçerlidir:**
 - Microsoft 365 Defender

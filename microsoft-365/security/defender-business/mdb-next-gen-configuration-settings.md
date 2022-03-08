@@ -1,13 +1,13 @@
 ---
-title: İş için Microsoft Defender'da (önizleme) yeni nesil koruma yapılandırma ayarlarını anlama
-description: İş için Microsoft Defender'da (önizleme) yeni nesil koruma için yapılandırma ayarlarını anlama
+title: İş için Microsoft Defender'da yeni nesil koruma yapılandırma ayarlarını anlama
+description: İş için Microsoft Defender'da yeni nesil koruma için yapılandırma ayarlarını anlama
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 02/07/2022
+ms.date: 02/24/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -16,26 +16,28 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: a4fd47c04e063e049265f037568a768eb05b6cc7
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: a3e4e9cb3b3350cbc901a40d171bb0171186519e
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63016703"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323017"
 ---
-# <a name="understand-next-generation-configuration-settings-in-microsoft-defender-for-business-preview"></a>İş için Microsoft Defender'da (önizleme) yeni nesil yapılandırma ayarlarını anlama
+# <a name="understand-next-generation-configuration-settings-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da yeni nesil yapılandırma ayarlarını anlama
 
 > [!IMPORTANT]
-> İş için Microsoft Defender şu anda önizlemede ve istekte etmek için buraya kaydolan müşterilere ve IT [İş Ortaklarına aşamalı](https://aka.ms/mdb-preview) olarak aşamalı olarak aşamalı olarak sunulmaktadır. Önümüzdeki haftalarda bir ilk müşteri ve iş ortağı kümesi sunuyoruz ve genel kullanılabilirlik durumuna kadar önizlemeyi genişleteceğiz. Önizlemenin bir dizi ilk [senaryoyla başlat olacağını](mdb-tutorials.md#try-these-preview-scenarios) ve düzenli olarak özellikler ekley olacacaz.
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-İş için Defender'daki yeni nesil koruma (önizleme), güçlü virüsten koruma ve kötü amaçlı yazılımlardan koruma içerir. Varsayılan ilkeleriniz, üretkenliği engellemeden cihazlarınızı ve kullanıcılarınızı korumak üzere tasarlanmıştır; bununla birlikte, ilkelerinizi iş gereksinimlerinize uygun olarak özelleştirebilirsiniz. Microsoft Endpoint Manager kullanıyorsanız, güvenlik ilkelerinizi yönetmek için de bu bilgileri kullanabilirsiniz.
+İş için Defender'daki yeni nesil koruma, güçlü virüsten koruma ve kötü amaçlı yazılımlardan koruma içerir. Varsayılan ilkeleriniz, üretkenliği engellemeden cihazlarınızı ve kullanıcılarınızı korumak üzere tasarlanmıştır; bununla birlikte, ilkelerinizi iş gereksinimlerinize uygun olarak özelleştirebilirsiniz. Microsoft Endpoint Manager kullanıyorsanız, güvenlik ilkelerinizi yönetmek için de bu bilgileri kullanabilirsiniz.
 
 **Bu makalede şu açıklanmıştır**:
 
 - [Yeni nesil koruma ayarları ve seçenekleri](#next-generation-protection-settings-and-options)
-- [Defender For Business 'daki diğer önceden yapılandırılmış ayarlar (önizleme)](#other-preconfigured-settings-in-defender-for-business) 
+
+- [İş için Defender'daki diğer önceden yapılandırılmış ayarlar](#other-preconfigured-settings-in-defender-for-business) 
+
 - [İş için Defender varsayılan ayarları ve Microsoft Endpoint Manager](#defender-for-business-default-settings-and-microsoft-endpoint-manager)
 
 ## <a name="next-generation-protection-settings-and-options"></a>Yeni nesil koruma ayarları ve seçenekleri
@@ -56,7 +58,7 @@ Aşağıdaki tabloda ayarlarınız ve seçenekleriniz listeledir:<br/><br/>
 | **Zamanlanmış taramayı çalıştırmak için günün saati** | Çalıştırmak için düzenli aralıklarla zamanlanmış virüsten koruma taramalarınızı çalıştırmak için bir zaman seçin. |
 | **Düşük performans kullanma** | Bu ayar varsayılan olarak kapalıdır. *Bu ayarın kapalı durumda tutmalarını öneririz.* Bununla birlikte, zamanlanmış taramalarda kullanılan cihaz belleğini ve kaynakları sınırlamak için bu ayarı açabilirsiniz. <br/><br/>**ÖNEMLİ** Düşük performans **kullan'a** ayarlarsanız, aşağıdaki ayarları Yapılandırarak Performans Microsoft Defender Virüsten Koruma: <br/>- Arşiv dosyaları taranmadı ([AllowArchiveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning))<br/>- Taramalara düşük CPU önceliği atanır ([EnableLowCPUPriority](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)) <br/>- Tam virüsten koruma taraması atlandı ise herhangi bir yakalama taraması çalıştırmayacak ([DisableCatchupFullScan](/windows/client-management/mdm/policy-csp-defender#defender-disablecatchupfullscan)) <br/>- Hızlı bir virüsten koruma taraması atlandı ise herhangi bir yakalama taraması çalıştırmayacak ([DisableCatchupQuickScan](/windows/client-management/mdm/policy-csp-defender#defender-disablecatchupquickscan)) <br/>- Virüsten koruma taraması sırasında ortalama CPU yük faktörü sayısını %50'den %20'ye indiren ([AvgCPULoadFactor](/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor)) |
 | **Kullanıcı deneyimi**   |  |
-| **Kullanıcıların Windows Güvenliği izin verme** | Kullanıcıların Windows Güvenliği'i kendi cihazlarında açmalarını sağlamak için bu ayarı açın. Kullanıcılar, İş için Microsoft Defender'da (önizleme) yapılandırılan ayarları geçersiz kılabilecektir, ancak gerekirse hızlı tarama çalıştırabilecek veya algılanan tehditlere göz atabilecektir. |
+| **Kullanıcıların Windows Güvenliği izin verme** | Kullanıcıların Windows Güvenliği'i kendi cihazlarında açmalarını sağlamak için bu ayarı açın. Kullanıcılar, İş için Microsoft Defender'da yapılandırılan ayarları geçersiz k çünkü gerekirse hızlı tarama çalıştırabilecek veya algılanan tüm tehditleri abilecektir. |
 | **Virüsten koruma dışlamaları** | Dışlamalar, taramalar tarafından atlanan süreçler, dosyalar veya Microsoft Defender Virüsten Koruma olur. *Genelde dışlamalar tanımlamanız gerekmer.* Microsoft Defender Virüsten Koruma işletim sistemi davranışları ve tipik yönetim dosyalarını temel alan birçok otomatik dışlama vardır.<br/><br/>[Dışlamalar hakkında daha fazla bilgi](../defender-endpoint/configure-exclusions-microsoft-defender-antivirus.md) |
 | **İşlem dışlamaları** | İşlem dışlamaları, belirli işlemler tarafından açılan dosyaların başka bir Microsoft Defender Virüsten Koruma. <br/><br/>[İşlem dışlamaları hakkında daha fazla bilgi](../defender-endpoint/configure-process-opened-file-exclusions-microsoft-defender-antivirus.md) |
 | **Dosya uzantısı dışlamaları** | Dosya uzantısı dışlamaları, belirli uzantılara sahip dosyaların başka uzantılar tarafından taran Microsoft Defender Virüsten Koruma.<br/><br/>[Dosya uzantısı dışlamaları hakkında daha fazla bilgi](../defender-endpoint/configure-extension-file-exclusions-microsoft-defender-antivirus.md) |
@@ -64,16 +66,19 @@ Aşağıdaki tabloda ayarlarınız ve seçenekleriniz listeledir:<br/><br/>
 
 ## <a name="other-preconfigured-settings-in-defender-for-business"></a>İş için Defender'daki diğer önceden yapılandırılmış ayarlar
 
-Aşağıdaki güvenlik ayarları Defender İş (önizleme) içinde önceden yapılandırılmıştır:
+Aşağıdaki güvenlik ayarları, İş için Defender'da önceden yapılandırılmıştır:
 
 - Çıkarılabilir sürücüleri tarama açık ([AllowFullScanRemovableDriveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning))
+
 - Günlük hızlı taramalarda önceden ayarlanmış bir zaman yok ([ScheduleQuickScanTime](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime))
+
 - Virüsten koruma taraması çalıştırmadan önce güvenlik zekası güncelleştirmeleri denetlenir ([CheckForSignaturesBeforeRunningScan](/windows/client-management/mdm/policy-csp-defender#defender-checkforsignaturesbeforerunningscan))
+
 - Güvenlik zekası denetimleri her dört saatte bir gerçekleşir ([SignatureUpdateInterval](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval))
 
 ## <a name="defender-for-business-default-settings-and-microsoft-endpoint-manager"></a>İş için Defender varsayılan ayarları ve Microsoft Endpoint Manager
 
-Aşağıdaki tabloda, İş için Defender (önizleme) için önceden yapılandırılmış ayarlar ve bu ayarların Microsoft Endpoint Manager'de gördüğünüze nasıl karşılık Microsoft Intune. Defender Kurumsal'da (önizleme [)](mdb-simplified-configuration.md) basitleştirilmiş yapılandırma işlemini kullanıyorsanız, bu ayarları düzenlemeniz gerekmektedir.
+Aşağıdaki tabloda, İş için Defender'da önceden yapılandırılmış olan ayarlar ve bu ayarların sizin Microsoft Endpoint Manager'te gördüğünüze (veya Microsoft Intune). Defender Kurumsal'da (önizleme [)](mdb-simplified-configuration.md) basitleştirilmiş yapılandırma işlemini kullanıyorsanız, bu ayarları düzenlemeniz gerekmektedir.
 <br/><br/>
 
 | Ayar  | Açıklama  |
@@ -92,9 +97,9 @@ Aşağıdaki tabloda, İş için Defender (önizleme) için önceden yapılandı
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [İş için Microsoft Defender'da olayları görüntüleme ve yönetme (önizleme)](mdb-view-manage-incidents.md)
+- [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)
 
-- [Microsoft Defender İş'te (önizleme) tehditlere yanıt verme ve tehditlerini azaltmak](mdb-respond-mitigate-threats.md)
+- [İş için Microsoft Defender'da tehditleri yanıtlama ve azaltmak](mdb-respond-mitigate-threats.md)
 
 - [İşlem merkezinde düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
 
@@ -103,6 +108,6 @@ Aşağıdaki tabloda, İş için Defender (önizleme) için önceden yapılandı
 
 - [Microsoft 365 Defender portalını ziyaret edin](mdb-get-started.md)
 
-- [İş için Microsoft Defender'da (önizleme) güvenlik duvarı ayarlarını yönetme](mdb-custom-rules-firewall.md)
+- [İş için Microsoft Defender'da güvenlik duvarı ayarlarını yönetme](mdb-custom-rules-firewall.md)
 
 - [İlke CSP - Defender](/windows/client-management/mdm/policy-csp-defender)

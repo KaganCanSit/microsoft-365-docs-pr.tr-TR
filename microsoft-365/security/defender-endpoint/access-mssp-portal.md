@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 5a359938dbee85ea64b5f46804761410cae1f48e
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: b1c133048e6600d553f0530e135ebfc2c441dd84
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62973866"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323675"
 ---
 # <a name="access-the-microsoft-365-defender-mssp-customer-portal"></a>MSSP Microsoft 365 Defender portalına erişme
 
@@ -36,9 +36,9 @@ ms.locfileid: "62973866"
 > [!NOTE]
 > Bu adım kümesi MSSP'ye yöneliktir.
 
-Varsayılan olarak, MSSP müşterileri Microsoft 365 Defender URL aracılığıyla kiracılarına erişim sağlar: `https://securitycenter.windows.com/`.
+Varsayılan olarak, MSSP müşterileri aşağıdaki URL Microsoft 365 Defender kiracılarına erişim sağlar: `https://security.microsoft.com/`.
 
-Ancak MSSP'lerin kiracıya özgü URL'leri aşağıdaki biçimde kullanmaları gerekir:  `https://securitycenter.windows.com?tid=customer_tenant_id` MSSP müşteri portalına erişmek için.
+Ancak MSSP'lerin kiracıya özgü URL'leri aşağıdaki biçimde kullanmaları gerekir:  `https://security.microsoft.com?tid=customer_tenant_id` MSSP müşteri portalına erişmek için.
 
 Genel olarak, MSSP'ler yönetmeyi amaçlasa da, MSSP müşterilerinin Azure AD'sinde yer alan her bir kullanıcıya eklenmiştir.
 
@@ -50,7 +50,7 @@ MSSP müşteri kiracı kimliğini almak için aşağıdaki adımları izleyin ve
 
 3. **Özellikler'Azure Active Directory > seçin**. Kiracı kimliğini Dizin Kimliği alanında bulabilirsiniz.
 
-4. MSSP müşteri portalına, değeri aşağıdaki `customer_tenant_id` URL'de değiştirerek erişin: `https://securitycenter.windows.com/?tid=customer_tenant_id`.
+4. MSSP müşteri portalına, değeri aşağıdaki `customer_tenant_id` URL'de değiştirerek erişin: `https://security.microsoft.com/?tid=customer_tenant_id`.
 
 ## <a name="related-topics"></a>İlgili konular
 

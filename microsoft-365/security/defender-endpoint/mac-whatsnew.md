@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 5382118753f3c865f6fceb7cd16a7a7953e7bfad
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 10ecf1f3906e7968328729257feea9c272562ffb
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63019437"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322639"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-mac"></a>Mac'te Uç Nokta için Microsoft Defender'daki güncelleştirmeler
 
@@ -31,6 +31,19 @@ ms.locfileid: "63019437"
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+
+## <a name="1015950-20122021159500"></a>101.59.50 (20.122021.15950.0)
+
+- Bu sürüm macOS 12.3 için destek ekler. MacOS 12.3'den başlayarak, [Apple Python 2.7'yi kaldırmıştı](https://developer.apple.com/documentation/macos-release-notes/macos-12_3-release-notes). MacOS üzerinde önceden yüklenmiş hiçbir Python sürümü varsayılan olarak olmayacaktır. **EYLEM GEREKIYOR**: 
+  - Kullanıcıların cihazlarını macOS Monterey 12.3 (veya daha yeni) sürümüne güncelleştirmeden önce, Mac için Uç Nokta için Microsoft Defender'ı 101.59.50 (veya daha yeni bir sürüm) olarak güncelleştirmeleri gerekir. Bu en düşük sürüm 101.59.50, macOS Monterey'de Mac için Uç Nokta için Microsoft Defender ile ilgili Python ile ilgili sorunları ortadan kaldırmanın önkoşullarıdır.
+  - Uzak dağıtımlarda, mevcut MDM kurulumlarının Mac için Uç Nokta sürüm 101.59.50 (veya daha yenisi) için Microsoft Defender'a güncelleştirilmiş olması gerekir. Mac için Uç Nokta sürümü için eski bir Microsoft Defender MDM aracılığıyla macOS Monterey 12.3'e (veya daha yenisine) itmek yükleme hatasına neden olur.
+
+## <a name="1015910-20122012159100"></a>101.59.10 (20.122012.15910.0)
+
+- Komut satırı aracı artık karantinaya alınmış dosyaları, dosyanın başlangıçta algılandığından farklı bir konuma geri yüklemeyi destekler. Bu, aracılığıyla yapılabilir `mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`.
+- Zaman 3 üzerinden bağlanan cihazları işlemek için genişletilmiş cihaz denetimi
+- Geçersiz satıcı kimlikleri ve ürün kimlikleri içeren cihaz denetimi ilkelerinin işlenmesi geliştirildi. Bu sürümden önce, ilke bir veya birden çok geçersiz kimlik içeriyorsa, ilkenin tamamı yok sayılırdı. Bu sürümden başlayarak, ilkenin yalnızca geçersiz bölümleri yok sayılır. İlkeyle ilgili sorunlar ile ilgili sorunlar ortaya çıkar `mdatp device-control removable-media policy list`.
+- Hata düzeltmeleri
 
 ## <a name="1015662-20121122156620"></a>101.56.62 (20.121122.15662.0)
 

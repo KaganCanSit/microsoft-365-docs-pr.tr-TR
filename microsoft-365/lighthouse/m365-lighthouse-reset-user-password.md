@@ -15,18 +15,15 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse kullanıcı parolasını sıfırlamayı öğrenin.
-ms.openlocfilehash: 0840725ffb74072d6f5973aa7175066a31fe32bb
-ms.sourcegitcommit: 6e43aeff217afe97876137b1ead8df26db6e9937
+description: MICROSOFT 365 LIGHTHOUSE kullanan Yönetilen Hizmet Sağlayıcıları (MSP)'ler için, tek bir kullanıcının veya farklı kiracılarda birden çok riskli kullanıcının parolasını sıfırlamayı öğrenin.
+ms.openlocfilehash: 5217db990816b8a1ec6ed927f8f9e05827cc215b
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "63015312"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63311557"
 ---
-# <a name="reset-user-password"></a>Kullanıcı parolasını sıfırlama
-
-> [!NOTE]
-> Bu makalede açıklanan özellikler Önizleme'dedir, değişebilir ve yalnızca gereksinimleri karşılayacak iş ortakları tarafından [kullanılabilir](m365-lighthouse-requirements.md). Henüz oturum açmadıysanız Microsoft 365 Lighthouse için [kaydolma'ya Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
+# <a name="reset-a-user-password"></a>Kullanıcı parolasını sıfırlama
 
 Microsoft 365 Lighthouse, kullanıcı parolalarını değiştirmenizi veya sıfırlamanizi sağlar. Farklı kiracılarda tek bir kullanıcının veya birden çok riskli kullanıcının parolasını sıfırlayabilirsiniz.
 

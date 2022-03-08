@@ -8,8 +8,8 @@ ms.sitesec: library
 ms.pagetype: security
 f1.keywords:
 - NOCSH
-ms.author: josephd
-author: JoeDavies-MSFT
+ms.author: dansimp
+author: dansimp
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -21,12 +21,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: fe4a5e97704cbf1d4851484397e7c4424c099d3c
-ms.sourcegitcommit: 22cae7ec541268d519d45518c32f22bf5811aec1
+ms.openlocfilehash: 2349fb9ac736653b9a74c42aecf5e71cc95381ca
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62974165"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63321523"
 ---
 # <a name="alert-grading-for-suspicious-email-forwarding-activity"></a>Şüpheli e-posta iletme etkinliği için uyarı notlama
 
@@ -37,7 +37,7 @@ ms.locfileid: "62974165"
 
 Tehdit amaçlı tehdit, kullanıcının gelen kutusunda e-postaları okuma, e-postaları dış alıcılara iletme ve kimlik avı e-postaları gönderme gibi çeşitli kötü amaçlı amaçlar doğrultusunda güvenliği ihlal edilmiş kullanıcı hesaplarını kullanabilir. Hedefli kullanıcı e-postalarının iletil haberini fark e-postayı fark e-postaylamış olabilir. Bu, kullanıcı hesaplarının güvenliği ihlal edilmişken saldırganların kullanmaları için kullanılan çok yaygın bir tactiğidir.
 
-E-postalar el ile veya otomatik olarak iletme kuralları kullanılarak iletilebilir. Otomatik iletme, Gelen Kutusu Kuralları, Aktarım Kuralı (ETR) Exchange SMTP İ iletme gibi çeşitli yöntemlerle uygulanabilirsiniz. El ile iletme işlemi kullanıcılardan doğrudan işlem gerektiriyor ama otomatik iletili e-postaların hepsini fark e-postalarını fark e-postayla gönderemleri gerektir. Yeni Microsoft 365, kullanıcı bir e-postayı otomatik olarak kötü amaçlı olabilecek bir e-posta adresine iletmişsa uyarı yükseltildi.
+E-postalar el ile veya otomatik olarak iletme kuralları kullanılarak iletilebilir. Otomatik iletme, Gelen Kutusu Kuralları, Aktarım Kuralı (ETR) Exchange SMTP İ iletme gibi çeşitli yollarla uygulanabilirsiniz. El ile iletme işlemi kullanıcılardan doğrudan işlem gerektiriyor ama otomatik iletili e-postaların hepsini fark e-postalarını fark e-postayla gönderemleri gerektir. Yeni Microsoft 365, kullanıcı bir e-postayı otomatik olarak kötü amaçlı olabilecek bir e-posta adresine iletmişsa uyarı yükseltildi.
 
 Bu çalışma kitabı Şüpheli E-posta İ iletme Etkinliği uyarılarını araştırmanıza ve bunları hızlı bir şekilde Doğru Pozitif (TP) veya Hatalı Pozitif (FP) olarak notlamanıza yardımcı olur. Ardından, saldırıyı düzeltmek için TP uyarıları için önerilen eylemleri gerçekleştirabilirsiniz.
 
@@ -61,7 +61,7 @@ Saldırganlar, kötü amaçlı etkinliklerini kullanıcıdan gizlemek üzere gü
 
 Bazı kurallar tüm e-postaları başka bir klasöre taşımak ve bunları "okundu" olarak işaretlemek için, bazı kurallar ise yalnızca e-posta iletisinde veya konu iletisinde belirli anahtar sözcükleri içeren postaları hareket ettirebilirsiniz. Örneğin, gelen kutusu kuralı "fatura", "kimlik avı", "yanıt vermedi", "şüpheli e-posta" veya "istenmeyen posta" gibi anahtar sözcükleri başkaları arasında arama yapacak şekilde ayarlanmış olabilir ve bunları bir dış e-posta hesabına taşı. Saldırganlar ayrıca güvenliği tehlikeye atılmış kullanıcı posta kutusunu istenmeyen posta, kimlik avı e-postaları veya kötü amaçlı yazılım dağıtmak için de kullanabilir.
  
-e-posta Office 365 için Microsoft Defender şüpheli e-posta iletme kurallarını algılanabilir ve uyararak kaynakta gizli kuralları bulamanıza ve silmenıza olanak sağlar.
+Microsoft Defender for Office 365 can detect and alert on suspicious email forwarding rules, to find and delete hidden rules at the source.
 
 Daha fazla bilgi için bu blog gönderileri'ne bakın:
 
@@ -113,7 +113,7 @@ Etkilenen posta kutusu için şu ek etkinlikleri de çözümebilirsiniz:
 
     - Gönderilen e-postalardan kaç tanesinde hassas bilgi olduğunu gözlemin. 
 
-- Portalda riskli oturum açma davranışını Microsoft Azure.
+- Portalda riskli oturum açma davranışını Microsoft Azure değerlendirin.
 - Kullanıcının cihazında kötü amaçlı etkinliklerin olup olduğunu kontrol edin.
 
 ### <a name="are-the-activities-malicious"></a>Etkinlikler kötü amaçlı mı?

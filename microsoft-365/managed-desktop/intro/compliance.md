@@ -9,12 +9,12 @@ ms.collection: M365-modern-desktop
 ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: d34807d20f0b203efb3d45b6fe45eddce632e275
-ms.sourcegitcommit: a6651b841f111ea2776cab88bf2c80f805fa8e09
+ms.openlocfilehash: 2606b6c241b364464b4c6f205a3beb13af50a814
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "63027290"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320389"
 ---
 # <a name="compliance"></a>Uyumluluk
 
@@ -39,10 +39,9 @@ Microsoft Yönetilen Masaüstü aşağıdaki sertifikaları edindi:
 - [Sağlık Sigortası Taşınabilirlik ve Sorumluluk Yasası (HIPAA)](/compliance/regulatory/offering-hipaa-hitech)
 - [Health Information Trust Alliance (HITRUST) Common Security Framework (CSF)](/compliance/regulatory/offering-hitrust)
 
-
 ## <a name="auditor-reports-and-compliance-certificates"></a>Denetçi raporları ve uyumluluk sertifikaları
 
-Microsoft Bulut Hizmeti teklifleri hakkında bilgi almak için merkezi depo olan Hizmet Güveni [Portalı'nda (STP)](https://servicetrust.microsoft.com/) denetim ve teknik gereksinimler gibi ilgili bilgileri bulabilirsiniz. STP'nin Denetim Raporları bölümünden denetçi raporlarını, uyumluluk sertifikalarını [ve daha](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuide) fazlasını indirebilirsiniz.
+Denetim ve teknik gereksinimler de dahil olmak üzere ilgili bilgileri Hizmet Güveni [Portalı'nde (STP) bulabilirsiniz](https://servicetrust.microsoft.com/). Bu portal, Microsoft Bulut Hizmeti teklifleri hakkında bilgi almak için merkezi bir depo sağlar. STP'nin Denetim Raporları bölümünden denetçi raporlarını, uyumluluk sertifikalarını [ve daha](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuide) fazlasını indirebilirsiniz.
 
 > [!NOTE]
 > Microsoft Yönetilen Masaüstü Azure'da çalıştırlı olduğundan, ilgili belgeler genellikle "Microsoft Azure, Dynamics 365 ve diğer Çevrimiçi Hizmetler" gibi dosya adlara sahip olur. Bu belgelerde, Microsoft Yönetilen Masaüstü'nü genellikle "Microsoft Online Services" veya "Monitoring + Management" kategorisi altında bulabilirsiniz.

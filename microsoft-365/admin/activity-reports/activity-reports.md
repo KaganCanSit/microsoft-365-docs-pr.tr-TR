@@ -21,21 +21,21 @@ search.appverid:
 - MOE150
 - GEA150
 ms.assetid: 0d6dfb17-8582-4172-a9a9-aed798150263
-description: Daha fazla bilgi için, Microsoft 365 bir grafiğin detaya gitmeleri için, Microsoft 365 bir rapor alın.
-ms.openlocfilehash: 36176ceee1ace993a95e661ab5d71ee062956692
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+description: Daha fazla bilgi için, Microsoft 365 bir grafikte detaya gitme hakkında düzenli bir rapor alın.
+ms.openlocfilehash: 9f54d3b582b08ba38cc6f9f815224f01fcad3dcb
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "62973872"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315351"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center"></a>Microsoft 365 Merkezinde Rapor Raporları
 
-İşletmeki kişilerin iş yeriz veya hizmetlerinizi nasıl Microsoft 365 bakabilirsiniz. Örneğin, kimin hizmeti çok fazla kullanan ve kotalara ulaştığını veya kimin o anda lisansa hiç ihtiyacı Microsoft 365 olmadığını tanımlayabilirsiniz. Kalıcı lisans modeli raporlara dahil edilecektir. 
+İşletmeki kişilerin iş yeriz veya hizmetleri kullanarak nasıl Microsoft 365 bakabilirsiniz. Örneğin, kimin hizmeti çok fazla kullanan ve kotalara ulaştığını veya kimin o anda lisansa hiç ihtiyacı Microsoft 365 olmadığını tanımlayabilirsiniz. Kalıcı lisans modeli raporlara dahil edilecektir. 
   
 Son 7 gün, son 30 gün, son 90 gün ve son 180 güne yönelik raporlar sağlanır. Tüm raporlama dönemlerine ilişkin veriler hemen hazır olmaz. Raporlar 48 saat içinde sunulur.
   
-## <a name="watch-act-on-a-usage-report-in-office-365"></a>İzle: Rapor'da kullanım Office 365
+## <a name="watch-act-on-a-usage-report-in-office-365"></a>İzle: Rapor'da bir kullanım raporuna Office 365
   
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/fb726f8e-aead-43b2-ba0f-53ba5b886bf7?autoplay=false]
   
@@ -53,7 +53,7 @@ Son 7 gün, son 30 gün, son 90 gün ve son 180 güne yönelik raporlar sağlan�
 
 ::: moniker-end
 
-2. Raporun ayrıntı **sayfasını görmek** için, bir hizmetin (e-posta veya Posta gibi) etkinlik kartından Daha fazla OneDrive düğmesine tıklayın. Burada, hizmetle ilgili farklı raporlar sekmelerde sağlanır.
+2. Raporun ayrıntı **sayfasını görmek** için, bir hizmetin (e-posta veya Posta gibi) bir bakışta etkinlik kartından Daha fazla OneDrive düğmesine tıklayın. Burada, hizmetle ilgili farklı raporlar sekmelerde sağlanır.
 
    :::image type="content" alt-text="Kullanım panosu." source="../../media/4c0f966d-9d2b-4a6f-a106-a6e2b9a2de07.png" lightbox="../../media/4c0f966d-9d2b-4a6f-a106-a6e2b9a2de07.png":::
 
@@ -111,6 +111,7 @@ Aboneliğinize bağlı olarak, tüm ortamlarda kullanılabilen raporlar aşağı
 |[Skype Kurumsal Çevrimiçi Sürüm konferans katılımı etkinliği](/SkypeForBusiness/skype-for-business-online-reporting/conference-participant-activity-report)|Evet|Evet|Hayır[^1]|Hayır[^1]|Evet|
 |[Skype Kurumsal Çevrimiçi Sürüm eşler arası etkinlik](/SkypeForBusiness/skype-for-business-online-reporting/peer-to-peer-activity-report)|Evet|Evet|Hayır[^1]|Hayır[^1]|Evet|
 |[Viva Learning etkinliği](viva-learning-activity.md)|Evet|Yok|Yok|Yok|Yok|
+|[Viva Analizler etkinliği](viva-insights-activity.md)|Evet|Evet|Yok|Yok|Yok|
 
 [^1]: The report is in plan to be released in the future. The <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=" target="_blank">Microsoft 365 Roadmap</a> will be updated before the release.
 [^2]: The service is not available in the environment so no plan to release the report.
@@ -142,15 +143,15 @@ Raporlarınızı oluşturmaktayken kullanıcı düzeyi bilgilerini yeniden görm
 
 Raporlar, kurum kurum kullanım verileri hakkında bilgi sağlar. Varsayılan olarak, raporlar kullanıcılar, gruplar ve siteler için tanımlayıcı adlar içeren bilgiler görüntüler. 1 Eylül 2021'den başlayarak, şirketlerin yerel gizlilik yasalarını desteklemelerine yardımcı olmak için devam eden taahhüdlerimizin bir parçası olarak tüm raporlar için kullanıcı bilgilerini varsayılan olarak gizleriz.
 
-Genel yöneticiler bu değişikliği kiracıları için geri döndürebilir ve kuruluşlarının gizlilik uygulamaları buna izin verdiyse tanımlanabilecek kullanıcı bilgilerini gösterebilir. Bunu aşağıdaki Microsoft 365 yönetim merkezi kullanarak başarıyla yapabilirsiniz:
+Genel yöneticiler bu değişikliği kiracıları için geri döndürebilir ve kuruluşlarının gizlilik uygulamaları buna izin verdiyse tanımlanabilecek kullanıcı bilgilerini gösterebilir. Aşağıdaki adımları kullanarak Microsoft 365 yönetim merkezi sağ edilebilir:
   
-1. Yönetim merkezinde Kuruluş Merkezi Ayarlar  \> **Hizmetleri Ayarlar** \> **gidin.**
+1. Yönetim merkezinde Kuruluş Yönetim Merkezi **Ayarlar** \> **Hizmetler Ayarlar** \> **gidin.**
 
 2. **Raporlar**'ı seçin. 
   
 3. Tüm raporlarda **gizlenen kullanıcı, grup ve site adlarını** görüntüle ifadesinin işaretini kaldırın ve sonra değişikliklerinizi kaydedin.  
   
-Bu değişikliklerin rapor panosundaki raporlarına yansıması birkaç dakika sürer. Bu ayar, Microsoft Microsoft 365 Yönetim Merkezi'nde [Graph](/graph/api/resources/report?view=graph-rest-1.0) ve Power BI raporları ve kullanım [Microsoft Teams için de geçerlidir](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference).[](/microsoft-365/admin/usage-analytics/usage-analytics?view=o365-worldwide) Tanınmaya neden olan kullanıcı bilgilerini gösterme, denetim günlüğünde kaydedilen Microsoft 365 uyumluluk merkezi olaydır.   
+Bu değişikliklerin rapor panosundaki raporlarına yansıması birkaç dakika sürer. Bu ayar, [Microsoft](/graph/api/resources/report?view=graph-rest-1.0) Microsoft 365 yönetim Graph yönetim Power BI raporları ve Microsoft Teams raporları [için de geçerlidir](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference).[](/microsoft-365/admin/usage-analytics/usage-analytics?view=o365-worldwide) Tanınmaya neden olan kullanıcı bilgilerini gösterme, denetim günlüğüne Microsoft 365 uyumluluk merkezi olaydır.   
 
   
 ## <a name="what-happens-to-usage-data-when-a-user-account-is-closed"></a>Kullanıcı hesabı kapatıldığında kullanım verilerine ne olur?
@@ -163,4 +164,4 @@ Bununla birlikte, geçerli tarihten itibaren 28 güne kadar olan bir gün seçer
 
 [Güvenlikte Raporlar &amp; Uyumluluk Merkezi](../../compliance/reports-in-security-and-compliance.md) (makale)\
 [Microsoft 365 analizi (](../usage-analytics/usage-analytics.md)makale)\
-[Raporlama ve kullanım Microsoft 365 raporları özelleştirme](../usage-analytics/customize-reports.md) (makale)
+[Rapor ve kullanım Microsoft 365 özelleştirme](../usage-analytics/customize-reports.md) (makale)

@@ -18,12 +18,12 @@ ms.custom: ''
 description: Yöneticiler, kullanıcılar tarafından bildirilen istenmeyen postayı ve kimlik avı e-postasını toplamak üzere bir posta kutusunun nasıl yapılandırıldığında bilgi edinebilirsiniz.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 96ec8a32a04768431597c965473974965b2de608
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 525b761b09a68c3e44443cec7bf718d9eaa4d8d1
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021587"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63327217"
 ---
 # <a name="user-reported-message-settings"></a>Kullanıcı ileti ayarlarını bildirdi
 
@@ -122,7 +122,7 @@ Posta kutunuzda tüm geçerli önkoşulların karşılandığından emin oldukta
    - **Microsoft Outlook** \>  ![](../../media/scc-toggle-off.png)İletiyi Bildir düğmesi Kapalı Geçiş kapalı.: Web üzerinde Outlook'te Rapor İletisi eklenti, Rapor Kimlik Avı eklentileri veya yerleşik raporlama yerine üçüncü taraf raporlama araçlarını kullanıyorsanız, bu seçeneği belirtin ve sonra aşağıdaki ayarları yapılandırın:
      - Kullanıcı **tarafından bildirilen gönderileri almak için Bu özel posta kutusunu kullan'ı seçin**. Görüntülenen kutuya, var olan ve e-posta al Exchange Online posta kutusunun e-posta adresini girin.
 
-   - **Microsoft Outlook İletiyi Bildir düğmesi**: Son kullanıcıların iletileri karantinadan bildirmesine izin sağlamak için bu özelliği etkinleştirin.
+   - **İletiyi karantinaya alın** düğmesi: Son kullanıcıların iletileri karantinadan bildirmesine izin vermelerini sağlamak için bu özelliği etkinleştirin.
 
    Bitirdikten sonra Onayla'ya **tıklayın**. Bu değerleri temizlemek için Geri Yükle'ye **tıklayın**
 

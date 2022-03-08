@@ -48,21 +48,21 @@
 ### [Cihazları ekleme ve Uç nokta özellikleri için Microsoft Defender'ı yapılandırma](onboard-configure.md)
 
 
-### [Windows ve Windows Sunucusunda Uç Nokta için Microsoft Defender]()
-#### [Yeni uç noktaları oluşturmak için Windows araçları ve yöntemleri](configure-endpoints.md)
-#### [Cihaz Windows cihaz ve Windows ekleme]()
+### [Windows ve Windows Server'da Uç Nokta için Microsoft Defender]()
+#### [Yeni uç noktaları oluşturmak için Windows ve yöntemler](configure-endpoints.md)
+#### [Cihaz Windows ve Windows Ekleme]()
 
-##### [Windows'in önceki sürümlerini Windows](onboard-downlevel.md)
+##### [Windows'un önceki sürümlerini ekleme](onboard-downlevel.md)
 
 
-##### [Cihaz Windows cihaz ve Windows ekleme]()
+##### [Cihaz Windows ve Windows Ekleme]()
 ###### [R2 Windows Server 2012 2016, Semi-Annual Kanalı, 2019 ve 2022'ye ekleme](configure-server-endpoints.md)
 ###### [Yerel Windows kullanarak cihazları ekleme](configure-endpoints-script.md)
-###### [Grup Windows kullanarak cihaz ekleme](configure-endpoints-gp.md)
-###### [Microsoft Endpoint Configuration Manager kullanarak Windows cihaz Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md)
+###### [Grup Windows kullanarak diğer cihazları ekleme](configure-endpoints-gp.md)
+###### [Microsoft Endpoint Configuration Manager kullanarak Windows cihazları Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md)
 ###### [Mobil Windows Yönetim araçlarını kullanarak cihazları ekleme](configure-endpoints-mdm.md)
 ###### [Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını ekleme](configure-endpoints-vdi.md)
-###### [Windows 10 Windows Sanal Masaüstü'ne çok oturumlu cihazları ekleme](onboard-windows-multi-session-device.md)
+###### [Sanal Windows 10'da çok oturumlu cihazları Windows cihaz ekleme](onboard-windows-multi-session-device.md)
 
 
 
@@ -87,8 +87,8 @@
 ##### [Dağıtma]()
 ###### [Microsoft Intune tabanlı dağıtım](mac-install-with-intune.md)
 ###### [JAMF Pro tabanlı dağıtım]()
-####### [MacOS'ta Jamf ve Jamf kullanarak Uç Nokta için Microsoft Defender Pro](mac-install-with-jamf.md)
-####### [Jamf Pro'de oturum açma](mac-install-jamfpro-login.md)
+####### [MacOS'ta Jamf veya Jamf kullanarak Uç Nokta için Microsoft Defender Pro](mac-install-with-jamf.md)
+####### [Jamf Pro'da oturum açma](mac-install-jamfpro-login.md)
 ####### [Cihaz gruplarını ayarlama](mac-jamfpro-device-groups.md)
 ####### [İlkeleri ayarlama](mac-jamfpro-policies.md)
 ####### [Cihazları kaydetme](mac-jamfpro-enroll-devices.md)
@@ -196,7 +196,7 @@
 
 
 ### [Portal ayarlarını yapılandırma]()
-#### [Tercihleri ayarlama](preferences-setup.md)
+#### [Uç nokta ayarları için genel Defender'ı yapılandırma](preferences-setup.md)
 #### [Genel]()
 ##### [Veri depolama konumunu doğrulama ve veri bekletme ayarlarını güncelleştirme](data-retention-settings.md)
 ##### [Uyarı bildirimlerini yapılandırma](configure-email-notifications.md)
@@ -239,7 +239,7 @@
 ##### [Pano içgörüleri](tvm-dashboard-insights.md)
 ##### [Pozlama puanı](tvm-exposure-score.md)
 ##### [Cihazlar için Microsoft Güvenli Puan](tvm-microsoft-secure-score-devices.md)
-#### [Güvenliğin getirilerini geliştirin & riski azaltma]()
+#### [Güvenlik nedenlerinizi geliştirin & riski azaltma]()
 ##### [Adres güvenliği önerileri](tvm-security-recommendation.md)
 ##### [Güvenlik açıklarını düzeltme](tvm-remediation.md)
 ##### [Güvenlik önerileri için özel durumlar](tvm-exception.md)
@@ -258,6 +258,12 @@
 #### [IoT tümleştirmesi için Microsoft Defender](enable-microsoft-defender-for-iot-integration.md)
 #### [Corelight veri tümleştirmesini etkinleştirme](corelight-integration.md)
 #### [Cihaz bulma hakkında SSS](device-discovery-faq.md)
+
+### [Cihaz envanteri]()
+#### [Cihaz envanteri](machines-view-overview.md)
+#### [Cihazları dışla](exclude-devices.md)
+#### [Cihaz zaman çizelgesi olay bayrakları](device-timeline-event-flag.md)
+#### [Cihaz grubunu ve etiketlerini yönetme](machine-tags.md)
 
 ### [Ağ cihazları](network-devices.md)
 
@@ -296,7 +302,7 @@
 ### Yeni nesil koruma
 #### [Yeni nesil korumaya genel bakış](next-generation-protection.md)
 ##### [Genel bakış Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-windows.md)
-##### [Birlikte daha iyi: Microsoft Defender Virüsten Koruma uç nokta için Microsoft Defender ve](why-use-microsoft-defender-antivirus.md)
+##### [Birlikte daha iyi: Microsoft Defender Virüsten Koruma için Microsoft Defender ve Uç Nokta için Microsoft Defender](why-use-microsoft-defender-antivirus.md)
 ##### [Birlikte daha iyi: Microsoft Defender Virüsten Koruma ve Office 365](office-365-microsoft-defender-antivirus.md)
 #### [Değerlendirme Microsoft Defender Virüsten Koruma](evaluate-microsoft-defender-antivirus.md)
 #### [Microsoft Defender Virüsten Koruma yapılandırma](configure-microsoft-defender-antivirus-features.md)
@@ -320,13 +326,14 @@
 #### [2010'da sınırlı düzenli tarama Microsoft Defender Virüsten Koruma](limited-periodic-scanning-microsoft-defender-antivirus.md)
 #### [Performans ayarlamaları Microsoft Defender Virüsten Koruma](tune-performance-defender-antivirus.md)
 #### [Diğer güvenlik ürünleriyle uyumluluk](microsoft-defender-antivirus-compatibility.md)
+#### [Uç nokta için Microsoft Defender için kötü amaçlı yazılım algılama adlarını bulma](find-defender-malware-name.md)
 
 #### [Virüsten koruma ve kötü amaçlı yazılımlardan koruma güncelleştirmelerini alın](manage-updates-baselines-microsoft-defender-antivirus.md)
 ##### [Koruma güncelleştirmeleri için kaynakları Microsoft Defender Virüsten Koruma yönetme](manage-protection-updates-microsoft-defender-antivirus.md)
 ##### [Koruma güncelleştirmelerinin ne zaman indirildikten ve uygulanmalıdır? zamanlamayı yönetme](manage-protection-update-schedule-microsoft-defender-antivirus.md)
 ##### [Microsoft Defender güncelleştirmeleri için aşamalı olarak geçiş işlemini yönetme](manage-gradual-rollout.md)
 ##### [Microsoft Defender güncelleştirmeleri için aşamalı olarak uygulama işlemini yapılandırma](configure-updates.md)
-##### [Güncel Microsoft Defender Virüsten Koruma uç noktaları yönetmek için güncelleştirmeleri ve taramaları yönetme](manage-outdated-endpoints-microsoft-defender-antivirus.md)
+##### [Güncel Microsoft Defender Virüsten Koruma uç noktaların güncelleştirmelerini ve taramalarını yönetme](manage-outdated-endpoints-microsoft-defender-antivirus.md)
 ##### [Olay tabanlı zorunlu güncelleştirmeleri yönetme](manage-event-based-updates-microsoft-defender-antivirus.md)
 ##### [Mobil cihazlar ve sanal makineler (VM) güncelleştirmelerini yönetme](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
 
@@ -334,20 +341,20 @@
 ##### [Microsoft Endpoint Manager'i yönetmek için Microsoft Defender Virüsten Koruma](use-intune-config-manager-microsoft-defender-antivirus.md)
 ##### [Grubu yönetmek için Grup İlkesi Microsoft Defender Virüsten Koruma](use-group-policy-microsoft-defender-antivirus.md)
 ##### [PowerShell cmdlet'lerini kullanarak Microsoft Defender Virüsten Koruma](use-powershell-cmdlets-microsoft-defender-antivirus.md)
-##### [Diğer Windows yönetmek için Araç Yönetimi Aracı'Microsoft Defender Virüsten Koruma](use-wmi-microsoft-defender-antivirus.md)
-##### [Bilgileri yönetmek mpcmdrun.exe Araç Kutusu Microsoft Defender Virüsten Koruma](command-line-arguments-microsoft-defender-antivirus.md)
+##### [Diğer Windows yönetmek için Araç Gereç (WMI) Microsoft Defender Virüsten Koruma](use-wmi-microsoft-defender-antivirus.md)
+##### [mpcmdrun.exe yönetmek için Microsoft Defender Virüsten Koruma](command-line-arguments-microsoft-defender-antivirus.md)
 ##### [Uç noktalarda görünen bildirimleri yapılandırma](configure-notifications-microsoft-defender-antivirus.md)
-##### [Kullanıcıların, ilke ayarlarını yerel olarak Microsoft Defender Virüsten Koruma değiştirip değiştiremezseniz](configure-local-policy-overrides-microsoft-defender-antivirus.md)
-##### [Kullanıcıların bir kullanıcı arabirimini görebilir mi yoksa Microsoft Defender Virüsten Koruma mi olduğunu belirtme](prevent-end-user-interaction-microsoft-defender-antivirus.md)
+##### [Kullanıcıların ilke ayarlarını yerel olarak değiştirip Microsoft Defender Virüsten Koruma değiştiremezseniz](configure-local-policy-overrides-microsoft-defender-antivirus.md)
+##### [Kullanıcıların bir kullanıcı arabirimini görebilir mi yoksa Microsoft Defender Virüsten Koruma mi göreceğini belirtme](prevent-end-user-interaction-microsoft-defender-antivirus.md)
 
 #### [Dağıtım ve rapor Microsoft Defender Virüsten Koruma](deploy-manage-report-microsoft-defender-antivirus.md)
-##### [Diğer uygulamaları dağıtma ve Microsoft Defender Virüsten Koruma](deploy-microsoft-defender-antivirus.md)
+##### [Dağıtım ve etkinleştirme Microsoft Defender Virüsten Koruma](deploy-microsoft-defender-antivirus.md)
 ##### [Sanal masaüstü Microsoft Defender Virüsten Koruma (VDI) ortamında dağıtım kılavuzu](deployment-vdi-microsoft-defender-antivirus.md)
 ##### [Raporla ilgili Microsoft Defender Virüsten Koruma](report-monitor-microsoft-defender-antivirus.md)
 
 #### [Taramalar ve düzeltme](review-scan-results-microsoft-defender-antivirus.md)
 ##### [Taramalarda isteğe bağlı olarak Microsoft Defender Virüsten Koruma çalıştırma](run-scan-microsoft-defender-antivirus.md)
-##### [Hızlı taramanın sonuçlarını Microsoft Defender Çevrimdışı gözden geçirme](microsoft-defender-offline.md)
+##### [Hızlı taramanın sonuçlarını çalıştırma Microsoft Defender Çevrimdışı gözden geçirme](microsoft-defender-offline.md)
 ##### [Tarama Microsoft Defender Virüsten Koruma yapılandırma](configure-advanced-scan-types-microsoft-defender-antivirus.md)
 ##### [Karantinaya alınmış dosyaları yeni Microsoft Defender Virüsten Koruma](restore-quarantined-files-microsoft-defender-antivirus.md)
 
@@ -402,7 +409,7 @@
 ##### [Olayları araştırma](investigate-incidents.md)
 
 #### [Uyarılar sırası]()
-##### [Microsoft 365 Defender'de uyarılar sırası](alerts-queue-endpoint-detection-response.md)
+##### [E-postada uyarılar Microsoft 365 Defender](alerts-queue-endpoint-detection-response.md)
 ##### [Uyarılar kuyruğu görüntüleme ve düzenleme](alerts-queue.md)
 ##### [Uyarıları gözden geçirme](review-alerts.md)
 ##### [Uyarıları yönetme](manage-alerts.md)
@@ -413,11 +420,6 @@
 ##### [Etki alanını araştırma](investigate-domain.md)
 ###### [İleri gelen sunuculardan sonra oluşan bağlantı olaylarını araştırma](investigate-behind-proxy.md)
 ##### [Kullanıcı hesabını araştırma](investigate-user.md)
-
-#### [Cihazlar listesi]()
-##### [Cihazlar listesini görüntüleme ve düzenleme](machines-view-overview.md)
-##### [Cihaz zaman çizelgesi olay bayrakları](device-timeline-event-flag.md)
-##### [Cihaz grubunu ve etiketlerini yönetme](machine-tags.md)
 
 #### [Yanıt eylemleri gerçekleştir]()
 ##### [Cihazda yanıt eylemleri gerçekleştirin]()
@@ -549,6 +551,12 @@
 ####### [IP ile ilgili uyarıları al](get-ip-related-alerts.md)
 ####### [IP istatistiklerini al](get-ip-statistics.md)
 
+###### [Canlı yanıt kitaplığı]()
+####### [Canlı yanıt kitaplığı yöntemleri ve özellikleri](live-response-library-methods.md)
+####### [Liste kitaplığı dosyaları](list-library-files.md)
+####### [Upload yanıt kitaplığına ekleme](upload-library.md)
+####### [Kitaplıktan silme](delete-library.md)
+
 
 ###### [Makine]()
 ####### [Makine yöntemleri ve özellikleri](machine.md)
@@ -643,7 +651,7 @@
 ##### [SIEM araçlarını Uç Nokta için Microsoft Defender ile tümleştirin](configure-siem.md)
 ##### [SIEM aracı tümleştirme sorunlarını giderme](troubleshoot-siem.md)
 
-#### [API'& iş ortakları]()
+#### [API'& ortakları]()
 ##### [İş ortağı uygulamaları](partner-applications.md)
 ##### [Bağlı uygulamalar](connected-applications.md)
 ##### [API gezgini](api-explorer.md)
@@ -681,7 +689,7 @@
 ### [Web görünümüne genel Windows koruması]()
 #### [Windows tümleştirmesi](information-protection-in-windows-overview.md)
 
-### [Uç Nokta Güvenlik Merkezi için Microsoft Defender'Community erişme](community.md)
+### [Uç Nokta Güvenlik Merkezi için Microsoft Defender'Community Erişme](community.md)
 
 ### [Yararlı kaynaklar](helpful-resources.md)
 
@@ -696,9 +704,9 @@
 ### [İstemci Çözümleyicisi'ni kullanarak algılayıcı sistem durumu sorunlarını giderme]()
 #### [İstemci çözümleyicisi genel bakış](overview-client-analyzer.md)
 #### [İstemci çözümleyicisini indirme ve çalıştırma](download-client-analyzer.md)
-#### [Çözümleyicide istemci çözümleyicisini Windows](run-analyzer-windows.md)
+#### [İstemci çözümleyicisini çözümleyiciyi çalışma Windows](run-analyzer-windows.md)
 #### [macOS veya Linux'ta istemci çözümleyicisini çalıştırın](run-analyzer-macos-linux.md)
-#### [Windows'ta gelişmiş sorun giderme için veri Windows](data-collection-analyzer.md)
+#### [Windows'da gelişmiş sorun giderme için veri Windows](data-collection-analyzer.md)
 #### [Çözümleyici HTML raporunu anlama](analyzer-report.md)
 #### [İstemci çözümleyicisi aracı hakkında geri bildirim sağlama](analyzer-feedback.md)
 

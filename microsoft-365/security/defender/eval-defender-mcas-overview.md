@@ -1,5 +1,5 @@
 ---
-title: Bulut Uygulamaları için Microsoft Defender'ı Değerlendirmeye Genel Bakış
+title: Adım 5. Bulut Uygulamaları için Microsoft Defender'ı Değerlendirmeye Genel Bakış
 description: Test etmek için Microsoft 365 Defender test laboratuvarınızı veya pilot ortamınızı ayarlama adımları; kurumdaki cihazları, kimlikleri, verileri ve uygulamaları korumak üzere tasarlanmış güvenlik çözümünü deneyin.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -22,14 +22,14 @@ ms.collection:
 - m365solution-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: c517f863f54678de0d3559c5853472a5bb97c2b6
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: ca2c69ac244ee70ce5342f56182499430b05e821
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63014196"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63327959"
 ---
-# <a name="evaluate-microsoft-defender-for-cloud-apps"></a>Bulut Uygulamaları için Microsoft Defender'ı Değerlendirme
+# <a name="step-5-evaluate-microsoft-defender-for-cloud-apps"></a>Adım 5. Bulut Uygulamaları için Microsoft Defender'ı Değerlendirme
 
 **Aşağıdakiler için geçerlidir:**
 - Microsoft 365 Defender

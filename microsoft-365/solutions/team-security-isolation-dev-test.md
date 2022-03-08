@@ -14,14 +14,16 @@ ms.collection:
 - M365-security-compliance
 - Strat_O365_Enterprise
 - remotework
-ms.custom: admindeeplinkCOMPLIANCE
+ms.custom:
+- admindeeplinkCOMPLIANCE
+- admindeeplinkSPO
 description: Çalışanlarınızı her yerden ve zamanda uzaktan çalışmalarına olanak sağlayan güvenlik ve altyapıyı yapılandırabilirsiniz.
-ms.openlocfilehash: 602bec66eec26551ae6d98bafdb99466747d8fa9
-ms.sourcegitcommit: 22cae7ec541268d519d45518c32f22bf5811aec1
+ms.openlocfilehash: 8ea359f2c0de98ac35b90a379e5a60c4578e66cf
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "63027595"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323423"
 ---
 # <a name="configure-a-team-with-security-isolation-in-a-devtest-environment"></a>Geliştirme/test ortamında güvenlik yalıtlığı olan bir ekibi yapılandırma
 
@@ -177,15 +179,14 @@ Ardından, yeni etiketi şu adımlarla yayımlayın:
 
 Ardından, yeni etiketinizi Şirket Stratejisi ekibine uygulayın ve yanlışlıkla dosya ve klasör paylaşma riskini hedef kitleye göre daha geniş bir kitleye azaltmak için varsayılan paylaşım bağlantı türünü güncelleştirin.
 
-1. SharePoint [merkezini açın](https://admin.microsoft.com/sharepoint).
-1. **Siteler'in** altında Etkin **siteler'e tıklayın**.
-1. Şirket Stratejisi **sitesine** tıklayın.
-1. **İlkeler sekmesindeki** **Duyarlılık'ın altında** Düzenle'ye **tıklayın**.
-1. Şirket Stratejisi **etiketini seçin** ve Kaydet'e **tıklayın**.
-1. **İlkeler sekmesinde**, Dış **paylaşım'ın altında** Düzenle'ye **tıklayın**.
+1. Siteler'SharePoint Etkin **siteler'i seçin**<a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**.**</a>
+1. Şirket Stratejisi **sitesini** seçin.
+1. **İlkeler sekmesindeki** **Duyarlılık'ın altında** Düzenle'yi **seçin**.
+1. Şirket Stratejisi **etiketini seçin** ve sonra da Kaydet'i **seçin**.
+1. **İlkeler sekmesindeki** Dış **paylaşım'ın altında** Düzenle'yi **seçin**.
 1. Yalnızca **kuruluşta olan kişiler'i seçin**.
 1. Varsayılan **paylaşım bağlantı** türü'nin altında Kuruluş **düzeyi ayarıyla aynı onay kutusunu temizleyin** ve Varolan erişimi olan **kişiler'i seçin**.
-1. **Kaydet**'e tıklayın.
+1. **Kaydet**'i seçin.
 
 Ardından, Şirket Stratejisi ekibi için yalnızca sahipler için **site paylaşımını** yapılandırın.
 

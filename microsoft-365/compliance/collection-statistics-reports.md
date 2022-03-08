@@ -16,12 +16,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Taslak koleksiyonları ve koleksiyonlar için, Advanced eDiscovery'de gözden geçirme kümesi için kaydedilmiş olan istatistiklere ve raporlara erişmeyi ve raporları kullanmayı Advanced eDiscovery.
-ms.openlocfilehash: a520bd3f05e7729a1a36101d4be334d984b39739
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: 4b5cf37639d497d615a0772e084507018cb829cf
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015506"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63325159"
 ---
 # <a name="collection-statistics-and-reports-in-advanced-ediscovery"></a>Koleksiyon istatistikleri ve rapor Advanced eDiscovery
 
@@ -94,7 +94,7 @@ Koleksiyonu bir gözden geçirme kümesine işlerken, kabul edilen bağlantını
  
    Bir üst öğe birden çok alt öğe içerebilir. Örneğin, e-posta iletisi ekli bir dosya içeriyorsa veya bulut eki varsa, üst öğedir. Bu durumda, bulut ekin ekli dosyası veya hedef dosyası alt öğe olarak kabul edilir. Koleksiyonu işlerken, üst öğeler ve buna karşılık gelen tüm alt öğeler (ekli dosyalar ve bulut ekleri gibi) gözden geçirmeye tek tek öğeler veya dosyalar olarak ayarlanır.
 
-- **Alt öğeler.** Gözden geçirme kümesine eklenen alt öğe sayısı. Gözden geçirmeye yalnızca dosya ekleri ve bulut ekleri olan alt öğeler tek tek dosyalar olarak eklenir. E-posta imzaları ve resimler gibi diğer alt öğe türleri. üst öğeden ayıklanır ve alt öğeden herhangi bir metni ayıklamak için Optik Karakter Tanıma (OCR) tarafından işlenir. Bu tür alt öğelerden ayıklanan metin daha sonra, gözden geçirme kümesinde görüntüley eklensin ve üst öğeye eklenir. Alt öğeleri ayrı bir dosya olarak kümedeki gözden geçirme kümesine eklememenizi, Advanced eDiscovery gözden geçirme kümesinde yer alma olasılığı bulunan öğelerin sayısını sınır ekleyerek gözden geçirme işlemini kolaylaştırmanıza yardımcı olur.
+- **Alt öğeler.** Gözden geçirme kümesine eklenen alt öğe sayısı. Gözden geçirmeye yalnızca dosya ekleri ve bulut ekleri olan alt öğeler tek tek dosyalar olarak eklenir. E-posta imzaları ve resimler gibi diğer alt öğe türleri üst öğeden ayıklanır ve alt öğeden herhangi bir metni ayıklamak için Optik Karakter Tanıma (OCR) tarafından işlenir. Bu tür alt öğelerden ayıklanan metin daha sonra, gözden geçirme kümesinde görüntüley eklensin ve üst öğeye eklenir. Alt öğeleri ayrı bir dosya olarak kümedeki gözden geçirme kümesine eklememenizi, Advanced eDiscovery gözden geçirme kümesinde yer alma olasılığı bulunan öğelerin sayısını sınır ekleyerek gözden geçirme işlemini kolaylaştırmanıza yardımcı olur.
 
 - **Benzersiz öğeler**. Gözden geçirme kümesine eklenen benzersiz öğe sayısı. Benzersiz öğeler gözden geçirme kümesine benzersizdir. Gözden geçirme kümesinde daha önce hiç öğe yoktu, çünkü ilk koleksiyon yeni bir gözden geçirme kümesine ekli olduğunda tüm öğeler benzersizdir.
 

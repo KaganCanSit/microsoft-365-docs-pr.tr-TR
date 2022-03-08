@@ -25,16 +25,19 @@ search.appverid:
 - MET150
 ms.assetid: bd66c26c-73a4-45a8-8642-3ea4ee7cd89d
 description: Mobil cihazların güvenliğini sağlamak Microsoft 365 için Microsoft 365 ayarları Windows 10 öğrenin.
-ms.openlocfilehash: 4019fb5d76824dc33bb5947d1bd3b25072b39bbd
-ms.sourcegitcommit: 2ea2105d40b60a87fc9aa30f392a73a3a9db6d99
+ms.openlocfilehash: 26a9921d1c950990adcb4a28516ce2207fb3bcd1
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2021
-ms.locfileid: "63007226"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313783"
 ---
 # <a name="edit-or-create-device-protection-settings-for-windows-10-pcs"></a>Bilgisayarlarında cihaz koruma ayarlarını düzenleme Windows 10 oluşturma
 
 Bu makale diğer Microsoft 365 İş Ekstra.
+
+> [!NOTE]
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Bu teklif, cihazlar için ek güvenlik özellikleri sağlar. [İş için Defender hakkında daha fazla bilgi öğrenin](../../security/defender-business/mdb-overview.md).
 
 Kurulum sayfasında varsayılan güvenlik Windows ayarlarını değiştirdikten sonra, tüm kullanıcılara veya bir dizi kullanıcıya uygulanacak yeni ayarları ebilirsiniz. Ayrıca, oluşturduktan herhangi birini düzenleyebilirsiniz.
 
@@ -78,9 +81,13 @@ Daha fazla bilgi için bkz[. Koruma özellikleri nasıl Microsoft 365 Premium In
 |Cihazların saldırı alanını azaltan kuralları kullan  <br/> |Saldırı alanı azaltma özelliği açık olarak ayarlandığında zararlı yazılımlar tarafından cihazlara bulaşmak için tipik olarak kullanılan eylemleri ve uygulamaları engeller. Bu ayar yalnızca Windows Defender Virüsten Koruma yazılımı Açık olarak ayarlandığında kullanılabilir. Daha fazla bilgi edinmek için [Saldırı alanlarını azaltma](/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) bölümüne bakın.  <br/> |
 |Klasörleri fidye yazılımı gibi tehditlerden koruma  <br/> |Bu ayar, şirket verilerini fidye yazılımı gibi şüpheli veya zararlı uygulamalar tarafından gerçekleştirilen değişikliklere karşı korumak için denetimli klasör erişimini kullanır. Bu türdeki uygulamaların korumalı klasörlerde değişiklik yapması engellenir. Bu ayar yalnızca Windows Defender Virüsten Koruma yazılımı Açık olarak ayarlandığında kullanılabilir. Daha [fazla bilgi edinmek için bkz. Denetimli klasör erişimiyle](/mem/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_CFA) klasörleri koruma.  <br/> |
 |İnternetteki olası zararlı içeriklerin ağa erişimini engelle  <br/> |Kimlik avı dolandırıcılığı, açıkları kullanan yazılımlar veya diğer zararlı içerikleri barındırabilecek, saygınlığı düşük İnternet konumlarına yönelik giden kullanıcı bağlantılarını engellemek için bu ayarı kullanın. Bu ayarın kullanılabilir durumda Windows Defender Virüsten Koruma olarak **ayarlanmışsa kullanılabilir**. Daha fazla bilgi için bkz [. Ağın koruma](/windows/security/threat-protection/windows-defender-antivirus/configure-real-time-protection-windows-defender-antivirus).  <br/> |
-|BitLocker ile PC'lerdeki dosyaların ve klasörlerin yetkisiz erişime karşı korunmasına yardımcı ol  <br/> |BitLocker bilgisayar sabit sürücülerini şifreleyerek verileri korur ve bilgisayar kaybolduğunda veya çalındığında verilerin açığa çıkma durumuna karşı koruma sağlar. Daha fazla bilgi için bkz. [Bitlocker SSS](/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions).  <br/> |
+|BitLocker ile PC'lerdeki dosyaların ve klasörlerin yetkisiz erişime karşı korunmasına yardımcı ol  <br/> |BitLocker bilgisayar sabit sürücülerini şifreleerek verileri korur ve bilgisayar kaybolursa veya çalınırsa verilerin açık kalma durumlarına karşı koruma sağlar. Daha fazla bilgi için bkz. [BitLocker SSS](/windows/security/information-protection/BitLocker/BitLocker-frequently-asked-questions).  <br/> |
 |Kullanıcıların Microsoft Store'ndan uygulama indirmesine izin ver  <br/> |Kullanıcıların Microsoft Store'ndan uygulama indirmesine ve yüklemesine izin verir. Uygulamalar, oyunlardan üretkenlik araçlarına kadar her şeyi içerebilir, dolayısıyla bu ayar **Açık** durumdadır ancak ek güvenlik için kapatabilirsiniz.  <br/> |
 |Kullanıcıların Cortana'ya erişmesine izin ver  <br/> |Cortana çok yararlı olabilir! Cortana için ayarları açmak veya kapatmak, yol tarifleri vermek ve randevular için zamanında zamanında hazır olduğundan emin olmak için bu ayarı varsayılan olarak **Açık** durumda tutabilirsiniz.  <br/> |
 |Kullanıcıların Microsoft'tan Windows ipucu ve reklam almasına izin ver  <br/> |Windows ipuçları kullanışlı olabilir ve yeni özellikler kullanıma sunulduğunda kullanıcıların yönlendirilmesine yardım edebilir.  <br/> |
 |Windows 10 cihazları otomatik olarak güncelleştir  <br/> |Windows 10 cihazların son güncelleştirmeleri otomatik olarak aldığından emin olur.  <br/> |
 |Cihaz şu kadar süre boşta kaldığında ekranı kapat  <br/> |Kullanıcı cihaz başında olmadığında şirket verilerinin korunmasını sağlar. Kullanıcı bir kafe gibi herkese açık bir konumda çalışıyorken kısa süreliğine uzaklaşabilir veya başka bir şeyle ilgilenebilir ve bu sırada diğer kişiler cihazdaki bilgilere bakabilir. Bu ayar sayesinde, ekran kapanmadan önce kullanıcının ne kadar süre boşta olabileceğini denetleyebilirsiniz.  <br/> |
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](../security-and-compliance/secure-your-business-data.md)

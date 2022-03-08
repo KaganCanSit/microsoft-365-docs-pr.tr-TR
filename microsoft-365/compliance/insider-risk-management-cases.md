@@ -13,12 +13,12 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: d37a47a3cb46214d098623edbf5f0b9bea4b242a
-ms.sourcegitcommit: efb333ce0772265da91632110acba39acfbe0bde
+ms.openlocfilehash: ab0eb6c9f7ecfbc51de4857d708f1fa34bd3f515
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "62997102"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313207"
 ---
 # <a name="insider-risk-management-cases"></a>Insider risk yönetimi vakaları
 
@@ -119,36 +119,13 @@ Uyarıları aşağıdakiler gibi çeşitli özniteliklere göre filtrelemek içi
 
 ### <a name="user-activity"></a>Kullanıcı etkinliği
 
-Kullanıcı **etkinliği sekmesi** , insider risk yönetimi çözümünde şirket içi risk çözümlemesi ve soruşturma için en güçlü araçlardan biridir. Bu sekme, tüm uyarıların geçmiş zaman çizelgesi, uyarı ayrıntıları, kullanıcının olayda geçerli risk puanı, risk olaylarının dizisi ve durumdaki riskleri etkili bir şekilde içeren denetimler de içinde olmak üzere olaylarda hızlı gözden geçirmeyi sağlayacak şekilde yapılandırılmıştır.
-
-![Insider risk yönetimi kullanıcı etkinliği.](../media/insider-risk-user-activities.png)
-
-1. **Saat filtreleri**: Varsayılan olarak, olayda onaylanmış son altı uyarı, Kullanıcı etkinliği grafiğinde görüntülenir. Kabarcık grafiğinde *6* Ay, *3* Ay veya *1 Ay sekmelerini* seçerek grafik görünümünü kolayca filtrelayabilirsiniz.
-2. **Risk uyarısı etkinliği ve ayrıntıları**: Risk etkinlikleri, Kullanıcı etkinliği grafiğinde görsel olarak renkli kabarcıklar olarak görüntülenir. Kabarcıklar farklı risk kategorileri için oluşturulur ve kabarcık boyutu kategori için risk etkinliklerinin sayısına orantılıdır. Her risk etkinliğinin ayrıntılarını görüntülemek için bir kabarcık seçin. Ayrıntılar şunlardır:
-    - **Risk** etkinliğinin tarihi.
-    - **Risk etkinliği kategorisi**. Örneğin, *kuruluşun dışından gönderilen ekleri içeren e-posta* veya *SharePoint Online'dan indirilen e-SharePoint.*
-    - **Uyarının** risk puanı. Bu puan, uyarı riski önem düzeyine göre sayısal puandır.
-    - Uyarıyla ilişkili olayların sayısı. Risk etkinliğiyle ilişkili her dosya veya e-postanın bağlantıları da kullanılabilir.
-3. **Risk sırası (önizleme)**: Riskli etkinliklerin kronolojik sırası, risk araştırmanın ve bu ilişkili etkinliklerin belirlenmesi, kurum açısından bir bütün olarak riski değerlendirmenin önemli bir kısmıdır. İlgili uyarı etkinlikleri, bu etkinliklerin daha büyük bir risk alanıyla ilişkilendiril vurgulu olduğu bağlantı çizgileri ile görüntülenir. Etkinliklerin bu görünümü, yalıtılmış veya tek başına etkinlikler olarak görüntülenilebilecek risk etkinlikleri için kelime anlamıyla "noktaları birbirine bağlama" yardımcı olabilir. İlişkili tüm risk etkinliklerinin ayrıntılarını görüntülemek için sırayla herhangi bir kabarcık seçin. Ayrıntılar şunlardır:
-
-    - **Sıranın** adı.
-    - **Sıranın** **tarih veya** tarih aralığı.
-    - **Dizi için** risk puanı. Bu puan, dizide ilgili her etkinlik için birleştirilmiş uyarı risk önem düzeyi düzeylerinin sırasının sayısal puanıdır.
-    - **Dizide yer alan her uyarıyla ilişkilendirilmiş olay sayısı**. Risk etkinliklerinin her biri ile ilişkilendirilmiş her dosya veya e-postanın bağlantıları da mevcuttur.
-    - **Etkinlikleri sırayla gösterme**. Sırayı kabarcık grafiğinde vurgu çizgisi olarak görüntüler ve ilgili tüm uyarıları sırayla görüntülemek için uyarı ayrıntılarını genişleter.
-
-4. **Risk etkinliği gösterge**: Kullanıcı etkinliği grafiğinin alt kısmında, renk kodlu bir gösterge her uyarı için risk kategorisini hızla belirlemenize yardımcı olur.
-5. **Risk etkinliği kronolojisi**: Vakayla ilişkilendirilmiş tüm risk uyarılarının tam kronolojik listesi, buna karşılık gelen uyarı balonunda bulunan tüm ayrıntılar da dahil olmak üzere listelenir.
-6. **Olay eylemleri**: Vakayı çözmeye yönelik seçenekler, olay eylemi araç çubuğundadır. Bir durumu çözebilir, kullanıcıya e-posta bildirimi gönderebilir veya veri veya kullanıcı soruşturması için durumu en iyi şekilde ifade edin.
+Kullanıcı **etkinliği sekmesi** , risk analistlerinin ve tahminlerin etkinlik ayrıntılarını gözden geçirmelerine ve risk uyarıları ve durumlarla ilişkilendirilmiş tüm etkinliklerin görsel bir temsilini kullanmalarına olanak sağlar. Örneğin, uyarı değerlendirme sürecinin bir parçası olarak, analistlerin daha ayrıntılı bilgi için durumla ilişkilendirilmiş tüm risk etkinliklerini gözden geçirmeleri gerekir. Bazı durumlarda risk ayrıntıları, davayla ilişkili etkinliklerin genel kapsamını anlamak için kullanıcı etkinliği ayrıntılarını ve kabarcık grafiği gözden geçirebilir. Kullanıcı etkinliği grafiği hakkında daha fazla bilgi için [Insider risk yönetimi etkinlikleri makalesine](insider-risk-management-activities.md#user-activity) bakın.
 
 ### <a name="activity-explorer-preview"></a>Etkinlik gezgini (önizleme)
 
-> [!IMPORTANT]
-> Etkinlik gezgini sekmesi, bu özellik kurumda kullanılabilir olduktan sonra olayları tetikleyen kullanıcılar için olay yönetimi alanında yer almaktadır.
-
 Etkinlik **gezgini sekmesi,** risk analistlerine ve tahminlere, risk uyarıları ile ilişkili etkinlik ayrıntılarını gözden geçirmelerine olanak sağlar. Örneğin, olay yönetimi eylemlerinin bir parçası olarak, analistlerin ve analistlerin daha ayrıntılı bilgi için olayla ilişkili tüm risk etkinliklerini gözden geçirmeleri gerekir. Etkinlik **gezginiyle**, gözden geçirenler algılanan riskli etkinliğin zaman çizelgesini hızla gözden geçirebilirsiniz ve uyarılarla ilişkilendirilmiş tüm risk etkinliklerini tanımlayabilir ve filtreleyebilirsiniz.
 
-Etkinlik gezgini hakkında daha fazla bilgi için [Insider risk yönetimi uyarıları makalesine](insider-risk-management-activities.md#activity-explorer) bakın.
+Etkinlik gezgini hakkında daha fazla bilgi için [Insider risk yönetimi etkinlikleri makalesine](insider-risk-management-activities.md#activity-explorer) bakın.
 
 ### <a name="content-explorer"></a>İçerik gezgini
 
@@ -160,7 +137,7 @@ Etkinlik gezgini hakkında daha fazla bilgi için [Insider risk yönetimi uyarı
 
 ### <a name="case-notes"></a>Olay notları
 
-**Olayda Örnek Olay** notları sekmesi, risk analistleri ve tahminlerinin olayla ilgili görüşlerini, geri bildirimleri ve içgörüleri paylaştığı durumtur. Notlar, bir vakaya kalıcı eklemedir ve not kaydedildikten sonra düzenlenemez veya silinemez. Uyarıdan olay oluşturulduğunda, Uyarıyı onayla ve **Insider risk** durumu oluştur iletişim kutusuna girilen açıklamalar, otomatik olarak olay notu olarak eklenir.
+**Olayda Örnek Olay** notları sekmesi, risk analistleri ve tahminlerinin olayla ilgili görüşlerini, geri bildirimleri ve içgörüleri paylaştığı durumtur. Notlar, bir vakaya kalıcı eklemedir; not kaydedildikten sonra düzenlenemez veya silinemez. Uyarıdan olay oluşturulduğunda, Uyarıyı onayla ve **Insider risk** durumu oluştur iletişim kutusuna girilen açıklamalar, otomatik olarak olay notu olarak eklenir.
 
 Büyük/küçük harf notları panosu, notu oluşturan kullanıcının notları ve not kaydedildiktan sonra geçen zamanı görüntüler. Büyük/küçük harf notu metin alanında belirli bir anahtar sözcüğü aramak için,  büyük/küçük harf panosunda Ara düğmesini kullanın ve belirli bir anahtar sözcüğü girin.
 

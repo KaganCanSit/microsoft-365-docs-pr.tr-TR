@@ -2,8 +2,8 @@
 title: Microsoft Uyumluluk Yöneticisi'nde değerlendirme şablonlarını genişletme
 f1.keywords:
 - NOCSH
-ms.author: v-jgriffee
-author: jmgriffee
+ms.author: chvukosw
+author: chvukosw
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Uyumluluk Yöneticisi'nde değerlendirme şablonlarını genişleterek denetim ekleme ve değiştirme hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: d47488f578436b1ea8bd865855d681d8778d07bd
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 4c9e4543a046e09733711500ae6162a547e3602b
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "62989989"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316219"
 ---
 # <a name="extend-assessment-templates-in-microsoft-compliance-manager"></a>Microsoft Uyumluluk Yöneticisi'nde değerlendirme şablonlarını genişletme
 

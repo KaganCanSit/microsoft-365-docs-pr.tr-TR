@@ -13,12 +13,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: article
 description: Masaüstü uygulamalarda etiketli ve şifrelenmiş belgeler için masaüstü uygulamalarıyla birlikte yazma ve Otomatik Kaydetmeyi sağlayan ayarı SharePoint OneDrive.
-ms.openlocfilehash: 8be6fc228a623f3a1f76efdf56354ba30beb9650
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 252d32e0f301bf332bf8143082ec86be2f1072ea
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63019445"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320053"
 ---
 # <a name="enable-co-authoring-for-files-encrypted-with-sensitivity-labels"></a>Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazma özelliği etkinleştirme
 
@@ -41,11 +41,11 @@ Sürüm duyurularını okumak için, Şifrelenmiş belgeler artık genel kullan�
 
 Office masaüstü uygulamaları için birlikte yazma desteği sağlayan ayarı etkinleştirmeden önce, bu eylemin, Office dosyalarına kaydedilen ve bu dosyalardan okunan etiket meta verisinde değişiklikler yapanı Office önemlidir.
 
-Etiket meta verileri kiracınızı tanımlayan ve duyarlılık etiketinin uygulandığı bilgileri içerir. Bu ayarın 2013'e göre meta veri biçimi ve konumu, Word, Excel ve dosya PowerPoint olur. Şifreli dosyalar veya e-postalar için herhangi bir işlem yapmasanız; Şifrelenmiş dosyaların meta veri değişikliği geriye doğru uyumludur ve e-postalarda hiçbir değişiklik yoktur. Öte yandan, şifrelenmiş dosyaların otomatik olarak yükseltilse de geriye doğru uyumlu olmayan meta veri değişikliklerini de biliyor olmak gerekir.
+Etiket meta verileri kiracınızı tanımlayan ve duyarlılık etiketinin uygulandığı bilgileri içerir. Bu ayarın 2013'e göre meta veri biçimi ve konumu, Word, Excel ve dosya PowerPoint olur. Şifrelenmiş dosyaların veya e-postaların meta verileri geriye doğru uyumlu olduğundan ve e-postalarda hiçbir değişiklik olmayacağı için, şifrelenmiş dosya veya e-postalar için herhangi bir işlemde işlem yapmak zorunda değilsiniz. Öte yandan, şifrelenmiş dosyaların otomatik olarak yükseltilse de geriye doğru uyumlu olmayan meta veri değişikliklerini de biliyor olmak gerekir.
 
 Bu değişiklik hem yeni etiketli dosyaları hem de önceden etiketlenmiş dosyaları etkiler. Birlikte yazma ayarını destekleyen uygulamaları ve hizmetleri kullanıyorsanız:
 - Yeni etiketlenen dosyalar için, meta verileri etiketlemek için yalnızca yeni biçim ve konum kullanılır.
-- Zaten etiketlenmiş olan dosyalar için, dosya bir sonraki açılabilir ve kaydedkisinde, dosyada eski biçimde ve konumda meta veriler varsa, yeni biçim ve konuma kopyalanır.
+- Zaten etiketlenmiş olan dosyalar için, dosya bir sonraki açılışta ve kaydedilerinde, dosyada eski biçimde ve konumda meta veriler varsa, bu bilgiler yeni biçim ve konuma kopyalanır.
 
 Bu meta veri değişikliği hakkında aşağıdaki kaynaklardan daha fazla bilgi okuyabilirsiniz:
 
@@ -81,8 +81,8 @@ Bu özelliği açmadan önce aşağıdaki önkoşulları anlıyoruz.
 - Kurumlar için Microsoft 365 Uygulamaları:
     - **Windows**: Güncel Kanal'dan En Az 2107 veya Aylık Kanaldan Enterprise.
     - **macOS**: En az sürüm 16.51
-    - **iOS**: Henüz desteklenmiyor
-    - **Android**: Henüz desteklenmiyor
+    - **iOS**: Minimum 2.58 [sürümüne](#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) sahip olarak kabul etmek için şu anda önizlemede seçeneği
+    - **Android**: Minimum 16.0.14931 sürümüyle şimdi önizlemede görüntüye sahip oluruz [](#opt-in-to-the-preview-of-co-authoring-for-ios-and-android)
 
 - Kiracınıza gelen tüm uygulamalar, hizmetler ve işlem araçları yeni etiket meta [verilerini desteklemeli](#metadata-changes-for-sensitivity-labels). Aşağıdaki sürümlerden herhangi birini kullanıyorsanız, gerekli en düşük sürümleri kontrol edin:
     
@@ -107,6 +107,12 @@ Microsoft 365 özellik açılırken hizmetler yeni etiket meta verilerini otomat
 - [Duyarlılık etiketlerini koşullar olarak kullanan DLP ilkeleri](dlp-sensitivity-label-as-condition.md)
 - [Duyarlılık etiketleri uygulamak üzere yapılandırılmış Bulut Uygulamaları için Microsoft Defender](/cloud-app-security/best-practices#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)
 
+### <a name="opt-in-to-the-preview-of-co-authoring-for-ios-and-android"></a>iOS ve Android için birlikte yazma önizlemesi'ne katılma
+
+iOS ve Android için birlikte yazma önizlemesini denemek için önceki bölümde belirtilen minimum sürümlere sahip olmak ve kiracının önizlemeye eklenmesini talep etmek [gerekir: Mobil](https://ncv.microsoft.com/5Oob3oDj1O) cihazlarda duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazma izni
+
+Daha fazla bilgi için aşağıdaki blog gönderisi duyurularına bakın: Mobil cihazlarda şifrelenmiş Microsoft Bilgi Koruması birlikte yazma özelliği artık [genel önizlemede](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/co-authoring-on-microsoft-information-protection-encrypted/ba-p/3081369)
+
 ## <a name="limitations"></a>Sınırlamalar
 
 Duyarlılık etiketleriyle şifrelenmiş dosyalar için kiracı ayarını etkinleştirmeden önce, bu özelliğin aşağıdaki sınırlamalarını anlamış olun.
@@ -115,14 +121,14 @@ Duyarlılık etiketleriyle şifrelenmiş dosyalar için kiracı ayarını etkinl
     
     Excel'a özgü: Şifreleme uygulamaz bir duyarlılık etiketi için meta veriler, birisi dosyayı düzenler ve kaydederse Excel'in duyarlılık etiketleri için meta veri değişikliklerini desteklememiş bir sürümü kullanarak dosyadan silinebilir.
 
-- Office Android ve iOS için uygulama uygulamaları şu anda desteklenmiyor.
+- iOS Office Android için desteklenen uygulamalar şu anda [önizlemededir](https://office.com/insider).
 
 - Birlikte yazma ve Otomatik Kaydetme desteklenmemektedir ve şifreleme için aşağıdaki yapılandırmalardan herhangi birini kullanan etiketli ve Office belgelerde [kullanılamaz](encryption-sensitivity-labels.md#configure-encryption-settings):
     - **Word,** PowerPoint ve Excel'da etiket ve onay kutusunu uygulayan kullanıcıların izin atamasına izin verin. PowerPoint onay **kutusunun seçili olduğunu** belirtin. Bu yapılandırma bazen "kullanıcı tanımlı izinler" olarak da adlandırılır.
     - **kullanıcının içeriğe erişiminin süresi hiçbir** zaman'dan farklı bir değere **ayarlanır**.
     - **Çift Anahtar Şifrelemesi** seçilidir.
     
-    Bu şifreleme yapılandırmalarının herhangi birini içeren etiketler için, etiketler Office görüntülenir. Bununla birlikte, kullanıcılar bu etiketleri seçer ve belgeyi başka kimse düzenlemezken, birlikte yazma ve Otomatik Kaydetme özelliğinin kullanılamaz olduğu uyarısıyla uyarıldı. Başka biri belgeyi düzenliyorsa, kullanıcılar etiketlerin uygulana olmadığını haber içeren bir ileti görebilir.
+    Bu şifreleme yapılandırmalarının herhangi birini içeren etiketler için, etiketler Office görüntülenir. Bununla birlikte, kullanıcılar bu etiketleri seçer ve belgeyi başka kimse düzenlemezken birlikte yazma ve Otomatik Kaydetme özelliğinin kullanılamaz olduğu uyarısıyla uyarıldı. Başka biri belgeyi düzenliyorsa, kullanıcılar etiketlerin uygulana olmadığını haber içeren bir ileti görebilir.
 
 - Azure Information Protection birleşik etiketleme istemcisini kullanıyorsanız: Daha fazla gereksinimler veya sınırlamalar için bu etiket istemcisinin [belgelerini inceleyin](/azure/information-protection/known-issues#known-issues-for-co-authoring). 
     > [!NOTE]
@@ -133,7 +139,7 @@ Duyarlılık etiketleriyle şifrelenmiş dosyalar için kiracı ayarını etkinl
 > [!CAUTION]
 > Bu ayarın açması tek yolli bir eylemdir. Bunu yalnızca bu sayfada belgelenmiş meta veri değişikliklerini, önkoşulları, sınırlamaları ve bilinen sorunları okuyun ve anladıktan sonra etkinleştirin.
 
-Önizleme süresi boyunca bu ayarı zaten etkinleştirirseniz başka işlem gerekmez ve bu yordamı atlayabilirsiniz.
+Önizleme süresi boyunca bu ayarı zaten etkinleştirirseniz, başka işlem gerekmez ve bu yordamı atlayabilirsiniz.
 
 1. Kiracınız için [genel Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) olarak kiracıda oturum açma.
 
@@ -156,7 +162,7 @@ Kiracınız için duyarlılık etiketleri olan dosyalar için birlikte yazma öz
 
 ![Duyarlılık etiketleri için birlikte yazma seçeneğinin açık olduğunu gösterir.](../media/co-authoring-tenant-option-set-for-sensitivity-labels.png)
 
-Bu ayar açıkken ekran görüntüsünde gördüğünüz gibi, [Microsoft](../admin/get-help-support.md) Desteği'ne başvurarak bu ayarı kapatmak için istekte bulundurabilirsiniz. Bu istek birkaç gün kadar zaman al götürseniz de, kiracınız için genel yönetici olduğunu kanıtlamanız gerekir. Her zamanki destek ücretlerini uygulayabilirsiniz. 
+Bu ayar açıkken ekran görüntüsünde gördüğünüz gibi, [Microsoft](../admin/get-help-support.md) Desteği'ne başvurarak bu ayarı kapatmak için istekte bulundurabilirsiniz. Bu istek birkaç gün kadar zaman alsın ve kiracınız için genel yönetici olduğunu kanıtlamanız gerekir. Her zamanki destek ücretlerini uygulayabilirsiniz. 
 
 Bir destek mühendisi kiracınız için bu ayarı devre dışı bırakırsa:
 

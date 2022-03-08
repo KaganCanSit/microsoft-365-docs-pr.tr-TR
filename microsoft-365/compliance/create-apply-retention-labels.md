@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bekletme etiketlerini yayımlama yönergeleri, böylece ihtiyacınız olan etiketleri korumak ve sahip olmadığınız şekilde silmek için bunları uygulamalara uygulayabilirsiniz.
-ms.openlocfilehash: 8a190020ce79431471b446c53b584c033c44e13a
-ms.sourcegitcommit: e3bff611439354e6339bb666a88682078f32ec13
+ms.openlocfilehash: 17a49e2cdeffde5ed3dff91c3dac64e1ddf333ed
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014350"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63319441"
 ---
 # <a name="publish-retention-labels-and-apply-them-in-apps"></a>Bekletme etiketlerini yayımlama ve uygulamalarda uygulama
 
@@ -90,15 +90,23 @@ Bekletme etiketlerini Exchange yayımlarsanız, bu bekletme etiketlerinin kullan
 
 ![Yayımlanan etiketlerin ne zaman etkili olduğunu gösterir.](../media/retention-labels-published-timings.png)
 
-Etiketler yedi gün sonra görünmezse, uyumluluk merkezinde Etiket ilkeleri sayfasından  etiket ilkesi durumunu kontrol edin. Kapalı (Hata **)** durumunu ve konumlara ilişkin ayrıntılarda ilkenin dağıtılması beklenenden uzun (SharePoint için) veya ilkeyi yeniden dağıtmayı (OneDrive için) denemek için bir PowerShell komutu olan [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) komutunu çalıştırmayı deneyin. İlke dağıtımını yeniden denemek için:
+Etiketler yedi gün sonra görünmezse, uyumluluk merkezinde Etiket ilkeleri sayfasından  etiket ilkesi durumunu kontrol edin. Durumu (Hata **)** ekli olarak ve konumlarla ilgili ayrıntılarda ilkenin dağıtılmasının beklenenden uzun zaman alıyor iletisini görüyorsanız veya ilkeyi yeniden dağıtmayı denemek için, ilke dağıtımını yeniden denemek için [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) veya [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell komutunu çalıştırmayı deneyin:
 
-1. [Bağlan ve Uyumluluk & PowerShell'e](/powershell/exchange/connect-to-scc-powershell)
+1. [Bağlan ve Uyumluluk & PowerShell'e.](/powershell/exchange/connect-to-scc-powershell)
 
-2. Aşağıdaki komutu çalıştırın:
+2. Aşağıdaki komutlardan birini çalıştırın:
     
-    ``` PowerShell
-    Set-RetentionCompliancePolicy -Identity <policy name> -RetryDistribution
-   ```
+    - Özel kanal iletilerinin Teams **ilke konumları için**, **Yammer iletilerini ve topluluk** **Yammer mesajlarını iletin**:
+    
+        ```PowerShell
+        Set-AppRetentionCompliancePolicy -Identity <policy name> -RetryDistribution
+        ```
+    
+    - E-posta gönderme, site Exchange **, kanal** **SharePoint gibi** diğer tüm **ilke Teams için**:
+    
+        ```PowerShell
+        Set-RetentionCompliancePolicy -Identity <policy name> -RetryDistribution
+        ```
 
 ### <a name="how-to-check-on-the-status-of-retention-labels-published-to-exchange"></a>Exchange'de yayımlanan bekletme etiketlerinin durumu nasıl Exchange
 

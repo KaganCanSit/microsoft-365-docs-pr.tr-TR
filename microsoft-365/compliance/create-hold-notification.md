@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: ''
 description: Yasal tutma bildirimlerini göndermek, Advanced eDiscovery ve izlemek için İletişim aracını bir olayda kullanın.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 3d4f8529486a4e17a1c21cc861b8d3694e6486c7
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 5c0bda35ffe2547e1c30b4bbf0a6c7d0d0563b7b
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983509"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315671"
 ---
 # <a name="create-a-legal-hold-notice"></a>Yasal tutma bildirimi oluşturma
 
@@ -36,33 +36,31 @@ Bu makalede, bildirim iş akışında tutma adımları ana hatlarıyla açıklan
 
 İlk adım, yasal tutma bildirimlerini veya diğer koruyucu iletişimleri için uygun ayrıntıları belirtmektir.
 
-![Ad İletişim Sayfası.](../media/NameCommunication.PNG)
+![Ad İletişimi sayfası.](../media/NameCommunication.PNG)
 
 1. Gelişmiş Microsoft 365 uyumluluk merkezi, **eBulma > Gelişmiş'e** gidip kurum durumdaki vakaların listesini görüntüleniyor.
 
 2. Bir vaka seçin, İletişim **sekmesine tıklayın** ve sonra da Yeni **iletişim'e tıklayın**.
 
-3. Ad **iletişim sayfasında** aşağıdaki (gerekli) iletişim ayrıntılarını belirtin.
+3. Ad **iletişim sayfasında** aşağıdaki iletişim ayarlarını belirtin.
 
     - **Ad**: Bu, iletişimin adıdır.
 
-    - **Açılan listede olay** üyelerinin listesi görüntülenir. Vakaya yeni üye ekleme hakkında daha fazla bilgi için bkz. Olay [Advanced eDiscovery oluşturma](create-and-manage-advanced-ediscoveryv2-case.md#create-a-case). Özel kişilere gönderilen her bildirim, belirtilen sorumlu kişi adına gönderilir.
+    - **Çalışan:** Açılan listede, kuruluşta iletişim için yardımcı olacak kişi olarak seçilecek kullanıcılar görüntülenir. Özel kişi adına gönderilen her iletişim, seçtiğiniz sorumlu kişi adına gönderilir. Açılan liste kullanıcıların listesi, davanın üyelerinden ve kuruluş genelindeki çalışanlardan oluşur. Bu teslim görevlileri eBulma Yöneticisi tarafından eklenir ve Advanced eDiscovery her durumda kullanılabilir. Daha fazla bilgi için bkz [. Görevlileri yönetme](advanced-ediscovery-issuing-officers.md).
 
-> [!NOTE]
-> Bu açılan açılan listesinde, bunu alan görevlisinin etkin bir posta kutusu olması gerekir 
-
+    - **İletişim şablonunu seçin**: Açılan listede, iletişim kitaplığında yer alan şablonlar, iletişim Advanced eDiscovery görüntülenir. Bir şablon seçmeniz, portal içeriğini oluşturmakta olduğunu bildirimin metni  için bir başlangıç noktası olarak tanımlansın'da görüntülenir. Bir şablon seçerek, bu bildirimi sıfırdan kendiniz oluşturmanız gerekir. İletişim şablonları hakkında daha fazla bilgi için bkz. [Özel iletişim şablonlarını yönetme](advanced-ediscovery-communications-library.md).
 
 4. **İleri**'ye tıklayın.
 
 ## <a name="step-2-define-the-portal-content"></a>2. Adım: Portal içeriğini tanımlama
 
-Ardından, tutma bildirimini oluşturabilir ve içeriğini  eklersiniz. İletişim **oluştur sihirbazının Portal** **içeriğini tanımla sayfasında** , tutma bildiriminin içeriğini belirtin. Bu içerik, Otomatik olarak Verme, Yeniden Sorun, Anımsatıcı ve İlerlama bildirimlerini ekler. Ayrıca, bu içerik özel uygulamanın Uyumluluk Portalı'nda görünür.
+Ardından, tutma bildirimini oluşturabilir ve içeriğini  eklersiniz. İletişim **oluştur sihirbazının Portal** **içeriğini tanımla sayfasında** , tutma bildiriminin içeriğini belirtin. Bu içerik, Otomatik olarak Verme, Yeniden Sorun, Anımsatıcı ve İlerlama bildirimlerini ekler. Ayrıca, bu içerik özel uygulamanın Uyumluluk Portalı'nda görünür. İletişim kitaplığından bir şablon seçtiysiniz, bu şablon görüntülenir ve oluşturmakta olduğunuz bildirim için bir başlangıç noktası sağlar.
 
-![Portal İçerik Sayfası.](../media/PortalContent.PNG)
+![Portal İçeriği sayfası.](../media/PortalContent.PNG)
 
 Portal içeriğini oluşturmak için:
 
-1. Portal içeriğine yönelik metin kutusuna basılı tutma bildiriminizi yazın (veya başka bir belgeden kesip yapıştırın).
+1. Portal içeriğine yönelik metin kutusuna basılı tutma bildiriminizi yazın (veya başka bir belgeden kesip yapıştırın). Önceki sihirbaz sayfasında bir iletişim şablonu seçtiysiniz, şablon görüntülenir. Şablon içeriğini gereken şekilde düzenleyebilirsiniz.
 
 2. Bildirimi özelleştirmek ve Custo bir Uyumluluk Portalı'nın paylaşımı için bildiriminize birleştirme değişkenleri  eklersiniz.
 
@@ -95,7 +93,7 @@ Bir verme bildirimi oluşturmak için:
 
 ### <a name="re-issuance-notification"></a>Re-Issuance bildirimi
 
-Durum ilerledikçe, daha önce belirtildiği gibi ek veya az verinin korunması için koruyucular gerekebilir. Portal içeriğini güncelleştirdikten sonra yeniden verme bildirimi gönderilir ve yasal yükümlülüklerinde yapılan değişiklikler konusunda koruyucuları uyararak bu konuda uyarabilirsiniz.
+Durum ilerledikçe, daha önce belirtildiği gibi ek veya az verinin korunması için koruyucular gerekebilir. Portal içeriğini güncelleştirdikten sonra, yeniden verme bildirimi gönderilir ve yasal yükümlülüklerinde yapılan değişiklikler konusunda koruyucuları uyararak bu konuda uyarabilirsiniz.
 
 Yeniden verme bildirimi oluşturmak için:
 
@@ -114,7 +112,7 @@ Yeniden verme bildirimi oluşturmak için:
 
 ### <a name="release-notification"></a>Sürüm bildirimi
 
-Bir sorun çözüldükten sonra veya custo custo custo bir vakadan çıkarabilirsiniz. Custo custo her daha önce bir tutma bildirimi verildiyse, sürüm bildirimi koruyucuları yükümlülüklerinden çıkarıldıklarına karşı uyarı vermek için kullanılabilir.
+Bir sorun çözüldükten sonra veya custo custo custo bir vakadan çıkarabilirsiniz. Custo custo her zaman bir tutma bildirimi verildiyse, sürüm bildirimi koruyucuları yükümlülüklerinden çıkarıldıklarına karşı uyarı vermek için kullanılabilir.
 
 Sürüm bildirimi oluşturmak için:
 
@@ -132,7 +130,7 @@ Sürüm bildirimi oluşturmak için:
 
 İsteğe bağlı olarak, otomatik anımsatıcı ve yükseltme bildirimleri oluşturarak ve zamanlayarak yanıtsız koruyucularla takip süreci için iş akışını basitleştirebilirsiniz.
 
-![Anımsatıcı/İlerlama Sayfası.](../media/ReminderEscalations.PNG)
+![Anımsatıcı/İlerlama sayfası.](../media/ReminderEscalations.PNG)
 
 ### <a name="reminders"></a>Anımsatıcılar
 
@@ -176,9 +174,9 @@ Yükseltmeleri zamanmak için:
 
 ## <a name="step-5-assign-custodians-to-receive-notifications"></a>5. Adım: Bildirimleri almak için koruyucuları atama
 
-Bildirimler için içeriği sonuç olarak verdikten sonra, bildirimleri göndermek istediğiniz koruyucuları seçin.
+Bildirimlerin içeriğini sonuç olarak verdikten sonra, bildirimleri göndermek istediğiniz koruyucuları seçin.
 
-![Özel renkçiler Sayfası'ı seçin.](../media/SelectCustodians.PNG)
+![Özel renkçiler sayfası'ı seçin.](../media/SelectCustodians.PNG)
 
 Koruyucu eklemek için:
 
@@ -202,7 +200,7 @@ Aşağıdaki tabloda, farklı türlerde bildirimlerin koruyuculara gönderilmesi
 |İletişim türü|Tetikleyici |
 |:---------|:---------|
 |Yayınla ile ilgili bildirimler|Bildirimin ilk oluşturulması. Ayrıca,  tutma bildirimini el ile de yeniden postaleyebilirsiniz. |
-|Yeniden verme duyuruları|İletişimi düzenle sihirbazının **Portal İçeriğini** Tanımla sayfasındaki portal **içeriğini** güncelleştirme.|
+|Yeniden verme bildirimlerini|İletişimi düzenle sihirbazının **Portal İçeriğini** Tanımla sayfasındaki portal **içeriğini** güncelleştirme.|
 |Sürüm duyuruları|Custoando, bu vakadan çıkar.|
 |Anımsatıcılar|Anımsatıcı için yapılandırılan anımsatıcı aralığı ve sayısıdır.|
 |Yükseltmeler|Yükseltme için yapılandırılmış anımsatıcı aralığı ve sayısı.|

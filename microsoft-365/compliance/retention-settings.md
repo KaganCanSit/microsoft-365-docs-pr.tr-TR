@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir bekletme ilkesinde veya bekletme etiketi ilkesinde, istediğiniz şeyi saklayarak ve istemediklerden kurtulmak için yapılandırabilirsiniz ayarları anlıyoruz.
-ms.openlocfilehash: 6709f56778865e8474a580c91d01d67512631e1d
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: decf8f53f30c7f29636e50900fe994aae25e6552
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63010921"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63326993"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için ortak ayarlar
 
@@ -61,7 +61,9 @@ Uyarlanabilir kapsamları kullanmayı tercih ettiyken, hangi tür uyarlanabilir 
 |**SharePoint siteleri** - aşağıdakiler için geçerlidir:  <br/> - SharePoint siteleri <br/> - OneDrive hesapları |Site URL'si <br/>Site adı <br/> SharePoint özellikleri görüntüleme: RefinableString00 - RefinableString99 |
 |**Microsoft 365 Grupları** - aşağıdakiler için geçerlidir:  <br/> - Microsoft 365 Grupları <br/> - Teams mesajlarını gönderme <br/> - Yammer iletilerini gönderme |Name <br/> Görünen ad <br/> Açıklama <br/> E-posta adresleri <br/> Diğer Ad <br/> Exchange öznitelikleriyle birlikte: CustomAttribute1 - CustomAttribute15 |
 
-Sitelerin özellik adları site tarafından yönetilen SharePoint temel alır ve kullanıcıların ve grupların öznitelik adları da Azure AD öznitelikleriyle eşlenmiş, filtrelenebilir [](/powershell/exchange/recipientfilter-properties#filterable-recipient-properties) alıcı özelliklerine dayalıdır. Örneğin:
+Sitelerin özellik adları, site tarafından yönetilen SharePoint temel almaktadır. Özel öznitelikler hakkında bilgi için bkz. Uyarlanabilir İlke Kapsamları ile SharePoint Bekletmeyi Uygulamak için [Microsoft 365 Site Özelliklerini Kullanma](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-custom-sharepoint-site-properties-to-apply-microsoft-365/ba-p/3133970).
+
+Kullanıcıların ve grupların öznitelik adları, Azure AD [öznitelikleriyle](/powershell/exchange/recipientfilter-properties#filterable-recipient-properties) eşen filtrelenebilir alıcı özelliklerine dayalıdır. Örneğin:
 
 - **Diğer** ad, Azure AD yönetim **merkezinde E-posta olarak gösterilen mailNickname** LDAP adıyla eşler.
 - **E-posta** adresleri, Azure AD yönetim merkezinde Proxy adresi olarak gösterilen **LDAP adı proxyAddresses** ile eşler.
@@ -77,7 +79,9 @@ Tek bir bekletme ilkesi bir veya birden çok uyarlanabilir kapsamına sahip olab
 
 #### <a name="to-configure-an-adaptive-scope"></a>Uyarlanabilir bir kapsamı yapılandırmak için
 
-Uyarlanabilir kapsamınızı yapılandırmadan önce, hangi kapsam türünü oluşturacağız ve hangi öznitelikleri ve değerleri kullanabileceğinizi belirlemek için önceki bölümü kullanın. Bu bilgileri onaylamak için diğer yöneticilerle birlikte çalışmanız ve diğer sitelerde SharePoint için özelliklerin dizine alındı bilgisini onaylamanız gerekir.
+Uyarlanabilir kapsamınızı yapılandırmadan önce, hangi kapsam türünü oluşturacağız ve hangi öznitelikleri ve değerleri kullanacağız belirlemek için önceki bölümü kullanın. Bu bilgileri onaylamak için diğer yöneticilerle birlikte çalışmanız gerekiyor olabilir. 
+
+Özel olarak SharePoint site özelliklerini kullanmayı planlıyorsanız SharePoint ek yapılandırma [gerekmektedir](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-custom-sharepoint-site-properties-to-apply-microsoft-365/ba-p/3133970).
 
 1. Gezinti [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/) konumlardan birini seçin:
     
@@ -109,19 +113,31 @@ Uyarlanabilir kapsamınızı yapılandırmadan önce, hangi kapsam türünü olu
     - Kullanıcı **ve** Kullanıcı **Microsoft 365 kapsamları** için, [OPATH filtreleme söz dizimi kullanın](/powershell/exchange/recipient-filters). Örneğin, üyeliğini departmana, ülkeye ve eyalete göre tanımlayan bir kullanıcı kapsamı oluşturmak için:
     
         ![Gelişmiş sorguyla örnek uyarlanabilir kapsam.](../media/example-adaptive-scope-advanced-query.png)
+        
+        Bu kapsamlar için gelişmiş sorgu oluşturucusunu kullanmanın avantajlarından biri, daha geniş bir sorgu işleci seçeneğidir:
+        - **ve**
+        - **veya**
+        - **not**
+        - **eq** (eşittir)
+        - **ne** (eşit değildir)
+        - **lt** (küçükten küçük)
+        - **gt** (büyüktür)
+        - **like** (dize karşılaştırması)
+        - **notlike** (dize karşılaştırması)
     
     - Site **SharePoint için** Anahtar Sözcük Sorgu Dili'yi (KQL) kullanın. Dizinli site özelliklerini kullanarak arama yapmak için KQL SharePoint zaten biliyor olabileceğiniz gibi görünüyor. Bu KQL sorgularını belirtmenize yardımcı olmak için bkz. [Anahtar Sözcük Sorgu Dili (KQL) söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
-    
-    Gelişmiş sorgu oluşturucusunu kullanmanın avantajlarından biri, daha geniş bir sorgu işleci seçeneğidir:
-    - **ve**
-    - **veya**
-    - **not**
-    - **eq** (eşittir)
-    - **ne** (eşit değildir)
-    - **lt** (küçükten küçük)
-    - **gt** (büyüktür)
-    - **like** (dize karşılaştırması)
-    - **notlike** (dize karşılaştırması)
+        
+        Örneğin, SharePoint sitelerin kapsamları Microsoft 365 bağlantılı ve OneDrive sitelerini içeren tüm SharePoint site türlerini otomatik olarak dahil olduğundan, belirli site türlerini eklemek veya dışarıda tutmak için **SiteTemplate** dizinli site özelliğini kullanabilirsiniz. Belirtebilirsiniz şablonlar:
+        - Modern iletişim siteleri için SITEPAGEPUBLISHING
+        - Grup bağlantılı Microsoft 365 için GROUP
+        - Özel kanal siteleri için MICROSOFT TEAMS TEAMCHANNEL
+        - Klasik bir ekip sitesi SharePoint STS
+        - Web siteleri için SPSPERS OneDrive siteleri
+        
+        Dolayısıyla, yalnızca modern iletişim sitelerini içeren ve goup bağlantılı ve Microsoft 365 sitelerini hariç OneDrive uyarlanabilir kapsam oluşturmak için, aşağıdaki KQL sorgusunu belirtin:
+        ````console
+        SiteTemplate=SITEPAGEPUBLISHING
+        ````
     
     Bu gelişmiş [sorguları, kapsam yapılandırmasından](#validating-advanced-queries) bağımsız olarak doğruabilirsiniz.
     

@@ -2,8 +2,8 @@
 title: Microsoft Uyumluluk Yöneticisi'nde yapılan güncelleştirmeler
 f1.keywords:
 - NOCSH
-ms.author: v-jgriffee
-author: jmgriffee
+ms.author: chvukosw
+author: chvukosw
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -17,18 +17,25 @@ search.appverid:
 - MOE150
 - MET150
 description: Uyumluluk Yönetimi'ne ve gelecekleri hakkında daha fazla bilgi bulun. Güncelleştirilmiş değerlendirmeler, yeni değerlendirme şablonları, yeni eylemler ve daha fazlası hakkında bilgi okuyun.
-ms.openlocfilehash: a5489241b223b076e3ef44432fd934afb732b38f
-ms.sourcegitcommit: d4797cfc15c732f1a7ef21e4f944e672a7170f9a
+ms.openlocfilehash: 48aed2e173231e3945bcdd3de73052de9f970a5b
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63016641"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63317661"
 ---
 # <a name="whats-new-in-microsoft-compliance-manager"></a>Microsoft Uyumluluk Yöneticisi'nde yapılan güncelleştirmeler
 
 **Bu makalede:** Uyumluluk Yöneticisi'nde en son güncelleştirmeler hakkında bilgi alın.
 
 ## <a name="february-2022"></a>Şubat 2022
+
+### <a name="continuous-compliance-assessment-of-improvement-actions"></a>Geliştirme eylemlerinin sürekli uyumluluk değerlendirmesi
+
+Uyumluluk Yöneticisi'nde daha önce Güvenli Puan kapsamında yer alan 35'den fazla geliştirme eylemi için otomatik test ve kanıt oluşturma işlemi ekliyoruz. Sürekli uyumluluk değerlendirmesiyle, uyumluluk değerlendirmelerinize uygunsa ve ilgili çözümlere erişme lisansına sahipsanız, bu geliştirme eylemlerini hangi geliştirme eylemlerini tamamlamış olduğunuz hakkında güncelleştirmeler alırsınız. Sürekli uyumluluk değerlendirmesi, kullanıcıların geliştirme işlemlerinizin puanlama mantığının görünürlüğünü de sağlar ve belirli bir puanı neden aldığınıza ilişkin içgörü ve kanıt sağlar. Bu özellik, Güvenlik Puanı Microsoft 365 ile var olan tümleştirmelerin yanında çalışır ve daha önce yapılandırdınız tüm otomatik eylemler olduğu gibi çalışmaya devam eder. Otomatik test ayarları hakkında [daha fazla bilgi edinebilirsiniz](compliance-manager-setup.md#set-up-automated-testing).
+### <a name="alerts-and-alert-policies"></a>Uyarılar ve uyarı ilkeleri
+
+Kullanıcılar artık, Bir kuruluşun izlemek istediği Uyumluluk Yöneticisi'nde değişiklikler için uyarılar kurabilirsiniz. Kolay kurulum sihirbazını kullanarak, şu tür olaylar olduğunda bildirim oluşturmak için uyarı ilkeleri oluşturabilirsiniz: geliştirme eylem puanı değişikliği, iyileştirme eylemi atama değişikliği, geliştirme eylemlerinde test veya uygulama durumu değişikliği ve geliştirme eyleminin Belgeler sekmesinde dosya karşıya yükleme veya silme. Uyumluluk Yöneticisi uyarıları ve [uyarı ilkelerini ziyaret ederek daha fazla bilgi edinin](compliance-manager-alert-policies.md).
 
 ### <a name="try-recommended-assessment-templates-for-your-organization"></a>Organizasyonunız için önerilen değerlendirme şablonlarını deneyin
 
@@ -49,7 +56,7 @@ Sıfır Güven, dijital emlakçının tüm katmanları üzerinde her işlemi aç
 - Sıfır Güven Ağı
 - Sıfır Güven Görünürlüğü, otomasyon vetion
 
-### <a name="new-assessment-templates"></a>Yeni değerlendirme şablonları
+### <a name="new-preview-templates"></a>Yeni önizleme şablonları
 
 Aşağıdaki değerlendirme şablonları artık önizlemede kullanılabilir:
 

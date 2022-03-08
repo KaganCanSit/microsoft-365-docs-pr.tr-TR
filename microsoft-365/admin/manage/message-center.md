@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: 38fb3333-bfcc-4340-a37b-deda509c2093
 description: yeni ve değiştirilmiş özellikleri Microsoft 365 diğer önemli duyuruları izleme açısından İleti merkezine genel bir bakış elde edin.
-ms.openlocfilehash: 42549156172c0ed529dfb84619836c2e40f42fe8
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: 09ae8e85a6de64848733c4f80b5d2e28e99072fc
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63016680"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322331"
 ---
 # <a name="message-center"></a>İleti merkezi
 
@@ -213,6 +213,9 @@ Burada, her sütunda göreceğiz bilgilere hızlı bir genel bakış ve sağ tı
 Ayrıntıları görmek için İleti merkezinde bir ileti seçin.
 
 İletiyle ilgili geri bildirim sağlamak için, ayrıntılar bölmesinde, ileti ayrıntıları bölmesinin alt kısmında Beğen  veya Beğenme  simgesini seçin ve görüntülenen metin kutusunda isteğe bağlı olarak geri bildirim gönderin. Hiçbir kişisel bilgi sağlamayın. İsterseniz, bu geri **bildirimle ilgili olarak benimle iletişim kurmam tamam'ı ve sonra Gönder'i** **seçin**.
+
+> [!NOTE]
+> Kamu için Microsoft 365 - GCC, kamu için Microsoft 365 - GCC Yüksek ve Office 365 Kamu - DoD kullanıyorsanız, bir gönderiyle ilgili geri bildirim s siteniz olmayacak.
 
 ## <a name="share-a-message"></a>İleti paylaşma
 

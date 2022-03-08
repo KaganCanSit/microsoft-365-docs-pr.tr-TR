@@ -11,12 +11,12 @@ manager: dougeby
 ms.topic: article
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-ms.openlocfilehash: 2a3ab858a35372297a3506648eb60e351ef17276
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+ms.openlocfilehash: 02bcb482de675e94c9b7c4f8eec80aae2f943ebe
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63016455"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323143"
 ---
 # <a name="get-your-users-ready-to-use-devices"></a>Kullanıcılarınızı cihazları kullanmaya hazır hale get get your users
 
@@ -51,7 +51,7 @@ Bu noktada, uygulamaları dağıtmaya hazır [oluruz](deploy-apps.md).
 1. Dağıtım ve [Intune Şirket Portalı](company-portal.md).
 1. [Lisans atama](assign-licenses.md).
 1. [Uygulamaları dağıtın](deploy-apps.md).
-1. [Cihazları ayarlayın](set-up-devices.md).
+1. [Cihazları hazırlayın](prepare-devices.md).
 1. [AutoPilot ve Kayıt Durumu Sayfası ile ilk çalıştırma deneyimini ayarlayın](esp-first-run.md).
 1. [Kullanıcı desteği özelliklerini etkinleştirin](enable-support.md).
 1. Kullanıcılarınızı cihazları kullanmaya hazır hale get get your devices (bu makale).

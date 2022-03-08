@@ -26,17 +26,20 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: be5b6d90-3344-4c5e-bf40-5733eb845beb
-description: AutoPilot'Windows kullanabileceğiniz, Windows 10 kullanıma hazır olacak şekilde işletmenize uygun yeni cihaz ayarlamayı öğrenin.
-ms.openlocfilehash: 4b187d5e8f9acc8fb76e77770ec88790394dfbe3
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: AutoPilot'Windows iş için çalışan kullanımına hazır olacak Windows 10 cihazları ayarlamak üzere nasıl kullanabileceğinizi öğrenin.
+ms.openlocfilehash: 12e86102633ddfc19960fb561b2a626da29f0560
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973845"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63314021"
 ---
 # <a name="use-the-step-by-step-guide-to-add-autopilot-devices-and-profile"></a>AutoPilot cihaz ve profilleri eklemek için adım adım kılavuzu kullanın.
 
-Windows AutoPilot Windows 10 u kullanarak işletmenize uygun yeni cihaz  ve cihazları çalışanlarınıza verirken kullanıma hazır hale kullanabilirsiniz.
+> [!NOTE]
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Bu teklif, cihazlar için ek güvenlik özellikleri sağlar. [İş için Defender hakkında daha fazla bilgi öğrenin](../../security/defender-business/mdb-overview.md).
+
+Windows AutoPilot Windows 10 u kullanarak işletmenize uygun yeni cihaz ve  cihazları çalışanlarınıza vermek üzere kullanıma hazır hale kullanabilirsiniz.
   
 ## <a name="device-requirements"></a>Cihaz gereksinimleri
 
@@ -60,7 +63,7 @@ Henüz cihaz grupları veya profil oluşturmadınız, başlamanın en iyi yolu a
     
     ![Click Start guide for step-by-step instructions for Autopilot.](../../media/31662655-d1e6-437d-87ea-c0dec5da56f7.png)
   
-3. Cihaz **Upload .csv bir dosyada**, dosyanın hazır bulunduğu konuma gidin ve .CSV **Aç'ı** \> **seçin**. Dosyada üç üst bilgi olması gerekir:
+3. Cihaz **Upload .csv bir dosyada**, kendi dosyanız için hazır bulunduğu konuma gidin ve .CSV **Aç'ı** \> **seçin**. Dosyada üç üst bilgi olması gerekir:
     
     - A sütunu: Cihaz Seri Numarası
     
@@ -73,7 +76,7 @@ Henüz cihaz grupları veya profil oluşturmadınız, başlamanın en iyi yolu a
     Daha fazla bilgi için bkz. [Cihaz listesi CSV dosyası](../misc/device-list.md). **Cihaz listesiyle .csv dosyası yükleme** sayfasında bir örnek dosya da indirebilirsiniz. 
     
 > [!NOTE]
-> Bu betikte, müşterinin cihazı AutoPilot'a kaydetmesi için gereken özellikleri almak Windows kullanılır. Sonuçta elde edilen CSV dosyasının Windows Ürün Kimliği (PKID) değeri toplamamalerinin normal olduğunu unutmayın, çünkü bu bir cihazı kaydetmek için gerekli değildir ve PKID'nin CSV çıktısı içinde NULL olması tamamen sorun değildir. Yalnızca seri numarası ve donanım karması doldurulur.
+> Bu betikte, müşterinin cihazı AutoPilot'a kaydetmesi için gereken özellikleri almak Windows kullanılır. Sonuçta elde edilen CSV dosyasının Windows Ürün Kimliği (PKID) değeri toplamamalerinin normal olduğunu unutmayın; çünkü bu bir cihazı kaydetmek için gerekli değildir ve PKID'nin CSV çıktısı içinde NULL olması tamamen sorun değildir. Yalnızca seri numarası ve donanım karması doldurulur.
     
 4. Profil **atama sayfasında** mevcut bir profili seçebilirsiniz veya yeni bir profil oluşturabilirsiniz. Henüz bir tane yoksa, oluşturmak için bir hesap oluşturmanız istenir. 
     
@@ -81,11 +84,11 @@ Henüz cihaz grupları veya profil oluşturmadınız, başlamanın en iyi yolu a
     
     Varsayılan özellikler gereklidir ve otomatik olarak ayarlanır. Varsayılan özellikler şunlardır:
     
-    - Kayıt Cortana, OneDrive OEM kaydı'OneDrive atlayabilirsiniz.
+    - Kayıt Cortana, OneDrive OEM kaydı atlayabilirsiniz.
     
     - Şirketinizin markasıyla oturum açma deneyimi oluşturma.
     
-    - Bağlan hesaplarınıza Azure Active Directory için cihazlarınızı seçin ve bu hesapları sizin yönetilleri için otomatik olarak Microsoft 365 İş Ekstra.
+    - Bağlan hesaplarınıza Azure Active Directory ve tüm cihazlarınız tarafından yönetilleri için otomatik olarak Microsoft 365 İş Ekstra.
     
     Daha fazla bilgi için bkz [. AutoPilot Profili ayarları hakkında](autopilot-profile-settings.md). 
     
@@ -98,4 +101,4 @@ Henüz cihaz grupları veya profil oluşturmadınız, başlamanın en iyi yolu a
 ## <a name="related-content"></a>İlgili içerik
 
 [AutoPilot Profili ayarları hakkında](autopilot-profile-settings.md) (makale)\
-[Cihazlarınızı ve uygulama verilerinizi koruma seçenekleri](../devices/choose-device-security.md) (makale)
+[Cihazlarınızı ve uygulama verilerinizi koruma seçenekleri](../devices/choose-device-security.md) (makale) İşletmeler için planlarda güvenliği sağlamanın en [Microsoft 365 10 yolu](../security-and-compliance/secure-your-business-data.md)

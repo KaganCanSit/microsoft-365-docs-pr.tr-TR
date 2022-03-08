@@ -2,8 +2,8 @@
 title: Microsoft Üretkenlik Puanı - Microsoft 365 durumunu güncelleştirme
 f1.keywords:
 - NOCSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Sağlık - Microsoft 365 Uygulamaları deneyimi Üretkenlik puanı ile ilgili ayrıntılar.
-ms.openlocfilehash: e1dbbd0f52ac0d06d5f5af677fb7acf3a4762a3c
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 22bc1d503bc177722cb12d54c63adc3869755491
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984428"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63321775"
 ---
 # <a name="microsoft-365-apps-health--technology-experiences"></a>Microsoft 365 Uygulamaları durumu – teknoloji deneyimleri
 

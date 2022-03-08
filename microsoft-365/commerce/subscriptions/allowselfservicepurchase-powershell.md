@@ -2,8 +2,8 @@
 title: MSCommerce PowerShell modülü için AllowSelfServicePurchase kullanma
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: mijeffer, pablom
 audience: Admin
@@ -14,19 +14,19 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
-- AdminSurgePortfolio
 - commerce_ssp
+- AdminSurgePortfolio
 search.appverid:
 - MET150
 description: Self servis satın alma hizmetini açmak veya kapatmak için AllowSelfServicePurchase PowerShell cmdlet'ini nasıl kullanabileceğinizi öğrenin.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.date: 12/15/2021
-ms.openlocfilehash: ebe01b9ed55b13d1d61ae1a59dca3bdb6373f285
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: a3800f82386fafe509d9bdabb25cd91422cf058d
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "62974169"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315729"
 ---
 # <a name="use-allowselfservicepurchase-for-the-mscommerce-powershell-module"></a>MSCommerce PowerShell modülü için AllowSelfServicePurchase kullanma
 
@@ -134,7 +134,7 @@ Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId CFQ
 
 ## <a name="example-script-to-disable-allowselfservicepurchase"></a>AllowSelfServicePurchase'i devre dışı bırakmak için örnek betik
 
-Aşağıdaki örnek, **MSCommerce** modülünü içeri aktarma, hesabınızla oturum açma, Power Automate için **ProductId'yi** alma ve sonra bu ürün için **AllowSelfServicePurchase'i** devre dışı bırakma adımları boyunca size yol sağlar.
+Aşağıdaki örnek, **MSCommerce** modülünü içeri aktarma, hesabınızla oturum açma, Power Automate için **ProductId'yi** alma ve sonra bu ürün için **AllowSelfServicePurchase'i** devre dışı bırakma adımlarıyla size yol sağlar.
 
 ```powershell
 Import-Module -Name MSCommerce

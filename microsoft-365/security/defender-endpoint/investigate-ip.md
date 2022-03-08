@@ -11,18 +11,16 @@ author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection:
-- m365-security-compliance
-- m365initiative-defender-endpoint
+ms.collection: m365-security-compliance
 ms.topic: article
 ms.date: 04/24/2018
 ms.technology: mde
-ms.openlocfilehash: 2e314f15719d4a6a0e75d5fd26ae788e2382b75a
-ms.sourcegitcommit: dfa9f28a5a5055a9530ec82c7f594808bf28d0dc
+ms.openlocfilehash: b20a8d5f1f33ebe62fa1ec9a5e8c8e05dbddbc2b
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "62997044"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323353"
 ---
 # <a name="investigate-an-ip-address-associated-with-a-microsoft-defender-for-endpoint-alert"></a>Uç nokta için Microsoft Defender uyarısıyla ilişkilendirilmiş IP adresini araştırma
 
@@ -82,7 +80,7 @@ IP adresiyle ilgili ayrıntılar görüntülenir. Bunlar: kayıt ayrıntıları 
 
 Arama ölçütlerini tanımlamak için arama filtrelerini kullanın. Zaman çizelgesi arama kutusunu, kuruluşta IP adresiyle iletişim kurarken gözlemlenen tüm cihazların, iletişimle ilişkilendirilmiş dosyanın ve gözlemlenen son tarihin sonuçlarını filtrelemek için de zaman çizelgesi arama kutusunu kullanabilirsiniz.
 
-Cihaz adlardan herhangi birini tıklatmak sizi bu cihazın görünümüne alır ve burada bildirilen uyarıları, davranışları ve olayları incelemeye devam edebilirsiniz.
+Cihaz adlardan herhangi birini tıklatmak sizi bu cihazın görünümüne götürmektedir ve bu görünümde bildirilen uyarıları, davranışları ve olayları incelemeye devam edebilirsiniz.
 
 ## <a name="related-topics"></a>İlgili konular
 

@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Temel Mobil Kullanım ve Güvenlik, mobil cihazlarınızı güvenli hale yönetmenize yardımcı olabilir.
-ms.openlocfilehash: 73df4cd8aa4eb8dea8ef7c96304e48caf1f15f8a
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 04ee7e7dfbc4937d4add2e4c27e7f686b596fadb
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021677"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63314889"
 ---
 # <a name="capabilities-of-basic-mobility-and-security"></a>Temel Hareketlilik ve Güvenlik Özellikleri
 
@@ -32,18 +32,30 @@ Temel Mobil Kullanım ve Güvenlik, iPhone, iPad, Android ve Windows Gibi mobil 
 
 ## <a name="supported-operating-systems"></a>Desteklenen işletim sistemleri
 
-Temel Mobil Microsoft Intune güvenliği kullanan cihazlar için desteklenen işletim sistemleri kılavuzuna bakın. Daha fazla bilgi için [bkz. Intune'da desteklenen işletim sistemleri](/mem/intune/fundamentals/supported-devices-browsers).
+Temel Microsoft Intune ve Güvenlik ile cihazlar için minimum desteklenen işletim sistemleri kılavuzuna bakın. Daha fazla bilgi için [bkz. Intune'da desteklenen işletim sistemleri](/mem/intune/fundamentals/supported-devices-browsers).
+
+Aşağıdaki cihazları güvenlik altına almak ve yönetmek için Temel Mobil Kullanım ve Güvenlik'i kullanabilirsiniz.
+
+- iOS
+- Android (Samsung Knox dahil)<sup>1</sup>
+- Windows <sup>2, 3</sup>
+
+<sup>1</sup> Haziran 2020'den sonra, 9'dan sonraki Android sürümleri Samsung Knox cihazları dışında parola ayarlarını yönetemedi.
+
+<sup>2</sup> RT cihazları için Windows 8.1 denetimi diğer cihazlarla Exchange ActiveSync.
+
+<sup>3</sup> Erişim denetimi Windows 10, aboneliği içeren bir Azure AD Premium ve cihazın e-posta hizmetine katılmış Azure Active Directory.
 
 > [!NOTE]
 > Özellikler önceden önceden işletim sistemi sürümleriyle kaydolan cihazlar çalışmaya devam eder, ancak bu özellikler önceden uyarılmadan değişebilir.
 
-Kuruluşta kişiler Temel Mobil Kullanım ve Güvenlik tarafından desteklenen mobil cihazlar kullanıyorsa, bu cihazlar için Exchange ActiveSync uygulamasının bu cihazlar için Microsoft 365 e-posta erişimine engel olarak, organizasyon verilerinizi daha güvenli hale toplamaya yardımcı olmak iyi bir uygulama olabilir. Güvenliği engelleme adımları için Exchange ActiveSync Temel Mobil [Kullanım ve Güvenlik'te cihaz erişimi ayarlarını yönetme.](manage-device-access-settings.md)
+Kuruluşta kişiler Temel Mobil Kullanım ve Güvenlik tarafından desteklenen mobil cihazlar kullanıyorsa, bu cihazlarda Exchange ActiveSync uygulamasının Microsoft 365 e-posta erişimine engel olarak, kuruluş verilerinizin daha güvenli hale gelen şekilde erişmelerini engelleyebilirsiniz. Güvenliği engelleme adımları için Exchange ActiveSync Temel Mobil [Kullanım ve Güvenlik'te cihaz erişimi ayarlarını yönetme.](manage-device-access-settings.md)
 
 ## <a name="access-control-for-microsoft-365-email-and-documents"></a>E-postayı ve Microsoft 365 için erişim denetimi
 
 Aşağıdaki tabloda yer alan farklı mobil cihaz türleri için desteklenen uygulamalar, kullanıcılardan, kullanıcının cihazı için geçerli olan ve daha önce cihazı kaydetmemiş yeni bir mobil cihaz yönetim ilkesi olan Basic Mobility ve Security'e kaydolmalarını istenir. Bir kullanıcının cihazı bir ilkeye uymazsa, sizin ilkeyi nasıl ayarlaymanıza bağlı olarak, kullanıcının bu uygulamalarda Microsoft 365 kaynaklarına erişimi engellenmiş olabilir veya bu kullanıcının erişimi olabilir ancak Microsoft 365 bir ilke ihlalsini raporlar.
 
-|**Ürün**|**iOS 10.0 veya sonrası**|**Android 5.0 veya sonrası**|
+|**Ürün**|**iOS**|**Android**|
 |:-----|:-----|:-----|
 |**Exchange** Exchange ActiveSync Sürüm 14.1 veya sonraki bir sürümü kullanan yerleşik e-posta ve TouchDown Exchange ActiveSync üçüncü taraf uygulamaları içerir. |Posta |E-posta |
 | Office ve  **OneDrive İş** |Outlook </br>OneDrive </br>Word </br>Excel </br>PowerPoint|**Telefonlarda ve tabletlerde**:<br/>Outlook <br/> OneDrive <br/> Word <br/> Excel <br/> PowerPoint <br/> **Yalnızca telefonlarda:** <br/> Office Mobile |
@@ -83,7 +95,7 @@ Aşağıdaki bölümlerde, kullanıcı ve kuruluş kaynaklarınıza bağlanan mo
 
 ## <a name="security-settings"></a>Güvenlik ayarları
 
-|**Ayar adı**|**iOS 7.1 ve sonrası**|**Android 5 ve sonrası**|**Samsung Knox**|
+|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
 |:-----|:-----|:-----|:-----|
 |Parola gerektirme|Evet|Evet|Evet|
 |Basit parolayı engelleme|Evet|Hayır|Hayır|
@@ -96,7 +108,7 @@ Aşağıdaki bölümlerde, kullanıcı ve kuruluş kaynaklarınıza bağlanan mo
 
 ## <a name="encryption-settings"></a>Şifreleme ayarları
 
-|**Ayar adı**|**iOS 7.1 ve sonrası**|**Android 5 ve sonrası**|**Samsung Knox**|
+|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
 |:-----|:-----|:-----|:-----|
 |Cihazlarda veri şifrelemesi <sup>gerektirme1</sup> |Hayır|Evet|Evet|
 
@@ -104,7 +116,7 @@ Aşağıdaki bölümlerde, kullanıcı ve kuruluş kaynaklarınıza bağlanan mo
 
 ## <a name="jail-broken-setting"></a>Güvenlik 2013 ayarları bozuk
 
-|**Ayar adı**|**iOS 7.1 ve sonrası**|**Android 5 ve sonrası**|**Samsung Knox**|
+|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
 |:-----|:-----|:-----|:-----|
 |Cihaz bozuk veya kök olarak girilenem |Evet|Evet|Evet|
 
@@ -112,13 +124,13 @@ Aşağıdaki bölümlerde, kullanıcı ve kuruluş kaynaklarınıza bağlanan mo
 
 Aşağıdaki seçenek, kullanıcıların el ile oluşturulan bir e-Microsoft 365 profili kullanıyorsa e-postalarına erişmelerini engelleyebilir. iOS cihazlarında kullanıcılar e-postalarına erişmek için önce el ile oluşturulan e-posta profillerini silmeleri gerekir. Profili sildikten sonra cihazda otomatik olarak yeni bir profil oluşturulur. Son kullanıcıların uyumlu hale nasıl geldiyle ilgili yönergeler için bkz [. Var olan bir e-posta hesabı bulundu](/intune-user-help/existing-company-email-account-found).
 
-|**Ayar adı**|**iOS 7.1 ve sonrası**|**Android 5 ve sonrası**|**Samsung Knox**|
+|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
 |:-----|:-----|:-----|:-----|
 |E-posta profili yönetiliyor |Evet|Hayır|Hayır|
 
 ## <a name="cloud-settings"></a>Bulut ayarları
 
-|**Ayar adı**|**iOS 7.1 ve sonrası**|**Android 5 ve sonrası**|**Samsung Knox**|
+|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
 |:-----|:-----|:-----|:-----|
 |Şifreli yedekleme gerektir |Evet|Hayır|Hayır|
 |Bulut yedeklemeyi engelle |Evet|Hayır|Hayır|
@@ -129,14 +141,14 @@ Aşağıdaki seçenek, kullanıcıların el ile oluşturulan bir e-Microsoft 365
 
 ## <a name="system-settings"></a>Sistem ayarları
 
-|**Ayar adı**|**iOS 7.1 ve sonrası**|**Android 5 ve sonrası**|**Samsung Knox**|
+|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
 |:-----|:-----|:-----|:-----|
 |Ekran yakalamayı engelle |Evet|Hayır|Evet|
 |Cihazdan tanılama verileri göndermeyi engelleme |Evet|Hayır|Evet|
 
 ## <a name="application-settings"></a>Uygulama ayarları
 
-|**Ayar adı**|**iOS 7.1 ve sonrası**|**Android 5 ve sonrası**|**Samsung Knox**|
+|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
 |:-----|:-----|:-----|:-----|
 |Cihazda görüntülü konferansları engelleme |Evet|Hayır|Hayır|
 |Uygulama deposuna erişimi engelleme |Evet|Hayır|Evet|
@@ -144,7 +156,7 @@ Aşağıdaki seçenek, kullanıcıların el ile oluşturulan bir e-Microsoft 365
 
 ## <a name="device-capabilities-settings"></a>Cihaz özellikleri ayarları
 
-|**Ayar adı**|**iOS 7.1 ve sonrası**|**Android 5 ve sonrası**|**Samsung Knox**|
+|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
 |:-----|:-----|:-----|:-----|
 |Çıkarılabilir depolama alanıyla bağlantıyı engelleme |Evet|Evet|Hayır|
 |Bağlantı Bluetooth engelleme |Evet|Evet|Hayır|
@@ -153,7 +165,7 @@ Aşağıdaki seçenek, kullanıcıların el ile oluşturulan bir e-Microsoft 365
 
 Güvenlik ayarları ve Uyumluluk Merkezi PowerShell cmdlet'lerini & ek ilke ayarlarını değiştirebilirsiniz. Daha fazla bilgi için bkz [. Güvenlik & Uyumluluk Merkezi PowerShell](/powershell/exchange/scc-powershell).
 
-|**Ayar adı**|**iOS 7.1 ve sonrası**|**Android 5 ve sonrası**|
+|**Ayar adı**|**iOS** |**Android**|
 |:-----|:-----|:-----|
 |CameraEnabled|Evet|Evet|
 |RegionRatings|Evet|Hayır|

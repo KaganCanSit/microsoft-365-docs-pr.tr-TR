@@ -1,5 +1,5 @@
 ---
-title: 1. Adım - Bir çalışanın iş yer açması için Microsoft 365
+title: 1. Adım - Eski bir çalışanın oturum açmasını ve bu hizmetlere erişimi Microsoft 365 engelleme
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -26,12 +26,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Eski çalışanın oturum açması ve bu hizmetlere erişimi Microsoft 365 engelin.
-ms.openlocfilehash: 5643c12f46fb09f76f16dc2632baf1538d358dd5
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+ms.openlocfilehash: abd6a6f47952b5af190b08f1ecae337840eaa312
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63012874"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63315967"
 ---
 # <a name="step-1---prevent-a-former-employee-from-logging-in-and-block-access-to-microsoft-365-services"></a>1. Adım - Eski bir çalışanın oturum açmasını ve bu hizmetlere erişimi Microsoft 365 engelleme
 

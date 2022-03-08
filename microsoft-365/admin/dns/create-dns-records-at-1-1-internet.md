@@ -2,13 +2,13 @@
 title: Bağlan IONOS'ta DNS kayıtlarınızı 1'den&'e kadar Microsoft 365
 f1.keywords:
 - CSH
-ms.author: pebaum
-author: pebaum
+ms.author: efrene
+author: efrene
 manager: scotv
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
-localization_priority: Normal
+ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
 - M365-subscription-management
@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: 5762c3ca-1de2-4999-bfe5-4c5e25a8957e
 description: Microsoft için 1&1 IONOS'ta etki alanlarınızı doğrulamayı ve e-posta, Skype Kurumsal Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
-ms.openlocfilehash: 8dc3a509a05e55e984d1c06e59319661a19019e7
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 54e18972fe2d5e2ccd8c3ab266b20241e67f68a9
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989881"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313615"
 ---
 # <a name="connect-your-dns-records-at-ionos-by-11-to-microsoft-365"></a>Bağlan IONOS'ta DNS kayıtlarınızı 1'den&'e kadar Microsoft 365
 
@@ -250,7 +250,7 @@ Bir dosyada kaydı Microsoft 365:
 
 ## <a name="advanced-option-skype-for-business"></a>Gelişmiş seçenek: Skype Kurumsal
 
-Yalnızca, bu seçeneği yalnızca, Skype Kurumsal yanı sıra sohbet, konferans aramaları ve görüntülü aramalar gibi çevrimiçi iletişim hizmetleri için Microsoft Teams. Skype için 4 kayıt gerekir: Oturum açma ve kullanıcıları hizmete bağlamak için 2 kullanıcı-kullanıcı iletişim için SRV kaydı ve 2 CNAME kaydı.
+Bu seçeneği yalnızca, işletmeniz Microsoft Teams'in yanı sıra sohbet, konferans aramaları ve görüntülü aramalar gibi çevrimiçi iletişim hizmetleri için Skype Kurumsal kullanıyorsa belirleyin. Skype için 4 kayıt gerekir: Kullanıcıdan kullanıcıya iletişim için 2 SRV kaydı ve oturum açma ve kullanıcıları hizmete bağlamak için 2 CNAME kaydı.
 
 ### <a name="add-two-additional-cname-records"></a>İki CNAME kaydı daha ekleme
   

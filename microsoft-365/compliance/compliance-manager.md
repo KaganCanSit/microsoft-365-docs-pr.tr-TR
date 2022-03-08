@@ -2,8 +2,8 @@
 title: Microsoft Uyumluluk Yöneticisi
 f1.keywords:
 - NOCSH
-ms.author: v-jgriffee
-author: jmgriffee
+ms.author: chvukosw
+author: chvukosw
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Uyumluluk Yöneticisi, kuruluşların risk değerlendirmelerini basitleştirmesini ve otomatikleştirmesini sağlar ve risklere yardımcı olmak için önerilen eylemler önerir.
-ms.openlocfilehash: 47040da384c33e853f0c11735053bb8850735c3d
-ms.sourcegitcommit: dc26169e485c3a31e1af9a5f495be9db75c49760
+ms.openlocfilehash: 289d82e8bc5f404589b263a2b6dec499d9e3b7e2
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "62990011"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63317675"
 ---
 # <a name="microsoft-compliance-manager"></a>Microsoft Uyumluluk Yöneticisi
 

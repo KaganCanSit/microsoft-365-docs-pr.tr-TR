@@ -3,7 +3,7 @@ title: Office 365 URL’leri ve IP adresi aralıkları
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 01/31/2022
+ms.date: 02/28/2022
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -24,12 +24,12 @@ search.appverid:
 ms.assetid: 8548a211-3fe7-47cb-abb1-355ea5aa88a2
 description: 'Özet: Office 365 için İnternet bağlantısı gerekir. Aşağıdaki uç noktalara, E-posta planları (Office 365) dahil Government Community Cloud müşteriler GCC.'
 hideEdit: true
-ms.openlocfilehash: 81f3f7ef203e9ed1e6d45e6139421b9a03057840
-ms.sourcegitcommit: 7fd1bcbd8246501029837e3ea92adea64c3406e1
+ms.openlocfilehash: 21d80523fc2cdba2e6a7bb9f08909bd7d6152a4b
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2022
-ms.locfileid: "63010101"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324736"
 ---
 # <a name="office-365-urls-and-ip-address-ranges"></a>Office 365 URL’leri ve IP adresi aralıkları
 
@@ -39,7 +39,7 @@ Office 365, İnternet bağlantısı gerektirir. Aşağıdaki uç noktalara, E-po
 
 |Notlar|İndir|Kullanım|
 |---|---|---|
-|**Son güncelleştirme:** 28/01/2022 - ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Günlük aboneliğini değiştir](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|**İndirin:** Tüm gerekli ve isteğe bağlı hedefler bir [JSON biçimlendirilmiş](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) listesindedir.|**Kullan:** PAC dosyaları [proxy'miz](managing-office-365-endpoints.md#pacfiles)|
+|**Son güncelleştirme:** 28/02/2022 - ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Günlük aboneliğini değiştir](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|**İndirin:** Tüm gerekli ve isteğe bağlı hedefler bir [JSON biçimlendirilmiş](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) listesindedir.|**Kullan:** PAC dosyaları [proxy'miz](managing-office-365-endpoints.md#pacfiles)|
 |
 
 Bu verileri [kullanarak ağ Office 365 yönetme](managing-office-365-endpoints.md) önerilerimizi anlamak için Uç noktaları yönetme ile başlayabilirsiniz. Her ayın başlangıcında, etkin olmaya 30 gün önceden yayımlanan yeni IP Adresleri ve URL'ler ile uç nokta verileri gerektiğinde güncelleştirilir. Bu, yeni bağlantı gerekmeden önce henüz otomatik güncelleştirmeleri olan müşterilerin işlemlerini tamamlamalarına olanak sağlar. Ayrıca, ay içinde yükseltmeleri, güvenlik olaylarını veya diğer acil işlem gereksinimlerini desteklemek için uç noktalar da güncelleştirilebilir. Aşağıdaki bu sayfada gösterilen verilerin hepsi REST tabanlı web hizmetlerinden oluşturulur. Bu verilere erişmek için komut dosyası veya ağ cihazı kullanıyorsanız, doğrudan [Web hizmetine gitebilirsiniz](microsoft-365-ip-web-service.md) .

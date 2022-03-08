@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: Bu makalede, Microsoft 365 Online site gruplarını yönetmek SharePoint PowerShell kullanımı yordamlarını bulabilirsiniz.
-ms.openlocfilehash: 26ac87fe258e0340e95be0e83710f7810bc437a8
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: deef41118789a9df4353fa188c88d827909dc863
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62986691"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63328785"
 ---
 # <a name="manage-sharepoint-online-site-groups-with-powershell"></a>PowerShell SharePoint Online site gruplarını yönetme
 
@@ -41,8 +41,8 @@ Bu makaledeki yordamlar için SharePoint Online'a bağlanmanız gerekir. Yönerg
 
 Web SharePoint Yönetim Merkezi'nde site gruplarını yönetmek için kullanımı kolay bazı yöntemler vardır. Örneğin, site için gruplara ve grup üyelerine bakmak istediğiniz varsayalım `https://litwareinc.sharepoint.com/sites/finance` . İşte yapmak için şunları yapacaksınız:
 
-1. Genel SharePoint, Etkin **siteler'e tıklayın** ve sonra da sitenin URL'sini seçin.
-2. Site sayfasında, Site Ayarlar simgesine  (sayfanın sağ üst köşesinde bulunur) tıklayın ve sonra da **Site izinleri'ne tıklayın**.
+1. Genel SharePoint merkezinde Etkin <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**siteler'i seçin**</a> ve sonra da sitenin URL'sini seçin.
+2. Site sayfasında, Seçenekler <a href="https://go.microsoft.com/fwlink/?linkid=2185072" target="_blank">**Ayarlar**</a> (sayfanın sağ üst köşesinde bulunur) öğesini ve sonra da **Site izinleri'ne tıklayın**.
 
 Ardından, bakmak istediğiniz bir sonraki site için işlemi tekrarlayın.
 

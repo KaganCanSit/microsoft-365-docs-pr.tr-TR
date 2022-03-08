@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Kampanya veya işletmenizin güvenliğini artırarak kampanyanızı ve işlerinizi korumayı Microsoft 365.
-ms.openlocfilehash: 14582edff3153649a36bf12b3fd25212c6c1543d
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 17144ea8c361c3fb3665addd9567cfcb18ca0172
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011945"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63329037"
 ---
 # <a name="bump-up-security-protection-for-your-campaign-or-business"></a>Kampanyanız veya işletmeniz için güvenlik korumasını en iyi şekilde sağlar
 
@@ -43,8 +43,8 @@ Kampanyanızı veya iş yerlerinizi nasıl koruyarak koruynizi görmek için bu 
 
 Ardından aşağıdaki adımları izleyin:
 
-- [Kötü amaçlı yazılıma ve diğer tehditlere karşı koruma](m365-campaigns-increase-protection.md)
-- [Hesaplarınızı ve uygulamalarınızı koruyarak](m365-campaigns-conditional-access.md) kampanya verilerinize erişimi koruyun
-- [Yönetici hesaplarını koruma](m365-campaigns-protect-admin-accounts.md)
-- [Mobil cihazları ayarlama](../business/set-up-mobile-devices.md?toc=/microsoft-365/campaigns/toc.json)
+- [Kötü amaçlı yazılıma ve diğer tehditlere karşı koruma](m365bp-increase-protection.md)
+- [Hesaplarınızı ve uygulamalarınızı koruyarak](m365bp-conditional-access.md) kampanya verilerinize erişimi koruyun
+- [Yönetici hesaplarını koruma](m365bp-protect-admin-accounts.md)
+- [Mobil cihazları ayarlama](../business/set-up-mobile-devices.md)
 - [Kullanıcılarınızı eğitin](m365-campaigns-users.md)

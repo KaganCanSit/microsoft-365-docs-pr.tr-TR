@@ -19,12 +19,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 7b98ebf38d0e2e5ab5ec086e75002d0d660cff4c
-ms.sourcegitcommit: 986ea76ecaceb5fe6b9616e553003e3c5b0df2e7
+ms.openlocfilehash: 77dbdb290a0f8643bd24e1a3c561b823e5c2e4b3
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "63010804"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63330601"
 ---
 # <a name="configure-device-discovery"></a>Cihaz bulma'yi yapılandırma
 
@@ -60,7 +60,7 @@ Cihazları Dışlamalar sayfasında hariç tutulacak **şekilde yapılandırabil
 
 ## <a name="select-networks-to-monitor"></a>Izlenir ağları seçme
 
- Uç Nokta için Microsoft Defender ağı analiz eder ve bunun izlenmesi gereken bir şirket ağı mı yoksa yoksayılabilir şirket dışı bir ağ mı olduğunu belirler. Şirket ağları genelde izleniyor olarak seçilir. Bununla birlikte, şirket dışı ağların bulunduğu cihazları izlemeyi seçerek bu kararı geçersiz kılabilirsiniz.
+Uç Nokta için Microsoft Defender ağı analiz eder ve bunun izlenmesi gereken bir şirket ağı mı yoksa yoksayılabilir şirket dışı bir ağ mı olduğunu belirler. Ağı şirket olarak tanımlamak için, ağ tanımlayıcılarını tüm kiracının istemcilerinde ve kuruluşta yer alan cihazların çoğunluğunun aynı ağ adına bağlı olduğunu raporla aynı varsayılan ağ geçidi ve ATM sunucu adresiyle tüm kiracılarla bağlantılı olarak ayarlarsanız, bunun bir şirket ağı olduğunu varsay ediyoruz. Şirket ağları genelde izleniyor olarak seçilir. Bununla birlikte, şirket dışı ağların bulunduğu cihazları izlemeyi seçerek bu kararı geçersiz kılabilirsiniz.
 
 Hangi ağların iz olacağını belirterek, cihaz bulmanın nerede gerçekleştiril olacağını yapılandırabilirsiniz. Ağ izlenirken, bu ağ üzerinde cihaz bulma yapılabilir.
 

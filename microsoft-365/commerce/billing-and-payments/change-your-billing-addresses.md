@@ -2,8 +2,8 @@
 title: Fatura adreslerinizi değiştirme
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
 author: cmcatee-MSFT
+ms.author: cmcatee
 manager: scotv
 ms.reviewer: tugu, jmueller
 audience: Admin
@@ -14,19 +14,19 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 ms.custom:
+- commerce_billing
 - okr_SMB
 - AdminSurgePortfolio
-- commerce_billing
 - AdminTemplateSet
 search.appverid: MET150
 description: İşletmeler için Fatura bildirimlerinizi veya fatura bildirimlerini almak için kullanılan e-posta Microsoft 365 öğrenin.
 ms.date: 01/24/2022
-ms.openlocfilehash: 888e371cb81475b385ecd9d5cd3a3898039a5e94
-ms.sourcegitcommit: 986ea76ecaceb5fe6b9616e553003e3c5b0df2e7
+ms.openlocfilehash: 3c03315612b4f3a65dc39d2dcabee639bc578edd
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "63010806"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63322275"
 ---
 # <a name="change-your-billing-addresses"></a>Fatura adreslerinizi değiştirme
 

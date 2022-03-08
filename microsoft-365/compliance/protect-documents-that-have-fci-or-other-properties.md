@@ -19,13 +19,14 @@ ms.collection:
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
+- admindeeplinkSPO
 description: Üçüncü taraf sistem özellikleri olan belgeleri korumak için veri kaybı önleme (DLP) ilkesi kullanmayı öğrenin.
-ms.openlocfilehash: fb8e1474666f016af3f6169f1a1d8d490a36f3c7
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 0bfb520119717d952a803e0f37fef0a1499ff0da
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988094"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63312161"
 ---
 # <a name="create-a-dlp-policy-to-protect-documents-with-fci-or-other-properties"></a>Belgeleri FCI veya diğer özelliklerle korumak için DLP ilkesi oluşturma
 
@@ -47,7 +48,7 @@ DLP ilkenizi belirli etiketli içeriğe uygulamak Microsoft 365, buradaki adıml
 
 ## <a name="before-you-create-the-dlp-policy"></a>DLP ilkesi oluşturmadan önce
 
-Bir DLP ilkesinde Windows Server FCI özelliğini veya başka bir özelliği kullanamadan önce, yönetim merkezinde yönetilen özellik SharePoint gerekir. İşte nedeni:
+Bir DLP ilkesinde Windows Server FCI özelliğini veya başka bir özelliği kullanamadan önce, yönetim merkezinde yönetilen <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">özellik SharePoint gerekir</a>. İşte nedeni:
 
 SharePoint Online ve OneDrive İş'de, arama dizini siteleriniz üzerinde içerikte gezinme özelliğiyle yerleşik olarak kullanılır. Gezgin belgelerden içeriği ve meta verileri gezinilen özellikler şeklinde seçer. Arama şeması, hangi içeriğin ve meta verilerin seçkiye sahip olduğuna gezgine yardımcı olur. Meta verilere örnek olarak belgenin yazarı ve başlığı örnek olarak verilmiştir. Bununla birlikte, belgelerden içerik ve meta verileri arama dizinine almak için, gezinilen özelliklerin yönetilen özelliklerle eşlenmiş olması gerekir. Yalnızca yönetilen özellikler dizinde tutulur. Örneğin, yazar ile ilgili gezinilen bir özellik, yazar ile ilgili yönetilen özelle eşlenmiştir.
 
@@ -66,7 +67,7 @@ Arama ve yönetilen özellikler hakkında daha fazla bilgi için bkz. [SharePoin
 
 1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetici merkezi</a>'nde oturum açın.
 
-2. Sol gezintide Yönetim merkezleri **merkezi'ni SharePoint**\>. Artık genel yönetim SharePoint siniz.
+2. Sol gezintide Yönetim merkezleri **merkezi'ni SharePoint**\>. Artık yönetim <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">merkezindesiniz SharePoint siniz</a>.
 
 3. Sol gezintide, arama **yönetimi sayfasında Arama** \> **Şemasını** **Yönet'i**\> seçin.
 

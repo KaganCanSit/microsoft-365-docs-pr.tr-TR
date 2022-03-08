@@ -13,16 +13,17 @@ ms.localizationpriority: high
 ms.collection:
 - M365-security-compliance
 - SPO_Content
+ms.custom: admindeeplinkSPO
 search.appverid:
 - MOE150
 - MET150
 description: Farklı sitelerde ve farklı gruplarda yer alan SharePoint Microsoft Teams korumak için duyarlılık Microsoft 365 kullanın.
-ms.openlocfilehash: d7d5ae1dfea2179c698922c4ddb045de0cd20ce5
-ms.sourcegitcommit: e3bff611439354e6339bb666a88682078f32ec13
+ms.openlocfilehash: 39caee37f8bf8b2f885824bbdd12ca7b5b372e69
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014365"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63320515"
 ---
 # <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Aynı sitelerde, gruplarda ve Microsoft Teams sitelerde Microsoft 365 için duyarlılık SharePoint kullanma
 
@@ -174,52 +175,11 @@ Bu önizlemenin bilinen sınırlamaları:
     - Power Apps veya Power Automate
     - Üçüncü taraf uygulamalar
 
-### <a name="configure-settings-for-the-default-sharing-link-for-a-site-by-using-powershell-advanced-settings"></a>PowerShell gelişmiş ayarlarını kullanarak bir sitenin varsayılan paylaşım bağlantısının ayarlarını yapılandırma
+### <a name="configure-settings-for-the-default-sharing-link-type-for-a-site-by-using-powershell-advanced-settings"></a>PowerShell gelişmiş ayarlarını kullanarak sitenin varsayılan paylaşım bağlantı türü ayarlarını yapılandırma
 
-Uyumluluk merkezinden yapılandırabilirsiniz sitelerin ve grupların etiket ayarlarına ek olarak, site için varsayılan paylaşım bağlantı türünü ve paylaşım bağlantısı izinlerini de yapılandırabilirsiniz.
+Uyumluluk merkezinden yapılandırabilirsiniz sitelerin ve grupların etiket ayarlarına ek olarak, site için varsayılan paylaşım bağlantı türünü de yapılandırabilirsiniz. Belgeler için duyarlılık etiketleri de varsayılan paylaşım bağlantı türü için yalndırabilirsiniz. Aşırı paylaşımı önlemeye yardımcı olan bu ayarlar, kullanıcılar kendi uygulamalarında Paylaş düğmesini seçtiklerinde otomatik Office seçilir. 
 
-Bu ayarların nasıl olduğu hakkında daha fazla bilgi edinmek için [bkz. Site için varsayılan bağlantı türünü değiştirme](/sharepoint/change-default-sharing-link).
-
-Paylaşım bağlantısı için bu ek etiket ayarları şu anda yalnızca PowerShell *AdvancedSettings* parametresi olarak ve Güvenlik ve Uyumluluk Merkezi [PowerShell'den](/powershell/exchange/scc-powershell) [Set-Label](/powershell/module/exchange/set-label) ve [New-Label](/powershell/module/exchange/new-labelpolicy) cmdlet'leri & kullanılabilir:
-
-- **DefaultSharingScope**: Kullanılabilir değerler:
-    - **SpecificPeople**: Sitenin varsayılan paylaşım bağlantısını "Belirli kişiler" bağlantısına ayarlar
-    - **Kuruluş**: Sitenin varsayılan paylaşım bağlantısını "kuruluş" bağlantısına veya şirket paylaşılabilir bağlantısına ayarlar
-    - **Herkes**: Sitenin varsayılan paylaşım bağlantısını Anonim Erişim veya Herkes bağlantısına ayarlar
-
-- **DefaultShareLinkPermission**: Kullanılabilir değerler:
-    - **Görüntüleme**: Sitenin varsayılan bağlantı iznini "görüntüleme" izinlerine ayarlar
-    - **Düzenle**: Sitenin varsayılan bağlantı iznini "düzenleme" izinlerine ayarlar
-
-Bu iki ayar ve değer, [Set-SPOSite](/powershell/module/sharepoint-online/set-sposite) cmdlet'inden *DefaultSharingScope* ve *DefaultShareLinkPermission* parametrelerinin eşdeğeridir.
-
-Duyarlılık etiketi GUID'nin **8faca7b8-8d20-48a3-8ea2-0f96310a848e** olduğu PowerShell örnekleri:
-
-- Paylaşım bağlantı türünü SpecificPeople olarak ayarlamak için:
-    
-    ````powershell
-    Set-Label -Identity 8faca7b8-8d20-48a3-8ea2-0f96310a848e -AdvancedSettings @{DefaultSharingScope="SpecificPeople"}
-    ````
-
-- Paylaşım bağlantısı izinlerini Düzenle olarak ayarlamak için:
-    
-    ````powershell
-    Set-Label -Identity 8faca7b8-8d20-48a3-8ea2-0f96310a848e -AdvancedSettings @{DefaultShareLinkPermission="Edit"}
-    ````
-
-#### <a name="powershell-tips-for-specifying-the-advanced-settings"></a>Gelişmiş ayarları belirtmek için PowerShell ipuçları
-
-Duyarlılık etiketini adına göre belirtesiniz, ancak etiket adını veya görünen adı belirtme konusunda olası karışıklıkları önlemek için etiket GUID'sini kullanmayı öneririz. GUID'i bulmak için:
-
-````powershell
-Get-Label | Format-Table -Property DisplayName, Name, Guid
-````
-
-Bu gelişmiş ayarlardan birini duyarlılık etiketinden kaldırmak için aynı AdvancedSettings parametre söz dizimini kullanın, ancak bir null dize değeri belirtin. Örneğin:
-
-````powershell
-Set-Label -Identity 8faca7b8-8d20-48a3-8ea2-0f96310a848e -AdvancedSettings @{DefaultSharingScope=""}
-````
+Daha fazla bilgi ve yönergeler için bkz. Site ve site sitelerinin ve belgelerin varsayılan paylaşım bağlantı türünü yapılandırmak için duyarlılık [SharePoint OneDrive](sensitivity-labels-default-sharing-link.md).
 
 ## <a name="sensitivity-label-management"></a>Duyarlılık etiketi yönetimi
 
@@ -351,7 +311,7 @@ Bu komut dizisi kiracınız genelinde birden çok siteyi aynı duyarlılık etik
 
 ## <a name="view-and-manage-sensitivity-labels-in-the-sharepoint-admin-center"></a>Duyarlılık etiketlerini yönetim merkezinde görüntüleme SharePoint yönetme
 
-Uygulanan duyarlılık etiketlerini görüntülemek, sıralamak ve aramak için yeni Yönetim **Merkezi'nde** bulunan Etkin siteler SharePoint kullanın. Önce Duyarlılık sütununu **eklemeniz** gerekiyor olabilir:
+Uygulanan duyarlılık etiketlerini görüntülemek, sıralamak ve aramak için yeni yönetim <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**merkezinde**</a> etkin siteleri SharePoint kullanın. Önce Duyarlılık sütununu **eklemeniz** gerekiyor olabilir:
 
 ![Etkin siteler sayfasında duyarlılık sütunu.](../media/manage-site-sensitivity-labels.png)
 

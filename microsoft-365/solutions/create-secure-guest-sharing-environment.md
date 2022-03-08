@@ -14,16 +14,17 @@ ms.collection:
 - m365initiative-externalcollab
 ms.custom:
 - seo-marvel-apr2020
+- admindeeplinkSPO
 ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: İş birliği geliştirmek için konuk erişimi sağlamak ve bu ortamda güvenli bir Microsoft 365 için kullanılabilir seçenekler hakkında bilgi öğrenin.
-ms.openlocfilehash: ae616bcaa78aa759ca5b1f1be4b1beaf8d709a00
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 97b9c3c26fce137ad4471bbf080d4b7340c8b622
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015233"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63323801"
 ---
 # <a name="create-a-secure-guest-sharing-environment"></a>Güvenli bir konuk paylaşım ortamı oluşturma
 
@@ -180,9 +181,9 @@ Konukları Gruplar ve gruplar ve gruplar için yalnızca web erişimiyle kısıt
 
 Konukların web'de web erişimine kısıtlamak SharePoint
 
-1. Genel yönetim [SharePoint, İlkeler'i](https://admin.microsoft.com/sharepoint) **genişletin ve** Access **denetimi'ne tıklayın**.
-2. **Unmanaged devices öğesini tıklatın**.
-3. Sınırlı, **yalnızca web erişimine izin ver seçeneğini belirtin** ve Kaydet'e **tıklayın**.
+1. Genel yönetim SharePoint İlkeler'i **genişletin ve Access** <a href="https://go.microsoft.com/fwlink/?linkid=2185071" target="_blank">**denetimi'ni seçin**</a>.
+2. **Unmanaged devices öğesini seçin**.
+3. Sınırlı, **yalnızca web erişimine izin ver seçeneğini ve** ardından Kaydet'i **seçin**.
 
 Yönetim merkezinde bu ayarın, Azure AD SharePoint de desteklenen bir koşullu erişim ilkesi oluşturduğuna dikkat edin.
 

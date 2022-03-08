@@ -27,16 +27,19 @@ search.appverid:
 - MOE150
 ms.assetid: c3ac23c5-d4b4-4b1b-b7ce-ea759521bf8c
 description: Microsoft 365 İş'te Yönetici giriş sayfasındaki Cihaz eylemleri listesinde çeşitli cihaz durumları hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: c70740077e42d2dc7b8b15ac7e563d8e245ac455
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 798a753f6d523a3f586ac32698cda80a127c44b5
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984122"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63313825"
 ---
 # <a name="device-states"></a>Cihaz durumları
 
 Bu makale diğer Microsoft 365 İş Ekstra.
+
+> [!NOTE]
+> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Bu teklif, cihazlar için ek güvenlik özellikleri sağlar. [İş için Defender hakkında daha fazla bilgi öğrenin](../../security/defender-business/mdb-overview.md).
 
 **Cihaz eylemleri** listesindeki (Yönetim giriş sayfası \> **Cihaz eylemleri**) cihazlar aşağıdaki durumlarda olabilir.
   
@@ -57,3 +60,7 @@ Bu makale diğer Microsoft 365 İş Ekstra.
 |Silme bekliyor  <br/> |Silme eylemi bekliyor.  <br/> |
 |Bulundu  <br/> |Microsoft 365 İş Ekstra cihazı algıladı.  <br/> |
    
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](../security-and-compliance/secure-your-business-data.md)

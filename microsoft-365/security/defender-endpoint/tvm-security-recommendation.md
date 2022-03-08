@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: bdd92a4be90aca4e7ca85489923ff94850114391
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 57c1909ff54fea6b9151e212f465abb75bab48f8
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63008092"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63325327"
 ---
 # <a name="security-recommendations---threat-and-vulnerability-management"></a>Güvenlik önerileri - Tehdit ve Güvenlik Açığı Yönetimi
 
@@ -108,7 +108,9 @@ Uçarak çıkıştan, aşağıdaki seçeneklerden herhangi birini seçebilirsini
 - [**Özel durum**](tvm-exception.md) seçenekleri - Bir özel durum gönderin, gerekçe belirleyin ve henüz bu sorunu düzeltmek için bir özel durum süresi ayarlayın.
 
 > [!NOTE]
-> Bir cihazda yazılım değişikliği yapılırken, verilerin güvenlik portalına yansıt olması normalde 2 saat sürer. Ancak bu işlem bazen daha uzun sürebilir. Yapılandırma değişiklikleri 4 ile 24 saat arasında sürebilir.
+> Windows, Linux veya macOS cihazlarında yazılım değişikliği yapılırken verilerin güvenlik portalına yansıt olması normalde 2-4 saat sürer. iOS ve Android cihazlardaki değişikliklerin yansıt olması 8 saat kadar sürebilir. Daha uzun sürerken bazı durumlar olabilir.
+> 
+> Yapılandırma değişiklikleri 4 ile 24 saat arasında sürebilir.
 
 ### <a name="investigate-changes-in-device-exposure-or-impact"></a>Cihaz etkilenme veya etkiyi araştırma
 

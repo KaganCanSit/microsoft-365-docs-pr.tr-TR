@@ -17,17 +17,14 @@ ROBOTS: NOINDEX
 description: Kullanıcılar, izinleri olan paylaşılan posta kutularına gönderilen karantinaya alınmış iletileri görüntülemeyi ve bu iletiler üzerinde eylem yapmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e78a46bca97ea58a88195c9d05e11332528cf3af
-ms.sourcegitcommit: 317fab13e84b2867087a6ba0a593313ecf43bbed
+ms.openlocfilehash: 8d9f83f176675be26fadf3d720dcc78e5146bde3
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "62988815"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63324529"
 ---
 # <a name="view-and-release-quarantined-messages-from-shared-mailboxes"></a>Paylaşılan posta kutularından karantinaya alınan iletileri görüntüleme ve serbest bırakma
-
-> [!NOTE]
-> Bu makalede açıklanan özellikler şu anda Önizleme'dedir, herkes tarafından kullanılamaz ve değişebilir.
 
 Kullanıcılar, [EOP'de](find-and-release-quarantined-messages-as-a-user.md) kullanıcı olarak karantinaya alınmış iletileri bulma ve bırakma konusunda açıklandığı gibi, alıcılardan biri olduğu karantinaya alınmış iletileri yönetebilir. Peki **, kullanıcının Tam** Erişim ve Farklı Gönder veya Adına Gönder izinlerine sahip olduğu paylaşılan posta kutularında, kullanıcı e-posta kutusunda paylaşılan [posta](/exchange/collaboration-exo/shared-mailboxes) kutularında Exchange Online?
 

@@ -18,12 +18,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Farklı MDM ve MAM yöntemleri arasında seçim seçin.
-ms.openlocfilehash: 8048c532fc44ea14e391535f7f509a13c1e64d36
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 0fa7389fc68523cf2db253c9e4e9f64cc85139a0
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983975"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63316457"
 ---
 # <a name="options-for-protecting-your-devices-and-app-data"></a>Cihazlarınızı ve uygulama verilerinizi koruma seçenekleri
 
@@ -32,7 +32,7 @@ Kurumsal ve kurumsal kimlikle, kuruluş cihazlarınızı ve verilerinizi güvenl
 - Intune (Microsoft Uç Nokta Yönetimi'nin bir parçası)
 - Azure Active Directory Premium plan.
 - Temel Mobil kullanım ve Güvenlik (Microsoft 365 ve kurumsal planların çoğunda yer almaktadır) Veya önceki tek başına planların bir bölümü veya hepsini içeren abonelikleri kullanın.
-
+- İş için Microsoft Defender (Microsoft 365 İş Ekstra dahil; bağımsız bir plan olarak da kullanılabilir)
 - A Microsoft 365 İş Ekstra subscription, which includes security and threat protection for small business under 300 users.
 - Microsoft 365 Kurumsal koruma ve tehdit koruması içeren tüm planları içerir.
 
@@ -49,10 +49,15 @@ Kurumsal ve kurumsal kimlikle, kuruluş cihazlarınızı ve verilerinizi güvenl
 - **Azure Active Directory (AD) Premium** planları, işletme ve kurumsal planlar için bazı yeni planlarla Microsoft 365 tek başına planlardır. Daha fazla bilgi için bkz. [Azure AD fiyatlandırması](https://azure.microsoft.com/pricing/details/active-directory/).
 
      Azure AD Premium P1 ve Azure AD Premium P2 özellikleri, kendi kendine parola sıfırlama gibi özellikleri ayarlamanıza olanak verir. Yeni planların özellikleri hakkında daha fazla bilgi Premium Azure [AD fiyatlandırma sayfasına](https://azure.microsoft.com/pricing/details/active-directory/) bakın.
-- **Microsoft 365 İş Ekstra** tehdit koruması Intune ve Azure Active Directory Premium P1'Office 365 korumayı içerir. 
+
+- **Microsoft 365 İş Ekstra** içinde Intune ve Azure Active Directory Premium P1, Plan 1 için Microsoft Defender Office 365 ve İş için Microsoft Defender vardır. 
  
-    Microsoft 365 İş Ekstra, cihazlarınızı ve uygulama verilerinizin güvenliğini sağlamak için bir dizi ilke şablonu sunar. 300 kullanıcı altındaki çoğu işletme için iyi bir güvenlik ve tehdit koruması düzeyi sunar. Daha fazla bilgi için bkz. [Kurulum Microsoft 365 İş Ekstra](../../business/set-up.md) ayarları, bilgisayar güvenlik [Windows 10 güvenlik](../../business/secure-win-10-pcs.md) [Microsoft 365 İş Ekstra özellikleri kullanma](/security-and-compliance/security-your-business-data.md).
+    Microsoft 365 İş Ekstra, cihazlarınızı ve uygulama verilerinizin güvenliğini sağlamak için bir dizi ilke şablonu sunar. 300 kullanıcı altındaki çoğu işletme için iyi bir güvenlik ve tehdit koruması düzeyi sunar. Daha fazla bilgi için bkz. [Microsoft 365 İş Ekstra Ve](../../business-premium/index.md) İş için [Microsoft Defender'a Genel Bakış](../../security/defender-business/mdb-overview.md).
 
 - **Microsoft 365 abonelikleri için E5** Microsoft Intune ve Azure AD Premium plan 1 ve 2'ye dahildir.
 
     Microsoft 365 E5, tüm yeni abonelikler için en yüksek güvenlik ve tehdit Microsoft 365 sunar. Daha fazla bilgi için bkz. [Microsoft 365 genel bakış bilgileri](../../enterprise/microsoft-365-overview.md).
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](../security-and-compliance/secure-your-business-data.md)
