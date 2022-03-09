@@ -15,16 +15,16 @@ ms.custom: nextgen
 ms.reviewer: pahuijbr, mkaminska
 manager: dansimp
 ms.technology: mde
-ms.date: 02/09/2022
+ms.date: 03/07/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 5d464fe0b43aa4395b81723d945019d5450a7fc0
-ms.sourcegitcommit: cafca45069819a44c7cf8c67f6c1e105de1b3393
+ms.openlocfilehash: e19b6400643b29005a6c92323f58f7dc996db49e
+ms.sourcegitcommit: ad6d9fd5ad050c72622a32a191997fe6d7b2deee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "63027555"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63353909"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Güncelleştirmeleri Microsoft Defender Virüsten Koruma ve taban çizgilerini uygulama
 
@@ -105,6 +105,7 @@ Güvenlik zekası güncelleştirme sürümü: 1.357.8.0 <br/>
 - Bu ayar `-ServiceHealthReportInterval` [Set-MpPreference olarak eklendi](/powershell/module/defender/set-mppreference). Bu ilke, zamanlanmış bir tarama yapmak için zaman aralığını yapılandırarak (dakika içinde).
 - Bu ayar `AllowSwitchToAsyncInspection` [Set-MpPreference olarak eklendi](/powershell/module/defender/set-mppreference). Bu ilke, eşitlenen ağ akışları denetlenen bir eşitleme denetimine geçerek, denetlenen ve doğrulandıktan sonra bir eşitleme denetimine geçişe olanak sağlayan bir performans iyileştirmesi sağlar.
 - Performans Çözümleyicisi v2 güncelleştirmeleri: Uzak PowerShell ve PowerShell 7.x desteği eklendi. Bkz[. Sistem için performans çözümleyicisi Microsoft Defender Virüsten Koruma](tune-performance-defender-antivirus.md).
+- Ağ denetleme sistemi sürücüsünde olası Microsoft Defender Virüsten Koruma paket hatası düzeltildi.
 
 ### <a name="known-issues"></a>Bilinen Sorunlar
 
@@ -638,6 +639,21 @@ En son virüsten koruma ve kötü amaçlı yazılımdan koruma güncelleştirmel
 Daha fazla bilgi için bkz. [İşletim sisteminin yükleme Windows için Microsoft Defender güncelleştirmesi](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
 
 <details>
+<summary>20220305.1</summary>
+
+&ensp;Paket sürümü: **20220305.1**<br/>
+&ensp;Platform sürümü: **4.18.2201.10**<br/>
+&ensp;Altyapı sürümü: **1.1.18900.3**<br/>
+&ensp;İmza sürümü: **1.359.1405.0**<br/>
+
+### <a name="fixes"></a>Düzeltmeler
+- Yok
+
+### <a name="additional-information"></a>Ek bilgiler
+- Yok
+
+<br/>
+</details><details>
 <summary>20220203.1</summary>
 
 &ensp;Paket sürümü: **20220203.1**<br/>
