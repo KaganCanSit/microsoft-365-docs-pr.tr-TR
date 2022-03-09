@@ -14,13 +14,13 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
-ms.date: 02/07/2022
-ms.openlocfilehash: a0bca99258bd256797437cdc4756910fc713cf26
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.date: 03/09/2022
+ms.openlocfilehash: 9f323d902f0e421ea73303706e0785f9bd76f3ff
+ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/09/2022
-ms.locfileid: "63401194"
+ms.locfileid: "63406071"
 ---
 # <a name="microsoft-defender-for-endpoint-device-control-removable-storage-access-control"></a>Uç Nokta Cihaz Denetimi Için Microsoft Defender Çıkarılabilir Depolama Denetimi
 
@@ -35,8 +35,6 @@ Access Denetimi'nin Uç Nokta Cihaz Denetimi Depolama Microsoft Defender aşağ�
 
 - bağımsız olarak veya dışlama olmadan çıkarılabilir depolama alanına erişimi denetleme, okuma, yazma veya yürütmeye izin verme veya engelleme
 
-<br/><br/>
-
 |Ayrıcalık|İzin|
 |---|---|
 |Access|Okuma, Yazma, Yürütme|
@@ -45,8 +43,6 @@ Access Denetimi'nin Uç Nokta Cihaz Denetimi Depolama Microsoft Defender aşağ�
 |GPO Desteği|Evet|
 |Kullanıcı Tabanlı Destek|Evet|
 |Makine Tabanlı Destek|Evet|
-
-<br/><br/>
 
 |Özellik|Açıklama|Intune aracılığıyla dağıtma|Grup İlkesi aracılığıyla dağıtma|
 |---|---|---|---|
@@ -68,6 +64,8 @@ Kötü amaçlı yazılım Depolama **4.18.2103.3** veya sonraki bir sürümüne 
 
 - **4.18.2111** veya sonrakisi: PowerShell aracılığıyla 'Çıkarılabilirleri Etkinleştir veya Devre Dışı Bırak' Depolama Access Denetimi', 'Varsayılan Zorlama', istemci makinesi ilkesi güncelleştirme süresi, dosya bilgileri
 
+- **4.18.2201** veya sonrakisi: OMA-URI aracılığıyla depolamaya izin verilen bir dosyanın kopyasını destekleme
+
 :::image type="content" source="images/powershell.png" alt-text="PowerShell arabirimi.":::
 
 > [!NOTE]
@@ -82,17 +80,13 @@ Kötü amaçlı yazılım Depolama **4.18.2103.3** veya sonraki bir sürümüne 
 
 ### <a name="removable-storage-group"></a>Çıkarılabilir Depolama Grubu
 
-<br/><br/>
-
 |Özellik Adı|Açıklama|Seçenekler|
 |---|---|---|
 |**GroupId**|Benzersiz bir kimlik olan GUID, grubu temsil eder ve ilkede kullanılır.||
-|**DescriptorIdList**|Grubun içini kapsıyorsanız kullanmak istediğiniz cihaz özelliklerini listele. Her cihaz özelliği için, daha ayrıntılı [bilgi için](device-control-removable-storage-protection.md) Cihaz Özellikleri'ne bakın. Tüm özellikler büyük/harfe duyarlıdır. |**PrimaryId**: `RemovableMediaDevices`, , `CdRomDevices``WpdDevices`<p>**BusId**: Örneğin, USB, BUTA<p>**DeviceId**<p>**HardwareId**<p>**InstancePathId**: InstancePathId, sistem içinde cihazı benzersiz olarak tanımlayan bir dizedir; örneğin, `USBSTOR\DISK&VEN_GENERIC&PROD_FLASH_DISK&REV_8.07\8735B611&0`. Ucundaki sayı (örneğin, &0) kullanılabilir yuvasını temsil eder ve cihazdan cihaza değişebilir. En iyi sonuçları elde etmek için en sonunda joker karakter kullanın. Örneğin, `USBSTOR\DISK&VEN_GENERIC&PROD_FLASH_DISK&REV_8.07\8735B611*`.<p>**FriendlyNameId**<p>**SeriSayıKimlik**<p>**VID**<p>**PID**<p>**VID_PID**<p>0751_55E0: Bu tam VID/PID çiftini eşleştirin<p>55E0: Herhangi bir medyayı PID=55E0 ile eşler <p>0751: VID=0751 ile herhangi bir medyayı eşleşme|
+|**DescriptorIdList**|Grubun içini kapsıyorsanız kullanmak istediğiniz cihaz özelliklerini listele. Her cihaz özelliği için, daha ayrıntılı [bilgi için](device-control-removable-storage-protection.md) Cihaz Özellikleri'ne bakın. Tüm özellikler büyük/harfe duyarlıdır. |**PrimaryId**: `RemovableMediaDevices`, , `CdRomDevices``WpdDevices`<p>**BusId**: Örneğin, USB, BUTA<p>**DeviceId**<p>**HardwareId**<p>**InstancePathId**: InstancePathId, sistem içinde cihazı benzersiz olarak tanımlayan bir dizedir; örneğin, `USBSTOR\DISK&VEN_GENERIC&PROD_FLASH_DISK&REV_8.07\8735B611&0`. Ucundaki sayı (örneğin, &0) kullanılabilir yuvasını temsil eder ve cihazdan cihaza değişebilir. En iyi sonuçları elde etmek için en sonunda joker karakter kullanın. Örneğin, `USBSTOR\DISK&VEN_GENERIC&PROD_FLASH_DISK&REV_8.07\8735B611*`.<p>**FriendlyNameId**<p>**SeriSayıKimlik**<p>**VID**<p>**PID**<p>**VID_PID**<p>`0751_55E0`: bu tam VID/PID çiftini eşleştirin<p>`_55E0`: herhangi bir medyayı PID=55E0 ile eşler <p>`0751_`: herhangi bir medyayı VID=0751 ile eşler|
 |**MatchType**|içinde kullanılan birden çok cihaz özelliği olduğunda `DescriptorIDList`, MatchType ilişkiyi tanımlar.|**MatchAll**: Altındaki `DescriptorIdList` tüm öznitelikler **Ve** ilişkisi olur; örneğin, `DeviceID` `InstancePathID`yönetici her bağlantılı USB için ve ve , değerlerini koyarsa, sistem USB'nin her iki değere de uygun olup olmadığını kontrol eder. <p> **MatchAny**: DescriptorIdList'in altındaki öznitelikler **Veya ilişkisi** olur; örneğin, yönetici her `DeviceID` `InstancePathID`bağlantılı USB için ve ' koyarsa, USB'de aynı **DeviceID** veya InstanceID değeri olduğu sürece sistem **zorlamayı** yapar. |
 
 ### <a name="access-control-policy"></a>Erişim Denetimi İlkesi
-
-<br/><br/>
 
 | Özellik Adı | Açıklama | Seçenekler |
 |---|---|---|
@@ -164,7 +158,7 @@ Uç Nokta Çıkarılabilir veya Erişim Denetimi'Depolama Microsoft Defender'ı 
 
     Belirli bir kullanıcıya kısıtlamak istediğiniz, SID özelliğini Girdi'de kullanın. Girdi ilkesinde SID yoksa, Makine için herkes oturum açma örneğine Girdi uygulanır.
     
-    Yazma erişimi için dosya bilgilerini izlemek için doğru Seçenek (8 veya 16) ile doğru AccessMask'ı kullanın; dosya yakalama bilgileri [örneğidir](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Group%20Policy/Audit%20File%20Information.xml).
+    Yazma erişimi için dosya bilgilerini izlemek için doğru Seçenek(16) ile doğru AccessMask'ı kullanın; dosya yakalama bilgileri [örneğidir](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Group%20Policy/Audit%20File%20Information.xml).
 
     Aşağıdaki resimde SID özelliğinin kullanımı ve Senaryo 1 örneği: Tüm kullanıcılara Yazma ve Yürütme erişimini engelleme, ancak belirli onaylanmış [USB'lere izin verme örneklerini göstermektedir](#scenario-1-prevent-write-and-execute-access-to-all-but-allow-specific-approved-usbs).
 
@@ -181,6 +175,7 @@ Uç Nokta Çıkarılabilir veya Erişim Denetimi'Depolama Microsoft Defender'ı 
 4. Varsayılan zorlama: ilke yoksa çıkarılabilir medyaya varsayılan erişimi (Reddet veya İzin Ver) ayarlamanıza olanak sağlar. Örneğin, RemovableMediaDevices için yalnızca ilkeye (Reddet veya İzin Ver) sahipsiniz ancak CdRomDevices veya WpdDevices ile ilgili hiçbir ilkeye sahip değildir ve varsayılan olarak Bu ilke üzerinden Reddet'i ayarlarken CdRomDevices veya WpdDevices'e Okuma/Yazma/Yürütme erişimi engellenir.
 
    - Bu ayarın dağıtımında Varsayılan İzin Ver veya **Varsayılan Reddet** **ayarlarını da göreceğiz**.
+   - Bu ayarı yapılandırırken hem Disk düzeyi hem de Dosya sistemi düzeyinde AccessMask'ı düşünün; örneğin, Varsayılan Reddet'i kullanmak ama belirli bir depolamaya izin vermek için hem Disk düzeyi hem de Dosya sistemi düzeyi erişimine izin vermek için AccessMask'ı 63 olarak ayarlayın.
 
     :::image type="content" source="images/148609579-a7df650b-7792-4085-b552-500b28a35885.png" alt-text="Varsayılan powershell koduna izin ver veya varsayılan reddet":::
 
@@ -188,13 +183,13 @@ Uç Nokta Çıkarılabilir veya Erişim Denetimi'Depolama Microsoft Defender'ı 
 
     :::image type="content" source="images/148608318-5cda043d-b996-4146-9642-14fccabcb017.png" alt-text="Cihaz Denetimi ayarları":::
 
-   - Bu ayarın dağıtımında "Etkin" veya 'Devre Dışı' - Devre Dışı ifadelerini görüyorsunuz. Bu makinede Çıkarılabilir Veya Erişim Depolama ilkesi çalışmıyor.
+   - Bu ayarı dağıttırdikten sonra Etkin veya Devre **Dışı'ya** **bakın**. Devre dışı bırak, bu makinenin Access Denetimi ilkesi Depolama Çıkarılabilir ayarına sahip olmadığını gösterir.
 
     :::image type="content" source="images/148609685-4c05f002-5cbe-4aab-9245-83e730c5449e.png" alt-text="PowerShell kodunda Etkin veya Devre Dışı cihaz denetimi":::
 
 6. Dosyanın kopyasının konumunu ayarlama: Yazma erişimi gerçekleşirken dosyanın bir kopyasını almak için, sistemin kopyayı kaydedeli olduğu konumu ayarlanız gerekir.
     
-    Bunu doğru AccessMask ve Option ile birlikte dağıtmalı - yukarıdaki 2. adıma bakın.
+    Bunu doğru AccessMask ve Option ile birlikte dağıtın. Yukarıdaki 2. adıma bakın.
 
     :::image type="content" source="../../media/define-device-control-policy-rules.png" alt-text="Grup İlkesi - Dosya kanıtı için locaiton ayarlama":::
 
@@ -246,7 +241,7 @@ Microsoft Endpoint Manager merkezi (<https://endpoint.microsoft.com/>)  **Cihazl
 
     - Veri Türü: Dize (XML dosyası)
        
-    Yazma erişimi için dosya bilgilerini izlemek için doğru Seçenek (8 veya 16) ile doğru AccessMask'ı kullanın; dosya yakalama bilgileri [örneğidir](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Audit%20File%20Information.xml).
+    Yazma erişimi için dosya bilgilerini izlemek için doğru Seçenek(16) ile doğru AccessMask'ı kullanın; dosya yakalama bilgileri [örneğidir](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Audit%20File%20Information.xml).
 
 3. Varsayılan zorlama: ilke yoksa çıkarılabilir medyaya varsayılan erişimi (Reddet veya İzin Ver) ayarlamanıza olanak sağlar. Örneğin, RemovableMediaDevices için yalnızca ilkeye (Reddet veya İzin Ver) sahipsiniz ancak CdRomDevices veya WpdDevices ile ilgili hiçbir ilkeye sahip değildir ve varsayılan olarak Bu ilke üzerinden Reddet'i ayarlarken CdRomDevices veya WpdDevices'e Okuma/Yazma/Yürütme erişimi engellenir.
 
@@ -258,6 +253,7 @@ Microsoft Endpoint Manager merkezi (<https://endpoint.microsoft.com/>)  **Cihazl
       `DefaultEnforcementDeny = 2`
 
     - Bu ayarın dağıtımında Varsayılan İzin Ver veya **Varsayılan Reddet** **ayarlarını görme**
+    - Örneğin, bu ayarı yapılandırken hem Disk düzeyi hem de Dosya sistemi düzeyinde AccessMask'ı göz önünde bulundurabilirsiniz; örneğin, Varsayılan Reddet'i kullanmak ancak belirli bir depolamaya izin vermek için hem Disk düzeyi hem de Fiel sistem düzeyi erişimine izin vermek için AccessMask ayarını 63 olarak ayarlayın.
 
     :::image type="content" source="images/148609590-c67cfab8-8e2c-49f8-be2b-96444e9dfc2c.png" alt-text="PowerShell koduna varsayılan Zorlamaya İzin Ver":::
 
@@ -276,7 +272,7 @@ Microsoft Endpoint Manager merkezi (<https://endpoint.microsoft.com/>)  **Cihazl
 
 5. Dosyanın bir kopyasının konumunu ayarlama: Yazma erişimi gerçekleşirken dosyanın bir kopyasını almak için sistemin kopyayı kaydedeli olduğu konumu ayarlanız gerekir.
     
-    - OMA-URI: `./Vendor/MSFT/Defender/Configuration/DataDuplicationRemoteLocation`
+    - OMA-URI: `./Vendor/MSFT/Defender/Configuration/DataDuplicationRemoteLocation;**username**;**password**`
 
     - Veri Türü: Dize
     

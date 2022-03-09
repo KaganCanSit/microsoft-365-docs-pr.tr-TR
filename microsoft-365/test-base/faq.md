@@ -2,8 +2,8 @@
 title: Test Tabanı SSS
 description: Sık sorulan soruları gözden geçirme
 search.appverid: MET150
-author: mansipatel-usl
-ms.author: mapatel
+author: Tinacyt
+ms.author: tinachen
 manager: rshastri
 audience: Software-Vendor
 ms.topic: troubleshooting
@@ -14,12 +14,12 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: mapatel
 f1.keywords: NOCSH
-ms.openlocfilehash: 668631563b35a848df5bfbdfd930be17efce8c04
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: e21774ada245a3b9d5c131998b7c60b4a4778210
+ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988176"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63406015"
 ---
 # <a name="test-base-faq"></a>Test Tabanı SSS
 
@@ -29,7 +29,7 @@ ms.locfileid: "62988176"
 
 Uygulama paketinizi göndermek için [Azure Portal'a](https://www.aka.ms/testbaseportal "Test Tabanı Giriş Sayfası") gidin ve kendi kendine hizmet eden Test Temel portalı panosu üzerinden uygulama ikili dosyalarını, bağımlılıklarını ve test betiklerini içeren sıkıştırılmış bir klasörü karşıya yükleyin. 
 
-Daha fazla bilgi için lütfen ekleme kullanıcı kılavuzuna bakın veya yardım ve daha <testbasepreview@microsoft.com> fazla bilgi için ekibimizle iletişime geçin.
+Daha fazla bilgi için ekleme kullanıcı kılavuzuna bakın veya yardım ve daha fazla <testbasepreview@microsoft.com> bilgi için ekibimizle iletişime geçin.
 
 **S: Yeni olmayan (OOB) testleri nedir?**
 
@@ -42,18 +42,18 @@ Standart dışı (OOB) testleri, uygulamanız üzerinden standart telemetri sağ
 **S: Hazır gelen testler dışında test gönderebilirsiniz (yükleme, başlatma, kapatma, kaldırma test betikleri)?**
 
 **A:** Evet, müşteriler self servis portal panosu üzerinden **işlevsel testler** için uygulama paketleri de yükleyebilir.
-**İşlevsel testler** , müşterilerin betiklerini kendi uygulamasında özel işlevler çalıştırmalarına olanak sağlayan testlerdir.
+**İşlevsel testler** , müşterilerin uygulamalarında özel işlevler çalıştırmaları için betiklerini yürütmelerine olanak sağlayan testlerdir.
 
 
 ## <a name="testing"></a>Test
 
 **S: İşlevsel testleri destekliyor musunuz?**
 
-**A:** Evet, Test Tabanı işlevsel testleri destekler. İşlevsel testler, müşterilerimizin betiklerini kendi uygulamasında özel işlevler çalıştırmalarına olanak sağlayan testlerdir. 
+**A:** Evet, Test Tabanı işlevsel testleri destekler. İşlevsel testler, müşterilerimizin, betiklerini kendi uygulamalarında özel işlevler çalıştıracak şekilde yürütmelerine olanak sağlayan testlerdir. 
 
-Uygulama paketinizi işlevsel test amacıyla göndermek için, uygulama ikili dosyalarını, bağımlılıklarını ve test betiklerini içeren sıkıştırılmış klasörü kendi kendine portal panomuz aracılığıyla karşıya yükleyin. 
+Uygulama paketinizi işlevsel test amacıyla göndermek için, kendi kendine portal panomuz aracılığıyla uygulama ikili dosyalarını, bağımlılıklarını ve test betiklerini içeren sıkıştırılmış klasörü karşıya yükleyin. 
 
-Daha fazla bilgi için lütfen ekleme kullanıcı kılavuzuna bakın veya yardım ve daha <testbasepreview@microsoft.com> fazla bilgi için ekibimizle iletişime geçin.
+Daha fazla bilgi için ekleme kullanıcı kılavuzuna bakın veya yardım ve daha fazla <testbasepreview@microsoft.com> bilgi için ekibimizle iletişime geçin.
 
 **S: Test Tabanı test verilerimizi nasıl işler?**
 
@@ -73,7 +73,7 @@ Ayrıca gerekli çerçevenin bağımlı ikililerini de sağlay (karşıya yükle
 
 **A:** Yayın öncesi sürüm derlemeleri üzerinde çalıştırmız her test için, sonuçları Azure Portal pano üzerinde 48 saat içinde [size sunaruz](https://www.aka.ms/testbaseportal "Test Tabanı Giriş Sayfası") .
 
-**S: Yükledikten sonra yeniden başlat biliyor musunuz?**
+**S: Yüklemeden sonra yeniden başlat biliyor musunuz?**
 
 **A:** Evet, bizim süreç yüklemeden sonra yeniden başlatmayı destekliyor. Ekleme portalında Görevlerinizi ayarlarken "İsteğe bağlı ayarlar" açılır **listesinden bu** seçeneği seçmeye emin olun.
 
@@ -91,7 +91,7 @@ Hazır (OOB) testleri için Yükleme betiği için yeniden başlatma gerekip ger
 
 **S: Güvenlik Güncelleştirmesi testleri ile Özellik Güncelleştirmesi testleri arasında ne fark vardır?**
 
-**A:** Güvenlik güncelleştirmesi testlerinde, kullanıcılarımızın her zaman **<ins></ins>** güvenli ve korumalı tutmaya odaklanan aylık yayın öncesi sürüm güvenlik güncelleştirmeleri Windows test edildi. Özellik güncelleştirmesi testlerinde, özelliklere ve özelliklere **<ins></ins>** yönelik yeni özellikler ve özellikler ekan iki yıllık sürüm öncesi özellik güncelleştirmelerinde Windows.
+**A:** Güvenlik güncelleştirmesi testlerinde, kullanıcılarımızın her zaman **<ins></ins>** güvenli ve korumalı tutmaya odaklanan aylık yayın öncesi sürüm güvenlik güncelleştirmeleri Windows test edildi. Özellik güncelleştirmesi testlerinde, özelliklere ve özelliklere **<ins></ins>** yeni özellikler ekan iki yıllık sürüm öncesi özellik güncelleştirmelerini Windows.
 
 ## <a name="debugging-options"></a>Hata Ayıklama seçenekleri
 
@@ -133,7 +133,7 @@ Sürüm öncesi güvenlik güncelleştirmeleri testlerine ek olarak, platformumu
 
 **S: Hizmetle ilişkilendirilmiş bir ücret var mı?**
 
-**A:** Test Temel hizmeti Genel Kullanılabilirlik (GA) tarihine kadar kullanıcılara ücretsiz olarak sağlanır. Bu zaman içinde tüm müşteriler için yürürlüğe girecek bir maliyet yapısını duyuracak. 
+**A:** 1 Mart 2022'den itibaren geçerli olmak üzere, doğrulama ihtiyaçlarınızı karşılamak için aboneliğiniz kapsamında 6 ay içinde süresi dolan 100 ücretsiz saat (800 ABD Doları değerinde) sağlanacaktır. Ücretsiz saatler tüketildikten (veya kullanılmadan önce sona erdikten) sonra, kullanımınız karşısında otomatik olarak saat başına 8 $'lık tarife yapılır.   
 
 **S: Test Tabanı hakkında nasıl geri bildirim s olabilirim?**
 

@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir soruşturma veya davayla ilgili içeriği korumak için Microsoft 365 çekirdek eKbulma durumuyla ilişkilendirilmiş bir tutma oluşturabilirsiniz.
-ms.openlocfilehash: 0d80197becdeb07c917602ff27a1ad9b2c882029
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 976c0e47195c520620cfa57e996cee42df509593
+ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63322121"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63406043"
 ---
 # <a name="create-an-ediscovery-hold"></a>eBulma ayrımı oluşturma
 
@@ -81,6 +81,9 @@ Bir tutma  oluşturmada, belirtilen içerik konumlarında korunan içeriğin kap
 10. Sorgu tabanlı bir tutma yapılandırdıktan sonra, Sonraki'ne **tıklayın**.
 
 11. Ayarlarınızı gözden geçirin (ve gerekirse düzenleyin) ve sonra Gönder'e **tıklayın**.
+
+> [!NOTE]
+> Sorgu tabanlı bir tutma  oluştururken, seçilen konumlardan alınan tüm içerik başlangıçta basılı tutar. Daha sonra, belirtilen sorguyla eşleşmemiş olan içerik her yedi ile 14 günde bir temizlemeyi sağlar. Bununla birlikte, içerik yerine herhangi bir türde beşten fazla 0'dan fazla 10 000 000 000 0000 yer varsa veya herhangi bir öğede dizin oluşturma sorunları varsa, sorgu tabanlı tutma içeriği temizlemez.
 
 ## <a name="query-based-holds-placed-on-sites"></a>Sitelere yerleştirilen sorgu tabanlı 10
 

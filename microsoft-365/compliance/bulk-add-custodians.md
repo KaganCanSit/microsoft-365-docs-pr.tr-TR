@@ -14,17 +14,29 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Bir vakaya çeşitli koruyucuları ve ilişkili veri kaynaklarını hızla eklemek için içeri aktarma aracını Advanced eDiscovery.
-ms.openlocfilehash: 5e2ce53a227462a1fddd7785faf83355ca70611c
-ms.sourcegitcommit: 2e05865beeb2051fd9ece212a46179310b946a46
+description: Bir vakaya hızla çeşitli koruyucular ve ilişkili veri kaynaklarını hızla eklemek için toplu içeri aktarma aracını Advanced eDiscovery.
+ms.openlocfilehash: f02745f8eb9dff2ce54d128d967486b0dd9cbc7a
+ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2021
-ms.locfileid: "63008074"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63405986"
 ---
 # <a name="import-custodians-to-an-advanced-ediscovery-case"></a>Koruyucuları bir vakaya Advanced eDiscovery aktarma
 
-Birçok Advanced eDiscovery koruyucu içeren diğer durumlarda, bir vakaya eklemek için gerekli bilgileri içeren bir CSV dosyası kullanarak birden çok koruyucuları bir kerede içeri aktarabilirsiniz.
+Birçok Advanced eDiscovery koruyucu içeren diğer durumlarda, bir vakaya eklemek için gerekli bilgileri içeren bir CSV dosyası kullanarak birden çok koruyucuları bir kerede içeri aktarabilirsiniz. İçeri aktarma koruyucu aracı, içeri aktarma işi oluşturulmadan önce CSV dosyasını da doğrular. Bu, içeri aktarma işinin tamamlandıktan sonra bir özel dosya eklinin eklenmesini engelleyen hatalar olduğunu öğrenmek için beklemek yerine CSV dosyasındaki tüm hataları düzeltebilirsiniz.
+
+## <a name="before-you-import-custodians"></a>Koruyucuları içeri aktarmadan önce
+
+- CSV dosyası başına en çok 1.000 koruyucu (satır) içeri aktarabilirsiniz.
+
+- Her custo ortak için en fazla 500 veri kaynağı ilişkilendirilebilirsiniz.  
+
+- Yalnızca, kuruluş kuruluşlarının parçası olan koruyucuları içeri Azure Active Directory.
+
+- Her koruyucu, benzersiz bir e-posta adresine sahip olmalıdır.
+
+- Etkin olmayan bir posta kutusunu özel kişi olarak içeri aktararak veya etkin olmayan bir posta kutusunu başka bir özel kişi ile ilişkilendirmek için, etkin olmayan posta kutusunun e-posta adresine bir "." öneki ekleyin (örneğin, .sarad@contoso.onmmicrosoft.com).
 
 ## <a name="import-custodians"></a>Koruyucuları içeri aktarma
 
@@ -32,34 +44,50 @@ Birçok Advanced eDiscovery koruyucu içeren diğer durumlarda, bir vakaya eklem
 
 2. Veri **kaynağı ekleEkleçleri** >  **sınırla'ya tıklayın**.
 
-3. Koruyucuları **içeri aktar sayfasında** , Özel şablon CSV **dosyasını** indirmek için Boş şablon indir'e tıklayın.
+3. Şablon al **sihirbazı sayfasında** , özel şablon **CSV dosyasını** indirmek için CSV şablonunu indir'e tıklayın.
 
    ![Koruyucuları içeri aktarma sayfasından bir CSV şablonu indirin.](../media/ImportCustodians1.png)
 
-4. ÖZEL bilgileri CSV dosyasına ekleyin ve yerel bilgisayarınıza kaydedin. CSV [dosyasındaki gerekli özellikler hakkında bilgi için Custo csv](#custodian-csv-file) dosyası bölümüne bakın.
+4. ÖZEL bilgileri CSV dosyasına ekleyin ve yerel bilgisayarınıza kaydedin. CSV [dosyasındaki gerekli özellikler hakkında ayrıntılı bilgi için Custo csv](#custodian-csv-file) dosyası bölümüne bakın.
 
 5. CSV dosyasını özel kişi bilgileriyle hazır açtıktan sonra,  >  Veri kaynakları sekmesine geri gidin ve Veri  kaynağı **ekleM custod bilgilerini** yeniden içeri aktar'a tıklayın.
 
-6. Koruyucuları **içeri aktar uç** sayfasında Gözat'a tıklayın ve  koruyucu bilgilerini içeren CSV dosyasını karşıya yükleyin.
+6. **CSV Upload sihirbazı** sayfasında, Csv Upload tıklayın ve custo cust  (özel dosya) bilgilerini içeren CSV dosyasını karşıya yükleyin.
 
-   CSV dosyası karşıya yüklendikten sonra, **BulkAddCusto bu** adlı bir iş oluşturulur ve **İş sekmesinde görüntülenir** . İş, koruyucuları ve ilişkili veri kaynaklarını doğrular ve sonra bunları durum sayfasının **Veri** kaynakları sayfasına ekler.
+   SIZ CSV dosyasını karşıya yükledikten sonra, içeri aktarma sihirbazı CSV dosyasını doğrular. Doğrulama hatası varsa, sihirbaz hataları görmek için bağlantı içeren bir hata başlığı görüntüler.
+
+   ![Daha fazla bilgi bağlantısı içeren doğrulama hatası başlığı.](../media/ImportCustodians2.png)
+
+   Hata bilgileri hatayı içeren hücrenin satır ve sütununu tanımlar ve bir düzeltme eylemi önerir. Herhangi bir doğrulama hatasını düzeltmeli ve sabit CSV dosyasını yeniden yükleyesiniz. İçeri aktarma koruyucu işini oluşturamadan önce CSV dosyasının başarıyla doğrulanması gerekir.
+
+7. CSV dosyası doğrulandıktan sonra İleri'ye **tıklayın ve sonra** içeri aktarma işini **başlatmak için** İçeri Aktar'a tıklayın.
+
+İçeri aktarma işini başladıktan sonra, Advanced eDiscovery şunları yapar:
+
+- Vakanın İş **sekmesinde BulkAddCusto ötele** **adlı** bir iş oluşturur.
+
+- Her custo veri kaynağı için Gelişmiş dizin oluşturma işlemi gerçekleştirir.
+
+- Tüm custo custo **ve data sources (CSV dosyasındaki Is OnHold** özelliği TRUE olarak ayarlanmışsa)
+
+İçeri aktarma koruyucu işi tamamlandığında, koruyucular ve ilişkili veri kaynakları, vakanın **Veri** kaynakları sayfasına eklenir.
 
 ## <a name="custodian-csv-file"></a>Custo bir CSV dosyası
 
-CSV koruyucu şablonunu indirdikten sonra, her satıra koruyucuları ve bunların veri kaynağını indirebilirsiniz. Üst bilgi satırdaki sütun adlarını değiştirmeyebilirsiniz. Diğer veri kaynaklarını bir özel dosyayla ilişkilendirmek için iş yükü türü ve iş yükü konumu sütunlarını kullanın.
+CSV koruyucu şablonunu indirdikten sonra, her satıra koruyucuları ve bunların veri kaynaklarını indirebilirsiniz. Üst bilgi satırdaki sütun adlarını değiştirmeyebilirsiniz. Diğer veri kaynaklarını bir özel dosyayla ilişkilendirmek için iş yükü türü ve iş yükü konumu sütunlarını kullanın.
 
 | Sütun adı|Açıklama|
 |:------- |:------------------------------------------------------------|
 |**Custo custo custo custemail**     |Custo bir UPN e-posta adresi. Örneğin, sarad@contoso.onmicrosoft.com.           |
 |**Exchange Etkin** | Custo posta kutusunu eklemek veya dahil etmek için DOĞRU/YANLIŞ değeri.      |
-|**OneDrive Etkin** | Custo custo OneDrive İş için DOĞRU/YANLIŞ değeri. |
+|**OneDrive Etkin** | Custo OneDrive İş hesabını eklemek veya içermeyen için DOĞRU/YANLIŞ değeri. |
 |**Is OnHold**        | Koruyucu veri kaynaklarının yerinde basılı olup olmadığını göstermek için DOĞRU/YANLIŞ değeri. <sup>1</sup>     |
-|**workload1 tür**         |Custo ortak veri kaynağı türünü belirten dize değeri. Olası değerler şunlardır: <br/>- ExchangeMailbox<br/> - SharePointSitesi<br/>- <sup>TeamsMailbox2</sup><br/>- <sup>YammerMailbox2</sup>| 
+|**workload1 tür**         |Custo ortak veri kaynağı türünü belirten dize değeri. Olası değerler şunlardır: <br/>- ExchangeMailbox<br/> - SharePointSitesi<br/>- <sup>TeamsMailbox2</sup><br/>- <sup>YammerMailbox2</sup>. Bu iş yükü türlerinin önceki değerleri büyük/harfe duyarlıdır. CSV dosyası, üç iş yükü türüyle bunların ilgili iş yükü konumlarının sütunlarını içerir. Toplam 500 iş yükü türü ve konumu  ekleyebilirsiniz.|
 |**Workload1 Location**     | İş yükünüz bağlı olarak, veri kaynağının konumu bu olur. Örneğin, bir posta kutusunun e-Exchange adresi veya posta kutusunun URL'si SharePoint olabilir. |
 |||
 
 > [!NOTE]
-> <sup>1</sup> 1.000'den fazla posta kutusunu veya 100 siteyi ayrı tutmanız gerektiğinde sistem eBulma ayrımlarını otomatik olarak ölçeklendirin. Bu, sistemin veri konumlarını tek bir tutma yerine otomatik olarak birden çok  tutma için ekleyecek olduğu anlamına gelir. Bununla birlikte, kuruluş başına 10.000 vaka sınırlaması yine de geçerlidir. Tutma sınırları hakkında daha fazla bilgi için bkz. Tutma [Advanced eDiscovery](limits-ediscovery20.md#hold-limits).
+> <sup>1 Bir</sup> durumda 1.000'den fazla posta kutusunu veya 100 siteyi ayrı tutarsanız, sistem eBulma tutma için gereken ölçeklendirmeyi otomatik olarak sağlar. Bu da, sistemin veri konumlarını tek bir ilkeye eklemek yerine otomatik olarak birden çok tutma ilkesine ekli olduğu anlamına gelir. Bununla birlikte, kuruluş başına 10.000 vaka tutma politikası sınırı yine de geçerlidir. Tutma sınırları hakkında daha fazla bilgi için bkz. Tutma [Advanced eDiscovery](limits-ediscovery20.md#hold-limits).
 <br>
 > <sup>2</sup> CSV dosyasına TeamsMailbox ve YammerMailbox iş yüklerini dahil edersiniz, grup sitesi (Ekip Sitesi ve Yammer Sitesi) varsayılan olarak otomatik olarak eklenir. CSV dosyasında TeamsSite ve YammerSitesi'i ayrı olarak belirtmeniz gerekmez.
 
@@ -74,46 +102,4 @@ Aşağıda, koruyucu bilgileri olan bir CSV dosyası örneği ve şöyledir:<br/
 ||||||
 
 > [!NOTE]
-> Etkin olmayan bir posta kutusunu koruyucu olarak içeri aktararak veya etkin olmayan bir posta kutusunu başka bir custo custo ortak yapmak için, etkin olmayan posta kutusunun UPN adresine bir "." öneki ekleyin.
-
-## <a name="custodian-and-data-source-validation"></a>Custo bira ve veri kaynağı doğrulaması
-
-Custo csv dosyasını karşıya yükledikten sonra, Advanced eDiscovery şunları yapın:
-
-1. Koruyucuları ve onların veri kaynaklarını doğrular.
-
-2. Her koruyucu için tüm veri kaynaklarını dizine alır ve bunları ayrı tutar (CSV **dosyasındaki Is OnHold** özelliği TRUE olarak ayarlanmışsa).
-
-### <a name="custodian-validation"></a>Custo bir doğrulama
-
-Şu anda yalnızca kuruluş kuruluşlarının çalışma alanlarına (Azure AD) dahil olan koruyucuları içeri Azure Active Directory destekliyoruz.
-
-Custo bir içeri aktarma aracı, CSV dosyasındaki **Custo bir contactEmail** sütunundaki UPN değerini kullanarak koruyucuları bulur ve doğrular. Doğrulanmış olan koruyucular vakaya otomatik olarak eklenir ve vakanın **Veri kaynakları** sekmesinde listelenir. Koruyucu doğrulanamıyorsa, bunlar, bu durumda işler sekmesinde listelenen BulkAddCusto ötele işinin hata günlüğünde listelenir. Kayıt dışı koruyucular, vakaya eklenmez veya Veri kaynakları **sekmesinde listelenmiyor** .
-
-### <a name="data-source-validation"></a>Veri kaynağı doğrulaması
-
-Koruyucular doğrulandıktan ve vakaya eklendikten sonra, her birincil posta kutusu OneDrive bir custo OneDrive hesabı eklenir.
-
-Öte yandan, bir custo ortak ile ilişkili diğer veri kaynaklarından (SharePoint siteleri, Microsoft Teams, Microsoft 365 Grupları veya Yammer grupları gibi) herhangi biri bulunamazsa, custo custo ortaklarına hiçbiri atanmaz ve Veri kaynakları üzerinde custo ortaklarının yanındaki Durum sütununda Doğrulanmadı değeri **görüntülenir**    sekmesini seçin.
-
-Custo custo bir için doğrulanmış veri kaynakları eklemek için:
-
-1. Veri **kaynakları sekmesinde** , doğrulanmadı veri kaynaklarını içeren bir özel dosya seçin.
-
-2. Custo flyout sayfasında, custo ötelek konumlar bölümüne kaydırarak hem doğrulanmış hem de doğrulanmamış custo ötelenmiş veri kaynaklarını görüntüleyebilirsiniz.
-
-3. Geçersiz **veri** kaynaklarını kaldırmak veya yeni veri kaynakları eklemek için, çıkış sayfasının en üstünde Düzenle'ye tıklayın.
-
-4. Henüz doğru olmayan veri kaynaklarını kaldıran veya yeni bir veri kaynağı eklendiğinde, Veri kaynakları sekmesindeki custo  custo veri sütununda **Etkin** **değeri** görüntülenir. Daha önce geçersiz gibi görünen kaynakları eklemek için, aşağıdaki düzeltme adımlarını izleyin ve bunları custo veriye el ile ekleyin.
-
-### <a name="remediating-invalid-data-sources"></a>Geçersiz veri kaynaklarını düzeltme
-
-Daha önce geçersiz olan bir veri kaynağını el ile eklemek ve ilişkilendirmek için:
-
-1. Veri kaynakları **sekmesinde** , daha önce geçersiz olan bir veri kaynağını el ile eklemek ve ilişkilendirmek için bir özel kişi seçin.
-
-2. Posta **kutularını**, siteleri, posta kutularını, posta kutularını veya posta gruplarını özel kullanıcı Teams ilişkilendirmek için, uç Yammer Düzenle'ye tıklayın. Bunu yapmak için, uygun **veri** konumu türünün yanındaki Düzenle'ye tıklayın.
-
-3. Tutma **ayarları** sayfasını görüntülemek **ve eklenen veri** kaynaklarının tutma ayarını yapılandırmak için Sonraki'ne tıklayın.
-
-4. Gözden **geçir** koruyucular **sayfasını görüntülemek için Sonraki'ne** tıklayın ve sonra da **değişikliklerinizi kaydetmek için** Gönder'e tıklayın.
+> Daha önce de belirtildiği gibi, etkin olmayan bir posta kutusunu custo custoactive olarak içeri aktaracak veya etkin olmayan bir posta kutusunu başka bir custo ortak yapmak için etkin olmayan posta kutusunun UPN adresine bir "." öneki ekleyin.

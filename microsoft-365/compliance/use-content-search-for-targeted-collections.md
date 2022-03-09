@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: e3cbc79c-5e97-43d3-8371-9fbc398cd92e
 ms.custom: seo-marvel-apr2020
 description: Belirli bir posta kutusu Microsoft 365 uyumluluk merkezi site klasöründe öğe araması yapacak bir hedefli koleksiyon gerçekleştirmek için, hedefli koleksiyondaki İçerik aramalarını kullanın.
-ms.openlocfilehash: 9de0c562f570a3028c7a96698241ac1be06b8ec1
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: a72984e3d4363dfd5d89e6167621dd65c9d57653
+ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63014269"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63406029"
 ---
 # <a name="use-content-search-for-targeted-collections"></a>Hedeflenen koleksiyonlar için İçerik arama kullanma
 
@@ -195,7 +195,7 @@ Posta kutusu klasörlerinin veya site belge bağlantısı (yol) adlarının list
 
 ### <a name="script-output-for-mailbox-folders"></a>Posta kutusu klasörleri için betik çıkışı
 
-Posta kutusu klasör kimliklerini alıyorsanız, betik Exchange Online PowerShell'e bağlanır, **Get-MailboxFolderStatisics** cmdlet'ini çalıştırır ve ardından belirtilen posta kutusundan klasörlerin listesini görüntüler. Posta kutusudaki her klasör için, betikte **FolderPath** sütununda klasörün adı ve **FolderQuery** sütununda klasör kimliği görüntülenir. Buna ek olarak, betik **klasör kimliğine folderId** ön eklerini (posta kutusu özelliğinin adıdır) ekler. **folderid özelliği aranabilir** bir özellik olduğundan, 2. Adım'daki `folderid:<folderid>` bir arama sorgusunda bu klasörde arama yapmak için kullanırsınız. Betikte en çok 100 posta kutusu klasörü görüntülenir.
+Posta kutusu klasör kimliklerini alıyorsanız, betik Exchange Online PowerShell'e bağlanır, **Get-MailboxFolderStatisics** cmdlet'ini çalıştırır ve ardından belirtilen posta kutusundan klasörlerin listesini görüntüler. Posta kutusudaki her klasör için, betikte **FolderPath** sütununda klasörün adı ve **FolderQuery** sütununda klasör kimliği görüntülenir. Buna ek olarak, betik **klasör kimliğine folderId** ön eklerini (posta kutusu özelliğinin adıdır) ekler. **folderid özelliği aranabilir** bir özellik olduğundan, 2. Adım'daki `folderid:<folderid>` bir arama sorgusunda bu klasörde arama yapmak için kullanırsınız. 
 
 > [!IMPORTANT]
 > Bu makaledeki betik, **Get-MailboxFolderStatistics** tarafından döndürülen 64 karakterli klasör Kimlik değerlerini arama için dizine alınmış olan 48 karakterlik biçime dönüştüren kodlama mantığı içerir. Bir klasör kimliği almak için (bu makalede betiği çalıştırmak yerine) PowerShell'de **Get-MailboxFolderStatistics** cmdlet'ini çalıştırmanız gerekirse, o klasör Kimliği değerini kullanan bir arama sorgusu başarısız olur. İçerik Arama'da  kullanılan doğru biçimlendirilmiş klasör kimliklerini almak için betiği çalıştırmanız gerekir.
@@ -208,7 +208,7 @@ Burada, posta kutusu klasörleri betiği tarafından döndürülen çıktının 
 
 ### <a name="script-output-for-site-folders"></a>Site klasörleri için betik çıkışı
 
-SharePoint veya OneDrive İş sitelerinden **documentlink** özelliğinin yolunu alıyorsanız, betik Güvenlik & Uyumluluk PowerShell'e bağlanır, sitede klasörler için arama yapılan yeni bir İçerik Araması oluşturur ve belirtilen sitede bulunan klasörlerin listesini görüntüler. Betikte her klasörün adı görüntülenir ve klasör URL'sinde **belge bağlantısının** ön eki bulunur. Documentlink **özelliği** aranabilir bir özellik olduğundan, 2. Adım'daki `documentlink:<path>` bir arama sorgusunda bu klasörde arama yapmak için property:value pair kullanırsınız. Betikte en çok 200 site klasörü görüntülenir. 200'den fazla site klasörü varsa, en yeni klasörler görüntülenir.
+SharePoint veya OneDrive İş sitelerinden **documentlink** özelliğinin yolunu alıyorsanız, betik Güvenlik & Uyumluluk PowerShell'e bağlanır, sitede klasörler için arama yapılan yeni bir İçerik Araması oluşturur ve belirtilen sitede bulunan klasörlerin listesini görüntüler. Betikte her klasörün adı görüntülenir ve klasör URL'sinde **belge bağlantısının** ön eki bulunur. Documentlink **özelliği** aranabilir bir özellik olduğundan, 2. Adım'daki `documentlink:<path>` bir arama sorgusunda bu klasörde arama yapmak için property:value pair kullanırsınız. Betikte en çok 100 site klasörü görüntülenir. 100'den fazla site klasörü varsa, en yeni klasörler görüntülenir.
 
 Burada, site klasörleri betiği tarafından döndürülen çıktının bir örneği ve almaktadır.
 

@@ -56,6 +56,14 @@
       href: share-files-and-videos.md
     - name: Organizasyonunız için bir İletişim sitesi oluşturma
       href: create-communications-site.md
+- name: İş için Defender ile cihazları koruma
+  items:
+    - name: Cihazları İş için Microsoft Defender'a ekleme
+      href: m365bp-onboard-devices-mdb.md
+    - name: Cihaz ilkelerini gözden geçirme ve düzenleme
+      href: m365bp-view-edit-create-mdb-policies.md
+    - name: Cihaz gruplarını yönetme
+      href: m365bp-device-groups-mdb.md
 - name: Cihazlardaki verileri sıfırlama veya kaldırma
   items:
     - name: Cihazlardan veri kaldırma
@@ -64,6 +72,8 @@
       href: ../business/reset-devices-to-factory-settings.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
 - name: Güvenlik olayı yönetimi
   items:
+    - name: Cihazlardaki düzeltme eylemlerini gözden geçirme
+      href: m365bp-review-remediation-actions-devices.md
     - name: Güvenliği ihlal edilmiş bir e-posta hesabını yanıtlama
       href: ../security/office-365-security/responding-to-a-compromised-email-account.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
 - name: Başvuru

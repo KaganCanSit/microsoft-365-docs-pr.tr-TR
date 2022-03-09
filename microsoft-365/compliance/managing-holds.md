@@ -21,12 +21,12 @@ description: Dosyanız için ilgili içeriği korumak için koruyucuları ve onl
 ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkMAC
-ms.openlocfilehash: 2c19b608f01f30df83e914bbe34d29aa85bd5af3
-ms.sourcegitcommit: 2e05865beeb2051fd9ece212a46179310b946a46
+ms.openlocfilehash: d731c0cda31f96f5274ca0c2fd56d5e14901f3a9
+ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2021
-ms.locfileid: "63007667"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63406165"
 ---
 # <a name="manage-holds-in-advanced-ediscovery"></a>Aynı anda 12 Advanced eDiscovery
 
@@ -97,6 +97,9 @@ Bir gerçekleştirilen içeriğin kapsamını belirtilen içerik konumlarında t
 11. Sorgu tabanlı bir tutma yapılandırdıktan sonra, Sonraki'ne **tıklayın**.
 
 12. Ayarlarınızı gözden geçirin ve Bu tutma **oluştur'a tıklayın**.
+
+> [!NOTE]
+> Sorgu tabanlı bir tutma  oluştururken, seçilen konumlardan alınan tüm içerik başlangıçta basılı tutar. Daha sonra, belirtilen sorguyla eşleşmemiş olan içerik her yedi ile 14 günde bir temizlemeyi sağlar. Bununla birlikte, içerik yerine herhangi bir türde beşten fazla 0'dan fazla 10 000 000 000 0000 yer varsa veya herhangi bir öğede dizin oluşturma sorunları varsa, sorgu tabanlı tutma içeriği temizlemez.
 
 > [!NOTE]
 > Kullanıcının posta kutusunu yerinde bekledikten sonra kullanıcının SMTP adresi değişirse, posta kutusu yerinde kalır. Yerinde tutmak üzere yeni SMTP adresini kullanmak için, yeni bir yerinde tutma oluşturun.

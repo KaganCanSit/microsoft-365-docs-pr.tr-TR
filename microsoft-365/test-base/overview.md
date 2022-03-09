@@ -2,8 +2,8 @@
 title: Genel Bakış
 description: Test Tabanı'nın anlaşılması
 search.appverid: MET150
-author: mansipatel-usl
-ms.author: mapatel
+author: Tinacyt
+ms.author: tinachen
 manager: rshastri
 audience: Software-Vendor
 ms.topic: how-to
@@ -14,12 +14,12 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: mapatel
 f1.keywords: NOCSH
-ms.openlocfilehash: b235fcb0de470f23afd75d8abd91d07451d040bd
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 8d7539dfeecf1e34a639bc506f312c35a4243323
+ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984670"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63405931"
 ---
 # <a name="what-is-test-base-for-microsoft-365"></a>Test Temel'i Microsoft 365?
 
@@ -51,9 +51,9 @@ Bu kılavuz, hizmetimizi kullanırken ücretsiz bir deneyimi sağlamak için dö
 
 4. **Müşterilerimizden** gelen tipik soruların yanıtlarını sağlayan Başvuru bölümü.
 
-## <a name="test-base-is-in-public-preview"></a>Test Tabanı genel önizlemede!
+## <a name="test-base-has-reached-general-availability"></a>Test Tabanı genel kullanılabilirlik durumuna ulaştı
 
-Test Tabanı, Temmuz `Public Preview` 2021'de Microsoft Inspire konferansı sırasında resmi olarak bildirildi.
+Test Bankası, Kasım 2021'de Microsoft Ignite konferansı sırasında genel kullanılabilirlik olarak bildirildi. 
 
 Bu, geçerli bir kurumsal Azure hesabına sahip olan herkesin test yardımcı yardımcılarını işe alıyabilecek ve hizmette uygulamalarını hızlıca testabilecek olduğu anlamına gelir.
 

@@ -21,12 +21,12 @@ description: Bu Microsoft 365 uyumluluk merkezi, birleşik denetim günlüğünd
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 71b7bb5d5588f19ff4134c133377b3e9ca83c780
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: ea440ac03c648a7ae77d99d0a7be091d4f72fa64
+ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63319357"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63405945"
 ---
 # <a name="search-the-audit-log-in-the-compliance-center"></a>Uyumluluk merkezinde denetim günlüğünde arama yapın
 
@@ -201,7 +201,7 @@ Denetim günlüğünde arama ve arama Microsoft 365.
 
 4. Arama **ölçütlerinizi** kullanarak arama çalıştırmak için Ara'ya tıklayın.
 
-   Arama sonuçları yüklenir ve birkaç dakika sonra yeni bir sayfada görüntülenir. Arama tamamlandığında, bulunan sonuç sayısı görüntülenir. 150 olaylık artışlarla en çok 50.000 olay görüntülenir.
+   Arama sonuçları yüklenir ve birkaç dakika sonra yeni bir sayfada görüntülenir. Arama tamamlandığında, bulunan sonuç sayısı görüntülenir. 150 olaylık artışlarla en çok 50.000 olay görüntülenir. Arama ölçütlerine uyan 50.000'den fazla olay varsa, yalnızca 50.000 sıralanmamış olay görüntülenir.
 
    ![Arama tamamlendikten sonra sonuç sayısı görüntülenir.](../media/986216f1-ca2f-4747-9480-e232b5bf094c.png)
 

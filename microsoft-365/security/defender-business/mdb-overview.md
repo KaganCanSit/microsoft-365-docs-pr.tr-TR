@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/01/2022
+ms.date: 03/08/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-overview
-ms.openlocfilehash: 81afceeaf1307c2f65d718d009294720d7f6f3d9
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 4070cb273a64f34468f313f79c9c51c400bfe7db
+ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63323728"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63406214"
 ---
 # <a name="overview-of-microsoft-defender-for-business"></a>İş için Microsoft Defender'a genel bakış
 
@@ -36,7 +36,7 @@ ms.locfileid: "63323728"
 
 İş için Defender hakkında daha fazla bilgi edinmek için aşağıdaki videoyu izleyin:
 
-[:::image type="content" source="media/mdb-youtubevideo1.jpg" alt-text="İş için Defender hakkında YouTube videosunu ekran görüntüsü.":::](https://aka.ms/MDB-MicrosoftMechanics)
+> [!VIDEO https://www.youtube.com/embed/umhUNzMqZto]
 
 Bu makalede, İş için Defender'a nelerin dahil olduğu açıklanmıştır, ayrıca bu özellikler ve özellikler hakkında daha fazla bilgi edinebilirsiniz.
 
