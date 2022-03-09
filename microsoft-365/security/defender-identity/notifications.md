@@ -8,12 +8,12 @@ ms.author: dacurwin
 ms.service: microsoft-defender-for-identity
 ms.custom: admindeeplinkDEFENDER
 manager: raynew
-ms.openlocfilehash: b33ee0f59ca02d305ec703ab47aa1d0f2f95b8da
-ms.sourcegitcommit: 542e6b5d12a8d400c3b9be44d849676845609c5f
+ms.openlocfilehash: 4e8969e51673676ecf13dc579ae304622e23e75d
+ms.sourcegitcommit: 1de72e5fd8af0ebc4a0dc91f47d2243498cfe5b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "63005010"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63384613"
 ---
 # <a name="defender-for-identity-notifications-in-microsoft-365-defender"></a>Microsoft 365 Defender'ta Kimlik bildirimleri için Defender
 
@@ -65,6 +65,9 @@ Bu Microsoft 365 Defender, algılanan uyarıların e-posta bildirimleri için al
 ## <a name="syslog-notifications"></a>Syslog bildirimleri
 
 Kimlik için Defender, Syslog sunucunuza aday bir algılayıcı aracılığıyla güvenlik ve sistem durumu uyarıları göndererek şüpheli etkinlikler algılayana kadar sizi bilgilendirir.
+
+> [!NOTE]
+> Identity için Defender for Identity'i Microsoft Sentinel ile tümleştirmeyi öğrenmek için bkz[. Microsoft Sentinel Microsoft 365 Defender tümleştirmesi](/azure/sentinel/microsoft-365-defender-sentinel-integration).
 
 1. Daha <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a>, Kimlikler'Ayarlar'e **gidin**.
 
