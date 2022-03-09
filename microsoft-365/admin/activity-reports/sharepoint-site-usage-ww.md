@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Merkezinde Rapor Raporları - SharePoint kullanımını sağlar
+title: Microsoft 365 yönetim merkezi SharePoint kullanım raporlarını kullanma
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -22,12 +22,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Kullanıcıların SharePoint kaç dosya depola olduğunu, kaç kullanıcının etkin olarak SharePoint ve kullanılan toplam depolama alanını bilmek için en iyi site kullanım raporunu elde edin.
-ms.openlocfilehash: 2c29234df1076fa31ea836b7ead51234e121004e
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: da857d1814bf0aa27532d3f730d352c6edeb66e9
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989896"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400691"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---sharepoint-site-usage"></a>Microsoft 365 Merkezinde Rapor Raporları - SharePoint kullanımını sağlar
 

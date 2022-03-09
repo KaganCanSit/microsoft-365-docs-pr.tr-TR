@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: e3f4efb5c52acb40ecb30ac17a8b144de9eaa106
-ms.sourcegitcommit: aac7e002ec6e10a41baa2d0bd38614b0ed471a70
+ms.openlocfilehash: 0e7253993a1c05bd25e6dd13865826c42dd7603a
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63010022"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400258"
 ---
 # <a name="take-response-actions-on-a-file"></a>Dosyada yanıt eylemleri gerçekleştirin
 
@@ -110,7 +110,7 @@ Bu eylem, dosyanın son 30 gün içinde Windows 10, sürüm 1703 veya Windows 11
 
 4. Eylem hakkında daha fazla bilgi görüntülemek için durum göstergelerini seçin. Örneğin, eylemin **başarısız olduğu** yeri görmek için Başarısız'ı seçin.
 
-#### <a name="notification-on-device-user"></a>Cihaz kullanıcısı bildirimi
+#### <a name="notification-on-device-userf"></a>Cihaz kullanıcı bildirimi
 
 Dosya bir cihazdan kaldırıldığı zaman aşağıdaki bildirim gösterilir:
 
@@ -320,7 +320,7 @@ Dosya göndermek için çalışırken bir sorun oluşursa, aşağıdaki sorun gi
 
 5. Grup İlkesi aracılığıyla kuruluş birimini değiştirme. Daha fazla bilgi için bkz [. Grup İlkesiyle Yapılandırma](configure-endpoints-gp.md).
 
-6. Bu adımlar sorunu çözmezse, sorununuzu [çözmek için winatp@microsoft.com](mailto:winatp@microsoft.com).
+6. Bu adımlar sorunu çözmezse, destan ile iletişime geçin.
 
 ## <a name="related-topics"></a>İlgili konular
 

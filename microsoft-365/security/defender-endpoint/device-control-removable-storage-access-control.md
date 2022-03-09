@@ -15,12 +15,12 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
 ms.date: 02/07/2022
-ms.openlocfilehash: 86ae312247d0e796364da61201f7b01d4fec816f
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: a0bca99258bd256797437cdc4756910fc713cf26
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63016701"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63401194"
 ---
 # <a name="microsoft-defender-for-endpoint-device-control-removable-storage-access-control"></a>Uç Nokta Cihaz Denetimi Için Microsoft Defender Çıkarılabilir Depolama Denetimi
 
@@ -54,6 +54,7 @@ Access Denetimi'nin Uç Nokta Cihaz Denetimi Depolama Microsoft Defender aşağ�
 |İlke Oluşturma|Çıkarılabilir her medya grubunu zorunlu olarak oluşturmak için ilke oluşturmanıza olanak sağlar|OMA-URI aracılığıyla ilkeyi dağıtma bölümündeki 2[. ve](#deploying-policy-via-oma-uri) 3. adımlar | Grup İlkesi aracılığıyla ilkeyi [dağıtma bölümündeki 2. adım](#deploying-policy-via-group-policy) |
 |Varsayılan Zorlama|İlke yoksa çıkarılabilir medyaya varsayılan erişimi (Reddet veya İzin Ver) ayarlamanıza olanak sağlar|Bölümdeki 4. Adım: [OMA-URI aracılığıyla ilke dağıtma](#deploying-policy-via-oma-uri) | Grup İlkesi aracılığıyla ilke dağıtma bölümündeki 3 [. adım](#deploying-policy-via-group-policy) |
 |Access Denetimi'nin Çıkarılabilir özelliğini Depolama veya Devre Dışı Bırak|Devre Dışı Bırak'ı ayarsanız, bu makinede Çıkarılabilir Depolama Access Denetimi ilkesi devre dışı bırakılabilir| Bölümdeki 5. Adım: [OMA-URI aracılığıyla ilke dağıtma](#deploying-policy-via-oma-uri) | Grup İlkesi aracılığıyla ilke dağıtma bölümündeki 4 [. adım](#deploying-policy-via-group-policy) |
+|Dosya bilgilerini yakalama|Yazma erişimi gerçekleşirse dosya bilgilerini yakalamak için ilke oluşturmanıza olanak sağlar| OMA-URI aracılığıyla ilkeyi dağıtma bölümündeki 2[. ve](#deploying-policy-via-oma-uri) 6. Adım | Grup İlkesi aracılığıyla ilkeyi dağıtma bölümündeki 2 [. ve 5. adım](#deploying-policy-via-group-policy) |
 
 ## <a name="prepare-your-endpoints"></a>Uç noktalarınızı hazırlama
 
@@ -65,7 +66,7 @@ Kötü amaçlı yazılım Depolama **4.18.2103.3** veya sonraki bir sürümüne 
 
 - **4.18.2107** veya sonraki sürümü: Windows Taşınabilir Cihaz (WPD) desteği ekleme (tablet gibi mobil cihazlar için); gelişmiş oyunlara AccountName [ekleme](device-control-removable-storage-access-control.md#view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint)
 
-- **4.18.2111** veya sonrakisi: PowerShell aracılığıyla 'Çıkarılabiliri Etkinleştir veya Devre Dışı Bırak' Depolama Access Denetimi', 'Varsayılan Zorlama', istemci makinesi ilkesi güncelleştirme süresi ekleyin.
+- **4.18.2111** veya sonrakisi: PowerShell aracılığıyla 'Çıkarılabilirleri Etkinleştir veya Devre Dışı Bırak' Depolama Access Denetimi', 'Varsayılan Zorlama', istemci makinesi ilkesi güncelleştirme süresi, dosya bilgileri
 
 :::image type="content" source="images/powershell.png" alt-text="PowerShell arabirimi.":::
 
@@ -102,8 +103,8 @@ Kötü amaçlı yazılım Depolama **4.18.2103.3** veya sonraki bir sürümüne 
 | **Tür** | IncludedIDList'te çıkarılabilir depolama grupları için eylemi tanımlar. <p>Zorlama: İzin Ver veya Reddet <p>Denetim: AuditAllowed veya AuditDenied<p> | İzin ver<p>Reddet <p>AuditAllowed: Erişime izin verilirken bildirim ve etkinliği tanımlar <p>Denetim Reddedildi: Erişim reddedilirken bildirimi ve olayı tanımlar; Erişimi reddet ile birlikte **çalışması** gerekir.<p> Aynı medya için çakışma türleri olduğunda, sistem ilkede birinciyi geçerli olur. Çakışma türüne örnek olarak İzin Ver **ve Reddet** **örneği olabilir**. |
 | **Sid** | Yerel kullanıcı Sid veya kullanıcı Sid grubu veya AD nesnesinin Sid grubu, bu ilkenin belirli bir kullanıcıya mı yoksa kullanıcı grubuna mı uygulan uygulanıp uygulan uygulanıla bir bütün değildir; bir giriş en çok bir Sid'e ve bir de Sid olmayan bir girdiye sahip olabilir, bu da ilkenin makineye uygulanması anlamına gelir. |  |
 | **ComputerSid** | Yerel bilgisayar Sid veya bilgisayar Sid grubu ya da AD nesnesinin Sid grubu, bu ilkenin belirli bir makine veya makine grubu üzerinde uygulanıp uygulan uygulanıp uygulan uygulana bir ilke olmadığını tanımlar; bir girişin en çok bir BilgisayarSid girişi olabilir ve herhangi bir ComputerSid değeri olmadan giriş, ilkenin makine üzerinden uygulanması anlamına gelir. Belirli bir kullanıcıya ve belirli makineye bir Girdi uygulamak için, hem Sid'i hem de BilgisayarSid'i aynı Girdiye ekleyin. |  |
-| **Seçenekler** | Bildirimin görüntüleniyor mu yoksa görüntülenmey mi olduğunu tanımlar |**0 veya 4**: İzin Ver veya Reddet Türü seçildiğinde. <p>0: hiçbir şey<p>4: Bu Girdi **için Denetime Izin Verilmedi** **ve Denetim Reddedildi'yi** devre dışı bırakma. Engelle **gerçekleşirse** ve Denetim Reddedildi ayarı yapılandırıldı olsa bile, sistem bildirimi göstermez. <p> Type **AuditAllowed seçiliyken** : <p>0: hiçbir şey <p>1: hiçbir şey <p>2: etkinlik gönderme<p>3: etkinlik gönderme <p> Tür Denetimi **Reddedildi seçiliyken** : <p>0: hiçbir şey <p>1: bildirimi göster <p>2: etkinlik gönderme<p>3: bildirimi gösterme ve etkinlik gönderme |
-|AccessMask|Erişimi tanımlar. | **1-7**: <p>1: Okuma <p>2: Yazma <p>3: Okuma ve Yazma <p>4: Yürütme <p>5: Okuma ve Yürütme<p>6: Yazma ve Yürütme <p>7: Okuma ve Yazma ve Yürütme |
+| **Seçenekler** | Bildirimin görüntüleniyor mu yoksa görüntülenmey mi olduğunu tanımlar |**İzin Türü seçildiğinde**: <p>0: hiçbir şey<p>4: Bu Girdi **için Denetime Izin Verilmedi** **ve Denetim Reddedildi'yi** devre dışı bırakma. İzin Ver **gerçekleşirse** ve AuditAllowed ayarı yapılandırılmış olsa bile, sistem olay göndermez. <p>8: Dosya bilgilerini yakalamak ve Yazma erişimi için kanıt olarak dosyanın bir kopyasını almak. <p>16: Yazma erişimi için dosya bilgilerini yakalama. <p>**Reddet Türü seçildiğinde**: <p>0: hiçbir şey<p>4: Bu Girdi **için Denetim Reddedildi özelliğini** devre dışı bırakma. Engelle **gerçekleşirse** ve Denetim Reddedildi ayarı yapılandırıldı olsa bile, sistem bildirimi göstermez. <p>**Type **AuditAllowed seçiliyken****: <p>0: hiçbir şey <p>1: hiçbir şey <p>2: etkinlik gönderme<p>3: etkinlik gönderme <p> **Tür Denetimi **Reddedildi seçiliyken****: <p>0: hiçbir şey <p>1: bildirimi göster <p>2: etkinlik gönderme<p>3: bildirimi gösterme ve etkinlik gönderme |
+|AccessMask|Erişimi tanımlar. | **Disk düzeyi erişimi**: <p>1: Okuma <p>2: Yazma <p>4: Yürütme <p>**Dosya sistemi düzeyi erişimi**: <p>8: Dosya sistemi Okuma <p>16: Dosya sistemi Yazma <p>32: Dosya sistemi Yürütme <p><p>İkili OR işlemi yaparak birden çok erişiminiz olabilir; örneğin, Okuma ve Yazma ve Yürütme için AccessMask 7 olur; Okuma ve Yazma için AccessMask 3 olur.|
 
 ## <a name="common-removable-storage-access-control-scenarios"></a>Ortak Çıkarılabilir Depolama Access Denetimi senaryoları
 
@@ -162,6 +163,8 @@ Uç Nokta Çıkarılabilir veya Erişim Denetimi'Depolama Microsoft Defender'ı 
 2. Tüm kuralları tek bir `<PolicyRules>` `</PolicyRules>` XML dosyasında birleştirin.
 
     Belirli bir kullanıcıya kısıtlamak istediğiniz, SID özelliğini Girdi'de kullanın. Girdi ilkesinde SID yoksa, Makine için herkes oturum açma örneğine Girdi uygulanır.
+    
+    Yazma erişimi için dosya bilgilerini izlemek için doğru Seçenek (8 veya 16) ile doğru AccessMask'ı kullanın; dosya yakalama bilgileri [örneğidir](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Group%20Policy/Audit%20File%20Information.xml).
 
     Aşağıdaki resimde SID özelliğinin kullanımı ve Senaryo 1 örneği: Tüm kullanıcılara Yazma ve Yürütme erişimini engelleme, ancak belirli onaylanmış [USB'lere izin verme örneklerini göstermektedir](#scenario-1-prevent-write-and-execute-access-to-all-but-allow-specific-approved-usbs).
 
@@ -188,6 +191,12 @@ Uç Nokta Çıkarılabilir veya Erişim Denetimi'Depolama Microsoft Defender'ı 
    - Bu ayarın dağıtımında "Etkin" veya 'Devre Dışı' - Devre Dışı ifadelerini görüyorsunuz. Bu makinede Çıkarılabilir Veya Erişim Depolama ilkesi çalışmıyor.
 
     :::image type="content" source="images/148609685-4c05f002-5cbe-4aab-9245-83e730c5449e.png" alt-text="PowerShell kodunda Etkin veya Devre Dışı cihaz denetimi":::
+
+6. Dosyanın kopyasının konumunu ayarlama: Yazma erişimi gerçekleşirken dosyanın bir kopyasını almak için, sistemin kopyayı kaydedeli olduğu konumu ayarlanız gerekir.
+    
+    Bunu doğru AccessMask ve Option ile birlikte dağıtmalı - yukarıdaki 2. adıma bakın.
+
+    :::image type="content" source="../../media/define-device-control-policy-rules.png" alt-text="Grup İlkesi - Dosya kanıtı için locaiton ayarlama":::
 
 ## <a name="deploying-and-managing-policy-via-intune-oma-uri"></a>Intune OMA-URI aracılığıyla ilke dağıtma ve yönetme
 
@@ -236,6 +245,8 @@ Microsoft Endpoint Manager merkezi (<https://endpoint.microsoft.com/>)  **Cihazl
       `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7bc544a991-5786-4402-949e-a032cb790d0e%7d/RuleData`
 
     - Veri Türü: Dize (XML dosyası)
+       
+    Yazma erişimi için dosya bilgilerini izlemek için doğru Seçenek (8 veya 16) ile doğru AccessMask'ı kullanın; dosya yakalama bilgileri [örneğidir](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Audit%20File%20Information.xml).
 
 3. Varsayılan zorlama: ilke yoksa çıkarılabilir medyaya varsayılan erişimi (Reddet veya İzin Ver) ayarlamanıza olanak sağlar. Örneğin, RemovableMediaDevices için yalnızca ilkeye (Reddet veya İzin Ver) sahipsiniz ancak CdRomDevices veya WpdDevices ile ilgili hiçbir ilkeye sahip değildir ve varsayılan olarak Bu ilke üzerinden Reddet'i ayarlarken CdRomDevices veya WpdDevices'e Okuma/Yazma/Yürütme erişimi engellenir.
 
@@ -263,6 +274,16 @@ Microsoft Endpoint Manager merkezi (<https://endpoint.microsoft.com/>)  **Cihazl
 
     :::image type="content" source="images/148609770-3e555883-f26f-45ab-9181-3fb1ff7a38ac.png" alt-text="PowerShell Depolama Access Denetimi'nin kaldırılabilir örneği":::
 
+5. Dosyanın bir kopyasının konumunu ayarlama: Yazma erişimi gerçekleşirken dosyanın bir kopyasını almak için sistemin kopyayı kaydedeli olduğu konumu ayarlanız gerekir.
+    
+    - OMA-URI: `./Vendor/MSFT/Defender/Configuration/DataDuplicationRemoteLocation`
+
+    - Veri Türü: Dize
+    
+    Bunu doğru AccessMask ve doğru Seçenek ile birlikte dağıtmalı - yukarıdaki 2. adıma bakın.
+
+    :::image type="content" source="../../media/device-control-oma-uri-edit-row.png" alt-text="Dosya kanıtı için locaiton ayarlama":::
+    
 ## <a name="deploying-and-managing-policy-by-using-intune-user-interface"></a>Intune kullanıcı arabirimini kullanarak ilkeyi dağıtma ve yönetme
 
 Bu özellik, Microsoft Endpoint Manager merkezinde kullanılabilir<https://endpoint.microsoft.com/>. **Endpoint SecurityAttack** >  **Surface ReductionCreate** >  **Policy adresine gidin**. Profil **: Windows 10 ile Platform: Tercihler** **ve daha sonraki bir adı seçin.**
@@ -313,7 +334,6 @@ Diğer bir neden ise XML dosyasının doğru biçimlendirimeilmiş olması (örn
 ### <a name="there-is-no-configuration-ux-for-define-device-control-policy-groups-and-define-device-control-policy-rules-on-my-group-policy"></a>Grup İlkemde 'Cihaz denetim ilkesi gruplarını tanımla' ve 'Cihaz denetim ilkesi kurallarını tanımla' için yapılandırma UX'si yoktur
 
 Grup İlkesi yapılandırması UX'larını yeniden teslim etmeseniz de, [WindowsDefender.adml](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/WindowsDefender.adml) ve [WindowsDefender.admx](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/WindowsDefender.admx) dosyalarında 'Raw' ve 'Farklı Kaydet'e tıklayarak ilgili adml ve admx dosyalarını almaya devam edebilirsiniz.
-
 
 ### <a name="how-can-i-know-whether-the-latest-policy-has-been-deployed-to-the-target-machine"></a>En son ilkenin hedef makineye dağıtıldığından nasıl emin olabilirim?
 

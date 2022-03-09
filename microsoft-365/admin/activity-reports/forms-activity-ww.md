@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Merkezinde Raporlar - Formlar etkinliği
+title: Microsoft 365 yönetim merkezi form etkinlik raporları
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -20,12 +20,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft Forms etkinlik raporunu, rapor 2013'Microsoft 365 Raporlar panosu kullanarak nasıl Microsoft 365 yönetim merkezi.
-ms.openlocfilehash: 900ae6c273d47785296b94622060f2fe3b6dc0ca
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 7b44dfe9fe8582a9efa7d768e9136b77f5d4219b
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989912"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400926"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---forms-activity"></a>Microsoft 365 Merkezinde Raporlar - Formlar etkinliği
 

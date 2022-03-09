@@ -19,22 +19,22 @@ search.appverid:
 ms.assetid: 0ad41414-0cc6-4b97-90fb-06bec7bcf590
 recommendations: false
 description: Grup üyelerinin bir grup olarak e-posta göndermesine Microsoft 365 veya grup adına e-posta göndermesine Microsoft 365 öğrenin.
-ms.openlocfilehash: e3742b645d1efb2acb4bd14d109314947d781246
-ms.sourcegitcommit: b6676f2dd7c42b0b5eb3ca2790b13e10177a5758
+ms.openlocfilehash: 588008669359629f5b59498bb7dbf776112d5408
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "62974129"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63401014"
 ---
 # <a name="allow-members-to-send-as-or-send-on-behalf-of-a-group"></a>Üyelerin grup olarak veya bir grup adına göndermesine izin verme
 
-Bir Microsoft 365 olarak gönderme veya Adına gönderme izinleri olan bir grup üyesi grup olarak  veya grup adına  e-posta gönderebilir. (Gruptaki konuklara bu izinler ver kullanılamaz.)
+Bir Microsoft 365 olarak gönderme veya Adına gönderme izinleri olan bir grup üyesi grup  olarak veya grup  adına e-posta gönderebilir. (Gruptaki konuklara bu izinler ver kullanılamaz.)
 
-Bu makalede, genel veya Exchange yöneticinin bu izinleri nasıl ayarlay yardımlı olduğu açıklanmıştır.
+Bu makalede, genel veya yönetici Exchange bu izinleri nasıl ayary olduğu açıklanmıştır.
   
-Örneğin, İtalik Bowen **Eğitim Microsoft 365 üyesi** ise ve grupta Gönderme izni varsa, grup olarak  bir e-posta gönderirse, e-posta Eğitim grubunun gönderdiği gibi olur. 
+Örneğin, Oya Bowen **Eğitim Microsoft 365 grubunda** yer aldı ve grupta Gönderme izni varsa, grup olarak bir  e-posta gönderirse, e-posta Eğitim grubunun gönderdiği gibi olur. 
   
-Adına **Gönderme izni,** kullanıcının bir grup kullanıcı adına e-posta gönderme Microsoft 365 sağlar. Örneğin, **Pazarlama ekibi Microsoft 365** grubunun bir parçası olan Alex Wilber, Adına Gönderme izinlerine sahipse ve grup  olarak bir e-posta gönderirse, e-posta Pazarlama adına **Alex Wilber** tarafından gönderilmiş gibi görünüyor.
+Adına **Gönderme izni,** kullanıcının bir grup adına e-posta gönderme Microsoft 365 sağlar. Örneğin, Pazarlama **ekibi Microsoft 365 grubunun** bir parçası olan Alex Wilber, Adına Gönderme izinlerine sahipse ve grup  olarak bir e-posta gönderirse, e-posta Pazarlama adına **Alex Wilber** tarafından gönderilmiş gibi görünüyor.
 
 > [!IMPORTANT]
 > Belirli bir kullanıcı **için Olarak** Gönder **veya Gönder'i** yapılandırmış, ancak her ikisi için birden yapılandıramazsanız. Her ikisini de yapılandırsanız, varsayılan olarak Gönder **ayarında kullanılır**.
@@ -44,39 +44,36 @@ Adına **Gönderme izni,** kullanıcının bir grup kullanıcı adına e-posta g
     
 ## <a name="allow-members-to-send-email-as-a-group"></a>Üyelerin grup olarak e-posta göndermesine izin verme
 
-Bu bölümde, kullanıcıların yönetim merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">(EAC) grup olarak e-posta göndermelerine Exchange ilgili</a> yönetim Exchange Online.
+Bu bölümde, kullanıcıların aynı adreste bulunan yönetim merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">(EAC) grup olarak e Exchange e-posta göndermesine nasıl izin</a> Exchange Online.
   
 1. Exchange yönetim merkezinde Alıcılar **Grupları'ne** \> <a href="https://go.microsoft.com/fwlink/?linkid=2183233" target="_blank">**gidin**</a>.
     
-2. **EditEdit**![ group icon öğesini seçin.  ](../media/0cfcb590-dc51-4b4f-9276-bb2ce300d87e.png) seçin. 
+2. Kullanıcıların farklı göndermesine izin vermek istediğiniz grubu seçin. 
     
-3. Grup **temsilcisi seçme**.
+3.  >  Ayarlar **Edit temsilcilerini yönet'i seçin**.
     
-4. Farklı **Gönder bölümünde** , grup **+** olarak göndermek istediğiniz kullanıcıları eklemek için işareti seçin. 
-    
-    ![Gönder iletişim kutusunun ekran görüntüsü.](../media/1df167f6-1eff-4f98-9ecd-4230fab46557.png)
+4. Temsilci **ekle bölümünde** , Erişim olarak gönder'i istediğiniz kullanıcının e-posta **adresini** girin.
   
-5. Aramak için yazın veya listeden bir kullanıcı seçin. **Tamam'ı ve** **Kaydet'i seçin**.
+5. Açılan **listeden Farklı** **Gönder olarak İzin** Türü'ne seçin.
+
+6.  Değişiklikleri **kaydet'i seçin**.
     
-    ![Aramak için yazın veya listeden bir kullanıcı seçin.](../media/522919cf-664c-4a25-8076-c51c8c9fbe43.png)
-  
+    
 ## <a name="allow-members-to-send-email-on-behalf-of-a-group"></a>Üyelerin grup adına e-posta göndermesine izin verme
 
-Bu bölümde, kullanıcıların yönetim merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">(EAC)</a> yer alan bir grup adına e-Exchange göndermelerine nasıl izin Exchange Online.
+Bu bölümde, kullanıcıların yönetim merkezinde (EAC) yer alan bir grup adına e-Exchange <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">e-posta göndermelerine nasıl izin</a> Exchange Online.
   
 1. Exchange yönetim merkezinde Alıcılar **Grupları'ne** \> <a href="https://go.microsoft.com/fwlink/?linkid=2183233" target="_blank">**gidin**</a>.
     
-2. Grubu **düzenle** ![simgesini düzenle'yi seçin.](../media/0cfcb590-dc51-4b4f-9276-bb2ce300d87e.png) seçin. 
+2. Kullanıcıların adına göndermesine izin vermek istediğiniz grubu seçin. 
     
-3. Grup **temsilcisi seçme**.
+3.  >  Ayarlar **Edit temsilcilerini yönet'i seçin**.
     
-4. Adına Gönder bölümünde, grup olarak **+** göndermek istediğiniz kullanıcıları eklemek için işareti seçin. 
-    
-    ![İletişim kutusu adına gönder seçeneğinin ekran görüntüsü.](../media/2bae0579-8907-4d6b-8920-ddd6555897b4.png)
+4. Temsilci **ekle bölümünde** , Erişim olarak gönder'i istediğiniz kullanıcının e-posta **adresini** girin.
   
-5. Aramak için yazın veya listeden bir kullanıcı seçin. **Tamam'ı ve** **Kaydet'i seçin**.
-    
-    ![Aramak için yazın veya listeden bir kullanıcı seçin.](../media/522919cf-664c-4a25-8076-c51c8c9fbe43.png)
+5. Açılan **listeden Adına** **Gönderme olarak İzin** Türü'ne seçin.
+
+6.  Değişiklikleri **kaydet'i seçin**.
 
 ## <a name="related-articles"></a>İlgili makaleler
 

@@ -20,12 +20,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Kuruluş bilginizi koruyan cihaz ilkeleri oluşturmak için Temel Mobil Kullanım ve Güvenlik'i kullanın.
-ms.openlocfilehash: c0fa9cec0b9029d2cd55aace0c758e6c81e265b0
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+ms.openlocfilehash: d4e693d27ea71cdd18c9ea668a2102e0ce061b8d
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63018762"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400455"
 ---
 # <a name="create-device-security-policies-in-basic-mobility-and-security"></a>Temel Mobil Kullanım ve Güvenlik içinde cihaz güvenliği ilkeleri oluşturma
 
@@ -121,7 +121,7 @@ Bazı kişilerin mobil cihazlarında koşullu erişim denetimlerini dışarıda 
 
 Kullanıcı cihazlarına ilkeyi uygulasanız bile, her cihazın üzerindeki etkisi cihaz türleri arasında bir değişiklik gösterir. İlkelerin farklı cihazlar üzerindeki etkisiyle ilgili örnekler için aşağıdaki tabloya bakın.
 
-|**Güvenlik İlkesi**|**Android 4 ve sonrası**|**Samsung KNOX**|**iOS 6 ve sonrası**|**Notlar**|
+|**Güvenlik İlkesi**|**Android**|**Samsung KNOX**|**iOS**|**Notlar**|
 |:-----|:-----|:-----|:-----|:-----|
 |Şifreli yedekleme gerektir|Hayır|Evet|Evet|iOS şifreli yedekleme gereklidir.|
 |Bulut yedeklemeyi engelle|Evet|Evet|Evet|iOS'ta Android'de Google yedeklemesini (gri renkte), bulut yedeklemesini engelle.|
@@ -139,7 +139,7 @@ Kullanıcı cihazlarına ilkeyi uygulasanız bile, her cihazın üzerindeki etki
 
 İlkeyi silseniz veya ilkenin dağıtıldığı gruptan bir kullanıcı kaldırsanız, ilke ayarları Microsoft 365 e-posta profili ve önbelleğe alınmış e-postalar kullanıcının cihazından kaldırılabilir. Farklı cihaz türlerinde nelerin kaldırıldığına bakın.
 
-|**Kaldırılanlar**|**iOS 6 ve sonrası**|**Android 4 ve sonrası (Samsung KNOX dahil)**|
+|**Kaldırılanlar**|**iOS**|**Android (Samsung KNOX dahil)**|
 |:-----|:-----|:-----|
 |Yönetilen e-posta <sup>profilleri1</sup>|Evet|Hayır|
 |Bulut yedeklemeyi engelle|Evet|Hayır|

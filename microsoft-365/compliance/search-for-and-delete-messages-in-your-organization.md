@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: 3526fd06-b45f-445b-aed4-5ebd37b3762a
 description: E-posta iletisi aramak ve Microsoft 365 uyumluluk merkezi tüm posta kutularından silmek için, ileti iletişim kutusunda arama ve temizleme özelliğini kullanın.
-ms.openlocfilehash: 33c65cb61be14d72631fd3a272b68f2dad2ffea6
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 9361f7dea0e1b12d50733b9b1d1e91ac15577ab9
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988186"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63401000"
 ---
 # <a name="search-for-and-delete-email-messages"></a>E-posta iletilerini arama ve silme
 
@@ -36,8 +36,8 @@ ms.locfileid: "62988186"
 
 - Hassas veriler içeren iletiler
 
-> [!CAUTION]
-> Arama ve temizleme, gerekli izinleri atanan herkesin kurum deki posta kutularından e-posta iletilerini silmelerine olanak sağlayan güçlü bir özelliktir.
+> [!TIP]
+> Kuruluşta Office 365 Plan 2 aboneliği için Bir Defender varsa, bu makalede açıklanan yordamı takip etmek yerine, [Kötü amaçlı e-postaları Office 365'de](/microsoft-365/security/office-365-security/remediate-malicious-email-delivered-office-365) teslim etme konusunda ayrıntılı olarak açıklanan yordamın kullanılması önerilir.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 

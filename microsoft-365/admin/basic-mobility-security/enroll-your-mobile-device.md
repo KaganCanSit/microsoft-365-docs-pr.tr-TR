@@ -18,30 +18,30 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid:
 - MET150
-description: Cihazınızla mobil Microsoft 365 için önce Temel Mobil Kullanım ve Güvenlik'e Microsoft 365.
-ms.openlocfilehash: 7573cce783be2a629adcba65562525794ad58999
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Cihazınızla mobil Microsoft 365 için öncelikle Temel Mobil Kullanım ve Güvenlik'e Microsoft 365.
+ms.openlocfilehash: bc937442be852862172b4ef747d757df4785f880
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973706"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400357"
 ---
 # <a name="enroll-your-mobile-device-using-basic-mobility-and-security"></a>Temel Mobil Kullanım ve Güvenlik'i kullanarak mobil cihazınızı kaydetme
 
-İş için telefon, tablet ve diğer mobil cihazlarınızı kullanmak, iş yeri dışındayken iş projeleri üzerinde çalışmak ve haberdar olmak için harika bir yol sağlar. Microsoft 365 hizmetlerini cihazınızla kullanamadan önce, bu hizmeti kullanarak mobil cihaz için Temel Mobil Microsoft 365 ve Güvenlik'e Microsoft Intune Şirket Portalı.
+İş için telefon, tablet ve diğer mobil cihazlarınızı kullanmak, iş yeri dışındayken iş projeleri üzerinde çalışmak ve haberdar olmak için harika bir yol sağlar. Microsoft 365 hizmetlerini cihazınızla birlikte kullanamadan önce, bu hizmeti kullanmak üzere Microsoft 365 için Temel Hareketlilik ve Güvenlik Microsoft Intune Şirket Portalı.
 
-Kuruluşlar Temel Mobil Kullanım ve Güvenlik'i seçmektedir, böylece çalışanlar mobil cihazlarını kullanarak iş e-postalarına, takvimlerine ve belgelerine güvenli bir şekilde erişirken işletme de önemli verilerin güvenliğini sağlar ve uyumluluk gereksinimlerini karşılar.Daha fazla bilgi edinmek için bkz[. Mobil Kullanım için Temel Mobil Kullanım ve Microsoft 365](overview.md). Daha fazla bilgi için bkz [. Cihazımı kaydettirmde kuruluşum ne bilgileri görebilir?](/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune)
+Kuruluşlar Temel Mobil Kullanım ve Güvenlik'i seçmektedir, böylece çalışanlar mobil cihazlarını kullanarak iş e-postalarına, takvimlerine ve belgelerine güvenli bir şekilde erişirken işletme de önemli verilerin güvenliğini sağlar ve uyumluluk gereksinimlerini karşılar.Daha fazla bilgi edinmek için bkz[. Mobil Kullanım için Temel Mobil kullanım ve Microsoft 365](overview.md). Daha fazla bilgi için bkz [. Cihazımı kaydettirmde kuruluşum ne bilgileri görebilir?](/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune)
 
 > [!IMPORTANT]
-> Cihazınızı Microsoft 365 için Temel Mobil Kullanım ve Güvenlik'e kaydettirerek, bir parola ayarlamanız ve buna ek olarak, iş organizasyonsunuz tarafından cihazı temizleme seçeneğine izin vermeniz gerekebilir. Cihaz temizleme işlemi, Microsoft 365 yönetim merkezi birçok kez yanlış <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank"></a>girilirse veya kullanım koşulları bozuksa cihazdan tüm verileri kaldırmak için cihaz temizleme işlemi yapılabilir.
+> Cihazınızı Microsoft 365 için Temel Mobil Kullanım ve Güvenlik'e kaydettirseniz, bir parola ayarlamanız ve buna ek olarak, iş organizasyonsunuz tarafından cihazı temizleme seçeneğine izin vermeniz gerekebilir. Cihaz temizleme işlemi, Microsoft 365 yönetim merkezi birçok kez yanlış <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank"></a>girilirse veya kullanım koşulları bozuksa cihazdan tüm verileri kaldırmak için cihaz temizleme işlemi yapılabilir.
 
 ## <a name="supported-devices"></a>Desteklenen cihazlar
 
 Intune hizmeti Microsoft 365 için Temel Mobil Kullanım ve Güvenlik, mobil cihazların çoğuyla değil, çoğuyla çalışır. Temel Hareketlilik ve Güvenlik ile desteklenenler:
 
-- iOS 10.0 veya sonrası
+- iOS
 
-- Android 4.4 veya sonrası
+- Android
 
 - Windows 8.1 ve Windows 10 (Telefon ve PC)
 
@@ -52,7 +52,7 @@ Cihazınız yukarıda listelenmiyorsa ve Temel Mobil Kullanım ve Güvenlik ile 
 
 ## <a name="set-up-your-mobile-device-with-intune-and-basic-mobility-and-security"></a>Intune ve Temel Mobil Kullanım ve Güvenlik ile mobil cihazınızı ayarlama
 
-Cihaz Intune Şirket Portalı Mobil Kullanım ve Güvenlik Microsoft 365 tarafından yönetillere olanak sağlar.
+Cihaz Intune Şirket Portalı Mobil Kullanım ve Güvenlik tarafından Microsoft 365 olanak sağlar.
 
 ### <a name="iphone-or-ipad"></a>iPhone veya iPad
 
@@ -70,13 +70,13 @@ Apple App Store'a gidin ve uygulamayı indirip Intune Şirket Portalı.
 
 Google Play mağazasına gidin ve uygulamayı indirip Intune Şirket Portalı.
 
-Android telefon veya tabletinizi Şirket portalıyla birbirine bağlamak ve yapılandırmak Microsoft 365 [bkz.](/mem/intune/user-help/enroll-device-android-company-portal) Cihazınızı Şu Şirket Portalı.
+Android telefon veya tabletinizi Şirket portalına bağlamak ve yapılandırmak Microsoft 365 [bkz. Cihazınızı Mobil cihaza Şirket Portalı](/mem/intune/user-help/enroll-device-android-company-portal).
 
 ### <a name="windows-81-and-windows-10"></a>Windows 8.1 ve Windows 10
 
-Yükleme Microsoft Store gidin ve yükleme Intune Şirket Portalı
+Güncelleştirmeler'e Microsoft Store, indirme ve yükleme Intune Şirket Portalı
 
-Şirket portalı üzerinden bilgisayarınıza Windows veya bilgisayarınızı bağlamak ve yapılandırmak için bkz. Microsoft 365'de Windows [kaydı Intune Şirket Portalı](/intune-user-help/windows-enrollment-company-portal).
+Şirket portalı üzerinden bilgisayarınıza Windows veya bilgisayarınızı bağlamak ve yapılandırmak için bkz. Microsoft 365'de [Windows kaydı Intune Şirket Portalı](/intune-user-help/windows-enrollment-company-portal).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

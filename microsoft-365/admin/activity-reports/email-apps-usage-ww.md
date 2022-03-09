@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Merkezinde Raporlar - E-posta uygulamaları kullanımı
+title: Microsoft 365 yönetim merkezi-posta uygulamaları kullanım raporları
 ms.author: kwekua
 author: kwekua
 manager: scotv
@@ -19,12 +19,12 @@ search.appverid:
 - GEA150
 ms.assetid: c2ce12a2-934f-4dd4-ba65-49b02be4703d
 description: E-posta uygulamaları kullanım raporunu, kullanıcıların Exchange Online ve Outlook e-posta uygulamaları hakkında bilgi edinmek için nasıl edinebilirsiniz.
-ms.openlocfilehash: 601258d721f817438f0bd6a08d98d73aa22b7afb
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: c2d68c5b151b236ee51d0a06b4e51f6e6b16ede5
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989913"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400930"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---email-apps-usage"></a>Microsoft 365 Merkezinde Raporlar - E-posta uygulamaları kullanımı
 

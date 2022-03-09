@@ -15,12 +15,12 @@ search.appverid:
 - MET150
 recommendations: false
 description: dlp ilkesi koşulları ve özel durumları hakkında bilgi
-ms.openlocfilehash: a0354fe6392d739fa1b616e92625b7507cca823f
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: 771674b82e50987397fc1ae754f0b96719a04ae5
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63010732"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63401122"
 ---
 # <a name="dlp-policy-conditions-exceptions-and-actions"></a>DLP ilkesi koşulları, özel durumlar ve eylemler
 
@@ -48,29 +48,25 @@ Aşağıdaki bölümlerdeki tablolarda, DLP'de kullanılabilen koşullar ve öze
 
 ### <a name="senders"></a>Gönderenler
 
-Gönderen adresini bir koşul veya özel durum olarak kullanırsanız, değerin baktığı gerçek alan kullandığınız kuralın türüne bağlı olarak değişir. DLP tabanlı kurallar için, gönderen adresi olarak Zarf adresi kullanılır. Daha Exchange Aktarım kuralları için, Gönderen adresi olarak Üst bilgi adresi kullanılır.
+Gönderen adresini bir koşul olarak kullanırsanız veya değerin bakılan gerçek alanını özel durum olarak kullanırsanız, yapılandırılmış gönderen adresi konumuna bağlı olarak değişir. Varsayılan olarak, DLP kuralları gönderen adresi olarak Üst bilgi adresini kullanır.
 
-<!--
-> [!NOTE]
-> Starting January 20, 2022, the default sender address location will be moved to the Header address along with the availability of the -SenderAddressLocation parameter to configure desired behavior at a DLP rule level.
+![Zarf (P1) adresi ile Üst Bilgi (P2) adresi arasındaki farkı gösteren e-posta üst bilgi görüntüsü](../media/dlp-conditions-exceptions-meetinginvite-callouts.png)
 
-![image](https://user-images.githubusercontent.com/53205984/145942298-6b435ba6-d146-44fe-a1c5-58babeaf8d7a.png)
-
-At the tenant level, you can configure a sender address location to be used across all rules, unless overridden by a single rule. To revert tenant DLP policy configuration to evaluate the sender address from the Envelope across all rules, you can run the following command:
+Kiracı düzeyinde, tek bir kural tarafından geçersiz kılınmadıkça, tüm kurallarda kullanılacak bir gönderen adresi konumu yapılandırabilirsiniz. Tüm kurallar genelinde Zarf'tan gönderen adresini değerlendirmek için kiracı DLP ilkesi yapılandırmasını ayarlamak için, aşağıdaki komutu çalıştırabilirsiniz:
 
 ```PowerShell
 Set-PolicyConfig –SenderAddressLocation Envelope
 ```
 
-To configure the sender address location at a DLP rule level, the parameter is _SenderAddressLocation_. The available values are:
+Gönderen adresinin konumunu bir DLP kural düzeyinde yapılandırmak için, parametre _SenderAddressLocation parametresidir_. Kullanılabilir değerler:
 
-- **Header**: Only examine senders in the message headers (for example, the **From**, **Sender**, or **Reply-To** fields). This is the default value.
+- **Üst** Bilgi: Yalnızca ileti üst bilgilerinden gönderenleri inceler ( **örneğin, Gönderen**, **Gönderen** **veya Yanıtla** alanları). Bu, varsayılan değerdir.
 
-- **Envelope**: Only examine senders from the message envelope (the **MAIL FROM** value that was used in the SMTP transmission, which is typically stored in the **Return-Path** field).
+- **Zarf**: Yalnızca ileti zarfı gönderenleri inceler (SMTP iletiminde kullanılan ve normalde **Dönüş Yolu** alanında depolanan MAIL **FROM** değeri).
 
-- **Header or envelope** (`HeaderOrEnvelope`) Examine senders in the message header and the message envelope.
+- **Üst bilgi veya zarf** (`HeaderOrEnvelope`) İleti üst bilgisinde ve ileti zarfındaki gönderenleri incele.
 <br>
--->
+
 |DLP'de koşul veya özel durum|PowerShell'de koşul/özel Microsoft 365 parametreleri|özellik türü|açıklama|
 |---|---|---|---|
 |Gönderen:|koşul: *Ilk* <br/> özel durum: *ExceptIfFrom*|Adresler|Belirtilen posta kutuları, posta kullanıcıları, posta kişileri veya kuruluş Microsoft 365 tarafından gönderilen iletiler.|

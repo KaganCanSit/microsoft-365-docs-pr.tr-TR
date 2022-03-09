@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Merkezinde Rapor Raporları - OneDrive İş raporları
+title: Microsoft 365 OneDrive İş raporları
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -20,12 +20,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Organizasyonun OneDrive bir kullanım raporuna sahip olur ve her kullanıcının OneDrive, paylaşılan dosya sayısını ve depolama kullanımını bilirsiniz.
-ms.openlocfilehash: 8cfd6dfbcff15c118f9ad54ef29e5cec6cf4d6bf
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 52e925774ba2315f582f1b5ba50a4a75fe221c10
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989898"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400803"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---onedrive-for-business-activity"></a>Microsoft 365 Merkezinde Rapor Raporları - OneDrive İş raporları
 

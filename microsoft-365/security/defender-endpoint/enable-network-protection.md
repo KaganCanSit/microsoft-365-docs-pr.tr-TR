@@ -1,7 +1,7 @@
 ---
 title: Ağ korumasını açma
 description: Grup İlkesi, PowerShell veya Mobil Cihaz Yönetimi ve Yapılandırma Yöneticisi ile ağ korumasını etkinleştirin.
-keywords: ANetwork protection, exploits, malicious website, ip, domain, domains, enable, turn on
+keywords: Ağ koruması, exploits, kötü amaçlı web sitesi, ip, etki alanı, etki alanları, etkinleştirmek, etkinleştirme
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -10,17 +10,17 @@ ms.localizationpriority: medium
 ms.topic: conceptual
 author: denisebmsft
 ms.author: deniseb
-ms.reviewer: ''
+ms.reviewer: mkaminska
 manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: acf474f472450456014a581366c8860d87607a79
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b21b2f2a69ab9a85f1f5003104969364ae9c6e78
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63322653"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63401154"
 ---
 # <a name="turn-on-network-protection"></a>Ağ korumasını açma
 
@@ -57,7 +57,8 @@ Anahtar yoksa, SOFTWARE **Microsoft** \> Windows Defender  \> **Windows Defender
    - 2 veya **Denetim** modu
 
     :::image type="content" alt-text="Ağ Koruması kayıt defteri anahtarı." source="../../media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png" lightbox="../../media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png":::
-
+    
+    
 ## <a name="enable-network-protection"></a>Ağ korumasını etkinleştirme
 
 Şu yöntemlerden herhangi birini kullanarak ağ korumasını etkinleştirin:
@@ -89,6 +90,9 @@ Anahtar yoksa, SOFTWARE **Microsoft** \> Windows Defender  \> **Windows Defender
 ### <a name="mobile-device-management-mdm"></a>Mobil cihaz yönetimi (MDM)
 
 Ağ korumasını etkinleştirmek veya devre dışı bırakmak veya denetim modunu etkinleştirmek için [./Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender) yapılandırma hizmet sağlayıcısını (CSP) kullanın.
+
+[Ağ korumasını etkinleştirmeden veya devre dışı bırakmadan ya da denetim modunu](https://support.microsoft.com/topic/update-for-microsoft-defender-antimalware-platform-92e21611-8cf1-8e0e-56d6-561a07d144cc) etkinleştirmeden önce Microsoft Defender kötü amaçlı yazılımdan koruma platformunu en son sürüme güncelleştirin.
+
 
 ### <a name="microsoft-endpoint-manager"></a>Microsoft Endpoint Manager
 
@@ -163,6 +167,7 @@ Kayıt Defteri düzenleyicisini kullanarak yerel bir bilgisayarda ağ korumasın
 6. Kalan adımları tamamlayın ve ilkeyi kaydedin. 
 
 7. İlkeyi koleksiyona **dağıtmak için** şeritten Dağıt'ı seçin.
+
 
 > [!IMPORTANT]
 > Configuration Manager'dan bir Exploit Guard ilkesi dağıtın, dağıtımı kaldırsanız bile Exploit Guard ayarları istemcilerden kaldırılamaz. `Delete not supported` , istemcinin Exploit Guard dağıtımını kaldırırsanız Configuration Manager istemcisinin ExploitGuardHandler.log dosyasına kaydedilir. <!--CMADO8538577-->

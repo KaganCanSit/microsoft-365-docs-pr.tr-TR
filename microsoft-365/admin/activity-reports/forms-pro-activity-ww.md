@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Merkezi'nde Raporlar - Dynamics 365 Müşteri Sesi etkinliği
+title: Microsoft Dynamics 365 müşteri ses etkinliği raporları
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -20,12 +20,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft Dynamics 365 Müşteri Sesi etkinlik raporunu, rapor üzerinde Microsoft 365 Raporlar panosu kullanarak nasıl Microsoft 365 yönetim merkezi.
-ms.openlocfilehash: d143728f8170ae9c12a6d007e9e256a23f7ff74d
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: fb3f631db84dbd974123863956d5505f02c382d6
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989911"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400888"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---dynamics-365-customer-voice-activity"></a>Microsoft 365 Merkezi'nde Raporlar - Dynamics 365 Müşteri Sesi etkinliği
 

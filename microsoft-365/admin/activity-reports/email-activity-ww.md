@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Merkezinde Raporlar - E-posta etkinliği
+title: Microsoft 365 yönetim merkezi-posta etkinliği raporlarını gönderme
 ms.author: kwekua
 author: kwekua
 manager: scotv
@@ -19,12 +19,12 @@ search.appverid:
 - GEA150
 ms.assetid: 1cbe2c00-ca65-4fb9-9663-1bbfa58ebe44
 description: Bir e-posta etkinlik raporunu, rapor Microsoft 365 Raporlar panosu kullanarak nasıl Microsoft 365 yönetim merkezi.
-ms.openlocfilehash: 82d9e7ecd6273f46e378953cf4b6fafffc7abd0f
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: e7441bc24661f279a43a655d17ef23047ed48a43
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989914"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400958"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---email-activity"></a>Microsoft 365 Merkezinde Raporlar - E-posta etkinliği
 

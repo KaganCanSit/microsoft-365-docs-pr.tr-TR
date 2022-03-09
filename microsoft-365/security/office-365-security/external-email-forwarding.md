@@ -15,12 +15,12 @@ ms.custom:
 description: Bu makale dış e-posta iletme, Otomatik iletme, 5.7.520 Erişim Engellendi iletileri, dış iletmeyi devre dışı bırakma, 'Yöneticiniz dış iletmeyi devre dışı bıraktı' iletilerini ve giden istenmeyen posta önleme ilkesi gibi konuları kapsar.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: db9c790c91e1335853b6647de63edb7ca6ee9a25
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 228bb4402fd67ba8e56dd84b270c64977667ff2d
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62997606"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63401028"
 ---
 # <a name="control-automatic-external-email-forwarding-in-microsoft-365"></a>E-postalarda otomatik dış e-posta iletmeyi Microsoft 365
 
@@ -43,7 +43,7 @@ Aşağıdaki otomatik iletme türleri şu bağlantılarda Microsoft 365:
 
 Dış alıcılara otomatik iletmeyi kontrol etmek için giden istenmeyen posta filtresi ilkelerini kullanabilirsiniz. Üç ayar kullanılabilir:
 
-- **Otomatik - Sistem denetimli**: Otomatik dış iletme engellenir. İletileri iç otomatik iletme çalışmaya devam edecektir. Varsayılan ayar budur.
+- **Otomatik - Sistem denetimli**: Bu, varsayılan ayardır. Bu ayar artık Kapalı ile **aynıdır**. Bu ayar ilk ilk ilk geldiğinde Açık ayarıyla **eşdeğerdir**. Zamanla, varsayılan olarak güvenli ilkeleri [sayesinde](secure-by-default.md) bu ayar tüm müşteriler için aşamalı olarak **Kapalı** olarak değiştirildi. Daha fazla bilgi için bu [blog gönderisi'ne bakın](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888). 
 - **Açık**: Otomatik dış iletmeye izin verilir ve kısıtlanmaz.
 - **Kapalı**: Otomatik dış iletme devre dışı bırakılır ve gönderene teslim edileme raporu (NDR veya geri dönen ileti olarak da bilinir) gönderilir.
 
@@ -63,12 +63,20 @@ Yönetici olarak, otomatik e-posta iletmeye izin vermek veya engellemek için ö
 - [Dış etki alanlarının](/exchange/mail-flow-best-practices/remote-domains/remote-domains) birlarına veya tamamlarına otomatik e-posta iletmeye izin vermek veya engellemek için uzak etki alanları.
 - Dış alıcılara otomatik olarak iletilen [iletileri Exchange](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) ve engellemek için posta akış kurallarında (aktarım kuralları olarak da bilinir) yer alan koşullar ve eylemler.
 
-Uzak etki alanı ayarları ve posta akışı kuralları, giden istenmeyen posta filtresi ilkeleriyle ilgili ayarlardan bağımsızdır. Örneğin:
+Bir ayar dış iletmeye izin verirken, başka bir ayar dış iletmeyi engellerken, blok normalde kazanır. Aşağıdaki tabloda örnekler açıklanmıştır:
 
-- Uzak etki alanı için otomatik iletmeye izin verebilirsiniz, ancak giden istenmeyen posta filtresi ilkelerinde otomatik iletmeyi engelleyebilirsiniz. Bu örnekte, otomatik olarak iletilen iletiler engellenir.
-- Giden istenmeyen posta filtresi ilkelerinde otomatik iletmeye izin vermekle birlikte, otomatik olarak iletili e-postayı engellemek için posta akış kurallarını veya uzak etki alanı ayarlarını kullanırsınız. Bu örnekte, posta akış kuralları veya uzak etki alanı ayarları otomatik olarak iletilene iletileri engelleyecek.
+<br>
 
-Bu özellik bağımsızlığı, (örneğin) giden istenmeyen posta filtresi ilkelerinde otomatik iletmeye izin verir, ancak uzak etki alanlarını kullanarak kullanıcıların iletileri iletebilirsiniz dış etki alanlarını denetlemeniz gerekir.
+****
+
+|Senaryo|Sonuç|
+|---|---|
+|<ul><li>Uzak etki alanı ayarlarını otomatik iletmeye izin verecek şekilde yapılandırabilirsiniz.</li><li>Giden istenmeyen posta filtresi ilkesinde otomatik iletme seçeneği Kapalı olarak **ayarlanır**.</li></ul>|etkilenen etki alanlarındaki alıcılara otomatik olarak iletilene iletiler engellenir.|
+|<ul><li>Uzak etki alanı ayarlarını otomatik iletmeye izin verecek şekilde yapılandırabilirsiniz.</li><li>Giden istenmeyen posta filtresi ilkesinde otomatik iletme seçeneği Otomatik **- Sistem denetimli olarak ayarlanır**.</li></ul>|etkilenen etki alanlarındaki alıcılara otomatik olarak iletilene iletiler engellenir. <p> Daha önce açıklandığı gibi **Otomatik - Sistem** tarafından denetlenen açık ayarı **kullanılır, ancak** tüm kuruluşlarda ayar zaman içinde **Kapalı** olarak değiştirilmiştir. <p> Netlik sağlamak için, giden istenmeyen posta filtresi ilkenizi Açık veya **Kapalı olarak yapılandırmanız** **gerekir**.|
+|<ul><li>Giden istenmeyen posta filtresi ilkesinde otomatik iletme seçeneği On olarak **ayarlanır**</li><li>Posta akış kurallarını veya uzak etki alanlarını, otomatik olarak iletili e-postaları engellemek için kullanırsınız.</li></ul>|Etkilenen alıcılara otomatik olarak iletilen iletiler posta akış kuralları veya uzak etki alanları tarafından engellenir.|
+|
+
+Bu davranışı (örneğin), giden istenmeyen posta filtresi ilkelerinde otomatik iletmeye izin vermek için kullanabilirsiniz, ancak uzak etki alanlarını kullanıcıların iletileri ilet kullanabileceği dış etki alanlarını kontrol etmek için kullanabilirsiniz.
 
 ## <a name="how-to-find-users-that-are-automatically-forwarding"></a>Otomatik olarak iletien kullanıcıları bulma
 

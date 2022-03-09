@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Merkezinde Raporlar - Grup Yammer raporu
+title: Microsoft 365 yönetim merkezi Yammer grupları etkinlik raporları
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -20,12 +20,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Yammer içinde oluşturulan ve kullanılan grup sayısını ve bunların Yammer etkinliklerini bilmek için grup etkinliği raporunu kullanın.
-ms.openlocfilehash: 704cc75c9d06c30f5562a824dd93eef470888297
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: bfc6756b6db65a846a767f50f20f9011abf01ef8
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989883"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400419"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---yammer-groups-activity-report"></a>Microsoft 365 Merkezinde Raporlar - Grup Yammer raporu
 

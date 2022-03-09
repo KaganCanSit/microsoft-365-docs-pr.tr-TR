@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: ''
 description: Bir gözden geçirme kümesinden sunular veya dış incelemeler Advanced eDiscovery içeriği seçmeyi ve dışarı aktarmayı öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: dba9708bfda6d1b98a2861615e56518067822100
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 6384d45121fc39d120d6906e46594b8b04124471
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984693"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63401070"
 ---
 # <a name="export-documents-from-a-review-set-in-advanced-ediscovery"></a>Belge kümesinde gözden geçirme kümesinden belgeleri Advanced eDiscovery
 
@@ -87,13 +87,17 @@ Bu dışarı aktarma seçeneğini tercih ediyorsanız, dışarı aktaran içerik
 
 - Summary.csv: Gözden geçirme kümesinden dışarı aktarıldı içeriğin bir özetini içerir
 
-- Kök klasör: [Dışarı Aktarma Adı] x / z.zip adlı bu klasör her ZIP dosyası bölümü için yinelenir.
+- Kök klasör: [Dışarı Aktarma Adı] x / z.zip adlı bu klasör her ZIP dosyası bölümü için yinelenir. Kök klasör şunları içerir:
   
   - Export_load_file_x: z.csv dosyası.
   
   - Uyarı ve hatalar x z.csv: Bu dosya, gözden geçirme kümesinden dışarı aktarmaya çalışırken karşılaşılan hatalar hakkında bilgi içerir.
   
-  - Exchange: Bu klasör PST dosyalarında depolanan Exchange tüm içeriği içerir. Bu seçenekte, redacted PDF dosyaları ek kullanılamaz. Gözden geçirme kümesinde bir ek seçiliyse, ek iliştirilmiş olarak üst e-posta dışarı aktarıldı.
+  - Exchange: Bu klasör PST dosyalarında depolanan Exchange tüm içeriği içerir. Bu seçenekte, redacted PDF dosyaları ek kullanılamaz. Gözden geçirme kümesinde bir ek seçiliyse, ek iliştirilmiş olarak üst e-posta iletisi dışarı aktarıldı. Bu klasör aşağıdaki öğeleri de içerebilir: 
+
+    - Kod çözmesi yapılan Bilgi Hakları Yönetimi (IRM) korumalı iletiler. 
+    - Hata düzeltildi iletileri. 
+    - Modern ekler veya iletilerde başvurulan bağlantılar. 
   
   - SharePoint: Bu klasör, dosya biçimindeki tüm yerel SharePoint yerel dosya biçiminde içerir. Bu seçenekte, redacted PDF dosyaları ek kullanılamaz.
 

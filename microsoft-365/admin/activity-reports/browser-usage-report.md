@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Merkezinde Raporlar - Microsoft tarayıcı kullanımı
+title: Microsoft 365 yönetim merkezi tarayıcı kullanım raporlarını kullanma
 ms.author: waxiaoyu
 author: sarahwxy
 manager: scotv
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - GEA150
 description: Microsoft tarayıcı kullanım raporunu, çalışma sayfalarındaki raporlar Microsoft 365 kullanarak nasıl ala bir Microsoft 365 yönetim merkezi.
-ms.openlocfilehash: d653bf1132f461b14644b1ddc04bab2fdceee358
-ms.sourcegitcommit: 542e6b5d12a8d400c3b9be44d849676845609c5f
+ms.openlocfilehash: cfeed7f311816e72d06f63e36aabe9f6ffad718f
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "62999588"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400972"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-browser-usage"></a>Microsoft 365 Merkezinde Raporlar - Microsoft tarayıcı kullanımı
 

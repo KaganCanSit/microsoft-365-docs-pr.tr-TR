@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: troubleshooting
 ms.technology: mde
-ms.openlocfilehash: b6d4b6f78cc677f9be5f664d86d8734ebd8df2f7
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: a0d0f470a2af18dab298ba3a1af642362590da4c
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62997558"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63401168"
 ---
 # <a name="collect-support-logs-in-microsoft-defender-for-endpoint-using-live-response"></a>Canlı yanıtı kullanarak Uç Nokta için Microsoft Defender'da destek günlüklerini toplama
 
@@ -35,11 +35,9 @@ Destek ile iletişime geçerek, Uç Nokta İstemci Çözümleyicisi aracı için
 
 Bu konu başlığında, aracı Canlı Yanıt ile çalıştırma hakkında yönergeler ve bilgiler verr.
 
-1. Uygun betiği indirme
-   - Yalnızca Uç nokta istemci algılayıcı günlükleri için Microsoft Defender: [LiveAnalyzer.ps1 betik.](https://aka.ms/MDELiveAnalyzer)
-      - Sonuç paketi yaklaşık boyut: ~100 Kb
-   - Uç nokta istemci algılayıcısı ve Virüsten Koruma günlükleri için Microsoft Defender: [LiveAnalyzer+MDAV.ps1 betiği](https://aka.ms/MDELiveAnalyzerAV).
-       - Sonuç paketi yaklaşık boyutu: ~10 Mb
+1. Uç Nokta İstemci Çözümleyicisi için Microsoft Defender'ın 'Araçlar' alt dizininden kullanılabilir [gerekli betikleri indirin ve alın](https://aka.ms/BetaMDEAnalyzer). <br>
+Örneğin, temel algılayıcı ve cihaz sistem durumu günlüklerini almak için ".. \Tools\MDELiveAnalyzer.ps1".<br>
+Defender Virüsten Koruma destek günlükleri de (MpSupportFiles.cab) MpSupportFiles.cab" getir'i alın. \Tools\MDELiveAnalyzerAV.ps1" 
 
 2. Araştırmamız [gereken makinede](live-response.md#initiate-a-live-response-session-on-a-device) Canlı Yanıt oturumu başlatma.
 

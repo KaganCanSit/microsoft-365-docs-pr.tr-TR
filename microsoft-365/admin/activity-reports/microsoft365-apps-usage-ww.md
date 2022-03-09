@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Merkezinde Rapor Raporları - Microsoft 365 Uygulamaları kullanımı
+title: Microsoft 365 yönetim merkezi uygulamaları kullanım raporları
 ms.author: kwekua
 author: kwekua
 manager: scotv
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - GEA150
 description: Raporlar panosunda Microsoft 365 Uygulamaları Raporları panosu kullanarak kullanım Microsoft 365 hakkında bilgi Microsoft 365 yönetim merkezi.
-ms.openlocfilehash: 5418ea32129a667d198eee7a14e005450105a3ca
-ms.sourcegitcommit: ab5368888876d8796da7640553fc8426d040f470
+ms.openlocfilehash: c7a8e5bbf2fec8450b52b3cbe52e110d97061ed3
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "62990585"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400831"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-365-apps-usage"></a>Microsoft 365 Merkezinde Rapor Raporları - Microsoft 365 Uygulamaları kullanımı
 

@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Merkezinde Rapor Raporları - Microsoft Teams etkinliğini gösterir
+title: Microsoft 365 yönetim merkezi Teams etkinlik raporlarını raporlar
 ms.author: kwekua
 author: kwekua
 manager: scotv
@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Kullanıcı etkinliği raporunu nasıl Microsoft Teams hakkında bilgi edinin ve Teams öngörüler elde edin.
-ms.openlocfilehash: 0d6d3742ee621952973e732f9c84def06011eceb
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: cfb503c09577d4538371ad6a5b35520d8da24bdb
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989902"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400846"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-user-activity"></a>Microsoft 365 Merkezinde Rapor Raporları - Microsoft Teams etkinliğini gösterir
 

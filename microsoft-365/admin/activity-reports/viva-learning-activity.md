@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Merkezinde Raporlar - Viva yönetim Learning etkinlikleri
+title: Microsoft 365 yönetim merkezi Viva Learning raporları
 ms.author: efrene
 author: efrene
 manager: scotv
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - GEA150
 description: Hızlı Raporlar panosunda yer Microsoft 365 Viva Learning raporları için Microsoft 365 raporları nasıl Microsoft 365 yönetim merkezi.
-ms.openlocfilehash: 64ea4da8e87d1ba1b09a7f85617c6972ce26308e
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 382513700f6008aa2b89f32f23f31b19cce63cab
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989885"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400399"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---viva-learning-activity"></a>Microsoft 365 Merkezinde Raporlar - Viva yönetim Learning etkinlikleri
 

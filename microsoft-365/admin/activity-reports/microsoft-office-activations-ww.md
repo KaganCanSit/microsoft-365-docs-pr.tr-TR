@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Merkezinde Rapor Raporları - Microsoft Office etkinleştirmeleri etkinleştirmeleri
+title: Microsoft 365 yönetim merkezi Office etkinleştirme raporları
 ms.author: kwekua
 author: kwekua
 manager: scotv
@@ -19,12 +19,12 @@ search.appverid:
 - GEA150
 ms.assetid: 87c24ae2-82e0-4d1e-be01-c3bcc3f18c60
 description: Office aboneliğini hangi kullanıcıların etkinleştir olduğunu öğrenmek ve ek yardım almak zorunda Office kullanıcı tanımlamak için nasıl bir Etkinleştirme raporu alasınız öğrenin.
-ms.openlocfilehash: e27a097c9071729aea66d3eeb2b47f0d4bc684ca
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 055762007bbb7f6571d8408a6c07738e1c7d0490
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "62989910"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400874"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-office-activations"></a>Microsoft 365 Merkezinde Rapor Raporları - Microsoft Office etkinleştirmeleri etkinleştirmeleri
 

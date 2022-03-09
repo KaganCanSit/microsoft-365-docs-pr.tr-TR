@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 5ff454904678bc589328c6a9b454b7823ff36090
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: bbd4100466fbfef75363848bc5b89bbb9a769265
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63318781"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63401084"
 ---
 # <a name="run-the-client-analyzer-on-macos-and-linux"></a>macOS ve Linux'ta istemci çözümleyicisini çalıştırın
 
@@ -34,7 +34,7 @@ ms.locfileid: "63318781"
 1. [Araştırmaniz gereken macOS veya](https://aka.ms/XMDEClientAnalyzer) Linux makinesine XMDE İstemci Çözümleyicisi aracını indirin.
 
    > [!NOTE]
-   > Yukarıdaki bağlantıdan indirilen geçerli 'XMDEClientAnalyzer.zip' SHA256 karması şöyledir: 'AA6E73A5F451C3B78B066C9D55EE6499CE3C2F1A6E05CCE691A6055F36F93A3B'.
+   > Yukarıdaki bağlantıdan indirilen geçerli 'XMDEClientAnalyzer.zip' SHA256 karması: 'B95E2E21D5A93E0AC88BA401ACB20E5F721727B409D4186147C8D17468185583'.
 
 2. Makinede XMDEClientAnalyzer.zip içeriğini ayıkla.
 

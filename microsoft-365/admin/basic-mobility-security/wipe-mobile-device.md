@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Kayıtlı cihazlardan bilgileri kaldırmak için yerleşik Temel Mobil Kullanım ve Güvenlik'i kullanın.
-ms.openlocfilehash: ed658abc55d065e6d271893dc80a293e19373a34
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: d5f610e2a9180f1d147f68e6aabf4a7291787033
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983988"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400176"
 ---
 # <a name="wipe-a-mobile-device-in-basic-mobility-and-security"></a>Temel Mobil Kullanım ve Güvenlik'te mobil cihazı temizleme
 
@@ -82,7 +82,7 @@ Cihazı temizleme nedenleri:
 
 Temizleme hemen mobil cihaza gönderilir ve cihaz Azure Active Directory'de uyumlu değil olarak işaretlenir. Cihaz fabrika varsayılanlara sıfırlana kadar tüm veriler kaldırılırken, aşağıdaki tabloda, şirket verilerini kaldıran bir cihaz için her cihaz türü için hangi içeriğin kaldırıldığı açıklanıyor.
 
-|**İçerik üzerindeki etkisi**|**iOS 10 ve sonrası**|**Android 5 ve sonrası**|
+|**İçerik üzerindeki etkisi**|**iOS**|**Android**|
 |:-----|:-----|:-----|
 |Microsoft 365 Intune Uygulama Koruması ilkeleri tarafından korundu ise uygulama verileri temizlenmiş olur. Uygulamalar kaldırılamaz. Mobil Uygulama Yönetimi (MAM) ilkeleri tarafından korunmayan cihazlar için, Outlook OneDrive ilkeleri önbelleğe alınmış verileri kaldırmaz.<br/>**Not** Intune Uygulama koruma ilkelerini uygularken Intune lisansınız olmalıdır.|Evet|Evet|
 |Cihazlara Temel Mobil Kullanım ve Güvenlik tarafından uygulanan ilke ayarları artık zorunlu kılınamaz; kullanıcılar ayarları değiştirebilir.|Evet|Evet|

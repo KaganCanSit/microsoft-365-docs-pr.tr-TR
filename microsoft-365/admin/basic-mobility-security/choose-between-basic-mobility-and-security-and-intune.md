@@ -19,16 +19,16 @@ ms.custom:
 search.appverid:
 - MET150
 description: Temel Hareketlilik ve Güvenlik, mobil kullanım Microsoft 365 dir.
-ms.openlocfilehash: 0a461bc7462300bb2b27b5d027c2b4d4582b7d14
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 79e5a641ad4c7c1966d1014376c9f1698caeff16
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973712"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63400385"
 ---
 # <a name="choose-between-basic-mobility-and-security-or-intune"></a>Temel Hareketlilik ve Güvenlik veya Intune arasında seçim
 
-[Microsoft Intune](/mem/intune/), belirli Microsoft 365 planlarına dahil edilen tek başına bir üründür; temel mobil kullanım ve güvenlik ise Microsoft 365 dir.
+[Microsoft Intune](/mem/intune/), belirli Microsoft 365 planlarına dahil edilen tek başına bir üründür; temel mobil kullanım ve güvenlik ise Microsoft 365 içinde yer almaktadır.
 
  ## <a name="availability-of-basic-mobility-and-security-and-intune"></a>Temel Hareketlilik ve Güvenlik ve Intune kullanılabilirliği
 
@@ -63,13 +63,13 @@ Hem Basic Mobility hem Security hem de Intune, aşağıdaki tabloda açıklanan 
 Microsoft Intune Yerleşik Temel Mobil Kullanım ve Güvenlik özelliği, hem kuruluş içinde mobil cihazları yönetmenize hem de aşağıdaki tabloda açıklanan özelliklerde önemli farklılıklar vardır.
 
 > [!NOTE]
-> Kullanıcıları ve onların mobil cihazlarını yönetmek için önce Temel Mobil Kullanım ve Güvenlik'i ayarp ardından yeni bir Microsoft 365 İş Standart Intune ve Temel Mobil Kullanım ve *Güvenlik Microsoft Intune*. Bu, Temel Mobil Kullanım ve Güvenlik'i veya daha zengin özellikteki Intune çözümünü seçmenizi sağlar. Intune özelliklerini etkinleştirmek için Intune lisansı attaynın.
+> Kullanıcıları ve onların mobil cihazlarını yönetmek için önce Temel Mobil Kullanım ve Güvenlik'i ayarp sonra da ilk olarak Temel Mobil Microsoft 365 İş Standart'i ayarp ardından mobil cihaz ekleyerek, hem Intune hem de Temel Mobil *Microsoft Intune.* Bu, Temel Mobil Kullanım ve Güvenlik'i veya daha zengin özellikteki Intune çözümünü seçmenizi sağlar. Intune özelliklerini etkinleştirmek için Intune lisansı attaynın.
 
 | Özellik alanı | Öne çıkan özellikler | Temel Hareketlilik ve Güvenlik | Microsoft Intune |
 |:-----|:-----|:-----|:-----|
 |Cihaz türleri|Farklı işletim sistemi platformlarını ve önemli yönetim modu değişkenlerini yönetme. |Windows<br/>iOS<br/>Android<br/>Android Samsung KNOX<br/>|Windows<br/>iOS<br/>Android<br/>Android Samsung KNOX<br/>mac OS, iPad OS|
-|Cihaz uyumluluğu|Cihaz düzeyi PIN kilidi ve jailbreak algılama gibi güvenlik ilkelerini ayarlayın ve yönetin. |Android 9 ve sonraki cihazlarda sınırlamalar. [Ayrıntılara bakın](capabilities.md). |Evet|
-|Cihaz uyumluluğuna dayalı koşullu erişim |Uyumlu olmayan cihazların şirket e-postalarına ve verilerine buluttan erişmesini engelin. |Bu sayfalarda Windows 10.<br/>Exchange Online, SharePoint Online ve Outlook.Outlook. |Evet |
+|Cihaz uyumluluğu|Cihaz düzeyi PIN kilidi ve jailbreak algılama gibi güvenlik ilkelerini ayarlayın ve yönetin. |Android cihazlarda sınırlamalar. [Ayrıntılara bakın](capabilities.md). |Evet|
+|Cihaz uyumluluğuna dayalı koşullu erişim |Uyumlu olmayan cihazların şirket e-postalarına ve verilerine buluttan erişmesini engelin. |Bu destek Windows 10.<br/>Exchange Online, SharePoint Online ve Outlook'e erişimi denetlemeyle Outlook. |Evet |
 |Cihaz yapılandırması  |Cihaz ayarlarını yapılandırma (örneğin kamerayı devre dışı bırakma)|Sınırlı ayar kümesi.|Evet|
 |E-posta profilleri  |Cihazda yerel bir e-posta profili sağlama. |Evet|Evet|
 |WiFi profilleri |Cihazda yerel bir WiFi profili sayın. |Hayır|Evet|
@@ -80,24 +80,24 @@ Microsoft Intune Yerleşik Temel Mobil Kullanım ve Güvenlik özelliği, hem ku
 |Sıfır dokunmatik kayıt programları (AutoPilot) |Şirkete ait çok sayıda cihazı kaydederek kullanıcı kurulumunu basitleştirin. |Hayır|Evet|
 |||
 
-Önceki tabloda listelenen özelliklere ek olarak, Temel Mobil Kullanım ve Güvenlik ile Intune'da İnternet üzerinden cihazlara komut gönderen bir dizi uzak eylem vardır. Örneğin, kişisel Office olduğu yerde bırakarak (Office uygulamalarını çalışanın cihazından temizleme) veya cihazı fabrika ayarlarına sıfırlama (tam temizleme) sırasında çalışanın cihazından Office verilerini kaldırabilirsiniz.
+Önceki tabloda listelenen özelliklere ek olarak, Temel Mobil Kullanım ve Güvenlik ile Intune'da İnternet üzerinden cihazlara komut gönderen bir dizi uzak eylem vardır. Örneğin, kişisel verileri olduğu Office bırakarak (kaldır) bir çalışanın cihazından Office verilerini kaldırabilir, Office uygulamalarını çalışanın cihazından kaldırabilir (temizleme) veya cihazı fabrika ayarlarına sıfırlayabilirsiniz (tam temizleme).
 
 Temel Mobil Kullanım ve Güvenlik uzaktan eylemleri kullanımdan kullanım, temizleme ve tam temizleme eylemlerini içerir. Temel Hareketlilik ve Güvenlik eylemleri hakkında daha fazla bilgi için bkz. [Temel Hareketlilik ve Güvenlik özellikleri](capabilities.md).
 
 Intune'da aşağıdaki eylem kümelerini kullanabilirsiniz:
 
--   AutoPilot sıfırlama (Windows açık)
--  [Bitlocker tuşu döndürme](/mem/intune/protect/encrypt-devices#rotate-bitlocker-recovery-keys)  (Windows bir şekilde)
+-   AutoPilot sıfırlama (Windows'i sıfırlama
+-  [Bitlocker tuşu döndürme](/mem/intune/protect/encrypt-devices#rotate-bitlocker-recovery-keys)  (Windows)
 -  [Cihazı temizleme, kullanımdan kaldırma veya el ile kaydı kaldırmayı kullanma](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-portal)
 -  [Etkinleştirme yerini devre dışı bırakma](/mem/intune/remote-actions/device-activation-lock-disable)  (yalnızca iOS)
 -  [Yeni başlangıç](/mem/intune/remote-actions/device-fresh-start)  (Windows)
-- [Tam tarama](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)  (Windows 10 bir kez)
+- [Tam tarama](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)  (Windows 10)
 - [Cihazı bulma](/mem/intune/remote-actions/device-locate)  (yalnızca iOS)
 - [Kayıp modu](/mem/intune/remote-actions/device-lost-mode)  (yalnızca iOS)- [Hızlı tarama](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)(Windows 10)
 - [Android için uzaktan denetim](/mem/intune/remote-actions/teamviewer-support)
 - [Uzaktan kilitleme](/mem/intune/remote-actions/device-remote-lock)
 - [Cihazı yeniden adlandır](/mem/intune/remote-actions/device-rename)
--  [Geçiş kodunu sıfırla](/mem/intune/remote-actions/device-passcode-reset) [Yeniden başlatma](/mem/intune/remote-actions/device-restart)  (Windows başlatma)
+-  [Geçiş kodunu sıfırla](/mem/intune/remote-actions/device-passcode-reset) [Yeniden başlatma](/mem/intune/remote-actions/device-restart) (Windows)
 -  Akıllı Windows Defender Güncelleştirme (yalnızca Windows)
 -  Windows 10 PIN sıfırlama (yalnızca Windows)
 -  [Özel bildirim gönderme](/mem/intune/remote-actions/custom-notifications#send-a-custom-notification-to-a-single-device)  (Android, iOS, iPad işletim sistemi)

@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Önceden oluşturulmuş bir modeli nasıl oluşturacaklarını ve yapılandıracaklarını öğrenmek için SharePoint Syntex.
-ms.openlocfilehash: cf87eab6158ae6dff3053dbddaee7f2fedcd87a5
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+ms.openlocfilehash: 7867fe197fd53e6095f51869fc5aaad18af9157b
+ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63014403"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "63401056"
 ---
 # <a name="use-a-prebuilt-model-to-extract-info-from-invoices-or-receipts-in-microsoft-sharepoint-syntex"></a>Microsoft Web Sitesinde faturalardan veya faturalardan bilgileri ayıklamak için önceden oluşturulmuş bir model SharePoint Syntex
 
@@ -129,6 +129,9 @@ Ayıklar panelinden bir ayıklayı **yeniden adlandırmak** için:
 - Değişiklikleri kaydetmek ve model giriş sayfasına dönmek için, Ayıklar **panelinde Kaydet'i** seçin **ve çıkın**.
 
 - Modeli kitaplara uygulamaya hazırsanız, belge alanında Sonraki'yi **seçin**. Kitaplık **ekle panelinde** modeli eklemek istediğiniz kitaplığı seçin ve sonra da Ekle'yi **seçin**.
+
+> [!TIP]
+> Belge kitaplığında görünümü, kendi ihtiyaçlarınıza veya tercihlerinize uyacak şekilde değiştirebilirsiniz. Daha fazla bilgi için bkz [. Belge kitaplığında görünümü değiştirme](apply-a-model.md#change-the-view-in-a-document-library).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
