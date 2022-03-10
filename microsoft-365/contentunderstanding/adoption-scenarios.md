@@ -14,13 +14,13 @@ ms.collection:
 ms.custom: Adopt
 search.appverid: ''
 ms.localizationpriority: medium
-description: Bir veya daha fazla SharePoint Syntex senaryo bulun.
-ms.openlocfilehash: 16688f08183e55c8e2f52cdbcd50919dff680c1b
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bir veya daha fazla SharePoint Syntex ilgili iş senaryolarını bulun.
+ms.openlocfilehash: fe4f72dc56014e5bc990e5ea39bd019785bd8572
+ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985024"
+ms.lasthandoff: 03/10/2022
+ms.locfileid: "63419093"
 ---
 # <a name="scenarios-and-use-cases-for-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex için senaryolar ve kullanım SharePoint Syntex
 

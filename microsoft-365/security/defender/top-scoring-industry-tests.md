@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 search.appverid: met150
 ms.technology: m365d
-ms.openlocfilehash: d4e4f9baaf67b921358f17dae16908bcf9fed401
-ms.sourcegitcommit: 19e16b16f144159b55bb4c544403e3642b69e335
+ms.openlocfilehash: c12a0dbb56e81c6b2c6d7953cff77e367f2e435d
+ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "63015244"
+ms.lasthandoff: 03/10/2022
+ms.locfileid: "63419340"
 ---
 # <a name="top-scoring-in-industry-tests"></a>Endüstri testlerinde en çok puanlama
 
@@ -41,7 +41,7 @@ Microsoft 365 Defender, Uç Nokta için [Microsoft Defender](https://www.microso
 
 MİTRE'nin test yaklaşımı, çözümlerin yeterince algılanabilir ve yanıt verip yanıt vereylenene kadar anlamak için gerçek dünya saldırılarını temel alan bir yaklaşımdır. Test, uç noktada algılama ve yanıtlama'e odaklanırken, MITRE'nin APT29 saldırı benzetimi birden çok saldırı etki alanına yayıldı ve yalnızca uç nokta korumasının ötesinde korumaları güçlendirecek fırsatlar sunuyor. Microsoft, iş noktası açık olduğu için uç noktanın ötesinde Microsoft 365 Defender.
 
-- ATT&CK tabanlı değerlendirme Microsoft 365 Defender - Mayıs 2020: Gerçek dünyada [algılamada önde gelen](https://www.microsoft.com/security/blog/2020/05/01/microsoft-threat-protection-leads-real-world-detection-mitre-attck-evaluation/)
+- ATT&CK tabanlı değerlendirme - Microsoft 365 Defender Nisan 2021: Değerlendirme, [Microsoft Defender'ın](https://www.microsoft.com/security/blog/2021/04/21/) Uç Nokta için Microsoft Defender'ın platformlar genelinde gelişmiş saldırılarını durdur durdurmaktadır
 
  Microsoft 365 Defender zinciri aşamalar boyunca yaklaşık yüzde 100 kapsam sağlar. Bu araç, saldırgan etkinliklerine ilk gelen görünürlüğü sağlar. Bu görünürlük, güvenlik işlemleri merkeziyle satıcı çözümlerinin belirli yapılandırma değişikliklerine bağlı olarak el ile yapılan çalışmalarını önemli ölçüde azaltır. Microsoft 365 Defender boşluklar en az olduğu için, algılanmamış şekilde çalışan saldırgan becerisini azalttı.
 
@@ -55,33 +55,33 @@ Microsoft Defender Virüsten Koruma, günümüzde en son ve [](https://www.youtu
 
 AV-TEST Ürün Gözden Geçirme ve Sertifika Raporu üç kategoriyle test ediyor: koruma, performans ve kullanılabilirlik. Aşağıdaki puanlar iki puana sahip Koruma kategorisine yöneliktir: Real-World Testi ve AV-TEST başvuru kümesi ("Yaygın Amaçlı Kötü Amaçlı Yazılım" olarak bilinir).
 
-- Kasım - Aralık 2020 AV-TEST İş Kullanıcısı testi: Koruma puanı [6.0/6.0](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/december-2020/microsoft-defender-antivirus-4.18-205017/) <sup>**En son**</sup>
+- Kasım - Aralık 2021 AV-TEST İş Kullanıcısı testi: Koruma puanı [6.0/6.0](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/december-2021/microsoft-defender-antivirus-4.18-212622/) <sup>**En son**</sup>
 
-    Microsoft Defender Virüsten Koruma ve Aralık'ta %100 ile 6,0/6,0 mükemmel bir Koruma puanı elde edilir. 11.382 kötü amaçlı yazılım örneği kullanılmıştır.
+    Microsoft Defender Virüsten Koruma ve Aralık'ta %100 ile 6,0/6,0 mükemmel bir Koruma puanı elde edilir. 18.870 kötü amaçlı yazılım örneği kullanılmıştır.
 
-- Eylül - Ekim 2020 AV-TEST İş Kullanıcısı testi: [Koruma puanı 6.0/6.0](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/october-2020/microsoft-defender-antivirus-4.18-204116/)
+- Eylül - Ekim 2021 AV-TEST İş Kullanıcısı testi: [Koruma puanı 6.0/6.0](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/october-2021/microsoft-defender-antivirus-4.18-212518/)
 
-- Temmuz - Ağustos 2020 AV-TEST İş Kullanıcısı testi: Koruma puanı [6.0/6.0](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/august-2020/microsoft-defender-antivirus-4.18-203215/)
+- Temmuz - Ağustos 2021 AV-TEST İş Kullanıcısı testi: Koruma puanı [6.0/6.0](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/august-2021/microsoft-defender-antivirus-4.18-212419/)
 
-- Mayıs - Haziran 2020 AV-TEST İş Kullanıcısı testi: [Koruma puanı 6.0/6.0](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/june-2020/microsoft-windows-defender-antivirus-4.18-202513/)
+- Mayıs - Haziran 2021 AV-TEST İş Kullanıcısı testi: [Koruma puanı 6.0/6.0](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/june-2021/microsoft-defender-antivirus-4.18-212318/)
 
-- Mart - Nisan 2020 AV-TEST İş Kullanıcısı testi: [Koruma puanı 5.5/6.0](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/february-2020/microsoft-windows-defender-antivirus-4.18-200614/)
+- Mart - Nisan 2021 AV-TEST İş Kullanıcısı testi: [Koruma puanı 6.0/6.0](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/april-2021/microsoft-defender-antivirus-4.18-212216/)
 
-- Ocak - Şubat 2020 AV-TEST İş Kullanıcısı testi: Koruma puanı [5.5/6.0Analysis](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/february-2020/microsoft-windows-defender-antivirus-4.18-200614/) | [](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4CflZ)
+- Ocak - Şubat 2021 AV-TEST İş Kullanıcı testi: Koruma puanı [6.0/6.0Analysis](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/february-2021/microsoft-defender-antivirus-4.18-212117/) | [](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4CflZ)
 
 ### <a name="av-comparatives-protection-rating-of-998-in-the-latest-test"></a>AV-Karşılaştırmalar: En son testte %99,8 koruma derecelendirmesi
 
 İş Güvenliği Testi üç ana bölümden oluşur: çevrimiçi kötü amaçlı yazılım saldırılarına taklit eden Real-World Koruma Testi, kötü amaçlı yazılımın İnternet dışından sisteme girdiği Kötü Amaçlı Yazılımdan Koruma Testi (örneğin USB) ve sistemin performansı üzerindeki etkisine bakan Performans Testi.
 
-- İş Güvenliği Testi 2020 (Ağustos - Kasım): [Gerçek Dünyada Koruma Oranı %99,8 En Son %99,8](https://www.av-comparatives.org/tests/business-security-test-2020-august-november/) <sup></sup>
+- İş Güvenliği Testi 2021 (Ağustos - Kasım): Gerçek Dünya Koruma Oranı [%99,8 En](https://www.av-comparatives.org/tests/business-security-test-2021-august-november/) <sup>**Son**</sup>
 
     Microsoft Defender Virüsten Koruma son testte %99,8 Real-World Koruma Oranları'nın üzerinde tutarlı bir şekilde yüksek puan aldı.
 
-- İş Güvenliği Testi 2020 (Mart - Haziran): [Gerçek Dünya Koruma Oranı %99,7](https://www.av-comparatives.org/tests/business-security-test-2020-march-june/)
+- İş Güvenliği Testi 2021 (Mart - Haziran): [Gerçek Dünya Koruma Oranı %99,7](https://www.av-comparatives.org/tests/business-security-test-2021-march-june/)
 
-- İş Güvenliği Testi 2019 (Ağustos - Kasım): [Gerçek Dünya Koruma Oranı %99,6](https://www.av-comparatives.org/tests/business-security-test-2019-august-november/)
+- İş Güvenliği Testi 2020 (Ağustos - Kasım): [Gerçek Dünya Koruma Oranı %99,8](https://www.av-comparatives.org/tests/business-security-test-2020-august-november/)
 
-- İş Güvenliği Testi 2019 (Mart - Haziran): [Gerçek Dünya Koruma Oranı %99,9 Çözümleme](https://www.av-comparatives.org/tests/business-security-test-2019-march-june/) | [](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3Esbl)
+- İş Güvenliği Testi 2020 (Mart - Haziran): [Gerçek Dünya Koruma Oranı %99,7 Çözümleme](https://www.av-comparatives.org/tests/business-security-test-2020-march-june/) | [](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3Esbl)
 
 ### <a name="se-labs-aaa-award-in-the-latest-test"></a>SE Laboratuvarları: En son testte AAA ödülü
 
@@ -110,14 +110,6 @@ SE Laboratuvarlar, ürünler ve hizmetler tarafından saldırıyı tespit etmek 
 Uç Nokta için Microsoft Defender [uç noktada algılama ve yanıtlama](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) özellikleri, gerçek zamanlı olarak yakın olan ve işlemlebilir gelişmiş saldırı algılamaları sağlar. Güvenlik analistleri uyarıları etkili bir şekilde önceliklendirmek, ihlallerin tam kapsamı için görünürlük kazanmak ve tehditleri düzeltmek için yanıt eylemleri gerçekleştirmektedir.
 
 Uç Nokta özellikleri ve uç nokta koruma EDR için Microsoft Defender, endüstri testlerinden ve yayınlarından olumlu sonuçlar aldı. [SC Laboratuvarları Haziran](https://www.scmagazine.com/home/reviews/sc-product-reviews-endpoint-security/) 2020'de uç nokta güvenlik araçlarını değerlendirdi ve Microsoft Defender'a Uç nokta [5/5 yıldız verdi](https://www.scmagazine.com/review/microsoft-defender-advanced-threat-protection/). Kuruluş, tam güvenlik özellikleri kümesi kullanarak kuruluşları modern tehdit ortamına karşı koruma olanağı için Microsoft Defender'ı çağrısında bulundular. SC Laboratuvarları, uç nokta güvenlik çözümünü de holist ve birleşik olarak tanımlandı. Ayrıca saldırı zinciri artık çözümler tarafından tamamen ele uç noktada algılama ve yanıtlama, uç nokta korumasının yakınsamasını da kabul ediyor.
-
-### <a name="mitre-industry-leading-optics-and-detection-capabilities"></a>MITRE: Endüstri lideri optikler ve algılama özellikleri
-
-MITRE, hedefli saldırı grubu APT3 (Boron veya UPS olarak da bilinir) tarafından yaygın olarak kullanılan teknikleri tespit etmek için ürünlerin yeteneğini test etti. Algılama özelliklerini yalıtmak için tüm koruma ve önleme özellikleri kapatildi. Microsoft EDR, ATT&CK çerçevesine dayalı olarak MITRE değerlendirmesine kaydolan ilk yardımcı satıcılardan biri&memnundur. Çerçeve, bugün en kapsamlı teknikler ve taktikler kataloğu olarak kabul edildi.
-
-- ATT&Uç Nokta için Microsoft Defender'ın CK tabanlı değerlendirmesi - Aralık 2018[:](https://www.microsoft.com/security/blog/2018/12/03/insights-from-the-mitre-attack-based-evaluation-of-windows-defender-atp/) |  Önde gelen optik özellikler ve algılama [özellikleriAnalysis](https://techcommunity.microsoft.com/t5/Windows-Defender-ATP/MITRE-evaluation-highlights-industry-leading-EDR-capabilities-in/ba-p/369831)
-
-    Uç Nokta için Microsoft Defender, tüm saldırı zincirinde teknikler için kapsamlı kapsam sağlar. Öne çıkanlar arasında telemetriye olan ekmek, tehdit zekası gücü ve makine öğrenimi, heuristics ve davranış izleme aracılığıyla gelişmiş, otomatik algılama yer alıyor.
 
 ## <a name="to-what-extent-are-tests-representative-of-protection-in-the-real-world"></a>Gerçek dünyada korumayı temsil eden testler ne ölçüde sınanıyor?
 

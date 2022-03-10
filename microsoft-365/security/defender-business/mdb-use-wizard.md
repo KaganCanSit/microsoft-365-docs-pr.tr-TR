@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-get-started
-ms.openlocfilehash: 98660e437463a79ce263edd29f2cd01725d19762
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 8c7100774057d399667a3176670a55d5b4479c73
+ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63322933"
+ms.lasthandoff: 03/10/2022
+ms.locfileid: "63419037"
 ---
 # <a name="use-the-wizard-to-set-up-microsoft-defender-for-business"></a>Microsoft Defender for Business'ı ayarlamak için sihirbazı kullanma
 
@@ -53,7 +53,7 @@ Sihirbaz, İş için Defender'ı hızla ve verimli bir şekilde ayarlamanıza ve
 
 2. **Cihaz ekleme ve Windows yapılandırma**. Bu adımda, İşletmeler için Defender'a Windows mobil cihazlarınızı  onboard. Cihazları hemen işe ekleme, bu cihazları ilk günden korumanıza yardımcı olur. Daha [fazla bilgi için bkz. Cihazları İş için Microsoft Defender'a](mdb-onboard-devices.md) ekleme.
 
-   - Zaten Microsoft Intune (Microsoft Endpoint Manager'in bir parçası) kullanıyorsanız ve kuruluşta Endpoint Manager'e kayıtlı cihazları varsa, kaydolan Windows cihazlarının bir bölümü veya hepsi için otomatik ekleme kullanmak isteyip Windows sorabilirsiniz. Otomatik ekleme, Endpoint Manager Defender İş arasında bir bağlantı ayarlar ve ardından Windows Defender İş'e cihaz ayarlar.
+   - Zaten Microsoft Intune (Microsoft Endpoint Manager'in bir parçası) kullanıyorsanız ve Endpoint Manager'e kayıtlı cihazlarınız varsa, kaydolan Windows cihazlarının bir bölümü veya hepsi için otomatik ekleme kullanmak isteyip Windows sorabilirsiniz.[](mdb-onboard-devices.md#automatic-onboarding-for-windows-devices-enrolled-in-microsoft-endpoint-manager) Otomatik ekleme, Endpoint Manager Defender İş arasında bir bağlantı ayarlar ve ardından Windows Defender İş'e cihaz ayarlar.
 
    - henüz Endpoint Manager'i Endpoint Manager veya Windows'a kayıtlı olmayan cihazlarınız varsa, Endpoint Manager cihazları Defender for Business'a el ile ekleyebilirsiniz. 
    

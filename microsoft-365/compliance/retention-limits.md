@@ -18,12 +18,12 @@ search.appverid:
 - MET150
 hideEdit: true
 description: Bekletme ilkeleri ve bekletme etiketi ilkeleri için ilke başına en fazla ilke ve öğe sayısını anlama
-ms.openlocfilehash: f7b445ab8fd0afe5fb893933c3475385e09bc84e
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 4cd8fc5f141f9e039a271e8534e156e4df0582e9
+ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63012021"
+ms.lasthandoff: 03/10/2022
+ms.locfileid: "63419135"
 ---
 # <a name="limits-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri sınırları
 
@@ -39,7 +39,8 @@ Kiracı başına en fazla 1.000 bekletme etiketi destekçisi.
 
 Tek bir kiracı en çok 10.000 ilkeye (herhangi bir yapılandırma) sahip olabilir. Bu üst sayı bekletme için farklı ilkeler ve DLP için ilkeler, bilgi engelleri, eKbulma bekletmeleri, Mahkeme bekletmeleri, Bekletmeler ve duyarlılık In-Place gibi uyumluluk ilkeleri içerir. Bununla birlikte, bu üst değer şunları hariç tutar:
 
-- Yalnızca silme SharePoint veya OneDrive değil, yalnızca silme etiketleri için etiket ilkeleri. Bulut ekleri için etiket ilkelerinin otomatik olarak uygulanıyor olması bir istisnadır ve bu ilkeler her zaman en fazla 10.000 dosyada yer almaktadır.
+- Bulut ekleri için SharePoint ve OneDrive için otomatik etiketleme ilkeleri.
+- Yalnızca silme SharePoint OneDrive değil, yalnızca silmeyi veya korumayı ve sonra da silmeyi tercihen etiket ilkeleri yayımlanmıştır.
 - Exchange kayıtları yönetiminden [(MRM) bekletme ilkelerini gönderme](/exchange/security-and-compliance/messaging-records-management/messaging-records-management).
 
 Bu 10.000 ilke sınırı içinde, iş yükü başına bekletmeye yönelik ilke sayısı üst sınırı da vardır:

@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Duyarlılık etiketi  oluşturduktan sonra, dosyalara ve e-postalara otomatik olarak bir etiket atayabilirsiniz veya kullanıcılardan önerdiğiniz etiketi seçmelerini istenebilirsiniz.
-ms.openlocfilehash: f617338448b71541d5ab0d914ab1a3198d4f486c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: ab47315fe56124f54b1404ceebc015a715eb74ee
+ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63319663"
+ms.lasthandoff: 03/10/2022
+ms.locfileid: "63419326"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>Otomatik olarak içeriğe duyarlılık etiketi uygulama
 
@@ -315,15 +315,19 @@ Her durumda, eşlenmiş dosyalar hesap kalıcı olarak OneDrive etiketlenmiş ol
 
     ![Otomatik etiketleme yapılandırması için konumlar sayfasını seçin.](../media/locations-auto-labeling-wizard.png)
     
-    Tek tek hesap OneDrive için bkz[. Tüm kullanıcı kimlik OneDrive listesi elde görme](/onedrive/list-onedrive-urls).
+    Konumlar hakkında daha fazla bilgi:
+    
+    - **E-posta Exchange** e-postayı kuruluş dışından etiketlemek seçerseniz, Varsayılan olarak All included (Dahil) **varsayılanını tutmanız** gerekir. Bu yapılandırmanın kapsamının kuruluşta belirli kullanıcılara açık olması için, sonraki **adımda Gelişmiş kurallar'ı** seçin. Daha sonra, bir kullanıcı alt kümesi içincoping gereksinimini elde etmek üzere koşulları, kuruluşta belirli alıcıları içerecek şekilde yapılandırın.
+    
+    - Tek tek hesap OneDrive için bkz[. Tüm kullanıcı kimlik OneDrive listesi elde görme](/onedrive/list-onedrive-urls).
 
-7. Ortak veya **gelişmiş kuralları ayarlama** sayfası için: Tüm seçtiğiniz konumlarda etiketilecek  içeriği tanımlayan kurallar tanımlamak için Ortak kurallar'ın varsayılanını kullanın. Konum başına farklı kurallara ihtiyacınız varsa, Gelişmiş **kurallar'ı seçin**. Sonra Da **Sonraki'yi seçin**.
+7. Ortak veya **gelişmiş kuralları ayarlama** sayfası için: Tüm seçtiğiniz konumlarda etiketilecek  içeriği tanımlayan kurallar tanımlamak için Ortak kurallar'ın varsayılanını kullanın. Konum başına farklı kurallara, örneğin konum başına farklı kurallara ihtiyacınız varsa, Exchange **kurallar'ı seçin**. Sonra Da **Sonraki'yi seçin**.
 
     Kurallar hassas bilgi türlerini ve paylaşım seçeneklerini içeren koşulları kullanır:
     - Hassas bilgi türleri için, hem yerleşik hem de özel hassas bilgi türlerini seçin.
     - Paylaşılan seçenekler için yalnızca kuruluşum içindeki **veya kuruluşum dışındaki** kişiler **için tercih yapabilirsiniz**.
 
-    Tek konumunuz geçerli **Exchange** veya Gelişmiş **kurallar'ı seçerek** bunu seçebilirsiniz:
+    Konumunuz Seçili **Exchange** kuralları **seçtiysanız**, seçerek seçerek başka koşullar da ebilirsiniz:
     - Gönderen IP adresi:
     - Alıcı etki alanı:
     - Alıcı

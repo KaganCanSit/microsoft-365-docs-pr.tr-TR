@@ -18,12 +18,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Uç nokta veri kaybını önleme (EPDLP) konumlarında kullanmak üzere Microsoft 365 kaybı önleme (DLP) ilkelerini yapılandırmayı öğrenin.
-ms.openlocfilehash: 5fc271028e4c20d431c4535fcdbf902bf17cdbb4
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: cecd489aa5ceb5f0d5d233a4bf09caa24dee6f8b
+ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63311851"
+ms.lasthandoff: 03/10/2022
+ms.locfileid: "63419163"
 ---
 # <a name="using-endpoint-data-loss-prevention"></a>Uç nokta veri kaybını önlemeyi kullanma
 
@@ -168,7 +168,7 @@ Kişilerin, ilkeleriniz tarafından korunan dosyaları belirli uygulama uygulama
 
 #### <a name="unallowed-browsers"></a>Izin verilmeyen tarayıcılar
 
-Daha Windows dosyaları için, yürütülebilir adları ile tanımlanan ve bulut hizmetleri kısıtlaması engellemeye veya engellemeye ayarlanmış olan, zorunlu bir DLP ilkesi koşullarına uygun dosyalara erişimi engellenir. Bu tarayıcıların bir dosyaya erişimi engellenmiş olduğunda, son kullanıcılar kendi tarayıcıları aracılığıyla dosyayı açmalarını isteyen bir bildirim Microsoft Edge.
+Daha Windows dosyaları için, yürütülebilir adları ile tanımlanan ve bulut hizmetleri kısıtlaması engellemeye veya engellemeye ayarlanmış olan, zorunlu bir DLP ilkesi koşullarına uygun dosyalara erişimi engellenir. Bu tarayıcıların bir dosyaya erişimi engellenmişse, son kullanıcılar bir bildirim görerek dosyayı Microsoft Edge üzerinden açmalarını veya yapılandırılmışsa özelleştirilmiş bir ileti görüntülemelerini ister.
 
 macOS cihazlarda, tam dosya yolunu eklemeniz gerekir. Mac uygulamalarının tam yolunu bulmak için:
 
@@ -431,7 +431,7 @@ Bu senaryoda, dosyaları Çok Gizli duyarlılık **etiketiyle** eşitlemek OneDr
 
 #### <a name="test-auto-quarantine-on-the-windows-10-device"></a>Windows 10 cihazında Otomatik karantinaya Windows 10 sınama
 
-1. 5. Windows 10'de belirttiğiniz kullanıcı hesabıyla Dosyaların duyarlılık OneDrive eşitlesini engellemek için ilke yapılandırma altında belirttiğiniz kullanıcı [hesabıyla oturum](#configure-a-policy-to-block-onedrive-synchronization-of-files-with-the-sensitivity-label-highly-confidential) açın.
+1. Dosyaların duyarlılık Windows 10 fazla gizli adım 5 ile eşitlesini engellemek üzere bir ilke yapılandırma altında belirttiğiniz kullanıcı hesabıyla OneDrive [bilgisayarda oturum açın](#configure-a-policy-to-block-onedrive-synchronization-of-files-with-the-sensitivity-label-highly-confidential).
 
 2. İçeriği bu klasörle eşitlenmayacak bir OneDrive. Örneğin:
 

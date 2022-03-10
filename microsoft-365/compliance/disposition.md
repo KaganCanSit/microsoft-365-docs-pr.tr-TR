@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir imha gözden geçirmesi kullanırken içeriğin silinmesini izleme ve yönetme veya kayıt olarak işaretlenen öğeler, yapılandırılan ayarlara göre otomatik olarak silinir.
-ms.openlocfilehash: 5ee5af04b399d7f7d0ba94dc3b943d259d57ff34
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 2d078eb00ffa6d2dd8279c7e5eb65a8fcfb6fa53
+ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63034256"
+ms.lasthandoff: 03/10/2022
+ms.locfileid: "63419191"
 ---
 # <a name="disposition-of-content"></a>İçeriğin yok olanı
 
@@ -187,7 +187,7 @@ Gösterilen örnekte gördüğünüz gibi, desteklenen eylemler:
   
 - **Tasfiyeyi onayla**:
     - Bu eylem, disposition gözden geçirmenin geçici aşaması için seçildiğinde (birden çok aşama yapılandırdıyabilirsiniz): Öğe bir sonraki konumlandırma aşamasına taşınır.
-    - Bu eylem, disposition gözden geçirmenin son aşaması için seçildiğinde veya bir de yok işleminin yalnızca bir aşaması vardır: Öğe kalıcı silme için uygun olarak işaretlenir. Silme işleminin tam zamanlaması iş yüküne bağlıdır. Daha fazla bilgi için bkz [. Bekletme ayarları içerikle nasıl çalışır](retention.md#how-retention-settings-work-with-content-in-place)?
+    - Bu eylem, disposition gözden geçirmenin son aşaması için seçildiğinde veya tek bir disposition aşaması olduğunda: Öğe kalıcı olarak silinmeye uygun olarak işaretlenir ve bu da 7 gün içinde olur.
 - **Yeniden Etiketle**:
     - Bu eylem seçildiğinde, öğe özgün etiket için konumlandırma gözden geçirme sürecinden çıkar. Ardından öğe, yeni seçilen bekletme etiketinin bekletme ayarlarına tabi olur.
 - **Uzat**:

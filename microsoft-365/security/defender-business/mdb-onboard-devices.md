@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/03/2022
+ms.date: 03/09/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: e4b28078c79b47ae48af590457d6721b0b470659
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: a078b2a88fdde3af840cff64414fec0a712ae92e
+ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63317409"
+ms.lasthandoff: 03/10/2022
+ms.locfileid: "63419312"
 ---
 # <a name="onboard-devices-to-microsoft-defender-for-business"></a>Cihazları İş için Microsoft Defender'a ekleme
 
@@ -71,8 +71,6 @@ Aşağıdaki tabloda, İş için Defender'a cihazları eklemede en sık kullanı
 | **Microsoft Intune** veya **Microsoft Endpoint Manager**<br/>(*Microsoft Intune veya Endpoint Manager*) | [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) Mobil [Cihaz Yönetimi de](/mem/intune/enrollment/device-enrollment) mobil cihaz yönetiminin Endpoint Manager. Microsoft 365 İş Ekstra müşteriler zaten Microsoft Intune ve bu seçeneği kullanabilir.<br/><br/>İş için Defender'ı Endpoint Manager önceden Endpoint Manager kullanıyorsanız cihazları eklemeye ve yönetmeye devam etmek için Endpoint Manager'i kullanmaya devam edin<br/><br/>Bu yöntemi kullanmak için bkz. [Microsoft Endpoint Manager](#microsoft-endpoint-manager). | Windows <br/>macOS<br/>iOS<br/>Android OS | 
 | **İş için Microsoft Defender güvenlik yapılandırması** <br/>(*Microsoft 365 Defender kullanır*) | Bu seçeneği kullanmak için, belirli ayarları yapılandırarak İş için Defender ile Kurumsal arasındaki iletişimi kolaylaştıracak Endpoint Manager. Ardından, her cihaza indirerek Microsoft 365 Defender bir paket kullanarak cihazları Web portalına ([https://security.microsoft.com](https://security.microsoft.com)) da () dahil edin. Cihazlar ve cihazlar (Azure AD) Azure Active Directory Defender İş güvenlik ilkeleri arasında güven kurulur.<br/><br/>Daha fazla bilgi edinmek için bkz. [İş için Microsoft Defender güvenlik yapılandırması](#microsoft-defender-for-business-security-configuration). | Windows <br/>macOS |
 
-
-
 > [!IMPORTANT]
 > Bir sorun olursa ve ekleme işleminiz başarısız olursa bkz. [İş için Microsoft Defender sorun giderme](mdb-troubleshooting.yml).
 
@@ -86,7 +84,7 @@ Otomatik ekleme hakkında daha fazla bilgi edinmek için, İş için Microsoft D
 
 ## <a name="local-script-in-defender-for-business"></a>İş için Defender'da yerel komut dosyası
 
-Kullanıcıları ve Mac cihazlarına yerel bir Windows betik kullanabilirsiniz. Ekleme betiğini bir cihazda çalıştırsanız, Azure Active Directory ile bir güven oluşturur, cihazı Microsoft Endpoint Manager'a kaydettirebilir ve cihazı İş için Defender'a ekler. Bu yöntem, İş için Defender'da cihaz ekleme için kullanışlıdır. Bir defada en fazla 10 cihaz abilirsiniz.
+Kullanıcıları ve Mac cihazlarına yerel bir Windows betik kullanabilirsiniz. Ekleme betiğini bir cihazda çalıştırsanız, Azure Active Directory ile bir güven oluşturur (bu güven henüz yoksa), cihazı Microsoft Endpoint Manager'e (henüz kayıtlı değilse) kaydederek cihazı İş için Defender'a tümleşik olarak sağlar. Bu yöntem, İş için Defender'da cihaz ekleme için kullanışlıdır. Bir defada en fazla 10 cihaz abilirsiniz.
 
 1. Microsoft 365 Defender portalına () gidin[https://security.microsoft.com](https://security.microsoft.com) ve oturum açın.
 
@@ -114,7 +112,7 @@ Bkz[. Microsoft Intune'de cihaz kaydı](/mem/intune/enrollment/device-enrollment
 
 İş için Microsoft Defender güvenlik yapılandırması, Uç Nokta için Microsoft Defender Güvenlik Yönetimi (önizleme) olarak bilinen [bir özellik üzerine ek edilmiştir](/mem/intune/protect/mde-security-integration). Bu özellik, cihazları önceden Microsoft 365 Defender portalına ([https://security.microsoft.com](https://security.microsoft.com)) tam olarak kaydolmak zorunda kalmadan, Microsoft Endpoint Manager Defender for Business'a cihaz eklemeye olanak tanır. 
 
-Bu yöntem, mobil cihaz eklemeye ve virüsten koruma ile güvenlik duvarı ilkelerinizi portala () Microsoft 365 Defender sağlar[https://security.microsoft.com](https://security.microsoft.com). Bu, şu şekilde çalışır:
+Bu yöntem, mobil cihaz eklemeye ve virüsten koruma ile güvenlik duvarı ilkelerinizi portala () Microsoft 365 Defender sağlar[https://security.microsoft.com](https://security.microsoft.com). Bunların hepsi şöyle çalışır:
 
 1. Microsoft 365 Defender portaldan bir ekleme paketi indirir ve bu cihazları Defender for Business'a yüklemek için cihazlarınız üzerinde paketi çalıştırın.
 

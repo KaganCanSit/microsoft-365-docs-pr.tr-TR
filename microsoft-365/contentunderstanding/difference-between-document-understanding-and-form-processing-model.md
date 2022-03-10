@@ -1,5 +1,5 @@
 ---
-title: Belge anlama ve form işleme modelleri arasındaki fark
+title: Belgeyi anlama ile form işleme modelleri arasındaki farklar
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -12,15 +12,15 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Belge anlama modeli ile form işleme modeli arasındaki temel farkları öğrenin.
-ms.openlocfilehash: 8a97c4a2c03d95a5ba9724423a405cb49d4a90fe
-ms.sourcegitcommit: 19e16b16f144159b55bb4c544403e3642b69e335
+description: Belge anlama modeli ile form işleme modeli arasındaki önemli farkları öğrenin.
+ms.openlocfilehash: 0605beb2b034343cc53e32058905870f75f811a4
+ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "63015256"
+ms.lasthandoff: 03/10/2022
+ms.locfileid: "63419298"
 ---
-# <a name="difference-between-document-understanding-and-form-processing-models"></a>Belge anlama ve form işleme modelleri arasındaki fark 
+# <a name="differences-between-document-understanding-and-form-processing-models"></a>Belgeyi anlama ile form işleme modelleri arasındaki farklar 
 
 Microsoft SharePoint Syntex'daki içeriği anlamanız, belge kitaplıklarına yüklenen belgeleri tanımlamanıza SharePoint sınıflandırmanıza ve her dosyadan ilgili bilgileri ayıklamanıza olanak sağlar.  Örneğin, dosyalar SharePoint belge kitaplığına yüklendiğinden, Satın Alma Siparişleri olarak tanımlanan tüm dosyalar bu şekilde sınıflandırılır  ve sonra özel bir belge kitaplığı görünümünde görüntülenir. Buna ek olarak, her dosyadan belirli bilgileri (örneğin, *POSTA* Numarası ve *Toplam*) çekebilir ve belge kitaplığı görünümde bir sütun olarak görüntüebilirsiniz. 
 

@@ -1,5 +1,5 @@
 ---
-title: SharePoint Syntex modunda çalışma
+title: Erişilebilirlik modu'SharePoint Syntex
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -8,17 +8,17 @@ ms.topic: article
 ms.prod: microsoft-365-enterprise
 search.appverid: ''
 ms.localizationpriority: medium
-description: SharePoint Syntex'da bir model eğitimken erişilebilirlik modunun nasıl SharePoint Syntex.
-ms.openlocfilehash: 6a27615e0b676fdcefb617d76a206d9f47c6f882
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Eğitim ve çalışma zamanlarında eğitim ve çalışma modelleriyle çalışırken erişilebilirlik özellikleri modunu SharePoint Syntex.
+ms.openlocfilehash: 09fd16259a44a2aa4d1b82dca49fffa76065690b
+ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973855"
+ms.lasthandoff: 03/10/2022
+ms.locfileid: "63419065"
 ---
-# <a name="sharepoint-syntex-accessibility-mode"></a>SharePoint Syntex modunda çalışma
+# <a name="accessibility-mode-in-sharepoint-syntex"></a>Erişilebilirlik modu'SharePoint Syntex
 
-Diğer [SharePoint Syntex](index.md), kullanıcılar örnek belgelerle çalışırken model eğitiminin tüm aşamalarında (etiket, eğit, test) erişilebilirlik modunu açabilirsiniz. Erişilebilirlik modunu kullanmak, görme zoru olan kullanıcıların, belge görüntüleyicisinde gezinen ve öğeleri etiketleyene kadar daha kolay klavye erişilebilirliğine sahip olmasına yardımcı olabilir.
+Diğer [SharePoint Syntex](index.md), kullanıcılar örnek belgelerle çalışırken tüm model eğitimi aşamalarında (etiket, eğit, test) erişilebilirlik modunu açabilirsiniz. Erişilebilirlik modunu kullanmak, görme zoru olan kullanıcıların, belge görüntüleyicisinde gezinen ve öğeleri etiketleyene kadar daha kolay klavye erişilebilirliğine sahip olmasına yardımcı olabilir.
 
 Bu, kullanıcıların klavyelerini kullanarak belge görüntüleyicisinde metin içinde gezinmelerine ve yalnızca seçili değerlerin değil, aynı zamanda seçili metinden etiket kullanımının veya tahmini etiket değerlerinin anlatımını dinlemek için, modeli ek örnek belgelerle eğitmelerine yardımcı olur. 
 

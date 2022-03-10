@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Yöneticiler, Plan 2 için Microsoft Defender'da belirtilen koşullar karşılandıklarında başlatan belirli teknikler ve yüklemeler içeren otomatik benzetimler Office 365 öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: a7b49baf23734bccf42df8215e384593ad48d30a
-ms.sourcegitcommit: 23a90ed17cddf3b0db8d4084c8424f0fabd7b1de
+ms.openlocfilehash: 47732960ad5fac9884f388836ea23a2b9283c93c
+ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63015365"
+ms.lasthandoff: 03/10/2022
+ms.locfileid: "63419354"
 ---
 # <a name="simulation-automations-for-attack-simulation-training"></a>Saldırı benzetimi eğitimi için benzetim otomasyonları
 
@@ -258,19 +258,20 @@ Giriş **sayfası sayfasında** , yükleme benzetimde bir yük açılırsa kulla
 
     Giriş sayfası sayfasında aşağıdaki ek ayarları **yapılandırmanız** gerekir:
 
-    - **Yük göstergeleri: Daha önce** Sosyal mühendislik tekniklerini seçin sayfasında Kötü amaçlı yazılım  eki veya Kötü  amaçlı yazılıma bağlantı ekle'yi seçtiyseniz [bu ayar](#select-one-or-more-social-engineering-techniques) kullanılamaz.
-
-      Kullanıcıların **kimlik avı iletilerini tanımlamayı öğrenmelerine yardımcı olmak için** E-postaya yük göstergeleri ekle'yi seçin.
+    - **Yük göstergeleri**: Bu ayar yalnızca aşağıdaki koşullardan her ikisi de geçerli olduğu zaman kullanılabilir:
+      - Sosyal mühendislik **tekniklerini seçin** sayfasında **Daha önce** Kimlik bilgisi toplama, Ek içinde bağlantı veya **Sürücü** [URL'si seçeneğini seçtiniz](#select-one-or-more-social-engineering-techniques) .
+      - Sayfa içeriğine **E-posta içeriği** **ekle adlı** Dinamik etiketi eklemenizden sonra.
 
     - Sayfa içeriği: İki sekme kullanılabilir:
 
       - **Metin**: Giriş sayfanız oluşturmak için zengin bir metin düzenleyicisi kullanılabilir. Normal yazı tipi ve biçimlendirme ayarlarına ek olarak, aşağıdaki ayarlar da kullanılabilir:
         - **Dinamik etiket**: Aşağıdaki etiketlerden seçim yapın:
-          - **Kullanıcı Adı**
-          - **E-posta gönderenin adı**
-          - **Gönderen e-posta adresi**
-          - **E-posta konusu**
-          - **E-posta içeriği**
+          - **Ad ekle**
+          - **Gönderen adını ekleme**
+          - **Gönderen e-postası ekleme**
+          - **E-posta konusu ekleme**
+          - **E-posta içeriği ekleme**
+          - **Tarih ekle**
         - **Varsayılan olarak kullan**: Başlangıç olarak 5 kullanılabilir giriş sayfası şablonundan birini seçin. Düzenleme alanında metin ve düzeni değiştirebilirsiniz. Giriş sayfasını şablonun varsayılan metnine ve düzenine sıfırlamak için Varsayılana **sıfırla'ya tıklayın**.
         - **Eğitim bağlantısı**: Görüntülenen Eğitim **URL'sini** adla iletişim kutusunda, eğitim bağlantısı için bir bağlantı başlığı girin ve ardından bağlantıyı giriş  sayfasına eklemek için Onayla'ya tıklayın.
       - **Kod**: HTML kodunu doğrudan görüntüp değiştirebilirsiniz.

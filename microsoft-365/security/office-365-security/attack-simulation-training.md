@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Yöneticiler, Plan 2'ye yönelik Microsoft Defender'daki Saldırı benzetimi eğitimini kullanarak kimlik avı saldırılarının benzetimini yapmayı ve kullanıcılarını kimlik avı engellemesi konusunda Office 365 öğrenebilirsiniz.
 ms.technology: mdo
-ms.openlocfilehash: 31c8fd7b0369e5af522cd79b9bee7c5ee8460cc5
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 17e4bb55ee2c571c2e66b648d277f0a896551f39
+ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63329649"
+ms.lasthandoff: 03/10/2022
+ms.locfileid: "63419368"
 ---
 # <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'daki Saldırı benzetimi eğitimi ile kimlik avı saldırılarının benzetimini Office 365
 
@@ -252,8 +252,6 @@ Microsoft tarafından el ile yapılan giriş sayfaları 12 dilde kullanılabilir
     - **Logo ekleme**: Bir dosya **,** .jpeg veya .png bulmak ve seçmek için Gözat'.gif tıklayın. Logoyu kaldırmak için Kaldır'a **tıklayın**.
     - **E-postaya yük göstergeleri ekleme**: Seçme tekniği sayfasında önceden Kötü amaçlı yazılım eki veya  Kötü amaçlı yazılıma bağlantı yükle'yi seçtiyseniz **bu** [ayar](#select-a-social-engineering-technique) kullanılamaz.
 
-      Kullanıcıların **kimlik avı iletilerini tanımlamayı öğrenmelerine yardımcı olmak için** E-postaya yük göstergeleri ekle'yi seçin.
-
     Sayfanın en altındaki Önizleme panelini **aç düğmesine tıklayarak** sonuçların önizlemesini görüntüleyebilirsiniz.
 
   - **Özel URL kullanın: Daha** önce Teknik seçin sayfasında Kötü amaçlı yazılım eki veya  Kötü amaçlı yazılıma **bağlantı ekle'yi** seçtiyseniz bu [ayar](#select-a-social-engineering-technique) kullanılamaz.
@@ -261,18 +259,19 @@ Microsoft tarafından el ile yapılan giriş sayfaları 12 dilde kullanılabilir
     Özel BIR **URL kullan'ı seçiyorsanız**, görüntülenen Özel giriş sayfası **URL'sini girin kutusuna URL'yi** eklemeniz gerekir. Sayfada başka seçenek yoktur.
 
   - **Kendi giriş sayfanızı oluşturma**: Bu değeri yapılandırmak için aşağıdaki ilişkili seçenekler vardır:
-    - **E-postaya yük göstergeleri ekleme**: Seçme tekniği sayfasında önceden Kötü amaçlı yazılım eki veya  Kötü amaçlı yazılıma bağlantı yükle'yi seçtiyseniz **bu** [ayar](#select-a-social-engineering-technique) kullanılamaz.
-
-      Kullanıcıların **kimlik avı iletilerini tanımlamayı öğrenmelerine yardımcı olmak için** E-postaya yük göstergeleri ekle'yi seçin.
+    - **E-postaya yük göstergeleri ekleyin**: Bu ayar yalnızca aşağıdaki koşulların ikisi de doğruysa kullanılabilir:
+      - Seçme tekniği sayfasında **daha önce** **Kimlik bilgisi** toplama, Ek içinde bağlantı **veya Sürücü URL'si'ne** [seçtiniz](#select-a-social-engineering-technique) .
+      - Sayfa içeriğine **E-posta içeriği** **ekle adlı** Dinamik etiketi eklemenizden sonra.
 
     - Sayfa içeriği: İki sekme kullanılabilir:
       - **Metin**: Giriş sayfanız oluşturmak için zengin bir metin düzenleyicisi kullanılabilir. Normal yazı tipi ve biçimlendirme ayarlarına ek olarak, aşağıdaki ayarlar da kullanılabilir:
         - **Dinamik etiket**: Aşağıdaki etiketlerden seçim yapın:
-          - **Kullanıcı Adı**
-          - **E-posta gönderenin adı**
-          - **Gönderen e-posta adresi**
-          - **E-posta konusu**
-          - **E-posta içeriği**
+          - **Ad ekle**
+          - **Gönderen adını ekleme**
+          - **Gönderen e-postası ekleme**
+          - **E-posta konusu ekleme**
+          - **E-posta içeriği ekleme**
+          - **Tarih ekle**
         - **Varsayılan olarak kullan**: Başlamak için kullanılabilir bir şablon seçin. Düzenleme alanında metin ve düzeni değiştirebilirsiniz. Giriş sayfasını şablonun varsayılan metnine ve düzenine sıfırlamak için Varsayılana **sıfırla'ya tıklayın**.
     - **Kod**: HTML kodunu doğrudan görüntüp değiştirebilirsiniz.
 

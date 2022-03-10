@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 description: Uyumluluk Merkezi'nde özel hassas bilgi türlerini oluşturma, değiştirme, kaldırma ve test etmeyi öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 2526ab9fdde4e5cedbbf3e831e6ec8ac9a6a5747
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: e21e77fdd113942618c021f69c2cf8be64ac742f
+ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015485"
+ms.lasthandoff: 03/10/2022
+ms.locfileid: "63419121"
 ---
 # <a name="create-custom-sensitive-information-types-in-the-compliance-center"></a>Uyumluluk merkezinde özel hassas bilgi türleri oluşturma
 
@@ -206,4 +206,6 @@ Kural ölçütlerini karşılayan taranan bir öğe için, tek bir öğede SIT'i
 > Çift bayt kısa çizgi veya çift byte dönemi kullanarak bir kayıtex oluşturulurken, bir kayıtex içinde bir kısa çizgi veya nokta gibi iki karakterin de kaçışta olduğundan emin olun. Başvuru için örnek bir kayıtex:
 >    - (?<!\d) ([4][0-9]{3} [\-?\-\t]*[0-9]{4})
 >
+> Anahtar sözcükte çift byte özel karakterler kullanılmamalıdır.
+> 
 > Anahtar sözcük listesinde sözcük eşleşmesi yerine dize eşleşmesi kullanılması önerilir.
