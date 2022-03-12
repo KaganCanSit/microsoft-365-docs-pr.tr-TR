@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 03/02/2022
+ms.date: 03/10/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -18,17 +18,17 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-get-started
-ms.openlocfilehash: 8c7100774057d399667a3176670a55d5b4479c73
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+ms.openlocfilehash: 2cc157e363c42b94cac750b19a6122ed0a22c3de
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63419037"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63450766"
 ---
 # <a name="use-the-wizard-to-set-up-microsoft-defender-for-business"></a>Microsoft Defender for Business'ı ayarlamak için sihirbazı kullanma
 
 > [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
+> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
@@ -55,7 +55,7 @@ Sihirbaz, İş için Defender'ı hızla ve verimli bir şekilde ayarlamanıza ve
 
    - Zaten Microsoft Intune (Microsoft Endpoint Manager'in bir parçası) kullanıyorsanız ve Endpoint Manager'e kayıtlı cihazlarınız varsa, kaydolan Windows cihazlarının bir bölümü veya hepsi için otomatik ekleme kullanmak isteyip Windows sorabilirsiniz.[](mdb-onboard-devices.md#automatic-onboarding-for-windows-devices-enrolled-in-microsoft-endpoint-manager) Otomatik ekleme, Endpoint Manager Defender İş arasında bir bağlantı ayarlar ve ardından Windows Defender İş'e cihaz ayarlar.
 
-   - henüz Endpoint Manager'i Endpoint Manager veya Windows'a kayıtlı olmayan cihazlarınız varsa, Endpoint Manager cihazları Defender for Business'a el ile ekleyebilirsiniz. 
+   - henüz Endpoint Manager'i Windows cihazlarınız yoksa Endpoint Manager [Defender for Business'a el ile ekleyebilirsiniz](mdb-onboard-devices.md#local-script-in-defender-for-business). 
    
 3. **Güvenlik ilkelerinizi yapılandırma**. İş için Defender, yeni nesil koruma ve güvenlik duvarı koruması için, kuruluş cihazlarına uygulanan varsayılan güvenlik ilkelerini içerir. Bu varsayılan ilkeler önerilen ayarları kullanır ve cihazlarınıza güçlü bir koruma sağlamak üzere tasarlanmıştır. 
 

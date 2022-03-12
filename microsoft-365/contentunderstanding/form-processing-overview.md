@@ -12,13 +12,13 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Microsoft SharePoint Syntex'da form işleme hakkında bilgi SharePoint Syntex.
-ms.openlocfilehash: 8079f12c3b05d62de95bcb08808d1acc931a37d7
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft SharePoint Syntex'da AI Derlemesi kullanarak form işleme modelleri oluşturma hakkında SharePoint Syntex.
+ms.openlocfilehash: d04de2fc71b0b393e560e354253be42053725416
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985161"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63450780"
 ---
 # <a name="form-processing-overview-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'ta form işlemeye genel bakış
 
@@ -37,11 +37,11 @@ Kuruluşlar genellikle posta, faks, e-posta gibi çeşitli kaynaklardan büyük 
 
 ![Belge kitaplığı görünümü.](../media/content-understanding/doc-lib-done.png)</br>  
 
-Modelinizi eğitmek ve formdan ayıklanan bilgileri tanımlamak için örnek dosyaları kullanırız. Belgenizin düzeni, modelinizi eğitimle öğrenerek öğrenebilirsiniz. Yalnızca beş form belgesine ihtiyacınız var. AI Oluşturucusu örnek dosyalarınızı anahtar-değer çiftleri için çözümler ve algılanmayacakları el ile de tanımlayabilirsiniz.  AI oluşturucusu, örnek dosyalarınız üzerinde modelinizin doğruluğunu test etmek için olanak sağlar.
+Modelinizi eğitmek ve formdan ayıklanan bilgileri tanımlamak için örnek dosyaları kullanırız. Belgenizin düzeni, modelinizi eğitimle öğrenerek öğrenebilirsiniz. Yalnızca beş form belgesine ihtiyacınız var. AI Oluşturucusu örnek dosyalarınızı anahtar-değer çiftleri için çözümler ve algılanan olmayanları el ile de tanımlayabilirsiniz.  AI oluşturucusu, örnek dosyalarınız üzerinde modelinizin doğruluğunu test etmek için olanak sağlar.
 
-Modelinizi eğitip yayımladikten sonra, modeliniz [yeni bir](/power-automate/getting-started) Power Automate Flow. Akış, bir dosya belge kitaplığına SharePoint ve modelde tanımlanan verileri ayıklar. Ayıklanan veriler modelinizin belge kitaplığı görünümündeki sütunlarda görüntülenir.
+Modelinizi eğitip yayımladikten sonra, modeliniz bir [Power Automate oluşturur](/power-automate/getting-started). Akış, bir dosya belge kitaplığına SharePoint ve modelde tanımlanan verileri ayıklar. Ayıklanan veriler modelinizin belge kitaplığı görünümündeki sütunlarda görüntülenir.
 
-Kullanıcı Office 365, belgenin belge kitaplığında [form](./set-up-content-understanding.md) işlemeyi etkinleştirmesi SharePoint, bu kitaplığın [içinde form işleme modeli](create-a-form-processing-model.md) oluşturabilecektir. Siteleri kurulum sırasında veya kurulumdan sonra yönetim ayarlarınıza seçebilirsiniz.
+Bir Office 365, kullanıcıların belge kitaplığında [form](./set-up-content-understanding.md) işleme modelini oluştur SharePoint için bu kitaplıkta [form işlemeyi etkinleştirmesi](create-a-form-processing-model.md) gerekir. Siteleri kurulum sırasında veya kurulumdan sonra yönetim ayarlarınıza seçebilirsiniz.
 
 ### <a name="file-limitations"></a>Dosya sınırlamaları
 

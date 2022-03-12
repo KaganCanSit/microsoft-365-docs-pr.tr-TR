@@ -15,12 +15,12 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.custom: ''
 description: Laboratuvar Seti ve Dağıtım Laboratuvarı Seti'Windows Office hakkında bilgi alın.
-ms.openlocfilehash: 7f91fdbd72a496d06377259387f53fbe923f1981
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: f5b2bad3828ef30da822be102010124ccb26091e
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314455"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63450724"
 ---
 # <a name="windows-and-office-365-deployment-lab-kit"></a>Windows ve Office 365 dağıtım laboratuvar seti
 
@@ -101,7 +101,7 @@ Ayrıntılı laboratuvar kılavuzları birçok dağıtım ve yönetim senaryosun
 [Windows 11 ve Office 365 laboratuvar seti indirin](https://www.microsoft.com/evalcenter/evaluate-windows-11-office-365-lab-kit)
 
 > [!NOTE]
-> Bu içeriği indirmek için lütfen geniş bant İnternet bağlantısı kullanın ve otomatik sağlama için yaklaşık 30 dakika bekleyin. Laboratuvar ortamı en az 16 GB kullanılabilir bellek ve 150 GB boş disk alanı gerektirir. En iyi performans için 32 GB kullanılabilir bellek ve 300 GB boş alan önerilir. Laboratuvar Windows 10 16 Mayıs 2022'de sona erecek. 11 Windows laboratuvarı 11 Nisan 2022'de sona erer. Yeni sürümler sona ermeden önce yayımlanacak.
+> Bu içeriği indirmek için lütfen geniş bant İnternet bağlantısı kullanın ve otomatik sağlama için yaklaşık 30 dakika bekleyin. Laboratuvar ortamı en az 16 GB kullanılabilir bellek ve 150 GB boş disk alanı gerektirir. En iyi performans için 32 GB kullanılabilir bellek ve 300 GB boş alan önerilir. Laboratuvar Windows 10 16 Mayıs 2022'de sona erecek. 11 Windows olan laboratuvar 6 Mayıs 2022'de sona erecek. Yeni sürümler sona ermeden önce yayımlanacak.
 
 ## <a name="additional-guidance"></a>Ek kılavuz
 

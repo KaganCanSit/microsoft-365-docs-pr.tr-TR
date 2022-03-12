@@ -12,13 +12,13 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Microsoft SharePoint Syntex'da modeli nasıl ve neden yeniden adlandır SharePoint Syntex.
-ms.openlocfilehash: e5cf6069e1b417e186563013a9924ebf7f89630c
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft web sitesinde belge anlama modelini nasıl ve neden yeniden adlandır SharePoint Syntex.
+ms.openlocfilehash: b1ced765d7a69fdf8b9fe9eb44d6716a840bf8a0
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62986721"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63450304"
 ---
 # <a name="rename-a-model-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da modeli yeniden adlandırma
 

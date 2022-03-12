@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 24158e4a9da9ce48382f08b6dbe701c5640972d4
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: b9a083404da3ad4edc3ccf2f88e1c459dc6f08e2
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63010175"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63450570"
 ---
 # <a name="microsoft-defender-for-endpoint-for-us-government-customers"></a>ABD Kamu müşterileri için Uç Nokta için Microsoft Defender
 
@@ -77,8 +77,8 @@ ABD Kamu müşterileri için Uç Nokta portalı URL'leri için Microsoft Defende
 |Müşteri türü|Portal URL'si|
 |---|---|
 |GCC|<https://security.microsoft.com>|
-|GCC Yüksek|<https://securitycenter.microsoft.us>|
-|DoD|<https://securitycenter.microsoft.us>|
+|GCC Yüksek|<https://security.microsoft.us>|
+|DoD|<https://security.microsoft.us>|
 |
 > [!NOTE]
 > GCC müşterisiysiniz ve Uç nokta ticari sürümü için Microsoft Defender'dan GCC'e taşıma sürecindeysanız, https://transition.security.microsoft.com Uç nokta ticari verileri için Microsoft Defender'ınıza erişmek için kullanın.
@@ -191,6 +191,6 @@ Bunlar bilinen boşluklardır:
 |Özellik adı|GCC|GCC Yüksek|DoD|
 |---|:---:|:---:|:---:|
 |Ağ değerlendirmeleri|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|
-|Ağ bulma|![Evet](images/svg/check-yes.svg)|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|
-|Raporlar: Saldırı yüzeyini azaltma, Cihaz Denetimi, Cihaz durumu, Güvenlik Duvarı|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|
+|Ağ bulma|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|![Evet](images/svg/check-yes.svg)|
+|Raporlar: Cihaz Denetimi, Cihaz durumu, Güvenlik Duvarı|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|
 |Web içeriği filtreleme|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|

@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir bekletme ilkesinde veya bekletme etiketi ilkesinde, istediğiniz şeyi saklayarak ve istemediklerden kurtulmak için yapılandırabilirsiniz ayarları anlıyoruz.
-ms.openlocfilehash: decf8f53f30c7f29636e50900fe994aae25e6552
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 2fd9f2655b13d8c9ac829108d3563a6a4322f3bc
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63326993"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63449253"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için ortak ayarlar
 
@@ -367,6 +367,14 @@ Bekletme döneminin başlangıcı için, içeriğin ne zaman oluşturulacakları
 Bekletme döneminin sonunda, içeriğin kalıcı olarak silinmesini isteyip istemeyebilirsiniz:
 
 ![Bekletme ayarları sayfasına gidin.](../media/b05f84e5-fc71-4717-8f7b-d06a29dc4f29.png)
+
+Bekletmeyi yapılandırmadan önce, ilgili iş yükleri için kapasite ve depolama sınırlarını tanımanız gerekir:
+
+- Site SharePoint OneDrive için, saklanan öğeler sitenin depolama kotasına dahil olan Saklama Kitaplığı'nın saklama kitaplığında saklanır. Daha fazla bilgi için bkz[. Site depolama alanı sınırlarını](/sharepoint/manage-site-collection-storage-limits) belgeler SharePoint yönetme.
+
+- Daha Exchange, Teams ve Yammer depolanmış iletilerin posta kutularında depolandığı alan hakkında bilgi için bkz. Exchange Online sınırlarına bakın ve otomatik [](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits) genişleyen [arşivlemeyi etkinleştirin](autoexpanding-archiving.md).
+    
+    Çok büyük hacimli e-postanın kısa bir süre içinde kullanıcılar tarafından veya ilke ayarlarından otomatik olarak silindiğinde, öğeleri kullanıcının birincil posta kutusunun Kurtarılabilir Öğeler klasöründen arşiv posta kutusunun Kurtarılabilir Öğeler klasörüne daha sık taşımak için Exchange'yi yapılandırmanız da gerekebilir. Adım adım yönergeler için bkz. [Posta kutuları için Kurtarılabilir Öğe kotasını artırma](increase-the-recoverable-quota-for-mailboxes-on-hold.md).
 
 ### <a name="deleting-content-thats-older-than-a-specific-age"></a>Belirli bir yaştan daha eski içeriği silme
 

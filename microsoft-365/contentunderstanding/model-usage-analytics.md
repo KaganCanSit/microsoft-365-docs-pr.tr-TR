@@ -1,5 +1,5 @@
 ---
-title: Microsoft SharePoint Syntex'ta belge anlama modeli kullanım SharePoint Syntex
+title: Modellerinizi Microsoft SharePoint Syntex'da nasıl kullanıla
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -12,15 +12,15 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Belge anlama modeli için kullanım analizini nasıl bulup kullanabileceğiniz hakkında bilgi edinin.
-ms.openlocfilehash: 3dd77f760f70812045841ab56afbb13b02044d91
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Belgenizi anlama ve form işleme modellerinin nasıl performans gösterir hakkında daha fazla bilgi edinebilirsiniz.
+ms.openlocfilehash: ddd4d602deae0fb871989e4739470a19b97b0238
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988127"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63450528"
 ---
-# <a name="document-understanding-model-usage-analytics-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'ta belge anlama modeli kullanım SharePoint Syntex
+# <a name="analyze-how-your-models-are-used-in-microsoft-sharepoint-syntex"></a>Modellerinizi Microsoft SharePoint Syntex'da nasıl kullanıla
 
 </br>
 

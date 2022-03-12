@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: 787d7a75-e201-46f3-a242-f698162ff09f
 description: Outlook'ta grup gruplarına bir veya Microsoft 365 dağıtım listelerini yükseltmeyi ve aynı anda birkaç dağıtım listelerini yükseltmek için PowerShell'i kullanmayı öğrenin.
-ms.openlocfilehash: 7a6e0eff49958b99df9ca59702b814b364aefb46
-ms.sourcegitcommit: 27eb93a7d46bcbb9c948a50b0a8481ffd3832ca0
+ms.openlocfilehash: 5394ce52f865d0b9a0383619cb11b9ebf3a94fc8
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/28/2021
-ms.locfileid: "63028356"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63449211"
 ---
 # <a name="upgrade-distribution-lists-to-microsoft-365-groups-in-outlook"></a>Dağıtım listelerini Outlook'Microsoft 365 Gruplarına yükseltme
 
@@ -196,6 +196,10 @@ VEYA
 ### <a name="what-happens-to-the-dl-if-the-upgrade-from-eac-fails"></a>EAC'den yükseltme başarısız olursa DL'ye ne olur?
 
 Yükseltme, ancak arama sunucuya gönderilebilir. Yükseltme başarısız olursa, URL'leri korunur. Her zaman olduğu gibi çalışırlar.
+
+### <a name="what-happens-to-message-approval-moderation-settings-on-distribution-groups-after-upgrading"></a>Yükseltme sonrasında dağıtım gruplarında ileti onayı (mode) ayarlarına ne olur?
+
+İleti onayı (moderation) ayarları korunur ve dağıtım grubu Bir Grup'a yükseltildikten sonra Microsoft 365 devam eder.
 
 ## <a name="related-content"></a>İlgili içerik
 

@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: ''
 description: Bir gözden geçirme kümesinden sunular veya dış incelemeler Advanced eDiscovery içeriği seçmeyi ve dışarı aktarmayı öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 6384d45121fc39d120d6906e46594b8b04124471
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: 61de8fed9c5bcb00daf3a8273f3ebfc86fe75a35
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63401070"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63449464"
 ---
 # <a name="export-documents-from-a-review-set-in-advanced-ediscovery"></a>Belge kümesinde gözden geçirme kümesinden belgeleri Advanced eDiscovery
 
@@ -45,7 +45,7 @@ Gözden geçirme kümesinden belgeleri dışarı aktarma:
 
 ## <a name="export-options"></a>Dışarı aktarma seçenekleri
 
-Dışarı aktarmayı yapılandırmak için aşağıdaki seçenekleri kullanın. BAZı çıkış seçenekleri için bazı çıkış seçeneklerine izin verilmez; en dikkati, PST biçimine dışarı aktarmada metin dosyalarını ve tam işlemli PDF'leri dışarı aktarmaya izin verilmez.
+Dışarı aktarmayı yapılandırmak için aşağıdaki seçenekleri kullanın. BAZı çıkış seçenekleri için bazı çıkış seçeneklerine izin verilmez; en dikkati, PST biçimine dışarı aktarmada metin dosyalarını ve tam işlemli PDF'leri dışarı aktarmasına izin verilmez.
 
 - **Dışarı aktarma** adı: Dışarı aktarma işinin adı. Bu, indirilecek ZIP dosyalarını isim etmek için kullanılır.
 
@@ -93,13 +93,16 @@ Bu dışarı aktarma seçeneğini tercih ediyorsanız, dışarı aktaran içerik
   
   - Uyarı ve hatalar x z.csv: Bu dosya, gözden geçirme kümesinden dışarı aktarmaya çalışırken karşılaşılan hatalar hakkında bilgi içerir.
   
-  - Exchange: Bu klasör PST dosyalarında depolanan Exchange tüm içeriği içerir. Bu seçenekte, redacted PDF dosyaları ek kullanılamaz. Gözden geçirme kümesinde bir ek seçiliyse, ek iliştirilmiş olarak üst e-posta iletisi dışarı aktarıldı. Bu klasör aşağıdaki öğeleri de içerebilir: 
-
-    - Kod çözmesi yapılan Bilgi Hakları Yönetimi (IRM) korumalı iletiler. 
-    - Hata düzeltildi iletileri. 
-    - Modern ekler veya iletilerde başvurulan bağlantılar. 
+  - Exchange: Bu klasör PST dosyalarında depolanan Exchange tüm içeriği içerir. Bu seçenekte, redacted PDF dosyaları ekli değildir. Gözden geçirme kümesinde bir ek seçiliyse, ek iliştirilmiş olarak üst e-posta iletisi dışarı aktarıldı.
   
-  - SharePoint: Bu klasör, dosya biçimindeki tüm yerel SharePoint yerel dosya biçiminde içerir. Bu seçenekte, redacted PDF dosyaları ek kullanılamaz.
+    En Exchange klasörü, aşağıdaki öğeleri içeren mailboxname_loosefiles.zip bir alt klasör de içerebilir:
+
+    - Kod çözmesi yapılan Bilgi Hakları Yönetimi (IRM) korumalı iletiler.
+    - Hata düzeltildi iletileri.
+    - Modern ekler veya iletilerde başvurulan bağlantılar.
+    - Şifrelenmiş öğeler (klasördeki PST dosyalarında yer Exchange).
+  
+  - SharePoint: Bu klasör, dosya biçimindeki tüm yerel SharePoint yerel dosya biçiminde içerir. Bu seçenekte, redacted PDF dosyaları ekli değildir.
 
 ### <a name="condensed-directory-structure"></a>Dizin yapısı sıkı
 

@@ -16,17 +16,17 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security-compliance
-ms.openlocfilehash: 7519e3b280b4415bb35237f922a2aa25d22b0c8f
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 4f92c50ad971de439541a7b8ea2e8f9fb5312c48
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63323031"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63449407"
 ---
 # <a name="get-microsoft-defender-for-business"></a>İş için Microsoft Defender'ı almak
 
 > [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
+> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
@@ -59,7 +59,7 @@ Bölgenize çözüm sağlayıcısı bulmak için aşağıdaki adımları izleyin
 
 ## <a name="get-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra’yı edinin
 
-*1 Mart 2022'den itibaren,* İş için Defender yeni bir Microsoft 365 İş Ekstra. 
+*1 Mart 2022'den itibaren, Defender for Business* yeni bir Microsoft 365 İş Ekstra. 
 
 Bkz[. Deneme veya satın Microsoft 365 İş Ekstra](../../business-premium/get-microsoft-365-business-premium.md).
 
@@ -100,7 +100,7 @@ Denemenizi başlatmaya hazır olduğunda, ayarlamaları yapmak için iki ana por
 
 |Portal  |Açıklama  |
 |---------|---------|
-| Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/))      | Deneme Microsoft 365 yönetim merkezi etkinleştirme ve ilk kez oturum açma adımlarını kullanın.<br/><br/> Ayrıca aşağıdaki bilgileri Microsoft 365 yönetim merkezi: <br/>- Kullanıcı ekleme veya kaldırma<br/>- Kullanıcı lisansları atama<br/>- Ürünlerinizi ve hizmetlerinizi görüntüleme<br/>- Microsoft 365 aboneliğiniz için Microsoft 365 görevlerini tamamlama <br/><br/> Daha fazla bilgi edinmek için bkz[. İlk Microsoft 365 yönetim merkezi](../../admin/admin-overview/admin-center-overview.md).      |
+| Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/))      | Deneme Microsoft 365 yönetim merkezi etkinleştirmek ve ilk kez oturum açma için oturum açma özelliğini kullanın.<br/><br/> Ayrıca aşağıdaki bilgileri Microsoft 365 yönetim merkezi: <br/>- Kullanıcı ekleme veya kaldırma<br/>- Kullanıcı lisansları atama<br/>- Ürünlerinizi ve hizmetlerinizi görüntüleme<br/>- Microsoft 365 aboneliğiniz için Microsoft 365 görevlerini tamamlama <br/><br/> Daha fazla bilgi edinmek için bkz[. İlk Microsoft 365 yönetim merkezi](../../admin/admin-overview/admin-center-overview.md).      |
 | Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com))     | İş için Microsoft 365 Defender Defender'ı ayarlamak ve yapılandırmak için güvenlik portalını kullanın. <br/><br/>Microsoft 365 Defender portalını kullanarak şunları Microsoft 365 Defender kullanabilirsiniz: <br/>- Cihazlarınızı ve cihaz koruma ilkelerini görüntüleme<br/>- Algılanan tehditleri görüntüleme ve önlem alma<br/>- Güvenlik önerilerini görüntüleme ve güvenlik ayarlarınızı yönetme <br/><br/>Daha fazla bilgi edinmek için [bkz. Microsoft 365 Defender başlama](mdb-get-started.md).        |
 
 If your organization is using Microsoft 365 İş Ekstra, you have Microsoft Intune (Microsoft Endpoint Manager) and you might be using the Microsoft Endpoint Manager center ()[https://endpoint.microsoft.com/](https://endpoint.microsoft.com/). Endpoint Manager, cihazları yönetmenize ve güvenlik ayarlarını yapılandırmana da olanak tanır. Daha fazla bilgi edinmek için [bkz Microsoft Intune cihazlarınız için bir MDM ve MAM sağlayıcısıdır](/mem/intune/fundamentals/what-is-intune).

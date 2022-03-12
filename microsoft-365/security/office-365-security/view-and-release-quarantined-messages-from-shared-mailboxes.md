@@ -17,12 +17,12 @@ ROBOTS: NOINDEX
 description: Kullanıcılar, izinleri olan paylaşılan posta kutularına gönderilen karantinaya alınmış iletileri görüntülemeyi ve bu iletiler üzerinde eylem yapmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8d9f83f176675be26fadf3d720dcc78e5146bde3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 3f136f373fa63be7dab6cfbd63e44b33b4eca2ff
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63324529"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63450542"
 ---
 # <a name="view-and-release-quarantined-messages-from-shared-mailboxes"></a>Paylaşılan posta kutularından karantinaya alınan iletileri görüntüleme ve serbest bırakma
 
@@ -48,7 +48,7 @@ Artık kullanıcıların paylaşılan posta kutularına gönderilen karantinaya 
 - [Exchange Online PowerShell'de](/powershell/exchange/connect-to-exchange-online-powershell) paylaşılan posta kutusu için karantinaya alınmış iletileri yönetmek için, son kullanıcının iletileri tanımlamak üzere _RecipientAddress_ parametresi değerinin paylaşılan posta kutusu [e-posta adresiyle Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage) cmdlet'ini kullanması gerekir. Örneğin:
 
   ```powershell
-  Get-QuarantinedMessage -RecipientAddress officeparty@contoso.com
+  Get-QuarantineMessage -RecipientAddress officeparty@contoso.com
   ```
 
   Daha sonra, son kullanıcı görüntülemek veya üzerinde işlem yapmak için listeden karantinaya alınmış iletiyi seçer.
@@ -56,9 +56,9 @@ Artık kullanıcıların paylaşılan posta kutularına gönderilen karantinaya 
   Bu örnekte, paylaşılan posta kutusuna gönderilmiş olan karantinaya alınmış tüm iletiler görüntülenir ve sonra da listenin ilk iletisi karantinadan çıkarılır (listenin ilk iletisi 0, ikinci ileti 1 olur, vb.).
 
   ```powershell
-  $SharedMessages = Get-QuarantinedMessage -RecipientAddress officeparty@contoso.com | select -ExpandProperty Identity
+  $SharedMessages = Get-QuarantineMessage -RecipientAddress officeparty@contoso.com | select -ExpandProperty Identity
   $SharedMessages
-  Release-QuarantinedMessage -Identity $SharedMessages[0]
+  Release-QuarantineMessage -Identity $SharedMessages[0]
   ```
 
   Ayrıntılı söz dizimi ve parametre bilgileri için aşağıdaki konulara bakın:

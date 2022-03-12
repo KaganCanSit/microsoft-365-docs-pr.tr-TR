@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Microsoft SharePoint Syntex için kaynakları nasıl bu SharePoint Syntex.
-ms.openlocfilehash: db8526cbf85be1b9db5b95ed0739d0ec948c2faa
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 3b8c85cfd405e68884df844c502473cdd95a4fa5
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63323171"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63449436"
 ---
 # <a name="introduction-to-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'e giriş
 
@@ -66,6 +66,8 @@ Bu bölümdeki kaynaklar, aşağıdaki üç veri sınıflandırması ve ayıklam
 |Örnek senaryolara bakarak, size bu senaryoları SharePoint Syntex hakkında fikir verme |[Durumlar için senaryolar ve kullanım SharePoint Syntex](./adoption-scenarios.md)| 
 |Deneme sürümü için bir deneme pilot programı ayarlayın SharePoint Syntex |[Deneme sürümü çalıştırma](./trial-syntex.md)|
 |Belge işlemlerini otomatikleştirmek için SharePoint Syntex kullanma hakkında bilgi |[Yeni bir çözüm kullanarak Microsoft 365 yönetin](./solution-manage-contracts-in-microsoft-365.md)| 
+|Sözleşmeleri yönetmeye yardımcı olmak SharePoint özelleştirilebilir bir site şablonu deneyin |[Sözleşme Yönetimi site şablonunu kullanma](./use-contracts-management-site.md)| 
+|Modeller hakkında daha fazla bilgi edinmek için, yönergeli bir İçerik Merkezi site şablonunu deneyin |[İçerik Merkezi site şablonunu kullanma](./use-content-center-site.md)| 
 
 ## <a name="set-up-sharepoint-syntex"></a>Ayarlama SharePoint Syntex
 
@@ -76,6 +78,7 @@ Bu bölümdeki kaynaklar, aynı ortamda organizasyon yöneticinizin Microsoft Sh
 |E-postayı ayarlama ve SharePoint Syntex|[Ayarlama SharePoint Syntex](./set-up-content-understanding.md)|
 |Lisanslama hakkında bilgi SharePoint Syntex|[Lisanslama SharePoint Syntex](./syntex-licensing.md)|
 |Resim etiketleme ve devre dışı bırakma hakkında bilgi|[Resim etiketleme SharePoint Syntex](./image-tagging.md)|
+|Veri yönetimi için PowerShell SharePoint Syntex|[PowerShell SharePoint Syntex yönetme](./powershell-syntex-intro.md)|
 
 ## <a name="models"></a>Modeller
 
@@ -96,7 +99,7 @@ Bu bölümdeki kaynaklar, kullanıcılarınızı belge anlama ve form işleme mo
 
 ## <a name="premium-services"></a>Premium hizmetleri
 
-Yeni SharePoint Syntex lisansı, kullanıcılarınıza bu ortamda size ek işlevler veren premium içerik Microsoft 365 verir. Bu bölümdeki kaynaklar, bu özellik ve bunların nasıl kullanımı hakkında daha fazla ayrıntı sağlar.
+Yeni SharePoint Syntex lisansı, kullanıcılarınıza bu ortamda size ek işlevler veren premium içerik Microsoft 365 verir. Bu bölümdeki kaynaklar, bu özellikler ve bunların nasıl kullanımı hakkında daha fazla ayrıntı sağlar.
 
 | Bu bilgileri arıyorsanız: | Bu kaynağa gidin: |
 |:-----|:-----|

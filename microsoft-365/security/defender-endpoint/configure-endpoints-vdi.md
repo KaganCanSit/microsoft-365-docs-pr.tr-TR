@@ -18,12 +18,12 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.date: 02/14/2022
 ms.technology: mde
-ms.openlocfilehash: 3e430d44789a1f3c43ec55a20ee7e06521f2dcaf
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 7342f368063c2c9024c4942c33a2e41f28eebd36
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015240"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63449828"
 ---
 # <a name="onboard-non-persistent-virtual-desktop-infrastructure-vdi-devices-in-microsoft-365-defender"></a>Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını mobil cihaza Microsoft 365 Defender
 
@@ -63,7 +63,10 @@ Aşağıdaki adımlar, VDI cihazlarını ekleme adımlarını size yönlendirece
 > [!WARNING]
 > Düşük kaynak yapılandırmalarının olduğu ortamlarda VDI önyükleme yordamı Uç nokta algılayıcısı kullanımı için Defender'ı yavaşlatabilir.
 
-### <a name="for-windows-10-or-windows-11-or-windows-server-2019-or-windows-server-2022"></a>Windows 10, Windows 11, Windows Server 2019 veya Windows Server 2022 için
+### <a name="for-windows-10-or-windows-11-or-windows-server-2012-r2-and-later"></a>R2 Windows 10 veya Windows 11 veya Windows Server 2012 için
+
+> [!NOTE]
+> Windows Server 2016 ve Windows Server 2012 R2'nin bu özelliğin çalışması için önce [Onboard Windows sunucularında](/microsoft-365/security/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016) verilen yönergeleri kullanarak yükleme paketinin uygulanmasıyla hazır olması gerekir.
 
 1.  Hizmet ekleme sihirbazından indirdiğiniz .zip dosyası *(WindowsDefenderATPOnboardingPackage.zip*) VDI yapılandırma paketini açın. Paketi şu portaldan da <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a>:
 
@@ -109,7 +112,10 @@ Aşağıdaki adımlar, VDI cihazlarını ekleme adımlarını size yönlendirece
 
 7. Cihazın adını girerek arama işlevini kullanın ve arama türü olarak **Cihaz'ı** seçin.
 
-## <a name="for-downlevel-skus-windows-server-2008-r22012-r22016"></a>Aşağı düzey SKU'lar için (Windows Server 2008 R2/2012 R2/2016)
+## <a name="for-downlevel-skus-windows-server-2008-r2"></a>Aşağı düzey SU'lar için (Windows Server 2008 R2)
+
+> [!NOTE]
+> Diğer Windows sunucu sürümleri için bu yönergeler, MMA gerektiren Windows Server 2016 ve Windows Server 2012 R2 uç noktası için önceki Microsoft Defender'ı çalıştırmayı da gerektirir. Yeni birleşik çözüme geçiş yönergeleri, Uç Nokta için [Microsoft Defender'daki Sunucu geçiş senaryolarındadır](/microsoft-365/security/defender-endpoint/server-migration).
 
 > [!NOTE]
 > Aşağıdaki kayıt defteri yalnızca hedef "Her cihaz için tek girdi" elde etmek olduğunda ilgili kayıt defteridir.

@@ -6,15 +6,15 @@ ms.author: pshelton
 manager: toddbeckett
 ms.topic: article
 audience: Developer
-ms.date: 2/4/2022
+ms.date: 3/7/2022
 ms.service: O365-seccomp
 ms.localizationpriority: medium
-ms.openlocfilehash: 64292627d81c78f91e485259b6a8f8b6131b0ad5
-ms.sourcegitcommit: f8267a0860de62dbd53ebb8a151a8e71a8ccda6a
+ms.openlocfilehash: 075fb8f4c27401a4622f4ce639c897f2e98bb3e9
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63016636"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63450383"
 ---
 # <a name="office-tls-certificate-changes"></a>Office TLS Sertifika Değişiklikleri
 
@@ -37,19 +37,22 @@ Etkilenen uç noktalar şunlardır (ancak bunlarla sınırlı değildir):
 - *.communication.azure.com
 - *.operatorconnect.microsoft.com
 
-Buna Skype Kurumsal, ABD Government ulusal bulut bulut örneklerinin Microsoft 365 uç noktaları aynı değişikliği yapacak ve aşağıdaki gibi uç noktaları etkileyecek:
+Ayrıca, Teams ve Skype Kurumsal-US Microsoft 365 Government ulusal bulut bulut örneklerinin Çevrimiçi uç noktaları da aynı değişikliği yapacaktır ve aşağıdaki gibi uç noktaları etkiler:
+- *.gcc.teams.microsoft.com
+- *.dod.teams.microsoft.us
+- *.gov.teams.microsoft.us
 - *.online.dod.skypeforbusiness.us
 - *.online.gov.skypeforbusiness.us
 - *.um-dod.office365.us
 - *.um.office365.us
 
-Bu değişiklik, ABD Devlet, Çin veya Almanya ulusal bulut örneklerde kullanılan diğer sertifikaları, etki alanlarını veya hizmetleri Microsoft 365.
+Bu değişiklik, Çin veya Almanya ulusal bulut örneklerde kullanılan sertifika, etki alanı veya hizmetleri Microsoft 365.
 
 Bu makaledeki tüm sertifika bilgileri daha önce Microsoft 365 2020'den sonra şifreleme zincirleri için sağlanmıştır.[](./encryption-office-365-certificate-chains.md)
 
 ## <a name="when-will-this-change-happen"></a>Bu değişiklik ne zaman gerçekleşecek?
 
-Hizmetler, Ocak 2022'den itibaren, Ekim 2022'den itibaren yeni Kök CA'lara geçişe başlayacaktır.
+Hizmetler Ocak 2022'de yeni Kök CA'lara geçiş yapmaya başladı ve Ekim 2022'ye kadar devam edecek.
 
 ## <a name="what-is-changing"></a>Neler değişiyor?
 
@@ -82,6 +85,10 @@ ile aşağıdaki Ara CA'lardan birini kullanabilirsiniz:
 | [Microsoft Azure TLS Issuing CA 02](https://www.microsoft.com/pkiops/certs/Microsoft%20Azure%20TLS%20Issuing%20CA%2002%20-%20xsign.crt) | e7eea674ca718e3befd90858e09f8372ad0ae2aa |
 | [Microsoft Azure TLS Issuing CA 05](https://www.microsoft.com/pkiops/certs/Microsoft%20Azure%20TLS%20Issuing%20CA%2005%20-%20xsign.crt) | 6c3af02e7f269aa73afd0eff2a88a4a1f04ed1e5 |
 | [Microsoft Azure TLS Issuing CA 06](https://www.microsoft.com/pkiops/certs/Microsoft%20Azure%20TLS%20Issuing%20CA%2006%20-%20xsign.crt) | 30e01761ab97e59a06b41ef20af6f2de7ef4f7b0 |
+
+Örnek olarak bu, yeni sertifika zincirlerinden biri olan geçerli bir sertifikadır:
+
+![Teams TLS Sertifika Zinciri](../media/teams-tls-certificate-chain.png)
 
 ## <a name="will-this-change-affect-me"></a>Bu değişiklik beni etkileyecek mi?
 

@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: 'Microsoft 365 noktası veri kaybını önleme önleme, bu dosyalar için dosya etkinliklerinin ve koruyucu eylemlerin izlenmesini uç noktalara genişlettir. Dosyalar Uyumluluk çözümsinde görünür hale gelir '
-ms.openlocfilehash: 7d8bc4dcb9d2852894ca838d88ae8ff2f5226298
-ms.sourcegitcommit: 99067d5eb1fa7b094e7cdb1f7be65acaaa235a54
+ms.openlocfilehash: 83608f005b9024583142515094b2d958b8f5d915
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2022
-ms.locfileid: "63010037"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63450352"
 ---
 # <a name="learn-about-microsoft-365-endpoint-data-loss-prevention"></a>Uç nokta Microsoft 365 kaybı önleme hakkında bilgi
 
@@ -81,8 +81,33 @@ Yalnızca ilke eşleşmelerinden verileri izlemek için, uç nokta DLP genel aya
 > [!TIP]
 > Desteklenen tüm dosya türlerinde etkinliklerin denetlen olduğundan emin olmak için, özel bir [DLP ilkesi oluşturun](create-test-tune-dlp-policy.md).
 
-
 Uç nokta DLP, MIME türüne göre etkinlik tabanlı olarak izler, dolayısıyla dosya uzantısı değişse bile etkinlikler yakalanır.
+
+### <a name="file-types-preview"></a>Dosya türleri (önizleme)
+
+Dosya Türleri, belirli iş akışlarını veya iş alanlarını korumak için kullanılan bir dosya biçimleri grubudır. DLP ilkelerinize koşullar olarak bir veya birden çok Dosya türü kullanabilirsiniz.
+
+|Dosya Türü |Uygulama  |izlenen dosya uzantıları  |
+|---------|---------|---------|
+|sözcük işleme |Word, PDF | .doc, .docx, .docm, .dot, .dotx, .dotm, .docb, .pdf |
+|elektronik tablo    |Excel, CSV, TSV |.xls, .xlsx, .xlt, .xlm, .xlsm, .xltx, .xltm, .xlsb, .xlw, .csv, .tsv         |
+|sunu |PowerPoint|.ppt, .pptx, .pos, .pps, .pptm, .potx, .potm, .ppam, .ppsx|
+|Arşiv  |dosya arşivi ve sıkıştırma araçları | .zip, .zipx, .rar, .7z, .tar, .gz        |
+|E-posta    |Outlook |.pst, .ost, .msg         |
+
+### <a name="file-extensions-preview"></a>Dosya uzantıları (önizleme)
+
+Dosya türleri, bir ilkede koşul olarak listeleniz gereken dosya uzantılarını kapsıyorsa, bunun yerine, dosya uzantılarını virgülle ayrılmış olarak kullanabilirsiniz.
+
+> [!IMPORTANT]
+> Dosya uzantıları ve dosya türleri seçenekleri, aynı kuralda koşullar olarak kullanılamaz. Bunları aynı ilkede koşullar olarak kullanmak istemiyorsanız, bunların ayrı kurallarda olması gerekir. 
+
+> [!IMPORTANT]
+> Bu Windows sürümleri Dosya türlerini ve Dosya uzantısı özelliklerini destekler:
+>- Windows 10 20H1/20H2/21H1 (KB 5006738)
+>- Windows 10 19H1/19H2 (KB 5007189)
+>- Windows 10 RS5 (KB 5006744)
+
 
 ## <a name="whats-different-in-endpoint-dlp"></a>Uç Nokta DLP'sinde farklar
 

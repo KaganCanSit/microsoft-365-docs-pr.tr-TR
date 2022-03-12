@@ -18,12 +18,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 3a8eda3dcdcb3f4487934b3bf107ce33210ffdf5
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: 33961088105e838add3634024bb85807a6550eb7
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016482"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63450738"
 ---
 # <a name="communication-compliance-policies"></a>İletişim uyumluluğu ilkeleri
 
@@ -40,7 +40,7 @@ Kuruluşta yer alan tüm Microsoft 365 için iletişim uyumluluk Microsoft 365 u
 
 |**Alan**|**İlke Şablonu**|**Ayrıntılar**|
 |:-----|:-----|:-----|
-| **Uygunsuz metin** | Uygunsuz metni algılama | - Konumlar: Exchange Online, Microsoft Teams, Yammer, Skype Kurumsal <br> - Yön: Gelen, Giden, İç <br> - Yüzdeyi gözden geçirme: %100 <br> - Koşullar: Tehdit, Tehdit (önizleme) ve Hedeflenen taciz sınıflayıcıları |
+| **Uygunsuz metin** | Uygunsuz metni algılama | - Konumlar: Exchange Online, Microsoft Teams, Yammer, Skype Kurumsal <br> - Yön: Gelen, Giden, İç <br> - Yüzdeyi gözden geçirme: %100 <br> - Koşullar: Tehdit, Tehdit, Tehdit ve Taciz sınıflandırıcıları |
 | **Uygunsuz resimler** | Uygunsuz resimleri algılama | - Konumlar: Exchange Online, Microsoft Teams, Yammer, Skype Kurumsal <br> - Yön: Gelen, Giden, İç <br> - Yüzdeyi gözden geçirme: %100 <br> - Koşullar: Yetişkin ve Racy resim sınıflandırıcıları |
 | **Hassas bilgiler** | Hassas bilgileri izleme | - Konumlar: Exchange Online, Microsoft Teams, Yammer, Skype Kurumsal <br> - Yön: Gelen, Giden, İç <br> - Yüzdeyi gözden geçirme: %10 <br> - Koşullar: Hassas bilgiler, ilk gelen içerik desenleri ve türleri, özel sözlük seçeneği, 1 MB'den büyük ekler |
 | **Mevzuat uyumluluğu** | Yasal düzenlemelere uyumluluğu izleme | - Konumlar: Exchange Online, Microsoft Teams, Yammer, Skype Kurumsal <br> - Yön: Gelen, Giden <br> - Yüzdeyi gözden geçirme: %10 <br> - Koşullar: özel sözlük seçeneği, 1 MB'den büyük ekler |
@@ -79,7 +79,7 @@ Bir ilkeyi kopyalamak ve yeni ilke oluşturmak için, aşağıdaki adımları ta
 
 1. Kopyalamak istediğiniz ilkeyi seçin.
 2. Komut **çubuğunda İlkeyi** kopyala komut çubuğu düğmesini seçin veya ilkenin eylem **menüsünden** İlkeyi kopyala'ya tıklayın.
-3. **İlkeyi kopyala** bölmesinde, İlke adı alanında ilke için varsayılan adı kabul **veya ilkeyi** yeniden adlandırabilirsiniz. Yeni ilkenin ilke adı, var olan etkin veya devre dışı bırakılmış ilkeyle aynı olamaz. Açıklama **alanını gereken** şekilde tamamlama.
+3. **İlkeyi kopyala** bölmesinde, İlke adı alanında ilke için varsayılan adı kabul **veya ilkeyi** yeniden adlandırabilirsiniz. Yeni ilkenin ilke adı, var olan etkin veya devre dışı bırakılmış ilkeyle aynı olabilir. Açıklama **alanını gereken** şekilde tamamlama.
 4. İlkeyi daha fazla özelleştirmeye ihtiyacınız yoksa, işlemi tamamlamak için **İlkeyi kopyala'ya** seçin. Yeni ilkenin yapılandırmasını güncelleştirmeniz gerekirse İlkeyi **özelleştir'i seçin**. Bu, yeni ilkeyi güncelleştirmenize ve özelleştirmenize yardımcı olmak için ilke sihirbazını başlatır.
 
 ## <a name="storage-limit-notification-preview"></a>Depolama sınırı bildirimi (önizleme)
@@ -143,7 +143,7 @@ Yerleşik olarak eğitilebilir ve genel sınıflayıcılar, farklı türlerde uy
 Aşağıdaki dil ve içerik türleri için terimler, resimler ve duyguları için iletişimin yerleşik eğitim ve genel sınıflandırıcı tarama iletişimi:
 
 - **Yetişkinlere yönelik** resimler: Cinsel olan doğada açık olan resimleri tarar.
-- **Virüs (önizleme)**: Açık ayırt etmek için taramalar ve diğer topluluklara göre Afrika Amerika/Siyah topluluklarına karşı özellikle ayrımcı dil konusunda hassastır.
+- **Virüs**: Açık bir ayırt etmek için taramalar ve diğer topluluklara göre Afrika Amerika/Siyah topluluklarına karşı özellikle ayrımcı dillere duyarlıdır.
 - **Gory resimleri**: Şiddet ve gore gösteren görüntüleri tarar.
 - **Küfür:** Çoğu kişiyi dikkat dışı eden küfür ifadelerini tarar.
 - **Racy resimleri**: Cinsel olan ama yetişkinlere yönelik olduğu kabul edildi resimlerden daha az açık içerik içeren resimleri tarar.
@@ -227,7 +227,7 @@ Gözden geçir edilecek içerik miktarını azaltmak için, iletişim uyumluluk 
 
 ## <a name="alert-policies"></a>Uyarı ilkeleri
 
-Bir ilke yapılandırıldığında, otomatik olarak buna karşılık gelen bir uyarı ilkesi oluşturulur ve ilkede tanımlanan koşullarla uyan iletiler için uyarılar oluşturulur. İlke oluşturduktan sonra etkinlik göstergelerinden uyarı almaya başlamak 24 saat kadar sürebilir. Varsayılan olarak, tüm ilke eşleşmeleri uyarı tetikleyicisine ilişkili uyarı ilkesinde bir önem düzeyi orta düzeyde atanır. İlişkili uyarı ilkesinde toplama tetikleyici eşik düzeyi karşılandıktan sonra, iletişim uyumluluk ilkesi için uyarılar oluşturulur. İlke koşullarına uygun iletilerin sayısına bakılmaksızın, her 24 saatte bir, uyarılar için tek bir e-posta bildirimi gönderilir. Örneğin, Contoso'da uygun olmayan bir içerik ilkesi etkindir ve 1 Ocak'ta 6 uyarı oluşturan 100 ilke eşleşmesi vardır. 1 Ocak'ın sonunda 6 uyarı için tek bir e-posta bildirimi gönderilir.
+Bir ilke yapılandırıldığında, otomatik olarak buna karşılık gelen bir uyarı ilkesi oluşturulur ve ilkede tanımlanan koşullarla uyan iletiler için uyarılar oluşturulur. İlke oluşturduktan sonra etkinlik göstergelerinden uyarı almaya başlamak 24 saat kadar sürebilir. Varsayılan olarak, tüm ilke eşleşmeleri uyarı tetikleyicisine ilişkili uyarı ilkesinde bir önem düzeyi orta düzeyde atanır. İlişkili uyarı ilkesinde toplama tetikleyici eşik düzeyi karşılandıktan sonra, iletişim uyumluluk ilkesi için uyarılar oluşturulur. İlke koşullarına uygun iletilerin sayısına bakılmaksızın, her 24 saatte bir, uyarılar için tek bir e-posta bildirimi gönderilir. Örneğin, Contoso'da uygun olmayan bir içerik ilkesi etkindir ve 1 Ocak'ta altı uyarı oluşturan 100 ilke eşleşmesi vardır. 1 Ocak sonunda altı uyarı için tek bir e-posta bildirimi gönderilir.
 
 İletişim uyumluluğu ilkeleri için, aşağıdaki uyarı ilkesi değerleri varsayılan olarak yapılandırılır:
 

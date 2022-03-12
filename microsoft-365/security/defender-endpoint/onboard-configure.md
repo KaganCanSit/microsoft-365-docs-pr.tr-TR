@@ -16,12 +16,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 4492b50cfdfb0125a9079eb1f4a4945b6e06e011
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 0922c827330fff25d7da1bbc69147c7a50f474df
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015210"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63449758"
 ---
 # <a name="onboard-devices-and-configure-microsoft-defender-for-endpoint-capabilities"></a>Cihazları ekleme ve Uç nokta özellikleri için Microsoft Defender'ı yapılandırma
 
@@ -109,7 +109,7 @@ Cihazları işe başladıktan sonra hizmetin diğer özelliklerini yapılandırm
 |Dosya yanıtı özellikleri: dosya toplama, derin çözümleme, dosyayı engelleme, durdurma ve karantina işlemleri     |      E   |    E     |     E    |    E    |    E   |
 |Canlı Yanıt    |      E   |    E     |     E    |    E    |    E   |
 
-(<a id="fn1">1</a>) Windows Server 2012 2016 için modern, birleşik çözümü ifade eder. Daha fazla bilgi için bkz. [Uç nokta Windows Defender'a Sunucu Ekleme](configure-server-endpoints.md).
+(<a id="fn1">1</a>) R2 ve 2016'da Windows Server 2012, birleşik çözümü ifade eder. Daha fazla bilgi için bkz. [Uç nokta Windows Defender'a Sunucu Ekleme](configure-server-endpoints.md).
 
 >[!NOTE]
 >Windows 7, 8.1, Windows Server 2008 R2 EDR algılayıcısı ve System Center Endpoint Protection (SCEP) kullanan AV için destek içerir.

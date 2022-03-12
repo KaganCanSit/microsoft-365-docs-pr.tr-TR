@@ -15,12 +15,12 @@ ms.collection:
 - Strat_O365_Enterprise
 - m365initiative-coredeploy
 description: Microsoft 365 Yönetici Merkezi'nde ağ bağlantısına genel bakış
-ms.openlocfilehash: ce0878037a3741ad440d0bddeefcca86b7b62f74
-ms.sourcegitcommit: 39838c1a77d4e23df56af74059fb95970223f718
+ms.openlocfilehash: 3a0f2b8d54c90884a79e79288d173aa5e17c0ef2
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63010776"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63450322"
 ---
 # <a name="network-connectivity-in-the-microsoft-365-admin-center"></a>Ağ Merkezi'nde Microsoft 365 Yönetici bağlantısı
 
@@ -82,7 +82,7 @@ Test raporları, LAN alt ağı bilgileriyle eklenmişse bir konuma bağlıdır, 
 Ölçü örnekleri ve ofis konumları, test raporu tamamlandıktan 2-3 dakika sonra görünmeye başlayacaktır. Daha fazla bilgi için bkz[. Microsoft 365 bağlantı testi.](office-365-network-mac-perf-onboarding-tool.md)
 
 > [!NOTE]
-> Şu anda, wKimlik ağ Microsoft 365 office konumlarınızı eklerken, LAN alt Microsoft 365 yönetim merkezi yalnızca IPv4 adreslerini sebilirsiniz. Egress IP adreslerinin IPv4'ü kullanması gerekir.
+> Şu anda, AĞ bağlantısı Microsoft 365 office konumlarınızı eklerken, Microsoft 365 yönetim merkezi alt ağları için yalnızca IPv4 adresleri sebilirsiniz. Egress IP adreslerinin IPv4'ü kullanması gerekir.
 
 ## <a name="how-do-i-use-this-information"></a>Bu bilgileri nasıl kullanabilirim?
 

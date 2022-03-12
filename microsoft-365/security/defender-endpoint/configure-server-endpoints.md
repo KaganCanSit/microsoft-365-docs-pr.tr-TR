@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 2979216cb87982210ac33dd8e273702f8bc18bf0
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 5f0b846fdbfaa76250ae64ae281afc9592a24eb4
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63328099"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63450360"
 ---
 # <a name="onboard-windows-servers-to-the-microsoft-defender-for-endpoint-service"></a>Uç Windows için Microsoft Defender hizmetine ek sunucu ekleme
 
@@ -411,7 +411,7 @@ Diğer Windows sunucu sürümleri için, hizmetten iki Windows çıkarabilirsini
 - Uç nokta çalışma alanı yapılandırması için Defender'ı kaldırma
 
 >[!NOTE]
->*Diğer Windows sunucu sürümleri için bu çıkarma yönergeleri, MMA gerektiren Windows Server 2016 ve Windows Server 2012 R2 uç noktası için önceki Microsoft Defender'ı çalıştırmayı da içerir. Yeni ve açık olmayan çözüme geçirme yönergeleri, Uç Nokta için [Microsoft Defender'daki Sunucu geçiş senaryolarındadır](/microsoft-365/security/defender-endpoint/server-migration).
+> Diğer Windows sunucu sürümleri için bu çıkarma yönergeleri, MMA gerektiren Windows Server 2016 ve Windows Server 2012 R2 uç noktası için önceki Microsoft Defender'ı çalıştırmayı da içerir. Yeni ve açık olmayan çözüme geçirme yönergeleri, Uç Nokta için [Microsoft Defender'daki Sunucu geçiş senaryolarındadır](/microsoft-365/security/defender-endpoint/server-migration).
 
 ## <a name="related-topics"></a>İlgili konular
 

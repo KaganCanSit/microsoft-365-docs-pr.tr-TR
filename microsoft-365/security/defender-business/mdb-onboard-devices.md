@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/09/2022
+ms.date: 03/10/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -17,28 +17,21 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: a078b2a88fdde3af840cff64414fec0a712ae92e
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+ms.openlocfilehash: 545e0e3a12fda1c45bac27f9c71d4e465ca05b7e
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63419312"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63450612"
 ---
 # <a name="onboard-devices-to-microsoft-defender-for-business"></a>Cihazları İş için Microsoft Defender'a ekleme
 
 > [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
+> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-Defender for Business'daki cihaz ekleme deneyimi, Uç Nokta için Microsoft Defender'da bizim kullanmamız gerekenlere benzer süreçler üzerine inşa edilmiştir. Nasıl çalıştığını görmek için aşağıdaki videoyu izleyin:<br/><br/>
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4bGqr]
-
 İş için Microsoft Defender ile, kuruma uygun cihazları eklemeye yardımcı olmak için çeşitli seçenekleriniz vardır. Bu makale, seçenekleriniz üzerinde size yol sunar ve eklemenin nasıl çalıştığını genel bir bakış sunar.
-
-> [!TIP]
-> Uç nokta için Defender'da cihaz ekleme hakkında daha ayrıntılı bilgi görüntülemek için bkz. Cihazları ekleme ve Uç nokta özellikleri için [Microsoft Defender'ı yapılandırma](../defender-endpoint/onboard-configure.md).
 
 ## <a name="what-to-do"></a>Ne yapmalı?
 
@@ -68,7 +61,7 @@ Aşağıdaki tabloda, İş için Defender'a cihazları eklemede en sık kullanı
 |---------|---------|---------|
 | **Otomatik katılım**<br/>(*zaten Microsoft Endpoint Manager kullanan müşteriler tarafından kullanılabilir*) | *Microsoft 365 İş Ekstra müşteriler zaten Microsoft Intune sahip olabilir ve bu seçeneği kullanabilir*. Otomatik ekleme, İş için Defender ile Microsoft Endpoint Manager arasında bir bağlantı ayarlar ve defender for Business Windows cihaz eklemeleri sağlar. Bu seçeneği kullanmak için, cihazlarınızı zaten Mobil Cihaz'a Endpoint Manager.<br/><br/>Daha fazla bilgi edinmek için bkz [. Otomatik ekleme](#automatic-onboarding-for-windows-devices-enrolled-in-microsoft-endpoint-manager). | Windows |
 | **Yerel betik** <br/> | Bu seçenek, İş için Defender'a cihazları el ile eklemeye olanak tanır. Yerel betiği kullanarak bir defada en fazla 10 cihaz abilirsiniz.<br/><br/>Daha fazla bilgi edinmek için bkz [. İş için Defender'da yerel betik](#local-script-in-defender-for-business). | Windows <br/>macOS |
-| **Microsoft Intune** veya **Microsoft Endpoint Manager**<br/>(*Microsoft Intune veya Endpoint Manager*) | [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) Mobil [Cihaz Yönetimi de](/mem/intune/enrollment/device-enrollment) mobil cihaz yönetiminin Endpoint Manager. Microsoft 365 İş Ekstra müşteriler zaten Microsoft Intune ve bu seçeneği kullanabilir.<br/><br/>İş için Defender'ı Endpoint Manager önceden Endpoint Manager kullanıyorsanız cihazları eklemeye ve yönetmeye devam etmek için Endpoint Manager'i kullanmaya devam edin<br/><br/>Bu yöntemi kullanmak için bkz. [Microsoft Endpoint Manager](#microsoft-endpoint-manager). | Windows <br/>macOS<br/>iOS<br/>Android OS | 
+| **Microsoft Intune** veya **Microsoft Endpoint Manager**<br/>(*Microsoft Intune veya Endpoint Manager*) | [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) Mobil [Cihaz Yönetimi de](/mem/intune/enrollment/device-enrollment) mobil cihaz yönetiminin Endpoint Manager. (Microsoft 365 İş Ekstra müşterilere zaten destek Microsoft Intune.)<br/><br/>İş için Defender'ı Endpoint Manager önceden Endpoint Manager kullanıyorsanız cihazları eklemeye ve yönetmeye devam etmek için Endpoint Manager'i kullanmaya devam edin<br/><br/>Bu yöntemi kullanmak için bkz. [Microsoft Endpoint Manager](#microsoft-endpoint-manager). | Windows <br/>macOS<br/>iOS<br/>Android OS | 
 | **İş için Microsoft Defender güvenlik yapılandırması** <br/>(*Microsoft 365 Defender kullanır*) | Bu seçeneği kullanmak için, belirli ayarları yapılandırarak İş için Defender ile Kurumsal arasındaki iletişimi kolaylaştıracak Endpoint Manager. Ardından, her cihaza indirerek Microsoft 365 Defender bir paket kullanarak cihazları Web portalına ([https://security.microsoft.com](https://security.microsoft.com)) da () dahil edin. Cihazlar ve cihazlar (Azure AD) Azure Active Directory Defender İş güvenlik ilkeleri arasında güven kurulur.<br/><br/>Daha fazla bilgi edinmek için bkz. [İş için Microsoft Defender güvenlik yapılandırması](#microsoft-defender-for-business-security-configuration). | Windows <br/>macOS |
 
 > [!IMPORTANT]
@@ -76,9 +69,15 @@ Aşağıdaki tabloda, İş için Defender'a cihazları eklemede en sık kullanı
 
 ## <a name="automatic-onboarding-for-windows-devices-enrolled-in-microsoft-endpoint-manager"></a>Microsoft Endpoint Manager'a Windows cihazlar için otomatik Microsoft Endpoint Manager
 
-Otomatik ekleme seçeneği yalnızca Windows için geçerlidir. Otomatik ekleme, siz İş için Defender'ı edinmeden önce Microsoft Intune'te Microsoft Endpoint Manager, Microsoft Intune veya Mobil Cihaz Yönetimi'Windows kullanıyorsa ve zaten Windows cihazlarınız varsa kullanılabilir Endpoint Manager. 
+Otomatik ekleme seçeneği yalnızca Windows için geçerlidir. Aşağıdaki koşullar karşı olursa otomatik ekleme kullanılabilir:
+
+- İş için Defender'ı Microsoft Endpoint Manager, Microsoft Intune veya Mobil Cihaz Yönetimi'Microsoft Intune MDM) zaten kullanıyordur
+- Zaten Windows Windows cihazlarınız var Endpoint Manager
 
 cihaz Windows zaten Endpoint Manager, siz İş için Defender'ı ayarlama ve yapılandırma sürecindeyken, İş için Defender bu cihazları algılar. Windows cihazlarının hepsi veya bazısı için otomatik ekleme özelliğini kullanmak Windows soruldu. Tüm cihaz ve Windows bir kerede ekleyebilir veya başlangıç yapmak üzere belirli cihazlar seçin ve daha sonra daha fazla cihaz ekleyin.
+
+> [!TIP]
+> "Tüm cihazlar kayıtlı" seçeneğini seçmenizi öneririz. Böylece, Windows cihazlarınız daha sonra Endpoint Manager cihazlarında yer alan cihazlar, otomatik olarak İş için Defender'a eklenir.
 
 Otomatik ekleme hakkında daha fazla bilgi edinmek için, İş için Microsoft Defender'ı ayarlamak üzere sihirbazı kullanma makalesinde 2 [. adıma bakın](mdb-use-wizard.md).
 
@@ -90,14 +89,16 @@ Kullanıcıları ve Mac cihazlarına yerel bir Windows betik kullanabilirsiniz. 
 
 2. Gezinti bölmesinde Kullanıcı Uçları'Ayarlar  > **seçin** ve ardından Cihaz **yönetimi'nin altında Ekleme'yi** **seçin**.
 
-3. **Windows 10 11** gibi bir işletim sistemi seçin ve ardından Cihaz ekleme'nin altındaki **Dağıtım** yöntemi bölümünde Yerel **betik'i seçin**. 
+3. **Windows 10 ve 11** veya **macOS** gibi bir işletim sistemi seçin ve ardından Dağıtım yöntemi bölümünde Yerel  **betik'i seçin**. 
 
-4. Ekleme **paketini indir'i seçin**. Ekleme paketini çıkarılabilir bir sürücüye kaydetmenizi öneririz.
+4. Ekleme **paketini indir'i seçin**. Ekleme paketini çıkarılabilir bir sürücüye kaydetmenizi öneririz. ( **MacOS'u seçtiysanız** Yükleme paketini **indir'i** de seçin ve çıkarılabilir cihazınıza kaydedin.)
 
-5. Aşağıdaki makalelerde yer alan yönergeleri izleyin:
+5. Aşağıdaki tabloda yer alan yönergeleri izleyin:
 
-   - Windows cihazlar: [Yerel Windows kullanarak cihazları ekleme](../defender-endpoint/configure-endpoints-script.md#onboard-devices)
-   - macOS cihazları: [macOS'ta Uç Nokta için Microsoft Defender için el ile dağıtım](../defender-endpoint/mac-install-manually.md#client-configuration)
+   | İşletim Sistemi | Yordam |
+   |---|---|
+   | Windows | 1. Windows cihazda, yapılandırma paketinin içeriğini Masaüstü klasörü gibi bir konuma ayıklayın. adlı bir dosyanız olması gerekir `WindowsDefenderATPLocalOnboardingScript.cmd`. <br/><br/>2. Yönetici olarak Komut İstemi'ne başvurun.<br/><br/>3. Betik dosyasının konumunu yazın. Örneğin, dosyayı Masaüstü klasörüne kopyaladıysanız, şunları yazmanız gerekir: `%userprofile%\Desktop\WindowsDefenderATPLocalOnboardingScript.cmd`ve sonra Enter tuşuna basın (veya Tamam'ı **seçin**).<br/><br/>4. Betik çalıştır edildikten sonra Algılama testi [çalıştırma'ya devam edin](#run-a-detection-test). |
+   | macOS | 1. Mac bilgisayarda, yükleme paketini yerel bir dizine `wdav.pkg` kaydedin. <br/><br/>2. Ekleme paketini, yükleme `WindowsDefenderATPOnboardingPackage.zip` paketinde kullanılan dizine kaydedin. <br/><br/>3. Finder'ı kullanarak, `wdav.pkg` daha önce kaydedilmiş olan size gidin ve dosyayı açın.<br/><br/>4. **Devam'ı** seçin, Lisans koşullarını kabul edin ve ardından istendiğinde parolanızı girin.<br/><br/>5. Microsoft sürücüsünün yüklenmesine izin vermeniz istenir ("Sistem Uzantısı Engellendi" veya "Yükleme engellendi"), ya da her ikisini birden yüklemeniz istenir. Sürücünün yüklenmeye izin verilmiyor olması gerekir. Yüklemeye izin vermek için, **Güvenlik Tercihlerini Aç'ı** veya **Sistem** >  Tercihlerini **AçSecurity & ve sonra** İzin Ver'i **seçin**.<br/><br/>6. Ekleme paketini çalıştırmak için Bash'ta aşağıdaki Python komutunu kullanın: `/usr/bin/python MicrosoftDefenderATPOnboardingMacOs.py`. <br/><br/>7. Cihazın organizasyonuyla ilişkili olduğunu onaylamak için Bash'ta şu Python komutunu kullanın: `mdatp health --field org_id`.<br/><br/>8. macOS 10.15 (Catalina) veya sonraki bir bilgisayar kullanıyorsanız cihazınızı korumak için İş için Defender iznini alın. Sistem **TercihleriSecurity &** >  **PrivacyPrivacyFull** >  >  **Disk Access'e gidin**.  Değişiklik yapmak için kilit simgesini seçin (iletişim kutusunun alt kısmında) ve sonra İş için Microsoft Defender'ı (veya uç nokta için Defender'ı (görüyorsanız, uç nokta için Defender) seçin. <br/><br/>9. Cihazın yerleşik olduğunu doğrulamak için Bash'ta şu komutu kullanın: `mdatp health --field real_time_protection_enabled`.    |
 
 ## <a name="microsoft-endpoint-manager"></a>Microsoft Endpoint Manager
 
@@ -159,24 +160,12 @@ Kuruluş cihazlarınızı aşamalar içinde  onboard. *Bu aşamalı cihaz ekleme
 
 ## <a name="offboarding-a-device"></a>Cihaz çıkarma
 
-Bir cihazla çıkarılacak şekilde yer almak için şu adımları izleyin:
+Bir cihazı çıkararak kullanmak için aşağıdaki yordamlardan birini kullanın:
 
-1. Erişim portalına Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com) ) ve oturum açın.
-
-2. Gezinti bölmesinde, Gezinti **Bölmesi'Ayarlar** uç **noktalar'ı seçin**.
-
-3. Cihaz **yönetimi'nin** altında **Çıkar'ı seçin**.
-
-4. **Windows 10 ve 11** gibi bir işletim sistemi seçin ve ardından Cihaz çıkar'ın altındaki Dağıtım yöntemi bölümünde Yerel **betik'i seçin**. 
-
-5. Onay ekranında bilgileri gözden geçirin ve devam etmek için **İndir'i** seçin.
-
-6. İndirme **paketi'ne tıklayın**. Çıkarılabilir paketi çıkarılabilir bir sürücüye kaydetmenizi öneririz.
-
-7. Betiği, çıkaracakları her cihaza çalıştırın. Bu görevle ilgili yardıma mı ihtiyacınız var? Aşağıdaki kaynaklara bakın:   
-
-   - Windows için: [Yerel Windows kullanarak çıkar çıkar](../defender-endpoint/configure-endpoints-script.md#offboard-devices-using-a-local-script)
-   - macOS cihazları: [macOS'ta kaldırma](../defender-endpoint/mac-resources.md#uninstalling)
+| İşletim sistemi | Yordam |
+|---|---|
+| Windows | 1. Giriş portalına Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com) ) ve oturum açın.<br/><br/>2. Gezinti bölmesinde, Gezinti Bölmesi'ni **Ayarlar** Uç **Noktalar'ı seçin**.<br/><br/>3. Cihaz **yönetimi'nin altında** **Çıkar'ı seçin**.<br/><br/>4. **Windows 10 ve 11** gibi bir işletim sistemi seçin ve ardından Cihaz çıkar'ın altındaki Dağıtım yöntemi bölümünde Yerel  **betik'i seçin**. <br/><br/>5. Onay ekranında bilgileri gözden geçirin ve devam etmek için **İndir'i** seçin.<br/><br/>6. İndirme **paketini indir'i seçin**. Çıkarılabilir paketi çıkarılabilir bir sürücüye kaydetmenizi öneririz.<br/><br/>7. Betiği, çıkararak almak istediğiniz her cihazda çalıştırın.| 
+| macOS | 1. **FinderApplications'e** >  gidin. <br/><br/>2. İş için Microsoft Defender'a sağ tıklayın ve Çöp Kutusuna **Taşı'yı seçin**. <br/><br/>--- veya --- <br/><br/> Şu komutu kullanın: `sudo '/Library/Application Support/Microsoft/Defender/uninstall/uninstall'`.|
 
 > [!IMPORTANT]
 > Bir cihaz çıkar bırak bırak bırak, cihazların Verileri İş için Defender'a göndermesini durdurur. Bununla birlikte, karalama öncesinde alınan veriler altı (6) aya kadar korunur.

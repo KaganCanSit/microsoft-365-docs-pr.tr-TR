@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.date: 03/27/2020
 ms.technology: mde
-ms.openlocfilehash: b4606eb25f2cea9c18db8c13beba0e107d0e7950
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 63107c50c081eef65e0a56417845b470cc0a294a
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62974106"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63449738"
 ---
 # <a name="view-and-organize-the-microsoft-defender-for-endpoint-alerts-queue"></a>Uç Nokta Uyarıları kuyruğu için Microsoft Defender'ı görüntüleme ve düzenleme
 
@@ -31,39 +31,41 @@ ms.locfileid: "62974106"
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-alertsq-abovefoldlink)
 
-Uyarılar **sırası,** ağ bağlantısına sahip cihazlardan bayrakla işaretlenmiş uyarıların listesini gösterir. Varsayılan olarak, kuyruk, gruplandı görünümünde son 30 gün içinde görülen uyarıları görüntüler. En son uyarılar listenin en üstünde, en son uyarıları en başta görme konusunda yardımcı olmak için gösteriler.
+Uyarılar **,** ağ bağlantısı olan cihazlardan bayrakla işaretlenmiş uyarıların listesini gösterir. En son uyarılar listenin en üstünde, en son uyarıları en başta görme konusunda yardımcı olmak için gösteriler.
 
 > [!NOTE]
-> Uyarılar kuyruğu, otomatik araştırma ve düzeltme ile önemli ölçüde azaltıldı ve güvenlik işlem uzmanlarının daha gelişmiş tehditlere ve diğer yüksek değerli girişimlere odaklanmasına olanak sağlar. Bir uyarı, desteklenen bir işletim sistemi olan bir cihazda otomatik soruşturma (örneğin bir dosya) için desteklenen bir varlık içerdiğinde, otomatik bir araştırma ve düzeltme başlatabilirsiniz. Otomatik soruşturmalar hakkında daha fazla bilgi için bkz. [Otomatik soruşturmalara genel bakış](automated-investigations.md).
+> Otomatik araştırma ve düzeltme sayesinde uyarılar önemli ölçüde azaltıldı ve güvenlik işlemi uzmanlarının daha gelişmiş tehditlere ve diğer yüksek değerli girişimlere odaklanmasına olanaklandı. Bir uyarı, desteklenen bir işletim sistemi olan bir cihazda otomatik soruşturma (örneğin bir dosya) için desteklenen bir varlık içerdiğinde, otomatik bir araştırma ve düzeltme başlatabilirsiniz. Otomatik soruşturmalar hakkında daha fazla bilgi için bkz. [Otomatik soruşturmalara genel bakış](automated-investigations.md).
 
-Uyarılar sırası görünümünü özelleştirmek için seçebileceğiniz çeşitli seçenekler vardır.
+Uyarılar görünümünü özelleştirmek için seçebileceğiniz çeşitli seçenekler vardır.
 
 Üst gezintiden şunlarıabilirsiniz:
 
-- Gruplamış görünümü veya liste görünümünü seçme
 - Sütunları eklemek veya kaldırmak için sütunları özelleştirme
-- Sayfa başına gösterecek öğeleri seçme
-- Sayfalar arasında gezinme
 - Filtre uygulama
+- 1 Gün, 3 Gün, 1 Hafta, 30 Gün ve 6 Ay gibi belirli bir süre için uyarıları görüntüleme
+- Uyarılar listesini Excel'e aktarma
+- Uyarıları Yönetme
 
-![Uyarılar kuyruğu resmi.](images/alerts-queue-list.png)
+:::image type="content" source="images/alerts-filters.png" alt-text="Uyarı listesinin resmi" lightbox="images/alerts-filters.png":::
 
-## <a name="sort-filter-and-group-the-alerts-queue"></a>Uyarılar kuyruğuna göre sıralama, filtreleme ve grupla
+## <a name="sort-and-filter-alerts"></a>Uyarıları sıralama ve filtreleme 
 
-Uyarı listesini sınırlandırarak ve uyarıları daha odaklanmış bir görünüme sahip olmak için aşağıdaki filtreleri uygulayabilirsiniz.
+Uyarı listesini sınırlandırarak ve uyarıların daha odaklanmış bir görünümünü elde etmek için aşağıdaki filtreleri uygulayabilirsiniz.
 
 ### <a name="severity"></a>Önem Derecesi
 
-Önem derecesine dikkat|Açıklama
----|---
-Yüksek <br> (Red)|Yaygın olarak gelişmiş kalıcı tehditlerle (APT) ilişkili uyarılar. Bu uyarılar, cihazlara zarar veren önem derecesine bağlı olarak yüksek bir risk olduğunu belirtmektedir. Bazı örnekler: kimlik bilgileri hırsızlığı araçları etkinlikleri, fidye yazılımı etkinlikleri, herhangi bir grupla ilişkili olmayan fidye yazılımı etkinlikleri, güvenlik algılayıcıları ile oynanıyor veya insan maceracıyı gösteren kötü amaçlı etkinlikler.
-Orta <br> (Orange)|Gelişmiş kalıcı uç noktada algılama ve yanıtlama (APT) parçası olabileceği ihlal sonrası davranışlarda uyarılarda. Bu, tipik saldırı aşamaları, anormal kayıt defteri değişikliği, şüpheli dosyaların yürütülmesi ve benzeri gözlemlenen davranışları içerir. Bazıları iç güvenlik testinin bir parçası olsa da bunun da gelişmiş bir saldırı olabileceği için araştırma gerektiriyor.
-Düşük <br> (Sarı)|Yaygın kötü amaçlı yazılımla ilişkilendirilmiş tehditlere karşı uyarılar. Örneğin, bilgi arama komutları, günlükleri temizleme gibi kötü amaçlı olmayan ve genellikle kuruluşu hedef alan gelişmiş bir tehdide işaretyen hack araçları. Ayrıca, kuruluşta bir kullanıcı tarafından yalıtılmış bir güvenlik aracı testinden de gelebilir.
-Bilgilendirme <br> (Gri)|Ağa zararlı kabul edilen uyarılar; ancak olası güvenlik sorunlarına karşı kurumsal güvenlik farkındalığını ortayatabilirsiniz.
+Uyarıları Önem Derecesi'ne göre filtreleysiniz.  
+
+|Önem derecesine dikkat|Açıklama|
+|---|---|
+|Yüksek <br> (Red)|Yaygın olarak gelişmiş kalıcı tehditlerle (APT) ilişkili uyarılar. Bu uyarılar, cihazlara zarar veren önem derecesine bağlı olarak yüksek bir risk olduğunu belirtmektedir. Bazı örnekler: kimlik bilgileri hırsızlığı araçları etkinlikleri, fidye yazılımı etkinlikleri, herhangi bir grupla ilişkili olmayan fidye yazılımı etkinlikleri, güvenlik algılayıcıları ile oynanıyor veya insan maceracıyı gösteren kötü amaçlı etkinlikler.|
+|Orta <br> (Orange)|Gelişmiş kalıcı uç noktada algılama ve yanıtlama (APT) bir parçası olabileceği ihlal sonrası davranışlarda uyarılarda. Bu, tipik saldırı aşamaları, anormal kayıt defteri değişikliği, şüpheli dosyaların yürütülmesi ve benzeri gözlemlenen davranışları içerir. Bazıları iç güvenlik testinin bir parçası olsa da bunun da gelişmiş bir saldırı olabileceği için araştırma gerektiriyor.|
+|Düşük <br> (Sarı)|Yaygın kötü amaçlı yazılımla ilişkilendirilmiş tehditlere karşı uyarılar. Örneğin, bilgi arama komutları, günlükleri temizleme gibi kötü amaçlı olmayan ve genellikle kuruluşu hedef alan gelişmiş bir tehdide işaretyen hack araçları. Ayrıca, kuruluşta bir kullanıcı tarafından yalıtılmış bir güvenlik aracı testinden de gelebilir.|
+|Bilgilendirme <br> (Gri)|Ağa zararlı kabul edilen uyarılar; ancak olası güvenlik sorunlarına karşı kurumsal güvenlik farkındalığını ortayatabilirsiniz.|
 
 #### <a name="understanding-alert-severity"></a>Uyarı önem derecelerini anlama
 
-Microsoft Defender Virüsten Koruma (Microsoft Defender AV) ve Uç nokta uyarısı için Defender farklı kapsamları temsil edecek şekilde farklıdır.
+Microsoft Defender Virüsten Koruma (Microsoft Defender AV) ve Uç nokta uyarısı için Defender ayrı ayrı olduğundan farklı kapsamları temsil bunlardır.
 
 Tehdit Microsoft Defender Virüsten Koruma düzeyi, algılanan tehdidin (kötü amaçlı yazılım) mutlak önem derecesine sahiptir ve virüs bulaşmışsa tek bir cihaza yönelik olası risklere bağlı olarak atanır.
 
@@ -71,83 +73,68 @@ Uç Nokta uyarısı önem düzeyi için Defender, algılanan davranışın önem
 
 Bu nedenle, örneğin:
 
-- Bir Microsoft Defender Virüsten Koruma hakkında Uç Nokta için Defender uyarısının önem derecesi, cihaza tamamen engel olan ve bu şekilde etkilenmemiş bir tehdit algıladı, çünkü gerçek bir hasar yoktu.
+- Bir Microsoft Defender Virüsten Koruma için Uç Nokta Için Defender uyarısının önem derecesi, cihaza tamamen engel olan ve bu şekilde etkilenmemiş bir tehdit algıladı, çünkü gerçek bir hasar yoktu, "Bilgilendirme" olarak kategorize edilir.
 - Yürütürken ticari kötü amaçlı yazılımla ilgili bir uyarı algılandı, ancak Microsoft Defender AV tarafından engellendi ve düzeltildi, çünkü bu uyarı cihaza biraz zarar verdiği için "Düşük" olarak kategorilere ayrılmıştır ancak kurumsal bir tehdit oluşturmaz.
 - Yürütürken algılanan kötü amaçlı yazılım uyarısı tek bir cihaz için değil, daha sonra engellenmiş olup olmadığını bakılmaksızın kuruluş için değil, "Orta" veya "Yüksek" olarak derece edilebilir.
 - Engellenmedi veya düzelti olmayan şüpheli davranış uyarıları, aynı kurumsal tehdit dikkate alınmasına göre "Düşük", "Orta" veya "Yüksek" olarak derecelenir.
 
-#### <a name="understanding-alert-categories"></a>Uyarı kategorilerini anlama
-
-MITRE ATT&CK matrisinde kurumsal saldırı taktiklerini hizalamak [](https://attack.mitre.org/tactics/enterprise/) [için uyarı kategorilerini yeniden tanımladık](https://attack.mitre.org/). Yeni kategori adları tüm yeni uyarılara uygulanır. Var olan uyarılar önceki kategori adlarını gizli tutacak.
-
-Aşağıdaki tabloda geçerli kategoriler ve bunların genel olarak önceki kategorilere nasıl eşli olduğu listelenmiştir.
-
-|Yeni kategori|API kategori adı|Algılanan tehdit etkinliği veya bileşeni|
-|---|---|---|
-|Koleksiyon|Koleksiyon|Filtreleme için verileri bulma ve toplama.|
-|Komut ve denetim|CommandAndControl|Veri geçişi yapmak veya komutları almak için saldırgan denetimli ağ altyapısına bağlanma.|
-|Kimlik bilgileri erişimi|CredentialAccess|Ağ'daki cihazlar ve diğer kaynaklar üzerinde denetimi genişletmek için geçerli kimlik bilgileri alma.|
-|Savunmayı kaçırma|DefenseEvasion|Örneğin güvenlik uygulamalarını kapatarak, aramaların silinmesini ve kök setleri çalıştırarak güvenlik denetimlerini önlemek.|
-|Keşif|Keşif|Yönetici bilgisayarlar, etki alanı denetleyicileri ve dosya sunucuları gibi önemli cihazlar ve kaynaklar hakkında bilgi toplama.|
-|Yürütme|Yürütme|RA'lar ve arka kullanıcılar da dahil olmak üzere saldırgan araçlarını ve kötü amaçlı kodu başlatma.|
-|Exfiltration|Exfiltration|Ağdan, saldırgan tarafından denetlenen bir konuma veri ayıklanıyor.|
-|Exploit|Exploit|Exploit code and possible exploitation activity.|
-|İlk erişim|InitialAccess|Hedef ağa ilk giriş elde etmek, genellikle parola tahminleri, açıkları açıkları veya kimlik avı e-postaları ile olur.|
-|Lateral movement|LateralMovement|Kritik kaynaklara ulaşmak veya ağ kalıcılığı kazanmak için hedef ağ içerisinde cihazlar arasında geçiş.|
-|Kötü amaçlı yazılım|Kötü amaçlı yazılım|Backdoors, truva atı ve diğer kötü amaçlı kod türleri.|
-|Kalıcılık|Kalıcılık|Etkin kalmak ve sistem yeniden başlatmalarını sağ kalmak için otomatik başlangıç genişletilebilirlik noktaları (ASEP) oluşturma.|
-|Ayrıcalık yükseltme|Ayrıcalıklar Çıkartması|Ayrıcalıklı bir işlem veya hesap bağlamında kodu çalıştırarak daha yüksek izin düzeyleri elde etmek.|
-|Fidye yazılımı|Fidye yazılımı|Dosyaları şifre eden ve erişimi geri yüklemek için ödemesi yapılan kötü amaçlı yazılım.|
-|Şüpheli etkinlik|SuspiciousActivity|Kötü amaçlı yazılım etkinliği veya bir saldırının parçası olabilir ya da atipik etkinlik.|
-|İstenmeyen yazılım|UnwantedSoftware|Üretkenliği ve kullanıcı deneyimini etkileyen düşük itibarlı uygulamalar ve uygulamalar; istenmeyen uygulamalar (PUA) olarak algılandı.|
-
 ### <a name="status"></a>Durum
 
-Uyarı listesini durumlarına göre sınırlandırabilirsiniz.
+Uyarılar listesini Durumlarına göre filtrelemeyi seçebilirsiniz.
 
-### <a name="investigation-state"></a>İnceleme durumu
+### <a name="categories"></a>Kategoriler
 
-Otomatik araştırma durumuna karşılık gelen durum.
+[MITRE ATT ve CK](https://attack.mitre.org/) matrisinde kurumsal saldırı taktiklerini hizalamak [](https://attack.mitre.org/tactics/enterprise/) için uyarı kategorilerini&belirlendi. Yeni kategori adları tüm yeni uyarılara uygulanır. Var olan uyarılar önceki kategori adlarını gizli tutacak.
 
-### <a name="category"></a>Kategori
+### <a name="service-sources"></a>Hizmet kaynakları
 
-Belirli türde kötü amaçlı etkinlikleri görüntülemek için sıraya filtre uygulamayı seçebilirsiniz.
+Microsoft Tehdit Uzmanları önizleme katılımcıları artık tehdit uzmanları tarafından yönetilen yeni arama hizmetinin algılamalarını filtreleye ve görebilir.
 
-### <a name="assigned-to"></a>Atanan
+Aşağıdaki Hizmet kaynakları temel alarak uyarıları filtrele:
 
-Size atanmış uyarıları göstermeyi veya otomasyonu seçebilirsiniz.
-
-### <a name="detection-source"></a>Algılama kaynağı
-
-Uyarı algılamayı tetikleyen kaynağı seçin. Microsoft Tehdit Uzmanları önizleme katılımcıları artık tehdit uzmanları tarafından yönetilen yeni arama hizmetinin algılamalarını filtreley ve görebilir.
+- Kimlik için Microsoft Defender
+- Bulut Uygulamaları için Microsoft Defender
+- Uç Nokta için Microsoft Defender
+- Microsoft 365 Defender
+- Office 365 için Microsoft Defender
+- Uygulama Yönetimi
+- AAD Koruma
 
 > [!NOTE]
-> Virüsten Koruma filtresi yalnızca cihazlar yazılımdan koruma Microsoft Defender Virüsten Koruma varsayılan gerçek zamanlı koruma ürünü olarak Yazılım'ı kullanıyorsa görüntülenir.
+> Virüsten Koruma filtresi, yalnızca cihazlar yazılımdan Microsoft Defender Virüsten Koruma için varsayılan gerçek zamanlı koruma ürünü olarak Yazılım'ı kullanıyorsa görüntülenir.
 
-|Algılama kaynağı|API değeri|
-|---|---|
-|3. taraf algılayıcılar|ThirdPartySensors|
-|Virüsten koruma|WindowsDefenderAv|
-|Otomatik araştırma|AutomatedInvestigation|
-|Özel algılama|CustomDetection|
-|Özel TI|CustomerTI|
-|EDR|WindowsDefenderAtp|
-|Microsoft 365 Defender|MTP|
-|Office 365 için Microsoft Defender|OfficeATP|
-|Microsoft Tehdit Uzmanları|ThreatExperts|
-|SmartScreen|WindowsDefender SmartScreen|
+### <a name="tags"></a>Etiketler
 
-### <a name="os-platform"></a>işletim sistemi platformu
+Uyarıları, uyarılara atanan Etiketlere göre filtreleebilirsiniz.
 
-Araştırırken ilgilendiğin işletim sistemi platformunu seçerek uyarılar kuyruğu görünümünü sınırlandırabilirsiniz.
+### <a name="policy"></a>İlke 
 
-### <a name="device-group"></a>Cihaz grubu
+Aşağıdaki ilkelere göre uyarıları filtre yapabilirsiniz:
 
-Denetlenen belirli cihaz gruplarınız varsa, uyarıların kuyruğu görünümünü sınırlamak için grupları seçin.
+- Sık kullanılmayan ülkenin etkinliği
+- Yönetici Gönderimi Sonucu Tamamlandı
+- Yönetici e-postanın el ile soruşturmasını tetikledi
+- Yönetici, kullanıcının güvenliği tehlikeye atarak araştırmayı tetikledi
+- Anormal Belirteç 
+- Atipik seyahat
+- Yönlendirme/yeniden yönlendirme kuralı oluşturma
+- Teslimden sonra kötü amaçlı URL içeren e-posta iletileri kaldırıldı
+- Teslimden sonra kötü amaçlı dosya içeren e-posta iletileri kaldırıldı
+- Kullanıcı tarafından kötü amaçlı yazılım veya kimlik avı olarak bildirilen e-posta
+- Parola Parolaları
+- Yönetici tarafından e-postalarda veya URL'de veya gönderende yapılan düzeltme eylemi
+- Şüpheli hizmet oluşturma 
+- Yabancı oturum açma özellikleri
 
-### <a name="associated-threat"></a>İlişkili tehdit
+### <a name="entities"></a>Varlıklar
 
-Bu filtreyi kullanarak yüksek profil tehditleri ile ilgili uyarılara odaklanın. Tehdit analizinde yüksek profilli tehditlerin tam [listesini görüyoruz](threat-analytics.md).
+Uyarıları, Varlık adı veya kimliğine göre filtreleebilirsiniz. 
+
+### <a name="automated-investigation-state"></a>Otomatik soruşturma durumu
+
+Uyarıları otomatik soruşturma durumlarına göre filtrelemeyi seçebilirsiniz.
+
+
 
 ## <a name="related-topics"></a>İlgili konular
 

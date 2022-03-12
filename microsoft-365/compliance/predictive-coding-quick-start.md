@@ -14,16 +14,16 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Advanced eDiscovery'da tahmine dayalı kodlama modülünü kullanmaya Advanced eDiscovery. Bu makale, araştırmanıza en uygun gözden geçirme kümesinde içeriği tanımlamak için tahmine dayalı kodlama kullanma işleminin  uç sürecinde size yol sağlar.
-ms.openlocfilehash: 38607459057ff06a2ce74364b752130467deaddd
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 2266f44e7b95c118314d76fe019a97b2db24f07c
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62986729"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63449478"
 ---
 # <a name="quick-start-predictive-coding-in-advanced-ediscovery-preview"></a>Hızlı başlangıç: Advanced eDiscovery (önizleme)
 
-Bu makalede, Advanced eDiscovery'de tahmine dayalı kodlama kullanmak için hızlı bir başlangıç Advanced eDiscovery. Advanced eDiscovery'daki tahmine dayalı kodlama modülü, gözden geçir edilecek içerik miktarını azaltmanıza yardımcı olmak için Advanced eDiscovery'daki akıllı makine öğrenme özelliklerini kullanır. Tahmine dayalı kodlama, büyük hacimli büyük hacimli olay içeriğini gözden geçirme için önceliklerini alacağız ve uygun bir öğe kümesine azaltmanıza yardımcı olur. Bu, gözden geçirme kümesinde en uygun öğelerin gözden geçirme önceliklerini belirlemeye yardımcı olacak kendi tahmine dayalı kodlama modellerinizi oluşturarak ve bu modelleri eğiterek  başarabilirsiniz.
+Bu makalede, Advanced eDiscovery'de tahmine dayalı kodlama kullanmak için hızlı bir başlangıç Advanced eDiscovery. Tahmine dayalı kodlama modülü, araştırmanıza uygun değil büyük hacimli olay içeriğini kullanmanıza yardımcı olmak için akıllı ve makine öğrenme özelliklerini kullanır. Bu, gözden geçirme için en uygun öğeleri önceliklendirmenize yardımcı olacak kendi tahmine dayalı kodlama modellerinizi oluşturarak ve eğiterek  başarılamaz.
 
 İşte tahmine dayalı kodlama işlemiyle ilgili hızlı bir genel bakış:
 

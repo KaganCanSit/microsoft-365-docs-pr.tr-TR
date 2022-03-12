@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.assetid: d945f7dd-f62f-4ca7-b3e7-469824cfd493
 description: eBulma ve arama araçlarını kullanarak, kurumda bir veri taşma olayı yönetmek ve buna yanıt verin.
-ms.openlocfilehash: 51fe6119acff7007f879b2ef323f263865458dfa
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 98dbb4ec36b7fb8166732aa855eefe3db6c5bbdc
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984471"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63449562"
 ---
 # <a name="ediscovery-solution-series-data-spillage-scenario---search-and-purge"></a>eBulma çözümü serisi: Veri taşma senaryosu - Arama ve temizleme
 
@@ -86,8 +86,6 @@ eBulma durumuyla ilişkilendirilmiş bir içerik araması oluşturmak için bkz.
 İçerik arama oluşturduklardan sonra, arama sonuçlarını gözden geçirmeniz, doğrulamanız ve bunların yalnızca silinmesi gereken e-posta iletilerinden oluşan sonuçları doğrulamanız gerekir. İçerik aramalarında, daha fazla veri taşmaması için arama sonuçlarını dışarı aktarmadan 1000 e-posta iletilerinin rastgele bir örneklemesini ön görebilirsiniz. Önizleme sınırlamaları hakkında daha fazla bilgi için İçerik Arama [Sınırlamaları makalesini okuyabilirsiniz](limits-for-content-search.md).
   
 Posta kutusu başına 1.000'den fazla posta kutunuz veya 100'den fazla e-posta iletiniz varsa, tarih aralığı veya gönderen/alıcı gibi başka anahtar sözcükler veya koşullar kullanarak ilk aramanızı birden çok aramaya bölebilirsiniz ve her aramanın sonuçlarını tek tek gözden geçirebilirsiniz. [Adım 7'de](#step-7-permanently-delete-the-spilled-data) iletileri silerken kullanmak üzere tüm arama sorgularını not edin.
-
-Bir custo custo ve son kullanıcıya Office 365 E5 lisansı atanırsa, bir kerede en çok 10.000 arama sonucu Advanced eDiscovery. Gözden geçir gönderilecek 10.000'den fazla e-posta ileti varsa, arama sorgusunu tarih aralığına göre bölebilirsiniz ve arama sonuçları tarihe göre sıralanmış olarak her sonucu ayrı ayrı gözden geçirebilirsiniz. Daha Advanced eDiscovery, önizleme panelindeki Etiket olarak özelliğini kullanarak arama sonuçlarını etiketleyebilirsiniz ve arama sonuçlarını etiketle etiketleyene kadar filtreleyebilirsiniz. İkincil bir gözden geçirenle işbirliği yapıyorken bu yararlı olur. Advanced eDiscovery'da optik karakter tanıma, e-posta zincirlama ve tahmine dayalı kodlama gibi ek çözümleme araçlarını kullanarak binlerce  iletilerini hızla işebilir, gözden geçirebilirsiniz ve daha fazla gözden geçirmek için bunları etiketebilirsiniz. Bkz[. Erişim için hızlı Advanced eDiscovery](./get-started-with-advanced-ediscovery.md).
 
 Taşmış veriler içeren bir e-posta iletisi bulursanız, iletinin dışarıdan paylaşılıyor olup olmadığını belirlemek için iletinin alıcılarını kontrol edin. İletiyi daha fazla takip etmek için, gönderen bilgilerini ve tarih aralıklarını toplayabilirsiniz, böylece ileti izleme günlüklerini kullanabilirsiniz. Bu işlem [5. Adım'da açıklanmıştır](#step-5-use-message-trace-log-to-check-how-spilled-data-was-shared).
 

@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: İş için Microsoft Defender
-summary: İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve 'a kaydolan müşterilere ve IT İş Ortaklarına aşamalı olarak tüm müşterilere aşamalı olarak kademeli olarak kademeli olarak sunulmaktadır https://aka.ms/mdb-preview.
+summary: 1 Mart 2022'den itibaren İş için Microsoft Defender yeni Microsoft 365 İş Ekstra. Tek başına bir abonelik olarak İş için Defender şu anda önizlemededir ve 'a kaydolan müşterilere ve IT İş Ortaklarına aşamalı olarak tüm müşterilere aşamalı olarak devredeceğiz https://aka.ms/mdb-preview.
 metadata:
   title: İş için Microsoft Defender belgeleri
   description: İş için Microsoft Defender'a genel bakış ve kurulum bilgilerine bakın
@@ -14,13 +14,13 @@ metadata:
   ms.custom: intro-hub-or-landing
   author: denisebmsft
   ms.author: deniseb
-  ms.date: 02/24/2022
-  ms.openlocfilehash: 2e941e8f72198a72fd15121f29e6dc55630398ee
-  ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+  ms.date: 03/10/2022
+  ms.openlocfilehash: eb00a4fc76315360c789afacad4b77da3d28c323
+  ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/08/2022
-  ms.locfileid: "63317157"
+  ms.lasthandoff: 03/12/2022
+  ms.locfileid: "63450752"
 landingContent:
 - title: Genel bakış
   linkLists:

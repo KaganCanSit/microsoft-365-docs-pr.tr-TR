@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Duyarlılık etiketi  oluşturduktan sonra, dosyalara ve e-postalara otomatik olarak bir etiket atayabilirsiniz veya kullanıcılardan önerdiğiniz etiketi seçmelerini istenebilirsiniz.
-ms.openlocfilehash: ab47315fe56124f54b1404ceebc015a715eb74ee
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+ms.openlocfilehash: 166905abb1dc08bcf9fe34e80c3ff3f44813501b
+ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63419326"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63449814"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>Otomatik olarak içeriğe duyarlılık etiketi uygulama
 
@@ -311,15 +311,17 @@ Her durumda, eşlenmiş dosyalar hesap kalıcı olarak OneDrive etiketlenmiş ol
 
 5. Otomatik etiketleme ilkenizi adla **: Otomatik** olarak uygulanan etiketi, konumları ve koşulları tanımlamak için benzersiz bir ad ve isteğe bağlı olarak bir açıklama girin.
 
-6. Etiketin **uygulanıyor olduğu** konumları seçin sayfası için: Konum, Konum, Konum ve Konum Exchange SharePoint'OneDrive. Seçtiğiniz konumlarda varsayılan olarak Tüm seçeneğini kullanmak istemiyorsanız,  dahil etmek istediğiniz belirli örnekleri seçmek için bağlantıyı seçin veya hariç tutulacak belirli örnekleri seçmek için bağlantıyı seçin. Sonra Da **Sonraki'yi seçin**.
+6. Etiketin **uygulanıyor olduğu** konumları seçin sayfası için: Konum, Konum, Konum ve Konum Exchange SharePoint'OneDrive. Seçtiğiniz konumlarda varsayılan olarak Hepsi dahil edilen seçeneğini kullanmak istemiyorsanız, dahil edilecek belirli örnekleri seçmek için bağlantıyı seçin veya hariç tutulacak belirli örnekleri seçmek için bağlantıyı seçin. Sonra Da **Sonraki'yi seçin**.
 
     ![Otomatik etiketleme yapılandırması için konumlar sayfasını seçin.](../media/locations-auto-labeling-wizard.png)
     
-    Konumlar hakkında daha fazla bilgi:
+    Varsayılan ayarları, Dahil Edilen veya Dışarıda **Bırakıldı'ya** **göre değiştirirsiniz**:
     
-    - **E-posta Exchange** e-postayı kuruluş dışından etiketlemek seçerseniz, Varsayılan olarak All included (Dahil) **varsayılanını tutmanız** gerekir. Bu yapılandırmanın kapsamının kuruluşta belirli kullanıcılara açık olması için, sonraki **adımda Gelişmiş kurallar'ı** seçin. Daha sonra, bir kullanıcı alt kümesi içincoping gereksinimini elde etmek üzere koşulları, kuruluşta belirli alıcıları içerecek şekilde yapılandırın.
+    - Adres **Exchange** ilke, belirtilen alıcıların gönderen adresine göre uygulanır. Çoğu zaman, Hariç Yok ayarında bulunan Tüm **varsayılanı** **tutmanız** gerekir. Bu yapılandırma, kullanıcıların bir alt kümesini test ediyor bile olsa uygundur. Buradaki kullanıcı alt kümenizi belirtmek yerine, bir sonraki adımda gelişmiş kuralları kullanarak organizasyonda alıcıları dahil etmek veya dışarıda tutmak için koşulları yapılandırabilirsiniz. Aksi takdirde, varsayılan ayarları burada değiştirirsiniz:
+        -  Varsayılan olarak Tüm dahil'i **değiştirir** ve bunun yerine belirli kullanıcıları veya grupları seçerseniz, kuruluş dışından gönderilen e-posta ilkeden muaf olur. 
+        -  Varsayılan olarak **All included (** Dahil edilenler) varsayılanı geçerli olup hariç tutulacak kullanıcıları veya grupları belirtirseniz, bu dışarıda bırakılan kullanıcıların göndermesi gereken e-posta ilkeden muaf olur, ancak almayacakları e-postadan muaf olmaz.
     
-    - Tek tek hesap OneDrive için bkz[. Tüm kullanıcı kimlik OneDrive listesi elde görme](/onedrive/list-onedrive-urls).
+    - Daha OneDrive için bkz. Dahil veya dışarıda bırakılacak tek [OneDrive](/onedrive/list-onedrive-urls) hesapları belirtmenize yardımcı olması için, OneDrive kullanıcı url'lerinin listesini elde edin.
 
 7. Ortak veya **gelişmiş kuralları ayarlama** sayfası için: Tüm seçtiğiniz konumlarda etiketilecek  içeriği tanımlayan kurallar tanımlamak için Ortak kurallar'ın varsayılanını kullanın. Konum başına farklı kurallara, örneğin konum başına farklı kurallara ihtiyacınız varsa, Exchange **kurallar'ı seçin**. Sonra Da **Sonraki'yi seçin**.
 
