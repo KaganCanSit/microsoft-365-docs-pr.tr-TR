@@ -15,16 +15,16 @@ ms.custom: nextgen
 ms.reviewer: pahuijbr, mkaminska
 manager: dansimp
 ms.technology: mde
-ms.date: 03/07/2022
+ms.date: 03/14/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: e19b6400643b29005a6c92323f58f7dc996db49e
-ms.sourcegitcommit: ad6d9fd5ad050c72622a32a191997fe6d7b2deee
+ms.openlocfilehash: 2f6f2135e81bf99f6391b75067ad89d1af3a712c
+ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63353909"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63468716"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Güncelleştirmeleri Microsoft Defender Virüsten Koruma ve taban çizgilerini uygulama
 
@@ -42,7 +42,7 @@ Cihazlarınızı Microsoft Defender Virüsten Koruma kötü amaçlı yazılımla
 
 ## <a name="security-intelligence-updates"></a>Güvenlik zekası güncelleştirmeleri
 
-Microsoft Defender Virüsten Koruma koruma (Microsoft [Gelişmiş](cloud-protection-microsoft-defender-antivirus.md) Koruma Hizmeti veya HARITALAR olarak da adlandırılan) kullanır ve koruma sağlamak için belirli aralıklarla güvenlik zekası güncelleştirmelerini indirir.
+Microsoft Defender Virüsten Koruma [koruma (](cloud-protection-microsoft-defender-antivirus.md)Microsoft Gelişmiş Koruma Hizmeti veya HARITALAR olarak da adlandırılan) kullanır ve düzenli aralıklarla ek koruma sağlamak için dinamik güvenlik zekası güncelleştirmelerini indirir. Bu dinamik güncelleştirmeler, güvenlik zekası güncelleştirmesi KB2267602 aracılığıyla düzenli güvenlik zekası güncelleştirmeleri yerine almaz.
 
 > [!NOTE]
 > Güncelleştirmeler, aşağıdaki KB'ler altında yayımlar:

@@ -21,12 +21,12 @@ search.appverid:
 - SPO160
 ms.assetid: bebb285f-1d54-4f79-90a5-94985afc6af8
 description: SharePoint Online varlıklarınızı Office 365 Content Delivery Network için CDN (SharePoint) kullanma hakkında bilgi alın.
-ms.openlocfilehash: ad4eb1df63e201e49ba0b4c56c9123a04e37c184
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: f4279da3bba7647f2e99179acb0147fe5d002f57
+ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63005477"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63468968"
 ---
 # <a name="use-the-office-365-content-delivery-network-cdn-with-sharepoint-online"></a>CDN Online ile Office 365 Content Delivery Network (CDN) SharePoint kullanma
 
@@ -56,11 +56,11 @@ E-Office 365 CDN ayarlamak için şu temel adımları izleyin:
   + [Varlıklarınızı nerede depolamak istediğinize karar verenin](use-microsoft-365-cdn-with-spo.md#CDNStoreAssets). Bu konum, SharePoint, kitaplık veya klasör olabilir ve kaynak _olarak adlandırılan bir konum olabilir_.
   + [Her kaynağın genel mi yoksa özel mi olacağını seçin](use-microsoft-365-cdn-with-spo.md#CDNOriginChoosePublicPrivate). Hem genel hem de özel türlerin birden çok kaynağını  eklersiniz.
 
-+ PowerShell veya CDN Online CLI kullanarak SharePoint ayarlayın ve yapılandırın
++ PowerShell veya CDN CLI'yi kullanarak e-postayı ayarlayın ve Microsoft 365
 
   + [Çevrimiçi Yönetim Kabuğu'CDN kullanarak varsayılan SharePoint ayarlama ve yapılandırma](use-microsoft-365-cdn-with-spo.md#CDNSetupinPShell)
   + [PnP PowerShell CDN ayarlama ve yapılandırma](use-microsoft-365-cdn-with-spo.md#CDNSetupinPnPPosh)
-  + [OFFICE 365 CLI kullanarak CDN ayarlama ve yapılandırma](use-microsoft-365-cdn-with-spo.md#CDNSetupinCLI)
+  + [Cli for CDN kullanarak e-postayı ayarlayın ve Microsoft 365](use-microsoft-365-cdn-with-spo.md#CDNSetupinCLI)
 
   Bu adımı tamamlarken şunları edin:
 
@@ -742,18 +742,18 @@ Bu cmdlet hakkında daha fazla bilgi için bkz. [Set-PnPTenantCdnEnabled](/power
 </details>
 
 <a name="CDNSetupinCLI"> </a>
-## <a name="set-up-and-configure-the-office-365-cdn-using-the-office-365-cli"></a>kullanarak Office 365 CDN ayarlama ve Office 365
+## <a name="set-up-and-configure-the-office-365-cdn-using-the-cli-for-microsoft-365"></a>E-posta için CLI Office 365 CDN kullanarak e-postayı ayarlayın ve Microsoft 365
 
-Bu bölümdeki yordamlar için [CLI'ya Office 365 gerekir](https://aka.ms/o365cli). Ardından oturum aç komutunu Office 365 [kiracınıza](https://pnp.github.io/office365-cli/cmd/login/) bağlanabilirsiniz.
+Bu bölümdeki yordamlar için CLI'ya daha [fazla Microsoft 365](https://aka.ms/cli-m365). Ardından oturum aç komutunu Office 365 [kiracınıza](https://pnp.github.io/cli-microsoft365/cmd/login/) bağlanabilirsiniz.
 
-CLI kullanarak varlıklarınızı CDN Online'da barındırmak üzere SharePoint ayarlamak ve yapılandırmak için Office 365 tamamlayın.
+CDN MICROSOFT 365 için CLI kullanarak SharePoint Online'da varlıklarınızı barındırmak üzere etki alanlarınızı ayarlamak ve yapılandırmak için bu Microsoft 365.
 
 <details>
   <summary>Genişletmek için tıklayın</summary>
 
 ### <a name="enable-the-office-365-cdn"></a>Ayarı Office 365 CDN
 
-Spo cdn kümesi komutunu Office 365 CDN kiracınız içinde yer alan [cdn'nin durumunu yönetebilirsiniz](https://pnp.github.io/office365-cli/cmd/spo/cdn/cdn-set/).
+Spo cdn kümesi komutunu Office 365 CDN kiracınız içinde yer alan [cdn'nin durumunu yönetebilirsiniz](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-set/).
 
 Kiracı yürütülecek Office 365 Genel CDN etkinleştirmek için:
 
@@ -769,7 +769,7 @@ spo cdn set --type Private --enabled true
 
 #### <a name="view-the-current-status-of-the-office-365-cdn"></a>Tsppnin geçerli durumunu Office 365 CDN
 
-Belirli bir dosya türünün etkin veya Office 365 CDN olduğunu kontrol etmek için [spo cdn get komutunu](https://pnp.github.io/office365-cli/cmd/spo/cdn/cdn-get/) kullanın.
+Belirli bir dosya türünün etkin veya Office 365 CDN olduğunu kontrol etmek için [spo cdn get komutunu](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-get/) kullanın.
 
 Ortak Office 365 etkinleştirildiğinden CDN için yürütün:
 
@@ -792,7 +792,7 @@ Varsayılan [CDN, varsayılan](use-microsoft-365-cdn-with-spo.md#default-cdn-ori
 > [!IMPORTANT]
 > Genel kaynak olarak yapılandırılan bir belge kitaplığında, SharePoint olarak kabul edilen kaynakları hiçbir zaman bir yere eklemeyebilirsiniz.
 
-Bir [kaynak tanımlamak için spo cdn origin add](https://pnp.github.io/office365-cli/cmd/spo/cdn/cdn-origin-add/) komutunu CDN kullanın. Birden çok kaynak tanımlayabilirsiniz. Kaynak, ana bilgisayar tarafından barındır SharePoint istediğiniz varlıkları içeren bir kitaplık veya klasöre CDN.
+Bir [kaynak tanımlamak için spo cdn origin add](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-origin-add/) komutunu CDN kullanın. Birden çok kaynak tanımlayabilirsiniz. Kaynak, ana bilgisayar tarafından barındır SharePoint istediğiniz varlıkları içeren bir kitaplık veya klasöre CDN.
 
 ```cli
 spo cdn origin add --type [Public | Private] --origin <path>
@@ -813,11 +813,11 @@ spo cdn origin add --type Private --origin sites/site1/siteassets
 ```
 
 > [!NOTE]
-> Kaynak CDN ekledikten sonra, dosyaları kaynak hizmeti aracılığıyla geri alayabilirsiniz ve bu 15 CDN sürebilir. Spo CDn kaynak listesi komutunu kullanarak belirli kaynağın zaten [etkinleştirildiğinden emin](https://pnp.github.io/office365-cli/cmd/spo/cdn/cdn-origin-list/) olun.
+> Kaynak CDN ekledikten sonra, dosyaları kaynak hizmeti aracılığıyla geri alayabilirsiniz ve bu 15 CDN sürebilir. Spo CDn kaynak listesi komutunu kullanarak belirli kaynağın zaten [etkinleştirildiğinden emin](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-origin-list/) olun.
 
 ### <a name="remove-an-office-365-cdn-origin"></a>Kaynak Office 365 CDN kaldırma
 
-Belirtilen [kaynak türüne bir kaynak CDN için spo cdn](https://pnp.github.io/office365-cli/cmd/spo/cdn/cdn-origin-remove/) kaynağını kaldır komutunu CDN kullanın.
+Belirtilen [kaynak türüne bir kaynak CDN için spo cdn](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-origin-remove/) kaynağını kaldır komutunu CDN kullanın.
 
 Kaynak yapılandırmadan genel CDN kaldırmak için yürütme:
 
@@ -834,10 +834,10 @@ Varolan bir kaynakta değişiklik CDN. Bunun yerine, komutu kullanarak önceden 
 
 ### <a name="change-the-types-of-files-to-include-in-the-office-365-cdn"></a>Dosya türlerini klasöre dahil etmek Office 365 CDN
 
-Varsayılan olarak aşağıdaki dosya türleri CDN'a dahildir: _.css, .eot, .gif, .ico, .jpeg, .jpg, .js, .map, .png, .svg, .ttf, .woff ve .woff2_. Dosyaya başka dosya türleri de eklemek CDN, [spo CDN ilke kümesi komutunu CDN dosya yapılandırmasını değiştirebilirsiniz](https://pnp.github.io/office365-cli/cmd/spo/cdn/cdn-policy-set/).
+Varsayılan olarak aşağıdaki dosya türleri CDN'a dahildir: _.css, .eot, .gif, .ico, .jpeg, .jpg, .js, .map, .png, .svg, .ttf, .woff ve .woff2_. Dosyaya başka dosya türleri de eklemek CDN, [spo CDN ilke kümesi komutunu CDN dosya yapılandırmasını değiştirebilirsiniz](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-policy-set/).
 
 > [!NOTE]
-> Dosya türleri listesini değiştirirken, şu anda tanımlanmış olan listenin üzerine yazmanız gerekir. Başka dosya türleri de eklemek için, ilk olarak [spo CDN](https://pnp.github.io/office365-cli/cmd/spo/cdn/cdn-origin-list/) ilke listesi komutunu kullanarak hangi dosya türlerinin yapılandırılmış olduğunu bulun.
+> Dosya türleri listesini değiştirirken, şu anda tanımlanmış olan listenin üzerine yazmanız gerekir. Başka dosya türleri de eklemek için, ilk olarak [spo CDN](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-origin-list/) ilke listesi komutunu kullanarak hangi dosya türlerinin yapılandırılmış olduğunu bulun.
 
 _Genel dosya türlerine dahil_ edilen varsayılan dosya türleri listesine JSON dosya türünü eklemek için CDN yürütün:
 
@@ -847,10 +847,10 @@ spo cdn policy set --type Public --policy IncludeFileExtensions --value "CSS,EOT
 
 ### <a name="change-the-list-of-site-classifications-you-want-to-exclude-from-the-office-365-cdn"></a>Site sınıflandırmalarının dışında tutmak istediğiniz sınıflandırmaların listesini Office 365 CDN
 
-Varsayılan ayar [üzerinde kullanılabilir yapmak istediğiniz](https://pnp.github.io/office365-cli/cmd/spo/cdn/cdn-policy-set/) site sınıflandırmalarını dışarıda tutmak için spo cdn ilke kümesi komutunu CDN. Varsayılan olarak, site sınıflandırmaları dahil değildir.
+Varsayılan ayar [üzerinde kullanılabilir yapmak istediğiniz](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-policy-set/) site sınıflandırmalarını dışarıda tutmak için spo cdn ilke kümesi komutunu CDN. Varsayılan olarak, site sınıflandırmaları dahil değildir.
 
 > [!NOTE]
-> Dışarıda bırakılan site sınıflandırmaları listesini değiştirirken, şu anda tanımlanmış olan listenin üzerine yazmaz. Ek sınıflandırmaları dahil etmek istemiyorsanız, şu anda hangi sınıflandırmaların yapılandırılmış olduğunu bulmak için ilk olarak [spo CDN](https://pnp.github.io/office365-cli/cmd/spo/cdn/cdn-policy-list/) ilke listesi komutunu kullanın.
+> Dışarıda bırakılan site sınıflandırmaları listesini değiştirirken, şu anda tanımlanmış olan listenin üzerine yazmaz. Ek sınıflandırmaları dahil etmek istemiyorsanız, şu anda hangi sınıflandırmaların yapılandırılmış olduğunu bulmak için ilk olarak [spo CDN](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-policy-list/) ilke listesi komutunu kullanın.
 
 Genel kuruluştan _HBI olarak sınıflandırılmış_ siteleri CDN, yürütme
 
@@ -1045,7 +1045,7 @@ spo cdn origin add --origin */CLIENTSIDEASSETS
 SharePoint Online Management Shell PowerShell modülünü veya **CLI'Office 365 CDN** kullanarak ana **bilgisayarla Office 365 seçebilirsiniz**.
 
 + [SharePoint Online Yönetim Kabuğu ile çalışmaya başlama](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
-+ [Office 365 CLI'yi yükleme](https://pnp.github.io/office365-cli/user-guide/installing-cli/)
++ [Office 365 CLI'yi yükleme](https://pnp.github.io/cli-microsoft365/user-guide/installing-cli/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

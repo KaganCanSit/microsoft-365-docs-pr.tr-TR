@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/10/2022
+ms.date: 03/14/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 545e0e3a12fda1c45bac27f9c71d4e465ca05b7e
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 6b475a1f56f66c6ec9e1ed09b5311515c5eb31c8
+ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450612"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63468702"
 ---
 # <a name="onboard-devices-to-microsoft-defender-for-business"></a>Cihazları İş için Microsoft Defender'a ekleme
 
@@ -61,7 +61,7 @@ Aşağıdaki tabloda, İş için Defender'a cihazları eklemede en sık kullanı
 |---------|---------|---------|
 | **Otomatik katılım**<br/>(*zaten Microsoft Endpoint Manager kullanan müşteriler tarafından kullanılabilir*) | *Microsoft 365 İş Ekstra müşteriler zaten Microsoft Intune sahip olabilir ve bu seçeneği kullanabilir*. Otomatik ekleme, İş için Defender ile Microsoft Endpoint Manager arasında bir bağlantı ayarlar ve defender for Business Windows cihaz eklemeleri sağlar. Bu seçeneği kullanmak için, cihazlarınızı zaten Mobil Cihaz'a Endpoint Manager.<br/><br/>Daha fazla bilgi edinmek için bkz [. Otomatik ekleme](#automatic-onboarding-for-windows-devices-enrolled-in-microsoft-endpoint-manager). | Windows |
 | **Yerel betik** <br/> | Bu seçenek, İş için Defender'a cihazları el ile eklemeye olanak tanır. Yerel betiği kullanarak bir defada en fazla 10 cihaz abilirsiniz.<br/><br/>Daha fazla bilgi edinmek için bkz [. İş için Defender'da yerel betik](#local-script-in-defender-for-business). | Windows <br/>macOS |
-| **Microsoft Intune** veya **Microsoft Endpoint Manager**<br/>(*Microsoft Intune veya Endpoint Manager*) | [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) Mobil [Cihaz Yönetimi de](/mem/intune/enrollment/device-enrollment) mobil cihaz yönetiminin Endpoint Manager. (Microsoft 365 İş Ekstra müşterilere zaten destek Microsoft Intune.)<br/><br/>İş için Defender'ı Endpoint Manager önceden Endpoint Manager kullanıyorsanız cihazları eklemeye ve yönetmeye devam etmek için Endpoint Manager'i kullanmaya devam edin<br/><br/>Bu yöntemi kullanmak için bkz. [Microsoft Endpoint Manager](#microsoft-endpoint-manager). | Windows <br/>macOS<br/>iOS<br/>Android OS | 
+| **Microsoft Intune** veya **Microsoft Endpoint Manager**<br/>(*Microsoft Intune veya Endpoint Manager*) | [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) Mobil [Cihaz Yönetimi de](/mem/intune/enrollment/device-enrollment) mobil cihaz yönetiminin Endpoint Manager. (Microsoft 365 İş Ekstra müşterilere zaten destek Microsoft Intune.)<br/><br/>İş için Defender'ı Endpoint Manager önceden Endpoint Manager kullanıyorsanız cihazlarınızı eklemeye ve yönetmeye devam etmek için Endpoint Manager'ı kullanmaya devam edin.<br/><br/>Bu yöntemi kullanmak için bkz. [Microsoft Endpoint Manager](#microsoft-endpoint-manager). | Windows <br/>macOS<br/>iOS<br/>Android OS | 
 | **İş için Microsoft Defender güvenlik yapılandırması** <br/>(*Microsoft 365 Defender kullanır*) | Bu seçeneği kullanmak için, belirli ayarları yapılandırarak İş için Defender ile Kurumsal arasındaki iletişimi kolaylaştıracak Endpoint Manager. Ardından, her cihaza indirerek Microsoft 365 Defender bir paket kullanarak cihazları Web portalına ([https://security.microsoft.com](https://security.microsoft.com)) da () dahil edin. Cihazlar ve cihazlar (Azure AD) Azure Active Directory Defender İş güvenlik ilkeleri arasında güven kurulur.<br/><br/>Daha fazla bilgi edinmek için bkz. [İş için Microsoft Defender güvenlik yapılandırması](#microsoft-defender-for-business-security-configuration). | Windows <br/>macOS |
 
 > [!IMPORTANT]

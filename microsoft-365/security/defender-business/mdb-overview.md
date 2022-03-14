@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/09/2022
+ms.date: 03/14/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-overview
-ms.openlocfilehash: 17f4ad39c89aa6990ec041e975a257fdab513d20
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 6db82c1dcc9afceebcb9fff891cb90ddafa95f21
+ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450058"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63468730"
 ---
 # <a name="overview-of-microsoft-defender-for-business"></a>İş için Microsoft Defender'a genel bakış
 
@@ -53,7 +53,7 @@ Bu makalede, İş için Defender'a nelerin dahil olduğu açıklanmıştır, ayr
 
 - **Kullanımı kolay bir güvenlik çözümü.** İş için Defender, uç noktaların güvenliği hakkında öneriler ve içgörüler ile işlemde size yol sunan akıcı deneyimler sunar. Özel bilgi gerekmez, çünkü İş için Defender ilk günden kuruluş cihazlarını korumaya yardımcı olmak için tasarlanmış sihirbaz tarafından yönlendirilen yapılandırma ve varsayılan güvenlik ilkeleri sunar.
 
-- **Ortamınız için esneklik**. Microsoft Bulut, şirket içi teknoloji veya Microsoft dışı üretkenlik çözümleri kullanıyorsanız, İş için Defender iş ortamınız ile birlikte çalışabilirsiniz. İş için Defender, Windows'de yerleşik olarak bulunan bileşenlerle ve macOS, iOS ve Android cihazları için uygulamalarla çalışır.
+- **Ortamınız için esneklik**. İster Microsoft Bulut'u kullanıyor ister yeniysiniz, İş için Defender Microsoft Intune ortamınıza yardımcı olabilir. İş için Defender, Windows'de yerleşik olarak bulunan bileşenlerle ve macOS, iOS ve Android cihazları için uygulamalarla çalışır.
 
 - **Microsoft 365 Lighthouse ile tümleştirme**. E-posta hizmetini kullanan bir Yönetilen Hizmet Sağlayıcısı (MSP) [Microsoft 365 Lighthouse](../../lighthouse/m365-lighthouse-overview.md) başka özellikler de vardır. Müşterileriniz Microsoft 365 İş Ekstra Defender İş ile birlikte Microsoft 365 İş Ekstra kullanıyorsa, güvenlik olaylarını ve müşteri kiracıları genelinde bu kiracılara Microsoft 365 Lighthouse.
 

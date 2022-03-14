@@ -17,12 +17,12 @@ ms.collection:
 description: Tek tek kullanıcılar veya tüm kuruluş için Rapor İletisini veya Kimlik Avını Bildirme eklentilerini Outlook Web üzerinde Outlook etkinleştirebilirsiniz.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7f2316cc787ede02644a48636a01b30458d7e349
-ms.sourcegitcommit: dfa9f28a5a5055a9530ec82c7f594808bf28d0dc
+ms.openlocfilehash: dc4c03a0ed1f0a03d96776c841203c9131c3067c
+ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "62997040"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63468888"
 ---
 # <a name="enable-the-report-message-or-the-report-phishing-add-ins"></a>Rapor İletisi'yi veya Rapor Kimlik Avı eklentilerini etkinleştirme
 
@@ -59,7 +59,9 @@ Genel yönetici veya Exchange Online yöneticisiyseniz ve Exchange OAuth kimlik 
   - Outlook için Microsoft 365 uygulamalarına dahil Enterprise
   - iOS Outlook Android için uygulama
 
-- Paylaşılan posta kutuları ve şirket içi posta kutuları ve şirket içi posta kutuları her ikisinde de Exchange yoktur.
+- Paylaşılan posta kutuları için her iki eklenti de kullanılamaz.
+
+- Her iki eklenti de şirket içi veya posta kutularında Exchange kullanılamaz. 
 
 - Var olan web tarayıcınız, hem Rapor İletisi hem de Rapor Kimlik Avı eklentileriyle birlikte çalışır. Ancak, eklentinin kullanılabilir olmadığını veya beklendiği gibi çalışmadı olduğunu fark ettiysanız, farklı bir tarayıcı deneyin.
 

@@ -15,12 +15,12 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
 ms.date: 03/09/2022
-ms.openlocfilehash: 9f323d902f0e421ea73303706e0785f9bd76f3ff
-ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
+ms.openlocfilehash: f696cd3631573bdb2206c665340f35601e4624ac
+ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63406071"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63468992"
 ---
 # <a name="microsoft-defender-for-endpoint-device-control-removable-storage-access-control"></a>Uç Nokta Cihaz Denetimi Için Microsoft Defender Çıkarılabilir Depolama Denetimi
 
@@ -253,7 +253,7 @@ Microsoft Endpoint Manager merkezi (<https://endpoint.microsoft.com/>)  **Cihazl
       `DefaultEnforcementDeny = 2`
 
     - Bu ayarın dağıtımında Varsayılan İzin Ver veya **Varsayılan Reddet** **ayarlarını görme**
-    - Örneğin, bu ayarı yapılandırken hem Disk düzeyi hem de Dosya sistemi düzeyinde AccessMask'ı göz önünde bulundurabilirsiniz; örneğin, Varsayılan Reddet'i kullanmak ancak belirli bir depolamaya izin vermek için hem Disk düzeyi hem de Fiel sistem düzeyi erişimine izin vermek için AccessMask ayarını 63 olarak ayarlayın.
+    - Bu ayarı yapılandırırken hem Disk düzeyi hem de Dosya sistemi düzeyinde AccessMask'ı düşünün; örneğin, Varsayılan Reddet'i kullanmak ama belirli bir depolamaya izin vermek için hem Disk düzeyi hem de Dosya sistemi düzeyi erişimine izin vermek için AccessMask'ı 63 olarak ayarlayın.
 
     :::image type="content" source="images/148609590-c67cfab8-8e2c-49f8-be2b-96444e9dfc2c.png" alt-text="PowerShell koduna varsayılan Zorlamaya İzin Ver":::
 
@@ -291,7 +291,7 @@ Varsayılan [Microsoft 365 Defender, Erişim](https://security.microsoft.com/adv
 - Microsoft 365 raporlaması
 
 ```kusto
-//events triggered by RemovableStoragePolicyTriggered
+//RemovableStoragePolicyTriggered: event triggered by Disk level enforcement
 DeviceEvents
 | where ActionType == "RemovableStoragePolicyTriggered"
 | extend parsed=parse_json(AdditionalFields)
@@ -311,6 +311,29 @@ DeviceEvents
 | order by Timestamp desc
 ```
 
+```kusto
+//RemovableStorageFileEvent: event triggered by File level enforcement, information of files written to removable storage 
+DeviceEvents
+| where ActionType contains "RemovableStorageFileEvent"
+| extend parsed=parse_json(AdditionalFields)
+| extend Policy = tostring(parsed.Policy) 
+| extend PolicyRuleId = tostring(parsed.PolicyRuleId) 
+| extend MediaClassName = tostring(parsed.ClassName)
+| extend MediaInstanceId = tostring(parsed.InstanceId)
+| extend MediaName = tostring(parsed.MediaName)
+| extend MediaProductId = tostring(parsed.ProductId) 
+| extend MediaVendorId = tostring(parsed.VendorId) 
+| extend MediaSerialNumber = tostring(parsed.SerialNumber) 
+| extend DuplicatedOperation = tostring(parsed.DuplicatedOperation)
+| extend FileEvidenceLocation = tostring(parsed.TargetFileLocation) 
+| project Timestamp, DeviceId, DeviceName, InitiatingProcessAccountName, 
+    ActionType, Policy, PolicyRuleId, DuplicatedOperation, 
+    MediaClassName, MediaInstanceId, MediaName, MediaProductId, MediaVendorId, MediaSerialNumber,
+    FileName, FolderPath, FileSize, FileEvidenceLocation,
+    AdditionalFields
+| order by Timestamp desc
+```
+    
 :::image type="content" source="images/block-removable-storage.png" alt-text="Çıkarılabilir depolama alanını engellemeyi gösteren ekran.":::
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular

@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: İçerik gezgini etiketli öğeleri yerel olarak görüntülemenizi sağlar.
-ms.openlocfilehash: fb7448ffd4ed56deb41bbb1d128608b88e9617ea
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 61d262c04d4a304506bc521d155be71f81d219ca
+ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021608"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63468768"
 ---
 # <a name="get-started-with-content-explorer"></a>İçerik gezginiyle çalışmaya başlama
 
@@ -91,7 +91,7 @@ Genel yönetici, gerekli İçerik Gezgini Liste Görüntüleyicisi'ni ve İçeri
 - Bilgi Koruma Koruma Koruma Koruması
 - Bilgi Koruma Okuyucusu
 
-Önizlemede olan MIP rol gruplarının listesi burada ve ve şekildedir. Bu gruplar hakkında daha fazla bilgi [edinmek için Güvenlik ve Uyumluluk Merkezi'nde & bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center).
+Önizlemede olan MIP rol gruplarının listesi burada ve ve şekildedir. Daha fazla bilgi edinmek için [Güvenlik ve Uyumluluk Merkezi'nde rol & bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center).
 
 - Bilgi Koruması
 - Bilgi Koruması Yöneticileri
@@ -106,9 +106,6 @@ Genel yönetici, gerekli İçerik Gezgini Liste Görüntüleyicisi'ni ve İçeri
 ### <a name="sensitive-information-types"></a>Hassas bilgi türleri
 
 [DLP ilkesi,](dlp-learn-about-dlp.md) hassas bir bilgi türü olarak tanımlanan hassas bilgilerin **korunmasına yardımcı olabilir**. Microsoft 365, [farklı bölgelerden](sensitive-information-type-entity-definitions.md) kullanıma hazır birçok yaygın hassas bilgi türüne ilişkin tanımları içerir. Örneğin, kredi kartı numarası, banka hesabı numaraları, ulusal kimlik numaraları ve canlı Windows numaraları.
-
-> [!NOTE]
-> İçerik Gezgini şu anda Dosya Gezgini'nde hassas bilgi türlerini Exchange Online.
 
 ### <a name="sensitivity-labels"></a>Duyarlılık etiketleri
 
@@ -134,29 +131,26 @@ Dışarı **aktarma** denetimi, .csv konumları bölmesinde gösterilenlerin lis
 ![veri sınıflandırması dışarı aktarma denetimi.](../media/data_classification_export_control.png)
 
 
+> [!NOTE]
+> Sayımların içerik *gezgininde* güncelleştirilmiş olması yedi gün kadar da olabilir.
+
 ### <a name="search"></a>Arama
 
-Exchange klasörü ya da sitedeki SharePoint veya site gibi bir OneDrive detaya ilerlersiniz, **arama** aracı görüntülenir.
+Exchange veya Teams klasörü ya da SharePoint veya OneDrive gibi bir konuma detaya gidin; **arama aracı görüntülenir**.
 
 ![içerik gezgini arama aracı.](../media/data_classification_search_tool.png)
 
-
 Arama aracının kapsamı, Tüm konumlar bölmesinde ne görüntüleniyor  ve ne üzerinde arama seçtiğiniz konuma bağlı olarak değişiklik gösterir. 
 
-Posta **Exchange** seçili konum olduğunda, posta kutusunun tam e-posta adresine, örneğin.`user@domainname.com`
+Seçilen **Exchange** posta **Teams** posta `user@domainname.com`kutusunun tam e-posta adresine, örneğin.
 
 Seçilen **SharePoint** veya **OneDrive** biri seçildiğinde, site adlarına, klasörlerine ve dosyalarına detaya gidin; arama aracı görüntülenir. 
 
-> [!NOTE]
-> **OneDrive** Önizleme programımız sırasında tüm bu OneDrive değerli geri bildirimlerinizi dinledik. Bu geri bildirime dayanarak, OneDrive tüm düzeltmeler gelene kadar işlevi önizlemede kalacaktır. Kiracınıza bağlı olarak, bazı müşteriler konum olarak OneDrive göremmektedir. Bu destekle devam edecek olmak sizin için çok önemli.
-
 Şu adreste arama:
-
 
 |değer|örnek  |
 |---------|---------|
 |tam site adı    |`https://contoso.onmicrosoft.com/sites/sitename`    |
-|kök klasör adı - tüm alt klasörleri alır    | `/sites`        |
 |dosya adı    |    `RES_Resume_1234.txt`     |
 |dosya adının başındaki metin| `RES`|
 |dosya adı olarak alt çizgi karakteri ( _ ) sonra gelen metin|`Resume` veya `1234`| 

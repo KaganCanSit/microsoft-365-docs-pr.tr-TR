@@ -25,30 +25,30 @@ search.appverid:
 - BCS160
 - IWA160
 ms.assetid: 932ad3ad-533c-418a-b938-6e44e8bc33b0
-description: Etkin bir hizmet kesintisi Microsoft 365 için desteği aramadan önce hizmetlerin durumunu görüntü önünden seçin.
-ms.openlocfilehash: d5af62bd31bc5fe6c3a3f04657d6cf0ea6083eaa
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Etkin bir hizmet kesintisi Microsoft 365 için desteği aramadan önce hizmetlerin durumunu görüntüdenin.
+ms.openlocfilehash: 4a72132872c890f755cb537e06c42412aa17fb9f
+ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973716"
+ms.lasthandoff: 03/14/2022
+ms.locfileid: "63468782"
 ---
 # <a name="how-to-check-microsoft-365-service-health"></a>Hizmet durumunu Microsoft 365 denetleme
 
 [![Yönetim merkezinin değiştiğini size bildirmeye yarayan etiket ve daha fazla ayrıntıyı aka.ms/aboutM365preview sayfasında bulabilirsiniz.](../media/O365-Admin-AdminCenterChanging.png)](/office365/admin/microsoft-365-admin-center-preview?preserve-view=true&view=o365-worldwide)
 
-Web üzerinde Office, Yammer, Microsoft Dynamics CRM ve mobil cihaz yönetimi bulut hizmetleri dahil olmak üzere Microsoft hizmetleri cihazınızın durumunu, [ Microsoft 365 yönetim merkezi](https://go.microsoft.com/fwlink/p/?linkid=2024339). If you are experiencing problems with a cloud service, you can check the service health to determine whether this is a known issue with a resolution in progress before you call support or spend time troubleshooting.
+Microsoft hizmetleri, Yammer, Web üzerinde Office Microsoft Dynamics CRM ve mobil cihaz yönetimi bulut hizmetleri dahil olmak üzere Microsoft hizmetleri hizmet durumunu, [ Microsoft 365 yönetim merkezi](https://go.microsoft.com/fwlink/p/?linkid=2024339). If you are experiencing problems with a cloud service, you can check the service health to determine whether this is a known issue with a resolution in progress before you call support or spend time troubleshooting.
 
 Yönetim merkezinde oturum açamıyorsanız, hizmet durumu sayfasını kullanarak kiracıda oturum açmanızı [](https://status.office365.com) engelleyen bilinen sorunları görebilirsiniz.  Belirli etkinliklerle ilgili bilgileri görmek için [@MSFT365status](https://twitter.com/MSFT365Status) Twitter'da bizi takip etmek için de kaydolabilirsiniz.
 
 ## <a name="how-to-check-service-health"></a>Hizmet durumunu denetleme
 
-1. 'daki Microsoft 365 yönetim merkezi gidin [https://admin.microsoft.com](https://go.microsoft.com/fwlink/p/?linkid=2024339)ve bir yönetici hesabıyla oturum açın.
+1. Microsoft 365 yönetim merkezi 'a gidin [https://admin.microsoft.com](https://go.microsoft.com/fwlink/p/?linkid=2024339)ve bir yönetici hesabıyla oturum açın.
 
     > [!NOTE]
     > Genel yönetici veya hizmet desteği yöneticisi rolüne atanan kişiler hizmet durumunu  bakabilir. Exchange, SharePoint ve Skype Kurumsal yöneticilerinin hizmet durumunu görüntülemesine izin vermek için, bunların Hizmet yöneticisi rolüne de atanmaları gerekir. Hizmet durumunu görüntüley gören roller hakkında daha fazla bilgi için bkz [. Yönetici rolleri hakkında](../admin/add-users/about-admin-roles.md?preserve-view=true&view=o365-worldwide#commonly-used-microsoft-365-admin-center-roles).
 
-2. Hizmet durumunu görüntülemek için, yönetim merkezinde **HealthService** >  **health** seçeneğine gidin veya Giriş panosunda **Hizmet durumu** **kartını seçin**. Pano kartı etkin bir hizmet sorunu olup olmadığını gösterir ve ayrıntılı Hizmet durumu **sayfasının bağlantılarını** sağlar.
+2. Hizmet durumunu görüntülemek için, yönetim merkezinin sol gezintisinde  **HealthService** >  **health** seçeneğine gidin veya Giriş panosunda Hizmet durumu **kartını seçin**. Pano kartı etkin bir hizmet sorunu olup olmadığını gösterir ve ayrıntılı Hizmet durumu **sayfasının bağlantılarını** sağlar.
 
 3. Hizmet **durumu sayfasında** , her bulut hizmetinin durumu tablo biçiminde gösterilir.
 
@@ -62,7 +62,7 @@ Görünüme filtre kullanarak yalnızca tüm etkin olayları görüntülemek iç
 
 Geçmiş **sekmesi** , son yedi veya 30 gün içinde çözülen tüm olayları ve tavsiyeleri gösterir.
 
-Bir Microsoft 365 hizmetiyle ilgili bir sorun yaşıyorsanız ve Hizmet durumu sayfasında bu sorunu görmüyorsanız, Sorun bildir'i seçerek ve  kısa formu tamamlayarak bu sorun hakkında bize bilgi edin. Sorunun ne kadar yaygın olduğunu ve hizmetimiz tarafından kaynaklandığını görmek için diğer kuruluşlardan gelen ilgili verilere ve raporlara bakacağız. Varsa, çözümlerini takip etmek için Hizmet durumu sayfasında yeni bir olay veya danışma olarak ekleriz. Bildirilen **Sorunlar sayfasında** , kiracının bu formda raporladığı tüm sorunlar ve durum görüntülenir.
+Bir Microsoft 365 hizmetiyle ilgili bir sorun yaşıyorsanız ve Bu hizmetin Hizmet durumu sayfasında listelenmiyorsa, Sorun bildir'i seçerek ve  kısa formu tamamlayarak bu sorun hakkında bize bilgi edin. Sorunun ne kadar yaygın olduğunu ve hizmetimiz tarafından kaynaklandığını görmek için diğer kuruluşlardan gelen ilgili verilere ve raporlara bakacağız. Varsa, çözümlerini takip etmek için Hizmet durumu sayfasında yeni bir olay veya danışma olarak ekleriz. Bildirilen **Sorunlar sayfasında** , kiracının bu formda raporladığı tüm sorunlar ve durum görüntülenir.
 
 Panoda hangi hizmetlerin görüntü görüntülemekte olduğunu özelleştirmek için TercihlerCustom  >  görünümü'ne tıklayın ve Hizmet durumu pano görünüm dışında filtrelemek istediğiniz hizmetlerin onay kutularını temizleyin. İzlemek istediğiniz her hizmet için onay kutusunun seçili olduğundan emin olun.
 
@@ -80,7 +80,7 @@ Ayrıca, bir hizmetin her etkinliği yerine tek tek etkinlikler için e-posta bi
 > Her yöneticinin Tercihleri ayarlanmış olabilir ve her yönetici hesabı için iki e-posta adresi üst sınırı vardır.
 
 > [!TIP]
-> Ayrıca, [mobil Microsoft 365 Yönetici](https://go.microsoft.com/fwlink/p/?linkid=627216) bildirimlerle güncel durumu takip etmek için mükemmel bir yol olan Hizmet durumunu görüntülemek için mobil aygıtınızda Microsoft 365 Yönetici uygulamasını da kullanabilirsiniz.
+> Ayrıca, mobil Microsoft 365 Yönetici [bildirimleriyle](https://go.microsoft.com/fwlink/p/?linkid=627216) güncel durumu takip etmek için mükemmel bir yol olan Hizmet durumunu görüntülemek için de mobil aygıtınızda Microsoft 365 Yönetici uygulamasını kullanabilirsiniz.
 
 ### <a name="view-details-of-posted-service-health"></a>Gönderilen hizmet durumunun ayrıntılarını görüntüleme
 
@@ -110,7 +110,7 @@ Tüm **hizmetler görünümünde** , çözüm üzerinde çalışırken gönderil
 Çoğu zaman hizmetler sağlam görünür ve başka bilgi saği olmaz. Hizmette sorun olduğunda, hizmet öneri veya olay olarak tanımlanır ve geçerli durum gösterilir.
 
 > [!TIP]
-> Planlı bakım olayları hizmet durumu içinde gösterilmez. Planlı bakım olaylarını, İleti merkeziyle güncel olarak **izleyebilirsiniz**. Değişikliğin ne zaman olacağını, etkisini ve buna nasıl hazırlık olacağını bulmak için Değişiklik planı olarak kategorilere ayrılmış iletilere filtre uygulama. Daha [fazla bilgi için Microsoft 365](https://support.office.com/article/38fb3333-bfcc-4340-a37b-deda509c2093) Merkezi'ne bakın.
+> Planlı bakım olayları hizmet durumu içinde gösterilmez. Planlı bakım olaylarını, İleti merkeziyle güncel olarak **izleyebilirsiniz**. Değişikliğin ne zaman olacağını, etkisini ve buna nasıl hazırlık olacağını bulmak için Değişiklik planı olarak kategorilere ayrılmış iletilere filtre uygulama. Daha [fazla bilgi için Microsoft 365](https://support.office.com/article/38fb3333-bfcc-4340-a37b-deda509c2093) merkezi'nde bulunan İleti merkezi'ne bakın.
 
 ### <a name="incidents-and-advisories"></a>Olaylar ve öneriler
 
@@ -138,13 +138,13 @@ Tüm **hizmetler görünümünde** , çözüm üzerinde çalışırken gönderil
 | Tür | Tanım |
 |:-----|:-----|
 |**Hızlı Güncelleştirme** | Tüm müşteriler tarafından kullanılabilen olayları geniş bir şekilde etkileyen kısa ve sık artımlı güncelleştirmeler. |
-|**Ek Ayrıntılar** | Bu ek gönderiler, olayları işleme konusunda daha ayrıntılı görünürlük sağlamak için daha zengin teknik ve çözüm ayrıntıları sağlar. Bu, aşağıdaki koşulların izlenmesinde ana hatları verilen Exchange Online [kullanılabilir](/microsoft-365/enterprise/microsoft-365-exchange-monitoring#requirements). |
+|**Ek Ayrıntılar** | Bu ek gönderiler, olayları işleme konusunda daha ayrıntılı görünürlük sağlamak için daha zengin teknik ve çözüm ayrıntıları sağlar. Bu, aşağıdaki koşulların izlenmesinde ana hatları verilen [Exchange Online kullanılabilir](/microsoft-365/enterprise/microsoft-365-exchange-monitoring#requirements). |
 
 ### <a name="history"></a>Geçmiş
 
 Hizmet durumu geçerli durumunıza bakmanıza ve son 30 gün içinde kiracınızı etkilenen tüm hizmet danışmanlarının ve olaylarının geçmişini görüntülemenize olanak sağlar. Tüm hizmetlerin geçmiş durumunu görüntülemek için Geçmiş **görünümü'ne** tıklayın.
 
-Çalışma süresi taahhüdümiz hakkında daha fazla bilgi için bkz[. Çalışma süresinden saydam Microsoft 365](/office365/servicedescriptions/office-365-platform-service-description/service-health-and-continuity).
+Çalışma süresi taahhüdümiz hakkında daha fazla bilgi için bkz[. Çalışma süremiz için Microsoft 365](/office365/servicedescriptions/office-365-platform-service-description/service-health-and-continuity).
 
 ## <a name="related-topics"></a>İlgili konular
 
