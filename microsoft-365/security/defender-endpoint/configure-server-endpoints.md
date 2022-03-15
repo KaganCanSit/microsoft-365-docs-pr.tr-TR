@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 5f0b846fdbfaa76250ae64ae281afc9592a24eb4
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 6f6ada6604190ccba270b287201d94ba2acbf6d2
+ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450360"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63504849"
 ---
 # <a name="onboard-windows-servers-to-the-microsoft-defender-for-endpoint-service"></a>Uç Windows için Microsoft Defender hizmetine ek sunucu ekleme
 
@@ -298,6 +298,8 @@ Yüklemeyi, kaldırmayı [ve](server-migration.md#installer-script) ekleme işle
     ```  
 
      >[!NOTE]
+    >Aracı yükleme sorunlarını gidermeniz gerekirse, komut dosyası parametrelerini '-etl -log' install.ps1 ekleyin.
+    >
     >Önerilen yürütme ilkesi ayarıdır `Allsigned`. Bunun için betiğin imzalama sertifikası, betiğin uç noktada SYSTEM olarak çalışıyorsa Yerel Bilgisayar Güvenilen Yayımcılar deposuna içeri aktarılması gerekir.
 
     Dosya \\sunucusunun paylaşılan paylaşılan dosyanın tam etki alanı adını (FQDN) kullanarak servername-or-the-space\share-name'yi UNC *yoluylainstall.ps1* değiştirin. Yükleyici paketi md4ws.msi aynı dizine yerleştiril olmalıdır.  Ayrıca UNC yolu izinlerinin, platformu yükleyerek bilgisayar hesabına okuma erişimine izin olduğundan da emin olun.

@@ -1,6 +1,6 @@
 ---
-title: Bir XDR Microsoft 365 Defender değerlendirme ve pilot Microsoft 365 Defender
-description: Cihazları, Microsoft 365 Defender, verileri ve uygulamaları korumak için tasarlanmış bir güvenlik çözümünü test etmek ve bu çözümden deneyim yaşamak için test etmek üzere test edin.
+title: Bir XDR çözümü Microsoft 365 Defender değerlendirme ve pilot uygulama
+description: XDR güvenliği nedir? Microsoft XDR'sini aynı Microsoft 365 Defender? Cihazları, kimlikleri, verileri ve Microsoft 365 Defender korumak üzere tasarlanmış bir güvenlik çözümünü test etmek ve bu çözüm üzerinde pilot çalışma ortamınızı planlamak için bu blog serisini kullanın. XDR siber güvenlik yolculuğunu burada başlatarak bu testi üretime attır.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 442ac9859f259479da556a9611880a61ab0413e0
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+ms.openlocfilehash: 5c0ef6ce393f7c79ee6fca9b591d99c46d864a52
+ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63014416"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63504537"
 ---
 # <a name="evaluate-and-pilot-microsoft-365-defender"></a>Değerlendirme ve pilot Microsoft 365 Defender
 
@@ -34,13 +34,32 @@ ms.locfileid: "63014416"
 
 - Microsoft 365 Defender
 
-Microsoft 365 Defender, Microsoft 365 ortamınız genelinde uç nokta, e-posta, uygulamalar ve kimlikler dahil olmak üzere sinyali, tehdide ve uyarıyı otomatik olarak toplayan, bu bilgileri analiz eden ve analiz eden genişletilmiş bir algılama ve yanıt (XDR) çözümüdür. Kapsamlı AI ve otomasyondan yararlanarak saldırıları otomatik olarak durdurarak etkilenen varlıkları güvenli bir halde düzeltmeyi sağlar. Aşağıdaki makaleler, bir deneme ortamı ayarlama sürecinde size yollar; böylelikle bu ortamın özelliklerini ve özelliklerini Microsoft 365 Defender. 
+# <a name="how-this-article-series-works"></a>Bu makale serisi nasıl çalışır?
 
-Bu makalelere baktıkça adımlar, her bileşeni nasıl etkinleştirecek, ayarları nasıl yapılandıracak ve pilot bir grupla izlemeye nasıl başlanacaklarını gösterir. Hazır olduğunda değerlendirme ortamınızı doğrudan üretime dönüştürerek promosyonla bitirebilirsiniz.
+Bu makale dizisi, deneme XDR ortamını *, sona* doğru ayarlama işleminin tamamına adım atacak şekilde tasarlanmıştır; böylece, Microsoft 365 Defender'in özelliklerini ve özelliklerini değerlendirerek, hatta hazır olduğunda ve hazırsanız değerlendirme ortamını doğrudan üretime yükseltebilirsiniz.
+
+XDR'i ilk kez düşünüyorsanız, çözümün ne kadar kapsamlı olduğunu ilk kez düşünmek için bu 7 bağlantılı makaleyi tarayamazsanız.
+
+- [Ortamı oluşturma](eval-create-eval-environment.md)
+- Bu Microsoft XDR teknolojisinin her bir teknolojisini ayarlama veya öğrenme
+    - [Kimlik için Microsoft Defender](eval-defender-identity-overview.md)
+    - [Office için Microsoft Defender](eval-defender-office-365-overview.md)
+    - [Uç Nokta için Microsoft Defender](eval-defender-endpoint-overview.md)
+    - [Bulut Uygulamaları için Microsoft Defender](eval-defender-mcas-overview.md)
+- [Bu XDR kullanarak araştırma ve yanıtlama](eval-defender-investigate-respond.md)
+- [Deneme ortamını üretim ortamına tanıtma](eval-defender-promote-to-production.md)
+
+## <a name="microsoft-365-defender-is-a-microsoft-xdr-cyber-security-solution"></a>Microsoft 365 Defender bir Microsoft XDR siber güvenlik çözümüdür
+
+Microsoft 365 Defender, Microsoft 365 ortamınız genelinde uç nokta, e-posta, uygulamalar ve kimlikler dahil olmak üzere sinyali, tehdide ve uyarıyı otomatik olarak toplayan, birbiriyle ilgili olan ve analiz eden bir  **e-posta algılama ve yanıt (XDR)** *çözümüdür*. Yapay zekadan (AI) ve otomasyondan yararlanarak  saldırıları otomatik olarak durdurur ve etkilenen varlıkları güvenli bir durumda düzeltmeye yöneliktir.
+
+XDR'i, tek bir yerde güvenlik, uç noktayı (uç noktada algılama ve yanıtlama veya EDR), e-posta, uygulama ve kimlik güvenliğinin bir sonraki adımı olarak düşünebilirsiniz.
+
+## <a name="microsoft-recommendations-for-evaluating-microsoft-365-defender"></a>Değerlendirmeyle ilgili Microsoft Microsoft 365 Defender
 
 Microsoft, değerlendirmenizi şu an için mevcut bir üretim aboneliğinde oluşturmanızı Office 365. Bu şekilde, gerçek dünyaya hemen öngörüler edinecek ve ayarları ortamınıza yönelik mevcut tehditlere karşı çalışacak şekilde ayar yapabilirsiniz. Deneyim kazandıktan ve platformda rahat olduktan sonra, her bileşeni tek tek üretime yükseltin.
 
-## <a name="the-anatomy-of-an-attack"></a>Saldırının anatomisi
+## <a name="the-anatomy-of-a-cyber-security-attack"></a>Siber güvenlik saldırılarının anatomisi
 
 Microsoft 365 Defender tabanlı, birleşik, ihlal öncesi ve ihlal sonrası bir kurumsal savunma paketidir. Engelleme, *algılama**, soruşturma* ve uç *noktalar,* kimlikler, uygulamalar, e-posta, işbirliğine dayalı uygulamalar ve tüm verileri genelinde engelleme, algılama, soruşturma ve yanıt noktaları eşgüdüm sağlar.
 
@@ -56,7 +75,7 @@ Bu çizimde bir saldırı yapılıyor. Kimlik avı e-postası, e-posta ekini far
 - **Kimlik için Defender ayrıcalık** yükseltmesi veya yüksek riskli uzar hareketi gibi daha önce olan hesap değişikliklerinin olduğunu dikkate alır. Ayrıca, güvenlik ekibi tarafından düzeltme için kısıtlanmamış Kerberos temsilcisi gibi kolayca yararlanan kimlik sorunları hakkında da bilgi sağlar.
 - **Bulut Uygulamaları için Microsoft Defender** bildirim, imkansız seyahat, kimlik bilgileri erişimi ve olağandışı indirme, dosya paylaşımı veya posta iletme etkinliği gibi anormal davranışlara sahip ve bunları güvenlik ekibine raporlar.
 
-### <a name="microsoft-365-defender-components"></a>Microsoft 365 Defender bileşenleri
+### <a name="microsoft-365-defender-components-secure-devices-identity-data-and-applications"></a>Microsoft 365 Defender, kimliği, verileri ve uygulamaları güvenlik altına almak için bu bileşenleri kullanın
 
 Microsoft 365 Defender, birlikte çalışan bu güvenlik teknolojilerden ileri türetir. XDR ve diğer bileşenlerin özelliklerinden yararlanabilmek için bu bileşenlerin Microsoft 365 Defender. Bir veya iki kullanımıyla da kazançlar ve verimlilik elde ettiysiniz. 
 
@@ -85,11 +104,15 @@ Bu şekilde:
 - Bulut Uygulamaları için Microsoft Defender, kurumuz tarafından bulut uygulamalarının kullanımından gelen sinyalleri toplar ve hem tahmin hem de işaretsiz bulut uygulamaları dahil, ortamınız ile bu uygulamalar arasında akan verileri korur.
 - Azure AD Kimlik Koruması, milyar oturum açma girişimlerinden risk verilerini değerlendirir ve ortamınıza her oturum açmanın riskini değerlendirmek için bu verileri kullanır. Bu veriler, Koşullu Erişim ilkelerinin nasıl yapılandırıldıklarına bağlı olarak, Azure AD tarafından hesap erişimine izin vermek veya engellemek için kullanılır. Azure AD Identity Protection, azure addan ayrı Microsoft 365 Defender. Bu, yeni e-Azure Active Directory Premium P2.  
 
+## <a name="microsoft-siem-and-soar-can-use-data-from-microsoft-365-defender"></a>Microsoft SIEM ve SOAR, veri kaynağından Microsoft 365 Defender
+
 Bu çizimde yer alan ek isteğe bağlı mimari bileşenleri:
 
-- Tüm veri bileşenlerinden ayrıntılı sinyal Microsoft 365 Defender bileşenleri Microsoft Sentinel ile tümleştirildi ve diğer günlük kaynaklarıyla birleştirildi ve tam SIEM ve SOAR özellikleriyle içgörüler sunabilirsiniz.
+- **Tüm veri bileşenlerinden ayrıntılı sinyal Microsoft 365 Defender bileşenleri Microsoft Sentinel** ile tümleştirildi ve diğer günlük kaynaklarıyla birleştirildi ve tam SIEM ve SOAR özellikleriyle içgörüler sunabilirsiniz.
+- Azure SIEM olan ve XDR olarak Microsoft 365 Defender olan **Microsoft Sentinel'i** kullanma hakkında daha fazla bilgi için, bu Genel Bakış makalesine ve [](/azure/sentinel/microsoft-365-defender-sentinel-integration) Microsoft Sentinel ve Microsoft 365 Defender tümleştirme adımlarına [göz atabilirsiniz](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
+- Microsoft Sentinel'de SOAR hakkında daha fazla bilgi için (Microsoft Sentinel Depolama Havuzu'GitHub çalışma kitaplarının bağlantıları dahil), lütfen bu [makaleyi okuyun](/azure/sentinel/automate-responses-with-playbooks).
 
-## <a name="the-evaluation-process"></a>Değerlendirme süreci
+## <a name="the-evaluation-process-for-microsoft-365-defender-cyber-security"></a>Siber güvenliği Microsoft 365 Defender değerlendirme süreci
 
 Microsoft, aşağıdakiler için Microsoft 365 bileşenlerini etkinleştirmenizi önermektedir:
 
@@ -108,8 +131,8 @@ Aşağıdaki tabloda bu çizim açık gösterilmiştir.
 |7     | [Denemeyi üretime yükseltin](eval-defender-promote-to-production.md)        | Yeni Microsoft 365 tek üretime yükseltin.        |
 | | | |
 
-Bu, genellikle özellikleri dağıtmak ve yapılandırmak için ne kadar çaba gerektirmektedir? temel alarak yeteneklerin değerini hızlı bir şekilde elde etmek için tasarlanmış ve yaygın olarak önerilen bir sıradır. Örneğin, Office 365 için Defender, Uç nokta için Defender'da cihazları kaydetmek için gerekenden daha kısa sürede ya yapılandırabilirsiniz. Kuşkusuz, iş ihtiyaçlarını karşılayacak bileşenlere öncelik ve bunları farklı bir sırada etkinleştirebilirsiniz.
+Bu, genellikle özellikleri dağıtmak ve yapılandırmak için ne kadar çaba gerektirmektedir? temel alarak yeteneklerin değerinden hızlı bir şekilde yararlanabilmek için tasarlanmış ve yaygın olarak önerilen bir sıradır. Örneğin, Office 365 için Defender, Uç nokta için Defender'da cihazları kaydetmek için gerekenden daha kısa sürede ya yapılandırabilirsiniz. Kuşkusuz, iş ihtiyaçlarını karşılayacak bileşenleri önceliklendirmeli ve bunları farklı bir sırada etkinleştirebilirsiniz.
 
-## <a name="next-steps"></a>Sonraki adımlar
+## <a name="go-to-the-next-step"></a>Sonraki Adıma gitme
 
-[Değerlendirme Microsoft 365 Defender Oluşturma](eval-create-eval-environment.md)
+[Değerlendirme Ortamı hakkında ve/veya Microsoft 365 Defender hakkında bilgi](eval-create-eval-environment.md)

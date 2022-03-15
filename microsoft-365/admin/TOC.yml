@@ -11,7 +11,7 @@
           href: admin-overview/sign-up-for-office-365.md
         - name: Microsoft 365'i deneme veya satın alma
           href: ../commerce/try-or-buy-microsoft-365.md
-        - name: İşletmeler için Microsoft 365 planınızı planlama
+        - name: Microsoft 365 Kurumsal kurulumlarınızı planlama
           href: setup/plan-your-setup.md
         - name: Oturum açma için Microsoft 365 İş Ekstra
           items:
@@ -21,23 +21,23 @@
               href: ../business/set-up.md
             - name: Microsoft 365 İş Ekstra (video)
               href: admin-overview/what-is-microsoft-365.md
-        - name: Oturum Microsoft 365 İş Standart
+        - name: Oturum açma için Microsoft 365 İş Standart
           items:
-            - name: Oturum Microsoft 365 İş Standart
+            - name: Oturum açma için Microsoft 365 İş Standart
               href: ../admin/simplified-signup/signup-business-standard.md
             - name: E-Microsoft 365 İş Standart
               href: ../admin/setup/setup-business-standard.md
-            - name: Kullanıcıları davet Microsoft 365 İş Standart
+            - name: Kullanıcıları davet et'Microsoft 365 İş Standart
               href: ../admin/simplified-signup/admin-invite-business-standard.md
             - name: E-posta davetini kabul Microsoft 365 İş Standart
               href: ../admin/simplified-signup/user-invite-business-standard.md
-            - name: 'Outlook, Yahoo, Gmail veya başka bir hesabı kullanarak Microsoft 365 İş Standart aboneliği kuruluşuna e-posta daveti kabul etme'
+            - name: 'Outlook, Yahoo, Gmail veya başka bir hesabı kullanarak Microsoft 365 İş Standart abonelik kuruluşuna e-posta daveti kabul etme'
               href: ../admin/simplified-signup/user-invite-msa-nodomain-join.md
             - name: Verileri Microsoft 365 İş Standart aboneliğime geçirme
               href: ../admin/simplified-signup/migrate-data-business-standard.md
         - name: İş için Microsoft Apps'e kaydolma
           items:
-            - name: Oturum İş için Microsoft 365 Uygulamaları
+            - name: Oturum açma için İş için Microsoft 365 Uygulamaları
               href: setup/signup--apps-business.md
             - name: Her şey için İş için Microsoft 365 Uygulamaları
               href: setup/setup-apps-for-business.md
@@ -77,7 +77,7 @@
           href: setup/customize-your-organization-theme.md
         - name: Şirket içi kullanıcılara ve kaynaklara erişme
           items:
-            - name: Etki alanı kullanıcılarını eşitlemek Microsoft 365
+            - name: Etki alanı kullanıcılarını eşitleme Microsoft 365
               href: setup/manage-domain-users.md
             - name: Etki alanına katılmış Windows 10 cihazlarının yönetillerini etkinleştirme
               href: setup/manage-windows-devices.md
@@ -231,7 +231,7 @@
           href: get-help-with-domains/buy-a-domain-name.md
         - name: Etki alanını kaldırma
           href: get-help-with-domains/remove-a-domain.md
-        - name: Bir etki alanını bir Microsoft 365 ana bilgisayara aktarma
+        - name: Etki alanını bir Microsoft 365 ana bilgisayara aktarma
           href: get-help-with-domains/transfer-a-domain-from-microsoft-to-another-host.md
         - name: Özel Microsoft 365 alanımdan pilot uygulama
           href: misc/pilot-microsoft-365-from-my-custom-domain.md
@@ -290,7 +290,7 @@
               href: manage/centralized-deployment-faq.yml
         - name: Endüstri haberlerini yönetme
           href: manage/manage-industry-news.md
-        - name: Tüm Office ayarlarını yönetme
+        - name: Betik Office ayarlarını yönetme
           href: manage/manage-office-scripts-settings.md
         - name: İş ortağı veya yeniden satıcı bulma
           href: manage/find-your-partner-or-reseller.md
@@ -338,21 +338,21 @@
       items:
         - name: Verilerinizin güvenliğini sağlamanın en iyi 10 yolu
           href: security-and-compliance/secure-your-business-data.md
-        - name: Çok faktörlü kimlik doğrulaması Microsoft 365
+        - name: Etki için çok faktörlü kimlik Microsoft 365
           href: security-and-compliance/multi-factor-authentication-microsoft-365.md
         - name: Çok faktörlü kimlik doğrulamasını ayarlama
           href: security-and-compliance/set-up-multi-factor-authentication.md
         - name: Öncelik hesaplarını yönetme ve izleme
           href: setup/priority-accounts.md
+        - name: Idle oturum zaman aşımını açma
+          href: manage/idle-session-timeout-web-apps.md
         - name: Office 2013 için Modern Kimlik Doğrulamayı Etkinleştirme
           href: security-and-compliance/enable-modern-authentication.md
         - name: Veri koruması için önkullar
           href: security-and-compliance/pre-requisites-for-data-protection.md
-        - name: Güvenlik özellikleri
-          href: security-and-compliance/secure-your-business-data.md
         - name: Tehdit korumasını artırma
           href: security-and-compliance/increase-threat-protection.md
-        - name: Tehdit tarafından algılanan Microsoft Defender Virüsten Koruma
+        - name: Güvenlik tarafından algılanan Microsoft Defender Virüsten Koruma
           href: security-and-compliance/threats-detected-defender-av.md
         - name: Algılanan tehditleri gözden geçirme ve önlem alma
           href: security-and-compliance/review-threats-take-action.md
@@ -448,9 +448,9 @@
           href: moveto-microsoft-365/add-google-domain.md
         - name: Uygulama Office yükleme ve Microsoft Teams
           href: setup/install-applications.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
-        - name: 'E-postayı, takvimi ve kişileri başka bir Microsoft 365'
+        - name: 'E-posta, takvim ve kişileri başka bir Microsoft 365'
           href: moveto-microsoft-365/migrate-email.md
-        - name: Bağlan alanına Microsoft 365
+        - name: Bağlan'e Microsoft 365
           href: moveto-microsoft-365/connect-domain-tom365.md
         - name: Herkesin verilerini taşımak için Geçiş Yöneticisi'ni kullanma
           href: moveto-microsoft-365/migrate-files-migration-manager.md
@@ -466,7 +466,7 @@
           href: 'https://support.microsoft.com/office/fccb4fa6-f864-4508-bdde-256e7384a14f'
         - name: Konuk kullanıcılarla Teams toplantısı zamanlama
           href: 'https://support.microsoft.com/office/943507a9-8583-4c58-b5d2-8ec8265e04e5'
-        - name: Konuk kullanıcılarla Teams bir toplantıya katılma
+        - name: Konuk kullanıcılarla Teams toplantısına katılma
           href: 'https://support.microsoft.com/office/c6efc38f-4e03-4e79-b28f-e65a4c039508'
     - name: Sorun giderme
       href: /office/troubleshoot/

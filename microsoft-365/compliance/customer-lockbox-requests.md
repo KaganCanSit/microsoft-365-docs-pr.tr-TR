@@ -18,16 +18,16 @@ search.appverid:
 - MOE150
 ms.custom: admindeeplinkMAC
 description: Bir sorunla karşı karşınıza çıkan bir Microsoft destek mühendisinin verilerinize nasıl erişeni denetlemenize olanak sağlayan Müşteri Kasa istekleri hakkında bilgi alın.
-ms.openlocfilehash: 4788a17df4a4d11245fa65342002cab1dc5716fa
-ms.sourcegitcommit: cafca45069819a44c7cf8c67f6c1e105de1b3393
+ms.openlocfilehash: 532b1b78c40725fa3558768a6b65beda9b8e05b2
+ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "63027561"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63504827"
 ---
 # <a name="customer-lockbox-in-office-365"></a>Müşteri Kilidi Office 365
 
-Bu makalede Müşteri Kilidi için dağıtım ve yapılandırma kılavuzu sunulmaktadır. Customer Lockbox, Exchange Online, SharePoint Online ve OneDrive İş'de verilere erişim isteklerini destekler. Diğer hizmetler için destek önerisinde, [UserVoice'Office 365 bir istek gönderin](https://feedbackportal.microsoft.com/feedback/).
+Bu makalede Müşteri Kilidi için dağıtım ve yapılandırma kılavuzu sunulmaktadır. Customer Lockbox, Exchange Online, SharePoint Online ve OneDrive İş'de verilere erişim isteklerini destekler. Diğer hizmetler için destek önerin, Geri Bildirim Portalı'nda bir [istek gönderin](https://feedbackportal.microsoft.com).
 
 Uyumluluk tekliflerinden yararlanan kullanıcılarınızı lisanslama Microsoft 365 için, güvenlik Microsoft 365 uyumlulukla ilgili lisanslama & [bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 

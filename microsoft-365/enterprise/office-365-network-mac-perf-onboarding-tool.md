@@ -14,12 +14,12 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 description: Microsoft 365 bağlantı test aracı
-ms.openlocfilehash: 8704da93d8f7ec95460ae5a275289176bccb0c22
-ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
+ms.openlocfilehash: e464b4e651276f8b36f54e91ea0bfc7b7b52d69b
+ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2022
-ms.locfileid: "63494506"
+ms.locfileid: "63504556"
 ---
 # <a name="microsoft-365-network-connectivity-test-tool"></a>Microsoft 365 bağlantı test aracı
 
@@ -255,7 +255,7 @@ Bu, Microsoft'un genel ağına ilişkin, müşterilerin etkilenmesi gibi önemli
 
 Uzaktan dağıtım ve yürütme araçlarınız tarafından kullanılabilen bir komut satırı yürütülebilir dosyası sağlar ve Microsoft 365 ağ bağlantı test aracı web sitesinde bulunanla aynı testleri çalıştırın.
 
-Komut satırı test aracı buradan indirilebilir: ![Komut Satırı Aracı](https://connectivity.office.com/api/AnonymousConnectivityTest/DownloadStandAloneRichClient)
+Komut satırı test aracı buradan indirilebilir: [Komut Satırı Aracı](https://connectivity.office.com/api/AnonymousConnectivityTest/DownloadStandAloneRichClient)
 
 Dosya Gezgini'nde yürütülebilir dosyaya çift tıklayarak Windows çalıştırabilirsiniz veya bunu bir komut isteminden başlatabilirsiniz veya görev zamanlayıcıyla zamanabilirsiniz.
 

@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Farklı sitelerde ve farklı gruplarda yer alan SharePoint Microsoft Teams korumak için duyarlılık Microsoft 365 kullanın.
-ms.openlocfilehash: 39caee37f8bf8b2f885824bbdd12ca7b5b372e69
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 46daf3ecd4c918196fa7a50f8e8869bdd54c945e
+ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320515"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63504815"
 ---
 # <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Aynı sitelerde, gruplarda ve Microsoft Teams sitelerde Microsoft 365 için duyarlılık SharePoint kullanma
 
@@ -327,7 +327,7 @@ Ayrıca, bu sayfadan bir etiket değiştirebilir ve uygulayabilirsiniz:
 
 ## <a name="support-for-sensitivity-labels"></a>Duyarlılık etiketleri desteği
 
-Duyarlılık etiketlerini destekleyen yönetim merkezleri kullanırken kiracınız için tüm duyarlılık etiketlerini görüyorsunuz. Karşılaştırmada, yayımlama ilkelerine göre duyarlılık etiketlerini filtreleyene kullanıcı uygulamaları ve hizmetler bu etiketlerin bir alt kümesini görmenizi neden olabilir.
+Duyarlılık etiketlerini destekleyen yönetim merkezleri kullanırken, Azure Active Directory portalı dışında kiracınız için tüm duyarlılık etiketlerini duyarsınız. Karşılaştırmada, yayımlama ilkelerine göre duyarlılık etiketlerini filtreleyene kullanıcı uygulamaları ve hizmetler bu etiketlerin bir alt kümesini görmenizi neden olabilir. Ayrıca Azure Active Directory portalı yayımlama ilkelerine göre etiketlere de filtre uygulamaz.
 
 Aşağıdaki uygulamalar ve hizmetler, siteler ve grup ayarları için yapılandırılmış duyarlılık etiketlerini destekler:
 
@@ -335,9 +335,9 @@ Aşağıdaki uygulamalar ve hizmetler, siteler ve grup ayarları için yapıland
 
   - SharePoint merkezi
   - Teams merkezi
-  - Azure Active Directory portalı
   - Microsoft 365 yönetici merkezi
   - Microsoft 365 uyumluluk merkezi
+  - Azure Active Directory portalı
 
 - Kullanıcı uygulamaları ve hizmetleri:
 

@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Microsoft Web Sitesinde içerik derlemesi kullanarak belgeleri ve diğer içerikleri otomatik olarak SharePoint Syntex.
-ms.openlocfilehash: 240b67ea2ca8c1119654096c365e958995e9c946
-ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
+ms.openlocfilehash: 9da2aa91443ffe1dd3bbd632b5284ce8f7622069
+ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2022
-ms.locfileid: "63494562"
+ms.locfileid: "63504567"
 ---
 # <a name="create-documents-using-content-assembly-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'ta içerik derlemesi kullanarak belgeler oluşturma
 
@@ -64,7 +64,7 @@ Modern bir şablon oluşturmak için bu adımları izleyin.
    - [Liste veya kitaplık sütunundaki seçeneklerden seçme](#associate-a-placeholder-by-selecting-from-choices-in-a-column-of-a-list-or-library)
 
    > [!NOTE]
-   > Şu anda, bir tablo hücresine veya tablonun içinde yer tutucular ekleriz.   
+   > Yalnızca metin için yer tutucular oluşturabilirsiniz. Şu anda resimler, akıllı resimler, tablolar ve madde işareti listeleri desteklenemİ değildir.   
 
 ### <a name="associate-a-placeholder-by-entering-text-or-selecting-a-date"></a>Metin girerek veya tarih seçerek yer tutucuyu ilişkilendirme 
 

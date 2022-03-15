@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 ms.assetid: 7dc1c01a-090f-4971-9677-f1b192d6c910
 description: 2013 yüklü olan cihazlarda modern kimlik doğrulamayı etkinleştirmek için kayıt Microsoft Office ayarlamayı öğrenin.
-ms.openlocfilehash: 9ab3bb8e352a90cd4cef0c3c56496b3431e8b746
-ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
+ms.openlocfilehash: 010dce00762e4e73d21a9da668a7ac9606d731f9
+ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2022
-ms.locfileid: "63494464"
+ms.locfileid: "63504744"
 ---
 # <a name="enable-modern-authentication-for-office-2013-on-windows-devices"></a>Windows cihazlarında Office 2013 için Modern Kimlik Doğrulama'yı etkinleştirme
 
@@ -48,9 +48,8 @@ Windows çalıştıran ve Microsoft Office 2013'ün yüklü olduğu herhangi bir
 |Kayıt defteri anahtarı|Tür|Değer|
 |:---|:---:|---:|
 |HKEY_CURRENT_USER\Software\Microsoft\Exchange\AlwaysUseMSOAuthForAutoDiscover|REG_DWORD|1|
-|HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity\EnableADAL|REG_DWORD|1|
-|HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity\Version|REG_DWORD|1|
-|
+|HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\Identity\EnableADAL|REG_DWORD|1|
+|HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\Identity\Version|REG_DWORD|1|
 
 EWS ve Otomatik Bulma gibi web Outlook için daha yeni bir kimlik doğrulama yöntemi kullanmaya zorlamak için aşağıdaki kayıt defteri anahtarlarını oluşturun veya bu kayıt defterinde değişiklik yapın. Kullanıcıların Modern Kimlik Doğrulama'Outlook kimlik doğrulamasını kullanmaya zorlamalarını öneririz.
 
@@ -67,7 +66,7 @@ EWS ve Otomatik Bulma gibi web Outlook için daha yeni bir kimlik doğrulama yö
    HKEY_CURRENT_USER\Software\Microsoft\Exchange\
    ```
 
-4. *AlwaysUseMSOAuthForAutoDiscover* tuşu yoksa, *AlwaysUseMSOAuthForAutoDiscover* yazın ve Enter tuşuna **basın.**
+4. *AlwaysUseMSOAuthForAutoDiscover* tuşu yoksa, Düzen menüsünde Yeni'nin üzerine gelin ve **DWORD Değeri'ni seçin**. *AlwaysUseMSOAuthForAutoDiscover yazın ve* Enter tuşuna **basın.**
 
 5. *AlwaysUseMSOAuthForAutoDiscover'a sağ tıklayın ve* ardından Değiştir'e **tıklayın.**
 
@@ -76,10 +75,10 @@ EWS ve Otomatik Bulma gibi web Outlook için daha yeni bir kimlik doğrulama yö
 7. Kayıt Defteri Düzenleyicisi'nde, aşağıdaki kayıt defteri alt anahtarını bulun ve tıklatın:
 
    ```console
-   HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity\
+   HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\Identity\
    ```
 
-8. Yukarıdaki tabloda zaten değerler varsa, bunları değiştirin ve sonra Kayıt Defteri Düzenleyicisi'den çıkın. Yoksa, Düzen menüsünde Yeni'nin üzerine **gelin** ve eksik tuşlar için **DWORD Değeri'ne** tıklayın. 
+8. Yukarıdaki tabloda zaten anahtarlar varsa, gerekiyorsa değerleri değiştirin, sonra da Kayıt Defteri Düzenleyicisi'den çıkın. Yoksa, Düzen menüsünde Yeni'nin üzerine gelin ve ardından eksik  tuşları oluşturmak için **DWORD Değeri'ni** seçin. 
 
 9. Örneğin, *EnableADAL tuşu* yoksa, *EnableADAL yazın ve* Enter tuşuna **basın.**
 
@@ -105,9 +104,8 @@ Bir cihazda modern kimlik doğrulamayı devre dışı bırakmak için aşağıda
 
 |Kayıt defteri anahtarı|Tür|Değer|
 |:---|:---:|---:|
-|HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity\EnableADAL|REG_DWORD|0|
+|HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity\EnableADAL|REG_DWORD|0|
 |HKEY_CURRENT_USER\Software\Microsoft\Exchange\AlwaysUseMSOAuthForAutoDiscover|REG_DWORD|0|
-|
    
 ## <a name="related-content"></a>İlgili içerik
 

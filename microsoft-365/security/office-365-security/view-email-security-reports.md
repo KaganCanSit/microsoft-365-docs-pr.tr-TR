@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3fdab6896edf704c4daa83ec993c0716c54d0f43
-ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
+ms.openlocfilehash: 0703e1f23d9d54a907b39382438f85f544a5b6de
+ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2022
-ms.locfileid: "63494576"
+ms.locfileid: "63504867"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Portalda e-posta Microsoft 365 Defender görüntüleme
 
@@ -485,6 +485,9 @@ Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et**
 
 ![Tehdit koruması durumu raporunda kimlik avı e-postaları için algılama teknolojisi görünümü.](../../media/threat-protection-status-report-phishing-detection-tech-view.png)
 
+> [!NOTE]
+> Mayıs 2021'den başlayarak, e-postada kimlik avı algılamaları kimlik  avı URL'leri içeren ileti eklerini içerecek şekilde güncelleştirildi. Bu değişiklik, Algılama ses düzeyi bazında **\>** Verileri E-posta Kötü Amaçlı E-posta Kötü Amaçlı E-postayla Görüntüle görünümünden ve Verileri E-posta Kimlik Avından **Görüntüle görünümüne \> değiştirebilir**. Başka bir deyişle, geleneksel olarak kötü amaçlı yazılım olarak tanımlanan kimlik avı URL'lerine sahip ileti ekleri artık kimlik avı olarak da tanımlanır.
+
 Verileri **E-Posta KimlikLerine Göre \>** Görüntüleme **ve Algılama Teknolojisine** Göre Grafik Çözümleme görünümünde, grafikte aşağıdaki bilgiler gösterilir:
 
 - **URL kötü amaçlı itibarı**<sup>\*</sup>: Diğer birçok müşteri tarafından Office 365 için Defender'dan oluşturulan kötü amaçlı URL Microsoft 365.
@@ -599,6 +602,9 @@ Tehdit **koruması durumu sayfasında** Zamanlama oluştur ![simgesi.](../../med
 ### <a name="view-data-by-email--malware-and-chart-breakdown-by-detection-technology"></a>Verileri E-posta Kötü Amaçlı Yazılımına \> ve Grafik Çözümlemesi'ne göre Algılama Teknolojisine göre görüntüleme
 
 ![Tehdit koruması durumu raporunda kötü amaçlı yazılım için algılama teknolojisi görünümü.](../../media/threat-protection-status-report-malware-detection-tech-view.png)
+
+> [!NOTE]
+> Mayıs 2021'den başlayarak, e-postada yapılan kötü amaçlı yazılım algılamaları, ileti eklere zararlı **URL'ler eklemek** için güncelleştirildi. Bu değişiklik, Verileri E-posta Kimlik Avı **\>** görünümüne göre görüntüleme ve Verileri Kötü Amaçlı E-posta Kötü Amaçlı E-postayla Görüntüle görünümüne kadar algılama ses **düzeyinin bir değişimini değiştirebilir.\>** Başka bir deyişle, geleneksel olarak kimlik avı olarak tanımlanan ileti ekleri için zararlı URL'ler artık kötü amaçlı yazılım olarak da tanımlanır.
 
 Verileri **E-Posta Kötü Amaçlı \> Yazılımına** Göre Görüntüle **ve Algılama** Teknolojisine Göre Grafik Çözümleme görünümünde, grafikte aşağıdaki bilgiler gösterilir:
 

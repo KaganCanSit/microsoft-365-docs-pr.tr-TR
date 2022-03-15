@@ -1,6 +1,6 @@
 ---
-title: Adım 2. Kimlik Microsoft 365 Defender için değerlendirme değerlendirme, değerlendirmeyi ayarlama
-description: Kimlik için Kimlik doğrulama Microsoft 365 Defender, eval'ı etkinleştirme ve pilot ya da test ayarlama gibi adımları.
+title: Adım 2. Kimlik değerlendirme Microsoft 365 Defender değerlendirmeye genel bakış
+description: Microsoft 365 Defender Microsoft 365 Defender XDR çözümünüzde Identity Microsoft 365 Defender'i kullanın. Kimlik için Kimlik doğrulama Microsoft 365 Defender, eval'ı etkinleştirme ve pilot ya da test ayarlama gibi adımları.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -22,12 +22,12 @@ ms.collection:
 - m365solution-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 37b387d1e38ca3e49406773820a63a6e0d239356
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 2438e7690230af88eae72e0864184e771bdd4135
+ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63311585"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63504806"
 ---
 # <a name="step-2-evaluate-microsoft-defender-for-identity-overview"></a>Adım 2. Kimlik için Microsoft Defender'ı değerlendirmeye genel bakış
 
@@ -35,14 +35,17 @@ ms.locfileid: "63311585"
 **Aşağıdakiler için geçerlidir:**
 - Microsoft 365 Defender
 
-Bu makalede Kimlik için Microsoft Defender'ı etkinleştirme ve pilot uygulama işlemi ana hatlarıyla açıklanmıştır. Bu işleme başlamadan önce, değerlendirme sürecini gözden geçirmeyi Microsoft 365 Defender değerlendirme ortamını [oluşturduğunuzdan Microsoft 365 Defender gerekir](eval-create-eval-environment.md).[](eval-overview.md) 
+> [!NOTE]
+> Bu makale ayrıca, bu Genel bakış Microsoft 365 Defender sözmız olan XDR çözümünün de bir [bölümüdür](eval-overview.md).
+
+ Kimlik için Microsoft Defender'ı olanaklı kılan ve pilot yapan işleme başlamadan önce *Microsoft 365 Defender'i eXtendEdilen Algılama ve Yanıt (XDR)* çözümü olarak değerlendirmek için, işlemi en baştan itibaren gözden geçirmeyi [deneyin:](eval-overview.md) Microsoft 365 Defender'i oluşturma dahil değerlendirme [ Microsoft 365 Defender ortamını inceleme](eval-create-eval-environment.md).
 <br>
 
-Identity için Microsoft Defender'ı etkinleştirmek ve pilot yapmak için aşağıdaki adımları kullanın.
+Identity için Microsoft Defender'ı etkinleştirmek ve bu özelliğin pilot kullanımını yapmak için aşağıdaki adımları kullanın.
 
 ![Defender değerlendirme ortamına Kimlik için Microsoft Defender ekleme adımları.](../../media/defender/m365-defender-identity-eval-steps.png)
 
-Aşağıdaki tabloda, çizimde yer alan adımlar açık gösterilmiştir.
+Bu tabloda, çizimde yer alan adımlar açık gösterilmiştir.
 
 | |Adım  |Açıklama  |
 |---------|---------|---------|
