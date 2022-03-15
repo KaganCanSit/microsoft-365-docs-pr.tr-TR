@@ -20,12 +20,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft 365; Exchange posta kutuları, SharePoint ve OneDrive İş siteleri, Microsoft 365 Grupları, Site İçeriği gibi farklı konumlarda bulunan içerikleri aramak ve dışarı Microsoft 365 için kullanabileceğiniz üç eBulma aracı Microsoft Teams ve Skype Kurumsal konuşmalar. Core eDiscovery and Advanced eDiscovery, araştırmalarınızı yönetmenize yardımcı olacak birçok ek özellik sağlar.
-ms.openlocfilehash: b6a6ea04c4ebfa65fae192654d1cdf16873d3a77
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: e92619ff0ecbfcdbdf1a7f41eb4cd35282a6f2d9
+ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015518"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63494520"
 ---
 # <a name="ediscovery-solutions-in-microsoft-365"></a>Microsoft 365'te eKbulma çözümleri
 
@@ -84,7 +84,7 @@ Her eBulma özelliğinin açıklaması şu şekildedir.
 
 - **Arama sonuçlarını dışarı aktarın**. Arama sonuçlarını iki adımlık bir işlemle, kuruluşta yerel bir bilgisayara aktarın. Arama sonuçlarını dışarı aktar geldiğinde, öğeler Microsoft tarafından sağlanan bir Azure uygulama Microsoft 365 özgün içerik Depolama kopyalanır. Böylece bu öğeleri yerel bir bilgisayara indirebilirsiniz.
 
-- **Rol tabanlı izinler**. Farklı kullanıcıların hangi eKbulma ile ilgili görevleri gerçekleştirebilirlerini kontrol etmek için rol tabanlı erişim (RBAC) izinlerini kullanın. Kullanıcıları, yerleşik eBulma ile ilgili rol grubuna veya belirli eBulma izinlerini ataan özel rol grupları oluşturabilirsiniz.
+- **Rol tabanlı izinler**. Farklı kullanıcıların hangi eKbulma ile ilgili görevleri gerçekleştirebilirlerini kontrol etmek için rol tabanlı erişim (RBAC) izinlerini kullanın. Yerleşik bir eBulma ile ilgili bir rol grubu kullanabilir veya belirli eBulma izinlerini ataan özel rol grupları oluşturabilirsiniz.
 
 - **Vaka yönetimi**. Çekirdek eBulma ve Dışarı Aktarma Advanced eDiscovery durumlarda, belirli aramaları ve dışarı aktarmaları belirli bir araştırmayla ilişkilendirmeniz olanak sağlar. Vakaya kimlerin erişeni ve davanın içeriğini görüntüley kimlerin erişeni kontrol etmek için de vakaya üye atabilirsiniz.
 
@@ -106,7 +106,7 @@ Her eBulma özelliğinin açıklaması şu şekildedir.
 
 - **Konuşma dizileri**. Bir gözden geçirme kümesinden gelen Teams ve Yammer sohbet iletileri bir gözden geçirme kümesine ekli olduğunda, konuşma dizisini toplayabilirsiniz. Bu, koleksiyon ölçütlerine uyan öğeleri içeren sohbet görüşmenin tamamının gözden geçirme kümesine ekli olduğu anlamına gelir. Bu, gidip yapılan konuşmanın bağlamında sohbet öğelerini gözden geçirmenizi sağlar.
 
-- **Koleksiyon istatistikleri ve raporları**. Bir taslak koleksiyonu oluşturdukten veya koleksiyonu gözden geçirme kümesine işlerken, arama ölçütleriyle en çok eşleşmeyi içeren içerik konumları ve arama sorgusunun döndürülen öğe sayısı gibi, alınan öğeler üzerinde zengin bir istatistik kümesi görüntüebilirsiniz. Sonuçların bir alt kümesini de öniz görebilirsiniz.
+- **Koleksiyon istatistikleri ve raporları**. Taslak koleksiyonu oluşturdukktan veya koleksiyonu gözden geçirme kümesine işlerken, arama ölçütleriyle en çok eşleşmeyi içeren içerik konumları ve arama sorgusunun döndürülen öğe sayısı gibi, alınan öğeler üzerinde zengin bir istatistik kümesi görüntüebilirsiniz. Sonuçların bir alt kümesini de öniz görebilirsiniz.
 
 - **Küme filtrelemesini gözden geçirme**. Gözden geçirme kümesine içerik eklendikten sonra, yalnızca filtre ölçütlerinize uyan öğe kümelerini görüntülemek için filtreler uygulayabilirsiniz. Ardından, filtre kümelerini sorgu olarak kaydedebilir ve böylece kaydedilen filtreleri hızla yeniden uygulamana olanak sağlar. Küme filtrelemeyi ve kaydedilen sorguları gözden geçirme, araştırmanız için en uygun olan öğeler üzerinde hızlı bir şekilde içerik üzerinde çalışmanıza yardımcı olur.
 
@@ -132,6 +132,8 @@ Aşağıdaki bölümlerde İçerik araması, Çekirdek eKbulma ve Yenileme için
 - Microsoft 365 G1 aboneliği
 - Microsoft 365 F1 F3 aboneliği veya F5 Güvenlik eklentiniz var
 - Microsoft 365 İş Ekstra aboneliği
+- Microsoft 365 Business Standard
+- Microsoft 365 İş Temel
 - Office 365 Eğitim A1 aboneliği
 - Office 365 E1 aboneliği
 

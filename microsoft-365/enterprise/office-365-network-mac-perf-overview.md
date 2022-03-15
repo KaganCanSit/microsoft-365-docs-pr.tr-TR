@@ -15,12 +15,12 @@ ms.collection:
 - Strat_O365_Enterprise
 - m365initiative-coredeploy
 description: Microsoft 365 Yönetici Merkezi'nde ağ bağlantısına genel bakış
-ms.openlocfilehash: 3a0f2b8d54c90884a79e79288d173aa5e17c0ef2
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: c2f44ba97cb3d70dbe065df4a5b631f569460bff
+ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450322"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63494548"
 ---
 # <a name="network-connectivity-in-the-microsoft-365-admin-center"></a>Ağ Merkezi'nde Microsoft 365 Yönetici bağlantısı
 
@@ -39,13 +39,11 @@ Yönetim Microsoft 365 Yönetici şimdi kiracınız tarafından toplanan toplana
 
 Ağ performansı sayfasına ilk kez göz atsanız, genel ağ performansının haritasını, tüm kiracıyı kapsamış olan ağ değerlendirmesini, kullanıcılarının yüzdesini yerinde uzaktan çalışan kullanıcılarının yüzdesini ve daha fazla araştırma yapmak üzere geçerli sorunların listesini görmek için konumlarınızı yapılandırmanız gerekir. Genel bakış bölmesinde, belirli ağ performansı ölçümlerini ve sorunları konuma göre görmek için detaya inebilirsiniz. Daha fazla bilgi için Bkz[. Merkezi'nde ağ Microsoft 365 Yönetici genel bakış](#network-connectivity-overview-in-the-microsoft-365-admin-center).
 
-Bu özellik için, kuruluş adına genel önizlemeye katılmanız istenebilirsiniz. Kabul genellikle hemen gerçekleşir ve bundan sonra ağ bağlantısı sayfasını görebilirsiniz.
-
 Ağ bağlantısı sayfasına erişmek için, ağ bağlantısının içinde kuruluşun yöneticisi Microsoft 365. Rapor Okuyucusu yönetim rolü, bu bilgilere okuma erişimine sahip olacak. Konumları ve ağ bağlantısının diğer öğelerini yapılandırmak için, yöneticinin Hizmet Desteği Yöneticisi rolüne sahip olması gerekir.
 
 ## <a name="pre-requisites-for-network-connectivity-assessments-to-appear"></a>Ağ bağlantısı değerlendirmeleri için önkkullar
 
-Kullanmaya başlarken, Windows Konum Hizmetleri kullanan cihazlardan otomatik olarak veri toplamak için konum kabul ayarınızı seçin, konum verilerini eklemek veya karşıya yüklemek için Konumlar listeniz'e gidin veya ofis konumlarından Microsoft 365 ağ bağlantısı testini çalıştırın. Kuruluş genelinde ağ bağlantısı değerlendirilirken belirli ofis konumlarında ağ tasarım iyileştirmeleri yapılması gerekir. Her ofis konumu için ağ bağlantısı bilgileri, bu konumlar belirlenene kadar sağlanır. Ofis konumlardan ağ değerlendirmeleri almak için üç seçenek vardır:
+Kullanmaya başlarken, Windows Konum Hizmetleri kullanan cihazlardan otomatik olarak veri toplamak için konum kabul ayarınızı seçin, konum verilerini eklemek veya karşıya yüklemek için Konumlar listeniz'e gidin veya ofis konumlarından Microsoft 365 ağ bağlantısı testini çalıştırın. Ofis konumu bilgileri için bu üç seçenek aşağıda ayrıntılı olarak verilmiştir. Kuruluş genelinde ağ bağlantısı değerlendirilirken belirli ofis konumlarında ağ tasarım iyileştirmeleri yapılması gerekir. Her ofis konumu için ağ bağlantısı bilgileri, bu konumlar belirlenene kadar sağlanır. Ofis konumlardan ağ değerlendirmeleri almak için üç seçenek vardır:
 
 ### <a name="1-enable-windows-location-services"></a>1. Konum Windows'i etkinleştirme
 
@@ -91,9 +89,6 @@ Test raporları, LAN alt ağı bilgileriyle eklenmişse bir konuma bağlıdır, 
 **Ağ değerlendirmeleri** , birçok ağ performansı ölçümünü toplamını, 0 - 100 arasında bir nokta değeriyle temsil edilen kurumsal ağ sistem durumunun anlık görüntüsüne tasarlanmıştır. Ağ değerlendirmeleri hem kiracının tamamını hem de kullanıcıların kiracınıza bağladığı her coğrafi konumun kapsamına girmektedir ve Microsoft 365 yöneticilerine, kuruluş ağ durumunu anında anlamanın ve herhangi bir genel ofis konumuyla ilgili ayrıntılı rapora hızla gitmeleri için kolay bir yol sağlar.
 
 Birden çok ofis konumu ve trivi olmayan ağ çevre mimarisine sahip karmaşık kuruluşlar, Microsoft 365'a ilk ekleme sırasında veya kullanım büyümesiyle bulunan ağ performansı sorunlarını düzeltmek için bu bilgiden yararlanabilir. Bu genellikle E-posta hizmeti kullanan küçük işletmeler Microsoft 365 zaten basit ve doğrudan ağ bağlantısı olan kuruluşlar için gerekli değildir. 500'den fazla kullanıcısı ve birden çok ofis konumu olan kuruluşların en çok yararlanması bek gerekmektedir.
-
->[!IMPORTANT]
->Microsoft 365 Yönetici Merkezi'nde ağ içgörüleri, performans önerileri ve değerlendirmeleri şu anda önizleme durumundadır ve yalnızca özellik önizleme programına Microsoft 365 kiracılar tarafından kullanılabilir.
 
 ## <a name="enterprise-network-connectivity-challenges"></a>Enterprise bağlantısının zorluklarını aşabilirsiniz
 
@@ -218,7 +213,7 @@ Müşteri Microsoft 365 ön kapı, Microsoft'un genel ağın, istemci ve hizmetl
 
 ### <a name="what-is-an-optimal-microsoft-365-service-front-door"></a>En iyi hizmet Microsoft 365 kapı nedir?
 
-En iyi Microsoft 365 hizmet ön kapı, genel olarak şehir veya metro bölgenize ağ çıkışa en yakın olan kapıdır. Hizmet [Microsoft 365 ön kapınız ve](office-365-network-mac-perf-onboarding-tool.md) en iyi hizmet ön Microsoft 365 konumunu belirlemek için Microsoft 365 bağlantı test aracını (önizleme) kullanın. Araç, kullanım için ön kapının en uygun olduğunu belirlerse Microsoft'un genel ağına en uygun şekilde bağlanırsanız.
+En iyi Microsoft 365 hizmet ön kapı, genel olarak şehir veya metro bölgenize ağ çıkışa en yakın olan kapıdır. Hizmet [Microsoft 365 ve](office-365-network-mac-perf-onboarding-tool.md) en iyi hizmet ön Microsoft 365 için kullanım için bağlantı test aracını kullanın. Araç, kullanım için ön kapının en uygun olduğunu belirlerse Microsoft'un genel ağına en uygun şekilde bağlanırsanız.
 
 ### <a name="what-is-an-internet-egress-location"></a>İnternet çıkış konumu nedir?
 

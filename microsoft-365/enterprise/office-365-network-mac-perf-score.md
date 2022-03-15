@@ -14,12 +14,12 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 description: Microsoft 365 değerlendirmesini geri ayanız
-ms.openlocfilehash: d7fea3d4f2dfbe846a873b6ce0ea34d8373bcc12
-ms.sourcegitcommit: 388279e10a160b85b345a8ad760f6816dda4e2ad
+ms.openlocfilehash: 5ff858ef652c7fc536310c9d27887863d156fb5d
+ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/07/2021
-ms.locfileid: "62996615"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63495018"
 ---
 # <a name="microsoft-365-network-assessment"></a>Microsoft 365 değerlendirmesini geri ayanız
 
@@ -40,9 +40,6 @@ Ağ değerlendirme değeri çok düşükse, Microsoft 365 istemcilerinin kiracı
 | 40                 | Kullanıcılar sorun yaşanıyor olabilir |
 | 20                 | Kullanıcılar şikayetçi olabilir       |
 | 0                  | Ağ sorunları yaygın bir tartışma konusu |
-
->[!IMPORTANT]
->Microsoft 365 Yönetici Merkezi'nde ağ içgörüleri, performans önerileri ve değerlendirmeleri şu anda önizleme durumundadır ve yalnızca özellik önizleme programına Microsoft 365 kiracılar tarafından kullanılabilir.
 
 ## <a name="network-assessment-panel"></a>Ağ değerlendirme paneli
 

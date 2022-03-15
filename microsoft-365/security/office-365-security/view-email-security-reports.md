@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 08ab4e4e0d85dec56de8285659cead3e1dfcb468
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 3fdab6896edf704c4daa83ec993c0716c54d0f43
+ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63321341"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63494576"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Portalda e-posta Microsoft 365 Defender görüntüleme
 
@@ -36,13 +36,35 @@ ms.locfileid: "63321341"
 - [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Microsoft 365 Defender portalında <https://security.microsoft.com> İstenmeyen posta önleme, kötü amaçlı yazılımdan koruma ve şifreleme özellikleri gibi e-posta güvenlik özelliklerinin Microsoft 365 için çeşitli raporlar bulabilirsiniz. Gerekli izinlere [sahipsiniz,](#what-permissions-are-needed-to-view-these-reports) bu makalede açıklandığı gibi bu raporları indirebilirsiniz.
+Microsoft 365 Defender portalında, Microsoft 365'daki <https://security.microsoft.com> istenmeyen posta önleme ve kötü amaçlı yazılımdan koruma gibi e-posta güvenlik özelliklerinin nasıl koruma altında Microsoft 365 çok çeşitli raporlar bulabilirsiniz. Gerekli izinlere [sahipsiniz,](#what-permissions-are-needed-to-view-these-reports) bu makalede açıklandığı gibi bu raporları indirebilirsiniz.
 
 > [!NOTE]
 >
 > E-posta ve işbirliği raporları **sayfasındaki &, e-posta** göndermek için Microsoft Defender Office 365. Bu raporlar hakkında bilgi için bkz. Rapor [portalında Office 365 için View Defender Microsoft 365 Defender.](view-reports-for-mdo.md)
 >
 > Posta akışıyla ilgili raporlar artık genel Exchange bir yönetim merkezindedir. Bu raporlar hakkında daha fazla bilgi için bkz[. Yeni Yönetim Merkezi'nde Exchange raporları](/exchange/monitoring/mail-flow-reports/mail-flow-reports).
+
+## <a name="email-security-report-changes-in-the-microsoft-365-defender-portal"></a>Web portalında e-posta Microsoft 365 Defender raporu değişiklikleri
+
+Exchange Online Protection portalında yer alan, taşınan veya kullanımdan Office 365 için Microsoft Defender (EOP) ve Microsoft 365 Defender için Microsoft Defender raporları aşağıdaki tabloda açıklanmıştır.
+
+<br>
+
+****
+
+|Kullanım dışı olan rapor ve cmdlet'ler|Yeni rapor ve cmdlet'ler|İleti Merkezi Kimliği|Tarih|
+|---|---|:---:|:---:|
+|**URL izleme** <p> Get-URLTrace|[URL koruma raporu](view-reports-for-mdo.md#url-protection-report) <p> [Get-SafeLinksAggregateReport](/powershell/module/exchange/get-safelinksaggregatereport) <br> [Get-SafeLinksDetailReport](/powershell/module/exchange/get-safelinksdetailreport)|MC239999|Haziran 2021|
+|**Gönderilmiş ve alınan e-posta raporu** <p> Get-MailTrafficReport <br> Get-MailDetailReport|[Tehdit koruması durum raporu](#threat-protection-status-report) <br> [Posta akışı durum raporu](#mailflow-status-report) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport) <br> [Get-MailFlowStatusReport](/powershell/module/exchange/get-mailflowstatusreport)|MC236025|Haziran 2021|
+|**Rapor iletme** <p> cmdlet'yok|[EAC'de otomatik iletili iletiler raporu](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report) <p> cmdlet'yok|MC250533|Haziran 2021|
+|**Kasa Ekleri dosya türleri raporu** <p> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Tehdit koruması durum raporu: Verileri Kötü Amaçlı E-postaLara Göre \> Görüntüleme](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250532|Haziran 2021|
+|**Kasa Ekleri ileti yok durumu raporu** <p> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Tehdit koruması durum raporu: Verileri Kötü Amaçlı E-postaLara Göre \> Görüntüleme](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250531|Haziran 2021|
+|**E-posta raporunda kötü amaçlı yazılım algılandı** <p> Get-MailTrafficReport <br> Get-MailDetailMalwareReport|[Tehdit koruması durum raporu: Verileri Kötü Amaçlı E-postaLara Göre \> Görüntüleme](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250530|Haziran 2021|
+|**İstenmeyen posta algılama raporu** <p> Get-MailTrafficReport <br> Get-MailDetailSpamReport|[Tehdit koruması durum raporu: Verileri İstenmeyen E-posta Olarak Görüntüle \>](#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250529|Ekim 2021|
+|Get-AdvancedThreatProtectionDocumentReport <p> Get-AdvancedThreatProtectionDocumentDetail|[Get-ContentMalwareMdoAggregateReport](/powershell/module/exchange/get-contentmalwaremdoaggregatereport) <p> [Get-ContentMalwareMdoDetailReport](/powershell/module/exchange/get-contentmalwaremdodetailreport)|TBA|Mayıs 2022|
+|**Exchange Aktarım Kuralı raporu** <p> Get-MailTrafficPolicyReport <br> Get-MailDetailTransportRuleReport|[Exchange Aktarım Kuralı raporuna bir aktarım kuralı raporu yazma](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report) <p> cmdlet'yok|MC316157|Nisan 2022|
+|Get-MailTrafficTopReport|[Tehdit koruması durum raporu: Verileri Kötü Amaçlı E-postaLara Göre \> Görüntüleme](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport) <p> **Not**: Get-MailTrafficTopReport'ta şifreleme raporlama özelliklerinde hiçbir değişiklik yoktur.|MC315742|Nisan 2022|
+|
 
 ## <a name="compromised-users-report"></a>Güvenliği ihlal edilmiş kullanıcılar raporu
 
@@ -1091,7 +1113,7 @@ Raporlarınıza veri görmüyorsanız, kullanmakta olduğu filtreleri denetleyin
 
    - **Alıcılar bölümü** : Zamanlanan **rapora alıcı** eklemek veya kaldırmak için Alıcıları düzenle'ye tıklayın. Bitirdikten sonra Kaydet'e **tıklayın.**
 
-   Bitirdikten sonra Kapat'a **tıklayın**.
+   İşlemi tamamladığınızda, **Kapat**'a tıklayın.
 
 ## <a name="request-report"></a>Rapor isteği
 

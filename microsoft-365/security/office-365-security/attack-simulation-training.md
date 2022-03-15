@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Yöneticiler, Plan 2'ye yönelik Microsoft Defender'daki Saldırı benzetimi eğitimini kullanarak kimlik avı saldırılarının benzetimini yapmayı ve kullanıcılarını kimlik avı engellemesi konusunda Office 365 öğrenebilirsiniz.
 ms.technology: mdo
-ms.openlocfilehash: 17e4bb55ee2c571c2e66b648d277f0a896551f39
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+ms.openlocfilehash: 5ce7b58410ea53e4f11d746ebc4583b125f1ade6
+ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63419368"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63494436"
 ---
 # <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'daki Saldırı benzetimi eğitimi ile kimlik avı saldırılarının benzetimini Office 365
 
@@ -249,7 +249,7 @@ Microsoft tarafından el ile yapılan giriş sayfaları 12 dilde kullanılabilir
 - **Giriş sayfası tercihini seçin**: Kullanılabilir değerler:
   - **Microsoft varsayılan giriş sayfasını kullanma**: Bu, yapılandırmayla ilgili aşağıdaki seçeneklerin yer alan varsayılan değerdir:
     - **Giriş sayfası düzenini seçin**: Kullanılabilir şablonlardan birini seçin.
-    - **Logo ekleme**: Bir dosya **,** .jpeg veya .png bulmak ve seçmek için Gözat'.gif tıklayın. Logoyu kaldırmak için Kaldır'a **tıklayın**.
+    - **Logo ekleme**: Bir dosya **,** .jpeg veya .png bulmak ve seçmek için Gözat'.gif tıklayın. Bozulmayı önlemek için logo boyutu en fazla 210 x 70 olabilir. Logoyu kaldırmak için Kaldır'a **tıklayın**.
     - **E-postaya yük göstergeleri ekleme**: Seçme tekniği sayfasında önceden Kötü amaçlı yazılım eki veya  Kötü amaçlı yazılıma bağlantı yükle'yi seçtiyseniz **bu** [ayar](#select-a-social-engineering-technique) kullanılamaz.
 
     Sayfanın en altındaki Önizleme panelini **aç düğmesine tıklayarak** sonuçların önizlemesini görüntüleyebilirsiniz.
@@ -308,7 +308,7 @@ Son **kullanıcı bildirimi seç sayfasında** , aşağıdaki bildirim seçenekl
         - **Değiştiren**
         - **Son değiştirme**
 
-        Bitirdikten sonra Kapat'a **tıklayın**.
+        İşlemi tamamladığınızda, **Kapat**'a tıklayın.
 
   Bu seçeneği tercih ettiyseniz, Sonraki'ye tıklarsanız [Ayrıntıları](#launch-details) başlat sayfasına **olursanız**.
 

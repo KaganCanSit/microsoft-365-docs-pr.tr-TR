@@ -14,12 +14,12 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 description: Microsoft 365 bağlantı test aracı
-ms.openlocfilehash: 602ab10c9741126360861586776863cb43ce162e
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 8704da93d8f7ec95460ae5a275289176bccb0c22
+ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019489"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63494506"
 ---
 # <a name="microsoft-365-network-connectivity-test-tool"></a>Microsoft 365 bağlantı test aracı
 
@@ -52,7 +52,7 @@ Ofis konumu tanımlayıcısından sonra JavaScript'te bir TCP gecikme süresi te
 
 ### <a name="download-the-advanced-tests-client-application"></a>Gelişmiş test istemci uygulamasını indirme
 
-Ardından, gelişmiş test istemci uygulamasının indir indirebilirsiniz. Kullanıcıya, istemci uygulamasını başlatması için güvenmekte ve .NET Core'un da yüklü olması gerekir.
+Ardından, gelişmiş test istemci uygulamasının indir indirebilirsiniz. kullanıcıya, istemci uygulamasını başlatması için güvenmekte ve .NET 6.0 Runtime'ın da yüklü olması gerekir.
 
 Ağ bağlantı testinin iki Microsoft 365 vardır: web <https://connectivity.office.com> sitesi ve gelişmiş ağ bağlantısı testleri Windows indirilebilir bir istemci uygulaması. Testleri çoğu için uygulamanın çalışması gerekir. Çalıştırılamaz ve sonuçlar web sayfasına geri döner.
 
@@ -251,13 +251,42 @@ Bu, Microsoft'un genel ağına ilişkin, müşterilerin etkilenmesi gibi önemli
 > [!div class="mx-imgBorder"]
 > ![Ağ durumu.](../media/m365-mac-perf/m365-mac-perf-status-page.png)
 
+## <a name="testing-from-the-command-line"></a>Komut Satırı'dan sınama
+
+Uzaktan dağıtım ve yürütme araçlarınız tarafından kullanılabilen bir komut satırı yürütülebilir dosyası sağlar ve Microsoft 365 ağ bağlantı test aracı web sitesinde bulunanla aynı testleri çalıştırın.
+
+Komut satırı test aracı buradan indirilebilir: ![Komut Satırı Aracı](https://connectivity.office.com/api/AnonymousConnectivityTest/DownloadStandAloneRichClient)
+
+Dosya Gezgini'nde yürütülebilir dosyaya çift tıklayarak Windows çalıştırabilirsiniz veya bunu bir komut isteminden başlatabilirsiniz veya görev zamanlayıcıyla zamanabilirsiniz.
+
+Yürütülebilir dosyayı ilk kez başlatacakken, test gerçekleştirilmeden önce son kullanıcı lisans sözleşmesi (EULA) kabul etmek istenir. EULA'yı zaten okumuş ve kabul ettiysanız, yürütülebilir dosya işlemi için Microsoft-365-Network-Connectivity-Test-EULA-accepted.txt dizinde yürütülebilir dosya olarak adlandırılan boş bir dosya oluşturabilirsiniz. EULA'yı kabul etmek için, istendiğinde komut satırı penceresine 'y' yazarak Enter tuşuna basabilirsiniz.
+
+Yürütülebilir dosya, bu yardım belgelerinin bağlantısını göstermek için /h dosyasının bir komut satırı parametresini kabul eder.
+
+### <a name="results"></a>Sonuçlar
+Sonuçların çıkışı, testResults adlı bir klasörde bulunan ve daha önce var olmadığı sürece sürecin geçerli çalışma dizininde oluşturulmuş bir JSON dosyasına yazılır. Çıktının dosya adı biçimi connectivity_test_result_YYYY-MM-DD-HH-MM-SS.json'dir. Sonuçlar, bir ağ bağlantısı test aracı web sitesi için web sayfasında gösterilen çıkışla Microsoft 365 JSON düğümlerdedir. Her çalıştırılan yeni sonuç dosyası oluşturulur ve tek başına yürütülebilir dosya, Yönetim Merkezi Ağ Bağlantısı sayfalarını görüntülemek üzere Microsoft kiracınıza sonuçları yüklemez.
+
+### <a name="launching-from-windows-file-explorer"></a>Dosya Gezgini'Windows başlatma
+Sınamayı başlatmak için yürütülebilir dosyayı çift tıklarsınız ve bir komut istemi penceresi görüntülenir.
+
+### <a name="launching-from-the-command-prompt"></a>Komut İstemi'den başlatma
+Bir CMD.EXE istemi penceresinde yürütülebilir dosyanın yolunu ve adını yazarak çalıştırabilirsiniz. Dosya adı Microsoft.Connectivity.Test.exe
+
+### <a name="launching-from-windows-task-scheduler"></a>Görev Zamanlayıcı'dan Windows başlatıyor
+Görev Windows Zamanlayıcı'da, tek başına test yürütülebilir dosyasını başlatmak için bir görev  eklersiniz. YÜRÜTÜlebilir dosya EULA kabul edilene kadar engelleninceye kadar, görevin geçerli çalışma dizinini EULA'yı kabul etmiş olduğunuz yerde belirtebilirsiniz. süreç arka planda başladı ancak konsolları yoksa, EULA'yı etkileşimli olarak kabul etmezsiniz.
+
+### <a name="more-details-on-the-standalone-executable"></a>Tek başına yürütülebilir dosyayla ilgili daha fazla ayrıntı
+Komut satırı aracı, Windows olan Şehir Şehri Ülke bilgilerini bulmak için Konum Hizmetleri'nde yer almaktadır. Denetim Windows Konum Hizmetleri devre dışı bırakılırsa, kullanıcı konumu tabanlı değerlendirmeler boş olur. Başka Windows Ayarlar "Konum hizmetleri" açık olmalı ve "Masaüstü uygulamalarının konumunuza erişmesine izin ver" açık da olmalı.
+
+Komut satırı aracı, yüklü .NET Framework yüklememişse, yükleme yapmaya çalıştır. Ayrıca, yürütülebilir ana test dosyasını Microsoft 365 bağlantı test aracından indirir ve yürütülebilir bir araçtır.
+
 ## <a name="faq"></a>SSS
 
 Burada, sık sorulan sorulardan bazılarının yanıtları ve ardından bir sorunuz vardır.
 
 ### <a name="what-is-required-to-run-the-advanced-test-client"></a>Gelişmiş test istemcisini çalıştırmak için neler gereklidir?
 
-Gelişmiş test istemcisi için .NET Core 3.1 Masaüstü Çalışma Zamanı gerekir. Gelişmiş test istemcisini yüklemeden çalıştırsanız, [.NET Core 3.1 yükleyici sayfasına yönlendirilene kadar devam edebilirsiniz](https://dotnet.microsoft.com/download/dotnet-core/3.1). Sayfada daha yüksek olan SDK'yı veya ASP.NET Core Runtime'ASP.NET Core Masaüstü Çalışma Zamanı'yı yüklemeden emin olun. Makine üzerinde yönetici izinleri .NET Core'i yüklemek için gereklidir.
+Gelişmiş test istemcisi için .NET 6.0 Çalışma Zamanı gerekir. Gelişmiş test istemcisini yüklemeden çalıştırsanız, [.NET 6.0 yükleyici sayfasına yönlendirilene kadar devam edebilirsiniz](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime?utm_source=getdotnetcore). Daha fazla bilgi için Masaüstü uygulamalarını çalıştır sütunundan yükleme Windows. Makinede yönetici izinleri .NET 6.0 Çalışma Zamanı'nın yüklemek için gereklidir.
 
 Gelişmiş test istemcisi web sayfasına iletişim kurmak için SignalR kullanır. Bunun için, bağlantı noktası 443 bağlantı noktasının açık **connectivity.service.signalr.net** gerekir. Bu URL, bir kullanıcı istemci uygulaması <https://aka.ms/o365ip> kullanıcısı için bağlantı Microsoft 365 yayımlanamaz.
 

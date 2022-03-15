@@ -11,12 +11,12 @@ ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 19ad7cfa3459b67b41a9d85994f960255aeeeb02
-ms.sourcegitcommit: babc2dad1c0e08a9237dbe4956ffd21c0214db83
+ms.openlocfilehash: 82a0bbc4811b3f2be23403717b0a0ffb485d7c74
+ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014333"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63495004"
 ---
 # <a name="microsoft-365-apps-for-enterprise"></a>Microsoft 365 Kurumsal Uygulamaları
 
@@ -50,7 +50,7 @@ Microsoft Yönetilen Masaüstü, masaüstü sürümünün 32 bit dağıtımını
 
 Microsoft 365 Uygulamaları, Aylık Güncelleştirme [Kanalı'Enterprise ayarlanır](/deployoffice/overview-update-channels#monthly-enterprise-channel-overview). Bu uygulama, kullanıcılarınıza her Office yeni özellikler sağlar, ancak öngörülebilir bir sürüm zamanlamaları üzerine her ay yalnızca bir güncelleştirme alırlar. Güncelleştirmeler ayın ikinci Salı günü yayımlanacak; bu güncelleştirmeler özellik, güvenlik ve kalite güncelleştirmelerini içerebilir. Bu güncelleştirmeler otomatik olarak yapılır ve ilgili kanal Office CDN doğrudan açılır.
 
-Microsoft Yönetilen Masaüstü basamakları, ortamınız içinde olası sorunları tanımlamak için her sürümü basamaklar. Bu uygulamanın Uygulama ürün grubundan piyasaya çıkıştan 28 gün Microsoft 365 tamamlarız. Microsoft Yönetilen Masaüstü, aşağıdaki gibi doğrulama ve test etme süresine izin vermek için güncelleştirme yayınlarını farklı gruplara zamanlar:
+Microsoft Yönetilen Masaüstü basamakları, ortamınız içinde olası sorunları tanımlamak için her sürümü basamaklar. Bu uygulama ürün grubundan Microsoft 365 tamamlanmıştır. Microsoft Yönetilen Masaüstü, aşağıdaki gibi doğrulama ve test etme süresine izin vermek için güncelleştirme yayınlarını farklı gruplara zamanlar:
 
 - Test: Sıfır gün
 - İlk: Sıfır gün

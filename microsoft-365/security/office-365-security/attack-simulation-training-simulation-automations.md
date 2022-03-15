@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Yöneticiler, Plan 2 için Microsoft Defender'da belirtilen koşullar karşılandıklarında başlatan belirli teknikler ve yüklemeler içeren otomatik benzetimler Office 365 öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 47732960ad5fac9884f388836ea23a2b9283c93c
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+ms.openlocfilehash: 029dce5b7f0b5c6e62b064aa9155d7b07c6a80d7
+ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63419354"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63495032"
 ---
 # <a name="simulation-automations-for-attack-simulation-training"></a>Saldırı benzetimi eğitimi için benzetim otomasyonları
 
@@ -247,7 +247,7 @@ Giriş **sayfası sayfasında** , yükleme benzetimde bir yük açılırsa kulla
     Giriş sayfası sayfasında aşağıdaki ek ayarları **yapılandırmanız** gerekir:
 
     - **Giriş sayfası düzenini seçin**: Kullanılabilir 5 giriş sayfası şablonudan birini seçin.
-    - **Logo ekleme**: Microsoft  tarafından seçilen tüm yüklere eklemek üzere .png, .jpeg veya .gif dosya bulmak ve seçmek için Gözat'a tıklayın. Logoyu kaldırmak için Kaldır'a **tıklayın**.
+    - **Logo ekleme**: Microsoft  tarafından seçilen tüm yüklere eklemek üzere .png, .jpeg veya .gif dosya bulmak ve seçmek için Gözat'a tıklayın. Bozulmayı önlemek için logo boyutu en fazla 210 x 70 olabilir. Logoyu kaldırmak için Kaldır'a **tıklayın**.
     - **Yük göstergeleri: Daha önce** Sosyal mühendislik tekniklerini seçin sayfasında Kötü amaçlı yazılım  eki veya Kötü  amaçlı yazılıma bağlantı ekle'yi seçtiyseniz [bu ayar](#select-one-or-more-social-engineering-techniques) kullanılamaz.
 
       Kullanıcıların **kimlik avı iletilerini tanımlamayı öğrenmelerine yardımcı olmak için** E-postaya yük göstergeleri ekle'yi seçin.
@@ -308,7 +308,7 @@ Son **kullanıcı bildirimi seç sayfasında** , aşağıdaki bildirim seçenekl
         - **Değiştiren**
         - **Son değiştirme**
 
-        Bitirdikten sonra Kapat'a **tıklayın**.
+        İşlemi tamamladığınızda, **Kapat**'a tıklayın.
 
   Bu seçeneği kullanırsanız, Sonraki'ye tıklarsanız [Benzetim](#simulation-schedule) zamanlama sayfasına **olursanız**.
 

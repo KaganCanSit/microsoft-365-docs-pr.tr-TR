@@ -9,16 +9,19 @@ ms.collection: M365-modern-desktop
 ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: 07220c7a1b5e44eecdae247387a95ea6dfd445f1
-ms.sourcegitcommit: 2c3b737e71038f843ef9e9ff4d5b99d6110b8ec5
+ms.openlocfilehash: 2005ead772399f26c3537ac8bf36f6b0810b07fb
+ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "63010026"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63495046"
 ---
 # <a name="configurable-settings-reference---microsoft-managed-desktop"></a>Yapılandırılabilir ayarlar başvurusu - Microsoft Yönetilen Masaüstü
 
 Bu makalede, müşterilerin Microsoft Yönetilen Masaüstü ile yapılandırabilir ayarlar kategorileri listelemektedir. Her ayar kategorisi gereksinimler, en iyi yöntemler ve ayar kategorisini özelleştirme hakkında bilgi içerir.
+
+> [!NOTE]
+> Bu sayfa, sık istenen ayarlarla ilgili bilgileri içerir. Eski Edge tarayıcısı için geçerlidir.
 
 ## <a name="desktop-background-picture"></a>Masaüstü arka plan resmi
 
@@ -66,7 +69,7 @@ Tarayıcınızın başlangıç sayfaları için intranet veya İnternet siteleri
 
 Web siteleriyle ilgili uyumluluk sorunları olan belirli web siteleriniz ve uygulamalarınız Microsoft Edge varsa, Enterprise Modu site listesini kullanarak web sitelerini Otomatik Olarak Internet Explorer 11'de açabilirsiniz. Ayrıca intranet sitelerinin Internet Explorer 11'de Microsoft Edge düzgün çalışmadıysa, tüm intranet sitelerini otomatik olarak Internet Explorer 11'de açılacak şekilde ayarlayın.
 
-Mobil Enterprise modunu kullanmak, Microsoft Edge olarak varsayılan tarayıcınız olarak kullanmaya devam ederken uygulamalarınızı da Internet Explorer 11'de çalışmaya devam edecek şekilde emin olmak anlamına gelir. Kuruluş modu site listeleri hakkında daha fazla bilgi için bkz. [Enterprise Modu ve Enterprise Site Listeleri](/internet-explorer/ie11-deploy-guide/what-is-enterprise-mode).
+Mobil Enterprise modunu kullanmak, Microsoft Edge olarak varsayılan tarayıcınız olarak kullanmaya devam ederken uygulamalarınızı da Internet Explorer 11'de çalışmaya devam edecek şekilde emin olmak anlamına gelir. Kurumsal modda site listeleri hakkında daha fazla bilgi için bkz. [Enterprise Modu'Enterprise Site Listeleri'ne bakın](/internet-explorer/ie11-deploy-guide/what-is-enterprise-mode).
 
 Bir konum veya `https://` kurumsal mod site listenizi barındırmış olduğunuz bir iç paylaşım için konum belirtebilirsiniz.
 
@@ -84,7 +87,7 @@ Müşterilerin, IT altyapılarını modernleştirmek için karar almalarına yar
 
 | Alıştırma | Açıklama |
 | ------ | ------ |
-| Sınırlı sayıda site seçin | Microsoft Yönetilen Masaüstü, Microsoft Edge açısından genel güvenliği ve kullanıcılarınız açısından kullanılabilirliği geliştirmek için tercih edilen tarayıcı olarak Microsoft Edge'ı kullanır. Bu listede çoğu site, tarayıcının o kadar çok güvenlik özelliği içermeyen eski bir sürümüne ihtiyacı olan eski web uygulamalarına göre hazır bulunmaktadır. |
+| Sınırlı sayıda site seçin | Microsoft Yönetilen Masaüstü, Microsoft Edge açısından genel güvenliği ve kullanıcılarınız açısından kullanılabilirliği geliştirmek için tercih edilen tarayıcı olarak Microsoft Edge'ı kullanır. Bu listede çoğu site, tarayıcının eski bir sürümüne ihtiyaç ihtiyacı olan eski web uygulamalarına göre hazır bulunmaktadır. Bu, çok fazla güvenlik özelliği içermez. |
 | Alternatif olarak düşünün | Daha eski bir tarayıcı gerektirmeyen farklı bir siteyi veya web uygulamasını düşünün. Güncelleştirmeyi de düşünebilirsiniz; böylece daha yeni tarayıcılar da kullanabilir. Daha yeni tarayıcılar en son teknolojiyi kullanır ve güvenliği geliştirmeye yardımcı olur. |
 
 ### <a name="customize-and-deploy-enterprise-site-mode-list-location"></a>Site modu Enterprise konumunu özelleştirme ve dağıtma

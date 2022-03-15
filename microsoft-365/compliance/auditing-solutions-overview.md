@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 description: İlk kuruluş kapsamındaki kullanıcılar ve yöneticilerin etkinliklerini denetlemeyi Microsoft 365 öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: ff7a456317827fc629d4e704037ad7586bad9f0d
-ms.sourcegitcommit: 4af23696ff8b44872330202fe5dbfd2a69d9ddbf
+ms.openlocfilehash: 92fb008e7fe03b4871b8838d78965c1508a20fdc
+ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "62997087"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63494534"
 ---
 # <a name="auditing-solutions-in-microsoft-365"></a>Denetim çözümleri Microsoft 365
 
@@ -98,6 +98,8 @@ Aşağıdaki bölümlerde Temel Denetim ve Gelişmiş Denetim için lisans gerek
 
 ### <a name="basic-audit"></a>Temel Denetim
 
+- Microsoft 365 İş Temel aboneliği
+- Microsoft 365 Uygulamaları kurumsal aboneliği
 - Microsoft 365 Kurumsal E3 aboneliği
 - Microsoft 365 Business Premium
 - Microsoft 365 Eğitim A3 aboneliği

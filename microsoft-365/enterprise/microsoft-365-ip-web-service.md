@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 - BCS160
 description: Ağ trafiğini daha iyi Office 365 tanımlamanıza ve ayırt etmeye yardımcı olmak için IP Adresi ve URL web hizmetini Office 365 öğrenin.
-ms.openlocfilehash: 5af1ca60a6e7b7f28ad1d5c3268c85fb399fb926
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: e4976bafbedc8f5289e2992569bbd5de28e9de75
+ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019507"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63494492"
 ---
 # <a name="office-365-ip-address-and-url-web-service"></a>Office 365 IP Adresi ve URL web hizmeti
 
@@ -78,7 +78,7 @@ Sürüm web yönteminin parametreleri:
 
 - **AllVersions=\<true \| false\>** —Varsayılan olarak, en son sürüm döndürülür. Web hizmeti ilk yayımlanır bu yana tüm yayımlanan sürümlerin isteğinde etmek için bu isteğe bağlı parametreyi dahil edin.
 - **Format=\<JSON \| CSV \| RSS\>** —JSON ve CSV biçimlerine ek olarak, sürüm web yöntemi RSS'yi de destekler. Bu isteğe bağlı parametreyi _AllVersions=true_ parametresiyle birlikte kullanarak, diğer RSS okuyucularıyla veya diğer RSS okuyucularıyla Outlook RSS akışı isteyebilirsiniz.
-- **Instance=\<Worldwide \| China \| Germany \| USGovDoD \| USGovGCCHigh\>** —Bu isteğe bağlı parametre, sürümün getirile örneklerini belirtir. Atlanırsa, tüm örnekler döndürülür. Geçerli örnekler: Worldwide, Çin, Almanya, USGovDoD, USGovGCCHigh.
+- **Instance=\<Worldwide \| China \| USGovDoD \| USGovGCCHigh\>** —Bu isteğe bağlı parametre, sürümün getirile örneklerini belirtir. Atlanırsa, tüm örnekler döndürülür. Geçerli örnekler: Worldwide, Çin, USGovDoD, USGovGCCHigh.
 
 Sürüm web yöntemi oranı sınırlı değildir ve 429 HTTP Yanıt Kodları'nın hiç bir zaman geri dönmez. Sürüm web yönteminin yanıtı, 1 saat süreyle verilerin önbelleğe alınmasını öneren bir önbellek denetimi başlığı içerir. Sürüm web yönteminden elde edilen sonuç tek bir kayıt veya bir kayıt dizisi olabilir. Her kaydın öğeleri:
 
@@ -108,10 +108,6 @@ Bu URI, her bir hizmet örneğinin Office 365 sürümünü döndürür. Örnek s
  },
  {
   "instance": "China",
-  "latest": "2018063000"
- },
- {
-  "instance": "Germany",
   "latest": "2018063000"
  }
 ]
@@ -183,7 +179,7 @@ Uç noktalar web yönteminin parametreleri:
 - **ServiceAreas=\<Common \| Exchange \| SharePoint \| Skype\>** —Hizmet alanlarının virgülle ayrılmış listesi. Geçerli _öğeler Yaygın,_ Ortak, _Exchange_, _SharePoint_ _ve Skype_. Ortak _hizmet_ alanı öğeleri diğer tüm hizmet alanlarının önkoşulları olduğundan, web hizmeti bunları her zaman içerir. Bu parametreyi dahil değilken tüm hizmet alanları döndürülür.
 - **TenantName=\<tenant_name\>** —Kiracı Office 365 adınız. Web hizmeti sağlanan adını alır ve URL'lerin kiracı adını içeren bölümlerine ekler. Kiracı adı sağlayasanız bile, URL'lerin bu bölümleri joker karaktere () sahiptir\*.
 - **NoIPv6=\<true \| false\>** —Ağda IPv6 _kullanmayacaksanız_ , çıktıdan IPv6 adreslerini hariç tutmak için değeri doğru olarak ayarlayın.
-- **Instance=\<Worldwide \| China \| Germany \| USGovDoD \| USGovGCCHigh\>** —Bu gerekli parametre, uç noktaların hangi örnekten getir mu olduğunu belirtir. Geçerli örnekler: _Worldwide_, _Çin_, _Almanya_, _USGovDoD_ ve _USGovGCCHigh_.
+- **Instance=\<Worldwide \| China \| USGovDoD \| USGovGCCHigh\>** —Bu gerekli parametre, uç noktaların hangi örnekten getir mu olduğunu belirtir. Geçerli örnekler: _Worldwide_, _Çin_, _USGovDoD_ ve _USGovGCCHigh_.
 
 Uç noktalar web yöntemini aynı istemci IP adresinden birçok kez çağırıyorsanız, HTTP yanıt kodu _429(Çok Fazla İstek) alırsınız_. Bu yanıt kodunu aldıysanız, isteğinizi yinelemeden önce 1 saat bekleyin veya istek için yeni bir GUID üretin. Genel bir en iyi uygulama olarak, yalnızca sürüm web yöntemi yeni bir sürümün kullanılabilir olduğunu gösteriyorsa uç noktalar web yöntemini çağırabilirsiniz.
 

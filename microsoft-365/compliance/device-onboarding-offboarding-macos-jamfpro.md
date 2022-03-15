@@ -14,12 +14,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: JAMF uyumluluk çözümleri (önizleme) kullanarak macOS cihazlarını macOS Microsoft 365 ekleme ve kaldırmayı Pro öğrenin
-ms.openlocfilehash: 2399dd901b9c31c3cd824e35bd4db844610125c5
-ms.sourcegitcommit: d37fce3b708ea5232b4102fd0e693f4bf17a8948
+ms.openlocfilehash: 3f67acd7f6d6f62b8231a3c92e99551d7b90690d
+ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/21/2022
-ms.locfileid: "63014119"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "63495000"
 ---
 # <a name="onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-jamf-pro-preview"></a>JAMF uyumluluk çözümleri kullanarak macOS cihazlarını Microsoft 365 kullanma ve çıkararak uyumluluk çözümlerine (Pro)
 
@@ -35,8 +35,7 @@ MacOS cihazlarını, Uç Pro kaybı önleme gibi uyumluluk çözümlerine Micros
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- [macOS cihazlarınızı Azure AD'ye katıldığından emin olun](https://docs.jamf.com/10.30.0/jamf-pro/administrator-guide/Azure_AD_Integration.html)
-- [macOS cihazlarınızı JAMF pro aracılığıyla yönetebilirsiniz](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/)
+- [macOS cihazlarınızı JAMF pro](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) aracılığıyla yönettikten ve JAMF hizmeti veya Intune aracılığıyla bir kimlikle (Azure AD'ye katılmış UPN) ilişkilendirilmiş Bağlan emin olun.
 - v95+ Edge tarayıcısını macOS cihazlarınıza yükleme 
 
 ## <a name="onboard-devices-into-microsoft-365-compliance-solutions-using-jamf-pro"></a>JAMF uyumluluk Microsoft 365 kullanarak cihazları Uyumluluk çözümlerine Pro
@@ -220,7 +219,7 @@ Bir macOS cihazı Uyumluluk çözümlerine ekleme çok aşamalı bir işlemdir.
 1. **Paketler'de** **+Yeni'yi seçin**. Şu ayrıntıları girin:
     - Görünen Ad: Boş bırakın çünkü .pkg dosyasını seçtiğiniz zaman sıfırlanır.
     - Kategori: Yok (varsayılan)
-    - Dosyaadı: Bu durumda dosyayı `wdav.pkg` seçin.
+    - Dosya adı: Bu durumda dosyayı `wdav.pkg` seçin.
 
 1. **Aç'ı seçin**. Ayarla:
     - **Görünen Ad**: `Microsoft Endpoint Technology`
