@@ -17,12 +17,12 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 ms.assetid: f30e2353-0bd6-41ed-8347-eea1fb8d2662
 description: Güvenlik, gizlilik ve uyumluluk uygulamalarına yardımcı olmak için Microsoft Hizmet Güveni Portalı'na erişmeyi ve portalı kullanmayı öğrenin.
-ms.openlocfilehash: 2efa7389da9d53d14b833dc31bd84b446ee48f63
-ms.sourcegitcommit: ab5368888876d8796da7640553fc8426d040f470
+ms.openlocfilehash: 5894fb57d4633c0dbc3c9d925be72910bdfc3f56
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "62990584"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512916"
 ---
 # <a name="get-started-with-the-microsoft-service-trust-portal"></a>Microsoft Hizmet Güveni Portalı ile çalışmaya başlama
 
@@ -70,7 +70,7 @@ Hizmet **Güveni Portalı** bağlantısı giriş sayfasını görüntüler. Giri
 ### <a name="compliance-manager"></a>Uyumluluk Yöneticisi
 
 > [!IMPORTANT]
-> Uyumluluk Yöneticisi, Hizmet Güveni Portalı'nın güvenlik portalında yeni <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a>. Tüm müşteri verileri yeni konuma taşındı, böylece kesintisiz olarak Uyumluluk Yöneticisi'ni kullanmaya devam edebilirsiniz. Kurulum bilgileri ve [yeni özellikler hakkında](compliance-manager.md) bilgi edinmek için Uyumluluk Yöneticisi belgelerine bakın. Uyumluluk Yöneticisi'nin klasik sürümü Hizmet Güveni Portalı'nde kalsa da, tüm kullanıcıların Uyumluluk Yöneticisi'ni Hizmet Güveni Portalı'Microsoft 365 uyumluluk merkezi.
+> Uyumluluk Yöneticisi Hizmet Güveni Portalı'Microsoft 365 uyumluluk merkezi<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">.</a> Tüm müşteri verileri yeni konuma taşındı, böylece kesintisiz olarak Uyumluluk Yöneticisi'ni kullanmaya devam edebilirsiniz. Kurulum bilgileri ve [yeni özellikler hakkında](compliance-manager.md) bilgi edinmek için Uyumluluk Yöneticisi belgelerine bakın.
 
 ### <a name="trust-documents"></a>Güven Belgeleri
 
@@ -116,13 +116,7 @@ Yalnızca genel **> hesapta** bulunan yönetim işlevlerine erişmek için Diğe
 
 Hizmet Güveni Portalı sayfasının sağ üst köşesindeki büyüteci tıklatın ve kutuyu genişletin, arama terimlerinizi girin ve Enter tuşuna **basın**. Arama **sayfası** görüntülenir; arama kutusunda arama terimi ve aşağıda listelenen arama sonuçları yer almaktadır.
 
-![Hizmet Güveni Portalı - Filtre uygulanmış Belgeler'de arama.](../media/86b754e1-c63c-4514-89ac-d014bf334140.png)
-
 Varsayılan olarak, arama belge sonuçlarını döndürür. Görüntülenen belge listesini geliştirmek için açılan listeleri kullanarak sonuçlara filtre ekleyebilirsiniz. Belge listesini daraltmak için birden çok filtre kullanabilirsiniz. Filtreler belirli bulut hizmetlerini, uyumluluk veya güvenlik uygulamaları kategorilerini, bölgeleri ve endüstrileri içerir. Belgeyi indirmek için belge adı bağlantısına tıklayın.
-
-Uyumluluk Yöneticisi'nde (klasik) arama terimleriyle ilgili Değerlendirmeler'den denetimlerin listesini görmek için, Uyumluluk **Yöneticisi'ne tıklayın**. Arama sonuçlarında değerlendirmenin oluşturulma tarihi, değerlendirme grubunun adı, ilgili Microsoft Bulut hizmeti ve denetimin Microsoft mu yoksa Müşteri Tarafından Yönetilen mi olduğu gösteriliyor. Denetimi Uyumluluk Yöneticisi'nde Değerlendirme'de (klasik) görüntülemek için denetimin adına tıklayın.
-
-![Hizmet Güveni Portalı - Uyumluluk Yöneticisi Denetimlerini Arama.](../media/bafb811a-68ce-40b5-ad16-058498fe5439.png)
 
 > [!NOTE]
 > Hizmet Güveni Portalı raporları ve belgeleri, yayımlandıktan sonra en az 12 ay boyunca veya belgenin yeni bir sürümü kullanılabilir duruma gelene kadar indirilebilir.
@@ -150,8 +144,6 @@ Bu başlangıç paketlerine erişmek için Hizmet Güveni Portalı **> Endüstri
 ## <a name="localization-support"></a>Yerelleştirme desteği
 
 Hizmet Güveni Portalı sayfa içeriğini farklı dillerde görüntülemenizi sağlar. Sayfa dilini değiştirmek için, sayfanın sol alt köşesindeki küre simgesine tıklayın ve istediğiniz dili seçin.
-
-![Hizmet Güveni Portalı - Yerelleştirilmiş içerik seçenekleri.](../media/b50c677e-a886-4267-9eca-915d880ead7a.png)
 
 ## <a name="give-feedback"></a>Geri bildirim gönderin
 

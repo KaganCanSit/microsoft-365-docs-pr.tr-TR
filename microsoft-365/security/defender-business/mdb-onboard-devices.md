@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/14/2022
+ms.date: 03/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: c5de66418b242beb975cce0d6ece299753360c99
-ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
+ms.openlocfilehash: 3db4d1b3cd4e4299c892a352b4f701abf05055ae
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63504771"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512776"
 ---
 # <a name="onboard-devices-to-microsoft-defender-for-business"></a>Cihazları İş için Microsoft Defender'a ekleme
 
@@ -31,7 +31,7 @@ ms.locfileid: "63504771"
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-İş için Microsoft Defender ile, kuruma uygun cihazları eklemeye yardımcı olmak için çeşitli seçenekleriniz vardır. Bu makale, seçenekleriniz üzerinde size yol sunar ve eklemenin nasıl çalıştığını genel bir bakış sunar.
+İş için Microsoft Defender ile, şirketinizin cihazlarını eklemeye yardımcı olmak için çeşitli seçenekleriniz vardır. Bu makale, seçenekleriniz üzerinde size yol sunar ve eklemenin nasıl çalıştığını genel bir bakış sunar.
 
 >
 > **Bir dakika mı kaldı?**
@@ -40,7 +40,7 @@ ms.locfileid: "63504771"
 
 ## <a name="get-the-device-onboarding-guide"></a>Cihaz ekleme kılavuzunu al
 
-Aşağıdaki kılavuzu ve bilgileri kullanarak, organizasyonunıza en uygun seçeneği belirtin.
+Aşağıdaki kılavuzu ve bilgileri kullanarak, şirketinize en uygun seçeneği belirtin.
 
 [:::image type="content" source="media/mdb-device-onboarding.png" alt-text="Cihaz ekleme diyagramının ekran görüntüsü":::](https://download.microsoft.com/download/4/d/2/4d2d8a86-2130-45b4-ba42-2997c854383a/MDB-DeviceOnboardingFlow-March2022.pdf) <br/>
 [PDF](https://download.microsoft.com/download/4/d/2/4d2d8a86-2130-45b4-ba42-2997c854383a/MDB-DeviceOnboardingFlow-March2022.pdf) | [Visio](https://download.microsoft.com/download/4/d/2/4d2d8a86-2130-45b4-ba42-2997c854383a/MDB-DeviceOnboardingFlow-March2022.vsdx)
@@ -79,7 +79,7 @@ Bu makalede cihaz çıkarma [hakkında da bilgi bulabilirsiniz](#offboarding-a-d
 
 Otomatik ekleme seçeneği yalnızca Windows için geçerlidir. Aşağıdaki koşullar karşı olursa otomatik ekleme kullanılabilir:
 
-- İş için Defender'ı Microsoft Endpoint Manager, Microsoft Intune veya Mobil Cihaz Yönetimi'Microsoft Intune MDM) zaten kullanıyordur
+- siz İş için Defender'ı Microsoft Endpoint Manager, Microsoft Intune veya Mobil Cihaz Yönetimi'Microsoft Intune MDM) kullanıyor olabilir
 
 - Zaten Windows Windows cihazlarınız var Endpoint Manager
 
@@ -107,11 +107,11 @@ Kullanıcıları ve Mac cihazlarına yerel bir Windows betik kullanabilirsiniz. 
    | İşletim Sistemi | Yordam |
    |---|---|
    | Windows | 1. Windows cihazda, yapılandırma paketinin içeriğini Masaüstü klasörü gibi bir konuma ayıklayın. adlı bir dosyanız olması gerekir `WindowsDefenderATPLocalOnboardingScript.cmd`. <br/><br/>2. Yönetici olarak Komut İstemi'ne başvurun.<br/><br/>3. Betik dosyasının konumunu yazın. Örneğin, dosyayı Masaüstü klasörüne kopyaladıysanız, şunları yazmanız gerekir: `%userprofile%\Desktop\WindowsDefenderATPLocalOnboardingScript.cmd`ve sonra Enter tuşuna basın (veya Tamam'ı **seçin**).<br/><br/>4. Betik çalıştır edildikten sonra Algılama testi [çalıştırma'ya devam edin](#run-a-detection-test). |
-   | macOS | 1. Mac bilgisayarda, yükleme paketini yerel bir dizine `wdav.pkg` kaydedin. <br/><br/>2. Ekleme paketini, yükleme `WindowsDefenderATPOnboardingPackage.zip` paketinde kullanılan dizine kaydedin. <br/><br/>3. Finder'ı kullanarak, `wdav.pkg` daha önce kaydedilmiş olan size gidin ve dosyayı açın.<br/><br/>4. **Devam'ı** seçin, Lisans koşullarını kabul edin ve ardından istendiğinde parolanızı girin.<br/><br/>5. Microsoft sürücüsünün yüklenmesine izin vermeniz istenir ("Sistem Uzantısı Engellendi" veya "Yükleme engellendi"), ya da her ikisini birden yüklemeniz istenir. Sürücünün yüklenmeye izin verilmiyor olması gerekir. Yüklemeye izin vermek için, **Güvenlik Tercihlerini Aç'ı** veya **Sistem** >  Tercihlerini **AçSecurity & ve sonra** İzin Ver'i **seçin**.<br/><br/>6. Ekleme paketini çalıştırmak için Bash'ta aşağıdaki Python komutunu kullanın: `/usr/bin/python MicrosoftDefenderATPOnboardingMacOs.py`. <br/><br/>7. Cihazın organizasyonuyla ilişkili olduğunu onaylamak için Bash'ta şu Python komutunu kullanın: `mdatp health --field org_id`.<br/><br/>8. macOS 10.15 (Catalina) veya sonraki bir bilgisayar kullanıyorsanız cihazınızı korumak için İş için Defender iznini alın. Sistem **TercihleriSecurity &** >  **PrivacyPrivacyFull** >  >  **Disk Access'e gidin**.  Değişiklik yapmak için kilit simgesini seçin (iletişim kutusunun alt kısmında) ve sonra İş için Microsoft Defender'ı (veya uç nokta için Defender'ı (görüyorsanız, uç nokta için Defender) seçin. <br/><br/>9. Cihazın yerleşik olduğunu doğrulamak için Bash'ta şu komutu kullanın: `mdatp health --field real_time_protection_enabled`.    |
+   | macOS | 1. Mac bilgisayarda, yükleme paketini yerel bir dizine `wdav.pkg` kaydedin. <br/><br/>2. Ekleme paketini, yükleme `WindowsDefenderATPOnboardingPackage.zip` paketinde kullanılan dizine kaydedin. <br/><br/>3. Finder'ı kullanarak, `wdav.pkg` daha önce kaydedilmiş olan size gidin ve dosyayı açın.<br/><br/>4. **Devam'ı** seçin, Lisans koşullarını kabul edin ve ardından istendiğinde parolanızı girin.<br/><br/>5. Microsoft sürücüsünün yüklenmesine izin vermeniz istenir ("Sistem Uzantısı Engellendi" veya "Yükleme engellendi"), ya da her ikisini birden yüklemeniz istenir. Sürücünün yüklenmeye izin verilmiyor olması gerekir. Yüklemeye izin vermek için, **Güvenlik Tercihlerini Aç'ı** veya **Sistem** >  Tercihlerini **AçSecurity & ve sonra** İzin Ver'i **seçin**.<br/><br/>6. Ekleme paketini çalıştırmak için Bash'ta aşağıdaki Python komutunu kullanın: `/usr/bin/python MicrosoftDefenderATPOnboardingMacOs.py`. <br/><br/>7. Cihazın şirketle ilişkilendirilmiş olduğunu onaylamak için Bash'ta aşağıdaki Python komutunu kullanın: `mdatp health --field org_id`.<br/><br/>8. macOS 10.15 (Catalina) veya sonraki bir bilgisayar kullanıyorsanız cihazınızı korumak için İş için Defender iznini alın. Sistem **TercihleriSecurity &** >  **PrivacyPrivacyFull** >  >  **Disk Access'e gidin**.  Değişiklik yapmak için kilit simgesini seçin (iletişim kutusunun alt kısmında) ve sonra İş için Microsoft Defender'ı (veya uç nokta için Defender'ı (görüyorsanız, uç nokta için Defender) seçin. <br/><br/>9. Cihazın yerleşik olduğunu doğrulamak için Bash'ta şu komutu kullanın: `mdatp health --field real_time_protection_enabled`.    |
 
 ## <a name="microsoft-endpoint-manager"></a>Microsoft Endpoint Manager
 
-zaten Endpoint Manager kullanıyorsanız (Microsoft Intune ve Mobil Cihaz Yönetimi dahil), Endpoint Manager'ı kullanarak kuruluş cihazlarını eklemeye devam edebilirsiniz. Uygulama Endpoint Manager iOS ve Android cihazları dahil olmak üzere bilgisayarları, tabletleri ve telefonları dahil edin.
+zaten Endpoint Manager kullanıyorsanız (Microsoft Intune ve Mobil Cihaz Yönetimi dahil), İş için Defender'ı olmadan önce Endpoint Manager cihazlarını eklemeye devam edebilirsiniz. Uygulama Endpoint Manager iOS ve Android cihazları dahil olmak üzere bilgisayarları, tabletleri ve telefonları dahil edin.
 
 Bkz[. Microsoft Intune'de cihaz kaydı](/mem/intune/enrollment/device-enrollment).
 
@@ -152,7 +152,7 @@ Komut çalıştır edildikten sonra, Komut İstemi penceresi otomatik olarak kap
 
 ## <a name="gradual-device-onboarding"></a>Aşamalı cihaz ekleme
 
-Kuruluş cihazlarınızı aşamalar içinde  onboard. *Bu aşamalı cihaz ekleme çağrısını aşamalı olarak çağrıltır.* 
+Şirketinizi cihazlara aşamalı olarak  yanitabilirsiniz. *Bu aşamalı cihaz ekleme çağrısını aşamalı olarak çağrıltır.* 
 
 1. Ekleme için bir cihaz kümesi belirleme.
 

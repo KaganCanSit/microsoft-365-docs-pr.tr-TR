@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 ms.assetid: 8f20ca4f-a908-46ec-99e6-9890d269ecf2
 description: Tahmini ve gerçek arama sonuçlarının, aramalarda eBulma araçlarıyla çalışma süresinde neden değişiklik göster Office 365.
-ms.openlocfilehash: 16b63b96421cfbf3f9d67e1373061b49ff5db225
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: e9dd47f8f2485fe31044cf52ae8e04e65eeaac60
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63032485"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512956"
 ---
 # <a name="differences-between-estimated-and-actual-ediscovery-search-results"></a>Tahmini ve gerçek eBulma arama sonuçları arasındaki farklar
 
@@ -73,7 +73,10 @@ Bu farkların bazı nedenleri şöyledir:
 
 - **Belge ve sürüm SharePoint OneDrive**. Bir SharePoint ve OneDrive hesapları aranıyorsa, bir belgenin birden çok sürümü tahmini arama sonuçları sayısına dahil değildir. Ancak, arama sonuçlarını dışarı aktararak tüm belge sürümlerini ekleme seçeneğiniz vardır. Arama sonuçlarını dışarı aktaracak belge sürümleri eklersiniz, dışarı aktarılmış öğelerin gerçek sayısı (ve toplam boyutu) artırılacaktır.
 
-- **SharePoint seçin**. SharePoint'daki klasörlerin adı bir arama sorgusuyla eşebiliyorsa, arama tahminsinde bu klasörlerin sayısı (ancak bu klasörlerdeki öğelerin değil) yer alır. Arama sonuçlarını dışarı aktarsanız bile, klasördeki öğeler dışarı aktarıldı ancak gerçek klasör dışarı aktarıldı. Sonuçta, dışarı aktarıldı olarak dışarı aktaran öğelerin sayısının tahmini arama sonucu sayısından daha fazla olur. Bir klasör boşsa, gerçek klasör dışarı aktarılamay olduğundan dışarı aktaran gerçek arama sonuçlarının sayısı bir öğeyle azalır.
+- **SharePoint seçin**. SharePoint'daki klasörlerin adı bir arama sorgusuyla eşebiliyorsa, arama tahminsinde bu klasörlerin sayısı (ancak bu klasörlerdeki öğelerin değil) yer alır. Arama sonuçlarını dışarı aktarsanız, klasördeki öğeler dışarı aktarıldı ancak asıl klasör dışarı aktarıldı. Sonuçta, dışarı aktaran öğelerin sayısının tahmini arama sonucu sayısından daha fazla olmasıdır. Bir klasör boşsa, gerçek klasör dışarı aktarılamay olduğundan dışarı aktaran gerçek arama sonuçlarının sayısı bir öğeyle azalır.
+
+   > [!NOTE]
+   > Sorgu tabanlı bir arama çalıştıracaksanız, SharePoint aşağıdaki koşulu ekleyerek bu klasörlerin dışında tutabilirsiniz: `NOT(ContentType:folder)`.
 
 - **SharePoint seçin**. Bir liste adının SharePoint bir arama sorgusuyla eş eşleşmesi, arama tahminini listede yer alan tüm öğelerin sayısını içerir. Arama sonuçlarını dışarı aktarsanız bile, liste (ve liste öğeleri) tek bir CSV dosyası olarak dışarı aktarıldı. Bu, gerçekten dışarı aktaran gerçek öğe sayısını azaltır. Listede ekler varsa, ekler ayrı belgeler olarak dışarı aktarıldı ve bu da dışarı aktarıldı öğe sayısını artıracaktır.
 

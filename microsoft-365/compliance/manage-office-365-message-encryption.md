@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
 ms.localizationpriority: medium
-ms.date: 5/8/2019
+ms.date: 03/04/2022
 search.appverid:
 - MET150
 ms.assetid: 09f6737e-f03f-4bc8-8281-e46d24ee2a74
@@ -19,12 +19,12 @@ ms.collection:
 ms.custom:
 - seo-marvel-apr2020
 description: Web Hizmetleri (OME) Office 365 İleti Şifrelemesi sonra dağıtımınızı çeşitli yollarla özelleştirmeyi öğrenin.
-ms.openlocfilehash: c402b5f414e81fbb7403d56a7314c9255c8cf1b4
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 49a3957eb4bc2cf1123f04ab0dea77d2adb638b0
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985031"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512178"
 ---
 # <a name="manage-office-365-message-encryption"></a>Office 365 İleti Şifrelemesi
 
@@ -211,7 +211,7 @@ Alıcıları oME Portalı'nın şifreli e-postalarını okumaya yönlendiren bir
 
 ## <a name="customize-the-appearance-of-email-messages-and-the-ome-portal"></a>E-posta iletilerinin ve OME portalının görünümünü özelleştirme
 
-OME'yi organizasyonunız için nasıl özelleştirebileceğiniz hakkında ayrıntılı bilgi için bkz. Şifreli [iletilerinize kuruluş markasını ekleme](add-your-organization-brand-to-encrypted-messages.md).
+OME'yi organizasyonunız için nasıl özelleştirebileceğiniz hakkında ayrıntılı bilgi için bkz. Şifreli [iletilerinize kuruluş markasını ekleme](add-your-organization-brand-to-encrypted-messages.md). Şifreli iletileri izleyebilme ve iptal etmek için, özel markanızı OME portalına eklemeniz gerekir.
   
 ## <a name="disable-the-new-capabilities-for-ome"></a>OME için yeni özellikleri devre dışı bırakma
 

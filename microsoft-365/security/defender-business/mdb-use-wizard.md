@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 03/10/2022
+ms.date: 03/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-get-started
-ms.openlocfilehash: 2cc157e363c42b94cac750b19a6122ed0a22c3de
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: b55af496881489279a7a6f96ed386ab2a26c2fa5
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450766"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512608"
 ---
 # <a name="use-the-wizard-to-set-up-microsoft-defender-for-business"></a>Microsoft Defender for Business'ı ayarlamak için sihirbazı kullanma
 
@@ -51,13 +51,13 @@ Sihirbaz, İş için Defender'ı hızla ve verimli bir şekilde ayarlamanıza ve
    - Güvenlik Yöneticisi güvenlik ayarlarını  görüntüleyemez ve düzenleyebilir. 
    - Güvenlik Okuyucusu bilgileri yalnızca raporlarda  görüntüde olabilir. 
 
-2. **Cihaz ekleme ve Windows yapılandırma**. Bu adımda, İşletmeler için Defender'a Windows mobil cihazlarınızı  onboard. Cihazları hemen işe ekleme, bu cihazları ilk günden korumanıza yardımcı olur. Daha [fazla bilgi için bkz. Cihazları İş için Microsoft Defender'a](mdb-onboard-devices.md) ekleme.
+2. **Cihaz ekleme ve Windows yapılandırma**. Bu adımda, şirketinizin cihaz ve cihazlarını Defender Windows Defender for Business'a hızlıca  yanitabilirsiniz. Cihazları hemen işe ekleme, bu cihazları ilk günden korumanıza yardımcı olur. Daha [fazla bilgi için bkz. Cihazları İş için Microsoft Defender'a](mdb-onboard-devices.md) ekleme.
 
-   - Zaten Microsoft Intune (Microsoft Endpoint Manager'in bir parçası) kullanıyorsanız ve Endpoint Manager'e kayıtlı cihazlarınız varsa, kaydolan Windows cihazlarının bir bölümü veya hepsi için otomatik ekleme kullanmak isteyip Windows sorabilirsiniz.[](mdb-onboard-devices.md#automatic-onboarding-for-windows-devices-enrolled-in-microsoft-endpoint-manager) Otomatik ekleme, Endpoint Manager Defender İş arasında bir bağlantı ayarlar ve ardından Windows Defender İş'e cihaz ayarlar.
+   - Zaten Microsoft Intune kullanıyorsanız (Microsoft Endpoint Manager'in bir parçası) ve şirketinde Endpoint Manager'e kayıtlı cihazları varsa, kaydolan Windows cihazlarının bir bölümü veya hepsi için otomatik ekleme kullanmak isteyip Windows sorabilirsiniz.[](mdb-onboard-devices.md#automatic-onboarding-for-windows-devices-enrolled-in-microsoft-endpoint-manager) Otomatik ekleme, Endpoint Manager Defender İş arasında bir bağlantı ayarlar ve ardından Windows Defender İş'e cihaz ayarlar.
 
    - henüz Endpoint Manager'i Windows cihazlarınız yoksa Endpoint Manager [Defender for Business'a el ile ekleyebilirsiniz](mdb-onboard-devices.md#local-script-in-defender-for-business). 
    
-3. **Güvenlik ilkelerinizi yapılandırma**. İş için Defender, yeni nesil koruma ve güvenlik duvarı koruması için, kuruluş cihazlarına uygulanan varsayılan güvenlik ilkelerini içerir. Bu varsayılan ilkeler önerilen ayarları kullanır ve cihazlarınıza güçlü bir koruma sağlamak üzere tasarlanmıştır. 
+3. **Güvenlik ilkelerinizi yapılandırma**. defender for Business, yeni nesil koruma ve güvenlik duvarı koruması için, şirketin cihazlarına uygulanan varsayılan güvenlik ilkelerini içerir. Bu varsayılan ilkeler önerilen ayarları kullanır ve cihazlarınıza güçlü bir koruma sağlamak üzere tasarlanmıştır. 
 
    Ayrıca isterseniz kendi güvenlik ilkelerinizi de oluşturabilirsiniz. Zaten Endpoint Manager kullanıyorsanız, güvenlik ilkelerinizi yönetmek için bunu kullanmaya devam edersiniz. 
 

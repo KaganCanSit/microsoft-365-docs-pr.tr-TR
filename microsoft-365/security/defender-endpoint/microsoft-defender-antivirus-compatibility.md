@@ -18,12 +18,12 @@ ms.date: 03/14/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 3a0701880a5712de4ec930e49397bf2ef4b8e637
-ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
+ms.openlocfilehash: 25d01c597da0f3a3e108eeee27d3a0dfe5b58eb7
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63468864"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512538"
 ---
 # <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Virüsten Koruma güvenlik ürünleriyle uyumluluk sorunları
 
@@ -153,13 +153,13 @@ Bu bölümdeki tabloda, "Etkin modda mı, pasif modda mı, yoksa devre dışı m
  | [Ağ koruması](network-protection.md)  | Evet | Hayır | Hayır | Hayır | 
  | [Saldırı yüzeyini azaltma kuralları](attack-surface-reduction.md)  | Evet | Hayır | Hayır  | Hayır | 
  | [Sınırlı düzenli tarama kullanılabilirliği](limited-periodic-scanning-microsoft-defender-antivirus.md) | Hayır | Hayır | Evet | Hayır | 
- | [Dosya tarama ve algılama bilgileri](review-scan-results-microsoft-defender-antivirus.md) | Evet | Evet | Hayır | Evet | 
- | [Tehdit düzeltmesi](configure-remediation-microsoft-defender-antivirus.md) | Evet | Nota bakın <sup>[[5](#fn5)]</sup> | Hayır | Evet | 
+ | [Dosya tarama ve algılama bilgileri](review-scan-results-microsoft-defender-antivirus.md) | Evet | Evet<sup>[[5](#fn5)]</sup> | Hayır | Evet | 
+ | [Tehdit düzeltmesi](configure-remediation-microsoft-defender-antivirus.md) | Evet | Evet | Hayır | Evet | 
  | [Güvenlik zekası güncelleştirmeleri](manage-updates-baselines-microsoft-defender-antivirus.md) | Evet | Evet | Hayır | Evet | 
 
 (<a id="fn4">4</a>) Genel olarak, Microsoft Defender Virüsten Koruma pasif modundayken, gerçek zamanlı koruma etkin ve pasif modunda olsa bile, hiçbir engelleme veya zorlama sağlamaz.
 
-(<a id="fn5">5</a>) Microsoft Defender Virüsten Koruma edilgen moddayken tehdit düzeltme özellikleri yalnızca zamanlanmış veya isteğe bağlı taramalarda etkin olur.
+(<a id="fn5">5</a>) Microsoft Defender Virüsten Koruma pasif modundayken, taramalar zamanlanmaz.
 
 > [!NOTE]
 > [Microsoft 365 uç nokta veri kaybı önleme](/microsoft-365/compliance/endpoint-dlp-learn-about) koruması etkin veya pasif modunda Microsoft Defender Virüsten Koruma şekilde normal çalışmaya devam eder.

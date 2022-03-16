@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 02/24/2022
+ms.date: 03/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: c955b85001a141933227873a1f74e681f74b004b
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: e1ef67f3f3011a660793858900f41f50c0e503b0
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63322947"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512998"
 ---
 # <a name="tutorials-and-simulations-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'daki öğreticiler ve benzetimler
 
@@ -30,7 +30,7 @@ ms.locfileid: "63322947"
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-İş için Microsoft Defender'ı ayarlamayı yeni bitirdiyseniz, İş için Defender'ın nasıl çalıştığını nereden öğrenmeye başlayacağını merak ediyor olabilir. Bu makalede deneme senaryoları ve İş için Defender ile kullanılabilen çeşitli öğreticiler ve benzetimler açıklanmıştır. Bu kaynaklar, İş için Defender'ın sizin için nasıl çalışacı olduğunu görmenize yardımcı olmak üzere tasarlanmıştır.
+İş için Microsoft Defender'ı ayarlamayı yeni bitirdiyseniz, İş için Defender'ın nasıl çalıştığını nereden öğrenmeye başlayacağını merak ediyor olabilir. Bu makalede deneme senaryoları ve İş için Defender ile kullanılabilen çeşitli öğreticiler ve benzetimler açıklanmıştır. Bu kaynaklar, Defender For Business'ın şirketinize nasıl yardımcı olduğunu görmenizi sağlar.
 
 >
 > **Bir dakika mı kaldı?**
@@ -48,7 +48,7 @@ Aşağıdaki tabloda, İş için Defender ile denemeniz gereken birkaç senaryo 
 | Yerel betik kullanarak cihazları ekleme <br/>(*üretim dağıtımı için değil*)     | İş için Defender'da, indiren ve her cihaza çalıştıracak bir betik kullanarak en fazla on Windows 10 ve 11 cihaz indirebilirsiniz. Defender for Business'ın ortamınızı nasıl çalıştıracaklarını değerlendirmek için uygun olan betik, Azure Active Directory (Azure AD) ile bir güven oluşturur ve cihazı Microsoft Intune. Daha fazla bilgi edinmek için bkz [. İş için Defender'da yerel betik](mdb-onboard-devices.md#local-script-in-defender-for-business).         |
 | Microsoft Intune kullanarak cihazları Microsoft Intune     | Uç nokta için Defender'ı Microsoft Intune önceden Microsoft Intune kullanıyorsanız cihaz eklemeye devam edin. Farklı işletim sistemli macOS, iOS ve Android Microsoft Intune. Daha fazla bilgi edinmek için bkz[. Microsoft Intune](/mem/intune/enrollment/device-enrollment).        |
 | Güvenlik ilkelerini düzenleme     | Defender For Business'da güvenlik ilkelerinizi yönetiyorsanız, ilkelerinizi görüntülemek ve **düzenlemek için Cihaz** yapılandırma sayfasını kullanın. Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da ilkeleri görüntüleme veya düzenleme](mdb-view-edit-policies.md).        |
-| Benzetimi yapılan saldırıyı yürütün   | İş için Defender'da çeşitli öğreticiler ve benzetimler mevcuttur. Bu öğreticiler ve benzetimler, Defender for Business'ın tehdit koruması özelliklerinin organizasyonunıza nasıl yararlı olduğunu ilk elden göstermek için tasarlanmıştır. Öğreticilerden birini veya daha fazlasını denemek için bkz. İş [için Microsoft Defender'a yönelik önerilen öğreticiler](#recommended-tutorials-for-defender-for-business).         |
+| Benzetimi yapılan saldırıyı yürütün   | İş için Defender'da çeşitli öğreticiler ve benzetimler mevcuttur. Bu öğreticiler ve benzetimler, Defender for Business'ın tehdit koruması özelliklerinin şirketinize nasıl yararlı olduğunu ilk elden göstermek için tasarlanmıştır. Öğreticilerden birini veya daha fazlasını denemek için bkz. İş [için Microsoft Defender'a yönelik önerilen öğreticiler](#recommended-tutorials-for-defender-for-business).         |
 | Olay görünümünde Microsoft 365 Lighthouse     | Microsoft 365 Lighthouse [Microsoft Bulut Çözümü Sağlayıcısı](/partner-center/enrolling-in-the-csp-program) kullanıyorsanız, yakın zamanda Microsoft 365 Lighthouse portalında müşterilerin kiracılarında olayları görüntüebilirsiniz. Daha fazla bilgi edinmek için bkz[. Microsoft 365 Lighthouse İş için Microsoft Defender](mdb-lighthouse-integration.md).       |
 
 
@@ -62,7 +62,7 @@ Aşağıdaki tabloda, İş için Defender müşterileri için önerilen öğreti
 |---------|---------|
 | **Belge Backdoor'a düşer**     | Test cihazında dosya tabanlı kötü amaçlı yazılıma neden olan saldırının benzetimini yapmak. Öğreticide benzetim dosyasını alma ve kullanma ve bu dosyada neleri izlemeniz Microsoft 365 Defender açık almaktadır. <br/><br/>Bu öğretici, Microsoft Word cihazınıza yüklenmemiş olması gerekir.   |
 | **Canlı Yanıt öğreticisi**     | Canlı Yanıt ile temel ve gelişmiş komutları kullanmayı öğrenin. Şüpheli bir dosyayı nasıl bu şekilde bulup düzeltmeyi ve cihazda bilgi toplamayı öğrenin.   |
-| **Tehdit & Güvenlik Açığı Yönetimi (temel senaryolar)**     | Üç senaryoyu Tehdit ve Güvenlik Açığı Yönetimi hakkında bilgi edinmek için: <br/><br/>1. Kuruluş tehditini ve güvenlik açığına maruz kalma süresini azaltma. <br/>2. Düzeltme isteğide bulundur. <br/>3. Güvenlik önerileri için bir özel durum oluşturun. <br/><br/> Tehdit güvenlik açığı yönetimi kimlik açıkları ve hatalı yapılandırmaları bulma, önceliklendirme ve düzeltme için risk tabanlı bir yaklaşım kullanır.      |
+| **Tehdit & Güvenlik Açığı Yönetimi (temel senaryolar)**     | Üç senaryoyu Tehdit ve Güvenlik Açığı Yönetimi hakkında bilgi edinmek için: <br/><br/>1. Şirketinizi tehdit ve güvenlik açığına maruz kalma süresini azaltma. <br/>2. Düzeltme isteğide bulundur. <br/>3. Güvenlik önerileri için bir özel durum oluşturun. <br/><br/> Tehdit güvenlik açığı yönetimi kimlik açıkları ve hatalı yapılandırmaları bulma, önceliklendirme ve düzeltme için risk tabanlı bir yaklaşım kullanır.      |
 
 Her öğreticide senaryoyu, bunların nasıl çalıştığını ve ne yaptığını açıklayan yol gösterir.
 

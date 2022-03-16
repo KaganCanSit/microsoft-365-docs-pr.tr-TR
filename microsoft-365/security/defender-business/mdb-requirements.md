@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/14/2022
+ms.date: 03/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 3fd3f272fee91e8ca14d667d953b65b1122284db
-ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
+ms.openlocfilehash: d7336e06aa970ac9fc08cafcb50f8bbed040c8a8
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63468688"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512314"
 ---
 # <a name="microsoft-defender-for-business-requirements"></a>İş için Microsoft Defender gereksinimleri
 
@@ -56,7 +56,7 @@ Aşağıdaki tabloda, İş için Microsoft Defender'ı yapılandırmak ve kullan
 | İzinler  | İş için Microsoft Defender'a kaydolmak için Genel Yönetici olmak gerekir.<br/><br/>Kullanıcı portalına Microsoft 365 Defender, kullanıcıların Azure [AD'de şu rollerden birinin atanmış olması](mdb-roles-permissions.md) gerekir: <br/>- Güvenlik Okuyucu<br/>- Güvenlik Yöneticisi<br/>- Genel Yönetici<br/><br/>Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da roller ve izinler](mdb-roles-permissions.md). |
 | Tarayıcı gereksinimleri | Microsoft Edge Veya Google Chrome |
 | İşletim sistemi | Cihazları İş için Microsoft Defender'da yönetmek için, cihazlarınız aşağıdaki işletim sistemlerinden birini çalıştırmaktadır: <br/>- Windows 10 Business veya sonrası <br/>- Windows 10 Professional veya sonrası <br/>- Windows 10 Enterprise veya sonrası <br/><br/>[KB5006738'in yüklü](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541) olduğundan emin olun. <br/><br/>Cihazları zaten Microsoft Intune 'da (veya Microsoft Endpoint Manager) yönetiyorsanız, bu cihazları İş için Defender'a  edinebilirsiniz. |
-| Microsoft Endpoint Manager ile tümleştirme  | Cihazları İş için [Microsoft Defender güvenlik yapılandırmasını kullanarak eklemeyi planlıyorsanız](mdb-onboard-devices.md#microsoft-defender-for-business-security-configuration), aşağıdaki gereksinimlerin karşı olması gerekir:<br/><br/>Uç Nokta için [Microsoft Defender Güvenlik Yönetimi'nin önkoşulları karşı olmalıdır](/mem/intune/protect/mde-security-integration).<br/>- Azure AD, kuruluş cihazlarıyla Azure AD arasında güven oluşturulacak şekilde yapılandırıldığından emin olun. <br/>- İş için Defender,'da güvenlik yönetiminin etkinleştirilmiş Microsoft Endpoint Manager.<br/><br/>Cihazların aşağıdaki URL'lere bağlanamaları gerekir:<br/>- `enterpriseregistration.windows.net` (Azure AD'de kayıt için)<br/>- `login.microsoftonline.com` (Azure AD'de kayıt için)<br/>- `*.dm.microsoft.com` (Joker karakter (*), kayıt, iade ve raporlama için kullanılan bulut hizmeti uç noktalarını destekler ve hizmet ölçeği olarak değişebilir.) |
+| Microsoft Endpoint Manager ile tümleştirme  | Cihazları İş için [Microsoft Defender güvenlik yapılandırmasını kullanarak eklemeyi planlıyorsanız](mdb-onboard-devices.md#microsoft-defender-for-business-security-configuration), aşağıdaki gereksinimlerin karşı olması gerekir:<br/><br/>Uç Nokta için [Microsoft Defender Güvenlik Yönetimi'nin önkoşulları karşı olmalıdır](/mem/intune/protect/mde-security-integration).<br/>- Azure AD, şirketinizin cihazları arasında güveni ve Azure AD'nin oluşturulacak şekilde yapılandırılması gerekir. <br/>- İş için Defender,'da güvenlik yönetiminin etkinleştirilmiş Microsoft Endpoint Manager.<br/><br/>Cihazların aşağıdaki URL'lere bağlanamaları gerekir:<br/>- `enterpriseregistration.windows.net` (Azure AD'de kayıt için)<br/>- `login.microsoftonline.com` (Azure AD'de kayıt için)<br/>- `*.dm.microsoft.com` (Joker karakter (*), kayıt, iade ve raporlama için kullanılan bulut hizmeti uç noktalarını destekler ve hizmet ölçeği olarak değişebilir.) |
 
 > [!NOTE]
 > [Azure Active Directory izinlerini ve cihaz gruplarını yönetmek için otomatik ad (Azure AD)](/azure/active-directory/fundamentals/active-directory-whatis) kullanılır. Azure AD, İş için Defender aboneliğinize dahildir. 

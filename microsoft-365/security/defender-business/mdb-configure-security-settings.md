@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/14/2022
+ms.date: 03/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 5673ac38577dbd87019a954eb388d6ab8f050328
-ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
+ms.openlocfilehash: bccbc7cf33d8be285bac801512de974f0277cf06
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63504760"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512468"
 ---
 # <a name="view-and-edit-your-security-policies-and-settings-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da güvenlik ilkelerinizi ve ayarlarınızı görüntüleme ve düzenleme
 
@@ -33,11 +33,11 @@ ms.locfileid: "63504760"
 
 ## <a name="overview"></a>Genel bakış
 
-Kuruluş cihazlarınızı İş için Microsoft Defender'a ekledikten sonra, bir sonraki adımınız güvenlik ilkelerinizi ve ayarlarınızı görüntülemek ve gerekirse düzenlemektir. Güvenlik ilkeleri şunlardır:
+Şirketinizin cihazlarını İş için Microsoft Defender'a ekledikten sonra, bir sonraki adımınız güvenlik ilkelerinizi ve ayarlarınızı görüntülemek ve gerekirse düzenlemektir. Güvenlik ilkeleri şunlardır:
 
-- **[Kuruluş cihazlarında virüsten](#view-or-edit-your-next-generation-protection-policies)** koruma ve kötü amaçlı yazılımlardan korumayı belirleyen yeni nesil koruma ilkeleri
+- **[Virüsten koruma ve kötü](#view-or-edit-your-next-generation-protection-policies)** amaçlı yazılımdan korumayı belirleyen yeni nesil koruma ilkeleri
 
-- **[Hangi ağ trafiğinin](#view-or-edit-your-firewall-policies-and-custom-rules)**, kuruluş cihazlarına veya bu cihazlardan akışa izin verilmiyor?
+- **[Hangi ağ trafiğinin](#view-or-edit-your-firewall-policies-and-custom-rules)** şirket cihazlarına veya şirket cihazlarından akışına izin verilmiyor? Güvenlik duvarı koruması ve kuralları
 
 - **[Yetişkin içeriği veya yasal](#set-up-web-content-filtering)** sorumluluk gibi kategorilere göre kişilerin belirli web sitelerini (URL) ziyaretlerini önleyen Web içeriği filtreleme.
 
@@ -74,8 +74,8 @@ Aşağıdaki tablo, güvenlik ilkelerinizi ve cihazlarınızı yönetecek yeri s
 
 | Seçenek | Açıklama |
 |:---|:---|
-| **Önerilen Microsoft 365 Defender** *kullanma* | Mobil Microsoft 365 Defender ([https://security.microsoft.com/](https://security.microsoft.com/)), kuruluş cihazlarınızı, güvenlik ilkelerini ve güvenlik ayarlarını yönetmek için tek alışverişte olacağınız yer olabilir. Güvenlik ilkelerinize ve ayarlarınıza erişebilir, [Tehdit &](mdb-view-tvm-dashboard.md) Güvenlik Açığı Yönetimi panoyu kullanabilir ve tüm olayları tek bir [yerde görüntüleyebilirsiniz](mdb-view-manage-incidents.md) ve yönetebilirsiniz. <br/><br/>Microsoft Endpoint Manager kullanıyorsanız, İş için Defender'a tümleşik cihazlarınız ve güvenlik ilkeleriniz Endpoint Manager. Daha fazla bilgi edinmek için aşağıdaki makalelere bakın:<br/><br/>- [İş için Defender varsayılan ayarları ve Microsoft Endpoint Manager](mdb-next-gen-configuration-settings.md#defender-for-business-default-settings-and-microsoft-endpoint-manager)<br/><br/>- [İş için Microsoft Defender'da Güvenlik Duvarı](mdb-firewall.md)   |
-| **Microsoft Endpoint Manager'i kullanma** | Kuruluş, güvenlik ilkelerini yönetmek için Endpoint Manager (Microsoft Intune içerir) kullanıyorsa, cihazları ve güvenlik ilkelerini yönetmek için Endpoint Manager'i kullanmaya devam edin. Daha fazla bilgi edinmek için bkz[. Cihaz güvenliğiyle cihaz güvenliğini uç nokta güvenlik ilkeleriyle yönetme Microsoft Intune](/mem/intune/protect/endpoint-security-policy). <br/><br/>İş için [Defender'da](mdb-simplified-configuration.md) basitleştirilmiş yapılandırma sürecine geçmeye karar verirseniz, daha sonra ilke çakışmalarını önlemek için Endpoint Manager tüm güvenlik ilkelerini [silmeniz](mdb-troubleshooting.yml) istenir. |
+| **Önerilen Microsoft 365 Defender** *kullanma* | Mobil Microsoft 365 Defender ([https://security.microsoft.com/](https://security.microsoft.com/)), şirketin cihazlarını, güvenlik ilkelerini ve güvenlik ayarlarını yönetmek için tek alışverişte olacağınız yer olabilir. Güvenlik ilkelerinize ve ayarlarınıza erişebilir, [Tehdit &](mdb-view-tvm-dashboard.md) Güvenlik Açığı Yönetimi panoyu kullanabilir ve tüm olayları tek bir [yerde görüntüleyebilirsiniz](mdb-view-manage-incidents.md) ve yönetebilirsiniz. <br/><br/>Microsoft Endpoint Manager kullanıyorsanız, İş için Defender'a tümleşik cihazlarınız ve güvenlik ilkeleriniz Endpoint Manager. Daha fazla bilgi edinmek için aşağıdaki makalelere bakın:<br/><br/>- [İş için Defender varsayılan ayarları ve Microsoft Endpoint Manager](mdb-next-gen-configuration-settings.md#defender-for-business-default-settings-and-microsoft-endpoint-manager)<br/><br/>- [İş için Microsoft Defender'da Güvenlik Duvarı](mdb-firewall.md)   |
+| **Microsoft Endpoint Manager'i kullanma** | Şirket güvenlik ilkelerini yönetmek için Endpoint Manager (Microsoft Intune içerir) kullanıyorsa, Endpoint Manager'ı kullanarak cihazları ve güvenlik ilkelerini yönetmeye devam edin. Daha fazla bilgi edinmek için bkz[. Cihaz güvenliğiyle cihaz güvenliğini uç nokta güvenlik ilkeleriyle yönetme Microsoft Intune](/mem/intune/protect/endpoint-security-policy). <br/><br/>İş için [Defender'da](mdb-simplified-configuration.md) basitleştirilmiş yapılandırma sürecine geçmeye karar verirseniz, daha sonra ilke çakışmalarını önlemek için Endpoint Manager tüm güvenlik ilkelerini [silmeniz](mdb-troubleshooting.yml) istenir. |
 
 > [!IMPORTANT]
 > Microsoft 365 Defender portalında güvenlik ilkelerini yönetiyorsanız, bu ilkeleri Endpoint Manager Virüsten Koruma veya Güvenlik  Duvarı ilkeleri olarak listelenmiş olarak görüntüebilirsiniz. Güvenlik duvarı ilkelerinizi güvenlik Endpoint Manager, listelenen iki ilke vardır: güvenlik duvarı korumanıza yönelik bir ilke ve özel kurallar için başka bir ilke.
@@ -112,7 +112,7 @@ Web içeriği filtreleme, güvenlik ekibinin içerik kategorilerine göre web si
 
 - Kategorilere kapatılmamış: hiç içeriği olmayan veya yeni kaydedilen siteler
 
-Bu kategorilere ait web sitelerinin hepsi kötü amaçlı değildir, ancak uyumluluk düzenlemeleri, bant genişliği kullanımı veya diğer endişelerden dolayı bu web siteleri organizasyonunız için sorun yaratabilir. Buna ek olarak, güvenlik ekibinin tüm web sitesi kategorilerini engelleyip engellemey denetlemesi gerektiğini daha iyi anlamak için bir yalnızca denetim ilkesi oluşturabilirsiniz.
+Bu kategorilere ait web sitelerinin hepsi kötü amaçlı değildir, ancak uyumluluk düzenlemeleri, bant genişliği kullanımı veya diğer endişelerden dolayı bunlar sorun yaratabilir. Buna ek olarak, güvenlik ekibinin tüm web sitesi kategorilerini engelleyip engellemey denetlemesi gerektiğini daha iyi anlamak için bir yalnızca denetim ilkesi oluşturabilirsiniz.
 
 Web içeriği filtreleme, başlıca web tarayıcılarında Windows Defender SmartScreen (Microsoft Edge) ve Ağ Koruması (Chrome, Firefox, Doğru ve Opera) tarafından gerçekleştirilen bloklarla kullanılabilir. Daha fazla bilgi için bkz [. Web içeriği filtreleme önkoşulları](../defender-endpoint/web-content-filtering.md#prerequisites).
 

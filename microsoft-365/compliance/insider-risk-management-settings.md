@@ -16,12 +16,12 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 62616ed20513ee023986525b4f097c96ae3107ba
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: f80ab9fcb0a3e057a20c22ff05c3a960cdf7eab4
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63330615"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512942"
 ---
 # <a name="get-started-with-insider-risk-management-settings"></a>Insider risk yönetimi ayarlarıyla çalışmaya başlama
 
@@ -37,6 +37,7 @@ Insider risk yönetimi ayarları, ilke oluştururken seçtiğiniz şablondan ba�
 - Power Automate akışları (önizleme)
 - Microsoft Teams (önizleme)
 - Analiz
+- Yönetici bildirimleri
 
 Insider risk yönetimi ilkelerine başlamadan ve oluşturmadan önce, bu ayarları anlamak ve kuruma en uygun uyumluluk düzeylerini seçmek önemlidir.
 
@@ -530,7 +531,7 @@ Analizler, olası risk alanlarıyla ilgili içgörüleri belirlemeye yardımcı 
 - **Azure Active Directory**: Tüm taramalara dahil edilen Azure Active Directory geçmişi, silinen kullanıcı hesaplarıyla ilişkilendirilmiş riskli etkinlikleri belirlemeye yardımcı olur.
 - **Microsoft 365 İk veri** bağlayıcısı bağlayıcısı: Yapılandırılırsa, İk bağlayıcısı etkinlikleri devam veya yaklaşan sonlandırma tarihlerine sahip kullanıcılarla ilişkilendirilmiş riskli etkinlikleri belirlemeye yardımcı olur.
 
-Taramalardan alınan çözümleme içgörüleri, Insider risk yönetimi ilkeleri tarafından kullanılan aynı risk etkinliği sinyallerine ve hem tek hem de sıralı kullanıcı etkinliklerine dayalı sonuçları raporlamaya dayalıdır. Ancak, analiz için risk puanlama etkinliği 30 günlük aktiviteye dayandırırken Insider risk ilkeleri içgörüler için günlük etkinliği kullanır. Kurumda analizi ilk kez etkinleştirtiğinde ve çalıştırarak, bir gün boyunca tarama sonuçlarını elde edin. Analizi etkin bırakırsanız, önceki 30 günlük etkinlik aralığından daha uzun bir süre için içgörü raporlarına her günlük taramanın sonuçlarının ekli olduğunu görüyorsunuz.
+Taramalardan alınan çözümleme içgörüleri, Insider risk yönetimi ilkeleri tarafından kullanılan aynı risk etkinliği sinyallerine ve hem tek hem de sıralı kullanıcı etkinliklerine dayalı sonuçları raporlamaya dayalıdır. Ancak, analiz için risk puanlama etkinliği 10 günlük aktiviteye dayandırırken Insider risk ilkeleri içgörüler için günlük etkinliği kullanır. Kurumda analizi ilk kez etkinleştirtiğinde ve çalıştırarak, bir gün boyunca tarama sonuçlarını elde edin. Analizi etkin bırakırsanız, önceki 10 günlük etkinlik aralığından daha uzun bir süre için içgörü raporlarına her günlük taramanın sonuçlarının ekli olduğunu görüyorsunuz.
 
 ### <a name="enable-analytics-and-start-your-scan"></a>Analizi etkinleştirme ve taramanızı başlatma
 
@@ -545,7 +546,9 @@ Insider risk analizini etkinleştirmek için aşağıdaki adımları tamamlayın
 
 ### <a name="viewing-analytics-insights-and-creating-new-policies"></a>Çözümleme içgörülerini görüntüleme ve yeni ilkeler oluşturma
 
-İlk analiz taraması tamamlandıktan sonra, kullanıcılarınızı tarafından risk altında olabilecek etkinliklere yönelik içgörüleri ve önerileri görüntüebilirsiniz. Siz organizasyonun analizini kapatmadıkça günlük taramalar devam eder. Organizasyonunız için olası riskleri görüntülemek için Genel Bakış sekmesine **gidin** ve Insider risk **analizi** kartında **Sonuçları görüntüle'yi** seçin. Kuruma tarama işlemi tamamlanmadı ise taramanın hala etkin olduğunu haber verilsin.
+İşletmeniz için ilk analiz taraması tamamlandıktan sonra *Insider Risk Yönetimi* Yönetici rol grubunun üyeleri otomatik olarak bir e-posta bildirimi alırlar ve kullanıcılarınız tarafından risk altında olabilecek etkinliklere yönelik ilk öngörüleri ve önerileri görebilirsiniz. Siz organizasyonun analizini kapatmadıkça günlük taramalar devam eder. Yöneticilere e-posta bildirimleri, kuruluşta ilk etkinlik örneğinden sonra çözümlemeler (veri sızıntıları, hırsızlık ve içeriyı gönderme) için üç kapsam içi kategorinin her biri için sağlanır. Günlük taramalar sonucunda elde edilen izleme etkinliği algılaması için yöneticilere e-posta bildirimleri gönderilmez. **Insider risk** >  yönetiminde **çözümlemeler varsa Ayarlar** >  **Analytics** devre dışı bırakılır ve daha sonra organizasyonda yeniden etkinleştirilir, otomatik e-posta bildirimleri sıfırlanır ve yeni tarama öngörüleri için *Insider Risk Management Admin rol* grubunun üyelerine e-postalar gönderilir.
+
+Organizasyonunız için olası riskleri görüntülemek için Genel Bakış sekmesine **gidin** ve Insider risk **analizi** kartında **Sonuçları görüntüle'yi** seçin. Kuruma tarama işlemi tamamlanmadı ise taramanın hala etkin olduğunu haber verilsin.
 
 ![Insider risk yönetimi analizi raporu hazır kartı.](../media/insider-risk-analytics-ready-card.png)
 
@@ -575,11 +578,17 @@ Insider risk analizini kapatmak için aşağıdaki adımları tamamlayın:
 
 Yönetici bildirimleri, yeni bir ilke için ilk uyarı oluşturulsa *, Insider Risk Yönetimi* Analistleri ve *Insider* Risk Yönetimi Analistleri ve *Insider Risk Yönetimi* Kullanıcılarının rol gruplarına dahil edilen kullanıcılara otomatik olarak bir e-posta bildirimi gönderir. Bu ayar tüm kuruluşlar ve ilkeler için varsayılan olarak 24 saatte bir denetlenir ve ilk kez yapılan uyarılar için kullanılır. İlk uyarıdan sonra ilkelerde yapılan hiçbir uyarı için bildirim gönderilmez.
 
+Organizasyonunız için Insider risk yönetimi Analizini etkinleştirdiyseniz, *Insider Risk Yönetimi* Yönetici rol grubunun üyeleri, veri sızıntıları, hırsızlık ve sızıntı etkinlikleriyle ilgili ilk analiz öngörüleri için otomatik olarak bir e-posta bildirimi alırlar.
+
 Yönetici bildirimlerini devre dışı bırakmayı tercih ediyorsanız, aşağıdaki adımları tamamlayın:
 
 1. Aşağıdaki [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimiInsider** >  **risk ayarları'ne gidin**.
 2. Yönetici **bildirimleri sayfasını** seçin.
-3. Yeni ilke **için ilk uyarı oluşturularak bildirim e-postası gönder onay** kutusunu temizleyin.
+3. Aşağıdaki seçeneklerin uygun olduğu onay kutusunu temizleyin:
+    - **Yeni bir ilke için ilk uyarı  oluşturularak bildirim e-postası gönderme**
+    - **Analiz'de yeni bir içgörü olduğunda e-posta bildirimi gönderme**
+    - **Analiz kapalıyken e-posta bildirimi gönderme**
+
 4. Yapılandırmak **ve çıkmak** için Kaydet'i seçin.
 
 ![Insider risk yönetimi yönetici bildirimleri ayarları.](../media/insider-risk-admin-notifications.png)

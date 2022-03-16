@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 02/24/2022
+ms.date: 03/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security-compliance
-ms.openlocfilehash: 4f92c50ad971de439541a7b8ea2e8f9fb5312c48
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: deae4e7449f142cbdbb9ef4d41953824499bedca
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449407"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512692"
 ---
 # <a name="get-microsoft-defender-for-business"></a>İş için Microsoft Defender'ı almak
 
@@ -80,7 +80,7 @@ Bkz[. Deneme veya satın Microsoft 365 İş Ekstra](../../business-premium/get-m
 
 4. Formu iletişim bilgileriyle doldurun. 
 
-   - Microsoft iş ortağıyla çalışan bir müşteriysiniz, Diğer kutusunda iş ortağının kuruluş  adını doldurun. Ardından **Submit**'i seçin.
+   - Microsoft iş ortağıyla çalışan bir müşteriysiniz, Diğer kutusunda iş ortağının şirket  adını doldurun. Ardından **Submit**'i seçin.
    - Bir Microsoft iş ortağı isanız, ortaklığınızı türünü ve birlikte çalışmak istediğiniz müşterilerle ilgili bilgileri göstermek için emin olun.
 
 5. Formu doldurmayı bitirdikten sonra Gönder'i **seçin**.
@@ -103,7 +103,7 @@ Denemenizi başlatmaya hazır olduğunda, ayarlamaları yapmak için iki ana por
 | Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/))      | Deneme Microsoft 365 yönetim merkezi etkinleştirmek ve ilk kez oturum açma için oturum açma özelliğini kullanın.<br/><br/> Ayrıca aşağıdaki bilgileri Microsoft 365 yönetim merkezi: <br/>- Kullanıcı ekleme veya kaldırma<br/>- Kullanıcı lisansları atama<br/>- Ürünlerinizi ve hizmetlerinizi görüntüleme<br/>- Microsoft 365 aboneliğiniz için Microsoft 365 görevlerini tamamlama <br/><br/> Daha fazla bilgi edinmek için bkz[. İlk Microsoft 365 yönetim merkezi](../../admin/admin-overview/admin-center-overview.md).      |
 | Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com))     | İş için Microsoft 365 Defender Defender'ı ayarlamak ve yapılandırmak için güvenlik portalını kullanın. <br/><br/>Microsoft 365 Defender portalını kullanarak şunları Microsoft 365 Defender kullanabilirsiniz: <br/>- Cihazlarınızı ve cihaz koruma ilkelerini görüntüleme<br/>- Algılanan tehditleri görüntüleme ve önlem alma<br/>- Güvenlik önerilerini görüntüleme ve güvenlik ayarlarınızı yönetme <br/><br/>Daha fazla bilgi edinmek için [bkz. Microsoft 365 Defender başlama](mdb-get-started.md).        |
 
-If your organization is using Microsoft 365 İş Ekstra, you have Microsoft Intune (Microsoft Endpoint Manager) and you might be using the Microsoft Endpoint Manager center ()[https://endpoint.microsoft.com/](https://endpoint.microsoft.com/). Endpoint Manager, cihazları yönetmenize ve güvenlik ayarlarını yapılandırmana da olanak tanır. Daha fazla bilgi edinmek için [bkz Microsoft Intune cihazlarınız için bir MDM ve MAM sağlayıcısıdır](/mem/intune/fundamentals/what-is-intune).
+If your company is using Microsoft 365 İş Ekstra, you have Microsoft Intune (Microsoft Endpoint Manager) and you might be using the Microsoft Endpoint Manager admin center ()[https://endpoint.microsoft.com/](https://endpoint.microsoft.com/). Endpoint Manager, cihazları yönetmenize ve güvenlik ayarlarını yapılandırmana da olanak tanır. Daha fazla bilgi edinmek için [bkz Microsoft Intune cihazlarınız için bir MDM ve MAM sağlayıcısıdır](/mem/intune/fundamentals/what-is-intune).
 
 ## <a name="activate-your-trial"></a>Denemenizi etkinleştirme
 

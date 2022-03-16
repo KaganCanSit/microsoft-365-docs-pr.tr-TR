@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 03/10/2022
+ms.date: 03/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 ms.custom: intro-get-started
-ms.openlocfilehash: 807ed67a789364928b00431f9d7a5abb98eba137
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 7d529ffac45484f585cf654d30cb5522bbdffcd5
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449912"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512300"
 ---
 # <a name="use-your-threat--vulnerability-management-dashboard-in-microsoft-defender-for-business"></a>microsoft Defender for Business& da Threat & Güvenlik Açığı Yönetimi panoyu kullanma
 
@@ -33,7 +33,7 @@ ms.locfileid: "63449912"
 
 İş için Microsoft Defender, güvenlik & zaman ve çabanızı kaydetmek üzere tasarlanmış bir Tehdit Güvenlik Açığı Yönetimi panosu içerir. Açığa çıkacak puanı sağlamanın yanı sıra, açık cihazlar ve güvenlik önerileriyle ilgili bilgileri de görüntüebilirsiniz. Threat & Güvenlik Açığı Yönetimi panoyu kullanarak:
 
-- Kuruluş cihazlarıyla ilişkilendirilmiş olan pozlama puanınızı görüntüleme
+- Şirketinizin cihazlarıyla ilişkilendirilmiş olan pozlama puanınızı görüntüleme
 
 - Cihazlarla iletişimi olumsuzlama, güvenlik duvarı korumasını açma veya güvenlik duvarı tanımlarını güncelleştirme gibi en önemli güvenlik Microsoft Defender Virüsten Koruma görüntüleme
 

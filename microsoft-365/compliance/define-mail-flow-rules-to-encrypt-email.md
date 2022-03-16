@@ -19,12 +19,12 @@ ms.custom:
 - admindeeplinkMAC
 - admindeeplinkEXCHANGE
 description: Yöneticiler, posta akış kurallarını (aktarım kuralları) kullanarak iletileri şifrelemeyi ve şifrelerini çözmeyi Office 365 İleti Şifrelemesi.
-ms.openlocfilehash: c546c151b7bcb1720f9903d43b8d310650f92d35
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+ms.openlocfilehash: bb50ed5d2b22fd74d4a6f88eba29f82d10be1f50
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63018755"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512818"
 ---
 # <a name="define-mail-flow-rules-to-encrypt-email-messages"></a>E-posta iletilerini şifrelemek için posta akış kurallarını tanımlama
 
@@ -103,7 +103,7 @@ EAC kullanarak, yeni OME özellikleriyle ileti şifrelemeyi kaldırmayı tetikle
 
 ### <a name="use-the-eac-to-create-a-rule-to-remove-encryption-from-email-messages-with-the-new-ome-capabilities"></a>Yeni OME özellikleriyle e-posta iletilerinden şifrelemeyi kaldırmak üzere bir kural oluşturmak için EAC'i kullanma
 
-Organizasyonunız tarafından uygulanan şifrelemeyi kaldırarak bunları kaldırmanıza yardımcı olabilir.
+Şifrelemeyi, sizin tarafından uygulanmış olan iletilerden kaldırabilirsiniz. Ayrıca, e-posta iletinin tamamının koruma olmadan korunmasını sağlamak için, tüm şifreli eklerin şifrelemesini kaldırabilirsiniz.
 
 1. Web tarayıcısında, genel yönetici izinlerine sahip bir iş veya okul hesabı kullanarak [Office 365.](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser)
 
@@ -117,9 +117,11 @@ Organizasyonunız tarafından uygulanan şifrelemeyi kaldırarak bunları kaldı
 
 6. Aşağıdaki **durumda bu kuralı uygula** altında, şifrelemenin iletilerden kaldırılması gereken koşulları seçin. Ekle **Gönderen, posta göndermek** \> **için kuruluşun** içinde veya Alıcı  **, posta** \> almak **için kuruluşun** içinde yer alıyor.
 
-7. **Aşağıdakini yapın'da** İleti **güvenliğini değiştir'i seçin Office 365 İleti Şifrelemesi** \> **koruma'ya tıklayın**.
+7. **Aşağıdakini yapın'da** İleti **güvenliğini değiştir Kuruluş tarafından** \> **Office 365 İleti Şifrelemesi hakları koruma kaldır'ı seçin**.
 
-8. **Kaydet**'i seçin.
+8. (İsteğe bağlı) Bunu **yapın'da** İleti güvenliğini **değiştir Kuruluş tarafından** \> **uygulanan ek hakları korumasını kaldır seçeneğini seçin**.
+
+Kuralı kaydedin.
 
 ## <a name="create-mail-flow-rules-for-office-365-message-encryption-without-the-new-capabilities"></a>Yeni özelliklere sahip Office 365 İleti Şifrelemesi için posta akışı kuralları oluşturma
 

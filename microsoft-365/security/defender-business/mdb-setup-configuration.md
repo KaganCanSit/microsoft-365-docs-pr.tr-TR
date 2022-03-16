@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 02/24/2022
+ms.date: 03/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: ec001f0a1576b767f93d74b7ef865e3912d397f1
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 8a649e7b7e2fef43661e9267c51956aac2a7bb2e
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449800"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512594"
 ---
 # <a name="set-up-and-configure-microsoft-defender-for-business"></a>İş için Microsoft Defender'ı ayarlama ve yapılandırma
 
@@ -47,7 +47,7 @@ ms.locfileid: "63449800"
 | 1 | [Gereksinimleri gözden geçirme](mdb-requirements.md) | İş için Microsoft Defender'a yönelik, desteklenen işletim sistemleri de içinde olmak üzere gereksinimleri gözden geçirebilirsiniz. Bkz. [İş için Microsoft Defender gereksinimleri](mdb-requirements.md). |
 | 2 | [Roller ve izinler atama](mdb-roles-permissions.md)     | Güvenlik ekibinizi kullanan kişilerin, algılanan tehditleri ve düzeltme eylemlerini gözden geçirme, & ilkeleri görüntüleme, cihaz ekleme & raporları kullanma gibi görevleri gerçekleştirmek için izinlere ihtiyacı vardır. Bu izinleri belirli roller aracılığıyla veebilirsiniz. Bkz [. Rol ve izin atama](mdb-roles-permissions.md).        |
 | 3 | [E-posta bildirimlerini ayarlama](mdb-email-notifications.md) | Uyarıların tetiklendiğinde veya yeni güvenlik açıkları keşfedlendiğinde e-posta bildirimlerini kimlerin a alacaklarını belirtebilirsiniz. Bkz [. E-posta bildirimlerini ayarlama](mdb-email-notifications.md).| 
-| 4 | [Cihazları ekleme](mdb-onboard-devices.md)     | İş için Microsoft Defender ayarlanmıştır; böylece, kuruma uygun cihazları eklemeye yardımcı olmak için çeşitli seçenekler arasında seçim yapabilirsiniz. Bkz [. Cihazları İş için Microsoft Defender'a ekleme](mdb-onboard-devices.md).         |
+| 4 | [Cihazları ekleme](mdb-onboard-devices.md)     | İşletmeler için Microsoft Defender ayarlanmıştır; böylece, şirketin cihazlarını eklemeye yardımcı olmak için çeşitli seçenekler arasında seçim yapabilirsiniz. Bkz [. Cihazları İş için Microsoft Defender'a ekleme](mdb-onboard-devices.md).         |
 | 5 | [Güvenlik ayarlarınızı ve ilkelerinizi yapılandırma](mdb-configure-security-settings.md) | Güvenlik ayarlarınızı ve ilkelerinizi yapılandırmak için, basitleştirilmiş bir yapılandırma işlemi veya güvenlik ilkeleri gibi çeşitli seçenekler Microsoft Endpoint Manager. Bkz [. Güvenlik ayarlarınızı ve ilkelerinizi yapılandırma](mdb-configure-security-settings.md). |
 
 ## <a name="next-steps"></a>Sonraki adımlar

@@ -20,12 +20,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft 365; Exchange posta kutuları, SharePoint ve OneDrive İş siteleri, Microsoft 365 Grupları, Site İçeriği gibi farklı konumlarda bulunan içerikleri aramak ve dışarı Microsoft 365 için kullanabileceğiniz üç eBulma aracı Microsoft Teams ve Skype Kurumsal konuşmalar. Core eDiscovery and Advanced eDiscovery, araştırmalarınızı yönetmenize yardımcı olacak birçok ek özellik sağlar.
-ms.openlocfilehash: e92619ff0ecbfcdbdf1a7f41eb4cd35282a6f2d9
-ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
+ms.openlocfilehash: cccc30dd649dc5abe74c551434e904236ecf9d35
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63494520"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512496"
 ---
 # <a name="ediscovery-solutions-in-microsoft-365"></a>Microsoft 365'te eKbulma çözümleri
 
@@ -132,8 +132,8 @@ Aşağıdaki bölümlerde İçerik araması, Çekirdek eKbulma ve Yenileme için
 - Microsoft 365 G1 aboneliği
 - Microsoft 365 F1 F3 aboneliği veya F5 Güvenlik eklentiniz var
 - Microsoft 365 İş Ekstra aboneliği
-- Microsoft 365 Business Standard
-- Microsoft 365 İş Temel
+- Microsoft 365 İş Standart aboneliği
+- Microsoft 365 İş Temel aboneliği
 - Office 365 Eğitim A1 aboneliği
 - Office 365 E1 aboneliği
 

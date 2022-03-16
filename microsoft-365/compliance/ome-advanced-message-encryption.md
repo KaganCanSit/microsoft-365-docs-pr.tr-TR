@@ -9,19 +9,19 @@ audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 ms.localizationpriority: medium
-ms.date: 08/11/2021
+ms.date: 03/04/2022
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 search.appverid:
 - MET150
 description: Gelişmiş İleti Şifrelemesi, yöneticilerin korumalı iletilerde daha fazlasını yapmalarına olanak sağlayarak kuruluşların uyumluluk yükümlülüklerini karşılamalarına yardımcı olur.
-ms.openlocfilehash: 9e0f1933d68ba696e6446b321857eb3f6836f378
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 8d09481b5a5f78d9dc4e5725896297a6881e6172
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62986471"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512552"
 ---
 # <a name="advanced-message-encryption"></a>Gelişmiş İleti Şifrelemesi
 
@@ -39,7 +39,7 @@ Organizasyonda, iş yerlerini içeren bir Office 365 Gelişmiş İleti Şifrelem
 
 Daha önce hiçbir Office 365 İleti Şifrelemesi, bkz[. Yeni özellik Office 365 İleti Şifrelemesi ayarlama](set-up-new-message-encryption-capabilities.md).
 
-Gelişmiş İleti Şifrelemesi ile tek bir markalama şablonuyla sınırlı olmazsınız. Bunun yerine, birden çok markalama şablonu oluşturabilir ve kullanabilirsiniz. Bilgi için bkz [. Şifrelenmiş iletilerinize kuruluş markasını ekleme](add-your-organization-brand-to-encrypted-messages.md). Özel markalama kullanıyorsanız, dış alıcılar OME portalına bağlantı içeren bir bildirim e-postası alırlar. Posta akış kuralı, bildirim e-postası ve OME Portalı'nın hangi markalama şablonunu kullanabileceğini belirler. Bu şekilde, güvenli içeriğiniz kuruluş dışından gönderilmez.
+Gelişmiş İleti Şifrelemesi ile tek bir markalama şablonuyla sınırlı olmazsınız. Bunun yerine, birden çok markalama şablonu oluşturabilir ve kullanabilirsiniz. Özel markalama eklemek, şifreli iletilerin iptali izlemesini etkinleştirmenizi de sağlar. Bilgi için bkz [. Şifrelenmiş iletilerinize kuruluş markasını ekleme](add-your-organization-brand-to-encrypted-messages.md). Özel markalama kullanıyorsanız, dış alıcılar OME portalına bağlantı içeren bir bildirim e-postası alırlar. Posta akış kuralı, bildirim e-postası ve OME Portalı'nın hangi markalama şablonunu kullanabileceğini belirler. Bu şekilde, güvenli içeriğiniz kuruluş dışından gönderilmez.
 
 Yalnızca iletileri iptal edebilirsiniz ve son kullanma tarihlerini kullanıcıların portal aracılığıyla almaları için iletilere uygulayabilirsiniz. Başka bir deyişle, özel bir markalama şablonu uygulanmış e-posta. Daha fazla bilgi ve örnek için, Tüm dış alıcıların şifreli postaları okumak için [OME Portalını kullanmasına emin olun makalesinde yer alan kılavuza bakın](manage-office-365-message-encryption.md#ensure-all-external-recipients-use-the-ome-portal-to-read-encrypted-mail).
 

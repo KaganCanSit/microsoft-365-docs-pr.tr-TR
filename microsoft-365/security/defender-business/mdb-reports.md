@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/10/2022
+ms.date: 03/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 55b49393e2b9115e4617b617d14ba495a95d983c
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 088adc0683954dff8a0b4c978d434a1526a1a7de
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449954"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63513012"
 ---
 # <a name="reports-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da Raporlar
 
@@ -38,11 +38,11 @@ Web portalına () Microsoft 365 Defender raporları bulabilirsiniz[https://secur
 
 |Rapor  |Açıklama  |
 |---------|---------|
-| **Güvenlik raporu**  | Güvenlik raporu, kurum kimlikleri, cihazları ve uygulamaları hakkında bilgi sağlar. Bu rapora erişmek için gezinti bölmesinde **ReportsGeneralSecurity report'ı** >  >  **seçin**. <br/><br/>**İpucu** Benzer bilgileri, web portalınız portalında () Microsoft 365 Defender görüntüleyebilirsiniz [https://security.microsoft.com](https://security.microsoft.com). |
+| **Güvenlik raporu**  | Güvenlik raporu, şirketinizin kimlikleri, cihazları ve uygulamaları hakkında bilgi sağlar. Bu rapora erişmek için gezinti bölmesinde **ReportsGeneralSecurity report'ı** >  >  **seçin**. <br/><br/>**İpucu** Benzer bilgileri, web portalınız portalında () Microsoft 365 Defender görüntüleyebilirsiniz [https://security.microsoft.com](https://security.microsoft.com). |
 | **Tehdit koruması**  | Tehdit koruması raporu, uyarılar ve uyarı eğilimleri hakkında bilgi sağlar. Son 30 **gün içinde** tetiklenen uyarılar hakkında bilgileri görüntülemek için Uyarı eğilimleri sütununu kullanın. Çözümlenmemiş **uyarı** kategorileri ve bunların sınıflandırması gibi uyarılar hakkında geçerli anlık görüntü bilgilerini görüntülemek için Uyarı durumu sütununu kullanın. Bu rapora erişmek için gezinti bölmesinde **ReportsEndpointsThreat** >  >  **protection'ı seçin**. <br/><br/>**İpucu**: Uyarılar hakkında bilgileri **görüntülemek için** Olaylar listesini de kullanabilirsiniz. Geçerli olayları görüntülemek ve yönetmek **için gezinti bölmesinde** Olaylar'ı seçin. Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md). |
-| **Cihaz durumu ve uyumluluğu** | Cihaz durumu ve uyumluluk raporu, cihaz durumu ve eğilimleri hakkında bilgi sağlar. Bu raporu, Defender for Business algılayıcılarının cihazlarda düzgün çalışıp çalışmadı veya algılayıcıların geçerli durumunu Microsoft Defender Virüsten Koruma. Bu rapora erişmek için gezinti bölmesinde **ReportsEndpointsDevice** >  >  **durum ve uyumluluk'u seçin**. <br/><br/>**İpucu**: Cihazınızın cihazları **hakkında bilgileri** görüntülemek için Cihaz envanteri listesini kullanabilirsiniz. Gezinti bölmesinde Cihaz **envanteri'ni seçin**. Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da cihazları yönetme](mdb-manage-devices.md). |
-| **Korumasız cihazlar** | Zayıf cihazlar raporu, cihazlar ve eğilimler hakkında bilgi sağlar. Son 30 gün içinde uyarı içeren cihazlarla ilgili bilgileri görüntülemek için Eğilimler sütununu kullanın. Uyarı içeren **cihazlarla** ilgili geçerli anlık görüntü bilgilerini görüntülemek için Durum sütununu kullanın. Bu rapora erişmek için gezinti bölmesinde **ReportsEndpointsYullanabilir** >  >  **cihazlar'ı seçin**.<br/><br/>**İpucu**: Cihazınızın cihazları **hakkında bilgileri** görüntülemek için Cihaz envanteri listesini kullanabilirsiniz. Gezinti bölmesinde Cihaz **envanteri'ni seçin**. Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da cihazları yönetme](mdb-manage-devices.md). |
-| **Web koruması** | Web koruma raporu kimlik avı sitelerine, kötü amaçlı yazılım vektörlerine, açıklarından yararlanma sitelerine, güvenilmeyen veya itibarsız sitelere ve açıkça engellenen sitelere erişme denemelerini gösterir. Engellenen site kategorileri yetişkin içeriği, boş zaman siteleri, yasal sorumluluk siteleri ve daha fazlasını içerir. Bu rapora erişmek için gezinti bölmesinde **ReportsEndpointsWeb** >  **protection'ı** >  seçin.<br/><br/>**İpucu**: Henüz sizin için web korumasını yapılandırmadısanız, rapor **görünümünde Ayarlar** Web Koruma düğmesini seçin. Sonra, **Kurallar'ın** altında **Web içeriği filtreleme'yi seçin**. Web içeriği filtreleme hakkında daha fazla bilgi edinmek için bkz [. Web içeriği filtreleme](../defender-endpoint/web-content-filtering.md). |
+| **Cihaz durumu ve uyumluluğu** | Cihaz durumu ve uyumluluk raporu, cihaz durumu ve eğilimleri hakkında bilgi sağlar. Bu raporu, Defender for Business algılayıcılarının cihazlarda düzgün çalışıp çalışmadı veya algılayıcıların geçerli durumunu Microsoft Defender Virüsten Koruma. Bu rapora erişmek için gezinti bölmesinde **ReportsEndpointsDevice** >  >  **durum ve uyumluluk'u seçin**. <br/><br/>**İpucu**: Cihazınızın cihazları **hakkında** bilgileri görüntülemek için Cihaz envanteri listesini kullanabilirsiniz. Gezinti bölmesinde Cihaz **envanteri'ni seçin**. Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da cihazları yönetme](mdb-manage-devices.md). |
+| **Korumasız cihazlar** | Zayıf cihazlar raporu, cihazlar ve eğilimler hakkında bilgi sağlar. Son 30 gün içinde uyarı içeren cihazlarla ilgili bilgileri görüntülemek için Eğilimler sütununu kullanın. Uyarı içeren **cihazlarla** ilgili geçerli anlık görüntü bilgilerini görüntülemek için Durum sütununu kullanın. Bu rapora erişmek için gezinti bölmesinde **ReportsEndpointsYullanabilir** >  >  **cihazlar'ı seçin**.<br/><br/>**İpucu**: Cihazınızın cihazları **hakkında** bilgileri görüntülemek için Cihaz envanteri listesini kullanabilirsiniz. Gezinti bölmesinde Cihaz **envanteri'ni seçin**. Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da cihazları yönetme](mdb-manage-devices.md). |
+| **Web koruması** | Web koruma raporu kimlik avı sitelerine, kötü amaçlı yazılım vektörlerine, açıklarından yararlanma sitelerine, güvenilmeyen veya itibarsız sitelere ve açıkça engellenen sitelere erişme denemelerini gösterir. Engellenen site kategorileri yetişkin içeriği, boş zaman siteleri, yasal sorumluluk siteleri ve daha fazlasını içerir. Bu rapora erişmek için gezinti bölmesinde **ReportsEndpointsWeb** >  **protection'ı** >  seçin.<br/><br/>**İpucu**: Henüz şirketin web korumasını yapılandırmadınız, rapor **Ayarlar** Web Koruma düğmesini seçin. Sonra, **Kurallar'ın** altında **Web içeriği filtreleme'yi seçin**. Web içeriği filtreleme hakkında daha fazla bilgi edinmek için bkz [. Web içeriği filtreleme](../defender-endpoint/web-content-filtering.md). |
 
 >
 > **Bir dakika mı kaldı?**

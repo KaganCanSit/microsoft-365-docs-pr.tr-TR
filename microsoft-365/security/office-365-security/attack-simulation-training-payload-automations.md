@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Yöneticiler, Office 365 Plan 2 için Microsoft Defender'daki Saldırı benzetimi eğitimi için otomatik benzetimleri toplamak ve başlatmak için yük otomasyonlarını (yük toplama) kullanmayı öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 0e090b79c8e04de5f0e9e81449d805d2b124bc59
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 3a0245acbb6d27353b4d4bd27011652c0a902975
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "62989994"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512389"
 ---
 # <a name="payload-automations-for-attack-simulation-training"></a>Saldırı benzetimi eğitimi için Yük otomasyonları
 
@@ -31,21 +31,21 @@ Yük otomasyonu oluşturmak için aşağıdaki adımları uygulayın:
 
    Doğrudan **Payload otomasyonları sekmesine gitmek** için kullanın <https://security.microsoft.com/attacksimulator?viewid=payloadautomation>.
 
-2. Payload **otomasyonları sekmesinde Benzetim** simgesi oluştur'a ![tıklayın.](../../media/m365-cc-sc-create-icon.png) **Benzetim oluşturun**.
+2. Yük **otomasyonları sekmesinde Otomasyon** simgesi oluştur'a ![tıklayın.](../../media/m365-cc-sc-create-icon.png) **Otomasyon oluşturun**.
 
-   ![Yazılım portalının Saldırı benzetimi eğitimi'nin Payload otomasyonları sekmesinde benzetim Microsoft 365 Defender.](../../media/attack-sim-training-sim-automations-create.png)
+   ![Yazılım portalının Saldırı benzetimi eğitimi'nin Yük otomasyonları sekmesindeki Microsoft 365 Defender oluşturun.](../../media/attack-sim-training-payload-automations-create.png)
 
 3. Oluşturma sihirbazı açılır. Bu makalenin kalan kalanında, sayfaları ve bunların içerdiği ayarlar açıklanmıştır.
 
 > [!NOTE]
-> Benzetim oluşturma sihirbazının herhangi bir noktasında, ilerlemenizi kaydetmek  ve benzetimi daha sonra yapılandırmaya devam etmek için Kaydet ve kapat'a tıklarsınız. Tamamlanmamış benzetimlerin **Benzetimler** **sekmesinde** Durum değeri **Taslağı** vardır. Benzetimi seçerek ve benzetim simgesini düzenle'ye tıklayarak, kalan yerden ![devamabilirsiniz.](../../media/m365-cc-sc-edit-icon.png) **Benzetimi** düzenleyin.## Benzetimi adla ve açıkların.
+> Oluşturma sihirbazı sırasında herhangi bir noktada, ilerlemenizi kaydetmek ve  yük otomasyonunu daha sonra yapılandırmaya devam etmek için Kaydet ve kapat'a tıklayabilir. Yük otomasyonları sekmesinden yük otomasyonunu seçerek ve sonra da Otomasyon simgesini düzenle'ye tıklayarak, kalan yerden  ![devamabilirsiniz.](../../media/m365-cc-sc-edit-icon.png) **Otomasyonu düzenleyin**.
 
 ## <a name="automation-name"></a>Otomasyon adı
 
 Otomasyon **adı sayfasında** aşağıdaki ayarları yapılandırabilirsiniz:
 
-- **Ad**: Benzetim için benzersiz, açıklayıcı bir ad girin.
-- **Açıklama**: Benzetim için isteğe bağlı olarak ayrıntılı bir açıklama girin.
+- **Ad**: Yük otomasyonu için benzersiz, açıklayıcı bir ad girin.
+- **Açıklama**: Yük otomasyonu için isteğe bağlı olarak ayrıntılı bir açıklama girin.
 
 Bitirdikten sonra, Sonraki'ne **tıklayın**.
 

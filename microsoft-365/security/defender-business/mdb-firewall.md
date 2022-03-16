@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 02/24/2022
+ms.date: 03/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: fdac3d71ee69618b7e0dc6d878eed558cf323b65
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 9644df7d4681a3f425c82f2f47bdb2ad50c75483
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450668"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512762"
 ---
 # <a name="firewall-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da Güvenlik Duvarı
 
@@ -32,7 +32,7 @@ ms.locfileid: "63450668"
 
 İş için Microsoft Defender, Güvenlik Duvarı'nı Windows Defender [içerir](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security). Güvenlik duvarı koruması, hangi ağ trafiğinin cihazlara girişine veya cihazlarından akışına izin verildiğini belirleyen kurallarla cihazların güvenliğini sağlar. 
 
-Çeşitli konumlarda cihazlarda bağlantılara izin veriip engellenmezseniz, güvenlik duvarı korumasını kullanabilirsiniz. Örneğin, güvenlik duvarı ayarlarınız, cihazınızın iç ağına bağlı cihazlarda gelen bağlantılara izin verir, ancak cihaz güvenilmeyen cihazlarla bir ağ üzerinde olduğunda bu bağlantıları önler.
+Çeşitli konumlarda cihazlarda bağlantılara izin veriip engellenmezseniz, güvenlik duvarı korumasını kullanabilirsiniz. Örneğin, güvenlik duvarı ayarlarınız, şirketin iç ağına bağlı cihazlarda gelen bağlantılara izin verir, ancak cihaz güvenilmeyen cihazlarla bir ağ üzerinde olduğunda bu bağlantıları önler.
 
 **Bu makalede şu açıklanmıştır**:
 
@@ -47,10 +47,10 @@ ms.locfileid: "63450668"
 
 ## <a name="default-firewall-settings-in-defender-for-business"></a>İş için Defender'da varsayılan güvenlik duvarı ayarları
 
-İş için Microsoft Defender, kuruluş cihazlarınızı ilk günden korumaya yardımcı olmak için varsayılan güvenlik duvarı ilkelerini ve ayarlarını içerir. Kuruluş cihazları İş için Microsoft Defender'a ekli olduğu anda, varsayılan güvenlik duvarı ilkeniz aşağıdaki gibi çalışır:
+İşletmeler için Microsoft Defender, şirket cihazlarınızı ilk günden korumanıza yardımcı olacak varsayılan güvenlik duvarı ilkelerini ve ayarlarını içerir. Şirketinizin cihazları İş için Microsoft Defender'a ekli olduğu anda, varsayılan güvenlik duvarı ilkeniz aşağıdaki gibi çalışır:
 
 - Konumdan bağımsız olarak, cihazlardan giden bağlantılara varsayılan olarak izin verilir.
-- Cihazlar kuruluş ağınıza bağlandığında, tüm gelen bağlantılar varsayılan olarak engellenir.
+- Cihazlar şirketinizin ağına bağlandığında, tüm gelen bağlantılar varsayılan olarak engellenir.
 - Cihazlar bir ortak ağa veya özel ağa bağlandığında, tüm gelen bağlantılar varsayılan olarak engellenir.
 
 İş için Microsoft Defender'da gelen bağlantıları engellemek veya buna izin vermek için özel durumlar tanımlayabilirsiniz. Özel kurallar oluşturarak bu özel durumları tanımlayabilirsiniz. Bkz [. Güvenlik duvarı ilkeleri için özel kuralları yönetme](mdb-custom-rules-firewall.md).
@@ -61,7 +61,7 @@ ms.locfileid: "63450668"
 
 | Ayar | Açıklama |
 |--|--|
-| **Etki alanı ağı** | Etki alanı ağ profili, kuruluş ağınız için geçerlidir. Etki alanı ağ için güvenlik duvarı ayarları, aynı ağ üzerinde olan diğer cihazlarda başlatılan gelen bağlantılara uygulanır. Varsayılan olarak, gelen bağlantılar Tüm bağlantıları engelle **olarak ayarlanır**.  |
+| **Etki alanı ağı** | Etki alanı ağ profili, şirketinizin ağına uygulanır. Etki alanı ağ için güvenlik duvarı ayarları, aynı ağ üzerinde olan diğer cihazlarda başlatılan gelen bağlantılara uygulanır. Varsayılan olarak, gelen bağlantılar Tüm bağlantıları engelle **olarak ayarlanır**.  |
 | **Genel ağ** | Genel ağ profili, kafe veya havaalanında gibi genel bir konumda kullanabileceğiniz bir ağa uygulanır. Ortak ağların güvenlik duvarı ayarları, aynı ağ üzerinde olan diğer cihazlarda başlatılan gelen bağlantılarda geçerlidir. Genel ağ, güvenme olmadığınız cihazlar da içerebilir, çünkü gelen bağlantılar varsayılan olarak hepsini engelle **olarak** ayarlanır.  |
 | **Özel ağ** | Özel ağ profili, eviniz gibi özel bir konumdaki ağa uygulanır. Özel ağların güvenlik duvarı ayarları, aynı ağ üzerinde olan diğer cihazlarda başlatılan gelen bağlantılarda geçerlidir. Genel olarak, özel bir ağ üzerinde aynı ağ'daki diğer tüm cihazların güvenilen cihazlar olduğu varsayılır. Bununla birlikte, varsayılan olarak gelen bağlantılar Tüm bağlantıları engelle **olarak ayarlanır**. |
 | **Özel kurallar** | [Özel kurallar belirli](mdb-custom-rules-firewall.md) bağlantıları engellemenizi veya izin vermenizi sağlar. Örneğin, bir cihaz üzerinde belirli bir uygulama üzerinden yapılan bağlantılar dışında, özel bir ağa bağlı cihazlardan tüm gelen bağlantıları engellemek istediğiniz varsayalım. Bu durumda, Tüm gelen bağlantıları engellemek **için** Özel ağ'ı ayarladığınız gibi, özel bir kural da ekleyebilir ve bu özel durumu tanımlayabilirsiniz. <br/><br/>Özel kuralları kullanarak belirli dosya veya uygulamalar, İnternet protokolü (IP) adresi veya IP adresi aralığı için özel durumlar tanımlayabilirsiniz. <br/><br/>Oluşturmakta istediğiniz özel kuralın türüne bağlı olarak, aşağıdaki örnek değerleri kullanabilirsiniz: <br/><br/>Uygulama dosyası yolu: `C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe` <br/><br/>IP: Geçerli bir IPv4/IPv6 adresi, örneğin `192.168.1.0` : `192.168.1.0/24` <br/><br/>IP: Gibi biçimlendirilmiş geçerli bir IPv4/IPv6 `192.168.1.0-192.168.1.9` adres aralığı (boşluk eklemeden) |

@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/10/2022
+ms.date: 03/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 4e87b8b2bbf926e231e5d610e212f7b73005d1ce
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 02ecd2d84684e4b388c11ff71d79992330172091
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449144"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512664"
 ---
 # <a name="assign-roles-and-permissions-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da roller ve izinler atama
 
@@ -52,7 +52,7 @@ Aşağıdaki tabloda, İş için Defender'da atanabilir üç rol açık almaktad
 
 | İzin düzeyi | Açıklama |
 |:---|:---|
-| **Genel yöneticiler** (genel yöneticiler olarak da adlandırılır) <br/><br/> *En iyi uygulama olarak, genel yöneticilerin sayısını sınırlayın.* | Genel yöneticiler her türlü görevi gerçekleştirebilir. microsoft Defender for Business veya Microsoft 365 için organizasyona oturum veren kişi varsayılan olarak genel yöneticidir. <br/><br/> Genel yöneticiler tüm kullanıcı portalları genelinde ayarlara erişim Microsoft 365 değiştirebilir. Örneğin: <br/>- Microsoft 365 yönetim merkezi ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)) |
+| **Genel yöneticiler** (genel yöneticiler olarak da adlandırılır) <br/><br/> *En iyi uygulama olarak, genel yöneticilerin sayısını sınırlayın.* | Genel yöneticiler her türlü görevi gerçekleştirebilir. İşletmeler için veya Microsoft Defender Microsoft 365 için şirketinizi varsayılan olarak genel yönetici olarak imzalayan kişidir. <br/><br/> Genel yöneticiler tüm kullanıcı portalları genelinde ayarlara erişim Microsoft 365 değiştirebilir. Örneğin: <br/>- Microsoft 365 yönetim merkezi ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)) |
 | **Güvenlik yöneticileri** (güvenlik yöneticileri olarak da adlandırılır) | Güvenlik yöneticileri aşağıdaki görevleri gerçekleştirebilir: <br/>- Güvenlik ilkelerini görüntüleme ve yönetme <br/>- Güvenlik tehditlerini ve uyarılarını görüntüleme ve yönetme (bu etkinlikler, uç noktalarda yanıt eylemlerinin yer almalarını içerir) <br/>- Güvenlik bilgilerini ve raporlarını görüntüleme |
 | **Güvenlik gözetmeni** | Güvenlik okuyucuları aşağıdaki görevleri gerçekleştirebilir: <br/>- Güvenlik ilkelerini görüntüleme <br/>- Güvenlik tehditlerini ve uyarıları görüntüleme <br/>- Güvenlik bilgilerini ve raporlarını görüntüleme  |
 

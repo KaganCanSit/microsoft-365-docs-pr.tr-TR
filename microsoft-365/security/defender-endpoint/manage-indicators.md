@@ -15,12 +15,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: c241438e2cd9a0a5bd9bb018d671340c22ef7d0d
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 00685ee4540949028b8bb438dd8a4965e2e9a5e7
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998024"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63513066"
 ---
 # <a name="create-indicators"></a>Gösterge oluşturma
 
@@ -59,7 +59,7 @@ Yeni bir gösterge (IoC) oluştururken, aşağıdaki eylemlerden biri veya birka
 
 - İzin Ver – IoC'nin cihazlarınız üzerinde çalışmasına izin verilir.
 - Denetim – IoC çalıştırlendiğinde bir uyarı tetiklenir.
-- Uyar – IoC kullanıcının atlay bir uyarıyla uyar (Yalnızca Bulut Uygulamaları için Defender)
+- Uyar – IoC kullanıcının atlay bir uyarıyla karşılanır 
 - Yürütmeyi engelle - IoC'nin çalışmasına izin verilmez.
 - Engelle ve düzelt - IoC'nin çalışmasına izin verilmez ve IoC'ye bir düzeltme eylemi uygulanır.
 
@@ -77,8 +77,8 @@ Aşağıdaki tabloda, gösterge (IoC) türü başına tam olarak hangi eylemleri
 | IoC türü | Kullanılabilir eylemler |
 |:---|:---|
 | [Dosyalar](indicator-file.md) | İzin ver <br> Denetim <br> Engelleme ve düzeltme |
-| [IP adresleri](indicator-ip-domain.md) | İzin ver <br> Denetim <br> Yürütmeyi engelle |
-| [URL'ler ve etki alanları](indicator-ip-domain.md) | İzin ver <br> Denetim <br> Yürütmeyi engelle |
+| [IP adresleri](indicator-ip-domain.md) | İzin ver <br> Denetim <br> Yürütmeyi engelle <br> Uyar |
+| [URL'ler ve etki alanları](indicator-ip-domain.md) | İzin ver <br> Denetim <br> Yürütmeyi engelle<br> Uyar |
 | [Sertifikalar](indicator-certificates.md) | İzin ver <br> Engelleme ve düzeltme |
 
 Önceden var olan IoC'lerin işlevselliği değişmez. Bununla birlikte, göstergeler desteklenen geçerli yanıt eylemleriyle eş olacak şekilde yeniden adlandırılmıştır:

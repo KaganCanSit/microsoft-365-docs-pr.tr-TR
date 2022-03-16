@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/14/2022
+ms.date: 03/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-overview
-ms.openlocfilehash: 6db82c1dcc9afceebcb9fff891cb90ddafa95f21
-ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
+ms.openlocfilehash: 14b93f27c2d7bd0255fb08164072ba160af6be1b
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63468730"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512454"
 ---
 # <a name="overview-of-microsoft-defender-for-business"></a>İş için Microsoft Defender'a genel bakış
 
@@ -32,7 +32,7 @@ ms.locfileid: "63468730"
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-İş için Microsoft Defender, özellikle küçük ve orta ölçekli işletmeler (300 çalışana kadar) için tasarlanmış yeni bir uç nokta güvenlik çözümüdür. Bu uç nokta güvenlik çözümüyle, kuruluş cihazları fidye yazılımlarına, kötü amaçlı yazılımlara, kimlik avına ve diğer tehditlere karşı daha iyi korunur. 
+İş için Microsoft Defender, özellikle küçük ve orta ölçekli işletmeler (300 çalışana kadar) için tasarlanmış yeni bir uç nokta güvenlik çözümüdür. Bu uç nokta güvenlik çözümüyle, şirketin cihazları fidye yazılımlarına, kötü amaçlı yazılımlara, kimlik avına ve diğer tehditlere karşı daha iyi korunmaktadır. 
 
 İş için Defender hakkında daha fazla bilgi edinmek için aşağıdaki videoyu izleyin: <br/><br/>
 
@@ -51,7 +51,7 @@ Bu makalede, İş için Defender'a nelerin dahil olduğu açıklanmıştır, ayr
 
 - **Enterprise sınıf güvenlik**. İş için Defender, endüstri lideri [Microsoft Defender](../defender-endpoint/microsoft-defender-endpoint.md) Uç Nokta çözümümizin güçlü uç nokta güvenlik özellikleri getirir ve KÜÇÜK ve orta ölçekli işletmeleri desteklemek için IT yöneticilerine bu özellikleri en iyi duruma getirir.
 
-- **Kullanımı kolay bir güvenlik çözümü.** İş için Defender, uç noktaların güvenliği hakkında öneriler ve içgörüler ile işlemde size yol sunan akıcı deneyimler sunar. Özel bilgi gerekmez, çünkü İş için Defender ilk günden kuruluş cihazlarını korumaya yardımcı olmak için tasarlanmış sihirbaz tarafından yönlendirilen yapılandırma ve varsayılan güvenlik ilkeleri sunar.
+- **Kullanımı kolay bir güvenlik çözümü.** İş için Defender, uç noktaların güvenliği hakkında öneriler ve içgörüler ile işlemde size yol sunan akıcı deneyimler sunar. Özel bilgi gerekmez, çünkü İş için Defender ilk günden itibaren şirketinizi korumak üzere tasarlanmış sihirbaz tarafından yönlendirilen yapılandırma ve varsayılan güvenlik ilkeleri sunar.
 
 - **Ortamınız için esneklik**. İster Microsoft Bulut'u kullanıyor ister yeniysiniz, İş için Defender Microsoft Intune ortamınıza yardımcı olabilir. İş için Defender, Windows'de yerleşik olarak bulunan bileşenlerle ve macOS, iOS ve Android cihazları için uygulamalarla çalışır.
 

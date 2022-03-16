@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Erişimi ve kullanımı kısıtlaarak verilerinizi koruyan şifreleme için duyarlılık etiketlerini yapılandırabilirsiniz.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 2e337ef74975bd761de89b4aaae03379344efeed
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: ac50568f9ce995f658e6b06c3a2b13b666211810
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63311907"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512356"
 ---
 # <a name="restrict-access-to-content-by-using-sensitivity-labels-to-apply-encryption"></a>Şifreleme uygulamak için duyarlılık etiketlerini kullanarak içeriğe erişimi kısıtlama
 
@@ -252,7 +252,7 @@ Daha fazla bilgi için bkz [. Hak Yönetimi sahibi ve Hak Yönetimi sahibi](/azu
 > [!NOTE]
 > Bu özellik şu anda yalnızca Azure Information Protection birleşik etiketleme istemcisi tarafından desteklenmiş durumdadır.
 
-Bu seçeneği yalnızca Çift Anahtar Şifreleme hizmetini yapılandırdıktan ve bu etiketin uygulandığı dosyalar için bu çift anahtar şifrelemeyi kullanmalıdır.
+Bu seçeneği yalnızca Çift Anahtar Şifreleme hizmetini yapılandırdıktan ve bu etiketin uygulandığı dosyalar için bu çift anahtar şifrelemeyi kullanmalıdır. Etiket yapılandırıldıktan ve kaydedildikten sonra, onu düzenleyemezsiniz.
 
 Daha fazla bilgi, önkoşullar ve yapılandırma yönergeleri için bkz. [Çift Anahtar Şifrelemesi (DKE)](double-key-encryption.md).
 
@@ -265,7 +265,7 @@ Aşağıdaki seçenekleri kullanarak, kullanıcıların içeriğe el ile bir duy
 
 - Bu Outlook, kullanıcı "İleri iletme" seçeneğiyle eşdeğer kısıtlamaları veya Seçili alıcıları [](/azure/information-protection/configure-usage-rights#do-not-forward-option-for-emails) [için](/azure/information-protection/configure-usage-rights#encrypt-only-option-for-emails) Yalnızca şifrele seçeneğini kullanabilir.
     
-    The Do Not Forward option is supported by all email clients that supporty labels. Bununla birlikte, Duyarlılık **etiketiyle** Yalnızca Şifrele seçeneğinin uygulanması, Azure Information Protection birleşik etiketleme istemcisi tarafından değil, yalnızca yerleşik etiketleme tarafından desteklenen yeni bir sürümdir. Bu özelliği desteklemeen e-posta istemcileri için etiket görünmez.
+    The Do Not Forward option is supported by all email clients that supporty labels. Ancak **, Duyarlılık** etiketiyle Yalnızca Şifrele seçeneğinin uygulanması, Azure Information Protection birleşik etiketleme istemcisi tarafından değil, yalnızca yerleşik etiketleme tarafından desteklenen daha yeni bir sürümdir. Bu özelliği desteklemeen e-posta istemcileri için etiket görünmez.
     
     Yerleşik etiketleme kullanan Outlook uygulamalarının duyarlılık etiketiyle birlikte Encrypt-Only seçeneğinin uygulanmasına destek olan minimum sürümlerini kontrol etmek için Outlook'un özellikler tablosu ve [Kullanıcıların](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-outlook) izin atamasına izin ver **: - Encrypt-Only** satırı kullanın.
 

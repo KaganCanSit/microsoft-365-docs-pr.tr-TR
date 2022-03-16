@@ -15,16 +15,16 @@ ms.custom: nextgen
 ms.reviewer: pahuijbr, mkaminska
 manager: dansimp
 ms.technology: mde
-ms.date: 03/14/2022
+ms.date: 03/15/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 2f6f2135e81bf99f6391b75067ad89d1af3a712c
-ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
+ms.openlocfilehash: be3dcfd23c0fb77604cec140a4b1d3606f6ee345
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63468716"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63513052"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Güncelleştirmeleri Microsoft Defender Virüsten Koruma ve taban çizgilerini uygulama
 
@@ -85,6 +85,27 @@ Tüm güncelleştirmelerimiz
 - Tümleştirme geliştirmeleri (Bulut, [Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender))
 <br/><br/>
 <details>
+<summary>Şubat-2022 (Platform: 4.18.xxxx.xx | Altyapı: 1.1.19000.8)</summary>
+
+&ensp;Güvenlik zekası güncelleştirme sürümü: **1.357.x.x**<br/>
+&ensp;Yayınlanma tarihi: **14 Mart 2022**<br/>
+&ensp;Platform: **4.18.xxxx.xx**<br/>
+&ensp;Altyapı: **1.1.19000.8**<br/>
+&ensp;Destek aşaması: **Güvenlik ve Kritik Güncelleştirmeler**<br/>
+
+Altyapı sürümü: 1.1.19000.8 <br/>
+Güvenlik zekası güncelleştirme sürümü: 1.357.x.x <br/>
+
+### <a name="whats-new"></a>Yenilikler
+
+- Çok yakında
+
+### <a name="known-issues"></a>Bilinen Sorunlar
+
+Bilinen sorun yok
+
+<br/><br/>
+</details><details>
 <summary>Ocak-2022 (Platform: 4.18.2201.10 | Altyapı: 1.1.18900.2)</summary>
 
 &ensp;Güvenlik zekası güncelleştirme sürümü: **1.357.8.0**<br/>
@@ -138,14 +159,21 @@ Altyapı sürümü: 1.1.18800.4 Güvenlik zekası güncelleştirme sürümü: 1.
 ### <a name="known-issues"></a>Bilinen Sorunlar
 Bilinen sorun yok
 <br/>
-</details><details>
+</details>
+
+
+### <a name="previous-version-updates-technical-upgrade-support-only"></a>Önceki sürüm güncelleştirmeleri: Yalnızca teknik yükseltme desteği
+
+Yeni bir paket sürümü yayınlandıktan sonra, önceki iki sürümün desteği yalnızca teknik destekle azaltıldı. Bu bölümde listelenenden daha eski sürümler ve yalnızca teknik yükseltme desteği için sağlanmıştır.<br/><br/>
+
+<details>
 <summary> Ekim-2021 (Platform: 4.18.2110.6 | Altyapı: 1.1.18700.4)</summary>
 
 &ensp;Güvenlik zekası güncelleştirme sürümü: **1.353.3.0**<br/>
 &ensp;Yayınlanma tarihi: **28 Ekim 2021**<br/>
 &ensp;Platform: **4.18.2110.6**<br/>
 &ensp;Altyapı: **1.1.18700.4**<br/>
-&ensp;Destek aşaması: **Güvenlik ve Kritik Güncelleştirmeler**<br/>
+&ensp;Destek aşaması: **Teknik yükseltme desteği (yalnızca)**<br/>
 
 Altyapı sürümü: 1.1.18700.4 Güvenlik zekası güncelleştirme sürümü: 1.353.3.0
 
@@ -160,14 +188,7 @@ Altyapı sürümü: 1.1.18700.4 Güvenlik zekası güncelleştirme sürümü: 1.
 ### <a name="known-issues"></a>Bilinen Sorunlar
 Bilinen sorun yok
 <br/>
-</details>
-
-
-### <a name="previous-version-updates-technical-upgrade-support-only"></a>Önceki sürüm güncelleştirmeleri: Yalnızca teknik yükseltme desteği
-
-Yeni bir paket sürümü yayınlandıktan sonra, önceki iki sürümün desteği yalnızca teknik destekle azaltıldı. Bu bölümde listelenenden daha eski sürümler ve yalnızca teknik yükseltme desteği için sağlanmıştır.<br/><br/>
-
-<details>
+</details><details>
 <summary> Eylül-2021 (Platform: 4.18.2109.6 | Altyapı: 1.1.18600.4)</summary>
 
 &ensp;Güvenlik zekası güncelleştirme sürümü: **1.351.7.0**<br/>

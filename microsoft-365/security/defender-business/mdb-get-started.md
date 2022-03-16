@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 02/24/2022
+ms.date: 03/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-get-started
-ms.openlocfilehash: e6ad964e250b9ae3bc01de02a4d51675beaf9c80
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 0754a16310df912a63ba92395b9cb9369436dc93
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449520"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512902"
 ---
 # <a name="get-started-using-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalını kullanmaya başlama
 
@@ -59,21 +59,21 @@ Olaylarınıza erişmek, raporları görüntülemek ve güvenlik ilkelerinizi y�
 
 | Öğe | Açıklama |
 |:---|:---|
-| **Giriş** | Sizi Ana Sayfa'daki giriş Microsoft 365 Defender. Giriş sayfasında, algılanan tüm etkin tehditleri vurgulayan kartların yanı sıra, kuruluş verilerinizin ve cihazlarının güvenliğini sağlamanıza yardımcı olacak öneriler de yer almaktadır. <br/><br/>Öneriler Defender For Business'a dahil edilen her şey, güvenlik ekibinin zaman ve çabadan tasarrufını sağlar. Öneriler, endüstrinin en iyi yöntemlerine dayalıdır. Öneriler hakkında daha fazla bilgi edinmek için bkz[. Güvenlik önerileri - Daha fazla Tehdit ve Güvenlik Açığı Yönetimi](../defender-endpoint/tvm-security-recommendation.md). |
+| **Giriş** | Sizi Ana Sayfa'daki giriş Microsoft 365 Defender. Giriş sayfasında, algılanan tüm etkin tehditleri vurgulayan kartlar ve bunun yanı sıra şirketin verilerini ve cihazlarının güvenliğini sağlamaya yardımcı olacak öneriler yer almaktadır. <br/><br/>Öneriler Defender For Business'a dahil edilen her şey, güvenlik ekibinin zaman ve çabadan tasarrufını sağlar. Öneriler, endüstrinin en iyi yöntemlerine dayalıdır. Öneriler hakkında daha fazla bilgi edinmek için bkz[. Güvenlik önerileri - Daha fazla Tehdit ve Güvenlik Açığı Yönetimi](../defender-endpoint/tvm-security-recommendation.md). |
 | **Olaylar** | Sizi en son olaylar listesine alır. Uyarılar tetiklendiğinde olay oluşturulur. Bir olay birden çok uyarı içerebilir. Olaylarınızı düzenli olarak gözden geçirmeyi emin olun. <br/><br/>Olaylar hakkında daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md).|
 | **İşlem merkezi** | Sizi, tamamlanmış veya bekleyen eylemler de dahil olmak üzere yanıt eylemleri listesine alır. <br/>- Yapılan **eylemleri** görmek için Geçmiş sekmesini seçin. Bazı eylemler otomatik olarak yapılır; başkaları el ile alınır veya onaylandıktan sonra tamamlanır. <br/>- Devam etmek **için** onay gerektiren eylemleri görüntülemek için Beklemede sekmesini seçin. <br/><br/>İşlem merkezi hakkında daha fazla bilgi edinmek için bkz. [İşlem Merkezi'nde düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md). |
 | **Tehdit analizleri** | Sizi mevcut tehditlerin bir görünümüne alır ve tehdit ortamınıza bir bakışta göz atmanızı sağlar. Tehdit analizleri, Microsoft güvenlik araştırmacısı raporlarını ve bilgilerini de içerir. <br/><br/>Tehdit analizi hakkında daha fazla bilgi edinmek için bkz [. Tehdit analizi aracılığıyla ortaya çıkan tehditleri izleme ve yanıtlama](../defender-endpoint/threat-analytics.md). |
-| **Skoru güvenli hale** | Size, kurum güvenlik konumunun bir gösterimini sağlar ve bunu geliştirmeye yönelik öneriler sunar.<br/><br/>Güvenli Puan hakkında daha fazla bilgi edinmek için bkz. [Cihazlar için Microsoft Güvenli Puanı](../defender-endpoint/tvm-microsoft-secure-score-devices.md). |
+| **Skoru güvenli hale** | Şirketinizin güvenlik konumunun bir gösterimini sağlar ve bunu geliştirmeye yönelik öneriler sunar.<br/><br/>Güvenli Puan hakkında daha fazla bilgi edinmek için bkz. [Cihazlar için Microsoft Güvenli Puanı](../defender-endpoint/tvm-microsoft-secure-score-devices.md). |
 | **Learning hub** | Aboneliğinize dahil olan öğrenme yolları aracılığıyla güvenlik eğitimine ve diğer kaynaklara erişim sağlar. Ürüne, beceri düzeyine, role ve daha fazlasına göre filtre uygulama. Learning merkezi, güvenlik ekibinin İş için Defender'daki güvenlik özelliklerini ve & için [Microsoft Defender](../defender-endpoint/microsoft-defender-endpoint.md) ve uç nokta için [Microsoft Defender](../office-365-security/defender-for-office-365.md) gibi daha fazla Microsoft teklifinde daha fazla özelliği Office 365.  |
 | **Uç noktalar** >  **Arama** | İş için Microsoft Defender'a ekli bir veya daha fazla cihaz aramanızı sağlar. |
 | **Uç noktalar** >  **Cihaz envanteri** | İş için Microsoft Defender'a ekli bir veya daha fazla cihaz aramanızı sağlar. |
-| **Uç noktalar** >  **Güvenlik açığı yönetimi** | Size bir pano, öneriler, düzeltme etkinlikleri, yazılım envanteri ve kurum içindeki olası zayıf noktaların listesi sağlar. |
+| **Uç noktalar** >  **Güvenlik açığı yönetimi** | Size bir pano, öneriler, düzeltme etkinlikleri, yazılım envanteri ve şirket içindeki olası zayıf noktaların listesi sağlar. |
 | **Uç noktalar** >  **Öğreticiler** | Tehdit koruması özelliklerinizin nasıl olduğu hakkında daha fazla bilgi edinmenize yardımcı olmak için, adım adım kılavuzlara ve benzetimlere erişim sağlar. <br/><br/>Her **öğreticinin benzetim dosyasını** elde etmek için denemeden önce Yolu oku bağlantısını seçin. Bazı benzetimler, Office şekilde Microsoft Word gibi ek uygulamalar gerektirir. |
 | **Uç noktalar** >  **Cihaz yapılandırması** | Güvenlik ilkelerinizi işletim sistemine ve türe göre listeler. <br/><br/>Güvenlik ilkeleriniz hakkında daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da ilkeleri görüntüleme veya düzenleme](mdb-view-edit-policies.md). |
-| **Raporlar** | Kullanılabilir güvenlik raporlarınızı listeler. Bu raporlar, güvenlik eğilimlerinizi görmenizi, tehdit algılamaları ve uyarılar ile ilgili ayrıntıları görüntülemenizi ve kurumnizin korumasız cihazları hakkında daha fazla bilgi edinmanızı sağlar. |
+| **Raporlar** | Kullanılabilir güvenlik raporlarınızı listeler. Bu raporlar, güvenlik eğilimlerinizi görmenizi, tehdit algılamaları ve uyarılar ile ilgili ayrıntıları görüntülemenizi ve şirketinizin korumasız cihazları hakkında daha fazla bilgi edinmanızı sağlar. |
 | **Hizmet Durumu** | Hizmet durumunu görüntülemenizi ve yaklaşan değişiklikleri planlamanızı sağlar. <br/>- **Hizmet durumu'nun** görünümünü, Microsoft 365 aboneliğine dahil olan hizmet durumunu görüntülemek için Hizmet durumu'nun seçin. <br/>- Planlanan **değişiklikler ve neler** beklemeleri hakkında bilgi edinmek için İleti merkezi'ne seçin.  |
-| **İzinler & rolleri** | Kuruluş portalında güvenliğinizi yönetecek ve olayları ve raporları görüntüleyenlere, organizasyonda izinler Microsoft 365 Defender sağlar. Ayrıca, kuruluş cihazlarınızı ek olarak ayarlamak ve yönetmek ve tehdit koruması ilkelerinizi atamak için cihaz gruplarını ayarlamanızı ve yönetmenizi sağlar.  |
-| **Ayarlar** | Portalda ve İş için Microsoft Defender Microsoft 365 Defender ayarlarını düzenlemenizi sağlar. Örneğin, uç noktalar olarak da adlandırılan cihazları ve kuruluş cihazlarını (uç noktalar olarak da adlandırılır) kullanabilirsiniz. Ayrıca, uyarı engelleme kuralları gibi kurallar tanımlayabilir ve belirli dosya veya işlemleri engellemek veya buna izin vermek için göstergeler kurabilirsiniz.  |
+| **İzinler & rolleri** | Şirketteki güvenlik ve raporlarınızı yönetmek ve bu portalda olayları ve raporları görüntülemek için gereken kullanıcılara izinler Microsoft 365 Defender sağlar. Ayrıca, şirketinizi cihazlarınıza ek olarak cihaz grupları ayarlamanızı ve yönetmenizi, ayrıca tehdit koruması ilkelerinizi atamanızı sağlar.  |
+| **Ayarlar** | Portalda ve İş için Microsoft Defender Microsoft 365 Defender ayarlarını düzenlemenizi sağlar. Örneğin, hem şirket cihazlarını (uç noktalar olarak da adlandırılır) hem de şirket cihazlarınızı sındırabilirsiniz (veya çıkarabilirsiniz). Ayrıca, uyarı engelleme kuralları gibi kurallar tanımlayabilir ve belirli dosya veya işlemleri engellemek veya buna izin vermek için göstergeler kurabilirsiniz.  |
 | **Diğer kaynaklar** | Giriş gibi diğer portallara Azure Active Directory. Diğer portallara Microsoft 365 Defender gerek kalmadan, portalda yer alan portalın sizin  gereklerinizi karşılaması gerektiğini unutmayın. |
 
 ## <a name="complete-a-learning-module-about-incidents-and-response-actions"></a>Olaylar ve yanıt eylemleri hakkında bir öğrenme modülü tamamlama

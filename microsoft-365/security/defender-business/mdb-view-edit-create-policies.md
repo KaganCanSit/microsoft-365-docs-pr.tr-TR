@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/10/2022
+ms.date: 03/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 localization_priority: Normal
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 01275143f7d52e4df0fa0aa1d904d60d13eda3b8
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 7b9c565a17d27aa57d1cb877a9a76e3ff0317f55
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449786"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512984"
 ---
 # <a name="view-or-edit-policies-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da ilkeleri görüntüleme veya düzenleme
 
@@ -31,7 +31,7 @@ ms.locfileid: "63449786"
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-İş için Microsoft Defender'da, güvenlik ayarları cihazlara uygulanan ilkeler aracılığıyla yapılandırılır. Kurulum ve yapılandırma deneyiminizi basitleştirmeye yardımcı olmak için, Defender for Business, kuruluş cihazları dahil edildik anda korunmasına yardımcı olmak için önceden yapılandırılmış ilkeler içerir. Varsayılan ilkeleri kullanabilir, ilkeleri düzenleyebilir veya kendi ilkelerinizi oluşturabilirsiniz.
+İş için Microsoft Defender'da, güvenlik ayarları cihazlara uygulanan ilkeler aracılığıyla yapılandırılır. Kurulum ve yapılandırma deneyiminizi basitleştirmeye yardımcı olmak için, Defender for Business şirket cihazları dahil edildik anda korunmasına yardımcı olmak için önceden yapılandırılmış ilkeler içerir. Varsayılan ilkeleri kullanabilir, ilkeleri düzenleyebilir veya kendi ilkelerinizi oluşturabilirsiniz.
 
 **Bu makalede şunların nasıl olduğu açıklanmıştır**:
 
@@ -50,11 +50,11 @@ ms.locfileid: "63449786"
 
 ## <a name="default-policies-in-defender-for-business"></a>İş için Defender'da varsayılan ilkeler
 
-İş için Defender'da, kuruma uygun cihazları korumak için iki ana ilke türü vardır:
+İş için Defender'da, şirketinizi korumak için iki ana ilke türü vardır:
 
 - **Yeni nesil koruma ilkelerinin** nasıl yapılandır Microsoft Defender Virüsten Koruma diğer tehdit koruması özelliklerinin nasıl yapılandırıldığından emin olun
 
-- **Hangi ağ** trafiğinin kuruluş cihazlarına ve bu cihazlardan akışa izin verdiğini belirleyen güvenlik duvarı ilkeleri
+- **Hangi ağ** trafiğinin şirket cihazlarına ve bu cihazlardan akışa izin verdiğini belirleyen Güvenlik Duvarı ilkeleri
 
 
 ## <a name="view-your-existing-policies"></a>Var olan ilkelerinizi görüntüleme
@@ -118,7 +118,7 @@ ms.locfileid: "63449786"
 
 7. Cihaz **grupları sekmesinde** yeni bir cihaz grubu oluşturun veya varolan bir grubu kullanın. İlkeler cihaz grupları aracılığıyla cihazlara atanır. Şunları unutmayın:
 
-   - Başlangıçta, yalnızca, kuruluş verilerinize ve e-postanıza erişmek için kuruluşta yer alan kişilerin cihazları içeren varsayılan cihaz grubunuz olabilir. Varsayılan cihaz grubunızı saklayarak kullanabilirsiniz.
+   - Başlangıçta, yalnızca şirketinizi kullanan kişilerin şirket verilerine ve e-postaya erişmek için hangi cihazları kullanıyor olduğunu içeren varsayılan cihaz grubunuz olabilir. Varsayılan cihaz grubunızı saklayarak kullanabilirsiniz.
    - Varsayılan ilkeden farklı olan belirli ayarlara sahip bir ilke uygulamak için yeni bir cihaz grubu oluşturun. 
    - Cihaz grubunızı ayar yukarıya doğru ayar ilk olarak işletim sistemi sürümü gibi belirli ölçütleri belirtirsiniz. Ölçütleri karşılanan cihazlar, siz dışlamadıysanız bu cihaz grubuna dahil edilir. 
    - Tanımladığınız varsayılan ve özel cihaz grupları dahil olmak üzere tüm cihaz grupları Azure Active Directory (Azure AD) içinde depolanır.

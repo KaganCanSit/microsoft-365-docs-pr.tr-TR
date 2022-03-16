@@ -9,19 +9,19 @@ audience: Admin
 ms.topic: conceptual
 ms.service: O365-seccomp
 ms.localizationpriority: medium
-ms.date: 06/11/2020
+ms.date: 03/04/2022
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 search.appverid:
 - MET150
 description: Yönetici ve ileti gönderen olarak, bir e-posta adresiyle şifrelenmiş bazı e-postaları iptal Office 365 Gelişmiş İleti Şifrelemesi.
-ms.openlocfilehash: 86231857b01cc4f505f19063fe59cd58b75e263b
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: bf793dce23c91e8b45f96114e6c4a56c866adc32
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988128"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63512260"
 ---
 # <a name="revoke-email-encrypted-by-advanced-message-encryption"></a>Gelişmiş İleti Şifrelemesi ile şifrelenen e-postaları iptal etme
 
@@ -30,6 +30,9 @@ E-posta iptali, e-posta iptal Office 365 Gelişmiş İleti Şifrelemesi. Office 
 Bu makale, bu makaleyle ilgili daha geniş bir makale dizisinin [Office 365 İleti Şifrelemesi](ome.md).
 
 Bir ileti Office 365 Gelişmiş İleti Şifrelemesi kullanılarak şifrelenirse ve Microsoft 365 yöneticisiyseniz veya iletinin göndereni sizseniz, belirli koşullar altında iletiyi iptalebilirsiniz. Yöneticiler PowerShell'in kullanıldığı iletileri iptal ediyor. Gönderen olarak, doğrudan posta gönderenden gelen bir iletiyi iptal Web üzerinde Outlook. Bu makalede, hangi iptalin mümkün olduğu ve bunun nasıl olduğu açıklanmıştır.
+
+> [!NOTE]
+> OME iletilerini izleyebilme ve iptal etme olanağını garanti etmek için, özel bir markalama şablonu eklemeniz gerekir. Bkz [. Şifreli iletilerinize kurum markanızı ekleme](add-your-organization-brand-to-encrypted-messages.md)
   
 ## <a name="encrypted-emails-that-you-can-revoke"></a>İptal edildiğiniz şifreli e-postalar
 
