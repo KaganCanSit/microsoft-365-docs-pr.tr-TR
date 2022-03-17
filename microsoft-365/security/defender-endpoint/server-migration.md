@@ -10,18 +10,18 @@ ms.sitesec: library
 ms.pagetype: security
 author: mjcaparas
 ms.author: macapara
-localization_priority: Normal
+ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 1a78d99650015aa0da92e35787a164b5c5a07b71
-ms.sourcegitcommit: cde34d38bdfb6335b980f1c48c6b218da6a64bf8
+ms.openlocfilehash: 7fd4ca4931c060c0eb7092f74ed708c0b8d69738
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2022
-ms.locfileid: "63014076"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63526076"
 ---
 # <a name="server-migration-scenarios-from-the-previous-mma-based-microsoft-defender-for-endpoint-solution"></a>Önceki, Uç nokta çözümü için MMA tabanlı Microsoft Defender'dan sunucu geçişi senaryoları
 

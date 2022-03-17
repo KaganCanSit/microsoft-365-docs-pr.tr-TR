@@ -5,16 +5,16 @@ keywords: Microsoft Yönetilen Masaüstü, Microsoft 365, hizmet, belgeler
 ms.service: m365-md
 author: tiaraquan
 ms.author: tiaraquan
-ms.localizationpriority: normal
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: 45729a40ecab2548b3125559ac3a971e5134f190
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 5ed7373bdcf9a8f2c8eda53c0bd249c6ba825992
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320809"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63525592"
 ---
 # <a name="shared-devices"></a>Paylaşılan cihazlar
 

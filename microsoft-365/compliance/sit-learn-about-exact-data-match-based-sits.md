@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 ms.date: ''
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 search.appverid:
@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 description: Hassas bilgi türlerine dayalı tam veri eşleşmesi hakkında bilgi edinebilirsiniz.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: d6b8b2bb5387257bf016e751713b9cba61de9691
-ms.sourcegitcommit: 2716cb48cc6127f6b851d177af23f276fb07bfc9
+ms.openlocfilehash: 21e6f3c12d7c401562a1ee1915e1e1c266724b1b
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63018840"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63526928"
 ---
 # <a name="learn-about-exact-data-match-based-sensitive-information-types"></a>Hassas bilgi türlerine dayalı tam veri eşleşmesi hakkında bilgi
 

@@ -8,18 +8,18 @@ ms.date: ''
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
 description: Uç nokta müşterileri için Microsoft Defender 'ı (önizleme) kullanarak mac Microsoft 365 OS cihazlarını JAMF Pro Uyumluluk çözümlerine ekleme ve çıkararak kullanma hakkında bilgi edinin
-ms.openlocfilehash: cfe008e7d1334be58e9aabf45d441b2553cb0fe2
-ms.sourcegitcommit: 542e6b5d12a8d400c3b9be44d849676845609c5f
+ms.openlocfilehash: 7e2109f52590cc4d9ad23700fa4b51a09ae4b5db
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "63005007"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63526478"
 ---
 # <a name="onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers-preview"></a>Uç nokta müşterileri için Microsoft Defender 'da JAMF Pro kullanarak MacOS cihazlarını ekleme ve çıkararak Uyumluluk çözümlerine ekleme (önizleme)
 

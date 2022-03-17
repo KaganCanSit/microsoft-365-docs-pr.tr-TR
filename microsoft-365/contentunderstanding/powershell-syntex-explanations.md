@@ -11,14 +11,14 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 search.appverid: MET150
-ms.localizationpriority: normal
+ms.localizationpriority: medium
 description: PowerShell'de SharePoint Syntex açıklamaları anlama hakkında bilgi edinmek için bu belgeyle çalışma hakkında bilgi öğrenin.
-ms.openlocfilehash: 06f0eb7314b85f9463689fea32667666e5e167fd
-ms.sourcegitcommit: d37fce3b708ea5232b4102fd0e693f4bf17a8948
+ms.openlocfilehash: 12bdb4c7019b34ee7d2c1f4315673d78cbfb7ba1
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/21/2022
-ms.locfileid: "63014130"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63525702"
 ---
 # <a name="work-with-document-understanding-model-explanations-in-powershell"></a>PowerShell'de belge anlama modeli açıklamaları ile çalışma
 

@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 ms.assetid: 7dc1c01a-090f-4971-9677-f1b192d6c910
 description: 2013 yüklü olan cihazlarda modern kimlik doğrulamayı etkinleştirmek için kayıt Microsoft Office ayarlamayı öğrenin.
-ms.openlocfilehash: 010dce00762e4e73d21a9da668a7ac9606d731f9
-ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
+ms.openlocfilehash: c390e3b9858a4d7d8fc37ea5c5e6f1901d5e20fb
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63504744"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63525119"
 ---
 # <a name="enable-modern-authentication-for-office-2013-on-windows-devices"></a>Windows cihazlarında Office 2013 için Modern Kimlik Doğrulama'yı etkinleştirme
 
@@ -78,7 +78,7 @@ EWS ve Otomatik Bulma gibi web Outlook için daha yeni bir kimlik doğrulama yö
    HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\Identity\
    ```
 
-8. Yukarıdaki tabloda zaten anahtarlar varsa, gerekiyorsa değerleri değiştirin, sonra da Kayıt Defteri Düzenleyicisi'den çıkın. Yoksa, Düzen menüsünde Yeni'nin üzerine gelin ve ardından eksik  tuşları oluşturmak için **DWORD Değeri'ni** seçin. 
+8. *EnableADAL ve* *Sürüm anahtarları zaten* varsa, gerekiyorsa değerleri değiştirin, sonra da Kayıt Defteri Düzenleyicisi'den çıkın. Yoksa, Düzen menüsünde Yeni'nin üzerine gelin ve ardından eksik  tuşları oluşturmak için **DWORD Değeri'ni** seçin. 
 
 9. Örneğin, *EnableADAL tuşu* yoksa, *EnableADAL yazın ve* Enter tuşuna **basın.**
 

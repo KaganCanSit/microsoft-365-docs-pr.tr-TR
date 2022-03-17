@@ -15,16 +15,16 @@ ms.custom: nextgen
 ms.reviewer: pahuijbr, mkaminska
 manager: dansimp
 ms.technology: mde
-ms.date: 03/15/2022
+ms.date: 03/16/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: be3dcfd23c0fb77604cec140a4b1d3606f6ee345
-ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
+ms.openlocfilehash: c6454704c6cabfd5136eeec565c3c57dca044250
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "63513052"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63526902"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Güncelleştirmeleri Microsoft Defender Virüsten Koruma ve taban çizgilerini uygulama
 
@@ -85,20 +85,28 @@ Tüm güncelleştirmelerimiz
 - Tümleştirme geliştirmeleri (Bulut, [Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender))
 <br/><br/>
 <details>
-<summary>Şubat-2022 (Platform: 4.18.xxxx.xx | Altyapı: 1.1.19000.8)</summary>
+<summary>Şubat-2022 (Platform: 4.18.2202.4 | Altyapı: 1.1.19000.8)</summary>
 
-&ensp;Güvenlik zekası güncelleştirme sürümü: **1.357.x.x**<br/>
+&ensp;Güvenlik zekası güncelleştirme sürümü: **1.361.14.0**<br/>
 &ensp;Yayınlanma tarihi: **14 Mart 2022**<br/>
-&ensp;Platform: **4.18.xxxx.xx**<br/>
+&ensp;Platform: **4.18.2202.4**<br/>
 &ensp;Altyapı: **1.1.19000.8**<br/>
 &ensp;Destek aşaması: **Güvenlik ve Kritik Güncelleştirmeler**<br/>
 
 Altyapı sürümü: 1.1.19000.8 <br/>
-Güvenlik zekası güncelleştirme sürümü: 1.357.x.x <br/>
+Güvenlik zekası güncelleştirme sürümü: 1.361.14.0 <br/>
 
 ### <a name="whats-new"></a>Yenilikler
 
-- Çok yakında
+- Algılama ve davranış izleme mantığında geliştirmeler
+- Hatalı pozitif tetikleyen saldırı yüzeyini azaltma algılamaları düzeltildi
+- Gelişmiş Sakslama ve Gelişmiş Saksı algılama uyarılarının EDR ilgili düzeltme eklendi
+- Defender artık bildirim açılan pencerelerde özel bildirimleri desteklemez. Bu değişikliği yansıtacak şekilde değiştirilmiş GPO/Intune/SCCM ve belgeler.
+- Çıkarılabilir depolama alanına yazılan dosyaların hem bilgilerini hem de kopyasını yakalamak için yapılan geliştirmeler. Daha fazla bilgi için bkz. Uç Nokta Cihaz Denetimi Çıkarılabilir için [Microsoft Defender Depolama Erişim Denetimi, çıkarılabilir depolama medyası](device-control-removable-storage-access-control.md).
+- SmartScreen hizmeti ulaşılamaz durumdayken geliştirilmiş trafik çıkışı 
+- Kimlik doğrulama gereksinimleri olan sunuculara sahip müşterilere yapılan bağlantı iyileştirmeleri
+- Ağ FileShares için VDI cihaz güncelleştirme hatası düzeltildi 
+- EDR modundaki çalışma artık yeni CSP'lerle ayrıntılı cihaz hedeflemeyi destekliyor. Bkz[. Uç nokta algılama ve yanıt (EDR) engelleme modunda](edr-in-block-mode.md).
 
 ### <a name="known-issues"></a>Bilinen Sorunlar
 

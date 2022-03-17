@@ -11,18 +11,18 @@ ms.pagetype: security
 ms.author: shthota
 author: shthota
 manager: dansimp
-localization_priority: Normal
+ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 2382dc157120b34bf100cf320807e2683f64bbb8
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 5c18d5e9fbf628f5d4e4373b866fa300c193ac30
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62974099"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63525536"
 ---
 # <a name="configure-microsoft-defender-for-endpoint-risk-signals-using-app-protection-policies-mam"></a>Uygulama Koruma İlkelerini (MAM) kullanarak Uç nokta risk işaretleri için Microsoft Defender'ı yapılandırma
 
@@ -41,7 +41,7 @@ Android'de Uç Nokta için Microsoft Defender tehdit bilgileri, bu uygulamaları
 
 Android'de Uç Nokta için Microsoft Defender MAM'nin her iki yapılandırmalarını da destekler
 - **Intune MDM + MAM**: IT yöneticileri uygulamaları yalnızca Intune mobil cihaz yönetimi (MDM) ile kayıtlı cihazlarda Uygulama Koruma İlkelerini kullanarak yönetebilir.
-- Cihaz **kaydı olmayan** MAM: Cihaz kaydı olmayan MAM veya MAM-WE, IT yöneticilerinin Intune MDM [](/mem/intune/app/app-protection-policy) ile kaydolmamış cihazlarda Uygulama Koruma İlkelerini kullanarak uygulamaları yönetmelerini sağlar. Başka bir ifadeyle, uygulamalar üçüncü taraf EMM sağlayıcılarıyla kaydolan cihazlarda Intune tarafından yönetilebilir. Yukarıdaki yapılandırmaların her ikisini de kullanarak uygulamaları yönetmek için müşterilerin yönetim merkezinde [Intune'Microsoft Endpoint Manager gerekir](https://go.microsoft.com/fwlink/?linkid=2109431)
+- Cihaz **kaydı olmayan** MAM: Cihaz kaydı olmayan MAM veya MAM-WE, IT yöneticilerinin Intune MDM [](/mem/intune/app/app-protection-policy) ile kaydolmamış cihazlarda Uygulama Koruma İlkelerini kullanarak uygulamaları yönetmelerini sağlar. Başka bir ifadeyle, uygulamalar üçüncü taraf EMM sağlayıcılarıyla kaydolan cihazlarda Intune tarafından yönetilebilir. Yukarıdaki yapılandırmaların her ikisini de kullanarak uygulamaları yönetmek için müşterilerin yönetim merkezinde Intune [Microsoft Endpoint Manager gerekir](https://go.microsoft.com/fwlink/?linkid=2109431)
 
 Bu özelliği etkinleştirmek için yöneticinin Uç Nokta için Microsoft Defender ile Intune arasındaki bağlantıyı yapılandırması, uygulama koruma ilkesi oluşturması ve ilkeyi hedefli cihazlara ve uygulamalara uygulamasına uygulaması gerekir. 
  
@@ -54,21 +54,21 @@ Son kullanıcıların ayrıca cihazına Uç Nokta için Microsoft Defender'ı y�
 
   a. Devam'a security.microsoft.com. 
 
-  b. Bağlantı **Ayarlar > Gelişmiş> için Uç > Microsoft Intune'ı** seçin.
+  b. Bağlantı **Ayarlar > Gelişmiş> Için Uç > Microsoft Intune'i** seçin.
 
   c. Bağlantı açık değilse, açmak için iki durumlu düğmeyi seçin ve sonra da Kaydetme **Tercihleri'ne tıklayın**.
 
   ![Endpoint -Intune bağlayıcısı için Defender görüntüsü](images/enable-intune-connection.png)
 
-  d. Giriş (**intune) Microsoft Endpoint Manager** gidin ve Bağlayıcı için Microsoft Defender'ın Endpoint-Intune etkinleştirildikten sonra doğrula' seçin.
+  d. Giriş (**intune) Microsoft Endpoint Manager** gidin ve Bağlayıcı için Microsoft DefenderEndpoint-Intune etkinleştirildikten sonra doğrula'ya gidin.
 
-  ![Intune'da Endpoint-Intune Defender'ın görüntüsü](images/validate-intune-connector.png)
+  ![Intune'da Endpoint-Intune Defender bağlayıcısı görüntüsü](images/validate-intune-connector.png)
 
 - **Uygulama Koruma İlkesi (APP) için Android Connector'da Uç Nokta için Microsoft Defender'ı Etkinleştirme**
   
-  Uygulama koruma ilkeleri için Intune Microsoft Endpoint Manager bağlayıcıyı yapılandırma:
+  Intune'da bağlayıcıyı Microsoft Endpoint Manager ilkeleri için yapılandırabilirsiniz:
 
-  a. Uç Nokta **için Microsoft Defender > Bağlayıcılar ve Belirteçler'e >'e gidin**.
+  a. Uç Nokta **için Microsoft Defender > Bağlayıcılar ve Belirteçler'> Kiracı Yönetimi'ne gidin**.
 
   b. Android için uygulama koruma ilkesi iki durumlu düğmesini açın (aşağıdaki ekran görüntüsünde olduğu gibi).
 
@@ -92,7 +92,7 @@ Uygulama koruma ilkeleri (UYGULAMA), kuruluşun verilerini güvende veya yöneti
 Mobil uygulama yönetimi cihaz yönetimi gerektirmeyen bu nedenle, şirket verilerini hem yönetilen hem de yönetilemeyen cihazlarda koruyabilirsiniz. Yönetim kullanıcı kimliğine göre ortalandı ve cihaz yönetimi gereksinimi ortadan kaldırıldı. Şirketler aynı anda MDM ile veya MDM olmadan uygulama koruma ilkelerini kullanabilir. Örneğin, hem şirket tarafından verilen bir telefonu hem de kendi kişisel tabletini kullanan bir çalışan düşünün. Şirket telefonu MDM'ye kayıtlıdır ve kişisel cihaz yalnızca uygulama koruma ilkeleri tarafından korunarak uygulama koruma ilkeleri tarafından korunur.
 
     b. Uygulamalar'ı seçin<br>
-    Yönetilen uygulama, uygulama koruma ilkeleri uygulanmış olan bir uygulamadır ve Intune tarafından yönetilebilir. [Intune SDK](/mem/intune/developer/app-sdk) ile tümleştirilmiş veya [Intune](/mem/intune/developer/apps-prepare-mobile-application-management) SDK ile kaydırılmış App Wrapping Tool, Intune uygulama koruma İlkeleri kullanılarak yönetilebilir. Bu araçlar kullanılarak [Microsoft Intune ve](/mem/intune/apps/apps-supported-intune-apps) genel kullanım için kullanılabilen korumalı uygulamaların resmi listesine bakın.
+    Yönetilen uygulama, uygulama koruma ilkeleri uygulanmış olan bir uygulamadır ve Intune tarafından yönetilebilir. [Intune SDK ile tümleştirilmiş veya Intune SDK](/mem/intune/developer/app-sdk) ile kaydırılmış App Wrapping Tool[, Intune](/mem/intune/developer/apps-prepare-mobile-application-management) uygulama koruma İlkeleri kullanılarak yönetilebilir. Bu araçlar kullanılarak [Microsoft Intune ve](/mem/intune/apps/apps-supported-intune-apps) genel kullanım için kullanılabilen korumalı uygulamaların resmi listesine bakın.
 
     *Örnek: Outlook uygulama olarak sırala*
 

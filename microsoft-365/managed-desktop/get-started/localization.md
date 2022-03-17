@@ -12,12 +12,12 @@ ms.collection: M365-modern-desktop
 manager: dougeby
 ms.topic: article
 audience: Admin
-ms.openlocfilehash: c7930215efac4e02a6a0bab484e9158ad693997a
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: c429a072d6ceb2d5d1472533649e30d1fc1a0078
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016517"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63525009"
 ---
 # <a name="localize-the-user-experience"></a>Kullanıcı deneyimini yerelleştirme
 
@@ -44,7 +44,12 @@ Kullanıcılar kurulum işlemi tamamlandıktan sonra Windows 10 dile Microsoft 3
 | Windows 10 dil özellikleri | <ul><li>Görüntüleme dili</li><li>Klavye dili</li><ul> |
 | Microsoft 365 Uygulamaları için Enterprise özellikleri | <ul><li>Görüntüleme dili</li><li>Yazım denetleme ve yazma araçları</li></ul> |
 
-Kullanıcılarınızı [yüklemesi için](#supported-languages) Microsoft 365 Uygulamaları Enterprise dilinin kullanılabilir olması için, kullanıcıları **Modern Workplace-Office-Language_Packs** grubuna ekleyin. Diller aşağıdaki dillerde Intune Şirket Portalı.
+## <a name="install-more-languages"></a>Daha fazla dil yükleme
+
+> [!NOTE]
+> 16 Mart 2022'den yeni diller eklemelerine izin veren Modern Workplace-Office-Language_Packs grubunu aşamalı olarak Microsoft Office. Yeni yönteme geçiş (aşağıya bakın) Nisan 2022'de tamamlanacak. Bu geçiş dönemi boyunca herhangi bir sorun varsa lütfen destek ile iletişime [geçin](../working-with-managed-desktop/admin-support.md).
+
+Varsayılan olarak, Microsoft Office yönetici olması gerekir. Microsoft Yönetilen Masaüstü, standart kullanıcıların dil paketlerini doğrudan Office uygulamaları üzerinden yüklemelerine olanak sağlayan bir Office dağıtır. Daha fazla bilgi için bkz [. Yönetici olmayan kullanıcıların başka diller yüklemesine izin verme](/deployoffice/overview-deploying-languages-microsoft-365-apps#allow-users-who-arent-admins-to-install-additional-languages).
 
 ## <a name="supported-languages"></a>Desteklenen diller
 
@@ -98,12 +103,6 @@ Microsoft [Yönetilen Masaüstü](../service-description/device-images.md#univer
 Kullanıcılarınızı burada listelenenler dışında bir dile ihtiyaç varsa [Yönetim portalını](../working-with-managed-desktop/admin-support.md) kullanarak bir destek [isteği dosya edin](access-admin-portal.md).
 
 ## <a name="languages-for-support-and-operations"></a>Destek ve işlemler için diller
-
-### <a name="user-support"></a>Kullanıcı desteği
-
-Microsoft Yönetilen Masaüstü yalnızca İngilizce destek sağlar. Kullanıcılar Yardım Alın uygulamasında başka bir dil seçerse, doğrudan Microsoft Yönetilen Masaüstü'nden destek almak yerine genel Microsoft destek kanallarından destek elde ederim. Daha fazla bilgi için bkz [. Kullanıcılar için yardım alma](../working-with-managed-desktop/end-user-support.md).
-
-Kullanıcılarınız başka dillerde de yardıma ihtiyaç destekliyorsa, bunu Microsoft dışı destek kaynakları veya kendi kuruluştan sağlamanız gerekir.
 
 ### <a name="admin-support-and-operations"></a>Yönetici desteği ve işlemleri
 

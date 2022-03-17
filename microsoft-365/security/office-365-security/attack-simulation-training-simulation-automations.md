@@ -6,18 +6,18 @@ manager: dansimp
 audience: ITPro
 ms.topic: how-to
 ms.prod: m365-security
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 description: Yöneticiler, Plan 2 için Microsoft Defender'da belirtilen koşullar karşılandıklarında başlatan belirli teknikler ve yüklemeler içeren otomatik benzetimler Office 365 öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 029dce5b7f0b5c6e62b064aa9155d7b07c6a80d7
-ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
+ms.openlocfilehash: 327091706ed7c8c2a6f1f1180af7888ed67c1a57
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63495032"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63526186"
 ---
 # <a name="simulation-automations-for-attack-simulation-training"></a>Saldırı benzetimi eğitimi için benzetim otomasyonları
 

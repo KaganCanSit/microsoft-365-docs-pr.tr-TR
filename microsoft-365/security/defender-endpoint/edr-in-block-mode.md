@@ -15,15 +15,15 @@ ms.custom:
 - next-gen
 - edr
 - admindeeplinkDEFENDER
-ms.date: 11/29/2021
+ms.date: 03/16/2022
 ms.collection: m365-security-compliance
 ms.technology: mde
-ms.openlocfilehash: 6b6e9f9c379d4d0a659b49b9b9ce9b22b6e5ee04
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 6c3df0efe5c565497803ecdd84716ec70e590afd
+ms.sourcegitcommit: b67385243fb56ad20f2a6f1c40be46f5691c1c2a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63322667"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63527834"
 ---
 # <a name="endpoint-detection-and-response-edr-in-block-mode"></a>Engelleme modunda uç nokta algılama EDR yanıt (EDR)
 
@@ -63,15 +63,24 @@ Aşağıdaki resimde, engelleme modundaki bir istenmeyen yazılım örneği gör
 
 ## <a name="enable-edr-in-block-mode"></a>EDR modunda etkinleştirme
 
+> [!IMPORTANT]
+> Platform sürüm 4.18.2202.X ile başlayarak, EDR'ı Intune CSP'lerini kullanarak belirli cihaz gruplarını hedefley etmek için blok modunda kullanabilirsiniz. Kiracı portalında kiracı genelinde EDR modunda kiracı genelinde kiracıyı <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">ayarlamaya Microsoft 365 Defender.</a> Engelleme modunda EDR modunun öncelikli olarak pasif modunda MDAV çalıştıran cihazlar için önerilen bir öneri olduğunu unutmayın (üçüncü taraf AV etkindir). 
+
 > [!TIP]
 > Engelleme modunda [otomatik olarak](#requirements-for-edr-in-block-mode) açmadan önce gereksinimlerin EDR karşı olduğundan emin olun.
+
+### <a name="security-portal"></a>Güvenlik Portalı 
 
 1. Erişim portalına Microsoft 365 Defender ([https://security.microsoft.com/](https://security.microsoft.com/) ) ve oturum açın.
 2. Genel **Ayarlar** \> **Uç Noktaları Genel** **Özellikler'i** \> \> **seçin**.
 3. Ekranı aşağı kaydırın ve Engelleme modunda **EDR etkinleştir'i etkinleştirin**.
 
-> [!IMPORTANT]
-> EDR modundaki alan yalnızca kiracı portalında <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> ve kiracı genelinde uygulanır. Varsayılan modu EDR cihaz gruplarını veya kullanıcıları hedefle olacak şekilde ayaramazsınız. Engelleme modunda kayıt defteri anahtarlarını, Microsoft Intune veya Grup İlkesi'ni EDR veya devre dışı bırakamazsınız.
+### <a name="intune"></a>Intune
+
+Intune'da özel bir ilke oluşturmak için bkz. [Intune aracılığıyla bir CSP'yi](/troubleshoot/mem/intune/deploy-oma-uris-to-target-csp-via-intune) OMA-URIs dağıtımı ve şirket içi ilke karşılaştırması.
+
+Engelleme modunda düzeltmeler için kullanılan Defender CSP EDR, Defender CSP'nin altındaki "Yapılandırma/PasifRemediation" [ile ilgili daha fazla bilgi için bkz](/windows/client-management/mdm/defender-csp).
+
 
 ## <a name="requirements-for-edr-in-block-mode"></a>Blok modunda EDR gereksinimleri
 

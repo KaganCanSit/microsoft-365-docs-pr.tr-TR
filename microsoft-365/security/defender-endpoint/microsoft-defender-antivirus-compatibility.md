@@ -14,16 +14,16 @@ ms.custom: nextgen
 ms.reviewer: mkaminska, pahuijbr
 manager: dansimp
 ms.technology: mde
-ms.date: 03/14/2022
+ms.date: 03/16/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 25d01c597da0f3a3e108eeee27d3a0dfe5b58eb7
-ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
+ms.openlocfilehash: fd049930b7b5b922e30e49f5796a736d44038bf2
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "63512538"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63526888"
 ---
 # <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Virüsten Koruma güvenlik ürünleriyle uyumluluk sorunları
 
@@ -154,12 +154,14 @@ Bu bölümdeki tabloda, "Etkin modda mı, pasif modda mı, yoksa devre dışı m
  | [Saldırı yüzeyini azaltma kuralları](attack-surface-reduction.md)  | Evet | Hayır | Hayır  | Hayır | 
  | [Sınırlı düzenli tarama kullanılabilirliği](limited-periodic-scanning-microsoft-defender-antivirus.md) | Hayır | Hayır | Evet | Hayır | 
  | [Dosya tarama ve algılama bilgileri](review-scan-results-microsoft-defender-antivirus.md) | Evet | Evet<sup>[[5](#fn5)]</sup> | Hayır | Evet | 
- | [Tehdit düzeltmesi](configure-remediation-microsoft-defender-antivirus.md) | Evet | Evet | Hayır | Evet | 
+ | [Tehdit düzeltmesi](configure-remediation-microsoft-defender-antivirus.md) | Evet | Nota bakın <sup>[[6](#fn6)]</sup> | Hayır | Evet | 
  | [Güvenlik zekası güncelleştirmeleri](manage-updates-baselines-microsoft-defender-antivirus.md) | Evet | Evet | Hayır | Evet | 
 
 (<a id="fn4">4</a>) Genel olarak, Microsoft Defender Virüsten Koruma pasif modundayken, gerçek zamanlı koruma etkin ve pasif modunda olsa bile, hiçbir engelleme veya zorlama sağlamaz.
 
 (<a id="fn5">5</a>) Microsoft Defender Virüsten Koruma pasif modundayken, taramalar zamanlanmaz.
+
+(<a id="fn6">6</a>) Microsoft Defender Virüsten Koruma pasif modundayken, tehditleri düzeltmez. Ancak, Tehditlere karşı engelleme modunda Uç [nokta algılama ve yanıt (EDR) ile düzeltebilirsiniz](edr-in-block-mode.md). Bu durumda, edilgen moddayken Microsoft Defender Virüsten Koruma kaynak olarak Microsoft Defender Virüsten Koruma uyarılar görebilirler.
 
 > [!NOTE]
 > [Microsoft 365 uç nokta veri kaybı önleme](/microsoft-365/compliance/endpoint-dlp-learn-about) koruması etkin veya pasif modunda Microsoft Defender Virüsten Koruma şekilde normal çalışmaya devam eder.

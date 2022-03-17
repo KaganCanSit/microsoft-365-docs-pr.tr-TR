@@ -8,18 +8,18 @@ ms.date: ''
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
 description: MacOS cihazlarını Uyumluluk çözümlerine ekleme hakkında bilgi edinin
-ms.openlocfilehash: fbf29e0d66bf31d058cede69aba9fe0c7814a3a7
-ms.sourcegitcommit: 542e6b5d12a8d400c3b9be44d849676845609c5f
+ms.openlocfilehash: 93a930f13a17c19c3ff7209295ddada648b9575a
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "63005004"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63526576"
 ---
 # <a name="onboard-macos-devices-into-microsoft-365-overview-preview"></a>MacOS cihazlarını mobil cihazlara Microsoft 365 genel bakış (önizleme)
 

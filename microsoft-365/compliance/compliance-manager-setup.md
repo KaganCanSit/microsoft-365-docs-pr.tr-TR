@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Uyumluluk Yöneticisi kullanıcı izinlerini ve rollerini ayarlayın ve eylemlerin otomatik testlerini ayarlayın. Kullanıcı geçmişini yönetin ve pano görünümlerinizi filtreleyin.
-ms.openlocfilehash: 070c8fea309ea7c01b82be068acc40a7dcb830ff
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: a6a0d7c12b0f798b88d460517866c55862c56740
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63330489"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63525023"
 ---
 # <a name="get-started-with-compliance-manager"></a>Uyumluluk Yöneticisi'ni çalışmaya başlama
 
@@ -124,8 +124,6 @@ Uyumluluk Yöneticisi ayarları, Microsoft 365 uyumluluk merkezi eylemlerini oto
 Uyumluluk Yöneticisi, bilgi idaresi, bilgi koruma Microsoft 365 veri kaybını önleme, iletişim uyumluluğu ve insider risk yönetimi dahil olmak üzere, diğer uyumluluk çözümlerinden gelen sinyalleri algılar. Her geliştirme eyleminin ayrıntılar sayfasında, Test sekmesindeki  Test mantığı alanı, eylemin uyumluluk puanınızı geçmesi ve bu puandan puan kazan olması için diğer çözümde nelerin gerekli olduğunu gösterir.
 
 Uyumluluk Yöneticisi, Microsoft Güvenli Puanı tarafından da izlenen tamamlayıcı geliştirme eylemlerinden [sinyaller de algılar](../security/defender/microsoft-secure-score.md). Uyumluluk Yöneticisi bu sinyalleri kullanarak sizin için bazı geliştirme eylemlerini otomatik olarak test eder ve bu da uyumluluk etkinliklerinizin verimliliğini en üst düzeye çıkarmanıza yardımcı olur. Geliştirme eylemi başarıyla test edilmiş ve uygulanmışsa, genel uyumluluk puanınıza kredi uygulanan tam puan alırsınız.
-
-Her geliştirme eyleminin ayrıntılar sayfasında
 
 Otomatik test, Uyumluluk Yöneticisi'ni yeni edinen kuruluşlar için varsayılan olarak açıktır. Verilerinizi veya verilerinizi ilk Microsoft 365 Office 365, verileri tümüyle toplamak ve uyumluluk puanınıza faktörünü almak yaklaşık yedi gün sürer. Otomatik test açık olduğunda, eylemin test tarihi güncelleştirilmez, ancak test durumu güncelleştirilir. Yeni değerlendirmeler oluşturulduğunda, puanlar otomatik olarak Microsoft denetim puanlarını ve Güvenli Puan tümleştirmesini içerir.
 

@@ -9,15 +9,15 @@ ms.date: ''
 audience: Admin
 ms.topic: how-to
 ms.service: O365-seccomp
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Microsoft tarafından sağlanan Slack eKbulma veri bağlayıcısı ayar kullanmayı ve anlık ileti verilerini içeri aktarmayı ve arşivlemeyi öğrenin.
-ms.openlocfilehash: 58401130726a7211eaad5b5c25985b534b68b0b8
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 2bd4df859d5bb3a4ccd048c83a864d44f81f33bc
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312369"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63525079"
 ---
 # <a name="set-up-a-connector-to-archive-slack-ediscovery-data-preview"></a>Slack eK bulma verilerini arşivlemek için bağlayıcı ayarlama (önizleme)
 

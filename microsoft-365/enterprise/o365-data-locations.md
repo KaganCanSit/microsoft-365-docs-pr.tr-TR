@@ -17,12 +17,12 @@ ms.custom:
 - admindeeplinkMAC
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: Dünya genelinde depolanan Microsoft 365 verilerinizin nerede depolandığına karar belirleme
-ms.openlocfilehash: 4240521579331c0d4aed329b952d0a560291df45
-ms.sourcegitcommit: 57211e8082a3429017ad33fe0e6bd9af203bb7ab
+ms.openlocfilehash: c88eceadf6c00d165b0ac032fab19596abec49e1
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63027543"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63525480"
 ---
 # <a name="where-your-microsoft-365-customer-data-is-stored"></a>Verilerinizin Microsoft 365 müşteri verilerinizin depolandığı yer
 
@@ -47,7 +47,7 @@ Müşterinin fatura adresi Avrupa dışında ise ve Müşterinin bir Office 365 
 
 ### <a name="how-does-microsoft-define-data"></a>Microsoft verileri nasıl tanımlar?
 
-Microsoft Güven [Merkezi'nde farklı veri türleriyle](https://go.microsoft.com/fwlink/p/?linkid=864390) ilgili tanımlarımızı gözden geçirebilirsiniz. [Microsoft Çevrimiçi Hizmetler Şartlarında](https://go.microsoft.com/fwlink/p/?linkid=862403), Microsoft müşteri verileri/verilerinizle ilgili sözleşmelere dayalı taahhütler yapar. Temel müşteri verilerini, Microsoft Online Services Koşulları'nın koşullarına göre yalnızca bölgeniz içinde depolamayı taahhüt eden müşteri verileri [olarak kabul ediyoruz](https://go.microsoft.com/fwlink/p/?linkid=862403).
+Microsoft Güven [Merkezi'nde farklı veri türleriyle](https://go.microsoft.com/fwlink/p/?linkid=864390) ilgili tanımlarımızı gözden geçirebilirsiniz. Gizlilik Ve [Güvenlik &'te](https://www.microsoft.com/licensing/terms/product/PrivacyandSecurityTerms/all), Microsoft müşteri verileri/verilerinizle ilgili sözleşmelere dayalı taahhütler yapar. Temel müşteri verilerini, Gizlilik ve Güvenlik Koşulları'nın koşullarına göre yalnızca bölgeniz içinde depolamayı taahhüt eden [& olarak ifade ederiz](https://www.microsoft.com/licensing/terms/product/PrivacyandSecurityTerms/all).
 
 ### <a name="where-are-the-exact-addresses-of-the-data-centers"></a>Veri merkezlerinin tam adresleri nerede?
 

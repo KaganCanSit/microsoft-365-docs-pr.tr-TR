@@ -17,12 +17,12 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 ms.assetid: f30e2353-0bd6-41ed-8347-eea1fb8d2662
 description: Güvenlik, gizlilik ve uyumluluk uygulamalarına yardımcı olmak için Microsoft Hizmet Güveni Portalı'na erişmeyi ve portalı kullanmayı öğrenin.
-ms.openlocfilehash: 5894fb57d4633c0dbc3c9d925be72910bdfc3f56
-ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
+ms.openlocfilehash: f23cf5be7f05462e505c4d3a46407255e460420b
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "63512916"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63526158"
 ---
 # <a name="get-started-with-the-microsoft-service-trust-portal"></a>Microsoft Hizmet Güveni Portalı ile çalışmaya başlama
 
@@ -30,7 +30,7 @@ Microsoft Hizmet Güveni Portalı, Microsoft güvenliği, gizliliği ve uyumlulu
 
 ## <a name="accessing-the-service-trust-portal"></a>Hizmet Güveni Portalı'na erişme
 
-Hizmet Güveni Portalı, Microsoft'un bulut hizmetlerimizle müşteri verilerini koruyan denetim ve işlemleri uygulama hakkında ayrıntılar içerir. Hizmet Güveni Portalı'daki bazı kaynaklara erişmek için, Microsoft bulut hizmetleri hesabınızla (Azure Active Directory kuruluş hesabı veya Microsoft Hesabı) kimliği doğrulanmış bir kullanıcı olarak oturum açmalı ve Uyumluluk Malzemeleri için Microsoft Gizlilik Sözleşmesi'ne bakarak kabul etmiş ve kabul etmiş olursanız.
+Hizmet Güveni Portalı, Microsoft'un bulut hizmetlerimizle müşteri verilerini koruyan denetim ve işlemleri uygulama hakkında ayrıntılar içerir. Hizmet Güveni Portalı'daki bazı kaynaklara erişmek için, Microsoft bulut hizmetleri hesabınızla (Azure Active Directory kuruluş hesabı) kimliği doğrulanmış bir kullanıcı olarak oturum açmalı, Uyumluluk Malzemeleri için Microsoft Gizlilik Sözleşmesi'Azure Active Directory gözden geçirmeniz ve kabul edebilirsiniz.
 
 ### <a name="existing-customers"></a>Mevcut müşteriler
 
@@ -41,7 +41,7 @@ Mevcut müşteriler, aşağıdaki çevrimiçi aboneliklerden (deneme <https://ak
 - Azure
 
  > [!NOTE]
- > Azure Active Directory hesapları tüm belgelere ve Uyumluluk Yöneticisi gibi özelliklere erişim iznine sahip olabilir. Kişisel kullanım için oluşturulan Microsoft hesapları, Hizmet Güveni Portalı içeriğine sınırlı erişime sahip olur.
+ > Azure Active Directory hesapları tüm belgelere ve Uyumluluk Yöneticisi gibi özelliklere erişim iznine sahip olabilir.
 
 ### <a name="new-customers-and-customers-evaluating-microsoft-online-services"></a>Yeni müşteriler ve Microsoft çevrimiçi hizmetlerini değerlendiren müşteriler
 

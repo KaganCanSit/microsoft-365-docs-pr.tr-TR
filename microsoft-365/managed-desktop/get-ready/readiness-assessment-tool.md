@@ -10,12 +10,12 @@ ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
 audience: Admin
-ms.openlocfilehash: 96bd667cf5d3661476111f7593632f0e5362cf45
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 8d949b13203aaeab51d2518f16650ba6df832195
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011890"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63525646"
 ---
 # <a name="readiness-assessment-tools"></a>Hazırlık değerlendirme araçları
 
@@ -33,7 +33,7 @@ Microsoft Yönetilen Masaüstü Yöneticisi portalı üzerinden erişilen bir ar
 
 Microsoft Yönetilen Masaüstü, Azure AD kurumda (kiracı) son denetim çalıştırmadan sonra, bu denetimlerle ilişkilendirilmiş verileri 12 ay süreyle korur. 12 ay sonra, tanımları belirlenemeyen bir şekilde koruruz. Topladığımız verileri silmeyi seçebilirsiniz.
 
-En azından Genel Okuyucu veya Intune Yöneticisi rolüne sahip olan herkes bu aracı çalıştırabilecektir, ancak denetimlerden ikisi ([Koşullu](readiness-assessment-fix.md#conditional-access-policies) erişim ilkeleri ve [Çok](readiness-assessment-fix.md#multi-factor-authentication) faktörlü kimlik doğrulaması için ek izinler gerekir).
+En azından Genel Okuyucu veya Intune Yöneticisi rolüne sahip olan herkes bu aracı çalıştırabilecektir, ancak denetimlerden ikisi ([Koşullu](readiness-assessment-fix.md#conditional-access-policies) erişim ilkeleri ve [Çok](readiness-assessment-fix.md#multi-factor-authentication) faktörlü kimlik doğrulaması) fazladan izin gerektirir.
 
 > [!IMPORTANT]  
 > Çevrimiçi hazırlık değerlendirme aracı, Microsoft Yönetilen Masaüstü'ne ilk kez kaydolma hazırlığınızı denetlemenize yardımcı olur. Organizasyonunız Microsoft Yönetilen Masaüstü'ne zaten kayıtlı ise, bu aracı kullanmayın.

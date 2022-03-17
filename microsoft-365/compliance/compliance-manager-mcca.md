@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Uyumluluk Yöneticisi ile hızla kullanmaya devam etmek için Microsoft Uyumluluk Yapılandırma Çözümleyicisi'ni nasıl kullanabileceğinizi anlama.
-ms.openlocfilehash: 3c5230a8a9998c4b924e5a9d4a9565ae1c97db89
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: a679f0483431313672ac0dfa1101eb9909b6c060
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63325117"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63525161"
 ---
 # <a name="microsoft-compliance-configuration-analyzer-for-compliance-manager-preview"></a>Uyumluluk Yöneticisi için Microsoft Uyumluluk Yapılandırması Çözümleyicisi (önizleme)
 
@@ -77,9 +77,7 @@ MCCA'yı yükledikten sonra, MCCA'yı çalıştırarak bir rapor oluşturabilirs
 
 3. MCCA çalıştırlandıktan sonra, bir ilk sürüm denetimi yapar ve kimlik bilgilerini sorar. Kullanıcı adı istemini girin adım adım hesap e-Microsoft 365 oturum açın (rapor [oluşturmak için uygun rolleri görüntüleme](#role-based-reporting)). Ardından, parola istemine parolanızı girin.
 
-Daha sonra raporunuz oluşturmak yaklaşık 2-5 dakika sürer. Bittiğinde, bir tarayıcı penceresi açılır ve HTML raporlarınızı görüntüler. Aracı her çalıştırsanız, kimlik bilgilerinizi sorar ve yeni bir rapor oluşturulur. Bu rapor, aşağıdaki dizinde yerel olarak depolanır:
-
-C:\Users\<username>\AppData\Local\Microsoft\MCCA. 
+Daha sonra raporunuz oluşturmak yaklaşık 2-5 dakika sürer. Bittiğinde, bir tarayıcı penceresi açılır ve HTML raporlarınızı görüntüler. Aracı her çalıştırsanız, kimlik bilgilerinizi sorar ve yeni bir rapor oluşturulur. Bu rapor, C dizininde yerel olarak depolanır: \ Kullanıcılar \ *kullanıcıadı* \ AppData \ Local \ Microsoft \ MCCA.
 
 Daha önce oluşturulan raporlara bu dizinden erişebilirsiniz.
 

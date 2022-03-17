@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Uyumluluk Yöneticisi'nde, organizasyonunız için önemli olan yasal düzenlemeler ve sertifikalara ilişkin gereksinimleri karşılamanıza yardımcı olacak değerlendirmeler sağlayın.
-ms.openlocfilehash: 59f2bd89a798567d51c3e28fda574e7b9f0ba326
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: fb30fd8f55172890507b82910630e7202de0d996
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63319539"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63526616"
 ---
 # <a name="build-and-manage-assessments-in-compliance-manager"></a>Uyumluluk Yöneticisi'nde değerlendirmeleri oluşturma ve yönetme
 
@@ -73,7 +73,7 @@ Yeni değerlendirme oluştururken bir grup da oluşturabilirsiniz. Gruplar tek b
 - Aynı grup içindeki farklı değerlendirmelerde bulunan ilgili değerlendirme denetimleri tamamlandığında otomatik olarak güncelleştirmesi yapılır.
 - Gruplar aynı sertifika veya düzenleme için değerlendirmeler içerebilir, ancak her grup belirli bir ürün-sertifika çifti için yalnızca bir değerlendirme içerebilir. Örneğin, bir grup, HER IKI DEĞERLENDIRME ve NIST CSF Office 365 değerlendirmeleri içerer. Bir grup, aynı ürün için birden çok değerlendirme içerebilir, ancak her bir ürün için ilgili sertifika veya düzenleme farklı olabilir.
 - Değerlendirmenin silinmesi, bu değerlendirmeyle grup arasındaki ilişkiyi bozar.
-- Gruplar el ile silinemez.
+- Gruplar silinemez.
 
 ## <a name="understand-templates-before-creating-assessments"></a>Değerlendirme oluşturmadan önce şablonları anlama
 

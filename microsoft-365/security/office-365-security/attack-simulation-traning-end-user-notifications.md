@@ -6,18 +6,18 @@ manager: dansimp
 audience: ITPro
 ms.topic: how-to
 ms.prod: m365-security
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 description: Yöneticiler, Plan 2'de Yer alan Microsoft Defender'da Saldırı benzetimi eğitimi için son kullanıcı bildirimi e-Office 365 mesajları oluştur yapmayı öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: bddd0b587e8fbf3007009a070cbd3e7616faac04
-ms.sourcegitcommit: 282f3a58b8e11615b3e53328e6b89a6ac52008e9
+ms.openlocfilehash: 3aa46724ef3414c83a5ece0c5fa17b4f9342c81c
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "63019057"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63526670"
 ---
 # <a name="end-user-notifications-for-attack-simulation-training"></a>Saldırı benzetimi eğitimi için son kullanıcı bildirimleri
 

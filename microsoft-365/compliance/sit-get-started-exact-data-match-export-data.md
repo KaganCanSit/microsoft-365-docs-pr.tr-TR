@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: how-to
 ms.service: O365-seccomp
 ms.date: ''
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 search.appverid:
@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 description: Hassas bilgi türüne göre tam veri eşleşmesi için kaynak verileri dışarı aktarmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 8253ff73d53100c986a2bd8580830703c9f4b363
-ms.sourcegitcommit: 19e16b16f144159b55bb4c544403e3642b69e335
+ms.openlocfilehash: 9a1ee56708018ddfddf141499bf4cf5f9ee02449
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2022
-ms.locfileid: "63015251"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63526270"
 ---
 # <a name="export-source-data-for-exact-data-match-based-sensitive-information-type"></a>Hassas bilgi türüne göre tam veri eşleşmesi için kaynak verileri dışarı aktarma
 

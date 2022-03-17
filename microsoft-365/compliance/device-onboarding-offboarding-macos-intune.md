@@ -8,18 +8,18 @@ ms.date: ''
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
 description: MacOS cihazlarını Microsoft Intune (önizleme) kullanarak Uyumluluk çözümlerine nasıl Microsoft 365 alın ve çıkarabilirsiniz
-ms.openlocfilehash: bab39cf101cb4fcae15f93ecc74bc52d81cadd91
-ms.sourcegitcommit: 726a72f135358603c2fde3f4067d834536e6deb2
+ms.openlocfilehash: 5f8dd27490992e15d53dfc10311ce7b23b99683a
+ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014317"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63526520"
 ---
 # <a name="onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-intune-preview"></a>Intune (önizleme) kullanarak MacOS cihazlarını Microsoft 365 Uyumluluk çözümlerine ekleme ve çıkarma
 
