@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 0703e1f23d9d54a907b39382438f85f544a5b6de
-ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
+ms.openlocfilehash: b1d7d3dab26d4f9034294b2780875d33cb2fbef3
+ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63504867"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63557954"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Portalda e-posta Microsoft 365 Defender görüntüleme
 
@@ -89,11 +89,13 @@ Grafiğin altındaki ayrıntılar tablosu aşağıdaki bilgileri gösterir:
 - **Oluşturma zamanı**
 - **Kullanıcı Kimliği**
 - **Eylem**
+- **Etiketler**: Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
 
 Filtre'ye tıklar ve beliren açılır grafikte aşağıdaki  değerlerden birini veya birden fazlasını seçerek hem grafiği hem de ayrıntılar tablosuna filtre yapabilirsiniz:
 
 - **Tarih (UTC)**: **Başlangıç tarihi ve** **Bitiş tarihi**.
 - **Etkinlik**: **Kısıtlanmış** veya **Şüpheli**
+- **Etiket**: **Tüm** veya belirtilen kullanıcı etiketi (öncelik hesapları dahil).
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
@@ -520,7 +522,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 - **Algılama teknolojisi**
 - **Teslim durumu**
 - **Gönderen IP'si**
-- **Etiketler**
+- **Etiketler**: Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
 
 **Filtre'ye tıklarsanız**, aşağıdaki filtreler kullanılabilir:
 
@@ -531,7 +533,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
   - **Hepsi**
   - **Gelen**
   - **Giden**
-- **Etiket**: **Tüm** veya belirtilen kullanıcı etiketi (öncelik hesapları dahil). Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
+- **Etiket**: **Tüm** veya belirtilen kullanıcı etiketi (öncelik hesapları dahil).
 - **Etki** alanı: **Hepsi** veya [kabul edilen bir etki alanı](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 - **İlke türü**:
   - **Hepsi**
@@ -572,7 +574,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 - **Algılama teknolojisi**
 - **Teslim durumu**
 - **Gönderen IP'si**
-- **Etiketler**
+- **Etiketler**: Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
 
 **Filtre'ye tıklarsanız**, aşağıdaki filtreler kullanılabilir:
 
@@ -582,7 +584,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
   - **Hepsi**
   - **Gelen**
   - **Giden**
-- **Etiket**: **Tüm** veya belirtilen kullanıcı etiketi (öncelik hesapları dahil). Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
+- **Etiket**: **Tüm** veya belirtilen kullanıcı etiketi (öncelik hesapları dahil).
 - **Etki** alanı: **Hepsi** veya [kabul edilen bir etki alanı](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 - **İlke türü**:
   - **Hepsi**
@@ -627,7 +629,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 - **Algılama teknolojisi**
 - **Teslim Durumu**
 - **Gönderen IP'si**
-- **Etiketler**
+- **Etiketler**: Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
 
 **Filtre'ye tıklarsanız**, aşağıdaki filtreler kullanılabilir:
 
@@ -638,7 +640,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
   - **Hepsi**
   - **Gelen**
   - **Giden**
-- **Etiket**: **Tüm** veya belirtilen kullanıcı etiketi (öncelik hesapları dahil). Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
+- **Etiket**: **Tüm** veya belirtilen kullanıcı etiketi (öncelik hesapları dahil).
 - **Etki** alanı: **Hepsi** veya [kabul edilen bir etki alanı](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 - **İlke türü**:
   - **Hepsi**
@@ -677,7 +679,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 - **Algılama teknolojisi**
 - **Teslim durumu**
 - **Gönderen IP'si**
-- **Etiketler**
+- **Etiketler**: Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
 
 **Filtre'ye tıklarsanız**, aşağıdaki filtreler kullanılabilir:
 
@@ -706,7 +708,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
   - **Hepsi**
   - **Gelen**
   - **Giden**
-- **Etiket**: **Tüm** veya belirtilen kullanıcı etiketi (öncelik hesapları dahil). Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
+- **Etiket**: **Tüm** veya belirtilen kullanıcı etiketi (öncelik hesapları dahil).
 - **Etki** alanı: **Hepsi** veya [kabul edilen bir etki alanı](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 - **İlke türü**:
   - **Hepsi**
@@ -750,7 +752,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 - **Algılama teknolojisi**
 - **Teslim durumu**
 - **Gönderen IP'si**
-- **Etiketler**
+- **Etiketler**: Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
 
 **Filtre'ye tıklarsanız**, aşağıdaki filtreler kullanılabilir:
 
@@ -779,7 +781,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
   - **Hepsi**
   - **Gelen**
   - **Giden**
-- **Etiket**: **Tüm** veya belirtilen kullanıcı etiketi (öncelik hesapları dahil). Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
+- **Etiket**: **Tüm** veya belirtilen kullanıcı etiketi (öncelik hesapları dahil).
 - **Etki** alanı: **Hepsi** veya [kabul edilen bir etki alanı](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 - **İlke türü**:
   - **Hepsi**
@@ -852,7 +854,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 - **Alıcılar**
 - **Sistem geçersiz kılma**
 - **Gönderen IP'si**
-- **Etiketler**
+- **Etiketler**: Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
 
 **Filtre'ye tıklarsanız**, aşağıdaki filtreler kullanılabilir:
 
@@ -863,7 +865,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
   - **Hepsi**
   - **Gelen**
   - **Giden**
-- **Etiket**: **Tüm** veya belirtilen kullanıcı etiketi (öncelik hesapları dahil). Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
+- **Etiket**: **Tüm** veya belirtilen kullanıcı etiketi (öncelik hesapları dahil).
 - **Etki** alanı: **Hepsi** veya [kabul edilen bir etki alanı](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 - **İlke türü**: **All**
 - **İlke adı (yalnızca ayrıntılar tablosu görünümü)**: **All**
@@ -890,7 +892,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 - **Alıcılar**
 - **Sistem geçersiz kılma**
 - **Gönderen IP'si**
-- **Etiketler**
+- **Etiketler**: Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
 
 **Filtre'ye tıklarsanız**, aşağıdaki filtreler kullanılabilir:
 
@@ -1040,7 +1042,7 @@ Grafiğin altındaki ayrıntılar tablosu aşağıdaki bilgileri gösterir:
 - **Gönderen**
 - **Bildirilen neden**
 - **Sonucu yeniden elde  ede**
-- **Etiketler**
+- **Etiketler**: Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
 
 Çözümleme için Microsoft'a ileti göndermek için, tablodan ileti girdisini seçin, çözümleme için **Microsoft'a** Gönder'e tıklayın ve sonra açılan listeden aşağıdaki değerlerden birini seçin:
 

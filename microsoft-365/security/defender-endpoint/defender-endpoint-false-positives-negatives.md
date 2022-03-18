@@ -23,12 +23,12 @@ ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs, yonghree, jcedola
 ms.custom:
 - FPFN
 - admindeeplinkDEFENDER
-ms.openlocfilehash: e7d401d4501f046455382039593d304494de5295
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: 0352fde9756efce3011db24c915f287c358f313b
+ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63016677"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63557915"
 ---
 # <a name="address-false-positivesnegatives-in-microsoft-defender-for-endpoint"></a>Uç nokta için Microsoft Defender'da hatalı pozitif/negatifleri adresle
 
@@ -74,8 +74,6 @@ Uyarıyı sınıflandırmadan veya gizlemeden önce, uyarının doğru mu, yanl�
 3. Uyarı hakkında daha ayrıntılı bilgi için bir uyarı seçin. (Bkz [. Uç Nokta için Microsoft Defender'da uyarıları gözden geçirme](review-alerts.md).)
 
 4. Uyarı durumuna bağlı olarak, aşağıdaki tabloda açıklanan adımları uygulayın:
-
-<br/><br/>
 
    |Uyarı durumu|Ne yapmalı?|
    |---|---|
@@ -308,7 +306,7 @@ Kötü amaçlı olarak yanlış algılanan veya kaçırılan bir dosyanız varsa
 
 1. Buradaki yönergeleri gözden geçirme: [Dosyaları çözümleme için gönderin](/windows/security/threat-protection/intelligence/submission-guide).
 
-2. Gönderme Microsoft Güvenlik Zekası () ziyaret<https://www.microsoft.com/wdsi/filesubmission> edin ve dosyalarınızı gönderin.
+2. Site [Microsoft Güvenlik Zekası sitesini ziyaret](https://www.microsoft.com/wdsi/filesubmission) edin (https://www.microsoft.com/wdsi/filesubmission)ve dosyalarınızı gönderin).
 
 ### <a name="submit-a-fileless-detection-for-analysis"></a>Çözümleme için dosyasız algılama gönderme
 
@@ -322,7 +320,7 @@ Davranışa dayalı olarak bir şey kötü amaçlı yazılım olarak algılandı
 
 3. Buradaki yönergeleri gözden geçirme: [Dosyaları çözümleme için gönderin](/windows/security/threat-protection/intelligence/submission-guide).
 
-4. Microsoft Güvenlik Zekası gönderme sitesini () ziyaret<https://www.microsoft.com/wdsi/filesubmission> edin ve .cab gönderin.
+4. Microsoft Güvenlik Zekası [gönderme sitesini ziyaret](https://www.microsoft.com/wdsi/filesubmission) edin (https://www.microsoft.com/wdsi/filesubmission)ve .cab gönderin.
 
 ### <a name="what-happens-after-a-file-is-submitted"></a>Dosya gönderildikten sonra ne olur?
 

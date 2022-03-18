@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Kullanıcıların e-posta, belgeler ve konuşmalarda kendi oluşturanın içeriğinin kontrolünü etkin bir şekilde tutmak için bekletme ilkesi kullanın. Istemediklerden kurtulun ve istemediklerden kurtulun.
-ms.openlocfilehash: 37e94d43f2cfeab0e1135c42de34726ee5895714
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: ddd0553405aa92a1eb7a7978398392b780a0a2ea
+ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320599"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63557817"
 ---
 # <a name="create-and-configure-retention-policies"></a>Bekletme ilkeleri oluşturma ve yapılandırma
 
@@ -103,8 +103,6 @@ Birden fazla bekletme ilkeniz varsa ve bekletme etiketlerini de kullanıyorken, 
 #### <a name="known-configuration-issues"></a>Bilinen yapılandırma sorunları
 
 - Öğelerin son değiştirilma tarihlerini bekletme dönemini başlatma seçeneğini de kullanabilirsiniz, ancak Ne zaman **oluşturuldu? değeri** her zaman kullanılır. Düzenlenen iletilerde, önceden düzenlenmiş bu iletinin ne zaman oluşturuldığını belirlemek için özgün iletinin bir kopyası özgün zaman damgasıyla kaydedilir ve düzenlenmiş iletide daha yeni bir zaman damgası yer alır.
-
-- Kanal iletileri **konumu** için **Teams'i** seçerek, Microsoft 365 ekip olmayan diğer grupları da görebilirler. Bu grupları seçmeyin.
 
 - Sohbet konumu **için** Düzenle'Teams, konukları ve posta kutusu olmayan kullanıcıları görebilirler. Bekletme ilkeleri bu kullanıcılar için tasarlanmamalıdır, bu nedenle onları seçmemelisiniz.
 

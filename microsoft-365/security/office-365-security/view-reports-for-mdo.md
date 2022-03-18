@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 47f957594815029c9590242c885ebd88485a9668
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 3fb48e432d20067f3c6ca1913349152154c57e81
+ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021687"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63557879"
 ---
 # <a name="view-defender-for-office-365-reports-in-the-microsoft-365-defender-portal"></a>yeni portalda Office 365 raporları için Defender'Microsoft 365 Defender görüntüleme
 
@@ -141,21 +141,28 @@ URL koruma raporu **sayfasındaki kullanılabilir** görünümler aşağıdaki b
 
 Verileri **URL'ye göre görüntüle tıklama** koruması eylem görünümü, kuruluşta kullanıcılar tarafından yapılan URL tıklamalarının sayısını ve şu tıklatmaların sonuçlarını gösterir:
 
-- **İzin** verildi: Kullanıcının URL'ye girmesine izin verili.
-- **Engellendi**: Kullanıcının URL'ye gezinmesi engellendi.
-- **Engellenmiş ve tıklandı**: Kullanıcı URL'ye gezinmeye devam etmek için seçti.
-- **Tarama sırasında tıkladı**: Kullanıcı tarama tamamlandıktan önce bağlantıya tıkladı.
+- **İzin verildi**: İzin verilen tıklamalar.
+- **Kiracı yöneticisi tarafından izin verildi**: Bağlantılar ilkelerde izin Kasa tıklamalar.
+- **Engellendi**: Engellendi'ye tıklayın.
+- **Kiracı yöneticisi tarafından engellendi**: Bu bağlantılar ilkelerde Kasa.
+- **Engellenmiş ve tıklanma tarihi**: Kullanıcıların engellenen URL'ye tıklaması için engellenen tıklamalar.
+- **Kiracı yöneticisi tarafından engellenmiş ve şu şekilde** tıklandı: Yönetici bağlantıyı engelledi, ancak kullanıcı bağlantıyı tıkladı.
+- **Tarama sırasında tıklayma**: Kullanıcıların URL'ye kadar bekleyen tarama sayfasında tıklaymalarını sağlar.
+- **Bekleyen tarama**: Tarama kararını bekleyen URL'lere tıklama.
 
 Tıklar, kullanıcının kötü amaçlı web sitesine yönelik engelleme sayfasına tıklamış olduğunu gösterir (yöneticiler Kasa Bağlantıları ilkelerde tıklamayı devre dışı bırakabilirsiniz).
 
 **Filtreler'e** tıklarsanız, görüntülenen açılır listede aşağıdaki değerlerden birini veya birden fazlasını seçerek raporu ve ayrıntılar tablosunda değişiklik yapabilirsiniz:
 
 - **Tarih (UTC)**: **Başlangıç tarihi** ve **Bitiş tarihi**
-- **Algılama**:
+- **Eylem**:
   - **İzin verildi**
   - **Engellendi**
+  - **Kiracı yöneticisi tarafından izin verildi**
   - **Engellendi ve boyunca tıklandı**
+  - **Kiracı yöneticisi tarafından engellenmiş ve**
   - **Tarama sırasında tıklatma**
+  - **Bekleyen tarama**
 - **Etki** alanları: Rapor sonuçlarında listelenen URL etki alanları.
 - **Alıcılar**
 
@@ -178,13 +185,8 @@ Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-crea
 Verileri **URL'ye göre görüntüle'ye tıklarken uygulama** görünümü, Veri Bağlantılarını destekleyen uygulamaların URL Kasa gösterir:
 
 - **E-posta istemcisi**
-- **PowerPoint**
-- **Word**
-- **Excel**
-- **OneNote**
-- **Visio**
+- **Office belgeyi ekleme**
 - **Teams**
-- **Diğer**
 
 **Filtreler'e** tıklarsanız, görüntülenen açılır listede aşağıdaki değerlerden birini veya birden fazlasını seçerek raporu ve ayrıntılar tablosunda değişiklik yapabilirsiniz:
 

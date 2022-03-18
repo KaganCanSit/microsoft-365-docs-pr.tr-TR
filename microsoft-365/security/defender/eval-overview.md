@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 5c0ef6ce393f7c79ee6fca9b591d99c46d864a52
-ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
+ms.openlocfilehash: 2502a4781e9844fca8de3113d64ee1836efddabd
+ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63504537"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63557901"
 ---
 # <a name="evaluate-and-pilot-microsoft-365-defender"></a>Değerlendirme ve pilot Microsoft 365 Defender
 
@@ -34,7 +34,7 @@ ms.locfileid: "63504537"
 
 - Microsoft 365 Defender
 
-# <a name="how-this-article-series-works"></a>Bu makale serisi nasıl çalışır?
+## <a name="how-this-article-series-works"></a>Bu makale serisi nasıl çalışır?
 
 Bu makale dizisi, deneme XDR ortamını *, sona* doğru ayarlama işleminin tamamına adım atacak şekilde tasarlanmıştır; böylece, Microsoft 365 Defender'in özelliklerini ve özelliklerini değerlendirerek, hatta hazır olduğunda ve hazırsanız değerlendirme ortamını doğrudan üretime yükseltebilirsiniz.
 
@@ -42,10 +42,10 @@ XDR'i ilk kez düşünüyorsanız, çözümün ne kadar kapsamlı olduğunu ilk 
 
 - [Ortamı oluşturma](eval-create-eval-environment.md)
 - Bu Microsoft XDR teknolojisinin her bir teknolojisini ayarlama veya öğrenme
-    - [Kimlik için Microsoft Defender](eval-defender-identity-overview.md)
-    - [Office için Microsoft Defender](eval-defender-office-365-overview.md)
-    - [Uç Nokta için Microsoft Defender](eval-defender-endpoint-overview.md)
-    - [Bulut Uygulamaları için Microsoft Defender](eval-defender-mcas-overview.md)
+  - [Kimlik için Microsoft Defender](eval-defender-identity-overview.md)
+  - [Office için Microsoft Defender](eval-defender-office-365-overview.md)
+  - [Uç Nokta için Microsoft Defender](eval-defender-endpoint-overview.md)
+  - [Bulut Uygulamaları için Microsoft Defender](eval-defender-mcas-overview.md)
 - [Bu XDR kullanarak araştırma ve yanıtlama](eval-defender-investigate-respond.md)
 - [Deneme ortamını üretim ortamına tanıtma](eval-defender-promote-to-production.md)
 
@@ -77,17 +77,17 @@ Bu çizimde bir saldırı yapılıyor. Kimlik avı e-postası, e-posta ekini far
 
 ### <a name="microsoft-365-defender-components-secure-devices-identity-data-and-applications"></a>Microsoft 365 Defender, kimliği, verileri ve uygulamaları güvenlik altına almak için bu bileşenleri kullanın
 
-Microsoft 365 Defender, birlikte çalışan bu güvenlik teknolojilerden ileri türetir. XDR ve diğer bileşenlerin özelliklerinden yararlanabilmek için bu bileşenlerin Microsoft 365 Defender. Bir veya iki kullanımıyla da kazançlar ve verimlilik elde ettiysiniz. 
+Microsoft 365 Defender, birlikte çalışan bu güvenlik teknolojilerden ileri türetir. XDR ve diğer bileşenlerin özelliklerinden yararlanabilmek için bu bileşenlerin Microsoft 365 Defender. Bir veya iki kullanımıyla da kazançlar ve verimlilik elde ettiysiniz.
 
-|Bileşen  |Açıklama  |Başvuru malzemesi  |
-|---------|---------|---------|
-|Kimlik için Microsoft Defender     |      Identity için Microsoft Defender, Active Directory sinyallerini kullanarak gelişmiş tehditleri, güvenliği tehlikeye atılmış kimlikleri ve kuruluşa yönlendirilen kötü amaçlı insider eylemlerini tanımlar, algılar ve araştırr.     |     [Kimlik için Microsoft Defender nedir?](/defender-for-identity/what-is)   |
-|Exchange Online Protection     |      Exchange Online Protection, bulut tabanlı yerel SMTP geçişi ve istenmeyen posta ve kötü amaçlı yazılımlara karşı korunmanıza yardımcı olan filtreleme hizmetidir.      |   [Exchange Online Protection (EOP) genel bakış - Office 365](../office-365-security/overview.md)     |
-|Office 365 için Microsoft Defender     |     Microsoft Defender For Office 365, e-posta iletileri, bağlantılar (URL'ler) ve işbirliği araçları tarafından ortaya atacak kötü amaçlı tehditlere karşı organizasyonlarınızı korur.      |    [Office 365 için Microsoft Defender - Office 365](../office-365-security/overview.md)    |
-|Uç Nokta için Microsoft Defender     |     Uç Nokta için Microsoft Defender cihaz koruması, ihlal sonrası algılama, otomatik soruşturma ve önerilen yanıt için birleşik bir platformdur.      |   [Uç Nokta için Microsoft Defender - Windows güvenlik](../defender-endpoint/microsoft-defender-endpoint.md)    |
-|Bulut Uygulamaları için Microsoft Defender     |      Bulut Uygulamaları için Microsoft Defender, bulut uygulamalarınız için derin görünürlük, güçlü veri denetimleri ve gelişmiş tehdit koruması sağlayan kapsamlı bir cross-SaaS çözümüdür.       |    [Bulut Uygulamaları için Defender nedir?](/cloud-app-security/what-is-cloud-app-security)    |
+|Bileşen|Açıklama|Başvuru malzemesi|
+|---|---|---|
+|Kimlik için Microsoft Defender|Identity için Microsoft Defender, Active Directory sinyallerini kullanarak gelişmiş tehditleri, güvenliği tehlikeye atılmış kimlikleri ve kuruluşa yönlendirilen kötü amaçlı insider eylemlerini tanımlar, algılar ve araştırr.|[Kimlik için Microsoft Defender nedir?](/defender-for-identity/what-is)|
+|Exchange Online Protection|Exchange Online Protection, bulut tabanlı yerel SMTP geçişi ve istenmeyen posta ve kötü amaçlı yazılımlara karşı korunmanıza yardımcı olan filtreleme hizmetidir.|[Exchange Online Protection (EOP) genel bakış - Office 365](../office-365-security/overview.md)|
+|Office 365 için Microsoft Defender|Microsoft Defender For Office 365, e-posta iletileri, bağlantılar (URL'ler) ve işbirliği araçları tarafından ortaya atacak kötü amaçlı tehditlere karşı organizasyonlarınızı korur.|[Office 365 için Microsoft Defender - Office 365](../office-365-security/overview.md)|
+|Uç Nokta için Microsoft Defender|Uç Nokta için Microsoft Defender cihaz koruması, ihlal sonrası algılama, otomatik soruşturma ve önerilen yanıt için birleşik bir platformdur.|[Uç Nokta için Microsoft Defender - Windows güvenlik](../defender-endpoint/microsoft-defender-endpoint.md)|
+|Bulut Uygulamaları için Microsoft Defender|Bulut Uygulamaları için Microsoft Defender, bulut uygulamalarınız için derin görünürlük, güçlü veri denetimleri ve gelişmiş tehdit koruması sağlayan kapsamlı bir cross-SaaS çözümüdür.|[Bulut Uygulamaları için Defender nedir?](/cloud-app-security/what-is-cloud-app-security)|
 |Azure AD Identity Protection|Azure AD Kimlik Koruması, milyar oturum açma girişimlerinden risk verilerini değerlendirir ve ortamınıza her oturum açmanın riskini değerlendirmek için bu verileri kullanır. Bu veriler, Koşullu Erişim ilkelerinin nasıl yapılandırıldıklarına bağlı olarak, Azure AD tarafından hesap erişimine izin vermek veya engellemek için kullanılır. Azure AD Identity Protection, azure addan ayrı Microsoft 365 Defender. Bu, yeni e-Azure Active Directory Premium P2.|[Kimlik Koruması nedir?](/azure/active-directory/identity-protection/overview-identity-protection)|
-| | | |
+||||
 
 ## <a name="microsoft-365-defender-architecture"></a>Microsoft 365 Defender mimarisi
 
@@ -102,7 +102,7 @@ Bu şekilde:
 - Identity için Microsoft Defender, Active Directory Federasyon Hizmetleri (AD FS) ve şirket içi Active Directory Etki Alanı Hizmetleri'ne (AD DS) çalışan sunuculardan sinyal toplar. Karma kimlik ortamınızı korumak için bu sinyalleri kullanır ve bu da şirket içi ortamda daha sonra iş istasyonlarında güvenliği tehlikeye atılmış hesapları kullanan korsanlara karşı koruma sağlar.
 - Uç Nokta için Microsoft Defender, kurum tarafından kullanılan cihazlardan sinyal toplar ve bu cihazları korur.
 - Bulut Uygulamaları için Microsoft Defender, kurumuz tarafından bulut uygulamalarının kullanımından gelen sinyalleri toplar ve hem tahmin hem de işaretsiz bulut uygulamaları dahil, ortamınız ile bu uygulamalar arasında akan verileri korur.
-- Azure AD Kimlik Koruması, milyar oturum açma girişimlerinden risk verilerini değerlendirir ve ortamınıza her oturum açmanın riskini değerlendirmek için bu verileri kullanır. Bu veriler, Koşullu Erişim ilkelerinin nasıl yapılandırıldıklarına bağlı olarak, Azure AD tarafından hesap erişimine izin vermek veya engellemek için kullanılır. Azure AD Identity Protection, azure addan ayrı Microsoft 365 Defender. Bu, yeni e-Azure Active Directory Premium P2.  
+- Azure AD Kimlik Koruması, milyar oturum açma girişimlerinden risk verilerini değerlendirir ve ortamınıza her oturum açmanın riskini değerlendirmek için bu verileri kullanır. Bu veriler, Koşullu Erişim ilkelerinin nasıl yapılandırıldıklarına bağlı olarak, Azure AD tarafından hesap erişimine izin vermek veya engellemek için kullanılır. Azure AD Identity Protection, azure addan ayrı Microsoft 365 Defender. Bu, yeni e-Azure Active Directory Premium P2.
 
 ## <a name="microsoft-siem-and-soar-can-use-data-from-microsoft-365-defender"></a>Microsoft SIEM ve SOAR, veri kaynağından Microsoft 365 Defender
 
@@ -120,16 +120,16 @@ Microsoft, aşağıdakiler için Microsoft 365 bileşenlerini etkinleştirmenizi
 
 Aşağıdaki tabloda bu çizim açık gösterilmiştir.
 
-|      |Adım  |Açıklama  |
-|------|---------|---------|
-|1     | [Değerlendirme ortamı oluşturma](eval-create-eval-environment.md)       |Bu adım, deneme sürümü lisansına sahip Microsoft 365 Defender.         |
-|2     | [Kimlik için Defender'ı etkinleştirme](eval-defender-identity-overview.md)        | Mimari gereksinimlerini gözden geçirmek, değerlendirmeyi etkinleştirmek ve farklı saldırı türlerini belirlemek ve düzeltmeye yönelik öğreticileri gözden geçirmek.   |
-|3     | [Windows için Defender'ı Office 365 ](eval-defender-office-365-overview.md)       | Mimari gereksinimlerini karşılarsınız, değerlendirmeyi etkinleştirin ve ardından pilot ortamı oluşturun. Bu bileşen, Exchange Online Protection özellikleri içerir ve dolayısıyla ikisini de burada *değerlendirirsiniz*.      |
-|4     | [Uç Nokta için Defender'ı Etkinleştir ](eval-defender-endpoint-overview.md)       | Mimari gereksinimlerini karşılarsınız, değerlendirmeyi etkinleştirin ve ardından pilot ortamı oluşturun.         |
-|5     | [Bulut Uygulamaları için Microsoft Defender'ı etkinleştirme](eval-defender-mcas-overview.md)        |  Mimari gereksinimlerini karşılarsınız, değerlendirmeyi etkinleştirin ve ardından pilot ortamı oluşturun.        |
-|6     | [Tehditleri araştırma ve yanıtlama](eval-defender-investigate-respond.md)        |   Bir saldırının benzetimini yapmak ve olay yanıtı özelliklerini kullanmaya başlamak.      |
-|7     | [Denemeyi üretime yükseltin](eval-defender-promote-to-production.md)        | Yeni Microsoft 365 tek üretime yükseltin.        |
-| | | |
+|Adım|Bağlantı|Açıklama|
+|---|---|---|
+|1|[Değerlendirme ortamı oluşturma](eval-create-eval-environment.md)|Bu adım, deneme sürümü lisansına sahip Microsoft 365 Defender.|
+|2|[Kimlik için Defender'ı etkinleştirme](eval-defender-identity-overview.md)|Mimari gereksinimlerini gözden geçirmek, değerlendirmeyi etkinleştirmek ve farklı saldırı türlerini belirlemek ve düzeltmeye yönelik öğreticileri gözden geçirmek.|
+|3|[Windows için Defender'ı Office 365](eval-defender-office-365-overview.md)|Mimari gereksinimlerini karşılarsınız, değerlendirmeyi etkinleştirin ve ardından pilot ortamı oluşturun. Bu bileşen, Exchange Online Protection özellikleri içerir ve dolayısıyla ikisini de burada *değerlendirirsiniz*.|
+|4|[Uç Nokta için Defender'ı Etkinleştir](eval-defender-endpoint-overview.md)|Mimari gereksinimlerini karşılarsınız, değerlendirmeyi etkinleştirin ve ardından pilot ortamı oluşturun.|
+|5|[Bulut Uygulamaları için Microsoft Defender'ı etkinleştirme](eval-defender-mcas-overview.md)|Mimari gereksinimlerini karşılarsınız, değerlendirmeyi etkinleştirin ve ardından pilot ortamı oluşturun.|
+|6|[Tehditleri araştırma ve yanıtlama](eval-defender-investigate-respond.md)|Bir saldırının benzetimini yapmak ve olay yanıtı özelliklerini kullanmaya başlamak.|
+|7|[Denemeyi üretime yükseltin](eval-defender-promote-to-production.md)|Yeni Microsoft 365 tek üretime yükseltin.|
+||||
 
 Bu, genellikle özellikleri dağıtmak ve yapılandırmak için ne kadar çaba gerektirmektedir? temel alarak yeteneklerin değerinden hızlı bir şekilde yararlanabilmek için tasarlanmış ve yaygın olarak önerilen bir sıradır. Örneğin, Office 365 için Defender, Uç nokta için Defender'da cihazları kaydetmek için gerekenden daha kısa sürede ya yapılandırabilirsiniz. Kuşkusuz, iş ihtiyaçlarını karşılayacak bileşenleri önceliklendirmeli ve bunları farklı bir sırada etkinleştirebilirsiniz.
 

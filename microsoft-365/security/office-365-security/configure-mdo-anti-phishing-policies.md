@@ -16,12 +16,12 @@ ms.custom: ''
 description: Yöneticiler, kimlik avı için Microsoft Defender'a sahip kuruluşlarda kullanılabilen gelişmiş kimlik avı ilkelerinin nasıl oluşturulsa, değiştirilebilir ve silin Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7f72d2a8f7b881216a283d920bce9b4903407cf6
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 5faf4533110fe5abad8606c9c859f82549dc2fce
+ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021693"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "63557929"
 ---
 # <a name="configure-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Kimlik avıyla mücadele ilkelerini Microsoft Defender'da Office 365
 
@@ -182,6 +182,9 @@ Microsoft 365 Defender portalında özel bir kimlik avı önleme ilkesi oluştur
      En az bir girdi seçtikten sonra **, seçili** girdileri kaldırmak için kullanabileceğiniz Sil simgesi görüntülenir.
 
      Bitirdikten sonra Bitti'ye **tıklayın**.
+
+     > [!NOTE]
+     > En fazla gönderen ve etki alanı girdisi sayısı 1024'tir.
 
    - **Posta kutusu zekası** etkinleştirme: Varsayılan değer açık (seçili) ve bunu açık bırakmanızı öneririz. Kapatmak için onay kutusunu temizleyin.
 
