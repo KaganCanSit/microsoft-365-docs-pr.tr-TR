@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 description: Donanım tabanlı yalıtımda en yeni özellikleri elde edin. Açıkları ve kötü amaçlı bağlantılar gibi geçerli ve ortaya çıkan saldırıların çalışan üretkenliğini ve kurumsal güvenliği kesintiye karşı engellemesini önle.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d1dfe0bf7082d05fa534a34cb0dd55d9227fca1a
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 8a483c6430721e0540a7012dabfcbd4480fd7ad8
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015188"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63675382"
 ---
 # <a name="application-guard-for-office-for-admins"></a>Yöneticiler için Office Application Guard
 
@@ -138,7 +138,6 @@ Office, güvenlik özellikleri için Application Guard'ın özelliklerini yapıl
 |Daha fazla bilgi için Application Guard'da açılan belgeler için kamera ve mikrofon Office|Bu ilkenin etkinleştirilmesi, Office için Application Guard'ın içinde kameraya ve mikrofona erişimi Office.|
 |Belgeler için Application Guard'da açılan belgelerden yazdırmayı Office|Bu ilkenin etkinleştirilmesi, kullanıcının bu yazıcılar için Application Guard'da açılan bir dosyadan yazdır olduğu yazıcıları Office. Örneğin, kullanıcıları yalnızca PDF'ye yazdırılacak şekilde kısıtlamak için bu ilkeyi kullanabilirsiniz.|
 |Kullanıcıların dosyalarda Uygulama Koruması'Office kaldırmasını engelleme|Bu ilkenin etkinleştirilmesi, Application Guard'ı Office koruması için devre dışı bırakma veya Office için Application Guard dışında bir dosya açma seçeneğini (Office. <p> **Not:** Kullanıcılar, web'de işaret özelliğini dosyadan el ile kaldırarak veya bir belgeyi Güvenilir konuma kaldırarak bu ilkeyi atlarlar.|
-|
 
 > [!NOTE]
 > Aşağıdaki ilkeler, kullanıcının oturumlarını açmasını ve yürürlüğe almak için Windows açmasını gerektirir:

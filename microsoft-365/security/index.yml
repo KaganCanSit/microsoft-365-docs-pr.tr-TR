@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Microsoft 365 belgeleri
-summary: Microsoft 365 Defender portalı, birden çok güvenlik teknolojilerini tek bir kapsamlı yönetim konsolunda birleştir ve kurumunuzu korumaya yardımcı olacak geliştirmeler sunar.
+title: Microsoft 365 güvenlik belgeleri
+summary: Microsoft 365 Defender portal, birden çok güvenlik teknolojilerini tek bir kapsamlı yönetim konsolunda birleştirir ve kurumunuzu korumaya yardımcı olacak geliştirmeler sunar.
 metadata:
-  title: Microsoft 365 belgeleri
-  description: 'Uç nokta için Microsoft Defender hakkında bilgi: Uç noktaları siber tehditlerden nasıl korur ve güvenlik işlem ekiplerine tehditleri düzeltme özellikleri sağlar.'
+  title: Microsoft 365 güvenlik belgeleri
+  description: Uç nokta için Microsoft Defender’ın, uç noktaları siber tehditlerden nasıl koruduğu ve güvenlik işlem ekiplerine tehditleri düzeltme özelliklerini nasıl sağladığı hakkında bilgi edinin.
   services: office-365-security-compliance
   ms.prod: m365-security
   ms.technology: m365d
@@ -15,7 +15,7 @@ metadata:
   ms.localizationpriority: high
   ms.openlocfilehash: 199f3005de41d8b97b6ae110740d687d5d4692e9
   ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 11/19/2021
   ms.locfileid: "62970599"
@@ -24,21 +24,21 @@ landingContent:
   linkLists:
   - linkListType: overview
     links:
-    - text: Giriş Microsoft 365 Defender
+    - text: Microsoft 365 Defender'a giriş
       url: defender/microsoft-365-defender.md
-- title: Ücretsiz denemelerle başlama
+- title: Ücretsiz denemelerle başlayın
   linkLists:
   - linkListType: get-started
     links:
-    - text: Değerlendirme Microsoft 365 Defender
+    - text: Microsoft 365 Defender’ı değerlendirin
       url: defender/eval-overview.md
-    - text: Microsoft 365 Defender pilot playbook
+    - text: Microsoft 365 Defender pilot akış planı
       url: defender/eval-overview.md
-- title: Uzaktan iş gücünüzün güvenliğini sağlama
+- title: Uzak iş gücünüzün güvenliğini sağlayın
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Uzaktan iş gücünüzün güvenliğini sağlama
+    - text: Uzak iş gücünüzün güvenliğini sağlayın
       url: /enterprise-mobility-security/remote-work/
 - title: Kimlik için Microsoft Defender
   linkLists:
@@ -54,7 +54,7 @@ landingContent:
     links:
     - text: Office 365 için Defender nedir?
       url: office-365-security/defender-for-office-365.md
-    - text: Office 365 hizmet açıklaması için Defender
+    - text: Office 365 için Defender hizmet açıklaması
       url: /office365/servicedescriptions/office-365-advanced-threat-protection-service-description
 - title: Uç Nokta için Microsoft Defender
   linkLists:
@@ -78,13 +78,13 @@ landingContent:
     links:
     - text: Bulut Uygulamaları için Microsoft Defender nedir?
       url: /cloud-app-security/what-is-cloud-app-security
-    - text: Bulut Uygulamaları için Microsoft Defender ile çalışmaya başlama
+    - text: Bulut Uygulamaları için Microsoft Defender’ı kullanmaya başlayın
       url: /cloud-app-security/getting-started-with-cloud-app-security
 - title: Güvenlik yönetimi
   linkLists:
   - linkListType: overview
     links:
-    - text: Skoru güvenli hale
+    - text: Güvenlik puanı
       url: defender/microsoft-secure-score.md
 - title: Microsoft Sentinel
   linkLists:

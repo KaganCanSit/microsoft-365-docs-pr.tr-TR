@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: İş abonelikleri ve fatura belgeleri
-summary: Microsoft'la iş aboneliklerini satın almayı ve yönetmeyi, lisans yönetim görevlerini gerçekleştirmeyi, iş hesaplarınız için faturalandırma ve ödemeleri yönetmeyi öğrenin.
+title: İş abonelikleri ve faturalama belgeleri
+summary: Microsoft ile iş abonelikleri satın almayı ve yönetmeyi, lisans yönetimi görevlerini gerçekleştirmeyi ve iş hesaplarınız için faturalama ve ödemeleri yönetmeyi öğrenin.
 metadata:
-  title: İş abonelikleri ve fatura belgeleri
-  description: Microsoft'la iş aboneliklerini satın almayı ve yönetmeyi, lisans yönetim görevlerini gerçekleştirmeyi, iş hesaplarınız için faturalandırma ve ödemeleri yönetmeyi öğrenin.
+  title: İş abonelikleri ve faturalama belgeleri
+  description: Microsoft ile iş abonelikleri satın almayı ve yönetmeyi, lisans yönetimi görevlerini gerçekleştirmeyi ve iş hesaplarınız için faturalama ve ödemeleri yönetmeyi öğrenin.
   ms.service: o365-administration
   ms.topic: landing-page
   ms.collection:
@@ -19,7 +19,7 @@ metadata:
   search.appverid: MET150
   ms.openlocfilehash: 30e99fcf7b984c2af17cbc7902bc4ff0fad6c3a6
   ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 10/06/2021
   ms.locfileid: "62970595"
@@ -30,7 +30,7 @@ landingContent:
     links:
     - text: Fatura ekstrenizi veya faturanızı görüntüleme
       url: billing-and-payments/view-your-bill-or-invoice.md
-    - text: Faturanızı veya faturanızı anlama
+    - text: Fatura ekstrenizi veya faturanızı anlama
       url: billing-and-payments/understand-your-invoice2.md
     - text: Aboneliğinizi ödeme
       url: billing-and-payments/pay-for-your-subscription.md
@@ -50,7 +50,7 @@ landingContent:
       url: ../admin/manage/remove-licenses-from-users.md
     - text: Abonelikleri ve lisansları anlama
       url: licenses/subscriptions-and-licenses.md
-    - text: Kalıcı yazılımı ve ürün lisans anahtarını indir
+    - text: Kalıcı yazılım ve ürün lisans anahtarını indirme
       url: ../admin/setup/download-software-licenses-csp.md
 - title: Yükseltme, yenileme veya iptal etme
   linkLists:
@@ -64,7 +64,7 @@ landingContent:
       url: subscriptions/reactivate-your-subscription.md
     - text: Aboneliğinizi iptal etme
       url: subscriptions/cancel-your-subscription.md
-    - text: Hesabı kapatma
+    - text: Hesabınızı kapatma
       url: close-your-account.md
 - title: Deneyin veya satın alın
   linkLists:
@@ -74,7 +74,7 @@ landingContent:
       url: try-or-buy-microsoft-365.md
     - text: Ücretsiz deneme sürümünüzden abonelik satın alma
       url: ./try-or-buy-microsoft-365.md#buy-a-subscription-from-your-free-trial
-    - text: Deneme sürenizi uzat
+    - text: Deneme sürenizi uzatma
       url: extend-your-trial.md#extend-your-trial
     - text: Depolama alanı ekleme
       url: add-storage-space.md

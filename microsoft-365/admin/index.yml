@@ -1,10 +1,10 @@
 ### YamlMime:Hub
-title: Microsoft 365 yönetim merkezi yardım
-summary: Kaynaklarda çalışmaya Microsoft 365 yönetim merkezi.
+title: Microsoft 365 yönetim merkezi yardımı
+summary: Microsoft 365 yönetim merkezinde çalışmak için kaynakları keşfedin.
 brand: m365
 metadata:
-  title: Microsoft 365 yönetim merkezi yardım
-  description: E-posta Office 365 Microsoft 365 ayarlama ve yönetme Microsoft 365 yönetim merkezi.
+  title: Microsoft 365 yönetim merkezi yardımı
+  description: Microsoft 365 yönetim merkezinde Office 365 ve Microsoft 365'i kurun ve yönetin.
   ms.service: O365-administration
   ms.prod: microsoft-365-business
   ms.topic: hub-page
@@ -18,13 +18,13 @@ metadata:
   ms.collection: Adm_TOC
 highlightedContent:
   items:
-    - title: Office 365 şimdi Microsoft 365!
+    - title: Office 365 artık Microsoft 365!
       itemType: whats-new
       url: new-subscription-names.md
-    - title: Yeni gelen Microsoft 365 yönetim merkezi!
+    - title: Microsoft 365 yönetim merkezindeki yenilikler!
       itemType: whats-new
       url: whats-new-in-preview.md
-    - title: Tüm değişiklikleri Microsoft 365 kalma
+    - title: Microsoft 365 değişikliklerinden haberdar olun
       itemType: how-to-guide
       url: manage/stay-on-top-of-updates.md
 productDirectory:
@@ -33,57 +33,57 @@ productDirectory:
   items:
     - title: Bu ay en çok görüntülenen 20 yönetici yardımı makalesi
       imageSrc: 'https://docs.microsoft.com/office/media/icons/education-tutorial-blue.svg'
-      summary: Diğer yöneticiler tarafından en popüler olan yardım makalelerini okuyun.
+      summary: Diğer yöneticiler arasında en popüler olan yardım makalelerine göz atın.
       url: top-m365-admin-articles.yml
     - title: Yönetici eğitimi video kitaplığı
       imageSrc: 'https://docs.microsoft.com/office/media/icons/video-play.svg'
-      summary: Kısa videolarla işletmeniz için e-Microsoft 365 ayarlamayı ve yönetmeyi öğrenin.
+      summary: Kısa videolarla işletmeniz için Microsoft 365'i nasıl kuracağınızı ve yöneteceğinizi öğrenin.
       url: admin-video-library.yml
     - title: Kullanmaya başlayın
       imageSrc: 'https://docs.microsoft.com/office/media/icons/sign-up-blue.svg'
-      summary: Oturum açma ve oturum açma Microsoft 365.
+      summary: Microsoft 365’e kaydolma ve ayarlama.
       url: admin-overview/sign-up-for-office-365.md
     - title: Verileri geçirme
       imageSrc: 'https://docs.microsoft.com/office/media/icons/migration-blue.svg'
-      summary: Verilerinizi başka bir hizmetten başka bir hizmete Microsoft 365.
+      summary: Verilerinizi başka bir hizmetten Microsoft 365'e taşıyın.
       url: setup/migrate-email-and-contacts-admin.md
     - title: Uygulamaları yükleme
       imageSrc: 'https://docs.microsoft.com/office/media/icons/deploy-blue.svg'
-      summary: Diğer Office Microsoft uygulamalarını yükleyin.
+      summary: Office'i ve diğer Microsoft uygulamalarını yükleyin.
       url: setup/install-applications.md
-    - title: Kullanıcıları eğitin
+    - title: Kullanıcıları eğitme
       imageSrc: 'https://docs.microsoft.com/office/media/icons/education-tutorial-blue.svg'
-      summary: Organizasyon'daki kullanıcıların dosyaları depolamayı ve paylaşmayı ve bu uygulamaları kullanmayı Office yardımcı olun.
+      summary: Kuruluşunuzdaki kullanıcıların dosyaları nasıl depolayacaklarını ve paylaşacaklarını ve Office uygulamalarını nasıl kullanacaklarını öğrenmelerine yardımcı olun.
       url: 'https://support.microsoft.com/training'
 additionalContent:
   sections:
     - title: Yönetme
-      summary: 'Aboneliğinizi, hizmetlerinizi ve kullanıcılarınızı yönetin, işlerinizi güvenlik altına alın ve sorun giderme yardımı alın.'
+      summary: 'Aboneliğinizi, hizmetlerinizi ve kullanıcılarınızı yönetin, işinizi güvenceye alın ve sorun giderme konusunda yardım alın.'
       items:
-        - title: Genel bakış Microsoft 365 yönetim merkezi
-          summary: 'Yönetici rolleri, değişiklikleri takip etme ve aboneliğinizi özelleştirme hakkında bilgi alın.'
+        - title: Microsoft 365 yönetim merkezine genel bakış
+          summary: 'Yönetici rolleri, değişiklikleri takip etme ve aboneliğinizi özelleştirme hakkında bilgi edinin.'
           url: admin-overview/about-the-admin-center.md
         - title: Kullanıcılar ve gruplar
-          summary: 'Parolaları yönetin, kullanıcı ekleyin ve kaldırın, grupları ayarlayın ve yönetin, konuk erişimini yönetin ve kullanıcı lisansları atsın.'
+          summary: 'Parolaları yönetin, kullanıcı ekleyip kaldırın, grupları kurun ve yönetin, konuk erişimini yönetin ve kullanıcı lisansları atayın.'
           url: add-users/add-users.md
         - title: E-posta ve takvimler
           summary: 'E-posta ayarlarını, dağıtım gruplarını ve güvenlik ayarlarını yönetin ve paylaşılan posta kutularını ayarlayın.'
           url: email/office-365-user-email-settings.md
         - title: Etki alanları
-          summary: 'Etki alanları, etki alanlarını ayarlama ve yönetme ve DNS kayıtlarını güncelleştirme hakkında bilgi öğrenin.'
+          summary: 'Etki alanları hakkında bilgi edinin, etki alanı adlarını kurun ve yönetin ve DNS kayıtlarını güncelleştirin.'
           url: setup/add-domain.md
         - title: Verileriniz ve hizmetiniz
-          summary: 'Hizmetinizin durumunu takip edin, verileri desteklenin, eklentileri yükleyin ve en son uygulamalara yükseltin.'
+          summary: 'Hizmetinizin durumunu izleyin, verileri yedekleyin, eklentileri yükleyin ve en son uygulamalara yükseltin.'
           url: activity-reports/activity-reports.md
         - title: Abonelikler ve faturalama
-          summary: 'Faturaları, abonelikleri ve ürün lisanslarını yönetin, ödeme yöntemlerini güncelleştirin, ek hizmet ve depolama alanı satın alın.'
+          summary: 'Faturaları, abonelikleri ve ürün lisanslarını yönetin, ödeme yöntemlerini güncelleştirin ve ek hizmetler ve depolama satın alın.'
           url: ../commerce/index.yml
-        - title: Organizasyon güvenliğinizi sağlama
-          summary: Çok faktörlü kimlik doğrulamasını (MFA) ayarlama gibi organizasyon güvenliği sağlamanın en iyi yollarını öğrenin ve ayrıca Microsoft Secure Score ve GDPR hakkında bilgi de öğrenin.
+        - title: Kuruluşunuzun güvenliğini sağlayın
+          summary: Çok faktörlü kimlik doğrulama (MFA) kurmak gibi kuruluşunuzun güvenliğini sağlamanın en iyi yolları hakkında bilgi edinin ve ayrıca Microsoft Güvenli Puanı ve GDPR hakkında bilgi edinin.
           url: security-and-compliance/secure-your-business-data.md
         - title: Müşterilerle çalışma
-          summary: Belgeleri paylaşın ve işbirliği Teams toplantı yapmak için belge paylaşımını kullanın.
+          summary: Belgeleri paylaşın ve işbirliği yapmak ve toplantı yapmak için Teams'i kullanın.
           url: manage/share-calendars-with-external-users.md
         - title: Sorun giderme
-          summary: Ürün veya hizmetlerinize yönelik sorunları gidermenize ve gidermenize yardımcı olacak Office erişin.
+          summary: Office ürünleriniz veya hizmetlerinizle ilgili sorunları gidermenize ve gidermenize yardımcı olacak kaynaklara erişin.
           url: 'https://docs.microsoft.com/office/troubleshoot/'

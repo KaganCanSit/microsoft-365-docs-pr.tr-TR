@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: Microsoft Yönetilen Masaüstü belgeleri
-summary: Microsoft Yönetilen Masaüstü, kullanıcılara IT profesyonellerinin güvenilmelerini sağlamak için uç nokta yönetimi ve güvenlik izlemelerini bir araya getirir, benzersiz bir ITaaS çözümüdür.
+summary: Microsoft Yönetilen Masaüstü, kullanıcılara BT uzmanlarının güvenebileceği güvenli ve üretken bir cihaz deneyimi sağlayacak şekilde uç nokta yönetimi ve güvenlik izlemeyi birleştiren benzersiz bir ITaaS çözümüdür.
 metadata:
   title: Microsoft Yönetilen Masaüstü belgeleri
-  description: Microsoft Yönetilen Masaüstü, Microsoft tarafından Microsoft 365 Kurumsal bulut tabanlı cihaz yönetimi ve güvenlik izlemesini bir araya getirerek, bilişim ekiplerinizi temel iş ihtiyaçlarına odaklanmaları için serbest bırakabilirsiniz.
+  description: Microsoft Yönetilen Masaüstü, Microsoft 365 Kurumsal, Microsoft tarafından bulut tabanlı cihaz yönetimi ve güvenlik izlemeyi bir araya getirerek BT ​​ekiplerinizin temel iş gereksinimlerine odaklanmasını sağlar.
   keywords: device, app, management
   ms.service: m365-md
   ms.topic: landing-page
@@ -13,7 +13,7 @@ metadata:
   ms.custom: intro-hub-or-landing
   ms.openlocfilehash: 9849b7e290f62c4853bf8796645df7a2041317b5
   ms.sourcegitcommit: a6651b841f111ea2776cab88bf2c80f805fa8e09
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 01/13/2022
   ms.locfileid: "62970617"
@@ -28,7 +28,7 @@ landingContent:
       url: ./service-description/index.md
   - linkListType: get-started
     links:
-    - text: Hazır olun
+    - text: Hazırlanın
       url: get-ready/index.md
     - text: Kullanmaya başlayın
       url: get-started/index.md
@@ -38,29 +38,29 @@ landingContent:
   linkLists:
   - linkListType: learn
     links:
-    - text: '[Blog] İş yeri cihazları yeni "ücretsiz atıştırmalık"'
+    - text: '[Blog] İşyeri cihazları yeni "ücretsiz atıştırmalıklar"'
       url: https://techcommunity.microsoft.com/t5/microsoft-managed-desktop/workplace-devices-are-the-new-free-snacks/ba-p/1675936
-    - text: '[Teknik teknik] Çalışma: Microsoft Yönetilen Masaüstü zamandan ve maliyetden tasarruf sağlar'
+    - text: '[Teknik inceleme] Microsoft Yönetilen Masaüstü, zamandan ve maliyetten tasarruf sağlar'
       url: https://techcommunity.microsoft.com/t5/microsoft-managed-desktop/study-microsoft-managed-desktop-saves-time-and-costs/ba-p/1403408
-    - text: '[Teknik teknik] Microsoft Yönetilen Masaüstü Etkileşimi Artırmaya Yardımcı Olabilir'
+    - text: '[Teknik inceleme] Microsoft Yönetilen Masaüstü Etkileşimi Artırmaya Yardımcı Olabilir'
       url: https://techcommunity.microsoft.com/t5/microsoft-managed-desktop/microsoft-managed-desktop-can-help-boost-engagement/ba-p/1031932
-    - text: "[Teknik teknik] SA Power Networks, gelişmeye devam eden kullanıcı  ihtiyaçlarını karşılamak için Microsoft Yönetilen Masaüstü'nü dağıtıyor"
+    - text: "[Teknik inceleme] SA Power Networks, değişen kullanıcı gereksinimlerini karşılamak için Microsoft Yönetilen Masaüstü'nü dağıtır"
       url: https://customers.microsoft.com/story/832888-sa-power-networks-case-study-energy-microsoft-managed-desktop
-- title: Avantajlar ve önemli özellikler
+- title: Avantajlar ve öne çıkanlar
   linkLists:
   - linkListType: video
     links:
-    - text: Microsoft Yönetilen Masaüstü - IT Yöneticisi deneyimi
+    - text: Microsoft Yönetilen Masaüstü - BT Yöneticisi deneyimi
       url: https://www.youtube.com/watch?v=UQ8VRSysUXw&feature=youtu.be
-    - text: Kuruluşların Microsoft Yönetilen Masaüstü'ne neleri sever?
+    - text: Kuruluşların Microsoft Yönetilen Masaüstü ile ilgili sevdiği şeyler
       url: https://www.microsoft.com/en-us/videoplayer/embed/RE4yjfL
-    - text: Microsoft Yönetilen Masaüstü - Olağanüstü cihaz deneyimleri
+    - text: Microsoft Yönetilen Masaüstü - Harika cihaz deneyimleri
       url: https://www.microsoft.com/en-us/videoplayer/embed/RE41urx?autoplay=false
     - text: Microsoft Yönetilen Masaüstü - Güvenlik işlemleri
       url: https://www.microsoft.com/videoplayer/embed/RE4COuk
-    - text: Microsoft Yönetilen Masaüstü - Değişiklik ve sürüm işlemi
+    - text: Microsoft Yönetilen Masaüstü - Değiştirme ve bırakma işlemi
       url: https://www.microsoft.com/videoplayer/embed/RE4COuk
-    - text: The Shiproom / IGM / Bölüm 29 - Güvenlikle kullanıcı deneyiminin önceliklerini belirleme
+    - text: Shiproom / IGM / Episode 29 - Güvenlikle kullanıcı deneyimini önceliklendirme
       url: https://www.youtube.com/watch?v=im11J9C1MTA&feature=youtu.be
-    - text: The Shiproom / Çoks Banking Group / Episode 25 - Leadership amid rapid transformation
+    - text: The Shiproom / Lloyds Banking Group / Episode 25 - Hızlı dönüşümün ortasında liderlik
       url: https://www.youtube.com/watch?v=B9Gqj66qxNo&feature=youtu.be

@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Microsoft 365 ve mimari merkezi
-summary: Bu çözüm ve mimari merkezi, kurumsal kaynak planlaması ve güvenli ve uyumlu modern işbirliği için tümleşik ve Microsoft 365 çözümleri anlamak, planlamak ve uygulamak için ihtiyacınız olan teknik kılavuzu bir araya getirir.
+title: Microsoft 365 çözüm ve mimari merkezi
+summary: Bu çözüm ve mimari merkezi, kurumsal kaynak planlaması ve güvenli ve uyumlu modern işbirliği için tümleşik Microsoft 365 çözümlerini anlamak, planlamak ve uygulamak için ihtiyaç duyduğunuz teknik klavuzu bir araya getirir.
 metadata:
-  title: Microsoft 365 ve mimari merkezi
-  description: Bu yardım merkezi, IT eğitimi ve organizasyonunıza uygun olan çözüm ve mimariyi tasarlama hakkında bilgi edinmanızı sağlayacaktır.
+  title: Microsoft 365 çözüm ve mimari merkezi
+  description: Bu yardım merkezi, BT eğitimi ve kuruluşunuz için doğru çözüm ve mimarinin nasıl tasarlanacağı hakkında bilgi edinmenizi sağlar.
   ms.service: o365-solutions
   ms.topic: landing-page
   ms.collection:
@@ -16,7 +16,7 @@ metadata:
   ms.localizationpriority: high
   ms.openlocfilehash: 4116d78dd5e231ac0674057f5a183b6f5b5d347c
   ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 02/12/2022
   ms.locfileid: "62970633"
@@ -25,27 +25,27 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Karma çalışma için altyapınızı ayarlama
+    - text: Hibrit çalışma için altyapınızı ayarlayın
       url: empower-people-to-work-remotely.md
-    - text: Güvenlik şifreleri ile güvenli işbirliği Microsoft 365
+    - text: Microsoft 365 ile güvenli işbirliği kurun
       url: setup-secure-collaboration-with-teams.md
     - text: Fidye yazılımı korumasını dağıtın
       url: ransomware-protection-microsoft-365.md
-    - text: Veri gizliliği düzenlemeleri için bilgi korumasını dağıtma
+    - text: Veri gizliliği düzenlemeleri için bilgi korumasını dağıtın
       url: information-protection-deploy.md
-    - text: Microsoft 365 işletmeler ve kampanyalar için yeni bir alan
+    - text: Küçük işletmeler ve kampanyalar için Microsoft 365
       url: ../business-premium/index.md
-- title: Mimari çizimleri ve tasarım ilkeleri
+- title: Mimari çizimler ve tasarım ilkeleri
   linkLists:
   - linkListType: architecture
     links:
     - text: Microsoft bulut mimarisi modelleri
       url: cloud-architecture-models.md
-    - text: Microsoft 365 çizimleri
+    - text: Microsoft 365 üretkenlik çizimleri
       url: productivity-illustrations.md
     - text: Tasarım ilkeleri
       url: design-principles.md
-    - text: Kullanıcılarınız için bilgi görselleri
+    - text: Kullanıcılarınız için bilgi grafikleri
       url: infographics-for-users.md
     - text: Mimari simgeleri ve şablonları
       url: architecture-icons-templates.md
@@ -57,19 +57,19 @@ landingContent:
       url: tenant-management-overview.md
     - text: Eski bir çalışanı kaldırma
       url: ../admin/add-users/remove-former-employee.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json&view=o365-worldwide
-    - text: Dosya paylaşımlarınızı başka bir Microsoft 365
+    - text: Dosya paylaşımlarınızı Microsoft 365’e geçirin
       url: /sharepointmigration/mm-get-started?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json&view=o365-worldwide
-- title: Toplantılar ve iletişim çözümü kılavuzları
+- title: Toplantı ve iletişim çözüm kılavuzları
   linkLists:
   - linkListType: deploy
     links:
-    - text: Ses çözümü Teams planlama ve dağıtma
+    - text: Teams Ses çözümü planlayın ve dağıtın
       url: deploy-voice.md
   - linkListType: overview
     links:
     - text: Kurumsal iletişim
       url: /sharepoint/corporate-communications-overview?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json&view=o365-worldwide
-- title: Ekip çalışması ve işbirliği çözümü kılavuzları
+- title: Ekip çalışması ve işbirliği çözüm kılavuzları
   linkLists:
   - linkListType: deploy
     links:
@@ -79,21 +79,21 @@ landingContent:
     links:
     - text: Akıllı intranet
       url: /sharepoint/intelligent-internet-overview
-    - text: İşbirliği yönetimi
+    - text: İşbirliği idaresi
       url: collaboration-governance-overview.md
     - text: Dosya işbirliği
       url: /sharepoint/deploy-file-collaboration?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json&view=o365-worldwide
-    - text: OneDrive için kılavuz
+    - text: Kuruluşlar için OneDrive rehberi
       url: /onedrive/plan-onedrive-enterprise?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json&view=o365-worldwide
 - title: Uyumluluk çözümü kılavuzları
   linkLists:
   - linkListType: deploy
     links:
-    - text: Insider risk çözümleri
+    - text: İçeriden risk çözümleri
       url: ../compliance/insider-risk-solution-overview.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json&view=o365-worldwide
     - text: Denetim çözümleri
       url: ../compliance/auditing-solutions-overview.md
-    - text: Microsoft 365 Advanced eDiscovery
+    - text: Microsoft 365 Gelişmiş eKeşif
       url: ../compliance/overview-ediscovery-20.md
   - linkListType: reference
     links:
@@ -109,25 +109,25 @@ landingContent:
   linkLists:
   - linkListType: deploy
     links:
-    - text: Evden çalışmayı desteklemek için güvenlik ekiplerine en önemli görevler
+    - text: Güvenlik ekiplerinin evden çalışmayı desteklemesi için en önemli görevler
       url: ../security/top-security-tasks-for-remote-work.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json&view=o365-worldwide
-    - text: Microsoft 365 Karar Vericileri (BDM) için güvenlik sağlar
+    - text: İş Karar Verenleri (BDM'ler) için Microsoft 365 güvenliği
       url: ../security/microsoft-365-security-for-bdm.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json&view=o365-worldwide
     - text: Kimlik ve cihaz erişimi yapılandırmaları
       url: ../security/office-365-security/microsoft-365-policies-configurations.md
-    - text: Uç Nokta için Microsoft Defender'ı Dağıtma
+    - text: Uç Nokta için Microsoft Defender'ı dağıtın
       url: /windows/security/threat-protection/microsoft-defender-atp/deployment-phases
-    - text: Değerlendirme Microsoft 365 Defender
+    - text: Microsoft 365 Defender’ı değerlendirin
       url: ../security/defender-endpoint/deployment-phases.md
-    - text: Öncelik hesapları için güvenlik önerileri
+    - text: Öncelikli hesaplar için güvenlik önerileri
       url: ../security/office-365-security/security-recommendations-for-priority-accounts.md
-    - text: Değerlendirme Microsoft 365 Defender
+    - text: Microsoft 365 Defender’ı değerlendirin
       url: ../security/defender-endpoint/deployment-phases.md
-    - text: Uç nokta için Microsoft Defender'da hatalı pozitif/negatifleri adresle
+    - text: Uç Nokta için Microsoft Defender'da yanlış pozitifleri/negatifleri ele alın
       url: ../security/defender-endpoint/defender-endpoint-false-positives-negatives.md
   - linkListType: how-to-guide
     links:
-    - text: Microsoft olmayan bir uç nokta koruma çözümünden Uç Nokta için Microsoft Defender'a geçme
+    - text: Microsoft olmayan bir uç nokta koruma çözümünden Uç Nokta için Microsoft Defender'a geçiş yapın
       url: ../security/defender-endpoint/switch-to-mde-overview.md
 - title: İş yükü kaynakları
   linkLists:
@@ -139,7 +139,7 @@ landingContent:
     links:
     - text: Test laboratuvarı kılavuzları
       url: test-lab-guides-overview-solutions.md
-- title: Sektöre özgü kılavuzlar
+- title: Sektöre özgü kılavuz
   linkLists:
   - linkListType: overview
     links:
@@ -147,11 +147,11 @@ landingContent:
       url: financial-services-secure-collaboration.md
     - text: Enerji ve kamu hizmetleri için güvenlik ve uyumluluk
       url: energy-secure-collaboration.md
-    - text: Teams için sağlık hizmeti
+    - text: Sağlık Hizmetleri için Teams
       url: /MicrosoftTeams/expand-teams-across-your-org/healthcare/teams-in-hc?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json&view=o365-worldwide
     - text: Eğitim için Teams
       url: /MicrosoftTeams/expand-teams-across-your-org/teams-for-education-landing-page?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json&view=o365-worldwide
-    - text: Teams için Yeni Yönetim
+    - text: Kamu için Teams
       url: /MicrosoftTeams/expand-teams-across-your-org/teams-for-government-landing-page?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json&view=o365-worldwide
-    - text: Teams kullanarak uzaktan kamu çalışanlarını destekleme
+    - text: Teams kullanarak uzaktan çalışan kamu çalışanlarını destekleyin
       url: /MicrosoftTeams/expand-teams-across-your-org/gov-support-remote-work-with-teams?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json&view=o365-worldwide

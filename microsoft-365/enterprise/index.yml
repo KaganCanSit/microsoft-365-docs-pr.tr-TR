@@ -1,10 +1,10 @@
 ### YamlMime:Hub
-title: Microsoft 365 belgeleri ve kaynakları için belgeler
-summary: Çalışma yollarınızı dönüştüren akıllı bulut hizmetleriyle sınıf içinde en iyi üretkenlik uygulamaları.
+title: Microsoft 365 belgeleri ve kaynakları için destek
+summary: Çalışma yönteminizi dönüştüren akıllı bulut hizmetleriyle sınıfının en iyisi üretkenlik uygulamaları.
 brand: m365
 metadata:
-  title: Microsoft 365 belgeleri ve kaynakları için belgeler
-  description: 'IT profesyonelleri, bilgi çalışanları ve iş ortakları için Microsoft 365 kaynakları ve belgeler hakkında bilgi alın.'
+  title: Microsoft 365 belgeleri ve kaynakları için destek
+  description: 'BT uzmanları, bilgi çalışanları ve iş ortakları için Microsoft 365 kurumsala yönelik ürün belgeleri ve kaynakları hakkında bilgi edinin.'
   services: service
   ms.prod: microsoft-365-enterprise
   ms.service: O365-seccomp
@@ -17,20 +17,20 @@ metadata:
   ms.date: 07/28/2020
 highlightedContent:
   items:
-    - title: Kurumsal Microsoft 365 bilgi
+    - title: Microsoft 365 kurumsal hakkında bilgi edinin
       itemType: get-started
       url: microsoft-365-overview.md
-    - title: Daha fazla bilgiyle dağıtımınızı FastTrack
+    - title: FastTrack ile dağıtımınızı hızlandırın
       itemType: quickstart
       url: 'https://www.microsoft.com/fasttrack/microsoft-365'
-    - title: IT profesyonellerinizi ve yöneticilerinizi eğitin
+    - title: BT uzmanlarınızı ve yöneticilerinizi eğitin
       itemType: learn
       url: /learn/m365/
 conceptualContent:
-  title: Kurumsal ve diğer Microsoft 365 kaynakları hakkında yardım al
-  summary: 'Kurumsal Microsoft 365, özellikleri ve hizmetleri için diğer özellikleri keşfedin.'
+  title: Microsoft 365 kurumsal ve diğer kaynaklarla ilgili yardım alın
+  summary: 'Microsoft 365 kurumsal dağıtım kılavuzunu, özelliklerini ve hizmetlerini keşfedin.'
   items:
-    - title: Önemli öğeleri dağıtma
+    - title: Anahtar öğeleri dağıtma
       links:
         - url: deploy-identity-solution-overview.md
           itemType: how-to-guide
@@ -44,7 +44,7 @@ conceptualContent:
         - url: /intune/fundamentals/planning-guide
           itemType: deploy
           text: Microsoft Intune
-    - title: Kurumsal Microsoft 365 yönetme
+    - title: Microsoft 365 kurumsalı yönetme
       links:
         - url: /windows/deployment/update/
           itemType: how-to-guide
@@ -61,14 +61,14 @@ conceptualContent:
 additionalContent:
   sections:
     - title: Ek kaynaklar
-      summary: Diğer özellikler ve kaynaklar hakkında Microsoft 365 fazla bilgi öğrenin.
+      summary: Diğer Microsoft 365 özellikleri ve kaynakları hakkında daha fazla bilgi edinin.
       items:
         - title: Microsoft 365 uyumluluğu
-          summary: 'Kuruluşun bilgileri yönetmesi, risklere karşı korunmasına ve yasal veya mevzuat standartlarına uymalarına yardımcı olur.'
+          summary: 'Kuruluşunuzun bilgileri yönetmesine, risklere karşı korunmasına ve yasal veya düzenleyici standartlara uymasına yardımcı olun.'
           url: ../compliance/index.yml
         - title: Microsoft 365 güvenliği
-          summary: Güçlü güvenlik hizmetleri ve çözümleri ile saldırı yüzeyleri arasında organizasyonlarınızı koruyun.
+          summary: Güçlü güvenlik hizmetleri ve çözümleri ile kuruluşunuzu saldırı yüzeylerinde koruyun.
           url: ../security/index.yml
-        - title: Microsoft 365 topluluğu
-          summary: Bağlan ve uzmanlarla Microsoft Tech ekibi arasında işbirliği yapın ve en Community yöntemleri Microsoft 365 paylaşın.
+        - title: Microsoft 365 teknik topluluğu
+          summary: 'Microsoft Tech Topluluğu''ndaki iş arkadaşları ve uzmanlarla bağlantı kurun, işbirliği yapın ve en iyi Microsoft 365 uygulamalarını paylaşın.'
           url: 'https://techcommunity.microsoft.com/t5/Microsoft-365/ct-p/microsoft365'

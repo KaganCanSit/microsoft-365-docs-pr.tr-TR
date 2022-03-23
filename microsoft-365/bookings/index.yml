@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 title: Microsoft Kayıtları
-summary: Müşterilere randevuya göre hizmet sağlamak için Microsoft Bookings'i ayarlamayı öğrenin.
+summary: Müşterilere randevu temelinde hizmet sağlamak için Microsoft Bookings'i nasıl ayarlayacağınızı öğrenin.
 brand: m365
 metadata:
   title: Microsoft Kayıtları
-  description: Müşterilere randevuya göre hizmet sağlamak için Microsoft Bookings'i ayarlamayı öğrenin.
+  description: Müşterilere randevu temelinde hizmet sağlamak için Microsoft Bookings'i nasıl ayarlayacağınızı öğrenin.
   ms.service: bookings
   ms.topic: hub-page
   author: dmaguire
@@ -16,20 +16,20 @@ additionalContent:
   sections:
     - items:
         - title: Microsoft Bookings nedir?
-          summary: Personeliniz için Outlook tümleştirmesi ve otomatik bildirim e-postaları da dahil web tabanlı bir rezervasyon takvimi ve uygulaması ile randevuları plan edin ve yönetin.
+          summary: Personeliniz için Outlook tümleştirmesi ve otomatik bildirim e-postaları dahil olmak üzere web tabanlı bir rezervasyon takvimi ve uygulamasıyla randevuları planlayın ve yönetin.
           url: bookings-overview.md
-        - title: İş bilginizi girin
-          summary: 'Microsoft Bookings''te iş adı, adresi, telefon numarası, web sitesi URL''si, logosu ve iş saatleri de dahil olmak üzere Bizim Hakkında sayfanızı girin.'
+        - title: İş bilgilerinizi girin
+          summary: 'Microsoft Bookings''de işletme adı, adres, telefon numarası, web sitesi URL''si, logo ve çalışma saatleri dahil olmak üzere Hakkımızda sayfanızı oluşturun.'
           url: enter-business-information.md
-        - title: Bookings uygulamasını edin
-          summary: Renk temasını değiştirebilir ve dış müşteriye yönelik rezervasyon sayfasının nasıl bir görünüme sahip olacaklarını ayarlayın.
+        - title: Bookings uygulamasını edinin
+          summary: Renk temasını değiştirin ve dış müşteriye yönelik rezervasyon sayfanızın nasıl görüneceğini ayarlayın.
           url: customize-booking-page.md
-        - title: Bookings'e personel ekleme
-          summary: 'Personel listenizi oluşturun ve ad, telefon numarası ve e-posta adresi gibi personel üyesi ayrıntılarını yönetin.'
+        - title: Bookings'e personel ekleyin
+          summary: 'Personel listenizi oluşturun ve ad, telefon numarası ve e-posta adresi gibi personel ayrıntılarını yönetin.'
           url: add-staff.md
-        - title: 'İş kapanışları, izinler ve izin zamanlarını zamanlama'
-          summary: Çalışanların belirtilen süreler boyunca rezervasyonlar için uygun olmadığı işaretlensin diye Bookings takviminden ofis kapanışları ve çalışan izinlerini zamanlamayın.
+        - title: 'İş bitiş, mesai dışı saatlerini ve tatil zamanlarını planlayın'
+          summary: 'Çalışanların belirtilen zamanlarda rezervasyon için uygun değil olarak işaretlenmesi için, Bookings takviminden ofis kapanışlarını ve çalışan izinlerini planlayın.'
           url: schedule-closures-time-off-vacation.md
-        - title: Microsoft Bookings'te çalışan çalışma saatleri
-          summary: Microsoft Bookings'te çalışanların çalışma saatlerini ve uygunluk durumunu ayarlayın.
+        - title: Microsoft Bookings’de çalışanların çalışma saatleri
+          summary: Microsoft Bookings'de çalışanların çalışma saatlerini ve uygunluk durumunu ayarlayın.
           url: employee-hours.md

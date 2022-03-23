@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: Microsoft 365 Defender
-summary: Tüm saldırı yüzeyleri arasında Microsoft 365 Defender şekilde korumanız için güvenlikle ilgili güçlü çözümler hakkında bilgi öğrenin.
+summary: Kuruluşunuzu saldırı yüzeylerinde daha iyi koruyabilmeniz için Microsoft 365 Defender'daki güçlü güvenlik çözümleri hakkında bilgi edinin.
 metadata:
   title: Microsoft 365 Defender belgeleri
-  description: Tüm saldırı yüzeyleri arasında Microsoft 365 Defender şekilde korumanız için güvenlikle ilgili güçlü çözümler hakkında bilgi öğrenin.
+  description: Kuruluşunuzu saldırı yüzeylerinde daha iyi koruyabilmeniz için Microsoft 365 Defender'daki güçlü güvenlik çözümleri hakkında bilgi edinin.
   services: office-365-security-compliance
   ms.service: O365-seccomp
   ms.subservice: subservice
@@ -16,7 +16,7 @@ metadata:
   ms.localizationpriority: high
   ms.openlocfilehash: 473a0b6ca9641c12c7ae9b8d9aeba1e0e9d477d8
   ms.sourcegitcommit: 36a19d80fe3f053df0fec398a7ff2dfc777f9730
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 12/30/2021
   ms.locfileid: "62970607"
@@ -25,35 +25,35 @@ landingContent:
   linkLists:
   - linkListType: overview
     links:
-    - text: Nedir Microsoft 365 Defender?
+    - text: Microsoft 365 Defender nedir?
       url: microsoft-365-defender.md
   - linkListType: whats-new
     links:
-    - text: Microsoft 365 Defender'daki Microsoft 365 Defender
+    - text: Microsoft 365 Defender'daki yenilikler
       url: ../defender/whats-new.md
   - linkListType: video
     links:
-    - text: Genel Bakış videosu
+    - text: Videoyu gözden geçirin
       url: https://www.microsoft.com/en-us/videoplayer/embed/RE4Bzww
-- title: Özellikleri değerlendirme
+- title: Özellikleri değerlendirin
   linkLists:
   - linkListType: get-started
     links:
-    - text: Deneme laboratuvarı oluşturma
+    - text: Deneme laboratuvarı oluşturun
       url: eval-overview.md
-    - text: Üretimde pilot proje çalıştırma
+    - text: Üretimde pilot proje çalıştırın
       url: eval-overview.md
 - title: Kullanmaya başlayın
   linkLists:
   - linkListType: get-started
     links:
-    - text: Microsoft 365 Defender'i Microsoft 365 Defender
+    - text: Microsoft 365 Defender’ı kullanmaya başlayın
       url: get-started.md
   - linkListType: deploy
     links:
-    - text: E-Microsoft 365 Defender
+    - text: Microsoft 365 Defender’ı açın
       url: m365d-enable.md
-    - text: Desteklenen hizmetleri dağıtma
+    - text: Desteklenen hizmetleri dağıtın
       url: deploy-supported-services.md
 - title: Kimlik için Microsoft Defender
   linkLists:
@@ -67,13 +67,13 @@ landingContent:
   linkLists:
   - linkListType: overview
     links:
-    - text: Microsoft Defender for Office 365?
+    - text: Office 365 için Microsoft Defender nedir?
       url: ../office-365-security/defender-for-office-365.md
     - text: Office 365 için Microsoft Defender hizmet açıklaması
       url: /office365/servicedescriptions/office-365-advanced-threat-protection-service-description
     - text: Microsoft 365 Defender'da Office 365 için Microsoft Defender
       url: microsoft-365-security-center-mdo.md
-    - text: Microsoft 365 Defender'da Office 365 için Microsoft Defender'ı yeniden yönlendirme
+    - text: Microsoft 365 Defender'da Office 365 için Microsoft Defender yeniden yönlendiriliyor
       url: microsoft-365-security-mdo-redirection.md
 - title: Uç Nokta için Microsoft Defender
   linkLists:
@@ -81,9 +81,9 @@ landingContent:
     links:
     - text: Uç Nokta için Microsoft Defender nedir?
       url: ../defender-endpoint/microsoft-defender-endpoint.md
-    - text: Microsoft 365 Defender'de Uç Nokta için Defender
+    - text: Microsoft 365 Defender'da Uç Nokta için Defender
       url: microsoft-365-security-center-mde.md
-    - text: Microsoft 365 Defender'te Uç Nokta için Yeniden Yönlendirme Defender
+    - text: Microsoft 365 Defender'da Uç Nokta için Defender yeniden yönlendiriliyor
       url: ../defender/microsoft-365-security-mde-redirection.md
 - title: Bulut Uygulamaları için Microsoft Defender
   linkLists:
@@ -91,15 +91,15 @@ landingContent:
     links:
     - text: Bulut Uygulamaları için Microsoft Defender nedir?
       url: /cloud-app-security/what-is-cloud-app-security
-    - text: Bulut Uygulamaları için Microsoft Defender ile çalışmaya başlama
+    - text: Bulut Uygulamaları için Microsoft Defender’ı kullanmaya başlayın
       url: /cloud-app-security/getting-started-with-cloud-app-security
-- title: Olayları ve uyarıları yönetme
+- title: Olayları ve uyarıları yönetin
   linkLists:
   - linkListType: overview
     links:
-    - text: Olayları araştırma
+    - text: Olayları araştırın
       url: investigate-incidents.md
-    - text: Ortaya çıkan tehditleri takip etmek ve buna yanıt vermek
+    - text: Ortaya çıkan tehditleri izleyin ve yanıtlayın
       url: threat-analytics.md
     - text: Otomatik araştırma ve yanıt
       url: m365d-autoir.md
