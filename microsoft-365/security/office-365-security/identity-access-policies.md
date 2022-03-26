@@ -20,12 +20,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 08d15cacdd6b391759aeb1a22abd91c98376cd17
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 27d45b46944a624abde48a37affad285092bc44d
+ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63321761"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63775488"
 ---
 # <a name="common-zero-trust-identity-and-device-access-policies"></a>Ortak Sıfır Güven kimliği ve cihaz erişimi ilkeleri
 
@@ -67,7 +67,6 @@ Bu görevleri gerçekleştirmeniz için size zaman vermek için, başlangıç no
 ||[Cihaz uyumluluk ilkelerini tanımlama](#define-device-compliance-policies)|Her platform için bir ilke.|Microsoft 365 E3 E5|
 ||[Uyumlu bilgisayar ve mobil cihaz gerektirme](#require-compliant-pcs-and-mobile-devices)|Hem PC'ler (Windows macOS) hem de telefon veya tabletler (iOS, iPadOS veya Android) için Intune yönetimini zorlar.|Microsoft 365 E3 E5|
 |**Özel güvenlik**|[*Her* zaman MFA gerektir](#assigning-policies-to-groups-and-users)||Microsoft 365 E3 E5|
-|
 
 ## <a name="assigning-policies-to-groups-and-users"></a>Gruplara ve kullanıcılara ilke atama
 
@@ -119,7 +118,6 @@ Aşağıdaki tablolarda, oturum açma riski temel alarak MFA'nın gerekli olduğ
 |Bulut uygulamaları veya eylemleri|**Bulut uygulamaları > Içerir**|**Uygulamalar'ı** seçin: Bu ilkenin uygulamak istediğiniz uygulamaları seçin. Örneğin, Tamam'ı Exchange Online.||
 |Koşullar|||Ortamınıza ve ihtiyaçlarına özel koşulları yapılandırabilirsiniz.|
 ||Oturum açma riski||Aşağıdaki tabloda yer alan kılavuza bakın.|
-|
 
 ### <a name="sign-in-risk-condition-settings"></a>Oturum açma riski koşulu ayarları
 
@@ -130,7 +128,6 @@ Hedeflerken koruma düzeyine dayalı olarak risk düzeyi ayarlarını uygulama.
 |Başlangıç noktası|Yüksek, orta|Her ikisini de kontrol edin.|
 |Enterprise|Yüksek, orta, düşük|Bunların üçünü de kontrol edin.|
 |Özel güvenlik||MFA'nın her zaman zorunlu kılınması için tüm seçenekleri işaretsiz bırakın.|
-|
 
 **Access denetimleri bölümünde**:
 
@@ -139,7 +136,6 @@ Hedeflerken koruma düzeyine dayalı olarak risk düzeyi ayarlarını uygulama.
 |Grant|**Grant access**||Seç|
 |||**Çok faktörlü kimlik doğrulaması gerektirme**|Çek|
 ||**Tüm seçili denetimlere gerektir**||Seç|
-|
 
 Ver **ayarlarını kaydetmek** için **Seç'i** seçin.
 
@@ -161,7 +157,6 @@ Multi-Factor Authentication desteği olmayan istemcileri engellemek üzere koşu
 ||Dışla|**Kullanıcılar ve gruplar**: Koşullu Erişim özel durum grubunızı seçin; (uygulama kimlikleri) gibi hesaplar.|Üyelik, gerektiği şekilde, geçici olarak değiştirilmelidir.|
 |Bulut uygulamaları veya eylemleri|**Bulut uygulamaları > Içerir**|**Uygulamaları seçin**: Modern kimlik doğrulamasını desteklemeen istemcilere karşılık gelen uygulamaları seçin.||
 |Koşullar|**İstemci uygulamaları**|Yapılandırma **için Evet'i** **seçin** <p> Tarayıcı ve Mobil uygulamalar **ile masaüstü** **istemcilerinin onay işaretlerini temizleme**||
-|
 
 **Access denetimleri bölümünde**:
 
@@ -169,7 +164,6 @@ Multi-Factor Authentication desteği olmayan istemcileri engellemek üzere koşu
 |---|---|---|---|
 |Grant|**Erişimi engelle**||Seç|
 ||**Tüm seçili denetimlere gerektir**||Seç|
-|
 
 Ver **ayarlarını kaydetmek** için **Seç'i** seçin.
 
@@ -191,7 +185,6 @@ Güvenlik portalında [(Microsoft Azurehttps://portal.azure.com)](https://portal
 |---|---|---|---|
 |Kullanıcılar|Dahil|**Tüm kullanıcılar**|Seç|
 |Kullanıcı riski|**Yüksek**||Seç|
-|
 
 İkinci **Ödevler bölümünde** :
 
@@ -199,7 +192,6 @@ Güvenlik portalında [(Microsoft Azurehttps://portal.azure.com)](https://portal
 |---|---|---|---|
 |Access|**Erişime izin ver**||Seç|
 |||**Parola değişikliği gerektirme**|Çek|
-|
 
 Access **ayarlarını** kaydetmek için **Bitti'yi** seçin.
 
@@ -228,7 +220,6 @@ Sıfır Güven kimliği ve cihaz erişim yapılandırmalarında belirtilen ilkel
 |Başlangıç noktası|[Düzey 2 geliştirilmiş veri koruması](/mem/intune/apps/app-protection-framework#level-2-enterprise-enhanced-data-protection)|Düzey 2'de zorunlu kılınan ilke ayarları, düzey 1 için önerilen tüm ilke ayarlarını içerir ve yalnızca düzey 1'den daha fazla denetim ve daha gelişmiş yapılandırma uygulamak için aşağıdaki ilke ayarlarına ekler veya ayarları günceller.|
 |Enterprise|[Düzey 2 geliştirilmiş veri koruması](/mem/intune/apps/app-protection-framework#level-2-enterprise-enhanced-data-protection)|Düzey 2'de zorunlu kılınan ilke ayarları, düzey 1 için önerilen tüm ilke ayarlarını içerir ve yalnızca düzey 1'den daha fazla denetim ve daha gelişmiş yapılandırma uygulamak için aşağıdaki ilke ayarlarına ekler veya ayarları günceller.|
 |Özel güvenlik|[Düzey 3 kurumsal yüksek veri koruması](/mem/intune/apps/app-protection-framework#level-3-enterprise-high-data-protection)|Düzey 3'te zorunlu kılınan ilke ayarları, düzey 1 ve 2 için önerilen tüm ilke ayarlarını içerir ve düzey 2'den daha fazla denetim ve daha gelişmiş yapılandırma uygulamak için yalnızca aşağıdaki ilke ayarlarına ekler veya ayarları günceller.|
-|
 
 Her platform (iOS ve Android) için veri koruma çerçevesi ayarlarını kullanarak Microsoft Endpoint Manager bir uygulama koruma ilkesi oluşturmak için şunları yapabilirsiniz:
 
@@ -362,7 +353,6 @@ Cihaz **durumu ve > Windows Durum Attestation Service değerlendirme kuralları 
 |BitLocker Gerektir|Gerektir|Seç|
 |Cihazda Güvenli Önyükleme'nin etkinleştirilmesi gerekir|Gerektir|Seç|
 |Kod bütünlüğü gerekli|Gerektir|Seç|
-|
 
 Cihaz **özellikleri için**, işletim sistemi sürümleri için uygun değerleri, IT ve güvenlik ilkelerinize göre belirtin.
 
@@ -388,14 +378,12 @@ Sistem **güvenliği için** bu tabloya bakın.
 ||Microsoft Defender Kötü amaçlı yazılımdan koruma minimum sürümü||Tür <p> Yalnızca masaüstü Windows 10 destekler. Microsoft, en son sürümden beş taneden daha eski sürümleri önerilmez.|
 ||Microsoft Defender Kötü amaçlı yazılımlardan koruma imzası güncel|Gerektir|Seç|
 ||Gerçek zamanlı koruma|Gerektir|Seç <p> Yalnızca masaüstü ve Windows 10 için desteklenen|
-|
 
 #### <a name="microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender
 
 |Tür|Özellikler|Değer|Eylem|
 |---|---|---|---|
 |Microsoft Endpoint Manager yönetim merkezinde Uç nokta kuralları için Microsoft Defender|[Cihazın makine risk puanına göre veya altında olması gerekir](/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level)|Orta|Seç|
-|
 
 <!--
 ## Require compliant PCs (but not compliant phones and tablets)

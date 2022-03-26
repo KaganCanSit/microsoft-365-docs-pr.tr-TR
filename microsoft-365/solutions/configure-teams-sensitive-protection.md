@@ -20,12 +20,12 @@ ms.custom:
 - admindeeplinkSPO
 recommendations: false
 description: Hassas veriler için korumayla ekipleri dağıtmayı öğrenin.
-ms.openlocfilehash: 42124881ac795c54288dee46e70dc1d5eccef3e3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 51e4c3b13d1a54e4edcfd9926ae246dde7d7e3e4
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314077"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63712709"
 ---
 # <a name="configure-teams-with-protection-for-sensitive-data"></a>Hassas veriler için korumayla ekipleri yapılandırma
 
@@ -57,7 +57,7 @@ Konuk paylaşımına izin vermek veya engellemek için, her ikisi de daha sonra 
 
 Hassas koruma düzeyi için ekibi sınıflandırmak için bir duyarlılık etiketi kullan kullan istiyoruz. Bu etiket bu veya diğer ekiplerde ya da ekipler veya ekipler gibi başka dosya konumlarında tek tek dosyaları sınıflandırmak SharePoint OneDrive. 
 
-İlk adım olarak, sizin için duyarlılık etiketlerini etkinleştirmeniz Teams. Ayrıntılar [için bkz. Microsoft Teams'ta, gruplarda Office 365 ve sitelerde SharePoint için duyarlılık etiketleri](../compliance/sensitivity-labels-teams-groups-sites.md) kullanma.
+İlk adım olarak, sizin için duyarlılık etiketlerini etkinleştirmeniz Teams. Ayrıntılar [için bkz. Microsoft Teams'ta, gruplarda Office 365 ve sitelerde içeriği SharePoint duyarlılık etiketleri](../compliance/sensitivity-labels-teams-groups-sites.md) kullanma.
 
 Zaten kuruluşta dağıtılmış duyarlılık etiketleriniz varsa, bu etiketin genel etiket stratejinize nasıl uyduğunu düşünün. Gerekirse, kuruluşun  ihtiyaçlarını karşılamak için adı veya ayarları değiştirebilirsiniz.
 
@@ -109,6 +109,10 @@ Bu katmanda, özel kanallar oluşturmayı ekip sahipleri ile kısıtlarız.
 
 Ayrıca, kimlerin özel [kanal oluştura](/MicrosoftTeams/teams-policies) onu kontrol etmek için ekip ilkelerini de kullanabilirsiniz.
 
+## <a name="shared-channel-settings"></a>Paylaşılan kanal ayarları
+
+[Paylaşılan kanalların](/MicrosoftTeams/shared-channels) ekip düzeyi ayarları yok. Hem yönetim merkezinde hem de Azure AD'de Teams paylaşılan kanal ayarları duyarlılık ne olursa olsun tüm ekiplere uygulanır.
+
 ## <a name="sharepoint-settings"></a>SharePoint ayarları
 
 Her yeni ekip 2013'te hassas etikete sahip yeni bir ekip  oluşturmanız SharePoint:
@@ -128,13 +132,11 @@ Site varsayılan paylaşım bağlantı türünü güncelleştirmek için
 
 Bunu ekip oluşturma işleminizin bir parçası olarak kullanmak için [Set-SPOSite'i](/powershell/module/sharepoint-online/set-sposite) `-DefaultSharingLinkType Direct` parametreyle birlikte kullanabilir ve varsayılan paylaşım bağlantısını Belirli kişiler *olarak değiştirebilirsiniz*.
 
-#### <a name="private-channels"></a>Özel kanallar
-
-Eklere özel kanallar eklersiniz, her özel kanal varsayılan paylaşım SharePoint yeni bir kanal sitesi oluşturur. Bu siteler SharePoint yönetim merkezinde görünmez, bu nedenle Set-SPOSite paylaşımı ayarlarını güncelleştirmek için Set-SPOSite PowerShell cmdlet'ini kullan gerekir.
+Ek ekiplere özel veya paylaşılan kanallar eklerken her biri varsayılan paylaşım SharePoint yeni bir site oluşturur. Ekiple ilişkili siteleri SharePoint yönetim merkezinden güncelleştirebilirsiniz.
 
 ### <a name="site-sharing-settings"></a>Site paylaşım ayarları
 
-Sitenin, SharePoint üyesi değil kişileriyle paylaşılmaması için, bu paylaşımı sahiplerle sınırlandırdık.
+Sitenin, SharePoint üyesi değil kişileriyle paylaşılmaması için, bu paylaşımı sahiplerle sınırlandırdık. Bu yalnızca ekiple SharePoint site için gereklidir. Özel veya paylaşılan kanalların bir parçası olarak oluşturulan diğer siteler ekip veya kanalın dışında paylaşılamaz.
 
 Yalnızca sahipler için site paylaşımını yapılandırmak için
 1. Güncelleştirme Teams, güncelleştirmek **istediğiniz** ekibin Genel sekmesine gidin.
@@ -145,6 +147,6 @@ Yalnızca sahipler için site paylaşımını yapılandırmak için
 6. Paylaşım **izinleri'nin** altında **Site sahipleri** ve üyeleri'ne tıklayın; Düzenleme izinleri olan kişiler dosyaları ve klasörleri paylaşabilir; ancak yalnızca site sahipleri siteyi paylaşabilir ve Kaydet'e **tıklayın**.
 
 
-## <a name="see-also"></a>Ayrıca Bkz
+## <a name="related-topics"></a>İlgili konular
 
 [Duyarlılık etiketlerini ve onların ilkelerini oluşturma ve yapılandırma](../compliance/create-sensitivity-labels.md)

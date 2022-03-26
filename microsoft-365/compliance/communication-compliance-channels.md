@@ -1,5 +1,5 @@
 ---
-title: İletişim uyumluluğuyla kanal sinyallerini algılama
+title: İletişim uyumluluğu ile kanal sinyallerini tespit etme
 description: İletişim uyumluluğu ile kanal sinyallerini algılama hakkında daha fazla bilgi edinin.
 f1.keywords:
 - NOCSH
@@ -18,14 +18,14 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 9cc2b77c9983fecc6e58be515fe316c6c5239fef
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 35bd11ac88859c3e587771552a02097a2f090a44
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63317787"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63712894"
 ---
-# <a name="detect-channel-signals-with-communication-compliance"></a>İletişim uyumluluğuyla kanal sinyallerini algılama
+# <a name="detect-channel-signals-with-communication-compliance"></a>İletişim uyumluluğu ile kanal sinyallerini tespit etme
 
 İletişim uyumluluğu ilkeleriyle, aşağıdaki iletişim platformlarından bir veya birden çoksinde yer alan iletileri grup olarak veya tek başına kaynak olarak taramayı seçebilirsiniz. Bu platformlarda yakalanan özgün iletiler, kuruluşun bekletme ve saklama ilkelerine uygun olarak özgün platform [konumda korunur](/microsoft-365/compliance/information-governance). çözümleme ve soruşturma için iletişim uyumluluk ilkeleri tarafından kullanılan iletilerin kopyaları, kullanıcılar kuruluşdan ayrılsa ve posta kutuları silinmiş olsa bile, ilke olduğu sürece korunur. Bir iletişim ilkesi silindiğinde, ilkeyle ilişkilendirilmiş iletilerin kopyaları da silinir.
 
@@ -33,7 +33,14 @@ ms.locfileid: "63317787"
 
 Hem ortak hem de özel Microsoft Teams sohbet iletişimleri ve tek tek sohbetler taranabilirsiniz. Seçilen bir kapsam ile iletişim uyumluluğu ilkesine atanan Microsoft Teams, kullanıcıların sohbet iletişimleri kullanıcının üyesi olduğu tüm Microsoft Teams genelinde otomatik olarak izlenir. Microsoft Teams kapsam, önceden tanımlanmış ilke şablonlarına otomatik olarak eklenir ve özel ilke şablonunda varsayılan olarak seçilir. Teams iletişim uyumluluğu ilkesi koşulları eşleşen sohbetlerin işlemesi 48 saat kadar sürebilir.
 
-Özel sohbetler ve özel kanallar için, iletişim uyumluluk ilkeleri Modern ek taramayı destekler. Modern ekler, e-postalara [OneDrive](/onedrive/plan-onedrive-enterprise#modern-attachments) [SharePoint](/sharepoint/dev/solution-guidance/modern-experience-customizations) sitelerinden kaynaklandırarak gelen Teams olur. Etkin iletişim uyumluluğu ilkesi koşulları ve sınıflayıcılarla otomatik işleme ve olası eşleşmeler için bu eklerden metin otomatik olarak ayıklanır. Modern ek algılama ve işleme için gereken herhangi bir ek yapılandırma yoktur. Metin yalnızca eklerin eşleşen ilke koşulları için ayıklanır. İlke eşleşmesi olan iletilerin ekleri için metin ayıklanmayacak (ekin ilke eşleşmesi olsa bile).
+Özel sohbetler ve özel kanallar için, iletişim uyumluluk ilkeleri [Paylaşılan Kanallar ve](/MicrosoftTeams/shared-channels) Modern ek taramayı destekler. Paylaşılan Kanal desteği Teams işlem otomatik olarak yapılır ve ek iletişim uyumluluk yapılandırması değişiklikleri gerektirmez. Aşağıdaki tabloda, gruplarla ve kullanıcılarla kanal paylaşımı Teams uyumluluk davranışı özetlenmiştir:
+
+|**Senaryo**|**İletişim uyumluluğu davranışı**|
+|:-----------|:------------------------------------|
+| **Bir iç ekiple kanal paylaşma** | İletişim uyumluluğu ilkeleri kapsam içinde kullanıcılara ve paylaşılan kanalda yer alan tüm iletilere uygulanır |
+| **Bir dış ekiple kanal paylaşma** | İletişim uyumluluğu ilkeleri iç kuruluş kapsamındaki kullanıcılar ve paylaşılan kanalda yer alan iletiler için geçerlidir |
+
+Modern ekler, e-postalara [OneDrive](/onedrive/plan-onedrive-enterprise#modern-attachments) [SharePoint](/sharepoint/dev/solution-guidance/modern-experience-customizations) sitelerinden kaynaklandırarak gelen Teams olur. Etkin iletişim uyumluluğu ilkesi koşulları ve sınıflayıcılarla otomatik işleme ve olası eşleşmeler için bu eklerden metin otomatik olarak ayıklanır. Modern ek algılama ve işleme için gereken herhangi bir ek yapılandırma yoktur. Metin yalnızca eklerin eşleşen ilke koşulları için ayıklanır. İlke eşleşmesi olan iletilerin ekleri için metin ayıklanmayacak (ekin ilke eşleşmesi olsa bile).
 
 Modern ek tarama, aşağıdaki dosya türlerinde destekler:
 

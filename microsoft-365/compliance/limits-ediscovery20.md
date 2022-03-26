@@ -1,5 +1,5 @@
 ---
-title: Advanced eDiscovery sınırları
+title: Gelişmiş eKeşif sınırları
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -16,12 +16,12 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Bu konuda, çözümle ilgili çözüm için yürürlüğe girecek olay sınırları, dizin oluşturma Advanced eDiscovery ve arama Microsoft 365.
-ms.openlocfilehash: fc658f4502bf510cf34297435db75bd7cdd7c136
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 04b0f98286693ef14019b30ab9c8d3a592484d92
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63316218"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63712806"
 ---
 # <a name="limits-in-advanced-ediscovery"></a>Alan Advanced eDiscovery
 
@@ -42,7 +42,6 @@ Aşağıdaki tabloda, çalışma sayfalarındaki vakaların ve gözden geçirme 
 |Vaka başına en fazla benzersiz etiket sayısı. <br/> |1.0001<sup></sup> |
 |Gözden geçirme kümesine içerik eklemek için, organizasyonda eş zamanlı iş sayısı üst sayısı. Bu işler Gözden **geçirme kümesine veri ekleme olarak** adlandırılmıştır ve **bir davanın İşleri** sekmesinde görüntülenir.| <sup>102</sup> |
 |Kullanıcı başına gözden geçirme kümesine içerik eklemek için eş zamanlı iş sayısı üst sayısı. Bu işler Gözden **geçirme kümesine veri ekleme olarak** adlandırılmıştır ve **bir davanın İşleri** sekmesinde görüntülenir. | 3 |
-|||
 
 ## <a name="hold-limits"></a>Tutma sınırları
 
@@ -64,7 +63,6 @@ Aşağıdaki tabloda, çalışma sayfalarında dizin oluşturma Advanced eDiscov
 |Tek bir dosyanın boyut üst boyutu.   <br/> |150 <sup>MB4</sup> <br/> |
 |Belgeye en fazla katıştırılmış öğe derinliği.  <br/> |<sup>254</sup> <br/> |
 |Optik Karakter Tanıma (OCR) tarafından işlenen dosyaların boyut üst sayısı.  <br/> |24 <sup>MB4</sup> <br/>  
-|||
 
 ## <a name="search-limits"></a>Arama sınırları
 
@@ -87,28 +85,26 @@ Bu bölümde açıklanan sınırlar, Aramalar sekmesindeki arama aracını kulla
 |Aramaların önizleme sayfasında görüntülenen ortak klasör posta kutusu başına en fazla öğe sayısı. |100|
 |Tüm ortak klasör posta kutusu öğelerinde bulunan ve arama önizleme sayfasında görüntülenen en fazla öğe sayısı. |200|
 |Arama sonuçları için önizlemede 2013'e kadar olan ortak klasör posta kutusu sayısı. Arama sorgusuyla eşleşmeye çalışan öğeler içeren 500'den fazla ortak klasör posta kutusu varsa, önizleme için yalnızca en çok sonuçları içeren ilk 500 posta kutusu kullanılabilir.|500|
-|||
+|Taslak koleksiyonunun örnek sayfasında görüntülenen en büyük öğe boyutu.|10.000.000 bayt (yaklaşık 9,5 MB)|
 
 ## <a name="search-times"></a>Arama saatleri
 
 Microsoft, tüm kuruluşların yaptığı aramalar için performans bilgilerini toplar. Arama sorgusunun karmaşıklığı arama sürelerini etkileyebilir, ancak aramaların ne kadar süreyle devamyeceğini etkileyen en büyük faktör, arama yapılan posta kutularının sayısıdır. Microsoft, arama süreleri için Bir Hizmet Düzeyi Sözleşmesi sağlamasa da, aşağıdaki tabloda, aramada yer alan posta kutularının sayısına göre koleksiyon aramalarının ortalama arama süreleri listelemektedir.
   
-  | Posta kutusu sayısı | Ortalama arama süresi |
-  |:-----|:-----|
-  |100  <br/> |30 saniye  <br/> |
-  |1,000  <br/> |45 saniye  <br/> |
-  |10,000  <br/> |4 dakika  <br/> |
-  |25,000  <br/> |10 dakika  <br/> |
-  |50,000  <br/> |20 dakika  <br/> |
-  |100,000  <br/> |25 dakika  <br/> |
-  |||
+| Posta kutusu sayısı | Ortalama arama süresi |
+|:-----|:-----|
+|100  <br/> |30 saniye  <br/> |
+|1,000  <br/> |45 saniye  <br/> |
+|10,000  <br/> |4 dakika  <br/> |
+|25,000  <br/> |10 dakika  <br/> |
+|50,000  <br/> |20 dakika  <br/> |
+|100,000  <br/> |25 dakika  <br/> |
 
 ## <a name="viewer-limits"></a>Görüntüleyici sınırları
 
 | Sınırın açıklaması | Sınır |
 |:-----|:-----|
 |Yerel görüntüleyicide Excel dosya boyutu üst sayısı.  <br/> |4 MB  <br/> |
-|||
 
 ## <a name="export-limits---final-export-out-of-review-set"></a>Dışarı aktarma sınırları - Gözden Geçirme Kümesi'nin son dışarı aktarması
 
@@ -118,14 +114,12 @@ Bu bölümde açıklanan sınırlar, gözden geçirme kümesi dışında belge d
 |:-----|:-----|
 |Tek bir dışarı aktarma için en büyük boyut.|5 milyon belge veya 500 GB (hangisi daha küçükse)|
 |Gözden geçirme kümesi başına en yüksek eşzamanlı dışarı aktarma. | 1 |
-|||
 
 ## <a name="review-set-download-limits"></a>ayarlanmış indirme sınırlarını gözden geçirme
 
 | Sınırın açıklaması | Sınır |
 |:-----|:-----|
 |Gözden geçirme kümesinden indirilen toplam dosya boyutu veya en fazla belge sayısı.  <br/> |3 MB veya 50 <sup>belge7</sup>|
-|||
 
 ## <a name="notes"></a>Notlar
 

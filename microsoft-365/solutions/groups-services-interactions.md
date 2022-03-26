@@ -16,12 +16,12 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Grup hizmetleri etkileşimleri
-ms.openlocfilehash: 226c1588c0275c3349d0fd996dd68f5748f11cd6
-ms.sourcegitcommit: c2b5ce3150ae998e18a51bad23277cedad1f06c6
+ms.openlocfilehash: 3f5433671e4407e25669498824817db0b43ff329
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "63005420"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63712828"
 ---
 # <a name="groups-services-interactions"></a>Grup hizmetleri etkileşimleri
 
@@ -83,7 +83,7 @@ Aşağıdaki hizmetler son kullanıcılar tarafından grup oluşturulmasına ola
 
 - Outlook
 - Planner
-- Project için web'de arama
+- Web için Project
 - SharePoint
 - Stream
 - Microsoft Teams
@@ -126,7 +126,7 @@ Aşağıdaki tablo, çeşitli hizmetlerle Microsoft 365 Grupları etkileşimleri
 |Power Automate|İş Akışı|Evet|Hayır|Hayır|
 |Power BI (klasik)|Workspace|Hayır|Evet|Evet|
 |Power BI (yeni)|Workspace|Evet|Hayır|Evet|
-|Project için web'de arama|Project planı|Evet|Evet|Hayır|
+|Web için Project|Project planı|Evet|Evet|Hayır|
 |Yol Haritası|Yol Haritası|Evet|Evet|Hayır|
 |SharePoint|Site|Evet|Evet|Evet|
 |Stream|Kanal, video|Evet|Evet|Evet|
@@ -475,7 +475,7 @@ Evet ve hayır. Çalışma alanı Power BI bir defada tek bir grupla ilişkilend
 
 Evet, Çalışma Alanı alanı Power BI grubu ve grupla ilişkilendirilmiş hizmetleri ve içeriği siler.
 
-## <a name="project-for-the-web"></a>Project için web'de arama
+## <a name="project-for-the-web"></a>Web için Project
 
 Project web için özellik, proje planları, Gantt grafikleri ve yol haritaları oluşturma olanağı sunar.
 Gruplara sağlanan önemli özellikler.
@@ -558,7 +558,7 @@ Evet, SharePoint grupla ilişkilendirilmiş olmayan çeşitli hizmetler ve ileti
 
 **Grup başına birden çok site olabilir mi?**
 
-Hayır, grup başına yalnızca tek bir site olabilir. Aşağıdaki özel Teams gruba bağlı olan diğer siteleri kullanabilirsiniz.
+Hayır, grup başına yalnızca tek bir site olabilir. Grupla bağlantılı Teams olan özel ve paylaşılan kanallar, gruba bağlı olan diğer siteleri kullanır.
 
 **Siteler birden çok grupla ilişkilendirilsin mi?**
 

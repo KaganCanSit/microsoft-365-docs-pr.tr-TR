@@ -15,12 +15,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: db219fe7ce39ae59668cedff10f03e931ddba416
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 83f0f53e2d2376975f853d826531e749732416b7
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998255"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754320"
 ---
 # <a name="onboard-devices-without-internet-access-to-microsoft-defender-for-endpoint"></a>Uç nokta için Microsoft Defender'a İnternet erişimi olmayan cihazları ekleme
 
@@ -37,7 +37,7 @@ ms.locfileid: "62998255"
 İnternet erişimi olmayan cihazları işe almak için aşağıdaki genel adımları benimsersiniz:
 
 > [!IMPORTANT] 
-> Aşağıdaki adımlar yalnızca şu tür güncelleştirmelerin önceki sürümlerini Windows cihazlar için geçerlidir: Windows Server 2016 veya önceki sürümleri Windows 8.1 önceki sürümleri.
+> Aşağıdaki adımlar yalnızca MMA tabanlı çözümü kullanarak Windows sürümlerini çalıştıran cihazlar için geçerlidir. Daha fazla bilgi için bkz. [Windows uç nokta hizmeti için Microsoft Defender'a ek sunucu ekleme](/microsoft-365/security/defender-endpoint/configure-server-endpoints).
 
 > [!NOTE]
 > - OMS ağ geçidi sunucusu, 'TelemetryProxyServer' kayıt defteri veya GPO aracılığıyla yapılandırıldığında bağlantı Windows veya Windows Server cihazları için ara sunucu olarak kullanılamaz.
@@ -50,7 +50,7 @@ Ekleme yöntemleri hakkında daha fazla bilgi için aşağıdaki makalelere bak�
 - [Uç nokta hizmeti için Microsoft Defender'a sunucuları ekleme](/microsoft-365/security/defender-endpoint/configure-server-endpoints#windows-server-2008-r2-sp1--windows-server-2012-r2-and-windows-server-2016)
 - [Cihaz ara sunucusunu ve İnternet bağlantısı ayarlarını yapılandırma](/microsoft-365/security/defender-endpoint/configure-proxy-internet#configure-the-proxy-server-manually-using-a-registry-based-static-proxy)
 
-## <a name="on-premises-devices"></a>Şirket içi cihazlar
+## <a name="devices-running-the-previous-mma-based-solution"></a>Önceki MMA tabanlı çözümü çalıştıran cihazlar
 
 - Ara sunucu veya hub gibi davranacak şekilde Azure Günlük Analizi'ni (eski adıyla OMS Ağ Geçidi) ayarlama:
   - [Azure Günlük Analizi Aracısı](/azure/azure-monitor/platform/gateway#download-the-log-analytics-gateway)
@@ -63,9 +63,9 @@ Ekleme yöntemleri hakkında daha fazla bilgi için aşağıdaki makalelere bak�
     - Ara sunucu olarak Azure Log Analytics IP'si
     - Uç nokta çalışma alanı anahtarı & Defender
 
-## <a name="azure-virtual-machines"></a>Azure sanal makineleri
+### <a name="azure-virtual-machines"></a>Azure sanal makineleri
 
-- Ara sunucu veya hub gibi davranacak şekilde Azure Günlük Analizi Ağ Geçidi'ni (eski adıyla OMS Ağ Geçidi) ayarlama:
+- Önceki MMA tabanlı çözümü çalıştıran cihazlar için, Ara sunucu veya hub gibi davranacak şekilde Azure Günlük Analizi Ağ Geçidi'ni (eski adıyla OMS Ağ Geçidi) kurabilirsiniz:
     - [Azure Log Analytics Ağ Geçidi](/azure/azure-monitor/platform/gateway#download-the-log-analytics-gateway)
     - [Kimlikte Uç Microsoft Monitoring Agent Alanı Anahtarı için Defender'ın (MMA)](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) noktasını yükleme ve & yapılandırma
 - Aynı OMS Ağ Geçidi ağı ağının çevrimdışı Azure sanal dosyaları

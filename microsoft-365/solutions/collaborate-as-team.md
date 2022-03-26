@@ -21,18 +21,21 @@ ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: Konuk ekibin Microsoft 365, konuşma ve belgelerle işbirliği yapmak için gerekli yapılandırma adımları hakkında bilgi Teams.
-ms.openlocfilehash: bb6ccf4f3e17192d86675d99072eca8b836973e2
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 0fd723a86f79f97703eca96c0693882fbc05f13a
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63324557"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63712916"
 ---
 # <a name="collaborate-with-guests-in-a-team"></a>Ekipte konuklarla işbirliği yapma
 
 Konuklarla belgeler, görevler ve konuşmalar arasında işbirliği yapmak için bu belgeleri Microsoft Teams. Teams, kalıcı sohbet ve birleşik bir kullanıcı deneyiminde özelleştirilebilir ve genişletilebilir bir işbirliği araçları kümesiyle Office ve SharePoint'te kullanılabilen tüm işbirliği özelliklerini sağlar.
 
 Bu makalede, konuklarla işbirliğine Microsoft 365 için gerekli tüm yapılandırma adımlarını takip edeceğiz. Konuk erişimini yapılandırdıktan sonra, Teams'de ek ekiplere konuk ekleme'de yer alan [adımları kullanarak konukları ekiplere Teams](https://support.microsoft.com/office/fccb4fa6-f864-4508-bdde-256e7384a14f).
+
+> [!NOTE]
+> [Paylaşılan kanallar](collaborate-teams-direct-connect.md), diğer farklı kuruluşlarla işbirliği için konuk hesaplarından daha sorunsuz bir Microsoft 365 sunar. Paylaşılan kanallar, dış katılımcıların kuruluşta oturum açmasına gerek kalmadan Teams kanallarını kullanarak kuruluş dışındaki kullanıcılarla işbirliğine olanak sağlar. Herhangi bir senaryo için [konuklarla işbirliği](plan-external-collaboration.md) yapmak yerine, paylaşılan kanalların daha iyi bir seçenek olup olduğunu görmek için dış işbirliği planlamayı gözden geçirmenizi öneririz.
 
 ## <a name="video-demonstration"></a>Video tanıtımı
 
@@ -44,7 +47,7 @@ Bu videoda, bu belgede açıklanan yapılandırma adımları gösterir.</br>
 
 Dış Microsoft 365, çalışma sayfasındaki [B2B dış işbirliği ayarları tarafından en yüksek Azure Active Directory](/azure/active-directory/external-identities/delegate-invitations). Azure AD'de konuk paylaşımı devre dışı bırakılmış veya kısıtlanmışsa, bu ayar Microsoft 365.
 
-Konuklarla paylaşımın engellenmiş olduğundan emin olmak için B2B dış işbirliği ayarlarına göz yapın.
+Konuklarla paylaşımın engellenmiş olduğundan emin olmak için B2B dış işbirliği ayarlarını kontrol edin.
 
 ![Kurumsal İlişkiler Azure Active Directory sayfası Ayarlar ekran görüntüsü.](../media/azure-ad-organizational-relationships-settings.png)
 
@@ -195,5 +198,3 @@ Konukları bir takıma davet etmek için
 [Yönetilen konuklarla B2B extranet oluşturma](b2b-extranet.md)
 
 [Azure Active Directory B2B ile SharePoint ve OneDrive tümleştirmesi](/sharepoint/sharepoint-azureb2b-integration-preview)
-
-[Bir dosyadan veya dosyadan paylaşım SharePoint seçenekleri gri OneDrive](/sharepoint/troubleshoot/administration/sharing-options-grayed-out-when-sharing-from-sharepoint-online-or-onedrive)

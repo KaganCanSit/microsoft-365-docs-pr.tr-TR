@@ -6,7 +6,7 @@ metadata:
   author: SKjerland
   manager: scotv
   audience: Admin
-  ms.topic: article
+  ms.topic: faq
   ms.prod: microsoft-365-lighthouse
   ms.localizationpriority: medium
   ms.collection:
@@ -17,12 +17,12 @@ metadata:
   - M365-Lighthouse
   search.appverid: MET150
   description: Microsoft 365 Lighthouse kullanarak Yönetilen Hizmet Sağlayıcıları (MSP)'ler için, sık sorulan soruların (SSS) yanıtlarını Microsoft 365 Lighthouse.
-  ms.openlocfilehash: 746ec9210e517921d1c2145c9e87f0d339a67758
-  ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+  ms.openlocfilehash: 24edebe8ef0a04c3256937195252fd5421599558
+  ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/08/2022
-  ms.locfileid: "63326176"
+  ms.lasthandoff: 03/24/2022
+  ms.locfileid: "63775444"
 title: Microsoft 365 Lighthouse sorulan sorular (SSS)
 summary: >
   Bu makale, bu konuda sık sorulan soruların (SSS) yanıtlarını Microsoft 365 Lighthouse.
@@ -32,7 +32,7 @@ summary: >
 sections:
 - name: Yok sayıldı
   questions:
-  - question: Bu ne Microsoft 365 Lighthouse?
+  - question: Microsoft 365 Lighthouse nedir?
     answer: >
       Microsoft 365 Lighthouse, Küçük ve orta ölçekli işletme (SMB) müşterileri için Yönetilen Hizmet Sağlayıcılarının (MSP) cihazları, verileri ve kullanıcıları küçük ve orta ölçekli işletme (SMB) müşterileri için güvenli ve yönetmeye yardımcı olan bir Microsoft 365 İş Ekstra Microsoft 365 E3.  Lighthouse, SMB'ler için uyarlanmış güvenlik yapılandırma taban çizgilerini önererek ve tüm müşteri ortamlarında çok kiracılı görünümler sağlayarak kiracıları işe alımları kolaylaştırır. Daha fazla bilgi için bkz[. Genel Microsoft 365 Lighthouse](m365-lighthouse-overview.md).
   - question: Deniz Feneri ile Azure Microsoft 365 Lighthouse arasındaki fark nedir?
@@ -57,7 +57,7 @@ sections:
     answer: >
       Müşteri kiracı verilerini Deniz Feneri'nin içinde yüklemesi 48 saate kadar sürebilir. Eklemeyi tamamlayana kadar 48'den fazla zaman kullandıysanız lütfen yardım için Destek ekibimize başvurun. Ekleme tamamlandıktan sonra bunları bilgili ve ilgili ekran görüntüleriyle günlükler sağlayacaksınız. Daha fazla bilgi için bkz[. Destek almak için Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
   - question: Neden bazı müşteri kiracıları için verileri görüyorum, ancak diğerleri bu şekilde görmüyor?
-    answer: "\nMüşteri kiracı verilerin Deniz Feneri'nde göstern diğer bir yolu olarak, MSP'ler İş Ortağı Merkezi aracılığıyla müşterilerle Temsili Yönetici Ayrıcalıkları (DAP) veya Ayrıntılı Temsilci Yönetici Ayrıcalıkları (GDAP) kurmaları gerekir. Daha fazla bilgi için, [İş Ortağı Merkezi'nde müşteriyle bayi ilişkisi isteğinde bulunabilirsiniz](/partner-center/request-a-relationship-with-a-customer). Kiracıların ayrıca en az bir Microsoft 365 İş Ekstra veya Microsoft 365 E3 ve kiracılarında 1000'den az lisanslı kullanıcı olması gerekir. Daha fazla bilgi için Bkz[. Kiracılar Microsoft 365 Lighthouse](m365-lighthouse-requirements.md) [ve Kiracılar Microsoft 365 Lighthouse genel bakış](m365-lighthouse-tenants-page-overview.md).\n"
+    answer: "Müşteri kiracı verilerin Deniz Feneri'nde gösternsin mi, MSP'ler müşteri kiracılarını yönetmek için temsilci erişimleri kurmalı. Temsilcili Yönetici Ayrıcalıkları 'nın müşterileri Deniz Feneri'ne eklemesi için gereklidir. Müşterilerinizle daha güvenli ve temsilcili erişim sağlamak için Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) kurmanızı öneririz. DAP ve GDAP birlikte çalışırken, her iki modelin de bulunduğu müşteriler için GDAP öncelik olacaktır. Kısa süre içinde yalnızca GDAP'ye (ve DAP) sahip olan müşteriler Deniz Feneri'ne yerabilecek. Temsilciyle erişim hakkında daha fazla bilgi için, İş Ortağı Merkezi'nde [müşteriyle bayi ilişkisi isteğinde bulunabilirsiniz](/partner-center/request-a-relationship-with-a-customer). Kiracıların ayrıca en az bir Microsoft 365 İş Ekstra veya Microsoft 365 E3 ve kiracılarında 1000'den az lisanslı kullanıcı olması gerekir. Daha fazla bilgi için Bkz[. Kiracılar Microsoft 365 Lighthouse](m365-lighthouse-requirements.md) [ve Kiracılar Microsoft 365 Lighthouse genel bakış](m365-lighthouse-tenants-page-overview.md).          \n"
   - question: Kiracılar için belirli kiracıları aynı kiracıda görmek Microsoft 365 Lighthouse?
     answer: >
       Deniz Feneri'nde belirli kiracıları ve onların verilerini görmek istemiyorsanız, bu kiracıları devre dışı abilirsiniz. Kiracıyı devre dışı bırakma için şu adımları izleyin:

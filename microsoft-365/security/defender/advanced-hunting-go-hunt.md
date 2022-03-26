@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: e14f2d5e35585cf5b0edfe433084fa7c8a1d5280
-ms.sourcegitcommit: 4af23696ff8b44872330202fe5dbfd2a69d9ddbf
+ms.openlocfilehash: 3d1ec22febe0c0072a4eed2a9b8fece3687762d7
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "62997079"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754269"
 ---
 # <a name="quickly-hunt-for-entity-or-event-information-with-go-hunt"></a>Hareket avı ile varlık veya etkinlik bilgilerini hızla avına çıktılar
 
@@ -38,25 +38,27 @@ ms.locfileid: "62997079"
 
 Hızlı arama *eylemiyle* , güçlü sorgu tabanlı gelişmiş av özelliklerini kullanarak olayları ve çeşitli varlık [türlerini hızla](advanced-hunting-overview.md) araştırabilirsiniz. Bu eylem, seçili etkinlik veya varlıkla ilgili bilgileri bulmak için otomatik olarak gelişmiş bir arama sorgusu çalıştırır.
 
-Etkinlik *veya varlık* ayrıntıları her görüntülendiğinde Bulut için Defender'ın go hunt eylemi çeşitli bölümlerinde kullanılabilir. Örneğin, aşağıdaki bölümlerden *go hunt'ı* kullanabilirsiniz:
+Go *Hunt eylemi* , Bulut için Defender'ın çeşitli bölümlerinde kullanılabilir. Bu eylem, olay veya varlık ayrıntıları görüntülendiğinde görüntülenebilir. Örneğin, aşağıdaki bölümlerden *go hunt* seçeneğini kullanabilirsiniz:
 
-- Olay [sayfasında kullanıcılar](investigate-incidents.md#summary), cihazlar ve bir olayla ilişkilendirilmiş diğer varlıklarla ilgili ayrıntıları gözden geçirebilirsiniz. Bir varlığı seçerek, ek bilgiler ve bu varlık üzerinde gerçekleştirebilirsiniz çeşitli işlemler elde edersiniz. Aşağıdaki örnekte, posta kutusuyla ilgili ayrıntıların yanı sıra posta kutusu hakkında daha fazla bilgi alma seçeneğini gösteren bir posta kutusu seçilmiştir.
+- Olay [sayfasında kullanıcılar](investigate-incidents.md#summary), cihazlar ve bir olayla ilişkilendirilmiş diğer varlıklarla ilgili ayrıntıları gözden geçirebilirsiniz. Bir varlığı seçerek, bu varlık hakkında ek bilgi ve gerçekleştirebilirsiniz. Aşağıdaki örnekte, posta kutusuyla ilgili ayrıntıların ve posta kutusu hakkında daha fazla bilgi için avına alma seçeneğinin yer alan bir posta kutusu seçilmiştir.
 
-    :::image type="content" source="../../media/go-hunt-1-incident.png" alt-text="Yeni portalda **Go hunt** seçeneğinin yer alan **Mailboxes** Microsoft 365 Defender sayfası" lightbox="../../media/go-hunt-1-incident.png":::
+    :::image type="content" source="../../media/go-hunt-1-incident.png" alt-text="Özel portalda Go hunt seçeneğinin olduğu Posta Microsoft 365 Defender sayfası" lightbox="../../media/go-hunt-1-incident.png":::
 
 - Olay sayfasında, Kanıt sekmesinin altında varlıkların listesine de **erişebilirsiniz** . Bu varlıklardan birini seçmek, ilgili varlıkla ilgili bilgileri hızla arama seçeneği sağlar.
 
-    :::image type="content" source="../../media/go-hunt-2-entity.png" alt-text="Portalda **Olay** sayfasındaki bir kanıt için Git Microsoft 365 Defender" lightbox="../../media/go-hunt-2-entity.png":::
+    :::image type="content" source="../../media/go-hunt-2-entity.png" alt-text="Microsoft 365 Defender portalında Olay sayfasındaki kanıt için Git Microsoft 365 Defender seçeneği" lightbox="../../media/go-hunt-2-entity.png":::
 
 
 - Bir cihaz için zaman çizelgesini görüntülerken, o etkinlikle ilgili ek bilgileri görüntülemek için zaman çizelgesinde bir olay seçin. Bir etkinlik seçildikten sonra, gelişmiş avda diğer ilgili etkinlikleri arama seçeneğiniz olur.
 
-    :::image type="content" source="../../media/go-hunt-3-event.png" alt-text="Bir portalda **Zaman çizelgeleri** sekmesindeki bir etkinliğin sayfasındaki ilgili etkinlikler için çağrı yapın** Microsoft 365 Defender" lightbox="../../media/go-hunt-3-event.png":::
+    :::image type="content" source="../../media/go-hunt-3-event.png" alt-text="Bir etkinlik sayfasında, Microsoft 365 Defender portalında Zaman Çizelgeleri sekmesinde yer alan ilgili etkinlikler için Microsoft 365 Defender." lightbox="../../media/go-hunt-3-event.png":::
 
 Go **hunt veya** **Hunt seçildiğinde** , bir varlık veya etkinlik seçtiğinize bağlı olarak ilgili etkinlikler için farklı sorgular geçer.
 
 ## <a name="query-for-entity-information"></a>Varlık bilgileri sorgusu
-Kullanıcı, *cihaz veya* başka herhangi bir tür varlık hakkında bilgi almak için sorgu yapmak için go Hunt kullanılırken, sorgu ilgili tüm şema tablolarında söz konulan olayları denetler. Sonuçların yönetilebilir durumda olması için, sorgunun kapsamı, son 30 gün içinde var olan ve olayla ilişkilendirilmiş olan en erken etkinlikle aynı zaman süresi kapsamındadır.
+Kullanıcı, cihaz *veya* başka herhangi bir tür varlık hakkında bilgi sorgulamak için go hunt kullanabilirsiniz; sorgu, tüm ilgili şema tablolarında, bu varlığa sahip olan herhangi bir olay için bilgi sağlamayı denetler. Sonuçların yönetilebilir durumda tutması için sorgu şöyledir:
+- kapsamda, varlığı içeren son 30 gün içinde en erken etkinlikle aynı zaman dönemine göre kapsamda yer alan
+- ilgili olayla ilişkilendirildi.
 
 Bir cihaz için go hunt sorgusu örneği:
 
@@ -72,7 +74,7 @@ and DeviceName == deviceName
 | take 100
 ```
 ### <a name="supported-entity-types"></a>Desteklenen varlık türleri
-Şu varlık *türlerinden herhangi birini* seçerek go hunt kullanabilirsiniz:
+Şu varlık *türlerinden herhangi birini* seçerek go hunt seçeneğini kullanabilirsiniz:
 
 - Dosyalar
 - E-postalar
@@ -113,6 +115,6 @@ Daha ilgili sonuçlar elde etmek için sorguyu değiştirmenin yanı sıra şunl
 
 ## <a name="related-topics"></a>İlgili konular
 - [Gelişmiş ava genel bakış](advanced-hunting-overview.md)
-- [Sorgu dilini öğrenme](advanced-hunting-query-language.md)
-- [Sorgu sonuçlarıyla çalışma](advanced-hunting-query-results.md)
+- [Sorgu dilini öğrenin](advanced-hunting-query-language.md)
+- [Sorgu sonuçlarıyla çalışın](advanced-hunting-query-results.md)
 - [Özel algılama kuralları](custom-detection-rules.md)

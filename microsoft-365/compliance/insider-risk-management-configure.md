@@ -1,5 +1,5 @@
 ---
-title: Insider risk yönetimiyle çalışmaya başlama
+title: İçeriden risk yönetimini kullanmaya başlama
 description: Kuruluş içinde insider risk yönetimini yapılandırma.
 keywords: Microsoft 365, insider risk yönetimi, risk yönetimi, uyumluluk
 ms.localizationpriority: medium
@@ -16,14 +16,14 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: e21d2904ec2afdcd57b69267f99af6a0726dca56
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: cdd368e7e78458067b9f363d41f7931ac5a2c0cd
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314637"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754217"
 ---
-# <a name="get-started-with-insider-risk-management"></a>Insider risk yönetimiyle çalışmaya başlama
+# <a name="get-started-with-insider-risk-management"></a>İçeriden risk yönetimini kullanmaya başlama
 
 Insider risk yönetimi ilkelerini kullanarak riskli etkinlikleri ve yönetim araçlarını kullanarak, kuruluşta risk uyarıları üzerinde eylem gerçekleştirin. Önkoşulları ayarlamak ve insider risk yönetimi ilkesi yapılandırmak için aşağıdaki adımları tamamlayın.
 
@@ -50,7 +50,7 @@ Mevcut bir Microsoft 365 Kurumsal E5 planınız yoksa ve insider risk yönetimin
 
 ## <a name="recommended-actions-preview"></a>Önerilen eylemler (önizleme)
 
-Önerilen eylemler, kuruluşa hızlı bir şekilde başlamanıza ve insider risk yönetimi yeteneklerine en iyi şekilde sahip olmak için yardımcı olabilir. Genel Bakış **sayfasında yer** alan önerilen eylemler, ilkeleri yapılandırma ve dağıtma ve ilke eşleşmelerinden uyarı oluşturan kullanıcı eylemleri için soruşturma eylemlerine yönelik işlemlerde size yol bu konuda yol yardımcı olur.
+Önerilen eylemler, kuruluşa Insider risk yönetimiyle hızlı bir şekilde yardımcı olabilir. Genel Bakış sayfasında **yer** alan önerilen eylemler, ilkeleri yapılandırma ve dağıtma adımlarında size yol yardımcı olur.
 
 ![Insider risk yönetimi önerilen eylemler.](../media/insider-risk-recommended-actions.png)
 
@@ -62,9 +62,6 @@ Insider risk yönetimi yapılandırmanıza başlamanıza veya en üst düzeye ç
 - **Olası insider risklerini tarama**: Kuruluşta yaşanacak olası insider risklerini bulmak için bir analiz taraması çalıştırın. Sonuçları değerlendirdikten sonra, ayarlamak için önerilen ilkeleri gözden geçirin.
 - **Başkalarına izin atama**: Insider risk özelliklerini yönetmekle sorumlu ek ekip üyeleri varsa, bunları uygun rol gruplarına atamanız gerekir.
 - **İlk ilkenizi** oluşturma: Olası riskli etkinliklere yönelik uyarılar almak için, algılamak ve araştırmak istediğiniz kullanıcı etkinliklerini tanımlayan, önceden tanımlanmış şablonlara dayalı ilkeler ayarlamelisiniz.
-- **Etkinliği not edilen kullanıcıları** gözden geçirme: Kullanıcılar panosu,  uyarı oluşturmak için etkinliğin eşiği karşı edip olmadığına bakılmaksızın, etkinliğine şu anda risk puanları atanmış olan kullanıcıları görüntülemeye olanak sağlar.
-- **Uyarıları gözden geçirme**: Kullanıcı için bir tetikleyici olayı gerçekleşirse, ilkeler algılanan etkinliğe risk puanları atamaya başlar. Risk puanı bir ilkenin eşiklerini karşılarsa, bu kullanıcı için puanlandır olunan tüm etkinliklerin ayrıntılı dökümünü içeren bir uyarıyla karşılaşın.
-- **Vakayı araştırma**: Olası Insider risklerini tanımlamak için daha fazla araştırma gerektiğinde durumlar uyarılardan el ile oluşturulur. Her olay tek bir kullanıcıya yöneliktir ve kullanıcı için mevcut bir vakaya veya yeni bir vakaya birden çok uyarı eklenebilir.
 
 Bu deneyime dahil edilen önerilen her eylemin dört özniteliği vardır:
 

@@ -22,12 +22,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Kullanıcıların SharePoint kaç dosya depola olduğunu, kaç kullanıcının etkin olarak SharePoint ve kullanılan toplam depolama alanını bilmek için en iyi site kullanım raporunu elde edin.
-ms.openlocfilehash: da857d1814bf0aa27532d3f730d352c6edeb66e9
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: ae25562924f569431b3a6d7eda3099f69cd912b1
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63400691"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754231"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---sharepoint-site-usage"></a>Microsoft 365 Merkezinde Rapor Raporları - SharePoint kullanımını sağlar
 
@@ -80,7 +80,7 @@ En **SharePoint kullanımı** raporu, son 7 gün, 30 gün, 90 gün veya 180 gün
 |Unmanaged device policy  | Unmanaged devices için site erişim ilkesi.  |
 |Coğrafi konum  | Sitenin coğrafi konumu.  |
 |Dosyalar  |Site'nin dosya sayısı. |
-|Etkin dosyalar  | Site'nin etkin dosyalarının sayısı.<br/> NOT: Rapor için belirtilen dönem içinde dosya kaldırıldısa, raporda gösterilen etkin dosyaların sayısı sitenin geçerli dosya sayısından büyük olabilir.  |
+|Etkin dosyalar  | Site'nin etkin dosyalarının sayısı. Belirtilen süre içinde kaydedilen, eşitlenen, değiştirilen veya paylaşılan bir dosya etkin olarak kabul edilir.<br/> NOT: Rapor için belirtilen dönem içinde dosya kaldırıldısa, raporda gösterilen etkin dosyaların sayısı sitenin geçerli dosya sayısından büyük olabilir.  |
 |Depolama kullanılan alan (MB)  |Şu anda sitede kullanılan depolama miktarı.  |
 |Depolama (MB)  |Site için ayrılan depolama alanı üst miktarı.  |
 |Sayfa görünümleri  |Sayfaların sitede kaç kez görüntülendiklerinin sayısı.  |

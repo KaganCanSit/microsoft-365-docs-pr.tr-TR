@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP)'ler için, Hizmet Sağlayıcılarını (MSP) kullanmak Microsoft 365 Lighthouse.
-ms.openlocfilehash: 51dd2404f03dc58d5975a37c386ba9c8f1333763
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b26eb34c728121b4c6f2474dd52aa2a6824d92d6
+ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63327259"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63775422"
 ---
 # <a name="requirements-for-microsoft-365-lighthouse"></a>Sistem gereksinimleri Microsoft 365 Lighthouse
 
@@ -29,24 +29,26 @@ Microsoft 365 Lighthouse Küçük ve orta ölçekli işletme (SMB) müşterileri
 
 MSP'ler, Deniz Bulut Çözümü Sağlayıcısı'ı kullanmak için Bulut Çözümü Sağlayıcısı (CSP) programına Dolaylı Bayi veya Doğrudan Fatura iş ortağı olarak kaydolmaları gerekir.  
 
-Buna ek olarak, her MSP müşteri kiracısı aşağıdaki gereksinimleri karşıerek Deniz Feneri'ne hak kazanmakla hak kazanmakla da gerekir: 
+Buna ek olarak, her MSP müşteri kiracısı aşağıdaki gereksinimleri karşıerek Deniz Feneri'ne hak kazanmakla hak kazanmakla da gerekir:
  
-- MSP için Temsili Yönetici Ayrıcalıkları (DAP) veya Ayrıntılı Temsili Yönetici Ayrıcalıkları (GDAP) 
-- En az bir Microsoft 365 İş Ekstra veya Microsoft 365 E3 lisansı 
-- 1000'den az lisanslı kullanıcı  
+- Müşteri kiracısı yönetimi için Yönetilen Hizmet Sağlayıcısı (MSP) için temsilci olarak ayarlanmış erişime sahip olmak*
+- 365 İş lisansınız Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows lisansa sahip olmalı
+- 1000'den fazla lisanslı kullanıcıya sahip olmalı
+
+*Temsilci Yönetici Ayrıcalıkları (DAP), müşterileri Deniz Feneri'ne ekleme için gereklidir. Ayrıca, daha güvenli ve temsilcili erişim sağlamak için müşterilerinizle Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) kurmanızı öneririz. DAP ve GDAP birlikte çalışırken, her iki modelin de bulunduğu müşteriler için GDAP öncelik olacaktır. Kısa süre içinde yalnızca GDAP'ye (ve DAP) sahip olan müşteriler Deniz Feneri'ne yerabilecek.
 
 ## <a name="requirements-for-enablingdevice-management"></a>Cihaz yönetimini etkinleştirme gereksinimleri
 
 Cihaz yönetimi sayfalarında müşteri kiracı cihazlarını görüntülemek için MSP'nin şunları yapmalıdır:
 
 - Tüm müşteri cihazlarını Microsoft Endpoint Manager (MEM) olarak kaydettir.Daha fazla bilgi için bkz[. Cihazları Microsoft Intune](/mem/intune/enrollment/).
-- Tüm müşteri cihazlarına uyumluluk ilkeleri attayabilirsiniz.Daha fazla bilgi için bkz[. 2013'te uyumluluk Microsoft Intune](/mem/intune/protect/create-compliance-policy). 
+- Tüm müşteri cihazlarına uyumluluk ilkeleri attayabilirsiniz.Daha fazla bilgi için bkz[. 2013'te uyumluluk Microsoft Intune](/mem/intune/protect/create-compliance-policy).
 
-## <a name="requirements-for-enabling-usermanagement"></a>Kullanıcı yönetimini etkinleştirme gereksinimleri 
+## <a name="requirements-for-enabling-usermanagement"></a>Kullanıcı yönetimini etkinleştirme gereksinimleri
 
-Müşteri verilerini, Risky kullanıcıları, Çok Faktörlü kimlik doğrulaması ve Parola sıfırlama gibi kullanıcı yönetimi sayfalarında gösteriymleri için, müşteri kiracılarının Azure Active Directory Premium P1 veya sonrası için lisansları olmalıdır. Azure AD Premium P1, e-Microsoft 365 İş Ekstra ve Microsoft 365 E3.   
+Müşteri verilerini, Risky kullanıcıları, Çok Faktörlü kimlik doğrulaması ve Parola sıfırlama gibi kullanıcı yönetimi sayfalarında gösteriymleri için, müşteri kiracılarının Azure Active Directory Premium P1 veya sonrası için lisansları olmalıdır. Azure AD Premium P1, e-Microsoft 365 İş Ekstra ve Microsoft 365 E3.
 
-## <a name="requirements-for-enablingthreat-management"></a>Tehdit yönetimini etkinleştirme gereksinimleri 
+## <a name="requirements-for-enablingthreat-management"></a>Tehdit yönetimini etkinleştirme gereksinimleri
 
 Müşteri kiracı cihazlarını ve tehdit sayfalarını görüntülemek için, tüm müşteri kiracı cihazlarını Microsoft Endpoint Manager'a (MEM) kaydetmeniz ve diğer cihazlara çalıştırarak onları korumanız Microsoft Defender Virüsten Koruma.  
 
@@ -54,8 +56,8 @@ Daha fazla bilgi için bkz[. Cihazları Microsoft Intune](/mem/intune/enrollment
 
 Microsoft Defender Virüsten Koruma, Windows sisteminin bir parçasıdır ve işletim sistemini çalıştıran cihazlarda varsayılan olarak Windows 10.  
 
-> [!NOTE] 
-> Microsoft dışı bir virüsten koruma çözümü kullanıyor ve herhangi bir çözüm Microsoft Defender Virüsten Koruma, Microsoft Defender Virüsten Koruma devre dışı bırakılır. Microsoft olmayan virüsten koruma çözümünü kaldırdığınız zaman, Microsoft Defender Virüsten Koruma cihazlarınızı tehditlere karşı korumak için Windows etkinleştirilir.    
+> [!NOTE]
+> Microsoft dışı bir virüsten koruma çözümü kullanıyor ve herhangi bir çözüm Microsoft Defender Virüsten Koruma, Microsoft Defender Virüsten Koruma devre dışı bırakılır. Microsoft olmayan virüsten koruma çözümünü kaldırdığınız zaman, Microsoft Defender Virüsten Koruma cihazlarınızı tehditlere karşı korumak için Windows etkinleştirilir.
 
 ## <a name="related-content"></a>İlgili içerik
 

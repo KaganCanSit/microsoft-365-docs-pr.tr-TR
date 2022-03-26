@@ -16,12 +16,12 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Farklı gruplarda, gruplarda Microsoft 365 yönetme hakkında Teams bilgi SharePoint.
-ms.openlocfilehash: e01326093476f341c6c4c75448efbdf8c745779f
-ms.sourcegitcommit: c2b5ce3150ae998e18a51bad23277cedad1f06c6
+ms.openlocfilehash: 3f4304a54cd1eae86c98d530e5a4ec4db5f6dc66
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "63005032"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63716178"
 ---
 # <a name="governing-access-in-microsoft-365-groups-teams-and-sharepoint"></a>Farklı gruplarda, Microsoft 365 ve Teams için SharePoint
 
@@ -36,7 +36,7 @@ Aşağıdaki tabloda, çalışma sayfalarındaki erişim denetimleri için hızl
 ||Kurallara dayalı dinamik grup üyeliği|[Grup içinde dinamik grup oluşturma veya Azure Active Directory](/azure/active-directory/users-groups-roles/groups-create-rule)|
 ||Dosyaları, klasörleri ve siteleri kimlerin paylaşalırı kontrol edin.|[Erişim isteklerini ayarlama ve yönetme](https://support.microsoft.com/office/94b26e0b-2822-49d4-929a-8455698654b3)|
 |Koşullu erişim|||
-||Multifactor Authentication|[Azure AD Multifactor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)|
+||Çok Faktörlü Kimlik Doğrulaması|[Azure AD Çok Faktörlü Kimlik Doğrulaması](/azure/active-directory/authentication/concept-mfa-howitworks)|
 ||Grup, ekip veya site duyarlılığına göre cihaz erişimini kontrol edin.|[Aynı sitelerde, gruplarda ve Microsoft Teams sitelerde Microsoft 365 için duyarlılık SharePoint kullanma](../compliance/sensitivity-labels-teams-groups-sites.md)|
 ||Site erişimini, unmanaged cihazlar için sınırlandırma.|[Kolay SharePoint cihazlardan erişim denetimi](/sharepoint/control-access-from-unmanaged-devices)|
 ||Konuma göre site erişimini denetleme|[Ağ konumu temel SharePoint veriye OneDrive ve verilere erişimi denetleme](/sharepoint/control-access-based-on-network-location)|
@@ -53,7 +53,6 @@ Aşağıdaki tabloda, çalışma sayfalarındaki erişim denetimleri için hızl
 |Kullanıcı yönetimi|||
 ||Ekip ve grup üyeliğini düzenli olarak gözden geçirme.|[Azure AD erişim incelemeleri nedir?](/azure/active-directory/governance/access-reviews-overview)|
 ||Gruplara ve ekiplere erişim yönetimini otomatikleştirin.|[Azure AD yetkilendirme yönetimi nedir?](/azure/active-directory/governance/entitlement-management-overview)|
-||Kişilerin belirli bir gün içinde özel kanallar oluşturmasına izin Teams.|[Özel kanalların yaşam döngüsünü Microsoft Teams](/MicrosoftTeams/private-channels-life-cycle-management)|
 
 ## <a name="membership"></a>Üyelik
 
@@ -72,9 +71,9 @@ SharePoint siteleri grup veya ekip üyeliği dışında sahip, üye ve ziyaretç
 
 ## <a name="conditional-access"></a>Koşullu erişim
 
-Birden Microsoft 365, hem kuruluşun içindeki hem de dışındaki kişiler için çok faktörlü kimlik doğrulaması gerekli olabilir. kişilerin ikinci bir kimlik doğrulama faktörü istendiğinde, bu durum için birçok seçenek vardır. Çok faktörlü kimlik doğrulamasını organizasyonunız için dağıtmanızı kesinlikle öneririz:
+Bu Microsoft 365, hem kuruluş içindeki hem de dışındaki kişiler için çok faktörlü kimlik doğrulaması gerekli olabilir. kişilerin ikinci bir kimlik doğrulama faktörü istendiğinde, bu durum için birçok seçenek vardır. Çok faktörlü kimlik doğrulamasını organizasyonunız için dağıtmanızı kesinlikle öneririz:
 
-- [Azure AD Multifactor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
+- [Azure AD çok faktörlü kimlik doğrulaması](/azure/active-directory/authentication/concept-mfa-howitworks)
 
 Bazı grup ve ekiplerde hassas bilgiler varsa, bir grup veya ekibin duyarlılık etiketine bağlı olarak cihaz yönetimi ilkelerini zorunlu  edebilirsiniz. Erişimi tamamen unmanaged cihazlarından engelleyebilir veya sınırlı, yalnızca web erişimine izin veebilirsiniz:
 
@@ -132,7 +131,7 @@ Microsoft 365, birçok farklı bilgi paylaşma yöntemi sunar. Hassas bilginiz v
 
 Ek kaynaklar:
 
-- [İş Birliği ile güvenli işbirliği Microsoft 365](./setup-secure-collaboration-with-teams.md)
+- [Microsoft 365 ile güvenli işbirliği kurun](./setup-secure-collaboration-with-teams.md)
 
 - [Kimliği doğrulanmamış kullanıcılarla dosya ve klasör paylaşmak için en iyi yöntemler](./best-practices-anonymous-sharing.md)
 
@@ -156,7 +155,9 @@ Ekip üyeleri Teams alt kümesi arasında kapsamları olan konuşmalara ve dosya
 
 - [Kanallarda özel Microsoft Teams](/MicrosoftTeams/private-channels)
 
-- [Özel kanalların yaşam döngüsünü Microsoft Teams](/MicrosoftTeams/private-channels-life-cycle-management)
+Paylaşılan kanallar, ekibin dışından veya kuruluş dışından kişileri davet etmene olanak sağlar. İşle ilgili özel gereksinimlerinize ve dış paylaşım ilkelerinize bağlı olarak, bu beceriye izin vermek veya engellemek istiyor olabilirsiniz.
+
+- [Paylaşılan kanallar](/MicrosoftTeams/shared-channels)
 
 Ek kaynaklar:
 

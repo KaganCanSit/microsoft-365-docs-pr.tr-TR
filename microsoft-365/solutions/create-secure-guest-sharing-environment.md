@@ -19,12 +19,12 @@ ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: İş birliği geliştirmek için konuk erişimi sağlamak ve bu ortamda güvenli bir Microsoft 365 için kullanılabilir seçenekler hakkında bilgi öğrenin.
-ms.openlocfilehash: 97b9c3c26fce137ad4471bbf080d4b7340c8b622
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 13190f2dba0f2cb1f4817a1a831b8d78359e1b81
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63323801"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63715151"
 ---
 # <a name="create-a-secure-guest-sharing-environment"></a>Güvenli bir konuk paylaşım ortamı oluşturma
 
@@ -68,7 +68,7 @@ Artık konuğun paylaşılan içeriğe, sitelere veya ekiplere erişmeden önce 
 
 ### <a name="more-information"></a>Daha fazla bilgi
 
-[Azure AD Multi-Factor Authentication dağıtımını planlama](/azure/active-directory/authentication/howto-mfa-getstarted)
+[Azure AD çok faktörlü kimlik doğrulama dağıtımını planlama](/azure/active-directory/authentication/howto-mfa-getstarted)
 
 ## <a name="set-up-a-terms-of-use-for-guests"></a>Konuklar için kullanım koşulları ayarlama
 
@@ -143,7 +143,7 @@ Konuk erişimi incelemesini ayarlamak için
 13. Bir Gözden **Geçir adı yazın** ve ayarları gözden geçirin.
 14. **Oluştur'a tıklayın**.
 
-SharePoint ve OneDrive konumlarına ilişkin olarak, belgenin tüm dış kullanıcılar için paylaşılıyor olup olmadığı bakılmaksızın, hassas bilgilerin algılanmasıyla hemen önceden engellenmiş olacağını, ancak iç kullanıcıların belgeye erişmeye devam edeceğini unutmayın.
+SharePoint ve OneDrive konumlarına bakılmaksızın, iç kullanıcılar belgeye erişmeye devam ederken, belgenin tüm konuklar için paylaşılıyor olup olmadığı bakılmaksızın, belgelerin hassas bilgileri algıladikten hemen sonra önceden engellenmiş olacağını unutmayın.
 
 ### <a name="more-information"></a>Daha fazla bilgi
 
@@ -254,7 +254,7 @@ Otomatik etiket ilkesi oluşturmak için
 
 ### <a name="more-information"></a>Daha fazla bilgi
 
-[Otomatik olarak içeriğe duyarlılık etiketi uygulama](../compliance/apply-sensitivity-label-automatically.md)
+[İçeriğe otomatik olarak bir hassasiyet etiketi uygulama](../compliance/apply-sensitivity-label-automatically.md)
 
 ## <a name="create-a-dlp-policy-to-remove-guest-access-to-highly-sensitive-files"></a>Çok hassas dosyalara konuk erişimini kaldırmak için DLP ilkesi oluşturma
 
@@ -283,7 +283,10 @@ DLP kuralı oluşturmak için
 13. Test seçeneklerinizi seçin ve Sonraki'ye **tıklayın**.
 14. **Gönder'e** ve ardından **Bitti'ye tıklayın**.
 
-Konuk sitenin veya ekibin bir bütün olarak üyesi ise, bu ilkenin erişimi kaldırmaz. Bir sitede veya ekipte konuk üyeleri bulunan üst düzeyde hassas belgeler kullanmayı planlıyorsanız, [Teams'de](https://support.microsoft.com/office/de3e20b0-7494-439c-b7e5-75899ebe6a0e) özel kanalları kullanmayı ve yalnızca özel kanallarda kuruluş üyelerinin izin vermelerini göz önünde bulundurabilirsiniz.
+Konuk sitenin veya ekibin bir bütün olarak üyesi ise, bu ilkenin erişimi kaldırmaz. Bir sitede veya ekipte konuk üyelere sahip üst düzeyde hassas belgeler olmasını planlıyorsanız şu seçenekleri göz önünde bulundurabilirsiniz:
+
+- Özel [kanallar kullanın](/MicrosoftTeams/private-channels) ve yalnızca özel kanallarda kuruluş üyelerinin izin vermesine izin verme.
+- Paylaşılan [kanalları,](/MicrosoftTeams/shared-channels) yalnızca kuruluşun kendisinde yer alan ve organizasyon dışındaki çalışanlarla işbirliği yapmak için kullanın.
 
 ## <a name="additional-options"></a>Ek seçenekler
 

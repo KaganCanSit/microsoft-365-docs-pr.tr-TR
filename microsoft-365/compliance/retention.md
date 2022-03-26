@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Size gerekenleri korumanıza ve neye ihtiyacınız olmadığını silmeye yardımcı olan bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: ac57859d7f27b22060b88189e79d386791535c9e
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: a7498685709dfc24feae61453057d51025ee9168
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63319399"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63716309"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi
 
@@ -117,6 +117,9 @@ Bekletme ilkeleri aşağıdaki konumlara uygulanabilir:
 - Teams kanal iletilerini gönderme
 - Yammer iletilerini gönderme
 - Yammer iletilerini gönderme
+
+> [!NOTE]
+> Teams mesajları artık paylaşılan kanalları (şu [anda](/MicrosoftTeams/shared-channels) önizlemede olan) ve standart kanalları içerir.
 
 Birden çok konuma ya da belirli konumlara veya kullanıcılara tek bir ilkeyi çok verimli bir şekilde uygulayabilirsiniz.
 
@@ -597,7 +600,7 @@ Verileri korumak için eski eBulma araçlarını kullanıyorsanız, aşağıdaki
 - SharePoint ve OneDrive: 
     - [eBulma Merkezi'nde vakaya içerik ekleme ve kaynakları yerinde yerinde tutma](/SharePoint/governance/add-content-to-a-case-and-place-sources-on-hold-in-the-ediscovery-center)
 
-- [Eski eBulma araçlarının emeklilik](legacy-ediscovery-retirement.md)
+- [Eski eKeşif araçlarını kullanımdan kaldırma](legacy-ediscovery-retirement.md)
 
 ## <a name="use-retention-policies-and-retention-labels-instead-of-older-features"></a>Eski özellikler yerine bekletme ilkelerini ve bekletme etiketlerini kullanma
 

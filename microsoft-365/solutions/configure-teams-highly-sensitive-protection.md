@@ -20,12 +20,12 @@ ms.custom:
 - admindeeplinkSPO
 recommendations: false
 description: Çok hassas veriler için korumayla ekipleri dağıtmayı öğrenin.
-ms.openlocfilehash: 053f92f0a3f7551d747c81b13b3832798c7e953c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 02b74d6f2a2e168f07a095207dcdc1bb6785aa8f
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312604"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63715223"
 ---
 # <a name="configure-teams-with-protection-for-highly-sensitive-data"></a>Çok hassas veriler için ekipleri koruma ile yapılandırma
 
@@ -62,7 +62,7 @@ Konuk paylaşımına izin vermek veya engellemek için, her ikisi de daha sonra 
 
 Çok hassas bir koruma düzeyi için ekibi sınıflandırmak için bir duyarlılık etiketi kullan kullan istiyoruz. Bu etiket, bu ekiplerde veya diğer ekiplerde ya da özel ekipler veya ekip dosyaları gibi diğer dosya konumlarında tek tek dosyaları sınıflandırmak SharePoint OneDrive. 
 
-İlk adım olarak, sizin için duyarlılık etiketlerini etkinleştirmeniz Teams. Ayrıntılar [için bkz. Microsoft Teams'ta, gruplarda Office 365 ve sitelerde SharePoint için duyarlılık etiketleri](../compliance/sensitivity-labels-teams-groups-sites.md) kullanma.
+İlk adım olarak, sizin için duyarlılık etiketlerini etkinleştirmeniz Teams. Ayrıntılar [için bkz. Microsoft Teams'ta, gruplarda Office 365 ve sitelerde içeriği SharePoint duyarlılık etiketleri](../compliance/sensitivity-labels-teams-groups-sites.md) kullanma.
 
 Zaten kuruluşta dağıtılmış duyarlılık etiketleriniz varsa, bu etiketin genel etiket stratejinize nasıl uyduğunu düşünün. Gerekirse, kuruluşun  ihtiyaçlarını karşılamak için adı veya ayarları değiştirebilirsiniz.
 
@@ -119,6 +119,10 @@ Bu katmanda, özel kanallar oluşturmayı ekip sahipleri ile kısıtlarız.
 
 Ayrıca, kimlerin özel [kanal oluştura](/MicrosoftTeams/teams-policies) onu kontrol etmek için ekip ilkelerini de kullanabilirsiniz.
 
+## <a name="shared-channel-settings"></a>Paylaşılan kanal ayarları
+
+[Paylaşılan kanalların](/MicrosoftTeams/shared-channels) ekip düzeyi ayarları yok. Yönetim merkezinde ve Azure AD'de Teams paylaşılan kanal ayarları, duyarlılık ne olursa olsun tüm ekiplerde kullanılabilir.
+
 ## <a name="sharepoint-settings"></a>SharePoint ayarları
 
 Üst düzeyde hassas etikete sahip yeni bir ekip  oluşturmanıza yardımcı olacak iki SharePoint:
@@ -136,9 +140,7 @@ Site varsayılan paylaşım bağlantı türünü güncelleştirmek için
 1. Varsayılan paylaşım bağlantı türü'nin altında Kuruluş **düzeyi ayarıyla aynı onay kutusunu temizleyin** ve Varolan erişimi olan **kişiler'i seçin**.
 1. **Kaydet**'i seçin.
 
-#### <a name="private-channels"></a>Özel kanallar
-
-Eklere özel kanallar eklersiniz, her özel kanal varsayılan paylaşım SharePoint yeni bir kanal sitesi oluşturur. Bu siteler SharePoint yönetim merkezinde görünmez, bu nedenle Set-SPOSite paylaşımı ayarlarını güncelleştirmek için Set-SPOSite PowerShell cmdlet'ini kullan gerekir.
+Ek ekiplere özel veya paylaşılan kanallar eklerken her biri varsayılan paylaşım SharePoint yeni bir site oluşturur. Ekiple ilişkili siteleri SharePoint yönetim merkezinden güncelleştirebilirsiniz.
 
 ### <a name="site-sharing-settings"></a>Site paylaşım ayarları
 

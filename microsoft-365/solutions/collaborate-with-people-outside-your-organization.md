@@ -19,31 +19,33 @@ ms.localizationpriority: medium
 f1.keywords: NOCSH
 recommendations: false
 description: Kuruluş dışından çalışanlarla Microsoft 365 için Teams, OneDrive ve SharePoint uygulamaları yapılandırmayı öğrenin.
-ms.openlocfilehash: 0a67eff5c201eaa82e36152c5a429df00c3ec876
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 65511cbafdc1f5a666c11e1bef7fefd6e6852ee3
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988179"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63712798"
 ---
 # <a name="collaborating-with-people-outside-your-organization"></a>Kuruluş dışındaki çalışanlarla işbirliği
 
-Dış paylaşım özellikleri Microsoft 365 iş ortakları, satıcılar, müşteriler ve dizinde hesabı olmadığı diğer kişiler ile işbirliği yapma fırsatı sunar. Ekiplerin veya sitelerin tamamını, kuruluş dışındakilerle veya yalnızca tek tek dosyaları paylaşabilirsiniz.
+Dış paylaşım özellikleri Microsoft 365 iş ortakları, satıcılar, müşteriler ve dizinde hesabı olmadığı diğer kişiler ile işbirliği yapma fırsatı sunar. Ekiplerin, kanalların veya sitelerin tamamını, kuruluş dışındakilerle ya da yalnızca tek tek dosyaları paylaşabilirsiniz.
 
-Kuruluş dışındaki çalışanlarla işbirliği iki önemli bileşenden oluşur:
+Kuruluş dışından çalışanlarla işbirliği yapmak şu önemli bileşenlerden oluşur:
 
 - **Paylaşımı etkinleştirme** - Kuruluş için istediğiniz paylaşım düzeyine izin Azure Active Directory, Teams, Microsoft 365 Grupları ve SharePoint genelinde paylaşım denetimlerini yapılandırabilirsiniz.
+- **Kuruluş ilişkilerini yapılandırma** - Paylaşılan kanalları kullanıyorsanız, işbirliği yapmak istediğiniz her kuruluşta B2B doğrudan bağlanma erişimine izin vermek için Azure Active Directory'de kiracılar arası erişim ayarlarını yapılandırmanız gerekir. (Bu kuruluşların kiracınız ile kuruluş ilişkilerini de yapılandırmaları gerekir.)
 - **Ek güvenliği etkinleştirme** - Temel paylaşım özellikleri, kuruluş dışından kişilerin kimlik doğrulaması yapmalarını gerektirecek şekilde ya da yapılandırılana kadar, Microsoft 365 verilerinizi korumanıza ve dış paylaşım yaparken yönetim ilkelerinizi korumanıza yardımcı olacak birçok ek güvenlik ve uyumluluk özelliği sağlar.
 
 Genel [işbirliği kılavuzunda dış Microsoft 365 bağlı Microsoft Teams bağlı Microsoft 365](/microsoft-365/solutions/setup-secure-collaboration-with-teams) güvenli işbirliğini ayarlama makalesini Microsoft 365 okuyun.
 
 ## <a name="enable-sharing"></a>Paylaşımı etkinleştir
 
-Varsayılan olarak, Microsoft 365 dışından kişilerle paylaşım etkinleştirilir. Birçok dış paylaşım senaryosu, başka yapılandırmalara gerek kalmadan çalışır. Kullanmakta olduğu senaryonun ayarlarını onaylamak veya yeni bir senaryoyu etkinleştirmek için aşağıdaki seçeneklerden birini belirleyin:
+Varsayılan olarak, konuk erişimini veya anonim erişimi kullanarak kuruluş dışındaki kullanıcılarla paylaşım özelliği etkinleştirilir, ancak paylaşılan kanalların Azure AD'de kuruluş ilişkileri yapılandırarak etkinleştirilmesi gerekir. Çoğu konuk paylaşımı senaryosu, başka yapılandırmaya gerek kalmadan çalışır. Kullanmakta olduğu senaryonun ayarlarını onaylamak veya yeni bir senaryoyu etkinleştirmek için aşağıdaki seçeneklerden birini belirleyin:
 
 - [Belgeler üzerinde birlikte çalışma](collaborate-on-documents.md) - Dosyaların Microsoft 365 klasörler üzerinde kuruluş dışındaki kullanıcılarla (hem konuklar hem de kimliği doğrulanmamış kullanıcılar) paylaşıma ve işbirliğine izin verecek şekilde belgeleri nasıl yapılandırabilirsiniz?
 - [Bir sitede işbirliği yapma](collaborate-in-site.md) - Bir siteyi konukla Microsoft 365 izin SharePoint yapılandırmayı öğrenin.
 - [Ekip olarak işbirliği yapma](collaborate-as-team.md) - ekip içinde konuk Microsoft 365 işbirliğini etkinleştirmek için ekibi Teams.
+- [Paylaşılan bir kanalda, kuruluşun dışındaki](/microsoft-365/solutions/collaborate-teams-direct-connect) kişiler ile işbirliği yapmak için kanalda dış katılımcılarla işbirliği yapın.
 
 Konuk paylaşım ayarları hakkında ayrıntılı bilgi için Microsoft 365 bkz. [Microsoft 365 göz atabilirsiniz](microsoft-365-guest-settings.md).
 
@@ -57,7 +59,9 @@ Kuruluş dışındaki kişilerle paylaşımda kullanmak istediğiniz senaryoyu e
 
 ## <a name="collaborate-with-partner-companies"></a>İş ortağı şirketlerle işbirliği yapma
 
-Başka bir kuruluştan çok sayıda konuk içeren büyük bir proje üzerinde çalışıyorsanız veya sürekli olarak konukların değişmektedir satıcı ilişkisi devam ediyorsa, konuk yönetimini basitleştirmek ve iş ortağı şirketin bu sorumlulukta paylaşmasına izin vermek için Azure Active Directory'te yetkilendirme yönetimini kullanabilirsiniz. Ayrıntılı [bilgi için bkz. Yönetilen konuklarla B2B extranet](b2b-extranet.md) oluşturma.
+Başka bir kuruluştan konuk içeren büyük bir proje üzerinde çalışırken paylaşılan kanalları düşünün. Paylaşılan kanallar konuk hesaplarını kullanmamalarından dolayı, diğer kuruluşta yer alan kullanıcılar, kuruluşta ayrı olarak oturum açmak zorunda kalmadan paylaşılan kanala doğrudan erişim sağlar.
+
+Konukların sıklıkla değişmektedir olduğu sürekli bir satıcı ilişkiniz varsa, konuk yönetimini basitleştirmek ve iş ortağı şirketinin bu sorumlulukta paylaşmasına izin vermek için Azure Active Directory'te yetkilendirme yönetimini kullanabilirsiniz. Ayrıntılı [bilgi için bkz. Yönetilen konuklarla B2B extranet](b2b-extranet.md) oluşturma.
 
 ## <a name="limit-sharing"></a>Paylaşımı sınırla
 

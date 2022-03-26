@@ -6,7 +6,7 @@ ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
 audience: Admin
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: O365-seccomp
 ms.collection: m365-security-compliance
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft 365 çözümleri deneme sürümü oynatma kitabınız.
-ms.openlocfilehash: fc04e5d745997e31799511d4a9edb7e7207f4088
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: 896e3fe81c74cc2a594ab88807e0b9505fed1a18
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016477"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754250"
 ---
 # <a name="trial-playbook-microsoft-365-compliance-solutions"></a>Deneme oynatma kitabı: Microsoft 365 Uyumluluk çözümleri
 
@@ -225,7 +225,7 @@ Kuruluşun iç ve dış soruşturmalarına yanıt veren içerikleri korumak, top
 Kullanıcıya Advanced eDiscovery veya bir davanın üyesi olarak Advanced eDiscovery için, kullanıcıya uygun izinler atanabilir.
 
 1. [EBulma Advanced eDiscovery ayarlama – eBulma izinleri atama](get-started-with-advanced-ediscovery.md#step-2-assign-ediscovery-permissions)
-1. [Vakaya üye ekleme veya vakadan üye kaldırma](add-or-remove-members-from-a-case-in-advanced-ediscovery.md)
+1. [Bir vakaya üye ekleme veya kaldırma](add-or-remove-members-from-a-case-in-advanced-ediscovery.md)
 
 ### <a name="step-2-required-create-a-case"></a>2. Adım (gerekli): Olay oluşturma
 
@@ -243,7 +243,7 @@ Diğer kuruluşlar kritik eK Advanced eDiscovery için Microsoft 365 çözümler
 Kuruluşların kişilerin vakaları oluşturmasına ve kullanmaya başlamasına izin vermek için, kuruluşun tüm örnekleri için geçerli olan genel ayarları yapılandırmanız gerekir. Şu anda tek genel ayar avukat-istemci ayrıcalık algılaması **özelliğidir** (gelecekte daha fazla genel ayar kullanılabilir).
 
 1. [Genel Advanced eDiscovery'i Ayarlar](get-started-with-advanced-ediscovery.md#step-3-configure-global-settings-for-advanced-ediscovery)
-1. [Arama ve çözümleme ayarlarını yapılandırma](configure-search-and-analytics-settings-in-advanced-ediscovery.md)
+1. [Arama ve analiz ayarlarını yapılandırma](configure-search-and-analytics-settings-in-advanced-ediscovery.md)
 1. [İş yerlerinde işleri Advanced eDiscovery](managing-jobs-ediscovery20.md)
 
 ### <a name="step-4-optional-compliance-boundaries"></a>4. Adım (isteğe bağlı): [Uyumluluk Sınırları](set-up-compliance-boundaries.md)
@@ -434,6 +434,6 @@ Veri toplama, veri aktarımları ve verilerin fazla şekillendirimini gibi gizli
 
 **Neler dahildir: Ürün** katmanına göre listelenen uyumluluk Microsoft 365 özelliklerinin tam listesi için Özellik Matrisi'ne [bakın](https://go.microsoft.com/fwlink/?linkid=2139145).
 
-**Microsoft Güvenlik Teknik İçerik Kitaplığı**: İhtiyaçlarınızı karşılamak için etkileşimli kılavuzları ve diğer öğrenme içeriğini bulmak için bu kitaplığı keşfedin. [Kitaplık'ı ziyaret edin](/security/content-library).
+**Microsoft Güvenlik Teknik İçerik Kitaplığı**: İhtiyaçlarınızı karşılamak için etkileşimli kılavuzları ve diğer öğrenme içeriğini bulmak için bu kitaplığı keşfedin. [Kitaplık'ı ziyaret edin](/security).
 
 **Microsoft Güvenlik Kaynakları**: Kötü amaçlı yazılımdan Sıfır Güven'e kadar, kuruma uygun tüm kaynakları ve güvenlik ihtiyaçlarını karşılar. [Kaynaklar'ı ziyaret edin](/security/business/resources).

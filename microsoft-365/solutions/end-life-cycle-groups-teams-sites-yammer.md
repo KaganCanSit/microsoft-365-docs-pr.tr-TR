@@ -16,12 +16,12 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Gruplar, ekipler ve ekipler için yaşam döngüsü sonu Yammer.
-ms.openlocfilehash: 883af3878bd0bc68aa539fc1cc36b66c4f1cfe9e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: d48b1950d65c91c5869cd65e47790f4c65d69f0f
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985179"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63715882"
 ---
 # <a name="end-of-lifecycle-options-for-groups-teams-and-yammer"></a>Gruplar, ekipler ve ekipler için yaşam döngüsü sonu Yammer
 
@@ -93,7 +93,7 @@ Ekibi [arşivlemenin avantajı, ekibi](/microsoftteams/archive-or-delete-a-team)
 
 Ekip sahibi tarafından arşivlenen ekip, üyeler için hem ekip içindeki içerikler için hem de seçiliyse ilişkili site için salt SharePoint ayarlanır. Bu eylemin amacı, kanallarda yapılan konuşmaların mevcut durumlarında ve dosya ve wiki SharePoint tabanlı içeriklerde korunmasını sağlamaktır.
 
-Site SharePoint görünür bir değişiklik yok. Bununla birlikte, Herhangi bir dosya veya liste üzerinde hiçbir değişiklik SharePoint, Microsoft 365 Site ziyaretçileri olarak **ayarlanmıştır**. Bu, OneNote site içindeki Site Varlıkları kitaplığında depolanan ekip için SharePoint içerir.
+Site SharePoint görünür bir değişiklik yok. Bununla birlikte, herhangi bir dosya veya liste üzerinde hiçbir değişiklik SharePoint site Microsoft 365 Site ziyaretçileri olarak **ayarlanmıştır**. Bu, OneNote site içindeki Site Varlıkları kitaplığında depolanan ekip için SharePoint içerir.
 
 Bir ekip arşivlenirken, temel Microsoft 365 grubu süre sonu ilkesine (ayarlanmışsa) tabi olmaya devam eder ve bu şekilde ekibin sahibinin ekibi yenilemeye devammesi gerekir.
 
@@ -168,7 +168,7 @@ Planın yalnızca kayıt tutma amacıyla bir kopyasını tutmanız gerekirse, en
 
 **Görevleri başka bir Plana kopyalama ve taşıma**
 
-Görevleri başka bir plana kopyalamak veya başka bir plana taşıma çözüm gibi görünüyorsa, tek tek görevler yalnızca [](https://support.microsoft.com/office/ad43a5d8-c1ad-42fd-b3da-fe97d72c8a1b) aynı grup içindeki planlar arasında kopyalanamaz veya taşınabilirsiniz. Planla ilişkilendirilmiş grup silinirse, bu bilgi verileri korumaz.
+Görevleri başka bir plana kopyalamak veya başka bir plana taşıma çözüm gibi görünüyorsa, tek tek görevler yalnızca [](https://support.microsoft.com/office/ad43a5d8-c1ad-42fd-b3da-fe97d72c8a1b) aynı grup içindeki planlar arasında kopyalanamaz veya taşınabilirsiniz. Planla ilişkilendirilmiş grup silinirse bu, verileri korumaz.
 
 **Planın tamamını kopyalama**
 
@@ -221,7 +221,7 @@ Dosyalar genel olarak bir site içinde üç birincil SharePoint depolanır:
 - Kanallarda dosyalar – Belge kitaplığı
 - Wiki sayfaları – Teams Wiki Verileri kitaplığına ekleme
 
-Sitede bir veya daha fazla alt site varsa, her alt site için uçağa bindirma işleminin tekrarı gerekir. Ekip özel kanallar içeriyorsa, her kanal için ayrı SharePoint site vardır.
+Sitede bir veya daha fazla alt site varsa, her alt site için uçağa bindirma işleminin tekrarı gerekir. Ekip özel veya paylaşılan kanallar içeriyorsa her kanal için ayrı SharePoint site vardır.
 
 Bir grup veya ekipten dosya kaldırılırken, bunların grubun veya ekibin üyesi olmayan kullanıcılarla paylaşılıyor olduğunu göz önünde bulundurabilirsiniz. Yaklaşan değişikliği onlara iletirsiniz.
 

@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: e534211008ea560642ba306844b9223170ac0140
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: de49205fe20cd5685279c0a5f9d138147f24bb8d
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63323227"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754162"
 ---
 # <a name="review-architecture-requirements-and-key-concepts-for-microsoft-defender-for-identity"></a>Kimlik için Microsoft Defender'da mimari gereksinimlerini ve temel kavramları gözden geçirin
 
@@ -46,13 +46,13 @@ Identity için Defender, şirket içi Active Directory kullanıcılarınızı ve
 
 Aşağıdaki diyagramda, Kimlik için Defender'ın temel mimarisini gösterir. 
 
-![Kimlik için Microsoft Defender Mimarisi.](../../media/defender/m365-defender-identity-architecture.png)
+:::image type="content" source="../../media/defender/m365-defender-identity-architecture.png" alt-text="Identity için Microsoft Defender'ın kimlik mimarisi" lightbox="../../media/defender/m365-defender-identity-architecture.png":::
 
 Bu şekilde:
+
 - AD etki alanı denetleyicilerinde yüklü algılayıcılar günlükleri ve ağ trafiğini ayrıştırarak analiz ve raporlama için Identity için Microsoft Defender'a gönderir.
 -  Azure AD, federasyon kimlik doğrulaması kullanmak üzere yapılandırıldığında (çizimde noktalı çizgi) algılayıcılar da Active Directory Federasyon Hizmetleri'nin (AD FS) ayrıştırmasını sağlar. 
 - Kimlik için Microsoft Defender, genişletilmiş algılama ve Microsoft 365 Defender (XDR) için sinyaller gönderir.
-
 
 Identity algılayıcıları için Defender doğrudan aşağıdaki sunuculara yükleyebilir:
 
@@ -66,7 +66,6 @@ Bulut Uygulamaları için Defender ile tümleştirme de dahil olmak üzere Ident
 
 Aşağıdaki tabloda, Identity için Microsoft Defender'ı değerlendirirken, yapılandırarak ve dağıtırken anlamanın önemli olduğu önemli kavramlar tanımlandı.
 
-
 |Kavram  |Açıklama |Daha fazla bilgi  |
 |---------|---------|---------|
 | Izlenen etkinlikler | Kimlik için Defender, şüpheli veya kötü amaçlı etkinlikleri saptamak için kuruluş içinde oluşturulan sinyalleri izler ve her olası tehdidin geçerliliğini belirlemenize yardımcı olarak, etkili bir belirleme belirleme ve yanıt vermenizi sağlar.  |  [Kimlik tarafından izlenen etkinlikler için Microsoft Defender](/defender-for-identity/monitored-activities)       |
@@ -78,8 +77,6 @@ Aşağıdaki tabloda, Identity için Microsoft Defender'ı değerlendirirken, ya
 | Rol grupları    | Kimlik için Defender, yöneticiler, Kullanıcılar ve Görüntüleyiciler'i de içeren, kuruluşa özgü güvenlik ve uyumluluk ihtiyaçlarına göre verileri korumak için rol tabanlı gruplar ve temsilci erişimi sağlar.        |  [Kimlik rol grupları için Microsoft Defender](/defender-for-identity/role-groups)       |
 | Yönetim portalı    |  Şüpheli etkinlikleri izlemek Microsoft 365 Defender bu portala ek olarak Kimlik için Defender portalı da kullanılabilir.      | [Kimlik için Microsoft Defender portalıyla çalışma](/defender-for-identity/workspace-portal)        |
 | Bulut Uygulamaları tümleştirmesi için Microsoft Defender   | Bulut Uygulamaları için Microsoft Defender, kullanıcı varlık davranış analizini (UEBA) karma bir ortamda (hem bulut uygulaması hem de şirket içi) sağlamak için Identity için Microsoft Defender ile tümleştirilmiştir   | Identity tümleştirmesi için Microsoft Defender  |
-| | | |
-
 
 ## <a name="review-prerequisites"></a>Önkoşulları gözden geçirme
 

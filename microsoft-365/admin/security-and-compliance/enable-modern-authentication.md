@@ -1,5 +1,5 @@
 ---
-title: Windows cihazlarında Office 2013 için Modern Kimlik Doğrulama'yı etkinleştirme
+title: Mobil cihazlarda Office 2013 için Modern kimlik Windows etkinleştirme
 f1.keywords:
 - NOCSH
 ms.author: sharik
@@ -23,91 +23,80 @@ search.appverid:
 - MOE150
 ms.assetid: 7dc1c01a-090f-4971-9677-f1b192d6c910
 description: 2013 yüklü olan cihazlarda modern kimlik doğrulamayı etkinleştirmek için kayıt Microsoft Office ayarlamayı öğrenin.
-ms.openlocfilehash: c390e3b9858a4d7d8fc37ea5c5e6f1901d5e20fb
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 468658c3b346c7923937ff9595699a20306ed6a9
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525119"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754178"
 ---
-# <a name="enable-modern-authentication-for-office-2013-on-windows-devices"></a>Windows cihazlarında Office 2013 için Modern Kimlik Doğrulama'yı etkinleştirme
+# <a name="enable-modern-authentication-for-office-2013-on-windows-devices"></a>Mobil cihazlarda Office 2013 için Modern kimlik Windows etkinleştirme
 
-Office 2013'ün yüklü olduğu herhangi bir Windows cihazı için modern kimlik doğrulamayı etkinleştirmek istiyorsanız, belirli kayıt defteri anahtarları ayarlamanız gerekir.
-  
-## <a name="enable-modern-authentication-for-office-2013-clients"></a>Office 2013 istemcileri için modern kimlik doğrulamayı etkinleştirme
-
-> [!NOTE]
-> Office 2016 istemcileri için modern kimlik doğrulama zaten etkindir. Office 2016 için kayıt defteri anahtarları ayarlamanız gerekmez. 
-  
-Windows çalıştıran ve Microsoft Office 2013'ün yüklü olduğu herhangi bir cihazda (örneğin, dizüstü bilgisayar veya tablet) modern kimlik doğrulamayı etkinleştirmek için, aşağıdaki kayıt defteri anahtarlarını ayarlamanız gerekir. Modern kimlik doğrulamayı etkinleştirmek istediğiniz her cihazda anahtarların ayarlanmış olması gerekir:
-
-<br>
-
-****
+Microsoft Office 2013 on Microsoft Windows bilgisayarlar Modern kimlik doğrulamayı destekler. Ancak bu anahtarı açmak için aşağıdaki kayıt defteri anahtarlarını yapılandırmamız gerekir:
 
 |Kayıt defteri anahtarı|Tür|Değer|
-|:---|:---:|---:|
+|:---|:---:|:---:|
 |HKEY_CURRENT_USER\Software\Microsoft\Exchange\AlwaysUseMSOAuthForAutoDiscover|REG_DWORD|1|
 |HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\Identity\EnableADAL|REG_DWORD|1|
 |HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\Identity\Version|REG_DWORD|1|
 
-EWS ve Otomatik Bulma gibi web Outlook için daha yeni bir kimlik doğrulama yöntemi kullanmaya zorlamak için aşağıdaki kayıt defteri anahtarlarını oluşturun veya bu kayıt defterinde değişiklik yapın. Kullanıcıların Modern Kimlik Doğrulama'Outlook kimlik doğrulamasını kullanmaya zorlamalarını öneririz.
+> [!NOTE]
+> Modern kimlik doğrulama 2016 veya Office'te zaten etkindir. Office 365'in sonraki sürümleri için bu kayıt defteri anahtarlarını Office.
 
-1. Outlook'tan çıkın.
+## <a name="enable-modern-authentication-for-office-2013-clients"></a>Office 2013 istemcileri için modern kimlik doğrulamayı etkinleştirme
 
-2. Kayıt Defteri Düzenleyicisi'ni, aşağıdaki yordamlardan birini kullanarak ve bu yordamlardan birini Windows:
+1. Outlook'u kapatın.
 
-   - **Windows 10, Windows 8.1 ve Windows 8:** Windows Tuşu + R tuşlarına basarak Çalıştır **iletişim** kutusunu açın. regedit.exeyazın *ve* Enter tuşuna **basın.**
-   - **Windows 7:** **Başlat'a** regedit.exearama kutusuna bir arama ** yazın ve Enter tuşuna **basın.**
+2. Aşağıdaki metni kopyalayıp yapıştırmak için Not Defteri:
 
-3. Kayıt Defteri Düzenleyicisi'nde, aşağıdaki kayıt defteri alt anahtarını bulun ve tıklatın:
+   ```text
+   Windows Registry Editor Version 5.00
 
-   ```console
-   HKEY_CURRENT_USER\Software\Microsoft\Exchange\
+   [HKEY_CURRENT_USER\Software\Microsoft\Exchange]
+   "AlwaysUseMSOAuthForAutoDiscover"=dword:00000001
+
+   [HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common]
+
+   [HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\Identity]
+   "EnableADAL"=dword:00000001
+   "Version"=dword:00000001
    ```
 
-4. *AlwaysUseMSOAuthForAutoDiscover* tuşu yoksa, Düzen menüsünde Yeni'nin üzerine gelin ve **DWORD Değeri'ni seçin**. *AlwaysUseMSOAuthForAutoDiscover yazın ve* Enter tuşuna **basın.**
+3. Dosyayı kolayca bulmanız için .txt bir konuma kaydetmek yerine .reg dosya uzantısıyla kaydedin. Örneğin, `C:\Data\Office2013_Enable_ModernAuth.reg`.
 
-5. *AlwaysUseMSOAuthForAutoDiscover'a sağ tıklayın ve* ardından Değiştir'e **tıklayın.**
+4. Dosya Gezgini'ni (eski adı Windows Gezgini) açın, az önce kayıtlı olan .reg dosyasının bulunduğu konuma gidin ve dosyaya çift tıklayın.
 
-6. Değer **verisi** kutusuna **1 yazın ve** Tamam'a **tıklayın.**
+5. Görüntülenen **Kullanıcı hesabı denetimi iletişim** kutusunda, **uygulamanın aygıtınızda** değişiklik olmasına izin vermek için Evet'e tıklayın.
 
-7. Kayıt Defteri Düzenleyicisi'nde, aşağıdaki kayıt defteri alt anahtarını bulun ve tıklatın:
+6. Görüntülenen Kayıt **Defteri Düzenleyicisi** uyarı iletişim kutusunda, değişiklikleri kabul **etmek için** Evet'e tıklayın.
 
-   ```console
-   HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\Identity\
-   ```
+Kayıt defteri anahtarlarını ayarlaytıktan sonra, Office 2013 uygulamalarını, Microsoft 365 ile çok faktörlü kimlik doğrulaması (MFA) kullanmak için Microsoft 365. Daha fazla bilgi için bkz [. Çok faktörlü kimlik doğrulamasını ayarlama](set-up-multi-factor-authentication.md).
 
-8. *EnableADAL ve* *Sürüm anahtarları zaten* varsa, gerekiyorsa değerleri değiştirin, sonra da Kayıt Defteri Düzenleyicisi'den çıkın. Yoksa, Düzen menüsünde Yeni'nin üzerine gelin ve ardından eksik  tuşları oluşturmak için **DWORD Değeri'ni** seçin. 
+Şu anda herhangi bir istemci Office oturum açmadıysanız, değişikliğin geçerliksi için oturum açmalı ve yeniden oturum dönebilirsiniz. Aksi takdirde, kimlik kuruluna kadar MRU ve dolaşım ayarları kullanılamaz.
 
-9. Örneğin, *EnableADAL tuşu* yoksa, *EnableADAL yazın ve* Enter tuşuna **basın.**
-
-10. *EnableADAL'a sağ tıklayın* ve sonra Değiştir'e **tıklayın.**
-
-11. Değer **verisi** kutusuna **1 yazın ve** Tamam'a **tıklayın.**
-
-12. Gerekirse, Sürüm anahtarı için de aynı işlemi izleyin. 
-
-13. **Kayıt Defteri Düzenleyicisi'nden çıkın.**
-
-Kayıt defteri anahtarlarını ayarlaytıktan sonra, Office 2013 uygulamalarını, Microsoft 365 ile Çok Faktörlü Kimlik Doğrulaması [(MFA)](set-up-multi-factor-authentication.md) kullanmak üzere Microsoft 365. 
-  
-Şu anda istemci uygulamalarından herhangi birinde oturum açmış durumdaysanız, değişikliğin geçerlilik kazanması için oturumu kapatıp yeniden oturum açmanız gerekir. Aksi takdirde, kimlik kuruluna kadar MRU ve dolaşım ayarları kullanılamaz.
-  
 ## <a name="disable-modern-authentication-on-devices"></a>Cihazlarda modern kimlik doğrulamayı devre dışı bırakma
 
-Bir cihazda modern kimlik doğrulamayı devre dışı bırakmak için aşağıdaki kayıt defteri anahtarlarını ayarlayın:
-
-<br>
-
-****
+Bir cihazda modern kimlik doğrulamayı devre dışı bırakma yordamı çok benzer, ancak daha az kayıt defteri anahtarı gereklidir ve değerlerini 0 olarak ayarlamanız gerekir.
 
 |Kayıt defteri anahtarı|Tür|Değer|
-|:---|:---:|---:|
-|HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity\EnableADAL|REG_DWORD|0|
+|---|:---:|:---:|
 |HKEY_CURRENT_USER\Software\Microsoft\Exchange\AlwaysUseMSOAuthForAutoDiscover|REG_DWORD|0|
-   
+|HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity\EnableADAL|REG_DWORD|0|
+
+```text
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Exchange]
+"AlwaysUseMSOAuthForAutoDiscover"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\Identity]
+"EnableADAL"=dword:00000000
+```
+
 ## <a name="related-content"></a>İlgili içerik
 
-[Office 2013'te ikinci bir doğrulama yöntemiyle oturum açma](https://support.microsoft.com/office/2b856342-170a-438e-9a4f-3c092394d3cb) (makale)\
-[Outlook istemleri doğrular ve](/outlook/troubleshoot/authentication/outlook-prompt-password-modern-authentication-enabled) bu parolaya bağlanmak için Modern Kimlik Office 365 kullanmaz (makale)
+[Office 2013'te ikinci bir doğrulama yöntemiyle oturum açma](https://support.microsoft.com/office/2b856342-170a-438e-9a4f-3c092394d3cb)
+
+[Outlook istemleri doğrular ve parolayı bağlanmak için Modern Kimlik Doğrulama'Office 365](/outlook/troubleshoot/authentication/outlook-prompt-password-modern-authentication-enabled)

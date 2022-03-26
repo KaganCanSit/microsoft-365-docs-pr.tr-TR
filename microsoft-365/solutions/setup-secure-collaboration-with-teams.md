@@ -17,12 +17,12 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Verilerinizi duyarlılığına dayalı olarak korumak için E-Teams içinde güvenli dosya işbirliği ve paylaşım ayarlamaya yönelik en iyi uygulamaları öğrenin.
-ms.openlocfilehash: 4bf18635b0c345e18c1ed5db8c7072ca6225e33c
-ms.sourcegitcommit: c2b5ce3150ae998e18a51bad23277cedad1f06c6
+ms.openlocfilehash: db1ad7d6d5c62775c696da89c3d771114d48e67e
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "63005031"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63714963"
 ---
 # <a name="set-up-secure-file-sharing-and-collaboration-with-microsoft-teams"></a>Dosya paylaşımını güvenli bir şekilde ayarlama ve işbirliği Microsoft Teams
 
@@ -70,7 +70,7 @@ Güvenli işbirliğini yapılandırmak için, bu özellik Microsoft 365 kullanı
 |---|---|---|
 |Office 365 için Microsoft Defender|Kasa, Bağlantı Ve Bağlantı Ekleri için OneDrive'Teams; Kasa Belgeleri; Kasa için Bağlantılar'Teams|Microsoft 365 E1, E3 ve E5|
 |SharePoint|Site ve dosya paylaşım ilkeleri, Site paylaşımı izinleri, Paylaşım bağlantıları, Erişim istekleri, Site konuk paylaşımı ayarları|Microsoft 365 E1, E3 ve E5|
-|Microsoft Teams|Konuk erişimi, özel takımlar, özel kanallar|Microsoft 365 E1, E3 ve E5|
+|Microsoft Teams|Konuk erişimi, özel takımlar, özel kanallar, paylaşılan kanallar|Microsoft 365 E1, E3 ve E5|
 |Microsoft 365 Uyumluluğu|Duyarlılık etiketleri|Microsoft 365 E3 ve E5|
 
 ## <a name="collaboration-governance-framework-for-teams-and-microsoft-365"></a>Kurumsal ve kurumsal işbirliği Teams birlikte Microsoft 365
@@ -119,6 +119,7 @@ Bu kaynaklar, organizasyon dışındaki kişilerle işbirliği için ortamınız
 - [Tek tek klasör](collaborate-on-documents.md) dosyalarını paylaşmak için belgeler üzerinde işbirliği yapın.
 - [Bir site içinde konuklarla](collaborate-in-site.md) işbirliği yapmak için bir sitede SharePoint yapın.
 - [Bir ekipte konuklarla](collaborate-as-team.md) işbirliği yapmak için ekip olarak işbirliği yapın.
+- [Paylaşılan bir kanalda, kuruluşun dışındaki](/microsoft-365/solutions/collaborate-teams-direct-connect) kişiler ile işbirliği yapmak için kanalda dış katılımcılarla işbirliği yapın.
 
 Paylaşılan bilgilerin duyarlılığına bağlı olarak, fazla paylaşımı önlemeye yardımcı olmak için korumalar  eklemeniz gerekir. Bu kaynaklar, organizasyonunız için gereken korumaları ayarlamanıza yardımcı olur:
 
@@ -126,7 +127,7 @@ Paylaşılan bilgilerin duyarlılığına bağlı olarak, fazla paylaşımı ön
 - [Kuruluş dışından kişilerle paylaşım sırasında dosyalarda yanlışlıkla açık kalma sürelerini sınırlama](share-limit-accidental-exposure.md)
 - [Güvenli bir konuk paylaşım ortamı oluşturma](create-secure-guest-sharing-environment.md)
 
-İş ortağı bir kuruluşla büyük bir projeniz varsa, Azure Yetkilendirme Yönetimi'ne kullanarak bu kuruluştan gelen konukları proje için ayar takım olarak yönetabilirsiniz. Ayrıntılı [bilgi için bkz. Yönetilen konuklarla B2B extranet](b2b-extranet.md) oluşturma.
+İş ortağı bir kuruluşla büyük bir projeniz varsa, kuruluş dışında birlikte çalışmanız gereken kişilerinizi yönetmek için paylaşılan kanalları veya [Azure](b2b-extranet.md) Yetkilendirme Yönetimi'ne kullanabilirsiniz.[](/microsoft-365/solutions/collaborate-teams-direct-connect)
 
 ## <a name="training-for-administrators"></a>Yöneticiler için eğitim
 
@@ -154,7 +155,7 @@ Microsoft Learn'den gelen bu eğitim modülleri, proje içinde ve diğer projele
 
 |Eğitim:|Kurumsal bilgileri iş yerleriyle Microsoft 365|
 |---|---|
-|![Teams koruma eğitimi simgesini seçin.](../media/protect-enterprise-information-microsoft-365.svg)|Kuruluş bilgilerini korumak ve güvenliğini sağlamak her zaman olduğu kadar zor olabilir. Microsoft 365 ile kurumsal bilgileri koruma yolu, hassas verilerinizi yanlışlıkla yanlış şekilde ortaya çıkarma veya yanlış kullanımlara karşı koruma, verileri keşfetme ve sınıflandırma, duyarlılık etiketleriyle koruma ve hassas bilgilerini hem izleme hem de çözümleme konularını ele almaktadır. Bu öğrenme yolu, Destek Sertifikalı: Güvenlik Microsoft 365 İş ortağı ve güvenlik Microsoft 365: Enterprise Sertifikalarını hazırlamanıza yardımcı olabilir.<p>1 sa - Learning Yolu - 5 Modül|
+|![Teams koruma eğitimi simgesini seçin.](../media/protect-enterprise-information-microsoft-365.svg)|Kuruluş bilgilerini korumak ve güvenliğini sağlamak her zaman olduğu kadar zor olabilir. Microsoft 365 ile kurumsal bilgileri koruma yolu, hassas verilerinizi yanlışlıkla yanlış şekilde ortaya çıkarma veya yanlış kullanımlara karşı koruma, verileri keşfetme ve sınıflandırma, duyarlılık etiketleriyle koruma ve hassas bilgilerini hem izleme hem de çözümleme konularını ele almaktadır. Bu öğrenme yolu, Eğitim Sertifikalı: Güvenlik Microsoft 365 İş ortağı ve eğitim Microsoft 365: Enterprise Uzman sertifikalarına hazırlanmanıza yardımcı olabilir.<p>1 sa - Learning Yolu - 5 Modül|
 
 > [!div class="nextstepaction"]
 > [Başlangıç >](/learn/modules/m365-security-info-overview/introduction/)
@@ -207,8 +208,8 @@ Bu çözümü dağıtmaya hazır olduğunda, şu adımlarla devam edin:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Microsoft 365 belgeleri](../security/index.yml)
+[Microsoft 365 güvenlik belgeleri](../security/index.yml)
 
-[Microsoft 365 uyumluluğu belgeleri](../compliance/index.yml)
+[Microsoft 365 uyumluluk belgeleri](../compliance/index.yml)
 
 [Microsoft Teams'e hoş geldiniz](/MicrosoftTeams/Teams-overview)

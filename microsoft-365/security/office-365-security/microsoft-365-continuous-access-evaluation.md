@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 255618508559e989a356ab404429bc4d87bfe2c6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 22927fbf85d9dab424c8b546b7e837bf035d8a2f
+ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63324543"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63775372"
 ---
 # <a name="continuous-access-evaluation-for-microsoft-365"></a>Web için sürekli erişim Microsoft 365
 
@@ -76,10 +76,6 @@ Koşullu Erişim ilkesi değerlendirme, kullanıcı hesabı artık güvenilir bi
 
 Aşağıdaki örnek Microsoft 365 hizmetleri şu anda Azure AD'den gelen olayları dinleyerek sürekli erişim değerlendirmesini destekler.
 
-<br>
-
-****
-
 |Zorlama türü|Exchange|SharePoint|Teams|
 |---|---|---|---|
 |**Kritik olaylar:**||||
@@ -87,7 +83,6 @@ Aşağıdaki örnek Microsoft 365 hizmetleri şu anda Azure AD'den gelen olaylar
 |Kullanıcı riski|Destekleniyor|Desteklenmiyor|Desteklenmiyor|
 |**Koşullu Erişim ilkesi değerlendirme:**||||
 |IP adresi konum ilkesi|Destekleniyor|Destekleniyor\*|Destekleniyor|
-|
 
 \*SharePoint Office tarayıcı erişimi katı modu etkinleştirerek anında IP ilkesi zorlamasını destekler. Kesin mod olmadan, erişim belirtecinin yaşam süresi bir saat olur.
 

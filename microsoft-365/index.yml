@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 title: Microsoft 365 belgeleri
-summary: 'İşletmenize veya kuruluşunuza yönelik çözümleri, senaryoları ve Microsoft 365 için ihtiyacınız olan kaynakları bulun.'
+summary: 'İşletmenize veya kuruluşunuza yönelik çözümleri, senaryoları ve Microsoft 365 için ihtiyacınız olan kaynakları bulun. Microsoft 365, Teams ve SharePoint gibi hizmetleri ve Outlook, Word, Excel ve PowerPoint gibi Microsoft 365 uygulamalarını içerir.'
 brand: m365
 metadata:
   title: Microsoft 365 belgeleri
-  description: 'İşletmenize veya kuruluşunuza yönelik çözümleri, senaryoları ve Microsoft 365 için ihtiyacınız olan kaynakları bulun.'
+  description: 'İşletmenize veya kuruluşunuza yönelik Office çözümleri dahil olmak üzere Microsoft 365 için ihtiyacınız olan çözümler, senaryoları ve kaynakları bulun.'
   ms.service: o365-solutions
   ms.topic: hub-page
   ms.collection: m365-security-compliance
@@ -185,8 +185,8 @@ additionalContent:
               url: /DeployOffice/plan-microsoft-365-apps
             - text: Mac için Office
               url: /DeployOffice/mac
-            - text: Office 2019
-              url: /DeployOffice/office2019
+            - text: Office LTSC 2021
+              url: /DeployOffice/ltsc2021/overview
             - text: Daha fazla >
               url: /DeployOffice
         - title: SharePoint

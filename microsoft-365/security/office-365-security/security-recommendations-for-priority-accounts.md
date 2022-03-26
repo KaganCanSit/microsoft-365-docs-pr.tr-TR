@@ -21,12 +21,12 @@ ms.custom: ''
 description: Yöneticiler, güvenlik ayarlarını yükseltmeyi ve kendi kuruluşlarında öncelik hesapları için raporları, uyarıları ve soruşturmaları kullanmayı Microsoft 365 öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2e0964d9b023a3a7c1efdda121cc34c1f37edd06
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: f27e146df680b36c117816f0a07e45e0345c647a
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63029246"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63675426"
 ---
 # <a name="security-recommendations-for-priority-accounts-in-microsoft-365"></a>Microsoft 365'de öncelik hesapları için güvenlik Microsoft 365
 
@@ -38,10 +38,6 @@ Microsoft 365 için Microsoft Defender Office 365, öncelik hesaplarınız için
 
 ![Simge formundaki güvenlik önerilerinin özeti.](../../media/security-recommendations-for-priority-users.png)
 
-<br>
-
-****
-
 |Görev|Tüm Office 365 Kurumsal planları|Microsoft 365 E3|Microsoft 365 E5|
 |---|:---:|:---:|:---:|
 |[Öncelik hesapları için oturum açma güvenliğini artırma](#increase-sign-in-security-for-priority-accounts)|![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
@@ -49,7 +45,6 @@ Microsoft 365 için Microsoft Defender Office 365, öncelik hesaplarınız için
 |[Öncelik hesaplarına kullanıcı etiketleri uygulama](#apply-user-tags-to-priority-accounts)|||![Dahil](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |[Uyarılarda, raporlarda ve algılamalarda öncelik hesaplarını izleme](#monitor-priority-accounts-in-alerts-reports-and-detections)|||![Dahil](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |[Kullanıcıları eğitin](#train-users)|![Dahil.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|
 
 > [!NOTE]
 > Ayrıcalıklı hesapların ( _yönetici hesapları_ ) güvenliğini sağlama hakkında bilgi için bu [konuya bakın](/azure/architecture/framework/security/critical-impact-accounts).
@@ -94,10 +89,6 @@ Ayrıca, öncelik hesaplarınızı daha fazla tanımlamak ve sınıflandırmak i
 
 Öncelik kullanıcılarınızı güvenlik altına alındıktan ve etiketledikten sonra, öncelik hesaplarını içeren olayları veya algılamaları hızla tanımlamak üzere EOP ve Office 365 için Defender'daki kullanılabilir raporları, uyarıları ve soruşturmaları kullanabilirsiniz. Kullanıcı etiketlerini destekleyen özellikler aşağıdaki tabloda açıklanmıştır.
 
-<br>
-
-****
-
 |Özellik|Açıklama|
 |---|---|
 |Uyarılar|Etkilenen kullanıcıların kullanıcı etiketleri, kullanıcı portalında Uyarılar sayfasında görünür ve Microsoft 365 Defender kullanılabilir. Daha fazla bilgi için bkz [. Uyarıları görüntüleme](../../compliance/alert-policies.md#viewing-alerts).|
@@ -105,7 +96,6 @@ Ayrıca, öncelik hesaplarınızı daha fazla tanımlamak ve sınıflandırmak i
 |Kampanya Görünümleri|Kullanıcı etiketleri, Plan 2'de yer alan Microsoft Defender'daki Kampanya Görünümleri'Office 365 özelliklerdendir. Daha fazla bilgi için bkz. [Kampanya Görünümleri](campaigns.md).|
 |Tehdit koruması durum raporu|Tehdit koruması durum raporudaki görünümlerin ve ayrıntı tablolarının neredeyse tümsinde **, sonuçları** öncelik hesaplarına **göre filtrelendirebilirsiniz**. Daha fazla bilgi için tehdit [koruması durum raporuna bakın](view-email-security-reports.md#threat-protection-status-report).|
 |Öncelik hesapları raporu için e-posta sorunları|**Exchange yönetim** merkezinde (EAC) öncelik hesapları için e-posta sorunları raporu, öncelik hesapları için teslim edilmeyen ve geciktirilen iletiler hakkında **bilgi içerir**. Daha fazla bilgi için bkz [. Öncelik hesapları raporu için e-posta sorunları](/exchange/monitoring/mail-flow-reports/mfr-email-issues-for-priority-accounts-report).|
-|
 
 ## <a name="train-users"></a>Kullanıcıları eğitin
 
@@ -114,10 +104,6 @@ Ayrıca, öncelik hesaplarınızı daha fazla tanımlamak ve sınıflandırmak i
 Harvard Harvard School [Cybersecurity Campaign El](https://www.belfercenter.org/CyberPlaybook) Kitabı, kullanıcıları kimlik avı saldırılarını belirlemeye yönelik eğitim de dahil olmak üzere, organizasyonu dahilinde güvenlik farkındalığı kültürü oluşturmak için mükemmel rehberlik sağlar.
 
 Microsoft 365, kullanıcıları bilgilendirmeye yardımcı olmak için aşağıdaki kaynakları sağlar:
-
-<br>
-
-****
 
 |Kavram|Kaynaklar|Açıklama|
 |---|---|---|

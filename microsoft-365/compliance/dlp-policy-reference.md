@@ -19,12 +19,12 @@ ms.collection:
 recommendations: false
 description: DLP ilkesi bileşeni ve yapılandırma başvurusu
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: d94277ac4ee3bd78feecf660e03d60a5720d1b43
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 4888569318fd24d25368dc1c923a1efced9f4126
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63319427"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63675448"
 ---
 # <a name="data-loss-prevention-policy-reference"></a>Veri Kaybı Önleme ilke başvurusu
 
@@ -397,17 +397,54 @@ Bir kuralda kullanılabilen eylemler, seçilmiş olan konumlara bağlıdır. İl
 
 - Mobil cihazlarda etkinlikleri denetleme Windows kısıtlama
 
-> [!NOTE]
-> Cihazlar seçeneği, Etkinliği **denetleme** , Etkinliği engelleme **veya etkinliği** geçersiz kılma ile **engelle** seçeneğini sunar.
+Bu ayarları kullanmak için **, DLP** ayarlarında ve bu ayarları kullanmak istediğiniz ilkede seçenekleri yapılandırmaniz gerekir. Daha fazla [bilgi için bkz. Kısıtlanmış uygulamalar ve](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) uygulama grupları.
 
-Cihaz konumu birçok alt etkinleştirme (koşullar) ve eylem sağlar. Daha fazla bilgi edinmek için [bkz. İzlemek ve üzerinde işlem gerçekleştirebilirsiniz uç nokta etkinlikleri](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on). 
+Cihaz konumu birçok alt etkinleştirme (koşullar) ve eylem sağlar. Daha fazla bilgi edinmek için [bkz. İzlemek ve üzerinde işlem gerçekleştirebilirsiniz uç nokta etkinlikleri](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on).
 
-#### <a name="microsoft-defender-for-cloud-apps"></a>Bulut Uygulamaları için Microsoft Defender
+Belirli cihazlarda **etkinlikleri denetle** veya kısıtla Windows, hizmet etki alanı veya tarayıcıya göre kullanıcı etkinliklerini kısıtlayabilirsiniz ve DLP'nin gerçekleştirmektedir:
+
+- Tüm uygulamalar
+- Tanımladığınız kısıtlı uygulamaların listesiyle
+- Ay, tanımladığınız kısıtlı bir uygulama grubu (önizleme).
+
+##### <a name="service-domain-and-browser-activities"></a>Hizmet etki alanı ve tarayıcı etkinlikleri
+
+Bulut hizmeti etki alanlarına ve İzin Ver **/** Engelle tarayıcılar  listesini (bkz. Tarayıcı ve hassas verilere yönelik etki alanı kısıtlamalarına [bakın)](dlp-configure-endpoint-settings.md#browser-and-domain-restrictions-to-sensitive-data) yapılandırırsanız ve kullanıcı korumalı bir dosyayı bulut hizmeti etki alanına karşıya yüklemeyi veya izin verilmeyen bir tarayıcıdan erişmeyi denerseniz, `Audit only`ilke eylemlerini ' veya `Block with override``Block` etkinliği yapılandırabilirsiniz.
+
+##### <a name="file-activities-for-all-apps"></a>Tüm uygulamalar için dosya etkinlikleri
+
+Tüm **uygulamalar için dosya etkinlikleri seçeneğiyle** , Dosya etkinliklerini kısıtlama **veya** Belirli etkinliklere **kısıtlama uygulama seçeneğini belirleyin**. Belirli etkinliklere kısıtlama uygulamayı seçerek, kullanıcı DLP korumalı bir öğeye eriştiğinde burada sizin eylemleriniz uygulanır. DLP'ye şu `Block with override``Block` kullanıcı `Audit only`etkinlikleri için , (eylemler) anlatabilirsiniz:
+
+- **Panoya kopyala**
+- **USB çıkarılabilir sürücüye kopyala** 
+- **Ağ paylaşımına kopyalama**
+- **Yazdır**
+- **Izin verilmeyen bir uygulama kullanarak kopyalama Bluetooth taşıma**
+- **Uzak masaüstü hizmetleri**
+
+
+##### <a name="restricted-app-activities"></a>Kısıtlanmış uygulama etkinlikleri  
+
+Önceden Izin verilmeyen uygulamalar olarak adlandırılan bu uygulamalara kısıtlama yapmak istediğiniz Uç Nokta DLP ayarlarında bir uygulama listesi tanımlarsiniz. Bir kullanıcı listedeki bir uygulamayı kullanarak DLP korumalı bir dosyaya erişmeye çalışırsa, `Audit only`bunun için , veya `Block with override`etkinliği `Block` seçebilirsiniz. Uygulama kısıtlanmış uygulama **grubunun bir üyesi** ise, Kısıtlanmış uygulama etkinlikleri içinde tanımlanan DLP eylemleri geçersiz kılınır. Ardından, kısıtlanmış uygulama grubunda tanımlanan eylemler uygulanır.
+
+##### <a name="file-activities-for-apps-in-restricted-app-groups-preview"></a>Kısıtlı uygulama gruplarında uygulamalar için dosya etkinlikleri (önizleme)
+
+Kısıtlanmış uygulama gruplarınızı Uç Nokta DLP ayarlarında tanımlar ve ilkelerinize kısıtlanmış uygulama grupları eklersiniz. İlkeye kısıtlanmış bir uygulama grubu eklerken, şu seçeneklerden birini seçmeniz gerekir:
+
+- Dosya etkinliğini kısıtlama
+- Tüm etkinliklere kısıtlama uygulama
+- Belirli etkinliklere kısıtlama uygulama
+
+Kısıtlama uygula seçenekleriden birini belirtir  ve kullanıcı DLP korumalı bir dosyaya, kısıtlanmış uygulama grubunda yer alan bir uygulamayı kullanarak erişmeye çalışırsa, `Audit only`veya `Block with override``Block` etkinliklere göre yapabilirsiniz. Burada tanımladığınız DLP eylemleri, uygulamanın tüm uygulamaları için **Kısıtlanmış** uygulama etkinlikleri ve Dosya etkinlikleri içinde **tanımlanan eylemleri** geçersiz kılar.
+
+Daha fazla [bilgi için bkz. Kısıtlanmış uygulamalar ve](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) uygulama grupları. 
+
+#### <a name="microsoft-defender-for-cloud-apps-actions"></a>Bulut Uygulamaları için Microsoft Defender eylemleri
 
 - Belirli konumlarda erişimi kısıtlama veya Microsoft 365 şifreleme
 - Üçüncü Taraf Uygulamalarını Kısıtla
 
-#### <a name="on-premises-repositories"></a>Şirket içi depolar
+#### <a name="on-premises-repositories-actions"></a>Şirket içi depo eylemleri
 
 - Erişimi kısıtlama veya şirket içi dosyaları kaldırma
 

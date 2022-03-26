@@ -21,25 +21,29 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: ce75fff753acfa9d5e183154e09805b04d7523da
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 41583a89abc3418799263dc46643fbe06a07e818
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63321459"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63712850"
 ---
 # <a name="investigate-alerts-in-microsoft-365-defender"></a>E-postada uyarıları Microsoft 365 Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
+
 - Microsoft 365 Defender
+
+>[!Note]
+>Bu makalede, E-Posta'da güvenlik Microsoft 365 Defender. Bununla birlikte, kullanıcılar etkinlik bildiriminde belirli etkinlikler gerçekleştirecekken kendinize veya diğer yöneticilere e-posta bildirimleri göndermek için etkinlik uyarılarını Microsoft 365. Daha fazla bilgi için bkz[. Etkinlik uyarıları oluşturma - Uyumluluk Microsoft 365'| Microsoft Docs](../../compliance/create-activity-alerts.md).
 
 Uyarılar tüm olayların temeli olup, ortamınıza kötü amaçlı veya şüpheli olayların ortaya çıkmasını sağlar. Uyarılar normalde daha geniş bir saldırının bir parçası olur ve bir olay hakkında ipucu sağlar.
 
-Daha Microsoft 365 Defender, ilgili uyarılar olay oluşturmak için bir [araya toplanır](incidents-overview.md). Ancak, olaylar her zaman bir saldırının daha geniş bağlamını sağlayacaktır; ancak daha derin çözümleme yapmak gerektiğinde uyarıları çözümlemek değerli olabilir. 
+Daha Microsoft 365 Defender, ilgili uyarılar olay oluşturmak için bir [araya toplanır](incidents-overview.md). Ancak, olaylar her zaman bir saldırının daha geniş bağlamını sağlayacaktır; ancak daha derin çözümleme yapmak gerektiğinde uyarıları çözümlemek değerli olabilir.
 
-Uyarılar **sırası geçerli** uyarı kümelerini gösterir. Microsoft 365 Defender portalının hızlı başlatında, Olaylar **& veya Uyarılar >** sırasında <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">uyarı kuyruğuna Microsoft 365 Defender</a>.
+Uyarılar **sırası geçerli** uyarı kümelerini gösterir. Microsoft 365 Defender portalının hızlı başlatında, Olaylar **& veya Uyarılar >** sırasında [uyarı kuyruğuna Microsoft 365 Defender](https://go.microsoft.com/fwlink/p/?linkid=2077139).
 
 :::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-queue.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-queue.png" alt-text="Microsoft 365 Defender portalında uyarı kuyruğu örneği":::
 
@@ -211,5 +215,5 @@ Süreç içinde yaşanan olaylarda olduğu gibi, incelemenize devam [edersiniz](
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Olaylara genel bakış](incidents-overview.md)
-- [Olayları yönetme](manage-incidents.md)
-- [Olayları araştırma](investigate-incidents.md)
+- [Olayları yönetin](manage-incidents.md)
+- [Olayları araştırın](investigate-incidents.md)

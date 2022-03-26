@@ -22,12 +22,12 @@ ms.custom:
 ms.assetid: 1d51bd87-17bf-457c-b698-61821de3afa0
 recommendations: false
 description: Korumanın üç katmanını kullanarak Teams paylaşımı güvenliği ve işbirliği kolaylığıyla güvenliği dengelemeyi daha iyi bir dosya paylaşımı güvenliği için nasıl yapılandırırsanız öğrenin.
-ms.openlocfilehash: 279e338af6db4d82291209deb66e1ea1eef74630
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 116675ac6736e1761286226a8bf724915627574f
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988138"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63712731"
 ---
 # <a name="configure-teams-with-three-tiers-of-protection"></a>Dört Teams koruma katmanıyla yapılandırma
 
@@ -55,6 +55,7 @@ Aşağıdaki tabloda her katman için yapılandırmalar özetlenmiştir. Başlan
 |Özel ekip veya genel ekip|Genel|Özel|Özel|Özel|
 |Who erişiminiz var mı?|B2B kullanıcıları dahil, kuruluşta herkes.|Yalnızca ekibin üyeleri. Başkaları ilişkili siteye erişim isteğinda  olabilir.|Yalnızca ekibin üyeleri.|Yalnızca ekibin üyeleri.|
 |Özel kanallar|Sahipler ve üyeler özel kanallar oluşturabilir|Sahipler ve üyeler özel kanallar oluşturabilir|Yalnızca sahipler özel kanallar oluşturabilir|Yalnızca sahipler özel kanallar oluşturabilir|
+|Paylaşılan kanallar|Sahipler ve üyeler paylaşılan kanallar oluşturabilir|Sahipler ve üyeler paylaşılan kanallar oluşturabilir|Yalnızca sahipler paylaşılan kanallar oluşturabilir|Yalnızca sahipler paylaşılan kanallar oluşturabilir|
 |Site düzeyinde konuk erişimi|**Yeni ve mevcut konuklar** (varsayılan).|**Yeni ve mevcut konuklar** (varsayılan).|**Yeni ve mevcut konuklar veya** **Ekip gereksinimlerine bağlı olarak** yalnızca kuruluşta olan kişiler.|**Yeni ve mevcut konuklar veya** **Ekip gereksinimlerine bağlı olarak** yalnızca kuruluşta olan kişiler.|
 |Site paylaşım ayarları|**Site sahipleri ve üyeleri ve Düzenleme izinleri olan kişiler dosyaları ve klasörleri paylaşabilir, ancak yalnızca site sahipleri siteyi paylaşabilir**.|**Site sahipleri ve üyeleri ve Düzenleme izinleri olan kişiler dosyaları ve klasörleri paylaşabilir, ancak yalnızca site sahipleri siteyi paylaşabilir**.|**Site sahipleri ve üyeleri ve Düzenleme izinleri olan kişiler dosyaları ve klasörleri paylaşabilir, ancak yalnızca site sahipleri siteyi paylaşabilir**.|**Yalnızca site sahipleri dosyaları, klasörleri ve siteyi paylaşabilir**.<br>Erişim istekleri **Kapalı.**|
 |Site düzeyindeki unmanaged cihaz erişimi|**Masaüstü uygulamalardan, mobil uygulamalardan ve web'den tam erişim** (varsayılan).|**Masaüstü uygulamalardan, mobil uygulamalardan ve web'den tam erişim** (varsayılan).|**Sınırlı, yalnızca web erişimine izin verme**.|**Erişimi engelin**.|
@@ -69,7 +70,7 @@ Teams ve çok hassas koruma için kullanılan özel ekipler, paylaşım ve iliş
 
 ## <a name="sensitivity-labels"></a>Duyarlılık etiketleri
 
-Hassas ve çok hassas katman, ekibin ve dosyalarının güvenliğini sağlamak için duyarlılık etiketleri kullanır. Bu katmanları uygulamak için, farklı sitelerde, gruplarda ve sitelerde [Microsoft Teams Office 365 için duyarlılık SharePoint etkinleştirmeniz gerekir](../compliance/sensitivity-labels-teams-groups-sites.md).
+Hassas ve çok hassas katman, ekibin ve dosyalarının güvenliğini sağlamak için duyarlılık etiketleri kullanır. Bu katmanları uygulamak için, Microsoft Teams, Office 365 Grupları ve sitelerinin içeriğini [korumak için duyarlılık SharePoint etkinleştirmeniz gerekir](../compliance/sensitivity-labels-teams-groups-sites.md).
 
 Taban çizgisi katmanı duyarlılık etiketleri gerektirmese de, bir "genel" etiket oluşturmayı ve ardından tüm ekiplerin etiketlenmiş olarak etiketlenmiş olarak gerektirmesini göz önünde bulundurabilirsiniz. Bu, kullanıcıların bir ekip oluşturdukta duyarlılık konusunda bilinçli bir seçim yapmalarını sağlamaya yardımcı olur. Hassas veya çok hassas katmanları dağıtmayı planlıyorsanız, taban çizgisi ekipleri için ve hassas değil dosyalar için kullanabileceğiniz bir "genel" etiket oluşturmanız önerilir.
 
@@ -94,15 +95,24 @@ Ekipler salt okunur izin seçeneğine sahip değildir, ancak SharePoint vardır.
 
 Varsayılan olarak, hem ekip sahipleri hem de üyeleri dosyaları ve klasörleri ekip dışındaki kişiler ile paylaşabilir. Bu, konuk paylaşımına izin verdiysanız, kuruluş dışındaki kişiler dahil olabilir. Üç katmanda da, yanlışlıkla paylaşımı önlemek için varsayılan paylaşım bağlantı türünü güncelleştiriz. Çok hassas katmanda, bu paylaşımı yalnızca ekip sahipleriyle kısıtlarız.
 
-## <a name="guest-sharing"></a>Konuk paylaşımı
+## <a name="sharing-with-people-outside-your-organization"></a>Kuruluş dışındaki kişilerle paylaşma
 
-Kuruluş dışından çalışanlarla işbirliği yapmak zorundaysanız, en iyi paylaşım ve yönetim [deneyimi için Azure AD B2B ile SharePoint ve OneDrive](/sharepoint/sharepoint-azureb2b-integration-preview) tümleştirmeyi yapılandırmanızı öneririz.
+Dış içerikleri Teams diğerleriyle paylaşmanız gerekirse iki seçenek vardır:
 
-Teams paylaşımı varsayılan olarak açıktır, ancak gerekirse bir duyarlılık etiketi kullanarak hassas ve çok hassas katmanlarda bu paylaşımı kapatmış olursanız.
+- **Konuk paylaşımı** - Konuk paylaşımı, kullanıcıların dosyaları, klasörleri, siteleri, grupları ve ekipleri kuruluş dışındaki kullanıcılarla paylaşmalarını sağlayan Azure AD B2B işbirliğini kullanır. Bu kişiler dizininizin konuk hesaplarını kullanarak paylaşılan kaynaklara erişin.
+- **Paylaşılan kanallar** - Paylaşılan kanallar Azure AD B2B doğrudan bağlanmayı kullanır ve böylece kullanıcılar, organizasyon kuruluşlarıyla diğer Azure AD kuruluşlarından kişileriyle kaynak paylaşabilir. Bu kişiler kendi iş veya okul hesaplarını Teams paylaşılan kanallara erişiyor. Kuruluşta hiçbir konuk hesabı oluşturulmaz.
 
-Çok hassas katmanda, duyarlılık etiketini uygulandığı dosyaları şifrele olacak şekilde yapılandır ediyoruz. Konukların bu dosyalara erişimi olması için ihtiyacınız varsa, etiketi  oluşturarak bu dosyalara izin verebilirsiniz.
+Duruma bağlı olarak hem konuk paylaşımı hem de paylaşılan kanallar kullanışlıdır. Her [biri hakkında ayrıntılı bilgi ve](plan-external-collaboration.md) verilen bir senaryo için hangisinin kullanılamayacaklarına karar vermek için bkz. Dış işbirliğini planlama.
+
+Konuk paylaşımını kullanmayı planlıyorsanız, en iyi paylaşım ve [yönetim deneyimi SharePoint ve OneDrive Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration-preview) ile tümleştirmeyi yapılandırmanız önerilir.
+
+Teams paylaşımı varsayılan olarak açıktır, ancak gerekirse bir duyarlılık etiketi kullanarak hassas ve çok hassas katmanlarda bu paylaşımı kapatmış olursanız. Paylaşılan kanallar varsayılan olarak açıktır, ancak işbirliği yapmak istediğiniz her kuruluş için kurumsal ilişkiler ayarlamayı gerektirir. Ayrıntılar [için bkz. Kanalda dış katılımcılarla](collaborate-teams-direct-connect.md) işbirliği yapma.
+
+Çok hassas katmanda, duyarlılık etiketini uygulandığı dosyaları şifrele olacak şekilde yapılandır ediyoruz. Konukların bu dosyalara erişimi olması için ihtiyacınız varsa, etiketi  oluşturarak bu dosyalara izin verebilirsiniz. Paylaşılan kanallarda dış katılımcılara duyarlılık etiketlerine izin verılamaz ve duyarlılık etiketiyle şifrelenen içeriğe erişılamaz.
 
 Kuruluş dışındanlarıyla işbirliği yapmak gerekirse, temel katman için ve hassas veya çok hassas katmanlarda konuk paylaşımını açık bırakmanızı kesinlikle öneririz. E-posta iletilerine Microsoft 365 olarak dosya göndermeye göre çok daha güvenli ve yönetilebilir bir paylaşım deneyimi sağlayan konuk paylaşımı özellikleri. Ayrıca, kullanıcıların yasal dış işbirliği yapanlarla paylaşmak üzere unoverned tüketici ürünlerini kullanmaları için GÖLGELE riskini azaltır.
+
+Azure AD kullanan diğer kuruluşlarla düzenli olarak işbirliği yapıyorsanız, paylaşılan kanallar iyi bir seçenek olabilir. Paylaşılan kanallar diğer kuruluşun Teams istemcisinde sorunsuz görünür ve dış katılımcıların bir konuk hesabı kullanarak ayrı ayrı oturum açmaları yerine kendi kuruluşlarında normal kullanıcı hesaplarını kullanmalarını sağlar.
 
 Güvenli ve üretken bir konuk paylaşım ortamı oluşturmak için aşağıdaki başvurulara bakın:
 

@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: 78fe3147-1979-4c41-83bb-aeccf244368d
 description: İçerik arama ve Temel eKbulma özellikleri için sonuçların nasıl etkili olduğunu Microsoft 365 uyumluluk merkezi.
-ms.openlocfilehash: fe59136a8b7c3cb0e10698ec5578794ff4d8a853
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: ad72dfa1d599a908a56b3b6530433ccb5ed23df4
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63032475"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63715960"
 ---
 # <a name="limits-for-ediscovery-search"></a>eBulma araması için sınırlar
 
@@ -52,12 +52,12 @@ Aşağıdaki tabloda, çalışma sayfalarında içerik arama aracını kullanır
 |İçerik arama sonuçlarının önizlemesi sırasında önizleme sayfasında görüntülenen ortak klasör posta kutusu başına en fazla öğe sayısı.|100|
 |İçerik arama sonuçlarının önizlemesi sırasında önizleme sayfasında görüntülenen tüm ortak klasör posta kutularında bulunan en fazla öğe sayısı.|200|
 |Arama sonuçları için önizlemede 2013 ortak klasör posta kutusu sayısı üst). Arama sorgusuyla eşleşen içerik içeren 500'den fazla ortak klasör posta kutusu varsa, önizleme için yalnızca en çok arama sonuçlarına sahip ilk 500 ortak klasör posta kutusu kullanılabilir.|500|
+|Önizleme sayfasında görüntülenen öğe boyutu için üst boyut.|10.000.000 bayt (yaklaşık 9,5 MB)|
 |Arama sorgusu için karakter sayısı üst sayısı (işleçler ve koşullar dahil) <p> **Not:** Bu sınır, sorgu genişletildikten sonra etkili olur ve anahtar sözcük sorgusundan gelen karakterleri, kullanıcıya uygulanan tüm arama izinleri filtrelerini ve tüm site konumlarının URL'lerini içerir. Bu, sorgunun anahtar sözcüklerin her biri için genişletilecek olduğu anlamına gelir. Örneğin, bir arama sorgusunda 15 anahtar sözcük ve ek parametre ve koşullar varsa, sorgu 15 kez, sorgunun diğer parametreleri ve koşullarıyla birlikte 15 kez genişletilir. Dolayısıyla, arama sorgusunun karakter sayısı sınırın altında olsa da, bu sınırı aşmaya katkı sağlayacak genişletilmiş sorgudur.|**Posta kutuları:** 10.000. <p> **Siteler:** Tüm sitelerde 4.000 veya 20 siteyi ararken 2.000 adet. <sup>3</sup>|
-|Arama sorgusunda tam bir tümcecik aramak için ön ek joker karakteri kullanırken veya bir önek joker karakteri ve **NEAR** Boole işleci kullanırken döndürülen en fazla değişken sayısı.|10.000 <sup>4</sup>|
+|Arama sorgusunda tam bir tümcecik aramak için ön ek joker karakteri kullanırken veya ön ek joker karakteri ve **NEAR** Boole işleci kullanırken döndürülen en fazla değişken sayısı.|10.000 <sup>4</sup>|
 |Ön ek joker karakterleri için en az alfa karakteri sayısı; örneğin, `time*`, `one*`veya `set*`.|3|
 |"Arama ve temizleme" eylemi yaparak ( **New-ComplianceSearchAction -Temizleme** komutunu kullanarak) bir aramadaki öğeleri silebilirsiniz. Temizleme eylemini yerine kendi aramanız için bu sınırdan daha fazla kaynak posta kutusu varsa, temizleme eylemi başarısız olur. Arama ve temizleme hakkında daha fazla bilgi için bkz. [Kurumda e-posta iletilerini arama ve silme](search-for-and-delete-messages-in-your-organization.md).|50,000|
 |Öğeleri dışarı aktarabilirsiniz ve aramada en fazla konum sayısı. Dışarı aktarıyorsanız aramanın bu sınırdan daha fazla konumu varsa, dışarı aktarma başarısız olur. Daha fazla bilgi için bkz [. İçerik arama sonuçlarını dışarı aktarma](export-search-results.md).|100,000|
-|||
 
 > [!NOTE]
 > <sup>1</sup> Tek bir aramada sınırsız sayıda posta kutusu arayabilirsiniz, ancak aynı veri kaynağında eBulma Dışarı Aktarma Aracı'nı kullanarak dışarı aktarmış arama sonuçlarını en çok 100.000 posta kutusundan Microsoft 365 uyumluluk merkezi.
@@ -84,7 +84,6 @@ Microsoft, tüm kuruluşların yaptığı aramalar için performans bilgilerini 
 |25,000|10 dakika|
 |50,000|20 dakika|
 |100,000|25 dakika|
-|||
 
 ## <a name="export-limits"></a>Dışarı aktarma sınırları
 
@@ -103,7 +102,6 @@ Aşağıdaki tabloda, içerik arama sonuçları dışarı aktarıldı ancak sın
 |eBulma Dışarı Aktarma Aracı kullanılarak indirilebilen arama sonuçları için en fazla posta kutusu sayısı|100,000|
 |Dışarı aktarıla en fazla PST dosyası boyutu <p> **Not:** Kullanıcının posta kutusunun arama sonuçları 10 GB'tan büyükse, posta kutusunun arama sonuçları iki (veya daha fazla) ayrı PST dosyasına dışarı aktar edilir. Tüm arama sonuçlarını tek bir PST dosyasında dışarı aktarmayı seçerseniz, arama sonuçlarının toplam boyutu 10 GB'tan büyükse PST dosyası ek PST dosyalarına bu dosya olarak depolamanız gerekir. Bu varsayılan boyutu değiştirmek için, arama sonuçlarını dışarı Windows bilgisayarda Windows Defteri'ni düzenleyebilirsiniz. Bkz [. eBulma arama sonuçlarını dışarı aktararak PST dosyalarının boyutunu değiştirme](change-the-size-of-pst-files-when-exporting-results.md). Tek bir posta kutusunun içeriği 10 GB'tan fazla olmadığı sürece, belirli bir posta kutusunun arama sonuçları birden çok PST dosyasına bölünmez. Arama sonuçlarını, tüm iletileri tek bir klasörde yer alan ve arama sonuçlarının 10 GB'tan büyük olduğu için tek bir PST dosyasında dışarı aktarmayı seçtiysiniz ve arama sonuçları hala kronolojik sırada düzenleniyor ve bu nedenle gönderilen tarihe göre ek PST dosyalarına toslar.|10 GB|
 |Posta kutuları ve sitelerden gelen arama sonuçlarının Microsoft tarafından sağlanan bir Azure depolama Depolama oranı.|Saatte en fazla 2 GB|
-|||
 
 ## <a name="indexing-limits-for-email-messages"></a>E-posta iletileri için dizin sınırları
 

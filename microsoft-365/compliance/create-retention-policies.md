@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Kullanıcıların e-posta, belgeler ve konuşmalarda kendi oluşturanın içeriğinin kontrolünü etkin bir şekilde tutmak için bekletme ilkesi kullanın. Istemediklerden kurtulun ve istemediklerden kurtulun.
-ms.openlocfilehash: ddd0553405aa92a1eb7a7978398392b780a0a2ea
-ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
+ms.openlocfilehash: 94388a375c3c50d97e696637ef6ef4ebefc96aab
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63557817"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63715503"
 ---
 # <a name="create-and-configure-retention-policies"></a>Bekletme ilkeleri oluşturma ve yapılandırma
 
@@ -73,6 +73,9 @@ Birden fazla bekletme ilkeniz varsa ve bekletme etiketlerini de kullanıyorken, 
 
 ### <a name="retention-policy-for-teams-locations"></a>Konumlar için bekletme Teams ilkesi
 
+> [!NOTE]
+> Bekletme ilkeleri artık [önizlemede olan](/MicrosoftTeams/shared-channels) paylaşılan kanalları desteklemektedir. Bir ekibin paylaşılan kanalları **varsa Teams** için bekletme ayarlarını yapılandırırsanız, ekipte paylaşılan kanal varsa, bekletme ayarları üst ekibinden devralır.
+
 1. İlke [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/) Yönetim **İlkeleri'ne** >  **seçin**.
 
 2. Bekletme **ilkesi yapılandırmasını başlatmak** için Yeni bekletme **ilkesi'ne seçin** ve yeni bekletme ilkenizi bir adyla yazın.
@@ -84,7 +87,7 @@ Birden fazla bekletme ilkeniz varsa ve bekletme etiketlerini de kullanıyorken, 
     -  Uyarlanabilir'i seçtiyseniz: Uyarlanabilir ilke kapsamlarını ve konumlarını seçin sayfasında  Kapsam ekle'yi seçin ve oluşturulmuş bir veya birden çok uyarlanabilir kapsam seçin. Ardından bir veya daha fazla konum seçin. Seçebilirsiniz konumlar, eklenen kapsam [türlerine bağlıdır](retention-settings.md#configuration-information-for-adaptive-scopes) . Örneğin, yalnızca bir Kullanıcı kapsamı türü eklediysanız **, kanal** mesajlarını seçerek **sohbetleri Teams** ancak **Teams edebilirsiniz**. 
     
     - **Statik'i seçtiyseniz**, **İlkeyi** uygulamak için konumları seçin sayfasında, İş için bir veya daha fazla Teams:
-        - **Teams mesajı görüntüler**: Standart kanal sohbetlerinden ve standart kanal toplantılarından gelen iletiler; ancak kendi ilke konumlarına [](/microsoftteams/private-channels) sahip özel kanallardan değil.
+        - **Teams mesajı:** Standart ve paylaşılan kanal sohbetlerinden ve standart ve paylaşılan kanal toplantılarından gelen iletiler; ancak kendi ilke konumlarına sahip [](/microsoftteams/private-channels) özel kanallardan değil.
         - **Teams sohbetleri**: Özel bire bir sohbetlerden, grup sohbetlerinden ve toplantı sohbetlerinden gelen mesajlar.
         - **Teams mesajları: Özel** kanal sohbetlerinden ve özel kanal toplantılarından gelen iletiler.
         
@@ -224,7 +227,7 @@ Bekletme ilkesi  oluşturmanız ve göndermeniz, bekletme ilkesinin uygulanması
         Set-AppRetentionCompliancePolicy -Identity <policy name> -RetryDistribution
         ```
     
-    - E-posta gönderme, site Exchange **, kanal** **SharePoint gibi** diğer tüm **ilke Teams için**:
+    - E-posta gönderme, site Exchange **ve** kanal **iletileri SharePoint gibi** diğer **tüm ilke Teams için**:
     
         ```PowerShell
         Set-RetentionCompliancePolicy -Identity <policy name> -RetryDistribution

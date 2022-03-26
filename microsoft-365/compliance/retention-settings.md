@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir bekletme ilkesinde veya bekletme etiketi ilkesinde, istediğiniz şeyi saklayarak ve istemediklerden kurtulmak için yapılandırabilirsiniz ayarları anlıyoruz.
-ms.openlocfilehash: 2fd9f2655b13d8c9ac829108d3563a6a4322f3bc
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 3b2833b2b6293845379f9f5aeffd3bd46610e2a8
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449253"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63713085"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için ortak ayarlar
 
@@ -59,7 +59,7 @@ Uyarlanabilir kapsamları kullanmayı tercih ettiyken, hangi tür uyarlanabilir 
 |:-----|:-----|
 |**Kullanıcılar** - aşağıdakiler için geçerlidir:  <br/> - Exchange-postayı gönderme <br/> - OneDrive hesapları <br/> - Teams sohbetler <br/> - Teams kanal iletilerini gönderme <br/> - Yammer iletilerini gönderme| Ad <br/> Soyadı    <br/>Görünen ad <br/> İş unvanı <br/> Bölüm <br/> Office <br/>Sokak adresi    <br/> Şehir <br/>Eyalet veya il <br/>Posta kodu <br/> Ülke veya bölge <br/> E-posta adresleri <br/> Diğer Ad <br/> Exchange öznitelikleriyle birlikte: CustomAttribute1 - CustomAttribute15|
 |**SharePoint siteleri** - aşağıdakiler için geçerlidir:  <br/> - SharePoint siteleri <br/> - OneDrive hesapları |Site URL'si <br/>Site adı <br/> SharePoint özellikleri görüntüleme: RefinableString00 - RefinableString99 |
-|**Microsoft 365 Grupları** - aşağıdakiler için geçerlidir:  <br/> - Microsoft 365 Grupları <br/> - Teams mesajlarını gönderme <br/> - Yammer iletilerini gönderme |Name <br/> Görünen ad <br/> Açıklama <br/> E-posta adresleri <br/> Diğer Ad <br/> Exchange öznitelikleriyle birlikte: CustomAttribute1 - CustomAttribute15 |
+|**Microsoft 365 Grupları** - aşağıdakiler için geçerlidir:  <br/> - Microsoft 365 Grupları <br/> - Teams iletilerini (standart ve paylaşılan) içerir <br/> - Yammer iletilerini gönderme |Name <br/> Görünen ad <br/> Açıklama <br/> E-posta adresleri <br/> Diğer Ad <br/> Exchange öznitelikleriyle birlikte: CustomAttribute1 - CustomAttribute15 |
 
 Sitelerin özellik adları, site tarafından yönetilen SharePoint temel almaktadır. Özel öznitelikler hakkında bilgi için bkz. Uyarlanabilir İlke Kapsamları ile SharePoint Bekletmeyi Uygulamak için [Microsoft 365 Site Özelliklerini Kullanma](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-custom-sharepoint-site-properties-to-apply-microsoft-365/ba-p/3133970).
 

@@ -1,22 +1,22 @@
-- name: Google Workspace'den Başka bir Microsoft 365
+- name: Google Workspace'ten Microsoft 365'e geçiş yapın
   items:
     - name: Genel bakış
       href: move-from-google-workspace-overview.md
     - name: Microsoft 365’e kaydolma
-      href: /admin-overview/sign-up-for-office-365?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
-    - name: Google Microsoft 365 ayarlama
+      href: ../admin-overview/sign-up-for-office-365.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
+    - name: Google geçişi için Microsoft 365'i ayarlayın
       href: set-up-microsoft-365-forgoogle.md
-    - name: Mobil cihazlar için güvenlik Windows ayarlama
+    - name: Windows cihazları için güvenlik ilkelerini ayarlayın
       href: ../setup/secure-win-10-pcs.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
-    - name: Google Workspace Etki Alanı Ekleme
+    - name: Google Workspace Etki Alanı Ekleyin
       href: add-google-domain.md
-    - name: Uygulama Office yükleme ve Microsoft Teams
+    - name: Office uygulamalarını ve Microsoft Teams'i yükleyin
       href: ../setup/install-applications.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
-    - name: 'E-postayı, takvimi ve kişileri başka bir Microsoft 365'
+    - name: 'E-posta, takvim ve kişileri Microsoft 365''e taşıyın'
       href: migrate-email.md
-    - name: Bağlan'e Microsoft 365
+    - name: Etki alanınızı Microsoft 365'e bağlayın
       href: connect-domain-tom365.md
-    - name: Herkesin verilerini taşımak için Geçiş Yöneticisi'ni kullanma
+    - name: Herkesin verilerini taşımak için Taşıma Yöneticisi'ni kullanın
       href: migrate-files-migration-manager.md
-    - name: Google Workspace'i iptal etme
+    - name: Google Workspace'i İptal Edin
       href: cancel-google.md

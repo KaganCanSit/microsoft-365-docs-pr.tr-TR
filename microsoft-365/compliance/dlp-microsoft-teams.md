@@ -15,12 +15,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Microsoft Teams ve kanallarda Veri Kaybı Önleme (DLP) ilkeleri desteklemektedir.
-ms.openlocfilehash: 66d451e55d5ee41abb0d43927e56295261bd4c8f
-ms.sourcegitcommit: ab5368888876d8796da7640553fc8426d040f470
+ms.openlocfilehash: 693b71181f34e948c0456779c7207fa22861dd5f
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "62990590"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63715355"
 ---
 # <a name="data-loss-prevention-and-microsoft-teams"></a>Veri kaybı önleme ve Microsoft Teams
 
@@ -33,6 +33,11 @@ Kuruluşta veri kaybı önleme (DLP) varsa, bir kanalda veya sohbet oturumunda k
 
 - **Örnek 2: Belgelerde hassas bilgileri koruma**. Bir kişinin bir kanalda veya sohbette konuklarla belge Microsoft Teams ve belgede hassas bilgiler olduğunu varsayalım. Bunu engellemek için tanımlanmış bir DLP ilkeniz varsa, bu kullanıcılara belge açılmaz. DLP ilkeniz, koruma SharePoint için OneDrive güvenlik güvenliklerini ve güvenlik güvenliklerini içermesi gerekir. Bu, Microsoft Teams SharePoint'da gösterip bu SharePoint için DLP'ye örnek olarak ve bu nedenle kullanıcıların Office 365 DLP (Office 365 E3'ye dahil) lisansına sahip olduğunu, ancak kullanıcıların lisans sahibi Office 365 Gelişmiş Uyumluluk .)
 
+- **Örnek 3: Paylaşılan Kanallarda Teams koruma**. Paylaşılan kanallar için ana bilgisayar Teams DLP ilkesi uygulanır. Örneğin, Contoso Ekibi'ne ait paylaşılan bir kanal olduğunu var diyelim. TeamA'da DLP ilkesi P1 vardır. Kanalı paylaşmanın 3 yolu vardır:
+    - **Üyeyle paylaşma**: Contoso'dan kullanıcı1'i TeamA üyesi yapmadan paylaşılan kanala katılmaya davet et. Kullanıcı1 de dahil olmak üzere bu paylaşılan kanalda yer alan herkes P1 kapsamındadır.
+    - **Ekiple paylaşma (şirket içinde)**: Kanalı Contoso'da başka bir ekip EkipB'sinde paylaşır. Başka bir ekibin farklı bir DLP ilkesi olabilir, ama bu önemli değildir. P1, hem TeamA hem de TeamB kullanıcıları da dahil olmak üzere bu paylaşılan kanalda yer alan herkese uygulanır.
+    - **Ekiple paylaşma (kiracılar arasında)**: Kanalı Fabrikam'daki bir ekip ekibiyle paylaşma. Fabrikam'ın kendi DLP ilkesi olabilir, ama bunun önemi yoktur. Hem TeamA (Contoso) hem de TeamF (Fabrikam) kullanıcıları da dahil olmak üzere bu paylaşılan kanalda P1 herkese uygulanır.
+ 
 ## <a name="dlp-licensing-for-microsoft-teams"></a>DLP Lisanslama Microsoft Teams
 
 [Veri kaybı önleme](dlp-learn-about-dlp.md) özellikleri, aşağıdakiler için özel Microsoft Teams mesajları da dahil olmak üzere sohbet ve **kanal iletilerini içerecek şekilde genişletildi**:
@@ -58,14 +63,14 @@ DLP koruması bu varlıklara farklı Teams uygulanır.
 |İlke kapsamı |Bu Teams Varlıklar |DLP koruması kullanılabilir olacak mı|
 |---------|---------|---------|
 |Tek tek kullanıcı hesapları     |1:1/n sohbetler         |Evet         |
-|     |Genel sohbetler         |Hayır         |
-|     |özel kanallar         |Evet         |
+|     |Standart ve paylaşılan kanal iletileri         |Hayır         |
+|     |Özel kanal iletileri         |Evet         |
 |Güvenlik grupları/dağıtım listeleri  | 1:1/n sohbetler         |Evet         |
-|     |Genel sohbetler         |Hayır         |
-|     |özel kanallar         |Evet        |
+|     |Standart ve paylaşılan kanal iletileri  |Hayır         |
+|     |Özel kanal iletileri         |Evet        |
 |Microsoft 365 grubu    |1:1/n sohbetler          |Hayır         |
-|     |Genel sohbetler          |Evet        |
-|     |özel kanallar|Hayır| 
+|     |Standart ve paylaşılan kanal iletileri          |Evet        |
+|     |Özel kanal iletileri|Hayır| 
 
 
 ## <a name="policy-tips-help-educate-users"></a>İlke ipuçları kullanıcıları eğit etmeye yardımcı olur
@@ -228,5 +233,5 @@ Konuk dış engellemeyi de olan bir belgeyi aynı dosyada açmaya Teams DLP ilke
 
 ## <a name="related-articles"></a>İlgili makaleler
 
-- [DLP ilkesi oluşturma, sınama ve ayarlama](create-test-tune-dlp-policy.md)
+- [Bir DLP ilkesi oluşturma, test etme ve ayarlama](create-test-tune-dlp-policy.md)
 - [DLP ilkeleri için e-posta bildirimleri gönderme ve ilke ipuçlarını gösterme](use-notifications-and-policy-tips.md)

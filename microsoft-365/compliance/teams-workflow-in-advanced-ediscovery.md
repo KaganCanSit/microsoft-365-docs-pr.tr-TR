@@ -14,26 +14,28 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Aynı siteden içeriği korumayı, toplamayı, gözden geçirmeyi ve Microsoft Teams hakkında Advanced eDiscovery.
-ms.openlocfilehash: 27f3ada633f7af37b657e59cce64ef1c8e102177
-ms.sourcegitcommit: b71a8fdda2746f18fde2c94d188be89f9cab45f2
+ms.openlocfilehash: 68a255dda7aa9b879c9e608eb99c9575ba691c16
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2021
-ms.locfileid: "63019118"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63716234"
 ---
 # <a name="advanced-ediscovery-workflow-for-content-in-microsoft-teams"></a>Advanced eDiscovery için iş akışını Microsoft Teams
 
 Bu makalede, verileri korumak, toplamak, gözden geçirmek ve bu içerikten içerik dışarı Advanced eDiscovery için kapsamlı bir yordamlar, yönergeler ve en iyi Microsoft Teams. Bu makalenin amacı, eBulma iş akışınızı daha iyi bir içerik için Teams etmektir.
 
-İçerik toplama ve işleme için Teams bir içerik kategorisi vardır ve bu kategorileri Advanced eDiscovery:
+İçerik toplama ve işleme için Teams bir içerik kategorisi vardır ve bunu kullanarak Advanced eDiscovery:
 
 - **Teams bir sohbetler.** bir konuşmada paylaşılan sohbet iletileri, gönderiler ve Teams iki kişi arasında.  Teams bir sohbetler, konuşma olarak da *çağrılır*.
 
 - **Teams sohbetleri seçin**. Üç veya daha fazla kişi arasında bir konuşmada paylaşılan sohbet Teams gönderileri ve ekler. Ayrıca *1:N sohbetler* veya *grup konuşmaları olarak da adlandırılan*.
 
-- **Teams seçin**. Bir kanalda paylaşılan sohbet iletileri, gönderiler, yanıtlar ve Teams.
+- **Teams seçin**. Standart bir kanalda paylaşılan sohbet iletileri, gönderiler, yanıtlar ve Teams.
 
-- **Özel Teams kanallarını seçin**. Özel bir kanalda paylaşılan ileti gönderileri, yanıtlar ve Teams.
+- **Özel kanallar**. Özel bir kanalda paylaşılan ileti gönderileri, yanıtlar ve Teams.
+
+- **Paylaşılan kanallar**. Paylaşılan bir kanalda paylaşılan ileti gönderileri, yanıtlar ve Teams.
 
 ## <a name="where-teams-content-is-stored"></a>İçerik Teams depolandığı yer
 
@@ -44,8 +46,12 @@ Advanced eDiscovery'Teams içeriklerini yönetmenin önkoşulları, Advanced eDi
 |Teams bire bir sohbetler     |Bire bir sohbetlerde yer alan mesajlar, tüm sohbet Exchange Online posta kutusunda saklanır. |Bire bir sohbette paylaşılan dosyalar, dosyayı OneDrive İş kişinin hesaplarında depolanır. |
 |Teams sohbetleri grup sohbetleri     |Grup sohbetleri'nin iletileri tüm sohbet Exchange Online posta kutusunda saklanır. |Grup sohbetlerde paylaşılan dosyalar, OneDrive İş paylaşan kişinin hesaplarında depolanır. |
 |Teams kanalların     |Tüm kanal iletileri ve gönderileri, ekiple Exchange Online posta kutusunda depolanır.|Kanalda paylaşılan dosyalar, ekiple ilişkilendirilmiş SharePoint Online sitesinde depolanır.           |
-|Özel Teams kanalları     |Özel kanalda gönderilen iletiler, Exchange Online tüm üyelerinin posta kutularında depolanır.|Özel kanalda paylaşılan dosyalar, özel kanalla ilişkilendirilmiş SharePoint Bir Çevrimiçi Site'de depolanır.|
+|Özel kanallar     |Özel kanalda gönderilen iletiler, Exchange Online tüm üyelerinin posta kutularında depolanır.|Özel kanalda paylaşılan dosyalar, özel kanalla ilişkilendirilmiş SharePoint Bir Çevrimiçi Site'de depolanır.|
+|Paylaşılan kanallar     |Paylaşılan kanala gönderilen iletiler, paylaşılan kanalla ilişkilendirilmiş sistem posta kutusunda depolanır. <sup>1</sup>|Paylaşılan kanalda paylaşılan dosyalar, paylaşılan kanalla ilişkilendirilmiş SharePoint Online sitesinde depolanır.|
 ||||
+
+> [!NOTE]
+> <sup>1</sup> Paylaşılan kanalda gönderilen iletileri aramak (ve korumak) için, üst Ekip için Exchange Online kutunuzu aramanız veya belirtmeniz gerekir.
 
 ## <a name="create-a-case-for-teams-content"></a>İçerik oluşturmak için Teams oluşturma
 
@@ -95,12 +101,12 @@ Bir vakaya koruyucular eklemek ve özel veri kaynaklarını korumak için:
 
    - **OneDrives**. Custohal'in OneDrive hesabı varsayılan olarak seçilidir. Bire bir sohbetlerde ve grup sohbetlarında paylaşılan dosyaları özel veriler olarak eklemek (ve korumak) için bu seçeneği seçili durumda tutabilirsiniz.
 
-   - **SharePoint**. Özel SharePoint herhangi bir özel kanalla ilişkilendirilmiş olan kullanıcı sitesini ekleyin. Custo ortak dosyalar özel kanalda paylaşılan dosyaları özel veriler olarak eklemek (ve korumak) için bir üyedir. **Düzenle'ye** tıklayın ve özel bir kanalla SharePoint sitenin URL'sini ekleyin. Bir kullanıcının üyesi olduğu özel kanalların nasıl bulunacağı hakkında bilgi edinmek için bkz. [Özel kanalların eBulma](/microsoftteams/ediscovery-investigation#ediscovery-of-private-channels).
+   - **SharePoint**. Herhangi SharePoint paylaşılan kanalla ilişkilendirilmiş özel veya paylaşılan kanal ekleme Custo custodial data olarak kanalda paylaşılan dosyaları özel veriler olarak eklemek (ve korumak) için bir üyedir. **Düzenle'ye** tıklayın ve özel veya paylaşılan SharePoint ilgili sitenin URL'sini ekleyin. Bir kullanıcının üyesi olduğu özel ve paylaşılan kanalların nasıl bulunacağı hakkında bilgi edinmek için, özel ve paylaşılan kanalların [eBulma'ya bakın](/microsoftteams/ediscovery-investigation#ediscovery-of-private-and-shared-channels).
 
-   - **Teams**. Custo ortaklarının üyesi olduğu ekipleri, özel veriler olarak ekleyebilir (ve) tüm kanal iletileriyle bir kanalda paylaşılan tüm Teams ekleyin. **Düzenle'ye tıklarken**, koruyucu ekibin her bir ekibiyle ilişkilendirilmiş posta kutusu ve site bir üye olarak görüntülenir. Özel dosyayla ilişkilendirmek istediğiniz ekipleri seçin. Her ekip için hem ilgili posta kutusunu hem de siteyi seçmeniz gerekir.
+   - **Teams**. Custo ortaklarının üyesi olduğu ekipleri, özel veriler olarak ekleyebilir (ve) tüm kanal iletileriyle bir kanalda paylaşılan tüm Teams ekleyin. Bu, koruyucuların üyesi olduğu paylaşılan kanalın üst ekibi için posta kutusunu eklemeyi içerir. **Düzenle'ye tıklarken**, koruyucu ekibin her bir ekibiyle ilişkilendirilmiş posta kutusu ve site bir üye olarak görüntülenir. Özel dosyayla ilişkilendirmek istediğiniz ekipleri seçin. Her ekip için hem ilgili posta kutusunu hem de siteyi seçmeniz gerekir.
 
    > [!NOTE]
-   > Ayrıca, koruyucuların bir koruyucu veri Teams üyesi olmayan posta kutusunu ve posta kutusunun sitesini de  eklersiniz. Bunu yapmak için, **Ekle ve** **Düzenle'Exchange** **SharePoint posta** kutusu ve site ilişkilendirmeyi ekiple ilişkilendirme'yi ekleyerek bunu yapar.
+   > Ayrıca, koruyucuların bir koruyucu veri Teams üyesi olmayan posta kutusunu ve posta kutusunun sitesini de  eklersiniz. Bunu yapmak için **Ekip sitesi ile** birlikte Exchange **SharePoint** yanındaki Düzenle'ye  tıklar ve ekiple ilişkili posta kutusunu ve siteyi eklersiniz.
 
 6. Özel kişi ekdikten ve özel veri kaynaklarını yapılandırdikten sonra, **Tutma ayarları sayfasını** görüntülemek için **Sonraki'ne** tıklayın.
 
@@ -140,13 +146,13 @@ Ayrıca, bir taslak koleksiyonu çalıştırmama ve koleksiyonu 2013 veya 2013/2
 
 5. Bir veya daha fazla koruyucu seçin ve Ekle'ye **tıklayın**.
 
-   Koleksiyona belirli koruyucular eklemenizden sonra, her özel kişi için belirli veri kaynaklarının listesi görüntülenir. Bunlar, özel durumuna custo bir eklenmiştir. Tüm koruyucu veri kaynakları varsayılan olarak seçilidir. Bu, Teams ve özel kanallarla ilişkilendirilmiş olan iletişim kanallarını içerir.
+   Koleksiyona belirli koruyucular eklemenizden sonra, her özel kişi için belirli veri kaynaklarının listesi görüntülenir. Bunlar, özel durumuna custo bir eklenmiştir. Tüm koruyucu veri kaynakları varsayılan olarak seçilidir. Bu, Teams ve custo ortaklarından herhangi birini veya kanalları içerir.
 
    daha fazla içerik toplarken aşağıdaki Teams öneririz:
 
    - Koruyucuların OneDrive veli hesaplarını koleksiyon kapsamından kaldırın (**Her custo OneDrive custo yassı** sütunundaki onay kutusunun işaretini kaldırın). Bu, bire bir sohbetlere ve grup sohbetlere eklenmiş yinelenen dosya koleksiyonunun önüne geçmek için kullanılır. Bulut ekleri, taslak koleksiyonunu gözden geçirme kümesine işlerken koleksiyonda bulunan her konuşmadan otomatik olarak toplanır. Bu yöntem kullanılarak (koleksiyonun bir OneDrive bir parçası olarak bu hesaplarda arama yapmak yerine), 1:1'e eklenen dosyalar ve grup sohbetleri, paylaşıldıkları konuşmada grupılır.
 
-   - Özel kanallarda paylaşılan dosyaların **bulunduğu sitenin SharePoint** siteyi kaldırmak için Ek site sütunundaki onay kutusunun işaretini kaldırın. Bunu yapmak, özel kanal konuşmalarına eklenmiş yinelenen dosyaları toplamayı ortadan kaldırmaz, çünkü taslak koleksiyonunu işlerken ve paylaşılan konuşmalarda gruplanan konuşmalarda gruplanan özel kanal konuşmalarına ekli bulut ekleri otomatik olarak gözden geçirme kümesine eklenir.
+   - Özel veya paylaşılan kanallarda paylaşılan **dosyaları içeren tüm** siteleri SharePoint siteyi kaldırmak için Ek site sütunundaki onay kutusunun işaretini kaldırın. Bunu yapmak, özel veya paylaşılan kanal konuşmalarına eklenmiş yinelenen dosyaları toplamayı ortadan kaldırmaz, çünkü taslak koleksiyonunu işlerken ve paylaşılan konuşmalarda gruplandırılan bulut ekleri otomatik olarak gözden geçirme kümesine eklenir.
 
 6. Daha önce koruyucu veri kaynakları olarak Teams adımlarını izlediysanız, bu adımı atlayıp İleri'yi **seçin**. Aksi takdirde, Özel  olmayan veri kaynakları sihirbaz sayfasında, koleksiyonda arama yapmak için vakaya eklemış olduğunuz Teams özel olmayan veri kaynaklarını seçebilirsiniz.
 
@@ -154,7 +160,7 @@ Ayrıca, bir taslak koleksiyonu çalıştırmama ve koleksiyonu 2013 veya 2013/2
 
 8. Koşullar sihirbazı **sayfasında**, önceki sihirbaz sayfalarında belirttiğiniz veri Teams içeriği toplamak için arama sorgusunu yapılandırabilirsiniz. Koleksiyonun kapsamını daraltmak için çeşitli anahtar sözcükler ve arama koşulları kullanabilirsiniz. Daha fazla bilgi için bkz [. Koleksiyonlar için arama sorguları oluşturma](building-search-queries.md).
 
-   En kapsamlı Teams sohbet konuşmalarını (1:1, grup, kanal ve özel sohbetler dahil) en kapsamlı koleksiyonunun sağlanmasına yardımcı olmak için **Tür** koşulu kullanın ve Anlık iletiler **seçeneğini** belirleyin. Ayrıca koleksiyonun kapsamını araştırmanız ile ilgili öğelere daraltmak için bir tarih aralığı veya birkaç anahtar sözcük de dahil öneririz. Tür ve Tarih seçeneklerini kullanan örnek bir sorgunun **ekran** **görüntüsü:**
+   En kapsamlı Teams sohbet konuşmalarını (1:1, grup sohbetleri ve kanal sohbetleri dahil) en kapsamlı koleksiyonunun sağlanmasına yardımcı olmak için Tür koşullarını  kullanın ve **Anlık iletiler seçeneğini** belirleyin. Ayrıca koleksiyonun kapsamını araştırmanız ile ilgili öğelere daraltmak için bir tarih aralığı veya birkaç anahtar sözcük de dahil öneririz. Tür ve Tarih seçeneklerini kullanan örnek bir sorgunun **ekran** **görüntüsü:**
 
    ![İçerik toplama sorgusu Teams.](..\media\TeamsConditionsQueryType.png)
 
@@ -193,7 +199,7 @@ Aşağıdaki tabloda, farklı türlerde sohbet içeriğinin Teams ve konuşmaya 
 | Teams türü|Aileye göre grupla  |Konuşmaya göre grupla  |
 |:---------|:---------|:---------|
 |Teams bire bir sohbetler ve grup sohbetleri   | Bir döküm ve tüm ekleri ve ayıklanan öğeler aynı **FamilyId'i paylaşır**. Her dökümün benzersiz bir **FamilyId'si var**. |Aynı konuşma içindeki tüm döküm dosyaları ve aile öğeleri aynı **ConversationId'i paylaşır**. Bu, aşağıdaki öğeleri içerir:<br/><br/>  - Aynı ConversationId'yi paylaşan tüm dökümlerin tüm ayıklanan öğeleri **ve ekleri**. <br/> - Aynı sohbet görüşmesinin tüm dökümleri<br/> - Her dökümün tüm koruyucu kopyaları<br/> - Aynı sohbet görüşmelerinden sonraki koleksiyonlardan dökümler <br/><br/>  Bire Teams sohbetleri ve grup sohbeti konuşmalarını takip etmek için, her biri konuşma içinde farklı bir zaman dilimine karşılık gelen birden fazla döküm dosyamız olabilir. Bu döküm dosyaları aynı katılımcılarla aynı konuşmadan geldiklerinden, aynı **ConversationId'leri paylaşırlar**.|
-|Teams ve özel kanal sohbetleri    | Her gönderiyle tüm yanıtlar ve ekler kendi döküm metnine kaydedilir. Bu döküm ve tüm ekleri ve ayıklanan öğeler aynı **FamilyId'i paylaşır**.         |Her gönderinin ve ekleri ile ayıklanan öğelerin benzersiz bir **ConversationId'si vardır**. Aynı gönderiden sonraki koleksiyonlar veya yeni yanıtlar varsa, bu koleksiyonların sonucunda elde edilen delta dökümleri de **aynı ConversationId'ye sahip olur**.|
+|Standart, özel ve paylaşılan kanal sohbetleri    | Her gönderiyle tüm yanıtlar ve ekler kendi döküm metnine kaydedilir. Bu döküm ve tüm ekleri ve ayıklanan öğeler aynı **FamilyId'i paylaşır**.         |Her gönderinin ve ekleri ile ayıklanan öğelerin benzersiz bir **ConversationId'si vardır**. Aynı gönderiden sonraki koleksiyonlar veya yeni yanıtlar varsa, bu koleksiyonların sonucunda elde edilen delta dökümleri de **aynı ConversationId'ye sahip olur**.|
 ||||
 
 Aile veya **konuşmaya** göre gruplu içeriği görüntülemek için, incelemenin Teams çubuğundaki Grup denetimi'ne tıklayın.
@@ -234,7 +240,7 @@ Advanced eDiscovery tarafından öğelerle ilgili bağlam sağlayan ek iletileri
 | Teams türü|Arama parametreleriyle sorgular  |Tarih aralıkları ile sorgular  |
 |:---------|:---------|:---------|
 |Teams bire bir sohbetler ve grup sohbetleri   |Yanıt veren öğelerden 12 saat önce ve 12 saat sonra gönderilen iletiler, tek bir döküm dosyasında yanıt veren öğeyle birlikte gruptur.   |24 saatlik bir pencerede gelen iletiler, tek bir döküm dosyasında grup İlkesini içerir.|
-|Teams ve özel kanal sohbetleri    |Yanıt veren öğeleri ve buna karşılık gelen tüm yanıtları içeren her gönderi, tek bir döküm dosyasında gruplandırılır. |Yanıt veren öğeleri ve buna karşılık gelen tüm yanıtları içeren her gönderi, tek bir döküm dosyasında gruplandırılır.|
+|Kanal sohbetleri için standart, Teams ve paylaşılan sohbetler    |Yanıt veren öğeleri ve buna karşılık gelen tüm yanıtları içeren her gönderi, tek bir döküm dosyasında gruplandırılır. |Yanıt veren öğeleri ve buna karşılık gelen tüm yanıtları içeren her gönderi, tek bir döküm dosyasında gruplandırılır.|
 ||||
 
 ### <a name="deduplication-of-teams-content"></a>İçerik Teams kaldırma
@@ -265,14 +271,14 @@ Aşağıdaki tabloda, bu içeriklerin meta veri Teams açık almaktadır.
 |:---------|:---------|
 |containsEditedMessage      | Döküm dosyasının düzenlenmiş bir ileti içerdiğini gösterir. Düzenlenmiş iletiler, döküm dosyasını görüntülerken tanımlanır.|
 |ConversationId|Öğenin ilişkilendirilen konuşmayı tanımlayan GUID. Bu özellik için aynı konuşmadan metin döküm dosyaları ve ekler aynı değere sahip olur.|
-|Konuşma adı     | Döküm dosyasının veya ekin ilişkilendiril olduğu konuşmanın adı. Grup Teams bire bir sohbetler ve grup sohbetleri yapmak için bu özelliğin değeri, konuşmanın tüm katılımcılarının UPN'dir. Örneğin, `User3 <User3@contoso.onmicrosoft.com>,User4 <User4@contoso.onmicrosoft.com>,User2 <User2@contoso.onmicrosoft.com>`. Teams ve özel kanal sohbetleri görüşme adı için aşağıdaki biçimi kullanır: `<Team name>,<Channel name>`.Örneğin, `eDiscovery vNext, General`.          |
-|ConversationType     | Ekip sohbeti türünü gösterir. Bire Teams sohbetler ve grup sohbetleri için bu özelliğin değeri şöyledir`Group`: . Kanal Teams özel kanal sohbetleri için değer: `Channel`.|
+|Konuşma adı     | Döküm dosyasının veya ekin ilişkilendiril olduğu konuşmanın adı. Grup Teams bire bir sohbetler ve grup sohbetleri yapmak için bu özelliğin değeri, konuşmanın tüm katılımcılarının UPN'dir. Örneğin, `User3 <User3@contoso.onmicrosoft.com>,User4 <User4@contoso.onmicrosoft.com>,User2 <User2@contoso.onmicrosoft.com>`. Teams (standart, özel ve paylaşılan) sohbetlerde konuşma adı için aşağıdaki biçim kullanılabilir: `<Team name>,<Channel name>`.Örneğin, `eDiscovery vNext, General`.          |
+|ConversationType     | Ekip sohbeti türünü gösterir. Bire Teams sohbetler ve grup sohbetleri için bu özelliğin değeri şöyledir`Group`: . Standart, özel ve paylaşılan kanal sohbetleri için değer : `Channel`.|
 |Tarih | Döküm dosyasındaki ilk iletinin zaman damgasıdır.|
 |FamilyId|Sohbet konuşmalarının döküm dosyasını tanımlayan GUID. Ekler, bu özellik için dosyanın ekli olduğu iletiyi içeren döküm dosyasıyla aynı değere sahip olur.|
 |FileClass     |Bu tür bir içeriği gösterir. Sohbetlerde Teams değeri vardır`Conversation`. Buna karşılık, Exchange-posta iletilerinin değeri vardır`Email`.|          |
 |MessageKind     | İletinin tür özelliği. Teams değeri vardır`microsoftteams , im`. |
 |Alıcılar     | Döküm konuşması içinde ileti alan tüm kullanıcıların listesi.|
-|TeamsChannelName     | Metin Teams adını veya dökümün özel kanal adını girin.|
+|TeamsChannelName     | Dökümün Teams adı.|
 |||
 
 Meta veri özellikleriyle ilgili diğer Advanced eDiscovery için bkz. Meta [veri alanlarında belge Advanced eDiscovery](document-metadata-fields-in-Advanced-eDiscovery.md).

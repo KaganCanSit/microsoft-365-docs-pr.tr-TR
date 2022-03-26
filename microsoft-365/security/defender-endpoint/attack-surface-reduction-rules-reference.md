@@ -17,12 +17,12 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: 5ffbe15fe9fa06e7c06546f9452d6c4f2bddfc39
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 77edaa3d71911bd0594e707996c320285dddabc5
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63329621"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754108"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Saldırı yüzeyini azaltma kuralları başvurusu
 
@@ -112,7 +112,7 @@ Bu tabloda başvurulan yapılandırma yönetim sistemi sürümleriyle ilgili bil
 
 |Kural adı | Intune | Microsoft Endpoint Manager |Microsoft Uç Noktası Yapılandırma Yöneticisi |Grup İlkesi<sup>[[1](#fn1)]<sup></sup> | PowerShell<sup>[[1](#fn1)]<sup></sup>  |
 |---|:---:|:---:|:---:|:---:|:---:|
-|[Açıklardan yararlanan ve imzalı sürücüler için kötüye kullanımı engelleme](#block-abuse-of-exploited-vulnerable-signed-drivers) | E  | Y MEM OMA-URI |   | E  |  E |
+|[Açıklardan yararlanan ve imzalı sürücüler için kötüye kullanımı engelleme](#block-abuse-of-exploited-vulnerable-signed-drivers) | E  | Y MEM OMA-URI |   | E  |  E  |
 |[Adobe Reader'ın alt işlemleri oluşturmalarını engelleme](#block-adobe-reader-from-creating-child-processes) | E |   | E | E  | E  |
 |[Tüm Office alt işlemleri oluşturmalarını engelleme](#block-all-office-applications-from-creating-child-processes) | E |   |E <br><br> CB 1710 | E  | E  |
 |[Yerel güvenlik yetkilisi alt sisteminden (Windows) kimlik bilgilerinin çalmasını lsass.exe](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) | E  |   | E <br><br>CB 1802 | E  | E  |
@@ -240,7 +240,7 @@ Bağımlılıklar: MDAV
 
 Bu kural, Office işlemleri oluşturmalarını engeller. Office word, Excel, PowerPoint, OneNote ve Access'i içerir.
 
-Kötü amaçlı alt işlemler oluşturmak, yaygın bir kötü amaçlı yazılım stratejisidir. Bir vektör olarak kötüye Office çoğunlukla daha fazla yük indirmek ve çalıştırmak için VBA makroları ve exploit kodu çalıştıran kötü amaçlı yazılım. Bununla birlikte, bazı yasal iş hattı uygulamaları da amacına yönelik alt süreçler oluştursa da; örneğin, bir komut istemini ya da Kayıt Defteri ayarlarını yapılandırmak için PowerShell'i kullanmak gibi.
+Kötü amaçlı alt işlemler oluşturmak, yaygın bir kötü amaçlı yazılım stratejisidir. Bir vektör olarak kullanan Office kötü amaçlı yazılım, çoğunlukla daha fazla yük indirmek ve çalıştırmak için VBA makroları ve açıklarından yararlanma kodu çalıştırır. Bununla birlikte, bazı yasal iş hattı uygulamaları da amacına yönelik alt süreçler oluştursa da; örneğin, bir komut istemini ya da Kayıt Defteri ayarlarını yapılandırmak için PowerShell'i kullanmak gibi.
 
 Intune adı: `Office apps launching child processes`
 

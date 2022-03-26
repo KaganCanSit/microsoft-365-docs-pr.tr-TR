@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu ilkelere uygulanacak bekletme ilkeleri hakkında Microsoft Teams.
-ms.openlocfilehash: d3562126a678e486fd97f3c760841f9ba4de7193
-ms.sourcegitcommit: 6e43aeff217afe97876137b1ead8df26db6e9937
+ms.openlocfilehash: fc870050b8ef69a908553617d755412d95efa288
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "63015317"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63714884"
 ---
 # <a name="learn-about-retention-for-microsoft-teams"></a>Müşteri için bekletme hakkında bilgi Microsoft Teams
 
@@ -43,6 +43,9 @@ Diğer iş yükleri için bkz:
 
 ## <a name="whats-included-for-retention-and-deletion"></a>Bekletme ve silme işlemi için neler dahildir?
 
+> [!NOTE]
+> Bekletme ilkeleri artık [önizlemede olan](/MicrosoftTeams/shared-channels) paylaşılan kanalları desteklemektedir. Tüm paylaşılan kanallar, bekletme ayarlarını üst kanaldan devralır.
+
 Teams sohbetleri, kanal iletileri ve özel kanal iletileri Teams için bekletme ilkeleri kullanılarak silinebilir ve uyumluluk nedenlerinden dolayı aşağıdaki öğeler de korunabilirsiniz: Eklenmiş resimler, tablolar, köprü metni bağlantıları, diğer Teams iletilerine ve dosyalarına bağlantılar ve kart [içeriği.](/microsoftteams/platform/task-modules-and-cards/what-are-cards) Sohbet iletileri ve özel kanal iletileri görüşmede yer alan kişilerin tüm adlarını, kanal iletileri ise ekip adını ve ileti başlığını (varsa) içerir. 
 
 Kod parçacıkları, Teams mobil istemcisinden kayıtlı sesli notlar, küçük resimler, duyuru resimleri ve ifade şeklinde diğer kişi ifadeleri gelen tepkiler, Teams için bekletme ilkeleri kullanılırken korunur.
@@ -60,6 +63,7 @@ Bu posta kutuları RecipientTypeDetails özniteliğine göre listelenir:
 - **UserMailbox**: Bu posta kutuları, bulut tabanlı kullanıcıların ileti verilerini Teams depolar.
 - **MailUser**: Bu posta kutuları, şirket içi kullanıcıların ileti [Teams depolar](search-cloud-based-mailboxes-for-on-premises-users.md).
 - **GroupMailbox**: Bu posta kutuları, standart kanalların ileti Teams depolar.
+- **Alt Grup Grubu: Bu** posta kutuları, paylaşılan kanalların ileti Teams depolar.
 
 Konferans odalarında kullanılan RoomMailbox gibi diğer posta kutusu Teams, bekletme ilkeleri Teams desteklemez.
 

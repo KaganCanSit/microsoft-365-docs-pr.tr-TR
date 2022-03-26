@@ -1,121 +1,137 @@
-- name: Microsoft 365 ve mimari merkezi
+- name: Microsoft 365 çözüm ve mimari merkezi
   href: index.yml
   displayName: Home
 - name: Çözüm ve mimari çizimleri
   items:
-    - name: Microsoft 365 çizimleri
+    - name: Microsoft 365 üretkenlik çizimleri
       href: productivity-illustrations.md
     - name: Microsoft bulut mimarisi modelleri
       href: cloud-architecture-models.md
-    - name: Kullanıcılar için bilgi görselleri
+    - name: Kullanıcılar için bilgi grafikleri
       href: infographics-for-users.md
     - name: Mimari simgeleri ve şablonları
       href: architecture-icons-templates.md
-- name: Microsoft 365 temel çözümler
+- name: Microsoft 365 temel çözümleri
   items:
-    - name: Karma çalışma için altyapınızı ayarlama
+    - name: Hibrit çalışma için altyapınızı ayarlayın
       items:
         - name: Genel bakış
           href: empower-people-to-work-remotely.md
-        - name: Adım 1. Oturum açma güvenliğini artırma
+        - name: Adım 1. Oturum açma güvenliğini artırın
           href: empower-people-to-work-remotely-secure-sign-in.md
-        - name: Adım 2. Uzaktan erişim sağlama
+        - name: Adım 2. Uzaktan erişim sağlayın
           href: empower-people-to-work-remotely-remote-access.md
-        - name: Adım 3. Güvenlik ve uyumluluğu dağıtma
+        - name: Adım 3. Güvenlik ve uyumluluk dağıtın
           href: empower-people-to-work-remotely-security-compliance.md
-        - name: Adım 4. Uç nokta yönetimini dağıtma
+        - name: Adım 4. Uç nokta yönetimini dağıtın
           href: empower-people-to-work-remotely-manage-endpoints.md
-        - name: Adım 5. Üretkenlik uygulamalarını ve hizmetlerini dağıtma
+        - name: Adım 5. Üretkenlik uygulamalarını ve hizmetlerini dağıtın
           href: empower-people-to-work-remotely-teams-productivity-apps.md
         - name: 6. Adım. Çalışanlarınızı eğitin
           href: empower-people-to-work-remotely-train-monitor-usage.md
-    - name: Intune ve Microsoft 365 ile uç noktaları yönetme
+    - name: Intune ve Microsoft 365 ile uç noktaları yönetin
       items:
         - name: Genel bakış
           href: manage-devices-with-intune-overview.md
-        - name: Adım 1. Uygulama Koruması ilkelerini uygulama
+        - name: Adım 1. Uygulama Koruma ilkelerini uygulayın
           href: manage-devices-with-intune-app-protection.md
-        - name: Adım 2. Cihazları yönetime kaydetme
+        - name: Adım 2. Cihazları yönetime kaydedin
           href: manage-devices-with-intune-enroll.md
-        - name: Adım 3. Uyumluluk ilkelerini ayarlama
+        - name: Adım 3. Uyumluluk ilkelerini ayarlayın
           href: manage-devices-with-intune-compliance-policies.md
-        - name: Adım 4. Sağlıklı ve uyumlu cihazlar gerektirme
+        - name: Adım 4. İyi durumda ve uyumlu cihazlar gerektirin
           href: manage-devices-with-intune-require-compliance.md
-        - name: Adım 5. Cihaz profillerini dağıtma
+        - name: Adım 5. Cihaz profillerini dağıtın
           href: manage-devices-with-intune-configuration-profiles.md
-        - name: 6. Adım. Cihaz riskini ve güvenlik taban çizgilerine uyumluluğu izleme
+        - name: 6. Adım. Cihaz riskini ve güvenlik temel hatlarına uyumluluğu izleyin
           href: manage-devices-with-intune-monitor-risk.md
-        - name: Adım 7. Bilgi koruma özellikleriyle veri kaybı önleme (DLP) uygulama
+        - name: 7. Adım. Bilgi koruma yetenekleriyle veri kaybı önleme (DLP) uygulayın
           href: manage-devices-with-intune-dlp-mip.md
-    - name: Güvenlik şifreleri ile güvenli işbirliği Microsoft 365
+    - name: Microsoft 365 ile güvenli işbirliği kurun
       items:
         - name: Genel bakış
           href: setup-secure-collaboration-with-teams.md
-        - name: Üç katman koruma katmanını otomatik olarak Microsoft Teams
+        - name: Microsoft Teams ile üç koruma katmanı yapılandırın
           items:
-            - name: Korumanın üç katmanına genel bakış
+            - name: Üç katmanlı korumaya genel bakış
               href: configure-teams-three-tiers-protection.md
-            - name: Taban çizgisi korumasını yapılandırma
+            - name: Temel korumayı yapılandırın
               href: configure-teams-baseline-protection.md
-            - name: Hassas korumayı yapılandırma
+            - name: Hassas korumayı yapılandırın
               href: configure-teams-sensitive-protection.md
-            - name: Çok hassas korumayı yapılandırma
+            - name: Son derece hassas korumayı yapılandırın
               href: configure-teams-highly-sensitive-protection.md
-            - name: Ekibi güvenlik yalıtlığı ile yapılandırma
+            - name: Güvenlik yalıtımıyla bir ekibi yapılandırın
               href: secure-teams-security-isolation.md
-        - name: Dış paylaşımı yapılandırma
+        - name: Dış paylaşımı yapılandırın
           items:
             - name: Dış paylaşıma genel bakış
               href: collaborate-with-people-outside-your-organization.md
-            - name: Yapılandırma senaryoları
+            - name: Dış işbirliğini planlayın
+              href: plan-external-collaboration.md
+            - name: Yapılandırma
               items:
-                - name: Belgeler üzerinde işbirliği yapma
+                - name: Belgeler üzerinde işbirliği yapın
                   href: collaborate-on-documents.md
-                - name: Bir sitede işbirliği yapma
+                - name: Sitede işbirliği yapın
                   href: collaborate-in-site.md
-                - name: Ekip olarak işbirliği yapma
+                - name: Ekip olarak işbirliği yapın
                   href: collaborate-as-team.md
-                - name: B2B extranet oluşturma
+                - name: Kanalda işbirliği yapın
+                  href: collaborate-teams-direct-connect.md
+                - name: Tüm kuruluşlarla paylaşılan kanalları etkinleştirin
+                  href: allow-direct-connect-with-all-organizations.md
+                - name: B2B extraneti oluşturun
                   href: b2b-extranet.md
-                - name: Paylaşımı sınırla
-                  href: microsoft-365-limit-sharing.md
-            - name: Güvenlik senaryoları
+                - name: Diğer kuruluşlardan koşullu erişime güvenin
+                  href: trust-conditional-access-from-other-organizations.md
+            - name: Paylaşımı sınırlayın
               items:
-                - name: Kimliği doğrulanmamış paylaşım
-                  href: best-practices-anonymous-sharing.md
-                - name: Kazara maruz kalmayı sınırla
+                - name: Kimlerin konuk davet edebileceğini sınırlayın
+                  href: limit-who-can-invite-guests.md
+                - name: Kuruluş tarafından kimlerin davet edilebileceğini sınırlayın
+                  href: limit-invitations-from-specific-organization.md
+                - name: Konuk paylaşımını belirli kuruluşlarla sınırlayın
+                  href: limit-guest-sharing-to-specific-organization.md
+                - name: Kullanıcıların konuk olabileceği kuruluşları sınırlayın
+                  href: limit-organizations-where-users-have-guest-accounts.md
+                - name: Kazara maruz kalmayı sınırlayın
                   href: share-limit-accidental-exposure.md
-                - name: Güvenli konuk paylaşım ortamı
-                  href: create-secure-guest-sharing-environment.md
+                - name: Paylaşımı sınırlayın
+                  href: microsoft-365-limit-sharing.md
+            - name: Güvenli konuk paylaşım ortamı
+              href: create-secure-guest-sharing-environment.md
+            - name: Kimliği doğrulanmamış paylaşım
+              href: best-practices-anonymous-sharing.md
             - name: Dış paylaşım başvurusu
               href: microsoft-365-guest-settings.md
-    - name: Yazılım kiracınız için fidye yazılımı Microsoft 365 dağıtın
+    - name: Microsoft 365 kiracınız için fidye yazılımı koruması dağıtın
       items:
         - name: Genel bakış
           href: ransomware-protection-microsoft-365.md
-        - name: Adım 1. Güvenlik taban çizgilerini yapılandırma
+        - name: Adım 1. Güvenlik temel hatlarını yapılandırın
           href: ransomware-protection-microsoft-365-security-baselines.md
-        - name: Adım 2. Saldırı algılamayı ve yanıtı dağıtın
+        - name: Adım 2. Saldırı algılama ve yanıt dağıtın
           href: ransomware-protection-microsoft-365-attack-detection-response.md
-        - name: Adım 3. Kimlikleri koruma
+        - name: Adım 3. Kimlikleri koruyun
           href: ransomware-protection-microsoft-365-identities.md
-        - name: Adım 4. Cihazları koruma
+        - name: Adım 4. Cihazları koruyun
           href: ransomware-protection-microsoft-365-devices.md
-        - name: Adım 5. Bilgileri koruma
+        - name: Adım 5. Bilgileri koruyun
           href: ransomware-protection-microsoft-365-information.md
-    - name: Veri gizliliği düzenlemeleri için bilgi korumasını dağıtma
+    - name: Veri gizliliği düzenlemeleri için bilgi korumasını dağıtın
       items:
         - name: Genel bakış
           href: information-protection-deploy.md
         - name: Plan
           href: information-protection-deploy-assess.md
-        - name: Takip Et
+        - name: Takip et
           href: information-protection-deploy-compliance.md
-        - name: Engelleme
+        - name: Engelle
           href: information-protection-deploy-identity-device-threat.md
         - name: Koru
           href: information-protection-deploy-protect-information.md
-        - name: Koruma
+        - name: Sakla
           href: information-protection-deploy-govern.md
         - name: Araştır
           href: information-protection-deploy-monitor-respond.md
@@ -129,7 +145,7 @@
           items:
             - name: Genel bakış
               href: tenant-management-overview.md
-            - name: Adım 1. Kiracılar
+            - name: Adım 1. Kiracılarınız
               href: tenant-management-tenants.md
             - name: Adım 2. En uygun ağ
               href: tenant-management-networking.md
@@ -143,122 +159,122 @@
               items:
                 - name: Genel bakış
                   href: ../admin/add-users/remove-former-employee.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: Adım 1. Çalışanın oturum açmasını ve bu hizmetlere erişimi Microsoft 365 engelleme
+                - name: Adım 1. Bir çalışanın oturum açmasını ve Microsoft 365 hizmetlerine erişimini engelleyin
                   href: ../admin/add-users/remove-former-employee-step-1.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: Adım 2. Eski çalışanın posta kutusunun içeriğini kaydetme
+                - name: Adım 2. Eski bir çalışanın posta kutusunun içeriğini kaydedin
                   href: ../admin/add-users/remove-former-employee-step-2.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: Adım 3. Eski çalışanın mobil cihazını temizleme ve engelleme
+                - name: Adım 3. Eski bir çalışanın mobil cihazını silin ve engelleyin
                   href: ../admin/add-users/remove-former-employee-step-3.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: Adım 4. Eski bir çalışanın e-postasını başka bir çalışana iletme veya paylaşılan posta kutusuna dönüştürme
+                - name: Adım 4. Eski bir çalışanın e-postasını başka bir çalışana iletin veya paylaşılan bir posta kutusuna dönüştürün
                   href: ../admin/add-users/remove-former-employee-step-4.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: Adım 5. Başka bir çalışana kişisel veriler OneDrive verilerine Outlook verme
+                - name: Adım 5. Başka bir çalışanın OneDrive ve Outlook verilerine erişmesine izin verin
                   href: ../admin/add-users/remove-former-employee-step-5.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: 6. Adım. Eski Microsoft 365 kullanıcı lisansını kaldırma
+                - name: Adım 6. Microsoft 365 lisansını eski bir çalışandan kaldırın
                   href: ../admin/add-users/remove-former-employee-step-6.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: Adım 7. Eski çalışanın kullanıcı hesabını silme
+                - name: Adım 7. Eski bir çalışanın kullanıcı hesabını silin
                   href: ../admin/add-users/remove-former-employee-step-7.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-        - name: İçeriğinizi Başka bir Microsoft 365
+        - name: İçeriğinizi Microsoft 365’e geçirin
           href: /sharepointmigration/migrate-to-sharepoint-online?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-        - name: Dosya paylaşımlarını başka bir Microsoft 365
+        - name: Dosya paylaşımlarını Microsoft 365'e geçirin
           items:
             - name: Genel bakış
               href: /sharepointmigration/mm-get-started?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: '1. Adım: Aracıları ayarlama'
+            - name: '1. Adım: Aracıları ayarlayın'
               href: /sharepointmigration/mm-setup-clients?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: '2. Adım: Geçiş görevi oluşturma'
+            - name: '2. Adım: Bir geçiş görevi oluşturun'
               href: /sharepointmigration/mm-how-to-use?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: '3. Adım: İzleme ve rapor'
+            - name: '3. Adım: İzleyin ve raporlayın'
               href: /sharepointmigration/mm-reports?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-    - name: Toplantılar ve iletişimler
+    - name: Toplantılar ve iletişim
       items:
-        - name: Sesli Teams dağıtımı Microsoft 365
+        - name: Microsoft 365'te Teams sesini dağıtın
           items:
             - name: Genel bakış
               href: deploy-voice.md
-            - name: Adım 1. Ses çözümlerinizi seçin
+            - name: Adım 1. Ses çözümünüzü seçin
               href: /MicrosoftTeams/cloud-voice-landing-page?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: Adım 2. - Ayar Telefon Sistemi
+            - name: Adım 2. - Telefon Sistemini ayarlayın
               href: /MicrosoftTeams/setting-up-your-phone-system?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: Adım 3. - PSTN bağlantısını ayarlama
+            - name: Adım 3. - PSTN bağlantısını ayarlayın
               items:
                 - name: Arama Planı seçeneği
                   href: /MicrosoftTeams/set-up-calling-plans?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
                 - name: Doğrudan Yönlendirme seçeneği
                   href: /MicrosoftTeams/direct-routing-configure?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: Çok uluslu corporation için örnek olay
+            - name: Çok uluslu şirket için örnek olay incelemesi
               href: /MicrosoftTeams/voice-case-study-overview?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-        - name: Kurumsal iletişimler
+        - name: Kurumsal İletişimler
           items:
-            - name: Kurumsal iletişimlere genel bakış
+            - name: Kurumsal iletişime genel bakış
               href: /sharepoint/corporate-communications-overview?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
               items:
-                - name: '1. Adım: İletişim stratejinizi planlama'
+                - name: 'Adım 1: İletişim stratejinizi planlayın'
                   href: /sharepoint/plan-communication-strategy?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: '2. Adım: İletişim araçlarını gözden geçirme'
+                - name: 'Adım 2: İletişim araçlarını inceleyin'
                   href: /sharepoint/review-communication-apps?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: '3. Adım: Hedef kitlenizin kapsamını belirleme ve'
+                - name: 'Adım 3: Hedef kitlenizi kapsamlayın ve tanımlayın'
                   href: /sharepoint/audience-profile?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: '4. Adım: Bir iletişim çözümü seçme'
+                - name: 'Adım 4: Bir iletişim çözümü seçin'
                   href: /sharepoint/choose-communication-method?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: Viva Connections'ın ayarlama
+            - name: Viva Bağlantılar’ı Ayarlayın
               href: /sharepoint/guide-to-setting-up-viva-connections?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: İntranet'iniz için bir ev sitesi edinin
+            - name: İntranetiniz için bir giriş sitesi edinin
               href: /sharepoint/home-site-plan?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: Kuruluş haberlerini dağıtma
+            - name: Kuruluş haberlerini dağıtın
               href: /sharepoint/distribute-corporate-news-to-your-organization?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: Bağlan liderlerini ve kuruluşlarını
+            - name: Liderleri ve kuruluşunuzu bağlayın
               href: /sharepoint/leadership-connection?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: Yammer'i kullanarak kasabayı Yammer
+            - name: Yammer kullanarak bir belediye binası tutun
               href: /sharepoint/hold-town-hall-using-yammer?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: Öğrenme ve eğitim deneyimleri oluşturma
+            - name: Öğrenme ve eğitim deneyimleri oluşturun
               href: /sharepoint/build-learning-and-training-experiences-for-employees?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-    - name: Ekip çalışması ve işbirliği
+    - name: Takım çalışması ve işbirliği
       items:
         - name: İşletmeniz için sözleşmeleri yönetin
           items:
             - name: Genel bakış
               href: ../contentunderstanding/solution-manage-contracts-in-microsoft-365.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: Adım 1. SharePoint Syntex
+            - name: Adım 1. SharePoint Syntex'i kullanın
               href: ../contentunderstanding/solution-manage-contracts-step1.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: Adım 2. E-Microsoft Teams
+            - name: Adım 2. Microsoft Teams'i kullanın
               href: ../contentunderstanding/solution-manage-contracts-step2.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
             - name: Adım 3. Power Automate
               href: ../contentunderstanding/solution-manage-contracts-step3.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-        - name: İntranet'SharePoint oluşturma
+        - name: Akıllı bir SharePoint intraneti oluşturun
           items:
             - name: Genel bakış
               href: /sharepoint/intelligent-internet-overview?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: Akıllı intranet'iniz hakkında nasıl düşünebilirsiniz?
+            - name: Akıllı intranetiniz hakkında nasıl düşünülür
               href: /sharepoint/trad-vs-modern-intranet?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: Intranet yol haritası
+            - name: İntranet yol haritası
               items:
-                - name: Intranet yol haritası
+                - name: İntranet yol haritası
                   href: /sharepoint/intranet-team-overview?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: intranet rolleri ve görevleri
+                - name: İntranet rolleri ve görevleri
                   href: /sharepoint/intranet-roles-tasks?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-                - name: Intranet yol haritası özeti
+                - name: İntranet yol haritası özeti
                   href: /sharepoint/intranet-get-started?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: İntranet'inizi planlama
+            - name: İntranetinizi planlayın
               href: /sharepoint/plan-intranet?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: Genel intranet planlaması için dikkate alınacak noktalar
+            - name: Genel bir intranet planlarken göz önünde bulundurulması gereken noktalar
               href: /sharepoint/set-up-global-intranet?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: İntranet yönetimi
+            - name: İntranet idaresi
               href: /sharepoint/intranet-governance?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: çalışma alanı iletişimi
+            - name: İş yeri iletişimi
               href: /sharepoint/workplace-communications?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-        - name: İşbirliği yönetimi
+        - name: İşbirliği idaresi
           items:
             - name: Genel bakış
               href: collaboration-governance-overview.md
-            - name: Yönetim planınızı oluşturma
+            - name: İdare planınızı oluşturun
               href: collaboration-governance-first.md
-            - name: Ayarlar içinde daha fazla bilgi
+            - name: Hizmetlerdeki ayarlar
               items:
-                - name: Gruplar SharePoint
+                - name: SharePoint ile gruplar
                   href: groups-sharepoint-governance.md
-                - name: 'Gruplar, SharePoint grupları ve Teams'
+                - name: 'Gruplar, SharePoint ve Teams'
                   href: groups-sharepoint-teams-governance.md
-                - name: Diğer hizmetlerle gruplar
+                - name: Diğer hizmetlere sahip gruplar
                   href: groups-services-interactions.md
             - name: Access
               href: groups-teams-access-governance.md
@@ -268,9 +284,9 @@
               href: groups-teams-communication-governance.md
             - name: Kuruluş ve yaşam döngüsü
               items:
-                - name: Kuruluş ve yaşam döngüsü yönetimi
+                - name: Kuruluş ve yaşam döngüsü idaresi
                   href: plan-organization-lifecycle-governance.md
-                - name: Grup oluşturma yönetme
+                - name: Grup oluşturmayı yönetin
                   href: manage-creation-of-groups.md
                 - name: Adlandırma ilkeleri
                   href: groups-naming-policy.md
@@ -278,25 +294,25 @@
                   href: microsoft-365-groups-expiration-policy.md
                 - name: Grup başına konuk erişimi
                   href: per-group-guest-access.md
-                - name: Gönderme ilkesi
+                - name: Farklı gönder ilkesi
                   href: allow-members-to-send-as-or-send-on-behalf-of-group.md
                 - name: Grup oluşturma etki alanı
                   href: choose-domain-to-create-groups.md
                 - name: Yaşam döngüsü sonu seçenekleri
                   href: end-life-cycle-groups-teams-sites-yammer.md
-        - name: Microsoft 365'da dosya SharePoint birlikte Microsoft 365
+        - name: Microsoft 365 ile SharePoint'te dosya işbirliği
           href: /sharepoint/deploy-file-collaboration
-        - name: OneDrive için Başvuru Kılavuzu
+        - name: Kuruluşlar için OneDrive Rehberi
           href: /onedrive/plan-onedrive-enterprise
     - name: Uyumluluk
       items:
-        - name: Insider risk çözümleri Microsoft 365
+        - name: Microsoft 365'te içerden risk çözümleri
           href: ../compliance/insider-risk-solution-overview.md
         - name: Denetim çözümleri
           href: ../compliance/auditing-solutions-overview.md
-        - name: Microsoft 365'te eKbulma çözümleri
+        - name: Microsoft 365'te eKeşif çözümleri
           href: ../compliance/ediscovery.md
-        - name: Microsoft 365 Advanced eDiscovery
+        - name: Microsoft 365 Gelişmiş eKeşif
           href: ../compliance/overview-ediscovery-20.md
         - name: Mevzuat uyumluluğu eylem planları
           items:
@@ -310,59 +326,59 @@
               href: /compliance/regulatory/gdpr?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
     - name: Güvenlik
       items:
-        - name: Microsoft 365 Sıfır Güveni dağıtım planı
+        - name: Microsoft 365 Sıfır Güven dağıtım planı
           href: ../security/microsoft-365-zero-trust.md
-        - name: Evden çalışmayı desteklemek için güvenlik ekiplerine en önemli görevler
+        - name: Güvenlik ekiplerinin evden çalışmayı desteklemesi için en önemli görevler
           href: ../security/top-security-tasks-for-remote-work.md
         - name: Kimlik ve cihaz erişimi yapılandırmaları
           href: ../security/office-365-security/microsoft-365-policies-configurations.md
-        - name: Değerlendirme ve pilot Microsoft 365 Defender
+        - name: Microsoft 365 Defender'ı değerlendirme ve pilot
           href: ../security/defender/eval-overview.md
-        - name: İlk olayınızı yanıtlama
+        - name: İlk olayınıza yanıt verin
           href: ../security/defender/first-incident-overview.md
-        - name: Uç Nokta için Microsoft Defender'ı Dağıtma
+        - name: Uç Nokta için Microsoft Defender'ı dağıtın
           href: ../security/defender-endpoint/deployment-phases.md
-        - name: Microsoft olmayan uç nokta korumasından Uç Nokta için Microsoft Defender'a geçme
+        - name: Microsoft'a ait olmayan uç nokta korumasından Uç Nokta için Microsoft Defender'a geçiş yapın
           href: ../security/defender-endpoint/switch-to-mde-overview.md
-        - name: Microsoft olmayan bir koruma aracından Microsoft Defender for Office 365
+        - name: Microsoft'a ait olmayan bir koruma aracından Office 365 için Microsoft Defender'a geçiş yapın
           href: ../security/office-365-security/migrate-to-defender-for-office-365.md
-        - name: Microsoft 365'de öncelik hesapları için güvenlik Microsoft 365
+        - name: Microsoft 365'te öncelikli hesaplar için güvenlik önerileri
           href: ../security/office-365-security/security-recommendations-for-priority-accounts.md
-        - name: Eski çalışanı kaldırma ve verilerin güvenliğini sağlama
+        - name: Eski bir çalışanı kaldırın ve verileri güvenli hale getirin
           href: /admin/add-users/remove-former-employee?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
     - name: Contoso örnek olay incelemeleri
       items:
-        - name: Microsoft 365 Corporation için en iyi çözümler
+        - name: Contoso Corporation için Microsoft 365 çözümleri
           href: contoso-case-study-solutions.md
         - name: Karma çalışma için COVID-19 yanıtı ve desteği
           href: contoso-remote-onsite-work.md
-        - name: Çok gizli bir proje için yalıtılmış Ekip
+        - name: Çok gizli bir proje için Yalıtılmış Ekip
           href: contoso-team-for-top-secret-project.md
-        - name: Teams geçiş
+        - name: Teams ses geçişi
           href: /MicrosoftTeams/voice-case-study-overview
-        - name: Contoso uyumluluk örnek olay incelemesi
+        - name: Contoso uyumluluk önek olay incelemesi
           href: ../compliance/communication-compliance-case-study.md
     - name: Test Laboratuvarı Kılavuzları
       items:
         - name: Çözümler ve senaryolar için Test Laboratuvarı Kılavuzları
           href: test-lab-guides-overview-solutions.md
-        - name: Güvenlik yalıtlığı olan ekip
+        - name: Güvenlik yalıtımına sahip ekip
           href: team-security-isolation-dev-test.md
-- name: Sektöre özgü kılavuzlar
+- name: Sektöre özel rehberlik
   items:
     - name: Finansal hizmetler
       items:
         - name: Finansal hizmetler için güvenlik ve uyumluluk
           href: financial-services-secure-collaboration.md
-    - name: Enerji ve kamu hizmetleri
+    - name: Enerji ve yardımcı hizmetler
       items:
         - name: Enerji ve kamu hizmetleri için güvenlik ve uyumluluk
           href: energy-secure-collaboration.md
-    - name: Sağlık
+    - name: Sağlık Hizmetleri
       items:
         - name: Genel bakış
           href: healthcare-overview.md
-        - name: Teams için sağlık hizmeti
+        - name: Sağlık Hizmetleri için Teams
           href: /MicrosoftTeams/expand-teams-across-your-org/healthcare/teams-in-hc
     - name: Education
       items:
@@ -370,29 +386,29 @@
           href: /MicrosoftTeams/expand-teams-across-your-org/teams-for-education-landing-page
     - name: Government
       items:
-        - name: Teams için Yeni Yönetim
+        - name: Kamu için Teams
           href: /MicrosoftTeams/expand-teams-across-your-org/teams-for-government-landing-page
-        - name: Teams kullanarak uzaktan kamu Teams
+        - name: Teams kullanarak uzaktan çalışan kamu çalışanlarını destekleyin
           href: /MicrosoftTeams/expand-teams-across-your-org/gov-support-remote-work-with-teams
     - name: Perakende
       items:
         - name: Genel bakış
           href: retail-overview.md
-        - name: Teams Satış
+        - name: Perakende için Teams
           href: /MicrosoftTeams/expand-teams-across-your-org/teams-for-retail-landing-page
-- name: Enterprise mimarisi tasarım ilkeleri
+- name: Kurumsal mimari tasarım ilkeleri
   items:
     - name: Genel bakış
       href: design-principles.md
     - name: Kimlik ve ötesine
       href: identity-design-principles.md
-    - name: Üzerinde tekneyle aç şu güvenlik engelleri
+    - name: Üzerinden geçebileceğiniz güvenlik engelleri
       href: security-design-principles.md
     - name: Ağ oluşturma (buluta)
       href: networking-design-principles.md
-- name: Microsoft 365 kaynaklarını güncelleştirme
+- name: Microsoft 365 dağıtım kaynakları
   items:
-    - name: Dağıtım Microsoft 365
+    - name: Microsoft 365'i dağıtın
       href: ../enterprise/microsoft-365-overview.md
 - name: Gezinti kılavuzu
   href: ../microsoft-365-docs-navigation-guide.md?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
