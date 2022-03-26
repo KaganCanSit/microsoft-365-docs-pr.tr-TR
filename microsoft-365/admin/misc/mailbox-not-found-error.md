@@ -1,5 +1,5 @@
 ---
-title: Posta kutusu bu dosyada bulunamıyor hatası Web üzerinde Outlook
+title: Web üzerinde Outlook'ta posta kutusu bulunamadı hatası alma
 f1.keywords:
 - CSH
 ms.author: efrene
@@ -18,28 +18,28 @@ ROBOTS: NOINDEX, NOFOLLOW
 search.appverid:
 - MET150
 ms.assetid: 7e453a40-66df-44ab-92a1-96786cb7fb34
-description: Hata **için Posta Kutusu bulunamadı;** bu, posta kutusuna bağlanmak için Web üzerinde Outlook hesabın Exchange Online anlamına gelir.
+description: "**Posta Kutusu bulunamadı** hatası, Web üzerinde Outlook'a bağlanmak için kullandığınız hesabın Exchange Online lisansına sahip olmadığı anlamına gelir."
 ms.openlocfilehash: afde59262be1fd0776dd94bafc9c8b0d2e75bebc
 ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/08/2022
 ms.locfileid: "63316415"
 ---
-# <a name="getting-a-mailbox-not-found-error-in-outlook-on-the-web"></a>E-posta kutusu bulunamadı hatası mı Web üzerinde Outlook?
+# <a name="getting-a-mailbox-not-found-error-in-outlook-on-the-web"></a>Web üzerinde Outlook'ta posta kutusu bulunamadı hatası mı alıyorsunuz?
 
-Web üzerinde Outlook kullanıyorsanız ve hata için bir Posta Kutusu bulunamadı iletisini alırsanız, **Web üzerinde Outlook'a** bağlanmak için kullanılan hesabın Exchange Online lisansı yoktur ve dolayısıyla hesapla ilişkili posta kutusu yoktur. 
+Web üzerinde Outlook kullanıyorsanız ve **Posta Kutusu bulunamadı** hatası alıyorsanız, Web üzerinde Outlook'a bağlanmak için kullandığınız hesabın Exchange Online lisansı yoktur ve bu nedenle hesapla ilişkilendirilmiş posta kutusu yoktur. 
 
-## <a name="assign-a-license-to-your-account"></a>Hesabınıza lisans atama
+## <a name="assign-a-license-to-your-account"></a>Hesabınıza bir lisans atama
 
-Yöneticiniz aşağıdaki adımları kullanarak hesabınıza lisans atayabilirsiniz:
+Yöneticiniz, aşağıdaki adımları izleyerek hesabınıza bir lisans atayabilir:
 
-1. Kullanıcılar [Microsoft 365 yönetim merkezi](https://admin.microsoft.com/adminportal/home#/homepage) altındaki Etkin **kullanıcılar'a** **gidin ve** hatayı gören kullanıcıyı seçin.
-1. Açılan kullanıcı sayfasında Lisanslar ve Uygulamalar bölümüne gidin,  uygun Konum değerini seçin ve konum içeren bir lisans  at Exchange Online (ayrıntılarını görmek için lisansı genişletin). 
-1. Bitirdikten sonra Değişiklikleri  **kaydet'e tıklayın**.
+1. [Microsoft 365 yönetim merkezi](https://admin.microsoft.com/adminportal/home#/homepage)’ni açın ve **Etkin kullanıcılar**'a, **Kullanıcılar** bölümünün altından gidin ve hatayı gören kullanıcıyı seçin.
+1. Açılan kullanıcı sayfasında **Lisanslar ve Uygulamalar** bölümüne gidin, uygun **Konum** değerini seçin ve Exchange Online içeren bir lisans atayın (ayrıntılarını görmek için lisansı genişletin). 
+1. Bitirdiğinizde, **Değişiklikleri kaydet**'i tıklayın.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Kullanıcı için başka bir e-posta diğer adı ekleme](../email/add-another-email-alias-for-a-user.md) (makale)\
-[E-posta iletmeyi Microsoft 365](../email/configure-email-forwarding.md) (makale)\
-[Paylaşılan posta kutusu oluşturma](../email/create-a-shared-mailbox.md) (makale)
+[Bir kullanıcı için başka bir e-posta takma adı ekleme](../email/add-another-email-alias-for-a-user.md) (makale)\
+[Microsoft 365'te e-posta iletmeyi yapılandırma](../email/configure-email-forwarding.md) (makale)\
+[Paylaşılan bir posta kutusu oluşturma](../email/create-a-shared-mailbox.md) (makale)

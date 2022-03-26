@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 title: Microsoft 365 İş Ekstra kaynakları
-summary: '300''e kadar çalışanı olan işletmeler için Microsoft 365 İş Ekstra uygulamaları ve çevrimiçi toplantıları ile Office verimli çalışmanız sağlar. Gelişmiş güvenlik özellikleriyle işletmenizin güvenliğini sağlamanın, tek bir çözümle BT kurulum ve yönetiminizi kolaylaştırma.'
+summary: '300''e kadar çalışana sahip işletmeler için Microsoft 365 İş Ekstra, Office uygulamaları ve çevrimiçi toplantılarla her yerde üretken olmanızı sağlar. Gelişmiş güvenlik özellikleriyle işinizi güvenceye alın ve tek bir çözümle BT kurulumunuzu ve yönetiminizi kolaylaştırın.'
 brand: m365
 metadata:
   title: Microsoft 365 İş Ekstra kaynakları
-  description: Kullanıcı ayarları ve çalışma belgeleri Microsoft 365 İş Ekstra.
+  description: Microsoft 365 İş Ekstra'yı ayarlama ve çalışma belgeleri.
   ms.service: o365-administration
   ms.topic: hub-page
   ms.collection: collection
@@ -15,23 +15,23 @@ metadata:
   ms.author: efrene
   ms.date: 03/01/2022
 productDirectory:
-  title: Üretkenlik ve güvenlik ile Microsoft 365 İş Ekstra
+  title: Microsoft 365 İş Ekstra ile üretkenlik ve güvenlik
   items:
     - title: İzle
       imageSrc: 'https://docs.microsoft.com/office/media/icons/video-play.svg'
-      summary: Bu avantajların en Microsoft 365 İş Ekstra.
+      summary: Microsoft 365 İş Ekstra'nın en önemli beş avantajı.
       url: 'https://aka.ms/M365BPvideo'
-    - title: Neler var?
+    - title: Yenilikler nelerdir?
       imageSrc: 'https://docs.microsoft.com/office/media/icons/get-started-blue.svg'
-      summary: İş Özellikleri ve Özellikleri özelliklerinde yeni İş için Defender Premium Microsoft 365 Lighthouse.
+      summary: İş Ekstra ve Microsoft 365 Lighthouse'daki yeni İş için Microsoft Defender özellikleri hakkında bilgi edinin.
       url: 'https://aka.ms/SMBsecurityFebBlog'
-    - title: Ücretsiz iş ortağı setini alın
+    - title: Ücretsiz iş ortağı setini edinin
       imageSrc: 'https://docs.microsoft.com/office/media/icons/education-tutorial-blue.svg'
-      summary: Pratik kılavuzlar ve karma çalışmaların güvenliğini sağlamak için iş ortakları için pazar kaynaklarına gidin.
+      summary: Karma çalışmayı güvence altına almak için ortaklar için pratik rehberlik ve pazar kaynakları.
       url: 'https://aka.ms/SMBSecurityKit'
-    - title: İş ortağı web tarayıcısı serisine katılma
+    - title: İş ortağı web semineri serisine katılın
       imageSrc: 'https://docs.microsoft.com/office/media/icons/education-tutorial-blue.svg'
-      summary: 'Microsoft 365 İş Ekstra, İş için Microsoft Defender ve diğer Microsoft 365 Lighthouse.'
+      summary: 'Microsoft 365 İş Ekstra, İş için Microsoft Defender ve Microsoft 365 Lighthouse ile ek satış yapmayı ve işinizi büyütmeyi öğrenin.'
       url: 'https://aka.ms/M365MDBseries'
 conceptualContent:
   items:
@@ -42,41 +42,41 @@ conceptualContent:
           text: Microsoft 365 İş Ekstra’ya Genel Bakış
         - url: ../business-video/index.yml
           itemType: video
-          text: Microsoft 365 eğitimi için yeni bir eğitim
+          text: İş için Microsoft 365 eğitimi
         - url: 'https://go.microsoft.com/fwlink/?linkid=2164213'
           itemType: overview
-          text: İş Microsoft 365 planlarını karşılaştırma
+          text: İş için Microsoft 365 planlarını karşılaştırın
         - url: ../admin/misc/microsoft-365-business-faqs.yml
           itemType: reference
-          text: Microsoft 365 hakkında SSS
-    - title: Ayarlama Microsoft 365 İş Ekstra
+          text: İş için Microsoft 365 SSS
+    - title: Microsoft 365 İş Ekstra'yı ayarlama
       links:
         - url: ../business-premium/get-microsoft-365-business-premium.md
           itemType: how-to-guide
           text: 1. Microsoft 365 İş Ekstra’yı edinin
         - url: ../admin/setup/plan-your-setup.md
           itemType: how-to-guide
-          text: 2. Kurulum işleminizi planlama
+          text: 2. Kurulum sürecinizi planlama
         - url: ../business-premium/m365bp-setup.md
           itemType: how-to-guide
-          text: 3. Ayarlama Microsoft 365 İş Ekstra
+          text: 3. Microsoft 365 İş Ekstra'yı ayarlama
         - url: ../admin/security-and-compliance/secure-your-business-data.md
           itemType: how-to-guide
-          text: 4. İşletmeler için güvenliği sağlamanın en Microsoft 365 10 yolu
-    - title: Bu ne Microsoft 365 Lighthouse?
+          text: 4. İş için Microsoft 365'in güvenliğini sağlamanın en iyi 10 yolu
+    - title: Microsoft 365 Lighthouse nedir?
       links:
         - url: ../lighthouse/m365-lighthouse-overview.md
           itemType: overview
-          text: İş ortaklarına Microsoft 365 Lighthouse (ortaklar için)
+          text: Microsoft 365 Lighthouse'a genel bakış (iş ortakları için)
         - url: ../lighthouse/m365-lighthouse-sign-up.md
           itemType: how-to-guide
-          text: Kaydolma ve Microsoft CSP'ye kaydolma
+          text: Kaydolma ve Microsoft CSP olma
         - url: ../lighthouse/m365-lighthouse-configure-portal-security.md
           itemType: how-to-guide
-          text: Deniz Feneri portalınızı ayarlama ve güvenlik altına alma
+          text: Lighthouse portalınızı ayarlama ve güvenliğini sağlama
         - url: ../lighthouse/m365-lighthouse-deploy-standard-tenant-configurations-overview.md
           itemType: overview
-          text: Müşteri kiracıları için taban çizgilerini kullanma
+          text: Müşteri kiracıları için temelleri kullanma
         - url: ../lighthouse/m365-lighthouse-faq.yml
           itemType: reference
           text: Microsoft 365 Lighthouse SSS
@@ -84,38 +84,38 @@ conceptualContent:
       links:
         - url: 'https://aka.ms/M365BPPartnerPlaybook'
           itemType: how-to-guide
-          text: İş Ortağı Microsoft 365 İş Ekstra Ve Hazırlık Serileri'ne bakın
+          text: Microsoft 365 İş Ekstra İş Ortağı Taktik Defteri ve Hazırlık Serisine bakın
         - url: 'https://aka.ms/M365MDBseries'
           itemType: video
-          text: İş ortağı web dizisine katılın!
+          text: İş ortağı web semineri serisine katılın!
         - url: 'https://partner.microsoft.com'
           itemType: overview
           text: Microsoft İş Ortağı Ağı
         - url: 'https://docs.microsoft.com/partner-center/overview'
           itemType: overview
-          text: İş Ortağı Merkezi'nde çalışmaya başlama
-    - title: Şirketinizi koruyun
+          text: İş Ortağı Merkezi'ni kullanmaya başlayın
+    - title: Şirket cihazlarınızı koruyun
       links:
         - url: ../security/defender-business/mdb-overview.md
           itemType: overview
-          text: İş için Microsoft Defender'a genel bakış
+          text: İş için Microsoft Defender'a Genel Bakış
         - url: ../security/defender-business/mdb-setup-configuration.md
           itemType: overview
           text: İş için Defender'ı ayarlama ve yapılandırma
         - url: ../security/defender-business/compare-mdb-m365-plans.md
           itemType: overview
-          text: Microsoft 365 planlarında güvenlik Microsoft 365 karşılaştırma
+          text: Microsoft 365 planlarındaki güvenlik özelliklerini karşılaştırın
         - url: ../security/defender-business/mdb-faq.yml
           itemType: reference
           text: İş için Defender SSS
-    - title: E-posta içeriğinizi ve Office koruma
+    - title: E-posta içeriğinizi ve Office dosyalarınızı koruyun
       links:
         - url: ../security/office-365-security/defender-for-office-365.md
           itemType: overview
-          text: Office 365 için Microsoft Defender'a genel Office 365
+          text: Office 365 için Microsoft Defender'a Genel Bakış
         - url: ../security/office-365-security/protect-against-threats.md
           itemType: how-to-guide
-          text: Defender for Office 365'i ayarlama ve yapılandırma
+          text: Office 365 için Defender'ı ayarlama ve yapılandırma
         - url: ../security/office-365-security/anti-malware-protection-faq-eop.yml
           itemType: reference
           text: Office 365 için Defender SSS
@@ -129,21 +129,21 @@ conceptualContent:
           text: Yardım alın
         - url: 'https://techcommunity.microsoft.com/t5/Microsoft-365-Business/bd-p/Microsoft365business'
           itemType: overview
-          text: Geri bildirim gönderme
+          text: Geri bildirim gönderin
         - url: 'https://techcommunity.microsoft.com/t5/Small-and-Medium-Businesses/ct-p/SMB'
           itemType: overview
-          text: Küçük Community orta ölçekli işletmeler için teknik destek
-    - title: Nasıl...
+          text: Küçük ve orta ölçekli işletmeler için Tech Topluluğu
+    - title: Nasıl yaparım?...
       links:
         - url: ../admin/manage/find-your-partner-or-reseller.md
           itemType: how-to-guide
           text: İşletmeme yardımcı olacak bir Microsoft iş ortağı bulma
         - url: ../commerce/subscriptions/upgrade-to-different-plan.md
           itemType: how-to-guide
-          text: Başka bir plan Microsoft 365 değiştirme
+          text: Başka bir Microsoft 365 planına değiştirme
         - url: ../admin/setup/migrate-email-and-contacts-admin.md
           itemType: how-to-guide
-          text: E-postayı ve kişileri başka bir Microsoft 365
+          text: E-posta ve kişileri Microsoft 365'e geçirme
         - url: ../admin/get-help-support.md
           itemType: how-to-guide
-          text: Destek almak için Microsoft 365
+          text: Microsoft 365 için desteğe başvurma
