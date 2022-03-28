@@ -20,12 +20,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu makalede, kullanıcı hesaplarının güvenliği ihlal edilmişken veya güvenlikle ilgili diğer olayları araştırmanız için araştırma araştırma gerçekleştirmek üzere Gelişmiş Denetim'in nasıl ayarıldığı açıklanmıştır.
-ms.openlocfilehash: 34ae98eaafcc3eeb3d6a25a457f017999b8c6078
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: dafe53161e04f28f2f5e4ff8dcfa71bab6c1a1f1
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985025"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754571"
 ---
 # <a name="set-up-advanced-audit-in-microsoft-365"></a>Gelişmiş Denetim'i Microsoft 365
 
@@ -49,9 +49,7 @@ MailItemsAccessed ve Send gibi önemli olayları günlüğe yazma yeteneği gibi
 
    MailItemsAccessed ve Send için denetim kayıtlarının günlüğü 24 saat içinde başlar. Diğer iki Gelişmiş Denetim olayını günlüğe kaydetmeye başlamak için 3. Adımı gerçekleştirmeniz gerek: SearchQueryInitiatedExchange ve SearchQueryInitiatedSharePoint.
 
-Grup tabanlı lisanslama kullanarak kullanıcı gruplarına lisans ataan kuruluşlarda, grup için Gelişmiş Denetim'i Microsoft 365 lisans atamasını kapatmanız gerekir. Değişikliklerinizi kaydeddikten sonra, grup Microsoft 365 Denetleme'nin kapalı olduğunu doğrulayın. Daha sonra grup için lisans atamayı yeniden aç. Grup tabanlı lisanslama hakkında yönergeler için bkz. Grup üyeliğine [göre kullanıcılara lisans atama Azure Active Directory](/azure/active-directory/users-groups-roles/licensing-groups-assign).
-
-Ayrıca, kullanıcı posta kutularından veya paylaşılan posta kutularından oturum açan posta kutusu eylemlerini özelleştirmiş olursanız, Microsoft tarafından yayımlanan tüm yeni Gelişmiş Denetim olayları bu posta kutularda otomatik olarak denetlenecek. Her oturum açma türü için denetlenen posta kutusu eylemlerini değiştirme hakkında bilgi için Posta kutusu denetimini yönetme'nin "Varsayılan olarak günlüğe kaydedilen posta kutusu eylemlerini değiştirme veya geri yükleme" [bölümüne bakın](enable-mailbox-auditing.md#change-or-restore-mailbox-actions-logged-by-default).
+Ayrıca, kullanıcı posta kutularından veya paylaşılan posta kutularından oturum açan posta kutusu eylemlerini özelleştirmiş durumdaysanız, Microsoft tarafından yayımlanan tüm yeni Gelişmiş Denetim olayları bu posta kutularından otomatik olarak denetlenz. Her oturum açma türü için denetlenen posta kutusu eylemlerini değiştirme hakkında bilgi için Posta kutusu denetimini yönetme'nin "Varsayılan olarak günlüğe kaydedilen posta kutusu eylemlerini değiştirme veya geri yükleme" [bölümüne bakın](enable-mailbox-auditing.md#change-or-restore-mailbox-actions-logged-by-default).
 
 ## <a name="step-2-enable-advanced-audit-events"></a>2. Adım: Gelişmiş Denetim olaylarını etkinleştirme
 

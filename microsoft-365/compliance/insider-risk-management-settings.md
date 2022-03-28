@@ -16,12 +16,12 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: f80ab9fcb0a3e057a20c22ff05c3a960cdf7eab4
-ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
+ms.openlocfilehash: 4b14f2def771294bdfa05109d6060242736f26d5
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "63512942"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754723"
 ---
 # <a name="get-started-with-insider-risk-management-settings"></a>Insider risk yönetimi ayarlarıyla çalışmaya başlama
 
@@ -576,11 +576,15 @@ Insider risk analizini kapatmak için aşağıdaki adımları tamamlayın:
 
 ## <a name="admin-notifications"></a>Yönetici bildirimleri
 
-Yönetici bildirimleri, yeni bir ilke için ilk uyarı oluşturulsa *, Insider Risk Yönetimi* Analistleri ve *Insider* Risk Yönetimi Analistleri ve *Insider Risk Yönetimi* Kullanıcılarının rol gruplarına dahil edilen kullanıcılara otomatik olarak bir e-posta bildirimi gönderir. Bu ayar tüm kuruluşlar ve ilkeler için varsayılan olarak 24 saatte bir denetlenir ve ilk kez yapılan uyarılar için kullanılır. İlk uyarıdan sonra ilkelerde yapılan hiçbir uyarı için bildirim gönderilmez.
+Yönetici bildirimleri, seçilebilir Insider risk yönetimi rol gruplarına otomatik olarak bir e-posta bildirimi gönderir. Aşağıdaki senaryolar için bildirimleri almak için bildirimleri etkinleştireblir ve hangi rol gruplarının bildirim atay postası ataysanız:
 
-Organizasyonunız için Insider risk yönetimi Analizini etkinleştirdiyseniz, *Insider Risk Yönetimi* Yönetici rol grubunun üyeleri, veri sızıntıları, hırsızlık ve sızıntı etkinlikleriyle ilgili ilk analiz öngörüleri için otomatik olarak bir e-posta bildirimi alırlar.
+- Yeni bir ilke için ilk uyarı  oluşturularak bir bildirim e-postası gönderin. İlkeler, ilkeye yönelik sonraki uyarılarda ilk kez yapılan uyarılar ve bildirimler için her 24 saatte bir denetlenir.
+- Yeni yüksek önem düzeyi uyarıları  oluşturularak günlük bir e-posta gönderin. İlkeler, yüksek önem derecesi uyarıları için her 24 saatte bir denetlenir.
+- Çözümlenmemiş uyarılar içeren haftalık e-posta özetleme ilkeleri gönderme
 
-Yönetici bildirimlerini devre dışı bırakmayı tercih ediyorsanız, aşağıdaki adımları tamamlayın:
+Organizasyonunız için Insider risk yönetimi analizini etkinleştirdiyseniz, *Insider Risk Yönetimi* Yönetici rol grubu üyeleri, veri sızıntıları, hırsızlık ve sızıntı etkinlikleriyle ilgili ilk analiz öngörüleri için otomatik olarak bir e-posta bildirimi alırlar.
+
+Yönetici ve analiz bildirimlerini devre dışı bırakmayı tercih ediyorsanız, aşağıdaki adımları tamamlayın:
 
 1. Aşağıdaki [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimiInsider** >  **risk ayarları'ne gidin**.
 2. Yönetici **bildirimleri sayfasını** seçin.
@@ -590,5 +594,3 @@ Yönetici bildirimlerini devre dışı bırakmayı tercih ediyorsanız, aşağı
     - **Analiz kapalıyken e-posta bildirimi gönderme**
 
 4. Yapılandırmak **ve çıkmak** için Kaydet'i seçin.
-
-![Insider risk yönetimi yönetici bildirimleri ayarları.](../media/insider-risk-admin-notifications.png)

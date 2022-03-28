@@ -1,5 +1,5 @@
 ---
-title: Office 365 raporları için Defender'ı görüntüleme
+title: Office 365 için Defender raporlarını görüntüleme
 f1.keywords:
 - CSH
 ms.author: chrisda
@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3fb48e432d20067f3c6ca1913349152154c57e81
-ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
+ms.openlocfilehash: 7532d5be8febda1b4dc4dfc0a0860516188ecfc5
+ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63557879"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63775630"
 ---
 # <a name="view-defender-for-office-365-reports-in-the-microsoft-365-defender-portal"></a>yeni portalda Office 365 raporları için Defender'Microsoft 365 Defender görüntüleme
 
@@ -88,8 +88,8 @@ Posta **gecikme süresi raporu sayfasında** , Posta gecikme süresi raporu **sa
 
 Hangi sekmeyi seç olursa olsun, grafik iletileri aşağıdaki kategorilerde düzenlenmiş olarak gösterir:
 
-- **Posta teslim gecikme süresi**
-- **Detonations**
+- **Genel**
+- **Detonation**
 
 Grafikte bir kategorinin üzerine gelindiğinde, her kategorideki gecikme süresinin dökümünü görüntüebilirsiniz.
 
@@ -100,17 +100,20 @@ Filtre'ye **tıklarsanız**, aşağıdaki değerlere göre hem grafiği hem de a
 - **Tarih (UTC)**: **Başlangıç tarihi** ve **Bitiş tarihi**
 - **İleti görünümü**: Aşağıdaki değerlerden biri:
   - **Tüm iletiler**
-  - **Ek veya URL içeren iletiler**
-  - **Detonated messages**
+  - **Detonated messages**: One of the following values:
+    - **Satır içi detonasyonu**: Teslimden önce tümüyle test edilmiş iletileri içerir.
+    - **Zaman uyumsuz detonasyonu**
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
 Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabilir:
 
 - **Tarih (UTC)**
-- **Yüzdebirlik**: **50**, **90** veya **99**
+- **Gecikme süresi**
 - **İleti sayısı**
-- **Genel gecikme süresi**
+- **50. yüzdebirlik**
+- **90. yüzdebirlik**
+- **99. yüzdebirlik**
 
 Ana rapor sayfasında Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](view-email-security-reports.md#export-report)** Aktar düğmesi kullanılabilir.
 
@@ -211,22 +214,13 @@ Ana rapor sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-crea
 
 Bu makalede açıklanan raporlara ek olarak, aşağıdaki tabloda açıklandığı gibi başka birkaç rapor da kullanılabilir:
 
-<br>
-
-****
-
 |Rapor|Konu|
 |---|---|
 |**Explorer** (Plan 2 Office 365 için Microsoft Defender) veya gerçek **zamanlı** algılamalar (Plan 1 Office 365 için Microsoft Defender)|[Tehdit Gezgini (ve gerçek zamanlı algılamalar)](threat-explorer.md)|
 |Office 365 için Defender gerektirmeyen e-posta güvenlik Office 365|[Portalda e-posta Microsoft 365 Defender görüntüleme](view-email-security-reports.md)|
 |Yönetim merkezinde (EAC) Exchange akışı raporları|[Yeni Yönetim Merkezi'nde posta Exchange raporları](/exchange/monitoring/mail-flow-reports/mail-flow-reports)|
-|
 
 PowerShell raporlama cmdlet'leri:
-
-<br>
-
-****
 
 |Rapor|Konu|
 |---|---|
@@ -237,7 +231,6 @@ PowerShell raporlama cmdlet'leri:
 |Güvenliği ihlal edilmiş kullanıcılar|[Get-CompromisedUserAggregateReport](/powershell/module/exchange/get-compromiseduseraggregatereport) <p> [Get-CompromisedUserDetailReport](/powershell/module/exchange/get-compromiseduserdetailreport)|
 |Posta akışı durumu|[Get-MailflowStatusReport](/powershell/module/exchange/get-mailflowstatusreport)|
 |Spoofed kullanıcılar|[Get-SpoofMailReport](/powershell/module/exchange/get-spoofmailreport)|
-|
 
 ## <a name="what-permissions-are-needed-to-view-the-defender-for-office-365-reports"></a>Yeni raporlar için Defender'ı görüntülemek için Office 365 gereklidir?
 

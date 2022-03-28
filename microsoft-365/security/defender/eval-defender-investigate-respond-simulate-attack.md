@@ -22,12 +22,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 3712875579c7d157fe52a5e115d059fc88b4b6d7
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 5e1b841c5638bf9228efc844daa58d1d1e170726
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63326503"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754755"
 ---
 # <a name="run-an-attack-simulation-in-a-microsoft-365-defender-pilot-environment"></a>Pilot ortamda saldırı benzetimi Microsoft 365 Defender çalıştırma
 
@@ -127,13 +127,13 @@ Alternatif olarak, AD DS etki alanı denetleyicinizi barındırabilirsiniz ve bu
 
 İşte sonuç.
 
-![Sanal kurumsal Test Laboratuvarı Kılavuzu kullanılarak Defender değerlendirme ortamınız için uç noktalar.](../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-endpoints-tlg.png)
+:::image type="content" source="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-endpoints-tlg.png" alt-text="Sanal kurumsal Test Laboratuvarı Kılavuzu'na sahip değerlendirme ortamı" lightbox="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-endpoints-tlg.png":::
 
 Algılamadan gizlemek için gelişmiş tekniklerden yararlanan gelişmiş bir saldırının benzetimini kullanırsiniz. Saldırı, etki alanı denetleyicilerinde açılan Sunucu İleti Bloğu (SMB) oturumlarını numaralara alır ve kullanıcıların cihazlarının son IP adreslerini alır. Bu saldırı kategorisi genellikle saldırının cihazında bırakılan dosyaları içermemektedir ve yalnızca bellekte yer almaktadır. Var olan sistem ve yönetim araçlarını kullanarak "karadan canlı" çıkarlar ve yürütmelerini gizlemek için kodlarını sistem işlemlerine sunarlar. Bu tür davranış, cihazda algılamayı geri alamalarına ve kalıcılıklarını sağlar.
 
 Bu benzetimde, örnek senaryomuz bir PowerShell betiğiyle başlar. Gerçek dünyada, bir kullanıcı bir betik çalıştırmaya kandırıldı olabilir veya betik, daha önce virüs bulan bir cihazla uzak bir bilgisayardan çalıştırabilir ve bu da saldırganin ağda sonraki bir yere taşınmaya çalışıyor olduğunu gösterir. Yöneticiler ayrıca, çeşitli yönetim etkinliklerini çalıştırmak için betikleri çoğunlukla uzaktan çalıştıracakları için bu betikleri algılamak zor olabilir.
 
-![İşlem ekleme ve SMB keşif saldırı diyagramıyla dosyasız PowerShell saldırı.](../../media/mtp/mtpdiydiagram.png)
+:::image type="content" source="../../media/mtp/mtpdiydiagram.png" alt-text="İşlem ekleme ve SMB keşif saldırı ile Fileless PowerShell saldırı" lightbox="../../media/mtp/mtpdiydiagram.png":::
 
 Benzetim sırasında saldırı, görünüşe göre devam ediyor gibi görünen bir süreç için kabuk kodu eklemeye başladı. Bu senaryo için kullanıcı kimlik notepad.exe. Bu işlemi benzetim için seçtik, ancak saldırganlar büyük olasılıkla sistem süreci gibi uzun vadeli bir sistemi hedef svchost.exe. Ardından kabukkodu, devam nasıl devam edecek yönergeleri almak için saldırganın komut ve denetim (C2) sunucusuna gider. Betik, etki alanı denetleyicisine (DC) yönelik reconnaissance sorguları yürütmeye çalışır. Reconnaissance, bir saldırganın son kullanıcı oturum açma bilgileri hakkında bilgi edinsına olanak sağlar. Saldırganlar bu bilgilere sahip olduktan sonra belirli bir hassas hesaba almak için ağlarında sonraki adımlara da devam eder
 
@@ -195,7 +195,7 @@ Görünüm soc analisti noktasına geçiş yapmak, artık portalda saldırıyı 
 
 3. Benzetimi yapılan saldırının yeni olayı olay sırasında görünür.
 
-    ![Olay sırası örneği.](../../media/mtp/fig2.png)
+   :::image type="content" source="../../media/mtp/fig2.png" alt-text="Microsoft 365 Defender portalında Olaylar sırası" lightbox="../../media/mtp/fig2.png":::
 
 #### <a name="investigate-the-attack-as-a-single-incident"></a>Saldırıyı tek bir olay olarak araştırma
 
@@ -226,7 +226,7 @@ Benzetimi yapılan saldırı sırasında oluşturulan uyarılardan bazılarına 
 > [!NOTE]
 > Benzetimi yapılan saldırı sırasında oluşturulan uyarılardan yalnızca birkaçı için size yoleceğiz. Test aygıtınızda çalışan Windows Microsoft 365 Defender sürümüne bağlı olarak, biraz farklı bir sırada görünen daha fazla uyarıyla karşınıza çıkabilir.
 
-![Oluşturulan uyarılar örneği.](../../media/mtp/fig6.png)
+:::image type="content" source="../../media/mtp/fig6.png" alt-text="Portalda oluşturulan Microsoft 365 Defender." lightbox="../../media/mtp/fig6.png":::
 
 ##### <a name="alert-suspicious-process-injection-observed-source-microsoft-defender-for-endpoint"></a>Uyarı: Şüpheli işlem eklemesi gözlemlendi (Kaynak: Uç Nokta için Microsoft Defender)
 
@@ -234,7 +234,7 @@ Gelişmiş saldırganlar, bellekte kalıcı olmak ve algılama araçlarından gi
 
 SOC analistlerinin bu gelişmiş saldırılara yakalamasına olanak sağlamak için, Uç Nokta için Microsoft Defender'daki derin bellek algılayıcıları çeşitli süreç kod ekleme tekniklerinin göz alıcı görünürlüğünü sağlayan bulut hizmetimizi sunar. Aşağıdaki şekilde, uç nokta için Defender'ın bu kod ekleme girişimiyle nasıl algılandı ve <i>notepad.exe. </i>
 
-![Kötü amaçlı olabilecek kod ekleme uyarısı örneği.](../../media/mtp/fig7.png)
+:::image type="content" source="../../media/mtp/fig7.png" alt-text="Yeni portala olası kötü amaçlı olabilecek kod ekleme Microsoft 365 Defender uyarısı" lightbox="../../media/mtp/fig7.png":::
 
 ##### <a name="alert-unexpected-behavior-observed-by-a-process-run-with-no-command-line-arguments-source-microsoft-defender-for-endpoint"></a>Uyarı: İşlem tarafından gözlemlenen beklenmedik davranış, komut satırı bağımsız değişkeni yok olarak çalıştırıldı (Kaynak: Uç Nokta için Microsoft Defender)
 
@@ -251,11 +251,12 @@ Uyarı ayrıntılarının dış IP adresini (araştırmayı genişletmek için �
 
 IP adresi ayrıntıları sayfasını görüntülemek için uyarı işlemi ağacında IP adresini seçin.
 
-![Komut satırı bağımsız değişkeni yoktur ve bir işlem tarafından beklenmeyen davranış uyarısı örneği.](../../media/mtp/fig8.png)
+:::image type="content" source="../../media/mtp/fig8.png" alt-text="İşlem tarafından beklenmeyen davranış uyarısı, portalda komut satırı bağımsız değişkeni Microsoft 365 Defender çalıştırma" lightbox="../../media/mtp/fig8.png":::
 
 Aşağıdaki şekilde seçili IP Adresi ayrıntıları sayfası görüntülenir (Uyarı işlemi ağacında IP adresine tıklama).
 
-![IP adresi ayrıntıları sayfası örneği.](../../media/mtp/fig9.png)
+:::image type="content" source="../../media/mtp/fig9.png" alt-text="Microsoft 365 Defender portalında IP adresi ayrıntıları sayfası" lightbox="../../media/mtp/fig9.png":::
+
 
 ##### <a name="alert-user-and-ip-address-reconnaissance-smb-source-microsoft-defender-for-identity"></a>Uyarı: Kullanıcı ve IP adresi uyumlulaştırma (SMB) (Kaynak: Kimlik için Microsoft Defender)
 
@@ -263,7 +264,7 @@ Sunucu İleti Bloğu (SMB) protokolünün kullanımı, saldırganların belirli 
 
 Bu algılamada, etki alanı denetleyicisinde SMB oturumu numaralama işlemi çalıştırlendiğinde bir uyarı tetiklenir.
 
-![Kullanıcı ve IP adresinin uyumlulaştırması için Kimlik uyarısı için Microsoft Defender örneği.](../../media/mtp/fig10.png)
+:::image type="content" source="../../media/mtp/fig10.png" alt-text="Kullanıcı ve IP adresi kullanıcı portalında uyumlulaştırma için Kimlik için Microsoft Defender Microsoft 365 Defender uyarısı" lightbox="../../media/mtp/fig10.png":::
 
 #### <a name="review-the-device-timeline-with-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender ile cihaz zaman çizelgesini gözden geçirme
 
@@ -273,13 +274,13 @@ Saldırının yürütül olduğu cihazın adını seçerek ilgili cihazın varl�
 
 Cihaz zaman **çizelgesini** açmak ve cihazda gözlemlenen tüm olay ve davranışları, uyarılar yükseltilmiş olarak kronolojik sırada görüntülemek için Zaman Çizelgesi sekmesini seçin.
 
-![Davranışlarla birlikte cihaz zaman çizelgesi örneği.](../../media/mtp/fig11.png)
+:::image type="content" source="../../media/mtp/fig11.png" alt-text="Zaman çizelgesi portalında Cihaz Microsoft 365 Defender bölümü" lightbox="../../media/mtp/fig11.png":::
 
 Daha ilginç davranışlardan bazılarının genişletilmesi, işlem ağaçları gibi yararlı ayrıntılar sağlar.
 
 Örneğin, Şüpheli işlem eklemesi gözlemlenen uyarı **olayına gelene kadar aşağı kaydırın**. Yan **powershell.exe Olay varlıkları notepad.exe** bu davranışın tam işlem ağacını görüntülemek için, altındaki süreç olayına eklemek istediğinizpowershell.exe nı seçin. Gerekirse filtreleme için arama çubuğunu kullanın.
 
-![Seçili PowerShell dosya oluşturma davranışı için işlem ağacı örneği.](../../media/mtp/fig12.png)
+:::image type="content" source="../../media/mtp/fig12.png" alt-text="Microsoft 365 Defender portalında seçili bir PowerShell dosya oluşturma Microsoft 365 Defender ağacı" lightbox="../../media/mtp/fig12.png":::
 
 #### <a name="review-the-user-information-with-microsoft-defender-for-cloud-apps"></a>Bulut Uygulamaları için Microsoft Defender ile kullanıcı bilgilerini gözden geçirme
 
@@ -287,7 +288,7 @@ Olay sayfasında, saldırıya **katılan kullanıcıların** listesini görünt�
 
 Kullanıcının daha fazla araştırmanın yürütül olduğu profil sayfasını açmak için kullanıcı adını seçin. [Riskli kullanıcıları araştırma hakkında daha fazla makale okuyun](/cloud-app-security/tutorial-ueba#identify).
 
-![Bulut Uygulamaları için Defender kullanıcı sayfası örneği.](../../media/mtp/fig13.png)
+:::image type="content" source="../../media/mtp/fig13.png" alt-text="Microsoft 365 Defender portalında Bulut Uygulamaları için Defender kullanıcı sayfası" lightbox="../../media/mtp/fig13.png":::
 
 #### <a name="automated-investigation-and-remediation"></a>Otomatik araştırma ve düzeltme
 
@@ -298,7 +299,7 @@ Kullanıcının daha fazla araştırmanın yürütül olduğu profil sayfasını
 
 Portalda olayla ilgili Microsoft 365 Defender gidin. Olay **sayfasındaki** **Soruşturmalar sekmesi** , Kimlik için Microsoft Defender ve Uç Nokta için Microsoft Defender tarafından tetiklenen otomatik soruşturmaları gösterir. Aşağıdaki ekran görüntüsünde yalnızca Uç Nokta için Defender tarafından tetiklenen otomatik araştırma görüntülenir. Varsayılan olarak, Uç Nokta için Defender kuyrukta bulunan yapıları otomatik olarak yeniden ayarlar ve bu da düzeltme gerektirir.
 
-![Olayla ilgili otomatik soruşturma örneği.](../../media/mtp/fig14.png)
+:::image type="content" source="../../media/mtp/fig14.png" alt-text="Portalda olayla ilgili otomatik Microsoft 365 Defender bölümü" lightbox="../../media/mtp/fig14.png":::
 
 Araştırma ayrıntıları sayfasını açmak için araştırmayı tetikleyen **uyarıyı** seçin. Aşağıdaki ayrıntıları burada görüyorsunuz:
 
@@ -310,7 +311,7 @@ Araştırma ayrıntıları sayfasını açmak için araştırmayı tetikleyen **
 > [!NOTE]
 > Zamanlamaya bağlı olarak, otomatik araştırma hala çalışıyor olabilir. Kanıtı toplayıp çözümlemeden ve sonuçları gözden geçirmeden önce, işleminin tamamlanması için birkaç dakika bekleyin. En son **bulguları elde etmek** için Araştırma ayrıntıları sayfasını yenileyin.
 
-![Araştırma ayrıntıları sayfası örneği.](../../media/mtp/fig15.png)
+:::image type="content" source="../../media/mtp/fig15.png" alt-text="Microsoft 365 Defender portalında araştırma ayrıntıları sayfası" lightbox="../../media/mtp/fig15.png":::
 
 Otomatik araştırma sırasında, Uç Nokta için Microsoft Defender notepad.exe düzeltme gerektiren yapılardan biri olarak ekli olan kimlik düzeltme işlemini tanımlanır. Uç Nokta için Defender otomatik düzeltmenin bir parçası olarak şüpheli işlem ekleme işlemini otomatik olarak durdurur.
 
@@ -322,7 +323,7 @@ Araştırma tamamlandıktan ve düzeltilen onaylandıktan sonra olayı çözersi
 
 Olay sayfasında **Olayı** **yönet'i seçin**. Durumu Olayı çöz olarak **ayarlayın ve** belirleme için **sınıflandırma ve** Güvenlik testi **için Doğru** uyarı'yi seçin.
 
-![Olayı çözebilirsiniz açık Olay panelini yönet ile olay sayfası örneği.](../../media/mtp/fig16.png)
+:::image type="content" source="../../media/mtp/fig16.png" alt-text="Portalda olayları çözebilme özelliği olan Olay Microsoft 365 Defender." lightbox="../../media/mtp/fig16.png":::
 
 Olay çöz çöz olduğunda, proje portalında ve ilgili portallarda Microsoft 365 Defender tüm uyarıları çözer.
 
@@ -330,7 +331,7 @@ Bu, olay çözümlemesi, otomatik soruşturma ve olay çözümü için saldırı
 
 ## <a name="next-step"></a>Sonraki adım
 
-[![Olay Microsoft 365 Defender özelliklerini deneyin.](../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-step2.png)](eval-defender-investigate-respond-additional.md)
+[:::image type="content" source="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-step2.png" alt-text="Microsoft 365 Defender yanıt özellikleri" lightbox="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-step2.png":::](eval-defender-investigate-respond-additional.md)
 
 Adım 2/ 2: [Olay Microsoft 365 Defender özelliklerini deneyin](eval-defender-investigate-respond-additional.md)
 

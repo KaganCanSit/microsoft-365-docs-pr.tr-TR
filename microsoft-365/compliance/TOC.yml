@@ -1,0 +1,1088 @@
+- name: Microsoft 365 uyumluluğu
+  href: index.yml
+- name: Microsoft 365 uyumluluğundaki yenilikler
+  href: whats-new.md
+- name: Uyumluluk ücretsiz denemeleri
+  items:
+    - name: Microsoft 365 uyumluluğu ücretsiz denemesi hakkında
+      href: compliance-easy-trials.md
+    - name: Microsoft Uyum Yöneticisi premium değerlendirmeleri için ücretsiz deneme hakkında
+      href: compliance-easy-trials-compliance-manager-assessments.md
+- name: Kullanmaya başlayın
+  items:
+    - name: Uyumluluğu kullanmaya başlamak için hızlı görevler
+      href: compliance-quick-tasks.md
+    - name: Microsoft 365 çözüm kataloğu
+      href: microsoft-365-solution-catalog.md
+    - name: Microsoft 365 uyumluluk merkezi
+      href: microsoft-365-compliance-center.md
+    - name: Microsoft 365 uyumluluk merkezindeki izinler
+      href: microsoft-365-compliance-center-permissions.md
+    - name: Kullanıcıları Microsoft 365 uyumluluk merkezine yönlendirme
+      href: microsoft-365-compliance-center-redirection.md
+    - name: Ücretsiz Azure Active Directory aboneliğinizi kullanma
+      href: use-your-free-azure-ad-subscription-in-office-365.md
+    - name: Office 365'te güvenlik ve uyum planı
+      href: plan-for-security-and-compliance.md
+    - name: Uyumluluk genişletilebilirliği
+      href: compliance-extensibility.md
+- name: Çapraz çözüm özellikleri
+  items:
+    - name: Windows 10 ve Windows 11 cihazlarının katılımı
+      items:
+        - name: Windows 10 ve Windows 11 cihazlarının Microsoft 365'e katılımına genel bakış
+          href: device-onboarding-overview.md
+        - name: Grup Politikası aracılığıyla Windows 10 ve Windows 11 cihazlarının katılımı
+          href: device-onboarding-gp.md
+        - name: Mobil Cihaz Yönetimi araçlarını kullanan Windows 10 ve Windows 11 cihazlarının katılımı
+          href: device-onboarding-mdm.md
+        - name: Yapılandırma Yöneticisi kullanan Windows 10 ve Windows 11 cihazlarının katılımı
+          href: device-onboarding-sccm.md
+        - name: Yerel bir komut dosyası kullanan Windows 10 ve Windows 11 cihazlarının katılımı
+          href: device-onboarding-script.md
+        - name: Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarının katılımı
+          href: device-onboarding-vdi.md
+    - name: macOS cihazlarının katılımı (önizleme)
+      items:
+        - name: macOS cihazlarının Microsoft 365'e katılımına genel bakış (önizleme)
+          href: device-onboarding-macos-overview.md
+        - name: macOS cihazlarının Microsoft Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)
+          href: device-onboarding-offboarding-macos-intune.md
+        - name: macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)
+          href: device-onboarding-offboarding-macos-intune-mde.md
+        - name: macOS cihazlarının JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)
+          href: device-onboarding-offboarding-macos-jamfpro.md
+        - name: macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)
+          href: device-onboarding-offboarding-macos-jamfpro-mde.md
+- name: Üçüncü taraf verileri için bağlayıcıları yönetme
+  items:
+    - name: Üçüncü taraf verileri için bağlayıcılar hakkında daha fazla bilgi edinme
+      href: archiving-third-party-data.md
+    - name: Microsoft veri bağlayıcıları
+      items:
+        - name: Bloomberg Message
+          href: archive-bloomberg-message-data.md
+        - name: Epic EHR sağlık hizmetleri verileri (önizleme)
+          href: import-epic-data.md
+        - name: Facebook Business
+          href: archive-facebook-data-with-sample-connector.md
+        - name: Genel EHR sağlık hizmetleri verileri (önizleme)
+          href: import-healthcare-data.md
+        - name: HR verileri
+          href: import-hr-data.md
+        - name: ICE Chat
+          href: archive-icechat-data.md
+        - name: Instant Bloomberg
+          href: archive-instant-bloomberg-data.md
+        - name: LinkedIn
+          href: archive-linkedin-data.md
+        - name: Fiziksel rozet verileri
+          href: import-physical-badging-data.md
+        - name: Slack eKeşif (önizleme)
+          href: archive-slack-data-microsoft.md
+        - name: Twitter
+          href: archive-twitter-data-with-sample-connector.md
+    - name: Veritas veri bağlayıcıları
+      items:
+        - name: CellTrust
+          href: archive-celltrust-data.md
+        - name: MS SQL üzerinde Cisco Jabber
+          href: archive-ciscojabberonmssql-data.md
+        - name: Oracle üzerinde Cisco Jabber
+          href: archive-ciscojabberonoracle-data.md
+        - name: PostgreSQL üzerinde Cisco Jabber
+          href: archive-ciscojabberonpostgresql-data.md
+        - name: EML
+          href: archive-eml-data.md
+        - name: FX Connect
+          href: archive-fxconnect-data.md
+        - name: Jive
+          href: archive-jive-data.md
+        - name: MS SQL Veritabanı
+          href: archive-mssqldatabaseimporter-data.md
+        - name: Pivot
+          href: archive-pivot-data.md
+        - name: Redtail Speak
+          href: archive-redtailspeak-data.md
+        - name: Reuters Dealing
+          href: archive-reutersdealing-data.md
+        - name: Reuters Eikon
+          href: archive-reuterseikon-data.md
+        - name: Reuters FX
+          href: archive-reutersfx-data.md
+        - name: RingCentral
+          href: archive-ringcentral-data.md
+        - name: Salesforce Chatter
+          href: archive-salesforcechatter-data.md
+        - name: ServiceNow
+          href: archive-servicenow-data.md
+        - name: Skype Kurumsal
+          href: archive-skypeforbusiness-data.md
+        - name: Slack eKeşif
+          href: archive-slack-data.md
+        - name: Symphony
+          href: archive-symphony-data.md
+        - name: Metinle ayrılmış
+          href: archive-text-delimited-data.md
+        - name: Twitter (önizleme)
+          href: archive-veritas-twitter-data.md
+        - name: Webex Teams
+          href: archive-webexteams-data.md
+        - name: Web sayfaları
+          href: archive-webpagecapture-data.md
+        - name: Facebook Workplace
+          href: archive-workplacefromfacebook-data.md
+        - name: XIP
+          href: archive-xip-data.md
+        - name: XSLT/XML
+          href: archive-xslt-xml-data.md
+        - name: Yieldbroker
+          href: archive-yieldbroker-data.md
+        - name: YouTube
+          href: archive-youtube-data.md
+        - name: Zoom Meetings
+          href: archive-zoommeetings-data.md
+    - name: TeleMessage veri bağlayıcıları
+      items:
+        - name: Android Arşivleyici
+          href: archive-android-archiver-data.md
+        - name: AT&T SMS/MMS Ağ Arşivleyicisi
+          href: archive-att-network-archiver-data.md
+        - name: Bell SMS/MMS Ağ Arşivleyicisi
+          href: archive-bell-network-data.md
+        - name: Kurumsal Numara Arşivleyicisi
+          href: archive-enterprise-number-data.md
+        - name: O2 Telefonica SMS ve Ses Ağı Arşivleyicisi
+          href: archive-o2-network-data.md
+        - name: Rogers Ağ Arşivleyicisi
+          href: archive-rogers-network-archiver-data.md
+        - name: Signal Arşivleyicisi
+          href: archive-signal-archiver-data.md
+        - name: Telegram Arşivleyicisi
+          href: archive-telegram-archiver-data.md
+        - name: TELUS Network
+          href: archive-telus-network-data.md
+        - name: Verizon SMS/MMS Ağ Arşivleyicisi
+          href: archive-verizon-network-data.md
+        - name: WeChat Arşivleyicisi
+          href: archive-wechat-data.md
+        - name: WhatsApp Arşivleyicisi
+          href: archive-whatsapp-data.md
+    - name: 17a-4 veri bağlayıcıları
+      items:
+        - name: BlackBerry DataParser
+          href: archive-17a-4-blackberry-data.md
+        - name: Bloomberg DataParser
+          href: archive-17a-4-bloomberg-data.md
+        - name: Cisco Jabber DataParser
+          href: archive-17a-4-cisco-jabber-data.md
+        - name: Cisco Webex DataParser
+          href: archive-17a-4-webex-teams-data.md
+        - name: FactSet DataParser
+          href: archive-17a-4-factset-data.md
+        - name: Fuze DataParser
+          href: archive-17a-4-fuze-data.md
+        - name: FX Connect DataParser
+          href: archive-17a-4-fxconnect-data.md
+        - name: ICE DataParser
+          href: archive-17a-4-ice-im-data.md
+        - name: InvestEdge DataParser
+          href: archive-17a-4-investedge-data.md
+        - name: LivePerson Conversational Cloud DataParser
+          href: archive-17a-4-liveperson-data.md
+        - name: Quip DataParser
+          href: archive-17a-4-quip-data.md
+        - name: Refinitiv Eikon Messenger DataParser
+          href: archive-17a-4-refinitiv-messenger-data.md
+        - name: ServiceNow DataParser
+          href: archive-17a-4-servicenow-data.md
+        - name: Skype Kurumsal Sunucu DataParser
+          href: archive-17a-4-skype-for-business-server-data.md
+        - name: Slack DataParser
+          href: archive-17a-4-slack-data.md
+        - name: SQL DataParser
+          href: archive-17a-4-sql-database-data.md
+        - name: Symphony DataParser
+          href: archive-17a-4-symphony-data.md
+        - name: Zoom DataParser
+          href: archive-17a-4-zoom-data.md
+    - name: CellTrust bağlayıcıları
+      items:
+        - name: CellTrust SL2
+          href: archive-data-from-celltrustsl2.md
+    - name: Üçüncü taraf verilerini arşivlemek için bir iş ortağıyla çalışma
+      href: work-with-partner-to-archive-third-party-data.md
+    - name: Üçüncü taraf verilerini arama
+      href: use-content-search-to-search-third-party-data-that-was-imported.md
+- name: İçeriden riskleri yönetme
+  items:
+    - name: Microsoft 365 içeriden risk çözümleri
+      href: insider-risk-solution-overview.md
+    - name: İletişim uyumluluğu
+      items:
+        - name: Genel bakış
+          href: communication-compliance-solution-overview.md
+        - name: İletişim uyumluluğu hakkında daha fazla bilgi edinme
+          href: communication-compliance.md
+        - name: İletişim uyumluluğu planı
+          href: communication-compliance-plan.md
+        - name: İletişim uyumluluğunu kullanmaya başlama
+          href: communication-compliance-configure.md
+        - name: İletişim uyumluluğu ile kanal sinyallerini tespit etme
+          href: communication-compliance-channels.md
+        - name: İletişim uyumluluğu ilkeleri oluşturma ve yönetme
+          href: communication-compliance-policies.md
+        - name: İletişim uyumluluğu uyarılarını araştırma ve çözümleme
+          href: communication-compliance-investigate-remediate.md
+        - name: İletişim uygunluğu raporları ve denetimleri hakkında daha fazla bilgi edinme
+          href: communication-compliance-reports-audits.md
+        - name: SIEM çözümleri ile iletişim uyumluluğu
+          href: communication-compliance-siem.md
+        - name: Örnek olay incelemesi - Contoso uygun olmayan bir metin ilkesini hızlı bir şekilde yapılandırır
+          href: communication-compliance-case-study.md
+    - name: İçeriden risk yönetimi
+      items:
+        - name: Genel bakış
+          href: insider-risk-management-solution-overview.md
+        - name: İçeriden risk yönetimi hakkında daha fazla bilgi edinme
+          href: insider-risk-management.md
+        - name: İçeriden risk yönetimi planı
+          href: insider-risk-management-plan.md
+        - name: İçeriden risk yönetimini kullanmaya başlama
+          href: insider-risk-management-configure.md
+        - name: İçeriden risk ayarlarını kullanmaya başlama
+          href: insider-risk-management-settings.md
+        - name: İçeriden risk ilkeleri oluşturma ve yönetme
+          href: insider-risk-management-policies.md
+        - name: İçeriden risk etkinliklerini araştırma
+          href: insider-risk-management-activities.md
+        - name: İçeriden risk vakalarında eyleme geçme
+          href: insider-risk-management-cases.md
+        - name: Tarayıcı sinyal algılaması hakkında daha fazla bilgi edinme ve bunu yapılandırma
+          href: insider-risk-management-browser-support.md
+        - name: İçeriden risk denetim günlüğü ile etkinlikleri inceleme
+          href: insider-risk-management-audit-log.md
+        - name: İçeriden risk içerik gezginiyle verileri inceleme
+          href: insider-risk-management-content-explorer.md
+        - name: Kullanıcılar panosuyla iş akışını yönetme
+          href: insider-risk-management-users.md
+        - name: İçeriden risk bildirimi şablonları oluşturma
+          href: insider-risk-management-notices.md
+    - name: Bilgi engelleri
+      items:
+        - name: Genel bakış
+          href: information-barriers-solution-overview.md
+        - name: Bilgi engelleri hakkında daha fazla bilgi edinme
+          href: information-barriers.md
+        - name: Bilgi engellerini kullanmaya başlama
+          href: information-barriers-policies.md
+        - name: Bilgi engellerini yönetme
+          href: information-barriers-edit-segments-policies.md
+        - name: Bilgi engelleri öznitelikleri
+          href: information-barriers-attributes.md
+        - name: Bilgi engelleri ve Microsoft 365 hizmetleri
+          items:
+            - name: Microsoft Teams ve bilgi engelleri
+              href: /microsoftteams/information-barriers-in-teams?toc=/microsoft-365/compliance/toc.json&bc=/microsoft-365/breadcrumb/toc.json
+            - name: OneDrive ve bilgi engelleri
+              href: /onedrive/information-barriers?toc=/microsoft-365/compliance/toc.json&bc=/microsoft-365/breadcrumb/toc.json
+            - name: SharePoint ve bilgi engelleri
+              href: /sharepoint/information-barriers?toc=/microsoft-365/compliance/toc.json&bc=/microsoft-365/breadcrumb/toc.json
+    - name: Ayrıcalıklı erişim yönetimi
+      items:
+        - name: Genel bakış
+          href: privileged-access-management-solution-overview.md
+        - name: Ayrıcalıklı erişim yönetimi hakkında daha fazla bilgi edinme
+          href: privileged-access-management-overview.md
+        - name: Ayrıcalıklı erişim yönetimini kullanmaya başlama
+          href: privileged-access-management-configuration.md
+    - name: Kullanıcı ve cihaz erişimini koruma
+      href: protect-access-to-data-and-services.md
+    - name: Müşteri Kasası
+      href: customer-lockbox-requests.md
+- name: Bilgi korumasını yönetme
+  items:
+    - name: 'Verileri bilme, verileri koruma ve veri kaybını önleme'
+      href: information-protection.md
+    - name: Bir MIP çözümü dağıtma
+      href: information-protection-solution.md
+    - name: Microsoft Bilgi Koruması için varsayılan etiketler ve ilkeler
+      href: mip-easy-trials.md
+    - name: Hassas bilgi türleri
+      items:
+        - name: Hassas bilgi türleri hakkında daha fazla bilgi edinme
+          items:
+            - name: Hassas bilgi türleri hakkında daha fazla bilgi edinme
+              href: sensitive-information-type-learn-about.md
+            - name: Tam veri eşleşmesine dayalı hassas bilgi türleri hakkında daha fazla bilgi edinme
+              href: sit-learn-about-exact-data-match-based-sits.md
+            - name: Belge Parmak İzi
+              href: document-fingerprinting.md
+            - name: Adlandırılmış varlıklar hakkında daha fazla bilgi edinme (önizleme)
+              href: named-entities-learn.md
+        - name: Hassas bilgi türünü kullanmaya başlama
+          items:
+            - name: Özel bir hassas bilgi türleri oluşturma - Uyumluluk Merkezi
+              href: create-a-custom-sensitive-information-type.md
+            - name: Tam veri eşleşmesine dayalı hassas bilgi türlerini kullanmaya başlama
+              href: sit-get-started-exact-data-match-based-sits-overview.md
+            - name: Tam veri eşleşmesine dayalı hassas bilgi türleri için kaynak verilerini dışa aktarma
+              href: sit-get-started-exact-data-match-export-data.md
+            - name: Tam veri eşleşmesine dayalı hassas bilgi türleri için tam veri eşleşmesi şeması oluşturma
+              href: sit-get-started-exact-data-match-create-schema.md
+            - name: Tam veri eşleşmeli hassas bilgi türleri için hassas bilgi kaynak tablosu karması oluşturma ve karşıya yükleme
+              href: sit-get-started-exact-data-match-hash-upload.md
+            - name: Tam veri eşleşmesi hassas bilgi türü/kural paketi oluşturma
+              href: sit-get-started-exact-data-match-create-rule-package.md
+            - name: Tam veri eşleşmesi hassas bilgi türünü test etme
+              href: sit-get-started-exact-data-match-test.md
+        - name: Hassas bilgi türlerini kullanma
+          items:
+            - name: Yerleşik hassas bilgi türünü özelleştirme
+              href: customize-a-built-in-sensitive-information-type.md
+            - name: Yapılandırılabilir eşleştirmeyi kullanmak için tam veri eşleşme şemasını değiştirme
+              href: sit-modify-edm-schema-configurable-match.md
+            - name: Tam veri eşleşme etkinlikleri için bildirimler oluşturma
+              href: sit-edm-notifications-activities.md
+            - name: Uyumluluk merkezindeki özel hassas bilgi türlerini yönetme
+              href: sit-manage-custom-sits-compliance-center.md
+            - name: Hassas bilgi türleri REGEX doğrulayıcıları ve ek kontroller
+              href: sit-regex-validators-additional-checks.md
+            - name: Özel hassas bilgi türü oluşturma - PowerShell
+              href: create-a-custom-sensitive-information-type-in-scc-powershell.md
+            - name: Özel hassas bilgi türünü kaldırma - PowerShell
+              href: sit-remove-a-custom-sensitive-information-type-in-powershell.md
+            - name: Özel hassas bilgi türünü değiştirme - PowerShell
+              href: sit-modify-a-custom-sensitive-information-type-in-powershell.md
+            - name: Anahtar sözcük sözlüğü oluşturma
+              href: create-a-keyword-dictionary.md
+            - name: Anahtar sözcük sözlüğü değiştirme
+              href: sit-modify-keyword-dictionary.md
+            - name: Tam veri eşleşme şemanızı yönetme
+              href: sit-use-exact-data-manage-schema.md
+            - name: Hassas bilgi kaynak tablosu dosyanızı yenileme
+              href: sit-use-exact-data-refresh-data.md
+            - name: Veri kaybı önleme ilkelerinizde adlandırılmış varlıkları kullanma (önizleme)
+              href: named-entities-use.md
+            - name: Hassas bilgi türleri için ortak kullanım senaryoları
+              href: sit-common-scenarios.md
+        - name: Hassas bilgi türü referansı
+          items:
+            - name: Hassas bilgi türü varlık tanımları
+              href: sensitive-information-type-entity-definitions.md
+            - name: Hassas bilgi türü işlevleri
+              href: sit-functions.md
+            - name: Özel hassas bilgi türü filtreleri referansı
+              href: sit-custom-sit-filters.md
+    - name: Eğitilebilir sınıflandırıcılar
+      items:
+        - name: Eğitilebilir sınıflandırıcılar hakkında daha fazla bilgi edinme
+          href: classifier-learn-about.md
+        - name: Eğitilebilir sınıflandırıcıları kullanmaya başlama
+          href: classifier-get-started-with.md
+        - name: İçerik gezgininde bir sınıflandırıcıyı yeniden eğitme
+          href: classifier-how-to-retrain-content-explorer.md
+    - name: Veri sınıflandırması
+      items:
+        - name: Veri sınıflandırması hakkında daha fazla bilgi edinme
+          href: data-classification-overview.md
+        - name: İçerik gezginini kullanmaya başlama
+          href: data-classification-content-explorer.md
+        - name: Etkinlik gezginini kullanmaya başlama
+          href: data-classification-activity-explorer.md
+        - name: Etkinlik gezgininde bildirilen etiketleme eylemleri
+          href: data-classification-activity-explorer-available-events.md
+    - name: Duyarlılık etiketleri
+      items:
+        - name: Duyarlılık etiketleri hakkında bilgi edinin
+          href: sensitivity-labels.md
+        - name: Office uygulamaları için MIP yerleşik etiketlemeyi seçme nedenleri
+          href: sensitivity-labels-aip.md
+        - name: Hassasiyet etiketlerini kullanmaya başlama
+          href: get-started-with-sensitivity-labels.md
+        - name: Hassasiyet etiketleri oluşturma ve yayınlama
+          href: create-sensitivity-labels.md
+        - name: Şifreleme uygulamak için hassasiyet etiketleri kullanarak içeriğe erişimi kısıtlama
+          href: encryption-sensitivity-labels.md
+        - name: İçeriğe otomatik olarak bir hassasiyet etiketi uygulama
+          href: apply-sensitivity-label-automatically.md
+        - name: 'Ekipler, gruplar ve sitelerle hassasiyet etiketleri kullanma'
+          href: sensitivity-labels-teams-groups-sites.md
+        - name: SharePoint ve OneDrive'daki Office dosyaları için hassasiyet etiketlerini etkinleştirme
+          href: sensitivity-labels-sharepoint-onedrive-files.md
+        - name: Hassasiyet etiketleri ile şifrelenen belgeler için birlikte yazmayı etkinleştirme
+          href: sensitivity-labels-coauthoring.md
+        - name: Hassasiyet etiketlerini kullanarak varsayılan paylaşım bağlantı türünü ayarlama
+          href: sensitivity-labels-default-sharing-link.md
+        - name: Office uygulamalarında duyarlılık etiketlerini yönetme
+          href: sensitivity-labels-office-apps.md
+    - name: Şifreleme
+      items:
+        - name: Şifrelemeyi anlama
+          href: encryption.md
+        - name: Çift Anahtarlı Şifreleme (DKE)
+          href: double-key-encryption.md
+        - name: Çift Anahtarlı Şifreleme SSS
+          href: double-key-encryption-overview.md
+        - name: Office 365 Hizmeti şifreleme
+          href: office-365-service-encryption.md
+        - name: Müşteri Anahtarı
+          items:
+            - name: Microsoft 365'deki Müşteri Anahtarı
+              href: customer-key-overview.md
+            - name: Microsoft 365 için Müşteri Anahtarı Kurulumu
+              href: customer-key-set-up.md
+            - name: Microsoft 365 için Müşteri Anahtarını Yönetme
+              href: customer-key-manage.md
+            - name: Bir Müşteri Anahtarını veya uygunluk anahtarını toplama veya döndürme
+              href: customer-key-availability-key-roll.md
+            - name: Müşteri Anahtarı için uygunluk anahtarı hakkında daha fazla bilgi edinme
+              href: customer-key-availability-key-understand.md
+        - name: E-posta şifreleme
+          href: email-encryption.md
+          items:
+            - name: Office 365 İleti Şifrelemesi (OME)
+              href: ome.md
+            - name: Yeni Office 365 İleti Şifrelemesi özelliklerini ayarlama
+              href: set-up-new-message-encryption-capabilities.md
+            - name: Office 365'deki e-posta iletilerini şifrelemek için posta akışı kurallarını tanımlama
+              href: define-mail-flow-rules-to-encrypt-email.md
+            - name: Kuruluşunuzun markasını şifrelenmiş iletilerinize ekleme
+              href: add-your-organization-brand-to-encrypted-messages.md
+            - name: Office 365 İleti Şifrelemesini kullanarak kuruluşunuz için hassas bilgi türü ilkesi oluşturma
+              href: ome-sensitive-info-types.md
+            - name: Office 365 İleti Şifrelemesini yönetme
+              href: manage-office-365-message-encryption.md
+            - name: Office 365 Gelişmiş İleti Şifrelemesi
+              href: ome-advanced-message-encryption.md
+            - name: Office 365 Gelişmiş İleti Şifrelemesi ile şifrelenen e-posta için bir son geçerlilik tarihi belirleme
+              href: ome-advanced-expiration.md
+            - name: Office 365 Gelişmiş İleti Şifrelemesi ile şifrelenen e-postayı iptal etme
+              href: revoke-ome-encrypted-mail.md
+            - name: OME sürümlerini karşılaştırma
+              href: ome-version-comparison.md
+            - name: Office 365 İleti Şifrelemesi SSS
+              href: ome-faq.yml
+            - name: 'Exchange Online, e-posta sırlarınızı nasıl güvence altına alır?'
+              href: exchange-online-secures-email-secrets.md
+            - name: 'Exchange Online, Office 365’de e-posta bağlantılarını güvence altına almak için TLS''yi nasıl kullanır?'
+              href: exchange-online-uses-tls-to-secure-email-connections.md
+            - name: SMTP DANE nasıl çalışır?
+              href: how-smtp-dane-works.md
+            - name: Şifreleme için BitLocker ve Dağıtılmış Anahtar Yöneticisi (DKM)
+              href: office-365-bitlocker-and-distributed-key-manager-for-encryption.md
+            - name: Eski OME
+              items:
+                - name: Office 365 İleti Şifrelemesi için eski bilgiler
+                  href: legacy-information-for-message-encryption.md
+                - name: Office 365 İleti Şifrelemesinin önceki sürümü için Azure Rights Management kurma
+                  href: set-up-azure-rms-for-previous-version-message-encryption.md
+        - name: SharePoint IRM
+          href: set-up-irm-in-sp-admin-center.md
+        - name: Teknik referans
+          href: technical-reference-details-about-encryption.md
+        - name: Microsoft 365 şifreleme zincirleri
+          href: encryption-office-365-certificate-chains.md
+        - name: Office 365 için TLS 1.0 ve 1.1 sürümlerini kullanımdan kaldırma
+          href: tls-1.0-and-1.1-deprecation-for-office-365.md
+        - name: Office 365 GCC High ve DoD'de TLS 1.0 ve 1.1 sürümlerini kullanımdan kaldırma
+          href: tls-1-2-in-office-365-gcc.md
+        - name: Office 365'de TLS 1.2
+          href: prepare-tls-1.2-in-office-365.md
+        - name: Ofis TLS Sertifika Değişiklikleri
+          href: encryption-office-365-tls-certificates-changes.md
+    - name: Veri kaybı önleme (DLP)
+      items:
+        - name: DLP hakkında daha fazla bilgi edinme
+          items:
+            - name: Veri kaybı önleme hakkında daha fazla bilgi edinme
+              href: dlp-learn-about-dlp.md
+            - name: Uç nokta veri kaybı önleme hakkında daha fazla bilgi edinme
+              href: endpoint-dlp-learn-about.md
+            - name: Microsoft Teams'teki varsayılan veri kaybı önleme ilkesi hakkında daha fazla bilgi edinme (önizleme)
+              href: dlp-teams-default-policy.md
+            - name: Microsoft 365 veri kaybı önleme şirket içi tarayıcı hakkında daha fazla bilgi edinme
+              href: dlp-on-premises-scanner-learn.md
+            - name: Microsoft Uyumluluk Uzantısı hakkında daha fazla bilgi edinme
+              href: dlp-chrome-learn-about.md
+            - name: Veri kaybı önleme Uyarılar panosu hakkında daha fazla bilgi edinme
+              href: dlp-alerts-dashboard-learn.md
+        - name: DLP Planı
+          items:
+            - name: Veri kaybı önleme planı
+              href: dlp-overview-plan-for-dlp.md
+            - name: Bir DLP ilkesi tasarlama
+              href: dlp-policy-design.md
+            - name: Veri kaybı önleme ilkesi referansı
+              href: dlp-policy-reference.md
+        - name: DLP kullanmaya başlama
+          items:
+            - name: Uç noktada veri kaybı önleme ayarlarını yapılandırma
+              href: dlp-configure-endpoint-settings.md
+            - name: Varsayılan DLP ilkesini kullanmaya başlama
+              href: get-started-with-the-default-dlp-policy.md
+            - name: Bir şablondan DLP ilkesi oluşturma
+              href: create-a-dlp-policy-from-a-template.md
+            - name: 'Bir DLP ilkesi oluşturma, test etme ve ayarlama'
+              href: create-test-tune-dlp-policy.md
+            - name: Microsoft 365 veri kaybı önleme şirket içi tarayıcıyı kullanmaya başlama
+              href: dlp-on-premises-scanner-get-started.md
+            - name: Uç noktada veri kaybı önlemeyi kullanmaya başlama
+              href: endpoint-dlp-getting-started.md
+            - name: Information Protection için cihaz proxy ve internet bağlantısı ayarlarını yapılandırma
+              href: device-onboarding-configure-proxy.md
+            - name: Microsoft Uyumluluk Uzantısını kullanmaya başlama
+              href: dlp-chrome-get-started.md
+            - name: Veri kaybı önleme uyarı panosunu kullanmaya başlama
+              href: dlp-alerts-dashboard-get-started.md
+            - name: Power BI için Veri kaybını önleme ilkelerini kullanmaya başlama (önizleme)
+              href: dlp-powerbi-get-started.md
+        - name: DLP kullanma
+          items:
+            - name: DLP ve Microsoft Teams
+              href: dlp-microsoft-teams.md
+            - name: Uç noktada veri kaybı önlemeyi kullanma
+              href: endpoint-dlp-using.md
+            - name: Microsoft 365 veri kaybı önleme şirket içi tarayıcı kullanma
+              href: dlp-on-premises-scanner-use.md
+            - name: DLP ilkelerinde bildirimleri ve ilke ipuçlarını kullanma
+              href: use-notifications-and-policy-tips.md
+            - name: DLP ilke şablonları neler içerir?
+              href: what-the-dlp-policy-templates-include.md
+            - name: FCI veya diğer özellikler ile belgeleri korumak için bir DLP ilkesi oluşturma
+              href: protect-documents-that-have-fci-or-other-properties.md
+            - name: DLP raporlarını görüntüleme
+              href: view-the-dlp-reports.md
+            - name: Sitelerde depolanan hassas verileri bulmak için sorgu oluşturma
+              href: form-a-query-to-find-sensitive-data-stored-on-sites.md
+            - name: 'DLP, Güvenlik ve Uyumluluk Merkezi ile Exchange yönetim merkezi arasında nasıl çalışır?'
+              href: how-dlp-works-between-admin-centers.md
+            - name: DLP ilkeleri için uyarıları yapılandırma ve görüntüleme (önizleme)
+              href: dlp-configure-view-alerts-policies.md
+            - name: DLP ilkelerinde bir koşul olarak hassasiyet etiketlerini kullanma
+              href: dlp-sensitivity-label-as-condition.md
+            - name: Microsoft dışı bulut uygulamaları için Veri Kaybı Önleme ilkelerini kullanma
+              href: dlp-use-policies-non-microsoft-cloud-apps.md
+            - name: DLP ilkelerinin koşulları ve istisnaları
+              href: dlp-conditions-and-exceptions.md
+            - name: Exchange Online veri kaybı önleme ilkelerini Uyumluluk merkezine taşıma
+              href: dlp-migrate-exo-policy-to-unified-dlp.md
+            - name: Veri Kaybı Önleme ilkesi ipuçları referansı
+              href: dlp-policy-tips-reference.md
+- name: Bilgi yönetişimi ve kayıtları yönetme
+  items:
+    - name: Bilgilerinizi yönetme
+      href: manage-information-governance.md
+    - name: Verileri saklamayı ve silmeyi anlama
+      items:
+        - name: Saklama ilkeleri ve saklama etiketleri hakkında daha fazla bilgi edinme
+          href: retention.md
+        - name: Saklama ve silme sonuçları için akış şeması
+          href: retention-flowchart.md
+        - name: Microsoft 365 iş yükleri için saklama ve silme
+          items:
+            - name: SharePoint ve OneDrive
+              href: retention-policies-sharepoint.md
+            - name: Microsoft Teams
+              href: retention-policies-teams.md
+            - name: Yammer
+              href: retention-policies-yammer.md
+            - name: Exchange
+              href: retention-policies-exchange.md
+        - name: Saklama ve silme için ortak ayarlar
+          href: retention-settings.md
+        - name: Saklama ve silme sınırları
+          href: retention-limits.md
+    - name: Bilgi Yönetişimi
+      items:
+        - name: Bilgi yönetişimi hakkında daha fazla bilgi edinme
+          href: information-governance.md
+        - name: Bilgi yönetişimini kullanmaya başlama
+          href: get-started-with-information-governance.md
+        - name: Saklama ilkeleri oluşturma
+          href: create-retention-policies.md
+        - name: İstisnalar için saklama etiketleri kullanma
+          href: create-retention-labels-information-governance.md
+        - name: Arşiv posta kutusu verileri
+          items:
+            - name: Arşiv posta kutuları hakkında daha fazla bilgi edinme
+              href: archive-mailboxes.md
+            - name: Arşiv posta kutularını etkinleştirme
+              href: enable-archive-mailboxes.md
+            - name: Otomatik genişleyen arşivleme hakkında daha fazla bilgi edinme
+              href: autoexpanding-archiving.md
+            - name: Otomatik genişleyen arşivlemeyi etkinleştirme
+              href: enable-autoexpanding-archiving.md
+            - name: Posta kutuları için arşivleme ve silme ilkesini özelleştirme (MRM)
+              href: set-up-an-archive-and-deletion-policy-for-mailboxes.md
+        - name: Etkin olmayan posta kutularını yönetme
+          items:
+            - name: Etkin olmayan posta kutuları hakkında daha fazla bilgi edinme
+              href: inactive-mailboxes-in-office-365.md
+            - name: Etkin olmayan posta kutuları oluşturma ve yönetme
+              href: create-and-manage-inactive-mailboxes.md
+            - name: Etkin olmayan posta kutusunun bekletme süresini değiştirme
+              href: change-the-hold-duration-for-an-inactive-mailbox.md
+            - name: Etkin olmayan posta kutusunu kurtarma
+              href: recover-an-inactive-mailbox.md
+            - name: Etkin olmayan posta kutusunu geri yükleme
+              href: restore-an-inactive-mailbox.md
+            - name: Etkin olmayan posta kutusunu silme
+              href: delete-an-inactive-mailbox.md
+        - name: PST dosyalarını içeri aktarma
+          items:
+            - name: PST dosyalarını içe aktarma hakkında daha fazla bilgi edinme
+              href: importing-pst-files-to-office-365.md
+            - name: PST dosyalarını içe aktarmak için ağ yüklemesini kullanma
+              href: use-network-upload-to-import-pst-files.md
+            - name: PST dosyalarını almak için sürücü gönderimini kullanma
+              href: use-drive-shipping-to-import-pst-files-to-office-365.md
+            - name: PST dosyalarını içe aktarırken verileri filtreleme
+              href: filter-data-when-importing-pst-files.md
+            - name: PST dosyalarını içe aktarma hakkında SSS
+              href: faqimporting-pst-files-to-office-365.yml
+    - name: Kayıt yönetimi
+      items:
+        - name: Kayıt yönetimini anlama
+          items:
+            - name: Kayıt yönetimi hakkında daha fazla bilgi edinme
+              href: records-management.md
+            - name: Yasal gereksinimler için kaynaklar
+              href: retention-regulatory-requirements.md
+            - name: Saklama etiketleri kullanarak kayıtları beyan etme
+              href: declare-records.md
+            - name: Dosyalar için kayıt sürümünü kullanma
+              href: record-versioning.md
+        - name: Kayıt yönetimini kullanmaya başlama
+          href: get-started-with-records-management.md
+        - name: Dosya planıyla saklama etiketleri oluşturma ve yönetme
+          href: file-plan-manager.md
+        - name: Bir olay meydana geldiğinde saklamayı başlatma
+          href: event-driven-retention.md
+        - name: Uygulamalarda saklama etiketleri yayınlama ve uygulama
+          href: create-apply-retention-labels.md
+        - name: İçeriğe otomatik olarak saklama etiketleri uygulama
+          href: apply-retention-labels-automatically.md
+        - name: Değişiklikleri kısıtlamak için kilitleme ilkeleri
+          href: retention-preservation-lock.md
+        - name: Saklama etiketleri oluşturmak ve yayınlamak için PowerShell'i kullanma
+          href: bulk-create-publish-labels-using-powershell.md
+        - name: SharePoint'teki belgeleri yönetmek için saklama etiketlerini kullanma
+          href: auto-apply-retention-labels-scenario.md
+        - name: Veri silmeyi yönetme
+          href: disposition.md
+- name: eKeşif’i yönetme
+  items:
+    - name: Microsoft 365 eKeşif çözümleri
+      href: ediscovery.md
+    - name: İçerik arama
+      items:
+        - name: İçerik aramaya genel bakış
+          href: search-for-content.md
+        - name: İçerik için arama yapma
+          href: content-search.md
+          items:
+            - name: Anahtar sözcük sorguları ve arama koşulları
+              href: keyword-queries-and-search-conditions.md
+            - name: Arama sorguları oluşturmak için KQL düzenleyicisini kullanma
+              href: ediscovery-kql-editor.md
+            - name: Şirket içi kullanıcılar için Teams sohbet verilerini arama
+              href: search-cloud-based-mailboxes-for-on-premises-users.md
+            - name: Arama izinleri filtrelemesini yapılandırma
+              href: permissions-filtering-for-content-search.md
+            - name: eKeşif arama sonuçlarını önizleme
+              href: preview-ediscovery-search-results.md
+            - name: Arama sonuçları için istatistikleri görüntüleme
+              href: view-keyword-statistics-for-content-search.md
+            - name: Arama sonuçlarını dışarı aktarma
+              href: export-search-results.md
+            - name: Bir arama raporunu dışa aktarma
+              href: export-a-content-search-report.md
+            - name: E-posta iletilerini arama ve silme
+              href: search-for-and-delete-messages-in-your-organization.md
+            - name: Başarısız bir aramayı yeniden deneme
+              href: retry-failed-content-search.md
+            - name: Arama için Gizli Kopya alıcılarını tutma
+              href: preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md
+        - name: İçerik arama referansı
+          items:
+            - name: İçerik arama için özellik referansı
+              href: content-search-reference.md
+            - name: eKeşif arama sınırları
+              href: limits-for-content-search.md
+            - name: eKeşif için posta kutularında saklanan içerik
+              href: what-is-stored-in-exo-mailbox.md
+            - name: Tahmini ve gerçek arama sonuçları arasındaki farklar
+              href: differences-between-estimated-and-actual-ediscovery-search-results.md
+            - name: Kısmen dizine eklenen öğeler
+              href: partially-indexed-items-in-content-search.md
+            - name: Kısmen dizine eklenen öğeleri araştırma
+              href: investigating-partially-indexed-items-in-ediscovery.md
+            - name: Arama sonuçlarında çoğaltmayı kaldırma
+              href: de-duplication-in-ediscovery-search-results.md
+            - name: eKeşif araçlarında şifre çözme
+              href: ediscovery-decryption.md
+            - name: Arama sonuçlarını dışa aktarırken PST dosyalarının boyutunu değiştirme
+              href: change-the-size-of-pst-files-when-exporting-results.md
+            - name: Arama sonuçlarını dışa aktarırken raporları devre dışı bırakma
+              href: disable-reports-when-you-export-content-search-results.md
+            - name: Arama sorgunuzda hata olup olmadığını kontrol etme
+              href: check-your-content-search-query-for-errors.md
+            - name: Arama sonuçlarını indirmek için Microsoft Edge'i kullanma
+              href: configure-edge-to-export-search-results.md
+            - name: Denetim günlüğünde eKeşif etkinliklerini ara
+              href: search-for-ediscovery-activities-in-the-audit-log.md
+        - name: PowerShell betiklerinde içerik arama
+          items:
+            - name: Hedeflenen koleksiyonlar için içerik araması kullanınma
+              href: use-content-search-for-targeted-collections.md
+            - name: Kullanıcı listesi için posta kutusunda ve OneDrive hesabında arama yapma
+              href: search-the-mailbox-and-onedrive-for-business-for-a-list-of-users.md
+            - name: 'Birden fazla arama oluşturma, raporlama ve silme'
+              href: create-report-on-and-delete-multiple-content-searches.md
+            - name: Bir aramayı kopyalama
+              href: clone-a-content-search.md
+    - name: Temel eKeşif
+      items:
+        - name: Temel eKeşif kullanmaya başlama
+          href: get-started-core-ediscovery.md
+        - name: eKeşif bekletmeleri oluşturma
+          href: create-ediscovery-holds.md
+        - name: Bir vakada içerik arama
+          href: search-for-content-in-core-ediscovery.md
+        - name: Bir vakadaki içeriği dışa aktarma
+          href: export-content-in-core-ediscovery.md
+        - name: 'Bir vakayı kapatma, yeniden açma ve silme'
+          href: close-reopen-delete-core-ediscovery-cases.md
+        - name: Temel eKeşif referansı
+          items:
+            - name: eKeşif arama sınırları
+              href: limits-for-content-search.md
+            - name: eKeşif izinleri atama
+              href: assign-ediscovery-permissions.md
+            - name: Anahtar sözcük sorguları ve arama koşulları
+              href: keyword-queries-and-search-conditions.md
+            - name: Arama sorguları oluşturmak için KQL düzenleyicisini kullanma
+              href: ediscovery-kql-editor.md
+            - name: Uyumluluk sınırları belirleme
+              href: set-up-compliance-boundaries.md
+            - name: Arama izinleri filtrelemesini yapılandırma
+              href: permissions-filtering-for-content-search.md
+            - name: eKeşif için posta kutularında saklanan içerik
+              href: what-is-stored-in-exo-mailbox.md
+            - name: Tahmini ve gerçek arama sonuçları arasındaki farklar
+              href: differences-between-estimated-and-actual-ediscovery-search-results.md
+            - name: Kısmen dizine eklenen öğeler
+              href: partially-indexed-items-in-content-search.md
+            - name: Kısmen dizine eklenen öğeleri araştırma
+              href: investigating-partially-indexed-items-in-ediscovery.md
+            - name: eKeşif arama sonuçlarını önizleme
+              href: preview-ediscovery-search-results.md
+            - name: Bir arama raporunu dışa aktarma
+              href: export-a-content-search-report.md
+            - name: Kullanıcıları eKeşif bekletmesine eklemek için betik kullanma
+              href: use-a-script-to-add-users-to-a-hold-in-ediscovery.md
+            - name: Bir bekletme raporu oluşturmak için betik kullanma
+              href: create-a-report-on-holds-in-ediscovery-cases.md
+            - name: Arama sonuçları için istatistikleri görüntüleme
+              href: view-keyword-statistics-for-content-search.md
+            - name: Saçılan verileri arama ve temizleme
+              href: data-spillage-scenariosearch-and-purge.md
+            - name: Arama için Gizli Kopya alıcılarını tutma
+              href: preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md
+            - name: eKeşif araçlarında şifre çözme
+              href: ediscovery-decryption.md
+            - name: eKeşif tanılama bilgilerini toplama
+              href: ediscovery-diagnostic-info.md
+            - name: Başarısız bir aramayı yeniden deneme
+              href: retry-failed-content-search.md
+            - name: Arama sonuçlarını indirmek için Microsoft Edge'i kullanma
+              href: configure-edge-to-export-search-results.md
+            - name: Denetim günlüğünde eKeşif etkinliklerini ara
+              href: search-for-ediscovery-activities-in-the-audit-log.md
+    - name: Gelişmiş eKeşif
+      items:
+        - name: Genel bakış
+          href: overview-ediscovery-20.md
+        - name: Gelişmiş eKeşif kurulumu yapma
+          href: get-started-with-advanced-ediscovery.md
+        - name: Gelişmiş eKeşif vakaları oluşturma
+          items:
+            - name: Bir vaka oluşturma ve yönetme
+              href: create-and-manage-advanced-ediscoveryv2-case.md
+            - name: Yeni vaka biçimini kullanma
+              href: advanced-ediscovery-new-case-format.md
+        - name: Teams içeriği için gelişmiş eKeşif iş akışı
+          href: teams-workflow-in-advanced-ediscovery.md
+        - name: Yedieminleri ve yediemin olmayan veri kaynaklarını yönetme
+          href: managing-custodians.md
+          items:
+            - name: Bir vakaya yediemin ekleme
+              href: add-custodians-to-case.md
+            - name: Birden fazla yediemini bir vakaya içeri aktarma
+              href: bulk-add-custodians.md
+            - name: Yedieminleri yönetme
+              href: manage-new-custodians.md
+            - name: Yediemin etkinliğini görüntüleme
+              href: view-custodian-activity.md
+            - name: Bir vakaya yediemin olmayan veri kaynakları ekleme
+              href: non-custodial-data-sources.md
+        - name: Yediemin iletişimlerini yönetme
+          href: managing-custodian-communications.md
+          items:
+            - name: Bekletme bildirimi oluşturma
+              href: create-hold-notification.md
+            - name: İletişim düzenleyicisini kullanma
+              href: using-communications-editor.md
+            - name: Bekletme bildirimlerini yönetme
+              href: manage-hold-notification.md
+            - name: Bekletme bildirimini onaylama
+              href: acknowledge-hold-notification.md
+            - name: Düzenleyen görevlileri yönetme
+              href: advanced-ediscovery-issuing-officers.md
+            - name: Yediemin iletişim şablonlarını yönetme
+              href: advanced-ediscovery-communications-library.md
+        - name: Bekletmeleri yönetme
+          href: managing-holds.md
+          items:
+            - name: Bir bekletme raporu oluşturmak için betik kullanma
+              href: create-a-report-on-holds-in-ediscovery-cases.md
+        - name: İşleme hatalarını yönetme
+          href: processing-data-for-case.md
+          items:
+            - name: Yediemin içeriğini gelişmiş dizine alma
+              href: indexing-custodian-data.md
+            - name: İçerik işlenirken hata düzeltme
+              href: error-remediation-when-processing-data-in-advanced-ediscovery.md
+            - name: Tek öğede hata düzeltme
+              href: single-item-error-remediation.md
+        - name: Bir vaka için içerik toplama
+          items:
+            - name: Koleksiyonlar hakkında daha fazla bilgi edinme
+              href: collections-overview.md
+            - name: Taslak koleksiyon oluşturma
+              href: create-draft-collection.md
+            - name: Bir inceleme setine taslak koleksiyon atama
+              href: commit-draft-collection.md
+            - name: Koleksiyon istatistikleri ve raporları
+              href: collection-statistics-reports.md
+            - name: Koleksiyonlar için arama sorguları oluşturma
+              href: building-search-queries.md
+            - name: Arama sorguları oluşturmak için KQL düzenleyicisini kullanma
+              href: ediscovery-kql-editor.md
+            - name: Anahtar sözcük sorguları ve arama koşulları
+              href: keyword-queries-and-search-conditions.md
+            - name: Bulut eklerini toplama
+              href: advanced-ediscovery-cloud-attachments.md
+        - name: İnceleme setlerini yönetme
+          href: managing-review-sets.md
+          items:
+            - name: Office 365 dışı verileri bir inceleme setine yükleme
+              href: load-non-Office-365-data-into-a-review-set.md
+            - name: Verileri başka bir inceleme setine ekleme
+              href: add-data-to-review-set-from-another-review-set.md
+        - name: Vaka içeriğini inceleme
+          items:
+            - name: Bir inceleme setindeki içeriği sorgulama ve filtreleme
+              href: review-set-search.md
+            - name: Bir inceleme setindeki belgeleri etiketleme
+              href: tagging-documents.md
+            - name: Bir inceleme setindeki belgeleri görüntüleme
+              href: view-documents-in-review-set.md
+            - name: İnceleme seti panosunu kullanma
+              href: advanced-ediscovery-dashboard.md
+        - name: Vaka içeriğini analiz etme
+          href: analyzing-data-in-review-set.md
+          items:
+            - name: Yakın eş kopya algılama
+              href: near-duplicate-detection-in-advanced-ediscovery.md
+            - name: E-posta yazışması
+              href: email-threading-in-advanced-ediscovery.md
+            - name: Temalar
+              href: themes-in-advanced-ediscovery.md
+        - name: Tahmine dayalı kodlama kullanma (önizleme)
+          items:
+            - name: Hızlı başlangıç - Tahmine dayalı kodlama
+              href: predictive-coding-quick-start.md
+            - name: Tahmine dayalı kodlama hakkında daha fazla bilgi edinme
+              href: predictive-coding-overview.md
+            - name: Tahmine dayalı kodlama modeli oluşturma
+              href: predictive-coding-create-model.md
+            - name: Tahmine dayalı kodlama modeli geliştirme
+              href: predictive-coding-train-model.md
+            - name: Tahmine dayalı puan filtresi uygulama
+              href: predictive-coding-apply-prediction-filter.md
+            - name: Tahmine dayalı kodlama referansı
+              href: predictive-coding-reference.md
+        - name: Vaka içeriğini dışa aktarma
+          href: exporting-data-ediscover20.md
+          items:
+            - name: Bir inceleme setinden belgeleri indirme
+              href: download-documents-from-review-set.md
+            - name: Bir inceleme setinden belgeleri dışa aktarma
+              href: export-documents-from-review-set.md
+            - name: Belgeleri bir Azure Storage hesabına aktarma
+              href: download-export-jobs.md
+        - name: İşleri yönetme
+          href: managing-jobs-ediscovery20.md
+        - name: Vaka ayarlarını yapılandırma
+          items:
+            - name: Bir vakayı kapatma veya silme
+              href: close-or-delete-case.md
+            - name: Bir vakaya üye ekleme veya kaldırma
+              href: add-or-remove-members-from-a-case-in-advanced-ediscovery.md
+            - name: Arama ve analiz ayarlarını yapılandırma
+              href: configure-search-and-analytics-settings-in-advanced-ediscovery.md
+        - name: Gelişmiş eKeşif referansı
+          items:
+            - name: Gelişmiş eKeşif sınırları
+              href: limits-ediscovery20.md
+            - name: Desteklenen dosya türleri
+              href: supported-filetypes-ediscovery20.md
+            - name: Belge meta veri alanları
+              href: document-metadata-fields-in-advanced-ediscovery.md
+            - name: Geçmiş sürümleri ayarlama
+              href: advanced-ediscovery-historical-versions.md
+            - name: Avukat müvekkil gizliliği algılamayı ayarlama
+              href: attorney-privilege-detection.md
+            - name: eKeşif izinleri atama
+              href: assign-ediscovery-permissions.md
+            - name: Anahtar sözcük sorguları ve arama koşulları
+              href: keyword-queries-and-search-conditions.md
+            - name: Uyumluluk sınırları belirleme
+              href: set-up-compliance-boundaries.md
+            - name: Arama izinleri filtrelemesini yapılandırma
+              href: permissions-filtering-for-content-search.md
+            - name: eKeşif için posta kutularında saklanan içerik
+              href: what-is-stored-in-exo-mailbox.md
+            - name: eKeşif araçlarında şifre çözme
+              href: ediscovery-decryption.md
+            - name: Konuşma inceleme setleri
+              href: conversation-review-sets.md
+            - name: CJK dil desteği
+              href: ediscovery-cjk-support.md
+            - name: eKeşif tanılama bilgilerini toplama
+              href: ediscovery-diagnostic-info.md
+            - name: Denetim günlüğünde eKeşif etkinliklerini ara
+              href: search-for-ediscovery-activities-in-the-audit-log.md
+            - name: AzCopy sorunlarını giderme
+              href: troubleshooting-azcopy.md
+    - name: Eski eKeşif araçlarını kullanımdan kaldırma
+      href: legacy-ediscovery-retirement.md
+- name: Bekletmeleri yönetme
+  items:
+    - name: Bir posta kutusuna yerleştirilen bekletme türünü tanımlama
+      href: identify-a-hold-on-an-exchange-online-mailbox.md
+    - name: Beklemedeki posta kutularının Kurtarılabilir Öğeler klasöründeki öğeleri silme
+      href: delete-items-in-the-recoverable-items-folder-of-mailboxes-on-hold.md
+    - name: Beklemedeki posta kutuları için Kurtarılabilir Öğeler kotasını artırma
+      href: increase-the-recoverable-quota-for-mailboxes-on-hold.md
+    - name: Yasal askıya alma oluşturma
+      href: create-a-litigation-hold.md
+    - name: Gizli kopya ve genişletilmiş dağıtım grubu alıcılarını koruma
+      href: preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery.md
+- name: Denetim ve uyarı ilkelerini yönetme
+  items:
+    - name: Microsoft 365 denetim çözümleri
+      href: auditing-solutions-overview.md
+    - name: Temel Denetim
+      items:
+        - name: Temel Denetim kurulumu
+          href: set-up-basic-audit.md
+        - name: Denetim günlüğünde arama yapma
+          href: search-the-audit-log-in-security-and-compliance.md
+        - name: 'Denetim günlüğü kayıtlarını dışa aktarma, yapılandırma ve görüntüleme'
+          href: export-view-audit-log-records.md
+        - name: Denetim günlüğünü aramak için PowerShell betiği kullanma
+          href: audit-log-search-script.md
+        - name: Denetim günlüğündeki ayrıntılı özellikler
+          href: detailed-properties-in-the-office-365-audit-log.md
+        - name: Denetimi açma veya kapatma
+          href: turn-audit-log-search-on-or-off.md
+        - name: Ortak sorunları araştırmak için denetim günlüğünü kullanma
+          href: auditing-troubleshooting-scenarios.md
+        - name: Denetim günlüğünde paylaşım denetimini kullanma
+          href: use-sharing-auditing.md
+        - name: Office 365 Yönetim Etkinliği API'si
+          items:
+            - name: Office 365 Yönetim Etkinliği API’si referansı
+              href: /office/office-365-management-api/office-365-management-activity-api-reference
+            - name: Office 365 Yönetim Etkinliği API’si şeması
+              href: /office/office-365-management-api/office-365-management-activity-api-schema
+            - name: Office 365 Yönetim Etkinliği API’si SSS ve sorun giderme
+              href: /office/office-365-management-api/troubleshooting-the-office-365-management-activity-api
+    - name: Gelişmiş Denetim
+      items:
+        - name: Gelişmiş Denetime genel bakış
+          href: advanced-audit.md
+        - name: Gelişmiş Denetim kurulumu
+          href: set-up-advanced-audit.md
+        - name: Denetim günlüğü saklama ilkelerini yönetme
+          href: audit-log-retention-policies.md
+        - name: Risk altındaki hesapları araştırmak için Gelişmiş Denetim kullanma
+          href: mailitemsaccessed-forensics-investigations.md
+    - name: Posta kutusu denetimi
+      href: enable-mailbox-auditing.md
+    - name: Uyarı ilkeleri
+      href: alert-policies.md
+- name: Uyumluluk risklerini yönetme
+  items:
+    - name: Uyumluluk Yöneticisi
+      items:
+        - name: Uyumluluk Yöneticisi hakkında daha fazla bilgi edinme
+          href: compliance-manager.md
+        - name: Uyumluluk Yöneticisindeki yenilikler
+          href: compliance-manager-whats-new.md
+        - name: Uyumluluk Yöneticisi hızlı başlangıç
+          href: compliance-manager-quickstart.md
+        - name: Uyumluluk Yöneticisini kullanmaya başlama
+          href: compliance-manager-setup.md
+        - name: Değerlendirmeler oluşturma ve yönetme
+          href: compliance-manager-assessments.md
+        - name: Değerlendirme şablonları hakkında daha fazla bilgi edinme
+          href: compliance-manager-templates.md
+        - name: Değerlendirme şablonları oluşturma
+          href: compliance-manager-templates-create.md
+        - name: Değerlendirme şablonlarını genişletme
+          href: compliance-manager-templates-extend.md
+        - name: Değerlendirme şablonlarını değiştirme
+          href: compliance-manager-templates-modify.md
+        - name: Şablon verilerini Excel’de biçimlendirme
+          href: compliance-manager-templates-format-excel.md
+        - name: Uyumluluk Yöneticisi şablonları listesi
+          href: compliance-manager-templates-list.md
+        - name: İyileştirme eylemleriyle çalışma
+          href: compliance-manager-improvement-actions.md
+        - name: Uyarı ilkeleri oluşturma ve yönetme
+          href: compliance-manager-alert-policies.md
+        - name: Uyumluluk puanınızı hesaplama
+          href: compliance-score-calculation.md
+        - name: Uyumluluk Yapılandırma Çözümleyici aracı
+          href: compliance-manager-mcca.md
+        - name: Sık sorulan sorular (SSS)
+          href: compliance-manager-faq.yml
+    - name: Microsoft Hizmet Güveni Portalı
+      href: get-started-with-service-trust-portal.md
+    - name: Sektöre özel rehberlik
+      items:
+        - name: Finansal hizmetler için güvenlik ve uyumluluk
+          href: ../solutions/financial-services-secure-collaboration.md
+        - name: Enerji hizmetleri için güvenlik ve uyumluluk
+          href: ../solutions/energy-secure-collaboration.md
+- name: Karma uyumluluk özellikleri
+  items:
+    - name: AD RMS ile Exchange Online posta şifrelemesi
+      href: information-rights-management-in-exchange-online.md
+      items:
+        - name: IRM’yi bir şirket içi AD RMS sunucusunda kullanmak üzere yapılandırma
+          href: configure-irm-to-use-an-on-premises-ad-rms-server.md
+- name: Microsoft 365 kurumsal
+  href: ../enterprise/index.yml
+- name: Microsoft 365 güvenlik
+  href: ../security/index.yml
+- name: Microsoft 365 Kurumsal Uygulamaları
+  href: /office365/admin/admin-home
+- name: Microsoft Priva
+  href: /privacy/priva/
+- name: Sorun giderme
+  href: /office365/troubleshoot/microsoft-365-compliance-welcome

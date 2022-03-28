@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 3801fdb4a7aeda5e75c4e36f622f7e76604d96a6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: bba910b46c4b4769e67ae00af0381e129139dfe5
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63318739"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754568"
 ---
 # <a name="pilot-microsoft-defender-for-identity"></a>Kimlik için Microsoft Defender'ı Pilot Uygulama
 
@@ -38,7 +38,7 @@ Bu makale [, Kimlik için](eval-defender-identity-overview.md) Microsoft Defende
 
 Microsoft Defender'da kimlik için pilot uygulamanın kurulumu ve yapılandırılması için aşağıdaki adımları kullanın. Önerilerin pilot grup ayarlamaya dahil olmadığını unutmayın. En iyi uygulama, devam etmek ve Active Directory Etki Alanı Hizmetleri (AD DS) ve Active Directory Federasyon Hizmetleri (AD FS) çalıştıran tüm sunucularınıza algılayıcı yüklemektir.
 
-![Defender değerlendirme ortamına Kimlik için Microsoft Defender ekleme adımları.](../../media/defender/m365-defender-identity-pilot-steps.png)
+:::image type="content" source="../../media/defender/m365-defender-identity-pilot-steps.png" alt-text="Microsoft Defender değerlendirme ortamında Identity için Microsoft Defender'ı pilot uygulama adımları" lightbox="../../media/defender/m365-defender-identity-pilot-steps.png":::
 
 Aşağıdaki tabloda, çizimde yer alan adımlar açık gösterilmiştir.
 

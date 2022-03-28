@@ -1,5 +1,5 @@
 ---
-title: Uç nokta müşterileri için Microsoft Defender 'da JAMF Pro kullanarak MacOS cihazlarını ekleme ve çıkararak Uyumluluk çözümlerine ekleme (önizleme)
+title: macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)
 f1.keywords: NOCSH
 ms.author: chrfox
 author: chrfox
@@ -14,14 +14,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: Uç nokta müşterileri için Microsoft Defender 'ı (önizleme) kullanarak mac Microsoft 365 OS cihazlarını JAMF Pro Uyumluluk çözümlerine ekleme ve çıkararak kullanma hakkında bilgi edinin
-ms.openlocfilehash: 7e2109f52590cc4d9ad23700fa4b51a09ae4b5db
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: f260d901f8f02c2c02007b2cc0d49ab9ee57dafd
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63526478"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63716331"
 ---
-# <a name="onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers-preview"></a>Uç nokta müşterileri için Microsoft Defender 'da JAMF Pro kullanarak MacOS cihazlarını ekleme ve çıkararak Uyumluluk çözümlerine ekleme (önizleme)
+# <a name="onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers-preview"></a>macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)
 
 MacOS cihazlarını uyumluluk çözümlerine Pro IÇIN JAMF Microsoft 365 kullanabilirsiniz.
 
@@ -32,14 +32,13 @@ MacOS cihazlarını uyumluluk çözümlerine Pro IÇIN JAMF Microsoft 365 kullan
 
 - MacOS cihazlarına MDE dağıtan müşteriler.
 - [Microsoft 365 Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
-- [Insider risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
+- [İçeriden risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
 
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- [macOS cihazlarınızı Azure AD'ye katıldığından emin olun](https://docs.jamf.com/10.30.0/jamf-pro/administrator-guide/Azure_AD_Integration.html)
-- [macOS cihazlarınızı JAMF pro aracılığıyla yönetebilirsiniz](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) 
-- v95+ Edge tarayıcısını macOS cihazlarınıza yükleme 
+- [macOS cihazlarınızı JAMF pro](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) aracılığıyla yönettikten ve JAMF hizmeti veya Intune aracılığıyla bir kimlikle (Azure AD'ye katılmış UPN) ilişkilendirilmiş Bağlan emin olun.
+- v95+ Edge tarayıcısını macOS cihazlarınıza yükleme
 
 ## <a name="onboard-devices-into-microsoft-365-compliance-solutions-using-jamf-pro"></a>JAMF uyumluluk Microsoft 365 kullanarak cihazları Uyumluluk çözümlerine Pro
 

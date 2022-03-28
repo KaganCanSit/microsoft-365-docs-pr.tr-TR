@@ -1,5 +1,5 @@
 ---
-title: İçerik arama için özellik başvurusu
+title: İçerik arama için özellik referansı
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -21,14 +21,14 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 description: Bu makale, İçerik arama hakkında birçok ayrıntıyı öğrenmene yardımcı olmak için Microsoft 365 uyumluluk merkezi araştırma belgesinde İçerik arama eBulma aracı hakkında başvuru bilgileri içerir.
-ms.openlocfilehash: 0688f3119b500f8e11675aa101d92942a3063e8b
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 3f2918c378d94fd65d4a89afed50957a2da40a7d
+ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984696"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "63716386"
 ---
-# <a name="feature-reference-for-content-search"></a>İçerik arama için özellik başvurusu
+# <a name="feature-reference-for-content-search"></a>İçerik arama için özellik referansı
 
 Bu makalede, İçerik arama özelliklerinin ve işlevleri açıklanmıştır.
 
@@ -62,7 +62,7 @@ Arama sorgusu oluşturmak için anahtar sözcük listesini kullanırken aşağı
 
 - İngilizce olmayan karakterlere (Çince karakterler gibi) anahtar sözcükler içeren bir arama sorgunuz varsa, İçerik arama'da Sorgu **dili-ülke/bölgeQuery**![ dili-ülke/bölge simgesine tıkekleyebilirsiniz.](../media/8d4b60c8-e1f1-40f9-88ae-ee2a7eca0886.png) ve arama için bir dil ülke kültür kodu değeri seçin. Varsayılan dil/bölge nötr olur. İçerik arama için dil ayarını değiştirmenin gerek olup olduğunu nasıl değiştirebilirsiniz? İçerik konumlarına İngilizce olmayan karakterlerin bulunduğuna eminseniz, ancak arama hiçbir sonuç döndüreni bilmiyorsa, nedeni dil ayarı olabilir.
 
-## <a name="partially-indexed-items"></a>Kısmen dizine alan öğeler
+## <a name="partially-indexed-items"></a>Kısmen dizine eklenen öğeler
 
 - Posta kutularında kısmen dizine alan öğeler, tahmini arama sonuçlarına dahil edilir. Tahmini arama sonuçlarına SharePoint OneDrive kısmen dizine alan öğeler dahil değildir. Daha fazla bilgi için bkz [. eBulma'da kısmen dizine alınan öğeler](partially-indexed-items-in-content-search.md).
 
@@ -80,7 +80,7 @@ GrupLarda ve Gruplarda içerik ararken Microsoft Teams Microsoft 365 göz Micros
 
 - Teams ve Microsoft 365 Grupları'nda bulunan içeriği aramak için, posta kutusunu ve ekip veya grupla SharePoint ilgili posta kutusunu ve posta kutusunu belirtmeniz gerekir.
 
-- Özel kanallardan gelen içerikler ekip posta kutusunda değil, her kullanıcının posta kutusunda depolanır. Özel kanallarda içerik aramak için bkz. [Özel kanalların eBulma](/microsoftteams/ediscovery-investigation#ediscovery-of-private-channels).
+- Özel kanallardan gelen içerikler ekip posta kutusunda değil, her kullanıcının posta kutusunda depolanır. Özel kanallarda içerik aramak için bkz. [Özel ve paylaşılan kanalların eBulma](/microsoftteams/ediscovery-investigation#ediscovery-of-private-and-shared-channels).
 
 - Bir ekibin veya bir Exchange Online Grubunun özelliklerini görüntülemek için **Get-UnifiedGroup** cmdlet'ini Microsoft 365 çalıştırın. Bu, ekip veya grupla ilişkilendirilmiş sitenin URL'sini almak için iyi bir yol sağlar. Örneğin, aşağıdaki komut, Üst Düzey Liderlik Ekibi adlı bir Microsoft 365 özellikler görüntüler:
 

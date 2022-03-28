@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: cd4423ab63019b554157de3a05da3c6c7e7d3d4c
-ms.sourcegitcommit: ab5368888876d8796da7640553fc8426d040f470
+ms.openlocfilehash: eb881611ad4b983eb80d028dfe3dee20c3ed6216
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "62990606"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754674"
 ---
 # <a name="take-action-on-advanced-hunting-query-results"></a>Gelişmiş arama sorgusu sonuçları üzerinde eyleme geç
 
@@ -62,10 +62,10 @@ Bu yanıt eylemlerinin Uç Nokta için Microsoft Defender aracılığıyla nası
 ## <a name="quarantine-files"></a>Dosyaları karantinaya alın
 Dosyalarda karantina *eylemlerini* dağıtarak, karşılaşıldıklarda otomatik olarak karantinaya alınmalarını sabilirsiniz. Bu eylemi seçerseniz, aşağıdaki sütunlar arasında seçim yapabilirsiniz ve sorgu sonuçlarınız içinde karantinaya alınacak dosyaları tanımlayabilirsiniz:
 
-- `SHA1` — Gelişmiş arama tablolarının çoğunda, kaydedilen eylemden etkilenen dosyanın SHA-1'idir. Örneğin, bir dosya kopyalanmışsa, kopyalanan dosya bu olur.
-- `InitiatingProcessSHA1` — Gelişmiş arama tablolarının çoğunda, kaydedilen eylemin başlatıcısı bu dosyadır. Örneğin, bir çocuk işlemi başlatıldısa, üst işlem bu olur. 
-- `SHA256` — Bu, sütunda tanımlanan dosyanın SHA-256 eşdeğeridir `SHA1` .
-- `InitiatingProcessSHA256` — Bu, sütunda tanımlanan dosyanın SHA-256 eşdeğeridir `InitiatingProcessSHA1` .
+- `SHA1`: Bu sütun, gelişmiş av tablolarının çoğunda kayıtlı eylemden etkilenen dosyanın SHA-1'ini ifade eder. Örneğin, bir dosya kopyalanmışsa, etkilenen bu dosya kopyalanan dosya olur.
+- `InitiatingProcessSHA1`: Gelişmiş arama tablolarının çoğunda, bu sütun kayıtlı eylemin başlatılamadan sorumlu olan dosyayı gösterir. Örneğin, bir çocuk işlemi başlatıldısa, bu başlatıcı dosyası üst işlemin bir parçası olur. 
+- `SHA256`: Bu sütun, sütunda tanımlanan dosyanın SHA-256 eşdeğeridir `SHA1` .
+- `InitiatingProcessSHA256`: Bu sütun, sütunda tanımlanan dosyanın SHA-256 eşdeğeridir `InitiatingProcessSHA1` .
 
 Karantina eylemlerinin nasıl gerçekleştir alındığı ve dosyaların nasıl geri yüklenebilir olduğu hakkında daha fazla bilgi edinmek için, [dosyalarda yanıt eylemleri makalesini okuyun](/windows/security/threat-protection/microsoft-defender-atp/respond-file-alerts).
 
@@ -75,7 +75,7 @@ Karantina eylemlerinin nasıl gerçekleştir alındığı ve dosyaların nasıl 
 ## <a name="take-action"></a>Harekete geç
 Açıklanan eylemlerin herhangi birini yapmak için, sorgu sonuçlarınıza bir veya birden çok kayıt seçin ve sonra da Eylemleri **gerçekleştir'i seçin**. Tercih ettiğiniz eylemleri seçme ve sonra gönderme işlemi boyunca bir sihirbaz size yol sağlar.
 
-![Kaydı denetleme paneli olan seçili kayıt görüntüsü.](../../media/take-action-multiple.png)
+:::image type="content" source="../../media/take-action-multiple.png" alt-text="Web portalında Eylemlere Microsoft 365 Defender seçeneği" lightbox="../../media/take-action-multiple.png":::
 
 ## <a name="review-actions-taken"></a>Yapılan eylemleri gözden geçirme
 Her eylem, ayrı ayrı İşlem merkeziHistory (Tarih **)** >  **altında** [işlem merkezine security.microsoft.com/action-center/history](https://security.microsoft.com/action-center/history).[](m365d-action-center.md) Her eylemin durumunu kontrol etmek için işlem merkezine gidin.
@@ -85,7 +85,7 @@ Her eylem, ayrı ayrı İşlem merkeziHistory (Tarih **)** >  **altında** [işl
 
 ## <a name="related-topics"></a>İlgili konular
 - [Gelişmiş ava genel bakış](advanced-hunting-overview.md)
-- [Sorgu dilini öğrenme](advanced-hunting-query-language.md)
-- [Sorgu sonuçlarıyla çalışma](advanced-hunting-query-results.md)
-- [Şemayı anlama](advanced-hunting-schema-tables.md)
+- [Sorgu dilini öğrenin](advanced-hunting-query-language.md)
+- [Sorgu sonuçlarıyla çalışın](advanced-hunting-query-results.md)
+- [Şemayı anlayın](advanced-hunting-schema-tables.md)
 - [İşlem merkezine genel bakış](m365d-action-center.md)

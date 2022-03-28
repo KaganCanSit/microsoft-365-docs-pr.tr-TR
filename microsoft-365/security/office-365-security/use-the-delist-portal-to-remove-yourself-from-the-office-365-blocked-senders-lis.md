@@ -20,12 +20,12 @@ ms.custom:
 description: Bu makalede, sizi engellenen gönderenler listesinden kaldırmak için deliste Microsoft 365 kullanmayı öğrenirsiniz. Bu, 5.7.511 Erişim reddedildi hatalarına verilen en iyi yanıttır.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 36187288b2a7acf1a852e6c203cbb84035ba5d7a
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 58ddb2913ce7ecd047b1d5acb360c8f4c9ff5074
+ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320249"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63775796"
 ---
 # <a name="use-the-delist-portal-to-remove-yourself-from-the-blocked-senders-list-and-address-57511-access-denied-errors"></a>Kendinizi engellenen gönderenler listesinden kaldırmak ve 5.7.511 Access'in reddedilen hatalarına karşı adres olarak liste kaldırma portalını kullanma
 
@@ -55,7 +55,6 @@ Gönderenlerin engellenen gönderenler listesine yer eklemesi için iyi nedenler
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMhvD]
 
-
 ## <a name="to-use-delist-portal-to-remove-yourself-from-the-blocked-senders-list-after-errors-like-57511-access-denied"></a>Liste portalını kullanarak kendinizi engellenen gönderenler listesinden kaldırmak için (5.7.511 Erişimi reddedildi gibi hatalardan sonra)
 
 1. Web tarayıcısında, ' gidin <https://sender.office.com>.
@@ -82,13 +81,13 @@ Gönderenlerin engellenen gönderenler listesine yer eklemesi için iyi nedenler
 [IP'nin engellenmiş olarak korunmasını önlemek için bkz. EOP'de](create-safe-sender-lists-in-office-365.md) güvenilir gönderen listeleri ve [EOP'de](outbound-spam-controls.md) Giden istenmeyen posta koruması oluşturma.
 
 ### <a name="how-do-fix-error-code-57511"></a>Hata kodu 5.7.511'i düzeltme
- 
+
 Kendi gönderdiniz e-posta iletisi teslimi konusunda sorun olduğunda, Microsoft 365 veya Office 365 size bir e-posta gönderir. Size gelen e-posta, DSN veya geri dönen ileti olarak da bilinen bir teslim durumu bildirimidir. En yaygın türe teslim edil raporu (NDR) denir ve bu rapor size bir iletinin teslim edile olmadığını söyler. Bazı durumlarda, Microsoft'un IP'niz üzerinden gelen trafik üzerinde ek soruşturmalar yürütmesi gerekir ve NDR kodu 5.7.511'i alıyorsanız,list portalını kullanasınız.
- 
->   550 5.7.511 Erişim reddedildi, yasaklanmış gönderen[xxx.xxx.xxx.xxx]. Bu listeden kaldırma isteğide etmek için, bu iletiyi destek delist@messaging.microsoft.com. Daha fazla bilgi için , gidin https://go.microsoft.com/fwlink/?LinkId=526653. 
- 
-Bu listeden kaldırma isteğinde ekleyebilirsiniz e-postada, tam NDR kodunu ve IP adresini girin. Microsoft, sonraki adımlarla birlikte 48 saat içinde size başvuracak. 
+
+> 550 5.7.511 Erişim reddedildi, yasaklanmış gönderen[xxx.xxx.xxx.xxx]. Bu listeden kaldırma isteğide etmek için, bu iletiyi destek delist@messaging.microsoft.com. Daha fazla bilgi için , gidin <https://go.microsoft.com/fwlink/?LinkId=526653>.
+
+Bu listeden kaldırma isteğinde ekleyebilirsiniz e-postada, tam NDR kodunu ve IP adresini girin. Microsoft, sonraki adımlarla birlikte 48 saat içinde size başvuracak.
 
 ## <a name="more-information"></a>Daha fazla bilgi
-  
-**Outlook.com için delisting** formu, tüketici hizmeti burada [bulunabilir](https://support.microsoft.com/supportrequestform/8ad563e3-288e-2a61-8122-3ba03d6b8d75). Gönderi yönü için önce [SSS](https://sendersupport.olc.protection.outlook.com/pm/troubleshooting.aspx) bölümünü *okuduğundan emin* olun.
+
+**Outlook.com için delisting** formu, tüketici hizmeti burada [bulunabilir](https://support.microsoft.com/supportrequestform/8ad563e3-288e-2a61-8122-3ba03d6b8d75). Gönderi yönü için önce [SSS](https://sendersupport.olc.protection.outlook.com/pm/troubleshooting.aspx) bölümünü _okuduğundan emin_ olun.

@@ -26,12 +26,12 @@ ms.custom:
 - intro-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 691db83111ba14e9fed7eed36a819479bda15ff5
-ms.sourcegitcommit: aac7e002ec6e10a41baa2d0bd38614b0ed471a70
+ms.openlocfilehash: 28f50cbd362104ba910ed5560e184036fc7f8703
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63010018"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754657"
 ---
 # <a name="microsoft-365-defender"></a>Microsoft 365 Defender
 
@@ -109,7 +109,7 @@ Microsoft 365 Defender arası özellikler şunlardır:
 Microsoft 365 Defender fazla bilgi için Aşağıdakiler bağlantısında, Microsoft 365 Defender portalında hizmeti etkinleştiremeden <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank"><https://security.microsoft.com></a> önce lisans gereksinimlerini karşılamanız gerekir:
 
 - [Lisans gereksinimleri](prerequisites.md#licensing-requirements)
-- [E-Microsoft 365 Defender](m365d-enable.md)
+- [Microsoft 365 Defender’ı açın](m365d-enable.md)
 
 ## <a name="the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalı
 
@@ -124,8 +124,8 @@ Bu tek cam bölmesi, Microsoft 365 Defender portalı ve Office 365 Güvenlik ve 
 
 Güvenlik ve Uyumluluk Merkezi'nde veya Güvenlik Office 365'nde & hakkında bilgi Microsoft 365 Defender:
 
-- [Office 365'da Microsoft 365 Defender için Defender](microsoft-365-security-center-mdo.md)
-- [Microsoft 365 Defender'ta Uç Nokta için Defender](microsoft-365-security-center-mde.md)
+- [Microsoft 365 Defender'da Office 365 için Defender](microsoft-365-security-center-mdo.md)
+- [Microsoft 365 Defender'da Uç Nokta için Defender](microsoft-365-security-center-mde.md)
 
 > [!NOTE]
 > Bu Microsoft 365 Defender portalında rol tabanlı var olan erişim zorunlu kılınıyor ve her güvenlik modeli birleştirilmiş portala taşınacak. Birbirine yakınan her iş yükünün kendi rol tabanlı erişimi vardır. Zaten ürünlerde yer alan roller portala otomatik olarak Microsoft 365 Defender yakınsaacaktır. Bununla birlikte, Bulut Uygulamaları için Microsoft Defender kendi rollerini ve izinlerini işlemeye devam ediyor.
@@ -139,7 +139,7 @@ Güvenlik Microsoft 365 Defender, farklı iş yüklerinden gelen sinyalleri aşa
 - Olaylar & uyarıları
 - Avlama
 - İşlem merkezi
-- Tehdit analizleri
+- Tehdit analizi
 
 Microsoft 365 Defender için Microsoft Defender ile Uç  Nokta için Microsoft Defender'ı birleştirken Office 365 netlik ve ortak hedefleri vurgular. Birleştirme, aşağıda listelenen önceliklere dayalıdır ve her güvenlik paketinin şu özelliklerle bir araya getirdiği özelliklerden ödün vermeden yapılır:
 
@@ -155,7 +155,7 @@ Microsoft 365 Defender için Microsoft Defender ile Uç  Nokta için Microsoft D
 
 Güvenlik bilgilerini merkezileştirerek, farklı güvenlik olaylarını araştıracak tek bir Microsoft 365. Birincil örnek olarak Olaylar **altındaki** **olaylar ve & başlatma uyarılarının** yer Microsoft 365 Defender.
 
-:::image type="content" source="../../media/converged-incidents-2.png.png" alt-text="Microsoft 365 Defender'de Olaylar Microsoft 365 Defender" lightbox="../../media/converged-incidents-2.png.png":::
+:::image type="content" source="../../media/converged-incidents-2.png.png" alt-text="Microsoft 365 Defender'da Olaylar Microsoft 365 Defender" lightbox="../../media/converged-incidents-2.png.png":::
 
 Olay adı seçerek, güvenlik bilgilerini merkezileştirmenin değerini gösteren bir sayfa görüntülenir.
 
@@ -277,7 +277,7 @@ Bu makaleden de geri bildirim abilirsiniz. 'Geri bildirim' bölümünün sonunda
 
 Özellikleri ve özellikleri keşfetmeye devam etmek için Microsoft 365 Defender:
 
-- [Olayları ve uyarıları yönetme](manage-incidents.md)
+- [Olayları ve uyarıları yönetin](manage-incidents.md)
 - [Tehdit analizi ile ortaya çıkan tehditleri takip edin ve yanıt verin](threat-analytics.md)
 - [İşlem merkezi](m365d-action-center.md)
 - [Cihazlar, e-postalar, uygulamalar ve kimlikler arasında tehdit avı](./advanced-hunting-query-emails-devices.md)
@@ -299,6 +299,6 @@ Microsoft Learn'in bu öğrenme yolu ile, güvenliğin tehditlerini Microsoft 36
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Microsoft 365 Defender'daki Microsoft 365 Defender](whats-new.md)
+- [Microsoft 365 Defender'daki yenilikler](whats-new.md)
 - [Microsoft 365 Defender'da Office 365 için Microsoft Defender](microsoft-365-security-center-mdo.md)
 - [Microsoft 365 Defender'ta Uç Nokta için Microsoft Defender](microsoft-365-security-center-mde.md)

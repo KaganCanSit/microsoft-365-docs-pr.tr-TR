@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: 1c83a64c3bf1e721ea54b526c0db0c5d7c403fba
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: 3a8696a14b85374d4bcb0a8704c14b82fdd845b5
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63010757"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754606"
 ---
 # <a name="hello-world-for-microsoft-365-defender-rest-api"></a>REST API'si Microsoft 365 Defender Hello World
 
@@ -49,7 +49,7 @@ Bu projenin tamamlanması 5 - 10 dakika kadar sürer. Bu kez tahmin, uygulamayı
 
 2. **Azure Active Directory** >  **App kayıtlarıne** **gidinYeni** >  kayıt.
 
-   ![Kayıt Microsoft Azure gezinti görüntüsü.](../../media/atp-azure-new-app2.png)
+   :::image type="content" source="../../media/atp-azure-new-app2.png" alt-text="Kayıt portalında Yeni Microsoft 365 Defender bölümü" lightbox="../../media/atp-azure-new-app2.png":::
 
 3. Kayıt formunda, başvuru için bir ad seçin ve sonra Kaydol'a **tıklayın**. Yönlendirme URI'sini seçmek isteğe bağlıdır. Bu örneği tamamlamak için buna ihtiyacınız olmayacak.
 
@@ -57,26 +57,27 @@ Bu projenin tamamlanması 5 - 10 dakika kadar sürer. Bu kez tahmin, uygulamayı
 
    > [!TIP]
    > *Microsoft Tehdit* Koruması bu güncelleştirmelerin eski Microsoft 365 Defender, özgün listede görünmez. Görünmesini görmek için metin kutusuna adını yazmaya başlamalı.
-   ![API izin seçimi resmi.](../../media/apis-in-my-org-tab.PNG)
+   :::image type="content" source="../../media/apis-in-my-org-tab.PNG" alt-text="Microsoft 365 Defender portalında API kullanımı bölümü" lightbox="../../media/apis-in-my-org-tab.PNG":::
 
    - Uygulama **izinleriIncident.Read.All'i seçin ve İzin** **ekle'yi seçin**. > 
 
-   ![API erişimi ve API seçimi görüntüsü.](../../media/request-api-permissions.PNG)
+     :::image type="content" source="../../media/request-api-permissions.PNG" alt-text="Microsoft 365 Defender portalında bir Microsoft 365 Defender bölmesi" lightbox="../../media/request-api-permissions.PNG":::
 
 5. Yönetici **izni ver'i seçin**. Her izin ekleyseniz, geçerlik için **Yönetici izni ver'i** seçmeniz gerekir.
 
-    ![İzin ver'in resmi.](../../media/grant-consent.PNG)
+    :::image type="content" source="../../media/grant-consent.PNG" alt-text="Portalda yer alan Yönetici izni Microsoft 365 Defender bölümü" lightbox="../../media/grant-consent.PNG":::
 
 6. Uygulamaya bir gizli ekleyin. **Sertifikalar gizli & seçin**, gizli belgeye bir açıklama ekleyin ve ekle'yi **seçin**.
 
     > [!TIP]
     > Ekle'yi **seçin** ve **oluşturulan gizli değeri kopyalayın**. Siz ayrılarak gizli değeri geri ala zamanlarız.
 
-    ![Uygulama anahtarı oluşturma resmi.](../../media/webapp-create-key2.png)
+    :::image type="content" source="../../media/webapp-create-key2.png" alt-text="Portalda gizli Microsoft 365 Defender ekleme" lightbox="../../media/webapp-create-key2.png":::
+    
 
 7. Uygulama kimliğinizi ve kiracı kimliğini güvenli bir yere kaydedin. Bunlar, uygulama sayfanıza **genel bakış** altında listelenir.
 
-   ![Oluşturulan uygulama kimliğinin resmi.](../../media/app-and-tenant-ids.png)
+   :::image type="content" source="../../media/app-and-tenant-ids.png" alt-text="Web portalında Genel Microsoft 365 Defender bölümü" lightbox="../../media/app-and-tenant-ids.png":::
 
 ### <a name="get-a-token-using-the-app-and-use-the-token-to-access-the-api"></a>Uygulamayı kullanarak bir belirteç alın ve API'ye erişmek için belirteci kullanın
 
@@ -118,7 +119,7 @@ Belirteçleri kullanma hakkında Azure Active Directory için [Azure AD öğreti
 
     Aşağıdaki resimde, ile ve izinleri olan bir uygulamada alınan kod çözme belirteci ```Incidents.Read.All``````Incidents.ReadWrite.All``````AdvancedHunting.Read.All``` gösterebilirsiniz:
 
-    ![Resim jwt.ms.](../../media/api-jwt-ms.png)
+    :::image type="content" source="../../media/api-jwt-ms.png" alt-text="Kod Çözme Portalı'Microsoft 365 Defender Belirteci bölümü" lightbox="../../media/api-jwt-ms.png":::
 
 ### <a name="get-a-list-of-recent-incidents"></a>Son olayları listele
 

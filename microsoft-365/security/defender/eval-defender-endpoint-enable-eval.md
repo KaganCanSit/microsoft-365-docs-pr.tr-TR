@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 846fd6854b8e2dcb408aaa55348380bb91c6b907
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: a12c81635f712dd0fac70101348d30bc1dc4f154
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63014193"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63754629"
 ---
 # <a name="enable-microsoft-defender-for-endpoint-evaluation-environment"></a>Uç nokta değerlendirme ortamı için Microsoft Defender'ı etkinleştirme
 
@@ -39,7 +39,7 @@ Bu makale, üretim cihazlarını kullanarak Uç Nokta için Microsoft Defender i
 
 Uç Nokta için Microsoft Defender değerlendirmesini etkinleştirmek üzere aşağıdaki adımları kullanın.
 
-![Microsoft Defender değerlendirme ortamında Uç Nokta için Microsoft Defender'ı etkinleştirme adımları.](../../media/defender/m365-defender-endpoint-eval-enable-steps.png)
+:::image type="content" source="../../media/defender/m365-defender-endpoint-eval-enable-steps.png" alt-text="Microsoft Defender değerlendirme ortamında Uç Nokta için Microsoft Defender'ı etkinleştirme adımları" lightbox="../../media/defender/m365-defender-endpoint-eval-enable-steps.png":::
 
 - [1. Adım. Lisans durumunu denetleme](#step-1-check-license-state)
 - [2. Adım. Ekleme uç noktaları](#step-2-onboard-endpoints-using-any-of-the-supported-management-tools)
@@ -52,13 +52,14 @@ Düzgün sağ olduğunu doğrulamak için önce lisans durumunu denetlemeniz ger
 
 1. Lisanslarınızı görüntülemek için Lisanslar **portalına Microsoft Azure gidin** ve lisans Microsoft Azure [bölümüne gidin](https://portal.azure.com/#blade/Microsoft_AAD_IAM/LicensesMenuBlade/Products).
 
-   ![Azure Lisanslama sayfasının resmi.](../../media/defender/atp-licensing-azure-portal.png)
+   :::image type="content" source="../../media/defender/atp-licensing-azure-portal.png" alt-text="Microsoft 365 Defender portalında Azure Lisans sayfası" lightbox="../../media/defender/atp-licensing-azure-portal.png":::
 
 1. Alternatif olarak, yönetim merkezinde **BillingSubscriptions'a** >  gidin.
 
     Ekranda, sağlanan tüm lisansları ve onların geçerli durumunu **görürsünüz**.
 
-    ![Fatura lisanslarının resmi.](../../media/defender/atp-billing-subscriptions.png)
+    :::image type="content" source="../../media/defender/atp-billing-subscriptions.png" alt-text="Microsoft Azure portalında Fatura lisansları sayfası" lightbox="../../media/defender/atp-billing-subscriptions.png":::
+    
 
 ## <a name="step-2-onboard-endpoints-using-any-of-the-supported-management-tools"></a>Adım 2. Desteklenen yönetim araçlardan herhangi birini kullanarak uç noktaları ekleme
 
