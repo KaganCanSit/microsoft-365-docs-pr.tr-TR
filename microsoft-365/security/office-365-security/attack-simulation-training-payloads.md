@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Yöneticiler, Plan 2'de yer alan Microsoft Defender'da Saldırı benzetimi eğitimi için özel Office 365 oluşturabilir.
 ms.technology: mdo
-ms.openlocfilehash: df939ac031035f8771314bc1941bf44535d65610
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: d670236aa81f4b5086263a75bbeceb8ca7e1e25f
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63032526"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679774"
 ---
 # <a name="create-custom-payloads-for-attack-simulation-training-in-defender-for-office-365"></a>Yeni görev için Defender'da Saldırı benzetimi eğitimi için özel Office 365
 
@@ -174,10 +174,6 @@ Gösterge ekle **sayfasında Gösterge** **ekle'ye tıklayın**. Görüntülenen
 
 - **Gösterge adı** **ve Gösterge konumu**: Bu değerler birbiriyle ilişkilidir. Göstergeyi nereye ekyersiniz, göstergenin kendisine bağlıdır. Kullanılabilir değerler aşağıdaki tabloda açıklanmıştır:
 
-  <br>
-
-  ****
-
   |Gösterge adı|Gösterge konumu|
   |---|---|
   |**Ek türü**|İleti gövdesi|
@@ -203,7 +199,6 @@ Gösterge ekle **sayfasında Gösterge** **ekle'ye tıklayın**. Görüntülenen
   |**Profesyonel olmayan görünümlü tasarım veya biçimlendirme**|İleti gövdesi|
   |**URL köprüleri**|İleti gövdesi|
   |**Özelsin**|İleti gövdesi|
-  |
   
   Bu liste, kimlik avı iletisinde görünen en yaygın ipuçlarını içeren bir listedir.
 

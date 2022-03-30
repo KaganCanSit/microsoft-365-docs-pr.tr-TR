@@ -17,12 +17,12 @@ ms.custom:
 description: Yöneticiler korumaların Exchange Online Protection (EOP) sıralarını ve koruma ilkelerinin öncelik değerinin hangi ilkenin uygulandığını nasıl belirleyeceklerini öğrenebilirler.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5fbccec656e0508535c2fbdaa055777a07968878
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 1debec0d2f8ca1498fd674f3d5a2d5a4681196eb
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988749"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679796"
 ---
 # <a name="order-and-precedence-of-email-protection"></a>E-posta korumasının sırası ve önceliği
 
@@ -41,10 +41,6 @@ Genelde, iletiye uygulanan ilke **CAT (Kategori)** özelliğinde **X-Forefront-A
 
 - **E-posta koruma türünün önceliği**: Bu düzen yapılandırılabilir değildir ve aşağıdaki tabloda açıklanmıştır:
 
-  <br>
-
-  ****
-
   |Öncelik|E-posta koruması|Kategori|Yönetnecek yer|
   |---|---|---|---|
   |1|Kötü amaçlı yazılım|CAT:MALW|[EOP'de kötü amaçlı yazılımdan koruma ilkelerini yapılandırma](configure-anti-malware-policies.md)|
@@ -55,7 +51,6 @@ Genelde, iletiye uygulanan ilke **CAT (Kategori)** özelliğinde **X-Forefront-A
   |6<sup>\*</sup>|Etki alanı kimliğine bürünme (korumalı etki alanları)|DIMP|[Kimlik avıyla mücadele ilkelerini Microsoft Defender'da Office 365](configure-mdo-anti-phishing-policies.md)|
   |7|İstenmeyen posta|CAT:SPM|[EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md)|
   |8|Toplu|CAT:BULK|[EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md)|
-  |
 
   <sup>\*</sup>Bu özellikler yalnızca kimlik avı önleme ilkeleri için Microsoft Defender'da Office 365.
 
@@ -66,15 +61,10 @@ Genelde, iletiye uygulanan ilke **CAT (Kategori)** özelliğinde **X-Forefront-A
 
 Örneğin, aynı kullanıcılar için geçerli olan Office 365 için Microsoft Defender'daki kimlik avı önleme ilkelerini ve hem kullanıcı kimliğine bürünülen hem de kimlik sahtesi olarak tanımlanan bir iletiyi göz önünde bulundurabilirsiniz:
 
-<br>
-
-****
-
 |İlke adı|Öncelik|Kullanıcı kimliğine bürünme|Anti-spoing|
 |---|---|---|---|
 |İlke A|1|On|Kapalı|
 |İlke B|2|Kapalı|On|
-|
 
 1. Kimlik sahteciliğini, kullanıcı kimliğine bürünme (5) yerine daha yüksek öncelikli (4) olduğundan ileti işaretlenir ve kimlik sahtecisi olarak kabul edilir.
 2. İlke A kullanıcılara uygulanır çünkü B İlkesinden daha yüksek önceliğe sahiptir.

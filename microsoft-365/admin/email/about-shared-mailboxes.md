@@ -23,12 +23,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Paylaşılan posta kutuları, aynı posta kutusuna birden çok kişinin erişmesi gereken durumlarda kullanılır. Paylaşılan posta kutusu oluşturmadan önce neleri bilmek zorunda olduğunu öğrenin.
-ms.openlocfilehash: 2fbf07fbe71ccb42411f5808aa923d7179d2f13d
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+ms.openlocfilehash: 7b2632d8fde1b898fb9f2f425ef26a2eec28abb0
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "62973878"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63675360"
 ---
 # <a name="about-shared-mailboxes"></a>Paylaşılan posta kutuları hakkında
 
@@ -44,7 +44,7 @@ Paylaşılan [posta kutusunu oluşturmadan önce](create-a-shared-mailbox.md), �
 
 - **Kullanıcı izinleri:** Kullanıcılara, paylaşılan posta kutusunu kullanma izinleri (üyelik) verebilirsiniz. Paylaşılan bir posta kutusunu yalnızca kuruluşunuzdaki kişiler kullanabilir.
 
-- **Dış kullanıcılar:** İşletmenizin dışındaki kişilerin (Gmail hesabı olan kişiler gibi) paylaşılan posta kutunuza erişmesine izin verebilirsiniz. Bunu yapmak istediğiniz zaman, daha sonra oluşturmak için grup Outlook göz önünde bulundurarak. Daha fazla bilgi için [bkz. Yönetim Microsoft 365 Grup oluşturma](../create-groups/create-groups.md).
+- **Dış kullanıcılar:** İşletmenizin dışındaki kişilerin (Gmail hesabı olan kişiler gibi) paylaşılan posta kutunuza erişmesine izin verebilirsiniz. Bunu yapmak istemiyorsanız, bunun yerine daha büyük bir grup Outlook göz önünde bulundurarak. Daha fazla bilgi için [bkz. Yönetim Microsoft 365 Grup oluşturma](../create-groups/create-groups.md).
 
 - **Outlook** ile kullanma: Paylaşılan posta kutularına erişmek için Web üzerinde Outlook'i tarayıcınızdan kullanmanın yanı sıra, iOS için Outlook uygulamasını veya Android için Outlook uygulamasını da kullanabilirsiniz. Daha fazla bilgi edinmek için bkz[. Mobil cihazlara paylaşılan Outlook ekleme](https://support.microsoft.com/office/f866242c-81b2-472e-8776-6c49c5473c9f). Bir diğer seçenek de paylaşılan posta kutunuz için bir grup oluşturmaktır. Daha fazla bilgi edinmek için bkz. [Grupları Karşılaştırma](../create-groups/compare-groups.md).
 
@@ -60,13 +60,13 @@ Paylaşılan [posta kutusunu oluşturmadan önce](create-a-shared-mailbox.md), �
 
 - **Çok fazla kullanıcı var:** Paylaşılan posta kutusuna eş zamanlı olarak erişecek çok fazla belirlenen kullanıcı olduğunda (25'den fazla önerilmez), bu posta kutusuna ara zaman bağlanamıyorlar veya giden kutusunda yinelenen iletiler gibi tutarsızlıklar olabilir. Bu durumda, kullanıcı sayısını azaltmayı veya Kullanıcı grubu veya Ortak klasör gibi farklı bir iş Microsoft 365 kullanmayı düşünebilirsiniz.
 
-- **İleti silme:** Ne yazık ki, paylaşılan bir posta kutusunda kişilerin iletileri silmeden bunu engelleyemeyebilirsiniz. Bunu tek yol, paylaşılan posta kutusu Microsoft 365 bir posta kutusu oluşturmaktır. E-posta Outlook paylaşılan posta kutusu gibi olur. bu iki grubun karşılaştırması için bkz. [Grupları karşılaştırma](../create-groups/compare-groups.md). Gruplar hakkında daha fazla bilgi edinmek için bkz. [Gruplar hakkında daha fazla bilgi.](https://support.microsoft.com/office/b565caa1-5c40-40ef-9915-60fdb2d97fa2)
+- **İleti silme:** Ne yazık ki, paylaşılan bir posta kutusunda kişilerin iletileri silmeden bunu engelleyemeyebilirsiniz. Bunu tek yol, paylaşılan [posta kutusu yerine Microsoft 365 grup](/microsoft-365/admin/create-groups/create-groups) oluşturmaktır. E-posta Outlook paylaşılan posta kutusu gibi olur. bu iki grubun karşılaştırması için bkz. [Grupları karşılaştırma](../create-groups/compare-groups.md). Gruplar hakkında daha fazla bilgi edinmek için bkz[. Grupları Microsoft 365 öğrenin](https://support.microsoft.com/office/b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 - **Multi-Geo** Çok coğrafi bir ortamda, paylaşılan posta kutularının aynı kullanıcı posta kutusunun lisanslı olması gibi lisansları da olması gerekir. Coğrafi posta kutusu denetiminin destek olmadığını unutmayın. Örneğin, kullanıcıya farklı bir coğrafi konumdaki paylaşılan posta kutusuna erişim izinleri atanmışsa, o kullanıcı tarafından gerçekleştirilen posta kutusu eylemleri paylaşılan posta kutusunun posta kutusu denetim günlüğüne kaydedilmez. 
 
 
 > [!NOTE]
-> Paylaşılan posta kutusuna erişmek için, kullanıcının bir Exchange Online lisansı olması gerekir, ancak paylaşılan posta kutusu ayrı bir lisans gerektirmez. Her paylaşılan posta kutusunun buna karşılık gelen bir kullanıcı hesabı vardır. Paylaşılan posta kutusunu oluşturulduğunda nasıl parola sağlamanın istenmeyeceğini fark ettiniz mi? Bu hesabın bir parolası var, ancak sistem tarafından oluşturulmuş (bilinmiyor) bir hesap. Paylaşılan posta kutusunda oturum açmak için hesabı kullanmamanız gerekir. Lisans olmadan paylaşılan posta kutuları 50 GB ile sınırlıdır. Boyut sınırını 100 GB'a artırmak için paylaşılan posta kutusuna Plan 2 lisansı Exchange Online gerekir. Bir Exchange Online Eklenti lisansına sahip Exchange Online Arşivleme Plan 1 lisansı yalnızca arşiv posta kutusunun boyutunu artıracaktır. Bu ayrıca ek arşiv depolama kapasitesi için otomatik genişleyen arşivlemeyi etkinleştirmeniz için de olanak sağlar. Benzer şekilde, bir paylaşılan posta kutusunu mahkemeler için yerinde tutmak istemeniz gibi, paylaşılan posta kutusunun bir Exchange Online Plan 2 lisansına veya Exchange Online eklenti lisansına sahip Exchange Online Arşivleme Plan 1 lisansına sahip olması gerekir. Office 365 için Microsoft Defender, Advanced eDiscovery veya otomatik bekletme ilkeleri gibi gelişmiş özellikleri uygulamak için, paylaşılan posta kutusunun bu özellikler için lisanslı olması gerekir.
+> Paylaşılan posta kutusuna erişmek için, kullanıcının bir Exchange Online lisansı olması gerekir, ancak paylaşılan posta kutusu için ayrı bir lisans gerekli yoktur. Her paylaşılan posta kutusunun buna karşılık gelen bir kullanıcı hesabı vardır. Paylaşılan posta kutusunu oluşturulduğunda nasıl parola sağlamanın istenmeyeceğini fark ettiniz mi? Bu hesabın bir parolası var, ancak sistem tarafından oluşturulmuş (bilinmiyor) bir hesap. Paylaşılan posta kutusunda oturum açmak için hesabı kullanmamanız gerekir. Lisans olmadan paylaşılan posta kutuları 50 GB ile sınırlıdır. Boyut sınırını 100 GB'a artırmak için paylaşılan posta kutusuna Plan 2 lisansı Exchange Online gerekir. Yeni Exchange Online eklenti lisansına sahip Exchange Online Arşivleme Plan 1 lisansı yalnızca arşiv posta kutusunun boyutunu artıracaktır. Bu ayrıca ek arşiv depolama kapasitesi için otomatik genişleyen arşivlemeyi etkinleştirmeniz için de olanak sağlar. Benzer şekilde, bir paylaşılan posta kutusunu mahkemeler için yerinde tutmak istemeniz gibi, paylaşılan posta kutusunun bir Exchange Online Plan 2 lisansına veya Exchange Online eklenti lisansına sahip bir Exchange Online Arşivleme Plan 1 lisansına sahip olması gerekir. Office 365 için Microsoft Defender, Advanced eDiscovery veya otomatik bekletme ilkeleri gibi gelişmiş özellikleri uygulamak için, paylaşılan posta kutusunun bu özellikler için lisanslı olması gerekir.
 
 ## <a name="related-content"></a>İlgili içerik
 

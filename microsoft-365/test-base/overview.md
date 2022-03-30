@@ -1,6 +1,6 @@
 ---
 title: Genel Bakış
-description: Test Tabanı'nın anlaşılması
+description: Test Base’i Anlama
 search.appverid: MET150
 author: Tinacyt
 ms.author: tinachen
@@ -16,53 +16,53 @@ ms.reviewer: mapatel
 f1.keywords: NOCSH
 ms.openlocfilehash: 8d7539dfeecf1e34a639bc506f312c35a4243323
 ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/09/2022
 ms.locfileid: "63405931"
 ---
-# <a name="what-is-test-base-for-microsoft-365"></a>Test Temel'i Microsoft 365?
+# <a name="what-is-test-base-for-microsoft-365"></a>Microsoft 365 için Test Base nedir?
 
-Test Tabanlı Microsoft 365 (Test Tabanlı), güvenli Azure ortamına dayalı olarak Microsoft'un doğrulama hizmetidir.
-Test Tabanı, Yazılım Satıcıları (SVS) ve Sistem Entegratörü (SI) ile yayın öncesi sürüm güvenlik ve özellik derlemelerine karşı Windows doğrulamalarını hızlandırabilirsiniz. Bu, SV iş ortakları ile Microsoft arasında yüksek düzeyde işbirliği sağlayarak ortak test, doğrulama ve düzeltme sağlar.
+Microsoft 365 için Test Base (Test Base), Microsoft'un güvenli Azure ortamına dayalı doğrulama hizmetidir.
+Test Base ile Yazılım Satıcıları (SV'ler) ve Sistem Tümleştiricileri (SI'ler), uygulamalarının önceden yayınlanmış Windows güvenliği ve özellik yapılarına karşı doğrulanmasını hızlandırabilir. Bu, SV iş ortakları ile Microsoft arasında ortak test, doğrulama ve düzeltme sağlayan yüksek düzeyde etkileşimli bir işbirliğidir.
 
-Test Base, azure'da güvenli bir doğrulama hizmeti oluşturmak ve bakımını yapmak için harika bir fırsat sunar. Burada müşteriler ve iş ortakları, uygulamanın iş yüklerini önceden yayımlanan güvenlik güncelleştirmelerine karşı aşamalı olarak test eder.
+Test Base, müşterilerin ve iş ortaklarının uygulamalarının iş yüklerini önceden yayınlanmış güvenlik güncelleştirmelerimize göre hazırlayıp test edebilecekleri Azure üzerinde güvenli bir doğrulama hizmeti oluşturmak ve sürdürmek için harika bir fırsat sağlar.
 
-Test Tabanı sayesinde, SVS'ler, Microsoft'un pazara güncelleştirmeyi piyasaya çıkarmadan önce yeni işletim sistemi sürümü üzerinde en iyi performansta performanslarını engellemeye neden olan olası sorunlar için daha fazla görünürlük sağlar.
+Test Base’le SV'lere Microsoft güncelleştirmeyi piyasaya sürmeden önce, uygulamalarının yeni işletim sistemi sürümünde en iyi şekilde çalışmasını engelleyebilecek olası sorunlar hakkında daha fazla görünürlük sağlanır.
 
-Bu yeni hizmet, SVs'lerin test çabalarını daha basit ve verimli hale getirir. Enterprise müşteriler işbirliğine dayalı bir ortamda SV ve Microsoft'un birlikte test etmelerinden faydalanarak uygulamalarının beklendiği gibi çalışabileceklerine daha fazla güven elde eder.
+Bu yeni hizmet, SV'lerin test çalışmalarını daha basit ve daha verimli hale getirir. Kurumsal müşteriler, işbirliğine dayalı bir ortamda SV ve Microsoft testlerinden faydalanabilir ve uygulamalarının beklendiği gibi çalışacağı konusunda daha fazla güven kazanır.
 
-**Avantajlar Test Bankası Kuruluşlar'a ve SV iş ortaklarına şunları sunar**:
+**Kuruluşlar ve SV iş ortaklarına sunulan Test Base Avantajları şunları içerir:**:
 
-- Cihazlarınızı güvence altına almak için güvenlik güncelleştirmelerini daha hızlı bir şekilde kullanın;
-- Işletim sistemi değişikliklerini ve uygulamasını aynı ortamda barındırarak, güncelleştirme doğrulama maliyetleri azaltıldı;
-- Microsoft'un uygulamalarınız hakkında birinci sınıf zeka raporu (kod kapsamı, API etki çözümlemesi gibi),
-- Microsoft'un test içeriğini değiştirme konusundaki uzmanlığı ve Azure'un gücüyle kullanın.
+- Cihazlarınızın güvenliğini sağlamak için güvenlik güncelleştirmelerinin daha hızlı kullanıma sunulması;
+- İşletim sistemi değişikliklerini ve uygulamasını aynı ortamda barındırarak güncelleştirme doğrulama maliyetlerini düşürdü;
+- Microsoft'tan uygulamalarınız hakkında birinci sınıf güvenlik analizi raporu (kod kapsamı, API etki analizi vb.);
+- Microsoft'un test içeriğini ve donanımlarını Azure'a geçirişi konusundaki uzmanlığı.
 
-## <a name="guide-to-navigating-the-test-base-portal"></a>Test Tabanı portalında gezinme kılavuzu
+## <a name="guide-to-navigating-the-test-base-portal"></a>Test Base portalında gezinme kılavuzu
 
-Bu kılavuz, hizmetimizi kullanırken ücretsiz bir deneyimi sağlamak için dört (4) bölüme ayrılmıştır:
+Bu kılavuz, hizmetimizi kullanırken sorunsuz bir deneyim sağlamak için dört (4) bölüme ayrılmıştır:
 
-1. Self **servis** ekleme portalımız aracılığıyla uygulama yükleme hakkında ayrıntılı, adım adım yönergeler sağlayan Genel Bakış.
+1. Başvurunuzu self servis işe katılım portalımız aracılığıyla nasıl yükleyeceğiniz konusunda ayrıntılı, adım adım yönergeler sağlayan **Genel Bakış**.
 
-2. Sıkıştırılmış **klasör yapısı** ve test betiklerinizi hazırlarken neleri bilmek istediğiniz hakkında bilgi sağlayan Hızlı Başlangıç bölümü.
+2. Sıkıştırılmış klasör yapısının biçimi ve test betiklerinizi hazırlarken bilmeniz gerekenler hakkında bilgi sağlayan **Hızlı Başlangıçlar** bölümü.
 
-3. Test **sonuçlarının çıkarılamayacak** şekilde Test Tabanı'nın nasıl kullanıla ile ilgili ayrıntılı ana hat sağlayan Nasıl Başvuru kılavuzu.
+3. Test sonuçlarını çıkarmak için Test Base’in nasıl kullanılacağı hakkında ayrıntılı anahatları sağlayan **Nasıl Yapılır kılavuzu**.
 
-4. **Müşterilerimizden** gelen tipik soruların yanıtlarını sağlayan Başvuru bölümü.
+4. Müşterilerimizden aldığımız tipik soruların yanıtlarını sağlayan **Referans** bölümü.
 
-## <a name="test-base-has-reached-general-availability"></a>Test Tabanı genel kullanılabilirlik durumuna ulaştı
+## <a name="test-base-has-reached-general-availability"></a>Test Base genel kullanılabilirlik durumuna ulaştı
 
-Test Bankası, Kasım 2021'de Microsoft Ignite konferansı sırasında genel kullanılabilirlik olarak bildirildi. 
+Test Base, Kasım 2021'deki Microsoft Ignite konferansı sırasında resmi olarak Genel Kullanılabilir olarak ilan edildi. 
 
-Bu, geçerli bir kurumsal Azure hesabına sahip olan herkesin test yardımcı yardımcılarını işe alıyabilecek ve hizmette uygulamalarını hızlıca testabilecek olduğu anlamına gelir.
+Bu, geçerli bir kurumsal Azure hesabına sahip herkesin test yardımcılarını ekleyebileceğini ve uygulamalarını hizmette hızla test etmeye başlayabileceği anlamına gelir.
 
-## <a name="who-should-onboard"></a>Who eklemeli misiniz?
+## <a name="who-should-onboard"></a>Kim katılmalı?
 
-Tüm Yazılım Satıcılarını (SVS) Ve Sistem Entegratörüleri'i (SI) uygulamaları, ikili dosyaları ve test betiklerini hizmete eklemeye teşvik ediyoruz.
+Tüm Yazılım Satıcılarını (SV'ler), Sistem Tümleştiricilerini (SI'ler) uygulamalarını, ikili dosyalarını ve test betiklerini hizmete eklemeye teşvik ediyoruz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bağlantıyı takip edin ve işe başlama
+Başlamak için bağlantıyı izleyin
 > [!div class="nextstepaction"]
 > [Sonraki adım](createaccount.md)
