@@ -22,60 +22,60 @@ search.appverid:
 - MOM160
 - BCS160
 ms.assetid: 8548a211-3fe7-47cb-abb1-355ea5aa88a2
-description: 'Özet: Office 365 için İnternet bağlantısı gerekir. Aşağıdaki uç noktalara, E-posta planları (Office 365) dahil Government Community Cloud müşteriler GCC.'
+description: 'Özet: Office 365, İnternet bağlantısı gerektirir. Government Community Cloud (GCC) dahil olmak üzere Office 365 planlarını kullanan müşteriler aşağıdaki uç noktalara erişebilmelidir.'
 hideEdit: true
 ms.openlocfilehash: 21d80523fc2cdba2e6a7bb9f08909bd7d6152a4b
 ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/08/2022
 ms.locfileid: "63324736"
 ---
 # <a name="office-365-urls-and-ip-address-ranges"></a>Office 365 URL’leri ve IP adresi aralıkları
 
-Office 365, İnternet bağlantısı gerektirir. Aşağıdaki uç noktalara, E-posta planları (Office 365) dahil Government Community Cloud müşteriler GCC.
+Office 365, İnternet bağlantısı gerektirir. Government Community Cloud (GCC) dahil olmak üzere Office 365 planlarını kullanan müşteriler aşağıdaki uç noktalara erişebilmelidir.
   
-*Office 365 Worldwide (+GCC)* \| [Office 365 21 Vianet](urls-and-ip-address-ranges-21vianet.md) \| [Office 365 ABD Government DoD](microsoft-365-u-s-government-dod-endpoints.md) \| [Office 365 U.S. Government GCC High tarafından işletilen GCC.](microsoft-365-u-s-government-gcc-high-endpoints.md) \|
+*Office 365 Dünya Çapında (+GCC)* \| [Office 365 21 Vianet tarafından sağlanan](urls-and-ip-address-ranges-21vianet.md) \| [Office 365 ABD Hükümeti DoD](microsoft-365-u-s-government-dod-endpoints.md) \| [Office 365 ABD Hükümeti GCC High](microsoft-365-u-s-government-gcc-high-endpoints.md) \|
 
 |Notlar|İndir|Kullanım|
 |---|---|---|
-|**Son güncelleştirme:** 28/02/2022 - ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Günlük aboneliğini değiştir](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|**İndirin:** Tüm gerekli ve isteğe bağlı hedefler bir [JSON biçimlendirilmiş](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) listesindedir.|**Kullan:** PAC dosyaları [proxy'miz](managing-office-365-endpoints.md#pacfiles)|
+|**Son güncelleştirme:** 28/02/2022 - ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Günlük aboneliğini değiştir](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|**İndirin:** tüm gerekli ve isteğe bağlı hedeflerin [JSON olarak biçimlendirilmiş](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) bir listesi.|**Kullanın:** [PAC dosyaları](managing-office-365-endpoints.md#pacfiles) proxy’miz|
 |
 
-Bu verileri [kullanarak ağ Office 365 yönetme](managing-office-365-endpoints.md) önerilerimizi anlamak için Uç noktaları yönetme ile başlayabilirsiniz. Her ayın başlangıcında, etkin olmaya 30 gün önceden yayımlanan yeni IP Adresleri ve URL'ler ile uç nokta verileri gerektiğinde güncelleştirilir. Bu, yeni bağlantı gerekmeden önce henüz otomatik güncelleştirmeleri olan müşterilerin işlemlerini tamamlamalarına olanak sağlar. Ayrıca, ay içinde yükseltmeleri, güvenlik olaylarını veya diğer acil işlem gereksinimlerini desteklemek için uç noktalar da güncelleştirilebilir. Aşağıdaki bu sayfada gösterilen verilerin hepsi REST tabanlı web hizmetlerinden oluşturulur. Bu verilere erişmek için komut dosyası veya ağ cihazı kullanıyorsanız, doğrudan [Web hizmetine gitebilirsiniz](microsoft-365-ip-web-service.md) .
+Bu verileri kullanarak ağ bağlantısını yönetmeye yönelik önerilerimizi anlamak için [Office 365 uç noktalarını yönetme](managing-office-365-endpoints.md) ile başlayın. Uç nokta verileri, etkin olmadan 30 gün önce yayınlanan yeni IP Adresleri ve URL'ler ile her ayın başında gerektiği gibi güncelleştirilir. Bu, henüz otomatik güncelleştirmelere sahip olmayan müşterilerin, yeni bağlantı gerekmeden önce işlemlerini tamamlamalarına olanak tanır. Destek artışlarını, güvenlik olaylarını veya diğer acil operasyonel gereksinimleri ele almak için gerekirse uç noktalar da ay boyunca güncelleştirilebilir. Aşağıdaki bu sayfada gösterilen verilerin tümü REST tabanlı web hizmetlerinden oluşturulmuştur. Bu verilere erişmek için bir betik veya bir ağ cihazı kullanıyorsanız, doğrudan [Web hizmetine](microsoft-365-ip-web-service.md) gitmelisiniz.
 
-Aşağıdaki uç nokta verilerinde, kullanıcının makinesiyle Posta'ya bağlantı Office 365. Microsoft'tan bir müşteri ağına yapılan ağ bağlantıları için kullanılan IP adreslerinin ayrıntıları (bazen karma veya gelen ağ bağlantıları olarak da adlandırılan) için daha fazla bilgi için bkz. [Ek](additional-office365-ip-addresses-and-urls.md) uç noktalar.
+Aşağıdaki uç nokta verileri, bir kullanıcının makinesinden Office 365'e bağlantı için gereksinimleri listeler. Microsoft'tan bir müşteri ağına, bazen karma veya gelen ağ bağlantıları olarak adlandırılan ağ bağlantıları için kullanılan IP adresleri hakkında ayrıntılar ve daha fazla bilgi için bkz. [Ek uç noktalar](additional-office365-ip-addresses-and-urls.md).
 
-Uç noktalar, üç birincil iş yükünü ve bir dizi ortak kaynağı temsil eden dört hizmet alanı olarak grup ayarlanır. Gruplar, trafik akışlarını belirli bir uygulamayla ilişkilendirmek için kullanılabilir; bununla birlikte, özelliklerin genellikle birden çok iş yükü genelinde uç noktaları kullandığına bağlı olarak, bu gruplar erişimi kısıtlamak için etkin bir şekilde kullanılamaz.
+Uç noktalar, üç birincil iş yükünü ve bir dizi ortak kaynağı temsil eden dört hizmet alanında gruplandırılmıştır. Gruplar, trafik akışlarını belirli bir uygulamayla ilişkilendirmek için kullanılabilir, ancak özelliklerin genellikle birden çok iş yükü arasında uç noktaları tükettiği göz önüne alındığında, bu gruplar erişimi kısıtlamak için etkin bir şekilde kullanılamaz.
 
-Gösterilen veri sütunları:
+Gösterilen veri sütunları şunlardır:
 
-- **Kimlik**: Uç nokta kümesi olarak da bilinen satırın kimlik numarası. Bu kimlik, uç nokta kümesi için web hizmetinin döndürülen kimliğiyle aynıdır.
+- **Kimlik**: Uç nokta kümesi olarak da bilinen satırın kimlik numarası. Bu kimlik, uç nokta kümesi için web hizmeti tarafından döndürülen kimlikle aynıdır.
 
-- **Kategori**: Uç nokta kümesine "En İyi Duruma Getirme", "İzin Ver" veya "Varsayılan" olarak kategorilere ayrılmış olup olmadığını gösterir. Bu kategorileri ve bunların yönetimiyle ilgili kılavuzu Yeni Kategori'de veya [uç nokta Office 365 okuyabilirsiniz](microsoft-365-network-connectivity-principles.md#new-office-365-endpoint-categories). Bu sütun, ağ bağlantısının olması için gereken uç nokta kümelerini de listeler. Ağ bağlantısı olması gerekmayacak uç nokta kümelerini, uç nokta kümesi engellenirse hangi işlevlerin eksik olacağını göstermek için bu alanda notlar sağlaruz. Tüm hizmet alanı dışında bırakıyorsanız, gerekli olarak listelenen uç nokta kümeleri bağlantı gerektirmez.
+- **Kategori**: Uç nokta kümesinin "İyileştir", "İzin Ver" veya "Varsayılan" olarak kategorize edilip edilmediğini gösterir. [Yeni Office 365 uç nokta kategorilerinde](microsoft-365-network-connectivity-principles.md#new-office-365-endpoint-categories) bu kategoriler ve bunların yönetimine ilişkin yönergeler hakkında bilgi edinebilirsiniz. Bu sütun ayrıca ağ bağlantısına sahip olmak için hangi uç nokta kümelerinin gerekli olduğunu da listeler. Ağ bağlantısına sahip olması gerekmeyen uç nokta kümeleri için, uç nokta kümesi engellenirse hangi işlevlerin eksik olacağını belirtmek için bu alanda notlar sağlarız. Bir hizmet alanının tamamını hariç tutuyorsanız, gerekli olarak listelenen uç nokta kümeleri bağlantı gerektirmez.
 
-- **HATA**: Uç nokta **kümesi,** yönlendirme önekleriyle birlikte Azure ExpressRoute üzerinden destek Office 365 olur. Gösterilen yol ön eklerini içeren BGP topluluğu, listelenen hizmet alanıyla hizalanır. HATAY olduğunda **,** bu ExpressRoute'un bu uç nokta kümesi için desteklen destekleme desteklemesi anlamına gelir. Bununla birlikte, HATAYİS'in Hayır olduğu bir uç nokta kümesi için hiçbir yönlendirmenin tanıtılma olduğu **varsayma gerekir**.
+- **HATA**: Uç nokta kümesi, Office 365 yol önekleriyle Azure ExpressRoute üzerinden destekleniyorsa bu **Evet**'tir. Gösterilen yol öneklerini içeren BGP topluluğu, listelenen hizmet alanıyla hizalanır. HATA **Hayır** olduğunda, ExpressRoute'un bu uç nokta kümesi için desteklenmediği anlamına gelir. Ancak, HATA’nın **Hayır** olduğu bir uç nokta kümesi için hiçbir yolun tanıtılmadığı varsayılmamalıdır.
 
-- **Adresler**: Uç nokta kümesi için FQDN'leri veya joker karakterli etki alanı adlarını ve IP Adresi aralıklarını listeler. IP Adresi aralığının CIDR biçiminde olduğunu ve belirtilen ağda birçok ayrı IP Adresi yer ağına sahip olduğunu unutmayın.
+- **Adresler**: Uç nokta kümesi için FQDN'leri veya joker alan adlarını ve IP Adresi aralıklarını listeler. IP Adresi aralığının CIDR biçiminde olduğunu ve belirtilen ağda birçok bağımsız IP Adresi içerebileceğini unutmayın.
 
-- **Bağlantı** noktaları: Ağ uç noktasını oluşturmak için Adresler ile birleştirilmiş TCP veya UDP bağlantı noktalarını listeler. LISTELENEN farklı bağlantı noktaları olan IP Adresi aralıklarında bazı yinelemeler olduğunu farkebilirsiniz.
+- **Bağlantı Noktaları**: Ağ uç noktasını oluşturmak için Adreslerle birleştirilen TCP veya UDP bağlantı noktalarını listeler. Listelenen farklı bağlantı noktalarının bulunduğu IP Adresi aralıklarında bazı yinelemeler görebilirsiniz.
 
 [!INCLUDE [Office 365 worldwide endpoints](../includes/office-365-worldwide-endpoints.md)]
 
 > [!NOTE]
-> IP adreslerini ve URL'Yammer hakkında öneriler için, bu blogda Yammer için sabit kodlu [IP](https://techcommunity.microsoft.com/t5/Yammer-Blog/Using-hard-coded-IP-addresses-for-Yammer-is-not-recommended/ba-p/276592) adresleri kullanılması önerilmez Yammer bakın.
+> Yammer IP adresleri ve URL'leriyle ilgili öneriler için, Yammer blogunda [Yammer için sabit kodlanmış IP adreslerinin kullanılması önerilmez](https://techcommunity.microsoft.com/t5/Yammer-Blog/Using-hard-coded-IP-addresses-for-Yammer-is-not-recommended/ba-p/276592) konusuna bakın.
 
 ## <a name="related-topics"></a>İlgili Konular
 
-[YENI IP Adresi ve URL Web Office 365 başka uç noktalar da dahil değil](additional-office365-ip-addresses-and-urls.md)
+[Office 365 IP Adresi ve URL Web hizmetine dahil olmayan ek uç noktalar](additional-office365-ip-addresses-and-urls.md)
 
-[Kullanıcı Office 365 yönetme](managing-office-365-endpoints.md)
+[Office 365 uç noktalarını yönetme](managing-office-365-endpoints.md)
 
 [Genel Microsoft Stream uç noktaları](/stream/network-overview#general-microsoft-stream-endpoints)
   
-[Ekran Microsoft 365 izleme](./monitor-connectivity.md)
+[Microsoft 365 bağlantısını izleyin](./monitor-connectivity.md)
 
-[Kök CA ve üçüncü taraf uygulama sisteminde Ara CA paketi](../compliance/encryption-office-365-certificate-chains.md)
+[Üçüncü taraf uygulama sisteminde Kök CA ve Ara CA paketi](../compliance/encryption-office-365-certificate-chains.md)
   
 [İstemci bağlantısı](https://support.office.com/article/client-connectivity-4232abcf-4ae5-43aa-bfa1-9a078a99c78b)
   
@@ -83,10 +83,10 @@ Gösterilen veri sütunları:
   
 [Microsoft Azure IP Aralıkları ve Hizmet Etiketleri – Genel Bulut](https://www.microsoft.com/download/details.aspx?id=56519)
 
-[Microsoft Azure IP Aralıkları ve Hizmet Etiketleri – US Government Cloud](https://www.microsoft.com/download/details.aspx?id=57063)
+[Microsoft Azure IP Aralıkları ve Hizmet Etiketleri – ABD Hükümeti Bulutu](https://www.microsoft.com/download/details.aspx?id=57063)
 
 [Microsoft Azure IP Aralıkları ve Hizmet Etiketleri – Çin Bulutu](https://www.microsoft.com/download/details.aspx?id=57062)
   
 [Microsoft Genel IP Alanı](https://www.microsoft.com/download/details.aspx?id=53602)
 
-[Hizmet Adı ve Aktarım Protokolü Bağlantı Noktası Numarası Kayıt Defteri](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
+[Hizmet Adı ve Aktarım Protokolü Bağlantı Noktası Numarası Kayıt Defteri Girişi](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)

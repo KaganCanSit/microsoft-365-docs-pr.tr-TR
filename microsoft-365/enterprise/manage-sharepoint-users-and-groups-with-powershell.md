@@ -5,7 +5,7 @@ author: kelleyvice-msft
 manager: laurawi
 ms.date: 07/17/2020
 audience: Admin
-ms.topic: hub-page
+ms.topic: landing-page
 ms.service: o365-administration
 ms.localizationpriority: medium
 search.appverid:
@@ -20,20 +20,20 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: Bu makalede, Microsoft 365 Online kullanıcılarını, gruplarını ve sitelerini yönetmek için SharePoint Için PowerShell'in nasıl kullanıldığı hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: 10991c2ac065331ab8eff3e782cecbdbcc5d034b
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: e2166753b1be56c19011a1fc7e20d1584a5d3004
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985579"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681204"
 ---
 # <a name="manage-sharepoint-online-users-and-groups-with-powershell"></a>PowerShell SharePoint Online kullanıcılarını ve gruplarını yönetme
 
 *Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
 
-Çok sayıda kullanıcı hesabı SharePoint gruplarla çalışan ve bunları yönetmek için daha kolay bir yol isteyen bir SharePoint Online yöneticisiyseniz, bu hesapları yönetmek için PowerShell'i Microsoft 365.
+Çok sayıda kullanıcı hesabı veya grupla çalışan ve bunları yönetmek için daha kolay bir yol isteyen bir SharePoint Online yöneticisiyseniz, bu hesapları yönetmek için PowerShell'i Microsoft 365.
 
-Başlamadan önce, bu konudaki yordamlar için SharePoint Online'a bağlanmanız gerekir. Yönergeler için bkz. [Bağlan Online PowerShell SharePoint e yükleme](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+Başlamadan önce, bu makaledeki yordamlarda SharePoint Online'a bağlanmanız gerekir. Yönergeler için bkz. [Bağlan Online PowerShell SharePoint e yükleme](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 ## <a name="get-a-list-of-sites-groups-and-users"></a>Sitelerin, grupların ve kullanıcıların listesini al
 
@@ -134,7 +134,7 @@ Bazen bir siteden, hatta tüm sitelerden kullanıcı kaldırmanız gerekir. Çal
 
 Bununla birlikte, SharePoint Online Yönetim Kabuğu ve CSV dosyalarıyla, bu hızlı ve kolaydır. Bu görev içinde, site koleksiyonu Windows PowerShell grubundan bir kullanıcı kaldırmak için Kullanıcı Grubu Yöneticisi'ne kullanıyabilirsiniz. Ardından bir CSV dosyası kullanır ve farklı sitelerden çok sayıda kullanıcı kaldırırsiniz.
 
-Komut söz dizimi'ne bakılamız için, yalnızca site koleksiyonu grubundan tek bir kullanıcı Microsoft 365'ı kaldırmak için 'Remove-SPOUser' cmdlet'ini kullanıyoruz. Söz dizimi şöyle olur:
+Komut söz dizimi'nin nasıl olduğunu görmemiz için, "Remove-SPOUser" cmdlet'ini kullanarak Microsoft 365 koleksiyonu grubundan tek bir kullanıcı kaldırmış oluruz. Söz dizimi şöyle olur:
 
 ```powershell
 $tenant = "<tenant name, such as litwareinc for litwareinc.com>"
@@ -167,11 +167,11 @@ Get-SPOSite | ForEach {Get-SPOSiteGroup –Site $_.Url} | ForEach {Remove-SPOUse
 
 ## <a name="automate-management-of-large-lists-of-users-and-groups"></a>Büyük kullanıcı ve grup listelerinin yönetimini otomatikleştirme
 
-SharePoint sitelerine çok sayıda hesap eklemek ve onlara izin vermek için Microsoft 365 yönetim merkezi, tek tek PowerShell komutlarını veya PowerShell'i bir CSV dosyası kullanabilirsiniz. Bu seçimler arasında, bu görevi otomatikleştirmenin en hızlı yolu CSV dosyasıdır.
+SharePoint sitelerine çok sayıda hesap eklemek ve onlara izin vermek için Microsoft 365 yönetim merkezi, tek tek PowerShell komutlarını veya PowerShell'i ve bir CSV dosyasını kullanabilirsiniz. Bu seçimler arasında, bu görevi otomatikleştirmenin en hızlı yolu CSV dosyasıdır.
 
 Temel işlem, betiğin gerektiği parametrelere karşılık gelen üstbilgiler (sütunlar) içeren bir CSV Windows PowerShell oluşturmaktır. Bu tür bir listeyi Excel csv dosyası olarak dışarı aktarabilirsiniz. Ardından, CSV dosyasındaki Windows PowerShell (satırlar) üzerinden kullanıcıları gruplara ve grupları sitelere eklemek için bir e-posta betiği kullanırsanız.
 
-Örneğin, bir grup site koleksiyonu, grup ve izin tanımlamak için bir CSV dosyası oluşturabilirsiniz. Ardından, grupları kullanıcılarla doldurmak için bir CSV dosyası oluştur aynı şekilde oluruz. Son olarak, grupları oluşturan ve doldurmak için Windows PowerShell bir komut dosyası oluşturur ve bu betiği çalıştırın.
+Örneğin, bir grup site koleksiyonu, grup ve izin tanımlamak için bir CSV dosyası oluşturabilirsiniz. Ardından, grupları kullanıcılarla doldurmak için bir CSV dosyası oluşturuz. Son olarak, grupları oluşturan ve Windows PowerShell bir betik oluşturacak ve çalıştıracak bir betik oluşturuz.
 
 İlk CSV dosyası, bir veya birden çok site koleksiyonuna bir veya daha fazla grup ekler ve şu yapıya sahip olur:
 
@@ -236,7 +236,7 @@ Import-Csv C:\O365Admin\GroupsAndPermissions.csv | ForEach {New-SPOSiteGroup -Gr
 Import-Csv C:\O365Admin\Users.csv | ForEach {Add-SPOUser -Group $_.Group –LoginName $_.LoginName -Site $_.Site}
 ```
 
-Betik, CSV dosya içeriğini içeri aktarır ve **New-SPOSiteGroup** ve **Add-SPOUser** komutlarının parametrelerini doldurmak için sütunlarda yer alan değerleri kullanır. Örneğimizde, bunu C sürücüsünde yer alanO365Admin klasörüne kaydedtik, ancak istediğiniz yere kaydedebilirsiniz.
+Betik, CSV dosya içeriğini içeri aktarır ve **New-SPOSiteGroup** ve **Add-SPOUser** komutlarının parametrelerini doldurmak için sütunlarda yer alan değerleri kullanır. Örneğimizde, bu dosyayı C sürücüsünde O365Admin klasörüne kaydederek, istediğiniz yere kaydedebilirsiniz.
 
 Şimdi de aynı CSV dosyasını kullanarak farklı sitelerde yer alan birkaç grup için bir grup kişiyi kaldırabilirsiniz. İşte örnek bir komut:
 
@@ -246,7 +246,7 @@ Import-Csv C:\O365Admin\Users.csv | ForEach {Remove-SPOUser -LoginName $_.LoginN
 
 ## <a name="generate-user-reports"></a>Kullanıcı raporları oluşturma
 
-Birkaç site için basit bir rapor almak ve bu sitelerin kullanıcılarını, onların izin düzeyini ve diğer özelliklerini görüntülemek istiyor olabilir. Söz dizimi şöyledir:
+Birkaç site için rapor almak ve bu sitelerin kullanıcılarını, bunların izin düzeyini ve diğer özelliklerini görüntülemek istiyor olabilir. Söz dizimi şöyledir:
 
 ```powershell
 $tenant = "<tenant name, such as litwareinc for litwareinc.com>"
@@ -254,7 +254,7 @@ $site = "<site name>"
 Get-SPOUser -Site https://$tenant.sharepoint.com/sites/$site | select * | Format-table -Wrap -AutoSize | Out-File c\UsersReport.txt -Force -Width 360 -Append
 ```
 
-Bu, bu üç sitenin verilerini alıp yerel sürücünizden bir metin dosyasına yazar. –Ekle parametresi, var olan dosyaya yeni içerik ekleyecek.
+Bu, bu üç sitenin verilerini alıp yerel sürücünizden bir metin dosyasına yazar. –Append parametresi, var olan dosyaya yeni içerik ekler.
 
 Örneğin, Contoso1 kiracısı için ContosoTest, Ekip Sitesi01 ve Project01 sitelerinde bir rapor çalıştıralım:
 
@@ -268,7 +268,7 @@ $site = "Project01"
 Get-SPOUser -Site https://$tenant.sharepoint.com/sites/$site | Format-Table -Wrap -AutoSize | Out-File c:\UsersReport.txt -Force -Width 360 -Append
 ```
 
-Yalnızca veri değişkenlerini değiştirmemiz **$site** unutmayın. En **$tenant** değişkeni, komutun üç çalıştırması boyunca değerini tutar.
+Yalnızca veri değişkenlerini **değiştirmemiz $site** vardı. En **$tenant** değişkeni, komutun üç çalıştırması boyunca değerini tutar.
 
 Öte yandan, bunu her site için yapmak istediniz ne olacak? Bu komutu kullanarak tüm web sitelerini yazmadan bunu kullanabilirsiniz:
 

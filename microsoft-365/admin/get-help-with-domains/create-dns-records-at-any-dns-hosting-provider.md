@@ -1,5 +1,5 @@
 ---
-title: Etki alanınıza bağlanmak için DNS kayıtları ekleme
+title: Etki alanınızı bağlamak için DNS kayıtları ekleme
 f1.keywords:
 - CSH
 ms.author: efrene
@@ -16,7 +16,7 @@ ms.collection:
 - Adm_O365_Setup
 search.appverid:
 - MET150
-description: Bağlan etki alanını doğrulamak ve etki alanı kayıt Microsoft 365 hesapta DNS kayıtlarını güncelleştirerek, etki alanını herhangi bir DNS barındırma sağlayıcısında barındırmak için kullanabilirsiniz.
+description: Herhangi bir DNS barındırma sağlayıcısındaki etki alanınızı doğrulayarak ve kayıt şirketinizin hesabında DNS kayıtlarını güncelleştirerek etki alanınızı Microsoft 365’e bağlayın.
 ms.custom:
 - okr_smb
 - AdminSurgePortfolio
@@ -25,107 +25,107 @@ ms.custom:
 - admindeeplinkMAC
 ms.openlocfilehash: 17a3a63dfb3faedb5ff213b24dd14abd57f55bb3
 ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 03/08/2022
 ms.locfileid: "63316933"
 ---
-# <a name="add-dns-records-to-connect-your-domain"></a>Etki alanınıza bağlanmak için DNS kayıtları ekleme
+# <a name="add-dns-records-to-connect-your-domain"></a>Etki alanınızı bağlamak için DNS kayıtları ekleme
 
-Bir üçüncü taraf barındırma sağlayıcısından etki alanı satın aldıysanız, etki alanını Microsoft 365'a bağlamak için kayıt şirketinizin hesaplarında DNS kayıtlarını güncelleştirebilirsiniz.
+Üçüncü taraf barındırma sağlayıcısından bir etki alanı satın aldıysanız, kayıt şirketinizin hesabında DNS kayıtlarını güncelleştirerek bu etki alanını Microsoft 365’e bağlayabilirsiniz.
 
-Bu adımların sonunda, etki alanınız etki alanını satın aldığınız ana bilgisayarla kayıtlı kalır, ancak Microsoft 365 e-posta adresleriniz (user@yourdomain.com gibi) ve diğer hizmetleriniz için bu etki alanını kullanabilir.
+Bu adımların sonunda, etki alanınız onu satın aldığınız barındırma sağlayıcısında kayıtlı durumda kalır ancak Microsoft 365 bunu e-posta adresleriniz (kullanıcı@etkialanınız.com gibi) ve diğer hizmetler için kullanabilir.
 
-Etki alanı ekley adresiniz yoksa, siz ekleyene kadar, onmicrosoft.com e-posta adresleri için etki alanınız bu etki alanını kullanır. Kullanıcıları eklemeden önce etki alanınızı eklemeniz önemlidir, böylece onları iki kez ayarlamak zorunda değildir.
+Etki alanı eklemezseniz, siz ekleyene kadar kuruluşunuzdaki kişiler e-posta adresleri için onmicrosoft.com etki alanını kullanır. Kullanıcıları eklemeden önce etki alanınızı eklemek önemlidir; böylelikle onları iki kez ayarlamanız gerekmez.
 
-[Aşağıda, ne](../setup/domains-faq.yml) arayabilirsiniz?
+Aradığınızı aşağıda bulamazsanız, [Etki Alanları SSS sayfasını inceleyin](../setup/domains-faq.yml).
 
 > [!TIP]
-> Bu konudaki adımlarda yardıma ihtiyacınız varsa, [Microsoft küçük işletme uzmanıyla çalışmayı göz önünde bulundurabilirsiniz](https://go.microsoft.com/fwlink/?linkid=2186871). İş Yardımı ile, işe alımtan günlük kullanıma kadar işlerinizi büyüttükçe siz ve çalışanlarınız küçük işletme uzmanlarına 24 saat erişim elde ediyor.
+> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa, [bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
 
-## <a name="step-1-add-a-txt-or-mx-record-to-verify-you-own-the-domain"></a>1. Adım: Etki alanının sahibi olduğunu doğrulamak için TXT veya MX kaydı ekleme
+## <a name="step-1-add-a-txt-or-mx-record-to-verify-you-own-the-domain"></a>1. Adım: Kendi etki alanınızı doğrulamak için TXT veya MX kaydı ekleme
 
 ### <a name="recommended-verify-with-a-txt-record"></a>Önerilen: TXT kaydıyla doğrulama
 
-İlk olarak, belgenize eklemek istediğiniz etki alanının sahibi olduğunu kanıtlamanız Microsoft 365.
+İlk olarak, Microsoft 365’e eklemek istediğiniz etki alanının sahibi olduğunuzu kanıtlamanız gerekir.
 
-1. Etki alanı için oturum Microsoft 365 yönetim merkezi ve **Tüm etki alanları'Ayarlar** >  >  <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**seçin**</a>.
-2. Yeni bir tarayıcı sekmesinde veya penceresinde DNS barındırma sağlayıcınızda oturum açın ve ardından DNS ayarlarınızı yönetmek istediğiniz yeri (örneğin, Bölge Dosyası Ayarlar, Etki Alanlarını Yönet, Etki Alanı Yöneticisi, DNS Yöneticisi) bulun.
-3. Sağlayıcınızın DNS Yöneticisi sayfasına gidin ve yönetim merkezinde gösterilen TXT kaydını etki alanınıza ekleyin.
+1. Microsoft 365 yönetim merkezinde oturum açın ve **Tümünü göster** > **Ayarlar** > <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki Alanları**</a> öğesini seçin.
+2. Yeni bir tarayıcı sekmesi veya penceresinde DNS barındırma sağlayıcınızda oturum açın ve ardından DNS ayarlarınızı yönettiğiniz yeri bulun (örneğin, Bölge Dosyası Ayarları, Etki Alanlarını Yönet, Etki Alanı Yöneticisi, DNS Yöneticisi).
+3. Sağlayıcınızın DNS Yöneticisi sayfasına gidin ve yönetim merkezinde belirtilen TXT kaydını etki alanınıza ekleyin.
 
-   Bu kaydı eklemek var olan e-posta veya diğer hizmetlerinizi etkilemez ve etki alanınız başka hizmetlere bağlandıktan sonra bu kaydı Microsoft 365.
+   Bu kaydın eklenmesi mevcut e-postanızı veya diğer hizmetlerinizi etkilemez ve etki alanınız Microsoft 365’e bağlandıktan sonra kaydı güvenle kaldırabilirsiniz.
 
    Örneğin:
 
    - TXT Adı: `@`
-   - TXT Değeri: MS=ms######## (yönetim merkezinden benzersiz kimlik)
+   - TXT Değeri: MS=ms######## (yönetim merkezinden benzersiz bir kimlik)
    - TTL: `3600` (veya varsayılan sağlayıcınız)
 
-4. Kaydı kaydedin, yönetim merkezine geri gidin ve Doğrula'ya **tıklayın**. Kayıt değişikliklerinin kaydedili genellikle 15 dakika kadar sürer, ancak bazen daha uzun da sürebilir. Biraz zaman ver ve değişikliği almaya birkaç kez çalışsın.
+4. Kaydı kaydedin, yönetim merkezine dönün ve ardından **Doğrula**’yı seçin. Kayıt değişikliklerinin kaydedilmesi genellikle 15 dakika kadar sürer ancak bazen daha uzun sürebilir. Değişikliğin alınması için birkaç denemeye biraz zaman tanıyın.
 
-Microsoft doğru TXT kaydını bulduğunda, etki alanınız doğrulanır.
+Microsoft doğru TXT kaydını bulduğunda etki alanınız doğrulanır.
 
 ### <a name="verify-with-an-mx-record"></a>MX kaydıyla doğrulama
 
-Kayıt şirketiniz TXT kayıtlarını eklemeyi desteklenmiyorsa, MX kaydı ekleyerek bunu doğruabilirsiniz.
+Kayıt şirketiniz TXT kayıtlarının eklenmesini desteklemiyorsa, MX kaydı ekleyerek doğrulayabilirsiniz.
 
-1. Etki alanı için oturum Microsoft 365 yönetim merkezi ve **Tüm etki alanları'Ayarlar** >  >  <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**seçin**</a>.
-2. Yeni bir tarayıcı sekmesinde veya penceresinde DNS barındırma sağlayıcınızda oturum açın ve ardından DNS ayarlarınızı yönetmek istediğiniz yeri (örneğin, Bölge Dosyası Ayarlar, Etki Alanlarını Yönet, Etki Alanı Yöneticisi, DNS Yöneticisi) bulun.
-3. Sağlayıcınızın DNS Yöneticisi sayfasına gidin ve yönetim merkezinde gösterilen MX kaydını etki alanınıza ekleyin.
+1. Microsoft 365 yönetim merkezinde oturum açın ve **Tümünü göster** > **Ayarlar** > <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki Alanları**</a> öğesini seçin.
+2. Yeni bir tarayıcı sekmesi veya penceresinde DNS barındırma sağlayıcınızda oturum açın ve ardından DNS ayarlarınızı yönettiğiniz yeri bulun (örneğin, Bölge Dosyası Ayarları, Etki Alanlarını Yönet, Etki Alanı Yöneticisi, DNS Yöneticisi).
+3. Sağlayıcınızın DNS Yöneticisi sayfasına gidin ve yönetim merkezinde belirtilen MX kaydını etki alanınıza ekleyin.
 
-Bu MX kaydının **Önceliği,** etki alanı için var olan tüm MX kayıtlarının en yüksek olması gerekir. Aksi takdirde, e-posta göndererek almak bu soruna neden olabilir. Etki alanı doğrulama tamamlandıktan sonra bu kayıtları silebilirsiniz.
+MX kaydının **Öncelik** değeri, etki alanı için tüm mevcut MX kayıtlarındaki en yüksek değer olmalıdır. Aksi takdirde e-posta gönderme ve alma işlemini engelleyebilir. Etki alanı doğrulaması tamamlandıktan hemen sonra bu kayıtları silmelisiniz.
 
-Alanların aşağıdaki değerlere ayarlanmış olduğundan emin olun:
+Alanların aşağıdaki değerlere ayarlandığından emin olun:
 
 - Kayıt Türü: `MX`
-- Öncelik: Önceden kullanılmamış olan büyük değere ayarlayın.
+- Öncelik: Henüz kullanılmamış herhangi bir büyük değere ayarlayın.
 - Ana Bilgisayar Adı: `@`
-- Points to address: Değeri yönetim merkezinden kopyalayıp buraya yapıştırın.
+- İşaret edilen adres: Yönetim merkezindeki değeri kopyalayın ve buraya yapıştırın.
 - TTL: `3600` (veya varsayılan sağlayıcınız)
 
-Microsoft doğru MX kaydını bulduğunda, etki alanınız doğrulanır.
+Microsoft doğru MX kaydını bulduğunda etki alanınız doğrulanır.
 
-## <a name="step-2-add-dns-records-to-connect-microsoft-services"></a>2. Adım: Bağlantı kurarak bağlanmak için DNS Microsoft hizmetleri
+## <a name="step-2-add-dns-records-to-connect-microsoft-services"></a>2. Adım: Microsoft hizmetlerine bağlanmak için DNS kayıtlarını ekleme
 
-Yeni bir tarayıcı sekmesinde veya penceresinde DNS barındırma sağlayıcınızda oturum açın ve DNS ayarlarınızı yönetebilirsiniz (örneğin, Bölge Dosyası Ayarlar, Etki Alanlarını Yönet, Etki Alanı Yöneticisi, DNS Yöneticisi).
+Yeni bir tarayıcı sekmesi veya penceresinde DNS barındırma sağlayıcınızda oturum açın ve DNS ayarlarınızı yönettiğiniz yeri bulun (örneğin, Bölge Dosyası Ayarları, Etki Alanlarını Yönet, Etki Alanı Yöneticisi, DNS Yöneticisi).
 
-Etkinleştirmek istediğiniz hizmetlere bağlı olarak, birkaç farklı türde DNS kaydı ekliyor oluruz.
+Etkinleştirmek istediğiniz hizmetlere bağlı olarak farklı türlerde çeşitli DNS kayıtları eklersiniz.
 
 ### <a name="add-an-mx-record-for-email-outlook-exchange-online"></a>E-posta için MX kaydı ekleme (Outlook, Exchange Online)
 
-**Başlamadan önce:** Etki alanınız ile zaten e-postanız varsa (user@yourdomain.com gibi), MX kayıtlarınızı ayarlamadan önce bu kullanıcıların hesaplarını yönetim merkezinde oluşturun. Bu şekilde, e-posta almaya devam eder. Etki alanınız MX kaydını güncelleştirin, etki alanını kullanan herkese gönderilecek tüm yeni e-Microsoft 365. E-postayı ve kişileri başka bir e-postaya geçirmeye karar vermedikçe, sahip olduğunuz tüm [e-postalar geçerli e-posta Microsoft 365.](../setup/migrate-email-and-contacts-admin.md)
+**Başlamadan önce:** Kullanıcıların sizin etki alanınızda zaten e-postaları varsa (kullanıcı@etkialanınız.com gibi), MX kayıtlarınızı ayarlamadan önce yönetim merkezinde hesaplarını oluşturun. Bu şekilde e-posta almaya devam ederler. Etki alanınızın MX kaydını güncelleştirdiğinizde etki alanınızı kullanan herkese gönderilen tüm yeni e-postalar artık Microsoft 365’e gider. Önceden almış olduğunuz e-postalar, [e-postaları ve kişileri Microsoft 365’e geçirmeye](../setup/migrate-email-and-contacts-admin.md) karar vermediğiniz sürece geçerli e-posta barındırıcınızda kalır.
 
-Yönetim merkezi etki alanı kurulum sihirbazından MX kaydıyla ilgili bilgileri edinebilirsiniz.
+MX kaydına yönelik bilgileri, yönetim merkezi etki alanı kurulum sihirbazından alırsınız.
 
 Barındırma sağlayıcınızın web sitesinde yeni bir MX kaydı ekleyin.
-Alanların aşağıdaki değerlere ayarlanmış olduğundan emin olun:
+Alanların aşağıdaki değerlere ayarlandığından emin olun:
 
 - Kayıt Türü: `MX`
-- Öncelik: Normalde, kullanılabilen en yüksek değere ayarlanır `0`.
+- Öncelik: Kullanılabilir en yüksek değere ayarlayın; genellikle `0` olur.
 - Ana Bilgisayar Adı: `@`
-- Points to address: Değeri yönetim merkezinden kopyalayıp buraya yapıştırın.
+- İşaret edilen adres: Yönetim merkezindeki değeri kopyalayın ve buraya yapıştırın.
 - TTL: `3600` (veya varsayılan sağlayıcınız)
 
-Kaydı kaydedin ve sonra tüm diğer MX kayıtlarını kaldırın.
+Kaydı kaydedin ve ardından diğer tüm MX kayıtlarını kaldırın.
 
-### <a name="add-cname-records-to-connect-other-services-teams-exchange-online-aad-mdm"></a>Diğer hizmetleri (Teams, Exchange Online, MDM) bağlamak AAD CNAME kayıtları ekleme
+### <a name="add-cname-records-to-connect-other-services-teams-exchange-online-aad-mdm"></a>Diğer hizmetlere bağlanmak için CNAME kayıtları ekleme (Teams, Exchange Online, AAD, MDM)
 
-CNAME kayıtlarıyla ilgili bilgileri yönetim merkezi etki alanı kurulum sihirbazından edinebilirsiniz.
+CNAME kayıtlarına yönelik bilgileri, yönetim merkezi etki alanı kurulum sihirbazından alırsınız.
 
-Barındırma sağlayıcınızın web sitesinde, bağlanmak istediğiniz her hizmet için CNAME kayıtlarını ekleyin.
-Alanların her biri için aşağıdaki değerlere ayarlanmış olduğundan emin olun:
+Barındırma sağlayıcınızın web sitesinde, bağlanmak istediğiniz her hizmet için CNAME kayıtları ekleyin.
+Her birinde alanların aşağıdaki değerlere ayarlandığından emin olun:
 
 - Kayıt Türü: `CNAME (Alias)`
-- Ana Bilgisayar: Kopyalayıp yönetim merkezinden değerleri buraya yapıştırın.
-- Points to address: Değeri yönetim merkezinden kopyalayıp buraya yapıştırın.
+- Ana Bilgisayar: Yönetim merkezinden kopyaladığınız değerleri buraya yapıştırın.
+- İşaret edilen adres: Yönetim merkezindeki değeri kopyalayın ve buraya yapıştırın.
 - TTL: `3600` (veya varsayılan sağlayıcınız)
 
-### <a name="add-or-edit-an-spf-txt-record-to-help-prevent-email-spam-outlook-exchange-online"></a>İstenmeyen e-postaları önlemeye yardımcı olmak için SPF TXT kaydı ekleyin veya düzenleyin (Outlook, Exchange Online)
+### <a name="add-or-edit-an-spf-txt-record-to-help-prevent-email-spam-outlook-exchange-online"></a>İstenmeyen e-postayı önlemeye yardımcı olmak için SPF TXT kaydını ekleme veya düzenleme (Outlook, Exchange Online)
 
-**Başlamadan önce:** Etki alanınız için zaten bir SPF kaydınız varsa, etki alanınız için yeni bir SPF Microsoft 365. Bunun yerine, Microsoft 365 her iki değer kümesi de içeren tek *bir SPF* kaydına sahip olmak için gerekli kayıt değerlerini barındırma sağlayıcıları web sitenize ekleyin.
+**Başlamadan önce:** Etki alanınız için zaten bir SPF kaydınız varsa Microsoft 365 için yeni SPF kaydı oluşturmayın. Bunun yerine, her iki değer kümesini de içeren *tek bir* SPF kaydınız olacak şekilde gerekli Microsoft 365 değerlerini barındırma sağlayıcılarınızın web sitesindeki geçerli kayda ekleyin.
 
-Barındırma sağlayıcınızın web sitesinde, var olan SPF kaydını düzenleyin veya bir SPF kaydı oluşturun.
-Alanların aşağıdaki değerlere ayarlanmış olduğundan emin olun:
+Barındırma sağlayıcınızın web sitesinde, mevcut SPF kaydını düzenleyin veya bir SPF kaydı oluşturun.
+Alanların aşağıdaki değerlere ayarlandığından emin olun:
 
 - Kayıt Türü: `TXT (Text)`
 - Ana Bilgisayar: `@`
@@ -134,54 +134,54 @@ Alanların aşağıdaki değerlere ayarlanmış olduğundan emin olun:
 
 Kaydı kaydedin.
 
-Bu SPF doğrulama araçlarından birini kullanarak [SPF kaydınızı doğrulama](/office365/admin/setup/domains-faq#how-can-i-validate-spf-records-for-my-domain)
+Şu [SPF doğrulama araçlarından](/office365/admin/setup/domains-faq#how-can-i-validate-spf-records-for-my-domain) birini kullanarak SPF kaydınızı doğrulayın.
 
-SPF, ifadeyi önlemeye yardımcı olmak için tasarlanmıştır ancak SPF'nin koruyamaz olduğu sanallık tekniklerini vardır. Bunlara karşı korunmak için, SPF'yi bir kez ayar verdiktan sonra bu alan için DKIM ve DMARC'yi de Microsoft 365.
+SPF kimlik sahtekarlığını önlemeye yardımcı olmak için tasarlanmıştır, ancak SPF’nin koruma sağlayamayacağı bazı kimlik sahtekarlığı yöntemleri vardır. Bunlara karşı korunmak için, SPF’yi ayarladıktan sonra Microsoft 365 için DKIM ve DMARC’yi de ayarlamanız gerekir.
 
-Kullanmaya başlamak için bkz[. MICROSOFT 365'ta](../../security/office-365-security/use-dkim-to-validate-outbound-email.md) etki alanınıza gönderilen giden e-postayı doğrulamak için DKIM kullanma ve [DMARC](../../security/office-365-security/use-dmarc-to-validate-email.md) kullanarak e-postayı Microsoft 365.
+Başlamak için bkz. [Microsoft 365’te etki alanınızdan gönderilen giden e-postayı doğrulamak için DKIM kullanma](../../security/office-365-security/use-dkim-to-validate-outbound-email.md) ve [Microsoft 365’te e-postayı doğrulamak için DMARC kullanma](../../security/office-365-security/use-dmarc-to-validate-email.md).
 
 ### <a name="add-srv-records-for-communications-services-teams-skype-for-business"></a>İletişim hizmetleri için SRV kayıtları ekleme (Teams, Skype Kurumsal)
 
-Barındırma sağlayıcınızın web sitesinde, bağlanmak istediğiniz her hizmet için SRV kayıtlarını ekleyin.
-Alanların her biri için aşağıdaki değerlere ayarlanmış olduğundan emin olun:
+Barındırma sağlayıcınızın web sitesinde, bağlanmak istediğiniz her hizmet için SRV kayıtları ekleyin.
+Her birinde alanların aşağıdaki değerlere ayarlandığından emin olun:
 
 - Kayıt Türü: `SRV (Service)`
 - Ad: `@`
-- Hedef: Yönetim merkezinden değeri kopyalayıp buraya yapıştırın.
-- Protokol: Yönetim merkezinden değeri kopyalayıp buraya yapıştırın.
-- Hizmet: Yönetim merkezinden değeri kopyalayıp buraya yapıştırın.
+- Hedef: Yönetim merkezindeki değeri kopyalayın ve buraya yapıştırın.
+- Protokol: Yönetim merkezindeki değeri kopyalayın ve buraya yapıştırın.
+- Hizmet: Yönetim merkezindeki değeri kopyalayın ve buraya yapıştırın.
 - Öncelik: `100`
 - Ağırlık: `1`
-- Bağlantı noktası: Yönetim merkezinden değeri kopyalayıp buraya yapıştırın.
+- Bağlantı Noktası: Yönetim merkezindeki değeri kopyalayın ve buraya yapıştırın.
 - TTL: `3600` (veya varsayılan sağlayıcınız)
 
 Kaydı kaydedin.
 
-#### <a name="srv-record-field-restrictions-and-workarounds"></a>SRV kaydı alan kısıtlamaları ve geçici çözümleri
+#### <a name="srv-record-field-restrictions-and-workarounds"></a>SRV kaydı alanının kısıtlamaları ve geçici çözümleri
 
-Bazı barındırma sağlayıcıları SRV kayıtları içindeki alan değerlerine kısıtlamalar dayatmaktadır. Bu kısıtlamalar için bazı yaygın geçici çözümler burada ve almaktadırsınız.
+Bazı barındırma sağlayıcıları SRV kayıtlarının içindeki alan değerlerine bazı kısıtlamalar getirir. Bu kısıtlamalara yönelik yaygın geçici çözümlerden bazıları aşağıda verilmiştir.
 
 ##### <a name="name"></a>Name
 
-Barındırma sağlayıcınız bu alanın ayarına izin vermiyorsa **@**, alanı boş bırakın. Bu yaklaşımı yalnızca *barındırma sağlayıcınızda* Hizmet ve Protokol değerleri için ayrı alanlar olduğunda kullanın. Aksi takdirde, aşağıdaki Hizmet ve Protokol notlarına bakın.
+Barındırma sağlayıcınız bu alanın **@** olarak ayarlanmasına izin vermiyorsa, alanı boş bırakın. Bu yaklaşımı *yalnızca* barındırma sağlayıcınızda Hizmet ve Protokol değerleri için ayrı alanlar varsa kullanın. Aksi takdirde, aşağıdaki Hizmet ve Protokol notlarına bakın.
 
 ##### <a name="service-and-protocol"></a>Hizmet ve Protokol
 
-Barındırma sağlayıcınız SRV kayıtları için bu alanları sağlayamıyorsa, kaydın Ad alanında Hizmet  ve **Protokol değerlerini belirtmeniz** gerekir. (Not: Barındırma sağlayıcınıza bağlı olarak, Ad alanı  başka bir adı olabilir, örneğin: **Ana** **bilgisayar, Ana** bilgisayar adı veya **Alt etki alanı**.) Bu değerleri eklemek için, tek bir dize oluşturun ve değerleri birbirinden noktayla ayırarak.
+Barındırma sağlayıcınız SRV kayıtları için bu alanları sağlamıyorsa, kaydın **Ad** alanında **Hizmet** ve **Protokol** değerlerini belirtmelisiniz. (Not: Barındırma sağlayıcınıza bağlı olarak **Ad** alanının adı farklı olabilir. Örneğin, **Ana Bilgisayar**, **Ana Bilgisayar Adı** veya **Alt Etki Alanı**.) Bu değerleri eklemek için, tek bir dize oluşturur ve değerleri nokta ile birbirinden ayırırsınız.
 
 Örnek: `_sip._tls`
 
 ##### <a name="priority-weight-and-port"></a>Öncelik, Ağırlık ve Bağlantı Noktası
 
-Barındırma sağlayıcınız SRV kayıtları için bu alanları sağlayamıyorsa, bunları kaydın Hedef alanında **belirtebilirsiniz** . (Not: Barındırma sağlayıcınıza bağlı olarak, **Hedef** alanın adı farklı olabilir, örneğin: **İçerik**, **IP Adresi** veya **Hedef Ana Bilgisayar**.)
+Barındırma sağlayıcınız SRV kayıtları için bu alanları sağlamıyorsa, bunları kaydın **Hedef** alanında belirtmeniz gerekir. (Not: Barındırma sağlayıcınıza bağlı olarak **Hedef** alanının adı farklı olabilir. Örneğin, **İçerik**, **IP Adresi** veya **Hedef Ana Bilgisayar**.)
 
-Bu değerleri eklemek için, değerleri birbirinden boşluklarla ayırarak ve bazen de bir noktayla *biten (emin* değilseniz sağlayıcınıza danışın) tek bir dize oluşturun. Değerler şu sırayla ek olmalıdır: Öncelik, Ağırlık, Bağlantı Noktası, Hedef.
+Bu değerleri eklemek için tek bir dize oluşturup değerleri boşluklarla ayırın ve *bazı durumlarda sonuna bir nokta koyun* (emin değilseniz sağlayıcınıza danışın). Değerler şu sırayla eklenmelidir: Öncelik, Ağırlık, Bağlantı Noktası, Hedef.
 
-- Örnek 1: `100 1 443 sipdir.online.lync.com.`
-- Örnek 2: `100 1 443 sipdir.online.lync.com`
+- 1. Örnek: `100 1 443 sipdir.online.lync.com.`
+- 2. Örnek: `100 1 443 sipdir.online.lync.com`
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Herhangi bir etki alanı kayıt şirketiyle etki Microsoft 365 ad sunucularını değiştir](change-nameservers-at-any-domain-registrar.md) (makale)\
-[Etki alanınızı veya DNS kayıtlarınızı ekledikten sonra sorunları bulma](find-and-fix-issues.md) ve düzeltme (makale)\
-[Etki alanlarını yönetme](/admin) (bağlantı sayfası)
+[Herhangi bir etki alanı kayıt şirketiyle Microsoft 365’i ayarlamak için ad sunucularını değiştirme](change-nameservers-at-any-domain-registrar.md) (makale)\
+[Kendi etki alanınızı veya DNS kayıtlarınızı ekledikten sonra sorunları bulma ve düzeltme](find-and-fix-issues.md) (makale)\
+[Etki alanlarını yönetme](/admin) (sayfa bağlantısı)
