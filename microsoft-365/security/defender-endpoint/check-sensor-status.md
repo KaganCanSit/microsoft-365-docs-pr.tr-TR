@@ -1,5 +1,5 @@
 ---
-title: Uç Nokta için Microsoft Defender'da algılayıcının durumunu denetleme
+title: Algılayıcının Uç Nokta için Microsoft Defender'da algılayıcının durumunu Uç Nokta için Microsoft Defender
 description: Yanlış yapılandırılmış, etkin olmayan veya algılayıcı verilerini raporlamamış olan cihazları belirlemek için cihazlarda algılayıcıların durumunu kontrol edin.
 keywords: algılayıcı, algılayıcı durumu, hatalı yapılandırılmış, etkin olmayan, algılayıcı verisi yok, algılayıcı verileri, engelli iletişimler, iletişim
 ms.prod: m365-security
@@ -15,20 +15,20 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.date: 04/24/2018
 ms.technology: mde
-ms.openlocfilehash: 926e23da7e439aa6035574a13bab2752004dd189
-ms.sourcegitcommit: 2b9d40e888ff2f2b3385e2a90b50d719bba1e653
+ms.openlocfilehash: bba5fde870b2916501f4154c6ff628a0d2e3ff1f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "62997020"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465482"
 ---
-# <a name="check-sensor-health-state-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'da algılayıcıların durumunu denetleme
+# <a name="check-sensor-health-state-at-microsoft-defender-for-endpoint"></a>Algılayıcıların durumuna göz atarak Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-checksensor-abovefoldlink)
@@ -42,7 +42,7 @@ Kutucukta, hizmete düzgün bir şekilde rapor olmayan cihaz sayısı hakkında 
 
 Gruplardan herhangi birini tıklatmak sizi **tercihe bağlı** olarak filtrelenmiş Cihazlar listesine yönlendirmektedir.
 
-![Algılayıcı sorunları kutucuğu bulunan cihazlar'ın ekran görüntüsü.](images/atp-devices-with-sensor-issues-tile.png)
+:::image type="content" source="images/atp-devices-with-sensor-issues-tile.png" alt-text="Algılayıcı sorunları kutucuğu bulunan cihazlar" lightbox="images/atp-devices-with-sensor-issues-tile.png":::
 
 Cihazlar **listesinde**, durum listesini aşağıdaki durum durumuna göre filtre yapabilirsiniz:
 
@@ -57,7 +57,7 @@ Dışarı Aktar özelliğini kullanarak listenin tamamını CSV biçiminde **de 
 > [!NOTE]
 > Filtrelenmemiş verileri görüntülemek için listeyi CSV biçiminde dışarı aktarın. CSV dosyası, görünümde uygulanan herhangi bir filtreye bakılmaksızın kuruluşta tüm cihazları içerir ve kuruluşun ne kadar büyük olduğuna bağlı olarak indirmesi çok uzun zaman almalıdır.
 
-![Cihazlar liste sayfasının ekran görüntüsü.](images/atp-devices-list-page.png)
+:::image type="content" source="images/atp-devices-list-page.png" alt-text="Cihaz listesi sayfasında Dışarı Aktar sekmesi" lightbox="images/atp-devices-list-page.png":::
 
 Yanlış yapılandırılmış veya etkin olmayan bir cihaza tıklarken cihaz ayrıntılarını görüntüebilirsiniz.
 

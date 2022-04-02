@@ -1,5 +1,5 @@
 ---
-title: Uç nokta uyarıları için Microsoft Defender'ı yönetme
+title: Uyarı Uç Nokta için Microsoft Defender yönetme
 description: Manage Alert menüsüyle uyarıların durumunu değiştirebilir, uyarıları gizlemek, açıklama göndermek ve tek tek uyarılar için değişiklik geçmişini gözden geçirmek için gizleme kuralları oluşturabilirsiniz.
 keywords: uyarıları yönetme, yönetme, uyarılar, durum, yeni, sürüyor, çözümlendi, uyarıları çözümleme, gizleme, bastırma, sıkıştırma, kurallar, bağlam, geçmiş, açıklamalar, değişiklikler
 ms.prod: m365-security
@@ -14,20 +14,20 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 5e0cde3a8a852fab426c1e0bf0290f9785aa0b40
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 83e7bd2cc46469cb6a5a6bc8c29a8d21dba20b7f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021674"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466201"
 ---
-# <a name="manage-microsoft-defender-for-endpoint-alerts"></a>Uç nokta uyarıları için Microsoft Defender'ı yönetme
+# <a name="manage-microsoft-defender-for-endpoint-alerts"></a>Uyarı Uç Nokta için Microsoft Defender yönetme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 
@@ -39,7 +39,7 @@ Ayrı bir cihaz için Uyarılar sırasında bir uyarı **seçerek** veya Cihaz s
 
 Bu yerlerden herhangi biri için uyarı seçerek Uyarı yönetimi **bölmesi görüntülenir**.
 
-![Uyarı yönetimi bölmesinin ve uyarılar kuyruğu resmi.](images/atp-alerts-selected.png)
+:::image type="content" source="images/atp-alerts-selected.png" alt-text="Uyarı yönetimi bölmesi ve Uyarılar sırası" lightbox="images/atp-alerts-selected.png":::
 
 ## <a name="link-to-another-incident"></a>Başka bir olayla bağlantı
 
@@ -131,10 +131,10 @@ Eklenen açıklamalar anında bölmede görünür.
 ## <a name="related-topics"></a>İlgili konular
 
 - [Gizleme kurallarını yönetme](manage-suppression-rules.md)
-- [Uç Nokta Uyarıları kuyruğu için Microsoft Defender'ı görüntüleme ve düzenleme](alerts-queue.md)
-- [Uç nokta uyarıları için Microsoft Defender'ı araştırma](investigate-alerts.md)
-- [Uç nokta için Microsoft Defender uyarısıyla ilişkilendirilmiş dosyayı araştırma](investigate-files.md)
-- [Uç Nokta Cihazları için Microsoft Defender listesinde cihazları araştırma](investigate-machines.md)
-- [Uç nokta için Microsoft Defender uyarısıyla ilişkilendirilmiş IP adresini araştırma](investigate-ip.md)
-- [Uç nokta için Microsoft Defender uyarısıyla ilişkilendirilmiş etki alanını araştırma](investigate-domain.md)
-- [Uç Nokta için Microsoft Defender'da kullanıcı hesabını araştırma](investigate-user.md)
+- [Yeni Uyarı kuyruğu Uç Nokta için Microsoft Defender ve düzenleme](alerts-queue.md)
+- [Uyarı Uç Nokta için Microsoft Defender araştırma](investigate-alerts.md)
+- [Kullanıcı hesabı uyarısıyla ilişkilendirilmiş Uç Nokta için Microsoft Defender araştırma](investigate-files.md)
+- [Uç Nokta için Microsoft Defender Cihazlar listesinde cihazları araştırma](investigate-machines.md)
+- [Adres defteri uyarısıyla ilişkilendirilmiş IP Uç Nokta için Microsoft Defender araştırma](investigate-ip.md)
+- [Kullanıcı ekleme uyarısıyla ilişkilendirilmiş etki Uç Nokta için Microsoft Defender araştırma](investigate-domain.md)
+- [E-postada kullanıcı hesabını Uç Nokta için Microsoft Defender](investigate-user.md)

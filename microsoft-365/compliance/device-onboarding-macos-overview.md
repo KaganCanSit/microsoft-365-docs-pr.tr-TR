@@ -1,5 +1,5 @@
 ---
-title: MacOS cihazlarını mobil cihazlara Microsoft 365 genel bakış (önizleme)
+title: macOS cihazlarının Microsoft 365'e katılımına genel bakış (önizleme)
 f1.keywords: NOCSH
 ms.author: chrfox
 author: chrfox
@@ -14,43 +14,43 @@ ms.collection:
 search.appverid:
 - MET150
 description: MacOS cihazlarını Uyumluluk çözümlerine ekleme hakkında bilgi edinin
-ms.openlocfilehash: 93a930f13a17c19c3ff7209295ddada648b9575a
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 783179ae749ac7cd6de671435927ba5bbdbdacad
+ms.sourcegitcommit: 9d563faeaa50b59b0b468dbb373d886e5270f58e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63526576"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "64387025"
 ---
-# <a name="onboard-macos-devices-into-microsoft-365-overview-preview"></a>MacOS cihazlarını mobil cihazlara Microsoft 365 genel bakış (önizleme)
+# <a name="onboard-macos-devices-into-microsoft-365-overview-preview"></a>macOS cihazlarının Microsoft 365'e katılımına genel bakış (önizleme)
 
-MacOS cihazları, Intune veya JAM Pro F Microsoft 365 uyumluluk çözümleri kullanılarak kullanılabilir. Ekleme yordamları, kullandığınız yönetim çözümüne bağlı olarak farklılık gösterir. macOS cihazlarınız Uç Nokta için Microsoft Defender'a (MDE) önceden ekli olarak alındısa, daha az adım vardır. Size [uygun yordamların](#next-steps) bağlantıları için sonraki adımlara bakın.
+MacOS cihazları, JAMF veya MICROSOFT 365 uyumluluk çözümleri kullanılarak Intune uyumluluk çözümlerine Pro. Ekleme yordamları, kullandığınız yönetim çözümüne bağlı olarak farklılık gösterir. MacOS cihazlarınız Uç Nokta için Microsoft Defender daha az adıma sahipse Size [uygun yordamların](#next-steps) bağlantıları için sonraki adımlara bakın.
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Microsoft 365 Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
-- [Insider risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
+- [Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
+- [İçeriden risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
 MacOS cihazlarında Uç Nokta DLP(Catalina 10.15 veya sonrası) ile çalışmaya başlamadan önce şu makaleleri tanımanız gerekir:
 
-- [Uç nokta Microsoft 365 kaybı önleme hakkında bilgi](endpoint-dlp-learn-about.md#learn-about-microsoft-365-endpoint-data-loss-prevention)
-- [Uç nokta veri kaybını önlemeye başlama](endpoint-dlp-getting-started.md#get-started-with-endpoint-data-loss-prevention)
+- [Uç nokta veri kaybı önleme hakkında daha fazla bilgi edinme](endpoint-dlp-learn-about.md#learn-about-microsoft-365-endpoint-data-loss-prevention)
+- [Uç noktada veri kaybı önlemeyi kullanmaya başlama](endpoint-dlp-getting-started.md#get-started-with-endpoint-data-loss-prevention)
 
 DLP'ye hiç aşina değilsanız, şu makaleleri de tanımanız gerekir:
 
-- [Veri kaybını önleme hakkında bilgi](dlp-learn-about-dlp.md#learn-about-data-loss-prevention)
+- [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md#learn-about-data-loss-prevention)
 - [Veri kaybı önleme (DLP) planı](dlp-overview-plan-for-dlp.md#plan-for-data-loss-prevention-dlp)
 - [Veri Kaybı Önleme ilke başvurusu](dlp-policy-reference.md#data-loss-prevention-policy-reference)
 
 Insider Riski'ne aşina değilsanız, şu makaleleri tanımanız gerekir:
 
- - [Insider risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
- - [Insider risk yönetimini planlama](insider-risk-management-plan.md#plan-for-insider-risk-management)
+ - [İçeriden risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
+ - [İçeriden risk yönetimi planı](insider-risk-management-plan.md#plan-for-insider-risk-management)
 
-macOS cihazlarınız intune veya JAMF mobil cihazlarında zaten Pro.
+macOS cihazlarınız zaten JAMF veya Intune üzerinden yönetil Pro.
  
-- Intune'a başlangıç yapmak için bkz. [Dağıtım kılavuzu: Microsoft Intune'de macOS](/mem/intune/fundamentals/deployment-guide-platform-macos) cihazlarını yönetme ve [Mac'inizi Başka bir Intune Şirket Portalı](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp). 
+- Office 365'e Intune için bkz[. Dağıtım kılavuzu: Microsoft Intune'de macOS](/mem/intune/fundamentals/deployment-guide-platform-macos) cihazlarını yönetme [ve Mac'inizi Intune Şirket Portalı](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp). 
 - JAMF yönetim Pro için [bkz. JAMF Pro](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) yöneticisi kılavuzu ve [JAMF mac Pro Yapılandırma Kılavuzu](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/)
 - v95+ Edge tarayıcısını macOS cihazlarınıza yükleme 
 
@@ -87,10 +87,7 @@ Henüz eklememiş cihazları almak istediğinizde, uygun betiği indirmiş ve bu
    > [!NOTE]
    > Cihaz eklemenin etkinleştirilmesi genellikle yaklaşık 60 saniye sürerken, Microsoft desteğiyle iletişime başlamadan önce lütfen 30 dakika kadar bekleyin.
 
-2. Uyumluluk Merkezi ayarlar sayfasını açın ve Cihazları **ekleyin'i seçin**.
-
-   > [!div class="mx-imgBorder"]
-   > ![cihaz yönetimini etkinleştirin.](../media/endpoint-dlp-learn-about-1-enable-device-management.png)
+2. Uyumluluk Merkezi ayarlar sayfasını açın ve **macOS cihaz izlemeyi aç'ı seçin**.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -98,13 +95,13 @@ DLP algılayıcı telemetrisi al Microsoft 365 veri kaybı önleme ilkelerinin u
 
 Konu | Açıklama
 :---|:---
-|[Intune (önizleme) kullanarak MacOS cihazlarını Microsoft 365 Uyumluluk çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune.md#onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-intune-preview)|Intune aracılığıyla yönetilen macOS cihazlar için
-|[Uç nokta müşterileri için Microsoft Defender'ı kullanarak MacOS cihazlarını Uyumluluk çözümlerine ekleme ve çıkararak kullanma (önizleme)](device-onboarding-offboarding-macos-intune-mde.md#onboard-and-offboard-macos-devices-into-compliance-solutions-using-intune-for-microsoft-defender-for-endpoint-customers-preview) |Intune üzerinden yönetilen ve Uç Nokta (MDE) için Microsoft Defender'ın dağıtıldı olduğu macOS cihazlar için
+|[Intune (önizleme) kullanarak macOS cihazlarını Microsoft 365 Uyumluluk çözümlerine alın ve çıkarın](device-onboarding-offboarding-macos-intune.md#onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-intune-preview)|Mobil cihaz aracılığıyla yönetilen macOS Intune
+|[macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)](device-onboarding-offboarding-macos-intune-mde.md#onboard-and-offboard-macos-devices-into-compliance-solutions-using-intune-for-microsoft-defender-for-endpoint-customers-preview) |Intune aracılığıyla yönetilen ve Uç Nokta için Microsoft Defender (MDE) dağıtılmış olan macOS cihazlar için
 |[JAMF uyumluluk çözümleri kullanarak macOS cihazlarını Microsoft 365 kullanma ve çıkararak uyumluluk çözümlerine (Pro)](device-onboarding-offboarding-macos-jamfpro.md#onboard-and-offboard-macos-devices-into-microsoft-365-compliance-solutions-using-jamf-pro-preview) | JAMF tarafından yönetilen macOS cihazlar Pro
-|[Uç nokta müşterileri için Microsoft Defender 'da JAMF Pro kullanarak MacOS cihazlarını ekleme ve çıkararak Uyumluluk çözümlerine ekleme (önizleme)](device-onboarding-offboarding-macos-jamfpro-mde.md#onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers-preview)|JAMF hizmeti aracılığıyla yönetilen ve Uç Nokta için Microsoft Defender (MDE) Pro bu cihazlara dağıtılan macOS cihazlar için
+|[macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)](device-onboarding-offboarding-macos-jamfpro-mde.md#onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers-preview)|JAM Pro F tarafından yönetilen ve onlara Uç Nokta için Microsoft Defender (MDE) Uç Nokta için Microsoft Defender macOS cihazlar için
 
 
 ## <a name="related-topics"></a>İlgili konular
 
-- [Uç nokta veri kaybını önlemeyi kullanma](endpoint-dlp-using.md#using-endpoint-data-loss-prevention)
+- [Uç noktada veri kaybı önlemeyi kullanma](endpoint-dlp-using.md#using-endpoint-data-loss-prevention)
 - [Microsoft uygulamaları genelinde DLP ilkesi ipuçları için Destek Matrisi](dlp-policy-tips-reference.md#support-matrix-for-dlp-policy-tips-across-microsoft-apps)

@@ -22,12 +22,12 @@ ms.collection:
 - m365solution-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 2438e7690230af88eae72e0864184e771bdd4135
-ms.sourcegitcommit: 8423f47fce3905a48db9daefe69c21c841da43a0
+ms.openlocfilehash: d77bb5f61127475c8c7c00e58af6c19013aaffe2
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63504806"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755419"
 ---
 # <a name="step-2-evaluate-microsoft-defender-for-identity-overview"></a>Adım 2. Kimlik için Microsoft Defender'ı değerlendirmeye genel bakış
 
@@ -43,14 +43,12 @@ ms.locfileid: "63504806"
 
 Identity için Microsoft Defender'ı etkinleştirmek ve bu özelliğin pilot kullanımını yapmak için aşağıdaki adımları kullanın.
 
-![Defender değerlendirme ortamına Kimlik için Microsoft Defender ekleme adımları.](../../media/defender/m365-defender-identity-eval-steps.png)
+:::image type="content" source="../../media/defender/m365-defender-identity-eval-steps.png" alt-text="Microsoft Defender değerlendirme ortamına Identity için Microsoft Defender ekleme adımları" lightbox="../../media/defender/m365-defender-identity-eval-steps.png":::
 
 Bu tabloda, çizimde yer alan adımlar açık gösterilmiştir.
 
-| |Adım  |Açıklama  |
+| Seri Numarası|Adım  |Açıklama  |
 |---------|---------|---------|
 |1|[Mimari gereksinimlerini ve temel kavramları gözden geçirin](eval-defender-identity-architecture.md)    | Kimlik mimarisi için Defender'ı anlıyoruz ve ortamının mimari önkoşullarının karşı olduğundan emin olun.       |
 |2|[Değerlendirme ortamını etkinleştirme](eval-defender-identity-enable-eval.md)     |   Değerlendirme ortamını ayarlamak için adımları izleyin.      |
 |3|[Pilot ayarlama](eval-defender-identity-pilot.md)     |   Kimlik ortamınıza kıyaslama ayarları hakkında bilgi edinmek ve Kimlik için Defender öğreticilerini deneyin.     |
-||||
-

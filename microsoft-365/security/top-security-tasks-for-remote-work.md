@@ -17,18 +17,18 @@ ms.collection:
 - remotework
 ms.custom: admindeeplinkDEFENDER
 description: İş e-postanızı ve verilerinizi fidye yazılımları, kimlik avı ve kötü amaçlı ekler de dahil olmak üzere siber tehditlere karşı koruyun.
-ms.openlocfilehash: 584da4e192ddbd8ac5b223e0d292a71f0c35c305
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 1277d001118dda764aa9b2a968f1024d5befcac1
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63019446"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755055"
 ---
 # <a name="top-12-tasks-for-security-teams-to-support-working-from-home"></a>Evden çalışmayı desteklemek için güvenlik ekipleri için en önemli 12 görev
 
 [Microsoft](https://www.microsoft.com/microsoft-365/blog/2020/03/10/staying-productive-while-working-remotely-with-microsoft-teams/) gibiysanız ve aniden ev iş gücüne dayalı bir iş gücüne destek olasanız, organizasyonsunuz mümkün olduğunca güvenli bir şekilde çalışıyor olduğundan emin olmak istiyoruz. Bu makalede, güvenlik ekiplerinin en önemli güvenlik özelliklerini mümkün olan en kısa sürede gerçekleştirmesine yardımcı olmak için görevler önceliklendirmede yer almaktadır.
 
-![Evden çalışmayı desteklemek için bu en önemli görevleri gerçekleştirin.](../media/security/security-support-remote-work.png)
+:::image type="content" source="../media/security/security-support-remote-work.png" alt-text="Evden çalışmayı desteklemek için güvenlik ekipleri için ilk 12 görev" lightbox="../media/security/security-support-remote-work.png":::
 
 Microsoft'un iş planlarından birini kullanan küçük veya orta ölçekli bir kuruluşsanız, bunun yerine aşağıdaki kaynaklara bakın:
 
@@ -45,22 +45,21 @@ Kurumsal planlarımızı kullanan müşteriler için Microsoft, aşağıdaki tab
 |Adım|Görev|Tüm Office 365 Kurumsal planları|Microsoft 365 E3|Microsoft 365 E5|
 |---|---|---|---|---|
 |1|[Azure AD Multi-Factor Authentication'i (MFA) etkinleştirme](#1-enable-azure-ad-multi-factor-authentication-mfa)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|2|[Tehditlere karşı koruma](#2-protect-against-threats)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|2|[Tehditlere karşı korunun](#2-protect-against-threats)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |3|[Windows için Microsoft Defender'ı Office 365](#3-configure-microsoft-defender-for-office-365)|||![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |4|[Kimlik için Microsoft Defender'ı yapılandırma](#4-configure-microsoft-defender-for-identity)|||![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|5|[E-Microsoft 365 Defender](#5-turn-on-microsoft-365-defender)|||![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|5|[Microsoft 365 Defender’ı açın](#5-turn-on-microsoft-365-defender)|||![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |6|[Telefonlar ve tabletler için Intune mobil uygulama korumasını yapılandırma](#6-configure-intune-mobile-app-protection-for-phones-and-tablets)||![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|7|[Intune uygulama koruması da dahil olmak üzere konuklar için MFA ve koşullu erişimi yapılandırma](#7-configure-mfa-and-conditional-access-for-guests-including-intune-mobile-app-protection)||![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|8|[Bilgisayarları cihaz yönetimine kaydettirin ve uyumlu bilgisayarlar gerektirir](#8-enroll-pcs-into-device-management-and-require-compliant-pcs)||![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|9|[Anızı bulut bağlantısı için en iyi duruma getirme](#9-optimize-your-network-for-cloud-connectivity)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|10|[Kullanıcıları eğitin](#10-train-users)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|11|[Bulut Uygulamaları için Microsoft Defender ile çalışmaya başlama](#11-get-started-with-microsoft-defender-for-cloud-apps)|||![Dahil](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|12|[Tehditleri izleme ve önlem alma](#12-monitor-for-threats-and-take-action)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil](../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|
+|7|[Intune uygulama koruması da dahil olmak üzere konuklar için MFA ve koşullu erişimi yapılandırma](#7-configure-mfa-and-conditional-access-for-guests-including-intune-mobile-app-protection)||![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|8|[Bilgisayarları cihaz yönetimine kaydettirin ve uyumlu bilgisayarlar gerektirir](#8-enroll-pcs-into-device-management-and-require-compliant-pcs)||![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|9|[Anızı bulut bağlantısı için en iyi duruma getirme](#9-optimize-your-network-for-cloud-connectivity)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|10|[Kullanıcıları eğitme](#10-train-users)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|11|[Bulut Uygulamaları için Microsoft Defender’ı kullanmaya başlayın](#11-get-started-with-microsoft-defender-for-cloud-apps)|||![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|12|[Tehditleri izleme ve önlem alma](#12-monitor-for-threats-and-take-action)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Dahil.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 
 Başlamadan önce, portalda Microsoft 365 [Puanınızı](./defender/microsoft-secure-score.md) <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender.</a> Merkezi bir panodan kimlikleri, verileri, uygulamaları, cihazları ve altyapıyı Microsoft 365 için güvenliği izleyebilir ve geliştirebilirsiniz. Önerilen güvenlik özelliklerini yapılandırma, güvenlikle ilgili görevleri (raporları görüntüleme gibi) gerçekleştirme ya da üçüncü taraf bir uygulama veya yazılımla önerilere yönelik öneriler gerçekleştirmeyle ilgili puanlar verilir. Bu makalede önerilen görevler puanınızı yükseltecek.
 
-![Microsoft Güvenli Puanı'nın ekran görüntüsü.](../media/secure-score.png)
+:::image type="content" source="../media/secure-score.png" alt-text="Güvenlik portalında Microsoft Microsoft 365 Defender ekranı" lightbox="../media/secure-score.png":::
 
 ## <a name="1-enable-azure-ad-multi-factor-authentication-mfa"></a>1: Azure AD Multi-Factor Authentication'i (MFA) etkinleştirme
 
@@ -77,7 +76,6 @@ Bu ilkelerin uygulanması yalnızca birkaç dakika sürer, ancak kullanıcılar�
 |Microsoft 365 (Azure AD P1 veya P2 olmadan)|[Azure AD'de güvenlik varsayılanlarını etkinleştirin](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults). Azure AD'de güvenlik varsayılanları, kullanıcılar ve yöneticiler için MFA içerir.|
 |Microsoft 365 E3 (Azure AD P1 ile)|Aşağıdaki [ilkeleri yapılandırmak için Ortak](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) Koşullu Erişim ilkelerini kullanın: <br/>- [Yöneticiler için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa) <br/>- [Tüm kullanıcılar için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa) <br/> - [Eski kimlik doğrulamayı engelle](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)|
 |Microsoft 365 E5 (Azure AD P2 ile)|Azure AD Kimlik Koruması'ndan yararlanmak için, bu ilkeleri oluşturarak Microsoft'un önerilen koşullu erişim ve [ilgili ilkeler](./office-365-security/identity-access-policies.md) setlerini uygulamaya başlayabilirsiniz:<br/> - [Oturum açma riski orta veya yüksek olduğunda MFA gerektirme](./office-365-security/identity-access-policies.md#require-mfa-based-on-sign-in-risk) <br/>- [Modern kimlik doğrulamasını desteklemez istemcileri engelleme](./office-365-security/identity-access-policies.md#block-clients-that-dont-support-multi-factor)<br/>- [Yüksek riskli kullanıcıların parolayı değiştirmesi gerekir](./office-365-security/identity-access-policies.md#high-risk-users-must-change-password)|
-|
 
 ## <a name="2-protect-against-threats"></a>2: Tehditlere karşı koruma
 
@@ -124,7 +122,9 @@ Bu iş yükleri için Defender'ı Exchange Online için SharePoint Online yönet
 
 Artık Microsoft Defender for Office 365 Ve Identity için Microsoft Defender'ı yapılandırmış olduğunuuza göre, bu özelliklerden gelen birleşik sinyalleri tek bir panoda görüntüleyebilirsiniz. [Microsoft 365 Defender](./defender/microsoft-365-defender.md), iş yükleri arasında uyarıları, olayları, otomatik soruşturma ve yanıtı ve gelişmiş avları (Kimlik için Microsoft Defender, Office 365 için Defender, Uç Nokta için Microsoft Defender ve Bulut Uygulamaları için Microsoft Defender) bir araya getirir Microsoft 365 Defender <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank"> portalında oturum açın</a>.
 
-![MTP panosu çizimi.](../media/top-ten-security-remote-work-mtp-dashboard.png)
+<!--
+:::image type="content" source="../media/top-ten-security-remote-work-mtp-dashboard.png" alt-text="The MTP dashboard in the Microsoft 365 Defender portal" lightbox="../media/top-ten-security-remote-work-mtp-dashboard.png":::
+--> 
 
 Defender for Office 365 hizmetlerinizi yapılandırdıktan sonra, MTP'yi açma. Yeni özellikler MTP'ye sürekli olarak eklenir; önizleme özelliklerini almayı kabul etmek iyi bir tercih.
 
@@ -213,9 +213,8 @@ Microsoft 365, kullanıcıları bilgilendirmeye yardımcı olmak için aşağıd
 |Kavram|Kaynaklar|
 |---|---|
 |Microsoft 365|[Özelleştirilebilir öğrenme yolları](/office365/customlearning/) <p>Bu kaynaklar, kurumda son kullanıcılar için eğitim bir araya çalışmanıza yardımcı olabilir|
-|Microsoft 365 güvenliği|[Learning: Yerleşik ve akıllı güvenlik ile kuruluş güvenliğinizi Microsoft 365](/learn/modules/security-with-microsoft-365) <p>Bu modül, güvenlik özelliklerinin Microsoft 365 birlikte nasıl olduğunu açıklamaya ve bu güvenlik özelliklerinin avantajlarını açıklamaya olanak sağlar.|
+|Microsoft 365 güvenlik|[Learning: Yerleşik ve akıllı güvenlik ile kuruluş güvenliğinizi Microsoft 365](/learn/modules/security-with-microsoft-365) <p>Bu modül, güvenlik özelliklerinin Microsoft 365 birlikte nasıl olduğunu açıklamaya ve bu güvenlik özelliklerinin avantajlarını açıklamaya olanak sağlar.|
 |Çok faktörlü kimlik doğrulaması|[İki aşamalı doğrulama: Ek doğrulama sayfası nedir?](/azure/active-directory/user-help/multi-factor-authentication-end-user-first-time) <p>Bu makale, son kullanıcıların çok faktörlü kimlik doğrulamasının ne olduğunu ve bu kimlik doğrulamanın neden kuruluşta kullanılıyor olduğunu anlıyoruz.|
-|
 
 Bu kılavuzun yanı sıra, Microsoft kullanıcılarınızı bu makalede açıklanan eylemleri gerçekleştirler: Hesaplarınızı ve cihazlarınızı bilgisayar korsanlarından ve kötü amaçlı [yazılımdan koruyun](https://support.office.com/article/066d6216-a56b-4f90-9af3-b3a1e9a327d6.aspx). Bu eylemler şunlardır:
 

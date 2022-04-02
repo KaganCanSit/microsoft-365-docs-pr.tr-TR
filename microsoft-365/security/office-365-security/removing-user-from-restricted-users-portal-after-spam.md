@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 66b810f7bb6381d405ee7ffc0d6b1cf7a10f2bf2
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: c375d77c3aa64d996a8d8d2f8dce538829eaa3b2
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63033363"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568324"
 ---
 # <a name="remove-blocked-users-from-the-restricted-users-portal-in-microsoft-365"></a>Engellenen kullanıcıları Microsoft 365'te Kısıtlanmış kullanıcılar portalında Microsoft 365
 
@@ -34,16 +34,16 @@ ms.locfileid: "63033363"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Kullanıcı, hizmet sınırlarında veya giden istenmeyen posta ilkesinde belirtilen giden gönderme sınırlarından birini aşarsa[, kullanıcının](configure-the-outbound-spam-policy.md) e-posta göndermesi kısıtlanır, ancak yine de e-posta almaya devamebilir.[](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options)
 
-Kullanıcı, kullanıcı portalının Kısıtlı **kullanıcılar** Microsoft 365 Defender eklenir. E-posta göndermeye çalışsalar, ileti [5.1.8](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-1-8-in-exchange-online) hata kodu ve aşağıdaki metinle birlikte teslim edilemedi raporunda (NDR veya geri dönen iletiler olarak da bilinir) döndürülür:
+Kullanıcı, kullanıcı portalının Kısıtlı **kullanıcılar** Microsoft 365 Defender eklenir. E-posta göndermeye deneyenler e-posta, [5.1.8](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-1-8-in-exchange-online) hata kodu ve aşağıdaki metni içeren bir teslim edilemedi raporunda (NDR veya geri dönen ileti olarak da bilinir) döndürülür:
 
 > "Geçerli bir gönderen olarak tanınmadınız için iletiniz teslim edilmedi. Bunun en yaygın nedeni, e-posta adresinizin istenmeyen posta gönderme şüphesi ve artık e-posta göndermesine izin verilmemektedir.  Yardım için e-posta yöneticinize başvurun. Uzak Sunucu '550 5.1.8 Erişim reddedildi, giden hatalı gönderen."
 
-Yöneticiler Microsoft 365 Defender PowerShell'de veya Exchange Online sayfasından kullanıcıları kaldırabilir.
+Yöneticiler, Microsoft 365 Defender **PowerShell'de** Kısıtlanmış kullanıcılar Exchange Online kaldırabilir.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
@@ -93,9 +93,9 @@ Kullanıcı e-posta **göndermeyle kısıtlandı** adlı varsayılan uyarı ilke
 > [!IMPORTANT]
 > Uyarıların çalışması için denetim günlüğü aramanın açık olması gerekir. Daha fazla bilgi için [bkz. Denetim günlüğü aramalarını açma veya kapatma](../../compliance/turn-audit-log-search-on-or-off.md).
 
-1. Microsoft 365 Defender portalında, E-posta ve İşbirliği **& ve** \> **Kurallar & ilkesi'ne** \> **gidin**.
+1. Microsoft 365 Defender portalında, E-posta ve <https://security.microsoft.com>işbirliği **&'ne** \> **& Uyarı ilkesi'ne** \> **gidin**. Doğrudan Uyarı ilkesi **sayfasına gitmek için** kullanın <https://security.microsoft.com/alertpolicies>.
 
-2. Uyarı ilkesi **sayfasında** , Kullanıcı e-posta gönderme kısıtlaması **adlı uyarıyı bulun ve seçin**. İlkeleri adlarına göre sıralanmış veya Arama **kutusunu kullanarak** ilkeyi bulabilirsiniz.
+2. Uyarı ilkesi **sayfasında** , Kullanıcı e-posta gönderme kısıtlaması **adlı uyarıyı bulun ve seçin**. İlkeleri adlarına göre sıralanmış veya Arama **kutusunu** kullanarak ilkeyi bulabilirsiniz.
 
 3. Görüntülenen **E-posta göndermeyle kısıtlanmış kullanıcı** açılır sayfasında, aşağıdaki ayarları doğrulayın veya yapılandıryın:
    - **Durum**: Uyarının Iki durumlu düğmeyi açık ![olduğunu doğrulayın](../../media/scc-toggle-on.png).

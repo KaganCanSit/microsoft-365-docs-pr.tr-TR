@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: 8cbf6d8b69d9fbc8d8b083bf11e455a74b636af1
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: 01d6a00bba5bd286e6c741dce6ec6ba3fa3625a1
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63014209"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755618"
 ---
 # <a name="create-an-app-to-access-microsoft-365-defender-without-a-user"></a>Kullanıcı olmadan e-Microsoft 365 Defender için uygulama oluşturma
 
@@ -63,7 +63,7 @@ Bu makalede şunların nasıl olduğu açıklanmıştır:
 
 2. **Azure Active Directory** >  **App kayıtlarıne** **gidinYeni** >  kayıt.
 
-   ![Kayıt Microsoft Azure gezinti görüntüsü.](../../media/atp-azure-new-app2.png)
+   :::image type="content" source="../../media/atp-azure-new-app2.png" alt-text="Microsoft 365 Defender portalında Yeni Microsoft 365 Defender sekmesi" lightbox="../../media/atp-azure-new-app2.png":::
 
 3. Formda, uygulamanız için bir ad seçin ve sonra da Kaydol'a **tıklayın**.
 
@@ -72,11 +72,11 @@ Bu makalede şunların nasıl olduğu açıklanmıştır:
    > [!TIP]
    > *Microsoft Tehdit* Koruması bu güncelleştirmelerin eski Microsoft 365 Defender, özgün listede görünmez. Görünmesini görmek için metin kutusuna adını yazmaya başlamalı.
 
-   ![API izin seçimi resmi.](../../media/apis-in-my-org-tab.PNG)
+   :::image type="content" source="../../media/apis-in-my-org-tab.PNG" alt-text="Microsoft 365 Defender portalında kuruluşun API'leri kullanım sekmesi" lightbox="../../media/apis-in-my-org-tab.PNG":::
 
 5. Uygulama **izinleri'ne tıklayın**. Senaryonuz için uygun izinleri seçin (örneğin, **Olay.Okuma.All**) ve ardından İzin **ekle'yi seçin**.
 
-   ![API erişimi ve API seçimi görüntüsü.](../../media/request-api-permissions.PNG)
+   :::image type="content" source="../../media/request-api-permissions.PNG" alt-text="Microsoft 365 Defender portalında uygulama Microsoft 365 Defender bölmesi" lightbox="../../media/request-api-permissions.PNG":::
 
     > [!NOTE]
     > Senaryo için uygun izinleri seçmeniz gerekir. *Tüm olayları okuma,* yalnızca bir örnektir. Hangi izinlere ihtiyacınız olduğunu belirlemek için lütfen çağrı **yapmak istediğiniz** API'deki İzinler bölümüne bakın.
@@ -85,18 +85,18 @@ Bu makalede şunların nasıl olduğu açıklanmıştır:
 
 6. Yönetici **izni ver'i seçin**. Her izin ekleyseniz, geçerlik için **Yönetici izni ver'i** seçmeniz gerekir.
 
-    ![İzin ver'in resmi.](../../media/grant-consent.PNG)
+    :::image type="content" source="../../media/grant-consent.PNG" alt-text="Microsoft 365 Defender portalında izin Microsoft 365 Defender bölmesi" lightbox="../../media/grant-consent.PNG":::
 
 7. Uygulamaya bir sır eklemek için Sertifikalar gizli **& seçin**, gizli için bir açıklama ekleyin ve Ekle'yi **seçin**.
 
     > [!TIP]
     > Ekle'yi **seçin** ve **oluşturulan gizli değeri kopyalayın**. Siz ayrılarak gizli değeri geri ala zamanlarız.
 
-    ![Uygulama anahtarı oluşturma resmi.](../../media/webapp-create-key2.png)
+    :::image type="content" source="../../media/defender-endpoint/webapp-create-key2.png" alt-text="Microsoft 365 Defender portalında uygulama oluştur bölmesi" lightbox="../../media/defender-endpoint/webapp-create-key2.png":::
 
 8. Uygulama kimliğinizi ve kiracı kimliğini güvenli bir yere kaydedin. Bunlar, uygulama sayfanıza **genel bakış** altında listelenir.
 
-   ![Oluşturulan uygulama kimliğinin resmi.](../../media/app-and-tenant-ids.png)
+   :::image type="content" source="../../media/app-and-tenant-ids.png" alt-text="Yeni portalda Genel Microsoft 365 Defender bölmesi" lightbox="../../media/app-and-tenant-ids.png":::
 
 9. **Yalnızca Microsoft 365 Defender** İş Ortakları [için: Microsoft 365 Defender](./api-partner-access.md) API'leri aracılığıyla iş ortağı erişimi için bu yönergeleri izleyin, uygulamanızı çok kiracılı olarak ayarlayın, böylece yönetici iznini alırsanız tüm kiracılarda kullanılabilir. Üçüncü taraf **uygulamalarda** iş ortağı erişimi gerekir; örneğin, birden çok müşteri kiracılarında çalıştıracak şekilde tasarlanmış bir uygulama sanız. Yalnızca **kiracıda** çalıştırmak istediğiniz bir hizmet (örneğin, yalnızca kendi verilerinizle etkileşimde bulunacak kendi kullanımınız için bir uygulama) oluşturmanız gerekmez. Uygulamalarınızı çok kiracılı olacak şekilde ayarlamak için:
 
@@ -244,7 +244,7 @@ aadToken = jsonResponse["access_token"]
 
    Aşağıdaki resimde, ile ve izinleri olan bir uygulamada alınan kod çözme belirteci `Incidents.Read.All``Incidents.ReadWrite.All``AdvancedHunting.Read.All` gösterebilirsiniz:
 
-   ![Belirteç doğrulama resmi.](../../media/webapp-decoded-token.png)
+   :::image type="content" source="../../media/defender-endpoint/webapp-decoded-token.png" alt-text="Kod çözme portalında Kod Çözme Microsoft 365 Defender bölmesi" lightbox="../../media/defender-endpoint/webapp-decoded-token.png":::
 
 ## <a name="use-the-token-to-access-the-microsoft-365-defender-api"></a>Microsoft 365 Defender API'sinde erişmek için belirteci kullanın
 

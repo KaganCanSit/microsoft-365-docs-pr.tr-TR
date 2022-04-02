@@ -4,7 +4,7 @@ summary: İş için Microsoft Defender, 1 Mart 2022'den başlayarak Microsoft 36
 metadata:
   title: İş için Microsoft Defender belgeleri
   description: İş için Microsoft Defender'a genel bakış ve kurulum bilgileri alın
-  ms.prod: 365-security
+  ms.prod: m365-security
   ms.technology: mdb
   ms.topic: landing-page
   ms.collection:
@@ -15,12 +15,12 @@ metadata:
   author: denisebmsft
   ms.author: deniseb
   ms.date: 03/10/2022
-  ms.openlocfilehash: eb00a4fc76315360c789afacad4b77da3d28c323
-  ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+  ms.openlocfilehash: e2b38e4900b1b3509b30751e72496581bc5f3541
+  ms.sourcegitcommit: 601ab9ad2b624e3b5e04eed927a08884c885c72a
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/12/2022
-  ms.locfileid: "63450752"
+  ms.lasthandoff: 03/24/2022
+  ms.locfileid: "64403666"
 landingContent:
 - title: Genel bakış
   linkLists:

@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 38bfde92a2988cd8bdbca770402af96a4b9c5134
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 40178e42737bdfea756db55658aaeb988ad4f19f
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63321841"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498747"
 ---
 # <a name="prioritize-incidents-in-microsoft-365-defender"></a>Microsoft 365 Defender'de olayları öncelik Microsoft 365 Defender
 
@@ -43,7 +43,7 @@ Olay **sırası,** cihazlar, kullanıcılar ve posta kutuları arasında oluştu
 
 Microsoft 365 Defender portalının hızlı **başlatılmasında Olaylar & veya >'den** olay <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">sırasına Microsoft 365 Defender</a>. İşte bir örnek.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="Olay sırası örneği." lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="Portalda iş sırasındaki olayın Microsoft 365 Defender." lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
 
 En **son olaylar ve uyarılar** bölümünde, alınan uyarı sayısının ve son 24 saat içinde oluşturulan olay sayısının grafiği gösterilir.
 
@@ -66,7 +66,7 @@ Olay **listesinin** üzerindeki Filtreler listesinde o anda uygulanmış olan fi
 
 Varsayılan olay sırasında Filtre'yi seçerek **filtrelenmiş bir** olay kümesi belirttiğiniz Filtre bölmesini görebilirsiniz. İşte bir örnek.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-filters.png" alt-text="Olay sırası için filtreler bölmesi örneği." lightbox="../../media/incidents-queue/incidents-ss-incidents-filters.png":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-filters.png" alt-text="Uygulama portalında olay sırası için Filtreler Microsoft 365 Defender." lightbox="../../media/incidents-queue/incidents-ss-incidents-filters.png":::
 
 Ayrıca, olaylar **listesinin** üstündeki Filtreler listesinde filtrelerden herhangi **birini** seçerek De Filtre bölmesini görebilirsiniz.
 
@@ -78,7 +78,7 @@ Bu tabloda, kullanılabilen filtre adları listelenmiş olur.
 | Önem Derecesi | Bir olayın önem derecesi, varlığınız üzerindeki etkisini gösterir. Önem derecesi ne kadar yüksek ise, etkisi o kadar büyük olur ve genellikle en acil dikkat gerektirir. Yüksek **,** **Orta,** Düşük **veya** **Bilgilendirme'yi seçin**. |
 | Olay ataması | Atanan kullanıcı veya kullanıcıları seçin. |
 | Birden çok hizmet kaynağı  | Filtrenin birden çok hizmet kaynağı için geçerli olup olmadığını belirtin. |
-| Hizmet kaynakları  | Uyarı içeren olayları belirtin: Uygulama Yönetimi, Microsoft 365 Defender, Office 365 için Microsoft Defender, Uç Nokta için Microsoft Defender, Kimlik için Microsoft Defender, Bulut Uygulamaları için Microsoft Defender. |
+| Hizmet kaynakları  | Uyarı içeren olayları belirtme: Uygulama Yönetimi, Microsoft 365 Defender, Office 365 için Microsoft Defender, Uç Nokta için Microsoft Defender, Kimlik için Microsoft Defender, Microsoft Defender for Cloud Apps. |
 | Etiketler | Listeden bir veya birden çok etiket adı seçin. |
 | Birden çok kategori  | Filtrenin birden çok kategori için olup olmadığını belirtin. |
 | Kategoriler | Görülen belirli taktiklere, tekniklere veya saldırı bileşenlerine odaklanmak için kategorileri seçin. |
@@ -105,7 +105,7 @@ Olay sırasında yararlı bir filtre yapılandırdıktan sonra, tarayıcı sekme
 - Atanmamış olaylar
 - Yüksek önem düzeyi olan, atanmamış olaylar
 - Bana atanan olaylar
-- Bana ve Uç Nokta için Microsoft Defender'a atanan olaylar
+- Bana ve bana atanan Uç Nokta için Microsoft Defender
 - Belirli bir etiket veya etikete sahip olaylar
 - Belirli bir tehdit kategorisine sahip olaylar
 - Belirli bir ilişkili tehdit ile ilgili olaylar
@@ -142,5 +142,5 @@ En yüksek önceliğin hangi olayı gerektirdiğini belirledikten sonra, o olay�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Olaylara genel bakış](incidents-overview.md)
-- [Olayları yönetme](manage-incidents.md)
-- [Olayları araştırma](investigate-incidents.md)
+- [Olayları yönetin](manage-incidents.md)
+- [Olayları araştırın](investigate-incidents.md)

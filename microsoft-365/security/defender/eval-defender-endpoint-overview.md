@@ -22,12 +22,12 @@ ms.collection:
 - m365solution-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 24600644e08bdc2b0a208d68d6da1078543bd2bd
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 05dbf222762837f2916a76cc5b183a99cd981101
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63325957"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755108"
 ---
 # <a name="step-4-evaluate-microsoft-defender-for-endpoint-overview"></a>Adım 4. Uç nokta için Microsoft Defender'ı değerlendirmeye genel bakış
 
@@ -41,7 +41,7 @@ Bu makalede, Uç Nokta için Microsoft Defender'ı etkinleştirme ve pilot uygul
 
 Uç Nokta için Microsoft Defender'ı etkinleştirmek ve pilot olarak kullanmak için aşağıdaki adımları kullanın.
 
-![Defender değerlendirme ortamına Uç Nokta için Microsoft Defender ekleme adımları.](../../media/defender/m365-defender-endpoint-eval-steps.png)
+:::image type="content" source="../../media/defender/m365-defender-endpoint-eval-steps.png" alt-text="Microsoft Defender değerlendirme ortamına Uç Nokta için Microsoft Defender ekleme adımları" lightbox="../../media/defender/m365-defender-endpoint-eval-steps.png":::
 
 
 Aşağıdaki tabloda, çizimde yer alan adımlar açık gösterilmiştir.
@@ -50,6 +50,4 @@ Aşağıdaki tabloda, çizimde yer alan adımlar açık gösterilmiştir.
 |---------|---------|
 | [1. Adım. Mimari gereksinimlerini ve temel kavramları gözden geçirin](eval-defender-endpoint-architecture.md)    | Uç nokta mimarisi için Defender'ı ve size kullanılabilir özellikleri anlıyoruz.       |
 |[2. Adım. Değerlendirme ortamını etkinleştirme](eval-defender-endpoint-enable-eval.md)     |   Değerlendirme ortamını ayarlama adımlarını izleyin.      |
-|[3. Adım. Pilot ayarlama ](eval-defender-endpoint-pilot.md)    |    Pilot grubunızı doğrulayın, benzetimler çalıştırın ve önemli özelliklerle panoları yakından takip edin.     |
-
-
+|[3. Adım. Pilot ayarlama ](eval-defender-endpoint-pilot.md)    |    Pilot grubunızı doğrulayın, benzetimler çalıştırın ve önemli özelliklerle panoları yakından takip edin. |

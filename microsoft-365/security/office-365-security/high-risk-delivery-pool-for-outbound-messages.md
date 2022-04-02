@@ -17,12 +17,12 @@ ms.collection:
 description: Teslim havuzlarının, veri merkezlerindeki e-posta sunucularının itibarını Microsoft 365 öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: cbfcb7063f839506b81ee244eadfce622c513c45
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: 273d105ca600face4d79d70fc1622dfce8bf9f5e
+ms.sourcegitcommit: 601ab9ad2b624e3b5e04eed927a08884c885c72a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62996110"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "64403855"
 ---
 # <a name="outbound-delivery-pools"></a>Giden teslim havuzları
 
@@ -30,15 +30,16 @@ ms.locfileid: "62996110"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 E-posta sunucuları Microsoft 365 istenmeyen posta göndermeye geçici olarak neden olabilir. Örneğin, şirket içi e-posta kuruluşunda kötü amaçlı veya kötü amaçlı bir istenmeyen posta saldırısı, şirket içi postayı Microsoft 365 veya hesaplarda Microsoft 365 güvenliği ihlal ediyor. Ayrıca, saldırganlar iletileri yayın ve iletme yoluyla göndererek algılamayı Microsoft 365 dener.
 
-Bu senaryolar, etkilenen veri merkezi sunucularının Microsoft 365 üçüncü taraf engellenen listelerde görünmesine neden olabilir. Bu engellenenler listesi kullanan hedef e-posta kuruluşları bu ileti kaynaklarından gelen e-postaları reddeder.
+Bu senaryolar, etkilenen veri merkezi sunucularının Microsoft 365 üçüncü taraf engellenen listelerde görünmesine neden olabilir. Bu engellenenler listesi kullanan hedef e-posta kuruluşları, bu hedef e-posta Microsoft 365 reddeder.
 
 ## <a name="high-risk-delivery-pool"></a>Yüksek riskli teslim havuzu
-Bunu önlemek için, istenmeyen posta olarak Microsoft 365 veya hizmet veya giden istenmeyen posta ilkelerinin gönderen sınırlarını aşan tüm giden iletiler, yüksek riskli teslim havuzu üzerinden _gönderilir_.[](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options) [](configure-the-outbound-spam-policy.md)
+
+IP adreslerimizin engellenmiş olması için, Microsoft 365 veri merkezi sunucularından gelen ve istenmeyen posta olduğu belirlenen tüm iletiler yüksek riskli teslim havuzu _üzerinden gönderilir_.
 
 Yüksek riskli teslim havuzu, yalnızca "düşük kaliteli" iletiler (örneğin, istenmeyen posta ve geri çıktı) göndermek için kullanılan, giden e-posta için ayrı bir IP [adres havuzudur](backscatter-messages-and-eop.md). Yüksek riskli teslim havuzunun kullanımı, giden e-postanın istenmeyen posta göndermesi için normal IP adres havuzunun önlenmesine yardımcı olur. Giden e-posta için normal IP adres havuzu "yüksek kaliteli" ileti gönderme itibarını koruyarak bu IP adresinin IP engellenen listelerde görünme olasılığını azaltır.
 
@@ -48,6 +49,11 @@ Daha fazla bilgi için bkz. [Giden istenmeyen postaları denetleme](outbound-spa
 
 > [!NOTE]
 > Kaynak e-posta etki alanının A kaydı veya genel DNS'de tanımlanmış MX kaydı olmayan iletiler, istenmeyen posta veya gönderme sınırı yok durumuna bakılmaksızın her zaman yüksek riskli teslim havuzu yoluyla yönlendirilmez.
+>
+> Aşağıdaki sınırları aşan iletiler engellenir, böylece yüksek riskli teslim havuzu üzerinden gönderilmezler:
+>
+> - [Hizmetin gönderme sınırları](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options).
+> - [Gönderenlerin posta göndermesi](configure-the-outbound-spam-policy.md) kısıtlanmış durumda olan giden istenmeyen posta ilkeleri.
 
 ### <a name="bounce-messages"></a>Geri dönen iletiler
 
@@ -62,19 +68,18 @@ NDR'lerdeki bir dalgalanmanın olası nedenleri şunlardır:
 
 Tüm bu sorunlar, hizmet tarafından işlenen NDR sayısının aniden artmasına neden olabilir. Çoğu zaman, bu NDR'ler diğer e-posta sunucuları ve hizmetlere (geri çıktı çıktısı olarak da bilinir _[) istenmeyen posta olarak görünür](backscatter-messages-and-eop.md)_.
 
-
 ### <a name="relay-pool"></a>Geçiş havuzu
 
 Bazı senaryolarda Microsoft 365 aracılığıyla iletilen veya iletilene iletiler özel bir geçiş havuzu kullanılarak gönderilir, çünkü hedef iletileri Microsoft 365 olarak değerlendirmez. Otomatik iletme veya e-postayı dışarı aktarmanın yasal ve geçersiz senaryoları olduğundan bu e-posta trafiğini yalıtmak çok Microsoft 365. Yüksek riskli teslim havuzuna benzer şekilde, geçişli posta için ayrı bir IP adresi havuzu kullanılır. Bu adres havuzu yayımlanmaz çünkü sık değişebilir ve bu havuz, yayımlanacak SPF kaydının bir parçası Microsoft 365.
 
 Microsoft 365 iletilen iletiyi güvenli bir şekilde sunmiz için özgün gönderenin yasal olduğunu doğrulamamız gerekir.
 
-İletilen/geçiş yapılan ileti, geçiş havuzunun kullanımından kaçınmak için aşağıdaki ölçütlerden birini karşılamalı:
+İletilen veya geçiş yapılan ileti, geçiş havuzunun kullanımından kaçınmak için aşağıdaki ölçütlerden birini karşılamalı:
 
 - Giden gönderen kabul edilen bir [etki alanındadır](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 - İleti geldiğinde SPF Microsoft 365.
 - Mesaj gönderici etki alanında DKIM, geldiğinde Microsoft 365.
- 
+
 Giden sunucu IP'sinde (geçiş havuzu 40.95.0.0/16 aralığında yer alır) bakarak veya giden sunucu adına bakarak (adı "rly" olan) bir iletinin geçiş havuzu aracılığıyla gönderildiğini öğrenebilirsiniz.
 
 Gönderenin kimliğini doğrulaymiz durumlarda, alıcı e-posta sisteminin iletilene iletinin güvenilir bir kaynaktan olduğunu an önce ansına yardımcı olmak için Gönderen Yeniden Yazma Düzeni'ne (SRS) kullanıyoruz. Bunun nasıl çalıştığını ve gönderen etki alanının, başka bir programda Gönderen Yeniden Yazma [Düzeni'ne (SRS)](/office365/troubleshoot/antispam/sender-rewriting-scheme) kimlik doğrulamayı geçeci olduğundan emin olmak için neler Office 365.
@@ -84,4 +89,3 @@ DKIM'nin çalışması için, etki alanı gönderirken DKIM'yi etkinleştirmeye 
 Özel etki alanları eklemek için, Etki alanına [etki alanı ekleme sayfasındaki Microsoft 365](../../admin/setup/add-domain.md).
 
 Etki alanınıza yönelik MX kaydı üçüncü taraf bir hizmeti veya şirket içi bir e-posta sunucusunu kullanıyorsa, Bağlayıcılar için Gelişmiş [Filtreleme'ye gerek vardır](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors). İyileştirilmiş Filtreleme, SPF doğrulamanın gelen posta için doğru olduğunu ve geçiş havuzu üzerinden e-posta gönderilmesini önlemeyi sağlar.
-

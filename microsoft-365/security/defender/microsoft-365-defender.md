@@ -26,12 +26,12 @@ ms.custom:
 - intro-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 28f50cbd362104ba910ed5560e184036fc7f8703
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: 15f4d179d3bc5590e014a15622e462932e8dea7c
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63754657"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498725"
 ---
 # <a name="microsoft-365-defender"></a>Microsoft 365 Defender
 
@@ -52,7 +52,7 @@ Tümleşik Microsoft 365 Defender çözümüyle, güvenlik uzmanları bu ürünl
 <table><tr><td><center><b><a href="/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint"><b>Uç Nokta için Microsoft Defender</b></center></a></td>
 <td><center><b><a href="/microsoft-365/security/office-365-security/overview"><b>Office 365 için Microsoft Defender</b></center></a></td>
 <td><center><b><a href="/defender-for-identity/"><b>Kimlik için Microsoft Defender</b></a></center></td>
-<td><center><b><a href="/cloud-app-security/"><b>Bulut Uygulamaları için Microsoft Defender</b></a></center></td>
+<td><center><b><a href="/cloud-app-security/"><b>Microsoft Defender for Cloud Apps</b></a></center></td>
 </tr>
 </table>
 <br>
@@ -68,9 +68,9 @@ Bu etkileşimli kılavuzda, iş yerleriyle birlikte organizasyonlarınızı nas�
 Microsoft 365 Defender korumaları:
 
 - **Uç Nokta için Defender ile** Uç Noktalar - Uç Nokta için Defender, koruma, ihlal sonrası algılama, otomatik soruşturma ve yanıt için birleşik bir uç nokta platformudur.
-- **Office 365 için Defender** ile e-posta ve işbirliği - Office 365 için Defender, e-posta iletileri, bağlantılar (URL'ler) ve işbirliği araçları tarafından tehditlere karşı organizasyonlarınızı korur.
-- **Kimlik ve Azure Active Directory için Defender (Azure AD)** Kimlik Koruması ile Kimlikler - Kimlik için Defender şirket içi Active Directory Etki Alanı Hizmetlerinizi (AD DS) kullanarak, gelişmiş tehditleri, güvenliği tehlikeye atılmış kimlikleri ve kuruluşa yönlendirilen kötü amaçlı insider eylemlerini tanımlamak, algılamak ve araştırmak üzere sinyaller gönderir. Azure AD Kimlik Koruması, bulut tabanlı Azure AD'niz içinde kimlik tabanlı riskleri algılamayı ve düzeltmeyi otomatik hale getiriyor.
-- **Bulut Uygulamaları için Microsoft Defender** ile uygulamalar - Bulut Uygulamaları için Microsoft Defender, bulut uygulamalarınız için derin görünürlük, güçlü veri denetimleri ve gelişmiş tehdit koruması sağlayan kapsamlı bir çapraz SaaS çözümüdür.
+- **E-posta ve Office 365 için Defender** işbirliği - Office 365 için Defender e-posta iletileri, bağlantılar (URL'ler) ve işbirliği araçları tarafından tehditlere karşı organizasyonlarınızı korur.
+- **Kimlik ve Azure Active Directory için Defender (Azure AD)** Kimlik Koruması ile Kimlikler - Kimlik için Defender, şirket içi Active Directory Etki Alanı Hizmetlerinizi (AD DS) kullanarak gelişmiş tehditleri, güvenliği tehlikeye atılmış kimlikleri ve kuruluşa yönlendirilen kötü amaçlı insider eylemlerini tanımlamak, algılamak ve araştırmak üzere sinyaller kullanır. Azure AD Kimlik Koruması, bulut tabanlı Azure AD'niz içinde kimlik tabanlı riskleri algılamayı ve düzeltmeyi otomatik hale getiriyor.
+- **Gelişmiş Microsoft Defender for Cloud Apps** uygulamaları - Microsoft Defender for Cloud Apps kapsamlı bir çapraz SaaS çözümü olup, bulut uygulamalarınız için derin görünürlük, güçlü veri denetimleri ve gelişmiş tehdit koruması sağlayan kapsamlı bir çapraz-SaaS çözümüdür.
 
 >[!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4Bzww]
 
@@ -83,15 +83,15 @@ Microsoft 365 Defender'in benzersiz ürün arası katmanı tek tek hizmet bileş
 
 Burada, portalında ürünler arasındaki tüm ilgili Microsoft 365 Defender ilgili uyarıları tek bir olayla nasıl ilişkili olduğu bir örnek ve almaktadır.
 
-:::image type="content" source="../../media/overview-incident.png" alt-text="Olayı genel bakış sayfası örneği" lightbox="../../media/overview-incident.png":::
+:::image type="content" source="../../media/overview-incident.png" alt-text="Olay genel bakış sayfası" lightbox="../../media/overview-incident.png":::
 
 Bir olayla ilgili uyarıların listesi örneği:
 
-:::image type="content" source="../../media/incident-list.png" alt-text="Olay için uyarı listesi örneği" lightbox="../../media/incident-list.png":::
+:::image type="content" source="../../media/incident-list.png" alt-text="Bir olay için uyarıların listesi" lightbox="../../media/incident-list.png":::
 
 Burada, e-postanın üzerine sorgu tabanlı avlama ve uç nokta ham verileri için bir örnek vesüreyi  edinebilirsiniz.
 
-:::image type="content" source="../../media/advanced-hunting.png" alt-text="Gelişmiş av ve sorgu örneği" lightbox="../../media/advanced-hunting.png":::
+:::image type="content" source="../../media/advanced-hunting.png" alt-text=" Sorgu ayrıntılarının yer olduğu Gelişmiş Av sayfası" lightbox="../../media/advanced-hunting.png":::
 
 Microsoft 365 Defender arası özellikler şunlardır:
 
@@ -99,10 +99,10 @@ Microsoft 365 Defender arası özellikler şunlardır:
 - **Birleştirilmiş olay** sırası - Güvenlik uzmanlarının tam saldırı kapsamının sağlanmasıyla kritik öneme odaklanmalarına yardımcı olmak için, etkileilen varlıklar ve otomatik düzeltme eylemleri birlikte gruplanmıştır ve zamanında ortaya çıkar. 
 - **Tehditlere otomatik yanıt** - Saldırının ilerlemesini durdurmak için tehdit Microsoft 365 Defender ürünler arasında gerçek zamanlı olarak kritik tehdit bilgileri paylaşılır. 
 
-   Örneğin, kötü amaçlı bir dosya Uç Nokta için Defender tarafından korunan bir uç noktada algılanırsa, Office 365 için Defender'a dosyayı tüm e-posta iletilerinden taramasını ve kaldırmasını gönderir. Tüm dosya, tüm güvenlik paketi tarafından Microsoft 365 engellenir.
+   Örneğin, Uç Nokta için Defender tarafından korunan bir uç noktada kötü amaçlı bir dosya algılanırsa, Office 365 için Defender tüm e-posta iletilerinden dosyayı taramasını ve kaldırmasını sağlar. Tüm dosya, tüm güvenlik paketi tarafından Microsoft 365 engellenir.
 
 - **Güvenliği tehlikeye atılmış cihazlar,** kullanıcı kimlikleri ve posta kutuları için kendi kendine güven ; Microsoft 365 Defender, etkilenen varlıkları güvenli bir hale geri dönmek için yapay zeka tarafından desteklenen otomatik eylemleri ve çalışma kitaplarını kullanır. Microsoft 365 Defender, bir olayla ilgili olarak etkilenmiş tüm varlıkların mümkün olduğunca otomatik olarak düzeltilemelerini sağlamak için paket ürünlerinin otomatik düzeltme özelliklerini kullanacaktır.
-- **Ürün arası tehdit** avı - Güvenlik ekipleri, çeşitli koruma ürünleri tarafından toplanan ham veriler üzerinde kendi özel sorgularını oluşturarak tehdit işaretlerini yakalamak için benzersiz kuruluş bilgilerinden faydalanma olanağına sahip olabilir. Microsoft 365 Defender, uç noktada 30 günlük tarihi ham sinyallere sorgu tabanlı erişim, uç nokta genelinde verileri uyarma ve verilerinizi koruma için Defender'Office 365 sağlar.
+- **Ürün arası tehdit** avı - Güvenlik ekipleri, çeşitli koruma ürünleri tarafından toplanan ham veriler üzerinde kendi özel sorgularını oluşturarak tehdit işaretlerini yakalamak için benzersiz kuruluş bilgilerinden faydalanma olanağına sahip olabilir. Microsoft 365 Defender son nokta genelinde 30 günlük tarihi ham sinyallere sorgu tabanlı erişim ve uç nokta genelinde verileri uyarın ve verileri Office 365 için Defender sağlar.
 
 ## <a name="get-started"></a>Kullanmaya başlayın
 
@@ -117,10 +117,10 @@ Bu <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">M
 
 Bu tek cam bölmesi, Microsoft 365 Defender portalı ve Office 365 Güvenlik ve Uyumluluk Merkezi gibi mevcut Microsoft güvenlik portallarından & getirir. Hızlı Microsoft 365 Defender erişimi vurgular, daha basit düzenler ve daha kolay kullanım için ilgili bilgileri bir araya getirir. İçindekiler:
 
-- Office 365 **[için Microsoft Defender Office 365](/microsoft-365/security/office-365-security/defender-for-office-365)**, e-postayı korumak ve kaynakları korumak için bir dizi engelleme, algılama, araştırma ve arama özelliğiyle kuruluşların kuruluşlarının güvenliğini Office 365 yardımcı olur.
-- **[Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint/microsoft-defender-advanced-threat-protection)** , koruma, ihlal sonrası algılama, otomatik araştırma ve organizasyon cihazları için yanıt sağlar.
+- **[Office 365 için Microsoft Defender](/microsoft-365/security/office-365-security/defender-for-office-365)** Office 365 için Microsoft Defender e-postayı korumak ve kaynakları korumak için bir dizi engelleme, algılama, araştırma ve arama özelliğiyle kuruluşların kuruluşlarının güvenliğini Office 365 yardımcı olur.
+- **[Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint/microsoft-defender-advanced-threat-protection)** koruma, ihlal sonrası algılama, otomatik soruşturma ve organizasyon cihazları için yanıt sağlar.
 - **[Microsoft 365 Defender](microsoft-365-defender.md)**, Microsoft'un etki alanları genelinde tehdit verilerini otomatik olarak çözümlemek ve tek bir panoya saldırının resmini oluşturmak için Microsoft 365 güvenlik portföyünü yararlanan Genişletilmiş Algılama ve *Yanıt (* XDR) çözümünün bir parçasıdır.
-- **[Bulut Uygulamaları için Microsoft Defender](/cloud-app-security/)** kapsamlı bir saas ve PaaS çözümü olup, bulut uygulamalarınız için derin görünürlük, güçlü veri denetimleri ve gelişmiş tehdit koruması sağlar.
+- **[Microsoft Defender for Cloud Apps](/cloud-app-security/)** kapsamlı bir saas ve PaaS çözümü olup bulut uygulamalarınız için derin görünürlük, güçlü veri denetimleri ve gelişmiş tehdit koruması sağlayan kapsamlı bir uygulamadır.
 
 Güvenlik ve Uyumluluk Merkezi'nde veya Güvenlik Office 365'nde & hakkında bilgi Microsoft 365 Defender:
 
@@ -128,11 +128,11 @@ Güvenlik ve Uyumluluk Merkezi'nde veya Güvenlik Office 365'nde & hakkında bil
 - [Microsoft 365 Defender'da Uç Nokta için Defender](microsoft-365-security-center-mde.md)
 
 > [!NOTE]
-> Bu Microsoft 365 Defender portalında rol tabanlı var olan erişim zorunlu kılınıyor ve her güvenlik modeli birleştirilmiş portala taşınacak. Birbirine yakınan her iş yükünün kendi rol tabanlı erişimi vardır. Zaten ürünlerde yer alan roller portala otomatik olarak Microsoft 365 Defender yakınsaacaktır. Bununla birlikte, Bulut Uygulamaları için Microsoft Defender kendi rollerini ve izinlerini işlemeye devam ediyor.
+> Bu Microsoft 365 Defender portalında rol tabanlı var olan erişim zorunlu kılınıyor ve her güvenlik modeli birleştirilmiş portala taşınacak. Birbirine yakınan her iş yükünün kendi rol tabanlı erişimi vardır. Zaten ürünlerde yer alan roller portala otomatik olarak Microsoft 365 Defender yakınsaacaktır. Bununla birlikte, Microsoft Defender for Cloud Apps rollerini ve izinlerini işlemeye devam ediyor.
 
 ### <a name="what-to-expect"></a>Neler olabilir?
 
-<a href="https://go.microsoft.com/fwlink/p/?linkid=2077143" target="_blank">Office 365 Güvenlik ve</a> Uyumluluk Merkezi'nde & güvenlik Microsoft 365 tüm güvenlik içeriği artık Microsoft 365 Defender <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">portalda bulunabilir</a>.
+Office 365 Güvenlik Merkezi'nde <a href="https://go.microsoft.com/fwlink/p/?linkid=2077143" target="_blank">&</a> güvenlik Microsoft 365 güvenlik merkezi tüm güvenlik içeriği artık Microsoft 365 Defender <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">portalda bulunabilir</a>.
 
 Güvenlik Microsoft 365 Defender, farklı iş yüklerinden gelen sinyalleri aşağıdakiler için bir dizi birleşik deneyime getirerek güvenlik ekiplerinin saldırılarını araştırmalarına ve yanıtlamalarına yardımcı olur:
 
@@ -141,7 +141,7 @@ Güvenlik Microsoft 365 Defender, farklı iş yüklerinden gelen sinyalleri aşa
 - İşlem merkezi
 - Tehdit analizi
 
-Microsoft 365 Defender için Microsoft Defender ile Uç  Nokta için Microsoft Defender'ı birleştirken Office 365 netlik ve ortak hedefleri vurgular. Birleştirme, aşağıda listelenen önceliklere dayalıdır ve her güvenlik paketinin şu özelliklerle bir araya getirdiği özelliklerden ödün vermeden yapılır:
+Microsoft 365 Defender netlik *, açıklığı ve iki tablo* arasında birleşarak ortak Office 365 için Microsoft Defender Uç Nokta için Microsoft Defender. Birleştirme, aşağıda listelenen önceliklere dayalıdır ve her güvenlik paketinin şu özelliklerle bir araya getirdiği özelliklerden ödün vermeden yapılır:
 
 - Ortak yapı taşları
 - Yaygın terminoloji
@@ -149,19 +149,19 @@ Microsoft 365 Defender için Microsoft Defender ile Uç  Nokta için Microsoft D
 - Diğer iş yükleriyle birlikte özellik eşlik
 
 > [!NOTE]
-> Geçiş Microsoft 365 Defender, müşterilerin geçiş adımlarına ihtiyacı kalmadan veya yeni bir lisans satın almaya gerek kalmadan erişilebilir. Örneğin, bu yeni portala E3 aboneliği olan yöneticiler aynı Office 365 için Microsoft Defender Plan 1 ve Plan 2'ye sahip olanlar gibi erişilebilir; bununla birlikte, Exchange Online Protection veya Office 365 Plan 1 müşterileri için Defender yalnızca abonelik lisanslarının desteklediği güvenlik özelliklerini görebilir. Portalın amacı güvenliği merkezileştirmektir.
+> Geçiş Microsoft 365 Defender, müşterilerin geçiş adımlarına ihtiyacı kalmadan veya yeni bir lisans satın almaya gerek kalmadan erişilebilir. Örneğin, bu yeni portala E3 aboneliği olan yöneticiler aynı Office 365 için Microsoft Defender Plan 1 ve Plan 2'ye sahip olduğu gibi erişilebilir; ancak Exchange Online Protection veya Office 365 için Defender  Plan 1 müşterileri yalnızca abonelik lisanslarının desteklediği güvenlik özelliklerini görebilir. Portalın amacı güvenliği merkezileştirmektir.
 
 ### <a name="unified-investigations"></a>Birleşik soruşturmalar
 
 Güvenlik bilgilerini merkezileştirerek, farklı güvenlik olaylarını araştıracak tek bir Microsoft 365. Birincil örnek olarak Olaylar **altındaki** **olaylar ve & başlatma uyarılarının** yer Microsoft 365 Defender.
 
-:::image type="content" source="../../media/converged-incidents-2.png.png" alt-text="Microsoft 365 Defender'da Olaylar Microsoft 365 Defender" lightbox="../../media/converged-incidents-2.png.png":::
+:::image type="content" source="../../media/converged-incidents-2.png.png" alt-text="Microsoft 365 Defender portalında Olaylar sayfası" lightbox="../../media/converged-incidents-2.png.png":::
 
 Olay adı seçerek, güvenlik bilgilerini merkezileştirmenin değerini gösteren bir sayfa görüntülenir.
 
-:::image type="content" source="../../media/converged-incident-info-3.png" alt-text="Başka bir olay için Özet Microsoft 365 Defender" lightbox="../../media/converged-incident-info-3.png":::
+:::image type="content" source="../../media/converged-incident-info-3.png" alt-text="Portalda bir olay için Microsoft 365 Defender sayfası" lightbox="../../media/converged-incident-info-3.png":::
 
-Olay sayfasının üst kısmında Özet, **Uyarılar,** **Cihazlar****,** **Kullanıcılar**, **Posta** Kutuları, Soruşturmalar **, Kanıt** ve yanıt ve Diğer **Graph görebilirsiniz.** Daha ayrıntılı bilgi için bu sekmeleri seçin. Örneğin, Kullanıcılar sekmesi  yakınsatan iş yüklerinden (Uç Nokta için Microsoft Defender, Kimlik için Microsoft Defender ve Bulut Uygulamaları için Microsoft Defender) ve şirket içi Active Directory Etki Alanı Hizmetleri (AD DS), Azure AD ve üçüncü taraf kimlik sağlayıcıları gibi çeşitli kaynaklardan gelen bilgileri görüntüler. Daha fazla bilgi için bkz [. kullanıcıları araştırma](investigate-users.md).
+Olay sayfasının üst kısmında Özet, **Uyarılar,** **Cihazlar****,** **Kullanıcılar**, **Posta** Kutuları, Soruşturmalar **, Kanıt** ve yanıt ve Diğer **Graph görebilirsiniz.** Daha ayrıntılı bilgi için bu sekmeleri seçin. Örneğin, Kullanıcılar sekmesi  yakınsatan iş yüklerinden (Uç Nokta için Microsoft Defender, Kimlik için Microsoft Defender, Microsoft Defender for Cloud Apps) ve çeşitli kaynaklardan kullanıcılar için bilgileri görüntüler. şirket içi Active Directory Alanı Hizmetleri (AD DS), Azure AD ve üçüncü taraf kimlik sağlayıcıları sağlar. Daha fazla bilgi için bkz [. kullanıcıları araştırma](investigate-users.md).
 
 Zaman alıp ortamınız içinde bulunan olayları gözden geçirin, bu sekmelerin detaya inin ve farklı tehdit türlerine karşı olaylarda sağlanan bilgilere nasıl erişin, bunu anlamak için alıştırma yapın.
 
@@ -173,19 +173,19 @@ Ortak denetimler ve içerik aynı yerde görünür ya da tek bir veri akışınd
 
 #### <a name="unified-settings"></a>Birleştirilmiş ayarlar
 
-:::image type="content" source="../../media/converged-add-role-9.png" alt-text="Portalda yer alan Microsoft 365 Defender sayfası" lightbox="../../media/converged-add-role-9.png":::
+:::image type="content" source="../../media/converged-add-role-9.png" alt-text="Ayarlar portalında en Microsoft 365 Defender sayfası" lightbox="../../media/converged-add-role-9.png":::
 
 #### <a name="permissions--roles"></a>İzinler & rolleri
 
-:::image type="content" source="../../media/converged-roles-5.png" alt-text="Grupların&, Roller'in ve Cihaz gruplarının uç noktaları rollerini & izinler ve Roller sayfası" lightbox="../../media/converged-roles-5.png":::
+:::image type="content" source="../../media/converged-roles-5.png" alt-text="İzinler ve & sayfasında görüntülenen grupların uç & rolleri" lightbox="../../media/converged-roles-5.png":::
 
-Access Microsoft 365 Defender, Azure AD genel rolleri veya özel roller kullanılarak yapılandırılır. Uç Nokta için Defender için bkz[. Microsoft 365 Defender portalına kullanıcı erişimi atama](/microsoft-365/security/defender-endpoint/assign-portal-access). Yeni kullanıcı Office 365 Defender için bkz. [Aşağıdaki Microsoft 365 uyumluluk merkezi ve Microsoft 365 Defender](../office-365-security/permissions-microsoft-365-compliance-security.md).
+Access Microsoft 365 Defender, Azure AD genel rolleri veya özel roller kullanılarak yapılandırılır. Uç Nokta için Defender için bkz[. Microsoft 365 Defender portalına kullanıcı erişimi atama](/microsoft-365/security/defender-endpoint/assign-portal-access). Daha Office 365 için Defender için bkz[. Sitenin Microsoft 365 uyumluluk merkezi ve Microsoft 365 Defender](../office-365-security/permissions-microsoft-365-compliance-security.md).
 
 - E-postanıza erişimi [yönetme hakkında daha fazla Microsoft 365 Defender](m365d-permissions.md)
 - Aynı dosyada özel [roller oluşturma hakkında daha](custom-roles.md) fazla Microsoft 365 Defender
 
 > [!NOTE]
-> Microsoft 365 Defender'ta Uç Nokta için Microsoft Defender, portalda erişim verilen şekilde yönetilen güvenlik hizmeti [sağlayıcılarına (MSSP)](/windows/security/threat-protection/microsoft-defender-atp/grant-mssp-access) [erişim Microsoft 365 Defender destekler](./mssp-access.md).
+> Uç Nokta için Microsoft Defender Microsoft 365 Defender, portalda erişim verilen şekilde yönetilen güvenlik hizmeti [sağlayıcılarına (MSSP)](/windows/security/threat-protection/microsoft-defender-atp/grant-mssp-access) erişim [Microsoft 365 Defender destekler](./mssp-access.md).
 
 #### <a name="integrated-reports"></a>Tümleşik raporlar
 
@@ -202,7 +202,7 @@ Kartlar şu kategorilere ayrılır:
 - **Kimlikler**- Kuruluş kimliklerini takip etmek ve şüpheli veya riskli davranışları izlemek. [Kimlik koruması hakkında daha fazla bilgi edinmek için:](/azure/active-directory/identity-protection/overview-identity-protection)
 - **Veriler** - Yetkisiz veri açıklamaya neden olan kullanıcı etkinliğini takip etmeye yardımcı olur.
 - **Cihazlar** - Cihazlarınız için uyarılar, ihlal etkinliği ve diğer tehditlerle ilgili güncel bilgiler edinebilirsiniz.
-- **Uygulamalar** - Bulut uygulamalarının organizasyonda nasıl kullanıldıklarına dair fikir edinin. [Bulut Uygulamaları için Defender'da bulunan uygulamalar hakkında daha fazla bilgi edinin](/cloud-app-security/discovered-apps).
+- **Uygulamalar** - Bulut uygulamalarının organizasyonda nasıl kullanıldıklarına dair fikir edinin. [Bulut için Defender Uygulamaları'nın keşfedilen uygulamaları hakkında daha fazla bilgi edinin](/cloud-app-security/discovered-apps).
 
 
 #### <a name="search-across-entities-preview"></a>Varlıklar arasında arama (Önizleme)
@@ -214,7 +214,7 @@ Arama çubuğu sayfanın en üstünde yer alıyor. Siz yazarak, varlıkları dah
 Uç Nokta için Defender ve Kimlik için Defender'da aşağıdaki varlıklar arasında arama yapabilirsiniz: 
 
 - **Cihazlar** - Hem Uç Nokta için Defender hem de Kimlik için Defender için de destekler. Arama işleçlerinin kullanımını destekler. 
-- **Kullanıcılar** - Uç Nokta için Defender, Kimlik için Defender ve Bulut Uygulamaları için Defender'da destekler. 
+- **Kullanıcılar** - Uç Nokta için Defender, Kimlik için Defender ve diğer Bulut için Defender destekler. 
 - **Dosyalar, IP'ler ve URL'ler** - Uç Nokta için Defender'dakiyle aynı özelliklerdir.
 
     >[!NOTE]
@@ -232,9 +232,9 @@ Uç Nokta için Defender ve Kimlik için Defender'da aşağıdaki varlıklar ara
 
 Tehdit analizi tümleşik deneyimi için aşağıdaki yeni ortaya çıkan tehditleri Microsoft 365 Defender ve yanıt verin:
 
-- Uç nokta için Microsoft Defender ile Office 365 için Microsoft Defender arasında daha iyi veri kapsamı; birleştirilmiş olay yönetimi, otomatik soruşturma, düzeltme ve etki alanı genelinde önceden önlem almaya ve yeniden aktif tehdit aramasını mümkün hale getirilmesine yardımcı olur.
-- Uç nokta için Microsoft Defender'dan mevcut uç nokta verilerine ek olarak Office 365 için Microsoft Defender'dan gelen e-postayla ilgili algılamalar ve risk azaltmalar.
-- Tehditle ilgili olaylar görünümü, hem iş sıranızı azaltmak hem de araştırmanızı kolaylaştırmak ve hızlandırmak için uç nokta için Microsoft Defender ve Office 365 için Microsoft Defender genelinde  end-uç saldırı öyküleri olarak uyarıları toplar.
+- Uç Nokta için Microsoft Defender ve Office 365 için Microsoft Defender arasında daha iyi veri kapsamı; birleştirilmiş olay yönetimi, otomatik soruşturma, düzeltme ve etki alanı genelinde önceden önlem almak veya yeniden aktif tehdit aramasını mümkün hale gelir.
+- E-postayla ilgili algılamalar ve Office 365 için Microsoft Defender uç nokta verilerinden edinilen uç nokta verilerine ek olarak Uç Nokta için Microsoft Defender.
+- Tehditle ilgili olaylar görünümü, hem iş sıranızı azaltmak hem de araştırmanızı basitleştirmek ve hızlandırmak için Uç Nokta için Microsoft Defender ve Office 365 için Microsoft Defender genelinde  end-uç saldırı öyküleri olarak uyarıları toplar.
 - Diğer çözümler tarafından algılanan ve engellenen saldırı Microsoft 365 Defender. Ayrıca, daha fazla maruz kalma riskini azaltan ve daha fazla güvenlik önlemi almak için kullanabileceğiniz veriler de vardır.
 - Raporlara acil şekilde odaklanmak, araştırmak ve raporlardan yararlanacak verileri hızla tanımlamanıza yardımcı olmak için işlemılabilir bilgileri öne çıkanlara koyan geliştirilmiş tasarım.
 
@@ -244,12 +244,12 @@ Tehdit analizi tümleşik deneyimi için aşağıdaki yeni ortaya çıkan tehdit
 
 Öğrenme merkezi içinde E-posta & İşbirliği (Office 365 için Microsoft Defender) kılavuzu Uç Nokta (Uç Nokta için Microsoft Defender) ve diğer Microsoft 365 Defender yan yanadır.
 
-Öğrenme merkezi açılır ve "Learning Kullanarak Araştır" gibi konuların çevresinde düzenlenmiş Microsoft 365 Defender. ve "En İyi Uygulamalar Office 365 için Microsoft Defender". Bu bölüm şu anda Microsoft'un içindeki güvenlik Ürün Grubu tarafından hazır bulunduruldu. Her Learning yolu, kavramlar üzerinden geçen bir yansıtıldı süreyi yansıtmaktadır. Örneğin ' Microsoft Defender for Office 365 account is compromiseded olduğunda atılması gereken adımlar' 8 dakika sürecek şekilde projelidir ve çalışmanız çok değerlidir.
+Öğrenme merkezi açılır ve "Learning Kullanarak Araştır" gibi konuların çevresinde düzenlenmiş Microsoft 365 Defender. ve "Office 365 için Microsoft Defender Yöntemleri" gibi) ve "En İyi Uygulamalar" sözlerini kabul edin. Bu bölüm şu anda Microsoft'un içindeki güvenlik Ürün Grubu tarafından hazır bulunduruldu. Her Learning yolu, kavramlar üzerinden geçen bir yansıtıldı süreyi yansıtmaktadır. Örneğin , 'Bir kullanıcı hesabının güvenliği Office 365 için Microsoft Defender adımlar' 8 dakika sürecek şekilde projesi vardır ve çalışmanız sürerken öğrenmeye değerlidir.
 
 İçeriğin üzerine tık olduktan sonra, bu siteye yer işareti eklemek ve yer işaretlerini 'Güvenlik' veya 'Kritik' klasörüne düzenlemek yararlı olabilir. Tüm yol Learning görmek için, ana panelde Tüm bağlantıyı göster'e tıklayın.
 
 > [!NOTE]
-> Microsoft 365 Defender öğrenme merkezi'nin üst kısmında, ürünler (şu anda Microsoft 365 Defender, Uç Nokta için Microsoft Defender ve Office 365 için Microsoft Defender) arasında seçim Office 365. Her bölümün eğitim kaynağı sayısının listelenmiş olduğunu unutmayın. Bu da, öğrenme ve eğitim için kaç kaynağı olduğunu öğrenmenin önemli bir yolu olarak bu kaynak sayısını takip etmeye yardımcı olabilir.
+> Ürünler (şu Microsoft 365 Defender **anda** Microsoft 365 Defender, Uç Nokta için Microsoft Defender ve Office 365 için Microsoft Defender). Her bölümün eğitim kaynağı sayısının listelenmiş olduğunu unutmayın. Bu da, öğrenme ve eğitim için kaç kaynağı olduğunu öğrenmenin önemli bir yolu olarak bu kaynak sayısını takip etmeye yardımcı olabilir.
 >
 > Ürün filtresiyle birlikte, geçerli konular, kaynak türleri (videolardan web seminerlerine), güvenlik alanları, güvenlik rolleri ve ürün özellikleriyle ilgili bilgi ve deneyim düzeyleri listelenir.
 
@@ -301,4 +301,4 @@ Microsoft Learn'in bu öğrenme yolu ile, güvenliğin tehditlerini Microsoft 36
 
 - [Microsoft 365 Defender'daki yenilikler](whats-new.md)
 - [Microsoft 365 Defender'da Office 365 için Microsoft Defender](microsoft-365-security-center-mdo.md)
-- [Microsoft 365 Defender'ta Uç Nokta için Microsoft Defender](microsoft-365-security-center-mde.md)
+- [Uç Nokta için Microsoft Defender'da Microsoft 365 Defender](microsoft-365-security-center-mde.md)

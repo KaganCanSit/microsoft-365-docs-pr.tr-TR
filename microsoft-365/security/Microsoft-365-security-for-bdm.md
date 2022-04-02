@@ -15,59 +15,61 @@ ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
-ms.openlocfilehash: 41b38a3e51644859a1ef10c514b3b6f31d44e76e
-ms.sourcegitcommit: c11d4a2b9cb891ba22e16a96cb9d6389f6482459
+ms.openlocfilehash: 59b74fdc13cc21f0266e0f110935f76656827f65
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62996473"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755180"
 ---
 # <a name="microsoft-365-security-for-business-decision-makers-bdms"></a>Microsoft 365 Karar Vericileri için Güvenlik (BDM)
 
 Bu makalede, kuruluşların şu anda en çok karşılaştığı tehdit ve saldırı senaryolarından bazıları açık Microsoft 365 risklerin azaltılmasına yönelik önerilen eylemler ele alınmaktadır. Microsoft 365 önceden yapılandırılmış çok sayıda güvenlik özelliğiyle birlikte gelir, ancak bu aynı zamanda müşteri olarak bulut hizmetlerine erişmek için kullanılan kimliklerinizi, verilerinizi ve cihazlarınızı güvende altına almak için sorumluluk sahibi olmak da gerekir. Bu kılavuz, Sundararajan (Microsoft Kıdemli Danışman) ve Fareta Beam (Microsoft Bulut Güvenlik Mimarı) tarafından geliştirilmiştir.
 
-Bu makale, kiracınız, e-postanız ve kiracınız e-posta gibi en kritik hizmetleri ve varlıkları yönetmek için kullanılan hesapları korumaktan başlayarak, çalışma önceliğe SharePoint. Güvenliğin yaklaşan olması için yöntemli bir yol sağlar ve aşağıdaki elektronik tabloyla birlikte çalışır, böylece organizasyonu genelinde paydaşlar ve ekipler ile ilerlemenizi izleyebilirsiniz: [BDMs elektronik](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/Microsoft-365-BDM-security-recommendations-spreadsheet.xlsx) tablosu için Microsoft 365 güvenliği sağlar. 
+Bu makale, kiracınız, e-postanız ve kiracınız e-posta gibi en kritik hizmetleri ve varlıkları yönetmek için kullanılan hesapları korumaktan başlayarak, çalışma önceliğe SharePoint. Güvenliğin yaklaşan olması için yöntemli bir yol sağlar ve aşağıdaki elektronik tabloyla birlikte çalışır, böylece organizasyonu genelinde paydaşlar ve ekipler ile ilerlemenizi izleyebilirsiniz: [BDMs elektronik](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/Microsoft-365-BDM-security-recommendations-spreadsheet.xlsx) tablosu için Microsoft 365 güvenliği sağlar.
 
-[![Başparmak resmi Microsoft 365 BDM güvenlik önerileri elektronik tablosu.](../downloads/microsoft-365-bdm-security-recommendations-spreadsheet-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/Microsoft-365-BDM-security-recommendations-spreadsheet.xlsx)
+:::image type="content" source="../downloads/microsoft-365-bdm-security-recommendations-spreadsheet-thumb.png" alt-text="Bir BDM güvenlik Microsoft 365 sayfası örneği" lightbox="../downloads/microsoft-365-bdm-security-recommendations-spreadsheet-thumb.png":::
 
 Microsoft, normal etkinliklerinize göre güvenlik nedenlerinizi otomatik olarak çözümlemek, puan atamak ve güvenlik iyileştirme önerileri sağlamak için kiracınız içinde Güvenli Puan aracını size sağlar. Bu makalede önerilen eylemleri gerçekleştirmeden önce, geçerli puanınızı ve önerilerinizi notun. Bu makalede önerilen işlemler puanınızı artıracaktır. En yüksek puanı elde etmek değil, kullanıcılarınız için üretkenliği olumsuz etkilemeden ortamınızı koruma fırsatlarını takip etmektir. [Bkz. Microsoft Güvenli Puan](defender/microsoft-secure-score.md).
 
-![İşletmenizin risklerini azaltmak için bu adımları izleyin.](../media/security/security-for-bdms-overview.png)
+:::image type="content" source="../media/security/security-for-bdms-overview.png" alt-text="Kurumsal portalda iş ortamı koruma önlemleri sağlayan Güvenli Puan Microsoft 365 Defender örneği" lightbox="../media/security/security-for-bdms-overview.png":::
 
-Başlamadan önce bir şey daha var. . . denetim [günlüğünün açık olduğundan emin olun](../compliance/search-the-audit-log-in-security-and-compliance.md). Daha sonra bir olayı veya ihlali araştırmak zorunda olduğunuz durumda bu verilere ihtiyacınız olur. 
+Başlamadan önce bir şey daha var. . . denetim [günlüğünün açık olduğundan emin olun](../compliance/search-the-audit-log-in-security-and-compliance.md). Daha sonra bir olayı veya ihlali araştırmak zorunda olduğunuz durumda bu verilere ihtiyacınız olur.
 
 ## <a name="protect-privileged-accounts"></a>Ayrıcalıklı hesapları koruma
 
-İlk adım olarak, ortamdaki kritik hesapların ek bir koruma katmanına sahip olmasını öneririz, çünkü bu hesapların kritik hizmetleri ve kaynakları yönetmesi ve değiştirme izni vardır ve bu da güvenliği ihlal edilirse kuruluşun tamamını olumsuz yönde etkiliyor olabilir. Ayrıcalıklı hesapları korumak, güvenliği tehlikeye atılmış bir hesabın izinlerini yönetime yükseltmek isteyen bir saldırgana karşı korunmanın en etkili yollarındandır. 
+İlk adım olarak, ortamdaki kritik hesapların ek bir koruma katmanına sahip olmasını öneririz, çünkü bu hesapların kritik hizmetleri ve kaynakları yönetmesi ve değiştirme izni vardır ve bu da güvenliği ihlal edilirse kuruluşun tamamını olumsuz yönde etkiliyor olabilir. Ayrıcalıklı hesapları korumak, güvenliği tehlikeye atılmış bir hesabın izinlerini yönetime yükseltmek isteyen bir saldırgana karşı korunmanın en etkili yollarındandır.
 
 |Öneri  |E3 |E5  |
 |---------|---------|---------|
-|Tüm yönetim hesapları için çok faktörlü kimlik doğrulamasını (MFA) zorunlu kılın.|![yeşil onay işareti.](../media/green-check-mark.png)|![yeşil onay işareti.](../media/green-check-mark.png)| 
+|Tüm yönetim hesapları için çok faktörlü kimlik doğrulamasını (MFA) zorunlu kılın.|![yeşil onay işareti.](../media/green-check-mark.png)|![yeşil onay işareti.](../media/green-check-mark.png)|
 |Azure AD Azure Active Directory Azure Privileged Identity Management bir defalık ayrıcalıklı erişimi uygulamak için bir (Azure AD) hizmeti (PIM) hizmeti kullanın. Ayrıca, kimin erişimi olduğunu keşfeder ve ayrıcalıklı erişimi gözden geçirsiniz.|         | ![yeşil onay işareti.](../media/green-check-mark.png)|
 |Aynı konumda yer alan ve ayrıcalıklı yönetici görevleri üzerinde ayrıntılı erişim denetimlerini yönetmek için ayrıcalıklı erişim Office 365. |         | ![yeşil onay işareti.](../media/green-check-mark.png)|
-|Hizmetleri yönetmek için Privileged Access İş Istasyonları'nın (BUN) kullanımını yapılandırarak kullanın. İnternet'e göz atarak ve yönetim hesabınızla ilgili e-postayı kontrol etmek için aynı iş istasyonlarını kullanmayın.|  ![yeşil onay işareti.](../media/green-check-mark.png)|![yeşil onay işareti.](../media/green-check-mark.png) | 
+|Hizmetleri yönetmek için Privileged Access İş Istasyonları'nın (BUN) kullanımını yapılandırarak kullanın. İnternet'e göz atarak ve yönetim hesabınızla ilgili e-postayı kontrol etmek için aynı iş istasyonlarını kullanmayın.|  !![yeşil onay işareti.](../media/green-check-mark.png)|![yeşil onay işareti.](../media/green-check-mark.png)::: |
 
 Aşağıdaki diyagramda bu özellikler örnek olarak ve göstermektedir.
-![Ayrıcalıklı hesapları korumak için önerilen özellikler.](../media/m365-security-bdm-illustrations-privileged-accounts.png)
+:::image type="content" source="../media/m365-security-bdm-illustrations-privileged-accounts.png" alt-text="Ayrıcalıklı hesapları koruma araçları tarafından sunulan özelliklere bir örnek" lightbox="../media/m365-security-bdm-illustrations-privileged-accounts.png":::
 
 Ek öneriler:
-- Şirket içinde eşitlenen hesaplara bulut hizmetleri için yönetici rolleri atanmaması gerekir. Bu, bir saldırganın bulut hizmetlere yönetici erişimi elde etmek için şirket içi hesapları uygulamasını önlemeye yardımcı olur. 
+
+- Şirket içinde eşitlenen hesaplara bulut hizmetleri için yönetici rolleri atanmaması gerekir. Bu, bir saldırganın bulut hizmetlere yönetici erişimi elde etmek için şirket içi hesapları uygulamasını önlemeye yardımcı olur.
 - Hizmet hesaplarına yönetici rolleri atanmaması gerekir. Bu hesaplar çoğunlukla izlenmz ve süresi dolmamış parolalarla ayarlanır. başlangıç olarak AADConnect ve ADFS hizmet hesaplarının varsayılan olarak Genel Yöneticiler olmadığını garanti edin.
-- Yönetici hesaplarından lisansları kaldırın. Belirli yönetici hesaplarına lisans atamak için belirli bir kullanım durumu yoksa, bu hesaplardan lisansları kaldırın. 
+- Yönetici hesaplarından lisansları kaldırın. Belirli yönetici hesaplarına lisans atamak için belirli bir kullanım durumu yoksa, bu hesaplardan lisansları kaldırın.
 
 ## <a name="reduce-the-surface-of-attack"></a>Saldırının yüzeyini azaltma
 
 Bir sonraki odak alanı saldırının yüzeyini azaltıyor. Bu çabalar, kullanıcılarınız ve hizmetleriniz üzerinde çok az çabayla ve etkiyle gerçek olabilir. Saldırının yüzey alanı azaltarak, saldırganların organizasyona karşı saldırı başlatmanın daha az yolu olur.
 
 İşte birkaç örnek:
-- POP3, IMAP ve SMTP protokollerini devre dışı bırak. Modern kuruluşların çoğu artık bu eski protokolleri kullanmaz. Bunları güvenle devre dışı bırakarak yalnızca gerektiğinde özel durumlara izin veabilirsiniz. 
-- Kiracıda Genel Yöneticilerin sayısını mutlak en düşük düzeyde azaltarak devam edin. Bu işlem, tüm Bulut uygulamaları için saldırının yüzey alanı sayısını doğrudan azaltır. 
-- Ortamınıza artık kullanılmadan sunucuları ve uygulamaları kullanın. 
-- Artık kullanılmaan hesapları devre dışı bırakmak ve silmek için bir işlem gerçekleştirin. 
+
+- POP3, IMAP ve SMTP protokollerini devre dışı bırak. Modern kuruluşların çoğu artık bu eski protokolleri kullanmaz. Bunları güvenle devre dışı bırakarak yalnızca gerektiğinde özel durumlara izin veabilirsiniz.
+- Kiracıda Genel Yöneticilerin sayısını mutlak en düşük düzeyde azaltarak devam edin. Bu işlem, tüm Bulut uygulamaları için saldırının yüzey alanı sayısını doğrudan azaltır.
+- Ortamınıza artık kullanılmadan sunucuları ve uygulamaları kullanın.
+- Artık kullanılmaan hesapları devre dışı bırakmak ve silmek için bir işlem gerçekleştirin.
 
 ## <a name="protect-against-known-threats"></a>Bilinen tehditlere karşı koruma
 
-Bilinen tehditlere kötü amaçlı yazılım, güvenliği ihlal edilmiş hesaplar ve kimlik avı dahildir. Bu tehditlere karşı bazı korumalar kullanıcılarınız üzerinde doğrudan hiçbir etkisi olmayacak şekilde hızlı bir şekilde uygulansa da, diğerleri için daha fazla planlama ve kullanıcı eğitimi gerekir. 
+Bilinen tehditlere kötü amaçlı yazılım, güvenliği ihlal edilmiş hesaplar ve kimlik avı dahildir. Bu tehditlere karşı bazı korumalar kullanıcılarınız üzerinde doğrudan hiçbir etkisi olmayacak şekilde hızlı bir şekilde uygulansa da, diğerleri için daha fazla planlama ve kullanıcı eğitimi gerekir.
 
 |Öneri  |E3  |E5  |
 |---------|---------|---------|
@@ -79,45 +81,38 @@ Bilinen tehditlere kötü amaçlı yazılım, güvenliği ihlal edilmiş hesapla
 |**İş yapmayan ülkelerden gelen bağlantıları engelin**. Bu ülkelerden gelen tüm bağlantıları engellemek ve kiracınız çevresinde etkili bir şekilde coğrafi güvenlik duvarı oluşturmak için bir Azure AD koşullu erişim ilkesi oluşturun.| |![yeşil onay işareti.](../media/green-check-mark.png)|
 
 Aşağıdaki diyagramda bu özellikler örnek olarak ve göstermektedir.
-![Bilinen tehditlere karşı korumak için önerilen özellikler.](../media/m365-security-bdm-illustrations-known-threats.png)
+:::image type="content" source="../media/m365-security-bdm-illustrations-known-threats.png" alt-text="Farklı türlerin tehditlerine karşı korunmak için araçlar tarafından sunulan çeşitli özelliklere bir örnek" lightbox="../media/m365-security-bdm-illustrations-known-threats.png":::
 
 ## <a name="protect-against-unknown-threats"></a>Bilinmeyen tehditlere karşı koruma
 
-Ayrıcalıklı hesaplarınıza ek korumalar ekledikten ve bilinen saldırılara karşı korumadan sonra, dikkati bilinmeyen tehditlere karşı korumak üzere shiftin. Ne kadar ileri düzey ve ne kadar ileri düzey desteksa, saldırı kuruluşları için yenilikçi ve yeni bilinmeyen yöntemleri kullanır. Microsoft'un çok büyük miktarda cihaz, uygulama ve hizmet toplanmış veri telemetrisi sayesinde Zero-Day saldırılarını önlemek, kum kutusu ortamlarını kullanmak ve içeriğinize erişime izin başlamadan önce geçerliliği kontrol etmek üzere Windows, Office 365 ve Azure üzerinde Office 365 için Defender'ı gerçekleştirebilirsiniz. 
-
+Ayrıcalıklı hesaplarınıza ek korumalar ekledikten ve bilinen saldırılara karşı korumadan sonra, dikkati bilinmeyen tehditlere karşı korumak üzere shiftin. Ne kadar ileri düzey ve ne kadar ileri düzey desteksa, saldırı kuruluşları için yenilikçi ve yeni bilinmeyen yöntemleri kullanır. Microsoft'un çok büyük miktarda cihaz, uygulama ve hizmet toplanmış veri telemetrisi sayesinde Zero-Day saldırılarını önlemek, kum kutusu ortamlarını kullanmak ve içeriğinize erişime izin başlamadan önce geçerliliği kontrol etmek üzere Windows, Office 365 ve Azure üzerinde Office 365 için Defender'ı gerçekleştirebilirsiniz.
 
 |Öneri  |E3  |E5  |
 |---------|---------|---------|
-|**Microsoft Defender'ı şu Office 365**:<br>* Kasa Ekleri<br>* Kasa Bağlantılar<br>* SharePoint, OneDrive için Uç Nokta için Microsoft Defender Microsoft Teams<br>* Kimlik avı koruması için Defender'da kimlik Office 365 koruma|         |![yeşil onay işareti.](../media/green-check-mark.png) |
-|**Uç nokta özellikleri için Microsoft Defender'ı yapılandırma**:<br>* Windows Defender Virüsten Koruma <br>* Exploit protection <br> * Saldırı yüzeyini azaltma <br> * Donanım tabanlı yalıtım <br>* Denetimli klasör erişimi     |         |![yeşil onay işareti.](../media/green-check-mark.png) |
+|**Microsoft Defender'ı şu Office 365**:<br>*Kasa Ekle Kasa<br>* Bağlantılar    <br>*kimlik koruması için Defender'da SharePoint, OneDrive ve kimlik Microsoft Teams Uç Noktası<br> için Microsoft* Defender Office 365.|         |![yeşil onay işareti.](../media/green-check-mark.png) |
+|**Uç nokta özellikleri için Microsoft Defender'ı yapılandırma**:<br>*<br>Windows Defender Virüsten Koruma* Exploit Protection <br> *Saldırı yüzeyini azaltma <br>*    Donanım tabanlı yalıtım <br>* Denetimli klasör erişimi     |         |![yeşil onay işareti.](../media/green-check-mark.png) |
 |**SaaS uygulamalarını keşfetmek ve davranış çözümlemeleri** ile anormal algılamayı kullanmaya başlamak için Bulut Uygulamaları için Microsoft Defender'ı kullanın. |         |![yeşil onay işareti.](../media/green-check-mark.png) |
 
 Aşağıdaki diyagramda bu özellikler örnek olarak ve göstermektedir.
-![Bilinmeyen tehditlere karşı korumak için önerilen özellikler.](../media/m365-security-bdm-illustrations-unknown-threats.png)
+:::image type="content" source="../media/m365-security-bdm-illustrations-unknown-threats.png" alt-text="Bilinmeyen tehditlere karşı korunmak için araçlar tarafından sunulan özelliklere bir örnek" lightbox="../media/m365-security-bdm-illustrations-unknown-threats.png":::
 
 Ek öneriler:
+
 - TLS kullanarak e-postalar gibi iş ortağı kanalı iletişimlerini güvenli hale edinin.
 - Federasyon Teams yalnızca iletişimde olduğunuz ortaklara açın.
-- Gönderen etki alanlarını, tek tek gönderenleri veya kaynak IP'leri izin listesine eklemeyin çünkü bu, istenmeyen postayı ve kötü amaçlı yazılım denetimlerini atlar. Müşterilerde yaygın bir uygulama, kendi kabul edilen etki alanlarını veya diğer birçok etki alanı için e-posta akışı sorunlarının izin listesine bildiriliyor olmasıdır. Etki alanlarını İstenmeyen Posta ve Bağlantı Filtreleme listesine ekleme, bu durumda tüm istenmeyen posta denetimlerini atlar. 
+- Gönderen etki alanlarını, tek tek gönderenleri veya kaynak IP'leri izin listesine eklemeyin çünkü bu, istenmeyen postayı ve kötü amaçlı yazılım denetimlerini atlar. Müşterilerde yaygın bir uygulama, kendi kabul edilen etki alanlarını veya diğer birçok etki alanı için e-posta akışı sorunlarının izin listesine bildiriliyor olmasıdır. Etki alanlarını İstenmeyen Posta ve Bağlantı Filtreleme listesine ekleme, bu durumda tüm istenmeyen posta denetimlerini atlar.
 - Giden istenmeyen posta bildirimlerini etkinleştirme — Şirket içi kullanıcılardan herhangi biri dışarı istenmeyen posta e-postaları gönder olup olduğunu bildirmesi için Yardım masasına veya IT Yöneticisi ekibine şirket içinde dağıtım listesinde giden istenmeyen posta bildirimlerini etkinleştirin. Bu, hesabın ele geçirildi bir göstergesi olabilir.
-- Uzak PowerShell'i tüm kullanıcılar için devre dışı bırakma — Uzak PowerShell daha çok Yöneticiler tarafından yönetim amacıyla veya programlı API erişimi için hizmetlere erişmek için kullanılır. Yönetici olmayan kullanıcıların erişim için bir ticari zorunlulukları olmadığı sürece onay almalarını önlemek için bu seçeneği devre dışı bırakmanız önerilir. 
-- Microsoft Azure Yönetim portalına erişimi engelin. Bunu, yöneticiler dışında tüm kullanıcıları engellemek için bir koşullu erişim kuralı oluşturarak gerçekleştirebilirsiniz. 
-
+- Uzak PowerShell'i tüm kullanıcılar için devre dışı bırakma — Uzak PowerShell daha çok Yöneticiler tarafından yönetim amacıyla veya programlı API erişimi için hizmetlere erişmek için kullanılır. Yönetici olmayan kullanıcıların erişim için bir ticari zorunlulukları olmadığı sürece onay almalarını önlemek için bu seçeneği devre dışı bırakmanız önerilir.
+- Microsoft Azure Yönetim portalına erişimi engelin. Bunu, yöneticiler dışında tüm kullanıcıları engellemek için bir koşullu erişim kuralı oluşturarak gerçekleştirebilirsiniz.
 
 ## <a name="assume-breach"></a>İhlal olduğu varsay
 
-Microsoft tehditlere ve saldırılara karşı önlemek için mümkün olan her türlü önlemi alırken, her zaman "İhlal Olduğunu Varsay" mindset altında çalışmayı öneririz. Bir Saldırgan ortama izinsiz giriş yapacak olsa bile, ortamdan veri veya kimlik bilgilerini açamıyorlarından emin olamamız gerekir. Bu nedenle Sosyal Güvenlik numaraları, kredi kartı numaraları, diğer kişisel bilgiler ve diğer kurumsal düzeydeki gizli bilgiler gibi hassas veri sızıntılarına karşı korumayı etkinleştirmenizi öneririz. 
-
-"İhlal Olduğunu Varsay" fikir kümesi Sıfır Güven ağ stratejisi uygulanmasını gerektirir ve bu da, kullanıcıların yalnızca ağın içinde yer alıyor olması nedeniyle tam olarak güvenililmdiğini varsayın. Bunun yerine, kullanıcıların neler yaplları için yetkilendirme kapsamında, koşullar kümeleri belirtilmiştir ve bu gibi koşullar karşı karşılaştığında, bazı denetimler zorunlu kılındı. Cihaz durumu, uygulamaya erişilen uygulama, gerçekleştirilen işlemler ve kullanıcı riski gibi koşullar olabilir. Örneğin, ortamınıza cihaz cihaz eklenmeylendiğinden emin olmak için, bir cihaz kayıt eylemi her zaman MFA kimlik doğrulamasını tetiklemeli. 
-
-Sıfır Güven ağ stratejisi ayrıca, bilgilerin nerede depolanmış olduğunu bilmek ve sınıflandırma, koruma ve bekletme için uygun denetimleri uygulamanızı gerektirir. En kritik ve hassas varlıklarınızı etkili bir şekilde korumak için, önce bunların yerini belirlemeli ve stoku al gerekir, bu zor olabilir. Ardından, bir yönetim stratejisi tanımlamak için organizasyonuyla birlikte çalışmanız gerekir. Bir kuruluş için sınıflandırma şeması tanımlama ve ilkeleri, etiketleri ve koşulları yapılandırma dikkatli bir planlama ve hazırlık gerektirir. Bunun bir IT tarafından yönlendirilen işlem olmadığının farkında olmak önemlidir. Yasal ve uyumluluk ekibimizle birlikte, kuruluş verileriniz için uygun bir sınıflandırma ve etiketleme şeması geliştirmek için çalışmanız gerekir.
-
-Microsoft 365 koruma özelliklerini keşfetmek, hangi bilgilere sahip olduğunu, nerede depolanmış olduğunu ve hangi bilgilerin ek koruma gerektirdiğini keşfetmeniz için yardımcı olabilir. Bilgi koruması sürekli bir süreçtir ve Microsoft 365 özellikleri, kullanıcıların hassas bilgileri nasıl kullanıyor ve dağıttığı, şu anda bilgilerin depolandığı ve nereye aktığı konusunda görünürlük sağlar. Ayrıca, kullanıcıların uygun etiket ve korumaların uygulandığından emin olmak için düzenlemeye tabi olan bilgileri nasıl işleyenin olduğunu da görebilirler.
+Microsoft tehditlere ve saldırılara karşı önlemek için mümkün olan her türlü önlemi alırken, her zaman "İhlal Olduğunu Varsay" mindset altında çalışmayı öneririz. Bir Saldırgan ortama izinsiz giriş yapacak olsa bile, ortamdan veri veya kimlik bilgilerini açamıyorlarından emin olamamız gerekir. Bu nedenle Sosyal Güvenlik numaraları, kredi kartı numaraları, diğer kişisel bilgiler ve diğer kurumsal düzeydeki gizli bilgiler gibi hassas veri sızıntılarına karşı korumayı etkinleştirmenizi öneririz.
 
 
 |Öneri |E3|E5 |
 |---------|---------|---------|
-|**Sıfır Güven ağının hedeflerine uygun hale getirmek için koşullu erişiminizi ve ilgili ilkeleri gözden geçirin ve en iyi duruma getirme**. Bilinen tehditlere karşı koruma, önerilen bir dizi [ilke uygulama içerir](./office-365-security/microsoft-365-policies-configurations.md). Uygulamalarınızı ve verilerinizi, ağınıza erişimi kazanan korsanlara karşı koruma sağlamak için bu ilkeleri uygulamalarınızı gözden geçirebilirsiniz. Web için önerilen Intune uygulama koruma ilkesi, Windows 10 Koruması'Windows (WIP) etkinleştirir. WIP, e-posta, sosyal medya ve genel bulut gibi uygulamalar ve hizmetler aracılığıyla yanlışlıkla kuruluş verilerinizin sızdır ızdırağına karşı koruma sağlar. |         |![yeşil onay işareti.](../media/green-check-mark.png)|
+|**Sıfır güven ağının hedeflerine uygun hale getirmek için koşullu erişiminizi ve ilgili ilkeleri gözden geçirin ve en iyi duruma getirmek.** Bilinen tehditlere karşı koruma, önerilen bir dizi [ilke uygulama içerir](./office-365-security/microsoft-365-policies-configurations.md). Uygulamalarınızı ve verilerinizi, ağınıza erişimi kazanan korsanlara karşı koruma sağlamak için bu ilkeleri uygulamalarınızı gözden geçirebilirsiniz. Web için önerilen Intune uygulama koruma ilkesi, Windows 10 Koruması'Windows (WIP) etkinleştirir. WIP, e-posta, sosyal medya ve genel bulut gibi uygulamalar ve hizmetler aracılığıyla yanlışlıkla kuruluş verilerinizin sızdır ızdırağına karşı koruma sağlar. |         |![yeşil onay işareti.](../media/green-check-mark.png)|
 |**Dış e-posta iletmeyi devre dışı bırakma**. Bir kullanıcının posta kutusuna erişim elde eden bilgisayar korsanları, posta kutusunu otomatik olarak e-postayı iletacak şekilde ayarerek postanızı çalarlar. Bu durum, kullanıcının farkında olmadan bile olabilir. Posta akış kuralı yapılandırarak bunun önüne geçebilirsiniz.|![yeşil onay işareti.](../media/green-check-mark.png) |![yeşil onay işareti.](../media/green-check-mark.png)|
 |**Anonim dış takvim paylaşımını devre dışı bırak**. Varsayılan olarak, dış anonim takvim paylaşımına izin verilir. [Hassas bilgilerin olası sızıntılarını](/exchange/sharing/sharing-policies/modify-a-sharing-policy) azaltmak için takvim paylaşımını devre dışı bırak.|![yeşil onay işareti.](../media/green-check-mark.png) |![yeşil onay işareti.](../media/green-check-mark.png)|
 |**Hassas veriler için veri kaybı önleme ilkelerini yapılandırma**. Kredi kartı numaraları, Sosyal &amp; Güvenlik numaraları ve banka hesabı numaraları gibi hassas verileri keşfetmek ve korumak için Güvenlik Uyumluluk Merkezinde Veri Kaybını Önleme İlkesi oluşturun. Microsoft 365, veri kaybı önleme ilkelerinde kullanabileceğiniz önceden tanımlanmış birçok hassas bilgi türü içerir. Ortamınıza özel olan hassas veriler için kendi hassas bilgi türlerinizi de oluşturabilirsiniz. |![yeşil onay işareti.](../media/green-check-mark.png)|![yeşil onay işareti.](../media/green-check-mark.png)|
@@ -128,6 +123,7 @@ Microsoft 365 koruma özelliklerini keşfetmek, hangi bilgilere sahip olduğunu,
 
 Aşağıdaki diyagramda bu özellikler örnek olarak ve göstermektedir.
 ![İhlallere karşı korumak için önerilen özellikler.](../media/m365-security-bdm-illustrations-assume-breach.png)
+ :::image type="content" source="../media/m365-security-bdm-illustrations-assume-breach.png" alt-text="İhlallere karşı koruma için araç tarafından sunulan özelliklere bir örnek" lightbox="../media/m365-security-bdm-illustrations-assume-breach.png":::
 
 ## <a name="continuous-monitoring-and-auditing"></a>Sürekli izleme ve denetim
 
@@ -137,15 +133,15 @@ Son olarak, Windows Microsoft 365 ve Cihazlar ile birlikte Microsoft 365 ortamı
 |---------|---------|---------|
 |Denetim **günlüğünün açık** olduğundan emin olun.|![yeşil onay işareti.](../media/green-check-mark.png)|![yeşil onay işareti.](../media/green-check-mark.png)|
 |**Güvenli Puanı haftalık olarak gözden** geçirme — Güvenli puan, şirketinizin Güvenlik durumuna erişmek ve Güvenli puan önerilerine dayalı işlemler yapmak için merkezi bir konumtur. Bu denetimi haftalık olarak gerçekleştirmeniz önerilir.|![yeşil onay işareti.](../media/green-check-mark.png)|![yeşil onay işareti.](../media/green-check-mark.png)|
-|Diğer **araçlar için Microsoft Defender Office 365** kullanın:<br>* Tehdit soruşturması ve yanıt özellikleri<br> * Otomatik araştırma ve yanıt |         |![yeşil onay işareti.](../media/green-check-mark.png)|
-|Uç Nokta **için Microsoft Defender'ı kullanın**:<br> *    [Uç nokta algılama ve yanıt](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) <br> * Otomatik araştırma ve düzeltme Güvenli puan <br>*    [Gelişmiş av](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-overview) <br>|         |![yeşil onay işareti.](../media/green-check-mark.png)|
-|Bulut **Uygulamaları için Microsoft Defender'ı** kullanarak fidye yazılımlarını, güvenliği tehlikeye atılmış kullanıcıları veya uygulamaları belirlemek, yüksek riskli kullanımı çözümlemek ve riski organizasyonum ile sınırlandır etmek için otomatik olarak düzeltmek için bulut uygulamaları genelinde alışılmışın dışında bir davranış algılayın.|         |![yeşil onay işareti.](../media/green-check-mark.png)|
-|**Ortamınız genelinde tehditlere karşı izlemek için Microsoft Sentinel'i** veya geçerli SIEM aracınızı kullanın. |         |![yeşil onay işareti](../media/green-check-mark.png)|
-|**Şirket [içi Active](/azure-advanced-threat-protection/what-is-atp)** Directory ortamınıza yönelik tehditleri izlemek ve bu tehditlere karşı korumak için Identity için Microsoft Defender'ı dağıtın.   |         |![yeşil onay işareti](../media/green-check-mark.png) |
+|Diğer **araçlar için Microsoft Defender Office 365** kullanın:<br>*Tehdit soruşturması ve yanıt özellikleri<br>*    Otomatik araştırma ve yanıt |         |![yeşil onay işareti.](../media/green-check-mark.png)|
+|Uç Nokta **için Microsoft Defender'ı kullanın**:<br> *[Uç nokta algılama ve yanıt](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) <br>*    Otomatik araştırma ve düzeltme Güvenli puan <br>*    [Gelişmiş av](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-overview) <br>|         |![yeşil onay işareti.](../media/green-check-mark.png)|
+|Bulut **Uygulamaları için Microsoft Defender'ı** kullanarak fidye yazılımlarını, güvenliği tehlikeye atılmış kullanıcıları veya uygulamaları belirlemek, yüksek riskli kullanımı çözümlemek ve riski organizasyonum ile sınırlandır etmek için otomatik olarak düzeltmek için bulut uygulamaları genelinde alışılmışın dışında bir davranış algılayın.|         |:::image type="content" source="../media/green-check-mark.png" alt-text="Yeşil renkli onay işareti örneği" lightbox="../media/green-check-mark.png":::|
+|**Ortamınız genelinde tehditlere karşı izlemek için Microsoft Sentinel'i** veya geçerli SIEM aracınızı kullanın. |         |![yeşil onay işareti.](../media/green-check-mark.png)|
+|**Şirket [içi Active](/azure-advanced-threat-protection/what-is-atp)** Directory ortamınıza yönelik tehditleri izlemek ve bu tehditlere karşı korumak için Identity için Microsoft Defender'ı dağıtın.   |         |![yeşil onay işareti.](../media/green-check-mark.png) |
 |Karma **ve bulut iş yüklerinin** tehditlerini izlemek için Bulut için Microsoft Defender'ı kullanın. Bulut için Microsoft Defender, ücretsiz bir özellik katmanı ve kaynak saatleri veya işlemlerine göre ücretli olan standart bir özellik katmanı içerir.|         |         |
 
 Aşağıdaki diyagramda bu özellikler örnek olarak ve göstermektedir.
-![Sürekli izleme ve denetim için önerilen özellikler.](../media/m365-security-bdm-illustrations-monitoring-auditing.png)
+:::image type="content" source="../media/m365-security-bdm-illustrations-monitoring-auditing.png" alt-text="Tehdit koruması ve algılamayı etkinleştirme araçları tarafından sunulan özelliklere bir örnek" lightbox="../media/m365-security-bdm-illustrations-monitoring-auditing.png":::
 
 En çok önerilen izleme eylemleri:
 

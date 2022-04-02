@@ -1,5 +1,5 @@
 ---
-title: E-postada (önizleme) varsayılan veri Microsoft Teams ilkesi hakkında bilgi
+title: Microsoft Teams'teki varsayılan veri kaybı önleme ilkesi hakkında daha fazla bilgi edinme (önizleme)
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -16,29 +16,20 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 description: E-postada varsayılan veri kaybı önleme Microsoft Teams
-ms.openlocfilehash: 61a1ea22362d9e75d605660d29116140f6708003
-ms.sourcegitcommit: ab5368888876d8796da7640553fc8426d040f470
+ms.openlocfilehash: 61443cdfdc116e9c25d9dad24c968876ae5d0349
+ms.sourcegitcommit: db2ed146b46ade9ea62eed9cb8efff5fea7a35e6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "62990602"
+ms.lasthandoff: 03/26/2022
+ms.locfileid: "64481374"
 ---
-# <a name="learn-about-the-default-data-loss-prevention-policy-in-microsoft-teams-preview"></a>E-postada (önizleme) varsayılan veri Microsoft Teams ilkesi hakkında bilgi
+# <a name="learn-about-the-default-data-loss-prevention-policy-in-microsoft-teams-preview"></a>Microsoft Teams'teki varsayılan veri kaybı önleme ilkesi hakkında daha fazla bilgi edinme (önizleme)
 
 [Veri kaybı](dlp-learn-about-dlp.md) önleme özellikleri, özel kanal iletileri dahil olmak Microsoft Teams sohbet ve kanal iletilerini de içerecek şekilde genişletildi. Bu sürümün bir parçası olarak, ilk kez gelen müşteriler için Microsoft Teams varsayılan bir DLP ilkesi <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a>.
 
-## <a name="applies-to"></a>Geçerli olduğu yer:
+## <a name="licensing"></a>Lisanslama
 
-Aşağıdaki lisanslardan biri veya birden fazlası ile lisanslı olan ve etkin kullanıcı Teams.
- 
-- ME5, 
-- MA5, 
-- E5/A5 Uyumluluğu 
-- IP+G tuşlarına bas 
-- OE5 
-- O365 Gelişmiş Uyumluluk 
-- EMS E5
-
+DLP'nin tüm lisans bilgilerini Microsoft Teams için bkz[. Information Protection: Lisanslama için Veri Kaybı Önleme Teams](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-teams).
 
 ## <a name="what-does-the-default-policy-do"></a>Varsayılan ilke ne işe geliyor?
 

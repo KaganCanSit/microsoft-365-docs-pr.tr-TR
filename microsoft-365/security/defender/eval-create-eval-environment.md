@@ -21,16 +21,16 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: how-to
 ms.technology: m365d
-ms.openlocfilehash: 5b684a1ead5638a787413d7470cb103cbe55e7df
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: 98d2ee2394e4384fbf8d7b2b3832d11a847b8521
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775532"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755150"
 ---
 # <a name="step-1-create-the-microsoft-365-defender-evaluation-environment-for-greater-cyber-security"></a>Adım 1. Daha büyük Microsoft 365 Defender siber güvenlik için Değerlendirme Ortamı oluşturma
 
-Bu sorunun çözümü, bu Microsoft Defender XDR kalan bölüm boyunca dağıtılacak adımlarda daha fazla bilgi edinebilirsiniz ve dağıtabilirsiniz:
+LYou can learn about and also build out this Microsoft Defender XDR solution in steps that are distributed through the rest of this series:
 
 - [Ortamı oluşturma](eval-create-eval-environment.md)
 - Bu Microsoft XDR teknolojisinin her bir teknolojisini ayarlama veya öğrenme
@@ -44,7 +44,7 @@ Bu sorunun çözümü, bu Microsoft Defender XDR kalan bölüm boyunca dağıtı
 
 Bu dizide adımlar, Microsoft 365 Defender XDR'nin ardındaki kavramları öğrenmekten bunu inşa etmek ve değerlendirme ortamını üretime almaya kadar  uç bir çalışma sunar.
 
-Bir sonraki adımı değerlendirmede yapmak için iki yaygın yol vardır. Bu seride, zaten bir üretim Microsoft 365 olduğu varsay Microsoft 365 geçerli ortamdaki deneme sürümü lisanslarını değerlendirmek için E5 deneme Microsoft 365 Defender *etkinleştireceksiniz*. Yerinde değerlendirme, değerlendirme süresi sona kadar lisans satın alımıyla tüm güvenlik yöntemlerini elde tutmanız için size zaman sağlar.
+Bir sonraki adımı değerlendirmede yapmak için iki yaygın yol vardır. Bu seride, zaten bir üretim Microsoft 365 olduğu varsaymaktadır ve geçerli ortamdaki deneme sürümü Microsoft 365 Defender için E5 deneme *lisanslarını etkinleştirirsiniz*. Yerinde değerlendirme, değerlendirme süresi sona kadar lisans satın alımıyla tüm güvenlik yöntemlerini elde tutmanız için size zaman sağlar.
 
 İkincisi de değerlendirme [amacıyla Microsoft 365 Defender test laboratuvarı ortamınızı](setup-m365deval.md) ayarlamaktır. Test ederken işletmeden birçok gerçek sinyalin olmadığını unutmayın.
 

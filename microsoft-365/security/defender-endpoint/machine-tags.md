@@ -14,22 +14,22 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 65df8553f5ee3b7dd7876557398e0d4aa22c7bd5
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b0b94e4905a780be9a608c8e91967b47a4db7160
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63323535"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465761"
 ---
 # <a name="create-and-manage-device-tags"></a>Cihaz etiketlerini oluşturma ve yönetme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Mantıksal bir grup ilişkisi oluşturmak için cihazlara etiketler ekleyin. Cihaz etiketleri, ağın uygun şekilde eşlenmesini destekleyerek bağlamı yakalamak için farklı etiketler eklemenize ve bir olayın parçası olarak dinamik liste oluşturmayı etkinleştirmenizi sağlar. Etiketler, Cihaz envanteri görünümünde **filtre olarak veya** cihazları grupla için kullanılabilir. Cihaz grupları hakkında daha fazla bilgi için bkz. [Cihaz grupları oluşturma ve yönetme](machine-groups.md).
 
@@ -56,11 +56,12 @@ API kullanarak cihaz etiketleri eklemek için bkz. [Cihaz etiketleri API'si ekle
 
 2. Yanıt **eylemleri satırından** Etiketleri yönet'i seçin.
 
-    :::image type="content" alt-text="Etiketleri yönet düğmesinin resmi." source="images/manage-tags-option.png":::
+    :::image type="content" source="images/manage-tags-option.png" alt-text="Etiketleri yönet düğmesinin resmi" lightbox="images/manage-tags-option.png":::
+    
 
 3. Etiketleri bulmak veya oluşturmak için yazın
 
-    :::image type="content" alt-text="Cihaza etiket ekleme resmi1." source="images/create-new-tag.png":::
+    :::image type="content" source="images/create-new-tag.png" alt-text="Cihaza etiket ekleme1" lightbox="images/create-new-tag.png":::
 
 Etiketler cihaz görünümüne eklenir ve Cihazlar envanter görünümüne **de yansıt** yansıtılmaktadır. Daha sonra ilgili cihaz **listesini** görmek için Etiketler filtresini kullanabilirsiniz.
 
@@ -71,7 +72,7 @@ Etiketler cihaz görünümüne eklenir ve Cihazlar envanter görünümüne **de 
 
 Ayrıca, etiketleri bu görünümden de silebilirsiniz.
 
-:::image type="content" alt-text="Cihaz2'ye etiket ekleme görüntüsü." source="images/new-tag-label-display.png":::
+:::image type="content" source="images/new-tag-label-display.png" alt-text="Cihaz2'ye etiket ekleme" lightbox="images/new-tag-label-display.png":::
 
 ## <a name="add-device-tags-by-setting-a-registry-key-value"></a>Kayıt defteri anahtarı değerini ayarerek cihaz etiketleri ekleme
 

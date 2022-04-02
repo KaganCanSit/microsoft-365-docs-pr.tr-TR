@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 ms.assetid: 211c5c90-9719-4d73-9ad9-1925bb80f5f6
 description: İş için Microsoft 365'nin Genel Veri Koruma Yönetmeliği (GDPR) sürecinde size nasıl yardımcı olduğunu öğrenin.
-ms.openlocfilehash: 07300313cc2ead3d6efba4295a9219e00a6dc2ec
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 7c8a2c402e362ede4eb9b2f4ec221dd8556052db
+ms.sourcegitcommit: 601ab9ad2b624e3b5e04eed927a08884c885c72a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312411"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "64403660"
 ---
 # <a name="gdpr-simplified-a-guide-for-your-small-business"></a>Basitleştirilmiş GDPR: Küçük işletmeniz için bir kılavuz
 
@@ -133,7 +133,8 @@ Fiziksel belgeleri kişisel verilerle depolarsanız, bunların yetkisiz kişiler
 Kişisel verilerinizi Microsoft 365 aracılığıyla bulutta depolamayı seçerseniz, dosya ve klasör izinlerini yönetmenize yardımcı olmak, dosyalarınızı kaydetmek için merkezi güvenli konumlar (OneDrive veya SharePoint belge kitaplıkları) ve dosyalarınızı gönderir veya alırken veri şifreleme gibi güvenlik özellikleriniz olur. 
 
 #### <a name="microsoft-365-features-that-can-help"></a>Microsoft 365 yardımcı olacak diğer özellikler
-İşletmenizin [hassas bilgilerini korumaya yardımcı olması için DLP](set-up-compliance.md#watch-set-up-dlp-features) özelliklerini ayarlamayı kullanabilirsiniz. GDPR [şablonunu kullanan bir DLP](/microsoft-365/compliance/create-a-dlp-policy-from-a-template) [ilkesi oluşturabilirsiniz](/microsoft-365/compliance/what-the-dlp-policy-templates-include#general-data-protection-regulation-gdpr).
+
+İşletmenizin [hassas bilgilerini korumaya yardımcı](set-up-compliance.md) olması için Uyumluluk özellikleri kur'a yardımcı olabilirsiniz. Uyumluluk Yöneticisi hemen başlamanıza yardımcı olabilir! Örneğin GDPR [şablonunu kullanan bir DLP](/microsoft-365/compliance/create-a-dlp-policy-from-a-template) ilkesi [oluşturabilirsiniz](/microsoft-365/compliance/what-the-dlp-policy-templates-include#general-data-protection-regulation-gdpr).
 
 ### <a name="step-5-keep-documentation-on-your-data-processing-activities"></a>5. Adım: Veri işleme etkinliklerinizin belgelerini tutma
 

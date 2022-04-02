@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, ICE Sohbet aracından verileri içeri aktaracak ve burada arşiv olacak şekilde bir bağlayıcı Microsoft 365. Bu, üçüncü taraf veri kaynaklarından verileri Microsoft 365'te arşivlemenize olanak sağlar ve böylece yasal saklama, içerik araması ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanarak kuruluş üçüncü taraf verilerini yönetebilirsiniz.
-ms.openlocfilehash: c340cbb65d7efaa5cbc14ca977879c09b585031a
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c29a39c8c398a0d8721931cbcb770aa18d0f3c4b
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63324893"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568104"
 ---
 # <a name="set-up-a-connector-to-archive-ice-chat-data"></a>ICE Sohbet verilerini arşivlemek için bağlayıcı ayarlama
 
@@ -121,14 +121,20 @@ Son adım, ağ bağlantılarında bir BUZ Sohbeti bağlayıcısı Microsoft 365 
 
 7. Bağlantı başarıyla doğrulandıktan sonra, Sonraki'ne **tıklayın**.
 
-8. Dış kullanıcıları **kullanıcı eşleme Microsoft 365,** otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlar. Bu sayfada, kullanıcı eşleme CSV dosyasının bir kopyasını indirebilirsiniz. Dosyaya kullanıcı eşlemeleri ekleyebilir ve sonra dosyayı karşıya yükleyebilirsiniz.
+8. Kullanıcı **tanımla sayfasında** , verileri içeri aktarıla kullanıcıları belirtin.
+
+     - **Kuruluş 2013'te çalışan tüm kullanıcılar**. Tüm kullanıcıların verilerini içeri aktar için bu seçeneği belirtin.
+
+     - **Yalnızca Mahkeme tutmada olan kullanıcılar**. Yalnızca posta kutuları Mahkeme tutmada bulunan kullanıcılara ait verileri içeri aktarmayı bu seçeneği belirtin. Bu seçenek, verileri LitigationHoldEnabled özelliği True olarak ayarlanmış kullanıcı posta kutularına içeri aktarmaktadır. Daha fazla bilgi için [bkz. Mahkeme tutma oluşturma](create-a-litigation-hold.md).
+
+9. Dış kullanıcıları **kullanıcı eşleme Microsoft 365,** otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlar. Bu sayfada, kullanıcı eşleme CSV dosyasının bir kopyasını indirebilirsiniz. Dosyaya kullanıcı eşlemeleri ekleyebilir ve sonra dosyayı karşıya yükleyebilirsiniz.
 
    > [!NOTE]
    > Daha önce de açıklaması olan özel eşleme dosyası CSV dosyası, HER kullanıcı için ICE Sohbeti imid'ini ve Microsoft 365 posta kutusu adresini içerir. Otomatik kullanıcı eşlemesini etkinleştirir ve her sohbet öğesi için özel bir eşleme sağlarsanız, bağlayıcı önce özel eşleme dosyasına bakar. Kullanıcının ICE Chat imid'ine karşılık gelen geçerli bir Microsoft 365 kullanıcısı bulamazsa bağlayıcı, öğeyi sohbet öğesinin *SenderEmail* ve *RecipientEmail* özelliklerinde belirtilen kullanıcıların posta kutularına aktaracak. Bağlayıcı, otomatik veya özel kullanıcı eşlemesi Microsoft 365 geçerli bir kullanıcı bulamazsa, öğe aktarılmaz.
 
-9. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için** Son'a tıklayın.
+10. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için** Son'a tıklayın.
 
-10. Yeni bağlayıcı **için içeri aktarma** işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin.
+11. Yeni bağlayıcı **için içeri aktarma** işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin.
 
 ## <a name="set-up-a-connector-using-private-keys"></a>Özel tuşları kullanarak bağlayıcı ayarlama
 
@@ -196,11 +202,17 @@ ICE Chat SFTP siteniz yapılandırıldıktan sonra, sonraki adım bu sitede bir 
 
 7. Bağlantı başarıyla doğrulandıktan sonra, Sonraki'ne **tıklayın**.
 
-8. Ice **Chat kullanıcılarını yeni kullanıcılarla Microsoft 365,** otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlar.
+8. Kullanıcı **tanımla sayfasında** , verileri içeri aktarıla kullanıcıları belirtin.
+
+     - **Kuruluş 2013'te çalışan tüm kullanıcılar**. Tüm kullanıcıların verilerini içeri aktar için bu seçeneği belirtin.
+
+     - **Yalnızca Mahkeme tutmada olan kullanıcılar**. Yalnızca posta kutuları Mahkeme tutmada bulunan kullanıcılara ait verileri içeri aktarmayı bu seçeneği belirtin. Bu seçenek, verileri LitigationHoldEnabled özelliği True olarak ayarlanmış kullanıcı posta kutularına içeri aktarmaktadır. Daha fazla bilgi için [bkz. Mahkeme tutma oluşturma](create-a-litigation-hold.md).
+
+9. Ice **Chat kullanıcılarını yeni kullanıcılarla Microsoft 365,** otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlar.
 
    > [!NOTE]
    > Daha önce de açıklaması olan özel eşleme dosyası CSV dosyası, HER kullanıcı için ICE Sohbeti imid'ini ve Microsoft 365 posta kutusu adresini içerir. Otomatik kullanıcı eşlemesini etkinleştirir ve her sohbet öğesi için özel bir eşleme sağlarsanız, bağlayıcı önce özel eşleme dosyasına bakar. Kullanıcının ICE Chat imid'ine karşılık gelen geçerli bir Microsoft 365 kullanıcısı bulamazsa bağlayıcı, öğeyi sohbet öğesinin *SenderEmail* ve *RecipientEmail* özelliklerinde belirtilen kullanıcıların posta kutularına aktaracak. Bağlayıcı, otomatik veya özel kullanıcı eşlemesi Microsoft 365 geçerli bir kullanıcı bulamazsa, öğe aktarılmaz.
 
-9. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için** Son'a tıklayın.
+10. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için** Son'a tıklayın.
 
-10. Yeni bağlayıcı **için içeri aktarma** işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin. Bağlayıcı hakkında bilgi içeren çıkış sayfasını görüntülemek için bağlayıcıya tıklayın.
+11. Yeni bağlayıcı **için içeri aktarma** işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin. Bağlayıcı hakkında bilgi içeren çıkış sayfasını görüntülemek için bağlayıcıya tıklayın.

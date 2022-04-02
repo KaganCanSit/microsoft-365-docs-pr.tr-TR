@@ -14,21 +14,23 @@ ms.reviewer: oogunrinde
 manager: dansimp
 ms.technology: mde
 ms.topic: how-to
-ms.collection: m365solution-scenario
+ms.collection:
+- m365solution-scenario
+- M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.date: 1/18/2022
-ms.openlocfilehash: 9f5d721148bdbd70347868d8e237a8454b33c346
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 14dfd8bd911be9eb3932f7664225532e493e8a80
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312103"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465387"
 ---
 # <a name="enable-attack-surface-reduction-rules"></a>Saldırı yüzeyini azaltma kurallarını etkinleştirin
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > [!TIP]
@@ -56,7 +58,7 @@ Tüm özellik kümesi saldırı yüzeyini azaltma kurallarını kullanmak için 
 - [Bulut Teslim Koruması açık](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) (bazı kurallar için bu gerekli olabilir)
 - Windows 10 Enterprise E5 veya E3 Lisansı
 
-Saldırı yüzeyini azaltma kuralları [Windows E5](/windows/deployment/deploy-enterprise-licenses) lisansı gerektirmese de, Windows E5 lisansına sahip olarak, Uç Nokta için Defender'da izleme, analiz ve iş akışları gibi gelişmiş yönetim özellikleriyle birlikte <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> raporlama ve yapılandırma özelliklerini elde edersiniz. Bu gelişmiş özellikler E3 lisansıyla kullanılamaz ancak saldırı yüzeyini azaltma kuralı olaylarını gözden geçirmek için Etkinlik Görüntüleyicisi'ni kullanmaya devam edersiniz.
+Saldırı yüzeyini azaltma kuralları [Windows E5](/windows/deployment/deploy-enterprise-licenses) lisansı gerektirmese de, Windows E5 lisansına sahip olarak, Uç Nokta için Defender'da izleme, analiz ve iş akışları gibi gelişmiş yönetim özellikleriyle birlikte <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> raporlama ve yapılandırma özelliklerini elde edersiniz. Bu gelişmiş özellikler E3 lisansıyla kullanılamaz ancak saldırı yüzeyini azaltma kuralı olaylarını gözden geçirmek Olay Görüntüleyicisi bu özellikleri kullanmaya devam edersiniz.
 
 Her ASR kuralı dört ayardan birini içerir:
 
@@ -68,7 +70,7 @@ Her ASR kuralı dört ayardan birini içerir:
 > [!IMPORTANT]
 > Şu anda, Microsoft Endpoint Manager'de (MEM) ASR kurallarını yapılandırarak, uyarı modu Microsoft Endpoint Manager desteklenmiyor. Daha fazla bilgi edinmek için [bkz. Uyarı modunun destek destekleme destekleme olduğu durumlar](attack-surface-reduction.md#cases-where-warn-mode-is-not-supported).
 
-Uç Nokta için [Microsoft Defender'da](microsoft-defender-endpoint.md) (Uç Nokta için Defender) bulunan gelişmiş izleme ve raporlama yetenekleriden yararlanmak için, bir Windows E5 lisansıyla (veya benzer lisans SKU'ları) ASR kuralları kullanılması önerilir. Öte yandan, gelişmiş izleme ve raporlama özelliklerini içermemiş Windows Professional veya Windows E3 gibi başka bir lisansınız varsa, ASR kuralları tetiklendiğinde her uç noktada oluşturulan olayların üzerine kendi izleme ve raporlama araçlarınızı geliştirebilirsiniz (örneğin, Olay İ iletme).
+[Uç Nokta için Microsoft Defender'de](microsoft-defender-endpoint.md) (Uç Nokta için Defender) bulunan gelişmiş izleme ve raporlama yetenekleriden yararlanmak için, ASR kurallarını Windows E5 lisansıyla (veya benzer lisans SKU'ları) kullanmanız önerilir. Öte yandan, gelişmiş izleme ve raporlama özelliklerini içermemiş Windows Professional veya Windows E3 gibi başka bir lisansınız varsa, ASR kuralları tetiklendiğinde her uç noktada oluşturulan olayların üzerine kendi izleme ve raporlama araçlarınızı geliştirebilirsiniz (örneğin, Olay İ iletme).
 
 > [!TIP]
 > Lisanslama hakkında daha fazla Windows için [Lisanslama](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5) Windows 10'ne bakın ve Lisanslama Hakkında [Toplu Lisanslama Windows 10](https://download.microsoft.com/download/2/D/1/2D14FE17-66C2-4D4C-AF73-E122930B60F6/Windows-10-Volume-Licensing-Guide.pdf).
@@ -81,7 +83,7 @@ Uç Nokta için [Microsoft Defender'da](microsoft-defender-endpoint.md) (Uç Nok
 - [Grup İlkesi](#group-policy)
 - [PowerShell](#powershell)
 
-Enterprise intune veya posta Microsoft Endpoint Manager düzey yönetimi önerilir. Enterprise yönetimi, başlangıçta çakışan Tüm Grup İlkesi veya PowerShell ayarlarının üzerine yazacak.
+Enterprise yönetim veya eğitim Intune düzeyde Microsoft Endpoint Manager önerilir. Enterprise yönetimi, başlangıçtaki çakışan tüm ayarların grup ilkesi PowerShell ayarlarının üzerine yazacak.
 
 ## <a name="exclude-files-and-folders-from-asr-rules"></a>Dosya ve klasörleri ASR kurallarından çıkar
 
@@ -156,7 +158,7 @@ ASR kurallarını etkinleştirmeye ilişkin aşağıdaki yordamlar, dosyaları v
 1. MICROSOFT ENDPOINT MANAGER (MEM) yönetim merkezini açın. Giriş menüsünde **Cihazlar'a** tıklayın,  **Yapılandırma** **profilleri'ne tıklayın** ve ardından Profil oluştur'a **tıklayın**.
 
    > [!div class="mx-imgBorder"]
-   > ![MEM Profil Oluştur.](images/mem01-create-profile.png)
+   >  :::image type="content" source="images/mem01-create-profile.png" alt-text="Yönetim merkezi portalında profil Microsoft Endpoint Manager sayfası" lightbox="images/mem01-create-profile.png":::
 
 2. Profil **oluştur'da**, aşağıdaki iki açılan listede, şunları seçin:
 
@@ -167,17 +169,17 @@ ASR kurallarını etkinleştirmeye ilişkin aşağıdaki yordamlar, dosyaları v
    **Özel'i** ve ardından Oluştur'a **seçin**.
 
    > [!div class="mx-imgBorder"]
-   > ![MEM kuralı profil öznitelikleri.](images/mem02-profile-attributes.png)
+   > :::image type="content" source="images/mem02-profile-attributes.png" alt-text="Microsoft Endpoint Manager yönetim merkezi portalında kural profili öznitelikleri" lightbox="images/mem02-profile-attributes.png":::
 
 3. Özel şablon aracı **1. adıma açılır**. **1 Temel Bilgi'de**, **Ad** kutusuna şablonunuz için bir ad yazın ve Açıklama'ya  bir açıklama (isteğe bağlı) yazın.
 
    > [!div class="mx-imgBorder"]
-   > ![MEM temel öznitelikleri.](images/mem03-1-basics.png)
+   > :::image type="content" source="images/mem03-1-basics.png" alt-text="Microsoft Endpoint Manager yönetim merkezi portalında temel öznitelikler" lightbox="images/mem03-1-basics.png":::
 
 4. **İleri**'ye tıklayın. **2. Adım Yapılandırma ayarları** açılır. OMA URI'leri Ayarlar Ekle'ye **tıklayın**. şimdi iki seçenek görüntülenir: **Ekle ve** Dışarı **Aktar**.
 
    > [!div class="mx-imgBorder"]
-   > ![MEM Yapılandırması ayarları.](images/mem04-2-configuration-settings.png)
+   > :::image type="content" source="images/mem04-2-configuration-settings.png" alt-text="Yönetim merkezi portalında Microsoft Endpoint Manager ayarları" lightbox="images/mem04-2-configuration-settings.png":::
 
 5. Yeniden **Ekle'ye** tıklayın. Satır **OMA-URI Ekle Ayarlar** açılır. Satır **Ekle'de** şunları yapın:
 
@@ -193,7 +195,7 @@ ASR kurallarını etkinleştirmeye ilişkin aşağıdaki yordamlar, dosyaları v
      - 6 : Uyarı (ASR kuralını etkinleştirin ancak son kullanıcının engellemeyi at olmasına izin verme)
 
    > [!div class="mx-imgBorder"]
-   > ![MEM OMA URI yapılandırması.](images/mem05-add-row-oma-uri.png)
+   > :::image type="content" source="images/mem05-add-row-oma-uri.png" alt-text="Yönetim merkezi portalında OMA Microsoft Endpoint Manager yapılandırması" lightbox="images/mem05-add-row-oma-uri.png":::
 
 6. **Kaydet**'i seçin. **Satır Ekle** kapanır. **Özel'de** Sonraki'yi **seçin**. 3. **adımda Kapsam etiketleri** isteğe bağlıdır. Şunlardan birini yapın:
 
@@ -207,7 +209,7 @@ ASR kurallarını etkinleştirmeye ilişkin aşağıdaki yordamlar, dosyaları v
    - **Tüm cihazları ekle**
 
    > [!div class="mx-imgBorder"]
-   > ![MEM ödevleri.](images/mem06-4-assignments.png)
+   > :::image type="content" source="images/mem06-4-assignments.png" alt-text="Microsoft Endpoint Manager yönetim merkezi portalında ödevler" lightbox="images/mem06-4-assignments.png":::
 
 8. **Dışlanan gruplar'da**, bu kuralın dışında tutmak istediğiniz grupları seçin ve sonra da Sonraki'yi **seçin**.
 
@@ -218,12 +220,12 @@ ASR kurallarını etkinleştirmeye ilişkin aşağıdaki yordamlar, dosyaları v
    - Değer **alanına**, geçerli değeri veya değer aralığını girin
 
    > [!div class="mx-imgBorder"]
-   > ![MEM Uygulanabilirlik kuralları.](images/mem07-5-applicability-rules.png)
+   > :::image type="content" source="images/mem07-5-applicability-rules.png" alt-text="Yönetim merkezi portalında Microsoft Endpoint Manager kuralları" lightbox="images/mem07-5-applicability-rules.png":::
 
 10. **İleri**'yi seçin. 6. **adımda Gözden Geçir + oluştur** adımını, seçtiğiniz ve girdiğiniz ayarları ve bilgileri gözden geçirerek Oluştur'a **tıklayın**.
 
     > [!div class="mx-imgBorder"]
-    > ![MEM Gözden Geçir ve oluştur.](images/mem08-6-review-create.png)
+    > :::image type="content" source="images/mem08-6-review-create.png" alt-text="Yönetim merkezi portalında Gözden Microsoft Endpoint Manager seçeneği" lightbox="images/mem08-6-review-create.png":::
 
     > [!NOTE]
     > Kurallar dakikalar içinde etkindir ve canlıdır.
@@ -280,11 +282,11 @@ Dışlama [eklemek için ./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReduc
 ### <a name="group-policy"></a>Grup İlkesi
 
 > [!WARNING]
-> Bilgisayarlarınızı ve cihazlarınızı Intune, Configuration Manager veya başka bir kurumsal düzey yönetim platformuyla yönetirseniz, yönetim yazılımı başlangıçta çakışan Grup İlkesi ayarlarının üzerine yazacak.
+> Bilgisayarlarınızı ve cihazlarınızı Intune, Configuration Manager veya başka bir kurumsal düzey yönetim platformuyla yönetirsanız, yönetim yazılımı başlangıçtaki çakışan tüm grup ilkesi üzerine yazacak.
 
-1. Grup İlkesi yönetim bilgisayarınızda Grup İlkesi Yönetim [Konsolu'nu](https://technet.microsoft.com/library/cc731212.aspx) açın, yapılandırmak istediğiniz Grup İlkesi Nesnesine sağ tıklayın ve Düzenle'yi **seçin**.
+1. Bilgisayarınızdan grup ilkesi Yönetim Konsolu'nu [grup ilkesi](https://technet.microsoft.com/library/cc731212.aspx), yapılandırmak istediğiniz Grup ilkesi Nesnesine sağ tıklayın ve Düzenle'yi **seçin**.
 
-2. Grup İlkesi **Yönetim Düzenleyicisi'nde** Bilgisayar **yapılandırması'ne gidin ve** Yönetim **şablonları'ı seçin**.
+2. Grup ilkesi **Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin ve** Yönetim **şablonları'ı seçin**.
 
 3. Saldırı yüzeyini **azaltmayı Windows bileşenleri Microsoft Defender Virüsten Koruma** \> **Microsoft Defender Exploit Guard** \>  \> **ağacı genişletin**.
 
@@ -295,7 +297,7 @@ Dışlama [eklemek için ./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReduc
    - 2 : Denetim (ETKINLEŞTIRILIRSE ASR kuralının organizasyonu nasıl etkiley olacağını değerlendirin)
    - 6 : Uyarı (ASR kuralını etkinleştirin ancak son kullanıcının engellemeyi at olmasına izin verme)
 
-   :::image type="content" source="images/asr-rules-gp.png" alt-text="Grup İlkesi'de ASR kuralları.":::
+   :::image type="content" source="images/asr-rules-gp.png" alt-text="Grup ilkesi'te ASR kuralları" lightbox="images/asr-rules-gp.png":::
 
 5. Dosyaları ve klasörleri ASR kurallarından dışlamak için Saldırı yüzeyi azaltma  kuralları ayarının dışında tutmak istediğiniz dosyaları ve yolları dışla ayarını seçin ve seçeneği Etkin olarak **ayarlayın**. **Göster'i** seçin ve Değer adı sütununa her **dosya veya klasörü** girin. Her **öğe için** Değer **sütununa** 0 girin.
 
@@ -305,12 +307,12 @@ Dışlama [eklemek için ./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReduc
 ### <a name="powershell"></a>PowerShell
 
 > [!WARNING]
-> Bilgisayarlarınızı ve cihazlarınızı Intune, Configuration Manager veya başka bir kurumsal düzey yönetim platformuyla yönetirsanız, yönetim yazılımı başlangıçta çakışan Tüm PowerShell ayarlarının üzerine yazmaz. Kullanıcıların PowerShell kullanarak değeri tanımlamasına izin vermek için, yönetim platformunda kural için "Kullanıcı Tanımlı" seçeneğini kullanın.
+> Bilgisayarlarınızı ve cihazlarınızı Intune, Configuration Manager veya başka bir kurumsal düzey yönetim platformuyla yönetirsanız, yönetim yazılımı başlangıçta çakışan Tüm PowerShell ayarlarının üzerine yazacak. Kullanıcıların PowerShell kullanarak değeri tanımlamasına izin vermek için, yönetim platformunda kural için "Kullanıcı Tanımlı" seçeneğini kullanın.
 > "Kullanıcı Tanımlı", yerel yönetici kullanıcısını kuralı yapılandırmaya olanak sağlar.
 > Kullanıcı Tanımlı seçenek ayarı aşağıdaki şekilde gösterilmektedir.
 
 > [!div class="mx-imgBorder"]
-> ![ASR "Kullanıcı Tanımlı" ayarını etkinleştirme](images/asr-user-defined.png)
+> :::image type="content" source="images/asr-user-defined.png" alt-text="Kimlik bilgileri güvenliği için Etkinleştir seçeneği" lightbox="images/asr-user-defined.png":::
 
 1. **PowerShell yazın ve** Başlat menüsü sağ tıklayın ve **Windows PowerShell Yönetici olarak** **çalıştır'ı seçin**.
 

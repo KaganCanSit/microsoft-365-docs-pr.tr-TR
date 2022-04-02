@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: d9f1b4619670c1998dbac584bf7ef4e1d1f940b6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b969efd9d83fa34ded01f8be7db7aaf4db971128
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314231"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64498651"
 ---
 # <a name="assess-your-security-posture-with-microsoft-secure-score"></a>Microsoft Güvenli Puanı ile güvenlik nedenlerinizi değerlendirin
 
@@ -38,15 +38,15 @@ Microsoft Güvenli Puanı, kuruluşun güvenlik mezralarının bir ölçümüdü
 Gereksinen bilgileri daha hızlı bu gerektirmenizi yardımcı olmak için, Microsoft geliştirme eylemleri gruplar halinde düzenlenmiştir:
 
 - Kimlik (Azure Active Directory hesapları & rolleri)
-- Cihaz (Cihazlar için Microsoft Güvenli Puanı olarak bilinen [Uç Nokta için Microsoft](/windows/security/threat-protection/microsoft-defender-atp/tvm-microsoft-secure-score-devices) Defender)
-- Uygulamalar (e-posta ve bulut uygulamaları, Office 365 uygulamaları ve Bulut Uygulamaları için Microsoft Defender dahil)
+- Cihaz (Uç Nokta için Microsoft Defender [Için Microsoft Güvenli Puanı olarak bilinir](/windows/security/threat-protection/microsoft-defender-atp/tvm-microsoft-secure-score-devices))
+- Uygulamalar (e-posta ve bulut uygulamaları, Office 365 ve bulut Microsoft Defender for Cloud Apps)
 
 >[!NOTE]
->Microsoft Secure Score'ın son sürümüyle, Microsoft Secure Score'ın Identity Secure Score ve Graph API ile geçici olarak uyumsuz hale gelen geliştirilmiş bir puanlama modeli yayınlandı. [Ayrıntıları görüntüle](microsoft-secure-score-whats-new.md)
+>Microsoft Secure Score'ın son sürümüyle, Microsoft Secure Score'ın Kimlik Güvenliği Puanı ve kimlik puanıyla geçici olarak uyumsuz hale gelen geliştirilmiş bir puanlama modeli Graph API. [Ayrıntıları görüntüle](microsoft-secure-score-whats-new.md)
 
 Microsoft Güvenli Puanı genel bakış sayfasında, bu gruplar arasında puanların nasıl bölün olduğunu ve hangi noktaların kullanılabilir olduğunu görebilirsiniz. Ayrıca, karşılaştırma karşılaştırmaları ile toplam puanın, güvenli puanınıza genel eğilimin ve puanınızı geliştirmek için alınacak öncelikleri alınmış geliştirme eylemlerinin hepsini kullanabilirsiniz.
 
-![Puanın Güvenliğini Sağlama giriş sayfası.](../../media/secure-score/secure-score-home-page.png)
+:::image type="content" source="../../media/secure-score/secure-score-home-page.png" alt-text="Web sitesi portalında Güvenli Microsoft 365 Defender sayfası" lightbox="../../media/secure-score/secure-score-home-page.png":::
 
 ## <a name="check-your-current-score"></a>Geçerli puanınızı denetleme
 
@@ -62,7 +62,7 @@ Aşağıda, genel puanınızı görünümünüze ek olarak, genel not resmin tam
 
 Bu görünüm, tüm olası puan görünümlerini dahil ettiysanız görünümün görünümüne benzer:
 
-![Planlanan puan, geçerli lisans puanı ve ulaşılabilir puanlar dahil güvenli puanınız.](../../media/secure-score/secure-score-achievable.png)
+:::image type="content" source="../../media/secure-score/secure-score-achievable.png" alt-text="Planlanan puan, geçerli lisans puanı ve portalda ulaşılabilir puanlar dahil güvenli Microsoft 365 Defender puanınız" lightbox="../../media/secure-score/secure-score-achievable.png":::
 
 ## <a name="take-action-to-improve-your-score"></a>Puanınızı geliştirmek için harekete geç
 
@@ -76,13 +76,13 @@ Sıralama, ulaşacak puan sayısına, uygulama zorluğuna, kullanıcı etkisine 
 
 Belirli bir geliştirme eylemlerini seçin, tam sayfa açılır sayfası görüntülenir.  
 
-![Geliştirme eylemi uçarak çıkış örneği.](../../media/secure-score/secure-score-improvement-action-details.png)
+:::image type="content" source="../../media/secure-score/secure-score-improvement-action-details.png" alt-text="Microsoft 365 Defender portalında geliştirme eyleminin uçarak çıkış" lightbox="../../media/secure-score/secure-score-improvement-action-details.png":::
 
 Eylemi tamamlamak için birkaç seçenek vardır:
 
 - Yapılandırma **ekranına** gitmek ve değişikliği yapmak için Yönet'i seçin. Bundan sonra, eylemin değer olduğu noktaları hareket hareket ettirecek şekilde kazanırsınız. Puanların güncelleştirilsi genellikle yaklaşık 24 saat sürer.
 
-- Geliştirme **eyleminin** doğrudan bağlantısını kopyalamak için Paylaş'ı seçin. Bağlantıyı paylaşmak için e-posta, e-posta veya Microsoft Planner Microsoft Teams da seçebilirsiniz.
+- Geliştirme **eyleminin** doğrudan bağlantısını kopyalamak için Paylaş'ı seçin. Bağlantıyı paylaşmak için e-posta, e-posta adresi veya posta Microsoft Teams da Microsoft Planner.
 
 **İlerlemeyi** veya açıklama eklemek istediğiniz başka herhangi bir şeyi izlemek için Notlar ekleyin. Geliştirme eylemine kendi **etiketlerinizi** eklersiniz, bu etiketlere göre filtre uygulamanız gerekir.
 
@@ -123,5 +123,5 @@ Herhangi bir sorun varsa, Güvenlik, Gizlilik ve Uyumluluk topluluğuna [gönder
 
 - [Microsoft Güvenli Puanına genel bakış](microsoft-secure-score.md)
 - [Microsoft Güvenli Puan geçmişinizi izleme ve hedefleri karşılama](microsoft-secure-score-history-metrics-trends.md)
-- [Neler geliyor?](microsoft-secure-score-whats-coming.md)
-- [Yenilikler](microsoft-secure-score-whats-new.md)
+- [Yapılacak yenilikler](microsoft-secure-score-whats-coming.md)
+- [Yeni gelenler](microsoft-secure-score-whats-new.md)

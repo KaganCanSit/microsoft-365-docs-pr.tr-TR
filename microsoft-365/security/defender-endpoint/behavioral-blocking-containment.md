@@ -1,7 +1,7 @@
 ---
-title: Davranışsal engelleme ve engelleme
-description: Uç nokta için Microsoft Defender'da davranış engelleme ve engelleme özellikleri hakkında bilgi
-keywords: Uç Nokta için Microsoft Defender, EDR modunda kapalı, pasif modu engelleme
+title: Davranışsal engelleme ve kapsama
+description: Aynı anda hem davranış engelleme hem de içeren özellikler hakkında Uç Nokta için Microsoft Defender
+keywords: Uç Nokta için Microsoft Defender, EDR modundayken pasif modunu engelleme
 ms.pagetype: security
 author: denisebmsft
 ms.author: deniseb
@@ -17,17 +17,17 @@ ms.custom:
 - admindeeplinkDEFENDER
 ms.collection: m365-security-compliance
 ms.technology: mde
-ms.openlocfilehash: bab766fd69b9227f10ba897040faff79e65b1722
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: f919a93768699c573c87b938cea37a05955ab9f2
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63325789"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465343"
 ---
-# <a name="behavioral-blocking-and-containment"></a>Davranışsal engelleme ve engelleme
+# <a name="behavioral-blocking-and-containment"></a>Davranışsal engelleme ve kapsama
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
@@ -38,7 +38,7 @@ Günümüzde tehdit ortamı dosyasız kötü amaçlı yazılımlar tarafından [
 
 Davranışsal engelleme ve engelleme özellikleri, tehdit yürütmeye başlamış olsalar bile, davranışlarına ve işlem ağaçlarına dayalı olarak tehditleri belirlemeye ve durdurmaya yardımcı olabilir. Uç nokta bileşenleri ve özellikleri için yeni nesil koruma, EDR ve Defender, davranış engelleme ve içerirken birlikte çalışır.
 
-:::image type="content" source="images/mdatp-next-gen-EDR-behavblockcontain.png" alt-text="Davranışsal engelleme ve engelleme.":::
+:::image type="content" source="images/mdatp-next-gen-EDR-behavblockcontain.png" alt-text="Microsoft Defender ATP portalında Davranış engelleme ve engelleme" lightbox="images/mdatp-next-gen-EDR-behavblockcontain.png":::
 
 Davranışsal engelleme ve engelleme özellikleri, birden çok bileşenle ve Uç Nokta için Defender'ın özellikleriyle birlikte çalışır ve saldırının ilerlemesini önler.
 
@@ -52,7 +52,7 @@ Bu özellikler sayesinde, çalışmaya başlamaları bile daha fazla tehdit önl
 
 Aşağıdaki resimde davranış engelleme ve engelleme özellikleri tarafından tetiklenen bir uyarı örneği yer almaktadır:
 
-:::image type="content" alt-text="Davranış engelleme ve engelleme yoluyla uyarı örneği." source="images/blocked-behav-alert.png" lightbox="images/blocked-behav-alert.png":::
+:::image type="content" source="images/blocked-behav-alert.png" alt-text="Davranış engelleme ve engelleme yoluyla uyarı içeren Uyarılar sayfası" lightbox="images/blocked-behav-alert.png":::
 
 ## <a name="components-of-behavioral-blocking-and-containment"></a>Davranış engelleme ve içeren bileşenleri
 
@@ -88,28 +88,28 @@ Aşağıda, davranışsal engelleme ve önlemi engellemeye örnek olarak iki ger
 
 Bu makale de açıklanmıştır [: AI](https://www.microsoft.com/security/blog/2019/10/08/in-hot-pursuit-of-elusive-threats-ai-driven-behavior-based-blocking-stops-attacks-in-their-tracks) tabanlı davranış tabanlı engelleme saldırılarını durdurarak saldırılara son verdi. Dünya'daki 100 kuruluşa yönelik kimlik bilgileri hırsızlığı saldırısı, davranış engelleme ve engelleme özellikleri tarafından durduruldu. Hedefli kuruluşlara, bir kimlik avı belgesi içeren kimlik avı e-posta iletileri gönderildi. Bir alıcı eki açtısa, ilgili uzak belge kullanıcının cihazında kod yürütüp Kimlik bilgilerini çaldıran, çalınmış verileri çaldıran ve komut ve denetim sunucusundan başka yönergeler için bekleyen Lokibot kötü amaçlı yazılımını yükleyemedi.
 
-Uç nokta için Defender'daki davranış tabanlı cihaz öğrenme modelleri, saldırı zincirinde iki noktada saldırgan tekniklerini durdurdu:
+Uç nokta için Defender'daki davranış tabanlı cihaz öğrenme modelleri yakalanırsa ve saldırganın tekniklerini saldırı zincirinin iki yerinden durdurulur:
 
 - İlk koruma katmanı, exploit davranışını algıladı. Buluttaki cihaz öğrenme sınıflayıcıları tehdidi doğru bir şekilde tanımlandı ve ardından istemci cihazdan saldırıyı engellemesini hemen istedi.
 - Saldırının ilk katmanı geçmiş, boş işlem algılandı, bu işlemi durdurmanıza ve ilgili dosyaları (Lokibot gibi) kaldıran ikinci koruma katmanı.
 
 Saldırı algılandığında ve durdurulurken " ilk erişim uyarısı" gibi uyarılar tetiklendi ve [Microsoft 365 Defender portalda görüldü](/microsoft-365/security/defender/microsoft-365-defender).
 
-:::image type="content" source="images/behavblockcontain-initialaccessalert.png" alt-text="Portalda ilk Microsoft 365 Defender uyarısı.":::
+:::image type="content" source="images/behavblockcontain-initialaccessalert.png" alt-text="Portalda ilk Microsoft 365 Defender uyarısı" lightbox="images/behavblockcontain-initialaccessalert.png":::
 
-Bu örnekte, buluttaki davranış tabanlı cihaz öğrenme modellerinin çalışmaya başladıktan sonra bile saldırılara karşı yeni koruma katmanlarını nasıl ekleyeceği açıklandı.
+Bu örnek, buluttaki davranış tabanlı cihaz öğrenme modellerinin çalışmaya başladıktan sonra bile saldırılara karşı yeni koruma katmanları eklemesi gösterir.
 
 ### <a name="example-2-ntlm-relay---juicy-potato-malware-variant"></a>Örnek 2: NTLM geçişi - Kötü amaçlı Patates kötü amaçlı yazılım değişken
 
 Son blog gönderisinde de açıklandığı gibi Davranışsal engelleme ve engelleme: Optikleri korumaya dönüştürme [Ocak](https://www.microsoft.com/security/blog/2020/03/09/behavioral-blocking-and-containment-transforming-optics-into-protection) 2020'de, Uç Nokta için Defender, kuruluşta bir cihazda ayrıcalık yükseltme etkinliği algıladı. "NTLM geçişi kullanılarak olası ayrıcalık yükseltmesi" adlı bir uyarı tetiklenir.
 
-:::image type="content" alt-text="Edinen Patates kötü amaçlı yazılımı için NTLM uyarısı." source="images/NTLMalertjuicypotato.png" lightbox="images/NTLMalertjuicypotato.png":::
+:::image type="content" source="images/NTLMalertjuicypotato.png" alt-text="Patates Patates kötü amaçlı yazılımları için NTLM uyarısı" lightbox="images/NTLMalertjuicypotato.png":::
 
 Tehdit kötü amaçlı yazılım olduğu ortaya çıktı; bu, saldırganlar tarafından bir cihazda ayrıcalık yükseltmesi elde etmek için kullanılan Veli Patates adlı, kötümser bir korsan aracının önceden görülen olmayan yeni bir çeşitlecidir.
 
 Uyarının tetiklendiğinden dakikalar sonra dosya çözümlendi ve kötü amaçlı olarak onaylandı. Aşağıdaki resimde gösterildiği gibi, işlemi durduruldu ve engellendi:
 
-:::image type="content" alt-text="Yapı engellendi." source="images/Artifactblockedjuicypotato.png" lightbox="images/Artifactblockedjuicypotato.png":::
+:::image type="content" source="images/Artifactblockedjuicypotato.png" alt-text="Yapı engellendi"  lightbox="images/Artifactblockedjuicypotato.png":::
 
 Yapı engellendikten birkaç dakika sonra, aynı dosyanın birden çok örneği aynı cihazda engellenmiş ve bu da cihaza daha fazla saldırgan veya başka kötü amaçlı yazılım dağıtmasını önler.
 

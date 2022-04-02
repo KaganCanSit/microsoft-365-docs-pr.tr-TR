@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Kullanıcılarınızı Microsoft ürünleri hakkında Microsoft'a gönderebilirsiniz geri bildirimi yönetin.
-ms.openlocfilehash: 9b63a4046c9d1ab13ae6b3f4856a521d4c7a9b70
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 8cd20b1a6138f389ba996bdaee8cae8ae24d2974
+ms.sourcegitcommit: 601ab9ad2b624e3b5e04eed927a08884c885c72a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984003"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "64403577"
 ---
 # <a name="manage-microsoft-feedback-for-your-organization"></a>Organizasyonunız için Microsoft geri bildirimlerini yönetme
 
@@ -69,10 +69,10 @@ Bu ilkeleri kullanmak için cihazlarınız minimum bir derleme numarasında olma
 
 |**Derleme #**|**Win32**|**iOS**|**Android**|**Mac**|**Web**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
-|Ürünle ilgili geri bildirim|En az 16.0.13328|En az 2,42|En az 16.0.13328|En az 16,42|Genel kullanıma açık|
-|Ürün içinde anketler|En az 16.0.13328|En az 2,42|En az 16.0.13426|En az 16,42|Bekleyen rollout|
-|Meta veri toplama|En az 16.0.13328|En az 2,42|En az 16.0.13328|En az 16,42|Genel kullanıma açık|
-|Müşteri katılımı|En az 16.0.13328|En az 2,42|En az 16.0.13426|En az 16,42|Bekleyen rollout|
+|Ürünle ilgili geri bildirim|En az Sürüm 2010|En az 2,42|En az 16.0.13328|En az 16,42|Genel kullanıma açık|
+|Ürün içinde anketler|En az Sürüm 2010|En az 2,42|En az 16.0.13426|En az 16,42|Bekleyen rollout|
+|Meta veri toplama|En az Sürüm 2010|En az 2,42|En az 16.0.13328|En az 16,42|Genel kullanıma açık|
+|Müşteri katılımı|En az Sürüm 2010|En az 2,42|En az 16.0.13426|En az 16,42|Bekleyen rollout|
 
 ## <a name="specific-policies-you-can-configure"></a>Yapılandırılan belirli ilkeler
 
@@ -88,19 +88,11 @@ Bu ilkeleri kullanmak için cihazlarınız minimum bir derleme numarasında olma
 
 ## <a name="configure-policies"></a>İlkeleri yapılandırma
 
-1. Gidin ve oturum [https://config.office.com](https://config.office.com) aç'a tıklayın.
-1. **Özelleştirme'yi ve** ardından **İlke Yönetimi'ne seçin**.
-1. **Oluştur**’u seçin.
-1. Ad **ve** açıklama **girin**.
-1. Yapılandırmak istediğiniz Azure Active dizin gruplarını seçin.
-1. Geri Bildirim ve **Araştırma'da arama.**
-1. Listelenen her ilke için, istediğiniz değeri ayarlayın.
+Bu ilke ayarlarını yapılandırmak için, Office hizmetini kullanabilirsiniz. Daha fazla bilgi için bkz[. İlke bulut Office genel bakış](/deployoffice/overview-office-cloud-policy-service). İlke ayarlarını yapılandırarak bulmak için, Office bulut ilkesi hizmeti kullanıcı arabiriminin içinde "geri bildirim" veya "anket" araması yapabilirsiniz. 
 
-Daha fazla bilgi için bkz[. İlke bulut Office genel bakış](/deployoffice/overview-office-cloud-policy-service).
+Bu ilke ayarları, İlke ve Kullanım grup ilkesi. Bu ilke ayarlarını kullanmak için, 22 Mart 2021'de yayımlanan Yönetim Şablonu dosyalarının [(ADMX/ADML)](https://www.microsoft.com/download/details.aspx?id=49030) en az 5146.1000 sürümünü indirin.
 
-Bu ilke ayarları, Grup İlkesi kullanırsanız da kullanılabilir. Bu ilke ayarlarını kullanmak için, 22 Mart 2021'de yayımlanan Yönetim Şablonu dosyalarının [(ADMX/ADML)](https://www.microsoft.com/download/details.aspx?id=49030) en az 5146.1000 sürümünü indirin.
-
-Bu ilke ayarlarını Kullanıcı Yapılandırması -> İlkeleri -> Yönetim Şablonları -> Microsoft Office 2016 -> -> Güven Merkezi altında bulabilirsiniz.
+Bu ilke ayarlarını Kullanıcı Yapılandırması\İlkeler\Yönetim Şablonları\Microsoft Office 2016\Privacy\Trust Center altında bulabilirsiniz.
 
 > [!NOTE]
 > İstemci uygulamalarının güncelleştirilsi birkaç saat sürer.

@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-zerotrust
 - m365solution-overview
 - M365-security-compliance
-ms.openlocfilehash: 9b37e353af74b7a01c0647f99b149f5fac0ae8a3
-ms.sourcegitcommit: 22cae7ec541268d519d45518c32f22bf5811aec1
+ms.openlocfilehash: 59ebfb9ffb925cc5937802a31902e7c2342fc740
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "63011783"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755659"
 ---
 # <a name="microsoft-365-zero-trust-deployment-plan"></a>Microsoft 365 Sıfır Güveni dağıtım planı
 
@@ -36,13 +36,7 @@ Sıfır Güven yaklaşımı tüm dijital emlak genelinde genişler ve tümleşik
 
 Bu çizim, Sıfır Güven'e katkıda bulunan birincil öğelerin bir gösterimini sağlar.
 
-<!---
-[![Zero Trust security architecture](../media/zero-trust/zero-trust-architecture.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/media/zero-trust/zero-trust-architecture.png)
--->
-
-:::image type="content" source="../media/zero-trust/zero-trust-architecture.png" alt-text="Sıfır Güveni mimarisi" lightbox="../media/zero-trust/zero-trust-architecture.png":::
-
-
+:::image type="content" source="../media/zero-trust/zero-trust-architecture.png" alt-text="Sıfır Güveni güvenlik mimarisi" lightbox="../media/zero-trust/zero-trust-architecture.png":::
 
 Çizimde:
 - Güvenlik ilkesi zorlaması, Sıfır Güven mimarisinin merkezindedir. Bu, kullanıcı hesabı riskini, cihaz durumunu ve sizin ayardınız diğer ölçütleri ve ilkeleri hesaba katan koşullu erişimle Çok Faktörlü kimlik doğrulamasını içerir.
@@ -128,7 +122,7 @@ Elektronik [**_bileşenlerin pilot Microsoft 365 Defender_**](defender/eval-over
 
 |Şunları içerir:  |Önkoşullar  |Bu,  |
 |---------|---------|---------|
-| Tüm bileşenler için değerlendirme ve pilot ortamını ayarlama:<br>- Kimlik için Defender<br>- Office 365 için Defender<br>- Uç Nokta için Defender<br>- Bulut Uygulamaları için Microsoft Defender<br><br>Tehditlere karşı koruma<br><br> Tehditleri araştırma ve yanıtlama   | Bu makalenin her bileşenine yönelik mimari gereksinimleri hakkında bilgi Microsoft 365 Defender.        | Azure AD Identity Protection, bu çözüm kılavuzuna dahil değildir. 1. Adım: Sıfır Güven kimliğini ve cihaz erişim korumasını yapılandırma'ya dahildir.        |
+| Tüm bileşenler için değerlendirme ve pilot ortamını ayarlama:<br>- Kimlik için Defender<br>- Office 365 için Defender<br>- Uç Nokta için Defender<br>- Bulut Uygulamaları için Microsoft Defender<br><br>Tehditlere karşı korunun<br><br> Tehditleri araştırın ve karşı yanıt verin   | Bu makalenin her bileşenine yönelik mimari gereksinimleri hakkında bilgi Microsoft 365 Defender.        | Azure AD Identity Protection, bu çözüm kılavuzuna dahil değildir. 1. Adım: Sıfır Güven kimliğini ve cihaz erişim korumasını yapılandırma'ya dahildir.        |
 |    |         |         |
 
 ## <a name="step-5-protect-and-govern-sensitive-data"></a>Adım 5. Hassas verileri koruma ve yönetme
@@ -144,7 +138,8 @@ Bu çalışma, bu makalenin önceki kısmında gösterildiği gibi dağıtım y�
 
 Microsoft Bilgi Koruması, belirli iş hedeflerinize yönelik olarak kullanabileceğiniz bir çerçeve, süreç ve özellikler sağlar.
 
-![Microsoft Bilgi Koruması (MIP) çerçevesi](../media/zero-trust/mip-solution-overview.png)
+:::image type="content" source="../media/zero-trust/mip-solution-overview.png" alt-text="Microsoft Bilgi Koruması çerçevesi" lightbox="../media/zero-trust/mip-solution-overview.png":::
+
 
 Bilgi korumasını planlama ve dağıtma hakkında daha fazla bilgi için bkz [**_. Microsoft Bilgi Koruması dağıtma_**](../compliance/information-protection-solution.md). 
 

@@ -12,31 +12,31 @@ ms.service: o365-solutions
 ms.localizationpriority: medium
 ms.collection: M365-subscription-management
 ms.custom: it-pro
-description: Kullanımdan kalkmış Masaüstü Dağıtım Merkezi ile eşdeğer kaynaklara nasıl erişebilirsiniz.
+description: Kullanım dışı Masaüstü Dağıtım Merkezi ile eşdeğer kaynaklara erişmeyi öğrenin.
 ms.openlocfilehash: 6a8f08b855393741e6b2d48c40b4f712154ee1a6
 ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 10/06/2021
 ms.locfileid: "62984682"
 ---
-# <a name="desktop-deployment-center-deprecated"></a>Masaüstü Dağıtım Merkezi (kullanımdan kullanımdan kullanımdan)
+# <a name="desktop-deployment-center-deprecated"></a>Masaüstü Dağıtım Merkezi (kullanım dışı)
 
-Masaüstü Dağıtım Merkezi'nde oluşturan içeriğin gövdesi kullanım dışı bırakıldı. 
+Masaüstü Dağıtım Merkezi’ni oluşturan içerik gövdesi kullanım dışı bırakıldı. 
 
 Modern masaüstlerini dağıtmak için şu kaynakları kullanın:
 
 - [Windows 10 dağıtımı](/windows/deployment/)
-- [Dağıtım Microsoft 365 Uygulamaları](/deployoffice/deployment-guide-microsoft-365-apps)
+- [Microsoft 365 Uygulamaları’nı dağıtın](/deployoffice/deployment-guide-microsoft-365-apps)
 - [Microsoft Intune](/mem/intune/fundamentals/planning-guide)
 - [Kimlik ve cihaz erişim ilkeleri](../security/office-365-security/microsoft-365-policies-configurations.md)
 
-Microsoft Mechanics'den Masaüstü [Dağıtımı serisi videolarını da görüntüebilirsiniz](https://www.aka.ms/watchhowtoshift).
+Microsoft Mechanics’deki [Masaüstü Dağıtımı video serisine](https://www.aka.ms/watchhowtoshift) de göz atabilirsiniz.
 
-Microsoft iş ortaklarından ve iş ortaklarından masaüstü dağıtımınıza ve [iş ortaklarına](https://www.microsoft.com/fasttrack/microsoft-365) FastTrack.
+Ayrıca Microsoft iş ortaklarından ve [FastTrack](https://www.microsoft.com/fasttrack/microsoft-365) programından masaüstü dağıtımınız ile ilgili yardım alabilirsiniz.
 
-## <a name="windows-and-office-deployment-lab-kit"></a>Windows ve Office Dağıtım Laboratuvar Seti
+## <a name="windows-and-office-deployment-lab-kit"></a>Windows ve Office Dağıtım Laboratuvarı Seti
 
-Bu set, masaüstü bilgisayarlarını çalıştıran ve çalışan masaüstlerini planlamanıza, test Windows 10 Enterprise ve doğrulamanıza Kurumlar için Microsoft 365 Uygulamaları. Laboratuvarlar; Microsoft Endpoint Configuration Manager, Desktop Analytics, Office Özelleştirme Aracı, OneDrive AutoPilot Windows ları kullanmayı içerir.
+Bu set, Windows 10 Enterprise ve Kurumlar için Microsoft 365 Uygulamaları çalıştıran masaüstü cihazların dağıtımını ve yönetimini planlamanıza, test etmenize ve doğrulamanıza yardımcı olur. Laboratuvarlar, Microsoft Endpoint Configuration Manager, Desktop Analytics, Office Özelleştirme Aracı, OneDrive, Windows Autopilot ve diğer çözümleri kullanmayı kapsar.
 
-Ayrıntılar [Windows için Office Dağıtım Laboratuvar Seti'ne bakın](modern-desktop-deployment-and-management-lab.md).
+Ayrıntılar için [Windows ve Office Dağıtım Laboratuvarı Seti](modern-desktop-deployment-and-management-lab.md) makalesine bakın.

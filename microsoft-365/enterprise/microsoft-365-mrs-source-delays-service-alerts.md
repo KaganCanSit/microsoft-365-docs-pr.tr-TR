@@ -1,7 +1,7 @@
 ---
 title: MRS hizmet uyarıları
-ms.author: markjjo
-author: markjjo
+ms.author: kvice
+author: kelleyvice-msft
 manager: scotv
 ms.date: ''
 audience: Admin
@@ -16,18 +16,18 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: Kurumdaki posta kutusu geçiş isteklerinde gecikmeleri izlemek için posta kutusu geçiş hizmeti uyarılarını kullanın.
-ms.openlocfilehash: 25c569030bd5da914dc6eb7ec0e58ebadfe4d766
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 6b4b618bae602c7c06b2d6371e39cc865d0a3407
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63028451"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64567994"
 ---
 # <a name="service-alerts-for-mrs-source-delays-in-exchange-online-monitoring"></a>Sistem izlemesinde MRS kaynak gecikmeleri için Exchange Online uyarıları
 
 Posta Kutusu Çoğaltma Hizmeti (MRS) kaynak gecikme hizmeti uyarıları, kiracı tarafında (geçiş kaynağı) yer alan ve kiracı tarafındaki (geçiş kaynağı) posta kutusu geçişlerini geciktiren depolama kısıtlamaları veya yüksek işlemcili kullanım sorunları hakkında sizi Microsoft 365 sağlar. Bu hizmet uyarıları, bu sorunları çözmenize yardımcı olacak Microsoft kaynaklarının bağlantılarını da içerir.
 
-Bu hizmet uyarıları aşağıdaki Microsoft 365 yönetim merkezi. Bu hizmet uyarılarını görüntülemek için <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">**HealthService health (HealthService**</a> >  health > ) Exchange Online sonra da **Etkin sorunlar sekmesine** tıklayın.
+Bu hizmet uyarıları aşağıdaki Microsoft 365 yönetim merkezi. Bu hizmet uyarılarını görüntülemek için Durum'a  > <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">**Hizmet durumu**</a> >  **Exchange Online** ardından Etkin sorunlar **sekmesine** tıklayın.
 
 ## <a name="what-do-these-service-alerts-indicate"></a>Bu hizmet uyarıları neleri gösteriyor?
 

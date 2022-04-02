@@ -22,12 +22,12 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.openlocfilehash: b64cbc55a975ee02bd1bd5d41d30330e8729d4be
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 0bd86f7ba05ce04743f547292105875f3b8234b1
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63329579"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499077"
 ---
 # <a name="the-action-center"></a>İşlem merkezi
 
@@ -49,7 +49,7 @@ ms.locfileid: "63329579"
 
 Birleşik İşlem merkezi ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)), cihazlarınız için bekleyen ve tamamlanmış düzeltme eylemlerini, e-posta & içeriğini ve kimlikleri tek bir konumda listeler.
 
-:::image type="content" source="../../media/m3d-action-center-unified.png" alt-text="Bir portalda birleşik Microsoft 365 Defender merkezi." lightbox="../../media/m3d-action-center-unified.png":::
+:::image type="content" source="../../media/m3d-action-center-unified.png" alt-text="En son portalda birleşik Microsoft 365 Defender." lightbox="../../media/m3d-action-center-unified.png":::
 
 Örneğin: 
 
@@ -57,7 +57,7 @@ Birleşik İşlem merkezi ([https://security.microsoft.com/action-center](https:
 - İşlem merkezini Microsoft Defender Güvenlik Merkezi ()[https://securitycenter.windows.com/action-center](https://securitycenter.windows.com/action-center) kullanıyorsanız, Microsoft 365 Defender portalında birleşik <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender deneyin</a>.
 - Zaten Iş Merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">portalını Microsoft 365 Defender</a>, İşlem Merkezinde () çeşitli geliştirmeler olduğunu görüyorsunuz[https://security.microsoft.com/action-center](https://security.microsoft.com/action-center).
 
-Birleşik İşlem Merkezi, diğer eylemler için Uç Nokta için Defender ve Defender genelinde düzeltme Office 365. Tüm düzeltme eylemleri için ortak bir dil tanımlar ve birleşik bir araştırma deneyimi sağlar. Güvenlik işlemleri ekibinin düzeltme eylemlerini görüntülemeye ve yönetmeye yönelik "tek bir cam" deneyimi vardır.  
+Birleşik İşlem Merkezi, Uç Nokta ve Diğer Eylemler için Defender genelinde düzeltme eylemlerini Office 365 için Defender. Tüm düzeltme eylemleri için ortak bir dil tanımlar ve birleşik bir araştırma deneyimi sağlar. Güvenlik işlemleri ekibinin düzeltme eylemlerini görüntülemeye ve yönetmeye yönelik "tek bir cam" deneyimi vardır.  
 
 Uygun izinlere ve aşağıdaki aboneliklerden bir veya birden fazlasına sahipsanız, birleşik İşlem Merkezini kullanabilirsiniz:
 
@@ -115,12 +115,12 @@ Otomatik soruşturmalar sonucunda otomatik olarak alınan düzeltme eylemlerine 
 |:-----|:---|
 | **El ile cihaz eylemi** | Cihazda el ile yapılan bir eylem. Örnek olarak [cihaz yalıtlığı](../defender-endpoint/respond-machine-alerts.md#isolate-devices-from-the-network) veya dosya [karantinası örnek olarak verilmiştir](../defender-endpoint/respond-file-alerts.md#stop-and-quarantine-files). |
 | **El ile e-posta eylemi** | E-posta üzerinde el ile yapılan bir eylem. Örneğin, e-posta iletilerini geçici olarak silme [veya e-posta iletilerini düzeltme örneği](../office-365-security/remediate-malicious-email-delivered-office-365.md). |
-| **Otomatik cihaz eylemi** | Dosya veya işlem gibi bir varlık üzerinde  alınan otomatik bir eylem. Otomatik eylemlere örnek olarak, dosyayı karantinaya gönderme, işlemi durdurma ve kayıt defteri anahtarını kaldırma işlemleri örnek olarak verilmiştir. (Bkz [. Uç Nokta için Microsoft Defender'da düzeltme eylemleri](../defender-endpoint/manage-auto-investigation.md#remediation-actions).) |
-| **Otomatik e-posta eylemi** | E-posta iletisi, ek veya URL gibi e-posta içeriği üzerinde  alınan otomatik bir eylem. Otomatik eylem örnekleri arasında e-posta iletilerini geçici olarak silme, URL'leri engelleme ve dış posta iletmeyi kapatma yer alır. (Bkz[. Microsoft Defender'da düzeltme eylemleri Office 365](../office-365-security/air-remediation-actions.md).) |
+| **Otomatik cihaz eylemi** | Dosya veya işlem gibi bir varlık üzerinde  alınan otomatik bir eylem. Otomatik eylemlere örnek olarak, dosyayı karantinaya gönderme, işlemi durdurma ve kayıt defteri anahtarını kaldırma işlemleri örnek olarak verilmiştir. (Bkz[. Düzeltme eylemleri Uç Nokta için Microsoft Defender](../defender-endpoint/manage-auto-investigation.md#remediation-actions).) |
+| **Otomatik e-posta eylemi** | E-posta iletisi, ek veya URL gibi e-posta içeriği üzerinde  alınan otomatik bir eylem. Otomatik eylem örnekleri arasında e-posta iletilerini geçici olarak silme, URL'leri engelleme ve dış posta iletmeyi kapatma yer alır. (Bkz[. Düzeltme eylemleri Office 365 için Microsoft Defender](../office-365-security/air-remediation-actions.md).) |
 | **Gelişmiş av eylemi** | Gelişmiş avla cihazlar veya e-posta [üzerinde alınan eylemler](./advanced-hunting-overview.md). |
 | **Gezgin eylemi** | Explorer ile e-posta içeriği üzerinde [alınan eylemler](../office-365-security/threat-explorer.md). |
 | **El ile canlı yanıt eylemi** | Canlı yanıta sahip bir cihazda [alınan eylemler](../defender-endpoint/live-response.md). Örnek olarak dosya silme, işlemi durdurma ve zamanlanmış görevi kaldırma örnek olarak verilmiştir. |
-| **Canlı yanıt eylemi** | Uç Nokta API'leri için [Microsoft Defender'ın olduğu bir cihazda alınan eylemler](../defender-endpoint/management-apis.md#microsoft-defender-for-endpoint-apis). Eylemlere örnek olarak bir cihazı yalıtma, virüsten koruma taraması çalıştırma ve dosya hakkında bilgi alma örneklerinden bazıları verilmiştir. |
+| **Canlı yanıt eylemi** | Çok API'leri olan [bir Uç Nokta için Microsoft Defender.](../defender-endpoint/management-apis.md#microsoft-defender-for-endpoint-apis) Eylemlere örnek olarak bir cihazı yalıtma, virüsten koruma taraması çalıştırma ve dosya hakkında bilgi alma örneklerinden bazıları verilmiştir. |
 
 ## <a name="required-permissions-for-action-center-tasks"></a>İşlem merkezi görevleri için gerekli izinler
 
@@ -128,12 +128,12 @@ Otomatik soruşturmalar sonucunda otomatik olarak alınan düzeltme eylemlerine 
 
 |Düzeltme eylemi |Gerekli roller ve izinler |
 |--|----|
-|Uç Nokta düzeltmesi için Microsoft Defender (cihazlar) |**Azure Active Directory** (Azure AD) () veya güvenlik rolüne ([https://portal.azure.com](https://portal.azure.com)) atanan Microsoft 365 yönetim merkezi.[https://admin.microsoft.com](https://admin.microsoft.com)<br/>--- veya ---<br/>**Uç nokta için** Microsoft Defender'a atanan etkin düzeltme eylemleri rolü <br/> <br/> Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın: <br/>- [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference)<br/>- [Rol tabanlı erişim denetimi için roller oluşturma ve yönetme (Uç nokta için Microsoft Defender)](../defender-endpoint/user-roles.md)  |
-|Düzeltme için Microsoft Defender Office 365 (Office ve e-posta)  |**Azure** AD 'ye () veya kullanıcıya ([https://portal.azure.com](https://portal.azure.com)) atanan Microsoft 365 yönetim merkezi rolü [https://admin.microsoft.com](https://admin.microsoft.com)<br/>--- ve --- <br/>**Güvenlik Ve Uyumluluk Merkezi'nde** atanan rolü & Temizleme ([https://protection.office.com](https://protection.office.com)) <br/><br/>**ÖNEMLİ**: Yalnızca Office 365 Güvenlik  ve Uyumluluk Merkezi'ne ()[https://protection.office.com](https://protection.office.com) Güvenlik Yöneticisi rolü &, İşlem merkezi veya güvenlik özelliklerine Microsoft 365 Defender. Azure **AD'ye veya güvenlik** yöneticisi rolüne Güvenlik Yöneticisi rolünü Microsoft 365 yönetim merkezi. <br/><br/>Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın: <br/>- [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference)<br/>- [Güvenlik ve Uyumluluk & İzinler](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) |
+|Uç Nokta için Microsoft Defender düzeltme (cihazlar) |**Azure Active Directory** (Azure AD) () veya güvenlik rolüne ([https://portal.azure.com](https://portal.azure.com)) atanan Microsoft 365 yönetim merkezi.[https://admin.microsoft.com](https://admin.microsoft.com)<br/>--- veya ---<br/>**Bir çalışma yerinde atanmış** etkin düzeltme Uç Nokta için Microsoft Defender <br/> <br/> Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın: <br/>- [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference)<br/>- [Rol tabanlı erişim denetimi için rol oluşturma ve yönetme (Uç Nokta için Microsoft Defender)](../defender-endpoint/user-roles.md)  |
+|Office 365 için Microsoft Defender düzeltme (Office ve e-posta)  |**Azure** AD 'ye () veya kullanıcıya ([https://portal.azure.com](https://portal.azure.com)) atanan Microsoft 365 yönetim merkezi rolü [https://admin.microsoft.com](https://admin.microsoft.com)<br/>--- ve --- <br/>**Güvenlik Ve Uyumluluk Merkezi'nde** atanan rolü & Temizleme ([https://protection.office.com](https://protection.office.com)) <br/><br/>**ÖNEMLİ**: Yalnızca Office 365 Güvenlik  ve Uyumluluk Merkezi'ne ()[https://protection.office.com](https://protection.office.com) Güvenlik Yöneticisi rolü &, İşlem merkezi veya güvenlik özelliklerine Microsoft 365 Defender. Azure **AD'ye veya güvenlik** yöneticisi rolüne Güvenlik Yöneticisi rolünü Microsoft 365 yönetim merkezi. <br/><br/>Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın: <br/>- [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference)<br/>- [Güvenlik ve Uyumluluk & İzinler](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) |
 
 > [!TIP]
 > Azure AD'de **Genel Yönetici** rolüne sahip olan kullanıcılar İşlem merkezinde bekleyen tüm eylemi onaylar veya reddeder. Bununla birlikte, en iyi yöntem olarak, organizasyonda Genel Yönetici rolü atanan kişi **sayısını sınırlaması** gerekir. İşlem merkezi izinleri **için yukarıdaki** tabloda listelenen Güvenlik **Yöneticisi, Etkin** düzeltme eylemleri ve  Arama ve Temizleme rollerini kullanmanızı öneririz.
 
 ## <a name="next-step"></a>Sonraki adım 
 
-- [Düzeltme eylemlerini görüntüleme ve yönetme](m365d-autoir-actions.md)
+- [Düzeltme eylemlerini görüntüleyin ve yönetin](m365d-autoir-actions.md)

@@ -1,6 +1,6 @@
 ---
-title: Üretim ortamınız içinde yer alan Office 365 için Microsoft Defender değerlendirme ortamını etkinleştirme
-description: Deneme lisansları, MX Office 365 ve kabul edilen etki alanlarının ve gelen bağlantıların denetimini & için Microsoft Defender'ı etkinleştirme adımları.
+title: Üretim ortamınıza bu Office 365 için Microsoft Defender değerlendirme ortamını etkinleştirme
+description: Deneme lisansları Office 365 için Microsoft Defender MX kaydı işleme ve kabul edilen etki & gelen bağlantıların denetimini etkinleştirme adımları.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -21,23 +21,24 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: how-to
 ms.technology: m365d
-ms.openlocfilehash: 4d2f77b41dccd5620b96d816869d7d7b6458a798
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: a5a14d507f7cd10ff4f7ab62b552ab256f0e4a5e
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63014208"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499011"
 ---
 # <a name="enable-the-evaluation-environment"></a>Değerlendirme ortamını etkinleştirme
 
 **Aşağıdakiler için geçerlidir:**
 - Microsoft 365 Defender
 
-Bu makale, Microsoft Defender için değerlendirme ortamını ayarlama işleminin [2/ 3](eval-defender-office-365-overview.md). adımıdır ve Office 365. Bu işlem hakkında daha fazla bilgi için genel bakış [makalesine bakın](eval-defender-office-365-overview.md).
+Bu makale, [değerlendirme ortamını ayarlama sürecindeki adım 2/ 3'ü](eval-defender-office-365-overview.md) ve Office 365 için Microsoft Defender. Bu işlem hakkında daha fazla bilgi için genel bakış [makalesine bakın](eval-defender-office-365-overview.md).
 
-Aşağıdaki adımları kullanarak bu destek için Microsoft Defender değerlendirmesini Office 365.
+Bu sorunu değerlendirmeyi etkinleştirmek için aşağıdaki Office 365 için Microsoft Defender.
 
-![Microsoft Defender değerlendirme ortamında Office 365 için Microsoft Defender'ı etkinleştirme adımları.](../../media/defender/m365-defender-office-eval-enable-steps.png)
+:::image type="content" source="../../media/defender/m365-defender-office-eval-enable-steps.png" alt-text="Microsoft Defender değerlendirme Office 365 için Microsoft Defender bu özellikleri etkinleştirme adımları" lightbox="../../media/defender/m365-defender-office-eval-enable-steps.png":::
+
 
 - [1. Adım: Deneme lisanslarını etkinleştirme](#step-1-activate-trial-licenses)
 - [2. Adım: Genel MX kaydını denetleme ve doğrulama](#step-2-audit-and-verify-the-public-mx-record)
@@ -47,29 +48,29 @@ Aşağıdaki adımları kullanarak bu destek için Microsoft Defender değerlend
 
 ## <a name="step-1-activate-trial-licenses"></a>1. Adım: Deneme lisanslarını etkinleştirme
 
-Çevrimiçi ortamda veya kiracı yönetim portalında Office 365 Microsoft Defender'ında oturum açın.
+Mevcut yönetim ortamınıza veya Office 365 için Microsoft Defender yönetim portalınıza oturum açın.
 
 1. Yönetim portalına gidin.
 2. Hızlı başlat'tan Hizmetleri Satın Alın'ı seçin.
 
-   :::image type="content" source="../../media/mdo-eval/1_m365-purchase-services.png" alt-text="Gezinti bölmesinde Hizmetleri satın alın'a Office 365.":::
+   :::image type="content" source="../../media/mdo-eval/1_m365-purchase-services.png" alt-text="Hizmet satın alma seçeneğine tıklamak için Microsoft 365 yönetim merkezi" lightbox="../../media/mdo-eval/1_m365-purchase-services.png":::
 
-3. Uygulama planları Add-On Microsoft Defender'ı bulmak için sayfayı aşağı kaydırın (veya "Defender" Office 365 bulun.
+3. En iyi planları Add-On için sayfayı aşağı kaydırın (veya "Defender" Office 365 için Microsoft Defender bulun.
 4. Değerlendirmek istediğiniz planın yanındaki Ayrıntılar'a tıklayın.
 
-   :::image type="content" source="../../media/mdo-eval/2_mdo-eval-license-details.png" alt-text="Ayrıntılar düğmesini ve ardından tıklayın.":::
+   :::image type="content" source="../../media/mdo-eval/2_mdo-eval-license-details.png" alt-text="Tıklı olacak Ayrıntılar düğmesi" lightbox="../../media/mdo-eval/2_mdo-eval-license-details.png":::
 
 5. Ücretsiz *denemeyi başlat bağlantısına* tıklayın.
 
-   :::image type="content" source="../../media/mdo-eval/3-m365-purchase-button.png" alt-text="Bu panelde Ücretsiz denemeyi *köprüyü* başlat'a tıklayın.":::
+   :::image type="content" source="../../media/mdo-eval/3-m365-purchase-button.png" alt-text="Ücretsiz denemeyi başlat köprüsü" lightbox="../../media/mdo-eval/3-m365-purchase-button.png":::
 
 6. İsteğinizi onaylayın ve Şimdi *deneyin düğmesine* tıklayın.
 
-   :::image type="content" source="../../media/mdo-eval/4_mdo-trial-order.png" alt-text="Şimdi Şimdi deneyin *düğmesine* tıklayın.":::
+   :::image type="content" source="../../media/mdo-eval/4_mdo-trial-order.png" alt-text="Şimdi deneyin düğmesi" lightbox="../../media/mdo-eval/4_mdo-trial-order.png":::
 
 ## <a name="step-2-audit-and-verify-the-public-mx-record"></a>2. Adım: Genel MX kaydını denetleme ve doğrulama
 
-Office 365 için Microsoft Defender'ı etkili bir şekilde değerlendirmek için, gelen dış e-postanın kiracınıza ilişkin Exchange Online Protection (EOP) örneğinden geçişli olması önemlidir.
+Kiracınızı etkili Office 365 için Microsoft Defender için, gelen dış e-postanın kiracınıza ilişkin Exchange Online Protection (EOP) örneğinden geçişli olması önemlidir.
 
 1. M365 Yönetim Portalı'ta oturum açın, Etki Alanları'Ayarlar'ı seçin.
 2. Doğrulanmış e-posta etki alanınızı seçin ve DNS'yi Yönet'e tıklayın.
@@ -94,44 +95,44 @@ Office 365 için Microsoft Defender'ı etkili bir şekilde değerlendirmek için
 
 ## <a name="step-5-activate-the-evaluation"></a>5. Adım: Değerlendirmeyi etkinleştirme
 
-Microsoft Defender for Office 365 değerlendirmesini etkinleştirmek için buradaki yönergeleri Microsoft 365 Defender kullanın.
+Değerlendirme değerlendirmenizi etkinleştirmeniz için buradaki Office 365 için Microsoft Defender portaldan Microsoft 365 Defender kullanın.
 
 1. Kiracınıza erişim izni olan bir hesap ile kiracınıza Microsoft 365 Defender açın.
-2. Microsoft 365 Defender portalını, **Office 365** için Microsoft Defender için varsayılan arabiriminiz yapmak isteyip Office 365 seçin.
+2. Microsoft 365 Defender portalını yönetim **için varsayılan Office 365 için Microsoft Defender** yapmak isteyip Office 365 için Microsoft Defender seçin.
 
-   :::image type="content" source="../../media/mdo-eval/1_mdo-eval-activate-eval.png" alt-text="Merkezi ve gelişmiş yönetim portalını kullanmak için Ayarları Microsoft 365 Defender düğmesine tıklayın.":::
+   :::image type="content" source="../../media/mdo-eval/1_mdo-eval-activate-eval.png" alt-text="Merkezi ve geliştirilmiş Ayarlar yönetim portalına liderlik yapmak için Microsoft 365 Defender düğmesi" lightbox="../../media/mdo-eval/1_mdo-eval-activate-eval.png":::
 
 3. Gezinti menüsünde, E-posta **ve & altında İlkeler** *ve Kurallar'ı & seçin*.
 
-   :::image type="content" source="../../media/mdo-eval/2_mdo-eval-activate-eval.png" alt-text="Burada, İlkeler ve &'a işaret alan bir E-posta Ve İşbirliği & resmi yer alır. Tıklayın!":::
+   :::image type="content" source="../../media/mdo-eval/2_mdo-eval-activate-eval.png" alt-text="the Policies & rules menu item to clicked" lightbox="../../media/mdo-eval/2_mdo-eval-activate-eval.png":::
 
 4. İlke *Ve & panosunda* Tehdit **İlkeleri'ne tıklayın**.
 
-   :::image type="content" source="../../media/mdo-eval/3_mdo-eval-activate-eval.png" alt-text="İlke Ve Kurallar & ve Tehdit ilkelerine işaret ediyor bir ok resmi. Bu sonrakine tıklayın!":::
+   :::image type="content" source="../../media/mdo-eval/3_mdo-eval-activate-eval.png" alt-text="Tıklı olacak Tehdit ilkeleri menü öğesi" lightbox="../../media/mdo-eval/3_mdo-eval-activate-eval.png":::
 
-5. Sayfayı Ek *İlkeler'e* kadar aşağı kaydırın **ve İlkeler için Defender'ı Office 365** seçin.
+5. Sayfayı Ek *İlkeler'e* kadar aşağı **kaydırın ve Office 365 için Defender** seçin.
 
-   :::image type="content" source="../../media/mdo-eval/4_mdo-eval-activate-eval.png" alt-text="Bunun e-posta Office 365 30 günlük bir deneme olduğunu söyleyen ve işbirliği vektörleri için Eval Defender & kutucuğu. Üzerinden geç'e tıklayın.":::
+   :::image type="content" source="../../media/mdo-eval/4_mdo-eval-activate-eval.png" alt-text="Eval Office 365 için Defender kutucuğu" lightbox="../../media/mdo-eval/4_mdo-eval-activate-eval.png":::
 
 6. Şimdi, dış e-postanın doğrudan mı Exchange Online yoksa üçüncü taraf bir ağ geçidine mi yoksa hizmete mi yönlendireceklerini seçin ve Sonraki'ye tıklayın.
 
-   :::image type="content" source="../../media/mdo-eval/5_mdo-eval-activate-eval.png" alt-text="Posta Office 365 Defender, posta kutunuza gelen Exchange Online değerlendirir. Postanızı postanıza yönlendiren giden bağlayıcının adı da dahil olmak üzere, postanın nasıl yönlendirildiklerinin ayrıntılarını iletin. Yalnızca başka Exchange Online Protection (EOP) kullanıyorsanız bağlayıcıniz olmayacak. Üçüncü taraf sağlayıcı veya şirket içi sağlayıcıdan birini veya yalnızca EOP'yi kullanıyorum'ı seçin.":::
+   :::image type="content" source="../../media/mdo-eval/5_mdo-eval-activate-eval.png" alt-text="Office 365 için Microsoft Defender portalında Yönlendirme ayarları bölmesi" lightbox="../../media/mdo-eval/5_mdo-eval-activate-eval.png":::
 
 7. Üçüncü taraf bir ağ geçidi kullanıyorsanız, açılan listeden satıcı adını ve bu çözümle ilişkilendirilmiş gelen bağlayıcıyı seçin. Yanıtlarınızı listeleninca, Sonraki'ye tıklayın.
 
-   :::image type="content" source="../../media/mdo-eval/6-mdo-eval-activate-eval-settings.png" alt-text="Bu iletişim kutusunda, kuruma göre üçüncü taraf satıcı hizmetini seçersiniz veya *Diğer* seçeneğini belirleyebilirsiniz. Sonraki iletişim kutusunda gelen bağlayıcıyı seçin. Ardından, Sonraki'ne tıklayın.":::
+   :::image type="content" source="../../media/mdo-eval/6-mdo-eval-activate-eval-settings.png" alt-text="Office 365 için Microsoft Defender portalında Üçüncü taraf veya şirket içi ayarlar bölmesi" lightbox="../../media/mdo-eval/6-mdo-eval-activate-eval-settings.png":::
 
 8. Ayarlarınızı gözden geçirin ve Değerlendirme **Oluştur düğmesine** tıklayın.
 
    |Önce|Sonra|
    |:---:|:---:|
-   |:::image type="content" source="../../media/mdo-eval/7-mdo-eval-activate-review.png" alt-text="Bu bölmede ayarlarınızı gözden geçirmek için bir açılan liste vardır. Ayrıca, gerekirse Yönlendirme türlerinizi düzenlemeniz için tıklanabilir bir bağlantısı da vardır. Hazırken büyük mavi Değerlendirme Oluştur düğmesine tıklayın.":::|:::image type="content" source="../../media/mdo-eval/8-mdo-eval-activate-complete.png" alt-text="Artık ayarlama tamamlanmıştır. Bu sayfada mavi düğme &quot;Değerlendirmeye Git&quot; yazıyor.":::|
+   |:::image type="content" source="../../media/mdo-eval/7-mdo-eval-activate-review.png" alt-text="Office 365 için Microsoft Defender portalında Ayarlarınızı gözden geçirme bölmesi" lightbox="../../media/mdo-eval/7-mdo-eval-activate-review.png":::|:::image type="content" source="../../media/mdo-eval/8-mdo-eval-activate-complete.png" alt-text="Office 365 için Microsoft Defender portalında Değerlendirme Office 365 için Microsoft Defender bildirimi" lightbox="../../media/mdo-eval/8-mdo-eval-activate-complete.png":::|
    |
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Adım 3 / 3: Microsoft Defender için pilot ayarlama hakkında daha fazla Office 365
+Adım 3 / 3: Test için pilot Office 365 için Microsoft Defender
 
-Windows için [Microsoft Defender'ı Değerlendirme genel görünümüne Office 365](eval-defender-office-365-overview.md)
+Değerlendirme görünümüne genel [bakış Office 365 için Microsoft Defender](eval-defender-office-365-overview.md)
 
 Değerlendirme ve pilot uygulama için [genel bakış Microsoft 365 Defender](eval-overview.md)

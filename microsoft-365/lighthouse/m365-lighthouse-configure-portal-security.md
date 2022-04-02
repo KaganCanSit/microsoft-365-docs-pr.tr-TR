@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP) Microsoft 365 Lighthouse, portal güvenliğini yapılandırmayı öğrenin.
-ms.openlocfilehash: 8f8ec851d2ce6795565530e120f3704128336ea2
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: dd99330d520b409a93cfd5d1ca777c17b9ef4373
+ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63323129"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "63775950"
 ---
 # <a name="configure-microsoft-365-lighthouse-portal-security"></a>Portal Microsoft 365 Lighthouse yapılandırma
 
@@ -37,7 +37,7 @@ Kullanıcılar Deniz Feneri'ne ilk kez erişdiğinde, deniz feneri hesaplarını
 
 ## <a name="set-up-role-based-access-control"></a>Rol tabanlı erişim denetimi ayarlama
 
-Rol tabanlı erişim denetimi (RBAC), kullanıcı rollerine dayalı olarak kaynaklara veya bilgilere erişim sağlar. Deniz Feneri'nde müşteri kiracı verilerine ve ayarlarına erişim, genel programdan (CSP) Bulut Çözümü Sağlayıcısı rollerle sınırlıdır. Deniz Feneri'nde RBAC rolleri ayarlamak için, kullanıcılara ayrıntılı atamalar uygulamak için Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) kullanmanız önerilir.
+Rol tabanlı erişim denetimi (RBAC), kullanıcı rollerine dayalı olarak kaynaklara veya bilgilere erişim sağlar. Deniz Feneri'nde müşteri kiracı verilerine ve ayarlarına erişim, genel programdan (CSP) Bulut Çözümü Sağlayıcısı rollerle sınırlıdır. Deniz Feneri'nde RBAC rolleri ayarlamak için, kullanıcılara ayrıntılı atamalar uygulamak için Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) kullanmanız önerilir. Kiracının başarılı bir şekilde eklemesi için temsili Yönetici Ayrıcalıkları (DAP) yine gereklidir, ancak yalnızca GDAP müşterileri yakın zamanda DAP'ye bağımlılık olmadan eklemede abilecektir. DAP ve GDAP bir müşteri için birlikte olduğunda GDAP izinleri öncelikli olur. 
 
 GDAP'yi çalışmaya başlamak için bkz [. Müşteri kiracılarını yönetmek için rolleri ayarlama](m365-lighthouse-set-up-roles.md).
 

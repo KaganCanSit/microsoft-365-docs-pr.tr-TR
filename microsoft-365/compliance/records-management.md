@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 description: Microsoft 365'de kayıt yönetimiyle, bekletme, kayıt bildirimi ve yoklamayı yöneten bir dosya planına bekletme zamanlamalarınızı uygulayabilirsiniz.
-ms.openlocfilehash: c7546216a935960e5c4b66b37bb3308d0a69e89e
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: ce00fdfc6db90b9c65051a31e8768d6cd661072d
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63324823"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755675"
 ---
 # <a name="learn-about-records-management-in-microsoft-365"></a>Microsoft 365'de kayıt yönetimi hakkında bilgi Microsoft 365
 
@@ -87,8 +87,8 @@ Standart bekletme etiketinde bekletme ayarları ve eylemleri vardır, ancak içe
 |Kapsayıcı <sup>3 içinde hareket etme</sup>|İzin verildi |İzin verildi | İzin verildi| İzin verildi|
 |Kapsayıcılar arasında hareket <sup>etme 3</sup>|İzin verildi |Kilidi hiç açık değilken izin verildi | **Engellendi** | **Engellendi**|
 |Açma/Okuma|İzin verildi |İzin verildi | İzin verildi| İzin verildi|
-|Etiketi değiştir|İzin verildi |İzin verildi - yalnızca kapsayıcı yöneticisi | İzin verildi - yalnızca kapsayıcı yöneticisi| **Engellendi**
-|Etiketi kaldır|İzin verildi |İzin verildi - yalnızca kapsayıcı yöneticisi | İzin verildi - yalnızca kapsayıcı yöneticisi| **Engellendi**
+|Etiketi değiştir|İzin verildi |İzin verildi - yalnızca kapsayıcı yöneticisi | **Engellendi**| **Engellendi**
+|Etiketi kaldır|İzin verildi |İzin verildi - yalnızca kapsayıcı yöneticisi | **Engellendi**| **Engellendi**
 
 Dipnotlar:
 

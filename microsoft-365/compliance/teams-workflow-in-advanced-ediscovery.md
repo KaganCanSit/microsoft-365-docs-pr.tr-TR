@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Aynı siteden içeriği korumayı, toplamayı, gözden geçirmeyi ve Microsoft Teams hakkında Advanced eDiscovery.
-ms.openlocfilehash: 68a255dda7aa9b879c9e608eb99c9575ba691c16
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: 9565beea342fe9587195d632fdc94cdc746faf5e
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63716234"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568126"
 ---
 # <a name="advanced-ediscovery-workflow-for-content-in-microsoft-teams"></a>Advanced eDiscovery için iş akışını Microsoft Teams
 
@@ -41,14 +41,13 @@ Bu makalede, verileri korumak, toplamak, gözden geçirmek ve bu içerikten içe
 
 Advanced eDiscovery'Teams içeriklerini yönetmenin önkoşulları, Advanced eDiscovery'te toplayabilirsiniz, iş bulundurabilir ve gözden geçirebilirsiniz Teams içeriğinin türünü ve bu içeriğin Microsoft 365. Aşağıdaki tabloda, Teams türü ve her biri nerede depolandığı listeledir.
 
-||Sohbet iletilerinin ve gönderilerinin konumu  |Dosya ve eklerin konumu |
-|:---------|:---------|:---------|
-|Teams bire bir sohbetler     |Bire bir sohbetlerde yer alan mesajlar, tüm sohbet Exchange Online posta kutusunda saklanır. |Bire bir sohbette paylaşılan dosyalar, dosyayı OneDrive İş kişinin hesaplarında depolanır. |
-|Teams sohbetleri grup sohbetleri     |Grup sohbetleri'nin iletileri tüm sohbet Exchange Online posta kutusunda saklanır. |Grup sohbetlerde paylaşılan dosyalar, OneDrive İş paylaşan kişinin hesaplarında depolanır. |
-|Teams kanalların     |Tüm kanal iletileri ve gönderileri, ekiple Exchange Online posta kutusunda depolanır.|Kanalda paylaşılan dosyalar, ekiple ilişkilendirilmiş SharePoint Online sitesinde depolanır.           |
-|Özel kanallar     |Özel kanalda gönderilen iletiler, Exchange Online tüm üyelerinin posta kutularında depolanır.|Özel kanalda paylaşılan dosyalar, özel kanalla ilişkilendirilmiş SharePoint Bir Çevrimiçi Site'de depolanır.|
-|Paylaşılan kanallar     |Paylaşılan kanala gönderilen iletiler, paylaşılan kanalla ilişkilendirilmiş sistem posta kutusunda depolanır. <sup>1</sup>|Paylaşılan kanalda paylaşılan dosyalar, paylaşılan kanalla ilişkilendirilmiş SharePoint Online sitesinde depolanır.|
-||||
+|&nbsp;|Sohbet iletilerinin ve gönderilerinin konumu|Dosya ve eklerin konumu|
+|---|---|---|
+|Teams bire bir sohbetler|Bire bir sohbetlerde yer alan mesajlar, tüm sohbet Exchange Online posta kutusunda saklanır.|Bire bir sohbette paylaşılan dosyalar, dosyayı OneDrive İş kişinin hesaplarında depolanır.|
+|Teams sohbetleri grup sohbetleri|Grup sohbetleri'nin iletileri tüm sohbet Exchange Online posta kutusunda saklanır.|Grup sohbetlerde paylaşılan dosyalar, OneDrive İş paylaşan kişinin hesaplarında depolanır.|
+|Teams kanalların|Tüm kanal iletileri ve gönderileri, ekiple Exchange Online posta kutusunda depolanır.|Kanalda paylaşılan dosyalar, ekiple ilişkilendirilmiş SharePoint Online sitesinde depolanır.|
+|Özel kanallar|Özel kanalda gönderilen iletiler, Exchange Online tüm üyelerinin posta kutularında depolanır.|Özel kanalda paylaşılan dosyalar, özel kanalla ilişkilendirilmiş SharePoint Bir Çevrimiçi Site'de depolanır.|
+|Paylaşılan kanallar|Paylaşılan kanala gönderilen iletiler, paylaşılan kanalla ilişkilendirilmiş sistem posta kutusunda depolanır. <sup>1</sup>|Paylaşılan kanalda paylaşılan dosyalar, paylaşılan kanalla ilişkilendirilmiş SharePoint Online sitesinde depolanır.|
 
 > [!NOTE]
 > <sup>1</sup> Paylaşılan kanalda gönderilen iletileri aramak (ve korumak) için, üst Ekip için Exchange Online kutunuzu aramanız veya belirtmeniz gerekir.
@@ -196,11 +195,10 @@ Konuşmalardan içerik Teams gözden geçirme kümesine ekli olduğunda, iletile
 
 Aşağıdaki tabloda, farklı türlerde sohbet içeriğinin Teams ve konuşmaya göre nasıl gruplu olduğu açıklandı.
 
-| Teams türü|Aileye göre grupla  |Konuşmaya göre grupla  |
-|:---------|:---------|:---------|
-|Teams bire bir sohbetler ve grup sohbetleri   | Bir döküm ve tüm ekleri ve ayıklanan öğeler aynı **FamilyId'i paylaşır**. Her dökümün benzersiz bir **FamilyId'si var**. |Aynı konuşma içindeki tüm döküm dosyaları ve aile öğeleri aynı **ConversationId'i paylaşır**. Bu, aşağıdaki öğeleri içerir:<br/><br/>  - Aynı ConversationId'yi paylaşan tüm dökümlerin tüm ayıklanan öğeleri **ve ekleri**. <br/> - Aynı sohbet görüşmesinin tüm dökümleri<br/> - Her dökümün tüm koruyucu kopyaları<br/> - Aynı sohbet görüşmelerinden sonraki koleksiyonlardan dökümler <br/><br/>  Bire Teams sohbetleri ve grup sohbeti konuşmalarını takip etmek için, her biri konuşma içinde farklı bir zaman dilimine karşılık gelen birden fazla döküm dosyamız olabilir. Bu döküm dosyaları aynı katılımcılarla aynı konuşmadan geldiklerinden, aynı **ConversationId'leri paylaşırlar**.|
-|Standart, özel ve paylaşılan kanal sohbetleri    | Her gönderiyle tüm yanıtlar ve ekler kendi döküm metnine kaydedilir. Bu döküm ve tüm ekleri ve ayıklanan öğeler aynı **FamilyId'i paylaşır**.         |Her gönderinin ve ekleri ile ayıklanan öğelerin benzersiz bir **ConversationId'si vardır**. Aynı gönderiden sonraki koleksiyonlar veya yeni yanıtlar varsa, bu koleksiyonların sonucunda elde edilen delta dökümleri de **aynı ConversationId'ye sahip olur**.|
-||||
+|Teams türü|Aileye göre grupla|Konuşmaya göre grupla|
+|---|---|---|
+|Teams bire bir sohbetler ve grup sohbetleri|Bir döküm ve tüm ekleri ve ayıklanan öğeler aynı **FamilyId'i paylaşır**. Her dökümün benzersiz bir **FamilyId'si var**.|Aynı konuşma içindeki tüm döküm dosyaları ve aile öğeleri aynı **ConversationId'i paylaşır**. Bu, aşağıdaki öğeleri içerir: <ul><li>Aynı ConversationId'yi paylaşan tüm dökümlerin tüm ayıklanan öğeleri **ve ekleri**.</li><li>Aynı sohbet görüşmesinin tüm dökümleri</li><li>Her dökümün tüm koruyucu kopyaları</li><li>Aynı sohbet görüşmelerinden sonraki koleksiyonlardan dökümler</li></ul> <br/> Bire Teams sohbetleri ve grup sohbeti konuşmalarını takip etmek için, her biri konuşma içinde farklı bir zaman dilimine karşılık gelen birden fazla döküm dosyamız olabilir. Bu döküm dosyaları aynı katılımcılarla aynı konuşmadan geldiklerinden, aynı **ConversationId'leri paylaşırlar**.|
+|Standart, özel ve paylaşılan kanal sohbetleri|Her gönderiyle tüm yanıtlar ve ekler kendi döküm metnine kaydedilir. Bu döküm ve tüm ekleri ve ayıklanan öğeler aynı **FamilyId'i paylaşır**.|Her gönderinin ve ekleri ile ayıklanan öğelerin benzersiz bir **ConversationId'si vardır**. Aynı gönderiden sonraki koleksiyonlar veya yeni yanıtlar varsa, bu koleksiyonların sonucunda elde edilen delta dökümleri de **aynı ConversationId'ye sahip olur**.|
 
 Aile veya **konuşmaya** göre gruplu içeriği görüntülemek için, incelemenin Teams çubuğundaki Grup denetimi'ne tıklayın.
 
@@ -237,11 +235,10 @@ Advanced eDiscovery tarafından öğelerle ilgili bağlam sağlayan ek iletileri
 
 - Yalnızca tarih aralıklarını kullanan sorgular
 
-| Teams türü|Arama parametreleriyle sorgular  |Tarih aralıkları ile sorgular  |
-|:---------|:---------|:---------|
-|Teams bire bir sohbetler ve grup sohbetleri   |Yanıt veren öğelerden 12 saat önce ve 12 saat sonra gönderilen iletiler, tek bir döküm dosyasında yanıt veren öğeyle birlikte gruptur.   |24 saatlik bir pencerede gelen iletiler, tek bir döküm dosyasında grup İlkesini içerir.|
-|Kanal sohbetleri için standart, Teams ve paylaşılan sohbetler    |Yanıt veren öğeleri ve buna karşılık gelen tüm yanıtları içeren her gönderi, tek bir döküm dosyasında gruplandırılır. |Yanıt veren öğeleri ve buna karşılık gelen tüm yanıtları içeren her gönderi, tek bir döküm dosyasında gruplandırılır.|
-||||
+|Teams türü|Arama parametreleriyle sorgular|Tarih aralıkları ile sorgular|
+|---|---|---|
+|Teams bire bir sohbetler ve grup sohbetleri|Yanıt veren öğelerden 12 saat önce ve 12 saat sonra gönderilen iletiler, tek bir döküm dosyasında yanıt veren öğeyle birlikte gruptur.|24 saatlik bir pencerede gelen iletiler, tek bir döküm dosyasında grup İlkesini içerir.|
+|Kanal sohbetleri için standart, Teams ve paylaşılan sohbetler|Yanıt veren öğeleri ve buna karşılık gelen tüm yanıtları içeren her gönderi, tek bir döküm dosyasında gruplandırılır.|Yanıt veren öğeleri ve buna karşılık gelen tüm yanıtları içeren her gönderi, tek bir döküm dosyasında gruplandırılır.|
 
 ### <a name="deduplication-of-teams-content"></a>İçerik Teams kaldırma
 
@@ -267,19 +264,18 @@ Binlerce veya milyonlarca öğeyle büyük gözden geçirme kümelerde, içeriğ
 
 Aşağıdaki tabloda, bu içeriklerin meta veri Teams açık almaktadır.
 
-|Meta Veri özelliği  |Açıklama  |
-|:---------|:---------|
-|containsEditedMessage      | Döküm dosyasının düzenlenmiş bir ileti içerdiğini gösterir. Düzenlenmiş iletiler, döküm dosyasını görüntülerken tanımlanır.|
+|Meta Veri özelliği|Açıklama|
+|---|---|
+|containsEditedMessage|Döküm dosyasının düzenlenmiş bir ileti içerdiğini gösterir. Düzenlenmiş iletiler, döküm dosyasını görüntülerken tanımlanır.|
 |ConversationId|Öğenin ilişkilendirilen konuşmayı tanımlayan GUID. Bu özellik için aynı konuşmadan metin döküm dosyaları ve ekler aynı değere sahip olur.|
-|Konuşma adı     | Döküm dosyasının veya ekin ilişkilendiril olduğu konuşmanın adı. Grup Teams bire bir sohbetler ve grup sohbetleri yapmak için bu özelliğin değeri, konuşmanın tüm katılımcılarının UPN'dir. Örneğin, `User3 <User3@contoso.onmicrosoft.com>,User4 <User4@contoso.onmicrosoft.com>,User2 <User2@contoso.onmicrosoft.com>`. Teams (standart, özel ve paylaşılan) sohbetlerde konuşma adı için aşağıdaki biçim kullanılabilir: `<Team name>,<Channel name>`.Örneğin, `eDiscovery vNext, General`.          |
-|ConversationType     | Ekip sohbeti türünü gösterir. Bire Teams sohbetler ve grup sohbetleri için bu özelliğin değeri şöyledir`Group`: . Standart, özel ve paylaşılan kanal sohbetleri için değer : `Channel`.|
-|Tarih | Döküm dosyasındaki ilk iletinin zaman damgasıdır.|
+|Konuşma adı|Döküm dosyasının veya ekin ilişkilendiril olduğu konuşmanın adı. Grup Teams bire bir sohbetler ve grup sohbetleri yapmak için bu özelliğin değeri, konuşmanın tüm katılımcılarının UPN'dir. Örneğin, `User3 <User3@contoso.onmicrosoft.com>,User4 <User4@contoso.onmicrosoft.com>,User2 <User2@contoso.onmicrosoft.com>`. Teams (standart, özel ve paylaşılan) sohbetlerde konuşma adı için aşağıdaki biçim kullanılabilir: `<Team name>,<Channel name>`.Örneğin, `eDiscovery vNext, General`.|
+|ConversationType|Ekip sohbeti türünü gösterir. Bire Teams sohbetler ve grup sohbetleri için bu özelliğin değeri şöyledir`Group`: . Standart, özel ve paylaşılan kanal sohbetleri için değer : `Channel`.|
+|Tarih|Döküm dosyasındaki ilk iletinin zaman damgasıdır.|
 |FamilyId|Sohbet konuşmalarının döküm dosyasını tanımlayan GUID. Ekler, bu özellik için dosyanın ekli olduğu iletiyi içeren döküm dosyasıyla aynı değere sahip olur.|
-|FileClass     |Bu tür bir içeriği gösterir. Sohbetlerde Teams değeri vardır`Conversation`. Buna karşılık, Exchange-posta iletilerinin değeri vardır`Email`.|          |
-|MessageKind     | İletinin tür özelliği. Teams değeri vardır`microsoftteams , im`. |
-|Alıcılar     | Döküm konuşması içinde ileti alan tüm kullanıcıların listesi.|
-|TeamsChannelName     | Dökümün Teams adı.|
-|||
+|FileClass|Bu tür bir içeriği gösterir. Sohbetlerde Teams değeri vardır`Conversation`. Buna karşılık, Exchange-posta iletilerinin değeri vardır`Email`.|
+|MessageKind|İletinin tür özelliği. Teams değeri vardır`microsoftteams , im`.|
+|Alıcılar|Döküm konuşması içinde ileti alan tüm kullanıcıların listesi.|
+|TeamsChannelName|Dökümün Teams adı.|
 
 Meta veri özellikleriyle ilgili diğer Advanced eDiscovery için bkz. Meta [veri alanlarında belge Advanced eDiscovery](document-metadata-fields-in-Advanced-eDiscovery.md).
 

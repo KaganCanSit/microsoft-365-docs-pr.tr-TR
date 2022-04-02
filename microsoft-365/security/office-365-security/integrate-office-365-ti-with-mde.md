@@ -1,8 +1,8 @@
 ---
-title: Uç nokta için Microsoft Defender ile Office 365 için Microsoft Defender'ı kullanma
+title: Office 365 için Microsoft Defender ile birlikte Uç Nokta için Microsoft Defender
 f1.keywords:
 - NOCSH
-keywords: integrate, Microsoft Defender, Endpoint için Microsoft Defender
+keywords: integrate, Microsoft Defender, Uç Nokta için Microsoft Defender
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
@@ -15,47 +15,47 @@ search.appverid:
 - MOE150
 ms.collection:
 - M365-security-compliance
-description: Cihazlarınıza ve e-Office 365 yönelik tehditlerle ilgili daha ayrıntılı bilgi almak için Microsoft Defender for Endpoint ile birlikte Microsoft Defender'ı kullanın.
+description: Cihazlarınıza Office 365 için Microsoft Defender ve e Uç Nokta için Microsoft Defender içeriğinize yönelik tehditlerle ilgili daha ayrıntılı bilgi almak için diğer e-posta adresleriyle birlikte Bu İletişim'i kullanın.
 ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 67406984e73f39858f4a7329a8c8520fcd35ac5c
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: ef1f89a9b218e559855789d0beabad1bc947dad1
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63027482"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465937"
 ---
-# <a name="use-microsoft-defender-for-office-365-together-with-microsoft-defender-for-endpoint"></a>Uç nokta için Microsoft Defender ile Office 365 için Microsoft Defender'ı kullanma
+# <a name="use-microsoft-defender-for-office-365-together-with-microsoft-defender-for-endpoint"></a>Office 365 için Microsoft Defender ile birlikte Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 
-[Uygulama için Microsoft Defender Office 365](defender-for-office-365.md) Uç Nokta için [Microsoft Defender ile çalışacak şekilde yalıtıldı](/windows/security/threat-protection).
+[Office 365 için Microsoft Defender](defender-for-office-365.md), diğerleriyle birlikte çalışacak şekilde [Uç Nokta için Microsoft Defender](/windows/security/threat-protection).
 
-Mobil cihazlar için Microsoft Defender Office 365 uç nokta için Microsoft Defender ile tümleştirin, güvenlik işlemleri ekibinin, kullanıcıların cihazları risk altında olduğu zaman hızlı bir şekilde izlemesi ve önlem almalarına yardımcı olabilir. Örneğin, tümleştirme etkinleştirildikten sonra, güvenlik işlemleri takımınız algılanan e-posta iletisiden etkilenme olasılığı olan cihazları ve uç nokta için Microsoft Defender'da bu cihazlar için ne kadar yeni uyarı üretlendiğini görebilir.
+Kullanıcıların Office 365 için Microsoft Defender risk altında Uç Nokta için Microsoft Defender, güvenlik işlemleri ekibinin izlemesi ve hızlı bir şekilde işlemde yer almalarına yardımcı olabilir. Örneğin, tümleştirme etkinleştirildikten sonra, güvenlik işlemleri ekipleri algılanan bir e-posta iletisiden etkilenme olasılığı olan cihazları ve bu cihazlar için Uç Nokta için Microsoft Defender'te yeni uyarıların oluşturularak bu cihazları görebilir.
 
-Aşağıdaki resimde, Uç nokta tümleştirmesi **için** Microsoft Defender etkinleştirildiğinde Cihazlar sekmesinin nasıl göründüğünü görebilirsiniz:
+Aşağıdaki resimde, tümleştirmeyi **etkinleştirmiş durumdayken** Cihazlar sekmesinin Uç Nokta için Microsoft Defender görünür:
 
-![Uç Nokta için Microsoft Defender etkinleştirildiğinde, uyarılara sahip cihazların listesini seçebilirsiniz.](../../media/fec928ea-8f0c-44d7-80b9-a2e0a8cd4e89.PNG)
+:::image type="content" source="../../media/fec928ea-8f0c-44d7-80b9-a2e0a8cd4e89.PNG" alt-text="Uyarılı cihazların listesi" lightbox="../../media/fec928ea-8f0c-44d7-80b9-a2e0a8cd4e89.PNG":::
 
 Bu örnekte, algılanan e-posta iletisi alıcılarının dört cihazı olduğunu ve birinin de uyarı olduğunu görüyoruz. Bir cihazın bağlantısına tıklarsanız, cihaz sayfası Microsoft 365 Defender [açılır](/microsoft-365/security/defender/microsoft-365-defender).
 
 > [!TIP]
-> Portal Microsoft 365 Defender, yeni portalın Microsoft Defender Güvenlik Merkezi. Bkz. [Microsoft 365 Defender'de Uç Nokta için Microsoft Defender](../defender/microsoft-365-security-center-mde.md).
+> Portal Microsoft 365 Defender, yeni portalın Microsoft Defender Güvenlik Merkezi. Bkz[. Uç Nokta için Microsoft Defender'da Microsoft 365 Defender](../defender/microsoft-365-security-center-mde.md).
 
 ## <a name="requirements"></a>Gereksinimler
 
-- Kuruluşta Kimlik Için Microsoft Defender (veya Office 365) ve Uç Office 365 E5 için Microsoft Defender olmalıdır.
+- Kuruluş, e-Office 365 için Microsoft Defender (veya Office 365 E5) ve Uç Nokta için Microsoft Defender.
 
 - Bu kuruluşta ya genel yönetici veya güvenlik yöneticisi rolünün atanmış Microsoft 365. Daha fazla bilgi için bkz[. Microsoft 365 Defender portalına.](permissions-microsoft-365-security-center.md)
 
 - Gezgin'e [erişiminiz (veya gerçek zamanlı algılamalar) olması gerekir](threat-explorer.md).
 
-## <a name="to-integrate-microsoft-defender-for-office-365-with-microsoft-defender-for-endpoint"></a>Microsoft Defender for Endpoint ile Office 365 için Microsoft Defender'ı tümleştirin
+## <a name="to-integrate-microsoft-defender-for-office-365-with-microsoft-defender-for-endpoint"></a>E-Office 365 için Microsoft Defender Uç Nokta için Microsoft Defender
 
-Windows için Microsoft Defender'Office 365 Uç Nokta için Microsoft Defender ile tümleştirme, hem Uç Nokta için Defender'da hem de Uç Nokta için Defender'da Office 365.
+Varsayılan Office 365 için Microsoft Defender Uç Nokta için Microsoft Defender uç nokta için Defender ve Diğer Uç Nokta'da Office 365 için Defender.
 
 1. Erişim portalına Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com) ) ve oturum açın.
 
@@ -63,9 +63,9 @@ Windows için Microsoft Defender'Office 365 Uç Nokta için Microsoft Defender i
 
 3. Gezgin **sayfasında**, ekranın sağ üst köşesinde **MDE Arama Çubuğu'Ayarlar**.
 
-3. Görüntülenen Uç Nokta **bağlantısı için Microsoft Defender** açılır öğesini, Uç Nokta Bağlan **Için Microsoft Defender'ı** açıp![](../../media/scc-toggle-on.png) Kapat'ı **seçin**.
+3. Görüntülenen **Uç Nokta için Microsoft Defender bağlantı** açılır öğesini seçin, Geçiş Bağlan **Uç Nokta için Microsoft Defender**![](../../media/scc-toggle-on.png)) seçeneğini açıp Kapat'ı **seçin**.
 
-    :::image type="content" source="../../media/explorer-mdeconnection-dialognew.png" alt-text="MDE Bağlantısı.":::
+   :::image type="content" source="../../media/explorer-mdeconnection-dialognew.png" alt-text="MDE Bağlantısı sayfası" lightbox="../../media/explorer-mdeconnection-dialognew.png":::
 
 4. Gezinti bölmesinde, **Tamam'ı Ayarlar**. Sayfa Son **Ayarlar** Uç **Noktalar'ı seçin**
 

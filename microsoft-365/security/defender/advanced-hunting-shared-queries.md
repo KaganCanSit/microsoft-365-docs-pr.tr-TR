@@ -18,12 +18,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 06952be112f4eb28867a4a0cd4bffbee0c664b5c
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 96db917808094487039a13740cba80ad751f062f
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021810"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755523"
 ---
 # <a name="use-shared-queries-in-advanced-hunting"></a>Gelişmiş avlarda paylaşılan sorguları kullanma
 
@@ -38,7 +38,7 @@ ms.locfileid: "63021810"
 
 [Gelişmiş arama](advanced-hunting-overview.md) sorguları aynı kuruluşta yer alan kullanıcılar arasında paylaşabilirsiniz. Ayrıca, e-GitHub.com'da herkesle paylaşılan GitHub. Bu sorgular, sıfırdan sorgu yazmak zorunda kalmadan belirli tehdit avı senaryolarını hızla takip etmek için kullanılabilir.
 
-![Paylaşılan sorguların resmi.](../../media/shared-query-1.png)
+:::image type="content" source="../../media/shared-query-1.png" alt-text="Web portalında paylaşılan Microsoft 365 Defender." lightbox="../../media/shared-query-1.png":::
 
 ## <a name="save-modify-and-share-a-query"></a>Sorgu kaydetme, değiştirme ve paylaşma
 Yeni veya var olan bir sorguyu, yalnızca sizin erişilsin veya diğer kullanıcılarla paylaşılacak şekilde kaydedebilirsiniz. 
@@ -49,7 +49,7 @@ Yeni veya var olan bir sorguyu, yalnızca sizin erişilsin veya diğer kullanıc
     
 3. Sorgu için bir ad girin. 
 
-   ![Sorgu kaydetme resmi.](../../media/shared-query-2.png)
+   :::image type="content" source="../../media/shared-query-2.png" alt-text="Portala kaydediliyor olması gereken yeni Microsoft 365 Defender." lightbox="../../media/shared-query-2.png":::
 
 4. Sorguyu kaydetmek istediğiniz klasörü seçin.
     - **Paylaşılan sorgular** — kuruluşun tüm kullanıcılarına paylaşılan
@@ -60,7 +60,7 @@ Yeni veya var olan bir sorguyu, yalnızca sizin erişilsin veya diğer kullanıc
 ## <a name="delete-or-rename-a-query"></a>Sorguyu silme veya yeniden adlandırma
 1. Yeniden adlandırmak veya silmek istediğiniz sorgunun sağ üç noktayı seçin.
 
-    ![Silme sorgusunun resmi.](../../media/shared-query-3.png)
+    :::image type="content" source="../../media/shared-query-3.png" alt-text="Gelişmiş 365 portalının Gelişmiş Sıyrı sayfasında yer alan Microsoft 365 Defender seçenekleri" lightbox="../../media/shared-query-3.png":::
 
 2. **Sil'i seçin** ve silme işlemini onaylayın. Veya Yeniden **Adlandır'ı** seçin ve sorgu için yeni bir ad girin.
 
@@ -76,8 +76,8 @@ Microsoft güvenlik araştırmacısı, özel bir yer için belirlenen genel depo
 
 ## <a name="related-topics"></a>İlgili konular
 - [Gelişmiş ava genel bakış](advanced-hunting-overview.md)
-- [Sorgu dilini öğrenme](advanced-hunting-query-language.md)
-- [Sorgu sonuçlarıyla çalışma](advanced-hunting-query-results.md)
-- [Cihazlar, e-postalar, uygulamalar ve kimlikler arasında iş avı](advanced-hunting-query-emails-devices.md)
-- [Şemayı anlama](advanced-hunting-schema-tables.md)
-- [Sorguyla ilgili en iyi yöntemleri uygulama](advanced-hunting-best-practices.md)
+- [Sorgu dilini öğrenin](advanced-hunting-query-language.md)
+- [Sorgu sonuçlarıyla çalışın](advanced-hunting-query-results.md)
+- [Cihazlar, e-postalar, uygulamalar ve kimlikler arasında avlayın](advanced-hunting-query-emails-devices.md)
+- [Şemayı anlayın](advanced-hunting-schema-tables.md)
+- [Sorgu en iyi yöntemlerini uygulayın](advanced-hunting-best-practices.md)

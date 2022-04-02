@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: ac5c1a1bb541dee61155a55f23a78533c2b5360c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 1be194035348bb8d414b37f16399fdcffe406063
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63311613"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755036"
 ---
 # <a name="enable-the-evaluation-environment-for-microsoft-defender-for-identity"></a>Microsoft Defender for Identity için değerlendirme ortamını etkinleştirme
 
@@ -37,7 +37,7 @@ Bu makale [, Kimlik için](eval-defender-identity-overview.md) Microsoft Defende
 
 Kimlik için Microsoft Defender ortamınızı ayarlamak üzere aşağıdaki adımları kullanın. 
 
-![Microsoft Defender değerlendirme ortamında Kimlik için Microsoft Defender'ı etkinleştirme adımları.](../../media/defender/m365-defender-identity-eval-enable-steps.png)
+:::image type="content" source="../../media/defender/m365-defender-identity-eval-enable-steps.png" alt-text="Microsoft Defender değerlendirme ortamında Identity için Microsoft Defender'ı etkinleştirme adımları" lightbox="../../media/defender/m365-defender-identity-eval-enable-steps.png":::
 
 - [1. Adım. Kimlik Örneği için Defender'ı ayarlama](#step-1-set-up-the-defender-for-identity-instance)
 - [2. Adım. Algılayıcıyı yükleyin ve yapılandıryın](#step-2-install-and-configure-the-sensor)
@@ -48,33 +48,30 @@ Kimlik için Microsoft Defender ortamınızı ayarlamak üzere aşağıdaki adı
 
 Örneğinizi oluşturmak ve ardından bu örneği Active Directory ortamınıza bağlamak için Kimlik için Defender portalında oturum açın. 
 
-|  |Adım     |Daha fazla bilgi  |
+|  Adım | Açıklama     |Daha fazla bilgi  |
 |---------|---------|---------|
 |1     | Identity için Defender örneğini oluşturma        | [Hızlı Başlangıç: Kimlik örneği için Microsoft Defender'nızı oluşturma](/defender-for-identity/install-step1)        |
 |2     | Bağlan için Defender örneğini Active Directory ormanınıza geri yükleme   | [Hızlı Başlangıç: Bağlan Ormanınıza göz atabilirsiniz](/defender-for-identity/install-step2)  |
-| | |
 
 ## <a name="step-2-install-and-configure-the-sensor"></a>Adım 2. Algılayıcıyı yükleyin ve yapılandıryın
 
 Ardından, şirket içi ortamınıza etki alanı denetleyicilerinde ve AD FS sunucularında Identity algılayıcısı için Defender'ı indirin, yükleyin ve yapılandırın.
 
-|  |Adım     |Daha fazla bilgi  |
+|  Adım | Açıklama     |Daha fazla bilgi  |
 |---------|---------|---------|
 |1     | Identity algılayıcıları için kaç Microsoft Defender'a ihtiyacınız olduğunu tespit edin.        | [Kimlik için Microsoft Defender kapasitesini planlama](/defender-for-identity/capacity-planning)   |
 |2     | Algılayıcı kurulum paketini indirin  |  [Hızlı Başlangıç: Kimlik algılayıcısı kurulum paketi için Microsoft Defender'ı indirin](/defender-for-identity/install-step3)   |
 |3     | Kimlik algılayıcısı için Defender'ı yükleme    |  [Hızlı Başlangıç: Kimlik algılayıcısı için Microsoft Defender'ı yükleme](/defender-for-identity/install-step4)       |
 |4     | Algılayıcıyı yapılandırma       |  [Kimlik algılayıcısı ayarları için Microsoft Defender'ı yapılandırma ](/defender-for-identity/install-step5)   |
-|   |         |         |
 
 ## <a name="step-3-configure-event-log-and-proxy-settings-on-machines-with-the-sensor"></a>Adım 3. Makinelerde algılayıcıya göre olay günlüğü ve ara sunucu ayarlarını yapılandırma
 
 Algılayıcıyı yüklemiş olduğunuz makinelerde, algılama Windows etkinleştirmek ve geliştirmek için etkinlik günlüğü koleksiyonu ve İnternet ara sunucusu ayarlarını yapılandırabilirsiniz.
 
-|  |Adım     |Daha fazla bilgi  |
+|  Adım | Açıklama     |Daha fazla bilgi  |
 |---------|---------|---------|
 |1     | Olay Windows koleksiyonunu yapılandırma         | [Etkinlik Windows yapılandırma](/defender-for-identity/configure-windows-event-collection)        |
 |2     | İnternet ara sunucusu ayarlarını yapılandırma        | [Kimlik Algılayıcısı için Microsoft Defender'nız için uç nokta ara sunucu ve İnternet bağlantı ayarlarını yapılandırma](/defender-for-identity/configure-proxy)        |
-|   |         |         |
 
 ## <a name="step-4-allow-defender-for-identity-to-identify-local-admins-on-other-computers"></a>Adım 4. Diğer bilgisayarlardaki yerel yöneticilerin Kimlik için Defender'a izin verme
 

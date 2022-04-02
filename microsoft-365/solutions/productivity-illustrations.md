@@ -13,12 +13,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: ''
 f1.keywords: NOCSH
-ms.openlocfilehash: ec1c4942923edb824452c4438f79edff1abfd702
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: f6170ef1ef7dc4167fdd61072a9fcd7e189fc23b
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775928"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755287"
 ---
 # <a name="microsoft-365-productivity-illustrations"></a>Microsoft 365 üretkenlik çizimleri
 
@@ -40,12 +40,14 @@ Hangi yöntemi (veya yöntemlerin bileşimlerini) kullanabileceğinizi ve bunlar
 |:-----|:-----|
 |[![Contoso kurumsal iletişim senaryosu posteri.](../media/solutions-architecture-center/contoso-corporate-communication-thumb.png)](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) <br/> [PDF](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) \| [Visio](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.vsdx)  <br>Güncelleştirme Ocak 2022   |Bu posterde, Contoso'nın yaygın iletişim senaryolarında çalışanların nasıl haberdar olduğunu ve meşgul olduğunu göstermektedir. Contoso, viva connections adlı yeni teklif de dahil olmak üzere çeşitli M365 uygulamaları kullanır.<br/><br/>**İlgili çözüm kılavuzları** <br/> <ul><li>[Kurumsal iletişimler: Kılavuz, yöntemler ve ürünler](/sharepoint/corporate-communications-overview)|
 
+
+
 ## <a name="groups-in-microsoft-365-for-it-architects"></a>IT Architects için Microsoft 365 Grupları
 Bu çizimde, BU Grupların bilgi ve bilgi Microsoft 365 vardır. Grupların ve ekiplerin kuruluş içinde işbirliği Microsoft 365 yapılandırılması ve yönetimi hakkında bilgi edinmek için bkz. Microsoft 365 ile güvenli işbirliği ayarlama [ve](/microsoft-365/solutions/setup-secure-collaboration-with-teams) İşbirliği [yönetimi nedir?](/microsoft-365/solutions/collaboration-governance-overview).
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Gruplar bilgi grafiği için başparmak resmi.](../downloads/msft-m365-groups-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-groups.vsdx) <br> Mayıs 2020'de güncelleştirildi|Bu çizimler farklı grup türlerini, bunların nasıl oluşturulacaklarını ve yönetil grafiklerini ve birkaç yönetim önerilerini ayrıntılarıyla açıklar.
+|[![Gruplar bilgi grafiği için başparmak resmi.](../downloads/msft-m365-groups-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-groups.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-groups.vsdx) <br> Mayıs 2020'de güncelleştirildi|Bu çizimler farklı grup türlerini, bunların nasıl oluşturulacaklarını ve yönetil grafiklerini ve birkaç yönetim önerilerini ayrıntılarıyla açıklar.|
 
 ## <a name="migrate-to-microsoft-365"></a>Microsoft 365'e geçiş
 
@@ -64,7 +66,7 @@ Bu çizim kümesi, bu becerilerin genel mevzuat gereksinimlerine uygun olarak na
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Model posteri: Microsoft 365 koruma ve uyumluluk özelliklerini içerir.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> İngilizce: [PDF olarak indirin](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| [Dosya olarak Visio](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japonca: [PDF olarak](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf) [Visio indirme](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)\|   <br/> Kasım 2020 güncelleştirildi|Şunları içerir: <ul><li>  Microsoft bilgi koruması ve veri kaybını önleme</li><li>Bekletme ilkeleri ve bekletme etiketleri </li><li>Bilgi engelleri</li><li>İletişim uyumluluğu</li><li>Insider riski</li><li>Üçüncü taraf veri alımı</li>|
+|[![Model posteri: Microsoft 365 koruma ve uyumluluk özelliklerini içerir.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> İngilizce: [PDF olarak indirin](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| [Dosya olarak Visio](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japonca: [PDF olarak](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf) [Visio indirme](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)\|   <br/> Kasım 2020 güncelleştirildi|Şunları içerir: <ul><li>  Microsoft bilgi koruması ve veri kaybını önleme</li><li>Bekletme ilkeleri ve bekletme etiketleri </li><li>Bilgi bariyerleri</li><li>İletişim uyumluluğu</li><li>Insider riski</li><li>Üçüncü taraf veri alımı</li>|
 
 
 ## <a name="security-and-information-protection-for-multi-region-organizations"></a>Çok Bölgeli Kuruluşlar için Güvenlik ve Bilgi Koruması
@@ -74,15 +76,6 @@ Tek bir kiracısı olan çok bölgeli kuruluşlar için güvenlik Microsoft 365 
 |:-----|:-----|
 |[![Çok bölgeli bilgi grafiği.](../media/solutions-architecture-center/multi-region-single-tenant-security-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.pdf) \| [Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.vsdx)<br>Güncelleştirme: Mart 2020 |Genel organizasyonunız için Microsoft 365 kiracı kullanmak, birçok nedenle en iyi seçim ve deneyimdir. Bununla birlikte, birçok mimar farklı bölgelerde güvenlik ve bilgi koruma hedeflerine nasıl ulaşacaklarını çok iyi istiyor. Bu konu kümesi öneriler sağlar. |
 
-## <a name="security-guidance-for-political-campaigns-nonprofits-and-other-agile-organizations"></a>Kampanya Kampanyaları, Kar Amacı Gütmeyen Kuruluşlar ve Diğer Çevik Kuruluşlar için Güvenlik Kılavuzu
-
-If your organization is çevik, you have a small IT team, and your threat profile is higher than average, this guidance is designed for you. Bu çözüm, en baştan güvenli denetimleri içeren temel bulut hizmetleriyle ortamı nasıl hızla kuracaklarını gösterir. Bu kılavuz, mobil cihazlardan veri, kimlik, e-posta ve erişimi korumaya yönelik önkrtif güvenlik önerileri içerir.
-
-| Öğe | Açıklama |
-|:---|:---|
-|**Kampanyalar için Microsoft Güvenlik Kılavuzu** <br> [:::image type="content" source="../media/d370ce28-ca40-4930-9a2c-907312aa06c8.png" alt-text="Güvenlik kılavuzu hakkında mini postere küçük resim.":::](https://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.pdf) <br> [PDF](https://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.pdf) \| [Visio](https://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.vsdx)|Bu kılavuzda örnek olarak, bir kampanya kuruluşu vardır. Bu kılavuzu her ortam için başlangıç noktası olarak kullanın.|
-|**Kar Amacı Gütmeyen Kuruluşlar için Microsoft Güvenlik Kılavuzu** <br> [:::image type="content" source="../media/e4784889-1c69-4067-9a8f-31d31d1eceea.png" alt-text="Güvenlik kılavuzu indirme küçük resmi.":::](https://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.pdf) <br> [PDF](https://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.pdf) \| [Visio](https://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.vsdx)|Bu kılavuz, kar amacı gütmeyen kuruluşlar için biraz düzeltilmiş. Örneğin, bu planlar için Office 365 Kar Amacı Gütmeyen başvurur. Teknik kılavuz, kampanyaya yönelik teknik kılavuz ile aynıdır.|
-
 ## <a name="microsoft-defender-for-endpoint-deployment-strategy"></a>Uç nokta dağıtım stratejisi için Microsoft Defender
 
 Ortamınıza bağlı olarak, bazı araçlar belirli mimarilere daha uygun olur.
@@ -90,7 +83,9 @@ Ortamınıza bağlı olarak, bazı araçlar belirli mimarilere daha uygun olur.
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Uç nokta dağıtım stratejisi için Microsoft Defender'ın küçük resmi.](../media/solutions-architecture-center/mde-deployment-strategy.png)](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)<br/> [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)\| [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx)   <br>Güncelleştirme: Eylül 2021| Mimari malzemeleri, aşağıdaki mimariler için dağıtımınızı planlamanıza yardımcı olur: <ul><li> Bulut yerel </li><li> Birlikte yönetim </li><li> Şirket içi</li><li>Değerlendirme ve yerel ekleme</li> |
+|[![Uç nokta dağıtım stratejisi için Microsoft Defender'ın küçük resmi.](../media/solutions-architecture-center/mde-deployment-strategy.png)](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)<br/> [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)\| [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx)   <br>Güncelleştirme: Eylül 2021| Mimari malzemeleri, aşağıdaki mimariler için dağıtımınızı planlamanıza yardımcı olur: <ul><li> Bulut yerel </li><li> Birlikte yönetim </li><li> Şirket içi</li><li>Değerlendirme ve yerel ekleme</li>
+
+
 <!--
 
 <a name="BKMK_O365IDP"></a>
@@ -103,15 +98,18 @@ Recommended Zero Trust capabilities for protecting identities and devices that a
 |[![Model poster: Zero Trust identity and device protection for Microsoft 365.](../media/microsoft-365-policies-configurations/zero-trust-id-device-protection-model-thumbnail.png)](../downloads/MSFT_cloud_architecture_identity&device_protection.pdf) <br/>  [View as a PDF](../downloads/MSFT_cloud_architecture_identity&device_protection.pdf) \| [Download as a PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/MSFT_cloud_architecture_identity&device_protection.pdf)  \| [Download as a Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/MSFT_cloud_architecture_identity&device_protection.vsdx) <br/> Updated November 2021|It's important to use consistent levels of protection across your data, identities, and devices. This model shows you which Zero Trust capabilities are comparable with more information on capabilities to protect identities and devices.  <br/> |
 
 --> 
-<a name="BKMK_ediscovery"></a>
 
-## <a name="advanced-ediscovery-architecture-in-microsoft-365"></a>Advanced eDiscovery'te Microsoft 365
+
+<a name="BKMK_ediscovery"></a>
+##Advanced eDiscovery'te Microsoft 365
 
 Advanced eDiscovery Multi-Geo ortamlarının içindekiler de dahil olmak üzere  uç Microsoft 365 iş akışını ve veri akışını içerir.
 
 | Öğe | Açıklama |
 |:-----|:-----|
 |[![Model posteri: Advanced eDiscovery Mimari'ye Microsoft 365.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) <br/> [Resim olarak görüntüleme](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) \| [PDF olarak indirme](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.pdf)\| [Dosya olarak Visio](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.vsdx)   <br/> Ekim 2020'de güncelleştirildi|Şunları içerir: <ul><li>  Tek bir ortamda  bitiş-uç iş akışı</li><li>Çok Coğrafi Bir Ortamda Uzla Microsoft 365  uç iş akışı </li><li>EDRM iş akışını destekleyen ed-uç veri akışı</li> |
+
+
 
 ## <a name="microsoft-telephony-solutions"></a>Microsoft Telephony Solutions
 

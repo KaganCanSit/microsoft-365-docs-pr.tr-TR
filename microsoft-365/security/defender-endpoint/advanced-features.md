@@ -1,7 +1,7 @@
 ---
-title: Uç Nokta için Microsoft Defender'da gelişmiş özellikleri yapılandırma
-description: Uç nokta için Microsoft Defender'da dosya engelleme gibi gelişmiş özellikleri açın.
-keywords: gelişmiş özellikler, ayarlar, dosya engelleme, otomatik araştırma, otomatik çözümleme, skype, kimlik için Microsoft Defender, Office 365, azure information protection, intune
+title: Web'de gelişmiş özellikleri Uç Nokta için Microsoft Defender
+description: Dosya engelleme gibi gelişmiş özellikleri Uç Nokta için Microsoft Defender.
+keywords: gelişmiş özellikler, ayarlar, dosya engelleme, otomatik soruşturma, otomatik çözümleme, skype, kimlik için Microsoft Defender, Office 365, azure information protection, intune
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,17 +14,17 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 56a836e14051e3f621fb42fd518fb2cf5efe8bed
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 94e5b18ab1090f6fb76cb7734e90411b93b444e7
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63327707"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465465"
 ---
 # <a name="configure-advanced-features-in-defender-for-endpoint"></a>Uç Nokta için Defender'da gelişmiş özellikleri yapılandırma
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
@@ -49,7 +49,7 @@ Hizmetin otomatik araştırma ve düzeltme özelliklerinden yararlanmak için bu
 ## <a name="live-response"></a>Canlı yanıt
 
 > [!NOTE]
-> Canlı yanıt için **, Uç nokta** portalı için Microsoft Defender'da gelişmiş ayarlar bölümünde etkinleştiremeden önce Otomatik araştırma'nın açık olması gerekir.
+> Canlı yanıt için **, hızlı araştırmanın** portalında yer alan gelişmiş ayarlar bölümünde etkinleştiremeden önce otomatik Uç Nokta için Microsoft Defender gerekir.
 
 Uygun izinlere sahip kullanıcıların cihazlarda canlı yanıt oturumu başlat olması için bu özelliği kullanın.
 
@@ -69,11 +69,11 @@ Bu özelliğin etkinleştirilmesi, imzasız betikleri canlı yanıt oturumunda �
 
 İstenmeyen olabilecek uygulamalar (PUA), makinenizin yavaş çalışmasına, beklenmeyen reklamlar görüntülemesine veya en kötü de kötü de, beklenmedik veya istenmeyen başka bir yazılım yüklemesine neden olabilecek bir yazılım kategorisidir.
 
-İstenmeyen olabilecek uygulamaların (PUA) cihazlarında PUA koruması yapılandırılmasa bile kiracınız dahil tüm cihazlarda düzeltilesini açmak için bu özelliği kullanın. Bu, kullanıcıların cihazlarına yanlışlıkla istenmeyen uygulamalar yüklemesini önleyerek onları korumaya yardımcı olur. Kapalı olduğunda, düzeltme cihaz yapılandırmasına bağlıdır.
+İstenmeyen olabilecek uygulamaların (PUA) cihazlarında PUA koruması yapılandırılmasa bile kiracınız dahil tüm cihazlarda düzeltilesini açmak için bu özelliği kullanın. Bu özelliğin etkinleştirilmesi, kullanıcıların cihazlarında istemeden istenmeyen uygulamalar yüklemelerini korumanıza yardımcı olur. Kapalı olduğunda, düzeltme cihaz yapılandırmasına bağlıdır.
 
 ## <a name="restrict-correlation-to-within-scoped-device-groups"></a>Kapsamı olan cihaz grupları içinde bağıntıyı kısıtlama
 
-Bu yapılandırma, yerel SOC işlemlerinin uyarı korelasyonlarını yalnızca eriştikleri cihaz gruplarıyla sınırlandırmak kullandığı senaryolarda kullanılabilir. Bu ayarın açmasıyla, cihaz grupları arasında uyarılardan oluşan bir olay artık tek bir olay olarak kabul edilir. Bundan sonra yerel SOC ilgili cihaz gruplarından birinin erişimi olduğundan olay üzerinde eyleme geçebilirsiniz. Bununla birlikte, genel SOC tek bir olay yerine cihaz grubuna göre birkaç farklı olayı görebilir. Bu ayarın, kuruluş genelinde olay korelasyon avantajlarının üzerinde bir öte öteye geçediği sürece, bu ayarı açmama öneririz.
+Bu yapılandırma, yerel SOC işlemlerinin uyarı korelasyonlarını yalnızca eriştikleri cihaz gruplarıyla sınırlandırmak kullandığı senaryolarda kullanılabilir. Bu ayarın açmasıyla, cihaz arası grupların uyarılardan oluşan bir olay artık tek bir olay olarak kabul edilir. Bundan sonra yerel SOC ilgili cihaz gruplarından birinin erişimi olduğundan olay üzerinde eyleme geçebilirsiniz. Bununla birlikte, genel SOC tek bir olay yerine cihaz grubuna göre birkaç farklı olayı görebilir. Bu ayarın, kuruluş genelinde olay korelasyon avantajlarının üzerinde bir öte öteye geçediği sürece, bu ayarı açmama öneririz.
 
 > [!NOTE]
 > Bu ayarın değiştirilmesi yalnızca gelecekteki uyarı korelasyonlarını etkiler.
@@ -109,7 +109,7 @@ Dosyalara izin **ver veya engelle'ye izin** ver veya engelle'ye açmak için:
 
 1. Ayarı Açık ve Kapalı **arasında** **geçiş yapmak.**
  
-    :::image type="content" source="../../media/alloworblockfile.png" alt-text="Dosya engelleme özelliğinin gelişmiş ayarlarının görüntüsü.":::
+    :::image type="content" source="../../media/alloworblockfile.png" alt-text="Uç noktalar ekranı" lightbox="../../media/alloworblockfile.png":::
 
 1. Sayfanın **en altındaki** Kaydetme tercihleri'ne tıklayın.
 
@@ -119,7 +119,7 @@ Bu özelliği verdikten sonra, [dosyanın](respond-file-alerts.md#allow-or-block
 
 Bu özelliğin gerçekleştirilebilir olması, özel gösterge listeniz üzerinden IP adresleri, etki alanları veya URL'ler için göstergeler oluşturmanıza olanak sağlar.
 
-Bu özelliği kullanmak için, cihazların 1709 veya Windows 10 11'de veya daha Windows çalışıyor olması gerekir. Ayrıca, engelleme modunda ve kötü amaçlı yazılım önleme platformunun 4.18.1906.3 veya daha sonraki bir sürümünde ağ korumasına sahip [olması gerekir, bkz. KB 4052623](https://go.microsoft.com/fwlink/?linkid=2099834).
+Bu özelliği kullanmak için cihazların 1709 veya Windows 10 sonraki bir sürümde veya daha sonraki bir sürümde Windows 11. Ayrıca, engelleme modunda ve kötü amaçlı yazılım önleme platformunun 4.18.1906.3 veya daha sonraki bir sürümünde ağ korumasına sahip [olması gerekir, bkz. KB 4052623](https://go.microsoft.com/fwlink/?linkid=2099834).
 
 Daha fazla bilgi için bkz [. Göstergeleri yönetme](manage-indicators.md).
 
@@ -147,14 +147,14 @@ Daha fazla bilgi için bkz [. Kullanıcı hesabını araştırma](investigate-us
 
 ## <a name="skype-for-business-integration"></a>Skype Kurumsal tümleştirmesi
 
-Skype Kurumsal tümleştirmeyi etkinleştirmek, e-posta, telefon veya telefon Skype Kurumsal kullanıcılarla iletişim kurma olanağı sağlar. Bu özellik, kullanıcıyla iletişim kurmanız ve riskleri azaltmak için kullanışlıdır.
+Skype Kurumsal tümleştirmeyi etkinleştirmek, e-posta, telefon veya telefon Skype Kurumsal kullanıcılarla iletişim kurma olanağı sağlar. Bu etkinleştirme, kullanıcıyla iletişim kurmanız ve riskleri azaltmak için kullanışlıdır.
 
 > [!NOTE]
 > Cihaz ağdan yalıtılmış durumdayken, Outlook ve Skype iletişimlerini etkinleştirmeyi seçebilirsiniz ve bu da ağ bağlantısı kesildiğinde kullanıcıyla iletişimleri sağlar. Bu ayar, Skype yalıtım Outlook olduğunda iletişimi otomatik olarak yapmak için geçerlidir.
 
-## <a name="microsoft-defender-for-identity-integration"></a>Identity tümleştirmesi için Microsoft Defender
+## <a name="microsoft-defender-for-identity-integration"></a>Kimlik için Microsoft Defender tümleştirmesi
 
-Identity için Microsoft Defender ile tümleştirme, doğrudan başka bir Microsoft Identity güvenlik ürününe özetlemenizi sağlar. Kimlik için Microsoft Defender, güvenliği ihlal edilmiş şüpheli bir hesap ve ilgili kaynaklar hakkında daha fazla içgörü ile bir soruşturmayı geliştirmektedir. Bu özelliği etkinleştirerek, ağı tanımlama açısından bir bakış açısından özetleerek cihaz tabanlı soruşturma özelliğini zenginleştirirsiniz.
+Microsoft Hesabı ile Kimlik için Microsoft Defender, doğrudan başka bir Microsoft Identity güvenlik ürününe özetlemenizi sağlar. Kimlik için Microsoft Defender ele geçirildikleri hesap ve ilgili kaynaklar hakkında daha fazla içgörü elde edilen bir soruşturmayı geliştirler. Bu özelliği etkinleştirerek, ağı tanımlama açısından bir bakış açısından özetleerek cihaz tabanlı soruşturma özelliğini zenginleştirirsiniz.
 
 > [!NOTE]
 > Bu özelliği etkinleştirmek için uygun lisansa sahip olmak gerekir.
@@ -163,7 +163,7 @@ Identity için Microsoft Defender ile tümleştirme, doğrudan başka bir Micros
 
 Bu özelliğin kullanılabilir olması için, etkin bir Office 365 E5 veya Tehdit İstihbaratı eklentisinde olması gerekir. Daha fazla bilgi için, Office 365 Kurumsal E5 ürün sayfasına bakın.
 
-Bu özelliği açık durumdayken, Office 365 için Microsoft Defender'dan Microsoft 365 Defender'e veri Office 365 posta kutuları ve diğer cihazlar arasında kapsamlı bir güvenlik Windows yönetebilirsiniz.
+Bu özelliği kapatarak, posta kutuları ve diğer cihazlarınız arasında kapsamlı bir güvenlik Office 365 için Microsoft Defender yapmak için Microsoft 365 Defender'den Office 365 verileri Windows.
 
 > [!NOTE]
 > Bu özelliği etkinleştirmek için uygun lisansa sahip olmak gerekir.
@@ -179,16 +179,16 @@ Threat Intelligence içinde bağlamsal cihaz tümleştirmesi Office 365 için G�
 
 ## <a name="microsoft-defender-for-cloud-apps"></a>Bulut Uygulamaları için Microsoft Defender
 
-Bu ayarın etkinleştirilmesi, bulut uygulaması kullanımında daha derin bir görünürlük sağlamak için Uç nokta için Defender'ı Bulut Uygulamaları için Microsoft Defender'a işaretleri. Forwarded data is stored and processed in the Defender for Cloud Apps data.
+Bu ayarın etkinleştirilmesi, bulut uygulama kullanımında daha derin bir görünürlük Microsoft Defender for Cloud Apps için Uç nokta işaretleri için Defender'ı iletin. Forwarded data is stored and processed in the location as your Bulut için Defender data.
 
 > [!NOTE]
-> Bu özellik [KB4493441](https://support.microsoft.com/help/4493441)), [Windows 10](https://www.microsoft.com/cloud-platform/enterprise-mobility-security) sürüm 1803 (KB4493464 ile birlikte işletim sistemi derlemesi 17134.704 ile Windows 10 sürüm 17134.704) ile çalışan cihazlarda Enterprise Mobility + Security için E5 lisansıyla birlikte Windows 10, sürüm 1809 [](https://support.microsoft.com/help/4493464)  ([KB4489899](https://support.microsoft.com/help/4489899) ile birlikte işletim sistemi derlemesi 17763.379), sonraki Windows 10 veya 11 Windows.
+> Bu özellik [KB4493441](https://support.microsoft.com/help/4493441)), [Windows 10](https://www.microsoft.com/cloud-platform/enterprise-mobility-security) sürüm 1803 (KB4493464 ile birlikte işletim sistemi derlemesi 17134.704 ile Windows 10 sürüm 17134.704) ile çalışan cihazlarda Enterprise Mobility + Security için E5 lisansıyla birlikte Windows 10, sürüm 1809 [](https://support.microsoft.com/help/4493464)  ([KB4489899](https://support.microsoft.com/help/4489899) ile birlikte işletim sistemi derlemesi 17763.379), daha sonraki Windows 10 sürümleri veya Windows 11.
 
-### <a name="enable-the-microsoft-defender-for-endpoint-integration-from-the-microsoft-defender-for-identity-portal"></a>Kimlik için Microsoft Defender portalında Uç Nokta tümleştirmesi için Microsoft Defender'ı etkinleştirme
+### <a name="enable-the-microsoft-defender-for-endpoint-integration-from-the-microsoft-defender-for-identity-portal"></a>Uç Nokta için Microsoft Defender Kimlik için Microsoft Defender portaldan Kimlik için Microsoft Defender tümleştirmeyi etkinleştirme
 
-Identity için Microsoft Defender'da bağlamsal cihaz tümleştirmesi almak için, özelliği Kimlik için Microsoft Defender portalında da etkinleştirmeniz gerekir.
+Kimlik için Microsoft Defender'da bağlamsal cihaz tümleştirmesi almak için, bu özelliği etkinleştirmeniz için portalda da Kimlik için Microsoft Defender gerekir.
 
-1. Bir Genel Yönetici veya [Güvenlik Yöneticisi rolüyle Kimlik için Microsoft Defender portalında](https://portal.atp.azure.com/) oturum açın.
+1. Portalda Genel [Kimlik için Microsoft Defender veya](https://portal.atp.azure.com/) Güvenlik Yöneticisi rolüyle oturum açın.
 
 2. **Örneğinizi oluşturun'a tıklayın**.
 
@@ -198,7 +198,7 @@ Her iki portalda tümleştirme adımlarını tamamladıktan sonra, cihaz ayrınt
 
 ## <a name="web-content-filtering"></a>Web içeriği filtreleme
 
-İstenmeyen içerik içeren web sitelerine erişimi engelin ve tüm etki alanları genelinde web etkinliğini takip edin. Engellemek istediğiniz web içeriği kategorilerini belirtmek için, web içeriği filtreleme [ilkesi oluşturun](https://security.microsoft.com/preferences2/web_content_filtering_policy). Uç nokta güvenlik temeli için Microsoft Defender'ı dağıtırken engelleme modunda [ağ korumanız olduğundan emin olun](https://devicemanagement.microsoft.com/#blade/Microsoft_Intune_Workflows/SecurityBaselineSummaryMenu/overview/templateType/2).
+İstenmeyen içerik içeren web sitelerine erişimi engelin ve tüm etki alanları genelinde web etkinliğini takip edin. Engellemek istediğiniz web içeriği kategorilerini belirtmek için, web içeriği filtreleme [ilkesi oluşturun](https://security.microsoft.com/preferences2/web_content_filtering_policy). Bu güvenlik temeli dağıtımında engelleme modunda ağ Uç Nokta için Microsoft Defender [emin olun](https://devicemanagement.microsoft.com/#blade/Microsoft_Intune_Workflows/SecurityBaselineSummaryMenu/overview/templateType/2).
 
 ## <a name="share-endpoint-alerts-with-microsoft-compliance-center"></a>Uç nokta uyarılarını Microsoft Uyumluluk Merkezi ile paylaşma
 
@@ -208,22 +208,22 @@ Insider risk yönetimi ayarlarında Güvenlik ilkesi [ihlal](/microsoft-365/comp
 
 ## <a name="microsoft-intune-connection"></a>Microsoft Intune bağlantı
 
-Cihaz risk tabanlı koşullu erişimi etkinleştirmek için [Microsoft Intune](/intune/what-is-intune) için Defender [ile Uç Nokta için Defender tümleştirildi](/intune/advanced-threat-protection#enable-windows-defender-atp-in-intune). Bu [özelliği etkinleştirirseniz](configure-conditional-access.md), intune ile Uç nokta cihaz bilgileri için Defender'ı paylaşarak ilke zorlamayı artırabileceksiniz.
+Cihaz risk tabanlı koşullu erişimi etkinleştirmek için [Microsoft Intune](/intune/what-is-intune) için Defender [ile Uç Nokta için Defender tümleştirildi](/intune/advanced-threat-protection#enable-windows-defender-atp-in-intune). Bu [özelliği etkinleştirirken, ilke zorlamayı](configure-conditional-access.md) geliştirmek için Uç nokta cihaz bilgileri için Defender'ı Intune bilgileri paylaşabilirsiniz.
 
 > [!IMPORTANT]
-> Bu özelliği kullanmak için hem Intune hem de Uç Nokta için Defender ile tümleştirmeyi etkinleştirmeniz gerekir. Belirli adımlar hakkında daha fazla bilgi için bkz. [Uç Nokta için Defender'da Koşullu Erişimi Yapılandırma](configure-conditional-access.md).
+> Bu özelliği kullanmak için hem Uç Nokta için Intune Defender'da tümleştirmeyi etkinleştirmeniz gerekir. Belirli adımlar hakkında daha fazla bilgi için bkz. [Uç Nokta için Defender'da Koşullu Erişimi Yapılandırma](configure-conditional-access.md).
 
-Bu özellik yalnızca aşağıdakilere sahipsanız kullanılabilir:
+Bu özellik yalnızca aşağıdaki önkoşullara sahipsanız kullanılabilir:
 
 - E5 ve E5 için Enterprise Mobility + Security E3 kiracı Windows (veya Microsoft 365 Kurumsal E5)
-- Intune tarafından yönetilen Microsoft Intune [Azure AD'ye Windows etkin bir etki alanı ortamı](/azure/active-directory/devices/concept-azure-ad-join/).
+- Azure AD Microsoft Intune tarafından yönetilen veya Intune cihaz Windows etkin [bir etki alanı ortamı](/azure/active-directory/devices/concept-azure-ad-join/).
 
 ### <a name="conditional-access-policy"></a>Koşullu Erişim ilkesi
 
-Intune tümleştirmeyi etkinleştirseniz, Intune otomatik olarak klasik bir Koşullu Erişim (CA) ilkesi oluşturacaktır. Bu klasik CA ilkesi, Intune'a durum raporlarını ayarlamanın önkoşullarıdır. Silinmemelidir.
+Dış tümleştirmeyi etkinleştir Intune, Intune otomatik olarak klasik bir Koşullu Erişim (CA) ilkesi oluşturulur. Bu klasik CA ilkesi, bu ilkeye durum raporlarını ayarlamanın önkoşul Intune. Silinmemelidir.
 
 > [!NOTE]
-> Intune tarafından oluşturulan klasik CA ilkesi, uç noktaları yapılandırmak için [kullanılan](/azure/active-directory/conditional-access/overview/) modern Koşullu Erişim ilkelerinden farklıdır.
+> Intune tarafından oluşturulan klasik CA ilkesi, uç noktaları yapılandırmak [için](/azure/active-directory/conditional-access/overview/) kullanılan modern Koşullu Erişim ilkelerinden farklıdır.
 
 ## <a name="device-discovery"></a>Cihaz bulma
 

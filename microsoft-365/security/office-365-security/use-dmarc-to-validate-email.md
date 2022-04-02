@@ -18,12 +18,12 @@ ms.collection:
 description: Kuruluştan gönderilen iletileri doğrulamak için Etki Alanı Tabanlı İleti Kimlik Doğrulaması, Raporlama ve Uyumluluk'ı (DMARC) yapılandırmayı öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7b166a481bf503ce2d46e79f2cb674861935f4ff
-ms.sourcegitcommit: 07405a81513d1c63071a128b9d5070d3a3bfe1cd
+ms.openlocfilehash: cae3f007cc046bfc2afd6bb7322c65fe047816d5
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63006786"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465893"
 ---
 # <a name="use-dmarc-to-validate-email"></a>E-postayı doğrulamak için DMARC kullanma
 
@@ -31,7 +31,7 @@ ms.locfileid: "63006786"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Etki Alanı Tabanlı İleti Kimlik Doğrulaması, Raporlama ve Uyumluluk ([DMARC](https://dmarc.org)), posta gönderenlerin kimliklerini doğrulamak ve hedef e-posta sistemlerinin etki alanınız üzerinden gönderilen iletilere güven olduğundan emin olmak için Sender Policy Framework (SPF) ve DomainKeys Identified Mail (DKIM) ile çalışır. DMARC'ın SPF ve DKIM ile uygulanması kimlik avı ve kimlik avı e-postalarına karşı ek koruma sağlar. DMARC, posta sistemlerinin SPF veya DKIM denetimlerini başarısız olan etki alanınız üzerinden gönderilen iletilerle ne olacağını belirlemesine yardımcı olur.
@@ -258,7 +258,7 @@ contoso.com     3600   IN  MX  10 contoso-com.mail.protection.outlook.com
 
 E-postanın çoğu veya çoğu birincil MX mail.contoso.com EOP'ye yönlendirilen e-posta olur. Bazı durumlarda, EOP'leri hiç MX kaydı olarak listeleyem ve e-postanızı yönlendiren bağlayıcıları bağlayın. DMARC doğrulamasının yapılması için EOP'nin ilk girdisi olması gerekir. Yalnızca doğrulamayı sağlar; tüm şirket içi/O365 olmayan sunucuların DMARC denetimleri yapmalarını sağlar.  DMARC TXT kaydını ayar takımınız, müşterinin etki alanı için zorunlu tutul almaya (sunucu için değil) uygundur, ancak bu zoru aslında alıcı sunucuya uygulanır.  Alıcı sunucu olarak EOP'i ayardısanız, DMARC zorlaması EOP tarafından esnetir.
 
-:::image type="content" source="../../media/Tp_DMARCTroublehoot.png" alt-text="Daniel Mande'nin hitapları olan DMARC için sorun giderme grafiği" lightbox="../../media/Tp_DMARCTroublehoot.png":::
+:::image type="content" source="../../media/Tp_DMARCTroublehoot.png" alt-text="DMARC için sorun giderme grafiği" lightbox="../../media/Tp_DMARCTroublehoot.png":::
 
 ## <a name="for-more-information"></a>Daha fazla bilgi için
 

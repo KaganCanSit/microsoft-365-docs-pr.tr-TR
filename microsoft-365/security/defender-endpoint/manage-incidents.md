@@ -1,5 +1,5 @@
 ---
-title: Uç nokta olayları için Microsoft Defender'ı yönetme
+title: Olay Uç Nokta için Microsoft Defender yönetme
 description: Olayları yönetmek için görev atama, durumunu güncelleştirme veya sınıflandırmayı ayarlama.
 keywords: olaylar, yönetme, atama, durum, sınıflandırma, doğru uyarı, yanlış uyarı
 search.product: eADQiWindows 10XVcnh
@@ -18,32 +18,31 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 45c08c5a3c304a23b5761d96a4d9aceb1b4f1562
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: a84f7ba72acb4caf3e229f0bed4d997e123cc7ae
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011985"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466223"
 ---
-# <a name="manage-microsoft-defender-for-endpoint-incidents"></a>Uç nokta olayları için Microsoft Defender'ı yönetme
+# <a name="manage-microsoft-defender-for-endpoint-incidents"></a>Olay Uç Nokta için Microsoft Defender yönetme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Olayları yönetmek, her siber güvenlik operasyonlarının önemli bir parçasıdır. Olayları yönetmek için, Olaylar kuyruğundan veya **Olaylar yönetim** bölmesinden **bir olay seçin**. 
 
 
 Olaylar sırasından bir **olay seçerek** , ayrıntılar için **olay sayfasını** açabilirsiniz.
 
-
-![Olay yönetim bölmesinin resmi.](images/atp-incidents-mgt-pane-updated.png)
+:::image type="content" source="images/atp-incidents-mgt-pane-updated.png" alt-text="Olay yönetim bölmesi" lightbox="images/atp-incidents-mgt-pane-updated.png":::
 
 Olayları kendinize atayabilirsiniz, durumunu ve sınıflandırmayı değiştirebilir, ilerleme durumlarını izlemek için bunları yeniden adlandırabilirsiniz veya yorumda bulundurabilirsiniz.
 
@@ -55,8 +54,7 @@ Olayları kendinize atayabilirsiniz, durumunu ve sınıflandırmayı değiştire
 > Otomatik olay adlarının herhangi bir şekilde otomatik olarak adlandırılamadan önce mevcut olan olaylar adlarını korur.
 >
 
-
-![Olay ayrıntı sayfasının görüntüsü.](images/atp-incident-details-updated.png)
+:::image type="content" source="images/atp-incident-details-updated.png" alt-text="Olay ayrıntı sayfası" lightbox="images/atp-incident-details-updated.png":::
 
 ## <a name="assign-incidents"></a>Olay atama
 Henüz bir olay atanmamışsa, olayı kendinize atamak **için Bana** ata'yi seçin. Bu şekilde, yalnızca olayın değil, aynı zamanda ilgili tüm uyarıların sahipliğini kabul eder.
@@ -84,4 +82,4 @@ Eklenen açıklamalar anında bölmede görünür.
 ## <a name="related-topics"></a>İlgili konular
 - [Olay sırası](/microsoft-365/security/defender-endpoint/view-incidents-queue)
 - [Olaylar kuyruğu görüntüleme ve düzenleme](view-incidents-queue.md)
-- [Olayları araştırma](investigate-incidents.md)
+- [Olayları araştırın](investigate-incidents.md)

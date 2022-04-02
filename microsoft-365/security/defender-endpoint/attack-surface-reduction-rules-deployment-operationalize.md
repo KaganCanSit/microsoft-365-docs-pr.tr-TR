@@ -1,7 +1,7 @@
 ---
 title: Saldırı yüzeyini azaltma (ASR) kuralları dağıtımı
 description: Saldırı yüzeyini azaltma kuralları dağıtımınızı faaliyete geçirmek için kılavuz sağlar.
-keywords: Saldırı yüzeyini azaltma kuralları dağıtımı, ASR dağıtımı, asr kurallarını etkinleştirme, ASR'yi yapılandırma, izinsiz giriş engelleme sistemi, koruma kuralları, istismardan koruma kuralları, istismardan koruma kuralları, bulaşma önleme kuralları, Uç nokta için Microsoft Defender, ASR kurallarını yapılandırma
+keywords: Saldırı yüzeyini azaltma kuralları dağıtımı, ASR dağıtımı, asr kurallarını etkinleştirme, ASR'yi yapılandırma, izinsiz giriş engelleme sistemi, koruma kuralları, istismardan koruma kuralları, istismardan koruma kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -16,14 +16,16 @@ manager: dansimp
 ms.custom: asr
 ms.technology: mde
 ms.topic: article
-ms.collection: m365solution-scenario
+ms.collection:
+- m365solution-scenario
+- M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 3229cd0a98714819009e7d50baab0872f3a67c43
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 9a3e8ab38c807b8cf3ea54bb5a18a5405d0b3c49
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011961"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465365"
 ---
 # <a name="step-4-operationalize-asr-rules"></a>4. Adım: ASR kurallarını işlem durumaleştirme
 
@@ -31,7 +33,7 @@ Saldırı yüzeyini azaltma (ASR) kurallarının tam olarak dağıtıldıktan so
 
 ## <a name="managing-false-positives"></a>Hatalı pozitif sonuç yönetimi
 
-Her tehdit koruması çözümünde hatalı pozitif/negatif sonuçlar oluşabilir. Yanlış pozitif sonuçlar, bir varlık (dosya veya işlem gibi) algılandığında ve kötü amaçlı olarak tanımlandığında (varlık aslında bir tehdit değilse de) durumlardır. Buna karşılık, hatalı negatif bir varlık, tehdit olarak algılanmadı ancak kötü amaçlı bir varlıktır. Hatalı pozitif ve yanlış negatif sonuçlar hakkında daha fazla bilgi için bkz: Uç Nokta için [Microsoft Defender'da hatalı pozitif/negatifleri adresle](defender-endpoint-false-positives-negatives.md)
+Her tehdit koruması çözümünde hatalı pozitif/negatif sonuçlar oluşabilir. Yanlış pozitif sonuçlar, bir varlık (dosya veya işlem gibi) algılandığında ve kötü amaçlı olarak tanımlandığında (varlık aslında bir tehdit değilse de) durumlardır. Buna karşılık, hatalı negatif bir varlık, tehdit olarak algılanmadı ancak kötü amaçlı bir varlıktır. Hatalı pozitif ve yanlış negatif sonuçlar hakkında daha fazla bilgi için bkz. Hatalı pozitif[/negatifleri](defender-endpoint-false-positives-negatives.md) Uç Nokta için Microsoft Defender
 
 ## <a name="keeping-up-with-reports"></a>Raporları takip edin
 
@@ -42,7 +44,7 @@ Raporların tutarlı, düzenli bir şekilde gözden geçirmesi, ASR kuralların�
 Gelişmiş avlama özelliği[, Microsoft 365 Defender özelliklerinden](https://security.microsoft.com) biridir. Gelişmiş av hakkında bilgi sahibi değilsanız, bkz. Gelişmiş [avla tehditlere karşı önceden arama.](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-overview)
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender gelişmiş av](images/asr-defender365-advanced-hunting2.png)
+> :::image type="content" source="images/asr-defender365-advanced-hunting2.png" alt-text="Microsoft 365 Defender portalında Gelişmiş Microsoft 365 Defender sayfası" lightbox="images/asr-defender365-advanced-hunting2.png":::
 
 Gelişmiş av, Microsoft Defender ATP Uç Nokta Algılama ve Yanıt (EDR) tarafından tüm makinelerden toplanacak yakalan (ham) verilerin 30 günü içinde keşfetmenize olanak sağlayan sorgu tabanlı bir (Kusto Sorgu Dili) tehdit arama aracıdır. Gelişmiş arama yoluyla, ilginç göstergeleri ve varlıkları bulmak için etkinlikleri önceden inceebilirsiniz. Verilere esnek erişim, hem bilinen hem de potansiyel tehditlere karşı kısıtlanmamış arama kolaylaştırır.
 
@@ -53,10 +55,10 @@ Gelişmiş arama yoluyla, ASR kuralları bilgilerini ayıklamak, rapor oluşturm
 Ilerleyen av portalında gösterilen ASR etkinlikleri, saatte bir görülen benzersiz işlemlerle kısıtlandı. ASR olay zamanı, etkinliğin o saat içinde ilk kez görülme zamanıdır.
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender arama sorgusu komut satırı](images/asr-defender365-advanced-hunting3.png)
+> :::image type="content" source="images/asr-defender365-advanced-hunting3.png" alt-text="Portalda Gelişmiş arama sorgusu Microsoft 365 Defender satırı" lightbox="images/asr-defender365-advanced-hunting3.png":::
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender gelişmiş arama sorgusu sonuçları](images/asr-defender365-advanced-hunting4.png)
+> :::image type="content" source="images/asr-defender365-advanced-hunting4.png" alt-text="Gelişmiş arama portalında Gelişmiş Microsoft 365 Defender sonuçları" lightbox="images/asr-defender365-advanced-hunting4.png":::
 
 Yukarıdakilerde, AsrLsassCredentialTheft için 187 olay kaydedilmiştir:
 
@@ -68,10 +70,10 @@ Yukarıdakilerde, AsrLsassCredentialTheft için 187 olay kaydedilmiştir:
 AsrOfficeProcess kuralına odaklanmak ve söz konusu gerçek dosyalar ve işlemlerle ilgili ayrıntıları almak için, ActionType filtresini değiştirin ve özetleme çizgisini istediğiniz alanların projeksiyonu ile değiştirin (bu durumda, bunlar DeviceName, FileName, FolderPath, vb.).
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender gelişmiş av sorgusu odaklandı](images/asr-defender365-advanced-hunting4b.png)
+> :::image type="content" source="images/asr-defender365-advanced-hunting4b.png" alt-text="Gelişmiş av sorgusu odak Microsoft 365 Defender" lightbox="images/asr-defender365-advanced-hunting4b.png":::
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender arama sorgusu odaklanan sonuçlar](images/asr-defender365-advanced-hunting5b.png)
+> :::image type="content" source="images/asr-defender365-advanced-hunting5b.png" alt-text="Gelişmiş arama sorgusu sonuçları portalda Microsoft 365 Defender odaklandı" lightbox="images/asr-defender365-advanced-hunting5b.png":::
 
 Gelişmiş aramanın asıl avantajı, sorguları zevke uygun şekilde şekillendirebilirsiniz. Sorguyu şekillendirerek, tek bir makineye bir şey sabitlemek ya da ortamın tamamına ilişkin öngörüler ayıklamak istediğinizden bağımsız olarak, neler olduğunu tam olarak görebilirsiniz.
 

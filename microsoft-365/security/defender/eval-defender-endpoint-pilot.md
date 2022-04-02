@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: adaf1a7798c9e2e7b016a85577c1f62995a7a78e
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: 4fff094b06dfa265f9fc44c568216582083ce1d9
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63014192"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755464"
 ---
 # <a name="pilot-microsoft-defender-for-endpoint"></a>Uç Nokta için Pilot Microsoft Defender
 
@@ -34,7 +34,7 @@ Bu makale, Uç Nokta için Microsoft Defender'da pilot çalıştırma sürecinde
 
 Uç Nokta için Microsoft Defender'da pilot ayarlama ve yapılandırma için aşağıdaki adımları kullanın. 
 
-![Defender değerlendirme ortamına Kimlik için Microsoft Defender ekleme adımları.](../../media/defender/m365-defender-endpoint-pilot-steps.png)
+:::image type="content" source="../../media/defender/m365-defender-endpoint-pilot-steps.png" alt-text="Microsoft Defender değerlendirme ortamına Identity için Microsoft Defender ekleme adımları" lightbox="../../media/defender/m365-defender-endpoint-pilot-steps.png":::
 
 - Adım 1. Pilot grubu doğrulama
 - Adım 2. Özellikleri deneyin

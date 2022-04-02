@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: how-to
 ms.technology: m365d
-ms.openlocfilehash: 456f5dae90f2a559e82599271f23bd5f3452ac12
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: 58d7a8acd752eda36fe8ee73989105b54e746ddf
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63014190"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755567"
 ---
 # <a name="pilot-microsoft-defender-for-office-365"></a>Destek için Microsoft Defender'ı Office 365
 
@@ -35,7 +35,7 @@ ms.locfileid: "63014190"
 
 Bu makale, Microsoft Defender için değerlendirme ortamını ayarlama işleminin [3/ 3](eval-defender-office-365-overview.md). adımıdır ve Office 365. Bu işlem hakkında daha fazla bilgi için genel bakış [makalesine bakın](eval-defender-office-365-overview.md).
 
-Microsoft Defender for Office 365 için pilot ayarlarını yapmak ve yapılandırmak için aşağıdaki Office 365.
+Aşağıdaki adımları kullanarak microsoft defender için pilot uygulama ayarlarını yapın ve Office 365.
 
 ![Destek için Microsoft Defender pilotları oluşturma Office 365.](../../media/defender/m365-defender-office-pilot.png)
 
@@ -45,28 +45,28 @@ Microsoft Defender for Office 365 için pilot ayarlarını yapmak ve yapılandı
 
 Microsoft Defender'ı tüm Office 365 için ilkeleri etkinleştirmeden ve zorlamadan önce belirli kullanıcıları pilot olarak değerlendirmeyi seçebilirsiniz. Dağıtım grupları oluşturmak, dağıtım işlemlerinin yönetimine yardımcı olabilir. Örneğin, Office 365 Kullanıcıları için *Defender - Standart* Koruma, Office 365 Kullanıcıları için Defender - Katı Koruma, *Office 365* Kullanıcıları için *Defender -* Özel Koruma veya Office 365 için *Defender -* Özel Durumlar gibi gruplar oluşturun.
 
-Bu konuda "Standart" ve "Katı" terimleri neden açık değildir; ancak güvenlik önayarları için Defender hakkında daha fazla bilgi Office 365 açık olur. "Özel" ve "özel durum" gruplarını adlandırmak kendileri için konuşsa da kullanıcılarının çoğu standart ve *katı, özel* durum grupları risk yönetimiyle ilgili olarak sizin için değerli veriler toplar.
+Bu gruplarda 'Standart' ve 'Katı' terimleri neden açık değildir; ancak güvenlik önayarları için Defender hakkında daha fazla bilgi Office 365 açık olur. "Özel" ve "özel durum" gruplarını adlandırmak kendileri için konuşsa da kullanıcılarının çoğu standart ve *katı, özel* durum grupları risk yönetimiyle ilgili olarak sizin için değerli veriler toplar.
 
 ## <a name="step-1-create-pilot-groups"></a>1. Adım: Pilot grupları oluşturma
 
 Dağıtım grupları doğrudan şirket içinde oluşturulabilir ve Exchange Online Active Directory'den eşitlenir.
 
-1. Alıcı Yöneticisi Exchange veya grup yönetimi izinleri verilmiş bir hesabı kullanarak EAC Yönetim Merkezi'nde (EAC) oturum açma.
-2. Gezinti menüsünde Alıcılar'ı genişletin **ve Gruplar'ı** <a href="https://go.microsoft.com/fwlink/?linkid=2183233" target="_blank">**seçin**</a>.
+1. Alıcı Yöneticisi rolüne Exchange veya grup yönetimi izinleri temsilciliği verilmiş bir hesabı kullanarak Exchange Yönetim Merkezi'nde (EAC) oturum açın.
+2. Gezinti menüsünde Alıcılar'ı genişletin *ve Gruplar'ı* *seçin*.
 
-   :::image type="content" source="../../media/mdo-eval/1_mdo-eval-pilot.png" alt-text="Exchange menüsünde (hızlı başlatma) Ve Gruplar'ı işaret alan bir ok bulunan bir yönetim merkezi açılır. Gruplar'a tıklayın.":::
+   :::image type="content" source="../../media/mdo-eval/1_mdo-eval-pilot.png" alt-text="Grup yönetim merkezinin (hızlı Exchange) gezinti menüsü ve Gruplar'ı işaret alan bir ok. Gruplar'a tıklayın" lightbox="../../media/mdo-eval/1_mdo-eval-pilot.png":::
 
 3. Gruplar panosundan "Grup ekle"yi seçin.
 
-   :::image type="content" source="../../media/mdo-eval/2_mdo-eval-pilot-add-group.png" alt-text="Gruplar panelinde grup ekleyin.":::
+   :::image type="content" source="../../media/mdo-eval/2_mdo-eval-pilot-add-group.png" alt-text="Grup portalının Gruplar panelindeki Grup ekle Microsoft 365 Defender." lightbox="../../media/mdo-eval/2_mdo-eval-pilot-add-group.png":::
 
 4. Grup türü olarak Dağıtım'ı *seçin ve* Sonraki'yi tıklatın.
 
-   :::image type="content" source="../../media/mdo-eval/3-mdo-eval-pilot-group-type.png" alt-text="Burada bir dağıtım grubu türü seçin.":::
+   :::image type="content" source="../../media/mdo-eval/3-mdo-eval-pilot-group-type.png" alt-text="Grup portalının Grup türü Microsoft 365 Defender sayfası" lightbox="../../media/mdo-eval/3-mdo-eval-pilot-group-type.png":::
 
 5. Gruba bir ad ve açıklama girin, ardından Sonraki'ye tıklayın.
 
-   :::image type="content" source="../../media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png" alt-text="Grubu isim ve açıklarız.":::
+   :::image type="content" source="../../media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png" alt-text="Yeni Portal'da Temel Microsoft 365 Defender ayarlama" lightbox="../../media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png":::
 
 ## <a name="step-2-configure-protection"></a>2. Adım: Korumayı yapılandırma
 
@@ -96,28 +96,28 @@ Adımların [vurgulu olduğu EOP ve Microsoft Defender'daki Office 365](../offic
 
 3. İlke Ve & panosunda Tehdit *İlkeleri'ne tıklayın*.
 
-   :::image type="content" source="../../media/mdo-eval/6-mdo-eval-pilot-threat-policies.png" alt-text="a.":::
+   :::image type="content" source="../../media/mdo-eval/6-mdo-eval-pilot-threat-policies.png" alt-text="Microsoft 365 Defender portalında Tehdit Microsoft 365 Defender öğesi" lightbox="../../media/mdo-eval/6-mdo-eval-pilot-threat-policies.png":::
 
 4. Güvenlik Microsoft 365 Defender gezinti menüsünde Tehdit Yönetimi'ni genişletin ve ardından alt menüden İlke'yi seçin.
 5. İlke panosunda İlke güvenlik *ilkeleri'ne tıklayın*.
 
-   :::image type="content" source="../../media/mdo-eval/7-mdo-eval-pilot-template-policies.png" alt-text="Önceden Belirlenmiş Güvenlik İlkeleri kutucuğuna tıklayın.":::
+   :::image type="content" source="../../media/mdo-eval/7-mdo-eval-pilot-template-policies.png" alt-text="Microsoft 365 Defender portalında Tehdit Microsoft 365 Defender sayfası" lightbox="../../media/mdo-eval/7-mdo-eval-pilot-template-policies.png":::
 
 6. Standart *ilkeyi* ve/veya Katı ilkeyi yapılandırmak ve atamak için Düzenle'ye tıklayın.
 
-   :::image type="content" source="../../media/mdo-eval/8-mdo-eval-pilot-preset.png" alt-text="Önceden belirlenmiş güvenlik ilkeleri panelinde Düzenle'ye tıklayın.":::
+   :::image type="content" source="../../media/mdo-eval/8-mdo-eval-pilot-preset.png" alt-text="Microsoft 365 Defender portalında Önceden belirlenmiş güvenlik ilkeleri sayfası" lightbox="../../media/mdo-eval/8-mdo-eval-pilot-preset.png":::
 
 7. Gerektiğinde, belirli pilot kullanıcılara veya kullanıcı gruplarına taban çizgisi ***EOP** _ korumaları uygulamak için koşullar ekleyin ve devam etmek için _Next* seçin.
 
    Örnek olarak, Office 365 için Defender pilot değerlendirme koşulu, alıcılar Office 365 Standart Koruma için tanımlı bir *Defender* grubunun üyesi olursa ve  daha sonra yalnızca hesapları ekleyerek veya gruptan hesap kaldırarak yönetiliyorsa, pilot değerlendirmeler için bir koşul uygulanabilir.
 
-   :::image type="content" source="../../media/mdo-eval/9-mdo-eval-pilot-eop-protections.png" alt-text="EOP güvenlik düzeyini pilot grubunuza uygulamak için gereken koşulları ekleyin.":::
+   :::image type="content" source="../../media/mdo-eval/9-mdo-eval-pilot-eop-protections.png" alt-text="EOP korumaları EOP portalının Microsoft 365 Defender uygulanır" lightbox="../../media/mdo-eval/9-mdo-eval-pilot-eop-protections.png":::
 
 8. Gerektiğinde, belirli pilot kullanıcılara veya kullanıcı gruplarına taban çizgisi ***MDO** _ korumaları uygulamak için koşullar ekleyin. Devam etmek _Next* düğmesini tıklatın.
 
    Örneğin, alıcılar Office 365 Standart Koruma grubu için tanımlı bir *Defender'a* üyeyse ve daha sonra grup üzerinden hesap  ekleme / kaldırma yoluyla yönetilen bir Pilot değerlendirmeler için Office 365 Defender koşulu uygulanabilir.
 
-   :::image type="content" source="../../media/mdo-eval/10-mdo-eval-pilot-mdo-protections.png" alt-text="Pilot grubunuz için Defender güvenlik Office 365 için gereken koşulları ekleyin.":::
+   :::image type="content" source="../../media/mdo-eval/10-mdo-eval-pilot-mdo-protections.png" alt-text="Güvenlik koruması Office 365 Defender, portalda yer alan Microsoft 365 Defender uygulanır" lightbox="../../media/mdo-eval/10-mdo-eval-pilot-mdo-protections.png":::
 
 9. Önceden ayarlanmış güvenlik ilkeleri atamayla ilgili değişikliklerinizi gözden geçirin ve onaylayın.
 10. Önceden belirlenmiş koruma ilkeleri, Microsoft 365 Defender portalı > İlkeler & kurallarına dönerek ve Önceden belirlenmiş güvenlik ilkeleri kutucuğuna tıklar >> yeniden yapılandırılabilir (yeniden yapılandırılabilir, yeniden uygulanabilir, devre dışı bırakılabilir,vb.).

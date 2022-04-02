@@ -1,6 +1,6 @@
 ---
-title: Depolama hesabınıza Uç nokta olayları için Microsoft Defender'Depolama akışı
-description: Gelişmiş Av etkinliklerini iş akışı için Uç Nokta için Microsoft Defender'ı nasıl yapılandır Depolama öğrenin.
+title: Uç Nokta için Microsoft Defender hesabınıza Depolama akışı
+description: Gelişmiş Av etkinliklerini Uç Nokta için Microsoft Defender için bu özellikleri yapılandırmayı Depolama öğrenin.
 keywords: ham veri dışarı aktarma, akış API'si, API, Etkinlik Hub'ları, Azure depolama, depolama hesabı, Gelişmiş Av, ham veri paylaşımı
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,20 +15,20 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: a9db98456cc971b4ac4179cd4f3460dfe2137b91
-ms.sourcegitcommit: cde34d38bdfb6335b980f1c48c6b218da6a64bf8
+ms.openlocfilehash: 77220c8e34cfcbcdb6b1ca527786696bb67e5d79
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2022
-ms.locfileid: "63014077"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64465790"
 ---
-# <a name="configure-microsoft-defender-for-endpoint-to-stream-advanced-hunting-events-to-your-storage-account"></a>Gelişmiş Av etkinliklerini iş akışı için Uç Nokta için Microsoft Defender'ı Depolama yapılandırma
+# <a name="configure-microsoft-defender-for-endpoint-to-stream-advanced-hunting-events-to-your-storage-account"></a>Gelişmiş Uç Nokta için Microsoft Defender etkinliklerini Depolama hesabınıza akışı için Depolama yapılandırma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configuresiem-abovefoldlink)
 
@@ -50,9 +50,9 @@ ms.locfileid: "63014077"
 
 5. **Etkinlikleri Azure Depolama'a ilet'i seçin**.
 
-6. Hesap Depolama **Kimliği'nizi yazın**. Depolama Hesap Kaynak **Depolama** almak için [Azure portal](https://ms.portal.azure.com/) \> \> özellikleri sekmesindeki Depolama hesap sayfanıza gidin ve hesap kaynak kimliği **Depolama kopyalayın**:
+6. Hesap Depolama **Kimliği'nizi yazın**. **Depolama Hesap Kaynak Kimliği'nizi** almak için, [Azure portal özellikleri sekmesindeki Depolama](https://ms.portal.azure.com/) \> \> hesap sayfanıza gidin ve Depolama **kaynak kimliği'nin altındaki metni kopyalayın**:
 
-   :::image type="content" alt-text="Olay merkezi kaynak kimliği1 görüntüsü." source="images/storage-account-resource-id.png" lightbox="images/storage-account-resource-id.png":::
+   :::image type="content" source="images/storage-account-resource-id.png" alt-text="Kaynak kimliğiyle Olay Hub'ları1" lightbox="images/storage-account-resource-id.png":::
 
 7. Akışla akışı yapmak istediğiniz olayları seçin ve Kaydet'e **tıklayın**.
 
@@ -60,7 +60,7 @@ ms.locfileid: "63014077"
 
 - Her olay türü için bir blob kapsayıcısı oluşturulur:
 
-  :::image type="content" alt-text="Olay merkezi kaynak kimliği2 görüntüsü." source="images/storage-account-event-schema.png" lightbox="images/storage-account-event-schema.png":::
+  :::image type="content" source="images/storage-account-event-schema.png" alt-text="Kaynak kimliği2 olan Olay Hub'ları" lightbox="images/storage-account-event-schema.png":::
 
 - Bir blob'un her satırın şeması aşağıdaki JSON'tır:
 
@@ -77,7 +77,7 @@ ms.locfileid: "63014077"
 
 - Her satır olay adını, Uç Nokta için Defender'ın olayı aldığı zaman, ait olduğu kiracı (yalnızca kiracıdan olay alıyabilirsiniz) ve "özellikler" adlı bir özelliğe JSON biçiminde olay içerir.
 
-- Uç nokta olayları için Microsoft Defender şeması hakkında daha fazla bilgi için bkz. [Gelişmiş Atlamaya genel bakış](advanced-hunting-overview.md).
+- Bu etkinliklerin şeması hakkında daha fazla bilgi Uç Nokta için Microsoft Defender bkz. [Gelişmiş Atlamaya genel bakış](advanced-hunting-overview.md).
 
 - Gelişmiş Av'da, **CihazBilgileri** tablosunda, cihaz grubunu içeren **Makine** Grubu adlı bir sütun vardır. Burada her etkinlik bu sütunla da süslenmiş olarak görüntülenir. Daha [fazla bilgi için cihaz](machine-groups.md) gruplarına bakın.
 
@@ -97,11 +97,11 @@ Olay özelliklerimizin veri türlerini almak için şunları yapın:
 
 - Cihaz Bilgileri olayı için bir örnek:
 
-  ![Olay merkezi kaynak kimliği3 resmi.](images/data-types-mapping-query.png)
+  :::image type="content" source="images/data-types-mapping-query.png" alt-text="Kaynak kimliğine sahip Olay Hub'ları3" lightbox="images/data-types-mapping-query.png":::
 
 ## <a name="related-topics"></a>İlgili konular
 
 - [Gelişmiş Ava Genel Bakış](advanced-hunting-overview.md)
-- [Uç Nokta Akış API'si için Microsoft Defender](raw-data-export.md)
-- [Azure depolama hesabınıza Uç nokta olayları için Microsoft Defender'ı akışla uygulama](raw-data-export-storage.md)
+- [Uç Nokta için Microsoft Defender Akışı API'si](raw-data-export.md)
+- [Azure Uç Nokta için Microsoft Defender hesabınıza etkinlik akışı uygulama](raw-data-export-storage.md)
 - [Azure Depolama Hesabı belgeleri](/azure/storage/common/storage-account-overview)

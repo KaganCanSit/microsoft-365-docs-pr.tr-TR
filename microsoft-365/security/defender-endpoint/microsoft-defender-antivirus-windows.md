@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender Virüsten Koruma'da Windows
-description: Yeni, yerleşik kötü amaçlı yazılım ve virüsten koruma Microsoft Defender Virüsten Koruma yönetmeyi, yapılandırmayı ve kullanmayı öğrenin.
-keywords: Microsoft Defender Virüsten Koruma, windows defender, kötü amaçlı yazılımdan koruma, scep, sistem merkezi uç nokta koruması, sistem merkezi yapılandırma yöneticisi, virüs, kötü amaçlı yazılım, tehdit, algılama, koruma, güvenlik
+title: Windows’da Microsoft Defender Virüsten Koruma
+description: Kötü amaçlı yazılımlardan ve virüslerden koruyan yerleşik Microsoft Defender Virüsten Koruma’yı yönetmeyi, yapılandırmayı ve kullanmayı öğrenin.
+keywords: Microsoft Defender Virüsten Koruma, windows defender, kötü amaçlı yazılımdan koruma, scep, system center endpoint protection, system center configuration manager, virüs, kötü amaçlı yazılım, tehdit, algılama, koruma, güvenlik
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -19,77 +19,77 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.openlocfilehash: b6eabc3527742b6cc7f06d23207db813b827e5f5
 ms.sourcegitcommit: aac7e002ec6e10a41baa2d0bd38614b0ed471a70
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 01/27/2022
 ms.locfileid: "63009990"
 ---
-# <a name="microsoft-defender-antivirus-in-windows"></a>Microsoft Defender Virüsten Koruma'da Windows
+# <a name="microsoft-defender-antivirus-in-windows"></a>Windows’da Microsoft Defender Virüsten Koruma
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
-Microsoft Defender Virüsten Koruma, Windows 10 Windows 11'de ve Windows Server sürümlerinde kullanılabilir.
+Microsoft Defender Virüsten Koruma; Windows 10, Windows 11 ve Windows Sunucusu sürümlerinde kullanılabilir.
 
-Microsoft Defender Virüsten Koruma, Uç Nokta için Microsoft Defender'da yeni nesil korumanın önemli bir bileşenidir. Bu koruma, makine öğrenimi, büyük veri çözümlemesi, derinlikli tehdit direnci araştırması ve organizasyonlu cihazları (veya uç noktaları) korumak için Microsoft bulut altyapısını bir araya getirir. Microsoft Defender Virüsten Koruma, Windows'de yerleşik olarak çalışır ve aygıtınızda ve bulutta koruma sağlamak için Uç Nokta için Microsoft Defender ile çalışır.
+Microsoft Defender Virüsten Koruma, Uç Nokta için Microsoft Defender’da yeni nesil korumanın önemli bir bileşenidir. Bu koruma, makine öğrenimi, büyük veri çözümlemesi, ayrıntılı tehdit direnci araştırması ve Microsoft bulut altyapısını bir araya getirerek kuruluşunuzdaki cihazları (veya uç noktaları) korur. Microsoft Defender Virüsten Koruma, Windows'da yerleşik olarak bulunur ve Uç Nokta için Microsoft Defender ile birlikte çalışarak cihazınızda ve bulutta koruma sağlar.
 
 ## <a name="compatibility-with-other-antivirus-products"></a>Diğer virüsten koruma ürünleriyle uyumluluk
 
-Aygıtınızda Microsoft'a karşı virüsten koruma/kötü amaçlı yazılımlardan koruma ürünü kullanıyorsanız, Microsoft dışı virüsten koruma çözümünün yanı sıra pasif modunda Microsoft Defender Virüsten Koruma çalıştırabilirsiniz. Kullanılan işletim sistemine ve cihazınızın Uç Nokta için Defender'a olup olmadığınıza bağlıdır. Daha fazla bilgi edinmek için uyumluluk [Microsoft Defender Virüsten Koruma bakın](microsoft-defender-antivirus-compatibility.md).
+Aygıtınızda Microsoft dışı virüsten koruma/kötü amaçlı yazılımlardan koruma ürünü kullanıyorsanız, Microsoft Defender Virüsten Koruma’yı, Microsoft dışı virüsten koruma çözümüyle birlikte pasif modda çalıştırmanız mümkün olabilir. Bu, kullanılan işletim sistemine ve cihazınıza Uç Nokta için Defender eklenip eklenmediğine bağlıdır. Daha fazla bilgi edinmek için [Microsoft Defender Virüsten Koruma uyumluluğuna](microsoft-defender-antivirus-compatibility.md) bakın.
 
-## <a name="comparing-active-mode-passive-mode-and-disabled-mode"></a>Etkin modu, pasif modunu ve devre dışı modunu karşılaştırma
+## <a name="comparing-active-mode-passive-mode-and-disabled-mode"></a>Etkin, pasif ve devre dışı modlarını karşılaştırma
 
-Aşağıdaki tabloda, etkin modda, pasif Microsoft Defender Virüsten Koruma devre dışı bırakılmıştır.
+Aşağıdaki tabloda, Microsoft Defender Virüsten Koruma etkin, pasif veya devre dışı modda olduğunda neler beklenebileceği açıklanmıştır.
 
 <br/><br/>
 
-| Mod | Ne olur? |
+| Mod | Neler olur? |
 |---|---|
-| Etkin mod | Etkin modda, Microsoft Defender Virüsten Koruma, cihazda birincil virüsten koruma uygulaması olarak kullanılır. Dosyalar taranır, tehditlere yönelik düzeltmeler yapıldı ve algılanan tehditler, kuruluş güvenlik raporlarında ve Windows Güvenliği uygulamanıza listelenir. |
-| Pasif modu | Pasif modunda, Microsoft Defender Virüsten Koruma, cihazda birincil virüsten koruma uygulaması olarak kullanılamaz. Dosyalar taranır ve algılanan tehditlere rapor edilir, ancak tehditler diğer belgeler veya Microsoft Defender Virüsten Koruma. <br/><br/> **ÖNEMLİ**: Microsoft Defender Virüsten Koruma edilgen modda yalnızca Uç Nokta için Microsoft Defender'a ekli uç noktalarda çalıştırabilirsiniz. [Edilgen modda Microsoft Defender Virüsten Koruma için gereksinimler'e bakın](microsoft-defender-antivirus-compatibility.md#requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode). |
-| Devre dışı bırakıldı veya kaldırıldı | Devre dışı bırakılacak veya Microsoft Defender Virüsten Koruma kaldırılamaz. Dosyalar taranmaz ve tehditlere düzeltme olmaz. Genelde devre dışı bırakmanızı veya kaldırmanızı Microsoft Defender Virüsten Koruma. |
+| Etkin mod | Etkin modda, Microsoft Defender Virüsten Koruma, cihazda virüsten birincil koruma uygulaması olarak kullanılır. Dosyalar taranır, tehditler düzeltilir ve algılanan tehditler, kuruluşunuzun güvenlik raporlarında ve Windows Güvenliği uygulamanıza listelenir. |
+| Pasif mod | Pasif modda, Microsoft Defender Virüsten Koruma, cihazda virüsten birincil koruma uygulaması olarak kullanılamaz. Dosyalar taranır ve algılanan tehditler rapor edilir ancak tehditler Microsoft Defender Virüsten Koruma ile düzeltilmez. <br/><br/> **ÖNEMLİ**: Microsoft Defender Virüsten Koruma, pasif modda sadece Uç Nokta için Microsoft Defender’a eklenmiş uç noktalarda çalıştırılabilir. [Microsoft Defender Virüsten Koruma’nın pasif modda çalıştırılması için gereksinimlere](microsoft-defender-antivirus-compatibility.md#requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode) bakın. |
+| Devre dışı bırakılmış veya kaldırılmış | Microsoft Defender Virüsten Koruma, devre dışı bırakıldığında veya kaldırıldığında kullanılmaz. Dosyalar taranmaz, tehditler düzeltilmez. Genel olarak, Microsoft Defender Virüsten Koruma’yı devre dışı bırakmanızı veya kaldırmanızı önermeyiz. |
 
-Daha fazla bilgi edinmek için uyumluluk [Microsoft Defender Virüsten Koruma bakın](microsoft-defender-antivirus-compatibility.md).
+Daha fazla bilgi edinmek için [Microsoft Defender Virüsten Koruma uyumluluğuna](microsoft-defender-antivirus-compatibility.md) bakın.
 
-## <a name="check-the-state-of-microsoft-defender-antivirus-on-your-device"></a>Cihazınızın Microsoft Defender Virüsten Koruma durumunu denetleme
+## <a name="check-the-state-of-microsoft-defender-antivirus-on-your-device"></a>Cihazınızın Microsoft Defender Virüsten Koruma durumunu kontrol etme
 
-Cihazınızın durumlarını Microsoft Defender Virüsten Koruma, Windows Güvenliği uygulaması veya posta kutusu gibi çeşitli yöntemlerden birini Windows PowerShell.
+Cihazınızın Microsoft Defender Virüsten Koruma durumunu kontrol etmek için Windows Güvenliği uygulaması veya Windows PowerShell gibi çeşitli yöntemlerden birini kullanabilirsiniz.
 
-### <a name="use-the-windows-security-app-to-check-status-of-microsoft-defender-antivirus"></a>Windows Güvenliği durumunu kontrol etmek için Microsoft Defender Virüsten Koruma
+### <a name="use-the-windows-security-app-to-check-status-of-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma durumunu kontrol etmek için Windows Güvenliği uygulamasını kullanma
 
-1. Windows başlat'ı Başlat menüsü yazmaya başlayın`Security`. Sonuçlarda Windows Güvenliği'i açın.
+1. Windows cihazınızda Başlat menüsü seçip yazmaya başlayın`Security`. Ardından, sonuçlarda Windows Güvenliği uygulamasını açın.
 
-2. Virüs **ve tehdit &'yi seçin**.
+2. **Virüs ve tehdit koruması**’nı seçin.
 
-3. Virüs **koruması & ayarları'nın altında** Ayarları **yönet'i seçin**.
+3. **Virüs ve tehdit koruması ayarları**’nda **Ayarları yönet**’i seçin.
 
-Ayarlar sayfasında virüsten koruma/kötü amaçlı yazılımdan koruma çözümünün adını görebilirsiniz.
+Ayarlar sayfasında virüsten koruma/kötü amaçlı yazılımdan koruma çözümünün adını görürsünüz.
 
-### <a name="use-powershell-to-check-status-of-microsoft-defender-antivirus"></a>PowerShell kullanarak postanın durumunu Microsoft Defender Virüsten Koruma
+### <a name="use-powershell-to-check-status-of-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma durumunu kontrol etmek için PowerShell’i kullanma
 
-1. Metni Başlat menüsü ve yazmaya başlayın`PowerShell`. Daha sonra Windows PowerShell bir arama açın.
+1. Başlat menüsünü seçip yazmaya başlayın`PowerShell`. Ardından, sonuçlarda Windows PowerShell’i açın.
 
 2. `Get-MpComputerStatus` yazın.
 
-3. Sonuç listesinde **AMRunningMode satırına** bakın.
+3. Sonuç listesinde **AMRunningMode** satırına bakın.
 
-   - **Normal**, Microsoft Defender Virüsten Koruma modda çalıştır çalıştırıı olduğu anlamına gelir.
+   - **Normal**, Microsoft Defender Virüsten Koruma’nın etkin modda çalıştığı anlamına gelir.
 
-   - **Pasif modu** Microsoft Defender Virüsten Koruma anlamına gelir, ancak aygıtınızda birincil virüsten koruma/kötü amaçlı yazılımdan koruma ürünü değildir. Pasif modu yalnızca Uç Nokta için Microsoft Defender'a ekli olan ve belirli gereksinimleri karşı bulunan cihazlar için kullanılabilir. Daha fazla bilgi edinmek için [pasif Microsoft Defender Virüsten Koruma için gereksinimler' bakın](microsoft-defender-antivirus-compatibility.md#requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode).
+   - **Pasif mod**, Microsoft Defender Virüsten Koruma’nın çalıştığı ancak cihazınızda virüsten birincil koruma/kötü amaçlı yazılımdan koruma ürünü olmadığı anlamına gelir. Pasif mod, yalnızca Uç Nokta için Microsoft Defender'a eklenen ve belirli gereksinimleri karşılayan cihazlar için kullanılabilir. Daha fazla bilgi edinmek için [Microsoft Defender Virüsten Koruma’nın pasif modda çalıştırılması gereksinimlere](microsoft-defender-antivirus-compatibility.md#requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode) bakın.
 
-   - **EDR Modu,** Microsoft Defender Virüsten Koruma için kullanılabilir olduğu ve Engelleme modunda Uç nokta algılama ve yanıt [(EDR)](edr-in-block-mode.md) özelliğinin etkinleştirildiğinde Uç nokta için Microsoft Defender'da bir özelliğin etkin olduğu anlamına gelir.
+   - **EDR Engelleme Modu**, Microsoft Defender Virüsten Koruma'nın çalıştığı ve Uç Nokta için Microsoft Defender’in bir özelliği olan [Uç nokta algılama ve yanıt’ın (EDR) engelleme modunda](edr-in-block-mode.md) etkinleştirildiği anlamına gelir.
 
-   - **SxS Pasif Modu**, Microsoft Defender Virüsten Koruma başka bir virüsten koruma/kötü amaçlı yazılımdan koruma ürünüyle birlikte çalıştır anlamına gelir ve düzenli aralıklarla [tarama kullanılmaktadır](limited-periodic-scanning-microsoft-defender-antivirus.md).
+   - **SxS Pasif Modu**, Microsoft Defender Virüsten Koruma’nın başka bir virüsten koruma/kötü amaçlı yazılımdan koruma ürünüyle birlikte çalıştığı ve [sınırlı düzenli taramanın kullanıldığı anlamına gelir](limited-periodic-scanning-microsoft-defender-antivirus.md).
 
 > [!TIP]
-> PowerShell cmdlet'i Get-MpComputerStatus daha fazla bilgi edinmek için [Get-MpCompkomStatus başvuru makalesine bakın](/powershell/module/defender/get-mpcomputerstatus).
+> Get-MpComputerStatus PowerShell cmdlet hakkında daha fazla bilgi edinmek için [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus) başvuru makalesine bakın.
 
-## <a name="get-your-antivirusantimalware-platform-updates"></a>Virüsten koruma/kötü amaçlı yazılımdan koruma platform güncelleştirmelerini alın
+## <a name="get-your-antivirusantimalware-platform-updates"></a>Virüsten koruma/kötü amaçlı yazılımdan koruma platform güncellemelerinizi alın
 
-Güncel e-Microsoft Defender Virüsten Koruma veya virüsten koruma/kötü amaçlı yazılımdan koruma çözümlerini korumanız önemlidir. Microsoft, cihazlarınızı yeni kötü amaçlı yazılımlara ve saldırı tekniklerine karşı korumak için en son teknolojiye sahip olduğundan emin olmak için düzenli güncelleştirmeler yayımlar. Daha fazla bilgi için bkz[. Güncelleştirmeleri Microsoft Defender Virüsten Koruma ve taban çizgilerini uygulama](manage-updates-baselines-microsoft-defender-antivirus.md).
+Microsoft Defender Virüsten Koruma programını ve tüm virüsten koruma/kötü amaçlı yazılımdan koruma çözümlerini güncel tutmanız önemlidir. Microsoft, cihazlarınızın kötü amaçlı yeni yazılımlara ve saldırı tekniklerine karşı korunması için en son teknolojiye sahip olmalarını sağlamak amacıyla düzenli güncelleştirmeler yayımlar. Daha fazla bilgi için [Microsoft Defender Virüsten Koruma güncelleştirmelerine bakın ve temelleri uygulayın](manage-updates-baselines-microsoft-defender-antivirus.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Microsoft Defender Virüsten Koruma yönetimi ve yapılandırması](configuration-management-reference-microsoft-defender-antivirus.md)
-- [Veri Microsoft Defender Virüsten Koruma değerlendirme](evaluate-microsoft-defender-antivirus.md)
+- [Microsoft Defender Virüsten Koruma değerlendirmesi](evaluate-microsoft-defender-antivirus.md)

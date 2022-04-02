@@ -2,8 +2,8 @@
 title: Güvenlik için tehdit korumasını Microsoft 365 İş Ekstra
 f1.keywords:
 - NOCSH
-ms.author: sharik
-author: skjerland
+ms.author: deniseb
+author: denisebmsft
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -23,76 +23,71 @@ search.appverid:
 - BCS160
 - MET150
 description: Veri kaybını önlemek ve müşterinizin hassas bilgilerini güvende tutmaya yardımcı olmak için uyumluluk özelliklerini ayarlayın.
-ms.openlocfilehash: 69960c4f158a30d9d47d749ed1e7eb2d2d74f430
-ms.sourcegitcommit: b6ab10ba95e4b986065c51179ead3810cc1e2a85
+ms.openlocfilehash: baac8bc1ad9a425ad7219a1e76949286858f60e0
+ms.sourcegitcommit: 601ab9ad2b624e3b5e04eed927a08884c885c72a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63018874"
+ms.lasthandoff: 03/24/2022
+ms.locfileid: "64403787"
 ---
 # <a name="set-up-compliance-features"></a>Uyumluluk özelliklerini ayarlama
 
-Müşterileriniz Microsoft 365 İş Ekstra verilerinizi ve cihazlarınızı korumaya ve sizin ve müşterilerinize hassas bilgilerini güvende tutmanıza yardımcı olacak özelliklerle birlikte gelir.
+Microsoft 365 İş Ekstra aboneliğiniz uyumluluk ve gizlilik özelliklerini içerir. Bu özellikler, şirketinizin verilerini korumaya ve sizin ve müşterilerinize ilişkin hassas bilgileri güvende tutmanıza yardımcı olur. Bu makale, uyumluluk özelliklerinize başlamanıza yardımcı olmak için tasarlanmıştır.
 
-## <a name="watch-set-up-dlp-features"></a>İzle: DLP özelliklerini ayarlama
+## <a name="before-you-begin"></a>Başlamadan önce
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3TGvL?autoplay=false]
+Azure Active Directory'de şu rollerden birinin atanmış olduğundan emin Azure Active Directory:
 
-Veri kaybı önleme ilkeleri, sosyal güvenlik numaraları veya tıbbi kayıtlar gibi işletmenizin hassas bilgilerini belirlemeye ve korumaya yardımcı olur.
+- Genel Yönetici
+- Uyumluluk Yöneticisi
 
-1. Çalışmaya başlama için yönetim merkezine [gidin ve Kurulum'u](https://admin.microsoft.com) **seçin**.
-1. Ekranı aşağı **kaydırarak Veri kaybını önlemeyi ayarla'ya** kaydırın ve ardından **Görüntüle'yi ve ardından** Yönet'i **seçin**.
-1. Bir ilkeyi düzenlemek için ilkeyi seçin, İlkeyi **düzenle'yi** ve sonra değiştirecek ilkeyi seçin. Örneğin, **taranacakları değiştirmek** için Konumlar'ı seçin.
-1. Yeni ilke oluşturmak için İlke **oluştur'a seçin**.
-1. Özel bir ilke oluşturabilir veya bir şablonla başlayabilirsiniz. Örneğin, HIPAA ilkesi oluşturmak için, Tıbbi ve sağlık şablonunu  seçin ve ardından ABD Sağlık Sigortası Yasası **(HIPAA)'yı seçin**. **İleri**'yi seçin.
-1. Ayarlarınızı gözden geçirerek Oluştur'a **tıklayın**. İlkeniz yürürlüğe girdikten sonra, açıklanan hassas bilgileri içeren e-posta engellenir ve bu bilgileri göndermeyi denen gönderen bir uyarı iletisi görür.
+Daha fazla bilgi edinmek için [Kullanmaya başlayın sayfasına bakın](../add-users/admin-roles-page.md).
 
-Kişisel [verilerin kaybından korunmaya yönelik bir](../../compliance/create-a-dlp-policy-from-a-template.md) ilke ayarlama hakkında bilgi için bkz. Şablondan DLP ilkesi oluşturma. 
-  
-DLP, birçok farklı yerel ayarı için kullanıma hazır birçok ilke şablonuyla birlikte gelir. Örneğin, Avustralya Finansal Verileri, Kanada Kişisel Bilgileri Yasası, ABD Finansal Verileri, ve diğer. Tam [liste için bkz. DLP](../../compliance/what-the-dlp-policy-templates-include.md) ilkesi şablonlarının şunları içerir. Bu şablonların hepsi, PII şablonu örneğine benzer şekilde etkinleştirilebilir.
- 
-## <a name="set-up-email-retention-with-exchange-online-archiving"></a>E-posta bekletmeyi otomatik olarak Exchange Online Arşivleme
+## <a name="use-compliance-manager-to-get-started"></a>Kullanmaya başlamak için Uyumluluk Yöneticisi'ni kullanma
 
- **Exchange Online Arşivleme** özellikleri, eKbulma için e-posta içeriğini koruyarak uyumluluk ve mevzuat standartlarını korumanıza yardımcı olur. Ayrıca, bir güvenlik ihlali durumunda riski azaltmanıza yardımcı olur ve güvenlik ihlali sonrasında veya silinmiş öğeleri kurtarmanız gereken durumlarda verileri kurtarmak için bir yol sağlar. Bir kullanıcının içeriğini korumak için mahkeme saklamayı veya korumak istediğiniz içeriği özelleştirmek için bekletme ilkelerini kullanabilirsiniz.
-  
-**Mahkeme tutma:** Kullanıcının posta kutusunun tamamını mahkemelere koyarak, silinmiş öğeler de dahil olmak üzere tüm posta kutusu içeriğini koruyabilirsiniz. 
-    
-Posta kutusunu mahkeme tutma için Yönetim merkezinde tutmak için:
-    
-1. Sol gezintide Kullanıcılar Etkin **kullanıcılar'a** \> **gidin**.
-    
-2. Posta kutusunu mahkemelere almak istediğiniz bir kullanıcı seçin. Kullanıcı bölmesinde Posta **ayarları'ni genişletin ve Diğer** ayarlar'ın **yanında Posta özelliklerini** **Exchange seçin**.
-    
-3. Kullanıcının posta kutusu sayfasında, sol gezintiden ** posta kutusu özellikleri ** seçin ve sonra Mahkeme tutma altındaki Etkinleştir **bağlantısını seçin**.
-    
-4. Mahkeme **tutma iletişim** kutusunda, Mahkeme tutma süresi alanında **mahkeme tutma süresini belirtebilirsiniz** . Sonsuz bir basılı tutmak istediğiniz alanı boş bırakın. Ayrıca, notlar ekleyebilir ve posta kutusu sahibini bir web sitesine yönlendirebilirsiniz ve bu konuda mahkeme tutma hakkında daha fazla açıklamanız gerekir. \>**Kaydet'i tıklatın**.
-    
-**Bekletme:** Örneğin, belirli bir süre boyunca korumak veya bekletme döneminin sonunda içeriği kalıcı olarak silmek için özelleştirilmiş bekletme ilkelerini etkinleştirebilirsiniz. Daha fazla bilgi edinmek için bkz [. Bekletme ilkelerine genel bakış](../../compliance/retention.md).
+:::image type="content" source="../../business-premium/media/m365bp-compliancemanager.png" alt-text="Microsoft 365 İş Ekstra'da Uyumluluk Yöneticisi'nin ekran Microsoft 365 İş Ekstra.":::
 
-## <a name="watch-set-up-sensitivity-labels"></a>İzle: Duyarlılık etiketlerini ayarlama
+Microsoft 365 İş Ekstra, uyumluluk özelliklerinizi ayarlamaya başlamanıza yardımcı olan Uyumluluk Yöneticisi'ni içerir. Bu tür özellikler arasında veri kaybını önleme, bilgi idaresi ve insider risk yönetimi yer alan birkaç özellik vardır. Uyumluluk Yöneticisi önerileri, uyumluluk puanını ve puanınızı geliştirme yollarını vurgularken size zaman tasarrufu sağlar.
 
-Duyarlılık etiketleri Azure Information Protection (AIP) Plan 1'i içerir ve etiketleri uygulayarak belgelerinizi ve e-postalarınızı sınıflandırmanıza ve isteğe bağlı olarak korumanıza yardımcı olur. Etiketler, kurallar ve koşullar tanımlayan yöneticiler tarafından, kullanıcılar tarafından el ile veya kullanıcıların önerilerinin verildiği bir birleşim kullanılarak otomatik olarak uygulanabilir.
+Şu şekilde başlandı:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3VRGT?autoplay=false]
+1. Gidin ve [https://compliance.microsoft.com](https://compliance.microsoft.com) oturum açma.
 
-1. Yönetim [merkezinde Uyumluluk](https://admin.microsoft.com) yönetim **merkezini** seçin.
-1. **Sınıflandırma'ya** ve ardından Duyarlılık **etiketleri'ne tıklayın**.
-1. Etiket **oluştur'a** tıklayın ve uyarı görüntülendiğinde Evet'i **seçin**.
-1. Ayarlarınızı gözden geçirerek Oluştur'a **tıklayın**. Etiketiniz oluşturuldu. İstediğiniz diğer etiketler için de bu işlemi yinelayın.
-1. Varsayılan olarak, etiketler Office şu sırayla görünür: **Gizli**, **İç** ve **Genel**. Sırayı değiştirmek için, her etiket için üç noktayı (diğer eylemler) seçin ve ardından etiketi yukarı veya aşağı hareket ettirin. Normalde, izinler en düşük düzeyden en yüksek izin düzeyine kadar listelenir.
-1. Ayarlarınızı gözden geçirerek Yayımla'yı **seçin**.
+2. Gezinti bölmesinde Uyumluluk **Yöneticisi'ni seçin**.
 
-Etiketlerinizin çalışması için, her kullanıcının Azure Information Protection birleşik etiket istemcisini indirmesi gerekir. Web'de **AzinfoProtection_UL.exe**, ardından Microsoft İndirme Merkezi'nden indirin ve kullanıcılarının bilgisayarlarında çalıştırın.
+3. Genel Bakış **sekmesinde** bilgileri gözden geçirebilirsiniz. Daha fazla bilgi görüntülemek veya veri kaybı önleme (DLP) ilkesi yapılandırma gibi işlemler yapmak için bir öğe veya bağlantı seçin. Örneğin, **Puanınızı etkileyen çözümler bölümünde** Kalan eylemler sütunundaki **bağlantıyı seçin** .
 
-Word gibi bir Office uygulaması tekrar açabilirsiniz; oluşturulan duyarlılık etiketlerini de göreceğiniz gibi. Bir etiketi değiştirmek veya uygulamak için Duyarlılık'ı seçin ve bir etiket seçin.
+   :::image type="content" source="../../business-premium/media/m365bp-compliancesolutions.png" alt-text="Puanınızı Etkileyen Çözümlerin ekran görüntüsü.":::
 
-### <a name="install-the-azure-information-protection-client-manually"></a>Azure Information Protection istemcisini el ile yükleme
+   Bu eylem sizi seçtiğiniz **öğe için** filtrelenmiş geliştirme eylemleri sekmesine alır. Bu örnekte, yapılandırılan DLP ilkelerini arıyoruz.
 
-AIP istemcisini el ile yüklemek için:
+   :::image type="content" source="../../business-premium/media/m365bp-dlppoliciestoconfigure.png" alt-text="Yapılandırılan DLP ilkelerinin ekran görüntüsü.":::
 
-1. Yükleme **AzinfoProtection_UL.exe** [Microsoft indirme merkezinden indirin](https://www.microsoft.com/download/details.aspx?id=53018).
- 
-2. Yüklemenin çalıştığını doğrulamak için bir Word belgesi görüntüleyebilirsiniz ve Giriş sekmesinde Duyarlılık **seçeneğinin** kullanılabilir olduğundan **emin** olun.
-<br/>![Word belgesinde Koruma sekmesi açılan listesinde.](../../media/word-sensitivity.png)
+4. Geliştirme **eylemleri sekmesinde** bir öğeyi seçin. Örneğimizde, Özelleştirilmiş **DLP ilkeleri veya kişisel olarak tanınmayı sağlayacak bilgiler oluştur'i seçtik**. Yapılandırılan ilke hakkında daha fazla bilgi sağlayan bir sayfa yüklenir.
 
-Daha fazla bilgi için bkz [. İstemciyi yükleme](/azure/information-protection/infoprotect-tutorial-step3).
+   :::image type="content" source="../../business-premium/media/m365bp-dlppolicyinfo.png" alt-text="Müşteri içeriğine ilişkin DLP ilkesiyle ilgili bilgilerin ekran görüntüsü.":::
+
+   DLP ilkenizi ayarlamak için ekranda bilgileri izleyin.
+
+İşletmeler için uyumluluk özellikleri hakkında daha Microsoft 365 için uyumluluk belgelerini [Microsoft 365 bakın](../../compliance/index.yml).
+
+## <a name="use-sensitivity-labels"></a>Duyarlılık etiketlerini kullanma
+
+Duyarlılık etiketleri Office Outlook Word, Excel gibi PowerPoint. Etiket örnekleri:
+
+- Normal
+- Personal
+- Özel
+- Gizli
+
+Bununla birlikte, şirketin için de başka etiketler tanımlayabilirsiniz.
+
+Duyarlılık etiketleriyle çalışmaya başlamak için aşağıdaki makaleleri kullanın:
+
+1. [Duyarlılık etiketleri nedir?](../../compliance/sensitivity-labels.md)
+
+2. [Kullanmaya başlayın etiketlerinizi oluşturma](../../compliance/get-started-with-sensitivity-labels.md)
+
+3. [Duyarlılık etiketlerini ve ilkelerini yayımlama](../../compliance/create-sensitivity-labels.md)
+
+4. [Şirketideki kişilerin duyarlılık etiketlerini nasıl kullanacaklarını gösterme](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)
