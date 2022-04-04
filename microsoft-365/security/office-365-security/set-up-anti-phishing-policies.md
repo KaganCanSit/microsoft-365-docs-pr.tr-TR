@@ -17,12 +17,12 @@ ms.custom:
 description: Yöneticiler, Exchange Online Protection (EOP) ve Office 365 için Microsoft Defender'da bulunan kimlik avı önleme ilkeleri hakkında bilgi Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 899a76fac01c6058d5642cb52af5a6e8fb7d11ee
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: a0f491c099e5a3b67866738267215e79ff6cbeb0
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63032512"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679554"
 ---
 # <a name="anti-phishing-policies-in-microsoft-365"></a>E-postada kimlik avı önleme Microsoft 365
 
@@ -44,10 +44,6 @@ Bu kuruluşlar için Microsoft Defender Office 365 örnekleri şunlardır:
 
 EOP'de kimlik avı önleme ilkeleri ile Office 365 için Defender'daki kimlik avı ilkeleri arasındaki üst düzey farklar aşağıdaki tabloda açıklanmıştır:
 
-<br>
-
-****
-
 |Özellik|EOP'de kimlik avı önleme ilkeleri|Office 365 için Defender'da kimlik avına karşı koruma Office 365|
 |---|:---:|:---:|
 |Otomatik olarak oluşturulan varsayılan ilke|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
@@ -57,7 +53,6 @@ EOP'de kimlik avı önleme ilkeleri ile Office 365 için Defender'daki kimlik av
 |İlk iletişim güvenlik ipucu|![Onay işareti.](../../media/checkmark.png)|![Onay işareti](../../media/checkmark.png)|
 |Kimliğe bürünme ayarları||![Onay işareti](../../media/checkmark.png)|
 |Gelişmiş kimlik avı eşikleri||![Onay işareti](../../media/checkmark.png)|
-|
 
 <sup>\*</sup> Varsayılan ilkede, ilke adı ve açıklaması salt okunur olur (açıklama boştur) ve ilkenin kimlere uygulanacağı belirtemezseniz (varsayılan ilke tüm alıcılar için geçerlidir).
 

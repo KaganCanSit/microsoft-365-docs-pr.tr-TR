@@ -1,7 +1,7 @@
 ---
 title: Korumasız cihazlar raporu - Tehdit ve Güvenlik Açığı Yönetimi
 description: Zayıf cihaz eğilimlerini ve güncel istatistikleri gösteren bir rapor. Amaç, nefesi ve cihazınızın açık kalma kapsamını anlamanızdır.
-keywords: Endpoint-tvm korumasına açık cihazlar için Microsoft Defender, Uç Nokta için Microsoft Defender, tvm, tehdit güvenlik & saldırıya maruz kalma durumunu azaltma, tehdit ve güvenlik açığını azaltma, güvenlik yapılandırmasını izleme
+keywords: Uç Nokta için Microsoft Defender ve TVM'ye açık cihazlar için Uç Nokta için Microsoft Defender, tvm, tehdit & saldırıya maruz kalma, tehdit ve güvenlik açığını azaltma, güvenlik yapılandırmasını izleme
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 50b30d38a42aab37c295a9f65bd070dd9613927c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: fa5280d9c6f396e8e164397210c1b58dfcfc8d9b
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312689"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466729"
 ---
 # <a name="vulnerable-devices-report---threat-and-vulnerability-management"></a>Korumasız cihazlar raporu - Tehdit ve Güvenlik Açığı Yönetimi
 
@@ -29,11 +29,11 @@ ms.locfileid: "63312689"
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Tehdit ve güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 Rapor, korumasız cihaz eğilimleri ve güncel istatistikleri olan grafikleri ve çubuk grafikleri gösterir. Amaç, nefesi ve cihazınızın açık kalma kapsamını anlamanızdır.
 
@@ -44,7 +44,7 @@ Raporlar ve Korumasız cihazlar Microsoft 365 Defender a gidip raporlar **> eri�
 - Eğilimler (zamanla). Son 30 günü, 3 ay, 6 ayyı veya özel bir tarih aralığını gösterebilir.
 - Durum (geçerli bilgiler)
 
-**Filtre**: Verileri güvenlik açığı önem düzeyi, açıkları açıkları, güvenlik açığı yaşı, işletim sistemi platformu, Windows 10 veya Windows 11 sürümüne ya da cihaz grubuna göre filtre edebilirsiniz.
+**Filtre**: Verileri güvenlik açığı önem düzeyi, açıkları açıkları, güvenlik açığı yaşı, işletim sistemi platformu, Windows 10 ya da Windows 11 ya da cihaz grubuna göre filtre edebilirsiniz.
 
 **Detaya** gitme: Daha fazla bilgi araştırmak istediğiniz bir içgörü varsa, cihaz envanteri sayfasında filtrelenmiş cihazların listesini görüntülemek için ilgili çubuk grafiği seçin. Buradan listeyi dışarı aktarabilirsiniz.
 
@@ -52,31 +52,31 @@ Raporlar ve Korumasız cihazlar Microsoft 365 Defender a gidip raporlar **> eri�
 
 Her cihaz, söz konusu cihazda bulunan en ciddi güvenlik açığına bağlı olarak yalnızca bir kez sayılır.
 
-:::image type="content" alt-text="Geçerli cihaz açığı önem düzeyi grafiklerinden biri ve zaman içinde düzeyleri gösteren bir grafik." source="images/tvm-report-severity.png" lightbox="images/tvm-report-severity.png":::
+:::image type="content" source="images/tvm-report-severity.png" alt-text=" Geçerli cihaz güvenlik açığı önem düzeylerini ve zaman içinde bu düzeyleri gösteren grafikler." lightbox="images/tvm-report-severity.png":::
 
 ## <a name="exploit-availability-graphs"></a>Exploit availability graphs
 
 Her cihaz, en yüksek bilinen exploit düzeyine bağlı olarak yalnızca bir kez sayılır.
 
-:::image type="content" alt-text="Mevcut cihaz açıklarının kullanılabilirliğini gösteren bir grafik ve zaman içinde kullanılabilirliği gösteren bir grafik." source="images/tvm-report-exploit-availability.png" lightbox="images/tvm-report-exploit-availability.png":::
+:::image type="content" source="images/tvm-report-exploit-availability.png" alt-text="Mevcut cihaz açıklarını ve zaman içinde kullanılabilirliği gösteren grafikler" lightbox="images/tvm-report-exploit-availability.png":::
 
 ## <a name="vulnerability-age-graphs"></a>Güvenlik açığı yaşı grafikleri
 
 Her cihaz en eski güvenlik açığı yayın tarihi altında yalnızca bir kez sayılır. Eski güvenlik açıkları daha yüksek bir sömürülmek ihtimaline sahip.
 
-:::image type="content" alt-text="Geçerli cihaz güvenlik açığının yaşını gösteren bir grafik ve zaman içinde yaşı gösteren bir grafik." source="images/tvm-report-age.png" lightbox="images/tvm-report-age.png":::
+:::image type="content" source="images/tvm-report-age.png" alt-text="Mevcut cihaz güvenlik açığı yaşını ve zaman içinde yaşa göre yaşı gösteren grafikler" lightbox="images/tvm-report-age.png":::
 
 ## <a name="vulnerable-devices-by-operating-system-platform-graphs"></a>İşletim sistemi platform grafiklerini kullanarak korumasız cihazlar
 
 Her işletim sisteminde, yazılım güvenlik açıkları nedeniyle ortaya çıkacak cihaz sayısı.
 
-:::image type="content" alt-text="İşletim sistemi platformuna göre geçerli korumasız cihazların bir grafiği ve zaman içinde işletim sistemi platformlarının korumasız cihazları gösteren bir grafik." source="images/tvm-report-os.png" lightbox="images/tvm-report-os.png":::
+:::image type="content" source="images/tvm-report-os.png" alt-text="İşletim sistemi platformuna göre mevcut korumasız cihazları ve işletim sistemi platformlarının korumasız cihazlarını zaman içinde gösteren grafikler" lightbox="images/tvm-report-os.png":::
 
 ## <a name="vulnerable-devices-by-windows-version-graphs"></a>Yeni sürüm Windows tarafından korumasız cihazlar
 
-Her bir sürümde, Windows 10 veya Windows 11 sürümüne sahip olan ve korumasız uygulamalar veya işletim sistemi nedeniyle açığa çıkaran cihaz sayısı.
+Her sürümde, her Windows 10 veya Windows 11 ve korumasız uygulamalar veya işletim sistemi nedeniyle açığa açığa çıkaran cihaz sayısı.
 
-:::image type="content" alt-text="Aynı sürüme göre geçerli korumasız cihazların bir Windows 10 ve zaman içinde aynı sürüme göre zayıf Windows 10 gösteren bir grafik." source="images/tvm-report-version.png" lightbox="images/tvm-report-version.png":::
+:::image type="content" source="images/tvm-report-version.png" alt-text="Zaman içinde aynı sürüme göre Windows 10 zayıf cihazları ve aynı sürüme göre Windows 10 cihazları gösteren grafikler" lightbox="images/tvm-report-version.png":::
 
 ## <a name="related-topics"></a>İlgili konular
 

@@ -21,12 +21,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 3418eac69930819fdb0e3fd8d1bae80312f89a9f
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 14332b2787b59e2ef192741dc97e59a7c7cb5418
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63326419"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499517"
 ---
 # <a name="manage-incidents-in-microsoft-365-defender"></a>Olayları iş yer Microsoft 365 Defender
 
@@ -40,7 +40,7 @@ Olay yönetimi, olay iş akışınıza en uygun zamanı en iyi duruma getirmek v
 
 Microsoft 365 Defender portalının (security.microsoft.com) hızlı başlatmada Olaylar **&** veya Olaylar'> olayları [yönetebilirsiniz](https://security.microsoft.com). İşte bir örnek.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="Olay sırası örneği." lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="Microsoft 365 Defender portalında Olaylar sayfası" lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
 
 Olaylarınızı şöyle yönetebilirsiniz:
 
@@ -53,7 +53,7 @@ Olaylarınızı şöyle yönetebilirsiniz:
 
 Olayları, Bir olayın Olay yönetme **bölmesinden** yönetebilirsiniz. İşte bir örnek.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-manage.png" alt-text="Bir olayın Olayları yönet bölmesi örneği." lightbox="../../media/incidents-queue/incidents-ss-incidents-manage.png":::
+:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents-manage.png" alt-text="Microsoft 365 Defender portalında Olayı yönet bölmesi" lightbox="../../media/incidents-queue/incidents-ss-incidents-manage.png":::
 
 Bu bölmeyi, şu bölmede **yer alan Olayı** yönet bağlantısından görüntüleyebilirsiniz:
 
@@ -121,5 +121,5 @@ süreç içinde yaşanan olaylarda, incelemenize devam [etmek gerekir](investiga
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Olaylara genel bakış](incidents-overview.md)
-- [Olayları önceliklendirme](incident-queue.md)
-- [Olayları araştırma](investigate-incidents.md)
+- [Olaylara öncelik belirleyin](incident-queue.md)
+- [Olayları araştırın](investigate-incidents.md)

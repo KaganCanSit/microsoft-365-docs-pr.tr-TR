@@ -1,5 +1,5 @@
 ---
-title: Microsoft Güvenli Puan
+title: Microsoft Güvenlik Puanı
 description: Güvenlik portalında Microsoft Güvenli Puanı Microsoft 365 Defender, güvenlik nedenlerinizi nasıl geliştirin ve güvenlik yöneticilerinin neler beklemesi olduğunu açıklar.
 keywords: microsoft güvenli puan, güvenli puan, office 365 güvenli puanı, microsoft güvenlik puanı, Microsoft 365 Defender portalı, geliştirme eylemleri
 ms.prod: m365-security
@@ -23,14 +23,14 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: d31fa35ddf84b63a115cf3128673794617fcc730
-ms.sourcegitcommit: 23a90ed17cddf3b0db8d4084c8424f0fabd7b1de
+ms.openlocfilehash: ed80d57d25fea2f3c19b6fe6363f993569c68a92
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63015362"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499458"
 ---
-# <a name="microsoft-secure-score"></a>Microsoft Güvenli Puan
+# <a name="microsoft-secure-score"></a>Microsoft Güvenlik Puanı
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
@@ -49,7 +49,7 @@ Güvenli puan'a hızlı bir genel bakış için bu videoyu izleyin.
 
 Kuruluşlar, ölçümlerin ve eğilimlerin güçlü görselleştirmelerine, diğer Microsoft ürünleriyle tümleştirmeye, benzer kuruluşlarla puan karşılaştırmalarına ve daha birçok öğeye erişim elde etmektedir. Puan, üçüncü taraf çözümlerinin önerilen eylemleri çözümlediğiniz durumlarını da yansıtabilirsiniz.
 
-![Puanın Güvenliğini Sağlama giriş sayfası.](../../media/secure-score/secure-score-home-page.png)
+:::image type="content" source="../../media/secure-score/secure-score-home-page.png" alt-text="Web portalının Microsoft Güvenli Puanı Microsoft 365 Defender sayfası" lightbox="../../media/secure-score/secure-score-home-page.png":::
 
 ## <a name="how-it-works"></a>Nasıl çalışır?
 
@@ -138,7 +138,7 @@ Herhangi bir sorun varsa, Güvenlik, Gizlilik ve Uyumluluk topluluğuna [gönder
 
 ## <a name="related-resources"></a>İlgili kaynaklar
 
-- [Güvenlik nedenlerinizi değerlendirin](microsoft-secure-score-improvement-actions.md)
+- [Güvenlik duruşlarınızı değerlendirin](microsoft-secure-score-improvement-actions.md)
 - [Microsoft Güvenli Puan geçmişinizi izleme ve hedefleri karşılama](microsoft-secure-score-history-metrics-trends.md)
-- [Neler geliyor?](microsoft-secure-score-whats-coming.md)
-- [Yenilikler](microsoft-secure-score-whats-new.md)
+- [Yapılacak yenilikler](microsoft-secure-score-whats-coming.md)
+- [Yeni gelenler](microsoft-secure-score-whats-new.md)

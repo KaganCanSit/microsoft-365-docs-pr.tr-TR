@@ -1,7 +1,7 @@
 ---
 title: Saldırı yüzeyini azaltma kuralları başvurusu
 description: Saldırı yüzeyini azaltma kuralları ile ilgili ayrıntıları kural temelinde listeler.
-keywords: Saldırı yüzeyini azaltma kuralları, ASR, asr kuralları, hip'ler, izinsiz giriş önleme sistemi, koruma kuralları, exploit kuralları, izinsiz giriş önleme kuralları, hastalık önleme kuralları, bulaşma önleme kuralları, Uç nokta için Microsoft Defender, ASR kurallarını yapılandırma, ASR kural açıklaması
+keywords: Saldırı yüzeyini azaltma kuralları, ASR, asr kuralları, hips, izinsiz giriş önleme sistemi, koruma kuralları, exploit kuralları, izinsiz giriş önleme kuralları, hastalık önleme kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma, ASR kural açıklaması
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -17,19 +17,19 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: 77edaa3d71911bd0594e707996c320285dddabc5
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: b9655189759707e9c4463d3c53a3b0b9fd20e730
+ms.sourcegitcommit: 0ae89b71b202aceabd5061f0d5b46d030d93e931
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63754108"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64520590"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Saldırı yüzeyini azaltma kuralları başvurusu
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 Bu makalede saldırı azaltma kuralları hakkında bilgi sağlar:
@@ -37,9 +37,10 @@ Bu makalede saldırı azaltma kuralları hakkında bilgi sağlar:
 - [Desteklenen işletim sistemi sürümleri](#supported-operating-systems)
 - [Desteklenen yapılandırma yönetim sistemleri](#supported-configuration-management-systems)
 - [Kural başına uyarı ve bildirim ayrıntıları](#per-rule-alert-and-notification-details)
+- [ASR kuralları ve GUID matrisi](#asr-rules-and-guids-matrix)
+- [ASR kuralı modları](#asr-rule-modes)
 - [Kural başına açıklamalar](#per-rule-descriptions)
   - Kural açıklamaları
-  - GUID'ler
   - Yapılandırma yönetimi sistemi kural adları
 
 ## <a name="public-preview-supported-operating-systems"></a>Genel önizleme: Desteklenen işletim sistemleri
@@ -110,7 +111,7 @@ Aşağıdaki tabloda, şu anda genel kullanılabilirlik için yayımlanan kurall
 
 Bu tabloda başvurulan yapılandırma yönetim sistemi sürümleriyle ilgili bilgilere bağlantılar bu tablonun altında listelenmiştir.
 
-|Kural adı | Intune | Microsoft Endpoint Manager |Microsoft Uç Noktası Yapılandırma Yöneticisi |Grup İlkesi<sup>[[1](#fn1)]<sup></sup> | PowerShell<sup>[[1](#fn1)]<sup></sup>  |
+|Kural adı | Intune | Microsoft Endpoint Manager |Microsoft Uç Noktası Yapılandırma Yöneticisi |<sup>grup ilkesi[[1](#fn1)]<sup></sup> | PowerShell<sup>[[1](#fn1)]<sup></sup>  |
 |---|:---:|:---:|:---:|:---:|:---:|
 |[Açıklardan yararlanan ve imzalı sürücüler için kötüye kullanımı engelleme](#block-abuse-of-exploited-vulnerable-signed-drivers) | E  | Y MEM OMA-URI |   | E  |  E  |
 |[Adobe Reader'ın alt işlemleri oluşturmalarını engelleme](#block-adobe-reader-from-creating-child-processes) | E |   | E | E  | E  |
@@ -143,7 +144,7 @@ Engelleme modunda tüm kurallar için bildirim bildirimleri oluşturulur. Diğer
 
 "Kural Durumu" belirtilen kurallar için:
 
-- Birleşimler ile \<ASR Rule, Rule State\> ASR kuralları yalnızca yüksek bulut bloğu düzeyindeki cihazlar için Uç Nokta için Microsoft Defender'da uyarıların (uyarı bildirimleri) ortaya çıkarilmesi için kullanılır. Yüksek bulut engelleme düzeyinde yer alan cihazlar herhangi bir ASR Kuralı, <Durum veya> uyarı oluşturmaz
+- Birleşimlerle ASR \<ASR Rule, Rule State\> kuralları yalnızca yüksek bulut bloğu düzeyindeki cihazlarda uyarıların (uyarı bildirimlerinin) Uç Nokta için Microsoft Defender için kullanılır. Yüksek bulut engelleme düzeyinde yer alan cihazlar herhangi bir ASR Kuralı, <Durum veya> uyarı oluşturmaz
 - EDR, ancak yalnızca yüksek bulut bloğu düzeyindeki cihazlarda ASR kuralları için uyarı oluşturulur.
 
 | Kural adı: | Kural durumu: | Posta'da uyarılar EDR? <br> (Evet&nbsp;\|&nbsp;Hayır) | Uyarı bildirimleri mi oluştursunuz? <br> (Evet&nbsp;\|&nbsp;Hayır) |
@@ -167,6 +168,27 @@ Engelleme modunda tüm kurallar için bildirim bildirimleri oluşturulur. Diğer
 |[Fidye yazılımlarına karşı gelişmiş koruma kullanın](#use-advanced-protection-against-ransomware) | AuditBlock&nbsp;\|&nbsp; | Y \| Y <br> Cihazın yüksek bulut blok düzeyinde olması gerekir  | N \| Y <br> Cihazın yüksek bulut blok düzeyinde olması gerekir |
 |   |   |   |   |
   
+## <a name="asr-rules-and-guids-matrix"></a>ASR kuralları ve GUID matrisi
+
+| Kural Adı | Kural GUID |
+|:-----|:-----|
+| Açıklardan yararlanan ve imzalı sürücüler için kötüye kullanımı engelleme | 56a863a9-875e-4185-98a7-b882c64b5ce5 |
+| Adobe Reader'ın alt işlemleri oluşturmalarını engelleme | 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c |
+| Tüm Office alt işlemleri oluşturmalarını engelleme | d4f940ab-401b-4efc-aadc-ad5f3c50688a |
+| Yerel güvenlik yetkilisi alt sisteminden (Windows) kimlik bilgilerinin çalmasını lsass.exe | 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2 |
+| E-posta istemcisi ve web postası yürütülebilir içeriğini engelleme | be9ba2d9-53ea-4cdc-84e5-9b1eeee46550 |
+| Yürütülebilir dosyaların yaygın bir yaş veya güvenilir liste ölçütüne uygun olmadıkça çalıştırmalarını engelleme | 01443614-cd74-433a-b99e-2ecdc07bfc25 |
+| Kapatılaabilecek betikleri yürütmeyi engelleme | 5beb7efe-fd9a-4556-801d-275e5ffc04cc |
+| JavaScript veya VBScript'in indirilen yürütülebilir içeriği başlatmalarını engelleme | d3e037e1-3eb8-44c8-a917-57927947596d |
+| Yürütülebilir Office yürütülebilir içerik oluşturmalarını engelleme | 3b576869-a4ec-4529-8536-b80a7769e899 |
+| Diğer Office başka işlemlere kod eklemelerini engelleme | 75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84 |
+| Alt Office, iletişim uygulamasının oluşturulmasını engelleme | 26190899-1602-49e8-8b27-eb1d0a1ce869 |
+| WMI olay aboneliği aracılığıyla kalıcılığı engelleme <br>* Dosya ve klasör dışlamaları desteklenmiyor. | e6db77e5-3df2-4cf1-b95a-636979351e5b |
+| PSExec ve WMI komutlarından kaynaklanan süreç oluşturma işlemlerini engelleme | d1e49aac-8f56-4280-b9ba-993a6d77406c |
+| USB'den çalıştıran güvenilmeyen ve imzalanmamış işlemleri engelleme | b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4 |
+| Makrolar arasında Win32 API Office engelleme | 92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b |
+| Fidye yazılımlarına karşı gelişmiş koruma kullanın | c1db55ab-c21a-4637-bb3f-a12568109d35 |
+
 ## <a name="asr-rule-modes"></a>ASR kuralı modları
 
 - **Yapılandırılmadı veya** **Devre** Dışı Bırak: Bu, ASR kuralının etkinleştirilmemiş veya devre dışı bırakılmıştır. Bu eyaletin kodu = 0.
@@ -205,7 +227,7 @@ Bu kural, uygulamanın korumasız imzalı bir sürücüyü diske yazmasını eng
 
 Intune Adı: `Block abuse of exploited vulnerable signed drivers` (henüz kullanılamıyor)
 
-Yapılandırma Yöneticisi adı: Henüz kullanılamıyor
+Configuration Manager: Henüz kullanılamıyor
   
 GUID:  `56a863a9-875e-4185-98a7-b882c64b5ce5`
 
@@ -214,7 +236,7 @@ Advanced hunting action type:
 -->
 
 <!-- 
-Dependencies:
+Dependencies: none provided by engineering
 -->
 
 ### <a name="block-adobe-reader-from-creating-child-processes"></a>Adobe Reader'ın alt işlemleri oluşturmalarını engelleme
@@ -223,9 +245,9 @@ Bu kural Adobe Reader'ın süreç oluşturmasını engelleyerek saldırılar ön
 
 Sosyal mühendislik veya açıklardan yararlanan kötü amaçlı yazılımlar yüklerini indirip başlatarak Adobe Reader'ı yok etmeye devam ediyor. Çocuk işlemlerinin Adobe Reader tarafından oluşturulmasını engelleyerek, kötü amaçlı yazılımla vektör olarak kullanmayı denemeniz engellenebilir.
 
-Intune adı: `Process creation from Adobe Reader (beta)`
+Intune adı:`Process creation from Adobe Reader (beta)`
 
-Yapılandırma Yöneticisi adı: Henüz kullanılamıyor
+Configuration Manager: Henüz kullanılamıyor
 
 GUID: `7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c`
 
@@ -242,9 +264,9 @@ Bu kural, Office işlemleri oluşturmalarını engeller. Office word, Excel, Pow
 
 Kötü amaçlı alt işlemler oluşturmak, yaygın bir kötü amaçlı yazılım stratejisidir. Bir vektör olarak kullanan Office kötü amaçlı yazılım, çoğunlukla daha fazla yük indirmek ve çalıştırmak için VBA makroları ve açıklarından yararlanma kodu çalıştırır. Bununla birlikte, bazı yasal iş hattı uygulamaları da amacına yönelik alt süreçler oluştursa da; örneğin, bir komut istemini ya da Kayıt Defteri ayarlarını yapılandırmak için PowerShell'i kullanmak gibi.
 
-Intune adı: `Office apps launching child processes`
+Intune adı:`Office apps launching child processes`
 
-Yapılandırma Yöneticisi adı: `Block Office application from creating child processes`
+Configuration Manager adı:`Block Office application from creating child processes`
 
 GUID: `d4f940ab-401b-4efc-aadc-ad5f3c50688a`
 
@@ -267,9 +289,9 @@ LSASS, aynı bilgisayarda oturum alan kullanıcıların kimliğini Windows sağl
 > [!IMPORTANT]
 > Saldırı Yüzeyini Azaltma (ASR) kuralı için "Windows yerel güvenlik yetkilisi alt sisteminden (lsass.exe)" kimlik bilgilerini engelleme kuralı için varsayılan durum Yapılandırılmadı olarak değişir ve varsayılan mod Engellendi olarak **ayarlanır**.  Diğer tüm ASR kuralları varsayılan durumda kalır: **Yapılandırılmadı**. Son kullanıcı bildirimlerini azaltmak için ek filtreleme mantığı kurala zaten dahil edildi. Müşteriler kuralı Denetim, Uyar veya **Devre** Dışı **Modları** **olarak yapılandırabilir** ve varsayılan modu geçersiz kılar. Bu kuralın işlevselliği aynıdır; kuralın varsayılan olarak modunda yapılandırılması veya Engelleme modunu el ile etkinleştirmeniz gerekir.  
 
-Intune adı: `Flag credential stealing from the Windows local security authority subsystem`
+Intune adı:`Flag credential stealing from the Windows local security authority subsystem`
 
-Yapılandırma Yöneticisi adı: `Block credential stealing from the Windows local security authority subsystem`
+Configuration Manager adı:`Block credential stealing from the Windows local security authority subsystem`
 
 GUID: `9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2`
 
@@ -287,7 +309,7 @@ Bu kural, aşağıdaki dosya türlerinin Microsoft Outlook uygulamasında veya O
 - Yürütülebilir dosyalar (.exe, .dll veya .scr gibi)
 - Betik dosyaları (PowerShell .ps, Visual Basic .vbs veya JavaScript .js)
 
-Intune adı: `Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions)`
+Intune adı:`Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions)`
 
 Microsoft Endpoint Manager adı:`Block executable content from email client and webmail`
 
@@ -303,9 +325,9 @@ Bağımlılıklar: MDAV
 > [!NOTE]
 > Kullandığınız uygulamaya **bağlı olarak, e-posta istemci ve web postalarından** yürütülebilir içeriği engelleme kuralı, aşağıdaki alternatif açıklamalara sahip olur:
 >
-> - Intune (Yapılandırma Profilleri): Yürütülebilir içerik (exe, dll, ps, js, vbs, vb.) e-postadan (web postası/posta istemcisi) atılır (özel durum yoktur).
+> - Intune (Yapılandırma Profilleri): Yürütülebilir içerik (exe, dll, ps, js, vbs, vb.) e-postadan (web postası/posta istemcisi) atılır (özel durum yoktur) yürütülmesi.
 > - Endpoint Manager: E-posta ve web posta istemcilerinden yürütülebilir içerik indirmesini engelin.
-> - Grup İlkesi: E-posta istemcisi ve web postası için yürütülebilir içeriği engelin.
+> - grup ilkesi: E-posta istemcisi ve web postası yürütülebilir içeriğini engelin.
 
 ### <a name="block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion"></a>Yürütülebilir dosyaların yaygın bir yaş veya güvenilir liste ölçütüne uygun olmadıkça çalıştırmalarını engelleme
 
@@ -318,9 +340,9 @@ Bu kural yürütülebilir dosyaları (.exe, .dll veya .scr gibi) başlatmaların
 >
 > Tek tek dosyaları veya klasörleri (klasör yollarını veya tam kaynak adlarını kullanarak) belirtebilirsiniz, ancak hangi kuralların veya dışlamaların geçerli olduğunu belirtemezseniz.
 
-Intune adı: `Executables that don't meet a prevalence, age, or trusted list criteria`
+Intune adı:`Executables that don't meet a prevalence, age, or trusted list criteria`
 
-Yapılandırma Yöneticisi adı: `Block executable files from running unless they meet a prevalence, age, or trusted list criteria`
+Configuration Manager adı:`Block executable files from running unless they meet a prevalence, age, or trusted list criteria`
 
 GUID: `01443614-cd74-433a-b99e-2ecdc07bfc25`
 
@@ -337,9 +359,9 @@ Bu kural, sahipsiz bir betiğin içinde şüpheli özellikler algılar.
 
 Betik gizleme, hem kötü amaçlı yazılım yazarlarının hem de yasal uygulamaların fikri mülkiyeti gizlemek veya betik yükleme sürelerini azaltmak için kullanabileceği yaygın bir tekniktir. Kötü amaçlı yazılım yazarları, kötü amaçlı kodun okunmalarını zorlaştıracak şekilde kapatmayı da kullanır ve bu da insanların ve güvenlik yazılımlarının yakın incelemesini engeller.
 
-Intune adı: `Obfuscated js/vbs/ps/macro code`
+Intune adı:`Obfuscated js/vbs/ps/macro code`
 
-Yapılandırma Yöneticisi adı: `Block execution of potentially obfuscated scripts`
+Configuration Manager adı:`Block execution of potentially obfuscated scripts`
 
 GUID: `5beb7efe-fd9a-4556-801d-275e5ffc04cc`
 
@@ -356,9 +378,9 @@ Bu kural, betiklerin kötü amaçlı olarak indirilmiş olabilecek içeriği ba�
 
 Yaygın olsa da, iş dizisi uygulamaları bazen yükleyicileri indirmek ve başlatmak için betikler kullanır.
 
-Intune adı: `js/vbs executing payload downloaded from Internet (no exceptions)`
+Intune adı:`js/vbs executing payload downloaded from Internet (no exceptions)`
 
-Yapılandırma Yöneticisi adı: `Block JavaScript or VBScript from launching downloaded executable content`
+Configuration Manager adı:`Block JavaScript or VBScript from launching downloaded executable content`
 
 GUID: `d3e037e1-3eb8-44c8-a917-57927947596d`
 
@@ -375,7 +397,7 @@ Bu kural, Office kodların diske yaz Excel engelleyerek Word, Excel ve PowerPoin
 
 Vektör olarak ihlal eden Office kötü amaçlı yazılım, kötü amaçlı bileşenleri diske Office kötü amaçlı bileşenleri parçalara ayrılmaya veya kaydetmeye çalışabilirsiniz. Bu kötü amaçlı bileşenler, bilgisayarın yeniden başlatılmasını ve sistem üzerinde kalıcı halede kalmalarını sağlar. Bu nedenle, bu kural yaygın bir kalıcılık tekniğini savunur.
 
-Intune adı: `Office apps/macros creating executable content`
+Intune adı:`Office apps/macros creating executable content`
 
 SCCM adı: `Block Office applications from creating executable content`
 
@@ -398,9 +420,9 @@ Kod eklemenin bilinen yasal iş amacı yoktur.
 
 Bu kural Word, Excel ve PowerPoint.
 
-Intune adı: `Office apps injecting code into other processes (no exceptions)`
+Intune adı:`Office apps injecting code into other processes (no exceptions)`
 
-Yapılandırma Yöneticisi adı: `Block Office applications from injecting code into other processes`
+Configuration Manager adı:`Block Office applications from injecting code into other processes`
 
 GUID: `75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84`
 
@@ -420,9 +442,9 @@ Bu kural sosyal mühendislik saldırılarını korur ve koddan yararlanmayı bu 
 > [!NOTE]
 > Bu kural, diğer tüm işlerde DLP ilkesi ipuçlarını ve Araç Outlook. Bu kural yalnızca Outlook.com Outlook.com için geçerlidir.
 
-Intune adı: `Process creation from Office communication products (beta)`
+Intune adı:`Process creation from Office communication products (beta)`
 
-Yapılandırma Yöneticisi adı: Kullanılamıyor
+Configuration Manager: Kullanılamaz
 
 GUID: `26190899-1602-49e8-8b27-eb1d0a1ce869`
 
@@ -442,9 +464,9 @@ Bu kural, bir cihazda kalıcılığı ulaşmak için kötü amaçlı yazılımla
 
 Dosyasız tehditlerle gizli kalmak, dosya sisteminde görülmemek ve düzenli olarak yürütme denetimi kazanmak için çeşitli taktikler kullanır. Bazı tehditlere karşı, GIZLI kalmak için WMI deposunu ve olay modelini kötüye kullanabilir.
 
-Intune adı: Kullanılamaz
+Intune: Kullanılamaz
 
-Yapılandırma Yöneticisi adı: Kullanılamıyor
+Configuration Manager: Kullanılamaz
 
 GUID: `e6db77e5-3df2-4cf1-b95a-636979351e5b`
 
@@ -460,11 +482,11 @@ Bağımlılıklar: MDAV, RPC
 Bu kural [PsExec](/sysinternals/downloads/psexec) ve WMI aracılığıyla oluşturulan [işlemlerin çalışmalarını](/windows/win32/wmisdk/about-wmi) engeller. Hem PsExec hem de WMI kodu uzaktan çalıştırabilir, dolayısıyla bu işlevselliği komut ve denetim amacıyla kötü amaçlı yazılımlar tarafından kötü amaçlı olarak kullanmak veya kuruluş ağının her yerine bulaşma riski vardır.
 
 > [!WARNING]
-> Bu kuralı yalnızca cihazlarınızı [Intune](/intune) veya başka bir MDM çözümüyle yönetiyorsanız kullanın. Bu kural, Configuration Manager istemcisinin [doğru Microsoft Endpoint Configuration Manager](/configmgr) IÇIN KULLANDıĞı WMI komutlarını engeller.
+> Bu kuralı yalnızca cihazlarınızı farklı bir MDM çözümüyle [Intune](/intune) kullanıyorsanız kullanın. Bu kural, istemcinin doğru [Microsoft Endpoint Configuration Manager Configuration Manager](/configmgr) kullandığı WMI komutlarını engellemesi nedeniyle, Configuration Manager ile yönetimle uyumlu değildir.
 
-Intune adı: `Process creation from PSExec and WMI commands`
+Intune adı:`Process creation from PSExec and WMI commands`
 
-Yapılandırma Yöneticisi adı: Geçerli değil
+Configuration Manager: Geçerli değil
 
 GUID: `d1e49aac-8f56-4280-b9ba-993a6d77406c`
 
@@ -479,9 +501,9 @@ Bağımlılıklar: MDAV
 
 Bu kuralla, yöneticiler SD kartları da dahil olmak üzere USB çıkarılabilir sürücülerden imzalanmamış veya güvenilmeyen yürütülebilir dosyaları çalıştırmayı önlenebilir. Engellenen dosya türleri yürütülebilir dosyalar içerir (.exe, .dll veya .scr gibi)
 
-Intune adı: `Untrusted and unsigned processes that run from USB`
+Intune adı:`Untrusted and unsigned processes that run from USB`
 
-Yapılandırma Yöneticisi adı: `Block untrusted and unsigned processes that run from USB`
+Configuration Manager adı:`Block untrusted and unsigned processes that run from USB`
 
 GUID: `b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4`
 
@@ -505,9 +527,9 @@ Desteklenen işletim sistemleri:
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - [Configuration Manager CB 1710](/configmgr/core/servers/manage/updates)
 
-Intune adı: `Win32 imports from Office macro code`
+Intune adı:`Win32 imports from Office macro code`
 
-Yapılandırma Yöneticisi adı: `Block Win32 API calls from Office macros`
+Configuration Manager adı:`Block Win32 API calls from Office macros`
 
 GUID: `92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b`
 
@@ -531,9 +553,9 @@ Kural, fidye yazılımlarını önlemek için dikkatli bir kenarda hataya neden 
 > [!NOTE]
 > Bu kuralı [kullanmak için bulut teslimi korumasını](enable-cloud-protection-microsoft-defender-antivirus.md) etkinleştirmeniz gerekir.
 
-Intune adı: `Advanced ransomware protection`
+Intune adı:`Advanced ransomware protection`
 
-Yapılandırma Yöneticisi adı: `Use advanced protection against ransomware`
+Configuration Manager adı:`Use advanced protection against ransomware`
 
 GUID: `c1db55ab-c21a-4637-bb3f-a12568109d35`
 

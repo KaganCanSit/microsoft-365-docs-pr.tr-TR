@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 40178e42737bdfea756db55658aaeb988ad4f19f
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 2d5477122a29c672a947a2022f49da3abeb7003b
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498747"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568554"
 ---
 # <a name="prioritize-incidents-in-microsoft-365-defender"></a>Microsoft 365 Defender'de olayları öncelik Microsoft 365 Defender
 
@@ -37,7 +37,7 @@ ms.locfileid: "64498747"
 **Aşağıdakiler için geçerlidir:**
 - Microsoft 365 Defender
 
-Microsoft 365 Defender çözümlemeleri uygular ve farklı ürünlerden ilgili uyarıları ve otomatik soruşturmaları bir olay haline toplar. Microsoft 365 Defender ayrıca, kullanıcıların tüm ürün paketinde yer alan  end-end görünürlükleri nedeniyle kötü amaçlı olarak tanımlanlan etkinlikler Microsoft 365 Defender benzersiz uyarılar tetikler. Bu görünüm, güvenlik analistlerine daha kapsamlı bir saldırı hikayesi sunar ve bu hikaye, güvenlik analistlerine kuruluş genelindeki karmaşık tehditleri daha iyi an ve yardımcı olur.
+Microsoft 365 Defender çözümlemeleri uygular ve farklı ürünlerden ilgili uyarıları ve otomatik soruşturmaları bir olay haline toplar. Microsoft 365 Defender ayrıca, Microsoft 365 Defender ürün paketinin tamamına sahip olduğu  end-end-end görünürlük nedeniyle kötü amaçlı olarak tanımlanlan etkinliklerde benzersiz uyarılar tetikler. Bu görünüm, güvenlik analistlerine daha kapsamlı bir saldırı hikayesi sunar ve bu hikaye, güvenlik analistlerine kuruluş genelindeki karmaşık tehditleri daha iyi an ve yardımcı olur.
 
 Olay **sırası,** cihazlar, kullanıcılar ve posta kutuları arasında oluşturulmuş bir olay koleksiyonunu gösterir. Olay önceliklendirmesi olarak bilinen bir işlem olan bilinçli bir siber güvenlik yanıtı kararına önceliklerini belirlemek ve oluşturmak için olaylarda sıralamanıza yardımcı olur.
 

@@ -1,5 +1,5 @@
 ---
-title: Uç Nokta Planı 1 için Microsoft Defender'ı yönetme
+title: Plan 1 Uç Nokta için Microsoft Defender i yönetme
 description: Uç Nokta Plan 1 için Defender'ı koruma ve güncelleştirme. Ayarları yönetin, güncelleştirmeleri alın ve hatalı pozitif/negatif sonuçlardan haberdar olun.
 search.appverid: MET150
 author: denisebmsft
@@ -14,17 +14,17 @@ ms.localizationpriority: medium
 ms.reviewer: inbadian
 f1.keywords: NOCSH
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 69e4df29817675918873e4d13b81bfe5b00b1219
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 5217cf3f8b61c4e5bc24dfc205fb78c5bde5a3b5
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63034276"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466641"
 ---
-# <a name="manage-microsoft-defender-for-endpoint-plan-1"></a>Uç Nokta Planı 1 için Microsoft Defender'ı yönetme
+# <a name="manage-microsoft-defender-for-endpoint-plan-1"></a>Plan 1 Uç Nokta için Microsoft Defender i yönetme
 
 **Geçerli olduğu yer:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Siz kuruluşta Uç Nokta Planı 1 için Defender'ı kullanacı olarak, güvenlik çözümünüz korumanız için güvenlik ekibinin bazı adımlarını atabilirsiniz. Güvenlik ekipleriniz bakım ve işlemler planınızı bir araya geldiklerinden, en azından aşağıdaki etkinlikleri dahil etmek için emin olun:
 
@@ -43,7 +43,7 @@ Güvenlik zekası ve ürün güncelleştirmelerinizi yönetmek için bkz. Micros
 
 ## <a name="fine-tune-and-adjust-defender-for-endpoint"></a>İnce ayar ve Uç Nokta için Defender'ı ayarlama
 
-Uç Nokta için Defender size çok fazla esneklik ve yapılandırma seçeneği sunar. Ayarlarınızı, kuruluşun ihtiyaçlarına uyacak şekilde ayarlayabilir ve ince ayar yapabilirsiniz. Örneğin, uç nokta güvenlik Microsoft Endpoint Manager yönetmek için Grup İlkesi ve diğer yöntemleri kullanabilirsiniz. 
+Uç Nokta için Defender size çok fazla esneklik ve yapılandırma seçeneği sunar. Ayarlarınızı, kuruluşun ihtiyaçlarına uyacak şekilde ayarlayabilir ve ince ayar yapabilirsiniz. Örneğin, uç nokta güvenlik ayarlarınızı Microsoft Endpoint Manager, grup ilkesi ve diğer yöntemleri kullanabilirsiniz. 
 
 Daha fazla bilgi edinmek için bkz. [Uç Nokta için Defender'ı Yönetme](manage-mde-post-migration.md).
 
@@ -51,10 +51,10 @@ Daha fazla bilgi edinmek için bkz. [Uç Nokta için Defender'ı Yönetme](manag
 
 Hatalı pozitif bir yapı, aslında bir tehdit olmayan, kötü amaçlı olarak algılanan dosya veya işlem gibi bir yapıdır. Yanlış negatiflik, aslında tehdit olarak algılanmadı olsa da var olan bir varlıktır. Uç nokta için Defender dahil olmak üzere herhangi bir uç nokta koruma çözümünde hatalı pozitif/negatif sonuçlar oluşabilir. Bununla birlikte, aşağıdaki resimde gösterilen gibi bu tür sorunları ele almak ve çözüme ince ayar yapmak için atılması gereken adımlar vardır:
 
-:::image type="content" source="../../media/defender-endpoint/false-positives-overview.png" alt-text="Hatalı pozitif ve negatif sonuçlar sürecine genel bakış":::
+:::image type="content" source="../../media/defender-endpoint/false-positives-overview.png" alt-text="Hatalı pozitif ve negatif sonuçlar sürecine genel bakış" lightbox="../../media/defender-endpoint/false-positives-overview.png":::
 
-Uç Nokta için Defender'da hatalı pozitif/negatif sonuçlar görüyorsanız bkz. Uç Nokta için [Microsoft Defender'da hatalı pozitif/negatifleri adresle](defender-endpoint-false-positives-negatives.md).
+Uç nokta için Defender'da hatalı pozitif/negatif sonuçlar görüyorsanız bkz. Hatalı pozitif[/negatifleri](defender-endpoint-false-positives-negatives.md) adrese Uç Nokta için Microsoft Defender.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Uç nokta için Microsoft Defender'daki yeni ve](whats-new-in-microsoft-defender-endpoint.md)
+- [Uç Nokta için Microsoft Defender'daki Uç Nokta için Microsoft Defender](whats-new-in-microsoft-defender-endpoint.md)

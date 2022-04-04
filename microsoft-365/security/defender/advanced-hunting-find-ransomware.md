@@ -21,14 +21,14 @@ ms.collection:
 - m365solution-ransomware
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 79dee9b6750e21d9b2482d4a0482d87d7fc7434b
-ms.sourcegitcommit: 4af23696ff8b44872330202fe5dbfd2a69d9ddbf
+ms.openlocfilehash: e90661932880ee146b8b1b81f8412e97d674749d
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "62997070"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755754"
 ---
-# <a name="hunt-for-ransomware"></a>Fidye yazılımı için avı
+# <a name="hunt-for-ransomware"></a>Fidye yazılımı avlayın
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
@@ -236,7 +236,7 @@ Birleştirilmiş sorgu aşağıdaki sonuçları döndürür:
 - **TotalEvidenceCount**—gözlemlenen işaret sayısı
 - **UniqueEvidenceCount**— gözlemlenen işaret türlerinin sayısı
 
-:::image type="content" source="../../media/advanced-hunting-ransomware-query.png" alt-text="Microsoft 365 Defender portalında fidye yazılımı etkinliği için birleştirilmiş bir Microsoft 365 Defender örneği":::
+:::image type="content" source="../../media/advanced-hunting-ransomware-query.png" alt-text="Microsoft 365 Defender portalında fidye yazılımı etkinliği için birleştirilmiş bir Microsoft 365 Defender örneği" lightbox="../../media/advanced-hunting-ransomware-query.png":::
 
 *Etkilenen cihazları ve fidye yazılımı etkinliğinin çeşitli işaretlerini gösteren sorgu sonuçları*
 
@@ -248,13 +248,13 @@ Varsayılan olarak, sorgu sonucunda yalnızca ikiden fazla fidye yazılımı etk
 
 ## <a name="related-topics"></a>İlgili konular
 - [Gelişmiş ava genel bakış](advanced-hunting-overview.md)
-- [Sorgu dilini öğrenme](advanced-hunting-query-language.md)
-- [Sorgu sonuçlarıyla çalışma](advanced-hunting-query-results.md)
-- [Paylaşılan sorguları kullanma](advanced-hunting-shared-queries.md)
-- [Şemayı anlama](advanced-hunting-schema-tables.md)
-- [Sorguyla ilgili en iyi yöntemleri uygulama](advanced-hunting-best-practices.md)
+- [Sorgu dilini öğrenin](advanced-hunting-query-language.md)
+- [Sorgu sonuçlarıyla çalışın](advanced-hunting-query-results.md)
+- [Paylaşılan sorguları kullanın](advanced-hunting-shared-queries.md)
+- [Şemayı anlayın](advanced-hunting-schema-tables.md)
+- [Sorgu en iyi yöntemlerini uygulayın](advanced-hunting-best-practices.md)
 
-## <a name="additional-ransomware-resources"></a>Ek fidye yazılımı kaynakları
+## <a name="more-ransomware-resources"></a>Diğer fidye yazılımı kaynakları
 
 Microsoft'tan önemli bilgiler:
 
@@ -279,7 +279,7 @@ Microsoft Azure:
 - [Fidye Yazılımı Saldırısını Azure Savunma](https://azure.microsoft.com/resources/azure-defenses-for-ransomware-attack/)
 - [Azure ve Microsoft 365 ile Fidye Yazılımı Performansını En Üst Düzeye Microsoft 365](https://azure.microsoft.com/resources/maximize-ransomware-resiliency-with-azure-and-microsoft-365/)
 - [Fidye yazılımlarına karşı korunmak için planı yedekleme ve geri yükleme](/security/compass/backup-plan-to-protect-against-ransomware)
-- [Yedekleme ile fidye yazılımlarından korunmaya Microsoft Azure (](https://www.youtube.com/watch?v=VhLOr2_1MCg)26 dakikalık video)
+- [Microsoft Azure Yedekleme ile fidye yazılımlarından korunmaya](https://www.youtube.com/watch?v=VhLOr2_1MCg) yardımcı olun (26 dakikalık video)
 - [Sistemsel kimlik güvenliğinden ödün verme](/azure/security/fundamentals/recover-from-identity-compromise)
 - [Microsoft Sentinel'de gelişmiş çok amaçlı saldırı algılama](/azure/sentinel/fusion#ransomware)
 - [Microsoft Sentinel'de Fidye Yazılımı için Fidye Yazılımı Algılama](https://techcommunity.microsoft.com/t5/azure-sentinel/what-s-new-fusion-detection-for-ransomware/ba-p/2621373)
@@ -290,7 +290,7 @@ Bulut Uygulamaları için Microsoft Defender:
 
 Microsoft Güvenlik ekibi blog gönderileri:
 
-- [Fidye yazılımlarını önlemeye ve fidye yazılımlarından korunmaya yönelik 3 adım (Eylül 2021)](https://www.microsoft.com/security/blog/2021/09/07/3-steps-to-prevent-and-recover-from-ransomware/)
+- [Fidye yazılımlarını önlemeye ve fidye yazılımlarından korunmaya yönelik üç adım (Eylül 2021)](https://www.microsoft.com/security/blog/2021/09/07/3-steps-to-prevent-and-recover-from-ransomware/)
 - [İnsan tarafından işletilen fidye yazılımlarla mücadeleye yardımcı bir kılavuz: Bölüm 1 (Eylül 2021)](https://www.microsoft.com/security/blog/2021/09/20/a-guide-to-combatting-human-operated-ransomware-part-1/)
 
   Microsoft'un Algılama ve Yanıt Ekibi'nin (YERMİ) fidye yazılımı olayı soruşturmalarını nasıl yönetecekleri ile ilgili önemli adımlar.

@@ -1,5 +1,5 @@
 ---
-title: Hassas bilgi türleriyle tam olarak eşleşmesi için hassas bilgi kaynağı tablosuna karma sağlama ve yükleme
+title: Tam veri eşleşmeli hassas bilgi türleri için hassas bilgi kaynak tablosu karması oluşturma ve karşıya yükleme
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -17,14 +17,14 @@ search.appverid:
 - MET150
 description: Hassas veri eşleşmesi için hassas bilgi kaynağı tablosuna karma kullanın ve hassas bilgi türlerini yükleyin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 8d3effe3d46375ffcaec268e4b3fc6d53fc5044e
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: e8726b17a3f87d61c8d63be7137ec8e465a5cd9a
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63526506"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568488"
 ---
-# <a name="hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types"></a>Hassas bilgi türleriyle tam olarak eşleşmesi için hassas bilgi kaynağı tablosuna karma sağlama ve yükleme
+# <a name="hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types"></a>Tam veri eşleşmeli hassas bilgi türleri için hassas bilgi kaynak tablosu karması oluşturma ve karşıya yükleme
 
 Bu makalede, hassas bilgi kaynağı tablolarınızı karma ve karşıya yükleme konularını bulabilirsiniz.
 
@@ -51,18 +51,19 @@ Net metin duyarlı bilgi kaynağı tablo dosyanızı doğrudan erişimli bilgisa
 ### <a name="best-practices"></a>En iyi uygulamalar
 
 Hassas verileri karmalama ve karşıya yükleme işlemlerini birbirinden ayırarak süreçteki sorunları daha kolay yalıtabilirsiniz.
- 
+
 Üretime başladıktan sonra, çoğu durumda bu iki adımı birbirinden ayrı tutabilirsiniz. Yalıtılmış bir bilgisayarda karma işlemi gerçekleştirdikten sonra dosyayı İnternet'e yönelik bir bilgisayara yüklemek için aktararak, İnternet bağlantısı nedeniyle güvenliği ihlal edilmiş olan bir bilgisayarda gerçek verilerin asla net metin formunda kullanılamaz.
 
-### <a name="ensure-your-sensitive-data-table-doesnt-have-formatting-issues"></a>Hassas veri tablonuzda biçimlendirme sorunları olduğundan emin olma. 
+### <a name="ensure-your-sensitive-data-table-doesnt-have-formatting-issues"></a>Hassas veri tablonuzda biçimlendirme sorunları olduğundan emin olma.
 
-Hassas verilerinizi karmalamadan ve karşıya yüklemeden önce, içeriği ayrıştırmada sorunlara neden olan özel karakterlerin varlığını doğrulamak için bir arama kullanın. Aşağıdaki söz dizim ile EDM karşıya yükleme aracılarını kullanarak tablonun EDM ile kullanmaya uygun bir biçimde olduğunu doğruabilirsiniz:
+Hassas verilerinizi karmalamadan ve karşıya yüklemeden önce, içeriği ayrıştırmada sorunlara neden olan özel karakterlerin varlığını doğrulamak için bir arama kullanın.
+Aşağıdaki söz dizim ile EDM karşıya yükleme aracılarını kullanarak tablonun EDM ile kullanmaya uygun bir biçimde olduğunu doğruabilirsiniz:
 
 ```powershell
-EdmUploadAgent.exe /ValidateData /DataFile [data file] /Schema [schema file] 
+EdmUploadAgent.exe /ValidateData /DataFile [data file] /Schema [schema file]
 ```
 
-Araç, sütun sayısıyla ilgili bir yanlışlık olduğunu gösteriyorsa, tablodaki değerlerde virgül veya tırnak karakterleri olması sütun sınırlayıcılarla karıştırılmış olabilir. Bir değerin tamamını çevrelemiyorsanız, tek ve çift tırnaklar tek tek bir sütunun nereden başladığı veya bittiği aracının yanlış tanımlanabilmektedir. 
+Araç, sütun sayısıyla ilgili bir yanlışlık olduğunu gösteriyorsa, tablodaki değerlerde virgül veya tırnak karakterleri olması sütun sınırlayıcılarla karıştırılmış olabilir. Bir değerin tamamını çevrelemiyorsanız, tek ve çift tırnaklar tek tek bir sütunun nereden başladığı veya bittiği aracının yanlış tanımlanabilmektedir.
 
 **Tam değerleri çevreleyen tek veya çift tırnak karakterleri bulursanız**, bunları olduğu gibi bırakın.
 
@@ -93,7 +94,7 @@ Bu bilgisayarın kiracınıza doğrudan erişimi Microsoft 365 gerekir.
 > [!NOTE]
 > Bu yordama başlamadan önce, **EDMDataUploaders\_ güvenlik grubunun üyesi olduğundan** emin olun.
 
-> [!TIP] 
+> [!TIP]
 >İsteğe bağlı olarak, karşıya yüklemeden önce hata denetimi yapmak için hassas bilgi kaynağı tablo dosyanız üzerinde doğrulama çalıştırabilirsiniz:
 >
 > `EdmUploadAgent.exe /ValidateData /DataFile [data file] /Schema [schema file]`
@@ -106,7 +107,7 @@ Bu bilgisayarın kiracınıza doğrudan erişimi Microsoft 365 gerekir.
 
 - [Ticari + GCC](https://go.microsoft.com/fwlink/?linkid=2088639) - çoğu ticari müşteri bunu kullan
 - [GCC-Yüksek](https://go.microsoft.com/fwlink/?linkid=2137521) - Bu, özel olarak yüksek güvenlikli devlet bulut aboneleri için
-- [DoD](https://go.microsoft.com/fwlink/?linkid=2137807) - Bu özel olarak AMERIKA Birleşik Devletleri Savunma bulut müşterileri için
+- [DoD](https://go.microsoft.com/fwlink/?linkid=2137807) - Bu özel olarak Birleşik Devletler Department of Defense cloud müşterileri için
 
 1. EDMUploadAgent için bir çalışma dizini oluşturun. Örneğin, **C:\EDM\Data**. Dosyayı **PatientRecords.csv** yere.
 
@@ -121,8 +122,8 @@ Bu bilgisayarın kiracınıza doğrudan erişimi Microsoft 365 gerekir.
 
    `EdmUploadAgent.exe /Authorize`
 
-> [!IMPORTANT]
-> **EdmUploadAgent'i** yüklü olduğu klasörden çalıştırmanız ve veri dosyalarınızın tam yolunu belirtebilirsiniz. 
+   > [!IMPORTANT]
+   > **EdmUploadAgent'i** yüklü olduğu klasörden çalıştırmanız ve veri dosyalarınızın tam yolunu belirtebilirsiniz.
 
 4. İş veya okul hesabınızla, Microsoft 365 grubuna eklenmiş olan iş veya okul EDM_DataUploaders açın. Bağlantıyı yapmak için kullanıcı hesabından kiracı bilgileri ayıklanır.
 
@@ -137,14 +138,15 @@ Bu bilgisayarın kiracınıza doğrudan erişimi Microsoft 365 gerekir.
    ```dos
    EdmUploadAgent.exe /UploadData /DataStoreName [DS Name] /DataFile [data file] /HashLocation [hash file location] /Schema [Schema file] /ColumnSeparator ["{Tab}"|"|"] /AllowedBadLinesPercentage [value]
    ```
+
    > [!NOTE]
-> Hassas veri dosyasının varsayılan biçimi virgülle ayrılmış değerlerdir. "{Tab}" seçeneğini /ColumnSeparator parametresiyle belirterek sekmeyle ayrılmış bir dosya belirtebilirsiniz veya "Sekme" seçeneğini belirterek, boruyla ayrılmış bir | belirtebilirsiniz.
+   > Hassas veri dosyasının varsayılan biçimi virgülle ayrılmış değerlerdir. "{Tab}" seçeneğini /ColumnSeparator parametresiyle belirterek sekmeyle ayrılmış bir dosya belirtebilirsiniz veya "Sekme" seçeneğini belirterek, boruyla ayrılmış bir | belirtebilirsiniz.
+   >
+   > Örnek: `EdmUploadAgent.exe /UploadData /DataStoreName PatientRecords /DataFile C:\Edm\Hash\PatientRecords.csv /HashLocation C:\Edm\Hash /Schema edm.xml /AllowedBadLinesPercentage 5`
 
-   Örnek: **EdmUploadAgent.exe /UploadData /DataStoreName PatientRecords /DataFile C:\Edm\Hash\PatientRecords.csv /HashLocation C:\Edm\Hash /Schema edm.xml /AllowedBadLinesPercentage 5**
+   Hassas bilgi tablolarında hatalı biçimlendirilmiş bazı değerler varsa, ancak yine de geçersiz satırları yoksayarken kalan verileri içeri aktarmayı istiyorsanız, komutta */AllowedBadLinesPercentage* parametresini kullanabilirsiniz. Yukarıdaki örnekte yüzde beş eşik belirtir. Bu, satırın en çok beş yüzdesi geçersiz olsa bile aracın karma değerine sahip olduğu ve hassas bilgi tablosu karşıya yükley istediğiniz anlamına gelir.
 
-Hassas bilgi tablolarında hatalı biçimlendirilmiş bazı değerler varsa, ancak yine de geçersiz satırları yoksayarken kalan verileri içeri aktarmayı istiyorsanız, komutta */AllowedBadLinesPercentage* parametresini kullanabilirsiniz. Yukarıdaki örnekte yüzde beş eşik belirtir. Bu, satırın en çok beş yüzdesi geçersiz olsa bile aracın karma değerine sahip olduğu ve hassas bilgi tablosu karşıya yükley istediğiniz anlamına gelir. 
-
-Bu komut daha yüksek güvenlik için karmaya rastgele oluşturulmuş bir salt değeri otomatik olarak ekler. İsteğe bağlı olarak, kendi salt değerinizi kullanmak istediğiniz **/Salt komutunu <saltvalue>** komuta ekleyin. Bu değer 64 karakter uzunluğunda olmalı ve yalnızca a-z karakterlerini ve 0-9 karakterlerini içerebilir.
+   Bu komut daha yüksek güvenlik için karmaya rastgele oluşturulmuş bir salt değeri otomatik olarak ekler. İsteğe bağlı olarak, kendi salt değerinizi kullanmak istediğiniz **/Salt komutunu \<saltvalue\>** komuta ekleyin. Bu değer 64 karakter uzunluğunda olmalı ve yalnızca a-z karakterlerini ve 0-9 karakterlerini içerebilir.
 
 6. Şu komutu çalıştırarak karşıya yükleme durumunu kontrol edin:
 
@@ -152,9 +154,9 @@ Bu komut daha yüksek güvenlik için karmaya rastgele oluşturulmuş bir salt d
    EdmUploadAgent.exe /GetSession /DataStoreName \<DataStoreName\>
    ```
 
-   Örnek: **EdmUploadAgent.exe /GetSession /DataStoreName PatientRecords**
+   Örnek: `EdmUploadAgent.exe /GetSession /DataStoreName PatientRecords`
 
-   **ProcessingInProgress içinde olmak için durumlara bakın**. Durum, Tamamlandı olarak tamamlanana kadar birkaç dakikada bir yeniden **kontrol edin**. Durum tamamlandıktan sonra EDM verileriniz kullanıma hazır olur. Hassas bilgi kaynağı tablo dosyanın boyutuna bağlı olarak, bu birkaç dakikadan birkaç saate kadar sürebilir. 
+   **ProcessingInProgress içinde olmak için durumlara bakın**. Durum, Tamamlandı olarak tamamlanana kadar birkaç dakikada bir yeniden **kontrol edin**. Durum tamamlandıktan sonra EDM verileriniz kullanıma hazır olur. Hassas bilgi kaynağı tablo dosyanın boyutuna bağlı olarak, bu birkaç dakikadan birkaç saate kadar sürebilir.
 
 > [!TIP]
 > Karşıya yüklenen hassas veriler kullanıma hazır olduğunda size bildirilmesi için Tam veri eşleşme etkinlikleri için bildirimler [oluşturma'daki yordamları izleyin](sit-edm-notifications-activities.md#create-notifications-for-exact-data-match-activities).
@@ -181,24 +183,24 @@ EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to 
    EdmUploadAgent.exe /CreateHash /DataFile C:\Edm\Data\PatientRecords.csv /HashLocation C:\Edm\Hash /Schema edm.xml /AllowedBadLinesPercentage 5
    ```
 
-> [!NOTE]
-> Hassas veri dosyasının varsayılan biçimi virgülle ayrılmış değerlerdir. "{Tab}" seçeneğini /ColumnSeparator parametresiyle belirterek sekmeyle ayrılmış bir dosya belirtebilirsiniz veya "Sekme" seçeneğini belirterek, boruyla ayrılmış bir | belirtebilirsiniz.
+   > [!NOTE]
+   > Hassas veri dosyasının varsayılan biçimi virgülle ayrılmış değerlerdir. "{Tab}" seçeneğini /ColumnSeparator parametresiyle belirterek sekmeyle ayrılmış bir dosya belirtebilirsiniz veya "Sekme" seçeneğini belirterek, boruyla ayrılmış bir | belirtebilirsiniz.
 
-
-   Bu, /Salt seçeneğini belirtmedıyseniz, karma bir dosyanın ve bu uzantılara sahip bir salt dosyanın **çıkışını <saltvalue>** alır:
+   Bu, /Salt seçeneğini belirtmedıyseniz, karma bir dosyanın ve bu uzantılara sahip bir salt dosyanın **çıkışını \<saltvalue\>** alır:
 
    - . EdmHash
    - . EdmSalt
-
 
 2. Bu dosyaları, hassas bilgi kaynağı tablo dosyanızı (PatientRecords) kiracınıza yüklemek için kullanabileceğiniz bilgisayara güvenli bir şekilde kopyalayın.
 
 3. EDM Hizmet Upload yetkilendirin, yönetici olarak Komut İstemi penceresini açın, **C:\EDM\Data** dizinine geçin ve sonra aşağıdaki komutu çalıştırın:
 
-   `EdmUploadAgent.exe /Authorize`
+   ```dos
+   EdmUploadAgent.exe /Authorize
+   ```
 
-> [!IMPORTANT]
-> **EdmUploadAgent'i** yüklü olduğu klasörden çalıştırmanız ve veri dosyalarınızın tam yolunu belirtebilirsiniz. 
+   > [!IMPORTANT]
+   > **EdmUploadAgent'i** yüklü olduğu klasörden çalıştırmanız ve veri dosyalarınızın tam yolunu belirtebilirsiniz.
 
 4. İş veya okul hesabınızla, Microsoft 365 grubuna eklenmiş olan iş veya okul EDM_DataUploaders açın. Bağlantıyı yapmak için kullanıcı hesabından kiracı bilgileri ayıklanır.
 
@@ -219,6 +221,7 @@ EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to 
    ```dos
    EdmUploadAgent.exe /GetDataStore
    ```
+
    Veri depolarının listesini ve en son ne zaman güncelleştirilenleri burada bulabilirsiniz.
 
 7. Belirli bir depoya yüklenen tüm verileri görmek için, Windows komut isteminde aşağıdaki komutu çalıştırarak tüm veri depolarının listesini ve ne zaman güncelleştirilenleri bakın:
@@ -226,8 +229,7 @@ EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to 
    ```dos
    EdmUploadAgent.exe /GetSession /DataStoreName <DataStoreName>
    ```
-     
+
 ## <a name="next-step"></a>Sonraki Adım
 
-- [Hassas bilgi türü/kural paketiyle tam olarak eşleşmesi için veri oluşturma](sit-get-started-exact-data-match-create-rule-package.md#create-exact-data-match-sensitive-information-typerule-package)
-
+- [Tam veri eşleşmesi hassas bilgi türü/kural paketi oluşturma](sit-get-started-exact-data-match-create-rule-package.md#create-exact-data-match-sensitive-information-typerule-package)

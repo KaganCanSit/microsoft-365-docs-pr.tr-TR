@@ -13,16 +13,31 @@ f1.keywords:
 ms.author: tiaraquan
 ms.article: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 57b4119c1c96132b2f9a5c715cb498f228802fcc
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c979ace1b5d3f1fa807384c769c5711c9fc2fda7
+ms.sourcegitcommit: f941967b8bc2c24401795e41fd155365a0dbc645
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63329859"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63761510"
 ---
 # <a name="change-history-for-microsoft-managed-desktop-documentation"></a>Microsoft Yönetilen Masaüstü belgeleri için değişiklik geçmişi
 
-Bu makalede, Microsoft Yönetilen Masaüstü belgelerinde yer alan yeni [ve güncelleştirilmiş makaleler listelenmektedir](index.yml). "Güncelleştirildi" makalelerde tipos düzeltmesi, stil veya biçimlendirme sorunları gibi düzeltmeler yer alan önemsiz düzeltmeler listelenmiyor. Her zaman, belirli bir tazyi ziyaret ederek (tüm değişikliklerin ayrıntıları da dahil) belirli taahhütlerin [geçmişini GitHub](https://github.com/MicrosoftDocs/microsoft-365-docs/tree/public/microsoft-365/managed-desktop).
+Bu makalede, Microsoft Yönetilen Masaüstü belgelerinde yer alan yeni [ve güncelleştirilmiş makaleler listelenmektedir](index.yml). "Güncelleştirildi" makalelerde malzeme eklemeleri veya düzeltmeler vardı. Yazım hataları, stil veya biçimlendirme sorunları gibi küçük düzeltmeler listelenmiyor. Her zaman, belirli bir tazyi ziyaret ederek (tüm değişikliklerin ayrıntıları da dahil) belirli taahhütlerin [geçmişini GitHub](https://github.com/MicrosoftDocs/microsoft-365-docs/tree/public/microsoft-365/managed-desktop).
+
+## <a name="march-2022"></a>Mart 2022
+
+Yeni veya değiştirilmiş makale | Açıklama
+--- | ---
+| [Yapılandırılabilir ayarlar başvurusu](working-with-managed-desktop/config-setting-ref.md) | Ek Proxy gereksinimleri eklendi |
+| [Kullanıcı deneyimini yerelleştirme](get-started/localization.md) | Daha fazla dil yükleme bölümüne not eklendi |
+| [Yapılandırılabilir ayarlar başvurusu](working-with-managed-desktop/config-setting-ref.md) | Eski Edge hakkında not eklendi |
+
+## <a name="february-2022"></a>Şubat 2022
+
+Yeni veya değiştirilmiş makale | Açıklama
+--- | ---
+| [Hizmet ölçümleri raporu](working-with-managed-desktop/service-metrics-report.md) | Hizmet metrik raporu eklendi |
+| [Microsoft Edge](get-started/edge-browser-app.md) | Makale güncelleştirildi |
 
 ## <a name="october-2021"></a>Ekim 2021
 

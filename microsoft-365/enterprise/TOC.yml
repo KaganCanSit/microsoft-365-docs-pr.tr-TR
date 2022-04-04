@@ -1,0 +1,686 @@
+- name: Microsoft 365 belgeleri ve kaynakları için destek
+  href: index.yml
+- name: Microsoft 365 Kurumsal’a genel bakış
+  href: microsoft-365-overview.md
+- name: Ağ
+  items:
+    - name: Yol Haritası
+      href: networking-roadmap-microsoft-365.md
+    - name: Plan
+      items:
+        - name: Microsoft 365 ağ bağlantısına genel bakış
+          href: microsoft-365-networking-overview.md
+        - name: Microsoft 365 ağ bağlantısı ilkeleri
+          href: microsoft-365-network-connectivity-principles.md
+        - name: Microsoft 365 ağ bağlantısını değerlendirme
+          href: assessing-network-connectivity.md
+        - name: Office 365 için ExpressRoute ile Ağ planlaması
+          href: network-planning-with-expressroute.md
+        - name: Microsoft 365 hizmetlerine bağlanan ağ cihazlarını planlama
+          href: plan-for-network-devices.md
+        - name: Microsoft 365 için ağ ve geçiş planlama
+          href: network-and-migration-planning.md
+    - name: Dağıtım
+      items:
+        - name: Etki alanı ekleme
+          href: ../admin/setup/add-domain.md
+        - name: Uç noktaları atlanması için yapılandırma
+          items:
+            - name: Office 365 IP Adresi ve URL Web hizmeti
+              href: microsoft-365-ip-web-service.md
+            - name: Web hizmetine dahil olmayan ek uç noktalar
+              href: additional-office365-ip-addresses-and-urls.md
+            - name: Office 365 GCC High ve DOD için ek ağ güvenliği gereksinimleri
+              href: additional-network-security-requirements-for-office-365-gcchigh-and-dod.md
+            - name: Office 365 DoD için DNS kayıtları
+              href: dns-records-for-office-365-dod.md
+            - name: Office 365 GCC High için DNS kayıtları
+              href: dns-records-for-office-365-gcc-high.md
+        - name: İçerik Teslim Ağı (CDN) Hızlı Başlangıç
+          href: office-365-cdn-quickstart.md
+        - name: CDN'yi SharePoint Online ile kullanma
+          href: use-microsoft-365-cdn-with-spo.md
+        - name: Uzak kullanıcılar için bağlantıyı iyileştirme
+          items:
+            - name: VPN bölünmüş tüneline genel bakış
+              href: microsoft-365-vpn-split-tunnel.md
+            - name: Yaygın VPN bölünmüş tünel senaryoları
+              href: microsoft-365-vpn-common-scenarios.md
+            - name: VPN bölünmüş tüneli uygulama
+              href: microsoft-365-vpn-implement-split-tunnel.md
+            - name: VPN bölünmüş tüneli için Teams medya trafiğinin güvenliğini sağlama
+              href: microsoft-365-vpn-securing-teams.md
+            - name: VPN ortamlarında akış ve canlı etkinlikler
+              href: microsoft-365-vpn-stream-and-live-events.md
+            - name: Çinkullanıcıları için Microsoft 365’i en iyi duruma getirme
+              href: microsoft-365-networking-china.md
+            - name: Yerel Windows 10 VPN istemcisiyle uzaktan çalışanlar için Microsoft 365 trafiğini en iyi duruma getirme
+              href: /windows/security/identity-protection/vpn/vpn-office-365-optimization
+        - name: Office 365 için ExpressRoute
+          href: azure-expressroute.md
+          items:
+            - name: ExpressRoute Uygulama
+              href: implementing-expressroute.md
+            - name: Office 365 için ExpressRoute ile Yönlendirme
+              href: routing-with-expressroute.md
+    - name: Yönetme
+      items:
+        - name: Office 365 uç noktaları
+          items:
+            - name: Microsoft 365 uç noktaları
+              href: microsoft-365-endpoints.md
+            - name: Office 365 uç noktalarını yönetme
+              href: managing-office-365-endpoints.md
+            - name: Dünya çapında uç noktalar
+              href: urls-and-ip-address-ranges.md
+            - name: ABD Hükümeti DoD uç noktaları
+              href: microsoft-365-u-s-government-dod-endpoints.md
+            - name: ABD Hükümeti GCC High uç noktaları
+              href: microsoft-365-u-s-government-gcc-high-endpoints.md
+            - name: 21Vianet uç noktaları tarafından sağlanan Office 365
+              href: urls-and-ip-address-ranges-21vianet.md
+        - name: İçerik teslim ağları
+          href: content-delivery-networks.md
+        - name: Office 365 hizmetlerinde IPv6 desteği
+          href: ipv6-support.md
+        - name: Office 365 ile NAT desteği
+          href: nat-support-with-microsoft-365.md
+        - name: Mac için Office'te ağ istekleri
+          href: network-requests-in-office-2016-for-mac.md
+        - name: Ağ planlama ve performans ayarlama
+          href: network-planning-and-performance.md
+        - name: Bağlantıyı izleme
+          href: monitor-connectivity.md
+        - name: ExpressRoute'u yönetme
+          href: managing-expressroute-for-connectivity.md
+    - name: Microsoft 365 Ağ İş Ortağı Programı
+      href: microsoft-365-networking-partner-program.md
+- name: Kiracı
+  items:
+    - name: Yol Haritası
+      href: tenant-roadmap-microsoft-365.md
+    - name: Plan
+      items:
+        - name: 'Abonelikler, lisanslar, hesaplar ve kiracılar'
+          href: subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings.md
+        - name: Üçüncü taraf SSL sertifikalarını planlama
+          href: plan-for-third-party-ssl-certificates.md
+        - name: Kurulum kılavuzları
+          href: setup-guides-for-microsoft-365.md
+        - name: Tümleştirme
+          items:
+            - name: Tümleşik Uygulamalar ve Azure AD
+              href: integrated-apps-and-azure-ads.md
+            - name: Şirket içi ile tümleştirme
+              href: microsoft-365-integration.md
+            - name: Azure tümleştirmesi
+              href: azure-integration.md
+            - name: Azure ExpressRoute
+              href: azure-expressroute.md
+        - name: Hibrit modern kimlik doğrulaması
+          items:
+            - name: Skype Kurumsal Sunucu ve Exchange Server için önkoşullar
+              href: hybrid-modern-auth-overview.md
+            - name: Exchange Server'ı yapılandırma
+              href: configure-exchange-server-for-hybrid-modern-authentication.md
+            - name: Skype Kurumsal'ı yapılandırma
+              href: configure-skype-for-business-for-hybrid-modern-authentication.md
+            - name: Skype Kurumsal ve Exchange için kaldırma veya devre dışı bırakma
+              href: remove-or-disable-hybrid-modern-authentication-from-skype-for-business-and-excha.md
+            - name: 'Office 2013, Office 2016 ve Office 2019 istemci uygulamaları'
+              href: modern-auth-for-office-2013-and-2016.md
+        - name: Yükseltmenizi planlama
+          href: plan-upgrade-previous-versions-office.md
+          items:
+            - name: Office 2007
+              items:
+                - name: Office 2007 sunucuları ve istemcilerinden yükseltme
+                  href: upgrade-from-office-2007-servers-and-products.md
+                - name: Office 2007 masaüstü
+                  href: /DeployOffice/endofsupport/office-2007-end-support-roadmap
+                - name: Exchange 2007
+                  href: exchange-2007-end-of-support.md
+                - name: SharePoint 2007
+                  href: sharepoint-2007-end-of-support.md
+                - name: Office İletişim Sunucusu
+                  href: /skypeforbusiness/plan-your-deployment/upgrade
+                - name: PerformancePoint Server 2007
+                  href: pps-2007-end-of-support.md
+                - name: Project Server 2007
+                  href: project-server-2007-end-of-support.md
+            - name: Office 2010
+              items:
+                - name: Office 2010 sunucuları ve istemcilerinden yükseltme
+                  href: upgrade-from-office-2010-servers-and-products.md
+                - name: Office 2010 masaüstü
+                  href: /DeployOffice/endofsupport/office-2010-end-support-roadmap
+                - name: Exchange 2010
+                  href: exchange-2010-end-of-support.md
+                - name: SharePoint 2010
+                  href: upgrade-from-sharepoint-2010.md
+                - name: Lync Server 2010
+                  href: /skypeforbusiness/plan-your-deployment/upgrade
+                - name: Project Server 2010
+                  href: project-server-2010-end-of-support.md
+        - name: Microsoft 365'te kiracı yalıtımı
+          href: /compliance/assurance/microsoft-365-isolation-controls
+          items:
+            - name: Control Azure Active Directory Yalıtım ve Erişim Denetimi
+              href: microsoft-365-isolation-in-azure-active-directory.md
+            - name: Kiracı Sınırlarını İzleme ve Test Etme
+              href: /compliance/assurance/assurance-monitoring-and-testing
+            - name: Kaynak Sınırları
+              href: /compliance/assurance/assurance-resource-limits
+            - name: Yalıtım ve Erişim Denetimi
+              href: microsoft-365-isolation-in-microsoft-365.md
+    - name: Dağıtım
+      items:
+        - name: Etki alanı ekleme
+          href: ../admin/setup/add-domain.md
+    - name: Yönetme
+      items:
+        - name: Microsoft 365 hizmet sistem durumu
+          href: microsoft-365-service-health.md
+        - name: Microsoft 365 izleme
+          href: microsoft-365-monitoring.md
+          items:
+            - name: Exchange Online izleme
+              href: microsoft-365-exchange-monitoring.md
+              items:
+                - name: Posta kutusu kullanımı için hizmet uyarıları
+                  href: microsoft-365-mailbox-utilization-service-alerts.md
+                - name: MRS kaynak gecikmeleri için hizmet uyarıları
+                  href: microsoft-365-mrs-source-delays-service-alerts.md
+                - name: Dış alıcılar için kuyruğa alınan iletiler için hizmet uyarıları
+                  href: microsoft-365-external-recipient-service-alerts.md
+            - name: Microsoft 365 Uygulamaları izleme
+              href: microsoft-365-apps-monitoring.md
+            - name: Microsoft 365 Teams izleme
+              href: microsoft-365-teams-monitoring.md
+        - name: Kurulum kılavuzları
+          href: setup-guides-for-microsoft-365.md
+    - name: Birden çok kiracı
+      items:
+        - name: Kiracılar arası işbirliği
+          href: microsoft-365-inter-tenant-collaboration.md
+        - name: Kiracılar arası posta kutusu geçişi
+          href: cross-tenant-mailbox-migration.md
+        - name: Kiracıdan kiracıya geçişler
+          href: microsoft-365-tenant-to-tenant-migrations.md
+    - name: Multi-Geo
+      items:
+        - name: Microsoft 365 Multi-Geo
+          href: microsoft-365-multi-geo.md
+        - name: Teams Multi-Geo
+          href: multi-geo-capabilities-in-teams-in-microsoft-365.md
+        - name: OneDrive ve SharePoint Multi-Geo
+          href: multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md
+        - name: Exchange Multi-Geo
+          href: multi-geo-capabilities-in-exchange-online.md
+        - name: Plan
+          items:
+            - name: Multi-Geo için planlama
+              href: plan-for-multi-geo.md
+            - name: Yönetim deneyimi
+              href: administering-a-multi-geo-environment.md
+            - name: Kullanıcı deneyimi
+              href: multi-geo-user-experience.md
+        - name: Dağıtım
+          items:
+            - name: Multi-Geo'da yapılandırma
+              href: multi-geo-tenant-configuration.md
+            - name: Tercih edilen veri konumunu yapılandır
+              href: /azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation?toc=/microsoft-365/Enterprise/toc.json&bc=/microsoft-365/enterprise/breadcrumb/toc.json
+            - name: Arama yapılandırma
+              href: configure-search-for-multi-geo.md
+        - name: Yönetme
+          items:
+            - name: Multi-Geo ortamı yönetme
+              href: administering-a-multi-geo-environment.md
+            - name: SharePoint kotalarını yönetme
+              href: sharepoint-multi-geo-storage-quota.md
+            - name: OneDrive sitesi taşıma
+              href: move-onedrive-between-geo-locations.md
+            - name: SharePoint sitesini taşıma
+              href: move-sharepoint-between-geo-locations.md
+            - name: Coğrafi konum yöneticisi ekleme veya kaldırma
+              href: add-a-sharepoint-geo-admin.md
+            - name: İçeriği coğrafi konumla kısıtlama
+              href: restrict-content-to-geo-location.md
+            - name: Multi-Geo Microsoft 365 eKeşif'i yapılandırma
+              href: multi-geo-ediscovery-configuration.md
+            - name: Belirli bir PDL ile grup oluşturma
+              href: multi-geo-add-group-with-pdl.md
+            - name: Coğrafi konumu silme
+              href: delete-a-geo-location.md
+            - name: Uydu coğrafi konumunuzdaki SharePoint Multi-Geo'sunu etkinleştirme
+              href: enabling-SP-multigeo-satellite-geolocation.md
+            - name: Exchange Multi-Geo Yönetimi
+              href: administering-exchange-online-multi-geo.md
+    - name: Yeni bir Microsoft 365 veri merkezi coğrafyasına taşıma
+      href: moving-data-to-new-datacenter-geos.md
+      items:
+        - name: Veri taşıma isteğinde bulunma
+          href: request-your-data-move.md
+        - name: Verilerinizi taşıma sırasında ve sonrasında
+          href: during-and-after-your-data-move.md
+        - name: Veri taşıma genel SSS
+          href: data-move-faq.yml
+        - name: Müşteri verilerinin depolandığı yer
+          href: o365-data-locations.md
+        - name: Avrupa Birliği için veri konumları
+          href: eu-data-storage-locations.md
+- name: Kimlik
+  items:
+    - name: Genel bakış
+      href: deploy-identity-solution-overview.md
+    - name: Adım 1. Kimlik modelinizi belirleme
+      href: deploy-identity-solution-identity-model.md
+    - name: Adım 2. Ayrıcalıklı hesaplarınızı koruma
+      href: protect-your-global-administrator-accounts.md
+    - name: Adım 3. Kullanıcı hesaplarınızı koruma
+      href: microsoft-365-secure-sign-in.md
+    - name: Adım 4. Kimlik modelinizi dağıtma
+      items:
+        - name: Yalnızca bulut kimliği
+          href: cloud-only-identities.md
+        - name: Karma kimlik
+          items:
+            - name: Dizin eşitlemesine hazırlanma
+              href: prepare-for-directory-synchronization.md
+            - name: Dizin eşitlemesi için yönlendirilebilir olmayan bir etki alanını hazırlama
+              href: prepare-a-non-routable-domain-for-directory-synchronization.md
+            - name: Dizin eşitlemesini ayarlama
+              href: set-up-directory-synchronization.md
+            - name: Hibrit çözümler
+              items:
+                - name: Genel bakış
+                  href: hybrid-solutions.md
+                - name: SharePoint Server 2016 kimlik doğrulaması için Azure Active Directory kullanma
+                  href: /azure/active-directory/saas-apps/sharepoint-on-premises-tutorial
+                - name: Şirket içi ağı bir Azure sanal ağına bağlama
+                  href: connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md
+                - name: Azure IaaS'de dizin eşitleme sunucusu dağıtma
+                  href: deploy-microsoft-365-directory-synchronization-dirsync-in-microsoft-azure.md
+                - name: Azure'da yüksek kullanılabilirliğe sahip şirket dışı kimlik doğrulamasını dağıtma
+                  href: deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md
+                  items:
+                    - name: 1. Aşama - Azure'u yapılandırma
+                      href: high-availability-federated-authentication-phase-1-configure-azure.md
+                    - name: 2. Aşama - Etki alanı denetleyicilerini yapılandırma
+                      href: high-availability-federated-authentication-phase-2-configure-domain-controllers.md
+                    - name: 3. Aşama - AD FS yapılandırma
+                      href: high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md
+                    - name: 4. Aşama - Web uygulaması ara sunucularını yapılandırma
+                      href: high-availability-federated-authentication-phase-4-configure-web-application-pro.md
+                    - name: 5. Aşama - Şirket dışı kimlik doğrulamasını yapılandırma
+                      href: high-availability-federated-authentication-phase-5-configure-federated-authentic.md
+                - name: Microsoft Azure'da SharePoint Server 2013 Olağanüstü Durum Kurtarma
+                  href: sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md
+    - name: Yönetme
+      items:
+        - name: Kullanıcı hesapları
+          items:
+            - name: Kullanıcı hesapları
+              href: manage-microsoft-365-accounts.md
+            - name: Aynı anda birkaç kullanıcıyı ekleme
+              href: add-several-users-at-the-same-time.md
+        - name: Lisanslar
+          href: assign-licenses-to-user-accounts.md
+        - name: Parolalar
+          href: manage-microsoft-365-passwords.md
+        - name: Gruplar
+          href: manage-microsoft-365-groups.md
+        - name: İdare
+          href: manage-microsoft-365-identity-governance.md
+        - name: Dizin eşitleme
+          items:
+            - name: Durumu görüntüle
+              href: view-directory-synchronization-status.md
+            - name: Hataları tanımlama
+              href: identify-directory-synchronization-errors.md
+            - name: Sorunları düzeltme
+              href: fix-problems-with-directory-synchronization.md
+            - name: Kapat
+              href: turn-off-directory-synchronization.md
+- name: İstemci ve sunucu yazılımı
+  items:
+    - name: Yol Haritası
+      href: client-server-software-roadmap-microsoft-365.md
+    - name: 'SharePoint, Exchange, Skype Kurumsal ve Lync için mimari modeller'
+      href: architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md
+    - name: Plan
+      items:
+        - name: Yükseltmenizi planlama
+          href: plan-upgrade-previous-versions-office.md
+    - name: Dağıtım
+      items:
+        - name: Office 2007
+          items:
+            - name: Office 2007 sunucuları ve istemcilerinden yükseltme
+              href: upgrade-from-office-2007-servers-and-products.md
+            - name: Office 2007 masaüstü
+              href: /DeployOffice/office-2007-end-support-roadmap
+            - name: Exchange 2007
+              href: exchange-2007-end-of-support.md
+            - name: SharePoint 2007
+              href: sharepoint-2007-end-of-support.md
+            - name: Office İletişim Sunucusu
+              href: /skypeforbusiness/plan-your-deployment/upgrade
+            - name: PerformancePoint Server 2007
+              href: pps-2007-end-of-support.md
+            - name: Project Server 2007
+              href: project-server-2007-end-of-support.md
+        - name: Office 2010
+          items:
+            - name: Office 2010 sunucuları ve istemcilerinden yükseltme
+              href: upgrade-from-office-2010-servers-and-products.md
+            - name: Office 2010 masaüstü
+              href: /DeployOffice/office-2010-end-support-roadmap
+            - name: Exchange 2010
+              href: exchange-2010-end-of-support.md
+            - name: SharePoint 2010
+              href: upgrade-from-sharepoint-2010.md
+            - name: Lync Server 2010
+              href: /skypeforbusiness/plan-your-deployment/upgrade
+            - name: Project Server 2010
+              href: project-server-2010-end-of-support.md
+        - name: Office 2013
+          items:
+            - name: Office 2013 masaüstü
+              href: /DeployOffice/endofsupport/plan-upgrade-older-versions-office
+            - name: SharePoint 2013
+              href: upgrade-from-sharepoint-2013.md
+            - name: Lync Server 2013
+              href: upgrade-from-lync-2013.md
+            - name: Project Server 2013
+              href: project-server-2013-end-of-support.md
+            - name: Exchange Server 2013
+              href: exchange-2013-end-of-support.md
+- name: Uyumluluk
+  href: ../compliance/index.yml
+- name: Güvenlik
+  href: ../security/index.yml
+- name: Bulut hizmetleri
+  items:
+    - name: Yol Haritası
+      href: cloud-services-roadmap-microsoft-365.md
+    - name: Dağıtım
+      items:
+        - name: Hazırlanın
+          href: configure-services-and-applications.md
+        - name: Exchange Online
+          href: /Exchange/exchange-online
+        - name: SharePoint
+          href: /sharepoint/sharepoint-online
+        - name: Skype Kurumsal
+          href: /SkypeForBusiness/skype-for-business-online
+        - name: Microsoft Teams
+          href: /MicrosoftTeams/Teams-overview
+        - name: Yammer
+          href: 'https://support.office.com/article/e1464355-1f97-49ac-b2aa-dd320b179dbe'
+        - name: Hak yönetimini etkinleştirme
+          href: activate-rms-in-microsoft-365.md
+        - name: Yayın seçeneklerini yapılandırma
+          href: 'https://support.office.com/article/365-3b3adfa4-1777-4ff0-b606-fb8732101f47'
+        - name: Kullanıcılarınızı eğitme
+          href: /office365/admin/admin-overview/get-started-with-office-365#training-resources-for-your-users
+    - name: Yönetme
+      items:
+        - name: Hizmet durumunu denetleme
+          href: view-service-health.md
+        - name: Destek seçenekleri
+          href: ../admin/get-help-support.md
+        - name: Exchange Online
+          href: /Exchange/exchange-online
+        - name: SharePoint
+          href: 'https://support.office.com/article/79eb0420-8cbd-4bcb-a90b-ddc7d3ab4b3a'
+        - name: Skype Kurumsal
+          href: /SkypeForBusiness/skype-for-business-online
+        - name: Microsoft Teams
+          href: /microsoftteams/upgrade-monitor-quality
+        - name: Yammer
+          href: 'https://support.office.com/article/e1464355-1f97-49ac-b2aa-dd320b179dbe'
+        - name: Performans ve ayarlama
+          items:
+            - name: Microsoft 365 performansını ayarlama
+              href: tune-microsoft-365-performance.md
+            - name: Temelleri ve performans geçmişini kullanarak performans ayarlama
+              href: performance-tuning-using-baselines-and-history.md
+            - name: Evet veya Hayır veren bir formüle dayalı koşullu biçimlendirme
+              href: tune-exchange-online-performance.md
+            - name: SharePoint performansını ayarlama
+              href: tune-sharepoint-online-performance.md
+              items:
+                - name: SharePoint için performans ayarlamaya giriş
+                  href: introduction-to-performance-tuning-for-sharepoint-online.md
+                - name: SharePoint'te performans sorunlarını tanılama
+                  href: diagnosing-performance-issues-with-sharepoint-online.md
+            - name: Skype Kurumsal Çevrimiçi Sürüm performansını ayarlama
+              href: tune-skype-for-business-online-performance.md
+            - name: Project Online performansını iyileştirme
+              href: /ProjectOnline/tune-project-online-performance
+            - name: Performans sorunlarını giderme planı
+              href: performance-troubleshooting-plan.md
+- name: Windows 10
+  items:
+    - name: Yayın durumunu denetleme
+      href: /windows/deployment/update/check-release-health
+    - name: Dağıtım ve güncelleştirme
+      href: /windows/deployment/
+- name: Microsoft 365 Kurumsal Uygulamaları
+  href: /deployoffice/deployment-guide-microsoft-365-apps
+- name: Surface cihazları
+  href: /surface/deploy
+- name: Cihaz yönetimi
+  items:
+    - name: Yol Haritası
+      href: device-management-roadmap-microsoft-365.md
+- name: Microsoft Edge
+  href: /deployedge/deploy-edge-plan-deployment
+- name: Dağıtım ve güncelleştirme kanalı örnek yapılandırmaları
+  items:
+    - name: Genel bakış
+      href: deploy-update-channels-examples.md
+    - name: En son sürümlerin geniş kapsamlı dağıtımı
+      href: deploy-update-channels-examples-rapid-deploy.md
+- name: PowerShell ile Microsoft 365’i yönetme
+  href: manage-microsoft-365-with-microsoft-365-powershell.md
+  items:
+    - name: Kullanmaya başlayın
+      href: getting-started-with-microsoft-365-powershell.md
+      items:
+        - name: PowerShell'i neden kullanmanız gerekir?
+          href: why-you-need-to-use-microsoft-365-powershell.md
+        - name: PowerShell ile Microsoft 365’e bağlanma
+          href: connect-to-microsoft-365-powershell.md
+        - name: Tek bir Windows PowerShell penceresinde tüm Microsoft 365 hizmetlerine bağlanma
+          href: connect-to-all-microsoft-365-services-in-a-single-windows-powershell-window.md
+        - name: PowerShell ile rapor oluşturma
+          href: use-windows-powershell-to-create-reports-in-microsoft-365.md
+        - name: Microsoft 365 hizmetleri için cmdlet başvuruları
+          href: cmdlet-references-for-microsoft-365-services.md
+        - name: PowerShell topluluk kaynakları
+          href: microsoft-365-powershell-community-resources.md
+    - name: 'Kullanıcı hesapları, parolalar, lisanslar ve gruplar'
+      href: manage-user-accounts-and-licenses-with-microsoft-365-powershell.md
+      items:
+        - name: Kullanıcı hesapları
+          items:
+            - name: Oluşturma
+              href: create-user-accounts-with-microsoft-365-powershell.md
+            - name: Görünüm
+              href: view-user-accounts-with-microsoft-365-powershell.md
+            - name: Özellikleri yapılandırma
+              href: configure-user-account-properties-with-microsoft-365-powershell.md
+            - name: Yönetici rollerini atama
+              href: assign-roles-to-user-accounts-with-microsoft-365-powershell.md
+            - name: Silme ve geri yükleme
+              href: delete-and-restore-user-accounts-with-microsoft-365-powershell.md
+            - name: Engelle
+              href: block-user-accounts-with-microsoft-365-powershell.md
+            - name: Parolalar
+              href: manage-passwords-with-microsoft-365-powershell.md
+        - name: Lisanslar ve hizmetler
+          items:
+            - name: Lisansları ve hizmetleri görüntüleme
+              href: view-licenses-and-services-with-microsoft-365-powershell.md
+            - name: Lisanslı ve lisanssız kullanıcıları görüntüleme
+              href: view-licensed-and-unlicensed-users-with-microsoft-365-powershell.md
+            - name: Kullanıcı hesaplarına lisans atama
+              href: assign-licenses-to-user-accounts-with-microsoft-365-powershell.md
+            - name: Hesap lisansı ve hizmet ayrıntılarını görüntüleme
+              href: view-account-license-and-service-details-with-microsoft-365-powershell.md
+            - name: Kullanıcı hesaplarından lisansları kaldırma
+              href: remove-licenses-from-user-accounts-with-microsoft-365-powershell.md
+            - name: Hizmetlere erişimi devre dışı bırakma
+              href: disable-access-to-services-with-microsoft-365-powershell.md
+              items:
+                - name: Sway'e erişimi devre dışı bırakna
+                  href: disable-access-to-sway-with-microsoft-365-powershell.md
+                - name: Kullanıcı lisansları atama sırasında hizmetlere erişimi devre dışı bırakma
+                  href: disable-access-to-services-while-assigning-user-licenses.md
+        - name: Gruplar
+          items:
+            - name: Güvenlik gruplarını yönetme
+              href: manage-security-groups-with-microsoft-365-powershell.md
+            - name: Güvenlik grubu üyeliğini koruma
+              href: maintain-group-membership-with-microsoft-365-powershell.md
+            - name: Grup Microsoft 365 yönetme
+              href: manage-microsoft-365-groups-with-powershell.md
+    - name: SharePoint’i yönetme
+      href: manage-sharepoint-online-with-microsoft-365-powershell.md
+      items:
+        - name: SharePoint Online siteleri oluşturma ve kullanıcı ekleme
+          href: create-sharepoint-sites-and-add-users-with-powershell.md
+        - name: SharePoint Online kullanıcılarını ve gruplarını yönetme
+          href: manage-sharepoint-users-and-groups-with-powershell.md
+        - name: SharePoint Online site gruplarını yönetme
+          href: manage-sharepoint-site-groups-with-powershell.md
+    - name: Exchange Online'ı yönetme
+      href: /powershell/exchange/connect-to-exchange-online-powershell
+    - name: E-postayı Microsoft 365'e geçirmek için PowerShell'i kullanma
+      href: use-powershell-for-email-migration-to-microsoft-365.md
+      items:
+        - name: Microsoft 365'e geçiş geçişi gerçekleştirmek için PowerShell'i kullanma
+          href: use-powershell-to-perform-a-cutover-migration-to-microsoft-365.md
+        - name: Microsoft 365'e IMAP geçişi gerçekleştirmek için PowerShell'i kullanma
+          href: use-powershell-to-perform-an-imap-migration-to-microsoft-365.md
+        - name: Microsoft 365'e aşamalı geçiş gerçekleştirmek için PowerShell'i kullanma
+          href: use-powershell-to-perform-a-staged-migration-to-microsoft-365.md
+    - name: Temsilci Erişimi iş ortakları için Windows PowerShell ile Microsoft 365'i yönetme
+      href: manage-microsoft-365-with-windows-powershell-for-delegated-access-permissions-dap-p.md
+      items:
+        - name: Temsilci Erişimi için Windows PowerShell iş ortaklarıyla Microsoft 365 kiracılarını yönetme
+          href: manage-microsoft-365-tenants-with-windows-powershell-for-delegated-access-permissio.md
+        - name: Temsilci Erişimi için Windows PowerShell iş ortaklarıyla bir istemci kiracılığına etki alanı ekleme
+          href: add-a-domain-to-a-client-tenancy-with-windows-powershell-for-delegated-access-pe.md
+        - name: Temsilci Erişimi ortakları için uzak Windows PowerShell aracılığıyla Exchange Online'a bağlanma
+          href: /powershell/exchange/connect-to-exchange-online-powershell
+        - name: Temsilci Erişimi iş ortakları için Windows PowerShell aracılığıyla müşteri raporlama verilerini alma
+          href: retrieve-customer-tenant-reporting-data-with-windows-powershell-for-delegated-ac.md
+    - name: Microsoft Teams'i yönetme
+      href: /microsoftteams/teams-powershell-install
+    - name: Skype Kurumsal Çevrimiçi Sürüm'ü yönetme
+      href: manage-skype-for-business-online-with-microsoft-365-powershell.md
+      items:
+        - name: Skype Kurumsal Çevrimiçi Sürüm ilkelerini yönetme
+          href: manage-skype-for-business-online-policies-with-microsoft-365-powershell.md
+        - name: Kullanıcı başına Skype Kurumsal Çevrimiçi Sürüm ilkeleri atama
+          href: assign-per-user-skype-for-business-online-policies-with-microsoft-365-powershell.md
+    - name: Merkezi Dağıtım PowerShell ile eklentileri yönetme
+      href: use-the-centralized-deployment-powershell-cmdlets-to-manage-add-ins.md
+- name: Windows ve Office 365 dağıtım laboratuvarı seti
+  href: modern-desktop-deployment-and-management-lab.md
+- name: Test Laboratuvarı Kılavuzları
+  href: m365-enterprise-test-lab-guides.md
+  items:
+    - name: Temel yapılandırma
+      items:
+        - name: Hafif
+          href: lightweight-base-configuration-microsoft-365-enterprise.md
+        - name: Sanal kuruluş
+          href: simulated-ent-base-configuration-microsoft-365-enterprise.md
+    - name: Kimlik
+      items:
+        - name: Parola karması eşitleme
+          href: password-hash-sync-m365-ent-test-environment.md
+        - name: Geçiş kimlik doğrulaması
+          href: pass-through-auth-m365-ent-test-environment.md
+        - name: Şirket Dışı Kimlik Doğrulaması
+          href: federated-identity-for-your-microsoft-365-dev-test-environment.md
+        - name: Microsoft Azure AD Sorunsuz Çoklu Oturum Açma
+          href: single-sign-on-m365-ent-test-environment.md
+        - name: Çok faktörlü kimlik doğrulaması
+          href: multi-factor-authentication-microsoft-365-test-environment.md
+        - name: Genel yönetici hesaplarını koruma
+          href: protect-global-administrator-accounts-microsoft-365-test-environment.md
+        - name: Parola geri yazma
+          href: password-writeback-m365-ent-test-environment.md
+        - name: Parola sıfırlama
+          href: password-reset-m365-ent-test-environment.md
+        - name: Otomatik lisanslama ve grup üyeliği
+          href: automate-licenses-group-membership-microsoft-365-test-environment.md
+        - name: Azure AD Kimlik Koruması
+          href: azure-ad-identity-protection-microsoft-365-test-environment.md
+        - name: Kimlik ve cihaz erişimi
+          href: identity-device-access-m365-test-environment.md
+          items:
+            - name: Yalnızca bulut
+              href: cloud-only-prereqs-m365-test-environment.md
+            - name: Parola karması eşitleme
+              href: phs-prereqs-m365-test-environment.md
+            - name: Geçiş kimlik doğrulaması
+              href: pta-prereqs-m365-test-environment.md
+    - name: Mobil cihaz yönetimi
+      items:
+        - name: iOS ve Android cihazlarını kaydetme
+          href: enroll-ios-and-android-devices-in-your-microsoft-enterprise-365-dev-test-environ.md
+        - name: Cihaz uyumluluk ilkeleri
+          href: mam-policies-for-your-microsoft-365-enterprise-dev-test-environment.md
+    - name: Bilgi koruması
+      items:
+        - name: Artırılmış Microsoft 365 güvenliği
+          href: increased-o365-security-microsoft-365-enterprise-dev-test-environment.md
+        - name: Veri sınıflandırması
+          href: data-classification-microsoft-365-enterprise-dev-test-environment.md
+        - name: Ayrıcalıklı erişim yönetimi
+          href: privileged-access-microsoft-365-enterprise-dev-test-environment.md
+- name: Contoso örnek olay incelemesi
+  href: contoso-case-study.md
+  items:
+    - name: Genel bakış
+      href: contoso-overview.md
+    - name: Contoso BT altyapısı ve gereksinimleri
+      href: contoso-infra-needs.md
+    - name: Ağ
+      href: contoso-networking.md
+    - name: Kimlik
+      href: contoso-identity.md
+    - name: Windows 10 Enterprise
+      href: contoso-win10.md
+    - name: Microsoft 365 Kurumsal Uygulamaları
+      href: contoso-o365pp.md
+    - name: Mobil cihaz yönetimi
+      href: contoso-mdm.md
+    - name: Bilgi koruması
+      href: contoso-info-protect.md
+    - name: Güvenlik özeti
+      href: contoso-security-summary.md
+- name: Microsoft 365 mimarisi ve çözümler
+  href: ../solutions/index.yml
+- name: Bulut hizmetleriyle Kurumsal İş Sürekliliği Yönetimi (EBCM)
+  href: /compliance/assurance/assurance-understanding-ebcm-with-cloud-services
+  items:
+    - name: Müşteri ve bulut iş ortağı EBCM sorumlulukları
+      href: /compliance/assurance/assurance-customer-and-cloud-partner-ebcm-responsibilities
+    - name: Microsoft 365 bulut hizmetleri dayanıklılığı
+      href: /compliance/assurance/assurance-m365-service-resiliency
+    - name: Süreklilik planınızı geliştirme
+      href: /compliance/assurance/assurance-developing-your-ebcm-plan
+    - name: Hizmet olayı risk azaltma senaryoları
+      href: /compliance/assurance/assurance-microsoft-365-mitigations
+- name: Gezinti kılavuzu
+  href: ../microsoft-365-docs-navigation-guide.md?toc=/microsoft-365/Enterprise/toc.json&bc=/microsoft-365/enterprise/breadcrumb/toc.json
+- name: İş için Microsoft 365
+  href: ../admin/index.yml

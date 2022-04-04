@@ -1,5 +1,5 @@
 ---
-title: Duyarlılık etiketleri oluşturma ve yayımlama
+title: Hassasiyet etiketleri oluşturma ve yayınlama
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: 'Tüm çözüm ve Microsoft Bilgi Koruması gereksinimi: Duyarlılık etiketlerini oluşturun, yapılandırarak ve yayımlayın; bu etiketleri kullanarak kuruluş verilerinizi sınıflandırin ve koruyun.'
-ms.openlocfilehash: b5bc61de14f54d65e4ce5eb6f7ae78303626c123
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 5c80147c18cff8c27f8c205ab1ed600e892f7335
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63032497"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499583"
 ---
 # <a name="create-and-configure-sensitivity-labels-and-their-policies"></a>Duyarlılık etiketlerini ve onların ilkelerini oluşturma ve yapılandırma
 
@@ -52,7 +52,7 @@ Kuruluş genel yöneticisinin, duyarlılık etiketlerinin tüm yönlerini oluşt
     ![Duyarlılık etiketi oluşturun.](../media/create-sensitivity-label-full.png)
 
     > [!NOTE]
-    > Varsayılan olarak, kiracıların hiçbir etiketi yok ve bunları oluşturmanız gerekir. Örnek resimdeki etiketler, [Azure Information Protection'dan geçirilen varsayılan etiketleri gösterir](/azure/information-protection/configure-policy-migrate-labels).
+    > Varsayılan olarak, kiracıların hiçbir etiketi yok ve bunları oluşturmanız gerekir. Örnek resimdeki etiketler, Azure Posta'dan [geçirilen varsayılan etiketleri Information Protection](/azure/information-protection/configure-policy-migrate-labels).
 
 3. Bu **etiket için kapsamı tanımla sayfasında** , yapılandırabilirsiniz ayarlar için etiketin kapsamını ve yayımlandıklarda nerede görünür olacaklarını belirleyen seçenekler belirler:
 
@@ -96,13 +96,13 @@ Güvenlik ve Uyumluluk Merkezi [PowerShell'in Set-Label](/powershell/module/exch
 
 - Çok *uluslu dağıtımlarda LocaleSettings* parametresini kullanın, böylece kullanıcılar etiket adını ve araç ipucunı yerel dillerinde görebilirler. Aşağıdaki [bölümde Fransızca](#example-configuration-to-configure-a-sensitivity-label-for-different-languages) , İtalyanca ve Almanca etiket adı ve araç ipucu metnini belirten örnek bir yapılandırma vardır.
 
-- Azure Information Protection birleşik etiketleme istemcisi, etiket rengi ayarlama ve etiket uygulandığında özel özellik uygulama gibi kapsamlı bir gelişmiş ayarlar listesini destekler.[](/azure/information-protection/rms-client/clientv2-admin-guide-customizations) Tam liste için bkz. [Bu istemcinin yönetici kılavuzundan](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-labels) etiketler için kullanılabilir gelişmiş ayarlar.
+- Azure Information Protection birleşik etiketleme istemcisi, etiket rengi ayarlamayı ve etiket uygulandığında özel [](/azure/information-protection/rms-client/clientv2-admin-guide-customizations) bir özellik uygulama gibi kapsamlı bir gelişmiş ayarlar listesini destekler. Tam liste için bkz. [Bu istemcinin yönetici kılavuzundan](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-labels) etiketler için kullanılabilir gelişmiş ayarlar.
 
 #### <a name="example-configuration-to-configure-a-sensitivity-label-for-different-languages"></a>Farklı diller için duyarlılık etiketini yapılandırmak üzere örnek yapılandırma
 
 Aşağıdaki örnekte, araç ipucu için yer tutucu metinle birlikte "Genel" adlı etiketin PowerShell yapılandırması görüntülenir. Bu örnekte, etiket adı ve araç ipucu metni Fransızca, İtalyanca ve Almanca için yapılandırılmıştır.
 
-Bu yapılandırmanın sonucunda, bu görüntüleme dillerini kullanan Office uygulamaları olan kullanıcılar, aynı dilde etiket adlarını ve araç ipucunı görebilirler. Benzer şekilde, Dosya Gezgini'nden dosyaları etiketlemek için Azure Information Protection birleşik etiketleme istemcisini yüklemiş olursanız, Windows'in dil sürümlerine sahip olan kullanıcılar, etiketleme için sağ tıklama eylemlerini kullandıklarında kendi etiket adlarını ve araç ipucularını yerel dillerinde görebilirler.
+Bu yapılandırmanın sonucunda, bu görüntüleme dillerini kullanan Office uygulamaları olan kullanıcılar, aynı dilde etiket adlarını ve araç ipucunı görebilirler. Benzer şekilde, Dosya Gezgini'tan dosyaları etiketlemek için Azure Information Protection birleşik etiketleme istemcisi yüklüyse, Windows'in dil sürümlerine sahip kullanıcılar etiketlemek için sağ tıklama eylemlerini kullandıklarında kendi etiket adlarını ve araç ipucularını yerel dillerinde görebilirler.
 
 Desteklemeniz gereken diller için, Office tanımlayıcılarını [(dil](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016#language-identifiers) etiketleri olarak da bilinir) kullanın ve etiket adı ve araç ipucu için kendi çevirinizi belirtin.
 
@@ -168,20 +168,17 @@ Var olan bir etiket politikasını düzenlemek için, ilkeyi seçin ve sonra da 
 
 Bu düğme, hangi **etiketlerin ekli** olduğunu ve etiket ayarlarını düzenlemenizi sağlayan İlke yapılandırmasını başlatır. Yapılandırmayı tamamlarken, tüm değişiklikler seçili kullanıcılara ve hizmetlere otomatik olarak çoğaltılır.
 
-Windows, macOS, iOS ve Android'de Office uygulamaları için yerleşik etiketlemeyi kullanıyorsanız, kullanıcılar dört saat içinde ve tarayıcıyı yenilerken Word, Excel ve Web üzerinde PowerPoint için bir saat içinde yeni etiketler görebilir. Bununla birlikte, değişikliklerin tüm uygulama ve hizmetlere çoğaltılması için 24 saate kadar izin verin.
-
-Duyarlılık etiketlerini destekleyen diğer uygulamalar ve hizmetler kendi güncelleştirme zamanlamaları ve ilke güncelleştirmeleri için tetikleyicileri ile 24 saate kadar daha sık güncelleştirmesi olabilir. Ayrıntılar için onların belgelerine bakın. Örneğin, Azure Information Protection birleşik etiketleme istemcisi için, [Azure Information Protection](/azure/information-protection/rms-client/use-client#detailed-comparisons-for-the-azure-information-protection-clients) istemcileri tablosu  için ayrıntılı karşılaştırmalar'da İlke güncelleştirme satırına bakın.
-
-> [!TIP]
-> Bazen duyarlılık etiketlerinin ve etiket ilkelerinin beklendiği gibi çalışmayı geciktirmelerine neden olan zamanlama bağımlılıklarını faktörü unutmayın. Örneğin, şifreleme uygulayan etiketler için [Azure Information Protection](/azure/information-protection/prepare#group-membership-caching-by-azure-information-protection) hizmeti tarafından yeni bir grup ve grup üyeliği değişiklikleri, ağ çoğaltması gecikme süresi ve bant genişliği kısıtlamaları, grup üyeliği önbelleğe alma.
-> 
-> Her biri kendi zamanlama döngülerine sahip olan birçok dış bağımlılıkla, son değişiklikler için etiketlerle ve etiket ilkeleriyle ilgili sorunları gidermek için zaman harcamadan önce 24 saat beklemeniz iyi olur.
-
 ### <a name="additional-label-policy-settings-with-security--compliance-center-powershell"></a>Güvenlik ve Uyumluluk Merkezi PowerShell& ile ek etiket ilkesi ayarları
 
 Güvenlik ve Uyumluluk Merkezi PowerShell'den [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) [cmdlet'iyle & ilke ayarları kullanılabilir](/powershell/exchange/scc-powershell).
 
-Azure Information Protection birleşik etiketleme istemcisi, diğer etiket çözümlerinden ve e-postaları göndereni uyaran, iki aya yaslama veya engelleme içeren Outlook açılır iletilerin de dahil olduğu birçok gelişmiş ayarı destekler.[](/azure/information-protection/rms-client/clientv2-admin-guide-customizations) Tam liste için, bu [istemcinin yönetici kılavuzunda bulunan etiket ilkeleri](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-label-policies) için kullanılabilir gelişmiş ayarlar'a bakın.
+Azure Information Protection birleşik etiketleme istemcisi, diğer etiket çözümlerinden ve Outlook'ta gönderilen e-postaları uyaran, iki aya yas eden veya engellenen iletilerin de arasında olduğu birçok gelişmiş ayarı destekler.[](/azure/information-protection/rms-client/clientv2-admin-guide-customizations) Tam liste için, bu [istemcinin yönetici kılavuzunda bulunan etiket ilkeleri](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-label-policies) için kullanılabilir gelişmiş ayarlar'a bakın.
+
+## <a name="when-to-expect-new-labels-and-changes-to-take-effect"></a>Yeni etiketlerin ve değişikliklerin ne zaman etkili olmasını beklemeniz gerekir?
+
+Etiketler ve etiket ilkesi ayarları için, değişikliklerin hizmetler arasında yayılması 24 saat kadar sürebilir. Her biri kendi zamanlama döngülerine sahip olan birçok dış bağımlılık vardır, bu nedenle son değişiklikler için etiketleri ve etiket ilkelerini sorun gidermeye zaman harcamadan önce bu 24 saatlik zaman dönemini beklemek iyi bir fikirdir.
+
+Bununla birlikte, bazı senaryolarda etiket ve etiket ilkesi değişikliklerinin çok daha hızlı etkili olması veya 24 saate daha uzun olması gerekir. Örneğin, Word, Excel ve Web üzerinde PowerPoint için yeni ve silinmiş duyarlılık etiketleri için, bir saat içinde güncelleştirmelerin çoğaltılmış olduğunu görüyoruz. Ancak, yeni bir grup ve grup üyeliğinin nasıl değiştiğına veya ağ çoğaltması gecikme süresi ve bant genişliği kısıtlamalarına bağlı olan yapılandırmalarda, bu değişiklikler 24-48 saat sürebilir.
 
 ## <a name="use-powershell-for-sensitivity-labels-and-their-policies"></a>Duyarlılık etiketleri ve ilkeleri için PowerShell kullanma
 
@@ -222,10 +219,10 @@ Duyarlılık etiketlerinizi belirli senaryolarda yapılandırmak ve kullanmak i�
 
 - [Duyarlılık etiketlerini şifreleme kullanarak içeriğe erişimi kısıtlama](encryption-sensitivity-labels.md)
 
-- [Otomatik olarak içeriğe duyarlılık etiketi uygulama](apply-sensitivity-label-automatically.md)
+- [İçeriğe otomatik olarak bir hassasiyet etiketi uygulama](apply-sensitivity-label-automatically.md)
 
-- [Ekipler, gruplar ve sitelerle duyarlılık etiketleri kullanma](sensitivity-labels-teams-groups-sites.md)
+- [Ekipler, gruplar ve sitelerle hassasiyet etiketleri kullanma](sensitivity-labels-teams-groups-sites.md)
 
-- [SharePoint ve Office dosyaları için duyarlılık OneDrive](sensitivity-labels-sharepoint-onedrive-files.md)
+- [SharePoint ve OneDrive'daki Office dosyaları için hassasiyet etiketlerini etkinleştirme](sensitivity-labels-sharepoint-onedrive-files.md)
 
-Etiketlerinizin nasıl kullanılıyor olduğunu izlemek için bkz. [Veri sınıflandırması ile çalışmaya başlama](data-classification-overview.md).
+Etiketlerinizin nasıl kullanılıyor olduğunu izlemek için bkz. [Veri Kullanmaya başlayın hakkında daha fazla bilgi.](data-classification-overview.md)

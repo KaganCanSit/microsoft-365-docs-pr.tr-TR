@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Bu ay en çok görüntülenen 20 yönetici yardımı makalesi
-summary: 'Son güncelleştirme: 13/1/2022. Hangi yardım makalelerini yöneticiler tarafından en popüler olan merak ediyor musunuz? Aylık olarak güncelleştirilen en çok görüntülenen 20 yardım makalesi koleksiyonuna göz atabilirsiniz.'
+summary: Son güncelleştirme 23/3/2022. Hangi yardım makalelerini yöneticiler tarafından en popüler olan merak ediyor musunuz? Aylık olarak güncelleştirilen en çok görüntülenen 20 yardım makalesi koleksiyonuna göz atabilirsiniz.
 metadata:
   title: Bu ay en çok görüntülenen 20 yönetici yardımı makalesi
   description: Aylık güncelleştirilen, yöneticiler tarafından en popüler olan 20 yardım makalesi koleksiyonuna göz at.
@@ -8,84 +8,90 @@ metadata:
   ms.topic: landing-page
   author: SKjerland
   ms.author: sharik
-  ms.date: 10/01/2021
+  ms.date: 03/22/2022
   ms.localizationpriority: high
   ms.custom: AdminSurgePortfolio
   ms.collection: Adm_TOC
-  ms.openlocfilehash: 8bc6995e9f3d1aab0125546cb9f52c1790582165
-  ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+  ms.openlocfilehash: 115617fb4291e65b828bb8308afab1765fcab3b6
+  ms.sourcegitcommit: f941967b8bc2c24401795e41fd155365a0dbc645
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/17/2022
-  ms.locfileid: "63526062"
+  ms.lasthandoff: 03/23/2022
+  ms.locfileid: "63761532"
 landingContent:
-- title: Bilgilendirme
+- title: Veri ve hizmetleri yönetme
   linkLists:
   - linkListType: overview
     links:
     - text: Yönetici rolleri hakkında
-      url: admin-overview/sign-up-for-office-365.md
+      url: add-users/about-admin-roles.md
+    - text: Microsoft 365 raporları
+      url: activity-reports/activity-reports.md
   - linkListType: video
     links:
     - text: Yardım veya destek al
-      url: https://support.microsoft.com/office/9ac1a0f1-789b-4143-b954-5821d5d89298
+      url: get-help-support.md
 - title: Etki alanları
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Etki alanınıza bağlanmak için DNS kayıtları ekleme
-      url: setup/setup-business-basic.md
+      url: get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md
     - text: Postanıza etki Microsoft 365
-      url: setup/setup-business-standard.md
+      url: setup/add-domain.md
 - title: Güvenlik
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Çok faktörlü kimlik doğrulamasını ayarlama
-      url: setup/migrate-email-and-contacts-admin.md
+      url: security-and-compliance/set-up-multi-factor-authentication.md
 - title: Faturalar ve abonelikler
   linkLists:
+  - linkListType: overview
+    links:
+    - text: Kayıt numaraları ve incelemenin altındaki bildirimler hakkında
+      url: ../commerce/about-registration-numbers.md
   - linkListType: how-to-guide
     links:
     - text: Aboneliğinizi iptal etme
-      url: setup/setup-business-basic.md
+      url: ../commerce/subscriptions/cancel-your-subscription.md
     - text: Aboneliğinizi ödeme
-      url: setup/setup-business-standard.md
+      url: ../commerce/billing-and-payments/pay-for-your-subscription.md
     - text: Ödeme yöntemlerini yönetme
-      url: setup/setup-business-standard.md
+      url: ../commerce/billing-and-payments/manage-payment-methods.md
     - text: Fatura ekstrenizi veya faturanızı görüntüleme
-      url: setup/setup-business-standard.md
+      url: ../commerce/billing-and-payments/view-your-bill-or-invoice.md
 - title: E-posta
   linkLists:
   - linkListType: overview
     links:
     - text: Paylaşılan posta kutuları hakkında
-      url: https://support.microsoft.com/office/9ac1a0f1-789b-4143-b954-5821d5d89298
+      url: email/about-shared-mailboxes.md
   - linkListType: how-to-guide
     links:
     - text: E-posta iletmeyi Microsoft 365
-      url: admin-overview/sign-up-for-office-365.md
+      url: email/configure-email-forwarding.md
     - text: Paylaşılan posta kutusu oluşturma
-      url: admin-overview/sign-up-for-office-365.md
+      url: email/create-a-shared-mailbox.md
     - text: Başka bir kullanıcıya posta kutusu izinleri verme
-      url: admin-overview/sign-up-for-office-365.md
+      url: add-users/give-mailbox-permissions-to-another-user.md
     - text: Kullanıcı adı ve e-posta adresi değiştirme
-      url: admin-overview/sign-up-for-office-365.md
+      url: add-users/change-a-user-name-and-email-address.md
     - text: Kullanıcı posta kutusunu paylaşılan posta kutusuna dönüştürme
-      url: admin-overview/sign-up-for-office-365.md
+      url: email/convert-user-mailbox-to-shared-mailbox.md
 - title: Kullanıcılar, gruplar ve parolalar
   linkLists:
   - linkListType: overview
     links:
     - text: Grupları karşılaştırma
-      url: https://support.microsoft.com/office/9ac1a0f1-789b-4143-b954-5821d5d89298
+      url: create-groups/compare-groups.md
   - linkListType: how-to-guide
     links:
     - text: Kullanıcıları ekleme ve lisansları aynı anda atama
-      url: admin-overview/sign-up-for-office-365.md
+      url: add-users/add-users.md
     - text: Kullanıcılara lisans atama
-      url: admin-overview/sign-up-for-office-365.md
+      url: manage/assign-licenses-to-users.md
     - text: Kuruluşunuzun parola süre sonu ilkesini belirleyin
-      url: admin-overview/sign-up-for-office-365.md
-    - text: Kullanıcıların QR koduyla mobil Outlook oturum açmasını etkinleştirme
-      url: admin-overview/sign-up-for-office-365.md
+      url: manage/set-password-expiration-policy.md
+    - text: Kullanıcıların QR koduyla mobil Outlook oturum açmasına izin ver
+      url: manage/use-qr-code-download-outlook.md

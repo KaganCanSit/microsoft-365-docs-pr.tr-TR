@@ -1,5 +1,5 @@
 ---
-title: '1. Aşama için Microsoft Defender Office 365 ya geçiş: Hazırlanma'
+title: 'Geçiş ve Office 365 için Microsoft Defender Aşama 1: Hazırlanma'
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -16,28 +16,28 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: migrationguides
-description: Üçüncü taraf koruma hizmeti veya cihazından Üçüncü taraf koruma hizmeti veya cihazından Microsoft Defender'a Office 365 adımları.
+description: Üçüncü taraf koruma hizmeti veya cihazından üçüncü taraf koruma hizmetine veya cihazdan üçüncü taraf korumasına Office 365 için Microsoft Defender.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f8a35fa7e8ac469a87861d25f45e7078eb4be940
-ms.sourcegitcommit: 23a90ed17cddf3b0db8d4084c8424f0fabd7b1de
+ms.openlocfilehash: 019f7152f0f892abd19bb09ffa9449874b00340c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63015352"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466597"
 ---
-# <a name="migrate-to-microsoft-defender-for-office-365---phase-1-prepare"></a>Geçiş için Microsoft Defender'a Office 365 - Aşama 1: Hazırlık
+# <a name="migrate-to-microsoft-defender-for-office-365---phase-1-prepare"></a>Geçiş ve Office 365 için Microsoft Defender - Aşama 1: Hazırlık
 
 **Geçerli olduğu yer:**
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 
 <br>
 
-|![Aşama 1: Hazırlık.](../../media/phase-diagrams/prepare.png) <br> Aşama 1: Hazırlama|[![Aşama 2: Ayarlama](../../media/phase-diagrams/setup.png)](migrate-to-defender-for-office-365-setup.md) <br> [Aşama 2: Ayarlama](migrate-to-defender-for-office-365-setup.md)|[![Aşama 3: Ekleme](../../media/phase-diagrams/onboard.png)](migrate-to-defender-for-office-365-onboard.md) <br> [Aşama 3: Ekleme](migrate-to-defender-for-office-365-onboard.md)|
+|![Aşama 1: Hazırlık.](../../media/phase-diagrams/prepare.png) <br> Aşama 1: Hazırlama|[![Aşama 2: Ayarlama](../../media/phase-diagrams/setup.png#lightbox)](migrate-to-defender-for-office-365-setup.md) <br> [Aşama 2: Ayarlama](migrate-to-defender-for-office-365-setup.md)|[![Aşama 3: Ekleme](../../media/phase-diagrams/onboard.png#lightbox)](migrate-to-defender-for-office-365-onboard.md) <br> [Aşama 3: Ekleme](migrate-to-defender-for-office-365-onboard.md)|
 |---|---|---|
 |*Buradasınız!*|||
 
-Aşama **1'e Hoş Geldiniz: Microsoft** **[Defender'a geçiş işleminin Office 365](migrate-to-defender-for-office-365.md#the-migration-process)**! Bu geçiş aşaması aşağıdaki adımları içerir. Herhangi bir değişiklik öncesinde, öncelikle mevcut koruma hizmetinizin ayarlarının envanterini alınız. Aksi takdirde, kalan adımları herhangi bir sırada atabilirsiniz:
+Aşama **1'e hoş geldiniz: Geçiş** **[işleminize hazırlık Office 365 için Microsoft Defender](migrate-to-defender-for-office-365.md#the-migration-process)**! Bu geçiş aşaması aşağıdaki adımları içerir. Herhangi bir değişiklik öncesinde, öncelikle mevcut koruma hizmetinizin ayarlarının envanterini alınız. Aksi takdirde, kalan adımları herhangi bir sırada atabilirsiniz:
 
 1. [Mevcut koruma hizmetinizin ayarlarının envanterini alın](#inventory-the-settings-at-your-existing-protection-service)
 2. [Microsoft 365'te mevcut koruma yapılandırmanızı denetleme](#check-your-existing-protection-configuration-in-microsoft-365)
@@ -50,11 +50,11 @@ Aşama **1'e Hoş Geldiniz: Microsoft** **[Defender'a geçiş işleminin Office 
 
 Var olan koruma hizmetinizin ayarları, kuralları, özel durumları, vb. eksiksiz bir envanterini almak iyi bir fikirdir çünkü aboneliğinizi iptal etmenizden sonra büyük olasılıkla bilgilere erişemeyebilirsiniz.
 
-**Ancak, yeni ve gelişmiş bir hizmet için Defender'da var olan tüm özelleştirmelerinizi otomatik olarak veya rastgele yeniden Office 365.** En iyi şekilde, artık gerekli, ilgili veya işlevsel olmayan ayarlar tanıtabilirsiniz. En kötüsü, önceki özelleştirmelerden bazıları bu özelleştirmeler için Defender'da güvenlik sorunları Office 365.
+**Ancak, içinde var olan tüm özelleştirmelerinizi yeni bir dosyada otomatik olarak veya rastgele yeniden Office 365 için Defender.** En iyi şekilde, artık gerekli, ilgili veya işlevsel olmayan ayarlar tanıtabilirsiniz. En kötüsü, önceki özelleştirmelerden bazıları bu özelleştirmelerde gerçekten güvenlik sorunları Office 365 için Defender.
 
-Defender for Office 365'un yerel yetenekleri ve davranışınız sizin sınamanız ve gözlemniz sonunda size gereken geçersiz kılmaları ve ayarları belirler. Var olan koruma hizmetinizin ayarlarını aşağıdaki kategorilere ayırmayı yararlı bulabilirsiniz:
+Sizin sınamanız ve bu özelliğin yerel yetenekleri ve Office 365 için Defender, size gereken geçersiz kılmaları ve ayarları en sonunda belirler. Var olan koruma hizmetinizin ayarlarını aşağıdaki kategorilere ayırmayı yararlı bulabilirsiniz:
 
-- **Bağlantı veya içerik filtreleme**: Büyük olasılıkla bu özelleştirmelerin büyük olasılıkla Sizin için Defender'da pek bir Office 365.
+- **Bağlantı veya içerik filtreleme**: Büyük olasılıkla bu özelleştirmelerin pek çoğuna ihtiyacınız olmadığını Office 365 için Defender.
 - **İşletme yönlendirme**: Yeniden oluşturmanız gereken özelleştirmelerin büyük olasılıkla bu kategoriye girer. Örneğin, posta akış kuralları (aktarım kuralları olarak da Microsoft 365 olarak Exchange), bağlayıcıları ve özel durumları birlikte kullanarak bu ayarları yeniden oluşturabilirsiniz.
 
 Eski ayarları görme engelli bir şekilde Microsoft 365 yerine, sürekli artan kullanıcı üyeliğinin olduğu bir pilot aşama ve kurumsal iş ihtiyaçlarıyla ilgili güvenlik hususlarını dengelemeye dayalı gözlem tabanlı ayarlama içeren bir Şelale yaklaşımı öneririz.
@@ -79,7 +79,7 @@ Mevcut koruma özelliklerinizi gözden Microsoft 365 artık gerekli olan ayarlar
 
 - Şirket Microsoft 365 e-posta sunucularından e-posta geçişi yapmak, kendi başına karmaşık bir proje olabilir. Basit bir örnek olarak, iletilerin çoğunu iç alıcılara gönderen ve toplu postalarda olmayan az sayıda uygulama veya cihaz kullanılabilir. Ayrıntılar [için bu](/exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365) kılavuza bakın. Daha kapsamlı ortamların daha iyi düşün olması gerekir. Pazarlama e-postasına ve alıcılar tarafından istenmeyen posta olarak görülen iletilere izin verilmez.
 
-- Office 365 için Defender'ın DMARC raporlarını toplamaya bir özelliği yok. Microsoft Akıllı [Güvenlik Birliği (MISA) kataloğunu ziyaret](https://www.microsoft.com/misapartnercatalog) edin ve daha fazla bilgi için DMARC raporlaması sunan üçüncü taraf satıcıları Microsoft 365.
+- Office 365 için Defender, DMARC raporlarını toplama özelliğine sahip değildir. Microsoft Akıllı [Güvenlik Birliği (MISA) kataloğunu ziyaret](https://www.microsoft.com/misapartnercatalog) edin ve daha fazla bilgi için DMARC raporlaması sunan üçüncü taraf satıcıları Microsoft 365.
 
 ## <a name="move-features-that-modify-messages-into-microsoft-365"></a>İletileri farklı bir yere Microsoft 365
 
@@ -100,7 +100,7 @@ Microsoft, yakın gelecekte Kimliği Doğrulanmış Alınan Zincir (ARC) standar
 
 ## <a name="account-for-any-active-phishing-simulations"></a>Etkin kimlik avı benzetimleri için hesap
 
-Etkin üçüncü taraf kimlik avı benzetimleri varsa iletilerin, bağlantıların ve eklerin, kimlik avı için Defender tarafından kimlik avı olarak tanımlardan birini Office 365. Daha fazla bilgi için bkz [. Gelişmiş teslim ilkesinde üçüncü taraf kimlik avı benzetimlerini yapılandırma](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-third-party-phishing-simulations-in-the-advanced-delivery-policy).
+Etkin üçüncü taraf kimlik avı benzetimleri varsa, iletilerin, bağlantıların ve eklerin, kimlik avı tarafından kimlik avı kimliğine sahip Office 365 için Defender. Daha fazla bilgi için bkz [. Gelişmiş teslim ilkesinde üçüncü taraf kimlik avı benzetimlerini yapılandırma](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-third-party-phishing-simulations-in-the-advanced-delivery-policy).
 
 ## <a name="define-spam-and-bulk-user-experiences"></a>İstenmeyen posta ve toplu kullanıcı deneyimlerini tanımlama
 
@@ -114,7 +114,7 @@ Etkin üçüncü taraf kimlik avı benzetimleri varsa iletilerin, bağlantılar�
   - [Akıllı ifade doğru](anti-spoofing-protection.md) çalışmaz.
   - Büyük olasılıkla çok sayıda yanlış pozitif sonuç alırsınız (iyi posta kötü olarak işaretlenir).
 
-  Sonuçta, e-postanın Gereksiz E-posta klasörüne teslimini karantinaya almak istemeniz sizin kararınızdır. Ancak, bu önemli bir sorundur: Office 365 için Defender deneyimi kullanıcılarınızı eskiden kullandığından farklı olursa, bunları bilgilendirmeniz ve temel eğitim sağlamanız gerekir. Pilot uygulamayla edinen eğitimleri bir hale dahil edin ve kullanıcıların e-posta teslimi için her yeni davranışa hazır olduğundan emin olun.
+  Sonuçta, e-postanın Gereksiz E-posta klasörüne teslimini karantinaya almak istemeniz sizin kararınızdır. Ama bir kesindir: Office 365 için Defender deneyimi kullanıcılarınızı alıştıran deneyimden farklı olursa, bunları bilgilendirmeniz ve temel eğitimler sağlamanız gerekir. Pilot uygulamayla edinen eğitimleri bir hale dahil edin ve kullanıcıların e-posta teslimi için her yeni davranışa hazır olduğundan emin olun.
 
 - **İstenilen toplu posta ve istenmeyen toplu posta: Birçok** koruma sistemi kullanıcıların kendileri için toplu e-postaya izin vermelerini veya engellemelerini sağlar. Bu ayarlar Microsoft 365'a kolayca geçirilmez, bu nedenle VIP'ler ve personeliyle birlikte çalışarak, Microsoft 365.
 
@@ -124,10 +124,10 @@ Etkin üçüncü taraf kimlik avı benzetimleri varsa iletilerin, bağlantılar�
 
 ## <a name="identify-and-designate-priority-accounts"></a>Öncelik hesaplarını tanımlama ve belirleme
 
-Özellik sizin için kullanılabilirse, **öncelik hesapları** ve **kullanıcı etiketleri** önemli kullanıcılarınızı tanımlamanıza yardımcı Microsoft 365 şekilde raporlarda dikkati ortaya çıkarlar. Daha fazla bilgi için bkz[. Windows için Microsoft Defender'da Office 365](user-tags.md) [ve öncelik hesaplarını yönetme ve izleme](/microsoft-365/admin/setup/priority-accounts).
+Özellik sizin için kullanılabilirse, **öncelik hesapları** ve **kullanıcı etiketleri** önemli kullanıcılarınızı tanımlamanıza yardımcı Microsoft 365 şekilde raporlarda dikkati ortaya çıkarlar. Daha fazla bilgi için bkz[. Öncelik hesaplarını yönetme Office 365 için Microsoft Defender](user-tags.md) [ve izleme'de kullanıcı etiketleri](/microsoft-365/admin/setup/priority-accounts).
 
 ## <a name="next-step"></a>Sonraki adım
 
-**Tebrikler**! Microsoft **Defender'a geçiş** [işleminin Hazırlık aşamasını tamamladınız ve Office 365](migrate-to-defender-for-office-365.md#the-migration-process)!
+**Tebrikler**! Geçiş işleminin **Hazırlık** aşamasını [tamamladınız ve Office 365 için Microsoft Defender](migrate-to-defender-for-office-365.md#the-migration-process)!
 
 - Aşama [2: Kurulum'a devam edin](migrate-to-defender-for-office-365-setup.md).

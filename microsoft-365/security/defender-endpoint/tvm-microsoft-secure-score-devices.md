@@ -1,7 +1,7 @@
 ---
 title: Cihazlar için Microsoft Güvenli Puan
 description: Cihazlar için puanınız, cihazlarınızı uygulama, işletim sistemi, ağ, hesaplar ve güvenlik denetimleri genelindeki toplu güvenlik yapılandırma durumunu gösterir.
-keywords: Cihazlar için Microsoft Güvenli Puanı, Cihazlar için Uç Nokta Microsoft Güvenli Puanı, güvenli puan, yapılandırma puanı, Tehdit ve Güvenlik Açığı Yönetimi, güvenlik denetimleri, geliştirme fırsatları, zaman içinde güvenlik yapılandırması puanı, güvenlik sonrası sonrası için Microsoft Defender, güvenlik sonrası, taban çizgisi
+keywords: Cihazlar için Microsoft Güvenli Puanı, Uç Nokta için Microsoft Defender Microsoft Güvenli Puanı, güvenli puan, yapılandırma puanı, Tehdit ve Güvenlik Açığı Yönetimi, güvenlik denetimleri, geliştirme fırsatları, zaman içinde güvenlik yapılandırması puanı, güvenlik sonrası, taban çizgisi
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ccd5164839244250c5e2d908f41c35a706e0f49d
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 1d63e240c0698273807421a4121061630b8f3951
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998189"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499539"
 ---
 # <a name="microsoft-secure-score-for-devices"></a>Cihazlar için Microsoft Güvenli Puan
 
@@ -29,7 +29,7 @@ ms.locfileid: "62998189"
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Tehdit ve güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
@@ -48,22 +48,10 @@ Cihazlar için puanınız [portalda Tehdit ve Güvenlik Açığı Yönetimi pano
 
 Güvenlik önerileri sayfasına gitmek ve [**ilgili önerileri görüntülemek**](tvm-security-recommendation.md) için bir kategori seçin.
 
-## <a name="turn-on-the-microsoft-secure-score-connector"></a>Microsoft Güvenli Puanı bağlayıcıyı açma
-
-Uç nokta işaretleri için Microsoft Defender'ı iletin ve cihaz güvenliği noktası üzerinde Microsoft Güvenli Puanı görünürlüğü sağlar. Forwarded data is stored and processed in the location as your Microsoft Secure Score data.
-
-Değişikliklerin panoya yansıması birkaç saat sürebilir.
-
-1. Gezinti bölmesinde, Genel Gelişmiş **Ayarlar** \> **Özellikleri'ne** \>  \> **gidin**.
-
-2. Ekranı aşağı **kaydırarak Microsoft Güvenli Puan'a** kaydırın ve ayarı Açık olarak **seçin**.
-
-3. Kaydetme **tercihleri'ne tıklayın**.
-
 ## <a name="how-it-works"></a>Nasıl çalışır?
 
 > [!NOTE]
-> Cihazlar için Microsoft Güvenli Puanı şu anda Grup İlkesi aracılığıyla ayarlanmış yapılandırmaları desteklemektedir. Geçerli kısmi Intune desteği nedeniyle, Intune aracılığıyla ayarlanmış olan yapılandırmalar hatalı yapılandırılmış olarak gösterebilirsiniz. Kuruluş güvenli yapılandırma yönetimi için Intune kullanıyor olabilir ve gerçek yapılandırma durumunu doğrulamak için IT Yöneticinize başvurun.
+> Cihazlar için Microsoft Güvenli Puan şu anda Cihazlar aracılığıyla ayarlanmış yapılandırmaları grup ilkesi. Geçerli kısmi destek Intune nedeniyle, yapılandırmalar aracılığıyla Intune yapılandırmalar yanlış yapılandırılmış olarak gösterebilirsiniz. Güvenli yapılandırma yönetimi için, kuruluş tarafından Intune için gerçek yapılandırma durumunu doğrulamak için, INTUNE başvurun.
 
 Cihazlar için Microsoft Güvenli Puanı kartında yer alan veriler, çok titiz ve sürekli açık açığı bulma işleminin bir ürünüdür. Sürekli olarak şu yapılandırma keşif değerlendirmeleriyle bir araya toplanır:
 
@@ -80,17 +68,17 @@ Güvenlik önerileri listesinden sorunları düzelterek güvenlik yapılandırma
 
 2. Listeden bir öğe seçin. Açılır panel, öneriyle ilgili ayrıntılarıyla birlikte açılır. Düzeltme **seçenekleri'ne tıklayın**.
 
-   :::image type="content" alt-text="Güvenlik denetimleriyle ilgili güvenlik önerileri." source="images/security-controls.png":::
+   :::image type="content" source="images/security-controls.png" alt-text="Güvenlik denetimleriyle ilgili güvenlik önerileri" lightbox="images/security-controls.png":::
 
 3. Sorunun bağlamını ve bundan sonra ne yapmak olduğunu anlamak için açıklamayı okuyun. Bir son tarih seçin, notlar ekleyin ve Tüm düzeltme etkinliği verilerini **CSV'ye** aktar'ı seçin, böylece izleme için bir e-postaya ekleyebilirsiniz.
 
 4. **İsteği gönder'i seçin**. Düzeltme görevinin oluşturulmuş olduğunu onay iletisi alırsınız.
 
-   :::image type="content" alt-text="Düzeltme görevi oluşturma onayı." source="images/remediation-task-created.png":::
+   :::image type="content" source="images/remediation-task-created.png" alt-text="Düzeltme görevi oluşturma onayı" lightbox="images/remediation-task-created.png":::
 
 5. CSV dosyanızı kaydedin.
 
-   :::image type="content" alt-text="Csv dosyasını kaydedin." source="images/tvm_save_csv_file.png":::
+   :::image type="content" source="images/tvm_save_csv_file.png" alt-text="CSV dosyasını kaydetme seçeneğini içeren sayfa" lightbox="images/tvm_save_csv_file.png":::
 
 6. IT Yöneticinize bir izleme e-postası gönderin ve düzeltmenin sistemde yayılması için size ne kadar süre verildiye izin ver.
 

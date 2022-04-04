@@ -19,16 +19,16 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 71e4b3d5f2a8cbf147a9aa50dd849be14047e27d
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 28b389292ed733318e5796a1be3ed9c11d2df462
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63318179"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466619"
 ---
 # <a name="policies-for-allowing-guest-access-and-b2b-external-user-access"></a>Konuk erişimine izin veren ilkeler ve B2B dış kullanıcı erişimi
 
-Bu makalede, Azure Active Directory (Azure AD) İş-İş (B2B) hesabı olan konuklara ve dış kullanıcılara erişime izin vermek için önerilen Sıfır Güven kimliği ve cihaz erişimi ilkelerini ayarlama konuları açıklanmıştır. Bu kılavuz, ortak kimlik [ve cihaz erişim ilkelerine yöneliktir](identity-access-policies.md).
+Bu makalede, Azure Active Directory (Azure AD) İş-İş (B2B) hesabı olan konuklara ve dış kullanıcılara erişim izni vermek için önerilen Sıfır Güven kimlik ve cihaz erişimi ilkelerini ayarlama konuları açıklanmıştır. Bu kılavuz, ortak kimlik [ve cihaz erişim ilkelerine yöneliktir](identity-access-policies.md).
 
 Bu öneriler korumanın başlangıç noktası **katmanına uygulanacak** şekilde tasarlanmıştır. Ancak önerileri, kurumsal ve özel güvenlik korumasına yönelik özel **ihtiyaçlarınıza göre** **de ayarlayabilirsiniz** .
 
@@ -38,7 +38,7 @@ B2B hesaplarının Azure AD kiracınız ile kimlik doğrulaması yapma yolu sağ
 
 Bu diyagramda, B2B konuk ve dış kullanıcı erişimi için ortak kimlik ve cihaz erişimi ilkeleri arasında hangi ilkelerin ekli veya güncelleştiriliyor olduğu görünür.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-guest.png" alt-text="Konuk erişimini korumaya yönelik ilke güncelleştirmelerinin özeti." lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-guest.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-guest.png" alt-text="Konuk erişimini korumak için ilke güncelleştirmelerinin özeti" lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-guest.png":::
 
 Aşağıdaki tabloda, oluşturmanız ve güncelleştirmeniz gereken ilkeler listelemektedir. Ortak ilkeler, Ortak kimlik ve cihaz erişimi ilkeleri [makalesinde yer alan ilişkili yapılandırma yönergelerine](identity-access-policies.md) bağlantı sağlar.
 
@@ -49,7 +49,7 @@ Aşağıdaki tabloda, oluşturmanız ve güncelleştirmeniz gereken ilkeler list
 
 Koşullu Erişim ilkelerine konukları ve dış kullanıcıları dahil etmek veya dış kullanıcıları dahil etmek için, **Ödevler > Kullanıcılar ve gruplar >'de** **Tüm konuk** ve dış **kullanıcılar'a göz seçin**.
 
-![konuklar ve dış kullanıcılar hariç denetimlerin ekran yakalaması.](../../media/microsoft-365-policies-configurations/identity-access-exclude-guests-ui.png)
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-exclude-guests-ui.png" alt-text="Konuklar ve dış kullanıcılar hariç tutulan denetimler" lightbox="../../media/microsoft-365-policies-configurations/identity-access-exclude-guests-ui.png":::
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
@@ -81,7 +81,7 @@ Bir cihazı yalnızca bir kuruluş yönetebilir. Konukları ve dış kullanıcı
 
 ## <a name="next-step"></a>Sonraki adım
 
-![4. Adım: Uygulama uygulama Microsoft 365 ve Bulut Uygulamaları için Microsoft Defender ilkeleri.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png)
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="Bulut uygulamaları Microsoft 365 için ilkeler Microsoft Defender for Cloud Apps" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
 
 Koşullu Erişim ilkelerini aşağıdakiler için yapılandırma:
 

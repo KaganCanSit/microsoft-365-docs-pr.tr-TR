@@ -1,5 +1,5 @@
 ---
-title: Uç Nokta Planı 1 için Microsoft Defender'a Genel Bakış
+title: Plan 1 Uç Nokta için Microsoft Defender e genel bakış
 description: Uç Nokta Planı 1 için Defender'a genel bir bakış elde olun. Bu uç nokta koruma aboneliğine dahil edilen özellikler ve özellikler hakkında bilgi alın.
 search.appverid: MET150
 author: denisebmsft
@@ -17,34 +17,34 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
 ms.custom: intro-overview
-ms.openlocfilehash: 50dbe395bee852601aae8e834514c6bbac3dd84d
-ms.sourcegitcommit: aac7e002ec6e10a41baa2d0bd38614b0ed471a70
+ms.openlocfilehash: d7e7f7d7c22da007187db5df8bd773dca798597c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63010008"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466311"
 ---
-# <a name="overview-of-microsoft-defender-for-endpoint-plan-1"></a>Uç Nokta Planı 1 için Microsoft Defender'a Genel Bakış
+# <a name="overview-of-microsoft-defender-for-endpoint-plan-1"></a>Plan 1 Uç Nokta için Microsoft Defender e genel bakış
 
 **Geçerli olduğu yer:**
 
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Uç Nokta için Microsoft Defender, sizinki gibi kuruluşların gelişmiş tehditleri önlemesi, algılaması, araştırması ve yanıtlaması için tasarlanmış bir kurumsal uç nokta güvenlik platformudur. Uç nokta için Defender'ın artık iki planla kullanılabilir olduğunu duyurmaktan mutluluk mutluyuz: 
+Uç Nokta için Microsoft Defender, sizin gibi kuruluşların gelişmiş tehditlerini önlemeye, algılamaya, araştırmaya ve yanıtlamaya yardımcı olmak için tasarlanmış bir kurumsal uç nokta güvenlik platformudur. Uç nokta için Defender'ın artık iki planla kullanılabilir olduğunu duyurmaktan mutluluk mutluyuz: 
 
 - **Bu makalede açıklanan Uç Nokta Planı 1 için Defender**; ve 
 - **[Uç Nokta Plan 2 için Defender](microsoft-defender-endpoint.md)** genel olarak kullanılabilir ve önceden Uç Nokta için [Defender olarak bilinir](microsoft-defender-endpoint.md).
 
 Aşağıdaki resimde yer alan yeşil kutular, Uç Nokta Planı 1 için Defender'a nelerin dahil olduğunu belirtir:
 
-:::image type="content" source="../../media/mde-p1/mde-p1-overview-diagram.png" alt-text="Uç Nokta Plan 1 diyagramı için Defender":::
+:::image type="content" source="../../media/mde-p1/mde-p1-overview-diagram.png" alt-text="Uç Nokta Planı 1 için Defender ile neler olduğu" lightbox="../../media/mde-p1/mde-p1-overview-diagram.png":::
 
 Bu kılavuzu kullanarak:
 
 - [Uç Nokta Planı 1 için Defender'da bulunanlar hakkında genel bakış](#defender-for-endpoint-plan-1-capabilities)
-- [Uç Nokta Plan 1 için Defender'ı Plan 2 ile karşılaştırma](defender-endpoint-plan-1-2.md)
+- [Uç Nokta için Defender Plan 1’i Plan 2 ile karşılaştırın](defender-endpoint-plan-1-2.md)
 - [Uç Nokta Planı 1 için Defender'ı ayarlamayı ve yapılandırmayı öğrenin](mde-p1-setup-configuration.md)
-- [Olayları ve uyarıları Microsoft 365 Defender, cihazları yönetebilirsiniz ve algılanan tehditlerle ilgili raporları kullanabileceğiniz Web Sitesi portalını kullanmaya başlama](mde-plan1-getting-started.md)
+- [Kullanmaya başlayın ve uyarıları Microsoft 365 Defender, cihazları yönetebilirsiniz ve algılanan tehditlerle ilgili raporları kullanabileceğiniz Web Sitesi portalını kullanabilirsiniz](mde-plan1-getting-started.md)
 - [Bakım ve işlemlere genel bir bakış elde](mde-p1-maintenance-operations.md)
 
 > [!TIP]
@@ -165,7 +165,7 @@ Daha fazla bilgi edinmek için [portala Microsoft 365 Defender bakın](portal-ov
 
 ### <a name="role-based-access-control"></a>Rol tabanlı erişim denetimi
 
-Rol tabanlı erişim denetimi (RBAC) kullanarak, güvenlik yöneticiniz portala uygun erişim için rol ve Microsoft 365 Defender oluşturabilir[https://security.microsoft.com](https://security.microsoft.com). RBAC ile, Bulut için Defender'a kimlerin erişeceği, neleri göreceği ve neler göreceği hakkında daha fazla denetime sahipsiniz. 
+Rol tabanlı erişim denetimi (RBAC) kullanarak, güvenlik yöneticiniz portala uygun erişim için rol ve Microsoft 365 Defender oluşturabilir[https://security.microsoft.com](https://security.microsoft.com). RBAC ile, 2013'e kimlerin eriş, neleri Bulut için Defender neleri göreceği ve neleri göreceği üzerinde ince denetime sahip oluruz. 
 
 Daha fazla bilgi edinmek için [bkz. Rol tabanlı erişim denetimi kullanarak portal erişimini yönetme](rbac.md).
 
@@ -178,7 +178,7 @@ Bu Microsoft 365 Defender portalı ([https://security.microsoft.com](https://sec
 - İşlem **merkezi** , yapılan düzeltme eylemlerini listeler. Örneğin, bir dosya karantinaya gönderilirse veya BIR URL engellenirse, her eylem Geçmiş sekmesindeki İşlem **merkezinde listelenir.**
 - Raporlar **bölümü** , algılanan tehditleri ve bunların durumunu göstermek için raporlar içerir. 
 
-Daha fazla bilgi edinmek için bkz [. Uç Nokta Planı 1 için Microsoft Defender ile çalışmaya başlama](mde-plan1-getting-started.md).
+Daha fazla bilgi edinmek için bkz[. Kullanmaya başlayın Plan 1 Uç Nokta için Microsoft Defender planlama](mde-plan1-getting-started.md).
 
 ### <a name="apis"></a>API'ler
 
@@ -199,7 +199,7 @@ Daha fazla bilgi edinmek için bkz. [Uç Nokta API'leri için Defender](manageme
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Uç Nokta Plan 1 için Microsoft Defender'ı Plan 2 ile karşılaştırma](defender-endpoint-plan-1-2.md)
-- [Uç Nokta Planı 1 için Defender'ı ayarlama ve yapılandırma](mde-p1-setup-configuration.md)
-- [Uç Nokta Planı 1 için Defender ile çalışmaya başlama](mde-plan1-getting-started.md)
+- [Plan 1 Uç Nokta için Microsoft Defender ile Plan 2'nin karşılaştırması](defender-endpoint-plan-1-2.md)
+- [Uç Nokta için Defender Planı 1’i ayarlama ve yapılandırın](mde-p1-setup-configuration.md)
+- [Kullanmaya başlayın Plan 1 için Defender ile Birlikte Uygulama](mde-plan1-getting-started.md)
 - [Uç Nokta Plan 1 için Defender'ı Yönetme](mde-p1-maintenance-operations.md)

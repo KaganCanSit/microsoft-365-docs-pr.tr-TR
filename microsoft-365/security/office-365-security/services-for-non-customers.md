@@ -17,12 +17,12 @@ ms.collection:
 description: Microsoft, kullanıcılarımızın korunmasına yardımcı olmak için, e-posta kullanımında kullanıcı güvenilerini korumaya yardımcı olmak üzere çeşitli ilkeler ve teknolojiler bu ilkeleri ve teknolojileri benimser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2894d565a08cf500199b123a0acd738de129faf0
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 7af1a901bf9b3b27f08a7a3d36de69d49c2c85e9
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984672"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679576"
 ---
 # <a name="services-for-non-customers-sending-mail-to-microsoft-365"></a>Microsoft 365'a posta gönderen olmayan Microsoft 365
 
@@ -35,15 +35,12 @@ Bu genel bakış, müşteri olmadığınız durumda bile organizasyonunıza sağ
 
 ## <a name="sender-solutions"></a>Gönderen çözümleri
 
-****
-
 |Hizmet|Avantajlar|
 |---|---|
 |Bu çevrimiçi yardım içeriği|Sağladığı: <ul><li>EOP kullanıcılarına iletişim sunmayla ilgili tüm sorular için bir başlangıç noktası.</li><li>İlke ve gereksinimlerimiz ile ilgili basit bir çevrimiçi kılavuz içerir.</li><li>Microsoft tarafından kullanılan gereksiz e-posta filtreleri ve kimlik doğrulama teknolojilerine genel bakış.</li><ul>|
 |[Microsoft desteği](#microsoft-support)|Teslim sorunları için kendi kendine yardım ve yükseltme desteği sağlar.|
 |[İstenmeyen Posta Önleme IP Liste Portalı](#anti-spam-ip-delist-portal)|IP'den izin isteği göndermek için bir araç. Bu isteği göndermeden önce, söz konusu IP'den kaynaklanan başka postaların kötü amaçlı veya kötü amaçlı olmadığını garanti etmek gönderenin sorumluluğundadır.|
 |[E-postadan kaynaklanan gereksiz e-postalar için kötüye kullanım ve istenmeyen Exchange Online](#abuse-and-spam-reporting-for-junk-email-originating-from-exchange-online)|İstenmeyen ve diğer istenmeyen postaların e-postaların e-postalardan Exchange Online İnternet'i ve posta sistemini karmaşık hale gelir.|
-|
 
 ## <a name="microsoft-support"></a>Microsoft desteği
 

@@ -22,12 +22,12 @@ search.appverid:
 - BCS160
 ms.assetid: c0531a6f-9e25-4f2d-ad0e-a70bfef09ac0
 description: Dış Etki Alanı Adı Sistemi kayıtlarının, dağıtım planlama ve dağıtım planlarında Office 365 listesi.
-ms.openlocfilehash: 39b6f093c196d8b696a8d36458d2ebc18be2a5f2
-ms.sourcegitcommit: e246725b0935067aad886530d5178972c0f895d7
+ms.openlocfilehash: 3ba8345c17446f7f6d2d6b034415288eb994ee79
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "63012866"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568444"
 ---
 # <a name="external-domain-name-system-records-for-office-365"></a>Etki Alanı için Dış Etki Alanı Adı Sistemi Office 365
 
@@ -39,7 +39,7 @@ ms.locfileid: "63012866"
 
 **Kendi özel dağıtımınız için başvuru listesini mi kullanmaktasınız?** Aşağıdaki liste, özel dağıtım dağıtım için başvuru olarak Office 365 kullanılmalıdır. Organizasyonunıza hangi kayıtların geçerli olduğunu seçmeniz ve uygun değerleri doldurmanız gerekir.
 
-**Daha fazla bilgi** [için ağ planlaması ve performans ayarı Office 365](./network-planning-and-performance.md).
+**Geri dön** [için ağ planlaması ve performans ayarı'nı Office 365](./network-planning-and-performance.md).
 
 SPF ve MX kayıtları çoğunlukla en zor olan kayıttır. Bu makalenin sonundaki SPF kayıtları kılavuzumızı güncelledik. Etki alanınız için yalnızca _tek bir SPF kaydına sahip olaynizi unutmamanız gerekir_. Birden çok MX kaydına sahip olabilirsiniz; Bununla birlikte, bu da posta teslim sorunlarına neden olabilir. E-postaları tek bir posta sistemine yönlendiren tek bir MX kaydınız olması birçok olası sorunu ortadan kaldırır.
   
@@ -48,12 +48,17 @@ Aşağıdaki bölümler, her bölümde hizmetlere göre Office 365. Etki alanın
 ## <a name="external-dns-records-required-for-office-365-core-services"></a>Hizmetler (temel hizmetler) Office 365 dış DNS kayıtları
 <a name="BKMK_ReqdCore"> </a>
 
-Her Office 365 dış DNS'lerine iki kayıt eklemesi gerekir. İlk CNAME kaydı, uygun Office 365 platformuyla kimlik doğrulaması yapılması için iş istasyonlarına yönlendirilmalerini sağlar. İkinci gerekli kayıt, etki alanı adınızın size ait olduğunu kanıtlamaktır.
+TXT kaydı, etki alanının sahibi olduğunu kanıtlamanız için gereklidir ve tüm müşteriler için gereklidir.
+
+CNAME kaydı yalnızca [21Vianet tarafından Office 365 kullanan müşteriler için gereklidir](/microsoft-365/admin/services-in-china/services-in-china). Bu, iş Office 365 kimlik platformuyla kimlik doğrulaması yapılması için iş istasyonlarını yönlendirenin. 
+
+
   
-|**DNS kaydı** <br/> |**Amaç** <br/> |**Value to use** <br/> |
-|----------|-----------|------------|
-|**CNAME** <br/> **(Paket)** <br/> |Kimlik doğrulama Office 365 doğru kimlik platformuna yönlendirecek şekilde kullanıcı tarafından kullanılır. [Daha fazla bilgi](../admin/services-in-china/purpose-of-cname.md?viewFallbackFrom=o365-worldwide) <br/> **Not:** Bu CNAME yalnızca 21Vianet Office 365 için geçerlidir. Mevcut olan ve Office 365 21Vianet tarafından çalıştırnını değilse, özel etki alanınız üzerinde çalışan *kullanıcılar "özel* etki alanı sistemimizte değil" hatasını alırlar ve Office 365 lisanslarını etkinleştiremz. [Daha fazla bilgi](/office365/servicedescriptions/office-365-platform-service-description/office-365-operated-by-21vianet) |**Diğer Ad:** msoid  <br/> **Hedef:** clientconfig.partner.microsoftonline-p.net.cn  <br/> |
-|**TXT** <br/> **(Etki alanı doğrulaması)** <br/> |Etki Office 365 etki alanının sahibi olduğunu doğrulamak için etki alanı tarafından kullanılır. Başka bir şeyi etkilemez.  <br/> |**Ana bilgisayar:** @ (veya bazı DNS barındırma sağlayıcıları için etki alanı adınız)  <br/> **TXT Değeri:** _Metin kutusu tarafından sağlanan_ Office 365  <br/> Bu Office 365 **oluşturmak için** kullanabileceğiniz değerleri etki alanı kurulum sihirbazı sağlar.  <br/> |
+|**DNS kaydı** <br/> |**Amaç** <br/> |**Value to use** <br/> |**Geçerli olduğu yer:**|
+|----------|-----------|------------|------------|
+|**TXT** <br/> **(Etki alanı doğrulaması)** <br/> |Etki Office 365 etki alanının sahibi olduğunu doğrulamak için etki alanı tarafından kullanılır. Başka bir şeyi etkilemez.  <br/> |**Ana bilgisayar:** @ (veya bazı DNS barındırma sağlayıcıları için etki alanı adınız)  <br/> **TXT Değeri:** _Metin kutusu tarafından sağlanan_ Office 365  <br/> Bu Office 365 **oluşturmak için** kullanabileceğiniz değerleri etki alanı kurulum sihirbazı sağlar.  <br/> |Tüm müşteriler|
+|**CNAME** <br/> **(Paket)** <br/> |Kimlik doğrulama Office 365 doğru kimlik platformuna yönlendirecek şekilde kullanıcı tarafından kullanılır. [Daha fazla bilgi](../admin/services-in-china/purpose-of-cname.md?viewFallbackFrom=o365-worldwide) <br/> **Bu** CNAME'nin yalnızca 21Vianet Office 365 için geçerli olduğunu unutmayın. Mevcut olan ve Office 365 21Vianet tarafından çalıştırnını değilse, özel etki alanınız üzerinde çalışan *kullanıcılar "özel* etki alanı sistemimizte değil" hatasını alırlar ve Office 365 lisanslarını etkinleştiremz. [Daha fazla bilgi](/office365/servicedescriptions/office-365-platform-service-description/office-365-operated-by-21vianet) |**Diğer Ad:** msoid  <br/> **Hedef:** clientconfig.partner.microsoftonline-p.net.cn  <br/> | Yalnızca 21Vianet müşterileri|
+
 
 
 ## <a name="external-dns-records-required-for-email-in-office-365-exchange-online"></a>e-posta için gereken dış DNS Office 365 (Exchange Online)
@@ -99,13 +104,13 @@ Ağın doğru yapılandırıldığından emin olmak [için Office 365 URL'leri v
 
 |**DNS kaydı** <br/> |**Amaç** <br/> |**Value to use** <br/> |
 |----------|-----------|------------|
-|**Ana Bilgisayar (A)** <br/> |Çoklu oturum açma (SSO) için kullanılır. Active Directory Federasyon Hizmetleri (AD FS) federasyon sunucusu lisanslara veya yük dengelemeli sanal IP'nize (VIP) bağlanmaları için şirket dışı kullanıcılarınız (ve  likesanız şirket içi kullanıcılarınız) için bitiş noktası sağlar.  <br/> |**Hedef:** Örneğin, sts.contoso.com  <br/> |
+|**Ana Bilgisayar (A)** <br/> |Çoklu oturum açma (SSO) için kullanılır. Active Directory Federasyon Hizmetleri (AD FS) (AD FS) federasyon sunucusu sunucu sunucu sunucunuza veya yük dengelemeli sanal IP'nize (VIP) bağlanmaları için şirket dışı kullanıcılarınız (ve  likesanız şirket içi kullanıcılarınız) için bitiş noktası sağlar.  <br/> |**Hedef:** Örneğin, sts.contoso.com  <br/> |
 
 ## <a name="external-dns-records-required-for-spf"></a>SPF için gereken dış DNS kayıtları
 <a name="BKMK_SPFrecords"> </a>
 
 > [!IMPORTANT]
-> SPF, ifadeyi önlemeye yardımcı olmak için tasarlanmıştır ancak SPF'nin koruyamaz olduğu sanallık tekniklerini vardır. Bunlara karşı korunmak için, SPF'yi ayarlamış olduktan sonra, SPF için DKIM ve DMARC'yi de Office 365. Kullanmaya başlamak için bkz[. DkIM kullanarak kendi etki alanınıza gönderilen giden e-postayı Office 365](../security/office-365-security/use-dkim-to-validate-outbound-email.md). Ardından, bkz. [DMARC kullanarak e-postayı doğrulamak için Office 365](../security/office-365-security/use-dmarc-to-validate-email.md).
+> SPF kimlik sahtekarlığını önlemeye yardımcı olmak için tasarlanmıştır, ancak SPF’nin koruma sağlayamayacağı bazı kimlik sahtekarlığı yöntemleri vardır. Bunlara karşı korunmak için, SPF'yi ayarlamış olduktan sonra, SPF için DKIM ve DMARC'yi de Office 365. Kullanmaya başlamak için bkz[. DkIM kullanarak kendi etki alanınıza gönderilen giden e-postayı Office 365](../security/office-365-security/use-dkim-to-validate-outbound-email.md). Ardından, bkz. [DMARC kullanarak e-postayı doğrulamak için Office 365](../security/office-365-security/use-dmarc-to-validate-email.md).
   
 SPF kayıtları, diğer kişilerin istenmeyen posta veya diğer kötü amaçlı e-postaları göndermek için etki alanınızı kullanmalarını önlemeye yardımcı olan TXT kayıtlarıdır. Sender Policy Framework (SPF) kayıtları, etki alanınıza e-posta gönderme yetkisi olan sunucuları tanımarak çalışır.
   

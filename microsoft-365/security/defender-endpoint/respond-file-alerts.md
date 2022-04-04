@@ -1,5 +1,5 @@
 ---
-title: Uç Nokta için Microsoft Defender'da dosya üzerinde yanıt eylemleri gerçekleştirin
+title: Dosyada yanıt eylemleri Uç Nokta için Microsoft Defender
 description: Bir dosyayı durdurarak ve kullanarak ya da dosyayı engelleyerek ve etkinlik ayrıntılarını kontrol ederek dosyayla ilgili uyarılarda yanıt eylemleri gerçekleştirin.
 keywords: Yanıtlama, durdurma ve karantinaya al, dosyayı engelleme, derin çözümleme
 ms.prod: m365-security
@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 0e7253993a1c05bd25e6dd13865826c42dd7603a
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: 5c5a457d960f7dd7906c7d26a099d242507fbe86
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63400258"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499209"
 ---
 # <a name="take-response-actions-on-a-file"></a>Dosyada yanıt eylemleri gerçekleştirin
 
@@ -27,7 +27,9 @@ ms.locfileid: "63400258"
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+
+- [Uç Nokta için Microsoft Defender Plan 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
@@ -49,17 +51,12 @@ Ayrıca, dosyayı güvenli bir bulut korumalı alanda çalıştırmak için dosy
 
 Bazı eylemler için belirli izinler gerekir. Aşağıdaki tabloda, taşınabilir yürütülebilir (PE) ve PE olmayan dosyalar üzerinde belirli izinlerin gerçekleştirebilirleri eylem açık almaktadır:
 
-<br>
-
-****
-
 |İzin|PE dosyaları|Pe olmayan dosyalar|
 |---|:---:|:---:|
 |Verileri görüntüleme|X|X|
 |Uyarı soruşturması|&#x2611;|X|
 |Canlı yanıt temel|X|X|
 |Canlı yanıt gelişmiş|&#x2611;|&#x2611;|
-|
 
 Roller hakkında daha fazla bilgi için bkz [. Rol tabanlı erişim denetimi için roller oluşturma ve yönetme](user-roles.md).
 
@@ -70,13 +67,13 @@ Kötü amaçlı işlemi durdurarak ve gözlemlenen dosyayı kullanarak saldırı
 > [!IMPORTANT]
 > Bu eylemi yalnızca şu durumla karşı  gerekir:
 >
-> - Üzerinde eyleme geçen cihaz, 1703 veya Windows 10 sürüm 11'de veya Windows çalışıyor
+> - Üzerinde eyleme geçen cihaz, Sürüm 1703 Windows 10 veya sonraki bir sürümü çalıştırarak Windows 11
 > - Dosya güvenilir üçüncü taraf yayıncılara ait değildir veya Microsoft tarafından imzalanmıştır
 > - Microsoft Defender Virüsten Koruma Pasif modunda çalışıyor olması gerekir. Daha fazla bilgi için uyumluluk [Microsoft Defender Virüsten Koruma bakın](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility).
 
 Dosyayı **Durdur ve Karantinaya** Al eylemi, işlemleri çalıştırmayı durdurmayı, dosyaları başka bir şekilde çalıştırmayı ve kayıt defteri anahtarları gibi kalıcı verileri silmeyi içerir.
 
-Bu eylem, dosyanın son 30 gün içinde Windows 10, sürüm 1703 veya Windows 11'i olan cihazlarda geçerli olur.
+Bu eylem, dosyanın son 30 gün içinde Windows 10, sürüm 1703 Windows 11 ve daha sonraki bir sürüme sahip cihazlarda geçerlik sağlar.
 
 > [!NOTE]
 > Her zaman dosyayı karantinadan geri yükleyebilirsiniz.
@@ -93,15 +90,15 @@ Bu eylem, dosyanın son 30 gün içinde Windows 10, sürüm 1703 veya Windows 11
 
 2. Üst çıtaya gidip Dosyayı Durdur **ve Karantinaya Bırak'ı seçin**.
 
-   ![Dosya durdurma ve karantina eyleminin resmi.](images/atp-stop-quarantine-file.png)
+   :::image type="content" source="images/atp-stop-quarantine-file.png" alt-text="Dosya durdurma ve karantina eylemi" lightbox="images/atp-stop-quarantine-file.png":::
 
 3. Bir neden belirtin, ardından **Onayla'ya seçin**.
 
-   ![Dosya kalıcı olarak durdurma ve karantinaya alın penceresinin resmi.](images/atp-stop-quarantine.png)
+   :::image type="content" source="images/atp-stop-quarantine.png" alt-text="Dosyayı durdurma ve karantinaya alın sayfası" lightbox="images/atp-stop-quarantine.png":::
 
    İşlem merkezi, gönderim bilgilerini gösterir:
 
-   ![Dosya durdurma ve karantinaya alındı işlem merkezi görüntüsü.](images/atp-stopnquarantine-file.png)
+   :::image type="content" source="images/atp-stopnquarantine-file.png" alt-text="Dosya durdurma ve karantinaya alındı işlem merkezi" lightbox="images/atp-stopnquarantine-file.png":::
 
    - **Gönderme süresi** - Eylemin ne zaman gönder olduğunu gösterir.
    - **Başarı** - Dosyanın durdurularak karantinaya alındığı cihaz sayısını gösterir.
@@ -114,7 +111,7 @@ Bu eylem, dosyanın son 30 gün içinde Windows 10, sürüm 1703 veya Windows 11
 
 Dosya bir cihazdan kaldırıldığı zaman aşağıdaki bildirim gösterilir:
 
-![Cihaz kullanıcısı bildiriminin resmi.](images/atp-notification-file.png)
+:::image type="content" source="images/atp-notification-file.png" alt-text="Cihazda kullanıcı bildirimi" lightbox="images/atp-notification-file.png":::
 
 Cihaz zaman çizelgesinde, dosyanın durdurulmuş ve karantinaya alınmış olduğu her cihaz için yeni bir olay eklenir.
 
@@ -150,7 +147,7 @@ Yanıt **eylemlerinden Dosyayı** indir'i seçmek, dosyanızı içeren yerel, pa
 
 Varsayılan olarak, karantinada olan dosyaları indirebilirsiniz.
 
-![Dosya indirme eyleminin resmi.](images/atp-download-file-action.png)
+:::image type="content" source="images/atp-download-file-action.png" alt-text="Dosya indirme eylemi" lightbox="images/atp-download-file-action.png":::
 
 ### <a name="download-quarantined-files"></a>Karantinaya alınmış dosyaları indirme
 
@@ -173,11 +170,11 @@ Bu ayarın açık olması, güvenlik ekiplerinin kötü olabilecek dosyaları in
 > - Virüsten koruma altyapısı sürümü 1.1.17300.4 veya sonraki bir sürümdür. Aylık [platform ve altyapı sürümlerine bakın](manage-updates-baselines-microsoft-defender-antivirus.md#monthly-platform-and-engine-versions)
 > - Bulut tabanlı koruma etkinleştirilir. Bkz [. Buluta teslim edilen korumayı açma](enable-cloud-protection-microsoft-defender-antivirus.md)
 > - Örnek gönderme açık
-> - Cihazların Windows 10 1703 veya sonraki bir sürümü, Windows server 2016 veya 2019 ya da Windows Server 2022 veya Windows 11'i vardır
+> - Cihazlar, Windows 10 1703 veya sonraki bir sürümü, Windows server 2016 veya 2019 ya da Windows Server 2022 veya Windows 11
 
 ### <a name="collect-files"></a>Dosyaları toplama
 
-Dosya henüz Uç Nokta için Microsoft Defender tarafından depolanıyorsa, dosyayı indirebilirsiniz. Bunun yerine, aynı konumda **Bir Dosya topla** düğmesi görüyoruz. Son 30 gün içinde kuruluşta hiç dosya görülmemişse, Dosya **topla devre dışı** bırakılır.
+Dosya henüz bir Uç Nokta için Microsoft Defender depolanıyorsa, indiresiniz. Bunun yerine, aynı konumda **Bir Dosya topla** düğmesi görüyoruz. Son 30 gün içinde kuruluşta hiç dosya görülmemişse, Dosya **topla devre dışı** bırakılır.
 > [!Important]
 > Olası ağ tehditi olarak karantinaya alınmış bir dosya kurtarılamaz olabilir. Kullanıcı karantinadan sonra dosyayı geri yükleme girişiminde olursa, bu dosyaya erişilemez. Bunun nedeni sistemin artık dosyaya erişmek için ağ kimlik bilgilerine sahip olması olabilir. Normalde, bu durum sistem veya paylaşılan klasörde geçici olarak oturum açmanın sonucudur ve erişim belirteçlerinin süresi dolar.
 
@@ -191,7 +188,7 @@ Olası kötü amaçlı dosyaları veya kötü amaçlı yazılımdan şüpheleniy
 >
 > - Kötü amaçlı yazılımdan koruma istemci sürümü 4.18.1901.x veya sonraki bir sürümde olabilir.
 > - Bu özellik kötü amaçlı yazılımdan (veya kötü amaçlı olabilecek dosyalardan) şüphelenilen dosyaların Web'den indirilmalarını önlemek için tasarlanmıştır. Şu anda dosya dosyaları ve yürütülebilir dosyalar da dahil olmak üzere taşınabilir _yürütülebilir (PE_ ) _.exe.dll_ destekler. Kapsam zaman içinde uzatılacaktır.
-> - Bu yanıt eylemi 11. Windows 10, sürüm 1703 veya daha sonraki sürümler Windows kullanılabilir.
+> - Bu yanıt eylemi 1703 Windows 10 sonraki sürümler ve sonraki sürümler için Windows 11.
 > - İzin verme veya engelleme eylemi öncesinde dosyanın sınıflandırması cihazın önbelleği üzerinde bulunuyorsa, izin ver veya engelle işlevi dosyalar üzerinde yapılamaz.
 
 > [!NOTE]
@@ -232,7 +229,7 @@ Ayrıntılar [için Bkz. Microsoft Tehdit Uzmanına](/microsoft-365/security/def
 
 Gönderme tarihi/saati, gönderilen kullanıcı ve eylem başarılı olursa ya da başarısız olursa diğer tüm ilgili ayrıntılar da gösterilir.
 
-![Bilgili işlem merkezi görüntüsü.](images/action-center-details.png)
+:::image type="content" source="images/action-center-details.png" alt-text="Bilgili işlem merkezi" lightbox="images/action-center-details.png":::
 
 ## <a name="deep-analysis"></a>Derin çözümleme
 
@@ -254,12 +251,12 @@ Herhangi bir dosyanın ayrıntılarını, genellikle bir uyarının araştırıl
 **Derin çözümleme için** gönder, dosya Uç Nokta arka uç örnek koleksiyonunda dosya kullanılabilir durumda olduğunda veya bu dosya derinlemesine çözümlemeye göndermeyi destekleyen bir Windows 10 cihazda gözlemlendiyse etkinleştirilir.
 
 > [!NOTE]
-> Yalnızca Windows 10 ve Windows 11 dosyaları otomatik olarak toplanabilir.
+> Yalnızca posta Windows 10 Windows 11 dosyalar otomatik olarak toplanabilir.
 
-Ayrıca, dosya bir Windows 10 cihazında ([](https://www.microsoft.com/security/portal/submission/submit.aspx)veya Windows 11'de) gözlemlenmedi ise ve daha derin çözümleme düğmesinin kullanılabilir olması için Gönder düğmesinin kullanılabilir olması için Microsoft Güvenlik Merkezi Portalı'nden  bir örnek gönderebilirsiniz.
+Dosya bir Windows 10 cihazında (veya Windows 11) gözlemlenmedi ise ve daha derin çözümleme düğmesinin kullanılabilir olması için Gönder düğmesinin kullanılabilir olması için Microsoft 365 Defender [Portalı](https://www.microsoft.com/security/portal/submission/submit.aspx) üzerinden bir örnek de gönderebilirsiniz.
 
 > [!NOTE]
-> Microsoft Güvenlik Merkezi Portalı'daki arka uç işleme akışları nedeniyle, dosya gönderimi ve Uç Nokta için Defender'daki derin çözümleme özelliğinin kullanılabilirliği arasında 10 dakikaya kadar gecikme olabilir.
+> Microsoft 365 Defender Portal'daki arka uç işleme akışları nedeniyle, dosya gönderimi ve Uç Nokta için Defender'daki derin çözümleme özelliğinin kullanılabilirliği arasında 10 dakikaya kadar gecikme olabilir.
 
 ### <a name="submit-files-for-deep-analysis"></a>Daha derin çözümleme yapmak için dosyaları gönderme
 
@@ -271,7 +268,7 @@ Ayrıca, dosya bir Windows 10 cihazında ([](https://www.microsoft.com/security/
 
 2. Dosya **görünümünün Derin** çözümleme sekmesinde Gönder'i **seçin**.
 
-   ![Pe dosyalarını yalnızca dosya ayrıntıları bölümünde gönderebilirsiniz.](images/submit-file.png)
+   :::image type="content" source="images/submit-file.png" alt-text="PE dosyalarını gönder düğmesi" lightbox="images/submit-file.png":::
 
    > [!NOTE]
    > DOSYA VE TİPİ dosyaları da _dahil olmak.exe_ _PE.dll_ destekler.
@@ -279,7 +276,7 @@ Ayrıca, dosya bir Windows 10 cihazında ([](https://www.microsoft.com/security/
    İlerleme çubuğu görüntülenir ve çözümlemenin farklı aşamaları hakkında bilgi sağlar. Çözümleme bittiğinde raporu görüntüebilirsiniz.
 
 > [!NOTE]
-> Cihazın kullanılabilirlik durumuna bağlı olarak, örnek toplama süresi değişiklik gösterebilir. Örnek koleksiyon için 3 saatlik bir zaman aşımı vardır. Koleksiyon başarısız olur ve bu sırada çevrimiçi bir cihaz (veya 11 Windows 10 11) bildirimi yoksa Windows durdurulacak. Dosya hakkında en yeni verileri elde etmek için, daha derin çözümlemeler yapmak için dosyaları yeniden gönderebilirsiniz.
+> Cihazın kullanılabilirlik durumuna bağlı olarak, örnek toplama süresi değişiklik gösterebilir. Örnek koleksiyon için 3 saatlik bir zaman aşımı vardır. Koleksiyon başarısız olur ve bu sırada çevrimiçi bir cihaz (veya Windows 11) raporlaması yoksa Windows 10 durdurulacak. Dosya hakkında en yeni verileri elde etmek için, daha derin çözümlemeler yapmak için dosyaları yeniden gönderebilirsiniz.
 
 ### <a name="view-deep-analysis-reports"></a>Derin çözümleme raporlarını görüntüleme
 
@@ -295,7 +292,7 @@ Verilen ayrıntılar olası bir saldırının göstergesi varsa araştırmanıza
 1. Daha derin çözümleme yapmak için dosyayı seçin.
 2. Derin çözümleme **sekmesini** seçin. Daha önce rapor varsa, rapor özeti bu sekmede görüntülenir.
 
-    ![Ayrıntılı çözümleme raporu, bir dizi kategori arasında ayrıntılı bilgi gösterir.](images/analysis-results-nothing500.png)
+   :::image type="content" source="images/analysis-results-nothing500.png" alt-text="Bir dizi kategori arasında ayrıntılı bilgi gösteren ayrıntılı çözümleme raporu" lightbox="images/analysis-results-nothing500.png":::
 
 #### <a name="troubleshoot-deep-analysis"></a>Derin çözümleme sorunlarını giderme
 
@@ -318,7 +315,7 @@ Dosya göndermek için çalışırken bir sorun oluşursa, aşağıdaki sorun gi
       Value = 1 - allow sample collection
     ```
 
-5. Grup İlkesi aracılığıyla kuruluş birimini değiştirme. Daha fazla bilgi için bkz [. Grup İlkesiyle Yapılandırma](configure-endpoints-gp.md).
+5. Kuruluş birimini farklı bir grup ilkesi. Daha fazla bilgi için bkz[. Grup ilkesi](configure-endpoints-gp.md).
 
 6. Bu adımlar sorunu çözmezse, destan ile iletişime geçin.
 
@@ -326,4 +323,4 @@ Dosya göndermek için çalışırken bir sorun oluşursa, aşağıdaki sorun gi
 
 - [Cihazda yanıt eylemleri gerçekleştirin](respond-machine-alerts.md)
 - [Dosyaları araştırma](investigate-files.md)
-- [Uç Nokta Planı 1 için Microsoft Defender'da el ile yanıt eylemleri](defender-endpoint-plan-1.md#manual-response-actions)
+- [Plan 1'de Uç Nokta için Microsoft Defender eylemleri](defender-endpoint-plan-1.md#manual-response-actions)

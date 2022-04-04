@@ -1,5 +1,5 @@
 ---
-title: Kasa için Microsoft Defender'da Belgeleri Office 365
+title: Kasa Belgeler'i Office 365 için Microsoft Defender
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -16,12 +16,12 @@ ms.collection:
 description: Kasa Microsoft 365 E5/A5 veya Microsoft 365 E5/A5 Güvenlik belgelerini nasıl Microsoft 365 E5 öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: beb34c04f93fe853678b30bcd9b5f7a621f4666b
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: ab5e35954cac20a18e34f418b5b9fcdc7f2fd007
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021789"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466355"
 ---
 # <a name="safe-documents-in-microsoft-365-e5a5"></a>Kasa/A5'Microsoft 365 E5 Belgeleri Belgele
 
@@ -30,7 +30,7 @@ ms.locfileid: "63021789"
 **Geçerli olduğu yer:**
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Kasa Belgeler, açık olan belgeleri Office için Korumalı Görünüm'de veya Application Guard'da taramak için [Uç](https://support.microsoft.com/office/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653) Nokta için [Microsoft Defender'ın](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) bulut arka ucu kullanan bir [premium Office](https://support.microsoft.com/topic/9e0fb9c2-ffad-43bf-8ba3-78f785fdba46).
+Kasa Belgeler, belgelerinizi Uç Nokta için Microsoft Defender için [Korumalı](https://support.microsoft.com/office/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653) Görünüm'de veya [Application Guard'da](https://support.microsoft.com/topic/9e0fb9c2-ffad-43bf-8ba3-78f785fdba46) Office taramak için Office.[](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 
 Kullanıcıların Yerel cihazlarında uç nokta için Defender'ın yüklü olması veya Belge korumasının Kasa olması gerekli değildir. Aşağıdaki gereksinimlerin Kasa kullanıcılar Belge korumasına sahip olur:
 
@@ -41,7 +41,7 @@ Kullanıcıların Yerel cihazlarında uç nokta için Defender'ın yüklü olmas
   - Microsoft 365 E5
   - Microsoft 365 E5 Güvenlik
 
-  Kasa Belgeler, lisans planları için Microsoft Defender'Office 365 dahil değildir.
+  Kasa Belgeler, lisans planlarına Office 365 için Microsoft Defender değildir.
 
   Daha fazla bilgi için bkz [. Lisanslama için ürün adları ve hizmet planı tanımlayıcıları](/azure/active-directory/enterprise-users/licensing-service-plan-reference).
 
@@ -67,7 +67,7 @@ Kullanıcıların Yerel cihazlarında uç nokta için Defender'ın yüklü olmas
 
 ### <a name="how-does-microsoft-handle-your-data"></a>Microsoft verilerinizi nasıl işler?
 
-Korunmak için, belgeler Kasa çözümleme için Uç nokta bulutu için [Microsoft Defender'a](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) gönderir. Uç nokta için Microsoft Defender'ın verilerinizi nasıl işlemesiyle ilgili ayrıntıları burada bulunabilir: Uç nokta veri depolaması ve gizliliği [için Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/data-storage-privacy).
+Korunmak için Belgeler Kasa çözümleme için dosyaları [Uç Nokta için Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) buluta gönderir. Verilerinizin nasıl Uç Nokta için Microsoft Defender ilgili ayrıntıları burada bulunabilir: [Uç Nokta için Microsoft Defender ve gizlilik](/windows/security/threat-protection/microsoft-defender-atp/data-storage-privacy).
 
 Postayle gönderilen Kasa Belgeler çözümleme için gereken süre kadar (normalde 24 saatten az) Uç Nokta için Defender'da tutulmz.
 
@@ -83,7 +83,7 @@ Postayle gönderilen Kasa Belgeler çözümleme için gereken süre kadar (norma
 
    Bitirdiğinizde, **Kaydet**'i tıklatın.
 
-   ![Kasa Ekler sayfasında Genel ayarlar'ı seçdikten sonra belgeler Kasa ayarlar'ı seçin.](../../media/safe-docs-global-settings.png)
+   :::image type="content" source="../../media/safe-docs-global-settings.png" alt-text="Ekler Kasa Genel ayarlar'ı seçdikten sonra Belgeler Kasa ayarlarına tıklayın" lightbox="../../media/safe-docs-global-settings.png":::
 
 ### <a name="use-exchange-online-powershell-to-configure-safe-documents"></a>belgeleri Exchange Online yapılandırmak için powershell Kasa kullanma
 
@@ -119,13 +119,13 @@ Daha fazla bilgi için, aşağıdaki konulara bakın:
 - [PowerShell Microsoft 365 lisansı ve hizmet ayrıntılarını görüntüleme](/microsoft-365/enterprise/view-account-license-and-service-details-with-microsoft-365-powershell)
 - [Lisanslama için ürün adları ve hizmet planı tanımlayıcıları](/azure/active-directory/enterprise-users/licensing-service-plan-reference)
 
-### <a name="onboard-to-the-microsoft-defender-for-endpoint-service-to-enable-auditing-capabilities"></a>Denetim özelliklerini etkinleştirmek için Uç Nokta için Microsoft Defender hizmetine ekleme
+### <a name="onboard-to-the-microsoft-defender-for-endpoint-service-to-enable-auditing-capabilities"></a>Denetim özelliklerini etkinleştirmek Uç Nokta için Microsoft Defender hizmetine ekleme
 
-Denetim olanaklarını etkinleştirmek için, yerel cihazda Uç Nokta için Microsoft Defender'ın yüklü olması gerekir. Uç nokta için Microsoft Defender'ı dağıtmak için, dağıtımın çeşitli aşamalarını tamamlamalısınız. Eklemeden sonra, denetim özelliklerini özellikler portalında Microsoft 365 Defender yapılandırabilirsiniz.
+Denetim olanaklarını etkinleştirmek için, yerel cihazın yüklü Uç Nokta için Microsoft Defender olması gerekir. Dağıtım Uç Nokta için Microsoft Defender, dağıtımın çeşitli aşamalarını tamamlamalısınız. Eklemeden sonra, denetim özelliklerini özellikler portalında Microsoft 365 Defender yapılandırabilirsiniz.
 
-Daha fazla bilgi edinmek için bkz [. Uç nokta için Microsoft Defender hizmetine ekleme](/microsoft-365/security/defender-endpoint/onboarding). Ek yardıma ihtiyacınız varsa Uç nokta ekleme [sorunları için Microsoft Defender'da sorun giderme makalesine bakın](/microsoft-365/security/defender-endpoint/troubleshoot-onboarding).
+Daha fazla bilgi edinmek için [bkz. Uç Nokta için Microsoft Defender ekleme](/microsoft-365/security/defender-endpoint/onboarding). Ek yardıma ihtiyacınız varsa Ekleme sorunlarını [giderme Uç Nokta için Microsoft Defender bakın](/microsoft-365/security/defender-endpoint/troubleshoot-onboarding).
 
-### <a name="how-do-i-know-this-worked"></a>Bunun çalıştığını nasıl bilim?
+### <a name="how-do-i-know-this-worked"></a>Nasıl yaparım? çalıştığını biliyor musunuz?
 
 Belgeler'i etkinleştirdikten ve yapılandırmış Kasa için, aşağıdaki adımlardan herhangi birini yapın:
 

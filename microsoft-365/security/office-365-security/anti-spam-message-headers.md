@@ -18,12 +18,12 @@ description: Yöneticiler, EOP (EOP) tarafından iletilere eklenen üst Exchange
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8eaf567e4cbceae66a5acd1fa1a45565f15a4804
-ms.sourcegitcommit: e09ced3e3628bf2ccb84d205d9699483cbb4b3b0
+ms.openlocfilehash: 33cebd8cfd0d61b09a5d4976baec9708082c8ca3
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2021
-ms.locfileid: "62990614"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679444"
 ---
 # <a name="anti-spam-message-headers-in-microsoft-365"></a>İletide istenmeyen posta önleme ileti Microsoft 365
 
@@ -60,8 +60,6 @@ Ayrı ayrı alanlar ve değerler aşağıdaki tabloda açıklanmıştır.
 > [!NOTE]
 > **X-Forefront-Antispam-Report üst** bilgisi birçok farklı alan ve değer içerir. Tabloda açık olmayan alanlar tanılama amacıyla Microsoft istenmeyen posta önleme ekibi tarafından özel olarak kullanılır.
 
-****
-
 |Alan|Açıklama|
 |---|---|
 |`ARC`|Protokolde `ARC` aşağıdaki alanlar vardır: <ul><li>`AAR`: DMARC'dan **Kimlik Doğrulama sonuçları** üst bilgisinde yer alan içeriği kayıtları.</li><li>`AMS`: İletinin şifreleme imzalarını içerir.</li><li>`AS`: İleti üst bilgilerinin şifreleme imzalarını içerir. Bu alan, zincir doğrulamanın sonucunu yok`"cv="`, geçti veya başarısız olarak içeren, , adlı bir **zincir** **doğrulama etiketi** **içerir**.</li></ul>|
@@ -87,18 +85,14 @@ Ayrı ayrı alanlar ve değerler aşağıdaki tabloda açıklanmıştır.
 |`SFV:SPM`|İleti, istenmeyen posta filtrelemesi ile istenmeyen posta olarak işaretlendi.|
 |`SRV:BULK`|İleti, istenmeyen posta filtreleme ve toplu şikayet düzeyi (BCL) eşiği tarafından toplu e-posta olarak tanımlandı. _MarkAsSpamBulkMail_ `On` parametresi (varsayılan olarak açıktır) olduğunda, toplu e-posta iletisi istenmeyen posta (SCL 6) olarak işaretlenir. Daha fazla bilgi için bkz [. İstenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).|
 |`X-CustomSpam: [ASFOption]`|İleti, Gelişmiş İstenmeyen Posta Filtresi (ASF) ayarıyla eşdü. Her ASF ayarının X üstbilgisi değerini görmek için bkz. [Gelişmiş İstenmeyen Posta Filtresi (ASF) ayarları](advanced-spam-filtering-asf-options.md).|
-|
 
 ## <a name="x-microsoft-antispam-message-header-fields"></a>X-Microsoft-Antispam ileti üst bilgisi alanları
 
 Aşağıdaki tabloda, **X-Microsoft-Antispam ileti üst bilgisinde yararlı alanlar** açıklanmıştır. Bu üst bilgide yer alan diğer alanlar tanılama amacıyla Microsoft istenmeyen posta önleme ekibi tarafından özel olarak kullanılır.
 
-****
-
 |Alan|Açıklama|
 |---|---|
 |`BCL`|İletinin toplu şikayet düzeyi (BCL). Daha yüksek bir BCL, toplu posta iletisinin şikayet oluşturma olasılığı daha yüksek (ve bu nedenle istenmeyen posta olma olasılığı daha yüksek) olduğunu gösterir. Daha fazla bilgi için bkz [. Toplu şikayet düzeyi (BCL)](bulk-complaint-level-values.md).|
-|
 
 ## <a name="authentication-results-message-header"></a>Kimlik doğrulama sonuçları ileti üst bilgisi
 
@@ -151,8 +145,6 @@ Aşağıdaki listede, her tür **e-posta** kimlik doğrulaması denetimi için K
 
 Aşağıdaki tabloda, her e-posta kimlik doğrulaması denetimi için alanlar ve olası değerler açık almaktadır.
 
-****
-
 |Alan|Açıklama|
 |---|---|
 |`action`|DMARC denetimi sonuçlarına dayalı olarak istenmeyen posta filtresi tarafından  alınan eylemi gösterir. Örneğin: <ul><li>**orect veya** **o.reject: Reddetmeyi** geçersiz kılmanın açılımı. Bu durumda Microsoft 365, DMARC TXT kaydı p=reddetme ilkesine sahip bir etki alanında DMARC denetimine başarısız olan bir ileti geldiğinde bu eylemi kullanır. İletiyi silmek veya reddetmek yerine, Microsoft 365 istenmeyen posta olarak işaretler. E-postaların neden Microsoft 365 yapılandırıldı hakkında daha fazla bilgi için bkz. Microsoft 365 [DMARC'da başarısız olan gelen e-postayı işleme](use-dmarc-to-validate-email.md#how-microsoft-365-handles-inbound-email-that-fails-dmarc).</li><li>**pct.karantina**: DMARC'ı geç kullanmayan iletilerin yüzde 100'den az bir yüzdesinin yine de teslim olacağını gösterir. Bu, iletinin DMARC başarısız olduğu ve ilkenin karantinaya alınamadı anlamına gelir, ancak PCT alanı %100 olarak ayarilmemiştir ve sistem belirtilen etki alanının ilkesine göre DMARC eylemlerini uygulamamak üzere rastgele karar verdi.</li><li>**pct.reject**: Yine de DMARC'ı geçemedi iletilerinin yüzde 100'den az bir yüzdesinin teslim olacağını gösterir. Bu, iletinin DMARC başarısız olduğu ve ilkenin reddedecek şekilde ayar olduğu, ancak PCT alanının %100 olarak ayarlanmadlı olduğu ve sistem belirtilen etki alanının ilkesine göre DMARC eyleminin uygulanmayacak şekilde rastgele belirlen ayarlaması anlamına gelir.</li><li>**permerror**: DNS'de yanlış 365 DMARC TXT kaydıyla karşılaşma gibi, DMARC değerlendirme sırasında kalıcı bir hata oluştu. Bu iletiyi yeniden gönderme girişiminin farklı bir sonuçla bit olasılığı yok. Bunun yerine, sorunu çözmek için etki alanının sahibine başvurabilirsiniz.</li><li>**bir hata oluştu**. DMARC değerlendirme sırasında geçici bir hata oluştu. E-postayı düzgün bir şekilde işlemesi için gönderenden daha sonra iletiyi yeniden göndermelerini isteğinizi gönderebilirsiniz.</li></ul>|
@@ -164,4 +156,3 @@ Aşağıdaki tabloda, her e-posta kimlik doğrulaması denetimi için alanlar ve
 |`reason`|Bileşik kimlik doğrulamasının geçen veya başarısız olan nedeni. Değer 3 basamaklı bir koddur. Örneğin: <ul><li>**000**: İleti açık kimlik doğrulaması başarısız oldu (`compauth=fail`). Örneğin, ileti bir DMARC'ı karantina veya reddetme eylemiyle başarısız oldu.</li><li>**001**: İleti örtülü kimlik doğrulaması () başarısız oldu`compauth=fail`. Bu, gönderen etki alanının yayımlanmış e-posta kimlik doğrulama kayıtları olmadığını veya varsa zayıf bir hata ilkesi (SPF yumuşak başarısız veya nötr, DMARC `p=none`ilkesi) olduğu anlamına gelir.</li><li>**002**: Kuruluş, gönderen/etki alanı çifti için, kimliği doğru olmayan e-posta göndermenin açıkça yasak olduğu bir ilkesine sahip. Bu ayar yönetici tarafından el ile ayarlanır.</li><li>**010**: İleti, DMARC'ye reddetme veya karantinaya alınmış bir eylemle başarısız oldu ve gönderen etki alanı da organizasyonlu kabul edilen etki alanlarından biri (kendi kendine yapılan veya kendi kendine yapılan veya kuruluş içi bir hesabın parçasıdır).</li><li>**1xx veya** **7xx**: İleti kimlik doğrulamasını () geçti`compauth=pass`. Son iki rakam, posta kodu tarafından kullanılan Microsoft 365.</li><li>**2xx**: İleti, örtülü kimlik doğrulamasına () yumuşak geçti`compauth=softpass`. Son iki rakam, posta kodu tarafından kullanılan Microsoft 365.</li><li>**3xx**: İleti, bileşik kimlik doğrulaması () için denetlendi`compauth=none`.</li><li>**4xx** veya **9xx**: İleti bileşik kimlik doğrulamasını () atlar`compauth=none`. Son iki rakam, posta kodu tarafından kullanılan Microsoft 365.</li><li>**6xx**: İleti, örtülü e-posta kimlik doğrulaması başarısız oldu ve gönderen etki alanı da organizasyonlu kabul edilen etki alanlarından biri (kendi kendine veya kuruluş kimlik doğrulamasının bir bölümüdür).</li></ul>|
 |`smtp.mailfrom`|Adresin etki alanı `5321.MailFrom` (POSTA GÖNDEREN adresi, P1 gönderen veya zarf gönderen olarak da bilinir). Bu, teslim edililmeyen raporlar (NDR'ler veya geri dönen iletiler olarak da bilinir) için kullanılan e-posta adresidir.|
 |`spf`|İletiyle ilgili SPF denetimi sonuçlarını açıklar. Olası değerler şunlardır: <ul><li>`pass (IP address)`: İletiyi içeren SPF denetimi, gönderenin IP adresini içerir. İstemci, gönderenin etki alanı adına e-posta gönderme veya geçiş yetkisine sahip.</li><li>`fail (IP address)`: İleti için SPF denetimi başarısız oldu ve gönderenin IP adresini içerir. Buna bazen zor başarısız _denir_.</li><li>`softfail (reason)`: SPF kaydı ana bilgisayarı göndermesine izin verilmedi ancak geçişte olduğunu belirledi.</li><li>`neutral`: SPF kaydı, IP adresinin gönderme yetkisi olup olmadığını açıkça onaylamaz.</li><li>`none`: Etki alanının bir SPF kaydı yok veya SPF kaydı bir sonucu değerlendirmez.</li><li>`temperror`: Geçici bir hata oluştu. Örneğin, bir DNS hatası. Aynı denetim daha sonra başarılı olabilir.</li><li>`permerror`: Kalıcı bir hata oluştu. Örneğin, etki alanının kötü biçimlendirilmiş bir SPF kaydı var.</li></ul>|
-|

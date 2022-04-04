@@ -13,12 +13,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 search.appverid: met150
 ms.technology: m365d
-ms.openlocfilehash: 9838d7f3ffed46c62891822c6e3761e36d49baf5
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: eec3881d2fdb53bc03e4e730fecaf6f1c78c98c7
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985352"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755863"
 ---
 # <a name="device-profile-page"></a>Cihaz profili sayfası
 
@@ -36,7 +36,7 @@ Cihaz Uç Nokta için Microsoft Defender'a kayıtlı ise, bazı yaygın güvenli
 
 Profil sayfası çeşitli geniş bölümlere ayrılmıştır.
 
-![(1) Sekme alanı (2) Kenar Çubuğu ve (3) Eylemleri'nin kırmızıyla vurgulu olduğu cihaz profili sayfasının görüntüsü.](../../media/mtp-device-profile/hybrid-device-overall.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-overall.png" alt-text="Microsoft 365 Defender portalında Cihaz profili sayfası" lightbox="../../media/mtp-device-profile/hybrid-device-overall.png":::
 
 Kenar çubuğu (1) cihazla ilgili temel ayrıntıları listeler.
 
@@ -48,7 +48,7 @@ Cihaz Uç Nokta için Microsoft Defender'a kayıtlı ise, yanıt eylemlerinin li
 
 Cihaz profil sayfasının ana içerik alanında kenar çubuğu yer almaktadır.
 
-![Cihaz profili için kenar çubuğu sekmesinin resmi.](../../media/mtp-device-profile/azure-atp-only-device-sidebar.png)
+:::image type="content" source="../../media/mtp-device-profile/azure-atp-only-device-sidebar.png" alt-text="Mobil portalda cihaz profili için Kenar Microsoft 365 Defender sekmesi" lightbox="../../media/mtp-device-profile/azure-atp-only-device-sidebar.png":::
 
 Kenar çubuğu cihazın tam adını ve pozlama düzeyini listeler. Ayrıca, küçük alt bölümlerde açık veya kapalı olarak değiştir değiştir işletmek için bazı önemli temel bilgiler sağlar; örneğin:
 
@@ -66,7 +66,7 @@ Kenar çubuğu cihazın tam adını ve pozlama düzeyini listeler. Ayrıca, kü�
 
 Yanıt eylemleri, tehditlere karşı savunmanın ve tehditleri çözümlemenin hızlı bir yolunu sağlar.
 
-![Cihaz profili için eylem çubuğunun resmi.](../../media/mtp-device-profile/hybrid-device-long-action-bar.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-long-action-bar.png" alt-text="Mobil portalda cihaz profili Microsoft 365 Defender çubuğu" lightbox="../../media/mtp-device-profile/hybrid-device-long-action-bar.png":::
 
 > [!IMPORTANT]
 > * [Yanıt eylemleri](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts) , yalnızca cihaz Uç Nokta için Microsoft Defender'a kaydedilir.
@@ -94,7 +94,7 @@ Uç nokta için Microsoft Defender'a kayıtlı cihazlar ayrıca bir zaman çizel
 
 Varsayılan sekme Genel **Bakış'tır**. Cihazla ilgili en önemli güvenlik bilgilerine hızlı bir bakış sağlar.
 
-![Cihaz profili için genel bakış sekmesinin görüntüsü.](../../media/mtp-device-profile/hybrid-device-tab-overview.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-tab-overview.png" alt-text="Portalda cihaz profili için Genel Microsoft 365 Defender sekmesi" lightbox="../../media/mtp-device-profile/hybrid-device-tab-overview.png":::
 
 Burada, cihazın etkin uyarılarını ve şu anda oturum açmış olan kullanıcıları hızla göz atabilirsiniz.
 
@@ -104,7 +104,7 @@ Cihaz Uç Nokta için Microsoft Defender'a kayıtlı ise, cihazın risk düzeyin
 
 Uyarılar **sekmesi** , cihazda hem Kimlik için Microsoft Defender'dan hem de Uç Nokta için Microsoft Defender'dan yükseltilmiş uyarıların listesini içerir.
 
-![Cihaz profili için uyarılar sekmesinin resmi.](../../media/mtp-device-profile/hybrid-device-tab-alerts.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-tab-alerts.png" alt-text="Microsoft 365 Defender portalında cihaz profili için Uyarılar sekmesi" lightbox="../../media/mtp-device-profile/hybrid-device-tab-alerts.png":::
 
 Görüntülenen öğe sayısını ve her öğe için görüntülenecek sütunları özelleştirebilirsiniz. Varsayılan davranış, sayfa başına otuz öğenin listelendir.
 
@@ -122,7 +122,7 @@ Zaman **Çizelgesi** sekmesi, cihazda yükseltilmiş tüm olayların etkileşiml
 
 Grafiğin altında, seçilen tarih aralığı için bir olay listesi yer almaktadır.
 
-![Cihaz profili için zaman çizelgesi sekmesinin resmi.](../../media/mtp-device-profile/hybrid-device-tab-timeline.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-tab-timeline.png" alt-text="Zaman Çizelgesi portalında cihaz profili Microsoft 365 Defender sekmesi" lightbox="../../media/mtp-device-profile/hybrid-device-tab-timeline.png":::
 
 Görüntülenen öğe sayısı ve listenin sütunlarının her ikisi de özelleştirilebilir. Varsayılan sütunlar olay zamanı, etkin kullanıcı, eylem türü, varlıklar (süreçler) ve olayla ilgili ek bilgileri listelemektedir.
 
@@ -136,7 +136,7 @@ Liste, indirilebilir bir CSV dosyasına da aktarabilirsiniz. Dosya olay sayısı
 
 Güvenlik **önerileri sekmesi** , cihazı korumak için gerçekleştirebilirsiniz eylemleri listeler. Bu listeden bir öğe seçerek, öneriyi uygulamayla ilgili yönergelere buradan bir açılır öğe açılır.
 
-![Cihaz profili için güvenlik önerileri sekmesinin resmi.](../../media/mtp-device-profile/hybrid-device-tab-security-recs.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-tab-security-recs.png" alt-text="Mobil portalda cihaz profili için Güvenlik Microsoft 365 Defender sekmesi" lightbox="../../media/mtp-device-profile/hybrid-device-tab-security-recs.png":::
 
 Önceki sekmelerde olduğu gibi, sayfa başına görüntülenen öğe sayısı ve hangi sütunların görüntüleniyor olduğu özelleştirilebilir.
 
@@ -146,7 +146,7 @@ Varsayılan görünüm, ele alınacak güvenlik açıklarını, ilişkili tehdid
 
 Yazılım **envanteri** sekmesinde, cihazda yüklü yazılım listeleri vardır.
 
-![Cihaz profili için yazılım envanteri sekmesinin görüntüsü.](../../media/mtp-device-profile/hybrid-device-tab-software-inventory.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-tab-software-inventory.png" alt-text="Portalda cihaz profili için Yazılım Microsoft 365 Defender sekmesi" lightbox="../../media/mtp-device-profile/hybrid-device-tab-software-inventory.png":::
 
 Varsayılan görünümde yazılım satıcısı, yüklü sürüm numarası, bilinen yazılım hatalarının sayısı, tehdit öngörüleri, ürün kodu ve etiketler görüntülenir. Görüntülenen öğe sayısı ve görüntülenecek sütunların her ikisi de özelleştirilebilir.
 
@@ -158,7 +158,7 @@ Bu liste ürün koduna göre filtrelenmiş olabilir.
 
 Bulunan **güvenlik açıkları** sekmesi, cihazı etkileyebilecek Tüm Ortak Güvenlik Açıkları ve Açıkları (CVE) listeler.
 
-![Cihaz profili için güvenlik açıkları sekmesinin görüntüsü.](../../media/mtp-device-profile/hybrid-device-tab-discovered-vulnerabilities.png)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-tab-discovered-vulnerabilities.png" alt-text="Microsoft 365 Defender portalında cihaz profili için bulunan güvenlik açıkları sekmesi" lightbox="../../media/mtp-device-profile/hybrid-device-tab-discovered-vulnerabilities.png":::
 
 Varsayılan görünümDE, ANLİ'nin önem düzeyi, Ortak Güvenlik Açığı Puanı (CVS), YERİNALA'ya ilişkin yazılım, ATL'nin yayım tarihi, DURUMUNUn en son ne zaman güncelleştirilmesi ve YERKarakARAKLA'ya ilişkin tehditler listelenmektedir.
 
@@ -170,7 +170,7 @@ Bu listeden bir öğe seçilerek BURMİ'yi açıklayan bir açılır öğe açı
 
 Eksik **KBs sekmesi** , cihaza henüz uygulanmamış olan tüm Microsoft Güncelleştirmelerini listeler. Söz konusu "KB"ler, bu [güncelleştirmeleri açıklayan](https://support.microsoft.com/help/242450/how-to-query-the-microsoft-knowledge-base-by-using-keywords-and-query) Bilgi Bankası makaleleridir; örneğin [KB4551762](https://support.microsoft.com/help/4551762/windows-10-update-kb4551762).
 
-![Cihaz profilinde eksik kbs sekmesinin resmi.](../../media/mtp-device-profile/hybrid-device-tab-missing-kbs.PNG)
+:::image type="content" source="../../media/mtp-device-profile/hybrid-device-tab-missing-kbs.PNG" alt-text="Portalda cihaz profili için Eksik Microsoft 365 Defender sekmesi" lightbox="../../media/mtp-device-profile/hybrid-device-tab-missing-kbs.PNG":::
 
 Varsayılan görünümde, güncelleştirmeler, işletim sistemi sürümü, etkilenen ürünler, CVE'lere adreslenen KB numarası ve etiketler içeren bülten listelenmiştir.
 
@@ -181,6 +181,6 @@ Bir öğe seçerek güncelleştirmeye bağlantı içeren bir açılır öğe aç
 ## <a name="related-topics"></a>İlgili konular
 
 * [Microsoft 365 Defender genel bakış](microsoft-365-defender.md)
-* [E-Microsoft 365 Defender](m365d-enable.md)
+* [Microsoft 365 Defender’ı açın](m365d-enable.md)
 * [Canlı yanıtı kullanarak cihazlardaki varlıkları araştırma](../defender-endpoint/live-response.md)
 * [Web'de otomatik araştırma ve yanıt (AIR) Office 365](../office-365-security/office-365-air.md)

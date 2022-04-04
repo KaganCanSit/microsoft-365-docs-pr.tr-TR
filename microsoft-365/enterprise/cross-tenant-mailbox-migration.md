@@ -16,12 +16,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.collection:
 - M365-subscription-management
-ms.openlocfilehash: a368102b6cb4eabaadd459fd185d18e3a7dc7381
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: e9ec5c27f5dabfa2df0f12ca6daecfcef860547c
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63323409"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499385"
 ---
 # <a name="cross-tenant-mailbox-migration-preview"></a>Kiracılar arası posta kutusu geçişi (önizleme)
 
@@ -38,7 +38,7 @@ Kiracılar arası Exchange kutusu geçişleri, yalnızca karma veya buluttaki ki
 Bu makalede kiracılar arası posta kutusu taşınırken ilen süreç açıklanmıştır ve kaynak ve hedef kiracıların posta kutusu içeriği taşırken nasıl hazır Exchange Online kılavuz sağlanmıştır.
 
    > [!NOTE]
-   > Kiracılar arası posta kutusu geçişini artık Azure Anahtar Kasası gerektirmeyen bir şekilde etkinleştirmek için kurulum adımlarımızı yakın zamanda güncelleştirildi! Bu önizlemeye ilk kez geliyorsanız herhangi bir işlem gerekmez ve bu belgede ayrıntılı olarak bulunan adımları izleyebilirsiniz. Önceki AKV yöntemini kullanarak kiracılarınızı yapılandırmaya başladıysanız, bu yeni yöntemi kullanmaya başlamak için bu yapılandırmayı durdurmanızı veya kaldırmanızı kesinlikle öneririz. Önceki AKV yöntemiyle devam eden posta kutusu geçişleri varsa, lütfen var olan geçişlerinizi tamamlayana kadar bekleyin ve yeni basitleştirilmiş yöntemi etkinleştirmek için aşağıdaki adımları izleyin. Azure Anahtar Kasası gerekli kurulum adımları arşivlenir, ancak başvuru **[için](https://github.com/microsoft/cross-tenant/wiki/V1-Content#cross-tenant-mailbox-migration-preview)** burada bulabilirsiniz.
+   > Kiracılar arası posta kutusu geçişini artık Azure posta kutusu gerektirmeyecek şekilde etkinleştirmek için kurulum adımlarımızı Key Vault! Bu önizlemeye ilk kez geliyorsanız herhangi bir işlem gerekmez ve bu belgede ayrıntılı olarak bulunan adımları izleyebilirsiniz. Önceki AKV yöntemini kullanarak kiracılarınızı yapılandırmaya başladıysanız, bu yeni yöntemi kullanmaya başlamak için bu yapılandırmayı durdurmanızı veya kaldırmanızı kesinlikle öneririz. Önceki AKV yöntemiyle devam eden posta kutusu geçişleri varsa, lütfen var olan geçişlerinizi tamamlayana kadar bekleyin ve yeni basitleştirilmiş yöntemi etkinleştirmek için aşağıdaki adımları izleyin. Azure Key Vault gerekli kurulum adımları arşivlenir, ancak başvuru için **[burada](https://github.com/microsoft/cross-tenant/wiki/V1-Content#cross-tenant-mailbox-migration-preview)** bulabilirsiniz.
 
 ## <a name="preparing-source-and-target-tenants"></a>Kaynak ve hedef kiracıları hazırlama
 
@@ -67,7 +67,7 @@ Aboneliğin kiracı kimliğini almak için abonelik oturum Microsoft 365 yöneti
 
    ![Azure Active Directory Düğmesi](../media/tenant-to-tenant-mailbox-move/109ac3dfbac2403fb288f085767f393b.png)
 
-3. Sol gezinti çubuğunda Uygulama kayıtları'ı seçin.
+3. Sol gezinti çubuğunda, Gezinti Çubuğu'Uygulama kayıtları.
 
 4. Yeni kayıt'ı seçin
 
@@ -79,7 +79,7 @@ Aboneliğin kiracı kimliğini almak için abonelik oturum Microsoft 365 yöneti
 
 6. Sayfanın sağ üst köşesinde, uygulamanın başarıyla oluşturulmuş olduğunu haberen bir bildirim açılır penceresini görebilirsiniz.
 
-7. Giriş'e geri gidin, Azure Active Directory kayıtlarına tıklayın.
+7. Geri dön'e Azure Active Directory'e tıklayın ve Sonra'Uygulama kayıtları.
 
 8. Sahip olunan uygulamalar'ın altında oluşturduğunuz uygulamayı bulun ve uygulamaya tıklayın.
 
@@ -112,7 +112,7 @@ Aboneliğin kiracı kimliğini almak için abonelik oturum Microsoft 365 yöneti
 18. İstemci gizlisi ekle penceresinde bir açıklama girin ve istediğiniz süre sonu ayarlarını yapılandırın.
 
       > [!NOTE]
-      > Bu, geçiş uç noktanızı oluştururken kullanılacak paroladır. Bu parolayı panoya kopyalamanız veya güvenli/gizli parola güvenli konumu için bu parolayı kopyalamanız son derece önemlidir. Bu parolayı yalnızca bu kez görmek mümkün! Bir şekilde kaybeder veya sıfırlamanız gerekirse, Azure portalında oturum açın, Uygulama kayıtlarına gidebilir, geçiş uygulamanızı bulabilir, Secrets & sertifikalarını seçerek uygulamanız için yeni bir parola oluşturabilirsiniz.
+      > Bu, geçiş uç noktanızı oluştururken kullanılacak paroladır. Bu parolayı panoya kopyalamanız veya güvenli/gizli parola güvenli konumu için bu parolayı kopyalamanız son derece önemlidir. Bu parolayı yalnızca bu kez görmek mümkün! Herhangi bir şekilde kaybeder veya sıfırlamanız gerekirse, Azure portal'mızda oturum açın, Uygulama kayıtları'e gidin, geçiş uygulamanızı bulun, Secrets & sertifikalarını seçin ve uygulamanız için yeni bir parola oluşturun.
 
 19. Artık geçiş uygulamasını başarıyla ve gizli olarak oluşturduğunuza göre, uygulamayı kabul etmek zorunda kalacaksınız. Uygulamayı kabul etmek için Azure Active Directory giriş sayfasına gidin, sol gezinti bölmesinde Enterprise uygulamalarına tıklayın, oluşturduğunuz geçiş uygulamasını bulun, seçin ve sol gezinti bölmesinde İzinler'i seçin.
 
@@ -148,7 +148,7 @@ Aboneliğin kiracı kimliğini almak için abonelik oturum Microsoft 365 yöneti
    
    # Enable customization if tenant is dehydrated
      $dehydrated=Get-OrganizationConfig | fl isdehydrated
-     if ($dehy -eq $true) {Enable-OrganizationCustomization}
+     if ($dehydrated -eq $true) {Enable-OrganizationCustomization}
      
    $AppId = "[guid copied from the migrations app]"
 
@@ -209,7 +209,7 @@ Aboneliğin kiracı kimliğini almak için abonelik oturum Microsoft 365 yöneti
 > [!NOTE]
 > Etki alanı adı olarak ve kullanıcı $sourceTenantId $targetTenantId, kiracı etki alanı adı değil GUID kimliğidir. Kiracı kimliği örneği ve kiracı kimliğinizi bulma hakkında bilgi için bkz. [Kiracı Microsoft 365 bulma](/onedrive/find-your-office-365-tenant-id).
    
-### <a name="how-do-i-know-this-worked"></a>Bunun çalıştığını nasıl bilim?
+### <a name="how-do-i-know-this-worked"></a>Nasıl yaparım? çalıştığını biliyor musunuz?
 
 Hedef kiracıda oluşturduğunuz kiracılar arası geçiş uç noktasına [Test-MigrationServerAvailability](/powershell/module/exchange/Test-MigrationServerAvailability) cmdlet'ini çalıştırarak kiracılar arası posta kutusu geçiş yapılandırmasını doğruabilirsiniz.
 
@@ -284,16 +284,16 @@ Hedef kuruluşta aşağıdaki nesnelerin ve özniteliklerin ayarlanmış olduğu
      |                      |                                                                         |
 
    - Karma geri yazma özelliğine önceden Exchange öznitelikler dahil olabilir. Yoksa, bunların da dahil olması gerekir.
-   - msExchBlockedSendersHash – yeniden çevrimiçi olarak güvenli ve engellenen gönderen verilerini istemcilerden şirket içi Active Directory'ye yazar.
-   - msExchSafeRecipientsHash – İstemcilerden şirket içi Active Directory'ye çevrimiçi güvenli ve engellenen gönderen verilerini geri yazar.
-   - msExchSafeSendersHash – İstemcilerden şirket içi Active Directory'ye çevrimiçi güvenli ve engellenen gönderen verilerini geri yazar.
+   - msExchBlockedSendersHash – yeniden çevrimiçi olarak güvenli ve engellenen gönderen verilerini istemcilerden şirket içi Active Directory.
+   - msExchSafeRecipientsHash – İstemcilerden güvenli ve engellenen gönderen verilerini yeniden çevrimiçi olarak şirket içi Active Directory.
+   - msExchSafeSendersHash – yeniden çevrimiçi olarak güvenli ve engellenen gönderen verilerini istemcilerden postalara şirket içi Active Directory.
 
 2. Kaynak posta kutusu MahkemeHold üzerinde ise ve kaynak posta kutusunun Kurtarılabilir Öğeler boyutu veritabanı varsayılan değerden (30 GB) büyükse, hedef kota kaynak posta kutusu boyutundan küçük olduğu için, geçişler devamamaz. HEDEF MailUser nesnesini güncelleştirerek ELC posta kutusu bayraklarını kaynak ortamdan hedefe geçebilirsiniz ve bu da MailUser kotasını 100 GB'a kadar genişletmesi hedef sistemi tetikler ve böylece hedefe geçebilirsiniz. ELC bayraklarını damgalama komutları kiracı yöneticilerine açıklanmaz Bağlan, bu yönergeler yalnızca Azure AD Bağlan çalıştıran karma kimlikte çalışır.
 
     > [!NOTE]
     > ÖRNEK – OLDUĞU GIBI, GARANTİ YOKTUR
     >
-    > Bu betikte, hem kaynak posta kutusuna (kaynak değerlerini almak için) hem de hedef şirket içi Active Directory'ye (ADUser nesnesini damgalama) bağlantı olduğu varsayıldı. Kaynakta mahkeme veya tek öğe kurtarma etkinse bunu hedef hesapta ayarlayın.  Bu, hedef hesabın dökümü boyutunu 100 GB'a artıracaktır.
+    > Bu betikte, hem kaynak posta kutusuna (kaynak değerleri almak için) hem de hedef posta kutusuna (ADUser nesnesini damgalama) şirket içi Active Directory bir bağlantı olduğu varsayıldı. Kaynakta mahkeme veya tek öğe kurtarma etkinse bunu hedef hesapta ayarlayın.  Bu, hedef hesabın dökümü boyutunu 100 GB'a artıracaktır.
 
     ```powershell
     $ELCValue = 0
@@ -399,7 +399,7 @@ Get-MoveRequest -Flags "CrossTenant"
 **Testte kullanılan öznitelikleri kopyalamak için örnek betikler s biliyor musunuz?**
 
 > [!NOTE]
-> ÖRNEK – OLDUĞU GIBI, GARANTİ YOK Bu betikte, hem kaynak posta kutusuna (kaynak değerlerini almak için) hem de hedef şirket içi Active Directory Etki Alanı Hizmetleri'ne (ADUser nesnesini damgalama) bağlantı olduğu varsayıldı. Kaynakta mahkeme veya tek öğe kurtarma etkinse bunu hedef hesapta ayarlayın.  Bu, hedef hesabın dökümü boyutunu 100 GB'a artıracaktır.
+> ÖRNEK – OLDUĞU GIBI, GARANTİ YOK Bu betikte, hem kaynak posta kutusuna (kaynak değerleri almak için şirket içi Active Directory) hem de hedef Etki Alanı Hizmetleri'ne (ADUser nesnesini damgalama) yönelik bir bağlantı olduğu varsayıldı. Kaynakta mahkeme veya tek öğe kurtarma etkinse bunu hedef hesapta ayarlayın.  Bu, hedef hesabın dökümü boyutunu 100 GB'a artıracaktır.
 
 
 
@@ -516,7 +516,7 @@ Evet, ancak yalnızca şu makalelerde açıklandığı gibi mağaza izinlerini t
 
 - [Microsoft Docs | E-postada alıcıların izinlerini Exchange Online](/exchange/recipients-in-exchange-online/manage-permissions-for-recipients)
 
-- [Microsoft Destek | Özel olarak ayrılmış Exchange posta Outlook kutusu izinleri Office 365.](https://support.microsoft.com/topic/how-to-grant-exchange-and-outlook-mailbox-permissions-in-office-365-dedicated-bac01b2c-08ff-2eac-e1c8-6dd01cf77287)
+- [Microsoft Desteği | Özel olarak ayrılmış Exchange posta Outlook kutusu izinleri Office 365.](https://support.microsoft.com/topic/how-to-grant-exchange-and-outlook-mailbox-permissions-in-office-365-dedicated-bac01b2c-08ff-2eac-e1c8-6dd01cf77287)
 
 **Toplu işler için önerileriniz var mı?**
 
@@ -540,9 +540,9 @@ Kiracılar arası geçiş yalnızca posta kutusu verilerini geçirir ve başka h
 
 Çünkü, kiracılar arası geçişler etiketleri dışarı aktarmaz ve kiracılar arasında etiketleri paylaşmanın hiçbir yolu yoktur, ancak bunu yalnızca hedef kiracıda etiketleri yeniden kullanarak gerçekleştirin.
 
-**Gruplarda grup taşımayı Microsoft 365 destekliyor musunuz?**
+**Başkalarını taşımayı destekliyor Microsoft 365 Grupları?**
 
-Şu anda Kiracılar Arası Posta Kutusu geçişleri özelliği Kullanıcı Grupları'nın Microsoft 365 desteklemez.
+Şu anda Kiracılar Arası Posta Kutusu geçişleri özelliği posta kutusu geçişini Microsoft 365 Grupları.
 
 **Posta kutusu yeni/hedef kiracıya geçirildikten sonra kaynak kiracı yöneticisi posta kutusunda eBulma araması gerçekleştire mi?**
 
@@ -660,8 +660,8 @@ Hayır, kiracılar arası posta kutusu geçişi sonrasında, geçirilen kullanı
       | Exchange Online POP                              |
       | Exchange Online Protection                       |
       | Bilgi Engelleri                             |
-      | Güvenlik için Bilgi Office 365 - Premium  |
-      | Standart Için Bilgi Office 365 - Standart |
+      | Information Protection için Office 365 - Premium  |
+      | Information Protection için Office 365 - Standart |
       | Analizler:MyAnalytics                          |
       | Microsoft 365 Denetim'i denetleme                  |
       | Microsoft Kayıtları                               |

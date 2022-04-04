@@ -18,12 +18,12 @@ ms.custom:
 ms.reviewer: evaldm, isco
 f1.keywords: CSH
 ms.technology: m365d
-ms.openlocfilehash: 4ec06a96e345345560a2714fa7e23d91a6f5832f
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 0e38dc36ca85425c033d2b8fd4828043b4043f1a
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314228"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499429"
 ---
 # <a name="configure-automated-investigation-and-response-capabilities-in-microsoft-365-defender"></a>Ekip içinde otomatik araştırma ve yanıt özelliklerini Microsoft 365 Defender
 
@@ -49,9 +49,9 @@ Daha sonra tüm ayarlamaları gerçekleştirdikten sonra İşlem merkezinde [dü
 |Gereksinim|Ayrıntılar|
 |---|---|
 |Abonelik gereksinimleri|Bu aboneliklerden biri: <ul><li>Microsoft 365 E5</li><li>Microsoft 365 A5</li><li>Microsoft 365 E3 Microsoft 365 E5 Güvenlik ile birlikte</li><li>Microsoft 365 A3 güvenlik Microsoft 365 A5 ile birlikte</li><li>Office 365 E5 artı Enterprise Mobility + Security E5 artı Windows E5</li></ul> <p> Lisans [Microsoft 365 Defender bkz](./prerequisites.md#licensing-requirements).|
-|Ağ gereksinimleri|<ul><li>[Kimlik için Microsoft Defender etkin](/azure-advanced-threat-protection/what-is-atp)</li><li>[Yapılandırılmış Bulut Uygulamaları için Microsoft Defender](/cloud-app-security/what-is-cloud-app-security)</li><li>[Identity tümleştirmesi için Microsoft Defender](/cloud-app-security/mdi-integration)</li></ul>|
+|Ağ gereksinimleri|<ul><li>[Kimlik için Microsoft Defender](/azure-advanced-threat-protection/what-is-atp) etkin</li><li>[Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security) yapılandırılmış</li><li>[Kimlik için Microsoft Defender tümleştirmesi](/cloud-app-security/mdi-integration)</li></ul>|
 |Windows gereksinimlerini karşıla|<ul><li>Windows 11</li><li>Windows 10, sürüm 1709 veya sonraki bir sürümü yükleme (Bkz[. Windows sürüm bilgileri](/windows/release-information/))</li><li>Aşağıdaki tehdit koruma hizmetleri yapılandırılmıştır:<ul><li>[Uç Nokta için Microsoft Defender](../defender-endpoint/configure-endpoints.md)</li><li>[Microsoft Defender Virüsten Koruma](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features)</li></ul></li></ul>|
-|E-posta içeriği ve dosya Office koruma|[Yapılandırılmış bir Office 365 Için Microsoft Defender](/microsoft-365/security/office-365-security/defender-for-office-365#configure-atp-policies)|
+|E-posta içeriği ve dosya Office koruma|[Office 365 için Microsoft Defender](/microsoft-365/security/office-365-security/defender-for-office-365#configure-atp-policies) yapılandırılmış|
 |İzinler|Otomatik araştırma ve yanıt özelliklerini yapılandırmak için, genel yönetici () veya Azure Active Directory içinde () veya bu kuruluşta (<https://portal.azure.com> ) Genel Yönetici veya Güvenlik Yöneticisi Microsoft 365 yönetim merkezi.<https://admin.microsoft.com> <p> Otomatik soruşturma ve bekleyen eylemleri gözden geçirme, onaylama veya reddetme gibi yanıt özellikleriyle çalışmak için gereken izinleri almak için bkz. İşlem merkezi görevleri için [gerekli izinler](m365d-action-center.md#required-permissions-for-action-center-tasks).|
 |
 
@@ -69,7 +69,7 @@ Otomatik soruşturmaların çalıştırıp çalışmama ve düzeltme eylemlerini
 
 ## <a name="review-your-security-and-alert-policies-in-office-365"></a>E-postada güvenlik ve uyarı ilkelerinizi Office 365
 
-Microsoft, belirli riskleri [belirlemeye yardımcı](../../compliance/alert-policies.md) olan yerleşik uyarı ilkeleri sağlar. Bu riskler arasında Exchange izinlerinin kötüye kullanımı, kötü amaçlı yazılım etkinliği, olası dış ve iç tehditlere ve bilgi yönetimi risklerine yer ve riski vardır. Bazı uyarılar, [e-postada otomatik araştırma ve Office 365](../office-365-security/office-365-air.md). Yeni özellik için [Defender'Office 365](../office-365-security/defender-for-office-365.md) doğru yapılandırıldığından emin olun.
+Microsoft, belirli riskleri [belirlemeye yardımcı](../../compliance/alert-policies.md) olan yerleşik uyarı ilkeleri sağlar. Bu riskler arasında Exchange izinlerinin kötüye kullanımı, kötü amaçlı yazılım etkinliği, olası dış ve iç tehditlere ve bilgi yönetimi risklerine yer ve riski vardır. Bazı uyarılar, [e-postada otomatik araştırma ve Office 365](../office-365-security/office-365-air.md). Office 365 için Defender [özelliklerinin doğru](../office-365-security/defender-for-office-365.md) yapılandırıldığından emin olun.
 
 Bazı uyarılar ve güvenlik ilkeleri otomatik soruşturmaları tetikleyse de, *e-posta ve içerik için otomatik olarak hiçbir düzeltme eylemi gerçekleştir alınmaz*. Bunun yerine, İşlem merkezinde güvenlik işlemleri ekibinin e-posta ve e-posta içeriği için tüm düzeltme eylemleri [onay bekliyor](m365d-action-center.md).
 
@@ -92,7 +92,7 @@ E-postanın Office 365 içeriğinin korunmasına yardımcı olacak güvenlik aya
 
 ## <a name="make-sure-microsoft-365-defender-is-turned-on"></a>Microsoft 365 Defender'in açık olduğundan emin olun
 
-:::image type="content" source="../../media/mtp-enable/mtp-on.png" alt-text="Etkinleştirmenin etkin olduğundan Microsoft 365 Defender emin olun." lightbox="../../media/mtp-enable/mtp-on.png":::
+:::image type="content" source="../../media/mtp-enable/mtp-on.png" alt-text="E-posta Microsoft 365 Defender portalında Microsoft 365 Defender bölmesi" lightbox="../../media/mtp-enable/mtp-on.png":::
 
 1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında oturum açma</a>
 

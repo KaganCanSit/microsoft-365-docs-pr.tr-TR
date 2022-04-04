@@ -13,18 +13,28 @@ ms.collection:
 - M365solutions
 ms.custom: seo-marvel-jun2020
 f1.keywords: NOCSH
-ms.openlocfilehash: b0a89bc8a79f3ea2c5c0b3c1f01039944565a75c
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: cdff93ed308767256df1adf8dcf9ce2f3eb095a4
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015479"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755763"
 ---
 # <a name="microsoft-cloud-for-it-architects-illustrations"></a>IT mimarları için Microsoft bulutu çizimler
 
 Bu bulut mimarisi posterleri size Microsoft 365, Azure Active Directory (Azure AD), Microsoft Intune, Microsoft Dynamics 365 ve karma şirket içi ve bulut çözümleri gibi Microsoft bulut hizmetleri hakkında bilgi sağlar. 
 
 IT karar vericileri ve mimarları, iş yükleri için ideal çözümleri belirlemek ve ağ, kimlik ve güvenlik gibi temel altyapı bileşenleri hakkında karar almak için bu kaynakları kullanabilir.
+
+<a name="zero trust"></a>
+### <a name="microsoft-365-zero-trust-deployment-plan"></a>Microsoft 365 Sıfır Güveni dağıtım planı
+
+
+Bu çizimde, Güven Güveni Sıfır güvenlik ve güvenlik yapıl için bir Microsoft 365. Sıfır Güven, ihlal olduğunu varsayanın ve her isteğin denetimsiz bir ağdan geliyor gibi doğrulandığını varsayan yeni bir güvenlik modelidir. İsteğin nereden geldiğine veya hangi kaynağa erişten olursa olsun, Sıfır Güven modeli "asla güvenme, her zaman doğrulama" öğretecek.
+
+| Öğe | Açıklama |
+|:-----|:-----|
+|[![Sıfır Güveni Microsoft 365 planı resmi.](../media/solutions-architecture-center/m365-zero-trust-deployment-plan-thumb.png) ](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) <br/> [PDF](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) \| [Visio](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.vsdx) <br/> Güncelleştirme: Mart 2022 | Bu makaleyle birlikte bu çizimi kullanın: [Microsoft 365 Sıfır Güven dağıtım planı](../security/Microsoft-365-zero-trust.md) <br/><br/>**İlgili çözüm kılavuzları** <br/> <ul><li>[Daha fazla bilgi için kimlik altyapınızı Microsoft 365](/microsoft-365/enterprise/deploy-identity-solution-overview)</li><li>[Önerilen kimlik ve cihaz erişimi yapılandırmaları](../security/office-365-security/microsoft-365-policies-configurations.md)</li><li>[Intune ile cihazları yönetme](manage-devices-with-intune-overview.md)</li><li>[Değerlendirme ve pilot Microsoft 365 Defender](../security/defender/eval-overview.md)</li><li>[Microsoft Bilgi Koruması çözümü dağıtma](../compliance/information-protection-solution.md)</li><li>[Gizlilik uygulamalarıyla veri gizliliği düzenlemelerine uygun bilgi Microsoft 365](information-protection-deploy.md)</li></ul>
 
 <a name="attacks"></a>
 ### <a name="common-attacks-and-microsoft-capabilities-that-protect-your-organization"></a>Organizasyonlarınızı koruyan yaygın saldırılar ve Microsoft özellikleri
@@ -33,7 +43,7 @@ En yaygın siber saldırılar ve Microsoft'un bir saldırının her aşamasında
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Yaygın saldırı posteri çizimi.](../media/solutions-architecture-center/common-attacks-model-thumb.png) ](https://download.microsoft.com/download/F/A/C/FACFC1E9-FA35-4DF1-943C-8D4237B4275B/MSFT_Cloud_architecture_security_commonattacks.pdf) <br/> [PDF](https://download.microsoft.com/download/F/A/C/FACFC1E9-FA35-4DF1-943C-8D4237B4275B/MSFT_Cloud_architecture_security_commonattacks.pdf) \| [Visio](https://download.microsoft.com/download/F/A/C/FACFC1E9-FA35-4DF1-943C-8D4237B4275B/MSFT_Cloud_architecture_security_commonattacks.vsdx) <br/> Güncelleştirme: Eylül 2021 | Bu posterde, yaygın saldırı yolunun gösterildiği ve bir saldırının her aşamasındaki saldırganların durmalarına yardımcı olan özellikler açıklandı. <br/><br/>**İlgili çözüm kılavuzları** <br/> <ul><li>[Değerlendirme ve pilot Microsoft 365 Defender](../security/defender/eval-overview.md)</li><li>[Önerilen kimlik ve cihaz erişimi yapılandırmaları](../security/office-365-security/microsoft-365-policies-configurations.md)</li><li>[Gizlilik uygulamalarıyla veri gizliliği düzenlemelerine uygun bilgi Microsoft 365](information-protection-deploy.md)</li><li>[Yazılım kiracınız için fidye yazılımı Microsoft 365 dağıtın](ransomware-protection-microsoft-365.md)</li><li>[Insider risk çözümleri Microsoft 365](../compliance/insider-risk-solution-overview.md)</li></ul>
+|[![Yaygın saldırı posteri çizimi.](../media/solutions-architecture-center/common-attacks-model-thumb.png) ](https://download.microsoft.com/download/F/A/C/FACFC1E9-FA35-4DF1-943C-8D4237B4275B/MSFT_Cloud_architecture_security_commonattacks.pdf) <br/> [PDF](https://download.microsoft.com/download/F/A/C/FACFC1E9-FA35-4DF1-943C-8D4237B4275B/MSFT_Cloud_architecture_security_commonattacks.pdf) \| [Visio](https://download.microsoft.com/download/F/A/C/FACFC1E9-FA35-4DF1-943C-8D4237B4275B/MSFT_Cloud_architecture_security_commonattacks.vsdx) <br/> Güncelleştirme: Eylül 2021 | Bu posterde, yaygın saldırı yolunun gösterildiği ve bir saldırının her aşamasındaki saldırganların durmalarına yardımcı olan özellikler açıklandı. <br/><br/>**İlgili çözüm kılavuzları** <br/> <ul><li>[Değerlendirme ve pilot Microsoft 365 Defender](../security/defender/eval-overview.md)</li><li>[Önerilen kimlik ve cihaz erişimi yapılandırmaları](../security/office-365-security/microsoft-365-policies-configurations.md)</li><li>[Gizlilik uygulamalarıyla veri gizliliği düzenlemelerine uygun bilgi Microsoft 365](information-protection-deploy.md)</li><li>[Yazılım kiracınız için fidye yazılımı Microsoft 365 dağıtın](ransomware-protection-microsoft-365.md)</li><li>[Microsoft 365'te içerden risk çözümleri](../compliance/insider-risk-solution-overview.md)</li></ul>
 
 <a name="identity"></a>
 ### <a name="microsoft-cloud-identity-for-it-architects"></a>IT mimarları için Microsoft bulut kimliği

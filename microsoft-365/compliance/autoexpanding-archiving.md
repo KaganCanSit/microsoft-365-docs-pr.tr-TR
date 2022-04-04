@@ -1,5 +1,5 @@
 ---
-title: Otomatik genişleyen arşivleme hakkında bilgi
+title: Otomatik genişleyen arşivleme hakkında daha fazla bilgi edinme
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,14 +17,14 @@ search.appverid:
 - MET150
 ms.assetid: 37cdbb02-a24a-4093-8bdb-2a7f0b3a19ee
 description: Posta kutularına ek arşiv depolama sağlayan otomatik genişleyen arşivleme Exchange Online öğrenin.
-ms.openlocfilehash: 1b4b8d81868cc97fc8e8faf5b0dc449e4c07a868
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b55c0504f04f896377c1e1b0a4dccdacdb8bbc37
+ms.sourcegitcommit: f941967b8bc2c24401795e41fd155365a0dbc645
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63328869"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63761554"
 ---
-# <a name="learn-about-auto-expanding-archiving"></a>Otomatik genişleyen arşivleme hakkında bilgi
+# <a name="learn-about-auto-expanding-archiving"></a>Otomatik genişleyen arşivleme hakkında daha fazla bilgi edinme
 
 Daha Office 365 posta kutuları, kullanıcılara ek posta kutusu depolama alanı sağlar. Kullanıcının arşiv posta kutusu etkinleştirildikten sonra, 100 GB'a kadar ek depolama alanı kullanılabilir. Geçmişte, 100 GB depolama alanı kotasına ulaşıldı ancak kuruluşlar bir arşiv posta kutusu için ek depolama alanı isteğinde bulundu. Artık durum böyle değildir.
 
@@ -79,6 +79,10 @@ Aşağıdaki ekran görüntüleri, iletilerin otomatik olarak genişletilmiş ar
 ## <a name="outlook-requirements-for-accessing-items-in-an-auto-expanded-archive"></a>Outlook genişletilmiş bir arşivdeki öğelere erişmek için bazı önemli gereksinimler
 
 Otomatik genişletilmiş bir arşivde depolanan iletilere erişmek için, kullanıcıların aşağıdaki müşterilerden birini Outlook gerekir:
+
+- Outlook (daha önce Kurumlar için Microsoft 365 Uygulamaları olarak adlandırılmış olan) bir parçası Office 365 ProPlus
+
+- Outlook (daha önce İş için Microsoft 365 Uygulamaları Office 365 İş olarak adlandırılmış)
 
 - Outlook 2016 için Outlook 2019'Windows
 

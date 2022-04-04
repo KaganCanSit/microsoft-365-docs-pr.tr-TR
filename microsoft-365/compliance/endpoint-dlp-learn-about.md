@@ -19,28 +19,28 @@ ms.collection:
 search.appverid:
 - MET150
 description: 'Microsoft 365 noktası veri kaybını önleme önleme, bu dosyalar için dosya etkinliklerinin ve koruyucu eylemlerin izlenmesini uç noktalara genişlettir. Dosyalar Uyumluluk çözümsinde görünür hale gelir '
-ms.openlocfilehash: 83608f005b9024583142515094b2d958b8f5d915
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 031d1d80dd6700939c9d73cc82350b7abc30c132
+ms.sourcegitcommit: 0ae89b71b202aceabd5061f0d5b46d030d93e931
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450352"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64520793"
 ---
 # <a name="learn-about-microsoft-365-endpoint-data-loss-prevention"></a>Uç nokta Microsoft 365 kaybı önleme hakkında bilgi
 
 Hassas olmaya karar Microsoft 365 üzerinde gerçekleştirilen eylemleri izlemek ve bu öğelerin madde dışı olarak paylaşımını önlemeye yardımcı olmak için, veri kaybı önleme (DLP) önlemeyi kullanabilirsiniz. DLP hakkında daha fazla bilgi için bkz. [Veri kaybını önleme hakkında bilgi.](dlp-learn-about-dlp.md)
 
-Uç nokta veri kaybı **önleme (Uç** Nokta DLP), DLP'nin etkinlik izleme ve koruma özelliklerini fiziksel olarak Windows 10, Windows 11 ve macOS (Catalina 10.15 ve daha yüksek) cihazlarda depolanan hassas öğelere genişletmektedir. Cihazlar uyumluluk çözümlerine Microsoft 365, kullanıcıların hassas öğelerle yaptıklarına ilişkin bilgiler etkinlik gezgininde görünür hale gelir ve DLP ilkeleri aracılığıyla bu öğeler [](data-classification-activity-explorer.md) üzerinde koruyucu işlemler [gerçekleştirebilirsiniz](create-test-tune-dlp-policy.md).
+Uç nokta veri kaybı **önleme (Uç** Nokta DLP), DLP'nin etkinlik izleme ve koruma özelliklerini Windows 10, Windows 11 ve macOS (Catalina 10.15 ve daha yüksek) cihazlarda fiziksel olarak depolanan hassas öğelere genişletmektedir. Cihazlar uyumluluk çözümlerine Microsoft 365, kullanıcıların hassas öğelerle yaptıklarına ilişkin bilgiler etkinlik gezgininde görünür hale gelir ve DLP ilkeleri aracılığıyla bu öğeler [](data-classification-activity-explorer.md) üzerinde koruyucu işlemler [gerçekleştirebilirsiniz](create-test-tune-dlp-policy.md).
 
 > [!TIP]
-> Çıkarılabilir depolama alanı için cihaz denetimi arıyorsanız bkz. Uç Nokta Cihaz Denetimi Çıkarılabilir veya Erişim Denetimi için [Microsoft Defender Depolama.](../security/defender-endpoint/device-control-removable-storage-access-control.md#microsoft-defender-for-endpoint-device-control-removable-storage-access-control)
+> Çıkarılabilir depolama alanı için cihaz denetimi arıyorsanız, bkz. Çıkarılabilir [Uç Nokta için Microsoft Defender Çıkarılabilir Depolama'Depolama Access Control](../security/defender-endpoint/device-control-removable-storage-access-control.md#microsoft-defender-for-endpoint-device-control-removable-storage-access-control).
 
 > [!NOTE]
 > Uyumluluk Microsoft 365 içinde, hassas öğelerin DLP ilkesi değerlendirmesi merkezi olarak gerçekleşir, dolayısıyla ilkeler ve ilke güncelleştirmelerinin tek tek cihazlara dağıtılması için zaman gecikmesi olmaz. Uyumluluk merkezinde bir ilke güncelleştirildiğinde, bu güncelleştirmelerin hizmet genelinde eşitlenmesi genellikle yaklaşık bir saat sürer. İlke güncelleştirmeleri eşitlensin mi, hedeflenen cihazlardaki öğeler bir sonraki erişilse veya değiştirildiğinde otomatik olarak yeniden değerlendirilir.
 
 ## <a name="endpoint-activities-you-can-monitor-and-take-action-on"></a>İzlemek ve üzerinde işlem gerçekleştirebilirsiniz uç nokta etkinlikleri
 
-Microsoft Endpoint DLP, kullanıcıların fiziksel olarak Windows 10, Windows 11 veya macOS cihazlerinde depolanmış olan hassas öğeler üzerinde gerçekleştirecekleri aşağıdaki etkinlik türlerini denetlemenizi ve yönetmenizi sağlar.
+Microsoft Endpoint DLP, kullanıcıların fiziksel olarak fiziksel olarak depolanan Windows 10, Windows 11 veya macOS cihazlarını kullanan aşağıdaki etkinlik türlerini denetlemenizi ve yönetmenizi sağlar.
 
 |Etkinlik |Açıklama  |Windows 10 1809 ve sonrası/ Windows 11| macOS Catalina 10.15 (önizleme) | Denetlenebilir/Kısıtlanabilir|
 |---------|---------|---------|---------|---------|
@@ -133,7 +133,7 @@ Ekleme ve çıkarma, Cihaz yönetim merkezinden indiren betikler yoluyla ele al�
 
  Cihazları almak için Uç [Nokta DLP Microsoft 365 ile çalışmaya](endpoint-dlp-getting-started.md) başlama yordamlarını kullanın.
 
-Cihazları uç nokta için [Microsoft Defender aracılığıyla aldıysanız](/windows/security/threat-protection/), bu cihazlar otomatik olarak cihaz listesinde görünür. Uç nokta **DLP'lerini kullanmak** için cihaz izlemeyi açabilirsiniz.
+Uç Nokta için Microsoft Defender aracılığıyla [cihazlarınız](/windows/security/threat-protection/) varsa, bu cihazlar otomatik olarak cihaz listesinde görünür. Uç nokta **DLP'lerini kullanmak** için cihaz izlemeyi açabilirsiniz.
 
 > [!div class="mx-imgBorder"]
 > ![yönetilen cihazlar listesi.](../media/endpoint-dlp-learn-about-2-device-list.png)
@@ -179,7 +179,7 @@ Uç nokta DLP, denetlenen etkinlik hakkında kapsamlı bilgi toplar.
 - cihaz adı
 - hedef konum türü
 - kopyayı gerçekleştiren uygulama
-- Uç nokta cihaz kimliği için Microsoft Defender (varsa)
+- Uç Nokta için Microsoft Defender kimliğini girin (varsa)
 - çıkarılabilir medya cihazı üreticisi
 - çıkarılabilir medya cihaz modeli
 - çıkarılabilir medya cihazı seri numarası
@@ -191,16 +191,17 @@ Uç nokta DLP, denetlenen etkinlik hakkında kapsamlı bilgi toplar.
 
 Artık Uç Nokta DLP hakkında bilgi edin öğrendiğinize göre, sonraki adımlarınız:
 
-1. [11 Windows 10 cihaz Windows cihaz ekleme ve cihaz ekleme Microsoft 365 genel bakış](device-onboarding-overview.md)
-1. [MacOS cihazlarını mobil cihazlara Microsoft 365 genel bakış (önizleme)](device-onboarding-macos-overview.md#onboard-macos-devices-into-microsoft-365-overview-preview)
+1. [Cihazları Windows 10 veya Windows 11 cihazlara eklemeye Microsoft 365 genel bakış](device-onboarding-overview.md)
+1. [macOS cihazlarının Microsoft 365'e katılımına genel bakış (önizleme)](device-onboarding-macos-overview.md)
+1. [Uç noktada veri kaybı önleme ayarlarını yapılandırma](dlp-configure-endpoint-settings.md)
 1. [Microsoft Uç Noktası veri kaybını önlemeyi kullanma](endpoint-dlp-using.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Microsoft Endpoint veri kaybı önleme ile çalışmaya başlama](endpoint-dlp-getting-started.md)
 - [Microsoft Uç Noktası veri kaybını önlemeyi kullanma](endpoint-dlp-using.md)
-- [Veri kaybını önleme hakkında bilgi](dlp-learn-about-dlp.md)
-- [DLP ilkesi oluşturma, sınama ve ayarlama](create-test-tune-dlp-policy.md)
-- [Etkinlik gezgini ile çalışmaya başlama](data-classification-activity-explorer.md)
+- [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md)
+- [Bir DLP ilkesi oluşturma, test etme ve ayarlama](create-test-tune-dlp-policy.md)
+- [Kullanmaya başlayın gezgini ile çalışma](data-classification-activity-explorer.md)
 - [Uç Nokta için Microsoft Defender](/windows/security/threat-protection/)
 - [Insider Risk yönetimi](insider-risk-management.md)

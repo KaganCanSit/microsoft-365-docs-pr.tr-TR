@@ -1,5 +1,5 @@
 ---
-title: 6. Adım. Pilot ortamdaki bir Microsoft 365 Defender kullanarak inceleme ve yanıtlama
+title: Pilot ortamdaki bir Microsoft 365 Defender kullanarak inceleme ve yanıtlama
 description: Kullanıcılara cihazları, kimlikleri, Microsoft 365 Defender ve uygulamaları korumalarını öğretecek şekilde tasarlanmış güvenlik çözümünü denemek için deneme laboratuvarı veya pilot ortamında saldırı benzetimleri ayarlayın.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -21,12 +21,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: e7dafa34daed763bc0da11e5cd11f80b791db508
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: a32b6dc2fafb80905c4cba44b79fc24b7e6a3187
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63318725"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568628"
 ---
 # <a name="step-6-investigate-and-respond-using-microsoft-365-defender-in-a-pilot-environment"></a>6. Adım. Pilot ortamdaki bir Microsoft 365 Defender kullanarak inceleme ve yanıtlama
 
@@ -37,7 +37,7 @@ Bu makalede saldırı benzetimleri ve öğreticileriyle olay oluşturma ve olayl
 
 Aşağıdaki adımları kullanın.
 
-![Değerlendirme ortamında benzetimi yapılan olay Microsoft 365 Defender adımları.](../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png)
+:::image type="content" source="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png" alt-text="Değerlendirme ortamında benzetimi yapılan olay Microsoft 365 Defender adımları" lightbox="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png":::
 
 Aşağıdaki tabloda, çizimde yer alan adımlar açık gösterilmiştir.
 

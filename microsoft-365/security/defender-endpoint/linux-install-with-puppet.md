@@ -1,8 +1,8 @@
 ---
-title: Linux'ta Linux'ta Uç Nokta için Microsoft Defender'ı Dağıtın
+title: Linux'Uç Nokta için Microsoft Defender Linux'ta Yasla'nın dağıtımı
 ms.reviewer: ''
-description: "Linux'ta Uç Nokta için Microsoft Defender'ın Linux'ta Nasıl Dağıtıılları Açıklamaktadır: Linux'u Kullanarak Uç Nokta için Microsoft Defender'ın Nasıl Dağıtın?"
-keywords: microsoft, defender, Endpoint için Microsoft Defender, linux, yükleme, dağıtma, kaldırma, atlanabilir, linux, redhat, ubuntu, debian, sles, suse, centos, fedora, amazon linux 2
+description: Linux'ta Linux'Uç Nokta için Microsoft Defender Dağıtım'ı açıklar.
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, linux, yükleme, dağıtma, kaldırma, kaldırılabilir, ansible, linux, redhat, ubuntu, debian, sles, suse, centos, fedora, amazon linux 2
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,20 +16,20 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 305dd74d31f3cbbf07db23f8de89b2b57fe52326
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: a8d92e67e45074fb4084e7fbbc1fa7359b34db36
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63016322"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568390"
 ---
-# <a name="deploy-microsoft-defender-for-endpoint-on-linux-with-puppet"></a>Linux'ta Linux'ta Uç Nokta için Microsoft Defender'ı Dağıtın
+# <a name="deploy-microsoft-defender-for-endpoint-on-linux-with-puppet"></a>Linux'Uç Nokta için Microsoft Defender Linux'ta Yasla'nın dağıtımı
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
@@ -55,7 +55,7 @@ Kullanıcı portalı üzerinden ekleme Microsoft 365 Defender indirin:
 2. İlk açılan menüde işletim sistemi olarak **Linux Server'ı** seçin. İkinci açılan menüde dağıtım yöntemi olarak **Tercih ettiğiniz Linux yapılandırma yönetim aracı'nı** seçin.
 3. Ekleme **paketini indir'i seçin**. Dosyayı farklı bir WindowsDefenderATPOnboardingPackage.zip.
 
-    ![Microsoft 365 Defender portalın ekran görüntüsü.](images/portal-onboarding-linux-2.png)
+   :::image type="content" source="images/portal-onboarding-linux-2.png" alt-text="Hazır paketi indirme seçeneği" lightbox="images/portal-onboarding-linux-2.png":::
 
 4. Komut isteminden, dosyanın size ait olduğunu doğrulayın. 
 
@@ -131,7 +131,7 @@ $version = undef
     case $::osfamily {
         'Debian' : {
             apt::source { 'microsoftpackages' :
-                location => "https://packages.microsoft.com/config/${distro}/${version}/prod",
+                location => "https://packages.microsoft.com/${distro}/${version}/prod",
                 release  => $channel,
                 repos    => 'main',
                 key      => {
@@ -142,7 +142,7 @@ $version = undef
         }
         'RedHat' : {
             yumrepo { 'microsoftpackages' :
-                baseurl  => "https://packages.microsoft.com/config/${distro}/${version}/${channel}",
+                baseurl  => "https://packages.microsoft.com/${distro}/${version}/${channel}",
                 descr    => "packages-microsoft-com-prod-${channel}",
                 enabled  => 1,
                 gpgcheck => 1,

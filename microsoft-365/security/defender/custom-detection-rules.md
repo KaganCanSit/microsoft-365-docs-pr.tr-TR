@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 473d58cde13f1f776c31184b2b50e74e23810b22
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: dac2a68249d90b212e6bbcaacdec84918560deb5
+ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015182"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63755811"
 ---
 # <a name="create-and-manage-custom-detections-rules"></a>Özel algılama kurallarını oluşturma ve yönetme
 
@@ -203,7 +203,7 @@ Var olan tüm özel algılama kurallarını görüntülemek için, **HuntingCust
 
 Özel bir algılama kuralı hakkında kapsamlı bilgi görüntülemek için **, Özel** algılama kuralları'  >  gidin ve kural adını seçin. Bundan sonra kural hakkında, çalıştırma durumu ve kapsamı gibi genel bilgileri görüntüebilirsiniz. Sayfa ayrıca tetiklenen uyarıların ve eylemlerin listesini de sağlar.
 
-![Özel algılama kuralı ayrıntıları sayfası.](../../media/custom-detect-rules-view.png)<br>
+:::image type="content" source="../../media/custom-detect-rules-view.png" alt-text="Microsoft 365 Defender portalında Özel algılama kuralı ayrıntıları sayfası" lightbox="../../media/custom-detect-rules-view.png":::<br>
 *Özel algılama kuralı ayrıntıları*
 
 Ayrıca, bu sayfada kural üzerinde aşağıdaki eylemleri de yapabilirsiniz:
