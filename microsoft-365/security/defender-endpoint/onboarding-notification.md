@@ -15,12 +15,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 36713496b5885866dd21a3402dcfe66b4af5b76e
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 0208e21394e350c2b5ffffdca6f8e14ebba227c8
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998254"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476059"
 ---
 # <a name="create-a-notification-rule-when-a-local-onboarding-or-offboarding-script-is-used"></a>Yerel bir ekleme veya çıkarma betiği kullanılırken bildirim kuralı oluşturma
 
@@ -28,11 +28,11 @@ ms.locfileid: "62998254"
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -54,18 +54,19 @@ Yerel bir ekleme veya işe kapatma betiği kullanılırken size bildirilmesi iç
 
 2. Boştan **, Yeni > - Zamanlanmış> Akışlarım'a gidin**.
 
-    ![Akış görüntüsü.](images/new-flow.png)
+   :::image type="content" source="images/new-flow.png" alt-text="Akış" lightbox="images/new-flow.png":::
+
 
 3. Zamanlanmış bir akış oluşturma.
    1. Bir akış adı girin.
    2. Başlangıç ve saati belirtin.
    3. Sıklığı belirtin. Örneğin, her 5 dakikada bir.
 
-    ![Bildirim akışının resmi.](images/build-flow.png)
+   :::image type="content" source="images/build-flow.png" alt-text="Bildirim akışı" lightbox="images/build-flow.png":::
 
 4. Yeni eylem eklemek için + düğmesini seçin. Yeni eylem, Uç nokta güvenlik merkezi cihaz(lar) API'si için Defender'a bir HTTP isteği olur. Ayrıca, bunu hazır gelen "WDATP Bağlayıcısı" (eylem: "Makineler - Makinelerin listesini alın") ile de değiştirebilirsiniz.
 
-    ![Yineleme ve eylem ekleme resmi.](images/recurrence-add.png)
+   :::image type="content" source="images/recurrence-add.png" alt-text="Yineleme ve eylem ekleme" lightbox="images/recurrence-add.png":::
 
 5. Aşağıdaki HTTP alanlarını girin:
 
@@ -78,19 +79,19 @@ Yerel bir ekleme veya işe kapatma betiği kullanılırken size bildirilmesi iç
    - Kimlik Bilgileri Türü: "Gizli" öğesini seçin.
    - Gizli: Oturum açın ve Uygulama https://portal.azure.com Kayıtlarını **Azure Active Directory > gidin ve** Kiracı Kimliği değerini alın.
 
-    ![HTTP koşullarının resmi.](images/http-conditions.png)
+    :::image type="content" source="images/http-conditions.png" alt-text="HTTP koşulları" lightbox="images/http-conditions.png":::
 
 6. Yeni eylem ekle'yi seçerek yeni **bir adım ekleyin, ardından** Veri **İşlemleri'i arayın** ve **Parse JSON'u seçin**.
 
-    ![Veri işlemlerinin görüntüsü.](images/data-operations.png)
+   :::image type="content" source="images/data-operations.png" alt-text="Veri işlemleri girdisi" lightbox="images/data-operations.png":::
 
 7. İçerik alanına Gövde **Ekle.'yi** seçin.
 
-    ![parse JSON görüntüsü.](images/parse-json.png)
+   :::image type="content" source="images/parse-json.png" alt-text="Parse JSON bölümü" lightbox="images/parse-json.png":::
 
 8. Şema bağlantısı **oluşturmak için örnek yük kullan'ı** seçin.
 
-    ![Yükli parse json resmi.](images/parse-json-schema.png)
+   :::image type="content" source="images/parse-json-schema.png" alt-text="Yükli JSON ayrıştırma" lightbox="images/parse-json-schema.png":::
 
 9. Aşağıdaki JSON parçacığını kopyalayıp yapıştırın:
 
@@ -179,22 +180,22 @@ Yerel bir ekleme veya işe kapatma betiği kullanılırken size bildirilmesi iç
     - Evet ise, hiçbir bildirim tetikli olmaz
     - Hayırsa, yeni cihaz (veya cihaz) cihaz listesini SharePoint uç nokta yöneticisi için Defender'a bir bildirim gönderilir.
 
-    ![Her biri için geçerli olan resim.](images/flow-apply.png)
+    :::image type="content" source="images/flow-apply.png" alt-text="Her öğeye akış uygulaması" lightbox="images/flow-apply.png":::
 
-    ![Get items ile her biri için geçerli olan resmi.](images/apply-to-each.png)
+    :::image type="content" source="images/apply-to-each.png" alt-text="Öğeleri al öğesine akışın uygulaması" lightbox="images/apply-to-each.png":::
 
 11. Koşul **altında**, şu ifadeyi ekleyin: "length(body('Get_items')?[' value'])" değerini seçin ve koşulu 0'a eşit olarak ayarlayın.
 
-    ![Her koşula uygulama resmi.](images/apply-to-each-value.png)
-    ![ Koşul1'in görüntüsü.](images/conditions-2.png)
-    ![ Koşul2'nin resmi.](images/condition3.png)
-    ![ E-posta gönderme resmi.](images/send-email.png)
+    :::image type="content" source="images/apply-to-each-value.png" alt-text="Her koşula akışın uygulaması" lightbox="images/apply-to-each-value.png":::
+    :::image type="content" source="images/conditions-2.png" alt-text="Koşul-1" lightbox="images/conditions-2.png":::
+    :::image type="content" source="images/condition3.png" alt-text="Koşul-2" lightbox="images/condition3.png":::
+    :::image type="content" source="images/send-email.png" alt-text="E-posta gönderme bölümü" lightbox="images/send-email.png":::
 
 ## <a name="alert-notification"></a>Uyarı bildirimi
 
 Aşağıdaki resim bir e-posta bildirimi örneğidir.
 
-![E-posta bildiriminin resmi.](images/alert-notification.png)
+:::image type="content" source="images/alert-notification.png" alt-text="E-posta bildirim ekranı" lightbox="images/alert-notification.png":::
 
 ## <a name="tips"></a>İpuçları
 

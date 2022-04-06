@@ -1,8 +1,8 @@
 ---
-title: Yönetici bloğu tarafından kaynaklanan MSI portal hatalarının sorunlarını giderme
-description: MSI portal hatalarının sorunlarını giderme
+title: Yönetici bloğunun neden olduğu MSI portalı hatalarını giderme
+description: MSI portalı hatalarını giderme
 ms.reviewer: ''
-keywords: güvenlik, örnek gönderim yardımı, kötü amaçlı yazılım dosyası, virüs dosyası, truva dosyası, gönder, Microsoft'a gönder, örnek, virüs, truva, solucan, algılanmadı, algılanmadı, microsoft'a e-posta, kötü amaçlı yazılım e-posta gönder, Bunun kötü amaçlı yazılım olduğunu düşünüyorum, bunun bir virüs olduğunu düşünüyorum, virüs bu virüs olabilir, bu bir virüs, MSE algılanmadı, imza yok, algılama yok, şüpheli dosya,  MMPC, Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi, araştırmacı, analist, WDSI, güvenlik zekası
+keywords: güvenlik, örnek gönderim yardımı, kötü amaçlı yazılım dosyası, virüs dosyası, truva atı dosyası, gönder, Microsoft'a gönder, örnek gönder, virüs, truva atı, solucan, algılanmadı, algılanmadı, e-posta microsoft, e-posta kötü amaçlı yazılım, Bu kötü amaçlı yazılım, ben bir virüs olduğunu düşünüyorum, nerede virüs gönderebilirim, bu bir virüs, MSE, algılamaz, imza yok, algılama yok, şüpheli dosya,  MMPC, Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi, araştırmacılar, analist, WDSI, güvenlik zekası
 ms.prod: m365-security
 ms.mktglfcycl: secure
 ms.sitesec: library
@@ -15,80 +15,87 @@ ms.collection: M365-security-compliance
 ms.topic: article
 search.appverid: met150
 ms.technology: m365d
-ms.openlocfilehash: e70eb5192a1fd6171b8e515509ad336aa99a2c63
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 544e96bd0a3985856f47bc8df424a2c2932f3c7e
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63705782"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64665678"
 ---
-# <a name="troubleshooting-malware-submission-errors-caused-by-administrator-block"></a>Yönetici bloğu tarafından neden olan kötü amaçlı yazılım gönderimi hatalarını giderme
-Bazı durumlarda, çözümleme için [Microsoft Security intelligence](https://www.microsoft.com/wdsi) web sitesine virüs bulaşmış olabilecek bir dosyayı göndermek için bir yönetici bloğu gönderim sorunlarına neden olabilir. Aşağıdaki işlem, bu sorunun nasıl çözüleceklerini gösterir.
+# <a name="troubleshooting-malware-submission-errors-caused-by-administrator-block"></a>Yönetici bloğunun neden olduğu kötü amaçlı yazılım gönderme hatalarını giderme
 
-## <a name="review-your-settings"></a>Ayarlarınızı gözden geçirme
-Azure Enterprise [uygulama ayarlarınızı açın](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/UserSettings/menuId/). Uygulama **Enterprise** **Kullanıcıları** >  , şirket verilerine kendi adına erişen uygulamaları kabul edip Evet veya Hayır'ın seçili olup olmadığını kontrol edin.
+Bazı durumlarda, analiz için [Microsoft Güvenlik bilgileri web sitesine](https://www.microsoft.com/wdsi) virüs bulaşmış olabilecek bir dosya göndermeye çalıştığınızda yönetici bloğu gönderme sorunlarına neden olabilir. Aşağıdaki işlem bu sorunun nasıl çözüleceğini gösterir.
 
-- Hayır **seçilirse** , müşteri kiracısı için bir Azure AD yöneticisinin kuruluş için izin sağlaması gerekir. Azure AD'nin yapılandırmasına bağlı olarak, kullanıcılar aynı iletişim kutusundan hemen bir istek gönderebilirsiniz. Yönetici onayı isteme seçeneği yoksa, kullanıcıların Azure AD yöneticilerine bu izinlerin eklenmesini istemeleri gerekir. Daha fazla bilgi için aşağıdaki bölüme gidin.
+## <a name="review-your-settings"></a>Ayarlarınızı gözden geçirin
 
-- Evet **seçiliyse**, Kullanıcıların oturum açması için Windows Defender **Security** Intelligence uygulaması ayarının Azure'da Evet olarak **ayarildiğinden** [emin olun](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Properties/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/4a918a14-4069-4108-9b7d-76486212d75d).Hayır **seçiliyse** , bir Azure AD yöneticisinin etkinleştirmesi için istekte bulundurabilirsiniz. 
-  
-## <a name="implement-required-enterprise-application-permissions"></a>Uygulama Enterprise Uygulamak 
+Azure [Enterprise uygulama ayarlarınızı](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/UserSettings/menuId/) açın. **uygulamalarKullanıcılar, şirket verilerine kendi adına erişen uygulamalara onay Enterprise** altında Evet veya Hayır'ın seçili olup olmadığını denetleyin. >  
+
+- **Hayır** seçilirse, müşteri kiracısının Azure AD yöneticisinin kuruluş için onay sağlaması gerekir. Azure AD yapılandırmasına bağlı olarak, kullanıcılar doğrudan aynı iletişim kutusundan istek gönderebilir. Yönetici onayı isteme seçeneği yoksa, kullanıcıların bu izinlerin Azure AD yöneticilerine eklenmesini istemesi gerekir. Daha fazla bilgi için aşağıdaki bölüme gidin.
+
+- **Evet** seçiliyse, Azure'da **kullanıcıların oturum açması için etkinleştirildi mi?** Windows Defender Güvenlik Zekası uygulama ayarının **Evet** olarak [ayarlandığından](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Properties/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/4a918a14-4069-4108-9b7d-76486212d75d) emin olun. **Hayır** seçiliyse bir Azure AD yöneticisinin etkinleştirmesini istemeniz gerekir.
+
+## <a name="implement-required-enterprise-application-permissions"></a>Gerekli Enterprise Uygulama izinlerini uygulama
+
 Bu işlem için kiracıda genel yönetici veya uygulama yöneticisi gerekir.
- 1. Uygulama [Enterprise'i açın](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Permissions/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/4a918a14-4069-4108-9b7d-76486212d75d). 
- 2. Kuruluş **için yönetici izni ver'i seçin**.
- 3. Bunu yapabilirsiniz, aşağıdaki resimde de olduğu gibi, bu uygulama için gereken API izinlerini gözden geçirebilirsiniz. Kiracı için izin alın.
 
-    ![izin resmi ver.](../../media/security-intelligence-images/msi-grant-admin-consent.jpg)
+1. [Uygulama ayarlarını Enterprise](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Permissions/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/4a918a14-4069-4108-9b7d-76486212d75d) açın.
+2. **Kuruluş için yönetici onayı ver'i** seçin.
+3. Bunu yapabiliyorsanız, aşağıdaki görüntüde gösterildiği gibi bu uygulama için gereken API izinlerini gözden geçirin. Kiracı için onay verin.
 
-  4. Yönetici el ile izin sağlamayı denirken bir hata alırsa, olası geçici çözüm olarak [Seçenek 1](#option-1-approve-enterprise-application-permissions-by-user-request) veya [Seçenek 2'den](#option-2-provide-admin-consent-by-authenticating-the-application-as-an-admin) birini deneyin.
-  
-## <a name="option-1-approve-enterprise-application-permissions-by-user-request"></a>1. Seçenek Kurumsal uygulama izinlerini kullanıcı isteğiyle onaylama
-> [!Note]
-> Bu şu anda bir önizleme özelliğidir.
+    ![onay görüntüsü verme.](../../media/security-intelligence-images/msi-grant-admin-consent.jpg)
 
-Azure Active Directory kullanıcıların uygulamalar için yönetici izni isteği kullanmasına izin vermeleri gerekir. Enterprise uygulamalarında **ayarın** [Evet olarak yapılandırıldığından emin Enterprise.](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/UserSettings/menuId/)
+4. Yönetici el ile onay vermeyi denerken bir hata alırsa, olası geçici çözümler olarak [Seçenek 1](#option-1-approve-enterprise-application-permissions-by-user-request) veya [Seçenek 2'yi](#option-2-provide-admin-consent-by-authenticating-the-application-as-an-admin) deneyin.
 
-![Enterprise ayarlarını değiştirin.](../../media/security-intelligence-images/msi-enterprise-app-user-setting.jpg)
+## <a name="option-1-approve-enterprise-application-permissions-by-user-request"></a>Seçenek 1 Kullanıcı isteğine göre kurumsal uygulama izinlerini onaylama
 
-Yönetici izni iş akışını yapılandırma [altında daha fazla bilgi edinebilirsiniz](/azure/active-directory/manage-apps/configure-admin-consent-workflow).
+> [!NOTE]
+> Bu, şu anda bir önizleme özelliğidir.
 
-Bu ayar doğrulandıktan sonra, kullanıcılar [Microsoft](https://www.microsoft.com/wdsi/filesubmission) güvenlik zekası'nda kurumsal müşteri oturum açma bilgilerine gidebilir ve gerekçelendirme de içinde olmak üzere yönetici onayı için bir istek gönderebilirsiniz.
+Azure Active Directory yöneticilerin kullanıcıların uygulamalara yönetici onayı istemesine izin vermeleri gerekir. Ayarın [Enterprise uygulamalarda](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/UserSettings/menuId/) **Evet** olarak yapılandırıldığını doğrulayın.
+
+![uygulama kullanıcı ayarlarını Enterprise.](../../media/security-intelligence-images/msi-enterprise-app-user-setting.jpg)
+
+[Yönetici onayı iş akışını yapılandırma](/azure/active-directory/manage-apps/configure-admin-consent-workflow) bölümünde daha fazla bilgi bulabilirsiniz.
+
+Bu ayar doğrulandıktan sonra, kullanıcılar [Microsoft güvenlik zekası'nda](https://www.microsoft.com/wdsi/filesubmission) kurumsal müşteri oturum açma işlemini yapabilir ve gerekçe dahil olmak üzere yönetici onayı için bir istek gönderebilir.
 
 ![Contoso oturum açma akışı.](../../media/security-intelligence-images/msi-contoso-approval-required.png)
 
-Yönetici, Azure yönetici izin isteklerini uygulama izinlerini gözden [geçirip onaylar](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/AccessRequests/menuId/).
+Yönetici, [Azure yönetici onayı isteklerinin](https://portal.azure.com/#blade/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/AccessRequests/menuId/) uygulama izinlerini gözden geçirebilir ve onaylayabilir.
 
-İzin verdikten sonra, kiracının tüm kullanıcıları uygulamayı kullanabilir.
-  
-## <a name="option-2-provide-admin-consent-by-authenticating-the-application-as-an-admin"></a>2. Seçenek Uygulamanın yönetici olarak kimlik doğrulamasını kullanarak yönetici izni sağlama 
-Bu işlem, genel yöneticilerin Microsoft güvenlik Enterprise müşteri oturum açma akışı [sırasından geçen süreci takiplemektedir](https://www.microsoft.com/wdsi/filesubmission).
+Onay sağlandıktan sonra kiracıdaki tüm kullanıcılar uygulamayı kullanabilir.
 
-![İzin oturum açma akışı.](../../media/security-intelligence-images/msi-microsoft-permission-required.jpg)
+## <a name="option-2-provide-admin-consent-by-authenticating-the-application-as-an-admin"></a>Seçenek 2 Uygulamanın kimliğini yönetici olarak doğrulayarak yönetici onayı sağlama
 
-Ardından yöneticiler izinleri gözden geçirerek, organizasyonu adına İzin'i **ve ardından Kabul Et'i** **seçin**.
+Bu işlem, genel yöneticilerin [Microsoft güvenlik bilgilerindeki](https://www.microsoft.com/wdsi/filesubmission) Enterprise müşteri oturum açma akışından geçmelerini gerektirir.
 
-Kiracının tüm kullanıcıları artık bu uygulamayı kullanabilir.
+![Onay oturum açma akışı.](../../media/security-intelligence-images/msi-microsoft-permission-required.jpg)
 
-## <a name="option-3-delete-and-readd-app-permissions"></a>3. Seçenek: Uygulama izinlerini silme ve okuma
-Bu seçeneklerden hiçbiri sorunu çözmezse, aşağıdaki adımları deneyin (yönetici olarak):
+Ardından, yöneticiler izinleri gözden geçirir ve **kuruluşunuz adına Onay'ı** seçip **Kabul Et'i** seçtiğinizden emin olur.
 
-1. Uygulamanın önceki yapılandırmalarını kaldırma. Diğer [uygulamalara Enterprise sil'i](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Properties/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/982e94b2-fea9-4d1f-9fca-318cda92f90b) **seçin**.
+Kiracıdaki tüm kullanıcılar artık bu uygulamayı kullanabilir.
 
-   ![Uygulama izinlerini silme.](../../media/security-intelligence-images/msi-properties.png)
+## <a name="option-3-delete-and-readd-app-permissions"></a>Seçenek 3: Uygulama izinlerini silme ve okuma
 
-2. Özellikler'den KiracıKimlik [Yakalama](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties).
+Bu seçeneklerden hiçbiri sorunu çözmezse aşağıdaki adımları deneyin (yönetici olarak):
 
-3. {tenant-id} öğesini aşağıdaki URL'de bu uygulamaya izin vermek için gereken belirli kiracıyla değiştirin. Bu URL'yi tarayıcıya kopyalayın. Parametrelerin kalanları zaten tamamlanmış durumdadır. 
+1. Uygulama için önceki yapılandırmaları kaldırın. [Enterprise uygulamalarına](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Properties/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/982e94b2-fea9-4d1f-9fca-318cda92f90b) gidin ve **sil'i** seçin.
+
+   ![Uygulama izinlerini silin.](../../media/security-intelligence-images/msi-properties.png)
+
+2. [Özelliklerden TenantID'yi](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties) yakalayın.
+
+3. {tenant-id} öğesini aşağıdaki URL'de bu uygulamaya onay vermesi gereken belirli bir kiracıyla değiştirin. Bu URL'yi tarayıcıya kopyalayın. Parametrelerin geri kalanı zaten tamamlandı.
 ``https://login.microsoftonline.com/{tenant-id}/v2.0/adminconsent?client_id=f0cf43e5-8a9b-451c-b2d5-7285c785684d&state=12345&redirect_uri=https%3a%2f%2fwww.microsoft.com%2fwdsi%2ffilesubmission&scope=openid+profile+email+offline_access``
 
-   ![İzinler gerekli.](../../media/security-intelligence-images/msi-microsoft-permission-requested-your-organization.png)
+   ![gerekli izinler.](../../media/security-intelligence-images/msi-microsoft-permission-requested-your-organization.png)
 
-4. Uygulamanın gerekli izinlerini gözden geçirerek Kabul Et'i **seçin**. 
+4. Uygulamanın gerektirdiği izinleri gözden geçirin ve **kabul et'i** seçin.
 
-5. [Azure portalda uygulanan izinleri onaylayın](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Permissions/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/ce60a464-5fca-4819-8423-bcb46796b051).
+5. İzinlerin [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ManagedAppMenuBlade/Permissions/appId/f0cf43e5-8a9b-451c-b2d5-7285c785684d/objectId/ce60a464-5fca-4819-8423-bcb46796b051) uygulandığını onaylayın.
 
-   ![İzinlerin uygulandığını gözden geçirebilirsiniz.](../../media/security-intelligence-images/msi-permissions.jpg)
-   
-6. Erişiminiz olup [olduğunu görmek için yönetici](https://www.microsoft.com/wdsi/filesubmission) olmayan bir hesabı olan kurumsal bir kullanıcı olarak Microsoft güvenlik zekası'ta oturum açın.
+   ![İzinlerin uygulandığını gözden geçirin.](../../media/security-intelligence-images/msi-permissions.jpg)
 
- Bu sorun giderme adımlarını izleyin ve uyarıyı çözemezse Microsoft desteğini arayın.
+6. Erişiminiz olup olmadığını görmek için [Microsoft güvenlik bilgileri'nde](https://www.microsoft.com/wdsi/filesubmission) yönetici olmayan bir hesapla kurumsal kullanıcı olarak oturum açın.
+
+ Bu sorun giderme adımları izlendikten sonra uyarı çözümlenmezse Microsoft desteğini arayın.

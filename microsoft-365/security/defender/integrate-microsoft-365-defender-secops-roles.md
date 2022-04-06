@@ -1,7 +1,7 @@
 ---
-title: Adım 4. Farklı Microsoft 365 Defender, sorumluluklar ve gözetim tanımlayın
-description: Görevlerinizi güvenlik işlemleriyle tümleştirinken rolleri, sorumlulukları ve gözetimi Microsoft 365 Defender tanımlamanın temelleri.
-keywords: olaylar, uyarılar, araştırma, korelasyon, saldırı, cihazlar, kullanıcılar, kimlikler, kimlik, posta kutusu, e-posta, 365, microsoft, Microsoft 365, olay yanıtı, siber saldırı, secops, güvenlik işlemleri, soc
+title: Adım 4. Microsoft 365 Defender rollerini, sorumluluklarını ve gözetimlerini tanımlama
+description: Microsoft 365 Defender güvenlik işlemlerinizle tümleştirirken rol, sorumluluk ve gözetim tanımlamanın temelleri.
+keywords: olaylar, uyarılar, araştırma, bağıntı, saldırı, cihazlar, kullanıcılar, kimlikler, kimlik, posta kutusu, e-posta, 365, Microsoft, Microsoft 365, olay yanıtı, siber saldırı, secops, güvenlik işlemleri, soc
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -22,42 +22,42 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 7562eca50b905bf70f17844cf8fe3079fbf3fc14
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 5410db413ece81a39453070985e6c744e8b684a6
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314287"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64664072"
 ---
-# <a name="step-4-define-microsoft-365-defender-roles-responsibilities-and-oversight"></a>Adım 4. Farklı Microsoft 365 Defender, sorumluluklar ve gözetim tanımlayın
+# <a name="step-4-define-microsoft-365-defender-roles-responsibilities-and-oversight"></a>Adım 4. Microsoft 365 Defender rollerini, sorumluluklarını ve gözetimlerini tanımlama
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - Microsoft 365 Defender
 
-Herhangi bir işlem rolleri tanımlanmadan önce Microsoft 365 Defender lisansların, yapılandırmaların ve yönetimin sahipliğini ve sorumluluklarını belirlemesi gerekir. Normalde, Microsoft 365 ve Enterprise Security + Mobility (EMS) hizmetlerinin (Microsoft 365 Defender dahil olabilir) lisanslarının, abonelik maliyetlerinin ve yönetiminin sahipliği Güvenlik İşlemleri Merkezi (SOC) ekiplerinin dışında olur. SOC ekiplerinin, her iki ekipte düzgün gözetim sağlamak için bu Microsoft 365 Defender. 
+Kuruluşunuzun, işletimsel rollerin tanımlanabilmesi için önce Microsoft 365 Defender lisanslarının, yapılandırmalarının ve yönetiminin sahipliğini ve sorumluluklarını ilk görevler olarak belirlemesi gerekir. Genellikle lisansların sahipliği, abonelik maliyetleri ve Microsoft 365 ve Enterprise Security + Mobility (EMS) hizmetlerinin (Microsoft 365 Defender içerebilir) yönetimi, Güvenlik İşletim Merkezi (SOC) ekiplerinin dışında kalır. SOC ekipleri, Microsoft 365 Defender düzgün bir şekilde gözetim altında olmasını sağlamak için bu kişilerle birlikte çalışmalıdır. 
 
-Birçok modern SOC, ekip üyelerini kendi beceri kümeleri ve işlevlerine göre kategorilere atar. Örneğin:
+Birçok modern SOC, ekip üyelerini becerilerine ve işlevlerine göre kategorilere atar. Örneğin:
 
-- Tehdit ve analiz işlevlerinin yaşam döngüsü yönetimiyle ilgili görevlere atanmış bir tehdit zekası ekibi.
+- Tehdit ve analiz işlevlerinin yaşam döngüsü yönetimiyle ilgili görevlere atanan bir tehdit bilgileri ekibi.
 - Günlükleri, uyarıları, olayları ve izleme işlevlerini korumakla sorumlu SOC analistlerinden oluşan bir izleme ekibi.
-- Bir mühendislik & ve güvenlik cihazlarını en iyi duruma getirmek için atanmış bir mühendislik ekibi.
+- Güvenlik cihazlarını mühendislik ve iyileştirmeye atanan bir mühendislik & operasyon ekibi.
 
-SOC ekip rolleri ve sorumluluklar bu Microsoft 365 Defender doğal bir şekilde tümleştirildi.
+Microsoft 365 Defender için SOC ekip rolleri ve sorumlulukları bu ekiplere doğal olarak tümleştirilir.
 
-Aşağıdaki tabloda, her SOC ekibinin rolleri ve sorumlulukları ve rollerinin ekiple tümleştirileri Microsoft 365 Defender.
+Aşağıdaki tabloda her SOC ekibinin rolleri ve sorumlulukları ve rolleri Microsoft 365 Defender ile nasıl tümleştirildi?
 
-| SOC ekibi | Roller ve sorumluluklar | Microsoft 365 Defender görevleri gerçekleştirme  |
+| SOC ekibi | Roller ve sorumluluklar | görevleri Microsoft 365 Defender  |
 |:-------|:-----|:-------|
-| SOC Oversight | <ul><li>SOC idaresi yapar</li><li>Günlük, haftalık, aylık süreçler sağlar</li><li>Eğitim ve farkındalık sağlar</li><li>Personel olarak işe alma, eşler arası gruplara ve toplantılara katılma</li><li>Mavi, Kırmızı, Mor takım alıştırmaları yapıyor</ul>  | <ul><li>Microsoft 365 Defender portalı erişim denetimleri</li><li>Özellik/URL ve lisans güncelleştirme kaydını bulundurr</li><li>IT, yasal, uyumluluk ve gizlilik paydaşları ile iletişimi sürdürür</li><li>Yeni toplantı veya toplantı düzenleme girişimleri için Microsoft 365 denetim Microsoft Azure katılma</ul> |
-| Threat Intelligence & Analytics  | <ul><li>Tehdit intel akış yönetimi</li><li>Virüs ve kötü amaçlı yazılım attribution</li><li>Tehdit modelleme & olay sınıflandırmaları</li><li>Insider tehdit öznitelik geliştirme </li><li>Threat Intel Integration with Risk Management program</li><li>İk, yasal, IT ve güvenlik ekipleri genelinde veri bilimi, BI ve analizlerle veri içgörülerini tümleştirin<ul> | <ul><li>Kimlik tehdit modellemesi için Microsoft Defender'ın bakımı</li><li>Tehdit modelleme için Microsoft Defender Office 365 koruma altındadır</li><li>Uç nokta tehdit modellemesi için Microsoft Defender'ın bakımı</ul> |
-| İzleme | <ul><li>Katman 1, 2, 3 analistler</li><li>Günlük kaynağı bakımı ve mühendislik</li><li>Veri kaynağı alımı </li><li>SIEM ayrıştırma, uyarı, korelasyon, iyileştirme</li><li>Etkinlik ve uyarı oluşturma</li><li>Olay ve uyarı çözümlemesi</li><li>Olay ve uyarı bildirimi</li><li>Bilet sistemi bakımı</ul> | Kullanım alanları: <ul><li>Güvenlik & Uyumluluk Merkezi</li><li>Microsoft 365 Defender portalı</ul> |
-| Mühendislik & SecOps | <ul><li>Uygulamalar, sistemler ve uç noktalar için Güvenlik Açığı Yönetimi</li><li>XDR/SOAR otomasyonu</li><li>Uyumluluk testi</li><li>Kimlik avı ve DLP mühendislik</li><li>Mühendislik</li><li>Koordinatlar değişiklik denetimi</li><li>Koordinatlar çalışma kitabı güncelleştirmeleri</li><li>Deneme testi<ul> | <ul><li>Bulut Uygulamaları için Microsoft Defender</li><li>Uç Nokta için Defender</li><li>Kimlik için Defender</ul> |
-| Bilgisayar Güvenliği Olay Yanıt Ekibi (CSIRT) | <ul><li>Siber olayları araştırıyor ve yanıtlaıyor</li><li>Adli incelemeler yapar</li><li>**GENELLIKLE SOC'dan yalıtılmış olabilir**</ul> | Olay yanıtı Microsoft 365 Defender kitaplarını işbirliği yapma ve koruma |
+| SOC Gözetim | <ul><li>SOC idaresi gerçekleştirir</li><li>Günlük, haftalık, aylık süreçler oluşturur</li><li>Eğitim ve farkındalık sağlar</li><li>Personeli işe alır, eş gruplarına ve toplantılara katılır</li><li>Mavi, Kırmızı, Mor takım alıştırmaları yürütür</ul>  | <ul><li>Portal erişim denetimlerini Microsoft 365 Defender</li><li>Özellik/URL ve lisans güncelleştirme kaydını korur</li><li>BT, yasal, uyumluluk ve gizlilik paydaşlarıyla iletişimi sürdürür</li><li>Yeni Microsoft 365 veya Microsoft Azure girişimleri için değişiklik denetimi toplantılarına katılır</ul> |
+| Tehdit Analizi & Analizi  | <ul><li>Tehdit intel akışı yönetimi</li><li>Virüs ve kötü amaçlı yazılım atfı</li><li>Tehdit modelleme & tehdit olayı kategorileri</li><li>Insider tehdit Özniteliği geliştirme </li><li>Risk Yönetimi programıyla Tehdit Intel Tümleştirmesi</li><li>veri içgörülerini İk, hukuk, BT ve güvenlik ekiplerinde veri bilimi, BI ve analizle tümleştirir<ul> | <ul><li>Kimlik için Microsoft Defender tehdit modellemesini korur</li><li>Office 365 için Microsoft Defender tehdit modellemesini korur</li><li>Uç Nokta için Microsoft Defender tehdit modellemesini korur</ul> |
+| Izleme | <ul><li>Katman 1, 2, 3 analistler</li><li>Günlük kaynağı bakımı ve mühendisliği</li><li>Veri kaynağı alımı </li><li>SIEM ayrıştırma, uyarı, bağıntı, iyileştirme</li><li>Olay ve uyarı oluşturma</li><li>Olay ve uyarı analizi</li><li>Olay ve uyarı raporlama</li><li>Bilet sistemi bakımı</ul> | Kullanır: <ul><li>Güvenlik & Uyumluluk Merkezi</li><li>Microsoft 365 Defender portalı</ul> |
+| Mühendislik & SecOps | <ul><li>Uygulamalar, sistemler ve uç noktalar için güvenlik açığı yönetimi</li><li>XDR/SOAR otomasyonu</li><li>Uyumluluk testi</li><li>Kimlik avı ve DLP mühendisliği</li><li>Mühendislik</li><li>Koordinatlar değişiklik denetimi</li><li>Runbook güncelleştirmelerini koordine eder</li><li>Sızma testi<ul> | <ul><li>Bulut Uygulamaları için Microsoft Defender</li><li>Uç Nokta için Defender</li><li>Kimlik için Microsoft Defender</ul> |
+| Bilgisayar Güvenlik Olayı Yanıt Ekibi (CSIRT) | <ul><li>Siber olayları araştırır ve yanıtlar</li><li>Adli tıp gerçekleştirir</li><li>**Genellikle SOC'den yalıtılmış olabilir**</ul> | olay yanıtı playbook'ları Microsoft 365 Defender işbirliği yapma ve bakımını yapma |
 ||||
 
 
 ## <a name="next-step"></a>Sonraki adım
 
-[5. Adım. Kullanım durumlarını geliştirme ve sınama](integrate-microsoft-365-defender-secops-use-cases.md)
+[5. Adım. Kullanım örneklerini geliştirme ve test edin](integrate-microsoft-365-defender-secops-use-cases.md)

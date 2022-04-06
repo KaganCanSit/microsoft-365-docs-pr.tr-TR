@@ -1,6 +1,6 @@
 ---
-title: Kullanmaya başlayın Plan 1 Uç Nokta için Microsoft Defender ile birlikte
-description: Kullanmaya başlayın Plan 1 için Defender'ı kullanma hakkında. Raporları görüntüleme, Bulut için Defender ve cihazları yönetme hakkında bilgi edinebilirsiniz.
+title: Uç Nokta için Microsoft Defender Plan 1 ile Kullanmaya başlayın
+description: Uç Nokta Için Defender Plan 1'i kullanarak Kullanmaya başlayın. Bulut için Defender kullanmayı, uyarıları ve cihazları yönetmeyi ve raporları görüntülemeyi öğrenin.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -17,161 +17,161 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
 ms.custom: intro-get-started
-ms.openlocfilehash: c3e7f55a0dd8ad26f2b00b7e2d5840945e777a2a
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 68315c6cf7947c2d42e58e34b4496e0ef790c8b0
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64470339"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64665502"
 ---
-# <a name="get-started-with-microsoft-defender-for-endpoint-plan-1"></a>Kullanmaya başlayın Plan 1 Uç Nokta için Microsoft Defender ile birlikte
+# <a name="get-started-with-microsoft-defender-for-endpoint-plan-1"></a>Uç Nokta için Microsoft Defender Plan 1 ile Kullanmaya başlayın
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Bu Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)), algılanan tehditlerle ilgili bilgileri görüntülemenize, uyarılarınızı ve olaylarınızı yönetmenize, algılanan tehditlere karşı gerekli eylemi uygulamanıza ve cihazları yönetmenize olanak tanır. En Microsoft 365 Defender portalı, Uç Nokta Planı 1 için Defender ile edinen tehdit koruması özellikleriyle etkileşime nereden başlayabileceksiniz? Aşağıdaki bölümlerde nasıl baş çık çık başlandı? açıklanmaktadır:
+Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)) algılanan tehditler hakkındaki bilgileri görüntülemenizi, uyarılarınızı ve olaylarınızı yönetmenizi, algılanan tehditler üzerinde gerekli eylemleri gerçekleştirmenizi ve cihazları yönetmenizi sağlar. Microsoft 365 Defender portalı, Uç Nokta için Defender Plan 1 ile elde ettiğiniz tehdit koruma özellikleriyle etkileşime geçebileceğiniz yerdir. Aşağıdaki bölümlerde nasıl kullanmaya başlandığı açıklanmaktadır:
 
 - [Microsoft 365 Defender portalı](#the-microsoft-365-defender-portal)
-- [Uyarılarda olayları görüntüleme & yönetme](#view-and-manage-incidents--alerts)
+- [Uyarıları & olayları görüntüleme ve yönetme](#view-and-manage-incidents--alerts)
 - [Cihazları yönetme](#manage-devices)
 - [Raporları görüntüleme](#view-reports)
 
 ## <a name="the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalı
 
-En Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)), uyarıları görüntüley İhlalleri görüntüleytnizi, cihazları yönettnizi ve raporları görüntüley yeridir. Oturum açma portalında Microsoft 365 Defender, aşağıdaki resimde gösterildiği gibi Giriş sayfasıyla başlarsınız:
+Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)), uyarıları görüntüleyebileceğiniz, cihazları yöneteceğiniz ve raporları görüntüleyebileceğiniz yerdir. Microsoft 365 Defender portalında oturum açtığınızda, aşağıdaki resimde gösterildiği gibi Giriş sayfasıyla başlarsınız:
 
-:::image type="content" source="../../media/mde-p1/m365-defender-portal.png" alt-text="Portal Microsoft 365 Defender" lightbox="../../media/mde-p1/m365-defender-portal.png":::
+:::image type="content" source="../../media/mde-p1/m365-defender-portal.png" alt-text="Microsoft 365 Defender portalı" lightbox="../../media/mde-p1/m365-defender-portal.png":::
 
-Giriş sayfası, güvenlik ekibinize uyarıların, cihazın durumunun ve algılanan tehditlerin anlık görüntü toplu görünümünü sağlar. Bu Bulut için Defender, güvenlik işlemleri ekibinin arayacakları bilgileri hızla ve kolayca bulmaları için ayarlanır.
+Giriş sayfası güvenlik ekibinize uyarıların, cihaz durumunun ve algılanan tehditlerin anlık görüntü toplam görünümünü sağlar. Bulut için Defender, güvenlik operasyonları ekibinizin aradıkları bilgileri hızlı ve kolay bir şekilde bulabilmesi için ayarlanır.
 
 > [!NOTE]
-> Bu makalede gösterilen örneklerimiz, kullanıcı portalında gördüğünüzden Microsoft 365 Defender olabilir. Portalda ne göreceğiniz, lisanslara ve izinlere bağlıdır. Buna ek olarak, güvenlik takımınız kartları ekleyerek, kaldırarak ve yeniden düzenleyerek organizasyon portalınızı özelleştirilebilir.
+> Bu makalede gösterilen örneklerimiz, Microsoft 365 Defender portalınızda gördüklerinizden farklı olabilir. Portalınızda gördükleriniz lisanslarınıza ve izinlerinize bağlıdır. Ayrıca, güvenlik ekibiniz kartları ekleyerek, kaldırarak ve yeniden düzenleyerek kuruluşunuzun portalını özelleştirebilir.
 
-### <a name="cards-highlight-key-information-and-include-recommendations"></a>Kartlar önemli bilgileri vurgular ve öneriler içerir
+### <a name="cards-highlight-key-information-and-include-recommendations"></a>Kartlar önemli bilgileri vurgular ve öneriler ekler
 
-Giriş sayfası, aşağıdaki resimde gösterilen Etkin olayları kartı gibi kartları içerir:
+Giriş sayfasında, aşağıdaki görüntüde gösterilen Etkin olaylar kartı gibi kartlar bulunur:
 
 :::image type="content" source="../../media/mde-p1/active-incidents-card.png" alt-text="Etkin olaylar kartı" lightbox="../../media/mde-p1/active-incidents-card.png":::
 
-Kart size bir bakışta bilgi sağlar ve daha ayrıntılı bilgileri görüntülemek için seçerek ek bir bağlantı veya düğme sağlar. Örnek Etkin olaylar kartımıza başvurup Tüm olayları görüntüle'yi **seçerek** olay listemize bakabilirsiniz.
+Kart, daha ayrıntılı bilgileri görüntülemek için seçebileceğiniz bir bağlantı veya düğmeyle birlikte size bir bakışta bilgi sağlar. Örnek Etkin olaylar kartımıza başvurarak **Tüm olayları görüntüle'yi** seçerek olay listemize gidebiliriz.
 
-:::image type="content" source="../../media/mde-p1/incidents.png" alt-text="Olayları listesi" lightbox="../../media/mde-p1/incidents.png":::
+:::image type="content" source="../../media/mde-p1/incidents.png" alt-text="Olaylar listesi" lightbox="../../media/mde-p1/incidents.png":::
 
 ### <a name="navigation-bar-makes-it-easy-to-find-alerts-the-action-center-and-more"></a>Gezinti çubuğu uyarıları, İşlem merkezini ve daha fazlasını bulmayı kolaylaştırır
 
-Ekranın sol tarafındaki gezinti çubuğu olaylar, uyarılar, İşlem merkezi, raporlar ve ayarlar arasında kolayca hareket etmenizi sağlar. Aşağıdaki tabloda gezinti çubuğu açık almaktadır.<br/><br/>
+Ekranın sol tarafındaki gezinti çubuğu olaylar, uyarılar, İşlem merkezi, raporlar ve ayarlar arasında kolayca hareket etmenizi sağlar. Aşağıdaki tabloda gezinti çubuğu açıklanmaktadır.<br/><br/>
 
 | Gezinti çubuğu öğesi | Açıklama |
 |:---|:---|
-| **Giriş** | Kullanıcı portalının Giriş sayfasına [Microsoft 365 Defender.](../defender/microsoft-365-security-center-mde.md) |
-| **Olaylar & uyarıları** | Olayları ve Uyarıları **gösterecek şekilde** **genişletildi**. |
-| **Olaylar & uyarıları** >  **Olaylar** | Olaylar **listesine** gidin. Uyarılar tetiklendiğinde ve/veya tehdit algılandığında olaylar oluşturulur. Varsayılan olarak, **Olaylar listesi** son 30 günlük verileri görüntüler ve en son olay en başta listelenir. <br/><br/> Daha fazla bilgi edinmek için bkz. [Olaylar](view-incidents-queue.md). |
-| **Olaylar & uyarıları** >  **Uyarılar** | Uyarılar listesine **(Uyarılar** sırası olarak da adlandırılır **) gidin**. Şüpheli veya kötü amaçlı bir dosya, işlem veya davranış algılandığında uyarılar tetiklenir. Varsayılan olarak, **Uyarılar listesi** son 30 günlük verileri görüntüler ve en son uyarı en başta listelenir. <br/><br/> Daha fazla bilgi edinmek için bkz [. Uyarılar](alerts-queue.md). |
-| **İşlem merkezi** | Düzeltme ve el ile yanıt eylemlerini takip etmek için İşlem merkezine gidin. İşlem merkezi aşağıdaki gibi etkinlikleri izler: <br/>- Microsoft Defender Virüsten Koruma bir dosyayla karşılaşır ve o dosyayı engeller/kaldırır. <br/>- Güvenlik ekipleriniz bir cihazı yalıtır.<br/>- Uç Nokta için Defender dosyayı algılar ve karantinaya eder. <br/><br/> Daha fazla bilgi edinmek için bkz. [İşlem merkezi](auto-investigation-action-center.md). |
-| **Güvenlik puanı** | Geliştirme eylemleri ve ölçümlerin listesiyle birlikte, organizasyon organizasyon güvenlik mezra nın bir gösterimini görüntüler. <br/><br/> Daha fazla bilgi edinmek için [bkz. Microsoft Güvenli Puanı](../defender/microsoft-secure-score.md). |
-| **Learning hub** | Güvenlik özellikleri hakkında daha fazla bilgi edinmek için erişebilirsiniz eğitim yollarının Microsoft 365 gidin.  |
-| **Uç noktalar** >  **Arama** | Cihaz adına göre belirli cihazları arayabilirsiniz. Sonuç listesinde, risk düzeyi ve sağlık durumu gibi ayrıntıları bir bakışta görebilirsiniz. |
-|  **Uç noktalar** >  **Cihaz envanteri** | Uç nokta için Defender'a eklen cihazlar listenize gidin. Cihazlar hakkında, pozlama ve risk düzeyleri gibi bilgiler sağlar. <br/><br/> Daha fazla bilgi edinmek için bkz [. Cihaz envanteri](machines-view-overview.md). |
-|  **Uç noktalar** >  **Yapılandırma & taban çizgilerini yapılandırma** | Güvenlik taban çizgilerini **ve Yapılandırma yönetimini gösterecek** **şekilde genişletildiğinde**. |
-|  **Uç noktalar** >  **Yapılandırma & taban çizgilerini yapılandırma** >  **Güvenlik taban çizgilerini** | Güvenlik taban çizgisi, önerilen güvenlik ayarlarını verimli ve etkili bir şekilde uygulamanıza yardımcı olacak, önceden yapılandırılmış ilkeler ve ayar gruplarıdır. Taban çizgisi, sektöre yönelik en iyi uygulamaları temel alan ayarları içerir. Varsayılan ayarları saklayabilirsiniz veya taban çizgilerinizi, kurum gereksinimlerine uygun olarak özelleştirebilirsiniz. <br/><br/> Daha fazla bilgi edinmek için bkz[. Temelleri kullanarak belirli cihazları Windows 10 için güvenlik Intune](/mem/intune/protect/security-baselines). |
-|  **Uç noktalar** >  **Yapılandırma & taban çizgilerini yapılandırma** >  **Yapılandırma yönetimi** | Cihaz yapılandırma yönetimi **sayfasına gidin. Burada** , yerleşik cihazlarla ilgili bilgileri görüntüleyebilirsiniz ve daha fazla cihaz ekleme adımlarını izleyin. |
-| **Raporlar** | Tehdit koruması raporunuz, Cihaz sistem durumu ve uyumluluk [raporunuz](threat-protection-reports.md) ve Web koruma [raporunuz](machine-reports.md) gibi [raporlarınıza gidin](web-protection-overview.md). |
-| **Hizmet Durumu** | İleti merkezi ve **Hizmet durumu** **bağlantıları içerir**.  |
-| **Durum** >  **Hizmet durumu** | Sayfa içinde Hizmet durumu sayfayı Microsoft 365 yönetim merkezi. Bu sayfa, kurum abonelikleriyle birlikte kullanılabilen tüm hizmetler genelinde sistem durumunu görüntülemenizi sağlar.   |
-| **Durum** >  **İleti merkezi** | İleti merkezinde İleti merkezine Microsoft 365 yönetim merkezi. İleti merkezi planlanan değişiklikler hakkında bilgi sağlar. Her iletide, neler olduğu, bunun kullanıcıları nasıl etkileyebilecek olduğu ve değişikliklerin nasıl yönet kullanıcılar tarafından yönet olabileceği açık vardır. |  
-| **İzinler & rolleri** | Kullanıcı portalının kullanımına izin Microsoft 365 Defender olanak sağlar. Azure Active Directory (Azure AD) Azure Active Directory üzerinden izinler verebilirsiniz. Bir rol seçin; bir açılır pencere görüntülenir. Uçarak çıkış, bir rol grubuna üye eklerini veya kaldırabilirsiniz, Azure AD'nin bağlantısını içerir. <br/><br/> Daha fazla bilgi edinmek için [bkz. Rol tabanlı erişim denetimi kullanarak portal erişimini yönetme](rbac.md).  |
-| **Ayarlar** | Güvenlik portalınız (Güvenlik merkezi olarak **Microsoft 365 Defender) ve** Uç Nokta için Defender (Uç Nokta olarak listelenmiş) genel **ayarlara gidin**. <br/><br/> Daha fazla bilgi edinmek için bkz. [Ayarlar](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal). |
-| **Diğer kaynaklar** | E-Azure Active Directory gibi daha fazla portal ve Microsoft 365 uyumluluk merkezi. <br/><br/> Daha fazla bilgi edinmek için [bkz. Microsoft güvenlik portalları ve yönetim merkezleri](../defender/portals.md). |
+| **Giriş** | [Microsoft 365 Defender portalın](../defender/microsoft-365-security-center-mde.md) Giriş sayfasına gider. |
+| **Olaylar & uyarıları** | **Olayları** ve Uyarıları göstermek için **genişletir**. |
+| **Olaylar & uyarıları** >  **Olay** | **Olaylar** listesine gider. Uyarılar tetiklendiğinde ve/veya tehditler algılandığında olaylar oluşturulur. Varsayılan olarak, **Olaylar** listesi son 30 güne ilişkin verileri görüntüler ve en son olay ilk sırada listelenir. <br/><br/> Daha fazla bilgi için bkz [. Olaylar](view-incidents-queue.md). |
+| **Olaylar & uyarıları** >  **Uyarı** | **Uyarılar** listesine (**Uyarılar kuyruğu** olarak da adlandırılır) gider. Şüpheli veya kötü amaçlı bir dosya, işlem veya davranış algılandığında uyarılar tetiklenir. Varsayılan olarak, **Uyarılar** listesi son 30 güne ilişkin verileri görüntüler ve en son uyarı ilk sırada listelenir. <br/><br/> Daha fazla bilgi için bkz. [Uyarılar](alerts-queue.md). |
+| **İşlem merkezi** | düzeltme ve el ile yanıt eylemlerini izleyen İşlem merkezine gider. İşlem merkezi aşağıdaki gibi etkinlikleri izler: <br/>- Microsoft Defender Virüsten Koruma kötü amaçlı bir dosyayla karşılaşır ve ardından bu dosyayı engeller/kaldırır. <br/>- Güvenlik ekibiniz bir cihazı yalıtıyor.<br/>- Uç Nokta için Defender bir dosyayı algılar ve karantinaya alır. <br/><br/> Daha fazla bilgi için bkz [. İşlem merkezi](auto-investigation-action-center.md). |
+| **Güvenlik puanı** | İyileştirme eylemlerinin ve ölçümlerinin listesiyle birlikte kuruluşunuzun güvenlik duruşunun bir gösterimini görüntüler. <br/><br/> Daha fazla bilgi için bkz. [Microsoft Güvenli Puanı](../defender/microsoft-secure-score.md). |
+| **Learning hub'ı** | Microsoft 365 güvenlik özellikleri hakkında daha fazla bilgi edinmek için erişebileceğiniz öğrenme yollarının listesine gider.  |
+| **Bitiş noktası** >  **Arama** | Belirli cihazları cihaz adına göre arayabileceğiniz bir sayfaya gider. Sonuç listesinde, risk düzeyi ve sistem durumu gibi ayrıntıları bir bakışta görebilirsiniz. |
+|  **Bitiş noktası** >  **Cihaz envanteri** | Uç Nokta için Defender'a eklenen cihazlar listenize gider. Cihazlar hakkında maruz kalma ve risk düzeyleri gibi bilgiler sağlar. <br/><br/> Daha fazla bilgi için bkz [. Cihaz envanteri](machines-view-overview.md). |
+|  **Bitiş noktası** >  **Yapılandırma & temelleri** | **Güvenlik temellerini** ve **Yapılandırma yönetimini** gösterecek şekilde genişletir. |
+|  **Bitiş noktası** >  **Yapılandırma & temelleri** >  **Güvenlik temelleri** | Güvenlik temelleri, önerilen güvenlik ayarlarını verimli ve etkili bir şekilde uygulamanıza yardımcı olabilecek önceden yapılandırılmış ilkeler ve ayar gruplarıdır. Temeller, endüstrinin en iyi yöntemlerini temel alan ayarları içerir. Varsayılan ayarları tutabilir veya temellerinizi kuruluşunuzun gereksinimlerine uyacak şekilde özelleştirebilirsiniz. <br/><br/> Daha fazla bilgi için bkz. [Intune'da Windows 10 cihazları yapılandırmak için güvenlik temellerini kullanma](/mem/intune/protect/security-baselines). |
+|  **Bitiş noktası** >  **Yapılandırma & temelleri** >  **Yapılandırma yönetimi** | Eklenen cihazlar hakkındaki bilgileri görüntüleyebileceğiniz ve daha fazla cihaz ekleme adımlarını uygulayabileceğiniz **Cihaz yapılandırma yönetimi** sayfasına gider. |
+| **Raporlar** | [Tehdit koruması raporunuz](threat-protection-reports.md), [Cihaz durumu ve uyumluluk raporunuz ve](machine-reports.md) [Web koruma raporunuz](web-protection-overview.md) gibi raporlarınıza gider. |
+| **Hizmet Durumu** | **Hizmet durumu** ve **İleti merkezi** bağlantılarını içerir.  |
+| **Sağlık** >  **Hizmet durumu** | Microsoft 365 yönetim merkezi Hizmet durumu sayfasına gider. Bu sayfa, kuruluşunuzun aboneliklerinde kullanılabilen tüm hizmetler genelinde sistem durumunu görüntülemenizi sağlar.   |
+| **Sağlık** >  **İleti merkezi** | Microsoft 365 yönetim merkezi İleti merkezine gider. İleti merkezi planlı değişiklikler hakkında bilgi sağlar. Her ileti, gelenleri, kullanıcıları nasıl etkileyebileceğini ve değişikliklerin nasıl yönetileceğini açıklar. |  
+| **İzinler & rolleri** | Microsoft 365 Defender portalını kullanmak için izinler vermenizi sağlar. İzinler Azure Active Directory 'deki (Azure AD) roller aracılığıyla verilir. Bir rol seçtiğinizde açılır pencere bölmesi görüntülenir. Açılır öğe, rol grubuna üye ekleyebileceğiniz veya kaldırabileceğiniz Bir Azure AD bağlantısı içerir. <br/><br/> Daha fazla bilgi edinmek için bkz. [Rol tabanlı erişim denetimini kullanarak portal erişimini yönetme](rbac.md).  |
+| **Ayarlar** | Microsoft 365 Defender portalınız (**Güvenlik merkezi** olarak listelenir) ve Uç Nokta için Defender (Uç Nokta olarak listelenir) için genel **ayarlara** gider. <br/><br/> Daha fazla bilgi için bkz. [Ayarlar](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal). |
+| **Diğer kaynaklar** | Azure Active Directory ve Microsoft 365 uyumluluk merkezi gibi daha fazla portalın ve merkezin listesini görüntüler. <br/><br/> Daha fazla bilgi için bkz. [Microsoft güvenlik portalları ve yönetim merkezleri](../defender/portals.md). |
 
 > [!TIP]
-> Daha fazla bilgi edinmek için [portala Microsoft 365 Defender bakın](../defender/microsoft-365-security-center-mde.md).
+> Daha fazla bilgi edinmek için [bkz. Microsoft 365 Defender portalına genel bakış](../defender/microsoft-365-security-center-mde.md).
 
-## <a name="view-and-manage-incidents--alerts"></a>Uyarılarda olayları & yönetme
+## <a name="view-and-manage-incidents--alerts"></a>Olayları & uyarıları görüntüleme ve yönetme
 
-Güvenlik portalında oturum Microsoft 365 Defender, olaylarınızı ve uyarılarınızı görüntüden ve yönet'den emin olun. Olaylar **listenizi başlatabilirsiniz** . Aşağıdaki resimde, yüksek önem düzeyi yüksek olan bir olay ve orta önem düzeyi yüksek olan bir diğer olay listesi görüntülenir.
+Microsoft 365 Defender portalında oturum açtığınızda olaylarınızı ve uyarılarınızı görüntüleyip yönettiğinizden emin olun. **Olaylar** listenizle başlayın. Aşağıdaki görüntüde, biri yüksek önem derecesine sahip, diğeri orta önem derecesine sahip olan bir olay listesi gösterilmektedir.
 
 :::image type="content" source="../../media/mde-p1/incidents.png" alt-text="Olaylar listesi":::
 
-Olayla ilgili ayrıntıları görüntülemek için bir olay seçin. Hangi uyarıların tetiklendiği, kaç cihaz ve kullanıcının etkilendiği ve diğer ayrıntıları içerir. Aşağıdaki resimde olay ayrıntılarının bir örneği yer aldı.
+Olayla ilgili ayrıntıları görüntülemek için bir olay seçin. Ayrıntılar hangi uyarıların tetiklendiğini, kaç cihaz ve kullanıcının etkilendiğini ve diğer ayrıntıları içerir. Aşağıdaki görüntüde olay ayrıntıları örneği gösterilmektedir.
 
-:::image type="content" source="../../media/mde-p1/single-incident.png" alt-text="Olayın ayrıntıları" lightbox="../../media/mde-p1/single-incident.png":::
+:::image type="content" source="../../media/mde-p1/single-incident.png" alt-text="Bir olayın ayrıntıları" lightbox="../../media/mde-p1/single-incident.png":::
 
-Tetiklenen **uyarılar**, **etkilenen** cihazlar ve etkilenen  kullanıcı hesapları gibi daha fazla bilgiyi görüntülemek için Uyarılar, Cihazlar ve Kullanıcılar sekmelerini kullanın. Buradan, cihazı yalıtma, bir dosyayı durdurma ve başka bir dosyaya yer alma gibi elle yanıt eylemleri gerçekleştirebilirsiniz.
+**Tetiklenen** uyarılar, etkilenen cihazlar ve etkilenen kullanıcı hesapları gibi daha fazla bilgi görüntülemek için Uyarılar, **Cihazlar** ve **Kullanıcılar** sekmelerini kullanın. Buradan, bir cihazı yalıtma, bir dosyayı durdurma ve quarantining gibi el ile yanıt eylemleri gerçekleştirebilirsiniz.
 
 > [!TIP]
-> Olay görünümünü kullanma hakkında daha fazla **bilgi edinmek** için bkz. [Olayları yönetme](manage-incidents.md).
+> Olay görünümünü kullanma hakkında daha fazla bilgi için bkz **. Olayları** [yönetme](manage-incidents.md).
 
 ## <a name="manage-devices"></a>Cihazları yönetme
 
-Kuruluş cihazlarınızı görüntülemek ve yönetmek için gezinti çubuğundaki Uç noktalar'ın altında **Cihaz** envanteri'ni **seçin**. Aşağıdaki resimde gösterildiği gibi cihazların listesini görüntülenir:
+Kuruluşunuzun cihazlarını görüntülemek ve yönetmek için gezinti çubuğundaki **Uç Noktalar'ın** altında **Cihaz envanteri'ni** seçin. Aşağıdaki görüntüde gösterildiği gibi cihazların listesini görürsünüz:
 
 :::image type="content" source="../../media/mde-p1/device-inventory.png" alt-text="Cihaz envanteri" lightbox="../../media/mde-p1/device-inventory.png":::
 
-Bu liste, uyarıların oluşturulmuş olduğu cihazları içerir. Varsayılan olarak, gösterilen veriler son 30 gündür ve en son öğeler önce listelenir. Bir cihaz hakkında daha fazla bilgi görüntülemek için o cihazı seçin. Aşağıdaki resimde gösterildiği gibi bir açılır pencere bölmesi açılır:
+Liste, uyarıların oluşturulduğu cihazları içerir. Varsayılan olarak, gösterilen veriler son 30 güne yöneliktir ve en son öğeler ilk sırada listelenir. Cihaz hakkında daha fazla bilgi görüntülemek için bir cihaz seçin. Aşağıdaki resimde gösterildiği gibi bir açılır pencere bölmesi açılır:
 
-:::image type="content" source="../../media/mde-p1/device-inventory-selecteddevice.png" alt-text="Seçilen cihaz ayrıntıları" lightbox="../../media/mde-p1/device-inventory-selecteddevice.png":::
+:::image type="content" source="../../media/mde-p1/device-inventory-selecteddevice.png" alt-text="Seçili cihaz ayrıntıları" lightbox="../../media/mde-p1/device-inventory-selecteddevice.png":::
 
-Uçarak çıkış bölmesi, cihaz için etkin uyarılar gibi ayrıntıları görüntüler ve bir cihazı yalıtma gibi işlem yapmak için gereken bağlantıları içerir.
+Açılır bölme, cihaz için etkin uyarılar gibi ayrıntıları görüntüler ve cihaz yalıtma gibi eylem gerçekleştirme bağlantıları içerir.
 
-Cihazda etkin uyarılar varsa, bunları çıkış bölmesinde görüntüleyebilirsiniz. Hakkında daha fazla ayrıntı görüntülemek için tek bir uyarı seçin. Ya da Cihazı Yalıt gibi bir işlemle cihazı daha fazla araştırıp diğer cihazlara bulaşma riskini en aza indirebilirsiniz.
+Cihazda etkin uyarılar varsa bunları açılır pencere bölmesinde görüntüleyebilirsiniz. Hakkında daha fazla ayrıntı görüntülemek için tek bir uyarı seçin. Ya da cihazı daha fazla araştırırken diğer **cihazlara** bulaşma riskini en aza indirebilmeniz için Cihazı yalıt gibi bir işlem gerçekleştirebilirsiniz.
 
 > [!TIP]
-> Daha fazla bilgi için bkz [. Uç nokta cihazları için Defender listesinde cihazları araştırma](investigate-machines.md).
+> Daha fazla bilgi edinmek [için Uç Nokta için Defender cihazları listesinde cihazları araştırma bölümüne bakın](investigate-machines.md).
 
 ## <a name="view-reports"></a>Raporları görüntüleme
 
-Uç Nokta Planı 1 için Defender'da, uygulama portalında Microsoft 365 Defender vardır. Raporlarınıza erişmek için şu adımları izleyin:
+Uç Nokta Için Defender Plan 1'de, Microsoft 365 Defender portalında çeşitli raporlar mevcuttur. Raporlarınıza erişmek için şu adımları izleyin:
 
-1. Erişim portalına Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com) ) ve oturum açın.
+1. Microsoft 365 Defender portalına ([https://security.microsoft.com](https://security.microsoft.com)) gidin ve oturum açın.
 
-2. Gezinti çubuğunda Raporlar'ı **seçin**.
+2. Gezinti çubuğunda **Raporlar'ı** seçin.
 
-3. Listeden bir rapor seçin. Aşağıdaki üç raporu görüyorsunuz:
+3. Listeden bir rapor seçin. Aşağıdaki üç raporu görürsünüz:
 
-   - Tehdit koruması raporu
+   - Tehdit koruma raporu
    - Cihaz durumu raporu
    - Web koruma raporu
 
 > [!TIP]
-> Daha fazla bilgi için bkz [. Tehdit koruması raporları](threat-protection-reports.md).
+> Daha fazla bilgi için bkz [. Tehdit koruma raporları](threat-protection-reports.md).
 
-### <a name="threat-protection-report"></a>Tehdit koruması raporu
+### <a name="threat-protection-report"></a>Tehdit koruma raporu
 
-Tehdit koruması raporunuza erişmek için, Microsoft 365 Defender raporlar'ı **ve ardından Tehdit** **koruması'ı seçin**. Tehdit Koruması raporu uyarı eğilimlerini, durumu, kategorileri ve daha fazlasını gösterir. Görünümler iki sütunda düzenlenmiştir: **Aşağıdaki** resimde **gösterildiği gibi**, Uyarı eğilimleri ve Uyarı durumu:
+Tehdit koruması raporunuz için Microsoft 365 Defender portalında **Raporlar'ı** ve ardından **Tehdit koruması'nı** seçin. Tehdit Koruması raporu uyarı eğilimlerini, durumunu, kategorilerini ve daha fazlasını gösterir. Görünümler iki sütun halinde düzenlenmiştir: **Uyarı eğilimleri** ve **Uyarı durumu**, aşağıdaki görüntüde gösterildiği gibi:
 
-:::image type="content" source="../../media/mde-p1/threat-protection-report.png" alt-text="Tehdit koruması raporu" lightbox="../../media/mde-p1/threat-protection-report.png":::
+:::image type="content" source="../../media/mde-p1/threat-protection-report.png" alt-text="Tehdit koruma raporu" lightbox="../../media/mde-p1/threat-protection-report.png":::
 
-Her bir listede tüm görünümleri görmek için aşağı kaydırın.
+Her listedeki tüm görünümleri görmek için aşağı kaydırın.
 
-- Varsayılan olarak, Uyarı eğilimleri sütunundaki  görünümler son 30 günlük verileri görüntüler, ancak son üç aya, son altı aya veya özel bir zaman aralığına (180 gün kadar) yönelik verileri görüntülemek üzere bir görünüm oluşturabilirsiniz.
-- Uyarı durumu **sütunundaki görünümler** , önceki iş günü için bir anlık görüntüdir.
+- Varsayılan olarak, **Uyarı eğilimleri sütunundaki görünümler** son 30 güne ilişkin verileri görüntüler, ancak son üç ay, son altı ay veya özel bir zaman aralığına (180 güne kadar) ilişkin verileri görüntülemek için bir görünüm ayarlayabilirsiniz.
+- **Uyarı durumu** sütunundaki görünümler, önceki iş gününün anlık görüntüsüdür.
 
 > [!TIP]
-> Daha fazla bilgi edinmek için bkz [. Uç Nokta için Defender'da tehdit koruması raporu](threat-protection-reports.md).
+> Daha fazla bilgi için bkz. [Uç Nokta için Defender'da tehdit koruma raporu](threat-protection-reports.md).
 
 ### <a name="device-health-report"></a>Cihaz durumu raporu
 
-Cihaz durumu raporunuza erişmek için, Rapor Microsoft 365 Defender ve **ardından** Cihaz **durumu'Microsoft 365 Defender'ı seçin**. Cihaz durumu raporu, kurum genelindeki cihazlar arasında durum durumunu ve virüsten koruma yazılımını gösterir. Tehdit koruması [raporuna benzer](#threat-protection-report) şekilde görünümler iki sütunda düzenlenmiştir: **Cihaz** eğilimleri ve Cihaz **özeti, aşağıdaki** resimde gösterildiği gibi:
+Cihaz durumu raporunuzla erişmek için Microsoft 365 Defender portalında **Raporlar'ı** ve ardından **Cihaz durumu'na** tıklayın. Cihaz durumu raporu, kuruluşunuzdaki cihazlarda sistem durumunu ve virüsten korumayı gösterir. [Tehdit koruması raporuna](#threat-protection-report) benzer şekilde görünümler de aşağıdaki görüntüde gösterildiği gibi iki sütun halinde düzenlenmiştir: **Cihaz eğilimleri** ve **Cihaz özeti**:
 
 :::image type="content" source="../../media/mde-p1/device-health-report.png" alt-text="Cihaz durumu raporu" lightbox="../../media/mde-p1/device-health-report.png":::
 
-Her bir listede tüm görünümleri görmek için aşağı kaydırın. Varsayılan olarak, Cihaz eğilimleri sütunundaki  görünümler son 30 günlük verileri görüntüler, ancak görünümü son üç aya, son altı aya veya özel bir zaman aralığına (180 gün kadar) yönelik verileri görüntüecek şekilde değiştirebilirsiniz. Cihaz **özeti görünümleri** , önceki iş günü anlık görüntüleridir.
+Her listedeki tüm görünümleri görmek için aşağı kaydırın. Varsayılan olarak, **Cihaz eğilimleri sütunundaki görünümler** son 30 güne ilişkin verileri görüntüler, ancak görünümü son üç aya, son altı aya veya özel bir zaman aralığına (180 güne kadar) ilişkin verileri görüntüleyecek şekilde değiştirebilirsiniz. **Cihaz özet** görünümleri, önceki iş gününün anlık görüntüleridir.
 
 > [!TIP]
-> Daha fazla bilgi edinmek için bkz. [Cihaz durumu](machine-reports.md).
+> Daha fazla bilgi için bkz [. Cihaz durumu](machine-reports.md).
 
 ### <a name="web-protection-report"></a>Web koruma raporu
 
-Cihaz durumu raporunuza erişmek için, Mobil Microsoft 365 Defender **Raporlar'ı ve** ardından **Web koruması'ı seçin**. Web koruma raporu, aşağıdaki resimde gösterildiği gibi kötü amaçlı URL'ler ve engellenen URL'lere erişme girişimleri gibi zamanla algılamaları gösterir:
+Cihaz durumu raporunuzla erişmek için Microsoft 365 Defender portalında **Raporlar'ı** ve ardından **Web koruması'nı** seçin. Web koruma raporu, aşağıdaki görüntüde gösterildiği gibi kötü amaçlı URL'ler ve engellenen URL'lere erişme girişimleri gibi zaman içindeki algılamaları gösterir:
 
 :::image type="content" source="../../media/mde-p1/web-protection-report.png" alt-text="Web koruma raporu" lightbox="../../media/mde-p1/web-protection-report.png":::
 
-Web koruma raporu'daki tüm görünümleri görmek için sayfayı aşağı kaydırın. Bazı görünümler daha fazla ayrıntı görüntülemenize, tehdit koruması özelliklerinizi yapılandırmanıza ve hatta Uç Nokta için Defender'da özel durumlara hizmet eden göstergeleri yönetmenizi sağlayan bağlantılar içerir.
+Web koruması raporundaki tüm görünümleri görmek için ekranı aşağı kaydırın. Bazı görünümler daha fazla ayrıntı görüntülemenizi, tehdit koruma özelliklerinizi yapılandırmanızı ve hatta Uç Nokta için Defender'da özel durum olarak hizmet veren göstergeleri yönetmenizi sağlayan bağlantılar içerir.
 
 > [!TIP]
-> Daha fazla bilgi edinmek için bkz. [Web koruması](web-protection-overview.md).
+> Daha fazla bilgi için bkz. [Web koruması](web-protection-overview.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Plan 1 Uç Nokta için Microsoft Defender i yönetme](mde-p1-maintenance-operations.md)
+- [Uç Nokta için Microsoft Defender Plan 1'i yönetme](mde-p1-maintenance-operations.md)
 - [Uç Nokta için Microsoft Defender](microsoft-defender-endpoint.md)

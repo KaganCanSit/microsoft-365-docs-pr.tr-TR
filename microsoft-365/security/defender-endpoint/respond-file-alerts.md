@@ -1,7 +1,7 @@
 ---
-title: Dosyada yanıt eylemleri Uç Nokta için Microsoft Defender
-description: Bir dosyayı durdurarak ve kullanarak ya da dosyayı engelleyerek ve etkinlik ayrıntılarını kontrol ederek dosyayla ilgili uyarılarda yanıt eylemleri gerçekleştirin.
-keywords: Yanıtlama, durdurma ve karantinaya al, dosyayı engelleme, derin çözümleme
+title: Uç Nokta için Microsoft Defender'da bir dosya üzerinde yanıt eylemleri gerçekleştirme
+description: Dosyayla ilgili uyarılarda bir dosyayı durdurup quarantinleyerek veya bir dosyayı engelleyerek ve etkinlik ayrıntılarını denetleyerek yanıt eylemleri gerçekleştirin.
+keywords: yanıt verme, durdurma ve karantinaya al, dosyayı engelle, derin analiz
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,297 +14,297 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 5c5a457d960f7dd7906c7d26a099d242507fbe86
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 8bfa08a92a011d32cdc30e2f68052715b4075fdf
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499209"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64665524"
 ---
 # <a name="take-response-actions-on-a-file"></a>Dosyada yanıt eylemleri gerçekleştirin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
 - [Uç Nokta için Microsoft Defender Plan 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-responddile-abovefoldlink)
+> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-responddile-abovefoldlink)
 
-Dosyaları durdurarak ve kullanarak veya bir dosyayı engelleyerek algılanan saldırılara hızlı bir şekilde yanıt verin. Dosyalar üzerinde işlem yapıldıktan sonra, İşlem merkezi'nde etkinlik ayrıntılarını kontrol edin.
+Algılanan saldırılara hızlı bir şekilde yanıt vermek için dosyaları durdurup kilitleyin veya bir dosyayı engelleyin. Dosyalar üzerinde işlem yaptıktan sonra İşlem merkezinde etkinlik ayrıntılarını de kontrol edebilirsiniz.
 
-Yanıt eylemleri, dosyanın ayrıntılı profil sayfasında kullanılabilir. Bu sayfaya başladıktan sonra, yeni Dosya sayfasını kapatarak yeni ve eski sayfa düzenleri **arasında geçişebilirsiniz**. Bu makalenin kalan kalanında daha yeni olan sayfa düzeni açıklanmıştır.
+Yanıt eylemleri bir dosyanın ayrıntılı profil sayfasında kullanılabilir. Bu sayfaya geçtikten sonra, yeni **Dosya sayfasını** değiştirerek yeni ve eski sayfa düzenleri arasında geçiş yapabilirsiniz. Bu makalenin geri kalanında daha yeni sayfa düzeni açıklanmaktadır.
 
-Yanıt eylemleri dosya sayfasının en üstünde görüntülenir ve şunları içerir:
+Yanıt eylemleri dosya sayfasının üst kısmında çalışır ve şunları içerir:
 
-- Dosyayı Durdur ve Karantinaya Alın
+- Dosyayı Durdur ve Karantinaya Al
 - Gösterge Ekle
-- Dosyayı indir
+- Dosyayı indirme
 - Tehdit uzmanına danışın
 - İşlem merkezi
 
-Ayrıca, dosyayı güvenli bir bulut korumalı alanda çalıştırmak için dosyaları derinlemesine çözümlemeye gönderebilirsiniz. Çözümleme tamamlandığında, dosyanın davranışı hakkında bilgi sağlayan ayrıntılı bir rapor elde edinebilirsiniz. Derin çözümleme sekmesini seçerek dosyaları daha derin çözümleme için gönderebilirsiniz ve geçmiş **raporları okuyabilirsiniz** . Dosya bilgileri kartlarında yer almaktadır.
+Dosyayı güvenli bir bulut korumalı alanında çalıştırmak için ayrıntılı analiz için de dosya gönderebilirsiniz. Analiz tamamlandığında, dosyanın davranışı hakkında bilgi sağlayan ayrıntılı bir rapor alırsınız. **Derin** analiz sekmesini seçerek derin analiz için dosya gönderebilir ve geçmiş raporları okuyabilirsiniz. Dosya bilgi kartlarının altında bulunur.
 
-Bazı eylemler için belirli izinler gerekir. Aşağıdaki tabloda, taşınabilir yürütülebilir (PE) ve PE olmayan dosyalar üzerinde belirli izinlerin gerçekleştirebilirleri eylem açık almaktadır:
+Bazı eylemler belirli izinler gerektirir. Aşağıdaki tabloda, bazı izinlerin taşınabilir yürütülebilir dosyalarda (PE) ve PE olmayan dosyalarda hangi eylemi gerçekleştirebileceği açıklanmaktadır:
 
-|İzin|PE dosyaları|Pe olmayan dosyalar|
+|Izni|PE dosyaları|PE olmayan dosyalar|
 |---|:---:|:---:|
 |Verileri görüntüleme|X|X|
-|Uyarı soruşturması|&#x2611;|X|
+|Uyarı araştırması|&#x2611;|X|
 |Canlı yanıt temel|X|X|
 |Canlı yanıt gelişmiş|&#x2611;|&#x2611;|
 
-Roller hakkında daha fazla bilgi için bkz [. Rol tabanlı erişim denetimi için roller oluşturma ve yönetme](user-roles.md).
+Roller hakkında daha fazla bilgi için bkz. [Rol tabanlı erişim denetimi için rol oluşturma ve yönetme](user-roles.md).
 
-## <a name="stop-and-quarantine-files-in-your-network"></a>Ağ içinde dosyaları durdurma ve karantinaya alın
+## <a name="stop-and-quarantine-files-in-your-network"></a>Ağ içinde dosyaları durdurun ve karantinaya alın
 
-Kötü amaçlı işlemi durdurarak ve gözlemlenen dosyayı kullanarak saldırılar bulundurabilirsiniz.
+Kötü amaçlı işlemi durdurarak ve dosyanın gözlemlendiği yerde durarak kuruluşunuzda bir saldırı içerebilirsiniz.
 
 > [!IMPORTANT]
-> Bu eylemi yalnızca şu durumla karşı  gerekir:
+> Bu eylemi yalnızca şu durumda gerçekleştirebilirsiniz:
 >
-> - Üzerinde eyleme geçen cihaz, Sürüm 1703 Windows 10 veya sonraki bir sürümü çalıştırarak Windows 11
-> - Dosya güvenilir üçüncü taraf yayıncılara ait değildir veya Microsoft tarafından imzalanmıştır
-> - Microsoft Defender Virüsten Koruma Pasif modunda çalışıyor olması gerekir. Daha fazla bilgi için uyumluluk [Microsoft Defender Virüsten Koruma bakın](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility).
+> - Üzerinde işlem yaptığınız cihaz Windows 10, sürüm 1703 veya üzerini çalıştırıyor ve Windows 11
+> - Dosya güvenilen üçüncü taraf yayımcılara ait değil veya Microsoft tarafından imzalanmaz
+> - Microsoft Defender Virüsten Koruma en azından Pasif modda çalışıyor olmalıdır. Daha fazla bilgi için bkz. [uyumluluk Microsoft Defender Virüsten Koruma](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility).
 
-Dosyayı **Durdur ve Karantinaya** Al eylemi, işlemleri çalıştırmayı durdurmayı, dosyaları başka bir şekilde çalıştırmayı ve kayıt defteri anahtarları gibi kalıcı verileri silmeyi içerir.
+**Dosyayı Durdur ve Karantinaya Al** eylemi, çalışan işlemleri durdurmayı, dosyaları quarantining'i ve kayıt defteri anahtarları gibi kalıcı verileri silmeyi içerir.
 
-Bu eylem, dosyanın son 30 gün içinde Windows 10, sürüm 1703 Windows 11 ve daha sonraki bir sürüme sahip cihazlarda geçerlik sağlar.
+Bu eylem, dosyanın son 30 gün içinde gözlemlendiği Windows 10, sürüm 1703 veya üzeri ve Windows 11 olan cihazlarda geçerli olur.
 
 > [!NOTE]
-> Her zaman dosyayı karantinadan geri yükleyebilirsiniz.
+> Dosyayı istediğiniz zaman karantinadan geri yükleyebilirsiniz.
 
-### <a name="stop-and-quarantine-files"></a>Dosyaları durdurma ve karantinaya alın
+### <a name="stop-and-quarantine-files"></a>Dosyaları durdurma ve karantinaya al
 
-1. Durdurmak istediğiniz dosyayı seçin ve karantinaya alın. Aşağıdaki görünümlerden herhangi biri için dosya seçerek veya Arama kutusunu kullanabilirsiniz:
+1. Durdurmak ve karantinaya almak istediğiniz dosyayı seçin. Aşağıdaki görünümlerden herhangi birinden bir dosya seçebilir veya Arama kutusunu kullanabilirsiniz:
 
-   - **Uyarılar** - Uyarı Anlatı zaman çizelgesinde Açıklama veya Ayrıntılar'daki ilgili bağlantılara tıklayın
-   - **Arama kutusu** - **açılan** menüden Dosya'ı seçin ve dosya adını girin
+   - **Uyarılar** - Uyarı Hikayesi zaman çizelgesindeki Açıklama veya Ayrıntılar'dan ilgili bağlantılara tıklayın
+   - **Arama kutusu** - Açılan menüden **Dosya'yı** seçin ve dosya adını girin
 
    > [!NOTE]
-   > Dosya durdurma ve karantina eylemi en çok 1000 cihazla sınırlıdır. Dosyayı çok sayıda cihazlarda durdurmak için bkz. Dosyayı engellemek [veya buna izin vermek için gösterge ekleme](#add-indicator-to-block-or-allow-a-file).
+   > Dosya durdurma ve karantinaya al eylemi en fazla 1000 cihazla sınırlıdır. Daha fazla sayıda cihazda bir dosyayı durdurmak için bkz. [Dosyayı engellemek veya dosyaya izin vermek için gösterge ekleme](#add-indicator-to-block-or-allow-a-file).
 
-2. Üst çıtaya gidip Dosyayı Durdur **ve Karantinaya Bırak'ı seçin**.
+2. Üst çubuka gidin ve **Durdur ve Dosyayı Karantinaya Al'ı** seçin.
 
-   :::image type="content" source="images/atp-stop-quarantine-file.png" alt-text="Dosya durdurma ve karantina eylemi" lightbox="images/atp-stop-quarantine-file.png":::
+   :::image type="content" source="images/atp-stop-quarantine-file.png" alt-text="Dosya durdurma ve karantinaya al eylemi" lightbox="images/atp-stop-quarantine-file.png":::
 
-3. Bir neden belirtin, ardından **Onayla'ya seçin**.
+3. Bir neden belirtin, ardından **Onayla'yı** seçin.
 
-   :::image type="content" source="images/atp-stop-quarantine.png" alt-text="Dosyayı durdurma ve karantinaya alın sayfası" lightbox="images/atp-stop-quarantine.png":::
+   :::image type="content" source="images/atp-stop-quarantine.png" alt-text="Durdurma ve karantina dosyası sayfası" lightbox="images/atp-stop-quarantine.png":::
 
-   İşlem merkezi, gönderim bilgilerini gösterir:
+   İşlem merkezi gönderim bilgilerini gösterir:
 
-   :::image type="content" source="images/atp-stopnquarantine-file.png" alt-text="Dosya durdurma ve karantinaya alındı işlem merkezi" lightbox="images/atp-stopnquarantine-file.png":::
+   :::image type="content" source="images/atp-stopnquarantine-file.png" alt-text="Dosya durdurma ve karantinaya al işlem merkezi" lightbox="images/atp-stopnquarantine-file.png":::
 
-   - **Gönderme süresi** - Eylemin ne zaman gönder olduğunu gösterir.
-   - **Başarı** - Dosyanın durdurularak karantinaya alındığı cihaz sayısını gösterir.
+   - **Gönderme zamanı** - Eylemin ne zaman gönderildiğini gösterir.
+   - **Başarılı** - Dosyanın durdurulduğu ve karantinaya alındığı cihaz sayısını gösterir.
    - **Başarısız** - Eylemin başarısız olduğu cihaz sayısını ve hatayla ilgili ayrıntıları gösterir.
-   - **Beklemede** - Dosyanın durdurulma ve karantinaya alındığı cihazların sayısını gösterir. Bu durum, cihazın çevrimdışı olduğu veya ağa bağlı olmadığının durumlar için zaman al götürebilirsiniz.
+   - **Beklemede** - Dosyanın henüz durdurulup karantinaya alınacağı cihaz sayısını gösterir. Bu, cihazın çevrimdışı olduğu veya ağa bağlı olmadığı durumlar için zaman alabilir.
 
-4. Eylem hakkında daha fazla bilgi görüntülemek için durum göstergelerini seçin. Örneğin, eylemin **başarısız olduğu** yeri görmek için Başarısız'ı seçin.
+4. Eylem hakkında daha fazla bilgi görüntülemek için durum göstergelerinden herhangi birini seçin. Örneğin, eylemin nerede başarısız olduğunu görmek için **Başarısız'ı** seçin.
 
-#### <a name="notification-on-device-userf"></a>Cihaz kullanıcı bildirimi
+#### <a name="notification-on-device-userf"></a>Cihaz userf'sinde bildirim
 
-Dosya bir cihazdan kaldırıldığı zaman aşağıdaki bildirim gösterilir:
+Dosya bir cihazdan kaldırıldığında aşağıdaki bildirim gösterilir:
 
-:::image type="content" source="images/atp-notification-file.png" alt-text="Cihazda kullanıcı bildirimi" lightbox="images/atp-notification-file.png":::
+:::image type="content" source="images/atp-notification-file.png" alt-text="Cihaz kullanıcısının a bildirimi" lightbox="images/atp-notification-file.png":::
 
-Cihaz zaman çizelgesinde, dosyanın durdurulmuş ve karantinaya alınmış olduğu her cihaz için yeni bir olay eklenir.
+Cihaz zaman çizelgesinde, bir dosyanın durdurulduğu ve karantinaya alındığı her cihaz için yeni bir olay eklenir.
 
-Kuruluş genelinde yaygın olarak kullanılan dosyalar için eylem uygulanmadan önce bir uyarı gösterilir. Bunun amacı, bu işlemi yapmak olduğunu doğrulamaktır.
+Eylem kuruluş genelinde yaygın olarak kullanılan dosyalar için uygulanmadan önce bir uyarı gösterilir. İşlemin amaçlandığını doğrulamak içindir.
 
-## <a name="restore-file-from-quarantine"></a>Dosyayı karantinadan geri yükleme
+## <a name="restore-file-from-quarantine"></a>Dosyayı karantinadan geri yükleyin
 
-Bir incelemeden sonra temiz olduğunu belirlediysanız, dosyayı geri alın ve karantinadan kaldırabilirsiniz. Dosya karantinaya alınmış her cihazda aşağıdaki komutu çalıştırın.
+Bir araştırmadan sonra temiz olduğunu belirlediyseniz dosyayı geri alabilir ve karantinadan kaldırabilirsiniz. Dosyanın karantinaya alındığı her cihazda aşağıdaki komutu çalıştırın.
 
-1. Cihazda yükseltilmiş komut satırı istemini açın:
+1. Cihazda yükseltilmiş bir komut satırı istemi açın:
 
-   1. **Başlat'a gidin** ve _cmd yazın_.
+   1. **Başlangıç'a** gidin ve _cmd_ yazın.
 
-   1. Komut istemi'ne **sağ tıklayın ve** Yönetici olarak **çalıştır'ı seçin**.
+   1. **Komut istemi'ne** sağ tıklayın ve **Yönetici olarak çalıştır'ı** seçin.
 
-2. Aşağıdaki komutu girin ve Enter tuşuna **basın**:
+2. Aşağıdaki komutu girin ve **Enter tuşuna** basın:
 
    ```dos
    "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
    ```
 
    > [!NOTE]
-   > Bazı senaryolarda **ThreatName** şöyle görünebilir: EUS:Win32/CustomEnterpriseBlock!cl.
+   > Bazı senaryolarda **ThreatName** şu şekilde görünebilir: EUS:Win32/CustomEnterpriseBlock!cl.
    >
-   > Uç Nokta için Defender, son 30 gün içinde bu cihazda karantinaya alınmış olan tüm özel engellenen dosyaları geri yükleyebilir.
+   > Uç Nokta için Defender, son 30 gün içinde bu cihazda karantinaya alınan tüm özel engellenen dosyaları geri yükler.
 
 > [!IMPORTANT]
-> Olası ağ tehditi olarak karantinaya alınmış bir dosya kurtarılamaz olabilir. Kullanıcı karantinadan sonra dosyayı geri yükleme girişiminde olursa, bu dosyaya erişilemez. Bunun nedeni sistemin artık dosyaya erişmek için ağ kimlik bilgilerine sahip olması olabilir. Normalde, bu durum sistem veya paylaşılan klasörde geçici olarak oturum açmanın sonucudur ve erişim belirteçlerinin süresi dolar.
+> Olası bir ağ tehdidi olarak karantinaya alınan bir dosya kurtarılamayabilir. Kullanıcı karantinadan sonra dosyayı geri yüklemeyi denerse, bu dosyaya erişilemiyor olabilir. Bunun nedeni sistemin artık dosyaya erişmek için ağ kimlik bilgilerine sahip olmaması olabilir. Genellikle bu, bir sistemde veya paylaşılan klasörde geçici oturum açmanın ve erişim belirteçlerinin süresinin dolmasının bir sonucudur.
 
-## <a name="download-or-collect-file"></a>Dosya indirme veya toplama
+## <a name="download-or-collect-file"></a>Dosya indirin veya toplayın
 
-Yanıt **eylemlerinden Dosyayı** indir'i seçmek, dosyanızı içeren yerel, parola korumalı bir .zip arşiv indirmenize olanak sağlar. Dosyayı indirme nedeni kaydederek bir parola ayar İlkeyi ayarlayabiliyorsanız, bir çıkış görüntülenir.
+Yanıt eylemlerinden **Dosya indir'i** seçtiğinizde dosyanızı içeren yerel, parola korumalı bir .zip arşivi indirebilirsiniz. Dosyayı indirmek için bir neden kaydedebileceğiniz ve bir parola ayarlayabileceğiniz bir açılır pencere görüntülenir.
 
-Varsayılan olarak, karantinada olan dosyaları indirebilirsiniz.
+Varsayılan olarak, karantinadaki dosyaları indirebilmeniz gerekir.
 
 :::image type="content" source="images/atp-download-file-action.png" alt-text="Dosya indirme eylemi" lightbox="images/atp-download-file-action.png":::
 
-### <a name="download-quarantined-files"></a>Karantinaya alınmış dosyaları indirme
+### <a name="download-quarantined-files"></a>Karantinaya alınan dosyaları indirme
 
-Posta dosyaları veya güvenlik Microsoft Defender Virüsten Koruma tarafından karantinaya alınan dosyalar, örnek gönderim yapılandırmalarına göre [uyumlu bir şekilde kaydedilir](enable-cloud-protection-microsoft-defender-antivirus.md). Güvenlik ekipleri "Dosyayı indir" düğmesi aracılığıyla dosyaları doğrudan dosyanın ayrıntı sayfasından indirebilir. **Bu önizleme özelliği varsayılan olarak 'Açık' durumdadır**.
+Microsoft Defender Virüsten Koruma veya güvenlik ekibiniz tarafından karantinaya alınan dosyalar[, örnek gönderim yapılandırmalarınıza](enable-cloud-protection-microsoft-defender-antivirus.md) göre uyumlu bir şekilde kaydedilir. Güvenlik ekibiniz dosyaları doğrudan dosyanın ayrıntı sayfasından "Dosyayı indir" düğmesi aracılığıyla indirebilir. **Bu önizleme özelliği varsayılan olarak 'Açık'tır**.
 
-Konum, kuruluş ayarlarına (AB, İngiltere veya ABD) bağlıdır. Karantinaya alınmış bir dosya, kuruluş başına yalnızca bir kez toplanır. Hizmet Güveni Portalı'nda Microsoft'un veri koruması hakkında daha fazla bilgi edinmek için:https://aka.ms/STP
+Konum, kuruluşunuzun coğrafi ayarlarına (AB, Birleşik Krallık veya ABD) bağlıdır. Karantinaya alınan bir dosya kuruluş başına yalnızca bir kez toplanır. Hizmet Güveni Portalı'ndan https://aka.ms/STPMicrosoft'un veri koruması hakkında daha fazla bilgi edinin.
 
-Bu ayarın açık olması, güvenlik ekiplerinin kötü olabilecek dosyaları incelemelerine ve olayları daha hızlı ve daha az riskli bir yolla incelemelerine yardımcı olabilir. Bununla birlikte, bu ayarı  kapatmanız gerekirse, Gelişmiş Uç **Noktalar** \>  \> \> Ayarlar Karantinaya alınmış dosyaları **indir'e** gidip ayarı ayarlayın. [Gelişmiş özellikler hakkında daha fazla bilgi](advanced-features.md)
+Bu ayarın açık olması, güvenlik ekiplerinin kötü olabilecek dosyaları incelemesine ve olayları hızlı ve daha az riskli bir şekilde araştırmalarına yardımcı olabilir. Ancak, bu ayarı kapatmanız gerekiyorsa, ayarı ayarlamak için **Ayarlar** \> **Uç Noktalar** \> **Gelişmiş özellikler** \> **Karantinaya alınan dosyaları indir'e** gidin. [Gelişmiş özellikler hakkında daha fazla bilgi edinin](advanced-features.md)
 
-#### <a name="backing-up-quarantined-files"></a>Karantinaya alınmış dosyaları geri yükleme
+#### <a name="backing-up-quarantined-files"></a>Karantinaya alınan dosyaları yedekleme
 
-Örnek gönderim yapılandırmanıza bağlı olarak, kullanıcılardan karantinaya alınmış dosyayı geri yüklemeden önce açık bir izin [sağlamaları istenebilirsiniz](enable-cloud-protection-microsoft-defender-antivirus.md#use-group-policy-to-turn-on-cloud-protection).
+[Örnek gönderim yapılandırmanıza](enable-cloud-protection-microsoft-defender-antivirus.md#use-group-policy-to-turn-on-cloud-protection) bağlı olarak, karantinaya alınan dosyayı yedeklemeden önce kullanıcılardan açık onay vermeleri istenebilir.
 
-Örnek gönderme kapalı ise bu özellik çalışmaz. Otomatik örnek gönderimi kullanıcıdan izin istenecek şekilde ayarlanırsa, yalnızca kullanıcının göndermeyi kabulladığı örnekler toplanır.
+Örnek gönderim kapatılırsa bu özellik çalışmaz. Otomatik örnek gönderimi kullanıcıdan izin istemek üzere ayarlanırsa, yalnızca kullanıcının göndermeyi kabulladığı örnekler toplanır.
 
 > [!IMPORTANT]
-> Karantinaya alınmış dosya gereksinimlerini karşıdan yükleme:
+> Karantinaya alınan dosya gereksinimlerini indirin:
 >
-> - Organizasyonun etkin Microsoft Defender Virüsten Koruma kullanıcı kullanıyor
-> - Virüsten koruma altyapısı sürümü 1.1.17300.4 veya sonraki bir sürümdür. Aylık [platform ve altyapı sürümlerine bakın](manage-updates-baselines-microsoft-defender-antivirus.md#monthly-platform-and-engine-versions)
-> - Bulut tabanlı koruma etkinleştirilir. Bkz [. Buluta teslim edilen korumayı açma](enable-cloud-protection-microsoft-defender-antivirus.md)
-> - Örnek gönderme açık
-> - Cihazlar, Windows 10 1703 veya sonraki bir sürümü, Windows server 2016 veya 2019 ya da Windows Server 2022 veya Windows 11
+> - Kuruluşunuz etkin modda Microsoft Defender Virüsten Koruma kullanıyor
+> - Virüsten koruma altyapısı sürümü 1.1.17300.4 veya üzeridir. [Bkz. Aylık platform ve altyapı sürümleri](manage-updates-baselines-microsoft-defender-antivirus.md#monthly-platform-and-engine-versions)
+> - Bulut tabanlı koruma etkindir. Bkz [. Bulut tabanlı korumayı açma](enable-cloud-protection-microsoft-defender-antivirus.md)
+> - Örnek gönderim açık
+> - Cihazların Windows 10 sürümü 1703 veya üzeri ya da Windows server 2016 veya 2019 ya da Windows Server 2022 veya Windows 11
 
 ### <a name="collect-files"></a>Dosyaları toplama
 
-Dosya henüz bir Uç Nokta için Microsoft Defender depolanıyorsa, indiresiniz. Bunun yerine, aynı konumda **Bir Dosya topla** düğmesi görüyoruz. Son 30 gün içinde kuruluşta hiç dosya görülmemişse, Dosya **topla devre dışı** bırakılır.
+Bir dosya Uç Nokta için Microsoft Defender tarafından depolanmadıysa, dosyayı indiremezsiniz. Bunun yerine, aynı konumda bir **Dosya topla** düğmesi görürsünüz. Son 30 gün içinde kuruluşta bir dosya görülmediyse, **Dosya topla** seçeneği devre dışı bırakılır.
 > [!Important]
-> Olası ağ tehditi olarak karantinaya alınmış bir dosya kurtarılamaz olabilir. Kullanıcı karantinadan sonra dosyayı geri yükleme girişiminde olursa, bu dosyaya erişilemez. Bunun nedeni sistemin artık dosyaya erişmek için ağ kimlik bilgilerine sahip olması olabilir. Normalde, bu durum sistem veya paylaşılan klasörde geçici olarak oturum açmanın sonucudur ve erişim belirteçlerinin süresi dolar.
+> Olası bir ağ tehdidi olarak karantinaya alınan bir dosya kurtarılamayabilir. Kullanıcı karantinadan sonra dosyayı geri yüklemeyi denerse, bu dosyaya erişilemiyor olabilir. Bunun nedeni sistemin artık dosyaya erişmek için ağ kimlik bilgilerine sahip olmaması olabilir. Genellikle bu, bir sistemde veya paylaşılan klasörde geçici oturum açmanın ve erişim belirteçlerinin süresinin dolmasının bir sonucudur.
 
-## <a name="add-indicator-to-block-or-allow-a-file"></a>Dosyayı engellemek veya dosyaya izin vermek için gösterge ekleme
+## <a name="add-indicator-to-block-or-allow-a-file"></a>Bir dosyayı engellemek veya dosyaya izin vermek için gösterge ekleme
 
-Olası kötü amaçlı dosyaları veya kötü amaçlı yazılımdan şüpheleniyorlar tarafından engellenebilir ve saldırının organizasyona daha fazla yayılmasını önle. Kötü amaçlı olabilecek bir taşınabilir yürütülebilir (PE) dosyası biliyorsanız, dosyayı engelleyebilirsiniz. Bu işlem, okunmalarını, yazıldıklarını veya organizasyonlar üzerinde yürütüleceklerini önler.
+Kötü amaçlı olabilecek dosyaları veya şüpheli kötü amaçlı yazılımları yasaklayarak kuruluşunuzda bir saldırının daha fazla yayılmasını önleyin. Kötü amaçlı olabilecek bir taşınabilir yürütülebilir dosya (PE) biliyorsanız, dosyayı engelleyebilirsiniz. Bu işlem, kuruluşunuzdaki cihazlarda okunmasını, yazılmasını veya yürütülmesini engeller.
 
 > [!IMPORTANT]
 >
-> - Bu özellik, bulut teslimi korumasının Microsoft Defender Virüsten Koruma tarafından etkinleştirildiğinde kullanılabilir. Daha fazla bilgi için bkz [. Bulut teslimi korumasını yönetme](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
+> - Kuruluşunuz Microsoft Defender Virüsten Koruma kullanıyorsa ve Bulut tabanlı koruma etkinleştirildiyse bu özellik kullanılabilir. Daha fazla bilgi için bkz. [Bulut tabanlı korumayı yönetme](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
 >
-> - Kötü amaçlı yazılımdan koruma istemci sürümü 4.18.1901.x veya sonraki bir sürümde olabilir.
-> - Bu özellik kötü amaçlı yazılımdan (veya kötü amaçlı olabilecek dosyalardan) şüphelenilen dosyaların Web'den indirilmalarını önlemek için tasarlanmıştır. Şu anda dosya dosyaları ve yürütülebilir dosyalar da dahil olmak üzere taşınabilir _yürütülebilir (PE_ ) _.exe.dll_ destekler. Kapsam zaman içinde uzatılacaktır.
-> - Bu yanıt eylemi 1703 Windows 10 sonraki sürümler ve sonraki sürümler için Windows 11.
-> - İzin verme veya engelleme eylemi öncesinde dosyanın sınıflandırması cihazın önbelleği üzerinde bulunuyorsa, izin ver veya engelle işlevi dosyalar üzerinde yapılamaz.
+> - Kötü amaçlı yazılımdan koruma istemcisi sürümü 4.18.1901.x veya üzeri olmalıdır.
+> - Bu özellik, şüpheli kötü amaçlı yazılımların (veya kötü amaçlı olabilecek dosyaların) web'den indirilmesini önlemek için tasarlanmıştır. Şu anda _.exeve.dll_ dosyaları da dahil olmak üzere taşınabilir yürütülebilir (PE) __ dosyaları destekler. Kapsam zaman içinde uzatılır.
+> - Bu yanıt eylemi Windows 10, sürüm 1703 veya üzeri ve Windows 11 cihazlarda kullanılabilir.
+> - İzin ver veya engelle eyleminden önce cihazın önbelleğinde dosya sınıflandırması varsa, izin ver veya engelle işlevi dosyalarda yapılamaz.
 
 > [!NOTE]
-> Bu eylemi benim için PE dosyasının cihaz zaman çizelgesinde olması gerekir.
+> Bu eylemi gerçekleştirebilmek için PE dosyasının cihaz zaman çizelgesinde olması gerekir.
 >
-> Eylemin gerçek dosyayla alınması arasında birkaç dakika gecikme süresi olabilir.
+> Eylemin gerçekleştirilişiyle gerçek dosyanın engellenmesi arasında birkaç dakika gecikme olabilir.
 
-### <a name="enable-the-block-file-feature"></a>Dosyayı engelleme özelliğini etkinleştirme
+### <a name="enable-the-block-file-feature"></a>Blok dosyası özelliğini etkinleştirme
 
-Dosyaları engellemeye başlamak için önce Dosya [bloğunda Engelle **veya izin** ver özelliğini Ayarlar](advanced-features.md).
+Dosyaları engellemeye başlamak için önce Ayarlar'de [**Engelle veya izin ver** özelliğini açmanız](advanced-features.md) gerekir.
 
-### <a name="allow-or-block-file"></a>Dosyaya izin verme veya dosyayı engelleme
+### <a name="allow-or-block-file"></a>Dosyaya izin ver veya dosyayı engelle
 
-Dosya için bir gösterge karması eklerken, bir uyarı bırakmayı ve kuruluşta bir cihaz bu karmayı çalıştırmayı her çalıştırsa dosyayı engellemeyi seçebilirsiniz.
+Bir dosya için gösterge karması eklediğinizde, kuruluşunuzdaki bir cihaz çalıştırmayı denediğinde uyarı oluşturmayı ve dosyayı engellemeyi seçebilirsiniz.
 
-Otomatik olarak bir gösterge tarafından engellenen dosyalar dosyanın İşlem merkezinde görünmez, ancak uyarılar Uyarılar sırasında görünmeye devam eder.
+Bir gösterge tarafından otomatik olarak engellenen dosyalar dosyanın İşlem merkezinde gösterilmez, ancak uyarılar Uyarılar kuyruğunda görünmeye devam eder.
 
-[Dosyalarda uyarı engelleme ve](manage-indicators.md) yükseltmeyle ilgili daha fazla ayrıntı için göstergeleri yönetme'ye bakın.
+Dosyalarda uyarıları engelleme ve tetikleme hakkında daha fazla bilgi için [bkz. göstergeleri yönetme](manage-indicators.md) .
 
-Dosyanın engellenmesini durdurmak için göstergeyi kaldırın. Bunu, dosyanın **profil sayfasındaki** Göstergeyi Düzenle eylemiyle de yapabiliriz. Bu eylem, göstergeyi eklemeden önce **Gösterge** Ekle eylemiyle aynı konumda görünür.
+Bir dosyayı engellemeyi durdurmak için göstergeyi kaldırın. Bunu, dosyanın profil sayfasındaki **Göstergeyi Düzenle** eylemi aracılığıyla yapabilirsiniz. Bu eylem, göstergeyi eklemeden önce **Gösterge Ekle** eylemiyle aynı konumda görünür.
 
-Ayrıca, Yeni Sayfa sayfasındaki Kurallar **Ayarlar** **göstergelerini düzenleyebilirsiniz**\>. Göstergeler bu alanda dosyanın karma değerine göre listelenir.
+Ayrıca, **Ayarlar sayfasından, Kural** \> **Göstergeleri'nin** altında göstergeleri düzenleyebilirsiniz. Göstergeler bu alanda dosya karması tarafından listelenir.
 
 ## <a name="consult-a-threat-expert"></a>Tehdit uzmanına danışın
 
-Güvenliği tehlikeye atılmış olabilecek cihazlar veya zaten güvenliği tehlikeye atılmış cihazlar hakkında daha fazla bilgi için Bir Microsoft tehdit uzmanına danışın. Microsoft Tehdit Uzmanları ve doğru yanıt için Microsoft 365 Defender portalında doğrudan meşgul olur. Uzmanlar güvenliği tehlikeye atabilecek bir cihaz hakkında içgörüler sağlar ve karmaşık tehditleri ve hedefli saldırı bildirimlerini anlamanıza yardımcı olur. Ayrıca, portal panoda gördüğünüz uyarılar veya tehdit İstihbaratı bağlamı hakkında da bilgi sağlayabilecektir.
+Güvenliği aşılmış olabilecek bir cihaz veya güvenliği aşılmış cihazlar hakkında daha fazla içgörü için bir Microsoft tehdit uzmanına başvurun. Microsoft Tehdit Uzmanları, zamanında ve doğru yanıt için doğrudan Microsoft 365 Defender portalından devreye girer. Uzmanlar, tehlikeye girmiş olabilecek bir cihaz hakkında içgörüler sağlar ve karmaşık tehditleri ve hedeflenen saldırı bildirimlerini anlamanıza yardımcı olur. Ayrıca, portal panonuzda gördüğünüz uyarılar veya tehdit bilgileri bağlamı hakkında bilgi de sağlayabilirler.
 
-Ayrıntılar [için Bkz. Microsoft Tehdit Uzmanına](/microsoft-365/security/defender-endpoint/configure-microsoft-threat-experts#consult-a-microsoft-threat-expert-about-suspicious-cybersecurity-activities-in-your-organization) Danışma.
+Ayrıntılar için bkz. [Microsoft Tehdit Uzmanına Başvurun](/microsoft-365/security/defender-endpoint/configure-microsoft-threat-experts#consult-a-microsoft-threat-expert-about-suspicious-cybersecurity-activities-in-your-organization) .
 
-## <a name="check-activity-details-in-action-center"></a>İşlem merkezinde etkinlik ayrıntılarını denetleme
+## <a name="check-activity-details-in-action-center"></a>İşlem merkezinde etkinlik ayrıntılarını denetleyin
 
-İşlem **merkezi** , bir cihaz veya dosya üzerinde yapılan işlemlerle ilgili bilgi sağlar. Aşağıdaki ayrıntıları görüntüebilirsiniz:
+**İşlem merkezi**, bir cihazda veya dosyada gerçekleştirilen eylemler hakkında bilgi sağlar. Aşağıdaki ayrıntıları görüntüleyebilirsiniz:
 
 - Araştırma paketi koleksiyonu
 - Virüsten koruma taraması
 - Uygulama kısıtlaması
-- Cihaz yalıtlığı
+- Cihaz yalıtımı
 
-Gönderme tarihi/saati, gönderilen kullanıcı ve eylem başarılı olursa ya da başarısız olursa diğer tüm ilgili ayrıntılar da gösterilir.
+Gönderme tarihi/saati, kullanıcıyı gönderme ve eylemin başarılı veya başarısız olup olmadığını gibi diğer tüm ilgili ayrıntılar da gösterilir.
 
-:::image type="content" source="images/action-center-details.png" alt-text="Bilgili işlem merkezi" lightbox="images/action-center-details.png":::
+:::image type="content" source="images/action-center-details.png" alt-text="Bilgi içeren işlem merkezi" lightbox="images/action-center-details.png":::
 
-## <a name="deep-analysis"></a>Derin çözümleme
+## <a name="deep-analysis"></a>Derinanaliz
 
-Siber güvenlik soruşturmaları normalde bir uyarı tarafından tetiklenir. Uyarılar çoğunlukla yeni veya bilinmeyen gözlenen bir veya birden çok dosyayla ilgilidir. Dosya seçerek, dosyanın meta verilerini görüntülebilirsiniz. Dosyayla ilgili verileri zenginleştirmek için, dosyayı derinlemesine çözümlemek için gönderebilirsiniz.
+Siber güvenlik araştırmaları genellikle bir uyarı tarafından tetiklenir. Uyarılar, genellikle yeni veya bilinmeyen bir veya daha fazla gözlemlenen dosyayla ilgilidir. Bir dosyayı seçtiğinizde dosyanın meta verilerini görebileceğiniz dosya görünümüne gidebilirsiniz. Dosyayla ilgili verileri zenginleştirmek için dosyayı ayrıntılı analiz için gönderebilirsiniz.
 
-Derin çözümleme özelliği, dosyayı güvenli, tam araçlı bir bulut ortamında yürütür. Derin çözümleme sonuçları, dosyanın etkinliklerini, gözlemlenen davranışları ve bırakılan dosyalar, kayıt defteri değişiklikleri ve IP'lerle iletişim gibi ilişkili yapıları gösterir.
-Derin çözümleme şu anda taşınabilir yürütülebilir (PE) dosyalarının (yürütülebilir dosya ve dosya _.exe_ ) kapsamlı _.dll_ desteklemektedir.
+Derin analiz özelliği, güvenli, tam olarak izlenen bir bulut ortamında bir dosya yürütür. Derin analiz sonuçları dosyanın etkinliklerini, gözlemlenen davranışlarını ve bırakılan dosyalar, kayıt defteri değişiklikleri ve IP'lerle iletişim gibi ilişkili yapıtları gösterir.
+Derin analiz şu anda taşınabilir yürütülebilir (PE) dosyaların ( _.exe_ ve _.dll_ dosyaları dahil) kapsamlı analizini destekler.
 
-Dosyanın derin çözümlemesi birkaç dakika sürer. Dosya çözümlemesi tamamlandıktan sonra Derin Çözümleme sekmesi, eldeki en son sonuçların özetini ve tarih ve saati görüntüleyebilirsiniz.
+Bir dosyanın derin analizi birkaç dakika sürer. Dosya analizi tamamlandıktan sonra, Derin Çözümleme sekmesi bir özet ve kullanılabilir en son sonuçların tarih ve saatini görüntüleyecek şekilde güncelleştirilir.
 
-Derin çözümleme özeti, bazıları kötü amaçlı etkinlikleri ve diskte oluşturulan iletişimlenmiş IP'ler ve dosyalar da dahil olmak üzere gözlenen davranışların listesini içerir. Hiçbir şey bulunamazsa, bu bölümlerde kısa bir ileti görüntülenir.
+Derin analiz özeti, gözlemlenen *davranışların* bir listesini içerir ve bazıları kötü amaçlı etkinlikleri ve diskte oluşturulan ilgili IP'ler ve dosyalar da dahil olmak üzere *gözlemlenebilirleri* gösterebilir. Hiçbir şey bulunamazsa, bu bölümlerde kısa bir ileti görüntülenir.
 
-Derin çözümleme sonuçları tehdit zekası ile eştir ve tüm eşleşmeler uygun uyarılar üretir.
+Derin analizin sonuçları tehdit bilgileriyle eşleştirilir ve tüm eşleşmeler uygun uyarılar oluşturur.
 
-Herhangi bir dosyanın ayrıntılarını, genellikle bir uyarının araştırılması sırasında veya kötü amaçlı davranış şüphesi olan başka bir nedenle araştırmak için derin çözümleme özelliğini kullanın. Bu özellik, derin **çözümleme** sekmesinde, dosyanın profil sayfasında yer alan kullanılabilir.
+Genellikle bir uyarı araştırması sırasında veya kötü amaçlı davranışlardan şüphelendiğiniz başka herhangi bir nedenle herhangi bir dosyanın ayrıntılarını araştırmak için derin analiz özelliğini kullanın. Bu özellik, dosyanın profil sayfasındaki **Derin analiz** sekmesinde bulunur.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4aAYy?rel=0]
 
-**Derin çözümleme için** gönder, dosya Uç Nokta arka uç örnek koleksiyonunda dosya kullanılabilir durumda olduğunda veya bu dosya derinlemesine çözümlemeye göndermeyi destekleyen bir Windows 10 cihazda gözlemlendiyse etkinleştirilir.
+Dosya Uç Nokta için Defender arka uç örnek koleksiyonunda kullanılabilir olduğunda veya **derin analize** göndermeyi destekleyen bir Windows 10 cihazında gözlemlendiğinde derin analiz için gönder seçeneği etkinleştirilir.
 
 > [!NOTE]
-> Yalnızca posta Windows 10 Windows 11 dosyalar otomatik olarak toplanabilir.
+> Yalnızca Windows 10 ve Windows 11 dosyaları otomatik olarak toplanabilir.
 
-Dosya bir Windows 10 cihazında (veya Windows 11) gözlemlenmedi ise ve daha derin çözümleme düğmesinin kullanılabilir olması için Gönder düğmesinin kullanılabilir olması için Microsoft 365 Defender [Portalı](https://www.microsoft.com/security/portal/submission/submit.aspx) üzerinden bir örnek de gönderebilirsiniz.
+Ayrıca, dosya Windows 10 cihazda (veya Windows 11) gözlemlenmediyse Microsoft 365 Defender [Portalı](https://www.microsoft.com/security/portal/submission/submit.aspx) üzerinden bir örnek gönderebilir ve **Derin analiz** düğmesinin kullanılabilir duruma gelmesini bekleyebilirsiniz.
 
 > [!NOTE]
-> Microsoft 365 Defender Portal'daki arka uç işleme akışları nedeniyle, dosya gönderimi ve Uç Nokta için Defender'daki derin çözümleme özelliğinin kullanılabilirliği arasında 10 dakikaya kadar gecikme olabilir.
+> Microsoft 365 Defender Portalı'ndaki arka uç işleme akışları nedeniyle, dosya gönderimi ile Uç Nokta için Defender'daki derin analiz özelliğinin kullanılabilirliği arasında 10 dakikaya kadar gecikme süresi olabilir.
 
-### <a name="submit-files-for-deep-analysis"></a>Daha derin çözümleme yapmak için dosyaları gönderme
+### <a name="submit-files-for-deep-analysis"></a>Ayrıntılı analiz için dosya gönderme
 
-1. Derin çözümleme yapmak için göndermek istediğiniz dosyayı seçin. Aşağıdaki görünümlerin herhangi birini seçerek veya bu dosyada arama yapabilirsiniz:
+1. Ayrıntılı analiz için göndermek istediğiniz dosyayı seçin. Aşağıdaki görünümlerden herhangi birinden dosya seçebilir veya dosyada arama yapabilirsiniz:
 
-    - **Uyarılar** - Uyarı Hikaye zaman çizelgesinde **Açıklama'dan** **veya Ayrıntılar'dan** dosya bağlantılarını seçin
-    - **Cihazlar listesi** - Kuruluşta cihaz bölümündeki **Açıklama** **veya Ayrıntılar** **bölümünden dosya bağlantılarını** seçin
-    - **Arama kutusu** - **açılan** menüden Dosya'ı seçin ve dosya adını girin
+    - **Uyarılar** - Uyarı Hikayesi zaman çizelgesindeki **Açıklama** veya **Ayrıntılar'dan** dosya bağlantılarını seçin
+    - **Cihazlar listesi** - **Kuruluştaki cihaz** bölümündeki **Açıklama** veya **Ayrıntılar** bölümünden dosya bağlantılarını seçin
+    - **Arama kutusu** - Açılan menüden **Dosya'yı** seçin ve dosya adını girin
 
-2. Dosya **görünümünün Derin** çözümleme sekmesinde Gönder'i **seçin**.
+2. Dosya görünümünün **Derin analiz** sekmesinde **Gönder'i** seçin.
 
    :::image type="content" source="images/submit-file.png" alt-text="PE dosyalarını gönder düğmesi" lightbox="images/submit-file.png":::
 
    > [!NOTE]
-   > DOSYA VE TİPİ dosyaları da _dahil olmak.exe_ _PE.dll_ destekler.
+   > _.exeve.dll_ dosyaları da dahil olmak üzere yalnızca PE dosyaları desteklenir __.
 
-   İlerleme çubuğu görüntülenir ve çözümlemenin farklı aşamaları hakkında bilgi sağlar. Çözümleme bittiğinde raporu görüntüebilirsiniz.
+   bir ilerleme çubuğu görüntülenir ve analizin farklı aşamaları hakkında bilgi sağlar. Daha sonra analiz tamamlandığında raporu görüntüleyebilirsiniz.
 
 > [!NOTE]
-> Cihazın kullanılabilirlik durumuna bağlı olarak, örnek toplama süresi değişiklik gösterebilir. Örnek koleksiyon için 3 saatlik bir zaman aşımı vardır. Koleksiyon başarısız olur ve bu sırada çevrimiçi bir cihaz (veya Windows 11) raporlaması yoksa Windows 10 durdurulacak. Dosya hakkında en yeni verileri elde etmek için, daha derin çözümlemeler yapmak için dosyaları yeniden gönderebilirsiniz.
+> Cihaz kullanılabilirliğine bağlı olarak örnek toplama süresi farklılık gösterebilir. Örnek toplama için 3 saatlik bir zaman aşımı vardır. Koleksiyon başarısız olur ve o anda çevrimiçi Windows 10 cihaz (veya Windows 11) raporlaması yoksa işlem durdurulacaktır. Dosyadaki yeni verileri almak için dosyaları derin analiz için yeniden gönderebilirsiniz.
 
-### <a name="view-deep-analysis-reports"></a>Derin çözümleme raporlarını görüntüleme
+### <a name="view-deep-analysis-reports"></a>Derin analiz raporlarını görüntüleme
 
-Gönderilen dosya hakkında daha ayrıntılı içgörüler görmek için, sağlanan ayrıntılı çözümleme raporunu görüntüye alın. Bu özellik, dosya görünümü bağlamında kullanılabilir.
+Gönderdiğiniz dosya hakkında daha ayrıntılı içgörüler görmek için sağlanan ayrıntılı analiz raporunu görüntüleyin. Bu özellik dosya görünümü bağlamında kullanılabilir.
 
-Aşağıdaki bölümlerde ayrıntılar sağlayan kapsamlı raporu görüntüebilirsiniz:
+Aşağıdaki bölümlerde ayrıntıları sağlayan kapsamlı raporu görüntüleyebilirsiniz:
 
-- Davranışlar
-- Gözlenebilirler
+- Davranış
+- Gözlemlenebilir öğeler
 
-Verilen ayrıntılar olası bir saldırının göstergesi varsa araştırmanıza yardımcı olabilir.
+Sağlanan ayrıntılar olası bir saldırının göstergesi olup olmadığını araştırmanıza yardımcı olabilir.
 
-1. Daha derin çözümleme yapmak için dosyayı seçin.
-2. Derin çözümleme **sekmesini** seçin. Daha önce rapor varsa, rapor özeti bu sekmede görüntülenir.
+1. Ayrıntılı analiz için gönderdiğiniz dosyayı seçin.
+2. **Derin analiz** sekmesini seçin. Önceki raporlar varsa, rapor özeti bu sekmede görünür.
 
-   :::image type="content" source="images/analysis-results-nothing500.png" alt-text="Bir dizi kategori arasında ayrıntılı bilgi gösteren ayrıntılı çözümleme raporu" lightbox="images/analysis-results-nothing500.png":::
+   :::image type="content" source="images/analysis-results-nothing500.png" alt-text="Bir dizi kategorideki ayrıntılı bilgileri gösteren derin analiz raporu" lightbox="images/analysis-results-nothing500.png":::
 
-#### <a name="troubleshoot-deep-analysis"></a>Derin çözümleme sorunlarını giderme
+#### <a name="troubleshoot-deep-analysis"></a>Derin analiz sorunlarını giderme
 
-Dosya göndermek için çalışırken bir sorun oluşursa, aşağıdaki sorun giderme adımlarının her birini deneyin.
+Dosya göndermeye çalışırken bir sorunla karşılaşırsanız aşağıdaki sorun giderme adımlarının her birini deneyin.
 
-1. Söz konusu dosyanın PE dosyası olduğundan emin olun. PE dosyaları genellikle _yürütülebilir.exe_ ya _da.dll_ (yürütülebilir programlar veya uygulamalar) içerir.
+1. Söz konusu dosyanın bir PE dosyası olduğundan emin olun. PE dosyaları genellikle _.exe_ veya _.dll_ uzantılarına (yürütülebilir programlar veya uygulamalar) sahiptir.
 
-2. Hizmetin dosyaya erişimi olduğundan, dosyanın hala var olduğundan ve hiç bozuk veya değiştirilmemiş olduğundan emin olun.
+2. Hizmetin dosyaya erişimi olduğundan, dosyanın hala var olduğundan ve bozulmadığından veya değiştirilmediğinden emin olun.
 
-3. Kısa bir süre bekleyin ve dosyayı yeniden göndermeyi deneyin. Kuyruk dolu olabilir veya geçici bir bağlantı veya iletişim hatası olabilir.
+3. Kısa bir süre bekleyin ve dosyayı yeniden göndermeyi deneyin. Kuyruk dolu olabilir veya geçici bir bağlantı veya iletişim hatası oluştu.
 
-4. Örnek koleksiyon ilkesi yapılandırılmamışsa, varsayılan davranış örnek koleksiyona izin vermektir. Yapılandırılmışsa, dosyayı yeniden göndermeden önce örnek toplamaya izin veren ilke ayarının doğrula. Örnek koleksiyon yapılandırıldığında, aşağıdaki kayıt defteri değerini kontrol edin:
+4. Örnek koleksiyon ilkesi yapılandırılmamışsa, varsayılan davranış örnek toplamaya izin vermektir. Yapılandırılmışsa, dosyayı yeniden göndermeden önce ilke ayarının örnek toplamaya izin verdiğinden emin olun. Örnek koleksiyon yapılandırıldığında aşağıdaki kayıt defteri değerini denetleyin:
 
     ```text
     Path: HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
@@ -315,12 +315,12 @@ Dosya göndermek için çalışırken bir sorun oluşursa, aşağıdaki sorun gi
       Value = 1 - allow sample collection
     ```
 
-5. Kuruluş birimini farklı bir grup ilkesi. Daha fazla bilgi için bkz[. Grup ilkesi](configure-endpoints-gp.md).
+5. grup ilkesi aracılığıyla kuruluş birimini değiştirin. Daha fazla bilgi için bkz[. grup ilkesi ile yapılandırma](configure-endpoints-gp.md).
 
-6. Bu adımlar sorunu çözmezse, destan ile iletişime geçin.
+6. Bu adımlar sorunu çözmezse desteğe başvurun.
 
 ## <a name="related-topics"></a>İlgili konular
 
 - [Cihazda yanıt eylemleri gerçekleştirin](respond-machine-alerts.md)
-- [Dosyaları araştırma](investigate-files.md)
-- [Plan 1'de Uç Nokta için Microsoft Defender eylemleri](defender-endpoint-plan-1.md#manual-response-actions)
+- [Dosyaları araştırın](investigate-files.md)
+- [Uç Nokta için Microsoft Defender Plan 1'de el ile yanıt eylemleri](defender-endpoint-plan-1.md#manual-response-actions)

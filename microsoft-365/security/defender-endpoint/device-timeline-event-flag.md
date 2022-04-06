@@ -1,6 +1,6 @@
 ---
-title: Uç nokta cihaz zaman çizelgesi olay bayrakları için Microsoft Defender
-description: Uç nokta cihaz zaman çizelgesi olay bayrakları için Microsoft Defender'ı kullanma
+title: Uç Nokta için Microsoft Defender zaman çizelgesi olay bayraklarını ekleme
+description: Cihaz Uç Nokta için Microsoft Defender çizelgesi olay bayraklarını kullanarak
 keywords: Uç nokta cihaz zaman çizelgesi için Defender, olay bayrakları
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -14,20 +14,20 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: e6661a03043095ed2ae1ece194179d26476a703f
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: 44292893249872c1c4b8dc3b4f66d10085fb0a2b
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63014064"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471197"
 ---
-# <a name="microsoft-defender-for-endpoint-device-timeline-event-flags"></a>Uç nokta cihaz zaman çizelgesi olay bayrakları için Microsoft Defender
+# <a name="microsoft-defender-for-endpoint-device-timeline-event-flags"></a>Uç Nokta için Microsoft Defender zaman çizelgesi olay bayraklarını ekleme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
@@ -47,23 +47,16 @@ Cihaz zaman çizelgesinde gezinirken belirli olayları arayabilir ve filtre gör
 ## <a name="flag-an-event"></a>Etkinliğe bayrak uygulama
 
 1. Bayrakla bayrakla görmek istediğiniz olayı bulma
-2. Bayrak sütununda bayrak simgesine tıklayın.
 
-   ![Cihaz zaman çizelgesi bayrağının resmi.](images/device-flags.png)
+2. Bayrak sütununda bayrak simgesine tıklayın. 
 
-3. Bayrak sütununda bayrak simgesine tıklayın.
-
-   ![Cihaz zaman çizelgesi bayrağının resmi](images/device-flags.png)
+:::image type="content" source="images/device-flags.png" alt-text="Cihaz zaman çizelgesi bayrağı" lightbox="images/device-flags.png":::
 
 ## <a name="view-flagged-events"></a>Bayraklı etkinlikleri görüntüleme
 
 1. Zaman çizelgesi Filtreleri **bölümünde** Bayraklı **olayları etkinleştirin**.
 2. **Uygula**'ya tıklayın. Yalnızca bayraklı olaylar görüntülenir.
 
-   Saat çubuğuna tıklayarak ek filtreler uygulayabilirsiniz. Bu yalnızca bayraklı etkinlik öncesi olayları gösterir.  
+Saat çubuğuna tıklayarak ek filtreler uygulayabilirsiniz. Bu yalnızca bayraklı etkinlik öncesi olayları gösterir.  
 
-   ![Filtrenin uygulanmış olduğu cihaz zaman çizelgesi bayrağının görüntüsü.](images/device-flag-filter.png)
-
-3. **Uygula**'ya tıklayın. Yalnızca bayraklı olaylar görüntülenir. Saat çubuğuna tıklayarak ek filtreler uygulayabilirsiniz. Bu yalnızca bayraklı etkinlik öncesi olayları gösterir.
-
-   ![Filtre uygulanmış cihaz zaman çizelgesi bayrağının resmi](images/device-flag-filter.png)
+:::image type="content" source="images/device-flag-filter.png" alt-text="Filtrenin açık olduğu cihaz zaman çizelgesi bayrağı" lightbox="images/device-flag-filter.png":::

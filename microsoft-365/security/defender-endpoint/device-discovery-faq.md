@@ -1,7 +1,7 @@
 ---
-title: Cihaz bulma ile ilgili sık sorulan sorular
+title: Cihaz bulma hakkında sık sorulan sorular
 description: Cihaz bulma hakkında sık sorulan soruların (SSS) yanıtlarını bulma
-keywords: cihaz bulma, keşif, pasif, proaktif, ağ, görünürlük, sunucu, iş istasyonu, ekleme, yönetimi olmayan cihazlar
+keywords: cihaz bulma, bulma, pasif, proaktif, ağ, görünürlük, sunucu, iş istasyonu, ekleme, yönetilmeyen cihazlar
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,19 +16,19 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 530846d4a7c18900f0697806bb656aa653b71947
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 54a1b816f3d1322cab5558e5bd09d5d9b4285ae8
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63326181"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64665018"
 ---
-# <a name="device-discovery-frequently-asked-questions"></a>Cihaz bulma ile ilgili sık sorulan sorular
+# <a name="device-discovery-frequently-asked-questions"></a>Cihaz bulma hakkında sık sorulan sorular
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- - [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
@@ -37,103 +37,103 @@ Cihaz bulma hakkında sık sorulan soruların (SSS) yanıtlarını bulun.
 
 ## <a name="what-is-basic-discovery-mode"></a>Temel bulma modu nedir?
 
-Bu mod, uç nokta için her Microsoft Defender ekli cihazın ağ verilerini toplamasını ve komşu cihazları keşfetmesini sağlar. Yerleşik uç noktalar pasif olarak ağ üzerindeki olayları toplar ve onlardan cihaz bilgilerini ayıklar. Hiçbir ağ trafiği başlatılacaktır. Onboarded endpoints will simply extract data from every network traffic that is seen by an onboarded device. Bu veriler, ağ bağlantısı olmayan cihazları listelerken kullanılır.
+Bu mod, eklenen her Uç Nokta için Microsoft Defender cihazın ağ verilerini toplamasına ve komşu cihazları bulmasına olanak tanır. Eklenen uç noktalar, ağdaki olayları pasif olarak toplar ve onlardan cihaz bilgilerini ayıklar. Ağ trafiği başlatılmaz. Eklenen uç noktalar, eklenen bir cihaz tarafından görülen her ağ trafiğinden verileri ayıklar. Ağınızdaki yönetilmeyen cihazları listelemek için kullanılan bu veriler.
 
-## <a name="can-i-disable-basic-discovery"></a>Temel bulma'ya devre dışı musunuz?
+## <a name="can-i-disable-basic-discovery"></a>Temel bulma özelliğini devre dışı bırakabilir miyim?
 
-Gelişmiş özellikler sayfası aracılığıyla cihaz bulma'ya kapatma [seçeneğiniz](advanced-features.md) vardır. Bununla birlikte, ağ bağlantınız altında olmayan cihazlarda görünürlüğü kaybedeceksiniz. Keşif SenseNDR.exe bakılmaksızın, yerleşik cihazlarda her bağlantının hala çalışıyor olacağını unutmayın. 
+[Gelişmiş özellikler](advanced-features.md) sayfasından cihaz bulmayı kapatma seçeneğiniz vardır. Ancak ağınızdaki yönetilmeyen cihazlarda görünürlüğü kaybedersiniz. Bulma özelliği kapatılsa da eklenen cihazlarda SenseNDR.exe çalışmaya devam edeceğine dikkat edin. 
 
 ## <a name="what-is-standard-discovery-mode"></a>Standart bulma modu nedir?
 
-Uç nokta için Microsoft Defender'a alınan bu modda uç noktalar, toplanan verileri zenginleştirmek için (uygun olmayan ağ trafiği miktarıyla) ağda gözlemlenen cihazları etkin bir şekilde gözlemlenebilir. Yalnızca temel bulma modu tarafından gözlemlenen cihazlar standart modda etkin bir şekilde gözlenir. Bu mod, güvenilir ve tutarlı bir cihaz stoku için kesinlikle önerilir. Bu modu devre dışı bırakmayı ve Temel bulma modunu seçerseniz, büyük olasılıkla yalnızca ağ bağlantınız içinde, bağlantıların sınırlı görünürlüğünü kazanırsınız.
+bu modda Uç Nokta için Microsoft Defender eklenen uç noktalar, toplanan verileri zenginleştirmek için ağdaki gözlemlenen cihazları etkin bir şekilde yoklayabilir (göz ardı edilebilir miktarda ağ trafiğiyle). Yalnızca temel bulma modu tarafından gözlemlenen cihazlar standart modda etkin bir şekilde yoklanır. Bu mod, güvenilir ve tutarlı bir cihaz envanteri oluşturmak için kesinlikle önerilir. Bu modu devre dışı bırakmayı ve Temel bulma modunu seçerseniz, büyük olasılıkla ağınızdaki yönetilmeyen uç noktaların yalnızca sınırlı görünürlüğünü elde edebilirsiniz.
 
- Standart mod aynı zamanda pasif yöntemi kullanılarak gözlemlenenlere ek olarak daha fazla cihaz bulmak için ağda sorgular kullanan yaygın bulma protokolleri kullanır.
+ Standart mod, pasif yöntem kullanılarak gözlemlenenlere ek olarak daha fazla cihaz bulmak için ağda çok noktaya yayın sorguları kullanan yaygın bulma protokollerinden de yararlanıyor.
 
-## <a name="can-i-control-which-devices-perform-standard-discovery"></a>Hangi cihazların Standart keşif gerçekleştireceklerini kontrol  olabilir miyim?
+## <a name="can-i-control-which-devices-perform-standard-discovery"></a>Hangi cihazların Standart bulma gerçekleştirebileceğini denetleyebilirim?
 
-Standart keşif gerçekleştirmek için kullanılan cihazların listesini özelleştirebilirsiniz. Bu özelliği de destekleyen tüm yerleşik cihazlarda (şu anda Windows 10 veya daha sonraki bir sürümü ve yalnızca Windows Server 2019 veya daha sonraki cihazlar) Standart bulma özelliğini etkinleştirebilirsiniz veya cihaz etiketlerini belirterek cihazlarınızı bir alt küme veya alt küme olarak belirleyebilirsiniz. Bu durumda, diğer tüm cihazlar yalnızca Temel keşif'i çalıştıracak şekilde yapılandırılır. Yapılandırma, cihaz bulma ayarları sayfasında kullanılabilir.
+Standart bulma gerçekleştirmek için kullanılan cihazların listesini özelleştirebilirsiniz. Bu özelliği de destekleyen tüm eklenen cihazlarda Standart bulma özelliğini etkinleştirebilir (şu anda yalnızca Windows 10 veya üzeri ve Windows Server 2019 veya üzeri cihazlar) ya da cihaz etiketlerini belirterek cihazlarınızın alt kümesini veya alt kümelerini seçebilirsiniz. Bu durumda, diğer tüm cihazlar yalnızca Temel bulma'yı çalıştıracak şekilde yapılandırılır. Yapılandırma, cihaz bulma ayarları sayfasında sağlanır.
 
-## <a name="can-i-exclude-unmanaged-devices-from-the-device-inventory-list"></a>Yönetimi olmayan cihazları cihaz stok listesinden çıkarabilirsiniz mi?
+## <a name="can-i-exclude-unmanaged-devices-from-the-device-inventory-list"></a>Yönetilmeyen cihazları cihaz envanter listesinden dışlayabilir miyim?
 
-Evet, yönetimi olmayan cihazları cihaz stok listesinden dışarıda tutmak için filtreler uygulayabilirsiniz. Ayrıca, yönetimi olmayan cihazları filtrelemek için API sorgularında ekleme durumu sütununu da kullanabilirsiniz.
+Evet, yönetilmeyen cihazları cihaz envanter listesinden dışlamak için filtreler uygulayabilirsiniz. Yönetilmeyen cihazları filtrelemek için API sorgularında ekleme durumu sütununu da kullanabilirsiniz.
 
-## <a name="which-onboarded-devices-can-perform-discovery"></a>Hangi yerleşik cihazlar keşif gerçekleştirebilirsiniz?
+## <a name="which-onboarded-devices-can-perform-discovery"></a>Hangi eklenen cihazlar bulma gerçekleştirebilir?
 
-Windows 10 sürüm 1809 veya sonraki sürümler, Windows 11, Windows Server 2019 veya Windows Server 2022 bulunan yerleşik cihazlar keşif gerçekleştirebilirsiniz.
+Windows 10 sürüm 1809 veya üzeri, Windows 11, Windows Server 2019 veya Windows Server 2022 üzerinde çalışan eklenen cihazlar bulma gerçekleştirebilir.
 
-## <a name="what-happens-if-my-onboarded-devices-is-connected-to-my-home-network-or-to-public-access-point"></a>Cihazlarım ev ağıma veya genel erişim noktasına bağlı olursa ne olur?
+## <a name="what-happens-if-my-onboarded-devices-is-connected-to-my-home-network-or-to-public-access-point"></a>Eklenen cihazlarım ev ağıma veya genel erişim noktasına bağlıysa ne olur?
 
-Keşif altyapısı, şirket ağına alınan ağ olaylarını şirket ağının dışından ayırt edicidir. Ağ tanımlayıcılarını tüm kiracının istemcileri arasında birbiriyle ilişkili olarak, olaylar özel ağlardan ve şirket ağlarından alınanlar arasında ayırt edilir. Örneğin, kuruluşta cihazların çoğunluğu aynı ağ adına, aynı varsayılan ağ geçidi ve ZAMAN sunucusu adresine bağlı olduğunu bildirse, bu ağın büyük olasılıkla bir şirket ağı olduğu varsayılır. Özel ağ cihazları stokta listelenmiyor ve etkin bir şekilde ağulanmayacak.
+Bulma altyapısı, şirket ağında alınan ağ olaylarını kurumsal ağın dışından ayırt eder. Ağ tanımlayıcıları tüm kiracının istemcileri arasında ilişkilendirilerek olaylar, özel ağlardan ve şirket ağlarından alınanlar arasında ayırt edilir. Örneğin, kuruluştaki cihazların büyük bölümü aynı ağ adına, aynı varsayılan ağ geçidine ve DHCP sunucu adresine bağlı olduklarını bildirirse, bu ağın büyük olasılıkla bir şirket ağı olduğu varsayılabilir. Özel ağ cihazları envanterde listelenmez ve etkin bir şekilde yoklanmaz.
 
-## <a name="what-protocols-are-you-capturing-and-analyzing"></a>Hangi protokolleri yakalama ve çözümlemektesiniz?
+## <a name="what-protocols-are-you-capturing-and-analyzing"></a>Hangi protokolleri yakalayıp analiz ediyorsunuz?
 
-Varsayılan olarak, sürüm 1809 veya Windows 10 çalıştıran tüm yerleşik cihazlar, Windows 11, Windows Server 2019 veya Windows Server 2022 aşağıdaki protokolleri yakalayarak analiz ediyor: ARP, CDP, UDP, DHCPv6, IP (üst bilgiler), LLDP, LLMNR, mDNS, MNDP, NBNS, SSDP, TCP (SYN üst bilgileri), UDP (üst bilgiler), WSD
+Varsayılan olarak, Windows 10 sürüm 1809 veya sonraki sürümlerde çalışan tüm eklenen cihazlar, Windows 11, Windows Server 2019 veya Windows Server 2022 şu protokolleri yakalayıp analiz ediyor: ARP, CDP, DHCP, DHCPv6, IP (üst bilgiler), LLDP, LLMNR, mDNS, MNDP, NBNS, SSDP, TCP (SYN üst bilgileri), UDP (üst bilgiler), WSD
 
-## <a name="which-protocols-do-you-use-for-active-probing-in-standard-discovery"></a>Standart bulma'da etkin olasılıklar için hangi protokolleri kullanasınız?
-Bir cihaz Standart bulma'yi çalıştıracak şekilde yapılandırıldığında, aşağıdaki protokoller kullanılarak ortaya çıkar: ARP, FTP, HTTP, HTTPS, ICMP, LLMNR, NBNS, RDP, SIP, SMTP, SNMP, SSH, Telnet, UPNP, WSD, SMB, NBSS, IPP, PJL, RPC, mDNS, LDAP, AFP, CrestonCIP, IphoneSync, WinRM, VNC, SLP, LDAP
+## <a name="which-protocols-do-you-use-for-active-probing-in-standard-discovery"></a>Standart bulmada etkin yoklama için hangi protokolleri kullanırsınız?
+Bir cihaz Standart bulma çalıştıracak şekilde yapılandırıldığında, Kullanıma sunulan hizmetler şu protokoller kullanılarak araştırılıyor: ARP, FTP, HTTP, HTTPS, ICMP, LLMNR, NBNS, RDP, SIP, SMTP, SNMP, SSH, Telnet, UPNP, WSD, SMB, NBSS, IPP, PJL, RPC, mDNS, DHCP, AFP, CrestonCIP, IphoneSync, WinRM, VNC, SLP, LDAP
 
 
-## <a name="how-can-i-exclude-targets-from-being-probed-with-standard-discovery"></a>Hedefleri Standart keşif kapsamından nasıl çıkartırm?
+## <a name="how-can-i-exclude-targets-from-being-probed-with-standard-discovery"></a>Standart bulma ile hedeflerin yoklanmasını nasıl dışlayabilirim?
 
-Ağ üzerinde etkin bir şekilde sahip olunmaması gereken cihazlar varsa, bu cihazların taranmalarını önlemek için bir dışlama listesi de tanımlayabilirsiniz. Yapılandırma, cihaz bulma ayarları sayfasında kullanılabilir.
+Ağınızda etkin olarak araştırılmaması gereken cihazlar varsa, taranmalarını önlemek için bir dışlama listesi de tanımlayabilirsiniz. Yapılandırma, cihaz bulma ayarları sayfasında sağlanır.
 
 > [!NOTE]
-> Cihazlar yine de ağda çok büyük keşif girişimlerine yanıt verir. Bu cihazlar keşfedilen ancak etkin bir şekilde sahip olunmayacak. 
+> Cihazlar yine de ağdaki çok noktaya yayın bulma girişimlerini yanıtlayabilir. Bu cihazlar bulunur ancak etkin bir şekilde yoklamaz. 
 
-## <a name="can-i-exclude-devices-from-being-discovered"></a>Cihazları bulunanların dışında tutabilirsiniz mi?
+## <a name="can-i-exclude-devices-from-being-discovered"></a>Cihazların bulunmasını dışlayabilir miyim?
 
-Cihaz bulma, ağ üzerindeki cihazları bulmak için pasif yöntemleri kullandığı için, şirket ağınıza ekli cihazlarınız ile iletişimde bulunan her cihaz stokta yer alan ve listelenmiş olabilir. Cihazları yalnızca etkin olasılıklar dışında tutabilirsiniz.
+Cihaz bulma, ağdaki cihazları bulmak için pasif yöntemler kullandığından, şirket ağındaki eklenen cihazlarınızla iletişim kuran tüm cihazlar bulunabilir ve envanterde listelenebilir. Cihazları yalnızca etkin yoklamanın dışında tutabilirsiniz.
 
-## <a name="how-frequent-is-the-active-probing"></a>Etkin olasılıklar ne sıklıkta?
+## <a name="how-frequent-is-the-active-probing"></a>Etkin yoklama ne sıklıktadır?
 
-Mevcut bilgilerin güncel olduğundan emin olmak için cihaz özelliklerinde yapılan değişiklikler gözlenirse (normalde, üç haftalık bir dönemde en fazla bir kez cihaz cihaza sahip değildir)
+Mevcut bilgilerin güncel olduğundan emin olmak için cihaz özelliklerindeki değişiklikler gözlemlendiğinde cihazlar etkin bir şekilde yoklanır (genellikle, cihazlar üç haftalık bir süre içinde en fazla bir kez yoklanır)
 
-## <a name="my-security-tool-raised-alert-on-unicastscannerps1--psscript_guidps1-or-port-scanning-activity-initiated-by-it-what-should-i-do"></a>Güvenlik aracım tarafından başlatılan UnicastScanner.ps1 / PSScript_{GUID}.ps1 veya bağlantı noktası tarama etkinliği hakkında uyarı aldı, ne yapabilirim?
+## <a name="my-security-tool-raised-alert-on-unicastscannerps1--psscript_guidps1-or-port-scanning-activity-initiated-by-it-what-should-i-do"></a>Güvenlik aracım tarafından başlatılan UnicastScanner.ps1 /PSScript_{GUID}.ps1 veya bağlantı noktası tarama etkinliğinde uyarı tetikledi, ne yapmalıyım?
 
-Etkin olasılık betikleri Microsoft tarafından imzalanmıştır ve güvenlidir. Dışlama listeniz için aşağıdaki yolu ekleyebilirsiniz: `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps1`
+Etkin yoklama betikleri Microsoft tarafından imzalandığından güvenlidir. Dışlama listenize aşağıdaki yolu ekleyebilirsiniz: `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\*.ps1`
 
-## <a name="what-is-the-amount-of-traffic-being-generated-by-the-standard-discovery-active-probe"></a>Standart keşif etkin araştırma tarafından oluşturulan trafik miktarı nedir?
+## <a name="what-is-the-amount-of-traffic-being-generated-by-the-standard-discovery-active-probe"></a>Standart bulma etkin yoklaması tarafından oluşturulan trafik miktarı nedir?
 
-Etkin olasılık, her olasılık denemesi olan ve yerleşik cihazla cihaz arasında en fazla 50 Kb trafik üretebilirsiniz
+Etkin yoklama, eklenen cihaz ve yoklama cihazı arasında her yoklama girişiminde 50 KB'a kadar trafik oluşturabilir
 
-## <a name="why-is-there-a-discrepancy-between-can-be-onboarded-devices-in-the-device-inventory-and-the-number-of-devices-to-onboard-in-the-dashboard-tile"></a>Neden cihaz envanteri içinde "kullanılabilir" cihazlar arasında bir uyuşmazlık ve pano kutucuğunun içinde "ekleme için" yapılan cihazların sayısı arasında bir uyuşmazlık var?
+## <a name="why-is-there-a-discrepancy-between-can-be-onboarded-devices-in-the-device-inventory-and-the-number-of-devices-to-onboard-in-the-dashboard-tile"></a>Cihaz envanterindeki "eklenebilir" cihazlar ile pano kutucuğundaki "eklenecek cihazlar" arasında neden bir tutarsızlık var?
 
-Listelenen cihazların sayısı ile cihaz envanteri içinde "eklensin" ifadesinin altında, "Uç nokta için Microsoft Defender'a ekle" güvenlik önerisi ve "ekleme için cihazlar" pano widget'ı arasında farklar olduğunu görebilirsiniz.
+Cihaz envanterinde "eklenebilir" altında listelenen cihazların sayısı, "Uç Nokta için Microsoft Defender'a ekleme" güvenlik önerisi ve "eklenecek cihazlar" pano pencere öğesi arasında farklar görebilirsiniz.
 
- Güvenlik önerisi ve pano widget'ı ağ üzerinde kararlı cihazlara göredir; ephemeral cihazlar, konuk cihazlar ve diğer cihazlar hariç. Amaç, kalıcı cihazlara, ayrıca kuruluşun genel güvenlik puanlarını da ima eden kalıcı cihazlar önermektedir.
+ Güvenlik önerisi ve pano pencere öğesi ağdaki kararlı cihazlara yöneliktir; kısa ömürlü cihazlar, konuk cihazlar ve diğerleri hariç. Fikir, kuruluşun genel güvenlik puanına da işaret eden kalıcı cihazlarda önermektir.
 
-## <a name="can-i-onboard-unmanaged-devices-that-were-found"></a>Bulunan, unmanaged cihazları eklemem gerekir mi?
+## <a name="can-i-onboard-unmanaged-devices-that-were-found"></a>Bulunan yönetilmeyen cihazları ekleyebilir miyim?
 
-Evet. Unmanaged cihazları el ile ekleyebilirsiniz. Ağ bağlantınız için yönelik olmayan uç noktalar, ağ bağlantınız için güvenlik açıklarına ve risklere neden olur. Bunları hizmete ekleme, güvenlik görünürlüğünü artırabilir.
+Evet. Yönetilmeyen cihazları el ile ekleyebilirsiniz. Ağınızdaki yönetilmeyen uç noktalar ağınıza güvenlik açıkları ve riskler getirir. Bunları hizmete eklemek, bu hizmetlerde güvenlik görünürlüğünü artırabilir.
 
-## <a name="ive-noticed-that-unmanaged-device-health-state-is-always-active-why-is-that"></a>Cihazın durumu, neden her zaman "Etkin" olduğunu fark ettim.
+## <a name="ive-noticed-that-unmanaged-device-health-state-is-always-active-why-is-that"></a>Yönetilmeyen cihaz sistem durumunun her zaman "Etkin" olduğunu fark ettim, neden bu?
 
-Cihaz durumu ne olursa olsun, geçici olarak, cihaz envanteri standart bekletme süresi boyunca "Etkin" durumda olur.
+Gerçek durumları ne olursa olsun, cihaz envanterinin standart saklama süresi boyunca geçici olarak yönetilmeyen cihaz sistem durumu "Etkin" olur.
 
-## <a name="does-standard-discovery-look-like-malicious-network-activity"></a>Standart keşif kötü amaçlı ağ etkinliklerine mi benziyor?
+## <a name="does-standard-discovery-look-like-malicious-network-activity"></a>Standart bulma kötü amaçlı ağ etkinliği gibi görünüyor mu?
 
-Standart keşifleri göz önünde bulundurarak, olasılıkların etkilerini ve özel olarak güvenlik araçlarının bu tür etkinliklerden kötü amaçlı olarak şüpheleniyor olup olmadığını merak ediyor olabilir. Aşağıdaki alt bölüm, kuruluşların neredeyse tüm durumlarda Standart keşifleri etkinleştirme konusunda kaygıları olması gerektiğini açıklar.  
+Standart bulmayı değerlendirirken, yoklamanın etkilerini ve özellikle güvenlik araçlarının kötü amaçlı etkinlik gibi etkinliklerden şüphelenip şüphelenmeyeceğini merak ediyor olabilirsiniz. Aşağıdaki alt bölüm, neredeyse tüm durumlarda kuruluşların Standart bulmayı etkinleştirme konusunda neden endişeleri olmaması gerektiğini açıklar.  
 
-### <a name="probing-is-distributed-across-all-windows-devices-on-the-network"></a>Olasılık, ağ Windows tüm cihazlarda dağıtılıyor
+### <a name="probing-is-distributed-across-all-windows-devices-on-the-network"></a>Yoklama, ağdaki tüm Windows cihazlara dağıtılır
 
-Normalde güvenliği tehlikeye atılmış az sayıda cihazdan ağın tamamını tarayacak olan kötü amaçlı etkinliklere karşı olarak, Uç Nokta'nın Standart keşif olasılıkları için Microsoft Defender, etkinliği her zaman anormal ve anormal olmayan hale gelen tüm yerleşik Windows cihazlarından başlatılır. Olasılık, ağ üzerindeki desteklenen tüm yerleşik cihazlar arasındaki olasılık denemesini dengelemek için buluttan merkezi olarak yönetilir.  
+Genellikle az sayıda güvenliği aşılmış cihazdan ağın tamamını tarayan kötü amaçlı etkinliklerin aksine, Uç Nokta için Microsoft Defender Standart bulma yoklama işlemi, etkinliği zararsız ve anormal olmayan hale getiren tüm eklenen Windows cihazlardan başlatılır. Yoklama, ağdaki desteklenen tüm eklenen cihazlar arasında yoklama girişimini dengelemek için buluttan merkezi olarak yönetilir.  
 
-### <a name="active-probing-generates-negligible-amount-of-extra-traffic"></a>Etkin olasılık, uygun olmayan trafik miktarına neden olur
+### <a name="active-probing-generates-negligible-amount-of-extra-traffic"></a>Etkin yoklama göz ardı edilebilir miktarda ek trafik oluşturur
 
-Unmanaged devices would normalde get no more than once in a three-week period and generate less 50KB of traffic. Kötü amaçlı etkinlikler çoğunlukla yüksek tekrarlı olasılık girişimlerini ve bazı durumlarda da ağ izleme araçlarıyla anormal olarak tanım edilemeyen önemli miktarda ağ trafiğine neden olan veri sızıntısını içerir.
+Yönetilmeyen cihazlar genellikle üç haftalık bir süre içinde en fazla bir kez yoklanır ve 50 KB'tan az trafik oluşturur. Kötü amaçlı etkinlikler genellikle yüksek yinelenen yoklama girişimlerini ve bazı durumlarda ağ izleme araçları tarafından anomali olarak tanımlanabilen önemli miktarda ağ trafiği oluşturan veri sızdırmayı içerir.
 
-### <a name="your-windows-device-already-runs-active-discovery"></a>Windows cihazınız zaten etkin keşifleri çalıştırır
+### <a name="your-windows-device-already-runs-active-discovery"></a>Windows cihazınız zaten etkin bulma çalıştırıyor
 
-Ağın uç noktaları arasında daha kolay "tak ve oynat" deneyimleri ve dosya paylaşımını kolaylaştırmak için etkin bulma özellikleri Windows işletim sistemine eklenmişti. Benzer işlevler mobil cihazlarda, ağ ekipmanında ve stok uygulamalarında yalnızca birkaçıdır.  
+Etkin bulma özellikleri, ağdaki uç noktalar arasında daha kolay "tak çalıştır" deneyimleri ve dosya paylaşımı için yakındaki cihazları, uç noktaları ve yazıcıları bulmak için her zaman Windows işletim sistemine eklenmiştir. Benzer işlevler mobil cihazlarda, ağ ekipmanında ve envanter uygulamalarında yalnızca birkaç adla uygulanır.  
 
-Standart bulma, cihazları tanımlamak ve aynı bulma yöntemlerini kullanarak, aynı bulma yöntemlerini kullanarak, aynı mobil cihaz Envanteri'nin altında ağ'daki tüm cihazlar için birleşik Microsoft 365 Defender olur. Örneğin – Standart bulma, ağ'daki yakındaki uç noktaları aynı ağ Windows yazıcıları listeleyeni gibi tanımlar. 
+Standart bulma, cihazları tanımlamak ve Microsoft 365 Defender Cihaz Envanteri'nde ağınızdaki tüm cihazlar için birleşik görünürlüğe sahip olmak için aynı bulma yöntemlerini kullanır. Örneğin– Standart bulma, ağdaki yakın uç noktaları ağdaki kullanılabilir yazıcıları Windows şekilde tanımlar. 
 
-Ağ güvenliği ve izleme araçları, ağ üzerinde cihazlar tarafından gerçekleştirilen bu tür etkinliklere kayıtsızdır. 
+Ağ güvenliği ve izleme araçları, ağdaki cihazlar tarafından gerçekleştirilen bu tür etkinliklere kayıtsızdır. 
 
-### <a name="only-unmanaged-devices-are-being-probed"></a>Yalnızca unmanaged devices are being esnad
+### <a name="only-unmanaged-devices-are-being-probed"></a>Yalnızca yönetilmeyen cihazlar yoklanıyor
 
-Cihaz bulma özellikleri, yalnızca ağ üzerinde yönetimi olmayan cihazları keşfetmek ve tanımlamak için yerleşik olarak bulundu. Bu, daha önce Uç Nokta için Microsoft Defender ile birlikte edinilen cihazların satın alıma açık olduğu anlamına gelir.
+Cihaz bulma özellikleri yalnızca ağınızdaki yönetilmeyen cihazları bulmak ve tanımlamak için oluşturulmuş. Bu, önceden bulunan ve önceden Uç Nokta için Microsoft Defender eklenen cihazların yoklanmayacağı anlamına gelir.
 
-### <a name="you-can-exclude-network-lures-from-active-probing"></a>Ağ nedenlerini etkin olasılıktan çıkarabilirsiniz
+### <a name="you-can-exclude-network-lures-from-active-probing"></a>Ağ yemlerini etkin yoklamanın dışında tutabilirsiniz
 
-Standart keşif, etkin olasılıklardan cihazların veya aralıkların (alt ağların) hariç tutulmasını destekler. Dağıtılan ağ hedefleriniz varsa, IP adreslerine veya alt ağlara (IP adresleri aralığı) dayalı dışlamaları tanımlamak için Cihaz Bulma ayarlarını kullanabilirsiniz. Bu dışlamaların tanımlanması, bu cihazların etkin şekilde uyarılmalarını ve uyarılmalarını sağlar. Bu cihazlar yalnızca pasif yöntemleri kullanılarak keşfeder (Temel bulma moduna benzer).
+Standart bulma, cihazların veya aralıkların (alt ağlar) etkin yoklamadan dışlanmasını destekler. Dağıtılan ağ yemleriniz varsa, IP adreslerine veya alt ağlara (bir dizi IP adresi) dayalı dışlamaları tanımlamak için Cihaz Bulma ayarlarını kullanabilirsiniz. Bu dışlamaları tanımlamak, bu cihazların etkin bir şekilde yoklanmamasını ve uyarı almamasını sağlar. Bu cihazlar yalnızca pasif yöntemler kullanılarak bulunur (Temel bulma moduna benzer).

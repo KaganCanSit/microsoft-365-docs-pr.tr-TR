@@ -20,12 +20,12 @@ ms.custom:
 description: Yöneticiler, Exchange Online Protection (EOP) bilgi Exchange Online Protection bilgi edinebiliyor.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5bf0ed143f5bfb78ff1d6af4005a4b5ec64fd90e
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: ba31c5022cb8f449ce9e1e1a4ba65e87afd0b464
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021750"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471461"
 ---
 # <a name="spoof-intelligence-insight-in-eop"></a>EOP'de akıllı Spoof Intelligence içgörü
 
@@ -33,7 +33,7 @@ ms.locfileid: "63021750"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!NOTE]
@@ -86,7 +86,7 @@ Bu makalenin kalan bölümü, Microsoft 365 Defender portalında ve PowerShell'd
   > - Görev sırasında ilgili kullanıcı Azure Active Directory eklemek Microsoft 365 yönetim merkezi kullanıcılara çalışma sayfalarındaki diğer özellikler için gerekli izinleri ve izinleri Microsoft 365. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
   > - **Görünüm'de Yalnızca Görüntüleme** [kuruluş Exchange Online rol](/Exchange/permissions-exo/permissions-exo#role-groups) grubu, özel salt okunur erişim de sağlar.
 
-- EOP'de ve Kimlik avı için Microsoft Defender'da kimlik avı önleme ilkelerde kimlik avı zekasını etkinleştirmiş ve devre dışı Office 365. Akıllı ifade varsayılan olarak etkinleştirilmiştir. Daha fazla bilgi için bkz[. EOP'de](configure-anti-phishing-policies-eop.md) kimlik avı koruma ilkelerini yapılandırma veya Kimlik avı için [Microsoft Defender'da kimlik avı ilkelerini Office 365](configure-mdo-anti-phishing-policies.md).
+- EOP ve Office 365 için Microsoft Defender'de kimlik avı önleme ilkelerde kimlik avı zekasını etkinleştirir ve devre dışı Office 365 için Microsoft Defender. Akıllı ifade varsayılan olarak etkinleştirilmiştir. Daha fazla bilgi için, [EOP'de](configure-anti-phishing-policies-eop.md) kimlik avı koruma ilkelerini yapılandırma veya EOP'de kimlik avı [önleme ilkelerini yapılandırma Office 365 için Microsoft Defender](configure-mdo-anti-phishing-policies.md).
 
 - Kimlik sahtesi koruması için önerilen ayarlarımız için bkz. [EOP kimlik avı önleme ilkesi ayarları](recommended-settings-for-eop-and-office365-atp.md#eop-anti-phishing-policy-settings).
 
@@ -96,7 +96,7 @@ Bu makalenin kalan bölümü, Microsoft 365 Defender portalında ve PowerShell'd
 
 2. Kiracı İzin **Ver/Engelle Listeleri sayfasında** , bilgi yok gibi bir bilgi bilgisi şu şekilde görünür:
 
-   ![Kimlik avıyla mücadele ilkesi sayfasındaki kimlik sahtesi bilgileri içgörü.](../../media/m365-sc-spoof-intelligence-insight.png)
+   :::image type="content" source="../../media/m365-sc-spoof-intelligence-insight.png" alt-text="Kimlik avıyla mücadele ilkesi sayfasındaki Kimlik sahtesi bilgileri içgörü" lightbox="../../media/m365-sc-spoof-intelligence-insight.png":::
 
    Bu içgörüde iki mod vardır:
 
@@ -123,7 +123,7 @@ Bilgi **bankasında** Bilgi Yoklama etkinliğini görüntüle'ye tıklarken  gö
   - **Dış**: Gönderenin kimliği doğru değil dış etki alanında.
 - **Eylem**: Bu değere **İzin Verildi** veya **Engellendi**:
   - **İzin** Verildi: Etki alanı, [SPF](how-office-365-uses-spf-to-prevent-spoofing.md), [DKIM](use-dkim-to-validate-outbound-email.md) ve DMARC için açık e-posta kimlik [doğrulaması başarısız oldu.](use-dmarc-to-validate-email.md) Ancak etki alanı, örtülü e-posta kimlik doğrulama denetimlerimizi (bileşik kimlik [doğrulama) geçti](email-validation-and-authentication.md#composite-authentication). Bunun sonucunda iletide, herhangi bir ifadeyle yapılan bir ifade yok.
-  - **Engellendi**: Hatalı etki alanı ve gönderme altyapısı bileşiminden gelen iletiler, bilgi  hatalı bilgi tarafından kötü olarak işaretlenir. Sahte adresli iletilere yönelik eylem, varsayılan kimlik avı önleme ilkesi veya özel kimlik avı koruma ilkeleri tarafından denetlenmektedir (varsayılan değer İletiyi Gereksiz E-posta klasörüne **taşı'dır**). Daha fazla bilgi için bkz[. Kimlik avı için Microsoft Defender'da kimlik avı Office 365](configure-mdo-anti-phishing-policies.md).
+  - **Engellendi**: Hatalı etki alanı ve gönderme altyapısı bileşiminden gelen iletiler, bilgi  hatalı bilgi tarafından kötü olarak işaretlenir. Sahte adresli iletilere yönelik eylem, varsayılan kimlik avı önleme ilkesi veya özel kimlik avı koruma ilkeleri tarafından denetlenmektedir (varsayılan değer İletiyi Gereksiz E-posta klasörüne **taşı'dır**). Daha fazla bilgi için bkz[. Kimlik avından korunma ilkelerini Office 365 için Microsoft Defender](configure-mdo-anti-phishing-policies.md).
 
 Sonuçları sıralamak için seçili sütun başlıklarına tıkebilirsiniz.
 
@@ -143,7 +143,7 @@ Listeden bir girdiyi seçin, aşağıdaki bilgileri ve özellikleri içeren bir 
 - Ne yapmak gerekir?
 - Ana bilgi e-postası sayfasındaki bilgilerin çoğunu içeren etki alanı özeti.
 - Gönderen hakkında WhoIs verileri.
-- Microsoft Defender'da [Kimlik Avını Görüntüle](threat-explorer.md) altında gönderen  \> hakkında ek ayrıntıları görmek için Threat Explorer'ı açma Office 365.
+- Threat [Explorer'ı açıp Gönderen hakkında Daha](threat-explorer.md) fazla ayrıntı görmek  \> için Tehdit Explorer'da Kimlik Avını **Görüntüle Office 365 için Microsoft Defender**.
 - Kiracıda aynı gönderenden gelen benzer iletiler.
 
 ### <a name="about-allowed-spoofed-senders"></a>İzin verilen kimliği doğrulandı gönderenler hakkında

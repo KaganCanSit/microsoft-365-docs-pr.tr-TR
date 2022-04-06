@@ -20,19 +20,19 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 0d9d8ee89aaa551c5fecf7c38fe0dbba97ed7fc8
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: dbaf395f10eaac7ff508b03f6f079f94bdd6cebd
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63032520"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475817"
 ---
-# <a name="impersonation-insight-in-defender-for-office-365"></a>Office 365 için Defender'daki kimliğe bürünme içgörü Office 365
+# <a name="impersonation-insight-in-defender-for-office-365"></a>Office 365 için Defender'de kimliğe bürünme içgörü Office 365 için Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Geçerli olduğu yer:**
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!NOTE]
@@ -45,7 +45,7 @@ Kimliğe Bürünme, e-posta iletisi gönderenin gerçek veya beklenen bir gönde
 
 Etki alanı kimliğine bürünme [, etki](anti-spoofing-protection.md) alanı kimlik sahteciliğe göre farklıdır, çünkü kimliğine bürünülen etki alanı normalde gerçek, kayıtlı bir etki alanıdır. Kimliğine bürünülen etki alanındaki gönderenlerden gelen iletiler ve genellikle kimlik sahteciliği girişimlerini (SPF, DKIM ve DMARC) belirleyen normal e-posta kimlik doğrulaması denetimlerini kullanabilir.
 
-Kimliğe Bürünme koruması, kimlik avı önleme ilkesi ayarlarının, kimlik avı için Microsoft Defender'a özel Office 365. Bu ayarlar hakkında daha fazla bilgi için bkz. Kimlik avı önleme ilkeleri için [Microsoft Defender'da Kimliğe Bürünme Office 365](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+Kimliğe Bürünme koruması, kimlik avı koruma ilkesi ayarlarının, kimlik avına özel Office 365 için Microsoft Defender. Bu ayarlar hakkında daha fazla bilgi için bkz. Kimlik avı önleme ilkelerine [yönelik kimliğe bürünme Office 365 için Microsoft Defender](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 Kimliğe bürünülen gönderenlerden veya kimliğe bürünme koruması için yapılandırmış olduğunuz gönderen etki alanlarından gelen iletileri hızla tanımlamak için Microsoft 365 Defender portalında kimliğe bürünme içgörüsteni kullanabilirsiniz.
 
@@ -63,7 +63,7 @@ Kimliğe bürünülen gönderenlerden veya kimliğe bürünme koruması için ya
 
   **Not**: Kullanıcı atama Azure Active Directory ilgili kullanıcı rolüne Microsoft 365 yönetim merkezi, kullanıcılara _Microsoft 365 Defender portalında_ gerekli izinleri ve Microsoft 365. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
 
-- Kimlik avı önleme ilkeleri için Microsoft Defender'da kimliğe bürünme korumasını etkinleştirerek Office 365. Kimliğe Bürünme koruması varsayılan olarak etkin değildir. Daha fazla bilgi için bkz[. Kimlik avı için Microsoft Defender'da kimlik avı Office 365](configure-mdo-anti-phishing-policies.md).
+- Kimlik avı koruma ilkelerinde kimliğe bürünme korumasını etkinleştiriyor ve Office 365 için Microsoft Defender. Kimliğe Bürünme koruması varsayılan olarak etkin değildir. Daha fazla bilgi için bkz[. Kimlik avından korunma ilkelerini Office 365 için Microsoft Defender](configure-mdo-anti-phishing-policies.md).
 
 ## <a name="open-the-impersonation-insight-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında kimliğe bürünme içgörü Microsoft 365 Defender açma
 
@@ -71,7 +71,7 @@ Kimliğe bürünülen gönderenlerden veya kimliğe bürünme koruması için ya
 
 2. Kimlik avı **önleme sayfasında** kimliğe bürünme içgörü şöyle görünür:
 
-   ![Kimlik avıyla mücadele ilkesi sayfasında kimliğe bürünme içgörü ve kimlik sahteci zekası.](../../media/m365-sc-impersonation-and-spoof-intelligence-insight.png)
+   :::image type="content" source="../../media/m365-sc-impersonation-and-spoof-intelligence-insight.png" alt-text="Kimlik avıyla mücadele ilkesi sayfasında kimliğe bürünme içgörü ve kimlik sahteci zekası" lightbox="../../media/m365-sc-impersonation-and-spoof-intelligence-insight.png":::
 
    Bu içgörüde iki mod vardır:
 

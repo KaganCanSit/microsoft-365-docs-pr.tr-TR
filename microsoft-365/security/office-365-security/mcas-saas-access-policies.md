@@ -1,6 +1,6 @@
 ---
-title: SaaS uygulamaları için Bulut Uygulamaları için Önerilen Microsoft Defender ilkeleri - Microsoft 365 Kurumsal | Microsoft Docs
-description: Bulut Uygulamaları için Microsoft Defender ile tümleştirme için önerilen ilkeleri açıklar.
+title: SaaS Microsoft Defender for Cloud Apps için önerilen ilkeler - Microsoft 365 Kurumsal | Microsoft Docs
+description: MICROSOFT DEFENDER FOR CLOUD APPS ile tümleştirme için önerilen ilkeler açık Microsoft Defender for Cloud Apps.
 author: BrendaCarter
 manager: laurawi
 ms.topic: article
@@ -15,18 +15,18 @@ ms.collection:
 - M365-identity-device-management
 - M365-security-compliance
 ms.prod: m365-security
-ms.openlocfilehash: 95b46e1c92354015ce6f8d9c5b1fa4b6e9642785
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 7cda1669b4f8441d13f92b09d7390e31f4add529
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683329"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472297"
 ---
-# <a name="recommended-microsoft-defender-for-cloud-apps-policies-for-saas-apps"></a>SaaS uygulamaları için Bulut Uygulamaları için Önerilen Microsoft Defender ilkeleri
+# <a name="recommended-microsoft-defender-for-cloud-apps-policies-for-saas-apps"></a>SaaS Microsoft Defender for Cloud Apps önerilen güvenlik ilkeleri
 
-Bulut Uygulamaları için Microsoft Defender, SaaS uygulamalarıyla indirmeleri engelleme, karşıya yüklemeler, kopyalama ve yapıştırma ve yazdırma gibi gerçek zamanlı olarak gerçek zamanlı izleme ve denetime olanak sağlayan Azure AD koşullu erişim ilkelerine yönelik derlemeler sunar. Bu özellik, kurumsal kaynaklara yönetim dışı cihazlardan veya konuk kullanıcılar tarafından erişilma gibi yapısal risk taşıyan oturumlara güvenlik ekler.
+Microsoft Defender for Cloud Apps engelleme, karşıya yüklemeler, kopyalama ve yapıştırma ve yazdırma gibi SaaS uygulamalarıyla gerçek zamanlı olarak gerçek zamanlı izleme ve denetime olanak sağlayan Azure AD koşullu erişim ilkelerine yönelik bir yapıya sahip olur. Bu özellik, kurumsal kaynaklara yönetim dışı cihazlardan veya konuk kullanıcılar tarafından erişilma gibi yapısal risk taşıyan oturumlara güvenlik ekler.
 
-Bulut Uygulamaları için Defender, Microsoft Bilgi Koruması ile yerel olarak tümleştirilmiştir, hassas bilgi türleri ve duyarlılık etiketlerine dayalı hassas verileri bulmak ve uygun önlemleri almak için gerçek zamanlı içerik incelemesi sağlar.
+Bulut için Defender Uygulamalar aynı zamanda Microsoft Bilgi Koruması ile yerel olarak tümleştirilmiştir, hassas bilgi türleri ve duyarlılık etiketlerine dayalı hassas verileri bulmak ve uygun önlemleri almak için gerçek zamanlı içerik incelemesi sağlar.
 
 Bu kılavuz, bu senaryolara yönelik öneriler içerir:
 
@@ -36,24 +36,24 @@ Bu kılavuz, bu senaryolara yönelik öneriler içerir:
 
 ## <a name="bring-saas-apps-into-it-management"></a>SaaS uygulamalarını IT yönetimine getirme
 
-SaaS uygulamalarını yönetmek için Bulut Uygulamaları için Defender'ı kullanmanın ilk adımı, bunları keşfetmek ve ardından bu uygulamaları Azure AD kiracınıza eklemektir. Keşifle ilgili yardıma ihtiyacınız varsa bkz [. Ağda SaaS uygulamalarını keşfetme ve yönetme](/cloud-app-security/tutorial-shadow-it). Uygulamaları budikten sonra, [bunları Azure AD kiracınıza ekleyin](/azure/active-directory/manage-apps/add-application-portal).
+SaaS uygulamalarını yönetmek Bulut için Defender Uygulamaları'nın kullanımında ilk adım bunları keşfetmek ve ardından bunları Azure AD kiracınıza eklemektir. Keşifle ilgili yardıma ihtiyacınız varsa bkz [. Ağda SaaS uygulamalarını keşfetme ve yönetme](/cloud-app-security/tutorial-shadow-it). Uygulamaları budikten sonra, [bunları Azure AD kiracınıza ekleyin](/azure/active-directory/manage-apps/add-application-portal).
 
 Aşağıdakini yaparak bunları yönetmeye başlayabilirsiniz:
 
-1. İlk olarak, Azure AD'de yeni bir koşullu erişim ilkesi oluşturun ve bunu "Koşullu Erişim Uygulama Denetimi Kullan" olarak yapılandırın. Bu işlem, isteği Bulut Uygulamaları için Defender'a yeniden yönlendirer. Tek bir ilke oluşturabilir ve tüm SaaS uygulamalarını bu ilkeye  eklersiniz.
-1. Ardından Bulut Uygulamaları için Defender'da oturum ilkeleri oluşturun. Uygulamak istediğiniz her denetim için bir ilke oluşturun.
+1. İlk olarak, Azure AD'de yeni bir koşullu erişim ilkesi oluşturun ve bunu "Koşullu Erişim Uygulama Denetimi Kullan" olarak yapılandırın. Bu, isteği Diğer Uygulamalar'a Bulut için Defender yönlendirmektir. Tek bir ilke oluşturabilir ve tüm SaaS uygulamalarını bu ilkeye  eklersiniz.
+1. Ardından, Bulut için Defender Uygulamaları'nın içinde oturum ilkeleri oluşturun. Uygulamak istediğiniz her denetim için bir ilke oluşturun.
 
-SaaS uygulamalarına izinler normalde uygulamaya erişim için iş ihtiyacı temel a dayalıdır. Bu izinler son derece dinamik olabilir. Bulut Uygulamaları için Defender ilkelerinin kullanılması, kullanıcıların başlangıç noktası, kurumsal veya özel güvenlik korumasıyla ilişkilendirilmiş bir Azure AD grubuna atanmış olup olmadığı bakılmaksızın uygulama verilerine koruma sağlar.
+SaaS uygulamalarına izinler normalde uygulamaya erişim için iş ihtiyacı temel a dayalıdır. Bu izinler son derece dinamik olabilir. Bulut için Defender uygulamalarının kullanılması, kullanıcıların başlangıç noktası, kurumsal veya özel güvenlik korumasıyla ilişkilendirilmiş bir Azure AD grubuna atanmış olup olmadığı bakılmaksızın, uygulama verilerine koruma sağlar.
 
-SaaS uygulamaları koleksiyonunuz genelindeki verileri korumak için, aşağıdaki diyagramda gerekli Azure AD koşullu erişim ilkesi ile Bulut Uygulamaları için Defender'da oluşturabilirsiniz önerilen ilkeler yer almaktadır. Bu örnekte, Bulut Uygulamaları için Defender'da oluşturulan ilkeler, yönetmekte olduğu tüm SaaS uygulamaları için geçerlidir. Bu denetimler, cihazların yönetil olup olmadığının yanı sıra dosyalara zaten uygulanmış olan duyarlılık etiketlerine bağlı olarak uygun denetimleri uygulamak üzere tasarlanmıştır.
+SaaS uygulamaları koleksiyonunuz genelinde verileri korumak için, aşağıdaki diyagramda gerekli Azure AD koşullu erişim ilkesiyle birlikte, Farklı Uygulamalar'da oluşturabilirsiniz önerilen ilkeler Bulut için Defender yer almaktadır. Bu örnekte, Uygulamalar'da Bulut için Defender ilkeler yönetmekte olduğu tüm SaaS uygulamaları için geçerlidir. Bu denetimler, cihazların yönetil olup olmadığının yanı sıra dosyalara zaten uygulanmış olan duyarlılık etiketlerine bağlı olarak uygun denetimleri uygulamak üzere tasarlanmıştır.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/mcas-manage-saas-apps-2.png" alt-text="Bulut Uygulamaları için Defender'da SaaS uygulamalarını yönetmeye yönelik ilkeler." lightbox="../../media/microsoft-365-policies-configurations/mcas-manage-saas-apps-2.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/mcas-manage-saas-apps-2.png" alt-text="Bulut için Defender Apps'te SaaS uygulamalarını yönetme ilkeleri" lightbox="../../media/microsoft-365-policies-configurations/mcas-manage-saas-apps-2.png":::
 
 Aşağıdaki tabloda, Azure AD'de oluşturmanız gereken yeni koşullu erişim ilkesi listeledir.
 
 |Koruma düzeyi|İlke|Daha fazla bilgi|
 |---|---|---|
-|Tüm koruma düzeyleri|[Bulut Uygulamaları için Defender'da Koşullu Erişim Uygulama Denetimi'yi kullanma](/cloud-app-security/proxy-deployment-aad#configure-integration-with-azure-ad)|Bu, IdP'nizi (Azure AD) Bulut Uygulamaları için Defender ile çalışacak şekilde yapılandırıyor.|
+|Tüm koruma düzeyleri|[Koşullu Erişim Uygulama Denetimi'Bulut için Defender kullanma](/cloud-app-security/proxy-deployment-aad#configure-integration-with-azure-ad)|Bu, IdP'nizi (Azure AD) uygulama uygulamalarıyla çalışacak Bulut için Defender yapılandırıyor.|
 ||||
 
 Sonraki tabloda, yukarıda gösterilen ve tüm SaaS uygulamalarını korumak için oluşturabilirsiniz örnek ilkeleri listelemektedir. Kendi iş, güvenlik ve uyumluluk hedeflerinizi değerlendirmeye ve ardından ortamınıza en uygun korumayı sağlayan ilkeler oluşturmanıza emin olun.
@@ -67,11 +67,11 @@ Sonraki tabloda, yukarıda gösterilen ve tüm SaaS uygulamalarını korumak iç
 
 Koşullu Erişim Uygulama Denetimi'yi ayarlamaya ilişkin son yönergeler için bkz. Öne çıkan uygulamalar için [Koşullu Erişim Uygulama Denetimi'ne Dağıtma](/cloud-app-security/proxy-deployment-aad). Bu makale, Azure AD'de gerekli koşullu erişim ilkesi oluşturma ve SaaS uygulamalarınızı test etme sürecinde size yol sunar.
 
-Daha fazla bilgi için bkz [. Bulut Uygulamaları için Microsoft Defender ile Uygulamaları Koşullu Erişim Uygulama Denetimi ile koruma](/cloud-app-security/proxy-intro-aad).
+Daha fazla bilgi için bkz[. Koşullu Erişim Uygulama denetimi Microsoft Defender for Cloud Apps uygulamaları koruma](/cloud-app-security/proxy-intro-aad).
 
 ## <a name="tune-protection-for-specific-saas-apps"></a>Belirli SaaS uygulamaları için korumayı ayarlama
 
-Ortamınıza belirli SaaS uygulamalarına ek izleme ve denetimler uygulamak iyi bir uygulama olabilir. Bulut Uygulamaları için Defender bunu gerçekleştirmeye olanak sağlar. Örneğin Box gibi bir uygulama ortamınıza yoğun bir şekilde kullanılıyorsa, ek denetimler uygulamak mantıklı olur. Hukuk veya finans departmanınız hassas iş verileri için belirli bir SaaS uygulaması kullanıyorsa, bu uygulamalara fazladan koruma hedeflebilirsiniz.
+Ortamınıza belirli SaaS uygulamalarına ek izleme ve denetimler uygulamak iyi bir uygulama olabilir. Bulut için Defender uygulamaları bunu gerçekleştirmene olanak sağlar. Örneğin Box gibi bir uygulama ortamınıza yoğun bir şekilde kullanılıyorsa, ek denetimler uygulamak mantıklı olur. Hukuk veya finans departmanınız hassas iş verileri için belirli bir SaaS uygulaması kullanıyorsa, bu uygulamalara fazladan koruma hedeflebilirsiniz.
 
 Örneğin, bu tür yerleşik anormal algılama ilkesi şablonlarıyla Box ortamınızı koruyabilirsiniz:
 
@@ -88,15 +88,15 @@ Ortamınıza belirli SaaS uygulamalarına ek izleme ve denetimler uygulamak iyi 
 
 Bunlar örneklerdir. Ek ilke şablonları düzenli olarak eklenir. Belirli uygulamalara ek koruma uygulama örnekleri için bkz [. Bağlı uygulamaları koruma](/cloud-app-security/protect-connected-apps).
 
-[Bulut Uygulamaları için Defender'ın Box](/cloud-app-security/protect-box) ortamınızı korumaya nasıl yardımcı olduğu, Box'ta iş verilerinizi ve hassas verilerle diğer uygulamaları korumanıza yardımcı olacak denetim türlerini gösterir.
+[Uygulama Bulut için Defender, Box](/cloud-app-security/protect-box) ortamınızı korumaya nasıl yardımcı olur? Box'ta ve diğer uygulamalarda hassas verilerle iş verilerinizi korumanıza yardımcı olacak denetim türlerini gösterir.
 
 ## <a name="configure-data-loss-prevention-dlp-to-help-comply-with-data-protection-regulations"></a>Veri koruma düzenlemelerine uymaya yardımcı olmak için veri kaybı önleme (DLP) ayarlarını yapılandırma
 
-Bulut Uygulamaları için Defender, uyumluluk düzenlemelerine ilişkin korumayı yapılandırmak için değerli bir araç olabilir. Bu durumda, bir düzenlemenin uygulandığı belirli verileri aramanız ve her ilkeyi uygun önlemleri alacak şekilde yapılandırmanız için belirli ilkeler oluşturabilirsiniz.
+Bulut için Defender Uygulamaları uyumluluk düzenlemelerine karşı korumayı yapılandırmak için değerli bir araç olabilir. Bu durumda, bir düzenlemenin uygulandığı belirli verileri aramanız ve her ilkeyi uygun önlemleri alacak şekilde yapılandırmanız için belirli ilkeler oluşturabilirsiniz.
 
 Aşağıdaki çizimde ve tabloda, Genel Veri Koruma Yönetmeliğine (GDPR) uymak üzere yapılandırılan ilkelere çeşitli örnekler verilmiştir. Bu örneklerde, ilkeler belirli verileri aramada kullanılır. Verilerin duyarlılığına bağlı olarak, her ilke uygun önlemleri alacak şekilde yapılandırılır.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/mcas-dlp.png" alt-text="Veri kaybını önlemeye yönelik Bulut Uygulamaları için Örnek Defender ilkeleri." lightbox="../../media/microsoft-365-policies-configurations/mcas-dlp.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/mcas-dlp.png" alt-text="Veri Bulut için Defender önleme sayfası için en iyi uygulama ilkeleri" lightbox="../../media/microsoft-365-policies-configurations/mcas-dlp.png":::
 
 |Koruma düzeyi|Örnek ilkeler|
 |---|---|
@@ -107,4 +107,4 @@ Aşağıdaki çizimde ve tabloda, Genel Veri Koruma Yönetmeliğine (GDPR) uymak
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bulut Uygulamaları için Defender'ı kullanma hakkında daha fazla bilgi için bkz. [Bulut Uygulamaları için Microsoft Defender belgeleri](//cloud-app-security/).
+Bulut için Defender Uygulamalarını kullanma hakkında daha fazla bilgi için bkz[. Microsoft Defender for Cloud Apps bakın](//cloud-app-security/).

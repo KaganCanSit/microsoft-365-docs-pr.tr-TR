@@ -21,23 +21,23 @@ ms.topic: article
 ms.custom:
 - migrationguides
 - admindeeplinkDEFENDER
-ms.date: 11/30/2021
+ms.date: 04/01/2022
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
-ms.openlocfilehash: aa0bd45c1765e2aa794e00e437bf08a63d1d742f
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 33ad09cb87c80aecbaa72ebe9fb2b6523962498f
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64476741"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634437"
 ---
 # <a name="switch-to-microsoft-defender-for-endpoint---phase-1-prepare"></a>Geçiş Uç Nokta için Microsoft Defender - Aşama 1: Hazırlık
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-| ![Aşama 1: Hazırlık.](images/phase-diagrams/prepare.png#lightbox)<br/>Aşama 1: Hazırlama | [![Aşama 2: Ayarlama](images/phase-diagrams/setup.png#lightbox)](switch-to-mde-phase-2.md)<br/>[Aşama 2: Ayarlama](switch-to-mde-phase-2.md) | [![Aşama 3: Ekleme](images/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Aşama 3: Ekleme](switch-to-mde-phase-3.md) |
+| ![Aşama 1: Hazırlık.](images/phase-diagrams/prepare.png#lightbox)<br/>Aşama 1: Hazırlık | [![Aşama 2: Kurulum](images/phase-diagrams/setup.png#lightbox)](switch-to-mde-phase-2.md)<br/>[Aşama 2: Kurulum](switch-to-mde-phase-2.md) | [![Aşama 3: Katılım](images/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Aşama 3: Katılım](switch-to-mde-phase-3.md) |
 |--|--|--|
 |*Buradasınız!*| | |
 
@@ -63,8 +63,6 @@ Yardıma mı ihtiyacınız var? Çözüm sağlayıcınızın belgelerine bakın.
 ### <a name="make-sure-your-organizations-devices-are-up-to-date"></a>Kuruluş cihazlarının güncel olduğundan emin olun
 
 Kuruluş cihazlarınızı güncelleştirmek için yardıma mı ihtiyacınız var? Aşağıdaki kaynaklara bakın:
-
-<br/><br/>
 
 |işletim sistemi|Kaynak|
 |---|---|
@@ -104,7 +102,9 @@ Ana Microsoft 365 Defender izinleri, temel izinler veya rol tabanlı erişim den
     Organizasyonunız bu yöntemlerden farklı bir Intune gerektiriyorsa, aşağıdaki seçeneklerden birini seçin:
 
     - [Yapılandırma Yöneticisi](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration)
+
     - [Gelişmiş grup ilkesi Yönetimi](/microsoft-desktop-optimization-pack/agpm)
+    
     - [Windows Admin Center](/windows-server/manage/windows-admin-center/overview)
 
 3. Portala erişim Microsoft 365 Defender. (Yardım mı gerekiyor? Bkz [. RBAC kullanarak portal erişimini yönetme](rbac.md).
@@ -113,17 +113,14 @@ Ana Microsoft 365 Defender izinleri, temel izinler veya rol tabanlı erişim den
 
 Cihazlarınız ve Uç Nokta için Defender arasında iletişimi etkinleştirmek için, proxy ve İnternet ayarlarını yapılandırabilirsiniz. Aşağıdaki tabloda, çeşitli işletim sistemleri ve özellikler için ara sunucu ve İnternet ayarlarınızı yapılandırmak üzere kullanabileceğiniz kaynakların bağlantıları yer alır:
 
-<br/><br/>
-
 |Özellikler|İşletim Sistemi|Kaynaklar|
 |---|---|---|
 |[Uç nokta algılama ve yanıt](overview-endpoint-detection-response.md) (EDR)|[Windows 10](/windows/release-health/release-information) veya sonrası<br/><br/>Windows Server 2022 <br/><br/>[Windows Server 2019](/windows/release-health/status-windows-10-1809-and-windows-server-2019)<br/><br/>[Windows Server 1803 veya sonrası](/windows-server/get-started/whats-new-in-windows-server-1803)|[Makine ara sunucusunu ve internet bağlantısı ayarlarını yapılandırma](configure-proxy-internet.md)|
 |EDR|[Windows Server 2016](/windows/release-health/status-windows-10-1607-and-windows-server-2016)<br/><br/>[Windows Server 2012 R2](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2)<br/><br/>[Windows Server 2008 R2 SP1](/windows/release-health/status-windows-7-and-windows-server-2008-r2-sp1)<br/><br/>[Windows 8.1](/windows/release-health/status-windows-8.1-and-windows-server-2012-r2)<br/><br/>[Windows 7 SP1](/windows/release-health/status-windows-7-and-windows-server-2008-r2-sp1)|[Proxy ve internet bağlantısı ayarlarını yapılandırma](onboard-downlevel.md#configure-proxy-and-internet-connectivity-settings)|
 |EDR|macOS (sistem [gereksinimlerine bakın)](microsoft-defender-endpoint-mac.md)|[macOS'ta Uç Nokta için Defender: Ağ bağlantıları](microsoft-defender-endpoint-mac.md#network-connections)|
-|[Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md)|[Windows 10](/windows/release-health/release-information) <br/><br/> [Windows Server 2019](/windows/release-health/status-windows-10-1809-and-windows-server-2019)<br/><br/> Windows Server 2022 <br/><br/> [Windows Server 1803 veya sonrası](/windows-server/get-started/whats-new-in-windows-server-1803) <br/><br/> [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)|[Ağ bağlantılarını yapılandırma Microsoft Defender Virüsten Koruma doğrulama](configure-network-connections-microsoft-defender-antivirus.md)|
+|[Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md)|[Windows 10](/windows/release-health/release-information) veya sonrası <br/><br/>Windows Server 2022 <br/><br/> [Windows Server 2019](/windows/release-health/status-windows-10-1809-and-windows-server-2019)<br/><br/> [Windows Server 1803 veya sonrası](/windows-server/get-started/whats-new-in-windows-server-1803) <br/><br/> [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)|[Microsoft Defender Virüsten Koruma ağ bağlantılarını yapılandırın ve doğrulayın](configure-network-connections-microsoft-defender-antivirus.md)|
 |Virüsten koruma|macOS (sistem [gereksinimlerine bakın)](microsoft-defender-endpoint-mac.md)|[macOS'ta Uç Nokta için Defender: Ağ bağlantıları](microsoft-defender-endpoint-mac.md#network-connections)|
 |Virüsten koruma|Linux (sistem [gereksinimlerine bakın](microsoft-defender-endpoint-linux.md#system-requirements))|[Linux'ta Uç Nokta için Defender: Ağ bağlantıları](microsoft-defender-endpoint-linux.md#network-connections)|
-
 
 ## <a name="next-step"></a>Sonraki adım
 

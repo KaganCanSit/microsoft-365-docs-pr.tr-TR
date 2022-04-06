@@ -1,6 +1,6 @@
 ---
-title: Uç Nokta için Microsoft Defender'da Microsoft 365 Defender
-description: Yeni gelen ve Microsoft Defender Güvenlik Merkezi hakkında bilgi Microsoft 365 Defender
+title: Microsoft 365 Defender'da Uç Nokta için Microsoft Defender
+description: Microsoft Defender Güvenlik Merkezi Microsoft 365 Defender değişiklikleri hakkında bilgi edinin
 keywords: Microsoft 365 Defender, Office 365 için Microsoft Defender, Uç Nokta için Microsoft Defender, MDO, MDE, güvenlik portalı, defender güvenlik portalı ile çalışmaya başlama
 ms.prod: microsoft-365-enterprise
 ms.mktglfcycl: deploy
@@ -19,169 +19,169 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: fa9833572a57e0ea81978f25a7d8d34db068109a
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: bac70dd864e1ab72fae5fbefa2a8da12cce4f6e7
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64501123"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64667240"
 ---
-# <a name="microsoft-defender-for-endpoint-in-microsoft-365-defender"></a>Uç Nokta için Microsoft Defender'da Microsoft 365 Defender
+# <a name="microsoft-defender-for-endpoint-in-microsoft-365-defender"></a>Microsoft 365 Defender'da Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
 - [Microsoft 365 Defender](microsoft-365-defender.md)
 - [Uç Nokta için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 ## <a name="quick-reference"></a>Hızlı başvuru
 
-Resimde ve aşağıdaki tabloda, tablo arasında gezinti bölmesindeki Microsoft Defender Güvenlik Merkezi Microsoft 365 Defender.
+Aşağıdaki resimde ve tabloda, Microsoft Defender Güvenlik Merkezi ile Microsoft 365 Defender arasındaki gezinti değişiklikleri listelenmiştir.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="../../media/mde-m3d-security-center.png" alt-text="Portalda yeni Microsoft 365 Defender konumlar" lightbox="../../media/mde-m3d-security-center.png":::
+> :::image type="content" source="../../media/mde-m3d-security-center.png" alt-text="Microsoft 365 Defender portalındaki yeni konumlar" lightbox="../../media/mde-m3d-security-center.png":::
 
 | Microsoft Defender Güvenlik Merkezi | Microsoft 365 Defender |
 |---------|---------|
-| Panolar <ul><li>Güvenlik İşlemleri</li><li>Threat Analytics</li></ul>  |Home <ul><li>Tehdit analizi</li></ul>   |
+| Pano <ul><li>Güvenlik İşlemleri</li><li>Tehdit Analizi</li></ul>  |Home <ul><li>Tehdit analizi</li></ul>   |
 | Olaylar | Olaylar & uyarıları |
 | Cihaz envanteri | Cihaz envanteri |
-| Uyarılar sırası | Olaylar & uyarıları |
-| Otomatik soruşturmalar | İşlem merkezi |
-| Gelişmiş avcılık örneği | Avlama |
+| Uyarı sırası | Olaylar & uyarıları |
+| Otomatik araştırma | İşlem merkezi |
+| Gelişmiş avcılık örneği | Avcı -lık |
 | Raporlar | Raporlar |
-| API'& ortakları | API'& ortakları |
+| İş ortakları & API'leri | İş ortakları & API'leri |
 | Tehdit & Güvenlik Açığı Yönetimi | Güvenlik açığı yönetimi |
 | Değerlendirme ve öğreticiler | Değerlendirme & öğreticileri |
 | Yapılandırma yönetimi | Yapılandırma yönetimi |
 | Ayarlar | Ayarlar | 
 
-Gelişmiş özellik[, Microsoft 365 Defender](microsoft-365-defender.md#the-microsoft-365-defender-portal) e-posta<a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">https://security.microsoft.com</a>, işbirliği, kimlik ve cihaz tehditlerini koruyan, algılayan, araştıran ve yanıtlayan güvenlik özelliklerini bir araya gösterir. Bu, uyumluluk merkezi ve Güvenlik ve Uyumluluk Merkezi gibi mevcut Microsoft güvenlik portallarından Microsoft Defender Güvenlik Merkezi Office 365 bir araya & getirir.
+'daki <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">https://security.microsoft.com</a> geliştirilmiş [Microsoft 365 Defender](microsoft-365-defender.md#the-microsoft-365-defender-portal), e-posta, işbirliği, kimlik ve cihaz tehditlerini koruyan, algılayan, araştıran ve yanıt veren güvenlik özelliklerini birleştirir. Bu, Microsoft Defender Güvenlik Merkezi ve Office 365 Güvenlik & Uyumluluk merkezi de dahil olmak üzere mevcut Microsoft güvenlik portallarından işlevleri bir araya getirir.
 
-Bu makale, bu makalede Microsoft Defender Güvenlik Merkezi bazı değişiklikler ve iyileştirmeler açıklanmıştır Microsoft 365 Defender. Bununla birlikte, dikkatlenmesi gereken bazı yeni ve güncelleştirilmiş öğeler vardır.
+Microsoft Defender Güvenlik Merkezi hakkında bilgi sahibiyseniz, bu makale Microsoft 365 Defender bazı değişiklikleri ve geliştirmeleri açıklamaya yardımcı olur. Ancak, dikkat etmeniz gereken bazı yeni ve güncelleştirilmiş öğeler vardır.
 
-Geçmişten bu [Microsoft Defender Güvenlik Merkezi](/windows/security/threat-protection/microsoft-defender-atp/portal-overview), ilk ev Uç Nokta için Microsoft Defender. Enterprise ekiplerinin olası gelişmiş kalıcı tehdit etkinlikleri veya veri ihlalleri uyarılarını izlemek ve buna yardımcı olmak için bu sistemi kullandığına dikkat edin. Portal sayısını azaltmaya yardımcı olmak için, Microsoft 365 Defender Microsoft kimlikleriniz, verileriniz, cihazlarınız, uygulamalarınız ve altyapınız genelinde güvenliği izleme ve yönetmeye de ev olacaktır.
+Tarihsel olarak[, Microsoft Defender Güvenlik Merkezi](/windows/security/threat-protection/microsoft-defender-atp/portal-overview) Uç Nokta için Microsoft Defender için ev olmuştur. Enterprise güvenlik ekipleri bunu olası gelişmiş kalıcı tehdit etkinliği veya veri ihlalleri uyarılarını izlemek ve yanıtlamaya yardımcı olmak için kullandı. Portal sayısını azaltmaya yardımcı olmak için Microsoft 365 Defender Microsoft kimlikleriniz, verileriniz, cihazlarınız, uygulamalarınız ve altyapınız genelinde güvenliği izlemek ve yönetmek için bir ev olacaktır.
 
-Uç Nokta için Microsoft Defender'daki Microsoft 365 Defender, aynı aynı güvenlik hizmet sağlayıcılarına [(MSSP)](/windows/security/threat-protection/microsoft-defender-atp/grant-mssp-access) aynı şekilde erişim verilmesini [Microsoft Defender Güvenlik Merkezi](mssp-access.md).
+Microsoft 365 Defender'daki Uç Nokta için Microsoft Defender, [yönetilen güvenlik hizmeti sağlayıcılarına (MSSP) Microsoft Defender Güvenlik Merkezi](/windows/security/threat-protection/microsoft-defender-atp/grant-mssp-access) [aynı şekilde erişim verilmesini](mssp-access.md) destekler.
 
 > [!IMPORTANT]
-> Yeni abonelikte ne Microsoft 365 Defender geçerli aboneliklerinize bağlıdır. Örneğin, e-posta adresi lisansınız Office 365 için Microsoft Defender E-posta & bölümü gösterilmez.
+> Microsoft 365 Defender'da gördükleriniz geçerli aboneliklerinize bağlıdır. Örneğin, Office 365 için Microsoft Defender lisansınız yoksa E-posta & İşbirliği bölümü gösterilmez.
 
 > [!Note]
-> Microsoft 365 Defender şu için kullanılamaz:
+> Microsoft 365 Defender şu şekilde kullanılamaz:
 >- ABD Government Community Cloud (GCC)
 >- ABD Government Community Cloud Yüksek (GCC Yüksek)
->- ABD Savunma Bölümü
->- Ticari lisanslara sahip tüm ABD kamu kurumları
+>- ABD Savunma Bakanlığı
+>- Ticari lisansa sahip tüm ABD kamu kurumları
 
-Microsoft 365 Defender'Microsoft 365 Defender bakın<a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">https://security.microsoft.com</a>.
+Microsoft 365 Defender bir <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">https://security.microsoft.com</a>göz atın.
 
-Avantajlar hakkında daha fazla bilgi edinmek için: [Avantajlara genel Microsoft 365 Defender](microsoft-365-defender.md)
+Avantajlar hakkında daha fazla bilgi edinin: [Microsoft 365 Defender genel bakış](microsoft-365-defender.md)
 
-## <a name="whats-changed"></a>Neler değişti
+## <a name="whats-changed"></a>Değişenler
 
-Bu tablo, iki tablo arasındaki değişikliklerin hızlı bir Microsoft Defender Güvenlik Merkezi Microsoft 365 Defender.
+Bu tablo, Microsoft Defender Güvenlik Merkezi ile Microsoft 365 Defender arasındaki değişikliklerin hızlı bir başvurusudur.
 
 ### <a name="alerts-and-actions"></a>Uyarılar ve eylemler
 
-| Alan | Değişiklik açıklaması |
+| Alan | Değişikliğin açıklaması |
 |---------|---------|
-| [Olaylar & uyarıları](incidents-overview.md)  | Daha Microsoft 365 Defender, uç noktalarınız, e-postanız ve kimlikleriniz genelinde olayları ve uyarıları yönetebilirsiniz. İlgili olayları daha kolay bulamanıza yardımcı olmak için deneyimi yakınsa kullandık. Daha fazla bilgi için bkz. [Olaylara Genel Bakış](incidents-overview.md).   |
-| [Avlama](advanced-hunting-overview.md)  |  Kimlik içermek üzere Uç Nokta için Microsoft Defender algılama kurallarının değiştirilmesi, e-posta tablolarını otomatik olarak başka bir Microsoft 365 Defender. İlgili uyarılar aynı zamanda son Microsoft 365 Defender. Bu değişiklikler hakkında daha fazla ayrıntı için Özel algılama [kurallarını geçirme makalesi'ne bakın](advanced-hunting-migrate-from-mde.md#migrate-custom-detection-rules). <br><br>Gelişmiş `DeviceAlertEvents` av tablosu şu anda Microsoft 365 Defender. E-postada cihaza özgü uyarı Microsoft 365 Defender sorgulamak için, `AlertInfo` `AlertEvidence` ve tabloları kullanarak farklı bir kaynak kümesinden daha fazla bilgi barındırabilirsiniz. [DeviceAlertEvents olmadan Yazma sorgularını takip edin ve cihazla ilgili bir sonraki sorguyu oluşturun](advanced-hunting-migrate-from-mde.md#write-queries-without-devicealertevents).|
-|[İşlem merkezi](m365d-action-center.md)    | Otomatik soruşturma ve düzeltme eylemlerini takip eden bekleyen ve tamamlanmış eylemleri listeler. Önceden, İşlem merkezi yalnızca cihazlarda Microsoft Defender Güvenlik Merkezi düzeltme eylemleri için bekleyen ve tamamlanmış eylemler listelenirken, Otomatik soruşturmalar uyarıları ve durumu listeledi. Geliştirilmiş Microsoft 365 Defender Merkezi e-posta, cihazlar ve kullanıcılar genelinde düzeltme eylemlerini ve soruşturmalarını tek bir konumda bir araya getirir.  |
-| [Tehdit analizi](threat-analytics.md) |  Daha kolay bulma ve kullanma için gezinti çubuğunun en üstüne taşındı. Şimdi hem uç noktalar hem de e-posta ve işbirliği için tehdit bilgilerini de içerir.    |
+| [Olaylar & uyarıları](incidents-overview.md)  | Microsoft 365 Defender tüm uç noktalarınızda, e-postanızda ve kimliklerinizde olayları ve uyarıları yönetebilirsiniz. İlgili olayları daha kolay bulmanıza yardımcı olmak için bu deneyimi yakınsamamızı sağladık. Daha fazla bilgi için bkz [. Olaylara Genel Bakış](incidents-overview.md).   |
+| [Avcı -lık](advanced-hunting-overview.md)  |  Uç Nokta için Microsoft Defender'de oluşturulan özel algılama kurallarını kimlik ve e-posta tablolarını içerecek şekilde değiştirmek, bunları otomatik olarak Microsoft 365 Defender taşır. İlgili uyarılar Microsoft 365 Defender'da da görünür. Bu değişiklikler hakkında daha fazla ayrıntı için [Bkz. Özel algılama kurallarını geçirme](advanced-hunting-migrate-from-mde.md#migrate-custom-detection-rules). <br><br>Gelişmiş `DeviceAlertEvents` avcılık tablosu Microsoft 365 Defender'de kullanılamaz. Microsoft 365 Defender'da cihaza özgü uyarı bilgilerini sorgulamak için ve `AlertEvidence` tablolarını kullanarak `AlertInfo` çeşitli kaynak kümelerinden daha fazla bilgi alabilirsiniz. [DeviceAlertEvents olmadan Yazma sorgularını](advanced-hunting-migrate-from-mde.md#write-queries-without-devicealertevents) izleyerek cihazla ilgili bir sonraki sorgunuzu oluşturma.|
+|[İşlem merkezi](m365d-action-center.md)    | Otomatik araştırmalardan ve düzeltme eylemlerinden sonra gerçekleştirilen bekleyen ve tamamlanan eylemleri listeler. Daha önce, Microsoft Defender Güvenlik Merkezi İşlem merkezi yalnızca cihazlarda gerçekleştirilen düzeltme eylemleri için bekleyen ve tamamlanan eylemler listelenirken Otomatik araştırmalarda uyarılar ve durum listelenir. geliştirilmiş Microsoft 365 Defender İşlem merkezi, e-posta, cihazlar ve kullanıcılar genelinde düzeltme eylemlerini ve araştırmalarını tek bir konumda bir araya getirir.  |
+| [Tehdit analizi](threat-analytics.md) |  Daha kolay bulma ve kullanım için gezinti çubuğunun en üstüne taşındı. Şimdi hem uç noktalar hem de e-posta ve işbirliği için tehdit bilgilerini içerir.    |
 
 ### <a name="endpoints"></a> Uç Noktaları
 
-| Alan | Değişiklik açıklaması |
+| Alan | Değişikliğin açıklaması |
 |---------|---------|
-|Arama   |  Arama çubuğu sayfanın en üstünde yer alıyor. Siz yazarak öneriler sağlanır. Uç Nokta için Defender ve Kimlik için Defender'da aşağıdaki varlıklar arasında arama yapabilirsiniz: <br><br> - **Cihazlar** - Hem Uç Nokta için Defender hem de Kimlik için Defender için de destekler. Hatta, örneğin "içerir" kullanarak ana bilgisayar adının bir bölümünü aramak için arama işleçlerini bile kullanabilirsiniz. <br><br> - **Kullanıcılar** - Hem Uç Nokta için Defender hem de Kimlik için Defender için de destekler. <br><br> - **Dosyalar, IP'ler ve URL'ler** - Uç Nokta için Defender'dakiyle aynı özelliklerdir. <br> NOT: *IP ve URL aramaları tam olarak eştir ve arama sonuçları sayfasında görünmez; doğrudan varlık sayfasına doğru iler.  <br><br> - **TVM** - Uç Nokta için Defender'dakiyle aynı özelliklerdir (güvenlik açıkları, yazılım ve öneriler). <br><br>  İyileştirilmiş arama sonuçları sayfası, tüm varlıklardan sonuçları merkezi hale gösterir.  |
-|[Pano](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)   |  Bu, güvenlik işlemleri panonuz. Kaç etkin uyarının tetiklenen, hangi cihazların risk altında olduğu, hangi kullanıcıların risk altında olduğu ve uyarılar, cihazlar ve kullanıcılar için önem düzeyi hakkında genel bir bakışa bakın. Ayrıca herhangi bir aygıtlarda algılayıcı sorunu olup kontrol edilemedi, genel hizmet durumunuz ve çözümlenmemiş uyarıların nasıl algılandığından emin olun. |
+|Arama   |  Arama çubuğu sayfanın en üstünde yer alır. Siz yazarken öneriler sağlanır. Uç Nokta için Defender ve Kimlik için Defender'da aşağıdaki varlıklar arasında arama yapabilirsiniz: <br><br> - **Cihazlar** - Hem Uç Nokta için Defender hem de Kimlik için Defender için desteklenir. Hatta arama işleçlerini de kullanabilirsiniz. Örneğin, bir konak adının bir bölümünü aramak için "contains" kullanabilirsiniz. <br><br> - **Kullanıcılar** - Hem Uç Nokta için Defender hem de Kimlik için Defender için desteklenir. <br><br> - **Dosyalar, IP'ler ve URL'ler** - Uç Nokta için Defender'daki özelliklerle aynıdır. <br> NOT: *IP ve URL aramaları tam olarak eşleşir ve arama sonuçları sayfasında görünmez; doğrudan varlık sayfasına yönlendirir.  <br><br> - **TVM** - Uç Nokta için Defender ile aynı özellikler (güvenlik açıkları, yazılımlar ve öneriler). <br><br>  Gelişmiş arama sonuçları sayfası, tüm varlıklardaki sonuçları merkezileştirir.  |
+|[Pano](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)   |  Bu, güvenlik işlemleri panonuzdur. Kaç etkin uyarının tetiklendiğine, hangi cihazların risk altında olduğunu, hangi kullanıcıların risk altında olduğunu ve uyarılar, cihazlar ve kullanıcılar için önem derecesine genel bakış bölümüne bakın. Ayrıca herhangi bir cihazda algılayıcı sorunları olup olmadığını, genel hizmet durumunuzu ve çözümlenmemiş uyarıların nasıl algılandığını da görebilirsiniz. |
 |Cihaz envanteri | Değişiklik yok. |
-|[Güvenlik açığı yönetimi](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt)    |    Ad, gezinti bölmesine sığacak şekilde kısaltıldı. Tüm sayfalar altta olacak şekilde Tehdit ve Güvenlik Açığı Yönetimi bölümle aynıdır.     |
+|[Güvenlik açığı yönetimi](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt)    |    Ad, gezinti bölmesine sığacak şekilde kısaltıldı. Tüm sayfaların altında olduğu Tehdit ve Güvenlik Açığı Yönetimi bölümüyle aynıdır.     |
 | İş ortakları ve API'ler | Değişiklik yok. |
 | Değerlendirmeler & öğreticileri    |     Yeni test ve öğrenme özellikleri.     |
 | Yapılandırma yönetimi   |  Değişiklik yok.  |
 
 > [!NOTE]
-> **Otomatik soruşturma ve düzeltme artık** olayın bir parçası. Olay Araştırma sekmesinde Otomatik araştırma ve düzeltme **olaylarını** > görebilirsiniz.
+> **Otomatik araştırma ve düzeltme** artık olayların bir parçasıdır. Otomatik araştırma ve düzeltme olaylarını **Olay > Araştırma** sekmesinde görebilirsiniz.
 
 > [!TIP]
-> Cihaz araması Uç Noktalar ve Arama'dan > yapılır.
+> Cihaz araması Uç Noktalar > Arama'dan yapılır.
 
 ### <a name="access-and-reporting"></a>Erişim ve raporlama
 
-| Alan | Değişiklik açıklaması |
+| Alan | Değişikliğin açıklaması |
 |---------|---------|
-| Raporlar  | Tehdit koruması, Cihaz durumu ve uyumluluğu & Korumasız cihazlar da dahil olmak üzere uç noktalar ve e-postaya yönelik raporlara bakın. |
-| Hizmet Durumu  |  Şu anda sayfanın "Hizmet durumu" sayfasına [Microsoft 365 yönetim merkezi](https://admin.microsoft.com/). |
-| Ayarlar |  Daha fazla bilgi, uç Microsoft 365 Defender, E-posta ve &, Kimlikler ve Cihaz bulma ayarlarınızı yönetin.   |
+| Raporlar  | Tehdit koruması, Cihaz durumu ve uyumluluğu ve Güvenlik açığı bulunan cihazlar dahil olmak üzere uç noktalar ve e-posta & işbirliği raporlarına bakın. |
+| Hizmet Durumu  |  Şu anda [Microsoft 365 yönetim merkezi](https://admin.microsoft.com/) "Hizmet durumu" sayfasına bağlanır. |
+| Ayarlar |  Microsoft 365 Defender, Uç Noktalar, E-posta & işbirliği, Kimlikler ve Cihaz bulma ayarlarınızı yönetin.   |
 
-## <a name="microsoft-365-security-navigation-and-capabilities"></a>Microsoft 365 gezintisi ve özellikleri hakkında
+## <a name="microsoft-365-security-navigation-and-capabilities"></a>Microsoft 365 güvenlik gezintisi ve özellikleri
 
-Sol gezinti veya hızlı başlatma çubuğu tanıdık gelecek. Bununla birlikte, portalda bazı yeni ve güncelleştirilmiş Microsoft 365 Defender vardır. 
+Sol gezinti veya hızlı başlatma çubuğu tanıdık görünecektir. Ancak, Microsoft 365 Defender portalında bazı yeni ve güncelleştirilmiş öğeler vardır. 
 
 ### <a name="incidents-and-alerts"></a>Olaylar ve uyarılar
 
-E-postanız, cihazlarınız ve kimlikleriniz arasında olay ve uyarı yönetimini bir araya getirir. Uyarı sayfası, ayrıntılı bir hikaye oluşturmak için saldırı sinyallerini birleştirerek uyarının tam bağlamını sağlar. Yeni, birleşik bir deneyim, artık iş yükleri genelinde uyarıların tutarlı bir görünümünü bir araya getirir. Hızlı bir şekilde triyaksıt atabilirsiniz, araştırabilirsiniz ve etkili bir işlem atabilirsiniz.
+Olay ve uyarı yönetimini e-postanız, cihazlarınız ve kimlikleriniz arasında bir araya getirir. Uyarı sayfası, ayrıntılı bir hikaye oluşturmak için saldırı sinyallerini birleştirerek uyarıya tam bağlam sağlar. Yeni, birleşik bir deneyim, iş yükleri genelinde uyarıların tutarlı bir görünümünü bir araya getiriyor. Hızlı bir şekilde önceliklendirme yapabilir, araştırabilir ve etkili eylemler gerçekleştirebilirsiniz.
 
-- [Olaylar hakkında daha fazla bilgi](incidents-overview.md)
-- [Uyarıları yönetme hakkında daha fazla bilgi](investigate-alerts.md)
+- [Olaylar hakkında daha fazla bilgi edinin](incidents-overview.md)
+- [Uyarıları yönetme hakkında daha fazla bilgi edinin](investigate-alerts.md)
 
-:::image type="content" source="../../media/converge-1-alerts-and-actions.png" alt-text="Portalda Uyarılar ve Eylemler hızlı başlatma Microsoft 365 Defender başlatma" lightbox="../../media/converge-1-alerts-and-actions.png":::
+:::image type="content" source="../../media/converge-1-alerts-and-actions.png" alt-text="Microsoft 365 Defender portalındaki Uyarılar ve Eylemler hızlı başlatma çubuğu" lightbox="../../media/converge-1-alerts-and-actions.png":::
 
-### <a name="hunting"></a>Avlama
+### <a name="hunting"></a>Avcı -lık
 
-Gelişmiş av sorgularını kullanarak uç noktalarınız genelinde tehdit, kötü amaçlı yazılım ve kötü amaçlı Office 365 önceden arama, posta kutuları ve daha fazlasını [Office 365 arama.](advanced-hunting-overview.md) Bu güçlü sorgular, hem bilinen hem de potansiyel tehditlere yönelik tehdit göstergelerini ve varlıkları bulmak ve gözden geçirmek için kullanılabilir.
+[Gelişmiş tehdit avcılığı sorgularını](advanced-hunting-overview.md) kullanarak uç noktalarınızdaki tehditleri, kötü amaçlı yazılımları ve kötü amaçlı etkinlikleri, Office 365 posta kutularını ve daha fazlasını proaktif olarak arayın. Bu güçlü sorgular, hem bilinen hem de olası tehditler için tehdit göstergelerini ve varlıkları bulmak ve gözden geçirmek için kullanılabilir.
 
-[İhlal](custom-detection-rules.md) etkinliğine ve hatalı yapılandırılmış cihazlara işaret eden olayları önceden izlemenizi yardımcı olmak için gelişmiş arama sorgularından özel algılama kuralları oluşturabilirsiniz.
+[Özel algılama kuralları](custom-detection-rules.md) , ihlal etkinliğinin ve yanlış yapılandırılmış cihazların göstergesi olabilecek olayları proaktif olarak izlemenize yardımcı olmak için gelişmiş tehdit avcılığı sorgularından oluşturulabilir.
 
 
 ### <a name="action-center"></a>İşlem merkezi
 
-İşlem merkezi, otomatik soruşturma ve yanıt özellikleri tarafından oluşturulan incelemeleri gösterir. Bu otomatik, kendi kendine yardım eden Microsoft 365 Defender ekiplere, belirli olayları otomatik olarak yanıt vermede yardımcı olabilir.
+İşlem merkezi, otomatik araştırma ve yanıt özellikleri tarafından oluşturulan araştırmaları gösterir. Microsoft 365 Defender'da otomatik ve kendi kendini iyileştiren bu özellik, belirli olaylara otomatik olarak yanıt vererek güvenlik ekiplerine yardımcı olabilir.
 
-[İşlem merkezi hakkında daha fazla bilgi edin.](m365d-action-center.md)
+[İşlem merkezi hakkında daha fazla bilgi edinin](m365d-action-center.md).
 
-### <a name="threat-analytics"></a>Threat Analytics
+### <a name="threat-analytics"></a>Tehdit Analizi
 
-Uzman Microsoft güvenlik araştırmacılarından tehdit zekası elde edin. Threat Analytics, ortaya çıkan tehditlere karşı güvenlik ekiplerinin daha verimli çalışmalarına yardımcı olur. Threat Analytics şunları içerir:
+Uzman Microsoft güvenlik araştırmacılarından tehdit bilgileri alın. Tehdit Analizi, güvenlik ekiplerinin yeni ortaya çıkan tehditlerle karşılaştığında daha verimli olmasını sağlar. Tehdit Analizi şunları içerir:
 
-- E-postayla ilgili algılamalar ve risk azaltmaları Office 365 için Microsoft Defender. Bu, uç nokta verilerinden zaten kullanılabilen uç nokta verilerine Uç Nokta için Microsoft Defender.
+- Office 365 için Microsoft Defender e-postayla ilgili algılamalar ve azaltmalar. Bu, Uç Nokta için Microsoft Defender'dan sağlanan uç nokta verilerine ek olarak sağlanır.
 - Tehditlerle ilgili olaylar görünümü.
-- Raporlarda işlemlenebilir bilgileri hızla tanımlamak ve kullanmak için gelişmiş deneyim.
+- Raporlarda eyleme dönüştürülebilir bilgileri hızla tanımlamak ve kullanmak için gelişmiş deneyim.
 
-Tehdit çözümlemelerine, Microsoft 365 Defender'ta sol üst gezinti çubuğundan veya kuruluş için en çok tehdit gösteren ayrılmış bir pano kartından erişebilirsiniz.
+Tehdit analizine Microsoft 365 Defender sol üst gezinti çubuğundan veya kuruluşunuz için en önemli tehditleri gösteren ayrılmış bir pano kartından erişebilirsiniz.
 
-Tehdit analizi ile ortaya çıkan [tehditleri izleme ve yanıtlama hakkında daha fazla bilgi edinin](./threat-analytics.md).
+[Tehdit analiziyle yeni ortaya çıkan tehditleri izleme ve yanıtlama](./threat-analytics.md) hakkında daha fazla bilgi edinin.
 
 ### <a name="endpoints-section"></a>Uç noktalar bölümü
 
-Kuruluşta uç noktaların güvenliğini görüntüleme ve yönetme. Bu e-Microsoft Defender Güvenlik Merkezi, tanıdık gelecek.
+Kuruluşunuzdaki uç noktaların güvenliğini görüntüleyin ve yönetin. Microsoft Defender Güvenlik Merkezi kullandıysanız tanıdık görünecektir.
 
-:::image type="content" source="../../media/converge-2-endpoints.png" alt-text="Yeni portalda Uç noktalar hızlı Microsoft 365 Defender çubuğu" lightbox="../../media/converge-2-endpoints.png":::
+:::image type="content" source="../../media/converge-2-endpoints.png" alt-text="Microsoft 365 Defender portalındaki Uç Noktalar hızlı başlatma çubuğu" lightbox="../../media/converge-2-endpoints.png":::
 
 ### <a name="access-and-reports"></a>Erişim ve raporlar
 
-Raporları görüntüleme, ayarlarınızı değiştirme ve kullanıcı rollerini değiştirme.
+Raporları görüntüleyin, ayarlarınızı değiştirin ve kullanıcı rollerini değiştirin.
 
-:::image type="content" source="../../media/converge-4-access-and-reporting-new.png" alt-text="Yeni portalda Access ve Raporlama Microsoft 365 Defender çubuğu" lightbox="../../media/converge-4-access-and-reporting-new.png":::
+:::image type="content" source="../../media/converge-4-access-and-reporting-new.png" alt-text="Microsoft 365 Defender portalındaki Erişim ve Raporlama hızlı oluşturma çubuğu" lightbox="../../media/converge-4-access-and-reporting-new.png":::
 
 ### <a name="siem-api-connections"></a>SIEM API bağlantıları
 
-Uç Nokta [SIEM API'si için Defender'ı kullanıyorsanız](../defender-endpoint/enable-siem-integration.md), bunu yapmaya devamabilirsiniz. API yüklemesinde, güvenlik portalında uyarı sayfasına veya olay sayfasına işaret alan yeni Microsoft 365 ekledik. Yeni API alanları LinkToMTP ve IncidentLinkToMTP'yi içerir. Daha fazla bilgi için [bkz. Hesapları Şu hesaplardan Uç Nokta için Microsoft Defender Microsoft 365 Defender](./microsoft-365-security-mde-redirection.md).
+[Uç Nokta için Defender SIEM API'sini](../defender-endpoint/enable-siem-integration.md) kullanıyorsanız, bunu yapmaya devam edebilirsiniz. API yüküne uyarı sayfasına veya Microsoft 365 güvenlik portalındaki olay sayfasına işaret eden yeni bağlantılar ekledik. Yeni API alanları LinkToMTP ve IncidentLinkToMTP'i içerir. Daha fazla bilgi için bkz. [Hesapları Uç Nokta için Microsoft Defender Microsoft 365 Defender yeniden yönlendirme](./microsoft-365-security-mde-redirection.md).
 
 ### <a name="email-alerts"></a>E-posta uyarıları
 
-Uç Nokta için Defender için e-posta uyarılarını kullanmaya devam edin. Uyarı sayfasına veya posta sayfasındaki olay sayfasına işaret alan e-postalara yeni bağlantılar Microsoft 365 Defender. Daha fazla bilgi için [bkz. Hesapları Şu hesaplardan Uç Nokta için Microsoft Defender Microsoft 365 Defender](./microsoft-365-security-mde-redirection.md).
+Uç Nokta için Defender için e-posta uyarılarını kullanmaya devam edebilirsiniz. E-postalara uyarı sayfasına veya Microsoft 365 Defender'daki olay sayfasına işaret eden yeni bağlantılar ekledik. Daha fazla bilgi için bkz. [Hesapları Uç Nokta için Microsoft Defender Microsoft 365 Defender yeniden yönlendirme](./microsoft-365-security-mde-redirection.md).
 
 ### <a name="managed-security-service-providers-mssp"></a>Yönetilen Güvenlik Hizmeti Sağlayıcıları (MSSP)
 
-Aynı gözatma oturumunda aynı anda birden çok kiracıda oturum açma şu anda birleşik portalda desteklenemli değildir. Eski Uç Nokta için Microsoft Defender [portalına](microsoft-365-security-mde-redirection.md#can-i-go-back-to-using-the-former-portal) geri dönerek, sorun çözülene kadar bu işlevselliği korumak için otomatik yeniden yönlendirmeyi geri döndürebilirsiniz.
+Aynı gözatma oturumunda aynı anda birden çok kiracıda oturum açmak şu anda birleşik portalda desteklenmemektedir. Sorun çözülene kadar bu işlevselliği korumak [için eski Uç Nokta için Microsoft Defender portalına geri dönerek](microsoft-365-security-mde-redirection.md#can-i-go-back-to-using-the-former-portal) otomatik yeniden yönlendirmeyi geri çevirebilirsiniz.
 
 ## <a name="related-information"></a>İlgili bilgiler
 
 - [Microsoft 365 Defender](microsoft-365-defender.md)
-- [Uç Nokta için Microsoft Defender'da Microsoft 365 Defender](microsoft-365-security-center-mde.md)
-- [Hesapları Uç Nokta için Microsoft Defender'tan Microsoft 365 Defender](microsoft-365-security-mde-redirection.md)
+- [Microsoft 365 Defender'da Uç Nokta için Microsoft Defender](microsoft-365-security-center-mde.md)
+- [Hesapları Uç Nokta için Microsoft Defender'dan Microsoft 365 Defender'a yönlendirme](microsoft-365-security-mde-redirection.md)

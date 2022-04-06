@@ -1,7 +1,7 @@
 ---
 title: Pano içgörüleri - Tehdit ve Güvenlik Açığı Yönetimi
 description: Güvenlik Tehdit ve Güvenlik Açığı Yönetimi, SecOps ve güvenlik yöneticilerine siber güvenlik tehditlerine karşı yardımcı olabilir ve kuruluşlarının güvenlik kullanılabilirliklerini oluşturabilir.
-keywords: Endpoint-tvm için Microsoft Defender, Endpoint-tvm panosu için Microsoft Defender, tehdit & güvenlik açığı yönetimi, Tehdit ve Güvenlik Açığı Yönetimi, risk tabanlı tehdit & güvenlik açığı yönetimi, güvenlik yapılandırması, Cihazlar için Microsoft Güvenli Puanı , pozlama puanı
+keywords: Uç Nokta için Microsoft Defender-tvm, Uç Nokta için Microsoft Defender-tvm panosu, tehdit & güvenlik açığı yönetimi, Tehdit ve Güvenlik Açığı Yönetimi, risk tabanlı tehdit & güvenlik açığı yönetimi, güvenlik yapılandırması, Cihazlar için Microsoft Güvenli Puanı, pozlama puanı
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -17,12 +17,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: fb93b179b9d342a4a0d098ddb889a94371fbabc4
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: 76eedd78e6bc6a95450a50c04d4f85b0de46db8e
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63016698"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472495"
 ---
 # <a name="dashboard-insights---threat-and-vulnerability-management"></a>Pano içgörüleri - Tehdit ve Güvenlik Açığı Yönetimi
 
@@ -30,7 +30,7 @@ ms.locfileid: "63016698"
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Tehdit ve güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
@@ -58,7 +58,7 @@ Tehdit ve Güvenlik Açığı Yönetimi panosunda neler olduğu hakkında hızl�
 
 ## <a name="threat-and-vulnerability-management-dashboard"></a>Tehdit ve güvenlik açığı yönetimi panosu
 
-:::image type="content" source="../../media/tvmdashboard.png" lightbox="../../media/tvmdashboard.png" alt-text="Cihazlar için Tehdit ve Güvenlik Açığı Yönetimi panosu.":::
+:::image type="content" source="../../media/tvmdashboard.png" alt-text="Cihazlar için Tehdit ve Güvenlik Açığı Yönetimi panosu" lightbox="../../media/tvmdashboard.png":::
 
 <br>
 
@@ -76,7 +76,7 @@ Tehdit ve Güvenlik Açığı Yönetimi panosunda neler olduğu hakkında hızl�
 |**En yüksek düzeye sahip cihazlar**|Açığa çıkarıla cihaz adlarını ve bunların açığa çıkacak düzeylerini görüntüleme. Uyarılarını, riskleri, olayları, güvenlik önerilerini, yüklü yazılımları ve ortaya çıkacak cihazlarla ilişkili güvenlik açıklarını görüntüleyebilirsiniz. Maruz **kalan cihazlar listesini** görmek için Daha fazla göster'i seçin. Cihazlar listesinden etiketleri yönetebilir, otomatik soruşturmalar başlatabilirsiniz, canlı yanıt oturumu başlatabilirsiniz, bir araştırma paketi toplayabilirsiniz, virüsten koruma taraması çalıştırabilirsiniz, uygulama yürütmeyi kısıtlayabilirsiniz ve cihazı yalıtabilirsiniz.|
 |
 
-Portal genelinde kullanılan simgeler hakkında daha fazla bilgi için bkz. Uç nokta simgeleri [için Microsoft Defender](portal-overview.md#microsoft-defender-for-endpoint-icons).
+Portalın tamamında kullanılan simgeler hakkında daha fazla bilgi için bkz. [Uç Nokta için Microsoft Defender tıklayın](portal-overview.md#microsoft-defender-for-endpoint-icons).
 
 ## <a name="related-topics"></a>İlgili konular
 

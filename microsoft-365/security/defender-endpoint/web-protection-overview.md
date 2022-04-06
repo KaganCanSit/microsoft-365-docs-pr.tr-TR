@@ -1,7 +1,7 @@
 ---
 title: Web koruması
-description: Web koruması hakkında bilgi edinmek Uç Nokta için Microsoft Defender ve organizasyonlarınızı nasıl koruyasını öğrenin
-keywords: web koruması, web tehdit koruması, web'e gözatma, güvenlik, kimlik avı, kötü amaçlı yazılım, açıkları kullanma, web siteleri, ağ koruması, Edge, Internet Explorer, Chrome, Firefox, web tarayıcısı, kötü amaçlı web siteleri
+description: Uç Nokta için Microsoft Defender'da web koruması ve kuruluşunuzu nasıl koruyabileceği hakkında bilgi edinin
+keywords: web koruması, web tehdit koruması, web gözatma, güvenlik, kimlik avı, kötü amaçlı yazılım, yararlanma, web siteleri, ağ koruması, Edge, Internet Explorer, Chrome, Firefox, web tarayıcısı, kötü amaçlı web siteleri
 search.appverid: met150
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,92 +15,92 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 7883ef4c7bc06c08e199af871902b26d8e46ac5e
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 4184948316e683a59b45b9397aaea74260e290ee
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64476587"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64664182"
 ---
 # <a name="web-protection"></a>Web koruması
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
 - [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 
-> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
 
 
 ## <a name="about-web-protection"></a>Web koruması hakkında
 
-Web Uç Nokta için Microsoft Defender, Web tehdit koruması, [Web](web-threat-protection.md) içeriği filtreleme ve Özel [göstergelerden yararlanan](web-content-filtering.md) [bir özelliktir](manage-indicators.md). Web koruması, cihazlarınızı web tehditlerine karşı korumanızı sağlar ve istenmeyen içeriği düzenlemenize yardımcı olur. Web koruma raporlarını Web koruması için raporlar Microsoft 365 Defender Portalı'**> bulabilirsiniz**.
+Uç Nokta için Microsoft Defender'de [web koruması, Web tehdit koruması](web-threat-protection.md), [Web içeriği filtreleme](web-content-filtering.md) ve [Özel göstergelerden oluşan bir özelliktir](manage-indicators.md). Web koruması, cihazlarınızı web tehditlerine karşı korumanıza olanak tanır ve istenmeyen içeriği düzenlemenize yardımcı olur. Web koruması raporlarını Microsoft 365 Defender portalında **Raporlar > Web koruması'na** giderek bulabilirsiniz.
 
 :::image type="content" source="images/web-protection.png" alt-text="Web koruma kartları" lightbox="images/web-protection.png":::
 
 ### <a name="web-threat-protection"></a>Web tehdit koruması
 
-Web tehdit korumasını neden olan kartlar, **zamanla Web tehdit algılamaları ve** Web tehdit **özetidir**.
+Web tehdit korumasını oluşturan kartlar **, zaman içindeki Web tehdit algılamaları** ve **Web tehdit özetidir**.
 
 Web tehdit koruması şunları içerir:
 
-- Web tehditlerine karşı kapsamlı görünürlük, organizasyonlarınızı etkiler.
-- Web ile ilgili tehdit etkinlikleri üzerinden, URL'lerin ve bu URL'lere erişen cihazların kapsamlı profilleri yoluyla soruşturma özellikleri.
-- Kötü amaçlı ve istenmeyen web sitelerine genel erişim eğilimlerini takip etmek için eksiksiz bir güvenlik özellikleri kümesi.
+- Kuruluşunuzu etkileyen web tehditlerine yönelik kapsamlı görünürlük.
+- Uyarılar ve bu URL'lere erişen cihazların kapsamlı profilleri ve uyarılar aracılığıyla web ile ilgili tehdit etkinlikleri üzerinde araştırma özellikleri.
+- Kötü amaçlı ve istenmeyen web sitelerine genel erişim eğilimlerini izleyen tam bir güvenlik özellikleri kümesi.
 
 Daha fazla bilgi için bkz [. Web tehdit koruması](web-threat-protection.md).
 
 ### <a name="custom-indicators"></a>Özel göstergeler
 
-Özel gösterge algılamaları, zaman içinde Web tehdit algılamaları ve **Web** tehdit özeti altında, kuruluşlarınız için web tehdit raporları da **özetlenmiştir**.
+Özel gösterge algılamaları, zaman içindeki Web tehdit algılamaları ve Web tehdit özeti altındaki kuruluşlarınızdaki **web tehdit raporlarında** da **özetlenir**.
 
 Özel gösterge şunları içerir:
 
-- Organizasyonlarınızı tehditlere karşı korumak için IP ve URL tabanlı güvenlik göstergeleri oluşturabilme.
+- Kuruluşunuzu tehditlere karşı korumak için IP ve URL tabanlı risk göstergeleri oluşturma olanağı.
 - Özel IP/URL profilleriniz ve bu URL'lere erişen cihazlarla ilgili etkinlikler üzerinde araştırma özellikleri.
-- URL'ler ve URL'ler için İzin Ver, Engelle ve Uyar ilkeleri oluşturabilme özelliği.
+- IP'ler ve URL'ler için İzin Ver, Engelle ve Uyar ilkeleri oluşturma özelliği.
 
-Daha fazla bilgi için bkz [. IP'ler ve URL'ler/etki alanları için göstergeler oluşturma](indicator-ip-domain.md)
+Daha fazla bilgi için bkz [. IP'ler ve URL'ler/etki alanları için gösterge oluşturma](indicator-ip-domain.md)
 
 ### <a name="web-content-filtering"></a>Web içeriği filtreleme
 
-Web içeriği filtreleme, **kategoriye göre Web etkinliği**, **Web içeriği filtreleme özeti** ve Web etkinliği **özeti içerir**.
+Web içeriği filtreleme **kategoriye göre Web etkinliğini**, **Web içeriği filtreleme özetini** ve **Web etkinliği özetini** içerir.
 
 Web içeriği filtreleme şunları içerir:
 
-- İster şirket içinde ister uzakta olsunlar, kullanıcıların engellenen kategorilerde web sitelerine erişimi engellenir.
-- Rol tabanlı erişim denetimi ayarlarında tanımlanan cihaz gruplarını kullanarak çeşitli kullanıcı [gruplarına Uç Nokta için Microsoft Defender ilkeler dağıtabilirsiniz](/microsoft-365/security/defender-endpoint/rbac).
-- Gerçek bloklar ve web kullanımıyla ilgili görünürlükle, web raporlarına aynı merkezi konumdan erişebilirsiniz.
+- Kullanıcıların, ister şirket içinde ister dışarıda gezinirken engellenen kategorilerdeki web sitelerine erişmeleri engellenir.
+- Çeşitli ilkeleri, [Uç Nokta için Microsoft Defender rol tabanlı erişim denetimi ayarlarında](/microsoft-365/security/defender-endpoint/rbac) tanımlanan cihaz gruplarını kullanarak çeşitli kullanıcı kümelerine kolayca dağıtabilirsiniz.
+- Gerçek bloklar ve web kullanımı üzerinde görünürlük ile web raporlarına aynı merkezi konumdan erişebilirsiniz.
 
 Daha fazla bilgi için bkz [. Web içeriği filtreleme](web-content-filtering.md).
 
 ## <a name="order-of-precedence"></a>Öncelik sırası
 
-Web koruması, öncelik sırasına göre listelenen aşağıdaki bileşenlerden oluşur. Bu bileşenlerin her biri, Microsoft Edge'de SmartScreen istemcisi ve diğer tüm tarayıcılarda ve işlemlerde Ağ Koruma istemcisi tarafından zorunlu kılındı.
+Web koruması, öncelik sırasına göre listelenen aşağıdaki bileşenlerden oluşur. Bu bileşenlerin her biri Microsoft Edge'daki SmartScreen istemcisi ve diğer tüm tarayıcılarda ve işlemlerde Ağ Koruması istemcisi tarafından zorlanır.
 
 - Özel göstergeler (IP/URL, Microsoft Defender for Cloud Apps ilkeleri)
   - İzin ver
-  - Uyar
+  - Uyarmak
   - Engelle
 
 - Web tehditleri (kötü amaçlı yazılım, kimlik avı)
-  - SmartScreen Intel, Exchange Online Protection (EOP) dahil
-  - Yükseltmeler
+  - Exchange Online Protection (EOP) dahil olmak üzere SmartScreen Intel
+  - Escalations
 
 - Web İçeriği Filtreleme (WCF)
 
 > [!NOTE]
-> Microsoft Defender for Cloud Apps durumda yalnızca engellenen URL'ler için göstergeler üretir.
+> Microsoft Defender for Cloud Apps şu anda yalnızca engellenen URL'ler için göstergeler oluşturur.
 
-Öncelik sırası, bir URL veya IP'nin değerlendirilen işlemlerin sırasıyla ilgilidir. Örneğin, web içeriği filtreleme ilkeniz varsa, özel IP/URL göstergeleri aracılığıyla dışlamalar oluşturabilirsiniz. Özel güvenlik göstergeleri (IoC) öncelik sırası WCF bloklarına göre daha yüksektir.
+Öncelik sırası, URL veya IP'nin değerlendirildiği işlemlerin sırasıyla ilgilidir. Örneğin, bir web içeriği filtreleme ilkeniz varsa özel IP/URL göstergeleri aracılığıyla dışlamalar oluşturabilirsiniz. Özel Risk Göstergeleri (IoC), öncelik sırasına göre WCF bloklarından daha yüksektir.
 
-Benzer şekilde, göstergeler arasındaki bir çakışma sırasında her zaman bloklara göre öncelik (mantığını geçersiz kılma) izin verir. Bu, bir izin göstergesinin mevcut olan engelleme göstergelerine göre kazanılamayacak anlamına gelir.
+Benzer şekilde, göstergeler arasındaki bir çakışma sırasında bloklardan (geçersiz kılma mantığı) her zaman öncelikli olmasına izin verir. Bu, bir izin göstergesinin mevcut olan tüm blok göstergelerini kazanacağı anlamına gelir.
 
-Aşağıdaki tabloda, web koruma yığını içinde çakışmalar sunacak bazı yaygın yapılandırmalar özetlenmiştir. Ayrıca, yukarıda listelenen öncelikleri temel alarak elde edilen belirlemeleri de tanımlar.
+Aşağıdaki tabloda, web koruma yığını içinde çakışmalar ortaya koyabilecek bazı yaygın yapılandırmalar özetlenmiştir. Ayrıca, yukarıda listelenen önceliğe göre elde edilen belirlemeleri tanımlar.
 
 <br>
 
@@ -108,43 +108,43 @@ Aşağıdaki tabloda, web koruma yığını içinde çakışmalar sunacak bazı 
 
 |Özel Gösterge ilkesi|Web tehdit ilkesi|WCF ilkesi|Bulut için Defender Uygulamaları ilkesi|Sonuç|
 |---|---|---|---|---|
-|İzin ver|Engelle|Engelle|Engelle|İzin Ver (Web korumasını geçersiz kıl)|
+|İzin ver|Engelle|Engelle|Engelle|İzin Ver (Web koruması geçersiz kılma)|
 |İzin ver|İzin ver|Engelle|Engelle|İzin Ver (WCF özel durumu)|
-|Uyar|Engelle|Engelle|Engelle|Uyar (geçersiz kıl)|
+|Uyarmak|Engelle|Engelle|Engelle|Uyar (geçersiz kıl)|
 |
 
-İç IP adresleri özel göstergeler tarafından desteklenmiyor. Son kullanıcı tarafından atlayan bir uyarı ilkesi için, site varsayılan olarak bu kullanıcı için 24 saat boyunca engeli kaldırır. Bu zaman dilimi Yönetici tarafından değiştirilebilir ve SmartScreen bulut hizmeti tarafından geçirir. Web tehdit blokları (kötü amaçlı yazılım/kimlik avı) için CSP kullanılarak uyarı Microsoft Edge atlanma özelliği de devre dışı bırakılabilir. Daha fazla bilgi için [SmartScreen Microsoft Edge'ya Ayarlar](/DeployEdge/microsoft-edge-policies#smartscreen-settings-policies).
+İç IP adresleri özel göstergeler tarafından desteklenmez. Son kullanıcı tarafından atlanan bir uyarı ilkesi için sitenin engeli varsayılan olarak 24 saat boyunca kaldırılır. Bu zaman dilimi Yönetici tarafından değiştirilebilir ve SmartScreen bulut hizmeti tarafından geçirilir. Web tehdit blokları (kötü amaçlı yazılım/kimlik avı) için CSP kullanılarak Microsoft Edge bir uyarıyı atlama özelliği de devre dışı bırakılabilir. Daha fazla bilgi için bkz. [SmartScreen Ayarlar Microsoft Edge](/DeployEdge/microsoft-edge-policies#smartscreen-settings-policies).
 
 ## <a name="protect-browsers"></a>Tarayıcıları koruma
 
-Tüm web koruma senaryolarında, hem birinci hem de üçüncü taraf tarayıcılarda ve süreçlerde koruma sağlamak için SmartScreen ve Ağ Koruması birlikte kullanılabilir. SmartScreen doğrudan Web üzerinde yerleşik Microsoft Edge, Ağ Koruması ise üçüncü taraf tarayıcılarda ve işlemlerde trafiği izler. Aşağıdaki diyagramda bu kavram gösterilmiştir. Birden çok tarayıcı/uygulama kapsamı sağlamak için birlikte çalışan iki istemcinin bu diyagramı, Web Koruma'nın tüm özellikleri (Göstergeler, Web Tehditleri, İçerik Filtreleme) için doğrudur.
+Tüm web koruma senaryolarında, SmartScreen ve Ağ Koruması hem birinci hem de üçüncü taraf tarayıcılarda ve işlemlerde koruma sağlamak için birlikte kullanılabilir. SmartScreen doğrudan Microsoft Edge yerleşik olarak bulunurken, Ağ Koruması üçüncü taraf tarayıcılarda ve işlemlerde trafiği izler. Aşağıdaki diyagramda bu kavram gösterilmektedir. Birden çok tarayıcı/uygulama kapsamı sağlamak için birlikte çalışan iki istemcinin bu diyagramı, Web Koruması'nın tüm özellikleri (Göstergeler, Web Tehditleri, İçerik Filtreleme) için doğrudur.
 
-:::image type="content" source="../../media/web-protection-protect-browsers.png" alt-text="SmartScreen ve Ağ Koruması'nın birlikte kullanımı" lightbox="../../media/web-protection-protect-browsers.png":::
+:::image type="content" source="../../media/web-protection-protect-browsers.png" alt-text="smartScreen ve Ağ Koruması'nın birlikte kullanımı" lightbox="../../media/web-protection-protect-browsers.png":::
 
-## <a name="troubleshoot-endpoint-blocks"></a>Uç nokta bloklarının sorunlarını giderme
+## <a name="troubleshoot-endpoint-blocks"></a>Uç nokta blokları sorunlarını giderme
 
-SmartScreen bulutundan gelen yanıtlar standartlaştırıldı. Fiddler gibi araçlar, bloğun kaynağını belirlemeye yardımcı olan bulut hizmetinin yanıtını incelemek için kullanılabilir.
+SmartScreen bulutundan gelen yanıtlar standartlaştırılmıştır. Fiddler gibi araçlar bulut hizmetinden gelen yanıtı incelemek için kullanılabilir ve bu da bloğun kaynağını belirlemeye yardımcı olur.
 
-SmartScreen bulut hizmeti yanıt verme, engelleme veya uyarı yanıtı ile yanıt verdiği zaman, yanıt kategorisi ve sunucu bağlamı istemciye geri döner. Daha Microsoft Edge kategorisi, gösterecek uygun blok sayfasını (kötü amaçlı, kimlik avı, kuruluş ilkesi) belirlemek için kullanılan yanıt kategorisidir.
+SmartScreen bulut hizmeti bir izin verme, engelleme veya uyarı yanıtıyla yanıt verdiği zaman, yanıt kategorisi ve sunucu bağlamı istemciye geri iletilir. Microsoft Edge'da yanıt kategorisi, gösterilecek uygun blok sayfasını belirlemek için kullanılan kategoridir (kötü amaçlı, kimlik avı, kuruluş ilkesi).
 
-Aşağıdaki tabloda yanıtlar ve onun ilişkili özellikleri gösterilmiştir.
+Aşağıdaki tabloda yanıtlar ve bunların bağıntılı özellikleri gösterilmektedir.
 
 <br>
 
 ****
 
-|ResponseCategory|Engelden sorumlu olan özellik|
+|ResponseCategory|Blok için sorumlu özellik|
 |---|---|
 |CustomPolicy|WCF|
 |CustomBlockList|Özel göstergeler|
 |CasbPolicy|Bulut Uygulamaları için Defender|
-|Kötü Amaçlı|Web tehditleri|
+|Kötü amaçlı|Web tehditleri|
 |Kimlik Avı|Web tehditleri|
 |||
 
-## <a name="advanced-hunting-for-web-protection"></a>Web koruması için gelişmiş av
+## <a name="advanced-hunting-for-web-protection"></a>Web koruması için gelişmiş avcılık
 
-Kusto 30 gün boyunca gelişmiş aramalarda web koruma bloklarını özetlemek için kullanılabilir. Bu sorgular, çeşitli bloklar kaynaklarını ayırt etmek ve bunları kullanıcı dostu bir şekilde özetlemek için yukarıda listelenen bilgileri kullanır. Örneğin, aşağıdaki sorguda bu kayıttan kaynaklanan tüm WCF Microsoft Edge.
+Gelişmiş avcılıktaki Kusto sorguları, kuruluşunuzdaki web koruma bloklarını 30 güne kadar özetlemek için kullanılabilir. Bu sorgular, çeşitli blok kaynaklarını ayırt etmek ve bunları kullanıcı dostu bir şekilde özetlemek için yukarıda listelenen bilgileri kullanır. Örneğin, aşağıdaki sorguda Microsoft Edge kaynaklı tüm WCF blokları listelenmiştir.
 
 ```kusto
 DeviceEvents
@@ -154,7 +154,7 @@ DeviceEvents
 | where Experience == "CustomBlockList"
 ```
 
-Benzer şekilde, Ağ Koruması'dan (örneğin, üçüncü taraf bir tarayıcıda WCF bloğu) kaynaklanan tüm WCF bloklarını liste için aşağıdaki sorguyu kullanabilirsiniz. ActionType'ın güncelleştirildiğini ve 'Deneyim'in 'ResponseCategory' olarak değiştirdiğini unutmayın.
+Benzer şekilde, Ağ Koruması'ndan kaynaklanan tüm WCF bloklarını listelemek için aşağıdaki sorguyu kullanabilirsiniz (örneğin, üçüncü taraf tarayıcıdaki bir WCF bloğu). ActionType'ın güncelleştirildiğini ve 'Experience' öğesinin 'ResponseCategory' olarak değiştirildiğini unutmayın.
 
 ```kusto
 DeviceEvents
@@ -164,32 +164,32 @@ DeviceEvents
 | where ResponseCategory == "CustomPolicy"
 ```
 
-Diğer özelliklerden (Özel Göstergeler gibi) dolayı olan bloklar listesi oluşturmak için, her özelliğin ve bunların ilgili yanıt kategorisinin vurgularını oluşturmada yukarıdaki tabloya bakın. Bu sorgular, aynı zamanda organizasyonlu belirli makinelerle ilgili telemetri aramak için de değiştirilebilir. Yukarıdaki her sorguda gösterilen ActionType türü yalnızca Web Koruma özelliği tarafından engellenen bağlantıları gösterir; tüm ağ trafiğini değil.
+Diğer özelliklerden (Özel Göstergeler gibi) kaynaklanan blokları listelemek için yukarıdaki her özelliğin ve ilgili yanıt kategorilerinin ana hatlarını oluşturan tabloya bakın. Bu sorgular, kuruluşunuzdaki belirli makinelerle ilgili telemetriyi aramak için de değiştirilebilir. Yukarıdaki her sorguda gösterilen ActionType'ın yalnızca Bir Web Koruması özelliği tarafından engellenen bağlantıları göstereceğini ve tüm ağ trafiğini göstermeyeceğini unutmayın.
 
 ## <a name="user-experience"></a>Kullanıcı deneyimi
 
-Kullanıcı kötü amaçlı yazılım, kimlik avı veya diğer web tehditlerine neden olan bir web sayfasını ziyaret ettiyse, Microsoft Edge 'Bu site güvenli değil olarak bildirildi' ifadesinin bulunduğu bir blok sayfası ve tehditle ilgili bilgileri tetikler.
+Kullanıcı kötü amaçlı yazılım, kimlik avı veya diğer web tehditleri riski olan bir web sayfasını ziyaret ederse, Microsoft Edge tehditle ilgili bilgilerle birlikte "Bu site güvenli değil olarak bildirildi" yazan bir blok sayfası tetikler.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="../../media/web-protection-malicious-block.png" alt-text="Sayfa Microsoft Edge" lightbox="../../media/web-protection-malicious-block.png":::
+> :::image type="content" source="../../media/web-protection-malicious-block.png" alt-text="Microsoft Edge tarafından engellenen sayfa" lightbox="../../media/web-protection-malicious-block.png":::
 
-WCF tarafından veya özel bir göstergeyle engellenirse, Microsoft Edge kullanıcıya bu sitenin kendi kuruluşu tarafından engellenmiş olduğunu söyleyen bir blok sayfası görüntülenir.
+WCF veya özel bir gösterge tarafından engellenirse, Microsoft Edge kullanıcıya bu sitenin kendi kuruluşu tarafından engellendiğini bildiren bir blok sayfası gösterilir.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="../../media/web-protection-indicator-blockpage.png" alt-text="Kuruluş tarafından engellenen sayfa" lightbox="../../media/web-protection-indicator-blockpage.png":::
+> :::image type="content" source="../../media/web-protection-indicator-blockpage.png" alt-text="Kuruluşunuz tarafından engellenen sayfa" lightbox="../../media/web-protection-indicator-blockpage.png":::
 
-Her durumda, üçüncü taraf tarayıcılarda hiçbir engelleme sayfası gösterilmez ve kullanıcı bir uyarı bildirimiyle birlikte 'Güvenli Bağlantı Başarısız' sayfasını görür. Engellemeden sorumlu olan ilkeye bağlı olarak, kullanıcı bildirim bildiriminde farklı bir ileti görebilir. Örneğin, web içeriği filtreleme 'Bu içerik engellendi' iletisi görüntülenir.
+Her durumda, üçüncü taraf tarayıcılarda hiçbir blok sayfası gösterilmez ve kullanıcı bir bildirimle birlikte "Güvenli Bağlantı Başarısız Oldu" sayfasını görür. Engellemeden sorumlu ilkeye bağlı olarak, bir kullanıcı bildirimde farklı bir ileti görür. Örneğin, web içeriği filtrelemesi 'Bu içerik engellendi' iletisini görüntüler.
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="../../media/web-protection-np-block.png" alt-text="WCF tarafından engellenen sayfa" lightbox="../../media/web-protection-np-block.png":::
 
-## <a name="report-false-positives"></a>Hatalı pozitif sonuç bildir
+## <a name="report-false-positives"></a>Hatalı pozitif sonuçları bildirme
 
-SmartScreen tarafından tehlikeli olduğu kabulilen siteler için hatalı pozitif bir sonuç rapor etmek için, smartScreen'de blok sayfasında (yukarıda gösterildiği gibi) Microsoft Edge bağlantıyı kullanın.
+SmartScreen tarafından tehlikeli kabul edilen sitelerde hatalı pozitif rapor vermek için, Microsoft Edge'deki blok sayfasında görünen bağlantıyı kullanın (yukarıda gösterildiği gibi).
 
-WCF'de, bir etki alanının kategorisine itirazabilirsiniz. WCF **raporlarının** Etki Alanları sekmesine gidin ve ardından **Rapor Inaccuracy'ye tıklayın**. Açılır bir açılır. Olayın önceliğini ayarlayın ve önerilen kategori gibi bazı ek ayrıntılar sağlar. WCF'nin nasıl aç haberleri ve ihtilaf kategorileri hakkında daha fazla bilgi için bkz [. Web içeriği filtreleme](web-content-filtering.md).
+WCF için, bir etki alanının kategorisine itiraz edebilirsiniz. WCF raporlarının **Etki Alanları** sekmesine gidin ve Rapor **Yanlışlığı'na** tıklayın. Açılır öğe açılır. Olayın önceliğini ayarlayın ve önerilen kategori gibi bazı ek ayrıntıları sağlayın. WCF'yi açma ve anlaşmazlık kategorileri hakkında daha fazla bilgi için bkz. [Web içeriği filtreleme](web-content-filtering.md).
 
-Hatalı pozitif/negatifleri gönderme hakkında daha fazla bilgi için bkz. Hatalı pozitif[/negatifleri](defender-endpoint-false-positives-negatives.md) Uç Nokta için Microsoft Defender.
+Hatalı pozitif/negatifleri gönderme hakkında daha fazla bilgi için bkz. [Uç Nokta için Microsoft Defender'de hatalı pozitif/negatifleri adresle](defender-endpoint-false-positives-negatives.md).
 
 ## <a name="related-information"></a>İlgili bilgiler
 
@@ -199,6 +199,6 @@ Hatalı pozitif/negatifleri gönderme hakkında daha fazla bilgi için bkz. Hata
 
 |Konu|Açıklama|
 |---|---|
-|[Web tehdit koruması](web-threat-protection.md) | Kimlik avı sitelerine, kötü amaçlı yazılım vektörlerine, açıklarından yararlanma sitelerine, güvenilmeyen veya itibarsız sitelere ve engellemiş olduğunuz sitelere erişimi durdurun.|
-|[Web içeriği filtreleme](web-content-filtering.md) | Web sitelerine erişimi içerik kategorilerine göre izleyebilir ve düzenler.|
+|[Web tehdit koruması](web-threat-protection.md) | Kimlik avı sitelerine, kötü amaçlı yazılım vektörlerine, güvenlik açığından yararlanma sitelerine, güvenilmeyen veya saygınlığı düşük sitelere ve engellediğiniz sitelere erişimi durdurun.|
+|[Web içeriği filtreleme](web-content-filtering.md) | Web sitelerine erişimi içerik kategorilerine göre izleyin ve düzenleyin.|
 |

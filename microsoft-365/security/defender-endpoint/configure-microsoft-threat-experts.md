@@ -1,5 +1,5 @@
 ---
-title: Yeni özellikleri Microsoft Tehdit Uzmanları ve yönetme
+title: Microsoft Tehdit Uzmanları özelliklerini yapılandırın ve yönetin
 ms.reviewer: ''
 description: Günlük güvenlik işlemlerinizi ve güvenlik yönetimi işlerinizi yapılandırmak, yönetmek ve kullanmak için Microsoft Tehdit Uzmanlarına kaydolma.
 keywords: Microsoft Tehdit Uzmanları tehdit arama hizmeti, MTE, Microsoft tarafından yönetilen arama hizmeti
@@ -18,19 +18,19 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 28533f2ad3fcf547cab95812048b3de8af3bcb9a
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 152c0c54138841d9159c7230fc043307979e4546
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63324277"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471835"
 ---
-# <a name="configure-and-manage-microsoft-threat-experts-capabilities"></a>Yeni özellikleri Microsoft Tehdit Uzmanları ve yönetme
+# <a name="configure-and-manage-microsoft-threat-experts-capabilities"></a>Microsoft Tehdit Uzmanları özelliklerini yapılandırın ve yönetin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
@@ -52,15 +52,15 @@ Zaten uç nokta için Defender müşterisiysiniz, Microsoft 365 Defender portal�
 
 2. **Uygula**'ya tıklayın.
 
-    ![Resim Microsoft Tehdit Uzmanları.](images/mte-collaboratewithmte.png)
+   :::image type="content" source="images/mte-collaboratewithmte.png" alt-text="Microsoft Tehdit Uzmanları ayarları" lightbox="images/mte-collaboratewithmte.png":::
 
 3. Microsoft'un size uygulamanıza geri dönesin için, adını ve e-posta adresinizi girin.
 
-    ![Uygulamanın Microsoft Tehdit Uzmanları.](images/mte-apply.png)
+   :::image type="content" source="images/mte-apply.png" alt-text="Microsoft Tehdit Uzmanları uygulama sayfasındaki Ad alanı" lightbox="images/mte-apply.png":::
 
 4. Gizlilik [bildirimini okuyun](https://privacy.microsoft.com/privacystatement) ve **bitirinca** Gönder'e tıklayın. Başvurunız onaylandıktan sonra bir hoş geldiniz e-postası alırsınız.
 
-    ![Uygulama Microsoft Tehdit Uzmanları resmi.](images/mte-applicationconfirmation.png)
+   :::image type="content" source="images/mte-applicationconfirmation.png" alt-text="Microsoft Tehdit Uzmanları uygulaması onay iletisi" lightbox="images/mte-applicationconfirmation.png":::
 
 Kabul edilirken bir hoş geldiniz e-postası alırsınız ve **Uygula düğmesinin** "açık" olan bir geçiş düğmesine değiştir değiştirmesini alırsınız. Kendinizi Hedefli Saldırı Bildirimleri hizmetten almak istemeniz durumunda, iki durumlu düğmeyi "kapalı" kaydırın ve sayfanın altındaki Kaydetme tercihleri'ne tıklayın.
 
@@ -105,15 +105,15 @@ Zamanında ve doğru Microsoft Tehdit Uzmanları yanıt için doğrudan web site
 
 2. Sağ üstteki menüde? simgesini seçin. Ardından, Tehdit **uzmanına başvur'ı seçin**.
 
-    ![Menüden Microsoft Tehdit Uzmanları Uzmanlara Özel'in görüntüsü.](images/mte-eod-menu.png)
+    :::image type="content" source="images/mte-eod-menu.png" alt-text="The Microsoft Tehdit Uzmanları Experts on Demand menu item" lightbox="images/mte-eod-menu.png":::
 
     Açılır ekran açılır. Aşağıdaki ekran, bir deneme aboneliği için ne zaman olduğunu gösterir.
 
-    ![Uzmanlardan Microsoft Tehdit Uzmanları görüntüsü.](images/mte-eod.png)
+    :::image type="content" source="images/mte-eod.png" alt-text="Microsoft Tehdit Uzmanları Uzmanlarını Talep Üzerine Uyar sayfası" lightbox="images/mte-eod.png":::
 
     Tam kullanıcı - Uzman isteğe bağlı Microsoft Tehdit Uzmanları aşağıdaki ekran size gösterilir.
 
-    ![Uzmanlardan Microsoft Tehdit Uzmanları tam abonelik ekranı görüntüsü.](images/mte-eod-fullsubscription.png)
+    :::image type="content" source="images/mte-eod-fullsubscription.png" alt-text="uzman Microsoft Tehdit Uzmanları isteğe bağlı tam abonelik sayfası" lightbox="images/mte-eod-fullsubscription.png":::
 
     Sorgulama **konu** alanı, araştırma isteğinize ilişkin ilgili sayfanın bağlantısıyla önceden doldurulur. Örneğin, isteği hazırlarken olay, uyarı veya cihaz ayrıntıları sayfasının bağlantısı.
 

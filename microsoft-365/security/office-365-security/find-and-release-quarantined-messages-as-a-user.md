@@ -20,12 +20,12 @@ ms.custom:
 description: Kullanıcılar, kullanıcılara teslim olması gereken karantinaya alınmış iletileri Exchange Online Protection (EOP) içinde görüntülemeyi ve yönetmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 35aa801d0d981f68de5c62a1928e1f85d82ee95d
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 44b1d86d441be5582b8c4b3381a383b2e03417a1
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682405"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471549"
 ---
 # <a name="find-and-release-quarantined-messages-as-a-user-in-eop"></a>EOP'de kullanıcı olarak karantinaya alınmış iletileri bulma ve serbest bırakma
 
@@ -33,7 +33,7 @@ ms.locfileid: "63682405"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Microsoft 365 posta kutusu olmayan Exchange Online ya da tek başına Exchange Online Protection Exchange Online Protection EOP Exchange Online) kuruluşlarında, karantinada tehlikeli veya istenmeyen iletiler karantinaya alın. Daha fazla bilgi için bkz. [EOP'de karantina](quarantine-email-messages.md).
@@ -46,16 +46,16 @@ Normal bir kullanıcı (yönetici olarak değil), karantinaya  alınmış iletin
 |Toplu|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
 |İstenmeyen posta|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
 |Yüksek güven istenmeyen posta|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
-|Kimlik avı|![Onay işareti.](../../media/checkmark.png)|![Onay işareti](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
+|Kimlik Avı|![Onay işareti.](../../media/checkmark.png)|![Onay işareti](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
 |Yüksek güven kimlik avı||||
 |**Kimlik avı önleme ilkeleri**||||
 |EOP'de akıllı ifade koruması|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
-|Office 365 için Defender'da kimliğine bürünülen kullanıcı Office 365|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
-|Office 365 için Defender'da kimliğine bürünülen etki alanı Office 365|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
-|Office 365 için Defender'da posta kutusu zekası koruması|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
+|E-postada kimliğine bürünülen kullanıcı Office 365 için Defender|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
+|E-postada kimliğine bürünülen etki Office 365 için Defender|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
+|E-postada posta kutusu zekası Office 365 için Defender|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
 |**Kötü amaçlı yazılımdan koruma ilkeleri**||||
 |Ekleri olan ve kötü amaçlı yazılım olarak karantinaya alınmış e-posta iletileri.||||
-|**Kasa için Defender'da Ekleri Office 365**||||
+|**Kasa'de Ekleri Office 365 için Defender**||||
 |Kasa kötü amaçlı ekleri olan e-posta iletilerini kötü amaçlı yazılım olarak karantinaya alan ekler ilkelerini içerir.||||
 |Kasa dosyalarını kötü amaçlı yazılım olarak SharePoint, OneDrive Microsoft Teams için ekleri karantinaya alın.||||
 |**Posta akış kuralları (aktarım kuralları)**||||
@@ -142,7 +142,7 @@ Belirli bir karantinaya alınmış iletiyi bu olduktan sonra, ayrıntılarını 
 
 Listeden karantinaya alınmış iletiyi seçin, görüntülenen ayrıntılar açılır iletisinde aşağıdaki bilgiler kullanılabilir.
 
-![Karantinaya alınmış bir iletinin ayrıntılar uçarak çıkış.](../../media/quarantine-user-message-details.png)
+:::image type="content" source="../../media/quarantine-user-message-details.png" alt-text="Karantinaya alınmış iletinin ayrıntılar uçarak çıkış" lightbox="../../media/quarantine-user-message-details.png":::
 
 Listeden bir e-posta iletisi seçin, Ayrıntılar bölmesine aşağıdaki **ileti ayrıntıları** gösterilir:
 
@@ -161,7 +161,7 @@ Listeden bir e-posta iletisi seçin, Ayrıntılar bölmesine aşağıdaki **ilet
 > [!NOTE]
 > Ayrıntılar uç iletisinde kalmak, ancak üzerinde karantinaya alınmış iletiyi değiştirmek için, uç ilişkinin üst kısmında bulunan yukarı ve aşağı okları kullanın.
 >
-> ![Karantinaya alınmış iletinin ayrıntılar bölmesindeki yukarı ve aşağı oklar.](../../media/quarantine-message-details-flyout-up-down-arrows.png)
+> :::image type="content" source="../../media/quarantine-message-details-flyout-up-down-arrows.png" alt-text="Karantinaya alınmış iletinin ayrıntılar iletisinde yukarı ve aşağı oklar" lightbox="../../media/quarantine-message-details-flyout-up-down-arrows.png":::
 
 ### <a name="take-action-on-quarantined-email"></a>Karantinaya alınmış e-postada eyleme geç
 
@@ -170,7 +170,7 @@ Listeden bir e-posta iletisi seçin, Ayrıntılar bölmesine aşağıdaki **ilet
 
 Listeden karantinaya alınmış bir ileti belirttikten sonra, ayrıntılar iletisinde aşağıdaki eylemler kullanılabilir:
 
-![Karantinaya alınmış iletinin ayrıntılar iletisinde kullanılabilir eylemler.](../../media/quarantine-user-message-details-flyout-actions.png)
+:::image type="content" source="../../media/quarantine-user-message-details-flyout-actions.png" alt-text="Karantinaya alınmış iletinin ayrıntılar iletisinde kullanılabilir eylemler" lightbox="../../media/quarantine-user-message-details-flyout-actions.png":::
 
 - ![Sürüm e-postası simgesi.](../../media/m365-cc-sc-check-mark-icon.png) **Sürüm e-postası**<sup>\*</sup>: İletiyi Gelen Kutunuza teslim ediyor.
 
@@ -197,7 +197,8 @@ Diğer eylemler simgesine tıklarsanız aşağıdaki ![eylemler kullanılabilir.
 > [!NOTE]
 > Mobil cihazda, eylem simgelerini açıklama metni kullanılamaz.
 >
-> ![Kullanılabilir eylemler vurgulanmış olarak karantinaya alınmış iletinin ayrıntıları.](../../media/quarantine-user-message-details-flyout-mobile-actions.png)
+> :::image type="content" source="../../media/quarantine-user-message-details-flyout-mobile-actions.png" alt-text="Kullanılabilir eylemler vurgulanmış olarak karantinaya alınmış iletinin ayrıntıları" lightbox="../../media/quarantine-user-message-details-flyout-mobile-actions.png":::
+
 >
 > Simgeler ve bunların karşılık gelen açıklamaları aşağıdaki tabloda özetlenmiştir:
 >
@@ -213,7 +214,7 @@ Diğer eylemler simgesine tıklarsanız aşağıdaki ![eylemler kullanılabilir.
 
 İlk sütunun sol tarafından boş bir alana tıklayarak listede birden çok karantinaya alınmış ileti (en çok 100) seçin; burada, aşağıdaki eylemleri gerçekleştirebilirsiniz:
 
-![Karantinada iletiler için toplu eylemler açılan listesi.](../../media/quarantine-user-message-bulk-actions.png)
+:::image type="content" source="../../media/quarantine-user-message-bulk-actions.png" alt-text="Karantinada iletiler için toplu eylemler açılan listesi" lightbox="../../media/quarantine-user-message-bulk-actions.png":::
 
 - ![Sürüm e-postası simgesi.](../../media/m365-cc-sc-check-mark-icon.png) **Sürüm iletileri**: İletileri Gelen Kutunuza teslim ediyor.
 - ![Karantinadan kaldır simgesi.](../../media/m365-cc-sc-delete-icon.png) **İletileri** silme: Görüntülenen **uyarıda Evet'e** tıklarsanız, iletiler özgün alıcılara gönderilmeden hemen karantinadan kaldırılır.

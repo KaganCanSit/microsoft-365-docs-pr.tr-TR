@@ -1,7 +1,7 @@
 ---
 title: Kötü amaçlı yazılım bulaşmasını önlemek için saldırı yüzeyini azaltma kurallarını kullanın
 description: Saldırı yüzeyini azaltma kuralları, istismarların cihazlara kötü amaçlı yazılım bulaştırmak için uygulama ve betik kullanmalarını önlemeye yardımcı olabilir.
-keywords: Saldırı yüzeyini azaltma kuralları, asr, hip'ler, izinsiz giriş önleme sistemi, koruma kuralları, exploit önleme, izinsiz giriş önleme, exploit, bulaşma önleme, Uç nokta için Microsoft Defender
+keywords: Saldırı yüzeyini azaltma kuralları, asr, hip'ler, izinsiz giriş önleme sistemi, koruma kuralları, exploit önleme, izinsiz giriş önleme, exploit, bulaşma önleme, Uç Nokta için Microsoft Defender
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -21,23 +21,23 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 53f338ec713038841ab5cc089c12cebf7fe46131
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: c09405043caeea57fdad1c241dfcd70e47ccd6f1
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680631"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470742"
 ---
 # <a name="attack-surface-reduction-rules-overview"></a>Saldırı yüzeyini azaltma kurallarına genel bakış
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 ## <a name="why-attack-surface-reduction-rules-are-important"></a>Saldırı yüzeyini azaltma kuralları neden önemlidir?
 
-Kuruluş saldırı yüzeyi, bir saldırganın, kuruluş cihazları veya ağlarının güvenliğini tehlikeye at olduğu tüm yerleri içerir. Saldırı yüzeyinizi azaltmak, kuruluş cihazlarınızı ve ağın korunması anlamına gelir. Bu, saldırganları saldırılar için daha az yol bırakır. Uç nokta için Microsoft Defender'da saldırı yüzeyini azaltma kurallarını yapılandırma size yardımcı olabilir!
+Kuruluş saldırı yüzeyi, bir saldırganın, kuruluş cihazları veya ağlarının güvenliğini tehlikeye at olduğu tüm yerleri içerir. Saldırı yüzeyinizi azaltmak, kuruluş cihazlarınızı ve ağın korunması anlamına gelir. Bu, saldırganları saldırılar için daha az yol bırakır. Saldırı yüzeyini azaltma kurallarını yapılandırma Uç Nokta için Microsoft Defender yardımcı olabilir!
 
 Saldırı yüzeyini azaltma kuralları, şu tür belirli yazılım davranışlarını hedefler:
 
@@ -53,7 +53,7 @@ Saldırı yüzeyini azaltma kurallarını yapılandırma hakkında daha fazla bi
 
 Saldırı yüzeyini azaltma kuralının, ilgili kuralla ilgili güvenlik önerisini Bu kuralın güvenlik önerisini [Tehdit ve Güvenlik Açığı Yönetimi.](/windows/security/threat-protection/#tvm)
 
-:::image type="content" source="images/asrrecommendation.png" alt-text="Saldırı yüzeyini azaltma kuralı için güvenlik reco.":::
+:::image type="content" source="images/asrrecommendation.png" alt-text="ASR önerisi" lightbox="images/asrrecommendation.png":::
 
 Öneri ayrıntıları bölmesinde, kullanıcı etkisini kontrol edin ve cihazlarınızı yüzde kaçının, üretkenliği olumsuz etkilemeden engelleme modunda kuralı etkinleştiren yeni bir ilke kabul edileyeceğini belirler.
 
@@ -88,7 +88,7 @@ Daha fazla bilgi almak ve güncelleştirmelerinizi almak için bkz. [Microsoft D
 
 ### <a name="cases-where-warn-mode-is-not-supported"></a>Uyarı modunun desteklen desteklemesi gereken durumlar
 
-Uyarı modu, yeni bir uygulama içinde yapılandırıldığında üç saldırı yüzeyini azaltma kuralı Microsoft Endpoint Manager. (Saldırı yüzeyini azaltma kurallarınızı yapılandırmak için Grup İlkesi kullanırsanız uyarı modu de kullanılabilir.) Bu modda yapılandırıldığında uyarı modunu desteklemeen üç Microsoft Endpoint Manager aşağıdaki gibidir:
+Uyarı modu, yeni bir uygulama içinde yapılandırıldığında üç saldırı yüzeyini azaltma kuralı Microsoft Endpoint Manager. (Saldırı yüzeyini grup ilkesi için Uyarı modunu kullanıyorsanız, uyarı modu de destekler.) Bu modda yapılandırıldığında uyarı modunu desteklemeen üç Microsoft Endpoint Manager aşağıdaki gibidir:
 
 - [JavaScript veya VBScript'in indirilen yürütülebilir içeriği](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content) (GUID) başlatmalarını `d3e037e1-3eb8-44c8-a917-57927947596d`engelleme
 - [WMI olay aboneliği (GUID) aracılığıyla](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription) kalıcılığı engelleme `e6db77e5-3df2-4cf1-b95a-636979351e5b`
@@ -133,7 +133,7 @@ Saldırı yüzeyini azaltma kuralları için Windows E5 lisansı gerekmese de, [
 - Uç Nokta için Defender'da bulunan izleme, çözümleme [ve iş akışları](microsoft-defender-endpoint.md)
 - Raporlama ve yapılandırma özellikleri [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
-Bu gelişmiş özellikler Windows Professional veya Windows E3 lisansı ile kullanılamaz. Ancak bu lisanslara sahipsinizse saldırı yüzeyini azaltma kuralı etkinliklerinizi gözden geçirmek için Olay Görüntüleyicisi'ni ve Microsoft Defender Virüsten Koruma günlüklerini kullanabilirsiniz.
+Bu gelişmiş özellikler Windows Professional veya Windows E3 lisansı ile kullanılamaz. Ancak bu lisanslara sahipsanız saldırı yüzeyini azaltma kuralı olaylarınızı Olay Görüntüleyicisi Microsoft Defender Virüsten Koruma günlüklerinizi gözden geçirmek için Olay Görüntüleyicisi ve kayıtlarınızı kullanabilirsiniz.
 
 ## <a name="review-attack-surface-reduction-events-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında saldırı yüzeyini azaltma etkinliklerini gözden geçirme
 
@@ -148,13 +148,13 @@ DeviceEvents
 | where ActionType startswith 'Asr'
 ```
 
-## <a name="review-attack-surface-reduction-events-in-windows-event-viewer"></a>Olay Görüntüleyicisi'nde saldırı yüzeyini azaltma Windows olaylarını gözden geçirme
+## <a name="review-attack-surface-reduction-events-in-windows-event-viewer"></a>Saldırı yüzeyini azaltma etkinliklerini iş yerlerinde Windows Olay Görüntüleyicisi
 
 Saldırı yüzeyini azaltma Windows oluşturulan olayları görüntülemek için etkinlik günlüğünü gözden geçirerek:
 
 1. Değerlendirme [Paketi'i](https://aka.ms/mp7z2w) indirin ve *cfa-events.xml* cihazda kolayca erişilebilir bir konuma ulaşacak şekilde dosyayı ayıklayabilirsiniz.
 
-2. Olay *Görüntüleyicisi'ni açmak* için Başlat menüsü Görüntüleyicisi Windows girin.
+2. Metin *Olay Görüntüleyicisi açmak için* Başlat menüsü, metin Windows Olay Görüntüleyicisi.
 
 3. **Eylemler'in** altında Özel **görünümü içeri aktar... seçeneğini seçin**.
 
@@ -170,4 +170,4 @@ Yalnızca aşağıdaki olayları gösterecek şekilde, bunların hepsi denetimli
 |1121|Engelleme modunda kural geldiğinde olay|
 |1122|Denetim modunda kural geldiğinde olay|
 
-Olay günlüğünde saldırı yüzeyini azaltma olayları için listelenen "altyapı sürümü", işletim sistemi tarafından değil Uç Nokta için Defender tarafından oluşturulur. Uç Nokta için Defender Windows 10 ve Windows 11 ile tümleşiktir, dolayısıyla bu özellik Windows 10 veya Windows 11 yüklü tüm cihazlarda çalışır.
+Olay günlüğünde saldırı yüzeyini azaltma olayları için listelenen "altyapı sürümü", işletim sistemi tarafından değil Uç Nokta için Defender tarafından oluşturulur. Uç Nokta için Defender, Windows 10 ve Windows 11 ile tümleşiktir, dolayısıyla bu özellik yüklü Windows 10 veya Windows 11 tüm cihazlarda çalışır.

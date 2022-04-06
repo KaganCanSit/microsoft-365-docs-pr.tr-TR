@@ -1,7 +1,7 @@
 ---
 title: Cihaz envanteri
-description: İncelemeleri geliştirmek için Cihazlar listesinden kullanabileceğiniz sıralama, filtreleme ve listenin dışarı aktarma gibi kullanılabilir özellikleri hakkında bilgi edinebilirsiniz.
-keywords: sıralama, filtreleme, dışarı aktarma, csv, cihaz adı, etki alanı, son görülen, iç IP, durum, etkin uyarılar, etkin kötü amaçlı yazılım algılamaları, tehdit kategorisi, uyarıları gözden geçirme, ağ, bağlantı, kötü amaçlı yazılım, tür, parola çalmak, fidye yazılımı, istismar, tehdit, genel kötü amaçlı yazılım, istenmeyen yazılım
+description: Araştırmayı geliştirmek için Sıralama, filtreleme ve listeyi dışarı aktarma gibi Cihazlar listesinden kullanabileceğiniz kullanılabilir özellikler hakkında bilgi edinin.
+keywords: sort, filter, export, csv, device name, domain, last seen, internal IP, health state, active alerts, active malware detections, threat category, review alerts, network, connection, malware, type, password stealer, ransomware, exploit, threat, general malware, istenmeyen yazılım
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,131 +14,131 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: a9753cdc818aefdf33411bd237327310dfc512ab
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 631a141ca6c898c6394bfd34839fd65d351fe8fc
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64474761"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64665546"
 ---
 # <a name="device-inventory"></a>Cihaz envanteri
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
 - [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-machinesview-abovefoldlink)
+> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-machinesview-abovefoldlink)
 
-Cihazlar **listesinde** , ağda uyarıların oluşturulmuş olduğu cihazların listesi görüntülenir. Varsayılan olarak, kuyruk son 30 gün içinde görülen cihazları görüntüler.
+**Cihazlar listesi**, ağınızdaki uyarıların oluşturulduğu cihazların listesini gösterir. Kuyruk varsayılan olarak son 30 gün içinde görülen cihazları görüntüler.
 
-En çok risk altında olan cihazların kolayca tanımlanması için etki alanı, risk düzeyi, işletim sistemi platformu gibi bilgileri ve diğer ayrıntıları bir bakışta görebilirsiniz.
+Bir bakışta etki alanı, risk düzeyi, işletim sistemi platformu gibi bilgileri ve risk altındaki cihazların kolay tanımlanmasına yönelik diğer ayrıntıları göreceksiniz.
 
-Cihaz listesi görünümünü özelleştirmek için seçebileceğiniz çeşitli seçenekler vardır. Üst gezintiden şunlarıabilirsiniz:
+Cihaz listesi görünümünü özelleştirmek için aralarından seçim yapabileceğiniz çeşitli seçenekler vardır. Üst gezintide aşağıdakileri yapabilirsiniz:
 
 - Sütun ekleme veya kaldırma
 - Listenin tamamını CSV biçiminde dışarı aktarma
-- Sayfa başına göstermek istediğiniz öğe sayısını seçin
+- Sayfa başına gösterilecek öğe sayısını seçin
 - Filtre uygulama
 
-Ekleme işlemi sırasında Cihazlar listesi, **algılayıcı** verilerini bildirmeye başlayan cihazlarla aşamalı olarak doldurulur. Çevrimiçi duruma geldiklerinde eklenilen uç noktalarınızı izlemek için bu görünümü kullanın veya çevrimdışı çözümleme için tam uç nokta listesini CSV dosyası olarak indirin.
+Ekleme işlemi sırasında **Cihazlar listesi** , algılayıcı verilerini raporlamaya başlarken cihazlarla aşamalı olarak doldurulur. Eklenen uç noktalarınızı çevrimiçi olarak izlemek için bu görünümü kullanın veya çevrimdışı analiz için tam uç nokta listesini CSV dosyası olarak indirin.
 
 > [!NOTE]
-> Cihaz listesini dışarı aktardıysanız, bu liste, organizasyonlar'daki tüm cihazlarınızı içerir. İndirmek, kuruma ne kadar büyük olduğunu bağlı olarak önemli ölçüde zaman alsa da bu kadar uzun olabilir. Listeyi CSV biçiminde dışarı aktaran veriler filtrelenmemiş bir şekilde görüntülenir. CSV dosyası, görünümde kendisine uygulanan filtrelerden bağımsız olarak, kuruluşta tüm cihazları içerir.
+> Cihaz listesini dışarı aktarırsanız, kuruluşunuzdaki tüm cihazları içerir. Kuruluşunuzun ne kadar büyük olduğuna bağlı olarak indirilmesi önemli ölçüde zaman alabilir. Listeyi CSV biçiminde dışarı aktarmak, verileri filtrelenmemiş bir şekilde görüntüler. CSV dosyası, görünüme uygulanan filtrelemelerden bağımsız olarak kuruluştaki tüm cihazları içerir.
 
-:::image type="content" source="images/device-inventory.png" alt-text="Cihazların listesi" lightbox="images/device-inventory.png":::
+:::image type="content" source="images/device-inventory.png" alt-text="Cihaz listesi" lightbox="images/device-inventory.png":::
 
 ## <a name="sort-and-filter-the-device-list"></a>Cihaz listesini sıralama ve filtreleme
 
-Uyarı listesini sınırlandırarak daha odaklanmış bir görünüm elde etmek için aşağıdaki filtreleri uygulayabilirsiniz.
+Uyarı listesini sınırlamak ve daha odaklanmış bir görünüm elde etmek için aşağıdaki filtreleri uygulayabilirsiniz.
 
 ### <a name="device-name"></a>Cihaz adı
 
-Kullanıcı Uç Nokta için Microsoft Defender sırasında MDE'ye yerleşik cihazlar, algılayıcı verilerini bildirmeye başlandıklarına göre cihaz envanterine aşamalı olarak doldurulur. Bu işlemden sonra, cihaz stoku, cihaz bulma işlemi aracılığıyla ağda bulunan cihazlar tarafından doldurulur. Cihaz envanteri, cihazları şu şekilde listeleen üç sekmeye sahip:
+Uç Nokta için Microsoft Defender ekleme işlemi sırasında, MDE'ye eklenen cihazlar, algılayıcı verilerini raporlamaya başladığında aşamalı olarak cihaz envanterine doldurulur. Bundan sonra, cihaz envanteri, cihaz bulma işlemi aracılığıyla ağınızda bulunan cihazlar tarafından doldurulur. Cihaz envanterinde cihazları listeleyen üç sekme vardır:
 
-- **Bilgisayarlar ve Mobil**: Enterprise uç noktaları (iş istasyonları, sunucular ve mobil cihazlar) kullanılabilir
+- **Bilgisayarlar ve Mobil**: Enterprise uç noktaları (iş istasyonları, sunucular ve mobil cihazlar)
 - **Ağ cihazları**: Yönlendiriciler ve anahtarlar gibi cihazlar
-- **IoT cihazları**: Yazıcı ve kamera gibi cihazlar
+- **IoT cihazları**: Yazıcılar ve kameralar gibi cihazlar
 
-## <a name="navigate-to-the-device-inventory-page"></a>Cihaz stoku sayfasına gidin
+## <a name="navigate-to-the-device-inventory-page"></a>Cihaz envanteri sayfasına gidin
 
-Mobil portalda Uç noktalar gezinti **menüsünden Cihaz** **envanteri'ni** seçerek cihaz [Microsoft 365 Defender erişin](/defender/microsoft-365-security-center-mde).
+[Microsoft 365 Defender portalındaki](/defender/microsoft-365-security-center-mde) **Uç Noktalar** gezinti **menüsünden Cihaz envanteri'ni** seçerek cihaz envanteri sayfasına erişin.
 
-## <a name="device-inventory-overview"></a>Cihaz stoku için genel bakış
+## <a name="device-inventory-overview"></a>Cihaz envanteri genel bakış
 
-Cihaz envanteri Bilgisayarlar ve **Mobil sekmesinde** açılır. En çok risk olan cihazların kolayca tanımlanması için cihaz adı, etki alanı, risk düzeyi, pozlama düzeyi, işletim sistemi platformu, kullanım durumu, algılayıcı durumu ve diğer ayrıntılar gibi bilgileri bir bakışta görebilirsiniz.
+Cihaz envanteri **Bilgisayarlar ve Mobil** sekmesinde açılır. Bir bakışta cihaz adı, etki alanı, risk düzeyi, maruz kalma düzeyi, işletim sistemi platformu, ekleme durumu, algılayıcı sistem durumu ve en çok risk altındaki cihazların kolay tanımlanması için diğer ayrıntılar gibi bilgileri göreceksiniz.
 
-Bulunan **cihazlara göre sıralamak** ve filtrelemek için Ekleme Durumu sütununu kullanın; bu cihazlarda zaten var olan cihazlar Uç Nokta için Microsoft Defender.
+Bulunan cihazlara ve zaten Uç Nokta için Microsoft Defender eklenen cihazlara göre sıralamak ve filtrelemek için **Ekleme Durumu** sütununu kullanın.
 
-![Cihaz listesiyle birlikte cihazlar listesinin görüntüsü.](images/device-inventory.png)
+![Cihaz listesinin yer aldığı cihaz listesinin görüntüsü.](images/device-inventory.png)
 
-Ağ **cihazları ve** **IoT cihazları** sekmelerinde satıcı, model ve cihaz türü gibi bilgileri de görüntülersiniz:
+**Ağ cihazları** ve **IoT cihazları** sekmelerinden satıcı, model ve cihaz türü gibi bilgileri de görürsünüz:
 
-![Ağ cihazları listesinin resmi.](images/device-inventory-networkdevices.png)
+![Ağ cihazları listesinin görüntüsü.](images/device-inventory-networkdevices.png)
 
-Her cihaz envanteri sekmesinin en üstünde, toplam cihaz sayısını, henüz eklememiş cihazların sayısını ve kuruluş için daha yüksek bir risk olarak tanımlanan cihaz sayısını görebilirsiniz. Güvenlik sonrası iyileştirmeleri için cihazların önceliklerini belirlemede size yardımcı olması için bu bilgileri kullanabilirsiniz.
+Her cihaz envanteri sekmesinin en üstünde, toplam cihaz sayısını, henüz eklenmemiş cihaz sayısını ve kuruluşunuz için daha yüksek risk olarak tanımlanan cihaz sayısını görebilirsiniz. Güvenlik duruşu geliştirmeleri için cihazların önceliklerini belirlemenize yardımcı olması için bu bilgileri kullanabilirsiniz.
 
-Ağ **cihazları ve** IoT cihazları için Yeni bulunan cihaz sayısı sekmeleri, son 7 gün içinde bulunan ve geçerli görünümde listelenen yeni cihazların sayısını gösterir.
+Ağ cihazları ve IoT cihazları sekmeleri için **yeni bulunan** cihaz sayısı, geçerli görünümde listelenen son 7 gün içinde bulunan yeni cihazların sayısını gösterir.
 
-![Yeni bulunan cihaz sayısını gösterir.](images/new-discovered-devices.png)
+![Bulunan yeni cihaz sayısının resmi.](images/new-discovered-devices.png)
 
-## <a name="explore-the-device-inventory"></a>Cihaz envanterini keşfedin
+## <a name="explore-the-device-inventory"></a>Cihaz envanterini keşfetme
 
-Cihaz stoku görünümünü özelleştirmek için seçebileceğiniz çeşitli seçenekler vardır. Her sekme için üst gezintide şunları yapın:
+Cihaz envanter görünümünü özelleştirmek için aralarından seçim yapabileceğiniz çeşitli seçenekler vardır. Her sekmenin üst gezintisinde aşağıdakileri yapabilirsiniz:
 
-- Cihazı adına göre arama
-- En son kullanılan IP adresi veya IP adresi öneki ile bir cihazı arama
+- Bir cihazı ada göre arama
+- Bir cihazı en son kullanılan IP adresine veya IP adresi ön eklerine göre arama
 - Sütun ekleme veya kaldırma
-- Çevrimdışı çözümleme için listenin tamamını CSV biçiminde dışarı aktarma
-- Görüntülenmek istediğiniz tarih aralığını seçin
+- Çevrimdışı analiz için listenin tamamını CSV biçiminde dışarı aktarma
+- Görüntülenecek tarih aralığını seçin
 - Filtre uygulama
 
 > [!NOTE]
-> Cihaz listesini dışarı aktardıysanız, bu liste, organizasyonlar'daki tüm cihazlarınızı içerir. İndirmek, kuruma ne kadar büyük olduğunu bağlı olarak önemli ölçüde zaman alsa da bu kadar uzun olabilir. Listeyi CSV biçiminde dışarı aktaran veriler filtrelenmemiş bir şekilde görüntülenir. CSV dosyası, görünümde kendisine uygulanan filtrelerden bağımsız olarak, kuruluşta tüm cihazları içerir.
+> Cihaz listesini dışarı aktarırsanız, kuruluşunuzdaki tüm cihazları içerir. Kuruluşunuzun ne kadar büyük olduğuna bağlı olarak indirilmesi önemli ölçüde zaman alabilir. Listeyi CSV biçiminde dışarı aktarmak, verileri filtrelenmemiş bir şekilde görüntüler. CSV dosyası, görünüme uygulanan filtrelemelerden bağımsız olarak kuruluştaki tüm cihazları içerir.
 
-Daha odaklanmış bir görünüm elde etmek ve kurumda cihazları değerlendirmenize ve yönetmenize yardımcı olmak için, her bir cihaz envanteri sekmesinde bulunan sıralama ve filtreleme işlevlerini kullanabilirsiniz.
+Daha odaklanmış bir görünüm elde etmek ve kuruluşunuzdaki cihazları değerlendirmenize ve yönetmenize yardımcı olmak için her cihaz envanteri sekmesinde bulunan sıralama ve filtreleme işlevini kullanabilirsiniz.
 
-Her sekmenin üst kısmında yer alan sayımlar geçerli görünüme göre güncelleştirilir.
+Her sekmenin en üstündeki sayılar geçerli görünüme göre güncelleştirilir.
 
-## <a name="use-filters-to-customize-the-device-inventory-views"></a>Cihaz envanteri görünümlerini özelleştirmek için filtreleri kullanma
+## <a name="use-filters-to-customize-the-device-inventory-views"></a>Cihaz envanter görünümlerini özelleştirmek için filtreleri kullanma
 
 Filtre | Açıklama
 :---|:---
-**Risk düzeyi** </br> | Risk düzeyi, cihaz üzerinde etkin uyarıların türleri ve önem düzeyi de içinde olmak üzere bir etmenler birleşimine bağlı olarak cihazın genel risk değerlendirmesini yansıtmaktadır. Etkin uyarıları çözümleme, düzeltme etkinliklerini onaylama ve sonraki uyarıları gizleme, risk düzeyini düşürebilir.
-**Pozlama düzeyi** </br> | Etkilenme düzeyi, bekleyen güvenlik önerilerinin kümülatif etkisine bağlı olarak cihazın geçerli etkilenme düzeyini yansıtmaktadır. Olası düzeyler düşük, orta ve yüksektir. Düşük pozlama, cihazlarınızı açıklardan yararlanmaya karşı daha az korumasız olduğu anlamına gelir. </br> </br> Pozlama düzeyi "Veri yok" ifadesini belirtiyorsa, bunun birkaç nedeni olabilir:</br>- Cihaz 30 gün boyunca raporlamayı durdurdu. Bu durumda devre dışı olduğu kabul edilir ve maruz kalma durumu hesaplanmayacaktır.</br>- Cihaz işletim sistemi desteklenmiyor - Mobil cihaz [gereksinimleri için en düşük Uç Nokta için Microsoft Defender](https://microsoft-my.sharepoint.com/personal/siosulli_microsoft_com/Documents/Security%20Posture/TVM/minimum-requirements.md).</br>- Eski aracısı olan cihaz (pek olası değil).
-**Etiketler** </br> | Listeyi, tek tek cihazlara ekleytilen gruplama ve etiketlemeye göre filtrele. Bkz [. Cihaz etiketlerini oluşturma ve yönetme](machine-tags.md).
-**Cihaz değeri**</br> | Cihazın yüksek değer veya düşük değer olarak işaretlenmiş olup olmadığını temel alarak listeye filtre uygulama.
-**Dışlama durumu** </br> | Cihazın dışlanmış veya dışlanmış olup olmadığını temel alarak listeye filtre uygulama. Daha fazla bilgi için bkz. [Cihazları dışla](exclude-devices.md).
-**Işletim Sistemi Platformu** </br>| Araştırırken ilgilendiğiniz işletim sistemi platformlarını filtrele </br></br>(_Yalnızca bilgisayarlar ve mobil ve IoT cihazları_)
-**İlk görülen** </br> | Görünümlerinizi, cihazın ağda ilk ne zaman görüntülandığına veya algılayıcı tarafından ilk ne zaman bildir Uç Nokta için Microsoft Defender filtrele.</br></br>(_Yalnızca bilgisayarlar ve mobil ve IoT cihazları_)
-**Windows sürümü** </br> | Araştırırken ilgilendiğiniz Windows sürümlerine göre filtrelenin.</br></br> (_Yalnızca bilgisayarlar ve mobil_)
-**Algılayıcıların durumu** </br> | Aşağıdaki algılayıcı durumuna göre filtre yapın. Cihaz, cihaza şu Uç Nokta için Microsoft Defender:</br> - **Etkin**: Algılayıcı verilerini etkin bir şekilde hizmete bildiren cihazlar.</br> - **Etkin değil**: 7 gün boyunca sinyalleri göndermeyi durduran cihazlar. </br> - **Yanlış Yapılandırılmış: Hizmetle** iletişim engeli olan veya algılayıcı verilerini gönderemeyen cihazlar. </br> Yanlış yapılandırılmış cihazlar, aşağıdakiler için daha fazla sınıflandırılabilir: </br>  - Algılayıcı verisi yok </br>  - Engelli iletişimler </br>  Hatalı yapılandırılmış cihazlardaki sorunları çözme hakkında daha fazla bilgi için bkz. [Uygun olmayan algılayıcıları düzeltme](https://microsoft-my.sharepoint.com/personal/siosulli_microsoft_com/Documents/Security%20Posture/TVM/fix-unhealthy-sensors.md).</br></br> (_Yalnızca bilgisayarlar ve mobil_)
-**Ekleme durumu** </br> | Ekleme durumu, cihazın şu anda kullanıcıya hazır olup olmadığını Uç Nokta için Microsoft Defender gösterir. Aşağıdaki eyaletlere göre filtre yapabilirsiniz: </br> - **Eklemeli**: Uç nokta, Alan Uç Nokta için Microsoft Defender.  </br> - **Kullanılabilir**: Uç nokta ağda desteklenen bir cihaz olarak bulundu ancak şu anda eklemedi. Microsoft bu cihazları işe eklemeyi kesinlikle önermektedir. </br> - **Desteklenmiyor**: Uç nokta ağda bulundu ancak diğer kullanıcılar tarafından Uç Nokta için Microsoft Defender. </br> - **Yetersiz bilgi**: Sistem, cihazın desteklanabilirliğini belirleyemedi.</br></br> (_Yalnızca bilgisayarlar ve mobil_)
-**Virüsten koruma durumu** </br> | Virüsten koruma durumunun devre dışı olup olmadığını, güncelleştirilme veya bilinmiyor olup olmadığını temel alarak görünüme filtre uygulama.</br></br> (_Yalnızca bilgisayarlar ve mobil_)
-**Grup** </br> | Araştırırken ilgilendiğiniz gruba göre listeye filtre uygulama. </br></br> (_Yalnızca bilgisayarlar ve mobil_)
-**Yönetilen** </br> | Yönetilen, cihazın nasıl yönetilmiyor olduğunu gösterir. Filtreyi şu ölçütlere göre filtreleysiniz:</br>- Uç Nokta için Microsoft Defender </br> - Mobil cihaz yönetimi (MDM) </br>- Bilinmiyor: Bunun nedeni, eski sürümün veya SCCM Windows başka bir üçüncü taraf MDM'nin çalışıyor olması olabilir.</br></br> (_Yalnızca bilgisayarlar ve mobil_)
-**Cihaz Türü** </br> | Araştırırken ilgilendiğiniz cihaz türüne göre filtre kullanın.</br></br> (_Yalnızca IoT cihazları_)
+**Risk düzeyi** </br> | Risk düzeyi, cihazdaki etkin uyarıların türleri ve önem derecesi de dahil olmak üzere faktörlerin bir bileşimine göre cihazın genel risk değerlendirmesini yansıtır. Etkin uyarıları çözümleme, düzeltme etkinliklerini onaylama ve sonraki uyarıların gizlenmesi risk düzeyini düşürebilir.
+**Maruz kalma düzeyi** </br> | Maruz kalma düzeyi, bekleyen güvenlik önerilerinin kümülatif etkisine bağlı olarak cihazın geçerli maruziyetini yansıtır. Olası düzeyler düşük, orta ve yüksektir. Düşük maruz kalma, cihazlarınızın yararlanmaya karşı daha az savunmasız olduğu anlamına gelir. </br> </br> Maruz kalma düzeyinde "Kullanılabilir veri yok" ifadesi varsa, bunun olmasının birkaç nedeni vardır:</br>- Cihaz 30 günden uzun süre raporlamayı durdurdu. Bu durumda etkin değil olarak kabul edilir ve açığa çıkarma hesap edilmez.</br>- Cihaz işletim sistemi desteklenmiyor - [Uç Nokta için Microsoft Defender için en düşük gereksinimlere](/microsoft-365/security/defender-endpoint/minimum-requirements) bakın.</br>- Eski aracılı cihaz (olası değildir).
+**Etiketler** </br> | Tek tek cihazlara eklediğiniz gruplandırma ve etiketlemeye göre listeyi filtreleyin. Bkz. [Cihaz etiketlerini oluşturma ve yönetme](machine-tags.md).
+**Cihaz değeri**</br> | Cihazın yüksek değer olarak mı yoksa düşük değer olarak mı işaretlendiğine göre listeyi filtreleyin.
+**Dışlama durumu** </br> | Cihazın dışlanıp dışlanmadığına göre listeyi filtreleyin. Daha fazla bilgi için bkz. [Cihazları dışlama](exclude-devices.md).
+**İşletim Sistemi Platformu** </br>| Araştırmak istediğiniz işletim sistemi platformlarına göre filtreleme </br></br>(_Yalnızca bilgisayarlar ve mobil ve IoT cihazları_)
+**İlk kez görüldü** </br> | Cihazınızın ağda ilk görüldüğü veya Uç Nokta için Microsoft Defender algılayıcısı tarafından ilk bildirildiği zaman temelinde görünümünüzü filtreleyin.</br></br>(_Yalnızca bilgisayarlar ve mobil ve IoT cihazları_)
+**Windows sürümü** </br> | Araştırmak istediğiniz Windows sürümlerine göre filtreleyin.</br></br> (_Yalnızca bilgisayarlar ve mobil_ cihazlar)
+**Algılayıcı sistem durumu** </br> | Uç Nokta için Microsoft Defender eklenen cihazlar için aşağıdaki algılayıcı sistem durumu durumlarına göre filtreleyin:</br> - **Etkin**: Algılayıcı verilerini hizmete etkin olarak bildiren cihazlar.</br> - **Etkin değil**: Sinyal göndermeyi 7 günden fazla durduran cihazlar. </br> - **Yanlış yapılandırılmış**: Hizmetle iletişim bozukluğu olan veya algılayıcı verilerini gönderemeyen cihazlar. </br> Yanlış yapılandırılmış cihazlar şu şekilde sınıflandırılabilir: </br>  - Algılayıcı verisi yok </br>  - Bozuk iletişimler </br>  Yanlış yapılandırılmış cihazlardaki sorunları giderme hakkında daha fazla bilgi için bkz. [İyi durumda olmayan algılayıcıları düzeltme](/microsoft-365/security/defender-endpoint/fix-unhealthy-sensors).</br></br> (_Yalnızca bilgisayarlar ve mobil_ cihazlar)
+**Ekleme durumu** </br> | Ekleme durumu, cihazın şu anda Uç Nokta için Microsoft Defender eklenip eklenmediğini gösterir. Aşağıdaki durumlara göre filtreleyebilirsiniz: </br> - **Eklenen**: Uç nokta Uç Nokta için Microsoft Defender eklenir.  </br> - **Eklenebilir**: Uç nokta ağdaki desteklenen bir cihaz olarak bulundu, ancak şu anda eklenmemiş. Microsoft bu cihazları eklemenizi kesinlikle önerir. </br> - **Desteklenmeyen**: Uç nokta ağda bulundu, ancak Uç Nokta için Microsoft Defender tarafından desteklenmiyor. </br> - **Yetersiz bilgi**: Sistem cihazın desteklenebilirliğini belirleyemedi.</br></br> (_Yalnızca bilgisayarlar ve mobil_ cihazlar)
+**Virüsten koruma durumu** </br> | Virüsten koruma durumunun devre dışı, güncelleştirilmemiş veya bilinmiyor olmasına göre görünümü filtreleyin.</br></br> (_Yalnızca bilgisayarlar ve mobil_ cihazlar)
+**Grup** </br> | Listeyi araştırmak istediğiniz gruba göre filtreleyin. </br></br> (_Yalnızca bilgisayarlar ve mobil_ cihazlar)
+**Tarafından yönetilir** </br> | Tarafından yönetilir, cihazın nasıl yönetildiğini gösterir. Filtre ölçütü:</br>- Uç Nokta için Microsoft Defender </br> - Mobil cihaz yönetimi (MDM) </br>- Bilinmiyor: Bunun nedeni eski bir Windows sürümünün çalıştırılması, SCCM'nin yerinde olması veya başka bir üçüncü taraf MDM'sinin olması olabilir.</br></br> (_Yalnızca bilgisayarlar ve mobil_ cihazlar)
+**Cihaz Türü** </br> | Araştırmak istediğiniz cihaz türüne göre filtreleyin.</br></br> (_Yalnızca IoT cihazları_)
 
-## <a name="use-columns-to-customize-the-device-inventory-views"></a>Cihaz stoku görünümlerini özelleştirmek için sütunları kullanma
+## <a name="use-columns-to-customize-the-device-inventory-views"></a>Cihaz envanter görünümlerini özelleştirmek için sütunları kullanma
 
-Kullanılabilir bir sütun başlığına tıklayarak görünümdeki sütunları ekleyebilir veya kaldırabilir ve girdileri sıralayabilirsiniz.
+Kullanılabilir bir sütun üst bilgisine tıklayarak görünüme sütun ekleyebilir veya görünümden sütunları kaldırabilir ve girişleri sıralayabilirsiniz.
 
-Bilgisayar ve **Mobil Cihazlar sekmesinde** Sütunları **özelleştir'i seçerek** kullanılabilir sütunları görüntüleyin. Aşağıdaki resimde varsayılan değerler denetlenir:
+Kullanılabilir sütunları görmek için **Bilgisayar ve Cep Telefonları** sekmesinde **Sütunları özelleştir'i** seçin. Varsayılan değerler aşağıdaki görüntüde denetlenmektedir:
 
-![Bilgisayar ve cep telefonlarının görüntüsü](images/computerandmobilescolumns.png)
+![Bilgisayarların ve cep telefonlarının görüntüsü](images/computerandmobilescolumns.png)
 
-Kullanılabilir **sütunları görmek için** Ağ cihazları **sekmesinde Sütunları** özelleştir'i seçin. Aşağıdaki resimde varsayılan değerler denetlenir:
+Kullanılabilir sütunları görmek için **Ağ cihazları** sekmesinde **Sütunları özelleştir'i** seçin. Varsayılan değerler aşağıdaki görüntüde denetlenmektedir:
 
 ![Ağ cihazı sütunlarının görüntüsü](images/networkdevicescolumns.png)
 
-Kullanılabilir sütunları **görmek için IoT** cihazları **sekmesinde Sütunları** özelleştir'i seçin. Aşağıdaki resimde varsayılan değerler denetlenir:
+Kullanılabilir sütunları görmek için **IoT cihazları** sekmesinde **Sütunları özelleştir'i** seçin. Varsayılan değerler aşağıdaki görüntüde denetlenmektedir:
 
-![IoT cihaz sütunlarının resmi](images/iotdevicescolumns.png)
+![IoT cihaz sütunlarının görüntüsü](images/iotdevicescolumns.png)
 
 ## <a name="related-articles"></a>İlgili makaleler
 
-[Uç Nokta için Microsoft Defender Cihazlar listesinde cihazları araştırma](investigate-machines.md)
+[Uç Nokta için Microsoft Defender Cihazlar listesindeki cihazları araştırma](investigate-machines.md)

@@ -7,7 +7,7 @@ ms.author: bcarter
 author: brendacarter
 manager: dansimp
 audience: Admin
-description: Tehditlere karşı savunmak Microsoft 365 Sıfır Güven hassas verileri korumak için ortamınıza güvenlik dağıtımı yapmayı öğrenin.
+description: Tehditlere karşı savunmak ve hassas verileri korumak için ortamınıza Microsoft 365 Sıfır Güven güvenlik dağıtmayı öğrenin.
 ms.topic: tutorial
 ms.prod: m365-security
 ms.technology: m365d
@@ -18,129 +18,115 @@ ms.collection:
 - m365solution-zerotrust
 - m365solution-overview
 - M365-security-compliance
-ms.openlocfilehash: f8ffdcb817763589dfb43f7389bc44b7a28459f2
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 879cbe33393158ee9e24107bbe042adc2f727ac6
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64473067"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64667218"
 ---
 # <a name="microsoft-365-zero-trust-deployment-plan"></a>Microsoft 365 Sıfır Güven dağıtım planı
 
-Bu makalede, güvenlik ve güvenlik **Sıfır Güven için dağıtım** planı Microsoft 365. Sıfır Güven, ihlal olduğunu varan ve her isteğin, denetimsiz bir ağdan geliyor gibi doğrulandığı yeni bir güvenlik modelidir. İsteğin nereden geldiğine veya hangi kaynağa erişten olursa olsun, Sıfır Güven modeli "asla güvenme, her zaman doğrula" dersi veriyor.
+Bu makalede, **Microsoft 365 ile Sıfır Güven** güvenliği oluşturmaya yönelik bir dağıtım planı sağlanır. Sıfır Güven, ihlal olduğunu varsayan ve her isteği kontrolsüz bir ağdan geliyormuş gibi doğrulayan yeni bir güvenlik modelidir. İsteğin nereden kaynaklandığına veya hangi kaynağa eriştiğine bakılmaksızın, Sıfır Güven modeli bize "hiçbir zaman güvenme, her zaman doğrulama" öğretir.
 
+## <a name="zero-trust-security-architecture"></a>Sıfır Güven güvenlik mimarisi
 
-## <a name="zero-trust-security-architecture"></a>Sıfır Güven mimarisini benimser
+Sıfır Güven bir yaklaşım tüm dijital emlak genelinde genişletilir ve tümleşik bir güvenlik felsefesi ve uçtan uca strateji olarak hizmet eder.
 
-Kısa Sıfır Güven yaklaşımı dijital emlakın tamamına doğru genişler ve tümleşik bir güvenlik stratejisi ve  uç-uç stratejisi olarak hizmet ediyor. 
+Bu çizim, Sıfır Güven katkıda bulunan birincil öğelerin bir gösterimini sağlar.
 
-Bu çizimde, çalışmalara katkıda bulunan birincil öğeler Sıfır Güven.
-
-:::image type="content" source="../media/zero-trust/zero-trust-architecture.png" alt-text="En Sıfır Güven mimarisi" lightbox="../media/zero-trust/zero-trust-architecture.png":::
+:::image type="content" source="../media/zero-trust/zero-trust-architecture.png" alt-text="Sıfır Güven güvenlik mimarisi" lightbox="../media/zero-trust/zero-trust-architecture.png":::
 
 Çizimde:
-- Güvenlik ilkesi zorlaması, güvenlik ilkesi mimarisinin Sıfır Güven merkezindedir. Bu, kullanıcı hesabı riskini, cihaz durumunu ve sizin ayardınız diğer ölçütleri ve ilkeleri hesaba katan koşullu erişimle Çok Faktörlü kimlik doğrulamasını içerir.
-- Kimlikler, cihazlar, veriler, uygulamalar, ağ ve diğer altyapı bileşenlerinin hepsi uygun güvenlikle yapılandırılır. Bu bileşenlerin her biri için yapılandırılan ilkeler, genel güvenlik stratejiniz Sıfır Güven eşgüdüm sağlar. Örneğin, cihaz ilkeleri sağlıklı cihazlar için ölçütleri belirler ve belirli uygulamalara ve verilere erişim için sağlıklı cihazlara yönelik koşullu erişim ilkeleri gerekir.
-- Tehdit koruması ve zeka ortamı izler, geçerli riskleri ortaya çıkartır ve saldırılarını düzeltmek için otomatik eylem alır.
+
+- Güvenlik ilkesi zorlama, Sıfır Güven mimarisinin merkezindedir. Bu, kullanıcı hesabı riskini, cihaz durumunu ve ayarladığınız diğer ölçütleri ve ilkeleri dikkate alan koşullu erişime sahip Multi Factor kimlik doğrulamasını içerir.
+- Kimlikler, cihazlar, veriler, uygulamalar, ağ ve diğer altyapı bileşenlerinin tümü uygun güvenlikle yapılandırılır. Bu bileşenlerin her biri için yapılandırılan ilkeler, genel Sıfır Güven stratejinizle koordine edilir. Örneğin, cihaz ilkeleri iyi durumdaki cihazlar için ölçütleri belirler ve koşullu erişim ilkeleri belirli uygulamalara ve verilere erişmek için iyi durumdaki cihazlar gerektirir.
+- Tehdit koruması ve zeka ortamı izler, mevcut riskleri ortaya çıkarır ve saldırıları düzeltmek için otomatik eylem gerçekleştirir.
 
 <!---
-For more information about this architecture, including deployment objectives for your entire digital estate, see [Zero Trust Rapid Modernization Plan (RaMP)](https://review.docs.microsoft.com/security/zero-trust/zero-trust-ramp-overview?branch=zt-content-prototype). 
+For more information about this architecture, including deployment objectives for your entire digital estate, see [Zero Trust Rapid Modernization Plan (RaMP)](https://review.docs.microsoft.com/security/zero-trust/zero-trust-ramp-overview?branch=zt-content-prototype).
 -->
 
-Daha fazla bilgi Sıfır Güven için Microsoft'un Kılavuz [_**Merkezi'Sıfır Güven bakın**_](/security/zero-trust).
+Sıfır Güven hakkında daha fazla bilgi için bkz. Microsoft'un [_**Sıfır Güven Rehberlik Merkezi**_](/security/zero-trust).
 
-## <a name="deploying-zero-trust-for-microsoft-365"></a>Sıfır Güven için Microsoft 365'i dağıtma
+## <a name="deploying-zero-trust-for-microsoft-365"></a>Microsoft 365 için Sıfır Güven dağıtma
 
-Microsoft 365 birçok güvenlik ve bilgi koruma özelliğiyle, ortamınıza güvenlik ve bilgi koruması Sıfır Güven bilerek yerleşik olarak tasarlanmıştır. Pek çok özellik, kurum tarafından kullanan diğer SaaS uygulamalarına ve bu uygulamalar içindeki verilere erişimi korumak için genişletılabilir.
+Microsoft 365, ortamınızda Sıfır Güven oluşturmanıza yardımcı olacak birçok güvenlik ve bilgi koruma özelliğiyle kasıtlı olarak oluşturulur. Kuruluşunuzun kullandığı diğer SaaS uygulamalarına ve bu uygulamalardaki verilere erişimi korumak için özelliklerin çoğu genişletilebilir.
 
-Bu çizim, yeni ve kolay Sıfır Güven çalışma gösterir. Bu çalışma, önkoşulların tamamlandıktan sonra alttan başlayarak en alttan başlayarak en üstten başlayarak birlikte yapılandırılana kadar çalışma birimlerine bozulur.
-
+Bu çizim, Sıfır Güven özellikleri dağıtma işlemini temsil eder. Bu çalışma, alttan başlayıp en üste doğru çalışarak birlikte yapılandırılabilir çalışma birimlerine bölünerek önkoşul çalışmasının tamamlanmasını sağlar.
 
 :::image type="content" source="../media/zero-trust/m365-zero-trust-deployment-stack.png" alt-text="Microsoft 365 Sıfır Güven dağıtım yığını" lightbox="../media/zero-trust/m365-zero-trust-deployment-stack.png":::
 
-Bu şekilde:
-- Sıfır Güven temel kimlik ve cihaz koruması temel bilgileriyle başlar. 
-- Tehdit koruması özellikleri, güvenlik tehditlerini gerçek zamanlı olarak izleme ve düzeltme sağlamak için bu temelin üzerine kurulur. 
-- Bilgi koruma ve yönetim, en değerli bilgilerinizi korumak ve kişisel bilgilerinizi koruma da dahil olmak üzere uyumluluk standartlarına uymanıza yardımcı olmak için belirli veri türlerine yönelik gelişmiş denetimler sağlar.
+Bu çizimde:
 
-## <a name="step-1-configure-zero-trust-identity-and-device-access-protection--starting-point-policies"></a>Adım 1. Kimlik Sıfır Güven cihaz erişim korumasını (başlangıç noktası ilkeleri) yapılandırma
+- Sıfır Güven, kimlik ve cihaz korumasının temeli ile başlar.
+- Tehdit koruma özellikleri, güvenlik tehditlerinin gerçek zamanlı izlenmesini ve düzeltilmesi için bu temelin üzerine kurulmuştur.
+- Bilgi koruma ve idare, en değerli bilgilerinizi korumak ve kişisel bilgileri korumak da dahil olmak üzere uyumluluk standartlarına uymanıza yardımcı olmak için belirli veri türlerini hedefleyen gelişmiş denetimler sağlar.
 
-İlk adım, kimlik ve cihaz Sıfır Güven korumasını yapılandırarak temel yapınızı oluşturmaktır. 
+## <a name="step-1-configure-zero-trust-identity-and-device-access-protection--starting-point-policies"></a>Adım 1. Sıfır Güven kimliği ve cihaz erişim korumasını yapılandırma — başlangıç noktası ilkeleri
 
+İlk adım, kimlik ve cihaz erişim korumasını yapılandırarak Sıfır Güven temelinizi oluşturmaktır.
 
-:::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-step-1b.png" alt-text="Kimlik ve cihaz erişim Sıfır Güven yapılandırma işlemi" lightbox="../media/zero-trust/m365-zero-trust-architecture-step-1b.png":::
+:::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-step-1b.png" alt-text="Sıfır Güven kimliği ve cihaz erişim korumasını yapılandırma işlemi" lightbox="../media/zero-trust/m365-zero-trust-architecture-step-1b.png":::
 
+Bunu gerçekleştirmek için Sıfır Güven [**_kimlik ve cihaz erişim korumasına_**](office-365-security/microsoft-365-policies-configurations.md) gidin. Bu makale serisinde bir dizi kimlik ve cihaz erişimi önkoşul yapılandırması ve Azure Active Directory (Azure AD) Koşullu Erişim, Microsoft Intune ve Microsoft 365 erişiminin güvenliğini sağlamak için diğer ilkeler açıklanmaktadır  Azure AD Uygulama Ara Sunucusu ile yayımlanan kurumsal bulut uygulamaları ve hizmetleri, diğer SaaS hizmetleri ve şirket içi uygulamalar için.
 
-
-Bunu Sıfır Güven [**_önceden yönlendirme için kimlik_**](office-365-security/microsoft-365-policies-configurations.md) ve cihaz erişim korumasına gidin. Bu makale dizisinde, kimlik ve cihaz erişimi önkoşulları yapılandırmaları ve bu yapılandırmalara erişimin güvenliğini sağlamak için Azure Active Directory (Azure AD) Koşullu Erişim, Microsoft Intune ve diğer ilkeler kümesi Microsoft 365  Kurumsal bulut uygulamaları ve hizmetleri, diğer SaaS hizmetleri ve Azure AD ile yayımlanan şirket içi uygulamalar için Uygulama Ara Sunucusu.
-
-
-
-|Şunları içerir:  |Önkoşullar  |Bu,  |
+|Içerir|Önkoşullar|Şunları içermez:|
 |---------|---------|---------|
-|Korumanın üç katmanı için önerilen kimlik ve cihaz erişimi ilkeleri:<br>- Başlangıç noktası<br>- Enterprise (önerilir)<br>- Özel<br><br>Ek öneriler:<br>- Dış kullanıcılar (konuklar)<br>- Microsoft Teams<br>- SharePoint Online<br>- Microsoft Defender for Cloud Apps| Microsoft E3 veya E5<br><br>Azure Active Directory modlardan birini seçin:<br>- Yalnızca bulut<br>- Parola karma eşitlemesi (PHS) kimlik doğrulaması ile karma<br>- Geçişli kimlik doğrulamasıyla karma (PTA)<br>- Federasyon     |Yönetilen cihazlar gerektiren ilkeler için cihaz kaydı. Cihazları kaydetmek için "Uç noktaları Intune" bağlantı noktalarına bakın |
-| | | |
+|Üç koruma katmanı için önerilen kimlik ve cihaz erişim ilkeleri: <ul><li>Başlangıç noktası</li><li>Enterprise (önerilir)</li><li>Özel</li></ul> <br> Ek öneriler: <ul><li>Dış kullanıcılar (konuklar)</li><li>Microsoft Teams</li><li>SharePoint Online</li><li>Bulut Uygulamaları için Microsoft Defender</lu></ul>|Microsoft E3 veya E5 <br><br> Bu modlardan birinde Azure Active Directory: <ul><li>Yalnızca bulut</li><li>Parola karması eşitleme (PHS) kimlik doğrulaması ile karma</li><li>Doğrudan kimlik doğrulaması (PTA) ile karma</li><li>Federe</li></ul>|Yönetilen cihazlar gerektiren ilkeler için cihaz kaydı. Bkz[. 2. Adım. Cihazları kaydetmek için Intune ile uç noktaları yönetme](#step-2-manage-endpoints-with-intune)|
 
-Başlangıç noktası katmanını uygulayarak başlayabilirsiniz. Bu ilkeler, cihazları yönetime kaydetmeyi gerektirmez. 
+Başlangıç noktası katmanını uygulayarak başlayın. Bu ilkeler, cihazların yönetime kaydedilmesini gerektirmez.
 
+:::image type="content" source="../media/zero-trust/identity-access-starting-point-tier.png" alt-text="Sıfır Güven kimlik ve cihaz erişim ilkeleri — başlangıç noktası katmanı" lightbox="../media/zero-trust/identity-access-starting-point-tier.png":::
 
-:::image type="content" source="../media/zero-trust/identity-access-starting-point-tier.png" alt-text="Kullanıcı Sıfır Güven cihaz erişimi ilkeleri (başlangıç noktası katmanı)" lightbox="../media/zero-trust/identity-access-starting-point-tier.png":::
+## <a name="step-2-manage-endpoints-with-intune"></a>Adım 2. uç noktaları Intune ile yönetme
 
+Ardından, cihazlarınızı yönetime kaydedin ve bunları daha gelişmiş denetimlerle korumaya başlayın.
 
-## <a name="step-2-manage-endpoints-with-intune"></a>Adım 2. Uç noktaları başka bir Intune
+:::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-step-2.png" alt-text="uç noktaları Intune ile yönet öğesi" lightbox="../media/zero-trust/m365-zero-trust-architecture-step-2.png":::
 
-Ardından, cihazlarınızı yönetime kaydettirin ve bunları daha gelişmiş denetimlerle korumaya başlayabilirsiniz. 
+Bunu gerçekleştirmek için açıklayıcı yönergeler için [**_Cihazları Intune ile yönetme_**](../solutions/manage-devices-with-intune-overview.md) konusuna gidin.
 
-:::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-step-2.png" alt-text="Intune öğesiyle uç Intune yönetme" lightbox="../media/zero-trust/m365-zero-trust-architecture-step-2.png":::
-
-
-Bunu [**_yapmak için önceden Intune_**](../solutions/manage-devices-with-intune-overview.md) Kılavuzu ile cihazları yönetme'ye gidin. 
-
-
-|Şunları içerir:  |Önkoşullar  |Bu,  |
+|Içerir|Önkoşullar|Şunları içermez:|
 |---------|---------|---------|
-|Cihazları başka bir Intune<br>- Kurumsal cihazlar<br>- AutoPilot/automated<br>- kayıt<br><br>İlkeleri yapılandırma<br>- Uygulama Koruma ilkeleri<br>- Uyumluluk ilkeleri<br>- Cihaz profili ilkeleri | Uç noktaları Azure AD ile kaydetme     | Bilgi koruma özelliklerini yapılandırma, şunları da içerir:<br>- Hassas bilgi türleri<br>- Etiketler<br>- DLP ilkeleri<br>Bu özellikler için bkz. 5. Adım. Verileri koruyun ve yönetirsiniz (bu makalenin devamlarında).       |
-|    |         |         |
+|Cihazları Intune ile kaydetme: <ul><li>Şirkete ait cihazlar</li><li>Otomatik pilot/otomatik</li><li>Kayıt</li></ul> <br> İlkeleri yapılandırma: <ul><li>Uygulama Koruma ilkeleri</li><li>Uyumluluk ilkeleri</li><li>Cihaz profili ilkeleri</li></ul>|Uç noktaları Azure AD'ye kaydetme|Aşağıdakiler dahil olmak üzere bilgi koruma özelliklerini yapılandırma: <ul><li>Hassas bilgi türleri</li><li>Etiket</li><li>DLP ilkeleri</li></ul> <br> Bu özellikler için bkz [. 5. Adım. Hassas verileri koruma ve yönetme](#step-5-protect-and-govern-sensitive-data) (bu makalenin ilerleyen bölümlerinde).|
 
-## <a name="step-3-add-zero-trust-identity-and-device-access-protection--enterprise-policies"></a>Adım 3. Kimlik Sıfır Güven cihaz erişim koruması (kimlik ve cihaz erişim Enterprise ekleme
+## <a name="step-3-add-zero-trust-identity-and-device-access-protection--enterprise-policies"></a>Adım 3. Sıfır Güven kimlik ve cihaz erişim koruması ekleme — Enterprise ilkeleri
 
-Yönetime kayıtlı cihazlarla, artık uyumlu cihazlar gerektiren tüm önerilen kimlik Sıfır Güven ve cihaz erişim ilkelerinin tamamını gerçekleştirebilirsiniz.
+Yönetime kayıtlı cihazlar sayesinde artık uyumlu cihazlar gerektiren önerilen Sıfır Güven kimlik ve cihaz erişim ilkelerinin tamamını uygulayabilirsiniz.
 
-:::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-enterprise-policies.png" alt-text="Cihaz Sıfır Güven kimlik ve erişim ilkeleri" lightbox="../media/zero-trust/m365-zero-trust-architecture-enterprise-policies.png":::
+:::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-enterprise-policies.png" alt-text="Cihaz yönetimiyle Sıfır Güven kimliği ve erişim ilkeleri" lightbox="../media/zero-trust/m365-zero-trust-architecture-enterprise-policies.png":::
 
-Ortak kimlik [**_ve cihaz erişimi ilkelerine geri_**](office-365-security/identity-access-policies.md) dönme ve ilkeleri ortak kimlik Enterprise ekleyin.  
+[**_Ortak kimlik ve cihaz erişim ilkelerine_**](office-365-security/identity-access-policies.md) dönün ve ilkeleri Enterprise katmanına ekleyin.
 
-:::image type="content" source="../media/zero-trust/identity-access-enterprise-tier.png" alt-text="Kullanıcı Sıfır Güven ve erişim ilkeleri — Enterprise (önerilen) katman" lightbox="../media/zero-trust/identity-access-enterprise-tier.png":::
+:::image type="content" source="../media/zero-trust/identity-access-enterprise-tier.png" alt-text="Sıfır Güven kimlik ve erişim ilkeleri — Enterprise (önerilen) katman" lightbox="../media/zero-trust/identity-access-enterprise-tier.png":::
 
-## <a name="step-4-evaluate-pilot-and-deploy-microsoft-365-defender"></a>Adım 4. Değerlendirme, pilot uygulama ve dağıtım Microsoft 365 Defender
+## <a name="step-4-evaluate-pilot-and-deploy-microsoft-365-defender"></a>Adım 4. Microsoft 365 Defender değerlendirme, pilot uygulama ve dağıtma
 
-Microsoft 365 Defender, Microsoft 365 ortamınız genelinde uç nokta, e-posta, uygulamalar ve kimlikler dahil olmak üzere sinyali, tehdide ve uyarıyı otomatik olarak toplayan, bu iletişimleri analiz eden ve analiz eden genişletilmiş bir algılama ve yanıt (XDR) çözümüdür.
+Microsoft 365 Defender uç nokta, e-posta, uygulamalar ve kimlikler dahil olmak üzere Microsoft 365 ortamınızda sinyal, tehdit ve uyarı verilerini otomatik olarak toplayan, ilişkilendiren ve analiz eden genişletilmiş bir algılama ve yanıt (XDR) çözümüdür.
 
 :::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-defender.png" alt-text="Sıfır Güven mimarisine Microsoft 365 Defender ekleme işlemi" lightbox="../media/zero-trust/m365-zero-trust-architecture-defender.png":::
 
-Elektronik [**_bileşenlerin pilot Microsoft 365 Defender_**](defender/eval-overview.md) dağıtımına ve dağıtımına ilişkin yöntemsel kılavuz için, Değerlendirme ve Microsoft 365 Defender gidin. 
+Microsoft 365 Defender bileşenleri pilot oluşturma ve dağıtmaya yönelik yöntemsel bir kılavuz için [**_Değerlendirme_**](defender/eval-overview.md) ve pilot Microsoft 365 Defender bölümüne gidin.
 
-|Şunları içerir:  |Önkoşullar  |Bu,  |
+|Içerir|Önkoşullar|Şunları içermez:|
 |---------|---------|---------|
-| Tüm bileşenler için değerlendirme ve pilot ortamını ayarlama:<br>- Kimlik için Defender<br>- Office 365 için Defender<br>- Uç Nokta için Defender<br>- Microsoft Defender for Cloud Apps<br><br>Tehditlere karşı korunun<br><br> Tehditleri araştırın ve karşı yanıt verin   | Bu makalenin her bileşenine yönelik mimari gereksinimleri hakkında bilgi Microsoft 365 Defender.        | Azure AD Identity Protection, bu çözüm kılavuzuna dahil değildir. Kimlik ve cihaz erişim koruması için 1. Sıfır Güven yapılandırma'ya dahildir.        |
-|    |         |         |
+|Tüm bileşenler için değerlendirme ve pilot ortamı ayarlayın: <ul><li>Kimlik için Microsoft Defender</li><li>Office 365 için Defender</li><li>Uç Nokta için Defender</li><li>Bulut Uygulamaları için Microsoft Defender</li></ul> <br> Tehditlere karşı korunun <br><br> Tehditleri araştırın ve karşı yanıt verin|Microsoft 365 Defender her bileşeni için mimari gereksinimleri hakkında bilgi edinmek için kılavuza bakın.| Azure AD Kimlik Koruması bu çözüm kılavuzuna dahil değildir. [1. Adım'a dahildir. Sıfır Güven kimliği ve cihaz erişim korumasını yapılandırın](#step-1-configure-zero-trust-identity-and-device-access-protection--starting-point-policies).|
 
 ## <a name="step-5-protect-and-govern-sensitive-data"></a>Adım 5. Hassas verileri koruma ve yönetme
 
-Hayat Microsoft Bilgi Koruması seyahat istediği her yerde hassas bilgileri bulan, sınıflandıracak ve korumanıza yardımcı olacak bir yol (MIP) uygulaması gerçekleştirin.
+Hassas bilgileri nerede olursa olsun keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olmak için Microsoft Bilgi Koruması (MIP) uygulayın.
 
-MIP özellikleri, Uyumluluk Microsoft 365 dahil edilir ve size verilerinizi bilmek, verilerinizi korumak ve veri kaybını önlemek için gerekli araçları sağlar.
+MIP özellikleri Microsoft 365 Uyumluluğu'na dahil edilir ve verilerinizi bilmeniz, verilerinizi korumanız ve veri kaybını önlemeniz için araçlar sunar.
 
+:::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-info-protect.png" alt-text="Bilgi koruma özellikleri, ilke uygulama yoluyla verileri koruma" lightbox="../media/zero-trust/m365-zero-trust-architecture-info-protect.png":::
 
-:::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-info-protect.png" alt-text="Bilgi koruma özellikleri, ilke zorlaması aracılığıyla verileri korur" lightbox="../media/zero-trust/m365-zero-trust-architecture-info-protect.png":::
+Bu çalışma, bu makalenin önceki bölümlerinde gösterilen dağıtım yığınının en üstünde gösteriliyor olsa da, bu çalışmaya istediğiniz zaman başlayabilirsiniz.
 
-Bu çalışma, bu makalenin önceki kısmında gösterildiği gibi dağıtım yığınının en üstünde gösterse de, bu çalışmaya istediğiniz zaman başlayabilirsiniz. 
-
-Microsoft Bilgi Koruması, belirli iş hedeflerinize yönelik olarak kullanabileceğiniz bir çerçeve, süreç ve özellikler sağlar.
+Microsoft Bilgi Koruması, belirli iş hedeflerinizi gerçekleştirmek için kullanabileceğiniz bir çerçeve, süreç ve özellikler sağlar.
 
 :::image type="content" source="../media/zero-trust/mip-solution-overview.png" alt-text="Microsoft Bilgi Koruması (MIP) çerçevesi" lightbox="../media/zero-trust/mip-solution-overview.png":::
 
+Bilgi korumasını planlama ve dağıtma hakkında daha fazla bilgi için bkz [**_. Microsoft Bilgi Koruması çözümü dağıtma_**](../compliance/information-protection-solution.md).
 
-Bilgi korumasını planlama ve dağıtma hakkında daha fazla bilgi için bkz [**_. Microsoft Bilgi Koruması dağıtma_**](../compliance/information-protection-solution.md). 
-
-Veri gizliliği düzenlemeleri için bilgi korumasını dağıtıyorsanız, bu çözüm kılavuzu tüm süreç için önerilen çerçeveyi sunar: Veri gizliliği düzenlemelerine uygun olarak bilgi [**_korumayı_**](../solutions/information-protection-deploy.md) Microsoft 365.
+Veri gizliliği düzenlemeleri için bilgi koruması dağıtıyorsanız, bu çözüm kılavuzu sürecin tamamı için önerilen bir çerçeve sağlar: [**_Microsoft 365 ile veri gizliliği düzenlemeleri için bilgi koruması dağıtma_**](../solutions/information-protection-deploy.md).

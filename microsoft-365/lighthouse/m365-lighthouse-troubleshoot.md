@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse, hata iletilerini ve sorunlarını giderme konusunda yardım alır.
-ms.openlocfilehash: 1bd98a90af19d60aba2e0891c3f993e77523a12c
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+ms.openlocfilehash: 24f282420bb69188106178cefc6fb89968f4fcf6
+ms.sourcegitcommit: 2bbccbcffce3ea6d10ea6d307349874eafb21339
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64632371"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "64645044"
 ---
 # <a name="troubleshoot-and-resolve-problems-and-error-messages-in-microsoft-365-lighthouse"></a>E-posta iletileriyle ilgili sorunları ve hata iletilerini Microsoft 365 Lighthouse
 
@@ -54,7 +54,7 @@ Bu makalede, E-posta iletileri kullanılırken karşılaşabilirsiniz hata ileti
 **Neden:** Müşteri kiracınız aşağıdaki ölçütlere uygun değil:
 
   - Müşteri kiracısı yönetimi için Yönetilen Hizmet Sağlayıcısı (MSP) için temsilci olarak ayarlanmış erişime sahip olmak*
-  - En az bir lisans Microsoft 365 İş Ekstra, Microsoft 365 E3 lisansınız veya Windows 365 Business lisansınız olmalı
+  - En az bir lisans Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business lisansa sahip olmalı
   - 1000'den fazla lisanslı kullanıcıya sahip olmalı 
 
 **Çözüm:** Aşağıdaki tabloda, eylem gerektiren farklı kiracı durumları açıkladığı gibi, bunları nasıl çözeceklerini de açıklar.
@@ -137,4 +137,4 @@ DAP ilişkileri olan müşteriler için, iş ortağı yöneticisinin sizi İş O
 
 [Dosyanın bilinen Microsoft 365 Lighthouse](m365-lighthouse-known-issues.md) sorunları (makale)\
 [Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)\
-[Destek almak için yardım ve Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md) (makale)
+[Destek almak için yardım ve Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md) (makale)

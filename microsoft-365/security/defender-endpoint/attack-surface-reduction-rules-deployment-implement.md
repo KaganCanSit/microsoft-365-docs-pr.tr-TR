@@ -1,7 +1,7 @@
 ---
-title: Saldırı yüzeyini azaltma (ASR) kuralları dağıtımı uygulama
-description: Saldırı yüzeyini azaltma kuralları dağıtımınızı uygulamaya yönelik kılavuz sağlar.
-keywords: Saldırı yüzeyini azaltma kuralları dağıtımı, ASR dağıtımı, asr kurallarını etkinleştirme, ASR'yi yapılandırma, izinsiz giriş engelleme sistemi, koruma kuralları, istismardan koruma kuralları, istismardan koruma kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma
+title: Saldırı yüzeyi azaltma (ASR) kuralları dağıtımı uygulama
+description: Saldırı yüzeyi azaltma kuralları dağıtımınızı uygulamak için rehberlik sağlar.
+keywords: Saldırı yüzeyi azaltma kuralları dağıtımı, ASR dağıtımı, ASR kurallarını etkinleştirme, ASR'yi yapılandırma, konak yetkisiz erişim önleme sistemi, koruma kuralları, açıktan yararlanma önleme kuralları, kötüye kullanıma karşı koruma kuralları, kötüye kullanma kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -20,16 +20,16 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: c85dcb985210167e04b51092d66fb59080280581
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 675d881c3737b67cfdc0207be85285f71455d65c
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64477357"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64666976"
 ---
-# <a name="step-3-implement-asr-rules"></a>3. Adım: ASR kurallarını uygulama
+# <a name="step-3-implement-asr-rules"></a>3. Adım: ASR kurallarını uygulayın
 
-Saldırı yüzeyini azaltma (ASR) kurallarının uygulanması, ilk test halkayı etkin, işlevsel bir durum haline taşır.
+Saldırı yüzeyi azaltma (ASR) kurallarının uygulanması, ilk test halkasını etkin, işlevsel bir duruma taşır.
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="images/asr-rules-implementation-steps.png" alt-text="ASR kurallarını uygulama yordamı" lightbox="images/asr-rules-implementation-steps.png":::
@@ -37,78 +37,78 @@ Saldırı yüzeyini azaltma (ASR) kurallarının uygulanması, ilk test halkayı
 
 ## <a name="step-1-transition-asr-rules-from-audit-to-block"></a>1. Adım: ASR Kurallarını Denetimden Engellemeye Geçiş
 
-1. Tüm dışlamalar denetim modundayken belirlendikten sonra, bazı ASR kurallarını "engelleme" moduna ayarlamaya en az tetiklenen kuraldan başlayarak başlatın. Saldırı yüzeyini [azaltma kurallarını etkinleştirme" bkz](enable-attack-surface-reduction.md).
-2. Microsoft 365 Defender portalında raporlama sayfasını gözden Uç Nokta için Microsoft Defender.[](threat-protection-reports.md) AsR şampiyonlarından gelen geri bildirimleri de gözden geçirebilirsiniz.
-3. Gereken şekilde dışlamaları geliştirin veya yeni dışlamalar oluşturun.
-4. Sorunlu kuralları Yeniden Denetim'e geçiş.
+1. Denetim modundayken tüm dışlamalar belirlendikten sonra, tetiklenen en az olayı içeren kuraldan başlayarak bazı ASR kurallarını "engelleme" moduna ayarlamaya başlayın. Bkz. [Saldırı yüzeyi azaltma kurallarını etkinleştirme](enable-attack-surface-reduction.md).
+2. Microsoft 365 Defender portalındaki raporlama sayfasını gözden geçirin; [bkz. Uç Nokta için Microsoft Defender'de tehdit koruma raporu](threat-protection-reports.md). Ayrıca ASR şampiyonlarınızdan gelen geri bildirimleri de gözden geçirin.
+3. Dışlamaları daraltma veya gerektiğinde yeni dışlamalar oluşturma.
+4. Sorunlu kuralları Denetim'e geri dönün.
 
   >[!Note]
-  >Sorunlu kurallar (çok fazla gürültü yaratan kurallar) için, dışlamalar oluşturmak kuralları kapatmaktan veya Denetim'e geri dönmekten daha iyidir. Ortamınıza en uygun olan şeyi belirlemeniz gerekir.
+  >Sorunlu kurallar (çok fazla kirlilik oluşturan kurallar) için, kuralları kapatmak veya Denetim'e geri dönmek yerine dışlamalar oluşturmak daha iyidir. Ortamınız için en iyi olanı belirlemeniz gerekir.
 
   >[!Tip]
-  >Kullanılabilir olduğunda, kesintileri sınırlamak için kurallarda Uyar modu ayarına sahip olun. Uyarı modunda ASR kurallarının etkinleştirilmesi, son kullanıcı erişimini engellemeden tetiklenen olayları yakalamanıza ve olası kesintilerini görüntülemeye olanak sağlar. Daha fazla bilgi: [Kullanıcılar için uyarı modu](attack-surface-reduction.md#warn-mode-for-users).
+  >Kullanılabilir olduğunda, kesintileri sınırlamak için kurallardaki Uyarı modu ayarından yararlanın. ASR kurallarını Uyarı modunda etkinleştirmek, son kullanıcı erişimini engellemeden tetiklenen olayları yakalamanıza ve olası kesintilerini görüntülemenize olanak tanır. Daha fazla bilgi edinin: [Kullanıcılar için uyarı modu](attack-surface-reduction.md#warn-mode-for-users).
 
 ### <a name="how-does-warn-mode-work"></a>Uyarı modu nasıl çalışır?
 
-Uyarı modu etkili bir şekilde Yönergeyi engelle seçeneğiyle birlikte, kullanıcıya verilen akış veya uygulamanın sonraki yürütmelerini "Engellemeyi kaldır" seçeneğiyle birlikte. Uyarı modu cihaz, kullanıcı, dosya ve süreç birleşimi başına engellemeyi kaldırır. Uyarı modu bilgileri yerel olarak depolanır ve 24 saat süresi vardır.
+Uyarı modu etkili bir Şekilde Engelleme yönergesidir, ancak kullanıcının verilen akışın veya uygulamanın sonraki yürütmelerini "engellemesini kaldırma" seçeneğiyle birlikte. Uyarı modu cihaz, kullanıcı, dosya ve işlem birleşimi başına engellemeleri kaldırır. Uyarı modu bilgileri yerel olarak depolanır ve süresi 24 saattir.
 
-### <a name="step-2-expand-deployment-to-ring-n--1"></a>2. Adım: Dağıtımı n + 1 çaldıracak şekilde genişletin
+### <a name="step-2-expand-deployment-to-ring-n--1"></a>2. Adım: Dağıtımı n + 1 kademesine genişlet
 
-1. halka için ASR kurallarını doğru yapılandırmış olduğunuzdan emin olun, dağıtımınız kapsamını bir sonraki halkada genişletebilirsiniz (n + 1 çaldır).
+Kademe 1 için ASR kurallarını doğru yapılandırdığınızda, dağıtımınızın kapsamını bir sonraki halkaya genişletebilirsiniz (halka n + 1).
 
-1. ve 3. adımlar izleyen her halka için dağıtım işlemi esas olarak aynıdır:
+1- 3. adım olan dağıtım işlemi, izleyen her kademe için temelde aynıdır:
 
-1. Denetim'de kuralları test etmek
-2. Microsoft 365 Defender portalında ASR tarafından tetiklenen denetim olaylarını gözden geçirme
-3. Dışlama oluşturma
-4. Gözden Geçirme: Gerektiğinde dışlamaları geliştirme, ekleme veya kaldırma
-5. Kuralları "engelle" olarak ayarlama
-6. Raporlama portalında raporlama Microsoft 365 Defender.
-7. Dışlama oluşturma.
-8. Sorunlu kuralları devre dışı bırakma veya denetime geri dönme.
+1. Denetim'de test kuralları
+2. Microsoft 365 Defender portalında ASR ile tetiklenen denetim olaylarını gözden geçirin
+3. Dışlamalar oluşturma
+4. Gözden geçirme: Gerektiğinde dışlamaları daraltma, ekleme veya kaldırma
+5. Kuralları "engelle" olarak ayarlayın
+6. Microsoft 365 Defender portalındaki raporlama sayfasını gözden geçirin.
+7. Dışlamalar oluşturun.
+8. Sorunlu kuralları devre dışı bırakın veya yeniden Denetim'e geçin.
 
-#### <a name="customize-attack-surface-reduction-rules"></a>Saldırı yüzeyini azaltma kurallarını özelleştirme
+#### <a name="customize-attack-surface-reduction-rules"></a>Saldırı yüzeyi azaltma kurallarını özelleştirme
 
-Saldırı alanı azaltma kuralları dağıtımınızı genişletmeye devam ettiyken etkinleştirmiş olduğunuz saldırı alanı azaltma kurallarını özelleştirmenin gerekli olduğunu veya yararlı olduğunu bulabilirsiniz.
+Saldırı yüzeyi azaltma kuralları dağıtımınızı genişletmeye devam ettikçe, etkinleştirdiğiniz saldırı yüzeyi azaltma kurallarını özelleştirmeyi gerekli veya yararlı bulabilirsiniz.
 
-##### <a name="exclude-files-and-folders"></a>Dosyaları ve klasörleri dışla
+##### <a name="exclude-files-and-folders"></a>Dosya ve klasörleri dışlama
 
-Saldırı yüzeyini azaltma kuralları ile dosya ve klasörlerin değerlendirilmesini dışlaabilirsiniz. Dışlanan bir saldırı yüzeyini azaltma kuralı dosyanın kötü amaçlı davranışlar içerdiğini algılasa bile dosyanın çalışıyor olması engellanmaz.
+Saldırı yüzeyi azaltma kuralları tarafından değerlendirilen dosya ve klasörleri dışlamamayı seçebilirsiniz. Dışlandığında, bir saldırı yüzeyi azaltma kuralı dosyanın kötü amaçlı davranış içerdiğini algılasa bile dosyanın çalışması engellenmez.
 
-Örneğin fidye yazılımı kuralını düşünün:
+Örneğin fidye yazılımı kuralını göz önünde bulundurun:
 
-Fidye yazılımı kuralı, kurumsal müşterilerin fidye yazılımı saldırılarını azaltmaya ve iş sürekliliğini sağlamaya yardımcı olmak için tasarlanmıştır. Varsayılan olarak, fidye yazılımı hataları uyarı tarafındadır ve henüz yeterli saygınlığı ve güveni elde edemeyen dosyalara karşı koruma sağlar. Fidye yazılımı kuralı, yalnızca milyonlarca müşterimizin kullanım ölçümlerine bağlı olarak, yeteri kadar pozitif itibarı ve yaygınlığı kazanmış olan dosyalar için tetiklenir. Genellikle, her dosyanın "itibarı ve güven" değerleri, sorunlu olmayan kullanım arttıkça artımlı olarak yükseltilir ve bu nedenle bloklar kendi kendine çözülür.
+Fidye yazılımı kuralı, kurumsal müşterilerin iş sürekliliğini sağlarken fidye yazılımı saldırılarının risklerini azaltmasına yardımcı olmak için tasarlanmıştır. Varsayılan olarak, fidye yazılımı kural hataları uyarı tarafında ve henüz yeterli saygınlığa ve güvene ulaşmamış dosyalara karşı koruma sağlar. Yeniden başlatmak için fidye yazılımı kuralı yalnızca milyonlarca müşterilerimizin kullanım ölçümlerine bağlı olarak yeterli olumlu saygınlık ve yaygınlık kazanmamış dosyalarda tetikler. Her dosyanın "saygınlık ve güven" değerleri sorunlu olmayan kullanım arttıkça artımlı olarak yükseltildiğinden bloklar genellikle kendi kendine çözülür.
 
-Blokların otomatik olarak zamanında çözümlenmezse, müşteriler kendileri gibi, self servis mekanizmayı veya Güvenlik  Göstergesi (IOC) tabanlı "izin listesine izin verme" özelliğini kullanarak dosyaların engellemesini kaldırabileceklerdir.
-
-> [!WARNING]
-> Dosyalar veya klasörler hariç tutarak veya engelini kaldırmak, güvenli olmayabilecek dosyaların çalışmasına ve cihazlarınıza bulaşarak bulaşarak devam olmasına neden olabilir. Dosyaları veya klasörleri dışlama, saldırı yüzeyini azaltma kuralları tarafından sağlanan korumayı ciddi ölçüde azaltabilir. Bir kural tarafından engellenmiş olan dosyaların çalışmasına izin verilir ve hiçbir rapor veya etkinlik kaydedimeyecektir.
-
-Dışlama, dışlamalara izin veren tüm kurallar için geçerlidir. Tek bir dosya, klasör yolu veya kaynak için tam etki alanı adı belirtebilirsiniz. Öte yandan, dışlamaları belirli bir kuralla sınırlandıramazsiniz.
-
-Dışlama, yalnızca dışlanan uygulama veya hizmet başlatıldığında uygulanır. Örneğin, zaten çalışan bir güncelleştirme hizmeti için dışlama eklersiniz, hizmet durdurulana ve yeniden başlatana kadar güncelleştirme hizmeti olayları tetiklemeye devam eder.
-
-Saldırı yüzeyini azaltma, ortam değişkenlerini ve joker karakterleri destekler. Joker karakter kullanma hakkında bilgi için bkz. Dosya adı ve klasör yolu veya uzantı [dışlama listelerinde joker karakter kullanma](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists).
-Algılanmaz olduğuna inandığınız dosyaları algılayan kurallarla ilgili sorunlarla karşılaşıyorsanız, kuralı test [etmek için denetim modunu kullanın](evaluate-attack-surface-reduction.md).
-
-Her [kuralla ilgili ayrıntılar için saldırı yüzeyini](attack-surface-reduction-rules-reference.md) azaltma kuralları başvuru başlığına bakın.
-
-##### <a name="use-group-policy-to-exclude-files-and-folders"></a>Dosyaları grup ilkesi klasörleri dışarıda tutmak için E-posta kullanma
-
-1. Bilgisayarınızdan grup ilkesi Yönetim Konsolu'nu [grup ilkesi](https://technet.microsoft.com/library/cc731212.aspx), yapılandırmak istediğiniz Grup ilkesi Nesnesine sağ tıklayın ve Düzenle'yi **seçin**.
-
-2. Yönetim **Grup ilkesi'nde** Bilgisayar **yapılandırması'ne gidin ve** Yönetim **şablonları'ne tıklayın**.
-
-3. Saldırı yüzeyini **azaltmayı Windows bileşenleri Microsoft Defender Virüsten Koruma** \> **Microsoft Defender Exploit Guard** \>  \> **ağacı genişletin**.
-
-4. Saldırı yüzeyini azaltma **Kuralları ayarındaki Dosyaları ve yolları hariç tut ayarına** çift tıklayın ve seçeneği Etkin olarak **ayarlayın**. **Göster'i** seçin ve Değer adı sütununa her **dosya veya klasörü** girin. Her **öğe için** Değer **sütununa** 0 girin.
+Blokların zamanında kendi kendine çözümlenmediği durumlarda, müşteriler _kendi riskleriyle_ self servis mekanizmasını veya dosyaların engellemesini kaldırmak için Risk Göstergesi (IOC) tabanlı "izin verilenler listesi" özelliğini kullanabilir.
 
 > [!WARNING]
-> Değer adı sütunu veya Değer sütunu için destek **sağlanmazken tırnak** içine **alın** .
+> Dosya veya klasörlerin dışlanması veya engeli kaldırıldığında güvenli olmayan dosyaların çalıştırılmasına ve cihazlarınıza bulaşmasına izin verebilir. Dosyaları veya klasörleri dışlama, saldırı yüzeyini azaltma kuralları tarafından sağlanan korumayı ciddi ölçüde azaltabilir. Bir kural tarafından engellenen dosyaların çalıştırılmasına izin verilir ve hiçbir rapor veya olay kaydedilmez.
 
-##### <a name="use-powershell-to-exclude-files-and-folders"></a>Dosyaları ve klasörleri dışarıda tutmak için PowerShell kullanma
+Dışlama, dışlamalara izin veren tüm kurallar için geçerlidir. Tek bir dosya, klasör yolu veya kaynak için tam etki alanı adı belirtebilirsiniz. Ancak, bir dışlamayı belirli bir kuralla sınırlayamazsınız.
 
-1. **PowerShell yazın ve** Başlat menüsü sağ tıklayın ve **Windows PowerShell Yönetici olarak** **çalıştır'ı seçin**.
+Dışlama yalnızca dışlanan uygulama veya hizmet başlatıldığında uygulanır. Örneğin, zaten çalışmakta olan bir güncelleştirme hizmeti için bir dışlama eklerseniz, hizmet durdurulup yeniden başlatılana kadar güncelleştirme hizmeti olayları tetiklemeye devam eder.
+
+Saldırı yüzeyini azaltma, ortam değişkenlerini ve joker karakterleri destekler. Joker karakterleri kullanma hakkında daha fazla bilgi için bkz. [Dosya adı ve klasör yolu veya uzantı dışlama listelerindeki joker karakterleri kullanma](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists).
+Algılanmaması gerektiğini inandığınız dosyaları algılayan kurallarla ilgili sorunlarla karşılaşıyorsanız, [kuralı test etmek için denetim modunu kullanın](evaluate-attack-surface-reduction.md).
+
+Her kuralla ilgili ayrıntılar için [saldırı yüzeyi azaltma kuralları başvuru](attack-surface-reduction-rules-reference.md) konusuna bakın.
+
+##### <a name="use-group-policy-to-exclude-files-and-folders"></a>Dosyaları ve klasörleri dışlamak için grup ilkesi kullanma
+
+1. grup ilkesi yönetim bilgisayarınızda [grup ilkesi Yönetim Konsolu'nu](https://technet.microsoft.com/library/cc731212.aspx) açın, yapılandırmak istediğiniz grup ilkesi Nesnesine sağ tıklayın ve **Düzenle'yi** seçin.
+
+2. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin ve **Yönetim şablonları'na** tıklayın.
+
+3. **Saldırı yüzeyini azaltma** Microsoft Defender Exploit Guard **Microsoft Defender Virüsten Koruma** \> **bileşenleri** \> **Windows** \> için ağacı genişletin.
+
+4. **Saldırı yüzeyi azaltma Kuralları'ndan dosyaları ve yolları dışla** ayarına çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. **Göster'i** seçin ve **Değer adı** sütununa her dosyayı veya klasörü girin. Her öğe için **Değer** sütununa **0** girin.
+
+> [!WARNING]
+> **Değer adı** sütunu veya **Değer** sütunu için desteklenmediğinden tırnak işaretleri kullanmayın.
+
+##### <a name="use-powershell-to-exclude-files-and-folders"></a>Dosyaları ve klasörleri dışlamak için PowerShell kullanma
+
+1. Başlat menüsü **powershell** yazın, **Windows PowerShell** sağ tıklayın ve **Yönetici olarak çalıştır'ı** seçin.
 
 2. Aşağıdaki cmdlet'i girin:
 
@@ -116,25 +116,25 @@ Her [kuralla ilgili ayrıntılar için saldırı yüzeyini](attack-surface-reduc
     Add-MpPreference -AttackSurfaceReductionOnlyExclusions "<fully qualified path or resource>"
     ```
 
-    Listeye daha `Add-MpPreference -AttackSurfaceReductionOnlyExclusions` fazla klasör eklemek için kullanmaya devam edin.
+    Listeye daha fazla klasör eklemek için kullanmaya `Add-MpPreference -AttackSurfaceReductionOnlyExclusions` devam edin.
 
     > [!IMPORTANT]
-    > Listeye `Add-MpPreference` uygulama eklemek veya listeye uygulama eklemek için kullanın. `Set-MpPreference` Cmdlet kullanmak, var olan listenin üzerine yazmaz.
+    > Listeye uygulama eklemek veya eklemek için kullanın `Add-MpPreference` . cmdlet'ini `Set-MpPreference` kullanmak varolan listenin üzerine yazılır.
 
-##### <a name="use-mdm-csps-to-exclude-files-and-folders"></a>Dosya ve klasörleri dışarıda tutmak için MDM CSP'leri kullanma
+##### <a name="use-mdm-csps-to-exclude-files-and-folders"></a>Dosyaları ve klasörleri dışlamak için MDM CSP'lerini kullanma
 
-Dışlama [eklemek için ./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionOnlyExclusions](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductiononlyexclusions) yapılandırma servis sağlayıcısını (CSP) kullanın.
+Dışlama eklemek için [./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionOnlyExclusions](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductiononlyexclusions) yapılandırma hizmeti sağlayıcısını (CSP) kullanın.
 
 ##### <a name="customize-the-notification"></a>Bildirimi özelleştirme
 
-Kural tetiklendiğinde ve bir uygulama veya dosyayı engelleme durumlarının bildirimini özelleştirebilirsiniz. Aşağıdaki [Windows Güvenliği](/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center#customize-notifications-from-the-windows-defender-security-center) bakın.
+Bir kuralın tetiklenip bir uygulama veya dosyayı engellemesi için bildirimi özelleştirebilirsiniz. [Windows Güvenliği](/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center#customize-notifications-from-the-windows-defender-security-center) makalesine bakın.
 
-## <a name="additional-topics-in-this-deployment-collection"></a>Bu dağıtım koleksiyonunda yer alan ek konular
+## <a name="additional-topics-in-this-deployment-collection"></a>Bu dağıtım koleksiyonundaki ek konular
 
 [ASR kuralları dağıtım önkoşulları](attack-surface-reduction-rules-deployment.md)
 
-[1. Adım: ASR kuralları dağıtımını planlama](attack-surface-reduction-rules-deployment-plan.md)
+[1. Adım: ASR kuralları dağıtımını planlayın](attack-surface-reduction-rules-deployment-plan.md)
 
 [2. Adım: ASR kurallarını test edin](attack-surface-reduction-rules-deployment-test.md)
 
-[4. Adım: ASR kurallarını işlem durumaleştirme](attack-surface-reduction-rules-deployment-operationalize.md)
+[4. Adım: ASR kurallarını kullanıma hazır hale getirin](attack-surface-reduction-rules-deployment-operationalize.md)

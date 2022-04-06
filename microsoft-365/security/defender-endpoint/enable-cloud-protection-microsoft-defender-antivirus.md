@@ -15,18 +15,18 @@ manager: dansimp
 ms.custom: nextgen
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 95abb603983ea16192d93b12757cde6fba026047
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+ms.openlocfilehash: 78f992e20ee0c0c2505777295ca3ba34a5c4ea66
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63016452"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470647"
 ---
 # <a name="turn-on-cloud-protection-in-microsoft-defender-antivirus"></a>Bulutta bulut korumasını Microsoft Defender Virüsten Koruma
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
 [Buluttan koruma Microsoft Defender Virüsten Koruma](cloud-protection-microsoft-defender-antivirus.md) doğru, gerçek zamanlı ve akıllı koruma sağlar. Bulut koruması varsayılan olarak etkinleştirilmelidir; ancak, bulut korumasını kuruluşun ihtiyaçlarına uyacak şekilde yapılandırabilirsiniz.
@@ -35,7 +35,7 @@ ms.locfileid: "63016452"
 
 Bulut koruması Microsoft Defender Virüsten Koruma birini kullanarak bu korumayı açabilirsiniz veya kapatabilirsiniz:
 
-- Microsoft Endpoint Manager Yapılandırma Yöneticisi'ni Microsoft Intune teknik bilgiler
+- Microsoft Endpoint Manager ve özel Microsoft Intune içeren Configuration Manager
 - Grup İlkesi
 - PowerShell cmdlet'leri
 
@@ -44,9 +44,9 @@ Ayrıca, Windows Güvenliği uygulamasını kullanarak bulut korumasını tek te
 Uç noktaların bulut koruma hizmetine bağlana olduğundan emin olmak üzere belirli ağ bağlantısı gereksinimleri hakkında daha fazla bilgi için bkz. [Ağ bağlantılarını yapılandırma ve doğrulama](configure-network-connections-microsoft-defender-antivirus.md).
 
 > [!NOTE]
-> 11 Windows 10 Windows 11'de, bu makalede açıklanan Temel ve **Gelişmiş** raporlama seçenekleri arasında fark  yoktur. Bu eski bir farktır ve iki ayardan birini seçmek aynı bulut koruma düzeyine neden olur. Paylaşılan bilgilerin türü veya miktarında fark yoktur. Topladığımız bilgiler hakkında daha fazla bilgi için [Microsoft Gizlilik Bildirimi'ne bakın](https://go.microsoft.com/fwlink/?linkid=521839).
+> Gelişmiş Windows 10 raporlama Windows 11, bu makalede açıklanan Temel **ve** **Gelişmiş raporlama** seçenekleri arasında herhangi bir fark yoktur. Bu eski bir farktır ve iki ayardan birini seçmek aynı bulut koruma düzeyine neden olur. Paylaşılan bilgilerin türü veya miktarında fark yoktur. Topladığımız bilgiler hakkında daha fazla bilgi için [Microsoft Gizlilik Bildirimi'ne bakın](https://go.microsoft.com/fwlink/?linkid=521839).
 
-## <a name="use-intune-to-turn-on-cloud-protection"></a>Intune kullanarak bulut korumasını açma
+## <a name="use-intune-to-turn-on-cloud-protection"></a>Bulut Intune açmak için E-depolamayı kullanma
 
 1. Yönetim merkezine Microsoft Endpoint Manager ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) ve oturum açma.
 
@@ -60,7 +60,7 @@ Uç noktaların bulut koruma hizmetine bağlana olduğundan emin olmak üzere be
 
 6. Örnek **göndermeden önce kullanıcılara sor açılan listesinde** Tüm verileri otomatik **olarak gönder'i seçin**.
 
-Intune cihaz profilleri hakkında daha fazla bilgi ve ayarlarını oluşturma ve yapılandırma gibi daha fazla bilgi için bkz. [Cihaz Microsoft Intune nedir?](/intune/device-profiles)
+Cihaz profillerini oluşturma Intune yapılandırma da dahil olmak üzere cihaz profillerini oluşturma ve yapılandırma hakkında daha fazla bilgi için bkz. [Microsoft Intune profili nedir?](/intune/device-profiles)
 
 ## <a name="use-microsoft-endpoint-manager-to-turn-on-cloud-protection"></a>Bulut Microsoft Endpoint Manager açmak için E-depolamayı kullanma
 
@@ -70,7 +70,7 @@ Intune cihaz profilleri hakkında daha fazla bilgi ve ayarlarını oluşturma ve
 
 3. Virüsten koruma profili seçin. (Henüz profiliniz yoksa veya yeni bir profil oluşturmak için, aşağıdaki Bağlantı sayfasında cihaz kısıtlama [ayarlarını yapılandırma Microsoft Intune](/intune/device-restrictions-configure).
 
-4. **Özellikler'i seçin**. Ardından, Yapılandırma **ayarları'nın yanında** Düzenle'yi **seçin**.
+4. **Özellikler**'i seçin. Ardından, Yapılandırma **ayarları'nın yanında** Düzenle'yi **seçin**.
 
 5. Bulut **koruması'nın** kapsamını genişletin ve **Bulut teslimi koruma düzeyi** listesinde, aşağıdaki seçeneklerden birini seçin:
    - **Yüksek**: Güçlü bir algılama düzeyi uygular.
@@ -81,11 +81,11 @@ Intune cihaz profilleri hakkında daha fazla bilgi ve ayarlarını oluşturma ve
 
 İlkeleri yapılandırma hakkında daha fazla Microsoft Endpoint Configuration Manager için bkz. Kötü amaçlı yazılımdan koruma ilkeleri oluşturma ve dağıtma[: Bulut koruma hizmeti](/configmgr/protect/deploy-use/endpoint-antimalware-policies#cloud-protection-service).
 
-## <a name="use-group-policy-to-turn-on-cloud-protection"></a>Bulut korumasını açmak için Grup İlkesi kullanma
+## <a name="use-group-policy-to-turn-on-cloud-protection"></a>Bulut grup ilkesi açmak için E-depolamayı kullanma
 
-1. Grup İlkesi yönetim aygıtınızda, Grup İlkesi [Yönetim Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz Grup İlkesi Nesnesine sağ tıklayın ve Düzenle'yi **seçin**.
+1. Mobil grup ilkesi cihazınızın Yönetim [Konsolu'nu grup ilkesi](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), yapılandırmak istediğiniz Grup ilkesi Nesnesine sağ tıklayın ve Düzenle'yi **seçin**.
 
-2. Grup İlkesi **Yönetim Düzenleyicisi'nde** Bilgisayar **yapılandırması'ne gidin**.
+2. Sistem Grup ilkesi **Düzenleyicisi'nde** Bilgisayar **yapılandırması'ne gidin**.
 
 3. Yönetim **şablonları'ı seçin**.
 
@@ -109,7 +109,7 @@ Intune cihaz profilleri hakkında daha fazla bilgi ve ayarlarını oluşturma ve
 
    >[!NOTE]
    > Güvenli **örnekler gönder** (1) seçeneği, örneklerin çoğunun otomatik olarak gönder anlamına gelir. Kişisel bilgi içerme olasılığı bulunan dosyalar yine de istenir ve ek onay gerektirir.
-   > Her Zaman **Sor (0** ) seçeneğinin ayarı cihazın koruma durumunu düşürecek. Bunu Hiçbir zaman **gönderme** (2) olarak ayar yapmak, Uç [](configure-block-at-first-sight-microsoft-defender-antivirus.md) Nokta için Microsoft Defender'ın İlk Görüşte Engelle özelliğinin çalışmay anlamına gelir.
+   > Her Zaman **Sor (0** ) seçeneğinin ayarı cihazın koruma durumunu düşürecek. Bunu Hiçbir zaman **gönderme** (2) olarak ayar yapmak, bu [](configure-block-at-first-sight-microsoft-defender-antivirus.md) özelliğin Uç Nokta için Microsoft Defender Görme özelliğinin çalışmay anlamına gelir.
 
 7. **Tamam**'ı seçin.
 
@@ -126,7 +126,7 @@ Microsoft Defender Virüsten Koruma ile PowerShell'i kullanma hakkında daha faz
 
 > [!IMPORTANT]
 > **-SubmitSamplesConsent** `SendSafeSamples` ayarını (varsayılan, önerilen ayar) veya `NeverSend`olarak değiştirebilirsiniz`AlwaysPrompt`. Bu `SendSafeSamples` ayar, örneklerin çoğunun otomatik olarak gönder anlamına gelir. Büyük olasılıkla kişisel bilgi içeren dosyalar devam istemiyle sonuçlandıracak ve onay gerektirecektir.
-> Ve `NeverSend` ayarlar `AlwaysPrompt` cihazın koruma düzeyini düşürer. Buna ek olarak `NeverSend` , bu ayar Uç nokta [için Microsoft Defender'ın](configure-block-at-first-sight-microsoft-defender-antivirus.md) İlk Görüşte Engelle özelliğinin çalışmay anlamına gelir.
+> Ve `NeverSend` ayarlar `AlwaysPrompt` cihazın koruma düzeyini düşürer. Buna ek olarak`NeverSend`, bu ayar sayesinde ilk [görüşte](configure-block-at-first-sight-microsoft-defender-antivirus.md) engelle Uç Nokta için Microsoft Defender çalışmayabilirsiniz.
 
 ## <a name="use-windows-management-instruction-wmi-to-turn-on-cloud-protection"></a>Bulut Windows açmak için YÖNETIM Yönergesi'ne (WMI) sahip komutlar kullanma
 
@@ -142,16 +142,18 @@ SubmitSamplesConsent
 ## <a name="turn-on-cloud-protection-on-individual-clients-with-the-windows-security-app"></a>Windows Güvenliği uygulamasıyla tek tek Windows Güvenliği açma
 
 > [!NOTE]
-> **Microsoft MAPS** Grup İlkesini raporlama için yerel ayarı geçersiz kıl ayarı Devre Dışı olarak  ayarlanırsa **,** Windows Ayarlar'daki Bulut tabanlı koruma ayarı gri olur ve kullanılamaz. Grup İlkesi Nesnesi aracılığıyla yapılan değişikliklerin, ayarın Grup İlkesi Nesnesinde güncelleştirilmeden önce tek tek uç noktalara dağıtılması Windows Ayarlar.
+> **Microsoft MAPS'i** raporlama için yerel ayarı geçersiz grup ilkesi ayarı Devre Dışı olarak  ayarlanırsa **,** Windows Ayarlar'daki Bulut tabanlı koruma ayarı gri olur ve kullanılamaz. Nesnede yapılan grup ilkesi, ayar Tek tek güncelleştirilmeden önce nesnenin tek tek uç noktalara dağıtılması Windows Ayarlar.
 
 1. Görev Windows Güvenliği kalkan simgesini seçerek veya görev çubuğu için başlangıç menüsünü arayarak görev çubuğunu **Windows Güvenliği**.
 
 2. Virüs koruması **& kutucuğunu** (veya sol menü çubuğundaki kalkan simgesini) seçin ve ardından Ayarları yönet'in altında Virüs  koruması & **ayarlarını seçin**.
 
-3. Bulut Tabanlı **Koruma ve Otomatik örnek gönderimin** **her ikisinin de** Açık olarak değiştir olduğunu **onaylayın**.
+   :::image type="content" source="../../media/wdav-protection-settings-wdsc.png" alt-text="Virüs ve & koruma ayarları" lightbox="../../media/wdav-protection-settings-wdsc.png":::
+
+3. Bulut Tabanlı **Koruma ve Otomatik örnek** **gönderimin Açık** olarak değiştir olduğunu **onaylayın**.
 
    > [!NOTE]
-   > Otomatik örnek gönderim Grup İlkesi ile yapılandırılmışsa, ayar gri olur ve kullanılamaz.
+   > Otomatik örnek gönderme özelliği otomatik olarak yapılandırılmışsa grup ilkesi gri olur ve kullanılamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

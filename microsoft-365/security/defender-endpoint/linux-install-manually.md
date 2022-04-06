@@ -1,8 +1,8 @@
 ---
-title: Linux'Uç Nokta için Microsoft Defender el ile dağıtım
+title: Linux'ta Uç Nokta için Microsoft Defender el ile dağıtma
 ms.reviewer: ''
-description: Linux'ta Uç Nokta için Microsoft Defender komut çizgisini kullanarak el ile nasıl dağıtın açıklaması vardır.
-keywords: microsoft, defender, Uç Nokta için Microsoft Defender, linux, yükleme, dağıtma, kaldırma, kaldırılabilir, ansible, linux, redhat, ubuntu, debian, sles, suse, centos, fedora, amazon linux 2
+description: Komut satırından Linux'ta Uç Nokta için Microsoft Defender el ile nasıl dağıtılacağı açıklanır.
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, linux, installation, deploy, uninstallation, puppet, ansible, linux, redhat, ubuntu, debian, sles, suse, centos, fedora, amazon linux 2
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,80 +16,80 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 4d66dad57fa7b045062a0300327b76030c33dfab
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: a0f499a08288735d5f0d75e7111ec0b6360908a8
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64468181"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64664534"
 ---
-# <a name="deploy-microsoft-defender-for-endpoint-on-linux-manually"></a>Linux'Uç Nokta için Microsoft Defender el ile dağıtım
+# <a name="deploy-microsoft-defender-for-endpoint-on-linux-manually"></a>Linux'ta Uç Nokta için Microsoft Defender el ile dağıtma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 
-Bu makalede Linux'ta el ile Uç Nokta için Microsoft Defender dağıtımı açıklanmıştır. Başarılı bir dağıtım için aşağıdaki görevlerin tamamlanmasını gerekir:
+Bu makalede Linux'ta Uç Nokta için Microsoft Defender el ile nasıl dağıtılacağı açıklanmaktadır. Başarılı bir dağıtım için aşağıdaki görevlerin tümünün tamamlanması gerekir:
 
   - [Önkoşullar ve sistem gereksinimleri](#prerequisites-and-system-requirements)
   - [Linux yazılım deposunu yapılandırma](#configure-the-linux-software-repository)
-    - [RHEL ve çeşitlemeler (CentOS, Fedora, Oracle Linux ve Amazon Linux 2)](#rhel-and-variants-centos-fedora-oracle-linux-and-amazon-linux-2)
+    - [RHEL ve varyantları (CentOS, Fedora, Oracle Linux ve Amazon Linux 2)](#rhel-and-variants-centos-fedora-oracle-linux-and-amazon-linux-2)
     - [SLES ve çeşitlemeler](#sles-and-variants)
     - [Ubuntu ve Debian sistemleri](#ubuntu-and-debian-systems)
   - [Uygulama yüklemesi](#application-installation)
-  - [Ekleme paketini indirin](#download-the-onboarding-package)
+  - [Ekleme paketini indirme](#download-the-onboarding-package)
   - [İstemci yapılandırması](#client-configuration)
 
 ## <a name="prerequisites-and-system-requirements"></a>Önkoşullar ve sistem gereksinimleri
 
-Başlamadan önce, geçerli yazılım [Uç Nokta için Microsoft Defender önkoşullarının](microsoft-defender-endpoint-linux.md) ve sistem gereksinimlerinin açıklaması için Bkz. Linux'ta sistem gereksinimleri.
+Başlamadan önce, geçerli yazılım sürümü için önkoşulların ve sistem gereksinimlerinin açıklaması için [bkz. Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md).
 
 > [!WARNING]
-> Ürün yüklemesi sonrasında işletim sisteminizi yeni bir ana sürüme yükseltmek için ürünün yeniden yüklenmesi gerekir. Aşağıdaki adımları takip [edin ve](linux-resources.md#uninstall) Linux'ta Uç Nokta için Defender'ı kaldırmanız, işletim sistemini yükseltmeniz ve ardından Linux'ta Uç Nokta için Defender'ı yeniden yapılandırmanız gerekir.
+> Ürün yüklemesinin ardından işletim sisteminizi yeni bir ana sürüme yükseltmek için ürünün yeniden yüklenmesi gerekir. Linux'ta mevcut Uç Nokta için [Defender'ı kaldırmanız](linux-resources.md#uninstall) , işletim sistemini yükseltmeniz ve ardından aşağıdaki adımları izleyerek Linux'ta Uç Nokta için Defender'ı yeniden yapılandırmanız gerekir.
 
 ## <a name="configure-the-linux-software-repository"></a>Linux yazılım deposunu yapılandırma
 
-Linux'ta Uç Nokta için Defender aşağıdaki kanallardan biri (*[kanal]* olarak açıklanmıştır) *dağıtılabilir*: *insider hızlı*, *insider-slow* veya prod. Bu kanalların her biri bir Linux yazılım deposuna karşılık geldi. Cihazınızı bu depolardan birini kullanmak üzere yapılandırma yönergeleri aşağıda verilmiştir.
+Linux'ta Uç Nokta için Defender aşağıdaki kanallardan birinden dağıtılabilir (aşağıda *[channel]* olarak belirtilir): *insider-fast*, *insider-slow* veya *prod*. Bu kanalların her biri bir Linux yazılım deposuna karşılık gelir. Cihazınızı bu depolardan birini kullanacak şekilde yapılandırma yönergeleri aşağıda verilmiştir.
 
-Kanalın seçimi, cihazınıza sunulan güncelleştirmelerin türünü ve sıklığını belirler. Insider *hızlı olan cihazlar,* güncelleştirmeleri ve yeni özellikleri alan ilk cihazlardır ve bunu daha sonra *Insider yavaş* ve son olarak *prod takip edin*.
+Kanal seçimi, cihazınıza sunulan güncelleştirmelerin türünü ve sıklığını belirler. *Insider'ların hızlı* olduğu cihazlar, güncelleştirmeleri ve yeni özellikleri ilk alan cihazlardır ve daha sonra *insider'ların yavaş* ve son olarak *prod* tarafından takip edilir.
 
-Yeni özelliklerin önizlemesini görüntülemek ve erken geri bildirim sağlamak için, kuruluş içindeki bazı cihazları *Insider hızlı veya insider-slow* kullanmaya yönelik olarak *yapılandırmanız önerilir*.
+Yeni özellikleri önizlemek ve erken geri bildirim sağlamak için kuruluşunuzdaki bazı cihazları *insider hızlı veya insider yavaş* kullanacak şekilde yapılandırmanız önerilir.
 
 > [!WARNING]
-> İlk yüklemeden sonra kanalı değiştirmek için ürünün yeniden yüklenmesi gerekir. Ürün kanalını değiştirmek için: var olan paketi kaldırın, cihazınızı yeni kanalı kullanmak üzere yeniden yapılandırın ve paketi yeni konumdan yüklemek için bu belge'de yer alan adımları izleyin.
+> İlk yüklemeden sonra kanalın değiştirilmesi için ürünün yeniden yüklenmesi gerekir. Ürün kanalını değiştirmek için: Mevcut paketi kaldırın, cihazınızı yeni kanalı kullanacak şekilde yeniden yapılandırın ve paketi yeni konumdan yüklemek için bu belgedeki adımları izleyin.
 
-### <a name="rhel-and-variants-centos-fedora-oracle-linux-and-amazon-linux-2"></a>RHEL ve çeşitlemeler (CentOS, Fedora, Oracle Linux ve Amazon Linux 2)
+### <a name="rhel-and-variants-centos-fedora-oracle-linux-and-amazon-linux-2"></a>RHEL ve varyantları (CentOS, Fedora, Oracle Linux ve Amazon Linux 2)
 
-- Henüz `yum-utils` yüklenmemişse yükleyin:
+- Henüz yüklenmediyse yükleyin `yum-utils` :
 
     ```bash
     sudo yum install yum-utils
     ```
 
   > [!NOTE]
-  > dağıtım ve sürümünüzdür ve onun için en yakın girdiyi (ana, küçük olan) belirlemesi için 'nin altında bu girdiyi seçin `https://packages.microsoft.com/config/rhel/`.
+  > Dağıtımınız ve sürümünüz ve altında `https://packages.microsoft.com/config/rhel/`bunun için en yakın girişi (ana, sonra ikincil) belirleyin.
 
-    Paketi bulmada size yol göstermede yardımcı olmak için aşağıdaki tabloyu kullanın:
+    Paketi bulma konusunda size yardımcı olması için aşağıdaki tabloyu kullanın:
 
     <br>
 
     ****
 
-    |Bir & dağıtım|Paket|
+    |Dağıtım & sürümü|Paket|
     |---|---|
     |RHEL/Centos/Oracle 8.0-8.5 için|<https://packages.microsoft.com/config/rhel/8/[channel].repo>|
-    |Amazon Linux 2'de RHEL/Centos/Oracle 7.2-7.9 & için |<https://packages.microsoft.com/config/rhel/7/[channel].repo>|
-    |RHEL/Centos için 6.7-6.10|<https://packages.microsoft.com/config/rhel/6/[channel].repo>|
-    |Fedora 33 için|<https://packages.microsoft.com/config/fedora/33/prod.repo>|
-    |Fedora 34 için|<https://packages.microsoft.com/config/fedora/34/prod.repo>|
+    |RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 için |<https://packages.microsoft.com/config/rhel/7/[channel].repo>|
+    |RHEL/Centos 6.7-6.10 için|<https://packages.microsoft.com/config/rhel/6/[channel].repo>|
+    |Fedora için 33|<https://packages.microsoft.com/config/fedora/33/prod.repo>|
+    |Fedora için 34|<https://packages.microsoft.com/config/fedora/34/prod.repo>|
 
-    Aşağıdaki komutlarda, *[sürüm] ve* *[kanal]* ifadelerini tanımladık bilgilerle değiştirin:
+    Aşağıdaki komutlarda *[version]* ve *[channel]* sözcüklerini tanımladığınız bilgilerle değiştirin:
 
 
     ```bash
@@ -97,21 +97,21 @@ Yeni özelliklerin önizlemesini görüntülemek ve erken geri bildirim sağlama
     ```
 
     > [!TIP]
-    > Sürüm [sürüm] de içinde olmak üzere sistemle ilgili bilgileri tanımlamak için hostnamectl *komutunu kullanın*.
+    > *[version]* sürümü de dahil olmak üzere sistemle ilgili bilgileri tanımlamak için hostnamectl komutunu kullanın.
 
-    Örneğin, CentOS 7 kullanıyorsanız ve *prod* kanalından Linux'ta Uç Nokta için Defender'ı dağıtmak istiyorsanız:
+    Örneğin, CentOS 7 çalıştırıyorsanız ve *Dağıtım kanalından* Linux'ta Uç Nokta için Defender'ı dağıtmak istiyorsanız:
 
     ```bash
     sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
     ```
 
-    Ya da seçili cihazlarda yeni özellikleri keşfetmek isterseniz, Linux'ta Uç Nokta için Microsoft Defender insider hızlı kanalına *dağıtmak da istiyor* da olabilir:
+    Alternatif olarak, seçilen cihazlardaki yeni özellikleri keşfetmek istiyorsanız, Linux'ta *insider* hızlı kanalına Uç Nokta için Microsoft Defender dağıtmak isteyebilirsiniz:
 
     ```bash
     sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
     ```
 
-- Microsoft GPG ortak anahtarını yükleme:
+- Microsoft GPG ortak anahtarını yükleyin:
 
     ```bash
     sudo rpm --import http://packages.microsoft.com/keys/microsoft.asc
@@ -120,24 +120,24 @@ Yeni özelliklerin önizlemesini görüntülemek ve erken geri bildirim sağlama
 ### <a name="sles-and-variants"></a>SLES ve çeşitlemeler
 
 > [!NOTE]
-> dağıtım ve sürümünüzdür ve onun için en yakın girdiyi (ana, küçük olan) belirlemesi için 'nin altında bu girdiyi seçin `https://packages.microsoft.com/config/sles/`.
+> Dağıtımınız ve sürümünüz ve altında `https://packages.microsoft.com/config/sles/`bunun için en yakın girişi (ana, sonra ikincil) belirleyin.
 
-   Aşağıdaki komutlarda, *[distro]* ve *[version]* ifadelerini tanımdığer bilgilerle değiştirin:
+   Aşağıdaki komutlarda *[distro]* ve *[version]* sözcüklerini tanımladığınız bilgilerle değiştirin:
 
    ```bash
    sudo zypper addrepo -c -f -n microsoft-[channel] https://packages.microsoft.com/config/[distro]/[version]/[channel].repo
    ```
 
    > [!TIP]
-   > Sürüm [sürüm] de içinde olmak üzere sistemle ilgili bilgileri tanımlamak için SPident *komutunu kullanın*.
+   > Sürüm *[version]* dahil olmak üzere sistemle ilgili bilgileri tanımlamak için SPident komutunu kullanın.
 
-   Örneğin, SLES 12 kullanıyorsanız ve *prod* kanalından Linux'Uç Nokta için Microsoft Defender dağıtım yapmak isterseniz:
+   Örneğin, SLES 12 çalıştırıyorsanız ve *Uç Nokta için Microsoft Defender dağıtım* kanalından Linux'a dağıtmak istiyorsanız:
 
    ```bash
    sudo zypper addrepo -c -f -n microsoft-prod https://packages.microsoft.com/config/sles/12/prod.repo
    ```
 
-- Microsoft GPG ortak anahtarını yükleme:
+- Microsoft GPG ortak anahtarını yükleyin:
 
     ```bash
     sudo rpm --import http://packages.microsoft.com/keys/microsoft.asc
@@ -145,49 +145,49 @@ Yeni özelliklerin önizlemesini görüntülemek ve erken geri bildirim sağlama
 
 ### <a name="ubuntu-and-debian-systems"></a>Ubuntu ve Debian sistemleri
 
-- Henüz `curl` yüklenmemişse yükleyin:
+- Henüz yüklenmediyse yükleyin `curl` :
 
     ```bash
     sudo apt-get install curl
     ```
 
-- Henüz `libplist-utils` yüklenmemişse yükleyin:
+- Henüz yüklenmediyse yükleyin `libplist-utils` :
 
     ```bash
     sudo apt-get install libplist-utils
     ```
 
 > [!NOTE]
-> dağıtım ve sürümünüzdür ve onun için en yakın girdiyi (ana, küçük olan) belirlemesi için 'nin altında bu girdiyi seçin `https://packages.microsoft.com/config/[distro]/`.
+> Dağıtımınız ve sürümünüz ve altında `https://packages.microsoft.com/config/[distro]/`bunun için en yakın girişi (ana, sonra ikincil) belirleyin.
 
-   Aşağıdaki komutta, *[distro]* ve *[version]* ifadelerini tanımdığer bilgilerle değiştirin:
+   Aşağıdaki komutta *[distro]* ve *[version]* sözcüklerini tanımladığınız bilgilerle değiştirin:
 
    ```bash
     curl -o microsoft.list https://packages.microsoft.com/config/[distro]/[version]/[channel].list
    ```
 
    > [!TIP]
-   > Sürüm [sürüm] de içinde olmak üzere sistemle ilgili bilgileri tanımlamak için hostnamectl *komutunu kullanın*.
+   > *[version]* sürümü de dahil olmak üzere sistemle ilgili bilgileri tanımlamak için hostnamectl komutunu kullanın.
 
-   Örneğin, Ubuntu 18.04 kullanıyorsanız ve *prod* kanalından Linux'Uç Nokta için Microsoft Defender dağıtmak isterseniz:
+   Örneğin, Ubuntu 18.04 çalıştırıyorsanız ve *dağıtım* kanalından Linux'ta Uç Nokta için Microsoft Defender dağıtmak istiyorsanız:
 
    ```bash
    curl -o microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
    ```
 
-- Depolama yapılandırmasını yükleme:
+- Depo yapılandırmasını yükleyin:
 
     ```bash
     sudo mv ./microsoft.list /etc/apt/sources.list.d/microsoft-[channel].list
     ```
 
-    Örneğin, prod *kanalı seçtiysanız* :
+    Örneğin, *üretim* kanalını seçtiyseniz:
 
     ```bash
     sudo mv ./microsoft.list /etc/apt/sources.list.d/microsoft-prod.list
     ```
 
-- `gpg` Paket henüz yüklenmemişse yükleyin:
+- `gpg` Henüz yüklü değilse paketi yükleyin:
 
     ```bash
     sudo apt-get install gpg
@@ -199,19 +199,19 @@ Yeni özelliklerin önizlemesini görüntülemek ve erken geri bildirim sağlama
     sudo apt-get install gnupg
     ```
 
-- Microsoft GPG ortak anahtarını yükleme:
+- Microsoft GPG ortak anahtarını yükleyin:
 
     ```bash
     curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
-- Henüz mevcut değilken https sürücüsünü yükleyin:
+- Henüz yoksa https sürücüsünü yükleyin:
 
     ```bash
     sudo apt-get install apt-transport-https
     ```
 
-- Depo meta verilerini güncelleştirme:
+- Depo meta verilerini güncelleştirin:
 
     ```bash
     sudo apt-get update
@@ -219,14 +219,14 @@ Yeni özelliklerin önizlemesini görüntülemek ve erken geri bildirim sağlama
 
 ## <a name="application-installation"></a>Uygulama yüklemesi
 
-- RHEL ve çeşitlemeler (CentOS ve Oracle Linux):
+- RHEL ve varyantları (CentOS ve Oracle Linux):
 
     ```bash
     sudo yum install mdatp
     ```
 
     > [!NOTE]
-    > Aygıtınızda birden çok Microsoft deposu yapılandırılmışsa, paketin hangi depodan yükll üzere belirli bir depo olduğu belli olabilir. Aşağıdaki örnekte, bu cihazda da yapılandırılmış `production` depolama kanalınız `insiders-fast` varsa, paketin kanaldan nasıl yük yüklemeniz olduğu gösterir. Bu durum, aygıtınızda birden çok Microsoft ürünü kullanıyorsanız olabilir. Dağıtıma ve sunucu sürümüne bağlı olarak, depo diğer adı aşağıdaki örnekte yer alan diğer addan farklı olabilir.
+    > Cihazınızda yapılandırılmış birden çok Microsoft deponuz varsa paketin yükleneceği depoya özgü olabilirsiniz. Aşağıdaki örnekte, bu cihazda depo kanalı da yapılandırılmışsa paketin `insiders-fast` kanaldan `production` nasıl yükleneceği gösterilmektedir. Cihazınızda birden çok Microsoft ürünü kullanıyorsanız bu durum oluşabilir. Sunucunuzun dağıtımına ve sürümüne bağlı olarak, depo diğer adı aşağıdaki örnekteki diğer addan farklı olabilir.
 
     ```bash
     # list all repositories
@@ -245,14 +245,14 @@ Yeni özelliklerin önizlemesini görüntülemek ve erken geri bildirim sağlama
     sudo yum --enablerepo=packages-microsoft-com-prod install mdatp
     ```
 
-- SLES ve çeşitlemeler:
+- SLES ve varyantlar:
 
     ```bash
     sudo zypper install mdatp
     ```
 
     > [!NOTE]
-    > Aygıtınızda birden çok Microsoft deposu yapılandırılmışsa, paketin hangi depodan yükll üzere belirli bir depo olduğu belli olabilir. Aşağıdaki örnekte, bu cihazda da yapılandırılmış `production` depolama kanalınız `insiders-fast` varsa, paketin kanaldan nasıl yük yüklemeniz olduğu gösterir. Bu durum, aygıtınızda birden çok Microsoft ürünü kullanıyorsanız olabilir.
+    > Cihazınızda yapılandırılmış birden çok Microsoft deponuz varsa paketin yükleneceği depoya özgü olabilirsiniz. Aşağıdaki örnekte, bu cihazda depo kanalı da yapılandırılmışsa paketin `insiders-fast` kanaldan `production` nasıl yükleneceği gösterilmektedir. Cihazınızda birden çok Microsoft ürünü kullanıyorsanız bu durum oluşabilir.
 
     ```bash
     zypper repos
@@ -278,7 +278,7 @@ Yeni özelliklerin önizlemesini görüntülemek ve erken geri bildirim sağlama
     ```
 
     > [!NOTE]
-    > Aygıtınızda birden çok Microsoft deposu yapılandırılmışsa, paketin hangi depodan yükll üzere belirli bir depo olduğu belli olabilir. Aşağıdaki örnekte, bu cihazda da yapılandırılmış `production` depolama kanalınız `insiders-fast` varsa, paketin kanaldan nasıl yük yüklemeniz olduğu gösterir. Bu durum, aygıtınızda birden çok Microsoft ürünü kullanıyorsanız olabilir.
+    > Cihazınızda yapılandırılmış birden çok Microsoft deponuz varsa paketin yükleneceği depoya özgü olabilirsiniz. Aşağıdaki örnekte, bu cihazda depo kanalı da yapılandırılmışsa paketin `insiders-fast` kanaldan `production` nasıl yükleneceği gösterilmektedir. Cihazınızda birden çok Microsoft ürünü kullanıyorsanız bu durum oluşabilir.
 
     ```bash
     cat /etc/apt/sources.list.d/*
@@ -293,20 +293,20 @@ Yeni özelliklerin önizlemesini görüntülemek ve erken geri bildirim sağlama
     sudo apt -t bionic install mdatp
     ```
 
-## <a name="download-the-onboarding-package"></a>Ekleme paketini indirin
+## <a name="download-the-onboarding-package"></a>Ekleme paketini indirme
 
-Ekleme paketini portaldan Microsoft 365 Defender indirin.
+Ekleme paketini Microsoft 365 Defender portalından indirin.
 
 > [!IMPORTANT]
-> Bu adımı kaçırırsanız, yürütülen herhangi bir komut ürünün lisanssız olduğunu belirten bir uyarı iletisi görüntüler. Komut, `mdatp health` 'ın değerini de döndürür `false`.
+> Bu adımı kaçırırsanız, yürütülen herhangi bir komut ürünün lisanssız olduğunu belirten bir uyarı iletisi gösterir. `mdatp health` Ayrıca komutu değerini `false`döndürür.
 
-1. Microsoft 365 Defender Portalında, Ayarlar > **Uç Noktaları ve Cihaz > Ekleme'> gidin**.
+1. Microsoft 365 Defender portalında **Ayarlar > Uç Noktaları > Cihaz yönetimi > Ekleme'ye** gidin.
 2. İlk açılan menüde işletim sistemi olarak **Linux Server'ı** seçin. İkinci açılan menüde dağıtım yöntemi olarak **Yerel Betik'i** seçin.
-3. Ekleme **paketini indir'i seçin**. Dosyayı farklı bir WindowsDefenderATPOnboardingPackage.zip.
+3. **Ekleme paketini indir'i** seçin. Dosyayı WindowsDefenderATPOnboardingPackage.zip olarak kaydedin.
 
-   :::image type="content" source="images/portal-onboarding-linux.png" alt-text="Microsoft 365 Defender portalında bir ekleme Microsoft 365 Defender indirme" lightbox="images/portal-onboarding-linux.png":::
+   :::image type="content" source="images/portal-onboarding-linux.png" alt-text="Microsoft 365 Defender portalında ekleme paketi indirme" lightbox="images/portal-onboarding-linux.png":::
 
-4. Komut isteminden, dosyanın size ait olduğunu doğrulayın ve arşivin içeriğini ayıkla:
+4. Komut isteminden dosyaya sahip olduğunuzu doğrulayın ve arşivin içeriğini ayıklayın:
 
     ```bash
     ls -l
@@ -328,96 +328,96 @@ Ekleme paketini portaldan Microsoft 365 Defender indirin.
 
 ## <a name="client-configuration"></a>İstemci yapılandırması
 
-1. Diğer MicrosoftDefenderATPOnboardingLinuxServer.py hedef cihaza kopyalayın.
+1. MicrosoftDefenderATPOnboardingLinuxServer.py hedef cihaza kopyalayın.
 
     > [!NOTE]
-    > Başlangıçta istemci cihazı kuruluşla ilişkilendirilmiş değildir ve *orgId* özniteliği boştur.
+    > Başlangıçta istemci cihazı bir kuruluşla ilişkilendirilmemiştir ve *orgId* özniteliği boş olur.
 
     ```bash
     mdatp health --field org_id
     ```
 
-2. Diğer MicrosoftDefenderATPOnboardingLinuxServer.py.
+2. MicrosoftDefenderATPOnboardingLinuxServer.py çalıştırın.
 
     > [!NOTE]
-    > Bu komutu çalıştırmak için, disto ve `python` `python3` sürüme bağlı olarak cihaza yüklenmiş veya yüklenmiş olması gerekir. Gerekirse bkz. [Linux'ta Python'i yüklemek için adım adım yönerge](https://opensource.com/article/20/4/install-python-linux).
+    > Bu komutu çalıştırmak için, disto ve sürüme bağlı olarak cihaza sahip `python`  olmanız veya `python3` yüklemeniz gerekir. Gerekirse bkz. [Linux'ta Python Yükleme için Adım Adım Yönergeler](https://opensource.com/article/20/4/install-python-linux).
     
-    RHEL 8.x veya Ubuntu 20.04 veya daha yüksek bir değer kullanıyorsanız, 'ı kullansanız gerekir `python3`.
+    RHEL 8.x veya Ubuntu 20.04 veya üzerini çalıştırıyorsanız kullanmanız `python3`gerekir.
 
     ```bash
     sudo python3 MicrosoftDefenderATPOnboardingLinuxServer.py
     ```
 
-    Diğer girişler ve sürümler için ' kullanın `python`.
+    Diğer dağıtımlar ve sürümler için kullanmanız `python`gerekir.
     
     ```bash
     sudo python MicrosoftDefenderATPOnboardingLinuxServer.py
     ```
     
-3. Cihazın şimdi organizasyonuyla ilişkili olduğunu doğrulayın ve geçerli bir kuruluş tanımlayıcısı rapor edin:
+3. Cihazın artık kuruluşunuzla ilişkilendirildiğini ve geçerli bir kuruluş tanımlayıcısı bildirdiğini doğrulayın:
 
     ```bash
     mdatp health --field org_id
     ```
 
-4. Aşağıdaki komutu çalıştırarak ürünün durumunu kontrol edin. Ürünün beklendiği gibi `1` ilerlemektedir. Sonuç değeri:
+4. Aşağıdaki komutu çalıştırarak ürünün sistem durumunu denetleyin. Dönüş değeri `1` , ürünün beklendiği gibi çalıştığını belirtir:
 
     ```bash
     mdatp health --field healthy
     ```
 
     > [!IMPORTANT]
-    > Ürün ilk kez başlatıldığında, en son kötü amaçlı yazılımdan koruma tanımlarını indirir. Bu, ağ bağlantısına bağlı olarak birkaç dakika sürebilir. Bu sırada yukarıdaki komut bir değeri döndürür `false`. Aşağıdaki komutu kullanarak tanım güncelleştirmesini durumunu kontrol edin:
+    > Ürün ilk kez başlatıldığında en son kötü amaçlı yazılımdan koruma tanımlarını indirir. Bu işlem, ağ bağlantısına bağlı olarak birkaç dakika kadar sürebilir. Bu süre boyunca yukarıdaki komut değerini `false`döndürür. Tanım güncelleştirmesinin durumunu denetlemek için aşağıdaki komutu kullanabilirsiniz:
     >
     > ```bash
     > mdatp health --field definitions_status
     > ```
     >
-    > İlk yükleme tamamladıktan sonra bir proxy yapılandırmanız gerekey olduğunu lütfen unutmayın. Statik [proxy bulma için Linux'ta Uç Nokta için Defender'ı Yapılandırma: Yükleme sonrası yapılandırma](linux-static-proxy-configuration.md#post-installation-configuration).
+    > İlk yüklemeyi tamamladıktan sonra bir ara sunucu yapılandırmanız gerekebileceğini lütfen unutmayın. Bkz [. Linux'ta Uç Nokta için Defender'ı statik proxy bulma için yapılandırma: Yükleme sonrası yapılandırma](linux-static-proxy-configuration.md#post-installation-configuration).
 
-5. Cihazın düzgün bir şekilde işe alımlı olduğunu ve hizmete rapor olduğunu doğrulamak için AV algılama testini çalıştırın. Yeni eklenen cihazda aşağıdaki adımları uygulayın:
+5. Cihazın düzgün şekilde eklendiğini ve hizmete bildirildiğini doğrulamak için bir AV algılama testi çalıştırın. Yeni eklenen cihazda aşağıdaki adımları gerçekleştirin:
 
-    - Gerçek zamanlı korumanın etkinleştirildiğinden emin olun (aşağıdaki komutun `1` çalıştırması sonucunda:
+    - Gerçek zamanlı korumanın etkinleştirildiğinden emin olun (aşağıdaki komutu çalıştırmanın `1` sonucu olarak belirtilir):
 
         ```bash
         mdatp health --field real_time_protection_enabled
         ```
         
-      Etkin değilse aşağıdaki komutu yürütün:
+      Etkinleştirilmemişse aşağıdaki komutu yürütür:
       
        ```bash
         mdatp config real-time-protection --value enabled
         ```
 
-    - Terminal penceresini açın ve aşağıdaki komutu yürütün:
+    - Bir Terminal penceresi açın ve aşağıdaki komutu yürütür:
 
         ``` bash
         curl -o /tmp/eicar.com.txt https://www.eicar.org/download/eicar.com.txt
         ```
 
-    - Dosya Linux'ta Uç Nokta için Defender tarafından karantinaya alınmış olmalıdır. Algılanan tüm tehditleri listeleyen aşağıdaki komutu kullanın:
+    - Dosya Linux'ta Uç Nokta için Defender tarafından karantinaya alınmış olmalıdır. Algılanan tüm tehditleri listelemek için aşağıdaki komutu kullanın:
 
         ```bash
         mdatp threat list
         ```
 
-6. Cihazın düzgün EDR ve hizmete bildirilmiş olduğunu doğrulamak için, EDR algılama testini çalıştırın ve algılamayı benzetimini yap. Yeni eklenen cihazda aşağıdaki adımları uygulayın:
+6. Cihazın düzgün şekilde eklendiğini ve hizmete bildirildiğini doğrulamak için bir EDR algılama testi çalıştırın ve algılama simülasyonu yapın. Yeni eklenen cihazda aşağıdaki adımları gerçekleştirin:
 
-    - Yerleşik Linux sunucusunun Linux'ta görüntülendiğinden Microsoft 365 Defender. Bu makineye ilk kez geliyorsa, görüntülenene kadar 20 dakika kadar sürebilir.
+    - Eklenen Linux sunucusunun Microsoft 365 Defender görüntülendiğini doğrulayın. Makinenin ilk eklemesi buysa, görünmesi 20 dakika kadar sürebilir.
 
-    - Betik dosyasını [yerleşik bir](https://aka.ms/LinuxDIY) Linux sunucusuna indirip ayık edin ve aşağıdaki komutu çalıştırın: `./mde_linux_edr_diy.sh`
+    - [Betik dosyasını](https://aka.ms/LinuxDIY) indirip ekli bir Linux sunucusuna ayıklayın ve aşağıdaki komutu çalıştırın:`./mde_linux_edr_diy.sh`
 
-    - Birkaç dakika sonra, iki alan içinde bir algılama Microsoft 365 Defender.
+    - Birkaç dakika sonra, Microsoft 365 Defender içinde bir algılama tetiklenmelidir.
 
     - Uyarı ayrıntılarına, makine zaman çizelgesine bakın ve tipik araştırma adımlarınızı gerçekleştirin.
 
 ## <a name="installer-script"></a>Yükleyici betiği
 
-Alternatif olarak, genel hizmet depomuzda [sağlanan otomatik](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh) yükleyici bash [betiği GitHub kullanabilirsiniz](https://github.com/microsoft/mdatp-xplat/).
-Betikte dağıtım ve sürüm tanımlanıyor, doğru depolama alanı seçimi basitleştirildi, en son paketi çekmek için cihaz ayarlanıyor, ürün yükleme ve ekleme adımları birleştirildi.
+Alternatif olarak, [genel GitHub depomuzda](https://github.com/microsoft/mdatp-xplat/) sağlanan otomatik [yükleyici bash betiğini](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh) kullanabilirsiniz.
+Betik dağıtımı ve sürümü tanımlar, doğru depo seçimini basitleştirir, cihazı en son paketi çekecek şekilde ayarlar ve ürün yükleme ve ekleme adımlarını birleştirir.
 
 ```bash
-❯ ./mde_installer.sh --help
+> ./mde_installer.sh --help
 usage: basename ./mde_installer.sh [OPTIONS]
 Options:
 -c|--channel      specify the channel from which you want to install. Default: insiders-fast
@@ -433,39 +433,39 @@ Options:
 -h|--help         display help
 ```
 
-Buradan daha fazlasını [okuyun](https://github.com/microsoft/mdatp-xplat/tree/master/linux/installation).
+Daha fazla bilgi [için buraya bakın](https://github.com/microsoft/mdatp-xplat/tree/master/linux/installation).
 
 ## <a name="log-installation-issues"></a>Günlük yükleme sorunları
 
-Hata [oluştuğunda](linux-resources.md#log-installation-issues) yükleyici tarafından oluşturulan otomatik günlüğü bulma hakkında daha fazla bilgi için bkz. Günlük yükleme sorunları.
+Bir hata oluştuğunda yükleyici tarafından oluşturulan otomatik olarak oluşturulan günlüğü bulma hakkında daha fazla bilgi için bkz. [Günlük yükleme sorunları](linux-resources.md#log-installation-issues) .
 
-## <a name="how-to-migrate-from-insiders-fast-to-production-channel"></a>Insiders-Fast kanalından Üretim kanalına geçiş
+## <a name="how-to-migrate-from-insiders-fast-to-production-channel"></a>Insiders-Fast'dan Üretim kanalına geçiş
 
-1. Linux'ta Endpoint için Defender'ın "Insider Hızlı kanalı" sürümünü kaldırın.
+1. Linux'ta Uç Nokta için Defender'ın "Insider-Hızlı kanal" sürümünü kaldırın.
 
     ```bash
     sudo yum remove mdatp
     ```
 
-1. Linux Insiders-Fast repo'da Uç Nokta için Defender'ı devre dışı bırakma
+1. Linux Insiders-Fast deposunda Uç Nokta için Defender'ı devre dışı bırakma
 
     ```bash
     sudo yum repolist
     ```
 
     > [!NOTE]
-    > Çıkışta "packages-microsoft-com-fast-prod" göster gerekir.
+    > Çıkışta "packages-microsoft-com-fast-prod" gösterilmelidir.
 
     ```bash
     sudo yum-config-manager --disable packages-microsoft-com-fast-prod
     ```
 
-1. "Üretim kanalını" Uç Nokta için Microsoft Defender Linux üzerinde yeniden dağıtım kanalını yeniden dağıtım.
+1. "Üretim kanalını" kullanarak Linux'ta Uç Nokta için Microsoft Defender yeniden dağıtın.
 
 ## <a name="uninstallation"></a>Kaldırma
 
-İstemci [cihazlarından](linux-resources.md#uninstall) Linux'ta Uç Nokta için Defender'ı kaldırma hakkında ayrıntılar için bkz. Kaldırma.
+Linux'ta Uç Nokta için Defender'ı istemci cihazlarından kaldırma hakkında ayrıntılı bilgi için bkz. [Kaldırma](linux-resources.md#uninstall) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Aracı durumu sorunlarını araştırma](health-status.md)
+- [Sistem durumu sorunlarını araştırın](health-status.md)

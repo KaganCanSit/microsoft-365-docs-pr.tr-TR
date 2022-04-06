@@ -1,8 +1,8 @@
 ---
 title: İstenmeyen yazılım
 ms.reviewer: ''
-description: İstenmeyen yazılımın sizin izniniz olmadan varsayılan ayarlarınızı nasıl değiştir olduğunu ve kendinizi korumak için neler yapabilirsiniz hakkında bilgi alın.
-keywords: güvenlik, kötü amaçlı yazılım, koruma, istenmeyen, yazılım, değiştirme, bulaşabilir, istenmeyen yazılım, yazılım paketleyenler, tarayıcı değiştiricileri, gizlilik, güvenlik, bilgi işlem deneyimi, bulaşmayı önleme, çözüm, WDSI, MMPC, Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi, virüs araştırma tehditleri, kötü amaçlı yazılım araştırma, bilgisayar koruması, bilgisayar bulaşması, virüs bulaşması, açıklamalar, düzeltme, en son tehditler
+description: İstenmeyen yazılımların izniniz olmadan varsayılan ayarlarınızı nasıl değiştirebileceği ve kendinizi korumak için yapabilecekleriniz hakkında bilgi edinin.
+keywords: güvenlik, kötü amaçlı yazılım, koruma, istenmeyen, yazılım, alter, enfekte, istenmeyen yazılım, yazılım paketleyiciler, tarayıcı değiştiriciler, gizlilik, güvenlik, bilgi işlem deneyimi, bulaşmayı önleme, çözüm, WDSI, MMPC, Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi, virüs araştırma tehditleri, araştırma kötü amaçlı yazılımları, Pc koruması, bilgisayar bulaşması, virüs bulaşması, açıklamalar, düzeltme, en son tehditler
 ms.prod: m365-security
 ms.mktglfcycl: secure
 ms.sitesec: library
@@ -15,58 +15,58 @@ ms.collection: M365-security-compliance
 ms.topic: article
 search.appverid: met150
 ms.technology: m365d
-ms.openlocfilehash: 94b3bad5b5653420d91cd422d40a0ff7802e6442
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 654730571de934552d983e1135f24a3299567741
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63706202"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64666690"
 ---
 # <a name="unwanted-software"></a>İstenmeyen yazılım
 
-İstenmeyen yazılımlar, sizin izniniz Windows denetiminiz olmadan bu deneyimi değiştiren programlardır. Bu durum değiştirilmiş gözatma deneyimi, indirmeler ve yükleme üzerinde denetim olmaması, yanıltıcı iletiler veya kurulum ayarlarına yönelik yetkisiz değişiklikler Windows olabilir.
+İstenmeyen yazılımlar, onayınız veya denetiminiz olmadan Windows deneyimini değiştiren programlardır. Bu, değiştirilmiş gözatma deneyimi, indirmeler ve yükleme üzerinde denetim eksikliği, yanıltıcı iletiler veya Windows ayarlarına yetkisiz değişiklikler şeklinde olabilir.
 
-## <a name="how-unwanted-software-works"></a>İstenmeyen yazılım nasıl çalışır?
+## <a name="how-unwanted-software-works"></a>İstenmeyen yazılımlar nasıl çalışır?
 
-Bir kullanıcı internetten uygulama arar ve indirirken istenmeyen yazılım kullanılabilir. Bazı uygulamalar yazılım paketçileridir, yani başka uygulamalarla bir paketlenirler. Sonuç olarak, özgün uygulama indirilirken başka programlar yanlışlıkla yüklenebilir.
+İstenmeyen yazılımlar, kullanıcı İnternet'ten uygulama arayıp indirdiğinde ortaya çıkar. Bazı uygulamalar yazılım paketleyicileridir ve bu da diğer uygulamalarla birlikte paketlendiği anlamına gelir. Sonuç olarak, özgün uygulama indirildiğinde diğer programlar yanlışlıkla yüklenebilir.
 
-İstenmeyen yazılıma dair bazı göstergeler:
+İstenmeyen yazılımların bazı göstergeleri şunlardır:
 
-- Yüklememişsiniz ve programı kaldırmak zor olabilir
+- Yüklemediğiniz ve kaldırılması zor olabilecek programlar var
 
-- Tarayıcı özellikleri veya ayarları değişti ve bunları görüntüleyeme ya da değiştireyesiniz
+- Tarayıcı özellikleri veya ayarları değişti ve bunları görüntüleyemez veya değiştiremezsiniz
 
 - Cihazınızın durumu veya dosyalar ve programlar hakkında çok fazla ileti var
 
-- Kolayca kapatılayılan reklamlar var
+- Kolayca kapatılamayan reklamlar var
 
-Bazı göstergelerin farksı daha zordur, çünkü bunlar daha az kesintiye neden olur, ancak yine de istenmeyendir. Örneğin, istenmeyen yazılımlar belirli reklamları görüntülemek, gözatma etkinliklerini izlemek veya tarayıcının kontrollerini kaldırmak için web sayfalarını değiştirebilir.
+Bazı göstergelerin tanınması daha zordur çünkü bunlar daha az kesintiye neden olur, ancak yine de istenmeyendir. Örneğin, istenmeyen yazılımlar belirli reklamları görüntülemek, gözatma etkinliklerini izlemek veya tarayıcının denetimini kaldırmak için web sayfalarını değiştirebilir.
 
-Microsoft, istenmeyen yazılımları [tanımlamak için kapsamlı](criteria.md) bir değerlendirme ölçütleri kullanır.
+Microsoft, istenmeyen yazılımları tanımlamak için kapsamlı bir [değerlendirme ölçütü](criteria.md) kullanır.
 
 ## <a name="how-to-protect-against-unwanted-software"></a>İstenmeyen yazılımlara karşı koruma
 
-İstenmeyen yazılım bulaşmasını önlemek için, yazılımı yalnızca resmi web sitelerinden veya web sitesinden Microsoft Store. Üçüncü taraf sitelerden yazılım indirmeye karşı çok fazla bilgi kullanın.
+İstenmeyen yazılım bulaşmasını önlemek için, yazılımı yalnızca resmi web sitelerinden veya Microsoft Store indirin. Üçüncü taraf sitelerden yazılım indirmeye karşı dikkatli olun.
 
-[İnternet'Microsoft Edge](/microsoft-edge/deploy/index) göz atma videolarını kullanın. Microsoft Edge tarayıcı ayarlarınızı değiştiren tarayıcı değiştiricileri etkili bir şekilde engel olan ek korumalar içerir. Microsoft Edge Ayrıca, [SmartScreen](/microsoft-edge/deploy/index) (Internet Explorer tarafından da kullanılır) Windows Defender web sitelerini kullanarak istenmeyen yazılım barındırmasını engeller.
+İnternet'e göz atarken [Microsoft Edge](/microsoft-edge/deploy/index) kullanın. Microsoft Edge, tarayıcı ayarlarınızı değiştirebilen tarayıcı değiştiricilerini etkili bir şekilde engelleyen ek korumalar içerir. Microsoft Edge, [Windows Defender SmartScreen](/microsoft-edge/deploy/index) (Internet Explorer tarafından da kullanılır) kullanarak istenmeyen yazılımları barındıran bilinen web sitelerini de engeller.
 
-[E-Microsoft Defender Virüsten Koruma'i](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-in-windows-10) Windows 10. Tehditlere karşı gerçek zamanlı koruma sağlar, bilinen ve istenmeyen yazılımları tespit eder ve kaldırır.
+[Windows 10'da Microsoft Defender Virüsten Koruma](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-in-windows-10) etkinleştirin. Tehditlere karşı gerçek zamanlı koruma sağlar ve bilinen istenmeyen yazılımları algılar ve kaldırır.
 
-7 veya Windows Vista'da gerçek zamanlı koruma için [Microsoft Security Essentials'Windows'i](https://www.microsoft.com/download/details.aspx?id=5201) indirin.
+Windows 7 veya Windows Vista'da gerçek zamanlı koruma için [Microsoft Security Essentials'ı](https://www.microsoft.com/download/details.aspx?id=5201) indirin.
 
-Daha genel ipuçları için bkz. Kötü [amaçlı yazılım bulaşmasını önleme](prevent-malware-infection.md).
+Daha genel ipuçları için bkz. [Kötü amaçlı yazılım bulaşmasını önleme](prevent-malware-infection.md).
 
-### <a name="what-should-i-do-if-my-device-is-infected"></a>Cihazıma virüs bulaşmışsa ne yapabilirim? 
+### <a name="what-should-i-do-if-my-device-is-infected"></a>Cihazıma virüs bulaşmışsa ne yapmalıyım? 
 
-İstenmeyen bir yazılıma sahip olduğunuz varsa analiz için [dosya gönderebilirsiniz](https://www.microsoft.com/wdsi/filesubmission).
+İstenmeyen yazılıma sahip olduğunuzdan şüpheleniyorsanız dosyaları [analiz için gönderebilirsiniz](https://www.microsoft.com/wdsi/filesubmission).
 
-Bazı istenmeyen yazılımlar kaldırma girdilerini ekler ve bu da, bunları kaldırmak için bir **kullanıcı Ayarlar**.
-1. Başlat düğmesini seçin
-2. Uygulamalar ve **Ayarlar > özellikleri > uygulamaları ve & gidin**.
-3. Kaldırmak istediğiniz uygulamayı seçin ve Kaldır'a **tıklayın**.
+İstenmeyen bazı yazılımlar kaldırma girdileri ekler; başka bir deyişle **bunları Ayarlar kullanarak kaldırabilirsiniz**.
+1. Başlangıç düğmesini seçin
+2. **Ayarlar > Uygulamaları > Uygulamalar & özellikleri'ne** gidin.
+3. Kaldırmak istediğiniz uygulamayı seçin ve **kaldır'a** tıklayın.
 
-Yalnızca istenmeyen yazılım bulaşmanın belirtilerini yeni fark ettiysanız, yükleme tarihine göre uygulamaları sıralamayı ve ardından yüklememiş olmadığınız en son uygulamaları kaldırmayı göz önünde bulundurabilirsiniz.
+İstenmeyen yazılım bulaşma belirtilerini yalnızca yakın zamanda fark ettiyseniz, uygulamaları yükleme tarihine göre sıralamayı ve ardından yüklemediğiniz en son uygulamaları kaldırmayı düşünün.
 
-Ayrıca Internet Explorer, Firefox **veya** Chrome gibi tarayıcılar ınıza tarayıcı eklentilerini kaldırmanız da gerekir.
+Tarayıcılarınızda Internet Explorer, Firefox veya Chrome gibi **tarayıcı eklentilerini de kaldırmanız** gerekebilir.
 
-Tehdit kaldırmanın başarısız olduğu durumda, kötü amaçlı yazılım algılama ve kaldırma [sorunlarını giderme hakkında bilgi edinebilirsiniz](https://support.microsoft.com/help/4466982/windows-10-troubleshoot-problems-with-detecting-and-removing-malware).
+Tehdit kaldırma işleminin başarısız olması durumunda [kötü amaçlı yazılım algılama ve kaldırma sorunlarını giderme](https://support.microsoft.com/help/4466982/windows-10-troubleshoot-problems-with-detecting-and-removing-malware) hakkında bilgi edinin.

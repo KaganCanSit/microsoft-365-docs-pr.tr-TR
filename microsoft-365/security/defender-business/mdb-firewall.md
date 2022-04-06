@@ -1,6 +1,6 @@
 ---
-title: İş için Microsoft Defender'da Güvenlik Duvarı
-description: Yapılandırma ayarları Windows Defender İş için Microsoft Defender Güvenlik Duvarı hakkında bilgi
+title: İş için Microsoft Defender'de güvenlik duvarı
+description: yapılandırma ayarları da dahil olmak üzere İş için Microsoft Defender Windows Defender Güvenlik Duvarı hakkında bilgi edinin
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -16,64 +16,64 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 92db1711fa5aefb8920c35a8665cf322b3f0f5ef
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: fb506a1d2cc28329f9d6ef9975a10b0661379bb9
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525869"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64664622"
 ---
-# <a name="firewall-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da Güvenlik Duvarı
+# <a name="firewall-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'de güvenlik duvarı
 
 > [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
+> İş için Microsoft Defender, 1 Mart 2022'de başlayarak [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşterilerine dağıtılıyor. Tek başına abonelik olarak İş için Defender önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşterilere ve BT İş Ortaklarına aşamalı olarak dağıtılacaktır. Önizleme, [bir dizi ilk senaryo](mdb-tutorials.md#try-these-preview-scenarios) içerir ve düzenli olarak özellikler ekleyeceğiz.
 > 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-İş için Microsoft Defender, Güvenlik Duvarı'nı Windows Defender [içerir](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security). Güvenlik duvarı koruması, hangi ağ trafiğinin cihazlara girişine veya cihazlarından akışına izin verildiğini belirleyen kurallarla cihazların güvenliğini sağlar. 
+İş için Microsoft Defender, [Windows Defender Güvenlik Duvarı ile güvenlik duvarı](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security) özelliklerini içerir. Güvenlik duvarı koruması, hangi ağ trafiğinin cihazlara girmesine veya cihazlardan akmasını sağlayan kurallarla cihazların güvenliğinin korunmasına yardımcı olur. 
 
-Çeşitli konumlarda cihazlarda bağlantılara izin veriip engellenmezseniz, güvenlik duvarı korumasını kullanabilirsiniz. Örneğin, güvenlik duvarı ayarlarınız, şirketin iç ağına bağlı cihazlarda gelen bağlantılara izin verir, ancak cihaz güvenilmeyen cihazlarla bir ağ üzerinde olduğunda bu bağlantıları önler.
+Çeşitli konumlardaki cihazlarda bağlantılara izin verilip verilmeyeceğini veya bağlantının engellenip engellenmeyeceğini belirtmek için güvenlik duvarı korumasını kullanabilirsiniz. Örneğin, güvenlik duvarı ayarlarınız şirketinizin iç ağına bağlı cihazlarda gelen bağlantılara izin verebilir, ancak cihaz güvenilmeyen cihazlara sahip bir ağdayken bu bağlantıları engelleyebilir.
 
-**Bu makalede şu açıklanmıştır**:
+**Bu makalede şunlar açıklanmaktadır**:
 
 - [İş için Defender'da varsayılan güvenlik duvarı ayarları](#default-firewall-settings-in-defender-for-business)
 
-- [İş için Defender'da yapılandırabilirsiniz güvenlik duvarı ayarları](#firewall-settings-you-can-configure-in-defender-for-business)
+- [İş için Defender'da yapılandırabileceğiniz güvenlik duvarı ayarları](#firewall-settings-you-can-configure-in-defender-for-business)
 
 >
-> **Bir dakika mı kaldı?**
-> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+> **Bir dakikan var mı?**
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">İş için Microsoft Defender hakkındaki kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
 ## <a name="default-firewall-settings-in-defender-for-business"></a>İş için Defender'da varsayılan güvenlik duvarı ayarları
 
-İşletmeler için Microsoft Defender, şirket cihazlarınızı ilk günden korumanıza yardımcı olacak varsayılan güvenlik duvarı ilkelerini ve ayarlarını içerir. Şirketinizin cihazları İş için Microsoft Defender'a ekli olduğu anda, varsayılan güvenlik duvarı ilkeniz aşağıdaki gibi çalışır:
+İş için Microsoft Defender, şirketinizin cihazlarının ilk günden korunmasına yardımcı olmak için varsayılan güvenlik duvarı ilkelerini ve ayarlarını içerir. Şirketinizin cihazları İş için Microsoft Defender eklenir eklenmez, varsayılan güvenlik duvarı ilkeniz aşağıdaki gibi çalışır:
 
-- Konumdan bağımsız olarak, cihazlardan giden bağlantılara varsayılan olarak izin verilir.
+- Konumdan bağımsız olarak cihazlardan giden bağlantılara varsayılan olarak izin verilir.
 - Cihazlar şirketinizin ağına bağlandığında, tüm gelen bağlantılar varsayılan olarak engellenir.
-- Cihazlar bir ortak ağa veya özel ağa bağlandığında, tüm gelen bağlantılar varsayılan olarak engellenir.
+- Cihazlar bir genel ağa veya özel ağa bağlandığında, tüm gelen bağlantılar varsayılan olarak engellenir.
 
-İş için Microsoft Defender'da gelen bağlantıları engellemek veya buna izin vermek için özel durumlar tanımlayabilirsiniz. Özel kurallar oluşturarak bu özel durumları tanımlayabilirsiniz. Bkz [. Güvenlik duvarı ilkeleri için özel kuralları yönetme](mdb-custom-rules-firewall.md).
+İş için Microsoft Defender'da, gelen bağlantıları engellemek veya izin vermek için özel durumlar tanımlayabilirsiniz. Özel kurallar oluşturarak bu özel durumları tanımlarsınız. Bkz. [Güvenlik duvarı ilkeleri için özel kuralları yönetme](mdb-custom-rules-firewall.md).
 
-## <a name="firewall-settings-you-can-configure-in-defender-for-business"></a>İş için Defender'da yapılandırabilirsiniz güvenlik duvarı ayarları
+## <a name="firewall-settings-you-can-configure-in-defender-for-business"></a>İş için Defender'da yapılandırabileceğiniz güvenlik duvarı ayarları
 
-İş için Microsoft Defender, Güvenlik Duvarı aracılığıyla güvenlik Windows Defender içerir. Aşağıdaki tabloda, İş için Microsoft Defender'da güvenlik duvarı koruması için yapılandırılan ayarlar listeledir. <br/><br/>
+İş için Microsoft Defender, Windows Defender Güvenlik Duvarı aracılığıyla güvenlik duvarı korumasını içerir. Aşağıdaki tabloda, İş için Microsoft Defender'da güvenlik duvarı koruması için yapılandırılabilir ayarlar listelenir. <br/><br/>
 
 | Ayar | Açıklama |
 |--|--|
-| **Etki alanı ağı** | Etki alanı ağ profili, şirketinizin ağına uygulanır. Etki alanı ağ için güvenlik duvarı ayarları, aynı ağ üzerinde olan diğer cihazlarda başlatılan gelen bağlantılara uygulanır. Varsayılan olarak, gelen bağlantılar Tüm bağlantıları engelle **olarak ayarlanır**.  |
-| **Genel ağ** | Genel ağ profili, kafe veya havaalanında gibi genel bir konumda kullanabileceğiniz bir ağa uygulanır. Ortak ağların güvenlik duvarı ayarları, aynı ağ üzerinde olan diğer cihazlarda başlatılan gelen bağlantılarda geçerlidir. Genel ağ, güvenme olmadığınız cihazlar da içerebilir, çünkü gelen bağlantılar varsayılan olarak hepsini engelle **olarak** ayarlanır.  |
-| **Özel ağ** | Özel ağ profili, eviniz gibi özel bir konumdaki ağa uygulanır. Özel ağların güvenlik duvarı ayarları, aynı ağ üzerinde olan diğer cihazlarda başlatılan gelen bağlantılarda geçerlidir. Genel olarak, özel bir ağ üzerinde aynı ağ'daki diğer tüm cihazların güvenilen cihazlar olduğu varsayılır. Bununla birlikte, varsayılan olarak gelen bağlantılar Tüm bağlantıları engelle **olarak ayarlanır**. |
-| **Özel kurallar** | [Özel kurallar belirli](mdb-custom-rules-firewall.md) bağlantıları engellemenizi veya izin vermenizi sağlar. Örneğin, bir cihaz üzerinde belirli bir uygulama üzerinden yapılan bağlantılar dışında, özel bir ağa bağlı cihazlardan tüm gelen bağlantıları engellemek istediğiniz varsayalım. Bu durumda, Tüm gelen bağlantıları engellemek **için** Özel ağ'ı ayarladığınız gibi, özel bir kural da ekleyebilir ve bu özel durumu tanımlayabilirsiniz. <br/><br/>Özel kuralları kullanarak belirli dosya veya uygulamalar, İnternet protokolü (IP) adresi veya IP adresi aralığı için özel durumlar tanımlayabilirsiniz. <br/><br/>Oluşturmakta istediğiniz özel kuralın türüne bağlı olarak, aşağıdaki örnek değerleri kullanabilirsiniz: <br/><br/>Uygulama dosyası yolu: `C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe` <br/><br/>IP: Geçerli bir IPv4/IPv6 adresi, örneğin `192.168.1.0` : `192.168.1.0/24` <br/><br/>IP: Gibi biçimlendirilmiş geçerli bir IPv4/IPv6 `192.168.1.0-192.168.1.9` adres aralığı (boşluk eklemeden) |
+| **Etki alanı ağı** | Etki alanı ağ profili şirketinizin ağı için geçerlidir. Etki alanı ağınız için güvenlik duvarı ayarları, aynı ağdaki diğer cihazlarda başlatılan gelen bağlantılara uygulanır. Varsayılan olarak, gelen bağlantılar **Tümünü engelle** olarak ayarlanır.  |
+| **Genel ağ** | Ortak ağ profili, kafe veya havaalanı gibi genel bir konumda kullanabileceğiniz bir ağ için geçerlidir. Ortak ağlar için güvenlik duvarı ayarları, aynı ağdaki diğer cihazlarda başlatılan gelen bağlantılara uygulanır. Ortak ağ, tanımadığınız veya güvenmediğiniz cihazlar içerebileceğinden, gelen bağlantılar varsayılan olarak **Tümünü engelle** olarak ayarlanır.  |
+| **Özel ağ** | Özel ağ profili, eviniz gibi özel bir konumdaki bir ağ için geçerlidir. Özel ağlar için güvenlik duvarı ayarları, aynı ağdaki diğer cihazlarda başlatılan gelen bağlantılara uygulanır. Genel olarak, özel bir ağda, aynı ağdaki diğer tüm cihazların güvenilir cihazlar olduğu varsayılır. Ancak, varsayılan olarak gelen bağlantılar **Tümünü engelle** olarak ayarlanır. |
+| **Özel kurallar** | [Özel kurallar](mdb-custom-rules-firewall.md) , belirli bağlantıları engellemenize veya izin vermenizi sağlar. Örneğin, bir cihazdaki belirli bir uygulama üzerinden yapılan bağlantılar dışında, özel bir ağa bağlı cihazlardaki tüm gelen bağlantıları engellemek istediğinizi varsayalım. Bu durumda, **Özel ağı** tüm gelen bağlantıları engelleyecek şekilde ayarlar ve ardından özel durumu tanımlamak için özel bir kural eklersiniz. <br/><br/>Belirli dosyalar veya uygulamalar, İnternet protokolü (IP) adresi veya bir IP adresi aralığı için özel durumlar tanımlamak için özel kurallar kullanabilirsiniz. <br/><br/>Oluşturduğunuz özel kuralın türüne bağlı olarak, kullanabileceğiniz bazı örnek değerler şunlardır: <br/><br/>Uygulama dosyası yolu: `C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe` <br/><br/>IP: veya gibi `192.168.11.0` geçerli bir IPv4/IPv6 adresi `192.168.1.0/24` <br/><br/>IP: Gibi `192.168.1.0-192.168.1.9` biçimlendirilmiş (boşluk içermeyen) geçerli bir IPv4/IPv6 adres aralığı |
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [İş için Microsoft Defender'da güvenlik duvarı ayarlarını yönetme](mdb-custom-rules-firewall.md)
+- [İş için Microsoft Defender'de güvenlik duvarı ayarlarını yönetme](mdb-custom-rules-firewall.md)
 
-- [Güvenlik Duvarı hakkında daha fazla Windows Defender bilgi](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security)
+- [Windows Defender Güvenlik Duvarı hakkında daha fazla bilgi edinin](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security)
 
 - [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)
 
-- [İş için Microsoft Defender'da tehditleri yanıtlama ve azaltmak](mdb-respond-mitigate-threats.md)
+- [İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma](mdb-respond-mitigate-threats.md)
 
-- [İşlem merkezinde düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
+- [İşlem merkezindeki düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)

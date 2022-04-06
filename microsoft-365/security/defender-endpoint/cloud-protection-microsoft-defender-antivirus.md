@@ -15,22 +15,22 @@ ms.technology: mde
 ms.topic: article
 ms.date: 10/18/2021
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 013b189dca95fc63dc8d189d020fcf3f7727cf82
-ms.sourcegitcommit: 2b9d40e888ff2f2b3385e2a90b50d719bba1e653
+ms.openlocfilehash: 881ae2de7a6c752c2be9bfc5ccdbe350050f340b
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "62997023"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472011"
 ---
 # <a name="cloud-protection-and-microsoft-defender-antivirus"></a>Bulut koruması ve Microsoft Defender Virüsten Koruma
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
 Yeni nesil teknolojiler, Microsoft Defender Virüsten Koruma ortaya çıkan tehditlere karşı yakın hızlı, otomatik koruma sağlar. Yeni tehditleri dinamik olarak belirlemek için, yeni nesil teknolojiler Microsoft Akıllı Güvenlik Graph ve gelişmiş makine öğrenme modelleri tarafından yönlendirilen güçlü yapay zeka (AI) sistemlerinde birbirine bağlı büyük veri kümeleriyle çalışır. Bulut koruması doğru, Microsoft Defender Virüsten Koruma ve akıllı koruma sağlamak için bulut korumasıyla birlikte çalışır. 
 
-[:::image type="content" source="images/mde-cloud-protection.png" alt-text="Bulut korumasının diğer çalışanlarla birlikte nasıl çalıştığını gösteren Microsoft Defender Virüsten Koruma":::](enable-cloud-protection-microsoft-defender-antivirus.md)
+[:::image type="content" source="images/mde-cloud-protection.png" alt-text="Bulut korumasının diğer çalışanlarla birlikte nasıl çalıştığını gösteren Microsoft Defender Virüsten Koruma" lightbox="images/mde-cloud-protection.png":::](enable-cloud-protection-microsoft-defender-antivirus.md)
 
 > [!TIP]
 > Bulut korumasının açık tutmasını öneririz. Daha fazla bilgi edinmek için bkz[. Bu bağlantıda bulut korumasının neden Microsoft Defender Virüsten Koruma](why-cloud-protection-should-be-on-mdav.md). 
@@ -41,7 +41,7 @@ Microsoft Defender Virüsten Koruma, Microsoft bulut hizmetleriyle sorunsuz çal
 
 Aşağıdaki blog gönderileri bulut korumanın nasıl çalıştığını göstermektedir:
 
-- [Yeni nesil uç nokta koruması için Microsoft Defender'ın temel noktası olan gelişmiş teknolojileri ile ilgili bilgi](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/)
+- [Yeni nesil korumanın temel Uç Nokta için Microsoft Defender teknolojilerle yenileri hakkında bilgi](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/)
 
 - [Microsoft Defender Virüsten Koruma kurumsalda en çok dağıtılan uygulama nedendir?](https://www.microsoft.com/security/blog/2018/03/22/why-windows-defender-antivirus-is-the-most-deployed-in-the-enterprise) 
 

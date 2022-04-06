@@ -1,7 +1,7 @@
 ---
-title: Mac'te Uç Nokta için Microsoft Defender'
-description: Mac'te yeni sürümün önceki sürümlerine Uç Nokta için Microsoft Defender hakkında bilgi edinin.
-keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mac, yükleme, macos, whatsnew
+title: Mac'te Uç Nokta için Microsoft Defender'deki yenilikler
+description: Mac'te önceki Uç Nokta için Microsoft Defender sürümlerindeki önemli değişiklikler hakkında bilgi edinin.
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mac, installation, macos, whatsnew
 ms.prod: m365-security
 ms.mktglfcycl: security
 ms.sitesec: library
@@ -15,22 +15,22 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: d8b2c7725354facb01f8b12af502aae19856afe8
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: d36d05a4abe36ffe63e53eb8e164e248755de0ec
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64500749"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64665920"
 ---
-# <a name="whats-new-in-microsoft-defender-for-endpoint-on-mac"></a>Mac'te Uç Nokta için Microsoft Defender'
+# <a name="whats-new-in-microsoft-defender-for-endpoint-on-mac"></a>Mac'te Uç Nokta için Microsoft Defender'deki yenilikler
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 ## <a name="1016169-20122022161690"></a>101.61.69 (20.122022.16169.0)
 
@@ -38,19 +38,19 @@ ms.locfileid: "64500749"
 
 ## <a name="1016091-20122021160910"></a>101.60.91 (20.122021.16091.0)
 
-- Bu sürüm, [PIE-2022-23278 için bir güvenlik güncelleştirmesi içerir](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
+- Bu sürüm [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/) için bir güvenlik güncelleştirmesi içerir
 
 ## <a name="1015950-20122021159500"></a>101.59.50 (20.122021.15950.0)
 
-- Bu sürüm macOS 12.3 için destek ekler. MacOS 12.3'den başlayarak, [Apple Python 2.7'yi kaldırmıştı](https://developer.apple.com/documentation/macos-release-notes/macos-12_3-release-notes). MacOS üzerinde önceden yüklenmiş hiçbir Python sürümü varsayılan olarak olmayacaktır. **EYLEM GEREKIYOR**: 
-  - Kullanıcıların cihazlarını macOS Monterey 12.3 (veya daha yeni) sürümüne güncelleştirmeden önce Mac için Uç Nokta için Microsoft Defender sürümünü 101.59.50 (veya daha yeni) sürümüne güncelleştirmeleri gerekir. Bu en düşük sürüm 101.59.50, macOS Monterey üzerinde Mac için Uç Nokta için Microsoft Defender Python ile ilgili sorunları ortadan kaldırmanın önkoşullarıdır.
-  - Uzak dağıtımlarda, var olan MDM kurulumların Mac için Uç Nokta için Microsoft Defender 101.59.50 (veya daha yeni) olarak güncelleştirilmiş olması gerekir. Mac için MDM'den daha eski bir Uç Nokta için Microsoft Defender macOS Monterey 12.3'e (veya daha yeni bir sürümü) itmek yükleme hatasına neden olur.
+- Bu sürüm macOS 12.3 için destek ekler. MacOS 12.3 sürümünden itibaren Apple, [Python 2.7'yi kaldırıyor](https://developer.apple.com/documentation/macos-release-notes/macos-12_3-release-notes). MacOS'ta varsayılan olarak önceden yüklenmiş python sürümü yoktur. **EYLEM GEREKLI**: 
+  - Kullanıcıların cihazlarını macOS Monterey 12.3(veya daha yeni) sürümüne güncelleştirmeden önce Mac için Uç Nokta için Microsoft Defender 101.59.50 (veya daha yeni) sürümüne güncelleştirmeleri gerekir. Bu en düşük sürüm 101.59.50, macOS Monterey'de Mac için Uç Nokta için Microsoft Defender ile ilgili Python ile ilgili sorunları ortadan kaldırmanın önkoşuludur.
+  - Uzak dağıtımlar için, mevcut MDM kurulumları Mac için Uç Nokta için Microsoft Defender sürüm 101.59.50 (veya daha yeni) olarak güncelleştirilmelidir. MDM aracılığıyla macOS Monterey 12.3'e (veya daha yeni bir sürüme) Mac için eski bir Uç Nokta için Microsoft Defender göndererek yükleme hatasına neden olur.
 
 ## <a name="1015910-20122012159100"></a>101.59.10 (20.122012.15910.0)
 
-- Komut satırı aracı artık karantinaya alınmış dosyaları, dosyanın başlangıçta algılandığından farklı bir konuma geri yüklemeyi destekler. Bu, aracılığıyla yapılabilir `mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`.
-- Zaman 3 üzerinden bağlanan cihazları işlemek için genişletilmiş cihaz denetimi
-- Geçersiz satıcı kimlikleri ve ürün kimlikleri içeren cihaz denetimi ilkelerinin işlenmesi geliştirildi. Bu sürümden önce, ilke bir veya birden çok geçersiz kimlik içeriyorsa, ilkenin tamamı yok sayılırdı. Bu sürümden başlayarak, ilkenin yalnızca geçersiz bölümleri yok sayılır. İlkeyle ilgili sorunlar ile ilgili sorunlar ortaya çıkar `mdatp device-control removable-media policy list`.
+- Komut satırı aracı artık karantinaya alınan dosyaların dosyanın ilk algılandığı konumdan farklı bir konuma geri yüklenmesini destekliyor. Bu işlem aracılığıyla `mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`yapılabilir.
+- Thunderbolt 3 üzerinden bağlanan cihazları işlemek için genişletilmiş cihaz denetimi
+- Geçersiz satıcı kimlikleri ve ürün kimlikleri içeren cihaz denetimi ilkelerinin işlenmesi geliştirildi. Bu sürümden önce, ilke bir veya daha fazla geçersiz kimlik içeriyorsa ilkenin tamamı yoksayılırdı. Bu sürümden başlayarak, ilkenin yalnızca geçersiz bölümleri yoksayılır. İlkeyle ilgili sorunlar aracılığıyla `mdatp device-control removable-media policy list`ortaya konur.
 - Hata düzeltmeleri
 
 ## <a name="1015662-20121122156620"></a>101.56.62 (20.121122.15662.0)
@@ -59,40 +59,40 @@ ms.locfileid: "64500749"
 
 ## <a name="1015635-20121121156350"></a>101.56.35 (20.121121.15635.0)
 
-- Uygulama", "Microsoft Defender ATP" olan "Microsoft Defender" olarak yeniden adlandırılmıştır. Son kullanıcılar aşağıdaki değişiklikleri gözlemler:
+- Uygulama "Microsoft Defender ATP" olarak "Microsoft Defender" olarak yeniden adlandırıldı. Son kullanıcılar aşağıdaki değişiklikleri gözlemler:
   - Uygulama yükleme yolu olarak değiştirildi `/Application/Microsoft Defender ATP.app` `/Applications/Microsoft Defender.app`.
-  - Kullanıcı deneyimi içinde, "Microsoft Defender ATP" tekrarları "Microsoft Defender" ile değiştirilmiştir
-- Mac için UÇ NOKTA IÇIN MICROSOFT DEFENDER ile dağıtılan ağ içerik filtresi nedeniyle bazı VPN uygulamalarının bağlanamama sorunu çözüldü
-- Belirli özelliklere sahip paketlerin yüklenmesine engel olan işletim sisteminde (OS) yapılan bir değişiklik nedeniyle, yükleme paketinin açılamadı olduğu macOS 12.2 beta 2'de bulunan bir sorun giderildi. Bu işletim sistemi değişikliğinin macOS 12.2'nin son sürümüne dahil olmadığını görünür ama gelecekteki bir macOS sürümünde yeniden aşınacak olması olasıdır. Bu nedenle tüm kuruluş yöneticilerinin, yönetim konsolunda yer alan Uç Nokta için Microsoft Defender paketini bu ürün sürümüne (veya daha yeni bir sürüme) yenilemelerini teşvik etmek için tüm kuruluş yöneticilerini cesaretlendirin.
-- Bazı M1 cihazlarda, ürünün geçersiz kötü amaçlı yazılımdan koruma tanımları ile takılıp kalmış ve çalışan bir tanım kümesine başarıyla güncelleştirilememe sorunu giderildi.
-- `mdatp health`çıkış, `full_disk_access_enabled` Mac için Office 365'in tüm bileşenlerine Tam Disk Erişimi'nin verili olup olmadığını belirlemek için kullanılmaktadır adlı ek Uç Nokta için Microsoft Defender genişletildi.
+  - Kullanıcı deneyiminde " Microsoft Defender ATP" oluşumları "Microsoft Defender" ile değiştirilmiştir
+- Mac için Uç Nokta için Microsoft Defender ile dağıtılan ağ içerik filtresi nedeniyle bazı VPN uygulamalarının bağlanamadığı bir sorun çözüldü
+- macOS 12.2 beta 2'de bulunan ve işletim sistemindeki (işletim sistemi) belirli özelliklere sahip paketlerin yüklenmesini engelleyen bir değişiklik nedeniyle yükleme paketinin açılamadığı bir sorun giderildi. Bu işletim sistemi değişikliği macOS 12.2'nin son sürümünde yer almamış gibi görünse de, gelecekteki bir macOS sürümünde yeniden kullanıma sunulacaktır. Bu nedenle, tüm kuruluş yöneticilerinin yönetim konsolundaki Uç Nokta için Microsoft Defender paketini bu ürün sürümüne (veya daha yeni bir sürüme) yenilemelerini öneririz.
+- Bazı M1 cihazlarında görülen ve ürünün geçersiz kötü amaçlı yazılımdan koruma tanımlarıyla takıldığı ve çalışan bir tanım kümesine başarıyla güncelleştirilemediği bir sorun giderildi.
+- `mdatp health`çıktısı, Mac için Uç Nokta için Microsoft Defender tüm bileşenlerine Tam Disk Erişimi verilip verilmediğini belirlemek için kullanılabilecek adlı `full_disk_access_enabled` ek bir öznitelikle genişletilmiştir.
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1015416-20121111154160"></a>101.54.16 (20.121111.15416.0)
 
 - macOS 10.14 (Mojave) artık desteklenmiyor
-- Ürün ayarı yönetici tarafından MDM aracılığıyla yönetildikten sonra, artık önceki değerine geri döner (son kullanıcı tarafından yerel olarak yapılandırılan değer veya bu tür bir yerel değer açık olarak sağ yüklenmezse, ürün tarafından kullanılan varsayılan değer). Bu değişiklikten önce, bir ayar yönetildikten sonra yönetilen değeri kalıcı olarak ürün tarafından kullanılmaya devam ediyordu.
+- Bir ürün ayarı MDM aracılığıyla yönetici tarafından yönetilmeyi durdurduktan sonra, yönetilmeden önce sahip olduğu değere geri döner (son kullanıcı tarafından yerel olarak yapılandırılan değer veya böyle bir yerel değer açıkça sağlanmazsa, ürün tarafından kullanılan varsayılan değer). Bu değişiklikten önce, bir ayar yönetilmeyi durdurduktan sonra yönetilen değeri kalıcı hale gelip ürün tarafından kullanılmaya devam etti.
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1014925-20121092149250"></a>101.49.25 (20.121092.14925.0)
 
-- isteğe bağlı taramalar sırasında arşivlerin taranıp taranmamasını kontrol etmek için komut satırı aracına yeni bir anahtar eklendi. Bu, aracılığıyla yalnarak yalnarak yalndırıldı `mdatp config scan-archives --value [enabled/disabled]`. Varsayılan olarak, bu ayar olarak ayarlanır `enabled`.
+- İsteğe bağlı taramalar sırasında arşivlerin taranıp taranmayacağını denetlemek için komut satırı aracına yeni bir anahtar eklendi. Bu, aracılığıyla `mdatp config scan-archives --value [enabled/disabled]`yapılandırılabilir. Bu, varsayılan olarak olarak `enabled`ayarlanır.
 - Hata düzeltmeleri
 
 ## <a name="1014727-20121082147270"></a>101.47.27 (20.121082.14727.0)
 
-- macOS Mojave ve macOS Catalina'da sistem donması nedeniyle oluşan donma sorunu için düzeltme
+- macOS Mojave ve macOS Catalina'da kapatma sırasında oluşan sistem donması için düzeltme
 
 ## <a name="1014384-20121082143840"></a>101.43.84 (20.121082.14384.0)
 
-- macOS 12 (Monterey) için aday derleme
+- macOS 12 için aday derleme (Monterey)
 - Hata düzeltmeleri
 
 ## <a name="1014110-20121072141100"></a>101.41.10 (20.121072.14110.0)
 
 - Komut satırı aracına yeni anahtarlar eklendi:
-  - Isteğe bağlı taramalar için paralellik derecesini kontrol altında bulundur. Bu, aracılığıyla yalnarak yalnarak yalndırıldı `mdatp config maximum-on-demand-scan-threads --value [number-between-1-and-64]`. Varsayılan olarak, paralellik derecesi `2` kullanılır.
-  - Güvenlik zekası güncelleştirmeleri etkinleştirildikten veya devre dışı bırakıldıktan sonra taramaları denetleme. Bu, aracılığıyla yalnarak yalnarak yalndırıldı `mdatp config scan-after-definition-update --value [enabled/disabled]`. Varsayılan olarak, bu ayar olarak ayarlanır `enabled`.
+  - İsteğe bağlı taramalar için paralellik derecesini denetleme. Bu, aracılığıyla `mdatp config maximum-on-demand-scan-threads --value [number-between-1-and-64]`yapılandırılabilir. Varsayılan olarak, bir paralellik `2` derecesi kullanılır.
+  - Güvenlik bilgileri güncelleştirmelerinin etkinleştirilip etkinleştirilmediğini veya devre dışı bırakılıp bırakılmayacağını denetleyin. Bu, aracılığıyla `mdatp config scan-after-definition-update --value [enabled/disabled]`yapılandırılabilir. Bu, varsayılan olarak olarak `enabled`ayarlanır.
 - Ürün günlüğü düzeyini değiştirmek için artık yükseltme gerekiyor
 - Performans iyileştirmeleri & hata düzeltmeleri
 
@@ -115,34 +115,34 @@ ms.locfileid: "64500749"
 
 ## <a name="1013420-20121051134200"></a>101.34.20 (20.121051.13420.0)
 
-- [macOS için cihaz denetimi](mac-device-control-overview.md) artık genel kullanılabilirlik durumuna geldi
-- macOS 11'de (Big Sur) durum menüsünden hızlı taramanın başlatılamama sorunu giderildi
+- [macOS için cihaz denetimi](mac-device-control-overview.md) artık genel kullanıma hazır
+- macOS 11'de (Big Sur) durum menüsünden hızlı taramanın başlatılamadığı bir sorun giderildi
 - Diğer hata düzeltmeleri
 
 ## <a name="1013269-20121042132690"></a>101.32.69 (20.121042.13269.0)
 
-- Birden fazla uygulama veya diğer uygulamalardan anahtarlıklara eşzamanlı Uç Nokta için Microsoft Defender anahtarlık bozulmalarına yol aç aça bir soruna ilişkin bir sorun giderildi.
+- Uç Nokta için Microsoft Defender ve diğer uygulamalardan anahtarlığa eşzamanlı erişimin anahtar zinciri bozulmasına yol açması sorunu giderildi.
 
 ## <a name="1012964-20121042129640"></a>101.29.64 (20.121042.12964.0)
 
-- Bu sürümden başlayarak, komut satırı istemcisi aracılığıyla tetiklenen isteğe bağlı virüsten koruma taramaları sırasında algılanan tehditler otomatik olarak düzeltilir. Kullanıcı arabirimi tarafından tetiklenen taramalar sırasında algılanan tehditlere yine el ile eylem gerekir.
-- `mdatp diagnostic real-time-protection-statistics` şimdi iki ek anahtarı desteklemelidir:
-  - `--sort`: çıktıyı taranan toplam dosya sayısına göre azalan düzende sıralar
-  - `--top N`: en yüksek N sonuçlarını görüntüler (yalnızca belirtilen sonuçlar `--sort` için işe yarar)
-- Performans iyileştirmeleri (özellikle DEYİCİ'nin ne zaman kullanılır) & düzeltmelerini içerir
+- Bu sürümden başlayarak, komut satırı istemcisi aracılığıyla tetiklenen isteğe bağlı virüsten koruma taramaları sırasında algılanan tehditler otomatik olarak düzeltilir. Kullanıcı arabirimi aracılığıyla tetiklenen taramalar sırasında algılanan tehditler yine de el ile eylem gerektirir.
+- `mdatp diagnostic real-time-protection-statistics` şimdi iki ek anahtarı destekler:
+  - `--sort`: Taranan toplam dosya sayısına göre azalan çıktıyı sıralar
+  - `--top N`: en iyi N sonuçlarını görüntüler (yalnızca belirtilirse `--sort` çalışır)
+- Performans iyileştirmeleri (özellikle YARN kullanıldığında) & hata düzeltmeleri
 
 ## <a name="1012750-20121022127500"></a>101.27.50 (20.121022.12750.0)
 
-- MacOS Catalina ve önceki sürümleri için Apple sertifikasının süre sonu için düzeltme. Bu düzeltme Tehdit & Güvenlik Açığı Yönetimi (TVM) işlevini geriler.
+- macOS Catalina ve önceki sürümlerde Apple sertifikası süre sonu için uyum sağlama düzeltmesi. Bu düzeltme, Tehdit & Güvenlik Açığı Yönetimi (TVM) işlevselliğini geri yükler.
 
 ## <a name="1012569-20121022125690"></a>101.25.69 (20.121022.12569.0)
 
-- Uç Nokta için Microsoft Defender macOS'ta bulunan müşteriler için önizleme, artık ABD Kamu müşterileri için önizleme olarak sunulmaktadır. Daha fazla bilgi için abd [Uç Nokta için Microsoft Defender için bkz.](gov.md)
-- Performans iyileştirmeleri (özel olarak XCode KodKodu uygulamasının kullanıldı olduğu durum için) ve & düzeltmeler.
+- macOS'taki Uç Nokta için Microsoft Defender artık ABD Kamu müşterileri için önizleme sürümünde kullanıma sunulmuştur. Daha fazla bilgi için bkz. [US Government müşterileri için Uç Nokta için Microsoft Defender](gov.md).
+- Performans iyileştirmeleri (özellikle XCode Simülatörü uygulamasının kullanıldığı durum için) hata düzeltmeleri &.
 
 ## <a name="1012364-20121021123640"></a>101.23.64 (20.121021.12364.0)
 
-- Son isteğe bağlı tarama hakkında bilgileri görüntülemek için komut satırı aracına yeni bir seçenek eklendi. Son isteğe bağlı tarama hakkında bilgi görüntülemek için `mdatp health --details antivirus`
+- Son isteğe bağlı tarama hakkındaki bilgileri görüntülemek için komut satırı aracına yeni bir seçenek eklendi. Son isteğe bağlı tarama hakkındaki bilgileri görüntülemek için `mdatp health --details antivirus`
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1012279-20121012122790"></a>101.22.79 (20.121012.12279.0)
@@ -156,9 +156,9 @@ ms.locfileid: "64500749"
 ## <a name="1011948-20120121119480"></a>101.19.48 (20.120121.11948.0)
 
 > [!NOTE]
-> Eski komut satırı aracının söz dizimi bu sürümde kullanım dışı bırakıldı. Yeni söz dizimi hakkında bilgi için bkz. [Kaynaklar](mac-resources.md#configuring-from-the-command-line).
+> Eski komut satırı aracının söz dizimi bu sürümle kullanım dışı bırakıldı. Yeni söz dizimi hakkında bilgi için bkz [. Kaynaklar](mac-resources.md#configuring-from-the-command-line).
 
-- Ağ uzantısını devre dışı bırakmak için yeni bir komut satırı anahtarı eklendi: `mdatp system-extension network-filter disable`. Bu komut, Mac'te dosyalarla ilgili ağ sorunlarını gidermek Uç Nokta için Microsoft Defender olabilir
+- Ağ uzantısını devre dışı bırakmak için yeni bir komut satırı anahtarı eklendi: `mdatp system-extension network-filter disable`. Bu komut, Mac'te Uç Nokta için Microsoft Defender ile ilgili olabilecek ağ sorunlarını gidermek için yararlı olabilir
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1011921-20120101119210"></a>101.19.21 (20.120101.11921.0)
@@ -167,14 +167,14 @@ ms.locfileid: "64500749"
 
 ## <a name="1011526-20120102115260"></a>101.15.26 (20.120102.11526.0)
 
-- macOS 11 Big Sur'da çalışan aracının güvenilirliği geliştirildi
-- Özel taramalar () sırasında AV dışlamalarını`--ignore-exclusions` yoksaymak için yeni bir komut satırı anahtarı (`mdatp scan custom`) eklendi
+- macOS 11 Big Sur'da çalışırken aracının güvenilirliği geliştirildi
+- Özel taramalar sırasında AV dışlamalarını yoksaymak için yeni bir komut satırı anahtarı`--ignore-exclusions` () eklendi (`mdatp scan custom`)
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1011375-20120101113750"></a>101.13.75 (20.120101.11375.0)
 
-- Bir macOS 11 Uç Nokta için Microsoft Defender (Big Sur) hatası tetiklendiğinde ve çekirdekte paniğe neden olan koşullar kaldırıldı
-- Mac 11'de (Big Sur) çalıştırılan Endpoint Security sistem uzantısında bellek sızıntısı düzeltildi
+- Uç Nokta için Microsoft Defender çekirdek paniğine dönüşen bir macOS 11 (Big Sur) hatasını tetiklediğinde koşullar kaldırıldı
+- mac 11 (Big Sur) üzerinde çalışırken Endpoint Security sistem uzantısındaki bellek sızıntısı düzeltildi
 - Hata düzeltmeleri
 
 ## <a name="1011072"></a>101.10.72
@@ -183,57 +183,57 @@ ms.locfileid: "64500749"
 
 ## <a name="1010961"></a>101.09.61
 
-- Geri bildirim gönderme seçeneğini devre dışı [bırakmak için yeni bir yönetilen tercih eklendi](mac-preferences.md#show--hide-option-to-send-feedback)
-- Durum menüsü simgesi artık ürün ayarları yönetilsinken iyi durumda olduğunu gösteriyor. Daha önce, ürün ayarları yönetici tarafından yönetilse bile durum menüsü simgesi bir uyarı veya hata durumu görüntüleniyor.
+- [Geri bildirim gönderme seçeneğini devre dışı bırakmak](mac-preferences.md#show--hide-option-to-send-feedback) için yeni bir yönetilen tercih eklendi
+- Durum menüsü simgesi artık ürün ayarları yönetildiğinde iyi durumda bir durum gösteriyor. Daha önce, ürün ayarları yönetici tarafından yönetilse bile durum menüsü simgesi bir uyarı veya hata durumu görüntülüyordu
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1010950"></a>101.09.50
 
-- Bu ürün sürümü macOS Big Sur 11 beta 9 üzerinde doğrulandı
+- Bu ürün sürümü macOS Big Sur 11 beta 9'da doğrulandı
 
-- Komut satırı aracının yeni `mdatp` söz dizimi artık varsayılan araçtır. Yeni söz dizimi hakkında daha fazla bilgi için bkz. [macOS'ta Uç Nokta için Microsoft Defender kaynakları](mac-resources.md#configuring-from-the-command-line)
+- Komut satırı aracının `mdatp` yeni söz dizimi artık varsayılan söz dizimidir. Yeni söz dizimi hakkında daha fazla bilgi için bkz[. macOS'ta Uç Nokta için Microsoft Defender kaynakları](mac-resources.md#configuring-from-the-command-line)
 
   > [!NOTE]
-  > Eski komut satırı aracının söz dizimi **1 Ocak 2021'de üründen kaldırılacaktır**.
+  > Eski komut satırı aracının söz dizimi **1 Ocak 2021'de** üründen kaldırılacaktır.
 
-- Tanılama günlüklerinin `mdatp diagnostic create` farklı bir dizine kaydedilmiş olarak tutulmasını sağlayan yeni bir parametreyle (`--path [directory]`) genişletilmiş
+- Tanılama günlüklerinin farklı bir dizine kaydedilmesini sağlayan yeni bir parametre (`--path [directory]`) ile genişletilmiş `mdatp diagnostic create`
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1010949"></a>101.09.49
 
-- IT yöneticisi tarafından yönetilen dışlamaları ve yerel kullanıcı tarafından tanımlanan dışlamaları ayırt etmek için kullanıcı arabirimi geliştirmeleri
-- Isteğe bağlı taramalar sırasında geliştirilmiş CPU kullanımı
+- BT yöneticisi tarafından yönetilen dışlamaları ve yerel kullanıcı tarafından tanımlanan dışlamaları ayırt etmek için kullanıcı arabirimi geliştirmeleri
+- İsteğe bağlı taramalar sırasında geliştirilmiş CPU kullanımı
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1010723"></a>101.07.23
 
-- Pasif modunun durumunu denetleme çıkışına `mdatp --health` ve pasif grup kimliğini denetleme çıkışına yeni EDR eklendi
+- Pasif modun durumunu ve EDR grup kimliğini denetlemek için çıkışına `mdatp --health` yeni alanlar eklendi
 
   > [!NOTE]
-  > `mdatp --health` gelecek bir ürün `mdatp health` güncelleştirmesi ile değiştireceğiz.
+  > `mdatp --health` , gelecekteki bir ürün güncelleştirmesinde ile `mdatp health` değiştirilecektir.
 
-- Kullanıcı arabiriminde otomatik örnek gönderimin yönetiliyor olarak işaretilma hatası düzeltildi
-- Virüsten koruma tarama geçmişinde öğelerin bekletmeyi denetlemek için yeni ayarlar eklendi. Artık tarama [geçmişinde öğeleri tutmak için gün sayısını ve tarama geçmişinde](mac-preferences.md#antivirus-scan-history-retention-in-days) en fazla [öğe sayısını belirtebilirsiniz](mac-preferences.md#maximum-number-of-items-in-the-antivirus-scan-history)
+- Otomatik örnek gönderiminin kullanıcı arabiriminde yönetilen olarak işaretlenmediği bir hata düzeltildi
+- Virüsten koruma tarama geçmişindeki öğelerin saklamasını denetlemek için yeni ayarlar eklendi. Artık [tarama geçmişindeki öğelerin tutulacak gün sayısını belirtebilir ve tarama geçmişindeki](mac-preferences.md#antivirus-scan-history-retention-in-days) [en fazla öğe sayısını belirtebilirsiniz](mac-preferences.md#maximum-number-of-items-in-the-antivirus-scan-history)
 - Hata düzeltmeleri
 
 ## <a name="1010663"></a>101.06.63
 
-- Sürümde ortaya konu olan bir performans gerilemesinde ele alındı `101.05.17`. Regresyon, çekirdekte SMB paylaşımlara erişilirken bazı müşterilerin gözlemlemektedir olduğu paniğe neden olan düzeltmeyi ortadan kaldırmaya başlandı. Bu kod değişikliğini geri başlattık ve çekirdek paniğini ortadan kaldırmanın alternatif yollarını araştırıyoruz.
+- sürümünde `101.05.17`ortaya çıkan performans regresyonu giderildi. Regresyon, bazı müşterilerin SMB paylaşımlarına erişirken gözlemlediği çekirdek paniğinin ortadan kaldırılmasına yönelik düzeltme ile sunulmuştur. Bu kod değişikliğini geri aldık ve çekirdek paniğini ortadan kaldırmak için alternatif yollar araştırıyoruz.
 
 ## <a name="1010517"></a>101.05.17
 
 > [!IMPORTANT]
-> Komut satırı aracı için yeni ve gelişmiş bir söz dizimi `mdatp` üzerinde çalışıyoruz. Yeni söz dizimi şu anda Insider Hızlı ve Insider Yavaş güncelleştirme kanallarında varsayılan ayardır. Bu yeni söz dizimi ile kendinizi daha soluk hale düzenlemeyi teşvik etmek için çok çalışmanız gerekiyor.
+> Komut satırı aracı için `mdatp` yeni ve gelişmiş bir söz dizimi üzerinde çalışıyoruz. Yeni söz dizimi şu anda Insider Hızlı ve Insider Yavaş güncelleştirme kanallarında varsayılandır. Bu yeni söz dizimi ile kendinizi özetlemenizi öneririz.
 >
-> Yeni söz dizimi ile paralel olarak eski söz dizimini desteklemeye devam edeceğiz ve önümüzdeki aylarda eski söz dizimi için kullanımdan kullanım planıyla ilgili daha fazla iletişim sağlanacak.
+> Eski söz dizimini yeni söz dizimiyle paralel olarak desteklemeye devam edeceğiz ve önümüzdeki aylarda eski söz dizimi için kullanımdan kaldırma planıyla ilgili daha fazla iletişim sağlayacağız.
 
-- SMB dosya paylaşımlara erişirken bazı durumlarda çekirdek paniğine neden olan bir soruna değinildi
+- SMB dosya paylaşımlarına erişilirken oluşan çekirdek paniği giderildi
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1010516"></a>101.05.16
 
-- Taranan dosyaların sayısını önemli ölçüde azaltmak için hızlı tarama mantığına yapılan iyileştirmeler
-- Komut [satırı aracı için](mac-resources.md#how-to-enable-autocompletion) otomatik tamamlama desteği eklendi
+- Taranan dosyaların sayısını önemli ölçüde azaltmak için hızlı tarama mantığını geliştirmeler
+- Komut satırı aracı için [otomatik tamamlama desteği](mac-resources.md#how-to-enable-autocompletion) eklendi
 - Hata düzeltmeleri
 
 ## <a name="1010312"></a>101.03.12
@@ -248,15 +248,15 @@ ms.locfileid: "64500749"
 
 ## <a name="1010031"></a>101.00.31
 
-- Yeni kullanıcılar [için geliştirilmiş ürün Intune deneyimi](/mem/intune/apps/apps-advanced-threat-protection-macos)
-- [Virüsten koruma dışlamaları artık joker karakterleri destekliyor](mac-exclusions.md#supported-exclusion-types)
-- macOS bağlam menüsünden virüsten koruma taramalarını tetikleme özelliği eklendi. Artık Finder'daki bir dosyaya veya klasöre sağ tık tıklar ve Dosya ile **tara'yı Uç Nokta için Microsoft Defender**
-- Yerinde ürün yüklemeleri artık yükleyici tarafından açıkça izin verilmedi. Eski sürümü yüklemeden önce mevcut sürümü kaldırıp cihazınızı yeniden yapılandırmanız gerekir.
-- Diğer performans iyileştirmeleri & düzeltmeleri
+- [Intune kullanıcıları için geliştirilmiş ürün ekleme deneyimi](/mem/intune/apps/apps-advanced-threat-protection-macos)
+- Virüsten [koruma dışlamaları artık joker karakterleri destekliyor](mac-exclusions.md#supported-exclusion-types)
+- macOS bağlam menüsünden virüsten koruma taramalarını tetikleme özelliği eklendi. Artık Bulucu'da bir dosyaya veya klasöre sağ tıklayabilir ve **Uç Nokta için Microsoft Defender ile tara'yı** seçebilirsiniz
+- Yerinde ürün düşürme işlemlerine artık yükleyici tarafından açıkça izin verilmiyor. Eski sürüme düşürmeniz gerekiyorsa, önce mevcut sürümü kaldırın ve cihazınızı yeniden yapılandırın
+- Hata düzeltmeleri & diğer performans iyileştirmeleri
 
 ## <a name="1009027"></a>100.90.27
 
-- Artık [macOS'ta sistem genelindeki](mac-updates.md#set-the-channel-name) güncelleştirme Uç Nokta için Microsoft Defender farklı bir güncelleştirme kanalı için güncelleştirme kanalını
+- Artık macOS'ta Uç Nokta için Microsoft Defender için sistem genelindeki [güncelleştirme kanalından farklı bir güncelleştirme kanalı ayarlayabilirsiniz](mac-updates.md#set-the-channel-name)
 - Yeni ürün simgesi
 - Diğer kullanıcı deneyimi geliştirmeleri
 - Hata düzeltmeleri
@@ -264,28 +264,28 @@ ms.locfileid: "64500749"
 ## <a name="1008692"></a>100.86.92
 
 - Time Machine ile uyumlulukla ilgili iyileştirmeler
-- Kaldırma işlemi sırasında ürünün bazen altındaki tüm dosyaları temizlemesi sırasında ürünün temizlenmesine `/Library/Application Support/Microsoft/Defender` neden olan bir soruna çözüm
-- Microsoft ürünleri Microsoft AutoUpdate aracılığıyla güncelleştirildiğinde ürünün CPU kullanımını azaltıldı
-- Diğer performans iyileştirmeleri & düzeltmeleri
+- Ürünün bazen kaldırma sırasında altındaki tüm dosyaları `/Library/Application Support/Microsoft/Defender` temizlememesi sorunu giderildi
+- Microsoft ürünleri Microsoft AutoUpdate aracılığıyla güncelleştirildiğinde ürünün CPU kullanımı azaltıldı
+- Hata düzeltmeleri & diğer performans iyileştirmeleri
 
 ## <a name="1008691"></a>100.86.91
 
 > [!CAUTION]
-> macOS cihazlarınız için en eksiksiz korumayı sağlamak ve Apple ile hizalama yapmak, Apple'ın macOS yerel güvenlik güncelleştirmelerinin [geçerli - 2] daha eski OS sürümlerine teslimini durdurmak için, Mac için MDATP dağıtımı ve güncelleştirmeleri macOS Sierra [10.12] üzerinde artık destek sağlanmamayacak. Mac için MDATP güncelleştirmeleri ve iyileştirmeleri Catalina [10.15], Mojave [10.14] ve High Sierra [10.13] sürümlerini çalıştıran cihazlara teslim edilecektir.
+> macOS cihazlarınız için en eksiksiz korumayı sağlamak ve Apple'ın macOS yerel güvenlik güncelleştirmelerinin [current - 2] sürümünden eski işletim sistemi sürümlerine teslimini durdurmasıyla uyumlu olması için Mac için MDATP dağıtımı ve güncelleştirmeleri artık macOS Sierra'da desteklenmeyecektir [10.12]. Mac için MDATP güncelleştirmeleri ve geliştirmeleri Catalina [10.15], Mojave [10.14] ve High Sierra [10.13] sürümlerini çalıştıran cihazlara sunulacaktır.
 >
-> Sierra [10.12] cihazlarınıza zaten Mac için MDATP dağıtılmışsa, koruma riskini ortadan kaldırmak için lütfen en son macOS sürümüne yükseltin.
+> Sierra [10.12] cihazlarınıza zaten Mac için MDATP dağıttıysanız koruma kaybı riskini ortadan kaldırmak için lütfen en son macOS sürümüne yükseltin.
 
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1008373"></a>100.83.73
 
-- Dışlamaların yönetimi, [tehdit türü](mac-preferences.md#exclusion-merge-policy) ayarlarının yönetimi ve izin verilmeyen tehdit eylemleriyle ilgili [olarak, IT](mac-preferences.md#threat-type-settings-merge-policy) [yöneticilerine daha fazla denetim eklendi](mac-preferences.md#disallowed-threat-actions)
-- Cihazda Tam Disk Erişimi etkinleştirilmemişse durum menüsünde artık bir uyarı görüntülenir
+- BT yöneticileri için [dışlama](mac-preferences.md#exclusion-merge-policy) yönetimi, [tehdit türü ayarlarının yönetimi](mac-preferences.md#threat-type-settings-merge-policy) ve [izin verilmeyen tehdit eylemleri](mac-preferences.md#disallowed-threat-actions) hakkında daha fazla denetim eklendi
+- Cihazda Tam Disk Erişimi etkinleştirilmediğinde, artık durum menüsünde bir uyarı görüntülenir
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1008260"></a>100.82.60
 
-- Ürünün bir tanım güncelleştirmesini takip edene kadar başlatılamama sorunu giderildi.
+- Ürünün bir tanım güncelleştirmesini takip etmeye başlayamaması sorunu giderildi.
 
 ## <a name="1008042"></a>100.80.42
 
@@ -293,14 +293,14 @@ ms.locfileid: "64500749"
 
 ## <a name="1007942"></a>100.79.42
 
-- Mac'te Uç Nokta için Microsoft Defender time machine'i engellemeye neden olan sorun düzeltildi
-- Arka uç hizmetiyle bağlantının test etmek için komut satırı yardımcı programına yeni bir anahtar eklendi
+- Mac'te Uç Nokta için Microsoft Defender zaman zaman Time Machine'i engellemesi sorunu düzeltildi
+- Arka uç hizmetiyle bağlantıyı test etmek için komut satırı yardımcı programı için yeni bir anahtar eklendi
 
   ```bash
   mdatp connectivity test
   ```
 
-- Kullanıcı arabiriminde tüm tehdit geçmişini görüntüleme olanağı eklendi (Koruma geçmişi **görünümünden erişilebilir** )
+- Kullanıcı arabiriminde tehdit geçmişinin tamamını görüntüleme özelliği eklendi ( **Koruma geçmişi** görünümünden erişilebilir)
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1007215"></a>100.72.15
@@ -309,23 +309,23 @@ ms.locfileid: "64500749"
 
 ## <a name="1007099"></a>100.70.99
 
-- Gerçek zamanlı koruma etkinleştirildiğinde bazı kullanıcıların macOS Catalina'ya yükseltmesini etkileyen bir soruna değinildi. Bu düzensiz soruna, Catalina Uç Nokta için Microsoft Defender paketi içindeki dosyaları tehditlere karşı tararken kilitleme hatası neden oldu ve yükseltme sırasında hatalara yol açtı.
+- Gerçek zamanlı koruma etkinleştirildiğinde bazı kullanıcıların macOS Catalina'ya yükseltme yeteneğini etkileyen bir sorun giderildi. Bu düzensiz sorun, catalina yükseltme paketindeki dosyaları tehditlere karşı tararken Uç Nokta için Microsoft Defender kilitlemeden kaynaklandı ve bu da yükseltme sırasında hatalara yol açtı.
 
 ## <a name="1006899"></a>100.68.99
 
-- Virüsten koruma işlevini pasif modunda çalıştıracak şekilde yapılandırma [özelliği eklendi](mac-preferences.md#enforcement-level-for-antivirus-engine)
+- Virüsten koruma işlevini [pasif modda](mac-preferences.md#enforcement-level-for-antivirus-engine) çalışacak şekilde yapılandırma özelliği eklendi
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1006528"></a>100.65.28
 
-- macOS Catalina için destek eklendi
+- macOS Catalina desteği eklendi
 
   > [!CAUTION]
-  > macOS 10.15 (Catalina) yeni güvenlik ve gizlilik iyileştirmeleri içerir. Bu sürümden başarak, uygulamalar varsayılan olarak açık izin alınmadan diskte bazı konumlara (Belgeler, İndirmeler, Masaüstü, vb.) erişemez. Bu iznin olmaması Uç Nokta için Microsoft Defender, cihazınızı tam olarak koruyamaz.
+  > macOS 10.15 (Catalina), yeni güvenlik ve gizlilik geliştirmeleri içerir. Bu sürümden başlayarak, uygulamalar varsayılan olarak açık onay olmadan disk üzerindeki belirli konumlara (Belgeler, İndirmeler, Masaüstü vb.) erişemez. Bu onay olmadığında, Uç Nokta için Microsoft Defender cihazınızı tam olarak koruyamaz.
   >
-  > Bu izni vermek için kullanılan mekanizma, bu izni nasıl dağıttılmışa Uç Nokta için Microsoft Defender:
+  > Bu onayı verme mekanizması, Uç Nokta için Microsoft Defender nasıl dağıtdığınıza bağlıdır:
   >
-  > - El ile dağıtımlar için, El ile dağıtım konusunda yer alan [güncelleştirilmiş yönergelere](mac-install-manually.md#how-to-allow-full-disk-access) bakın.
-  > - Yönetilen dağıtımlar için[, JAMF](mac-install-with-jamf.md) tabanlı dağıtım ve dağıtım Microsoft Intune [ilgili güncelleştirilmiş yönergelere](mac-install-with-intune.md#create-system-configuration-profiles) bakın.
+  > - El ile dağıtımlar için [El ile dağıtım](mac-install-manually.md#how-to-allow-full-disk-access) konusunda güncelleştirilmiş yönergelere bakın.
+  > - Yönetilen dağıtımlar için [JAMF tabanlı dağıtım](mac-install-with-jamf.md) ve [Microsoft Intune tabanlı dağıtım](mac-install-with-intune.md#create-system-configuration-profiles) konularındaki güncelleştirilmiş yönergelere bakın.
 
 - Performans iyileştirmeleri & hata düzeltmeleri

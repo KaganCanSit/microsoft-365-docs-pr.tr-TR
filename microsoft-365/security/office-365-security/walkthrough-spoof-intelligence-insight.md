@@ -21,19 +21,19 @@ ms.custom:
 ms.technology: mdo
 ms.prod: m365-security
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 62be716a9663820f90d5c4f125f4634b3b399547
-ms.sourcegitcommit: bcea69bacd1b48827bd60af2880909593a1609a4
+ms.openlocfilehash: f433c93d9bba13822cf84ff8740f86d95cf2befe
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "63010784"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471351"
 ---
 # <a name="manage-spoofed-senders-using-the-spoof-intelligence-policy-and-spoof-intelligence-insight-in-eop"></a>EOP'de akıllı ifade ilkesi ve kimliği doğruya gizli bilgi içgörü kullanarak kimliği doğru bilgiye sahip olan gönderenleri yönetme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Geçerli olduğu yer:**
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!IMPORTANT]
@@ -67,7 +67,7 @@ Microsoft 365 Defender portalında ya da Microsoft 365 Exchange Online'ta posta 
 - Kimlik avı önleme ilkelerde kimlik sahte e-postası ayarlarını etkinleştirebilirsiniz, devre dışı bırakır ve yapılandırabilirsiniz. Aboneliğinize bağlı yönergeler için aşağıdaki konulardan birini izleyin:
 
   - [EOP'de kimlik avı önleme ilkelerini yapılandırma](configure-anti-phishing-policies-eop.md).
-  - [Kimlik avıyla mücadele ilkelerini Microsoft Defender'da kimlik Office 365](configure-mdo-anti-phishing-policies.md).
+  - [E-postada kimlik avı önleme ilkelerini Office 365 için Microsoft Defender](configure-mdo-anti-phishing-policies.md).
 
 - Kimlik sahtesi koruması için önerilen ayarlarımız için bkz. [EOP kimlik avı önleme ilkesi ayarları](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings).
 
@@ -87,7 +87,7 @@ Kimliği doğruyla engellenen gönderenlere izin vermenin ve engellemenin iki yo
 
 2. **İstenmeyen posta önleme ilkeleri** sayfasında, **adı tıklatarak Kimlik bilgisi** ilkesi'ne tıklayın.
 
-   ![Akıllı ifade ilkeyi seçin.](../../media/anti-spam-settings-spoof-intelligence-policy.png)
+   :::image type="content" source="../../media/anti-spam-settings-spoof-intelligence-policy.png" alt-text="Akıllı ifade ilkesi seçme seçeneği" lightbox="../../media/anti-spam-settings-spoof-intelligence-policy.png":::
 
 3. Görüntülenen **Bilgi Yok ayarı ilkesi** açılırken, aşağıdaki seçimlerden birini yapın:
    - **Gözden geçirmem olan gönderenleri göster**
@@ -101,7 +101,7 @@ Kimliği doğruyla engellenen gönderenlere izin vermenin ve engellemenin iki yo
    - **Evet**: Kimliği doğru iletinin gönderene izin verme.
    - **Hayır**: İletiyi yanıltılı olarak işaretleme. Eylem, varsayılan kimlik avı önleme ilkesi veya özel kimlik avı önleme ilkeleri tarafından denetlenmektedir. Daha fazla bilgi için bkz [. Kimlik avı önleme ilkelerde kimlik avı ayarları](set-up-anti-phishing-policies.md#spoof-settings).
 
-   ![Göndericilerin kimliği doğru çıktısı alma ve gönderene ifadeyle birlikte ifadeyi gösterme izni olup olmadığını gösteren ekran görüntüsü.](../../media/spoof-allow-block-flyout.png)
+   :::image type="content" source="../../media/spoof-allow-block-flyout.png" alt-text="Gizli gönderenler uç uçarak çıkış ve gönderene ifadeyle birlikte bilgi ve ifadeyi ifadeyle birlikte gönderip alma izni verilmemektedir" lightbox="../../media/spoof-allow-block-flyout.png":::
 
    Gördüğünüz sütunlar ve değerler aşağıdaki listede açıklanmıştır:
 
@@ -196,7 +196,7 @@ Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-PhishFilterPolic
 
 3. Panoya ilişkin içgörü, aşağıdaki gibi bilgileri gösterir:
 
-   ![Akıllı bilgi bilgisinde bir bilgi almama ekran görüntüsü.](../../media/28aeabac-c1a1-4d16-9fbe-14996f742a9a.png)
+   :::image type="content" source="../../media/28aeabac-c1a1-4d16-9fbe-14996f742a9a.png" alt-text="Bilgi ifadeleri ile ilgili bilgi" lightbox="../../media/28aeabac-c1a1-4d16-9fbe-14996f742a9a.png":::
 
    Bu içgörüde iki mod vardır:
 
@@ -232,7 +232,7 @@ Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-PhishFilterPolic
 
    Buradan, İzin verilenler ve gönderen izin verilenler listesinden etki alanı/gönderme altyapısı çiftini ekleme **veya kaldırmayı** da seçebilirsiniz. Geçiş düğmeyi buna uygun olarak ayarlayın.
 
-   ![Spoof Intelligence içgörü ayrıntıları bölmesinde bir etki alanının ekran görüntüsü.](../../media/03ad3e6e-2010-4e8e-b92e-accc8bbebb79.png)
+   :::image type="content" source="../../media/03ad3e6e-2010-4e8e-b92e-accc8bbebb79.png" alt-text="Spoof Intelligence içgörü ayrıntıları bölmesinde bir etki alanı" lightbox="../../media/03ad3e6e-2010-4e8e-b92e-accc8bbebb79.png":::
 
 ## <a name="how-do-you-know-these-procedures-worked"></a>Bu yordamların çalıştığını nasıl biliyorsunuz?
 

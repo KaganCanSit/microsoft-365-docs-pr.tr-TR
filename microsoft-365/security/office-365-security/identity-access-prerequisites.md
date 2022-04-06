@@ -1,6 +1,6 @@
 ---
 title: Kimlik ve cihaz erişim ilkelerinin uygulanması için önkoşullar çalışması - Microsoft 365 erişimi için | Microsoft Docs
-description: Bu makalede, Sıfır Güven kimliği ve cihaz erişimi ilkeleri ile yapılandırmalarını kullanmak için karşılamanız gereken önkoşullar açıklanmıştır.
+description: Bu makalede, kimlik ve cihaz erişim ilkelerini ve yapılandırmalarını kullanmak Sıfır Güven için karşılamanız gereken önkoşullar açıklanmıştır.
 ms.author: dansimp
 author: dansimp
 manager: dansimp
@@ -19,20 +19,20 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 445cb497abfaa0e7e4322268a761aafbaa0e31d6
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 8123b3602569ec1effcbf79cb12d242ab19d960e
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680918"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472363"
 ---
-# <a name="prerequisite-work-for-implementing-zero-trust-identity-and-device-access-policies"></a>Sıfır Güven kimliği ve cihaz erişim ilkelerinin uygulanması için önkoşul çalışma
+# <a name="prerequisite-work-for-implementing-zero-trust-identity-and-device-access-policies"></a>Kimlik ve cihaz erişimi Sıfır Güven için önkoşul çalışması
 
-Bu makalede yöneticilerin önerilen Sıfır Güven kimliği ve cihaz erişimi ilkelerini kullanmak ve Koşullu Erişim'i kullanmak için karşılamaları gereken önkoşullar açıklanmıştır. Ayrıca, en iyi çoklu oturum açma (SSO) deneyimi için istemci platformlarını yapılandırmak için önerilen varsayılanlar da ele almaktadır.
+Bu makalede, yöneticilerin önerilen kimlik ve cihaz erişimi Sıfır Güven ve Koşullu Erişim'i kullanmak için karşılamaları gereken önkoşullar açıklanmıştır. Ayrıca, en iyi çoklu oturum açma (SSO) deneyimi için istemci platformlarını yapılandırmak için önerilen varsayılanlar da ele almaktadır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Önerilen Sıfır Güven kimliği ve cihaz erişimi ilkelerini kullanmadan önce, önkoşulları karşılaması gerekir. Gereksinimler, listelenen çeşitli kimlik doğrulama modellerinde farklıdır:
+Önerilen kullanıcı Sıfır Güven ve cihaz erişimi ilkelerini kullanmadan önce, önkoşulları karşılaması gerekir. Gereksinimler, listelenen çeşitli kimlik doğrulama modellerinde farklıdır:
 
 - Yalnızca bulut
 - Karma parola eşitlemesi (PHS) kimlik doğrulamasıyla karma
@@ -61,19 +61,19 @@ Bu bölümde, kullanıcılarınıza en iyi SSO deneyimini ve Koşullu Erişim i�
 
 ### <a name="windows-devices"></a>Windows cihazları
 
-Azure hem Windows hem de Azure AD Windows 10 en rahat SSO deneyimini sağlamak üzere tasarlayali olduğu için Azure'un 11 ya da Windows 10 sürümü (sürüm 2004 veya sonrası) sürümünü öneririz. İş veya okul tarafından verilen cihazların Azure AD'ye doğrudan katılacağı şekilde ya da kuruluşun şirket içi AD etki alanı katılmasını kullanıyorsa, bu cihazların otomatik olarak yapılandırılması ve [Azure AD'ye](/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup) sessiz kaydolması gerekir.
+Azure hem Windows 11 hem Windows 10 Azure AD için mümkün olan en rahat SSO deneyimini sağlamak üzere tasarlayali olduğu için, Azure'a veya Windows 10 sürümüne (sürüm 2004 veya sonrası) öneririz. İş veya okul tarafından verilen cihazların Azure AD'ye doğrudan katılacağı şekilde ya da kuruluşun şirket içi AD etki alanı katılmasını kullanıyorsa, bu cihazların otomatik olarak yapılandırılması ve [Azure AD'ye](/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup) sessiz kaydolması gerekir.
 
-BYOD cihaz Windows, kullanıcılar İş veya **okul hesabı ekle'yi kullanabilir**. Windows 11 veya Windows 10 cihazlarında Google Chrome tarayıcı kullanıcılarının, kullanıcılarının aynı sorunsuz oturum açma deneyimini elde etmek için bir [](https://chrome.google.com/webstore/detail/windows-10-accounts/ppnbnpeolgkicgegkbkbjmhlideopiji?utm_source=chrome-app-launcher-info-dialog) uzantı yüklemeleri Microsoft Edge unutmayın. Ayrıca, kurumda etki alanına katılmış Windows 8 veya 8.1 cihazları varsa, microsoft çalışma alanına katılmayan bilgisayarlar için Microsoft workplace Windows 10 yükleyebilirsiniz. [Cihazları Azure AD'ye kaydetmek](https://www.microsoft.com/download/details.aspx?id=53554) için paketi indirin.
+BYOD cihaz Windows, kullanıcılar İş veya **okul hesabı ekle'yi kullanabilir**. Windows 11 veya Windows 10 cihazlarında Google Chrome tarayıcısını kullananların, kullanıcılarla aynı sorunsuz oturum açma deneyimini elde etmek [](https://chrome.google.com/webstore/detail/windows-10-accounts/ppnbnpeolgkicgegkbkbjmhlideopiji?utm_source=chrome-app-launcher-info-dialog) için bir uzantı yüklemeleri Microsoft Edge unutmayın. Ayrıca, kurumda etki alanına katılmış Windows 8 veya 8.1 cihazları varsa, microsoft çalışma alanına katılmayan bilgisayarlar için Microsoft workplace Windows 10 yükleyebilirsiniz. [Cihazları Azure AD'ye kaydetmek](https://www.microsoft.com/download/details.aspx?id=53554) için paketi indirin.
 
 ### <a name="ios-devices"></a>iOS cihazları
 
-Koşullu Erişim veya [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) MFA ilkelerini dağıtmadan önce Microsoft Authenticator uygulaması kullanıcı cihazlarına yüklemenizi öneririz. En azından, kullanıcıların cihazlarını iş veya okul hesabı ekleyerek Azure AD'ye kaydetmeleri istenmiş veya Intune şirket portalı uygulamasını yükerek cihazı yönetime kaydetmeleri istenmiş olduğunda uygulamanın yüklenmiş olması gerekir. Bu, yapılandırılmış Koşullu Erişim ilkesine bağlıdır.
+Koşullu Erişim veya [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) MFA ilkelerini dağıtmadan önce Microsoft Authenticator uygulaması kullanıcı cihazlarına yüklemenizi öneririz. En azından, kullanıcıların cihazlarını iş veya okul hesabı ekleyerek Azure AD'ye kaydetmeleri istenmiş veya cihazı yönetime kaydetmek için Intune şirket portalı uygulamasını yüklemiş olması istenmiş olduğunda uygulamanın yüklenmiş olması gerekir. Bu, yapılandırılmış Koşullu Erişim ilkesine bağlıdır.
 
 ### <a name="android-devices"></a>Android cihazları
 
-Koşullu Erişim ilkeleri [dağıtıldıktan Intune Şirket Portalı bazı](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal&hl=en) kimlik doğrulama [girişimlerinde gerektiğinde](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) kullanıcıların Intune Şirket Portalı'i ve Microsoft Authenticator uygulamasını yüklemelerini öneririz. Uygulama yüklemesi sonrasında, kullanıcıların Azure AD'ye kaydolmaları veya cihazlarını Intune'a kaydetmeleri istenebilirsiniz. Bu, yapılandırılmış Koşullu Erişim ilkesine bağlıdır.
+Koşullu Erişim ilkeleri [dağıtıldıktan Intune Şirket Portalı bazı](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal&hl=en) kimlik doğrulama [girişimlerinde gerektiğinde](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) kullanıcıların Intune Şirket Portalı'i ve Microsoft Authenticator uygulamasını yüklemelerini öneririz. Uygulama yüklemesi sonrasında, kullanıcıların Azure AD'ye kaydolmaları veya cihazlarını Intune. Bu, yapılandırılmış Koşullu Erişim ilkesine bağlıdır.
 
-Ayrıca, kuruluşa ait cihazların, posta hesaplarının Intune MDM ilkesi tarafından yönetillerine ve korunmasına izin vermek üzere İş veya Samsung Knox için Android'i destekleyen OEM'lerde ve sürümlerinde standart hale getirildiklerini öneririz.
+Ayrıca, kuruluşa ait cihazların İş veya Samsung Knox için Android'i destekleyen OEM'lerde ve sürümlerinde standart hale getirildiklerine ve posta hesaplarının MDM ilkesiyle yönetillerine ve korunmasına izin Intune öneririz.
 
 ### <a name="recommended-email-clients"></a>Önerilen e-posta istemcileri
 
@@ -122,6 +122,6 @@ Bazı ek önerilerimiz var:
 
 ## <a name="next-step"></a>Sonraki adım
 
-[![2. Adım: Ortak Sıfır Güven kimliğini yapılandırma ve Koşullu Erişim ilkelerine erişme.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-2.png)](identity-access-policies.md)
+[![2. Adım: Ortak kimlik Sıfır Güven ve Koşullu Erişim ilkelerine erişin.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-2.png#lightbox)](identity-access-policies.md)
 
-[Ortak Sıfır Güven kimliğini ve cihaz erişim ilkelerini yapılandırma](identity-access-policies.md)
+[Ortak kimlik Sıfır Güven cihaz erişimi ilkelerini yapılandırma](identity-access-policies.md)

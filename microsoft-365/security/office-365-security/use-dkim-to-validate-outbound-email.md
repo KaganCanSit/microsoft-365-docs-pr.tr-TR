@@ -20,20 +20,20 @@ ms.custom:
 description: Özel etki alanınız üzerinden gönderilen iletilerin hedef e-posta sistemleri tarafından güveni sağ Microsoft 365 etki alanıyla birlikte DomainKeys Identified Mail (DKIM) kullanmayı öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 25333a1616bb1f4e4e529c17813bdd58f4c768b4
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: fd236ff616ab585909b210c9c1b9a8f12b2e9fe2
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312957"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472275"
 ---
-# <a name="use-dkim-to-validate-outbound-email-sent-from-your-custom-domain"></a>Özel etki alanınıza gönderilen giden e-postayı doğrulamak için DKIM kullanma
+# <a name="use-dkim-to-validate-outbound-email-sent-from-your-custom-domain"></a>Özel etki alanınıza gönderilen giden e-postayı doğrulamak için DKIM'yi kullanma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
  Bu makalede, hedef e-posta sistemlerinin özel etki alanınız üzerinden giden iletilere güven güveni sağlamak için, etki alanıyla birlikte DomainKeys Identified Mail (DKIM Microsoft 365) kullanma adımları listelemektedir.
@@ -89,13 +89,15 @@ DkIM'yi yapılandırmak için etki alanınız eklendiktan sonra aşağıdaki ad�
 
 1. Adım: DKIM sayfasında DKIM'yi yapılandırmak istediğiniz etki alanına tıklayın ( veyahttps://security.microsoft.com/dkimv2 https://protection.office.com/dkimv2).
 
-![Seçilen bir etki alanıyla Microsoft 365 Defender portalında DKIM sayfası.](../../media/126996261-2d331ec1-fc83-4a9d-a014-bd7e1854eb07.png)
+:::image type="content" source="../../media/126996261-2d331ec1-fc83-4a9d-a014-bd7e1854eb07.png" alt-text="Seçilen etki alanıyla birlikte Microsoft 365 Defender portalında DKIM sayfası" lightbox="../../media/126996261-2d331ec1-fc83-4a9d-a014-bd7e1854eb07.png":::
 
 2. Adım: Iki durumlu düğmeyi Etkinleştir'e **kaydırın**. CNAME kayıtlarını eklemenizi belirten bir açılır pencere görüntülenir.
 
-![DKIM'yi etkinleştirmek için iki durumlu düğmeyi Etkin'e kaydırın.](../../media/126995186-9b3fdefa-a3a9-4f5a-9304-1099a2ce7cef.png)
+:::image type="content" source="../../media/127001645-4ccf89e6-6310-4a91-85d6-aaedbfd501d3.png" alt-text="DKIM tuşları oluştur düğmesiyle Etki alanı ayrıntıları geçici adı" lightbox="../../media/127001645-4ccf89e6-6310-4a91-85d6-aaedbfd501d3.png":::
 
 3. Adım: Açılan pencerede gösterilen CNAMES'i kopyalama
+
+:::image type="content" source="../../media/127001787-3cce2c29-e0e4-4712-af53-c51dcba33c46.png" alt-text="Kopyalayacak iki CNAME kaydı içeren CNAM'leri Yayımla açılır penceresi" lightbox="../../media/127001787-3cce2c29-e0e4-4712-af53-c51dcba33c46.png":::
 
 4. Adım: Kopyalanan CNAME kayıtlarını DNS hizmet sağlayıcınızda yayımlayın.
 
@@ -110,7 +112,7 @@ TTL: 3600 (or your provider default)
 
 5. Adım: DKIM'yi etkinleştirmek için DKIM sayfasına geri dönme.
 
-![DKIM'yi etkinleştirmek için iki durumlu düğmeyi Etkin'e kaydırın.](../../media/126995186-9b3fdefa-a3a9-4f5a-9304-1099a2ce7cef.png)
+:::image type="content" source="../../media/126995186-9b3fdefa-a3a9-4f5a-9304-1099a2ce7cef.png" alt-text="DKIM'yi etkinleştirmek için iki durumlu düğme" lightbox="../../media/126995186-9b3fdefa-a3a9-4f5a-9304-1099a2ce7cef.png":::
 
 CNAME kaydı yok hatası görüyorsanız, bunun nedeni şu olabilir:
 
@@ -248,7 +250,7 @@ DNS'de CNAME kayıtlarını yayımladıktan sonra, KAYıTlarda DKIM imzalamayı 
 #### <a name="to-enable-dkim-signing-for-your-custom-domain-by-using-powershell"></a>PowerShell kullanarak özel etki alanınız için DKIM imzalamasını etkinleştirmek için
 
 > [!IMPORTANT]
-> :::image type="content" source="../../media/dkim.png" alt-text="'Bu etki alanı için hiçbir DKIM anahtarı kaydedilemiyor.' hatası.":::
+> :::image type="content" source="../../media/dkim.png" alt-text="Bu etki alanı hatası için hiçbir DKIM anahtarı kaydedilemiyor" lightbox="../../media/dkim.png":::
 > DKIM'i ilk kez yapılandırıyorsanız ve anahtarı görmek için aşağıdaki 2. adımda (örneğin, `Set-DkimSigningConfig -Identity contoso.com -Enabled $true`) 'Bu etki alanı için kayıtlı DKIM anahtarı yok' hatasını görüyorsanız.
 
 1. [Bağlan PowerShell Exchange Online e geri tarak.](/powershell/exchange/connect-to-exchange-online-powershell)
@@ -408,4 +410,5 @@ Ardından, bkz. [**E-postayı doğrulamak için DMARC kullanma**](use-dmarc-to-v
 
 PowerShell aracılığıyla tuş döndürme: [Rotate-DkimSigningConfig](/powershell/module/exchange/rotate-dkimsigningconfig)
 
-[E-postayı doğrulamak için DMARC kullanma](use-dmarc-to-validate-email.md)
+[E-postayı doğrulamak için DMARC kullanma](/microsoft-365/security/office-365-security/use-dmarc-to-validate-email?view=o365-worldwide&preserve-view=true)
+

@@ -1,6 +1,6 @@
 ---
-title: Uç Nokta Uyarıları kuyruğu için Microsoft Defender'ı görüntüleme ve düzenleme
-description: Uç nokta uyarıları için Microsoft Defender sıralarının nasıl çalışır ve uyarı listelerinin nasıl sıralanmış ve filtrelenmiş olduğunu öğrenin.
+title: Yeni Uyarı kuyruğu Uç Nokta için Microsoft Defender ve düzenleme
+description: Uyarı sıralarının Uç Nokta için Microsoft Defender ve uyarı listelerini sıralamayı ve filtrelemeyi öğrenin.
 keywords: uyarılar, kuyruklar, uyarılar sırası, sıralama, sıralama, sıralama, filtreleme, uyarıları yönetme, yeni, sürüyor, çözümlendi, en yeni, sırada saat, önem derecesi, zaman dönemi, Microsoft tehdit uzmanları uyarıları
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,23 +15,23 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.date: 03/27/2020
 ms.technology: mde
-ms.openlocfilehash: 63107c50c081eef65e0a56417845b470cc0a294a
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 0d6b012d2e3dbe6778c8d9c70552cf24427f8a3d
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449738"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472055"
 ---
-# <a name="view-and-organize-the-microsoft-defender-for-endpoint-alerts-queue"></a>Uç Nokta Uyarıları kuyruğu için Microsoft Defender'ı görüntüleme ve düzenleme
+# <a name="view-and-organize-the-microsoft-defender-for-endpoint-alerts-queue"></a>Yeni Uyarı kuyruğu Uç Nokta için Microsoft Defender ve düzenleme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-alertsq-abovefoldlink)
 
-Uyarılar **,** ağ bağlantısı olan cihazlardan bayrakla işaretlenmiş uyarıların listesini gösterir. En son uyarılar listenin en üstünde, en son uyarıları en başta görme konusunda yardımcı olmak için gösteriler.
+Uyarılar **sırası,** ağ bağlantısına sahip cihazlardan bayrakla işaretlenmiş uyarıların listesini gösterir. Varsayılan olarak, kuyruk, gruplandı görünümünde son 30 gün içinde görülen uyarıları görüntüler. En son uyarılar listenin en üstünde gösterilir ve en son uyarıları önce görmene yardımcı olur.
 
 > [!NOTE]
 > Otomatik araştırma ve düzeltme sayesinde uyarılar önemli ölçüde azaltıldı ve güvenlik işlemi uzmanlarının daha gelişmiş tehditlere ve diğer yüksek değerli girişimlere odaklanmasına olanaklandı. Bir uyarı, desteklenen bir işletim sistemi olan bir cihazda otomatik soruşturma (örneğin bir dosya) için desteklenen bir varlık içerdiğinde, otomatik bir araştırma ve düzeltme başlatabilirsiniz. Otomatik soruşturmalar hakkında daha fazla bilgi için bkz. [Otomatik soruşturmalara genel bakış](automated-investigations.md).
@@ -46,7 +46,7 @@ Uyarılar görünümünü özelleştirmek için seçebileceğiniz çeşitli seç
 - Uyarılar listesini Excel'e aktarma
 - Uyarıları Yönetme
 
-:::image type="content" source="images/alerts-filters.png" alt-text="Uyarı listesinin resmi" lightbox="images/alerts-filters.png":::
+:::image type="content" source="images/alerts-queue-list.png" alt-text="Uyarılar sırası sayfası" lightbox="images/alerts-queue-list.png":::
 
 ## <a name="sort-and-filter-alerts"></a>Uyarıları sıralama ve filtreleme 
 
@@ -54,14 +54,12 @@ Uyarı listesini sınırlandırarak ve uyarıların daha odaklanmış bir görü
 
 ### <a name="severity"></a>Önem Derecesi
 
-Uyarıları Önem Derecesi'ne göre filtreleysiniz.  
-
-|Önem derecesine dikkat|Açıklama|
-|---|---|
-|Yüksek <br> (Red)|Yaygın olarak gelişmiş kalıcı tehditlerle (APT) ilişkili uyarılar. Bu uyarılar, cihazlara zarar veren önem derecesine bağlı olarak yüksek bir risk olduğunu belirtmektedir. Bazı örnekler: kimlik bilgileri hırsızlığı araçları etkinlikleri, fidye yazılımı etkinlikleri, herhangi bir grupla ilişkili olmayan fidye yazılımı etkinlikleri, güvenlik algılayıcıları ile oynanıyor veya insan maceracıyı gösteren kötü amaçlı etkinlikler.|
-|Orta <br> (Orange)|Gelişmiş kalıcı uç noktada algılama ve yanıtlama (APT) bir parçası olabileceği ihlal sonrası davranışlarda uyarılarda. Bu, tipik saldırı aşamaları, anormal kayıt defteri değişikliği, şüpheli dosyaların yürütülmesi ve benzeri gözlemlenen davranışları içerir. Bazıları iç güvenlik testinin bir parçası olsa da bunun da gelişmiş bir saldırı olabileceği için araştırma gerektiriyor.|
-|Düşük <br> (Sarı)|Yaygın kötü amaçlı yazılımla ilişkilendirilmiş tehditlere karşı uyarılar. Örneğin, bilgi arama komutları, günlükleri temizleme gibi kötü amaçlı olmayan ve genellikle kuruluşu hedef alan gelişmiş bir tehdide işaretyen hack araçları. Ayrıca, kuruluşta bir kullanıcı tarafından yalıtılmış bir güvenlik aracı testinden de gelebilir.|
-|Bilgilendirme <br> (Gri)|Ağa zararlı kabul edilen uyarılar; ancak olası güvenlik sorunlarına karşı kurumsal güvenlik farkındalığını ortayatabilirsiniz.|
+Önem derecesine dikkat|Açıklama
+---|---
+Yüksek <br> (Red)|Yaygın olarak gelişmiş kalıcı tehditlerle (APT) ilişkili uyarılar. Bu uyarılar, cihazlara zarar veren önem derecesine bağlı olarak yüksek bir risk olduğunu belirtmektedir. Bazı örnekler: kimlik bilgileri hırsızlığı araçları etkinlikleri, fidye yazılımı etkinlikleri, herhangi bir grupla ilişkili olmayan fidye yazılımı etkinlikleri, güvenlik algılayıcıları ile oynanıyor veya insan maceracıyı gösteren kötü amaçlı etkinlikler.
+Orta <br> (Orange)|Gelişmiş kalıcı uç noktada algılama ve yanıtlama (APT) bir parçası olabileceği ihlal sonrası davranışlarda uyarılarda. Bu davranışlar saldırı evrelerinin tipik gözlemlenen davranışlarını, anormal kayıt defteri değişikliklerini, şüpheli dosyaların yürütülmesini vb. içerir. Bazıları iç güvenlik testinin bir parçası olsa da bunun da gelişmiş bir saldırı olabileceği için araştırma gerektiriyor.
+Düşük <br> (Sarı)|Yaygın kötü amaçlı yazılımla ilişkilendirilmiş tehditlere karşı uyarılar. Örneğin, bilgi arama komutları, günlükleri temizleme gibi kötü amaçlı olmayan ve genellikle kuruluşu hedef alan gelişmiş bir tehdide işaretyen hack araçları. Ayrıca, kuruluşta bir kullanıcı tarafından yalıtılmış bir güvenlik aracı testinden de gelebilir.
+Bilgilendirme <br> (Gri)|Ağa zararlı kabul edilen uyarılar; ancak olası güvenlik sorunlarına karşı kurumsal güvenlik farkındalığını ortayatabilirsiniz.
 
 #### <a name="understanding-alert-severity"></a>Uyarı önem derecelerini anlama
 
@@ -73,7 +71,7 @@ Uç Nokta uyarısı önem düzeyi için Defender, algılanan davranışın önem
 
 Bu nedenle, örneğin:
 
-- Bir Microsoft Defender Virüsten Koruma için Uç Nokta Için Defender uyarısının önem derecesi, cihaza tamamen engel olan ve bu şekilde etkilenmemiş bir tehdit algıladı, çünkü gerçek bir hasar yoktu, "Bilgilendirme" olarak kategorize edilir.
+- Bir Microsoft Defender Virüsten Koruma için Uç Nokta Için Defender uyarısının önem derecesi, cihaza engel olan ve bu tehditle etkilenmemiş bir tehdit algıladı, çünkü gerçek bir hasar yoktu, "Bilgilendirme" olarak kategorize edilir.
 - Yürütürken ticari kötü amaçlı yazılımla ilgili bir uyarı algılandı, ancak Microsoft Defender AV tarafından engellendi ve düzeltildi, çünkü bu uyarı cihaza biraz zarar verdiği için "Düşük" olarak kategorilere ayrılmıştır ancak kurumsal bir tehdit oluşturmaz.
 - Yürütürken algılanan kötü amaçlı yazılım uyarısı tek bir cihaz için değil, daha sonra engellenmiş olup olmadığını bakılmaksızın kuruluş için değil, "Orta" veya "Yüksek" olarak derece edilebilir.
 - Engellenmedi veya düzelti olmayan şüpheli davranış uyarıları, aynı kurumsal tehdit dikkate alınmasına göre "Düşük", "Orta" veya "Yüksek" olarak derecelenir.
@@ -111,20 +109,18 @@ Uyarıları, uyarılara atanan Etiketlere göre filtreleebilirsiniz.
 
 Aşağıdaki ilkelere göre uyarıları filtre yapabilirsiniz:
 
-- Sık kullanılmayan ülkenin etkinliği
-- Yönetici Gönderimi Sonucu Tamamlandı
-- Yönetici e-postanın el ile soruşturmasını tetikledi
-- Yönetici, kullanıcının güvenliği tehlikeye atarak araştırmayı tetikledi
-- Anormal Belirteç 
-- Atipik seyahat
-- Yönlendirme/yeniden yönlendirme kuralı oluşturma
-- Teslimden sonra kötü amaçlı URL içeren e-posta iletileri kaldırıldı
-- Teslimden sonra kötü amaçlı dosya içeren e-posta iletileri kaldırıldı
-- Kullanıcı tarafından kötü amaçlı yazılım veya kimlik avı olarak bildirilen e-posta
-- Parola Parolaları
-- Yönetici tarafından e-postalarda veya URL'de veya gönderende yapılan düzeltme eylemi
-- Şüpheli hizmet oluşturma 
-- Yabancı oturum açma özellikleri
+|Algılama kaynağı|API değeri|
+|---|---|
+|Üçüncü taraf algılayıcılar|ThirdPartySensors|
+|Virüsten koruma|WindowsDefenderAv|
+|Otomatik araştırma|AutomatedInvestigation|
+|Özel algılama|CustomDetection|
+|Özel TI|CustomerTI|
+|EDR|WindowsDefenderAtp|
+|Microsoft 365 Defender|MTP|
+|Office 365 için Microsoft Defender|OfficeATP|
+|Microsoft Tehdit Uzmanları|ThreatExperts|
+|SmartScreen|WindowsDefender SmartScreen|
 
 ### <a name="entities"></a>Varlıklar
 
@@ -138,10 +134,10 @@ Uyarıları otomatik soruşturma durumlarına göre filtrelemeyi seçebilirsiniz
 
 ## <a name="related-topics"></a>İlgili konular
 
-- [Uç nokta uyarıları için Microsoft Defender'ı yönetme](manage-alerts.md)
-- [Uç nokta uyarıları için Microsoft Defender'ı araştırma](investigate-alerts.md)
-- [Uç nokta için Microsoft Defender uyarısıyla ilişkilendirilmiş dosyayı araştırma](investigate-files.md)
-- [Uç Nokta Cihazları için Microsoft Defender listesinde cihazları araştırma](investigate-machines.md)
-- [Uç nokta için Microsoft Defender uyarısıyla ilişkilendirilmiş IP adresini araştırma](investigate-ip.md)
-- [Uç nokta için Microsoft Defender uyarısıyla ilişkilendirilmiş etki alanını araştırma](investigate-domain.md)
-- [Uç Nokta için Microsoft Defender'da kullanıcı hesabını araştırma](investigate-user.md)
+- [Uyarı Uç Nokta için Microsoft Defender yönetme](manage-alerts.md)
+- [Uyarı Uç Nokta için Microsoft Defender araştırma](investigate-alerts.md)
+- [Kullanıcı hesabı uyarısıyla ilişkilendirilmiş Uç Nokta için Microsoft Defender araştırma](investigate-files.md)
+- [Uç Nokta için Microsoft Defender Cihazlar listesinde cihazları araştırma](investigate-machines.md)
+- [Adres defteri uyarısıyla ilişkilendirilmiş IP Uç Nokta için Microsoft Defender araştırma](investigate-ip.md)
+- [Kullanıcı ekleme uyarısıyla ilişkilendirilmiş etki Uç Nokta için Microsoft Defender araştırma](investigate-domain.md)
+- [E-postada kullanıcı hesabını Uç Nokta için Microsoft Defender](investigate-user.md)

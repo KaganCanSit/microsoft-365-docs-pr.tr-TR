@@ -1,5 +1,5 @@
 ---
-title: Uç nokta tehdit analizi için Microsoft Defender'la ortaya çıkan tehditleri izleme ve yanıtlama
+title: Tehdit analizi ile ortaya çıkan tehditleri izleme Uç Nokta için Microsoft Defender yanıt verme
 ms.reviewer: ''
 description: Ortaya çıkan tehdit ve saldırı tekniklerini ve bunları nasıl durduracaklarını anlıyoruz. Organizasyon üzerindeki etkisini değerlendirin ve organizasyona karşı etkilerinızı değerlendirin.
 keywords: tehdit analizi, risk değerlendirme, işletim sistemi azaltma, mikro kod azaltma, risk azaltma durumu
@@ -19,22 +19,22 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 1c86dad2f303df149921efab87d3ffd026e0f93d
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 0ca4aea3281d6bb375e7b5ff5223cb40e9a980ac
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998202"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471087"
 ---
 # <a name="track-and-respond-to-emerging-threats-through-threat-analytics"></a>Tehdit analizleri aracılığıyla ortaya çıkan tehditleri takip edin ve yanıt verin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Sık sık ve yaygın olarak ortaya çıkan daha gelişmiş rakipler ve yeni tehditlerle, hızla devam etmek kritik öneme sahip:
 
@@ -66,7 +66,7 @@ Tehdit çözümlemesi panosu, organizasyonuyla en ilgili raporlara almak için m
 
 Bu tehdidin raporunu görüntülemek için panodan bir tehdit seçin.
 
-![Tehdit analiz panosunun resmi.](images/ta_dashboard.png)
+:::image type="content" source="images/ta_dashboard.png" alt-text="Tehdit analiz panosu" lightbox="images/ta_dashboard.png":::
 
 ## <a name="view-a-threat-analytics-report"></a>Tehdit analizi raporunu görüntüleme
 
@@ -76,8 +76,8 @@ Her tehdit analizi raporu üç bölümde bilgi sağlar: **Genel Bakış**, **Ana
 
 Genel **Bakış** bölümü, ayrıntılı analist raporunun bir önizlemesini sağlar. Ayrıca, hatalı ve eşleşmeyen cihazlar aracılığıyla organizasyonunız için tehdidin etkisini vurgulayan grafikler de sağlar.
 
-![Tehdit analizi raporunun genel bakış bölümünün görüntüsü.](images/ta-overview.png)
- _Tehdit analizi raporunun genel bakış bölümü_
+:::image type="content" source="images/ta-overview.png" alt-text="Tehdit analizi raporunun Genel Bakış bölümü" lightbox="images/ta-overview.png":::
+_Tehdit analizi raporunun genel bakış bölümü_
 
 #### <a name="assess-the-impact-to-your-organization"></a>Organizasyonun etkisini değerlendirme
 
@@ -112,7 +112,8 @@ Azaltmalar **bölümünde** , tehditlere karşı kuruluşa karşı daha fazla ö
 
 Bu bölümdeki azaltma bilgileri, rapor Tehdit ve Güvenlik Açığı Yönetimi çeşitli bağlantılarından [](next-gen-threat-and-vuln-mgt.md)ayrıntılı detaya gitme bilgileri de sağlayan veri bağlantılarını içerir.
 
-![Tehdit analizi raporunun risk azaltma bölümünün resmi.](images/ta-mitigations.png)
+:::image type="content" source="images/ta-mitigations.png" alt-text="Tehdit analizi raporunun Azaltmalar bölümü" lightbox="images/ta-mitigations.png":::
+
 
 _Tehdit analizi raporunun Azaltmalar bölümü_
 

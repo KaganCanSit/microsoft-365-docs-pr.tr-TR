@@ -1,7 +1,7 @@
 ---
-title: Adım 5. Kullanım durumlarını geliştirme ve sınama
-description: Bu tür kullanım durumlarını güvenlik işlemleriyle tümleştirin Microsoft 365 Defender ve test etmeyle ilgili temel bilgiler.
-keywords: olaylar, uyarılar, araştırma, korelasyon, saldırı, cihazlar, kullanıcılar, kimlikler, kimlik, posta kutusu, e-posta, 365, microsoft, m365, olay yanıtı, siber saldırı, secops, güvenlik işlemleri, soc
+title: Adım 5. Kullanım örneklerini geliştirme ve test edin
+description: Microsoft 365 Defender güvenlik işlemlerinizle tümleştirirken kullanım örnekleri geliştirme ve test etmeyle ilgili temel bilgiler.
+keywords: olaylar, uyarılar, araştırma, bağıntı, saldırı, cihazlar, kullanıcılar, kimlikler, kimlik, posta kutusu, e-posta, 365, Microsoft, m365, olay yanıtı, siber saldırı, secops, güvenlik işlemleri, soc
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -22,129 +22,129 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 6621ca47356f87edd47a905e4edeb592d9b556ff
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 732b10bceaa3509f28f607228dc20ad6e941cb2f
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499099"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64664468"
 ---
-# <a name="step-5-develop-and-test-use-cases"></a>Adım 5. Kullanım durumlarını geliştirme ve sınama
+# <a name="step-5-develop-and-test-use-cases"></a>Adım 5. Kullanım örneklerini geliştirme ve test edin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - Microsoft 365 Defender
 
-Güvenlik İşlemleri Merkezi'nde (SOC) Microsoft 365 Defender dağıtımı için önerilen yöntemler, SOC ekibinin güncel araç, süreç ve beceri kümeleri kümesine bağlıdır. Yüzlerce güvenlik kaynağı yoksa onlarcadan gelen çok büyük miktarda veri nedeniyle platformlarda siber tehditlere karşı korunması zor olabilir. 
+Güvenlik İşlemleri Merkezi'nde (SOC) Microsoft 365 Defender dağıtmak için önerilen yöntemler, SOC ekibinin geçerli araç, işlem ve beceri kümelerine bağlıdır. Yüzlerce güvenlik kaynağı olmasa da onlarca veriden gelen muazzam miktarda veri nedeniyle platformlar arasında siber hijyenin korunması zor olabilir. 
 
-Güvenlik araçları birbiriyle bağlantılıdır. Güvenlik teknolojisinin bir özelliğinin değiştirilmesi veya bir sürecin değiştirilmesi de başka bir özelliğin değiştirilmesine neden olabilir. Bu nedenle Microsoft, SOC ekibinin kullanım durumlarını tanımlama ve önceliklerini belirleme yöntemini resmileştirmelerini önermektedir. Vakaları kullanmak, çeşitli ekipler genelinde SOC işlemleri için gereksinimlerin ve test işlemlerinin tanımlarına yardımcı olur. Doğru rollerin ve çeşitli görevlerin doğru beceriler kümeleri ile doğru eksolojilerle uyumlu olup olmadığını belirlemek üzere ölçümleri yakalamak için bir yöntem oluşturur. 
+Güvenlik araçları birbiriyle ilişkilidir. Bir güvenlik teknolojisindeki bir özelliği açmak veya bir işlemi değiştirmek başka bir özelliği bozabilir. Bu nedenle Microsoft, SOC ekibinizin kullanım örneklerini tanımlamaya ve önceliklendirmeye yönelik bir yöntemi resmileştirmesini önerir. Kullanım örnekleri, çeşitli ekiplerde SOC işlemleri için gereksinimleri ve test süreçlerini tanımlamaya yardımcı olur. Doğru rollerin ve görev karışımının doğru beceri kümeleriyle doğru takıma hizalanıp hizalanmadığını belirlemek için ölçümleri yakalamak için bir metodoloji oluşturur. 
 
-## <a name="develop-and-formalize-use-case-process"></a>Kullanım durumu sürecini geliştirme ve resmileştirme
+## <a name="develop-and-formalize-use-case-process"></a>Kullanım örneği sürecini geliştirme ve resmileştirme
 
-SOC, kullanım durumlarını geliştirmek için üst düzey bir standart ve süreç tanımlamalı ve SOC Gözetim ekibi tarafından düzenleyecektir. SOC Gözetimi ekibi, sonunda SOC ekibinin çalışma kitaplarına ve çalışma kitaplarına gelecek SOC kullanım durumlarının önceliklerini belirlemek için işletmeniz, IT, legal, İk ve diğer gruplarla birlikte çalışmalı. Kullanım durumlarının önceliği uyumluluk veya gizlilik gibi amaçları temel almaktadır.
+SOC, SOC Gözetim ekibi tarafından düzenlenecek olan kullanım örnekleri geliştirmek için üst düzey bir standart ve süreç tanımlamalıdır. SOC Gözetim ekibi, SOC ekibinin runbook'larına ve playbook'larına girebilecek SOC kullanım örneklerini önceliklendirmek için işletmeniz, BT, hukuk, İk ve diğer gruplarla birlikte çalışmalıdır. Kullanım örneklerinin önceliği, uyumluluk veya gizlilik gibi hedeflere bağlıdır.
 
-Kullanım durumu geliştirme ile ilgili SOC Gözetim etkinlikleri şunlardır: 
+Kullanım örneği geliştirmeyle ilgili SOC Gözetim etkinlikleri şunlardır: 
 
 - Gereksinimler
-- Personel veya eğitim ihtiyaçları
+- Personel veya eğitim gereksinimleri
 - Yazılım lisansları
-- Sözleşmeli satıcı
+- Satıcı sözleşmesi
 - Planı yönetme
-- Kullanım durumu kayıt defterini koruma
+- Kullanım örneği kayıt defterini koruma
 - Şablonları koruma/güncelleştirme
 
-Çalışma kitabı ve çalışma kitabı oluşturma işlemlerini kolaylaştırmak için kullanım durumu karar ağacı oluşturun. Bu şekilde bir örnek ve sayı 365'tir.
+Runbook ve playbook oluşturma işlemlerini kolaylaştırmak için bir kullanım örneği karar ağacı oluşturun. Bu şekilde bir örnek gösterilmektedir.
 
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/use-case-decision-process.png" alt-text="Kullanım durumu karar süreci" lightbox="../../media/integrate-microsoft-365-defender-secops/use-case-decision-process.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/use-case-decision-process.png" alt-text="Kullanım örneği karar süreci" lightbox="../../media/integrate-microsoft-365-defender-secops/use-case-decision-process.png":::
 
-Üst düzey bir kullanım durumu standardı tanımlandıktan ve onaylandıktan sonra, bir sonraki adım gerçek kullanım durumu oluşturmak ve test etmektir. Aşağıdaki bölümlerde örnek olarak kimlik avı önleme ve tehdit ve güvenlik açığı tarama senaryoları kullanılır.
+Üst düzey kullanım örneği standardı tanımlanıp onaylandıktan sonra, bir sonraki adım gerçek bir kullanım örneği oluşturup test etmektir. Aşağıdaki bölümlerde örnek olarak kimlik avı önleme ve tehdit ve güvenlik açığı tarama senaryoları kullanılır.
 
-## <a name="use-case-example-1-new-phishing-variant"></a>Kullanım örneği 1: Yeni kimlik avı değişken
+## <a name="use-case-example-1-new-phishing-variant"></a>Kullanım örneği 1: Yeni kimlik avı değişkeni
 
-Kullanım durumu oluşturmanın ilk adımı, içerik panosu kullanarak iş akışının ana hatlarını oluşturmakdır. Burada, Tehdit İstihbaratı ekibine yönelik yeni kimlik avı açıkları hakkında bildirim almak için üst düzey bir hikaye panosu örneği ve bir örnek vemektedir.
+Kullanım örneği oluşturmanın ilk adımı, bir yazı panosu kullanarak iş akışının ana hatlarını oluşturmaktır. Burada, Tehdit Bilgileri ekibine yeni kimlik avı açıklarından yararlanma bildirimi için üst düzey bir hikaye panosu örneği verilmiş.
  
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png" alt-text="Kimlik avı önleme kampanyası için kullanım durumu iş akışı" lightbox="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png" alt-text="Kimlik avından koruma kampanyası için kullanım örneğinin iş akışı" lightbox="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png":::
 
-### <a name="invoke-the-use-case-workflow-for-example-1"></a>Kullanım durumu iş akışını çağırma (örneğin 1)
+### <a name="invoke-the-use-case-workflow-for-example-1"></a>Kullanım örneği iş akışını çağırın, örneğin 1
 
-Anlatı panosu onaylandıktan sonra, bir sonraki adım kullanım durumu iş akışını çağırmak olur. Burada, kimlik avı önleme kampanyası için örnek bir işlem vemektedir. 
+İçerik panosu onaylandıktan sonra, sonraki adım kullanım örneği iş akışını çağırmaktır. Kimlik avı önleme kampanyası için örnek bir süreç aşağıda verilmiştir. 
  
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png" alt-text="Kimlik avı önleme kampanyası için ayrıntılı kullanım durumu iş akışı" lightbox="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png" alt-text="Kimlik avı önleme kampanyası için ayrıntılı bir kullanım örneği iş akışı" lightbox="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png":::
 
-## <a name="use-case-example-2-threat-and-vulnerability-scanning"></a>Kullanım durumu örneği 2: Tehdit ve güvenlik açığı tarama
+## <a name="use-case-example-2-threat-and-vulnerability-scanning"></a>Kullanım örneği 2: Tehdit ve güvenlik açığı taraması
 
-Bir kullanım durumu kullanıla bir diğer senaryo tehdit ve güvenlik açığı tarama için kullanılabilir. Bu örnekte SOC, tehdit ve güvenlik açıklarının, varlık tarama içeren onaylanmış işlemler aracılığıyla varlıklara yönelik olarak düzelt güncelleştirmesi gerektirmektedir. 
+Kullanım örneğinin kullanılabilmesi için bir diğer senaryo da tehdit ve güvenlik açığı taramasıdır. Bu örnekte SOC, varlıkların taranması da dahil olmak üzere onaylı işlemler aracılığıyla varlıklara karşı tehditlerin ve güvenlik açıklarının giderilmesini gerektirir. 
 
-Burada, varlıklarının en iyi şekilde çalışma alanlarının Tehdit ve Güvenlik Açığı Yönetimi bir pano örneği vemektedir.
+Varlıkların Tehdit ve Güvenlik Açığı Yönetimi için örnek bir üst düzey görsel taslak aşağıda verilmiştir.
  
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png" alt-text="İş akışı için kullanım durumu Tehdit ve Güvenlik Açığı Yönetimi" lightbox="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png" alt-text="Tehdit ve Güvenlik Açığı Yönetimi için kullanım örneği iş akışı" lightbox="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png":::
 
-### <a name="invoke-the-use-case-workflow-for-example-2"></a>Kullanım durumu iş akışını çağırma (örneğin 2)
+### <a name="invoke-the-use-case-workflow-for-example-2"></a>Kullanım örneği iş akışını çağırma örneğin 2
 
-Tehdit ve güvenlik açığı tarama için örnek bir süreç şu şekildedir.
+Tehdit ve güvenlik açığı taraması için örnek bir işlem aşağıda verilmiştir.
  
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png" alt-text="İş akışları için ayrıntılı kullanım durumu Tehdit ve Güvenlik Açığı Yönetimi" lightbox="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png":::
+:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png" alt-text="Tehdit ve Güvenlik Açığı Yönetimi için ayrıntılı kullanım örneği iş akışı" lightbox="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png":::
  
-### <a name="analyze-the-use-case-output-and-lessons-learned"></a>Kullanım durumu çıktısını ve öğrenilen dersleri çözümle
+### <a name="analyze-the-use-case-output-and-lessons-learned"></a>Kullanım örneği çıkışını ve öğrenilen dersleri analiz etme
 
-Kullanım durumu onaylandıktan ve test edildikten sonra, güvenlik ekipleriniz arasındaki boşluklar; kişiler, süreçler ve söz konusu Microsoft 365 Defender tanımlanır. Microsoft 365 Defender, istenen sonuçları elde etme yeteneğine sahip olup olduklarını belirlemek için bu teknolojilerin analiz olması gerekir. Bunlar bir denetim listesi veya matris aracılığıyla iz olabilir. 
+Bir kullanım örneği onaylandıktan ve test edildikten sonra, güvenlik ekipleriniz arasındaki boşluklar ve ilgili kişiler, süreçler ve Microsoft 365 Defender teknolojileri belirlenmelidir. Microsoft 365 Defender teknolojilerin istenen sonuçlara ulaşıp ulaşamadığını belirlemek için analiz edilmelidir. Bunlar bir denetim listesi veya matris aracılığıyla izlenebilir. 
 
-Örneğin, kimlik avı önleme senaryo örneğinde, SOC ekipleri bu tabloda keşifler yapmış olabilir.
+Örneğin, kimlik avına karşı koruma senaryosu örneğinde SOC ekipleri bu tabloda keşifler yapmış olabilir.
 
 
-| SOC ekibi | Gereksinim | Gereksinimi karşılamak için insanlar | Gereksinimi karşılamak için işlem | İlgili teknoloji | Boşluk tanımlandı | Kullanım durumu değişiklik günlüğü | Muaf (Y/N) |
+| SOC ekibi | Gereksinim | Gereksinimi karşılayacak kişiler | Gereksinimi karşılama süreci | İlgili teknoloji | Tanımlanan boşluk | Kullanım örneği değişiklik günlüğü | Muaf (Y/N) |
 |:-------|:-----|:-------|:-------|:-------|:-----|:-------|:-------|
-| Threat Intelligence and Analytics team | Veri kaynakları tehdit zekası altyapılarını düzgün bir şekilde besliyor. | Threat Intelligence Analyst/Engineer | Veri akışı gereksinimlerinin kurulması, tehdit İstihbaratı onaylı kaynaklardan tetiklenir | Kimlik için Microsoft Defender, Uç Nokta için Microsoft Defender | Threat Intelligence ekibi, yeni API'yi tehdit intel altyapıları ile Microsoft 365 Defender için otomasyon betiği kullanmadı | Tehdit Microsoft 365 Defender kaynakları olarak kullanıcı ekleme <BR> <BR> Kullanım durumu çalıştırma kitabını güncelleştir | N |
-| Ekibi izleme | Veri kaynakları izleme panolarını düzgün bir şekilde besliyor | Katman 1,2 SOC Analisti–& Uyarıları | Raporlama için iş akışı & Uyumluluk Merkezi Güvenli Puanı | [Güvenlik ve Uyumluluk & Uyarılar](/microsoft-365/security/office-365-security/alerts)  <br><br> Güvenli Puan izleme  | SoC analistlerine, Güvenli Puanı geliştirmek için başarılı yeni kimlik avı değişken algılaması bildirme mekanizması yoktur <br><br> [Güvenlik ve Uyumluluk & raporlama](/microsoft-365/security/office-365-security/reports-and-insights-in-security-and-compliance)| Raporlama iş akışlarına Güvenli Puan iyileştirmesi izleme işlemi ekleme | N | 
-| Mühendislik ve SecOps Ekibi | DEĞIŞIKLIK denetimi güncelleştirmeleri SOC ekip çalışma kitaplarında yapılır | Katman 2 SOC Engineer | SOC ekip çalışma kitapları için Denetim Bildirimi yordamını değiştirme | Güvenlik cihazlarında onaylanan değişiklikler | SOC güvenlik Microsoft 365 Defender bağlantısında yapılan değişiklikler onay gerektirir | SoC Microsoft Defender for Cloud Apps'ye Kimlik için Defender, Uç Nokta için Defender, Güvenlik & Uyumluluk Merkezi ekleme | E |
+| Tehdit Analizi ve Analiz ekibi | Veri kaynakları tehdit bilgileri altyapılarını düzgün bir şekilde besliyor. | Tehdit Analizi Analisti/Mühendis | Veri akışı gereksinimleri oluşturuldu, onaylanan kaynaklardan gelen tehdit bilgileri tetikleyicileri | Kimlik için Microsoft Defender, Uç Nokta için Microsoft Defender | Tehdit Bilgileri ekibi, Microsoft 365 Defender API'sini tehdit intel altyapılarıyla bağlamak için otomasyon betiğini kullanmadı | Tehdit altyapılarına veri kaynağı olarak Microsoft 365 Defender ekleme <BR> <BR> Kullanım örneği çalıştırma kitabını güncelleştirme | N |
+| İzleme ekibi | Veri kaynakları izleme panolarını düzgün şekilde besliyor | Katman 1,2 SOC Analisti-İzleme & Uyarıları | Güvenlik & Uyumluluk Merkezi Güvenli Puanını raporlamaya yönelik iş akışı | [Güvenlik & Uyumluluk Merkezi'ndeki uyarılar](/microsoft-365/security/office-365-security/alerts)  <br><br> Güvenli Puan izleme  | SOC analistlerinin Güvenli Puanı geliştirmek için başarılı yeni kimlik avı değişken algılamasını bildirmesi için bir mekanizma yok <br><br> [Güvenlik & Uyumluluk Merkezi'nde raporlama](/microsoft-365/security/office-365-security/reports-and-insights-in-security-and-compliance)| Raporlama iş akışlarına Güvenli Puan iyileştirmesini izlemeye yönelik bir işlem ekleme | N | 
+| Mühendislik ve SecOps Ekibi | Değişiklik denetimi güncelleştirmeleri SOC ekip runbook'larında yapılır | Katman 2 SOC Mühendisi | SOC ekip runbook'ları için Denetim bildirimi yordamını değiştirme | Güvenlik cihazlarında onaylanan değişiklikler | SOC güvenlik teknolojisine Microsoft 365 Defender bağlantıda yapılan değişiklikler onay gerektirir | SOC runbook'larına Microsoft Defender for Cloud Apps, Kimlik için Defender, Uç Nokta için Defender, Güvenlik & Uyumluluk Merkezi ekleme | E |
 |||||||||
 
-Buna ek olarak, SOC ekipleri yukarıda açıklanan senaryoyla ilgili olarak aşağıdaki tabloda ana hatları Tehdit ve Güvenlik Açığı Yönetimi keşifler yapmış olabilir:
+Ayrıca SOC ekipleri, yukarıda özetlenen Tehdit ve Güvenlik Açığı Yönetimi senaryosuyla ilgili olarak aşağıdaki tabloda özetlenen keşifleri yapmış olabilir:
 
-| SOC ekibi | Gereksinim | Gereksinimi karşılamak için insanlar | Gereksinimi karşılamak için işlem | İlgili teknoloji | Boşluk tanımlandı | Kullanım durumu değişiklik günlüğü | Muaf (Y/N) |
+| SOC ekibi | Gereksinim | Gereksinimi karşılayacak kişiler | Gereksinimi karşılama süreci | İlgili teknoloji | Tanımlanan boşluk | Kullanım örneği değişiklik günlüğü | Muaf (Y/N) |
 |:-------|:-----|:-------|:-------|:-------|:-----|:-------|:-------|
-| SOC Oversight | Onaylanmış ağlara bağlı tüm varlıklar tanımlanır ve kategorilere ayrılmıştır | SOC Oversight, BU sahipleri, uygulama sahipleri, IT varlık sahipleri, vb. | Risklere dayalı varlık kategorisini ve özniteliklerini bulmak ve listeley etmek için merkezi varlık yönetim sistemi. | ServiceNow veya diğer varlıklar. <br><br>[Microsoft 365 Stoku](/security/defender-endpoint/device-discovery) | Varlıkların yalnızca %70'i bulundu. Microsoft 365 Defender düzeltme izleme yalnızca bilinen varlıklar için etkilidir | %100 kapsama sahip Microsoft 365 Defender için olgun varlık yaşam döngüsü yönetim hizmetleri | N |
-| Mühendislik & SecOps Teams | Varlıklar üzerindeki yüksek etki ve kritik güvenlik açıkları ilkeye göre düzeltildi | SecOps engineers, SOC analistleri: Güvenlik & Güvenlik Mühendisliği Güvenlik Açığı | Yüksek Riskli ve Kritik Güvenlik Açıklarını kategorilere ayırmaya yönelik tanımlı işlem | [Tehdit ve Güvenlik Açığı Yönetim Panoları](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt) | Uç Nokta için Defender, Microsoft'un önerilen etkinliklerini düzeltme planı veya uygulaması yoksa yüksek etkiyi olan yüksek uyarı cihazları belirledi | İlke başına 30 gün içinde düzeltme etkinliğinin gerekli olduğu varlık sahiplerini bildirmek için iş akışı ekleyin; Varlık sahiplerine düzeltme adımlarını bildirmek için bir bilet sistemi uygulayın. | N |
-| İzleme Teams | Tehdit ve güvenlik açığı durumu şirket intranet portalı aracılığıyla bildiriliyor | Katman 2 SOC analisti | Raporlardan otomatik olarak oluşturulan Microsoft 365 Defender, varlıkların düzeltme ilerlemesini gösterir | [Güvenlik ve Uyumluluk & Uyarılar](/microsoft-365/security/office-365-security/alerts) <br><br> Güvenli Puan izleme | Varlıklara yönelik tehdit ve güvenlik açığı durumuyla ilgili olarak varlık sahiplerine herhangi bir görünüm veya pano raporu aktar aktar aktarnmz. | Kuruluşa yüksek riskli veya kritik varlık güvenlik açığının düzeltme durumunu doldurmak için otomasyon betiği oluşturun. | N |
+| SOC Gözetim | Onaylanan ağlara bağlı tüm varlıklar tanımlanır ve kategorilere ayrılmıştır | SOC Gözetim, BU sahipleri, uygulama sahipleri, BT varlık sahipleri vb. | Risk temelinde varlık kategorisini ve özniteliklerini bulmak ve listelemek için merkezi varlık yönetim sistemi. | ServiceNow veya diğer varlıklar. <br><br>[cihaz envanteri Microsoft 365](/security/defender-endpoint/device-discovery) | Varlıkların yalnızca %70'i bulundu. Microsoft 365 Defender düzeltme izlemesi yalnızca bilinen varlıklar için geçerlidir | Microsoft 365 Defender %100 kapsama sahip olduğundan emin olmak için olgun varlık yaşam döngüsü yönetim hizmetleri | N |
+| Mühendislik & SecOps Teams | Varlıklardaki yüksek etki ve kritik güvenlik açıkları ilkeye göre düzeltilir | SecOps mühendisleri, SOC analistleri: Güvenlik açığı & Uyumluluğu, Güvenlik Mühendisliği | Yüksek Risk ve Kritik Güvenlik Açıklarını kategorilere ayırmak için tanımlanan işlem | [Tehdit ve Güvenlik Açığı Yönetimi Panoları](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt) | Uç Nokta için Defender, microsoft tarafından önerilen etkinliğin düzeltme planı veya uygulaması olmayan yüksek etki, yüksek uyarı cihazları tanımladı | İlke başına 30 gün içinde düzeltme etkinliği gerektiğinde varlık sahiplerini bilgilendirmek için bir iş akışı ekleyin; Varlık sahiplerine düzeltme adımlarını bildirmek için bir bilet sistemi uygulayın. | N |
+| İzleme Teams | Tehdit ve güvenlik açığı durumu şirket intranet portalı aracılığıyla bildirilir | Katman 2 SOC analisti | Varlıkların düzeltme ilerleme durumunu gösteren Microsoft 365 Defender otomatik olarak oluşturulan raporlar | [Güvenlik & Uyumluluk Merkezi'ndeki uyarılar](/microsoft-365/security/office-365-security/alerts) <br><br> Güvenli Puan izleme | Varlıkların tehdit ve güvenlik açığı durumuyla ilgili olarak varlık sahiplerine hiçbir görünüm veya pano raporu iletilmeyen. | Kuruluş için yüksek riskli ve kritik varlık güvenlik açığı düzeltme durumunu doldurmak için otomasyon betiği oluşturun. | N |
 |||||||||
 
-Bu örnek kullanım durumlarında, bu test SOC ekibinin gereksinimlerinde, her ekibin sorumluluklarının temeli olarak temel olarak ortaya koyan bazı boşluklar ortaya çıkar. SOC ekibinin yeni veya mevcut SOC gereksinimleriyle tümleştirmeye hazır olduğundan emin olmak için, kullanım durumu denetim listesi Microsoft 365 Defender kapsamlı olabilir. Bu iteratif bir işlem olacağınından, kullanım durumu geliştirme süreci ve kullanım durumu çıktısı içeriği soc'un çalışma kitaplarını öğrenme ile güncelleştirmeye ve olgunlaştıracak şekilde doğal bir şekilde hizmet edecek.
+Bu örnek kullanım örneklerinde test, SOC ekibinin gereksinimlerinde her ekibin sorumlulukları için temel olarak oluşturulmuş çeşitli boşluklar ortaya çıkardı. SOC ekibinin yeni veya mevcut SOC gereksinimleriyle Microsoft 365 Defender tümleştirmeye hazır olduğundan emin olmak için kullanım örneği denetim listesi gerektiği kadar kapsamlı olabilir. Bu yinelemeli bir süreç olacağından, kullanım örneği geliştirme süreci ve kullanım örneği çıktı içeriği doğal olarak SOC'nin runbook'larını öğrenilen derslerle güncelleştirmeye ve olgun etmeye yarar.
 
-## <a name="update-production-runbooks-and-playbooks"></a>Üretim çalışma kitaplarını ve çalışma kitaplarını güncelleştirme
+## <a name="update-production-runbooks-and-playbooks"></a>Üretim runbook'larını ve playbook'larını güncelleştirme
 
-Tüm boşluklar için kullanım durumu testi düzeltilenin, bu boşluklar için öğrenilen dersler ve bunlarda toplanan ölçümler SOC ekibinin üretim çalışma kitaplarına (işletim süreçleri) ve çalışma kitaplarına (olay yanıtları ve yükseltme yordamları) birikabilir. 
+Kullanım örneği testi tüm boşluklar için düzeltildikten sonra, öğrenilen dersler ve bunlarda toplanan ölçümler SOC ekibinizin üretim runbook'larına (işletim süreçleri) ve playbook'larına (olay yanıtları ve yükseltme yordamları) eklenebilir. 
 
-SOC ekip çalışma kitaplarının ve çalışma kitaplarının bakımı çok sayıda şekilde düzenleniyor. Her SOC ekibi kendi sorumluluğunda olabilir veya tüm ekiplerin merkezi bir depoda paylaşması için tek bir merkezi sürüm olabilir. Tek tek kuruluşlar için çalışma kitabı ve çalışma kitabı yönetimi, boyut, beceriler, roller ve görevlerin ayrımlarına dayalıdır. Çalışma kitabı güncelleştirildiğinde, çalışma kitabı güncelleştirme işleminin izlemesi gerekir. 
+SOC ekibi runbook'larının ve playbook'larının bakımı birçok yolla düzenlenebilir. Her SOC ekibi kendilerinden sorumlu olabilir veya tüm ekiplerin merkezi bir depoda paylaşabileceği tek bir merkezi sürüm olabilir. Tek tek kuruluşlar için runbook ve playbook yönetimi, görevlerin boyutunu, beceri kümelerini, rollerini ve ayrımını temel alır. Bir runbook güncelleştirildikten sonra playbook güncelleştirme işlemi izlenmelidir. 
 
 ## <a name="use-a-standard-framework-for-escalation"></a>Yükseltme için standart çerçeve kullanma
 
-Playbooks, başarılı bir tümleştirme ve kullanım durumu sınamasına dayalı olarak, gerçek bir etkinlik gerçekleşirken SOC ekiplerinin izlemesi gereken adımlardır. Bu nedenle SOC'nin, olay yanıtı için en önde gelen endüstri standartlarından biri haline gelen [NIST](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) Olay Yanıt Standardı gibi, olay yanıtı için resmi bir yaklaşım benimser.
+Playbook'lar, kullanım örneğinin başarılı tümleştirmesine ve testine bağlı olarak gerçek bir olay gerçekleştiğinde SOC ekiplerinin izlemesi gereken adımlardır. Bu nedenle, SOC'nin olay yanıtı için önde gelen endüstri standartlarından biri haline gelen [NIST Olay Yanıtı Standardı](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) gibi olay yanıtına yönelik resmi bir yaklaşım izlemesi zorunludur.
 
-NIST dört adımlı olay yanıt süreci dört aşama içerir:
+NIST dört adımlı olay yanıtı işlemi dört aşama içerir:
 
 1.  Hazırlık
-2.  Algılama ve çözümleme
-3.  Içeren, s silme ve kurtarma
+2.  Algılama ve analiz
+3.  Kapsama, silme ve kurtarma
 4.  Olay sonrası etkinlik
 
-### <a name="example-tracking-preparation-phase-activity"></a>Örnek: İzleme hazırlık aşaması etkinliği
+### <a name="example-tracking-preparation-phase-activity"></a>Örnek: Hazırlık aşaması etkinliğini izleme
 
-Yükseltme çalışma kitabının temel temellerinden biri, her SOC ekibinin bir olay veya olaydan önce, olay sırasında ve sonrasında ne yapması gerektiğinin biraz açıklığı olmamasını sağlamaktır. Bu nedenle, adım adım yönergeleri listeli yapmak iyi bir yöntemdir. 
+Yükseltme playbook'unun temel temellerinden biri, her SOC ekibinin bir etkinlik veya olaydan önce, olay sırasında ve sonrasında ne yapması gerektiğiyle ilgili çok az belirsizlik olduğundan emin olmaktır. Bu nedenle, adım adım yönergeleri listelemek iyi bir uygulamadır. 
 
-Örneğin, Hazırlık aşaması görevlerin bir if/then veya XoR matrisini içerebilir. Yeni kimlik avı değişken örneğinde kullanım durumu söz konusu olduğu durumlarda, böyle bir matris aşağıdakine benzer olabilir:
+Örneğin, Hazırlık aşaması bir if/then veya XoR görev matrisi içerebilir. Yeni kimlik avı değişken örneği kullanım örneği söz konusu olduğunda, böyle bir matris aşağıdaki gibi görünebilir:
 
-| Yükseltme Neden Garanti Edildi? | Sonraki Adım |
+| Yükseltme Neden Garanti Edilir? | Sonraki Adım |
 |:-------|:-----|
-| SOC İzlemesinde 500/saat için > **olarak derecelendirilen uyarı** | Çalışma Kitabı A, Bölüm 2, Etkinlik 5'e gidin (çalışma kitabı bölümüne bağlantı içeren) |
-| eCommerce olası DDoS saldırılarını bildirdi | Invoke Playbook B-Section C, Activity 19 (çalışma kitabı bölümüne bağlantı içeren) |
-| Yönetici kimlik avı girişimi olarak şüpheli bir e-posta bildirdi | Playbook 5, Bölüm 2, Etkinlik 5'e gidin (çalışma kitabı bölümüne bağlantı içeren) |
+| SoC İzleme'de uyarı, **500/saat** > **kritik** olarak tetiklenmiş olarak derecelendirilmiştir | Playbook A, Bölüm 2, Etkinlik 5'e gidin (playbook bölümünün bağlantısıyla) |
+| e-Ticaret olası DDoS saldırısı bildirdi | Playbook B-Section C, Etkinlik 19'u çağırma (playbook bölümünün bağlantısıyla) |
+| Yönetici şüpheli bir e-postayı zıpkınla kimlik avı girişimi olarak bildirdi | Playbook 5, Bölüm 2, Etkinlik 5'e gidin (playbook bölümünün bağlantısıyla) |
 |||
 
-Hazırlık aşamasını yürüttkten sonra, kuruluşlar NIST tarafından ana hatlarıyla belirtilen kalan aşamaları çağıracak şekilde çağırmaları gerekir:
+Hazırlık aşamasını yürüten kuruluşlar, NIST tarafından özetlenen kalan aşamaları çağırmalıdır:
 
-- Algılama ve çözümleme
-- Içeren, s silme ve kurtarma
+- Algılama ve analiz
+- Kapsama, silme ve kurtarma
 - Olay sonrası etkinlik 
 
 ## <a name="next-step"></a>Sonraki adım

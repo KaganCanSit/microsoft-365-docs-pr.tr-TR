@@ -1,7 +1,7 @@
 ---
-title: E-postada uyarıları Microsoft 365 Defender
-description: Cihazlar, kullanıcılar ve posta kutuları genelinde görülen uyarıları araştırabilirsiniz.
-keywords: olaylar, uyarılar, araştırma, çözümleme, yanıt, korelasyon, saldırı, makineler, cihazlar, kullanıcılar, kimlikler, kimlik, posta kutusu, e-posta, 365, microsoft, m365
+title: Microsoft 365 Defender'da uyarıları araştırma
+description: Cihazlar, kullanıcılar ve posta kutuları arasında görülen uyarıları araştırın.
+keywords: olaylar, uyarılar, araştırma, analiz etme, yanıt, bağıntı, saldırı, makineler, cihazlar, kullanıcılar, kimlikler, kimlik, posta kutusu, e-posta, 365, Microsoft, m365
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -21,53 +21,53 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: c09a3880a9f117d0ce5ce6e5edf3736192fc9c95
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 20ae5bd77b9a4a962093db1e3d92d8f765a9a9a3
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499869"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64664710"
 ---
-# <a name="investigate-alerts-in-microsoft-365-defender"></a>E-postada uyarıları Microsoft 365 Defender
+# <a name="investigate-alerts-in-microsoft-365-defender"></a>Microsoft 365 Defender'da uyarıları araştırma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
 - Microsoft 365 Defender
 
 >[!Note]
->Bu makalede, E-Posta'da güvenlik Microsoft 365 Defender. Bununla birlikte, kullanıcılar etkinlik bildiriminde belirli etkinlikler gerçekleştirecekken kendinize veya diğer yöneticilere e-posta bildirimleri göndermek için etkinlik uyarılarını Microsoft 365. Daha fazla bilgi için bkz[. Etkinlik uyarıları oluşturma - Uyumluluk Microsoft 365'| Microsoft Docs](../../compliance/create-activity-alerts.md).
+>Bu makalede Microsoft 365 Defender'deki güvenlik uyarıları açıklanmaktadır. Ancak, kullanıcılar Microsoft 365 belirli etkinlikler gerçekleştirdiğinde kendinize veya diğer yöneticilere e-posta bildirimleri göndermek için etkinlik uyarılarını kullanabilirsiniz. Daha fazla bilgi için bkz. [Etkinlik uyarıları oluşturma - Microsoft 365 Uyumluluk | Microsoft Docs](../../compliance/create-activity-alerts.md).
 
-Uyarılar tüm olayların temeli olup, ortamınıza kötü amaçlı veya şüpheli olayların ortaya çıkmasını sağlar. Uyarılar normalde daha geniş bir saldırının bir parçası olur ve bir olay hakkında ipucu sağlar.
+Uyarılar tüm olayların temelini oluşturur ve ortamınızda kötü amaçlı veya şüpheli olayların oluştuğuna işaret eder. Uyarılar genellikle daha geniş kapsamlı bir saldırının parçasıdır ve bir olay hakkında ipuçları sağlar.
 
-Daha Microsoft 365 Defender, ilgili uyarılar olay oluşturmak için bir [araya toplanır](incidents-overview.md). Ancak, olaylar her zaman bir saldırının daha geniş bağlamını sağlayacaktır; ancak daha derin çözümleme yapmak gerektiğinde uyarıları çözümlemek değerli olabilir.
+Microsoft 365 Defender'da, ilgili uyarılar [olayları](incidents-overview.md) oluşturmak için bir araya toplanır. Olaylar her zaman bir saldırının daha geniş bağlamını sağlar, ancak daha derin analiz gerektiğinde uyarıları analiz etmek değerli olabilir.
 
-Uyarılar **sırası geçerli** uyarı kümelerini gösterir. Microsoft 365 Defender portalının hızlı başlatında, Olaylar **& veya Uyarılar >** sırasında [uyarı kuyruğuna Microsoft 365 Defender](https://go.microsoft.com/fwlink/p/?linkid=2077139).
+**Uyarılar kuyruğu** geçerli uyarı kümesini gösterir. Microsoft 365 Defender [portalının](https://go.microsoft.com/fwlink/p/?linkid=2077139) hızlı başlatılması sırasında **Olaylar & uyarılar > Uyarılar'dan uyarılar** kuyruğuna ulaşabilirsiniz.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-queue.png" alt-text="Microsoft 365 Defender portalında Uyarılar bölümü" lightbox="../../media/investigate-alerts/alerts-ss-alerts-queue.png":::
+:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-queue.png" alt-text="Microsoft 365 Defender portalındaki Uyarılar bölümü" lightbox="../../media/investigate-alerts/alerts-ss-alerts-queue.png":::
 
-Uyarı, güvenlik hizmeti ve güvenlik Uç Nokta için Microsoft Defender Office 365 için Microsoft Defender Microsoft Microsoft 365 Defender uyarıları burada görünür.
+Uç Nokta için Microsoft Defender, Office 365 için Microsoft Defender ve Microsoft 365 Defender gibi farklı Microsoft güvenlik çözümlerinden uyarılar burada görünür.
 
-Varsayılan olarak, portalda Microsoft 365 Defender sırasındaki uyarı sırası son 30 gün içinde gelen yeni ve devam eden uyarıları görüntüler. En son uyarı listenin en üstünde yer alıyor, böylece ilk olarak siz de onu görüyorsunuz. 
+Varsayılan olarak, Microsoft 365 Defender portalındaki uyarılar kuyruğu son 30 güne ait yeni ve devam eden uyarıları görüntüler. En son uyarı listenin en üstündedir, böylece önce siz görebilirsiniz. 
 
-Varsayılan uyarılar kuyruğundan Filtre'yi seçerek **uyarıların bir** alt kümesini belirtebilirsiniz. Filtre bölmesini görmek için bu bölmeyi de görebilirsiniz. İşte bir örnek.
+Varsayılan uyarılar kuyruğundan **Filtre'yi** seçerek bir **Filtre** bölmesi görebilirsiniz. Bu bölmeden uyarıların bir alt kümesini belirtebilirsiniz. İşte bir örnek.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-filter.png" alt-text="Filtre portalının Filtreler Microsoft 365 Defender." lightbox="../../media/investigate-alerts/alerts-ss-alerts-filter.png":::
+:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-filter.png" alt-text="Microsoft 365 Defender portalındaki Filtreler bölümü." lightbox="../../media/investigate-alerts/alerts-ss-alerts-filter.png":::
 
-Uyarıları şu ölçütlere göre filtreleyabilirsiniz:
+Uyarıları şu ölçütlere göre filtreleyebilirsiniz:
 
-- Önem Derecesi
+- Önem
 - Durum
 - Hizmet kaynakları
-- Varlıklar (etkilene varlıklar)
-- Otomatik soruşturma durumu
+- Varlıklar (etkilenen varlıklar)
+- Otomatik araştırma durumu
 
-## <a name="required-roles-for-defender-for-office-365-alerts"></a>Uyarılarda Office 365 için Defender rolleri
+## <a name="required-roles-for-defender-for-office-365-alerts"></a>Office 365 için Defender uyarıları için gerekli roller
 
-Bu uyarılara erişmek için aşağıdaki rollerden herhangi biri Office 365 için Microsoft Defender gerekir:
+Office 365 için Microsoft Defender uyarılarına erişmek için aşağıdaki rollerden birine sahip olmanız gerekir:
 
-- Daha Azure Active Directory (Azure AD) genel rolleri için:
+- Azure Active Directory (Azure AD) genel rolleri için:
 
    - Genel yönetici
 
@@ -77,7 +77,7 @@ Bu uyarılara erişmek için aşağıdaki rollerden herhangi biri Office 365 iç
 
    - Genel Okuyucu
 
-   - Güvenlik Okuyucu
+   - Güvenlik Okuyucusu
 
 - Office 365 Güvenlik & Uyumluluk Rol Grupları
 
@@ -85,134 +85,134 @@ Bu uyarılara erişmek için aşağıdaki rollerden herhangi biri Office 365 iç
 
    - Kuruluş Yönetimi 
 
-- Özel [bir rol](custom-roles.md)
+- [Özel bir rol](custom-roles.md)
 
-## <a name="analyze-an-alert"></a>Uyarıyı çözümleme
+## <a name="analyze-an-alert"></a>Uyarıyı analiz etme
 
 Ana uyarı sayfasını görmek için uyarının adını seçin. İşte bir örnek.
 
 :::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-main.png" alt-text="Microsoft 365 Defender portalında uyarının ayrıntıları" lightbox="../../media/investigate-alerts/alerts-ss-alerts-main.png":::
 
-Ayrıca, Uyarıyı yönet **bölmesinden Ana uyarı sayfasını** aç **eylemlerini de seçin** .
+Uyarıyı **yönet** **bölmesinden Ana uyarı sayfasını aç** eylemini de seçebilirsiniz.
 
-Bu bölümlerde bir uyarı sayfası oluşur: 
+Uyarı sayfası şu bölümlerden oluşur: 
 
-- Bu uyarıyla ilgili olayların ve uyarıların zinciri olan ve kronolojik sırayla uyarı hikayesi
+- Bu uyarıyla ilgili olayların ve uyarıların kronolojik sırada zinciri olan uyarı hikayesi
 - Özet ayrıntıları
 
-Uyarı sayfası genelinde, herhangi bir varlığın yanındaki üç noktayı (**...**) seçerek uyarıyı başka bir olayla bağlama gibi kullanılabilir eylemleri görebilirsiniz. Kullanılabilir eylemlerin listesi uyarının türüne bağlıdır.
+Uyarı sayfası boyunca, uyarıyı başka bir olaya bağlama gibi kullanılabilir eylemleri görmek için herhangi bir varlığın yanındaki üç noktayı (**...**) seçebilirsiniz. Kullanılabilir eylemlerin listesi uyarı türüne bağlıdır.
 
-### <a name="alert-sources"></a>Kaynakları uyarın
+### <a name="alert-sources"></a>Uyarı kaynakları
 
-Microsoft 365 Defender uyarıları alan, alan, Uç Nokta için Microsoft Defender, Office 365 için Microsoft Defender gibi çözümlerden gelebilir. Microsoft Defender for Cloud Apps için eklenti ve uygulama yönetimi Microsoft Defender for Cloud Apps. Uyarıda, ön karakter içeren uyarılar farkedebilirsiniz. Aşağıdaki tablo, uyarı kaynaklarının eşlemesini, uyarının ön ekli karakterini temel alarak anlamanıza yardımcı olacak kılavuz bilgiler sağlar.
+Microsoft 365 Defender uyarılar Uç Nokta için Microsoft Defender, Office 365 için Microsoft Defender gibi çözümlerden gelebilir Microsoft Defender for Cloud Apps ve Microsoft Defender for Cloud Apps için uygulama idare eklentisi. Uyarıda önceden eklenmiş karakterler içeren uyarılar fark edebilirsiniz. Aşağıdaki tabloda uyarının ekli karakterine göre uyarı kaynaklarının eşlemesini anlamanıza yardımcı olacak yönergeler sağlanmaktadır.
 
 > [!NOTE]
-> - Hazır GUID'ler yalnızca birleşik uyarılar sırası, birleşik uyarılar sayfası, birleşik araştırma ve birleşik olay gibi birleşik deneyimlere özeldir.
-> - Önki karakter uyarının GUID'sini değiştirmez. GUID'ye yapılan tek değişiklik, ön bileşendir.
+> - Önceden eklenen GUID'ler yalnızca birleşik uyarılar kuyruğu, birleşik uyarılar sayfası, birleşik araştırma ve birleştirilmiş olay gibi birleşik deneyimlere özeldir.
+> - Ekli karakter uyarının GUID değerini değiştirmez. GUID'de yapılan tek değişiklik, önceden eklenen bileşendir.
 
-| Uyarı kaynağı | Ön uç karakteri |
+| Uyarı kaynağı | Ekli karakter |
 | :---|:--- |
 | Office 365 için Microsoft Defender | `fa{GUID}` <br> Örnek: `fa123a456b-c789-1d2e-12f1g33h445h6i` |
 | Uç Nokta için Microsoft Defender | `da` veya `ed` özel algılama uyarıları için <br> |
 | Kimlik için Microsoft Defender | `aa{GUID}` <br> Örnek: `aa123a456b-c789-1d2e-12f1g33h445h6i` |
 | Bulut Uygulamaları için Microsoft Defender |`ca{GUID}` <br> Örnek: `ca123a456b-c789-1d2e-12f1g33h445h6i` |
 
-### <a name="analyze-affected-assets"></a>Etkilenen varlıkları çözümleme
+### <a name="analyze-affected-assets"></a>Etkilenen varlıkları analiz etme
 
-**Yapılan Eylemler** bölümünde, bu uyarıdan etkilenen posta kutuları, cihazlar ve kullanıcılar gibi etkilenen varlıkların listesi yer almaktadır. 
+**Gerçekleştirilen eylemler** bölümünde posta kutuları, cihazlar ve bu uyarıdan etkilenen kullanıcılar gibi etkilenen varlıkların listesi bulunur. 
 
-Ayrıca, aynı **portalda İşlem merkezi'nin** **Geçmiş** sekmesini görüntülemek **için İşlem merkezinde** görüntüle'yi Microsoft 365 Defender. 
+ayrıca **, Microsoft 365 Defender portalında İşlem merkezinin** **Geçmiş** sekmesini görüntülemek için **İşlem merkezinde** görüntüle'yi de seçebilirsiniz. 
 
-### <a name="trace-an-alerts-role-in-the-alert-story"></a>Uyarı hikayesinde uyarının rolünü izleme
+### <a name="trace-an-alerts-role-in-the-alert-story"></a>Uyarı yazısında uyarının rolünü izleme
 
-Uyarı hikayesinde, bir işlem ağacı görünümünde uyarıyla ilgili tüm varlıklar veya varlıklar görüntülenir. Seçili uyarının sayfasına ilk kez geldiğinde, başlıkta uyarı odakta olan uyarıdır. Uyarı hikayesinde yer alan varlıklar genişletilebilir ve tıklanabilir. Bunlar ek bilgi sağlar ve uyarı sayfası bağlamında hemen işlemnize izin vererek yanıt sürecinizi hızlandırtır. 
+Uyarı hikayesi, bir işlem ağacı görünümünde uyarıyla ilgili tüm varlıkları veya varlıkları görüntüler. Başlıktaki uyarı, seçtiğiniz uyarının sayfasına ilk kez girdiğinizde odakta olan uyarıdır. Uyarı hikayesindeki varlıklar genişletilebilir ve tıklanabilir. Ek bilgiler sağlar ve uyarı sayfası bağlamında işlem yapmanıza olanak tanıyarak yanıtınızı hızlandırırlar. 
 
 > [!NOTE]
-> Uyarı anlatısı bölümü, seçtiğiniz uyarıdan önce veya sonra görünen aynı yürütme ağacıyla ilgili ek uyarılar içeren birden fazla uyarı içerebilir.
+> Uyarı hikayesi bölümünde birden fazla uyarı bulunabilir ve seçtiğiniz uyarıdan önce veya sonra aynı yürütme ağacıyla ilgili ek uyarılar görüntülenir.
 
-### <a name="view-more-alert-information-on-the-details-page"></a>Ayrıntılar sayfasında daha fazla uyarı bilgisi görüntüleme
+### <a name="view-more-alert-information-on-the-details-page"></a>Ayrıntılar sayfasında daha fazla uyarı bilgisi görüntüleyin
 
-Ayrıntılar sayfasında, seçilen uyarının ayrıntıları ve bu uyarıyla ilgili eylemlerle birlikte ayrıntılar görüntülenir. Uyarı hikayesinde etkilenen varlıklardan veya varlıklardan herhangi birini seçtiysanız, ayrıntılar sayfası seçili nesne için bağlamsal bilgi ve eylemler sağlamak üzere değişir.
+Ayrıntılar sayfası, seçili uyarının ayrıntılarını ve bununla ilgili ayrıntıları ve eylemleri gösterir. Uyarı yazısında etkilenen varlıklardan veya varlıklardan herhangi birini seçerseniz, ayrıntılar sayfası seçili nesne için bağlamsal bilgiler ve eylemler sağlayacak şekilde değişir.
 
-İlgi alanı olan bir varlık seçtikten sonra, ayrıntılar sayfasında seçili varlık türü, varsa tarihi bilgiler ve bu varlık üzerinde doğrudan uyarı sayfasından işlem görüntüleme seçenekleri görüntülenir.
+İlgilendiğiniz bir varlığı seçtikten sonra ayrıntılar sayfası seçili varlık türüyle ilgili bilgileri, kullanılabilir olduğunda geçmiş bilgileri ve doğrudan uyarı sayfasından bu varlık üzerinde eylem gerçekleştirme seçeneklerini görüntüleyecek şekilde değişir.
 
-## <a name="manage-alerts"></a>Uyarıları yönetme
+## <a name="manage-alerts"></a>Uyarıları yönetin
 
-Uyarıyı yönetmek için, **uyarı sayfasının** özet ayrıntılar bölümünde Uyarıyı yönet'i seçin. Tek bir uyarı için, burada Uyarıyı yönet **bölmesinin bir örneği** ve gösterilir.
+Uyarıyı yönetmek için uyarı sayfasının özet ayrıntıları bölümünde Uyarıyı **yönet'i** seçin. Tek bir uyarı için **Uyarıyı yönet** bölmesinin bir örneği aşağıda verilmiştır.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-manage.png" alt-text="Microsoft 365 Defender portalında Manage alert bölümü" lightbox="../../media/investigate-alerts/alerts-ss-alerts-manage.png":::
+:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-manage.png" alt-text="Microsoft 365 Defender portalındaki Uyarıyı yönet bölümü" lightbox="../../media/investigate-alerts/alerts-ss-alerts-manage.png":::
 
-Yönet **uyarı bölmesi** şunları görüntülemenizi veya belirtmenizi sağlar:
+**Uyarıyı yönet** bölmesi şunları görüntülemenize veya belirtmenize olanak tanır:
 
-- Uyarı durumu (Yeni, Çözümlendi, Sürüyor).
-- Uyarının atandığı kullanıcı hesabı.
+- Uyarı durumu (Yeni, Çözüldü, Sürüyor).
+- Uyarıya atanan kullanıcı hesabı.
 - Uyarının sınıflandırması:
 
-   - **Ayarlanmaz** (varsayılan).
+   - **Ayarlanmadı** (varsayılan).
 
-   - **Bir tehdit** türünde gerçek pozitif sonuç. Gerçek bir tehditi doğru belirten uyarılar için bu sınıflandırmayı kullanın. Tehdit türünü belirtmek, güvenlik ekibinin tehdit düzenlerini görmelerine ve organizasyonunu onlardan savunmaya yardımcı olur.
+   - Bir tehdit türüyle **gerçek pozitif**. Gerçek bir tehdidi doğru şekilde gösteren uyarılar için bu sınıflandırmayı kullanın. Tehdit türünü belirtmek, güvenlik ekibinizin tehdit desenlerini görmesine ve kuruluşunuzu onlardan korumak için harekete geçilmesine yardımcı olur.
 
-   - **Bilgilendirme, etkinlik türüyle** beklenen etkinlik. Bu kategorideki seçenekleri, güvenlik testleri, kırmızı ekip etkinliği ve güvenilir uygulamalar ve kullanıcılardan beklenen alışılmışın dışında bir davranışa yönelik uyarıları sınıflandırmak için kullanın.
+   - Bir etkinlik türüyle **bilgilendirici, beklenen** etkinlik. Güvenlik testlerine, kırmızı ekip etkinliğine ve güvenilen uygulama ve kullanıcılardan beklenen olağan dışı davranışlara yönelik uyarıları sınıflandırmak için bu kategorideki seçenekleri kullanın.
 
-   - **Kötü amaçlı** etkinlik olduğunda bile oluşturulan uyarı türleri için hatalı pozitif sonuç. Uyarıların hatalı pozitif olarak sınıflanması, Microsoft 365 Defender kalitesini geliştirmelerine yardımcı olur.
+   - Kötü amaçlı etkinlik olmadığında bile oluşturulan uyarı türleri için **hatalı pozitif**. Uyarıları hatalı pozitif olarak sınıflandırmak Microsoft 365 Defender algılama kalitesini artırmaya yardımcı olur.
 
 - Uyarıyla ilgili bir açıklama.
 
 > [!NOTE]
-> Etiketlerin kullanımıyla uyarıyı yönetmenin bir yolu. Bu özellik için etiketleme Office 365 için Microsoft Defender artımlı olarak dağıtımdadır ve şu anda önizlemededir. <br>
-> Şu anda, değiştirilmiş etiket adları yalnızca güncelleştirmeden sonra oluşturulan *uyarılara* uygulanır. Değişiklik öncesinde oluşturulan uyarılar, güncelleştirilmiş etiket adını yansıtmaz. 
+> Etiketleri kullanarak uyarıları yönetmenin bir yolu. Office 365 için Microsoft Defender etiketleme özelliği artımlı olarak kullanıma sunulmuştur ve şu anda önizleme aşamasındadır. <br>
+> Şu anda değiştirilen etiket adları yalnızca *güncelleştirmeden sonra* oluşturulan uyarılara uygulanır. Değişiklik öncesinde oluşturulan uyarılar güncelleştirilmiş etiket adını yansıtmaz. 
 
-Belirli bir *uyarıya benzer bir uyarı* kümesi yönetmek için uyarı sayfasının özet ayrıntılar  bölümündeki **INSIGHT** kutusunda Benzer uyarıları görüntüle'yi seçin.
+*Belirli bir uyarıya benzer bir uyarı kümesini yönetmek için* uyarı sayfasının özet ayrıntıları bölümündeki **INSIGHT** kutusunda **Benzer uyarıları görüntüle'yi** seçin.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-manage-select.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-manage-select.png" alt-text="Portalda uyarı Microsoft 365 Defender yönetme":::
+:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-manage-select.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-manage-select.png" alt-text="Microsoft 365 Defender portalında uyarıyı yönetme":::
 
-Uyarıları **yönet bölmesinden** , ilgili uyarıların hepsini aynı anda sınıflandırabilirsiniz. İşte bir örnek.
+**Uyarıları yönet** bölmesinden, tüm ilgili uyarıları aynı anda sınıflandırabilirsiniz. İşte bir örnek.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-select-related.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-select-related.png" alt-text="Portalda ilgili uyarıları Microsoft 365 Defender yönetme":::
+:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-select-related.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-select-related.png" alt-text="Microsoft 365 Defender portalında ilgili uyarıları yönetme":::
 
-Benzer uyarılar geçmişte zaten sınıflandırılmışsa, diğer uyarıların nasıl çözülmüş olduğunu öğrenmek için Microsoft 365 Defender öneriler kullanarak zamandan tasarruf edin. Özet ayrıntıları bölümünde, **Tamam'ı Öneriler**.
+Benzer uyarılar geçmişte zaten sınıflandırıldıysa, diğer uyarıların nasıl çözüldüğünü öğrenmek için Microsoft 365 Defender önerileri kullanarak zaman kazanabilirsiniz. Özet ayrıntıları **bölümünden Öneriler'ı** seçin.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-recommendations.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-recommendations.png" alt-text="Uyarı için öneriler seçme örneği":::
+:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-recommendations.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-recommendations.png" alt-text="Uyarı önerileri seçme örneği":::
 
-Bu **Öneriler** araştırma, düzeltme ve önleme için sonraki adım eylemleri ve öneriler sağlar. İşte bir örnek.
+**Öneriler** sekmesi araştırma, düzeltme ve önleme için sonraki adım eylemler ve öneriler sağlar. İşte bir örnek.
 
 :::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-recommendations-example.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-recommendations-example.png" alt-text="Uyarı önerileri örneği":::
 
 ## <a name="resolve-an-alert"></a>Uyarıyı çözme
 
-Bir uyarıyı çözümlemeyi bitirerek bu uyarıyı çözümleyene kadar, uyarı veya  benzer uyarılar için Uyarıyı yönet bölmesine gidin, durumu Çözümlendi olarak işaretleyebilirsiniz ve ardından bir tehdit türüyle,  Bilgi amaçlı **,** beklenen bir etkinlik türüyle veya Yanlış pozitif türünde bir True olarak sınıflandırın **.**
+Bir uyarıyı çözümlemeyi tamamladıktan ve çözümlenebildiğiniz zaman, uyarı veya benzer uyarılar için **Uyarıyı yönet** bölmesine gidin ve durumu **Çözüldü** olarak işaretleyin ve ardından bir tehdit **türü,** **Bilgilendirici,** etkinlik türüyle beklenen etkinlik veya **Hatalı pozitif** olarak sınıflandırın.
 
-Uyarıların sınıflanması, algılama Microsoft 365 Defender geliştirmelerine yardımcı olur.
+Uyarıları sınıflandırmak Microsoft 365 Defender algılama kalitesini artırmaya yardımcı olur.
 
-## <a name="use-power-automate-to-triage-alerts"></a>Uyarıların Power Automate için uyarıların önce gelen durumuyla ilgili bilgileri kullanma
+## <a name="use-power-automate-to-triage-alerts"></a>Uyarıları önceliklendirmek için Power Automate kullanma
 
-Modern güvenlik işlemlerinin (SecOps) ekiplerinin etkin bir şekilde çalışması için otomasyona ihtiyacı olur. SecOps ekipleri, gerçek tehditlere karşı aramalara ve gerçek tehditlere karşı Power Automate için uyarı listesinin öncelerini kaldırmak ve tehdit olmayanları ortadan kaldırmak için bu uyarıları kullanır.  
+Modern güvenlik operasyonları (SecOps) ekiplerinin etkili bir şekilde çalışması için otomasyon gerekir. SecOps ekipleri, gerçek tehditleri avlamaya ve araştırmaya odaklanmak için Power Automate kullanarak uyarı listesini önceliklendirmek ve tehdit olmayanları ortadan kaldırır.  
 
 ### <a name="criteria-for-resolving-alerts"></a>Uyarıları çözümleme ölçütleri
 
-- Kullanıcı Ofis dışında iletisi açık
+- Kullanıcının İşyeri Dışında iletisi açık
 
-- Kullanıcı yüksek risk olarak etiketlenmiş değil
+- Kullanıcı yüksek riskli olarak etiketlenmemiş
 
-Her ikisi de doğruysa, SecOps uyarıyı yasal bir seyahat olarak işaretler ve sorunu çözer. Bu uyarı çözümlendikten Microsoft Teams bu alan alanla birlikte bir bildirim postalanmıştır.
+Her ikisi de doğruysa, SecOps uyarıyı geçerli seyahat olarak işaretler ve çözer. Uyarı çözümlendikten sonra Microsoft Teams bir bildirim gönderilir.
 
-### <a name="connect-power-automate-to-microsoft-defender-for-cloud-apps"></a>Bağlan Power Automate'Microsoft Defender for Cloud Apps
+### <a name="connect-power-automate-to-microsoft-defender-for-cloud-apps"></a>Microsoft Defender for Cloud Apps Bağlan Power Automate
 
-Otomasyon oluşturmak için, Power Automate'a bağlanamadan önce bir API belirteci Microsoft Defender for Cloud Apps.
+Otomasyonu oluşturmak için, Power Automate Microsoft Defender for Cloud Apps bağlayabilmeniz için bir API belirteci gerekir.
 
-1. Ekle **Ayarlar** e tıklayın, **Güvenlik uzantıları'yı** seçin ve ARDıNDAN API **belirteçleri** sekmesinde Belirteç **ekle'ye** tıklayın.
+1. **Ayarlar'e** tıklayın, **Güvenlik uzantıları'nı** seçin ve ardından **API belirteçleri** sekmesinde **Belirteç ekle'ye** tıklayın.
 
-2. Belirtecniz için bir ad girin ve oluştur'a **tıklayın**. Belirteci daha sonra ihtiyacınız olacak şekilde kaydedin.
+2. Belirteciniz için bir ad girin ve **Oluştur'a** tıklayın. Daha sonra ihtiyacınız olacak şekilde belirteci kaydedin.
 
 ### <a name="create-an-automated-flow"></a>Otomatik akış oluşturma
 
-Adım adım ayrıntılı işlem için buradaki videoya [bakın](https://www.microsoft.com/en-us/videoplayer/embed/RWFIRn).
+Ayrıntılı adım adım işlem için [buradaki](https://www.microsoft.com/en-us/videoplayer/embed/RWFIRn) videoya bakın.
 
-Bu videoda ayrıca, power automate to connect power automate to Bulut için Defender açık almaktadır.
+Bu videoda power automate'in Bulut için Defender Uygulamalarına nasıl bağlandığı da açıklanır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Süreç içinde yaşanan olaylarda olduğu gibi, incelemenize devam [edersiniz](investigate-incidents.md).
+İşlem içi olaylar için gerektiğinde [araştırmanıza](investigate-incidents.md) devam edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

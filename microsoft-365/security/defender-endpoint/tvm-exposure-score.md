@@ -1,7 +1,7 @@
 ---
 title: Tehdit ve Güvenlik Açığı Yönetimi'de pozlama Tehdit ve Güvenlik Açığı Yönetimi
 description: Bu Tehdit ve Güvenlik Açığı Yönetimi, organizasyonlarının siber güvenlik tehditlerine karşı ne kadar savunmasız olduğunu yansıtıyor.
-keywords: pozlama puanı, Uç nokta pozlama puanı için Microsoft Defender, Uç nokta tvm pozlama puanı için Microsoft Defender, kuruluş pozlama puanı, tvm kuruluşu pozlama puanı, Tehdit ve Güvenlik Açığı Yönetimi için Microsoft Defender Uç nokta
+keywords: pozlama puanı, Uç Nokta için Microsoft Defender maruz kalma puanı, tvm maruz kalma Uç Nokta için Microsoft Defender, kuruluşun pozlama puanı, tvm kuruluşa maruz kalma puanı, Tehdit ve Güvenlik Açığı Yönetimi, Uç Nokta için Microsoft Defender
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: a82d49e7ac6f87847e7ac61cc4451ad63c2bdeef
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: f65b48f37d1cf141611af075e55328226db6c6bd
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62997557"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471593"
 ---
 # <a name="exposure-score---threat-and-vulnerability-management"></a>Pozlama puanı - Tehdit ve Güvenlik Açığı Yönetimi
 
@@ -29,11 +29,11 @@ ms.locfileid: "62997557"
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Tehdit ve güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 Pozlama puanınız, ilgili portalın [Tehdit güvenlik açığı yönetimi panosunda](tvm-dashboard-insights.md) Microsoft 365 Defender görünür. Bu, kurumuz için siber güvenlik tehditlerine karşı ne kadar zayıf olduğunu yansıtıyor. Düşük pozlama puanı, cihazlarınızı istismara karşı daha az korumasız olduğu anlamına gelir.
 
@@ -43,7 +43,7 @@ Pozlama puanınız, ilgili portalın [Tehdit güvenlik açığı yönetimi panos
 
 Kart size zaman içinde pozlama puanı eğiliminizin üst düzey bir görünümünü sağlar. Grafikte yer alan depolar, size yüksek siber güvenlik tehditine maruz bırakıldığını ve daha fazla araştırmanız gerektirdiğinin görsel bir göstergesini sağlar.
 
-![Pozlama puanı kartı.](images/tvm_exp_score.png)
+:::image type="content" source="images/tvm_exp_score.png" alt-text="Pozlama karnesi" lightbox="images/tvm_exp_score.png":::
 
 ## <a name="how-it-works"></a>Nasıl çalışır?
 

@@ -1,8 +1,8 @@
 ### YamlMime:FAQ
 metadata:
-  title: Saldırı yüzeyini azaltma ile ilgili sık sorulan sorular (SSS)
-  description: Uç noktanın saldırı yüzeyini azaltma kuralları için Microsoft Defender hakkında sık sorulan soruların yanıtlarını bulun.
-  keywords: Attack surface reduction rules, asr, hips, host intrusion prevention system, protection rules, anti-exploit, antiexploit, exploit, infection prevention, microsoft defender for endpoint
+  title: Saldırı yüzeyini azaltma hakkında sık sorulan sorular (SSS)
+  description: Uç Nokta için Microsoft Defender saldırı yüzeyi azaltma kuralları hakkında sık sorulan soruların yanıtlarını bulun.
+  keywords: Saldırı yüzeyi azaltma kuralları, asr, kalçalar, konak yetkisiz giriş önleme sistemi, koruma kuralları, kötüye kullanıma karşı koruma, antiexploit, exploit, enfeksiyon önleme, uç nokta için microsoft defender
   ms.pagetype: security
   ms.prod: m365-security
   ms.mktglfcycl: manage
@@ -18,18 +18,18 @@ metadata:
   ms.technology: mde
   ms.collection: m365-security-compliance
   ms.date: 1/18/2022
-  ms.openlocfilehash: fbdeee9b98a0c9a3309cf0d18436fb8508afc060
-  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+  ms.openlocfilehash: 7c37f4f971ea603be2bf523568c03c84f669951c
+  ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63683789"
-title: Saldırı yüzeyini azaltma ile ilgili sık sorulan sorular (SSS)
+  ms.lasthandoff: 04/06/2022
+  ms.locfileid: "64667174"
+title: Saldırı yüzeyini azaltma hakkında sık sorulan sorular (SSS)
 summary: >
   [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-  **Aşağıdakiler için geçerlidir:**
+  **Şunlar için geçerlidir:**
 
   - [Uç Nokta için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
 
@@ -38,203 +38,207 @@ sections:
 - name: Yok sayıldı
   questions:
   - question: >
-      Saldırı yüzeyini azaltma (ASR) buma sadece bir Windows?
+      Is attack surface reduction (ASR) part of Windows?
     answer: >
-      ASR, ilk olarak Microsoft Defender Virüsten Koruma sürüm 1709'da, Windows 10'de önemli bir güncelleştirme olarak sömürün koruma özellikleri paketinin bir özelliğidir. Microsoft Defender Virüsten Koruma, yazılımdan korumanın yerel kötü amaçlı yazılımlardan koruma bileşeni Windows. Bununla birlikte, tam ASR özellik kümesi yalnızca kurumsal lisans Windows kullanılabilir. AYRıCA, ASR kuralı dışlamaların dışlamalardan ayrı Microsoft Defender Virüsten Koruma unutmayın.
+      ASR was originally a feature of the suite of exploit guard features introduced as a major update to Microsoft Defender Antivirus, in Windows 10, version 1709. Microsoft Defender Antivirus is the native antimalware component of Windows. However, the full ASR feature-set is only available with a Windows enterprise license. Also note that ASR rule exclusions are managed separately from Microsoft Defender Antivirus exclusions.
   - question: >
-      ASR kurallarını çalıştırmak için kurumsal bir lisansa ihtiyacım var mı?
+      Do I need to have an enterprise license to run ASR rules?
     answer: >
-      TÜM ASR kuralları ve özellikleri kümesi, yalnızca Windows 10 11 için kurumsal lisansınız varsa Windows. Sınırlı sayıda kural kuruluş lisansı olmadan da işe yaramadı. Microsoft 365 İş Microsoft Defender Virüsten Koruma, birincil güvenlik çözümünüz olarak işlerinizi ayarlayın ve PowerShell aracılığıyla kuralları etkinleştirin. ASR'nin kuruluş lisansı olmadan kullanımı resmi olarak destek desteklemez ve ASR'nin tüm özelliklerini kullanamadan.
+      The full set of ASR rules and features is only supported if you have an enterprise license for Windows 10 or Windows 11. A limited number of rules may work without an enterprise license. If you have Microsoft 365 Business, set Microsoft Defender Antivirus as your primary security solution, and enable the rules through PowerShell. Using ASR without an enterprise license isn't officially supported and you won't be able to use the full capabilities of ASR.
 
 
-      Lisanslama hakkında daha fazla Windows için [Lisanslama](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5) Windows 10'ne bakın ve Lisanslama Hakkında [Toplu Lisanslama Windows 10](https://download.microsoft.com/download/2/D/1/2D14FE17-66C2-4D4C-AF73-E122930B60F6/Windows-10-Volume-Licensing-Guide.pdf).
+      To learn more about Windows licensing, see [Windows 10 Licensing](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5) and get the [Volume Licensing guide for Windows 10](https://download.microsoft.com/download/2/D/1/2D14FE17-66C2-4D4C-AF73-E122930B60F6/Windows-10-Volume-Licensing-Guide.pdf).
   - question: >
-      E3 lisansım varsa ASR destek uygulamam gerekir mi?
+      Is ASR supported if I have an E3 license?
     answer: >
-      Evet. ASR, E3 ve Windows Enterprise için desteklenen bir destektir.
+      Yes. ASR is supported for Windows Enterprise E3 and above.
   - question: >
-      E5 lisansıyla desteklenen özellikler hangileridir?
+      Which features are supported with an E5 license?
     answer: >
-      E3'te desteklenen kuralların hepsi E5 ile de de desteklenen kurallardır.
+      All of the rules supported with E3 are also supported with E5.
 
 
-      E5, Uç Nokta için Defender ile daha fazla tümleştirme sağlar. E5 ile uyarıları gerçek zamanlı olarak  bakabilirsiniz, kural dışlamalarında ince ayarlamalar oluşturabilir, ASR kurallarını yapılandırabilirsiniz ve olay raporlarının listelerini görüntüabilirsiniz.
+      E5 adds greater integration with Defender for Endpoint. With E5, you can view alerts in real-time, fine-tune rule exclusions, configure ASR rules, and view lists of event reports.
   - question: >
-      Şu anda desteklenen ASR kuralları nedir?
+      What are the currently supported ASR rules?
     answer: >
-      ASR şu anda aşağıdaki kuralların hepsini desteklemektedir.
+      ASR currently supports all of the rules below.
   - question: >
-      Hangi kuralları etkinleştirecek? Hepsi bu kadar mı yoksa tek tek kuralları mı aç?
+      What rules to enable? All, or can I turn on individual rules?
     answer: >
-      Ortamınıza en uygun özellikleri bu şekilde değerlendirmenize yardımcı olmak için, denetim modunda ASR kurallarını [etkinleştirmenizi öneririz](audit-windows-defender.md). Bu yaklaşımla, organizasyon etkileyen olası etkiyi siz belirlersiniz. Örneğin, iş hattı uygulamalarınız.
+      To help you figure out what's best for your environment, we recommended that you enable ASR rules in [audit mode](audit-windows-defender.md). With this approach, you'll determine the possible affect to your organization. For example, your line-of-business applications.
   - question: >
-      ASR kuralları dışlamaları nasıl çalışır?
+      How do ASR rules exclusions work?
     answer: >
-      ASR kuralları için, tek bir dışlama eklersiniz tüm ASR kurallarını etkiler.
+      For ASR rules, if you add one exclusion, it will affect every ASR rule.
 
 
-      ASR kuralları dışlamaları joker karakterleri, yolları ve çevreyi değişkenleri destekler. ASR kurallarında joker karakterleri kullanma hakkında daha fazla bilgi için bkz. Dosya uzantısına ve klasör konumuna bağlı olarak dışlamaları yapılandırma [ve doğrulama](/windows/security/threat-protection/microsoft-defender-antivirus/configure-extension-file-exclusions-microsoft-defender-antivirus).
+      ASR rules exclusions support wildcards, paths, and environmental variables. For more information on how to use wildcards in ASR rules, see [configure and validate exclusions based on file extension and folder location](/windows/security/threat-protection/microsoft-defender-antivirus/configure-extension-file-exclusions-microsoft-defender-antivirus).
 
 
-      ASR kuralları dışlamaları (joker karakterler ve env dahil) ile ilgili aşağıdaki öğeleri bilin. değişkenler):
+      Be aware of the following items about ASR rules exclusions (including wildcards and env. variables):
 
 
-      - ASR kuralları dışlamaları, dışlama Microsoft Defender Virüsten Koruma bağımsızdır
+      - ASR rules exclusions are independent from Microsoft Defender Antivirus exclusions
 
-      - Joker karakterler sürücü harfi tanımlamak için kullanılamaz
+      - Wildcards cannot be used to define a drive letter
 
-      - Birden çok klasörü dışarıda tutmak istediğiniz bir yolda, \*iç içe birden çok klasörü göstermek için birden çok \ örneği kullanın (örneğin, c:\Klasör\*\*\Test)
+      - If you want to exclude more than one folder, in a path, use multiple instances of \*\ to indicate multiple nested folders (for example, c:\Folder\*\*\Test)
 
-      - Microsoft Endpoint Configuration Manager *joker karakterleri* (* veya ?) desteklemez
+      - Microsoft Endpoint Configuration Manager *does not* support wildcards (* or ?)
 
-      - Rastgele karakterler (otomatik dosya oluşturma) içeren bir dosyayı hariç tutmak için '?' simgesini kullanabilirsiniz (örneğin, C:\Folder\fileversion?.docx)
+      - If you want to exclude a file, that contains random characters (automated file generation), you can use the '?' symbol (for example, C:\Folder\fileversion?.docx)
 
-      - Grup İlkesi'nin ASR dışlamaları tırnakları desteklemez (altyapı uzun yolu, boşlukları vb. yerel olarak ele aecek, dolayısıyla tırnakları kullanmaya gerek yoktur)
+      - ASR exclusions in Group Policy don't support quotes (the engine will natively handle long path, spaces, etc., so there's no need to use quotes)
 
-      - ASR kuralları NT AUTHORITY\SYSTEM hesabı altında çalıştırılmıştır, dolayısıyla çevre koruma değişkenleri makine değişkenleriyle sınırlıdır.
+      - ASR rules run under NT AUTHORITY\SYSTEM account, so environmental variables are limited to machine variables.
   - question: >
-      Neleri hariç tutmak zorunda olduğumu nasıl bilim?
+      How do I know what I need to exclude?
     answer: >
-      Farklı ASR kuralları farklı koruma akışlarına sahip olur. Her zaman, yapılandıracakları ASR kuralının neye karşı korumaları ve gerçek yürütme akışı kaydırarak nasıl kaydıracaklarını düşün.
+      Different ASR rules will have different protection flows. Always think about what the ASR rule you are configuring protects against, and how the actual execution flow pans out.
 
 
-      Örnek: Doğrudan Yerel Güvenlik Yetkilisi Alt **Sistemi (** LSASS) sürecinden Windows güvenlik yetkilisi alt sistemi Okuma'dan çalarak kimlik bilgilerini engellemek bir güvenlik riski olabilir, çünkü kurumsal kimlik bilgilerini açığa çıkarabilirsiniz.
+      Example:
+
+      **Block credential stealing from the Windows local security authority subsystem**
+
+      Reading directly from Local Security Authority Subsystem (LSASS) process can be a security risk, since it might expose corporate credentials.
 
 
-      Bu kural güvenilmeyen işlemlerin LSASS belleğine doğrudan erişmesini sağlar. Bir süreç LSASS'a erişmek için OpenProcess() işlevini kullanmayı her çalıştığında ve bu işlemde sağ erişim PROCESS_VM_READ, kural özellikle bu erişimi doğru şekilde engellemektedir.
+      This rule prevents untrusted processes from having direct access to LSASS memory. Whenever a process tries to use the OpenProcess() function to access LSASS, with an access right of PROCESS_VM_READ, the rule will  specifically block that access right.
 
 
-      :::image type="content" source="images/asrfaq1.png" alt-text="LSASS çalmak için kimlik bilgilerini engelleme":::
+      :::image type="content" source="images/asrfaq1.png" alt-text="block credential stealing LSASS":::
 
 
-      Yukarıdaki örneğine bakarak, erişim hakkıyla birlikte tam yol ile birlikte dosya adını ekleme işlemi için gerçekten bir özel durum oluşturmanız gerekirse, dosya adını engellenmiş veya LSASS işlem belleğine erişim izni verildikten sonra dışarıda tutabilirsiniz. 0 değeri, ASR kurallarının bu dosyayı/işlemi yoksaymayacak ve engelley etmemesi/denetlemesi anlamına gelir.
+      Looking at the above example, if you really had to create an exception for the process that the access right was blocked, adding the filename along with full path would exclude it from being blocked and after allowed to access LSASS process memory. The value of 0 means that ASR rules will ignore this file/process and not block/audit it.
 
 
-      :::image type="content" source="images/asrfaq2.png" alt-text="dosya asr'larını dışla":::
+      :::image type="content" source="images/asrfaq2.png" alt-text="exclude files asr":::
   - question: >
-      Microsoft'un etkinleştirmesi için hangi kurallar önerilir?
+      What are the rules Microsoft recommends enabling?
     answer: >
-      Tüm olası kuralları etkinleştirmenizi öneririz. Bununla birlikte, bazı durumlarda kuralı etkinleştirme olmaması gereken durumlar vardır. Örneğin, uç noktalarınızı yönetmek için Microsoft Endpoint Configuration Manager (veya, System Center Configuration Manager - SCCM) kullanıyorsanız, PSExec ve WMI komutlarından kaynaklanan Süreç oluşturmalarını engelle özelliğini etkinleştirmenizi önerilmez.
+      We recommend enabling every possible rule. However, there are some cases where you shouldn't enable a rule. For example, we don't recommend enabling the Block process creations originating from PSExec and WMI commands rule, if you're using Microsoft Endpoint Configuration Manager (or, System Center Configuration Manager - SCCM) to manage your endpoints.
 
 
-      Herkese açık belgelerde bulunan kurala özgü her bilgiyi ve/veya uyarıyı [okumanizi kesinlikle öneririz](/microsoft-365/security/defender-endpoint/attack-surface-reduction).
+      We highly recommend you that you read each rule-specific information and/or warnings, which are available in our
 
-      kimlik bilgileri, Kimlik Bilgileri, Betikler, E-Office gibi birçok koruma sütununa yayma. WMI olay aboneliği aracılığıyla kalıcılığı engelleme dışındaki tüm ASR kuralları 1709 ve Windows üzerinde de desteklenen bir kuraldır:
+      [public documentation](/microsoft-365/security/defender-endpoint/attack-surface-reduction).
+       spanning across multiple pillars of protection, like Office, Credentials, Scripts, E-Mail, etc. All ASR rules, except for Block persistence through WMI event subscription, are supported on Windows 1709 and later:
 
+      * [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
 
-      * [Açıklardan yararlanan ve imzalı sürücüler için kötüye kullanımı engelleme](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
+      * [Block executable content from email client and webmail](attack-surface-reduction-rules-reference.md#block-executable-content-from-email-client-and-webmail)
 
-      * [E-posta istemcisi ve web postası yürütülebilir içeriğini engelleme](attack-surface-reduction-rules-reference.md#block-executable-content-from-email-client-and-webmail)
+      * [Block all Office applications from creating child processes](attack-surface-reduction-rules-reference.md#block-all-office-applications-from-creating-child-processes)
 
-      * [Tüm Office alt işlemleri oluşturmalarını engelleme](attack-surface-reduction-rules-reference.md#block-all-office-applications-from-creating-child-processes)
+      * [Block Office applications from creating executable content](attack-surface-reduction-rules-reference.md#block-office-applications-from-creating-executable-content)
 
-      * [Yürütülebilir Office yürütülebilir içerik oluşturmalarını engelleme](attack-surface-reduction-rules-reference.md#block-office-applications-from-creating-executable-content)
+      * [Block Office applications from injecting code into other processes](attack-surface-reduction-rules-reference.md#block-office-applications-from-injecting-code-into-other-processes)
 
-      * [Diğer Office başka işlemlere kod eklemelerini engelleme](attack-surface-reduction-rules-reference.md#block-office-applications-from-injecting-code-into-other-processes)
+      * [Block JavaScript or VBScript from launching downloaded executable content](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
 
-      * [JavaScript veya VBScript'in indirilen yürütülebilir içeriği başlatmalarını engelleme](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
+      * [Block execution of potentially obfuscated scripts](attack-surface-reduction-rules-reference.md#block-execution-of-potentially-obfuscated-scripts)
 
-      * [Kapatılaabilecek betikleri yürütmeyi engelleme](attack-surface-reduction-rules-reference.md#block-execution-of-potentially-obfuscated-scripts)
+      * [Block Win32 API calls from Office macro](attack-surface-reduction-rules-reference.md#block-win32-api-calls-from-office-macros)
 
-      * [Makroda Win32 API çağrılarını Office engelleme](attack-surface-reduction-rules-reference.md#block-win32-api-calls-from-office-macros)
+      * [Use advanced protection against ransomware](attack-surface-reduction-rules-reference.md#use-advanced-protection-against-ransomware)
 
-      * [Fidye yazılımlarına karşı gelişmiş koruma kullanın](attack-surface-reduction-rules-reference.md#use-advanced-protection-against-ransomware)
+      * [Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem) (lsass.exe)
 
-      * [Yerel güvenlik yetkilisi alt sisteminden (Windows) kimlik bilgilerinin](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem) çalmasını lsass.exe
+      * [Block process creations originating from PSExec and WMI commands](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)
 
-      * [PSExec ve WMI komutlarından kaynaklanan süreç oluşturma işlemlerini engelleme](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)
+      * [Block untrusted and unsigned processes that run from USB](attack-surface-reduction-rules-reference.md#block-untrusted-and-unsigned-processes-that-run-from-usb)
 
-      * [USB'den çalıştıran güvenilmeyen ve imzalanmamış işlemleri engelleme](attack-surface-reduction-rules-reference.md#block-untrusted-and-unsigned-processes-that-run-from-usb)
+      * [Block executable files from running unless they meet a prevalence, age, or trusted list criteria](attack-surface-reduction-rules-reference.md#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)
 
-      * [Yürütülebilir dosyaların yaygın bir yaş veya güvenilir liste ölçütlerine uygun olmadıkça çalıştırulmalarını engelleme](attack-surface-reduction-rules-reference.md#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)
+      * [Block Office communication applications from creating child processes](attack-surface-reduction-rules-reference.md#block-office-communication-application-from-creating-child-processes)
 
-      * [Alt Office uygulamalarının oluşturulmasını engelleme](attack-surface-reduction-rules-reference.md#block-office-communication-application-from-creating-child-processes)
+      * [Block Adobe Reader from creating child processes](attack-surface-reduction-rules-reference.md#block-adobe-reader-from-creating-child-processes)
 
-      * [Adobe Reader'ın alt işlemleri oluşturmalarını engelleme](attack-surface-reduction-rules-reference.md#block-adobe-reader-from-creating-child-processes)
-
-      * [WMI olay aboneliği aracılığıyla kalıcılığı engelleme](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)
+      * [Block persistence through WMI event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)
   - question: >
-      Yerel güvenlik yetkilisi alt sistemi varsayılan olarak etkin mi?
+      Is Local security authority subsystem enabled by default?
     answer: >
-      Saldırı Yüzeyini Azaltma (ASR) kuralı için "Windows yerel güvenlik yetkilisi alt sisteminden (lsass.exe)" kimlik bilgilerini engelleme kuralı için varsayılan durum Yapılandırılmadı olarak değişir ve varsayılan mod Engellendi olarak **ayarlanır**.  Diğer tüm ASR kuralları varsayılan durumda kalır: **Yapılandırılmadı**. Son kullanıcı bildirimlerini azaltmak için ek filtreleme mantığı kurala zaten dahil edildi. Müşteriler kuralı Denetim, Uyar veya **Devre** Dışı **Modları** **olarak yapılandırabilir** ve varsayılan modu geçersiz kılar. Bu kuralın işlevselliği aynıdır; kuralın varsayılan olarak modunda yapılandırılması veya Engelleme modunu el ile etkinleştirmeniz gerekir.  
+      The default state for the Attack Surface Reduction (ASR) rule "Block credential stealing from the Windows local security authority subsystem (lsass.exe)" will change from **Not Configured** to **Configured** and the default mode set to **Block**. All other ASR rules will remain in their default state: **Not Configured**. Additional filtering logic has already been incorporated in the rule to reduce end user notifications. Customers can configure the rule to **Audit**, **Warn** or **Disabled** modes, which will override the default mode. The functionality of this rule is the same, whether the rule is configured in the on-by-default mode, or if you enable Block mode manually.
   - question: >
-      ASR'ye başlarken bazı iyi öneriler neler?
+      What are some good recommendations for getting started with ASR?
     answer: >
-      ASR kurallarını, kısa bir süre boyunca denetim modunda çalıştırarak, asr kurallarını etkinleştirmeden önce, ASR kurallarının organizasyon üzerindeki etkisini test edin. Kuralları denetim modunda çalışırken, hatalı olarak engellenen tüm iş yeri uygulamalarını tanımlayabilir ve bunları ASR'nin dışında tutabilirsiniz.
+      Test how ASR rules will impact your organization before enabling them by running ASR rules in audit mode for a brief period of time. While you are running the rules in audit mode, you can identify any line-of-business applications that might get blocked erroneously, and exclude them from ASR.
 
 
-      Daha büyük kuruluşlar, cihazları giderek daha geniş olan alt kümelerde denetimler ve etkinleştirerek ASR kurallarını "halkalar" olarak genişletmeyi düşünseler. Intune veya Grup İlkesi yönetim aracını kullanarak, kuruluş cihazlarını halkalar içine yerleştirebilirsiniz.
+      Larger organizations should consider rolling out ASR rules in "rings," by auditing and enabling rules in increasingly broader subsets of devices. You can arrange your organization's devices into rings by using Intune or a Group Policy management tool.
   - question: >
-      Bir ASR kuralını etkinleştirmeden önce denetim modunda ne kadar süreyle test  gerekir?
+      How long should I test an ASR rule in audit mode before enabling it?
     answer: >
-      Kuralın, tüm kuruluş genelinde geçerlik yaşamakla birlikte çalışması için iyi bir taban çizgisi elde etmek için, yaklaşık 30 gün boyunca denetimi modunda tutabilirsiniz. Denetim döneminde, kural tarafından engellenmiş durumda olan tüm iş yeri uygulamalarını tanımlayabilir ve kuralı bunları dışarıda bırakacak şekilde yapılandırabilirsiniz.
+      Keep the rule in audit mode for about 30 days to get a good baseline for how the rule will operate once it goes live throughout your organization. During the audit period, you can identify any line-of-business applications that might get blocked by the rule, and configure the rule to exclude them.
   - question: >
-      Üçüncü taraf bir güvenlik çözümünden Uç Nokta için Defender'a geçiş yapıyorum. Kuralları başka bir güvenlik çözümünden ASR'ye aktarmanın "kolay" bir yolu var mı?
+      I'm making the switch from a third-party security solution to Defender for Endpoint. Is there an "easy" way to export rules from another security solution to ASR?
     answer: >
-      Çoğu durumda, kuralları başka bir güvenlik çözümünden içeri aktarmayı denemeden, Uç Nokta için [Defender'ın](/windows/security/threat-protection) önerdiği taban çizgisi önerileriyle başlamak daha kolay ve daha iyi olur. Ardından, yeni çözümlerinizi benzersiz ihtiyaçlarına uygun olarak yapılandırmak için denetim modu, izleme ve çözümleme gibi araçları kullanın.
+      In most cases, it's easier and better to start with the baseline recommendations suggested by [Defender for Endpoint](/windows/security/threat-protection) than to attempt to import rules from another security solution. Then, use tools such as audit mode, monitoring, and analytics to configure your new solution to suit your unique needs.
 
 
-      Çoğu ASR kuralı için varsayılan yapılandırma, Uç Nokta'nın gerçek zamanlı koruması için Defender'la birlikte, çok sayıda açıktan yararlanmaya ve güvenlik açıklarına karşı koruma sağlar.
+      The default configuration for most ASR rules, combined with Defender for Endpoint's real-time protection, will protect against a large number of exploits and vulnerabilities.
 
 
-      Belirli yazılım davranışlarına izin vermek ve engellemek için, Uç Nokta için Defender'ın içinde özel göstergelerle savunmalarınızı güncelleştirebilirsiniz. ASR, dosya ve klasör dışlamaları şeklinde kuralların bazı özelleştirmelerini de sağlar. Genel bir kural olarak, bir kuralı belirli bir süre denetlendirin ve engellenmiş olabileceğiniz tüm iş hattı uygulamaları için dışlamaları yapılandırın.
+      From within Defender for Endpoint, you can update your defenses with custom indicators, to allow and block certain software behaviors. ASR also allows for some customization of rules, in the form of file and folder exclusions. As a general rule, it is best to audit a rule for a period of time, and configure exclusions for any line-of-business applications that might get blocked.
   - question: >
-      ASR, yolda sistem değişkenlerini ve joker karakterleri içeren dosya veya klasör dışlamalarını destekler mi?
+      Does ASR support file or folder exclusions that include system variables and wildcards in the path?
     answer: >
-      Evet. [ASR kurallarında](enable-attack-surface-reduction.md#exclude-files-and-folders-from-asr-rules) yer alan dosyalar veya klasörleri dışarıda tutma hakkında daha fazla ayrıntı için bkz. ASR kurallarından dosya ve klasörleri dışlama [](/windows/security/threat-protection/microsoft-defender-antivirus/configure-extension-file-exclusions-microsoft-defender-antivirus#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists) ve dışlanan dosya yollarında sistem değişkenlerini ve joker karakterleri kullanma hakkında daha fazla bilgi için, dosya uzantısına ve klasör konumuna bağlı olarak dışlamaları yapılandırma ve doğrulama.
+      Yes. See [Excluding files and folders from ASR rules](enable-attack-surface-reduction.md#exclude-files-and-folders-from-asr-rules) for more details on excluding files or folders from ASR rules, and [Configure and validate exclusions based on file extension and folder location](/windows/security/threat-protection/microsoft-defender-antivirus/configure-extension-file-exclusions-microsoft-defender-antivirus#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists) for more on using system variables and wildcards in excluded file paths.
   - question: >
-      ASR kuralları varsayılan olarak tüm uygulamaları kapsıyor mu?
+      Do ASR rules cover all applications by default?
     answer: >
-      Kurala bağlıdır. ASR kurallarının çoğu Word, Microsoft Office, Excel, PowerPoint, OneNote veya başka hizmetlerde Outlook. Kapatılmıştır olabilecek betikleri *yürütmeyi engelle gibi* bazı ASR kuralları kapsam olarak daha geneldir.
+      It depends on the rule. Most ASR rules cover the behavior of Microsoft Office products and services, such as Word, Excel, PowerPoint, and OneNote, or Outlook. Certain ASR rules, such as *Block execution of potentially obfuscated scripts*, are more general in scope.
   - question: >
-      ASR üçüncü taraf güvenlik çözümlerini destekliyor mu?
+      Does ASR support third-party security solutions?
     answer: >
-      ASR, Microsoft Defender Virüsten Koruma engellemek için bu uygulamaları kullanır. ASR'nin şu anda engelleme için başka bir güvenlik çözümü kullanmak üzere yapılandırılması mümkün değildir.
+      ASR uses Microsoft Defender Antivirus to block applications. It is not possible to configure ASR to use another security solution for blocking at this time.
   - question: >
-      E5 lisansım var ve Uç Nokta için Defender ile birlikte bazı ASR kuralları etkinleştirildi. AsR olayın, Uç noktanın olay zaman çizelgesi için Defender'da hiç göstermesini mümkün mü?
+      I have an E5 license and enabled some ASR rules in conjunction with Defender for Endpoint. Is it possible for an ASR event to not show up at all in Defender for Endpoint's event timeline?
     answer: >
-      Bir ASR kuralı tarafından yerel olarak bir bildirim tetiklendiğinde, olayla ilgili rapor Uç Nokta için Defender portalına da gönderilir. Olayı bulmakta sorun kullanıyorsanız, arama kutusunu kullanarak olaylar zaman çizelgesini filtre görebilirsiniz. Ayrıca, Bulut için Defender görev çubuğundaki Yapılandırma yönetimi simgesinden Saldırı yüzeyi yönetimine git'i ziyaret ederek ASR etkinliklerini görüntüleyebilirsiniz. Saldırı yüzeyi yönetim sayfası, uç nokta için Defender'a bildirilen ASR kuralı olaylarının tam listesini içeren rapor algılamaları için bir sekme içerir.
+      Whenever a notification is triggered locally by an ASR rule, a report on the event is also sent to the Defender for Endpoint portal. If you're having trouble finding the event, you can filter the events timeline using the search box. You can also view ASR events by visiting **Go to attack surface management**, from the **Configuration management** icon in the Defender for Cloud taskbar. The attack surface management page includes a tab for report detections, which includes a full list of ASR rule events reported to Defender for Endpoint.
   - question: >
-      GPO kullanarak kural uyguladım. Şimdi Microsoft Outlook'da kuralın dizin oluşturma seçeneklerini denetlemeye çalışarak "Erişim reddedildi" iletisi alıyorum.
+      I applied a rule using GPO. Now when I try to check the indexing options for the rule in Microsoft Outlook, I get a message stating, 'Access denied'.
     answer: >
-      Dizin oluşturma seçeneklerini doğrudan Windows 10 11'den Windows deneyin.
+      Try opening the indexing options directly from Windows 10 or Windows 11.
 
 
-      1. Görev **çubuğunda** Arama Windows seçin.
+      1. Select the **Search** icon on the Windows taskbar.
 
 
-      1. Arama **kutusuna Dizin oluşturma** seçeneklerini girin.
+      1. Enter **Indexing options** into the search box.
   - question: >
-      Kural tarafından kullanılan ölçütler, "Yürütülebilir dosyaların yaygınlık, yaş veya güvenilir liste ölçütüne uygun olmadığı sürece çalıştırmasını engelle" veya yönetici tarafından yapılandırılabilir mi?
+      Are the criteria used by the rule, "Block executable files from running unless they meet a prevalence, age, or trusted list criterion," configurable by an admin?
     answer: >
-      Hayır. Bu kural tarafından kullanılan ölçütler, güvenilir listeyi dünyanın her yanında toplanmış verilerle sürekli güncel tutmak için Microsoft bulut koruması tarafından korunur. Yerel yöneticilerin bu verileri değiştirmek için yazma erişimi olmaz. Bu kuralı işletmeniz için uyarlamak üzere yapılandırmak arıyorsanız, kuralın tetiklenirken tetiklenirken dışlama listesine bazı uygulamaları ekleyebilirsiniz.
+      No. The criteria used by this rule are maintained by Microsoft cloud protection, to keep the trusted list constantly up to date with data gathered from around the world. Local admins do not have write access to alter this data. If you are looking to configure this rule to tailor it for your enterprise, you can add certain applications to the exclusions list to prevent the rule from being triggered.
   - question: >
-      ASR kuralını etkinleştirdim: "Yürütülebilir dosyaların yaygınlık, yaş veya güvenilir liste ölçütüne uygun olmadıkça çalıştırmalarını engelle". Bir süre sonra bir yazılım parçasını güncellemiştim ve kural daha önce engellememiş olsa bile bu yazılımı engelliyor. Bir sorun mu yaptınız?
+      I enabled the ASR rule, 'Block executable files from running unless they meet a prevalence, age, or trusted list criterion'. After some time, I updated a piece of software, and the rule is now blocking it, even though it didn't before. Did something go wrong?
     answer: >
-      Bu kural, yaygın olarak bilinen bir üne sahip uygulamalara, yaşlarına veya güvenilir uygulamalar listesine eklemeye göre ölçülür. Kuralın uygulamayı engelleme veya buna izin verme kararı, Microsoft bulut korumasının bu ölçütlere ilişkin değerlendirmesi tarafından nihai olarak belirlenir.
+      This rule relies upon each application having a known reputation, as measured by prevalence, age, or inclusion on a list of trusted apps. The rule's decision to block or allow an application is ultimately determined by Microsoft cloud protection's assessment of these criteria.
 
 
-      Bulut koruması genellikle, uygulamanın yeni sürümünün önceki sürümlere benser ve bu sürümün uzunlukta yeniden biriktirilene gerek olmadığını belirler. Ancak, uygulamanın sürümleri değiştirdikten sonra, özellikle de önemli bir güncelleştirmeden sonra ün oluşturması biraz zaman alabiliyor. Bu arada, bu kuralın önemli uygulamaları engellemesini önlemek için uygulamayı dışlamalar listesine ekleyebilirsiniz. Uygulamanın yeni sürümlerini sık sık güncelleştiriyor ve bu sürümlerle çalışıyorsanız, bunun yerine bu kuralı denetim modunda çalıştırmayı tercih edin.
+      Usually, cloud protection can determine that a new version of an application is similar enough to previous versions that it does not need to be reassessed at length. However, it might take some time for the app to build reputation after switching versions, particularly after a major update. In the meantime, you can add the application to the exclusions list, to prevent this rule from blocking important applications. If you are frequently updating and working with new versions of applications, you may opt instead to run this rule in audit mode.
   - question: >
-      AsR kuralını etkinleştirdikten sonra 'Windows yerel güvenlik yetkilisi alt sisteminden (lsass.exe)' kimlik bilgilerini çalacak şekilde etkinleştirildi ve çok fazla sayıda bildirim alıyorum. Ne var ne yok?
+      I recently enabled the ASR rule, 'Block credential stealing from the Windows local security authority subsystem (lsass.exe)', and I am getting a large number of notifications. What is going on?
     answer: >
-      Bu kural tarafından oluşturulan bir bildirim kötü amaçlı etkinlikleri belirtemmektedir; Öte yandan, bu kural kötü amaçlı etkinlikleri engellemek için hala yararlıdır, çünkü kötü amaçlı yazılım çoğunlukla lsass.exe hesaplara kötü amaçlı erişim kazanmak için hedeflemektedir. Kullanıcı lsass.exe oturum açtıktan sonra kullanıcı kimlik bilgilerini bellekte depolar. Windows, kullanıcıları doğrulamak ve yerel güvenlik ilkelerini uygulamak için bu kimlik bilgilerini kullanır.
+      A notification generated by this rule does not necessarily indicate malicious activity; however, this rule is still useful for blocking malicious activity, since malware often targets lsass.exe to gain illicit access to accounts. The lsass.exe process stores user credentials in memory after a user has logged in. Windows uses these credentials to validate users and apply local security policies.
 
 
-      Normal bir gün boyunca birçok yasal işlem kimlik bilgilerini lsass.exe, bu kural özellikle gürültülü olabilir. Bilinen geçerli bir uygulama bu kuralın aşırı sayıda bildirim oluşturmanıza neden oluyorsa, bunu dışlama listesine ekleyebilirsiniz. Diğer asr kurallarının çoğu, buna göre daha az sayıda bildirim üretecek, çünkü lsass.exe'de çağrı yapmak birçok uygulamanın normal işlevinin tipik bir işlevidir.
+      Because many legitimate processes throughout a typical day will be calling on lsass.exe for credentials, this rule can be especially noisy. If a known legitimate application causes this rule to generate an excessive number of notifications, you can add it to the exclusion list. Most other ASR rules will generate a relatively smaller number of notifications, in comparison to this one, since calling on lsass.exe is typical of many applications' normal functioning.
   - question: >
-      LSA korumasıyla birlikte "Kimlik bilgilerinin Windows yerel güvenlik yetkilisi alt sisteminden (lsass.exe)" çalmasını engelle" kuralını etkinleştirmek iyi bir fikir mi?
+      Is it a good idea to enable the rule, 'Block credential stealing from the Windows local security authority subsystem (lsass.exe)', alongside LSA protection?
     answer: >
-      LSA koruması da etkinleştirilmişse, bu kuralın [etkinleştirilmesi ek](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection#BKMK_HowToConfigure) koruma sağlamaz. Hem kural hem de LSA koruması çok aynı şekilde çalışır, dolayısıyla her ikisinin de aynı anda çalışması yedekli olabilir. Bununla birlikte, bazen LSA korumasını etkinleştirmeniz de mümkün olabilir. Böyle durumlarda, bu kuralı etkinleştirarak hedef amaçlı yazılıma karşı eşdeğer koruma lsass.exe.
+      Enabling this rule will not provide additional protection if you have [LSA protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection#BKMK_HowToConfigure) enabled as well. Both the rule and LSA protection work in much the same way, so having both running at the same time would be redundant. However, sometimes you may not be able to enable LSA protection. In those cases, you can enable this rule to provide equivalent protection against malware that target lsass.exe.
   - question: >
-      Ayrıca bkz.
+      See also
     answer: >-
-      * [Saldırı yüzeyini azaltmaya genel bakış](attack-surface-reduction.md)
+      * [Attack surface reduction overview](attack-surface-reduction.md)
 
-      * [Saldırı yüzeyini azaltma kurallarını değerlendirin](evaluate-attack-surface-reduction.md)
+      * [Evaluate attack surface reduction rules](evaluate-attack-surface-reduction.md)
 
-      * [Saldırı yüzeyini azaltma kuralları dağıtımı 3. Adım: ASR kurallarını uygulama](attack-surface-reduction-rules-deployment-implement.md)
+      * [Attack surface reduction rules deployment Step 3: Implement ASR rules](attack-surface-reduction-rules-deployment-implement.md)
 
-      * [Saldırı yüzeyini azaltma kurallarını etkinleştirin](enable-attack-surface-reduction.md)
+      * [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
 
-      * [Uyumluluk Microsoft Defender Virüsten Koruma virüsten koruma/kötü amaçlı yazılımlarla uyumluluk](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility)
+      * [Compatibility of Microsoft Defender Antivirus with other antivirus/antimalware](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility)

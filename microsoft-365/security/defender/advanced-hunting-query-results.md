@@ -1,7 +1,7 @@
 ---
-title: E-Microsoft 365 Defender'de gelişmiş arama sorgusu sonuçlarıyla Microsoft 365 Defender
-description: 2013'te gelişmiş avla döndürülen sorgu sonuçlarından en Microsoft 365 Defender
-keywords: gelişmiş av, tehdit avı, siber tehdit avı, Microsoft 365 Defender, Microsoft 365, m365, arama, sorgu, telemetri, özel algılamalar, şema, kusto, görselleştirme, grafik, filtreler, detaya gitme
+title: Microsoft 365 Defender'de gelişmiş tehdit avcılığı sorgu sonuçlarıyla çalışma
+description: Microsoft 365 Defender'de gelişmiş avcılık tarafından döndürülen sorgu sonuçlarından en iyi şekilde emin olun
+keywords: gelişmiş tehdit avcılığı, tehdit avcılığı, siber tehdit avcılığı, Microsoft 365 Defender, microsoft 365, m365, arama, sorgu, telemetri, özel algılamalar, şema, kusto, görselleştirme, grafik, filtreler, detaya gitme
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -20,77 +20,81 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 41427760a0a02f0dafbb9685da457a473698207c
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: 0bfec0b56a67b1242d8dfd76b845aa273a76d27e
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63754991"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64667262"
 ---
-# <a name="work-with-advanced-hunting-query-results"></a>Gelişmiş arama sorgusu sonuçlarıyla çalışma
+# <a name="work-with-advanced-hunting-query-results"></a>Gelişmiş tehdit avcılığı sorgu sonuçlarıyla çalışma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - Microsoft 365 Defender
 - Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-Hassas bilgiler elde etmek [için gelişmiş](advanced-hunting-overview.md) arama sorgularınızı oluşturabilirsiniz, ancak daha fazla bilgi almak, belirli etkinlikleri ve göstergeleri araştırmak için sorgu sonuçlarıyla çalışabilirsiniz. Sorgu sonuçlarınız üzerinde aşağıdaki eylemleri gerçekleştirebilirsiniz:
+Hassas bilgiler döndürmek için [gelişmiş tehdit avcılığı](advanced-hunting-overview.md) sorgularınızı oluşturabilirsiniz ancak daha fazla içgörü elde etmek ve belirli etkinlikleri ve göstergeleri araştırmak için sorgu sonuçlarıyla da çalışabilirsiniz. Sorgu sonuçlarınızda aşağıdaki eylemleri gerçekleştirebilirsiniz:
 
 - Sonuçları tablo veya grafik olarak görüntüleme
 - Tabloları ve grafikleri dışarı aktarma
-- Ayrıntılı varlık bilgilerine gitme
-- Sorgularınızı sonuçlardan doğrudan ayarlama veya filtre uygulama
+- Ayrıntılı varlık bilgilerini detaya gitme
+- Sorgularınızı doğrudan sonuçlardan ayarlama veya filtre uygulama
 
 ## <a name="view-query-results-as-a-table-or-chart"></a>Sorgu sonuçlarını tablo veya grafik olarak görüntüleme
-Varsayılan olarak, gelişmiş arama sorgu sonuçlarını tablo verileri olarak görüntüler. Grafikle aynı verileri de görüntüebilirsiniz. Gelişmiş av aşağıdaki görünümleri destekler:
+
+Varsayılan olarak, gelişmiş avcılık sorgu sonuçlarını tablosal veriler olarak görüntüler. Grafikle aynı verileri de görüntüleyebilirsiniz. Gelişmiş avcılık aşağıdaki görünümleri destekler:
 
 | Görünüm türü | Açıklama |
 |--|--|
 | **Tablo** | Sorgu sonuçlarını tablo biçiminde görüntüler |
-| **Sütun grafik** | X ekseni üzerinde, yükseklikleri başka bir  alanından sayısal değerleri temsil eden dikey çubuklar olarak bir dizi benzersiz öğe işler |
-| **Yığılmış sütun grafik** | X ekseni üzerinde, yükseklikleri bir veya daha fazla  alanlardaki sayısal değerleri temsil eden yığılmış dikey çubuklar olarak bir dizi benzersiz öğe işler |
-| **Pasta grafik** | Benzersiz öğeleri temsil eden bölüm pastaları işler. Her pastanın boyutu başka bir  alanından gelen sayısal değerleri temsil eder. |
-| **Pasta grafik** | Benzersiz öğeleri temsil eden bölüm yayları işler. Her yay uzunluğu başka bir  alanından gelen sayısal değerleri temsil eder. |
-| **Çizgi grafik** | Bir dizi benzersiz öğe için sayısal değerler çizer ve çizilen değerleri bağlar |
-| **Dağılım grafiği** | Bir dizi benzersiz öğe için sayısal değerler verir |
+| **Sütun grafik** | X ekseninde bir dizi benzersiz öğeyi, yükseklikleri başka bir alandaki sayısal değerleri temsil eden dikey çubuklar olarak işler |
+| **Yığılmış sütun grafik** | X ekseninde bir dizi benzersiz öğeyi, yükseklikleri bir veya daha fazla alandan sayısal değerleri temsil eden yığılmış dikey çubuklar olarak işler |
+| **Pasta grafik** | Benzersiz öğeleri temsil eden bölüm pastalarını işler. Her pastanın boyutu başka bir alandaki sayısal değerleri temsil eder. |
+| **Halka grafik** | Benzersiz öğeleri temsil eden bölümsel yayları işler. Her yay uzunluğu başka bir alandan sayısal değerleri temsil eder. |
+| **Çizgi grafik** | Bir dizi benzersiz öğe için sayısal değerleri çizer ve çizilen değerleri bağlar |
+| **Dağılım grafiği** | Bir dizi benzersiz öğe için sayısal değerler çizer |
 | **Alan grafiği** | Bir dizi benzersiz öğe için sayısal değerler çizer ve çizilen değerlerin altındaki bölümleri doldurur |
 
-### <a name="construct-queries-for-effective-charts"></a>Etkili grafikler için sorguları oluşturma
-Grafikleri işlenirken gelişmiş av, ilgi alanlarının sütunlarını ve toplanmış sayısal değerleri otomatik olarak tanımlar. Anlamlı grafikler elde etmek için, görselleştirilmiş olarak görmek istediğiniz belirli değerleri elde etmek için sorgularınızı oluşturun. Burada bazı örnek sorgular ve sonuçta elde edilen grafikler ve yer almaktadır.
+### <a name="construct-queries-for-effective-charts"></a>Etkin grafikler için sorgu oluşturma
+
+Grafikleri işlerken, gelişmiş avcılık ilgi çekici sütunları ve toplanmış sayısal değerleri otomatik olarak tanımlar. Anlamlı grafikler elde etmek için, sorgularınızı görselleştirilmiş olarak görmek istediğiniz belirli değerleri döndürecek şekilde ayarlayın. Bazı örnek sorgular ve sonuçta elde edilen grafikler aşağıda verilmiştir.
 
 #### <a name="alerts-by-severity"></a>Önem derecesine göre uyarılar
-Grafiğini `summarize` oluşturmak istediğiniz değerlerin sayısal sayısını elde etmek için işleci kullanın. Aşağıdaki sorgu, önem derecesine `summarize` göre uyarıların sayısını almak için işleci kullanır.
+
+Grafiğini `summarize` oluşturmak istediğiniz değerlerin sayısal sayısını elde etmek için işlecini kullanın. Aşağıdaki sorgu, önem derecesine göre uyarı sayısını almak için işlecini kullanır `summarize` .
 
 ```kusto
 AlertInfo
 | summarize Total = count() by Severity
 ```
-Sonuçları işlerken, sütun grafik her önem derecesi değerini ayrı bir sütun olarak görüntüler:
 
-:::image type="content" source="../../media/advanced-hunting-column-chart-new.png" alt-text="Portalda gelişmiş av sonuçlarını gösteren bir Microsoft 365 Defender" lightbox="../../media/advanced-hunting-column-chart-new.png":::
-*Sütun grafik olarak görüntülenen önem derecesine göre uyarılar için sorgu sonuçları*
+Sonuçlar işlenirken, bir sütun grafiği her önem derecesini ayrı bir sütun olarak görüntüler:
 
+:::image type="content" source="../../media/advanced-hunting-column-chart-new.png" alt-text="Microsoft 365 Defender portalında gelişmiş avcılık sonuçlarını görüntüleyen bir grafik örneği" lightbox="../../media/advanced-hunting-column-chart-new.png":::
+*Uyarıların önem derecesine göre sorgu sonuçları sütun grafiği olarak görüntülenir*
 
-#### <a name="phishing-emails-across-top-ten-sender-domains"></a>İlk on gönderen etki alanı arasında kimlik avı e-postaları
-Sonlu olmayan bir değer listesiyle uğraşıyorsanız, `Top` yalnızca en çok örneği olan değerlerin grafiğini oluşturmak için işleci kullanabilirsiniz. Örneğin, kimlik avı e-postası en çok olan ilk 10 gönderen etki alanına sahip olmak için aşağıdaki sorguyu kullanın:
+#### <a name="phishing-emails-across-top-ten-sender-domains"></a>İlk on gönderen etki alanında kimlik avı e-postaları
+
+Sınırlı olmayan değerlerin listesiyle ilgileniyorsanız işlecini `Top` kullanarak yalnızca en çok örneğe sahip değerlerin grafiğini oluşturabilirsiniz. Örneğin, en çok kimlik avı e-postasına sahip ilk 10 gönderen etki alanını almak için aşağıdaki sorguyu kullanın:
 
 ```kusto
 EmailEvents
-| where ThreatTypes has "Phish" 
-| summarize Count = count() by SenderFromDomain 
+| where ThreatTypes has "Phish"
+| summarize Count = count() by SenderFromDomain
 | top 10 by Count
 ```
-Üst etki alanları arasında dağıtımı etkili bir şekilde göstermek için pasta grafik görünümünü kullanın:
 
-:::image type="content" source="../../media/advanced-hunting-pie-chart-new.png" alt-text="Portalda gelişmiş arama sonuçlarını görüntüleyen Microsoft 365 Defender grafiği" lightbox="../../media/advanced-hunting-pie-chart-new.png":::
-*Kimlik avı e-postalarının üst gönderen etki alanları arasında dağıtımını gösteren pasta grafik*
+En üst etki alanları arasında dağıtımı etkili bir şekilde göstermek için pasta grafik görünümünü kullanın:
 
-#### <a name="file-activities-over-time"></a>Zaman içinde dosya etkinlikleri
-İşleci `summarize` işlevle `bin()` birlikte kullanarak, belirli bir göstergenin zaman içinde yer aldığı olayları denetlemeye devam edebilirsiniz. Aşağıdaki sorgu, dosyayla ilgili etkinlikteki `invoice.doc` depoları göstermek için, dosyayı 30 dakikalık aralıklarla içeren olayları sayar:
+:::image type="content" source="../../media/advanced-hunting-pie-chart-new.png" alt-text="Microsoft 365 Defender portalında gelişmiş avcılık sonuçlarını görüntüleyen pasta grafik" lightbox="../../media/advanced-hunting-pie-chart-new.png":::
+*En çok gönderen etki alanları arasında kimlik avı e-postalarının dağıtımını gösteren pasta grafik*
+
+#### <a name="file-activities-over-time"></a>Zaman içindeki dosya etkinlikleri
+`summarize` işlecini `bin()` işleviyle birlikte kullanarak belirli bir göstergeyi içeren olayları zaman içinde de kontrol edebilirsiniz. Aşağıdaki sorgu, dosyayla ilgili etkinlikteki ani artışları göstermek için dosyayla `invoice.doc` ilgili olayları 30 dakikalık aralıklarla sayar:
 
 ```kusto
 CloudAppEvents
@@ -98,44 +102,46 @@ CloudAppEvents
 | where FileName == "invoice.doc"
 | summarize FileCount = count() by bin(Timestamp, 30m)
 ```
-Aşağıdaki çizgi grafik, şunları içeren daha fazla etkinlikle zaman dönemlerini açıkça vurgular `invoice.doc`: 
 
-:::image type="content" source="../../media/line-chart-a.png" alt-text="Portalda gelişmiş arama sonuçlarını görüntüleyen çizgi Microsoft 365 Defender." lightbox="../../media/line-chart-a.png":::
-*Zaman içinde dosyayı içeren etkinliklerin sayısını gösteren çizgi grafik*
+Aşağıdaki çizgi grafik, içeren daha fazla etkinlik içeren zaman aralıklarını net bir şekilde vurgular `invoice.doc`:
 
+:::image type="content" source="../../media/line-chart-a.png" alt-text="Microsoft 365 Defender portalında gelişmiş avcılık sonuçlarını görüntüleyen çizgi grafik" lightbox="../../media/line-chart-a.png":::
+*Bir dosyanın zaman içindeki olay sayısını gösteren çizgi grafik*
 
 ## <a name="export-tables-and-charts"></a>Tabloları ve grafikleri dışarı aktarma
-Sorguyu çalıştırdikten sonra, sonuçları **yerel dosyaya** kaydetmek için Dışarı Aktar'ı seçin. Sonuçların nasıl dışarı aktarıldıklarını seçtiğiniz görünüm belirler:
 
-- **Tablo görünümü**— Sorgu sonuçları tablo şeklinde, çalışma kitabı olarak Microsoft Excel dışarı aktarıldı
-- **Herhangi bir** grafik— Sorgu sonuçları, işlenen grafiğin JPEG görüntüsü olarak dışarı aktarıldı
+Sorguyu çalıştırdıktan sonra dışarı **aktar'ı** seçerek sonuçları yerel dosyaya kaydedin. Seçtiğiniz görünüm sonuçların nasıl dışarı aktarileceğini belirler:
+
+- **Tablo görünümü**—Sorgu sonuçları tablo biçiminde Microsoft Excel çalışma kitabı olarak dışarı aktarılır
+- **Herhangi bir grafik**—Sorgu sonuçları, işlenen grafiğin JPEG görüntüsü olarak dışarı aktarılır
 
 ## <a name="drill-down-from-query-results"></a>Sorgu sonuçlarından detaya gitme
-Sorgu sonuçlarındaki bir kaydı hızla incelemek için, ilgili satırı seçerek Kayıt inceleme **panelini** açın. Panelde, seçili kayda dayalı olarak aşağıdaki bilgiler bulunur:
 
-- **Varlıklar**—Kayıtta bulunan ana varlıkların (posta kutuları, cihazlar ve kullanıcılar) özetlenmiş görünümü, risk ve pozlama düzeyleri gibi kullanılabilir bilgilerle zenginleştirilmiştir
-- **Tüm ayrıntılar**—Kayıtta sütunlardan gelen tüm değerler  
+Sorgu sonuçlarınızdaki bir kaydı hızla incelemek için ilgili satırı seçerek **Kaydı incele** panelini açın. Panel, seçili kayda göre aşağıdaki bilgileri sağlar:
 
-:::image type="content" source="../../media/results-inspect-record.png" alt-text="Portalda kaydı denetleme paneli olan Microsoft 365 Defender" lightbox="../../media/results-inspect-record.png":::
+- **Varlıklar**—Kayıtta bulunan ana varlıkların (posta kutuları, cihazlar ve kullanıcılar) özetlenmiş görünümü, risk ve maruz kalma düzeyleri gibi kullanılabilir bilgilerle zenginleştirilmiştir
+- **Tüm ayrıntılar**—Kayıttaki sütunlardan gelen tüm değerler
 
-Sorgu sonuçlarınız içinde makine, dosya, kullanıcı, IP adresi veya URL gibi belirli bir varlık hakkında daha fazla bilgi görüntülemek için, varlık tanımlayıcısını seçerek söz konusu varlık için ayrıntılı bir profil sayfası açın.
+:::image type="content" source="../../media/results-inspect-record.png" alt-text="Microsoft 365 Defender portalında kaydı incelemek için panel içeren seçili kayıt" lightbox="../../media/results-inspect-record.png":::
 
-## <a name="tweak-your-queries-from-the-results"></a>Sonuçlardan sorgularınızı ayarlama
-Kayıt panelini incele'de herhangi bir sütunun sağ üç **noktayı** seçin. Bu seçenekleri kullanarak şunları yapabilirsiniz:
+Sorgu sonuçlarınızda makine, dosya, kullanıcı, IP adresi veya URL gibi belirli bir varlık hakkında daha fazla bilgi görüntülemek için varlık tanımlayıcısını seçerek bu varlık için ayrıntılı bir profil sayfası açın.
 
-- Seçili değeri açıkça (`==`)
-- Seçili değeri sorgunun dışında tut (`!=`)
-- Sorgunuza değer eklemek için , gibi daha gelişmiş işleçler `contains`elde etmek için , ve `starts with``ends with` 
+## <a name="tweak-your-queries-from-the-results"></a>Sorgularınızı sonuçlardan ayarlama
 
-:::image type="content" source="../../media/work-with-query-tweak-query.png" alt-text="Microsoft 365 Defender portalında Kaydı incele sayfasındaki Eylem Microsoft 365 Defender bölmesi" lightbox="../../media/work-with-query-tweak-query.png":::
+**Kaydı incele** panelinde herhangi bir sütunun sağındaki üç noktayı seçin. Aşağıdakileri yapmak için seçenekleri kullanabilirsiniz:
 
+- Seçili değeri`==` () açıkça arayın
+- Seçili değeri sorgunun dışında tutma (`!=`)
+- Sorgunuza değer eklemek için , `starts with`ve gibi `contains`daha gelişmiş işleçler edinin`ends with`
 
+:::image type="content" source="../../media/work-with-query-tweak-query.png" alt-text="Microsoft 365 Defender portalındaki Kaydı incele sayfasındaki Eylem Türü bölmesi" lightbox="../../media/work-with-query-tweak-query.png":::
 
->[!NOTE]
->Bu makaledeki bazı tablolar, Uç Nokta için Microsoft Defender'da kullanılamıyor olabilir. [Daha fazla Microsoft 365 Defender](m365d-enable.md) kullanarak tehdit yakalamak için çok daha fazla kaynağı açabilirsiniz. Gelişmiş av iş akışlarınızı Uç Nokta için Microsoft Defender'dan Microsoft 365 Defender için [Microsoft Defender'dan gelişmiş arama sorgularını geçirme makalesinde](advanced-hunting-migrate-from-mde.md) yer alan adımları takip edebilirsiniz.
+> [!NOTE]
+> Bu makaledeki bazı tablolar Uç Nokta için Microsoft Defender'da kullanılamayabilir. Daha fazla veri kaynağı kullanarak tehditleri avlamak için [Microsoft 365 Defender açın](m365d-enable.md). Gelişmiş avcılık sorgularını Uç Nokta için Microsoft Defender'den geçirme bölümünde yer alan adımları izleyerek [gelişmiş avcılık iş akışlarınızı Uç Nokta için Microsoft Defender'den Microsoft 365 Defender](advanced-hunting-migrate-from-mde.md) taşıyabilirsiniz.
 
 ## <a name="related-topics"></a>İlgili konular
-- [Gelişmiş ava genel bakış](advanced-hunting-overview.md)
+
+- [Gelişmiş avcılığa genel bakış](advanced-hunting-overview.md)
 - [Sorgu dilini öğrenin](advanced-hunting-query-language.md)
 - [Paylaşılan sorguları kullanın](advanced-hunting-shared-queries.md)
 - [Cihazlar, e-postalar, uygulamalar ve kimlikler arasında avlayın](advanced-hunting-query-emails-devices.md)

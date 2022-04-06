@@ -19,12 +19,12 @@ search.appverid:
 description: Kişisel verilerin sızıntılarını izlemek için kullanabileceğiniz üç araç hakkında bilgi edinebilirsiniz.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ba164fde38be1e8eed53b71ab568124140deaac5
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 4024640173d6cbbf6817d3fa2b1c24cb7264833c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682713"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470867"
 ---
 # <a name="monitor-for-leaks-of-personal-data"></a>Kişisel verilerin sızıntılarını izleme
 
@@ -33,15 +33,15 @@ ms.locfileid: "63682713"
 
 Kişisel verilerin kullanımını ve aktarımlarını izlemek için kullanılmaktadır. Bu konu başlığında, iyi çalışacak üç araç açıklanmıştır.
 
-![Kişisel verilerin kullanımını ve aktarımlarını izleme araçları.](../../media/Monitor-for-leaks-of-personal-data-image1.png)
+:::image type="content" source="../../media/Monitor-for-leaks-of-personal-data-image1.png" alt-text="Kişisel verilerin kullanımını ve aktarımlarını izleme araçları" lightbox="../../media/Monitor-for-leaks-of-personal-data-image1.png":::
 
 Çizimde:
 
 - SharePoint Online Microsoft 365 ta, e-postada ve e-postada kişisel verileri izlemek için veri OneDrive İş önleme raporlarıyla çalışmaya başlayabilirsiniz. Bu raporlar, kişisel verileri izlemek için en yüksek ayrıntı düzeyini sağlar. Ancak bu raporlar, raporlarda yer alan tüm hizmetleri Office 365.
 
-- Ardından, hizmetler genelinde etkinliği izlemek için uyarı ilkelerini ve denetim günlüğünü kullanın. Devam eden izleme ayarlayın veya bir olayı araştırmak için denetim günlüğünde arama yapın. Denetim günlüğü Sway, Power BI, eKıştırma, Dynamics 365, Power Automate, Microsoft Teams, Yönetici etkinliği, OneDrive İş, SharePoint Online, iletili posta ve diğer posta kutuları gibi hizmetler genelinde çalışır. Skype konuşmalar, posta kutularında kalan posta kutularına dahil edilir.
+- Ardından, hizmetler genelinde etkinliği izlemek için uyarı ilkelerini ve denetim günlüğünü kullanın. Devam eden izleme ayarlayın veya bir olayı araştırmak için denetim günlüğünde arama yapın. Denetim günlüğü; Sway, Power BI, eBulma, Dynamics 365, Power Automate, Microsoft Teams, Yönetici etkinliği, OneDrive İş, SharePoint Online, iletili posta ve diğer posta kutuları gibi hizmetler genelinde çalışır. Skype konuşmalar, posta kutularında kalan posta kutularına dahil edilir.
 
-- Son olarak, diğer SaaS sağlayıcılarında hassas verilerle dosyaları izlemek için Bulut Uygulamaları için Microsoft Defender'ı kullanın. Yakında, Azure Information Protection genelinde hassas bilgi türlerini ve birleşik etiketleri, Bulut Uygulamaları için Defender ile Office etiketleri kullanma özelliği de yakında kullanılabilir olacak. SaaS uygulamalarınızın veya belirli uygulamalarınız için geçerli olan ilkeler oluşturabilirsiniz (Box gibi). Bulut Uygulamaları için Defender, e-postaya eklenen dosyalar Exchange Online uygulamaları içinde yer alan dosyaları bulmaz.
+- Son olarak, Microsoft Defender for Cloud Apps SaaS sağlayıcılarında hassas verilerle dosyaları izlemek için bu bilgileri kullanın. Yakında, azure genelinde hassas bilgi türlerini ve birleşik etiketleri Information Protection ve Office uygulamalarıyla birlikte Bulut için Defender özelliği olacak. SaaS uygulamalarınızın veya belirli uygulamalarınız için geçerli olan ilkeler oluşturabilirsiniz (Box gibi). Bulut için Defender Uygulamaları e-postaya eklenmiş dosyalar dahil Exchange Online dosyaları bulmaz.
 
 ## <a name="data-loss-prevention-reports"></a>Veri kaybı önleme raporları
 
@@ -62,11 +62,11 @@ DLP raporları aşağıdaki Microsoft 365 uyumluluk merkezi. DLP **ilkesi eşle�
 
 Daha fazla bilgi için bkz [. Veri kaybını önleme için raporları görüntüleme](../../compliance/view-the-dlp-reports.md).
 
-![DLP ilkesi eşleşmelerini gösteren rapor.](../../media/Monitor-for-leaks-of-personal-data-image2.png)
+:::image type="content" source="../../media/Monitor-for-leaks-of-personal-data-image2.png" alt-text="DLP ilkesi eşleşmelerini gösteren rapor" lightbox="../../media/Monitor-for-leaks-of-personal-data-image2.png":::
 
 ## <a name="audit-log-and-alert-policies"></a>Denetim günlüğü ve uyarı ilkeleri
 
-Denetim günlüğü Exchange Online, SharePoint Online, OneDrive İş, Azure Active Directory, Microsoft Teams, Power BI, Sway ve diğer hizmetlerden olaylar içerir.
+Denetim günlüğü Exchange Online, SharePoint Online, OneDrive İş, Azure Active Directory, Microsoft Teams, Power BI, Sway ve diğer hizmetlerden olayları içerir.
 
 Denetim Microsoft 365 Defender denetim günlüğü Microsoft 365 uyumluluk merkezi izlemek ve rapor etmek için iki yol sağlar:
 
@@ -84,45 +84,45 @@ Uyarı ilkeleri ve denetim günlüğünde arama hakkında daha fazla bilgi:
 - [E-postada uyarı Microsoft 365](../../compliance/alert-policies.md)
 - [Denetim günlüğünde kullanıcı ve yönetici etkinliğini arama (Office 365](../../compliance/search-the-audit-log-in-security-and-compliance.md))
 - [Denetim günlüğü aramalarını açma veya kapatma](../../compliance/turn-audit-log-search-on-or-off.md)
-- [Denetim günlüğünde arama](../../compliance/search-the-audit-log-in-security-and-compliance.md)
+- [Denetim günlüğünde arama yapma](../../compliance/search-the-audit-log-in-security-and-compliance.md)
 - [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) (cmdlet)
-- [Denetim günlüğünde ayrıntılı özellikler](../../compliance/detailed-properties-in-the-office-365-audit-log.md)
+- [Denetim günlüğündeki ayrıntılı özellikler](../../compliance/detailed-properties-in-the-office-365-audit-log.md)
 
 ## <a name="microsoft-defender-for-cloud-apps"></a>Bulut Uygulamaları için Microsoft Defender
 
-Bulut Uygulamaları için Microsoft Defender, ağlarda ve bu uygulamalardan gönderilen hassas veriler arasında diğer SaaS uygulamalarını keşfetmenize yardımcı olur.
+Microsoft Defender for Cloud Apps, ağlarda ve bu uygulamalardan gönderilen hassas veriler arasında diğer SaaS uygulamalarını keşfetmenize yardımcı olur.
 
-Bulut Uygulamaları için Microsoft Defender, bulut uygulamalarınız için ayrıntılı görünürlük, ayrıntılı denetimler ve gelişmiş tehdit koruması sağlayan kapsamlı bir hizmettir. Ağ bağlantınıza tüm cihazlardan 15.000'den fazla bulut uygulaması tanımlar ve risk puanlama ile devam eden risk değerlendirmesi ve çözümlemeleri sağlar. Aracı gerekmez: Bulut kullanımı ve gölge IT'niz için tam görünürlük ve bağlam sağlayan güvenlik duvarlarınız ve aracılardan bilgiler toplanır.
+Microsoft Defender for Cloud Apps kapsamlı görünürlük, ayrıntılı denetimler ve bulut uygulamalarınız için gelişmiş tehdit koruması sağlayan kapsamlı bir hizmettir. Ağ bağlantınıza tüm cihazlardan 15.000'den fazla bulut uygulaması tanımlar ve risk puanlama ile devam eden risk değerlendirmesi ve çözümlemeleri sağlar. Aracı gerekmez: Bulut kullanımı ve gölge IT'niz için tam görünürlük ve bağlam sağlayan güvenlik duvarlarınız ve aracılardan bilgiler toplanır.
 
-Bulut ortamınızı daha iyi anlamak için, Bulut Uygulamaları için Defender araştırma özelliği sahip olunan ve yönetilen uygulamalara yönelik tüm etkinlikler, dosyalar ve hesaplar üzerinde derin bir görünürlük sağlar. Dosya düzeyinde ayrıntılı bilgi edinebilirsiniz ve bulut uygulamaları içinde verilerin nereye gittiğini keşfedebilirsiniz.
+Bulut ortamınızı daha iyi anlamak için, Bulut için Defender Uygulamaları araştırma özelliğiyle, ekli ve yönetilen uygulamalar için tüm etkinlikler, dosyalar ve hesaplar üzerinde derin bir görünürlük sağlar. Dosya düzeyinde ayrıntılı bilgi edinebilirsiniz ve bulut uygulamaları içinde verilerin nereye gittiğini keşfedebilirsiniz.
 
-Örnek olarak, aşağıdaki çizimde GDPR'de yardımcı olacak iki Bulut Uygulaması için Defender ilkeleri gösterilmiştir.
+Örnek olarak, aşağıdaki çizimde GDPR Bulut için Defender yardımcı olacak iki farklı uygulama uygulaması uygulaması gösterilmiştir.
 
-![Bulut Uygulamaları için Örnek Defender ilkeleri.](../../media/Monitor-for-leaks-of-personal-data-image3.png)
+:::image type="content" source="../../media/Monitor-for-leaks-of-personal-data-image3.png" alt-text="Bulut için Defender Uygulamaları ilkeleri" lightbox="../../media/Monitor-for-leaks-of-personal-data-image3.png":::
 
 Seçtiğiniz önceden tanımlanmış PII özniteliğine veya özel ifadeye sahip dosyalar, seçtiğiniz SaaS uygulamalarıyla kuruluşun dışında paylaşılırken ilk ilke uyarıları.
 
 İkinci ilke, dosyaların indirilmelerini, yöneticisi olmayan tüm cihaza indirmelerini engeller. Dosyaların içindeki öznitelikleri, ilkenin uygulamak istediğiniz SaaS uygulamalarını seçersiniz.
 
-Bu öznitelik türleri yakında Bulut Uygulamaları için Defender'da kullanılabilir olacak:
+Bu öznitelik türleri yakında Uygulamalarda Bulut için Defender geliyor:
 
 - Hassas bilgi türleri
-- Azure Information Protection Microsoft 365 birleştirilmiş etiketler
+- Microsoft 365 Azure Information Protection'de birleştirilmiş etiketler
 
-### <a name="defender-for-cloud-apps-dashboard"></a>Bulut Uygulamaları panosu için Defender
+### <a name="defender-for-cloud-apps-dashboard"></a>Bulut için Defender Uygulamaları panosu
 
-Bulut Uygulamaları için Defender'ı kullanmaya henüz başlamadıysanız, başlangıç olarak bu çözümü kullanın. Bulut Uygulamaları için Defender'a erişmek için: <https://portal.cloudappsecurity.com>.
+Bulut için Defender Uygulamalarını kullanmaya başlamadıysanız, başlangıç olarak bu uygulamaları kullanın. Bulut için Defender erişmek için: <https://portal.cloudappsecurity.com>.
 
 > [!NOTE]
-> Bulut Uygulamaları için Defender'ı başlarken veya etiketleri atamadan önce "Azure Information Protection sınıflandırma etiketleri için dosyaları otomatik olarak tara" (Genel ayarlar'da) ayarını etkinleştirmeyi öğrenin. Kurulumdan sonra Bulut Uygulamaları için Defender, var olan dosyaları değiştirilene kadar yeniden taramaz.
+> Bulut için Defender Uygulamaları'na başlarken veya etiketler atamadan önce "Azure Information Protection sınıflandırma etiketleri için dosyaları otomatik olarak tara" (Genel ayarlar'da) ayarını etkinleştirmeyi öğrenin. Kurulumdan sonra, Bulut için Defender Uygulamalar değiştirilene kadar var olan dosyaları yeniden taramaz.
 
-![Uyarılar hakkında bilgi gösteren pano.](../../media/Monitor-for-leaks-of-personal-data-image4.png)
+:::image type="content" source="../../media/Monitor-for-leaks-of-personal-data-image4.png" alt-text="Uyarılar hakkında bilgi gösteren pano" lightbox="../../media/Monitor-for-leaks-of-personal-data-image4.png":::
 
 Daha fazla bilgi:
 
-- [Bulut Uygulamaları için Defender'ı Dağıtma](/cloud-app-security/getting-started-with-cloud-app-security)
-- [Bulut Uygulamaları için Microsoft Defender hakkında daha fazla bilgi](https://www.microsoft.com/cloud-platform/cloud-app-security)
-- [Bulut Uygulamaları için Microsoft Defender ara sunucusunu kullanarak hassas bilgilerin indirmelerini engelleme](/cloud-app-security/use-case-proxy-block-session-aad)
+- [Uygulama Bulut için Defender dağıtma](/cloud-app-security/getting-started-with-cloud-app-security)
+- [Daha fazla bilgi Microsoft Defender for Cloud Apps](https://www.microsoft.com/cloud-platform/cloud-app-security)
+- [Microsoft Defender for Cloud Apps proxy'lerini kullanarak hassas bilgilerin indir Microsoft Defender for Cloud Apps engelleme](/cloud-app-security/use-case-proxy-block-session-aad)
 
 ## <a name="example-file-and-activity-policies-to-detect-sharing-of-personal-data"></a>Kişisel verilerin paylaşımını algılamak için örnek dosya ve etkinlik ilkeleri
 
@@ -140,7 +140,7 @@ Onaylanmış bir bulut uygulamasından kredi kartı numarası içeren bir dosyan
 |Uygula|Tüm dosyalar, tüm sahipler|
 |İçerik incelemesi|Mevcut ifadeyle eşleşmeye sahip dosyaları içerir: Tüm ülkeler: Finans: Kredi kartı numarası <p> İlgili bağlam gerektirmeyen: işaretsiz (bu ayar anahtar sözcüklerle ve regex ile de eşler) <p> En az 1 eşleşmesi olan dosyaları içerir <p> İhlalin son 4 karakterine yer yok: işaretli|
 |Uyarılar|Eşleşen her dosya için uyarı oluşturma: İşaretlendi <p> Günlük uyarı sınırı: 1000 <p> E-posta olarak uyarı seçme: işaretli <p> Bunu yapmak için: infosec@contoso.com|
-|İdare|Microsoft OneDrive Kurumsal <p> Özel hale: Dış Kullanıcıları Kaldır'ı denetleme <p> Diğer tüm ayarlar: işaretsiz <p> Microsoft Office SharePoint Online <p> Özel hale: Dış Kullanıcıları Kaldır'ı denetleme <p> Diğer tüm ayarlar: işaretsiz|
+|İdare|Microsoft OneDrive İş <p> Özel hale: Dış Kullanıcıları Kaldır'ı denetleme <p> Diğer tüm ayarlar: işaretsiz <p> Microsoft Office SharePoint Online <p> Özel hale: Dış Kullanıcıları Kaldır'ı denetleme <p> Diğer tüm ayarlar: işaretsiz|
 
 Benzer ilkeler:
 
@@ -163,7 +163,7 @@ Notlar:
 |İlke önem düzeyi|Yüksek|
 |Kategori|Paylaşım Denetimi|
 |Üzerinde eylemde davran|Tek etkinlik|
-|Filtre ayarları|Etkinlik türü = Upload Dosyası <p> Uygulama = Microsoft OneDrive ve Box <p> Sınıflandırma Etiketi (şu anda özel önizlemede): Azure Information Protection = Müşteri Verileri, İnsan Kaynakları —Maaş Verileri, İnsan Kaynakları—Çalışan Verileri|
+|Filtre ayarları|Etkinlik türü = Upload Dosyası <p> Uygulama = Microsoft OneDrive İş Box <p> Sınıflandırma Etiketi (şu anda özel önizlemede): Azure Information Protection = Müşteri Verileri, İnsan Kaynakları—Maaş Verileri, İnsan Kaynakları—Çalışan Verileri|
 |Uyarılar|Uyarı oluşturma: işaretli <p> Günlük uyarı sınırı: 1000 <p> E-posta olarak uyarı seçme: işaretli <p> Bunu yapmak için: infosec@contoso.com|
 |İdare|Tüm uygulamalar <p> Kullanıcı karantinaya alın: Denetleme <p> Diğer tüm ayarlar: işaretsiz <p> Office 365 <p> Kullanıcı karantinaya alın: Denetleme <p> Diğer tüm ayarlar: işaretsiz|
 

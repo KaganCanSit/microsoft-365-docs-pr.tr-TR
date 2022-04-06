@@ -10,20 +10,20 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Yöneticiler, Plan 2 için Microsoft Defender'da belirtilen koşullar karşılandıklarında başlatan belirli teknikler ve yüklemeler içeren otomatik benzetimler Office 365 öğrenebilir.
+description: Yöneticiler, Plan 2'de belirtilen koşullar karşılandıklarında başlatan belirli teknikler ve yüklemeler içeren otomatik benzetimler Office 365 için Microsoft Defender öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 3ad24a8b6d2be18fb7ef5fd49be7f2197b3be3a7
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: e1e71fc5a901612a132d57afd663364f9a10daf4
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680962"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472451"
 ---
 # <a name="simulation-automations-for-attack-simulation-training"></a>Saldırı benzetimi eğitimi için benzetim otomasyonları
 
- [Office 365 için Microsoft Defender plan 2 için geçerlidir](defender-for-office-365.md)
+**Plan** [2 Office 365 için Microsoft Defender için geçerlidir](defender-for-office-365.md)
 
-Saldırı benzetimi eğitimi hakkında bilgi almak için bkz. [Saldırı benzetimi eğitimlerini kullanmaya başlama](attack-simulation-training-get-started.md).
+Saldırı benzetimi eğitimi hakkında bilgi almak için Saldırı [benzetim Kullanmaya başlayın'i kullanma hakkında daha fazla bilgi için bkz](attack-simulation-training-get-started.md).
 
 Benzetim otomasyonu oluşturmak için aşağıdaki adımları uygulayın:
 
@@ -33,7 +33,7 @@ Benzetim otomasyonu oluşturmak için aşağıdaki adımları uygulayın:
 
 2. Benzetim **otomasyonları sekmesinde** Otomasyon simgesi oluştur'a ![tıklayın.](../../media/m365-cc-sc-create-icon.png) **Otomasyon oluşturun**.
 
-   ![Proje portalında, Saldırı benzetimi eğitimi'nin Benzetim otomasyonları sekmesindeki Microsoft 365 Defender oluşturun.](../../media/attack-sim-training-sim-automations-create.png)
+   :::image type="content" source="../../media/attack-sim-training-sim-automations-create.png" alt-text="Yazılım portalının Saldırı benzetimi eğitimi'nin Benzetim otomasyonları sekmesindeki Benzetim Microsoft 365 Defender düğmesi" lightbox="../../media/attack-sim-training-sim-automations-create.png":::
 
 3. Oluşturma sihirbazı açılır. Bu makalenin kalan kalanında, sayfaları ve bunların içerdiği ayarlar açıklanmıştır.
 
@@ -61,7 +61,7 @@ Sosyal mühendislik **tekniklerini seçin** sayfasında, [MITRE ATT ve CK® fram
 
 Açıklamada Ayrıntıları **görüntüle bağlantısına** tıklarsanız, tekniğin ve teknikten elde edilen benzetim adımlarını açıklayan bir ayrıntılar açılır.
 
-![Sosyal mühendislik tekniklerini seçin sayfasındaki kimlik bilgisi toplama tekniği ile ilgili ayrıntılar çıktısı.](../../media/attack-sim-training-simulations-select-technique-sim-steps.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-select-technique-sim-steps.png" alt-text="Sosyal mühendislik tekniklerini seçin sayfasındaki kimlik bilgisi toplama tekniğine ilişkin Ayrıntılar uç sayfası" lightbox="../../media/attack-sim-training-simulations-select-technique-sim-steps.png":::
 
 Bitirdikten sonra, Sonraki'ne **tıklayın**.
 
@@ -110,7 +110,7 @@ Adı tıklatarak listeden bir yük seçersiniz, yükle ilgili ayrıntılar bir �
 - Genel **Bakış** sekmesi, yük hakkında bir örnek ve diğer ayrıntıları içerir.
 - **Benzetimler başlatıldı** sekmesi Benzetim adı, **Tıklama** oranı, Güvenliği **ihlal** **edildi oranı ve** **Eylem'i içerir**.
 
-![Geçiş portalında Saldırı benzetimi eğitimi altında ayrıntıları Microsoft 365 Defender.](../../media/attack-sim-training-simulations-select-payload-details.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details.png" alt-text="Yeni portalda Saldırı benzetimi eğitimi altında Yük ayrıntıları Microsoft 365 Defender." lightbox="../../media/attack-sim-training-simulations-select-payload-details.png":::
 
 Bitirdikten sonra, Sonraki'ne **tıklayın**.
 
@@ -140,7 +140,7 @@ Hedef **kullanıcılar sayfasında** benzetimi alacak olan kullanıcıları seç
         - Tüm **Başlığı Seç**
         - Mevcut Başlık değerlerini seçin.
 
-      ![Hedef kullanıcılar sayfasındaki Saldırı benzetimi eğitimi sayfasındaki kullanıcı filtrelemesi Microsoft 365 Defender.](../../media/attack-sim-training-simulations-target-users-filter-by-category.png)
+      :::image type="content" source="../../media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="Kullanıcı profili portalında Saldırı benzetimi eğitimi sayfasındaki Hedef kullanıcılar Microsoft 365 Defender filtrelemesi" lightbox="../../media/attack-sim-training-simulations-target-users-filter-by-category.png":::
 
       Ölçütlerinizi tanımdikten sonra, etkilenen kullanıcılar görüntülenen Kullanıcı listesi bölümünde gösterilir  ve burada bulunan alıcıların bir bölümünü veya hepsini seçebilirsiniz.
 
@@ -178,7 +178,7 @@ Eğitim **atama sayfasında** benzetim için eğitimler atabilirsiniz. Eğitimde
       - **Benzetim sona erdikten 7 gün sonra**
   - **Eğitim yok**: Bu değeri seçerseniz, sayfada yer alan tek seçenek Giriş sayfası sayfasına sizi  alan Sonraki [**düğmesidir**](#landing-page).
 
-![Yeni portalda Saldırı benzetimi eğitimi'nin Eğitim ödev sayfasına önerilen Microsoft 365 Defender ekleyin.](../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png" alt-text="Yeni portalda, Saldırı benzetimi eğitimi sayfasındaki Eğitim atama sayfasına önerilen Microsoft 365 Defender ekleme seçeneği" lightbox="../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png":::
 
 ### <a name="training-assignment"></a>Eğitim ödevi
 
@@ -220,7 +220,7 @@ Listede yer alan her eğitim için, Ata sütunundaki değerleri seçerek eğitim
 
 Gösterilen bir eğitimi kullanmak istemiyorsanız, Sil simgesine ![tıklayın.](../../media/m365-cc-sc-delete-icon.png) **Sil'i seçin**.
 
-![Geçiş portalında Saldırı benzetimi eğitimi'nin Microsoft 365 Defender sayfası.](../../media/attack-sim-training-training-assignment.png)
+:::image type="content" source="../../media/attack-sim-training-training-assignment.png" alt-text="Yeni portalda Saldırı benzetimi eğitimi'nin Eğitim Microsoft 365 Defender sayfası" lightbox="../../media/attack-sim-training-training-assignment.png":::
 
 Bitirdikten sonra, Sonraki'ne **tıklayın**.
 

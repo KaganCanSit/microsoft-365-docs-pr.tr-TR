@@ -1,7 +1,7 @@
 ---
-title: Uç nokta için Microsoft Defender'daki cihazları dışla
-description: Cihazları cihaz stok listesinden çıkar
-keywords: dışla
+title: Uç Nokta için Microsoft Defender'de cihazları dışlama
+description: Cihazları cihaz envanter listesinden dışlama
+keywords: Dışlamak
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,92 +14,92 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: c17bea7b6a3decdb1cf20f21067c316366c2afed
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: cbfc82f56cc1922a663c31defe30dc61c2d3dd9b
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63705072"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64664160"
 ---
-# <a name="exclude-devices"></a>Cihazları dışla
+# <a name="exclude-devices"></a>Cihazları dışlayın
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-respondmachine-abovefoldlink)
+> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-respondmachine-abovefoldlink)
 
-## <a name="exclude-devices-from-threat-and-vulnerability-management"></a>Cihazları diğer Tehdit ve Güvenlik Açığı Yönetimi
+## <a name="exclude-devices-from-threat-and-vulnerability-management"></a>Cihazları Tehdit ve Güvenlik Açığı Yönetimi dışında tutma
 
-Etkin olmayan, yinelenen veya kapsam dışında kalan cihazlar hariç olmak üzere etkin cihazlarınız üzerinde riskleri keşfetmeye ve önceliklerini belirlemeye odaklanmanıza olanak tanır. Bu eylem, açık kalma Tehdit ve Güvenlik Açığı Yönetimi daha doğru bir şekilde yansıtmanıza da yardımcı olabilir, çünkü dışarıda bırakılan cihazlar Tehdit ve Güvenlik Açığı Yönetimi.
+Etkin olmayan, yinelenen veya kapsamı dışında olan cihazları dışlamak, etkin cihazlarınızdaki riskleri keşfetmeye ve önceliklendirmeye odaklanmanıza olanak tanır. Dışlanan cihazlar Tehdit ve Güvenlik Açığı Yönetimi raporlarınızda görünmeyebileceği için bu eylem daha doğru bir Tehdit ve Güvenlik Açığı Yönetimi maruz kalma puanını yansıtmaya da yardımcı olabilir.
 
-Cihazlar dışlandıktan sonra, bu cihazlardaki güvenlik açıkları ve yüklü yazılımla ilgili güncelleştirilmiş veya ilgili bilgileri görüntüemezsiniz. Gelişmiş avdaki tüm Tehdit ve Güvenlik Açığı Yönetimi sayfaları, raporları ve ilgili tabloları etkiler.
+Cihazlar dışlandıktan sonra, bu cihazlarda güvenlik açıkları ve yüklü yazılımlar hakkında güncelleştirilmiş veya ilgili bilgileri görüntüleyemezsiniz. Gelişmiş avcılıkta tüm Tehdit ve Güvenlik Açığı Yönetimi sayfaları, raporları ve ilgili tabloları etkiler.
 
-Cihaz dışlama özelliği sayfalar ve raporlardan güvenlik açığı yönetimi verileri kaldırsa da, cihazlar ağa bağlı kalır ve kuruluş için risk altında olabilir. Cihaz dışlama işlemini istediğiniz zaman iptal edebilirsiniz.
+Cihaz dışlama özelliği cihaz verilerini güvenlik açığı yönetimi sayfalardan ve raporlardan kaldırsa da, cihazlar ağa bağlı kalır ve kuruluş için bir risk olmaya devam edebilir. İstediğiniz zaman cihaz dışlama işlemini iptal edebilirsiniz.
 
-## <a name="how-to-exclude-a-device"></a>Cihaz dışlama
+## <a name="how-to-exclude-a-device"></a>Cihazı dışlama
 
-Tek bir cihazı veya birden çok cihazı aynı anda hariç tutabilirsiniz.
+Tek bir cihazı veya birden çok cihazı aynı anda dışlamamayı seçebilirsiniz.
 
-### <a name="exclude-a-single-device"></a>Tek bir cihazı dışla
+### <a name="exclude-a-single-device"></a>Tek bir cihazı dışlama
 
-1. Cihaz **envanteri sayfasına gidin** ve dışarıda bırakılacak cihazı seçin.
-2. Cihaz **envanter** sayfasındaki eylem çubuğundan veya cihaz açılır öğesinde eylemler menüsünden Dışarıda Bırak'ı seçin.
+1. **Cihaz envanteri** sayfasına gidin ve dışlamak istediğiniz cihazı seçin.
+2. Cihaz envanteri sayfasındaki eylem çubuğundan veya cihaz açılır öğesindeki eylemler menüsünden **Dışla'yı** seçin.
 
-![Cihazı dışla menü seçeneğinin resmi.](images/exclude-devices-menu.png)
+   ![Cihazı dışla menü seçeneğinin görüntüsü.](images/exclude-devices-menu.png)
 
- 3. Bir gerekçelendirme seçin:
+3. Bir gerekçe seçin:
 
     - Etkin olmayan cihaz
-    - Cihazı çoğalt
-    - Cihaz mevcut değil
-    - Kapsam dışında  
+    - Yinelenen cihaz
+    - Cihaz yok
+    - Kapsam dışı
     - Diğer
 
-4. Bir not yazın ve Cihazı **dışla'ya seçin**.
+4. Bir not yazın ve **Cihazı dışla'yı** seçin.
 
-![Cihazı dışla'nın görüntüsü.](images/exclude-device.png)
+![Cihazı dışlama görüntüsü.](images/exclude-device.png)
 
-Ayrıca bir cihazı cihaz sayfasından da çıkarabilirsiniz.
+Ayrıca bir cihazı cihaz sayfasından dışlayabilirsiniz.
 
 > [!NOTE]
-> Etkin cihazların hariç olması önerilmez, çünkü özellikle güvenlik açığı bilgilerini görünürlüğü olmaz. Bir cihaz etkinse ve cihaz hariç tutmak istemiyorsanız, bir uyarı iletisi ve etkin bir cihazı dışarıda tutmak istediğinizden emin olup olamamanızı isteyen bir onay açılır iletisi alırsınız.
+> Etkin cihazların dışlanması önerilmez, çünkü güvenlik açığı bilgilerine görünürlük sağlamamak özellikle risklidir. Bir cihaz etkinse ve cihazı dışlamaya çalışırsanız, etkin bir cihazı dışlamak istediğinizden emin olup olmadığınız sorusunu soran bir uyarı iletisi ve bir onay açılır penceresi alırsınız.
 
-Bir cihazın görünümler ve verilerin tamamen dışlanmış olması 10 güvenlik açığı yönetimi kadar sürebilir.
+Bir cihazın güvenlik açığı yönetimi görünümlerden ve verilerden tamamen dışlanması 10 saate kadar sürebilir.
 
-Dışarıda bırakılan cihazlar, Cihaz envanteri listesinde görünmeye devam eder. Dışlanan cihazların görünümünü şu şekilde yönetebilirsiniz:
+Dışlanan cihazlar, Cihaz envanteri listesinde görünmeye devam ediyor. Dışlanan cihazlar görünümünüzü şu şekilde yönetebilirsiniz:
 
-- Cihaz stok **görünümüne** Dışlama durumu sütunu ekleme.
-- uygun  **cihaz listesini görüntülemek içinExclusion**  statefilter'ı kullanma.
+- **Dışlama durumu** sütununu cihaz envanter görünümüne ekleme.
+- İlgili cihaz listesini görüntülemek için **Dışlama durumu** filtresini kullanma.
 
-![Dışlama durumunun resmi.](images/exclusion-state.png)
+![Dışlama durumunun görüntüsü.](images/exclusion-state.png)
 
 ### <a name="bulk-device-exclusion"></a>Toplu cihaz dışlama
 
-Ayrıca, aynı anda birden çok cihazı hariç tutmak da seçebilirsiniz:
+Aynı anda birden çok cihazı dışlama seçeneğini de belirleyebilirsiniz:
 
-1. Cihaz **envanteri sayfasına gidin** ve hariç tutulacak cihazları seçin.
+1. **Cihaz envanteri** sayfasına gidin ve hariç tutulacak cihazları seçin.
 
-2. Eylemler çubuğunda Dışla'ya **seçin**.
+2. Eylemler çubuğunda **Dışla'yı** seçin.
 
-3. Bir gerekçelendirme seçin ve Cihazı **dışla'ya seçin**.
+3. Bir gerekçe seçin ve **Cihazı dışla'yı** seçin.
 
-Cihaz listesinde farklı dışlama durumları olan birden fazla cihaz seçtiysiniz, seçili cihazların dışlama uçlaması seçili cihazların kaç cihazın zaten dışlanmış olduğuyla ilgili ayrıntıları sağlar. Cihazları yeniden hariç tutabilirsiniz, ancak gerekçe ve notlar geçersiz kılınır.
+Cihaz listesinde farklı dışlama durumlarına sahip birden çok cihaz seçerseniz, seçili cihazların dışlanması açılır öğesi, seçili cihazların kaçının zaten dışlandığının ayrıntılarını sağlar. Cihazları yeniden dışlayabilirsiniz, ancak gerekçe ve notlar geçersiz kılınacaktır.
 
-![Toplu hariç tutmak için resim](images/exclude-device-bulk.png)
+![Toplu dışlama görüntüsü](images/exclude-device-bulk.png)
 
-Cihaz dışlandıktan sonra, dışarıda bırakılan bir cihazın cihaz sayfasına gidersanız, bulunan güvenlik açıkları, yazılım envanteri veya güvenlik önerileriyle ilgili verileri görüntüleyebilirsiniz. Veriler aynı zamanda kişisel sayfalarda, güvenlik açığı yönetimi gelişmiş av tablolarında ve korumasız cihazlar raporunda da yer almayacaktır.
+Bir cihaz dışlandıktan sonra, dışlanan bir cihazın cihaz sayfasına giderseniz bulunan güvenlik açıklarına, yazılım envanterine veya güvenlik önerilerine ilişkin verileri göremezsiniz. Veriler güvenlik açığı yönetimi sayfalarında, ilgili gelişmiş tehdit avcılığı tablolarında ve güvenlik açığı bulunan cihazlar raporunda da gösterilmez.
 
-## <a name="stop-excluding-a-device"></a>Cihaz hariç durma
+## <a name="stop-excluding-a-device"></a>Cihazı dışlamayı durdurma
 
-Cihaz hariç tutulacak herhangi bir zamanda bunu durdurabilirsiniz. Cihazlar artık hariç tutulamazsa güvenlik açığı verileri sayfalarda, raporlarda ve gelişmiş güvenlik açığı yönetimi aramalarda görünür. Değişikliklerin yürürlüğe girecekleri 8 saat kadar sürebilir.
+İstediğiniz zaman bir cihazı dışlamayı durdurabilirsiniz. Cihazlar artık dışlanmadıktan sonra güvenlik açığı verileri güvenlik açığı yönetimi sayfalarda, raporlarda ve gelişmiş tehdit avcılığında görünür. Değişikliklerin geçerli olması 8 saat kadar sürebilir.
 
-1. Cihaz envantere gidin, dışarıyı açmak için dışarıda bırakılan cihazı seçin ve ardından Dışlama **ayrıntıları'ı seçin**
-2. **Dışlamayı durdur'ı seçin**
+1. Cihaz envanterine gidin, dışlanan cihazı seçerek açılır öğeyi açın ve ardından **Dışlama ayrıntıları'nı** seçin
+2. **Dışlamayı durdur'u** seçin
 
 ![Dışlama ayrıntılarının resmi](images/exclusion-details.png)
 

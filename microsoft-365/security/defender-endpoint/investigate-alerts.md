@@ -1,5 +1,5 @@
 ---
-title: Uç nokta uyarıları için Microsoft Defender'ı araştırma
+title: Uyarı Uç Nokta için Microsoft Defender araştırma
 description: Anızı etkileyen uyarılar, bunların ne anlama gelenler ve bunların nasıl çözülecekleri ile ilgili ayrıntılı bilgi almak için araştırma seçeneklerini kullanın.
 keywords: araştırma, araştırma, cihazlar, cihaz, uyarılar sırası, pano, IP adresi, dosya, gönderme, gönderiler, derin çözümleme, zaman çizelgesi, arama, etki alanı, URL, IP
 ms.prod: m365-security
@@ -17,20 +17,20 @@ ms.collection:
 ms.topic: article
 ms.date: 04/24/2018
 ms.technology: mde
-ms.openlocfilehash: f228d0ca44589b9c140226c2b39984c717c7d9f8
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: e2ebdffa171266fdc0ec77047c9fecc5be9e56ba
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011889"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64471175"
 ---
-# <a name="investigate-alerts-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'da uyarıları araştırma
+# <a name="investigate-alerts-in-microsoft-defender-for-endpoint"></a>E-postada uyarıları Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigatealerts-abovefoldlink)
@@ -39,7 +39,7 @@ Anızı etkileyen uyarıları araştırmanız, bunların ne anlama gelen olduğu
 
 Uyarı sayfasına gitmek için uyarılar sırasından bir uyarı seçin. Bu görünüm uyarı başlığını, etkilenen varlıkları, yan ayrıntılar bölmesini ve uyarı yazını içerir.
 
-Uyarı sayfasından, uyarı ağacı görünümünün altındaki etkilenen varlıkları veya varlıkları seçerek araştırmanıza başlayabilirsiniz. Ayrıntılar bölmesi, seçtiğiniz konuyla ilgili ek bilgilerle otomatik olarak gösterilir. Burada ne tür bilgiler görüntüyebilirsiniz? Görmek için Bkz [. Uç Nokta için Microsoft Defender'da uyarıları gözden geçirme](/microsoft-365/security/defender-endpoint/review-alerts).
+Uyarı sayfasından, uyarı ağacı görünümünün altındaki etkilenen varlıkları veya varlıkları seçerek araştırmanıza başlayabilirsiniz. Ayrıntılar bölmesi, seçtiğiniz konuyla ilgili ek bilgilerle otomatik olarak gösterilir. Burada ne tür bilgiler görüntü ola görüntülemek için, Bu [makalenin Tamam görünümünde uyarıları Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint/review-alerts).
 
 ## <a name="investigate-using-the-alert-story"></a>Uyarı hikayelerini kullanarak araştırma
 
@@ -52,7 +52,7 @@ Ayrıntıları bir bakışta görmek için varlıkları genişletin. Bir varlık
 > [!NOTE]
 > Uyarı anlatısı bölümü, seçtiğiniz uyarıdan önce veya sonra görünen aynı yürütme ağacıyla ilgili ek uyarılar içeren birden fazla uyarı içerebilir.
 
-![Odaklanan bir uyarı ve genişletilmiş bazı kartlar ile bir uyarı hikayesi örneği.](images/alert-story-tree.png)
+:::image type="content" source="images/alert-story-tree.png" alt-text="Odakta bir uyarının ve genişletilmiş bazı kartların olduğu uyarı anlatısı" lightbox="images/alert-story-tree.png":::
 
 ## <a name="take-action-from-the-details-pane"></a>Ayrıntılar bölmesinden eyleme geçin
 
@@ -62,19 +62,19 @@ Incelemeyi tamamlaydıktan sonra, başlama uyarıya geri gidin, uyarının durum
 
 Bu uyarıyı doğru uyarı olarak sınıflandırsanız, aşağıdaki resimde gösterildiği gibi bir karar da seçin.
 
-![Çözümlenmiş uyarının ve karartma açılan penceresinin genişletilen bölümü.](images/alert-details-resolved-true.png)
+:::image type="content" source="images/alert-details-resolved-true.png" alt-text="Çözümlenen uyarının ve açılan karartma açılan listesinde genişletilmiş ayrıntılar bölmesi" lightbox="images/alert-details-resolved-true.png":::
 
 İş hattı uygulamasında yanlış uyarıyla karşılaşıyorsanız, gelecekte bu uyarı türünden kaçınmak için bir gizleme kuralı oluşturun.
 
-![Gizleme kuralı vurgulanmış olarak ayrıntılar bölmesinde eylemler ve sınıflandırma.](images/alert-false-suppression-rule.png)
+:::image type="content" source="images/alert-false-suppression-rule.png" alt-text="Gösterme kuralının vurgulu olduğu ayrıntılar bölmesinde eylemler ve sınıflandırma" lightbox="images/alert-false-suppression-rule.png":::
 
 > [!TIP]
 > Yukarıda açıklanmaz bir sorunla yaşıyorsanız geri bildirim sağlamak veya 🙂 bir destek bileti açmak için düğmeyi kullanın.
 
 
 ## <a name="related-topics"></a>İlgili konular
-- [Uç Nokta Uyarıları kuyruğu için Microsoft Defender'ı görüntüleme ve düzenleme](alerts-queue.md)
-- [Uç nokta uyarıları için Microsoft Defender'ı yönetme](manage-alerts.md)
+- [Yeni Uyarı kuyruğu Uç Nokta için Microsoft Defender ve düzenleme](alerts-queue.md)
+- [Uyarı Uç Nokta için Microsoft Defender yönetme](manage-alerts.md)
 - [Uç Nokta için Defender uyarısıyla ilişkilendirilmiş dosyayı araştırma](investigate-files.md)
 - [Uç Nokta Cihazları için Defender listesinde cihazları araştırma](investigate-machines.md)
 - [Uç Nokta için Defender uyarısıyla ilişkilendirilmiş IP adresini araştırma](investigate-ip.md)

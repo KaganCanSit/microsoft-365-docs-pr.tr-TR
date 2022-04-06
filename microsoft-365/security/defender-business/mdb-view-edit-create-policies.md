@@ -1,6 +1,6 @@
 ---
-title: İş için Microsoft Defender'da ilkeleri görüntüleme veya düzenleme
-description: İş için Microsoft Defender'da yeni nesil koruma ilkelerini görüntülemeyi, düzenlemeyi, oluşturmayı ve silmeyi öğrenin
+title: İş için Microsoft Defender'de ilkeleri görüntüleme veya düzenleme
+description: İş için Microsoft Defender'de yeni nesil koruma ilkelerini görüntülemeyi, düzenlemeyi, oluşturmayı ve silmeyi öğrenin
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -17,132 +17,132 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: cb79804985ee888faf1aa70029014a77ac9cae78
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 6f8ad1bd1f77bd3e53a1686674984155a7dc8525
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63526780"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64665106"
 ---
-# <a name="view-or-edit-policies-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da ilkeleri görüntüleme veya düzenleme
+# <a name="view-or-edit-policies-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'de ilkeleri görüntüleme veya düzenleme
 
 > [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
+> İş için Microsoft Defender, 1 Mart 2022'de başlayarak [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşterilerine dağıtılıyor. Tek başına abonelik olarak İş için Defender önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşterilere ve BT İş Ortaklarına aşamalı olarak dağıtılacaktır. Önizleme, [bir dizi ilk senaryo](mdb-tutorials.md#try-these-preview-scenarios) içerir ve düzenli olarak özellikler ekleyeceğiz.
 > 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-İş için Microsoft Defender'da, güvenlik ayarları cihazlara uygulanan ilkeler aracılığıyla yapılandırılır. Kurulum ve yapılandırma deneyiminizi basitleştirmeye yardımcı olmak için, Defender for Business şirket cihazları dahil edildik anda korunmasına yardımcı olmak için önceden yapılandırılmış ilkeler içerir. Varsayılan ilkeleri kullanabilir, ilkeleri düzenleyebilir veya kendi ilkelerinizi oluşturabilirsiniz.
+İş için Microsoft Defender'da, güvenlik ayarları cihazlara uygulanan ilkeler aracılığıyla yapılandırılır. İş için Defender, kurulum ve yapılandırma deneyiminizi basitleştirmeye yardımcı olmak için şirketinizin cihazlarının eklendikleri anda korunmasına yardımcı olmak için önceden yapılandırılmış ilkeler içerir. Varsayılan ilkeleri kullanabilir, ilkeleri düzenleyebilir veya kendi ilkelerinizi oluşturabilirsiniz.
 
-**Bu makalede şunların nasıl olduğu açıklanmıştır**:
+**Bu makalede şunların nasıl yapılacağını açıklar**:
 
-- [Varsayılan ilkelerinize genel bir bakış elde](#default-policies-in-defender-for-business)
+- [Varsayılan ilkelerinize genel bakış elde edin](#default-policies-in-defender-for-business)
 
-- [Var olan ilkelerinizi görüntüleme](#view-your-existing-policies)
+- [Mevcut ilkelerinizi görüntüleme](#view-your-existing-policies)
 
 - [Var olan bir ilkeyi düzenleme](#edit-an-existing-policy)
 
 - [Yeni ilke oluşturma](#create-a-new-policy)
 
 >
-> **Bir dakika mı kaldı?**
-> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+> **Bir dakikan var mı?**
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">İş için Microsoft Defender hakkındaki kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
 ## <a name="default-policies-in-defender-for-business"></a>İş için Defender'da varsayılan ilkeler
 
-İş için Defender'da, şirketinizi korumak için iki ana ilke türü vardır:
+İş için Defender'da, şirketinizin cihazlarını korumaya yönelik iki ana ilke türü vardır:
 
-- **Yeni nesil koruma ilkelerinin** nasıl yapılandır Microsoft Defender Virüsten Koruma diğer tehdit koruması özelliklerinin nasıl yapılandırıldığından emin olun
+- Microsoft Defender Virüsten Koruma ve diğer tehdit koruma özelliklerinin nasıl yapılandırıldığını belirleyen **yeni nesil koruma ilkeleri**
 
-- **Hangi ağ** trafiğinin şirket cihazlarına ve bu cihazlardan akışa izin verdiğini belirleyen Güvenlik Duvarı ilkeleri
+- Şirketinizin cihazlarına hangi ağ trafiğinin akışına izin verileceğini belirleyen **güvenlik duvarı ilkeleri**
 
 
-## <a name="view-your-existing-policies"></a>Var olan ilkelerinizi görüntüleme
+## <a name="view-your-existing-policies"></a>Mevcut ilkelerinizi görüntüleme
 
-1. Microsoft 365 Defender portalına () gidin[https://security.microsoft.com](https://security.microsoft.com) ve oturum açın. 
+1. Microsoft 365 Defender portalına ()[https://security.microsoft.com](https://security.microsoft.com) gidin ve oturum açın. 
 
-2. Gezinti bölmesinde Cihaz **yapılandırması'ni seçin**. İlkeler, işletim sistemi (Windows **istemcisi** gibi) ve ilke türüne (Yeni nesil koruma ve Güvenlik Duvarı **gibi)** göre **düzenlenmiştir**. 
+2. Gezinti bölmesinde **Cihaz yapılandırması'nı** seçin. İlkeler işletim sistemine (**Windows istemcisi** gibi) ve ilke türüne (**Yeni nesil koruma** ve **Güvenlik Duvarı** gibi) göre düzenlenir. 
 
-3. Bir işletim sistemi sekmesi seçin (örneğin, **Windows)** ve sonra Yeni Nesil Koruma ve Güvenlik Duvarı kategorileri altındaki **ilkeler** **listesini gözden** geçirebilirsiniz. 
+3. bir işletim sistemi sekmesi (örneğin, **Windows istemcileri**) seçin ve ardından **Yeni nesil koruma** ve **Güvenlik Duvarı** kategorilerinin altındaki ilke listesini gözden geçirin. 
 
-4. İlke hakkında daha fazla ayrıntı görüntülemek için, ilkenin adını seçin. Bu ilke hakkında daha fazla bilgi sağlayan, örneğin bu ilke tarafından korunan cihazlar gibi bir yan bölme açılır.
+4. İlke hakkında daha fazla ayrıntı görüntülemek için adını seçin. İlkeyle korunan cihazlar gibi bu ilke hakkında daha fazla bilgi sağlayan bir yan bölme açılır.
 
 ## <a name="edit-an-existing-policy"></a>Var olan bir ilkeyi düzenleme
 
-1. Microsoft 365 Defender portalına () gidin[https://security.microsoft.com](https://security.microsoft.com) ve oturum açın. 
+1. Microsoft 365 Defender portalına ()[https://security.microsoft.com](https://security.microsoft.com) gidin ve oturum açın. 
 
-2. Gezinti bölmesinde Cihaz **yapılandırması'ni seçin**. İlkeler, işletim sistemi (Windows **istemcisi** gibi) ve ilke türüne (Yeni nesil koruma ve Güvenlik Duvarı **gibi)** göre **düzenlenmiştir**. 
+2. Gezinti bölmesinde **Cihaz yapılandırması'nı** seçin. İlkeler işletim sistemine (**Windows istemcisi** gibi) ve ilke türüne (**Yeni nesil koruma** ve **Güvenlik Duvarı** gibi) göre düzenlenir. 
 
-3. Bir işletim sistemi sekmesi seçin (örneğin, **Windows)** ve sonra Yeni Nesil Koruma ve Güvenlik Duvarı kategorileri altındaki **ilkeler** **listesini gözden** geçirebilirsiniz. 
+3. bir işletim sistemi sekmesi (örneğin, **Windows istemcileri**) seçin ve ardından **Yeni nesil koruma** ve **Güvenlik Duvarı** kategorilerinin altındaki ilke listesini gözden geçirin. 
 
-4. Bir ilkeyi düzenlemek için, ilkenin adını seçin ve sonra da Düzenle'yi **seçin**.
+4. İlkeyi düzenlemek için, ilkenin adını ve ardından **Düzenle'yi** seçin.
 
-5. Genel **bilgiler sekmesinde** bilgileri gözden geçirebilirsiniz. Gerekirse, açıklamayı düzenleyebilirsiniz. Sonra, **Sonraki'yi seçin**.
+5. **Genel bilgiler** sekmesinde bilgileri gözden geçirin. Gerekirse açıklamayı düzenleyebilirsiniz. Ardından **İleri'yi** seçin.
 
-6. Cihaz grupları **sekmesinde** , bu ilkeyi hangi cihaz gruplarının alaları gerektiğini seçin.  
+6. **Cihaz grupları** sekmesinde, hangi cihaz gruplarının bu ilkeyi alması gerektiğini belirleyin.  
 
-   - Seçili cihaz grubunu olduğu gibi tutmak için Sonraki'yi **seçin**.
-   - Bir cihaz grubunu ilkeden kaldırmak için Kaldır'ı **seçin**.
-   - Yeni bir cihaz grubu ayarlamak için Yeni grup **oluştur'a** ve ardından cihaz grubunızı ayarlayın. (Bu görevle ilgili yardım almak için bkz [. İş için Microsoft Defender'da cihaz grupları](mdb-create-edit-device-groups.md).)
-   - İlkeyi başka bir cihaz grubuna uygulamak için Varolan grubu **kullan'ı seçin**.
+   - Seçili cihaz grubunu olduğu gibi tutmak için **İleri'yi** seçin.
+   - İlkeden bir cihaz grubunu kaldırmak için **Kaldır'ı** seçin.
+   - Yeni bir cihaz grubu ayarlamak için **Yeni grup oluştur'u** seçin ve ardından cihaz grubunuzu ayarlayın. (Bu görevle ilgili yardım almak için bkz[. İş için Microsoft Defender cihaz grupları](mdb-create-edit-device-groups.md).)
+   - İlkeyi başka bir cihaz grubuna uygulamak için **Var olan grubu kullan'ı** seçin.
 
-   hangi cihaz gruplarının ilkeyi alsı gerektiğini belirttikten sonra, Sonraki'yi **seçin**.
+   İlkeyi hangi cihaz gruplarının alacağını belirttikten sonra **İleri'yi** seçin.
 
-7. Yapılandırma **ayarları sekmesinde** ayarları gözden geçirin. Gerekirse, ilkenizin ayarlarını düzenleyebilirsiniz. Bu görevle ilgili yardım almak için aşağıdaki makalelere bakın: 
+7. **Yapılandırma ayarları** sekmesinde ayarları gözden geçirin. Gerekirse, ilkenizin ayarlarını düzenleyebilirsiniz. Bu görevle ilgili yardım almak için aşağıdaki makalelere bakın: 
 
    - [Yeni nesil yapılandırma ayarlarını anlama](mdb-next-gen-configuration-settings.md)   
    - [Güvenlik duvarı ayarları](mdb-firewall.md)
 
-   Yeni nesil koruma ayarlarınızı belirttikten sonra, Sonraki'yi **seçin**.
+   Yeni nesil koruma ayarlarınızı belirttikten sonra **İleri'yi** seçin.
 
-8. **İlkenizi gözden geçirme** sekmesinde genel bilgileri, hedefli cihazları ve yapılandırma ayarlarını gözden geçirebilirsiniz. 
+8. **İlkenizi gözden geçirin** sekmesinde genel bilgileri, hedeflenen cihazları ve yapılandırma ayarlarını gözden geçirin. 
 
-   - Düzenle'yi seçerek gerekli değişiklikleri **yapın**.
-   - Devam etmeye hazır olduğunda İlkeyi **güncelleştir'i seçin**.
+   - **Düzenle'yi** seçerek gerekli değişiklikleri yapın.
+   - Devam etmeye hazır olduğunuzda **İlkeyi güncelleştir'i** seçin.
 
 ## <a name="create-a-new-policy"></a>Yeni ilke oluşturma
 
-1. Microsoft 365 Defender portalına () gidin[https://security.microsoft.com](https://security.microsoft.com) ve oturum açın. 
+1. Microsoft 365 Defender portalına ()[https://security.microsoft.com](https://security.microsoft.com) gidin ve oturum açın. 
 
-2. Gezinti bölmesinde Cihaz **yapılandırması'ni seçin**. İlkeler, işletim sistemi (Windows **istemcisi** gibi) ve ilke türüne (Yeni nesil koruma ve Güvenlik Duvarı **gibi)** göre **düzenlenmiştir**. 
+2. Gezinti bölmesinde **Cihaz yapılandırması'nı** seçin. İlkeler işletim sistemine (**Windows istemcisi** gibi) ve ilke türüne (**Yeni nesil koruma** ve **Güvenlik Duvarı** gibi) göre düzenlenir. 
 
-3. Bir işletim sistemi sekmesi seçin (örneğin, **Windows)** ve sonra Yeni nesil koruma ilkeleri **listesini gözden** geçirebilirsiniz. 
+3. bir işletim sistemi sekmesi (örneğin, **Windows istemcileri**) seçin ve **yeni nesil koruma** ilkeleri listesini gözden geçirin. 
 
-4. Yeni **nesil koruma veya Güvenlik Duvarı'nın** **altında** **+ Ekle'yi seçin**.
+4. **Yeni nesil koruma** veya **Güvenlik Duvarı** altında **+ Ekle'yi** seçin.
 
-5. Genel **bilgiler sekmesinde** aşağıdaki adımları izleyin:
+5. **Genel bilgiler** sekmesinde aşağıdaki adımları izleyin:
 
-   1. Ad ve açıklama belirtin. Bu bilgiler, sizin ve ekibinin daha sonra ilkeyi belirlemenize yardımcı olur.
-   2. İlke sırayı gözden geçirin ve gerekirse düzenleyin. (Daha fazla bilgi için bkz. [İlke sırası](mdb-policy-order.md).)
+   1. Bir ad ve açıklama belirtin. Bu bilgiler, sizin ve ekibinizin ilkeyi daha sonra tanımlamanıza yardımcı olur.
+   2. İlke sırasını gözden geçirin ve gerekirse düzenleyin. (Daha fazla bilgi için bkz. [İlke sırası](mdb-policy-order.md).)
    3. **İleri**'yi seçin. 
 
-7. Cihaz **grupları sekmesinde** yeni bir cihaz grubu oluşturun veya varolan bir grubu kullanın. İlkeler cihaz grupları aracılığıyla cihazlara atanır. Şunları unutmayın:
+7. **Cihaz grupları** sekmesinde yeni bir cihaz grubu oluşturun veya mevcut bir grubu kullanın. İlkeler cihazlara cihaz grupları aracılığıyla atanır. Aklınızda bulundurmak istediğiniz bazı şeyler şunlardır:
 
-   - Başlangıçta, yalnızca şirketinizi kullanan kişilerin şirket verilerine ve e-postaya erişmek için hangi cihazları kullanıyor olduğunu içeren varsayılan cihaz grubunuz olabilir. Varsayılan cihaz grubunızı saklayarak kullanabilirsiniz.
+   - Başlangıçta, yalnızca şirketinizdeki kişilerin şirket verilerine ve e-postasına erişmek için kullandığı cihazları içeren varsayılan cihaz grubunuz olabilir. Varsayılan cihaz grubunuzu tutabilir ve kullanabilirsiniz.
    - Varsayılan ilkeden farklı olan belirli ayarlara sahip bir ilke uygulamak için yeni bir cihaz grubu oluşturun. 
-   - Cihaz grubunızı ayar yukarıya doğru ayar ilk olarak işletim sistemi sürümü gibi belirli ölçütleri belirtirsiniz. Ölçütleri karşılanan cihazlar, siz dışlamadıysanız bu cihaz grubuna dahil edilir. 
-   - Tanımladığınız varsayılan ve özel cihaz grupları dahil olmak üzere tüm cihaz grupları Azure Active Directory (Azure AD) içinde depolanır.
+   - Cihaz grubunuzu ayarlarken işletim sistemi sürümü gibi belirli ölçütleri belirtirsiniz. Ölçütleri karşılayan cihazlar, siz hariç tutmadığınız sürece bu cihaz grubuna dahil edilir. 
+   - Tanımladığınız varsayılan ve özel cihaz grupları dahil olmak üzere tüm cihaz grupları Azure Active Directory(Azure AD) içinde depolanır.
 
-   Cihaz grupları hakkında daha fazla bilgi edinmek için bkz [. İş için Defender'da cihaz grupları](mdb-create-edit-device-groups.md).
+   Cihaz grupları hakkında daha fazla bilgi edinmek için bkz. [İş için Defender'da cihaz grupları](mdb-create-edit-device-groups.md).
 
-8. Yapılandırma **ayarları sekmesinde** , ilkenizin ayarlarını belirtin ve sonra da Sonraki'yi **seçin**. Tek tek ayarlar hakkında daha fazla bilgi için bkz. [İş için Microsoft Defender yapılandırma ayarları](mdb-next-gen-configuration-settings.md).
+8. **Yapılandırma ayarları** sekmesinde ilkenizin ayarlarını belirtin ve ardından **İleri'yi** seçin. Tek tek ayarlar hakkında daha fazla bilgi için bkz[. İş için Microsoft Defender yapılandırma ayarları](mdb-next-gen-configuration-settings.md).
 
-9. **İlkenizi gözden geçirme** sekmesinde genel bilgileri, hedefli cihazları ve yapılandırma ayarlarını gözden geçirebilirsiniz. 
+9. **İlkenizi gözden geçirin** sekmesinde genel bilgileri, hedeflenen cihazları ve yapılandırma ayarlarını gözden geçirin. 
 
-   - Düzenle'yi seçerek gerekli değişiklikleri **yapın**.
-   - Devam etmeye hazır olduğunda İlke **oluştur'a seçin**.
+   - **Düzenle'yi** seçerek gerekli değişiklikleri yapın.
+   - Devam etmeye hazır olduğunuzda **İlke oluştur'u** seçin.
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Aşağıdaki görevlerden birini veya daha fazlasını seçin:
 
-- [Cihazları yönet](mdb-manage-devices.md)
+- [Cihazları yönetme](mdb-manage-devices.md)
 
 - [İş için Microsoft Defender'da yeni ilke oluşturma](mdb-create-new-policy.md)
 
 - [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)
 
-- [İş için Microsoft Defender'da tehditleri yanıtlama ve azaltmak](mdb-respond-mitigate-threats.md)
+- [İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma](mdb-respond-mitigate-threats.md)
 
-- [İşlem merkezinde düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
+- [İşlem merkezindeki düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)

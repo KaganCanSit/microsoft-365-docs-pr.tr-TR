@@ -14,15 +14,15 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Yöneticiler, Exchange Online Protection (EOP) ve Office 365 için Microsoft Defender'da bulunan kimlik avı önleme ilkeleri hakkında bilgi Office 365.
+description: Yöneticiler, EOP (EOP) ve başka bir Exchange Online Protection kimlik avı ilkeleri hakkında bilgi Office 365 için Microsoft Defender.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a0f491c099e5a3b67866738267215e79ff6cbeb0
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 5389e83634bc92dd01908b16e8ca0a76dd76c765
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679554"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475707"
 ---
 # <a name="anti-phishing-policies-in-microsoft-365"></a>E-postada kimlik avı önleme Microsoft 365
 
@@ -30,21 +30,21 @@ ms.locfileid: "63679554"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Kimlik avı koruma ayarlarını yapılandırmaya yönelik ilkeler Microsoft 365 posta kutuları olan Exchange Online kuruluşlarda, Exchange Online Protection posta kutuları olmayan tek başına Exchange Online Protection (EOP Exchange Online) kuruluşlarında ve Office 365 için.
+Kimlik avı koruma ayarlarını yapılandırmaya yönelik ilkeler Microsoft 365 posta kutuları olan Exchange Online kuruluşlarda, posta kutuları olmayan tek Exchange Online Protection (EOP) Exchange Online ve Office 365 için Microsoft Defender için.
 
-Bu kuruluşlar için Microsoft Defender Office 365 örnekleri şunlardır:
+Bazı yeni Office 365 için Microsoft Defender örnekleri şunlardır:
 
 - Microsoft 365 Kurumsal E5, Microsoft 365 Eğitim A5, vb.
 - [Microsoft 365 Kurumsal](https://www.microsoft.com/microsoft-365/enterprise/home)
 - [Microsoft 365 İş](https://www.microsoft.com/microsoft-365/business)
-- [Eklenti olarak Office 365 için Microsoft Defender](https://products.office.com/exchange/advance-threat-protection)
+- [Office 365 için Microsoft Defender olarak ekleme](https://products.office.com/exchange/advance-threat-protection)
 
-EOP'de kimlik avı önleme ilkeleri ile Office 365 için Defender'daki kimlik avı ilkeleri arasındaki üst düzey farklar aşağıdaki tabloda açıklanmıştır:
+EOP'de kimlik avı ilkeleri ile Office 365 için Defender'te kimlik avı ilkeleri arasındaki üst düzey farklar aşağıdaki tabloda açıklanmıştır:
 
-|Özellik|EOP'de kimlik avı önleme ilkeleri|Office 365 için Defender'da kimlik avına karşı koruma Office 365|
+|Özellik|EOP'de kimlik avı önleme ilkeleri|E-postada kimlik avı önleme Office 365 için Defender|
 |---|:---:|:---:|
 |Otomatik olarak oluşturulan varsayılan ilke|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
 |Özel ilkeler oluşturma|![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
@@ -59,13 +59,13 @@ EOP'de kimlik avı önleme ilkeleri ile Office 365 için Defender'daki kimlik av
 Kimlik avı önleme ilkelerini yapılandırmak için aşağıdaki makalelere bakın:
 
 - [EOP'de kimlik avı önleme ilkelerini yapılandırma](configure-anti-phishing-policies-eop.md)
-- [Kimlik avıyla mücadele ilkelerini Microsoft Defender'da Office 365](configure-mdo-anti-phishing-policies.md)
+- [E-postada kimlik avı önleme ilkelerini Office 365 için Microsoft Defender](configure-mdo-anti-phishing-policies.md)
 
-Bu makalenin kalan bölümü, EOP'de kimlik avı ilkeleri ve Kimlik Avı için Defender'da bulunan Office 365.
+Bu makalenin kalan bölümü EOP ve Office 365 için Defender'de kimlik avı önleme ilkelerde bulunan ayarları Office 365 için Defender.
 
 ## <a name="common-policy-settings"></a>Ortak ilke ayarları
 
-Aşağıdaki ilke ayarları EOP'de kimlik avı önleme ilkelerde ve kimlik avı için Defender'da Office 365:
+Aşağıdaki ilke ayarları EOP'de ve kimlik avı önleme ilkelerde Office 365 için Defender:
 
 - **Ad**: Varsayılan kimlik avı önleme ilkesi yeniden adlandırılamaz. Özel bir kimlik avı önleme ilkesi oluşturduk sonra, bu ilkeyi Microsoft 365 Defender portalında yeniden Microsoft 365 Defender.
 
@@ -85,13 +85,13 @@ Aşağıdaki ilke ayarları EOP'de kimlik avı önleme ilkelerde ve kimlik avı 
     - **Etki alanları**
 
   > [!NOTE]
-  > İlkenin geçerli olduğu ileti alıcılarını belirlemek için, özel kimlik avı ilkeleri içinde Kullanıcılar **,** gruplar ve etki alanı ayarlarında en az bir  <u>seçim gereklidir</u>. Office 365 için Defender'da kimlik avı önleme ilkeleri ayrıca, bu makalenin [](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) devamlarında açıklandığı gibi kimliğe bürünme koruması alacak tek tek gönderen e-posta adreslerini veya gönderen etki alanlarını belirtebilirsiniz.<u></u>
+  > İlkenin geçerli olduğu ileti alıcılarını belirlemek için, özel kimlik avı ilkeleri içinde Kullanıcılar **,** gruplar ve etki alanı ayarlarında en az bir  <u>seçim gereklidir</u>. Office 365 için Defender kimlik avı önleme ilkeleri, bu makalenin devamlarında açıklandığı [](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) gibi kimliğe bürünme koruması alacak tek tek gönderen e-posta adreslerini <u></u> veya gönderen etki alanlarını belirtebilirsiniz.
 
 ## <a name="spoof-settings"></a>Poof ayarları
 
 Kimliği doğrulama, e-posta iletisinden gelen adresin (e-posta istemcilerde gösterilen gönderen adresi) e-posta kaynağının etki alanıyla eşleşmemiş olmasıdır. Bu konuda daha fazla bilgi için bkz. Bu konuda bilgi için bkz. [Microsoft 365](anti-spoofing-protection.md).
 
-Aşağıdaki kimlik sahtesi ayarları EOP'de kimlik avı önleme ilkelerde ve kimlik avı için Defender'da Office 365:
+Aşağıdaki kimlik sahtesi ayarları EOP ve kimlik avı önleme ilkelerde Office 365 için Defender:
 
 - **Akıllı ifadeyi etkinleştirme**: Akıllı ifadeyi etkinleştirme veya devre dışıdır. Açık bırakmanizi öneririz.
 
@@ -118,7 +118,7 @@ Aşağıdaki kimlik sahtesi ayarları EOP'de kimlik avı önleme ilkelerde ve ki
 
 ### <a name="unauthenticated-sender"></a>Kimliği doğrulanmamış gönderen
 
-Kimliği doğrulanmamış gönderen bildirimleri, önceki bölümde açıklandığı gibi [](#spoof-settings) EOP ve Office 365 için Defender'da kimlik avı önleme ilkelerde bulunan Kimlik sahtesi ayarlarının bir bölümüdur. Aşağıdaki ayarlar yalnızca bilgi yok ayarı açık olduğunda kullanılabilir:
+Kimliği doğrulanmamış gönderen bildirimleri, önceki bölümde açıklandığı gibi [](#spoof-settings) EOP ve Office 365 için Defender'te kimlik avı önleme ilkelerde kullanılabilen Kimlik sahtesi ayarlarının bir bölümü olur. Aşağıdaki ayarlar yalnızca bilgi yok ayarı açık olduğunda kullanılabilir:
 
 - Kimliksüz kimlik doğrulaması için kimliği doğrulanmamış gönderenler için **(?)** göster: Bu bildirim, ileti SPF veya DKIM denetimlerinden geçelamasa ve ileti DMARC veya bileşik kimlik doğrulamasını geçese, Gönderen kutusunda gönderenin fotoğrafına bir soru işareti [ekler](email-validation-and-authentication.md#composite-authentication). Bu ayar kapalı olduğunda, soru işareti gönderenin fotoğrafına eklenmez.
 
@@ -135,14 +135,14 @@ Daha fazla bilgi için bkz[. Outlook.com'da şüpheli iletileri tanımlama ve](h
 
 ## <a name="first-contact-safety-tip"></a>İlk iletişim güvenlik ipucu
 
-İlk **kişi kimliğini göster güvenlik ipucu** ayarları EOP ve Defender'da Office 365 kuruluşlar için kullanılabilir ve kimlik sahteciliğe veya kimliğe bürünme koruma ayarlarına bağımlılığı yoktur. Güvenlik ipucu aşağıdaki senaryolarda alıcılara gösterilir:
+İlk **kişi kimliğini göster güvenlik ipucu** ayarları EOP ve Office 365 için Defender kuruluşlarda kullanılabilir ve kimlik sahteciliğe veya kimliğe bürünme koruma ayarlarına bağımlılığı yoktur. Güvenlik ipucu aşağıdaki senaryolarda alıcılara gösterilir:
 
 - gönderenden ilk kez ileti alan kişiler
 - Çoğunlukla gönderenden ileti alırlar.
 
-![Tek alıcılı güvenlik ipucu için ilk kişi adresi.](../../media/safety-tip-first-contact-one-recipient.png)
+:::image type="content" source="../../media/safety-tip-first-contact-one-recipient.png" alt-text="Bir alıcısı güvenlik ipucu iletiler için İlk kişi adı" lightbox="../../media/safety-tip-first-contact-one-recipient.png":::
 
-![Birden çok güvenlik ipucu ileti için ilk iletişim adresi.](../../media/safety-tip-first-contact-multiple-recipients.png)
+:::image type="content" source="../../media/safety-tip-first-contact-multiple-recipients.png" alt-text="Birden çok güvenlik ipucu olan iletiler için İlk kişi adı" lightbox="../../media/safety-tip-first-contact-multiple-recipients.png":::
 
 Bu özellik, olası kimliğe bürünme saldırılarına karşı ek bir güvenlik koruması katmanı ekler; dolayısıyla bu özelliği açmanız önerilir.
 
@@ -151,14 +151,14 @@ Bu özellik, olası kimliğe bürünme saldırılarına karşı ek bir güvenlik
 > [!NOTE]
 > İletinin birden çok alıcısı varsa, ipucunun göster olup olmadığı ve kimin için bir çoğunluk modelini temel alan bir ipucu olduğu. Alıcıların çoğunluğu asla veya çoğu zaman gönderenden ileti almayacaksa, etkilenen alıcılar bu iletiyi alan bazı kişiler **... ipucunu** alır. Bu davranışın bir alıcının diğer alıcıya iletişim alışkanlıkları konusunda endişeleriniz varsa, ilk iletişim güvenlik ipucu etkinleştirme olmalı ve onun yerine posta akış kurallarını kullanmaya devam edesiniz.
 
-## <a name="exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Kimlik avıyla mücadele ilkeleri için Microsoft Defender'daki özel Office 365
+## <a name="exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>E-postada kimlik avı önleme ilkelerde özel Office 365 için Microsoft Defender
 
-Bu bölümde, yalnızca Office 365 için Defender'daki kimlik avı önleme ilkelerde kullanılabilen ilke ayarları açık Office 365.
+Bu bölümde, yalnızca Office 365 için Defender'de kimlik avı önleme ilkeleri için kullanılabilen ilke ayarları açık Office 365 için Defender.
 
 > [!NOTE]
-> Office 365 için Defender'daki varsayılan kimlik avı koruma ilkesi, tüm alıcılar için kimlik [avı koruması ve](set-up-anti-phishing-policies.md#spoof-settings) posta kutusu zekası sağlar. Bununla birlikte, diğer kullanılabilir [kimliğe bürünme](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) koruma [özellikleri ve gelişmiş](set-up-anti-phishing-policies.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) ayarlar varsayılan ilkede yapılandırılmaz veya etkinleştirilmez. Tüm koruma özelliklerini etkinleştirmek için, varsayılan kimlik avı önleme ilkesine değişiklik veya ek kimlik avı koruma ilkeleri oluşturun.
+> E-posta'daki varsayılan kimlik avı önleme [Office 365 için Defender tüm alıcılar](set-up-anti-phishing-policies.md#spoof-settings) için kimlik avı koruması ve posta kutusu zekası sağlar. Bununla birlikte, diğer kullanılabilir [kimliğe bürünme](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) koruma [özellikleri ve gelişmiş](set-up-anti-phishing-policies.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365) ayarlar varsayılan ilkede yapılandırılmaz veya etkinleştirilmez. Tüm koruma özelliklerini etkinleştirmek için, varsayılan kimlik avı önleme ilkesine değişiklik veya ek kimlik avı koruma ilkeleri oluşturun.
 
-### <a name="impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da kimlik avı önleme ilkelerinde kimliğe bürünme Office 365
+### <a name="impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>kimlik avı önleme ilkelerinde kimliğe bürünme ayarları Office 365 için Microsoft Defender
 
 Kimliğe Bürünme, gönderenin veya gönderenin e-posta etki alanının bir iletide gerçek gönderene veya etki alanına benser olduğu durumla benzer:
 
@@ -170,7 +170,7 @@ Kimliğe Bürünme, gönderenin veya gönderenin e-posta etki alanının bir ile
 
 Kimliğine bürünülen bir etki alanı yasal (kayıtlı etki alanı, yapılandırılmış e-posta kimlik doğrulama kayıtları, vb.) kabul edilir, ancak amacı alıcıları kandırmaktır.
 
-Aşağıdaki kimliğe bürünme ayarları yalnızca kimlik avı önleme ilkeleri için Defender'da Office 365:
+Aşağıdaki kimliğe bürünme ayarları yalnızca kimlik avı önleme ilkelerinde Office 365 için Defender:
 
 - **Kullanıcıların korumasını etkinleştirme**: Belirtilen iç veya dış e-posta adreslerinin ileti gönderenleri olarak **kimliğine bürünülmelerini sağlar**. Örneğin, Şirketinizin Başkan Yardımcısı'nın şirket içi bazı bilgilerini göndermenizi isteyen bir e-posta iletisi alırsınız. Bunu yapar mısınız? Birçok kişi düşünmeden yanıtı gönderir.
 
@@ -229,13 +229,13 @@ Aşağıdaki kimliğe bürünme ayarları yalnızca kimlik avı önleme ilkeleri
 
 - **Güvenilen gönderenleri ve etki alanlarını ekleme**: Kimliğe bürünme koruma ayarlarıyla ilgili özel durumlar. Belirtilen gönderenlerden ve gönderen etki alanlarından gelen iletiler ilke tarafından hiçbir zaman kimliğe bürünme tabanlı saldırılar olarak sınıflandırılmaz. Başka bir deyişle, korumalı gönderenler, korunan etki alanları veya posta kutusu zekası koruması eylemi bu güvenilen gönderenlere veya gönderen etki alanlarına uygulanmaz. Bu listeler için en yüksek sınır 1024 girdidir.
 
-### <a name="advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da kimlik avı önleme ilkelerde gelişmiş kimlik Office 365
+### <a name="advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'ta kimlik avı önleme ilkelerde gelişmiş kimlik Office 365 için Microsoft Defender
 
-Aşağıdaki gelişmiş kimlik avı eşikleri yalnızca Office 365 için Defender'daki kimlik avı önleme ilkelerde Office 365. Bu eşikler kimlik avı kararını belirlemek üzere iletilere makine öğrenme modelleri uygulama duyarlılığını belirler:
+Aşağıdaki gelişmiş kimlik avı eşikleri yalnızca kimlik avıyla mücadele ilkesinde ve Office 365 için Defender. Bu eşikler kimlik avı kararını belirlemek üzere iletilere makine öğrenme modelleri uygulama duyarlılığını belirler:
 
 - **1 - Standart**: Bu, varsayılan değerdir. İletide iletiyi alan eylemin önem derecesi, iletinin kimlik avı (düşük, orta, yüksek veya çok yüksek güven düzeyi) olduğunu güvenlik derecesine bağlıdır. Örneğin, kimlik avı olarak tanımlanan ve çok yüksek güven derecesine sahip iletilere en ciddi işlemler uygulanırken, kimlik avı olarak tanımlanan ve güven derecesi düşük olan iletilere daha az ciddi eylemler uygulanır.
 - **2 - Saldırgan**: Kimlik avı olarak tanımlanan ve yüksek düzeyde güvenen iletiler, çok yüksek güven derecesiyle tanımlandı gibi kabul edilir.
 - **3 - Daha agresif**: Orta veya yüksek düzeyde güven derecesiyle kimlik avı olarak tanımlanan iletiler, çok yüksek güven derecesiyle tanımlandı gibi kabul edilir.
 - **4 - En saldırgan**: Kimlik avı olarak tanımlanan ve düşük, orta veya yüksek düzeyde güven derecesine sahip iletiler, kimlik avından çok yüksek düzeyde güvenerek tanımlandı gibi kabul edilir.
 
-Bu ayarı artırtıkça hatalı pozitif sonuç (kötü işaretli iyi iletiler) ihtimali artar. Önerilen ayarlar hakkında bilgi için bkz. Kimlik avı ayarları için [Microsoft Defender'da kimlik Office 365.](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365)
+Bu ayarı artırtıkça hatalı pozitif sonuç (kötü işaretli iyi iletiler) ihtimali artar. Önerilen ayarlar hakkında daha fazla bilgi için bkz. [Kimlik avıyla mücadele ilkesi Office 365 için Microsoft Defender.](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365)

@@ -1,6 +1,6 @@
 ---
-title: İş için Microsoft Defender'daki öğreticiler ve benzetimler
-description: İş için Defender kullanmaya başlamanıza yardımcı olacak çeşitli öğreticiler hakkında bilgi
+title: İş için Microsoft Defender'deki öğreticiler ve simülasyonlar
+description: İş için Defender'ı kullanmaya başlamanıza yardımcı olacak çeşitli öğreticiler hakkında bilgi edinin
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -16,77 +16,77 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: b28e28b2504ed2234f2f48a9763827fc7b063af8
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 98ead4a77c275e0e4aeeab90e87e0b468a9b7bb8
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525508"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64665986"
 ---
-# <a name="tutorials-and-simulations-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'daki öğreticiler ve benzetimler
+# <a name="tutorials-and-simulations-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'deki öğreticiler ve simülasyonlar
 
 > [!IMPORTANT]
-> İş için Microsoft Defender şu anda önizlemede ve istekte etmek için buraya kaydolan müşterilere ve IT [İş Ortaklarına aşamalı](https://aka.ms/mdb-preview) olarak aşamalı olarak aşamalı olarak sunulmaktadır. Önümüzdeki haftalarda bir ilk müşteri ve iş ortağı kümesi sunuyoruz ve genel kullanılabilirlik durumuna kadar önizlemeyi genişleteceğiz. Önizlemenin bir dizi ilk [senaryoyla başlat olacağını](#try-these-preview-scenarios) ve düzenli olarak özellikler ekley olacacaz.
+> İş için Microsoft Defender artık önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşterilere ve BT İş Ortaklarına aşamalı olarak dağıtılacaktır. Önümüzdeki haftalarda ilk müşteri ve iş ortaklarını ekleyeceğiz ve önizlemeyi genişleterek genel kullanıma sunacağız. Önizlemenin [ilk senaryo kümesiyle](#try-these-preview-scenarios) başlatılacağını ve düzenli olarak özellikler ekleyebileceğimizi unutmayın.
 > 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-İş için Microsoft Defender'ı ayarlamayı yeni bitirdiyseniz, İş için Defender'ın nasıl çalıştığını nereden öğrenmeye başlayacağını merak ediyor olabilir. Bu makalede deneme senaryoları ve İş için Defender ile kullanılabilen çeşitli öğreticiler ve benzetimler açıklanmıştır. Bu kaynaklar, Defender For Business'ın şirketinize nasıl yardımcı olduğunu görmenizi sağlar.
+İş için Microsoft Defender ayarlamayı yeni tamamladıysanız, İş için Defender'ın nasıl çalıştığı hakkında nereden bilgi edineceğinizi merak ediyor olabilirsiniz. Bu makalede deneyebileceğiniz önizleme senaryoları ve İş için Defender'da kullanılabilen çeşitli öğreticiler ve simülasyonlar açıklanmaktadır. Bu kaynaklar, İş için Defender'ın şirketiniz için nasıl çalışabileceğini görmenize yardımcı olmak için tasarlanmıştır.
 
 >
-> **Bir dakika mı kaldı?**
-> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+> **Bir dakikan var mı?**
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">İş için Microsoft Defender hakkındaki kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
 ## <a name="try-these-preview-scenarios"></a>Bu önizleme senaryolarını deneyin
 
-Aşağıdaki tabloda, İş için Defender ile denemeniz gereken birkaç senaryo özetlenmiştir. 
+Aşağıdaki tabloda, İş için Defender ile deneyebileceğiniz çeşitli senaryolar özetlemektedir. 
 <br/><br/>
 
 
 | Senaryo  | Açıklama  |
 |---------|---------|
-| Yerel betik kullanarak cihazları ekleme <br/>(*üretim dağıtımı için değil*)     | İş için Defender'da, indiren ve her cihaza çalıştıracak bir betik kullanarak en fazla on Windows 10 ve 11 cihaz indirebilirsiniz. Defender for Business'ın ortamınızı nasıl çalıştıracaklarını değerlendirmek için uygun olan betik, Azure Active Directory (Azure AD) ile bir güven oluşturur ve cihazı Microsoft Intune. Daha fazla bilgi edinmek için bkz [. İş için Defender'da yerel betik](mdb-onboard-devices.md#local-script-in-defender-for-business).         |
-| Microsoft Intune kullanarak cihazları Microsoft Intune     | Uç nokta için Defender'ı Microsoft Intune önceden Microsoft Intune kullanıyorsanız cihaz eklemeye devam edin. Farklı işletim sistemli macOS, iOS ve Android Microsoft Intune. Daha fazla bilgi edinmek için bkz[. Microsoft Intune](/mem/intune/enrollment/device-enrollment).        |
-| Güvenlik ilkelerini düzenleme     | Defender For Business'da güvenlik ilkelerinizi yönetiyorsanız, ilkelerinizi görüntülemek ve **düzenlemek için Cihaz** yapılandırma sayfasını kullanın. Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da ilkeleri görüntüleme veya düzenleme](mdb-view-edit-policies.md).        |
-| Benzetimi yapılan saldırıyı yürütün   | İş için Defender'da çeşitli öğreticiler ve benzetimler mevcuttur. Bu öğreticiler ve benzetimler, Defender for Business'ın tehdit koruması özelliklerinin şirketinize nasıl yararlı olduğunu ilk elden göstermek için tasarlanmıştır. Öğreticilerden birini veya daha fazlasını denemek için bkz. İş [için Microsoft Defender'a yönelik önerilen öğreticiler](#recommended-tutorials-for-defender-for-business).         |
-| Olay görünümünde Microsoft 365 Lighthouse     | Microsoft 365 Lighthouse [Microsoft Bulut Çözümü Sağlayıcısı](/partner-center/enrolling-in-the-csp-program) kullanıyorsanız, yakın zamanda Microsoft 365 Lighthouse portalında müşterilerin kiracılarında olayları görüntüebilirsiniz. Daha fazla bilgi edinmek için bkz[. Microsoft 365 Lighthouse İş için Microsoft Defender](mdb-lighthouse-integration.md).       |
+| Yerel betik kullanarak cihazları ekleme <br/>(*üretim dağıtımı için değil*)     | İş için Defender'da, indirdiğiniz ve her cihazda çalıştırdığınız bir betik kullanarak on Windows 10 ve 11 cihaz ekleyebilirsiniz. İş için Defender'ın ortamınızda nasıl çalışacağını değerlendirmek için uygun olan betik, Azure Active Directory (Azure AD) ile bir güven oluşturur ve cihazı Microsoft Intune ile kaydeder. Daha fazla bilgi için bkz. [İş için Defender'da yerel betik](mdb-onboard-devices.md#local-script-in-defender-for-business).         |
+| Microsoft Intune kullanarak cihazları ekleme     | Uç Nokta için Defender'ı almadan önce zaten Microsoft Intune kullanıyorsanız cihazları eklemek için Microsoft Intune kullanmaya devam edebilirsiniz. Microsoft Intune ile macOS, iOS ve Android cihazları eklemeyi deneyin. Daha fazla bilgi için bkz. [Microsoft Intune'de cihaz kaydı](/mem/intune/enrollment/device-enrollment).        |
+| Güvenlik ilkelerini düzenleme     | İş için Defender'da güvenlik ilkelerinizi yönetiyorsanız, ilkelerinizi görüntülemek ve düzenlemek için **Cihaz yapılandırma** sayfasını kullanın. Daha fazla bilgi için bkz. [İş için Microsoft Defender'de ilkeleri görüntüleme veya düzenleme](mdb-view-edit-policies.md).        |
+| Sanal saldırı yürütme   | İş için Defender'da çeşitli öğreticiler ve simülasyonlar mevcuttur. Bu öğreticiler ve simülasyonlar, İş için Defender'ın tehdit koruması özelliklerinin şirketiniz için nasıl çalışabileceğini ilk elden gösterecek şekilde tasarlanmıştır. Öğreticilerden birini veya daha fazlasını denemek için bkz. [İş için Microsoft Defender için önerilen öğreticiler](#recommended-tutorials-for-defender-for-business).         |
+| Microsoft 365 Lighthouse'da olayları görüntüleme     | Microsoft 365 Lighthouse kullanan bir [Microsoft Bulut Çözümü Sağlayıcısı](/partner-center/enrolling-in-the-csp-program) iseniz, Microsoft 365 Lighthouse portalınızda müşterilerinizin kiracıları genelindeki olayları yakında görüntüleyebileceksiniz. Daha fazla bilgi edinmek için bkz. [Microsoft 365 Lighthouse ve İş için Microsoft Defender](mdb-lighthouse-integration.md).       |
 
 
-## <a name="recommended-tutorials-for-defender-for-business"></a>defender for Business için önerilen öğreticiler
+## <a name="recommended-tutorials-for-defender-for-business"></a>İş için Defender için önerilen öğreticiler
 
-Aşağıdaki tabloda, İş için Defender müşterileri için önerilen öğreticiler açık almaktadır:
+Aşağıdaki tabloda, İş için Defender müşterileri için önerilen öğreticiler açıklanmaktadır:
 <br/><br/>
 
 
 | Öğretici  | Açıklama  |
 |---------|---------|
-| **Belge Backdoor'a düşer**     | Test cihazında dosya tabanlı kötü amaçlı yazılıma neden olan saldırının benzetimini yapmak. Öğreticide benzetim dosyasını alma ve kullanma ve bu dosyada neleri izlemeniz Microsoft 365 Defender açık almaktadır. <br/><br/>Bu öğretici, Microsoft Word cihazınıza yüklenmemiş olması gerekir.   |
-| **Canlı Yanıt öğreticisi**     | Canlı Yanıt ile temel ve gelişmiş komutları kullanmayı öğrenin. Şüpheli bir dosyayı nasıl bu şekilde bulup düzeltmeyi ve cihazda bilgi toplamayı öğrenin.   |
-| **Tehdit & Güvenlik Açığı Yönetimi (temel senaryolar)**     | Üç senaryoyu Tehdit ve Güvenlik Açığı Yönetimi hakkında bilgi edinmek için: <br/><br/>1. Şirketinizi tehdit ve güvenlik açığına maruz kalma süresini azaltma. <br/>2. Düzeltme isteğide bulundur. <br/>3. Güvenlik önerileri için bir özel durum oluşturun. <br/><br/> Tehdit güvenlik açığı yönetimi kimlik açıkları ve hatalı yapılandırmaları bulma, önceliklendirme ve düzeltme için risk tabanlı bir yaklaşım kullanır.      |
+| **Belge arka kapı bırakıldığında**     | Bir test cihazına dosya tabanlı kötü amaçlı yazılım getiren bir saldırının benzetimini yapmak. Öğreticide simülasyon dosyasının nasıl alınıp kullanılacağı ve Microsoft 365 Defender portalında nelerin izlenip izlendiği açıklanır. <br/><br/>Bu öğretici, test cihazınıza Microsoft Word yüklenmesini gerektirir.   |
+| **Canlı Yanıt öğreticisi**     | Canlı Yanıt ile temel ve gelişmiş komutları kullanmayı öğrenin. Şüpheli bir dosyayı bulmayı, dosyayı düzeltmeyi ve bir cihazda bilgi toplamayı öğrenin.   |
+| **Tehdit & Güvenlik Açığı Yönetimi (temel senaryolar)**     | Üç senaryodan Tehdit ve Güvenlik Açığı Yönetimi hakkında bilgi edinin: <br/><br/>1. Şirketinizin tehdidini ve güvenlik açığına maruz kalmasını azaltın. <br/>2. Bir düzeltme isteyin. <br/>3. Güvenlik önerileri için bir özel durum oluşturun. <br/><br/> Tehdit ve güvenlik açığı yönetimi, uç nokta güvenlik açıklarını ve yanlış yapılandırmalarını bulma, öncelik belirleme ve düzeltme konusunda risk tabanlı bir yaklaşım kullanır.      |
 
-Her öğreticide senaryoyu, bunların nasıl çalıştığını ve ne yaptığını açıklayan yol gösterir.
+Her öğreticide senaryoyu, nasıl çalıştığını ve ne yapılacağını açıklayan bir izlenecek yol belgesi bulunur.
 
 > [!TIP]
-> Yol gösterilen belgelerde Uç Nokta için Microsoft Defender'a başvurular vardır. Bu makalede listelenen öğreticiler, Uç Nokta için Defender veya İş için Defender ile kullanılabilir.
+> İzlenecek belgelerde Uç Nokta için Microsoft Defender başvurularını görürsünüz. Bu makalede listelenen öğreticiler Uç Nokta için Defender veya İş için Defender ile kullanılabilir.
 
 ## <a name="how-to-access-the-tutorials"></a>Öğreticilere erişme
 
-1. Erişim portalına Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com) ) ve oturum açın.
+1. Microsoft 365 Defender portalına ([https://security.microsoft.com](https://security.microsoft.com)) gidin ve oturum açın.
 
-2. Gezinti bölmesindeki Uç **Noktalar'ın altında Öğreticiler'i** **seçin**.
+2. Gezinti bölmesindeki **Uç Noktalar'ın** altında **Öğreticiler'i** seçin.
 
 3. Aşağıdaki öğreticilerden birini seçin:
 
-   - **Belge Backdoor'a düşer**
+   - **Belge arka kapı bırakıldığında**
    - **Canlı Yanıt öğreticisi**
    - **Tehdit & Güvenlik Açığı Yönetimi (temel senaryolar)**
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [İş için Microsoft Defender'da cihazları yönetme](mdb-manage-devices.md)
+- [İş için Microsoft Defender'de cihazları yönetme](mdb-manage-devices.md)
 
 - [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)
 
-- [İş için Microsoft Defender'da tehditleri yanıtlama ve azaltmak](mdb-respond-mitigate-threats.md)
+- [İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma](mdb-respond-mitigate-threats.md)
 
-- [İşlem merkezinde düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
+- [İşlem merkezindeki düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)

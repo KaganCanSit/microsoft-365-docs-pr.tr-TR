@@ -17,16 +17,16 @@ ms.custom:
 - intro-get-started
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP)'ler için, hizmet sağlayıcılarına nasıl Microsoft 365 Lighthouse.
-ms.openlocfilehash: 2607a131908a06ec4b7072cbf718739e1db00ad7
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 25ad88edc63d53e3c9110062a64285bbb759a775
+ms.sourcegitcommit: 2bbccbcffce3ea6d10ea6d307349874eafb21339
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63326965"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "64645190"
 ---
 # <a name="sign-up-for-microsoft-365-lighthouse"></a>Oturum açma için Microsoft 365 Lighthouse
 
-Bu makalede, iş için kaydolma yönergeleri Microsoft 365 Lighthouse. Microsoft 365 Lighthouse, Küçük ve orta ölçekli işletme (SMB) müşterileri için Yönetilen Hizmet Sağlayıcılarının (MSP) cihazları, verileri ve kullanıcıları küçük ve orta ölçekli işletme (SMB) müşterileri için güvenli ve yönetmeye yardımcı olan bir Microsoft 365 İş Ekstra Microsoft 365 E3. 
+Bu makalede, iş için kaydolma yönergeleri Microsoft 365 Lighthouse. Microsoft 365 Lighthouse, Yönetilen Hizmet Sağlayıcılarının (MSP) küçük ve orta ölçekli işletme (SMB) müşterileri için küçük ve orta ölçekli işletme (SMB) müşterileri için cihazları, verileri ve kullanıcıları güvenlik altına alma ve yönetmeye yardımcı olan bir Microsoft 365 İş Ekstra Microsoft 365 E3 veya Windows 365 Business. 
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 

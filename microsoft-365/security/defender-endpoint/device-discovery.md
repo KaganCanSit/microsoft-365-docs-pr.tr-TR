@@ -1,7 +1,7 @@
 ---
 title: Cihaz keşfine genel bakış
-description: Ağ 365'te, Microsoft 365 Defender olmayan cihazları bulmak için uç nokta bulmada nasıl yararlan yararlanıy öğrenin
-keywords: cihaz bulma, keşif, pasif, proaktif, ağ, görünürlük, sunucu, iş istasyonu, ekleme, yönetimi olmayan cihazlar
+description: Ağınızdaki yönetilmeyen cihazları bulmak için Microsoft 365 Defender uç nokta bulmadan nasıl yararlanacağınızı öğrenin
+keywords: cihaz bulma, bulma, pasif, proaktif, ağ, görünürlük, sunucu, iş istasyonu, ekleme, yönetilmeyen cihazlar
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -20,117 +20,117 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 926d23cb4e9abcecd9d34e976dee60851471613b
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: f6046576fcea2fe961e73e88168c6254a2d95a40
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64472935"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64665062"
 ---
 # <a name="device-discovery-overview"></a>Cihaz keşfine genel bakış
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-Ortamınızı korumak, ağda yer alan cihazların envanterini almak gerektirir. Bununla birlikte, bir ağ üzerinden eşleme cihazları genellikle pahalı, zorlu ve zaman alıcı olabilir.
+Ortamınızı korumak için ağınızdaki cihazların envanterinin alınması gerekir. Ancak, bir ağdaki cihazları eşlemek genellikle pahalı, zorlayıcı ve zaman alıcı olabilir.
 
-Uç Nokta için Microsoft Defender, ek aletler veya zahmetli süreç değişikliklerine gerek kalmadan şirket ağınıza bağlı, yönetimi olmayan cihazları bulamıyorum bir cihaz bulma özelliği sağlar. Cihaz bulma, ağın içinde bulunan yerleşik uç noktaları, ağını toplamak, taramak veya taramak için, unmanaged cihazları bulmak için kullanır. Cihaz bulma özelliği şunları keşfetme olanağı sağlar:
+Uç Nokta için Microsoft Defender, şirket ağınıza bağlı yönetilmeyen cihazları ek gereçlere veya hantal işlem değişikliklerine gerek kalmadan bulmanıza yardımcı olan bir cihaz bulma özelliği sağlar. Cihaz bulma, ağınızdaki yerleşik uç noktaları kullanarak yönetilmeyen cihazları bulmak için ağınızda toplar, yoklar veya tarar. Cihaz bulma özelliği şunları keşfetmenize olanak tanır:
 
-- Enterprise henüz iş istasyonuna dahil edilemeyen uç noktaları (iş istasyonları, sunucular ve mobil cihazlar) Uç Nokta için Microsoft Defender
+- henüz Uç Nokta için Microsoft Defender eklenmemiş uç noktaları (iş istasyonları, sunucular ve mobil cihazlar) Enterprise
 - Yönlendiriciler ve anahtarlar gibi ağ cihazları
 - Yazıcılar ve kameralar gibi IoT cihazları
 
-Eşleşmeyen bir yazıcı, zayıf güvenlik yapılandırmalarına sahip ağ cihazları veya güvenlik denetimleri olmayan bir sunucu gibi bilinmeyen ve belirlenemeyen cihazlar ağınıza önemli riskler gönderir. Cihazlar bulunduktan sonra şunlarıabilirsiniz:
+Bilinmeyen ve yönetilmeyen cihazlar ağınıza önemli riskler getirir. Bu, eşleşmeyen bir yazıcı, zayıf güvenlik yapılandırmalarına sahip ağ cihazları veya güvenlik denetimleri olmayan bir sunucu olabilir. Cihazlar bulunduktan sonra şunları yapabilirsiniz:
 
-- Hizmet için unmanaged endpoints onboard, bu uç noktalar üzerindeki güvenlik görünürlüğünü artırıyor.
-- Güvenlik açıklarını tanımip değerlendirerek ve yapılandırma boşluklarını algıarak saldırı yüzeyini azaltın.
+- Yönetilmeyen uç noktaları hizmete ekleyip bu uç noktaların güvenlik görünürlüğünü artırır.
+- Güvenlik açıklarını tanımlayıp değerlendirerek ve yapılandırma boşluklarını algılayarak saldırı yüzeyini azaltın.
 
-Cihaz bulmayla ilgili hızlı bir genel bakış için bu videoyu izleyin:
+Cihaz bulma işlemine hızlı bir genel bakış için bu videoyu izleyin:
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWORdQ]
 
-Bu özellikle birlikte, mevcut cihaz deneyiminin bir parçası olarak Uç Nokta için Microsoft Defender cihazları eklemeye yardımcı olacak bir Tehdit ve Güvenlik Açığı Yönetimi önerisi vardır.
+Bu özellik ile birlikte, mevcut Tehdit ve Güvenlik Açığı Yönetimi deneyiminin bir parçası olarak cihazları Uç Nokta için Microsoft Defender eklemeye yönelik bir güvenlik önerisi sağlanır.
 
 ## <a name="discovery-methods"></a>Bulma yöntemleri
 
-Yerleşik cihazlarınız tarafından kullanılacak bulma modunu seçebilirsiniz. Mod, şirket ağınız içinde yönetimi olmayan cihazlar için edinebilirsiniz görünürlük düzeyini kontrol eder.
+Eklenen cihazlarınız tarafından kullanılacak bulma modunu seçebilirsiniz. Mod, şirket ağınızdaki yönetilmeyen cihazlar için alabileceğiniz görünürlük düzeyini denetler.
 
-Kullanılabilir iki keşif modu vardır:
+Kullanılabilir iki bulma modu vardır:
 
-- **Temel bulma**: Bu modda, uç noktalar ağnizdeki olayları pasif olarak toplar ve onlardan cihaz bilgilerini ayıklar. Temel bulma, pasif SenseNDR.exe veri toplama için ikili olarak kullanılır ve ağ trafiği başlat olmaz. Uç noktalar yalnızca, bir cihaz tarafından görülen her ağ trafiğinden veri ayıklar. Temel bulma sayesinde, yalnızca ağ bağlantınız için unmanaged uç noktalarında sınırlı görünürlük elde olursiniz.
+- **Temel bulma**: Bu modda uç noktalar ağınızdaki olayları pasif olarak toplar ve onlardan cihaz bilgilerini ayıklar. Temel bulma, pasif ağ veri toplama için SenseNDR.exe ikili dosyasını kullanır ve hiçbir ağ trafiği başlatılmaz. Uç noktalar, eklenen bir cihaz tarafından görülen her ağ trafiğinden verileri ayıklar. Temel bulma ile ağınızdaki yönetilmeyen uç noktaların yalnızca sınırlı görünürlüğünü elde edersiniz.
 
-- **Standart bulma** (önerilen): Bu mod, uç noktaların toplanan verileri zenginleştirmek ve daha fazla cihaz keşfetmek için ağ'daki cihazları etkin bir şekilde bulmalarına olanak tanır ve güvenilir ve tutarlı bir cihaz envanteri oluşturmanıza yardımcı olur. Pasif yöntemi kullanılarak gözlemlenen cihazlara ek olarak, standart mod daha fazla cihaz bulmak için ağda sorgular kullanan yaygın bulma protokollerini de kullanır. Standart mod, gözlemlenen cihazlar hakkında mevcut cihaz bilgilerini zenginleştirmek için ek bilgiler bulmak için akıllı ve etkin olasılıklar kullanır. Standart modu etkinleştirildiğinde, keşif algılayıcısı tarafından oluşturulan çok az ve uygun olmayan ağ etkinlikleri, kurum içinde ağ izleme araçları tarafından gözlemlenebilir.
+- **Standart bulma** (önerilen): Bu mod, uç noktaların toplanan verileri zenginleştirmek ve daha fazla cihaz bulmak için ağınızdaki cihazları etkin bir şekilde bulmasına olanak tanır ve güvenilir ve tutarlı bir cihaz envanteri oluşturmanıza yardımcı olur. Standart mod, pasif yöntem kullanılarak gözlemlenen cihazlara ek olarak, daha da fazla cihaz bulmak için ağdaki çok noktaya yayın sorgularını kullanan yaygın bulma protokollerinden de yararlanıyor. Standart mod, mevcut cihaz bilgilerini zenginleştirmek için gözlemlenen cihazlar hakkında ek bilgileri keşfetmek için akıllı ve etkin yoklama kullanır. Standart mod etkinleştirildiğinde, kuruluşunuzdaki ağ izleme araçları tarafından bulma algılayıcısı tarafından oluşturulan en düşük ve ihmal edilebilir ağ etkinliği gözlemlenebilir.
 
-Bulma ayarlarınızı değiştirebilir ve özelleştirebilirsiniz. Daha fazla bilgi için bkz. Cihaz [bulma'yi yapılandırma](configure-device-discovery.md).
+Bulma ayarlarınızı değiştirebilir ve özelleştirebilirsiniz. Daha fazla bilgi için bkz. [Cihaz bulmayı yapılandırma](configure-device-discovery.md).
 
 > [!IMPORTANT]
-> 19 Temmuz 2021'den itibaren tüm müşteriler için standart keşif varsayılan moddur. Ayarlar sayfasından, bu yapılandırmayı temel yapılandırma olarak değiştirebilirsiniz. Temel modu seçerseniz, yalnızca ağ bağlantınız için unmanaged uç noktalarında sınırlı görünürlük kazanırsınız.
+> Standart bulma, 19 Temmuz 2021'den itibaren tüm müşteriler için varsayılan moddur. Ayarlar sayfasından bu yapılandırmayı temel olarak değiştirmeyi seçebilirsiniz. Temel modu seçerseniz ağınızdaki yönetilmeyen uç noktaların yalnızca sınırlı görünürlüğünü elde edersiniz.
 
 > [!NOTE]
-> Keşif altyapısı, şirket ağına alınan ağ olaylarını şirket ağının dışından ayırt edicidir. Şirket ağlarına bağlı değil cihazlar, cihaz envanteri içinde keşfed olmaz veya listelenmiyor.
+> Bulma altyapısı, şirket ağında alınan ağ olaylarını kurumsal ağın dışından ayırt eder. Şirket ağlarına bağlı olmayan cihazlar bulunmayacak veya cihaz envanterinde listelenmeyecektir.
 
 ## <a name="device-inventory"></a>Cihaz envanteri
 
-Bilgisayar tarafından henüz ekli veya güvenlik altına alınmış olan cihazlar Uç Nokta için Microsoft Defender ve Mobil cihazlar sekmesindeki cihaz envanteri içinde listelenir.
+Bulunan ancak henüz Uç Nokta için Microsoft Defender tarafından eklenen ve güvenliği sağlanmamış cihazlar, Bilgisayarlar ve Mobil sekmesindeki cihaz envanterinde listelenir.
 
-Bu cihazları değerlendirmek için, cihaz stoku listesinde Aşağıdaki değerlerden herhangi birini bulunduran Ekleme durumu adlı bir filtre kullanabilirsiniz:
+Bu cihazları değerlendirmek için cihaz envanter listesinde Ekleme durumu adlı bir filtre kullanabilirsiniz ve bu filtre aşağıdaki değerlerden herhangi birine sahip olabilir:
 
-- Eklemeli: Uç nokta, başka bir Uç Nokta için Microsoft Defender.
-- Kullanılabilir: Uç nokta ağda keşfedildi ve İşletim Sistemi Uç Nokta için Microsoft Defender tarafından desteklenen bir uç nokta olarak tanımlanır, ancak şu anda eklemede değildir. Bu cihazları işe eklemenizi kesinlikle öneririz.
-- Desteklenmiyor: Uç nokta ağda bulundu ancak diğer kullanıcılar tarafından Uç Nokta için Microsoft Defender.
-- Yetersiz bilgi: Sistem, cihazın desteklanabilirliğini belirleyemedi. Ağ'daki diğer cihazlarda standart bulmanın etkinleştirilmesi, bulunan öznitelikleri zenginleştirebilirsiniz.
+- Eklenen: Uç nokta Uç Nokta için Microsoft Defender eklenir.
+- Eklenebilir: Uç nokta ağda bulundu ve İşletim Sistemi, Uç Nokta için Microsoft Defender tarafından desteklenen bir uç nokta olarak tanımlandı, ancak şu anda eklenmedi. Bu cihazları eklemenizi kesinlikle öneririz.
+- Desteklenmeyen: Uç nokta ağda bulundu ancak Uç Nokta için Microsoft Defender tarafından desteklenmiyor.
+- Yetersiz bilgi: Sistem cihazın desteklenebilirliğini belirleyemedi. Ağdaki daha fazla cihazda standart bulmayı etkinleştirmek bulunan öznitelikleri zenginleştirebilir.
 
-:::image type="content" source="images/2b62255cd3a9dd42f3219e437b956fb9.png" alt-text="Cihaz stoku panosu" lightbox="images/2b62255cd3a9dd42f3219e437b956fb9.png":::
+:::image type="content" source="images/2b62255cd3a9dd42f3219e437b956fb9.png" alt-text="Cihaz envanteri panosu" lightbox="images/2b62255cd3a9dd42f3219e437b956fb9.png":::
 
 > [!TIP]
-> Yönetimi olmayan cihazları cihaz stok listesinden dışarıda tutmak için her zaman filtre uygulayabilirsiniz. Ayrıca, yönetimi olmayan cihazları filtrelemek için API sorgularında ekleme durumu sütununu da kullanabilirsiniz.
+> Yönetilmeyen cihazları cihaz envanter listesinden dışlamak için istediğiniz zaman filtre uygulayabilirsiniz. Yönetilmeyen cihazları filtrelemek için API sorgularında ekleme durumu sütununu da kullanabilirsiniz.
 
-Daha fazla bilgi için bkz. [Cihaz envanteri](machines-view-overview.md).
+Daha fazla bilgi için bkz [. Cihaz envanteri](machines-view-overview.md).
 
 ## <a name="network-device-discovery"></a>Ağ cihazı bulma
 
-Kuruluşta dağıtılan, fazla sayıdaki yönetimi olmayan ağ cihazları büyük bir saldırı alanı oluşturur ve tüm kuruluş için önemli bir riski temsil eder. Uç Nokta için Microsoft Defender bulma özellikleri, ağ cihazlarının varlık stoku içinde bulunmasına, doğru şekilde sınıflandırılması ve eklenmelerine yardımcı olur.
+Bir kuruluşa dağıtılan çok sayıda yönetilmeyen ağ cihazı, büyük bir yüzey saldırı alanı oluşturur ve kuruluşun tamamı için önemli bir riski temsil eder. Uç Nokta için Microsoft Defender ağ bulma özellikleri, ağ cihazlarının bulunmasını, doğru sınıflandırılmasını ve varlık envanterine eklenmesini sağlamanıza yardımcı olur.
 
-Ağ cihazları standart uç nokta olarak yönetilmiyor, çünkü Uç Nokta için Defender'ın kendi ağ cihazlarına yerleşik bir algılayıcısı olmaz. Bu tür cihazlar, uzaktan taramanın cihazlardan gerekli bilgileri edineni aracısız bir yaklaşım gerektirir. Bunu yapmak için, her Uç Nokta için Microsoft Defender kesimde önceden yapılandırılmış ağ cihazlarının düzenli olarak kimlik doğrulanmış taramalarını gerçekleştirmek için belirlenen bir kimlik doğrulama cihazı kullanılır. Bulunduktan sonra, Uç Nokta İçin Defender güvenlik Tehdit ve Güvenlik Açığı Yönetimi bulunan anahtarlar, yönlendiriciler, WLAN denetleyicileri, güvenlik duvarları ve VPN ağ geçitleri için tümleşik iş akışları sağlar.
+Uç Nokta için Defender'ın ağ cihazlarında yerleşik bir algılayıcısı olmadığından, ağ cihazları standart uç nokta olarak yönetilmez. Bu tür cihazlar, uzaktan taramanın cihazlardan gerekli bilgileri edineceği aracısız bir yaklaşım gerektirir. Bunu yapmak için, önceden yapılandırılmış ağ cihazlarında düzenli aralıklarla kimliği doğrulanmış taramalar gerçekleştirmek için her ağ kesiminde belirlenmiş bir Uç Nokta için Microsoft Defender cihazı kullanılır. Uç Nokta için Defender'ın Tehdit ve Güvenlik Açığı Yönetimi özellikleri, bulunan anahtarları, yönlendiricileri, WLAN denetleyicilerini, güvenlik duvarlarını ve VPN ağ geçitlerini güvenli hale getirmek için tümleşik iş akışları sağlar.
 
-Daha fazla bilgi için bkz. [Ağ cihazları](network-devices.md).
+Daha fazla bilgi için bkz [. Ağ cihazları](network-devices.md).
 
-## <a name="device-discovery-integrations"></a>Cihaz Bulma Tümleştirmeleri
+## <a name="device-discovery-integrations"></a>Cihaz bulma Tümleştirmeleri
 
-Eksiksiz OT/IOT varlık envanterini bulmak, belirlemek ve güvenliğini sağlamak üzere yeterli görünürlük elde etmek için Uç Nokta için Microsoft Defender şimdi aşağıdaki tümleştirmeleri destekler:
+Ot/IOT varlık envanterinizi bulmak, tanımlamak ve güvenliğini sağlamak için yeterli görünürlük elde etme zorluğuna çözüm bulmak için Uç Nokta için Microsoft Defender şimdi aşağıdaki tümleştirmeleri destekler:
 
-- **Corelight**: Microsoft, Corelight ağ cihazlarından veri almak için Corelight ile ortak çalışma kaydetti. Bu, Microsoft 365 Defender da içinde olmak üzere, diğer unmanaged cihazlar veya dış ağlarla iletişim gibi, unmand cihazların ağ etkinliklerine karşı daha fazla görünürlük sağlar. Daha fazla bilgi için bkz [. Corelight veri tümleştirmesini etkinleştirme](corelight-integration.md).
+- **Corelight**: Microsoft, Corelight ağ gereçlerinden veri almak için Corelight ile iş ortaklığı yaptı. Bu, diğer yönetilmeyen cihazlar veya dış ağlarla iletişim de dahil olmak üzere yönetilmeyen cihazların ağ etkinliklerine daha fazla görünürlük sağlayan Microsoft 365 Defender sağlar. Daha fazla bilgi için bkz [. Corelight veri tümleştirmesini etkinleştirme](corelight-integration.md).
 
-- **IoT için Microsoft Defender**: Bu tümleştirme, bir IT ağına bağlı kurumsal IoT cihazlarının (örneğin, İnternet Protokolü (VoIP), yazıcılar ve akıllı TV'ler gibi kurumsal IoT cihazlarının güvenliğini sağlamak için Uç Nokta için Microsoft Defender'ın cihaz bulma özellikleriyle IoT için Microsoft Defender'ın aracısız izleme özelliklerini birleştirir. Daha fazla bilgi için bkz [. IoT tümleştirmesi için Microsoft Defender'ı etkinleştirme](enable-microsoft-defender-for-iot-integration.md).
+- **IoT için Microsoft Defender**: Bu tümleştirme, Uç Nokta için Microsoft Defender cihaz bulma özelliklerini IoT için Microsoft Defender'ın aracısız izleme özellikleriyle bir araya getirerek bir BT ağına bağlı kurumsal IoT cihazlarının (örneğin, İnternet Üzerinden Ses Protokolü (VoIP), yazıcıların ve akıllı TV'lerin güvenliğini sağlar. Daha fazla bilgi için bkz. [IoT için Microsoft Defender tümleştirmesini etkinleştirme](enable-microsoft-defender-for-iot-integration.md).
 
 ## <a name="vulnerability-assessment-on-discovered-devices"></a>Bulunan cihazlarda güvenlik açığı değerlendirmesi
 
-Cihazlarınız ve ağ üzerinde bulunan diğer güvenlik açıkları ve riskler, ağda bulunan ve "Güvenlik Öneriler" kapsamındaki mevcut TVM akışlarının bir parçası ve portalda var olan varlık sayfalarında temsil edilenler.
-Yönetilemeyen ve yönetilen cihazlarla ilgili SSH güvenlik açıklarını bulmak için "SSH" ile ilgili güvenlik önerilerini arama.
+Cihazlarınızdaki güvenlik açıkları ve riskler ve ağdaki diğer keşfedilen yönetilmeyen cihazlar, "Güvenlik Öneriler" altındaki geçerli TVM akışlarının bir parçasıdır ve portaldaki varlık sayfalarında gösterilir.
+Yönetilmeyen ve yönetilen cihazlarla ilgili SSH güvenlik açıklarını bulmak için "SSH" ile ilgili güvenlik önerilerini arayın.
 
 :::image type="content" source="images/1156c82ffadd356ce329d1cf551e806c.png" alt-text="Güvenlik önerileri panosu" lightbox="images/1156c82ffadd356ce329d1cf551e806c.png":::
 
 
-## <a name="use-advanced-hunting-on-discovered-devices"></a>Bulunan cihazlarda Gelişmiş Av kullanma
+## <a name="use-advanced-hunting-on-discovered-devices"></a>Bulunan cihazlarda Gelişmiş Avcılık kullanma
 
-Bulunan cihazlarda görünürlük kazanmak için Gelişmiş Av sorgularını kullanabilirsiniz.
-CihazBilgileri tablosunda bulunan Uç Noktalar hakkında ayrıntıları veya DeviceNetworkInfo tablosunda bu cihazlar hakkında ağla ilgili bilgileri bulabilirsiniz.
+Bulunan cihazlarda görünürlük kazanmak için Gelişmiş Tehdit Avcılığı sorgularını kullanabilirsiniz.
+Bulunan Uç Noktalar hakkındaki ayrıntıları DeviceInfo tablosunda veya Bu cihazlarla ilgili ağ ile ilgili bilgileri DeviceNetworkInfo tablosunda bulabilirsiniz.
 
-:::image type="content" source="images/f48ba1779eddee9872f167453c24e5c9.png" alt-text="Sorguların kullanl olduğu Gelişmiş av sayfası" lightbox="images/f48ba1779eddee9872f167453c24e5c9.png":::
+:::image type="content" source="images/f48ba1779eddee9872f167453c24e5c9.png" alt-text="Sorguların kullanılabilmesi için Gelişmiş tehdit avcılığı sayfası" lightbox="images/f48ba1779eddee9872f167453c24e5c9.png":::
 
-Cihaz bulma, Uç Nokta için Microsoft Defender olmayan cihazlara öznitelik etkinlikleri için ağ veri kaynağı olarak yerleşik cihazları kullanıyor ve bu cihazlardan yararlanıyor. Başka bir ifadeyle Uç Nokta için Microsoft Defender bir cihaz, yerleşik olmayan bir cihazla iletişim kurarsa, eklemeyen cihazdaki etkinliklerin zaman çizelgesinde ve Gelişmiş av deviceNetworkEvents tablosu üzerinden görülebiz.
+Cihaz bulma, eklenen Uç Nokta için Microsoft Defender cihazları, eklememiş cihazlara etkinlikleri öznitelik etmek için ağ veri kaynağı olarak kullanır. Bu, eklenen Uç Nokta için Microsoft Defender bir cihazın eklenmemiş bir cihazla iletişim kurması durumunda, eklenmeyen cihazdaki etkinliklerin zaman çizelgesinde ve Gelişmiş avcılık DeviceNetworkEvents tablosu aracılığıyla görülebileceği anlamına gelir.
 
-Yeni etkinlikler, İletim Denetimi Protokolü (TCP) bağlantı tabanlıdır ve geçerli DeviceNetworkEvents düzenine uyar. ETKIN olmayan bir Uç Nokta için Microsoft Defender ETKIN olan cihaza TCP Uç Nokta için Microsoft Defender.
+Yeni olaylar İletim Denetimi Protokolü (TCP) bağlantıları tabanlıdır ve geçerli DeviceNetworkEvents düzenine uyar. Uç Nokta için Microsoft Defender etkin olmayan bir cihazdan Uç Nokta için Microsoft Defender etkin cihaza TCP girişi.
 
-Aşağıdaki eylem türleri de eklendi:
+Aşağıdaki eylem türleri de eklenmiştir:
 
-- ConnectionAttempt - TCP bağlantısı (syn) kurma girişimi
-- ConnectionAcknowledged - TCP bağlantısının kabul edilen bir bildirim (syn\ack)
+- ConnectionAttempt - TCP bağlantısı kurma girişimi (syn)
+- ConnectionAcknowledged - TCP bağlantısının kabul edildiğine ilişkin bir bildirim (syn\ack)
 
-Şu örnek sorguyu  deneyebilirsiniz:
+Bu örnek sorguyu deneyebilirsiniz:
 
 ```text
 DeviceNetworkEvents
@@ -140,5 +140,5 @@ DeviceNetworkEvents
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Cihaz bulma'yi yapılandırma](configure-device-discovery.md)
-- [Cihaz bulma SSS](device-discovery-faq.md)
+- [Cihaz keşif ayarlarını yapılandırın](configure-device-discovery.md)
+- [Cihaz bulma hakkında SSS](device-discovery-faq.md)

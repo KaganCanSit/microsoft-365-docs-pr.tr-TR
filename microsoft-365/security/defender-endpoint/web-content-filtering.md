@@ -15,20 +15,20 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: be2352ef44d8e9f7430cde39a71c7b7b1167a874
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+ms.openlocfilehash: 2535845c52285b1ce28fbe142709089778503c09
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634107"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469591"
 ---
 # <a name="web-content-filtering"></a>Web içeriği filtreleme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Şunlar için geçerlidir:**
+**Aşağıdakiler için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > [!TIP]
@@ -52,7 +52,7 @@ Web içeriği filtreleme, başlıca web tarayıcılarında Windows Defender Smar
 
 Bu özelliği denmeden önce, aşağıdaki gereksinimleri karşılamıyor olun:
 
-- Aboneliğiniz şunları içerir: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Güvenlik, Microsoft 365 E3 veya Uç Nokta için Microsoft Defender tek başına lisans. 
+- Aboneliğiniz şunları içerir: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Güvenlik, Microsoft 365 E3 + Microsoft 365 E5 Güvenlik eklenti, veya Uç Nokta için Microsoft Defender tek başına lisansa sahip olabilir. 
 
 - Bu portala <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender vardır</a>.
 
@@ -203,9 +203,9 @@ Etki alanının kategorisine itiraz etmek için, Raporlar Web  Koruması \> **We
 
 ### <a name="url-category-lookup"></a>URL kategori araması
 
-Web sitesinin kategorisini belirlemek için, Uç Noktalar Araması'nın altındaki Web sitesi portalında (<https://security.microsoft.com>) Microsoft 365 Defender URL **arama işlevini kullanabilirsiniz**\>. URL arama sonuçlarında, web içeriği filtreleme kategorisi **URL/Etki alanı ayrıntıları altında görünür**. Kategori sonucu göster gösterilmezse, URL şu anda var olan bir web içeriği filtreleme kategorisine atanmadı.
+Web sitesinin kategorisini belirlemek için, Uç Noktalar Araması'nın altındaki Web sitesi portalında (<https://security.microsoft.com>) Microsoft 365 Defender URL **arama işlevini kullanabilirsiniz**\>. URL arama sonuçlarında, web içeriği filtreleme kategorisi **URL/Etki alanı ayrıntıları altında görünür**. Aşağıdaki resimde gösterildiği gibi, yöneticiler doğrudan bu sayfadan etki alanının kategorisine de itiraz edebilirsiniz. Kategori sonucu göster gösterilmezse, URL şu anda var olan bir web içeriği filtreleme kategorisine atanmadı.
 
-<!---:::image type="content" source="../../media/web-content-filtering-category-lookup.png" alt-text="The web content filtering category lookup results" lightbox="../../media/web-content-filtering-category-lookup.png":::--->
+:::image type="content" source="../../media/web-content-filtering-category-lookup.png" alt-text="Web içeriği filtreleme kategorisi arama sonuçları" lightbox="../../media/web-content-filtering-category-lookup.png":::
 
 ## <a name="web-content-filtering-cards-and-details"></a>Web içeriği filtreleme kartları ve ayrıntıları
 
@@ -257,6 +257,6 @@ Ağ Koruması şu anda SSL incelemesini desteklememektedir ve bunun sonucunda we
 
 - [Web korumasına genel bakış](web-protection-overview.md)
 - [Web tehdit koruması](web-threat-protection.md)
-- [Web güvenliğini izleyin](web-protection-monitoring.md)
-- [Web tehditlerine yanıt verin](web-protection-response.md)
+- [Web güvenliğini izleme](web-protection-monitoring.md)
+- [Web tehditlerine yanıt verme](web-protection-response.md)
 - [Ağ Koruması gereksinimleri](web-content-filtering.md)

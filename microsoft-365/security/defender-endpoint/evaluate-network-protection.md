@@ -17,20 +17,20 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: c43fdfe746575837e8e5c8f36992f5fa6e2fec96
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: df79062d1dafcd8d82dfa4ff9b9847ff4fad1775
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679510"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476147"
 ---
 # <a name="evaluate-network-protection"></a>Ağ korumasını değerlendirme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 [Ağ koruması,](network-protection.md) çalışanların İnternet'de kimlik avı dolandırıcılığı, açıklardan yararlanan ve diğer zararlı içerikleri barındıran tehlikeli etki alanlarına erişmek için herhangi bir uygulamayı kullanmalarını engellemeye yardımcı olur.
@@ -62,14 +62,14 @@ Hangi IP adreslerinin ve etki alanlarının engellenmiş olacağını görmek i�
 
     Ağ bağlantısına izin verilir ve bir test iletisi görüntülenir.
     
-    ![Bağlantı engellendi ifadesinin yer alan örnek bildirim: Bu ağ bağlantısının Windows Güvenliği yöneticiniz tarafından engellenmiş. IT yardım masanıza ulaşın.](images/np-notif.png)
+    :::image type="content" source="images/np-notif.png" alt-text="Bağlantı engelleme bildirimi" lightbox="images/np-notif.png":::
 
 > [!NOTE]
 > Bir site ağ koruması tarafından engellenmiş olsa bile ağ bağlantıları başarılı olabilir. Daha fazla bilgi edinmek için [bkz. Ağ koruması ve TCP üç yol el sıkışması](network-protection.md#network-protection-and-the-tcp-three-way-handshake).
 
-## <a name="review-network-protection-events-in-windows-event-viewer"></a>Olay Görüntüleyicisi'nde ağ Windows olaylarını gözden geçirme
+## <a name="review-network-protection-events-in-windows-event-viewer"></a>Ağ koruma olaylarını gözden Windows Olay Görüntüleyicisi
 
-Engellenmiş olan uygulamaları gözden geçirmek için Olay Görüntüleyicisi'ni açın ve Microsoft-Windows-Windows Defender/Operational günlüğünde Olay Kimliği 1125'i filtrelenin. Aşağıdaki tabloda tüm ağ koruma olayları listele.
+Engellenmiş olan uygulamaları gözden geçirmek için Microsoft-Windows-Windows Defender/Operational günlüğünde Olay Görüntüleyicisi Kimliği 1125'i açın ve filtreyi yapın. Aşağıdaki tabloda tüm ağ koruma olayları listele.
 
 | Olay Kimliği | Sağla/Kaynak | Açıklama |
 |---|---|---|

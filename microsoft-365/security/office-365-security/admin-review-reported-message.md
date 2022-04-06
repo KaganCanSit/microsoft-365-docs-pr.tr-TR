@@ -14,22 +14,22 @@ ms.custom: ''
 description: Bildirilen iletileri gözden geçirmeyi ve kullanıcılarınıza geri bildirim yapmayı öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2cb979260bde62903e97a4726083924101b8711a
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 44476e7a8ad3bad9b21e82a9528593ceb350257d
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021706"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470911"
 ---
 # <a name="admin-review-for-reported-messages"></a>Bildirilen iletiler için yönetici incelemesi
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Geçerli olduğu yer:**
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Microsoft 365 posta kutuları olan Exchange Online Microsoft Defender ve Office 365 için Microsoft Defender'da yöneticiler artık bildirilen iletileri gözden geçirdikten sonra şablon iletileri son kullanıcılara geri gönderebilir. Şablonlar, organizasyonunız için özelleştirilebilir ve yöneticinizin kararına bağlı olarak da özelleştirilebilir.
+Microsoft 365 kutusu ve Exchange Online kutusu olan Office 365 için Microsoft Defender, yöneticiler bildirilen iletileri gözden geçirmelerinin ardından artık şablonlı iletileri son kullanıcılara geri gönderebilir. Şablonlar, organizasyonunız için özelleştirilebilir ve yöneticinizin kararına bağlı olarak da özelleştirilebilir.
 
 Bu özellik kullanıcılarınıza geri bildirim vermek üzere tasarlanmıştır, ancak sistem içerisinde ileti kararlarını değiştirmez. Microsoft'un filtrelerini güncelleştirmesini ve geliştirmesini yardımcı olmak için, Yönetici gönderimini kullanarak çözümleme için [ileti göndermeniz gerekir](admin-submission.md).
 
@@ -56,7 +56,7 @@ Bu özellik kullanıcılarınıza geri bildirim vermek üzere tasarlanmıştır,
 3. Farklı işaretle **ve bildir açılan liste'yi** seçin ve ardından Tehdit **bulunamadı, Kimlik** Avı **veya Gereksiz'i** **seçin**.
 
    > [!div class="mx-imgBorder"]
-   > ![Portaldan ileti gönderin.](../../media/admin-review-send-message-from-portal.png)
+   > :::image type="content" source="../../media/admin-review-send-message-from-portal.png" alt-text="Kullanıcı tarafından bildirilen iletilerin görüntülandığı sayfa" lightbox="../../media/admin-review-send-message-from-portal.png":::
 
 Bildirilen ileti hatalı pozitif veya yanlış negatif olarak işaretlenir ve portaldan iletiyi bildiren kullanıcıya otomatik olarak bir e-posta gönderilir.
 
@@ -68,12 +68,12 @@ Bildirilen ileti hatalı pozitif veya yanlış negatif olarak işaretlenir ve po
 
 3. Şablonlardan herhangi birini özelleştirmek için sayfanın en altındaki **E-posta** bildirimini özelleştir'e tıklayın. Açılan açılır listede yalnızca şunları özelleştirebilirsiniz:
 
-    - Kimlik avı
+    - Kimlik Avı
     - Gereksiz
     - Tehdit bulunamadı
     - Alt Bilgi
 
     > [!div class="mx-imgBorder"]
-    > ![Kullanıcılara gönderilen iletileri özelleştirin.](../../media/admin-review-customize-message.png)
+    > :::image type="content" source="../../media/admin-review-customize-message.png" alt-text="Özelleştirme onayı iletisi sayfası" lightbox="../../media/admin-review-customize-message.png":::
 
 4. Bitirdiğinizde, **Kaydet**'i tıklatın. Bu değerleri temizlemek için, **Kullanıcı gönderimleri** **sayfasında At'a** tıklayın.

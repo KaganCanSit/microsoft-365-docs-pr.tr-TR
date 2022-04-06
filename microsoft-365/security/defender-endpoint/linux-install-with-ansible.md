@@ -1,8 +1,8 @@
 ---
-title: Linux'ta Ansible ile Uç Nokta için Microsoft Defender'ı Dağıtma
+title: Linux'Uç Nokta için Microsoft Defender Ansible ile dağıtım
 ms.reviewer: ''
-description: Ansible kullanarak Linux'ta Uç Nokta için Microsoft Defender'ın nasıl dağıtııstır.
-keywords: microsoft, defender, Endpoint için Microsoft Defender, linux, yükleme, dağıtma, kaldırma, atlanabilir, linux, redhat, ubuntu, debian, sles, suse, centos, fedora, amazon linux 2
+description: Ansible kullanarak Linux Uç Nokta için Microsoft Defender'i nasıl dağıtın açıklaması vardır.
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, linux, yükleme, dağıtma, kaldırma, kaldırılabilir, ansible, linux, redhat, ubuntu, debian, sles, suse, centos, fedora, amazon linux 2
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,20 +16,20 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 6a2c29d27814b4ed8c199b7a4db1ee10ce37b86c
-ms.sourcegitcommit: cde34d38bdfb6335b980f1c48c6b218da6a64bf8
+ms.openlocfilehash: 57f0687fce422f26b76fc8b98a06ce0566f90f60
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2022
-ms.locfileid: "63014092"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476081"
 ---
-# <a name="deploy-microsoft-defender-for-endpoint-on-linux-with-ansible"></a>Linux'ta Ansible ile Uç Nokta için Microsoft Defender'ı Dağıtma
+# <a name="deploy-microsoft-defender-for-endpoint-on-linux-with-ansible"></a>Linux'Uç Nokta için Microsoft Defender Ansible ile dağıtım
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
@@ -75,7 +75,7 @@ Kullanıcı portalı üzerinden ekleme Microsoft 365 Defender indirin:
 2. İlk açılan menüde işletim sistemi olarak **Linux Server'ı** seçin. İkinci açılan menüde dağıtım yöntemi olarak **Tercih ettiğiniz Linux yapılandırma yönetim aracı'nı** seçin.
 3. Ekleme **paketini indir'i seçin**. Dosyayı farklı bir WindowsDefenderATPOnboardingPackage.zip.
 
-    ![Microsoft 365 Defender portalın ekran görüntüsü.](images/portal-onboarding-linux-2.png)
+   :::image type="content" source="images/portal-onboarding-linux-2.png" alt-text="Ekleme paketini indir seçeneği" lightbox="images/portal-onboarding-linux-2.png":::
 
 4. Komut isteminden, dosyanın size ait olduğunu doğrulayın. Arşivin içeriğini ayıklama:
 

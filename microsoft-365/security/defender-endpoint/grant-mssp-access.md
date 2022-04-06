@@ -1,6 +1,6 @@
 ---
 title: Yönetilen güvenlik hizmeti sağlayıcısına (MSSP) erişim izni ver
-description: Uç Nokta için Microsoft Defender ile MSSP tümleştirmesini yapılandırmak için gerekli adımları izleyin
+description: SISTEM ayarlarıyla MSSP tümleştirmeyi yapılandırmak için gerekli Uç Nokta için Microsoft Defender
 keywords: yönetilen güvenlik hizmeti sağlayıcısı, mssp, yapılandırma, tümleştirme
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -14,20 +14,20 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: cb92b67b3f19c578d12eb9673d2f80d5fadd131f
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: c8a96f3dba51de09a7237279b4053b9f4ed9b4a7
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63029241"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470493"
 ---
 # <a name="grant-managed-security-service-provider-mssp-access-preview"></a>Yönetilen güvenlik hizmeti sağlayıcısı (MSSP) erişimi (önizleme) ver
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-mssp-support-abovefoldlink)
@@ -43,7 +43,7 @@ ms.locfileid: "63029241"
 
 3. Microsoft Myaccess'te erişim isteklerini ve [denetimlerini yönetin](/azure/active-directory/governance/entitlement-management-request-approve).
 
-## <a name="enable-role-based-access-controls-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'da rol tabanlı erişim denetimlerini etkinleştirme
+## <a name="enable-role-based-access-controls-in-microsoft-defender-for-endpoint"></a>Web'de rol tabanlı erişim denetimlerini Uç Nokta için Microsoft Defender
 
 1. **Müşteri Hizmetleri'ne MSSP kaynakları için erişim grupları AAD grupları: Gruplar**
 
@@ -57,7 +57,7 @@ ms.locfileid: "63029241"
 
     Müşteri Microsoft 365 Defender portalında RBAC'yi etkinleştirmek için, Genel Yönetici  veya Güvenlik Yöneticisi hakları olan bir kullanıcı hesabından Ayarlar > İzinleri ve > Roller'e ve "Rolleri aç" seçeneğine erişin.
 
-    ![MSSP erişimi resmi.](images/mssp-access.png)
+    :::image type="content" source="images/mssp-access.png" alt-text="MSSP erişimi" lightbox="images/mssp-access.png":::
 
     Ardından, MSSP SOC Katman  ihtiyaçlarını karşılamak için RBAC rolleri oluşturun. Bu rolleri "Atanan kullanıcı grupları" aracılığıyla oluşturulan kullanıcı gruplarına bağlama.
 
@@ -87,7 +87,7 @@ ms.locfileid: "63029241"
 
     Bunu yapmak için, müşteri AD kiracısinde Kimlik Yönetimi: Kataloglar'a erişin ve Yeni Katalog **ekleyin**. Örneğimizde, biz buna **MSSP Erişimi 1222 02/2013 2013 2013'te izin ve daha sonra MSSP Erişimleri**
 
-    ![Yeni katalog görüntüsü.](images/goverance-catalog.png)
+    :::image type="content" source="images/goverance-catalog.png" alt-text="Yeni katalog sayfası" lightbox="images/goverance-catalog.png":::
 
     Daha fazla bilgi için bkz [. Kaynak kataloğu oluşturma](/azure/active-directory/governance/entitlement-management-catalog-create).
 
@@ -103,7 +103,7 @@ ms.locfileid: "63029241"
     - Access'in otomatik kullanım süresi 365 gün sonra dolacak
 
     > [!div class="mx-imgBorder"]
-    > ![Yeni erişim paketinin resmi.](images/new-access-package.png)
+    > :::image type="content" source="images/new-access-package.png" alt-text="Yeni erişim paketi sayfası" lightbox="images/new-access-package.png":::
 
     Daha fazla bilgi için bkz [. Yeni erişim paketi oluşturma](/azure/active-directory/governance/entitlement-management-access-package-create).
 
@@ -112,11 +112,11 @@ ms.locfileid: "63029241"
     Erişimim portalı bağlantısı MSSP SOC analistleri tarafından, oluşturulan erişim paketleri üzerinden erişim isteğide kullanılmaktadır. Bağlantı dayanıklıdır, başka bir ifadeyle aynı bağlantı zaman içinde yeni analistler için kullanılabilir. Analist isteği, MSSP Analisti Onaylayanlar tarafından onay **almak için sıraya girdi**.
 
     > [!div class="mx-imgBorder"]
-    > ![Erişim özellikleri resmi.](images/access-properties.png)
+    > :::image type="content" source="images/access-properties.png" alt-text="Özellikler sayfası" lightbox="images/access-properties.png":::
 
     Bağlantı, her erişim paketinin genel bakış sayfasında yer almaktadır.
 
-## <a name="manage-access"></a>Erişimi yönetme
+## <a name="manage-access"></a>Erişimi yönetin
 
 1. Müşteri ve/veya MSSP myaccess'te erişim isteklerini gözden geçirip yetkilendiin.
 
@@ -126,7 +126,7 @@ ms.locfileid: "63029241"
 
     Örnek: `https://myaccess.microsoft.com/@M365x440XXX.onmicrosoft.com#/`
 
-2. Kullanıcı arabiriminin Onaylar bölümünde **istekleri onaylar** veya reddedin.
+2. Kullanıcı arabiriminin En **Son Onaylar istekleri** onaylar veya reddedin.
 
     Bu noktada, analist erişimi sağlandı ve her analist müşterinin müşteri portalına Microsoft 365 Defender:`https://security.microsoft.com/?tid=<CustomerTenantId>`
 

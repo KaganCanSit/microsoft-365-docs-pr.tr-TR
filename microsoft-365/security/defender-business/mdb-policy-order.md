@@ -1,6 +1,6 @@
 ---
-title: İş için Microsoft Defender'da ilke siparişlerini anlama
-description: İş için Microsoft Defender'daki ilkelerle öncelik sırası hakkında bilgi
+title: İlke sırasını İş için Microsoft Defender anlama
+description: İş için Microsoft Defender'da ilkelerle öncelik sırası hakkında bilgi edinin
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -16,51 +16,51 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 373f3eb821e00f903837f98896ed5dab0588e946
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 13e803666cc7af14af52031eb86a2f86edf06f80
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63524915"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64666316"
 ---
-# <a name="understand-policy-order-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da ilke siparişlerini anlama
+# <a name="understand-policy-order-in-microsoft-defender-for-business"></a>İlke sırasını İş için Microsoft Defender anlama
 
 > [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
+> İş için Microsoft Defender, 1 Mart 2022'de başlayarak [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşterilerine dağıtılıyor. Tek başına abonelik olarak İş için Defender önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşterilere ve BT İş Ortaklarına aşamalı olarak dağıtılacaktır. Önizleme, [bir dizi ilk senaryo](mdb-tutorials.md#try-these-preview-scenarios) içerir ve düzenli olarak özellikler ekleyeceğiz.
 > 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
 ## <a name="policy-order-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da ilke sırası
 
-İş için Microsoft Defender, çalışanlarınızı kullanan cihazların korunmasına yardımcı olmak için önceden tanımlanmış ilkeler içerir. Güvenlik ekipleriniz de yeni ilkeler ekleyebilir. Örneğin, bazı ayarları bazı cihazlara ve diğer cihazlara farklı ayarlar uygulamak istediğiniz varsayalım. Bunu, yeni nesil koruma ilkeleri veya güvenlik duvarı ilkeleri gibi ilkeler ekleyerek de bunuabilirsiniz.
+İş için Microsoft Defender, çalışanlarınızın kullandığı cihazların korunduğundan emin olmak için önceden tanımlanmış ilkeler içerir. Güvenlik ekibiniz de yeni ilkeler ekleyebilir. Örneğin, bazı cihazlara belirli ayarları ve diğer cihazlara farklı ayarları uygulamak istediğinizi varsayalım. Bunu yapmak için yeni nesil koruma ilkeleri veya güvenlik duvarı ilkeleri gibi ilkeler ekleyebilirsiniz.
 
-İlkeler eklendikken, bir öncelik sırası atandı bildirimini fark ettiysiniz. Tanımladığınız ilkeler için öncelik sıralarını düzenleyebilirsiniz, ancak varsayılan ilkeler için öncelik sıralarını değiştiremezsiniz. Örneğin, cihaz ve istemci Windows üç yeni nesil koruma ilkeniz olduğunu varsayalım. Bu durumda, varsayılan ilkeniz önceliğe sahip 3 numaradır. İlkelerinizi 1 ve 2 numaralı olacak şekilde değiştirebilirsiniz, ancak varsayılan ilke listede 3 numaradan kalacaktır. 
+İlkeler eklendikçe bir öncelik sırası atandığını fark edeceksiniz. Tanımladığınız ilkelerin öncelik sırasını düzenleyebilirsiniz, ancak varsayılan ilkeler için öncelik sırasını değiştiremezsiniz. Örneğin, Windows istemci cihazlarınız için üç yeni nesil koruma ilkeniz olduğunu varsayalım. Bu durumda, varsayılan ilkeniz öncelik olarak 3 numaradır. İlkelerinizin 1 ve 2 numaralı sırasını değiştirebilirsiniz, ancak varsayılan ilke listenizde 3 numarada kalır. 
 
-**Birden çok ilke hakkında unutmamanız gereken önemli olan, cihazların yalnızca ilk uygulanan ilkeyi almayacaklarıdır.** Önceki üç yeni nesil ilke örneğimize başvurup, üç ilkenin de hedeflemektedir. Bu durumda, bu cihazlar 1 numaralı ilkeyi alır ancak 2 ve 3 numaralı ilkeleri almaz. 
+**Birden çok ilke hakkında hatırlamanız gereken önemli şey, cihazların yalnızca ilk uygulanan ilkeyi almasıdır.** Önceki üç yeni nesil ilke örneğimize bakarak, üç ilkenin de hedeflediği cihazlarınız olduğunu varsayalım. Bu durumda, bu cihazlar ilke numarası 1'i alır, ancak 2 ve 3 numaralı ilkeleri almaz. 
 
 >
-> **Bir dakika mı kaldı?**
-> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+> **Bir dakikan var mı?**
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">İş için Microsoft Defender hakkındaki kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
-## <a name="key-points-to-remember-about-policy-order"></a>İlke sırasıyla ilgili anımsanacak önemli noktalar
+## <a name="key-points-to-remember-about-policy-order"></a>İlke sırası hakkında hatırlanması gereken önemli noktalar
 
 - İlkelere öncelik sırası atanır.
 
 - Cihazlar yalnızca ilk uygulanan ilkeyi alır.
 
-- İlkelerin öncelik sıralarını değiştirebilirsiniz.
+- İlkelerin öncelik sırasını değiştirebilirsiniz.
 
 - Varsayılan ilkelere en düşük öncelik sırası verilir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [İş için Defender'ı kullanmaya başlama](mdb-get-started.md)
+- [İş için Defender'Kullanmaya başlayın kullanma](mdb-get-started.md)
 
-- [Cihazları yönet](mdb-manage-devices.md)
+- [Cihazları yönetme](mdb-manage-devices.md)
 
 - [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)
 
-- [İş için Microsoft Defender'da tehditleri yanıtlama ve azaltmak](mdb-respond-mitigate-threats.md)
+- [İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma](mdb-respond-mitigate-threats.md)
 
-- [İşlem merkezinde düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
+- [İşlem merkezindeki düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)

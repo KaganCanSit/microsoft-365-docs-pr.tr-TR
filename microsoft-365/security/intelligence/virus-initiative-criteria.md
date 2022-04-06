@@ -1,8 +1,8 @@
 ---
 title: Microsoft Virüs Girişimi
 ms.reviewer: ''
-description: Microsoft Virüs Girişimi (MVI), virüsten koruma veya kötü amaçlı yazılımdan koruma ürünlerinin Yazılımdan Koruma ile tümleştirildi Windows ve telemetriye Microsoft'la paylaşmaya yardımcı olur.
-keywords: güvenlik, kötü amaçlı yazılım, MVI, Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi, MMPC, alliances, WDSI
+description: Microsoft Virüs Girişimi (MVI), virüsten koruma veya kötü amaçlı yazılımdan koruma ürünlerinin Windows ile tümleştirilmesini sağlayan ve telemetri verilerini Microsoft ile paylaşan kuruluşlara yardımcı olur.
+keywords: güvenlik, kötü amaçlı yazılım, MVI, Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi, MMPC, ittifaklar, WDSI
 ms.prod: m365-security
 ms.mktglfcycl: secure
 ms.sitesec: library
@@ -14,46 +14,46 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 521d663fd8966bfd2f253377941d27e2587904bd
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 911deac49606116ca7aece9d37a9aa3d7164fe3f
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63706032"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64665326"
 ---
 # <a name="microsoft-virus-initiative"></a>Microsoft Virüs Girişimi
 
-Microsoft Virüs Girişimi (MVI), kuruluşların, Microsoft teknolojisi ve stratejisiyle iyi çalışan, güvenilir ve uyumlu olan daha iyi bir güvenlik çözümleri geliştirmelerine yardımcı olur.
+Microsoft Virüs Girişimi (MVI), kuruluşların performans, güvenilir ve Microsoft teknolojisi ve stratejisiyle uyumlu daha iyi bir şekilde birlikte güvenlik çözümleri geliştirmelerine yardımcı olur.
 
-## <a name="become-a-member"></a>Üye olma
+## <a name="become-a-member"></a>Üye olun
 
-Kötü amaçlı yazılım veya virüsten koruma teknolojisi geliştiren ve üreten bir kuruluşu temsil ediyorsanız üyelik isteğinde bulundurarak bu kuruluşu temsil edin. 
+Kötü amaçlı yazılımdan koruma veya virüsten koruma teknolojisi geliştiren ve üreten bir kuruluşun temsilcisiyseniz üyelik isteyebilirsiniz. 
 
-MVI programına hak kazanmak için, kuruluş aşağıdaki tüm gereksinimleri karşılamalıdır:
+MVI programına hak kazanmak için kuruluşunuzun aşağıdaki tüm gereksinimleri karşılaması gerekir:
 
-1)  Güvenlik çözümünüz, takdirleri ve takdirleri Microsoft Defender Virüsten Koruma.
+1)  Güvenlik çözümünüz Microsoft Defender Virüsten Koruma değiştirir veya tamamlayıcıdır.
 
-2)  Uyumluluk sorununa karşı son müşterilere uygulama güncelleştirmelerini geliştirmek ve dağıtmak, sizin Windows.
+2)  Kuruluşunuz, Windows uyumluluğu ele alan son müşterilere uygulama güncelleştirmeleri geliştirmek ve dağıtmakla sorumludur.
 
-3)  Organizasyonun, kötü amaçlı yazılımlardan koruma sektöründe etkin olması ve sektör konferanslara katılımın kanıtları olarak pozitif bir üne sahip olması veya AV-Karşılaştırmalar, OPSWAT veya Gartner gibi endüstri standardı bir rapora katılması gerekir.
+3)  Kuruluşunuzun kötü amaçlı yazılımdan koruma sektöründe etkin olması ve endüstri konferanslarına katılımın kanıtladığı veya AV-Comparatives, OPSWAT veya Gartner gibi endüstri standardı bir raporda gözden geçirildiği için olumlu bir üne sahip olması gerekir.
 
-4)  Kuruluş, Microsoft'la gizlilik sözleşmesi (NDA) imzalamalı.
+4)  Kuruluşunuzun Microsoft ile bir gizlilik sözleşmesi (NDA) imzalaması gerekir.
 
-5)  Kuruluş bir program lisans sözleşmesi imzalamalı. Bu lisans sözleşmesine sahip olmak, kötü amaçlı yazılımdan koruma uygulamaları için tüm program gereksinimlerine bağlı kalmanız gerekir. Bu gereksinimler, yazılımdan koruma uygulamalarının yazılım ve yazılımdan koruma uygulamalarıyla doğru etkileşimi Windows.
+5)  Kuruluşunuzun bir program lisans sözleşmesi imzalaması gerekir. Bu lisans sözleşmesinin korunması, kötü amaçlı yazılımdan koruma uygulamaları için tüm program gereksinimlerine uymanızı gerektirir. Bu gereksinimler, Windows düzgün etkileşim sağlamak için gereken kötü amaçlı yazılımdan koruma uygulamalarının davranışını tanımlar.
 
-6)  Düzenli performans testi ve özellik incelemesi için uygulamanızı Microsoft'a gönderebilirsiniz.
+6)  Uygulamanızı düzenli performans testi ve özellik incelemesi için Microsoft'a göndermeniz gerekir.
 
-7)  Çözümünüz, en az bir endüstri standardı kuruluş tarafından bağımsız test yoluyla sertifikalandırılmış ve yıllık sertifikanın korunması gerekir.
+7)  Çözümünüz en az bir endüstri standardı kuruluş tarafından bağımsız test yoluyla onaylanmalıdır ve yıllık sertifikasyon korunmalıdır.
 
-Test Sağlayıcısı | Laboratuvar Test Türü | En Düşük Düzey / Puan
+Test Sağlayıcısı | Laboratuvar Test Türü | Minimum Düzey / Puan
 ------------- |---------------|----------------------
-AV-Comparatives | Real-World Koruma Testi </br> https://www.av-comparatives.org/testmethod/real-world-protection-tests/ |AV Karşılaştırmaları'dan "Onaylandı" derecelendirmesi
-AV-Test | Bu testlerden önce testi Windows. Mac ve Linux için sertifikalar kabul edilmemektedir </br> https://www.av-test.org/en/about-the-institute/certification/ | "AV-TEST Sertifikalı" (ev kullanıcıları için) veya "AV-TEST Onaylandı" (kurumsal kullanıcılar için)
-ICSA Laboratuvarları | Uç Nokta Kötü Amaçlı Yazılımdan Koruma Algılama </br> https://www.icsalabs.com/technology-program/anti-virus/criteria |PASS/Sertifikalı
-SKD Laboratuvarları | Sertifika Gereksinimleri Ürünü: Virüsten koruma veya Kötü amaçlı yazılımdan koruma </br> http://www.skdlabs.com/html/english/ </br> http://www.skdlabs.com/cert/ |SKD Laboratuvarları Yıldız Denetim Sertifikası Gereksinimleri >= %98,5 Isteğe Bağlı, Erişim ve Toplam Algılama testleri ile geçer 
+AV-Comparatives | Real-World Koruma Testi </br> https://www.av-comparatives.org/testmethod/real-world-protection-tests/ |AV Comparatives tarafından "Onaylandı" derecelendirmesi
+AV-Test | Windows için testleri geçmelidir. Mac ve Linux sertifikaları kabul değil </br> https://www.av-test.org/en/about-the-institute/certification/ | "AV-TEST Onaylı" (ev kullanıcıları için) veya "AV-TEST Onaylı" (kurumsal kullanıcılar için) elde edin
+ICSA Labs | Uç Nokta Kötü Amaçlı Yazılımdan Koruma Algılama </br> https://www.icsalabs.com/technology-program/anti-virus/criteria |PASS/Sertifikalı
+SKD Laboratuvarları | Sertifikasyon Gereksinimleri Ürünü: Virüsten koruma veya kötü amaçlı yazılımdan koruma </br> http://www.skdlabs.com/html/english/ </br> http://www.skdlabs.com/cert/ |SKD Labs Yıldız Denetimi Sertifikasyon Gereksinimleri geçiş >= %98,5 İsteğe Bağlı, Erişimde ve Toplam Algılama testleriyle 
 VB 100 |    VB100 Sertifika Testi V1.1 </br> https://www.virusbulletin.com/testing/vb100/vb100-methodology/vb100-methodology-ver1-1/ | VB100 Sertifikası
-Batı Sahili Laboratuvarları |   Onay İşareti Sertifikalı </br> http://www.checkmarkcertified.com/sme/  | Ürün Güvenliği Performansında "A" Derecelendirmesi
+West Coast Labs |   Onay İşareti Sertifikalı </br> http://www.checkmarkcertified.com/sme/  | Ürün Güvenliği Performansında "A" Derecelendirmesi
 
-## <a name="apply-now"></a>Hemen uygula
+## <a name="apply-now"></a>Şimdi uygula
 
-Organizasyonunız bu ölçütlere katılıyorsa ve katılmak ilginizi çekiyorsa, [şimdi üyelik için geçerlidir](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRxusDUkejalGp0OAgRTWC7BUQVRYUEVMNlFZUjFaUDY2T1U1UDVVU1NKVi4u).
+Kuruluşunuz bu ölçütleri karşılıyorsa ve katılmakla ilgileniyorsa [, şimdi üyelik için başvuruda bulunabilirsiniz](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRxusDUkejalGp0OAgRTWC7BUQVRYUEVMNlFZUjFaUDY2T1U1UDVVU1NKVi4u).

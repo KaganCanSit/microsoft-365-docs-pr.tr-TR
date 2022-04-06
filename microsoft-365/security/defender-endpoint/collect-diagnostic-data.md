@@ -17,12 +17,12 @@ manager: dansimp
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 73f07a7346edbaebe7e53cd4e17e29a5e6764073
-ms.sourcegitcommit: 2b9d40e888ff2f2b3385e2a90b50d719bba1e653
+ms.openlocfilehash: 099bd5c458a863576c8030a86d6923065228e307
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "62997000"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470757"
 ---
 # <a name="collect-microsoft-defender-antivirus-diagnostic-data"></a>Tanılama Microsoft Defender Virüsten Koruma toplama
 
@@ -31,8 +31,8 @@ ms.locfileid: "62997000"
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Bu makalede, Microsoft destek ve mühendislik ekipleri tarafından kullanılmaktadır. Verileri kullanırken karşılaşabilirsiniz sorunları gidermek için kullanılmaktadır. Bu tanılama verilerini Microsoft Defender Virüsten Koruma.
 
@@ -117,23 +117,24 @@ SupportLogLocation parametresi kullanıldığında, hedef yolda aşağıdaki gib
 
 ## <a name="specify-location-where-diagnostic-data-is-created"></a>Tanılama verilerin oluşturulacak yeri belirtme
 
-Ayrıca, Grup İlkesi Nesnesi (GPO) .cab tanılama dosyasının oluşturulacak yeri de belirtebilirsiniz.
+Tanılama dosyasının, .cab grup ilkesi Nesnesi (GPO) kullanılarak oluşturulacak grup ilkesi belirtebilirsiniz.
 
-1. Yerel Grup İlkesi Düzenleyicisi'ni açın ve SupportLogLocation GPO'nun bulun: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\SupportLogLocation`.
+1. Local grup ilkesi Düzenleyicisi'ni açın ve SupportLogLocation GPO'nun bulun: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\SupportLogLocation`.
 
 2. Destek **günlük dosyalarını kopyalamak için Dizin yolunu tanımla'ya seçin**.
 
-   ![Yerel grup ilkesi düzenleyicisinin ekran görüntüsü](images/GPO1-SupportLogLocationDefender.png)
+   :::image type="content" source="images/GPO1-SupportLogLocationDefender.png" alt-text="Yerel grup ilkesi düzenleyicisi" lightbox="images/GPO1-SupportLogLocationDefender.png":::
 
-   ![Günlük dosyaları için tanımla yolunun ekran görüntüsü ayarı](images/GPO2-SupportLogLocationGPPage.png)
+   :::image type="content" source="images/GPO2-SupportLogLocationGPPage.png" alt-text="Günlük dosyaları ayarının tanımlama yolu" lightbox="images/GPO2-SupportLogLocationGPPage.png":::
 
-    ![Yerel grup ilkesi düzenleyicisinin ekran görüntüsü.](images/GPO1-SupportLogLocationDefender.png)  
+   :::image type="content" source="images/GPO1-SupportLogLocationDefender.png" alt-text="Yerel grup ilkesi düzenleyicisi" lightbox="images/GPO1-SupportLogLocationDefender.png"::: 
         
-     ![Günlük dosyaları için tanımla yolunun ekran görüntüsü ayarı.](images/GPO2-SupportLogLocationGPPage.png)  
+   :::image type="content" source="images/GPO2-SupportLogLocationGPPage.png" alt-text="Günlük dosyaları ayarını yapılandırmak için tanımlama yolu" lightbox="images/GPO2-SupportLogLocationGPPage.png":::
+ 
 3. İlke düzenleyicisinin içinde Etkin'i **seçin**.
 
 4. Seçenekler alanında destek günlük dosyalarını kopyalamak istediğiniz **dizin yolunu belirtin** .
-     ![Etkin dizin yolu özel ayarının ekran görüntüsü.](images/GPO3-SupportLogLocationGPPageEnabledExample.png) 
+   :::image type="content" source="images/GPO3-SupportLogLocationGPPageEnabledExample.png" alt-text="Etkin dizin yolu özel ayarı" lightbox="images/GPO3-SupportLogLocationGPPageEnabledExample.png":::
 5. **Tamam'ı veya** **Uygula'ya tıklayın**.
 
 ## <a name="see-also"></a>Ayrıca bkz.
