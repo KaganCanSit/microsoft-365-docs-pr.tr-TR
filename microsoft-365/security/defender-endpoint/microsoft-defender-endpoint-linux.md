@@ -1,8 +1,8 @@
 ---
 title: Linux'ta Uç Nokta için Microsoft Defender
 ms.reviewer: ''
-description: Linux'ta Uç Nokta için Microsoft Defender ve kullanımı açıklarıdır.
-keywords: microsoft, defender, Uç Nokta için Microsoft Defender, linux, yükleme, dağıtma, kaldırma, koruyucu, ansible, linux, redhat, ubuntu, debian, sles, suse, centos
+description: Linux'ta Uç Nokta için Microsoft Defender yükleme ve kullanma işlemleri açıklanır.
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, linux, installation, deploy, uninstallation, puppet, ansible, linux, redhat, ubuntu, debian, sles, suse, centos
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -17,90 +17,92 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 2cd00befebba58dcac8411bb9aa9bce60bd02aac
-ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
+ms.openlocfilehash: dcc4ed070e900f9df892abb58cd05cdad2dca619
+ms.sourcegitcommit: 2f6a0096038d09f0e43e1231b01c19e0b40fb358
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64507153"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64687021"
 ---
 # <a name="microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Bu konu başlığı altında Linux'ta sistem sistemlerini yükleme, yapılandırma, Uç Nokta için Microsoft Defender ve kullanma açıklanmıştır.
+Bu konuda Linux'ta Uç Nokta için Microsoft Defender yükleme, yapılandırma, güncelleştirme ve kullanma işlemleri açıklanmaktadır.
 
 > [!CAUTION]
-> Linux'ta diğer üçüncü taraf uç nokta koruma ürünlerinin Uç Nokta için Microsoft Defender birlikte çalıştırmanın performans sorunlarına ve öngörülemeyen yan etkilere neden olması olasıdır. Microsoft dışı uç nokta koruması ortamınızın mutlak bir gereksinimi ise, virüsten koruma işlevini Pasif modunda çalıştıracak şekilde yapılandırdikten sonra Linux EDR uç noktası için Defender'ın avantajını güvenle [kullanabilirsiniz](linux-preferences.md#enforcement-level-for-antivirus-engine).
+> Linux'ta Uç Nokta için Microsoft Defender birlikte diğer üçüncü taraf uç nokta koruma ürünlerini çalıştırmak, performans sorunlarına ve öngörülemeyen yan etkilere yol açabilir. Ortamınızda Microsoft dışı uç nokta koruması mutlak bir gereksinimse, virüsten koruma işlevini [Pasif modda](linux-preferences.md#enforcement-level-for-antivirus-engine) çalışacak şekilde yapılandırdıktan sonra Linux'ta Uç Nokta için Defender EDR işlevselliğinden güvenle yararlanabilirsiniz.
 
-## <a name="how-to-install-microsoft-defender-for-endpoint-on-linux"></a>Linux'a Uç Nokta için Microsoft Defender yükleme
+## <a name="how-to-install-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender yükleme
 
-Linux için Uç Nokta için Microsoft Defender, kötü amaçlı yazılımlardan koruma ve uç noktada algılama ve yanıtlama (EDR) özellikleri içerir. 
+Linux için Uç Nokta için Microsoft Defender kötü amaçlı yazılımdan koruma ve uç noktada algılama ve yanıtlama (EDR) özelliklerini içerir. 
 
 
 ### <a name="prerequisites"></a>Önkoşullar
 
 - Microsoft 365 Defender portalına erişim
-- Sistemli sistem [yöneticisini kullanarak](https://systemd.io/) Linux dağıtımı
-- Linux ve BASH betikleri için başlangıç düzeyi deneyimi
-- Cihaz üzerinde yönetim ayrıcalıkları (el ile dağıtım durumunda)
+- [Sistemli](https://systemd.io/) sistem yöneticisini kullanarak Linux dağıtımı
+- Linux ve BASH betiği oluşturmada başlangıç düzeyinde deneyim
+- Cihazdaki yönetim ayrıcalıkları (el ile dağıtım durumunda)
 
 > [!NOTE]
-> Uç Nokta için Microsoft Defender Linux aracısı, [OMS aracılarından bağımsızdır](/azure/azure-monitor/agents/agents-overview#log-analytics-agent). Uç Nokta için Microsoft Defender kendi bağımsız telemetri potansiyel sistemine dayandır.
+> Linux aracısının Uç Nokta için Microsoft Defender [OMS aracısından](/azure/azure-monitor/agents/agents-overview#log-analytics-agent) bağımsızdır. Uç Nokta için Microsoft Defender kendi bağımsız telemetri işlem hattına dayanır.
 
 
 ### <a name="installation-instructions"></a>Yükleme yönergeleri
 
-Linux'ta e-postanızı yüklemek ve yapılandırmak için kullanabileceğiniz çeşitli Uç Nokta için Microsoft Defender araçları vardır.
+Linux'ta Uç Nokta için Microsoft Defender yüklemek ve yapılandırmak için kullanabileceğiniz çeşitli yöntemler ve dağıtım araçları vardır.
 
-Genelde aşağıdaki adımları benimsersiniz:
+Genel olarak aşağıdaki adımları uygulamanız gerekir:
 
-- Yeni bir aboneliğiniz olduğundan Uç Nokta için Microsoft Defender emin olur.
-- Aşağıdaki Uç Nokta için Microsoft Defender birini kullanarak Linux'ta dağıtım yapın:
+- Uç Nokta için Microsoft Defender aboneliğiniz olduğundan emin olun.
+- Aşağıdaki dağıtım yöntemlerinden birini kullanarak Linux'ta Uç Nokta için Microsoft Defender dağıtın:
   - Komut satırı aracı:
     - [El ile dağıtım](linux-install-manually.md)
   - Üçüncü taraf yönetim araçları:
-    - [Configuration configuration management tool kullanarak dağıtma](linux-install-with-puppet.md)
+    - [Puppet yapılandırma yönetim aracını kullanarak dağıtma](linux-install-with-puppet.md)
     - [Ansible yapılandırma yönetim aracını kullanarak dağıtma](linux-install-with-ansible.md)
-    - [Configuration yapılandırma yönetim aracını kullanarak dağıtma](linux-deploy-defender-for-endpoint-with-chef.md)
+    - [Chef yapılandırma yönetim aracını kullanarak dağıtma](linux-deploy-defender-for-endpoint-with-chef.md)
 
-Yükleme hatalarında sorun yaşamanız durumunda Linux için Uç Nokta için Microsoft Defender [sorunları giderme'ye bakın](linux-support-install.md).
+Herhangi bir yükleme hatasıyla karşılaşırsanız [Bkz. Linux'ta Uç Nokta için Microsoft Defender yükleme hatalarını giderme](linux-support-install.md).
 
 > [!NOTE]
-> Varsayılan yükleme yolu dışında bir Uç Nokta için Microsoft Defender başka bir konuma E-posta yüklemesi desteklenmiyor. 
+> Uç Nokta için Microsoft Defender varsayılan yükleme yolu dışında başka bir konuma yüklenmesi desteklenmez. 
 
 ### <a name="system-requirements"></a>Sistem gereksinimleri
 
-- Desteklenen Linux sunucu dağıtımları, x64 (AMD64/EM64T) ve x86_64 sürümleri:
+- Desteklenen Linux sunucu dağıtımları ve x64 (AMD64/EM64T) ve x86_64 sürümleri:
 
-  - Red Hat Enterprise Linux 6.7 veya daha yüksek
-  - Red Hat Enterprise Linux 7.2 veya daha yüksek
+  - Red Hat Enterprise Linux 6.7 veya üzeri
+  - Red Hat Enterprise Linux 7.2 veya üzeri
   - Red Hat Enterprise Linux 8.x
-  - CentOS 6.7 veya daha yüksek 
-  - CentOS 7.2 veya daha yüksek
-  - Ubuntu 16.04 LTS veya daha yüksek LTS
-  - Debian 9 veya daha yüksek
-  - SUSE Linux Enterprise Server 12 veya daha yüksek sürümü
-  - Oracle Linux 7.2 veya daha yüksek
+  - CentOS 6.7 veya üzeri 
+  - CentOS 7.2 veya üzeri
+  - Ubuntu 16.04 LTS veya üzeri LTS
+  - Debian 9 veya üzeri
+  - SUSE Linux Enterprise Server 12 veya üzeri
+  - Oracle Linux 7.2 veya üzeri
   - Oracle Linux 8.x
   - Amazon Linux 2
-  - Fedora 33 veya daha yüksek
+  - Fedora 33 veya üzeri
 
     > [!NOTE]
-    > Açıkça listelenmiyor dağıtımlar ve sürümler desteklenmiyor (resmi olarak desteklenen dağıtımlardan türetlenmiş olsalar bile).
+    > Açıkça listelenmeyen dağıtımlar ve sürümler desteklenmez (resmi olarak desteklenen dağıtımlardan türetilmiş olsalar bile).
 
 - Desteklenen çekirdek sürümlerinin listesi
+  - En düşük çekirdek sürümü 3.10.0-327 (Red Hat Enterprise Linux 6 ve CentOS 6 dışında yukarıda belirtilen tüm desteklenen Linux dağıtımları için)
+  - Çekirdek `fanotify` seçeneği etkinleştirilmelidir
   - Red Hat Enterprise Linux 6 ve CentOS 6:
     - 6.7 için: 2.6.32-573.*
     - 6.8 için: 2.6.32-642.*
-    - 6.9 için: 2.6.32-696.*
-    - 6.10 için: 2.6.32.754.2.1.el6.x86_64 2.6.32-754.41.2'ye 2.6.32.754.2.1.el6.x86_64:
+    - 6.9 için: 2.6.32-696.* (2.6.32-696.el6.x86_64 hariç)
+    - 6.10 için: 2.6.32-754.43.1 2.6.32.754.2.1.el6.x86_64:
     
        - 2.6.32-754.10.1.el6.x86_64
        - 2.6.32-754.11.1.el6.x86_64
@@ -129,58 +131,20 @@ Yükleme hatalarında sorun yaşamanız durumunda Linux için Uç Nokta için Mi
        - 2.6.32-754.6.3.el6.x86_64
        - 2.6.32-754.9.1.el6.x86_64
 
-    Red Hat Enterprise Linux 6 ve CentOS 6 için desteklenen çekirdek sürümleri listesi şöyledir:
-       - 6.7 için: 2.6.32-573.* 
-       - 6.8 için: 2.6.32-642.* 
-       - 6.9 için: 2.6.32-696.* 
-       - 6.10 için: 2.6.32.754.2.1.el6.x86_64 2.6.32-754.41.2'ye 2.6.32.754.2.1.el6.x86_64:
-
  > [!NOTE]
- > Yeni bir paket sürümü yayınlandıktan sonra, önceki iki sürümün desteği yalnızca teknik destekle azaltıldı. Bu bölümde listelenenden daha eski sürümler yalnızca teknik yükseltme desteği için sağlanmıştır.
+ > Yeni bir paket sürümü yayımlandıktan sonra, önceki iki sürüme yönelik destek yalnızca teknik desteğe indirgener. Bu bölümde listelenen sürümlerden eski sürümler yalnızca teknik yükseltme desteği için sağlanır.
 
-  Sürüm listesi:
-
-  - 2.6.32-754.2.1.el6.x86_64 
-  - 2.6.32-754.17.1.el6.x86_64
-  - 2.6.32-754.29.1.el6.x86_64
-  - 2.6.32-754.3.5.el6.x86_64 
-  - 2.6.32-754.18.2.el6.x86_64
-  - 2.6.32-754.29.2.el6.x86_64
-  - 2.6.32-754.6.3.el6.x86_64 
-  - 2.6.32-754.22.1.el6.x86_64
-  - 2.6.32-754.30.2.el6.x86_64
-  - 2.6.32-754.9.1.el6.x86_64 
-  - 2.6.32-754.23.1.el6.x86_64
-  - 2.6.32-754.33.1.el6.x86_64
-  - 2.6.32-754.10.1.el6.x86_64
-  - 2.6.32-754.24.2.el6.x86_64
-  - 2.6.32-754.35.1.el6.x86_64
-  - 2.6.32-754.11.1.el6.x86_64
-  - 2.6.32-754.24.3.el6.x86_64
-  - 2.6.32-754.39.1.el6.x86_64
-  - 2.6.32-754.12.1.el6.x86_64
-  - 2.6.32-754.25.1.el6.x86_64
-  - 2.6.32-754.41.2.el6.x86_64
-  - 2.6.32-754.14.2.el6.x86_64
-  - 2.6.32-754.27.1.el6.x86_64
-  - 2.6.32-754.15.3.el6.x86_64
-  - 2.6.32-754.28.1.el6.x86_64       
-
-
-- En düşük çekirdek sürümü 3.10.0-327
-
-- Çekirdek `fanotify` seçeneğinin etkinleştirilmesi gerekir
 
   > [!CAUTION]
-  > Linux'ta Uç Nokta için diğer tabanlı güvenlik `fanotify`çözümleriyle yan yana çalışan Defender desteklenmiyor. İşletim sisteminin asılı olması da dahil olmak üzere, öngörülemeyen sonuçlara yol aç sağlar.
+  > Linux'ta Uç Nokta için Defender'ın diğer `fanotify`tabanlı güvenlik çözümleriyle yan yana çalıştırılması desteklenmez. İşletim sistemini asmak da dahil olmak üzere öngörülemeyen sonuçlara yol açabilir.
 
 - Disk alanı: 1 GB
 
-- /opt/microsoft/mdatp/sbin/wdavdaemon için yürütülebilir izin gerekir. Daha fazla bilgi için Linux'ta yürütülebilir izinle ilgili yükleme sorunlarını giderme altında yer alan "daemon'un yürütülebilir izni olduğundan [emin Uç Nokta için Microsoft Defender.](/microsoft-365/security/defender-endpoint/linux-support-install)
+- /opt/microsoft/mdatp/sbin/wdavdaemon yürütülebilir izin gerektirir. Daha fazla bilgi için [Linux'ta Uç Nokta için Microsoft Defender yükleme sorunlarını giderme](/microsoft-365/security/defender-endpoint/linux-support-install) makalesindeki "Daemon'un yürütülebilir izinlere sahip olduğundan emin olun" konusuna bakın.
 
-- Çekirdekler: En az 2, 4 tercih edilen
+- Çekirdekler: 2 en az, 4 tercih edilir
 
-- Bellek: En az 1 GB, tercih edilen 4
+- Bellek: En az 1 GB, tercih edilen 4 GB
 
     > [!NOTE]
     > Lütfen /var içinde boş disk alanınız olduğundan emin olun.
@@ -204,59 +168,59 @@ Yükleme hatalarında sorun yaşamanız durumunda Linux için Uç Nokta için Mi
   - `vfat`
   - `xfs`
 
-Hizmeti etkinleştirdikten sonra, ağ veya güvenlik duvarınızı bu bağlantıyla uç noktalarınız arasında giden bağlantılara izin verecek şekilde yapılandırmanız gerekebilir.
+Hizmeti etkinleştirdikten sonra, ağınızı veya güvenlik duvarınızı, bu hizmetle uç noktalarınız arasında giden bağlantılara izin verecek şekilde yapılandırmanız gerekebilir.
 
 - Denetim çerçevesi (`auditd`) etkinleştirilmelidir.
 
   > [!NOTE]
-  > Kuralların eklediği sistem olayları `/etc/audit/rules.d/` `audit.log`(s) değerine eklenir ve ana bilgisayar denetimini ve akış koleksiyonunu etkileyebilir. Linux'ta Uç Nokta için Microsoft Defender tarafından eklenen etkinlikler anahtarla etiketlenir`mdatp`.
+  > 'a `/etc/audit/rules.d/` eklenen kurallar tarafından yakalanan sistem olayları ,'lere `audit.log`eklenir ve konak denetimini ve yukarı akış koleksiyonunu etkileyebilir. Linux'ta Uç Nokta için Microsoft Defender tarafından eklenen olaylar anahtarla `mdatp` etiketlenir.
 
 ### <a name="configuring-exclusions"></a>Dışlamaları Yapılandırma
 
-Dışlamalar söz Microsoft Defender Virüsten Koruma, hatanın Yaygın Dışlama [Hatalarını Microsoft Defender Virüsten Koruma](/microsoft-365/security/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus)
+Microsoft Defender Virüsten Koruma'a dışlama eklerken, Microsoft Defender Virüsten Koruma [için Yaygın Dışlama Hatalarına](/microsoft-365/security/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus) dikkat etmelisiniz
 
 ### <a name="network-connections"></a>Ağ bağlantıları
 
-Aşağıdaki indirilebilir elektronik tablo, ağ bağlantı kurabilirsiniz ve bu hizmetlerle ilişkilendirilmiş URL'leri listeler. Bu URL'lere erişimi reddedecek güvenlik duvarı veya ağ filtreleme kuralları yoktur. Varsa, özel olarak onlar için bir izin *kuralı* oluşturmanız gerekir.
+Aşağıdaki indirilebilir elektronik tablo, ağınızın bağlanabilmesi gereken hizmetleri ve bunların ilişkili URL'lerini listeler. Bu URL'lere erişimi reddedecek bir güvenlik duvarı veya ağ filtreleme kuralı olmadığından emin olmalısınız. Varsa, bunlar için özel olarak bir *izin verme* kuralı oluşturmanız gerekebilir.
 
 <br>
 
 ****
 
-|Etki alanı listesinin elektronik tablosu| Açıklama|
+|Etki alanları listesinin elektronik tablosu| Açıklama|
 |---|---|
-|Uç Nokta için Microsoft Defender müşteriler için bir URL listesi| Ticari müşteriler için hizmet konumları, coğrafi konumlar ve işletim sistemi için belirli DNS kayıtlarının elektronik tablosu. <p> [Elektronik tabloyu buradan indirin.](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)
-| Uç Nokta için Microsoft Defender Gov/GCC/DoD için URL listesi | Gov/GCC/DoD müşterileri için hizmet konumları, coğrafi konumlar ve işletim sistemi için belirli DNS kayıtlarının elektronik tablosu. <p> [Elektronik tabloyu buradan indirin.](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx)
+|Ticari müşteriler için Uç Nokta için Microsoft Defender URL listesi| Ticari müşteriler için hizmet konumları, coğrafi konumlar ve işletim sistemi için belirli DNS kayıtlarının elektronik tablosu. <p> [Elektronik tabloyu buradan indirin.](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)
+| Gov/GCC/DoD için Uç Nokta için Microsoft Defender URL listesi | Gov/GCC/DoD müşterileri için hizmet konumları, coğrafi konumlar ve işletim sistemi için belirli DNS kayıtlarının elektronik tablosu. <p> [Elektronik tabloyu buradan indirin.](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx)
 
 > [!NOTE]
-> Daha belirli bir URL listesi için bkz. [Proxy ve İnternet bağlantı ayarlarını yapılandırma](/microsoft-365/security/defender-endpoint/configure-proxy-internet#enable-access-to-microsoft-defender-atp-service-urls-in-the-proxy-server).
+> Daha belirli bir URL listesi için bkz. [Ara sunucu ve internet bağlantısı ayarlarını yapılandırma](/microsoft-365/security/defender-endpoint/configure-proxy-internet#enable-access-to-microsoft-defender-atp-service-urls-in-the-proxy-server).
 
-Uç Nokta için Defender, aşağıdaki bulma yöntemlerini kullanarak bir ara sunucuyu keşfeder:
+Uç Nokta için Defender, aşağıdaki bulma yöntemlerini kullanarak bir proxy sunucusu bulabilir:
 
 - Saydam ara sunucu
-- El ile statik ara sunucu yapılandırması
+- El ile statik proxy yapılandırması
 
-Bir ara sunucu veya güvenlik duvarı anonim trafiği engelliyorsa, anonim trafiğin daha önce listelenen URL'lerde izin verildiğindan emin olun. Saydamxlarda, Uç Nokta için Defender'a ek yapılandırma gerekmez. Statik proxy için, El ile Statik Proxy [Yapılandırması'nın adımlarını izleyin](linux-static-proxy-configuration.md).
+Bir ara sunucu veya güvenlik duvarı anonim trafiği engelliyorsa, önceden listelenen URL'lerde anonim trafiğe izin verildiğinden emin olun. Saydam proxy'ler için Uç Nokta için Defender için ek yapılandırma gerekmez. Statik ara sunucu için [El ile Statik Proxy Yapılandırması'ndaki](linux-static-proxy-configuration.md) adımları izleyin.
 
 > [!WARNING]
-> PAC, WPAD ve kimliği doğrulanmışxler desteklanmaz. Yalnızca statik ara sunucu veya saydam proxy'nin kullanılıyor olduğundan emin olun.
+> PAC, WPAD ve kimliği doğrulanmış proxy'ler desteklenmez. Yalnızca statik bir ara sunucu veya saydam proxy kullanıldığından emin olun.
 >
-> SSL incelemesi ve kesişme prox'leri güvenlik nedenleriyle de desteklanmaz. Linux'ta Uç Nokta için Defender'dan kesme noktası olmadan ilgili URL'lere doğrudan veri geçecek SSL incelemesi ve ara sunucu için bir özel durum yapılandırın. Kesme noktası sertifikanızı genel mağazaya eklemek kesme noktası engellemesine izin vermez.
+> GÜVENLIK nedeniyle SSL denetimi ve ara sunucuları da desteklenmez. SSL incelemesi için bir özel durum yapılandırın ve ara sunucunuzu, Linux'ta Uç Nokta için Defender'dan kesme olmadan ilgili URL'lere doğrudan veri geçirmek için yapılandırın. Kesme sertifikanızı genel depoya eklemek kesmeye izin vermez.
 
-Sorun giderme adımları için bkz[. Linux'ta sistem Uç Nokta için Microsoft Defender sorunlarını giderme](linux-support-connectivity.md).
+Sorun giderme adımları için bkz[. Linux'ta Uç Nokta için Microsoft Defender için bulut bağlantısı sorunlarını giderme](linux-support-connectivity.md).
 
 ## <a name="how-to-update-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender güncelleştirme
 
-Microsoft, performansı, güvenliği geliştirmek ve yeni özellikler sunmak için düzenli olarak yazılım güncelleştirmeleri yayımlar. Linux'Uç Nokta için Microsoft Defender fazla güncelleştirme yapmak için [Linux'ta Uç Nokta için Microsoft Defender dağıtma'ya bakın](linux-updates.md).
+Microsoft, performansı, güvenliği geliştirmek ve yeni özellikler sunmak için düzenli olarak yazılım güncelleştirmeleri yayımlar. Linux'ta Uç Nokta için Microsoft Defender güncelleştirmek için bkz. [Linux'ta Uç Nokta için Microsoft Defender güncelleştirmelerini dağıtma](linux-updates.md).
 
 ## <a name="how-to-configure-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender yapılandırma
 
-Ürünü kurumsal ortamlarda yapılandırma kılavuzuna Linux'ta Kurumsal ortamlar için Uç Nokta için Microsoft Defender [ve kullanılabilir](linux-preferences.md).
+Ürünü kurumsal ortamlarda yapılandırma yönergelerine [Linux'ta Uç Nokta için Microsoft Defender için tercihleri ayarlama](linux-preferences.md) bölümünden ulaşabilirsiniz.
 
-## <a name="common-applications-to-microsoft-defender-for-endpoint-can-impact"></a>Yaygın Kullanılan Uç Nokta için Microsoft Defender etki
+## <a name="common-applications-to-microsoft-defender-for-endpoint-can-impact"></a>Uç Nokta için Microsoft Defender için Yaygın Uygulamalar etkilenebilir
 
-Belirli uygulamalardan gelen yüksek I/O iş yükleri, yükleme Uç Nokta için Microsoft Defender performans sorunlarıyla yaşanabilirsiniz. Bunlar, Oracle ve Jira gibi geliştirici senaryoları için uygulamalar, OracleDB ve Postgres gibi veritabanı iş yükleridir. Performans düşüşü yaşıyorsanız, güvenilir uygulamalar için dışlamalar ayarlamayı göz önünde bulundurarak Dışlama Hatalarının Yaygın [Microsoft Defender Virüsten Koruma](/microsoft-365/security/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus) göz önünde bulundurabilirsiniz. Ek bilgiler için, üçüncü taraf uygulamalardan virüsten koruma dışlamaları ile ilgili belgelere bakabilirsiniz.
+Belirli uygulamaların yüksek G/Ç iş yükleri, Uç Nokta için Microsoft Defender yüklendiğinde performans sorunlarıyla karşılaşabilir. Bunlar Jenkins ve Jira gibi geliştirici senaryolarına yönelik uygulamaları ve OracleDB ve Postgres gibi veritabanı iş yüklerini içerir. Performans düşüşü yaşıyorsanız, Microsoft Defender Virüsten Koruma için Yaygın Dışlama Hatalarını göz önünde bulundurarak güvenilen uygulamalar [için dışlamalar](/microsoft-365/security/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus) ayarlamayı göz önünde bulundurun. Ek yönergeler için üçüncü taraf uygulamalardan gelen virüsten koruma dışlamalarıyla ilgili danışmanlık belgelerini göz önünde bulundurun.
 
 ## <a name="resources"></a>Kaynaklar
 
-- Günlüğe kaydetme, kaldırma veya diğer konular hakkında daha fazla bilgi için bkz. [Kaynaklar](linux-resources.md).
+- Günlüğe kaydetme, kaldırma veya diğer konular hakkında daha fazla bilgi için bkz [. Kaynaklar](linux-resources.md).

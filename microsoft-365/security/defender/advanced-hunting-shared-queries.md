@@ -1,7 +1,7 @@
 ---
-title: Gelişmiş avlarda paylaşılan Microsoft 365 Defender kullanma
-description: Önceden tanımlanmış ve paylaşılan sorgularla tehdit aramalarına hemen başlayabilirsiniz. Sorgularınızı genel olarak veya kuruluşla paylaşın.
-keywords: gelişmiş av, tehdit avı, siber tehdit avı, Microsoft 365 Defender, Microsoft 365, m365, arama, sorgu, telemetri, özel algılamalar, şema, kusto, github repo, sorgularım, paylaşılan sorgular
+title: Microsoft 365 Defender gelişmiş avcılıkta paylaşılan sorguları kullanma
+description: Önceden tanımlanmış ve paylaşılan sorgularla tehdit avcılığı yapmaya hemen başlayın. Sorgularınızı genel veya kuruluşunuzla paylaşın.
+keywords: gelişmiş tehdit avcılığı, tehdit avcılığı, siber tehdit avcılığı, Microsoft 365 Defender, microsoft 365, m365, arama, sorgu, telemetri, özel algılamalar, şema, kusto, github deposu, sorgularım, paylaşılan sorgular
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -18,64 +18,72 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 96db917808094487039a13740cba80ad751f062f
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: 21dbcdebbb640e15ef4023c0bf0cfdaf4739fdb7
+ms.sourcegitcommit: 2f6a0096038d09f0e43e1231b01c19e0b40fb358
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63755523"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64686999"
 ---
-# <a name="use-shared-queries-in-advanced-hunting"></a>Gelişmiş avlarda paylaşılan sorguları kullanma
+# <a name="use-shared-queries-in-advanced-hunting"></a>Gelişmiş avcılıkta paylaşılan sorguları kullanma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - Microsoft 365 Defender
 - Uç Nokta için Microsoft Defender
 
+[Gelişmiş tehdit avcılığı](advanced-hunting-overview.md) sorguları aynı kuruluştaki kullanıcılar arasında paylaşılabilir. Ayrıca yalnızca sizin erişebileceğiniz sorguları da kaydedebilirsiniz. Ayrıca, GitHub genel olarak paylaşılan topluluk sorgularını da bulabilirsiniz. Kaydedilen bu sorgular, sıfırdan sorgu yazmak zorunda kalmadan belirli tehdit avcılığı senaryolarını hızla izlemenize olanak sağlar.
+
+Gelişmiş avcılıkta Sorgular sekmesinin altında **Paylaşılan sorgular**, **Sorgularım** ve **Community sorguların** açılan menülerini bulabilirsiniz. Menüyü genişletmek için aşağı dönük bir ok seçebilirsiniz.
 
 
-[Gelişmiş arama](advanced-hunting-overview.md) sorguları aynı kuruluşta yer alan kullanıcılar arasında paylaşabilirsiniz. Ayrıca, e-GitHub.com'da herkesle paylaşılan GitHub. Bu sorgular, sıfırdan sorgu yazmak zorunda kalmadan belirli tehdit avı senaryolarını hızla takip etmek için kullanılabilir.
+:::image type="content" source="../../media/advanced-hunting-shared-queries-1.png" alt-text="Microsoft 365 Defender portalındaki paylaşılan sorgu bilgileri" lightbox="../../media/advanced-hunting-shared-queries-1.png":::
 
-:::image type="content" source="../../media/shared-query-1.png" alt-text="Web portalında paylaşılan Microsoft 365 Defender." lightbox="../../media/shared-query-1.png":::
 
-## <a name="save-modify-and-share-a-query"></a>Sorgu kaydetme, değiştirme ve paylaşma
-Yeni veya var olan bir sorguyu, yalnızca sizin erişilsin veya diğer kullanıcılarla paylaşılacak şekilde kaydedebilirsiniz. 
+
+## <a name="save-modify-and-share-a-query"></a>Sorguyu kaydetme, değiştirme ve paylaşma
+Yeni veya mevcut bir sorguyu kaydederek yalnızca sizin için erişilebilir olmasını veya kuruluşunuzdaki diğer kullanıcılarla paylaşılabilmesini sağlayabilirsiniz. 
 
 1. Sorgu oluşturma veya değiştirme. 
 
-2. Sorguyu **kaydet açılan** düğmesine tıklayın ve Farklı **kaydet'i seçin**.
+2. **Sorguyu kaydet** açılan düğmesine tıklayın ve **Farklı kaydet'i** seçin.
     
 3. Sorgu için bir ad girin. 
 
-   :::image type="content" source="../../media/shared-query-2.png" alt-text="Portala kaydediliyor olması gereken yeni Microsoft 365 Defender." lightbox="../../media/shared-query-2.png":::
+   :::image type="content" source="../../media/shared-query-2.png" alt-text="Microsoft 365 Defender portalına kaydedilmek üzere olan yeni sorgu" lightbox="../../media/shared-query-2.png":::
 
 4. Sorguyu kaydetmek istediğiniz klasörü seçin.
-    - **Paylaşılan sorgular** — kuruluşun tüm kullanıcılarına paylaşılan
-    - **Sorgularım** : yalnızca sizin için erişilebilir
+    - **Paylaşılan sorgular** — kuruluşunuzda tüm kullanıcılarla paylaşıldı
+    - **Sorgularım** — yalnızca sizin için erişilebilir
     
 5. **Kaydet**'i seçin. 
 
 ## <a name="delete-or-rename-a-query"></a>Sorguyu silme veya yeniden adlandırma
-1. Yeniden adlandırmak veya silmek istediğiniz sorgunun sağ üç noktayı seçin.
+1. Yeniden adlandırmak veya silmek istediğiniz sorgunun sağındaki üç noktayı seçin.
 
-    :::image type="content" source="../../media/shared-query-3.png" alt-text="Gelişmiş 365 portalının Gelişmiş Sıyrı sayfasında yer alan Microsoft 365 Defender seçenekleri" lightbox="../../media/shared-query-3.png":::
+    :::image type="content" source="../../media/shared-query-3.png" alt-text="Microsoft 365 Defender portalındaki Gelişmiş Tehdit Avcılığı sayfasında paylaşılan sorgu seçenekleri" lightbox="../../media/shared-query-3.png":::
 
-2. **Sil'i seçin** ve silme işlemini onaylayın. Veya Yeniden **Adlandır'ı** seçin ve sorgu için yeni bir ad girin.
+2. **Sil'i** seçin ve silmeyi onaylayın. İsterseniz **Yeniden Adlandır'ı** seçip sorgu için yeni bir ad da sağlayabilirsiniz.
 
 ## <a name="create-a-direct-link-to-a-query"></a>Sorguya doğrudan bağlantı oluşturma
-Sorguyu doğrudan gelişmiş arama sorgusu düzenleyicisinde açan bir bağlantı oluşturmak için sorguyu sonlaştırın ve Bağlantıyı **paylaş'ı seçin**.
+Sorgunuzu doğrudan gelişmiş tehdit avcılığı sorgu düzenleyicisinde açan bir bağlantı oluşturmak için sorgunuzu sonlandırın ve **Bağlantıyı paylaş'ı** seçin.
 
-## <a name="access-queries-in-the-github-repository"></a>Veri deposundaki GitHub erişme  
-Microsoft güvenlik araştırmacısı, özel bir yer için belirlenen genel depoda [gelişmiş av sorgularını düzenli GitHub](https://aka.ms/hunting-queries). Bu depo katkılara açık. Katkıda bulunmak için [GitHub ücretsiz katılın](https://github.com/).
+## <a name="access-community-queries-in-the-github-repo"></a>GitHub deposunda topluluk sorgularını erişme  
+Microsoft güvenlik araştırmacıları, [GitHub'daki belirli bir genel depoda](https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries/Microsoft%20365%20Defender) düzenli olarak gelişmiş avlanma sorgularını paylaşır. Bu depoya yapılan katkılar yayımlanmadan önce gözden geçirilir. Katkıda bulunmak için [ücretsiz olarak GitHub katılın](https://github.com/).
+
+Bu sorguları **Community sorguları** açılan listesinde de kolayca bulabilirsiniz.
+
+:::image type="content" source="../../media/advanced-hunting-shared-queries-2.png" alt-text="Microsoft 365 Defender portalına kaydedilmek üzere olan yeni sorgu" lightbox="../../media/advanced-hunting-shared-queries-2.png":::
+
 
 >[!tip]
->Microsoft güvenlik araştırmacısı yeni ortaya çıkan tehditlerle ilişkilendirilmiş etkinlikleri ve göstergeleri bulmak için kullanabileceğiniz gelişmiş arama sorguları da sağlar. Bu sorgular, raporlarda tehdit [çözümlemesi](/windows/security/threat-protection/microsoft-defender-atp/threat-analytics) raporlarının bir Microsoft 365 Defender.
+>Microsoft güvenlik araştırmacıları, yeni ortaya çıkan tehditlerle ilişkili etkinlikleri ve göstergeleri bulmak için kullanabileceğiniz gelişmiş tehdit avcılığı sorguları da sağlar. Bu sorgular, [Microsoft 365 Defender'daki tehdit analizi](/windows/security/threat-protection/microsoft-defender-atp/threat-analytics) raporlarının bir parçası olarak sağlanır.
 
 
 ## <a name="related-topics"></a>İlgili konular
-- [Gelişmiş ava genel bakış](advanced-hunting-overview.md)
+- [Gelişmiş avcılığa genel bakış](advanced-hunting-overview.md)
 - [Sorgu dilini öğrenin](advanced-hunting-query-language.md)
 - [Sorgu sonuçlarıyla çalışın](advanced-hunting-query-results.md)
 - [Cihazlar, e-postalar, uygulamalar ve kimlikler arasında avlayın](advanced-hunting-query-emails-devices.md)

@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender Virüsten Koruma Server'da Windows'i seçin
-description: Windows Server 2016, Windows Server 2019 ve Microsoft Defender Virüsten Koruma Server 2022'de Windows ve yapılandırmayı öğrenin.
-keywords: windows Defender, sunucu, scep, sistem merkezi uç nokta koruması, sunucu 2016, geçerli dalı, sunucu 2012
+title: Windows Server'da Microsoft Defender Virüsten Koruma
+description: Windows Server 2016, Windows Server 2019 ve Windows Server 2022'de Microsoft Defender Virüsten Koruma etkinleştirmeyi ve yapılandırmayı öğrenin.
+keywords: windows defender, server, scep, system center endpoint protection, server 2016, current branch, server 2012
 ms.pagetype: security
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -17,14 +17,14 @@ ms.date: 04/01/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 412033e274cce22b9350292c612b91ef6e34e209
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+ms.openlocfilehash: b93595375982e3ed61d1ac94ae410575b0d72307
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634855"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64666998"
 ---
-# <a name="microsoft-defender-antivirus-on-windows-server"></a>Microsoft Defender Virüsten Koruma Server'da Windows'i seçin
+# <a name="microsoft-defender-antivirus-on-windows-server"></a>Windows Server'da Microsoft Defender Virüsten Koruma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
@@ -35,150 +35,150 @@ Microsoft Defender Virüsten Koruma, Windows Server'ın aşağıdaki sürümleri
 
 - Windows Server 2022
 - Windows Server 2019
-- Windows Server, sürüm 1803 veya sonrası
+- Windows Server, sürüm 1803 veya üzeri
 - Windows Server 2016
-- Windows Server 2012 R2 (Gerekli Uç Nokta için Microsoft Defender)
+- Windows Server 2012 R2 (Uç Nokta için Microsoft Defender gerektirir)
 
-## <a name="setting-up-microsoft-defender-antivirus-on-windows-server"></a>Windows Server'da Microsoft Defender Virüsten Koruma ayarlama
+## <a name="setting-up-microsoft-defender-antivirus-on-windows-server"></a>Windows Sunucusu'nda Microsoft Defender Virüsten Koruma ayarlama
 
-Windows Server'da Microsoft Defender Virüsten Koruma kurma ve çalıştırma işlemi aşağıdaki adımları içerir:
+Windows Sunucusu'nda Microsoft Defender Virüsten Koruma ayarlama ve çalıştırma işlemi aşağıdaki adımları içerir:
 
 1. [Arabirimi etkinleştirin](#enable-the-user-interface-on-windows-server).
-2. [Yükleme Microsoft Defender Virüsten Koruma](#install-microsoft-defender-antivirus-on-windows-server).
+2. [Microsoft Defender Virüsten Koruma yükleyin](#install-microsoft-defender-antivirus-on-windows-server).
 3. [Microsoft Defender Virüsten Koruma çalıştığını doğrulayın](#verify-microsoft-defender-antivirus-is-running).
-4. [Kötü amaçlı yazılımlardan koruma Güvenlik zekası'nızı güncelleştirin](#update-antimalware-security-intelligence).
-5. (Gerekirse) [Örnekleri gönderin](#submit-samples).
-6. (Gerekirse) [Otomatik dışlamaları yapılandırma](#configure-automatic-exclusions).
-7. (Yalnızca gerekirse) Windows [Sunucusunu pasif moduna ayarlayın](#passive-mode-and-windows-server).
+4. [Kötü amaçlı yazılımdan koruma güvenlik zekanızı güncelleştirin](#update-antimalware-security-intelligence).
+5. (Gerektiğinde) [Örnekleri gönderin](#submit-samples).
+6. (Gerektiğinde) [Otomatik dışlamaları yapılandırın](#configure-automatic-exclusions).
+7. (Yalnızca gerekirse) [Windows Sunucusu'nu pasif moda](#passive-mode-and-windows-server) ayarlayın.
 
-## <a name="enable-the-user-interface-on-windows-server"></a>Windows Server'da kullanıcı arabirimini etkinleştirme
+## <a name="enable-the-user-interface-on-windows-server"></a>Windows Sunucusu'nda kullanıcı arabirimini etkinleştirme
 
 > [!IMPORTANT]
-> Windows Server 2012 R2 kullanıyorsanız, bkz. Yükleme [seçeneklerini Uç Nokta için Microsoft Defender](configure-server-endpoints.md#options-to-install-the-microsoft-defender-for-endpoint-packages).
+> Windows Server 2012 R2 kullanıyorsanız bkz. [Uç Nokta için Microsoft Defender yükleme seçenekleri](configure-server-endpoints.md#options-to-install-the-microsoft-defender-for-endpoint-packages).
 
-Varsayılan olarak, Microsoft Defender Virüsten Koruma Sunucu'da Windows işlevseldir. Bazen, kullanıcı arabirimi (GUI) varsayılan olarak yüklenir. GUI gerekli değildir; veri yönetimi için PowerShell, grup ilkesi yöntemleri veya başka yöntemler Microsoft Defender Virüsten Koruma. Bununla birlikte, birçok kuruluş gui'yi iş için Microsoft Defender Virüsten Koruma. GUI'yi yüklemek için aşağıdaki tabloda yer alan yordamlardan birini kullanın:
+Varsayılan olarak, Microsoft Defender Virüsten Koruma Windows Sunucusu'nda yüklü ve işlevseldir. Bazen kullanıcı arabirimi (GUI) varsayılan olarak yüklenir. GUI gerekli değildir; Microsoft Defender Virüsten Koruma yönetmek için PowerShell, grup ilkesi veya diğer yöntemleri kullanabilirsiniz. Ancak, birçok kuruluş Microsoft Defender Virüsten Koruma için GUI kullanmayı tercih eder. GUI'yi yüklemek için aşağıdaki tabloda yer alan yordamlardan birini kullanın:
 
-| Yordam | Ne yapmalı? |
+| Yordam | Yapılması gerekenler |
 |:---|:---|
-| Rol ve Özellik Ekleme Sihirbazı'nı kullanarak GUI'yi açma | 1. Rol [ve Özellik Ekleme Sihirbazı'nı](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard) kullanarak rolleri, rol hizmetlerini ve özellikleri yükleme ve Rol ve Özellik **Ekleme Sihirbazı'nı kullanma**. <br/><br/>2. Sihirbazın Özellikler adımına **geldiğinde**, Özellikler'in **Windows Defender altında** GUI **for Windows Defender** seçin. |
-| PowerShell kullanarak GUI'i açma | 1. Windows Sunucunuzda, Windows PowerShell olarak açın. <br/><br/>2. Aşağıdaki PowerShell cmdlet'ini çalıştırın: `Install-WindowsFeature -Name Windows-Defender-GUI` |
+| Rol ve Özellik Ekleme Sihirbazı'nı kullanarak GUI'yi açma | 1. Rol [ve Özellik Ekleme Sihirbazı'nı kullanarak rolleri, rol hizmetlerini ve özellikleri yükleme](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard) ve **Rol ve Özellik Ekleme Sihirbazı'nı** kullanma bölümüne bakın. <br/><br/>2. Sihirbazın **Özellikler** adımına gittiğiniz zaman, **Windows Defender Özellikler'in** altında **Windows Defender için GUI** seçeneğini belirleyin. |
+| PowerShell kullanarak GUI'yi açma | 1. Windows Sunucunuzda Windows PowerShell yönetici olarak açın. <br/><br/>2. Aşağıdaki PowerShell cmdlet'ini çalıştırın: `Install-WindowsFeature -Name Windows-Defender-GUI` |
 
-## <a name="install-microsoft-defender-antivirus-on-windows-server"></a>Windows Server'Microsoft Defender Virüsten Koruma yükleme
+## <a name="install-microsoft-defender-antivirus-on-windows-server"></a>Windows Server'a Microsoft Defender Virüsten Koruma yükleme
 
-Windows Server'da Microsoft Defender Virüsten Koruma veya yeniden yüklemeniz gerekirse, aşağıdaki tabloda yer alan yordamlardan birini kullanın:
+Windows Server'da Microsoft Defender Virüsten Koruma yüklemeniz veya yeniden yüklemeniz gerekiyorsa, aşağıdaki tabloda yer alan yordamlardan birini kullanın:
 
-| Yordam | Ne yapmalı? |
+| Yordam | Yapılması gerekenler |
 |:---|:---|
-| Rol ve Özellik Ekleme Sihirbazı'nı kullanarak Microsoft Defender Virüsten Koruma | 1. Rolleri [, Rol Hizmetlerini veya Özellikleri Yükleme veya Kaldırma'ya bakın ve](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard) Rol **ve Özellik Ekleme Sihirbazı'nı kullanın**. <br/><br/>2. Sihirbazın Özellikler **adımına** geldiğinde, Özellikler adımına Microsoft Defender Virüsten Koruma seçin. Ayrıca, Kullanıcı için **GUI Windows Defender** seçin. |
-| Microsoft Defender Virüsten Koruma'i yüklemek için PowerShell kullanma | 1. Windows Sunucunuzda, Windows PowerShell olarak açın. <br/><br/>2. Aşağıdaki PowerShell cmdlet'ini çalıştırın: `Install-WindowsFeature -Name Windows-Defender` |
+| Microsoft Defender Virüsten Koruma yüklemek için Rol ve Özellik Ekleme Sihirbazı'nı kullanma | 1. Rolleri [, Rol Hizmetlerini veya Özellikleri Yükleme veya Kaldırma](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard) bölümüne bakın ve **Rol ve Özellik Ekleme Sihirbazı'nı** kullanın. <br/><br/>2. Sihirbazın **Özellikler** adımına gittiğiniz zaman Microsoft Defender Virüsten Koruma seçeneğini belirleyin. Ayrıca **Windows Defender için GUI** seçeneğini belirleyin. |
+| Microsoft Defender Virüsten Koruma yüklemek için PowerShell kullanma | 1. Windows Sunucunuzda Windows PowerShell yönetici olarak açın. <br/><br/>2. Aşağıdaki PowerShell cmdlet'ini çalıştırın: `Install-WindowsFeature -Name Windows-Defender` |
 
 > [!NOTE]
-> Yazılım altyapısına dahil edilen kötü amaçlı yazılımlardan Microsoft Defender Virüsten Koruma iletileri, Microsoft Defender Virüsten Koruma [içinde bulunabilir](troubleshoot-microsoft-defender-antivirus.md).
+> Microsoft Defender Virüsten Koruma ile birlikte gelen kötü amaçlı yazılımdan koruma altyapısı için olay iletileri [Microsoft Defender Virüsten Koruma Olayları'nda](troubleshoot-microsoft-defender-antivirus.md) bulunabilir.
 
 ## <a name="verify-microsoft-defender-antivirus-is-running"></a>Microsoft Defender Virüsten Koruma çalıştığını doğrulama
 
-E-postanızı yükledikten (veya yeniden yükledikten) Microsoft Defender Virüsten Koruma, bir sonraki adımınız çalıştığını doğrulamak olur. Aşağıdaki tabloda yer alan PowerShell cmdlet'lerini kullanın:
+Microsoft Defender Virüsten Koruma yükledikten (veya yeniden yükledikten) sonra, sonraki adımınız çalıştığını doğrulamaktır. Aşağıdaki tablodaki PowerShell cmdlet'lerini kullanın:
 
 | Yordam | PowerShell cmdlet'i |
 |:---|:---|
-| Microsoft Defender Virüsten Koruma çalıştığını doğrulama | `Get-Service -Name windefend` |
-| Güvenlik duvarı korumasının açık olduğunu doğrulama | `Get-Service -Name mpssvc` |
+| Microsoft Defender Virüsten Koruma çalıştığını doğrulayın | `Get-Service -Name windefend` |
+| Güvenlik duvarı korumasının açık olduğunu doğrulayın | `Get-Service -Name mpssvc` |
 
-PowerShell'e alternatif olarak, komut istemini kullanarak komutun çalıştığını Microsoft Defender Virüsten Koruma kullanabilirsiniz. Bunu yapmak için, komut isteminde aşağıdaki komutu çalıştırın:
+PowerShell'e alternatif olarak Komut İstemi'ni kullanarak Microsoft Defender Virüsten Koruma çalıştığını doğrulayabilirsiniz. Bunu yapmak için bir komut isteminden aşağıdaki komutu çalıştırın:
 
 ```cmd
 sc query Windefend
 ```
 
-Komut`sc query`, hizmetle ilgili Microsoft Defender Virüsten Koruma döndürür. Microsoft Defender Virüsten Koruma çalışıyor olduğunda, değer `STATE` görüntülenir`RUNNING`.
+komut, `sc query` Microsoft Defender Virüsten Koruma hizmeti hakkındaki bilgileri döndürür. Microsoft Defender Virüsten Koruma çalışırken `STATE` değeri görüntülenir`RUNNING`.
 
-Çalıştır olmayan tüm hizmetleri görüntülemek için aşağıdaki PowerShell cmdlet'ini çalıştırın:
+Çalışmayan tüm hizmetleri görüntülemek için aşağıdaki PowerShell cmdlet'ini çalıştırın:
 
 ```cmd
 sc query state= all
 ```
 
-## <a name="update-antimalware-security-intelligence"></a>Kötü amaçlı yazılımlardan korumayı güncelleştirme Güvenlik zekası
+## <a name="update-antimalware-security-intelligence"></a>Kötü amaçlı yazılımdan koruma güvenlik bilgilerini güncelleştirme
 
-Normal güvenlik zekası güncelleştirmelerinizi almak için Windows Update hizmet çalışıyor olması gerekir. Windows Server Update Services (WSUS) gibi bir güncelleştirme yönetim hizmeti kullanıyorsanız, Microsoft Defender Virüsten Koruma Security Intelligence güncelleştirmelerinin yönettiniz bilgisayarlar için onaylandıktan emin olun.
+Normal güvenlik bilgileri güncelleştirmelerinizi almak için Windows Update hizmetinin çalışıyor olması gerekir. Windows Sunucu Güncelleştirme Hizmetleri (WSUS) gibi bir güncelleştirme yönetimi hizmeti kullanıyorsanız, yönettiğiniz bilgisayarlar için Microsoft Defender Virüsten Koruma Güvenlik bilgileri güncelleştirmelerinin onaylandığından emin olun.
 
-Varsayılan olarak, Windows Update Güncelleştirmeleri Windows Server 2019 veya Windows Server 2022 veya başka bir Windows Server 2016. Aşağıdaki yöntemlerden birini kullanarak bu yapılandırmayı değiştirebilirsiniz:
+varsayılan olarak, Windows Update güncelleştirmeleri Windows Server 2019 veya Windows Server 2022 veya Windows Server 2016'a otomatik olarak indirmez ve yüklemez. Aşağıdaki yöntemlerden birini kullanarak bu yapılandırmayı değiştirebilirsiniz:
 
 | Yöntem | Açıklama |
 |---|---|
-| **Windows Update'da** Denetim Masası | **Güncelleştirmeleri otomatik olarak** yükleme, güvenlik zekası güncelleştirmeleri de dahil olmak üzere tüm güncelleştirmelerin Windows Defender olarak yüklenir. <br/><br/> **Güncelleştirmeleri indirmeme izin ver, ancak** bunları yüklememe izin Windows Defender Güvenlik zekası güncelleştirmelerini otomatik olarak indirip yüklemelerine izin ver, ancak diğer güncelleştirmeler otomatik olarak yüklenmez. |
-| **Grup İlkesi** | grup ilkesi'te bulunan ayarları kullanarak Windows Update'i şu şekilde ayar oluşturabilir ve yönetebilirsiniz: Yönetim Şablonları **\Windows Bileşenleri\Windows Update\** Otomatik Güncelleştirmeleri Yapılandırma |
-| **AUOptions kayıt** defteri anahtarı | Aşağıdaki iki değer, Güvenlik Windows Update güncelleştirmelerini otomatik olarak indirmesine ve yüklemesine izin verir: <br/><br/> **4** -  **Güncelleştirmeleri otomatik olarak yükleyin**. Bu değer, güvenlik zekası güncelleştirmeleri de dahil olmak üzere tüm güncelleştirmelerin Windows Defender sonucu verir. <br/><br/> **3** -  **Güncelleştirmeleri indirin, ancak yük isteyip seçmeme izin ver**. Bu değer güvenlik Windows Defender güncelleştirmelerini indirme ve yükleme izin verir, ancak diğer güncelleştirmeler otomatik olarak yüklenmez. |
+| **Denetim Masası'da** Windows Update | **Güncelleştirmeleri otomatik olarak yükleme**, Windows Defender Güvenlik bilgileri güncelleştirmeleri de dahil olmak üzere tüm güncelleştirmelerin otomatik olarak yüklenmesine neden olur. <br/><br/> **Güncelleştirmeleri indir ama yüklenip yüklenmeyeceğini seçmeme izin ver**, Windows Defender Güvenlik bilgileri güncelleştirmelerini otomatik olarak indirip yüklemesine izin verir, ancak diğer güncelleştirmeler otomatik olarak yüklenmez. |
+| **Grup İlkesi** | grup ilkesi'da bulunan ayarları kullanarak Windows Update ayarlayabilir ve yönetebilirsiniz: **Yönetim Şablonları\Windows Components\Windows Update\Otomatik Güncelleştirmeleri Yapılandır** |
+| **AUOptions** kayıt defteri anahtarı | Aşağıdaki iki değer Windows Update Güvenlik bilgileri güncelleştirmelerini otomatik olarak indirip yüklemesine olanak sağlar: <br/><br/> **4** -  **Güncelleştirmeleri otomatik olarak yükleyin**. Bu değer, Windows Defender Güvenlik bilgileri güncelleştirmeleri de dahil olmak üzere tüm güncelleştirmelerin otomatik olarak yüklenmesine neden olur. <br/><br/> **3** -  **Güncelleştirmeleri indirin ama yüklenip yüklenmeyeceğini ben seçeyim**. Bu değer, Windows Defender Güvenlik bilgileri güncelleştirmelerini otomatik olarak indirip yüklemesine olanak tanır, ancak diğer güncelleştirmeler otomatik olarak yüklenmez. |
 
-Kötü amaçlı yazılıma karşı korumanın korun olduğundan emin olmak için aşağıdaki hizmetleri etkinleştirin:
+Kötü amaçlı yazılımdan korumanın korunmasını sağlamak için aşağıdaki hizmetleri etkinleştirin:
 
 - Windows Hata Bildirimi hizmeti
 - Windows Update hizmeti
 
-Aşağıdaki tabloda, bağlı hizmetler ve Microsoft Defender Virüsten Koruma hizmetleri listelemektedir.
+Aşağıdaki tabloda Microsoft Defender Virüsten Koruma hizmetleri ve bağımlı hizmetler listelenmektedir.
 
 | Hizmet Adı | Dosya Konumu | Açıklama |
 |---|---|---|
-| Windows Defender Hizmeti (WinDefend) | `C:\Program Files\Windows Defender\MsMpEng.exe` | Bu, her Microsoft Defender Virüsten Koruma çalışan ana hizmettir.|
+| Windows Defender Hizmeti (WinDefend) | `C:\Program Files\Windows Defender\MsMpEng.exe` | Bu, her zaman çalışması gereken ana Microsoft Defender Virüsten Koruma hizmetidir.|
 | Windows Hata Bildirimi Hizmeti (Wersvc) | `C:\WINDOWS\System32\svchost.exe -k WerSvcGroup` | Bu hizmet hata raporlarını Microsoft'a geri gönderir. |
-| Windows Defender Duvarı (MpsSvc) | `C:\WINDOWS\system32\svchost.exe -k LocalServiceNoNetwork` | Güvenlik Duvarı hizmetinin Windows Defender durumda tutmanız önerilir. |
-| Windows Update (Wuauserv) | `C:\WINDOWS\system32\svchost.exe -k netsvcs`| Windows Update zekası güncelleştirmelerini ve kötü amaçlı yazılımdan koruma altyapısı güncelleştirmelerini almak için bu gerekli güncelleştirmeler |
+| Windows Defender Güvenlik Duvarı (MpsSvc) | `C:\WINDOWS\system32\svchost.exe -k LocalServiceNoNetwork` | Windows Defender Güvenlik Duvarı hizmetini etkin tutmanızı öneririz. |
+| Windows Update (Wuauserv) | `C:\WINDOWS\system32\svchost.exe -k netsvcs`| Güvenlik bilgileri güncelleştirmelerini ve kötü amaçlı yazılımdan koruma altyapısı güncelleştirmelerini almak için Windows Update gereklidir |
 
-## <a name="submit-samples"></a>Örnek gönderme
+## <a name="submit-samples"></a>Örnekleri gönderme
 
-Örnek gönderme, Microsoft'un kötü amaçlı olabilecek yazılım örnekleri toplamasına olanak sağlar. Devam ve güncel koruma sağlamak için, Microsoft araştırmacısı şüpheli etkinlikleri çözümlemek ve güncelleştirilmiş kötü amaçlı yazılımlardan koruma sağlamak için bu örnekleri kullanır. Program yürütülebilir dosyalarını toplar, örneğin .exe dosyaları ve yürütülebilir .dll toplar. Belgeler ve PDF dosyaları gibi kişisel veri içeren Microsoft Word toplamaya çalışmamız mümkün değildir.
+Örnek gönderim, Microsoft'un kötü amaçlı olabilecek yazılım örneklerini toplamasına olanak tanır. Microsoft araştırmacıları, sürekli ve güncel koruma sağlamaya yardımcı olmak için bu örnekleri kullanarak şüpheli etkinlikleri analiz eder ve güncelleştirilmiş kötü amaçlı yazılımdan koruma güvenlik bilgileri üretir. .exe dosyaları ve .dll dosyaları gibi program yürütülebilir dosyalarını toplarız. Microsoft Word belgeler ve PDF dosyaları gibi kişisel veriler içeren dosyaları toplamayız.
 
 ### <a name="submit-a-file"></a>Dosya gönderme
 
-1. Gönderme kılavuzunu [gözden geçirme](/windows/security/threat-protection/intelligence/submission-guide).
+1. [Gönderme kılavuzunu](/windows/security/threat-protection/intelligence/submission-guide) gözden geçirin.
 
-2. Örnek gönderim [portalını ziyaret](https://www.microsoft.com/wdsi/filesubmission) edin ve dosyanızı gönderin.
+2. [Örnek gönderim portalını](https://www.microsoft.com/wdsi/filesubmission) ziyaret edin ve dosyanızı gönderin.
 
-### <a name="enable-automatic-sample-submission"></a>Otomatik örnek gönderimi etkinleştirme
+### <a name="enable-automatic-sample-submission"></a>Otomatik örnek göndermeyi etkinleştirme
 
-Otomatik örnek gönderimi etkinleştirmek için, Windows PowerShell konsolu başlatın ve **SubmitSamplesConsent** değer verilerini aşağıdaki ayarlardan birini kullanarak ayarlayın:
+Otomatik örnek gönderimini etkinleştirmek için yönetici olarak bir Windows PowerShell konsolu başlatın ve **SubmitSamplesConsent** değer verilerini aşağıdaki ayarlardan birine göre ayarlayın:
 
 |Ayar|Açıklama|
 |---|---|
-| **0** -  **Her zaman sor** | Bu Microsoft Defender Virüsten Koruma, tüm gerekli dosyaların gönderimi onaylamanızı sağlar. bu, Microsoft Defender Virüsten Koruma için varsayılan ayardır ancak GUI olmadan Windows Server 2016 veya 2019 ya da Windows Server 2022 yüklemeleri için önerilmez. |
-| **1**  -  **Güvenli örnekleri otomatik olarak gönderme** | Dosya Microsoft Defender Virüsten Koruma "güvenli" olarak işaretlenmiş tüm dosyaları gönderir ve dosyaların kalanının geri kalanının istendiğinde. |
-| **2** -  **Hiçbir zaman gönderme** | Microsoft Defender Virüsten Koruma hizmeti istem veya dosya göndermez. |
-| **3** -  **Tüm örnekleri otomatik olarak gönderme** | Aşağıdaki Microsoft Defender Virüsten Koruma, tüm dosyaları onay istemi olmadan gönderir. |
+| **0** -  **Her zaman iste** | Microsoft Defender Virüsten Koruma hizmeti, tüm gerekli dosyaların gönderilmesini onaylamanızı ister. Bu, Microsoft Defender Virüsten Koruma için varsayılan ayardır, ancak Windows Server 2016 veya 2019 veya Windows Server 2022'de GUI olmadan yapılan yüklemeler için önerilmez. |
+| **1**  -  **Güvenli örnekleri otomatik olarak gönderme** | Microsoft Defender Virüsten Koruma hizmeti "güvenli" olarak işaretlenmiş tüm dosyaları gönderir ve dosyaların geri kalanını ister. |
+| **2** -  **Hiçbir zaman gönderme** | Microsoft Defender Virüsten Koruma hizmeti soru sormaz ve hiçbir dosya göndermez. |
+| **3** -  **Tüm örnekleri otomatik olarak gönderme** | Microsoft Defender Virüsten Koruma hizmeti, onay istemi olmadan tüm dosyaları gönderir. |
 
 > [!NOTE]
-> Bu seçenek R2'de Windows Server 2012 kullanılamaz. 
+> Bu seçenek Windows Server 2012 R2 için kullanılamaz. 
 
 ## <a name="configure-automatic-exclusions"></a>Otomatik dışlamaları yapılandırma
 
-Güvenlik ve performansı sağlamaya yardımcı olmak için, bazı dışlamalar Windows Server 2016 veya 2019 ya da Windows Server 2022'de Microsoft Defender Virüsten Koruma'i kullanırken yüklemiş olduğunuz rollere ve özelliklere bağlı olarak otomatik olarak eklenir.
+Güvenlik ve performansın sağlanmasına yardımcı olmak için, Windows Server 2016 veya 2019 veya Windows Server 2022'de Microsoft Defender Virüsten Koruma kullanırken yüklediğiniz rollere ve özelliklere göre belirli dışlamalar otomatik olarak eklenir.
 
-Bkz[. Windows Server'da Microsoft Defender Virüsten Koruma dışlamaları yapılandırma](configure-server-exclusions-microsoft-defender-antivirus.md).
+Bkz[. Windows Server'da Microsoft Defender Virüsten Koruma'de dışlamaları yapılandırma](configure-server-exclusions-microsoft-defender-antivirus.md).
 
-## <a name="passive-mode-and-windows-server"></a>Pasif modu ve Windows Sunucusu
+## <a name="passive-mode-and-windows-server"></a>Pasif mod ve Windows Sunucusu
 
-Windows Server'da birincil virüsten koruma çözümünüz olarak Microsoft dışı bir virüsten koruma ürünü kullanıyorsanız, Microsoft Defender Virüsten Koruma veya devre dışı moduna ayarla olasınız. Windows Server uç noktanız Uç Nokta için Microsoft Defender varsa, Microsoft Defender Virüsten Koruma moduna Microsoft Defender Virüsten Koruma için ayarlamanızı sağlar. E-posta Uç Nokta için Microsoft Defender, Microsoft Defender Virüsten Koruma moduna ayarlayın. 
+Windows Server'da birincil virüsten koruma çözümünüz olarak Microsoft dışı bir virüsten koruma ürünü kullanıyorsanız, Microsoft Defender Virüsten Koruma pasif moda veya devre dışı moduna ayarlamanız gerekir. Windows Sunucusu uç noktanız Uç Nokta için Microsoft Defender ekliyse, Microsoft Defender Virüsten Koruma pasif moda ayarlayabilirsiniz. Uç Nokta için Microsoft Defender kullanmıyorsanız, Microsoft Defender Virüsten Koruma devre dışı moduna ayarlayın. 
 
 > [!TIP]
-> Diğer [Microsoft Defender Virüsten Koruma ürünleriyle uyumluluk sorunlarına bakın](microsoft-defender-antivirus-compatibility.md).
+> Bkz. [diğer güvenlik ürünleriyle uyumluluk Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-compatibility.md).
 
-Aşağıdaki tabloda, pasif moduna Microsoft Defender Virüsten Koruma, pasif modunu devre dışı bırakma ve Microsoft Defender Virüsten Koruma kaldırma yöntemleri Microsoft Defender Virüsten Koruma:
+Aşağıdaki tabloda, Microsoft Defender Virüsten Koruma pasif moda ayarlama, Microsoft Defender Virüsten Koruma devre dışı bırakma ve Microsoft Defender Virüsten Koruma kaldırma yöntemleri açıklanmaktadır:
 
 | Yordam | Açıklama |
 |---|---|
-| Kayıt Microsoft Defender Virüsten Koruma kullanarak pasif moduna ayarlama | ForceDefenderPassiveMode kayıt defteri anahtarını aşağıdaki gibi ayarlayın: <br/>- Yol: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection` <br/>- Ad: `ForceDefenderPassiveMode` <br/>- Tür: `REG_DWORD` <br/>- Değer: `1` |
-| PowerShell kullanarak Microsoft Defender Virüsten Koruma arabirimini kapatma | Windows PowerShell yönetici olarak açın ve aşağıdaki PowerShell cmdlet'ini çalıştırın:`Uninstall-WindowsFeature -Name Windows-Defender-GUI`
-| PowerShell Microsoft Defender Virüsten Koruma'i devre dışı bırakma | Aşağıdaki PowerShell cmdlet'ini kullanın: `Set-MpPreference -DisableRealtimeMonitoring $true` |
-| Rol Microsoft Defender Virüsten Koruma Özellikleri Kaldır sihirbazını kullanarak görevleri devre dışı bırakma | Rolleri [, Rol Hizmetlerini veya Özellikleri Yükleme veya Kaldırma'ya bakın](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#remove-roles-role-services-and-features-by-using-the-remove-roles-and-features-wizard) ve Rol **ve Özellik Kaldırma Sihirbazı'nı kullanın**. <br/><br/>Sihirbazın Özellikler **adımına** geldiğinde, Özellikler'e Windows Defender **seçeneğinin temizlerini** seçin. <br/><br/> Kullanıcı Özellikleri **Windows Defender** tek başına **Windows Defender**, kullanıcı arabirimi için **GUI seçeneğini kaldırmanız Windows Defender**.<br/><br/>Microsoft Defender Virüsten Koruma kullanıcı arabirimi olmadan da normal çalışır, ancak çekirdek Kaynak Özellikleri özelliğini devre dışı bıraksanız kullanıcı **arabirimi Windows Defender** etkinleştirilmez. |
-| PowerShell Microsoft Defender Virüsten Koruma kaldırma | Aşağıdaki PowerShell cmdlet'ini kullanın: `Uninstall-WindowsFeature -Name Windows-Defender` |
-| E-Microsoft Defender Virüsten Koruma'i kullanarak devre dışı grup ilkesi | Yerel Sistem Grup ilkesi Düzenleyicisi'nde Yönetim  >  Şablonu **Windows** Bileşen **Endpoint Protection** >  >  **Disable Endpoint Protection'ı** seçin ve **sonra da EnabledOK'u** >  **seçin**. |
+| Kayıt defteri anahtarı kullanarak Microsoft Defender Virüsten Koruma pasif moda ayarlama | ForceDefenderPassiveMode kayıt defteri anahtarını aşağıdaki gibi ayarlayın: <br/>- Yol: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection` <br/>- Ad: `ForceDefenderPassiveMode` <br/>- Tür: `REG_DWORD` <br/>- Değer: `1` |
+| PowerShell kullanarak Microsoft Defender Virüsten Koruma kullanıcı arabirimini kapatma | Windows PowerShell yönetici olarak açın ve aşağıdaki PowerShell cmdlet'ini çalıştırın:`Uninstall-WindowsFeature -Name Windows-Defender-GUI`
+| PowerShell kullanarak Microsoft Defender Virüsten Koruma devre dışı bırakma | Aşağıdaki PowerShell cmdlet'ini kullanın: `Set-MpPreference -DisableRealtimeMonitoring $true` |
+| Rol ve Özellik Kaldırma sihirbazını kullanarak Microsoft Defender Virüsten Koruma devre dışı bırakma | Bkz. [Rolleri, Rol Hizmetlerini veya Özellikleri Yükleme veya Kaldırma](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#remove-roles-role-services-and-features-by-using-the-remove-roles-and-features-wizard) ve **Rolleri ve Özellikleri Kaldırma Sihirbazı'nı** kullanma. <br/><br/>Sihirbazın **Özellikler** adımına gittiğiniz zaman **Windows Defender Özellikler** seçeneğini temizleyin. <br/><br/> Windows Defender **Özellikleri** bölümünde **Windows Defender** tek başına temizlerseniz, **Windows Defender için** arabirim seçeneği GUI'sini kaldırmanız istenir.<br/><br/>Microsoft Defender Virüsten Koruma kullanıcı arabirimi olmadan normal şekilde çalışmaya devam eder, ancak çekirdek **Windows Defender** özelliğini devre dışı bırakırsanız kullanıcı arabirimi etkinleştirilemiyor. |
+| PowerShell kullanarak Microsoft Defender Virüsten Koruma kaldırma | Aşağıdaki PowerShell cmdlet'ini kullanın: `Uninstall-WindowsFeature -Name Windows-Defender` |
+| grup ilkesi kullanarak Microsoft Defender Virüsten Koruma devre dışı bırakma | Yerel grup ilkesi Düzenleyicinizde **Yönetim Şablonu** >  **Windows Bileşeni** >  **Endpoint Protection** >  **Disable Endpoint Protection'na** gidin ve **EnabledOK'yi** >  seçin. |
 
-### <a name="are-you-using-windows-server-2012-r2-or-windows-server-2016"></a>Windows Server 2012 R2 veya Windows Server 2016?
+### <a name="are-you-using-windows-server-2012-r2-or-windows-server-2016"></a>Windows Server 2012 R2 mi yoksa Windows Server 2016 mi kullanıyorsunuz?
 
-Windows Sunucunuz Uç Nokta için Microsoft Defender'e Uç Nokta için Microsoft Defender, artık R2'de Microsoft Defender Virüsten Koruma edilgen modda Windows Server 2012 çalıştırabilirsiniz ve Windows Server 2016. Aşağıdaki makalelere bakın:
+Windows Sunucunuz Uç Nokta için Microsoft Defender'a ekliyse artık Microsoft Defender Virüsten Koruma Windows Server 2012 R2'de pasif modda çalıştırabilirsiniz ve Windows Server 2016. Aşağıdaki makalelere bakın:
 
-- [Uç Nokta için Microsoft Defender'i yükleme Uç Nokta için Microsoft Defender](configure-server-endpoints.md#options-to-install-the-microsoft-defender-for-endpoint-packages)
+- [Uç Nokta için Microsoft Defender yükleme seçenekleri](configure-server-endpoints.md#options-to-install-the-microsoft-defender-for-endpoint-packages)
 
-- [Microsoft Defender Virüsten Koruma güvenlik ürünleriyle uyumluluk sorunları](microsoft-defender-antivirus-compatibility.md)
+- [Microsoft Defender Virüsten Koruma diğer güvenlik ürünleriyle uyumluluk](microsoft-defender-antivirus-compatibility.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
