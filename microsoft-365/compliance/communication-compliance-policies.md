@@ -18,12 +18,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 33961088105e838add3634024bb85807a6550eb7
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: d8524715ad0e450671faeaeb0714992e297a02df
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450738"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595196"
 ---
 # <a name="communication-compliance-policies"></a>İletişim uyumluluğu ilkeleri
 
@@ -81,6 +81,32 @@ Bir ilkeyi kopyalamak ve yeni ilke oluşturmak için, aşağıdaki adımları ta
 2. Komut **çubuğunda İlkeyi** kopyala komut çubuğu düğmesini seçin veya ilkenin eylem **menüsünden** İlkeyi kopyala'ya tıklayın.
 3. **İlkeyi kopyala** bölmesinde, İlke adı alanında ilke için varsayılan adı kabul **veya ilkeyi** yeniden adlandırabilirsiniz. Yeni ilkenin ilke adı, var olan etkin veya devre dışı bırakılmış ilkeyle aynı olabilir. Açıklama **alanını gereken** şekilde tamamlama.
 4. İlkeyi daha fazla özelleştirmeye ihtiyacınız yoksa, işlemi tamamlamak için **İlkeyi kopyala'ya** seçin. Yeni ilkenin yapılandırmasını güncelleştirmeniz gerekirse İlkeyi **özelleştir'i seçin**. Bu, yeni ilkeyi güncelleştirmenize ve özelleştirmenize yardımcı olmak için ilke sihirbazını başlatır.
+
+## <a name="user-reported-messages-policy"></a>Kullanıcı tarafından bildirilen ileti ilkesi
+
+Kuruluşta uygunsuz iletileri algılamak ve düzeltmek için katmanlı bir savunmanın parçası olarak, kullanıcı tarafından bildirilen iletilerle iletişim uyumluluk ilkelerine destek Microsoft Teams. Bu özellik, güvenli ve uyumlu bir çalışma ortamını teşvik etmeye yardımcı olmak için, organizasyonduki kullanıcıları taciz veya tehdit dili, yetişkin içeriğini paylaşma ve hassas veya gizli bilgileri paylaşma gibi uygunsuz iletileri kendi kendine bildirme konusunda güçlendirmektedir.
+
+Teams yönetim merkezinde varsayılan olarak etkinleştirilen [Teams](/microsoftteams/manage-teams-in-modern-portal) iletileri için Bir sorun bildir  seçeneği, kuruluşta yer alan kullanıcıların ilkeye yönelik iletişim uyumluluğu gözden geçirenleri tarafından gözden geçirilleri için uygunsuz iletiler göndermelerine olanak sağlar. Bu iletiler, kanallarda, gruplarda ve özel sohbetlerde ileti Teams destekleyen varsayılan sistem ilkesi tarafından de destekler.
+
+![İletişim uyumluluğu Sorun bildirebilirsiniz.](../media/communication-compliance-report-a-concern-full-menu.png)
+
+Kullanıcı gözden geçirme için Teams bir sohbet iletisi gönderse, ileti Kullanıcı tarafından bildirilen ileti ilkesine kopyalanır. Bildirilen iletiler başlangıçta tüm sohbet üyeleri tarafından görünür kalır ve sohbet üyelerine veya ileti göndericiye kanal, özel veya grup sohbetine ileti bildirilmesine yönelik herhangi bir bildirim yoktur. Kullanıcı aynı iletiyi birden çok kez raporamaz ve ilke inceleme işlemi sırasında ileti sohbet oturumuna dahil olan tüm kullanıcılar tarafından görülebilir. 
+
+Gözden geçirme işlemi sırasında, iletişim uyumluluğu gözden geçirenler iletide, iletiyi [](/microsoft-365/compliance/communication-compliance-investigate-remediate#step-3-decide-on-a-remediation-action) sohbetten kaldırmak da dahil olmak üzere tüm standart Teams gerçekleştirebilirsiniz. İletilerin nasıl düzeltilmesine bağlı olarak, ileti gönderen ve alıcılar inceleme sonrasında sohbetlerde Teams iletileri görebilir[](/microsoftteams/communication-compliance#act-on-inappropriate-messages-in-microsoft-teams).
+
+![İletişim uyumluluğu kullanıcı tarafından bildirilen iletiler ilkesi.](../media/communication-compliance-user-reported-messages-policy.png)
+
+Kullanıcı sohbetlerden gelen Teams, Kullanıcı tarafından bildirilen ileti ilkesi tarafından işlenen tek iletidir ve ilkeye atanan gözden geçirenler değiştirilebilir. Diğer tüm ilke özellikleri düzenlenemez. İlke oluşturulduğunda, ilkeye atanan ilk gözden geçirenler, İletişim Uyumluluğu Yöneticileri rol grubunun (en az  bir kullanıcıyla doldurulduğunda) tüm üyeleri veya kuruluşun Genel Yönetici rol grubunun tüm üyeleridir. İlke oluşturucusu, İletişim Uyumluluğu Yöneticileri rol grubundan  (en az bir kullanıcıyla doldurulduğunda) rastgele seçilen bir kullanıcı veya kuruluşun Genel Yönetici rol grubundan rastgele seçilen *bir kullanıcıdır*.  
+
+Yöneticilerin, özel gözden geçirenleri hemen bu ilkeye sizin için uygun şekilde ataması gerekir. Bu, Uyumluluk Görevlisi, Risk Görevlisi veya İnsan Kaynakları departmanınız üyeleri gibi gözden geçirenleri içerebilir. Kullanıcı tarafından bildirilen iletiler olarak gönderilen sohbet iletilerinin gözden geçirenlerini özelleştirmek için, aşağıdaki adımları tamamlayın:
+
+1. Kendi [Microsoft 365 uyumluluk merkezi yönetici](https://compliance.microsoft.com/) hesabının kimlik bilgilerini kullanarak oturum Microsoft 365 açın.
+2. aşağıdaki Microsoft 365 uyumluluk merkezi **uyumluluğu'ne gidin**.
+3. İlke **sekmesinde** Kullanıcı tarafından bildirilen *iletiler ilkeyi seçin ve* sonra da Düzenle'yi **seçin**.
+4. Kullanıcı tarafından **bildirilen iletileri izle bölmesinde** , ilke için gözden geçirenleri attayın. Gözden geçirenlerin, posta kutuları posta kutusunda barındırılan Exchange Online. Gözden geçirenler bir ilkeye ekli olduğunda, otomatik olarak ilkeye atamayı haber veren ve gözden geçirme işlemiyle ilgili bilgilerin bağlantılarını veren bir e-posta iletisi alırlar.
+5. **Kaydet**'i seçin.
+
+Kullanıcıların Önemli bir Teams bildir seçeneğiyle iletileri raporlamasını devre dışı bırakmak *için, Kullanıcı* Yönetim Merkezi'nde Son kullanıcı [raporlama seçeneğini Teams devre dışı bırak.](/microsoftteams/manage-teams-in-modern-portal)
 
 ## <a name="storage-limit-notification-preview"></a>Depolama sınırı bildirimi (önizleme)
 

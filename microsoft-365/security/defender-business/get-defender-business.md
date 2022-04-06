@@ -1,6 +1,6 @@
 ---
-title: İş için Microsoft Defender'ı almak
-description: İş için Microsoft Defender'ı almak
+title: İş için Microsoft Defender alma
+description: İş için Microsoft Defender alma
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -16,126 +16,126 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security-compliance
-ms.openlocfilehash: c136c873fbe34f3fe227b508aedae168c15f69e1
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: cb85f5391a6ee6c25d4f82f6f6819132bb8d3b02
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63524859"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64663060"
 ---
-# <a name="get-microsoft-defender-for-business"></a>İş için Microsoft Defender'ı almak
+# <a name="get-microsoft-defender-for-business"></a>İş için Microsoft Defender alma
 
 > [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
+> İş için Microsoft Defender, 1 Mart 2022'de başlayarak [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşterilerine dağıtılıyor. Tek başına abonelik olarak İş için Defender önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşterilere ve BT İş Ortaklarına aşamalı olarak dağıtılacaktır. Önizleme, [bir dizi ilk senaryo](mdb-tutorials.md#try-these-preview-scenarios) içerir ve düzenli olarak özellikler ekleyeceğiz.
 > 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-Henüz İş için Microsoft Defender'a sahip değilken çeşitli seçenekler arasında seçim yapabilirsiniz:
+Henüz İş için Microsoft Defender yoksa, çeşitli seçenekler arasından seçim yapabilirsiniz:
 
 - [Microsoft çözüm sağlayıcısıyla çalışma](#work-with-a-microsoft-solution-provider)
 - [Microsoft 365 İş Ekstra’yı edinin](#get-microsoft-365-business-premium)
 - [Önizleme programına kaydolma](#sign-up-for-the-preview-program)
 
-Deneme sürümüne kayıt olduktan sonra, kabul e-postanızı alırsanız, deneme sürümünizi etkinleştirdikten ve kullanıcı lisansları atayabilirsiniz ve sonraki adımlarla [devam edebilirsiniz](#next-steps).[](#activate-your-trial)
+Deneme sürümüne kaydolmuşsanız, kabul e-postanızı aldıktan sonra [denemenizi etkinleştirebilir ve kullanıcı lisansları atayabilir](#activate-your-trial) ve [sonraki adımlarınıza](#next-steps) geçebilirsiniz.
 
 >
-> **Bir dakika mı kaldı?**
-> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+> **Bir dakikan var mı?**
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">İş için Microsoft Defender hakkındaki kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
 ## <a name="work-with-a-microsoft-solution-provider"></a>Microsoft Çözüm Sağlayıcısı ile çalışma
 
-Microsoft'un teklif satışı için yetkili çözüm sağlayıcılarının (Microsoft 365 İş Ekstra Microsoft Defender for Business dahil) listesi vardır. 
+Microsoft, Microsoft 365 İş Ekstra ve İş için Microsoft Defender dahil olmak üzere teklif satma yetkisine sahip çözüm sağlayıcılarının bir listesine sahiptir. 
 
-Bölgenize çözüm sağlayıcısı bulmak için aşağıdaki adımları izleyin:
+Bölgenizde bir çözüm sağlayıcısı bulmak için aşağıdaki adımları izleyin:
 
-1. **Microsoft Çözüm Sağlayıcıları sayfasına** () gidin [https://www.microsoft.com/solution-providers](https://www.microsoft.com/solution-providers).
+1. **Microsoft Çözüm Sağlayıcıları** sayfasına ([https://www.microsoft.com/solution-providers](https://www.microsoft.com/solution-providers) ) gidin.
  
-2. Arama kutusunda, konum ve şirket boyutunu doldurun. 
+2. Arama kutusunda konumunuzu ve şirketinizin boyutunu doldurun. 
 
-3. Ürün **, hizmet, beceri, endüstri ara kutusuna ,** ve ardından `Microsoft 365`Git'i **seçin**.
+3. **Ürün, hizmet, beceri, endüstri ara** kutusuna yazın `Microsoft 365`ve **ardından Git'i** seçin.
 
-4. Sonuç listesini gözden geçirme. Uzmanlıkları ve sağ yaptıkları hizmetler hakkında daha fazla bilgi edinmek için bir sağlayıcı seçin. Sağlayıcınız, İş için Defender'a kaydolmanıza yardımcı olabilir.
+4. Sonuç listesini gözden geçirin. Uzmanlığı ve sağladığı hizmetler hakkında daha fazla bilgi edinmek için bir sağlayıcı seçin. Sağlayıcınız İş için Defender'a kaydolmanıza yardımcı olabilir.
 
 ## <a name="get-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra’yı edinin
 
-*1 Mart 2022'den itibaren, Defender for Business* yeni bir Microsoft 365 İş Ekstra. 
+*1 Mart 2022'de, İş için Defender Microsoft 365 İş Ekstra kapsamında kullanıma sunulacaktır*. 
 
-Bkz[. Deneme veya satın Microsoft 365 İş Ekstra](../../business-premium/get-microsoft-365-business-premium.md).
+Bkz[. Microsoft 365 İş Ekstra deneme veya satın alma](../../business-premium/get-microsoft-365-business-premium.md).
 
 ## <a name="sign-up-for-the-preview-program"></a>Önizleme programına kaydolma
 
-Önizleme programına katılmanız, İş için Defender'ı tek başına bir abonelik olarak denemenizi sağlar. Önizleme programı aşağıdakiler için kullanılabilir:
+Önizleme programına katılmak, İş için Defender'ı tek başına abonelik olarak denemenize olanak tanır. Önizleme programı şu şekilde kullanılabilir:
 
-- Küçük ve orta ölçekli işletmelere IT hizmetleri sağlayan Microsoft iş ortakları
-- Henüz kurumsal olmayan küçük ve orta ölçekli işletmeler (300 çalışana kadar) Microsoft 365 İş Ekstra
+- Küçük ve orta ölçekli işletmelere BT hizmetleri sağlayan Microsoft iş ortakları
+- Henüz Microsoft 365 İş Ekstra sahip olmayan küçük ve orta ölçekli işletmeler (en fazla 300 çalışan)
 
-Şu şekilde kaydolum:
+Şu şekilde kaydolun:
 
-1. 'ı ziyaret edin [https://aka.ms/MDB-Preview](https://aka.ms/MDB-Preview).
+1. adresini ziyaret edin [https://aka.ms/MDB-Preview](https://aka.ms/MDB-Preview).
 
-2. **Müşteri'yi veya** **Microsoft İş Ortağı'ı seçin**.
+2. **Müşteri** veya **Microsoft İş Ortağı'ı** seçin.
 
-3. İş için Microsoft Defender Önizleme Sözleşmesi'ne yönelik koşulları incele ve kabul et'i ve sonra Sonraki'yi **seçin**.
+3. İş için Microsoft Defender Önizleme Sözleşmesi'nin koşullarını gözden geçirin ve kabul edin ve **İleri'yi** seçin.
 
-4. Formu iletişim bilgileriyle doldurun. 
+4. Formu iletişim bilgilerinizle doldurun. 
 
-   - Microsoft iş ortağıyla çalışan bir müşteriysiniz, Diğer kutusunda iş ortağının şirket  adını doldurun. Ardından **Submit**'i seçin.
-   - Bir Microsoft iş ortağı isanız, ortaklığınızı türünü ve birlikte çalışmak istediğiniz müşterilerle ilgili bilgileri göstermek için emin olun.
+   - Microsoft iş ortağıyla çalışan bir müşteriyseniz **, Diğer** kutusunda iş ortağının şirket adını girin. Ardından **Submit**'i seçin.
+   - Microsoft iş ortağıysanız, iş ortaklığınızın türünü ve birlikte çalışmayı planladığınız müşteriler hakkındaki bilgileri belirttiğinizden emin olun.
 
-5. Formu doldurmayı bitirdikten sonra Gönder'i **seçin**.
+5. Formu doldurmayı bitirdiğinizde **Gönder'i** seçin.
 
-## <a name="what-to-expect-after-applying"></a>Uygulamadan sonra neler olabilir?
+## <a name="what-to-expect-after-applying"></a>Uygulamadan sonra beklenmesi gerekenler
 
-Uygulamanızı gözden geçireceğiz ve karara var edeceğiz. Bu durumda, promosyon kodunuzu içeren veya şu anda deneme programı sunama nedenmiz mümkün olmadığını açıklayan bir e-posta alırsınız.
+Başvurunuzu gözden geçirip bir belirleme yapacağız. Ardından promosyon kodunuzu içeren veya şu anda size deneme programını neden sunamadığımızı açıklayan bir e-posta alırsınız.
 
-Kabul edersiniz, e-postanız bir lisans kodu içerir ve bu kodu İş için Defender deneme sürümünizi etkinleştirirsiniz.
+Kabul edilirseniz, e-postanız İş için Defender denemenizi etkinleştirmek için kullanacağınız bir lisans kodu içerir.
 
 > [!IMPORTANT]
-> İş ortağınız varsa, önizleme programına kabul edildikten sonra, her müşterinin Önizleme programına kaydolma bölümünde açıklanan işlemi tamamlamasını [s görevi tamamlamanız gerekir](#sign-up-for-the-preview-program). Müşterinin, Diğer kutusunda Microsoft iş ortağı adını belirten bir işaret olduğundan **emin** olun.
+> İş ortağıysanız, önizleme programına kabul edildikten sonra her müşterinin [önizleme programına kaydolma](#sign-up-for-the-preview-program) bölümünde açıklanan işlemi tamamlaması gerekir. Müşterinin **Diğer** kutusunda Microsoft iş ortağı adınızı belirttiğinden emin olun.
 
 ## <a name="two-portals-for-setup"></a>Kurulum için iki portal
 
-Denemenizi başlatmaya hazır olduğunda, ayarlamaları yapmak için iki ana portalla çalışırsınız. Aşağıdaki tabloda, kullanabileceğiniz iki ana portal özetlenmiştir: <br/><br/>
+Deneme sürümünüzü başlatmaya hazır olduğunuzda, ayarları yapmak için iki ana portalla çalışacaksınız. Aşağıdaki tabloda kullanacağınız iki ana portal özetlemektedir: <br/><br/>
 
 |Portal  |Açıklama  |
 |---------|---------|
-| Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/))      | Deneme Microsoft 365 yönetim merkezi etkinleştirmek ve ilk kez oturum açma için oturum açma özelliğini kullanın.<br/><br/> Ayrıca aşağıdaki bilgileri Microsoft 365 yönetim merkezi: <br/>- Kullanıcı ekleme veya kaldırma<br/>- Kullanıcı lisansları atama<br/>- Ürünlerinizi ve hizmetlerinizi görüntüleme<br/>- Microsoft 365 aboneliğiniz için Microsoft 365 görevlerini tamamlama <br/><br/> Daha fazla bilgi edinmek için bkz[. İlk Microsoft 365 yönetim merkezi](../../admin/admin-overview/admin-center-overview.md).      |
-| Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com))     | İş için Microsoft 365 Defender Defender'ı ayarlamak ve yapılandırmak için güvenlik portalını kullanın. <br/><br/>Microsoft 365 Defender portalını kullanarak şunları Microsoft 365 Defender kullanabilirsiniz: <br/>- Cihazlarınızı ve cihaz koruma ilkelerini görüntüleme<br/>- Algılanan tehditleri görüntüleme ve önlem alma<br/>- Güvenlik önerilerini görüntüleme ve güvenlik ayarlarınızı yönetme <br/><br/>Daha fazla bilgi edinmek için [bkz. Microsoft 365 Defender başlama](mdb-get-started.md).        |
+| Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/))      | Deneme sürümünüzü etkinleştirmek ve ilk kez oturum açmak için Microsoft 365 yönetim merkezi kullanın.<br/><br/> Ayrıca Microsoft 365 yönetim merkezi kullanarak şunları da yapacaksınız: <br/>- Kullanıcı ekleme veya kaldırma<br/>- Kullanıcı lisansları atama<br/>- Ürün ve hizmetlerinizi görüntüleme<br/>- Microsoft 365 aboneliğiniz için kurulum görevlerini tamamlayın <br/><br/> Daha fazla bilgi edinmek için bkz. [Microsoft 365 yönetim merkezi genel bakış](../../admin/admin-overview/admin-center-overview.md).      |
+| Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com))     | İş için Defender'ı ayarlamak ve yapılandırmak için Microsoft 365 Defender portalını kullanın. <br/><br/>Microsoft 365 Defender portalını kullanarak: <br/>- Cihazlarınızı ve cihaz koruma ilkelerini görüntüleme<br/>- Algılanan tehditleri görüntüleme ve işlem gerçekleştirme<br/>- Güvenlik önerilerini görüntüleme ve güvenlik ayarlarınızı yönetme <br/><br/>Daha fazla bilgi için bkz. [Microsoft 365 Defender portalını kullanarak Kullanmaya başlayın](mdb-get-started.md).        |
 
-If your company is using Microsoft 365 İş Ekstra, you have Microsoft Intune (Microsoft Endpoint Manager) and you might be using the Microsoft Endpoint Manager admin center ()[https://endpoint.microsoft.com/](https://endpoint.microsoft.com/). Endpoint Manager, cihazları yönetmenize ve güvenlik ayarlarını yapılandırmana da olanak tanır. Daha fazla bilgi edinmek için [bkz Microsoft Intune cihazlarınız için bir MDM ve MAM sağlayıcısıdır](/mem/intune/fundamentals/what-is-intune).
+Şirketiniz Microsoft 365 İş Ekstra kullanıyorsa Microsoft Intune (Microsoft Endpoint Manager bir parçası) vardır ve Microsoft Endpoint Manager yönetim merkezini ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) kullanıyor olabilirsiniz. Endpoint Manager, cihazları yönetmenize ve güvenlik ayarlarını yapılandırmanıza da olanak tanır. Daha fazla bilgi edinmek için bkz. [Microsoft Intune cihazlarınız için bir MDM ve MAM sağlayıcısıdır](/mem/intune/fundamentals/what-is-intune).
 
-## <a name="activate-your-trial"></a>Denemenizi etkinleştirme
+## <a name="activate-your-trial"></a>Deneme sürümünüzü etkinleştirme
 
-Kabul e-postanızı alırsanız, deneme aboneliğinizi şu şekilde etkinleştirebilirsiniz: 
+Kabul e-postanızı aldığınızda deneme aboneliğinizi şu şekilde etkinleştirebilirsiniz: 
 
-1. Kabul e-postanıza promosyon kodunuzu içeren bağlantıyı seçin. 
+1. Kabul e-postanızda promosyon kodunuzu içeren bağlantıyı seçin. 
 
-2. Zaten bir Microsoft 365 varsa, hesabınızla oturum açın. Henüz bir aboneliğiniz yoksa, yeni bir hesap oluşturmak için istemleri izleyin. 
+2. Zaten bir Microsoft 365 aboneliğiniz varsa hesabınızı kullanarak oturum açın. Henüz bir aboneliğiniz yoksa, yeni bir hesap oluşturmak için istemleri izleyin. 
 
-3. İlk kez oturum aken, ilk kez oturum Microsoft 365 yönetim merkezi.[https://admin.microsoft.com/](https://admin.microsoft.com/) Bkz[. İlkelere genel Microsoft 365 yönetim merkezi](../../admin/admin-overview/admin-center-overview.md).
+3. İlk kez oturum açtığınızda Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/)) bölümüne gidersiniz. Bkz. [Microsoft 365 yönetim merkezi genel bakış](../../admin/admin-overview/admin-center-overview.md).
 
 4. Aşağıdaki yordamlardan birini kullanın:
 
-   - Microsoft 365 aboneliğini ilk kez kuruyorsanız, Kılavuzlu kuruluma git'i **seçin** ve aşağıdaki adımları tamamlayın:
+   - Microsoft 365 aboneliğini ilk kez ayarlıyorsanız **Kılavuzlu kuruluma git'i** seçin ve aşağıdaki adımları tamamlayın:
 
-      a. Office uygulamalarını hemen yükleyin veya bu adımı atlamak **için Devam'ı** seçin. (Uygulamalarınızı daha sonra Office yükleyebilirsiniz.)
+      a. Office uygulamalarınızı şimdi yükleyin veya bu adımı atlamak için **Devam'ı** seçin. (Office uygulamalarınızı daha sonra yükleyebilirsiniz.)
 
-      b. Şirketinizin bir etki alanı varsa, şimdi ebilirsiniz (bu seçenek önerilir). Alternatif olarak, şimdilik varsayılan etki alanını kullanmayı `.onmicrosoft.com` da seçebilirsiniz.
+      b. Şirketinizin bir etki alanı varsa, şimdi ekleyebilirsiniz (bu seçenek önerilir). Alternatif olarak, şimdilik varsayılan `.onmicrosoft.com` etki alanınızı kullanmayı seçebilirsiniz.
 
-      c. Kullanıcı ekleme ve lisans atama. Listeniz olan her kullanıcıya otomatik olarak bir lisans atanır. Bkz [. Aynı anda kullanıcı ekleme ve lisans atama](../../admin/add-users/add-users.md).
+      c. Kullanıcı ekleyin ve lisans atayın. Listelediğiniz her kullanıcıya otomatik olarak bir lisans atanır. Bkz. [Kullanıcıları ekleme ve lisansları aynı anda atama](../../admin/add-users/add-users.md).
 
-   - Var olan bir kiracıya deneme Microsoft 365, yeni lisanslarınızı kullanıcılara atamak için şu adımları izleyin:
+   - Mevcut bir Microsoft 365 kiracısına deneme sürümü ekliyorsanız, kullanıcılara yeni lisanslarınızı atamak için şu adımları izleyin:
 
-      a. Giriş () Microsoft 365 yönetim merkezi[https://admin.microsoft.com/](https://admin.microsoft.com/) ve oturum açma.
+      a. Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/)) gidin ve oturum açın.
 
-      b. Gezinti bölmesinde **UsersActive** >  **users'ı seçin**. Kullanıcı listesini gözden geçirme. 
+      b. Gezinti bölmesinde **KullanıcılarEtkin** >  kullanıcılar'ı seçin. Kullanıcı listesini gözden geçirin. 
 
-      c. Lisans atamak için, Kullanıcılara lisans atama [konusunda yer alan yönergeleri izleyin](../../admin/manage/assign-licenses-to-users.md).
+      c. Lisansları atamak için [Kullanıcılara lisans atama](../../admin/manage/assign-licenses-to-users.md) başlığı altında yer alan yönergeleri izleyin.
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [İş için Microsoft Defender'ı ayarlayın ve yapılandıryın](mdb-setup-configuration.md).
+- [İş için Microsoft Defender ayarlayın ve yapılandırın](mdb-setup-configuration.md).
 
-- [İş için Microsoft Defender ile ilgili yardım ve destek almak hakkında bilgi](mdb-get-help.md)
+- [İş için Microsoft Defender için yardım ve destek almayı öğrenin](mdb-get-help.md)

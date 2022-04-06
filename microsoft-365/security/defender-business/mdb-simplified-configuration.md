@@ -1,6 +1,6 @@
 ---
-title: İş için Microsoft Defender'da basitleştirilmiş yapılandırma işlemi
-description: İş için Microsoft Defender'da basitleştirilmiş yapılandırma işlemi hakkında bilgi
+title: İş için Microsoft Defender'de basitleştirilmiş yapılandırma işlemi
+description: İş için Microsoft Defender'da basitleştirilmiş yapılandırma işlemi hakkında bilgi edinin
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -17,61 +17,61 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 2445b7f35fb808c49c046027e2279c3b00057f54
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 02f970f7ad9981336ba54aaafcf936e952f1b726
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525786"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64663126"
 ---
-# <a name="the-simplified-configuration-process-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da basitleştirilmiş yapılandırma işlemi
+# <a name="the-simplified-configuration-process-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'de basitleştirilmiş yapılandırma işlemi
 
 > [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
+> İş için Microsoft Defender, 1 Mart 2022'de başlayarak [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşterilerine dağıtılıyor. Tek başına abonelik olarak İş için Defender önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşterilere ve BT İş Ortaklarına aşamalı olarak dağıtılacaktır. Önizleme, [bir dizi ilk senaryo](mdb-tutorials.md#try-these-preview-scenarios) içerir ve düzenli olarak özellikler ekleyeceğiz.
 > 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-İş için Microsoft Defender, özellikle küçük ve orta ölçekli işletmeler için tasarlanmış basitleştirilmiş bir yapılandırma işlemi içerir. Bu deneyim, sihirbaza benzer bir deneyim ve şirket cihazlarınızı ilk günden korumak üzere tasarlanmış varsayılan ilkelerle cihazları ekleme ve yönetme çalışmalarından çıkar. **Basitleştirilmiş yapılandırma işlemini öneririz; bununla birlikte, bu seçenekle sınırlı değildirsiniz**.
+İş için Microsoft Defender, özellikle küçük ve orta ölçekli işletmeler için tasarlanmış basitleştirilmiş bir yapılandırma işlemine sahiptir. Bu deneyim, şirketinizin cihazlarını ilk günden korumak için tasarlanmış sihirbaz benzeri bir deneyim ve varsayılan ilkelerle cihazları ekleme ve yönetme konusunda tahminde bulunur. **Basitleştirilmiş yapılandırma işlemini kullanmanızı öneririz; ancak bu seçenekle sınırlı değilsiniz**.
 
-Şirket cihazlarına ekleme ve güvenlik ayarlarını yapılandırma söz konusu olduğunda, çeşitli deneyimler arasında seçim yapabilirsiniz: 
+Söz konusu cihazları ekleme ve şirketinizin cihazları için güvenlik ayarlarını yapılandırma olduğunda, çeşitli deneyimler arasından seçim yapabilirsiniz: 
 
-- İş için Microsoft Defender'da basitleştirilmiş yapılandırma işlemi (*önerilir*) 
-- Microsoft Endpoint Manager (Microsoft Intune dahil) içeren [Microsoft 365 İş Ekstra](../../business-premium/index.md)
-- Cihazları yönetmek için Microsoft olmayan çözümünüz 
+- İş için Microsoft Defender basitleştirilmiş yapılandırma işlemi (*önerilir*) 
+- Microsoft Intune içeren Microsoft Endpoint Manager ([Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil)
+- Cihazları yönetmek için Microsoft dışı çözümünüz 
 
-## <a name="what-to-do"></a>Ne yapmalı?
+## <a name="what-to-do"></a>Yapılması gerekenler
 
-1. [Kurulum ve yapılandırma seçeneklerinizi gözden geçirme](#review-your-setup-and-configuration-options)
+1. [Kurulum ve yapılandırma seçeneklerinizi gözden geçirin](#review-your-setup-and-configuration-options)
 
-2. [İş için Defender'da basitleştirilmiş yapılandırma işlemi hakkında daha fazla bilgi](#why-we-recommend-using-the-simplified-configuration-process)
+2. [İş için Defender'da basitleştirilmiş yapılandırma süreci hakkında daha fazla bilgi edinin](#why-we-recommend-using-the-simplified-configuration-process)
 
-3. [Sonraki adımlarınıza devam edin](#next-steps)
+3. [Sonraki adımlarınıza geçin](#next-steps)
 
 >
-> **Bir dakika mı kaldı?**
-> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+> **Bir dakikan var mı?**
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">İş için Microsoft Defender hakkındaki kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
-## <a name="review-your-setup-and-configuration-options"></a>Kurulum ve yapılandırma seçeneklerinizi gözden geçirme
+## <a name="review-your-setup-and-configuration-options"></a>Kurulum ve yapılandırma seçeneklerinizi gözden geçirin
 
-Aşağıdaki tabloda her deneyim açık almaktadır:
+Aşağıdaki tabloda her deneyim açıklanmaktadır:
 <br/><br/>
 
 | Portal deneyimi  | Açıklama  |
 |---------|---------|
-| Yeni portalda basitleştirilmiş Microsoft 365 Defender deneyimi ([https://security.microsoft.com](https://security.microsoft.com)) <br/>(*Bu çoğu müşteri için önerilen seçenektir*)  | Basitleştirilmiş yapılandırma deneyimi, İş için Defender'ı ayarlamanıza ve yapılandırmanıza yardımcı olan sihirbaza benzer bir deneyim içerir. Basitleştirilmiş yapılandırma, şirketinizi İş için Defender'a alındıklarında korumanıza yardımcı olacak varsayılan güvenlik ayarlarını ve ilkelerini de içerir. <br/><br/>Bu deneyimde, güvenlik ekipleriniz şu Microsoft 365 Defender kullanır: <br/>- İş için Defender'ı ayarlama ve yapılandırma <br/>- Olayları görüntüleme ve yönetme<br/>- Tehditleri yanıtlama ve azaltmak<br/>- Raporları görüntüleme<br/>- Bekleyen veya tamamlanmış eylemleri gözden geçirme <br/><br/> En Microsoft 365 Defender portalı, şirketinizin güvenlik ayarları ve tehdit koruması özellikleri için tek alışveriş mağazanızdır. Hızlı ve verimli bir şekilde başlamanıza yardımcı olacak basitleştirilmiş bir deneyim elde edersiniz. Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'ı ayarlamak için sihirbazı kullanma](mdb-use-wizard.md).<br/><br/>Ayarlarınızı düzenleyebilir veya yeni ilkeler tanımlayarak şirket  ihtiyaçlarını karşılarız.<br/><br/>Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da cihaz ilkelerini görüntüleme veya düzenleme](mdb-view-edit-policies.md). |
-| Microsoft Endpoint Manager yönetim merkezi ([https://endpoint.microsoft.com](https://endpoint.microsoft.com))  | Microsoft Endpoint Manager uygulamaları Microsoft Intune için bulut tabanlı bir mobil cihaz yönetimi (MDM) ve mobil uygulama yönetimi (MAM) sağlayıcısı olan Uygulamaları içerir. [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşteriler zaten E-Endpoint Manager. <br/><br/>Birçok şirket Intune'i cep telefonları, tabletler ve dizüstü bilgisayarlar gibi cihazlarını yönetmek için kullanır. Daha fazla bilgi edinmek için [bkz Microsoft Intune cihazlarınız için bir MDM ve MAM sağlayıcısıdır](/mem/intune/fundamentals/what-is-intune). <br/><br/>Zaten Microsoft Intune veya Microsoft Endpoint Manager kullanıyorsanız, o çözümü kullanmaya devam edersiniz. |
-| Microsoft olmayan cihaz yönetimi çözümünüz  | Microsoft dışı bir üretkenlik ve cihaz yönetim çözümü kullanıyorsanız, bu çözümü İş için Defender ile kullanmaya devam edebilirsiniz. <br/><br/>Cihazlar İş için Defender'a geldiğinde, cihaz portalında durumları ve Microsoft 365 Defender. Daha fazla bilgi edinmek için bkz. [Uç Nokta için Defender için Ekleme ve yapılandırma aracı seçenekleri](../defender-endpoint/onboard-configure.md). |
+| Microsoft 365 Defender portalında basitleştirilmiş yapılandırma deneyimi ([https://security.microsoft.com](https://security.microsoft.com)) <br/>(*Bu, çoğu müşteri için önerilen seçenektir*)  | Basitleştirilmiş yapılandırma deneyimi, İş için Defender'ı ayarlamanıza ve yapılandırmanıza yardımcı olacak sihirbaz benzeri bir deneyim içerir. Basitleştirilmiş yapılandırma, şirketinizin cihazlarını İş için Defender'a eklendikleri anda korumanıza yardımcı olacak varsayılan güvenlik ayarları ve ilkeleri de içerir. <br/><br/>Bu deneyimle, güvenlik ekibiniz Microsoft 365 Defender portalını kullanarak: <br/>- İş için Defender'ı ayarlama ve yapılandırma <br/>- Olayları görüntüleme ve yönetme<br/>- Tehditlere yanıt verme ve tehditleri azaltma<br/>- Raporları görüntüleme<br/>- Bekleyen veya tamamlanan eylemleri gözden geçirme <br/><br/> Microsoft 365 Defender portalı, şirketinizin güvenlik ayarları ve tehdit koruması özellikleri için tek durağınızdır. Hızlı ve verimli bir şekilde çalışmaya başlamanıza yardımcı olacak basitleştirilmiş bir deneyim elde edersiniz. Daha fazla bilgi edinmek için bkz. [İş için Microsoft Defender ayarlamak için sihirbazı kullanma](mdb-use-wizard.md).<br/><br/>Ayrıca ayarlarınızı düzenleyebilir veya şirketinizin gereksinimlerine uygun yeni ilkeler tanımlayabilirsiniz.<br/><br/>Daha fazla bilgi için bkz. [İş için Microsoft Defender'de cihaz ilkelerini görüntüleme veya düzenleme](mdb-view-edit-policies.md). |
+| Microsoft Endpoint Manager yönetim merkezi ([https://endpoint.microsoft.com](https://endpoint.microsoft.com))  | Microsoft Endpoint Manager Microsoft Intune, bulut tabanlı bir mobil cihaz yönetimi (MDM) ve uygulamalar ve cihazlar için mobil uygulama yönetimi (MAM) sağlayıcısı içerir. [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşterilerin zaten Endpoint Manager var. <br/><br/>Birçok şirket cep telefonları, tabletler ve dizüstü bilgisayarlar gibi cihazlarını yönetmek için Intune kullanır. Daha fazla bilgi edinmek için bkz. [Microsoft Intune cihazlarınız için bir MDM ve MAM sağlayıcısıdır](/mem/intune/fundamentals/what-is-intune). <br/><br/>Zaten Microsoft Intune veya Microsoft Endpoint Manager kullanıyorsanız bu çözümü kullanmaya devam edebilirsiniz. |
+| Microsoft dışı cihaz yönetimi çözümünüz  | Microsoft dışı bir üretkenlik ve cihaz yönetimi çözümü kullanıyorsanız, bu çözümü İş için Defender ile kullanmaya devam edebilirsiniz. <br/><br/>Cihazlar İş için Defender'a eklendiğinde, Microsoft 365 Defender portalında durumlarını ve uyarılarını görürsünüz. Daha fazla bilgi için bkz [. Uç Nokta için Defender için ekleme ve yapılandırma aracı seçenekleri](../defender-endpoint/onboard-configure.md). |
 
 
-## <a name="why-we-recommend-using-the-simplified-configuration-process"></a>Neden basitleştirilmiş yapılandırma işleminin kullanılması önerilir?
+## <a name="why-we-recommend-using-the-simplified-configuration-process"></a>Neden basitleştirilmiş yapılandırma işlemini kullanmanızı öneririz?
 
-**İş için Microsoft Defender'da çoğu müşteri için basitleştirilmiş yapılandırma işleminin** kullanılması önerilir. Basitleştirilmiş yapılandırma işlemi, özellikle küçük ve orta ölçekli işletmeler için kolaylaştırılmıştır. İş için Defender, en fazla teknik uzmanlık veya özel bir bilgiye gerek kalmadan şirketinizi ilk günden korumanıza yardımcı olmak üzere tasarlanmıştır. Varsayılan güvenlik ayarları ve ilkeleriyle, cihazlarınız işe alındıklarında korunur.
+Çoğu müşteri için **İş için Microsoft Defender basitleştirilmiş yapılandırma işlemini kullanmanızı öneririz**. Basitleştirilmiş yapılandırma süreci özellikle küçük ve orta ölçekli işletmeler için kolaylaştırılır. İş için Defender, derin teknik uzmanlığa veya özel bilgiye gerek kalmadan şirketinizin cihazlarını ilk günde korumanıza yardımcı olmak için tasarlanmıştır. Varsayılan güvenlik ayarları ve ilkeleriyle, cihazlarınız eklenir eklenmez korunur.
 
-İş için Defender, güvenlik ayarlarınızı yapılandırmada size zaman ve emek tasarrufu sağlarken güçlü bir koruma sağlamak üzere tasarlanmıştır. Yeni portalda yer alan düzenli Microsoft 365 Defender, cihazları ekleme ve yönetmeyi basit hale geliyor. Buna ek olarak, şirket cihazları ekli olduğu anda korunması için varsayılan ilkeler de dahil edilir. Varsayılan ayarlarınızı olduğu gibi saklayabilirsiniz veya iş ihtiyaçlarınıza uygun değişiklikler yapabilirsiniz. Ayrıca, gerektiğinde cihazları yönetmek için yeni ilkeler de ebilirsiniz.
+İş için Defender, güvenlik ayarlarınızı yapılandırmada size zaman ve çaba tasarrufu sağlarken güçlü bir koruma sağlamak üzere tasarlanmıştır. Microsoft 365 Defender portalındaki kolaylaştırılmış deneyim, cihazları eklemeyi ve yönetmeyi kolaylaştırır. Ayrıca, şirketinizin cihazlarının eklendikleri anda korunması için varsayılan ilkeler de dahil edilir. Varsayılan ayarlarınızı olduğu gibi tutabilir veya iş gereksinimlerinize uygun değişiklikler yapabilirsiniz. Cihazları gerektiği gibi yönetmek için yeni ilkeler de ekleyebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [İş için Microsoft Defender'ı ayarlama ve yapılandırma](mdb-setup-configuration.md)
+- [İş için Microsoft Defender ayarlama ve yapılandırma](mdb-setup-configuration.md)
 
-- [İş için Microsoft Defender'ı kullanmaya başlama](mdb-get-started.md)
+- [İş için Microsoft Defender kullanarak Kullanmaya başlayın](mdb-get-started.md)

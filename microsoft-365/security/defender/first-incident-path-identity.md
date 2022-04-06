@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 20b9fca87e003c0c776c9f614afaa1b6054c24a5
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 6d62e1127eabb401a6af77aa1bbf073e4cfced17
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64500287"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64570117"
 ---
 # <a name="example-of-an-identity-based-attack"></a>Kimlik tabanlı bir saldırı örneği
 
@@ -52,7 +52,7 @@ Microsoft 365 Defender, analistlerin olaylar sayfasının Uyarılar sekmesindeki
 
 Alternatif olarak, bir analist uç nokta üzerinde etkinlik hakkında daha fazla bilgi edinmek için Uç Nokta için Defender'ı kullanabilir. Olay sırasından olayı seçin ve sonra Uyarılar **sekmesini** seçin. Buradan, algılama kaynağını da tanımlayabilirler. Uç Nokta olarak etiketlenmiş algılama EDR Uç Nokta için Defender olan Uç Nokta Algılama ve Yanıt'ın açılımıdır. Analist buradan, güvenlik uzmanı tarafından algılanan bir uyarıyı EDR.
 
-:::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-mde-edr.png" alt-text="Yeni Portalda Uç Nokta Algılama Uç Nokta için Microsoft Defender Yanıt" lightbox="../../media/first-incident-path-identity/first-incident-identity-mde-edr.png"::: 
+:::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-mde-edr.png" alt-text="Yeni Portalda Uç Nokta Algılama Uç Nokta için Microsoft Defender Yanıt" lightbox="../../media/first-incident-path-identity/first-incident-identity-mde-edr.png":::
 
 Uyarı sayfasında, etkilenen cihaz adı, kullanıcı adı, otomatik soruşturma durumu ve uyarı ayrıntıları gibi çeşitli bilgiler görüntülenir. Uyarı hikayesinde, işlem ağacının görsel bir gösterimi yer almaktadır. İşlem ağacı, uyarıyla ilgili üst ve alt işlemlerin hiyerarşik bir gösterimidir.
 

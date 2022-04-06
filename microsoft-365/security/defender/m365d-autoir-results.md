@@ -23,12 +23,12 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.openlocfilehash: 05e16a32fb21f682a756c32201a69c192d398184
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 5a95980147c66fa8655f5c1b2ebe8adfff9e87c0
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63321815"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64501277"
 ---
 # <a name="details-and-results-of-an-automated-investigation"></a>Otomatik bir incelemenin ayrıntıları ve sonuçları
 
@@ -41,7 +41,7 @@ Otomatik Microsoft 365 Defender ile[, otomatik bir](m365d-autoir.md) araştırma
 
 ## <a name="new-unified-investigation-page"></a>(NEW) Birleşik araştırma sayfası
 
-Araştırma sayfası yakın zamanda cihazlarınız, e-postanız ve işbirliği içeriğiniz arasında bilgi içerecek şekilde güncelleştirildi. Yeni, birleşik araştırma sayfası yaygın bir dil tanımlar ve Uç Nokta için [Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) ve İş için [Microsoft Defender genelinde otomatik soruşturmalar için birleşik bir Office 365](../office-365-security/defender-for-office-365.md). Birleştirilmiş araştırma sayfasına erişmek için, göreceğin sarı başlıkta bağlantıyı seçin:
+Araştırma sayfası yakın zamanda cihazlarınız, e-postanız ve işbirliği içeriğiniz arasında bilgi içerecek şekilde güncelleştirildi. Yeni, birleştirilmiş araştırma sayfası yaygın bir dil tanımlar ve hem iş hem de kaynaklarda otomatik Uç Nokta için Microsoft Defender için [birleşik bir](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) [Office 365 için Microsoft Defender](../office-365-security/defender-for-office-365.md). Birleştirilmiş araştırma sayfasına erişmek için, göreceğin sarı başlıkta bağlantıyı seçin:
 
 - Güvenlik ve Uyumluluk <a href="https://go.microsoft.com/fwlink/p/?linkid=2077143" target="_blank">Merkezi'Office 365 herhangi & sayfası</a>
 - Portalda herhangi bir Microsoft 365 Defender sayfası ([https://security.microsoft.com](https://security.microsoft.com))
@@ -89,23 +89,23 @@ Etkilenen cihazlar, kullanıcı hesapları veya posta kutularıyla ilgili tetikl
 
 İşte bir örnek.
 
-:::image type="content" source="../../media/mtp-incidentdetails-tabs.png" alt-text="Araştırma sayfası örneği." lightbox="../../media/mtp-incidentdetails-tabs.png":::
+:::image type="content" source="../../media/mtp-incidentdetails-tabs.png" alt-text="Microsoft 365 Defender portalında araştırma sayfası" lightbox="../../media/mtp-incidentdetails-tabs.png":::
 
 ## <a name="investigation-details"></a>İnceleme ayrıntıları
 
 Bir soruşturmayla ilgili geçmiş, geçerli ve bekleyen etkinlikleri görmek için araştırma ayrıntıları görünümünü kullanın. İşte bir örnek.
 
-:::image type="content" source="../../media/mtp-air-investdetails.png" alt-text="Soruşturma ayrıntıları örneği." lightbox="../../media/mtp-air-investdetails.png":::
+:::image type="content" source="../../media/mtp-air-investdetails.png" alt-text="Microsoft 365 Defender portalında araştırma ayrıntıları sayfası" lightbox="../../media/mtp-air-investdetails.png":::
 
 Araştırma ayrıntıları görünümünde, aşağıdaki tabloda açıklanan Araştırma **grafiği, Uyarılar****,** **Cihazlar**, **Kimlikler**, **Anahtar** **bulguları, Varlıklar**, **Günlük** ve Bekleyen eylemler sekmelerinde bilgileri görebilirsiniz.
 
 > [!NOTE]
-> Araştırma ayrıntıları sayfasında gördüğünüz belirli sekmeler, aboneliğinizin içeriğine bağlıdır. Örneğin, aboneliğiniz Plan 2 için Microsoft Defender Office 365 yoksa, Posta Kutuları sekmesini **görmeyebilirsiniz**.
+> Araştırma ayrıntıları sayfasında gördüğünüz belirli sekmeler, aboneliğinizin içeriğine bağlıdır. Örneğin, aboneliğiniz Plan 2'Office 365 için Microsoft Defender eklense bile Posta Kutuları **sekmesini görmeyebilirsiniz**.
 
 | Sekme | Açıklama |
 |:--------|:--------|
 | **İnceleme grafiği** | Araştırmanın görsel bir gösterimini sağlar. Bulunan varlıkları ve listeleri tehditlerle birlikte, uyarılar ve onay bekleyen eylemlerin olup olmadığını gösterir.<br/>Daha fazla ayrıntı görüntülemek için grafikte bir öğe seçin. Örneğin, Kanıt **simgesini seçmek sizi** Kanıt sekmesine alır ve burada  algılanan varlıkları ve bunların kararlarını görebilirsiniz. |
-| **Uyarılar** | Araştırmayla ilişkili uyarıları listeler. Uyarılar; kullanıcının cihazı, Office uygulamaları, Bulut Uygulamaları için Microsoft Defender ve diğer güvenlik özelliklerinde tehdit koruması Microsoft 365 Defender gelebilir.|
+| **Uyarılar** | Araştırmayla ilişkili uyarıları listeler. Uyarılar, bir kullanıcının cihazı, Office uygulamaları, güvenlik özellikleri ve diğer Microsoft Defender for Cloud Apps tehdit Microsoft 365 Defender gelebilir.|
 | **Cihazlar** | İncelemeye dahil edilen cihazları düzeltme düzeyiyle birlikte listeler. (Düzeltme düzeyleri, cihaz [gruplarının otomasyon düzeyine karşılık geldi](m365d-configure-auto-investigation-response.md#review-or-change-the-automation-level-for-device-groups).) |
 | **Posta Kutuları** |Algılanan tehditlerden etki alan posta kutularını listeler.  |
 | **Kullanıcılar**  | Algılanan tehditlerden etkilenmesi olan kullanıcı hesaplarını listeler. |
@@ -116,5 +116,5 @@ Araştırma ayrıntıları görünümünde, aşağıdaki tabloda açıklanan Ara
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Düzeltme eylemlerini görüntüleme ve yönetme](m365d-autoir-actions.md)
+- [Düzeltme eylemlerini görüntüleyin ve yönetin](m365d-autoir-actions.md)
 - [Düzeltme eylemleri hakkında daha fazla bilgi](m365d-remediation-actions.md)

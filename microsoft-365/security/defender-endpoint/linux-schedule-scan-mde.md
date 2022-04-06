@@ -1,7 +1,7 @@
 ---
-title: Uç nokta (Linux) için Microsoft Defender ile taramaları zamanlama
-description: Kuruluş varlıklarını daha iyi korumak için Uç Nokta (Linux) için Microsoft Defender için otomatik tarama zamanı zamanlamayı öğrenin.
-keywords: microsoft, defender, Endpoint için Microsoft Defender, linux, taramalar, virüsten koruma, uç nokta için Microsoft Defender (linux)
+title: Uç Nokta için Microsoft Defender (Linux) ile taramaları zamanlama
+description: Kuruluş varlıklarını daha iyi korumak için Uç Nokta için Microsoft Defender (Linux) için otomatik tarama zamanlaması yapmayı öğrenin.
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, linux, taramalar, virüsten koruma, uç nokta için microsoft defender (linux)
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,17 +14,17 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ddb02d67866e675febda59fac15e8e494188a47f
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: 05e8fccc200b39a606fa67a857631e215c8d4b1c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62996526"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467631"
 ---
-# <a name="schedule-scans-with-microsoft-defender-for-endpoint-linux"></a>Uç nokta (Linux) için Microsoft Defender ile taramaları zamanlama
+# <a name="schedule-scans-with-microsoft-defender-for-endpoint-linux"></a>Uç Nokta için Microsoft Defender (Linux) ile tarama zamanlama
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 
 Linux için bir tarama çalıştırmak için bkz. [Desteklenen Komutlar](/microsoft-365/security/defender-endpoint/linux-resources#supported-commands).
@@ -95,7 +95,7 @@ CRON_TZ=America/Los_Angeles
 
 İşlerinizi görüntülemek için `sudo crontab -l`
 
-:::image type="content" source="../../media/linux-mdatp-1.png" alt-text="linux mdatp.":::
+:::image type="content" source="../../media/linux-mdatp-1.png" alt-text="Linux mdatp sayfası" lightbox="../../media/linux-mdatp-1.png":::
 
 #### <a name="to-inspect-cron-job-runs"></a>İş ilanlarını incelemek için
 

@@ -19,12 +19,12 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: f50a6750c3f5cd39e68a39cf000ff60e4fec8ef2
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: fa9833572a57e0ea81978f25a7d8d34db068109a
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64568704"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64501123"
 ---
 # <a name="microsoft-defender-for-endpoint-in-microsoft-365-defender"></a>Uç Nokta için Microsoft Defender'da Microsoft 365 Defender
 
@@ -75,7 +75,7 @@ Uç Nokta için Microsoft Defender'daki Microsoft 365 Defender, aynı aynı güv
 >- ABD Savunma Bölümü
 >- Ticari lisanslara sahip tüm ABD kamu kurumları
 
-'da Microsoft 365 Defender bakın<a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">https://security.microsoft.com</a>.
+Microsoft 365 Defender'Microsoft 365 Defender bakın<a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">https://security.microsoft.com</a>.
 
 Avantajlar hakkında daha fazla bilgi edinmek için: [Avantajlara genel Microsoft 365 Defender](microsoft-365-defender.md)
 

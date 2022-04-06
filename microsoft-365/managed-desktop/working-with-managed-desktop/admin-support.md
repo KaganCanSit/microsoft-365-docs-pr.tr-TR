@@ -1,7 +1,7 @@
 ---
-title: Microsoft Yönetilen Masaüstü için yönetici desteği
+title: Destek için Microsoft Managed Desktop
 description: Yöneticiler hizmetle ilgili nasıl yardım edebilir?
-keywords: Microsoft Yönetilen Masaüstü, Microsoft 365, hizmet, belgeler
+keywords: Microsoft Managed Desktop, Microsoft 365, hizmet, belgeler
 ms.service: m365-md
 author: tiaraquan
 ms.localizationpriority: medium
@@ -9,16 +9,16 @@ ms.collection: M365-modern-desktop
 ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: ad8ae319be7515282dc51e9dd9a519660b5d91f6
-ms.sourcegitcommit: 007822d16e332522546e948f5c216327254a4d49
+ms.openlocfilehash: 7f13c11f73d9ddbb9d074782a03fa408ef2c3ec6
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63015331"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595246"
 ---
-# <a name="admin-support-for-microsoft-managed-desktop"></a>Microsoft Yönetilen Masaüstü için yönetici desteği
+# <a name="admin-support-for-microsoft-managed-desktop"></a>Destek için Microsoft Managed Desktop
 
-Microsoft Yönetilen Masaüstü Yöneticisi portalını kullanarak Microsoft'a destek biletleri veya geri bildirim istekleri gönderebilirsiniz. Destek isteklerine her zaman geri bildirim gönderimlerine göre önceliklendirmek gerekir.
+Microsoft Yönetim Portalı'Microsoft Managed Desktop kullanarak destek biletlerini veya geri Microsoft Managed Desktop gönderebilirsiniz. Destek isteklerine her zaman geri bildirim gönderimlerine göre önceliklendirmek gerekir.
 
 ## <a name="open-a-new-support-request"></a>Yeni bir destek isteği açma
 
@@ -27,7 +27,7 @@ Destek istekleri, önem düzeyi tanımı tablosunda belirtilen önem düzeyine g
 **Yeni bir destek isteği açmak için:**
 
 1. E-Microsoft Endpoint Manager [açın](https://endpoint.microsoft.com/) ve Kiracı yönetim **menüsüne** gidin.
-2. Microsoft Yönetilen **Masaüstü bölümünde** Hizmet **istekleri'ne tıklayın**.
+2. Yeni **Microsoft Managed Desktop** Servis **istekleri'ne tıklayın**.
 3. Hizmet istekleri **bölümünde + Yeni** destek **isteği'ne tıklayın**.
 4. Size **gereken yardımla** eşleşen İstek türünü seçin. Aşağıdaki tabloda seçenekler ana hatlarıyla açıklanmıştır.
 5. Önem Derecesi **düzeyini** seçin. Daha fazla bilgi için önem [derecesi tanımı tablosuna bakın](#support-request-severity-definitions).
@@ -39,9 +39,9 @@ Destek istekleri, önem düzeyi tanımı tablosunda belirtilen önem düzeyine g
 
 | Destek isteği türü | Ne zaman kullan |
 | ----- | ----- |
-Olay | Microsoft Yönetilen Masaüstü İşlemleri ekibinin bir kullanıcı sorunu araştırmalarını gerektirir. Örneğin, bir değişikliğin veya hizmet kesintisini yaygın olarak etkiler.
-Bilgi isteği | Ağ, ara sunucu yapılandırması, VPN sistemleri, sertifika süre sonu gibi bir değişiklik planlıyor veya yalnızca hizmet hakkında bazı bilgilere ihtiyacınız var. Microsoft Yönetilen Masaüstü İşlemleri ekibinden gelen yanıt, kurum içinde bir değişikliğin iletişim kurması önerilir.
-Değişiklik isteği | Microsoft Yönetilen Masaüstü İşlemleri ekibinin, cihazları güncelleştirme grupları arasında taşıma gibi bir değişiklik yapmalarını gerektirirsiniz. Tüm değişiklik istekleri önem derecesi C olarak kabul edilir.
+Olay | Microsoft Managed Desktop Operations ekibinin bir kullanıcı sorunu araştırması gerekir. Örneğin, bir değişikliğin veya hizmet kesintisini yaygın olarak etkiler.
+Bilgi isteği | Ağ, ara sunucu yapılandırması, VPN sistemleri, sertifika süre sonu gibi bir değişiklik planlıyor veya yalnızca hizmet hakkında bazı bilgilere ihtiyacınız var. Microsoft Managed Desktop Operations ekibinden gelen bir yanıt, kurum içinde bir değişikliğin iletişim kurması önerilir.
+Değişiklik isteği | Güncelleştirme grupları arasında Microsoft Managed Desktop gibi bir değişiklik yapmak için Güncelleştirme İşlemleri ekibinin bu ekibin ihtiyacı vardır. Tüm değişiklik istekleri önem derecesi C olarak kabul edilir.
 
 > [!IMPORTANT]
 > Bir destek isteği  oluşturmak için birincil ilgili kişi oluşturmanız gerekir. Bu kişi, sorunu çözmek veya istenen bir değişiklikle ilgili soruları yanıtlamak için Hizmet Mühendislerimiz ile çalışmakla sorumludur. Ayrıca, daha önce ilgili odak [alanıyla](../get-started/add-admin-contacts.md) ilgili tüm olay bildirimlerine kopyalanan bir Yönetici kişisi ayarlamanız gerekiyor. Bir davanın birincil kişisi ulaşılamaz durumda ise, bu kişiden bir vakayı teslim almaları istenecek.
@@ -57,7 +57,7 @@ E-posta, ekibimizle etkileşim kurmak için önerilen yaklaşımdır. Tüm deste
 **Tüm etkin davalarınızı görüntülemek için:**
 
 1. Bu [oturum Microsoft Endpoint Manager ve](https://endpoint.microsoft.com/) Kiracı Yönetimi **menüsüne** gidin.
-2. Microsoft Yönetilen **Masaüstü bölümünde** Hizmet isteği'ne **tıklayın**.
+2. Son **Microsoft Managed Desktop Servis** **isteği'ne tıklayın**.
 3. Bu görünümde, ayrıntıları görüntülemek için özet görünümünü dışarı aktarabilirsiniz veya herhangi bir vakayı seçin.
 
 ### <a name="edit-case-details"></a>Vaka ayrıntılarını düzenleme
@@ -75,18 +75,21 @@ E-posta, ekibimizle etkileşim kurmak için önerilen yaklaşımdır. Tüm deste
 
 Bir olay çözülürse artık düzenlenemez. Bir istek 24 saatten kısa bir süre içinde çözülmüşse, Düzenle yerine **yeniden etkinleştirme seçeneğini** **orada görmeye devam edin**. Yeniden etkinleştirildiği zaman, isteği yeniden düzenleyebilirsiniz.  
 
-### <a name="provide-feedback"></a>Geri bildirim sağlama
+> [!NOTE]
+> Önem düzeyi yalnızca belirli destek isteği türleri için ayarlandı. Destek isteği oluşturulduğunda önem düzeyi seçmek bir seçenek değildi, destek isteğinizi düzenleyemezsiniz.
+
+### <a name="provide-feedback"></a>Geri bildirim gönderin
 
 Görüşleriniz için teşekkür ederiz ve bunu yönetici destek deneyimini geliştirmek için kullanıyoruz.
 
-Destek isteği için birincil kişi siz olursanız, Microsoft Yönetilen Masaüstü İşlemleri'nden bir e-posta alırsınız. Sorun çözüldükten sonra, e-posta size deneyiminiz hakkında bilgi sorar. Geri bildirim, hizmeti geliştirmek ve gelecek özelliklere önceliklerini belirlemek için etkin bir şekilde izlenir ve mühendislikle paylaşılır. Geri bildirim formuna kişisel bilgilerinizi dahil etmek yerine kendi deneyiminize odaklanmayı tercih edin. Gizlilik hakkında daha fazla bilgi için Microsoft Gizlilik [Bildirimi'ne bakın](https://privacy.microsoft.com/privacystatement).
+Destek isteği için birincil kişi siz olursanız, Destek İşlemleri'ne bir e-posta Microsoft Managed Desktop alırsınız. Sorun çözüldükten sonra, e-posta size deneyiminiz hakkında bilgi sorar. Geri bildirim, hizmeti geliştirmek ve gelecek özelliklere önceliklerini belirlemek için etkin bir şekilde izlenir ve mühendislikle paylaşılır. Geri bildirim formuna kişisel bilgilerinizi dahil etmek yerine kendi deneyiminize odaklanmayı tercih edin. Gizlilik hakkında daha fazla bilgi için Microsoft Gizlilik [Bildirimi'ne bakın](https://privacy.microsoft.com/privacystatement).
 
 ## <a name="support-request-severity-definitions"></a>Destek isteği önem derecesi tanımları
 
-İlk yanıt süresi, destek isteğinizi gönderdiğiniz ve microsoft Yönetilen Masaüstü mühendisinin sizin için bağlantı verdiği ve destek isteğiniz üzerinde çalışmaya başladığı süredir. İlk yanıt süresi, isteğin iş üzerindeki etkisine göre değişir. bu, isteğin önem düzeyine dayalıdır.
+İlk yanıt süresi, destek isteğinizi gönderdiğiniz ve sizin Microsoft Managed Desktop mühendisinin destek isteğiniz üzerinde çalışmaya başladığı süredir. İlk yanıt süresi, isteğin iş üzerindeki etkisine göre değişir. bu, isteğin önem düzeyine dayalıdır.
 
 > [!NOTE]
-> Bu tabloda "yönetici desteği saatleri", çoğu ülkede Pazartesi'den Cuma'ya kadar günde 24 saat boyunca Yöneticiler için Microsoft Tarafından Yönetilen Masaüstü desteğinin kullanılabilir **olduğu anlamına gelir**. Önem Derecesi A sorunları, haftanın yedi günü içinde, günde 24 saat çalışabilirsiniz.
+> Bu tabloda "yönetici destek saatleri", çoğu Microsoft Managed Desktop Pazartesi-Cuma günleri arasında günde 24 saat yönetici desteğinin kullanılabilir olduğu **anlamına gelir**. Önem Derecesi A sorunları, haftanın yedi günü içinde, günde 24 saat çalışabilirsiniz.
 
 | Önem düzeyi | Durum | İlk yanıt süresi | Sizin yanıt beklenen |
 | ----- | ----- |----- | ----- |
@@ -107,6 +110,6 @@ Aşağıda, bir destek isteği göndererek dikkat edin ek koşulların bir liste
 
 ## <a name="more-resources"></a>Diğer kaynaklar
 
-- [Microsoft Yönetilen Masaüstü için kullanıcı desteği](end-user-support.md).
-- [Microsoft Yönetilen Masaüstü desteği](../service-description/support.md).
-- Microsoft Yönetilen Masaüstü aboneliğiniz zaten varsa, Ayrıntılı yordamları, süreç akışlarını, çalışma yönergelerini ve SSS'leri Microsoft Yönetilen Masaüstü Yönetici Kılavuzu'nda bulabilirsiniz. Daha [Microsoft Endpoint Manager](https://endpoint.microsoft.com/) Kiracı yönetimi bölümüne gidin ve Microsoft Yönetilen Masaüstü altında Çevrimiçi kaynaklar'ı ve ardından Diğer kaynaklar'ı seçin. Yönetici Kılavuzunu burada bulabilirsiniz.
+- [Destek için kullanıcı Microsoft Managed Desktop](end-user-support.md).
+- [Destek Microsoft Managed Desktop](../service-description/support.md).
+- Microsoft Managed Desktop abonesiyseniz, Microsoft Managed Desktop Kılavuzu'Microsoft Managed Desktop ayrıntılı yordamları, süreç akışlarını, iş yönergelerini ve SSS'leri bulabilirsiniz. Daha [Microsoft Endpoint Manager](https://endpoint.microsoft.com/) Kiracı yönetimi bölümüne gidin ve Kiracı yönetimi'nin Microsoft Managed Desktop Çevrimiçi kaynaklar'ı ve ardından Diğer kaynaklar'ı seçin. Yönetici Kılavuzunu burada bulabilirsiniz.

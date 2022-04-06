@@ -1,0 +1,491 @@
+- name: Microsoft 365 Defender
+  href: index.yml
+  expanded: true
+  items:
+    - name: Genel bakış
+      items:
+        - name: Microsoft 365 Defender
+          href: microsoft-365-defender.md
+        - name: Microsoft 365 Defender'daki yenilikler
+          href: whats-new.md
+        - name: Microsoft 365 Defender hizmetleri
+          items:
+            - name: Microsoft 365 Defender'da Uç Nokta için Defender
+              href: microsoft-365-security-center-mde.md
+            - name: Microsoft 365 Defender'da Office 365 için Defender
+              href: microsoft-365-security-center-mdo.md
+            - name: Uç Nokta için Defender'ı Microsoft 365 Defender'a yönlendirme
+              href: microsoft-365-security-mde-redirection.md
+        - name: Microsoft 365 Defender'ın Microsoft Sentinel ile tümleştirmesi
+          href: microsoft-365-defender-integration-with-azure-sentinel.md
+        - name: ABD Hükümeti müşterileri için Microsoft 365 Defender
+          href: usgov.md
+        - name: Sektör testleri
+          href: ./top-scoring-industry-tests.md
+    - name: Plan
+      items:
+        - name: Önkoşullar
+          href: prerequisites.md
+        - name: Veri güvenliği ve gizliliği
+          href: data-privacy.md
+        - name: Microsoft güvenlik portalları
+          href: portals.md
+    - name: Değerlendirme ve pilot
+      items:
+        - name: Genel bakış
+          href: eval-overview.md
+        - name: Adım 1. Değerlendirme ortamını oluşturun
+          href: eval-create-eval-environment.md
+        - name: Adım 2. Kimlik için Microsoft Defender
+          items:
+            - name: Genel bakış
+              href: eval-defender-identity-overview.md
+            - name: Mimari gereksinimleri gözden geçirin
+              href: eval-defender-identity-architecture.md
+            - name: Değerlendirmeyi etkinleştirin
+              href: eval-defender-identity-enable-eval.md
+            - name: Kimlik için Pilot Defender
+              href: eval-defender-identity-pilot.md
+        - name: Adım 3. Office 365 için Defender
+          items:
+            - name: Genel bakış
+              href: eval-defender-office-365-overview.md
+            - name: Mimari gereksinimleri gözden geçirin
+              href: eval-defender-office-365-architecture.md
+            - name: Değerlendirmeyi etkinleştirin
+              href: eval-defender-office-365-enable-eval.md
+            - name: Office için Pilot Defender
+              href: eval-defender-office-365-pilot.md
+        - name: Adım 4. Uç Nokta için Defender
+          items:
+            - name: Genel bakış
+              href: eval-defender-endpoint-overview.md
+            - name: Mimari gereksinimleri gözden geçirin
+              href: eval-defender-endpoint-architecture.md
+            - name: Değerlendirmeyi etkinleştirin
+              href: eval-defender-endpoint-enable-eval.md
+            - name: Uç Nokta için Pilot Defender
+              href: eval-defender-endpoint-pilot.md
+        - name: Adım 5. Bulut Uygulamaları için Microsoft Defender
+          items:
+            - name: Genel bakış
+              href: eval-defender-mcas-overview.md
+            - name: Mimari gereksinimleri gözden geçirin
+              href: eval-defender-mcas-architecture.md
+            - name: Değerlendirmeyi etkinleştirin
+              href: eval-defender-mcas-enable-eval.md
+            - name: Bulut Uygulamaları için Pilot Microsoft Defender
+              href: eval-defender-mcas-pilot.md
+        - name: 6. Adım. Araştırma ve yanıtlama
+          items:
+            - name: Genel bakış
+              href: eval-defender-investigate-respond.md
+            - name: Saldırı simülasyonu yapın
+              href: eval-defender-investigate-respond-simulate-attack.md
+            - name: Özellikleri deneyin
+              href: eval-defender-investigate-respond-additional.md
+        - name: 7. Adım. Deneme sürümünü üretime yükseltin
+          href: eval-defender-promote-to-production.md
+    - name: Kullanmaya başlayın
+      items:
+        - name: Genel bakış
+          href: get-started.md
+        - name: 1. Microsoft 365 Defender’ı açın
+          href: m365d-enable.md
+        - name: 2. Desteklenen hizmetleri dağıtın
+          href: deploy-supported-services.md
+        - name: Microsoft 365 Defender’ı Açma SSS
+          href: m365d-enable-faq.md
+        - name: Güvenlik personelinizi eğitin
+          href: microsoft-365-defender-train-security-staff.md
+    - name: Tehditlere karşı korunun
+      items:
+        - name: Microsoft Güvenlik Puanı
+          items:
+            - name: Güvenlik Puanına genel bakış
+              href: microsoft-secure-score.md
+            - name: Güvenlik duruşlarınızı değerlendirin
+              href: microsoft-secure-score-improvement-actions.md
+            - name: Puan geçmişinizi izleyin ve hedefleri karşılayın
+              href: microsoft-secure-score-history-metrics-trends.md
+            - name: Yapılacak yenilikler
+              href: microsoft-secure-score-whats-coming.md
+            - name: Yenilikler
+              href: microsoft-secure-score-whats-new.md
+        - name: Uç noktalarınızı koruyun
+          href: ../defender-endpoint/index.yml
+        - name: Kimliklerinizi koruyun
+          items:
+            - name: Algılayıcı ayarları ve sistem durumu
+              href: ../defender-identity/sensor-health.md
+            - name: Dizin Hizmetleri hesabı
+              href: ../defender-identity/directory-service-accounts.md
+            - name: VPN tümleştirmesi
+              href: ../defender-identity/vpn-integration.md
+            - name: Varlık etiketlerini ayarlayın
+              href: ../defender-identity/entity-tags.md
+            - name: Güvenlik uyarılarını yönetin
+              href: ../defender-identity/manage-security-alerts.md
+            - name: Algılama dışlamalarını yapılandırın
+              href: ../defender-identity/exclusions.md
+            - name: E-posta ve syslog bildirimleri
+              href: ../defender-identity/notifications.md
+        - name: Office 365 iş yüklerinizi koruyun
+          href: ../office-365-security/index.yml
+    - name: Tehditleri araştırın ve karşı yanıt verin
+      items:
+        - name: Genel bakış
+          href: incident-response-overview.md
+        - name: Olaylara karşı yanıt verin
+          items:
+            - name: Genel bakış
+              href: incidents-overview.md
+            - name: Olaylara öncelik belirleyin
+              href: incident-queue.md
+            - name: Olayları yönetin
+              href: manage-incidents.md
+            - name: İlk olayınıza yanıt verin
+              items:
+                - name: Genel bakış
+                  href: first-incident-overview.md
+                - name: Hazırlanın
+                  href: first-incident-prepare.md
+                - name: Adım 1. Önceliklendirme ve analiz
+                  href: first-incident-analyze.md
+                - name: Adım 2. Düzeltin
+                  href: first-incident-remediate.md
+                - name: Adım 3. Gözden geçirin
+                  href: first-incident-post.md
+                - name: Ek olay örnekleri
+                  items:
+                    - name: Kimlik avı postası
+                      href: first-incident-path-phishing.md
+                    - name: Kimlik
+                      href: first-incident-path-identity.md
+            - name: Olayları araştırın
+              items:
+                - name: Olaylar
+                  href: investigate-incidents.md
+                - name: Uyarılar
+                  href: investigate-alerts.md
+                - name: Taktik defterini notlandırma uyarısı
+                  items:
+                    - name: Genel bakış
+                      href: alert-grading-playbooks.md
+                    - name: Şüpheli e-posta iletme etkinliği
+                      href: alert-grading-playbook-email-forwarding.md
+                    - name: Şüpheli gelen kutusu iletme kuralları
+                      href: alert-grading-playbook-inbox-forwarding-rules.md
+                    - name: Şüpheli gelen kutusu işleme kuralları
+                      href: alert-grading-playbook-inbox-manipulation-rules.md
+                - name: Kullanıcılar
+                  href: investigate-users.md
+            - name: Olay yanıtı taktik defterleri
+              href: /security/compass/incident-response-playbooks
+        - name: Otomatik araştırma ve yanıtı yönetin
+          items:
+            - name: Genel bakış
+              href: m365d-autoir.md
+            - name: Özellikleri yapılandırın
+              href: m365d-configure-auto-investigation-response.md
+            - name: Düzeltme eylemleri
+              href: m365d-remediation-actions.md
+            - name: İşlem merkezini kullanın
+              href: m365d-action-center.md
+            - name: Düzeltme eylemlerini görüntüleyin ve yönetin
+              href: m365d-autoir-actions.md
+            - name: Ayrıntıları ve sonuçları görüntüleyin
+              href: m365d-autoir-results.md
+            - name: Yanlış pozitifleri ve negatifleri ele alın
+              href: m365d-autoir-report-false-positives-negatives.md
+        - name: Gelişmiş avcılıkla tehdit arayın
+          items:
+            - name: Genel bakış
+              href: advanced-hunting-overview.md
+            - name: 'Öğrenin, eğitin ve örnek alın'
+              items:
+                - name: Sorgu dilini öğrenin
+                  href: advanced-hunting-query-language.md
+                - name: Uzman eğitimi alın
+                  href: advanced-hunting-expert-training.md
+                - name: Paylaşılan sorguları kullanın
+                  href: advanced-hunting-shared-queries.md
+                - name: 'Cihazlar, e-postalar, uygulamalar ve kimlikler arasında avlayın'
+                  href: advanced-hunting-query-emails-devices.md
+                - name: Fidye yazılımı avlayın
+                  href: advanced-hunting-find-ransomware.md
+                - name: Gelişmiş avcılık örneği
+                  href: advanced-hunting-example.md
+                - name: Uç Nokta için Defender'dan geçiş yapın
+                  href: advanced-hunting-migrate-from-mde.md
+            - name: Sorgu sonuçlarıyla çalışın
+              href: advanced-hunting-query-results.md
+            - name: Sorgu sonuçları üzerinde işlem yapın
+              href: advanced-hunting-take-action.md
+            - name: Go Hunt ile hızla araştırın
+              href: advanced-hunting-go-hunt.md
+            - name: Sorgu sonuçlarını bir olayla bağlayın
+              href: advanced-hunting-link-to-incident.md
+            - name: En iyi duruma getirin ve hataları işleyin
+              items:
+                - name: Sorgu en iyi yöntemlerini uygulayın
+                  href: advanced-hunting-best-practices.md
+                - name: Hataları işleyin
+                  href: advanced-hunting-errors.md
+                - name: Kotalar ve kullanım parametreleri
+                  href: advanced-hunting-limits.md
+                - name: Veri kapsamını genişletin
+                  href: advanced-hunting-extend-data.md
+            - name: Veri şeması
+              items:
+                - name: Şemayı anlayın
+                  href: advanced-hunting-schema-tables.md
+                - name: Şema adlandırma değişiklikleri
+                  href: advanced-hunting-schema-changes.md
+                - name: AADSignInEventsBeta
+                  href: advanced-hunting-aadsignineventsbeta-table.md
+                - name: AADSpnSignInEventsBeta
+                  href: advanced-hunting-aadspnsignineventsbeta-table.md
+                - name: AlertEvidence
+                  href: advanced-hunting-alertevidence-table.md
+                - name: AlertInfo
+                  href: advanced-hunting-alertinfo-table.md
+                - name: CloudAppEvents
+                  href: advanced-hunting-cloudappevents-table.md
+                - name: DeviceEvents
+                  href: advanced-hunting-deviceevents-table.md
+                - name: DeviceFileCertificateInfo
+                  href: advanced-hunting-devicefilecertificateinfo-table.md
+                - name: DeviceFileEvents
+                  href: advanced-hunting-devicefileevents-table.md
+                - name: DeviceImageLoadEvents
+                  href: advanced-hunting-deviceimageloadevents-table.md
+                - name: DeviceInfo
+                  href: advanced-hunting-deviceinfo-table.md
+                - name: DeviceLogonEvents
+                  href: advanced-hunting-devicelogonevents-table.md
+                - name: DeviceNetworkEvents
+                  href: advanced-hunting-devicenetworkevents-table.md
+                - name: DeviceNetworkInfo
+                  href: advanced-hunting-devicenetworkinfo-table.md
+                - name: DeviceProcessEvents
+                  href: advanced-hunting-deviceprocessevents-table.md
+                - name: DeviceRegistryEvents
+                  href: advanced-hunting-deviceregistryevents-table.md
+                - name: DeviceTvmSecureConfigurationAssessment
+                  href: advanced-hunting-devicetvmsecureconfigurationassessment-table.md
+                - name: DeviceTvmSecureConfigurationAssessmentKB
+                  href: advanced-hunting-devicetvmsecureconfigurationassessmentkb-table.md
+                - name: DeviceTvmSoftwareEvidenceBeta
+                  href: advanced-hunting-devicetvmsoftwareevidencebeta-table.md
+                - name: DeviceTvmSoftwareInventory
+                  href: advanced-hunting-devicetvmsoftwareinventory-table.md
+                - name: DeviceTvmSoftwareVulnerabilities
+                  href: advanced-hunting-devicetvmsoftwarevulnerabilities-table.md
+                - name: DeviceTvmSoftwareVulnerabilitiesKB
+                  href: advanced-hunting-devicetvmsoftwarevulnerabilitieskb-table.md
+                - name: EmailAttachmentInfo
+                  href: advanced-hunting-emailattachmentinfo-table.md
+                - name: EmailEvents
+                  href: advanced-hunting-emailevents-table.md
+                - name: EmailPostDeliveryEvents
+                  href: advanced-hunting-emailpostdeliveryevents-table.md
+                - name: EmailUrlInfo
+                  href: advanced-hunting-emailurlinfo-table.md
+                - name: IdentityDirectoryEvents
+                  href: advanced-hunting-identitydirectoryevents-table.md
+                - name: IdentityInfo
+                  href: advanced-hunting-identityinfo-table.md
+                - name: IdentityLogonEvents
+                  href: advanced-hunting-identitylogonevents-table.md
+                - name: IdentityQueryEvents
+                  href: advanced-hunting-identityqueryevents-table.md
+            - name: İşlevler
+              items:
+                - name: AssignedIPAddresses()
+                  href: advanced-hunting-assignedipaddresses-function.md
+                - name: DeviceFromIP()
+                  href: advanced-hunting-devicefromip-function.md
+                - name: FileProfile()
+                  href: advanced-hunting-fileprofile-function.md
+            - name: Özel algılamalar
+              items:
+                - name: Özel algılamalara genel bakış
+                  href: custom-detections-overview.md
+                - name: Algılama kuralları oluşturun ve yönetin
+                  href: custom-detection-rules.md
+        - name: Ortaya çıkan tehditleri izleyin ve yanıtlayın
+          items:
+            - name: Tehdit analizine genel bakış
+              href: threat-analytics.md
+            - name: Analist raporunu anlayın
+              href: threat-analytics-analyst-reports.md
+        - name: Microsoft Tehdit Uzmanları ile işbirliği yapın
+          items:
+            - name: Genel bakış
+              href: microsoft-threat-experts.md
+            - name: Microsoft Tehdit Uzmanları özelliklerini yapılandırın ve yönetin
+              href: configure-microsoft-threat-experts.md
+    - name: Güvenlik işlemleri kılavuzu
+      items:
+        - name: Genel bakış
+          href: integrate-microsoft-365-defender-secops.md
+        - name: Adım 1. Faaliyete hazır olma durumu
+          href: integrate-microsoft-365-defender-secops-plan.md
+        - name: Adım 2. Sıfır Güven kullanarak hazırlık değerlendirmesi
+          href: integrate-microsoft-365-defender-secops-readiness.md
+        - name: Adım 3. SOC hizmetleriniz ile tümleştirme
+          href: integrate-microsoft-365-defender-secops-services.md
+        - name: 'Adım 4. Roller, sorumluluklar ve gözetim'
+          href: integrate-microsoft-365-defender-secops-roles.md
+        - name: Adım 5. Test kullanım örnekleri
+          href: integrate-microsoft-365-defender-secops-use-cases.md
+        - name: 6. Adım. SOC bakım görevleri
+          href: integrate-microsoft-365-defender-secops-tasks.md
+    - name: Başvuru
+      items:
+        - name: İzinler ve Ayarlar
+          items:
+            - name: Erişimi yönetin
+              href: m365d-permissions.md
+            - name: Rol tabanlı erişimde özel roller
+              href: custom-roles.md
+            - name: Saat dilimini ayarlayın
+              href: m365d-time-zone.md
+            - name: Cihaz profillerini görüntüleyin
+              href: device-profile.md
+            - name: Geri bildirim gönderin
+              href: feedback.md
+            - name: Yönetilen hizmet sağlayıcı (MSSP) erişimi sağlayın
+              href: mssp-access.md
+            - name: ServiceNow biletleri ve görevleri oluşturun
+              items:
+                - name: ServiceNow tümleştirmeye genel bakış
+                  href: ./tickets.md
+        - name: Microsoft 365 Defender API'leri
+          items:
+            - name: Microsoft 365 Defender API'lerine genel bakış
+              href: api-overview.md
+            - name: Desteklenen Microsoft 365 Defender API'leri
+              href: api-supported.md
+            - name: Microsoft 365 Defender API'lerini kullanmaya başlayın
+              items:
+                - name: Microsoft 365 Defender API lisansı ve kullanım koşulları
+                  href: api-terms.md
+                - name: Microsoft 365 Defender API'lerine erişim
+                  href: api-access.md
+                - name: Merhaba Dünya örneği
+                  href: api-hello-world.md
+                - name: Uygulama bağlamıyla erişim alın
+                  href: api-create-app-web.md
+                - name: Kullanıcı bağlamıyla erişim alın
+                  href: api-create-app-user-context.md
+                - name: İş ortağı uygulaması erişimi alın
+                  href: api-partner-access.md
+                - name: Diğer API kaynakları
+                  href: api-articles.md
+            - name: Microsoft 365 Defender API'leri ve şeması
+              items:
+                - name: Yaygın REST API hata kodları
+                  href: api-error-codes.md
+                - name: Akış API'si
+                  items:
+                    - name: Microsoft 365 Akış API'si
+                      href: streaming-api.md
+                    - name: Gelişmiş avcılık olaylarını Azure Olayları merkezine aktarın
+                      href: streaming-api-event-hub.md
+                    - name: Depolama hesabınızda gelişmiş avcılık olaylarını çevrimiçi yürütün
+                      href: streaming-api-storage.md
+                    - name: Desteklenen Akış olayı türleri
+                      href: supported-event-types.md
+                    - name: Olay merkezini yapılandırın
+                      href: configure-event-hub.md
+                - name: Gelişmiş Avcılık API'si
+                  href: api-advanced-hunting.md
+                - name: Olay API'leri
+                  items:
+                    - name: Olay yöntemleri ve özellikleri
+                      href: api-incident.md
+                    - name: Olayları listeleyin
+                      href: api-list-incidents.md
+                    - name: Olayları güncelleştirin
+                      href: api-update-incidents.md
+                    - name: Olayı Alın
+                      href: api-get-incident.md
+            - name: Defender Microsoft 365 getirin
+              href: fetch-incidents.md
+            - name: SIEM tümleştirmesi
+              items:
+                - name: SIEM araçlarınızı Microsoft 365 Defender ile tümleştirin
+                  href: configure-siem-defender.md
+                - name: SIEM araçlarını tümleştirmeyle ilgili sorunları giderin
+                  href: ../defender-endpoint/troubleshoot-siem.md
+            - name: Tehdit bilgileri kavramlarını anlayın
+              href: ../defender-endpoint/threat-indicator-concepts.md
+        - name: Güvenlik bilgileri
+          items:
+            - name: Güvenlik Tarayıcısı’nı indirin
+              href: ../intelligence/safety-scanner-download.md
+            - name: Kötü amaçlı yazılımları ve diğer tehditleri anlayın
+              href: ../intelligence/understanding-malware.md
+              items:
+                - name: Kötü amaçlı yazılım bulaşmasını önleyin
+                  href: ../intelligence/prevent-malware-infection.md
+                - name: Kötü amaçlı yazılım adları
+                  href: ../intelligence/malware-naming.md
+                - name: KriptoPara madenicileri
+                  href: ../intelligence/coinminer-malware.md
+                - name: Açıklardan yararlanın ve açıklardan yararlanma setleri
+                  href: ../intelligence/exploits-malware.md
+                - name: Dosyasız tehditler
+                  href: ../intelligence/fileless-threats.md
+                - name: Makro kötü amaçlı yazılımı
+                  href: ../intelligence/macro-malware.md
+                - name: Kimlik Avı
+                  href: ../intelligence/phishing.md
+                - name: Fidye Yazılımı
+                  href: /security/compass/human-operated-ransomware
+                - name: Rootkits
+                  href: ../intelligence/rootkits-malware.md
+                - name: Tedarik zinciri saldırıları
+                  href: ../intelligence/supply-chain-malware.md
+                - name: Teknik destek dolandırıcılığı
+                  href: ../intelligence/support-scams.md
+                - name: Trojan
+                  href: ../intelligence/trojans-malware.md
+                - name: İstenmeyen yazılım
+                  href: ../intelligence/unwanted-software.md
+                - name: Solucanlar
+                  href: ../intelligence/worms-malware.md
+            - name: Microsoft’un kötü amaçlı yazılımları ve PUA'yı tanımlaması
+              href: ../intelligence/criteria.md
+            - name: Dosyaları analiz için gönderin
+              href: ../intelligence/submission-guide.md
+            - name: Sektör işbirliği programları
+              href: ../intelligence/cybersecurity-industry-partners.md
+            - name: Virüs bilgileri ortaklığı
+              href: ../intelligence/virus-information-alliance-criteria.md
+            - name: Microsoft virüs girişimi
+              href: ../intelligence/virus-initiative-criteria.md
+            - name: Eşgüdümlü kötü amaçlı yazılım silme
+              href: ../intelligence/coordinated-malware-eradication.md
+            - name: Microsoft Bug Bounty Programı
+              href: ../intelligence/microsoft-bug-bounty-program.md
+            - name: Geliştiriciler için bilgiler
+              items:
+                - name: Yazılım geliştirici SSS
+                  href: ../intelligence/developer-faq.yml
+                - name: Yazılım geliştirici kaynakları
+                  href: ../intelligence/developer-resources.md
+    - name: Microsoft 365 Defender belgeleri
+      items:
+        - name: Office 365 için Defender
+          href: ../office-365-security/index.yml
+        - name: Uç Nokta için Defender
+          href: ../defender-endpoint/index.yml
+        - name: Kimlik için Microsoft Defender
+          href: /defender-for-identity
+        - name: Bulut Uygulamaları için Defender
+          href: /cloud-app-security
+        - name: İş için Defender
+          href: ../defender-business/index.yml

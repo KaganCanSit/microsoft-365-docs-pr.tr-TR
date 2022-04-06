@@ -1,7 +1,7 @@
 ---
-title: Uç Nokta için Microsoft Defender-Onboard'a geçiş
-description: Uç nokta için Microsoft Defender'a geçiş yapma. Cihazları ekin ve Microsoft olmayan çözümlerinizi kaldırın.
-keywords: geçiş, Uç Nokta için Microsoft Defender, edr
+title: Uç Nokta için Microsoft Defender - Onboard'a geçiş
+description: Geçiş tarak Uç Nokta için Microsoft Defender. Cihazları ekin ve Microsoft olmayan çözümlerinizi kaldırın.
+keywords: migration, Uç Nokta için Microsoft Defender, edr
 ms.prod: m365-security
 ms.technology: mde
 ms.mktglfcycl: deploy
@@ -21,23 +21,23 @@ ms.custom:
 - migrationguides
 - admindeeplinkDEFENDER
 ms.topic: article
-ms.date: 12/02/2021
+ms.date: 03/28/2022
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
-ms.openlocfilehash: 3e92a0525dd70c0f420f581f86f4d6ceb7fd6326
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 1397c34e8e4a7f1fcb20df192409bd57bc50f40b
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015215"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507131"
 ---
-# <a name="switch-to-microsoft-defender-for-endpoint---phase-3-onboard"></a>Uç nokta için Microsoft Defender'a geçiş - Aşama 3: Ekleme
+# <a name="switch-to-microsoft-defender-for-endpoint---phase-3-onboard"></a>Geçiş: Uç Nokta için Microsoft Defender - Aşama 3: Ekleme
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-| [![Aşama 1: Hazırla3.](images/phase-diagrams/prepare.png)](switch-to-mde-phase-1.md)<br/>[Aşama 1: Hazırlama](switch-to-mde-phase-1.md) | [![Aşama 2: Ayarlama](images/phase-diagrams/setup.png)](switch-to-mde-phase-2.md)<br/>[Aşama 2: Ayarlama](switch-to-mde-phase-2.md) | ![Aşama 3: Ekleme](images/phase-diagrams/onboard.png)<br/>Aşama 3: Ekleme |
+| [![Aşama 1: Hazırla3.](images/phase-diagrams/prepare.png#lightbox)](switch-to-mde-phase-1.md)<br/>[Aşama 1: Hazırlama](switch-to-mde-phase-1.md) | [![Aşama 2: Ayarlama](images/phase-diagrams/setup.png#lightbox)](switch-to-mde-phase-2.md)<br/>[Aşama 2: Ayarlama](switch-to-mde-phase-2.md) | ![Aşama 3: Ekleme](images/phase-diagrams/onboard.png#lightbox)<br/>Aşama 3: Ekleme |
 |--|--|--|
 || |*Buradasınız!* |
 
@@ -50,7 +50,7 @@ ms.locfileid: "63015215"
 5. [Microsoft olmayan çözümlerinizi kaldırın](#uninstall-your-non-microsoft-solution).
 6. [Uç Nokta için Defender'ın düzgün çalıştığından emin olun](#make-sure-defender-for-endpoint-is-working-correctly).
 
-## <a name="onboard-devices-to-microsoft-defender-for-endpoint"></a>Cihazları Uç Nokta için Microsoft Defender'a ekleme
+## <a name="onboard-devices-to-microsoft-defender-for-endpoint"></a>Cihazları mobil cihaza Uç Nokta için Microsoft Defender
 
 1. Erişim portalına Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com) ) ve oturum açın.
 
@@ -61,19 +61,19 @@ ms.locfileid: "63015215"
 4. Dağıtım **yöntemi'nin** altında bir seçenek belirtin. Kuruluş cihazlarınızı ekleme için bağlantıları ve istemleri izleyin. Yardıma mı ihtiyacınız var? Ekleme [yöntemlerine bakın](#onboarding-methods) (bu makalede).
 
 > [!NOTE]
-> Ekleme sırasında bir sorun olursa bkz. Uç nokta ekleme [sorunları için Microsoft Defender'da sorun giderme](troubleshoot-onboarding.md). Bu makalede, uç noktalarda ekleme sorunlarının ve yaygın hataların nasıl çözül olduğu açıklanmıştır.
+> Ekleme sırasında bir sorun olursa bkz. Ekleme [Uç Nokta için Microsoft Defender giderme](troubleshoot-onboarding.md). Bu makalede, uç noktalarda ekleme sorunlarının ve yaygın hataların nasıl çözül olduğu açıklanmıştır.
 
 ### <a name="onboarding-methods"></a>Ekleme yöntemleri
 
 > [!IMPORTANT]
-> Bulut için Microsoft Defender kullanıyorsanız bkz. [Bulut için Microsoft Defender ile Tümleştirme](configure-server-endpoints.md#integration-with-microsoft-defender-for-cloud).
+> Bulut için Microsoft Defender kullanıyorsanız, bkz. [Bulut için Microsoft Defender](configure-server-endpoints.md#integration-with-microsoft-defender-for-cloud).
 
 Dağıtım yöntemleri, işletim sistemine ve tercih edilen yöntemlere bağlı olarak değişir. Aşağıdaki tabloda, Uç Nokta için Defender'a eklemeye yardımcı olacak kaynaklar listeledir:
 
 |İşletim sistemleri  |Yöntemler  |
 |---------|---------|
-|Windows 10 veya sonrası<br/><br/>Windows Server 2019 veya sonraki bir sonrakini yükleme<br/><br/>Windows Server, sürüm 1803 veya sonrası<br/><br/>Windows Server 2012 R2 ve 2016<sup>[[1](#fn1)]<sup>  |   [Yerel betik (10 cihaza kadar)](configure-endpoints-script.md)<br><br/>   [Grup İlkesi](configure-endpoints-gp.md)<br/><br/>[Microsoft Uç Noktası Yapılandırma Yöneticisi](configure-endpoints-sccm.md)<br/><br/>[Microsoft Endpoint Manager/ Mobil Cihaz Yönetimi (Intune)](configure-endpoints-mdm.md)<br>    [VDI betikleri](configure-endpoints-vdi.md) <br><br> **NOT**: Yerel bir betik kavram kanıtı için uygundur, ancak üretim dağıtımı için kullanılmaları gerekir. Üretim dağıtımı için Grup İlkesi, Grup İlkesi, Microsoft Endpoint Configuration Manager Intune'ı kullanmanızı öneririz. |
-|Windows Server 2008 R2 SP1 | [Microsoft Monitoring Agent (MMA) veya](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) Bulut [için Microsoft Defender](/azure/security-center/security-center-wdatp) <br><br> **NOT**: Microsoft Monitoring Agent Azure Log Analytics aracısı oldu. Daha fazla bilgi edinmek için bkz. [Log Analytics aracıya genel bakış](/azure/azure-monitor/platform/log-analytics-agent).  |
+|Windows 10 veya sonrası<br/><br/>Windows Server 2019 veya sonraki bir sonrakini yükleme<br/><br/>Windows Server, sürüm 1803 veya sonrası<br/><br/>Windows Server 2012 R2 ve 2016<sup>[[1](#fn1)]<sup>  |   [Yerel betik (10 cihaza kadar)](configure-endpoints-script.md)<br><br/>   [Grup İlkesi](configure-endpoints-gp.md)<br/><br/>[Microsoft Uç Noktası Yapılandırma Yöneticisi](configure-endpoints-sccm.md)<br/><br/>[Microsoft Endpoint Manager/ Mobil Cihaz Yönetimi (Intune)](configure-endpoints-mdm.md)<br>    [VDI betikleri](configure-endpoints-vdi.md) <br><br> **NOT**: Yerel bir betik kavram kanıtı için uygundur, ancak üretim dağıtımı için kullanılmaları gerekir. Üretim dağıtımı için, üretim ürün grup ilkesi, Microsoft Endpoint Configuration Manager veya destek Intune. |
+|Windows Server 2008 R2 SP1 | [Microsoft Monitoring Agent (MMA) veya](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) [Bulut için Microsoft Defender](/azure/security-center/security-center-wdatp) <br><br> **NOT**: Microsoft Monitoring Agent Azure Log Analytics aracısı oldu. Daha fazla bilgi edinmek için bkz. [Log Analytics aracıya genel bakış](/azure/azure-monitor/platform/log-analytics-agent).  |
 |Windows 8.1 Enterprise<br/><br/>Windows 8.1 Pro<br/><br/>Windows 7 SP1 Pro<br/><br/>Windows 7 SP1| [Microsoft Monitoring Agent (MMA)](onboard-downlevel.md) <br><br> **NOT**: Microsoft Monitoring Agent Azure Log Analytics aracısı oldu. Daha fazla bilgi edinmek için bkz. [Log Analytics aracıya genel bakış](/azure/azure-monitor/platform/log-analytics-agent).  
 | macOS (sistem [gereksinimlerine bakın)](microsoft-defender-endpoint-mac.md) | [Yerel betik](mac-install-manually.md)<br/><br/>[Microsoft Endpoint Manager](mac-install-with-intune.md)<br/><br/>[JAMF Pro](mac-install-with-jamf.md)<br/><br/>[Mobil Cihaz Yönetimi](mac-install-with-other-mdm.md)   |
 | Linux (sistem [gereksinimlerine bakın](microsoft-defender-endpoint-linux.md#system-requirements)) |  [Yerel betik](linux-install-manually.md) <br><br/> [Operasyon](linux-install-with-puppet.md) <br><br/> [Ansible](linux-install-with-ansible.md)|  
@@ -131,9 +131,9 @@ Windows Server Microsoft Defender Virüsten Koruma, sürüm 1803 veya daha yenis
 > [!NOTE]
 > Kayıt defteri anahtarını ayarlamak için başka yöntemler kullanabilirsiniz, örneğin:
 >
-> - [Grup İlkesi Tercihi](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn581922(v=ws.11))
-> - [Yerel Grup İlkesi Nesne aracı](/windows/security/threat-protection/security-compliance-toolkit-10#what-is-the-local-group-policy-object-lgpo-tool)
-> - [Configuration Manager'da bir paket](/mem/configmgr/apps/deploy-use/packages-and-programs)
+> - [grup ilkesi Tercihi](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn581922(v=ws.11))
+> - [Local grup ilkesi Object tool](/windows/security/threat-protection/security-compliance-toolkit-10#what-is-the-local-group-policy-object-lgpo-tool)
+> - [Bir paket Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs)
 
 ### <a name="start-microsoft-defender-antivirus-on-windows-server-2016"></a>Microsoft Defender Virüsten Koruma'da Windows Server 2016
 
@@ -157,7 +157,10 @@ Bu noktada:
 - Uç nokta için Defender'a kuruluş cihazlarınızı ekleme ve
 - Microsoft Defender Virüsten Koruma yüklü ve etkinse,
 
-Ardından, bir sonraki adımınız Microsoft dışı virüsten koruma, kötü amaçlı yazılımdan koruma ve uç nokta koruma çözümlerinizi kaldırmaktır. Microsoft olmayan çözümlerinizi kaldırdığınız zaman, pasif Microsoft Defender Virüsten Koruma moduna geçer. Çoğu durumda bu otomatik olarak gerçekleşir.
+Ardından, bir sonraki adımınız Microsoft dışı virüsten koruma, kötü amaçlı yazılımdan koruma ve uç nokta koruma çözümlerinizi kaldırmaktır. Microsoft olmayan çözümlerinizi kaldırdığınız zaman, pasif Microsoft Defender Virüsten Koruma moduna geçer. Çoğu durumda bu otomatik olarak gerçekleşir. 
+
+> [!IMPORTANT]
+> Herhangi bir nedenden Microsoft Defender Virüsten Koruma Microsoft dışı virüsten koruma/kötü amaçlı yazılımlardan koruma çözümlerinizi kaldırdikten sonra herhangi bir nedenle etkin moda giremenizi sağlarsa, bkz. Microsoft Defender Virüsten Koruma edilgen modunda takılmış [gibi görünüyorsa](switch-to-mde-troubleshooting.md#microsoft-defender-antivirus-seems-to-be-stuck-in-passive-mode).
 
 Microsoft olmayan çözümlerinizi kaldırma konusunda yardım almak için, çözümle ilgili teknik destek ekibine başvurun.
 

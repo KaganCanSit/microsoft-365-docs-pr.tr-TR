@@ -16,13 +16,13 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid: ''
 ms.localizationpriority: medium
-description: Kuruluş içinde yer alan diğer kuruluşlar için deneme pilot SharePoint Syntex planlamayı ve çalıştırmayı öğrenin.
-ms.openlocfilehash: 74b44c14140f26e0744aac73fd948e58d9d33e24
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Kuruluş içinde yer alan diğer kuruluşlar için deneme sürümü programını planlamayı, SharePoint Syntex çalıştırmayı öğrenin.
+ms.openlocfilehash: fc4221b0022aca8a0564c78e64d94028f6483104
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983376"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507109"
 ---
 # <a name="run-a-trial-of-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex deneme sürümü çalıştırın
 
@@ -44,7 +44,7 @@ Deneme sürümünü aşağıdaki kaynaklardan birini kullanabilirsiniz:
     2. **BillingPurchase** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=868433" target="_blank">**Services'a gidin**</a>.
     3. Eklentiler bölümüne **kadar aşağı kaydırın** .
     4. Ayrıntılar SharePoint Syntex **seçin.**
-    5. Ücretsiz **denemeyi al'ı seçin**.
+    5. Ücretsiz **denemeyi başlat'ı seçin**.
     6. Denemeyi onaylamak için kalan sihirbazın adımlarını izleyin.
 
 Denemeyi etkinleştirmek için Microsoft 365 genel yönetici veya faturalama yöneticisi olun.
@@ -112,4 +112,4 @@ Denemeden sonra lisans satın alasanız:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Microsoft SharePoint Syntex benimseme: Çalışmaya başlama](adoption-getstarted.md)
+[Microsoft SharePoint Syntex benimseme: Kullanmaya başlayın](adoption-getstarted.md)

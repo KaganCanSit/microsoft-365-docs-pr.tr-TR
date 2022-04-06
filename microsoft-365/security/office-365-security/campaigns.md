@@ -1,5 +1,5 @@
 ---
-title: Plan için Microsoft Defender'da Office 365 Görünümleri
+title: Kampanya Görünümleri Office 365 için Microsoft Defender Plan
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -17,24 +17,24 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: ''
-description: For Office 365 için Microsoft Defender'da Kampanya Görünümleri hakkında Office 365.
+description: Kampanya Görünümleri hakkında daha fazla bilgi Office 365 için Microsoft Defender.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d8fad29e82b647d309d3b7046e36bd03b64de81d
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: eb1e5e6e740accdb9c6102b798df8e60ab47dfff
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682559"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467741"
 ---
-# <a name="campaign-views-in-microsoft-defender-for-office-365"></a>Yardım için Microsoft Defender'da Kampanya Office 365
+# <a name="campaign-views-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da Saldırı Kampanyası Görünümleri
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Geçerli olduğu yer:**
 - [Office 365 için Microsoft Defender plan 2](defender-for-office-365.md)
 
-Kampanya Görünümleri, Plan 2 için Microsoft Defender'Office 365 bir özelliktir (örneğin, Microsoft 365 E5 plan 2 için Defender Office 365 kuruluşlar). Kampanya Görünümleri Microsoft 365 Defender portalında kimlik avı saldırılarını tanımlar ve kategorilere ayırmaktadır. Kampanya Görünümleri şunları yapmak için yardımcı olabilir:
+Kampanya Görünümleri, Plan 2'Office 365 için Microsoft Defender bir özelliktir (örneğin, Microsoft 365 E5 Plan 2 Office 365 için Defender olan kuruluşlar). Kampanya Görünümleri Microsoft 365 Defender portalında kimlik avı saldırılarını tanımlar ve kategorilere ayırmaktadır. Kampanya Görünümleri şunları yapmak için yardımcı olabilir:
 
 - Kimlik avı saldırılarını verimli bir şekilde araştırarak yanıt verin.
 - Saldırının kapsamını daha iyi anlıyoruz.
@@ -59,7 +59,7 @@ Kampanyalar kısa ömürle yaşanıyor olabileceği gibi, etkin ve etkin olmayan
 
 Kampanya Görünümleri, web portalına Microsoft 365 Defender-posta ve <https://security.microsoft.com> işbirliği **Kampanyaları &** \> **veya** doğrudan üzerinden kullanılabilir<https://security.microsoft.com/campaigns>.
 
-![Kampanyalara genel bakış Microsoft 365 Defender içerir.](../../media/campaigns-overview.png)
+:::image type="content" source="../../media/campaigns-overview.png" alt-text="Kampanyalara genel bakış Microsoft 365 Defender portalı" lightbox="../../media/campaigns-overview.png":::
 
 Kampanya Görünümleri'ne şu sitelerden de çıkabilirsiniz:
 
@@ -93,7 +93,7 @@ Genel bakış sayfasındaki grafiğin altındaki tablo Kampanya sekmesinde aşa�
   - **Kimlik** avı: Kullanılabilir durumda, bu kampanya tarafından kimlik avına yapılan markadır. Örneğin, `Microsoft`, `365``Unknown`, veya . `Outlook``DocuSign`
   - **Kötü amaçlı** yazılım: Örneğin, `HTML/PHISH` veya `HTML/<MalwareFamilyName>`.
 
-  Kullanılabilir durumda, bu kampanya tarafından kimlik avına neden olan marka. Algılama bu teknoloji için Defender tarafından Office 365, alt tür değerine **ATP-** öneki eklenir.
+  Kullanılabilir durumda, bu kampanya tarafından kimlik avına neden olan marka. Algılama bu teknoloji tarafından Office 365 için Defender olduğunda, **alt tür değerine ATP-** öneki eklenir.
 
 - **Alıcılar**: Bu kampanya tarafından hedeflenen kullanıcı sayısı.
 
@@ -113,7 +113,7 @@ Kampanya **kaynağı** sekmesi, ileti kaynaklarını dünya haritasında göster
 
 Kampanya sayfasının en üstünde **, belirli** kampanyaları bulup ayırmanıza yardımcı olacak çeşitli filtre ve sorgu ayarları vardır.
 
-![Kampanya filtreleri.](../../media/campaign-filters-and-settings.png)
+:::image type="content" source="../../media/campaign-filters-and-settings.png" alt-text="Kampanya filtreleri" lightbox="../../media/campaign-filters-and-settings.png":::
 
 En temel filtreleme, başlangıç tarihi/saati ve bitiş tarihi/saatidir.
 
@@ -170,7 +170,7 @@ Temel veya gelişmiş bir filtre oluşturdukktan sonra, Sorguyu kaydet'i veya **
 
 Grafiği veya kampanya listesini dışarı aktarma için Dışarı aktar'a tıklayın ve **Grafik** verilerini **dışarı aktar'ı** veya Kampanya listesini **dışarı aktar'ı seçin**.
 
-Uç nokta için Microsoft Defender aboneliğiniz varsa, kampanya bilgilerini Uç Nokta için Microsoft Defender **ile bağlamak Ayarlar için MDE** Ayarlar'e tık edebilirsiniz. Daha fazla bilgi için bkz[. Microsoft Defender for Endpoint Office 365 için Microsoft Defender'ı tümleştirin](integrate-office-365-ti-with-mde.md).
+Uç Nokta için Microsoft Defender aboneliğiniz varsa, kampanyayla ilgili bilgilere bağlantı **Ayarlar bağlantıyı kesmek için MDE Uç Nokta için Microsoft Defender**. Daha fazla bilgi için bkz[. Office 365 için Microsoft Defender'i Uç Nokta için Microsoft Defender](integrate-office-365-ti-with-mde.md).
 
 ## <a name="campaign-details"></a>Kampanya ayrıntıları
 
@@ -192,7 +192,7 @@ Kampanya ayrıntıları görünümünün en üstünde, aşağıdaki kampanya bil
 - Kampanya akışı için başlangıç tarihi/saati ve bitiş verileri/saat filtreleri sonraki bölümde açıklandığı gibi.
 - Kampanya etkinliğinin etkileşimli bir zaman çizelgesi: Zaman çizelgesi, kampanyanın tüm ömrü boyunca olan etkinliği gösterir. Algılanan iletilerin miktarını görmek için grafikte veri noktalarının üzerine gelin.
 
-![Kampanya bilgileri.](../../media/campaign-details-campaign-info.png)
+:::image type="content" source="../../media/campaign-details-campaign-info.png" alt-text="Kampanya bilgileri" lightbox="../../media/campaign-details-campaign-info.png":::
 
 ### <a name="campaign-flow"></a>Kampanya akışı
 
@@ -201,7 +201,7 @@ Kampanya ayrıntıları görünümünün ortasında, kampanya hakkında önemli 
 > [!TIP]
 > Akış diyagramında görüntülenen bilgiler, önceki bölümde açıklandığı gibi zaman çizelgesindeki tarih aralığı filtresi tarafından denetlenmektedir.
 
-![Kullanıcı URL tıklamaları içermeden kampanya ayrıntıları.](../../media/campaign-details-no-recipient-actions.png)
+:::image type="content" source="../../media/campaign-details-no-recipient-actions.png" alt-text="Kullanıcı URL tıklamaları içermeen Kampanya ayrıntıları" lightbox="../../media/campaign-details-no-recipient-actions.png":::
 
 Diyagramda yatay bir banda gelirsiniz, ilgili iletilerin sayısını (örneğin, belirli bir kaynak IP'den gelen iletiler, belirtilen gönderen etki alanını kullanan kaynak IP'den gelen iletiler vb.) alırsınız.
 
@@ -253,7 +253,7 @@ Kullanıcı kimlik avı iletisinde yük URL'sini tıklattığında, eylemler kam
 - **İzin verildi**
 - **BlockPage**: Alıcı yüklenmiş URL'ye tıklamış ancak kötü amaçlı web sitesine erişimi, Kasa [Bağlantılar](safe-links.md) ilkesi tarafından engellenmiş.
 - **BlockPageOverride**: Alıcı iletide yükün URL'sine tıkladı, Kasa Bağlantılar bunları durdurmayı denedi ancak engeli geçersiz kılmasına izin verildi. Kullanıcıların karar [Kasa ve kötü](set-up-safe-links-policies.md) amaçlı web sitesine devam etmek için neden kullanıcıların Yeni Bağlantılar kararını geçersiz k Kasa için Bağlantı ilkelerinizi incelemeniz gerekir.
-- **PendingDetonationPage**: Kasa Office 365 için Microsoft Defender'daki Ekler, sanal bilgisayar ortamında yük URL'sini açma ve inceleme sürecindedir.
+- **PendingDetonationPage**: Kasa Attachments in Office 365 için Microsoft Defender, sanal bilgisayar ortamında yük URL'sini açma ve inceleme sürecindedir.
 - **PendingDetonationPageOverride**: Alıcıya yükün detonasyonu işlemini geçersiz k kullandı ve sonuçları beklemeden URL'yi açtı.
 
 ### <a name="tabs"></a>Sekmeler

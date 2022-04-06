@@ -15,21 +15,21 @@ ms.assetid: ''
 ms.collection: m365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Yöneticiler Plan 2 kuruluşları için Microsoft 365 E5 veya Microsoft Defender'da Saldırı benzetimi ve eğitimiyle ilgili dağıtımla Office 365 hakkında bilgi edinebilirsiniz.
+description: Yöneticiler, Plan 2 kuruluşlarında veya Plan 2 kuruluşlarında saldırı benzetimi ve eğitimiyle ilgili dağıtımla Microsoft 365 E5 ve sık sorulan Office 365 için Microsoft Defender hakkında bilgi edinebilirsiniz.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 380241d44f667a845c47f85062d877192e1a7802
-ms.sourcegitcommit: 7b83e2605895fee5c73cd1d01f4cd16e1457a69f
+ms.openlocfilehash: 57b4d684e52fd51a2ece279cc7322389a953a17c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "62999569"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467807"
 ---
 # <a name="attack-simulation-training-deployment-considerations-and-faq"></a>Saldırı benzetimi eğitimi dağıtımıyla ilgili dikkat edilmesi gereken noktalar ve SSS
 
-Saldırı benzetimi eğitimi, Office 365 Plan 2 kuruluşları için Microsoft 365 E5 veya Microsoft Defender'ın, gerçek dünyaya yönelik, kolay kimlik avı yükleri tarafından desteklenen kimlik avı benzetimlerinin oluşturulmasına ve yönetimine izin vererek sosyal mühendislik riskini ölçmesini ve yönetmesini sağlar. Hyper-targeted training, delivered in partnership withNova security, helps improve knowledge and change employee behavior.
+Saldırı benzetimi eğitimi, Microsoft 365 E5 veya Office 365 için Microsoft Defender Plan 2 kuruluşlarının gerçek dünya tarafından desteklenen kimlik avı benzetimleri oluşturulmasına ve yönetimine olanak sağlayarak sosyal mühendislik riskini ölçmelerine ve yönetmelerine olanak sağlar. Hyper-targeted training, delivered in partnership withNova security, helps improve knowledge and change employee behavior.
 
-Saldırı benzetimi eğitimine başlama hakkında daha fazla bilgi için bkz. [Saldırı benzetimi eğitimlerini kullanmaya başlama](attack-simulation-training-get-started.md).
+Saldırı benzetimi eğitimine başlama hakkında daha fazla bilgi için saldırı [benzetim Kullanmaya başlayın'i kullanma hakkında daha fazla bilgi için bkz](attack-simulation-training-get-started.md).
 
 Benzetim oluşturma ve zamanlama deneyiminin tamamı serbest akışlı ve kusursuz olacak şekilde tasarlasa da, kurumsal ölçekte benzetimler yapmak çoğunlukla planlamayı gerektirir. Bu makale müşterilerimizin kendi ortamlarında benzetimler çalıştırması sayesinde karşılaştığımız belirli güçlüklere yardımcı olur.
 
@@ -39,13 +39,13 @@ Benzetim oluşturma ve zamanlama deneyiminin tamamı serbest akışlı ve kusurs
 
 URL'nin saygınlığı hizmeti, Saldırı benzetimi eğitimi tarafından kullanılan URL'lerin bir veya daha fazlasını güvenli olmayan olarak tanımlayabilir. Google Kasa Google Chrome'da gezinme, sanal kimlik avı URL'lerinden bazılarını Algısal **bir site devam iletisiyle** engeller. Benzetim URL'lerimize her zaman izin vermek için birçok URL itibari satıcıyla çalışırken, her zaman tam kapsamımız yok.
 
-![Google Chrome'da algısal siteyi ön uyarı.](../../media/attack-sim-training-faq-chrome-deceptive-site-message.png)
+:::image type="content" source="../../media/attack-sim-training-faq-chrome-deceptive-site-message.png" alt-text="Google Chrome'da algısal siteyi ön uyarı" lightbox="../../media/attack-sim-training-faq-chrome-deceptive-site-message.png":::
 
 Bu sorunun verileri etkilemeyeceğini Microsoft Edge.
 
 Planlama aşamasının bir parçası olarak, kimlik avı kampanyasında URL'yi kullanmadan önce, desteklenen web tarayıcılarında URL'nin kullanılabilirliğini denetlemeye bakın. URL'ler Google Kasa Gözatma tarafından engellenmişse[,](https://support.google.com/chrome/a/answer/7532419) URL'lere erişim izni vermek için Google'ın bu yönergeleri izleyin.
 
-Şu anda [Attack benzetim eğitimi tarafından kullanılan](attack-simulation-training-get-started.md) URL'lerin listesi için Saldırı benzetimi eğitimlerini kullanmaya başlama'ya bakın.
+Saldırı [Kullanmaya başlayın eğitimi tarafından kullanılan URL'lerin](attack-simulation-training-get-started.md) listesi için Saldırı benzetimi eğitimi'ne bakın.
 
 ### <a name="phishing-simulation-and-admin-urls-blocked-by-network-proxy-solutions-and-filter-drivers"></a>Ağ ara sunucu çözümleri ve filtre sürücüleri tarafından engellenen kimlik avı benzetimi ve yönetici URL'leri
 
@@ -57,7 +57,7 @@ Hem kimlik avı benzetimi URL'leri hem de yönetici URL'leri ara güvenlik cihaz
 
 Bu katmanda birkaç müşteri engellenmiş olarak görülen bir durumla karşıtlık yaşanır. Sorunlarla karşılaşırsanız, güvenlik cihazlarınız veya filtreleriniz tarafından taramayı atlamak için aşağıdaki URL'leri gerekli şekilde yapılandırmayı düşünebilirsiniz:
 
-- Saldırı benzetimini kullanmaya başlama eğitimi konusunda açıklandığı gibi [benzetimi yapılan kimlik avı URL'leri](attack-simulation-training-get-started.md).
+- Saldırı benzetimi eğitimi kullanılarak kimlik avı URL'leri [Kullanmaya başlayın sanal kimlik avı URL'leri](attack-simulation-training-get-started.md).
 - <https://security.microsoft.com/attacksimulator>
 - <https://security.microsoft.com/attacksimulationreport>
 - <https://security.microsoft.com/trainingassignments>
@@ -96,11 +96,11 @@ Her benzetim kampanyasının bir yaşam döngüsü vardır. Benzetim ilk oluştu
 
 Benzetim Zamanlanmış **durumdayken** benzetim raporları çoğunlukla boş olacaktır. Bu aşama sırasında benzetim altyapısı hedef kullanıcı e-posta adreslerini çözümliyor, dağıtım gruplarını genişletiyor ve konuk kullanıcıları listeden kaldırıyor.
 
-![Zamanlanan durumdaki benzetimi gösteren benzetim ayrıntıları.](../../media/attack-sim-training-faq-scheduled-state.png)
+:::image type="content" source="../../media/attack-sim-training-faq-scheduled-state.png" alt-text="Zamanlanan durumdaki benzetimi gösteren benzetim ayrıntıları" lightbox="../../media/attack-sim-training-faq-scheduled-state.png":::
 
 Benzetim Sürüyor **aşamasına girdikçe** , raporlamaya bilgi girmeye başlayarak bilgi olduğunu fark edin:
 
-![Devam eden durumdaki benzetimi gösteren benzetim ayrıntıları.](../../media/attack-sim-training-faq-in-progress-state.png)
+:::image type="content" source="../../media/attack-sim-training-faq-in-progress-state.png" alt-text="Devam eden durumdaki benzetimi gösteren benzetim ayrıntıları" lightbox="../../media/attack-sim-training-faq-in-progress-state.png":::
 
 Benzetim raporlarının, geçiş devam ediyor durumuna geçiş sonrasında güncelleştirilsi 30 **dakika kadar** sürebilir. Benzetim Tamamlanan durumuna ulaşana kadar rapor verileri **derlemeye devam** eder. Raporlama güncelleştirmeleri aşağıdaki aralıklarla gerçekleşir:
 
@@ -166,7 +166,7 @@ Yapılandırma değişikliğinin tüm hizmetlerde eşitlenmesi 30 dakika kadar s
 
 A: Evet, bunu! Yeni bir benzetim **oluşturmak** için sihirbazın en son Benzetimini Gözden Geçir sayfasında Test gönderme **seçeneği vardır**. Bu seçenek, o anda oturum açmış olan kullanıcıya örnek bir kimlik avı benzetimi iletisi gönderir. Gelen Kutunuzda kimlik avı iletisi doğrulandıktan sonra benzetimi gönderebilirsiniz.
 
-![Benzetimi gözden geçir sayfasında bir test gönder düğmesi.](../../media/attack-sim-training-simulations-review-simulation.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-review-simulation.png" alt-text="Benzetimi gözden geçir sayfasındaki Test gönder düğmesi" lightbox="../../media/attack-sim-training-simulations-review-simulation.png":::
 
 ### <a name="q-can-i-target-users-that-belong-to-a-different-tenant-as-part-of-the-same-simulation-campaign"></a>S: Aynı benzetim kampanyasının bir parçası olarak farklı bir kiracıya ait kullanıcıları hedef adede miyim?
 

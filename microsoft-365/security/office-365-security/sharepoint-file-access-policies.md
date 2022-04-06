@@ -19,16 +19,16 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 3057e66352b9bd658ddd4958986cbefd61e4e187
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 6effe1ffefaf7faeb90258163c539cdddcec2679
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682955"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64570007"
 ---
 # <a name="policy-recommendations-for-securing-sharepoint-sites-and-files"></a>Site ve dosyaların güvenliğini SharePoint ilke önerileri
 
-Bu makalede, güven ve güvenlik ilkelerini korumak için önerilen Sıfır Güven kimliği ve cihaz erişimi ilkelerinin SharePoint OneDrive İş. Bu kılavuz, ortak kimlik [ve cihaz erişim ilkelerine yöneliktir](identity-access-policies.md).
+Bu makalede, kimlik ve cihaz erişimi ilkelerini korumak için önerilen kimlik Sıfır Güven cihaz erişimi ilkelerinin nasıl SharePoint ve OneDrive İş. Bu kılavuz, ortak kimlik [ve cihaz erişim ilkelerine yöneliktir](identity-access-policies.md).
 
 Bu öneriler, şu üç farklı güvenlik ve koruma katmanına dayalıdır SharePoint dosyaları, şu şekildeki ihtiyaçlarınızı ayrıntılı olarak temel alarak **uygulanabilir: başlangıç** **noktası, kurumsal** ve **özel güvenlik**. Genel bakış bilgisinde, bu önerilerden başvurulan bu güvenlik katmanları ve önerilen istemci işletim sistemleri hakkında daha fazla [bilgi edinmek için bkz](microsoft-365-policies-configurations.md).
 
@@ -38,7 +38,7 @@ Bu kılavuzu uygulamaya ek olarak, siteleri SharePoint ve özelleştirilmiş gü
 
 Ortak kimlik ve cihaz SharePoint OneDrive için, aşağıdaki diyagramda ortak kimlik ve cihaz erişim ilkelerinden güncelleştirilen ilkeler çiziliyor.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-sharepoint.png" alt-text="Postane erişimi korumak için yapılan ilke güncelleştirmelerinin SharePoint." lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-sharepoint.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-sharepoint.png" alt-text="Postane erişimi korumayla ilgili ilke güncelleştirmelerinin SharePoint" lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-sharepoint.png":::
 
 Ortak ilkeleri SharePoint yeni ilkeler oluşturduysanız, yalnızca yeni ilkeleri oluşturmanız gerekir. Koşullu Erişim ilkeleri için, SharePoint kuralları OneDrive.
 
@@ -60,7 +60,7 @@ Aşağıdaki tabloda, gözden geçirmeniz ve güncelleştirmeniz veya yeni oluş
 
 ## <a name="use-app-enforced-restrictions-in-sharepoint"></a>Mobil uygulamada uygulamanın zorunlu SharePoint
 
-SharePoint'de erişim denetimleri SharePoint, Azure AD'den Azure AD'ye dış içerikte yapılandırılan ilkeleri zorunlu SharePoint. Bu ilke tüm kullanıcılar için geçerlidir, ancak yalnızca PowerShell kullanarak belirttiğiniz sitelere erişimi SharePoint.
+SharePoint'de erişim denetimleri SharePoint Azure AD'de koşullu Erişim ilkeleri oluşturularak Azure AD'den, azure ad'de yapılandırılan ilkeleri zorunlu SharePoint. Varsayılan olarak, bu ilke tüm kullanıcılar için geçerlidir, ancak yalnızca PowerShell kullanarak belirttiğiniz sitelere erişimi SharePoint. İlke, belirli kullanıcılar, gruplar veya siteler için de kapsamlandırabilirsiniz.
 
 Bu ilkeyi yapılandırmak için, Kolay erişilen cihazlardan erişimi denetleme'de "SharePoint site koleksiyonlarına veya OneDrive hesaplarına erişimi engelleme veya sınırlama" [bağlantılarına bakın](/sharepoint/control-access-from-unmanaged-devices).
 
@@ -79,7 +79,7 @@ Site izinlerinin genellikle sitelere SharePoint ilgili iş ihtiyaçlarına dayal
 
 Aşağıdaki çizimde, cihaz erişim ilkelerinin SharePoint için sitelere erişimi nasıl koruy korumları gösterilmiştir.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/SharePoint-rules-scenario.png" alt-text="Cihaz erişimi ilkelerinin SharePoint koruma örneği." lightbox="../../media/microsoft-365-policies-configurations/SharePoint-rules-scenario.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/SharePoint-rules-scenario.png" alt-text="Cihaz erişim ilkelerinin SharePoint koruma örneği" lightbox="../../media/microsoft-365-policies-configurations/SharePoint-rules-scenario.png":::
 
 James'in başlangıç noktası Koşullu Erişim ilkeleri atanmıştır, ancak kurumsal veya özel güvenlik SharePoint belirli sitelere erişim izni verilmiştir.
 
@@ -89,7 +89,8 @@ James'in başlangıç noktası Koşullu Erişim ilkeleri atanmıştır, ancak ku
 
 ## <a name="next-step"></a>Sonraki adım
 
-![4. Adım: Bulut Microsoft 365 için ilkeler.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png)
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="4. Adım - Bulut uygulamaları Microsoft 365 ilkeleri" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
+
 
 Koşullu Erişim ilkelerini aşağıdakiler için yapılandırma:
 

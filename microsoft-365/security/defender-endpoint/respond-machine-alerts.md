@@ -1,5 +1,5 @@
 ---
-title: Uç Nokta için Microsoft Defender'da cihazda yanıt eylemleri gerçekleştirin
+title: Uç Nokta için Microsoft Defender'ta bir cihazda yanıt Uç Nokta için Microsoft Defender
 description: Cihazdan ayrılmış cihazlar, araştırma paketi toplama, etiketleri yönetme, av taraması çalıştırma ve uygulama yürütmeyi kısıtlama gibi yanıt eylemleri gerçekleştirin.
 keywords: yanıt verme, ayırma, cihazı ayırma, soruşturma paketini toplama, işlem merkezi, kısıtlama, etiketleri yönetme, av taraması, uygulamayı kısıtlama
 ms.prod: m365-security
@@ -14,19 +14,20 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 00347aabe38e4e74374f0b96d189051ebb56af3b
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: f1fa77f33988893967e71b82cc81059429e41d55
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016511"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64501299"
 ---
 # <a name="take-response-actions-on-a-device"></a>Cihazda yanıt eylemleri gerçekleştirin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [İş için Microsoft Defender](/microsoft-365/security/defender-business/mdb-overview)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-respondmachine-abovefoldlink)
 
@@ -45,6 +46,7 @@ Yanıt eylemleri belirli bir cihaz sayfasının en üstünde görüntülenir ve 
 - İşlem merkezi
 
 [![Yanıt eylemlerinin resmi.](images/response-actions.png)](images/response-actions.png#lightbox)
+
 
  Cihaz sayfalarını aşağıdaki görünümlerden herhangi birisinde bulabilirsiniz:
 
@@ -97,11 +99,11 @@ Alternatif yol:
 
 1. Cihaz **sayfasının** yanıt eylemleri bölümünden İşlem merkezi'ne tıklayın.
 
-    ![İşlem merkezi düğmesinin resmi.](images/action-center-package-collection.png)
+   :::image type="content" source="images/action-center-package-collection.png" alt-text="İşlem merkezi seçeneği" lightbox="images/action-center-package-collection.png":::
 
 2. İşlem merkezi uçarak dışarı doğru, zip dosyasını **indirmek için Kullanılabilir** paket koleksiyonu paketi'ne tıklayın.
 
-    ![Paketi indir düğmesinin resmi.](images/collect-package.png)
+   :::image type="content" source="images/collect-package.png" alt-text="İndirme paketi seçeneği" lightbox="images/collect-package.png":::
 
 Paket aşağıdaki klasörleri içerir:
 
@@ -137,7 +139,7 @@ Araştırma ve yanıt işleminin bir parçası olarak, güvenliği tehlikeye at�
 
 Virüsten **koruma taraması** çalıştır'ı seçtikten sonra, çalıştırmak istediğiniz tarama türünü seçin (hızlı veya tam) ve taramayı onaylamadan önce bir açıklama ekleyin.
 
-![Hızlı taramayı veya tam taramayı seçerek açıklama eklemek için bildirim görüntüsü.](images/run-antivirus.png)
+:::image type="content" source="images/run-antivirus.png" alt-text="Hızlı taramayı veya tam taramayı seçme ve açıklama ekleme bildirimi" lightbox="images/run-antivirus.png":::
 
 İşlem merkezi tarama bilgilerini gösterir ve cihaz zaman çizelgesi, cihaza bir tarama eyleminin gönderl olduğunu yansıtan yeni bir olay içerir. Microsoft Defender AV uyarıları, tarama sırasında ortaya gelen tüm algılamaları yansıtacak.
 
@@ -153,7 +155,7 @@ Virüsten **koruma taraması** çalıştır'ı seçtikten sonra, çalıştırmak
 Kötü amaçlı işlemleri durdurarak saldırı eklemeye ek olarak, cihazı kilitleyip kötü amaçlı olabilecek olası programların sonraki girişimlerini de önebilirsiniz.
 
 >[!IMPORTANT]
-> - Bu eylem, 11. Windows 10, sürüm 1709 veya Windows sonraki sürümler ve Windows Server 2016. 
+> - Bu eylem 1709, Windows 10 1709 veya sonraki sürümler, sürümler ve Windows 11 cihazlar için Windows Server 2016. 
 > - Bu özellik, bu özelliğin kullanımı sizin için Microsoft Defender Virüsten Koruma.
 > - Bu eylemin, Uygulama Denetimi Windows Defender ilke biçimlerini ve imzalama gereksinimlerini karşılaması gerekir. Daha fazla bilgi için bkz[. Kod bütünlüğü ilke biçimleri ve imza).](/windows/security/threat-protection/windows-defender-application-control/use-code-signing-to-simplify-application-control-for-classic-windows-applications)
 
@@ -164,13 +166,13 @@ Bir uygulamanın çalışmasına kısıtlamak için, yalnızca dosyaların Micro
 
 Cihaz sayfasında uygulama **yürütmeyi kısıtla'yi** seçtikten sonra bir açıklama yazın ve Onayla'ya **tıklayın**. İşlem merkezi tarama bilgilerini gösterir ve cihaz zaman çizelgesi yeni bir olay içerir.
 
-![Uygulama kısıtlama bildiriminin resmi.](images/restrict-app-execution.png)
+:::image type="content" source="images/restrict-app-execution.png" alt-text="Uygulama kısıtlama bildirimi" lightbox="images/restrict-app-execution.png":::
 
 ### <a name="notification-on-device-user"></a>Cihaz kullanıcısı bildirimi
 
 Bir uygulama kısıtlanmışsa, kullanıcıya bir uygulamanın çalıştırıla kısıtlamalı olduğunu bildirmek için aşağıdaki bildirim görüntülenir:
 
-![Uygulama kısıtlama resmi.](images/atp-app-restriction.png)
+:::image type="content" source="images/atp-app-restriction.png" alt-text="Uygulama kısıtlama iletisi" lightbox="images/atp-app-restriction.png":::
 
 >[!NOTE]
 >Bu bildirim R2'de Windows Server 2016 Windows Server 2012 kullanılamaz.
@@ -182,8 +184,8 @@ Saldırının önem düzeyine ve cihazın duyarlılığına bağlı olarak, ciha
 >[!IMPORTANT]
 >- Bu eylem şu anda macOS ve Linux için desteklenmiyor. Eylemi çalıştırmak için canlı yanıtı kullanın. Canlı yanıt hakkında daha fazla bilgi için bkz [. Canlı yanıtı kullanan cihazlardaki varlıkları araştırma](live-response.md)
 >- Windows 10, sürüm 1703, Windows 11, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 ve Windows Server 2022 cihazlarında tam yalıtım kullanılabilir.
->- Seçmeli yalıtım; 11. Windows 10 sürüm 1709 ve sonraki sürümlerde Windows kullanılabilir.
->- Bir cihazı yorumlarken yalnızca belirli işlemlere ve hedeflere izin verilir. Bu nedenle, tam VPN hedeflerinin arkasındaki cihazlar cihaz yalıtılmış halde uç nokta için Microsoft Defender bulut hizmetine ulaşamayabilecektir. Uç Nokta için Microsoft Defender ve bulut tabanlı korumayla ilgili Microsoft Defender Virüsten Koruma bir VPN kullanılması önerilir.
+>- Seçmeli yalıtım en son sürüm Windows 10 1709 veya sonraki sürümlerde ve sonraki sürümlerde Windows 11.
+>- Bir cihazı yorumlarken yalnızca belirli işlemlere ve hedeflere izin verilir. Bu nedenle, tam VPN hedeflerinin arkasındaki cihazlar cihaz yalıtılmış Uç Nokta için Microsoft Defender bulut hizmetine erişemmektedir. Bulut tabanlı korumayla ilgili trafik için Uç Nokta için Microsoft Defender VPN Microsoft Defender Virüsten Koruma vpn kullanılması önerilir.
 
 Bu cihaz yalıtım özelliği, güvenliği ihlal edilmiş cihazın ağ bağlantısını keserken, uç nokta için Defender hizmetinin bağlantısını da keser ve bu da cihazı izlemeye devam eder.
 
@@ -194,7 +196,7 @@ Bir Windows 10 sürüm 1709 veya sonraki bir sürümde, ağ yalıtım düzeyi ü
 
 Cihaz sayfasında Cihazı **yalıt'ı** seçtikten sonra bir açıklama yazın ve Onayla'ya **tıklayın**. İşlem merkezi tarama bilgilerini gösterir ve cihaz zaman çizelgesi yeni bir olay içerir.
 
-![Cihazı yalıtmak resmi.](images/isolate-device.png)
+:::image type="content" source="images/isolate-device.png" alt-text="Yalıtılmış bir cihaz ayrıntıları sayfası" lightbox="images/isolate-device.png":::
 
 > [!NOTE]
 > Cihaz ağdan yalıtılmış olsa bile Uç Nokta için Defender hizmetine bağlı kalır. Outlook ve Skype Kurumsal iletişimini etkinleştirmeyi seçtiysanız, cihaz yalıtılmışken kullanıcıya iletişim kurabilirsiniz.
@@ -203,7 +205,7 @@ Cihaz sayfasında Cihazı **yalıt'ı** seçtikten sonra bir açıklama yazın v
 
 Cihaz yalıtılmış olduğunda, kullanıcıya cihazın ağdan yalıtılmış olduğunu bildirmek için aşağıdaki bildirim görüntülenir:
 
-![Ağ bağlantısı yok resmi.](images/atp-notification-isolate.png)
+:::image type="content" source="images/atp-notification-isolate.png" alt-text="Ağ bağlantısı yok iletisi" lightbox="images/atp-notification-isolate.png":::
 
 ## <a name="consult-a-threat-expert"></a>Tehdit uzmanına danışın
 
@@ -222,10 +224,11 @@ Ayrıntılar [için Bkz. Microsoft Tehdit Uzmanına](/microsoft-365/security/def
 
 Gönderme tarihi/saati, gönderilen kullanıcı ve eylem başarılı olursa ya da başarısız olursa, diğer tüm ilgili ayrıntılar da gösterilir.
 
-![Bilgili işlem merkezi görüntüsü.](images/action-center-details.png)
+:::image type="content" source="images/action-center-details.png" alt-text="Bilgili işlem merkezi" lightbox="images/action-center-details.png":::
+
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dosyada yanıt eylemleri gerçekleştirin](respond-file-alerts.md)
-- [Uç Nokta Planı 1 için Microsoft Defender'da el ile yanıt eylemleri](defender-endpoint-plan-1.md#manual-response-actions)
+- [Plan 1'de Uç Nokta için Microsoft Defender eylemleri](defender-endpoint-plan-1.md#manual-response-actions)
 - [Rapor yanlışlığı](/microsoft-365/security/defender-endpoint/tvm-security-recommendation#report-inaccuracy)

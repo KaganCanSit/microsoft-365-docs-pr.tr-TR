@@ -17,12 +17,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 159b4a41d423c2a7af3d367185e29af35a378b6b
-ms.sourcegitcommit: 542e6b5d12a8d400c3b9be44d849676845609c5f
+ms.openlocfilehash: ed62807c0efc7003bab8fc725c2753c3d91ef1d6
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "63004999"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64501233"
 ---
 # <a name="configure-microsoft-365-defender-to-stream-advanced-hunting-events-to-your-storage-account"></a>Gelişmiş Microsoft 365 Defender etkinlikleri akışı için gelişmiş av etkinliklerini Depolama yapılandırma
 
@@ -51,9 +51,9 @@ ms.locfileid: "63004999"
 4. Görüntülenen **Yeni Akış API'si ayarları** ekle açılır sayfasında aşağıdaki ayarları yapılandırabilirsiniz:
    1. **Ad**: Yeni ayarlarınız için bir ad seçin.
    2. **Etkinlikleri Azure Depolama'a ilet'i seçin**.
-   3. Görüntülenen **Depolama Kaynak Kimliği** kutusuna Hesap Kaynak Kimliği'Depolama **hesap kimliğinizi yazın**. Hesap Kaynak **Depolama almak** için Azure portalını <https://portal.azure.com> \> \> 'da açın, Depolama hesapları sekmesine gidip Hesap Kaynak Kimliği'nin altındaki **metni Depolama tıklayın**.
+   3. Görüntülenen **Depolama Kaynak Kimliği** kutusuna Hesap Kaynak Kimliği'Depolama **hesap kimliğinizi yazın**. Hesap Kaynak **Depolama almak** için, Azure portal <https://portal.azure.com> \> \> 'da açın, Depolama hesaplarının Özellikler sekmesine gidip Hesap Kaynak Kimliği'nin **altındaki metni Depolama tıklayın**.
 
-      ![Olay merkezi kaynak kimliği1 görüntüsü.](../defender-endpoint/images/storage-account-resource-id.png)
+      :::image type="content" source="../defender-endpoint/images/storage-account-resource-id.png" alt-text="Bir Depolama Hesabı Kaynak Kimliği" lightbox="../defender-endpoint/images/storage-account-resource-id.png":::
 
    4. Yeni Akış **API'si ayarları ekle** seçeneğine geri dönerek **akış oluşturmak istediğiniz** Etkinlik türlerini seçin.
 
@@ -63,7 +63,7 @@ ms.locfileid: "63004999"
 
 - Her olay türü için bir blob kapsayıcısı oluşturulur:
 
-  ![Olay merkezi kaynak kimliği2 görüntüsü.](../defender-endpoint/images/storage-account-event-schema.png)
+  :::image type="content" source="../defender-endpoint/images/storage-account-event-schema.png" alt-text="Blob kapsayıcısı örneği" lightbox="../defender-endpoint/images/storage-account-event-schema.png":::
 
 - Bir blob'un her satırın şeması aşağıdaki JSON'tır:
 
@@ -98,7 +98,7 @@ Olay özelliklerimizin veri türlerini almak için şunları yapın:
 
 - Cihaz Bilgileri olayı için bir örnek:
 
-  ![Olay merkezi kaynak kimliği3 resmi.](../defender-endpoint/images/machine-info-datatype-example.png)
+  :::image type="content" source="../defender-endpoint/images/machine-info-datatype-example.png" alt-text="Örnek cihaz bilgi sorgusu" lightbox="../defender-endpoint/images/machine-info-datatype-example.png":::
 
 ## <a name="related-topics"></a>İlgili konular
 

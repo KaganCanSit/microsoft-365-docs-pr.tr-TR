@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Kullanıcıların e-posta, belgeler ve konuşmalarda kendi oluşturanın içeriğinin kontrolünü etkin bir şekilde tutmak için bekletme ilkesi kullanın. Istemediklerden kurtulun ve istemediklerden kurtulun.
-ms.openlocfilehash: 94388a375c3c50d97e696637ef6ef4ebefc96aab
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: 5a57093ed4ecd5b87a62701e3c055888ed16a5ca
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63715503"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595334"
 ---
 # <a name="create-and-configure-retention-policies"></a>Bekletme ilkeleri oluşturma ve yapılandırma
 
@@ -112,7 +112,7 @@ Birden fazla bekletme ilkeniz varsa ve bekletme etiketlerini de kullanıyorken, 
 
 #### <a name="additional-retention-policy-needed-to-support-teams"></a>Destek ve destek için gereken ek bekletme Teams
 
-Teams yalnızca sohbetler ve kanal iletileri değil. Microsoft 365 grubundan (eski adı Office 365 grubu) oluşturulan ekipleriz varsa, Microsoft 365 Grupları konumunu kullanarak bu Microsoft 365 grubunu içeren bir bekletme ilkesi **de yapılandırabilirsiniz**. Bu bekletme ilkesi grubun posta kutusu, site ve dosyalarında bulunan içeriklere uygulanır.
+Teams yalnızca sohbetler ve kanal iletileri değil. Microsoft 365 grubundan (eski adı Office 365 grubundan) oluşturulan ekiplerin varsa, Microsoft 365 Grupları konumunu kullanarak bu Microsoft 365 grubunu içeren bir bekletme **ilkesi de yapılandırabilirsiniz**. Bu bekletme ilkesi grubun posta kutusu, site ve dosyalarında bulunan içeriklere uygulanır.
 
 Bir Microsoft 365 grubuna bağlı olmayan ekip siteleriniz varsa, Microsoft 365'de dosyaları alıkoyma ve silme için **SharePoint** sitelerini veya **OneDrive** hesap konumlarını içeren bir bekletme ilkesine Teams:
 
@@ -128,7 +128,7 @@ Microsoft 365 gruplarına, SharePoint sitelerine veya OneDrive hesaplarına uygu
 ### <a name="retention-policy-for-yammer-locations"></a>Konumlar için bekletme Yammer ilkesi
 
 > [!NOTE]
-> Bekletme ilkeleri Yammer önizlemededir ve bekletme ilkesi nedeniyle şu anda iletiler silindiğinde kullanıcılara bildiremez.
+> Kullanıcıların bekletme Yammer, şu anda bekletme ilkesi sonucunda iletilerin ne zaman silindiğinde konusunda kullanıcıları bilgilendirmez.
 >
 > Bu özelliği kullanmak için, Yammer ağın Karma Mod değil, [Yerel](/yammer/configure-your-yammer-network/overview-native-mode) Mod olması gerekir.
 
@@ -143,11 +143,6 @@ Microsoft 365 gruplarına, SharePoint sitelerine veya OneDrive hesaplarına uygu
     -  Uyarlanabilir'i seçtiyseniz: Uyarlanabilir ilke kapsamlarını ve konumlarını seçin sayfasında  Kapsam ekle'yi seçin ve oluşturulmuş bir veya birden çok uyarlanabilir kapsam seçin. Ardından bir veya daha fazla konum seçin. Seçebilirsiniz konumlar, eklenen kapsam [türlerine bağlıdır](retention-settings.md#configuration-information-for-adaptive-scopes) . Örneğin, yalnızca bir Kullanıcı kapsamı türü eklediysanız **, kullanıcı** iletilerini Yammer **ancak** topluluk iletilerini **Yammer seçebilirsiniz**. 
     
     - Statik: **İlkeyi** uygulamak için  konumları seçin sayfasında, **Yammer: Yammer** için konumların birini veya her ikisini de açıp kullanıcı iletilerini Yammer **seçin**.
-        
-        > [!IMPORTANT]
-        > Yalnızca bu kullanıcı iletileri için bir bekletme ilkesi Yammer, ancak bu konumun bekletme ilkesi tüm topluluk üyeleri için Yammer uygulamasından topluluk iletilerini silebilir.
-        > 
-        > Bu seçeneği belirtirseniz ve bekletme ilkesi kullanıcı iletilerini silmek üzere yapılandırılırsa, bunun bir etkiyi anlamış olduğundan emin olun. Daha fazla bilgi için bkz[. Bekletme nasıl Yammer](retention-policies-yammer.md#how-retention-works-with-yammer).
         
         Varsayılan olarak, tüm topluluklar ve kullanıcılar seçilir, ancak dahil edilecek veya hariç tutulacak toplulukları ve kullanıcıları belirterek bu değeri daraltabilirsiniz.
         
@@ -165,9 +160,9 @@ Bu konuda bekletme ilkelerinin nasıl çalışır? Yammer için [bekletme hakkı
 
 #### <a name="additional-retention-policies-needed-to-support-yammer"></a>Destek olmak için gereken ek bekletme Yammer
 
-Yammer yalnızca topluluk iletileri ve özel iletiler değil. Yammer ağ bağlantınıza gelen e-posta iletilerini korumak ve silmek için, Microsoft 365 Grupları konumunu kullanarak Yammer için kullanılan tüm Microsoft 365 gruplarını içeren **ek bir bekletme Microsoft 365 yapılandırabilirsiniz**. 
+Yammer yalnızca topluluk iletileri ve özel iletiler değil. Yammer ağ bağlantınıza gelen e-posta iletilerini korumak ve silmek için, bu konumu kullanarak Yammer için kullanılan tüm Microsoft 365 gruplarını içeren ek bir **bekletme Microsoft 365 Grupları** yapılandırabilirsiniz. 
 
-Yammer'de depolanan dosyaları alıkoyma ve silme için, **Microsoft 365 Grupları** konumunu veya hesap konumlarını içeren **OneDrive** ilkeniz gerekir:
+Yammer'de depolanan dosyaları alıkoyma ve silme için, Microsoft 365 Grupları konumunu veya hesap konumlarını içeren **OneDrive ilkeniz** gerekir:
 
 - Özel iletilerde paylaşılan dosyalar, dosyayı OneDrive kullanıcıya gönderilen posta hesabında depolanır. 
 
@@ -241,6 +236,6 @@ Bekletme ilkesinden alınan ayarlar içeriğe zaten uygulandığında, ilkenin y
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Exchange, SharePoint, OneDrive veya Microsoft 365 Grupları için bazı öğeler için yapılandırılan bekletme ilkesi ayarlarından farklı bekletme ayarları gerekirse, bu özel durumlar için bekletme etiketleri [oluşturun](create-retention-labels-information-governance.md).
+Bazı ürünlerde Exchange, SharePoint, OneDrive veya Microsoft 365 Grupları için yapılandırmış olduğunuz bekletme ilkesi ayarlarından farklı bekletme ayarları gerekirse, bu özel durumlar için bekletme etiketleri [oluşturun](create-retention-labels-information-governance.md).
 
 Öte yandan, iş, yasal veya mevzuata yönelik kayıt tutma gereksinimleri için yüksek değerli öğelerin yaşam döngüsü yönetimini arıyorsanız, bekletme etiketleri oluşturmak ve yönetmek için dosya [planını kullanın](file-plan-manager.md).

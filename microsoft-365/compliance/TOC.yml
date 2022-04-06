@@ -535,8 +535,6 @@
               href: dlp-chrome-get-started.md
             - name: Veri kaybı önleme uyarı panosunu kullanmaya başlama
               href: dlp-alerts-dashboard-get-started.md
-            - name: Power BI için Veri kaybını önleme ilkelerini kullanmaya başlama (önizleme)
-              href: dlp-powerbi-get-started.md
         - name: DLP kullanma
           items:
             - name: DLP ve Microsoft Teams

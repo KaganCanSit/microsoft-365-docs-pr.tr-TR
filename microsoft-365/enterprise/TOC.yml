@@ -181,22 +181,15 @@
       items:
         - name: Microsoft 365 hizmet sistem durumu
           href: microsoft-365-service-health.md
-        - name: Microsoft 365 izleme
-          href: microsoft-365-monitoring.md
+        - name: Exchange Online izleme
+          href: microsoft-365-exchange-monitoring.md
           items:
-            - name: Exchange Online izleme
-              href: microsoft-365-exchange-monitoring.md
-              items:
-                - name: Posta kutusu kullanımı için hizmet uyarıları
-                  href: microsoft-365-mailbox-utilization-service-alerts.md
-                - name: MRS kaynak gecikmeleri için hizmet uyarıları
-                  href: microsoft-365-mrs-source-delays-service-alerts.md
-                - name: Dış alıcılar için kuyruğa alınan iletiler için hizmet uyarıları
-                  href: microsoft-365-external-recipient-service-alerts.md
-            - name: Microsoft 365 Uygulamaları izleme
-              href: microsoft-365-apps-monitoring.md
-            - name: Microsoft 365 Teams izleme
-              href: microsoft-365-teams-monitoring.md
+            - name: Posta kutusu kullanımı için hizmet uyarıları
+              href: microsoft-365-mailbox-utilization-service-alerts.md
+            - name: MRS kaynak gecikmeleri için hizmet uyarıları
+              href: microsoft-365-mrs-source-delays-service-alerts.md
+            - name: Dış alıcılar için kuyruğa alınan iletiler için hizmet uyarıları
+              href: microsoft-365-external-recipient-service-alerts.md
         - name: Kurulum kılavuzları
           href: setup-guides-for-microsoft-365.md
     - name: Birden çok kiracı

@@ -20,13 +20,13 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid: MET150
 description: Microsoft 365 yönetim merkezinde Dynamics 365, Intune, Power Platform ve İş için Microsoft 365 deneme veya ücretli aboneliklerinizi nasıl iptal edebileceğinizi öğrenin.
-ms.date: 01/20/2022
-ms.openlocfilehash: 82d579cab43b2c1edd7cc3bd898f2397bbd7a435
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.date: 03/31/2022
+ms.openlocfilehash: d6b6c078c5f0d1b44143f3a9cc2d336a0a80fe03
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320095"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595290"
 ---
 # <a name="cancel-your-subscription"></a>Aboneliğinizi iptal etme
 
@@ -49,11 +49,11 @@ Aboneliğinizi iptal etmek istiyorsanız, bunu yapmanın en kolay yolu [yinelene
 
 ### <a name="if-you-have-a-billing-profile"></a>Faturalama profiliniz varsa
 
-Aboneliğinizi iptal etmek ve eşit dağıtılmış bir kredi veya para iadesi almak için, aboneliği başlangıcından veya yenilenmesinden sonraki 72 saat içinde iptal etmeniz gerekir. Bu sınırlı zaman penceresinde iptal ederseniz, eşit dağıtılmış tutar kredi olarak bir sonraki faturanıza yansıtılır veya sonraki fatura döneminde size iade edilir.
+Aboneliğinizi iptal etmek ve eşit dağıtılmış bir kredi veya para iadesi almak için, aboneliği başlangıcından veya yenilenmesinden sonraki yedi gün içinde iptal etmeniz gerekir. Bu sınırlı zaman penceresinde iptal ederseniz, eşit dağıtılmış tutar kredi olarak bir sonraki faturanıza yansıtılır veya sonraki fatura döneminde size iade edilir.
 
-Aboneliğinizin başlangıcından veya yenilenmesinden sonraki 72 saat içinde iptal etmeniz gerekiyorsa, bu makalenin devamındaki [Aboneliğinizi iptal etme adımları](#steps-to-cancel-your-subscription) bölümüne gidin.
+Aboneliğinizin başlangıcından veya yenilenmesinden sonraki yedi gün içinde iptal etmeniz gerekiyorsa, bu makalenin devamındaki [Aboneliğinizi iptal etme adımları](#steps-to-cancel-your-subscription) bölümüne gidin.
 
-72 saatten daha uzun bir süre geçtiyse [yinelenen faturalandırmayı kapatın](renew-your-subscription.md). Bu işlem aboneliğiniz için yeniden ücretlendirilmenizi önler ve aboneliğinizin kalan bölümünde ürünlerinize ve hizmetlerinize erişimi sürdürmenize olanak tanır.
+Yedi günden daha uzun süre geçtiyse, [yinelenen faturalandırmayı](renew-your-subscription.md) kapatın. Bu işlem aboneliğiniz için yeniden ücret alınmasını önler ve aboneliğinizin kalan bölümünde ürünlerinize ve hizmetlerinize erişimi sürdürmenize olanak tanır.
 
 ### <a name="if-you-dont-have-a-billing-profile"></a>Faturalama profiliniz yoksa
 
@@ -66,7 +66,7 @@ Deneme veya ücretli aboneliğinizi iptal etme adımları, aboneliğinizdeki lis
 |25 veya daha az  | <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezinde</a> deneme veya ücretli aboneliğinizi çevrimiçi olarak [iptal etmek için aşağıdaki adımları kullanın](#steps-to-cancel-your-subscription).        |
 |25'ten fazla   | Lisansların sayısını 25’e veya 25’in altına düşürün ve [iptal etmek için aşağıdaki adımları kullanın](#steps-to-cancel-your-subscription).      |
 
-Lisansların sayısını azaltamıyorsanız [yinelenen faturalandırmayı kapatın](renew-your-subscription.md). Bu işlem aboneliğiniz için yeniden ücretlendirilmenizi önler ve aboneliğinizin kalan bölümünde ürünlerinize ve hizmetlerinize erişimi sürdürmenize olanak tanır.
+Lisans sayısını azaltamıyorsanız, [yinelenen faturalandırmayı](renew-your-subscription.md) kapatın. Bu işlem aboneliğiniz için yeniden ücret alınmasını önler ve aboneliğinizin kalan bölümünde ürünlerinize ve hizmetlerinize erişimi sürdürmenize olanak tanır.
 
 Aboneliğinizi iptal edemiyorsanız, yardım için [destekle iletişime geçin](../../admin/get-help-support.md).
 
@@ -89,7 +89,7 @@ Aboneliğinizi iptal edemiyorsanız, yardım için [destekle iletişime geçin](
 
 2. İptal etmek istediğiniz aboneliği bulun. Üç noktayı (diğer eylemler) ve ardından **Aboneliği iptal et**'i seçin.
 
-3. **Aboneliği iptal et** bölmesinde iptal etme nedeninizi seçin. İsteğe bağlı olarak bir geri bildirim gönderin.
+3. **Aboneliği iptal et** bölmesinde iptal etme nedeninizi seçin. İsterseniz geri bildirim sağlayabilirsiniz.
 
 4. **Kaydet**'i seçin.
 

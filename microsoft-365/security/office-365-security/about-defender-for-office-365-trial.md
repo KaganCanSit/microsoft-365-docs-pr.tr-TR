@@ -19,19 +19,19 @@ ms.custom:
 - seo-marvel-apr2020
 ROBOTS: NOINDEX, NOFOLLOW
 description: Yöneticiler, windows için Microsoft Defender'ın deneme modu hakkında bilgi Office 365
-ms.openlocfilehash: 3d8d873a3e89b0ae3302eca0ab7d7c471fd94449
-ms.sourcegitcommit: 39838c1a77d4e23df56af74059fb95970223f718
+ms.openlocfilehash: 40ad151dfa4ee26bf1e6177dda170cc2998c7c7e
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "62973876"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683877"
 ---
 # <a name="about-the-microsoft-defender-for-office-365-trial"></a>Office 365 için Microsoft Defender deneme sürümü hakkında
 
 > [!IMPORTANT]
 > Microsoft Defender'ın kullanımı kolay Deneme çalışma [kitabımızı hızlı bir şekilde kullanmaya Office 365](trial-playbook-defender-for-office-365.md). Bu çalışma kitabı, iş için Microsoft Defender ile organizasyonlarınızı nasıl koruyarak ücretsiz denemenizi en iyi şekilde Office 365.
 
-Güvenlik için Microsoft Defender Office 365 e-posta iletileri, bağlantılar (URL'ler) ve işbirliği araçları tarafından ortaya atacak kötü amaçlı tehditlere karşı organizasyonlarınızı korur. Office 365 Defender şunları içerir:
+Microsoft Defender for Office 365, e-posta iletileri, bağlantılar (URL'ler) ve işbirliği araçları tarafından ortaya atacak kötü amaçlı tehditlere karşı organizasyonlarınızı korur. Defender for Office 365 şunları içerir:
 
 - **Tehdit koruması ilkeleri**: Organizasyonunız için uygun koruma düzeyini ayarlamak üzere tehdit koruması ilkelerini tanımlayın.
 - **Raporlar**: Defender'ı izlemek ve Office 365 performansını izlemek için gerçek zamanlı raporları görüntüleniyor.
@@ -39,10 +39,6 @@ Güvenlik için Microsoft Defender Office 365 e-posta iletileri, bağlantılar (
 - **Otomatik araştırma ve yanıt özellikleri**: Zaman ve çabadan tasarruf etmek için araştırma ve tehditleri azaltmaya yönelik çabalar gerekir.
 
 Office 365 için Microsoft Defender denemesi, yalnızca birkaç tıklamayla ücretsiz olarak Office 365 Plan 2 için Defender'ın özelliklerini denemenin kolay bir yoludur. Bu üst düzey özellikler aşağıdaki tabloda açıklanmıştır:
-
-<br>
-
-****
 
 |Özellik|Açıklama|
 |---|---|
@@ -56,20 +52,19 @@ Office 365 için Microsoft Defender denemesi, yalnızca birkaç tıklamayla ücr
 |[Kampanya Görünümleri](campaigns.md)<sup>\*</sup>|Büyük ölçekli kötü amaçlı e-posta etkinliğini araştırın ve yanıt verin.|
 |[Yeni özellikler için Defender Office 365 raporlar](view-reports-for-mdo.md)|Tehdit koruması durumu, URL tehdit koruması, posta gecikme süresi ve daha fazlasını içeren raporları görüntüye ekleyin.|
 |[Öncelik hesabı koruması](/microsoft-365/admin/setup/priority-accounts)<sup>\*</sup>|Öncelik hesabı olarak tanım kullanıcılarınız uyarılarda, raporlarda ve araştırmalarda etiketlenir ve böylece dikkatleri üzerinde dururlar. Ayrıca, Filtrelerde Öncelik etiketini de kullanabilirsiniz.|
-|
 
 <sup>\*</sup>Bu özellik Plan 2'de Office 365 Defender'a özeldir.
 
 ## <a name="set-up-a-defender-for-office-365-trial"></a>Office 365 için Defender ayarlama
 
-Deneme sürümü, kuruluşlara Defender'ı kolay bir şekilde ayarlama ve yapılandırma Office 365 olanak sağlar. Kurulum sırasında, Office 365 için Defender'a özel ilkeler (özel olarak[, Kasa](safe-attachments.md) [E-posta](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) iletileri için ekler, [Kasa e-posta](safe-links.md) iletileri ve Microsoft Teams için Microsoft Teams bağlantıları ve kimlik avı önleme ilkelerinde kimliğe bürünme koruması) önceden ayarlanmış güvenlik ilkeleri için Standart şablonu kullanılarak [uygulanır.](preset-security-policies.md)
+Deneme sürümü, kuruluşlara Defender'ı kolay bir şekilde ayarlama ve yapılandırma Office 365 olanak sağlar. Kurulum sırasında, Office 365 için Defender'a özel ilkeler (özel olarak[,](safe-attachments.md) [e-posta](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) iletileri için Kasa Ekleri, e-posta iletileri ve [Microsoft Teams için Kasa](safe-links.md) Bağlantıları ve kimlik avı ilkeleri içinde kimliğe bürünme koruması) önceden ayarlanmış güvenlik ilkeleri için Standart şablonu kullanılarak [uygulanır.](preset-security-policies.md)
 
 Varsayılan olarak, bu ilkeler kuruluş kapsamındaki tüm kullanıcılara yöneliktir, ancak deneme sürümü sırasında veya sonrasında, ilke atamayı belirli kullanıcılarla değiştirebilirsiniz.
 
 > [!NOTE]
-> Mevcut istenmeyen posta önleme ilkeleriniz, istenmeyen posta önleme ilkelerde yüksek  güveni olan istenmeyen posta kararlarını almak için İletiyi Gereksiz E-posta klasörüne taşı eylemiyle yapılandırılmış olabilir. Önceden tanımlı güvenlik ilkeleri için Standart şablonu, yüksek güven  istenmeyen posta için Karantina iletisi eylemini kullanır ve önceden ayarlanmış güvenlik ilkeleri her zaman özel istenmeyen posta önleme ilkeleri veya varsayılan istenmeyen posta önleme ilkesi önce uygulanır. Varsayılan, Standart ve Katı ayarları hakkında daha fazla bilgi için bkz. [EOP ve Microsoft Defender için önerilen ayarlar Office 365.](recommended-settings-for-eop-and-office365.md)
+> Mevcut istenmeyen posta önleme ilkeleriniz, istenmeyen posta önleme ilkelerde yüksek  güveni olan istenmeyen posta kararlarını almak için İletiyi Gereksiz E-posta klasörüne taşı eylemiyle yapılandırılmış olabilir. Önceden tanımlı güvenlik ilkeleri için Standart şablonu, yüksek güven  istenmeyen posta için Karantina iletisi eylemini kullanır ve önceden ayarlanmış güvenlik ilkeleri her zaman özel istenmeyen posta önleme ilkeleri veya varsayılan istenmeyen posta önleme ilkesi önce uygulanır. Varsayılan, Standart ve Katı ayarları hakkında daha fazla bilgi için bkz. [EOP ve Microsoft Defender için önerilen ayarlar Office 365 bakın](recommended-settings-for-eop-and-office365.md).
 
-Diğer iş yükleri de koruma için kullanılabilir (örneğin, Kasa, [SharePoint, OneDrive, Microsoft Teams](mdo-for-spo-odb-and-teams.md) ve Kasa Uygulamaları için [Office 365 Bağlantıları](safe-links.md#safe-links-settings-for-office-365-apps).
+Diğer iş yükleri de koruma için kullanılabilir (örneğin, [Kasa SharePoint, OneDrive, Microsoft Teams ve Kasa](mdo-for-spo-odb-and-teams.md) Uygulamaları için [Office 365 Ekleri](safe-links.md#safe-links-settings-for-office-365-apps).
 
 Deneme sürümünün kurulumu sırasında, Plan 2 için Defender'a özel Office 365 yanıt işlevselliği (örneğin[, AIR](office-365-air.md) ve [Threat Explorer](threat-explorer.md) tüm kuruluş için de ayarlanır. İlkenin tanınması gerekmez.
 
@@ -89,11 +84,11 @@ Deneme için lisans kartı aşağıdaki bilgileri gösterir:
 
   - **Ücretli**: Lisans (varsa) için Office 365 Defender sayısı.
 
-- **Kullanım** bölümü: Kullanıcılarınızı kaç kullanıcınız bu ilkeler için Defender Office 365 kapsiyor.
+- **Kullanım** bölümü: Kullanıcılarınızı kaç kullanıcınız bu ilkeler için Defender Office 365 ele almaktadır.
   - **Yalnızca & algılama**: Aşağıdaki senaryolara dahil olan toplam kullanıcı sayısı:
     - Deneme süresi boyunca, ilkelerin kapsamını belirli kullanıcılar için belirttiniz.
     - Kapsamları belirli kullanıcılara göre olan özel güvenlik açıkları vardır.
-  - **Tam koruma**: Plan 2 özellikleri (AIR, Threat Explorer, Attack Office 365 vb.) için Defender tarafından korunan toplam kullanıcı sayısı.
+  - **Tam koruma**: Plan 2 özellikleri (AIR, Threat Explorer, Saldırı benzetim eğitimi Office 365) için Defender ile korunan toplam kullanıcı sayısı.
 
 ## <a name="permissions"></a>İzinler
 
@@ -119,7 +114,7 @@ A: Bkz. [Deneme sürenizi uzatma](/microsoft-365/commerce/try-or-buy-microsoft-3
 
 ### <a name="q-what-happens-to-my-data-after-the-trial-expires"></a>S: Deneme süresi sona erdikten sonra verilerime ne olur?
 
-A: Deneme süreniz sona erdikten sonra, 30 gün boyunca deneme verilerinize (daha önce sahip olmadığınız Office 365 Için Defender'daki özelliklerden gelen veriler) erişebilirsiniz. Bu 30 günlük sürenin ardından, bu deneme sürümü için Defender ile Office 365 ilkeler ve veriler silinir.
+A: Deneme süreniz dolduğunda 30 gün boyunca deneme verilerinize (daha önce sahip olmadığınız bir Office 365 için Defender'daki özelliklerden gelen veriler) erişebilirsiniz. Bu 30 günlük sürenin ardından, bu deneme sürümü için Defender ile Office 365 ilkeler ve veriler silinir.
 
 ### <a name="q-how-many-times-can-i-use-the-defender-for-office-365-trial-in-my-organization"></a>S: Kuruluşumda bu denemeyi kullanmak için Defender Office 365 kaç kez kullanabilirim?
 
@@ -137,7 +132,7 @@ Bu etkileşimli kılavuzda, Windows için Defender Office 365 hakkında daha faz
 
 Güçlü bir filtreleme yığını iş e-posta güvenliği, kimlik bilgisi kimlik avı, fidye yazılımı ve gelişmiş kötü amaçlı yazılım gibi çok çeşitli hacim tabanlı ve hedefli saldırılar engeller.
 
-- [Kimlik avı önleme ilkeleri: Kimlik avı için Defender'daki özel Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
+- [Kimlik avı koruma ilkeleri: Güvenlik ayarları için Defender'Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
 - [Kasa Ekleri Kaydetme](safe-attachments.md)
 - [Güvenli Bağlantılar](safe-links.md)
 
@@ -154,7 +149,7 @@ Güçlü deneyimler, tüm kullanıcılar genelindeki saldırıları izlemek içi
 - [Tehdit Gezgini ve Gerçek zamanlı algılamalar](threat-explorer.md)
 - [Office 365 için Defender'da gerçek zamanlı raporlar](view-reports-for-mdo.md)
 - [Tehdit İzleyicileri - Yeni ve Dikkat çekici](threat-trackers.md)
-- Microsoft 365 Defender ile [tümleştirme](../defender/microsoft-365-defender.md)
+- Microsoft 365 Defender [ile tümleştirme](../defender/microsoft-365-defender.md)
 
 ### <a name="response-and-remediation"></a>Yanıt ve düzeltme
 
@@ -173,7 +168,7 @@ Zengin benzetim ve eğitim özellikleriyle birlikte istemci uygulamaları içind
 Önerilen şablonlar ve yapılandırma içgörüleri müşterilerin güvenli bir şekilde alımalarını ve güvende kalmalarını sağlar.
 
 - [EOP ve Office 365 için Microsoft Defender'da önceden ayarlanmış güvenlik Office 365](preset-security-policies.md)
-- [EOP'de koruma ilkeleri için yapılandırma çözümleyicisi ve](configuration-analyzer-for-security-policies.md) Office 365.
+- [EOP'de ve Office 365 için Microsoft Defender'da koruma ilkeleri için yapılandırma çözümleyicisi](configuration-analyzer-for-security-policies.md).
 
 ## <a name="give-feedback"></a>Geri bildirim gönderin
 

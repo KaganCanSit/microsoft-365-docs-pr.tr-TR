@@ -19,12 +19,12 @@ ms.collection:
 description: Güvenlik ayarları için EOP (EOP) Exchange Online Protection Defender ile ilgili en Office 365 yöntemlerdir? Standart koruma için geçerli öneriler neler? Daha katı olmak için ne kullanılmaları gerekir? Ayrıca Defender'ı bu iş için kullanıyorsanız hangi ek Office 365?
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 66d221b422236c6818ebb146babc0cc90eab1206
-ms.sourcegitcommit: f563b4229760fa099703296d1ad2c1f0264f1647
+ms.openlocfilehash: 078fbe60b18c06b46c4da0935fce3c4ad867908b
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "63016267"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683723"
 ---
 # <a name="recommended-settings-for-eop-and-microsoft-defender-for-office-365-security"></a>EOP ve Microsoft Defender için önerilen güvenlik Office 365 ayarları
 
@@ -56,10 +56,6 @@ Bu makalede, varsayılan ayarların yanı sıra kullanıcılarınızı korumaya 
 
 İstenmeyen posta önleme ilkeleri oluşturmak ve yapılandırmak için bkz. [EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).
 
-<br>
-
-****
-
 |Güvenlik özelliği adı|Default|Standard|Katı|Açıklama ekleme|
 |---|:---:|:---:|:---:|---|
 |**İstenmeyen posta & toplu e-posta eşiği**|||||
@@ -85,15 +81,10 @@ Bu makalede, varsayılan ayarların yanı sıra kullanıcılarınızı korumaya 
 |İzin verilen gönderen etki alanları <p> _AllowedSenderDomains_|Yok|Yok|Yok|İzin verilen gönderenler listesine etki alanları eklemek çok iyi bir fikir değildir. Saldırganlar size aksi halde filtrelenmiş e-posta gönderebilirler. <p> Kuruluş [e-posta](learn-about-spoof-intelligence.md) etki alanlarındaki gönderen e-posta adreslerini kullanarak ya da dış etki alanlarındaki gönderen e-posta adreslerini kullanarak gönderenin e-posta adreslerini kullanarak e-posta gönderenin e-postalarını kullanarak e-posta gönderenin e-postalarını e-posta olarak gönderenlerin e-postalarını e-posta ile birlikte kullanarak e-postaların e-postalarını kullanarak ya da e-postaların e-postalarını kullanarak ya da e-posta e-postalarını kullanarak ya da e-posta e-postalarını kullanarak bilgi e-postalarını kullanarak ya da e-posta e-postalarını kullanarak ya da e-posta e-postalarını kullanarak e-posta gönderene ya da e-posta [](tenant-allow-block-list.md)|
 |Engellenen gönderenler <p> _BlockedSenders_|Yok|Yok|Yok||
 |Engellenen gönderen etki alanları <p> _BlockedSenderDomains_|Yok|Yok|Yok||
-|
 
 #### <a name="asf-settings-in-anti-spam-policies"></a>İstenmeyen posta önleme ilkelerde ASF ayarları
 
 Bu bölümdeki tabloda, istenmeyen posta önleme ilkelerde kullanılabilen Gelişmiş İstenmeyen Posta Filtresi (ASF) ayarları açık bulunmaktadır. Hem Standart hem de Katı **düzeyler** için **bu ayarların** **hepsi Kapalıdır** . ASF ayarları hakkında daha fazla bilgi için bkz. [EOP'de Gelişmiş İstenmeyen Posta Filtresi (ASF) ayarları](advanced-spam-filtering-asf-options.md).
-
-<br>
-
-****
 
 |Güvenlik özelliği adı|Açıklama ekleme|
 |---|---|
@@ -113,7 +104,6 @@ Bu bölümdeki tabloda, istenmeyen posta önleme ilkelerde kullanılabilen Geli�
 |**Gönderen Kimliği filtrelemesi zor başarısız oldu** (_MarkAsSpamFromAddressAuthFail_)||
 |**Geri Çıktı** (_MarkAsSpamNdrBackscatter_)||
 |**Test modu** (_TestModeAction_)|Test eylemini destekleyen ASF  ayarları için, sınama modu eylemini Yok olarak yapılandırabilirsiniz **, varsayılan** **X Üstbilgi** metni ekleyebilir veya Gizli **iletisi (**`None`, `AddXHeader``BccMessage`veya ) gönderebilirsiniz. Daha fazla bilgi için bkz. [ASF ayarlarını etkinleştirme, devre dışı bırakma veya test edin](advanced-spam-filtering-asf-options.md#enable-disable-or-test-asf-settings).|
-|
 
 #### <a name="eop-outbound-spam-policy-settings"></a>EOP giden istenmeyen posta ilkesi ayarları
 
@@ -124,10 +114,6 @@ Hizmette varsayılan gönderme sınırları hakkında daha fazla bilgi için bkz
 > [!NOTE]
 > Giden istenmeyen posta ilkeleri Standart veya Katı önceden tanımlı güvenlik ilkelerinin bir parçası değildir. **Standart ve** **Katı değerleri**, varsayılan **giden istenmeyen** posta ilkesinde veya sizin oluşturmanız için özel ilkelerde önerilen değerlerimizi gösterir.
 
-<br>
-
-****
-
 |Güvenlik özelliği adı|Default|Standard|Katı|Açıklama ekleme|
 |---|:---:|:---:|:---:|---|
 |**Dış ileti sınırı ayarlama** <p> _RecipientLimitExternalPerHour_|0|500|400|Varsayılan değer 0, hizmet varsayılanlarını kullanmak anlamına gelir.|
@@ -137,15 +123,10 @@ Hizmette varsayılan gönderme sınırları hakkında daha fazla bilgi için bkz
 |**Otomatik iletme kuralları** <p> _AutoForwardingMode_|**Otomatik - Sistem denetimli** <p> `Automatic`|**Otomatik - Sistem denetimli** <p> `Automatic`|**Otomatik - Sistem denetimli** <p> `Automatic`|
 |**Bu sınırları aşan giden iletilerin bir kopyasını bu kullanıcılara ve gruplara gönderin** <p> _BccSuspiciousOutboundMail_ <p> _BccSuspiciousOutboundAdditionalRecipients_|Seçili değil <p> `$false` <p> Boş|Seçili değil <p> `$false` <p> Boş|Seçili değil <p> `$false` <p> Boş|Bu ayar için özel bir önerimiz yok. <p> Bu ayar yalnızca varsayılan giden istenmeyen posta ilkesinde çalışır. Sizin oluşturan özel giden istenmeyen posta ilkelerde işe yaramadı.|
 |**Gönderenin giden istenmeyen posta göndermesi nedeniyle engellenmişse, bu kullanıcıları ve grupları bilgilendirin** <p> _NotifyOutboundSpam_ <p> _NotifyOutboundSpamRecipients_|Seçili değil <p> `$false` <p> Boş|Seçili değil <p> `$false` <p> Boş|Seçili değil <p> `$false` <p> Boş|Kullanıcı e-posta göndermeyle kısıtlandı adlı varsayılan uyarı ilkesi, ilke sınırları aşılmış olması nedeniyle kullanıcılar engellenmiş durumdayken **TenantAdmins** (**Genel** yöneticiler) grubunun üyelerine zaten e-posta bildirimleri gönderir.[](../../compliance/alert-policies.md)  **Yöneticileri ve diğer kullanıcıları bilgilendirmek için giden** istenmeyen posta ilkesinde bu ayar yerine uyarı ilkesi kullanmalarını kesinlikle öneririz. Yönergeler için bkz [. Kısıtlanmış kullanıcılar için uyarı ayarlarını doğrulama](removing-user-from-restricted-users-portal-after-spam.md#verify-the-alert-settings-for-restricted-users).|
-|
 
 ### <a name="eop-anti-malware-policy-settings"></a>EOP kötü amaçlı yazılımdan koruma ilkesi ayarları
 
 Kötü amaçlı yazılımdan koruma ilkeleri oluşturmak ve yapılandırmak için bkz. [EOP'de kötü amaçlı yazılımdan koruma ilkelerini yapılandırma](configure-anti-malware-policies.md).
-
-<br>
-
-****
 
 |Güvenlik özelliği adı|Default|Standard|Katı|Açıklama ekleme|
 |---|:---:|:---:|:---:|---|
@@ -171,15 +152,10 @@ Kötü amaçlı yazılımdan koruma ilkeleri oluşturmak ve yapılandırmak içi
 |**Dış gönderenlerden gelen iletiler için bildirimleri özelleştirme**||||Bu ayarlar yalnızca, **İletiler kötü** amaçlı yazılım olarak karantinaya alınırken dış gönderenlere bildir veya Yöneticiye dış gönderenlerden teslim edilmeyen iletileri bildir **seçili olduğunda kullanılır** .|
 |**Konu** <p> _CustomExternalSubject_|Boş <p> `$null`|Boş <p> `$null`|Boş <p> `$null`||
 |**İleti** <p> _CustomExternal YerKarakdi_|Boş <p> `$null`|Boş <p> `$null`|Boş <p> `$null`||
-|
 
 ### <a name="eop-anti-phishing-policy-settings"></a>EOP kimlik avı önleme ilkesi ayarları
 
 Bu ayarlar hakkında daha fazla bilgi için bkz [. Spoof ayarları](set-up-anti-phishing-policies.md#spoof-settings). Bu ayarları yapılandırmak için bkz. [EOP'de kimlik avı koruma ilkelerini yapılandırma](configure-anti-phishing-policies-eop.md).
-
-<br>
-
-****
 
 |Güvenlik özelliği adı|Default|Standard|Katı|Açıklama ekleme|
 |---|:---:|:---:|:---:|---|
@@ -190,7 +166,6 @@ Bu ayarlar hakkında daha fazla bilgi için bkz [. Spoof ayarları](set-up-anti-
 |**İlk kişi bilgilerini güvenlik ipucu** <p> _EnableFirstContactSafetyTips_|Seçili değil <p> `$false`|Seçili değil <p> `$false`|Seçili değil <p> `$false`|Daha fazla bilgi için bkz[. İlk kişi güvenlik ipucu](set-up-anti-phishing-policies.md#first-contact-safety-tip).|
 |**Kimlik doğrulaması için kimliği doğrulanmamış gönderenler için göster (?)** <p> _EnableUnauthenticatedSender_|Seçildi <p> `$true`|Seçildi <p> `$true`|Seçildi <p> `$true`|Tanımlanamayan kimliksiz gönderenler için Outlook'da gönderenin fotoğrafına bir soru işareti (?) ekler. Daha fazla bilgi için bkz [. Kimliği doğrulanmamış gönderen](set-up-anti-phishing-policies.md#unauthenticated-sender).|
 |**"Aracılığıyla" etiketini göster** <p> _EnableViaTag_|Seçildi <p> `$true`|Seçildi <p> `$true`|Seçildi <p> `$true`|DKIM imzası veya MAIL **FROM** chris@contoso.com farklı ise, Gönderen adresine aracılığıyla etiketi (chris@contoso.com fabrikam.com aracılığıyla gönder) ekler. <p> Daha fazla bilgi için bkz [. Kimliği doğrulanmamış gönderen](set-up-anti-phishing-policies.md#unauthenticated-sender).|
-|
 
 ## <a name="microsoft-defender-for-office-365-security"></a>Office 365 güvenliği için Microsoft Defender
 
@@ -214,22 +189,13 @@ EOP müşterileri daha önce açıklandığı gibi temel kimlik avı önleme öz
 
 Bu ayar hakkında daha fazla bilgi için bkz. Gelişmiş kimlik avı ilkeleri için [Microsoft Defender'da kimlik avıyla mücadele Office 365](set-up-anti-phishing-policies.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365). Bu ayarı yapılandırmak için bkz. Kimlik avı için [Defender'da kimlik avı ilkelerini Office 365](configure-mdo-anti-phishing-policies.md).
 
-<br>
-
-****
-
 |Güvenlik özelliği adı|Default|Standard|Katı|Açıklama ekleme|
 |---|:---:|:---:|:---:|---|
 |**Kimlik avı e-posta eşiği** <p> _PhishThresholdLevel_|**1 - Standart** <p> `1`|**2 - Saldırgan** <p> `2`|**3 - Daha agresif** <p> `3`||
-|
 
 #### <a name="impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da kimlik avı önleme ilkelerinde kimliğe bürünme Office 365
 
 Bu ayarlar hakkında daha fazla bilgi için bkz. Kimlik avı önleme ilkeleri için [Microsoft Defender'da Kimliğe Bürünme Office 365](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365). Bu ayarları yapılandırmak için bkz. [Kimlik avı için Defender'da kimlik avı ilkelerini Office 365](configure-mdo-anti-phishing-policies.md).
-
-<br>
-
-****
 
 |Güvenlik özelliği adı|Default|Standard|Katı|Açıklama ekleme|
 |---|:---:|:---:|:---:|---|
@@ -248,17 +214,12 @@ Bu ayarlar hakkında daha fazla bilgi için bkz. Kimlik avı önleme ilkeleri i�
 |**Kullanıcı kimliğe bürünme kullanıcı kimliğini güvenlik ipucu** <p> _EnableSimilarUsersSafetyTips_|Kapalı <p> `$false`|Seçildi <p> `$true`|Seçildi <p> `$true`||
 |**Etki alanı kimliğe bürünme kullanıcılarını güvenlik ipucu** <p> _EnableSimilarDomainsSafetyTips_|Kapalı <p> `$false`|Seçildi <p> `$true`|Seçildi <p> `$true`||
 |**Kullanıcı kimliğe bürünme alışılmadık karakterleri güvenlik ipucu** <p> _EnableUnusualCharactersSafetyTips_|Kapalı <p> `$false`|Seçildi <p> `$true`|Seçildi <p> `$true`||
-|
 
 #### <a name="eop-anti-phishing-policy-settings-in-microsoft-defender-for-office-365"></a>Kimlik avı için Microsoft Defender'da EOP kimlik avına karşı koruma Office 365
 
 Bunlar, [EOP'de istenmeyen posta önleme ilkesi ayarlarında kullanılabilen ayarlarla aynıdır](#eop-anti-spam-policy-settings).
 
 Poof ayarları birbirine göre bağlantılıdır, ancak İlk kişi güvenlik ipucu  ayarının gizlilik ayarına bağımlılığı yoktur.
-
-<br>
-
-****
 
 |Güvenlik özelliği adı|Default|Standard|Katı|Açıklama ekleme|
 |---|:---:|:---:|:---:|---|
@@ -269,7 +230,6 @@ Poof ayarları birbirine göre bağlantılıdır, ancak İlk kişi güvenlik ipu
 |**İlk kişi bilgilerini güvenlik ipucu** <p> _EnableFirstContactSafetyTips_|Seçili değil <p> `$false`|Seçildi <p> `$true`|Seçildi <p> `$true`|Daha fazla bilgi için bkz[. İlk kişi güvenlik ipucu](set-up-anti-phishing-policies.md#first-contact-safety-tip).|
 |**Kimlik doğrulaması için kimliği doğrulanmamış gönderenler için göster (?)** <p> _EnableUnauthenticatedSender_|Seçildi <p> `$true`|Seçildi <p> `$true`|Seçildi <p> `$true`|Tanımlanamayan kimliksiz gönderenler için Outlook'da gönderenin fotoğrafına bir soru işareti (?) ekler. Daha fazla bilgi için bkz [. Kimliği doğrulanmamış gönderen](set-up-anti-phishing-policies.md#unauthenticated-sender).|
 |**"Aracılığıyla" etiketini göster** <p> _EnableViaTag_|Seçildi <p> `$true`|Seçildi <p> `$true`|Seçildi <p> `$true`|DKIM imzası veya MAIL **FROM** chris@contoso.com farklı ise, Gönderen adresine aracılığıyla etiketi (chris@contoso.com fabrikam.com aracılığıyla gönder) ekler. <p> Daha fazla bilgi için bkz [. Kimliği doğrulanmamış gönderen](set-up-anti-phishing-policies.md#unauthenticated-sender).|
-|
 
 ### <a name="safe-attachments-settings"></a>Kasa Ek ayarlarını değiştirme
 
@@ -288,16 +248,11 @@ Bu ayarları yapılandırmak için bkz. SharePoint, [OneDrive](turn-on-mdo-for-s
 
 PowerShell'de, bu ayarlar için [Set-AtpPolicyForO365](/powershell/module/exchange/set-atppolicyforo365) cmdlet'ini kullanırsiniz.
 
-<br>
-
-****
-
 |Güvenlik özelliği adı|Default|Yerleşik koruma|Açıklama ekleme|
 |---|:---:|:---:|---|
 |**SharePoint, OneDrive ve Office 365 için Defender'ı Microsoft Teams** <p> _EnableATPForSPOTeamsODB_|Kapalı <p> `$false`|On <p> `$true`|Kullanıcıların kötü amaçlı dosyaları indirmesini engellemek için bkz[. SharePoint Online PowerShell kullanarak kullanıcıların kötü amaçlı dosyaları indirmesini engelleme](turn-on-mdo-for-spo-odb-and-teams.md#step-2-recommended-use-sharepoint-online-powershell-to-prevent-users-from-downloading-malicious-files).|
 |**Office istemcileri için Belgeleri Kasa açma** <p> _EnableSafeDocs_|Kapalı <p> `$false`|On <p> `$true`|Bu özellik yalnızca Office 365 için Defender'a dahil edilen lisanslarla (örneğin, Microsoft 365 E5 veya başka bir Microsoft 365 E5 Güvenlik). Daha fazla bilgi için bkz[. Kasa Belge Belgeleri'Microsoft 365 E5](safe-docs.md).|
 |**Belgelerin dosyayı kötü amaçlı olarak tanımlasa bile Kasa Korumalı Görünüm'e tıklamasına izin ver** <p> _AllowSafeDocsOpen_|Kapalı <p> `$false`|Kapalı <p> `$false`|Bu ayar, Belgeler'Kasa ilgilidir.|
-|
 
 #### <a name="safe-attachments-policy-settings"></a>Kasa ler ilke ayarlarını değiştirme
 
@@ -310,17 +265,12 @@ PowerShell'de, bu ayarlar için [New-SafeAttachmentPolicy](/powershell/module/ex
 >
 > Özel **sütundaki Varsayılan**, yeni sütunda varsayılan değerlere başvurur Kasa Ekler ilkelerine başvurur. Kalan sütunlar, karşılık gelen önceden ayarlanmış güvenlik ilkelerde yapılandırılan değerleri gösterir (aksi belirtilmedikçe).
 
-<br>
-
-****
-
 |Güvenlik özelliği adı|Özelde varsayılan|Yerleşik koruma|Standard|Katı|Açıklama ekleme|
 |---|:---:|:---:|:---:|:---:|---|
 |**Kasa bilinmeyen kötü amaçlı yazılım yanıtı** <p> _Etkinleştirme_ ve _Eylem_|**Kapalı** <p> `-Enable $false` ve `-Action Block`|**Engelle** <p> `-Enable $true` ve `-Action Block`|**Engelle** <p> `-Enable $true` ve `-Action Block`|**Engelle** <p> `-Enable $true` ve `-Action Block`|Enable _parametresi_ etkinleştir $false, _Action parametresinin değeri_ önemli değildir.|
 |**Karantina ilkesi** (_Karantina Etiketi_)|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|Ekler ilkesi oluşturmak Kasa, boş bir değer, Kasa Attachments (AdminOnlyAccessPolicy) tarafından karantinaya alınmış iletiler için geçmiş özelliklerini tanımlamak için varsayılan karantina ilkesi anlamına gelir. <p> Yöneticiler kullanıcılar için daha fazla özellik tanımlayan özel karantina ilkeleri oluşturabilir ve bu ilkeleri kullanabilir. Daha fazla bilgi için bkz. [Karantina ilkeleri](quarantine-policies.md).|
 |**Algılanan eklerle eki yeniden yönlendirme** : **Yeniden yönlendirmeyi etkinleştir** <p> _Yeniden yönlendirme_ <p> _RedirectAddress_|Seçilmedi ve e-posta adresi belirtilmemiş. <p> `-Redirect $false` <p> _RedirectAddress_ boş (`$null`)|Seçilmedi ve e-posta adresi belirtilmemiş. <p> `-Redirect $false` <p> _RedirectAddress_ boş (`$null`)|Bir e-posta adresi seçin ve belirtin. <p> `$true` <p> e-posta adresi|Bir e-posta adresi seçin ve belirtin. <p> `$true` <p> e-posta adresi|İletileri gözden geçirmesi için bir güvenlik yöneticisine yönlendirin. <p> **Not**: Bu ayar **Standart, Katı** veya **Yerleşik koruma önceden** ayarlanmış **güvenlik ilkelarında** yapılandırılmaz. Standart **ve** **Katı değerleri**, yeni **veya sizin** Kasa Ek ilkeleri içinde önerilen değerlerimizi gösterir.|
 |**Tarama Kasa tamamlanmadı ise Ekler algılama yanıtı uygulama (zaman aşımı veya hatalar)** <p> _ActionOnError_|Seçildi <p> `$true`|Seçildi <p> `$true`|Seçildi <p> `$true`|Seçildi <p> `$true`||
-|
 
 ### <a name="safe-links-settings"></a>Kasa Bağlantıları ayarları
 
@@ -339,17 +289,12 @@ Bu ayarları yapılandırmak için bkz. [Windows için Defender'Kasa Bağlantıl
 
 PowerShell'de, bu ayarlar için [Set-AtpPolicyForO365](/powershell/module/exchange/set-atppolicyforo365) cmdlet'ini kullanırsiniz.
 
-<br>
-
-****
-
 |Güvenlik özelliği adı|Default|Yerleşik koruma|Açıklama ekleme|
 |---|:---:|:---:|---|
 |**Aşağıdaki URL'leri engelleme** <p> _ExcludedUrls_|Boş <p> `$null`|Boş <p> `$null`|Bu ayar için özel bir önerimiz yok. <p> Daha fazla bilgi için, [Bu Bağlantılar için "Aşağıdaki URL'leri engelleme" Kasa bakın](safe-links.md#block-the-following-urls-list-for-safe-links).
 |**Office 365 Kasa Bağlantılarını kullanma** <p> _EnableSafeLinksForO365Clients_|On <p> `$true`|On <p> `$true`|Desteklenen Kasa ve mobil (iOS Office 365 Android) uygulamalarda Bağlantılar'a tıklayın. Daha fazla bilgi için bkz[. Kasa uygulamaları için bağlantılar Office 365 bakın](safe-links.md#safe-links-settings-for-office-365-apps).|
 |**Kullanıcılar Office 365 uygulamaları korumalı bağlantılara tıklay Office 365 izleme** <p> _TrackClicks_|On <p> `$false`|Kapalı <p> `$true`|Bu ayarı kapatarak (_Tıklatmaları İzle ayarı_`$true`), desteklenen uygulamalarda kullanıcı tıklamalarını Office 365 izler.|
 |**Kullanıcıların uygulamalarda özgün URL'ye tıklamalarına izin Office 365 verme** <p> _AllowClickThrough_|On <p> `$false`|On <p> `$false`|Bu ayarın açması (_AllowClickThrough_ `$false`ayarı), desteklenen diğer uygulamalarda özgün URL'ye Office 365 sağlar.|
-|
 
 #### <a name="safe-links-policy-settings"></a>Kasa Bağlantıları ilke ayarları
 
@@ -361,10 +306,6 @@ PowerShell'de, bu ayarlar için [New-SafeLinksPolicy](/powershell/module/exchang
 > Daha önce açıklandığı gibi, varsayılan Kasa yoktur, ancak Kasa önceden ayarlanmış güvenlik ilkesiyle Tüm alıcılara Bağlantı koruması [ atanır](preset-security-policies.md).
 >
 > Özel **sütundaki Varsayılan**, yeni sütunda varsayılan değerlere başvurur Kasa Bağlantılar ilkelerine başvurur. Kalan sütunlar, karşılık gelen önceden ayarlanmış güvenlik ilkelerde yapılandırılan değerleri gösterir (aksi belirtilmedikçe).
-
-<br>
-
-****
 
 |Güvenlik özelliği adı|Özelde varsayılan|Yerleşik koruma|Standard|Katı|Açıklama ekleme|
 |---|:---:|:---:|:---:|:---:|---|
@@ -381,7 +322,6 @@ PowerShell'de, bu ayarlar için [New-SafeLinksPolicy](/powershell/module/exchang
 |**Aşağıdaki URL'leri yeniden yazma** <p> _DoNotRewriteUrls_|Seçili değil <p> boş|Seçili değil <p> boş|Seçili değil <p> boş|Seçili değil <p> boş|Bu ayar için özel bir önerimiz yok. Daha fazla bilgi için, [Bağlantılar ilkeleri altında "Aşağıdaki URL'leri yeniden yazma" Kasa bakın](safe-links.md#do-not-rewrite-the-following-urls-lists-in-safe-links-policies).|
 |**Bildirim**||||||
 |**Kullanıcılarınıza nasıl bildirim yapmak gerekir?**|**Varsayılan bildirim metnini kullanma**|**Varsayılan bildirim metnini kullanma**|**Varsayılan bildirim metnini kullanma**|**Varsayılan bildirim metnini kullanma**|Bu ayar için özel bir önerimiz yok. <p> Kullanmak üzere özelleştirilmiş **bildirim metni girmek için Özel** bildirim metni kullan'ı (_CustomNotificationText_) seçin. Ayrıca, özel bildirim **metnini Microsoft Çeviri diline** çevirmek için Otomatik olarak yerelleştirme için Metin Kullan'ı (_UseTranslatedNotificationText_) de kullanabilirsiniz.
-|
 
 ## <a name="related-articles"></a>İlgili makaleler
 

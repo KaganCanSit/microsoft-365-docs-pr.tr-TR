@@ -1,5 +1,5 @@
 ---
-title: Destek için Microsoft Defender Kasa da Bağlantılar ilkelerini Office 365
+title: Web'Kasa Bağlantılar ilkelerini Office 365 için Microsoft Defender
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -16,40 +16,40 @@ ms.assetid: bdd5372d-775e-4442-9c1b-609627b94b5d
 ms.collection:
 - M365-security-compliance
 ms.custom: ''
-description: Yöneticiler, İş için Microsoft Defender'daki Bağlantılar ilkelerini ve Kasa Bağlantıları Kasa görüntülemeyi, oluşturmayı, değiştirmeyi ve Office 365.
+description: Yöneticiler, Aynı Grup'ta Bağlantılar ilkelerini ve genel Bağlantıları Kasa görüntülemeyi, Kasa, değiştirmeyi ve Office 365 için Microsoft Defender.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7d4cbaccab3eca371114eec92fe1bf89b2c0e353
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 7a352391a0acc595463a8363da315e8dda2758c1
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312985"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507241"
 ---
-# <a name="set-up-safe-links-policies-in-microsoft-defender-for-office-365"></a>Destek için Microsoft Defender Kasa da Bağlantılar ilkelerini Office 365
+# <a name="set-up-safe-links-policies-in-microsoft-defender-for-office-365"></a>Web'Kasa Bağlantılar ilkelerini Office 365 için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Geçerli olduğu yer:**
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!IMPORTANT]
-> Bu makale, Microsoft [Defender'a sahip iş müşterileri için Office 365](defender-for-office-365.md). Bu bağlantılarda Safelink'ler hakkında bilgi arayan bir ev kullanıcısı Outlook[, bkz. Gelişmiş Outlook.com güvenliği](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
+> Bu makale, bu makaleye sahip olan [iş Office 365 için Microsoft Defender.](defender-for-office-365.md) Bu bağlantılarda Safelink'ler hakkında bilgi arayan bir ev kullanıcısı Outlook[, bkz. Gelişmiş Outlook.com güvenliği](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 
-[Kasa için Microsoft Defender'daki bağlantılar Office 365](defender-for-office-365.md) posta akışında gelen e-posta iletilerinin URL'sini tarama ve e-posta iletisinde ve diğer konumlarda URL'leri ve bağlantıları tıklatma zamanı sağlar. Daha fazla bilgi için bkz. [Kasa için Microsoft Defender'daki Office 365](safe-links.md).
+Kasa Bağlantıları [Office 365 için Microsoft Defender](defender-for-office-365.md) posta akışında gelen e-posta iletilerinin URL taramasini ve e-posta iletileriyle diğer konumlarda URL'lerin ve bağlantıların tıklama zamanı kadar tarama süresi sağlar. Daha fazla bilgi için bkz[. Kasa Bağlantılar'a Office 365 için Microsoft Defender](safe-links.md).
 
-Varsayılan Bağlantı ilkesi Kasa, yerleşik koruma önceden ayarlanmış güvenlik ilkesi tüm alıcılara  Kasa Bağlantıları koruması sağlar (özel Bağlantılar ilkeleri içinde tanımlanmamış kullanıcılar Kasa). Daha fazla bilgi için bkz[. İlke için EOP'de ve Microsoft Defender'da önceden Office 365](preset-security-policies.md).
+Varsayılan Bağlantı ilkesi Kasa, yerleşik koruma önceden ayarlanmış güvenlik ilkesi tüm alıcılara  Kasa Bağlantıları koruması sağlar (özel Bağlantılar ilkeleri içinde tanımlanmamış kullanıcılar Kasa). Daha fazla bilgi için bkz[. EOP'de önceden ayarlanmış güvenlik Office 365 için Microsoft Defender](preset-security-policies.md).
 
 Ayrıca, bu makaledeki yordamları kullanarak belirli kullanıcılar, Kasa veya etki alanlarına uygun bağlantılar ilkeleri oluşturabilirsiniz.
 
 > [!NOTE]
 >
-> Bağlantılar koruması için, bağlantılar Kasa dışında **genel Kasa** yapılandırabilirsiniz. Yönergeler için bkz. [İş için Microsoft Defender'da Kasa Bağlantılar için genel Office 365](configure-global-settings-for-safe-links.md).
+> Bağlantılar koruması için, bağlantılar Kasa dışında **genel Kasa** yapılandırabilirsiniz. Yönergeler için bkz. [E-posta bağlantılarında Kasa ayarlarını Office 365 için Microsoft Defender](configure-global-settings-for-safe-links.md).
 >
-> Yöneticiler, Bağlantılar'ın farklı yapılandırma ayarlarını dikkate Kasa gerekir. Kullanılabilir seçeneklerden biri, Kişisel Bağlantılar'a kullanıcı kimliği Kasa. Bu özellik, *Güvenlik Ekibi ekiplerinin olası kullanıcı* güvenliğini araştırmalarına, düzeltme önlemleri almalarına ve yüksek ihlalleri sınırlandırmalarına olanak sağlar.
+> Yöneticiler, Bağlantılar'ın farklı yapılandırma ayarlarını dikkate Kasa gerekir. Kullanılabilir seçeneklerden biri, Kişisel Bağlantılar'a kullanıcı kimliği Kasa. Bu özellik, güvenlik işlemlerinin (SecOps)ekiplerin olası kullanıcı güvenliğini araştırmasını, düzeltme önlemleri almalarını ve yüksek ihlalleri sınırlandırmalarını sağlar.
 
-Microsoft 365 Defender portalında veya PowerShell'de Kasa Bağlantıları ilkelerini yapılandırabilirsiniz (Exchange Online'te posta kutusu olan uygun Microsoft 365 kuruluşları için Exchange Online PowerShell; Exchange Online kutularını ekleyebilir, ancak diğer eklentiler için Microsoft Defender Office 365 abonelikleri kullanabilirsiniz).
+Microsoft 365 Defender portalında veya PowerShell'de Kasa Bağlantıları ilkelerini yapılandırabilirsiniz (Exchange Online'te posta kutusu olan uygun Microsoft 365 kuruluşları için Exchange Online PowerShell; Exchange Online kutularını ekleyebilir, ancak Office 365 için Microsoft Defender abonelikleri vardır).
 
 Bağlantılar ilkesinin temel Kasa şöyledir:
 
@@ -85,7 +85,7 @@ PowerShell Exchange Online tek başına EOP PowerShell'de, ilkeyi ve kuralı ayr
 
 - Yeni veya güncelleştirilmiş ilkenin uygulanması için 6 saate kadar izin verme.
 
-- [İş için Microsoft Defender'a sürekli yeni özellikler Office 365](defender-for-office-365.md#new-features-in-microsoft-defender-for-office-365). Yeni özellikler eklendiklerine göre, mevcut Özellikler ve Bağlantılar ilkeleriniz için Kasa gerekir.
+- [Yeni özellikler sürekli yeni özellikler Office 365 için Microsoft Defender](defender-for-office-365.md#new-features-in-microsoft-defender-for-office-365). Yeni özellikler eklendiklerine göre, mevcut Özellikler ve Bağlantılar ilkeleriniz için Kasa gerekir.
 
 ## <a name="use-the-microsoft-365-defender-portal-to-create-safe-links-policies"></a>Yeni Microsoft 365 Defender ilkeleri oluşturmak için Kasa kullanma
 
@@ -104,7 +104,7 @@ Web Kasa portalında özel bağlantı bağlantıları ilkesi Microsoft 365 Defen
 
 4. Görüntülenen **Kullanıcılar ve etki** alanları sayfasında, ilkenin geçerli olduğu iç alıcıları (alıcı koşulları) bulun:
    - **Kullanıcılar**: Belirtilen posta kutuları, posta kullanıcıları veya kuruluşta posta kişileri.
-   - **Gruplar**: Belirtilen dağıtım grupları, posta etkin güvenlik grupları veya Microsoft 365 Grupları.
+   - **Gruplar**: Belirtilen dağıtım grupları, posta etkin güvenlik grupları veya Microsoft 365 Grupları grupları.
    - **Etki** alanları: Belirtilen kabul edilen etki [alanlarındaki tüm](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) alıcılar.
 
    Uygun kutuya tıklayın, bir değer yazmaya başlayın ve sonuçlardan istediğiniz değeri seçin. Bu işlemi gereken sayıda yineler. Var olan bir değeri kaldırmak için kaldır'a tıklayın. ![Kaldır simgesi.](../../media/m365-cc-sc-remove-selection-icon.png) seçin.
@@ -123,8 +123,8 @@ Web Kasa portalında özel bağlantı bağlantıları ilkesi Microsoft 365 Defen
        - **İletiyi teslimmeden önce URL tarama işleminin tamamlandıktan** sonra tamamlanacak şekilde bekleme: Gerçek zamanlı URL tarama işleminin iletiyi teslim etmek için tamamlanacak şekilde beklemesini bekleyin.
      - **Posta Kasa Kuruluş** içinde gönderilen e-posta iletilerine bağlantılar: E-posta iletilerini, Kasa Gönderenler ve iç alıcılar arasındaki iletilere uygulamak için bu seçeneği belirtin.
    - **E-posta içinde bilinmeyen veya kötü** amaçlı olabilecek URL'lere yönelik eylemi seçin:  Microsoft Teams'daki bağlantılar için Kasa Bağlantıları korumasını etkinleştirmek için Teams. Bu ayarın etkili bir şekilde 24 saate kadar sürebilir.
-   - **Kullanıcı tıklatmalarını izleme**: Kullanıcının e-posta iletilerde URL'lere tıklamalarını izleme seçeneğini etkinleştirmek için bu ayarın seçimini kaldırın.
-   - **Kullanıcıların özgün URL'ye tıklamalarına izin verme**: Kullanıcıların uyarı sayfalarındaki özgün URL'ye tıklamalarını engellemek için bu [seçeneği belirtin](safe-links.md#warning-pages-from-safe-links).
+   - **Kullanıcı tıklamalarını izleme**: İzlenme kullanıcılarının e-posta iletilerde URL'lere tıklamalarını etkinleştirmek için bu seçeneği seçili bırakın.
+   - **Kullanıcıların özgün URL'ye tıklamasına izin** ver: Uyarı sayfalarında kullanıcıların tıklayarak özgün URL'ye tıklamalarını engellemek için [bu seçeneğin onay seçeneğinin dışında bırakın](safe-links.md#warning-pages-from-safe-links).
    - **Aşağıdaki URL'leri yeniden** yazma: Belirtilen URL'lere, aksi takdirde Üçüncü Sayfa Bağlantıları tarafından engellenmiş Kasa verir.
 
      Kutuya istediğiniz URL'yi veya değeri yazın ve Ekle'ye **tıklayın**. Bu adımı gereken sayıda yinelayın.
@@ -254,7 +254,7 @@ PowerShell'Kasa Bağlantılar ilkesi oluşturmak iki adımlı bir işlemdir:
 Güvenli bağlantılar ilkesi oluşturmak için şu söz dizimlerini kullanın:
 
 ```PowerShell
-New-SafeLinksPolicy -Name "<PolicyName>" [-AdminDisplayName "<Comments>"] [-IsEnabled <$true | $false>] [-EnableSafeLinksForTeams <$true | $false>] [-ScanUrls <$true | $false>] [-DeliverMessageAfterScan <$true | $false>] [-EnableForInternalSenders <$true | $false>] [-DoNotAllowClickThrough <$true | $false>] [-DoNotTrackUserClicks <$true | $false>] [-DoNotRewriteUrls "Entry1","Entry2",..."EntryN"]
+New-SafeLinksPolicy -Name "<PolicyName>" [-AdminDisplayName "<Comments>"] [-EnableSafeLinksForEmail <$true | $false>] [-EnableSafeLinksForTeams <$true | $false>] [-ScanUrls <$true | $false>] [-DeliverMessageAfterScan <$true | $false>] [-EnableForInternalSenders <$true | $false>] [-AllowClickThrough <$true | $false>] [-TrackUserClicks <$true | $false>] [-DoNotRewriteUrls "Entry1","Entry2",..."EntryN"]
 ```
 
 > [!NOTE]
@@ -270,11 +270,11 @@ Bu örnek, aşağıdaki değerleri içeren Contoso All adlı bir güvenli bağla
 - Dosyaları işaret alan tıklı bağlantılar da dahil olmak üzere, tıklı URL'ler için gerçek zamanlı taramayı açma.
 - İletiyi teslim etmek için URL tarama işleminin tamamlandıktan sonra tamamlanacaklarını bekleyin.
 - İç iletiler için URL tarama ve yeniden yazma'ya tıklayın.
-- Kasa Links korumasıyla ilgili kullanıcı tıklamalarını izleme (_DoNotTrackUserClicks_ parametresi kullanacağız) ve varsayılan değer de $false tıklamaların iz iz olduğu anlamına gelir.
+- Kullanıcı tıklamalarını izleme Kasa Bağlantıları korumasıyla ilgili (_TrackUserClicks_ parametresi kullanacağız ve varsayılan değer $true).
 - Kullanıcıların özgün URL'ye tıklamalarına izin verme.
 
 ```PowerShell
-New-SafeLinksPolicy -Name "Contoso All" -IsEnabled $true -EnableSafeLinksForTeams $true -ScanUrls $true -DeliverMessageAfterScan $true -EnableForInternalSenders $true -DoNotAllowClickThrough $true
+New-SafeLinksPolicy -Name "Contoso All" -EnableSafeLinksForEmail $true -EnableSafeLinksForTeams $true -ScanUrls $true -DeliverMessageAfterScan $true -EnableForInternalSenders $true -AllowClickThrough $false
 ```
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. New-SafeLinksPolicy](/powershell/module/exchange/new-safelinkspolicy).
@@ -468,7 +468,7 @@ Remove-SafeLinksRule -Identity "Marketing Department"
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. Remove-SafeLinksRule](/powershell/module/exchange/remove-safelinksrule).
 
-Bağlantıların iletileri Kasa olduğunu doğrulamak için, bu raporlar için kullanılabilir Microsoft Defender Office 365 kontrol edin. Daha fazla bilgi için bkz[. Office 365 için Defender raporlarını görüntüleme](view-reports-for-mdo.md) ve Microsoft 365 Defender [kullanın](threat-explorer.md).
+Bağlantıların iletileri Kasa olduğunu doğrulamak için, kullanılabilir tüm Office 365 için Microsoft Defender kontrol edin. Daha fazla bilgi için bkz[. Office 365 için Defender](view-reports-for-mdo.md) [portalında Gezgin'i kullanma Microsoft 365 Defender.](threat-explorer.md)
 
 ## <a name="how-do-you-know-these-procedures-worked"></a>Bu yordamların çalıştığını nasıl biliyorsunuz?
 

@@ -1,8 +1,8 @@
 ---
-title: Teknik Destek Dolandırıcılığı
+title: Teknik Destek Dolandırıcılıkları
 ms.reviewer: ''
-description: Microsoft güvenlik yazılımı, kötü amaçlı yazılımları veya virüsleri tarama iddia eden ve ardından sahte algılamalar ve uyarılar gösteren teknik destek dolandırıcılarından sizi koruyabilir.
-keywords: güvenlik, kötü amaçlı yazılım, teknik destek, dolandırıcılık, koruma, hile, kimlik sahtekarlığı, sahte, hata iletileri, rapor, güvenlik yazılımı, sahte, virüsten koruma, sahte yazılım, sahte yazılım, tehdit, ücret, kaldırma ücreti, yükseltme, kaldırma için ödeme, tam sürüm yükle, deneme, çok sayıda tehdit, tarayıcı, tarama, temizleme, bilgisayar, güvenlik, program, XP ev güvenliği, sahte microsoft, etkinleştirme, tarama, virüsten koruma, uyarılar, açılır pencereleri, güvenlik uyarıları, güvenlik açılır pencereleri teknik destek dolandırıcılığı,  sahte Microsoft hata bildirimi, sahte virüs uyarısı, sahte ürün süre sonu, sahte Windows etkinleştirme, dolandırıcılık web sayfaları, dolandırıcı telefon numaraları, telefon numaraları, MMPC, WDSI, Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi, teknik destek dolandırıcılık numaraları
+description: Microsoft güvenlik yazılımı sizi kötü amaçlı yazılım veya virüs taraması iddia eden ve ardından sahte algılamalar ve uyarılar gösteren teknik destek dolandırıcılıklarından koruyabilir.
+keywords: güvenlik, kötü amaçlı yazılım, teknik destek, dolandırıcılık, koruma, hile, sahtekarlık, sahte, hata iletileri, rapor, sahte güvenlik yazılımı, sahte, virüsten koruma, sahte yazılım, sahte, tehditler, ücret, kaldırma ücreti, yükseltme, kaldırma için ödeme, tam sürüm yükleme, deneme, çok sayıda tehdit, tarayıcı, tarama, temiz, bilgisayar, güvenlik, program, XP ev güvenliği, sahte Microsoft, etkinleştirme, taramayı etkinleştirme, virüsten koruma, uyarılar, açılır pencereler, güvenlik uyarıları, güvenlik açılır pencereleri teknik destek dolandırıcılıkları,  sahte Microsoft hata bildirimi, sahte virüs uyarısı, sahte ürün süre sonu, sahte Windows etkinleştirme, dolandırıcılık web sayfaları, dolandırıcılık telefon numaraları, telefon numaraları, MMPC, WDSI, Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi, teknik destek dolandırıcılığı numaraları
 ms.prod: m365-security
 ms.mktglfcycl: secure
 ms.sitesec: library
@@ -15,61 +15,61 @@ ms.collection: M365-security-compliance
 ms.topic: article
 search.appverid: met150
 ms.technology: m365d
-ms.openlocfilehash: d1b8fe9649b7a9232be5ed14966c455ac3632f07
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 28347f3e6ac0d51c9c46bbf9de33a4e46b9da705
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63706282"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64663104"
 ---
 # <a name="tech-support-scams"></a>Teknik destek dolandırıcılığı
 
-Teknik destek dolandırıcıları, sahte cihaz, platform veya yazılım sorunlarını çözen gereksiz teknik destek hizmetlerini ödemek için kullanıcıları kandırmak için sektör genelinde bir sorundur.
+Teknik destek dolandırıcılığı, dolandırıcıların kullanıcıları, ilgili cihaz, platform veya yazılım sorunlarını düzelten gereksiz teknik destek hizmetleri için ödeme yapması için kandırmak için korkutma taktikleri kullandığı sektör çapında bir sorundur.
 
 ## <a name="how-tech-support-scams-work"></a>Teknik destek dolandırıcılığı nasıl çalışır?
 
-Dolandırıcılar sizi doğrudan telefonunuz üzerinden arayabilir ve bir yazılım şirketinin temsilcisi olmak için sahtekar olabilir. Arayan kimliğinin kimliğine bile kimlikleri doğru olabilir ve güvenilir bir şirketten geçerli bir destek telefon numarası görüntüler. Bundan sonra sizden, cihazınıza uzaktan erişim izni verecek uygulamaları yüklemenizi istemeleri de olabilir. Uzaktan erişimi kullanarak, bu deneyimli dolandırıcılar sorun işaretleri olarak normal sistem çıkışını yanlış temsil ediyor olabilir.
+Dolandırıcılar sizi doğrudan telefonunuzdan arayabilir ve bir yazılım şirketinin temsilcisi gibi davranabilir. Hatta arayan kimliği, güvenilir bir şirketten gelen geçerli bir destek telefon numarasını görüntüleyebilecek şekilde yanıltabilir. Daha sonra cihazınıza uzaktan erişim sağlayan uygulamaları yüklemenizi isteyebilirler. Bu deneyimli dolandırıcılar, uzaktan erişim kullanarak normal sistem çıkışını sorun işaretleri olarak yanlış tanıtabilir.
 
-Dolandırıcılar ziyaret ettiğiniz web sitelerinde sahte hata iletileri görüntüleyerek, destek numaralarını görüntüleyerek ve sizi aramaya çağırarak da iletişim başlatabilir. Ayrıca, tarayıcınızı tam ekrana yer kilitleyerek kapatmayacak açılır iletiler de sınıyor. Bu sahte hata iletileri, sizi belirtilen teknik destek yardım hattına çağrı yapmak için kandırmayı amaçlar. Microsoft hata ve uyarı iletilerinin hiçbir zaman telefon numarası içermeyer.
+Dolandırıcılar ayrıca ziyaret ettiğiniz web sitelerinde sahte hata iletileri görüntüleyerek, destek numaralarını görüntüleyerek ve sizi aramaya çağırarak da iletişim başlatabilir. Ayrıca tarayıcınızı tam ekrana koyabilir ve tarayıcınızı kilitleyerek ortadan kalkmayacak açılır iletileri görüntüleyebilirler. Bu sahte hata iletileri, sizi belirtilen bir teknik destek destek hattını aramanız için kandırmayı amaçlar. Microsoft hata ve uyarı iletilerinin hiçbir zaman telefon numarası içermediğini unutmayın.
 
-Dolandırıcılarla etkileşime geçince, "sorunlarınız" için sahte çözümler sunarak bir defalık ücret veya temiz bir destek hizmetine abonelik şeklinde ödeme talep edebilirsiniz.
+Dolandırıcılarla etkileşime geçtiğinizde, "sorunlarınız" için sahte çözümler sunabilir ve bir kerelik ücret veya bir tasdikli destek hizmetine abonelik şeklinde ödeme isteyebilirler.
 
-**Daha fazla bilgi için, [bilinen teknik destek dolandırıcılığı numaralarını ve popüler web dolandırıcılıklarını görüntüye bakın](https://support.microsoft.com/help/4013405/windows-protect-from-tech-support-scams).**
+**Daha fazla bilgi için [bilinen teknik destek dolandırıcılığı numaralarını ve popüler web dolandırıcılıklarını](https://support.microsoft.com/help/4013405/windows-protect-from-tech-support-scams) görüntüleyin.**
 
-## <a name="how-to-protect-against-tech-support-scams"></a>Teknik destek dolandırıcılığına karşı korunma
+## <a name="how-to-protect-against-tech-support-scams"></a>Teknik destek dolandırıcılığına karşı koruma
 
-Kötü amaçlı yazılım bulaşmasını önlemeyle ilgili genel [ipuçlarını paylaşın ve gerçekleştirin](prevent-malware-infection.md).
+[Kötü amaçlı yazılım bulaşmasını önlemeye](prevent-malware-infection.md) yönelik genel ipuçlarını paylaşın ve uygulayın.
 
-Ayrıca, aşağıdakilerin gözlerden uzak tutmak da önemlidir:
+Aşağıdakileri göz önünde bulundurmak da önemlidir:
 
-* Microsoft, kişisel veya finansal bilgileri talep etmek ya da bilgisayarınızı düzeltmek için istenmeyen e-posta iletileri göndermez veya telefon aramaları yapmaz.
+* Microsoft, kişisel veya finansal bilgi istemek ya da bilgisayarınızı düzeltmek için istenmeyen e-posta iletileri göndermez veya istenmeyen telefon aramaları yapmaz.
 
-* Microsoft ile tüm iletişimi sizin başlatmanız gerekir.
+* Microsoft ile tüm iletişimler sizin tarafınızdan başlatılmalıdır.
 
-* Açılır pencerelerde numaraya çağrıyın. Microsoft'un hatası ve uyarı iletileri hiçbir zaman bir telefon numarası içermez.
+* Açılır pencerelerdeki numarayı aramayın. Microsoft'un hata ve uyarı iletileri hiçbir zaman telefon numarası içermez.
 
-* Yazılımı yalnızca resmi satıcı web sitelerinden veya İnternet Microsoft Store. Üçüncü taraf sitelerden yazılım indirilme konusunda temlik olun, çünkü bazıları yazarın e-posta kötü amaçlı yazılım desteği ve diğer tehditleri paketleyeme bilgisi olmadan değiştirilmiş olabilir.
+* Yazılımı yalnızca resmi satıcı web sitelerinden veya Microsoft Store indirin. Üçüncü taraf sitelerden yazılım indirmeye dikkat edin çünkü bazıları, dolandırıcılığı ve diğer tehditleri paketlemek için yazarın bilgisi olmadan değiştirilmiş olabilir.
 
-* [İnternet'Microsoft Edge](https://www.microsoft.com/windows/microsoft-edge) göz atma videolarını kullanın. SmartScreen (Internet Explorer tarafından da Windows Defender da kullanılır) kullanılarak, bilinen destek dolandırıcılık sitelerini engeller. Ayrıca, Microsoft Edge sitelerin kullandığı açılan iletişim döngülerini de durdurabilirsiniz.
+* İnternet'e göz atarken [Microsoft Edge](https://www.microsoft.com/windows/microsoft-edge) kullanın. Windows Defender SmartScreen (Internet Explorer tarafından da kullanılır) kullanarak bilinen destek dolandırıcılığı sitelerini engeller. Ayrıca, Microsoft Edge bu siteler tarafından kullanılan açılır iletişim kutusu döngülerini durdurabilir.
 
-* [E-Microsoft Defender Virüsten Koruma'i](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-in-windows-10) Windows 10. Bu, bilinen destek dolandırıcılığı kötü amaçlı yazılımlarını algılar ve kaldırır.
+* [Windows 10'da Microsoft Defender Virüsten Koruma](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-in-windows-10) etkinleştirin. Bilinen destek dolandırıcılığı kötü amaçlı yazılımlarını algılar ve kaldırır.
 
-## <a name="what-to-do-if-information-has-been-given-to-a-tech-support-person"></a>Teknik destek kişilerine bilgi verilmişse ne yapmak gerekir?
+## <a name="what-to-do-if-information-has-been-given-to-a-tech-support-person"></a>Teknik destek görevlisine bilgi verildiyse yapılması gerekenler
 
-* Dolandırıcıların yüklemesi gereken uygulamaları kaldırın. Erişim verildiyse, cihazı sıfırlamayı düşünebilirsiniz
+* Dolandırıcıların yüklenmesini istediği uygulamaları kaldırın. Erişim verildiyse cihazı sıfırlamayı göz önünde bulundurun
 
-* Herhangi bir kötü amaçlı yazılımı kaldırmak Microsoft Defender Virüsten Koruma tam taramayı çalıştırabilirsiniz. Kullanılabilir olduğu anda tüm güvenlik güncelleştirmelerini uygulayabilirsiniz.
+* Kötü amaçlı yazılımları kaldırmak için Microsoft Defender Virüsten Koruma ile tam tarama çalıştırın. Tüm güvenlik güncelleştirmelerini kullanılabilir oldukları anda uygulayın.
 
-* parolaları değiştirebilirsiniz.
+* Parolaları değiştirin.
 
-* Daha önce ödeme yaptıysanız, ücretleri geri almak için kredi kartı sağlayıcınızı arayın.
+* Zaten ödeme yapmışsanız ücretleri geri almak için kredi kartı sağlayıcınızı arayın.
 
-* Anormal oturum açma etkinliklerini izleme. Normalde Windows Defender erişiy olmadığınız hizmetlere trafiği engellemek için Güvenlik Duvarı'nı kullanın.
+* Anormal oturum açma etkinliğini izleyin. Normalde erişmeyeceğiniz hizmetlere gelen trafiği engellemek için Windows Defender Güvenlik Duvarı'nı kullanın.
 
-### <a name="reporting-tech-support-scams"></a>Teknik destek dolandırıcılığı raporlama
+### <a name="reporting-tech-support-scams"></a>Teknik destek dolandırıcılığı bildirme
 
-İster Microsoft'tan ister başka bir teknoloji şirketinden olsunlar, teknik destek dolandırıcılarını bildirerek Microsoft'un dolandırıcıları durdurmasına yardımcı olur:
+İster Microsoft'tan ister başka bir teknoloji şirketinden olduğunu iddia ederek Microsoft'un teknik destek dolandırıcılıklarını bildirerek dolandırıcıları durdurmasına yardımcı olun:
 
 <b>www.microsoft.com/reportascam</b>
 
-Ayrıca, Güvenilir olmayan [bir siteyi](https://www.microsoft.com/wdsi/support/report-unsafe-site) bildir formunu doldurarak veya yerleşik web tarayıcısı işlevselliğini kullanarak, kimlik avı web sitesi olduğunu şüpheli veya kötü amaçlı içeriği doğrudan Microsoft'a bildirebilirsiniz.
+Ayrıca, kimlik avı **web sitesi** olduğundan şüphelendiğiniz veya kötü amaçlı içeriği doğrudan Microsoft'a bildirmek için [Güvenli olmayan bir site formu bildir formunu](https://www.microsoft.com/wdsi/support/report-unsafe-site) doldurabilir veya yerleşik web tarayıcısı işlevselliğini kullanabilirsiniz.

@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 112bfd63a5f3667b22378790b62f3e33fba784d6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 413c4fadcc6de3527643be712713d37a1e2c346c
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320305"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64501145"
 ---
 # <a name="example-of-a-phishing-email-attack"></a>Kimlik avı e-posta saldırısı örneği
 
@@ -40,25 +40,25 @@ Microsoft 365 Defender e-postayla teslim edilen kötü amaçlı ekleri algılama
 
 Örneğin, bir analiste çok aşamalı bir olay atanmıştır.
  
-:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-incident.png" alt-text="Çok aşamalı bir olay örneği."::: 
+:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-incident.png" alt-text="Çok aşamalı bir olay" lightbox="../../media/first-incident-path-phishing/first-incident-phishing-incident.png":::
 
-Olayın **Uyarılar sekmesinde**, Office 365 için Defender ve Bulut Uygulamaları için Microsoft Defender uyarıları görüntülenir. Analist, e-posta iletileri uyarılarını seçerek Office 365 Defender hakkında detaya gitmenizi sağlar. Uyarının ayrıntıları yan bölmede görüntülenir.
+Olayın **Uyarılar** sekmesinde, Posta ve Posta Office 365 için Defender Microsoft Defender for Cloud Apps görüntülenir. Analist, e-posta iletileri Office 365 için Defender seçerek en son uyarıların ayrıntıya iner. Uyarının ayrıntıları yan bölmede görüntülenir.
 
-:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-alerts.png" alt-text="E-posta uyarısı örneği.":::
+:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-alerts.png" alt-text="E-posta uyarısı" lightbox="../../media/first-incident-path-phishing/first-incident-phishing-alerts.png":::
  
 Daha fazla bilgi ekranı aşağı kaydırarak, kötü amaçlı dosyalar ve etkileniyor olan kullanıcı gösterilir.
 
-:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-impact.png" alt-text="Kullanıcı ve e-posta uyarısının dosya üzerindeki etkisi örneği.":::
+:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-impact.png" alt-text="E-posta uyarısının kullanıcı ve dosya üzerindeki etkisi" lightbox="../../media/first-incident-path-phishing/first-incident-phishing-impact.png":::
   
 Uyarı sayfasını **aç'ı** seçmek, bağlantıyı seçerek sizi çeşitli bilgilerin daha ayrıntılı görüntül olduğu belirli bir uyarıya alır. Asıl e-posta iletisi, panelin alt kısmında **Gezgin'de iletileri** görüntüle seçerek ekleyebilirsiniz.
  
-:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-event-explorer.png" alt-text="Uyarının ayrıntıları örneği."::: 
+:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-event-explorer.png" alt-text="Uyarının ayrıntıları" lightbox="../../media/first-incident-path-phishing/first-incident-phishing-event-explorer.png"::: 
 
 Bu, analisti E-posta Konusu, Alıcı, Gönderen ve diğer bilgilerin görüntülendiğinde Tehdit Yönetimi sayfasına alır. **Özel** Eylemler **altındaki** ZAP, analiste Sıfır saatlik otomatik temizleme özelliğinin uygulanmasını söyler. ZAP, kuruluş genelindeki posta kutularında yer alan kötü amaçlı ve istenmeyen iletileri otomatik olarak algılar ve kaldırır. Daha fazla bilgi için bkz[. Saat içinde Sıfır saatlik otomatik temizleme (ZAP) Exchange Online](../office-365-security/zero-hour-auto-purge.md).
 
 Eylemler seçerek belirli iletiler üzerinde başka eylemler de **gerçekleştirebilirsiniz**. 
  
-:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-actions.png" alt-text="E-posta iletisinde diğer eylemlerin örneği."::: 
+:::image type="content" source="../../media/first-incident-path-phishing/first-incident-phishing-actions.png" alt-text="E-posta iletileri üzerinde 7/2" lightbox="../../media/first-incident-path-phishing/first-incident-phishing-actions.png"::: 
 
 ## <a name="next-step"></a>Sonraki adım
 
@@ -67,5 +67,5 @@ Kimlik tabanlı [saldırı araştırma yoluna](first-incident-path-identity.md) 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Olaylara genel bakış](incidents-overview.md)
-- [Olayları araştırma](investigate-incidents.md)
-- [Olayları yönetme](manage-incidents.md)
+- [Olayları araştırın](investigate-incidents.md)
+- [Olayları yönetin](manage-incidents.md)

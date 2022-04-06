@@ -1,5 +1,5 @@
 ---
-title: İletişim uyumluluğunu çalışmaya başlama
+title: İletişim uyumluluğunu kullanmaya başlama
 description: Kullanıcı iletişimini gözden geçirmek üzere yapılandırmak için iletişim uyumluluk ilkelerini ayarlayın.
 f1.keywords:
 - NOCSH
@@ -21,14 +21,14 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 2e14e523c9aa662afc0ee38572f8a19be6f851b5
-ms.sourcegitcommit: 99067d5eb1fa7b094e7cdb1f7be65acaaa235a54
+ms.openlocfilehash: d9d418cee35976e621c173b3563b04ee8bdce7ca
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2022
-ms.locfileid: "63010052"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595328"
 ---
-# <a name="get-started-with-communication-compliance"></a>İletişim uyumluluğunu çalışmaya başlama
+# <a name="get-started-with-communication-compliance"></a>İletişim uyumluluğunu kullanmaya başlama
 
 İç veya dış gözden geçirenlerin kullanıcı iletişimlerini incelemeye yönelik tanımlamak için iletişim uyumluluk ilkelerini kullanın. İletişim uyumluluğu ilkelerinin, kurum içinde iletişimi izlemenize nasıl yardımcı olduğu hakkında daha fazla bilgi için, [Microsoft 365.](communication-compliance.md) Contoso'nın Microsoft Teams, Exchange Online ve Yammer iletişim bağlantılarında uygunsuz içeriği izlemek üzere bir iletişim uyumluluk ilkesi nasıl yapılandırdı diye gözden geçirmek Yammer bu örnek olay [incelemesine göz atabilirsiniz](communication-compliance-case-study.md).
 
@@ -36,14 +36,14 @@ ms.locfileid: "63010052"
 
 İletişim uyumluluğunu başlamadan önce, Microsoft 365 [aboneliğinizi ve](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) tüm eklentileri onaylamanız gerekir. İletişim uyumluluğuna erişmek ve bu uyumluluğu kullanmak için, organizasyon aşağıdaki aboneliklerden veya eklentilerden birini kullanıyor olması gerekir:
 
-- Microsoft 365 E5/A5/G5 aboneliği (ücretli veya deneme sürümü)
-- Microsoft 365 E3/A3/G5 aboneliği + Microsoft 365 E5/A5/G5 Uyumluluk eklentisi
-- Microsoft 365 E3/A3/G5 aboneliği + Microsoft 365 E5/A5/G5 Insider Risk Yönetimi eklentisi
+- Microsoft 365 E5/A5/F5/G5 aboneliği (ücretli veya deneme sürümü)
+- Microsoft 365 E3/A3/F3/G5 aboneliği + Microsoft 365 E5/A5/F5/G5 Uyumluluk eklentiniz
+- Microsoft 365 E3/A3/F3/G5 aboneliği + Microsoft 365 E5/A5/F5/G5 Insider Risk Yönetimi eklentisi
 - Office 365 Kurumsal E5 aboneliği (ücretli veya deneme sürümü)
 - Office 365 A5 (ücretli veya deneme sürümü)
 - Office 365 Kurumsal E3 aboneliği + Office 365 Gelişmiş Uyumluluk eklentiyi içerir (artık yeni abonelikler için kullanılamaz, nota bakın)
 
-İletişim uyumluluk ilkelerine dahil olan kullanıcılara yukarıdaki lisanslardan biri atanmalıdır.
+İletişim uyumluluk ilkelerine dahil olan kullanıcılara yukarıdaki lisanslardan biri atanmalıdır. Abonelikler ve lisanslar hakkında daha fazla bilgi için, [güvenlik Microsoft 365 uyumluluğu için yol & bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#communication-compliance).
 
 > [!IMPORTANT]
 > İletişim uyumluluğu şu anda, Azure hizmet bağımlılıkları tarafından desteklenen coğrafi bölgelerde ve ülkelerde barındırılan kiracılarda kullanılabilir. İletişim uyumluluğunun organizasyonunız için destek olduğunu doğrulamak için bkz. [Ülkeye/bölgeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
@@ -194,7 +194,7 @@ Büyük kurumsal kuruluşlarda denetlenen kullanıcıları yönetmek için, büy
 Grupları ayarlama hakkında daha fazla bilgi için bkz:
 
 - [Dağıtım grupları oluşturma ve yönetme](/Exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups)
-- [Gruplara genel Microsoft 365 bakış](/office365/admin/create-groups/office-365-groups)
+- [Genel bakış Microsoft 365 Grupları](/office365/admin/create-groups/office-365-groups)
 
 ## <a name="step-4-optional-verify-your-yammer-tenant-is-in-native-mode"></a>4. Adım (isteğe bağlı): Yammer Yerel Modda olduğunu doğrulama
 

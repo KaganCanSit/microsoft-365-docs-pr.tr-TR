@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Microsoft tarafından sağlanan Slack eKbulma veri bağlayıcısı ayar kullanmayı ve anlık ileti verilerini içeri aktarmayı ve arşivlemeyi öğrenin.
-ms.openlocfilehash: 2bd4df859d5bb3a4ccd048c83a864d44f81f33bc
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 7882524bb01a1d28c0f4f7c564472961d04baa07
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525079"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64501211"
 ---
 # <a name="set-up-a-connector-to-archive-slack-ediscovery-data-preview"></a>Slack eK bulma verilerini arşivlemek için bağlayıcı ayarlama (önizleme)
 
@@ -77,7 +77,15 @@ Aşağıdaki genel bakış makalesinde, Microsoft veri bağlayıcısı kullanara
 
    İzin **Ver'e** tıklarsınız, Slack sayfası kapanır ve **Slack eKızı** kullanıcılarını bağlayıcı sihirbazında Microsoft 365 sayfasına eşle sayfası görüntülenir.
 
-## <a name="step-3-map-users-and-select-data-types-to-import"></a>3. Adım: Kullanıcıları eşleme ve içeri aktarıla veri türlerini seçme
+## <a name="step-3-specify-the-users-to-import-data-for"></a>3. Adım: Verileri içeri aktar yer alan kullanıcıları belirtme
+
+Slack eKbulma verilerini içeri aktaracak kullanıcıları belirtmek için aşağıdaki seçeneklerden birini belirtin.
+
+- **Kuruluş 2013'te çalışan tüm kullanıcılar**. Tüm kullanıcıların verilerini içeri aktar için bu seçeneği belirtin.
+
+- **Yalnızca Mahkeme tutmada olan kullanıcılar**. Yalnızca posta kutuları Mahkeme tutmada bulunan kullanıcılara ait verileri içeri aktarmayı bu seçeneği belirtin. Bu seçenek, verileri LitigationHoldEnabled özelliği True olarak ayarlanmış kullanıcı posta kutularına içeri aktarmaktadır. Daha fazla bilgi için [bkz. Mahkeme tutma oluşturma](create-a-litigation-hold.md).
+
+## <a name="step-4-map-users-and-select-data-types-to-import"></a>4. Adım: Kullanıcıları eşleme ve içeri aktarıla veri türlerini seçme
 
 1. Slack kullanıcılarını kendi posta kutularına eşlemek için aşağıdaki seçeneklerden birini Microsoft 365 yapılandırabilirsiniz.
 
@@ -103,7 +111,7 @@ Aşağıdaki genel bakış makalesinde, Microsoft veri bağlayıcısı kullanara
 
 3. Veri türlerini içeri aktar olacak şekilde yapılandırdikten sonra, **Sonraki'ne** tıklayın, bağlayıcı ayarlarını gözden geçirip **Bağlayıcıyı oluşturmak** için Son'a tıklayın.
 
-## <a name="step-4-monitor-the-slack-ediscovery-connector"></a>4. Adım: Slack eKbulma bağlayıcılarını izleme
+## <a name="step-5-monitor-the-slack-ediscovery-connector"></a>5. Adım: Slack eKbulma bağlayıcılarını izleme
 
 Slack eK bulma bağlayıcısı oluşturdukta, bağlayıcının durumunu çalışma Microsoft 365 uyumluluk merkezi.
 

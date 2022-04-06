@@ -1,6 +1,6 @@
 ---
 title: Web içeriği filtreleme
-description: Web sitelerine erişimi içerik kategorilerine göre izlemek ve düzenlemek için Uç Nokta için Microsoft Defender'da web içeriği filtrelemeyi kullanın.
+description: Web sitelerine erişimi içerik Uç Nokta için Microsoft Defender izlemek ve düzenlemek için Web sitesinde web içeriği filtrelemeyi kullanın.
 keywords: web koruması, web tehdit koruması, web'e gözatma, izleme, raporlar, kartlar, etki alanı listesi, güvenlik, kimlik avı, kötü amaçlı yazılım, exploit, web siteleri, ağ koruması, Edge, Internet Explorer, Chrome, Firefox, web tarayıcısı
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,26 +15,26 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 14d45f4ac22a9707b380d817cb89da1bbee562e2
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 24cdf18ad510902a533834da2f3595acaa9b33d7
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63326517"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595268"
 ---
 # <a name="web-content-filtering"></a>Web içeriği filtreleme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > [!TIP]
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
 
-Web içeriği filtreleme, Uç Nokta için Microsoft [Defender'daki Web](web-protection-overview.md) koruma özellikleri kapsamındadır. Bu özellik, kuruluşlarının kendi içerik kategorilerine göre web sitelerine erişimi izlemesini ve düzenlemesini sağlar. Kötü amaçlı değilken, bu web sitelerinin birçoğu uyumluluk mevzuatı, bant genişliği kullanımı veya diğer endişelerden dolayı sorun yaratabilir.
+Web içeriği filtreleme, Web koruma özellikleri [kapsamında Uç Nokta için Microsoft Defender](web-protection-overview.md). Bu özellik, kuruluşlarının kendi içerik kategorilerine göre web sitelerine erişimi izlemesini ve düzenlemesini sağlar. Kötü amaçlı değilken, bu web sitelerinin birçoğu uyumluluk mevzuatı, bant genişliği kullanımı veya diğer endişelerden dolayı sorun yaratabilir.
 
 Cihaz gruplarınız genelinde ilkeleri belirli kategorileri engellemek üzere yapılandırabilirsiniz. Kategorinin engellenmesi, belirtilen cihaz gruplarında yer alan kullanıcıların kategoriyle ilişkili URL'lere erişmesini sağlar. Engellenmiş durumdaki herhangi bir kategori için URL'ler otomatik olarak denetlenmektedir. Kullanıcılarınız KESINTI olmadan URL'lere erişebilirsiniz ve daha özel bir ilke kararı atayabilirsiniz. Kullanıcılarınız, görüntülemekte olduğu sayfada yer alan bir öğe engellenen bir kaynağı arıyorsa engellenen bir bildirim görebilirler.
 
@@ -44,7 +44,7 @@ Web içeriği filtreleme, başlıca web tarayıcılarında Windows Defender Smar
 
 - İster şirket içinde ister uzakta olsunlar, kullanıcıların engellenen kategorilerde web sitelerine erişimi engellenir.
 
-- Güvenlik ekibinin, uç nokta rol tabanlı erişim denetimi ayarları için Microsoft Defender'da tanımlanan cihaz gruplarını kullanarak kullanıcı gruplarına [ilkeleri rahatça dağıtabilirsiniz](/microsoft-365/security/defender-endpoint/rbac).
+- Güvenlik ekibinin, rol tabanlı erişim denetimi ayarlarında tanımlanan cihaz gruplarını kullanarak kullanıcı [gruplarına Uç Nokta için Microsoft Defender ilkeler dağıtabilirsiniz](/microsoft-365/security/defender-endpoint/rbac).
 
 - Güvenlik ekibinin aynı merkezi konumdaki web raporlarına erişebilirsiniz ve gerçek bloklar ve web kullanımıyla ilgili görünürlük sağlar.
 
@@ -52,17 +52,17 @@ Web içeriği filtreleme, başlıca web tarayıcılarında Windows Defender Smar
 
 Bu özelliği denmeden önce, aşağıdaki gereksinimleri karşılamıyor olun:
 
-- Aboneliğiniz şunları içerir: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Güvenlik, Microsoft 365 E3 + Microsoft 365 E5 Güvenlik  eklentisini veya Endpoint tek başına lisansı için Microsoft Defender'ı seçin. 
+- Aboneliğiniz şunları içerir: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Güvenlik, Microsoft 365 E3 + Microsoft 365 E5 Güvenlik eklenti, veya Uç Nokta için Microsoft Defender tek başına lisansa sahip olabilir. 
 
 - Bu portala <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender vardır</a>.
 
-- En son virüsten koruma/kötü amaçlı yazılımdan koruma güncelleştirmeleriyle, Windows 10 Yıldönümü Güncelleştirmesi (sürüm 1607) veya Windows 11'i çalıştıran cihazları [çalışıyor](manage-updates-baselines-microsoft-defender-antivirus.md).
+- En son virüsten koruma/kötü amaçlı yazılımlardan koruma güncelleştirmeleriyle, Windows 10 Yıldönümü Güncelleştirmesi (sürüm 1607) veya Windows 11 cihazları [çalışıyor](manage-updates-baselines-microsoft-defender-antivirus.md).
 
 - Windows Defender SmartScreen ve Ağ Koruması, kuruluş cihazlarında etkindir.
 
 ## <a name="data-handling"></a>Veri işleme
 
-Veriler, Uç nokta veri işleme ayarları için [Microsoft Defender'ın bir parçası olarak seçilen bölgede depolanır](data-storage-privacy.md). Verileriniz bu bölgedeki veri merkezinden ayrılmaz. Buna ek olarak, verileriniz veri sağlayıcılarımız da dahil olmak üzere hiçbir üçüncü tarafla paylaşılmaz.
+Veriler, verilerinizi işleme ayarlarınız kapsamında seçilen [Uç Nokta için Microsoft Defender depolanır](data-storage-privacy.md). Verileriniz bu bölgedeki veri merkezinden ayrılmaz. Buna ek olarak, verileriniz veri sağlayıcılarımız da dahil olmak üzere hiçbir üçüncü tarafla paylaşılmaz.
 
 ## <a name="turn-on-web-content-filtering"></a>Web içeriği filtrelemeyi açma
 
@@ -134,7 +134,7 @@ Web içeriği filtreleme ilkeleri, hangi site kategorilerinin hangi cihaz grupla
 
 **Sohbet**: Temelde web tabanlı sohbet odaları olan siteler.
 
-**Oyunlar**: Çevrimiçi hizmetleri veya oyunlarla ilgili bilgileri barındırma yoluyla oyunların reklamını yapan siteler dahil, video veya bilgisayar oyunlarıyla ilgili siteler.
+**Oyunlar**: Video veya bilgisayar oyunlarına ilişkin siteler; oyun barındırma ve oyunla ilgili çevrimiçi hizmetler siteler.
 
 **Anlık mesajlaşma**: Anlık ileti yazılımını veya istemci tabanlı anlık mesajlaşmayı indirmek için kullanılmaktadır.
 
@@ -203,9 +203,9 @@ Etki alanının kategorisine itiraz etmek için, Raporlar Web  Koruması \> **We
 
 ### <a name="url-category-lookup"></a>URL kategori araması
 
-Web sitesinin kategorisini belirlemek için, Uç Noktalar Araması'nın altındaki Web sitesi portalında (<https://security.microsoft.com>) Microsoft 365 Defender URL **arama işlevini kullanabilirsiniz**\>. URL arama sonuçlarında, web içeriği filtreleme kategorisi **URL/Etki alanı ayrıntıları altında görünür**. Aşağıdaki resimde gösterildiği gibi, yöneticiler doğrudan bu sayfadan etki alanının kategorisine de itiraz edebilirsiniz. Kategori sonucu göster gösterilmezse, URL şu anda var olan bir web içeriği filtreleme kategorisine atanmadı.
+Web sitesinin kategorisini belirlemek için, Uç Noktalar Araması'nın altındaki Web sitesi portalında (<https://security.microsoft.com>) Microsoft 365 Defender URL **arama işlevini kullanabilirsiniz**\>. URL arama sonuçlarında, web içeriği filtreleme kategorisi **URL/Etki alanı ayrıntıları altında görünür**. Kategori sonucu göster gösterilmezse, URL şu anda var olan bir web içeriği filtreleme kategorisine atanmadı.
 
-![Web içeriği filtreleme kategori arama sonuçlarının görüntüsü.](../../media/web-content-filtering-category-lookup.png)
+<!---:::image type="content" source="../../media/web-content-filtering-category-lookup.png" alt-text="The web content filtering category lookup results" lightbox="../../media/web-content-filtering-category-lookup.png":::--->
 
 ## <a name="web-content-filtering-cards-and-details"></a>Web içeriği filtreleme kartları ve ayrıntıları
 
@@ -217,25 +217,25 @@ Bu kartta, erişim denemelerinin sayısında en fazla artış veya en az olan ü
 
 Bu özelliğin kullanımına ilişkin ilk 30 gün içinde, bu bilgileri görüntülemek için yeterli veriniz olmuyor olabilir.
 
-![Kategori kartına göre web etkinliğinin resmi.](images/web-activity-by-category600.png)
+:::image type="content" source="images/web-activity-by-category600.png" alt-text="Kategori kartına göre web etkinliği" lightbox="images/web-activity-by-category600.png":::
 
 ### <a name="web-content-filtering--summary-card"></a>Web içeriği filtreleme özet kartı
 
 Bu kartta, engellenmiş erişim girişimleri farklı üst web içeriği kategorileri genelinde dağıtıldı. Belirli bir üst web kategorisi hakkında daha fazla bilgi görüntülemek için renkli çubuklardan birini seçin.
 
-![Web içeriği filtreleme özet kartının görüntüsü.](images/web-content-filtering-summary.png)
+:::image type="content" source="images/web-content-filtering-summary.png" alt-text="Web içeriği filtreleme özet kartı" lightbox="images/web-content-filtering-summary.png":::
 
 ### <a name="web-activity-summary-card"></a>Web etkinliği özet kartı
 
 Bu kart, tüm URL'lerde web içeriği isteklerinin toplam sayısını görüntüler.
 
-![Web etkinliği özet kartının görüntüsü.](images/web-activity-summary.png)
+:::image type="content" source="images/web-activity-summary.png" alt-text="Web etkinliği özet kartı" lightbox="images/web-activity-summary.png":::
 
 ### <a name="view-card-details"></a>Kart ayrıntılarını görüntüleme
 
 Kartta yer **alan grafikten** bir tablo satırı veya renkli çubuk seçerek her kartın Rapor ayrıntılarına erişebilirsiniz. Her kartın rapor ayrıntıları sayfası web içeriği kategorileri, web sitesi etki alanları ve cihaz grupları hakkında kapsamlı istatistiksel veriler içerir.
 
-![Web koruma raporu ayrıntılarının resmi.](images/web-protection-report-details.png)
+:::image type="content" source="images/web-protection-report-details.png" alt-text="Web koruma raporu ayrıntıları" lightbox="images/web-protection-report-details.png":::
 
 - **Web kategorileri**: Kurumda erişim denemelerine sahip olan web içeriği kategorilerini listeler. Özet açılır öğesini açmak için belirli bir kategori seçin.
 
@@ -257,6 +257,6 @@ Ağ Koruması şu anda SSL incelemesini desteklememektedir ve bunun sonucunda we
 
 - [Web korumasına genel bakış](web-protection-overview.md)
 - [Web tehdit koruması](web-threat-protection.md)
-- [Web güvenliğini izleme](web-protection-monitoring.md)
-- [Web tehditlerine yanıt verme](web-protection-response.md)
+- [Web güvenliğini izleyin](web-protection-monitoring.md)
+- [Web tehditlerine yanıt verin](web-protection-response.md)
 - [Ağ Koruması gereksinimleri](web-content-filtering.md)

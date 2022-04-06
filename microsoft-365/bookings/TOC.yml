@@ -1,0 +1,49 @@
+- name: Microsoft Kayıtları
+  href: bookings-overview.md
+  items:
+    - name: Kurulum
+      items:
+        - name: Bookings’e erişim sağlama
+          href: get-access.md
+        - name: İş bilginizi girme
+          href: enter-business-information.md
+        - name: Hizmet tekliflerinizi tanımlama
+          href: define-service-offerings.md
+        - name: SMS mesajı bildirimlerini yapılandırma
+          href: bookings-sms.md
+        - name: Bookings’e personel ekleme
+          href: add-staff.md
+        - name: İşletme kapanışlarını ve izinleri zamanlama
+          href: schedule-closures-time-off-vacation.md
+        - name: Zamanlama ilkelerinizi ayarlama
+          href: set-scheduling-policies.md
+        - name: Rezervasyon sayfanızı özelleştirme ve yayımlama
+          href: customize-booking-page.md
+        - name: El ile rezervasyon oluşturma
+          href: create-a-manual-booking.md
+        - name: Çalışan saatleri
+          href: employee-hours.md
+        - name: Rezervasyon sayfasına özel ve gerekli sorular ekleme
+          href: add-questions.md
+        - name: Tampon süre ayarlama
+          href: set-buffer-time.md
+        - name: Ölçümler ve etkinlik izleme
+          href: metrics-and-activity-tracking.md
+        - name: Dil ve saat dilimi ayarlama
+          href: set-language-time-zones.md
+    - name: Bookings uygulamasını edinin
+      href: get-bookings-app.md
+    - name: Bookings uygulamasını Microsoft Teams’de yönetme
+      href: /microsoftteams/bookings-app-admin?bc=%2fmicrosoft-365%2fbookings%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fbookings%2ftoc.json
+    - name: Microsoft Teams ve Bookings uygulaması ile sanal vizitler
+      href: /microsoftteams/expand-teams-across-your-org/bookings-virtual-visits
+    - name: Karşılaştırma grafiği - web uygulaması ve Teams uygulaması
+      href: comparison-chart.md
+    - name: Rezervasyon takvimi silme
+      href: delete-calendar.md
+    - name: Microsoft Bookings’i açma veya kapatma
+      href: turn-bookings-on-or-off.md
+    - name: Microsoft Bookings raporlama bilgileri
+      href: reporting-info.md
+    - name: Microsoft Bookings hakkında sık sorulan sorular (SSS)
+      href: bookings-faq.yml
