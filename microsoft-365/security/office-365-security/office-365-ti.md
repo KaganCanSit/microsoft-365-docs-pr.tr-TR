@@ -1,5 +1,5 @@
 ---
-title: Tehdit & yanıt özellikleri - Microsoft Defender for Office 365 Plan 2
+title: Tehdit & yanıt özellikleri - Office 365 için Microsoft Defender Plan 2
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -18,15 +18,15 @@ ms.collection:
 - m365initiative-defender-office365
 ms.custom:
 - seo-marvel-apr2020
-description: Microsoft Defender'daki tehdit soruşturması ve yanıt özellikleri hakkında bilgi Office 365 öğrenin.
+description: Plan'da tehdit soruşturması ve yanıt Office 365 için Microsoft Defender öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 91a366b8169c783671145b73f66b0fde93b5fffe
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 53f1077d4ef32c6dc5698aae74de51dd5a421510
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680675"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474915"
 ---
 # <a name="threat-investigation-and-response"></a>Tehdit soruşturması ve yanıt
 
@@ -36,7 +36,7 @@ ms.locfileid: "63680675"
 - [Office 365 için Microsoft Defender plan 2](defender-for-office-365.md)
 
 
-Microsoft Defender'daki tehdit soruşturması ve yanıt [özellikleri Office 365](defender-for-office-365.md) güvenlik analistleri ve yöneticilerinin kuruluşlarının kurumsal kullanıcılar için Microsoft 365 korunmasına yardımcı olur:
+Güvenlik analistleri ve yöneticilerinin [Office 365 için Microsoft Defender](defender-for-office-365.md) yönelik tehdit soruşturması ve yanıt özellikleri, güvenlik analistlerinin ve yöneticilerin Microsoft 365 tarafından kurumsal kullanıcılara yönelik güvenliğini korumalarına yardımcı olur:
 
 - Siber saldırıları kolayca tanıyın, takip edebilir ve anlıyoruz.
 - Exchange Online, SharePoint Online, OneDrive İş ve Microsoft Teams'te tehditlere hızlı bir OneDrive İş yardımcı Microsoft Teams.
@@ -58,7 +58,7 @@ Microsoft 365 Defender portalında tehdit soruşturması ve yanıt <https://secu
 
 Tehditleri çözümlemek, zaman içinde saldırı hacmini görmek ve tehdit aileleri, altyapı gibi daha fazlasını analiz etmek için [Explorer'ı (ve gerçek zamanlı algılamaları)](threat-explorer.md) kullanın. Gezgin (Tehdit Gezgini olarak da adlandırılır), her güvenlik analistinin araştırma iş akışının başlangıç noktasıdır.
 
-![Tehdit gezgini.](../../media/7a7cecee-17f0-4134-bcb8-7cee3f3c3890.png)
+:::image type="content" source="../../media/7a7cecee-17f0-4134-bcb8-7cee3f3c3890.png" alt-text="Threat explorer page" lightbox="../../media/7a7cecee-17f0-4134-bcb8-7cee3f3c3890.png":::
 
 Bu raporu şu adreste görüntülemek ve Microsoft 365 Defender portalında görüntülemek için, <https://security.microsoft.com>E-posta ve **işbirliği &** \> **gidin**. Doğrudan Gezgin sayfasına gitmek **için de** bunu kullanın <https://security.microsoft.com/threatexplorer>.
 
@@ -66,7 +66,7 @@ Bu raporu şu adreste görüntülemek ve Microsoft 365 Defender portalında gör
 
 Bu özelliğin kullanılabilir olması için, etkin bir Office 365 E5 veya Tehdit İstihbaratı eklentiniz olması gerekir. Daha fazla bilgi için, Office 365 Kurumsal E5 ürün sayfasına bakın.
 
-Bu özelliği açık durumdayken, Office 365 için Microsoft Defender'dan Microsoft 365 Defender'e veri Office 365 posta kutuları ve diğer cihazlar arasında kapsamlı bir güvenlik Windows yönetebilirsiniz.
+Bu özelliği kapatarak, posta kutuları ve diğer cihazlarınız arasında kapsamlı bir güvenlik Office 365 için Microsoft Defender yapmak için Microsoft 365 Defender'den Office 365 verileri Windows.
 
 > [!NOTE]
 > Bu özelliği etkinleştirmek için uygun lisansa sahip olmak gerekir.
@@ -77,11 +77,11 @@ Threat Intelligence içinde bağlamsal cihaz tümleştirmesi Office 365 için G�
 
 Uçuş güvenliği olaylarının listesini görmek için Olaylar listesini (Bu liste Araştırma olarak da denir) kullanın. Olaylar, şüpheli e-posta iletileri gibi tehditleri izlemek, daha fazla araştırma ve düzeltme yapmak için kullanılır.
 
-![Mevcut Tehdit Olaylarının Listesi Office 365.](../../media/acadd4c7-d2de-4146-aeb8-90cfad805a9c.png)
+:::image type="content" source="../../media/acadd4c7-d2de-4146-aeb8-90cfad805a9c.png" alt-text="2013'te geçerli Tehdit Olaylarının listesi Office 365" lightbox="../../media/acadd4c7-d2de-4146-aeb8-90cfad805a9c.png":::
 
 daha fazla portalda, 'da yer <https://security.microsoft.com>alan Microsoft 365 Defender geçerli olayları listesini görüntülemek için Olaylar ve uyarılar **&** \> **gidin**. Olaylar sayfasına doğrudan gitmek **için de** bunu kullanın <https://security.microsoft.com/incidents>.
 
-![Güvenlik ve Uyumluluk &'nde Tehdit yönetimini Gözden Geçir'i \> seçin.](../../media/e0f46454-fa38-40f0-a120-b595614d1d22.png)
+:::image type="content" source="../../media/e0f46454-fa38-40f0-a120-b595614d1d22.png" alt-text="Güvenlik ve Uyumluluk Merkezi'nde & sayfası" lightbox="../../media/e0f46454-fa38-40f0-a120-b595614d1d22.png":::
 
 ### <a name="attack-simulation-training"></a>Saldırı benzetimi eğitimi
 
@@ -95,17 +95,17 @@ zaman kazanmak ve içerikle, cihazlarla ve insanların kuruluşta tehditlere kar
 
 ## <a name="threat-intelligence-widgets"></a>Tehdit zekası pencere öğeleri
 
-Güvenlik analistleri, Plan 2 Office 365 için Microsoft Defender'ın bir parçası olarak bilinen tehditle ilgili ayrıntıları gözden geçirebilirsiniz. Bu, kullanıcıların güvenli olması için atılacak ek önlem/adımlar olup olmadığını belirlemek için kullanışlıdır.
+Plan 2'Office 365 için Microsoft Defender bir parçası olarak, güvenlik analistleri bilinen tehditle ilgili ayrıntıları gözden geçirebilirsiniz. Bu, kullanıcıların güvenli olması için atılacak ek önlem/adımlar olup olmadığını belirlemek için kullanışlıdır.
 
-![Son tehditlerle ilgili bilgileri gösteren Güvenlik Eğilimleri.](../../media/11e7d40d-139b-4c56-8d52-c091c8654151.png)
+:::image type="content" source="../../media/11e7d40d-139b-4c56-8d52-c091c8654151.png" alt-text="Son tehditlerle ilgili bilgileri gösteren Güvenlik eğilimleri bölmesi" lightbox="../../media/11e7d40d-139b-4c56-8d52-c091c8654151.png":::
 
 ## <a name="how-do-we-get-these-capabilities"></a>Bu özellikleri nasıl elde  yapabiliriz?
 
-Microsoft 365 tehdit soruşturması ve yanıt özellikleri, Enterprise E5'te bulunan veya belirli aboneliklere eklenti olarak dahil edilen Office 365 Plan 2 için Microsoft Defender'a dahildir. Daha fazla bilgi edinmek için bkz. [Office 365 Defender ve Plan 2](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2).
+Microsoft 365 tehdit soruşturması ve yanıt özellikleri, Enterprise E5'te bulunan veya belirli aboneliklere eklenti olarak bulunan Office 365 için Microsoft Defender Plan 2'ye dahil edilir. Daha fazla bilgi edinmek için bkz[. Office 365 için Defender 1 ve Plan 2](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2).
 
 ## <a name="required-roles-and-permissions"></a>Gerekli roller ve izinler
 
-Office 365 için Microsoft Defender rol tabanlı erişim denetimi kullanır. Azure Active Directory, Microsoft 365 yönetim merkezi portalında belirli roller üzerinden Microsoft 365 Defender atanır.
+Office 365 için Microsoft Defender tabanlı erişim denetimi kullanır. Azure Active Directory, Microsoft 365 yönetim merkezi portalında belirli roller üzerinden Microsoft 365 Defender atanır.
 
 > [!TIP]
 > Güvenlik Yöneticisi gibi bazı roller portalda atanabilir Microsoft 365 Defender, ancak bunun yerine Microsoft 365 yönetim merkezi veya Azure Active Directory kullanabilirsiniz. Roller, rol grupları ve izinler hakkında bilgi için aşağıdaki kaynaklara bakın:
@@ -119,11 +119,11 @@ Office 365 için Microsoft Defender rol tabanlı erişim denetimi kullanır. Azu
 |Tehditleri [çözümlemek için Gezgin'i (ve gerçek zamanlı algılamaları)](threat-explorer.md) kullanın|Aşağıdakilerden biri: <ul><li>**Genel Yönetici**</li><li>**Güvenlik Yöneticisi**</li><li>**Güvenlik Okuyucu**</li></ul> <p> Bu roller Azure Active Directory () veya Microsoft 365 yönetim merkezi<https://portal.azure.com>.<https://admin.microsoft.com>|
 |Olayları Görüntüleme (Araştırma olarak da adlandırılır) <p> Olay e-posta iletileri ekleme|Aşağıdakilerden biri: <ul><li>**Genel Yönetici**</li><li>**Güvenlik Yöneticisi**</li><li>**Güvenlik Okuyucu**</li></ul> <p> Bu roller Azure Active Directory () veya Microsoft 365 yönetim merkezi<https://portal.azure.com>.<https://admin.microsoft.com>|
 |Olayda e-posta eylemlerini tetikleme <p> Şüpheli e-posta iletilerini bulma ve silme|Aşağıdakilerden biri: <ul><li>**Genel Yönetici**</li><li>**Güvenlik Yöneticisi** ile **birlikte Arama ve Temizleme** rolü</li></ul> <p> Genel **Yönetici** ve **Güvenlik Yöneticisi** rolleri Azure Active Directory (<https://portal.azure.com>) veya üst bilgi Microsoft 365 yönetim merkezi.<https://admin.microsoft.com> <p> Arama **ve Temizleme rolü** , Microsoft 36 Defender **portalında ( &** işbirliği rollerinin E-posta Adresi'nden atanabilir<https://security.microsoft.com>.|
-|Plan 2'den Office 365 için Microsoft Defender'ı Uç Nokta için Microsoft Defender ile tümleştirin <p> Plan 2'de Office 365 için Microsoft Defender'ı SIEM sunucusuyla tümleştirin|Genel **Yönetici veya** herhangi **bir kullanıcıya**<https://portal.azure.com> () veya Azure Active Directory Güvenlik Yöneticisi rolü Microsoft 365 yönetim merkezi<https://admin.microsoft.com>. <p> --- **artı** --- <p> Ek uygulamalarda (Microsoft Defender Güvenlik Merkezi veya SIEM sunucunuzda[) atanan](/windows/security/threat-protection/microsoft-defender-atp/user-roles) uygun bir rol.|
+|Plan 2 Office 365 için Microsoft Defender i başka bir Uç Nokta için Microsoft Defender <p> Plan 2 Office 365 için Microsoft Defender i SIEM sunucusuyla tümleştirin|Genel **Yönetici veya** herhangi **bir kullanıcıya**<https://portal.azure.com> () veya Azure Active Directory Güvenlik Yöneticisi rolü Microsoft 365 yönetim merkezi<https://admin.microsoft.com>. <p> --- **artı** --- <p> Ek uygulamalarda (Microsoft Defender Güvenlik Merkezi veya SIEM sunucunuzda[) atanan](/windows/security/threat-protection/microsoft-defender-atp/user-roles) uygun bir rol.|
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [Tehdit İzleyicisi - Yeni ve Dikkat çekici hakkında bilgi](threat-trackers.md)
 - [Teslim edilen kötü amaçlı e-postaları bulma ve araştırma (Tehdit Office 365 Yanıtı)](investigate-malicious-email-that-was-delivered.md)
-- [Tehdit Office 365 Araştırmayı ve Uç Nokta için Microsoft Defender ile Yanıtı Tümleştirin](integrate-office-365-ti-with-mde.md)
+- [Tehdit Office 365 Araştırmayı ve Yanıtı Güvenlikle Tümleştirin Uç Nokta için Microsoft Defender](integrate-office-365-ti-with-mde.md)
 - [Kimlik avı saldırılarını benzetimini](attack-simulation-training.md)

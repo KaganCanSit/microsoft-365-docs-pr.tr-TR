@@ -16,12 +16,12 @@ ms.collection:
 description: Yöneticiler, güvenlik portalında yer alan Kiracı İzin Ver/Engelleme Listesi'ni nasıl yapılandırlayabileceklerini öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3823290e9f239b14e4bf97fe1ae8ef7020561697
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 755a23d7cddbeb2943809681fc90556a2adac25b
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314120"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475553"
 ---
 # <a name="add-allows-in-the-tenant-allowblock-list"></a>Kiracı İzin Ver/Engelleme Listesi'ne izin verme
 
@@ -29,7 +29,7 @@ ms.locfileid: "63314120"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Yöneticiler doğrudan Kiracı İzin Ver/Engelleme Listesi'ne izin ekleyemz. Bunun yerine, yönetici gönderim işlemini kullanarak engellenmiş iletiyi gönderirsiniz; böylece ilgili URL, dosya ve/veya gönderenler Kiracı İzin Verme/Engelleme Listesi'ne eklenecektir. Dosya, URL veya gönderenin engeli henüz oluşturulmamışsa izinler oluşturulmaz. İletinin hatalı bir şekilde engellenmiş yanlış pozitif sonuç olarak belirlen olduğu çoğu durumda, sisteme doğal bir şekilde izin vermek için gereken süre boyunca izinler tutulur.
@@ -55,9 +55,7 @@ Web'de, Gönderiler sayfasında **gönderenlere (veya etki** alanlarına) Micros
 
 7. Bitirdikten sonra **Gönder düğmesine tıklayın** .
 
-> [!div class="mx-imgBorder"]
 > ![Çözümleme için kötü amaçlı yazılımı Microsoft'a gönderin.](../../media/admin-submission-allow-messages.png)
-
 ## <a name="add-url-allows-using-the-submissions-portal"></a>URL Ekle, Gönderiler portalının kullanımına izin verir
 
 web sayfasındaki Gönderiler **sayfasında URL'lere** izin Microsoft 365 Defender.
@@ -78,7 +76,6 @@ web sayfasındaki Gönderiler **sayfasında URL'lere** izin Microsoft 365 Defend
 
 > [!div class="mx-imgBorder"]
 > ![Çözümleme için URL'yi gönderin.](../../media/submit-url-for-analysis.png)
-
 ## <a name="add-file-allows-using-the-submissions-portal"></a>Dosya Ekle, Gönderiler portalının kullanımına olanak sağlar
 
 sayfanın Gönderiler **sayfasındaKimlik** sayfasında Dosyalara İzin Microsoft 365 Defender.

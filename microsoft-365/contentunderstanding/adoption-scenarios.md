@@ -15,12 +15,12 @@ ms.custom: Adopt
 search.appverid: ''
 ms.localizationpriority: medium
 description: Bir veya daha fazla SharePoint Syntex ilgili iş senaryolarını bulun.
-ms.openlocfilehash: fe4f72dc56014e5bc990e5ea39bd019785bd8572
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+ms.openlocfilehash: c5af826396d4b53dd84c36f8af599344fd5fb2ba
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63419093"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475641"
 ---
 # <a name="scenarios-and-use-cases-for-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex için senaryolar ve kullanım SharePoint Syntex
 
@@ -139,4 +139,4 @@ Bu senaryoyu otomatik hale garanti etmek için:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Microsoft SharePoint Syntex benimseme: Çalışmaya başlama](adoption-getstarted.md)
+[Kullanmaya başlayın benimsemeyi SharePoint Syntex](adoption-getstarted.md)

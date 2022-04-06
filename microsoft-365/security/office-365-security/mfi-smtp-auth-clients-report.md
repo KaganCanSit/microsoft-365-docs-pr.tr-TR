@@ -15,12 +15,12 @@ ms.custom:
 description: Yöneticiler, kuruluşlarında e-posta iletilerini göndermek için kimliği doğrulanmış SMTP (SMTP AUTH) kullanan e-posta gönderenleri izlemek için Güvenlik & Uyumluluk Merkezi'nde Posta akışı panosunda SMTP Kimlik Doğrulaması içgörü ve raporunu kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e21e9fae80880b479070b1920379b925bf7074c7
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 8c2152820e7f3d5dbf04534e5f0b0fec344ecc7b
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681138"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475003"
 ---
 # <a name="smtp-auth-clients-insight-and-report-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde SMTP Kimlik Doğrulaması & raporu
 
@@ -28,18 +28,18 @@ ms.locfileid: "63681138"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Güvenlik [& Uyumluluk](https://protection.office.com) Merkezi'nde Posta akışı [](mail-flow-insights-v2.md) panosunda ve ilişkili [SMTP Auth](#smtp-auth-clients-report) istemcileri raporunda **,** SMTP Auth istemcileri içgörüleri, kuruluşta kullanıcılar veya sistem hesapları tarafından SMTP AUTH istemci gönderim protokolünün kullanımını vurgular. Yalnızca Temel kimlik doğrulamasını kullanan bu eski protokol (uç nokta smtp.office365.com) sunar ve güvenliği tehlikeye atılmış hesapların e-posta göndermek için kullanımına duyarlıdır. Bilgi ve rapor, SMTP AUTH e-posta gönderimlerine olağan dışı etkinlikleri denetlemenizi sağlar. Smtp AUTH kullanan istemciler veya cihazlar için TLS kullanım verilerini de gösterir.
 
 Widget, son 7 gün içinde SMTP Kimlik Doğrulaması protokolünü kullanan kullanıcıların veya hizmet hesaplarının sayısını gösterir.
 
-![Güvenlik ve Uyumluluk Merkezi'nin Posta akışı panosunda SMTP & widget'ı.](../../media/mfi-smtp-auth-clients-report-widget.png)
+:::image type="content" source="../../media/mfi-smtp-auth-clients-report-widget.png" alt-text="Güvenlik ve Uyumluluk Merkezi'nin Posta akışı panosunda SMTP & widget'ı" lightbox="../../media/mfi-smtp-auth-clients-report-widget.png":::
 
 Widget'ta ileti sayısına tıklarsanız, **bir SMTP Auth istemcileri** açılır öğesi görüntülenir. Uçarak çıkış, TLS kullanımı ve geçen hafta için hacimlerin toplu bir görünümünü sağlar.
 
-![Posta akışı panosunda SMTP Auth istemcileri widget'ine tık olduktan sonra ayrıntılar çıktısı.](../../media/mfi-smtp-auth-clients-report-details.png)
+:::image type="content" source="../../media/mfi-smtp-auth-clients-report-details.png" alt-text="Posta akışı panosunda SMTP Auth istemcileri widget'ine tık olduktan sonra Ayrıntılar uç noktası" lightbox="../../media/mfi-smtp-auth-clients-report-details.png":::
 
 Bir sonraki bölümde **açıklandığı gibi SMTP Kimlik** Doğrulaması istemcileri rapor bağlantısına tıklayarak SMTP Kimlik Doğrulaması istemcileri raporuna gidebilirsiniz.
 
@@ -53,11 +53,11 @@ Genel bakış bölümü aşağıdaki grafikleri içerir:
 
 - **Verileri görüntüleme:** Birim gönderme: Varsayılan olarak grafikte, tüm etki alanlarından gönderilen SMTP Auth istemci iletilerinin sayısı görüntülenir (Verileri **göster:** Tüm gönderen etki alanları varsayılan olarak seçilidir). Verileri göster'i tıklatarak ve açılan listeden gönderen etki alanını  seçerek, sonuçları belirli bir gönderen etki alanı olarak filtreebilirsiniz. Belirli bir veri noktasını (gün) vurgularsanız, iletilerin sayısı gösterilir.
 
-  ![Güvenlik ve Uyumluluk Merkezi'nde SMTP Auth istemcileri raporunda ses & gönderme.](../../media/mfi-smtp-auth-clients-report-sending-volume-view.png)
+  :::image type="content" source="../../media/mfi-smtp-auth-clients-report-sending-volume-view.png" alt-text="Güvenlik ve Uyumluluk Merkezi'nde SMTP Kimlik Doğrulaması istemcilerinin gönderme & görünümü" lightbox="../../media/mfi-smtp-auth-clients-report-sending-volume-view.png":::
 
 - **Verileri görüntüleme: TLS Kullanımı**: Grafik, seçilen dönem boyunca tüm SMTP Kimlik Doğrulaması istemci iletileri için TLS kullanımının yüzdesini gösterir. Bu grafik, TLS'nin daha eski sürümlerini kullanmaya devam olan kullanıcıları ve sistem hesaplarını tanımlamanıza ve bu hesaplar üzerinde eyleme geçebilirsiniz.
 
-  ![Güvenlik ve Uyumluluk Merkezi'nde SMTP Kimlik Doğrulaması istemcileri raporunda TLS & görünümü.](../../media/mfi-smtp-auth-clients-report-tls-usage-view.png)
+  :::image type="content" source="../../media/mfi-smtp-auth-clients-report-tls-usage-view.png" alt-text="Güvenlik ve Uyumluluk Merkezi'nde SMTP Kimlik Doğrulaması istemcilerinin TLS & görünümü" lightbox="../../media/mfi-smtp-auth-clients-report-tls-usage-view.png":::
 
 Rapor görünümünde **Filtreler'e** tıklarsanız, Başlangıç tarihi ve Bitiş tarihi **ile bir tarih** aralığı **belirtebilirsiniz**.
 
@@ -88,7 +88,7 @@ Ayrıntılar tablosu **görünümünde Filtreler'e** tıklarsanız, Başlangıç
 
 Bir satır seçersiniz, uçarak çıkışta benzer ayrıntılar gösterilir:
 
-![SMTP Kimlik Doğrulaması istemcileri raporunda TLS kullanım görünümünün ayrıntılar tablosundan ayrıntılar çıktısı.](../../media/mfi-smtp-auth-clients-report-tls-usage-view-view-details-table-details.png)
+:::image type="content" source="../../media/mfi-smtp-auth-clients-report-tls-usage-view-view-details-table-details.png" alt-text="SMTP Kimlik Doğrulaması istemcileri raporunda TLS kullanım görünümünün ayrıntılar tablosundan Ayrıntılar uç noktası" lightbox="../../media/mfi-smtp-auth-clients-report-tls-usage-view-view-details-table-details.png":::
 
 Bir **e-posta** iletisinde raporun daha ayrıntılı bir sürümünü almak için Rapor isteği'ne tıklayın. Tarih aralığını ve raporu alacak alıcıları belirtebilirsiniz.
 

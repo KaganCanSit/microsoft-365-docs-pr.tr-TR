@@ -22,12 +22,12 @@ ms.localizationpriority: high
 description: Yöneticiler, Exchange Online Protection'de (EOP) bulunan kimlik avı saldırılarını ve kimlik avı saldırılarını önlemeye yardımcı olan kimlik sahteciliği önleme özellikleri hakkında bilgi edinebilirsiniz.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b93f2e1543a70ca7b5dde8ab5e83d48fba5f5a5e
-ms.sourcegitcommit: e246725b0935067aad886530d5178972c0f895d7
+ms.openlocfilehash: 140ed15b793b5d6b74b39a35b854b7432a658bc3
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "63012862"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475179"
 ---
 # <a name="anti-spoofing-protection-in-eop"></a>EOP'de anti-poing protection
 
@@ -35,7 +35,7 @@ ms.locfileid: "63012862"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Microsoft 365 kutusu olmayan Exchange Online ya da tek başına Exchange Online Protection (EOP) kuruluşlarında posta kutusu olan Exchange Online kuruluşlarında, EOP, kurumlarınızı sahte (sahte) gönderenlerden korumaya yardımcı olan özellikler içerir.
@@ -48,24 +48,24 @@ EOP'de şu ifadeyi koruma teknolojileri kullanılabilir:
 
   EOP, standart e-posta kimlik doğrulama yöntemlerini ve gönderen itibarı tekniklerini birlikte kullanarak kimlik doğrulaması yapılamayacak iletileri analiz eder ve engeller.
 
-  ![EOP kimliklerini önleme denetimleri.](../../media/eop-anti-spoofing-protection.png)
+  :::image type="content" source="../../media/eop-anti-spoofing-protection.png" alt-text="EOP kimlik kimliklerini önleme denetimleri" lightbox="../../media/eop-anti-spoofing-protection.png":::
 
 - **Akıllı ifade içgörü**: Son 7 gün içinde dahili ve dış etki alanlarındaki gönderenlerden gelen kimliği doğrun gönderilen iletileri gözden geçirme ve bu gönderenlere izin verme veya engelleme. Daha fazla bilgi için bkz [. EOP'de Spoof Intelligence içgörü](learn-about-spoof-intelligence.md).
 
 - Kiracı İzin Ver/Engelleme Listesi'ne yer alan kimliği doğruya sahip gönderenlere izin verme veya engelleme: Bilgi bloğu içgörüsinde kararı geçersiz kıl kılıca, kimliği doğruya sahip gönderen, yalnızca Kiracı İzin Ver **/** Engelleme Listesi'nin Gizli Bilgi sekmesinde görüntülenen bir el ile izin verilen veya engellenen giriş haline gelir. Ayrıca, e-posta gönderenlere yönelik girişlere izin verme veya engellemeyi ayrıca, bu kişi kimliğin kimliği doğrulandığından önce el ile oluşturabilir veya engelleyebilirsiniz. Daha fazla bilgi için bkz [. EOP'de Kiracı İzin Ver/Engelleme Listesini Yönetme](tenant-allow-block-list.md).
 
-- **Kimlik avı önleme ilkeleri**: EOP ve Office 365 için Microsoft Defender'da, kimlik avı önleme ilkeleri aşağıdaki kimlik sahtesi önleme ayarlarını içerir:
+- **Kimlik avı önleme ilkeleri**: EOP ve Office 365 için Microsoft Defender'de, kimlik avı önleme ilkeleri aşağıdaki kimlik sahtesi önleme ayarlarını içerir:
   - Akıllı ifadeyi açma veya kapatma.
   - Kimliği doğrulanmamış gönderen kimliğini Outlook veya kapatın.
   - Kimliği doğrun engellenen gönderenler eylemlerini belirtin.
 
   Daha fazla bilgi için bkz [. Kimlik avı önleme ilkelerde kimlik avı ayarları](set-up-anti-phishing-policies.md#spoof-settings).
 
-  **Not**: Kimlik avı koruması ilkeleri için Defender'Office 365 kimliğe bürünme koruması da dahil olmak üzere ek **korumalar** içerir. Daha fazla bilgi için bkz[. Kimlik avı önleme ilkeleri için Microsoft Defender'da özel Office 365](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+  **Not**: Kimlik avıyla mücadele ilkeleri Office 365 için Defender kimliğe bürünme koruması da dahil olmak üzere ek **korumalar** içerir. Daha fazla bilgi için bkz[. Kimlik avı önleme ilkelerine özel Office 365 için Microsoft Defender](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 - **Spoof algılamaları raporu**: Daha fazla bilgi için bkz. [Spoof Algılamaları raporu](view-email-security-reports.md#spoof-detections-report).
 
-  **Not**: Office 365 için Defender kuruluşlar kimlik avı girişimleriyle ilgili bilgileri görüntülemek üzere Gerçek zamanlı algılamaları (Plan 1) veya Tehdit Gezgini 'ni (Plan 2) de kullanabilir. Daha fazla bilgi için tehdit [Microsoft 365 yanıtını incelemeye bakın](office-365-ti.md).
+  **Not**: Office 365 için Defender kimlik avı girişimleriyle ilgili bilgileri görüntülemek için gerçek zamanlı algılamaları (Plan 1) veya Tehdit Gezgini (Plan 2) kullanabilir. Daha fazla bilgi için tehdit [Microsoft 365 yanıtını incelemeye bakın](office-365-ti.md).
 
 ## <a name="how-spoofing-is-used-in-phishing-attacks"></a>Kimlik avı saldırılarında kimlik sahtesi nasıl kullanılır
 

@@ -14,22 +14,22 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: d254eee546187311a25a0e6cc433005a26ff57e6
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+ms.openlocfilehash: a9753cdc818aefdf33411bd237327310dfc512ab
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64632437"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474761"
 ---
 # <a name="device-inventory"></a>Cihaz envanteri
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Şunlar için geçerlidir:**
+**Aşağıdakiler için geçerlidir:**
 
 - [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-machinesview-abovefoldlink)
@@ -109,14 +109,14 @@ Her sekmenin üst kısmında yer alan sayımlar geçerli görünüme göre günc
 Filtre | Açıklama
 :---|:---
 **Risk düzeyi** </br> | Risk düzeyi, cihaz üzerinde etkin uyarıların türleri ve önem düzeyi de içinde olmak üzere bir etmenler birleşimine bağlı olarak cihazın genel risk değerlendirmesini yansıtmaktadır. Etkin uyarıları çözümleme, düzeltme etkinliklerini onaylama ve sonraki uyarıları gizleme, risk düzeyini düşürebilir.
-**Pozlama düzeyi** </br> | Etkilenme düzeyi, bekleyen güvenlik önerilerinin kümülatif etkisine bağlı olarak cihazın geçerli etkilenme düzeyini yansıtmaktadır. Olası düzeyler düşük, orta ve yüksektir. Düşük pozlama, cihazlarınızı açıklardan yararlanmaya karşı daha az korumasız olduğu anlamına gelir. </br> </br> Pozlama düzeyi "Veri yok" ifadesini belirtiyorsa, bunun birkaç nedeni olabilir:</br>- Cihaz 30 gün boyunca raporlamayı durdurdu. Bu durumda devre dışı olduğu kabul edilir ve maruz kalma durumu hesaplanmayacaktır.</br>- Cihaz işletim sistemi desteklenmiyor - Mobil cihaz [gereksinimleri için en düşük Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint/minimum-requirements).</br>- Eski aracısı olan cihaz (pek olası değil).
+**Pozlama düzeyi** </br> | Etkilenme düzeyi, bekleyen güvenlik önerilerinin kümülatif etkisine bağlı olarak cihazın geçerli etkilenme düzeyini yansıtmaktadır. Olası düzeyler düşük, orta ve yüksektir. Düşük pozlama, cihazlarınızı açıklardan yararlanmaya karşı daha az korumasız olduğu anlamına gelir. </br> </br> Pozlama düzeyi "Veri yok" ifadesini belirtiyorsa, bunun birkaç nedeni olabilir:</br>- Cihaz 30 gün boyunca raporlamayı durdurdu. Bu durumda devre dışı olduğu kabul edilir ve maruz kalma durumu hesaplanmayacaktır.</br>- Cihaz işletim sistemi desteklenmiyor - Mobil cihaz [gereksinimleri için en düşük Uç Nokta için Microsoft Defender](https://microsoft-my.sharepoint.com/personal/siosulli_microsoft_com/Documents/Security%20Posture/TVM/minimum-requirements.md).</br>- Eski aracısı olan cihaz (pek olası değil).
 **Etiketler** </br> | Listeyi, tek tek cihazlara ekleytilen gruplama ve etiketlemeye göre filtrele. Bkz [. Cihaz etiketlerini oluşturma ve yönetme](machine-tags.md).
 **Cihaz değeri**</br> | Cihazın yüksek değer veya düşük değer olarak işaretlenmiş olup olmadığını temel alarak listeye filtre uygulama.
 **Dışlama durumu** </br> | Cihazın dışlanmış veya dışlanmış olup olmadığını temel alarak listeye filtre uygulama. Daha fazla bilgi için bkz. [Cihazları dışla](exclude-devices.md).
 **Işletim Sistemi Platformu** </br>| Araştırırken ilgilendiğiniz işletim sistemi platformlarını filtrele </br></br>(_Yalnızca bilgisayarlar ve mobil ve IoT cihazları_)
 **İlk görülen** </br> | Görünümlerinizi, cihazın ağda ilk ne zaman görüntülandığına veya algılayıcı tarafından ilk ne zaman bildir Uç Nokta için Microsoft Defender filtrele.</br></br>(_Yalnızca bilgisayarlar ve mobil ve IoT cihazları_)
 **Windows sürümü** </br> | Araştırırken ilgilendiğiniz Windows sürümlerine göre filtrelenin.</br></br> (_Yalnızca bilgisayarlar ve mobil_)
-**Algılayıcıların durumu** </br> | Aşağıdaki algılayıcı durumuna göre filtre yapın. Cihaz, cihaza şu Uç Nokta için Microsoft Defender:</br> - **Etkin**: Algılayıcı verilerini etkin bir şekilde hizmete bildiren cihazlar.</br> - **Etkin değil**: 7 gün boyunca sinyalleri göndermeyi durduran cihazlar. </br> - **Yanlış Yapılandırılmış: Hizmetle** iletişim engeli olan veya algılayıcı verilerini gönderemeyen cihazlar. </br> Yanlış yapılandırılmış cihazlar, aşağıdakiler için daha fazla sınıflandırılabilir: </br>  - Algılayıcı verisi yok </br>  - Engelli iletişimler </br>  Hatalı yapılandırılmış cihazlardaki sorunları çözme hakkında daha fazla bilgi için bkz. [Uygun olmayan algılayıcıları düzeltme](/microsoft-365/security/defender-endpoint/fix-unhealthy-sensors).</br></br> (_Yalnızca bilgisayarlar ve mobil_)
+**Algılayıcıların durumu** </br> | Aşağıdaki algılayıcı durumuna göre filtre yapın. Cihaz, cihaza şu Uç Nokta için Microsoft Defender:</br> - **Etkin**: Algılayıcı verilerini etkin bir şekilde hizmete bildiren cihazlar.</br> - **Etkin değil**: 7 gün boyunca sinyalleri göndermeyi durduran cihazlar. </br> - **Yanlış Yapılandırılmış: Hizmetle** iletişim engeli olan veya algılayıcı verilerini gönderemeyen cihazlar. </br> Yanlış yapılandırılmış cihazlar, aşağıdakiler için daha fazla sınıflandırılabilir: </br>  - Algılayıcı verisi yok </br>  - Engelli iletişimler </br>  Hatalı yapılandırılmış cihazlardaki sorunları çözme hakkında daha fazla bilgi için bkz. [Uygun olmayan algılayıcıları düzeltme](https://microsoft-my.sharepoint.com/personal/siosulli_microsoft_com/Documents/Security%20Posture/TVM/fix-unhealthy-sensors.md).</br></br> (_Yalnızca bilgisayarlar ve mobil_)
 **Ekleme durumu** </br> | Ekleme durumu, cihazın şu anda kullanıcıya hazır olup olmadığını Uç Nokta için Microsoft Defender gösterir. Aşağıdaki eyaletlere göre filtre yapabilirsiniz: </br> - **Eklemeli**: Uç nokta, Alan Uç Nokta için Microsoft Defender.  </br> - **Kullanılabilir**: Uç nokta ağda desteklenen bir cihaz olarak bulundu ancak şu anda eklemedi. Microsoft bu cihazları işe eklemeyi kesinlikle önermektedir. </br> - **Desteklenmiyor**: Uç nokta ağda bulundu ancak diğer kullanıcılar tarafından Uç Nokta için Microsoft Defender. </br> - **Yetersiz bilgi**: Sistem, cihazın desteklanabilirliğini belirleyemedi.</br></br> (_Yalnızca bilgisayarlar ve mobil_)
 **Virüsten koruma durumu** </br> | Virüsten koruma durumunun devre dışı olup olmadığını, güncelleştirilme veya bilinmiyor olup olmadığını temel alarak görünüme filtre uygulama.</br></br> (_Yalnızca bilgisayarlar ve mobil_)
 **Grup** </br> | Araştırırken ilgilendiğiniz gruba göre listeye filtre uygulama. </br></br> (_Yalnızca bilgisayarlar ve mobil_)

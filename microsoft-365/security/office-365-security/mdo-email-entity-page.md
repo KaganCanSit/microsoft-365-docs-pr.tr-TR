@@ -1,5 +1,5 @@
 ---
-title: e-posta varlık Office 365 için Microsoft Defender sayfası
+title: Office 365 için Microsoft Defender-posta varlık sayfası
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -16,13 +16,13 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: ''
-description: Office 365 E5 P1 ve P2 müşterileri için Microsoft Defender artık e-posta varlık sayfasıyla her e-postanın 360 derecelik görünümünü elde ediyor.
-ms.openlocfilehash: 263411d6f0c9931dfd03fbf8b89fd24a86c3c9e6
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+description: Office 365 için Microsoft Defender E5, P1 ve P2 müşterileri artık e-posta varlık sayfasıyla her e-postayı 360 derecelik bir görünüme sahip olacak.
+ms.openlocfilehash: d75ebd9b54fc5e7919154a4f65e0d5fc0e77e117
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63032515"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475465"
 ---
 # <a name="the-email-entity-page"></a>E-posta varlık sayfası
 
@@ -32,7 +32,7 @@ ms.locfileid: "63032515"
 - [E-posta varlık sayfası sekmelerini kullanma](#use-email-entity-page-tabs)
 - [E-posta varlık sayfasında yenisiniz](#new-to-the-email-entity-page)
 
-Office 365 E5 için Microsoft Defender yöneticileri ve Office P1 ve P2 için Defender'ın E-posta varlık sayfasını kullanarak 360 derecelik e-posta **görünümü vardır**. Threat Explorer 'e-posta ayrıntıları' sayfasında teslim edilen bilgileri geliştirmek [için bu git e-posta sayfası oluşturulmuştur](threat-explorer-views.md).
+Office 365 için Microsoft Defender E5, Office P1 ve P2 için Defender yöneticileri E-posta varlık sayfasını kullanarak e-postanın 360 derecelik **görünümünü alır**. Threat Explorer 'e-posta ayrıntıları' sayfasında teslim edilen bilgileri geliştirmek [için bu git e-posta sayfası oluşturulmuştur](threat-explorer-views.md).
 
 ## <a name="reach-the-email-entity-page"></a>E-posta varlık sayfasına ulaşma
 
@@ -40,9 +40,9 @@ E-posta varlık sayfası, Microsoft 365 Defender portalında E-posta ve <https:/
 
 **Gezgin'de**, araştıran bir e-postanın konusunu seçin. Bu posta için dışarı uçan e-postanın üst kısmında altın gibi bir çubuk görüntülenir. Yeni sayfaya davet "Yeni e-posta varlık sayfamızı zenginleştirilmiş verilerle deneyin..." makalesini okur. Yeni sayfayı görüntülemek için öğesini seçin.
 
-:::image type="content" source="../../media/email-entities-1-navigation-to-ee.png" alt-text="Yeni deneyime gitmek için *Zenginleştirilmiş veriler içeren yeni e-posta varlık sayfamızı deneyin* sözcüklerini içeren altın gibi bir başlık görebilirsiniz.":::
+:::image type="content" source="../../media/email-entities-1-navigation-to-ee.png" alt-text="Yeni deneyime gitmek için *Zenginleştirilmiş veriler içeren yeni e-posta varlık sayfamızı deneyin* sözcüklerinin yer alan altın başlık" lightbox="../../media/email-entities-1-navigation-to-ee.png":::
 
-:::image type="content" source="../../media/email-entities-2-eep.png" alt-text="E-posta varlık sayfasının bu grafiği, göreceğiniz başlıklara odaklanır. E-posta üst bilgisi burada görüntülenir.":::
+:::image type="content" source="../../media/email-entities-2-eep.png" alt-text="Göreceğiniz başlıklara odaklanan e-posta varlık sayfasının grafiği" lightbox="../../media/email-entities-2-eep.png":::
 
 > [!NOTE]
 > Bu sayfayı görüntülemek ve kullanmak için gereken izinler, Explorer'ı görüntülemekle **aynıdır**. Yönetici, Genel yönetici veya genel okuyucu ya da Güvenlik yöneticisi veya Güvenlik Okuyucusu üyesi olabilir. Daha fazla bilgi için bkz[. Microsoft 365 Defender portalına.](permissions-microsoft-365-security-center.md)
@@ -53,15 +53,15 @@ Yapı, kolayca okunması ve bir bakışta gezinmesi için tasarlanmıştır. Say
 
 1. En gerekli alanlar, uçarak çıkar'ın sol tarafındadır. Bu ayrıntılar 'yapışkan'tır; yani, uçarak girişin geri kalanında gezinmek istediğiniz sekmeden fark etmez; sola sabitleniyorlar.
 
-    :::image type="content" source="../../media/email-entities-3-left-panel.png" alt-text="Sol tarafı vurgulanmış olarak e-posta varlık sayfasının grafiği. Posta teslimi ile ilgili başlık ve bilgiler burada.":::
+    :::image type="content" source="../../media/email-entities-3-left-panel.png" alt-text="Sol tarafı vurgulanmış olarak e-posta varlık sayfasının grafiği" lightbox="../../media/email-entities-3-left-panel.png":::
 
 2. Sağ üst köşede, bir e-posta üzerinde  gerçekleştirebilirsiniz. Gezgin aracılığıyla yapılabilecek tüm eylemler, **e-posta** varlık sayfası aracılığıyla da kullanılabilir.
 
-    :::image type="content" source="../../media/email-entities-5-preview.png" alt-text="Bu kez *sağ* tarafı vurgulanmış olarak e-posta varlık sayfasının grafiği. 'E-posta önizleme' ve 'Karantinaya git' gibi eylemler burada.":::
+    :::image type="content" source="../../media/email-entities-5-preview.png" alt-text="Sağ tarafı vurgulanmış olarak e-posta varlık sayfasının grafiği" lightbox="../../media/email-entities-5-preview.png":::
 
 3. Daha derin çözümleme, sayfanın geri kalanından sıralama yoluyla yapılabilir. E-posta algılama ayrıntılarını, e-posta kimlik doğrulama durumunu ve üst bilgileri kontrol edin. Bu alan büyük/küçük harfe göre kontrol edilir, ancak bu sekmelerde yer alan bilgiler tüm e-postalarda kullanılabilir.
 
-    :::image type="content" source="../../media/email-entities-4-middle-panel.png" alt-text="Bu sayfanın ana paneli e-posta üst bilgilerini ve kimlik doğrulama durumunu içerir.":::
+    :::image type="content" source="../../media/email-entities-4-middle-panel.png" alt-text="Sayfanın e-posta üst bilgilerini ve kimlik doğrulama durumunu içeren ana panel" lightbox="../../media/email-entities-4-middle-panel.png":::
 
 ### <a name="use-email-entity-page-tabs"></a>E-posta varlık sayfası sekmelerini kullanma
 
@@ -102,7 +102,7 @@ Kullanıcılar, kendi kiracılarının kendi e-postalarında bulunan, bilinen k�
 1. *Davranış* Ayrıntıları, tam olarak detonation sırasında olan olaylar ve detonation sırasında bulunan URL'ler, IP'ler, etki alanları ve dosyalar içeren gözlenebilir olaylar gibi davranış ayrıntılarını gösteren bir dışarı aktarmadır (ve sorunlu veya sorunlu olabilir). Aşağıdakiler için davranış ayrıntıları olmadığını fark edin:
     - Başka dosyaları tutan .zip veya .rar kapsayıcı dosyalar.
 
-:::image type="content" source="../../media/email-entities-6-detonation-page.png" alt-text="Zincir, özet, detonasyonun ayrıntılarını ve *Derin Çözümleme* başlığı altındaki ekran görüntüsünü gösteren detonation özetinin ekran görüntüsü.":::
+:::image type="content" source="../../media/email-entities-6-detonation-page.png" alt-text="*Derin Çözümleme* başlığı altındaki zincir, özet, detonation ayrıntılarını ve ekran görüntüsünü gösteren detonation özeti" lightbox="../../media/email-entities-6-detonation-page.png":::
 
 ### <a name="other-innovations"></a>Diğer yenilikler
 
@@ -112,7 +112,7 @@ Kullanıcılar, kendi kiracılarının kendi e-postalarında bulunan, bilinen k�
 
 *E-posta* ayrıntıları: Çözümleme sekmesinde bulunan e-postanın daha ayrıntılı anlaşılması için *gereken* ayrıntılar.
 
-- *Exchange kuralları (* posta akış kuralları veya ETR'ler olarak da bilinir): Bu kurallar aktarım katmanında bir iletiye uygulanır ve kimlik avı ve istenmeyen posta kararlarına göre önceliklidir. Posta akış kuralları, <https://admin.exchange.microsoft.com/#/transportrules>Exchange yönetim merkezinde oluşturulur ve değiştirilir; ancak herhangi bir posta akış kuralı bir ileti için geçerli olursa, kural adı ve GUID burada gösterilir. İzleme amacıyla değerli bilgiler.
+- *Exchange kuralları (* posta akış kuralları veya ETR'ler olarak da bilinir): Bu kurallar aktarım katmanında bir iletiye uygulanır ve kimlik avı ve istenmeyen posta kararlarına göre önceliklidir. Posta akış kuralları, Exchange <https://admin.exchange.microsoft.com/#/transportrules>yönetim merkezinde 'da oluşturulur ve değiştirilir; ancak, iletiye uygulanan bir posta akış kuralı varsa, kural adı ve GUID burada gösterilir. İzleme amacıyla değerli bilgiler.
 
 - *Sistem Geçersiz Kılmaları*: Bu, sistem tarafından verilen teslim konumunu geçersiz kılarak (tehdit ve algılama teknolojisine göre) bir ileti için hedeflenen teslim konumu üzerinde istisnalar yapmanın bir aracıdır.
 
@@ -128,7 +128,7 @@ Kullanıcılar, kendi kiracılarının kendi e-postalarında bulunan, bilinen k�
 
 - *Etki Alanı Oluşturulma* Tarihi: Gönderen etki alanının oluşturulma tarihini belirtir. Yeni oluşturulan etki alanı, diğer sinyaller bazı şüpheli davranışlara neden oluyorsa dikkatli olmalısınız.
 
-*E-posta* Kimlik Doğrulaması: SPF, DKIM ve DMARC Microsoft 365 tarafından kullanılan e-posta kimlik doğrulama yöntemleri.
+*E-posta* Kimlik Doğrulaması: Microsoft 365 tarafından kullanılan e-posta kimlik doğrulama yöntemleri SPF, DKIM ve DMARC'dır.
 
 - Sender Policy Framework (**SPF**): İleti için SPF denetimi sonuçlarını açıklar. Olası değerler şöyle olabilir:
   - Pass (IP adresi): Geçen ileti için SPF denetimi ve gönderenin IP adresini içerir. İstemci, gönderenin etki alanı adına e-posta gönderme veya geçiş yetkisine sahip.
@@ -150,7 +150,7 @@ Kullanıcılar, kendi kiracılarının kendi e-postalarında bulunan, bilinen k�
   - Bestguesspass: Etki alanı için DMARC TXT kaydının olmadığını belirtir, ama varsa, iletinin DMARC denetimi geçmiş olabilir.
   - Yok: DNS'de gönderen etki alanı için DMARC TXT kaydının olmadığını gösterir.
 
-*Bileşik Kimlik Doğrulaması*: Bu, Microsoft 365 SPF, DKIM ve DMARC gibi e-posta kimlik doğrulamasını birleştirerek iletinin kimlik doğrulaması olup olmadığını belirlemek için kullanılan değerdir. Değerlendirme temeli olarak postanın From *:* etki alanını kullanır.
+*Bileşik Kimlik* Doğrulaması: Bu, Microsoft 365 tarafından SPF, DKIM ve DMARC gibi e-posta kimlik doğrulamasını birleştirerek iletinin kimlik doğrulaması olup olmadığını belirlemek için kullanılan bir değerdir. Değerlendirme temeli olarak postanın From *:* etki alanını kullanır.
 
 ### <a name="email-summary-panel"></a>E-posta özet paneli
 

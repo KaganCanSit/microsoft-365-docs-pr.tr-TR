@@ -20,12 +20,12 @@ ms.custom:
 description: Bu makalede, sizi engellenen gönderenler listesinden kaldırmak için deliste Microsoft 365 kullanmayı öğrenirsiniz. Bu, 5.7.511 Erişim reddedildi hatalarına verilen en iyi yanıttır.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 58ddb2913ce7ecd047b1d5acb360c8f4c9ff5074
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: 627e8f91c9d4730fed6a7fca275e9d53e1dfd7fd
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775796"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474805"
 ---
 # <a name="use-the-delist-portal-to-remove-yourself-from-the-blocked-senders-list-and-address-57511-access-denied-errors"></a>Kendinizi engellenen gönderenler listesinden kaldırmak ve 5.7.511 Access'in reddedilen hatalarına karşı adres olarak liste kaldırma portalını kullanma
 
@@ -33,7 +33,7 @@ ms.locfileid: "63775796"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 E-posta adresi Microsoft 365 olan bir alıcıya e-posta göndermeye çalışsanız da hata iletisi alıyor musunuz (örneğin ve 5.7.511 Erişim reddedildi)? Hata iletisini almamanız gerektiğini düşünüyorsanız, liste portalını kullanarak kendinizi engellenen gönderenler listesinden kaldırabilirsiniz.
@@ -65,7 +65,8 @@ Gönderenlerin engellenen gönderenler listesine yer eklemesi için iyi nedenler
 
     Portal, sağlarken kaynak e-posta adresine bir e-posta gönderir. E-posta aşağıdakine benzer şekilde olur:
 
-    ![Liste portalı aracılığıyla bir istek gönderdiğinizde alınan e-postanın ekran görüntüsü.](../../media/bf13e4f7-f68c-4e46-baa7-b6ab4cfc13f3.png)
+    :::image type="content" source="../../media/bf13e4f7-f68c-4e46-baa7-b6ab4cfc13f3.png" alt-text="Liste portalı aracılığıyla istek gönderdiğinizde alınan e-posta" lightbox="../../media/bf13e4f7-f68c-4e46-baa7-b6ab4cfc13f3.png":::
+
 
 4. Liste portalı tarafından size gönderilen e-postada onay bağlantısına tıklayın.
 

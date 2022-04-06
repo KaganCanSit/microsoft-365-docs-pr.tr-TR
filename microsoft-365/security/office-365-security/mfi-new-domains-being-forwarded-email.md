@@ -13,12 +13,12 @@ description: Yöneticiler, kullanıcılarının iletileri daha önce iletilen d�
 ms.technology: mdo
 ms.prod: m365-security
 ms.collection: M365-security-compliance
-ms.openlocfilehash: df4f9e79439d435059374dd066a5298ba73d329b
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: e23d63a519bf69f94ce4990d8851d673826dcb5c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679664"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475091"
 ---
 # <a name="new-domains-being-forwarded-email-insight-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde e-posta ile iletili yeni & bilgileri
 
@@ -26,7 +26,7 @@ ms.locfileid: "63679664"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 E-posta iletilerini belirli etki alanlarındaki dış alıcılara iletmenin geçerli iş nedenleri vardır. Ancak, organizasyonu kullananlar aniden iletileri kuruluş içinde hiç kimsenin iletileri iletmemiştir (yeni bir etki alanına) iletmemiştir ve bu durum şüphelidir.
@@ -37,11 +37,12 @@ Güvenlik **ve Uyumluluk Merkezi'nde** E-posta ile iletili yeni [etki alanları]
 
 Bu içgörü ancak sorun algılandığında ve Rapor [iletildi sayfasında görüntülenir](view-mail-flow-reports.md#forwarding-report) .
 
-![E-posta ile iletili yeni etki alanları içgörü.](../../media/mfi-new-domains-being-forwarded.png)
+:::image type="content" source="../../media/mfi-new-domains-being-forwarded.png" alt-text="E-posta ile iletili yeni etki alanları içgörü" lightbox="../../media/mfi-new-domains-being-forwarded.png":::
+
 
 Widget'a tıklarsanız, iletili iletiler hakkında daha fazla ayrıntıya ulaşabilirsiniz ve bu açılır pencere öğesi, İletim raporuna [bir bağlantı içerir](view-mail-flow-reports.md#forwarding-report).
 
-![Yeni etki alanları iletili e-posta içgörüne tıklandıktan sonra görüntülenen ayrıntılar açılır.](../../media/mfi-new-domains-being-forwarded-details.png)
+:::image type="content" source="../../media/mfi-new-domains-being-forwarded-details.png" alt-text="Yeni etki alanları iletildi e-posta içgörüne tıklandıktan sonra görüntülenen Ayrıntılar açılır" lightbox="../../media/mfi-new-domains-being-forwarded-details.png":::
 
 Ayrıca, En iyi öngörüler ve öneriler **alanında (** \> Raporlar Panosu veya ) Hepsini görüntüle'ye **tıklarken** & bu ayrıntılar sayfasına **da bakabilirsiniz**<https://protection.office.com/insightdashboard>.
 

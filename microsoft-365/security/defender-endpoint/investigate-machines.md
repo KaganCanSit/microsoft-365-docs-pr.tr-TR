@@ -14,20 +14,20 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: b707a6f684df6b9888fb8f2d50c4bba9a6dd3195
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 71755add523b3426d144f748ab3582e3a3975dc6
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63324179"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475245"
 ---
-# <a name="investigate-devices-in-the-microsoft-defender-for-endpoint-devices-list"></a>Uç Nokta Cihazları için Microsoft Defender listesinde cihazları araştırma
+# <a name="investigate-devices-in-the-microsoft-defender-for-endpoint-devices-list"></a>Uç Nokta için Microsoft Defender Cihazlar listesinde cihazları araştırma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigatemachines-abovefoldlink)
@@ -53,7 +53,7 @@ Belirli bir cihazı araştırsanız, şunları görmeye devam edin:
 - Sekmeler (genel bakış, uyarılar, zaman çizelgesi, güvenlik önerileri, yazılım envanteri, güvenlik açıkları keşfetildi, eksik KB'ler)
 - Kartlar (etkin uyarılar, oturum açmış kullanıcılar, güvenlik değerlendirmesi)
 
-![Cihaz görünümünün resmi.](images/specific-device.png)
+:::image type="content" source="images/specific-device.png" alt-text="Cihaz görünümü" lightbox="images/specific-device.png":::
 
 > [!NOTE]
 > Ürün sınırlandırma nedeniyle, cihaz profili 'Son Görülme' zaman çerçevesini belirlerken (cihaz sayfasında da görülür) siber kanıtı göz önünde bulundurm olmaz.
@@ -91,13 +91,13 @@ Sekmeler cihazla ilgili ilgili güvenlik ve tehdit önleme bilgilerini sağlar. 
 
 Genel **Bakış** sekmesi etkin [uyarılar,](#cards) oturum açmış kullanıcılar ve güvenlik değerlendirmesi için kartları görüntüler.
 
-![Cihaz sayfasındaki genel bakış sekmesinin görüntüsü.](images/overview-device.png)
+:::image type="content" source="images/overview-device.png" alt-text="Cihaz sayfasındaki Genel Bakış sekmesi" lightbox="images/overview-device.png":::
 
 ### <a name="alerts"></a>Uyarılar
 
 Uyarılar **sekmesi** cihazla ilişkilendirilmiş uyarıların listesini sağlar. Bu liste, Uyarılar kuyruğun filtrelenmiş bir [](alerts-queue.md)sürümüdür ve uyarı, önem düzeyi (yüksek, orta, düşük, bilgilendirme amaçlı), sırada durumu (yeni, sürüyor, çözümlendi), sınıflandırma (ayarlanmaz, yanlış uyarı, doğru uyarı), araştırma durumu, uyarı kategorisi, uyarının adresi olan kişi ve son etkinlik hakkında kısa bir açıklama gösterir. Uyarıları filtrelemek de gerekir.
 
-![Cihazla ilgili uyarıların resmi.](images/alerts-device.png)
+:::image type="content" source="images/alerts-device.png" alt-text="Cihazla ilgili uyarıların sekmesi" lightbox="images/alerts-device.png":::
 
 Uyarının sol köşesindeki daire simgesi seçiliyken bir açılır simge görüntülenir. Bu panelden uyarıyı yönetebilir ve olay numarası ve ilgili cihazlar gibi diğer ayrıntıları görüntüleyebilirsiniz. Aynı anda birden çok uyarı seçilebilir.
 
@@ -118,7 +118,7 @@ Zaman çizelgesi, ayrıca, verilen bir süre içinde  meydana gelen olayları se
 > - [5031](/windows/security/threat-protection/auditing/event-5031) - uygulamanın ağ üzerinden gelen bağlantıları kabulsi engellendi
 > - [5157](/windows/security/threat-protection/auditing/event-5157) - engellenen bağlantı
 
-![Olaylı cihaz zaman çizelgesinin resmi.](images/timeline-device.png)
+:::image type="content" source="images/timeline-device.png" alt-text="Olaylı cihaz zaman çizelgesi" lightbox="images/timeline-device.png":::
 
 İşlevlerin bazıları şunları içerir:
 
@@ -146,47 +146,47 @@ Bir etkinlikle ilgili ayrıntıları görüntülemek için o etkinliği seçin. 
 
 Etkinlik ve ilgili etkinlikleri daha ayrıntılı incelemek için, ilgili etkinlikler için Tekin'i [seçerek](advanced-hunting-overview.md) hızla gelişmiş bir av **sorgusu çalıştırabilirsiniz**. Sorgu seçili olayı ve aynı uç noktada aynı zamanda 44 saat içinde  meydana gelen diğer olayların listesini geri döner.
 
-![Olay ayrıntıları panelinin resmi.](images/event-details.png)
+:::image type="content" source="images/event-details.png" alt-text="Olay ayrıntıları paneli" lightbox="images/event-details.png":::
 
 ### <a name="security-recommendations"></a>Güvenlik önerileri
 
-**Güvenlik önerileri,** Uç Nokta Tehdit Veya Güvenlik Açığı Yönetimi özelliği & Için Microsoft [Defender'dan](tvm-dashboard-insights.md) oluşturulur. Öneriyi seçerek, önerinin açıklaması ve üzerine alınmayacak riskler gibi ilgili ayrıntıları görüntüleyebilirsiniz. Ayrıntılar [için güvenlik önerisine](tvm-security-recommendation.md) bakın.
+**Güvenlik önerileri,** güvenlik Uç Nokta için Microsoft Defender Güvenlik Açığı Yönetimi [& tarafından](tvm-dashboard-insights.md) oluşturulur. Öneriyi seçerek, önerinin açıklaması ve üzerine alınmayacak riskler gibi ilgili ayrıntıları görüntüleyebilirsiniz. Ayrıntılar [için güvenlik önerisine](tvm-security-recommendation.md) bakın.
 
-![Güvenlik önerileri sekmesinin resmi.](images/security-recommendations-device.png)
+:::image type="content" source="images/security-recommendations-device.png" alt-text="Güvenlik önerileri sekmesi" lightbox="images/security-recommendations-device.png":::
 
 ### <a name="software-inventory"></a>Yazılım envanteri
 
 Yazılım **envanteri** sekmesi, yazılımlarla birlikte cihazda her türlü zayıflığı veya tehdityi de görüntülemenizi sağlar. Yazılımın adını seçmek, sizi güvenlik önerilerini, güvenlik açıklarını, yüklü cihazları ve sürüm dağıtımını görüntüleyebilirsiniz yazılım ayrıntıları sayfasına götürebilirsiniz. Ayrıntılar [için bkz.](tvm-software-inventory.md) Yazılım envanteri
 
-![Yazılım envanteri sekmesinin resmi.](images/software-inventory-device.png)
+:::image type="content" source="images/software-inventory-device.png" alt-text="Yazılım envanteri sekmesi" lightbox="images/software-inventory-device.png":::
 
 ### <a name="discovered-vulnerabilities"></a>Bulunan güvenlik açıkları
 
 Bulunan **güvenlik açıkları** sekmesi, cihazla ilgili bulunan güvenlik açıklarının adını, önem derecesine ve tehdit öngörülerini gösterir. Belirli güvenlik açıklarını seçmek bir açıklama ve ayrıntılar gösterir.
 
-![Bulunan güvenlik açıkları sekmesinin resmi.](images/discovered-vulnerabilities-device.png)
+:::image type="content" source="images/discovered-vulnerabilities-device.png" alt-text="Bulunan güvenlik açıkları sekmesi" lightbox="images/discovered-vulnerabilities-device.png":::
 
 ### <a name="missing-kbs"></a>Eksik KB'ler
 Eksik **KBs sekmesi** , cihaz için eksik güvenlik güncelleştirmelerini listeler.
 
-![Eksik kbs sekmesinin resmi.](images/missing-kbs-device.png)
+:::image type="content" source="images/missing-kbs-device.png" alt-text="Eksik Kbs sekmesi" lightbox="images/missing-kbs-device.png":::
 
 ## <a name="cards"></a>Kartlar
 
 ### <a name="active-alerts"></a>Etkin uyarılar
 
-**Azure Gelişmiş Tehdit Koruması** kartı, Kimlik için Microsoft Defender özelliğini etkinleştirdiyseniz ve varsa cihazla ve risk düzeyiyle ilgili uyarılar için üst düzey bir genel bakış görüntüler. Daha fazla bilgiyi "Uyarılar" detaya gitme sayfalarından edinebilirsiniz.
+**Azure Gelişmiş Tehdit Koruması** kartı, gelişmiş tehdit özelliğini etkinleştirdiyseniz ve herhangi bir etkin uyarı varsa cihazla ve cihazla ilgili risk düzeyiyle ilgili Kimlik için Microsoft Defender düzeyli bir genel bakış görüntüler. Daha fazla bilgiyi "Uyarılar" detaya gitme sayfalarından edinebilirsiniz.
 
-![Etkin uyarılar kartının resmi.](images/risk-level-small.png)
+:::image type="content" source="images/risk-level-small.png" alt-text="Etkin uyarılar kartı" lightbox="images/risk-level-small.png":::
 
 > [!NOTE]
-> Bu özelliği kullanmak için hem Kimlik için Microsoft Defender hem de Uç Nokta için Defender ile tümleştirmeyi etkinleştirmeniz gerekir. Uç Nokta için Defender'da, gelişmiş özelliklerde bu özelliği etkinleştirebilirsiniz. Gelişmiş özellikleri etkinleştirme hakkında daha fazla bilgi için bkz [. Gelişmiş özellikleri açma](advanced-features.md).
+> Bu özelliği kullanmak için hem Uç Nokta için Kimlik için Microsoft Defender Defender'da tümleştirmeyi etkinleştirmeniz gerekir. Uç Nokta için Defender'da, gelişmiş özelliklerde bu özelliği etkinleştirebilirsiniz. Gelişmiş özellikleri etkinleştirme hakkında daha fazla bilgi için bkz [. Gelişmiş özellikleri açma](advanced-features.md).
 
 ### <a name="logged-on-users"></a>Oturum açmış kullanıcılar
 
 Oturum **açan kullanıcılar kartı** , son 30 gün içinde kaç kullanıcının oturum açtığını ve en sık kullanan kullanıcıları gösterir. "Tüm kullanıcıları göster" bağlantısının seçkisi, kullanıcı türü, oturum açma türü ve kullanıcının ilk ve son görülme zamanları gibi bilgilerin görüntü olduğu ayrıntılar bölmesini açar. Daha fazla bilgi için bkz [. Kullanıcı varlıklarını araştırma](investigate-user.md).
 
-![Kullanıcı ayrıntıları bölmesinin resmi.](images/logged-on-users.png)
+:::image type="content" source="images/logged-on-users.png" alt-text="Kullanıcı ayrıntıları bölmesi" lightbox="images/logged-on-users.png":::
 
 > [!NOTE]
 > 'En sık' kullanıcı değeri yalnızca etkileşimli olarak oturum açan kullanıcıların kanıtlarına dayalı olarak hesaplanır.
@@ -196,13 +196,13 @@ Oturum **açan kullanıcılar kartı** , son 30 gün içinde kaç kullanıcını
 
 Güvenlik **değerlendirmeleri kartı** genel açık düzeyini, güvenlik önerilerini, yüklü yazılımı ve güvenlik açıklarını gösterir. Bir cihazın etkilenme düzeyi, bekleyen güvenlik önerilerinin kümülatif etkisiyle belirlenir.
 
-![Güvenlik değerlendirme kartının görüntüsü.](images/security-assessments.png)
+:::image type="content" source="images/security-assessments.png" alt-text="Güvenlik değerlendirmeleri kartı" lightbox="images/security-assessments.png":::
 
 ## <a name="related-topics"></a>İlgili konular
 
-- [Uç Nokta Uyarıları kuyruğu için Microsoft Defender'ı görüntüleme ve düzenleme](alerts-queue.md)
-- [Uç nokta uyarıları için Microsoft Defender'ı yönetme](manage-alerts.md)
-- [Uç nokta uyarıları için Microsoft Defender'ı araştırma](investigate-alerts.md)
+- [Yeni Uyarı kuyruğu Uç Nokta için Microsoft Defender ve düzenleme](alerts-queue.md)
+- [Uyarı Uç Nokta için Microsoft Defender yönetme](manage-alerts.md)
+- [Uyarı Uç Nokta için Microsoft Defender araştırma](investigate-alerts.md)
 - [Uç Nokta için Defender uyarısıyla ilişkilendirilmiş dosyayı araştırma](investigate-files.md)
 - [Uç Nokta için Defender uyarısıyla ilişkilendirilmiş IP adresini araştırma](investigate-ip.md)
 - [Uç nokta için Defender uyarısıyla ilişkilendirilmiş etki alanını araştırma](investigate-domain.md)

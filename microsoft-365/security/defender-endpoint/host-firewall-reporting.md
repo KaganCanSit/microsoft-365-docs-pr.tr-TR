@@ -1,5 +1,5 @@
 ---
-title: Uç Nokta için Microsoft Defender'da ana bilgisayar güvenlik duvarı bildirimi
+title: Güvenlik duvarı raporlaması Uç Nokta için Microsoft Defender
 description: Portalda güvenlik duvarı raporlamayı ana Microsoft 365 Defender görüntüleme.
 keywords: windows defender, güvenlik duvarı
 ms.prod: m365-security
@@ -15,31 +15,31 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: b5aaad7363b42e18a0ca21e4d56d118218cec1a9
-ms.sourcegitcommit: 6dcc3b039e0f0b9bae17c386f14ed2b577b453a6
+ms.openlocfilehash: e5bbdd77226f8649f2a781866fef614706e8a789
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63019042"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475289"
 ---
-# <a name="host-firewall-reporting-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'da ana bilgisayar güvenlik duvarı bildirimi
+# <a name="host-firewall-reporting-in-microsoft-defender-for-endpoint"></a>Güvenlik duvarı raporlaması Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 Yöneticiyseniz, artık güvenlik duvarı bildirimini portalında [Microsoft 365 Defender.](https://security.microsoft.com) Bu özellik merkezi bir konumdan Windows 10, Windows 11, Windows Server 2019 ve Windows Server 2022 güvenlik duvarı raporlamalarını görüntülemeye olanak sağlar.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
-- Windows 10, Windows 11 veya Windows Server 2019 ya da Windows Server 2022 çalıştırlısınız.
-- Cihazları Uç Nokta için Microsoft Defender hizmetine ekleme için buraya [bakın](onboard-configure.md).
+- Windows 10, Windows 11 ya da Windows Server 2019 veya Windows Server 2022'de çalışıyor olun.
+- Cihazları Servis Hizmetine Uç Nokta için Microsoft Defender için buraya [bakın](onboard-configure.md).
 - Daha <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalının</a> verileri almaya başlaması için, Gelişmiş Güvenlik Duvarı'nı **Windows Defender** Denetim Olayları'nı etkinleştirmeniz gerekir:
   - [Denetim Filtreleme Platform Paketi Bırakma](/windows/security/threat-protection/auditing/audit-filtering-platform-packet-drop)
   - [Denetim Filtreleme Platform Bağlantısı](/windows/security/threat-protection/auditing/audit-filtering-platform-connection)
-- Grup İlkesi Nesne Düzenleyicisi, Yerel Güvenlik İlkesi veya İlke komutlarını kullanarak bu auditpol.exe etkinleştirin. Daha fazla bilgi için buraya [bakın](/windows/win32/fwp/auditing-and-logging).
+- Bu olayları Nesne Düzenleyicisi grup ilkesi, Yerel Güvenlik İlkesi veya İlke Komutları auditpol.exe etkinleştirin. Daha fazla bilgi için buraya [bakın](/windows/win32/fwp/auditing-and-logging).
   - İki PowerShell komutu vardır:
     - **auditpol /set /subcategory:"Platform PaketTeleni Filtreleme" /failure:enable**
     - **auditpol /set /subcategory:"Platform Bağlantısına Filtre Uygulama" /failure:enable**
@@ -64,7 +64,7 @@ Aşağıdaki senaryolar Ring0 Preview sırasında de desteklenen bir durumdadır
 Aşağıda güvenlik duvarı rapor sayfalarının birkaç örneği verilmiştir. Burada, gelen, giden ve uygulama etkinliğinin özetini bulabilirsiniz. Bu sayfaya doğrudan, 'a gidip erişebilirsiniz <https://security.microsoft.com/firewall>.
 
 > [!div class="mx-imgBorder"]
-> ![Ana bilgisayar güvenlik duvarı raporlama sayfası.](\images\host-firewall-reporting-page.png)
+> :::image type="content" source="\images\host-firewall-reporting-page.png" alt-text="Ana bilgisayar güvenlik duvarı raporlama sayfası" lightbox="\images\host-firewall-reporting-page.png":::
 
 Bu raporlara, Güvenlik Duvarı Engellenen Gelen Bağlantılar kartının alt kısmında bulunan **ReportsSecurity** >  **ReportDevices** >  (bölüm) **bağlantısına gidip** de erişilebilir.
 
@@ -73,21 +73,21 @@ Bu raporlara, Güvenlik Duvarı Engellenen Gelen Bağlantılar kartının alt k�
 Kartlar etkileşimli nesneleri destekler. Yeni bir sekmede Microsoft 365 Defender portalını başlatan ve sizi doğrudan Cihaz Zaman Çizelgesi sekmesine götüren cihaz adına tıklayarak, cihazın etkinliğinde **detaya girebilirsiniz**.
 
 > [!div class="mx-imgBorder"]
-> ![Bağlantısı engellenen bilgisayarlar.](\images\firewall-reporting-blocked-connection.png)
+> :::image type="content" source="\images\firewall-reporting-blocked-connection.png" alt-text="Engellenmiş bağlantı olan bilgisayarlar sayfası" lightbox="\images\firewall-reporting-blocked-connection.png":::
 
 Artık, size o **cihazla** ilişkili olayların listesini verecek Olan Zaman Çizelgesi sekmesini seçebilirsiniz.
 
 Görüntüleme bölmesinin **sağ** üst köşesindeki Filtreler düğmesine tık olduktan sonra, istediğiniz etkinlik türünü seçin. Bu durumda, Güvenlik Duvarı **olayları'nı** seçin; bölme Güvenlik Duvarı olayları olarak filtrelenmiş olur.
 
 > [!div class="mx-imgBorder"]
-> ![Filtreler düğmesi.](\images\firewall-reporting-filters-button.png)
+> :::image type="content" source="\images\firewall-reporting-filters-button.png" alt-text="Filtreler düğmesi" lightbox="\images\firewall-reporting-filters-button.png":::
 
 ### <a name="drill-into-advanced-hunting-preview-refresh"></a>Gelişmiş avda detaya gitme (önizleme yenileme)
 
 Güvenlik duvarı raporları, Gelişmiş av düğmesini aç düğmesine tıklayarak **karttan doğrudan** Gelişmiş **Uzmlara açmayı** destekler. Sorgu önceden doldurulur.
 
 > [!div class="mx-imgBorder"]
-> ![Gelişmiş av düğmesini açın.](\images\firewall-reporting-advanced-hunting.png)
+> :::image type="content" source="\images\firewall-reporting-advanced-hunting.png" alt-text="Gelişmiş av düğmesini aç" lightbox="\images\firewall-reporting-advanced-hunting.png":::
 
 Sorgu şimdi yürütülebilirsiniz ve son 30 gün içinde ilgili tüm Güvenlik Duvarı olayları araştırabilirsiniz.
 

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender'da Threat Explorer ile e-posta güvenliği Office 365
+title: Office 365 için Microsoft Defender'te Threat Explorer ile e-posta Office 365 için Microsoft Defender
 f1.keywords:
 - NOCSH
 ms.author: dansimp
@@ -17,14 +17,14 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3ee97c54174fc7aaa2cd6d653dcd9fdd8298376d
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: da555769cbff177fff7de4ee4a25908e1eee3782
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021630"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475135"
 ---
-# <a name="email-security-with-threat-explorer-in-microsoft-defender-for-office-365"></a>Microsoft Defender'da Threat Explorer ile e-posta güvenliği Office 365
+# <a name="email-security-with-threat-explorer-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'te Threat Explorer ile e-posta Office 365 için Microsoft Defender
 
 Bu makalede:
 
@@ -39,7 +39,7 @@ Bu makalede, güvenlik özellikleri tarafından e-postayla algılanan kötü ama
 
 **Aşağıdakiler için geçerlidir:**
 
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 ## <a name="view-malware-detected-in-email"></a>E-postada algılanan kötü amaçlı yazılımı görüntüleme
@@ -56,13 +56,13 @@ Microsoft 365 teknolojisine göre sıralanmış e-postada kötü amaçlı yazıl
 
 3. **Gönderen'e** tıklayın **ve açılan** \> **listede Temel** Algılama teknolojisi'ne tıklayın.
 
-   :::image type="content" source="../../media/exploreremailmalwaredetectiontech-newimg.png" alt-text="kötü amaçlı yazılım algılama teknolojisi.":::
+   :::image type="content" source="../../media/exploreremailmalwaredetectiontech-newimg.png" alt-text="Kötü amaçlı yazılım algılama teknolojisi" lightbox="../../media/exploreremailmalwaredetectiontech-newimg.png":::
 
    Algılama teknolojileriniz artık rapor için filtre olarak kullanılabilir.
 
 4. Bir seçenek belirtin ve ardından bu **filtreyi uygulamak** için Yenile'ye tıklayın (tarayıcı pencerenizi yenilemenin gerektir).
 
-   :::image type="content" source="../../media/exploreremailmalwaredetectiontech2-new.png" alt-text="algılama teknolojisi seçilmiştir.":::
+   :::image type="content" source="../../media/exploreremailmalwaredetectiontech2-new.png" alt-text="seçili algılama teknolojisi" lightbox="../../media/exploreremailmalwaredetectiontech2-new.png":::
 
    Rapor, seçtiğiniz teknoloji seçeneği kullanılarak, kötü amaçlı yazılımın e-postada algıladık sonuçları gösterecek şekilde yenilenir. Buradan daha fazla analiz yürütesiniz.
 
@@ -79,7 +79,7 @@ Bir iletiyi **hatalı pozitif sonuç** olarak rapor etmek için Explorer'daki Ra
 4. Seçenek listesini aşağı kaydırarak Yeni gönderimi başlat **bölümüne gidin ve** ardından Rapor **temizleme'yi seçin**. Bir açılır çıktı görüntülenir.
 
    > [!div class="mx-imgBorder"]
-   > ![Explorer'da rapor temizleme seçeneği.](../../media/report-clean-option-explorer.png) 
+   > :::image type="content" source="../../media/report-clean-option-explorer.png" alt-text="Gezgin'de Rapor temizleme seçeneği" lightbox="../../media/report-clean-option-explorer.png":::
 
 5. Kaydırıcıyı Açık olarak **ayarlayın**. Açılan listeden iletinin kaldırılmasını istediğiniz gün sayısını belirtin, gerekirse bir not ekleyin ve sonra Gönder'i **seçin**. 
 
@@ -94,13 +94,13 @@ Bir iletiyi **hatalı pozitif sonuç** olarak rapor etmek için Explorer'daki Ra
 2. Görünüm açılan **listesinde E-posta** Kimlik **Avını** \> **seçin**.
 
    > [!div class="mx-imgBorder"]
-   > ![Kimlik avı bağlamında Gezgin için Görünüm menüsü.](../../media/ExplorerViewEmailPhishMenu.png)
+   > :::image type="content" source="../../media/ExplorerViewEmailPhishMenu.png" alt-text="Kimlik avı bağlamında Gezgin için Görünüm menüsü" lightbox="../../media/ExplorerViewEmailPhishMenu.png":::
 
 3. **Gönderen'e** tıklayın ve ardından **URL'leri seçin** \> **Açılan** listede karara tıklayın.
 
 4. Görünen seçeneklerde, Engellendi ve Geçersiz kılınma öğesini engelle gibi bir  veya birden çok seçeneği belirleyin ve yenile'ye **tıklayın (** tarayıcı pencerenizi yenilemeyin).
 
-    :::image type="content" source="../../media/threatexploreremailphishclickverdict-new.png" alt-text="URL'ler ve kararlara tıklayın.":::
+    :::image type="content" source="../../media/threatexploreremailphishclickverdict-new.png" alt-text="URL'ler ve kararlara tıklayın" lightbox="../../media/threatexploreremailphishclickverdict-new.png":::
 
    Rapor, raporun altındaki URL'ler sekmesinde iki farklı **URL tablosu gösterecek** şekilde yenilenir:
 
@@ -111,7 +111,7 @@ Bir iletiyi **hatalı pozitif sonuç** olarak rapor etmek için Explorer'daki Ra
    İki URL tablosu kimlik avı e-posta iletisinde teslim eylemine ve konuma göre en önemli URL'leri gösterir. Tablolarda, uyarıya rağmen engellenmiş veya ziyaret edilen URL tıklamaları gösterir; böylelikle kullanıcılara hangi olası hatalı bağlantıların sunlarak ve kullanıcılara tıklanarak gösternebilirsiniz. Buradan daha fazla analiz yürütesiniz. Örneğin, grafiğin altında, kuruluşun ortamında engellenmiş e-posta iletilerinde en üst URL'leri görebilirsiniz.
 
    > [!div class="mx-imgBorder"]
-   > ![Engellenmiş olan Gezgin URL'leri.](../../media/ExplorerPhishClickVerdictURLs.png)
+   > :::image type="content" source="../../media/ExplorerPhishClickVerdictURLs.png" alt-text="Engellenmiş olan Gezgin URL'leri" lightbox="../../media/ExplorerPhishClickVerdictURLs.png":::
 
    Daha ayrıntılı bilgi görüntülemek için bir URL seçin.
 
@@ -134,7 +134,7 @@ E-posta veya URL çıkışlarında, Üst Tıklamalar'da ve filtreleme deneyimler
 ## <a name="start-automated-investigation-and-response"></a>Otomatik araştırma ve yanıt başlatma
 
 > [!NOTE]
-> Plan 2 ve 2'nin son güncelleştirmeleri için *Microsoft Defender'Office 365 otomatik soruşturma* ve *Office 365 E5*.
+> Plan 2 ve Daha Fazla Bilgi'de *Office 365 için Microsoft Defender araştırma* ve *yanıt Office 365 E5*.
 
 [Otomatik araştırma ve yanıt,](automated-investigation-response-office.md) güvenlik işlemleri ekip sürenizi ve siber saldırıları araştırma ve azaltma için harcanan çabadan tasarruf sağlar. Güvenlik çalışma kitabını tetikleyen uyarılar yapılandırmaya ek olarak, Gezgin'de görünümden otomatik bir araştırma ve yanıt işlemi de başlatabilirsiniz. Ayrıntılar için bkz [. Örnek: Güvenlik yöneticisi Explorer'dan gelen bir soruşturmayı tetikler](automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 

@@ -1,7 +1,7 @@
 ---
-title: Uç Nokta API'si için Microsoft Defender için Hello World
+title: MERHABA DÜNYA API için Uç Nokta için Microsoft Defender Bilgi
 ms.reviewer: ''
-description: Uç Nokta API için Microsoft Defender'a 'Merhaba dünya' tarzı bir API çağrısı oluşturun.
+description: Kullanıcı API'sinde "Merhaba dünya" tarzı bir API çağrısı Uç Nokta için Microsoft Defender oluşturun.
 keywords: api'ler, desteklenen api'ler, gelişmiş av, sorgu, microsoft defender atp, uç nokta için Microsoft Defender
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,24 +16,24 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 55d01dfe6d0b6fd69bf32016b1b5dd585827e168
-ms.sourcegitcommit: c11d4a2b9cb891ba22e16a96cb9d6389f6482459
+ms.openlocfilehash: bd8f48e8396225fc03441cfc7c8ed69fa3f378bb
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62997123"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64475619"
 ---
-# <a name="microsoft-defender-for-endpoint-api---hello-world"></a>Uç Nokta API için Microsoft Defender - Hello World
+# <a name="microsoft-defender-for-endpoint-api---hello-world"></a>Uç Nokta için Microsoft Defender API - Merhaba Dünya
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 
 
->Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+>Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -51,15 +51,15 @@ ms.locfileid: "62997123"
 
 ### <a name="do-i-need-a-permission-to-connect"></a>Bağlanmak için izin gerekiyor mu?
 
-Uygulama kayıt aşamasında, genel yönetici rolüne sahip Azure Active Directory  Azure AD) kiracınız olması gerekir.
+Uygulama kayıt aşamasında, Genel yönetici (Azure AD) kiracısında Azure Active Directory rolüne sahip olmak gerekir.
 
 ### <a name="step-1---create-an-app-in-azure-active-directory"></a>1. Adım - Aynı Uygulamada Azure Active Directory
 
-1. [Genel yönetici kullanıcınız ile Azure'da](https://portal.azure.com) **oturum** açın.
+1. [Genel yönetici kullanıcınız](https://portal.azure.com) **ile Azure'da Genel yönetici** yapın.
 
-2.  \> Azure Active Directory **App kayıtları Yeni kayıt'a** \> **gidin**.
+2. Yeni kayıt **Azure Active Directory** \> **Uygulama kayıtları** \> **gidin**.
 
-   :::image type="content" alt-text="Kayıt Microsoft Azure gezinti görüntüsü." source="images/atp-azure-new-app2.png" lightbox="images/atp-azure-new-app2.png":::
+   :::image type="content" source="images/atp-azure-new-app2.png" alt-text="Uygulama kayıtları portalında Yönet bölmesinin altında yer alan Azure Active Directory seçeneği"  lightbox="images/atp-azure-new-app2.png":::
 
 3. Kayıt formunda, başvuru için bir ad seçin ve Kaydol'a **tıklayın**.
 
@@ -70,11 +70,11 @@ Uygulama kayıt aşamasında, genel yönetici rolüne sahip Azure Active Directo
      > [!NOTE]
      > WindowsDefenderATP özgün listede görünmez. Görünmesini görmek için metin kutusuna adını yazmaya başlamalı.
 
-     :::image type="content" alt-text="API erişimi ve API seçimi1 resmi." source="images/add-permission.png" lightbox="images/add-permission.png":::
+     :::image type="content" source="images/add-permission.png" alt-text="Portalda Yönet bölmesinin altındaki API izinleri Azure Active Directory." lightbox="images/add-permission.png":::
 
    - Uygulama **izinleri** **Uyarısı.Oku.Tüm** \> Gün > İzin **ekle'ye tıklayın**.
 
-     :::image type="content" alt-text="API erişimi ve API seçimi2 resmi." source="images/application-permissions.png" lightbox="images/application-permissions.png":::
+     :::image type="content" source="images/application-permissions.png" alt-text="API izinleri sayfasındaki izin türü ve ayarlar bölmeleri" lightbox="images/application-permissions.png":::
 
      > [!IMPORTANT]
      > İlgili izinleri seçmeniz gerekir. 'Tüm Uyarıları Oku' yalnızca bir örnektir!
@@ -90,7 +90,7 @@ Uygulama kayıt aşamasında, genel yönetici rolüne sahip Azure Active Directo
    > [!NOTE]
    > Her izin ekley tıklaymanız ve yeni **iznin** yürürlüğe girecek olması için İzin ver'e tıklamanız gerekir.
 
-   ![İzin ver'in resmi.](images/grant-consent.png)
+   :::image type="content" source="images/grant-consent.png" alt-text="Azure Active Directory portalında izin Azure Active Directory seçeneği" lightbox="images/grant-consent.png":::
 
 6. Uygulamaya bir gizli ekleyin.
 
@@ -99,13 +99,13 @@ Uygulama kayıt aşamasında, genel yönetici rolüne sahip Azure Active Directo
     > [!IMPORTANT]
     > Ekle'ye **tıklayıp oluşturulan gizli değeri kopyalayın**. İşten ayrıldıktan sonra geri ala zaman kazanaaasiniz!
 
-    ![Uygulama anahtarı oluşturma resmi.](images/webapp-create-key2.png)
+    :::image type="content" source="images/webapp-create-key2.png" alt-text="The Certificates & secrets menu item in the Manage pane in the Azure Active Directory portal" lightbox="images/webapp-create-key2.png":::
 
 7. Uygulama kimliğinizi ve kiracı kimliğinizi bir yere yazın.
 
    Uygulama sayfanız üzerinde Genel **Bakış'a** gidin ve şunları kopyalayın:
 
-   ![Oluşturulan uygulama kimliğinin resmi.](images/app-and-tenant-ids.png)
+   :::image type="content" source="images/app-and-tenant-ids.png" alt-text="Azure Active Directory portalında Genel Bakış menü öğesinin altındaki uygulama Azure Active Directory bölmesi" lightbox="images/app-and-tenant-ids.png":::
 
 Bitti! Bir uygulamayı başarıyla kaydettiysiniz!
 
@@ -143,7 +143,7 @@ Bitti! Bir uygulamayı başarıyla kaydettiysiniz!
   - Üst kutuya yapıştırma.
   - "Roller" bölümünü bakın. _Alert.Read.All rolünü_ bulun.
 
-  :::image type="content" alt-text="Resim jwt.ms." source="images/api-jwt-ms.png" lightbox="images/api-jwt-ms.png":::
+  :::image type="content" source="images/api-jwt-ms.png" alt-text="Kod Çözme Belirteci bölmesi jwt.ms" lightbox="images/api-jwt-ms.png":::
 
 ### <a name="lets-get-the-alerts"></a>Uyarıları al!
 
@@ -196,6 +196,6 @@ Hepsi bu kadar! Başarıyla tamamladık:
 
 ## <a name="related-topic"></a>İlgili konu
 
-- [Uç Nokta API'leri için Microsoft Defender](exposed-apis-list.md)
-- [Uygulama bağlamında Uç Nokta için Access Microsoft Defender](exposed-apis-create-app-webapp.md)
-- [Kullanıcı bağlamında Uç Nokta için Access Microsoft Defender](exposed-apis-create-app-nativeapp.md)
+- [Uç Nokta için Microsoft Defender API'leri](exposed-apis-list.md)
+- [Uygulama Uç Nokta için Microsoft Defender ile Access 2013](exposed-apis-create-app-webapp.md)
+- [Kullanıcı Uç Nokta için Microsoft Defender Access erişimi](exposed-apis-create-app-nativeapp.md)
