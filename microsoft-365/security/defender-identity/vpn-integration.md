@@ -1,6 +1,6 @@
 ---
-title: Microsoft 365 Defender'da Identity VPN tümleştirmesi için Microsoft Defender
-description: Microsoft Defender for Identity için VPN'i farklı bir ağ bağlantılarında tümleştirerek finansal bilgileri Microsoft 365 Defender
+title: Kimlik için Microsoft Defender VPN tümleştirmesi Microsoft 365 Defender
+description: VPN'i farklı bir ağ ile bütünleştirerek finansal Kimlik için Microsoft Defender toplamayı Microsoft 365 Defender
 ms.date: 06/07/2021
 ms.topic: how-to
 author: dcurwin
@@ -9,21 +9,21 @@ ms.service: microsoft-defender-for-identity
 ms.custom: admindeeplinkDEFENDER
 manager: raynew
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 59ab309b4d5cbab971c161ee1b8a4abefe93be69
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: a5c45ecda43b32e37f7309b9a2de33810d60bd15
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683043"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469173"
 ---
 # <a name="defender-for-identity-vpn-integration-in-microsoft-365-defender"></a>Microsoft 365 Defender'te Identity VPN tümleştirmesi için Defender
 
 **Aşağıdakiler için geçerlidir:**
 
 - Microsoft 365 Defender
-- Kimlik için Defender
+- Kimlik için Microsoft Defender
 
-Bu makalede, aynı e-postada Identity için [Microsoft Defender](/defender-for-identity) ile [VPN'Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
+Bu makalede, VPN'nin 2013'te [Kimlik için Microsoft Defender](/defender-for-identity) ile [tümleştirileri Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
 >[!IMPORTANT]
 >Sonuçların yakınmasının bir <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">parçası Microsoft 365 Defender</a>, kimlik için Defender portalında yer alan konumlarından bazı seçenekler ve ayrıntılar değiştirilmiştir. Hem tanıdık hem de yeni özellikleri nerede bulamıyorum? bulmak için lütfen aşağıdaki ayrıntıları okuyun.
@@ -34,7 +34,7 @@ Bu makalede, aynı e-postada Identity için [Microsoft Defender](/defender-for-i
 
 - Microsoft
 - F5
-- Onay Noktası
+- Check Point
 - Cisco ASA
 
 ## <a name="prerequisites"></a>Önkoşullar
@@ -60,11 +60,11 @@ RRAS sunucunuzda aşağıdaki adımları gerçekleştirin.
 1. Sunucu adına sağ tıklayın ve Özellikler'i **seçin**.
 1. Güvenlik **sekmesindeki Finansal** sağlayıcı'nın **altında YARıÇAP** **Finansal'ı seçin ve ardından** **Yapılandır'ı seçin**.
 
-    ![YARıÇAP kurulumu.](../../media/defender-identity/radius-setup.png)
+   :::image type="content" source="../../media/defender-identity/radius-setup.png" alt-text="YARıÇAP kurulumu" lightbox="../../media/defender-identity/radius-setup.png":::
 
 1. YARıÇAP Sunucusu **Ekle penceresinde** , en yakın **algılayıcının** (ağ bağlantısı olan [!INCLUDE [Product short](includes/product-short.md)] ) Sunucu adını yazın. Yüksek kullanılabilirlik için YARıÇAP Sunucuları olarak ek [!INCLUDE [Product short](includes/product-short.md)] algılayıcılar eklemeniz gerekir. Bağlantı **Noktası altında**, varsayılan 1813'in yapılandırılmış olduğundan emin olun. **Değiştir'i** seçin ve yeni bir alfasayısal karakter paylaşılan gizli dize yazın. Yeni paylaşılan gizli dizeyi, daha sonra Yapılandırma sırasında doldurmanız gerekeceğimiz şekilde not [!INCLUDE [Product short](includes/product-short.md)] alır. YARıÇAP Hesabını **Gönder Açık ve Finansal Kapalı iletilerini işaretleyin ve** tüm **açık iletişim** kutularında Tamam'ı seçin.
 
-    ![VPN kurulumu'nı seçin.](../../media/defender-identity/vpn-set-accounting.png)
+   :::image type="content" source="../../media/defender-identity/vpn-set-accounting.png" alt-text="VPN kurulumu" lightbox="../../media/defender-identity/vpn-set-accounting.png":::
 
 ## <a name="configure-vpn-in-defender-for-identity"></a>Kimlik için Defender'da VPN'yi yapılandırma
 
@@ -74,12 +74,12 @@ VPN verilerini aynı Microsoft 365 Defender[!INCLUDE [Product short](includes/pr
 
 1. Daha <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a>, Kimlikler'Ayarlar'e **gidin**.
 
-    ![Kimlikler'Ayarlar ardından Kimlikler'e gidin.](../../media/defender-identity/settings-identities.png)
+   :::image type="content" source="../../media/defender-identity/settings-identities.png" alt-text="Ayarlar menü öğesinin altındaki Kimlikler seçeneği" lightbox="../../media/defender-identity/settings-identities.png":::
 
 1. **VPN'yi seçin**.
 1. Yarıçap **muhasebeini etkinleştir'i** seçin ve daha **önce** RRAS VPN Sunucunuzda yapılandırmış olduğunuz Paylaşılan Gizli'yi yazın. Ardından **Kaydet'i seçin**.
 
-    ![VPN tümleştirmesi.](../../media/defender-identity/vpn-integration.png)
+   :::image type="content" source="../../media/defender-identity/vpn-integration.png" alt-text="VPN tümleştirmesi" lightbox="../../media/defender-identity/vpn-integration.png":::
 
 Bu etkinleştirildikten sonra tüm Identity algılayıcıları için Defender algılayıcıları YARıÇAP finansal olayları için 1813 bağlantı noktasını dinler ve VPN kurulumunuz tamamlanır.
 

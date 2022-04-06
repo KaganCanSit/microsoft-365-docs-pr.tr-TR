@@ -18,12 +18,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: d8524715ad0e450671faeaeb0714992e297a02df
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+ms.openlocfilehash: ab3b274ee07b343528c9b25f36dccc86d18e7ef8
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64595196"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64635009"
 ---
 # <a name="communication-compliance-policies"></a>İletişim uyumluluğu ilkeleri
 
@@ -220,7 +220,7 @@ Aşağıdaki tabloda her koşul hakkında daha fazla açıklama ve bilgi ve aç�
 | **İleti, bu etiketlerden herhangi biri ile sınıflandırılır**  <br><br> **İleti, bu etiketlerin hiçbirleriyle sınıflandırılmamıştır** | Belirli bekletme etiketleri iletiye ekli olduğunda veya iletiye dışlandıklarında ilkeyi uygulamak için. Bekletme etiketlerinin ayrı olarak yapılandırılması gerekir ve bu koşul kapsamında yapılandırılmış etiketler seçilir. Seçtiğiniz her etiket ayrı olarak uygulanır (ilkenin iletiye uygulanması için bu etiketlerden yalnızca biri uygulanmalıdır). Bekletme etiketleri hakkında daha fazla bilgi için bkz. Bekletme [ilkeleri ve bekletme etiketleri hakkında bilgi.](retention.md)|
 | **İleti bu sözcüklerden herhangi birini içeriyor**  <br><br> **İletide bu sözcüklerden hiçbiri yok** | Belirli sözcükler veya tümcecikler iletiye ekli veya dışlanmışken ilkeyi uygulamak için, her sözcüğü virgülle ayrılmış olarak girin. İki sözcük veya daha fazla sözcük içeren tümcecikler için, ifadenin etrafında tırnak işareti kullanın. Her sözcük veya tümcecik ayrı olarak uygulanır (ilkenin iletiye uygulanması için yalnızca bir sözcük geçerli olması gerekir). Sözcük veya tümcecik girme hakkında daha fazla bilgi için, sonraki E-posta veya eklerle sözcük [ve tümcecikleri eşleştirme bölümüne bakın](communication-compliance-policies.md#Matchwords).|
 | **Ek, bu sözcüklerden herhangi birini içerir**  <br><br> **Ekte bu sözcüklerden hiçbiri yok** | Belirli sözcükler veya tümcecikler bir ileti eke (örneğin bir Word belgesi) eke ekli veya dışlanmış durumdayken ilkeyi uygulamak için, virgülle ayrılmış her sözcüğü girin. İki sözcük veya daha fazla sözcük içeren tümcecikler için, ifadenin etrafında tırnak işareti kullanın. Her sözcük veya tümcecik ayrı olarak uygulanır (eke uygulanması için ilkeye yalnızca bir sözcük uygulanması gerekir). Sözcük veya tümcecik girme hakkında daha fazla bilgi için, sonraki E-posta veya eklerle sözcük [ve tümcecikleri eşleştirme bölümüne bakın](communication-compliance-policies.md#Matchwords).|
-| **Ek, bu dosya türlerinden herhangi biridir**  <br><br> **Ek, bu dosya türlerinden hiçbiri değil** | Belirli türde ekleri içeren veya dışarıda tutmak istediğiniz denetleme iletişimleri için, dosya uzantılarını (örneğin, .exe veya .pdf). Birden çok dosya uzantısını dahil etmek veya hariç tutmak için bunları ayrı satırlara girin. İlkenin geçerli olması için yalnızca bir ek uzantısının eşleşmesi gerekir.|
+| **Ek, bu dosya türlerinden herhangi biridir**  <br><br> **Ek, bu dosya türlerinden hiçbiri değil** | Belirli türde ekleri içeren veya dışarıda tutmak istediğiniz denetleme iletişimleri için, dosya uzantılarını (örneğin, .exe veya .pdf). Birden çok dosya uzantısını dahil etmek veya hariç tutmak için, virgülle ayrılmış dosya türlerini girin (.exe *,.pdf,.zip*). İlkenin geçerli olması için yalnızca bir ek uzantısının eşleşmesi gerekir.|
 | **İleti boyutu**  <br><br> **İleti boyutu büyük değil** | Belirli bir boyuta bağlı olarak iletileri gözden geçirmek için, bu koşulları kullanarak bir iletinin gözden geçirnmeden önce en büyük veya en küçük boyut belirtebilirsiniz. Örneğin, İleti **boyutunun** \> **1,0 MB'den** büyük olduğunu belirtirsiniz, 1,01 MB ve daha büyük olan tüm iletiler gözden geçirebilirsiniz. Bu koşul için bayt, kilobayt, megabayt veya gigabayt seçebilirsiniz.|
 | **Ek,**  <br><br> **Ek büyük değil** | İletileri eklerinin boyutuna göre gözden geçirmek için, ekin iletiden ve eklerinin gözden geçirilmeden önce en fazla veya en küçük boyutta olacağını belirtin. Örneğin, Ek'in  \> **2,0 MB'den** büyük olduğunu belirtirsiniz, ekleri 2,01 MB ve üzerinde olan tüm iletiler gözden geçirebilirsiniz. Bu koşul için bayt, kilobayt, megabayt veya gigabayt seçebilirsiniz.|
 

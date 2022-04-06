@@ -1,7 +1,7 @@
 ---
 title: Güvenlik önerileri için özel durumlar oluşturma ve görüntüleme - Tehdit ve Güvenlik Açığı Yönetimi
 description: Çalışma sayfalarında güvenlik önerileri için özel durumlar oluşturun Tehdit ve Güvenlik Açığı Yönetimi.
-keywords: Uç nokta tvm düzeltmesi için Microsoft Defender, Uç nokta tvm için Microsoft Defender, Tehdit ve Güvenlik Açığı Yönetimi, tehdit & güvenlik açığı yönetimi, tehdit & güvenlik açığı yönetimi düzeltme, tvm düzeltme intune, tvm düzeltme sccm
+keywords: Uç Nokta için Microsoft Defender, tvm, Uç Nokta için Microsoft Defender, tvm, Tehdit ve Güvenlik Açığı Yönetimi, tehdit & güvenlik açığı yönetimi, tehdit & güvenlik açığı yönetimi düzeltme, tvm düzeltmesi intune, tvm düzeltmesi sccm
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: a3986d44027824f2ba9ca508567d518cce270450
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 00d7afd9daec71a14d4b789d1d6dcfe5eaf07d83
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63008093"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477203"
 ---
 # <a name="create-and-view-exceptions-for-security-recommendations---threat-and-vulnerability-management"></a>Güvenlik önerileri için özel durumlar oluşturma ve görüntüleme - Tehdit ve Güvenlik Açığı Yönetimi
 
@@ -29,11 +29,11 @@ ms.locfileid: "63008093"
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Tehdit ve güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 Bir öneri şu anda uygun olmadığınız bir düzeltme isteğine alternatif olarak, öneriler için özel durumlar oluşturabilirsiniz. Kuruluşta cihaz grupları varsa, özel durumu belirli cihaz grupları için kapsamına bakabilirsiniz. Özel durumlar, seçili cihaz grupları için veya geçmiş ve mevcut tüm cihaz grupları için oluşturulabilir.
 
@@ -43,19 +43,19 @@ Bir öneri şu anda uygun olmadığınız bir düzeltme isteğine alternatif ola
 
 Yalnızca "özel durumları işleme" izni olan kullanıcılar özel durumları yönetebilir (oluşturma veya iptal etme de dahil). [RBAC rolleri hakkında daha fazla bilgi edinmek için](user-roles.md):
 
-![Özel durum işleme izni görünümü.](images/tvm-exception-permissions.png)
+:::image type="content" source="images/tvm-exception-permissions.png" alt-text="Özel durum işleme izni" lightbox="images/tvm-exception-permissions.png":::
 
 ## <a name="create-an-exception"></a>Özel durum oluşturma
 
 Özel durum oluşturmak istediğiniz güvenlik önerilerini seçin ve özel durum seçenekleri'ne **tıklayın ve** formu doldurun.
 
-!["Özel durum seçenekleri" düğmesinin bir güvenlik önerisi uç kutusunda konum olduğunu gösterme.](images/tvm-exception-options.png)
+:::image type="content" source="images/tvm-exception-options.png" alt-text="Güvenlik önerisi uç kutusunda özel durum seçenekleri düğmesinin konumu" lightbox="images/tvm-exception-options.png":::
 
 ### <a name="exception-by-device-group"></a>Cihaz grubuna göre özel durum
 
 Bu özel durumu tüm geçerli cihaz gruplarına uygulayabilir veya belirli cihaz gruplarını seçebilirsiniz. Bu özel durum, gelecekteki cihaz gruplarına dahil değildir. Özel durumu zaten olan cihaz grupları listede görüntülenmez. Yalnızca belirli cihaz gruplarını seçmeniz halinde öneri durumu "etkin" olan "kısmi özel durum" durumuna değiştirir. Tüm cihaz gruplarını seçmeniz halinde durum , "tam özel durum" olarak değişir.
 
-![Cihaz grubu açılan liste gösteriliyor.](images/tvm-exception-device-group-500.png)
+:::image type="content" source="images/tvm-exception-device-group-500.png" alt-text="Cihaz grubu açılan listesinde" lightbox="images/tvm-exception-device-group-500.png":::
 
 #### <a name="filtered-views"></a>Filtrelenmiş görünümler
 
@@ -63,27 +63,27 @@ Bu sayfaların herhangi birsinde cihaz grubuna göre filtre Tehdit ve Güvenlik 
 
 Bu, herhangi bir sayfadaki cihaz grubuna göre filtre Tehdit ve Güvenlik Açığı Yönetimi:
 
-![Seçili cihaz grupları filtresini gösterme.](images/tvm-selected-device-groups.png)
+:::image type="content" source="images/tvm-selected-device-groups.png" alt-text="Seçili cihaz grupları filtresi" lightbox="images/tvm-selected-device-groups.png":::
 
 Filtrelenmiş cihaz gruplarında özel durum görünümü:
 
-![Filtrelenmiş cihaz grubu açılan liste gösteriliyor.](images/tvm-exception-device-filter500.png)
+:::image type="content" source="images/tvm-exception-device-filter500.png" alt-text="Filtrelenmiş cihaz grubu açılan listesinde" lightbox="images/tvm-exception-device-filter500.png":::
 
 #### <a name="large-number-of-device-groups"></a>Çok fazla sayıda cihaz grubu
 
 Kuruluşta 20'den fazla cihaz grubu varsa **, filtrelenmiş** cihaz grubu seçeneğinin yanındaki Düzenle'yi seçin.
 
-![Çok fazla sayıda grubun nasıl düzenlenemez?](images/tvm-exception-edit-groups.png)
+:::image type="content" source="images/tvm-exception-edit-groups.png" alt-text="Çok fazla sayıda grubu düzenleme yordamı" lightbox="images/tvm-exception-edit-groups.png":::
 
 Dahil etmek istediğiniz cihaz gruplarını arayabilirsiniz ve bu grupları seçebilirsiniz. Ara'nın altındaki onay işareti simgesini seçerek hepsini işaretleyin/işaretini kaldırın.
 
-![Büyük cihaz grubu uçarak çıkış gösteriliyor.](images/tvm-exception-device-group-flyout-400.png)
+:::image type="content" source="images/tvm-exception-device-group-flyout-400.png" alt-text="Büyük cihaz grubu uçarak çıkış" lightbox="images/tvm-exception-device-group-flyout-400.png":::
 
 ### <a name="global-exceptions"></a>Genel özel durumlar
 
 Genel yönetici izinlerine sahipseniz, genel bir özel durum oluşturabilir ve iptal edebilirsiniz. Bu, **geçerli** ve gelecekteki tüm cihaz gruplarını etkiler ve yalnızca benzer izinlere sahip bir kullanıcı bunu değiştirebilir. Öneri durumu, "etkin" olan "tam özel durum" durumuna değiştirir.
 
-![Genel özel durum seçeneğini gösterme.](images/tvm-exception-global.png)
+:::image type="content" source="images/tvm-exception-global.png" alt-text="Genel özel durum seçeneği" lightbox="images/tvm-exception-global.png":::
 
 Unutmayın gereken bazı şeyler:
 
@@ -107,7 +107,7 @@ Düzeltme sayfasında **Özel** Durumlar **sekmesine** gidin. Gerekçelendirmeye
 
  Daha fazla ayrıntıya sahip bir açılır sayfa açmak için bir özel durum seçin. Cihazlar grubu başına özel durumlar, özel durum olarak dışarı aktarabilirsiniz tüm cihaz grubunun bir listesini içerir. Ayrıca ilgili öneriyi  bakarak veya özel durumu iptal edebilirsiniz.
 
-![Düzeltme sayfasında "Özel Durumlar" sekmesini gösterme.](images/tvm-exception-view.png)
+:::image type="content" source="images/tvm-exception-view.png" alt-text="Düzeltme sayfasında Özel Durumlar sekmesi" lightbox="images/tvm-exception-view.png":::
 
 ## <a name="how-to-cancel-an-exception"></a>Özel durumu iptal etme
 
@@ -115,25 +115,25 @@ Bir özel durumu iptal etmek için **, Düzeltme sayfasında** Özel Durumlar **
 
 Tüm cihaz grupları için veya genel bir özel durum için özel durumu iptal etmek için Tüm cihaz **grupları için özel durumu iptal et düğmesini** seçin. Yalnızca izinlerine sahip olduğu cihaz grupları için özel durumları iptal edebilirsiniz.
 
-![İptal düğmesi.](images/tvm-exception-cancel.png)
+:::image type="content" source="images/tvm-exception-cancel.png" alt-text="İptal düğmesi" lightbox="images/tvm-exception-cancel.png":::
 
 ### <a name="cancel-the-exception-for-a-specific-device-group"></a>Belirli bir cihaz grubu için özel durumu iptal etme
 
 Özel durumu iptal etmek için belirli cihaz grubunu seçin. Cihaz grubu için bir uç uçarak çıkış görüntülenir ve Özel durumu iptal **et'i seçin**.
 
-![Belirli bir cihaz grubu seçmeyi gösterir.](images/tvm-exception-device-group-hover.png)
+:::image type="content" source="images/tvm-exception-device-group-hover.png" alt-text="Belirli bir cihaz grubunu seçme yordamı" lightbox="images/tvm-exception-device-group-hover.png":::
 
 ## <a name="view-impact-after-exceptions-are-applied"></a>Özel durumlar uygulandıktan sonra etkisini görüntüleme
 
 Güvenlik Ayarları Öneriler, Sütunları özelleştir'i seçin  ve Açık cihazlar (özel durumlar dışından sonra) ve Etki (özel durumlardan sonra **)** **kutularını işaretleyin**.
 
-![Sütunları özelleştirme seçeneklerini gösterir.](images/tvm-after-exceptions.png)
+:::image type="content" source="images/tvm-after-exceptions.png" alt-text="Sütunları özelleştirme seçenekleri" lightbox="images/tvm-after-exceptions.png":::
 
 Açık olan cihazlar (özel durumlar dışından sonra) sütunu, özel durumlar uygulandıktan sonra da güvenlik açıklarına açık kalan cihazları gösterir. Saldırıya maruz kalmayı etkileyen özel durum gerekçeleri 'üçüncü taraf denetimi' ve 'alternatif risk azaltma'dır. Diğer gerekçeler cihazın maruz kalma süresini azaltmaz ve yine de açığa çıkarılacağı düşünülebilir.
 
 Etki (özel durumlar dışından sonra), özel durumlar uygulandıktan sonra puanın etkilenme puanına veya güvenli puana kalan etkiyi gösterir. Puanları etkileyen özel durumlar 'üçüncü taraf denetimi' ve 'alternatif azaltma'dır. Diğer gerekçeler cihazın maruz kalma süresini azaltmaz, dolayısıyla pozlama puanı ve güvenlik puanı değişmez.
 
-![Tablodaki sütunları gösterme.](images/tvm-after-exceptions-table.png)
+:::image type="content" source="images/tvm-after-exceptions-table.png" alt-text="Tablodaki sütunlar" lightbox="images/tvm-after-exceptions-table.png":::
 
 ## <a name="related-topics"></a>İlgili konular
 

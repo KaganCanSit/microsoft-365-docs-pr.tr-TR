@@ -1,7 +1,7 @@
 ---
-title: macOS'ta Uç Nokta için Microsoft Defender'da çekirdek uzantısı sorunlarını giderme
-description: macOS'ta Uç Nokta için Microsoft Defender'da çekirdek uzantısıyla ilgili sorunları giderin.
-keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mac, kernel, uzantı
+title: macOS'ta çekirdek Uç Nokta için Microsoft Defender sorunlarını giderme
+description: macOS'ta çekirdek uzantısıyla Uç Nokta için Microsoft Defender sorunları giderin.
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mac, kernel, extension
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,34 +15,34 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ba52d9587a2ac530eabeacf8c72336751a1a17d7
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 72d1aab8be071b5f4ec66988b35655571625b409
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63026650"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477291"
 ---
-# <a name="troubleshoot-kernel-extension-issues-in-microsoft-defender-for-endpoint-on-macos"></a>macOS'ta Uç Nokta için Microsoft Defender'da çekirdek uzantısı sorunlarını giderme
+# <a name="troubleshoot-kernel-extension-issues-in-microsoft-defender-for-endpoint-on-macos"></a>macOS'ta çekirdek Uç Nokta için Microsoft Defender sorunlarını giderme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Aşağıdakiler için geçerlidir:**
 
-- [macOS'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [macOS Uç Nokta için Microsoft Defender üzerinde Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Bu makalede, macOS üzerinde Uç Nokta için Microsoft Defender'ın bir parçası olarak yüklenmiş olan çekirdek uzantısıyla ilgili sorunları giderme hakkında bilgi sağlar.
+Bu makalede, macOS'ta çekirdek uzantısının bir parçası olarak yüklenmiş olan çekirdek uzantısıyla ilgili Uç Nokta için Microsoft Defender bilgiler sağlanmıştır.
 
 macOS High Sierra'dan (10.13) başlayarak, macOS tüm çekirdek uzantılarının cihazda çalışmasına izin verilmeden önce açıkça onaylanmasını gerektirir.
 
-macOS'ta Uç Nokta için Microsoft Defender'ın dağıtımı/yüklenmesi sırasında çekirdek uzantısını onaylamadıysanız, uygulama etkinleştirmenizi istenecek bir başlık görüntüler:
+macOS'ta çekirdek uzantısını dağıtım/yükleme sırasında onaylamadısanız Uç Nokta için Microsoft Defender, uygulama bunu etkinleştirmenizi istenecek bir başlık görüntüler:
 
-   ![RTP devre dışı ekran görüntüsü.](images/mdatp-32-main-app-fix.png)
+:::image type="content" source="images/mdatp-32-main-app-fix.png" alt-text="RTP devre dışı" lightbox="images/mdatp-32-main-app-fix.png":::
 
 'i de çalıştırarak da çalıştırarak,```mdatp health``` Gerçek zamanlı koruma etkinleştirildiğinde ancak kullanılabilir olmadığını raporlar. Bu, çekirdek uzantısının aygıtınızda çalıştıracak şekilde onaylan olmadığını gösterir.
 
@@ -56,7 +56,7 @@ real_time_protection_available              : true
 ...
 ```
 
-Aşağıdaki bölümlerde, macOS'ta Uç Nokta için Microsoft Defender'ı dağıtırken kullandığınız yönteme bağlı olarak bu sorunun nasıl ele ele üzerine olduğu konusunda yol gösterir.
+Aşağıdaki bölümlerde, macOS üzerinde office 365'i dağıtırken kullandığınız yönteme bağlı olarak bu sorunu Uç Nokta için Microsoft Defender ve ve bilgi sağlanmıştır.
 
 ## <a name="managed-deployment"></a>Yönetilen dağıtım
 
@@ -71,7 +71,7 @@ Aşağıdaki bölümlerde, macOS'ta Uç Nokta için Microsoft Defender'ı dağı
 
 Bu istem görmüyorsanız, 30 veya daha fazla dakika geçmiş ve çekirdek uzantısının aygıtınızda çalıştıracak şekilde onaylanmadı olduğu anlamına gelir:
 
-![Bilgi isteminin süresi dolduğunda ekran görüntüsü güvenlik ve gizlilik penceresi.](images/mdatp-33-securityprivacysettings-noprompt.png)
+:::image type="content" source="images/mdatp-33-securityprivacysettings-noprompt.png" alt-text="Bilgi isteminin süresi dolduktan sonra güvenlik ve gizlilik penceresi" lightbox="images/mdatp-33-securityprivacysettings-noprompt.png":::
 
 Bu durumda, onay akışını yeniden tetiklemek için aşağıdaki adımları gerçekleştirmeniz gerekir.
 

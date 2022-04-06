@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 741450f2573e0d750a1d3de5012f97cf16a0780d
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: e2a8f7166e1fa3a05b95b1a48dbf91b30ef34224
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64569102"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470383"
 ---
 # <a name="set-up-and-configure-microsoft-defender-for-endpoint-plan-1"></a>Plan 1'i Uç Nokta için Microsoft Defender ve yapılandırma
 
@@ -53,7 +53,7 @@ Aşağıdaki tabloda, Uç Nokta Planı 1 için Defender'ın temel gereksinimleri
 
 | Gereksinim | Açıklama |
 |:---|:---|
-| Lisans gereksinimleri | Uç Nokta Plan 1 için Defender |
+| Lisans gereksinimleri | Uç Nokta Plan 1 için Defender (eski adı Uç Nokta için Microsoft Defender Lite)|
 | Tarayıcı gereksinimleri | Microsoft Edge <br/> Internet Explorer sürüm 11 <br/> Google Chrome |
 | İşletim sistemleri | Windows 10, sürüm 1709 veya sonrası <br/>macOS: 11.5 (Big Sur), 10.15.7 (Catalina) veya 10.14.6 (Mojave) <br/>iOS <br/>Android OS  |
 | Datacenter | Aşağıdaki veri merkezi konumlarından biri: <br/>- Avrupa Birliği <br/>- Birleşik Krallık <br/>- Birleşik Devletler |

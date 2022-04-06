@@ -1,6 +1,6 @@
 ---
 title: E-posta teslim edilen kötü amaçlı e-postaları Microsoft 365, kötü amaçlı e-postaları bulma ve araştırma
-keywords: TIMailData-Satır içi, Güvenlik Olayı, olay, Uç Nokta PowerShell için Microsoft Defender, kötü amaçlı e-posta, güvenliği ihlal edilmiş kullanıcılar, e-posta kimlik avı, e-posta kötü amaçlı yazılım, e-posta üst bilgilerini okuma, üst bilgileri okuma, e-posta üst bilgilerini açma, özel eylemler
+keywords: TIMailData-Inline, Security Olayı, olay, Uç Nokta için Microsoft Defender PowerShell, e-posta kötü amaçlı yazılım, güvenliği ihlal edilmiş kullanıcılar, e-posta kimlik avı, e-posta kötü amaçlı yazılım, e-posta üst bilgilerini okuma, üst bilgileri okuma, e-posta üst bilgilerini açma, özel eylemler
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 4f3c992ad94d63b44d2f89acff6bb295728a0804
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 48deec7763981b10daf1d0c16cbef95d0e2dbaeb
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681446"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476543"
 ---
 # <a name="investigate-malicious-email-that-was-delivered-in-microsoft-365"></a>Dosyada teslim edilen kötü amaçlı e-postaları Microsoft 365
 
@@ -34,10 +34,10 @@ ms.locfileid: "63681446"
 
 **Aşağıdakiler için geçerlidir:**
 
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-[Microsoft Defender for Office 365](defender-for-office-365.md), kuruluş riskine sahip olan kişilerin yer almalarını sağlayan etkinlikleri araştırmanıza ve organizasyonlarınızı korumak için bir işlem uygulamanıza olanak sağlar. Örneğin, kuruluşun güvenlik ekibinin bir parçasısanız, teslim edilen şüpheli e-posta iletilerini bulabilir ve araştırabilirsiniz. Tehdit Gezgini'ni (veya [gerçek zamanlı algılamaları) kullanarak bunuabilirsiniz](threat-explorer.md).
+[Office 365 için Microsoft Defender](defender-for-office-365.md), kuruluş riskine neden olan etkinlikleri araştırmanıza ve organizasyonlarınızı korumak için bir işlem uygulamanıza olanak sağlar. Örneğin, kuruluşun güvenlik ekibinin bir parçasısanız, teslim edilen şüpheli e-posta iletilerini bulabilir ve araştırabilirsiniz. Tehdit Gezgini'ni (veya [gerçek zamanlı algılamaları) kullanarak bunuabilirsiniz](threat-explorer.md).
 
 > [!NOTE]
 > Buradaki düzeltme makalesine [atlayın](remediate-malicious-email-delivered-office-365.md).
@@ -46,7 +46,7 @@ ms.locfileid: "63681446"
 
 Aşağıdaki gereksinimlerin karşı olduğundan emin olun:
 
-- Kuruluş, [kullanıcılara Office 365 için Microsoft](defender-for-office-365.md) [Defender'ı ve lisansları atanmıştır](../../admin/manage/assign-licenses-to-users.md).
+- Kuruluşun [kullanıcılara Office 365 için Microsoft Defender](defender-for-office-365.md) [lisansı var ve lisansları atanmış.](../../admin/manage/assign-licenses-to-users.md)
 
 - [Denetim günlüğü](../../compliance/turn-audit-log-search-on-or-off.md) , sizin için açık.
 
@@ -84,11 +84,11 @@ Tehdit Gezgini, iletileri bulma ve silme, kötü amaçlı e-posta gönderenin IP
 
 2. Görünüm menüsünde **açılan listeden** Tüm **e-postayı** \> **E-postayla** Gönder'i seçin.
 
-    ![Tehdit gezgini Görünüm menüsü ve E-posta - Kötü Amaçlı Yazılım, Kimlik Avı, Gönderiler ve Tüm E-posta seçenekleri, ayrıca İçerik - Kötü Amaçlı Yazılım.](../../media/tp-InvestigateMalEmail-viewmenu.png)
+    :::image type="content" source="../../media/tp-InvestigateMalEmail-viewmenu.png" alt-text="Kötü Amaçlı Yazılım açılan listesi" lightbox="../../media/tp-InvestigateMalEmail-viewmenu.png":::
 
     Kötü *Amaçlı Yazılım* görünümü şu anda varsayılan görünüm durumdadır ve kötü amaçlı yazılım tehdidinin algı bulunduğu e-postaları yakalar. Kimlik *Avı* görünümü, Kimlik Avı için de aynı şekilde çalışır.
 
-    Bununla birlikte, *Tüm e-posta* görünümünde, kuruluş tarafından alınan her posta tehdit algılanır veya algılanmaz. Tahmin edin, bu çok fazla veridir ve bu nedenle bu görünümde filtrenin uygulanmasını isteyen bir yer tutucu görüntülenir. (Bu görünüm yalnızca Office 365 P2 müşterileri için Defender'da kullanılabilir.)
+    Bununla birlikte, *Tüm e-posta* görünümünde, kuruluş tarafından alınan her posta tehdit algılanır veya algılanmaz. Tahmin edin, bu çok fazla veridir ve bu nedenle bu görünümde filtrenin uygulanmasını isteyen bir yer tutucu görüntülenir. (Bu görünüm yalnızca Office 365 için Defender P2 müşterileri tarafından kullanılabilir.)
 
     *Gönderiler* görünümü yönetici veya kullanıcı tarafından Microsoft'a bildirilen tüm postaları gösterir.
 
@@ -104,11 +104,11 @@ Tehdit Gezgini, iletileri bulma ve silme, kötü amaçlı e-posta gönderenin IP
 
    Gelişmiş filtreleme, arama özelliklerine büyük bir ektir. Alıcı **, Gönderen** ve Gönderen etki alanı **filtrelerinin** boole  NOT değeri, yöneticilerin değerleri dışlayarak araştırmalarına olanak sağlar. Bu seçenek, Eşittir **yok seçimidir** . Bu seçenek yöneticilerin istenmeyen posta kutularını soruşturmaların dışında çekmesini sağlar (örneğin, uyarı posta kutuları ve varsayılan yanıt posta kutuları) ve yöneticilerin Belirli bir konuyu (örneğin, Dikkat) araysa da, Alıcının Eşittir yok: yok olarak ayarlandırıldığı *durumlarda defaultMail@contoso.com*. Bu tam bir değer aramasıdır.
 
-   ![Alıcılar - 'Hiçbirini içerir' Gelişmiş filtresi.](../../media/tp-InvestigateMalEmail-AdvancedFilter.png)
+   :::image type="content" source="../../media/tp-InvestigateMalEmail-AdvancedFilter.png" alt-text="Alıcılar bölmesi" lightbox="../../media/tp-InvestigateMalEmail-AdvancedFilter.png":::
 
    Başlangıç tarihi ve bitiş tarihine bir zaman filtresi eklemek, güvenlik ekibinin hızla detaya inmelerine yardımcı olur. İzin verilen en kısa süre 30 dakikadır. Şüpheli eylemi zaman çerçevesine göre (örneğin, 3 saat önce oldu) daraltabiliyorsanız, bu işlem bağlamı sınırlandırır ve sorunun yerini an etmeye yardımcı olur.
 
-   ![Veri güvenliği ekiplerinin işlemesi gereken ve süresi en kısa olan 30 dakikayı daraltmak için saatlere göre filtreleme seçeneği.](../../media/tp-InvestigateMalEmail-FilterbyHours.png)
+   :::image type="content" source="../../media/tp-InvestigateMalEmail-FilterbyHours.png" alt-text="Saate göre filtreleme seçeneği" lightbox="../../media/tp-InvestigateMalEmail-FilterbyHours.png":::
 
 6. **Tehdit Gezgini'nde alanlar**: Tehdit Gezgini Teslim *eylemi, Teslim* *konumu, Özel* eylem, Yön, Geçersiz Kılmalar ve URL tehdidi gibi güvenlikle ilgili çok daha fazla *posta bilgisi sağlar*. Ayrıca, kuruluş güvenlik ekibinin daha yüksek bir kesinlik ile araştırmalarına olanak sağlar.
 
@@ -188,10 +188,10 @@ Teslim konumu, teslim sonrası çalıştırmayı gösteren ilke ve algılamalar�
 
 ## <a name="related-topics"></a>İlgili konular
 
-[Posta ile teslim edilen kötü amaçlı e-postaları Office 365](remediate-malicious-email-delivered-office-365.md)
+[Office 365'te teslim edilen kötü amaçlı e-postaları düzeltme](remediate-malicious-email-delivered-office-365.md)
 
 [Office 365 için Microsoft Defender](office-365-ti.md)
 
 [Güvenlik tehditlerine karşı Office 365](protect-against-threats.md)
 
-[Office 365 için Defender raporlarını görüntüleme](view-reports-for-mdo.md)
+[Raporlar için raporları Office 365 için Defender](view-reports-for-mdo.md)

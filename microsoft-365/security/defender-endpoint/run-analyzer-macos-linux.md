@@ -1,6 +1,6 @@
 ---
 title: macOS veya Linux'ta istemci çözümleyicisini çalıştırın
-description: macOS veya Linux'ta Uç Nokta İstemcisi Çözümleyicisi için Microsoft Defender'ı çalıştırmayı öğrenin
+description: macOS veya Linux'ta Uç Nokta için Microsoft Defender çözümleyicisini çalıştırmayı öğrenin
 keywords: istemci çözümleyicisi, algılayıcı, çözümleyici, mdeanalyzer, macos, linux, mdeanalyzer sorunlarını giderme
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,18 +16,18 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: f6767b1a788129266bff713a6608277a2450598c
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: d56cbb48697c4804aa493d945ff81c52e12f86c5
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775906"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470097"
 ---
 # <a name="run-the-client-analyzer-on-macos-and-linux"></a>macOS ve Linux'ta istemci çözümleyicisini çalıştırın
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 ## <a name="running-the-analyzer-through-gui-scenario"></a>Çözümleyiciyi GUI senaryosu aracılığıyla çalıştırma
 
@@ -74,7 +74,7 @@ ms.locfileid: "63775906"
 
 Örneğin:
 
-![Komut satırı örneği görüntüsü.](images/4ca188f6c457e335abe3c9ad3eddda26.png)
+:::image type="content" source="images/4ca188f6c457e335abe3c9ad3eddda26.png" alt-text="Komut satırı örneği" lightbox="images/4ca188f6c457e335abe3c9ad3eddda26.png":::
 
 Ek söz dizimi yardımı:
 
@@ -113,7 +113,7 @@ Ek söz dizimi yardımı:
 
 - Processes_information.txt
 
-  Açıklama: Sistemde uç nokta ile ilgili işlemler için çalışan Microsoft Defender'ın ayrıntılarını içerir.
+  Açıklama: Sistemle ilgili tüm Uç Nokta için Microsoft Defender ayrıntıları içerir.
 
 - Log.txt
 

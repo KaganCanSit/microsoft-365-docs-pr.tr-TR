@@ -25,12 +25,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Güvenlik 365 Windows 10 bilgisayarlarında güvenlik sağlamayı Microsoft 365 İş Ekstra.
-ms.openlocfilehash: 03573a117658b10ee5510da1188e4a05b188d8dc
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 0b77a3430e4a5091409cf9fc8a4672ac7ee4472f
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63316639"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64635031"
 ---
 # <a name="secure-windows-10-computers"></a>Bilgisayarlarda Windows 10 sağlama
 
@@ -45,23 +45,29 @@ Güvenlik güvenliklerini [Microsoft 365 İş Ekstra](business-set-up.md), zaman
 Microsoft 365 Business'da cihaz korumasını ayardikten sonra, bilgisayarlarınızı korumak için Windows 10 izleyin.
 
 1. Aşağıdaki Microsoft 365 yönetim merkezi'ı <a href="https://go.microsoft.com/fwlink/p/?linkid=2171997" target="_blank">**seçin**</a>.
-1. **Bilgisayarlarınızı güvende Windows altında** Görüntüle'yi **seçin**.
-1. **Başla'ya seçin**.
-1. **İlke Who uygulansın mı?** altında, seçimlerinizi kuruluşta yer alan herkese mi yoksa belirli güvenlik gruplarına mı uygulanacak? seçin.
-1. Değişiklikleri  **kaydet'i seçin**.
+
+2. **Bilgisayarlarınızı güvende Windows altında** Görüntüle'yi **seçin**.
+
+3. **Seç'Kullanmaya başlayın**.
+
+4. **İlke Who uygulansın mı?** altında, seçimlerinizi kuruluşta yer alan herkese mi yoksa belirli güvenlik gruplarına mı uygulanacak? seçin.
+
+5. Değişiklikleri  **kaydet'i seçin**.
 
 ## <a name="to-secure-your-windows-10-computers"></a>Bilgisayarlarınızı güvende Windows 10 için
 
 1. Genel yönetici [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) kullanarak oturum açma. 
+
 2. Sol gezintide Kurulum'u **seçin ve** oturum açma ve **güvenlik'in** altında Bilgisayar **güvenliği'Windows 10 seçin**. Çalışmaya **başlamak için** Görüntüle'yi seçin.
+
 3. **Windows 10 güvenli Windows 10**, neleri teslim etmekte olduğunu ve kullanıcının etkisini anlamak için tüm bilgileri okuyun.
 
-    Sayfanın üst kısmında, **Başla'ya tıklayın**.
+    Sayfanın üst kısmında, **Tamam'ı Kullanmaya başlayın**.
 
 4. Güvenli **Windows 10 altında**, açmak istediğiniz seçenekleri belirleyin. 
     
     Çoğu kuruluş için buradaki seçenekler iyi bir güvenlik düzeyi sunar; bununla birlikte, kuruluşta daha karmaşık güvenlik ihtiyaçları varsa, güvenlik taban çizgilerini kullanarak güvenlik güvenlik Windows 10 kullanabilirsiniz. Daha fazla bilgi için bkz[. Mobil cihazlarınız için Windows 10 taban Windows 10 bakın](/mem/intune/protect/security-baselines).   
 
-1. Ayarları **uygula'ya tıklayın**.
+5. Ayarları **uygula'ya tıklayın**.
 
-    Bu ayarlar, tüm kullanıcılarınıza uygulanır. Farklı güvenlik grupları için farklı ilkeler ayarlamak için bkz. [Bilgisayarlarında cihaz Windows 10 ayarlama](../devices/protection-settings-for-windows-10-pcs.md).
+    Bu ayarlar, tüm kullanıcılarınıza uygulanır. Farklı güvenlik grupları için farklı ilkeler ayarlamak için bkz. [Bilgisayarlarında cihaz Windows 10 ayarlama](../../business-premium/m365bp-protection-settings-for-windows-10-pcs.md).

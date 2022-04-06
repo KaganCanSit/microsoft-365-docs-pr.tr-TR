@@ -1,7 +1,7 @@
 ---
 title: macOS için cihaz denetimi
-description: MAC'te Uç Nokta için Microsoft Defender'ı USB cihazları gibi çıkarılabilir bir depolama alanına yönelik tehditleri azaltmak üzere nasıl yapılandıracaklarını öğrenin.
-keywords: microsoft, defender, Uç nokta için Microsoft Defender, mac, cihaz, denetim, usb, çıkarılabilir, medya
+description: Mac'te USB Uç Nokta için Microsoft Defender çıkarılabilir depolamadan gelen tehditleri azaltmak için mac'te depolamayı yapılandırmayı öğrenin.
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mac, cihaz, kontrol, usb, çıkarılabilir, medya
 ms.prod: m365-security
 ms.mktglfcycl: security
 ms.sitesec: library
@@ -15,23 +15,23 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 5cb41b0bd3f185237055daa2d282f0a1d6975a49
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: fbe693272a2f2893dff5f8614f3f9eff301069fd
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011826"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477313"
 ---
 # <a name="device-control-for-macos"></a>macOS için cihaz denetimi
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -39,7 +39,7 @@ macOS için cihaz denetimi aşağıdaki önkoşullara sahip:
 
 > [!div class="checklist"]
 >
-> - Uç Nokta yetkilendirmesi için Microsoft Defender (deneme olabilir)
+> - Uç Nokta için Microsoft Defender hakkı (deneme sürümü olabilir)
 > - Minimum işletim sistemi sürümü: macOS 11 veya daha yüksek
 > - Minimum ürün sürümü: 101.34.20
 
@@ -72,7 +72,7 @@ Cihaz denetimi ilkesi aşağıdakiler için kullanılabilir:
 
 Yerine konan cihaz denetim ilkesi bir cihazda zorunlu tutulsa (örneğin, çıkarılabilir bir medya cihazına erişim kısıtlanmışsa), kullanıcıya bir bildirim görüntülenir.
 
-![Cihaz denetimi bildirimi.](images/mac-device-control-notification.png)
+:::image type="content" source="images/mac-device-control-notification.png" alt-text="Cihaz denetim bildirimi" lightbox="images/mac-device-control-notification.png":::
 
 Son kullanıcılar bu bildirime tıklaytılarında, varsayılan tarayıcıda bir web sayfası açılır. Son kullanıcılar bildirimi tıklayana kadar açılan URL'yi yapılandırabilirsiniz.
 
@@ -329,7 +329,7 @@ Aşağıdaki örnekte, yukarıdaki kavramlardan tüm kavramların bir cihaz dene
 
 Aşağıdaki belgelere cihaz denetimi ilkeleriyle ilgili daha fazla örneklemiz var:
 
-- [Intune için cihaz denetim ilkelerine örnekler](mac-device-control-intune.md)
+- [Veri için cihaz denetimi ilkelerine Intune](mac-device-control-intune.md)
 - [JAMF için cihaz denetimi ilkeleri örnekleri](mac-device-control-jamf.md)
 
 #### <a name="look-up-device-identifiers"></a>Cihaz tanımlayıcılarını bakma
@@ -340,25 +340,26 @@ USB cihazının satıcı kimliğini, ürün kimliğini ve seri numarasını bulm
 1. Tanımlayıcıları görmek istediğiniz USB cihazını takın.
 1. macOS'un en üst düzey menüsünde Bu **Mac Hakkında'ya tıklayın**.
 
-    ![Bu Mac hakkında.](images/mac-device-control-lookup-1.png)
+   :::image type="content" source="images/mac-device-control-lookup-1.png" alt-text="Bu Mac hakkında sayfası" lightbox="images/mac-device-control-lookup-1.png":::
 
 1. Sistem **Raporu'mu seçin**.
 
-    ![Sistem Raporu'](images/mac-device-control-lookup-2.png)
+   :::image type="content" source="images/mac-device-control-lookup-2.png" alt-text="Sistem raporu" lightbox="images/mac-device-control-lookup-2.png":::
 
 1. Sol sütundan **USB'yi seçin**.
 
-    ![Tüm USB cihazlarının görünümü.](images/mac-device-control-lookup-3.png)
+   :::image type="content" source="images/mac-device-control-lookup-3.png" alt-text="Tüm USB cihazlarının görünümü" lightbox="images/mac-device-control-lookup-3.png":::
+    
 
 1. **USB Cihaz Ağacı** altında, takmış olduğunuz USB cihazına gidin.
 
-    ![Bir USB cihazının ayrıntıları.](images/mac-device-control-lookup-4.png)
+   :::image type="content" source="images/mac-device-control-lookup-4.png" alt-text="BIR USB cihazının ayrıntıları" lightbox="images/mac-device-control-lookup-4.png":::
 
 1. Satıcı kimliği, ürün kimliği ve seri numarası görüntülenir. Çıkarılabilir medya ilkesine satıcı kimliği ve ürün kimliğini eklerken, bölümü yalnızca sonra eklemeniz gerekir `0x`. Örneğin, aşağıdaki resimde satıcı kimliği ve ürün `1000` kimliği yer almaktadır `090c`.
 
 #### <a name="discover-usb-devices-in-your-organization"></a>Kuruluş içinde USB cihazlarını keşfedin
 
-Uç nokta gelişmiş avı için Microsoft Defender'da USB cihazlarından kaynaklanan bağlama, unmount ve volume change etkinliklerini görüntüebilirsiniz. Bu olaylar, şüpheli kullanım etkinliğini tanımlamak veya iç soruşturmalar gerçekleştirmek için yararlı olabilir.
+Usb cihazlardan gelen bağlama, bağlama ve bağlamadan çıkış ve toplu değişiklik etkinliklerini gelişmiş Uç Nokta için Microsoft Defender görüntüebilirsiniz. Bu olaylar, şüpheli kullanım etkinliğini tanımlamak veya iç soruşturmalar gerçekleştirmek için yararlı olabilir.
 
 ```bash
 DeviceEvents
@@ -368,13 +369,13 @@ DeviceEvents
 
 ## <a name="device-control-policy-deployment"></a>Cihaz denetimi ilkesi dağıtımı
 
-Cihaz denetimi ilkesi, macOS üzerinde Uç nokta için Microsoft Defender tercihlerini ayarlama konusunda açıklandığı gibi diğer ürün [ayarlarının yanına ekli olmalıdır](mac-preferences.md).
+Cihaz denetimi ilkesi, MacOS'ta cihaz ayarları için tercihleri ayarlama konusunda açıklandığı [Uç Nokta için Microsoft Defender ekli olmalı](mac-preferences.md).
 
 Bu profil, Yapılandırma profili dağıtımı'nda listelenen yönergeler [kullanılarak dağıtılabilir](mac-preferences.md#configuration-profile-deployment).
 
 ## <a name="troubleshooting-tips"></a>Sorun giderme ipuçları
 
-Yapılandırma profilini Intune veya JAMF aracılığıyla ittikten sonra, Terminal'de aşağıdaki komutu çalıştırarak ürün tarafından başarıyla alınip alın bulamadınız kontrol edin:
+Intune YA DA JAMF aracılığıyla yapılandırma profilini ittirdikten sonra, Terminal'de aşağıdaki komutu çalıştırarak ürün tarafından başarıyla alınip alınamadı kontrol edin:
 
 ```bash
 mdatp device-control removable-media policy list
@@ -403,5 +404,5 @@ Yukarıdaki örnekte, takılı yalnızca bir `read` `execute` çıkarılabilir m
 
 ## <a name="related-topics"></a>İlgili konular
 
-- [Intune için cihaz denetim ilkelerine örnekler](mac-device-control-intune.md)
+- [Veri için cihaz denetimi ilkelerine Intune](mac-device-control-intune.md)
 - [JAMF için cihaz denetimi ilkeleri örnekleri](mac-device-control-jamf.md)

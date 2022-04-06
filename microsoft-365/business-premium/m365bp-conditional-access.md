@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Güvenlik varsayılanlarının, güvenlik ayarları için önceden yapılandırılmış güvenlik ayarları sağlayarak kimlikle ilgili saldırılardan korunmasına nasıl yardımcı Microsoft 365 İş Ekstra.
-ms.openlocfilehash: dfd0d3edff541d828b70d383641aaf66c93826b6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 9684dc2be113d6f511f1a84e8865ac04a6881ecc
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63705142"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634679"
 ---
 # <a name="turn-on-security-defaults-for-microsoft-365-business-premium"></a>Posta için güvenlik varsayılanlarını Microsoft 365 İş Ekstra
 
@@ -76,9 +76,13 @@ Tüm müşteriler güvenlik varsayılanlarını kullanabilirken, Koşullu Erişi
 Koşullu Erişim'i kullanarak güvenlik varsayılanları tarafından etkinleştirilen ilkelerle eşdeğer ilkeler yapılandırmak için, aşağıdaki adım adım kılavuzlara göz atabilirsiniz:
 
 - [Yöneticiler için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa)
+
 - [Azure yönetimi için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-azure-management)
+
 - [Eski kimlik doğrulamayı engelle](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)
+
 - [Tüm kullanıcılar için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa)
+
 - [Azure AD MFA kaydı gerektirme](/azure/active-directory/identity-protection/howto-identity-protection-configure-mfa-policy) - Kimlik doğrulama işleminin bir parçası olan Azure AD Identity Protection Azure Active Directory Premium P2
 
 Koşullu Erişim hakkında daha fazla bilgi edinmek için bkz [. Koşullu Erişim nedir?](/azure/active-directory/conditional-access/overview) Koşullu Erişim ilkeleri oluşturma hakkında daha fazla bilgi için bkz [. Koşullu Erişim ilkesi oluşturma](/azure/active-directory/authentication/tutorial-enable-azure-mfa#create-a-conditional-access-policy).

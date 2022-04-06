@@ -1,6 +1,6 @@
 ---
 title: İstemci çözümleyiciSI HTML raporunu anlama
-description: Uç Nokta İstemci Çözümleyicisi HTML raporu için Microsoft Defender'ı çözümlemeyi öğrenin
+description: Yeni İstemci Çözümleyicisi HTML Uç Nokta için Microsoft Defender çözümlemeyi öğrenin
 keywords: istemci çözümleyici raporu, html raporu, istemci çözümleyicisi
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,46 +16,44 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: ab6a23d1f2c8893a86fb6432ab9fece95a10006c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 1f843c62d44ed7c25f07568cc0ee92709fb080a7
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63322891"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468909"
 ---
 # <a name="understand-the-client-analyzer-html-report"></a>İstemci çözümleyiciSI HTML raporunu anlama
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 
 İstemci çözümleyicisi, html biçiminde bir rapor üretir. Olası algılayıcı sorunlarını tespit etmek ve bu sorunları giderebilirsiniz.
 
 Raporu anlamak için aşağıdaki örneği kullanın.
 
- Süresi dolmuş Kuruluş Kimliği'ne ekli bir makinede çözümleyicinin örnek çıktısı ve Uç Nokta URL'leri için gerekli Microsoft Defender'dan bire ulaşamamalıdır:
+ Son kullanma tarihi geçen Kuruluş Kimliği'ne ekli bir makinede çözümleyicinin örnek çıktısı ve gerekli kullanıcı URL'lerinden Uç Nokta için Microsoft Defender başarısız:
 
-![İstemci çözümleyicisi sonucu görüntüsü.](images/147cbcf0f7b6f0ff65d200bf3e4674cb.png)
+:::image type="content" source="images/147cbcf0f7b6f0ff65d200bf3e4674cb.png" alt-text="MDE İstemci Çözümleyicisi Sonuçları sayfası" lightbox="images/147cbcf0f7b6f0ff65d200bf3e4674cb.png":::
 
 - En üstte, başvuru için betik sürümü ve betik çalışma zamanı listelenir
 - Cihaz **Bilgileri bölümünde** , çözümleyicinin çalıştır çalıştır olduğu cihazı benzersiz bir şekilde tanımlamak için temel işletim sistemi ve cihaz tanımlayıcıları gösterilir.
-- Uç **Nokta Güvenlik Ayrıntıları**, uç nokta ve algılayıcı işlem dahil uç nokta ile ilgili süreçler Microsoft Defender Virüsten Koruma Microsoft Defender hakkında genel bilgiler sağlar. Önemli işlemler beklendiği gibi çevrimiçi yoksa renk kırmızıya değiştirir.
+- Uç **Nokta Güvenlik Ayrıntıları**, algılayıcı Uç Nokta için Microsoft Defender de dahil olmak üzere konuyla ilgili Microsoft Defender Virüsten Koruma genel bilgiler sağlar. Önemli işlemler beklendiği gibi çevrimiçi yoksa renk kırmızıya değiştirir.
+  
+-   Uç **Nokta Güvenlik Ayrıntıları**, algılayıcı Uç Nokta için Microsoft Defender de dahil olmak üzere konuyla ilgili Microsoft Defender Virüsten Koruma genel bilgiler sağlar. Önemli işlemler beklendiği gibi çevrimiçi yoksa renk kırmızıya değiştirir.
 
-  ![Ayrıntılı istemci çözümleyicisi sonucu görüntüsü](images/85f56004dc6bd1679c3d2c063e36cb80.png)
+    :::image type="content" source="images/85f56004dc6bd1679c3d2c063e36cb80.png" alt-text="Sonuçları Denetleme Özeti sayfası" lightbox="images/85f56004dc6bd1679c3d2c063e36cb80.png":::
 
--   Uç **Nokta Güvenlik Ayrıntıları**, uç nokta ve algılayıcı işlem dahil uç nokta ile ilgili süreçler Microsoft Defender Virüsten Koruma Microsoft Defender hakkında genel bilgiler sağlar. Önemli işlemler beklendiği gibi çevrimiçi yoksa renk kırmızıya değiştirir.
+-   Sonuçları **Denetleme Özeti'nin** altında, çözümleyici tarafından algılanan hata, uyarı veya bilgisel olaylar için birleştirilmiş bir sayınız olur.
 
-  ![Ayrıntılı istemci çözümleyicisi ayrıntılı sonucu görüntüsü.](images/85f56004dc6bd1679c3d2c063e36cb80.png)
-
--   Sonuçları **Denetleme Özeti'nin** altında, çözümleyici tarafından algılanan hata, uyarı veya bilgilendirme olayları için bir toplam sayınız olur.
-
--   Ayrıntılı **Sonuçlar'da** , sonuçlarla birlikte (önem düzeyine göre sıralanmış) bir liste ve çözümleyici tarafından yapılan gözlemlere dayalı kılavuzluk gösterilir.
+-   Ayrıntılı **Sonuçlar'da**, sonuçların ve çözümleyicinin yaptığı gözlemlere dayalı rehberlikle birlikte bir liste (önem derecesine göre sıralanmış) gösterilir.
 
 ## <a name="open-a-support-ticket-to-microsoft-and-include-the-analyzer-results"></a>Microsoft'a bir destek bileti açın ve Çözümleyici sonuçlarını dahil
 
 Destek bileti a [açılışında çözümleyici sonuç dosyalarını eklemek](contact-support.md#open-a-service-request) için Ekler bölümünü kullanmaya **ve dosyayı** eklemeye emin `MDEClientAnalyzerResult.zip` olun:
 
-![Ek isteminin resmi.](images/508c189656c3deb3b239daf811e33741.png)
+:::image type="content" source="images/508c189656c3deb3b239daf811e33741.png" alt-text="Ek istemi" lightbox="images/508c189656c3deb3b239daf811e33741.png":::
 
 > [!NOTE]
 > Dosya boyutu 25 MB'den büyükse, davanıza atanan destek mühendisi, çözümleme için büyük dosyaları karşıya yüklemek için özel bir güvenli çalışma alanı sağlar.

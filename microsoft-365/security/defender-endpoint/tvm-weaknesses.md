@@ -1,7 +1,7 @@
 ---
 title: Kuruluşumda güvenlik açıkları - Tehdit ve Güvenlik Açığı Yönetimi
-description: Yaygın güvenlik açıklarını ve güvenlik açıklarını (ZAMANI) kullanarak, kurumda çalışan yazılımlarda bulunan zayıf noktaların kimliklerini listeler. Uç Nokta ve Uç Nokta için Microsoft Defender Tehdit ve Güvenlik Açığı Yönetimi bulundu.
-keywords: Tvm, tvm güvenlik & güvenlik açığı yönetimi listesi, güvenlik açığı listesi, TVm'de güvenlik açığı ayrıntıları aracılığıyla bitiş noktası tehdit & güvenlik açığı yönetimi, Tehdit ve Güvenlik Açığı Yönetimi için Microsoft Defender Bitiş Noktası TVM sorun giderme sayfası
+description: Yaygın güvenlik açıklarını ve güvenlik açıklarını (ZAMANI) kullanarak, kurumda çalışan yazılımlarda bulunan zayıf noktaların kimliklerini listeler. Bu özellik Uç Nokta için Microsoft Defender Tehdit ve Güvenlik Açığı Yönetimi bulundu.
+keywords: Uç Nokta için Microsoft Defender, & güvenlik açığı yönetimi, Tehdit ve Güvenlik Açığı Yönetimi ve Uç Nokta için Microsoft Defender  tvm zayıflığı sayfası, TVM, TVm güvenlik açığı listesi, TVM'de güvenlik açığı ayrıntıları aracılığıyla zarar bulma
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,23 +16,23 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 23b0235382e748071f0d8e060e15624b5332326d
-ms.sourcegitcommit: 23a90ed17cddf3b0db8d4084c8424f0fabd7b1de
+ms.openlocfilehash: a2f3db3a28755c5e2bce46f7134eb1c977d1aa0a
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/17/2022
-ms.locfileid: "63015442"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476653"
 ---
 # <a name="vulnerabilities-in-my-organization---threat-and-vulnerability-management"></a>Kuruluşumda güvenlik açıkları - Tehdit ve Güvenlik Açığı Yönetimi
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Tehdit ve güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 > [!IMPORTANT]
 > Tehdit ve güvenlik açığı yönetimi, uygulamalar ve bileşenlere yönelik Log4j güvenlik açıklarını belirlemeye yardımcı olabilir. [Daha fazla bilgi edinin](https://www.microsoft.com/security/blog/2021/12/11/guidance-for-preventing-detecting-and-hunting-for-cve-2021-44228-log4j-2-exploitation/#TVM).
@@ -45,7 +45,7 @@ Tehdit ve güvenlik açığı yönetimi, güvenlik açıklarını taramak ve alg
 > Bir güvenlik açığı için resmi BIRYALI KODU atanmamışsa güvenlik açığı adı ilgili kullanıcı tarafından Tehdit ve Güvenlik Açığı Yönetimi.
 
 > [!TIP]
-> Yeni güvenlik açığı olayları hakkında e-postalar almak için bkz. Uç Nokta için [Microsoft Defender'da güvenlik açığı e-posta bildirimlerini yapılandırma](configure-vulnerability-email-notifications.md)
+> Yeni güvenlik açığı olayları hakkında e-postalar almak için bkz. Güvenlik açığı [e-posta bildirimlerini güvenlik açığı Uç Nokta için Microsoft Defender](configure-vulnerability-email-notifications.md)
 
 ## <a name="navigate-to-the-weaknesses-page"></a>Zayıf Noktaları sayfasına gidin
 
@@ -58,11 +58,13 @@ Esnaflar sayfasına birkaç farklı şekilde erişin:
 
 **CVE** listesini **açmak için Güvenlik Açığı yönetimi** gezinti menüsüne gidin ve Zayıf Yönler'i seçin.
 
-### <a name="vulnerabilities-in-global-search"></a>Genel aramada güvenlik açıkları
+### <a name="vulnerabilities-in-global-search"></a>genel arama'daki güvenlik açıkları
 
-1. Genel arama açılan menüsüne gidin.
+1. En genel arama menüsüne gidin.
 2. Ortak **Güvenlik Açıkları** ve Saldırılar (ALıK) Kimliğinde (NOD) Güvenlik Açığı ve Anahtar'ı seçin ve ardından arama simgesini seçin. **Yalnızlıklar** sayfası, sizin istediğiniz HER ŞEY bilgileriyle birlikte açılır.
-![Açılan "güvenlik açığı" seçeneğinin seçili olduğu ve bir DEMİ örneği olan genel arama kutusu.](images/tvm-vuln-globalsearch.png)
+
+:::image type="content" source="images/tvm-vuln-globalsearch.png" alt-text="Açılan seçenek açığının seçili olduğu Genel arama kutusu" lightbox="images/tvm-vuln-globalsearch.png":::
+
 3. GÜVENLIK açığı açıklaması, ayrıntılar, tehdit öngörüleri ve açık cihazlar dahil daha fazla bilgi içeren bir açılır panel açmak için PANO'ya tıklayın.
 
 Zayıf noktaları sayfasındaki güvenlik açıklarının geri **kalanını görmek için** , ZAMANLI yazın ve arama'ya tıklayın.
@@ -71,7 +73,7 @@ Zayıf noktaları sayfasındaki güvenlik açıklarının geri **kalanını gör
 
 Açık cihazlardaki güvenlik açıklarını düzeltmek, riski varlıklarınıza ve organizasyonuma azaltmaya yöneliktir. Maruz Kalan **Cihazlar sütununda** 0 varsa, bu risk altında olmadığınız anlamına gelir.
 
-![Zayıf giriş sayfası.](images/tvm-weaknesses-overview.png)
+:::image type="content" source="images/tvm-weaknesses-overview.png" alt-text="Esneler giriş sayfası" lightbox="images/tvm-weaknesses-overview.png":::
 
 ### <a name="breach-and-threat-insights"></a>İhlal ve tehdit öngörüleri
 
@@ -94,7 +96,7 @@ BIR AYRINTI seçerek, güvenlik açığı açıklaması, ayrıntılar, tehdit ö
 - "işletim sistemi özelliği" kategorisi ilgili senaryolarda gösterilir
 - Cihaz açık olduğunda her ASPİ için ilgili güvenlik önerisine gidebilirsiniz
 
- ![Zayıf uçarak çıkış örneği.](images/tvm-weakness-flyout400.png)
+ :::image type="content" source="images/tvm-weakness-flyout400.png" alt-text="Güvenlik Açığı Açıklaması sayfası" lightbox="images/tvm-weakness-flyout400.png":::
 
 ### <a name="software-that-isnt-supported"></a>Desteklenen olmayan yazılım
 
@@ -110,7 +112,7 @@ CvE'ler için desteklenmeyen yazılımlara sahip açık cihaz bilgileri kullanı
 
 1. En korumasız [Tehdit ve Güvenlik Açığı Yönetimi araç](tvm-dashboard-insights.md) çubuğu panosuna gidin ve sayfayı En korumasız yazılım **widget'izine kadar aşağı** kaydırın. Her yazılımda bulunan güvenlik açıklarının sayısını, ayrıca tehdit bilgilerini ve cihazın zaman içinde açık kalma düzeyini üst düzey olarak gösterirsiniz.
 
-    ![En korumasız dört sütuna sahip yazılım kartı: yazılım, zayıf kalmalar, tehditler, açık cihazlar.](images/tvm-top-vulnerable-software500.png)
+   :::image type="content" source="images/tvm-top-vulnerable-software500.png" alt-text="Top vulnerable software sayfasındaki Yayılar sütunu" lightbox="images/tvm-top-vulnerable-software500.png":::
 
 2. Detaya gitme sayfasına gitmek için araştırma yapmak istediğiniz yazılımı seçin.
 
@@ -118,7 +120,7 @@ CvE'ler için desteklenmeyen yazılımlara sahip açık cihaz bilgileri kullanı
 
 4. Güvenlik açığı ayrıntıları hakkında daha fazla bilgi için araştırma yapmak istediğiniz güvenlik açığını seçin
 
-    ![Windows Server 2019 detaya genel bakış.](images/windows-server-drilldown.png)
+   :::image type="content" source="images/windows-server-drilldown.png" alt-text="Windows Server 2019 detaya genel bakış" lightbox="images/windows-server-drilldown.png":::
 
 ### <a name="discover-vulnerabilities-in-the-device-page"></a>Cihaz sayfasındaki güvenlik açıklarını keşfedin
 
@@ -128,13 +130,13 @@ Cihaz sayfasında ilgili İhale bilgilerini görüntüleyebilirsiniz.
 
 2. Cihaz **envanteri** sayfasında, araştırma yapmak istediğiniz cihaz adını seçin.
 
-    ![Araştırılacak seçili cihazla birlikte cihaz listesi.](images/tvm_machinetoinvestigate.png)
+   :::image type="content" source="images/tvm_machinetoinvestigate.png" alt-text="Araştırılacak seçili bir cihazın olduğu Cihaz listesi" lightbox="images/tvm_machinetoinvestigate.png":::
 
 3. Cihaz sayfası, araştırma yapmak istediğiniz cihazın ayrıntılarını ve yanıt seçeneklerini içerir.
 
 4. Bulunan **güvenlik açıkları'ı seçin**.
 
-   :::image type="content" alt-text="Ayrıntıları ve yanıt seçeneklerinin yer olduğu cihaz sayfası." source="images/tvm-discovered-vulnerabilities.png" lightbox="images/tvm-discovered-vulnerabilities.png":::
+   :::image type="content" source="images/tvm-discovered-vulnerabilities.png" alt-text="Ayrıntılar ve yanıt seçeneklerinin yer olduğu Cihaz sayfası." lightbox="images/tvm-discovered-vulnerabilities.png":::
 
 5. AŞAĞıDAKI güvenlik açığı açıklaması, tehdit içgörüleri ve algılama mantığı gibi, PANO ayrıntılarına sahip bir açılır panel açmak üzere araştırma yapmak istediğiniz güvenlik açığını seçin.
 
@@ -144,7 +146,7 @@ Yazılım kanıtına benzer şekilde, korumasız olduğunu göstermek için art�
 
 "işletim sistemi özelliği" kategorisi ilgili senaryolarda da gösterilir. BIR YERKARAKA,yalnızca belirli bir işletim sistemi bileşeni etkinleştirildiğinde korumasız işletim sistemi çalıştıran cihazları etkileyebilir. DNS bileşeninde Windows Server 2019 veya Windows Server 2022'nin bir güvenlik açığı olduğunu var sayabilirsiniz. Bu yeni özellikle, bu AYNI ÖZELLIĞINI yalnızca işletim sistemi içinde etkinleştirilmiş DNS özelliği etkinleştirilmiş Windows Server 2019 ve Windows Server 2022 cihazlarına ekley.
 
-:::image type="content" alt-text="Algılama Mantığı örneği, cihazda algılanan yazılımları ve KBS'leri listeler." source="images/tvm-cve-detection-logic.png":::
+:::image type="content" source="images/tvm-cve-detection-logic.png" alt-text="Cihazda algılanan yazılımları ve KB'leri listeen Algılama Mantığı örneği" lightbox="images/tvm-cve-detection-logic.png":::
 
 ## <a name="report-inaccuracy"></a>Rapor yanlışlığı
 
@@ -161,4 +163,4 @@ Belirsiz, yanlış veya eksik bilgiler gördüğünüzde hatalı bir pozitif son
 - [Güvenlik önerileri](tvm-security-recommendation.md)
 - [Yazılım envanteri](tvm-software-inventory.md)
 - [Pano içgörüleri](tvm-dashboard-insights.md)
-- [Uç Nokta Cihazları için Microsoft Defender listesini görüntüleme ve düzenleme](machines-view-overview.md)
+- [Cihazlar listesini görüntüleme Uç Nokta için Microsoft Defender düzenleme](machines-view-overview.md)

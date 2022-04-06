@@ -1,7 +1,7 @@
 ---
-title: Uç nokta için Microsoft Defender'a geçiş - Hazırla
-description: Uç nokta için Microsoft Defender'a geçiş yapmaya hazır olun. Cihazlarınızı güncelleştirin ve ağ bağlantılarınızı yapılandırabilirsiniz.
-keywords: geçiş, Uç Nokta için Microsoft Defender, en iyi uygulama
+title: Geçiş Uç Nokta için Microsoft Defender - Hazırla
+description: Geçiş yapmaya hazır olun ve Uç Nokta için Microsoft Defender. Cihazlarınızı güncelleştirin ve ağ bağlantılarınızı yapılandırabilirsiniz.
+keywords: geçiş, Uç Nokta için Microsoft Defender, en iyi yöntem
 ms.prod: m365-security
 ms.technology: mde
 ms.mktglfcycl: deploy
@@ -23,21 +23,21 @@ ms.custom:
 - admindeeplinkDEFENDER
 ms.date: 11/30/2021
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
-ms.openlocfilehash: d9d122c9d114aa135eb2a82e1168eabec2aeec7b
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: aa0bd45c1765e2aa794e00e437bf08a63d1d742f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "63009319"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476741"
 ---
-# <a name="switch-to-microsoft-defender-for-endpoint---phase-1-prepare"></a>Uç nokta için Microsoft Defender'a geçiş - Aşama 1: Hazırlık
+# <a name="switch-to-microsoft-defender-for-endpoint---phase-1-prepare"></a>Geçiş Uç Nokta için Microsoft Defender - Aşama 1: Hazırlık
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-| ![Aşama 1: Hazırlık.](images/phase-diagrams/prepare.png)<br/>Aşama 1: Hazırlama | [![Aşama 2: Ayarlama](images/phase-diagrams/setup.png)](switch-to-mde-phase-2.md)<br/>[Aşama 2: Ayarlama](switch-to-mde-phase-2.md) | [![Aşama 3: Ekleme](images/phase-diagrams/onboard.png)](switch-to-mde-phase-3.md)<br/>[Aşama 3: Ekleme](switch-to-mde-phase-3.md) |
+| ![Aşama 1: Hazırlık.](images/phase-diagrams/prepare.png#lightbox)<br/>Aşama 1: Hazırlama | [![Aşama 2: Ayarlama](images/phase-diagrams/setup.png#lightbox)](switch-to-mde-phase-2.md)<br/>[Aşama 2: Ayarlama](switch-to-mde-phase-2.md) | [![Aşama 3: Ekleme](images/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Aşama 3: Ekleme](switch-to-mde-phase-3.md) |
 |--|--|--|
 |*Buradasınız!*| | |
 
@@ -74,7 +74,7 @@ Kuruluş cihazlarınızı güncelleştirmek için yardıma mı ihtiyacınız var
 |Android|[Android & güncelleştirme ve güncelleştirme denetleme](https://support.google.com/android/answer/7680439)|
 |Linux|[Linux 101: Sisteminizi Güncelleştirme](https://www.linux.com/training-tutorials/linux-101-updating-your-system)|
 
-## <a name="get-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'ı Al
+## <a name="get-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender
 
 Artık kuruluş cihazlarınızı güncellemiş olduğunuuza göre, sıradaki adım Uç Nokta için Defender'ı almak, lisans atamak ve hizmetin sağlanmasıdır.
 
@@ -99,13 +99,13 @@ Ana Microsoft 365 Defender izinleri, temel izinler veya rol tabanlı erişim den
 
 1. Güvenlik yöneticilerinizin ve güvenlik işleçlerinin rollerini ve izinlerini planla. Bkz [. Rol tabanlı erişim denetimi](prepare-deployment.md#role-based-access-control).
 
-2. RBAC'yi ayarlayın ve yapılandıryın. [Intune'u](/mem/intune/fundamentals/what-is-intune), özellikle de organizasyonunız Windows 10, macOS, iOS ve Android cihazlarının bir bileşimini kullanıyorsa RBAC'yi yapılandırmanız önerilir. [Intune kullanarak RBAC'yi ayarlamaya bakın](/mem/intune/fundamentals/role-based-access-control).
+2. RBAC'yi ayarlayın ve yapılandıryın. Özellikle de [Intune](/mem/intune/fundamentals/what-is-intune) işletim sistemi, macOS, iOS ve Android cihazlarının bir birleşimini kullanıyorsa, RBAC Windows 10 i yapılandırmanız önerilir. Bkz[. Ayarları kullanarak RBAC Intune](/mem/intune/fundamentals/role-based-access-control).
 
-    Organizasyonunız Intune dışında bir yöntem gerektiriyorsa, aşağıdaki seçeneklerden birini belirleyin:
+    Organizasyonunız bu yöntemlerden farklı bir Intune gerektiriyorsa, aşağıdaki seçeneklerden birini seçin:
 
     - [Yapılandırma Yöneticisi](/mem/configmgr/core/servers/deploy/configure/configure-role-based-administration)
-    - [Gelişmiş Grup İlkesi Yönetimi](/microsoft-desktop-optimization-pack/agpm)
-    - [Windows Merkezi](/windows-server/manage/windows-admin-center/overview)
+    - [Gelişmiş grup ilkesi Yönetimi](/microsoft-desktop-optimization-pack/agpm)
+    - [Windows Admin Center](/windows-server/manage/windows-admin-center/overview)
 
 3. Portala erişim Microsoft 365 Defender. (Yardım mı gerekiyor? Bkz [. RBAC kullanarak portal erişimini yönetme](rbac.md).
 

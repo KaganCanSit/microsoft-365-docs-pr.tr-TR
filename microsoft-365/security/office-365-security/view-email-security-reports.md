@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b6d085d2e3c1e9c1e032f468f56d67a393269fe1
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: b3b69b25f74f66a5ea0d8c63600f5eab0e780edb
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683065"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477247"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Portalda e-posta Microsoft 365 Defender görüntüleme
 
@@ -33,20 +33,20 @@ ms.locfileid: "63683065"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Microsoft 365 Defender portalında, Microsoft 365'daki <https://security.microsoft.com> istenmeyen posta önleme ve kötü amaçlı yazılımdan koruma gibi e-posta güvenlik özelliklerinin nasıl koruma altında Microsoft 365 çok çeşitli raporlar bulabilirsiniz. Gerekli izinlere [sahipsiniz,](#what-permissions-are-needed-to-view-these-reports) bu makalede açıklandığı gibi bu raporları indirebilirsiniz.
 
 > [!NOTE]
 >
-> E-posta ve işbirliği raporları **sayfasındaki &, e-posta** göndermek için Microsoft Defender Office 365. Bu raporlar hakkında bilgi için bkz. Rapor [portalında Office 365 için View Defender Microsoft 365 Defender.](view-reports-for-mdo.md)
+> E-posta Ve İşbirliği **raporları sayfasındaki &, daha** fazla rapor Office 365 için Microsoft Defender. Bu raporlar hakkında bilgi için bkz[. Rapor Office 365 için Defender portalına Microsoft 365 Defender.](view-reports-for-mdo.md)
 >
 > Posta akışıyla ilgili raporlar artık genel Exchange bir yönetim merkezindedir. Bu raporlar hakkında daha fazla bilgi için bkz[. Yeni Yönetim Merkezi'nde Exchange raporları](/exchange/monitoring/mail-flow-reports/mail-flow-reports).
 
 ## <a name="email-security-report-changes-in-the-microsoft-365-defender-portal"></a>Web portalında e-posta Microsoft 365 Defender raporu değişiklikleri
 
-Exchange Online Protection portalında yer alan, taşınan veya kullanımdan Office 365 için Microsoft Defender (EOP) ve Microsoft 365 Defender için Microsoft Defender raporları aşağıdaki tabloda açıklanmıştır.
+Exchange Online Protection portalında yer alan, Office 365 için Microsoft Defender Microsoft 365 Defender taşınmış veya kullanımdan Office 365 için Microsoft Defender raporları aşağıdaki tabloda açıklanmıştır.
 
 |Kullanım dışı olan rapor ve cmdlet'ler|Yeni rapor ve cmdlet'ler|İleti Merkezi Kimliği|Tarih|
 |---|---|:---:|:---:|
@@ -68,7 +68,7 @@ Exchange Online Protection portalında yer alan, taşınan veya kullanımdan Off
 
 Güvenliği **ihlal edilmiş** kullanıcılar raporu, son 7 gün içinde Şüpheli veya **Kısıtlanmış** olarak  işaretlenmiş kullanıcı hesaplarının sayısını gösterir. Bu durumların herhangi bir hesapta sorunlu veya hatta güvenliği ihlal edilmiş olabilir. Sık kullanımı kullanarak, şüpheli veya kısıtlanmış hesaplarda depoları ve hatta eğilimleri tespit etmek için raporu kullanabilirsiniz. Güvenliği ihlal edilmiş kullanıcılar hakkında daha fazla bilgi için bkz [. Güvenliği ihlal edilmiş bir e-posta hesabını yanıtla](responding-to-a-compromised-email-account.md).
 
-![E-posta ve işbirliği raporları sayfasında güvenliği & widget'ı.](../../media/compromised-users-report-widget.png)
+:::image type="content" source="../../media/compromised-users-report-widget.png" alt-text="E-posta ve işbirliği raporları sayfasında güvenliği ihlal & widget'ı" lightbox="../../media/compromised-users-report-widget.png":::
 
 Toplama görünümü son 90 günlük verileri, ayrıntılı görünüm ise son 30 günlük verileri gösterir.
 
@@ -96,16 +96,24 @@ Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et**
 
 Güvenliği ihlal **edilmiş kullanıcılar** sayfasında Zamanlama ![oluştur simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur](#schedule-report)**, ![Rapor isteği simgesi.](../../media/m365-cc-sc-download-icon.png) **[Rapor isteği](#request-report)** ve Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
 
-![Güvenliği ihlal edilmiş kullanıcılar raporu rapor görünümü.](../../media/compromised-users-report-activity-view.png)
+:::image type="content" source="../../media/compromised-users-report-activity-view.png" alt-text="Güvenliği ihlal edilmiş kullanıcılar raporunda Rapor görünümü" lightbox="../../media/compromised-users-report-activity-view.png":::
 
 ## <a name="exchange-transport-rule-report"></a>Exchange Aktarım Kuralı raporu
 
+Bu **Exchange aktarım kuralı** raporu, posta akışı kurallarının (aktarım kuralları olarak da bilinir) organizasyonun gelen ve giden iletileri üzerindeki etkisini gösterir.
+
+Raporu bir web portalında görüntülemek Microsoft 365 Defender E-posta  \> Raporları ve **işbirliği & E-posta** \> **& gidin**. **E-posta & raporları sayfasında**, aktarım **Exchange bulun ve** Ayrıntıları görüntüle'ye **tıklayın**. Doğrudan rapora gitmek için ' i açın <https://security.microsoft.com/reports/ETRRuleReport>.
+
+:::image type="content" source="../../media/transport-rule-report-widget.png" alt-text="E Exchange-posta ve işbirliği raporları sayfasındaki & aktarım kuralı widget'ı" lightbox="../../media/transport-rule-report-widget.png":::
+
+Yeni **Exchange kuralı raporu sayfasında**, kullanılabilir grafikler ve veriler aşağıdaki bölümlerde açıklanmıştır.
 > [!NOTE]
 > Yeni **Exchange Aktarım Kuralı raporu**, artık EAC'de kullanılabilir. Daha fazla bilgi için bkz[. Exchange EAC'de aktarım kuralı raporunu düzenleme](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report).
 
+
 ### <a name="chart-breakdown-by-direction"></a>Yöne göre grafik kırılım
 
-![Bir aktarım kuralı Exchange Aktarım kuralları için Exchange görünümü.](../../media/transport-rule-report-etr-direction-view.png)
+:::image type="content" source="../../media/transport-rule-report-etr-direction-view.png" alt-text="Aktarım kuralı raporu Exchange Aktarım kuralları için Exchange görünümü" lightbox="../../media/transport-rule-report-etr-direction-view.png":::
 
 Yöne **Göre Grafik çözümlemesi'ne** tıklayın, aşağıdaki grafikler kullanılabilir:
 
@@ -135,7 +143,7 @@ Zamanlamayı **Exchange raporu sayfasında** Zamanlama oluştur ![simgesine tık
 
 ### <a name="chart-breakdown-by-severity"></a>Önem Düzeyine göre grafik çözümlemesi
 
-![Bir aktarım kuralı raporu Exchange Aktarım kuralları için önem Exchange görünümü.](../../media/transport-rule-report-etr-severity-view.png)
+:::image type="content" source="../../media/transport-rule-report-etr-severity-view.png" alt-text="Bir aktarım kuralı raporu Exchange Aktarım kuralları için önem Exchange görünümü" lightbox="../../media/transport-rule-report-etr-severity-view.png":::
 
 Önem **Derecesine Göre Grafik Çözümlemesi'ne** tıklayın, aşağıdaki grafikler kullanılabilir:
 
@@ -175,11 +183,11 @@ Posta **Akışı durum** raporu, gelen ve giden e-posta, istenmeyen posta algıl
 
 Raporu aşağıdaki portalda görüntülemek için Microsoft 365 Defender E-posta <https://security.microsoft.com> \> Raporları ve **işbirliği & E-posta** \> **& gidin**. **E-posta Akışı & raporları sayfasında** Posta Akışı durum **özetini bulun ve** Ayrıntıları görüntüle'ye **tıklayın**. Doğrudan rapora gitmek için ' i açın <https://security.microsoft.com/reports/mailflowStatusReport>.
 
-![E-posta Ve İş Birliği raporları sayfasındaki & özeti widget'ı.](../../media/mail-flow-status-report-widget.png)
+:::image type="content" source="../../media/mail-flow-status-report-widget.png" alt-text="E-posta Akışı ve işbirliği raporları sayfasındaki & durumu özet widget'ı" lightbox="../../media/mail-flow-status-report-widget.png":::
 
 ### <a name="type-view-for-the-mailflow-status-report"></a>Posta Akışı durum raporu için tür görünümü
 
-![Posta Akışı durum raporuna görünüm yazın.](../../media/mail-flow-status-report-type-view.png)
+:::image type="content" source="../../media/mail-flow-status-report-type-view.png" alt-text="Posta Akışı durum raporunda Tür görünümü" lightbox="../../media/mail-flow-status-report-type-view.png":::
 
 Posta **Akışı durum raporu sayfasında** , Tür **sekmesi** varsayılan olarak seçilidir. Grafikte belirtilen tarih aralığı için aşağıdaki bilgiler görüntülenir:
 
@@ -188,7 +196,7 @@ Posta **Akışı durum raporu sayfasında** , Tür **sekmesi** varsayılan olara
 - **Kötü amaçlı** yazılım: Çeşitli filtreler tarafından kötü amaçlı yazılım olarak engellenen e-posta.
 - **Kimlik avı e-postası**: Çeşitli filtreler tarafından kimlik avı olarak engellenen e-posta.
 - **İstenmeyen** posta: Çeşitli filtreler tarafından istenmeyen posta olarak engellenen e-posta.
-- **Kenar koruması**: EOP veya Office 365 için Defender tarafından değerlendirilmeden önce kenar/çevre tarafından reddedilen e-Office 365.
+- **Kenar koruması**: EOP veya çevre tarafından değerlendirilmeden önce kenar/çevre tarafından reddedilen e-Office 365 için Defender.
 - **Kural iletileri**: Posta akış kuralları (aktarım kuralları olarak da bilinir) tarafından gereğini yapılan e-posta iletileri.
 
 Grafiğin altındaki ayrıntılar tablosu aşağıdaki bilgileri gösterir:
@@ -211,7 +219,7 @@ Filtre'ye tıklar ve beliren açılır grafikte aşağıdaki  değerlerden birin
   - **İstenmeyen posta**
   - **Edge koruması**
   - **kural iletileri**
-  - **Kimlik avı e-postası**
+  - **Kimlik avı postası**
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
@@ -226,7 +234,7 @@ Posta **Akışı durum raporu sayfasında** Zamanlama oluştur ![simgesi.](../..
 
 ### <a name="direction-view-for-the-mailflow-status-report"></a>Posta Akışı durum raporu için yön görünümü
 
-![Posta Akışı durum raporunda Yön görünümü.](../../media/mail-flow-status-report-direction-view.png)
+:::image type="content" source="../../media/mail-flow-status-report-direction-view.png" alt-text="Posta Akışı durum raporunda Yön görünümü" lightbox="../../media/mail-flow-status-report-direction-view.png":::
 
 Yön sekmesine **tıklarsanız** grafikte belirtilen tarih aralığı için aşağıdaki bilgiler görüntülenir:
 
@@ -243,7 +251,7 @@ Filtre'ye tıklar ve beliren açılır grafikte aşağıdaki  değerlerden birin
   - **İstenmeyen posta**
   - **Edge koruması**
   - **kural iletileri**
-  - **Kimlik avı e-postası**
+  - **Kimlik avı postası**
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
@@ -260,11 +268,11 @@ Posta **Akışı durum raporu sayfasında** Zamanlama oluştur ![simgesi.](../..
 
 Posta **Akışı görünümü** Microsoft'un e-posta tehdit koruması özelliklerinin, gelen ve giden e-postayı kuruluş içinde nasıl filtrele olduğunu gösterir. Bu görünüm toplam e-posta sayısıyla ilgili ayrıntıları ve uç koruma, kötü amaçlı yazılımdan koruma, kimlik avından koruma, istenmeyen posta önleme ve kimlik sahtesi önleme gibi yapılandırılmış tehdit koruması özelliklerinin bu sayımı nasıl etkilediğini görmek için yatay akış diyagramı ( _Sankey_ diyagramı olarak bilinir) kullanır.
 
-![Posta Akışı durum raporuna posta akışı görünümü.](../../media/mail-flow-status-report-mailflow-view.png)
+:::image type="content" source="../../media/mail-flow-status-report-mailflow-view.png" alt-text="Posta Akışı durum raporunda Posta Akışı görünümü" lightbox="../../media/mail-flow-status-report-mailflow-view.png":::
 
 Toplam görünüm ve ayrıntılar tablosu görünümü 90 günlük filtrelemeye izin vermez.
 
-Diyagramda yer alan bilgiler, **EOP** veya Office 365 **için Defender tarafından renk Office 365** ve şifreleridir.
+Diyagramda yer alan bilgiler **EOP veya Office 365 için Defender** tarafından **renk Office 365 için Defender** vardır.
 
 Diyagram aşağıdaki yatay şeritler olarak düzenlenmiştir:
 
@@ -277,8 +285,8 @@ Diyagram aşağıdaki yatay şeritler olarak düzenlenmiştir:
   - **Kötü amaçlı** yazılım bloğu: Çeşitli filtreler tarafından kötü amaçlı yazılım olarak tanımlanan iletiler.<sup>\*</sup>
   - **Kimlik avı** bloğu: Çeşitli filtreler tarafından işlem sırasında kimlik avı olarak tanımlanan iletiler.<sup>\*</sup>
   - **İstenmeyen** posta bloğu: Çeşitli filtreler tarafından işlem sırasında istenmeyen posta olarak tanımlanan iletiler.<sup>\*</sup>
-  - **Kimliğe bürünme** bloğu: Kullanıcı kimliğine bürünme veya etki alanı kimliğine bürünme olarak algılanan iletiler, Office 365.<sup>\*</sup>
-  - **Detonation block**: Kasa Ekler ilkeleri veya Kasa için Defender'da Bağlantılar ilkeleri tarafından dosya veya URL'nin detonasyonu sırasında algılanan iletiler Office 365.<sup>\*</sup>
+  - **Kimliğe bürünme** bloğu: Kendi etki alanı içinde kullanıcı kimliğine bürünme veya etki alanı kimliğine bürünme olarak Office 365 için Defender.<sup>\*</sup>
+  - **Detonation block**: Attachments policies veya Kasa Links policies or Kasa Links policies by file or URL detonation sırasında algılanan iletiler Office 365 için Defender.<sup>\*</sup>
   - **ZAP kaldırıldı**: Sıfır saatlik otomatik temizleme (ZAP) ile kaldırılan iletiler.<sup>\*</sup>
   - **Teslim** edildi: İzin nedeniyle kullanıcılara teslim edilen iletiler.<sup>\*</sup>
 
@@ -286,7 +294,7 @@ Diyagramda yatay bir bandın üzerine gelindiğinde ilgili iletilerin sayısın�
 
 <sup>\*</sup> Bu öğeye tıklarsanız, diyagram diğer ayrıntıları gösterecek şekilde genişletilir. Genişletilmiş düğümlerde her öğenin açıklaması için bkz. [Algılama teknolojileri](/office/office-365-management-api/office-365-management-activity-api-schema#detection-technologies).
 
-![Posta Akışı durum raporuna gelen Posta Akışı görünümünde kimlik avı bloğu ayrıntıları.](../../media/mail-flow-status-report-mailflow-view-details.png)
+:::image type="content" source="../../media/mail-flow-status-report-mailflow-view-details.png" alt-text="Posta Akışı durum raporuna gelen Posta Akışı görünümünde kimlik avı bloğu ayrıntıları" lightbox="../../media/mail-flow-status-report-mailflow-view-details.png":::
 
 Diyagramın altındaki ayrıntılar tablosu aşağıdaki bilgileri gösterir:
 
@@ -312,7 +320,7 @@ Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et**
 
 Posta Akışı durum **raporu sayfasına geri dönebilirsiniz** ve görüntülenen Posta Akışı  eğilimleri açılır iletisinde eğilim grafiklerini görmek **için Eğilimleri** göster'e tıkleyebilirsiniz.
 
-![Posta Akışı durum raporu'daki Posta Akışı görünümünde posta akışı eğilimleri akışı.](../../media/mail-flow-status-report-mailflow-view-show-trends.png)
+:::image type="content" source="../../media/mail-flow-status-report-mailflow-view-show-trends.png" alt-text="Posta Akışı durum raporu'daki Posta Akışı görünümünde Posta Akışı eğilimleri uçarak çıkış" lightbox="../../media/mail-flow-status-report-mailflow-view-show-trends.png":::
 
 Posta **Akışı durum raporu sayfasında** Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **Dışarı** Aktar düğmesi kullanılabilir.
 
@@ -323,7 +331,7 @@ Posta **Akışı durum raporu sayfasında** Dışarı Aktar ![simgesi.](../../me
 
 ## <a name="mail-latency-report"></a>Posta gecikme süresi raporu
 
-Windows **için Defender'daki** Posta gecikme Office 365, kurum içinde yaşanan posta teslimi ve detonasyonu gecikme süresiyle ilgili bilgileri içerir. Daha fazla bilgi için bkz [. Posta gecikme süresi raporu](view-reports-for-mdo.md#mail-latency-report).
+Bu **tablo'daki Posta** gecikme Office 365 için Defender, kurum içinde yaşanan posta teslimi ve detonasyonu gecikme süresiyle ilgili bilgileri içerir. Daha fazla bilgi için bkz [. Posta gecikme süresi raporu](view-reports-for-mdo.md#mail-latency-report).
 
 ## <a name="spam-detections-report"></a>İstenmeyen posta algılama raporu
 
@@ -338,7 +346,7 @@ Raporun toplam görünümü 90 günlük filtrelemeye izin verirken, ayrıntılı
 
 Raporu bir web portalında görüntülemek Microsoft 365 Defender E-posta  \> Raporları ve **işbirliği & E-posta** \> **& gidin**. **E-posta & raporları sayfasında**, **Bilgi tanıma algılamalarını bulun ve Ayrıntıları** **görüntüle'ye tıklayın**. Doğrudan rapora gitmek için ' i açın <https://security.microsoft.com/reports/SpoofMailReport>.
 
-![E-posta ve işbirliği raporları sayfasındaki & widget'ı.](../../media/spoof-detections-widget.png)
+:::image type="content" source="../../media/spoof-detections-widget.png" alt-text="E-posta ve işbirliği raporları sayfasındaki & widget'ı" lightbox="../../media/spoof-detections-widget.png":::
 
 Grafik aşağıdaki bilgileri gösterir:
 
@@ -361,7 +369,7 @@ Filtre'ye tıklar ve beliren açılır grafikte aşağıdaki  değerlerden birin
   - **Diğer**
 - **Poof türü**: **İç** ve **Dış**
 
-![Web portalında yer alan adres mektup Microsoft 365 Defender sayfası.](../../media/spoof-detections-report-page.png)
+:::image type="content" source="../../media/spoof-detections-report-page.png" alt-text="Microsoft 365 Defender portalında Yer Alma E-posta Microsoft 365 Defender sayfası" lightbox="../../media/spoof-detections-report-page.png":::
 
 Grafiğin altındaki ayrıntılar tablosu aşağıdaki bilgileri gösterir:
 
@@ -386,7 +394,7 @@ Hesap **tanıma algılamaları sayfasında** Zamanlama oluştur ![simgesi.](../.
 
 Raporu aşağıdaki portalda görüntülemek için Microsoft 365 Defender E-posta <https://security.microsoft.com> \> Raporları ve **işbirliği & E-posta** \> **& gidin**. **E-posta Gönderileri & raporları sayfasında** Gönderiler'i **bulun ve** Ayrıntıları görüntüle'ye **tıklayın**. Doğrudan rapora gitmek için ' i açın <https://security.microsoft.com/adminSubmissionReport>. Bir portalda [yönetici gönderileri'ne Microsoft 365 Defender](admin-submission.md) Gönderilere **Git'e tıklayın**. Yöneticiler son 30 gün için raporu  bakabilecektir.
 
-![E-posta ve işbirliği & Gönderiler widget'ı.](../../media/submissions-report-widget.png)
+:::image type="content" source="../../media/submissions-report-widget.png" alt-text="E-posta ve işbirliği raporları sayfasındaki & widget'ı" lightbox="../../media/submissions-report-widget.png":::
 
 Grafik aşağıdaki bilgileri gösterir:
 
@@ -418,13 +426,13 @@ Grafiğin altındaki ayrıntılar tablosu aynı bilgileri gösterir ve Çözüml
 
 Gönderiler **sayfasında** Dışarı **[Aktar](#export-report)** düğmesi kullanılabilir.
 
-![Yeni portalda Gönderiler Microsoft 365 Defender.](../../media/submissions-report-page.png)
+:::image type="content" source="../../media/submissions-report-page.png" alt-text="Microsoft 365 Defender portalında Gönderiler rapor sayfası" lightbox="../../media/submissions-report-page.png":::
 
 ## <a name="threat-protection-status-report"></a>Tehdit koruması durum raporu
 
-Tehdit **koruması durum raporu**, hem EOP'de hem de Office 365 Için Defender'da kullanılabilir; bununla birlikte, raporlar farklı veriler içerir. Örneğin, EOP müşterileri e-postada algılanan kötü amaçlı yazılımla ilgili bilgileri yalnızca Kasa[, SharePoint, OneDrive](mdo-for-spo-odb-and-teams.md) ve Microsoft Teams için ekler tarafından algılanan kötü amaçlı dosyalar hakkında Microsoft Teams.
+Tehdit **koruması durum raporu** hem EOP'de hem de Office 365 için Defender, ancak raporlarda farklı veriler vardır. Örneğin, EOP müşterileri e-postada algılanan kötü amaçlı yazılımla ilgili bilgileri yalnızca Kasa[, SharePoint, OneDrive](mdo-for-spo-odb-and-teams.md) ve Microsoft Teams için ekler tarafından algılanan kötü amaçlı dosyalar hakkında Microsoft Teams.
 
-Raporda, [e-posta](zero-hour-auto-purge.md) iletilerinin sayısını kötü amaçlı yazılımdan koruma altyapısı tarafından engellenen dosyalar veya web sitesi adresleri (URL'ler), sıfır saatlik otomatik temizleme (ZAP) ve [Kasa Bağlantıları](safe-links.md), [Kasa](safe-attachments.md) Ekleri ve kimlik avı önleme ilkelerine yönelik kimliğe bürünme koruması özellikleri gibi Office 365 özellikleri için Defender [sağlar.](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) Bu bilgileri, eğilimleri tanımlamak veya kuruluş ilkelerinin ayarlanması gerekip gerek olmadığını belirlemek için kullanabilirsiniz.
+Raporda, [e-posta](zero-hour-auto-purge.md) iletilerinin sayısını kötü amaçlı yazılımdan koruma altyapısı tarafından engellenen dosyalar veya web sitesi adresleri (URL'ler), sıfır saatlik otomatik temizleme (ZAP Office 365 için Defender) ve [Kasa](safe-links.md) Bağlantıları, [Kasa](safe-attachments.md) Ekleri ve kimlik avı önleme ilkelerine yönelik kimliğe bürünme koruması özellikleri gibi kötü amaçlı içerikler [sağlar.](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) Bu bilgileri, eğilimleri tanımlamak veya kuruluş ilkelerinin ayarlanması gerekip gerek olmadığını belirlemek için kullanabilirsiniz.
 
 **Not**: Bir ileti beş alıcıya gönderilirse, bunu bir ileti olarak değil de beş farklı ileti olarak kabul etmek önemlidir.
 
@@ -433,7 +441,7 @@ Raporu bir web portalında görüntülemek Microsoft 365 Defender E-posta  \> Ra
 - Office 365 için Defender:<https://security.microsoft.com/reports/TPSAggregateReportATP>
 - EOP: <https://security.microsoft.com/reports/TPSAggregateReport>
 
-![E-posta ve işbirliği raporları sayfasındaki & durumu widget'ı.](../../media/threat-protection-status-report-widget.png)
+:::image type="content" source="../../media/threat-protection-status-report-widget.png" alt-text="E-posta ve işbirliği raporları sayfasındaki Tehdit & durumu widget'ı" lightbox="../../media/threat-protection-status-report-widget.png":::
 
 Varsayılan olarak, grafik son 7 günlerin verilerini gösterir. Tehdit **koruması durum raporu** sayfasında **Filtre'ye** tıklarsanız, 90 günlük bir tarih aralığı seçin (deneme abonelikleri 30 gün ile sınırlı olabilir). Ayrıntılar tablosu 30 gün boyunca filtrelemeye izin verir.
 
@@ -441,7 +449,7 @@ Kullanılabilir görünümler aşağıdaki bölümlerde açıklanmıştır.
 
 ### <a name="view-data-by-overview"></a>Verileri Genel Bakış'a göre görüntüleme
 
-![Tehdit koruması durum raporuna genel bakış görünümü.](../../media/threat-protection-status-report-overview-view.png)
+:::image type="content" source="../../media/threat-protection-status-report-overview-view.png" alt-text="Tehdit koruması durum raporunda Genel Bakış görünümü" lightbox="../../media/threat-protection-status-report-overview-view.png":::
 
 Verileri **Genel Bakış görünümünde görüntüleme** görünümünde, grafikte aşağıdaki algılama bilgileri gösterilir:
 
@@ -460,7 +468,7 @@ Grafiğin altında herhangi bir ayrıntı tablosu yoktur.
   - **E-posta kimlik avı**
   - **İstenmeyen e-posta**
   - **İçerik kötü amaçlı yazılımı**
-- **Koruma:** **MDO** (Office 365 Defender) ve **EOP**.
+- **Koruma:** **MDO** (Office 365 için Defender) ve **EOP**.
 - **Etiket**: **Tüm** veya belirtilen kullanıcı etiketi (öncelik hesapları dahil). Kullanıcı etiketleri hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
 - **Yön**:
   - **Hepsi**
@@ -480,14 +488,14 @@ Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et**
 
 ### <a name="view-data-by-email--phish-and-chart-breakdown-by-detection-technology"></a>Verileri Algılama Teknolojisine Göre E-posta \> Kimlik Avı ve Grafik Çözümlemesi'ne göre görüntüleme
 
-![Tehdit koruması durumu raporunda kimlik avı e-postaları için algılama teknolojisi görünümü.](../../media/threat-protection-status-report-phishing-detection-tech-view.png)
+:::image type="content" source="../../media/threat-protection-status-report-phishing-detection-tech-view.png" alt-text="Tehdit koruması durumu raporunda kimlik avı e-postaları için Algılama teknolojisi görünümü" lightbox="../../media/threat-protection-status-report-phishing-detection-tech-view.png":::
 
 > [!NOTE]
 > Mayıs 2021'den başlayarak, e-postada kimlik avı algılamaları kimlik  avı URL'leri içeren ileti eklerini içerecek şekilde güncelleştirildi. Bu değişiklik, Algılama ses düzeyi bazında **\>** Verileri E-posta Kötü Amaçlı E-posta Kötü Amaçlı E-postayla Görüntüle görünümünden ve Verileri E-posta Kimlik Avından **Görüntüle görünümüne \> değiştirebilir**. Başka bir deyişle, geleneksel olarak kötü amaçlı yazılım olarak tanımlanan kimlik avı URL'lerine sahip ileti ekleri artık kimlik avı olarak da tanımlanır.
 
 Verileri **E-Posta KimlikLerine Göre \>** Görüntüleme **ve Algılama Teknolojisine** Göre Grafik Çözümleme görünümünde, grafikte aşağıdaki bilgiler gösterilir:
 
-- **URL kötü amaçlı itibarı**<sup>\*</sup>: Diğer birçok müşteri tarafından Office 365 için Defender'dan oluşturulan kötü amaçlı URL Microsoft 365.
+- **URL kötü amaçlı itibarı**<sup>\*</sup>: Diğer birçok müşteride Office 365 için Defender ve detonasyonlardan oluşturulan kötü amaçlı URL Microsoft 365.
 - **Gelişmiş filtre**: Kimlik avı, makine öğrenimine dayalı sinyaller.
 - **Genel filtre**: Kimlik avı, analist kurallarına dayalı sinyaller.
 - **Poof intra-org**: Sender is trying to spoof the recipient domain.
@@ -506,7 +514,7 @@ Verileri **E-Posta KimlikLerine Göre \>** Görüntüleme **ve Algılama Teknolo
 - **Dosya detonasyonu itibarı**<sup>\*</sup>
 - **Kampanya**<sup>\*</sup>
 
-<sup>\*</sup>Yalnızca Office 365 için Defender
+<sup>\*</sup>Office 365 için Defender bir
 
 Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabilir:
 
@@ -523,7 +531,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 
 - **Tarih (UTC)** **Başlangıç tarihi** ve **Bitiş tarihi**
 - **Algılama**: Grafikle aynı değerlerdir.
-- **Koruma:** **MDO** (Office 365 Defender) **veya EOP**
+- **Koruma:** **MDO** (Office 365 için Defender) veya **EOP**
 - **Yön**:
   - **Hepsi**
   - **Gelen**
@@ -547,7 +555,7 @@ Tehdit **koruması durumu sayfasında** Zamanlama oluştur ![simgesi.](../../med
 
 ### <a name="view-data-by-email--spam-and-chart-breakdown-by-detection-technology"></a>Verileri Algılama Teknolojisine Göre E-posta \> İstenmeyen Posta'ya ve Grafik Çözümlemesi'ne göre görüntüleme
 
-![Tehdit koruması durumu raporunda istenmeyen postalar için algılama teknolojisi görünümü.](../../media/threat-protection-status-report-spam-detection-tech-view.png)
+:::image type="content" source="../../media/threat-protection-status-report-spam-detection-tech-view.png" alt-text="Tehdit koruması durum raporunda istenmeyen posta için Algılama teknolojisi görünümü" lightbox="../../media/threat-protection-status-report-spam-detection-tech-view.png":::
 
 Verileri **E-posta İstenmeyen \> Postalara Göre** Görüntüle ve **Algılama** Teknolojisine Göre Grafik Çözümleme görünümünde, grafikte aşağıdaki bilgiler gösterilir:
 
@@ -598,7 +606,7 @@ Tehdit **koruması durumu sayfasında** Zamanlama oluştur ![simgesi.](../../med
 
 ### <a name="view-data-by-email--malware-and-chart-breakdown-by-detection-technology"></a>Verileri E-posta Kötü Amaçlı Yazılımına \> ve Grafik Çözümlemesi'ne göre Algılama Teknolojisine göre görüntüleme
 
-![Tehdit koruması durumu raporunda kötü amaçlı yazılım için algılama teknolojisi görünümü.](../../media/threat-protection-status-report-malware-detection-tech-view.png)
+:::image type="content" source="../../media/threat-protection-status-report-malware-detection-tech-view.png" alt-text="Tehdit koruması durumu raporunda kötü amaçlı yazılım için Algılama teknolojisi görünümü" lightbox="../../media/threat-protection-status-report-malware-detection-tech-view.png":::
 
 > [!NOTE]
 > Mayıs 2021'den başlayarak, e-postada yapılan kötü amaçlı yazılım algılamaları, ileti eklere zararlı **URL'ler eklemek** için güncelleştirildi. Bu değişiklik, Verileri E-posta Kimlik Avı **\>** görünümüne göre görüntüleme ve Verileri Kötü Amaçlı E-posta Kötü Amaçlı E-postayla Görüntüle görünümüne kadar algılama ses **düzeyinin bir değişimini değiştirebilir.\>** Başka bir deyişle, geleneksel olarak kimlik avı olarak tanımlanan ileti ekleri için zararlı URL'ler artık kötü amaçlı yazılım olarak da tanımlanır.
@@ -606,7 +614,7 @@ Tehdit **koruması durumu sayfasında** Zamanlama oluştur ![simgesi.](../../med
 Verileri **E-Posta Kötü Amaçlı \> Yazılımına** Göre Görüntüle **ve Algılama** Teknolojisine Göre Grafik Çözümleme görünümünde, grafikte aşağıdaki bilgiler gösterilir:
 
 - **Dosya detonasyonu**<sup>\*</sup>: Ekleri Algılama Kasa Algılama.
-- **Dosya detonasyonu itibarı**<sup>\*</sup>: Defender tarafından oluşturulan tüm kötü amaçlı dosya Office 365 detonations.
+- **Dosya detonasyonu itibarı**<sup>\*</sup>: Tüm kötü amaçlı dosya ünleri, Office 365 için Defender olarak oluşturulur.
 - **Dosya itibarı**
 - **Kötü amaçlı yazılımdan koruma altyapısı**<sup>\*</sup>: Kötü amaçlı yazılımdan koruma altyapılarından algılama.
 - **Kötü amaçlı yazılımdan koruma ilkesi dosya türü bloğu**: Bunlar, iletide tanımlanan kötü amaçlı dosya türü nedeniyle filtrelenmiş e-posta iletileridir.
@@ -630,7 +638,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 
 - **Tarih (UTC)** **Başlangıç tarihi** ve **Bitiş tarihi**
 - **Algılama**: Grafikle aynı değerlerdir.
-- **Koruma:** **MDO** (Office 365 Defender) **veya EOP**
+- **Koruma:** **MDO** (Office 365 için Defender) veya **EOP**
 - **Yön**:
   - **Hepsi**
   - **Gelen**
@@ -654,7 +662,7 @@ Koruma **durumu sayfasında Zamanlama** oluştur ![simgesine tıklayın.](../../
 
 ### <a name="chart-breakdown-by-policy-type"></a>İlke türüne göre grafik çözümleme
 
-![Tehdit koruması durumu raporunda kimlik avı e-postaları, istenmeyen e-postalar veya kötü amaçlı yazılım e-postaları için ilke türü görünümü.](../../media/threat-protection-status-report-phishing-policy-type-view.png)
+:::image type="content" source="../../media/threat-protection-status-report-phishing-policy-type-view.png" alt-text="Tehdit koruması durumu raporunda kimlik avı e-postaları, istenmeyen e-posta veya kötü amaçlı yazılım e-postaları için İlke türü görünümü" lightbox="../../media/threat-protection-status-report-phishing-policy-type-view.png":::
 
 Verileri **E-posta \>** KimlikLerine Göre **Görüntüle, \>****\>** Verileri E-posta İstenmeyen Posta'ya Göre Görüntüle veya Verileri E-posta Kötü Amaçlı E-posta görünümlerine göre görüntüle'de, İlke türüne göre grafik kırılım'ı seçmek grafikte aşağıdaki bilgileri gösterir:
 
@@ -680,7 +688,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 
 - **Tarih (UTC)** **Başlangıç tarihi** ve **Bitiş tarihi**
 - **Algılama**:
-  - **URL kötü amaçlı itibarı**<sup>\*</sup>: Diğer birçok müşteri tarafından Office 365 için Defender'dan oluşturulan kötü amaçlı URL Microsoft 365.
+  - **URL kötü amaçlı itibarı**<sup>\*</sup>: Diğer birçok müşteride Office 365 için Defender ve detonasyonlardan oluşturulan kötü amaçlı URL Microsoft 365.
   - **Gelişmiş filtre**: Kimlik avı, makine öğrenimine dayalı sinyaller.
   - **Genel filtre**: Kimlik avı, analist kurallarına dayalı sinyaller.
   - **Poof intra-org**: Sender is trying to spoof the recipient domain.
@@ -698,7 +706,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
   - **Dosyanın detonasyonu**<sup>\*</sup>
   - **Dosya detonasyonu itibarı**<sup>\*</sup>
   - **Kampanya**<sup>\*</sup>
-- **Koruma:** **MDO** (Office 365 Defender) **veya EOP**
+- **Koruma:** **MDO** (Office 365 için Defender) veya **EOP**
 - **Yön**:
   - **Hepsi**
   - **Gelen**
@@ -716,7 +724,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 - **İlke adı (yalnızca ayrıntılar tablosu görünümü)**: **Hepsi** veya belirtilen ilke.
 - **Alıcılar**
 
-<sup>\*</sup>Yalnızca Office 365 için Defender
+<sup>\*</sup>Office 365 için Defender bir
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
@@ -724,7 +732,7 @@ Tehdit **koruması durumu sayfasında** Zamanlama oluştur ![simgesi.](../../med
 
 ### <a name="chart-breakdown-by-delivery-status"></a>Teslim durumuna göre grafik çözümlemesi
 
-![Tehdit koruması durumu raporunda kimlik avı e-postaları ve kötü amaçlı yazılım e-postaları için teslim durumu görünümü.](../../media/threat-protection-status-report-phishing-delivery-status-view.png)
+:::image type="content" source="../../media/threat-protection-status-report-phishing-delivery-status-view.png" alt-text="Tehdit koruması durumu raporunda kimlik avı e-postaları ve kötü amaçlı yazılım e-postaları için Teslim durumu görünümü" lightbox="../../media/threat-protection-status-report-phishing-delivery-status-view.png":::
 
 Verileri **E-posta \>** KimlikLerine Göre **Görüntüle, \>****\>** Verileri E-posta İstenmeyen Posta'ya Göre Görüntüle veya Verileri Kötü  Amaçlı E-posta Görünümlerine Göre Görüntüle'de, Teslim durumuna göre grafik kırılımını seçmek grafikte aşağıdaki bilgileri gösterir:
 
@@ -753,7 +761,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 
 - **Tarih (UTC)** **Başlangıç tarihi** ve **Bitiş tarihi**
 - **Algılama**:
-  - **URL kötü amaçlı itibarı**<sup>\*</sup>: Diğer birçok müşteri tarafından Office 365 için Defender'dan oluşturulan kötü amaçlı URL Microsoft 365.
+  - **URL kötü amaçlı itibarı**<sup>\*</sup>: Diğer birçok müşteride Office 365 için Defender ve detonasyonlardan oluşturulan kötü amaçlı URL Microsoft 365.
   - **Gelişmiş filtre**: Kimlik avı, makine öğrenimine dayalı sinyaller.
   - **Genel filtre**: Kimlik avı, analist kurallarına dayalı sinyaller.
   - **Poof intra-org**: Sender is trying to spoof the recipient domain.
@@ -771,7 +779,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
   - **Dosyanın detonasyonu**<sup>\*</sup>
   - **Dosya detonasyonu itibarı**<sup>\*</sup>
   - **Kampanya**<sup>\*</sup>
-- **Koruma:** **MDO** (Office 365 Defender) **veya EOP**
+- **Koruma:** **MDO** (Office 365 için Defender) veya **EOP**
 - **Yön**:
   - **Hepsi**
   - **Gelen**
@@ -789,7 +797,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 - **İlke adı (yalnızca ayrıntılar tablosu görünümü)**: **Hepsi** veya belirtilen ilke.
 - **Alıcılar**
 
-<sup>\*</sup>Yalnızca Office 365 için Defender
+<sup>\*</sup>Office 365 için Defender bir
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
@@ -797,9 +805,9 @@ Tehdit **koruması durumu sayfasında** Zamanlama oluştur ![simgesi.](../../med
 
 ### <a name="view-data-by-content--malware"></a>Verileri İçerik Kötü Amaçlı Yazılımına göre \> görüntüleme
 
-![Tehdit koruması durum raporunda içerik kötü amaçlı yazılım görünümü.](../../media/threat-protection-status-report-content-malware-view.png)
+:::image type="content" source="../../media/threat-protection-status-report-content-malware-view.png" alt-text="Tehdit koruması durum raporunda İçerik kötü amaçlı yazılım görünümü" lightbox="../../media/threat-protection-status-report-content-malware-view.png":::
 
-Verileri İçerik **Kötü Amaçlı Yazılıma \>** Göre Görüntüle görünümünde, bu kuruluşlar için Microsoft Defender'ın Office 365 gösterilir:
+Verileri **İçerik Kötü Amaçlı Yazılıma \> Göre** Görüntüle görünümünde, bu kuruluşa ve kuruluşlara ilişkin Office 365 için Microsoft Defender gösterilir:
 
 - **Kötü amaçlı yazılımdan** koruma altyapısı: SharePoint'te yerleşik OneDrive algılaması Microsoft Teams ve Microsoft Teams'de [tespit edilen kötü amaçlı Microsoft 365](virus-detection-in-spo.md).
 - **MDO detonasyonu**: Dosya Eki Kasa tarafından algılanan SharePoint [, OneDrive dosyaları ve Microsoft Teams](mdo-for-spo-odb-and-teams.md).
@@ -826,7 +834,7 @@ Tehdit **koruması durumu sayfasında** Zamanlama oluştur ![simgesi.](../../med
 
 ### <a name="view-data-by-system-override-and-chart-breakdown-by-reason"></a>Verileri Sistem geçersiz kılma ve Neden'e göre Grafik çözümlemeye göre görüntüleme
 
-![Tehdit koruma durumu raporunda İletiyi geçersiz kılma ve Neden görünümüne göre Grafik çözümlemesi.](../../media/threat-protection-status-report-system-override-view-breakdown-by-reason.png)
+:::image type="content" source="../../media/threat-protection-status-report-system-override-view-breakdown-by-reason.png" alt-text="Tehdit koruma durumu raporunda İletiyi geçersiz kılma ve Neden görünümüne göre Grafik çözümleme" lightbox="../../media/threat-protection-status-report-system-override-view-breakdown-by-reason.png":::
 
 Verileri Sistem **geçersiz kılmaya göre görüntüleme ve** **Nedene göre Grafik çözümlemesi** görünümünde, grafikte aşağıdaki geçersiz kılma nedeni bilgileri gösterilir:
 
@@ -872,7 +880,7 @@ Tehdit **koruması durumu sayfasında** Dışarı Aktar ![simgesi.](../../media/
 
 ### <a name="view-data-by-system-override-and-chart-breakdown-by-delivery-location"></a>Verileri Sistem geçersiz kılma ve Teslim konumuna göre Grafik kırılım'a göre görüntüleme
 
-![Tehdit koruma durumu raporunda İletiyi geçersiz kılma ve Teslim Konumu görünümüne göre grafik çözümleme.](../../media/threat-protection-status-report-system-override-view-breakdown-by-delivery-location.png)
+:::image type="content" source="../../media/threat-protection-status-report-system-override-view-breakdown-by-delivery-location.png" alt-text="Tehdit koruma durumu raporuna göre İletiyi geçersiz kılma ve Teslim Konumu görünümüne göre Grafik çözümleme" lightbox="../../media/threat-protection-status-report-system-override-view-breakdown-by-delivery-location.png":::
 
 Verileri Sistem **geçersiz kılmaya göre görüntüleme ve** Teslim **konumuna** göre Grafik çözümlemesi görünümünde, grafikte aşağıdaki geçersiz kılma nedeni bilgileri gösterilir:
 
@@ -921,7 +929,7 @@ Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabil
 - **İlke adı (yalnızca ayrıntılar tablosu görünümü)**: **All**
 - **Alıcılar**
 
-<sup>\*</sup>Yalnızca Office 365 için Defender
+<sup>\*</sup>Office 365 için Defender bir
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
@@ -933,7 +941,7 @@ En **üst kötü amaçlı** yazılım raporu, EOP'de kötü amaçlı yazılımda
 
 Raporu bir web portalında görüntülemek Microsoft 365 Defender E-posta  \> Raporları ve **işbirliği & E-posta** \> **& gidin**. **E-posta ve & raporları sayfasında En** iyi kötü amaçlı **yazılım'ı bulun ve** Ayrıntıları **görüntüle'ye tıklayın**. Doğrudan rapora gitmek için ' i açın <https://security.microsoft.com/reports/TopMalware>.
 
-![E-posta ve işbirliği raporları sayfasındaki & yazılımı widget'ı.](../../media/top-malware-report-widget.png)
+:::image type="content" source="../../media/top-malware-report-widget.png" alt-text="E-posta ve işbirliği raporları sayfasındaki & kötü amaçlı yazılım widget'ı" lightbox="../../media/top-malware-report-widget.png":::
 
 Pasta grafikte bir grafiğin üzerine gelindiğinde, bir tür kötü amaçlı yazılımın adını ve bu kötü amaçlı yazılıma sahip olduğu saptanan ileti sayısıyla ilgili bilgi edinebilirsiniz.
 
@@ -946,20 +954,20 @@ Filtre'ye **tıklarsanız**, Başlangıç tarihi ve Bitiş tarihi **ile bir tari
 
 Üst kötü **amaçlı yazılım** sayfasında Zamanlama oluştur ![simgesi.](../../media/m365-cc-sc-create-icon.png) **[Zamanlama oluştur ve](#schedule-report)** Dışarı ![Aktar simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** aktar düğmeleri kullanılabilir.
 
-![En üst kötü amaçlı yazılım raporu görünümü.](../../media/top-malware-report-view.png)
+:::image type="content" source="../../media/top-malware-report-view.png" alt-text="En üst kötü amaçlı yazılım raporu görünümü" lightbox="../../media/top-malware-report-view.png":::
 
 ## <a name="top-senders-and-recipients-report"></a>En çok gönderenler ve alıcılar raporu
 
-En **çok gönderenler ve alıcılar** raporu hem EOP'de hem de Office 365 için Defender'da kullanılabilir; bununla birlikte, raporlar farklı veriler içerir. Örneğin, EOP müşterileri en çok kötü amaçlı yazılım, istenmeyen posta ve kimlik avı (kimlik avı) alıcılarıyla ilgili bilgileri iletiyi iletiyi sınar ancak [Kasa](safe-attachments.md) Ekler veya kimliğe bürünme koruması tarafından algılanan kimlik avı hakkında bilgileri [görüntülemez](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+En **Çok gönderenler ve alıcılar raporu** hem EOP'de hem de Office 365 için Defender, ancak raporlarda farklı veriler vardır. Örneğin, EOP müşterileri en çok kötü amaçlı yazılım, istenmeyen posta ve kimlik avı (kimlik avı) alıcılarıyla ilgili bilgileri iletiyi iletiyi sınar ancak [Kasa](safe-attachments.md) Ekler veya kimliğe bürünme koruması tarafından algılanan kimlik avı hakkında bilgileri [görüntülemez](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
-En **Çok gönderenler** ve alıcılar, eOP tarafından algılanan iletiler için en yüksek alıcıların yanı sıra en çok gelen iletilerin yanı sıra koruma özellikleri için de EOP ve Defender Office 365 gösterir. Varsayılan olarak, rapor son haftanın verilerini gösterir, ancak son 90 gün için de veriler kullanılabilir.
+En **Çok gönderenler** ve alıcılar, eOP ve EOP tarafından algılanan iletiler için en iyi alıcıların yanı sıra en çok ileti gönderenleri ve en Office 365 için Defender gösterir. Varsayılan olarak, rapor son haftanın verilerini gösterir, ancak son 90 gün için de veriler kullanılabilir.
 
 Raporu aşağıdaki portalda görüntülemek için Microsoft 365 Defender E-posta <https://security.microsoft.com> \> Raporları ve **işbirliği & E-posta** \> **& gidin**. **E-posta & raporları sayfasında**, En çok gönderenler **ve alıcılar raporunu bulun ve Ayrıntıları** **görüntüle'ye tıklayın**. Doğrudan rapora gitmek için aşağıdaki URL'lerden birini açın:
 
 - Office 365 için Defender:<https://security.microsoft.com/reports/TopSenderRecipientsATP>
 - EOP: <https://security.microsoft.com/reports/TopSenderRecipient>
 
-![Raporlar panosunda en çok gönderenler ve alıcılar widget'ı.](../../media/top-senders-and-recipients-widget.png)
+:::image type="content" source="../../media/top-senders-and-recipients-widget.png" alt-text="Raporlar panosunda En çok gönderenler ve alıcılar widget'ı" lightbox="../../media/top-senders-and-recipients-widget.png":::
 
 Pasta grafikte bir çizginin üzerine gelindiğinde, gönderenin veya alıcının ileti sayısını alabilirsiniz.
 
@@ -985,11 +993,11 @@ Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et**
 
 Üst **gönderenler ve alıcılar sayfasında** Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **Dışarı** Aktar düğmesi kullanılabilir.
 
-![İlk gönderenler ve alıcılar raporunda En çok posta gönderenler görünümü için verileri gösterme.](../../media/top-senders-and-recipients-report-view.png)
+:::image type="content" source="../../media/top-senders-and-recipients-report-view.png" alt-text="Üst gönderenler ve alıcılar raporunda En çok posta gönderenler için verileri göster görünümü" lightbox="../../media/top-senders-and-recipients-report-view.png":::
 
 ## <a name="url-protection-report"></a>URL koruma raporu
 
-**URL koruma raporu yalnızca** Microsoft Defender'da Office 365. Daha fazla bilgi için bkz. [URL koruma raporu](view-reports-for-mdo.md#url-protection-report).
+**URL koruma raporu** yalnızca url'de Office 365 için Microsoft Defender. Daha fazla bilgi için bkz. [URL koruma raporu](view-reports-for-mdo.md#url-protection-report).
 
 ## <a name="user-reported-messages-report"></a>Kullanıcı ileti raporunu bildirdi
 
@@ -1000,7 +1008,7 @@ Kullanıcı **tarafından bildirilen iletiler** raporu, kullanıcıların Rapor 
 
 Raporu bir web portalında görüntülemek Microsoft 365 Defender E-posta  \> Raporları ve **işbirliği & E-posta** \> **& gidin**. **E-posta & raporları sayfasında Kullanıcı** tarafından bildirilen **iletiler'i bulun ve** Ayrıntıları görüntüle'ye **tıklayın**. Doğrudan rapora gitmek için ' i açın <https://security.microsoft.com/reports/userSubmissionReport>. Bir portalda [yönetici gönderileri'ne Microsoft 365 Defender](admin-submission.md) Gönderilere **Git'e tıklayın**.
 
-![Kullanıcı, E-posta Ve birlikte çalışma raporları & ileti pencere öğesi olarak bildirdi.](../../media/user-reported-messages-widget.png)
+:::image type="content" source="../../media/user-reported-messages-widget.png" alt-text="E-posta ve işbirliği raporları sayfasındaki kullanıcı tarafından & ileti widget'ı" lightbox="../../media/user-reported-messages-widget.png":::
 
 Filtre'ye tıklar ve beliren açılır grafikte aşağıdaki  değerlerden birini veya birden fazlasını seçerek hem grafiği hem de ayrıntılar tablosuna filtre yapabilirsiniz:
 
@@ -1027,7 +1035,7 @@ Girdileri grupla için, **Grup'a** tıklayın ve açılan listeden aşağıdaki 
 - **Sonucu yeniden elde  ede**
 - **Kimlik avı benzetimi**
 
-![Kullanıcı ileti raporunu bildirdi.](../../media/user-reported-messages-report.png)
+:::image type="content" source="../../media/user-reported-messages-report.png" alt-text="Kullanıcı tarafından bildirilen iletiler raporu" lightbox="../../media/user-reported-messages-report.png":::
 
 Grafiğin altındaki ayrıntılar tablosu aşağıdaki bilgileri gösterir:
 
@@ -1045,7 +1053,7 @@ Grafiğin altındaki ayrıntılar tablosu aşağıdaki bilgileri gösterir:
 - **Kimlik avını bildirme**
 - **Kötü amaçlı yazılım bildir**
 - **İstenmeyen posta bildir**'
-- **Tetikleyici soruşturma** (Office 365 için Defender)
+- **Tetik araştırma** (Office 365 için Defender)
 
 Kullanıcı **ileti bildirdi sayfasında** Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](#export-report)** Aktar düğmesi kullanılabilir.
 
@@ -1176,4 +1184,4 @@ Dışarı aktarıldı .csv 150.000 satırla sınırlıdır. Veri 150.000'den faz
 
 [Portalda posta akışı raporlarını Microsoft 365 Defender görüntüleme](view-mail-flow-reports.md)
 
-[Office 365 için Defender raporlarını görüntüleme](view-reports-for-mdo.md)
+[Raporlar için raporları Office 365 için Defender](view-reports-for-mdo.md)

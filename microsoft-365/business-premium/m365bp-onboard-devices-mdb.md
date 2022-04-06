@@ -1,13 +1,13 @@
 ---
-title: Kuruluş cihazlarınızı İş için Microsoft Defender'a ekleme
-description: Kuruluş cihazlarınızı İş için Microsoft Defender'a ekleme
+title: Daha fazla yardım için organizasyon cihazlarınızı İş için Microsoft Defender
+description: Daha fazla yardım için organizasyon cihazlarınızı İş için Microsoft Defender
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/14/2022
+ms.date: 04/01/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,39 +17,43 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 44015c7cf568b968a4910433faa7700d550586fb
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: e9810b453136025e094ef8a0e88bff526f2c5a51
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63705622"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634789"
 ---
-# <a name="onboard-managed-devices-to-microsoft-defender-for-business"></a>Yönetilen cihazları İş için Microsoft Defender'a ekleme
+# <a name="onboard-managed-devices-to-microsoft-defender-for-business"></a>Yönetilen cihazları ekleme ve İş için Microsoft Defender
 
-Yeni nesil koruma (virüsten koruma, kötü amaçlı yazılımdan koruma ve bulut teslimi koruma), güvenlik duvarı koruması, web içeriği filtreleme ve daha fazlası ile korumak için cihazları İş için Microsoft Defender'a yükleyin. 
+Yeni nesil İş için Microsoft Defender (virüsten koruma, kötü amaçlı yazılımdan koruma ve bulut teslimi koruma), güvenlik duvarı koruması, web içeriği filtreleme ve daha fazlası ile korumak için cihazları başka cihazlara yükleyin. 
 
 Cihazları onboard yapmak için çeşitli seçeneklerden birini seçebilirsiniz:
 
 - [Microsoft Endpoint Manager'a önceden kaydolan Windows cihazlar için otomatik Microsoft Endpoint Manager](#use-automatic-onboarding-for-windows-devices-that-are-already-enrolled-in-microsoft-endpoint-manager)
+
 - [Kullanıcıları ve macOS cihazlarına Windows betik kullanarak ekleme](#use-a-local-script-to-onboard-windows-and-macos-devices)
+
 - [Cihazları Endpoint Manager (Windows](#use-microsoft-endpoint-manager-to-enroll-devices), macOS, iOS ve Android) kaydetmek için Endpoint Manager'i kullanın ve ardından bu cihazlara İş için Defender ilkeleri uygulama
 
 Bu makale şunları da içerir:
 
 - [Windows cihazında algılama Windows çalıştırma](#run-a-detection-test-on-a-windows-device)
+
 - [Cihazları aşamalı olarak ekleme](#onboard-devices-gradually)
+
 - [Bir cihaz değiştirilirse veya bir](#offboard-a-device) kişi kuruluştan ayrılırsa cihaz çıkardan çıkar
 
 > [!IMPORTANT]
-> Bir sorun olursa ve ekleme işleminiz başarısız olursa bkz. [İş için Microsoft Defender sorun giderme](../security/defender-business/mdb-troubleshooting.yml).
+> Bir sorun olursa ve ekleme işleminiz başarısız olursa, sorun gidermeye İş için Microsoft Defender [bakın](../security/defender-business/mdb-troubleshooting.yml).
 
 ## <a name="use-automatic-onboarding-for-windows-devices-that-are-already-enrolled-in-microsoft-endpoint-manager"></a>Microsoft Endpoint Manager'a önceden kaydolan Windows cihazlar için otomatik Microsoft Endpoint Manager
 
-Otomatik ekleme seçeneği yalnızca Windows için geçerlidir. Otomatik ekleme, siz İş için Defender'ı edinmeden önce Microsoft Intune'te Microsoft Endpoint Manager, Microsoft Intune veya Mobil Cihaz Yönetimi'Windows kullanıyorsa ve zaten Windows cihazlarınız varsa kullanılabilir Endpoint Manager. 
+Otomatik ekleme seçeneği yalnızca Windows için geçerlidir. Otomatik ekleme, siz İş için Defender'ı edinmeden önce Microsoft Intune'te Microsoft Endpoint Manager, Microsoft Intune veya Mobil Cihaz Yönetimi (MDM) kullanıyorsa ve bu uygulamalara zaten sahipsanız Windows  Endpoint Manager.'a Endpoint Manager. 
 
 cihaz Windows zaten Endpoint Manager, siz İş için Defender'ı ayarlama ve yapılandırma sürecindeyken, İş için Defender bu cihazları algılar. Windows cihazlarının hepsi veya bazısı için otomatik ekleme özelliğini kullanmak Windows soruldu. Tüm cihaz ve Windows bir kerede ekleyebilir veya başlangıç yapmak üzere belirli cihazlar seçin ve daha sonra daha fazla cihaz ekleyin.
 
-Otomatik ekleme hakkında daha fazla bilgi edinmek için, İşletmeler için Microsoft Defender'ı ayarlamak için sihirbazı kullanma makalesinde 2 [. Adım'a bakın](../security/defender-business/mdb-use-wizard.md).
+Otomatik ekleme hakkında daha fazla bilgi edinmek için şu bağlantıdan 2. adıma bakın: Otomatik ekleme [İş için Microsoft Defender](../security/defender-business/mdb-use-wizard.md).
 
 ## <a name="use-a-local-script-to-onboard-windows-and-macos-devices"></a>Kullanıcıları ve macOS cihazlarına Windows betik kullanarak ekleme
 
@@ -68,11 +72,12 @@ Bu yöntemle bir defada en fazla 10 cihaz abilirsiniz.
 5. Aşağıdaki makalelerde yer alan yönergeleri izleyin:
 
    - Windows cihazlar: [Yerel Windows kullanarak cihazları ekleme](../security/defender-endpoint/configure-endpoints-script.md#onboard-windows-devices-using-a-local-script)
+
    - macOS cihazları: [macOS'ta Uç Nokta için Microsoft Defender için el ile dağıtım](../security/defender-endpoint/mac-install-manually.md#download-installation-and-onboarding-packages)
 
 ## <a name="use-microsoft-endpoint-manager-to-enroll-devices"></a>Cihazları Microsoft Endpoint Manager için mobil cihaz kullanma
 
-zaten Endpoint Manager kullanıyorsanız (Microsoft Intune ve Mobil Cihaz Yönetimi dahil), Endpoint Manager'ı kullanarak kuruluş cihazlarını eklemeye devam edebilirsiniz. Uygulama Endpoint Manager iOS ve Android cihazları dahil olmak üzere bilgisayarları, tabletleri ve telefonları dahil edin.
+zaten Endpoint Manager (Microsoft Intune ve Mobil Cihaz Yönetimi içerir) kullanıyorsanız, Endpoint Manager'ı kullanarak kuruluş cihazlarını eklemeye devam edin. Uygulama Endpoint Manager iOS ve Android cihazları dahil olmak üzere bilgisayarları, tabletleri ve telefonları dahil edin.
 
 Kuruluşta Android cihazları kullanıyorsa, bu yöntemi kullanın.
 
@@ -131,6 +136,7 @@ Bir cihazla çıkarılacak şekilde yer almak için şu adımları izleyin:
 7. Betiği, çıkaracakları her cihaza çalıştırın. Bu görevle ilgili yardıma mı ihtiyacınız var? Aşağıdaki kaynaklara bakın:   
 
    - Windows için: [Yerel Windows kullanarak çıkar çıkar](../security/defender-endpoint/configure-endpoints-script.md#offboard-devices-using-a-local-script)
+   
    - macOS cihazları: [macOS'ta kaldırma](../security/defender-endpoint/mac-resources.md#uninstalling)
 
 > [!IMPORTANT]

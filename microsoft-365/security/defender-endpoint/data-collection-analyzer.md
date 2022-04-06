@@ -1,5 +1,5 @@
 ---
-title: Windows'da gelişmiş sorun giderme için veri toplama
+title: Windows'da gelişmiş sorun giderme için veri Windows
 description: Karmaşık sorun giderme senaryolarında veri toplamak üzere istemci çözümleyicisini kullanmayı öğrenin
 keywords: bilgi toplama, mdeclientanalyzer sorunlarını giderme, gelişmiş sorun giderme
 ms.prod: m365-security
@@ -16,31 +16,31 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 513432dfb24af89451c4d8290ce5fde0951819b9
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 2825bc87750dc9bb130e35f9a4997283e470f869
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63322709"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469899"
 ---
-# <a name="data-collection-for-advanced-troubleshooting-on-windows"></a>Windows'da gelişmiş sorun giderme için veri toplama
+# <a name="data-collection-for-advanced-troubleshooting-on-windows"></a>Windows'da gelişmiş sorun giderme için veri Windows
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Microsoft destek uzmanlarıyla işbirliği yapmak üzere daha karmaşık senaryolarda sorun giderme için veri toplamak üzere istemci çözümleyicisini kullanabilirsiniz. Çözümleyici betiği bu amaç için diğer parametreleri destekler ve araştırılması gereken gözlemlenen belirtilere dayalı olarak belirli bir günlük kümesi toplayabilirsiniz.
 
 '**MDEClientAnalyzer.cmd /?**' çalıştırın kullanılabilir parametrelerin listesini ve onların açıklamasını görmek için:
 
-![Komut satırda istemci çözümleyicisi parametrelerinin görüntüsü.](images/d89a1c04cf8441e4df72005879871bd0.png)
+:::image type="content" source="images/d89a1c04cf8441e4df72005879871bd0.png" alt-text="MDEClientAnalyzer.cmd parametreleri" lightbox="images/d89a1c04cf8441e4df72005879871bd0.png":::
 
 > [!NOTE]
-> Herhangi bir gelişmiş sorun giderme parametresi kullanıldığında, çözümleyici Microsoft Defender Virüsten Koruma [MpCmdRun.exe](/microsoft-365/security/defender-endpoint/command-line-arguments-microsoft-defender-antivirus) destek günlüklerini toplamak için çözümleyiciyi aratır.
+> Herhangi bir gelişmiş sorun giderme parametresi kullanıldığında, çözümleyici ilgili destek [ günlükleriniMpCmdRun.exe](/microsoft-365/security/defender-endpoint/command-line-arguments-microsoft-defender-antivirus) için Microsoft Defender Virüsten Koruma aratır.
 
-**-h** - Standart günlük [kümesine ek](/windows-hardware/test/wpt/wpr-command-line-options) olarak ayrıntılı bir genel performans izlemesi toplamak için Windows Performans Kaydedicisi'ne çağrılar.
+**-h** - Standart [Windows ek olarak](/windows-hardware/test/wpt/wpr-command-line-options) ayrıntılı bir genel performans izlemesi toplamak için Performans Kaydedicisi'ne çağrılar.
 
-**-l** - Hafif bir perfmon [izlemesi](/windows-server/remote/remote-desktop-services/rds-rdsh-performance-counters) toplamak için yerleşik Windows Performans İzleyicisi'ne çağrılar. Zaman içinde oluşan ancak isteğe bağlı olarak yeniden üreti güç performans düşüşü sorunlarının tanılaması sırasında bu yararlı olabilir.
+**-l** - Hafif bir perfmon [Windows Performans İzleyicisi](/windows-server/remote/remote-desktop-services/rds-rdsh-performance-counters) için yerleşik dizinlere çağrılar. Zaman içinde oluşan ancak isteğe bağlı olarak yeniden üreti güç performans düşüşü sorunlarının tanılaması sırasında bu yararlı olabilir.
 
 **-c** - Gerçek [zamanlı dosya sisteminin,](/sysinternals/downloads/procmon) kayıt defterinin ve süreç/iş parçacığı etkinliğinin gelişmiş izlenmesi için süreç izlemesine çağrılar. Bu özellikle çeşitli uygulama uyumluluk senaryolarında sorun giderirken kullanışlıdır.
 
@@ -48,7 +48,7 @@ Microsoft destek uzmanlarıyla işbirliği yapmak üzere daha karmaşık senaryo
 
 **-b** - '-c' ile aynıdır, ancak işlem izleme izlemesi bir sonraki başlatma sırasında başlatılır ve yalnızca -b yeniden kullanılırken durdurulur.
 
-**-a** - Virüsten koruma işlemiyle (MsMpEng.exe) ilgili yüksek CPU sorunlarının çözümlemesine özgü ayrıntılı bir performans izlemesi toplamak için [Windows](/windows-hardware/test/wpt/wpr-command-line-options) Performans Kaydedicisi'ne MsMpEng.exe.
+**-a** - Virüsten koruma [Windows](/windows-hardware/test/wpt/wpr-command-line-options) (MsMpEng.exe) ile ilgili yüksek CPU sorunlarını çözümlemeye özgü ayrıntılı bir performans izlemesi toplamak için Performans Kaydedicisi'ne MsMpEng.exe.
 
 **-v** - En ayrıntılı [ -MpCmdRun.exe bayraklarıyla](/windows/security/threat-protection/microsoft-defender-antivirus/command-line-arguments-microsoft-defender-antivirus) birlikte virüsten koruma yazılımı veya komut satırı bağımsız değişkenlerini kullanır.
 
@@ -56,7 +56,7 @@ Microsoft destek uzmanlarıyla işbirliği yapmak üzere daha karmaşık senaryo
 
 **-q** - Uç nokta DLPDiagnose.ps1 DLP için temel yapılandırmayı ve gereksinimleri doğrulayan çözümleyici 'Araçlar' dizininden gelen arama betiği kullanılır.
 
-**-d** - **MsSenseS**.exe (Windows Server 2016 veya daha eski işletim sistemi) ve ilgili işlemlerin bellek dökümü toplar.
+**-d** - **MsSenseS**.exe (Windows Server 2016 eski işletim sistemi) ve ilgili işlemlerin bellek dökümü toplar.
 
 - \* Bu bayrak, yukarıda belirtilen bayraklarla birlikte kullanılabilir.
 - \*\*[PPL korumalı işlemlerin](/windows-hardware/drivers/install/early-launch-antimalware) bellek dökümü yakalaması MsSense.exe MsMpEng.exe şu anda çözümleyici tarafından desteklenmiyor.
@@ -69,7 +69,7 @@ Microsoft destek uzmanlarıyla işbirliği yapmak üzere daha karmaşık senaryo
 
 Çözümleyici ve yukarıdaki tüm senaryo bayrakları, çözümleyici araç kümesi içinde de birlikte gelen 'RemoteMDEClientAnalyzer.cmd' çalıştırarak uzaktan başlatabilirsiniz:
 
-![Çözümleyici bilgilerine sahip komut çizgisinin resmi.](images/57cab9d82d08f672a92bf9e748ac9572.png)
+:::image type="content" source="images/57cab9d82d08f672a92bf9e748ac9572.png" alt-text="RemoteMDEClientAnalyzer.cmd parametreleri" lightbox="images/57cab9d82d08f672a92bf9e748ac9572.png":::
 
 > [!NOTE]
 >

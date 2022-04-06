@@ -1,6 +1,6 @@
 ---
-title: Uç nokta için Microsoft Defender'a düzgün bir şekilde ekli olduğunu doğrulamak için cihazda bir algılama testi çalıştırın
-description: Düzgün ekli olduğunu doğrulamak için, uç nokta için Microsoft Defender hizmetine eklenen bir cihazda algılama test betiği çalıştırın.
+title: Cihazda algılama testini çalıştırarak bu cihazda cihazın düzgün şekilde yerleşik olduğunu Uç Nokta için Microsoft Defender
+description: Düzgün ekli olduğunu doğrulamak için yakın zamanda Uç Nokta için Microsoft Defender hizmette eklenmiş bir cihazda algılama sınama betiği çalıştırın.
 search.appverid: met150
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,14 +16,14 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 41ba14fd2e4a9e3726e4ef4287812cf8d3ffb2d1
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 1d8459633d00d759fda1584e0084cd8ed4e12633
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63012009"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477269"
 ---
-# <a name="run-a-detection-test-on-a-newly-onboarded-microsoft-defender-for-endpoint-device"></a>Yeni eklenen Uç nokta cihazı için Microsoft Defender'da bir algılama testi çalıştırma
+# <a name="run-a-detection-test-on-a-newly-onboarded-microsoft-defender-for-endpoint-device"></a>Yeni eklenen bir cihazda algılama Uç Nokta için Microsoft Defender çalıştırma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
@@ -36,16 +36,16 @@ ms.locfileid: "63012009"
 - Windows Server, sürüm 1803
 - Windows Server 2019
 - Windows Server 2022
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Yönetim için Uç Nokta hizmeti için Microsoft Defender'a bir cihaz eklerken, buna ekleme cihazları da denir. Ekleme, cihazların sistem durumuyla ilgili sinyalleri hizmete bildirmesini sağlar.
+Yönetim için mobil cihaz hizmetine Uç Nokta için Microsoft Defender, buna ekleme cihazları da denir. Ekleme, cihazların sistem durumuyla ilgili sinyalleri hizmete bildirmesini sağlar.
 
 Bir cihazın hizmete başarıyla ekli olduğundan emin olmak veya bunu doğrulamak, dağıtım işleminin tamamına yönelik önemli bir adımdır. Beklenen tüm cihazların yönetiliyor olması güvence sağlar. 
 
-## <a name="verify-microsoft-defender-for-endpoint-onboarding-of-a-device-using-a-powershell-detection-test"></a>PowerShell algılama testi kullanarak cihazın Uç Nokta eklemesi için Microsoft Defender'ı doğrulama
+## <a name="verify-microsoft-defender-for-endpoint-onboarding-of-a-device-using-a-powershell-detection-test"></a>PowerShell Uç Nokta için Microsoft Defender sınaması kullanarak bir cihaz ekleme işlemi doğrulama
 
 Yeni eklenen bir cihazda aşağıdaki PowerShell betiğini çalıştırarak cihazın Uç nokta için Defender hizmetine düzgün bir şekilde rapor olduğunu doğrulayın.
 
@@ -56,8 +56,8 @@ Yeni eklenen bir cihazda aşağıdaki PowerShell betiğini çalıştırarak ciha
 
    1. Komut **İstemi'ne sağ tıklayın ve** Yönetici olarak **çalıştır'ı seçin**.
 
-      ![Window Başlat menüsü Yönetici olarak çalıştır'a işaret ediyor olabilir.](images/run-as-admin.png)
-
+      :::image type="content" source="images/run-as-admin.png" alt-text="Yönetici Başlat menüsü çalıştır'a işaret ediyor olan olay" lightbox="images/run-as-admin.png":::
+    
 3. Komut isteminde, aşağıdaki komutu kopyalayıp çalıştırın:
 
    ```powershell
@@ -70,4 +70,4 @@ Komut İstemi penceresi otomatik olarak kapanır. Başarılı olursa, yaklaşık
 
 - [Cihaz Windows ekleme](configure-endpoints.md)
 - [Sunucuları ekleme](configure-server-endpoints.md)
-- [Uç nokta ekleme sorunları için Microsoft Defender'da sorun giderme](/microsoft-365/security/defender-endpoint/troubleshoot-onboarding)
+- [Uç Nokta için Microsoft Defender ekleme sorunlarını giderme](/microsoft-365/security/defender-endpoint/troubleshoot-onboarding)

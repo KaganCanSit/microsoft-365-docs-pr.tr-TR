@@ -1,7 +1,7 @@
 ---
 title: Yönetime ve API'lere genel bakış
 ms.reviewer: ''
-description: Uç nokta için Microsoft Defender'daki yönetim araçları ve API kategorileri hakkında bilgi edinin
+description: Aşağıdaki yönetim araçları ve API kategorileri hakkında bilgi Uç Nokta için Microsoft Defender
 keywords: ekleme, api, siem, rbac, access, portal, tümleştirme, araştırma, yanıt, varlıklar, varlık, kullanıcı bağlamı, uygulama bağlamı, akış
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,20 +16,20 @@ ms.collection: M365-security-compliance
 ms.topic: conceptual
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 36975b55d8f26ae7788495543ae42922ea404c66
-ms.sourcegitcommit: 986ea76ecaceb5fe6b9616e553003e3c5b0df2e7
+ms.openlocfilehash: cc73531540222791eb39eeca74570f34ff78a1b7
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "63010794"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469789"
 ---
 # <a name="overview-of-management-and-apis"></a>Yönetime ve API'lere genel bakış
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-mgt-apis-abovefoldlink)
@@ -41,7 +41,7 @@ Müşteri ortamlarının ve yapılarının farklılık gösterebiliyor olması, 
 
 ## <a name="endpoint-onboarding-and-portal-access"></a>Uç nokta ekleme ve portal erişimi
 
-Cihaz ekleme, istemci cihazları için Microsoft Endpoint Manager Microsoft Intune ve sunucu cihazları için Microsoft Defender ile tam olarak tümleştirilmiştir; bu uygulama yapılandırma, dağıtım ve izlemenin tam 24 bit deneyimi sunar. Buna ek olarak, Uç Nokta için Microsoft Defender Grup İlkesi'ni ve cihaz yönetimi için kullanılan diğer üçüncü taraf araçlarını destekler.
+Cihaz ekleme, istemci cihazları için Microsoft Endpoint Manager Microsoft Intune ve sunucu cihazları için Microsoft Defender ile tam olarak tümleştirilmiştir; bu uygulama yapılandırma, dağıtım ve izlemenin tam 24 bit deneyimi sunar. Buna ek Uç Nokta için Microsoft Defender, cihaz grup ilkesi için kullanılan diğer üçüncü taraf araçlarını da desteklemektedir.
 
 Uç Nokta için Defender, portala erişimi olan kullanıcıların rol tabanlı erişim denetimi (RBAC) esnekliği aracılığıyla neler göreceği ve neler göreceği üzerinde daha fazla denetim sağlar. RBAC modeli, güvenlik ekipleri yapısının tüm çeşitlerini destekler:
 
@@ -51,19 +51,19 @@ Uç Nokta için Defender, portala erişimi olan kullanıcıların rol tabanlı e
 
 ## <a name="available-apis"></a>Kullanılabilir API'ler
 
-Uç Nokta için Microsoft Defender çözümü, tümleştirmeye hazır bir platformun üzerine yerleşik olarak gönderilir.
+En Uç Nokta için Microsoft Defender çözümü, tümleştirmeye hazır bir platformun üzerine üzerine yerleşiktir.
 
 Uç Nokta için Defender, veri ve eylemlerinin büyük bir fazlasını bir dizi programlı API aracılığıyla ortaya çıkarır. Bu API'ler, iş akışlarını otomatikleştirmenize ve Uç nokta özellikleri için Defender'a dayalı yenilikler yapmaya olanak sağlar.
 
-![Kullanılabilir API'nin ve Uç Nokta için Microsoft Defender'daki tümleştirmenin görüntüsü.](images/mdatp-apis.png)
+:::image type="content" source="images/mdatp-apis.png" alt-text="Uç Nokta için Microsoft Defender'de kullanılabilen API ve tümleştirme" lightbox="images/mdatp-apis.png":::
 
 Uç Nokta API'leri için Defender üç olarak gruplandı:
 
-- Uç Nokta API'leri için Microsoft Defender
+- Uç Nokta için Microsoft Defender API'leri
 - Ham veri akışı API'si
 - SIEM tümleştirmesi
 
-## <a name="microsoft-defender-for-endpoint-apis"></a>Uç Nokta API'leri için Microsoft Defender
+## <a name="microsoft-defender-for-endpoint-apis"></a>Uç Nokta için Microsoft Defender API'leri
 
 Uç Nokta için Defender, kullanıcılar veya SaaS uygulamaları bağlamında erişime olanak sağlayan, standart Bir Azure AD tabanlı kimlik doğrulama ve yetkilendirme modeli aracılığıyla ortaya çıkar, yapılandırılmış, açık ve kullanımı kolay bir modelde verilerin ve becerilerin ortaya çıkar olduğu katmanlı bir API modeli sunar. API modeli varlıkları ve özellikleri tutarlı bir şekilde göstermek için tasarlanmıştır.
 
@@ -79,7 +79,7 @@ Yanıt **API'si** hizmette ve cihazlarda işlem yapma olanağı sunar; müşteri
 
 Uç nokta ham veri akışı API'si için Defender, müşterilerin tek bir veri akışı içinde gerçek zamanlı etkinlikleri ve uyarıları tek bir veri akışı içinde teslim etmelerine olanak sağlayarak düşük gecikme süresi ve yüksek aktarım hızı teslim mekanizması sağlar.
 
-Uç Nokta için Defender olay bilgileri, uzun süreli veri bekletme için doğrudan Azure depolama alanına veya görselleştirme hizmetleri veya ek veri işleme altyapılarının kullanımı için Azure Olay Hub'larına gönderilir.
+Uç Nokta için Defender olay bilgileri, uzun vadeli veri bekletme için doğrudan Azure depolama alanına gönderilir veya görselleştirme hizmetleri Azure Event Hubs ek veri işleme altyapılarının kullanımına yönelik olarak kullanılır.
 
 Daha fazla bilgi için bkz. [Ham veri akışı API'si](raw-data-export.md).
 
@@ -92,6 +92,6 @@ Güvenlik bilgileri ve olay yönetimi (SIEM) tümleştirmesini etkinleştirerek,
 
 ## <a name="related-topics"></a>İlgili konular
 
-- [Uç Nokta API'leri için Microsoft Defender'a erişme](apis-intro.md)
+- [Api'lere Uç Nokta için Microsoft Defender erişme](apis-intro.md)
 - [Desteklenen API'ler](exposed-apis-list.md)
 - [Teknik iş ortağı fırsatları](partner-integration.md)

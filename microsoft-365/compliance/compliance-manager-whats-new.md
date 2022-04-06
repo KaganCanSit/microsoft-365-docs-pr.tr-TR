@@ -17,22 +17,43 @@ search.appverid:
 - MOE150
 - MET150
 description: Uyumluluk Yönetimi'ne ve gelecekleri hakkında daha fazla bilgi bulun. Güncelleştirilmiş değerlendirmeler, yeni değerlendirme şablonları, yeni eylemler ve daha fazlası hakkında bilgi okuyun.
-ms.openlocfilehash: 48aed2e173231e3945bcdd3de73052de9f970a5b
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 0f368be06b33f485ff687c998615fb8578845daf
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63317661"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634217"
 ---
 # <a name="whats-new-in-microsoft-compliance-manager"></a>Microsoft Uyumluluk Yöneticisi'nde yapılan güncelleştirmeler
 
 **Bu makalede:** Uyumluluk Yöneticisi'nde en son güncelleştirmeler hakkında bilgi alın.
 
-## <a name="february-2022"></a>Şubat 2022
+## <a name="march-2022"></a>Mart 2022
+
+### <a name="new-templates-available"></a>Kullanılabilir yeni şablonlar
+
+Uyumluluk Yöneticisi aşağıdaki yeni değerlendirme şablonlarını yayımladı:
+
+**Global**
+- ISO 37301
+- NIST 800-207 - Sıfır Güven Mimarisi
+- SIG 2022
+
+**US Government**
+- CMMC v2 Düzey 1
+- CMMC v2 Düzey 2
+
+**Kuzey Amerika**
+- Bilgi Güvenliği Yönetimi Yasası - İngiliz Columbia Eyaleti, CA
+
+Değerlendirme [şablonlarının tam listemizi görüntüleme](compliance-manager-templates-list.md).
 
 ### <a name="continuous-compliance-assessment-of-improvement-actions"></a>Geliştirme eylemlerinin sürekli uyumluluk değerlendirmesi
 
 Uyumluluk Yöneticisi'nde daha önce Güvenli Puan kapsamında yer alan 35'den fazla geliştirme eylemi için otomatik test ve kanıt oluşturma işlemi ekliyoruz. Sürekli uyumluluk değerlendirmesiyle, uyumluluk değerlendirmelerinize uygunsa ve ilgili çözümlere erişme lisansına sahipsanız, bu geliştirme eylemlerini hangi geliştirme eylemlerini tamamlamış olduğunuz hakkında güncelleştirmeler alırsınız. Sürekli uyumluluk değerlendirmesi, kullanıcıların geliştirme işlemlerinizin puanlama mantığının görünürlüğünü de sağlar ve belirli bir puanı neden aldığınıza ilişkin içgörü ve kanıt sağlar. Bu özellik, Güvenlik Puanı Microsoft 365 ile var olan tümleştirmelerin yanında çalışır ve daha önce yapılandırdınız tüm otomatik eylemler olduğu gibi çalışmaya devam eder. Otomatik test ayarları hakkında [daha fazla bilgi edinebilirsiniz](compliance-manager-setup.md#set-up-automated-testing).
+
+## <a name="february-2022"></a>Şubat 2022
+
 ### <a name="alerts-and-alert-policies"></a>Uyarılar ve uyarı ilkeleri
 
 Kullanıcılar artık, Bir kuruluşun izlemek istediği Uyumluluk Yöneticisi'nde değişiklikler için uyarılar kurabilirsiniz. Kolay kurulum sihirbazını kullanarak, şu tür olaylar olduğunda bildirim oluşturmak için uyarı ilkeleri oluşturabilirsiniz: geliştirme eylem puanı değişikliği, iyileştirme eylemi atama değişikliği, geliştirme eylemlerinde test veya uygulama durumu değişikliği ve geliştirme eyleminin Belgeler sekmesinde dosya karşıya yükleme veya silme. Uyumluluk Yöneticisi uyarıları ve [uyarı ilkelerini ziyaret ederek daha fazla bilgi edinin](compliance-manager-alert-policies.md).
@@ -43,18 +64,18 @@ Artık, hemen başlangıç ve çalışmanıza yardımcı olacak hızlı kurulum 
 
 ## <a name="november-2021"></a>Kasım 2021
 
-### <a name="zero-trust-integration-for-the-data-protection-baseline-template"></a>Veri Koruma Temel şablonu için Sıfır Güven tümleştirmesi
+### <a name="zero-trust-integration-for-the-data-protection-baseline-template"></a>Sıfır Güven Temel şablonu için veri tümleştirmesi
 
-Sıfır Güven, dijital emlakçının tüm katmanları üzerinde her işlemi açıkça ve sürekli doğrular, en az ayrıcalık tanıyın ve zekayı, gelişmiş algılamayı ve tehditlere gerçek zamanlı olarak yanıt dayandıran, proaktif, tümleşik bir yaklaşımdır. Tüm kullanıcılara dahil edilen Uyumluluk Yöneticisi'nin Veri Koruma Temel şablonu, şimdi aşağıdaki denetim aileleri arasında hizalanmış olan Sıfır Güven için 57 yeni denetimi ve 36 yeni eylemi tümleştirin:
+Sıfır Güven, dijital emlakçının tüm katmanları boyunca her işlemi açıkça ve sürekli doğrular, en az ayrıcalık tanıyın ve zekayı, gelişmiş algılamayı ve tehditlere gerçek zamanlı yanıt dayandıran, proaktif, tümleşik bir yaklaşımdır. Tüm kullanıcılara dahil edilen Uyumluluk Yöneticisi'nin Veri Koruma Temel şablonu, şimdi 57 yeni denetimi ve 36 yeni eylemi aşağıdaki denetim aileleri arasında Sıfır Güven tümleştirildi:
 
 - Sıfır Güven Uygulaması
-- Sıfır Güven Uygulaması geliştirme kılavuzu
+- Sıfır Güven geliştirme kılavuzu
 - Sıfır Güven Uç Noktası
 - Sıfır Güven Verileri
 - Sıfır Güven Kimliği
 - Sıfır Güven Altyapısı
 - Sıfır Güven Ağı
-- Sıfır Güven Görünürlüğü, otomasyon vetion
+- Sıfır Güven, otomasyon vetion
 
 ### <a name="new-preview-templates"></a>Yeni önizleme şablonları
 

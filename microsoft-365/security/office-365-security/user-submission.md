@@ -18,20 +18,20 @@ ms.custom: ''
 description: Yöneticiler, kullanıcılar tarafından bildirilen istenmeyen postayı ve kimlik avı e-postasını toplamak üzere bir posta kutusunun nasıl yapılandırıldığında bilgi edinebilirsiniz.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 525b761b09a68c3e44443cec7bf718d9eaa4d8d1
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 9a38943b492e6bdae151a7906d1c8146a649949d
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63327217"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634041"
 ---
 # <a name="user-reported-message-settings"></a>Kullanıcı ileti ayarlarını bildirdi
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Yeni Microsoft 365 kutusu olan Exchange Online, kullanıcıların kötü amaçlı olup olmadığını belirten iletileri almak için bir posta kutusu belirtebilirsiniz. Kullanıcılar çeşitli raporlama seçeneklerini kullanarak iletileri bildirseler, iletilerin kesişimini yapmak (yalnızca özel posta kutusuna göndermek) veya iletilerin kopyalarını almak (özel posta kutusuna ve Microsoft'a göndermek) için bu posta kutusunu kullanabilirsiniz. Bu özellik aşağıdaki ileti raporlama seçenekleriyle çalışır:
@@ -55,7 +55,7 @@ Kullanıcı iletileri özel posta kutunuza gidecek şekilde gerekli önkoşullar
 
 - [İstenmeyen](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) posta için ZAP ve kimlik avı için ZAP'ın kapalı olduğu özel posta kutusunu içeren bir istenmeyen posta önleme ilkesi **oluşturun (** \> Sıfır saatlik otomatik temizleme bölümü Etkin **sıfır saatlik otomatik temizleme (ZAP)** seçili değil).
 
-Gelişmiş filtreleme hizmetiniz için Microsoft Defender Office 365, aşağıdaki ayarları da yapılandırarak gelişmiş filtrelememizin iletilerinizi kullanıcıları etkilemesini s ayarlarınız gerekir:
+Filtrelemeniz Office 365 için Microsoft Defender, aşağıdaki ayarları da yapılandırarak, gelişmiş filtremizin iletileri bildirimini kullanıcıları etkilemesini şunları s gerekir:
 
 - [Bağlantı tarama Kasa kapalı](set-up-safe-links-policies.md) olduğu özel posta kutusunu içeren bir Kasa Bağlantıları ilkesi oluşturun (İletilerde kötü amaçlı olabilecek bilinmeyen **URL'ler için eylemi** \> **kapalı seçin**).
 
@@ -71,7 +71,7 @@ Posta kutunuzda tüm geçerli önkoşulların karşılandığından emin oldukta
 
   - **Portalda** yer **alan İzinler'deki** [Kuruluş Microsoft 365 Defender.](permissions-microsoft-365-security-center.md)
 
-- Exchange Online PowerShell'e erişiminiz vardır. Kullanmaya istediğiniz hesabın Exchange Online PowerShell'e erişimi yoksa, gönderiler posta kutusunu belirtirken aşağıdakine benzer bir hata alırsınız:
+- Exchange Online PowerShell'e erişiminiz vardır. Kullanmaya çalışıyorsanız hesabın Exchange Online PowerShell erişimi yoksa, gönderiler posta kutusunu belirtirken aşağıdakine benzer bir hata alırsınız:
 
   > Etki alanınıza bir e-posta adresi belirtin
 
@@ -141,8 +141,8 @@ Tek gereksinim, özgün iletinin bir . olarak dahil olmasıdır. EML veya . Öze
 Özgün ekli iletilerin bildirilen nedenini belirtmek için, özel posta kutusuna gönderilen iletilerin (eki değiştirme) Konu'da şu ön eklerden biri ile başlaması gerekir (Zarf Başlığı):
 
 - 1| veya Gereksiz:
-- 2| veya Gereksiz değil
-- 3| veya Kimlik Avı
+- 2| veya Gereksiz değil:
+- 3| veya Kimlik Avı:
 
 Örneğin:
 

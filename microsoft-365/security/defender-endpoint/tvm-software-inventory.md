@@ -1,7 +1,7 @@
 ---
 title: Yazılım envanteri Tehdit ve Güvenlik Açığı Yönetimi
-description: Uç nokta kullanımı için Microsoft Defender'ın yazılım stok Tehdit ve Güvenlik Açığı Yönetimi yazılımda kaç zayıf noktanın ve güvenlik açıklarının algılandı olduğunu gösterir.
-keywords: Tehdit ve Güvenlik Açığı Yönetimi için Microsoft Defender, Uç nokta için Microsoft Defender, Uç nokta yazılım envanteri için Microsoft Defender, Uç nokta tehdit & güvenlik açığı yönetimi için Microsoft Defender, Uç nokta tehdit & güvenlik açığı yönetimi  yazılım envanteri, Uç nokta tvm yazılım envanteri için Microsoft Defender, TVM yazılım envanteri
+description: Yazılım stoku için yazılım Uç Nokta için Microsoft Defender sayfası Tehdit ve Güvenlik Açığı Yönetimi yazılımda kaç zayıf noktanın ve güvenlik açıklarının algı olduğunu gösterir.
+keywords: Tehdit ve Güvenlik Açığı Yönetimi, Uç Nokta için Microsoft Defender Uç Nokta için Microsoft Defender satın Uç Nokta için Microsoft Defender ve yazılım & güvenlik açığı yönetimi için Uç Nokta için Microsoft Defender ve & güvenlik açığı yönetimi için, Uç Nokta için Microsoft Defender tvm yazılım envanteri, TVM yazılım envanteri
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: e6bf614730caa9060a334c0a01c2dfe64b24df78
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: cbd4634e779fe2bf853aaf014b59b1e7e1c1928f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63325291"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470053"
 ---
 # <a name="software-inventory---threat-and-vulnerability-management"></a>Yazılım envanteri - Tehdit ve Güvenlik Açığı Yönetimi
 
@@ -30,7 +30,7 @@ ms.locfileid: "63325291"
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Tehdit ve güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
@@ -47,7 +47,7 @@ Yazılım envanteri, Tehdit ve Güvenlik Açığı Yönetimi bilinen yazılımla
 
 ## <a name="how-it-works"></a>Nasıl çalışır?
 
-Keşif alanında, Uç nokta algılama ve yanıt özellikleri için Microsoft Defender'da algılama ve güvenlik açığı değerlendirmesi ile aynı sinyal kümeden [yararlanıyoruz](overview-endpoint-detection-response.md).
+Keşif alanında, güvenlik algılama ve yanıt özelliklerinde algılama ve güvenlik açığı değerlendirmesi ile aynı [sinyal Uç Nokta için Microsoft Defender sinyallerden yararlanıyoruz](overview-endpoint-detection-response.md).
 
 Gerçek zamanlı olduğu için dakikalar içinde güvenlik açığı bilgilerini keşfedilene kadar görmeye devam edersiniz. Altyapı, birden çok güvenlik akışından bilgileri otomatik olarak yakalar. Aslında, belirli bir yazılımın canlı tehdit kampanyasıyla bağlantılı olup değildir. Ayrıca, kullanılabilir olduğu anda bir Threat Analytics raporunun bağlantısını da sağlar.
 
@@ -58,7 +58,7 @@ Yazılım envanteri sayfasına erişmek için, **portalda yer** alan Tehdit ve G
 Yazılımları, cihazlar listesinden tek tek cihazlar sayfalarında belirli [cihazlarda görüntüleme](machines-view-overview.md).
 
 > [!NOTE]
-> Uç nokta genel araması için Microsoft Defender'ı kullanarak yazılım aratırsanız, boşluk yerine alt çizgi koyarak kontrol edin. Örneğin, en iyi arama sonuçları için "Windows 10 windows_11" veya "windows_10 11" yerine "Windows 10" veya "Windows" yazmanız gerekir.
+> Bu özelliği kullanarak yazılım Uç Nokta için Microsoft Defender genel arama, boşluk yerine alt çizgi koymaya emin olun. Örneğin, en iyi arama sonuçları için "Windows 10" veya "windows_10" yerine "windows_11 Windows 10" veya "Windows 11" yazın.
 
 ## <a name="software-inventory-overview"></a>Yazılım envantere genel bakış
 
@@ -66,7 +66,7 @@ Yazılım **envanteri** sayfası, satıcı adı, bulunanlar, onlarla ilişkilend
 
 Varsayılan olarak, görünüm Ürün Kodu **(CPE) ile filtrelenmiştir: Kullanılabilir**. Ayrıca, liste görünümünü yazılımda bulunan zayıflıklara, onlarla ilişkilendirilmiş tehditlere ve yazılımın destek sonuna ulaşıp ulaşmamış olduğu gibi etiketlere göre filtreleebilirsiniz.
 
-:::image type="content" alt-text="Yazılım envanteri giriş sayfası örneği." source="images/software-inventory-page.png" lightbox="images/tvm-software-inventory.png":::
+:::image type="content" source="images/tvm-software-inventory.png" alt-text="Yazılım envanteri giriş sayfası" lightbox="images/tvm-software-inventory.png":::
 
 Araştırmak istediğiniz yazılımı seçin. Sayfada bilgilerin daha küçük bir görünümüne sahip bir açılır panel açılır. Araştırmanın daha derine inip Yazılım sayfasını aç'ı seçin veya Yanlış raporu bildir'i seçerek teknik **tutarsızlıkları bayrakla atabilirsiniz**.
 
@@ -74,7 +74,7 @@ Araştırmak istediğiniz yazılımı seçin. Sayfada bilgilerin daha küçük b
 
 Şu anda tehdit ve tehdit tarafından desteklenen & güvenlik açığı yönetimi yazılım stoku sayfasında yer alan yazılımlar olabilir. Desteklenem, yalnızca sınırlı veriler kullanılabilir. "Zayıf" bölümündeki "Kullanılamaz" seçeneğiyle desteklenmeyen yazılıma göre filtre uygulama.
 
-:::image type="content" alt-text="Desteklenmeyen yazılım filtresi." source="images/tvm-unsupported-software-filter.png" lightbox="images/tvm-unsupported-software-filter.png":::
+:::image type="content" source="images/tvm-unsupported-software-filter.png" alt-text="Desteklenmeyen yazılım filtresi" lightbox="images/tvm-unsupported-software-filter.png":::
 
 Aşağıda, yazılımın destekli olmadığını gösterir:
 
@@ -97,7 +97,7 @@ Kayıt defterinden, diskten veya her iki cihazdan belirli bir yazılım algılan
 
 Açılır sayfayı açmak için bir yazılım adı seçin ve "Yazılım Kanıtı" adlı bölümü seçin.
 
-:::image type="content" alt-text="Yazılım kanıtı kayıt Windows 10 aygıtlar listesinden örnek yazılım kanıtı örneği." source="images/tvm-software-evidence.png" lightbox="images/tvm-software-evidence.png":::
+:::image type="content" source="images/tvm-software-evidence.png" alt-text="Windows 10 listesinden gelen liste" lightbox="images/tvm-software-evidence.png":::
 
 ## <a name="software-pages"></a>Yazılım sayfaları
 
@@ -117,7 +117,7 @@ Yazılım sayfalarını birkaç farklı şekilde görüntüleyebilirsiniz:
   - Yazılımın yüklü olduğu cihazlar (cihaz adı, etki alanı, işletim sistemi ve daha fazlası ile birlikte).
   - Yazılım sürümü listesi (sürümün yüklü olduğu cihaz sayısı, bulunan güvenlik açıklarının sayısı ve yüklü cihazların adları dahil).
 
-    :::image type="content" alt-text="Yazılım ayrıntıları, zayıf Visual Studio, açıkta kalan cihazlar ve daha fazlası ile birlikte Visual Studio 2017 için yazılım örneği sayfası." source="images/tvm-software-page-example.png" lightbox="images/tvm-software-page-example.png":::
+    :::image type="content" source="images/tvm-software-page-example.png" alt-text="Yazılım Visual Studio, zayıf olan, açıkta olan cihazlar ve daha fazlasının olduğu en iyi 2017." lightbox="images/tvm-software-page-example.png":::
 
 ## <a name="report-inaccuracy"></a>Rapor yanlışlığı
 
@@ -142,4 +142,4 @@ Hatalı güvenlik açığı bilgileri ve değerlendirme sonuçları gördüğün
 - [Tehdit ve güvenlik açığı yönetimi genel bakış](next-gen-threat-and-vuln-mgt.md)
 - [Güvenlik önerileri](tvm-security-recommendation.md)
 - [Etkinlik zaman çizelgesi](threat-and-vuln-mgt-event-timeline.md)
-- [Uç Nokta Cihazları için Microsoft Defender listesini görüntüleme ve düzenleme](machines-view-overview.md)
+- [Cihazlar listesini görüntüleme Uç Nokta için Microsoft Defender düzenleme](machines-view-overview.md)

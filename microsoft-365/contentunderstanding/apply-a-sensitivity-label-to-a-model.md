@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Bir veya daha fazla bilgi için bir modele duyarlılık SharePoint Syntex.
-ms.openlocfilehash: 189db9314e01a52618890daf6b0e5d4e81317de9
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: a7e6ea878fd7fceb6b7496dbcfb90a50f3e8ce1e
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681710"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64635097"
 ---
 # <a name="apply-a-sensitivity-label-to-a-model-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da bir modele duyarlılık SharePoint Syntex
 
@@ -29,7 +29,7 @@ Duyarlılık etiketleri modellerinizi tanımları olan belgelere şifreleme uygu
 Modelinizin giriş sayfasındaki model ayarları aracılığıyla modelinize önceden var olan bir duyarlılık etiketi uygulayabilirsiniz. Model ayarlarından seçilk için etiketin zaten yayımlanmış olması gerekir. Etiketler Word (Office .docx), PowerPoint (.pptx) ve Excel (.xlsx) dosyalarına uygulanır. 
 
 > [!Important]
-> Duyarlılık etiketlerinin belgenize uygulanarak modelleri anlaması için, etiketlerin Uyumluluk Merkezi'nde [oluşturularak Microsoft 365 yayımlanır](../admin/security-and-compliance/set-up-compliance.md).
+> Duyarlılık etiketlerinin belgenize uygulanarak modelleri anlaması için, etiketlerin Uyumluluk Merkezi'nde [oluşturularak Microsoft 365 yayımlanır](../compliance/microsoft-365-compliance-center.md).
 
 ## <a name="add-a-sensitivity-label-to-a-document-understanding-model"></a>Belge anlama modeline duyarlılık etiketi ekleme
 
@@ -76,7 +76,7 @@ Modelinizin belge kitaplığınıza gelen görünüm sayfasında yeni bir **Duya
 ## Add a sensitivity label to a form processing model
 
 > [!Important]
-> For sensitivity labels to be available to apply to your form processing model, they need to be [created and published in the Microsoft 365 Compliance Center](../admin/security-and-compliance/set-up-compliance.md).
+> For sensitivity labels to be available to apply to your form processing model, they need to be [created and published in the Microsoft 365 Compliance Center](../business-premium/m365bp-set-up-compliance.md).
 
 You can either apply a sensitivity label to a form processing model when you are creating a model, or apply it to an existing model.
 

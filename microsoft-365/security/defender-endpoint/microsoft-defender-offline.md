@@ -15,12 +15,12 @@ manager: dansimp
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 75179fc3daf8e375ace6cc4c1566abf1e18cdfaa
-ms.sourcegitcommit: 282f3a58b8e11615b3e53328e6b89a6ac52008e9
+ms.openlocfilehash: ccb65b865afdf2a0ec0210c3593daee1cb5c09b6
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "63019077"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476851"
 ---
 # <a name="run-and-review-the-results-of-a-microsoft-defender-offline-scan"></a>Hızlı taramanın sonuçlarını çalıştırma Microsoft Defender Çevrimdışı gözden geçirme
 
@@ -28,20 +28,20 @@ ms.locfileid: "63019077"
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Microsoft Defender Çevrimdışı, güvenilir bir ortamdan tarama başlatmaya ve çalıştırmaya olanak sağlayan bir kötü amaçlı yazılımdan koruma tarama aracıdır. Tarama normal Windows çekirdek dışından çalışır ve böylelikle virüsler ve ana önyükleme kaydına (M CLIP) bulaşan veya üzerine yazan kök setler gibi Windows kabuğunu atlayan kötü amaçlı yazılımları hedefleyebndir.
 
 Kötü amaçlı Microsoft Defender Çevrimdışı bulaşmadan şüpheleniyorsanız veya kötü amaçlı yazılım salgınından sonra uç noktanın kapsamlı bir temiz olduğunu onaylamak istiyorsanız, parolayı kullanabilirsiniz.
 
-Windows 10 ve Windows 11'de, Microsoft Defender Çevrimdışı doğrudan Windows Güvenliği üzerinden tek [tıklamayla çalıştırabilirsiniz](microsoft-defender-security-center-antivirus.md). Windows'Windows önceki sürümlerinde, kullanıcının Microsoft Defender Çevrimdışı önyüklenebilir medyaya yüklemesi, uç noktayı yeniden başlatması ve önyüklenebilir medyayı yüklemesi gerekirdi.
+Uygulama Windows 10 Windows 11, Microsoft Defender Çevrimdışı doğrudan doğrudan Windows Güvenliği ile [birini Windows Güvenliği çalıştırabilirsiniz](microsoft-defender-security-center-antivirus.md). Windows'Windows önceki sürümlerinde, kullanıcının Microsoft Defender Çevrimdışı önyüklenebilir medyaya yüklemesi, uç noktayı yeniden başlatması ve önyüklenebilir medyayı yüklemesi gerekirdi.
 
 ## <a name="prerequisites-and-requirements"></a>önkoşullar ve gereksinimler
 
-Microsoft Defender Çevrimdışı 11 Windows 10 Windows 11'in donanım gereksinimleri, donanım gereksinimleriyle Windows 10.
+Microsoft Defender Çevrimdışı ve Windows 10'Windows 11 sistem gereksinimleri ile aynı donanım Windows 10.
 
-11. gereksinimleri Windows 10 hakkında Windows fazla bilgi için aşağıdaki konulara bakın:
+Gereksinimlerin nasıl karşı Windows 10 Windows 11 için aşağıdaki konulara bakın:
 
 - [Minimum donanım gereksinimleri](/windows-hardware/design/minimum/minimum-hardware-requirements-overview)
 
@@ -57,7 +57,7 @@ Uç noktadan Microsoft Defender Çevrimdışı için, kullanıcının yönetici 
 Microsoft Defender Çevrimdışı, uç nokta üzerinde kullanılabilen en son koruma güncelleştirmelerini kullanır; bu güncelleştirmeler her Windows Defender Virüsten Koruma güncelleştirilir.
 
 > [!NOTE]
-> Çevrimdışı taramayı çalıştırmadan önce Microsoft Defender AV korumasını güncelleştirmeyi denemeniz gerekir. Grup İlkesi ile bir güncelleştirmeyi zorlar veya güncelleştirmeleri normalde uç noktalara dağıtır ya da en son koruma güncelleştirmelerini Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi'nden el ile [indirip yükleyebilirsiniz](https://www.microsoft.com/security/portal/definitions/adl.aspx).
+> Çevrimdışı taramayı çalıştırmadan önce Microsoft Defender AV korumasını güncelleştirmeyi denemeniz gerekir. Grup ilkesi ile güncelleştirmeyi zorlar veya ancak normalde uç noktalara güncelleştirmeler dağıtır veya en son koruma güncelleştirmelerini Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi'nden el ile [indirip yükleyebilirsiniz](https://www.microsoft.com/security/portal/definitions/adl.aspx).
 
 Daha fazla [bilgi Microsoft Defender Virüsten Koruma için Güvenlik zekası güncelleştirmelerini yönetme](manage-protection-updates-microsoft-defender-antivirus.md) başlığına bakın.
 
@@ -69,15 +69,15 @@ Uç noktalarınızı yönetmek için kullanıyorsanız, çevrimdışı tarama Mi
 
 Bilgi istemi, aşağıdakine benzer bir bildirim aracılığıyla ortaya çıkabilir:
 
-:::image type="content" source="../../media/notification.png" alt-text="Bildirim, çalışma Microsoft Defender Çevrimdışı.":::
+:::image type="content" source="../../media/notification.png" alt-text="Çalışma bildirimi Microsoft Defender Çevrimdışı" lightbox="../../media/notification.png":::
 
 Kullanıcıya müşteri içinde de Windows Defender.
 
-Configuration Manager'da, İzleme Ayarları'na giderek uç noktaların durumunu tanımlayabilirsiniz> Genel Bakış **> Durum > Endpoint Protection Durumu'> System Center Endpoint Protection olabilir**.
+Daha Configuration Manager'te, İzleme ve Genel Bakış 'a > Genel Bakış'a giderek **uç noktaların > > Endpoint Protection Durumunu > System Center Endpoint Protection tanımlayabilirsiniz**.
 
 Microsoft Defender Çevrimdışı taramaları, Çevrimdışı tarama **gerektiğinde Kötü** amaçlı yazılım düzeltme **durumu altında belirtilmiştir**.
 
-:::image type="content" source="../../media/sccm-wdo.png" alt-text="Microsoft Defender Çevrimdışı taraması gereklidir.":::
+:::image type="content" source="../../media/sccm-wdo.png" alt-text="Durum taramasının göstergesi Microsoft Defender Çevrimdışı" lightbox="../../media/sccm-wdo.png":::
 
 ## <a name="configure-notifications"></a>Bildirimleri yapılandırma
 
@@ -124,7 +124,7 @@ Daha fazla bilgi için aşağıdakilere bakın:
 
 ### <a name="use-the-windows-defender-security-app-to-run-an-offline-scan"></a>Windows Defender Security uygulamasını kullanarak çevrimdışı taramayı çalıştırma
 
-1. Görev Windows Güvenliği kalkan simgesine tıklayarak veya Başlangıç menüsünde Bulut için Defender'ı arayarak **Mobil Uygulamayı açın**.
+1. Görev Windows Güvenliği kalkan simgesine tıklayarak veya görev çubuğundaki kalkan simgesi için başlangıç menüsünde arama **Bulut için Defender.**
 
 2. Virüs koruması **& kutucuğuna** (veya sol menü çubuğundaki kalkan simgesine) ve ardından **Gelişmiş tarama etiketine** tıklayın:
 

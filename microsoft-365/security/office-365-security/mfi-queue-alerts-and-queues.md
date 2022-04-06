@@ -14,12 +14,12 @@ description: Yöneticiler, şirket içi veya iş ortağı kuruluşlarının gide
 ms.technology: mdo
 ms.prod: m365-security
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 54bff65b29555fe0c94c86141cd7a10a77c36219
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 62da2d9654174bc2572a6d7cbb3acbd638757a6c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680016"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469481"
 ---
 # <a name="queues-insight-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde Kuyruklar & bilgileri
 
@@ -27,7 +27,7 @@ ms.locfileid: "63680016"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 İletiler, bağlayıcılar kullanılarak şirket içi veya iş ortağı e-posta sunucularınıza gönderilmey olduğunda, iletiler şirket içinde Microsoft 365. Bu koşula neden olan yaygın örnekler:
@@ -43,7 +43,8 @@ Sıraya alınan e-posta hacmi önceden tanımlanmış eşiği aşarsa (varsayıl
 
 - Güvenlik ve Uyumluluk **Merkezi'nde (Uyarılar** Panosu veya ) Uyarılar [panosunda &](https://protection.office.com) **uyarı** \> **görüntülenir**<https://protection.office.com/alertsdashboard>.
 
-  ![Güvenlik ve Uyumluluk Merkezi'nin Uyarılar panosunda son &.](../../media/mfi-queued-messages-alert.png)
+  :::image type="content" source="../../media/mfi-queued-messages-alert.png" alt-text="Güvenlik ve Uyumluluk Merkezi'nin Uyarılar panosunda & uyarıları" lightbox="../../media/mfi-queued-messages-alert.png":::
+
 
 - Yöneticiler, İletiler adlı varsayılan uyarı ilkesi gecikmiş yapılandırmasına dayalı bir **e-posta bildirimi alır**. Bu uyarının bildirim ayarlarını yapılandırmak için sonraki bölüme bakın.
 
@@ -57,7 +58,7 @@ Sıraya alınan e-posta hacmi önceden tanımlanmış eşiği aşarsa (varsayıl
 
 3. Açılan **İleti gecikmiş açılır** iletisinde, uyarıyı açar veya kapatabilir ve bildirim ayarlarını yapılandırabilirsiniz.
 
-   ![İletiler gecikmeli uyarı ilkesi ayrıntıları Güvenlik ve Uyumluluk & bulunmaktadır.](../../media/mfi-queued-messages-alert-policy.png)
+   :::image type="content" source="../../media/mfi-queued-messages-alert-policy.png" alt-text="İletiler gecikmiş uyarılarının ayrıntıları" lightbox="../../media/mfi-queued-messages-alert-policy.png":::
 
    - **Durum**: Uyarıyı açıp kapatarak kapatarak,
 
@@ -70,7 +71,7 @@ Sıraya alınan e-posta hacmi önceden tanımlanmış eşiği aşarsa (varsayıl
    - **Günlük bildirim sınırı**: Varsayılan değer Sınır **yok'tır**.
    - **Eşik**: Varsayılan değer 200'tir.
 
-   ![İletiler'in bildirim ayarları, Güvenlik ve Uyumluluk Merkezi'nde gecikmiş uyarı & ayrıntılarıdır.](../../media/mfi-queued-messages-alert-policy-notification-settings.png)
+     :::image type="content" source="../../media/mfi-queued-messages-alert-policy-notification-settings.png" alt-text="İletiler'in Gecikmiş uyarısıyla ilgili Bildirim ayarları" lightbox="../../media/mfi-queued-messages-alert-policy-notification-settings.png":::
 
 5. Bitirdikten sonra Kaydet'e ve **Kapat'a** **tıklayın**.
 
@@ -78,7 +79,7 @@ Sıraya alınan e-posta hacmi önceden tanımlanmış eşiği aşarsa (varsayıl
 
 Sıraya alınan ileti hacmi eşiği aşmamış ve uyarı oluşturmamış olsa bile, posta akışı panosunda Kuyruklar içgörülerini kullanarak  bir saatten uzun süre sıraya [](mail-flow-insights-v2.md) alınan iletileri görebilir ve sıraya alınan iletilerin sayısı çok fazla olmadan önce bir işlem yapabilirsiniz.
 
-![Güvenlik ve Uyumluluk Merkezi'nde Posta akışı panosunda kuyruklar widget& görüntülenir.](../../media/mfi-queues-widget.png)
+:::image type="content" source="../../media/mfi-queues-widget.png" alt-text="Güvenlik ve Uyumluluk Merkezi'nde Posta akışı panosunda Kuyruklar widget& görüntülenir" lightbox="../../media/mfi-queues-widget.png":::
 
 Widget'ta ileti sayısına tıklarsanız, sıraya alınan **iletiler** açılır öğesi aşağıdaki bilgileri içerir:
 
@@ -91,11 +92,11 @@ Widget'ta ileti sayısına tıklarsanız, sıraya alınan **iletiler** açılır
 - **Son hata**
 - **Nasıl düzeltebilirim**: Yaygın sorunlar ve çözümler kullanılabilir. Şimdi **düzelt bağlantısı varsa** , sorunu düzeltmek için bu bağlantıya tıklayın. Aksi takdirde, hata ve olası çözümler hakkında daha fazla bilgi için kullanılabilir bağlantılardan birini tıklatın.
 
-![Posta akışı panosunda Kuyruklar içgörüne tık olduktan sonra ayrıntılar.](../../media/mfi-queues-details.png)
+:::image type="content" source="../../media/mfi-queues-details.png" alt-text="Posta akışı panosunda Kuyruklar içgörüne tık sonrası Ayrıntılar" lightbox="../../media/mfi-queues-details.png":::
 
 İletiler gecikmiş uyarısının **ayrıntılarında** Kuyruğu görüntüle'ye tıklarsanız **aynı uç uçarak** çıkış görüntülenir.
 
-![İletiler, Güvenlik ve Uyumluluk Merkezi'nde gecikmeli & yapıldı.](../../media/mfi-queued-messages-alert-details.png)
+:::image type="content" source="../../media/mfi-queued-messages-alert-details.png" alt-text="Güvenlik ve Uyumluluk Merkezi'nde İletilerin ayrıntıları gecikmeli & yapıldı" lightbox="../../media/mfi-queued-messages-alert-details.png":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

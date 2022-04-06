@@ -15,12 +15,12 @@ search.appverid:
 - MET150
 ROBOTS: NOINDEX,NOFOLOW
 description: Yöneticiler, iş yerlerinde veya belgelerde etkin içeriği engellemek için Office öğrenebilir
-ms.openlocfilehash: 89f2e51253d3c2fda0140dd7be8bc86b1fda2cf5
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 33d53ab14fec1b6cd16b8de95befe8bc8a898e16
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682823"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468931"
 ---
 # <a name="manage-active-content-in-office-documents"></a>Belgelerde etkin Office yönetme
 
@@ -35,17 +35,17 @@ Daha önce, kullanıcılar belgeleri güvenilir belge olarak tanımlarında, yö
 
 Güncelleştirilmiş Güven Merkezi mantığı aşağıdaki diyagramda açıklanmıştır:
 
-:::image type="content" source="../media/office-trust-center-flow.png" alt-text="Microsoft 365 Defender portalında Güven merkezi Mantığının açık olduğu akış Microsoft 365 Defender örneği" lightbox="../media/office-trust-center-flow.png":::
+:::image type="content" source="../media/office-trust-center-flow.png" alt-text="Microsoft 365 Defender portalında Güven merkezi mantığının açık Microsoft 365 Defender akış çizelgesi" lightbox="../media/office-trust-center-flow.png":::
 
 1. Bir kullanıcı, Office içeren bir belge açar.
 
 2. Belge güvenilir bir konumdansa, etkin içerik etkin olarak açılır. Belge güvenilir bir konumdan değilse, değerlendirme devam eder.
 
-3. Güncelleştirilmiş davranış bu noktada yürürlüğe girecektir:
+3. Güncelleştirilmiş davranış şu şekildedir:
    - Daha önce, kullanıcı bu belgeyi güvenilir belge olarak tanım olsaydı sonraki değerlendirilen ayar vardı. Varsa, belge etkin içerik etkin olarak açılır.
    - Artık, kullanıcının belgeyi güvenilir belge olarak tanım isteyip eklemediği burada dikkate alınmaz (şimdi 8. adım).
 
-     Bu, davranışın temel değişikliğidir: Güvenilir belgenin kullanıcı ataması dikkate alınmadan önce bulut ilkeleri (4. adım), grup ilkeleri (6. adım) ve  yerel ayarlar (7. adım) denetlenir. Bu adımlardan herhangi biri etkin içeriğe erişimi engellese ve adımlardan hiçbiri kullanıcının geçersiz kılmasına izin vermiyorsa, belgenin güvenilir belge olarak kullanıcı kimliği temel olarak önemli değildir.
+     Temel davranış değişikliği şu şekilde açıklanmıştır: Güvenilir belgenin kullanıcı ataması dikkate alınmadan önce bulut ilkeleri (4. adım), grup ilkeleri (6. adım) ve yerel ayarlar  (7. adım) denetlenir. Bu adımlardan herhangi biri etkin içeriğe erişimi engellese ve adımlardan hiçbiri kullanıcının geçersiz kılmasına izin vermiyorsa, belgenin güvenilir belge olarak kullanıcı kimliğinin hiçbir önemi olmaz.
 
 4. Bulut ilkeleri, bu etkin içerik türüne izin verili olup İzin verilmiyor veya engellenmiş olup değildir. Etkin içerik engellenmiş durumda değil, değerlendirme 6. adıma devam eder.
 
@@ -81,7 +81,7 @@ Daha fazla bilgi için aşağıdaki makalelere bakın:
 Yöneticilerin, kuruluşta bir Office yapılandırmanın birçok yolu vardır. Örneğin:
 
 - **Office ilke** hizmeti: Azure AD hesabıyla Office uygulamalarına erişen tüm cihazlarında kullanıcılara uygulanan kullanıcı tabanlı bir ilke ayarlayın. İlke Bulut İlkesi [Hizmeti'Office bulut ilkesi yapılandırması](/DeployOffice/overview-office-cloud-policy-service) [oluşturma Office adımlara bakın](https://config.office.com/officeSettings/officePolicies).
-- **intune'da** Office ilkeleri: HKCU ilkelerini Ayarlar PC'lere dağıtmak için Intune Ayarlar kataloğunu veya Yönetim şablonlarını kullanın: Windows 10 CIHAZLAR Yapılandırma Profilleri altındaki [MEM](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesMenu/configurationProfiles)  \> yönetim **merkezinde**.
+- **Office'da** Intune ilkeleri: INTUNE AYARLAR kataloğunu veya Yönetim şablonlarını kullanarak HKCU ilkelerini şu PC'lere Windows 10 dağıtın: Cihazlar Yapılandırma Profilleri altındaki [MEM](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesMenu/configurationProfiles)  \> yönetim **merkezinde**.
   - ***Yönetim Şablonları***: Yönetim Şablonlarını yapılandırmak Windows 10 [yönergelere bakın](/mem/intune/configuration/administrative-templates-windows).
   - ***Ayarlar kataloğu (önizleme)***: Önizleme kataloğunu [(Ayarlar) kullanma yönergelerine bakın](/mem/intune/configuration/settings-catalog).
 - **Grup ilkesi**: Grup ilkesi nesnelerini (GPOS) kullanıcılara ve bilgisayarlara dağıtmak için şirket içi Active Directory'nizi kullanın. Bu ayara yönelik bir GPO oluşturmak için, en son Yönetim Şablonu dosyalarını [(ADMX/ADML) ve Kurumlar için Microsoft 365 Uygulamaları, Office 2019 ve Office 2016 için Office](https://www.microsoft.com/download/details.aspx?id=49030) Özelleştirme Aracı'nı indirin.
@@ -92,7 +92,7 @@ Yöneticilerin, kuruluşta bir Office yapılandırmanın birçok yolu vardır. �
 
 ## <a name="admin-options-for-restricting-active-content"></a>Etkin içeriği kısıtlamak için yönetici seçenekleri
 
-Güven düzeyinde, dahili olarak oluşturulan içerikle kullanıcıların İnternet'te indir olduğu içerik arasında büyük bir fark vardır. İç belgelerde etkin içeriğe izin verme ve İnternet'in belgelerinde etkin içeriğe genel olarak izin verme gibi düşünebilirsiniz.
+Güven düzeyinde, dahili olarak oluşturulan içerikle kullanıcıların İnternet'te indir olduğu içerik arasında büyük fark vardır. İç belgelerde etkin içeriğe izin verme ve İnternet'in belgelerinde etkin içeriğe genel olarak izin verme gibi düşünebilirsiniz.
 
 Kullanıcılarınızı belirli türlerde etkin içeriklere gerek yoksa, en güvenli seçeneğiniz, ilkeleri kullanarak bu etkin içeriğe kullanıcı erişimini kapatmak ve gerektiğinde özel durumlara izin vermektir.
 
@@ -143,10 +143,10 @@ Aşağıdaki bölümlerdeki tablolarda etkin içeriği denetleme ayarları açı
 |Makrolar|Excel|Open XML çalışma kitaplarında Excel makroları tarama|**Şifreli makroları tarama (varsayılan)**|Hayır|
 |Makrolar|Office|VBA'nın başvuru türü başvurularını güvenilmeyen intranet konumlarından bir yola göre yüklemesine izin verme|**Devre dışı**|Hayır|
 |Makrolar|Office|Otomasyon Güvenliği|**Uygulama makrosu güvenlik düzeyini kullanma**|Hayır|
-|Makrolar|Office|Yerel makinedeki güvenli olmayan konumlara başvurabilecek VBA kitaplığı başvurularına ek güvenlik denetimlerini devre dışı bırakma|**Devre dışı**|Hayır|
+|Makrolar|Office|VBA kitaplık başvurularına, yerel makinedeki güvenli olmayan konumlara başvurulabilecek diğer güvenlik denetimlerini devre dışı bırakma|**Devre dışı**|Hayır|
 |Makrolar|Office|Makro Çalışma Zamanı Tarama Kapsamı|**Tüm belgeler için etkinleştirme**|Hayır|
 |Makrolar|Office|Yalnızca V3 imzaları kullanan VBA makrolara güven|Güvenlik temeli ayarı değil.|Hayır|
-|Makrolar|Outlook|Outlook Modu|**Güvenlik Outlook İlkesi kullanma**|Tüm yeni GPO ayarlarını Outlook için gereklidir. <p> Bağımlılık olarak bahsedilen (bu ilke etkin içeriğin kendisini engellemez).|
+|Makrolar|Outlook|Outlook Modu|**Outlook Security grup ilkesi**|Tüm yeni GPO ayarlarını Outlook için gereklidir. <p> Bağımlılık olarak bahsedilen (bu ilke etkin içeriğin kendisini engellemez).|
 |Makrolar|Outlook|Makrolar için güvenlik ayarı|**İmzalı için uyar, imzasızları devre dışı bırak**|**Evet** , aşağıdaki değerler için: <ul><li>**Her zaman uyar**</li><li>**İmzalı için uyar, imzasızları devre dışı bırak**</li><li>**Devre dışı**</li><li>**Yapılandırılmadı**</li></ul>|
 |Makrolar|PowerPoint|Open XML sunularında şifrelenmiş PowerPoint tarama|**Şifreli makroları tarama (varsayılan)**|Hayır|
 |Makrolar|Publisher|Publisher Otomasyon Güvenlik Düzeyi|**Kullanıcı arabirimine göre (istenir)**|Hayır|
@@ -162,7 +162,7 @@ Aşağıdaki bölümlerdeki tablolarda etkin içeriği denetleme ayarları açı
 |---|---|---|---|---|
 |ActiveX|Office|ActiveX Kısıtlama|excel.exe = True <p> exprwd.exe = True <p> groove.exe = True <p> msaccess.exe = True <p> mse7.exe = True <p> mspub.exe = True <p> onent.exe = True <p> outlook.exe = True <p> powerpnt.exe = True <p> pptview.exe = True <p> spDesign.exe = True <p> visio.exe = True <p> winproj.exe = True <p> winword.exe = True|Hayır|
 |Eklentiler & Genişletilebilirlik|Office|Eklenti Yönetimi|excel.exe = True <p> exprwd.exe = True <p> groove.exe = True <p> msaccess.exe = True <p> mse7.exe = True <p> mspub.exe = True <p> onent.exe = True <p> outlook.exe = True <p> powerpnt.exe = True <p> pptview.exe = True <p> spDesign.exe = True <p> visio.exe = True <p> winproj.exe = True <p> winword.exe = True|Hayır|
-|Eklentiler & Genişletilebilirlik|Office|Elektronik belgelerde Flash Office engelleme|Bu uygulamalarda Flash için tüm etkinleştirmeyi engellemek için COM killbitlerinin listesi için Microsoft Güvenlik Kılavuzu ADMX/ADML Microsoft 365 bakın. Kurumsal Güvenlik Taban Çizgilerine yönelik ADMX/ADML dosyaları, Güvenlik Uyumluluğu [Araç Seti'ne mevcuttur](https://www.microsoft.com/download/details.aspx?id=55319).|Hayır|
+|Eklentiler & Genişletilebilirlik|Office|Elektronik belgelerde Flash Office engelleme|En son uygulamalarda Flash için tüm etkinleştirmeyi engellemek için COM killbitlerinin listesi için Microsoft Güvenlik Kılavuzu ADMX/ADML Microsoft 365 bakın. Kurumsal Güvenlik Taban Çizgilerine yönelik ADMX/ADML dosyaları, Güvenlik Uyumluluğu [Araç Seti'ne mevcuttur](https://www.microsoft.com/download/details.aspx?id=55319).|Hayır|
 |Jscript & VBScript|Office|Erişim için eski JScript yürütmeyi Office|**Etkin**: <p> Access: 69632 <p> Excel: 69632 <p> OneNote: 69632 <p> Outlook: 69632 <p> PowerPoint: 69632 <p> Project: 69632 <p> Publisher: 69632 <p> Visio: 69632 <p> Word: 69632|Hayır|
 |Jscript & VBScript|Office|Komut Dosyası Pencere Güvenlik Kısıtlamaları|excel.exe = True <p> exprwd.exe = True <p> groove.exe = True <p> msaccess.exe = True <p> mse7.exe = True <p> mspub.exe = True <p> onent.exe = True <p> outlook.exe = True <p> powerpnt.exe = True <p> pptview.exe = True <p> spDesign.exe = True <p> visio.exe = True <p> winproj.exe = True <p> winword.exe = True|Hayır|
 |

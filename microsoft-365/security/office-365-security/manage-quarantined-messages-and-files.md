@@ -16,15 +16,15 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Yöneticiler, Exchange Online Protection'da (EOP) kullanıcılar için karantinaya alınmış iletileri görüntülemeyi ve yönetmeyi öğrenebilir. Office 365 için Microsoft Defender'a sahip kuruluşlarda yöneticiler SharePoint Online, OneDrive İş ve Microsoft Teams'te karantinaya alınmış dosyaları yönetebilir.
+description: Yöneticiler, Exchange Online Protection'da (EOP) kullanıcılar için karantinaya alınmış iletileri görüntülemeyi ve yönetmeyi öğrenebilir. Office 365 için Microsoft Defender olan kuruluşlarda yöneticiler SharePoint Online, OneDrive İş ve Microsoft Teams'te karantinaya alınmış dosyaları yönetebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7787943ad16a3ae641b475b01b7e1dd8bb7f51d2
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 449886f6272c81f9947fd3e7ea869e565326578f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63318221"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469657"
 ---
 # <a name="manage-quarantined-messages-and-files-as-an-admin-in-eop"></a>EOP'de yönetici olarak karantinaya alınmış iletileri ve dosyaları yönetme
 
@@ -32,7 +32,7 @@ ms.locfileid: "63318221"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Microsoft 365 posta kutusu olmayan Exchange Online ya da tek başına Exchange Online Protection Exchange Online Protection EOP Exchange Online) kuruluşlarında, karantinada tehlikeli veya istenmeyen iletiler karantinaya alın. Daha fazla bilgi için bkz. [EOP'de e-posta iletileri karantinaya alınmış](quarantine-email-messages.md).
@@ -41,7 +41,7 @@ Yöneticiler tüm kullanıcılar için karantinaya alınmış ileti türlerini  
 
 Varsayılan olarak, yalnızca yöneticiler kötü amaçlı yazılım olarak karantinaya alınmış iletileri, yüksek güven kimlik avı veya posta akış kuralları (aktarım kuralları olarak da bilinir) sonucunda yönetebilir. Ancak yöneticiler, iletinin _neden_ karantinaya alındığına (desteklenen özellikler için) göre karantinaya alınmış iletilerde kullanıcılara izin verilenleri tanımlamak için karantina ilkelerini kullanabilir. Daha fazla bilgi için bkz. [Karantina ilkeleri](quarantine-policies.md).
 
-Office 365 için Microsoft Defender'a sahip kuruluşlarda yöneticiler ayrıca SharePoint, OneDrive ve Kasa Ekleri ile karantinaya alınmış [dosyaları Microsoft Teams](mdo-for-spo-odb-and-teams.md).
+Office 365 için Microsoft Defender [Kasa'a](mdo-for-spo-odb-and-teams.md) sahip olan kuruluşlarda yöneticiler, SharePoint, OneDrive ve klasörlerin ekleri SharePoint tarafından karantinaya Microsoft Teams.
 
 karantinaya alınmış iletileri Microsoft 365 Defender portalında veya PowerShell'de Exchange Online (Microsoft 365 posta kutuları olan Microsoft 365 için PowerShell'de; Exchange Online'de ise tek başına EOP PowerShell ile yönetirsiniz Exchange Online kutularını da) kullanın.
 
@@ -63,7 +63,7 @@ karantinaya alınmış iletileri Microsoft 365 Defender portalında veya PowerSh
   - **Görünüm'de Yalnızca Görüntüleme** [kuruluş Exchange Online rol](/Exchange/permissions-exo/permissions-exo#role-groups) grubu, özel salt okunur erişim de sağlar.
   - <sup>\*</sup>[Microsoft 365 Defender portalında](permissions-microsoft-365-security-center.md#email--collaboration-roles-in-the-microsoft-365-defender-portal) **E-posta &** işbirliği rollerinde yer alan Karantina Yöneticisi rol grubunun üyelerinin, Exchange Online PowerShell'de karantina yordamları gerçekleştirmek için [Exchange Online'te](/Exchange/permissions-exo/permissions-exo#role-groups) Skrya Yönetimi rol grubunun üyesi Exchange Online gerekir. 
 
-- Karantinaya alınan iletiler, karantinaya alındıklarına bağlı olarak varsayılan bir süre boyunca korunur. Bekletme süresi dolduğunda, iletiler otomatik olarak silinir ve kurtarılamaz. Daha fazla bilgi için bkz. [EOP'de karantinaya alınmış e-posta iletileri ve Office 365](quarantine-email-messages.md).
+- Karantinaya alınan iletiler, karantinaya alındıklarına bağlı olarak varsayılan bir süre boyunca korunur. Bekletme süresi dolduğunda, iletiler otomatik olarak silinir ve kurtarılamaz. Daha fazla bilgi için bkz. [EOP'de karantinaya alınmış e-posta iletileri Office 365 için Defender](quarantine-email-messages.md).
 
 ## <a name="use-the-microsoft-365-defender-portal-to-manage-quarantined-email-messages"></a>Karantinaya alınmış Microsoft 365 Defender iletilerini yönetmek için kullanıcı portalını kullanma
 
@@ -110,7 +110,7 @@ karantinaya alınmış iletileri Microsoft 365 Defender portalında veya PowerSh
      - **Aktarım kuralı** (posta akışı kuralı)
      - **Toplu**
      - **İstenmeyen posta**
-     - **Kötü** amaçlı yazılım: EOP veya kötü amaçlı yazılımdan koruma ilkeleri Kasa için Defender'da Ekleri Office 365. **İlke Türü** değeri, hangi özelliğin kullanılmış olduğunu gösterir.
+     - **Kötü** amaçlı yazılım: EOP'de kötü amaçlı yazılımdan koruma ilkeleri Kasa EOP'de ek ilkeleri Office 365 için Defender. **İlke Türü** değeri, hangi özelliğin kullanılmış olduğunu gösterir.
      - **Kimlik avı**: İstenmeyen posta filtresi  kararı, Kimlik avı veya kimlik avı korumasını karantinaya [aldı (kimlik](set-up-anti-phishing-policies.md#spoof-settings) avı ayarları veya [kimliğe bürünme koruması](set-up-anti-phishing-policies).
      - **Yüksek güven kimlik avı**
    - **Alıcı**: **Tüm kullanıcılar veya** Yalnızca **ben**. Son kullanıcılar yalnızca kullanıcılara gönderilen karantinaya alınmış iletileri yönetebilir.
@@ -141,7 +141,7 @@ Belirli bir karantinaya alınmış iletiyi bu olduktan sonra, ayrıntılarını 
 
 Listeden karantinaya alınmış iletiyi seçin, görüntülenen ayrıntılar açılır iletisinde aşağıdaki bilgiler kullanılabilir.
 
-![Karantinaya alınmış bir iletinin ayrıntılar uçarak çıkış.](../../media/quarantine-message-details-flyout.png)
+:::image type="content" source="../../media/quarantine-message-details-flyout.png" alt-text="Karantinaya alınmış iletinin ayrıntılar uçarak çıkış" lightbox="../../media/quarantine-message-details-flyout.png":::
 
 - **İleti Kimliği**: İletinin genel benzersiz tanımlayıcısıdır. İleti üst **bilgisinde İleti** Kimliği üst bilgisi alanında kullanılabilir.
 - **Gönderen adresi**
@@ -152,7 +152,7 @@ Listeden karantinaya alınmış iletiyi seçin, görüntülenen ayrıntılar aç
 - **İlke adı**
 - **Alıcı sayısı**
 - **Alıcılar**: İleti birden çok alıcı içeriyorsa, alıcıların tam listesini görmek için  İletiyi önizleme'yi veya İleti üst bilgilerini görüntüle'yi tıklatmanız gerekir.
-- **Alıcı etiketi**: Daha fazla bilgi için bkz [. Microsoft Defender'da kullanıcı Office 365](user-tags.md).
+- **Alıcı etiketi**: Daha fazla bilgi için bkz [. Alıcı etiketleri Office 365 için Microsoft Defender](user-tags.md).
 - **Son kullanma** tarihi: İletinin karantinadan otomatik olarak ve kalıcı olarak silinecek olduğu tarih/saat.
 - **Yayım tarihi**: İletinin yayım tarihi olan tüm e-posta adresleri (varsa).
 - **Henüz yayınlanma tarihi:** İletinin henüz yayınlanmamış olduğu tüm e-posta adresleri (varsa).
@@ -162,13 +162,13 @@ Listeden karantinaya alınmış iletiyi seçin, görüntülenen ayrıntılar aç
 > [!NOTE]
 > Ayrıntılar uç iletisinde kalmak, ancak üzerinde karantinaya alınmış iletiyi değiştirmek için, uç ilişkinin üst kısmında bulunan yukarı ve aşağı okları kullanın.
 >
-> ![Karantinaya alınmış iletinin ayrıntılar bölmesindeki yukarı ve aşağı oklar.](../../media/quarantine-message-details-flyout-up-down-arrows.png)
+> :::image type="content" source="../../media/quarantine-message-details-flyout-up-down-arrows.png" alt-text="Karantinaya alınmış iletinin ayrıntılar iletisinde yukarı ve aşağı oklar" lightbox="../../media/quarantine-message-details-flyout-up-down-arrows.png":::
 
 ### <a name="take-action-on-quarantined-email"></a>Karantinaya alınmış e-postada eyleme geç
 
 Listeden karantinaya alınmış bir ileti belirttikten sonra, ayrıntılar iletisinde aşağıdaki eylemler kullanılabilir:
 
-![Karantinaya alınmış iletinin ayrıntılar iletisinde kullanılabilir eylemler.](../../media/quarantine-message-details-flyout-actions.png)
+:::image type="content" source="../../media/quarantine-message-details-flyout-actions.png" alt-text="Karantinaya alınmış iletinin ayrıntılar iletisinde Kullanılabilir eylemler" lightbox="../../media/quarantine-message-details-flyout-actions.png":::
 
 - ![Sürüm e-postası simgesi.](../../media/m365-cc-sc-check-mark-icon.png) **Sürüm e-postası**<sup>\*</sup>: Görüntülenen açılır bölmede aşağıdaki seçenekleri yapılandırabilirsiniz:
   - **Göndereni kurum izin listesine ekleme: Gönderenden** gelen iletilerin karantinaya alınmasını önlemek için bu seçeneği belirtin.
@@ -234,7 +234,7 @@ Diğer eylemler simgesine tıklarsanız aşağıdaki ![eylemler kullanılabilir.
 > [!NOTE]
 > Mobil cihazda, eylem simgelerini açıklama metni kullanılamaz.
 >
-> ![Kullanılabilir eylemler vurgulanmış olarak karantinaya alınmış iletinin ayrıntıları.](../../media/quarantine-message-details-flyout-mobile-actions.png)
+> :::image type="content" source="../../media/quarantine-message-details-flyout-mobile-actions.png" alt-text="Kullanılabilir eylemler vurgulanmış olarak karantinaya alınmış iletinin ayrıntıları" lightbox="../../media/quarantine-message-details-flyout-mobile-actions.png":::
 >
 > Simgeler ve bunların karşılık gelen açıklamaları aşağıdaki tabloda özetlenmiştir:
 >
@@ -253,7 +253,7 @@ Diğer eylemler simgesine tıklarsanız aşağıdaki ![eylemler kullanılabilir.
 
 İlk sütunun sol tarafından boş bir alana tıklayarak listede birden çok karantinaya alınmış ileti (en çok 100) seçin; burada, aşağıdaki eylemleri gerçekleştirebilirsiniz:
 
-![Karantinada iletiler için toplu eylemler açılan listesi.](../../media/quarantine-message-bulk-actions.png)
+:::image type="content" source="../../media/quarantine-message-bulk-actions.png" alt-text="Karantinada yer alan iletiler için Toplu eylemler açılan listesi" lightbox="../../media/quarantine-message-bulk-actions.png":::
 
 - ![Sürüm e-postası simgesi.](../../media/m365-cc-sc-check-mark-icon.png) **Sürüm iletileri**: İletileri tüm alıcılara yayımlar. Görüntülenen açılır listede, aşağıdaki seçenekleri kullanabilirsiniz; bu, tek bir iletiyi sürümle aynı olur:
   - **Göndereni kuruluşun izin listesine ekleme**
@@ -272,12 +272,12 @@ Diğer eylemler simgesine tıklarsanız aşağıdaki ![eylemler kullanılabilir.
 - ![İndir e-posta simgesi.](../../media/m365-cc-sc-download-icon.png) **İletileri indirme**
 - ![Yalnızca gönder simgesi.](../../media/m365-cc-sc-create-icon.png) **Yalnızca gönder**
 
-## <a name="use-the-microsoft-365-defender-portal-to-manage-quarantined-files-in-defender-for-office-365"></a>Office 365 için Defender Microsoft 365 Defender da karantinaya alınmış dosyaları yönetmek için Office 365
+## <a name="use-the-microsoft-365-defender-portal-to-manage-quarantined-files-in-defender-for-office-365"></a>Microsoft 365 Defender portalında karantinaya alınmış dosyaları yönetmek için Office 365 için Defender
 
 > [!NOTE]
-> Bu bölümdeki karantinaya alınmış dosyalar için yordamlar, Plan 1 veya Plan 2 aboneleri Office 365 Microsoft Defender'da kullanılabilir.
+> Bu bölümdeki karantinaya alınmış dosyalar için yordamlar yalnızca Plan 1 Office 365 için Microsoft Defender Plan 2 aboneleri tarafından kullanılabilir.
 
-Office 365 için Defender'a sahip olan kuruluşlarda Kasa yöneticiler SharePoint, OneDrive ve Microsoft Teams ekleri ile karantinaya alınmış dosyaları yönetebilir. Bu dosyalar için korumayı etkinleştirmek için bkz. Kasa, [SharePoint, OneDrive ve](turn-on-mdo-for-spo-odb-and-teams.md) Microsoft Teams.
+Office 365 için Defender'Office 365 için Defender olan kuruluşlarda, yöneticiler Kasa, SharePoint, OneDrive ve klasörlerin ekleri tarafından karantinaya Microsoft Teams. Bu dosyalar için korumayı etkinleştirmek için bkz. Kasa, [SharePoint, OneDrive ve](turn-on-mdo-for-spo-odb-and-teams.md) Microsoft Teams.
 
 ### <a name="view-quarantined-files"></a>Karantinaya alınmış dosyaları görüntüleme
 
@@ -312,7 +312,7 @@ Belirli bir karantinaya alınmış dosyayı buktan sonra, dosyayla ilgili ayrın
 
 Listeden karantinaya alınmış bir dosya seçin, açılan ayrıntılar açılır listesinde aşağıdaki bilgiler kullanılabilir:
 
-![Karantinaya alınmış dosyanın ayrıntılar çıktısı.](../../media/quarantine-file-details-flyout.png)
+:::image type="content" source="../../media/quarantine-file-details-flyout.png" alt-text="Karantinaya alınmış dosyanın ayrıntılar uçarak çıkış" lightbox="../../media/quarantine-file-details-flyout.png":::
 
 - **Dosya Adı**
 - **Dosya URL'si**: Dosyanın konumunu tanımlayan URL (örneğin, SharePoint Online).
@@ -333,13 +333,13 @@ Dosya üzerinde işlem yapmak için sonraki bölüme bakın.
 > [!NOTE]
 > Ayrıntılar bölmesinde kalmak, ancak üzerinde karantinaya alınmış dosyayı değiştirmek için, uç ilişkinin üst kısmında bulunan yukarı ve aşağı okları kullanın.
 >
-> ![Karantinaya alınmış dosyanın ayrıntılar bölmesindeki yukarı ve aşağı oklar.](../../media/quarantine-file-details-flyout-up-down-arrows.png)
+> :::image type="content" source="../../media/quarantine-file-details-flyout-up-down-arrows.png" alt-text="Karantinaya alınmış dosyaların ayrıntılarında yukarı ve aşağı oklar" lightbox="../../media/quarantine-file-details-flyout-up-down-arrows.png":::
 
 ### <a name="take-action-on-quarantined-files"></a>Karantinaya alınmış dosyalarda eyleme geç
 
 Listeden karantinaya alınmış bir dosya seçdikten sonra, ayrıntılar ayrıntılarında şu eylemler kullanılabilir:
 
-![Karantinaya alınmış dosyanın ayrıntılarlarında kullanılabilir eylemler.](../../media/quarantine-file-details-flyout-actions.png)
+:::image type="content" source="../../media/quarantine-file-details-flyout-actions.png" alt-text="Karantinaya alınmış dosyanın ayrıntılarlarında yer alan eylemler" lightbox="../../media/quarantine-file-details-flyout-actions.png":::
 
 - ![Sürüm dosyası simgesi.](../../media/m365-cc-sc-check-mark-icon.png) **Sürüm dosyası**<sup>\*</sup>: Görüntülenen açılır bölmede Çözümleme için Dosyaları **Microsoft'a** bildir'i açın veya kapatın, ardından Sürüm'e **tıklayın**.
 - ![Sürüm dosyası simgesi.](../../media/m365-cc-sc-check-mark-icon.png)
@@ -355,7 +355,7 @@ Dosyayı çıkartır veya kaldırsanız bile, varsayılan karantina bekletme sü
 
 Konu sütununu sol boş alana tıklayarak listede birden çok karantinaya alınmış dosya (en çok 100) seçerek, aşağıdaki eylemleri gerçekleştirebilirsiniz Toplu  eylemler açılan listesi görüntülenir:
 
-![Karantinada dosyalar için toplu eylemler açılan listesi.](../../media/quarantine-file-bulk-actions.png)
+:::image type="content" source="../../media/quarantine-file-bulk-actions.png" alt-text="Karantinada yer alan dosyalar için Toplu eylemler açılan listesi" lightbox="../../media/quarantine-file-bulk-actions.png":::
 
 - ![Sürüm dosyası simgesi.](../../media/m365-cc-sc-check-mark-icon.png) **Sürüm dosyası**: Görüntülenen açılır bölmede Çözümleme için Dosyaları **Microsoft'a** bildir'i açın veya kapatın, ardından Sürüm'e **tıklayın**.
 - ![Karantinadan sil simgesi.](../../media/m365-cc-sc-delete-icon.png) **Karantinadan sil**: Görüntülenen **uyarıda Evet'e** tıklarsanız, dosya hemen silinir.

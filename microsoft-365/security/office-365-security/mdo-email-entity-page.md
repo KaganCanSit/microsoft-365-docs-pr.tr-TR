@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: tracyp
 author: msfttracyp
 manager: dansimp
-ms.date: 01/21/2021
+ms.date: 04/01/2022
 audience: ITPro
 ms.topic: article
 ms.prod: m365-security
@@ -17,12 +17,12 @@ ms.collection:
 - m365initiative-defender-office365
 ms.custom: ''
 description: Office 365 için Microsoft Defender E5, P1 ve P2 müşterileri artık e-posta varlık sayfasıyla her e-postayı 360 derecelik bir görünüme sahip olacak.
-ms.openlocfilehash: d75ebd9b54fc5e7919154a4f65e0d5fc0e77e117
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 1b74c4c79d05a4a52434810527c92de801b329f0
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64475465"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634833"
 ---
 # <a name="the-email-entity-page"></a>E-posta varlık sayfası
 
@@ -88,7 +88,7 @@ E-postalar hala Bulutta varsa, yöneticiler ***Bulut*** posta kutularında e-pos
 
 Bu ayrıntılar e-posta ekleri ve URL'lere özeldir. Kullanıcılar Explorer'a gidip dosya detonasyonu veya URL detonasyonu için ayarlanmış algılama teknolojisi filtresini uygulayarak bu ayrıntıları görebilirler. Dosyanın detonasyonu için filtrelenmiş e-postalar, detonation ayrıntılarına sahip kötü amaçlı bir dosya ve URL'ler için filtrelenmiş olanlar kötü amaçlı bir URL ve bunun detonasyonu ayrıntılarını içerir.
 
-Kullanıcılar, kendi kiracılarının kendi e-postalarında bulunan, bilinen kötü amaçlı ekler veya URL'ler için zenginleştirilmiş detonation ayrıntıları görebilir. Müşterilerin ekin veya URL'nin neden kötü amaçlı ve detontoned olarak kabul edildiklerini anlamalerine yardımcı olmak için, Detonation zinciri, Detonation özeti, Ekran Görüntüsü ve Gözlemlenen davranış ayrıntıları oluşur.
+Kullanıcılar, kendi kiracılarının kendi e-postalarında bulunan, bilinen kötü amaçlı ekler veya URL'ler için zenginleştirilmiş detonation ayrıntıları görebilir. Bu, ekin veya URL'nin neden kötü amaçlı ve detonated olarak kabul edildiklerini anlamalarında müşterilere yardımcı olmak için Detonation zinciri, Detonation özeti, Ekran Görüntüsü ve Gözlemlenen davranış ayrıntılarını içerir.
 
 1. *Detonation chain*. Tek bir dosya veya URL'nin detonasyonu birden çok detonasyonu tetikler. Detonation zinciri karara neden olan özgün kötü amaçlı dosya veya URL ve detonasyonun etkilenen diğer tüm dosyaları veya URL'leri de içinde olmak üzere, detonations yolunu izler. Bu URL'ler veya ekli dosyalar doğrudan e-postada yer alamasa da, bu çözümleme dosyanın veya URL'nin neden kötü amaçlı olduğunu belirlemek için önemlidir.  
 
@@ -112,13 +112,21 @@ Kullanıcılar, kendi kiracılarının kendi e-postalarında bulunan, bilinen k�
 
 *E-posta* ayrıntıları: Çözümleme sekmesinde bulunan e-postanın daha ayrıntılı anlaşılması için *gereken* ayrıntılar.
 
-- *Exchange kuralları (* posta akış kuralları veya ETR'ler olarak da bilinir): Bu kurallar aktarım katmanında bir iletiye uygulanır ve kimlik avı ve istenmeyen posta kararlarına göre önceliklidir. Posta akış kuralları, Exchange <https://admin.exchange.microsoft.com/#/transportrules>yönetim merkezinde 'da oluşturulur ve değiştirilir; ancak, iletiye uygulanan bir posta akış kuralı varsa, kural adı ve GUID burada gösterilir. İzleme amacıyla değerli bilgiler.
+- *Exchange kuralları (* posta akış kuralları veya ETR'ler olarak da bilinir): Bu kurallar aktarım katmanında bir iletiye uygulanır ve kimlik avı ve istenmeyen posta kararlarına göre önceliklidir. Posta akış kuralları, <https://admin.exchange.microsoft.com/#/transportrules>Exchange yönetim merkezinde oluşturulur ve değiştirilir; ancak herhangi bir posta akış kuralı bir ileti için geçerli olursa, kural adı ve GUID burada gösterilir. İzleme amacıyla değerli bilgiler.
 
 - *Sistem Geçersiz Kılmaları*: Bu, sistem tarafından verilen teslim konumunu geçersiz kılarak (tehdit ve algılama teknolojisine göre) bir ileti için hedeflenen teslim konumu üzerinde istisnalar yapmanın bir aracıdır.
 
 - *Toplu Şikayet Düzeyi (BCL)*: İletinin toplu şikayet düzeyi (BCL). Daha yüksek bir BCL, bir toplu posta iletisinin şikayet oluşturma olasılığı daha yüksek olduğunu gösterir (e-postanın istenmeyen posta olma olasılığı varsa doğal sonuç).
 
 - *İstenmeyen Posta Güven düzeyi (SCL)*: İletinin istenmeyen posta güven düzeyi (SCL). Daha yüksek bir değer iletinin istenmeyen posta olma olasılığı daha yüksek olduğunu gösterir.
+
+- *İstemci türü*: E-postanın rest gibi gönderildiği İstemci türünü gösterir.
+
+- *İlerletir*: Autoforwaridng ile senaryolar için, hem iletme kullanıcıyı hem de ETR veya SMTP iletme gibi iletme türünü gösterir. 
+
+- *Dağıtım listesi*: Alıcı e-postayı listenin bir üyesi olarak teslim ettiyseniz, dağıtım listesini gösterir. İç içe dağıtım listeleri söz konusu ise, en üst düzey dağıtım listesini gösterir.  
+
+- *To, Bilgi*: E-postanın Bilgi alanlarında listelenen adresleri gösterir. Bu alanlardaki bilgiler 5000 karakterle sınırlıdır. 
 
 - *Etki Alanı* Adı: Gönderenin etki alanı adıdır.
 
@@ -128,7 +136,7 @@ Kullanıcılar, kendi kiracılarının kendi e-postalarında bulunan, bilinen k�
 
 - *Etki Alanı Oluşturulma* Tarihi: Gönderen etki alanının oluşturulma tarihini belirtir. Yeni oluşturulan etki alanı, diğer sinyaller bazı şüpheli davranışlara neden oluyorsa dikkatli olmalısınız.
 
-*E-posta* Kimlik Doğrulaması: Microsoft 365 tarafından kullanılan e-posta kimlik doğrulama yöntemleri SPF, DKIM ve DMARC'dır.
+*E-posta* Kimlik Doğrulaması: SPF, DKIM ve DMARC Microsoft 365 tarafından kullanılan e-posta kimlik doğrulama yöntemleri.
 
 - Sender Policy Framework (**SPF**): İleti için SPF denetimi sonuçlarını açıklar. Olası değerler şöyle olabilir:
   - Pass (IP adresi): Geçen ileti için SPF denetimi ve gönderenin IP adresini içerir. İstemci, gönderenin etki alanı adına e-posta gönderme veya geçiş yetkisine sahip.
@@ -150,7 +158,7 @@ Kullanıcılar, kendi kiracılarının kendi e-postalarında bulunan, bilinen k�
   - Bestguesspass: Etki alanı için DMARC TXT kaydının olmadığını belirtir, ama varsa, iletinin DMARC denetimi geçmiş olabilir.
   - Yok: DNS'de gönderen etki alanı için DMARC TXT kaydının olmadığını gösterir.
 
-*Bileşik Kimlik* Doğrulaması: Bu, Microsoft 365 tarafından SPF, DKIM ve DMARC gibi e-posta kimlik doğrulamasını birleştirerek iletinin kimlik doğrulaması olup olmadığını belirlemek için kullanılan bir değerdir. Değerlendirme temeli olarak postanın From *:* etki alanını kullanır.
+*Bileşik Kimlik Doğrulaması*: Bu, Microsoft 365 SPF, DKIM ve DMARC gibi e-posta kimlik doğrulamasını birleştirerek iletinin kimlik doğrulaması olup olmadığını belirlemek için kullanılan değerdir. Değerlendirme temeli olarak postanın From *:* etki alanını kullanır.
 
 ### <a name="email-summary-panel"></a>E-posta özet paneli
 

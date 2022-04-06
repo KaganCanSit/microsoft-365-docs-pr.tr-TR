@@ -1,6 +1,6 @@
 ---
 title: Mac'te Uç Nokta için Microsoft Defender güncelleştirmelerini dağıtma
-description: Kurumsal ortamlarda Mac'te Uç Nokta için Microsoft Defender güncelleştirmelerini kontrol edin.
+description: Kurumsal ortamlarda Mac Uç Nokta için Microsoft Defender güncelleştirmelerini kontrol edin.
 keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mac, güncelleştirmeler, dağıtma
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,32 +15,32 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ceff362daeb2054b6037ea0eecbeafbb9dbed4f3
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 0b9ddf9693a242b3b8c466cfa1616b62c5eb73b9
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63019439"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469305"
 ---
-# <a name="deploy-updates-for-microsoft-defender-for-endpoint-on-macos"></a>macOS'ta Uç Nokta için Microsoft Defender güncelleştirmelerini dağıtma
+# <a name="deploy-updates-for-microsoft-defender-for-endpoint-on-macos"></a>MacOS'ta Uç Nokta için Microsoft Defender güncelleştirmelerini dağıtma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Aşağıdakiler için geçerlidir:**
 
-- [macOS'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [macOS Uç Nokta için Microsoft Defender üzerinde Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Microsoft, performansı, güvenliği geliştirmek ve yeni özellikler sunmak için düzenli olarak yazılım güncelleştirmeleri yayımlar.
 
-MacOS üzerinde Uç Nokta için Microsoft Defender'ı güncelleştirmek için Microsoft AutoUpdate (MAU) adlı bir program kullanılır. Varsayılan olarak, MAU güncelleştirmeleri otomatik olarak günlük olarak denetler, ancak bunu haftalık, aylık veya el ile değiştirebilirsiniz.
+MacOS Uç Nokta için Microsoft Defender güncelleştirme yapmak için Microsoft AutoUpdate (MAU) adlı bir program kullanılır. Varsayılan olarak, MAU güncelleştirmeleri otomatik olarak günlük olarak denetler, ancak bunu haftalık, aylık veya el ile değiştirebilirsiniz.
 
-![MAU ekran görüntüsü.](images/MDATP-34-MAU.png)
+:::image type="content" source="images/MDATP-34-MAU.png" alt-text="MAU" lightbox="images/MDATP-34-MAU.png":::
 
 Yazılım dağıtım araçlarınızı kullanarak güncelleştirmeleri dağıtmaya karar verirsiniz, MAU'yı yazılım güncelleştirmelerini el ile denetlemesi için yapılandırmanız gerekir. MAU'un kurumda Mac'ler için güncelleştirmeleri nasıl ve ne zaman denetlerken yapılandırma tercihlerini dağıtabilirsiniz.
 
@@ -48,7 +48,7 @@ Yazılım dağıtım araçlarınızı kullanarak güncelleştirmeleri dağıtmay
 
 MAU, güncelleştirmelerin ne zaman uygulandığını daha hassas bir denetime sahip olacak şekilde, IT yöneticilerine göre tasarlanmış, *msupdate* olarak adlandırılan bir komut satırı aracı içerir. Bu aracı kullanma yönergeleri, Güncelleştirme Office Mac [güncelleştirme konusunda bulunabilir](/deployoffice/mac/update-office-for-mac-using-msupdate).
 
-MAU'da, macOS üzerinde Uç Nokta için Microsoft Defender uygulama tanımlayıcısı *WDAV00'dur*. macOS üzerinde Uç Nokta için Microsoft Defender'a uygun en son güncelleştirmeleri indirmek ve yüklemek için Terminal penceresinde aşağıdaki komutu yürütün:
+MAU'da, macOS üzerinde Uç Nokta için Microsoft Defender tanımlayıcısı *WDAV00'tur*. macOS üzerinde en son güncelleştirmeleri Uç Nokta için Microsoft Defender yüklemek için Terminal penceresinde aşağıdaki komutu yürütün:
 
 ```dos
 ./msupdate --install --apps wdav00
@@ -87,7 +87,7 @@ Kanal `Current` , ürünün en kararlı sürümünü içerir.
 |||
 
 > [!WARNING]
-> Bu ayar, Microsoft AutoUpdate aracılığıyla güncelleştirilen tüm uygulamaların kanalını değiştirir. MacOS'ta uç nokta için Microsoft Defender'da kanalı değiştirmek için, istediğiniz kanalla değiştirdikten sonra `[channel-name]` aşağıdaki komutu yürütün:
+> Bu ayar, Microsoft AutoUpdate aracılığıyla güncelleştirilen tüm uygulamaların kanalını değiştirir. MacOS'ta yalnızca Uç Nokta için Microsoft Defender kanalı değiştirmek için, istediğiniz kanalla değiştirdikten sonra `[channel-name]` aşağıdaki komutu yürütün:
 >
 > ```bash
 > defaults write com.microsoft.autoupdate2 Applications -dict-add "/Applications/Microsoft Defender.app" " { 'Application ID' = 'WDAV00' ; 'App Domain' = 'com.microsoft.wdav' ; LCID = 1033 ; ChannelName = '[channel-name]' ; }"
@@ -276,7 +276,7 @@ Aşağıdaki yapılandırma profili, aşağıdakiler için kullanılır:
 MAU'yı yapılandırmak için, bu yapılandırma profilini kurumda şu yönetim aracından dağıtabilirsiniz:
 
 - JAMF'den, bu yapılandırma profilini karşıya yükleyin ve Tercih Etki Alanını *com.microsoft.autoupdate2 olarak ayarlayın*.
-- Intune'dan, bu yapılandırma profilini karşıya yükleyin ve özel yapılandırma profili adını *com.microsoft.autoupdate2 olarak ayarlayın*.
+- Bu Intune, bu yapılandırma profilini karşıya yükleyin ve özel yapılandırma profili adını *com.microsoft.autoupdate2 olarak ayarlayın*.
 
 ## <a name="resources"></a>Kaynaklar
 

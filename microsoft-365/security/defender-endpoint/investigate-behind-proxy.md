@@ -1,6 +1,6 @@
 ---
 title: İleri gelen sunuculardan sonra oluşan bağlantı olaylarını araştırma
-description: Proxy yerine gerçek bir hedef ortaya çıkaran Uç Nokta için Microsoft Defender'da ağ koruması aracılığıyla gelişmiş HTTP düzeyi izlemesini kullanmayı öğrenin.
+description: Proxy yerine gerçek bir hedef ortaya alan Uç Nokta için Microsoft Defender'da ağ koruması aracılığıyla gelişmiş HTTP düzeyi izlemenin nasıl kullanıla olduğunu öğrenin.
 keywords: proxy, ağ koruması, proxy'i iletme, ağ olayları, denetim, engelleme, etki alanı adları, etki alanı
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,19 +15,19 @@ ms.collection:
 - m365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: c0a2bdab641f0289975f1d8475627d3066ecf1f8
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 580f41c24d6d78fb9e5ac7e20eb80e6ae78a505b
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021764"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469811"
 ---
 # <a name="investigate-connection-events-that-occur-behind-forward-proxies"></a>İleri gelen sunuculardan sonra oluşan bağlantı olaylarını araştırma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigatemachines-abovefoldlink)
@@ -58,13 +58,13 @@ Daha fazla bilgi için bkz. [Ağ korumasını etkinleştirme](enable-network-pro
 
 Ağ koruması açıkken cihazın zaman çizelgesinde IP adresinin proxy'yi temsil ederken gerçek hedef adresin de proxy'yi temsil eder.
 
-![Cihazın zaman çizelgesinde ağ olaylarının resmi.](images/atp-proxy-investigation.png)
+:::image type="content" source="images/atp-proxy-investigation.png" alt-text="Cihazın zaman çizelgesinde ağ olayları" lightbox="images/atp-proxy-investigation.png":::
 
 Ağ koruma katmanı tarafından tetiklenen diğer olaylar artık gerçek etki alanı adlarını bir proxy arkasında bile ortaya çıkarabilirsiniz.
 
 Etkinliğin bilgileri:
 
-![Tek bir ağ olayı görüntüsü.](images/atp-proxy-investigation-event.png)
+:::image type="content" source="images/atp-proxy-investigation-event.png" alt-text="Tek bir ağ olayın URL'leri" lightbox="images/atp-proxy-investigation-event.png":::
 
 ## <a name="hunt-for-connection-events-using-advanced-hunting"></a>Gelişmiş avı kullanarak bağlantı etkinliklerini arama
 
@@ -78,7 +78,7 @@ DeviceNetworkEvents
 | take 10
 ```
 
-![Gelişmiş arama sorgusu görüntüsü.](images/atp-proxy-investigation-ah.png)
+:::image type="content" source="images/atp-proxy-investigation-ah.png" alt-text="Gelişmiş av sorgusu" lightbox="images/atp-proxy-investigation-ah.png":::
 
 Ayrıca, proxy'nin kendisine yönelik bağlantıyla ilgili olayları filtre de atabilirsiniz.
 

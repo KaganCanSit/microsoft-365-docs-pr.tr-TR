@@ -1,5 +1,5 @@
 ---
-title: Kiracınızı Microsoft 365 güvenliği için yapılandırma
+title: Daha fazla güvenlik için Microsoft 365 kiracınızı yapılandırma
 f1.keywords:
 - NOCSH
 ms.author: bcarter
@@ -21,20 +21,20 @@ ms.custom:
 description: Bu konu başlığı, kiracı ortamının güvenliğini etkileyen kiracı genelindeki ayarlar için önerilen Microsoft 365 gösterir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 94da7316c5e749cf6dcc5e038c185bea4790765f
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 96f31d0fb9eb3ef9d6eaec396fdac8fe96b96c3d
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682889"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476367"
 ---
-# <a name="configure-your-microsoft-365-tenant-for-increased-security"></a>Kiracınızı Microsoft 365 güvenliği için yapılandırma
+# <a name="configure-your-microsoft-365-tenant-for-increased-security"></a>Daha fazla güvenlik için Microsoft 365 kiracınızı yapılandırma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Bu konu başlığı, kiracı ortamının güvenliğini etkileyen kiracı genelindeki ayarlar için önerilen Microsoft 365 gösterir. Güvenlik ihtiyaçları daha fazla veya daha az güvenlik gerekli olabilir. Bu önerileri başlangıç noktası olarak kullanın.
@@ -49,10 +49,10 @@ Bu Microsoft 365 Defender, ortamınızı koruyan özellikler içerir. Ayrıca, i
 
 |Alan|Varsayılan ilke?|Öneri|
 |---|---|---|
-|**Kimlik avı önleme**|Evet|Varsayılan kimlik avı koruma ilkesi burada açıklandığı gibi yapılandırma: EOP'de kimlik avı koruma ayarlarını ve Kimlik avı için [Defender'ı Office 365](protect-against-threats.md#part-2---anti-phishing-protection-in-eop-and-defender-for-office-365). <p> Daha fazla bilgi: <ul><li>[E-postada kimlik avı önleme Microsoft 365](set-up-anti-phishing-policies.md)</li><li>[Kimlik avı için Microsoft Defender'da önerilen kimlik avı önleme ilkesi Office 365](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365)</li><li> [Kimliğe bürünme içgörü](impersonation-insight.md)</li><li>[EOP'de akıllı Spoof Intelligence içgörü](learn-about-spoof-intelligence.md)</li><li>[Kiracı İzin Ver/Engelleme Listesi'ne tıklayın](tenant-allow-block-list.md).</li></ul>|
+|**Kimlik avı önleme**|Evet|Varsayılan kimlik avı koruma ilkesi burada açıklandığı gibi yapılandırma: [EOP ve Kimlik](protect-against-threats.md#part-2---anti-phishing-protection-in-eop-and-defender-for-office-365) avından korunma ayarlarını Office 365 için Defender. <p> Daha fazla bilgi: <ul><li>[E-postada kimlik avı önleme Microsoft 365](set-up-anti-phishing-policies.md)</li><li>[E-postada önerilen kimlik avı önleme ilkesi Office 365 için Microsoft Defender](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365)</li><li> [Kimliğe bürünme içgörü](impersonation-insight.md)</li><li>[EOP'de akıllı Spoof Intelligence içgörü](learn-about-spoof-intelligence.md)</li><li>[Kiracı İzin Ver/Engelleme Listesi'ne tıklayın](tenant-allow-block-list.md).</li></ul>|
 |**Kötü Amaçlı Yazılımdan Koruma Altyapısı**|Evet|Varsayılan kötü amaçlı yazılımdan koruma ilkesi burada açıklandığı gibi yapılandırma: [EOP'de kötü amaçlı yazılımdan koruma ayarlarını yapılandırma](protect-against-threats.md#part-1---anti-malware-protection-in-eop). <p> Daha fazla bilgi: <ul><li>[Kötü amaçlı yazılımdan koruma](anti-malware-protection.md)</li><li>[Kötü amaçlı yazılımdan koruma ilkesi ayarları](recommended-settings-for-eop-and-office365.md#eop-anti-malware-policy-settings)</li><li>[Kötü amaçlı yazılımdan koruma ilkelerini yapılandırma](configure-anti-malware-policies.md)</li></ul>|
-|**Kasa için Defender'da Ekleri Office 365**|Hayır|E-posta Ekleri Kasa genel ayarlarını yapılandırma ve burada açıklandığı gibi Kasa Ekleri ilkesi oluşturma: Office 365 için [Microsoft Defender'da Kasa Ekleri ayarlarını yapılandırma](protect-against-threats.md#safe-attachments-policies-in-microsoft-defender-for-office-365). <p> Daha fazla bilgi: <ul><li>[Ekleri Kasa ayarları için önerilenler](recommended-settings-for-eop-and-office365.md#safe-attachments-settings)</li><li>[Kasa için Microsoft Defender'daki Ekleri Office 365](safe-attachments.md)</li><li>[Ekleri Kasa ilkelerini ayarlama](set-up-safe-attachments-policies.md)</li><li>[Kasa, Bağlantı SharePoint OneDrive için Ekleri Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li><li>[Microsoft 365 E5 aboneliğinde Güvenli Belgeler](safe-docs.md)</li></ul>|
-|**Kasa için Microsoft Defender'daki Office 365**|Hayır|Bağlantılar'ın genel ayarlarını Kasa ve burada açıklandığı gibi Kasa Bağlantıları ilkesi oluşturun Kasa: Office 365 [için Microsoft Defender'da Bağlantı ayarlarını Office 365](protect-against-threats.md#safe-links-policies-in-microsoft-defender-for-office-365). <p> Daha fazla bilgi: <ul><li>[Önerilen Kasa Bağlantıları ayarları](recommended-settings-for-eop-and-office365.md#safe-links-settings)</li><li>[Bağlantılar Kasa ayarlama](set-up-safe-links-policies.md)</li><li>[Kasa için Microsoft Defender'daki Office 365](safe-links.md)</li><li>[Web için Microsoft Defender'Kasa Bağlantılar için genel ayarları Office 365](configure-global-settings-for-safe-links.md)</li></ul>|
+|**Kasa'de Ekleri Office 365 için Defender**|Hayır|Ekler için genel ayarları Kasa ve burada açıklandığı gibi Kasa Ekleri ilkesi oluşturun: Kasa'de [Ekleri Yapılandırma Office 365 için Microsoft Defender](protect-against-threats.md#safe-attachments-policies-in-microsoft-defender-for-office-365). <p> Daha fazla bilgi: <ul><li>[Ekleri Kasa ayarları için önerilenler](recommended-settings-for-eop-and-office365.md#safe-attachments-settings)</li><li>[Kasa'de Ekleri Office 365 için Microsoft Defender](safe-attachments.md)</li><li>[Ekleri Kasa ilkelerini ayarlama](set-up-safe-attachments-policies.md)</li><li>[Kasa, Bağlantı SharePoint OneDrive için Ekleri Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li><li>[Microsoft 365 E5 aboneliğinde Güvenli Belgeler](safe-docs.md)</li></ul>|
+|**Kasa'daki Bağlantıları Office 365 için Microsoft Defender**|Hayır|Bağlantılar'ın genel ayarlarını Kasa ve burada açıklandığı gibi Kasa Bağlantıları ilkesi oluşturun: bağlantıların Kasa ayarlarını [Office 365 için Microsoft Defender](protect-against-threats.md#safe-links-policies-in-microsoft-defender-for-office-365). <p> Daha fazla bilgi: <ul><li>[Önerilen Kasa Bağlantıları ayarları](recommended-settings-for-eop-and-office365.md#safe-links-settings)</li><li>[Bağlantılar Kasa ayarlama](set-up-safe-links-policies.md)</li><li>[Kasa'daki Bağlantıları Office 365 için Microsoft Defender](safe-links.md)</li><li>[Web'de Bağlantıları Kasa genel ayarlarını Office 365 için Microsoft Defender](configure-global-settings-for-safe-links.md)</li></ul>|
 |**İstenmeyen posta önleme (posta filtreleme)**|Evet|Varsayılan istenmeyen posta önleme ilkesi burada açıklandığı gibi yapılandırma: [EOP'de istenmeyen posta önleme ayarlarını yapılandırma](protect-against-threats.md#part-3---anti-spam-protection-in-eop) <p> Daha fazla bilgi: <ul><li>[İstenmeyen posta önleme ilkesi ayarları](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings)</li><li>[EOP'de istenmeyen posta önleme koruması](anti-spam-protection.md)</li><li>[EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md)</li></ul>|
 |***E-posta Kimlik Doğrulaması***|Evet|E-posta kimlik doğrulaması, e-posta iletilerine ileti kaynağı ve gönderen hakkında doğrulanabilir bilgiler eklemek için DNS kayıtlarını kullanır. Microsoft 365 varsayılan etki alanı için e-posta kimlik doğrulamasını otomatik olarak yapılandırıyor (onmicrosoft.com), ancak Microsoft 365 yöneticileri de özel etki alanları için e-posta kimlik doğrulamasını yapılandırabilirsiniz. Üç kimlik doğrulama yöntemi kullanılır: <ul><li>Sender Policy Framework (veya SPF).</li><ul><li>Kurulum için bkz[. SPF'yi Microsoft 365 SPF'yi ayarlama.](set-up-spf-in-office-365-to-help-prevent-spoofing.md)</li></ul> <li>DomainKeys Identified Mail (DKIM).</li><ul><li>Bkz [. Özel etki alanınıza gönderilen giden e-postayı doğrulamak için DKIM kullanma](use-dkim-to-validate-outbound-email.md).</li><li>DKIM'yi yapılandırdıktan sonra, dkIM'yi Microsoft 365 Defender etkinleştirin.</li></ul><li>Etki Alanı Tabanlı İleti Kimlik Doğrulaması, Raporlama ve Uyumluluk (DMARC).</li><ul><li>DMARC kurulumu için [DMARC kullanarak e-postayı doğrula ve Microsoft 365](use-dmarc-to-validate-email.md).</li></ul></ul>|
 
@@ -66,7 +66,7 @@ Ortamının durumu hakkında daha fazla bilgi edinmek için bu raporları ve pan
 |Pano|Açıklama|
 |---|---|
 |E-posta güvenlik raporları|Bu raporlar tüm Exchange Online Protection. Daha fazla bilgi için bkz[. Microsoft 365 Defender portalında e-posta Microsoft 365 Defender görüntüleme](view-email-security-reports.md).|
-|Office 365 raporları için Defender|Raporlar yalnızca Office 365 için Defender'da Office 365. Daha fazla bilgi için bkz[. Office 365 portalında raporları görüntülemek Microsoft 365 Defender.](view-reports-for-mdo.md)|
+|Office 365 için Defender raporları|Raporlar yalnızca tüm Office 365 için Defender. Daha fazla bilgi için [bkz. Office 365 için Defender portalında raporları görüntüleme Microsoft 365 Defender.](view-reports-for-mdo.md)|
 |Posta akışı raporları ve içgörüleri|Bu raporlar ve içgörüler, yönetim Exchange (EAC) içinde yer almaktadır. Daha fazla bilgi için bkz [. Posta akışı raporları](/exchange/monitoring/mail-flow-reports/mail-flow-reports) ve [Posta akışı içgörüleri](/exchange/monitoring/mail-flow-insights/mail-flow-insights).|
 |[Tehdit Gezgini (veya gerçek zamanlı algılamalar)](threat-explorer.md)|Kiracınızı araştırıyorsanız veya kiracınıza yönelik bir saldırıyla karşılaşıyorsanız tehditleri çözümlemek için Explorer'ı (veya gerçek zamanlı algılamaları) kullanın. Gezgin (ve gerçek zamanlı algılamalar raporu), size zaman içinde saldırı hacmini gösterir ve tehdit aileleri, altyapı ve daha fazlasını kullanarak bu verileri analiz edersiniz. Ayrıca, Olaylar listesi için tüm şüpheli e-postaları işaretebilirsiniz.|
 
@@ -114,21 +114,21 @@ Bu arada, bu görevi SharePoint Online ve iş başka bir OneDrive İş:
 - PowerShell kullanın, bkz [. Modern kimlik doğrulaması kullanmayan uygulamaları engelleme](/mem/intune/protect/app-modern-authentication-block).
 - Bunu" SharePoint "<a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank"></a>Cihaz erişimi" sayfasındaki "Modern kimlik doğrulama kullanmayan uygulamalardan erişimi denetleme" altında bulabilirsiniz. Engelle'yi seçin.
 
-## <a name="get-started-with-defender-for-cloud-apps-or-office-365-cloud-app-security"></a>Bulut Uygulamaları veya Uygulamaları için Defender ile Office 365 Bulut Uygulamaları Güvenliği
+## <a name="get-started-with-defender-for-cloud-apps-or-office-365-cloud-app-security"></a>Kullanmaya başlayın Uygulamaları Bulut için Defender ile Office 365 Bulut Uygulamaları Güvenliği
 
 Bu Office 365 Bulut Uygulamaları Güvenliği riski değerlendirmek, şüpheli etkinliklere karşı uyarı yapmak ve otomatik olarak işlem yapmak için kullanın. Plan Office 365 E5 gerekir.
 
-Ya da erişim verildikten sonra bile daha ayrıntılı görünürlük elde etmek için Bulut Uygulamaları için Microsoft Defender'ı kullanın, kapsamlı denetimler ve bulut uygulamalarınız için Gelişmiş Office 365.
+Erişim verildikten Microsoft Defender for Cloud Apps, kapsamlı denetimler ve gelişmiş koruma da dahil olmak üzere tüm bulut uygulamalarınız için daha derin bir görünürlük elde etmek için Office 365.
 
-Bu çözüm EMS E5 planını önereceği için, başlangıç olarak Bulut Uygulamaları için Defender'ı kullanırsınız, böylece bunu ortamınız içinde diğer SaaS uygulamalarıyla kullanabilirsiniz. Varsayılan ilkeler ve ayarlarla çalışmaya başlama.
+Bu çözüm EMS E5 planını öneren bir uygulama olduğundan, Bulut için Defender Uygulamaları ile başlamanızı ve böylelikle ortamınızı diğer SaaS uygulamalarıyla kullanabileceğinizi öneririz. Varsayılan ilkeler ve ayarlarla çalışmaya başlama.
 
 Daha fazla bilgi:
 
-- [Bulut Uygulamaları için Defender'ı Dağıtma](/cloud-app-security/getting-started-with-cloud-app-security)
-- [Bulut Uygulamaları için Microsoft Defender hakkında daha fazla bilgi](https://www.microsoft.com/cloud-platform/cloud-app-security)
-- [Bulut Uygulamaları için Defender nedir?](/cloud-app-security/what-is-cloud-app-security)
+- [Uygulama Bulut için Defender dağıtma](/cloud-app-security/getting-started-with-cloud-app-security)
+- [Daha fazla bilgi Microsoft Defender for Cloud Apps](https://www.microsoft.com/cloud-platform/cloud-app-security)
+- [Uygulamalar Bulut için Defender nedir?](/cloud-app-security/what-is-cloud-app-security)
 
-![Bulut Uygulamaları için Defender panosu.](../../media/1fb2aa65-54b8-4746-9f5e-c187d339e9f5.png)
+:::image type="content" source="../../media/1fb2aa65-54b8-4746-9f5e-c187d339e9f5.png" alt-text="Bulut için Defender Apps panosu" lightbox="../../media/1fb2aa65-54b8-4746-9f5e-c187d339e9f5.png":::
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 

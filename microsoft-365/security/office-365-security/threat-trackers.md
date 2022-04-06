@@ -19,18 +19,18 @@ ms.custom: ''
 description: Organizasyonunu güvenlik endişelerini takip etmeye yardımcı olmak için, yeni Dikkate Değer İzleyiciler de dahil olmak üzere Tehdit İzleyicileri hakkında bilgi edinin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 9015e94869db88be750ca522173a0dc6d55383e7
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+ms.openlocfilehash: d9adc6cd356187a8dbbb35719ab9b8e96499c8bd
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64632809"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468997"
 ---
 # <a name="threat-trackers---new-and-noteworthy"></a>Tehdit İzleyicileri - Yeni ve Dikkat çekici
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Uygulandığı öğe**
+**Geçerli olduğu yer:**
 - [Office 365 için Microsoft Defender plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
@@ -49,9 +49,9 @@ Tehdit İzleyicileri, şirketinizi etkilemesi gereken farklı siber güvenlik so
 
 :::image type="content" source="../../media/e426f220-fdcb-4dd9-99a2-db97dbcf71d5.png" alt-text="Explorer'da kampanya bilgileri örneği" lightbox="../../media/e426f220-fdcb-4dd9-99a2-db97dbcf71d5.png":::
 
-İzleyiciler, Plan 2'de birçok harika özelliğin [Office 365 için Microsoft Defender vardır](office-365-ti.md). Tehdit İzleyicileri [Dikkat çekici izleyiciler](#noteworthy-trackers), [Popüler izleyiciler](#trending-trackers), [İzlanan sorgular](#tracked-queries) ve [Kaydedilmiş sorgular içerir](#saved-queries).
+İzleyiciler, Plan 2'de birçok harika özelliğin [Office 365 için Microsoft Defender vardır](office-365-ti.md). Tehdit İzleyicileri [, Notyıldız izleyicileri](#noteworthy-trackers), Popüler [izleyiciler](#trending-trackers), [İzlanan sorgular](#tracked-queries) ve [Kaydedilmiş sorgular'dır](#saved-queries).
 
-Tehdit İzleyicisi'nizi görüntülemek ve kullanmak için Microsoft 365 Defender portalını <https://security.microsoft.com>'da açın ve İşbirliği tehdit izleyicisi **& e-posta adresine** \> **gidin**. Tehdit izleyicisi sayfasına **doğrudan gitmek** için kullanın <https://security.microsoft.com/threattrackerv2>.
+Tehdit İzleyicisi'nizi görüntülemek ve kullanmak için Microsoft 365 Defender portalını <https://security.microsoft.com>'da açın ve İşbirliği tehdit izleyicisi **& e-posta adresine** \> **gidin**. Tehdit izleyicisi sayfasına **doğrudan gitmek** için kullanın <https://security.microsoft.com/threattracker>.
 
 > [!NOTE]
 > Tehdit İzleyicileri'ni kullanmak için genel yönetici, güvenlik yöneticisi veya güvenlik okuyucusu gerekir. Aşağıdaki [portalda İzinler Microsoft 365 Defender bakın](permissions-microsoft-365-security-center.md).
@@ -64,7 +64,7 @@ Genellikle Dikkat çekici izleyiciler, yeni tehditleri tanımlamız ve bu özell
 
 ### <a name="trending-trackers"></a>Popüler izleyiciler
 
-Popüler izleyiciler (eski adı Kampanyalar), geçen hafta kurum e-postasında alınan yeni tehditleri vurgular. Popüler izleyiciler görünümü, kurum çevrenizi etkileyen e-posta tehditleri ile ilgili dinamik Office 365 sağlar. Bu görünüm, kiracı düzeyinde kötü amaçlı yazılım eğilimlerini gösterir, kötü amaçlı yazılım ailelerini yükselme, düz veya azalan bir şekilde tanımladığı ve yöneticilere hangi tehditlerle daha fazla dikkat gerektiren konusunda daha fazla bilgi sağlar.
+Popüler izleyiciler (eski adı Kampanyalar), geçen hafta kurum e-postasında alınan yeni tehditleri vurgular.
 
 :::image type="content" source="../../media/d2ccc1a0-2a1d-4e36-99b5-6766c207772f.png" alt-text="Popüler kötü amaçlı yazılım kampanyaları widget örneği" lightbox="../../media/d2ccc1a0-2a1d-4e36-99b5-6766c207772f.png":::
 

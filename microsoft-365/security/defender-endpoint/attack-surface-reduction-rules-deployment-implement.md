@@ -1,7 +1,7 @@
 ---
 title: Saldırı yüzeyini azaltma (ASR) kuralları dağıtımı uygulama
 description: Saldırı yüzeyini azaltma kuralları dağıtımınızı uygulamaya yönelik kılavuz sağlar.
-keywords: Saldırı yüzeyini azaltma kuralları dağıtımı, ASR dağıtımı, asr kurallarını etkinleştirme, ASR'yi yapılandırma, izinsiz giriş engelleme sistemi, koruma kuralları, istismardan koruma kuralları, istismardan koruma kuralları, bulaşma önleme kuralları, Uç nokta için Microsoft Defender, ASR kurallarını yapılandırma
+keywords: Saldırı yüzeyini azaltma kuralları dağıtımı, ASR dağıtımı, asr kurallarını etkinleştirme, ASR'yi yapılandırma, izinsiz giriş engelleme sistemi, koruma kuralları, istismardan koruma kuralları, istismardan koruma kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -20,24 +20,25 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 2ca83735eab465e3a5ec6b25156143fde1719c0a
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: c85dcb985210167e04b51092d66fb59080280581
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683131"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477357"
 ---
 # <a name="step-3-implement-asr-rules"></a>3. Adım: ASR kurallarını uygulama
 
 Saldırı yüzeyini azaltma (ASR) kurallarının uygulanması, ilk test halkayı etkin, işlevsel bir durum haline taşır.
 
 > [!div class="mx-imgBorder"]
-> ![ASR kuralları uygulama adımları](images/asr-rules-implementation-steps.png)
+> :::image type="content" source="images/asr-rules-implementation-steps.png" alt-text="ASR kurallarını uygulama yordamı" lightbox="images/asr-rules-implementation-steps.png":::
+  
 
 ## <a name="step-1-transition-asr-rules-from-audit-to-block"></a>1. Adım: ASR Kurallarını Denetimden Engellemeye Geçiş
 
 1. Tüm dışlamalar denetim modundayken belirlendikten sonra, bazı ASR kurallarını "engelleme" moduna ayarlamaya en az tetiklenen kuraldan başlayarak başlatın. Saldırı yüzeyini [azaltma kurallarını etkinleştirme" bkz](enable-attack-surface-reduction.md).
-2. Microsoft 365 Defender portalında raporlama sayfasını gözden geçirme; bkz. [Uç Nokta için Microsoft Defender'da Tehdit koruması raporu](threat-protection-reports.md). AsR şampiyonlarından gelen geri bildirimleri de gözden geçirebilirsiniz.
+2. Microsoft 365 Defender portalında raporlama sayfasını gözden Uç Nokta için Microsoft Defender.[](threat-protection-reports.md) AsR şampiyonlarından gelen geri bildirimleri de gözden geçirebilirsiniz.
 3. Gereken şekilde dışlamaları geliştirin veya yeni dışlamalar oluşturun.
 4. Sorunlu kuralları Yeniden Denetim'e geçiş.
 
@@ -92,11 +93,11 @@ Algılanmaz olduğuna inandığınız dosyaları algılayan kurallarla ilgili so
 
 Her [kuralla ilgili ayrıntılar için saldırı yüzeyini](attack-surface-reduction-rules-reference.md) azaltma kuralları başvuru başlığına bakın.
 
-##### <a name="use-group-policy-to-exclude-files-and-folders"></a>Dosyaları ve klasörleri dışarıda tutmak için Grup İlkesi kullanma
+##### <a name="use-group-policy-to-exclude-files-and-folders"></a>Dosyaları grup ilkesi klasörleri dışarıda tutmak için E-posta kullanma
 
-1. Grup İlkesi yönetim bilgisayarınızda Grup İlkesi Yönetim [Konsolu'nu](https://technet.microsoft.com/library/cc731212.aspx) açın, yapılandırmak istediğiniz Grup İlkesi Nesnesine sağ tıklayın ve Düzenle'yi **seçin**.
+1. Bilgisayarınızdan grup ilkesi Yönetim Konsolu'nu [grup ilkesi](https://technet.microsoft.com/library/cc731212.aspx), yapılandırmak istediğiniz Grup ilkesi Nesnesine sağ tıklayın ve Düzenle'yi **seçin**.
 
-2. Grup İlkesi **Yönetim Düzenleyicisi'nde** Bilgisayar **yapılandırması'ne gidin ve** Yönetim **şablonları'ne tıklayın**.
+2. Yönetim **Grup ilkesi'nde** Bilgisayar **yapılandırması'ne gidin ve** Yönetim **şablonları'ne tıklayın**.
 
 3. Saldırı yüzeyini **azaltmayı Windows bileşenleri Microsoft Defender Virüsten Koruma** \> **Microsoft Defender Exploit Guard** \>  \> **ağacı genişletin**.
 

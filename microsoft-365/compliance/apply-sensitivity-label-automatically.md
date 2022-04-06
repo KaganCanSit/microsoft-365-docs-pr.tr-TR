@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Duyarlılık etiketi  oluşturduktan sonra, dosyalara ve e-postalara otomatik olarak bir etiket atayabilirsiniz veya kullanıcılardan önerdiğiniz etiketi seçmelerini istenebilirsiniz.
-ms.openlocfilehash: 80f3b5c69e482301dd8c4e926959087c7149a529
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 21ee443ba9bab0ac7071377befee5d6e6143a398
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499671"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634635"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>İçeriğe otomatik olarak bir hassasiyet etiketi uygulama
 
@@ -275,18 +275,6 @@ Sanal dağıtım, PowerShell için WhatIf parametresi gibi çalışır. Otomatik
 Benzetim modu ayrıca dağıtımdan önce otomatik etiketleme ilkenizin kapsamını aşamalı olarak artırmanıza olanak sağlar. Örneğin, tek bir konumla, örneğin tek bir SharePoint kitaplığıyla başlayabilirsiniz. Daha sonra, yinelene değişikliklerle, kapsamı birden çok site için artırarak, sonra da site kapsamını başka bir OneDrive.
 
 Son olarak, benzetim modunu, benzetim modu olmadan ne zaman çalıştıracaklarını planlamanıza ve zamanlamanıza yardımcı olmak üzere otomatik etiketleme ilkenizi çalıştırmak için gereken süre hakkında yaklaşık olarak bilgi sağlamak üzere kullanabilirsiniz.
-
-#### <a name="deleted-onedrive-accounts-and-simulation-results"></a>Silinmiş OneDrive hesapları ve benzetim sonuçları
-
-Silinen hesaplar silinmeden önce benzetim sonuçlarında olası görüntü farklarını OneDrive silme işleminin [bekletme aşamasındadır](/onedrive/retention-and-deletion#the-onedrive-deletion-process). Örneğin, bir çalışan kuruluştan ayrıldı ve müdürünün bu kullanıcının dosya dosyalarına geçici OneDrive vardır.
-
-Bu senaryoda, OneDrive hesabı otomatik etiketleme ilkesinde URL tarafından belirtilirse, benzetim sonuçlarına silinen OneDrive hesaptan eşlenmiş dosyalar dahil edilir.
-
-Öte yandan, OneDrive HESABı URL tarafından belirtilmemişse ancak Tüm varsayılan ayarına **dahil edildiyseniz**:
-- Posta SharePoint ilkeye ekli olduğunda, silinen hesaptan OneDrive dosyalar benzetim sonuçları SharePoint öğeler olarak görüntülenir.
-- Posta SharePoint ilkeye dahil etmediğinde, silinen hesaptan OneDrive dosyalar benzetim sonuçlarına dahil değildir.
-
-Her durumda, eşlenmiş dosyalar hesap kalıcı olarak OneDrive etiketlenmiş olarak gelir. Listelenen görüntü tutarsızlıkları yalnızca benzetim sonuçları için geçerlidir.
 
 ### <a name="creating-an-auto-labeling-policy"></a>Otomatik etiketleme ilkesi oluşturma
 

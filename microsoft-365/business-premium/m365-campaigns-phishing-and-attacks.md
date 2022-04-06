@@ -24,27 +24,30 @@ search.appverid:
 - MET150
 - MOE150
 description: Kimlik avına ve diğer saldırılara karşı koruma Microsoft 365.
-ms.openlocfilehash: b1a6b5a80b00df010d4733c1b7cb8ce1d16a95d9
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 09e72221e23f4f0d1e2f4a5e7dcb81abff46dcf2
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011981"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634261"
 ---
 # <a name="protect-yourself-against-phishing-and-other-attacks"></a>Kimlik avına ve diğer saldırılara karşı kendinizi koruma
 
 Microsoft 365 İş Ekstra saldırılara karşı korunmak için birçok koruma içerir, ancak çevrimiçi saldırılar riskini sınırlamak ve en aza indirmek için kendiniz bazı şeyler vardır.
 
 - **İstenmeyen veya gereksiz posta** Gereksiz e-posta almakla tüm gereksiz e-postaların aynı olmadığının birçok nedeni vardır. Ancak, gereksiz postayı filtreleerek size gerekenleri ve dolayısıyla saldırı risklerini azaltabilirsiniz.
+
 - **Kimlik avı** Kimlik avı dolandırıcılığı, meşru görünen ancak kişisel bilgilerinizi almaya veya paranızı çalmaya yönelik e-postalar yoluyla olur.
+
 - **Spoofing** Dolandırıcılar, kendinizden e-posta almışsınız gibi görünmesini yapmak için sahtekarlığı olarak adlandırılan bir teknik de kullanabilir. 
+
 - **Kötü** amaçlı yazılım, bilgisayarınıza yüklensin, çoğunlukla bir bağlantıya tıklar veya bir belgeyi e-postadan açtıktan sonra yüklenir. Çeşitli türlerde kötü amaçlı yazılım (örneğin, fidye yazılımı, bilgisayarınız ele alınsa) vardır, ancak bu tür yazılımlardan herhangi birini almak istemiyorsanız. 
 
 ## <a name="best-practices"></a>En iyi uygulamalar
 
 ### <a name="reduce-spam-mail"></a>İstenmeyen postayı azaltma
 
-İstenmeyen [postayı azaltmaya yardımcı olmak için bu 10 ipucuna bakın](https://support.microsoft.com/en-us/office/10-tips-on-how-to-help-reduce-spam-55f756e8-688b-41c3-a086-8f68ccc592f6).
+İstenmeyen [postayı azaltmaya yardımcı olmak için bu 10 ipucuna bakın](https://support.microsoft.com/office/10-tips-on-how-to-help-reduce-spam-55f756e8-688b-41c3-a086-8f68ccc592f6).
 
 ### <a name="report-it"></a>Rapor!
 
@@ -78,5 +81,6 @@ Kampanya ekibinin size ve üyelerine ipuçlarıyla birlikte bu bilgi görselini 
 Şu konuda daha fazla bilgi:
 
 - [İletişimlerinizi ve dosyalarınızı bu dosya ve Office](https://support.microsoft.com/en-us/office/keep-your-files-and-communications-safe-with-office-c4ddc381-7395-42da-887c-8836a3bb975f).
+
 - [İş yerinde güvenli ve gizli kalın](https://support.office.com/article/stay-secure-and-private-at-work-104c7d91-b25a-453d-beee-ba64b6c6fc2d).
   

@@ -22,12 +22,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Oturum açma sayfanızı gizlilik ve izin bildirimiyle özelleştirin ve Microsoft 365.
-ms.openlocfilehash: 003853e0577b2c23fc8240d2b19918c3235eade8
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 8beff76721ce622d5e1943aea1c16fda90b052f1
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011897"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634701"
 ---
 # <a name="customize-your-sign-in-page-with-a-privacy-and-consent-notice"></a>Gizlilik ve izin bildirimiyle oturum açma sayfanızı özelleştirme
 
@@ -42,8 +42,11 @@ Oturum açma sayfasındaki özelleştirilebilir öğeleri güncelleştirmek içi
 Güncelleştir şunlarız:
 
 - **Oturum açma sayfası metni** Gizlilik ve izin bildirimini eklemek için kolay bir yer.
+
 - Oturum açma sayfası arka plan resmi
+
 - Başlık logosu
+
 - Kullanıcı adı ipucu
 
 Gizlilik ve izin bildirimlerinden örnekler için bkz. Arama ve Bilgisayarları Seizing'de A Eki ve Suç [Soruşturmalarında Elektronik Kanıt Elde.](https://www.justice.gov/sites/default/files/criminal-ccips/legacy/2015/01/14/ssmanual2009.pdf)

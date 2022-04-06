@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 24cdf18ad510902a533834da2f3595acaa9b33d7
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+ms.openlocfilehash: be2352ef44d8e9f7430cde39a71c7b7b1167a874
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64595268"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634107"
 ---
 # <a name="web-content-filtering"></a>Web içeriği filtreleme
 
@@ -52,7 +52,7 @@ Web içeriği filtreleme, başlıca web tarayıcılarında Windows Defender Smar
 
 Bu özelliği denmeden önce, aşağıdaki gereksinimleri karşılamıyor olun:
 
-- Aboneliğiniz şunları içerir: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Güvenlik, Microsoft 365 E3 + Microsoft 365 E5 Güvenlik eklenti, veya Uç Nokta için Microsoft Defender tek başına lisansa sahip olabilir. 
+- Aboneliğiniz şunları içerir: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Güvenlik, Microsoft 365 E3 veya Uç Nokta için Microsoft Defender tek başına lisans. 
 
 - Bu portala <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender vardır</a>.
 

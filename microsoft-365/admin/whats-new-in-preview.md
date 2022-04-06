@@ -22,12 +22,12 @@ ms.custom:
 - AdminSurgePortfolio
 - admindeeplinkMAC
 description: Yeni Microsoft 365 yönetim merkezi - bu ay eklenen özellikler hakkında bilgi içerir.
-ms.openlocfilehash: 2a86fdaac2334bfb5b30a3ad60e875a7c9a97a3b
-ms.sourcegitcommit: 57211e8082a3429017ad33fe0e6bd9af203bb7ab
+ms.openlocfilehash: 231fdcce809834503a93eeb0a87f993f13de3d09
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63027541"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634141"
 ---
 # <a name="whats-new-in-the-microsoft-365-admin-center"></a>2010'daki Microsoft 365 yönetim merkezi
 
@@ -46,10 +46,22 @@ Ayrıca diğer Microsoft bulut hizmetleriyle ilgili nelerin yeni olduğunu bilme
 - [Yönetim merkezinde Exchange.](/Exchange/whats-new)
 - [Microsoft Intune'daki Microsoft Intune](/mem/intune/fundamentals/whats-new)
 - [Yeni gelen Microsoft 365 uyumluluk merkezi](/Office365/SecurityCompliance/whats-new)
-- [Microsoft 365 Defender'daki Microsoft 365 Defender](../security/mtp/whats-new.md)
+- [Microsoft 365 Defender'daki yenilikler](../security/mtp/whats-new.md)
 - [Yönetim merkezinde SharePoint.](/sharepoint/what-s-new-in-admin-center)
 - [Office güncelleştirmeleri](/OfficeUpdates/)
 - [Sürüm durumunu Windows denetleme](/windows/deployment/update/check-release-health)
+
+## <a name="march-2022"></a>Mart 2022
+
+### <a name="microsoft-365-lighthouse-ga"></a>Microsoft 365 Lighthouse GA
+
+Küçük ve orta ölçekli işletmeler, kendi IT ortamlarını yönetmek için çoğunlukla güvenilir IT iş ortaklarına güvenir. İş ortaklarının, Yönetilen Hizmet Sağlayıcıları (MSP) için çok kiracılı bir yönetim portalı olan [Microsoft 365 Lighthouse'ın](https://aka.ms/March1SMBPartnerBlog) genel kullanılabilirliğiyle müşterilerin ölçeğinde güvenliğini sağlamalarını kolaylaştırıyoruz. Microsoft 365 Lighthouse iş ortaklarına tehditlere, anormal oturum açmalara ve cihaz uyumluluğu uyarılarına karşı onları güvende tutmak için hızlı bir şekilde tanımlama ve bu tehditlere karşı harekete geçerek, müşterilere eksiksiz bir deneyim sunar.
+
+:::image type="content" source="../media/lighthouse.png" alt-text="Ekran görüntüsü: Microsoft 365 Lighthouse panosu":::
+
+Microsoft 365 Lighthouse yalnızca bir IT iş ortağı hizmetidir ve Bulut Çözümü Sağlayıcısı (CSP) programına kaydolan ve en fazla 1000 lisanslı kullanıcısı olan müşterileri yöneten iş ortakları tarafından Microsoft 365 İş Ekstra. Microsoft 365 E3 veya İş için Microsoft Defender (önizlemede) abonelikleri seçin. Microsoft CSP kaydıyla kaydolan bir IT İş Ortağı iysiniz, Microsoft 365 Lighthouse kullanımına ücretsizdir ve iş ölçeğinize ve büyümenize yardımcı olmak için tasarlanmıştır. Daha fazla bilgi [Microsoft 365 Lighthouse için Yardım kitaplığına](../lighthouse/m365-lighthouse-overview.md) göz atabilirsiniz.
+
+Oturum açma'Microsoft 365 Lighthouse [için bkz.](../lighthouse/m365-lighthouse-sign-up.md) Microsoft 365 Lighthouse. İş ortağı web Microsoft 365 Lighthouse, Defender for Business ve Microsoft 365 İş Ekstra [hakkında daha fazla bilgi edinmek için bize katılın](https://aka.ms/M365MDBSeries).
 
 ## <a name="february-2022"></a>Şubat 2022
 
@@ -122,9 +134,9 @@ Bu güncelleştirmeleri Yeni <a href="https://go.microsoft.com/fwlink/p/?linkid=
 
 Arama işlevine birkaç yeni kategori ekledik.
 
-- Artık genel aramada Microsoft 365 yönetici rollerini arayabilir ve herhangi bir sayfadan rol atamalarını hızla  görüntüleyebilirsiniz ve yönetebilirsiniz. Örneğin, **Intune yöneticisini arayın**.
+- Artık herhangi bir sayfada Microsoft 365 rollerini arayabilir genel arama ve rol atamalarını hızlı bir şekilde görüntüleyebilirsiniz. Örneğin, yönetici Intune **arayabilirsiniz**.
 
-- Artık genel arama aracılığıyla basitleştirilmiş kurulum deneyimlerini bulabilirsiniz. Bu, sizin ve ekibinin yeni özellikleri kullanmaya hızlı bir şekilde başlamanıza yardımcı olabilir. Örneğin, parolayı süresi hiç **dolmay olacak şekilde ayarlayın**.
+- Artık, Yeni Deneyimler aracılığıyla basitleştirilmiş kurulum genel arama. Bu, sizin ve ekibinin yeni özellikleri kullanmaya hızlı bir şekilde başlamanıza yardımcı olabilir. Örneğin, parolayı süresi hiç **dolmay olacak şekilde ayarlayın**.
 
 Yönetim merkezinde arama hakkında daha fazla bilgi edinmek için bkz[. Yönetim merkezinde Microsoft 365 yönetim merkezi](manage/search-in-the-mac.md).
 
@@ -200,11 +212,11 @@ Yalnızca çevrimiçi olan ilk Ignite hizmetimiz olan Microsoft Ignite'a hoş ge
 - **Kiracılar:** Yönetmekte olduğu kiracılar arasında hızla geçiş yapmak.
 - **Tüm kiracılar**: Tüm kiracı hizmetlerinizin durumunu, açık hizmet isteklerini, ürünlerinizi ve faturanızı, önerilen kurulum görevlerini ve bu kiracının kullanıcı sayısını hızla göreceğiniz yeni bir sayfa.
 - **Kurulum**: Çok kiracılı Kurulum sayfası, Kurulum sayfasının bir liste görünümünü sağlar, ancak birçok kiracı için düzenlenmiştir. Hangi özelliklerin açık olmadığını, tüm kiracılar için hangi görevlerin tamamlanmış olduğunu ve kiracıların yine de tamamlaması gereken görevleri görebilirler. Bu görünüm, özelliğin benimsenmesi izlemenizi ve önerilen güvenlik kurulumu görevlerinin her zaman bittiğinden emin olun.
-- **Hizmet durumu**: Hizmet durumu görünümü, kiracıları etkileyen bir olay veya danışma olup olduğunu gösterir. Size kaç tane yönetilen kiracınızı etkile ilgili olduğu bile anlat söyler. Genel bakış sekmesi hakkında daha fazla bilgi almak için bir olay seçin ve sonra detaya inerek bu kiracıyı desteklemek için Kiracılar etkilenenler sekmesine geçmeli.
+- **Hizmet durumu** Durumu: Hizmet durumu görünümü kiracıları etkileyen bir olay veya danışma olup olduğunu gösterir. Size kaç tane yönetilen kiracınızı etkile ilgili olduğu bile anlat söyler. Genel bakış sekmesi hakkında daha fazla bilgi almak için bir olay seçin ve sonra detaya inerek bu kiracıyı desteklemek için Kiracılar etkilenenler sekmesine geçmeli.
 - **Kiracılar arası** posta kutusu geçişleri, artık genel önizlemede yer alan ve posta kutularını yere kapatmaya gerek kalmadan kiracılar arasında taşımanızı ve posta kutularını eklemenizi sağlayan yeni bir hizmettir. 
 - **Kiracılar arası etki alanı** paylaşımı: Çok yakında, etki alanını birden çok kiracıda paylaşmaya olanak sağlayan özellikler için özel önizlemeye katılabilirsiniz. Örneğin, Contoso Wingtip Toys'i alırsa, Contoso etki alanını Wingtip Toys ile paylaşabilir ve böylece her iki kiracıda da e-posta adresleri olarak "contoso.com" kullanabilir.
 
-![Bir olayın seçili olduğu ve Kiracıların etkilenenler sekmesinin açık olduğu birden çok kiracı için hizmet durumu sayfası. Gezinti menüsünde yalnızca seçenekler Tüm kiracılar, Kurulum ve Hizmet durumu yer almaktadır.](../media/MAC-WN-MTinServiceHealth.png)
+![Hizmet durumu ve Kiracılar etkilenen sekme açık durumdayken birden çok kiracı için bir sayfa. Gezinti menüsünde Tüm kiracılar, Kurulum ve Hizmet durumu seçenekleri vardır.](../media/MAC-WN-MTinServiceHealth.png)
 
 ### <a name="monitor-your-most-important-accounts"></a>En önemli hesaplarınızı izleme
 
@@ -220,7 +232,7 @@ CEO'nun olduğu gibi, iş üzerinde büyük bir etkisi olan kullanıcılarınız
 Başlamanın iki yolu vardır:
 
 - **Kullanıcılar'a** gidin ve ardından listeye kullanıcı eklemek için üç nokta (diğer eylemler) menüsünde  Öncelik hesaplarını yönet'i seçin.
-- **Kurulum'a** gidin, kurulum görevini bulun **En önemli hesaplarınızı izleme ve** sonra da **Başla'ya seçin**.
+- **Kurulum'a** gidin, kurulum görevini bulun **En önemli hesaplarınızı takip edin** ve sonra Dam'ı **Kullanmaya başlayın**.
 
 Öncelik hesapları hakkında daha fazla bilgi için Öncelik hesaplarını [izleme'ye göz atabilirsiniz](./setup/priority-accounts.md).
 
@@ -244,11 +256,11 @@ Yönetim merkezi için yeni bir Arama deneyimi sunuyor ve bu özelliği denemeni
 
 [Aboneliğinize Microsoft 365 yönetici mobil](https://www.microsoft.com/microsoft-365/business/manage-office-365-admin-app) uygulaması, mobil Microsoft 365 bir şeyler yönetmenize olanak sağlar ve böylece masanızda günlük görevleri gerçekleştirmek için masadan uzaklaşabilirsiniz. Aslında uygulamada 90'dan fazla özellik vardır ve biraz daha ekledik:
 
-- **E-Microsoft Intune'nin** Mobil Uygulama Yönetimi ve Koşullu Erişim ilkeleri için destek: Artık kendi kişisel cihazınızı kullanarak Intune'un Mobil Uygulama Yönetimi'ne ve koşullu erişim ilkelerine sahip olsa bile Microsoft 365'i yönetebilirsiniz.
+- **Mobil Microsoft Intune Yönetimi** ve Koşullu Erişim ilkeleri için destek: Şimdi kişisel cihazınızı kullanarak Microsoft 365'ın Mobil Uygulama Yönetimi ve koşullu erişim ilkelerini Intune açık bile olsa yönetebilirsiniz.
 - **İleti merkezi bildirimleri**: Yeni ileti merkezi gönderileri hakkında **uyarıldırilmek** >  isterseniz, Ayarlar Merkezi'nde ileti merkezi bildirimlerini açabilirsiniz. Bildirimler aracılığıyla, kiracınız genelindeki önemli bilgiler ve olaylar hakkında bilgi sahibi olmak istiyorum.
 - **Faturalama uyarıları**: Ayrıca, bir aboneliğin süresi **dolmak** >  üzere olduğu zaman cihazınızın fatura bildirimlerini almak için fatura bildirimlerini Ayarlar Notifications'da da açabilirsiniz.
 - **Koyu mod**: Mobil uygulamanın koyu tarafına hoş geldiniz. Bu, en çok istenen özelliklerdendi. Açmak **için Ayarlar** >  **Themes'e** gidin.
-- **Sorun bildirme**: Artık uygulamada bir sorun bildirebilirsiniz veya diğer yöneticiler tarafından bildirilen sorunları görüntüebilirsiniz. Hizmet **durumunu kontrol etmek** için Hizmet durumu'edin.
+- **Sorun bildirme**: Artık uygulamada bir sorun bildirebilirsiniz veya diğer yöneticiler tarafından bildirilen sorunları görüntüebilirsiniz. Göz **Hizmet durumu** için Ziyaret edin.
 
 ![İleti merkezi, Microsoft 365 durumu ve fatura uyarıları bildirimleriyle birlikte yönetici uygulamasının Durum sayfası.](../media/MAC-WN-AdminMobileApp.png)
 
@@ -271,13 +283,13 @@ Uzaktan çalışmaya ve hatırlaması ve paylaşması kolay kullanışlı bir we
 - Web Exchange azaltma ilkenizi değiştirme
 - Belirli kullanıcılara Teams sağlama ve doğrulama durumunu denetleme
 - DKIM kurulum sorunlarını düzeltme
-- Intune kullanıcı kaydı hatalarını tanılama
+- Kullanıcı Intune hatalarını tanılama
 
 Ayrıca daha önce gördüğünüz yeni ve geliştirilmiş destek deneyimini diğer bazı Microsoft 365 yönetim merkezi merkezlerine de sunuyoruz<a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank"></a>. Teams merkezi ve Güvenlik ve Uyumluluk yönetim merkezleri zaten bu yeni deneyime sahiptir. Yakında, **Exchange merkezi**, **SharePoint merkezi** ve **Office.com** yöneticilerine bu yeni yardım deneyimiyle birlikte güncelleştirilecek.
 
-### <a name="manage-changes-with-microsoft-planner"></a>Microsoft Planner ile değişiklikleri yönetme
+### <a name="manage-changes-with-microsoft-planner"></a>Değişiklikleri daha kolay Microsoft Planner
 
-Mayıs'ta, kısa bir süre sonra İleti merkezi gönderilerini Microsoft Planner'a eşit kullanabileceğinizi ve artık herkesin kullanımına açık olacağını duyurmuştuk.  Artık iletilerden görevler oluşturabilir, bunları atayabilirsiniz ve tamamlama için izleyebilirsiniz. İlk kez Planner **eşitleme'yi seçersiniz** ve uygun plana bağlanmanız gerekir.
+Mayıs'ta, kısa bir süre sonra İleti merkezi gönderilerini e-posta Microsoft Planner artık herkesin kullanımına açık olacağını duyurmuştuk.  Artık iletilerden görevler oluşturabilir, bunları atayabilirsiniz ve tamamlama için izleyebilirsiniz. İlk kez Planner **eşitleme'yi seçersiniz** ve uygun plana bağlanmanız gerekir.
 
 ![Tercihler düğmesinin yanındaki komut çubuğunda 'planner eşitleme' vurgulanmış ileti merkezi sayfası.](../media/MAC-WN-MCPlannerSync.png)
 
@@ -369,149 +381,3 @@ Yalnızca bu ay, güvenli ve uyumlu işbirliği için [tümleşik Microsoft 365 
 
 - Microsoft 365 video serisinde bulunan yeni deneyimler: Bu ay Teams yöneticisi ve Güvenlik ve Uyumluluk Merkezleri, İleti Merkezi ile Planner tümleştirmesi ve **Microsoft Teams'te** yeni 3x3 video düzeniyle ilgili yeni destek deneyimini Microsoft Teams. 
 - Gerek [Microsoft 365 yönetim merkezi bulmanız](./index.yml) için yardım merkezi sayfası güncelleştirildi. Şu anda o sayfaya bakarsanız, önemli güncelleştirmeler ve değişiklikler konusunda sizi bilgilendirmek için bir kart ekledik.
-
-## <a name="april-2020"></a>Nisan 2020
-
-### <a name="intune-roles-management"></a>Intune rol yönetimi
-
-[Nisan 2020](#april-2020)
-
-İşte, yaptık! Birleşik bir roller deneyiminde ikinci adımı attık ve artık intune rollerini aynı <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi.</a> Ayrıca, roller için arama yapma ve rol izinlerini görüntüleme gibi özelliklerden de faydalanabilirsiniz. Bu, aynı zamanda Sizin ve Intune'da rolleri yönetmek için iki Microsoft 365 olmadığınız anlamına gelir. Üst bilgi sayfasında oturum <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a>, Roller sayfasında biri Azure AD ve biri Intune için olmakken iki özet olduğunu görebilirsiniz.
-
-![Intune özet seçili olarak Roller sayfası.](../media/MAC-WN-IntuneRoles.png)
-
-### <a name="sync-message-center-posts-to-planner"></a>İleti Merkezi gönderilerini Planner'a eşitleme
-
-Mayıs'ta, Hedefli sürümde olan yöneticiler ileti merkezinde "Planner eşitleme" düğmesini görmeye başlayacaktır. Artık eyleme ihtiyacı olan iletileri izleyebilir, izlemek istediğiniz ileti türünü seçin, görev olarak izlemek için iletiler attayabilirsiniz ve daha sonra dikkat çekmek için iletileri etiketebilirsiniz.
-
-[Başlamak için Hedefli Sürüme](manage/release-options-in-office-365.md) Katılın!
-
-### <a name="need-help-launched-in-teams-admin-center--security-and-compliance-centers"></a>"Yardıma mı ihtiyacınız var?" Güvenlik Teams Uyumluluk & Yönetim Merkezi'nde başlatıldı
-
-Yönetim Teams, Güvenlik merkezi ve Uyumluluk Merkezi artık aynı "Yardıma mı ihtiyacınız var?" özelliğine sahiptir <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">Microsoft 365 yönetim merkezi</a> yardım bulmak ve destek ile iletişim kurmak için bu özelliği kullanır. Yöneticilerden aynı düzeyde yardım ve destek almak istediğini çok sayıda geri bildirim aldık ve bunu size getirmekten mutluluk aldık. Deneyin ve bize geri bildirim gönderin!
-
-#### <a name="need-chat"></a>Sohbet mi gerekiyor?
-
-Destek temsilcilerimiz evden çalışırken evden çalışmaya devam ederken müşteri olaylarını ve İnternet bant genişliği kısıtlamalarını almaya devam ederken müşteri arama kalitesini etkiliyor. Destek olmaya devam etmek için ticari müşterilere yönelik canlı sohbet desteği seçeneğini ilk <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">Microsoft 365 yönetim merkezi.</a>
-
-Hizmet isteği oluştururken, telefon ve e-postanın yanı sıra sohbeti de bir seçenek olarak görüyorsunuz. Tercih edilen iletişim kanalı olarak sohbeti seçin ve isteği oluşturun. İsteği oluşturduktan sonra, Microsoft temsilcileriyle sohbet etmeye hazır olduğunda sohbeti başlatabilirsiniz.
-
-### <a name="teams-updates"></a>Teams güncelleştirmeleri yükleme
-
-Teams'in artan kullanımıyla, bunları yönetmenize yardımcı olacak birkaç özellik ekledik.
-
-- Yönetim merkezi Giriş sayfasındaki yeni bir öneri kartı, 30 gün boyunca hangi kullanıcıların etkin Teams olmadığını gösterir. Bu kullanıcılara, eğitim e-postası gönderebilirsiniz ve bu kullanıcılara eğitim Teams.
-- **Kullanıcıları ekiplerle bir araya** getirin: Kurulum'a gidip lisanslı kullanıcılar için Teams'ı açmanıza ve konuk erişimine izin vermelerine yardımcı olacak yeni bir sayfa görmek için Kurulum'a gidin, böylece Teams.
-- Yeni Microsoft Teams kartı artık Giriş sayfanıza varsayılan olarak sabitlenmiş durumdadır. Bu, Teams açık olup olmadığını ve konuk erişimine izin verili olup olmadığını gösterir. Ayrıca, yeni lisansa sahip kullanıcıların kurulum durumunu denetlemeye Teams ve ağ sorunlarının kullanıcıları etkiley olup Teams sağlar.
-- Son Teams, satın aldığınız lisanslar için ilk ayarlama akışında bir adımdır ve bu, Teams.
-
-### <a name="productivity-score"></a>Üretkenlik puanı
-
-Üretkenlik Puanı, kişilerin Microsoft bulut hizmetlerini ve bunları destekleyen teknoloji deneyimlerini nasıl kullanabileceğine ilgili içgörüler sağlar. Bu puan, çalışan ve teknoloji deneyimi ölçüleri karşısında kurum personelinizin performansını yansıtan ve sizin gibi kuruluşlarla puanlarınızı karşılaştıran bir puandır. Bu ay, önizleme deneyimi için aşağıdaki yeni kavramları tanıtılacaktır:
-
-- Giriş sayfasında birincil içgörülerin eğilim görünümü ve kategori ayrıntı sayfaları -Endpoint Analytics ve Network Connectivity categories added to Technology Experience
-- Çalışan Deneyimi kategorilerinde gösterilen İlgili Teknoloji Deneyimi içgörü
-- Çalışan Deneyiminin bir parçası olarak Yeni İletişimler kategorisi
-- Çalışan Deneyimi kategorilerinde kurumsal meta veriler ile kullanıcı ayrıntıları
-
-Daha fazla bilgi edinmek için şu blogu ziyaret edin: Microsoft Üretkenlik Puanı ile Microsoft 365 [ve geliştirme](https://techcommunity.microsoft.com/t5/microsoft-365-blog/measure-and-improve-the-microsoft-365-experience-with-microsoft/ba-p/1348618). Üretkenlik puanı şu anda özel önizlemede. [Çalışmaya katılmak için Üretkenlik puanı özel önizlemeye](https://aka.ms/productivityscorepreview) katılın.
-
-### <a name="groups-updates"></a>Grup güncelleştirmeleri
-
-Bu ay Gruplar için iki güncelleştirmemiz var:
-
-- Artık her grubun e-posta Office 365 düzenleyebilirsiniz (Outlook'te Gruplar olarak da bilinir ve yakında bu e-posta grupları Microsoft 365 gelir).
-- Geri bildirimlerinizi aldık ve bir grubu Microsoft Team'e dönüştürmenizin nedeni olarak daha net bir hata iletisi ekledik.
-
-### <a name="docs-videos-and-training-april"></a>Belgeler, videolar ve eğitim (Nisan)
-
-Microsoft 365 video serisinde yapılan öneriler: Bu ay, küçük işletmelere **Microsoft Teams'i**, müşterilerle ve iş ortaklarıyla bağlantıda kalmak için uzaktan çalışma eğitim kaynaklarını ve yeni iş ortaklarını ve yeni iş ortağı planının nasıl yayınlanacaklarını da içeren uzaktan çalışmaya geçişe yardımcı olacak ipuçları ve Microsoft 365 Küçük İşletmeler için Ses sunuyoruz. [Bu Yeni Gelen Microsoft 365](https://go.microsoft.com/fwlink/p/?linkid=2118096)
-
-#### <a name="for-your-users"></a>Kullanıcılarınız için
-
-- [Toplantı zamanlama](https://support.microsoft.com/office/943507a9-8583-4c58-b5d2-8ec8265e04e5)
-- [Teams toplantısına katılma](https://support.microsoft.com/office/078e9868-f1aa-4414-8bb9-ee88e9236ee4)
-- [Kuruluş genelinde ekip oluşturma](/microsoftteams/create-an-org-wide-team)
-- [Konuklı ekip oluşturma](https://support.microsoft.com/office/fccb4fa6-f864-4508-bdde-256e7384a14f)
-- [Bir Takıma konuk olarak katılma](/microsoftteams/guest-experience)
-- [Grup e-posta adresi oluşturma](https://support.microsoft.com/office/3f73d218-52d6-4f88-a733-9ff37073ee4c)
-
-#### <a name="for-admins-and-business-owners"></a>Yöneticiler ve iş sahipleri için
-
-- [Küçük işletmenizi uzaktan çalışmayla güçlendirin](https://support.microsoft.com/office/9b91a85a-39b4-40a6-a590-0f9bea0ba8e6)
-- [Uzaktan küçük işletme çalıştırma](admin-overview/sign-up-for-office-365.md)
-- [Microsoft Business Basic'e kaydolma]()
-- [İki faktörlü oturum açma ayarını ayarlama](admin-overview/sign-up-for-office-365.md)
-
-## <a name="march-2020"></a>Mart 2020
-
-### <a name="featured-feedback-fix-improve-add-user-reliability-for-licensing"></a>Öne Çıkan Geri Bildirim Düzeltmesi: Lisanslama için "kullanıcı ekle" güvenilirliğini geliştirme
-
-Yöneticilerden, kullanıcı eklerken lisans atamanın ne kadar zor olduğuyla ilgili çok fazla geri bildirim aldık. Bu düzeltme için ilk güncelleştirmeyi yaptık ve bu istekleri işlemesi için daha güvenilir bir sahne arkası hizmetine geçiş yaptık. Bir sorun olursa, yeniden denemenizi sağlayan bir hata iletisi alırsınız.
-
-![Hatayla birlikte kullanıcı onayı sayfası ekleyin.](../media/MAC-WN-ImprovedLicensing.png)
-
-### <a name="microsoft-teams-home-page-card"></a>Microsoft Teams sayfası kartı
-
-Kullanım Teams sayesinde, bazı kuruluşlarda daha kolay keşfedilebilir bir Teams pano kartı elde edilebilir. Kartta ayrıca, uzaktan çalışmaya kuruluş geçişinize yardımcı olacak eğitim ve belgelerin bağlantıları da vardır. Yeni kartı görmek **için Giriş** sayfasına gidin.
-
-![Microsoft Teams sayfası kartına tıklayın.](../media/MAC-WN-TeamsCard.PNG)
-
-### <a name="customize-your-organizations-sharepoint-mobile-app-theme"></a>Mobil uygulama temasını SharePoint özelleştirme
-
-Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">kullanarak,</a> iOS için mobil uygulamada ve Android için SharePoint mobil uygulamada SharePoint özelleştirebilirsiniz. Bu özellik, hareket eden çalışanlar için SharePoint Online ile eş SharePoint bir mobil intranet uygulaması deneyimi sağlar. Tema özelleştirme logo resminizi, gezinti çubuğu renginizi, metin ve simge renklerini ve tema renklerini içerir; kolayca tanımanızı sağlar.
-
-![Yönetim merkezi ayarlarını mobil uygulamaya eşleme diyagramı.](../media/MAC-WN-CustThemeSP.png)
-
-### <a name="improvements-to-the-add-a-group-wizard"></a>"Grup ekleme" sihirbazında geliştirmeler
-
-Yöneticiler yeni bir grup oluşturduktan sonra bunu aynı anda bir Ekip olarak oluşturduktan sonra, grup üyelerini içeren lisansı olmayan sahiplere Teams. Bu da bazı baş başları da büyük bir aksı oldu. Sahiplerin Teams lisansına sahip olduklarını ve grubu Bir Ekip'e çevirme seçeneğinin devre dışı bırakılamalarına sahip olduklarını doğrulamak için sihirbaz akışını güncelledık.
-
-### <a name="microsoft-365-offerings-for-small-and-medium-businesses"></a>Microsoft 365 ve orta ölçekli işletmeler için yeni teklifler
-
-Bunun gelecek ay için bir duyuru olduğunu biliyoruz, ancak hazır olduğunu bilmek istiyorum.
-
-21 Nisan'dan başlayarak küçük ve orta ölçekli işletmeler için Office 365 aboneliklerimizle ilgili değişiklikler yapıyoruz ve Office 365 ProPlus. Bu ürünler artık marka Microsoft 365 kullanır.
-
-Yeni ürün adları 21 Nisan 2020'de yürürlüğe girecektir. Bu, yalnızca ürün adıyla ilgili bir değişikliktir ve şu anda hiçbir fiyatlandırma veya özellik değişikliği yoktur.
-
-|Geçerli ad |Yeni ad  |
-|---------|---------|
-|Office 365 İş Başlangıç     |   Microsoft 365 İş Temel      |
-|Office 365 Business Premium     |    Microsoft 365 Business Standard     |
-|Microsoft 365 İş     |    Microsoft 365 Business Premium     |
-|Office 365 İş     |    Microsoft 365 Kurumsal Uygulamaları       |
-|Office 365 ProPlus    |   Microsoft 365 için uygulamalarınızı oluşturun      |
-
-### <a name="videos-training-and-docs"></a>Videolar, eğitim ve belgeler
-
-Microsoft 365 web dizisinde yapılan özellikler: Bu ayın bölümünde, [Microsoft Teams'in](https://go.microsoft.com/fwlink/p/?linkid=2118096) 3. yıl dönümünü vurguladık ve çevrimiçi toplantılarda ses kalitesini iyileştirme, Vardiyalar uygulamasıyla firstline yöneticiler için Hedefli İletişim, Teams ve Skype tüketici birlikte çalışabilirlik gibi daha birçok yeni özelliği kapsıyor.
-
-## <a name="february-2020"></a>Şubat 2020
-
-### <a name="featured-feedback-fix-multi-organization-switcher"></a>Öne Çıkan Geri Bildirim Düzeltmesi: Çok kuruluşlu anahtarcı
-
-Birden çok Microsoft bulut kuruluşlarını yönetmenin zorluklarıyla ilgili iş ortakları ve yöneticilerden çok sayıda geri bildirim aldık. İlk çok kuruluşlu yönetim özelliklerimizin **biri, yalnızca** 2 tıklamayla yönetmekte olduğu kuruluşlar arasında değişiklik yapabilirsiniz Kuruluş anahtarıdır.
-> [!TIP]
-> En az bir kuruluşun İş ortağı kaydında olduğu sürece kuruluş geçişcinin görünmesi için hiçbir şey yapmak zorunda değilsiniz.
-
-1. Kuruluş <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> adını seçin.
-![Ekran görüntüsü: Giriş sayfasının üst kısmında, anahtar simgesiyle kuruluş profili adı gösterilir.](../media/MAC-Organization-switcher.png)
-
-2. Kuruluş anahtarında yönetmek istediğiniz kuruluşu seçin.
-![Ekran yakalama: Birleştirilmiş Messenger kiracısı vurgulanmış Olarak Kuruluşum kiracı değiştiricisi.](../media/MAC-OrgSwitcherSelected.png)
-
-Tam anlamıyla bu!!!
-
-### <a name="groups"></a>Gruplar
-
-Bu ay gruplar alanında yapılan birkaç değişiklik:
-
-- **Grup adına göre sıralama**: Grup adı sütununu seçerek grup listesini alfabetik **olarak sıraabilirsiniz** .
-- **Silinmiş Microsoft 365 geri yükleme**: Silinmiş grupları geri yüklemek için artık Exchange yönetim merkezine Microsoft 365 yok. Grupları Sil **Microsoft 365 yönetim merkezi** \> **i seçin** \>  \> (listeden bir grup seçin) Grubu geri yükle'ye \> **gidin**. Grubu Yeniden Gruplar listesine geri alır ve grubun e-postası, konuşmaları, not defteri, dosyalar ve takvimlerini geri sağlar.
-
-### <a name="videos-training-and-docs-february"></a>Videolar, eğitim ve belgeler (Şubat)
-
-- **Microsoft 365 video** serisinde yapılan özellikler: Bu ay, uygulama içi yardım bölmesi aracılığıyla belirli özellikleri, SharePoint Yammer'daki en son güvenlik ve uyumluluk güncelleştirmelerini göstermenizi veya gizlemenizi sağlayan Office Online için özel arama özelliklerine odaklandınız. İşte en son bölüm: [Microsoft 365'daki Microsoft 365](https://go.microsoft.com/fwlink/p/?linkid=2118096)
-
-- **Belgeler taşıma**: Office 365 yöneticisinin web makalelerini Microsoft 365 içeriğiyle birlikte kullandık ve yeni URL'yi fark etmişsinizdir. Örneğin, bu makale önceden şu adreste barındırıldı **: docs.microsoft.com/Office365/Admin/whats-new-in-preview**, ancak URL şu şekildedir: **docs.microsoft.com/microsoft-365/admin/whats-new-in-preview**. Sayfalara yer işareti ekle ettiysanız bağlantılarınızı güncelleştirmeniz gerekir; ancak içerik bağlantıları yeni içerik kesme sayfasına yeniden yönlendirildi.

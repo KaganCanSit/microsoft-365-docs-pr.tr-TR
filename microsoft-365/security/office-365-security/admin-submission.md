@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Yöneticiler yenidencanlama için şüpheli e-postalar, şüpheli kimlik avı postaları, istenmeyen postalar ve diğer zararlı olabilecek iletiler, URL'ler ve e-posta ekleri göndermek için Microsoft 365 Defender portalında Gönderimler portalını kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 34d608a6ea114fff8005069f3dc2ddc79c4be45e
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: d0d699c3344cc16f3e15996139f1d2d8b608ba50
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682647"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477159"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Gönderimler portalını kullanarak şüpheli istenmeyen posta, kimlik avı, URL'ler ve dosyaları Microsoft'a gönderme
 
@@ -30,7 +30,7 @@ ms.locfileid: "63682647"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 
 
 Microsoft 365 posta kutuları Exchange Online kuruluşlarda, yöneticiler tarama yapmak üzere Microsoft'a e-posta iletileri, URL'ler ve ekleri göndermek için Microsoft 365 Defender portalında Gönderiler portalını kullanabilirler.
@@ -84,7 +84,7 @@ Microsoft'a e-posta iletileri, URL'ler ve ekleri göndermenin diğer yolları i�
 
 3. Farklı işaretle **ve bildir açılan liste'yi** seçin ve ardından Tehdit bulunamadı Kimlik avı **veya Gereksiz** \> **öğesini** **seçin**.
 
-   :::image type="content" alt-text="Portaldan ileti gönderin." source="../../media/unified-submission-user-reported-message.png" lightbox="../../media/unified-submission-user-reported-message.png":::
+   :::image type="content" source="../../media/unified-submission-user-reported-message.png" alt-text="Gönderiler sayfası" lightbox="../../media/unified-submission-user-reported-message.png":::
 
 Bildirilen ileti, hatalı pozitif veya hatalı negatif olarak işaretlenir. Portal içerisinden iletiyi bildiren kullanıcıya otomatik olarak bir e-posta bildirimi gönderilir.
 
@@ -108,7 +108,7 @@ Bildirilen ileti, hatalı pozitif veya hatalı negatif olarak işaretlenir. Port
 5. Bitirdikten sonra Gönder'e **tıklayın**.
 
     > [!div class="mx-imgBorder"]
-    > ![Yeni URL gönderim örneği.](../../media/submission-flyout-email.png)
+    > :::image type="content" source="../../media/submission-flyout-email.png" alt-text="Yeni URL gönderme işlemi" lightbox="../../media/submission-flyout-email.png":::
 
 ### <a name="send-a-suspect-url-to-microsoft"></a>Şüpheli bir URL'yi Microsoft'a gönderme
 
@@ -125,7 +125,7 @@ Bildirilen ileti, hatalı pozitif veya hatalı negatif olarak işaretlenir. Port
 4. Bitirdikten sonra Gönder'e **tıklayın**.
 
     > [!div class="mx-imgBorder"]
-    > ![Yeni E-posta gönderim örneği.](../../media/submission-url-flyout.png)
+    > :::image type="content" source="../../media/submission-url-flyout.png" alt-text="Yeni E-posta gönderme işlemi" lightbox="../../media/submission-url-flyout.png":::
 
 ### <a name="submit-a-suspected-email-attachment-to-microsoft"></a>Şüpheli bir e-posta eklerini Microsoft'a gönderme
 
@@ -142,7 +142,7 @@ Bildirilen ileti, hatalı pozitif veya hatalı negatif olarak işaretlenir. Port
 4. Bitirdikten sonra Gönder'e **tıklayın**.
 
     > [!div class="mx-imgBorder"]
-    > ![Yeni Ek gönderme örneği.](../../media/submit-email-attachment-for-analysis.png)
+    > :::image type="content" source="../../media/submission-file-flyout.png" alt-text="Yeni Ek gönderme işlemi" lightbox="../../media/submission-file-flyout.png":::
 
 > [!NOTE]
 > Kötü amaçlı yazılım filtrelemesi ileti eklerini Kötü Amaçlı Yazılım Uyarısı Text.txt dosyasıyla değiştirirse, özgün iletiyi özgün ekleri içeren karantinadan göndermeniz gerekir. İletileri karantinaya almak ve kötü amaçlı yazılım hatalı pozitif sonuçlarla serbest bırakmak hakkında daha fazla bilgi için bkz. Karantinaya alınmış [iletileri ve dosyaları yönetici olarak yönetme](manage-quarantined-messages-and-files.md).
@@ -178,7 +178,7 @@ Bildirilen ileti, hatalı pozitif veya hatalı negatif olarak işaretlenir. Port
      Bitirdikten sonra Uygula'ya **tıklayın**.
 
      > [!div class="mx-imgBorder"]
-     > ![Yönetici gönderileri için Yeni Sütun özelleştirme seçenekleri.](../../media/submit-admin-submissios-customize-columns.png)
+     > :::image type="content" source="../../media/admin-submission-customize-columns.png" alt-text="Yönetici gönderileri için Yeni Özelleştir sütun seçenekleri" lightbox="../../media/admin-submission-customize-columns.png":::
 
    - Girdileri filtrelemek için Filtre'ye **tıklayın**. Kullanılabilir filtreler:
      - **Gönderilme tarihi**: **Başlangıç tarihi ve** **Bitiş tarihi**.
@@ -195,7 +195,7 @@ Bildirilen ileti, hatalı pozitif veya hatalı negatif olarak işaretlenir. Port
      Bitirdikten sonra Uygula'ya **tıklayın**.
 
      > [!div class="mx-imgBorder"]
-     > ![Yönetici gönderimleri için yeni Filtre seçenekleri.](../../media/submit-admin-submissions-view-filters.png)
+     > :::image type="content" source="../../media/admin-submission-filters.png" alt-text="Yönetici gönderileri için Yeni Filtre seçenekleri" lightbox="../../media/admin-submission-filters.png":::
 
    - Girdileri gruplay etmek için **, Grup'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
      - **Yok**
@@ -263,7 +263,7 @@ Rapor İletisi eklentisinde [, Rapor](enable-the-report-message-add-in.md) Kimli
      Bitirdikten sonra Uygula'ya **tıklayın**.
 
      > [!div class="mx-imgBorder"]
-     > ![Kullanıcı gönderimleri için yeni Filtre seçenekleri.](../../media/submit-user-submissions-view-filters.png)
+     > :::image type="content" source="../../media/admin-submission-reported-messages.png" alt-text="Kullanıcı gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/admin-submission-reported-messages.png":::
 
    - Girdileri gruplay etmek için **, Grup'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
      - **Yok**
@@ -298,4 +298,4 @@ Kullanıcı tarafından **bildirilen iletiler** sekmesinde, listeden bir ileti s
 - **Tetik araştırma**
 
 > [!div class="mx-imgBorder"]
-> ![Eylem düğmesi üzerinde Yeni Seçenekler.](../../media/admin-submission-main-action-button.png)
+> :::image type="content" source="../../media/admin-submission-main-action-button.png" alt-text="Eylem düğmesi üzerinde Yeni seçenekler" lightbox="../../media/admin-submission-main-action-button.png":::

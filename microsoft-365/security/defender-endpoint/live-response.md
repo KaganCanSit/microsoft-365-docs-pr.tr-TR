@@ -1,5 +1,5 @@
 ---
-title: Uç nokta için Microsoft Defender'da canlı yanıt kullanan cihazlarda varlıkları araştırma
+title: Uç Nokta için Microsoft Defender'de canlı yanıt kullanan cihazlardaki varlıkları Uç Nokta için Microsoft Defender
 description: Bir cihazda gerçek zamanlı olarak üzerinde acil yanıt eylemleri yapmak için güvenli bir uzaktan kabuk bağlantısı kullanarak bir cihaza erişin.
 keywords: remote, shell, connection, live, response, real-time, command, script, remediate, hunt, export, log, drop, download, file,
 ms.prod: m365-security
@@ -14,19 +14,19 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 882454e00517624c3bc43e87308007b00ece9507
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 8987c5642ea48e4c7887735cc0fce0e5bfccc119
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449750"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470405"
 ---
 # <a name="investigate-entities-on-devices-using-live-response"></a>Canlı yanıtı kullanan cihazlardaki varlıkları araştırma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 
@@ -101,7 +101,7 @@ Cihazda oturumu başlatamadan önce, aşağıdaki gereksinimleri karşılayın:
 
   Aşağıdaki hatayı alırsınız:
 
-  ![Hata iletisinin görüntüsü.](images/live-response-error.png)
+  :::image type="content" source="images/live-response-error.png" alt-text="Hata iletisi" lightbox="images/live-response-error.png":::
 
 - **Canlı yanıt imzalanmamış betik yürütmesini etkinleştir** (isteğe bağlı).
 

@@ -1,7 +1,7 @@
 ---
-title: iOS'ta Uç Nokta için Microsoft Defender ile ilgili SSS'lerde sorunları giderme ve yanıtları bulma
-description: Sorun giderme ve SSS - iOS'ta Uç Nokta için Microsoft Defender
-keywords: microsoft, defender, Endpoint, ios için Microsoft Defender, sorun giderme, s, nasıl gönderilir
+title: iOS'ta karşılaşılan sorunlar ile ilgili sorunları giderin ve SSS Uç Nokta için Microsoft Defender bulun
+description: Sorun giderme ve SSS - iOS Uç Nokta için Microsoft Defender sorunları giderme
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, ios, sorun giderme, s, nasıl gönderilir
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,25 +15,25 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 1119d13998510927f249288cc40a47eda45dc9ac
-ms.sourcegitcommit: dfa9f28a5a5055a9530ec82c7f594808bf28d0dc
+ms.openlocfilehash: bc8cda3fb61ec9338b95eed58f5f0a70e1deb3e1
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "62997059"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469371"
 ---
-# <a name="troubleshoot-issues-and-find-answers-to-faqs-on-microsoft-defender-for-endpoint-on-ios"></a>iOS'ta Uç Nokta için Microsoft Defender'da sorunları giderme ve SSS'lere yanıt bulma
+# <a name="troubleshoot-issues-and-find-answers-to-faqs-on-microsoft-defender-for-endpoint-on-ios"></a>iOS'ta sorunları giderme ve SSS'Uç Nokta için Microsoft Defender yanıt bulma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Bu konu başlığı altında, iOS'ta Uç Nokta için Microsoft Defender kullanılırken ortaya çıkabilecek sorunları çözmeniz için sorun giderme bilgileri ve sağlar.
+Bu konu başlığı altında, iOS'ta iOS'ta e-posta kullanımınız devam e Uç Nokta için Microsoft Defender e yardımcı olacak sorun giderme bilgileri yer sağlar.
 
 
 
@@ -48,14 +48,14 @@ Varsayılan olarak, iOS'ta Uç Nokta için Defender web koruma özelliğini içe
 Varsayılan olarak etkin durumdayken VPN'yi devre dışı bırakmanızı gerektiren bazı durumlar olabilir. Örneğin, VPN yapılandırıldığında çalışmayan bazı uygulamaları çalıştırmak istiyor olun. Böyle durumlarda, VPN'yi doğrudan Uç Nokta için Defender uygulamasından veya aşağıdaki adımları kullanarak devre dışı bırakmayı seçebilirsiniz:
 
 1. iOS aygıtınızda, **Genel'e ve Ayarlar** **VPN'ye** tıklayın **veya** dokunun.
-1. Uç Nokta için Microsoft Defender'da "i" düğmesine tıklayın veya dokunun.
+1. "i" düğmesine tıklayarak veya dokunarak Uç Nokta için Microsoft Defender.
 1. VPN'yi devre **Bağlan için On Demand özelliğini** kapatın.
 
     > [!div class="mx-imgBorder"]
-    > ![VPN config connect on demand.](images/ios-vpn-config.png)
+    > :::image type="content" source="images/ios-vpn-config.png" alt-text="isteğe Bağlan seçeneği" lightbox="images/ios-vpn-config.png":::
 
 > [!NOTE]
-> VPN devre dışı bırakılmıştır, Web Koruması kullanılamaz. Web Korumasını yeniden etkinleştirmek için cihazda Uç Nokta için Microsoft Defender uygulamasını ve Web Korumasını Etkinleştir'i açın.
+> VPN devre dışı bırakılmıştır, Web Koruması kullanılamaz. Web Korumasını yeniden etkinleştirmek için, Uç Nokta için Microsoft Defender Web Korumasını Etkinleştir'i açın.
 
 ## <a name="coexistence-with-multiple-vpn-profiles"></a>Birden çok VPN profiliyle birlikte yer
 
@@ -63,19 +63,19 @@ Apple iOS, aynı anda etkin **olmak için cihaz** genelinde birden çok VPN'i de
 
 ## <a name="battery-consumption"></a>Pil tüketimi
 
-Web tabanlı tehditlere karşı size tüm zaman koruma sağlamak için, Uç Nokta için Microsoft Defender'ın her zaman arka planda çalışması gerekir. Bu, cihazınızın genel pil tüketiminde küçük bir artışa yol açabilir. Pil pil gücünde önemli bir şey görüyor olurken lütfen [bize geri bildirim gönderin.](ios-troubleshoot.md#send-in-app-feedback) Biz de incelemeye devam ederiz.
+Web tabanlı tehditlere karşı size tüm zaman koruma sağlamak için, Uç Nokta için Microsoft Defender zaman arka planda çalışması gerekir. Bu, cihazınızın genel pil tüketiminde küçük bir artışa yol açabilir. Pil pil gücünde önemli bir şey görüyor olurken lütfen [bize geri bildirim gönderin.](ios-troubleshoot.md#send-in-app-feedback) Biz de incelemeye devam ederiz.
 
-Ayrıca, Ayarlar uygulamasında iOS yalnızca belirli bir süre boyunca kullanıcının görebilir olduğu uygulamaların pil kullanımını gösterir. Ekranda gösterilen uygulamaların pil kullanımı yalnızca bu süre boyunca kullanılabilir ve CPU ve Ağ kullanımı gibi çok sayıda faktöre bağlı olarak iOS tarafından hesaplanır. Uç Nokta için Microsoft Defender, kötü amaçlı web siteleri veya bağlantılar için web trafiğini kontrol etmek için arka planda yerel/geri döngülü bir VPN kullanır. Herhangi bir uygulamanın ağ paketleri bu denetimden geçerek Uç Nokta için Microsoft Defender'ın pil kullanımının hatalı hesaplnıyor olmasına neden olur. Uç nokta için Microsoft Defender'ın gerçek pil tüketimi, cihazda Pil cihazı sayfasında gösterilenden Ayarlar daha azdır.
+Ayrıca, Ayarlar uygulamasında iOS yalnızca belirli bir süre boyunca kullanıcının görebilir olduğu uygulamaların pil kullanımını gösterir. Ekranda gösterilen uygulamaların pil kullanımı yalnızca bu süre boyunca kullanılabilir ve CPU ve Ağ kullanımı gibi çok sayıda faktöre bağlı olarak iOS tarafından hesaplanır. Uç Nokta için Microsoft Defender kötü amaçlı web siteleri veya bağlantılar için web trafiğini kontrol etmek için arka planda yerel/geri döngülü bir VPN kullanır. Herhangi bir uygulamanın ağ paketleri bu denetimden geçerek pil kullanımının Uç Nokta için Microsoft Defender yanlış hesaplandı. Gerçek pil tüketimi Uç Nokta için Microsoft Defender pil tüketimi, cihazda Pil ve Ayarlar sayfasında gösterilenden daha azdır.
 
 Kullanılan VPN'nin yerel bir VPN olduğunu ve geleneksel VPN'den farklı olarak ağ trafiğinin cihazın dışına gönderilme olmadığını unutmayın.
 
 ## <a name="data-usage"></a>Veri kullanımı
 
-Uç Nokta için Microsoft Defender, kötü amaçlı web siteleri veya bağlantılar için web trafiğini kontrol etmek için yerel/geri dönüş VPN kullanır. Bu nedenle, Uç Nokta için Microsoft Defender veri kullanımı yanlış hesap olabilir. Ayrıca, cihaz yalnızca cep telefonu ağına bağlı olduğu zaman hizmet sağlayıcı tarafından bildirilen veri kullanımının gerçek tüketimine çok yakın olduğunu, Apple'ın ise Ayarlar uygulamasında yaklaşık 1,5x ile 2x gerçek veri kullanımına yakın olduğunu gözlemledık.
+Uç Nokta için Microsoft Defender kötü amaçlı web siteleri veya bağlantılar için web trafiğini kontrol etmek için yerel/geri dönüş VPN kullanır. Bu nedenle, Uç Nokta için Microsoft Defender kullanımı yanlış hesap olabilir. Ayrıca, cihaz yalnızca cep telefonu ağına bağlı olduğu zaman hizmet sağlayıcı tarafından bildirilen veri kullanımının gerçek tüketimine çok yakın olduğunu, Apple'ın ise Ayarlar uygulamasında yaklaşık 1,5x ile 2x gerçek veri kullanımına yakın olduğunu gözlemledık.
 
 Diğer VPN hizmetleriyle benzer gözlemlerimiz var ve bunu Apple'a bildirdik.
 
-Buna ek olarak, daha iyi koruma sağlamak için Uç Nokta için Microsoft Defender'ın arka uç hizmetlerimizle güncel olması önemlidir.
+Buna ek olarak, daha iyi Uç Nokta için Microsoft Defender sağlamak için arka uç hizmetlerimizle güncel olması önemlidir.
 
 ## <a name="report-unsafe-site"></a>Güvenli olmayan siteyi bildirme
 
@@ -83,27 +83,27 @@ Kimlik avı web siteleri, kişisel veya finansal bilgilerinizi almak için güve
 
 ## <a name="malicious-site-detected"></a>Kötü amaçlı site algılandı
 
-Uç Nokta için Microsoft Defender sizi kimlik avına veya diğer web tabanlı saldırılara karşı korur. Kötü amaçlı bir site algılanırsa, bağlantı engellenir ve kuruluşun posta portalına bir uyarı Microsoft 365 Defender. Uyarı bağlantının etki alanı adını, uzak IP adresini ve cihaz ayrıntılarını içerir.
+Uç Nokta için Microsoft Defender kimlik avı veya diğer web tabanlı saldırılara karşı sizi korur. Kötü amaçlı bir site algılanırsa, bağlantı engellenir ve kuruluşun posta portalına bir uyarı Microsoft 365 Defender. Uyarı bağlantının etki alanı adını, uzak IP adresini ve cihaz ayrıntılarını içerir.
 
 Buna ek olarak, iOS cihazında bir bildirim gösterilir. Bildirime dokunulduğunda, kullanıcının ayrıntıları gözden geçirmesi için aşağıdaki ekran açılır.
 
 > [!div class="mx-imgBorder"]
-> ![Güvenli olmayan bildirim olarak bildirilen sitenin resmi.](images/ios-phish-alert.png)
+> :::image type="content" source="images/ios-phish-alert.png" alt-text="Sitenin güvenli olmayan bildirim olarak raporlandığı" lightbox="images/ios-phish-alert.png":::
 
 ## <a name="device-not-seen-on-the-defender-for-endpoint-console-after-onboarding"></a>Cihaz, ekleme sonrasında Uç nokta konsolu için Defender'da görülems.
 
 Eklemeden sonra, cihazın Uç nokta için Defender güvenlik konsolunda Cihaz envanteri'nin içinde yer alan bir uygulamanın gösterilesi birkaç saat sürer. Ayrıca, her cihazda İnternet bağlantısı olduğundan ve Azure Active Directory ile doğru kaydedildikten emin olun. Başarılı bir şekilde işe alım için cihazın Microsoft Authenticator veya Intune Şirket Portalı ile kaydedilmiş olması ve kullanıcının, Azure AD'ye kayıtlı cihazın hesabıyla oturum açması gerekir.
 
 > [!NOTE]
-> Bazen, cihaz adı Microsoft Endpoint Manager (Intune) konsolunda bu adla tutarlı değildir. Uç nokta konsolu için Defender'daki cihaz adı, <username_iPhone/iPad biçimidir>. Cihazı Uç nokta konsolu için Defender'da tanımlamak için Azure AD cihaz kimliğini de kullanabilirsiniz.
+> Bazen, cihaz adı Microsoft Endpoint Manager (Intune) konsolda bu adla tutarlı değildir. Uç nokta konsolu için Defender'daki cihaz adı, <username_iPhone/iPad biçimidir>. Cihazı Uç nokta konsolu için Defender'da tanımlamak için Azure AD cihaz kimliğini de kullanabilirsiniz.
 
 ## <a name="data-and-privacy"></a>Veri ve Gizlilik
 
-Toplanan veriler ve gizlilik hakkında ayrıntılı bilgi için bkz. Gizlilik [Bilgileri - iOS'ta Uç Nokta için Microsoft Defender](ios-privacy.md).
+Toplanan veriler ve gizlilik hakkında ayrıntılı bilgi için bkz. [iOS'ta Uç Nokta için Microsoft Defender Bilgileri.](ios-privacy.md)
 
 ## <a name="connectivity-issue-on-cellular-network"></a>Cep telefonu şebekesi üzerinde bağlantı sorunu
 
-Hücresel ağ üzerinde İnternet bağlantısı sorunlarıyla karşı karşıyaysanız, Uç Nokta için Microsoft Defender'da hücresel verinin etkinleştirildiğinden emin olun: AYARLAR uygulamasını açın > MS Defender > MS Defender için "Hücresel veri" etkinleştirildiğinden emin olun.
+Hücresel ağ üzerinde İnternet bağlantısı sorunlarıyla karşı karşıyaysanız, Uç Nokta için Microsoft Defender'de hücresel verinin etkinleştirildiğinden emin olun: MS Defender için Ayarlar uygulamasını > MS Defender > için "Hücresel veri" etkinleştirildiğinden emin olun.
 
 Bağlantı sorunlarınız devam ediyorsa Uçak modunu açma/kapatmanın sorunu çözmenize yardımcı olup yardımcı olup denetleyin. Sorun devam ederse bize [günlük gönderin](ios-troubleshoot.md#send-in-app-feedback).
 

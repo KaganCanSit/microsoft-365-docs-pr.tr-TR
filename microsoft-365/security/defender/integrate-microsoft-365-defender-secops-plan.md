@@ -1,7 +1,7 @@
 ---
-title: Adım 1. Hazırlık Microsoft 365 Defender planlama
-description: Çalışmanızı güvenlik Microsoft 365 Defender tümleştirerek bu işlemlerin hazırlık Microsoft 365 Defender planlamanın temelleri.
-keywords: olaylar, uyarılar, araştırma, korelasyon, saldırı, cihazlar, kullanıcılar, kimlikler, kimlik, posta kutusu, e-posta, 365, microsoft, m365, olay yanıtı, siber saldırı, secops, güvenlik işlemleri, soc
+title: Adım 1. Microsoft 365 Defender işlemlerin hazır olma durumunu planlama
+description: Microsoft 365 Defender güvenlik işlemlerinizle tümleştirirken Microsoft 365 Defender işlemlerin hazır olma durumunu planlamanın temelleri.
+keywords: olaylar, uyarılar, araştırma, bağıntı, saldırı, cihazlar, kullanıcılar, kimlikler, kimlik, posta kutusu, e-posta, 365, Microsoft, m365, olay yanıtı, siber saldırı, secops, güvenlik işlemleri, soc
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -22,40 +22,40 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 45abe5dfa77e9ed224f2d55e15986eba732f2aff
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 8c69e92390e6ed6515be6f399703124ece99cc39
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63326447"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64664028"
 ---
-# <a name="step-1-plan-for-microsoft-365-defender-operations-readiness"></a>Adım 1. Hazırlık Microsoft 365 Defender planlama
+# <a name="step-1-plan-for-microsoft-365-defender-operations-readiness"></a>Adım 1. Microsoft 365 Defender işlemlerin hazır olma durumunu planlama
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - Microsoft 365 Defender
 
-Güvenlik işlemlerinizin geçerli vade süresi ne olursa olsun, Güvenlik İşlemleri Merkezinize (SOC) uyum içinde çalışmanız önemlidir. Her kuruluşa uyan tek bir model varken, bazı yönler diğer kuruluşlardan daha yaygındır. 
+Güvenlik operasyonlarınızın geçerli vadesi ne olursa olsun, Güvenlik İşlemleri Merkezi (SOC) ile uyumlu olmanız önemlidir. Her kuruluşa uyan tek bir model olmasa da, diğerlerinden daha yaygın olan bazı yönler vardır.
 
 Aşağıdaki bölümlerde SOC'nin temel işlevleri açıklanmaktadır.
 
-## <a name="provide-situational-awareness-of-modern-threats"></a>Modern tehditlere karşı durumsal farkındalık sağlama
+## <a name="provide-situational-awareness-of-modern-threats"></a>Modern tehditler konusunda durumsal farkındalık sağlama
 
-SOC ekibi yeni ve gelen tehditlere karşı hazırlanır ve bunun için kuruluşla birlikte çalışarak önlem ve tepkiler kurmasını sağlar. SOC ekibinin modern saldırı yöntemleri ve tekniklerde üst düzeyde eğitim almış ve tehdit tehditlerini anlayacaktır. CK çerçevesi, [Siber Kill Zinciri](https://www.microsoft.com/security/blog/2016/11/28/disrupting-the-kill-chain/) veya [MITRE ATT&](https://attack.mitre.org/) gibi paylaşılan tehdit zekası ve çerçeveleri personelinizi tehdit analistleri ve tehdit analistleri ile güçlendirin.
+Bir SOC ekibi, karşı önlemler ve yanıtlar oluşturmak üzere kuruluşla birlikte çalışabilmeleri için yeni ve gelen tehditlere hazırlanır ve bu tehditleri avlar. SOC ekibinizin modern saldırı yöntemleri ve teknikleri konusunda yüksek düzeyde eğitilmiş ve tehdit aktörlerini anlayan personeli olmalıdır. [Siber Sonlandırma Zinciri](https://www.microsoft.com/security/blog/2016/11/28/disrupting-the-kill-chain/) veya [MITRE ATT&CK çerçevesi](https://attack.mitre.org/) gibi paylaşılan tehdit bilgileri ve çerçeveler, tehdit analistleri ve tehdit avcıları personelinizi güçlendirebilir.
 
-## <a name="provide-first-second-and-potentially-third-level-responses-to-cyber-incidents-and-events"></a>Siber olaylara ve olaylara birinci, ikinci ve potansiyel olarak üçüncü düzey yanıtlar sağlama
+## <a name="provide-first-second-and-potentially-third-level-responses-to-cyber-incidents-and-events"></a>Siber olaylara ve olaylara birinci, ikinci ve potansiyel olarak üçüncü düzey yanıtlar sağlayın
 
-SOC, güvenlik olayları ve olaylarda savunmanın ön hattıdır. Bir olay, tehdit, saldırı, ilke ihlali veya denetim bulgusu bir uyarıyı veya eylem aramasını tetiklerse, SOC ekibi öncelik belirleme, içerme veya araştırma için bu durumu yükseltme değerlendirmesini yapar. Bu nedenle, SOC ilk satırı yanıtlayanların güvenlik olayları ve göstergeleri hakkında geniş teknik bilgiye sahip olması gerekir.
+SOC, güvenlik olaylarına ve olaylarına karşı savunmanın ön hattıdır. Bir olay, tehdit, saldırı, ilke ihlali veya denetim bulma işlemi bir uyarıyı veya eylem çağrısını tetiklediğinde, SOC ekibi bu uyarıyı önceliklendirmek ve içermek ya da araştırma için ilerletmek için bir değerlendirme yapar. Bu nedenle, SOC ilk satır yanıtlayıcıları güvenlik olayları ve göstergeleri hakkında geniş bir teknik bilgiye sahip olmalıdır.
 
-## <a name="centralize-monitoring-and-logging-of-your-organizations-security-sources"></a>Kuruluş güvenlik kaynaklarını izleme ve günlüğe kaydetmeyi merkezileştirme 
+## <a name="centralize-monitoring-and-logging-of-your-organizations-security-sources"></a>Kuruluşunuzun güvenlik kaynaklarının izlenmesini ve günlüğe kaydedilmesini merkezileştirme
 
-GENELLIKLE SOC ekibinin temel işlevi, güvenlik duvarları, izinsiz giriş önleme sistemleri, veri kaybı önleme sistemleri, Tehdit ve Güvenlik Açığı Yönetimi sistemleri ve kimlik sistemleri gibi tüm güvenlik cihazlarının düzgün çalışır ve izlenir durumda olduğundan emin olmaktır. SOC ekipleri, güvenlik bilgilerini merkezi ve güvenli hale getirildiklerinden emin olmak için kimlik, DevOps, bulut, uygulama, veri bilimi ve diğer iş ekipleri gibi daha geniş ağ işlemleriyle birlikte çalışır. Buna ek olarak, SOC ekibi verilerin kullanılabilir ve okunabilir biçimlerde günlüklerini korumaktan sorumludur. Bunlar birbirinden ayrı biçimleri ayrıştırma ve normalleştirmeyi içerebilir.
+SOC ekibinin temel işlevi genellikle güvenlik duvarları, izinsiz giriş önleme sistemleri, veri kaybı önleme sistemleri, Tehdit ve Güvenlik Açığı Yönetimi sistemleri ve kimlik sistemleri gibi tüm güvenlik cihazlarının doğru çalıştığından ve izlendiğinden emin olmaktır. SOC ekipleri kimlik, DevOps, bulut, uygulama, veri bilimi ve diğer iş ekipleriyle birlikte çalışarak güvenlik bilgilerinin analizinin merkezi ve güvenli olmasını sağlayacaktır. Ayrıca SOC ekibi, verilerin günlüklerini ayrıştırma ve normalleştirmeyi de içerebilecek, kullanılabilir ve okunabilir biçimlerde tutmakla sorumludur.
 
-## <a name="establish-red-blue-and-purple-team-operational-readiness"></a>Kırmızı, Mavi ve Mor ekibin faaliyete hazırlığı kurma
+## <a name="establish-red-blue-and-purple-team-operational-readiness"></a>Kırmızı, Mavi ve Mor takım işletime hazır olma durumunu belirleme
 
-Her SOC ekibi bir siber olayı yanıta cevap olarak hazırlığını test edeler. Deneme, tablo topları ve alıştırmalar gibi eğitim alıştırmaları aracılığıyla, IT'de, güvenlikte ve iş düzeyindeki çeşitli bireylerle birlikte yapılabilir. Bireysel eğitim alıştırması ekipleri temsili rollere dayalı olarak oluşturulur ve bir defender (Mavi Ekip), bir saldırgan (Kırmızı Ekip) rolünü oynamaktadır ya da güçlü ve zayıf noktaları kullanarak hem Mavi hem de Kırmızı ekiplerin yöntem ve tekniklerini geliştirmeye çalışan saldırganlar olarak (Mor Takım) ortaya çıkar.
+Her SOC ekibi, bir siber olaya yanıt verirken hazırlığını test etmelidir. Test, BT, güvenlik ve iş düzeyindeki çeşitli kişilerle tablo üstü ve uygulama çalıştırmaları gibi eğitim alıştırmaları aracılığıyla yapılabilir. Bireysel eğitim alıştırma ekipleri, temsili roller temelinde oluşturulur ve bir savunmacı (Mavi Takım), bir saldırganın (Kırmızı Takım) rolünü oynar veya alıştırma sırasında ortaya çıkan güçlü ve zayıflıklar (Mor Takım) aracılığıyla hem Mavi hem de Kırmızı takımların yöntemlerini ve tekniklerini geliştirmek isteyen gözlemciler olarak görev alır.
 
 ## <a name="next-step"></a>Sonraki adım
 
-[2. Adım. Zero Trust Framework kullanarak SOC tümleştirme hazırlık değerlendirmesini gerçekleştirme](integrate-microsoft-365-defender-secops-readiness.md)
+[2. Adım. Sıfır Güven Framework kullanarak SOC tümleştirme hazırlığı değerlendirmesi gerçekleştirme](integrate-microsoft-365-defender-secops-readiness.md)

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams
 description: Nasıl Teams cihazlara yüklenir ve daha sonra güncelleştirilir
-keywords: Microsoft Yönetilen Masaüstü, Microsoft 365, hizmet, belgeler, uygulamalar, iş hattı uygulamaları, LOB uygulamaları
+keywords: Microsoft Managed Desktop, Microsoft 365, belge, uygulama, iş hattı uygulamaları, LOB uygulamaları
 ms.service: m365-md
 author: tiaraquan
 ms.localizationpriority: medium
@@ -10,12 +10,12 @@ ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
 audience: ITPro
-ms.openlocfilehash: 3dfdd9f5187fba9a1e19e56a4df24cf1f7eff44b
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 469edf3e8ae856ea6e94bada8ffb9d6c97ba8b66
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63322443"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634481"
 ---
 # <a name="microsoft-teams"></a>Microsoft Teams
 
@@ -23,20 +23,17 @@ ms.locfileid: "63322443"
 
 ## <a name="initial-deployment"></a>İlk dağıtım
 
-Çoğu donanım satıcı, henüz Teams parçası olarak resim parçası olarak güvenlik kameralarını dahil etmemektedir. Microsoft Yönetilen Masaüstü, Teams uygulamaları kullanarak cihazlarınıza Microsoft Intune. Tüm yönetilen cihazlar, [Teams .msi paketine](/MicrosoftTeams/msi-deployment#how-the-microsoft-teams-msi-package-works) sahip. Bu .msi paketi, cihazda oturum alan tüm kullanıcıların kullanıma hazır Microsoft Teams hazır olur. Paket yüklemeyi ilk kez tamamlarsa, Teams başlatılır ve masaüstüne bir kısayol eklenir.
+Çoğu donanım satıcı, henüz Teams parçası olarak resim parçası olarak güvenlik kameralarını dahil etmemektedir. Microsoft Managed Desktop, Teams kullanarak cihazlarınıza e-posta Microsoft Intune. Tüm yönetilen cihazlar, [Teams .msi paketine](/MicrosoftTeams/msi-deployment#how-the-microsoft-teams-msi-package-works) sahip. Bu .msi paketi, cihazda oturum alan tüm kullanıcıların kullanıma hazır Microsoft Teams hazır olur. Paket yüklemeyi ilk kez tamamlarsa, Teams başlatılır ve masaüstüne bir kısayol eklenir.
 
 ### <a name="microsoft-intune-changes"></a>Microsoft Intune değişiklikleri
 
-Microsoft Yönetilen Masaüstü, destek olmak için Azure AD Microsoft Teams. Cihaza uygun olarak 64 bit veya 32 bit istemcilere dağıtılır:  
-
-- Modern Çalışma Alanı - Teams Machine Wide Installer x64  
-- Modern Çalışma Alanı - Teams Machine Wide Installer x32
+Microsoft Managed Desktop kiracınıza Microsoft Teams ekler: Modern Çalışma Alanı - Teams Machine Wide Installer x64  
 
 ## <a name="updates"></a>Güncelleştirmeler
 
 Teams, dosyadan ayrı bir güncelleştirme yolu Kurumlar için Microsoft 365 Uygulamaları. Masaüstü istemcisi kendisini otomatik olarak ler. Teams birkaç saatte bir denetler, bunları indirir ve sonra güncelleştirmeyi sessiz yüklemeden önce bilgisayarın boşta beklemesini bekler.  
 
-Bu Teams grubu yöneticilerin güncelleştirmeleri denetlemesine izin vermemektedir, dolayısıyla Microsoft Yönetilen Masaüstü standart [otomatik güncelleştirme kanalını kullanır](/microsoftteams/teams-client-update#can-admins-deploy-updates-instead-of-teams-auto-updating).
+Ürün Teams grubu yöneticilerin güncelleştirmeleri denetlemesine izin vermez; dolayısıyla Microsoft Managed Desktop standart [otomatik güncelleştirme kanalını kullanır](/microsoftteams/teams-client-update#can-admins-deploy-updates-instead-of-teams-auto-updating).
 
 ### <a name="manually-updating-teams"></a>El ile güncelleştirme Teams
 

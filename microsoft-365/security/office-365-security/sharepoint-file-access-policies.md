@@ -19,12 +19,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 6effe1ffefaf7faeb90258163c539cdddcec2679
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: 4425ee0a4ee9abb7c87be7ed45d9f5c94b84cdc6
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64570007"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477027"
 ---
 # <a name="policy-recommendations-for-securing-sharepoint-sites-and-files"></a>Site ve dosyaların güvenliğini SharePoint ilke önerileri
 
@@ -60,7 +60,7 @@ Aşağıdaki tabloda, gözden geçirmeniz ve güncelleştirmeniz veya yeni oluş
 
 ## <a name="use-app-enforced-restrictions-in-sharepoint"></a>Mobil uygulamada uygulamanın zorunlu SharePoint
 
-SharePoint'de erişim denetimleri SharePoint Azure AD'de koşullu Erişim ilkeleri oluşturularak Azure AD'den, azure ad'de yapılandırılan ilkeleri zorunlu SharePoint. Varsayılan olarak, bu ilke tüm kullanıcılar için geçerlidir, ancak yalnızca PowerShell kullanarak belirttiğiniz sitelere erişimi SharePoint. İlke, belirli kullanıcılar, gruplar veya siteler için de kapsamlandırabilirsiniz.
+SharePoint'de erişim denetimleri SharePoint, Azure AD'den Azure AD'ye dış içerikte yapılandırılan ilkeleri zorunlu SharePoint. Bu ilke tüm kullanıcılar için geçerlidir, ancak yalnızca PowerShell kullanarak belirttiğiniz sitelere erişimi SharePoint.
 
 Bu ilkeyi yapılandırmak için, Kolay erişilen cihazlardan erişimi denetleme'de "SharePoint site koleksiyonlarına veya OneDrive hesaplarına erişimi engelleme veya sınırlama" [bağlantılarına bakın](/sharepoint/control-access-from-unmanaged-devices).
 

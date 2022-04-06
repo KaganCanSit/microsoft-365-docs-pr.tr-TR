@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Bu güvenlik önerilerinin kullanıcılarınızı Microsoft 365 İş Ekstra ve verilerinizi nasıl etkilediğini öğrenin.
-ms.openlocfilehash: cf0af6aab22c4a025a0c6b907fc3cade397d0dcc
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: f1c327badefcd7f5d7f1728489a8388e7e7925e8
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63328477"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64635163"
 ---
 # <a name="how-these-security-recommendations-affect-your-users"></a>Bu güvenlik önerileri kullanıcılarınızı nasıl etkiler?
 
@@ -42,7 +42,9 @@ Bu çözümde yer alan Microsoft 365 için güvenlik önerileri, bilgisayar kors
 Tüm kullanıcıların e-postalarını güvenli tutmaya yardımcı olmak için bu e-posta uygulamalarından haberdar olması ve bu uygulamaları kullanıyor olması gerekir:
 
 - Doğrulayıcı uygulamasıyla çok faktörlü kimlik doğrulamasını kullanmak için e-postayı ayarlayın.
-- Güvenli e-postaları doğrulayın ve Kimlik Koruması için Defender'da Gelişmiş Kimlik Avı'Office 365 bakın.
+
+- Yasal e-postaları doğrulayın ve gelişmiş kimlik avı koruması (kimlik avı) güvenlik ipuçlarına Office 365 için Defender.
+
 - Yalnızca güvenli bağlantıları ve ekleri, Bağlantıları ve Ekleri Kasa doğrulandığında Kasa açın.
 
 Çok faktörlü kimlik [doğrulaması ve kimlik avı ve](m365bp-multifactor-authentication.md) diğer [saldırılar hakkında daha fazla bilgi öğrenin](m365-campaigns-phishing-and-attacks.md).
@@ -54,7 +56,9 @@ Size [ve ekibinizin](m365-campaigns-protect-campaign-infographic.md) üyelerine 
 Ortamınıza eklerken iPhone ve Android cihazlarını ayarlamanın güvenli [bir şekilde çalışması için tüm kullanıcıların](../business/set-up-mobile-devices.md) birkaç dakikası gerekir:
 
 - Cihazları, doğrulayıcı uygulamasıyla çok faktörlü kimlik doğrulamasını kullanmak üzere ayarlayın.
+
 - Outlook Mobile, Word, OneDrive ve uygulama mağazasından Microsoft uygulamaları da dahil olmak üzere Microsoft mobil uygulamalarını kullanın. iPhone ve Android cihazlarda bulunan yerel posta uygulamaları destek kapsamında değildir. 
+
 - Kullanıcıların cihaz kilidini açması için PIN gerektir.
 
 Bunları ayardikten sonra, kullanıcılarınıza posta da dahil olmak üzere bu cihazlardan kuruluş verilerinize erişirken doğrulayıcı uygulamayı kullanmaları istenir.
@@ -64,6 +68,7 @@ Bunları ayardikten sonra, kullanıcılarınıza posta da dahil olmak üzere bu 
 Ayrıca kullanıcıların birincil iş cihazlarını güncel tutmaları da önemlidir:
 
 - Masaüstü uygulamalarına en son Office yükleyin ve istendiğinde bu güncelleştirmeleri güncel olarak kullanın.
+
 - İşletim sistemi güncelleştirmeleri, örneğin işletim sistemi güncelleştirmelerini Windows olun.
 
 Mac [ve cihazları Windows 10 için](m365bp-protect-pcs-macs.md), temel güvenlik özelliklerinin etkinleştirildiğinden emin olmak kullanıcıların sorumluluğundadır.

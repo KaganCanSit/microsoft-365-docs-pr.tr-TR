@@ -1,5 +1,5 @@
 ---
-title: Microsoft Bookings'i açma veya kapatma
+title: Microsoft Bookings’i açma veya kapatma
 ms.author: kwekua
 author: kwekuako
 manager: scotv
@@ -9,53 +9,53 @@ ms.service: bookings
 ms.custom: admindeeplinkMAC
 ms.localizationpriority: medium
 ms.assetid: 5382dc07-aaa5-45c9-8767-502333b214ce
-description: Microsoft 365'te Microsoft Bookings'e erişmeyi öğrenin.
-ms.openlocfilehash: 3feacd756c141dd51edd7e987c1c4a2033524ae3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365'ta Microsoft Bookings erişimi Microsoft 365.
+ms.openlocfilehash: 09fba96265bc3d2b67db9152f0c6020e10183314
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63328506"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634811"
 ---
-# <a name="turn-microsoft-bookings-on-or-off"></a>Microsoft Bookings'i açma veya kapatma
+# <a name="turn-microsoft-bookings-on-or-off"></a>Microsoft Bookings’i açma veya kapatma
 
-Bookings, tüm kuruluş için veya belirli kullanıcılar için açık veya kapalı olabilir. Kullanıcılar için Bookings'i açabilirsiniz; bir Bookings sayfası oluşturabilir, takvim oluşturabilir ve diğer kişilerin bu sayfayla zaman rezervasyonu yaparken onlara izin vermelerine izin ve vermezler.
+Bookings için veya belirli kullanıcılar için açık ya da kapalı olabilir. Kullanıcılarınız için Bookings, yeni bir sayfa Bookings takvim oluşturabilir ve diğer kişilerin kendileriyle zaman rezervasyonlarına izin ve vermezler.
 
 > [!NOTE]
-> Bu bölümlerde açıklanan yönetici denetimleri 21Vianet (Çin) tarafından işletilen Office 365 müşterileri için kullanılamaz.
+> Bu bölümlerde açıklanan yönetici denetimleri 21Vianet (Çin) Office 365 tarafından işletilen müşteriler için kullanılamaz.
 
-## <a name="turn-bookings-on-or-off-for-your-organization-using-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezini kullanarak Bookings'i organizasyonunız için açma veya kapatma
+## <a name="turn-bookings-on-or-off-for-your-organization-using-the-microsoft-365-admin-center"></a>E Bookings i kullanarak e-postanızı açma veya Microsoft 365 yönetim merkezi
 
-1. Microsoft 365 yönetim merkezinde genel yönetici olarak oturum açma.
+1. Genel yönetici Microsoft 365 yönetim merkezi oturum açma.
 
-2. Yönetim  **merkezindeSettings Kuruluş ayarlarına** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2053743" target="_blank">**gidin**</a>.
+2. Yönetim merkezinde Kuruluş  **ayarları'Ayarlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2053743" target="_blank">**gidin**</a>.
 
-3. Organizasyonunuz için **Bookings'i etkinleştirmek veya** devre dışı bırakmak üzere Bookings'i kullanmasına izin ver onay kutusunu seçin.
+3. Kuruluş için posta kutusunu etkinleştirmek **veya devre dışı bırakmak üzere Bookings'i** kullanmasına izin Bookings kutusunu seçin.
 
    > [!NOTE]
-   > Bookings'i kapatarak Bookings sayfalarının oluşturulması ve yönetimi de içinde olmak üzere tüm hizmetlere erişim devre dışı bırakilecektir.
+   > Devre dışı Bookings, sayfalar oluşturulması ve yönetimi de dahil olmak üzere hizmete tüm Bookings devre Bookings olur.
 
 4. **Değişiklikleri Kaydet**'i seçin.
 
-### <a name="turn-bookings-on-or-off-for-your-organization-using-powershell"></a>PowerShell kullanarak bookings'i organizasyonunız için açma veya kapatma
+### <a name="turn-bookings-on-or-off-for-your-organization-using-powershell"></a>PowerShell Bookings kullanarak e-postalarınızı açma veya kapatma
 
-PowerShell cmdlet [Set-OrganizationConfig](/powershell/module/exchange/set-organizationconfig) kullanarak Bookings'i açmak veya kapatmak için, [Exchange Online PowerShell'e](/powershell/exchange/connect-to-exchange-online-powershell) bağlanın ve aşağıdaki komutu çalıştırın:
+[Set-OrganizationConfig](/powershell/module/exchange/set-organizationconfig) Bookings PowerShell cmdlet'ini kullanarak bu Exchange Online açmak veya kapatmak için, PowerShell Bağlan e Exchange Online [komutu çalıştırın](/powershell/exchange/connect-to-exchange-online-powershell) ve şu komutu çalıştırın:
 
 ```PowerShell
    Set-OrganizationConfig -BookingsEnabled $false
 ```
 
-Bookings'i kimlerin kullanabileceğini kontrol etmek için aşağıdaki ayarları kullanın, Bookings bilgilerini paylaşıp paylaşmayacaklarına ve personelin bir Booking takvimine eklenmeden önce onay gerekip ihtiyaç olmadığına karar verin.
+Bookings'i kimlerin kullanabileceğini kontrol etmek için aşağıdaki ayarları kullanın, Bookings bilgileri paylaşıp paylaşılamayacaklarına ve personelin rezervasyon takvimine eklenmeden önce onay gerekip ihtiyaç olmadığına karar verin.
 
-:::image type="content" source="../media/control-access-sharing-bookings.png" alt-text="Ekran görüntüsü: Bookings'i kimlerin kullanabileceğini denetlemenizi sağlayan ayarlar, Bookings bilgilerini paylaşılırken ve personel onayı":::
+:::image type="content" source="../media/control-access-sharing-bookings.png" alt-text="Ekran Ayarlar: Paylaşılan bilgileri ve personel onayı Bookings denetlemeye olanak Bookings izin veren ekran görüntüsü":::
 
 ### <a name="block-bookings-from-outside-your-organization"></a>Kuruluş dışından rezervasyonları engelleme
 
-Bookings'i yalnızca organizasyon organizasyonumdan randevu ayarlayacak şekilde kurarak yeni randevu alabilirsiniz. Yalnızca, organizasyonda oturum veya kimliği doğrulanmış randevular için rezervasyon yapan kullanıcılar randevular için kullanılabilir.
+Yalnızca organizasyon Bookings randevu ayarlay kuruluşu için randevu ayarlamanızı s ayarlayın. Yalnızca, kuruluşta oturummış ve kimliği doğrulanmış olan kullanıcılar randevular için rezervasyonlar yer almaktadır.
 
 ### <a name="block-social-sharing-options"></a>Sosyal paylaşım seçeneklerini engelleme
 
-Rezervasyon sayfalarının sosyal ağlarda nasıl paylaşılacaklarını kontrol edin. Bu ayar, Microsoft 365 yönetim merkezinde **SettingsOrg** ->  **settingsBookings** ->  altında yer almaktadır.
+Rezervasyon sayfalarının sosyal ağlarda nasıl paylaşılacaklarını kontrol edin. Bu ayar, Ayarları Microsoft 365 yönetim merkezi altında **Ayarlar** ->  **Org ayarları** ->  **Bookings**.
 
 ### <a name="block-sharing-staff-details-with-customers"></a>Personel ayrıntılarını müşterilerle paylaşmayı engelleme
 
@@ -63,7 +63,7 @@ Rezervasyon sayfalarının sosyal ağlarda nasıl paylaşılacaklarını kontrol
 
 ### <a name="require-staff-approvals-before-sharing-freebusy-information"></a>Serbest/meşgul bilgilerini paylaşmadan önce personel onayı gerektirme
 
-Organizasyon personelinizin uygunluk bilgileri Bookings aracılığıyla paylaşılmadan ve bir rezervasyon sayfasından rezervasyon için uygun olmadan önce kabul  edilebilirler.
+Organizasyon personelinizin uygunluk bilgileri bir rezervasyon sayfasından Bookings ile paylaşılmadan önce kabul edilmelerini gerekli haletebilirsiniz.
 
 Bu ayar etkinleştirildiğinde, rezervasyon takvimlerine personel olarak eklenen kişiler, isteği Onaylama/Reddetme bağlantısını **içeren bir e-posta** alır.
 
@@ -73,28 +73,28 @@ Uyumluluk nedenleriyle, bazı müşteri bilgilerini toplamak istemeyebilirsiniz.
 
 :::image type="content" source="../media/restrict-collection-customer-data.png" alt-text="Ekran görüntüsü: Müşterilerin hassas verileri sizin ile paylaşmasını önlemeye yardımcı olmak için onay kutularını seçin":::
 
-### <a name="turn-bookings-on-or-off-for-individual-users"></a>Tek tek kullanıcılar için Bookings'i açma veya kapatma
+### <a name="turn-bookings-on-or-off-for-individual-users"></a>Kullanıcıları Bookings açma veya kapatma
 
-Tek tek kullanıcılar için Bookings'i devre dışı abilirsiniz.
+Bu özelliği tek Bookings devre dışı abilirsiniz.
 
-1. Microsoft 365 yönetim merkezine gidin, ardından Kullanıcılar Etkin **Kullanıcılar'ı** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**seçin**</a>.
+1. Kullanıcı Sayısı'Microsoft 365 yönetim merkezi ardından Kullanıcılar Etkin **Kullanıcılar'ı** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**seçin**</a>.
 
 1. İstediğiniz kullanıcı ve ardından Lisanslar ve **Uygulamalar'ı seçin**.
 
-1. **Uygulamalar'a** tıklayın ve Microsoft Bookings onay kutusunu temizleyin.
+1. **Uygulamalar'a** genişletin ve bu onay kutusunu Microsoft Bookings.
 
-## <a name="allow-only-selected-users-to-create-bookings-calendars"></a>Yalnızca seçili kullanıcıların Bookings takvimleri oluşturmasına izin ver
+## <a name="allow-only-selected-users-to-create-bookings-calendars"></a>Yalnızca seçili kullanıcıların takvim oluşturmasına Bookings ver
 
-İlke kısıtlamalarını kullanarak lisanslı kullanıcıların Bookings takvimleri oluşturabileceklerini kısıtabilirsiniz. İlk olarak tüm kuruluş için Bookings'i etkinleştirmeniz gerekir. Organizasyon dahil tüm kullanıcıların Bookings lisansları olur, ama yalnızca bu ilkeye dahil olanlar Bookings takvimleri oluşturabilir ve oluşturdukları takvimlere kimlerin eriş erişimleri üzerinde tam denetime sahip olabilir.
+İlke kısıtlamalarını kullanarak, lisanslı kullanıcıların kendi takvimleri oluşturabileceklerini Bookings kısıtabilirsiniz. İlk olarak tüm Bookings izinlerini etkinleştirmeniz gerekir. Tüm kullanıcıların kuruluşlarında Bookings lisansı olur, ancak yalnızca bu ilkeye dahil olanlar takvimler oluşturabilir Bookings ve oluşturdukları takvimlere kimlerin eriş erişimleri üzerinde tam denetime sahip olabilir.
 
-Bu ilkeye dahil olan kullanıcılar yeni Bookings takvimleri oluşturabilir ve mevcut Bookings takvimlerine herhangi bir kapasitede personel olarak (yönetici rolü dahil) eklenebilir. Bu ilkeye dahil olmayan kullanıcılar yeni Bookings takvimleri oluşturabilecektir ve bunu yapmaya çalışan kullanıcılar bir hata iletisi alır.
+Bu ilkeye dahil olan kullanıcılar yeni takvimler Bookings ve mevcut takvimlere herhangi bir kapasiteyle (yönetici rolü dahil) personel olarak Bookings eklenebilir. Bu ilkeye dahil olmayan kullanıcılar yeni takvimler oluşturabilecek Bookings ve bunu yapmaya çalışan kullanıcılar bir hata iletisi alır.
 
-Exchange Online PowerShell'i kullanarak aşağıdaki komutları çalıştırmalısınız. Exchange Online cmdlet'lerini çalıştırma hakkında daha fazla bilgi için bkz [. Exchange Online PowerShell'e Bağlanma](/powershell/exchange/connect-to-exchange-online-powershell).
+Exchange Online PowerShell'i kullanarak aşağıdaki Exchange Online gerekir. Bu cmdlet'leri Exchange Online daha fazla bilgi için bkz[. Bağlan PowerShell'Exchange Online çalıştırma](/powershell/exchange/connect-to-exchange-online-powershell).
 
 > [!IMPORTANT]
-> Aşağıdaki adımlarda, kuruluşta başka Outlook Web App (OWA) posta kutusu ilkeleri oluşturulmaz.
+> Aşağıdaki adımlarda, kuruluşta başka Outlook Web App posta kutusu ilkeleri (OWA) ilkeleri oluşturulmaz.
 
-1. Bookings takvimleri oluşturmasına izin verilen kullanıcılar için yeni bir posta kutusu ilkesi oluşturun. (Yeni posta kutusu ilkeleri varsayılan olarak Bookings takvim oluşturmasına izin verilir.)
+1. Takvim oluşturmasına izin verilen kullanıcılar için yeni bir posta Bookings oluşturun. (Bookings posta kutusu ilkeleri varsayılan olarak takvim oluşturmasına izin verilir.)
 
    ```PowerShell
    New-OwaMailboxPolicy -Name "BookingsCreators"
@@ -102,7 +102,7 @@ Exchange Online PowerShell'i kullanarak aşağıdaki komutları çalıştırmal�
 
    Daha fazla bilgi için bkz [. New-OwaMailboxPolicy](/powershell/module/exchange/new-owamailboxpolicy).
 
-2. Bookings takvimleri oluşturma izni vermek istediğiniz her kullanıcı için bu komutu çalıştırarak ilgili kullanıcılara bu ilkeyi attayabilirsiniz.
+2. Takvim oluşturma izni vermek istediğiniz her kullanıcı için bu komutu çalıştırarak ilgili kullanıcılara bu Bookings attayabilirsiniz.
 
    ```PowerShell
    Set-CASMailbox -Identity <someCreator@emailaddress> -OwaMailboxPolicy "BookingsCreators"
@@ -110,7 +110,7 @@ Exchange Online PowerShell'i kullanarak aşağıdaki komutları çalıştırmal�
 
    Daha fazla bilgi için bkz. [Set-CASMailbox](/powershell/module/exchange/set-casmailbox).
 
-3. İsteğe bağlı: Bookings'i organizasyonlu diğer tüm kullanıcılar için devre dışı bırakmak için bu komutu çalıştırın.
+3. İsteğe Bağlı: Bu komutu, diğer tüm kullanıcılar Bookings devre dışı bırakmak için çalıştırın.
 
    ```PowerShell
    Set-OwaMailboxPolicy "OwaMailboxPolicy-Default" -BookingsMailboxCreationEnabled:$false
@@ -120,6 +120,6 @@ Exchange Online PowerShell'i kullanarak aşağıdaki komutları çalıştırmal�
 
 OWA posta kutusu ilkeleri hakkında daha fazla bilgi için aşağıdaki konu başlıklarına bakın:
 
-- [Exchange Online'da web üzerinde Outlook posta kutusu ilkesi oluşturma](/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/create-outlook-web-app-mailbox-policy)
+- [E-Web üzerinde Outlook posta kutusu ilkesi Exchange Online](/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/create-outlook-web-app-mailbox-policy)
 
-- [Exchange Online'da bir posta kutusunda Web üzerinde Outlook posta kutusu ilkesi uygulama veya kaldırma](/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/create-outlook-web-app-mailbox-policy)
+- [E-posta Web üzerinde Outlook kutusunda posta kutusu ilkesi uygulama veya Exchange Online](/exchange/clients-and-mobile-in-exchange-online/outlook-on-the-web/create-outlook-web-app-mailbox-policy)

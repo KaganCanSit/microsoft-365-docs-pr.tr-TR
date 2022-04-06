@@ -28,12 +28,12 @@ search.appverid:
 - MOE150
 ms.assetid: 018a2a96-3811-4b5d-b751-3b6330b34256
 description: Koruma ilkeleri aracılığıyla yönetilen cihazlardan şirket verilerini kaldırmayı ve cihazları fabrika Windows 10 ayarlarına sıfırlamayı öğrenin.
-ms.openlocfilehash: 623bdad413a46f572618c83f68a7f13448fd9988
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 3532194321b99b2469b6a283fda4a2188b25a46c
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "60160620"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64635141"
 ---
 # <a name="manage-protected-devices-with-microsoft-365-business-premium"></a>Korumalı cihazları postayla Microsoft 365 İş Ekstra
 
@@ -41,6 +41,6 @@ Kullanıcı, iş hesabıyla cihazında oturum açın veya cihazı Office uygulam
 
 ## <a name="related-content"></a>İlgili içerik
   
-[Cihazlardan şirket verilerini kaldırma](remove-company-data.md) (makale)\
+[Cihazlardan şirket verilerini kaldırma](/business-premium/m365bp-remove-company-data.md) (makale)\
 [Cihaz Windows 10 fabrika ayarlarına sıfırlama](reset-devices-to-factory-settings.md) (makale)\
-[Yönetilen cihaz ekleme](./app-protection-settings-for-android-and-ios.md) (makale)
+[Yönetilen cihaz ekleme](/business-premium/m365bp-app-protection-settings-for-android-and-ios.md) (makale)

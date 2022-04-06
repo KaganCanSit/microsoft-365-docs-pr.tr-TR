@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 Lighthouse ve İş için Microsoft Defender
-description: Microsoft Defender for Business'ın Microsoft Defender ile Microsoft 365 Lighthouse
+description: Uygulamanın İş için Microsoft Defender bütünleştir olduğunu Microsoft 365 Lighthouse
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: d39617e419c29855c9f26a39872e806133b77ca5
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 8dcfe7733193697f68647cda43f02d5565827db2
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525842"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634965"
 ---
 # <a name="microsoft-365-lighthouse-and-microsoft-defender-for-business"></a>Microsoft 365 Lighthouse ve İş için Microsoft Defender
 
@@ -30,9 +30,9 @@ ms.locfileid: "63525842"
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-## <a name="microsoft-defender-for-business-integrates-with-microsoft-365-lighthouse"></a>microsoft Defender for Business integrates with Microsoft 365 Lighthouse
+## <a name="microsoft-defender-for-business-integrates-with-microsoft-365-lighthouse"></a>İş için Microsoft Defender, diğerleriyle Microsoft 365 Lighthouse
 
-Microsoft Bulut Çözümü Sağlayıcısı (CSP) sahibiysiniz ve Microsoft 365 Lighthouse, müşterileriniz (küçük ve orta [](../../lighthouse/m365-lighthouse-overview.md)ölçekli işletmeler) için güvenliği yönetebiliyorsanız. İş için Microsoft Defender ile tümleştirilen şekilde Microsoft 365 Lighthouse. Bu özellikler kullanılabilir olduğunda, Microsoft 365 Lighthouse portalında () kiracılar genelindeki güvenlik olaylarını görüntüebilirsiniz[https://lighthouse.microsoft.com](https://lighthouse.microsoft.com). 
+Microsoft Bulut Çözümü Sağlayıcısı (CSP) sahibiysiniz ve Microsoft 365 Lighthouse, müşterileriniz (küçük ve orta [](../../lighthouse/m365-lighthouse-overview.md)ölçekli işletmeler) için güvenliği yönetebiliyorsanız. İş için Microsoft Defender, diğerleriyle tümleştirilen şekilde Microsoft 365 Lighthouse. Bu özellikler kullanılabilir olduğunda, Microsoft 365 Lighthouse portalında () kiracılar genelindeki güvenlik olaylarını görüntüebilirsiniz[https://lighthouse.microsoft.com](https://lighthouse.microsoft.com). 
 
 :::image type="content" source="media/lighthouse-incidents.png" alt-text="Microsoft 365 Lighthouse'daki olay listesinin ekran Microsoft 365 Lighthouse":::
 
@@ -42,10 +42,10 @@ Olay listesine erişmek için, Microsoft 365 Lighthouse sayfasında Güvenlik ol
 
 Microsoft 365 Lighthouse, Microsoft Bulut Hizmet Sağlayıcılarının aşağıdaki aboneliklerden birini kullanan küçük ve orta ölçekli işletme müşterileri için cihazları, verileri ve kullanıcıları güvenlik altına adede ve yönetmeye olanak tanır:
 
-- [İş için Microsoft Defender](mdb-overview.md)
+- [İş için Microsoft Defender](/security/defender-business/mdb-overview.md)
 
 - [Microsoft 365 Business Premium](../../admin/admin-overview/what-is-microsoft-365.md)
 
-- [Microsoft 365 E3](../../enterprise/microsoft-365-overview.md) Noktası Planı [1 için Microsoft Defender'ı içerir](../defender-endpoint/defender-endpoint-plan-1.md))
+- [Microsoft 365 E3](../../enterprise/microsoft-365-overview.md) (artık Plan [1'Uç Nokta için Microsoft Defender içerir](../defender-endpoint/defender-endpoint-plan-1.md))
 
 Daha fazla bilgi edinmek için bkz[. Genel Microsoft 365 Lighthouse](../../lighthouse/m365-lighthouse-overview.md).

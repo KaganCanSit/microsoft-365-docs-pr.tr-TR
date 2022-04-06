@@ -1,7 +1,7 @@
 ---
 title: Tehdit ve Güvenlik Açığı Yönetimi'da etkinlik Tehdit ve Güvenlik Açığı Yönetimi
 description: Etkinlik zaman çizelgesi, kuruluşa riskin nasıl gir olduğunu ve bunu azaltmak için hangi risk azaltmalarının olduğunu yorumlamanıza yardımcı olan bir risk haber akışıdır.
-keywords: olay zaman çizelgesi, Uç nokta olay zaman çizelgesi için Microsoft Defender, Uç nokta tvm etkinliği zaman çizelgesi için Microsoft Defender, Tehdit ve Güvenlik Açığı Yönetimi için Microsoft Defender
+keywords: olay zaman çizelgesi, Uç Nokta için Microsoft Defender zaman çizelgesi, TVM Uç Nokta için Microsoft Defender zaman çizelgesi, zaman Tehdit ve Güvenlik Açığı Yönetimi, Uç Nokta için Microsoft Defender
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 3fe3139f12b863b54d336e52939ffbb3057df6b4
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 81c3a3a6d1d35551eec34d0fe12aba2f1fc6ec5e
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63316009"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469701"
 ---
 # <a name="event-timeline---threat-and-vulnerability-management"></a>Etkinlik zaman çizelgesi - Tehdit ve Güvenlik Açığı Yönetimi
 
@@ -27,17 +27,17 @@ ms.locfileid: "63316009"
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 Etkinlik zaman çizelgesi, yeni güvenlik açıkları veya açıkları ya da açıkları aracılığıyla kuruluşa risklerin nasıl gir açıkları olduğunu yorumlamanıza yardımcı olan bir risk haber akışıdır. Kuruluş riskini etkileyilebilecek olayları görüntüabilirsiniz. Örneğin, ortaya eklenen yeni güvenlik açıklarını, sömürülebilir hale gelen güvenlik açıklarını, bir exploit kit'ine eklenen açıkları ve daha fazlasını bulabilirsiniz.
 
 Etkinlik zaman çizelgesi, büyük değişikliklerin nedenini belirlemenize yardımcı [olmak](tvm-exposure-score.md) için pozlama puanınızı ve Cihazlar [için Microsoft Güvenli](tvm-microsoft-secure-score-devices.md) Puanı'nın öyküünü de anlatır. Etkinlikler cihazlarınızı veya cihaz puanınızı etkiler. Önceliklendirmeli güvenlik önerilerine dayalı olarak nelerin düzeltilleri gerektiğini ele alarak maruz kalma [süresini azaltabilirsiniz](tvm-security-recommendation.md).
 
 > [!TIP]
-> Yeni güvenlik açığı olayları hakkında e-postalar almak için bkz. Uç Nokta için [Microsoft Defender'da güvenlik açığı e-posta bildirimlerini yapılandırma](configure-vulnerability-email-notifications.md)
+> Yeni güvenlik açığı olayları hakkında e-postalar almak için bkz. Güvenlik açığı [e-posta bildirimlerini güvenlik açığı Uç Nokta için Microsoft Defender](configure-vulnerability-email-notifications.md)
 
 ## <a name="navigate-to-the-event-timeline-page"></a>Olay zaman çizelgesi sayfasına gidin
 
@@ -53,18 +53,18 @@ Tehdit ve Güvenlik Açığı Yönetimi panosunda, cihazlarınızı etkileyen en
 
 Cihazlarınızı veya cihazlarınız için puanınızı etkileyen bir etkinlik yoksa, hiçbiri gösterilmez.
 
-![Pozlama puanı vurgulu.](images/tvm-event-timeline-exposure-score350.png) 
-![ Cihazlar için Microsoft Güvenli Puan üzerine gelin.](images/tvm-event-timeline-device-hover360.png)
+:::image type="content" source="images/tvm-event-timeline-exposure-score350.png" alt-text="Pozlama puanı üzerine gelme" lightbox="images/tvm-event-timeline-exposure-score350.png":::
+:::image type="content" source="images/tvm-event-timeline-device-hover360.png" alt-text="Cihazlar için Microsoft Güvenli Puanı üzerine gelin" lightbox="images/tvm-event-timeline-device-hover360.png":::
 
 ### <a name="drill-down-to-events-from-that-day"></a>O günün olaylarından ayrıntıya gitme
 
 Bu günden **itibaren tüm etkinlikleri göster'i seçmek** , sizi o gün için özel bir tarih aralığı olan Etkinlik zaman çizelgesi sayfasına alır.
 
-![Olay zaman çizelgesi özel tarih aralığını seçti.](images/tvm-event-timeline-drilldown.png)
+:::image type="content" source="images/tvm-event-timeline-drilldown.png" alt-text="Etkinlik zaman çizelgesi sayfası" lightbox="images/tvm-event-timeline-drilldown.png":::
 
 Tarih **aralığını başka** bir özel aralıkla veya önceden ayarlanmış bir zaman aralığıyla değiştirmek için Özel aralık'ı seçin.
 
-![Olay zaman çizelgesi tarih aralığı seçenekleri.](images/tvm-event-timeline-dates.png)
+:::image type="content" source="images/tvm-event-timeline-dates.png" alt-text="Olay zaman çizelgesi tarih aralığı seçenekleri" lightbox="images/tvm-event-timeline-dates.png":::
 
 ## <a name="event-timeline-overview"></a>Etkinlik zaman çizelgesine genel bakış
 
@@ -78,7 +78,7 @@ Olay zaman çizelgesi sayfasında, bir olayla ilgili tüm gerekli bilgileri gör
 
 Sayfanın en üstünde yer alan iki büyük sayı, yeni güvenlik açıklarının ve açıklarından yararlanılabilir güvenlik açıklarının sayısını gösterir; olaylar değil. Bazı olaylarda birden çok güvenlik açıkları ve bazı güvenlik açıkları da birden fazla olay olabilir.
 
-![Olay zaman çizelgesi sayfası.](images/tvm-event-timeline-overview-mixed-type.png)
+:::image type="content" source="images/tvm-event-timeline-overview-mixed-type.png" alt-text="Olay zaman çizelgesi" lightbox="images/tvm-event-timeline-overview-mixed-type.png":::
 
 ### <a name="columns"></a>Sütunlar
 
@@ -110,7 +110,7 @@ Bir etkinlik seçin ve cihazlarınızı etkileyen geçerli CVE'leri listeli bir 
 
 "Puan eğilimi"nin altındaki ok, bu etkinliğin kurumsal açık kalma puanınızı yükseltip yükseltemeyebileceklerini belirlemenize yardımcı olur. Daha yüksek pozlama puanı, cihazların açıklarından yararlanmaya karşı daha korumasız olduğu anlamına gelir.
 
-![Etkinlik zaman çizelgesi uçarak çıkış.](images/tvm-event-timeline-flyout500.png)
+:::image type="content" source="images/tvm-event-timeline-flyout500.png" alt-text="Etkinlik zaman çizelgesi uçarak çıkış" lightbox="images/tvm-event-timeline-flyout500.png":::
 
 Buradan, güvenlik **önerileri sayfasında İlgili güvenlik** önerisine git'i seçerek yeni yazılım güvenlik [açığının giderin önerisine bakın](tvm-security-recommendation.md). Güvenlik önerisinde açıklamayı ve güvenlik açığı ayrıntılarını okuduktan sonra bir düzeltme isteği gönderebilir ve düzeltme sayfasında [isteği izleyebilirsiniz](tvm-remediation.md).
 
@@ -120,11 +120,11 @@ Yazılım sayfasını açmak için, açılır > "İlgili bileşen" adlı bölüm
 
 Belirli bir yazılımın tüm ayrıntılarının yer olduğu tam bir sayfa görüntülenir. Belirli bir yazılımla ilgili olayların zaman çizelgesini görmek için fareyi grafiğin üzerinde tutun.
 
-![Etkinlik zaman çizelgesi grafiğinin yer alan yazılım sayfası.](images/tvm-event-timeline-software2.png)
+:::image type="content" source="images/tvm-event-timeline-software2.png" alt-text="Etkinlik zaman çizelgesi grafiğinin yer alan yazılım sayfası" lightbox="images/tvm-event-timeline-software2.png":::
 
 Bu yazılımla ilgili tüm olayları görüntülemek için olay zaman çizelgesi sekmesine gidin. Ayrıca güvenlik önerilerini, bulunan güvenlik açıklarını, yüklü cihazları ve sürüm dağıtımını da görüntüebilirsiniz.
 
-![Etkinlik zaman çizelgesi sekmesinin yer alan Yazılım sayfası.](images/tvm-event-timeline-software-pages.png)
+:::image type="content" source="images/tvm-event-timeline-software-pages.png" alt-text="Etkinlik zaman çizelgesi sekmesinin olduğu yazılım sayfası" lightbox="images/tvm-event-timeline-software-pages.png":::
 
 ## <a name="related-topics"></a>İlgili konular
 

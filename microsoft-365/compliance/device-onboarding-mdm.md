@@ -1,5 +1,5 @@
 ---
-title: Mobil Windows 10 araçları Windows 11 cihaza ekleme ve kullanma
+title: Mobil Cihaz Yönetimi araçlarını kullanan Windows 10 ve Windows 11 cihazlarının katılımı
 f1.keywords: NOCSH
 ms.author: chrfox
 author: chrfox
@@ -14,20 +14,20 @@ ms.collection:
 ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
-description: Yapılandırma paketini hizmete dahil etmek üzere cihazlara dağıtmak için Mobil Cihaz Yönetimi araçlarını kullanın.
-ms.openlocfilehash: 578a1e06bf5f83f700c5db69ddc32a480d68b729
-ms.sourcegitcommit: 726a72f135358603c2fde3f4067d834536e6deb2
+description: Mobil Cihaz Yönetimi, yapılandırma paketini hizmete dahil etmek üzere cihazlara dağıtmak için mobil cihaz araçlarını kullanın.
+ms.openlocfilehash: 9b329ccf86a2364c13ac72bd4348711d72c17ff5
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014310"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634503"
 ---
-# <a name="onboard-windows-10-and-windows-11-devices-using-mobile-device-management-tools"></a>Mobil Windows 10 araçları Windows 11 cihaza ekleme ve kullanma
+# <a name="onboard-windows-10-and-windows-11-devices-using-mobile-device-management-tools"></a>Mobil Cihaz Yönetimi araçlarını kullanan Windows 10 ve Windows 11 cihazlarının katılımı
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
 - [Microsoft 365 Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
-- [Insider risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
+- [İçeriden risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
 
 Cihazları yapılandırmak için mobil cihaz yönetimi (MDM) çözümlerini kullanabilirsiniz. Microsoft 365 koruması, cihazları yönetmek için ilkeler oluşturmak için OMA-URIs bilgi sağlayarak MDM'leri destekler.
 
@@ -39,12 +39,12 @@ MDM'nin birden çok cihazda etkinleştirilmesi hakkında daha fazla Microsoft In
 
 ## <a name="onboard-devices-using-microsoft-intune"></a>Microsoft Intune kullanarak cihazları Microsoft Intune
 
-[Intune'daki yönergeleri izleyin](/intune/advanced-threat-protection).
-
+Aşağıdaki adımları takip [Intune](/mem/intune/protect/advanced-threat-protection-configure).
+ 
 > [!NOTE]
 > - **Onboarded cihazlar için Durum** ilkesi salt okunur özellikleri kullanır ve düzelti değildir.
 
-## <a name="offboard-and-monitor-devices-using-mobile-device-management-tools"></a>Mobil Cihaz Yönetimi araçlarını kullanarak offboard ve monitör cihazları
+## <a name="offboard-and-monitor-devices-using-mobile-device-management-tools"></a>Mobil cihazlar ve mobil cihazlar ile offboard Cihaz Yönetimi izleme
 
 Güvenlik nedeniyle, Offboard cihazları için kullanılan paketin süresi, indirildikten 30 gün sonra sona erer. Bir cihaza gönderilen süresi dolmuş offboard paketleri reddedilir. Bir çıkartan kullanım paketi indirirken paketlerin son kullanma tarihi size bildirilecek ve paket adına da bu paket dahil edilecektir.
 
@@ -55,7 +55,7 @@ Güvenlik nedeniyle, Offboard cihazları için kullanılan paketin süresi, indi
 
 2. Gezinti **bölmesinde,Device onboardingOffboarding** >  **Ayarlar'ı** >  seçin.
 
-3. Dağıtım yöntemi **alanında**, Mobil Cihaz Yönetimi **/ Mobil Cihaz Yönetimi'ne Microsoft Intune**.
+3. Dağıtım yöntemi **alanında,** Mobil Cihazlar **/ Cihaz Yönetimi'Microsoft Intune**.
 
 4. Paketi **indir'e** tıklayın ve dosyayı .zip kaydedin.
 
@@ -69,7 +69,7 @@ Güvenlik nedeniyle, Offboard cihazları için kullanılan paketin süresi, indi
     Value: [Copy and paste the value from the content of the DeviceCompliance_valid_until_YYYY-MM-DD.offboarding file]
     ```
 > [!NOTE]
-> Uç Nokta için Microsoft Defender zaten yapılandırılmışsa cihaz eklemeyi açabilirsiniz **ve** 6. Adım artık gerekli değildir.
+> Cihaz Uç Nokta için Microsoft Defender zaten yapılandırılmışsa cihaz eklemeyi **açabilirsiniz ve** 6. Adım artık gerekli değildir.
 
 > [!NOTE]
 > Kapalı **durumdaki cihazlar için Durum** ilkesi salt okunur özellikleri kullanır ve düzelti değildir.
@@ -78,8 +78,8 @@ Güvenlik nedeniyle, Offboard cihazları için kullanılan paketin süresi, indi
 > Offboard, cihazın algılayıcı verilerini portala göndermeyi durdurmaya neden olur, ancak sahip olduğu uyarılara başvuru da dahil olmak üzere cihazdan alınan veriler 6 ay süreyle korunur.
 
 ## <a name="related-topics"></a>İlgili konular
-- [Grup Windows 10 kullanarak cihaz ekleme](device-onboarding-gp.md)
+- [Windows 10 kullanarak diğer cihazları grup ilkesi](device-onboarding-gp.md)
 - [Microsoft Endpoint Configuration Manager kullanarak Windows 10 cihazları Microsoft Endpoint Configuration Manager](device-onboarding-sccm.md)
 - [Yerel Windows 10 kullanarak cihazları ekleme](device-onboarding-script.md)
-- [Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını ekleme](device-onboarding-vdi.md)
+- [Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarının katılımı](device-onboarding-vdi.md)
 - [Microsoft Defender Gelişmiş Tehdit Koruması'nın ekleme sorunlarını giderme](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)

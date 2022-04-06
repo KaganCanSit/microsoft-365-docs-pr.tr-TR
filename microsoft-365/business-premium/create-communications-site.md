@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Kampanyanız veya iş için kampanyanız SharePoint bir iletişim sitesi oluşturmak için neden ve nasıl yeni bir iletişim Microsoft 365.
-ms.openlocfilehash: d2634f8793c142cc34d6c1708481aa8e4df3184b
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: ba0f8f559bc8843a61baca1bbb6615c596ffdc65
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63326335"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634393"
 ---
 # <a name="create-a-communications-site-in-sharepoint"></a>Web sitesinde iletişim sitesi SharePoint
 
@@ -40,9 +40,13 @@ ms.locfileid: "63326335"
 İletişim sitenize aşağıdaki öğeleri dahil edin:
 
 1. Logonuzu ve renklerinizi üst bilgi resmi ve tema olarak ekleyin.
+
 2. Hero web bölümünde stratejiniz, iletiniz, önemli belgeleriniz, dizininiz ve SSS'lerinizi **kontrol edin**.
+
 3. Metin web bölümünde eks gereken bir CEO'veya aday **açıklaması ekleme**.
+
 4. Herkesin neler olduğunu **görmeleri için etkinlikler web** bölümü ekleyin.
+
 5. Kişilerin kullanabileceği fotoğraflar ekleyin veya bir Resim galerisi **web bölümünde paylaşın**.
 
 ![Kampanyanın gerek SharePoint ortak öğeleri için alan olan bir SharePoint İletişim sayfasının diyagramı.](../media/m365-democracy-comms-site.png)
@@ -58,7 +62,9 @@ PDF ve PDF PowerPoint aşağıdaki bağlantılar tabloid biçiminde (genel muhas
 ## <a name="set-it-up"></a>Ayarlayın
 
 1. https://Office.com'te oturum açın.
+
 2. Sayfanın sol üst köşesinde uygulama başlatıcı simgesini seçin ve sonra **SharePoint seçin.** Siteler kutucuğunu görmüyorsanız **, SharePoint** veya Siteler **kutucuğunu** görmüyorsanız SharePoint Tüm'e tıklayın.
+
 3. Sayfa giriş sayfasının en SharePoint + Site **oluştur'a tıklayın** ve İletişim sitesi **seçeneğini** belirtin.
 
 İletişim siteleri [ve](https://support.office.com/article/What-is-a-SharePoint-communication-site-94A33429-E580-45C3-A090-5512A8070732) [SharePoint Online'da iletişim sitesi oluşturma hakkında SharePoint öğrenin](https://support.microsoft.com/en-us/office/create-a-communication-site-in-sharepoint-online-7fb44b20-a72f-4d2c-9173-fc8f59ba50eb).

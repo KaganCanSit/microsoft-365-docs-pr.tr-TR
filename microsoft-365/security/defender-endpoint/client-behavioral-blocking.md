@@ -1,6 +1,6 @@
 ---
 title: İstemci davranışı engelleme
-description: İstemci davranışı engellemesi, Uç Nokta için Microsoft Defender'daki davranış engelleme ve içerirlik yeteneklerinin bir kısmıdır
+description: İstemci davranışı engelleme, müşteriyi engelleme ve engellemenin bir Uç Nokta için Microsoft Defender
 keywords: davranış engelleme, hızlı koruma, istemci davranışı, Uç Nokta için Microsoft Defender
 ms.pagetype: security
 author: denisebmsft
@@ -16,17 +16,17 @@ ms.custom:
 - edr
 ms.collection: m365-security-compliance
 ms.technology: mde
-ms.openlocfilehash: c5a738584f1705365db1c4fad61f190a42d97660
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 8da3f04af66568bbe79dd6a74c38b30a8a1ab891
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63330237"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64470229"
 ---
 # <a name="client-behavioral-blocking"></a>İstemci davranışı engelleme
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
@@ -35,7 +35,7 @@ ms.locfileid: "63330237"
 
 İstemci davranışı engellemesi, Uç Nokta için [Defender'daki](behavioral-blocking-containment.md) davranış engelleme ve içerirlik yeteneklerinin bir bileşenidir. Cihazlarda (istemci veya uç nokta olarak da adlandırılan) şüpheli davranışlar algılandığından, yapılar (dosyalar veya uygulamalar gibi) engellenir, denetlenir ve otomatik olarak düzeltilir.
 
-:::image type="content" alt-text="Bulut ve istemci koruması." source="images/pre-execution-and-post-execution-detection-engines.png" lightbox="images/pre-execution-and-post-execution-detection-engines.png":::
+:::image type="content" source="images/pre-execution-and-post-execution-detection-engines.png" alt-text="Bulut ve istemci koruması" lightbox="images/pre-execution-and-post-execution-detection-engines.png":::
 
 Virüsten koruma, bulut korumasıyla eşleştirilmiş olarak en iyi şekilde çalışır.
 

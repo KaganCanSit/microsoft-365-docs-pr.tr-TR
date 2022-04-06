@@ -23,12 +23,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Küçük işletmeniz veya kampanyanız üzerinde işbirliği Microsoft Teams ekip oluşturmanın neden ve nasıl ekip oluştur öğrenin.
-ms.openlocfilehash: a8aae7eb1492a45cf80cd5e56b9df7393f08eb7d
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 6c218b24b335dc01aa0b426eb4e95bccef3d20d7
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011873"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634085"
 ---
 # <a name="create-a-team-in-microsoft-teams-so-your-small-business-or-campaign-can-collaborate"></a>Küçük işletmenizin veya kampanya Microsoft Teams işbirliği yapmak için ekip oluşturma
 
@@ -37,22 +37,29 @@ Microsoft Teams her cihazdan personelinizin düzenli bir şekilde çalışmalar�
 ## <a name="best-practices"></a>En iyi uygulamalar
 
 1. Hassas bilgiler için özel ekipler oluşturun.
-1. Kuruluş genelindeki herkesle iletişim için kuruluş genelinde bir ekip oluşturun.
-1. Belirli projeler için ekipler oluşturun ve kimlerin dahil olması gerektiğine bağlı olarak uygun koruma miktarını uygulama.
-1. İş ortakları ile iletişim için belirli ekipler oluşturun ve iş ortaklarınızı işletmeniz için önemli olan her şeyden ayrı tutabilirsiniz.
+
+2. Kuruluş genelindeki herkesle iletişim için kuruluş genelinde bir ekip oluşturun.
+
+3. Belirli projeler için ekipler oluşturun ve kimlerin dahil olması gerektiğine bağlı olarak uygun koruma miktarını uygulama.
+
+4. İş ortakları ile iletişim için belirli ekipler oluşturun ve iş ortaklarınızı işletmeniz için önemli olan her şeyden ayrı tutabilirsiniz.
 
 Örneğin bir işletme, hukuk firması veya sağlık uygulaması aşağıdaki ekipleri oluşturabilir:
 
 1. **İşletme, firma veya uygulama genelinde bir ekip:** Bu, herkesin günlük iletişimlerde kullanabileceği ve işletmeniz genelinde çalış kullanabileceğini ifade ediyor. Tüm firmanız veya uygulamanız için duyurular yapmak veya ilgi alanlarınızı paylaşmak için bu ekibi kullanabilirsiniz.
-1. **Tek tek ekipler:** Günlük işleriyle ilgili işbirliği yapmak için daha küçük gruplar için ekipler ayarlayın.
-1. **Dış iletişim ekibi veya ekipleri:** Satıcılarınız, iş ortaklarınız veya müşterilerinizle hassas bir şekilde çalışmalarına izin vermeden onlarla birlikte çalışmanız gerekir. Belirli gruplar için farklı kanallar ayarlayın.
+
+2. **Tek tek ekipler:** Günlük işleriyle ilgili işbirliği yapmak için daha küçük gruplar için ekipler ayarlayın.
+
+3. **Dış iletişim ekibi veya ekipleri:** Satıcılarınız, iş ortaklarınız veya müşterilerinizle hassas bir şekilde çalışmalarına izin vermeden onlarla birlikte çalışmanız gerekir. Belirli gruplar için farklı kanallar ayarlayın.
 
 ![İşletme içinde güvenli Microsoft Teams ve işbirliğini sağlamak için üç ayrı ekibin yer alan bir çalışma penceresi diyagramı.](../media/m365-democracy-teams-business-collab.png)
 
 Ayrıca kampanyalar, güvenli bir şekilde iletişim kurmak ve işbirliği yapmak için aşağıdaki ekipler oluşturabilir:
 
 1. **Kampanya Ekibin müşteri adayları:** Bunu, yalnızca önemli kampanya üyelerinizin erişebilecekleri ve hassas olabilecek kaygıları tartışacak şekilde özel bir ekip olarak ayarlayın.
+
 2. **Genel bir kampanya ekibi:** Bu, herkesin günlük iletişimleri ve iş yapmak için kullanabileceğini ifade ediyor. Kişiler, gruplar veya komiteler, çalışmalarını yapmak için bu ekipte kanallar kurabilirsiniz. Örneğin, etkinlik planlama insanları kampanya etkinlikleri için sohbet etmek ve lojistiği koordine etmek için bir kanal kurabilirsiniz.
+
 3. **İş ortağı ekibi:** Hassas bir şeye izin vermeden satıcılarınızı, iş ortaklarınızı veya gönüllülerinizi koordine edin.
 
 ![Bir kampanyada güvenli Microsoft Teams ve işbirliğine olanak sağlayan üç ayrı ekibin yer olduğu bir ekip penceresi diyagramı.](../media/m365-democracy-teams-collab.png)
@@ -60,16 +67,23 @@ Ayrıca kampanyalar, güvenli bir şekilde iletişim kurmak ve işbirliği yapma
 Ekip oluşturulduğunda, aşağıdakiler oluşturulur:
 
 - Yeni [Microsoft 365 grubu](/MicrosoftTeams/office-365-groups)
+
 - Ekip [SharePoint depolamak için](/MicrosoftTeams/sharepoint-onedrive-interact) bir Çevrimiçi site ve belge kitaplığı
+
 - Paylaşılan [Exchange Online](/MicrosoftTeams/exchange-teams-interact) kutusu ve takvimi
+
 - OneNote not defteri
+
 - Planner ve Office 365 gibi diğer birçok uygulamanın bağlı Power BI
 
 Microsoft Teams içinde şunları bulabilirsiniz:
 
 1. **Teams:** Ait olmak için kanalları bulun veya kendi kanalınızı oluşturun. Kanallarda yerinde toplantılara olabilir, görüşmeler veya dosyalar paylaşabilirsiniz.
+
 2. **Toplantılar:** Gün veya hafta içinde hazır bulundurduk her şeyi görme. Veya bir toplantı zaman seçin. Bu takvim, takviminizi Outlook eşitler.
+
 3. **Aramalar:** Bazı durumlarda, kuruluşun ayarlaması varsa, e-posta Microsoft Teams kullanmasalar bile herhangi birini Microsoft Teams.
+
 4. **Etkinlik:** Tüm okunmamış iletilerinizi, iletilerinizi, @mentions ve daha fazlasını takip.
 
 Belirli öğeleri veya kişiyi aramak, hızlı işlemler yapmak ve uygulamaları başlatmak için en üstdeki komut kutusunu kullanın.

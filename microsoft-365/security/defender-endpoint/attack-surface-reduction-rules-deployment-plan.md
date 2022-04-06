@@ -1,7 +1,7 @@
 ---
-title: ASR kuralları saldırı yüzeyi azaltma dağıtım kuralları dağıtımı planlama
-description: Saldırı yüzeyi azaltma (ASR) kuralları dağıtımınızı planlamak için rehberlik sağlar.
-keywords: Saldırı yüzeyi azaltma kuralları dağıtımı, ASR dağıtımı, ASR kurallarını etkinleştirme, ASR'yi yapılandırma, konak yetkisiz erişim önleme sistemi, koruma kuralları, açıktan yararlanma önleme kuralları, kötüye kullanıma karşı koruma kuralları, kötüye kullanma kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma
+title: ASR kurallarını saldırı yüzeyi azaltma dağıtım kuralları dağıtımı
+description: Saldırı yüzeyini azaltma (ASR) kuralları dağıtımınızı planlamak için kılavuz sağlar.
+keywords: Saldırı yüzeyini azaltma kuralları dağıtımı, ASR dağıtımı, asr kurallarını etkinleştirme, ASR'yi yapılandırma, izinsiz giriş engelleme sistemi, koruma kuralları, istismardan koruma kuralları, istismardan koruma kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -20,72 +20,72 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 94c66591a99a92ebd9d710de573d32e440386573
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 9342e4b3868e5bc0d5701b4a0cfa2e8f0a56937b
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64663148"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477335"
 ---
-# <a name="step-1-plan-asr-rules-deployment"></a>1. Adım: ASR kuralları dağıtımını planlayın
+# <a name="step-1-plan-asr-rules-deployment"></a>1. Adım: ASR kuralları dağıtımını planlama
 
-Saldırı yüzeyi azaltma (ASR) kurallarını test ederken doğru iş birimiyle başlamak önemlidir. Belirli bir iş birimindeki küçük bir grup kişiyle başlamak istersiniz. Belirli bir iş birimi içinde, ASR kuralları hakkında gerçek dünya etkisi sağlayabilecek ve uygulamanızı ayarlamanıza yardımcı olabilecek bazı ASR şampiyonlarını tanımlayabilirsiniz.
+Saldırı yüzeyini azaltma (ASR) kurallarını test ederken doğru iş birimiyle başlamak önemlidir. Belirli bir iş birimine bağlı küçük bir grup insanla başlamak istiyor oluruz. Belirli bir iş birimi içinde, ASR kuralları üzerinde gerçek etki sağlayacak bazı ASR şampiyonlarını tanımlayabilir ve uygulamanızı ayarlamanıza yardımcı olabilirsiniz.
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="images/asr-rules-planning-steps.png" alt-text="ASR kuralları planlama adımları" lightbox="images/asr-rules-planning-steps.png":::
 
-## <a name="start-with-the-right-business-unit"></a>Doğru iş birimiyle başlayın
+## <a name="start-with-the-right-business-unit"></a>Doğru iş birimiyle çalışmaya başlama
 
-ASR kuralları dağıtımınızı dağıtmak için iş birimini nasıl seçeceğiniz aşağıdakiler gibi faktörlere bağlıdır:
+ASR kuralları dağıtımı için iş birimini nasıl seçki, aşağıdaki gibi faktörlere bağlıdır:
 
 - İş biriminin boyutu
-- ASR kural şampiyonlarının kullanılabilirliği  
-- Dağıtımı ve kullanımı:
+- ASR kuralları şampiyonlarının kullanılabilirliği  
+- Dağılımı ve kullanımı:
   - Yazılım
   - Paylaşılan klasörler
   - Betiklerin kullanımı
-  - makroları Office
-  - ASR kurallarından etkilenen diğer varlıklar
+  - Office oluşturma
+  - ASR kuralları tarafından etkilenen diğer varlıklar
 
-İş gereksinimlerinize bağlı olarak, yazılımın, paylaşılan klasörlerin, betiklerin, makroların vb. kapsamlı bir örneklemesini almak için birden çok iş birimi dahil etmeye karar vekleyebilirsiniz. Buna karşılık, ilk ASR kuralları dağıtımınızın kapsamını tek bir iş birimiyle sınırlamaya karar verebilir, ardından ASR kuralları dağıtım işleminin tamamını diğer iş birimlerinizle tek tek yinelemeye karar verebilirsiniz.
+İş gereksinimlerinize bağlı olarak, çeşitli yazılım, paylaşılan klasörler, betikler, makrolar gibi çeşitli özellikler elde etmek için birden çok iş birimini içermeye karar veabilirsiniz. Buna karşılık, ilk ASR kurallarının kapsamını tek bir iş birimiyle sınırlamaya karar ve ardından ASR kuralları uygulama işleminin tamamını diğer iş birimlerinize bire bir yinelersiniz.
 
 ## <a name="identify-asr--rules-champions"></a>ASR kuralları şampiyonlarını belirleme
 
-ASR kuralları şampiyonları, kuruluşunuzda ön test ve uygulama aşamalarında ilk ASR kuralları dağıtımınıza yardımcı olacak üyelerdir. Şampiyonlarınız genellikle teknik açıdan daha usta olan ve aralıklı iş akışı kesintileri tarafından raydan çıkarılmayan çalışanlardır. Şampiyonların katılımı, ASR kuralları dağıtımının kuruluşunuza daha geniş kapsamlı bir şekilde genişletilmesi boyunca devam edecektir. ASR kural şampiyonlarınız, ASR kuralları dağıtımının her düzeyini ilk kez deneyimleyecek.
+ASR kuralları destekçileri, ilk test ve uygulama aşamasında ilk ASR kurallarının uygulanmasında size yardımcı olacak organizasyon üyeleridir. Şampiyonlarımız normalde daha teknik açıdan daha teknik olan ve aralıklı iş akışı kesintileri nedeniyle rayından çık çalışmayan çalışanlardandır. Şampiyonların katılımı, asr kurallarının organizasyonunıza dağıtımının daha geniş bir genişletilmesi boyunca devam edecek. ASR kurallarının her düzeyinde birinci olarak ASR kuralları birinci olur.
 
-ASR kurallarıyla ilgili iş kesintileri konusunda sizi uyarmak ve ASR kuralları dağıtımıyla ilgili iletişimleri almak için ASR kural şampiyonlarınız için bir geri bildirim ve yanıt kanalı sağlamak önemlidir.
+ASR kuralları destekçileri için, ASR kurallarıyla ilgili çalışma kesintileri hakkında sizi uyaran ve ASR kurallarına uygun iletişimleri alan bir geri bildirim ve yanıt kanalı sağlamak önemlidir.
 
-## <a name="get-inventory-of-line-of-business-apps-and-understand-the-business-unit-processes"></a>İş kolu uygulamalarının envanterini alma ve iş birimi süreçlerini anlama
+## <a name="get-inventory-of-line-of-business-apps-and-understand-the-business-unit-processes"></a>İş hattı uygulamalarının envanterini edinin ve iş birimi işlemlerini anlama
 
-Kuruluşunuz genelinde kullanılan uygulamaları ve iş birimi başına işlemleri tam olarak anlamak, başarılı bir ASR kuralları dağıtımı için kritik öneme sahiptir. Ayrıca, bu uygulamaların kuruluşunuzdaki çeşitli iş birimlerinde nasıl kullanıldığını anlamanız şarttır.
-Başlamak için, kuruluşun genelinde kullanım için onaylanan uygulamaların bir envanterini almanız gerekir. Yazılım uygulamalarının envanterini oluşturmanıza yardımcı olması için Microsoft 365 Uygulamaları yönetim merkezi gibi araçları kullanabilirsiniz. Bkz. [Microsoft 365 Uygulamaları yönetim merkezinde envantere genel bakış](/deployoffice/admincenter/inventory).
+Organizasyonu genelinde kullanılan uygulamaları ve iş birimi başına işlemleri tam olarak anlamak, başarılı bir ASR kuralları dağıtımı için çok önemlidir. Buna ek olarak, bu uygulamaların kuruluş içindeki çeşitli iş birimleri içinde nasıl kullanıldıklarını anlamanız da gerekir.
+İlk olarak, kuruluş genelinde kullanım onayı alan uygulamaların envanterini elde edinebilirsiniz. Stok yazılım uygulamalarınıza yardımcı olmak Microsoft 365 Uygulamaları Yönetim Merkezi gibi araçları kullanabilirsiniz. Bkz. [Yönetim merkezinde stok Microsoft 365 Uygulamaları genel bakış](/deployoffice/admincenter/inventory).
 
-## <a name="define-reporting-and-response-team-roles-and-responsibilities"></a>Raporlama ve yanıt ekibi rollerini ve sorumluluklarını tanımlama
+## <a name="define-reporting-and-response-team-roles-and-responsibilities"></a>Ekip rollerini ve sorumluluklarını raporlama ve yanıtlama
 
-ASR kurallarının durumunu ve etkinliğini izlemek ve iletmekle sorumlu kişilerin rollerini ve sorumluluklarını açıkça ifade etmek ASR bakımının temel etkinliğidir. Bu nedenle, şunları belirlemek önemlidir:
+ASR kurallarının durumunu ve etkinliğini izlemek ve bunlardan sorumlu olan kişilerin rollerini ve sorumluluklarını açıkça ortaya ortaya açıklaması, ASR bakımının temel etkinliklerindendir. Bu nedenle, şunları belirlemek önemlidir:
 
-- Rapor toplamadan sorumlu kişi veya ekip
-- Raporların nasıl ve kimlerle paylaşıldığı
-- ASR kurallarının neden olduğu yeni tanımlanan tehditler veya istenmeyen engellemeler için yükseltme nasıl giderilir?
+- Rapor toplamakla sorumlu kişi veya ekip
+- Raporların nasıl ve kimlerle paylaşılıyor
+- ASR kuralları tarafından neden olan yeni tanımlanan tehditlere veya istenmeyen engellemelere yönelik yükseltme nasıl ele alınır
 
-Tipik roller ve sorumluluklar şunlardır:
+Genel roller ve sorumluluklar şunlardır:
 
-- BT yöneticileri: ASR kurallarını uygulayın, dışlamaları yönetin. Uygulamalar ve süreçler üzerinde farklı iş birimleriyle çalışın. Raporların toplanması ve paydaşlara paylaşılması
-- Sertifikalı güvenlik operasyonları merkezi (CSOC) analisti: Tehdidin geçerli olup olmadığını belirlemek için yüksek öncelikli, engellenen süreçlere yatırım yapmaktan sorumludur
-- Bilgi güvenliği müdürü (CISO): Kuruluşun genel güvenlik duruşu ve sağlığından sorumludur
+- IT yöneticileri: ASR kuralları uygulama, dışlamaları yönetme. Uygulamalar ve süreçlerde farklı iş birimleriyle çalışabilirsiniz. Proje katılımcıları için raporları bir araya getirerek paylaşma
+- Sertifikalı güvenlik işlemleri merkezi (CSOC) analisti: Tehditnin geçerli olup olmadığını belirlemek için yüksek öncelikli, engellenen süreçler yatırım yapmakla sorumlu
+- Baş bilgi güvenliği görevlisi (CISO): Kuruluşun genel güvenlik sorumlusundan ve sağlığından sorumlu
 
 ## <a name="ring-deployment"></a>Halka dağıtımı
 
-Microsoft, büyük kuruluşlar için ASR kurallarının "halkalar" içinde dağıtılması önerilir. Halkalar, çakışmayan ağaç halkaları gibi dışa doğru yayılan eşmerkezli daireler olarak görsel olarak temsil edilen cihaz gruplarıdır. En içteki halka başarıyla dağıtıldığında, bir sonraki halkayı test aşamasına geçirebilirsiniz. İş birimlerinizin, ASR kuralları şampiyonlarınızın, uygulamalarınızın ve süreçlerinizin kapsamlı bir şekilde değerlendirilmesi halkalarınızı tanımlamak için zorunludur.
-Çoğu durumda kuruluşunuz, Windows güncelleştirmelerinin aşamalı dağıtımları için dağıtım halkaları tasarlayacaktır. ASR kurallarını uygulamak için mevcut halka tasarımınızı kullanabilirsiniz.
-Bkz. [Windows için dağıtım planı oluşturma](/windows/deployment/update/create-deployment-plan)
+Büyük kuruluşlar için Microsoft, ASR kurallarını "halkalar" içinde dağıtmayı önermektedir. Halkalar, örtüşmeyen ağaç halkaları gibi dışarı doğru yayılan, görsel olarak kesişen matris daireleri olarak temsil edilen cihaz gruplarıdır. En içteki halka başarıyla dağıtıldığında, bir sonraki halkayı test aşamasına geçsiniz. İş birimlerinizin kapsamlı değerlendirmesi, ASR kuralları şampiyonları, uygulamaları ve süreçlerinizi tanımlamanız gerekir.
+Çoğu durumda, kuruluş bu güncelleştirmelerin aşamalı dağıtımları için dağıtım halkaları Windows tasarlanmıştır. ASR kurallarını uygulamak için var olan halka tasarımınızı kullanabilirsiniz.
+Bkz. [Dağıtım planı oluşturma Windows](/windows/deployment/update/create-deployment-plan)
 
-## <a name="additional-topics-in-this-deployment-collection"></a>Bu dağıtım koleksiyonundaki ek konular
+## <a name="additional-topics-in-this-deployment-collection"></a>Bu dağıtım koleksiyonunda yer alan ek konular
 
 [ASR kuralları dağıtım önkoşulları](attack-surface-reduction-rules-deployment.md)
 
 [2. Adım: ASR kurallarını test edin](attack-surface-reduction-rules-deployment-test.md)
 
-[3. Adım: ASR kurallarını uygulayın](attack-surface-reduction-rules-deployment-implement.md)
+[3. Adım: ASR kurallarını uygulama](attack-surface-reduction-rules-deployment-implement.md)
 
-[4. Adım: ASR kurallarını kullanıma hazır hale getirin](attack-surface-reduction-rules-deployment-operationalize.md)
+[4. Adım: ASR kurallarını işlem durumaleştirme](attack-surface-reduction-rules-deployment-operationalize.md)

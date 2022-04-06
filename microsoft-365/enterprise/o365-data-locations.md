@@ -17,12 +17,12 @@ ms.custom:
 - admindeeplinkMAC
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: Dünya genelinde depolanan Microsoft 365 verilerinizin nerede depolandığına karar belirleme
-ms.openlocfilehash: c88eceadf6c00d165b0ac032fab19596abec49e1
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 17675917a737717c352125d23a32b432e681a77f
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525480"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634569"
 ---
 # <a name="where-your-microsoft-365-customer-data-is-stored"></a>Verilerinizin Microsoft 365 müşteri verilerinizin depolandığı yer
 
@@ -38,7 +38,7 @@ Microsoft Ürünleri ve Hizmetleri Veri Koruma [Sözleşmesi'nde (DPA)](https://
 
 Veri Azure Active Directory için lütfen Veri [Haritası'AAD'ı ziyaret edin](https://go.microsoft.com/fwlink/p/?linkid=2092972).
 
-Müşterinin fatura adresi Avrupa dışında ise ve Müşterinin bir Office 365 Eğitim aboneliği varsa, OST'nin "Core Online Services için Rest'te Müşteri Verileri Konumu" bölümüne bakarak Microsoft, Avrupa veya Kuzey Amerika'nın herhangi bir yerinde müşteri verilerini sağlar, Müşteri Verilerini aktarabilir ve müşteri verilerini Avrupa veya Kuzey Amerika Office 365'nın herhangi bir yerinde depolar.  Müşterinin fatura adresi Avrupa'da ise ve Müşterinin bir Office 365 Eğitim aboneliği varsa, OST'nin "Core Online Services için Rest'te Müşteri Verileri Konumu" bölümüne bakarak Microsoft, Müşteri'nin Office 365 kiracısı sağlanmasını, Müşteri Verilerini Avrupa Birliği içinde herhangi bir yere aktarabilir ve orada depolar.
+Müşterinin fatura adresi Avrupa dışında ve Müşteri'nin bir Office 365 Eğitim aboneliği varsa, OST'nin "Core Online Services için Rest'te Müşteri Verileri Konumu" bölümüne bakarak Microsoft, Avrupa veya Kuzey Amerika'te Müşterinin Office 365 kiracısına müşteri verisi sağlanmasını, Müşteri Verilerini aktarabilir ve orada orada depolabilir.  Müşterinin fatura adresi Avrupa'da ise ve Müşterinin bir Office 365 Eğitim aboneliği varsa, OST'nin "Core Online Services için Rest'te Müşteri Verileri Konumu" bölümüne bakarak Microsoft, Müşteri'nin Office 365 kiracısı sağlanmasını, Müşteri Verilerini Avrupa Birliği içinde herhangi bir yere aktarabilir ve orada depolar.
 
 
 
@@ -93,24 +93,24 @@ Lütfen bölgeye [göre ürünler sayfasını](https://go.microsoft.com/fwlink/p
 
 Bazı durumlarda, müşteri isteği verilerinizin depolandığı konumdan farklı bir bölgedeki sunucular tarafından işleniyor olabilir. Ağ yönlendirme kararlarının istek işleme için farklı bir sunucu seçmesi buna neden olabilir, ancak böyle durumlarda verileriniz yeni bir konumda yeni bir konuma taşınmaz.
 
-### <a name="what-are-the-exceptions-for-intune-data-locations"></a>Intune veri konumları için özel durumlar nedir?
+### <a name="what-are-the-exceptions-for-intune-data-locations"></a>Veri konumlarını nasıl Intune?
 
-Microsoft, Intune müşteri verilerini belirtilen Geo dışında depolamaz. şu dışında:
+Microsoft, belirtilen Intune dışında kalan tüm müşteri verilerini depolamaz. şu dışında:
 
 - Microsoft'un müşteri desteği sağlaması, hizmet sorunlarını gidermesi veya yasal gereksinimlere uyması gerekir.
 - Müşteri, aşağıdakilerin kullanımı da dahil olmak üzere müşteri verisi bu tür depolamayı etkinleştirmek üzere bir hesap yapılandırr:
 
   - Genel bir önbelleğe alma hizmeti sağlayan ve müşteri verilerini dünyanın her yerindeki uç konumlarda depo sağlayan Content Delivery Network (CDN) gibi, genel olarak işletmek üzere tasarlanmış özellikler.
 
-  - Azure Active Directory (Azure AD) ile kullanılabilir ve dizin verilerini genel olarak depolar. Bu durum, Amerika Birleşik Devletleri'nde (Azure AD verilerin yalnızca Amerika Birleşik Devletleri'nde depolandığı) veya Avrupa'daki (Azure AD verileri Avrupa veya ABD'de depolandığı) Azure AD dağıtımları için geçerli değildir.
+  - Azure Active Directory (Azure AD) ile kullanılabilir ve dizin verilerini genel olarak depolar. Bu durum, Birleşik Devletler'daki (Azure AD verileri yalnızca Birleşik Devletler'te) veya Avrupa'da (Azure AD verileri Avrupa veya Avrupa'da depolandığı yer) Azure AD dağıtımları için Birleşik Devletler.
    
-  - Önizleme, beta veya diğer yayın öncesi sürüm hizmetleri, genellikle müşteri verilerini ABD'de depolar, ancak genel olarak depolar.
+  - Önizleme, beta veya diğer yayın öncesi sürüm hizmetleriyle müşteri verilerini genel olarak Birleşik Devletler genel olarak depolanabilirsiniz.
 
-Ne olursa olsun, Microsoft müşterilerin veya son kullanıcılarının müşteri verilerine erişim verilerinde yer alan Coğrafi verileri denetlemez veya sınırlamaz. Benzer şekilde, diğer hizmetlerde yer alan müşteri verileri daha sonra Intune ile tümleştirildi; kaynak müşteri verileri, diğer hizmetin coğrafi taahhütlerine (varsa) tabi olmaya devam eder; yalnızca Intune ile tümleştirilmiş müşteri verilerin kopyası Intune için belirtilen Geo'da depolanır.  
+Ne olursa olsun, Microsoft müşterilerin veya son kullanıcılarının müşteri verilerine erişim verilerinde yer alan Coğrafi verileri denetlemez veya sınırlamaz. Benzer şekilde, diğer hizmetlerde yer alan müşteri verileri daha sonra Intune ile tümleştirilene kadar, kaynak müşteri verileri diğer hizmetin kendi Coğrafi taahhütlerine (varsa) tabi olmaya devam eder; yalnızca müşteri verilerini Intune ile tümleştirilmiş olan müşteri verileri, Intune için belirtilen Geo belgesinde depolanır.  
 
 ### <a name="what-are-the-considerations-for-microsoft-viva-data-locations"></a>Veri konumlarını nasıl Microsoft Viva?
 
-- Viva Connections
+- Viva Bağlantılar
 
   - Pano, Kaynaklar ve masaüstü uygulamasının verileri SharePoint Online'da depolanır. 
   
@@ -132,9 +132,9 @@ Aşağıdaki genel coğrafyalar, geriye kalan verileri depolar. Müşteri verile
 
 | Genel Coğrafyalar | Müşteri verilerini depolandığı konumlar |
 | --- | --- |
-| Global Coğrafya 1 – EMEA (Avrupa, Orta Doğu ve Afrika) | Avusturya, Finlandiya, Fransa, İrlanda, Hollanda |
+| Global Coğrafya 1 – EMEA (Avrupa, Orta Doğu ve Afrika) | Avusturya, Finlandiya, Fransa, İrlanda, Hollanda, İsveç |
 | Genel Coğrafya 2 – Asya Pasifik | Hong Kong, Japonya, Malezya, Singapur, Güney Kore |
-| Global Geography 3 - Amerika | Brezilya, Şili, Amerika Birleşik Devletleri |
+| Global Geography 3 - Amerika | Brezilya, Şili, Birleşik Devletler |
 
 ## <a name="countryregion-specific-data-center-city-locations"></a>Ülke/Bölgeye özgü Veri Merkezi şehir konumları
 
@@ -145,7 +145,7 @@ Aşağıdaki genel coğrafyalar, geriye kalan verileri depolar. Müşteri verile
 | Avustralya | Sydney, Melbourne |
 | Brezilya | Rio, Campinas |
 | Kanada | Quebec City, Toronto |
-| Avrupa Birliği | Avusturya (Finlandiya), Finlandiya (Helsinki), Fransa (Paris, İrlanda), İrlanda (Dublin), Hollanda (Amsterdam) |
+| Avrupa Birliği | Avusturya (Finlandiya), Finlandiya (Helsinki), Fransa (Paris, İrlanda), İrlanda (Dublin), Hollanda (Amsterdam), İsveç (Gävle, Sandviken, Staffanstorp) |
 | Fransa | Paris, Londra |
 | Almanya | Frankfurt, Berlin |
 | Hindistan | Chennai, Mumbai, Pune |
@@ -180,11 +180,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -208,11 +208,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -236,11 +236,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -264,16 +264,16 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-## <a name="american-samoa"></a>Amerikan Samoa
+## <a name="american-samoa"></a>Amerikan Samoası
 <details><summary>Genişletmek için tıklayın</summary><p>
 
 | Hizmet | Konum |
@@ -292,11 +292,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -320,11 +320,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -348,11 +348,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -376,11 +376,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -404,11 +404,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -432,11 +432,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -460,11 +460,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Global Geography 3 – Amerika |
-| Viva Konuları | Global Geography 3 – Amerika |
-| Viva Learning | Global Geography 3 – Amerika |
-| Viva Analizler - Bireysel | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
+| Viva Bağlantılar | Global Geography 3 – Amerika |
+| Viva Konular | Global Geography 3 – Amerika |
+| Viva Öğrenme | Global Geography 3 – Amerika |
+| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -488,11 +488,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -516,11 +516,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -544,11 +544,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avustralya |
 | Whiteboard | Avustralya |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Avustralya |
-| Viva Konuları | Avustralya |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Avustralya |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Avustralya |
+| Viva Konular | Avustralya |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Avustralya |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -572,11 +572,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -600,11 +600,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -628,11 +628,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -656,11 +656,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -684,11 +684,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -712,11 +712,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -741,11 +741,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -769,11 +769,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -797,11 +797,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -825,11 +825,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -853,11 +853,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -881,11 +881,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -909,11 +909,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Global Geography 3 – Amerika |
-| Viva Konuları | Global Geography 3 – Amerika |
-| Viva Learning | Global Geography 3 – Amerika |
-| Viva Analizler - Bireysel | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
+| Viva Bağlantılar | Global Geography 3 – Amerika |
+| Viva Konular | Global Geography 3 – Amerika |
+| Viva Öğrenme | Global Geography 3 – Amerika |
+| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -937,11 +937,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Global Geography 3 – Amerika |
-| Viva Konuları | Global Geography 3 – Amerika |
-| Viva Learning | Global Geography 3 – Amerika |
-| Viva Analizler - Bireysel | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
+| Viva Bağlantılar | Global Geography 3 – Amerika |
+| Viva Konular | Global Geography 3 – Amerika |
+| Viva Öğrenme | Global Geography 3 – Amerika |
+| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -965,11 +965,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -993,11 +993,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1021,11 +1021,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1049,11 +1049,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Brezilya |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Brezilya |
-| Viva Konuları | Brezilya |
-| Viva Learning | Global Geography 3 – Amerika |
-| Viva Analizler - Bireysel | Brezilya |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
+| Viva Bağlantılar | Brezilya |
+| Viva Konular | Brezilya |
+| Viva Öğrenme | Global Geography 3 – Amerika |
+| Viva Analizler - Kişisel | Brezilya |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1077,11 +1077,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1105,11 +1105,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1133,11 +1133,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1161,11 +1161,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1189,11 +1189,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1217,11 +1217,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1245,11 +1245,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1273,11 +1273,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1301,11 +1301,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Kanada |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Kanada |
-| Viva Konuları | Kanada |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Kanada |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Kanada |
+| Viva Konular | Kanada |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Kanada |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1329,11 +1329,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1357,11 +1357,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1385,11 +1385,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1413,11 +1413,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1441,11 +1441,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Global Geography 3 – Amerika |
-| Viva Konuları | Global Geography 3 – Amerika |
-| Viva Learning | Global Geography 3 – Amerika |
-| Viva Analizler - Bireysel | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
+| Viva Bağlantılar | Global Geography 3 – Amerika |
+| Viva Konular | Global Geography 3 – Amerika |
+| Viva Öğrenme | Global Geography 3 – Amerika |
+| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1469,11 +1469,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1497,16 +1497,16 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-## <a name="cocos-keeling-islands"></a>Cocos (Cocoling) Adaları
+## <a name="cocos-keeling-islands"></a>Cocos (Keeling) Adaları
 <details><summary>Genişletmek için tıklayın</summary><p>
 
 | Hizmet | Konum |
@@ -1525,11 +1525,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1553,11 +1553,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1581,11 +1581,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1610,11 +1610,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1639,11 +1639,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1668,11 +1668,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1696,11 +1696,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1724,11 +1724,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1752,11 +1752,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1780,11 +1780,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Global Geography 3 – Amerika |
-| Viva Konuları | Global Geography 3 – Amerika |
-| Viva Learning | Global Geography 3 – Amerika |
-| Viva Analizler - Bireysel | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
+| Viva Bağlantılar | Global Geography 3 – Amerika |
+| Viva Konular | Global Geography 3 – Amerika |
+| Viva Öğrenme | Global Geography 3 – Amerika |
+| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1808,11 +1808,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1836,11 +1836,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1864,11 +1864,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1892,11 +1892,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1920,11 +1920,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1948,11 +1948,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -1976,11 +1976,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Global Geography 3 – Amerika |
-| Viva Konuları | Global Geography 3 – Amerika |
-| Viva Learning | Global Geography 3 – Amerika |
-| Viva Analizler - Bireysel | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
+| Viva Bağlantılar | Global Geography 3 – Amerika |
+| Viva Konular | Global Geography 3 – Amerika |
+| Viva Öğrenme | Global Geography 3 – Amerika |
+| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2004,11 +2004,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2032,11 +2032,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2060,11 +2060,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2088,11 +2088,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2116,11 +2116,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2144,11 +2144,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2172,11 +2172,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Global Geography 3 – Amerika |
-| Viva Konuları | Global Geography 3 – Amerika |
-| Viva Learning | Global Geography 3 – Amerika |
-| Viva Analizler - Bireysel | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
+| Viva Bağlantılar | Global Geography 3 – Amerika |
+| Viva Konular | Global Geography 3 – Amerika |
+| Viva Öğrenme | Global Geography 3 – Amerika |
+| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2200,11 +2200,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2228,11 +2228,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2256,11 +2256,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avustralya |
 | Whiteboard | Avustralya |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Avustralya |
-| Viva Konuları | Avustralya |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Avustralya |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Avustralya |
+| Viva Konular | Avustralya |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Avustralya |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2284,11 +2284,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2312,11 +2312,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Fransa |
-| Viva Konuları | Fransa |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Fransa |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Fransa |
+| Viva Konular | Fransa |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Fransa |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2340,11 +2340,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Global Geography 3 – Amerika |
-| Viva Konuları | Global Geography 3 – Amerika |
-| Viva Learning | Global Geography 3 – Amerika |
-| Viva Analizler - Bireysel | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
+| Viva Bağlantılar | Global Geography 3 – Amerika |
+| Viva Konular | Global Geography 3 – Amerika |
+| Viva Öğrenme | Global Geography 3 – Amerika |
+| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2368,11 +2368,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2396,11 +2396,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2424,11 +2424,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2452,11 +2452,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2480,11 +2480,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2508,11 +2508,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Almanya |
-| Viva Konuları | Almanya |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Almanya |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Almanya |
+| Viva Konular | Almanya |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Almanya |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2536,11 +2536,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2564,11 +2564,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2592,11 +2592,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2621,11 +2621,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2649,11 +2649,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2677,11 +2677,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2705,11 +2705,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2733,11 +2733,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2761,11 +2761,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2789,11 +2789,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2817,11 +2817,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2845,11 +2845,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Global Geography 3 – Amerika |
-| Viva Konuları | Global Geography 3 – Amerika |
-| Viva Learning | Global Geography 3 – Amerika |
-| Viva Analizler - Bireysel | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
+| Viva Bağlantılar | Global Geography 3 – Amerika |
+| Viva Konular | Global Geography 3 – Amerika |
+| Viva Öğrenme | Global Geography 3 – Amerika |
+| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2873,11 +2873,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2901,11 +2901,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2929,11 +2929,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2957,11 +2957,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -2985,11 +2985,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3013,11 +3013,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3041,11 +3041,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3069,11 +3069,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3098,11 +3098,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Hindistan |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Hindistan |
-| Viva Konuları | Hindistan |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Hindistan |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Hindistan |
+| Viva Konular | Hindistan |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Hindistan |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3126,11 +3126,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3154,11 +3154,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3182,16 +3182,16 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-## <a name="isle-of-man"></a>Isle of Man
+## <a name="isle-of-man"></a>Man Adası
 <details><summary>Genişletmek için tıklayın</summary><p>
 
 | Hizmet | Konum |
@@ -3210,11 +3210,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3238,11 +3238,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3266,11 +3266,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3294,11 +3294,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3322,11 +3322,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Japonya |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Japonya |
-| Viva Konuları | Japonya |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Japonya |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Japonya |
+| Viva Konular | Japonya |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Japonya |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3350,11 +3350,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3378,11 +3378,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3406,11 +3406,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3434,11 +3434,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3462,11 +3462,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3490,11 +3490,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Güney Kore |
-| Viva Konuları | Güney Kore |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Güney Kore |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Güney Kore |
+| Viva Konular | Güney Kore |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Güney Kore |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3518,11 +3518,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3546,11 +3546,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3574,11 +3574,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3602,11 +3602,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3630,11 +3630,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3658,11 +3658,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3687,11 +3687,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3716,11 +3716,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3744,11 +3744,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3773,11 +3773,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | İsviçre |
-| Viva Konuları | İsviçre |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | İsviçre |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | İsviçre |
+| Viva Konular | İsviçre |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | İsviçre |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3801,11 +3801,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3829,11 +3829,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3857,11 +3857,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3885,11 +3885,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3913,11 +3913,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3941,11 +3941,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3969,11 +3969,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -3997,11 +3997,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4025,11 +4025,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4053,16 +4053,16 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-## <a name="mauritania"></a>Mauritya
+## <a name="mauritania"></a>Moritanya
 <details><summary>Genişletmek için tıklayın</summary><p>
 
 | Hizmet | Konum |
@@ -4081,11 +4081,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4109,11 +4109,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4137,11 +4137,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4165,11 +4165,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4193,11 +4193,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4221,11 +4221,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4249,11 +4249,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4277,11 +4277,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4305,11 +4305,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4333,11 +4333,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4361,11 +4361,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4389,11 +4389,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4417,11 +4417,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4445,11 +4445,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4474,11 +4474,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4503,11 +4503,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4531,17 +4531,17 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
 
-## <a name="new-caledonia"></a>Yeni Kalediya
+## <a name="new-caledonia"></a>Yeni Kaledonya
 <details><summary>Genişletmek için tıklayın</summary><p>
 
 | Hizmet | Konum |
@@ -4560,11 +4560,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4588,11 +4588,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avustralya |
 | Whiteboard | Avustralya |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Avustralya |
-| Viva Konuları | Avustralya |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Avustralya |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Avustralya |
+| Viva Konular | Avustralya |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Avustralya |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4616,11 +4616,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4644,11 +4644,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4672,11 +4672,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4700,11 +4700,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4728,11 +4728,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4756,11 +4756,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4784,11 +4784,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Genel Coğrafya 1 – EMEA |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Norveç |
-| Viva Konuları | Norveç |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Norveç |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Norveç |
+| Viva Konular | Norveç |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Norveç |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 
@@ -4813,11 +4813,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4841,11 +4841,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4869,11 +4869,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4897,11 +4897,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4925,11 +4925,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4953,11 +4953,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -4981,11 +4981,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Global Geography 3 – Amerika |
-| Viva Konuları | Global Geography 3 – Amerika |
-| Viva Learning | Global Geography 3 – Amerika |
-| Viva Analizler - Bireysel | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
+| Viva Bağlantılar | Global Geography 3 – Amerika |
+| Viva Konular | Global Geography 3 – Amerika |
+| Viva Öğrenme | Global Geography 3 – Amerika |
+| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5009,11 +5009,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Global Geography 3 – Amerika |
-| Viva Konuları | Global Geography 3 – Amerika |
-| Viva Learning | Global Geography 3 – Amerika |
-| Viva Analizler - Bireysel | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
+| Viva Bağlantılar | Global Geography 3 – Amerika |
+| Viva Konular | Global Geography 3 – Amerika |
+| Viva Öğrenme | Global Geography 3 – Amerika |
+| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5037,11 +5037,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5065,11 +5065,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5093,11 +5093,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5121,11 +5121,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5149,11 +5149,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5177,11 +5177,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5205,11 +5205,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5233,11 +5233,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5261,11 +5261,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5290,11 +5290,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5319,11 +5319,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5348,11 +5348,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5376,11 +5376,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5404,11 +5404,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5432,11 +5432,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5460,11 +5460,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5488,11 +5488,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5516,11 +5516,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5544,11 +5544,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5572,11 +5572,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5600,11 +5600,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5628,11 +5628,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5656,11 +5656,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5684,11 +5684,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5712,11 +5712,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5740,11 +5740,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5768,11 +5768,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5796,11 +5796,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5824,11 +5824,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5852,11 +5852,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5880,11 +5880,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5909,11 +5909,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5937,11 +5937,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | South Africa |
-| Viva Konuları | South Africa |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | South Africa |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | South Africa |
+| Viva Konular | South Africa |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | South Africa |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
  </p></details>
@@ -5965,11 +5965,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -5993,11 +5993,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Avrupa Birliği |
-| Viva Konuları | Avrupa Birliği |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Avrupa Birliği |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Avrupa Birliği |
+| Viva Konular | Avrupa Birliği |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Avrupa Birliği |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6021,11 +6021,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6049,11 +6049,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6077,16 +6077,16 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
 
-## <a name="swaziland"></a>Saziland
+## <a name="swaziland"></a>Svaziland
 <details><summary>Genişletmek için tıklayın</summary><p>
 
 | Hizmet | Konum |
@@ -6105,11 +6105,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6133,11 +6133,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | İsveç |
-| Viva Konuları | İsveç |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | İsveç |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | İsveç |
+| Viva Konular | İsveç |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | İsveç |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6161,11 +6161,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Avrupa Birliği |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | İsviçre |
-| Viva Konuları | İsviçre |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | İsviçre |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | İsviçre |
+| Viva Konular | İsviçre |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | İsviçre |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6189,11 +6189,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6217,11 +6217,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6245,11 +6245,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6273,11 +6273,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6301,11 +6301,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6329,11 +6329,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6357,11 +6357,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6385,11 +6385,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6413,11 +6413,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6441,11 +6441,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6469,11 +6469,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6497,11 +6497,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6525,11 +6525,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6553,11 +6553,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6581,11 +6581,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6609,11 +6609,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6637,11 +6637,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6665,11 +6665,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Birleşik Arap Emirlikleri |
-| Viva Konuları | Birleşik Arap Emirlikleri |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Birleşik Arap Emirlikleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Birleşik Arap Emirlikleri |
+| Viva Konular | Birleşik Arap Emirlikleri |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Birleşik Arap Emirlikleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
  </p></details>
@@ -6693,11 +6693,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Birleşik Krallık |
 | Whiteboard | Avrupa Birliği |
 | Formlar | Avrupa Birliği |
-| Viva Connections | Birleşik Krallık |
-| Viva Konuları | Birleşik Krallık |
-| Viva Learning | Avrupa Birliği |
-| Viva Analizler - Bireysel | Birleşik Krallık |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Avrupa Birliği |
+| Viva Bağlantılar | Birleşik Krallık |
+| Viva Konular | Birleşik Krallık |
+| Viva Öğrenme | Avrupa Birliği |
+| Viva Analizler - Kişisel | Birleşik Krallık |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Avrupa Birliği |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6721,11 +6721,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6749,11 +6749,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Global Geography 3 – Amerika |
-| Viva Konuları | Global Geography 3 – Amerika |
-| Viva Learning | Global Geography 3 – Amerika |
-| Viva Analizler - Bireysel | Global Geography 3 – Amerika |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
+| Viva Bağlantılar | Global Geography 3 – Amerika |
+| Viva Konular | Global Geography 3 – Amerika |
+| Viva Öğrenme | Global Geography 3 – Amerika |
+| Viva Analizler - Kişisel | Global Geography 3 – Amerika |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Global Geography 3 – Amerika |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6777,11 +6777,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6805,11 +6805,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6833,11 +6833,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6860,11 +6860,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Amerika Birleşik Devletleri |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Amerika Birleşik Devletleri |
-| Viva Konuları | Amerika Birleşik Devletleri |
-| Viva Learning | Amerika Birleşik Devletleri |
-| Viva Analizler - Bireysel | Amerika Birleşik Devletleri |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
+| Viva Bağlantılar | Amerika Birleşik Devletleri |
+| Viva Konular | Amerika Birleşik Devletleri |
+| Viva Öğrenme | Amerika Birleşik Devletleri |
+| Viva Analizler - Kişisel | Amerika Birleşik Devletleri |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Amerika Birleşik Devletleri |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6889,11 +6889,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6917,11 +6917,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 2 – Asya Pasifik |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Amerika Birleşik Devletleri |
-| Viva Connections | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Konuları | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Learning | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Bireysel | Genel Coğrafya 2 – Asya Pasifik |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Bağlantılar | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Konular | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Öğrenme | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Kişisel | Genel Coğrafya 2 – Asya Pasifik |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 2 – Asya Pasifik |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6945,11 +6945,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -6973,11 +6973,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -7001,11 +7001,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>
@@ -7029,11 +7029,11 @@ Yeni Microsoft 365 kiracıların varsayılan olarak, o kiracının ilk aboneliğ
 | Stream | Genel Coğrafya 1 – EMEA |
 | Whiteboard | Amerika Birleşik Devletleri |
 | Formlar | Genel Coğrafya 1 – EMEA |
-| Viva Connections | Genel Coğrafya 1 – EMEA |
-| Viva Konuları | Genel Coğrafya 1 – EMEA |
-| Viva Learning | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Bireysel | Genel Coğrafya 1 – EMEA |
-| Viva Analizler - Yalnızca Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
+| Viva Bağlantılar | Genel Coğrafya 1 – EMEA |
+| Viva Konular | Genel Coğrafya 1 – EMEA |
+| Viva Öğrenme | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Kişisel | Genel Coğrafya 1 – EMEA |
+| Viva Analizler - Yönetici/AAD kuruluş verileri | Genel Coğrafya 1 – EMEA |
 | Viva Analizler - Yalnızca 3. taraf İk verilerine sahip Yönetici/Yönetici | Amerika Birleşik Devletleri |
 | Viva Analizler - Gelişmiş | Amerika Birleşik Devletleri |
 </p></details>

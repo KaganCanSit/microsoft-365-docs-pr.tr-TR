@@ -15,12 +15,12 @@ ms.custom:
 description: Yöneticiler, kuruluşlarına posta döngülerini tanımlamak ve düzeltmek için Güvenlik & ve Uyumluluk Merkezi'nde Posta akışı panosunda Olası posta döngüsü düzeltme içgörüsini kullanmayı öğrenebilirler.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a80555f438ceb9431638e727ff0b84c3268ac1c1
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 5a74e7cc623dffd6bae6451f7488d8f630b607b2
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679708"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469151"
 ---
 # <a name="fix-possible-mail-loop-insight-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde olası posta döngüsü & çözme
 
@@ -28,7 +28,7 @@ ms.locfileid: "63679708"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Posta döngüleri hatalıdır çünkü:
@@ -41,7 +41,7 @@ Güvenlik **ve** Uyumluluk Merkezi'nde Posta akışı panosunun Sizin için öne
 
 Bu içgörü ancak koşul algılandığında görüntülenir (posta döngüleri yoksa, içgörüyü görmezsiniz).
 
-![Posta akışı panosunun Sizin için önerilenler alanında yavaş posta akışı kuralları içgörülerini düzeltin.](../../media/mfi-fix-possible-mail-loop.png)
+:::image type="content" source="../../media/mfi-fix-possible-mail-loop.png" alt-text="Posta akışı panosunun Sizin için önerilenler alanında Yer alan Yavaş posta akışı kurallarını düzelt içgörü" lightbox="../../media/mfi-fix-possible-mail-loop.png":::
 
 Widget'ta **Ayrıntıları görüntüle'ye** tıklarken, daha fazla bilgiyle birlikte bir açılır pencere açılır:
 
@@ -49,9 +49,9 @@ Widget'ta **Ayrıntıları görüntüle'ye** tıklarken, daha fazla bilgiyle bir
 - **İleti sayısı**: Döngüden etkilenen **ileti örneğine** [dair ileti](message-trace-scc.md) izleme sonuçlarını görmek için Örnek iletileri görüntüle'yi tıklatın.
 - **Etki alanı** türü" Örneğin, Yetkili veya Yetkili Değil.
 - **MX kaydı**: Etki alanının MX **kaydının** **ana** bilgisayarı (Posta sunucusu) ve Öncelik değerleri.
-- **Döngü nedeni** **ve Düzeltme:** En yaygın posta döngüsü senaryolarını belirleyecek ve döngüyü düzeltmek için önerilen eylemleri sağlarız.
+- **Loop ve** **Nasıl** düzeltebilirim: En yaygın posta döngüsü senaryolarını belirleyecek ve döngüyü düzeltmek için önerilen eylemleri sağlarız.
 
-![Olası posta döngüsü düzeltme içgörüseğinde Ayrıntıları görüntüle'ye tık olduktan sonra görüntülenen ayrıntılar açılır görünümü.](../../media/mfi-fix-possible-mail-loop-details.png)
+:::image type="content" source="../../media/mfi-fix-possible-mail-loop-details.png" alt-text="Olası posta döngüsü düzeltme içgörüseğinde Ayrıntıları görüntüle'ye tık olduktan sonra görüntülenen Ayrıntılar açılır görünümü" lightbox="../../media/mfi-fix-possible-mail-loop-details.png":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

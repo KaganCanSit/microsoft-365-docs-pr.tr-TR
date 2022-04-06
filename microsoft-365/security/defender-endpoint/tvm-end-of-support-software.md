@@ -1,7 +1,7 @@
 ---
 title: Destek sonu yazılım ve yazılım sürümlerini planlama
 description: Artık desteklenen ve güvenlik güncelleştirmeleri al almayan yazılım ve yazılım sürümlerini keşfedin ve plan edin.
-keywords: Tehdit ve Güvenlik Açığı Yönetimi için Microsoft Defender TVM güvenlik önerisi, siber güvenlik önerisi, işlemli güvenlik önerisi
+keywords: Tehdit ve Güvenlik Açığı Yönetimi, Uç Nokta için Microsoft Defender tvm güvenlik önerisi, siber güvenlik önerisi, işlemli güvenlik önerisi
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 65842d0bd56308b6a5e5476f84c089b63a04987b
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 3997e2cb372a2cbbbdb0d8e9b51c5b57bd38c7aa
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62997519"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476697"
 ---
 # <a name="plan-for-end-of-support-software-and-software-versions-with-threat-and-vulnerability-management"></a>Destek sonu yazılım ve yazılım sürümlerini destek sürümleriyle birlikte Tehdit ve Güvenlik Açığı Yönetimi
 
@@ -29,11 +29,11 @@ ms.locfileid: "62997519"
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Tehdit ve güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 Yazılım veya yazılım sürümleri için de destek sonu (EOS) olarak bilinen destek sonu (EOS), artık destek almayacakları veya hizmet almayacakları ve güvenlik güncelleştirmeleri almayacakları anlamına gelir. Desteği sona ermiştir ve yazılım veya yazılım sürümlerini kullanırsınız ve bu, kurum açısından güvenlik açıkları, yasal ve finansal risklere karşı açık olur.
 
@@ -47,11 +47,11 @@ Güvenlik ve IT Yöneticilerinin birlikte çalışması ve kuruluşun yazılım 
 1. Seçenekler Tehdit ve Güvenlik Açığı Yönetimi, Güvenlik [**önerileri'ne gidin**](tvm-security-recommendation.md).
 2. Filtreler **paneline** gidin ve etiketler bölümüne bakın. EOS etiket seçenekleriden birini veya birden fazlasını seçin. Sonra **Uygula'ya.**
 
-    ![EOS yazılımı, EOS sürümleri ve Yaklaşan EOS sürümleri etiketlerini ekran görüntüsü.](images/tvm-eos-tag.png)
+   :::image type="content" source="images/tvm-eos-tag.png" alt-text="EOS yazılımı, EOS sürümleri ve Yaklaşan EOS sürümleri" lightbox="images/tvm-eos-tag.png":::
 
 3. Sona eren destek sona ermiştir, destek sona erer yazılım sürümleri veya yaklaşan destek sonu ile sürümler ile ilgili önerilerin bir listesini burada bulunmaktadır. Bu etiketler yazılım envanteri [sayfasında da](tvm-software-inventory.md) görünür.
 
-    ![Öneriler ile birlikte.](images/tvm-eos-tags-column.png)
+   :::image type="content" source="images/tvm-eos-tags-column.png" alt-text="The Öneriler with EOS tag" lightbox="images/tvm-eos-tags-column.png":::
 
 ## <a name="list-of-versions-and-dates"></a>Sürümler ve tarihler listesi
 
@@ -59,15 +59,15 @@ Destek sonuna ulaşan ya da kısa süre içinde sona eren ya da desteklenen sür
 
 1. Desteğin sonuna ulaşan veya yakın zamanda destek sonuna gelecek sürümlerin yazılım için güvenlik önerisi uç iletisinde bir ileti görüntülenir.
 
-    ![Sürüm dağıtım bağlantısının ekran görüntüsü.](images/eos-upcoming-eos.png)
+   :::image type="content" source="images/eos-upcoming-eos.png" alt-text="Sürüm dağıtım bağlantısı" lightbox="images/eos-upcoming-eos.png":::
 
 2. Yazılım **detaya** gitme sayfasına gitmek için sürüm dağıtım bağlantısını seçin. Burada, etiketlerin destek sonu veya yaklaşan destek sonu olarak tanımları için filtrelenmiş sürümler listesi görebilirler.
 
-    ![Destek yazılımı sonu ile yazılım detaya gitme sayfasının ekran görüntüsü.](images/software-drilldown-eos.png)
+   :::image type="content" source="images/software-drilldown-eos.png" alt-text="Destek yazılımının sonunun ayrıntılarının yer alan yazılım detaya gitme sayfası" lightbox="images/software-drilldown-eos.png":::
 
 3. Tablodaki sürümlerden birini seçerek açın. Örneğin, sürüm 10.0.18362.1. Destek sonunun bitiş tarihiyle birlikte bir çıkış görünür.
 
-    ![Destek sonunun ekran görüntüsü.](images/version-eos-date.png)
+   :::image type="content" source="images/version-eos-date.png" alt-text="Destek sonunun tarihi görüntülenir" lightbox="images/version-eos-date.png":::
 
 Destek sonu durumlarından dolayı hangi yazılım ve yazılım sürümlerinin zayıf olduğunu belirleyip belirlemenin ardından, bunları kurumdan güncelleştirme veya kaldırma arasında karar verebilirsiniz. Bunun yapmak, kuruluşlarının güvenlik açıklarına ve gelişmiş kalıcı tehditlere maruz kalmalarını azaltır.
 

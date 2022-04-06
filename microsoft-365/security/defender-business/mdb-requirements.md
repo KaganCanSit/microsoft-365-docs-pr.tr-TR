@@ -1,5 +1,5 @@
 ---
-title: İş için Microsoft Defender gereksinimleri
+title: Sistem gereksinimleri İş için Microsoft Defender
 description: İş için Microsoft Defender lisans, donanım ve yazılım gereksinimleri
 search.appverid: MET150
 author: denisebmsft
@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/15/2022
+ms.date: 04/01/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 17954ec9c01a053f847a7d8a74188edf2f4e4091
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 9fd082160640c239424ec75ff58c695a0175d630
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525550"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634943"
 ---
 # <a name="microsoft-defender-for-business-requirements"></a>İş için Microsoft Defender gereksinimleri
 
@@ -31,7 +31,7 @@ ms.locfileid: "63525550"
 > 
 > Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-Bu makalede, İş için Microsoft Defender gereksinimleri açıklanmıştır.
+Bu makalede, iş gereksinimleri İş için Microsoft Defender.
 
 ## <a name="what-to-do"></a>Ne yapmalı?
 
@@ -41,22 +41,21 @@ Bu makalede, İş için Microsoft Defender gereksinimleri açıklanmıştır.
 
 >
 > **Bir dakika mı kaldı?**
-> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+> Lütfen bu konuda <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">kısa anket İş için Microsoft Defender</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
 >
 
 ## <a name="review-the-requirements"></a>Gereksinimleri gözden geçirme
 
-Aşağıdaki tabloda, İş için Microsoft Defender'ı yapılandırmak ve kullanmak için temel gereksinimler listelemektedir. <br/><br/>
+Aşağıdaki tabloda, bu gereksinimleri yapılandırmak ve kullanmak için temel İş için Microsoft Defender. <br/><br/>
 
 | Gereksinim | Açıklama |
 |:---|:---|
-| Abonelik | Microsoft 365 Business Premium <br/>--- veya ---<br/>İş için Microsoft Defender (tek başına; şu anda önizlemede). <br/><br/> Bkz [. İş için Microsoft Defender'ı almak](get-defender-business.md).<br/><br/>Birden çok aboneliğiniz varsa, en yüksek aboneliğin öncelikli olduğunu unutmayın. Örneğin, Uç Nokta Planı 2 için Microsoft Defender'ı (satın alınan veya deneme aboneliği) alıyorsanız ve İş için Microsoft Defender alıyorsanız, Uç Nokta Planı 2 için Defender öncelikli olur. Bu durumda, İş için Defender deneyimini görmeyersiniz.  |
-| Datacenter | Aşağıdaki veri merkezi konumlarından biri: <br/>- Avrupa Birliği <br/>- Birleşik Krallık <br/>- Amerika Birleşik Devletleri |
-| Kullanıcı hesapları | Kullanıcı hesapları yeni hesapta Microsoft 365 yönetim merkezi ([https://admin.microsoft.com](https://admin.microsoft.com))<br/><br/>Microsoft Defender for Business lisansları aşağıdaki Microsoft 365 yönetim merkezi<br/><br/>Bu görevle ilgili yardım almak için bkz [. Kullanıcı ekleme ve lisans atama](../../admin/add-users/add-users.md). |
-| İzinler  | İş için Microsoft Defender'a kaydolmak için Genel Yönetici olmak gerekir.<br/><br/>Kullanıcı portalına Microsoft 365 Defender, kullanıcıların Azure [AD'de şu rollerden birinin atanmış olması](mdb-roles-permissions.md) gerekir: <br/>- Güvenlik Okuyucu<br/>- Güvenlik Yöneticisi<br/>- Genel Yönetici<br/><br/>Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da roller ve izinler](mdb-roles-permissions.md). |
+| Abonelik | Microsoft 365 Business Premium <br/>--- veya ---<br/>İş için Microsoft Defender (tek başına; şu anda önizlemede). <br/><br/> Bkz[. İş için Microsoft Defender](get-defender-business.md).<br/><br/>Birden çok aboneliğiniz varsa, en yüksek aboneliğin öncelikli olduğunu unutmayın. Örneğin, 2. Plan 2 Uç Nokta için Microsoft Defender i (satın alınan veya deneme aboneliği) satın alıyorsanız ve İş için Microsoft Defender Defender ile Uç Nokta Planı 2 için Defender'ı alırsınız. Bu durumda, İş için Defender deneyimini görmeyersiniz.  |
+| Datacenter | Aşağıdaki veri merkezi konumlarından biri: <br/>- Avrupa Birliği <br/>- Birleşik Krallık <br/>- Birleşik Devletler |
+| Kullanıcı hesapları | Kullanıcı hesapları yeni hesapta Microsoft 365 yönetim merkezi ([https://admin.microsoft.com](https://admin.microsoft.com))<br/><br/>İş için Microsoft Defender lisansların atandığı Microsoft 365 yönetim merkezi<br/><br/>Bu görevle ilgili yardım almak için bkz [. Kullanıcı ekleme ve lisans atama](../../admin/add-users/add-users.md). |
+| İzinler  | Genel Yönetici İş için Microsoft Defender olmak gerekir.<br/><br/>Kullanıcı portalına Microsoft 365 Defender, kullanıcıların Azure [AD'de şu rollerden birinin atanmış olması](mdb-roles-permissions.md) gerekir: <br/>- Güvenlik Okuyucu<br/>- Güvenlik Yöneticisi<br/>- Genel Yönetici<br/><br/>Daha fazla bilgi edinmek için bkz[. Daha fazla bilgi edinmek için İş için Microsoft Defender](mdb-roles-permissions.md). |
 | Tarayıcı gereksinimleri | Microsoft Edge Veya Google Chrome |
-| İşletim sistemi | Cihazları İş için Microsoft Defender'da yönetmek için, cihazlarınız aşağıdaki işletim sistemlerinden birini çalıştırmaktadır: <br/>- Windows 10 Business veya sonrası <br/>- Windows 10 Professional veya sonrası <br/>- Windows 10 Enterprise veya sonrası <br/><br/>[KB5006738'in yüklü](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541) olduğundan emin olun. <br/><br/>Cihazları zaten Microsoft Intune 'da (veya Microsoft Endpoint Manager) yönetiyorsanız, bu cihazları İş için Defender'a  edinebilirsiniz. |
-| Microsoft Endpoint Manager ile tümleştirme  | Cihazları İş için [Microsoft Defender güvenlik yapılandırmasını kullanarak eklemeyi planlıyorsanız](mdb-onboard-devices.md#microsoft-defender-for-business-security-configuration), aşağıdaki gereksinimlerin karşı olması gerekir:<br/><br/>Uç Nokta için [Microsoft Defender Güvenlik Yönetimi'nin önkoşulları karşı olmalıdır](/mem/intune/protect/mde-security-integration).<br/>- Azure AD, şirketinizin cihazları arasında güveni ve Azure AD'nin oluşturulacak şekilde yapılandırılması gerekir. <br/>- İş için Defender,'da güvenlik yönetiminin etkinleştirilmiş Microsoft Endpoint Manager.<br/><br/>Cihazların aşağıdaki URL'lere bağlanamaları gerekir:<br/>- `enterpriseregistration.windows.net` (Azure AD'de kayıt için)<br/>- `login.microsoftonline.com` (Azure AD'de kayıt için)<br/>- `*.dm.microsoft.com` (Joker karakter (*), kayıt, iade ve raporlama için kullanılan bulut hizmeti uç noktalarını destekler ve hizmet ölçeği olarak değişebilir.) |
+| İşletim sistemi | Cihazları aynı İş için Microsoft Defender yönetmek için, cihazlarınız aşağıdaki işletim sistemlerinden birini çalıştırmaktadır: <br/>- Windows 10 Business veya sonrası <br/>- Windows 10 Professional veya sonrası <br/>- Windows 10 Enterprise veya sonrası <br/><br/>[KB5006738'in yüklü](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541) olduğundan emin olun. <br/><br/>Cihazları zaten Microsoft Intune 'da (veya Microsoft Endpoint Manager) yönetiyorsanız, bu cihazları İş için Defender'a  edinebilirsiniz. |
 
 > [!NOTE]
 > [Azure Active Directory izinlerini ve cihaz gruplarını yönetmek için otomatik ad (Azure AD)](/azure/active-directory/fundamentals/active-directory-whatis) kullanılır. Azure AD, İş için Defender aboneliğinize dahildir. 
@@ -68,5 +67,5 @@ Aşağıdaki tabloda, İş için Microsoft Defender'ı yapılandırmak ve kullan
 
 Şu şekilde devam edin:
 
-- [2. Adım: İş için Microsoft Defender'da roller ve izinler atama](mdb-roles-permissions.md) 
+- [2. Adım: İş için Microsoft Defender'de roller ve izinler atama](mdb-roles-permissions.md) 
  

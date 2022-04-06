@@ -13,12 +13,12 @@ description: Yöneticiler, Otomatik iletili iletiler raporu hakkında Bilgi edin
 ms.technology: mdo
 ms.prod: m365-security
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 05ad934fbc7736c0cfbb86f7411a2ca73705112f
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 4603e7d895c847513a41dc52764070f970a50d15
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680170"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476389"
 ---
 # <a name="auto-forwarded-messages-insight-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde otomatik iletili & içgörü
 
@@ -26,12 +26,12 @@ ms.locfileid: "63680170"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Güvenlik [](mail-flow-insights-v2.md) [& ve](https://protection.office.com) **Uyumluluk Merkezi'nin** Posta akışı panosunda yer alan Otomatik İletiler iletileri içgörüsi, kuruluştan dış etki alanlarındaki alıcılara otomatik olarak iletilene iletiler hakkında bilgi görüntüler.
 
-![Güvenlik ve Uyumluluk Merkezi'nde otomatik iletili & widget'ı.](../../media/mfi-auto-forwarded-messages.png)
+:::image type="content" source="../../media/mfi-auto-forwarded-messages.png" alt-text="Güvenlik ve Uyumluluk Merkezi'nde otomatik olarak iletili & widget'tır" lightbox="../../media/mfi-auto-forwarded-messages.png":::
 
 ## <a name="auto-forwarded-messages-details"></a>Otomatik iletili ileti ayrıntıları
 
@@ -52,7 +52,7 @@ Widget'ta iletilerin sayısına tıklarsanız, otomatik iletili iletiler hakkın
   - **Yeni kullanıcılar (geçen hafta)**
   - Daha ayrıntılı bilgi [için Değişiklikleri iletme raporunun](mfi-new-users-forwarding-email.md#forwarding-modifications-report) bağlantısı.
 
-![Güvenlik ve Uyumluluk Merkezi'nde Otomatik iletili iletiler raporu için ayrıntılar &.](../../media/mfi-auto-forwarded-messages-details.png)
+:::image type="content" source="../../media/mfi-auto-forwarded-messages-details.png" alt-text="Güvenlik ve Uyumluluk Merkezi'nde Otomatik iletili & widget'ı" lightbox="../../media/mfi-auto-forwarded-messages-details.png":::
 
 ## <a name="insights"></a>Analizler
 

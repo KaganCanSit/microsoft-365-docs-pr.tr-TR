@@ -16,21 +16,21 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.custom: migrationguides
-ms.date: 03/28/2022
+ms.date: 04/01/2022
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
 ms.technology: mde
-ms.openlocfilehash: 30218ea9b3b5ecbec20fdbc3364546d25c80bcab
-ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
+ms.openlocfilehash: 8334ce03bac5b7d4518433f83ab34d5f86e71339
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64507524"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634173"
 ---
 # <a name="troubleshooting-issues-when-switching-to-microsoft-defender-for-endpoint"></a>E-Uç Nokta için Microsoft Defender'a geçişte karşılaşılan sorunları giderme
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 Bu makalede, Microsoft olmayan bir uç nokta koruma çözümünden Kimlik Koruması çözümüne geçişte sorun yaşayan güvenlik yöneticilerine sorun giderme Uç Nokta için Microsoft Defender.
@@ -41,28 +41,8 @@ Uç nokta için Defender'a geçişte, etkin modda Microsoft dışı virüsten ko
 
 Bu sorunu çözmek için aşağıdaki adımları izleyin:
 
-1. [DisableAntiCcaware kayıt defteri anahtarını false olarak ayarlayın](#set-the-disableantispyware-registry-key-to-false).
-2. [Dışlama Uç Nokta için Microsoft Defender dışlama listesi ekleme](#add-microsoft-defender-for-endpoint-to-the-exclusion-list).
-3. [Pasif modunu Microsoft Defender Virüsten Koruma moduna el ile ayarlayın](#set-microsoft-defender-antivirus-to-passive-mode-manually).
-
-### <a name="set-the-disableantispyware-registry-key-to-false"></a>DisableAntiCcaware kayıt defteri anahtarını false olarak ayarlama
-
-[Geçmişte DisableAntiCcaware](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware) kayıt defteri anahtarı, mcAfee, Microsoft Defender Virüsten Koruma gibi başka bir virüsten koruma ürününü devre dışı bırakmak ve dağıtmak için kullanılmıştır. **Genelde, Windows** cihazlarınıza ve uç noktalarınıza bu kayıt defteri anahtarınız sahip olmazsınız;  `DisableAntiSpyware` ancak, yapılandırmadınız varsa, değerini false olarak ayarlamak için şu şekilde ayarlanır:
-
-1. Windows Server aygıtınızda Kayıt Defteri Düzenleyicisi'ni açın.
-
-2. `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`'a gidin.
-
-3. Bu klasörde **DisableAntiWordsware** adlı bir DWORD girdisi bakın.
-   - Bu girdiyi görmüyorsanız hazırsanız.
-   - **DisableAnti Birware görüyorsanız**, 4. adıma geçin.
-
-4. DisableAntiWordsware DWORD'e sağ tıklayın ve değiştir'i **seçin**.
-
-5. Değeri olarak ayarlayın `0`. (Bu eylem kayıt defteri anahtarının değerini *false olarak ayarlar*.)
-
-> [!TIP]
-> Bu kayıt defteri anahtarı hakkında daha fazla bilgi edinmek için [bkz. DisableAntiAntiWare](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware).
+1. [Dışlama Uç Nokta için Microsoft Defender dışlama listesi ekleme](#add-microsoft-defender-for-endpoint-to-the-exclusion-list).
+2. [Pasif modunu Microsoft Defender Virüsten Koruma moduna el ile ayarlayın](#set-microsoft-defender-antivirus-to-passive-mode-manually).
 
 ### <a name="add-microsoft-defender-for-endpoint-to-the-exclusion-list"></a>Dışlama Uç Nokta için Microsoft Defender kişi ekleme
 

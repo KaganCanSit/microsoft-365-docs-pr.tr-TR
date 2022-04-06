@@ -1,6 +1,6 @@
 ---
 title: Ağ korumasını açma
-description: Grup İlkesi, PowerShell veya Mobil Cihaz Yönetimi ve Yapılandırma Yöneticisi ile ağ korumasını etkinleştirin.
+description: Grup ilkesi, PowerShell veya Mobile Cihaz Yönetimi mobil Configuration Manager.
 keywords: Ağ koruması, exploits, kötü amaçlı web sitesi, ip, etki alanı, etki alanları, etkinleştirmek, etkinleştirme
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -15,20 +15,20 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: b21b2f2a69ab9a85f1f5003104969364ae9c6e78
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: 4c3b74179294d0b028dd07c3a6f4f28e844237d3
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63401154"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469943"
 ---
 # <a name="turn-on-network-protection"></a>Ağ korumasını açma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > [!TIP]
@@ -56,9 +56,8 @@ Anahtar yoksa, SOFTWARE **Microsoft** \> Windows Defender  \> **Windows Defender
    - 1 veya **Açık**
    - 2 veya **Denetim** modu
 
-    :::image type="content" alt-text="Ağ Koruması kayıt defteri anahtarı." source="../../media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png" lightbox="../../media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png":::
-    
-    
+    :::image type="content" source="../../media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png" alt-text="Ağ Koruması kayıt defteri anahtarı" lightbox="../../media/95341270-b738b280-08d3-11eb-84a0-16abb140c9fd.png":::
+
 ## <a name="enable-network-protection"></a>Ağ korumasını etkinleştirme
 
 Şu yöntemlerden herhangi birini kullanarak ağ korumasını etkinleştirin:
@@ -120,9 +119,9 @@ Etki alanına katılmış bilgisayarlarda veya tek başına bir bilgisayarda ağ
 
     *-Veya-*
 
-    Etki alanına katılmış bir Grup İlkesi yönetim bilgisayarda, Grup İlkesi Yönetim Konsolu'nu [açın, yapılandırmak](https://technet.microsoft.com/library/cc731212.aspx) istediğiniz Grup İlkesi Nesnesine sağ tıklayın ve Düzenle'yi **seçin**.
+    Etki alanına katılmış bir grup ilkesi yönetim bilgisayarda, [grup ilkesi](https://technet.microsoft.com/library/cc731212.aspx) Yönetim Konsolu'nu açın, yapılandırmak istediğiniz grup ilkesi Nesne'ye sağ tıklayın ve Düzenle'yi **seçin**.
 
-2. Grup İlkesi **Yönetim Düzenleyicisi'nde** Bilgisayar **yapılandırması'ne gidin ve** Yönetim **şablonları'ı seçin**.
+2. Grup ilkesi **Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin ve** Yönetim **şablonları'ı seçin**.
 
 3. **Exploit Guard** \> Ağ **koruması Windows bileşenleri** \> **Microsoft Defender Virüsten Koruma Windows Defender** \> **ağacı genişletin**.
 
@@ -135,7 +134,7 @@ Etki alanına katılmış bilgisayarlarda veya tek başına bir bilgisayarda ağ
     - **Denetim Modu** - Kullanıcı kötü amaçlı bir IP adresini veya etki alanını ziyaret ettiyse, olay günlüğüne Windows kaydedilir. Bununla birlikte, kullanıcının adresi ziyaret etmeleri engel olmayacaktır.
 
    > [!IMPORTANT]
-   > Ağ korumasını tümüyle etkinleştirmek için Grup İlkesi seçeneğini Etkin olarak ayarlamalı ve  ayrıca seçenekler açılan menüsünde  Engelle'yi seçilmelidir.
+   > Ağ korumasını tümüyle etkinleştirmek için, varsayılan grup ilkesi **seçeneği** Etkin olarak ayar olmalı ve ayrıca seçenekler açılan menüsünde Engelle'yi seçmeniz gerekir.
 
 Kayıt Defteri düzenleyicisini kullanarak yerel bir bilgisayarda ağ korumasının etkinleştirildiğinden onaylayın:
 
@@ -170,7 +169,7 @@ Kayıt Defteri düzenleyicisini kullanarak yerel bir bilgisayarda ağ korumasın
 
 
 > [!IMPORTANT]
-> Configuration Manager'dan bir Exploit Guard ilkesi dağıtın, dağıtımı kaldırsanız bile Exploit Guard ayarları istemcilerden kaldırılamaz. `Delete not supported` , istemcinin Exploit Guard dağıtımını kaldırırsanız Configuration Manager istemcisinin ExploitGuardHandler.log dosyasına kaydedilir. <!--CMADO8538577-->
+> Bir Exploit Guard ilkesi Configuration Manager sonra dağıtımı kaldırırsanız, Exploit Guard ayarları istemcilerden kaldırılamaz. `Delete not supported`istemcinin Exploit Guard Configuration Manager, Configuration Manager ExploitGuardHandler.log dosyasına kaydedilir. <!--CMADO8538577-->
 > Bu ayarları kaldırmak için SYSTEM bağlamı altında aşağıdaki PowerShell betiği çalıştırabilirsiniz:<!--CMADO9907132-->
 >
 > ```powershell

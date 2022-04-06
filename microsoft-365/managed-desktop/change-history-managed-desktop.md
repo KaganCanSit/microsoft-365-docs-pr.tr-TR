@@ -13,16 +13,22 @@ f1.keywords:
 ms.author: tiaraquan
 ms.article: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e697d9caf2b35dd0dedb9632b968cb095b792520
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+ms.openlocfilehash: 60847c3455c65ebc4393950c766f2c4d0c3165ef
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64595069"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634327"
 ---
 # <a name="change-history-for-microsoft-managed-desktop-documentation"></a>Belgeler için Microsoft Managed Desktop değiştirme
 
 Bu makalede, çalışma belgelerine ait yeni ve [Microsoft Managed Desktop listelenmektedir](index.yml). "Güncelleştirildi" makalelerde malzeme eklemeleri veya düzeltmeler vardı. Yazım hataları, stil veya biçimlendirme sorunları gibi küçük düzeltmeler listelenmiyor. Her zaman, belirli bir tazyi ziyaret ederek (tüm değişikliklerin ayrıntıları da dahil) belirli taahhütlerin [geçmişini GitHub](https://github.com/MicrosoftDocs/microsoft-365-docs/tree/public/microsoft-365/managed-desktop).
+
+## <a name="april-2022"></a>Nisan 2022
+
+Yeni veya değiştirilmiş makale | Açıklama
+--- | ---
+| [Teams](get-started/teams.md) | Güncelleştirme Microsoft Intune değişiklikleri bölümü |
 
 ## <a name="march-2022"></a>Mart 2022
 

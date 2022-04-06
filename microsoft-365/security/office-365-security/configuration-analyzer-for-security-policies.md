@@ -19,20 +19,20 @@ ms.custom: ''
 description: Yöneticiler, önceden ayarlanmış güvenlik ilkeleri içinde Standart koruma ve Katı koruma ayarlarında yer alan ayarların altında yer alan güvenlik ilkelerini bulmak ve düzeltmek için yapılandırma çözümleyicisi'ni kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 0acdf6d300984c00bb1b1b060d3e36562983ebca
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 459f44f29b89b2bbca6aa0f6847d0b4636647be6
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021663"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477071"
 ---
-# <a name="configuration-analyzer-for-protection-policies-in-eop-and-microsoft-defender-for-office-365"></a>EOP'de ve Office 365 için Microsoft Defender'da koruma ilkeleri için yapılandırma çözümleyicisi
+# <a name="configuration-analyzer-for-protection-policies-in-eop-and-microsoft-defender-for-office-365"></a>EOP ve veritabanı koruma ilkeleri için yapılandırma çözümleyicisi Office 365 için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Microsoft 365 Defender portalında yapılandırma çözümleyicisi, önceden ayarlanmış güvenlik ilkelerde ayarların Standart koruma ve Katı koruma profili ayarlarının altında yer alan güvenlik ilkelerini bulmak ve düzeltmek için merkezi [bir konum sağlar](preset-security-policies.md).
@@ -44,15 +44,15 @@ Aşağıdaki ilke türleri yapılandırma çözümleyicisi tarafından çözüml
   - [Kötü amaçlı yazılımdan koruma ilkeleri](configure-anti-malware-policies.md).
   - [EOP kimlik avı önleme ilkeleri](set-up-anti-phishing-policies.md#spoof-settings).
 
-- **İlkeler için Microsoft Defender Office 365 ilkeleri**: Bu, Microsoft 365 E5 veya Office 365 için Defender'a sahip olan kuruluşları içerir:
-  - Office 365 için Microsoft Defender'da kimlik avıyla mücadele ilkeleri şunlardır:
+- **Office 365 için Microsoft Defender ilkeleri**: Bu, e-posta Microsoft 365 E5 veya Office 365 için Defender abonelikleri olan kuruluşlara dahildir:
+  - Office 365 için Microsoft Defender'de kimlik avı önleme ilkeleri şunlardır:
     - EOP [kimlik avı önleme](set-up-anti-phishing-policies.md#spoof-settings) ilkelerde bulunan kimlik sahtesi ayarlarıyla aynıdır.
     - [Kimliğe bürünme ayarları](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
     - [Gelişmiş kimlik avı eşikleri](set-up-anti-phishing-policies.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
   - [Kasa Bağlantıları ilkeleri.](set-up-safe-links-policies.md)
   - [Kasa İlkeleri'ne tıklayın](set-up-safe-attachments-policies.md).
 
-Taban çizgisi olarak kullanılan Standart ve Katı ilke ayarı değerleri, EOP için önerilen ayarlar ve Güvenlik için [Microsoft Defender'da Office 365 açıklanmıştır](recommended-settings-for-eop-and-office365.md).
+Taban çizgisi olarak kullanılan Standart ve Katı ilke ayarı değerleri EOP için önerilen ayarlar ve Güvenlik ayarlarını Office 365 için Microsoft Defender [açıklanmıştır](recommended-settings-for-eop-and-office365.md).
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
@@ -85,15 +85,15 @@ Yapılandırma **çözümleyicisi** sayfasının üç ana sekmesi vardır:
 
 Varsayılan olarak, yapılandırma çözümleyicisi **Standart öneriler sekmesinde** açılır. Katı öneriler **sekmesine geçebilirsiniz** . Ayarlar, düzen ve eylemler her iki sekmede de aynıdır.
 
-![Ayarlar çözümleyicisinde daha fazla bilgi ve öneriler görünümü sağlar.](../../media/configuration-analyzer-settings-and-recommendations-view.png)
+:::image type="content" source="../../media/configuration-analyzer-settings-and-recommendations-view.png" alt-text="Yapılandırma Ayarlar çözümleyicisinde Yer Alan ve Öneriler görünümü" lightbox="../../media/configuration-analyzer-settings-and-recommendations-view.png":::
 
 Sekmenin ilk bölümünde, Standart veya Katı koruma ile karşılaştırıldığında, her tür ilke için geliştirme gereken ayarlar görüntülenir. İlke türleri:
 
 - **İstenmeyen posta önleme**
 - **Kimlik avı önleme**
 - **Kötü amaçlı yazılımdan koruma**
-- **Kasa Ekle (** aboneliğiniz Windows için Microsoft Defender'ı da Office 365)
-- **Kasa Bağlantılarını Paylaş** (aboneliğiniz Microsoft Defender for Office 365)
+- **Kasa Ekle 'i** seçin (aboneliğiniz ekli Office 365 için Microsoft Defender)
+- **Kasa Bağlantıları** (aboneliğiniz abonelik kapsamındasa) Office 365 için Microsoft Defender
 
 İlke türü ve numarası gösterilmezse, bu türle ilgili tüm ilkeleriniz Standart veya Katı korumanın önerilen ayarlarına uygun olur.
 
@@ -148,4 +148,4 @@ Sonuçları bir dosya dosyasına dışarı .csv Dışarı Aktar'a **tıklayın**
 
 Sonuçları değiştiren belirli bir değere, **Ayar adı** **veya** Tür **değerine göre** filtrelemek için Arama **kutusunu** kullanın.
 
-![Yapılandırma çözümleyicisinde yapılandırma gerindi çözümlemesi ve geçmiş görünümü.](../../media/configuration-analyzer-configuration-drift-analysis-view.png)
+:::image type="content" source="../../media/configuration-analyzer-configuration-drift-analysis-view.png" alt-text="Yapılandırma çözümleyicisinde Configuration gerinme çözümlemesi ve geçmiş görünümü" lightbox="../../media/configuration-analyzer-configuration-drift-analysis-view.png":::

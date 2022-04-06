@@ -14,12 +14,12 @@ description: Yöneticiler, Güvenlik ve Uyumluluk Merkezi'nin Posta akışı pan
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 176681b5fe780f0aeb4a0c8502b3e919e7ebcadc
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: b5cc3eba5807838b0a797f606d8a6aa3c152f60c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682537"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64476477"
 ---
 # <a name="mail-flow-insights-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde & öngörüleri
 
@@ -27,12 +27,12 @@ ms.locfileid: "63682537"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Yöneticiler, eğilimleri, içgörüleri keşfetmek ve kuruluşların posta akışıyla ilgili sorunları düzeltmek için Güvenlik ve Uyumluluk Merkezi'nde Posta akışı panosu & kullanabilir.
 
-![Güvenlik ve Uyumluluk Merkezi'nde Posta & panosu.](../../media/mail-flow-dashboard-v2.png)
+:::image type="content" source="../../media/mail-flow-dashboard-v2.png" alt-text="Güvenlik ve Uyumluluk Merkezi'nde posta & panosu" lightbox="../../media/mail-flow-dashboard-v2.png":::
 
 Kullanılabilir içgörüler:
 

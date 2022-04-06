@@ -1,7 +1,7 @@
 ---
 title: Cihaz değeri atama - Tehdit ve Güvenlik Açığı Yönetimi
 description: Varlık öncelikleri arasında ayrımnıza yardımcı olması için bir cihaza düşük, normal veya yüksek değer atamayı öğrenin.
-keywords: Uç nokta cihaz değeri, cihaz Tehdit ve Güvenlik Açığı Yönetimi, yüksek değerli cihazlar, cihaz değeri pozlama puanı için Microsoft Defender
+keywords: Uç Nokta için Microsoft Defender değeri, cihaz Tehdit ve Güvenlik Açığı Yönetimi değeri, yüksek değerli cihazlar, cihaz değeri pozlama puanı
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,23 +16,23 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: cb8c0bd0870ea240e64c33dfac2fd6c00156def8
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: ff6d61e02ff923cc9406412c81e9a67799e6880a
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998250"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64477230"
 ---
 # <a name="assign-device-value---threat-and-vulnerability-management"></a>Cihaz değeri atama - Tehdit ve Güvenlik Açığı Yönetimi
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Tehdit ve güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
@@ -59,10 +59,11 @@ Yüksek değer atanacak cihazlara örnekler:
 
 2. Sayfanın **en** üstünde, eylemler çubuğunun yanındaki üç noktanın yanındaki Cihaz değeri'ne tıklayın.
 
-    ![Cihaz değeri açılan liste örneği.](images/tvm-device-value-dropdown.png)
+   :::image type="content" source="images/tvm-device-value-dropdown.png" alt-text="Cihaz değeri seçeneği" lightbox="images/tvm-device-value-dropdown.png":::
 
 3. Geçerli cihaz değeri ve anlamıyla birlikte bir çıkış görünür. Cihazın değerini gözden geçirin ve cihazınıza en uygun olanı seçin.
-![Cihaz değeri uçarak çıkış örneği.](images/tvm-device-value-flyout.png)
+
+:::image type="content" source="images/tvm-device-value-flyout.png" alt-text="Cihaz değeri sayfası" lightbox="images/tvm-device-value-flyout.png":::
 
 ## <a name="how-device-value-impacts-your-exposure-score"></a>Cihaz değeri etkilenme puanınızı nasıl etkiler?
 

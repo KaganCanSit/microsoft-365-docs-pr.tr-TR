@@ -1,7 +1,7 @@
 ---
-title: Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını ekleme
-description: Yapılandırma paketini sanal masaüstü altyapısı (VDI) cihazında dağıtın; böylelikle Uç nokta hizmeti için Microsoft Defender'a da dahil edin.
-keywords: Sanal masaüstü altyapısını (VDI) cihazı, vdi'yi, cihaz yönetimini yapılandırma, Uç nokta için Microsoft Defender'ı yapılandırma, uç noktalar
+title: Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarının katılımı
+description: Yapılandırma paketini sanal masaüstü altyapısı (VDI) cihazında dağıtın, böylece bu hizmette Uç Nokta için Microsoft Defender edin.
+keywords: sanal masaüstü altyapısını (VDI) cihazı, vdi'yi, cihaz yönetimini yapılandırma, Uç Nokta için Microsoft Defender uç noktaları yapılandırma
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -18,19 +18,24 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.date: 02/14/2022
 ms.technology: mde
-ms.openlocfilehash: 7342f368063c2c9024c4942c33a2e41f28eebd36
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: e292c2f1e0d01e51e3962b71a940927078ab95ad
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449828"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634723"
 ---
 # <a name="onboard-non-persistent-virtual-desktop-infrastructure-vdi-devices-in-microsoft-365-defender"></a>Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını mobil cihaza Microsoft 365 Defender
 
+Sanal masaüstü altyapısı (VDI), son kullanıcıların neredeyse her cihazdan (kişisel bilgisayarınız, akıllı telefonunuz veya tabletiniz gibi) kurumsal sanal masaüstlerine erişmelerini sağlayan bir IT altyapısı kavramıdır ve kuruluşun kullanıcılara fiziksel makine sağlama ihtiyacı ortadan kaldırıyor. VDI cihazlarının kullanımı maliyeti azaltır çünkü IT departmanları artık fiziksel uç noktaları yönetmek, onarmak ve değiştirmekle sorumlu değildir. Yetkili kullanıcılar, güvenli bir masaüstü istemcisi veya tarayıcısı aracılığıyla aynı şirket sunucularına, dosyalarına, uygulamalarına ve hizmetlerine onaylanmış herhangi bir cihazdan erişim s sağlar.
+
+Bir IT ortamındaki diğer sistemlerde olduğu gibi, bunların da gelişmiş tehditlere ve saldırılara karşı korunması için bir Uç Nokta Algılama ve Yanıt (EDR) ve Virüsten Koruma çözümü olmalıdır.
+
+
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 - Sanal masaüstü altyapısı (VDI) cihazları
 - Windows 10, Windows 11, Windows Server 2019, Windows Server 2022, Windows Server 2008R2/2012R2/2016
@@ -38,32 +43,34 @@ ms.locfileid: "63449828"
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configvdi-abovefoldlink)
 
  > [!NOTE]
-  > **Kalıcı VDI'ler** -  [Uç nokta için](configure-endpoints.md) Microsoft Defender'a kalıcı bir VDI makinesi ekleme, masaüstü veya dizüstü bilgisayar gibi fiziksel bir makineyle aynı şekilde uygulanır. Grup ilkesi, Microsoft Endpoint Manager ve diğer yöntemler kalıcı bir makineyi eklemede kullanılabilir. Microsoft 365 Defender portalında, (https://security.microsoft.com)ekleme'nin altında tercih ettiğiniz ekleme yöntemini seçin ve bu türle ilgili yönergeleri izleyin. 
+  > **Kalıcı VDI'ler** -  [Uç Nokta için Microsoft Defender'a kalıcı bir VDI](configure-endpoints.md) makinesi ekleme, masaüstü veya dizüstü bilgisayar gibi fiziksel bir makineye sahip olacağınız gibi ele alındır. Grup ilkesi, Microsoft Endpoint Manager ve diğer yöntemler kalıcı bir makineyi eklemede kullanılabilir. Microsoft 365 Defender portalında, (https://security.microsoft.com)ekleme'nin altında tercih ettiğiniz ekleme yöntemini seçin ve bu türle ilgili yönergeleri izleyin. 
 
 ## <a name="onboarding-non-persistent-virtual-desktop-infrastructure-vdi-devices"></a>Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını ekleme
 
 Uç Nokta için Defender kalıcı olmayan VDI oturumu eklemeyi destekler.
 
-VDA'ları eklemeye yönelik zorluklarla ilgili sorunlar olabilir. Aşağıda, bu senaryoyla ilgili tipik güçlükler ve sorunlar yermaktadır:
+VDI örneklerini eklemeye yönelik zorluklarla ilgili sorunlar olabilir. Aşağıda, bu senaryoyla ilgili tipik güçlükler ve sorunlar yermaktadır:
 
 - Gerçek sağlama öncesinde Uç Nokta için Defender'a sağlanması gereken, kısa vadeli bir oturumun anında erken eklemesi.
 - Cihaz adı normalde yeni oturumlar için yeniden kullanılır.
 
-VDI cihazları Uç nokta portalı için Defender'da şu şekilde görünebilir:
+VDI ortamında VDI örnekleri kısa ömürlere sahip olabilir. VDI cihazları Uç nokta portalı için Defender'da şu şekilde görünebilir:
 
-- Her cihaz için tek giriş.
+
+- Her VDI örneği için tek portal girdisi. VDI örneği Uç Nokta için Microsoft Defender'a önceden oluşturulmuşsa ve bir noktada silindikten sonra aynı ana bilgisayar adıyla yeniden oluşturulduktan sonra portalda bu VDI örneğini temsil eden yeni bir nesne OLUŞTURULMAZ. 
+
 
   > [!NOTE]
   > Bu durumda, *oturum* oluşturulduğunda örneğin katılımsız yanıt dosyası kullanılarak aynı cihaz adının yapılandırılması gerekir.
 
-- Her cihaz için birden çok giriş- her oturum için bir girdi.
+- Her cihaz için birden çok giriş - her VDI örneği için bir girdi.
 
 Aşağıdaki adımlar, VDI cihazlarını ekleme adımlarını size yönlendirecek ve tek ve birden çok giriş için adımları vurgular.
 
 > [!WARNING]
 > Düşük kaynak yapılandırmalarının olduğu ortamlarda VDI önyükleme yordamı Uç nokta algılayıcısı kullanımı için Defender'ı yavaşlatabilir.
 
-### <a name="for-windows-10-or-windows-11-or-windows-server-2012-r2-and-later"></a>R2 Windows 10 veya Windows 11 veya Windows Server 2012 için
+### <a name="for-windows-10-or-windows-11-or-windows-server-2012-r2-and-later"></a>R2 Windows 10, Windows 11 veya daha Windows Server 2012 için
 
 > [!NOTE]
 > Windows Server 2016 ve Windows Server 2012 R2'nin bu özelliğin çalışması için önce [Onboard Windows sunucularında](/microsoft-365/security/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016) verilen yönergeleri kullanarak yükleme paketinin uygulanmasıyla hazır olması gerekir.
@@ -83,12 +90,12 @@ Aşağıdaki adımlar, VDI cihazlarını ekleme adımlarını size yönlendirece
     2. Her cihaz için tek bir giriş uygulayıyorsanız, hem Onboard-NonPersistentMachine.ps1 hem de WindowsDefenderATPOnboardingScript.cmd'yi kopyalayın.
 
     > [!NOTE]
-    > Klasörü görmüyorsanız `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup` gizlenmiş olabilir. Dosya Gezgini'nde Gizli **dosya ve klasörleri göster** seçeneğini seçmeniz gerekir.
+    > Klasörü görmüyorsanız `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup` gizlenmiş olabilir. Diğer seçeneklerden Gizli dosya **ve klasörleri göster seçeneğini Dosya Gezgini**.
 
-3. Yerel Grup İlkesi Düzenleyicisi penceresini açın ve Betik **Başlatma'da Bilgisayar** \> **Windows Ayarlar** \> **gidin**\>.
+3. Yerel Dosya Düzenleyicisi grup ilkesi açın ve Betik Başlatma'da  **Bilgisayar** **Yapılandırması'Windows Ayarlar** \> \> \> **gidin**.
 
    > [!NOTE]
-   > Domain Group Policy be also used for onboarding non-persistent VDI devices.
+   > Etki grup ilkesi alanı adı, kalıcı olmayan VDI cihazlarının eklemesi için de kullanılabilir.
 
 4. Uygulamak için kullandığınız yönteme bağlı olarak, uygun adımları izleyin:
     - Her cihaza tek bir giriş için:
@@ -115,7 +122,7 @@ Aşağıdaki adımlar, VDI cihazlarını ekleme adımlarını size yönlendirece
 ## <a name="for-downlevel-skus-windows-server-2008-r2"></a>Aşağı düzey SU'lar için (Windows Server 2008 R2)
 
 > [!NOTE]
-> Diğer Windows sunucu sürümleri için bu yönergeler, MMA gerektiren Windows Server 2016 ve Windows Server 2012 R2 uç noktası için önceki Microsoft Defender'ı çalıştırmayı da gerektirir. Yeni birleşik çözüme geçiş yönergeleri, Uç Nokta için [Microsoft Defender'daki Sunucu geçiş senaryolarındadır](/microsoft-365/security/defender-endpoint/server-migration).
+> Diğer Windows sunucu sürümleri için, MMA gerektiren Windows Server 2016 ve R2 için önceki sürümü Uç Nokta için Microsoft Defender Windows Server 2012 için de geçerlidir. Yeni birleşik çözüme geçiş yönergeleri Aşağıdaki sunucu [geçiş senaryolarında ve](/microsoft-365/security/defender-endpoint/server-migration) Uç Nokta için Microsoft Defender.
 
 > [!NOTE]
 > Aşağıdaki kayıt defteri yalnızca hedef "Her cihaz için tek girdi" elde etmek olduğunda ilgili kayıt defteridir.
@@ -178,8 +185,8 @@ DISM komutları ve çevrimdışı hizmet hakkında daha fazla bilgi için aşağ
 5. Altın/ana resmi normalde olduğu gibi yeniden kullanın.
 
 ## <a name="related-topics"></a>İlgili konular
-- [Grup Windows kullanarak diğer cihazları ekleme](configure-endpoints-gp.md)
-- [Microsoft Endpoint Configuration Manager kullanarak Windows cihazları Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md)
-- [Mobil Windows Yönetim araçlarını kullanarak cihazları ekleme](configure-endpoints-mdm.md)
-- [Yerel Windows kullanarak cihazları ekleme](configure-endpoints-script.md)
-- [Uç nokta ekleme sorunları için Microsoft Defender'da sorun giderme](troubleshoot-onboarding.md)
+- [Windows araçlarını Grup İlkesi kullanarak ekleyin](configure-endpoints-gp.md)
+- [Microsoft Endpoint Configuration Manager kullanarak Windows cihazlarını ekleyin](configure-endpoints-sccm.md)
+- [Mobil Cihaz Yönetimi araçlarını kullanarak Windows cihazlarını ekleyin](configure-endpoints-mdm.md)
+- [Windows araçlarını yerel betik kullanarak ekleyin](configure-endpoints-script.md)
+- [Uç Nokta için Microsoft Defender ekleme sorunlarını giderme](troubleshoot-onboarding.md)

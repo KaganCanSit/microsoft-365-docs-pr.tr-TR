@@ -21,23 +21,23 @@ ms.custom:
 - migrationguides
 - admindeeplinkDEFENDER
 ms.topic: article
-ms.date: 03/28/2022
+ms.date: 04/01/2022
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
-ms.openlocfilehash: 1397c34e8e4a7f1fcb20df192409bd57bc50f40b
-ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
+ms.openlocfilehash: 4f387ae01af51292667f810176970f3607b489b3
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64507131"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634415"
 ---
 # <a name="switch-to-microsoft-defender-for-endpoint---phase-3-onboard"></a>Geçiş: Uç Nokta için Microsoft Defender - Aşama 3: Ekleme
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-| [![Aşama 1: Hazırla3.](images/phase-diagrams/prepare.png#lightbox)](switch-to-mde-phase-1.md)<br/>[Aşama 1: Hazırlama](switch-to-mde-phase-1.md) | [![Aşama 2: Ayarlama](images/phase-diagrams/setup.png#lightbox)](switch-to-mde-phase-2.md)<br/>[Aşama 2: Ayarlama](switch-to-mde-phase-2.md) | ![Aşama 3: Ekleme](images/phase-diagrams/onboard.png#lightbox)<br/>Aşama 3: Ekleme |
+| [![Aşama 1: Hazırla3.](images/phase-diagrams/prepare.png#lightbox)](switch-to-mde-phase-1.md)<br/>[Aşama 1: Hazırlık](switch-to-mde-phase-1.md) | [![Aşama 2: Kurulum](images/phase-diagrams/setup.png#lightbox)](switch-to-mde-phase-2.md)<br/>[Aşama 2: Kurulum](switch-to-mde-phase-2.md) | ![Aşama 3: Katılım](images/phase-diagrams/onboard.png#lightbox)<br/>Aşama 3: Katılım |
 |--|--|--|
 || |*Buradasınız!* |
 
@@ -80,15 +80,11 @@ Dağıtım yöntemleri, işletim sistemine ve tercih edilen yöntemlere bağlı 
 | iOS | [Microsoft Endpoint Manager](ios-install.md)     |
 |Android  | [Microsoft Endpoint Manager](android-intune.md)  | 
 
-
 (<a id="fn1">1</a>) Windows Server 2016 ve Windows Server 2012 R2'nin Onboard [Windows kullanılarak Windows gerekir](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016).
-
 
 ## <a name="run-a-detection-test"></a>Algılama testi çalıştırma
 
 Cihazlarınızı uç nokta için Defender'a düzgün bir şekilde bağlı olduğunu doğrulamak için bir algılama testi çalıştırabilirsiniz.
-
-<br/><br/>
 
 |İşletim sistemi|Kılavuz|
 |---|---|
@@ -102,8 +98,6 @@ Cihazlarınızı uç nokta için Defender'a düzgün bir şekilde bağlı olduğ
 ## <a name="confirm-that-microsoft-defender-antivirus-is-in-passive-mode-on-your-endpoints"></a>Uç Microsoft Defender Virüsten Koruma edilgen modda olduğunu doğrulama
 
 Uç noktanız Artık Uç Nokta için Defender'a alındıkndan, bir sonraki adımınız edilgen modda Microsoft Defender Virüsten Koruma emin olmaktır. Aşağıdaki tabloda açıklandığı gibi, birkaç yöntemden birini kullanabilirsiniz:
-
-<br/><br/>
 
 |Yöntem|Ne yapmalı?|
 |---|---|
@@ -120,12 +114,12 @@ Uç noktanız Artık Uç Nokta için Defender'a alındıkndan, bir sonraki adım
 
 Windows Server Microsoft Defender Virüsten Koruma, sürüm 1803 veya daha yenisi ya da Windows Server 2019 veya Windows Server 2022'de pasif moduna ayarlamak için şu adımları izleyin:
 
-1. Kayıt Defteri Düzenleyicisi'ni açın ve ardından şulere gidin:
-
-   `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
+1. Kayıt Defteri Düzenleyicisi'ni açın ve sonra 'a gidin `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
 
 2. **ForceDefenderPassiveMode** adlı bir DWORD girdisini düzenleyin (veya oluşturun) ve aşağıdaki ayarları belirtin:
+
    - DWORD değerini **1 olarak ayarlayın**.
+
    - **Taban'ın** altında **Onaltılı'ya seçin**.
 
 > [!NOTE]
@@ -146,6 +140,7 @@ Cihazlarınızı Microsoft Defender Virüsten Koruma edilgen modda çalışıyor
 Güncelleştirmelerin güncel tutmayla ilgili iki tür Microsoft Defender Virüsten Koruma vardır:
 
 - Güvenlik zekası güncelleştirmeleri
+
 - Ürün güncelleştirmeleri
 
 Güncelleştirmelerinizi almak için, Güncelleştirmeleri yönetme ve [temelleri Microsoft Defender Virüsten Koruma yönergeleri izleyin](manage-updates-baselines-microsoft-defender-antivirus.md).
@@ -155,6 +150,7 @@ Güncelleştirmelerinizi almak için, Güncelleştirmeleri yönetme ve [temeller
 Bu noktada:
 
 - Uç nokta için Defender'a kuruluş cihazlarınızı ekleme ve
+
 - Microsoft Defender Virüsten Koruma yüklü ve etkinse,
 
 Ardından, bir sonraki adımınız Microsoft dışı virüsten koruma, kötü amaçlı yazılımdan koruma ve uç nokta koruma çözümlerinizi kaldırmaktır. Microsoft olmayan çözümlerinizi kaldırdığınız zaman, pasif Microsoft Defender Virüsten Koruma moduna geçer. Çoğu durumda bu otomatik olarak gerçekleşir. 
@@ -169,7 +165,9 @@ Microsoft olmayan çözümlerinizi kaldırma konusunda yardım almak için, çö
 Artık Uç Nokta için Defender'ı kabul ettiynize ve Microsoft olmayan eski çözümlerinizi kaldırdığınıza göre, bir sonraki adımınız Uç Nokta için Defender'ın düzgün çalıştığından emin olmaktır. Bu görevi gerçekleştirmenin en iyi yollarından biri, Uç nokta tanıtım senaryoları için Defender sitesini () ziyaret etmektir[https://demo.wd.microsoft.com](https://demo.wd.microsoft.com). Bu sayfada, en azından aşağıdakiler dahil olmak üzere tanıtım senaryolarından birini veya birden fazlasını deneyin:
 
 - Bulut teslimi koruma
+
 - İstenmeyen Olabilecek Uygulamalar (PUA)
+
 - Ağ Koruması (NP)
 
 > [!NOTE]
@@ -180,4 +178,5 @@ Artık Uç Nokta için Defender'ı kabul ettiynize ve Microsoft olmayan eski ç�
 **Tebrikler**! Uç Nokta için [Defender'a geçiş işleminizi tamamladınız](switch-to-mde-overview.md#the-migration-process)!
 
 - [Portalda ( ) güvenlik](security-operations-dashboard.md) Microsoft 365 Defender ziyaret edin[https://security.microsoft.com](https://security.microsoft.com).
+
 - [Uç Nokta için Defender'ı Yönet, geçiş sonrası](manage-mde-post-migration.md).

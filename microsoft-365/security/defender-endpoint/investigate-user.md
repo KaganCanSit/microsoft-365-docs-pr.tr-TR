@@ -1,7 +1,7 @@
 ---
-title: Uç Nokta için Microsoft Defender'da kullanıcı hesabını araştırma
+title: E-postada kullanıcı hesabını Uç Nokta için Microsoft Defender
 description: Güvenliği tehlikeye atılmış olası kimlik bilgileri için kullanıcı hesabını araştırabilirsiniz veya araştırma sırasında ilişkili kullanıcı hesabında özet atabilirsiniz.
-keywords: araştırma, hesap, kullanıcı, kullanıcı varlığı, uyarı, Uç Nokta için Microsoft Defender
+keywords: araştır, hesap, kullanıcı, kullanıcı varlığı, uyarı, Uç Nokta için Microsoft Defender
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,20 +15,20 @@ ms.collection: m365-security-compliance
 ms.topic: article
 ms.date: 04/24/2018
 ms.technology: mde
-ms.openlocfilehash: feebff9361f1504e94069e82a3de87a2e1d95c0c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 76b0b7405c8dc1c434fbc9f991903b25d8b9d4f4
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312691"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64469349"
 ---
-# <a name="investigate-a-user-account-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'da kullanıcı hesabını araştırma
+# <a name="investigate-a-user-account-in-microsoft-defender-for-endpoint"></a>E-postada kullanıcı hesabını Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 
@@ -48,19 +48,19 @@ Bu görünümlerde tıklanabilir bir kullanıcı hesabı bağlantısı vardır v
 
 Bir kullanıcı hesabı varlığı incelenin, şunları bakın:
 
-- Kullanıcı hesabı ayrıntıları, Kimlik uyarıları için Microsoft Defender ve oturum açmış cihazlar, rol, oturum açma türü ve diğer ayrıntılar
+- Kullanıcı hesabı ayrıntıları, Kimlik için Microsoft Defender uyarıları ve oturum açmış cihazlar, rol, oturum açma türü ve diğer ayrıntılar
 - Olaylara ve kullanıcının cihazlarına genel bakış
 - Bu kullanıcıyla ilgili uyarılar
 - Kuruluşta gözlemlenen (oturum açmış cihazlar)
 
-![Kullanıcı hesabı varlık ayrıntıları sayfasının görüntüsü.](images/atp-user-details-view.png)
+:::image type="content" source="images/atp-user-details-view.png" alt-text="Kullanıcı hesabı varlık ayrıntıları sayfası" lightbox="images/atp-user-details-view.png":::
 
 ### <a name="user-details"></a>Kullanıcı ayrıntıları
 
-Sol  tarafta yer alan Kullanıcı ayrıntıları bölmesi kullanıcı hakkında, ilgili açık olaylar, etkin uyarılar, SAM adı, SID, Kimlik uyarıları için Microsoft Defender, kullanıcının oturum açtığı cihaz sayısı, kullanıcının ilk ve son görülme sayısı, rol ve oturum açma türleri gibi bilgileri sağlar. Etkinleştirmiş olduğunuz tümleştirme özelliklerine bağlı olarak, diğer ayrıntıları da burada görüyorsunuz. Örneğin, İşletmeler için Skype tümleştirmeyi etkinleştirirsanız portaldan kullanıcıyla iletişim kurabilirsiniz. **Azure ATP uyarıları** bölümü, Kimlik için Microsoft Defender özelliğini etkinleştirdiyseniz ve kullanıcıyla ilgili uyarılar varsa sizi Kimlik için Microsoft Defender sayfasına götüren bir bağlantı içerir. Kimlik için Microsoft Defender sayfası, uyarılar hakkında daha fazla bilgi sağlar.
+Sol  tarafta yer alan Kullanıcı ayrıntıları bölmesi kullanıcı hakkında, ilgili açık olaylar, etkin uyarılar, SAM adı, SID, Kimlik için Microsoft Defender uyarıları, kullanıcının oturum açtığı cihaz sayısı, kullanıcının ilk ve son görülme sayısı, rol ve oturum açma türleri gibi bilgileri sağlar. Etkinleştirmiş olduğunuz tümleştirme özelliklerine bağlı olarak, diğer ayrıntıları da burada görüyorsunuz. Örneğin, İşletmeler için Skype tümleştirmeyi etkinleştirirsanız portaldan kullanıcıyla iletişim kurabilirsiniz. **Azure ATP uyarıları** bölümü, Kimlik için Microsoft Defender özelliğini etkinleştirdiyseniz ve kullanıcıyla ilgili uyarılar varsa sizi Kimlik için Microsoft Defender sayfasına götüren bir bağlantı içerir. Bu Kimlik için Microsoft Defender, uyarılar hakkında daha fazla bilgi sağlar.
 
 > [!NOTE]
-> Bu özelliği kullanmak için hem Kimlik için Microsoft Defender hem de Uç Nokta için Defender ile tümleştirmeyi etkinleştirmeniz gerekir. Uç Nokta için Defender'da, gelişmiş özelliklerde bu özelliği etkinleştirebilirsiniz. Gelişmiş özellikleri etkinleştirme hakkında daha fazla bilgi için bkz [. Gelişmiş özellikleri açma](advanced-features.md).
+> Bu özelliği kullanmak için hem Uç Nokta için Kimlik için Microsoft Defender Defender'da tümleştirmeyi etkinleştirmeniz gerekir. Uç Nokta için Defender'da, gelişmiş özelliklerde bu özelliği etkinleştirebilirsiniz. Gelişmiş özellikleri etkinleştirme hakkında daha fazla bilgi için bkz [. Gelişmiş özellikleri açma](advanced-features.md).
 
 Kuruluşta Genel Bakış, Uyarılar ve Gözlemlenen, kullanıcı hesabıyla ilgili çeşitli özniteliklerin görüntüleniyor farklı sekmelerdir.
 
@@ -101,9 +101,9 @@ Sonuçları aşağıdaki dönemlere göre filtre yapabilirsiniz:
 
 ## <a name="related-topics"></a>İlgili konular
 
-- [Uç Nokta Uyarıları kuyruğu için Microsoft Defender'ı görüntüleme ve düzenleme](alerts-queue.md)
-- [Uç nokta uyarıları için Microsoft Defender'ı yönetme](manage-alerts.md)
-- [Uç nokta uyarıları için Microsoft Defender'ı araştırma](investigate-alerts.md)
+- [Yeni Uyarı kuyruğu Uç Nokta için Microsoft Defender ve düzenleme](alerts-queue.md)
+- [Uyarı Uç Nokta için Microsoft Defender yönetme](manage-alerts.md)
+- [Uyarı Uç Nokta için Microsoft Defender araştırma](investigate-alerts.md)
 - [Uç Nokta için Defender uyarısıyla ilişkilendirilmiş dosyayı araştırma](investigate-files.md)
 - [Uç Nokta Cihazları için Defender listesinde cihazları araştırma](investigate-machines.md)
 - [Uç Nokta için Defender uyarısıyla ilişkilendirilmiş IP adresini araştırma](investigate-ip.md)

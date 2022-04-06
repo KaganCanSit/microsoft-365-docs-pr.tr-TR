@@ -19,22 +19,22 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 7b9443cac6543ac14f6d94bd2809b5263be0a860
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 4c922ef443dbe6e4a1b55159f2c27b35926ff886
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681842"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64634459"
 ---
-# <a name="protect-your-network"></a>Ağın koruma
+# <a name="protect-your-network"></a>Ağınızı koruyun
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 ## <a name="overview-of-network-protection"></a>Ağ korumasına genel bakış
 
@@ -43,7 +43,7 @@ Ağ koruması, cihazları İnternet tabanlı etkinliklere karşı korumaya yard�
 Ağ koruması, Web koruması için [korumayı](web-protection-overview.md) işletim sistemi düzeyine genişlettir. Edge'de diğer desteklenen tarayıcılara ve tarayıcı olmayan uygulamalara web koruma işlevselliği sağlar. Buna ek olarak, ağ koruması Uç nokta algılama ve yanıtta kullanılırken güvenlik göstergelerinin (IOC) görünürlüğünü [ve engellemesini sağlar](overview-endpoint-detection-response.md). Örneğin, ağ koruması, belirli etki [alanlarını veya ana bilgisayar](manage-indicators.md) adlarını engellemek için kullanabileceğiniz özel göstergeleriniz ile birlikte çalışır.
 
 > [!TIP]
-> Ağ korumasının nasıl çalıştığını görmek için demo.wd.microsoft.com uç [nokta](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) test planı için Microsoft Defender sitesine bakın.
+> Ağ Uç Nokta için Microsoft Defender nasıl çalıştığını [görmek için demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) test planı sitesine bakın.
 
 > [!NOTE]
 > demo.wd.microsoft.com'daki Uç Nokta için Defender tanıtım sitesi kullanım dışıdır ve gelecekte kaldırılacaktır.
@@ -68,11 +68,11 @@ Hizmetleri etkinleştirdikten sonra, ağ veya güvenlik duvarınızı hizmetlerl
 
 ## <a name="configuring-network-protection"></a>Ağ korumasını yapılandırma
 
-Ağ korumasını etkinleştirme hakkında daha fazla bilgi için bkz. **[Ağ korumasını etkinleştirme](enable-network-protection.md)**. Ağ korumasını etkinleştirmek ve yönetmek için Grup İlkesi, PowerShell veya MDM CSP'leri kullanın.
+Ağ korumasını etkinleştirme hakkında daha fazla bilgi için bkz. **[Ağ korumasını etkinleştirme](enable-network-protection.md)**. Ağ grup ilkesi etkinleştirmek ve yönetmek için CSP'ler, PowerShell veya MDM CSP'leri kullanın.
 
 ## <a name="viewing-network-protection-events"></a>Ağ koruma olaylarını görüntüleme
 
-Ağ koruması, en iyi şekilde [Uç Nokta için Microsoft Defender](microsoft-defender-endpoint.md) ile çalışır ve size uyarı soruşturma senaryolarının bir parçası olarak exploit protection olayları ve blokları hakkında ayrıntılı [raporlama sağlar](investigate-alerts.md).
+Ağ koruması, [en iyi Uç Nokta için Microsoft Defender](microsoft-defender-endpoint.md), size exploit protection olayları hakkında ayrıntılı raporlama ve uyarı soruşturma senaryolarının bir parçası [olarak bloklar sağlar](investigate-alerts.md).
 
 Ağ koruması bağlantıyı engellerse, İşlem Merkezi'nde bir bildirim görüntülenir. Güvenlik işlemleri ekipleriniz [, bildirimi, kuruluşun](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) ayrıntıları ve iletişim bilgileriyle özelleştirilebilir. Buna ek olarak, her bir saldırı yüzeyini azaltma kuralları etkinleştirilebilir ve izlenmesi gereken belirli tekniklere uygun olarak özelleştirilebilir.
 
@@ -80,7 +80,7 @@ Ayrıca, ağ [korumasının etkinleştirilmişse](audit-windows-defender.md) kur
 
 ## <a name="review-network-protection-events-in-the-microsoft-365-defender-portal"></a>Web portalında ağ koruma Microsoft 365 Defender gözden geçirme
 
-Uç Nokta için Microsoft Defender, uyarı soruşturma senaryolarının bir parçası olarak olaylara ve [bloklara ayrıntılı raporlama sağlar](investigate-alerts.md). Bu ayrıntıları uyarı kuyruğunda Microsoft 365 Defender portalda ([https://security.microsoft.com](https://security.microsoft.com)) veya [gelişmiş](review-alerts.md) avı kullanarak [görüntüebilirsiniz](advanced-hunting-overview.md). Denetim modunu [kullanıyorsanız, ağ](audit-windows-defender.md) koruma ayarlarının etkinleştirilmişse ortamınızı nasıl etkileyeceğini görmek için gelişmiş arama kullanabilirsiniz.
+Uç Nokta için Microsoft Defender, uyarı soruşturma senaryolarının bir parçası olarak olaylara ve bloklara [ayrıntılı raporlama sağlar](investigate-alerts.md). Bu ayrıntıları uyarı kuyruğunda Microsoft 365 Defender portalda ([https://security.microsoft.com](https://security.microsoft.com)) veya [gelişmiş](review-alerts.md) avı kullanarak [görüntüebilirsiniz](advanced-hunting-overview.md). Denetim modunu [kullanıyorsanız, ağ](audit-windows-defender.md) koruma ayarlarının etkinleştirilmişse ortamınızı nasıl etkileyeceğini görmek için gelişmiş arama kullanabilirsiniz.
 
 İşte gelişmiş av için örnek bir sorgu:
 
@@ -89,7 +89,7 @@ DeviceNetworkEvents
 |where ActionType in ('ExploitGuardNetworkProtectionAudited','ExploitGuardNetworkProtectionBlocked', 'ConnectionSuccess')
 ```
 
-## <a name="review-network-protection-events-in-windows-event-viewer"></a>Olay Görüntüleyicisi'nde ağ Windows olaylarını gözden geçirme
+## <a name="review-network-protection-events-in-windows-event-viewer"></a>Ağ koruma olaylarını gözden Windows Olay Görüntüleyicisi
 
 Ağ koruma blokları (Windows denetimler) kötü amaçlı IP veya etki alanına erişimi sırasında oluşturulan olayları görmek için bu olay günlüğünü gözden geçirebilirsiniz:
 
@@ -142,7 +142,11 @@ Azure'Windows 10 Enterprise Sanal Masaüstü'Windows'de kullanılan Çoklu Oturu
 
 1. Ağ [korumasını aç'a](enable-network-protection.md) ve ilkenizi uygulamak için yönergeleri izleyin.
 
-2. Aşağıdaki PowerShell komutunu yürütme: `Set-MpPreference -AllowNetworkProtectionOnWinServer 1`
+2. Aşağıdaki PowerShell komutlarını yürütme:
+  - `Set-MpPreference -EnableNetworkProtection Enabled`
+  - `Set-MpPreference -AllowNetworkProtectionOnWinServer 1`
+  - `Set-MpPreference -AllowNetworkProtectionDownLevel 1`
+  - `Set-MpPreference -AllowDatagramProcessingOnWinServer 1`
 
 ## <a name="network-protection-troubleshooting"></a>Ağ koruma sorunlarını giderme
 
@@ -157,5 +161,5 @@ reg add "HKLM\Software\Microsoft\Windows Defender" /v ProxyPacUrl /d "<Proxy PAC
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ağ koruma güvenlik güvenlik](evaluate-network-protection.md) | Özelliğin nasıl çalıştığını ve tipik olarak hangi olayların oluşturul olacağını gösteren hızlı bir senaryoya taahhütte bulundurabilirsiniz.
-- [Ağ koruma güvenlik olanaklarını](enable-network-protection.md) | Ağ korumasını etkinleştirmek ve yönetmek için Grup İlkesi, PowerShell veya MDM CSP'leri kullanın.
+- [Ağ koruma güvenlik olanaklarını](enable-network-protection.md) | Ağ grup ilkesi etkinleştirmek ve yönetmek için CSP'ler, PowerShell veya MDM CSP'leri kullanın.
 - [Saldırı yüzeyini azaltma özelliklerini Microsoft Intune](/mem/intune/protect/endpoint-security-asr-policy)

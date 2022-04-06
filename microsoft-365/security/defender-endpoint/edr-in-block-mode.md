@@ -15,15 +15,15 @@ ms.custom:
 - next-gen
 - edr
 - admindeeplinkDEFENDER
-ms.date: 04/04/2022
+ms.date: 04/01/2022
 ms.collection: m365-security-compliance
 ms.technology: mde
-ms.openlocfilehash: eb40eaee9043e81331eca98c85f1467111cc37e4
-ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
+ms.openlocfilehash: 898d6de45830068ad300a64a3312cff3d5914323
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/04/2022
-ms.locfileid: "64638366"
+ms.locfileid: "64634305"
 ---
 # <a name="endpoint-detection-and-response-edr-in-block-mode"></a>Engelleme modunda uç nokta algılama EDR yanıt (EDR)
 
@@ -115,6 +115,10 @@ Dışlama için dışlama da Microsoft Defender Virüsten Koruma. Bkz[. Taramala
 ### <a name="do-i-need-to-turn-edr-in-block-mode-on-if-i-have-microsoft-defender-antivirus-running-on-devices"></a>Cihazlarda çalıştırmış EDR, engelleme modundayken Microsoft Defender Virüsten Koruma gerekir mi?
 
 Engelleme modundaki EDR, Microsoft dışı bir virüsten koruma ürünü tarafından kaçırilen ihlal sonrası algılamaları düzeltmektir. Gerçek zamanlı korumanın önce algılamaları fark EDR ve düzeltmesi beklendiğinden, Microsoft Defender Virüsten Koruma etkin moddayken engelleme modunu etkinleştirmenin en düşük yararı vardır. Virüsten Koruma EDR Microsoft Defender'ın pasif modunda çalıştır olduğu uç noktalarda engelleme modunda devre dışı bırakmayı etkinleştirmenizi öneririz. EDR algılamaları[, PUA](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md) koruması tarafından veya engelleme [modundaki düzeltme & otomatik](automated-investigations.md) soruşturma tarafından otomatik olarak düzeltilir.
+
+- Pasif Microsoft Defender Virüsten Koruma modundayken, blok EDR modundaki bir sistem, pasif moduna sahip başka bir savunma Uç Nokta için Microsoft Defender.
+
+- Microsoft Defender Virüsten Koruma etkin moddayken, EDR modundayken fazladan tarama işlemi sağlanmaz, ancak Microsoft Defender Virüsten Koruma ihlal sonrası, davranış ya da algılamalarda otomatik EDR olanak sağlar.
 
 ### <a name="will-edr-in-block-mode-affect-a-users-antivirus-protection"></a>Engelleme EDR bir virüsten koruma yazılımı kullanıcının virüsten korumasını etkiler mi?
 
