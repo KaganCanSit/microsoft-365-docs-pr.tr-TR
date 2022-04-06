@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bekletme etiketlerini yayımlama yönergeleri, böylece ihtiyacınız olan etiketleri korumak ve sahip olmadığınız şekilde silmek için bunları uygulamalara uygulayabilirsiniz.
-ms.openlocfilehash: 17a49e2cdeffde5ed3dff91c3dac64e1ddf333ed
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: a1d8a32a9190ddb645160fc475fb72a9d1dcd72e
+ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63319441"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64638409"
 ---
 # <a name="publish-retention-labels-and-apply-them-in-apps"></a>Bekletme etiketlerini yayımlama ve uygulamalarda uygulama
 
@@ -156,7 +156,7 @@ End users, as well as administrators, can manually apply retention labels from t
     
 - SharePoint
     
-- Microsoft 365 groups (both the group site and group mailbox in Outlook on the web)
+- Microsoft 365 group site for Teams
     
 Use the following sections to understand how to apply retention labels. 
 

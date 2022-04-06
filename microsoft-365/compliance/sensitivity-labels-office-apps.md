@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Masaüstü, mobil ve web için Office uygulamalarının duyarlılık etiketlerini yönetmeye ilişkin BILGI.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 2bfd7dfd0cf56c8546cd21e5127bc8ef432e1cc5
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+ms.openlocfilehash: 0ca67ecb87b48d551ec4fb740e8732b8196c872c
+ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64594784"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64637928"
 ---
 # <a name="manage-sensitivity-labels-in-office-apps"></a>Office uygulamalarında duyarlılık etiketlerini yönetme
 
@@ -98,7 +98,7 @@ Listelenen sayılar, her Office için gereken en düşük uygulama sürümü say
 |[Kullanıcıların izin atamasına izin verme: <br /> - İte haberleri verme](encryption-sensitivity-labels.md#let-users-assign-permissions)                     | Güncel Kanal: 1910+ <br /><br> Aylık Enterprise Kanalı: 1910+ <br /><br> Semi-Annual Enterprise Kanalı: 2002+ | 16.21+                 | 4.7.1+         | 4.0.39+           | Evet               |
 |[Kullanıcıların izin atamasına izin ver: <br /> - Yalnızca Şifrele](encryption-sensitivity-labels.md#let-users-assign-permissions)  | Güncel Kanal: 2011+ <br /><br> Aylık Enterprise Kanalı: 2011+ <br /><br> Semi-Annual Enterprise Kanalı: 2108+ | 16.48+ <sup>\*</sup> | 4.2112.0+  | 4.2112.0+ | Evet |
 |[Kullanıcıların e-postalarına ve belgelerine etiket uygulamalarını gerektirme](#require-users-to-apply-a-label-to-their-email-and-documents)   | Güncel Kanal: 2101+ <br /><br> Aylık Enterprise Kanalı: 2101+ <br /><br> Semi-Annual Enterprise Kanalı: 2108+ | 16.43+ <sup>\*</sup>                    | 4.2111+            | 4.2111+                | Evet                |
-|[Etiketle ilgili kullanıcı etkinliğini denetleme](#auditing-labeling-activities) | Güncel Kanal: 2011+ <br /><br> Aylık Enterprise Kanalı: 2011+ <br /><br> Semi-Annual Enterprise: 2022+ | 16.51+ <sup>\*</sup> | 4.2126+ | 4.2126+ | Evet |
+|[Etiketle ilgili kullanıcı etkinliğini denetleme](#auditing-labeling-activities) | Güncel Kanal: 2011+ <br /><br> Aylık Enterprise Kanalı: 2011+ <br /><br> Semi-Annual Enterprise Kanalı: 2108+ | 16.51+ <sup>\*</sup> | 4.2126+ | 4.2126+ | Evet |
 |[İçeriğe otomatik olarak bir hassasiyet etiketi uygulama](apply-sensitivity-label-automatically.md) <br /> - Hassas bilgi türlerini kullanma                    | Güncel Kanal: 2009+ <br /><br> Aylık Enterprise Kanalı: 2009+ <br /><br> Semi-Annual Enterprise: 2102+ | 16.44+ <sup>\*</sup>                    | Gözden geçirme altında           | Gözden geçirme altında               | Evet |
 |[İçeriğe otomatik olarak bir hassasiyet etiketi uygulama](apply-sensitivity-label-automatically.md) <br /> - Eğitilebilir sınıflayıcıları kullanma                    | Güncel Kanal: 2105+ <br /><br> Aylık Enterprise Kanalı: 2105+ <br /><br> Semi-Annual Enterprise Kanalı: 2108+ | 16.49+ | Gözden geçirme altında           | Gözden geçirme altında               | Evet |
 |[Varsayılan etiket ve zorunlu etiketleme için farklı ayarlar](#outlook-specific-options-for-default-label-and-mandatory-labeling)                    | Güncel Kanal: 2105+ <br /><br> Aylık Enterprise Kanalı: 2105+ <br /><br> Semi-Annual Enterprise Kanalı: 2108+ | 16.43+ <sup>\*</sup>                   | 4.2111+           | 4.2111+               | Evet |

@@ -24,17 +24,17 @@ search.appverid:
 - MET150
 ms.assetid: f3433b6b-02f7-447f-9d62-306bf03638b0
 description: Android veya iOS cihazlarınıza Microsoft 365 İş Ekstra koruma ayarlarını doğrulamayı öğrenin.
-ms.openlocfilehash: 85d98a4741299327c0e88735cb9593e129fdc929
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b760b49c59d8033e4587cedd67f024f983547179
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63313755"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64632459"
 ---
 # <a name="validate-app-protection-settings-on-android-or-ios-devices"></a>Android veya iOS cihazlarda uygulama koruma ayarlarını doğrulama
 
 > [!NOTE]
-> İş için Microsoft Defender 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Bu teklif, cihazlar için ek güvenlik özellikleri sağlar. [İş için Defender hakkında daha fazla bilgi öğrenin](../../security/defender-business/mdb-overview.md).
+> İş için Microsoft Defender, 1 Mart 2022 Microsoft 365 İş Ekstra müşterilere sunulmaktadır. Bu teklif, cihazlar için ek güvenlik özellikleri sağlar. [İş için Defender hakkında daha fazla bilgi öğrenin](../../security/defender-business/mdb-overview.md).
 
 Android veya iOS cihazlarında uygulama koruma ayarlarını doğrulamak için aşağıdaki bölümlerde verilen yönergeleri izleyin.
   
@@ -42,7 +42,7 @@ Android veya iOS cihazlarında uygulama koruma ayarlarını doğrulamak için a�
   
 ### <a name="check-that-the-app-protection-settings-are-working-on-user-devices"></a>Uygulama koruma ayarlarının kullanıcı cihazlarda çalış çalış çalışı kontrol edin
 
-Uygulamaları korumak amacıyla [Android cihazları için uygulama yapılandırmalarını ayarlayın](app-protection-settings-for-android-and-ios.md) ve seçtiğiniz ayarların çalıştığını doğrulamak için aşağıdaki adımları izleyin. 
+Android veya [iOS cihazlarına](../../business-premium/m365bp-app-protection-settings-for-android-and-ios.md) yönelik uygulama koruma ayarlarını uygulamaları korumak için ayarlandıktan sonra, seçtiğiniz ayarların işe yönelik olduğunu doğrulamak için bu adımları izleyin. 
   
 İlk olarak, ilkenin doğrulamayı yapacak olacağınız uygulama için geçerli olduğundan emin olun.
   
@@ -131,7 +131,7 @@ Uygulamaları korumak amacıyla [Android cihazları için uygulama yapılandırm
   
 ### <a name="check-that-the-app-protection-settings-are-working-on-user-devices"></a>Uygulama koruma ayarlarının kullanıcı cihazlarında çalışıp çalışmadığını denetleme
 
-Uygulamaları korumak amacıyla [iOS cihazları için uygulama yapılandırmalarını ayarlayın](app-protection-settings-for-android-and-ios.md) ve seçtiğiniz ayarların çalıştığını doğrulamak için aşağıdaki adımları izleyin. 
+Uygulamaları korumak amacıyla [iOS cihazları için uygulama yapılandırmalarını ayarlayın](../../business-premium/m365bp-protection-settings-for-windows-10-devices.md) ve seçtiğiniz ayarların çalıştığını doğrulamak için aşağıdaki adımları izleyin. 
   
 İlk olarak, ilkenin doğrulamayı yapacak olacağınız uygulama için geçerli olduğundan emin olun.
   

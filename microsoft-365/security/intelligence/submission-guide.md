@@ -1,8 +1,8 @@
 ---
-title: Microsoft tarafından çözümleme için dosya gönderme
-description: Kötü amaçlı yazılım çözümlemesi yapmak için dosyaları Microsoft'a nasıl gönderebilirsiniz, gönderilerinizi nasıl takip edin ve İhtilaf algılamaları hakkında bilgi edinebilirsiniz.
+title: Microsoft tarafından analiz için dosya gönderme
+description: Kötü amaçlı yazılım analizi için dosyaları Microsoft'a göndermeyi, gönderimlerinizi izlemeyi ve uyuşmazlık algılamalarını öğrenin.
 ms.reviewer: ''
-keywords: güvenlik, örnek gönderim yardımı, kötü amaçlı yazılım dosyası, virüs dosyası, truva dosyası, gönder, Microsoft'a gönder, örnek, virüs, truva, solucan, algılanmadı, algılanmadı, microsoft'a e-posta, kötü amaçlı yazılım e-posta gönder, Bunun kötü amaçlı yazılım olduğunu düşünüyorum, bunun bir virüs olduğunu düşünüyorum, virüs bu virüs olabilir, bu bir virüs, MSE algılanmadı, imza yok, algılama yok, şüpheli dosya,  MMPC, Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi, araştırmacı, analist, WDSI, güvenlik zekası
+keywords: güvenlik, örnek gönderim yardımı, kötü amaçlı yazılım dosyası, virüs dosyası, truva atı dosyası, gönder, Microsoft'a gönder, örnek gönder, virüs, truva atı, solucan, algılanmadı, algılanmadı, e-posta microsoft, e-posta kötü amaçlı yazılım, Bu kötü amaçlı yazılım, ben bir virüs olduğunu düşünüyorum, nerede virüs gönderebilirim, bu bir virüs, MSE, algılamaz, imza yok, algılama yok, şüpheli dosya,  MMPC, Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi, araştırmacılar, analist, WDSI, güvenlik zekası
 ms.prod: m365-security
 ms.mktglfcycl: secure
 ms.sitesec: library
@@ -15,69 +15,69 @@ ms.collection: M365-security-compliance
 ms.topic: article
 search.appverid: met150
 ms.technology: m365d
-ms.openlocfilehash: 78f1e00555d36880f24f05d213f42725f4ac0133
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: df2ab2b2019bb76af49f00d2751cdc76848705d1
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63705702"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64663610"
 ---
 # <a name="submit-files-for-analysis"></a>Dosyaları analiz için gönderin
 
-Kötü amaçlı yazılımdan şüpheleniyorsanız veya yanlış algılandığından şüpheleniyorsanız analiz için bize gönderebilirsiniz. Bu sayfada, çözümleme için dosya göndermeyle ilgili olarak sık sorulan bazı soruların yanıtları ve bulunmektedir.
+Kötü amaçlı yazılım olabileceği veya yanlış algılandığından şüphelendiğiniz bir dosyanız varsa, dosyayı analiz için bize gönderebilirsiniz. Bu sayfada analiz için dosya göndermeyle ilgili bazı yaygın soruların yanıtları bulunur.
 
-## <a name="how-do-i-send-a-malware-file-to-microsoft"></a>Kötü amaçlı yazılım dosyasını Microsoft'a nasıl gönderirim?
+## <a name="how-do-i-send-a-malware-file-to-microsoft"></a>Microsoft'a kötü amaçlı yazılım dosyası Nasıl yaparım? gönderebilirsiniz?
 
-Kötü amaçlı yazılım olabileceğini veya örnek gönderim portalı üzerinden yanlış algılanmış dosyalar olduğunu düşünüyor olabileceğiniz [dosyaları bize gönderebilirsiniz](https://www.microsoft.com/en-us/wdsi/filesubmission).
+Kötü amaçlı yazılım olabileceğini düşündüğünüz dosyaları veya hatalı algılanmış dosyaları [bize örnek gönderim portalı](https://www.microsoft.com/wdsi/filesubmission) üzerinden gönderebilirsiniz.
 
-Birçok kaynaktan çok fazla sayıda örnek alanız. Çözümlememiz, dosya algılama sayısına ve gönderim türüne göre önceliklidir. Kullanmakta olduğunuz ürün ve dosyayı buken ne yapmak istediğiniz hakkında ayrıntılı bilgi sağlayarak hızlı bir çözümlemeyi tamamlamamıza yardımcı olabilirsiniz.
+Birçok kaynaktan çok sayıda örnek alırız. Analizimiz, dosya algılama sayısı ve gönderim türüne göre önceliklendirilir. Kullandığınız ürün ve dosyayı bulduğunuzda ne yaptığınız hakkında ayrıntılı bilgi vererek hızlı bir analizi tamamlamamıza yardımcı olabilirsiniz.
 
-Oturum akten sonra gönderilerinizi izleyebilirsiniz.
+Oturum açtığınızda gönderimlerinizi izleyebilirsiniz.
 
 ## <a name="can-i-send-a-sample-by-email"></a>E-postayla örnek gönderebilir miyim?
 
-Hayır, yalnızca örnek gönderim portalımız üzerinden [gönderileri kabul etmiş oluruz](https://www.microsoft.com/en-us/wdsi/filesubmission).
+Hayır, yalnızca [örnek gönderim portalımız aracılığıyla gönderimleri](https://www.microsoft.com/wdsi/filesubmission) kabul ederiz.
 
-## <a name="can-i-submit-a-sample-without-signing-in"></a>Oturum açmadan bir örnek göndere miyim?
+## <a name="can-i-submit-a-sample-without-signing-in"></a>Oturum açmadan örnek gönderebilir miyim?
 
-Hayır. Kurumsal müşteriysiniz, gönderinize uygun öncelikleri belirlememiz için oturum açmanız gerekir. Şu anda virüs salgını veya güvenlikle ilgili bir olay yaşıyorsanız, belirlenen Microsoft destek uzmanına başvurarak veya anında yardım için [Microsoft](https://support.microsoft.com/) Desteği'ne giterek.
+Hayır. Kurumsal müşteriyseniz gönderiminizin önceliklerini uygun şekilde belirlememiz için oturum açmanız gerekir. Şu anda bir virüs salgını veya güvenlikle ilgili bir olay yaşıyorsanız, belirlenen Microsoft destek uzmanınıza başvurmanız veya acil yardım için [Microsoft Desteği](https://support.microsoft.com/) gitmeniz gerekir.
 
 ## <a name="what-is-the-software-assurance-id-said"></a>Yazılım Güvencesi Kimliği (SAID) nedir?
 
-Yazılım [Güvencesi Kimliği (SAID),](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) kurumsal müşterilerin destek yetkilendirmelerini izlemesi için sağmaktadır. Gönderme portalı SAID bilgilerini kabul eder ve korur; müşterilerin geçerli SAID'leri olan müşterilerin yüksek öncelikli gönderimler yapmalarını sağlar.
+[Yazılım Güvencesi Kimliği (SAID),](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) kurumsal müşterilerin destek yetkilendirmelerini izlemesine yöneliktir. Gönderim portalı SAID bilgilerini kabul eder ve saklar ve geçerli SAID'leri olan müşterilerin daha yüksek öncelikli gönderimler yapmasına olanak tanır.
 
-### <a name="how-do-i-dispute-the-detection-of-my-program"></a>Programımı algılamaya nasıl itiraz  olurum?
+### <a name="how-do-i-dispute-the-detection-of-my-program"></a>Programımın algılanması konusunda Nasıl yaparım? anlaşmazlık var?
 
-[Söz konusu](https://www.microsoft.com/en-us/wdsi/filesubmission) dosyayı yazılım geliştiricisi olarak gönderin. Gönderimin son bir karara varıncaya kadar bekleyin.
+Söz konusu dosyayı yazılım geliştiricisi olarak [gönderin](https://www.microsoft.com/wdsi/filesubmission). Gönderiminizin son bir belirlemesi olana kadar bekleyin.
 
-Gönderiyi belirleme şeklimizi memnun değilseniz, Microsoft'a ulaşmak için gönderim sonuçlarıyla birlikte verilen geliştirici iletişim formunu kullanın. Sağlayılan bilgileri, gerekirse daha fazla araştırma yapmak için kullanacağız.
+Gönderimin belirlenmesinden memnun değilseniz, Microsoft'a ulaşmak için gönderim sonuçlarıyla birlikte sağlanan geliştirici iletişim formunu kullanın. Gerekirse daha fazla araştırma yapmak için sağladığınız bilgileri kullanacağız.
 
-Tüm yazılım satıcılarını ve geliştiricilerin, Microsoft'un kötü amaçlı yazılım ve istenmeyen yazılımları [nasıl tanımları hakkında bilgi edinebilirsiniz](criteria.md).
+Tüm yazılım satıcılarının ve geliştiricilerin [Microsoft'un kötü amaçlı yazılımları ve istenmeyen yazılımları nasıl tanımlamış olduğunu okumalarını](criteria.md) öneririz.
 
-## <a name="how-do-i-track-or-view-past-sample-submissions"></a>Geçmiş örnek gönderileri nasıl izleyebilir veya  bakabilirsiniz?
+## <a name="how-do-i-track-or-view-past-sample-submissions"></a>Geçmiş örnek gönderimleri izlemek veya görüntülemek Nasıl yaparım??
 
-Gönderilerinizi, gönderi geçmişi [sayfasından izleyebilirsiniz](https://www.microsoft.com/en-us/wdsi/submissionhistory).
+Gönderimlerinizi [gönderim geçmişi sayfasından](https://www.microsoft.com/wdsi/submissionhistory) izleyebilirsiniz.
 
-## <a name="what-does-the-submission-status-mean"></a>Gönderme durumu ne anlama geliyor?
+## <a name="what-does-the-submission-status-mean"></a>Gönderim durumu ne anlama geliyor?
 
-Her gönderimin aşağıdaki durum türlerinden biri olduğu gösterilir:
+Her gönderim aşağıdaki durum türlerinden birinde gösterilir:
 
-* Gönderildi; dosya alındı
+* Gönderildi— dosya alındı
 
-* Devam ediyor; bir analist dosyayı denetlemeye başladı
+* Devam ediyor— bir analist dosyayı denetlemeye başladı
 
-* Kapalı— bir analist tarafından son belirleme verildi
+* Kapatıldı— bir analist tarafından kesin bir belirleme yapıldı
 
-Bize gönderdiğiniz tüm dosyaların durumunu gönderim geçmişi [sayfasında görebilirsiniz](https://www.microsoft.com/en-us/wdsi/submissionhistory).
+Bize gönderdiğiniz dosyaların durumunu [gönderim geçmişi sayfasında](https://www.microsoft.com/wdsi/submissionhistory) görebilirsiniz.
 
-## <a name="how-does-microsoft-prioritize-submissions"></a>Microsoft gönderilere nasıl öncelik öncelikli olur?
+## <a name="how-does-microsoft-prioritize-submissions"></a>Microsoft gönderilerin önceliklerini nasıl belirlemeli?
 
-Gönderileri işleme, adanmış bir analist kaynağı alır. Düzenli aralıklarla çok fazla sayıda gönderi almız olduğundan, bu gönderileri bir önceliğe göre işlemeyi tercih ediyorum. Aşağıdaki faktörler, gönderileri önceliklendirme nedenlerimizi etkiler:
+Gönderimlerin işlenmesi için ayrılmış analist kaynağı gerekir. Düzenli olarak çok sayıda gönderim aldığımızdan, bunları bir önceliğe göre ele alırız. Aşağıdaki faktörler gönderimlere öncelik verme şeklimizi etkiler:
 
-* Çok fazla sayıda bilgisayarın etkilenmesi olası yaygın dosyalar öncelik sırasına sahiptir.
+* Çok sayıda bilgisayarı etkileme olasılığı olan yaygın dosyalara öncelik verebilirsiniz.
 
-* Kimliği doğrulanmış müşterilere, özellikle de geçerli Yazılım [Güvencesi Kimliklerine (SAID) sahip kurumsal](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) müşterilere öncelik verilir.
+* Kimliği doğrulanmış müşterilere, özellikle de geçerli [Yazılım Güvencesi Kimliklerine (SAID)](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) sahip kurumsal müşterilere öncelik verilir.
 
-* SAID sahipleri tarafından yüksek öncelikli olarak işaretlenen gönderilere anında dikkat verilir.
+* SAID sahipleri tarafından yüksek öncelikli olarak işaretlenmiş gönderimlere hemen dikkat edilir.
 
-Gönderiniz, bir analist vakanızı işlemeye başlamadan önce bile size en son belirlemeyi vermek için sistemlerimiz tarafından hemen taranır. Aynı dosyanın bir analist tarafından zaten işlenmiş olduğunu unutmayın. Belirleme güncelleştirmelerini kontrol etmek için, gönderme ayrıntıları sayfasında yeniden seçerek.
+Gönderiniz, bir analist davanızı işlemeye başlamadan önce bile size en son belirlemeyi sağlamak için sistemlerimiz tarafından hemen taranır. Aynı dosyanın bir analist tarafından zaten işlenmiş olabileceğini unutmayın. Belirleme güncelleştirmelerini denetlemek için gönderim ayrıntıları sayfasında yeniden tara'yı seçin.

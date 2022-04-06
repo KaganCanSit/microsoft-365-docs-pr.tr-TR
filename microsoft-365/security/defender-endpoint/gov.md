@@ -1,6 +1,6 @@
 ---
-title: ABD Kamu müşterileri için Uç Nokta için Microsoft Defender
-description: ABD Kamu müşterileri için Uç Nokta için Microsoft Defender gereksinimleri ve özellikleri hakkında bilgi
+title: ABD Uç Nokta için Microsoft Defender müşterileri için yeni hizmet
+description: ABD Kamu Uç Nokta için Microsoft Defender gereksinimleri ve yetenekleri hakkında bilgi
 keywords: kamu, gcc, yüksek, gereksinimler, özellikler, defender, Uç Nokta için Microsoft Defender, uç nokta, dod
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -16,20 +16,20 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 03d4d22bdce9f18b4883437215ea5cba50b3868e
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: b6c9594112e347439945d3c21f61f9272edb935f
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681358"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507377"
 ---
-# <a name="microsoft-defender-for-endpoint-for-us-government-customers"></a>ABD Kamu müşterileri için Uç Nokta için Microsoft Defender
+# <a name="microsoft-defender-for-endpoint-for-us-government-customers"></a>ABD Uç Nokta için Microsoft Defender müşterileri için yeni hizmet
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-Azure US Government ortamında yerleşik olarak yer alan US Government müşterileri için Uç Nokta için Microsoft Defender, Azure Ticari Uç Nokta için Defender ile aynı temel alınan teknolojileri kullanır.
+Uç Nokta için Microsoft Defender, Azure US Government ortamında yerleşik olarak yer alan US Government müşterileri için, Azure Ticari Uç Nokta için Defender ile aynı temeldeki teknolojileri kullanır.
 
 Bu teklif GCC, GCC High ve DoD müşterilerine sunulmaktadır ve ticari sürümle aynı engelleme, algılama, soruşturma ve düzeltmelerden temel alındı. Bununla birlikte, bu teklifin özelliklerinde bazı farklılıklar vardır.
 
@@ -38,7 +38,7 @@ Bu teklif GCC, GCC High ve DoD müşterilerine sunulmaktadır ve ticari sürüml
 
 ## <a name="licensing-requirements"></a>Lisans gereksinimleri
 
-US Government müşterileri için Uç Nokta için Microsoft Defender için aşağıdaki Microsoft toplu lisans tekliflerinden birini gerektirir:
+Uç Nokta için Microsoft Defender için ABD Kamu müşterileri için aşağıdaki Microsoft toplu lisans tekliflerinden biri gerekir:
 
 ### <a name="desktop-licensing"></a>Masaüstü lisansı
 
@@ -50,7 +50,7 @@ US Government müşterileri için Uç Nokta için Microsoft Defender için aşa�
 |---|---|---|
 |Microsoft 365 GCC G5|Microsoft 365 E5 High için GCC.|MICROSOFT 365 için G5|
 |Microsoft 365 G5 Güvenlik GCC|Microsoft 365 G5 Security for GCC High|Microsoft 365 DOD için G5 Güvenliği|
-|Uç Nokta için Microsoft Defender - GCC|GCC High uç noktası için Microsoft Defender|DOD için Uç Nokta için Microsoft Defender|
+|Uç Nokta için Microsoft Defender - GCC|Uç Nokta için Microsoft Defender High için GCC.|DOD Uç Nokta için Microsoft Defender için iş|
 |Windows 10 Enterprise E5 GCC|Windows 10 Enterprise yüksek için E5 GCC|dod Windows 10 Enterprise E5|
 |
 
@@ -62,13 +62,13 @@ US Government müşterileri için Uç Nokta için Microsoft Defender için aşa�
 
 |GCC|GCC Yüksek|DoD|
 |---|---|---|
-|Endpoint Server 2010 için Microsoft Defender GCC|GCC High için Endpoint Server için Microsoft Defender|DOD için Uç Nokta Sunucusu için Microsoft Defender|
+|Uç Nokta için Microsoft Defender Server GCC|Uç Nokta için Microsoft Defender Server for GCC High|DOD Uç Nokta için Microsoft Defender Sunucu|
 |Sunucular için Microsoft Defender|Sunucular için Microsoft Defender - Kamu|Sunucular için Microsoft Defender - Kamu|
 |
 
 ## <a name="portal-urls"></a>Portal URL'leri
 
-ABD Kamu müşterileri için Uç Nokta portalı URL'leri için Microsoft Defender'ı aşağıda bulabilirsiniz:
+Aşağıda, ABD Kamu Uç Nokta için Microsoft Defender portal URL'leri veleri ve):
 
 <br />
 
@@ -81,7 +81,7 @@ ABD Kamu müşterileri için Uç Nokta portalı URL'leri için Microsoft Defende
 |DoD|<https://security.microsoft.us>|
 |
 > [!NOTE]
-> GCC müşterisiysiniz ve Uç nokta ticari sürümü için Microsoft Defender'dan GCC'e taşıma sürecindeysanız, https://transition.security.microsoft.com Uç nokta ticari verileri için Microsoft Defender'ınıza erişmek için kullanın.
+> Müşteri GCC müşterisiysiniz ve https://transition.security.microsoft.com ticari olan müşteri Uç Nokta için Microsoft Defender ticari GCC, ticari verilerinize erişmek Uç Nokta için Microsoft Defender kullanın.
 
 ## <a name="endpoint-versions"></a>Uç nokta sürümleri
 
@@ -154,7 +154,8 @@ Aşağıdaki indirilebilir elektronik tablo, ağ bağlantı kurabilirsiniz ve bu
 
 |Etki alanı listesinin elektronik tablosu| Açıklama|
 |---|---|
-| Gov/GCC/DoD müşterileri için Uç nokta URL listesi için Microsoft Defender | Gov/GCC/DoD müşterileri için hizmet konumları, coğrafi konumlar ve işletim sistemi için belirli DNS kayıtlarının elektronik tablosu. <p> [Elektronik tabloyu buradan indirin.](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx)
+|Uç Nokta için Microsoft Defender müşteriler için bir URL listesi| Ticari müşteriler için hizmet konumları, coğrafi konumlar ve işletim sistemi için belirli DNS kayıtlarının elektronik tablosu. <p> [Elektronik tabloyu buradan indirin.](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)
+| Uç Nokta için Microsoft Defender Gov/GCC/DoD için URL listesi | Gov/GCC/DoD müşterileri için hizmet konumları, coğrafi konumlar ve işletim sistemi için belirli DNS kayıtlarının elektronik tablosu. <p> [Elektronik tabloyu buradan indirin.](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx)
 
 Daha fazla bilgi için bkz [. Cihaz ara sunucusunu ve İnternet bağlantı ayarlarını yapılandırma](configure-proxy-internet.md).
 
@@ -196,7 +197,7 @@ Bunlar bilinen boşluklardır:
 |Web içeriği filtreleme|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|![Hayır](images/svg/check-no.svg) Geliştirme aşamasında|
   
 
-Mobil Tehdit Savunması [(Android ve iOS'ta Uç Nokta için Microsoft Defender) özellikleri ve bilinen & vardır](mtd.md):
+Mobil Tehdit Savunması [(Android ve iOS için Uç Nokta için Microsoft Defender) özellikleri ve bilinen & bunlardır](mtd.md):
 
 <br />
 

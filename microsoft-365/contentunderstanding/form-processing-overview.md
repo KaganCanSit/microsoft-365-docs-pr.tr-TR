@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Microsoft SharePoint Syntex'da AI Derlemesi kullanarak form işleme modelleri oluşturma hakkında SharePoint Syntex.
-ms.openlocfilehash: d04de2fc71b0b393e560e354253be42053725416
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: a3a3d1fa0e160b96d487a5eeb03c69f9e4fe7fb3
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450780"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507399"
 ---
 # <a name="form-processing-overview-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'ta form işlemeye genel bakış
 
@@ -31,7 +31,7 @@ AI Builder form işlemeyi kullanarak, form ve faturalar gibi yapılandırılmı�
 Kuruluşlar genellikle posta, faks, e-posta gibi çeşitli kaynaklardan büyük miktarlarda fatura alır. Bu belgelerin işlemesi ve bunları veritabanına el ile girmek oldukça fazla zaman alsa da bu kadar zaman alır. Belgelerinizin metinlerini, anahtar/değer çiftlerini ve tabloları ayıklamak için AI kullanarak form işleme bu işlemi otomatik halelar. 
 
 > [!NOTE]
-> Aşağıdaki [benimsemeyi SharePoint Syntex: Form işleme senaryo](./adoption-getstarted.md) örnekleri hakkında daha fazla bilgi edinmek için çalışmaya başlama kılavuzu.
+> Form işleme [SharePoint Syntex için Kullanmaya başlayın benimseme](./adoption-getstarted.md) kılavuzuna bakın.
 
 Örneğin, belge kitaplığına yüklenen tüm satın alma siparişi belgelerini tanımlayan bir form işleme modeli oluşturabilirsiniz. Her satın alma siparişinden sizin için önemli olan *SATıN* ALMA Siparişi Numarası, Tarih veya Toplam Maliyet *gibi belirli verileri ayıklar* ve *görüntüebilirsiniz*.
 
@@ -46,6 +46,10 @@ Bir Office 365, kullanıcıların belge kitaplığında [form](./set-up-content-
 ### <a name="file-limitations"></a>Dosya sınırlamaları
 
 Form işleme modelleri kullanırken, dosya kullanımıyla ilgili gereksinimleri ve [sınırlamaları not edin](/ai-builder/form-processing-model-requirements).
+
+### <a name="supported-languages"></a>Desteklenen diller
+
+Form işleme, belgeleri 73'den fazla dilde destekler. Dil listesi için bkz. [Form işleme dili desteği](/power-platform-release-plan/2021wave2/ai-builder/form-processing-new-language-support).
 
 ### <a name="multi-geo-environments"></a>Multi-Geo ortamları
 

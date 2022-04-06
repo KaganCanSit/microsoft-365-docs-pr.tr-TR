@@ -1,5 +1,5 @@
 ---
-title: Cihazları tek bir Intune
+title: cihazları Intune ile yönetme
 ms.author: bcarter
 author: brendacarter
 f1.keywords:
@@ -10,7 +10,7 @@ f1.keywords:
 manager: dougeby
 audience: ITPro
 ms.topic: article
-description: Uç nokta cihazlarınızı Microsoft Intune ve güvenlik mimarisinin bir parçası olarak Sıfır Güven ve uzak çalışanlar için koruma sağlarken fidye yazılımlarına karşı koruma sağlar.
+description: Uzak çalışanlar için koruma oluştururken fidye yazılımlarına karşı koruma sağlayarak uç nokta cihazlarınızı Sıfır Güven güvenlik mimarinizin bir parçası olarak Microsoft Intune kaydedin.
 ms.prod: microsoft-365-enterprise
 ms.localizationpriority: high
 ms.collection:
@@ -19,101 +19,101 @@ ms.collection:
 - m365solution-overview
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: 2ca980a3f4f66b1b2d0a838f16c6ac7f138bc979
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: a9872e707bbbb6546d6801ac88ebd28f23fb9806
+ms.sourcegitcommit: a06bb81fbd727a790a8fe6a3746b8a3cf62a6b24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64570095"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "64651333"
 ---
-# <a name="manage-devices-with-intune-overview"></a>Hızlı Genel Bakış ile Intune yönetme
+# <a name="manage-devices-with-intune-overview"></a>Intune Genel Bakış ile cihazları yönetme
 
-Kurumsal düzeyde güvenliğin temel bileşenleri arasında cihazları yönetme ve koruma vardır. İster güvenlik mimarisi Sıfır Güven, fidye yazılımlarına karşı ortamınızı bağlantılara açıklaştırın veya uzak çalışanları desteklemek için korumalar inşa ediyor olun, cihazları yönetmek stratejinin bir parçasıdır.
-Microsoft 365 cihazları yönetmeye ve korumaya yönelik çeşitli araçlar ve metodolojiler içerir ama bu kılavuz Microsoft'un Cihaz Yönetimi'ne yönelik önerilerini Microsoft Intune. Aşağıdakiler sizin için doğru kılavuz olur:
+Kurumsal düzeyde güvenliğin temel bileşenlerinden biri, cihazları yönetmeyi ve korumayı içerir. Sıfır Güven bir güvenlik mimarisi oluştururken, ortamınızı fidye yazılımlarına karşı sağlamlaştırırken veya uzak çalışanları desteklemek için korumalar oluştururken, cihazları yönetmek stratejinin bir parçasıdır.
+Microsoft 365, cihazları yönetmeye ve korumaya yönelik çeşitli araçlar ve yöntemler içerirken, bu kılavuz Microsoft Intune kullanarak Microsoft'un önerilerinde yol gösterir. Aşağıdakiler sizin için doğru yoldur:
 
-- Cihazları Azure AD Join (Karma Azure AD Intune dahil) aracılığıyla Intune'e kaydetmeyi plan edin.
-- Cihazları el ile mobil cihaza Intune.
-- Uygulamalar ve veriler için koruma uygulama planları olan BYOD cihazlarına izin verin ve/veya bu cihazları yönetime kaydettirin.
+- Azure AD Join (Hibrit Azure AD Katılımı dahil) aracılığıyla cihazları Intune kaydetmeyi planlayın.
+- Cihazları el ile Intune kaydetmeyi planlayın.
+- Uygulamalar ve veriler için koruma uygulama ve/veya bu cihazları Intune kaydetme planlarına sahip KCG cihazlarına izin verin.
 
-Öte yandan, ortamınız birlikte yönetim planları (örneğin, proje Microsoft Endpoint Configuration Manager) varsa, bkz[.](/mem/configmgr/comanage/) Organizasyonunıza en uygun yolu geliştirmek için birlikte yönetim belgeleri. Ortamınıza proje planları Windows 365 Bulut PC, Windows 365 Enterprise [için](/windows-365/enterprise/) belgelerinize bakın.
+Öte yandan, ortamınız Microsoft Endpoint Configuration Manager de dahil olmak üzere ortak yönetim planları içeriyorsa, kuruluşunuz için en iyi yolu geliştirmek için [ortak yönetim belgelerine](/mem/configmgr/comanage/) bakın. Ortamınız Windows 365 Bulut PC planları içeriyorsa, kuruluşunuz için en iyi yolu geliştirmek için [Windows 365 Enterprise belgelerine](/windows-365/enterprise/) bakın.
 
 ## <a name="why-manage-endpoints"></a>Uç noktaları neden yönetebilirsiniz?
 
-Modern kuruluş, verilerine erişen inanılmaz çeşitli uç noktalara sahiptir. Bu kurulum muazzam bir saldırı yüzeyi oluşturur ve bunun sonucunda uç noktalar sizin güvenlik stratejinizin en zayıf Sıfır Güven olabilir.
+Modern kuruluş, verilerine erişen inanılmaz çeşitli uç noktalara sahiptir. Bu kurulum çok büyük bir saldırı yüzeyi oluşturur ve sonuç olarak uç noktalar kolayca Sıfır Güven güvenlik stratejinizdeki en zayıf bağlantı haline gelebilir.
 
-Çoğunlukla, dünya uzak veya karma bir iş modeline kayarak gerekli olarak hareket ediyor ve kullanıcılar her yerden, her cihazdan, tarihe göre daha çok çalışıyor. Saldırganlar bu değişiklikden yararlanmak için taktiklerini hızlı bir şekilde ayariyor. Birçok kuruluş, bu yeni iş zorluklarında ilerlerken kısıtlanmış kaynakla karşılaşmaktadır. Neredeyse gece, şirketler dijital dönüşümü hızlandırmıştır. Basitçe ifade etmek gerekirse, kişilerin çalışma yolu değişmiştir; artık şirket kaynakları genel kaynaklarına yalnızca ofisten ve şirkete ait cihazlardan erişmeyi beklemeyeceksiniz.
+Dünya uzak veya hibrit bir iş modeline geçtikten sonra çoğunlukla ihtiyaçlara göre hareket eden kullanıcılar, her yerden, herhangi bir cihazdan, tarihteki her zamankinden daha fazla çalışıyor. Saldırganlar bu değişikliklerden yararlanmak için taktiklerini hızlı bir şekilde ayarlıyor. Birçok kuruluş, bu yeni iş güçlüklerinde gezinirken kısıtlanmış kaynaklarla karşı karşıya kalır. Neredeyse bir gecede şirketler dijital dönüşümü hızlandırdı. Basitçe belirtmek gerekirse, insanların çalışma şekli değişti; artık çok sayıda şirket kaynağına yalnızca ofisten ve şirkete ait cihazlardan erişmeyi beklemiyoruz.
 
-Şirket kaynaklarınıza erişen uç noktalara görünürlük kazanmak, cihaz stratejinizin ilk Sıfır Güven adımıdır. Mobil cihazlar çoğunlukla izlemez ve koruma olmadan devam ederken şirketler bilgisayarları güvenlik açıklarından ve saldırılardan önceden korur. Verilerinizi risklere karşı açık durumuna getirmemenizi sağlamak için, kuruluş ilkesine göre uygun erişim düzeyini sağlamak için her uç noktayı riskler için izlememiz ve ayrıntılı erişim denetimleri ihtiyacımız vardır. Örneğin, kişisel bir cihazın güvenliği engellenirse, kurumsal uygulamaların bilinen güvenlik açıklarına açık kalmaması için erişimi engelleyebilirsiniz.
+Şirket kaynaklarınıza erişen uç noktaların görünürlüğünü elde etmek, Sıfır Güven cihaz stratejinizin ilk adımıdır. Genellikle şirketler bilgisayarları güvenlik açıklarına ve saldırılara karşı korurken mobil cihazlar genellikle izlenmeyen ve korumasız kalır. Verilerinizi riske atmadığınızdan emin olmak için her uç noktayı risklere karşı izlememiz ve kuruluş ilkesine göre uygun erişim düzeyini sağlamak için ayrıntılı erişim denetimleri kullanmamız gerekir. Örneğin, kişisel bir cihazın jailbreak uygulanmışsa, kurumsal uygulamaların bilinen güvenlik açıklarına maruz kalmadığından emin olmak için erişimi engelleyebilirsiniz.
 
-Bu makale dizisi, kaynaklarınıza erişen cihazları yönetmek için önerilen bir süreçte yol sunar. Önerilen adımları izlediğinizde, organizasyonunız cihazlarınız ve erişim sağlandık kaynaklar için çok gelişmiş koruma elde eder.
+Bu makale serisi, kaynaklarınıza erişen cihazları yönetmek için önerilen bir işlemde yol gösterir. Önerilen adımları izlerseniz, kuruluşunuz cihazlarınız ve erişecekleri kaynaklar için çok gelişmiş koruma elde eder.
 
-## <a name="implementing-the-layers-of-protection-on-and-for-devices"></a>Cihazlara ve cihazlara koruma katmanları uygulama
+## <a name="implementing-the-layers-of-protection-on-and-for-devices"></a>Cihazlar için ve üzerinde koruma katmanlarını uygulama
 
-Cihazlar ve cihazlara yönelik verileri ve uygulamaları korumak çok katmanlı bir işlemdir. Unmanaged cihazlarda kazanabilirsiniz bazı korumalar vardır. Cihazları yönetime kaydettikten sonra, daha gelişmiş denetimler gerçekleştirebilirsiniz. Uç noktalarınıza tehdit koruması dağıtıldığında, daha da fazla içgörü ve bazı saldırıları otomatik olarak düzeltme olanağı elde edersiniz. Son olarak, organizasyonunız hassas verileri tanımlama, sınıflandırma ve etiketler uygulama ve veri kaybı önleme ilkelerini yapılandırma çalışmalarını başlattısa, uç noktalarınız üzerinde veriler için daha da ayrıntılı koruma elde edinebilirsiniz.
+Cihazlarda ve cihazlardaki verileri ve uygulamaları korumak çok katmanlı bir işlemdir. Yönetilmeyen cihazlarda kazanabileceğiniz bazı korumalar vardır. Cihazları Intune kaydettikten sonra daha gelişmiş denetimler uygulayabilirsiniz. Tehdit koruması uç noktalarınıza dağıtıldığında daha da fazla içgörü elde eder ve bazı saldırıları otomatik olarak düzeltme olanağı elde edebilirsiniz. Son olarak, kuruluşunuz hassas verileri tanımlama, sınıflandırma ve etiketler uygulama ve veri kaybı önleme ilkelerini yapılandırma işini yerine getirdiyse, uç noktalarınızdaki veriler için daha ayrıntılı koruma elde edebilirsiniz.
 
-Aşağıdaki diyagramda, bu ortama Sıfır Güven SaaS uygulamalarının ve Microsoft 365 yüksek güvenlik Microsoft 365 için yapı taşlarını gösteren yapı taşları yer almaktadır. Cihazlarla ilgili öğeler 1'den 7'ye kadar numara olur. Bunlar, koruma cihazı yöneticilerinin başaracakları diğer yöneticilerle eşgüdüm altına alınan katmanlardır.
+Aşağıdaki diyagramda, bu ortama tanıttığınız Microsoft 365 ve diğer SaaS uygulamaları için Sıfır Güven bir güvenlik duruşu elde etmek için yapı taşları gösterilmektedir. Cihazlarla ilgili öğeler 1 ile 7 arasında numaralandırılır. Bunlar, cihaz yöneticilerinin gerçekleştirmek için diğer yöneticilerle koordine edeceği koruma katmanlarıdır.
 
-![Microsoft 365 Sıfır Güven yığını](../media/devices/m365-zero-trust-deployment-stack-devices.png#lightbox)
+![Microsoft 365 Sıfır Güven dağıtım yığını](../media/devices/m365-zero-trust-deployment-stack-devices.png#lightbox)
 
-Bu şekilde:
+Bu çizimde:
 
 |&nbsp;|Adım|Açıklama|Lisans gereksinimleri|
 |---|---|---|---|
-|1|Kimlik ve cihaz erişim Sıfır Güven başlangıç noktası ilkelerini yapılandırma|Düzey 2 Uygulama Koruma [İlkeleri (UYGULAMA) veri korumasını uygulamak için kimlik yöneticinizle birlikte çalışma](manage-devices-with-intune-app-protection.md). Bu ilkeler cihazları yönetmenizi gerektirmez. UYGULAMA ilkelerini aşağıdaki Intune. Kimlik yöneticiniz onaylı uygulamalar gerektiren bir Koşullu Erişim ilkesi yapılandırıyor.|E3, E5, F1, F3, F5|
-|2|Cihazları yönetime kaydedin|Bu görevin uygulanması için daha fazla planlama ve zaman gerekir. Bu araç en iyi Intune tümleştirme sağladığı için Microsoft, cihazları kaydetmek için Intune kullanılması önerilir. Platforma bağlı olarak, cihazları kaydetmek için birkaç seçenek vardır. Örneğin, Windows cihazları Azure AD Join kullanılarak veya AutoPilot kullanılarak kaydedebilirsiniz. Her bir platforma yönelik seçenekleri gözden geçirmeniz ve ortamınıza en uygun kayıt seçeneğinin hangisi olduğuna karar vermeniz gerekir. Daha [fazla bilgi için bkz. 3. Adım: Cihazları yönetime](manage-devices-with-intune-enroll.md) kaydetme.|E3, E5, F1, F3, F5|
-|3|Uyumluluk ilkelerini yapılandırma|Uygulamalarınıza ve verilerinize erişen cihazların en düşük gereksinimleri (örneğin, cihazlar parola veya pin korumalı) karşı olduğundan ve işletim sisteminin güncel olduğundan emin olmak istiyor olun. Uyumluluk ilkeleri, cihazların karşılaması gereken gereksinimleri tanımlamanın yoludur. [3. Adım. Uyumluluk ilkeleri ayarlamak, bu](manage-devices-with-intune-compliance-policies.md) ilkeleri yapılandırmanıza yardımcı olur.|E3, E5, F3, F5|
-|4|Kimlik Enterprise cihaz erişim ilkelerini Sıfır Güven (önerilen) bir kimlik ve cihaz erişimi ilkelerini yapılandırma|Cihazlarınız kaydedilene kadar, kimlik yöneticinizle birlikte çalışarak koşullu Erişim ilkelerini sağlıklı ve uyumlu cihazlar gerektirecek [şekilde ayarlamaları sebilirsiniz](manage-devices-with-intune-require-compliance.md).|E3, E5, F3, F5|
-|5|Yapılandırma profillerini dağıtma|Bir cihazı yalnızca uyumlu olarak işaret eden veya yapılandırılan ölçütlere dayalı olmayan cihaz uyumluluk ilkelerinin aksine, yapılandırma profilleri aslında cihaz ayarlarının yapılandırmasını değiştirir. Siber tehditlere karşı cihazlara yönelik yapılandırma ilkelerini kullanabilirsiniz. Bkz [. Adım 5. Yapılandırma profillerini dağıtın](manage-devices-with-intune-configuration-profiles.md).|E3, E5, F3, F5|
-|6|Cihaz riskini ve güvenlik taban çizgileriyle uyumluluğu izleme|Bu adımda, diğer Intune bağlan Uç Nokta için Microsoft Defender. Bu tümleştirmeyle, cihaz riskini erişim koşulu olarak izleyebilirsiniz. Riskli durumda bulunan cihazlar engellenir. Ayrıca, güvenlik taban çizgileriyle uyumluluğu da izleyebilirsiniz. Bkz [. Adım 6. Cihaz riskini ve güvenlik taban çizgilerine uyumluluğu takip edin](manage-devices-with-intune-monitor-risk.md).|E5, F5|
-|7|Bilgi koruma yetenekleriyle veri kaybı önleme (DLP) uygulayın|Organizasyonunız hassas verileri tanımlama ve belgeleri etiketleme çalışmalarını başlattısa, cihazlarınız üzerinde hassas bilgileri ve belgeleri korumak için bilgi koruma [yöneticinizle birlikte çalışabilirsiniz](manage-devices-with-intune-dlp-mip.md).|E5, F5 uyumluluk eklentisi|
+|1|Başlangıç noktası Sıfır Güven kimlik ve cihaz erişim ilkelerini yapılandırma|[Düzey 2 Uygulama Koruma İlkeleri (APP) veri korumasını uygulamak](manage-devices-with-intune-app-protection.md) için kimlik yöneticinizle birlikte çalışın. Bu ilkeler, cihazları yönetmenizi gerektirmez. uygulama ilkelerini Intune yapılandırabilirsiniz. Kimlik yöneticiniz, onaylı uygulamalar gerektirecek şekilde bir Koşullu Erişim ilkesi yapılandırıyor.|E3, E5, F1, F3, F5|
+|2|Cihazları Intune kaydetme|Bu görevin uygulanması için daha fazla planlama ve zaman gerekir. Microsoft, cihazları kaydetmek için Intune kullanılmasını önerir çünkü bu araç en iyi tümleştirmeyi sağlar. Platforma bağlı olarak cihazları kaydetmek için çeşitli seçenekler vardır. Örneğin, Windows cihazlar Azure AD Join veya Autopilot kullanılarak kaydedilebilir. Her platform için seçenekleri gözden geçirmeniz ve ortamınız için en uygun kayıt seçeneğini belirlemeniz gerekir. Daha fazla bilgi için bkz[. 3. Adım: Cihazları Intune kaydetme](manage-devices-with-intune-enroll.md).|E3, E5, F1, F3, F5|
+|3|Uyumluluk ilkelerini yapılandırma|Uygulamalarınıza ve verilerinize erişen cihazların en düşük gereksinimleri karşıladığından emin olmak istiyorsunuz; örneğin cihazlar parola veya pin korumalıdır ve işletim sistemi günceldir. Uyumluluk ilkeleri, cihazların karşılaması gereken gereksinimleri tanımlamanın yoludur. [3. Adım. Uyumluluk ilkelerini ayarlama](manage-devices-with-intune-compliance-policies.md) , bu ilkeleri yapılandırmanıza yardımcı olur.|E3, E5, F3, F5|
+|4|kimlik ve cihaz erişim ilkelerini Sıfır Güven Enterprise (önerilen) yapılandırma|Cihazlarınız kaydedildikten sonra, [koşullu erişim ilkelerini sağlıklı ve uyumlu cihazlar gerektirecek şekilde ayarlamak için](manage-devices-with-intune-require-compliance.md) kimlik yöneticinizle birlikte çalışabilirsiniz.|E3, E5, F3, F5|
+|5|Yapılandırma profillerini dağıtma|Yapılandırma profilleri, bir cihazı yalnızca uyumlu olarak işaretleyen veya yapılandırdığınız ölçütlere göre olmayan cihaz uyumluluk ilkelerinin aksine, aslında bir cihazdaki ayarların yapılandırmasını değiştirir. Cihazları siber tehditlere karşı sağlamlaştırmak için yapılandırma ilkelerini kullanabilirsiniz. Bkz [. 5. Adım. Yapılandırma profillerini dağıtma](manage-devices-with-intune-configuration-profiles.md).|E3, E5, F3, F5|
+|6|Cihaz riskini ve güvenlik temelleriyle uyumluluğu izleme|Bu adımda, Intune Uç Nokta için Microsoft Defender bağlarsınız. Bu tümleştirmeyle cihaz riskini erişim koşulu olarak izleyebilirsiniz. Riskli durumda olduğu belirlenen cihazlar engellenir. Güvenlik temelleriyle uyumluluğu da izleyebilirsiniz. Bkz [. 6. Adım. Cihaz riskini ve güvenlik temellerine uyumluluğunu izleyin](manage-devices-with-intune-monitor-risk.md).|E5, F5|
+|7|Bilgi koruma yetenekleriyle veri kaybı önleme (DLP) uygulayın|Kuruluşunuz hassas verileri tanımlamak ve belgeleri etiketlemek için çalışmayı kullandıysa, [cihazlarınızdaki hassas bilgileri ve belgeleri korumak](manage-devices-with-intune-dlp-mip.md) için bilgi koruma yöneticinizle birlikte çalışabilirsiniz.|E5, F5 uyumluluk eklentisi|
 
-## <a name="coordinating-endpoint-management-with-zero-trust-identity-and-device-access-policies"></a>Kimlik ve cihaz erişimi ilkeleriyle Sıfır Güven uç nokta yönetimini birlikte uygulama
+## <a name="coordinating-endpoint-management-with-zero-trust-identity-and-device-access-policies"></a>Uç nokta yönetimini Sıfır Güven kimlik ve cihaz erişim ilkeleriyle koordine etme
 
-Bu kılavuz, kimlik ve cihaz erişim Sıfır Güven [önerilen kılavuzlarla sıkı bir şekilde eşgüdüm sağlar](../security/office-365-security/microsoft-365-policies-configurations.md). Kimlik ekibimizle birlikte çalışarak, Azure AD'de Koşullu Erişim Intune'te yapılandırmış olacağınız korumayı gerçekleştireceksiniz.
+Bu kılavuz, önerilen [Sıfır Güven kimlik ve cihaz erişim ilkeleriyle](../security/office-365-security/microsoft-365-policies-configurations.md) sıkı bir şekilde koordine edilir. Intune ile yapılandırdığınız korumayı Azure AD'deki Koşullu Erişim ilkelerine taşımak için kimlik ekibinizle birlikte çalışacaksınız.
 
-Aşağıda, Intune/MEM'de yapacaksınız çalışmayla ilgili adım açıklamalı olarak ayarlanmış önerilen ilkeyi ve Azure AD'de eşgüdümlü olarak yardım edecek ilgili Koşullu Erişim ilkelerinin bir çizimi ve ve hazır bir şekilde gösterilmiştir.
+aşağıda, Intune/MEM'de gerçekleştirdiğiniz çalışma için adım açıklama balonları içeren önerilen ilke kümesinin ve Azure AD'de koordine olmanıza yardımcı olacak ilgili Koşullu Erişim ilkelerinin bir çizimi verilmiştir.
 
-[![Sıfır Güven ve cihaz erişimi ilkelerini doğrulama](../media/devices/identity-device-overview-steps.png#lightbox)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/media/devices/identity-device-overview-steps.png)
+[![kimlik ve cihaz erişim ilkelerini Sıfır Güven](../media/devices/identity-device-overview-steps.png#lightbox)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/media/devices/identity-device-overview-steps.png)
 
-Bu şekilde:
+Bu çizimde:
 
-- 1. Adım'da Düzey 2 Uygulama Koruma İlkelerini [(UYGULAMA)](manage-devices-with-intune-app-protection.md) uygulama ilkeleriyle birlikte önerilen veri koruma düzeyini yapılandırabilirsiniz. Daha sonra, ilgili Koşullu Erişim kuralını bu korumanın kullanımını gerektirecek şekilde yapılandırmak için kimlik ekibiyle birlikte çalışırsanız.
-- 2, 3 ve 4'lerde, cihazları Intune/MEM ile yönetime kaydettir, cihaz uyumluluk ilkeleri tanımlar ve sonra ilgili Koşullu Erişim kuralını yalnızca uyumlu cihazlara erişim izni verecek şekilde yapılandırmak için kimlik ekibimizle birlikte çalışırsanız.
+- 1. Adım, [Düzey 2 Uygulama Koruma İlkelerini Uygulama (APP)](manage-devices-with-intune-app-protection.md) bölümünde, APP ilkeleriyle önerilen veri koruma düzeyini yapılandırabilirsiniz. Ardından ilgili Koşullu Erişim kuralını bu korumanın kullanılmasını gerektirecek şekilde yapılandırmak için kimlik ekibinizle birlikte çalışırsınız.
+- 2., 3. ve 4. Adımlarda cihazları Intune ile yönetime kaydeder, cihaz uyumluluk ilkeleri tanımlarsınız ve ardından kimlik ekibinizle koordine olarak ilgili Koşullu Erişim kuralını yalnızca uyumlu cihazlara erişime izin verecek şekilde yapılandırırsınız.
 
 <!---
 ## Managing change with users
 --->
 
-## <a name="enrolling-devices-vs-onboarding-devices"></a>Cihazları kaydetme ve cihaz ekleme
+## <a name="enrolling-devices-vs-onboarding-devices"></a>Cihazları kaydetme ve cihazları ekleme karşılaştırması
 
-Bu kılavuza uyarsanız, cihazları yönetime kaydetmek için Intune (veya başka bir araç) kullandıracak ve cihazları iki hizmet için kullanıyabilirsiniz:
+Bu yönergeleri izlerseniz, cihazları Intune kullanarak yönetime kaydedersiniz ve aşağıdaki Microsoft 365 özellikleri için cihazları eklersiniz:
 
-- Uç Nokta için Defender
-- Uç nokta DLP
+- Uç Nokta için Microsoft Defender
+- Microsoft 365 Uyumluluğu (uç nokta veri kaybı önleme (DLP) için) 
 
-Aşağıdaki çizimde, bu iki tablo Intune.
+Aşağıdaki çizimde bunun Intune kullanılarak nasıl çalıştığı ayrıntılı olarak gösterilmiştir.
 
-![Kaydolma ve cihaz ekleme işlemi](../media/devices/devices-enroll-onboard-process.png#lightbox)
+![Cihazları kaydetme ve ekleme işlemi](../media/devices/devices-enroll-onboard-process.png#lightbox)
 
 Çizimde:
 
-1. Diğer cihazlarla cihazları yönetime Intune.
-2. Uç Intune Defender'a cihaz ekleme için Cihaz Ekleme'ye kullanın.
-3. Uç nokta için Defender'a dahil olan cihazlar, Uç nokta DLP dahil olmak Microsoft 365 uyumluluk özellikleri için de ekli olarak kullanılır.
+1. Intune ile cihazları yönetime kaydetme.
+2. cihazları Uç Nokta için Microsoft Defender eklemek için Intune kullanın.
+3. Uç Nokta için Defender'a eklenen cihazlar, uç nokta DLP'si de dahil olmak üzere Microsoft 365 uyumluluk özellikleri için de eklenir.
 
-Yalnızca diğer Intune cihazların yönetiminde olduğunu unutmayın. Ekleme, bir cihazın belirli bir hizmetle bilgi paylaşabilme özelliği anlamına gelir. Aşağıdaki tabloda, cihazları yönetime kaydetme ile belirli bir hizmet için cihazları ekleme arasındaki farklar özetlenmiştir.
+Cihazları yalnızca Intune yönettiğini unutmayın. Ekleme, bir cihazın belirli bir hizmet özelliğiyle bilgi paylaşma özelliğini ifade eder. Aşağıdaki tabloda, belirli bir özellik için cihazları yönetime kaydetme ve cihazları ekleme arasındaki farklar özetlenmektedir.
 
-|&nbsp;|Kaydol|Onboard|
+|&nbsp;|Kayıt|Onboard|
 |---|---|---|
-|Açıklama|Kayıt, cihazları yönetmek için geçerlidir. Cihazlar, cihaz yönetimi için Intune veya Configuration Manager.|Ekleme, bir cihazı özellikler kümesi üzerinde belirli bir özelliklerle çalışacak şekilde Microsoft 365. Şu anda ekleme, yazılım Uç Nokta için Microsoft Defender Microsoft uyumluluk özellikleri için geçerlidir. <br/><br/> Diğer Windows, ekleme işlemi Defender'ın çevrimiçi hizmete bağlanmasına ve cihaza uygulanacak ilkeleri kabul etmesinde izin veren Windows Defender'da bir ayarın bağlanması içerir.|
-|Kapsam|Bu cihaz yönetim araçları, cihazı güvenlik gibi belirli hedefleri karşılayacak şekilde yapılandırma da dahil olmak üzere tüm cihazı yönetir.|Ekleme, yalnızca geçerli olan hizmetleri etkiler.|
-|Önerilen yöntem|Azure Active Directory katıl, cihazları otomatik olarak Intune.|Intune uç nokta için cihaz ekleme için tercih edilen yöntem Windows Defender ve sonuç olarak uyumluluk Microsoft 365 tercih edilir. <br/><br/> Diğer yöntemleri kullanarak uyumluluk özelliklerini Microsoft 365 cihazlar, Uç Nokta için Defender'a otomatik olarak kaydolmaz.|
-|Diğer yöntemler|Diğer kayıt yöntemleri cihazın platformuna ve byOD olup olmadığını veya kuruluş tarafından yönetil olup olmadığını bağlıdır.|Cihaz ekleme için diğer yöntemler, önerilen sırada şunlardır: <ul><li>Yapılandırma Yöneticisi</li><li>Diğer mobil cihaz yönetim aracı (cihaz tek bir cihaz tarafından yönetiliyorsa)</li><li>Yerel betik</li><li>Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını eklemeye uygun VDI yapılandırma paketi</li><li>Grup İlkesi</li></ul>|
+|Açıklama|Kayıt, cihazları yönetmek için geçerlidir. Cihazlar Intune veya Configuration Manager ile yönetim için kaydedilir.|Ekleme, bir cihazı Microsoft 365'daki belirli bir özellik kümesiyle çalışacak şekilde yapılandırıyor. Şu anda ekleme, Uç Nokta için Microsoft Defender ve Microsoft uyumluluk özellikleri için geçerlidir. <br/><br/> Windows cihazlarda ekleme, Windows Defender'da Defender'ın çevrimiçi hizmete bağlanmasına ve cihaza uygulanan ilkeleri kabul etmesine olanak tanıyan bir ayar eklemeyi içerir.|
+|Kapsam|Bu cihaz yönetimi araçları, cihazı güvenlik gibi belirli hedeflere uyacak şekilde yapılandırmak da dahil olmak üzere tüm cihazı yönetir.|Ekleme yalnızca geçerli olan özellikleri etkiler.|
+|Önerilen yöntem|Azure Active Directory birleştirme, cihazları otomatik olarak Intune kaydeder.|Intune, uç nokta için cihazları Windows Defender ve dolayısıyla uyumluluk özelliklerini Microsoft 365 için tercih edilen yöntemdir. <br/><br/> Diğer yöntemler kullanılarak Microsoft 365 uyumluluk özelliklerine eklenen cihazların Uç Nokta için Defender'a otomatik olarak kaydedilmediğini unutmayın.|
+|Diğer yöntemler|Diğer kayıt yöntemleri, cihazın platformuna ve KCG olup olmadığına veya kuruluşunuz tarafından yönetilip yönetilmediğine bağlıdır.|Cihaz eklemeye yönelik diğer yöntemler şunlardır: <ul><li>Yapılandırma Yöneticisi</li><li>Diğer mobil cihaz yönetim aracı (cihaz bir tarafından yönetiliyorsa)</li><li>Yerel betik</li><li>Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını eklemeye yönelik VDI yapılandırma paketi</li><li>Grup İlkesi</li></ul>|
 
-## <a name="learning-for-administrators"></a>Learning için sistem yöneticisi
+## <a name="learning-for-administrators"></a>Yöneticiler için Learning
 
-Aşağıdaki kaynaklar yöneticilerin MEM ve MEM'nin kullanımıyla ilgili kavramları öğrenmesi için yardımcı Intune.
+Aşağıdaki kaynaklar yöneticilerin MEM ve Intune kullanma hakkındaki kavramları öğrenmesine yardımcı olur.
 
-[Microsoft Endpoint Manager](/learn/modules/simplify-device-management-with-microsoft-endpoint-manager/) ile cihaz yönetimini basitleştirme Açıklama: Modern yönetim Microsoft Endpoint Manager ve Microsoft 365'daki işletme yönetim araçlarının tüm cihazlarınızı yönetimini nasıl basitleştirebilirsiniz hakkında bilgi edinebilirsiniz.
+[Microsoft Endpoint Manager Açıklama ile cihaz yönetimini basitleştirme](/learn/modules/simplify-device-management-with-microsoft-endpoint-manager/): Modern yönetim, Microsoft Endpoint Manager ve Microsoft 365'deki iş yönetimi araçlarının tüm cihazlarınızın yönetimini nasıl kolaylaştırabileceği hakkında bilgi edinin.
 
-[Microsoft Intune](/learn/modules/set-up-microsoft-intune/) Ayarlama: Microsoft Intune bir parçası olan Microsoft Endpoint Manager, verimli olmak için kuruluşta çalışan kişilerin cihaz, uygulama ve verileri korumanıza yardımcı olur. Bu modülü tamamladıktan sonra, çalışma Microsoft Intune. Ayarlama; desteklenen yapılandırmaları gözden geçirmeyi, Intune'e kaydolmayı, kullanıcıları ve grupları eklemeyi, kullanıcılara lisans atamayı, yönetici izinlerini atamayı ve MDM yetkilisini ayarlamayı içerir.
+[Microsoft Intune Açıklamayı Ayarlama](/learn/modules/set-up-microsoft-intune/): Microsoft Endpoint Manager bir parçası olan Microsoft Intune, kuruluşunuzdaki kişilerin üretken olmak için kullandığı cihazları, uygulamaları ve verileri korumanıza yardımcı olur. Bu modülü tamamladıktan sonra Microsoft Intune ayarlamış olacaksınız. Kurulum, desteklenen yapılandırmaları gözden geçirmeyi, Intune kaydolmayı, kullanıcı ve grup eklemeyi, kullanıcılara lisans atamayı, yönetici izinleri vermeyi ve MDM yetkilisini ayarlamayı içerir.

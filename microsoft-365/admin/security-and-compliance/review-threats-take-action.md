@@ -15,12 +15,12 @@ ms.collection:
 ms.custom: AdminSurgePortfolio
 search.appverid: MET150
 description: Mobil cihazlarınıza güvenlik tarafından algılanan tehditleri Microsoft Defender Virüsten Koruma ve yönetmeyi Windows 10 öğrenin.
-ms.openlocfilehash: e0e0613ad7805b8c4bde221aa2192c788fb75106
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c836554445f56a9a915885d55a4490c6bb5bd1a9
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63324291"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64633227"
 ---
 # <a name="review-detected-threats-and-take-action"></a>Algılanan tehditleri gözden geçirme ve önlem alma
 
@@ -32,7 +32,7 @@ Microsoft Defender Virüsten Koruma tehditlere karşı şunları algılar ve kor
 - Kimlik avı girişimleri
 - Veri hırsızlığı girişimleri
 
-Bir IT uzmanı/yöneticisi olarak, aynı anda [intune'a Windows 10](/mem/intune/enrollment/device-enrollment) cihazlarında tehdit algılamaları ile ilgili bilgileri Microsoft 365 yönetim merkezi. Aşağıdakiler gibi özet bilgileri burada görüyorsunuz:
+Bir IT uzmanı/yöneticisi olarak, aynı kullanıcıya Windows 10 cihazlarında tehdit algılamaları [](/mem/intune/enrollment/device-enrollment) Intune bilgileri Microsoft 365 yönetim merkezi. Aşağıdakiler gibi özet bilgileri burada görüyorsunuz:
 
 - Virüsten koruma yazılımına ihtiyaç kaç cihaz gerekiyor?
 - Kaç cihaz güvenlik ilkeleriyle uyumlu değil
@@ -58,7 +58,7 @@ Aşağıdaki yordam, bu yordama sahip olan Microsoft 365 İş Ekstra.
 
 ## <a name="manage-threat-detections-on-the-active-threats-page"></a>Etkin tehdit sayfasında tehdit **algılamalarını** yönetme
 
-Aşağıdaki yordam, bu yordama sahip olan Microsoft 365 İş Ekstra. [Windows 10 güvenli olmalı ve](../setup/secure-win-10-pcs.md) [Intune'a kaydolması gerekir](/mem/intune/enrollment/windows-enrollment-methods).
+Aşağıdaki yordam, bu yordama sahip olan Microsoft 365 İş Ekstra. [Windows 10 cihazları güvenlik altına alınarak](../setup/secure-win-10-pcs.md) [başka bir cihaza Intune](/mem/intune/enrollment/windows-enrollment-methods).
 
 > [!NOTE]
 > Yeni **Microsoft Defender Virüsten Koruma** ve Etkin tehdit sayfası aşamalar içinde yuvarlanıyor, dolayısıyla bu karta hemen erişiminiz yok olabilir.
@@ -86,7 +86,7 @@ Belirli tehditlere veya cihazlara ilişkin ayrıntıları görüntüde, önerile
 
 ## <a name="manage-threat-detections-in-microsoft-endpoint-manager"></a>Yeni bir e-postada tehdit algılamalarını Microsoft Endpoint Manager
 
-Tehdit algılamalarını Microsoft Endpoint Manager için bu özelliği kullanabilirsiniz. Windows 10 cihazlar [Intune'a (cihazlarının](/mem/intune/enrollment/windows-enrollment-methods) bir parçası) Microsoft Endpoint Manager.
+Tehdit algılamalarını Microsoft Endpoint Manager için bu özelliği kullanabilirsiniz. Windows 10 [cihazlarının Intune](/mem/intune/enrollment/windows-enrollment-methods) (Microsoft Endpoint Manager.
 
 1. Şu anda Microsoft Endpoint Manager merkezine gidin <a href="https://go.microsoft.com/fwlink/p/?linkid=2150463" target="_blank">https://endpoint.microsoft.com</a> ve oturum açma.
 
@@ -105,7 +105,7 @@ Aşağıdaki tabloda, bu tabloda sizin 2013'te Microsoft Endpoint Manager.<br><b
 | Yeniden başlatma | Bir Windows 10 dakika içinde yeniden başlatılmasını gerektirir.<br><br>**ÖNEMLİ:** Cihaz sahibine veya kullanıcıya yeniden başlatma işlemi otomatik olarak bildirilir ve bu, çalışmanızı kaybetmeye neden olabilir. |
 | Hızlı Tarama | Cihazda hızlı bir virüsten koruma taraması başlatır, kayıt defteri anahtarları ve bilinen veya başlangıç klasörleri gibi kötü amaçlı yazılım kaydedileme Windows olur. Sonuçlar [diğer Microsoft Endpoint Manager.](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager) |
 | Tam Tarama | Cihazda tam virüsten koruma taraması başlatır, kötü amaçlı yazılımların kaydedil olduğu yaygın konumlara odaklanarak ve cihaza her dosya ve klasörü dahil edin. Sonuçlar [diğer Microsoft Endpoint Manager.](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager) |
-| Eşitleme | Intune ile birlikte (uygulamanın bir parçası) iade etmek için bir Microsoft Endpoint Manager. Cihaz iade geldiğinde, cihaza atanmış bekleyen eylemleri veya ilkeleri alır. |
+| Eşitleme | Posta kutusuyla (uygulamanın bir Intune) iade etmek için bir cihaz Microsoft Endpoint Manager. Cihaz iade geldiğinde, cihaza atanmış bekleyen eylemleri veya ilkeleri alır. |
 | İmzaları güncelleştirme | Virüsten koruma ve kötü [amaçlı yazılımlardan koruma için](https://go.microsoft.com/fwlink/?linkid=2149926) güvenlik zekası güncelleştirmelerini almak için cihazı gerektirir. |
 
 > [!TIP]
@@ -117,6 +117,6 @@ Kaçırılmış olduğunu ya da yanlış olarak kötü amaçlı yazılım olarak
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](secure-your-business-data.md)
+[kurumsal planların güvenliğini sağlamanın en Microsoft 365 10 yolu](../../admin/security-and-compliance/secure-your-business-data.md)
 
-[İşletmeler için Microsoft Defender'a](../../security/defender-business/mdb-overview.md) genel bakış (1 Mart 2022 Microsoft 365 İş Ekstra'den itibaren işletmeler için Defender İş tarafından müşterilere sunulmaktadır)
+[Yeni müşterilere İş için Microsoft Defender](../../security/defender-business/mdb-overview.md) (Defender for Business, 1 Mart 2022 Microsoft 365 İş Ekstra den itibaren müşterilere sunulmaktadır)

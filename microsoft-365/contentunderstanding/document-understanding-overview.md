@@ -14,12 +14,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Microsoft SharePoint Syntex'da belgeyi anlama hakkında bilgi SharePoint Syntex.
-ms.openlocfilehash: 4c4910ac2cec9688af60c6999e67e1be41701ef3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c7488fcb44116f030d538b416af1f04b33382519
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63322597"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507333"
 ---
 # <a name="document-understanding-overview-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da belgeyi anlama genel bakış
 
@@ -33,7 +33,7 @@ ms.locfileid: "63322597"
 Belge kullanımı yapay zeka (AI) modellerini, dosyaların sınıflandırması ve bilgi ayıklamayı otomatikleştirmek için kullanır. Mektuplar veya sözleşmeler gibi yapılandırılmamış belgelerle en iyi şekilde çalışır. Bu belgelerde, tümceciklere veya desenlere göre tanım edilemeyen metinler olması gerekir. Tanımlanan metin, hem dosyanın türünü (sınıflandırması) hem de ayıklamak istediğiniz dosyayı (ayıklar) belirtir.
 
 > [!NOTE]
-> Senaryo örneklerini [SharePoint Syntex: Senaryo örneklerini belge anlama](./adoption-getstarted.md) hakkında daha fazla bilgi edinmek için kılavuza bakın.
+> Senaryo örneklerini [SharePoint Syntex: Kullanmaya başlayın hakkında daha](./adoption-getstarted.md) fazla bilgi edinmek için bu kılavuza bakın.
 
 Belge anlama modelleri, içerik merkezi olarak adlandırılan bir SharePoint site içinde *oluşturulur ve yönetilir*. Bir belge kitaplığına SharePoint, modelin ayıklanan bilgileri depolamak için sütunları olan bir içerik türüyle ilişkilendirildi. Kendi oluşturtuz içerik türü, SharePoint galerisinde depolanır. Şemalarını kullanmak için mevcut içerik türlerini de kullanabilirsiniz.
 
@@ -112,7 +112,8 @@ Belge anlama modelleri aşağıdaki dosya türlerini destekler:
 
 ### <a name="supported-languages"></a>Desteklenen diller
 
-Belge anlama modelleri aşağıdaki dilleri destekler:
+Belge anlama modelleri *, aşağıdakiler* de dahil olmak üzere Latin tabanlı tüm dilleri destekler:
+
 - English
 - French
 - German

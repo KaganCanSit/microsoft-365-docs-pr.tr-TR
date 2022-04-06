@@ -16,18 +16,18 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 5ad0d64ff2f296d0e8282afb02cbe7fc2bb21470
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 1c5177946ff3d54ab64c78e9013a8e0c07b0fd11
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63032464"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468137"
 ---
 # <a name="microsoft-defender-antivirus-in-the-windows-security-app"></a>Microsoft Defender Virüsten Koruma Windows Güvenliği seçin
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Sürüm Windows 10 1703 ve sonraki sürümlerde, Windows Defender uygulaması diğer Windows Güvenliği.
 
@@ -36,17 +36,17 @@ Ayarlar Windows Defender istemcisinin ve ana Windows Ayarlar parçası olan tüm
 > [!IMPORTANT]
 > Uygulama hizmeti devre Windows Güvenliği devre dışı bırak, Güvenlik Duvarı'Microsoft Defender Virüsten Koruma [Windows Defender devre dışı bırakmaz](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security). Üçüncü taraf virüsten koruma yazılımı veya güvenlik duvarı ürünü yük olduğunda bunlar otomatik olarak devre dışı bırakılır ve güncel tutulur.
 >
-> Windows Güvenliği uygulama hizmetini devre dışı bırakır veya başlatmasını veya çalıştırmasını önlemek üzere ilişkili Grup İlkesi ayarlarını yapılandırsanız, Windows Güvenliği uygulaması cihaza yüklemiş olabileceğiniz virüsten koruma yazılımı veya güvenlik duvarı ürünleri hakkında eski ya da yanlış bilgiler  görüntülenmeye devam ediyor olabilir.
+> Windows Güvenliği uygulama hizmetini devre dışı bırakır veya uygulamayı başlatmasını veya çalıştırmasını önlemek üzere ilişkili grup ilkesi ayarlarını yapılandırdısanız, Windows Güvenliği uygulaması cihaza yüklemiş olabileceğiniz virüsten koruma yazılımı veya güvenlik duvarı ürünleri hakkında eski veya yanlış bilgiler lişkilendirilmiş olabilir.
 > Ayrıca, eski Microsoft Defender Virüsten Koruma veya güncel olmayan bir üçüncü taraf virüsten koruma yazılımınız varsa veya daha önce yüklemiş olabileceğiniz üçüncü taraf virüsten koruma ürünlerini kaldırırsanız, bu özelliğin kendi kendine etkinleştirilmesini de engellenebilir.
 > Bu, cihazınızın korumasını önemli ölçüde azaltır ve kötü amaçlı yazılım bulaşmaya yol açabilir.
 
 Uygulamada [Windows Güvenliği diğer](/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) güvenlik özellikleri Windows daha fazla bilgi için bu makaleye bakın.
 
-Uygulama Windows Güvenliği sürüm 1703 ve Windows 10 üzerinde bir istemci arabirimidir. Uç nokta için Microsoft Defender Microsoft 365 Defender gözden geçirmek ve yönetmek için kullanılan [bir web portalı değildir](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint).
+Uygulama Windows Güvenliği sürüm 1703 ve Windows 10 üzerinde bir istemci arabirimidir. Bu, posta Microsoft 365 Defender yönetmek ve gözden geçirmek için kullanılan bir web [Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint).
 
 ## <a name="review-virus-and-threat-protection-settings-in-the-windows-security-app"></a>Windows Güvenliği uygulamasında virüs ve tehdit koruması ayarlarını gözden geçirme
 
-:::image type="content" source="../../media/wdav-protection-settings-wdsc.png" alt-text="Bu uygulamada virüs ve tehdit Windows Güvenliği ayarları.":::
+:::image type="content" source="../../media/wdav-protection-settings-wdsc.png" alt-text="Windows Güvenliği uygulamasında virüs ve tehdit koruması ayarları" lightbox="../../media/wdav-protection-settings-wdsc.png":::
 
 1. Görev Windows Güvenliği kalkan simgesine tıklayarak veya görev çubuğu için başlangıç menüsünde arama **Windows Güvenliği.**
 
@@ -55,7 +55,7 @@ Uygulama Windows Güvenliği sürüm 1703 ve Windows 10 üzerinde bir istemci ar
 Aşağıdaki bölümlerde, Microsoft Defender Virüsten Koruma uygulamasındaki Microsoft Defender Virüsten Koruma tarafından sağlanan tehdit korumasını gözden geçirme veya bu tehdit korumasıyla etkileşim kurmada en Windows Güvenliği açıklanmaktadır.
 
 > [!NOTE]
-> Bu ayarlar Grup İlkesi kullanılarak yapılandırılır ve dağıtılırsa, bu bölümde açıklanan ayarlar gri olur ve uç noktalar tek tek kullanılabilir durumda kullanılamaz. Grup İlkesi Nesnesi aracılığıyla yapılan değişikliklerin, ayarın Grup İlkesi Nesnesinde güncelleştirilmeden önce tek tek uç noktalara dağıtılması Windows Ayarlar. Kullanıcı [profiliyle son kullanıcı etkileşimi Microsoft Defender Virüsten Koruma](configure-end-user-interaction-microsoft-defender-antivirus.md) konuda, yerel ilke geçersiz kılma ayarlarının nasıl yapılandırıl olduğu açıklanmıştır.
+> Bu ayarlar tek tek uç noktalar kullanılarak grup ilkesi yapılandırılmış ve dağıtılmışsa, bu bölümde açıklanan ayarlar gri olur ve uç noktaların tek tek kullanımı için kullanılamaz. Nesnede yapılan grup ilkesi, ayar Tek tek güncelleştirilmeden önce nesnenin tek tek uç noktalara dağıtılması Windows Ayarlar. Kullanıcı [profiliyle son kullanıcı etkileşimi Microsoft Defender Virüsten Koruma](configure-end-user-interaction-microsoft-defender-antivirus.md) konuda, yerel ilke geçersiz kılma ayarlarının nasıl yapılandırıl olduğu açıklanmıştır.
 
 ## <a name="run-a-scan-with-the-windows-security-app"></a>Windows Güvenliği uygulamasıyla tarama çalıştırma
 
@@ -67,7 +67,7 @@ Aşağıdaki bölümlerde, Microsoft Defender Virüsten Koruma uygulamasındaki 
 
 ## <a name="review-the-security-intelligence-update-version-and-download-the-latest-updates-in-the-windows-security-app"></a>Windows Güvenliği uygulamasında güvenlik zekası güncelleştirme sürümünü gözden geçirme ve en son Windows Güvenliği indirme
 
-:::image type="content" source="../../media/wdav-wdsc-defs.png" alt-text="Güvenlik zekası sürüm numarası.":::
+:::image type="content" source="../../media/wdav-wdsc-defs.png" alt-text="Güvenlik zekası sürüm numarası" lightbox="../../media/wdav-wdsc-defs.png":::
 
 1. Başlat Windows Güvenliği Güvenlik'i arayarak ve sonra *Güvenlik'i* seçerek **Windows Güvenliği.**
 

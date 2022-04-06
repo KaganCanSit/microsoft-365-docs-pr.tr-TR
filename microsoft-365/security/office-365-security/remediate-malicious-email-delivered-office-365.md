@@ -14,21 +14,21 @@ search.appverid: MET150
 description: Tehdit düzeltmesi
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 49cd5f532f41fd05090592136e28ca2462a9efd6
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 3ba8564ef5ecbd261dc47b2f0a48d6d4d77d620a
+ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681182"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64638325"
 ---
-# <a name="remediate-malicious-email-delivered-in-office-365"></a>Posta ile teslim edilen kötü amaçlı e-postaları Office 365
+# <a name="remediate-malicious-email-delivered-in-office-365"></a>Office 365'te teslim edilen kötü amaçlı e-postaları düzeltme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Office 365 için Microsoft Defender plan 2](defender-for-office-365.md)
 
-Düzeltme, bir tehditle karşı önceden planlanmış bir eyleme karşı almak anlamına gelir. Bilgisayarınıza gönderilen kötü amaçlı e-postalar sistem tarafından, sıfır saatlik otomatik temizleme (ZAP) yoluyla veya gelen kutusu taşıma, gereksiz'e taşıma, silinmiş öğelere taşıma, yumuşak silme veya sabit silme gibi düzeltme eylemleri aracılığıyla güvenlik ekipleri tarafından temizlenebilir *.* Microsoft Defender for Office 365 Plan 2/E5, güvenlik ekiplerinin elle ve otomatik soruşturma yoluyla e-posta ve işbirliği işlevselliğiyle tehditleri düzeltmesini sağlar.
+Düzeltme, bir tehditle karşı önceden planlanmış bir eyleme karşı almak anlamına gelir. Bilgisayarınıza gönderilen kötü amaçlı e-postalar sistem tarafından, sıfır saatlik otomatik temizleme (ZAP) yoluyla veya gelen kutusu taşıma, gereksiz'e taşıma, silinmiş öğelere taşıma, yumuşak silme veya sabit silme gibi düzeltme eylemleri aracılığıyla güvenlik ekipleri tarafından temizlenebilir *.* Office 365 için Microsoft Defender Plan 2/E5, güvenlik ekiplerinin elle ve otomatik soruşturma yoluyla e-posta ve işbirliği işlevselliğiyle tehditleri düzeltmelerine olanak sağlar.
 
 > [!NOTE]
 > Kötü amaçlı e-postaları düzeltmek için güvenlik ekiplerine Arama *ve* Temizleme rolü atanabilir. Rol ataması, [portalda izinler Microsoft 365 Defender yapılır](permissions-microsoft-365-security-center.md).
@@ -42,19 +42,21 @@ Yöneticiler e-postalarda gerekli işlemleri gerçekleştirebilirsiniz, ancak bu
 *El ile* arama, güvenlik ekipleri Explorer'daki arama ve filtreleme özelliklerini kullanarak tehdit tanımlıyorsa ortaya çıkar. El ile düzeltme, siz düzeltmesi gereken bir dizi e-posta tanım bastıktan *sonra herhangi bir* e-posta *görünümünde (Kötü* Amaçlı Yazılım, Kimlik Avı veya Tüm e-postalar *)* tetiklenir.
 
 > [!div class="mx-imgBorder"]
-> [![Tehdit Gezgini'Office 365 tarihe göre el ile avlama.](../../media/tp-RemediationArticle1.png)](../../media/tp-RemediationArticle1.png#lightbox)
+> [![Tehdit Gezgini'nde tarihe Office 365 elle aramanın ekran görüntüsü.](../../media/tp-RemediationArticle1.png)](../../media/tp-RemediationArticle1.png#lightbox)
 
 Güvenlik ekipleri çeşitli yollarla e-postaları seçmek için Explorer'ı kullanabilir:
 
 - El ile e-postaları seçin: Çeşitli görünümlerde filtreleri kullanın. Düzeltmek için en fazla 100 e-posta seçin.
 
-- Sorgu seçimi: Üstteki Hepsini seç düğmesini kullanarak tüm **sorguyu** seçin. Aynı sorgu, işlem merkezi posta gönderimi ayrıntılarında da gösterilir.
+- Sorgu seçimi: Üstteki Hepsini seç düğmesini kullanarak tüm **sorguyu** seçin. Aynı sorgu, işlem merkezi posta gönderimi ayrıntılarında da gösterilir. Müşteriler tehdit gezgininden en çok 200.000 e-posta gönderebilirsiniz.  
 
 - Dışlamayla sorgu seçimi: Bazen güvenlik işlemleri ekipleri, bir sorgunun tamamını seçerek ve belirli e-postaları sorgudan el ile dışlayarak e-postaları düzeltmek ister. Yönetici bunu yapmak için, YöneticiNin her şeyi seç **onay kutusunu** kullanabilir ve e-postaları el ile dışarıda tutmak için sayfayı aşağı kaydırın. Sorgu en çok 1.000 e-posta tutabilir. En fazla dışlama sayısı 100'tir.
 
 E-postalar Gezgin aracılığıyla seçildikten sonra, doğrudan bir işlemle veya bir eylem için e-postaları sıraya alarak düzeltmeye başlayabilirsiniz:
 
-- Doğrudan onay: Uygun izinlere sahip güvenlik personeli tarafından Gelen Kutusu'na taşıma, gereksiz'e *taşıma, silinmiş* öğelere  *taşıma, yumuşak* silme veya kalıcı silme gibi eylemler seçildiğinde ve düzeltmenin sonraki adımları izlendikten sonra, düzeltme süreci seçili eylemi yürütmeye başlar. Geçici bir çıkış, düzeltmenin devam ediyor olduğunu gösterir.
+- Doğrudan onay: Uygun izinlere sahip güvenlik personeli tarafından Gelen Kutusu'na taşıma, gereksiz'e *taşıma, silinmiş* öğelere  *taşıma, yumuşak* silme veya kalıcı silme gibi eylemler seçildiğinde ve düzeltmenin sonraki adımları izlendikten sonra, düzeltme süreci seçili eylemi yürütmeye başlar.
+> [!NOTE]
+>Düzeltme atıldığı için bir uyarı ve paralel olarak bir soruşturma üretir. Uyarı, uyarılar sırasında "Yönetici tarafından gönderilen yönetim eylemi" adıyla ve güvenlik personelinin bir varlığı düzeltme eyleminde eylemde bulundurarak önererek gösterir. Eylemi gerçekleştiren kişinin adı, destek araştırma bağlantısı ve zaman gibi ayrıntıları sunar. Varlıklar üzerinde düzeltme gibi gerçek bir eylem gerçekleştirilen her zaman bunu bilmek gerçekten güzeldir. Tüm bu eylemler, Gönderiler Eylem merkeziHistory **sekmesi (genel &** \>   ->  önizleme) **altında** trarak yapılabilir.
 
 - İki adımlı onay: Uygun izinleri olmayan veya eylemi yürütmek için beklemesi gereken yöneticiler "düzeltmeye ekle" eylemi gerçekleştirebilirsiniz. Bu durumda, hedefli e-postalar bir düzeltme kapsayıcısı eklenir. Düzeltme yürütülmeden önce onay gerekir.
 
@@ -63,19 +65,27 @@ E-postalar Gezgin aracılığıyla seçildikten sonra, doğrudan bir işlemle ve
 > [!div class="mx-imgBorder"]
 > [!["Zapped" sayfasında kötü amaçlı yazılımla posta, Zap yürütme zamanlarını gösteriyor.](../../media/tp-RemediationArticle3.png)](../../media/tp-RemediationArticle3.png#lightbox)
 
-Gezgin'de oluşturulmuş tüm düzeltmeler (doğrudan onay veya iki adımlı onay) ve otomatik soruşturmalardan gelen onaylanmış eylemler İşlem Merkezi'nde görüntülenir. Bunlara, İşlem Merkezini Gözden Geçir'in altındaki sol **gezinti panelinden** \> **erişin**.
+Gezgin'de, Gelişmiş aramada veya Otomatik soruşturma'da oluşturulan tüm düzeltme (doğrudan onaylar) İşlem Merkezi'nde görüntülenir. Bunlara, Gönderiler Eylem merkeziHistory **sekmesinin Eylemler & sol** \> **gezinti**  ->  **bölmesinden erişin**.
 
-> [!div class="mx-imgBorder"]
-> [![Tarihe ve önem derecesine göre tehdit listesiyle işlem merkezi.](../../media/tp-RemediationArticle4.png)](../../media/tp-RemediationArticle4.png#lightbox)
+Gezgin'de veya Gelişmiş aramada veya Otomatik soruşturma'da oluşturulan tüm düzeltmeler (doğrudan onaylar) İşlem Merkezi'nde görüntülenir. Bunlara, Gönderiler Eylem merkeziHistory **sekmesinin Eylemler & sol** \> **gezinti**  ->  **bölmesinden erişin**. 
 
-İşlem Merkezi son 30 gün için tüm düzeltme eylemlerini gösterir. Explorer aracılığıyla  alınan eylemler, düzeltme oluşturulduğunda güvenlik işlemleri ekibinin sağladığı adla listelenir. Otomatik soruşturmalar aracılığıyla  alınan eylemlerin başlığı, incelemeyi tetikleyen ilgili uyarıyla başlar (örneğin, "Zap e-posta kümesi... )."
+İki adımlı onay işlemini kullanarak el ile onay bekleyen eylemler (1. bir güvenlik işlemi ekip üyesi tarafından düzeltmeye ekleme, 2. başka bir güvenlik işlemi ekibi üyesi tarafından gözden geçirilen ve onaylanan), yalnızca eski İşlem Merkezi'nde Office 365 için Defender  \> gözden geçirme İşlem Merkezi'nde görünür; olaylarda/soruşturmalarda ve Birleşik İşlem Merkezi'nde görülmeyebilir.
 
-Ad, oluşturma tarihi, açıklama, tehdit önem derecesi ve durum gibi ayrıntıları görüntülemek için herhangi bir düzeltme öğesini açın. Aşağıdaki iki sekmeyi de gösterir.
+> [!NOTE]
+> İki adımlı onay: eylemler yalnızca ofis işlem merkezinde kullanılabilir İşlem Merkezini  **Gözden** \> **Geçir**
 
-- **Posta gönderimi** sekmesi: Threat Explorer aracılığıyla gönderilen e-posta sayısını veya düzelti yapılacak otomatik soruşturmaları görüntüler. Bu e-postalar eyleme değiştirilebilir veya işlem edilemez.
+:::image type="content" source="../../media/microsoft-365-defender-action-center-history.png" alt-text="Birleşik İşlem Merkezi size 30 günlük düzeltme eylemleri gösterir.":::
+
+Birleştirilmiş İşlem Merkezi son 30 gün için düzeltme eylemlerini gösterir. Explorer aracılığıyla alınan eylemler, düzeltme oluşturulduğunda güvenlik işlemleri ekibinin sağladığı adla ve onay Kimliği, Araştırma Kimliği olarak listelenir. Otomatik soruşturmalar aracılığıyla alınan eylemlerin, *Zap* e-posta kümesi gibi araştırmayı tetikleyen ilgili uyarıyla başlayan başlıkları vardır.
+
+Düzeltme adı, onay Kimliği, Araştırma Kimliği, oluşturma tarihi, açıklama, durum, eylem kaynağı, eylem türü, karara göre, durum dahil olmak üzere tüm düzeltme öğesini açın. Ayrıca eylem ayrıntılarını, e-posta kümesi ayrıntılarını, uyarıyı ve Olay ayrıntılarını içeren bir yan bölme açar.
+
+- *Araştırma Aç sayfası bu* daha az ayrıntı ve sekme içeren bir yönetici İncelemesi açar. İlgili uyarı, düzeltme için seçilen varlık, alınan eylem, düzeltme durumu, varlık sayısı, günlükler, eylem onaylayan gibi ayrıntıları gösterir. Bu araştırma, yönetici tarafından elle yapılan soruşturmaları takip ediyor ve yönetici tarafından yapılan seçimlere ilişkin ayrıntıları içeriyor. Bu nedenle, yönetici eylem soruşturması olarak adlandırılan bu işlem. İncelemeye ve durumu zaten onaylandı olarak uyarmaya gerek yok.   
+- *E-posta sayısı* Threat Explorer aracılığıyla gönderilen e-posta sayısını görüntüler. Bu e-postalar eyleme değiştirilebilir veya işlem edilemez. 
+- *Eylem günlükleri* Başarılı/ başarısız/ hedefte olan düzeltme durumunun ayrıntılarını gösterir
 
   > [!div class="mx-imgBorder"]
-  > [![İşlemlenebilir ve işlem için değiştirilebilir tehditlere sahip işlem merkezidir.](../../media/tp-RemediationArticle5.png)](../../media/tp-RemediationArticle5.png#lightbox)
+  > [![İşlem merkezi üzerinde işlem yapmakta olan ve işlem için değiştirilebilir tehditlere sahip olan ekran görüntüsü.](../../media/tp-RemediationArticle5.png)](../../media/tp-RemediationArticle5.png#lightbox)
 
   - **İşlem Edilebilir**: Aşağıdaki bulut posta kutusu konumlarında yer alan e-postalar üzerinde eyleme edilebilir ve taşınabilir:
     - Gelen Kutusu
@@ -107,14 +117,8 @@ Ad, oluşturma tarihi, açıklama, tehdit önem derecesi ve durum gibi ayrıntı
 
   Yöneticiler gerekirse karantinada bulunan e-postalar üzerinde eylem gerçekleştirebilir, ancak el ile temizlanmazsa bu e-postaların karantina süresi dolar. Varsayılan olarak, kötü amaçlı içerik nedeniyle e-postalara kullanıcılar tarafından erişilemez ve dolayısıyla güvenlik personeli karantinada tehditlerden kurtulmak için herhangi bir işlem yapmak zorunda değildir. E-postalar şirket içinde veya dışında olursa, şüpheli e-postayla bağlantı kurmak için kullanıcıyla bağlantı kurabilirsiniz. Ya da yöneticiler kaldırma için ayrı e-posta sunucusu/güvenlik araçları kullanabilir. Bu e-postalar, Explorer'da *teslim konumu = önceden gelen dış filtre* uygulanarak belirlenebilirsiniz. Başarısız veya bırakılan e-postalar veya kullanıcılar tarafından erişilamayan e-postalar için, azaltmak istediğiniz e-posta olmaz çünkü bu postalar posta kutusuna ulaşmaz.
 
-  Aşağıdaki resimde bir gönderimin İşlem Merkezi'nde nasıl göründüğünü gösterir. Düzeltme birden çok gönderim içerebilir. Birden çok eylem tek bir otomatik soruşturma aracılığıyla onaylanırsa, her e-posta veya e-posta kümesi eylemi, farklı bir gönderimle aynı düzeltmede görünür.
-
-  > [!div class="mx-imgBorder"]
-  > [![ZAP e-posta kümesi uçma paneli.](../../media/tp-RemediationArticle6.png)](../../media/tp-RemediationArticle6.png#lightbox)
-
-  Bu düzeltmenin ayrıntılarını( sorgu seçme yoluyla otomatik soruşturmalar veya Explorer tetiklendiğinde) ve düzeltmenin başlangıç ve bitiş saatleri gibi ayrıntıları göstermek için bir posta gönderme öğesi seçin. Ayrıca, düzeltme için gönderilen iletilerin listesini de görüntüler. İletiler Gezgin bekletme süresinden çıktıklarından, iletiler bu listeden kaybolur. Listede düzeltilebilir tek tek iletiler de görüntülenir.
-
-- **Eylem günlükleri**: Bu sekmede, onay tarihi, eylemi, eylemi, durumu ve sayımları onay eden yönetici gibi düzeltmiş iletiler görüntülenir.
+ 
+- **Eylem günlükleri**: Bu, düzeltilecek, başarılı, başarısız olan, zaten hedefte olan iletileri gösterir.
 
   Durum şöyle olabilir:
 
@@ -139,5 +143,9 @@ Eylemler yalnızca Tehdit Gezgini'nin Gelen Kutusu, Gereksiz, Silinmiş ve Yumu�
 Düzeltme ayrıntılarını görüntülemek için eylem günlüğünde herhangi bir öğeyi seçin. Ayrıntılarda "başarılı" veya "posta kutusunda bulunamadı" ifadeleri varsa, bu öğe posta kutusundan zaten kaldırılmıştır. Düzeltme sırasında bazen sistem hatası olabilir. Böyle durumlarda, düzeltme eylemlerini yeniden denemek iyi bir fikirdir.
 
 Büyük toplu e-postaları düzeltme durumunda, Posta Gönderimi yoluyla düzeltme için gönderilen iletileri ve Eylem Günlükleri aracılığıyla düzeltmiş iletileri dışarı aktarın. Dışarı aktarma sınırı 100.000 kayıt olarak artırıldı.
+
+ Yöneticiler, e-posta iletilerini Gereksiz, Gelen Kutusu veya Silinmiş öğeler klasörüne taşıma ve Gelişmiş Av sayfalarından yumuşak silinmiş veya zor silme gibi eylemleri silme gibi düzeltme eylemleri gerçekleştirebilir.
+
+:::image type="content" source="../../media/microsoft-365-defender-advanced-hunting-actions-pane.png" alt-text="Gelişmiş Av, eylemleri seçme eylemlerini bulundurarak Eylemler Yapın paneli.":::
 
 Düzeltme, tehditleri azaltmak, şüpheli e-postaları adreslerine karşıtlık sağlar ve kuruluşun güvenliğini korumanıza yardımcı olur.

@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse, hata iletilerini ve sorunlarını giderme konusunda yardım alır.
-ms.openlocfilehash: e39eea66222852d8f331aa6bc68b386bea3da763
-ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
+ms.openlocfilehash: 1bd98a90af19d60aba2e0891c3f993e77523a12c
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "63705442"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64632371"
 ---
 # <a name="troubleshoot-and-resolve-problems-and-error-messages-in-microsoft-365-lighthouse"></a>E-posta iletileriyle ilgili sorunları ve hata iletilerini Microsoft 365 Lighthouse
 
@@ -53,17 +53,20 @@ Bu makalede, E-posta iletileri kullanılırken karşılaşabilirsiniz hata ileti
 
 **Neden:** Müşteri kiracınız aşağıdaki ölçütlere uygun değil:
 
-  - Yönetilen Hizmet Sağlayıcısı (MSP) için temsilci (DAP) veya ayrıntılı temsilcili (GDAP) yönetici ayrıcalıklarının ayarlanmış olması gerekir
-  - En az bir kullanıcı veya Microsoft 365 İş Ekstra lisansına Microsoft 365 E3 gerekir
+  - Müşteri kiracısı yönetimi için Yönetilen Hizmet Sağlayıcısı (MSP) için temsilci olarak ayarlanmış erişime sahip olmak*
+  - En az bir lisans Microsoft 365 İş Ekstra, Microsoft 365 E3 lisansınız veya Windows 365 Business lisansınız olmalı
   - 1000'den fazla lisanslı kullanıcıya sahip olmalı 
 
-**Çözüm:** Aşağıdaki tabloda, eylem gerektiren farklı kiracı durumları açıkladığı gibi, bunları nasıl çözeceklerini de açıklar.<br><br>
+**Çözüm:** Aşağıdaki tabloda, eylem gerektiren farklı kiracı durumları açıkladığı gibi, bunları nasıl çözeceklerini de açıklar.
+
+*Temsilci Yönetici Ayrıcalıkları (DAP), müşterileri Deniz Feneri'ne ekleme için gereklidir. Ayrıca, daha güvenli ve temsilcili erişim sağlamak için müşterilerinizle Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) kurmanızı öneririz. DAP ve GDAP birlikte çalışırken, her iki modelin de bulunduğu müşteriler için GDAP öncelik olacaktır. Kısa süre içinde yalnızca GDAP'ye (ve DAP) sahip olan müşteriler Deniz Feneri'ne yerabilecek.
+
 
 | Durum | Açıklama | Çözüm |
 |--|--|--|
 | Etkin değil | Kiracı MSP'nin isteği üzerine çıkarıldı ve artık Deniz Feneri'nde yönetilmiyor. | Kiracıyı yeniden etkinleştirmeniz gerekir. Kiracılar **sayfasında** , yeniden etkinleştirmek istediğiniz kiracının yanındaki üç noktayı (diğer eylemler) seçin ve sonra da Kiracıyı **etkinleştir'i seçin**. İlk müşteri verilerinizin Deniz Feneri'nde görünmesi 24-48 saat sürebilir. |
 | Uygun değil - DAP veya GDAP ayarlanmaz | Kiracıyla ayarlanmış OLAN DAP veya GDAP yönetici ayrıcalıklarınız yoktur ve bu, Deniz Feneri için gereklidir. | Microsoft İş Ortağı Merkezi'nde DAP veya GDAP yönetici ayrıcalıklarını ayarlayın. |
-| Uygun değil - Gerekli lisans eksik | Kiracının gerekli bir lisansı yok. En az bir kullanıcı veya Microsoft 365 İş Ekstra lisansı Microsoft 365 E3 gerekir. | Kiracının en az bir kullanıcı veya Microsoft 365 İş Ekstra lisans Microsoft 365 E3 emin olun. |
+| Uygun değil - Gerekli lisans eksik | Kiracının gerekli bir lisansı yok. En az bir lisans Microsoft 365 İş Ekstra, Microsoft 365 E3 veya lisans Windows 365 Business gerekir. | Kiracının en az bir kiracıya Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business sahip olduğundan emin olun. |
 | Uygun değil - Kullanıcı sayısı aşıldı | Kiracı, Deniz Feneri tarafından izin verilen en fazla 1000 lisanslı kullanıcıya sahip. | Kiracının 1000'den fazla lisanslı kullanıcısı olmadığını doğrulayın. |
 | Uygun değil - Coğrafi denetim başarısız oldu | Siz ve müşteriniz, Deniz Feneri'nin ihtiyaç olduğu coğrafi bölgede ikamet yok. | Müşterinin coğrafi bölgenize yerdığını doğrulayın. Yönete değil, o zaman Deniz Feneri'nde kiracıyı yönete değildir. |
 | İşlemde | Deniz Feneri kiracıyı keşfetti ancak hala kiracıyı ekleme sürecinde. | Deniz Feneri'nin kiracıyı ekleme işlemini tamamlamasına 48 saat izin ver. |
@@ -76,7 +79,7 @@ Müşteri kiracının işe ekleme ölçütlerine uygun olduğunu onaylarsanız v
 
 **Neden:** Azure AD'de doğru güvenlik grubuna üyesi değilsiniz veya Deniz Feneri'ne erişim için İş Ortağı Merkezi'nde size doğru rol atanmamış.
 
-**Çözüm:** İş ortağı kiracınıza uygun izinlere sahip bir yöneticinin sizi Azure AD'de doğru GDAP güvenlik grubuna atadığı ve İş Ortağı Merkezi'nde size doğru rolü atadığından emin olun. Ayrıca, Deniz Feneri'nde bazı işlemlerin Genel yönetici olmak zorunda olduğunu unutmayın. GDAP rolleri ve her rolün neler yapılası hakkında daha fazla bilgi edinmek için Portal [güvenliğini Microsoft 365 Lighthouse bakın](m365-lighthouse-configure-portal-security.md). Tüm Azure AD yerleşik rollerinin ve GDAP izinlerinin ayrıntılı açıklaması için bkz. [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
+**Çözüm:** İş ortağı kiracınıza uygun izinlere sahip bir yöneticinin sizi Azure AD'de doğru GDAP güvenlik grubuna atadığı ve İş Ortağı Merkezi'nde size doğru rolü atadığından emin olun. Ayrıca, Deniz Feneri'nde bazı işlemlerin Genel yönetici olmak zorunda olduğunu unutmayın. GDAP rolleri ve her rolün neler yapılası hakkında daha fazla bilgi edinmek için bkz. Rol [rollerinde izinlere Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md). Tüm Azure AD yerleşik rollerinin ve GDAP izinlerinin ayrıntılı açıklaması için bkz. [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
 
 DAP ilişkileri olan müşteriler için, iş ortağı yöneticisinin sizi İş Ortağı Merkezi'nde Yönetici temsilcisine veya Yardım masası aracısı rolüne ataması gerekir. Tüm İş Ortağı Merkezi rollerinin ve izinlerinin ayrıntılı açıklaması için bkz. [Kullanıcılara rol ve izin atama](/partner-center/permissions-overview).
 
@@ -84,7 +87,7 @@ DAP ilişkileri olan müşteriler için, iş ortağı yöneticisinin sizi İş O
 
 **Neden:** Var olan Azure AD güvenlik grubuna atanan rollere bağlı olarak, sınırlı bir GDAP erişiminiz var.
 
-**Çözüm:** İş ortağı kiracınıza uygun izinlere sahip bir yöneticinin sizi Azure AD'de doğru GDAP güvenlik grubuna ata olduğundan emin olun. Ayrıca, Deniz Feneri'nde bazı işlemlerin Genel yönetici olmak zorunda olduğunu unutmayın. GDAP rolleri ve her rolün neler yapılası hakkında daha fazla bilgi edinmek için Portal [güvenliğini Microsoft 365 Lighthouse bakın](m365-lighthouse-configure-portal-security.md). Tüm Azure AD yerleşik rollerinin ve GDAP izinlerinin ayrıntılı açıklaması için bkz. [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
+**Çözüm:** İş ortağı kiracınıza uygun izinlere sahip bir yöneticinin sizi Azure AD'de doğru GDAP güvenlik grubuna ata olduğundan emin olun. Ayrıca, Deniz Feneri'nde bazı işlemlerin Genel yönetici olmak zorunda olduğunu unutmayın. GDAP rolleri ve her rolün neler yapılası hakkında daha fazla bilgi edinmek için bkz. Rol [rollerinde izinlere Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md). Tüm Azure AD yerleşik rollerinin ve GDAP izinlerinin ayrıntılı açıklaması için bkz. [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
 
 ## <a name="customer-tenant-management"></a>Müşteri kiracı yönetimi  
 
@@ -104,7 +107,7 @@ DAP ilişkileri olan müşteriler için, iş ortağı yöneticisinin sizi İş O
 
 **Neden:** Müşteri kiracısı içindeki kullanıcı yapılandırmayı Microsoft Intune tamamlamadınız.
 
-**Çözüm:** Müşteri kiracısı içinde Intune için temel yapılandırma adımlarını tamamlamış olduğunu doğrulayın. Intune yapılandırmasının müşteri kiracısı için tamamlandıktan sonra sorun devam ederse Destek'e başvurun. Daha fazla bilgi için bkz[. Destek almak için Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+**Çözüm:** Müşteri kiracısı içindeki kiracının temel yapılandırma Intune tamamlamış olduğunu doğrulayın. Müşteri kiracısı için kimlik yapılandırmasının Intune doğrulandıktan sonra sorun devam ederse Destek'e başvurun. Daha fazla bilgi için bkz[. Destek almak için Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
 
 ### <a name="cant-access-partner-tenant-data-in-lighthouse"></a>Deniz Feneri'nde iş ortağı kiracı verilerine erişlanamıyor
 
@@ -116,9 +119,9 @@ DAP ilişkileri olan müşteriler için, iş ortağı yöneticisinin sizi İş O
 
 ### <a name="i-dont-see-any-customer-tenant-data-on-the-device-compliance-and-threat-management-pages-of-lighthouse"></a>Deniz Feneri'nin Cihaz uyumluluğu ve Tehdit yönetimi sayfalarında müşteri kiracısı verilerini göremiyorum
 
-**Neden 1:** Müşteri kiracısı Intune'a eklemeyi henüz tamamlamış değil. Müşteri kiracısı Intune'a eklemeyi tamamlayana kadar Deniz Feneri'nin Cihaz uyumluluğu veya Tehdit yönetimi sayfalarında müşteri kiracı verileri kullanılamaz.
+**Neden 1:** Müşteri kiracısı kiracı bu kiracıya ekleme Intune. Müşteri kiracısı Deniz Feneri'nin Cihaz uyumluluğu veya Tehdit yönetimi sayfalarında kullanılamaz, ancak müşteri kiracı kiracısı kiracıya Intune.
 
-**Çözüm:** Verilerini görüntülemeye çalışırken müşteri kiracısını Intune'a eklemenin tamamlandıktan sonra olduğunu doğrulayın. Intune'da ekleme işlemi tamamlandıktan sonra, Deniz Feneri'nde cihaz verileri için 4 saat bekleyin.
+**Çözüm:** Verilerini görüntülemeye çalışırken müşteri kiracısına kullanıcı eklemesi tamamlandığından emin Intune. Deniz Feneri'nde Intune, cihaz verilerinizin Deniz Feneri'nde görünmesi için 4 saat bekleyin.
 
 **Neden 2:** Müşteri kiracısı kısa süre önce Deniz Feneri'ne alındı ve veriler Deniz Feneri'ne yükleniyor.
 

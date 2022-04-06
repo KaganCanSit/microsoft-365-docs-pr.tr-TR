@@ -7,29 +7,29 @@
           href: mdb-overview.md
         - name: Basitleştirilmiş yapılandırma işlemi
           href: mdb-simplified-configuration.md
-        - name: Küçük ve orta ölçekli işletmeler için planları karşılaştırma
+        - name: Küçük ve orta ölçekli işletmeler için planları karşılaştırın
           href: compare-mdb-m365-plans.md
         - name: Microsoft 365 Lighthouse ile tümleştirme
           href: mdb-lighthouse-integration.md
     - name: Kullanmaya başlayın
       items:
-        - name: İş için Defender'ı al
+        - name: İş için Defender'ı edinin
           href: get-defender-business.md
-        - name: Kurulum sihirbazını kullanma
+        - name: Kurulum sihirbazını kullanın
           href: mdb-use-wizard.md
-        - name: Portalı kullanmaya başlama
+        - name: Portalı kullanmaya başlayın
           href: mdb-get-started.md
-        - name: güvenlik açığı yönetimi görüntüleme
+        - name: Güvenlik açığı yönetimi panonuzu görüntüleyin
           href: mdb-view-tvm-dashboard.md
-        - name: Öğreticileri ve benzetimleri deneyin
+        - name: Öğreticileri ve simülasyonları deneyin
           href: mdb-tutorials.md
     - name: İş için Defender'ı ayarlama ve yapılandırma
       items:
         - name: Kuruluma genel bakış
           href: mdb-setup-configuration.md
-        - name: 1. Adım - Gereksinimleri gözden geçirme
+        - name: '1. Adım : Gereksinimleri gözden geçirme'
           href: mdb-requirements.md
-        - name: 2. Adım - Roller ve izinler atama
+        - name: 2. Adım - Rol ve izin atama
           href: mdb-roles-permissions.md
         - name: 3. Adım - E-posta bildirimlerini ayarlama
           href: mdb-email-notifications.md
@@ -37,11 +37,11 @@
           href: mdb-onboard-devices.md
         - name: 5. Adım - Güvenlik ilkelerinizi yapılandırma
           href: mdb-configure-security-settings.md
-    - name: Algılanan tehditleri görüntüleme ve yanıtlama
+    - name: Algılanan tehditleri görüntüleme ve tehditlere karşılık verme
       items:
         - name: Olayları görüntüleme ve yönetme
           href: mdb-view-manage-incidents.md
-        - name: Tehditleri yanıtlama ve azaltmak
+        - name: Tehditlere yanıt verme ve tehditleri azaltma
           href: mdb-respond-mitigate-threats.md
         - name: Düzeltme eylemlerini gözden geçirme
           href: mdb-review-remediation-actions.md
@@ -59,21 +59,21 @@
           href: mdb-firewall.md
         - name: Güvenlik duvarı ilkeleri için kuralları yönetme
           href: mdb-custom-rules-firewall.md
-    - name: Cihazları yönet
+    - name: Cihazları yönetme
       items:
-        - name: Cihazları görüntüleme ve yönetme
+        - name: İlkeleri ve cihazları görüntüleme
           href: mdb-manage-devices.md
-        - name: Cihaz grupları oluşturma
+        - name: Cihaz etiketleri veya grupları oluşturma ve yönetme
           href: mdb-create-edit-device-groups.md
     - name: Başvuru bilgileri
       items:
-        - name: Yardım almak veya de destek ile iletişim kurmak
+        - name: Yardım almak veya de destek ile iletişim kurma
           href: mdb-get-help.md
         - name: Sık sorulan sorular
           href: mdb-faq.yml
         - name: Sorun giderme
           href: mdb-troubleshooting.yml
         - name: Microsoft 365 Business Premium
-          href: /microsoft-365/business-premium
+          href: /microsoft-365/business-premium/
         - name: Microsoft 365 Lighthouse
           href: /microsoft-365/lighthouse/m365-lighthouse-overview

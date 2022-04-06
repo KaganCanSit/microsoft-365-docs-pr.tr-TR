@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP) Microsoft 365 Lighthouse, portal güvenliğini yapılandırmayı öğrenin.
-ms.openlocfilehash: 4d12755ca1b02988dff3f5ba6be6dd0d8da172ad
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+ms.openlocfilehash: 532ce9d6e90ea4d502c6898a105702d525f05a1b
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64594762"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64632699"
 ---
 # <a name="configure-microsoft-365-lighthouse-portal-security"></a>Portal Microsoft 365 Lighthouse yapılandırma
 
@@ -39,11 +39,11 @@ Kullanıcılar Deniz Feneri'ne ilk kez erişdiğinde, deniz feneri hesaplarını
 
 Rol tabanlı erişim denetimi (RBAC), kullanıcı rollerine dayalı olarak kaynaklara veya bilgilere erişim sağlar. Deniz Feneri'nde müşteri kiracı verilerine ve ayarlarına erişim, genel programdan (CSP) Bulut Çözümü Sağlayıcısı rollerle sınırlıdır. Deniz Feneri'nde RBAC rolleri ayarlamak için, kullanıcılara ayrıntılı atamalar uygulamak için Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) kullanmanız önerilir. Kiracının başarılı bir şekilde eklemesi için temsili Yönetici Ayrıcalıkları (DAP) yine gereklidir, ancak yalnızca GDAP müşterileri yakın zamanda DAP'ye bağımlılık olmadan eklemede abilecektir. DAP ve GDAP bir müşteri için birlikte olduğunda GDAP izinleri öncelikli olur. 
 
-GDAP'yi çalışmaya başlamak için bkz. [GDAP'de izinlere Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md).
+GDAP ilişkisi ayarlamak için bkz. Müşteri hizmetini yönetmek [için ayrıntılı yönetici izinlerini alma](/partner-center/gdap-obtain-admin-permissions-to-manage-customer). Deniz Feneri'nin hangi roller için kullanılması önerilir? Hakkında daha fazla bilgi için bkz. Deniz [Feneri'Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md).
 
 MSP teknisyenleri Ayrıca Yönetici Temsilcisi veya Yardım masası Aracısı rollerini Temsilci Yönetici Ayrıcalıkları (DAP) aracılığıyla kullanarak Deniz Feneri'ne de erişebilirler.
 
-Deniz Feneri'nde müşteriyle ilgili olmayan kiracı eylemleri için (örneğin, işe alma, müşteriyi devre dışı bırakma/yeniden etkinleştirme, etiketleri yönetme, günlükleri gözden geçirme), MSP teknisyenlerinin iş ortağı kiracısında atanmış bir rolü olması gerekir. Önceki makalenin bağlantı ayrıntılarında, Deniz Feneri'nde roller ve bunların izinleri yer almıştır.
+Deniz Feneri'nde müşteriyle ilgili olmayan kiracı eylemleri için (örneğin, işe alma, müşteriyi devre dışı bırakma/yeniden etkinleştirme, etiketleri yönetme, günlükleri gözden geçirme), MSP teknisyenlerinin iş ortağı kiracısında atanmış bir rolü olması gerekir. İş [ortağı kiracı rolleri hakkında daha fazla Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md) için bkz. İş ortağı kiracısı izinlerine genel bakış.
 
 ## <a name="set-up-azure-ad-privileged-identity-management-pim"></a>Azure AD Privileged Identity Management'i (PIM) ayarlama
 

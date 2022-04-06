@@ -1,5 +1,5 @@
 ---
-title: Office 365 için Microsoft Defender ile ilgili araştırmalarda e-posta Office 365
+title: E-posta çözümleme Office 365 için Microsoft Defender si
 f1.keywords:
 - NOCSH
 author: dansimp
@@ -15,20 +15,20 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 keywords: otomatik olay yanıtı, araştırma, düzeltme, tehdit koruması
-description: Daha fazla bilgi için Microsoft Defender'da soruşturmalarda e-posta çözümlemesi Office 365.
+description: Araştırmalarda e-posta çözümlemenin diğer Office 365 için Microsoft Defender.
 ms.custom:
 - air
 - seo-marvel-mar2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5c4d1be31742d21f6e7919a8db4a3d2aff75f66e
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: 49a244e948da14e328ab3db64dc495ab6e5d6dd4
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775400"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468027"
 ---
-# <a name="email-analysis-in-investigations-for-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender ile ilgili araştırmalarda e-posta Office 365
+# <a name="email-analysis-in-investigations-for-microsoft-defender-for-office-365"></a>E-posta çözümleme Office 365 için Microsoft Defender si
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "63775400"
 - [Office 365 için Microsoft Defender plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Uyarıların otomatik olarak soruşturması sırasında Office 365 için Microsoft Defender orijinal e-postayı tehditlere karşı analiz eder ve özgün e-posta ile ilgili diğer e-postaları tanımlar ve saldırının bir parçası olabilir. E-posta saldırıları nadiren tek bir e-postadan oluşur, çünkü bu çözümleme önemlidir.
+Uyarıların otomatik olarak soruşturması sırasında, Office 365 için Microsoft Defender e-postayı tehditlere karşı analiz eder ve özgün e-postayla ve olası bir saldırının parçası olan diğer e-postaları tanımlar. E-posta saldırıları nadiren tek bir e-postadan oluşur, çünkü bu çözümleme önemlidir.
 
 Otomatik araştırmanın e-posta çözümlemesi, özgün e-postadan gelen öznitelikleri kullanarak e-posta kümelerini, sizin tarafından gönderilen ve alınan e-postaları sorgulamaya tanımlar. Bu, güvenlik işlemleri analisti'nin Gezgin'de veya Gelişmiş Sındır'da ilgili e-postaları aramalarına benzer. Tipik olarak güvenlik algılamayı önlemek için e-posta parametrelerine dönüşüm uygulamalarından dolayı eşleşen e-postaları tanımlamak için çeşitli sorgular kullanılır. Kümeleme çözümlemesi, soruşturmaya dahil olan e-postaların nasıl işlenmeli olduğunu belirlemek için şu denetimleri gerçekleştirir:
 
@@ -74,7 +74,7 @@ Soruşturma eylemlerinin güncel olmasını sağlamak için, bekleyen eylemleri 
 
 Bir olayın Kanıt ve Yanıt **sekmesinde e-posta** tabanlı kanıt şimdi aşağıdaki bilgileri görüntüler.
 
-:::image type="content" source="../../media/email-analysis-investigations/email-analysis-evidence-example.png" alt-text="Kanıt ve Yanıt'ta e-posta çözümleme bilgileri örneği." lightbox="../../media/email-analysis-investigations/email-analysis-evidence-example.png":::
+:::image type="content" source="../../media/email-analysis-investigations/email-analysis-evidence-example.png" alt-text="Kanıt ve Yanıt'ta e-posta çözümleme bilgileri" lightbox="../../media/email-analysis-investigations/email-analysis-evidence-example.png":::
 
 Şekilde numaralı açıklamalı açıklamalardan:
 
@@ -91,7 +91,7 @@ Bir olayın Kanıt ve Yanıt **sekmesinde e-posta** tabanlı kanıt şimdi aşa�
 
 Bir olayın Varlıklar sekmesindeki e-posta  veya e-posta kümeleri **için,** Engellenmiş iletisi, posta kutusunda bu öğe için kötü amaçlı e-posta (posta veya küme) olmadığını gösterir. İşte bir örnek.
 
-:::image type="content" source="../../media/email-analysis-investigations/email-analysis-evidence-example-prevented.png" alt-text="Engelli e-posta örneği." lightbox="../../media/email-analysis-investigations/email-analysis-evidence-example-prevented.png":::
+:::image type="content" source="../../media/email-analysis-investigations/email-analysis-evidence-example-prevented.png" alt-text="Önleyen bir e-posta." lightbox="../../media/email-analysis-investigations/email-analysis-evidence-example-prevented.png":::
 
 Bu örnekte, e-posta kötü amaçlıdır ancak posta kutusunda değildir.
 

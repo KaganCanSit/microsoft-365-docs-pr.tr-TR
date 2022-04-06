@@ -1,7 +1,7 @@
 ---
-title: Şüpheli e-posta iletme etkinliği için uyarı notlama
-description: Uyarıları gözden geçirmek ve saldırıyı düzeltmek ve ağın korunması için önerilen eylemleri yapmak için şüpheli e-posta iletme etkinliğine uyarı notlama.
-keywords: olaylar, uyarılar, araştırma, çözümleme, yanıt, korelasyon, saldırı, makineler, cihazlar, kullanıcılar, kimlikler, kimlik, posta kutusu, e-posta, 365, microsoft, m365
+title: Şüpheli e-posta iletme etkinliği için uyarı notları
+description: Uyarıları gözden geçirmek ve saldırıyı düzeltmek ve ağınızı korumak için önerilen eylemleri uygulamak için şüpheli e-posta iletme etkinliği için uyarı notlama.
+keywords: olaylar, uyarılar, araştırma, analiz etme, yanıt, bağıntı, saldırı, makineler, cihazlar, kullanıcılar, kimlikler, kimlik, posta kutusu, e-posta, 365, Microsoft, m365
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -21,168 +21,153 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 2349fb9ac736653b9a74c42aecf5e71cc95381ca
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: dcfb6d01503dd4499ce6431b95a433c4cb598de1
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63321523"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64663236"
 ---
-# <a name="alert-grading-for-suspicious-email-forwarding-activity"></a>Şüpheli e-posta iletme etkinliği için uyarı notlama
+# <a name="alert-grading-for-suspicious-email-forwarding-activity"></a>Şüpheli e-posta iletme etkinliği için uyarı notları
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - Microsoft 365 Defender
 
-Tehdit amaçlı tehdit, kullanıcının gelen kutusunda e-postaları okuma, e-postaları dış alıcılara iletme ve kimlik avı e-postaları gönderme gibi çeşitli kötü amaçlı amaçlar doğrultusunda güvenliği ihlal edilmiş kullanıcı hesaplarını kullanabilir. Hedefli kullanıcı e-postalarının iletil haberini fark e-postayı fark e-postaylamış olabilir. Bu, kullanıcı hesaplarının güvenliği ihlal edilmişken saldırganların kullanmaları için kullanılan çok yaygın bir tactiğidir.
+Tehdit aktörleri, güvenliği aşılmış kullanıcı hesaplarını kullanıcının gelen kutusundaki e-postaları okuma, e-postaları dış alıcılara iletme ve kimlik avı postaları gönderme gibi çeşitli kötü amaçlı amaçlar için kullanabilir. Hedeflenen kullanıcı, e-postalarının iletildiğini bilmiyor olabilir. Bu, saldırganların kullanıcı hesapları tehlikeye atıldığında kullandığı çok yaygın bir taktiktir.
 
-E-postalar el ile veya otomatik olarak iletme kuralları kullanılarak iletilebilir. Otomatik iletme, Gelen Kutusu Kuralları, Aktarım Kuralı (ETR) Exchange SMTP İ iletme gibi çeşitli yollarla uygulanabilirsiniz. El ile iletme işlemi kullanıcılardan doğrudan işlem gerektiriyor ama otomatik iletili e-postaların hepsini fark e-postalarını fark e-postayla gönderemleri gerektir. Yeni Microsoft 365, kullanıcı bir e-postayı otomatik olarak kötü amaçlı olabilecek bir e-posta adresine iletmişsa uyarı yükseltildi.
+E-postalar el ile veya iletme kuralları kullanılarak otomatik olarak iletilebilir. Otomatik iletme, Gelen Kutusu Kuralları, Exchange Aktarım Kuralı (ETR) ve SMTP İletme gibi birçok yolla uygulanabilir. El ile iletme kullanıcıların doğrudan eylem gerçekleştirmesini gerektirse de, otomatik olarak iletilen tüm e-postaların farkında olmayabilirler. Microsoft 365'da, kullanıcı bir e-postayı kötü amaçlı olabilecek bir e-posta adresine otomatik olarak ilettiğinde bir uyarı oluşturulur.
 
-Bu çalışma kitabı Şüpheli E-posta İ iletme Etkinliği uyarılarını araştırmanıza ve bunları hızlı bir şekilde Doğru Pozitif (TP) veya Hatalı Pozitif (FP) olarak notlamanıza yardımcı olur. Ardından, saldırıyı düzeltmek için TP uyarıları için önerilen eylemleri gerçekleştirabilirsiniz.
+Bu playbook, Şüpheli E-posta İletme Etkinliği uyarılarını araştırmanıza ve bunları Doğru Pozitif (TP) veya Hatalı Pozitif (FP) olarak hızla notlamanıza yardımcı olur. Ardından, saldırıyı düzeltmek için TP uyarıları için önerilen eylemleri gerçekleştirebilirsiniz.
 
-Office 365 için Microsoft Defender ve Bulut Uygulamaları için Microsoft Defender uyarı notlama hakkında genel bilgi için giriş [makalesine bakın](alert-grading-playbooks.md).
+Office 365 için Microsoft Defender ve Microsoft Defender for Cloud Apps için uyarı not verme konusuna genel bakış için [giriş makalesine](alert-grading-playbooks.md) bakın.
 
-Bu playbook'un kullanımı sonuçları:
+Bu playbook'u kullanmanın sonuçları şunlardır:
 
-- Otomatik iletili e-postalarla ilişkilendirilmiş uyarıları kötü amaçlı (TP) veya skp (FP) etkinlikleri olarak belirledik.
+- Otomatik iletilen e-postalarla ilişkili uyarıları kötü amaçlı (TP) veya iyi huylu (FP) etkinlikler olarak belirlediniz.
 
-  Kötü amaçlı ise, etkilenen [posta kutuları için e-posta otomatik](../office-365-security/external-email-forwarding.md) iletmeyi durdurdunız.
+  Kötü amaçlıysa, etkilenen posta kutuları için [e-posta otomatik iletmeyi durdurdunuz](../office-365-security/external-email-forwarding.md) .
 
-- E-postalar kötü amaçlı bir e-posta adresine iletirse gerekli eylemi benimseyebilirsiniz.
+- E-postalar kötü amaçlı bir e-posta adresine iletildiyse gerekli eylemi yapmışsınızdır.
 
 ## <a name="email-forwarding-rules"></a>E-posta iletme kuralları
 
-E-posta iletme kuralları, kullanıcıların bir kullanıcının posta kutusuna gönderilen e-posta iletilerini kuruluş içinde veya dışında başka bir kullanıcının posta kutusuna iletmesine yönelik bir kural oluşturmasına olanak sağlar. Özellikle birden çok posta kutusu olan bazı e-posta kullanıcıları, işveren e-postalarını özel e-posta hesaplarına taşımak için iletme kurallarını yapılandırıyor. E-posta iletme kullanışlı bir özelliktir, ancak bilgilerin olası açıklanması nedeniyle güvenlik riski de ortaya atabilirsiniz. Saldırganlar bu bilgileri kuruluşa veya iş ortaklarına saldırı yapmak için kullanabilir.
+E-posta iletme kuralları, kullanıcıların kullanıcının posta kutusuna gönderilen e-posta iletilerini kuruluşun içindeki veya dışındaki başka bir kullanıcının posta kutusuna iletmek için bir kural oluşturmasına olanak tanır. Özellikle birden çok posta kutusu olan bazı e-posta kullanıcıları, işveren e-postalarını özel e-posta hesaplarına taşımak için iletme kurallarını yapılandırmaktadır. E-posta iletme yararlı bir özelliktir, ancak bilgilerin olası açığa çıkması nedeniyle güvenlik riski de oluşturabilir. Saldırganlar bu bilgileri kuruluşunuza veya iş ortaklarına saldırmak için kullanabilir.
 
 ### <a name="suspicious-email-forwarding-activity"></a>Şüpheli e-posta iletme etkinliği
 
-Saldırganlar, kötü amaçlı etkinliklerini kullanıcıdan gizlemek üzere güvenliği tehlikeye konan kullanıcı posta kutusunda gelen e-postaları gizlemek için e-posta kuralları ayarlamış olabilir. Ayrıca güvenliği tehlikeye atılmış kullanıcı posta kutusunda e-postaları silmek, e-postaları RSS klasörü gibi daha az fark edilebilir başka bir klasöre taşımak veya e-postaları bir dış hesaba iletmek için de kurallar ayarlanabilir.  
+Saldırganlar, kullanıcıdan gelen kötü amaçlı etkinliklerini gizlemek için güvenliği aşılmış kullanıcı posta kutusundaki gelen e-postaları gizlemek için e-posta kuralları ayarlayabilir. Ayrıca, e-postaları silmek, e-postaları RSS klasörü gibi daha az fark edilebilir başka bir klasöre taşımak veya e-postaları dış hesaba iletmek için güvenliği aşılmış kullanıcı posta kutusunda kurallar da ayarlayabilir.
 
-Bazı kurallar tüm e-postaları başka bir klasöre taşımak ve bunları "okundu" olarak işaretlemek için, bazı kurallar ise yalnızca e-posta iletisinde veya konu iletisinde belirli anahtar sözcükleri içeren postaları hareket ettirebilirsiniz. Örneğin, gelen kutusu kuralı "fatura", "kimlik avı", "yanıt vermedi", "şüpheli e-posta" veya "istenmeyen posta" gibi anahtar sözcükleri başkaları arasında arama yapacak şekilde ayarlanmış olabilir ve bunları bir dış e-posta hesabına taşı. Saldırganlar ayrıca güvenliği tehlikeye atılmış kullanıcı posta kutusunu istenmeyen posta, kimlik avı e-postaları veya kötü amaçlı yazılım dağıtmak için de kullanabilir.
- 
-Microsoft Defender for Office 365 can detect and alert on suspicious email forwarding rules, to find and delete hidden rules at the source.
+Bazı kurallar tüm e-postaları başka bir klasöre taşıyabilir ve bunları "okundu" olarak işaretleyebilirken, bazı kurallar yalnızca e-posta iletisinde veya konuda belirli anahtar sözcükler içeren postaları taşıyabilir. Örneğin, gelen kutusu kuralı diğerleri arasında "fatura", "kimlik avı", "yanıtlama", "şüpheli e-posta" veya "istenmeyen posta" gibi anahtar sözcükleri aramak ve bunları bir dış e-posta hesabına taşımak için ayarlanabilir. Saldırganlar istenmeyen postaları, kimlik avı e-postalarını veya kötü amaçlı yazılımları dağıtmak için güvenliği aşılmış kullanıcı posta kutusunu da kullanabilir.
 
-Daha fazla bilgi için bu blog gönderileri'ne bakın:
+Office 365 için Microsoft Defender şüpheli e-posta iletme kurallarını algılayabilir ve uyarır ve böylece gizli kuralları kaynakta bulup silebilirsiniz.
 
-- [İş e-posta güvenliği](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/business-email-uncompromised-part-one/ba-p/2159900)
-- [İş e-postalarının sahne gerisinde güvenliği tehlikeye atma: Büyük bir BEC kampanyasını kesintiye bırakmak için etki alanı arası tehdit verilerini kullanma](https://www.microsoft.com/security/blog/2021/06/14/behind-the-scenes-of-business-email-compromise-using-cross-domain-threat-data-to-disrupt-a-large-bec-infrastructure/)
+Daha fazla bilgi için şu blog gönderilerine bakın:
 
+- [İş E-posta Güvenliğinin Aşılmasına Neden Olan](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/business-email-uncompromised-part-one/ba-p/2159900)
+- [İş e-posta güvenliğinin aşılması sahne arkası: Büyük bir BEC kampanyasını kesintiye uğratmak için etki alanları arası tehdit verilerini kullanma](https://www.microsoft.com/security/blog/2021/06/14/behind-the-scenes-of-business-email-compromise-using-cross-domain-threat-data-to-disrupt-a-large-bec-infrastructure/)
 
 ## <a name="alert-details"></a>Uyarı ayrıntıları
 
-Şüpheli E-posta Iletme Etkinliği uyarılarını gözden geçirmek **için** , Uyarılar sayfasını açıp Etkinlik listesi **bölümünü** açın. İşte bir örnek.
- 
+Şüpheli E-posta İletme Etkinliği uyarısını gözden geçirmek için **, Etkinlik** **listesi** bölümünü görmek için Uyarılar sayfasını açın. İşte bir örnek.
+
 :::image type="content" source="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-list.png" alt-text="Uyarıyla ilgili etkinliklerin listesi" lightbox="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-list.png":::
 
-Kenar **çubuğunda**  etkinliğin ayrıntılarını görüntülemek için Etkinlik'i seçin. İşte bir örnek.
- 
-:::image type="content" source="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-details.png" alt-text="Etkinlik ayrıntıları" lightbox="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-details.png":::
+Kenar çubuğunda bu etkinliğin ayrıntılarını görüntülemek için **Etkinlik'i**  seçin. İşte bir örnek.
 
-Neden **alanı** , bu uyarıyla ilgili aşağıdaki bilgileri içerir.
+:::image type="content" source="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-details.png" alt-text="Etkinliğin ayrıntıları" lightbox="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-details.png":::
 
-- İ iletme Türü (FT) aşağıdakilerden biridir:
+**Neden** alanı, bu uyarıyla ilgili aşağıdaki bilgileri içerir.
 
-    -  Exchange Aktarım Kuralı (ETR): Aktarım Kuralı kullanılarak Exchange iletildi 
+- İletme Türü (FT) aşağıdakilerden biridir:
+  - Exchange Aktarım Kuralı (ETR): Aktarım Kuralı kullanılarak iletilir ve Exchange
+  - SMTP: Posta Kutusu İletme kullanılarak iletildi
+  - Gelen KutusuRule: Gelen Kutusu Kuralı kullanılarak iletildi
 
-    -  SMTP: Posta Kutusu İletim kullanılarak iletildi
+- İleti İzleme Kimliği (MTI): Bu uyarıyı tetikleyen iletilen e-postanın tanımlayıcısı (NetworkMessageId). NetworkMessageId, kuruluşunuzdaki bir e-postanın benzersiz tanımlayıcısıdır.
+- İletici (F): Bu e-postayı ileden kullanıcı.
+- Şüpheli Alıcı Listesi (SRL): Bu e-postada şüpheli olarak kabul edilen alıcıların listesi.
+- Alıcı Listesi (RL): Bu e-postadaki tüm alıcıların listesi.
 
-    -  Gelen Kutusu Kuralı: Gelen Kutusu Kuralı kullanılarak iletildi
-
-- İleti İzleme Kimliği (MTI): Bu, bu uyarıyı tetikleyen iletili e-postanın tanımlayıcısıdır (NetworkMessageId). NetworkMessageId, kurum içinde yer alan bir e-postanın benzersiz tanımlayıcısıdır.
-- Forwarder (F): Bu e-postayı iletir.
-- Şüpheli Alıcı Listesi (SRL): Bu e-postada şüpheli kabul edilen alıcılar listesi.
-- Alıcı Listesi (RL): Bu e-postada yer alan tüm alıcıların listesi.
-
-## <a name="investigation-workflow"></a>İnceleme iş akışı
+## <a name="investigation-workflow"></a>Araştırma iş akışı
 
 Bu uyarıyı araştırırken şunları belirlemeniz gerekir:
 
-- Kullanıcı hesabı ve posta kutusu güvenliği ihlal edilmiş mi?
+- Kullanıcı hesabı ve posta kutusu tehlikeye girdi mi?
 - Etkinlikler kötü amaçlı mı?
 
-### <a name="is-the-user-account-and-its-mailbox-compromised"></a>Kullanıcı hesabı ve posta kutusu güvenliği ihlal edilmiş mi?
+### <a name="is-the-user-account-and-its-mailbox-compromised"></a>Kullanıcı hesabı ve posta kutusu tehlikeye girdi mi?
 
-Gönderenin geçmiş davranışına ve son etkinliklere bakarak, kullanıcının hesabının tehlikeye atılmış olarak kabul edilmiş olup olmadığını belirleyebilirsiniz. Kullanıcı portalında, kullanıcının sayfasından yükseltilmiş uyarı ayrıntılarını Microsoft 365 Defender. 
+Gönderenin geçmiş davranışlarına ve son etkinliklerine bakarak, kullanıcının hesabının gizliliğinin ihlal edilmiş olarak kabul edilip edilmeyeceğini saptayabilmelisiniz. Microsoft 365 Defender portalında kullanıcının sayfasından alınan uyarıların ayrıntılarını görebilirsiniz.
 
-Etkilenen posta kutusu için şu ek etkinlikleri de çözümebilirsiniz:
+Etkilenen posta kutusu için bu ek etkinlikleri de analiz edebilirsiniz:
 
 - E-postayla ilgili tehditleri anlamak için Tehdit Gezgini'ni kullanma
+  - Gönderen tarafından gönderilen en son e-postalardan kaçının kimlik avı, istenmeyen posta veya kötü amaçlı yazılım olarak algılandığından gözlemleyin.
+  - Gönderilen e-postaların kaç tanesinde hassas bilgiler olduğunu gözlemleyin.
 
-    - Gönderen tarafından gönderilen en son e-postalardan çoğunun kimlik avı, istenmeyen posta veya kötü amaçlı yazılım olarak algılandığından emin olun.
-
-    - Gönderilen e-postalardan kaç tanesinde hassas bilgi olduğunu gözlemin. 
-
-- Portalda riskli oturum açma davranışını Microsoft Azure değerlendirin.
-- Kullanıcının cihazında kötü amaçlı etkinliklerin olup olduğunu kontrol edin.
+- Microsoft Azure portalında riskli oturum açma davranışını değerlendirin.
+- Kullanıcının cihazındaki kötü amaçlı etkinlikleri denetleyin.
 
 ### <a name="are-the-activities-malicious"></a>Etkinlikler kötü amaçlı mı?
 
-E-posta iletme etkinliğini araştırabilirsiniz. Örneğin, e-postanın türünü, bu e-postanın alıcısı veya e-postanın ilet iş türünü kontrol edin. 
+E-posta iletme etkinliğini araştırma. Örneğin, e-postanın türünü, bu e-postanın alıcısını veya e-postanın nasıl iletildiğine bakın.
 
 Daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [Otomatik iletili iletiler içgörü](/microsoft-365/security/office-365-security/mfi-auto-forwarded-messages-report)
-- [E-posta içgörülerini iletir yeni kullanıcılar](/microsoft-365/security/office-365-security/mfi-new-users-forwarding-email)
-- [Güvenliği Tehlikeye E-posta Hesabını Yanıtla](/microsoft-365/security/office-365-security/responding-to-a-compromised-email-account)
-- [Negatif sonuçlarda hatalı pozitif ve yanlış negatif Outlook](/microsoft-365/security/office-365-security/report-false-positives-and-false-negatives)
+- [Otomatik iletilen iletiler içgörüleri](/microsoft-365/security/office-365-security/mfi-auto-forwarded-messages-report)
+- [E-posta içgörülerini ileten yeni kullanıcılar](/microsoft-365/security/office-365-security/mfi-new-users-forwarding-email)
+- [Güvenliği Aşılmış E-posta Hesabına Yanıt Verme](/microsoft-365/security/office-365-security/responding-to-a-compromised-email-account)
+- [Outlook hatalı pozitifleri ve hatalı negatifleri raporlama](/microsoft-365/security/office-365-security/report-false-positives-and-false-negatives)
 
-İşte, şüpheli e-posta iletme etkinliklerini belirlemeye yönelik iş akışı.
+Şüpheli e-posta iletme etkinliklerini tanımlamaya yönelik iş akışı aşağıdadır.
 
-:::image type="content" source="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-workflow.png" alt-text="E-posta iletme için uyarı soruşturma iş akışı" lightbox="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-workflow.png":::
+:::image type="content" source="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-workflow.png" alt-text="E-posta iletme için uyarı araştırma iş akışı" lightbox="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-workflow.png":::
 
-Tehdit Gezgini'ni kullanarak veya gelişmiş arama sorguları ile e-posta iletme uyarılarını araştırmanız için, gelişmiş arama portalında Microsoft 365 Defender edebilirsiniz. Gerektiğinde sürecin tamamını veya bir bölümünü izlemeyi seçebilirsiniz.
+Tehdit Gezgini'ni kullanarak veya Microsoft 365 Defender portalındaki özelliklerin kullanılabilirliğine bağlı olarak gelişmiş tehdit avcılığı sorgularıyla bir e-posta iletme uyarısını araştırabilirsiniz. İşlemin tamamını veya sürecin bir bölümünü gerektiği gibi takip etmeyi seçebilirsiniz.
 
-## <a name="using-threat-explorer"></a>Tehdit Gezgini'ni kullanma
+## <a name="using-threat-explorer"></a>Tehdit Gezgini'nin kullanımı
 
-Threat Explorer, bu etkinliğin şüpheli olup olmadığını belirlemek için e-postayla ilgili tehditlere karşı etkileşimli bir soruşturma deneyimi sağlar. Uyarı bilgilerinden aşağıdaki göstergeleri kullanabilirsiniz:
+Tehdit Gezgini, bu etkinliğin şüpheli olup olmadığını belirlemek için e-postayla ilgili tehditler için etkileşimli bir araştırma deneyimi sağlar. Uyarı bilgilerinden aşağıdaki göstergeleri kullanabilirsiniz:
 
-- SRL/RL: Bu ayrıntıları bulmak için (Şüpheli) Alıcılar Listesi'ne (SRL) bakın:
- 
+- SRL/RL: Şu ayrıntıları bulmak için (Şüpheli) Alıcılar Listesi'ni (SRL) kullanın:
+
     :::image type="content" source="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-recipients-list.png" alt-text="Alıcı listesi örneği" lightbox="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-recipients-list.png":::
 
-    - Who başka e-postaları bu alıcılara iletir mi?
+  - Bu alıcılara başka Who e-posta iletildi?
+  - Bu alıcılara kaç e-posta iletildi?
+  - E-postalar bu alıcılara ne sıklıkta iletilir?
 
-    - Bu alıcılara kaç e-posta iletildi?
-
-    - E-postalar bu alıcılara ne sıklıkta ilet edilir?
- 
-
-- MTI: Şu ayrıntıları bulmak için İleti İzleme Kimliği/Ağ İleti Kimliği'ne tıklayın:
+- MTI: Şu ayrıntıları bulmak için İleti İzleme Kimliği/Ağ İleti Kimliği'ni kullanın:
 
     :::image type="content" source="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-network-message-id.png" alt-text="Ağ İletisi Kimliği örneği" lightbox="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-network-message-id.png":::
 
-    - Bu e-posta için hangi ek ayrıntılar kullanılabilir? Örneğin: Konu, dönüş yolu ve zaman damgası.
+  - Bu e-posta için hangi ek ayrıntılar sağlanır? Örneğin: konu, dönüş yolu ve zaman damgası.
+  - Bu e-postanın kaynağı nedir? Benzer e-postalar var mı?
+  - Bu e-posta herhangi bir URL içeriyor mu? URL herhangi bir hassas veriye işaret eder mi?
+  - E-postada ek var mı? Ekler hassas bilgiler içeriyor mu?
+  - E-postada gerçekleştirilen eylem neydi? Silindi mi, okundu olarak işaretlendi mi veya başka bir klasöre taşındı mı?
+  - Bu e-postayla ilişkili tehditler var mı? Bu e-posta herhangi bir kampanyanın parçası mı?
 
-    - Bu e-postanın kaynağı nedir? Benzer e-postalar var mı?
+Bu soruların yanıtlarına bağlı olarak, bir e-postanın kötü amaçlı mı yoksa zararsız mı olduğunu saptayabilmeniz gerekir.
 
-    - Bu e-posta URL'leri içeriyor mu? URL herhangi bir hassas veriye işaret mi etti?
+## <a name="advanced-hunting-queries"></a>Gelişmiş tehdit avcılığı sorguları
 
-    - E-posta ek içeriyor mu? Ekler hassas bilgiler içeriyor mu?
-
-    - E-postada hangi eylem ildi? Silinmiş, okundu olarak işaretlenmiş veya başka bir klasöre taşınmış mı?
-
-    - Bu e-postayla ilişkilendirilmiş bir tehdit var mı? Bu e-posta herhangi bir kampanyanın parçası mı?
-
-Bu soruların yanıtlarını temel alarak, bir e-postanın kötü amaçlı mı yoksa kötü amaçlı mı olduğunu belirleyebilirsiniz.
-
-## <a name="advanced-hunting-queries"></a>Gelişmiş arama sorguları
-
-Uyarıyla [ilgili bilgi](advanced-hunting-overview.md) toplamak ve etkinliğin şüpheli olup olmadığını belirlemek için gelişmiş Arama sorgularını kullanmak için, aşağıdaki tablolara erişiminiz olduğundan emin olun:
+Bir uyarıyla ilgili bilgileri toplamak ve etkinliğin şüpheli olup olmadığını belirlemek için [gelişmiş Tehdit Avcılığı](advanced-hunting-overview.md) sorgularını kullanmak için aşağıdaki tablolara erişiminiz olduğundan emin olun:
 
 - EmailEvents - E-posta akışıyla ilgili bilgileri içerir.
 
-- EmailUrlInfo - E-postalarda URL'lerle ilgili bilgileri içerir.
+- EmailUrlInfo - E-postalardaki URL'ler ile ilgili bilgileri içerir.
 
 - CloudAppEvents -Kullanıcı etkinliklerinin denetim günlüğünü içerir.
 
-- IdentityLogonEvents - Tüm kullanıcıların oturum açma bilgilerini içerir.
+- IdentityLogonEvents - Tüm kullanıcılar için oturum açma bilgilerini içerir.
 
->[!Note]
->Bazı parametreler, sizin veya ağınız için benzersizdir. Bu belirli parametreleri her sorguda olduğu gibi doldurun.
->
+> [!NOTE]
+> Bazı parametreler kuruluşunuza veya ağınıza özgüdür. Her sorguda açıklandığı gibi bu belirli parametreleri doldurun.
 
-Bu alıcılara e-postaları başka kimlerin ilettirmiştir (SRL/RL) bulmak için bu sorguyu çalıştırın.
+Başka kimlerin bu alıcılara e-posta ilettiğini (SRL/RL) bulmak için bu sorguyu çalıştırın.
 
 ```kusto
 let srl=pack_array("{SRL}"); //Put values from SRL here.
@@ -191,7 +176,7 @@ EmailEvents
 | distinct SenderDisplayName, SenderFromAddress, SenderObjectId
 ```
 
-Bu alıcılara kaç e-posta iletildi bulmak için bu sorguyu çalıştırın.
+Bu alıcılara kaç e-posta iletildiğini öğrenmek için bu sorguyu çalıştırın.
 
 ```kusto
 let srl=pack_array("{SRL}"); //Put values from SRL here.
@@ -200,7 +185,7 @@ EmailEvents
 | summarize Count=dcount(NetworkMessageId) by RecipientEmailAddress
 ```
 
-E-postaların bu alıcılara ne sıklıkta iletildiklerini bulmak için bu sorguyu çalıştırın.
+E-postaların bu alıcılara ne sıklıkta ilettiğini öğrenmek için bu sorguyu çalıştırın.
 
 ```kusto
 let srl=pack_array("{SRL}"); //Put values from SRL here.
@@ -209,15 +194,15 @@ EmailEvents
 | summarize Count=dcount(NetworkMessageId) by RecipientEmailAddress, bin(Timestamp, 1d)
 ```
 
-E-postada URL olup olduğunu bulmak için bu sorguyu çalıştırın.
- 
+E-postanın URL'leri olup olmadığını öğrenmek için bu sorguyu çalıştırın.
+
 ```kusto
 let mti='{MTI}'; //Replace {MTI} with MTI from alert
 EmailUrlInfo
 | where NetworkMessageId == mti
 ```
 
-E-postanın ekleri olup olduğunu bulmak için bu sorguyu çalıştırın.
+E-postada ek olup olmadığını öğrenmek için bu sorguyu çalıştırın.
 
    ```kusto
    let mti='{MTI}'; //Replace {MTI} with MTI from alert
@@ -225,15 +210,15 @@ E-postanın ekleri olup olduğunu bulmak için bu sorguyu çalıştırın.
    | where NetworkMessageId == mti
    ```
 
-Forwarder'ın (gönderen) yeni kurallara sahip olup olduğunu bulmak için bu sorguyu çalıştırın.
+İleticinin (gönderen) yeni kurallar oluşturup oluşturmadığını öğrenmek için bu sorguyu çalıştırın.
 
 ```kusto
 let sender = "{SENDER}"; //Replace {SENDER} with display name of Forwarder
 let action_types = pack_array(
-    "New-InboxRule", 
-    "UpdateInboxRules", 
-    "Set-InboxRule", 
-    "Set-Mailbox",    
+    "New-InboxRule",
+    "UpdateInboxRules",
+    "Set-InboxRule",
+    "Set-Mailbox",
     "New-TransportRule",
     "Set-TransportRule");
 CloudAppEvents
@@ -241,51 +226,51 @@ CloudAppEvents
 | where ActionType in (action_types)
 ```
 
-Bu kullanıcıdan herhangi bir anormal oturum açma olay bulunarak bu sorguyu çalıştırın. Örneğin: bilinmeyen IP'ler, yeni uygulamalar, yaygın olmayan ülkeler, çoklu Oturum Açma Olayları.
+Bu kullanıcıdan gelen anormal oturum açma olayları olup olmadığını öğrenmek için bu sorguyu çalıştırın. Örneğin: bilinmeyen IP'ler, yeni uygulamalar, yaygın olmayan ülkeler, birden çok LogonFailed olayı.
 
 ```kusto
-let sender = "{SENDER}"; //Replace {SENDER} with email of the Forwarder 
+let sender = "{SENDER}"; //Replace {SENDER} with email of the Forwarder
 IdentityLogonEvents
 | where AccountUpn == sender
 ```
 
-### <a name="investigating-forwarding-rules"></a>Yönlendirme kurallarını araştırma
+### <a name="investigating-forwarding-rules"></a>İletme kurallarını araştırma
 
-Ayrıca, kural türüne (uyarının FT değeri) bağlı olarak, Exchange yönetim merkezini kullanarak şüpheli iletme kurallarını da bulabilirsiniz.
+Kural türüne (uyarıdaki FT değeri) göre Exchange yönetim merkezini kullanarak şüpheli iletme kurallarını da bulabilirsiniz.
 
-- ETR 
+- ETR
 
-  Exchange aktarım kuralları, Kurallar **bölümünde listelenir**. Tüm kuralların beklendiği gibi olduğunu doğrulayın.
+  Exchange aktarım kuralları **Kurallar** bölümünde listelenir. Tüm kuralların beklendiği gibi olduğunu doğrulayın.
 
 - SMTP
 
-  Gönderenin posta kutusunu seçerek posta kutusu iletme kurallarını, Posta akışı ayarlarını yönet **\> E-posta iletme \> Düzenleme'yi seçebilirsiniz\>**.
+  Gönderenin posta kutusunu **yönet posta akışı ayarlarını \> e-posta iletme Düzenleme'yi seçerek posta kutusu\> iletme \>** kurallarını görebilirsiniz.
 
 - Gelen KutusuRule
 
-  Gelen kutusu kuralları e-posta istemcisiyle yapılandırılır. Kullanıcılar tarafından oluşturulan [gelen kutusu kurallarını liste almak için Get-InboxRule](/powershell/module/exchange/get-inboxrule) PowerShell cmdlet'ini kullanabilirsiniz.
+  Gelen kutusu kuralları e-posta istemcisiyle yapılandırılır. Kullanıcılar tarafından oluşturulan gelen kutusu kurallarını listelemek için [Get-InboxRule](/powershell/module/exchange/get-inboxrule) PowerShell cmdlet'ini kullanabilirsiniz.
 
 ### <a name="additional-investigation"></a>Ek araştırma
 
-Şimdiye kadar keşfedilen kanıtla birlikte, yeni iletme kuralları oluşturulsa bile, bu kuralların oluşturul olup olmadığını da öğrensiniz. Kuralla ilişkilendirilmiş IP adresini araştırabilirsiniz. Bu adresin anormal bir IP adresi olmadığını ve kullanıcı tarafından gerçekleştirilen normal etkinliklerle tutarlı olduğundan emin olun.
+Şimdiye kadar bulunan kanıtlarla birlikte yeni iletme kuralları oluşturulup oluşturulmadığını belirleyebilirsiniz. Kuralla ilişkili IP adresini araştırın. Bunun anormal bir IP adresi olmadığından ve kullanıcı tarafından gerçekleştirilen olağan etkinliklerle tutarlı olduğundan emin olun.
 
 ## <a name="recommended-actions"></a>Önerilen eylemler
 
-İlişkili etkinliklerin bu uyarıyı Doğru Pozitif durumuna çıkartır olduğunu belirlerken, uyarıyı sınıflandırarak düzeltme için şu eylemleri gerçekleştirin:
+İlişkili etkinliklerin bu uyarıyı Gerçek Pozitif hale getireceğini belirledikten sonra uyarıyı sınıflandırın ve düzeltme için şu eylemleri gerçekleştirin:
 
-1. Gelen kutusu iletme kuralını devre dışı bırakma ve silme.
-2. Gelen KutusuRule iletme türü için, kullanıcının hesap kimlik bilgilerini sıfırlayın.
-3. SMTP veya ETR iletme türü için, uyarıyı oluşturan kullanıcı hesabının etkinliklerini araştırabilirsiniz.
+1. Gelen kutusu iletme kuralını devre dışı bırakın ve silin.
+2. Gelen KutusuRule iletme türü için kullanıcının hesap kimlik bilgilerini sıfırlayın.
+3. SMTP veya ETR iletme türü için uyarıyı oluşturan kullanıcı hesabının etkinliklerini araştırın.
 
-    - Diğer şüpheli yönetici etkinliklerini araştıryın.
+    - Diğer şüpheli yönetici etkinliklerini araştırın.
 
     - Kullanıcı hesabının kimlik bilgilerini sıfırlayın.
 
-4. Etkilenen hesaplardan, IP adreslerinden ve şüpheli gönderenlerden gelen ek etkinliklerin olup kaynaklandığını denetleme.
+4. Etkilenen hesaplardan, IP adreslerinden ve şüpheli gönderenlerden kaynaklanan ek etkinlikleri denetleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uyarı notlamaya genel bakış](alert-grading-playbooks.md)
+- [Uyarı notlama genel bakış](alert-grading-playbooks.md)
 - [Şüpheli gelen kutusu iletme kuralları](alert-grading-playbook-inbox-forwarding-rules.md)
 - [Şüpheli gelen kutusu işleme kuralları](alert-grading-playbook-inbox-manipulation-rules.md)
-- [Uyarıları araştırma](investigate-alerts.md)
+- [Uyarıları araştırın](investigate-alerts.md)

@@ -1,8 +1,8 @@
 ---
-title: Microsoft kötü amaçlı yazılımları ve istenmeyen olabilecek uygulamaları nasıl tanımlar?
+title: Microsoft kötü amaçlı yazılımları ve istenmeyebilecek uygulamaları nasıl tanımlar?
 ms.reviewer: ''
-description: Microsoft'un kötü amaçlı yazılım veya istenmeyen olabilecek bir uygulama olup olmadığını belirlemek üzere gizlilik ihlalleri ve diğer negatif davranışlar için yazılımı nasıl gözden gözden uygulaması olduğunu öğrenin.
-keywords: güvenlik, kötü amaçlı yazılım, virüs araştırması tehditleri, araştırma kötü amaçlı yazılım, cihaz koruması, bilgisayar bulaşması, virüs bulaşması, açıklamalar, düzeltme, en son tehdit, MMdevice, Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi, PUA, potansiyel olarak istenmeyen uygulamalar
+description: Microsoft'un kötü amaçlı yazılım mı yoksa istenmeyebilecek bir uygulama mı olduğunu belirlemek için yazılımı gizlilik ihlalleri ve diğer olumsuz davranışlara karşı nasıl gözden geçireceğini öğrenin.
+keywords: güvenlik, kötü amaçlı yazılım, virüs araştırma tehditleri, araştırma kötü amaçlı yazılımları, cihaz koruması, bilgisayar bulaşması, virüs bulaşması, açıklamalar, düzeltme, en son tehditler, MMdevice, Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi, PUA, istenmeyebilecek uygulamalar
 ms.prod: m365-security
 ms.mktglfcycl: secure
 ms.sitesec: library
@@ -16,179 +16,179 @@ ms.topic: article
 ms.date: 12/13/2021
 search.appverid: met150
 ms.technology: m365d
-ms.openlocfilehash: 3eb7eefb5309383b46189f784f811224dcfb2b28
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 1f210ee98c8fc51cfa6900b19bb3cb5d5465dbb3
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63705892"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64663558"
 ---
-# <a name="how-microsoft-identifies-malware-and-potentially-unwanted-applications"></a>Microsoft kötü amaçlı yazılımları ve istenmeyen olabilecek uygulamaları nasıl tanımlar?
+# <a name="how-microsoft-identifies-malware-and-potentially-unwanted-applications"></a>Microsoft kötü amaçlı yazılımları ve istenmeyebilecek uygulamaları nasıl tanımlar?
 
-Microsoft,güvenli ve cihazlarınızı kontrol altında Windows verimli bir deneyim sunmak için çalışıyor. Microsoft, yazılım ve çevrimiçi içeriği tanımlayarak ve çözümlayarak olası tehditlerden korunmanıza yardımcı olur. Yazılımı indirdiğiniz, yüklemeniz, çalıştırmanız, indirilen programların itibarını kontrol ediyor ve bilinen tehditlere karşı korunmanız gerekiyor. Ayrıca, bizim için bilinmeyen yazılım hakkında da uyarıldınız.  
+Microsoft, cihazlarınızı güvende ve denetimde olduğunuzdan emin olmak için çalışarak keyifli ve üretken bir Windows deneyimi sağlamayı amaçlar. Microsoft, yazılımları ve çevrimiçi içeriği tanımlayıp analiz ederek olası tehditlerden korunmanıza yardımcı olur. Yazılımı indirdiğinizde, yüklediğinizde ve çalıştırdığınızda, indirilen programların itibarını denetler ve bilinen tehditlere karşı korunmanızı sağlarız. Ayrıca, bizim bilmediğimiz yazılımlar hakkında da uyarılırsınız.  
 
-Bilinmeyen veya şüpheli yazılımları analiz [için göndererek Microsoft'a yardımcı olabilirsiniz](https://www.microsoft.com/wdsi/filesubmission/). Bu, bilinmeyen veya şüpheli yazılımların saygınlığı sağlamaya başlamak için sistemimiz tarafından taranmasında yardımcı olur. [Çözümleme için dosya gönderme hakkında daha fazla bilgi](submission-guide.md)
+[Analiz için bilinmeyen veya şüpheli yazılımlar göndererek Microsoft'a](https://www.microsoft.com/wdsi/filesubmission/) yardımcı olabilirsiniz. Bu, bilinmeyen veya şüpheli yazılımların itibarını artırmaya başlamak için sistemimiz tarafından taranmasını sağlamaya yardımcı olur. [Analiz için dosya gönderme hakkında daha fazla bilgi edinin](submission-guide.md)
 
-Sonraki bölümlerde, uygulamalar için kullanılan sınıflandırmalara ve bu sınıflandırmaya yol açacak davranış türlerine genel bir bakış sağlanmıştır.
+Sonraki bölümlerde, uygulamalar için kullandığımız sınıflandırmalara ve bu sınıflandırmaya yol açan davranış türlerine genel bir bakış sağlanır.
 
 >[!NOTE]
-> Yeni kötü amaçlı yazılım formları ve istenmeyen uygulamalar hızla geliştiriliyor ve dağıtılıyor. Aşağıdaki liste kapsamlı bir liste değildir ve Microsoft önceden bildirim veya duyurulmadan bunları ayarlama, genişletme ve güncelleştirme hakkını saklı tutar.
+> Yeni kötü amaçlı yazılım biçimleri ve istenmeyebilecek uygulamalar hızla geliştiriliyor ve dağıtılıyor. Aşağıdaki liste kapsamlı olmayabilir ve Microsoft, önceden bildirimde bulunmadan veya duyurulmadan bunları ayarlama, genişletme ve güncelleştirme hakkını saklıdır.
 
 ## <a name="unknown--unrecognized-software"></a>Bilinmiyor – Tanınmayan yazılım  
 
-Virüsten koruma veya koruma teknolojisi mükemmel değildir. Kötü amaçlı site ve uygulamaları tanımlamak ve engellemek ya da yeni yayımlanan programlara ve sertifikalara güvenmek zaman alır.İnternet'te ve yazılımda sürekli güncelleştirilen ve yayımlanan neredeyse 2 milyar web sitesiyle, tek tek her site ve program hakkında bilgi almak imkansızdır.
+Hiçbir virüsten koruma veya koruma teknolojisi mükemmel değildir. Kötü amaçlı siteleri ve uygulamaları tanımlamak ve engellemek ya da yeni yayımlanan programlara ve sertifikalara güvenmek zaman alır. İnternet'te neredeyse 2 milyar web sitesi ve yazılım sürekli olarak güncelleştirilip yayınlandığında, her site ve program hakkında bilgi sahibi olmak imkansızdır.
 
-Bilinmeyen/Seyrek İndirilen uyarılar, algılanmamış kötü amaçlı yazılımlar için erken uyarı sistemi olarak düşünmektedir. Genel olarak, yeni kötü amaçlı yazılım tanımlanana kadar yayımlanana kadar bir gecikme olur. Yaygın olmayan programların hepsi kötü amaçlı değildir, ancak bilinmeyen kategorideki risk normal kullanıcı için çok daha yüksektir. Bilinmeyen yazılımlar için uyarılar bloklar değildir. Kullanıcılar, dilese uygulamayı normal olarak indirmeyi ve çalıştırmayı seçebilir.
+Bilinmeyen/Yaygın olarak indirilmeyen uyarıları, algılanmamış olabilecek kötü amaçlı yazılımlar için erken uyarı sistemi olarak düşünün. Yeni kötü amaçlı yazılımların kullanıma sunulma süresi, tanımlanana kadar genellikle bir gecikme yaşanıyor. Yaygın olmayan programların tümü kötü amaçlı değildir, ancak bilinmeyen kategorideki risk tipik kullanıcı için çok daha yüksektir. Bilinmeyen yazılım uyarıları blok değildir. Kullanıcılar isterlerse uygulamayı normal bir şekilde indirip çalıştırmayı seçebilir.
 
-Yeterli veri toplanıp toplanıp, Microsoft'un güvenlik çözümleri bir karara varabilirsiniz. Tehdit bulunamıyor ya da bir uygulama veya yazılım kötü amaçlı yazılım veya potansiyel olarak istenmeyen yazılım olarak kategorilere ayrılmıştır.
+Yeterli veri toplandıktan sonra Microsoft'un güvenlik çözümleri bir belirleme yapabilir. Tehdit bulunamadı ya da bir uygulama veya yazılım kötü amaçlı yazılım veya istenmeyebilecek yazılım olarak kategorilere ayrılmıştır.
 
-## <a name="malware"></a>Kötü amaçlı yazılım
+## <a name="malware"></a>Malware
 
-Kötü amaçlı yazılım, Microsoft'un kötü amaçlı yazılım veya istenmeyen yazılım olarak daha ayrıntılı bir şekilde sınıflara ekli hale gelen uygulamalar ve yazılım gibi diğer kodlara yönelik *aşırı arşiv* *adıdır*.
+Kötü amaçlı yazılım, Microsoft'un *kötü amaçlı* yazılım veya *istenmeyen* yazılım olarak daha ayrıntılı olarak sınıflandıran uygulamalar ve yazılım gibi diğer kodlar için ayrıntılı bir addır.
 
 ### <a name="malicious-software"></a>Kötü amaçlı yazılım
 
-Kötü amaçlı yazılım, kullanıcı güvenliğini tehlikeye atan bir uygulama veya koddur. Kötü amaçlı yazılımlar kişisel bilgilerinizi çalmak, bir lisans ödemesi yapılana, istenmeyen posta göndermek için cihazınızı kullanana veya diğer kötü amaçlı yazılımları indirene kadar cihazınızı kilitler. Genel olarak, kötü amaçlı yazılımlar kullanıcıları kandırmak, hile yapmak veya hile yapmak ister ve onları zayıf devletlere yerleştirmek ister.
+Kötü amaçlı yazılım, kullanıcı güvenliğini tehlikeye atan bir uygulama veya koddur. Kötü amaçlı yazılımlar kişisel bilgilerinizi çalabilir, fidye ödeyene kadar cihazınızı kilitler, istenmeyen posta göndermek için cihazınızı kullanabilir veya diğer kötü amaçlı yazılımları indirebilir. Genel olarak, kötü amaçlı yazılımlar kullanıcıları kandırmak, kandırmak veya dolandırmak, savunmasız durumlara yerleştirmek ister.
 
-Microsoft, en kötü amaçlı yazılımları aşağıdaki kategorilerden birini sınıflandırabilir:
+Microsoft, kötü amaçlı yazılımların çoğunu aşağıdaki kategorilerden birinde sınıflandırır:
 
-* **Backdoor:** Kötü amaçlı korsanlara cihazınıza uzaktan erişim ve kontrolü veren bir kötü amaçlı yazılım türü.
+* **Backdoor:** Kötü amaçlı korsanlara cihazınıza uzaktan erişim ve cihazınızın denetimini sağlayan bir kötü amaçlı yazılım türü.
 
-* **Komut ve Denetim:** Cihazınıza bulaşacak ve bilgisayar korsanlarının komut ve denetim sunucusuyla yönergeler almak için iletişim kuracak bir kötü amaçlı yazılım türü. İletişim kurulduktan sonra bilgisayar korsanları veri çaldıracak komutlar gönderebilir, cihazı kapatıp yeniden başlatıp web hizmetlerini kesintiye neden olabilir.
+* **Komut ve Denetim:** Cihazınıza bulaşan ve yönergeleri almak için bilgisayar korsanlarının komut ve denetim sunucusuyla iletişim kuran bir kötü amaçlı yazılım türü. İletişim kurulduktan sonra bilgisayar korsanları verileri çalabilen, cihazı kapatıp yeniden başlatabilen ve web hizmetlerini kesintiye uğratabilecek komutlar gönderebilir.
 
-* **İndirici:** Cihazınıza başka bir kötü amaçlı yazılım indiren bir kötü amaçlı yazılım türü. Dosyaları indirmek için İnternet'e bağlanması gerekir.
+* **Downloader:** Cihazınıza diğer kötü amaçlı yazılımları indiren bir kötü amaçlı yazılım türü. Dosyaları indirmek için İnternet'e bağlanması gerekir.
 
-* **Dropper:** Cihazınıza başka kötü amaçlı yazılım dosyaları yüken bir kötü amaçlı yazılım türü.İndiriciden farklı olarak, dropper kötü amaçlı dosyaları bırakmak için İnternet'e bağlanmak zorunda değildir. Bırakılan dosyalar genellikle dropper'ın kendisine ekli olarak gelir.
+* **Damlalık:** Cihazınıza başka kötü amaçlı yazılım dosyaları yükleyen bir kötü amaçlı yazılım türü. İndiricinin aksine, bir damlalık kötü amaçlı dosyaları bırakmak için İnternet'e bağlanmak zorunda değildir. Bırakılan dosyalar genellikle damlalık içine eklenir.
 
-* **Exploit:** Cihazınıza erişim kazanmak ve kötü amaçlı yazılım yüklemek gibi diğer görevleri gerçekleştirmek için yazılım açıklarını kullanan bir kod parçası. [Açıkları hakkında daha fazla bilgi edinebilirsiniz](exploits-malware.md).
+* **Istismar:** Cihazınıza erişim kazanmak ve kötü amaçlı yazılım yükleme gibi diğer görevleri gerçekleştirmek için yazılım güvenlik açıklarını kullanan bir kod parçası. [Açıklardan yararlanmalar hakkında daha fazla bilgi edinin](exploits-malware.md).
 
-* **Hacktool:** Cihazınıza yetkisiz erişim kazanmak için kullanılmaktadır.
+* **Hacktool:** Cihazınıza yetkisiz erişim elde etmek için kullanılabilecek bir araç türü.
 
-* **Makro virüsü:** Virüs bulaşmış belgelere yayılan kötü amaçlı yazılım Microsoft Word veya Excel olabilir. Virüs bulaşmış bir belgeyi a açınca 0 olur.
+* **Makro virüsü:** Microsoft Word veya Excel belgeleri gibi virüslü belgeler arasında yayılan bir kötü amaçlı yazılım türü. Virüs bulaşmış bir belgeyi açtığınızda virüs çalıştırılır.
 
-* **Obfuscator:** Kodunu ve amacını gizleyerek, güvenlik yazılımının algılamasını veya kaldırmasını zorlaştıracak bir kötü amaçlı yazılım t türü.
+* **Obfuscator:** Kodunu ve amacını gizleyen ve güvenlik yazılımlarının algılamasını veya kaldırmasını zorlaştıran bir kötü amaçlı yazılım türü.
 
-* **Parola çalmak:** Kullanıcı adları ve parolalar gibi kişisel bilgilerinizi topan bir kötü amaçlı yazılım t türü. Sık sık, basıldık tuşları ve ziyaret ettiğiniz web siteleri hakkında bilgi toplayan ve gönderen bir tuş günlüğüyle birlikte çalışır.
+* **Parola çalan:** Kullanıcı adları ve parolalar gibi kişisel bilgilerinizi toplayan bir kötü amaçlı yazılım türü. Genellikle bastığınız tuşlar ve ziyaret ettiğiniz web siteleri hakkında bilgi toplayan ve gönderen bir keylogger ile birlikte çalışır.
 
-* **Fidye yazılımı:** Dosyalarınızı şifreleyen veya cihazınızı kullanmanızı engel olacak başka değişiklikler yapan bir kötü amaçlı yazılım türü. Ardından, cihazınızı yeniden kullanamadan önce para ödemeniz veya başka işlemler gerçekleştirmeniz gerektiğini gösteren bir not görüntülenir. [Fidye yazılımı hakkında daha fazla bilgi edinebilirsiniz](/security/compass/human-operated-ransomware).
+* **Fidye yazılımı:** Dosyalarınızı şifreleyen veya cihazınızı kullanmanızı engelleyebilecek başka değişiklikler yapan bir kötü amaçlı yazılım türü. Ardından cihazınızı yeniden kullanabilmeniz için önce para ödemeniz veya başka eylemler gerçekleştirmeniz gerektiğini belirten bir fidye notu görüntüler. [Fidye yazılımı hakkında daha fazla bilgi edinin](/security/compass/human-operated-ransomware).
 
-* **Güvenlik yazılımı:** Güvenlik yazılımı gibi olmakla birlikte herhangi bir koruma sağlanmmakta olan kötü amaçlı yazılım. Bu tür bir kötü amaçlı yazılım genellikle aygıtınızda yok olan tehditlerle ilgili uyarılar görüntüler. Ayrıca hizmetleri için ödeme yapmaya ikna etmeye çalışır.
+* **Sahte güvenlik yazılımı:** Güvenlik yazılımıymış gibi davranan ancak herhangi bir koruma sağlamayan kötü amaçlı yazılım. Bu tür kötü amaçlı yazılımlar genellikle cihazınızda var olmayan tehditlerle ilgili uyarılar görüntüler. Ayrıca hizmetlerini ödemeniz için sizi ikna etmeye çalışır.
 
-* **Truva:** Zararsız görünmeye çalışan bir kötü amaçlı yazılım türü. Virüs veya solucandan farklı olarak, Truva tek başına yayılmaz. Bunun yerine, kullanıcıların indirme ve yüklemeyle ilgili püf noktalarına karşı yasal bir görünüm yüklemeye çalışır. Yüklendikten sonra, Truvalar kişisel bilgileri çalmak, diğer kötü amaçlı yazılımları indirmek veya cihazınıza saldırganlara erişim vermek gibi çeşitli kötü amaçlı etkinlikler gerçekleştirler.
+* **Trojan:** Zararsız görünmeye çalışan bir kötü amaçlı yazılım türü. Virüs veya solucandan farklı olarak truva atı tek başına yayılmaz. Bunun yerine, kullanıcıları indirme ve yükleme konusunda hileler yapmaya çalışır. Truva atları yüklendikten sonra kişisel bilgileri çalmak, diğer kötü amaçlı yazılımları indirmek veya saldırganlara cihazınıza erişim vermek gibi çeşitli kötü amaçlı etkinlikler gerçekleştirir.
 
-* **Truva tıkıcı:** Web siteleri veya uygulamalar üzerindeki düğmelere veya benzer denetimlere otomatik olarak tık eden bir truva türü. Saldırganlar çevrimiçi reklamlara tıklamak için bu Truva'yı kullanabilir. Bu tıklamalar çevrimiçi yoklamaları veya diğer izleme sistemlerini çarpıtarak cihazınıza uygulama bile yükleyebilir.
+* **Truva atıcısı:** Web siteleri veya uygulamalardaki düğmelere veya benzer denetimlere otomatik olarak tıklayan bir truva atı türü. Saldırganlar bu truva atını kullanarak çevrimiçi reklamlara tıklayabilir. Bu tıklamalar çevrimiçi anketleri veya diğer izleme sistemlerini çarpıtabilir ve hatta cihazınıza uygulama yükleyebilir.
 
-* **Solucan:** Başka cihazlara yayılan bir kötü amaçlı yazılım türü. Solucanlar e-postaya, anlık iletilere, dosya paylaşım platformlarına, sosyal ağlara, ağ paylaşımlarına ve çıkarılabilir sürücülere yayılabilir. Karmaşık solucanlar, yayılmak için yazılım güvenlik açıklarından faydalanıyor.
+* **Solucan:** Diğer cihazlara yayılan bir kötü amaçlı yazılım türü. Solucanlar e-posta, anlık ileti, dosya paylaşım platformları, sosyal ağlar, ağ paylaşımları ve çıkarılabilir sürücüler aracılığıyla yayılabilir. Gelişmiş solucanlar, yazılım güvenlik açıklarından yararlanarak yayılmayı sağlar.
 
 ### <a name="unwanted-software"></a>İstenmeyen yazılım
 
-Microsoft, en iyi deneyiminiz üzerinde denetim altında Windows inanıyor. Yazılım, Windows seçenekler ve erişilebilir denetimler aracılığıyla cihazınızın kontrolünüz altında tutmalı. Microsoft, denetim altında kalmanız için yazılım davranışlarını tanımlar. Bu davranışları tümüyle "istenmeyen yazılım" olarak göstermemeyen yazılımları sınıflandırıyoruz.
+Microsoft, Windows deneyiminiz üzerinde denetim sahibi olmanız gerektiğine inanıyor. Windows üzerinde çalışan yazılımlar, bilinçli seçimler ve erişilebilir denetimler aracılığıyla cihazınızın denetimini size vermelidir. Microsoft, denetiminizi korumanızı sağlayan yazılım davranışlarını tanımlar. Bu davranışları tam olarak göstermeyen yazılımları "istenmeyen yazılım" olarak sınıflandırırız.
 
-#### <a name="lack-of-choice"></a>Seçenek yok
+#### <a name="lack-of-choice"></a>Seçim eksikliği
 
-Hangi yazılımın yaptığı ve etkin olup olmadığı dahil olmak üzere, aygıtınızda olup olmadığı konusunda bilgili olun.
+Yazılımın ne yaptığı ve etkin olup olmadığı da dahil olmak üzere cihazınızda neler olduğu hakkında size bildirimde bulunmalısınız.
 
-Seçenek eksikliğini sergileyen yazılım:
+Seçim eksikliği gösteren yazılımlar:
 
-* Yazılımın davranışı, amacı ve amacı hakkında belirgin bir bildirim sağlayamama.
+* Yazılımın davranışı ve amacı ve amacı hakkında belirgin bir bildirim sağlanamaması.
 
-* Yazılımın ne zaman etkin olduğunu açıkça belirtemesiniz. Ayrıca iletişim durumlarını gizlemeyi veya gizlemeyi de sınıyor olabilir.
+* Yazılımın ne zaman etkin olduğunu net bir şekilde belirtemez. Ayrıca varlığını gizlemeye veya gizlemeye çalışabilir.
 
-* İzniniz, etkileşiminiz veya izniniz olmadan yazılımı yükleyin, yeniden yükleyin veya kaldırın.
+* İzin, etkileşim veya onayınız olmadan yazılım yükleyin, yeniden yükleyin veya kaldırın.
 
-* Birincil yazılımla ilişkisinin net bir göstergesi olmadan başka bir yazılım yükleyin.
+* Birincil yazılımla ilişkisini net bir şekilde belirtmeden diğer yazılımları yükleyin.
 
-* Tarayıcıdan veya işletim sisteminden kullanıcı izni iletişim kutularını kontrol edin.
+* Tarayıcıdan veya işletim sisteminden kullanıcı onayı iletişim kutularını atlatın.
 
-* Yanlış şekilde Microsoft'tan yazılım olduğunu iddia eden bir yazılımdır.
+* Microsoft'un yazılımı olduğunu iddia etme.
 
-Yazılım, cihazınız hakkında karar verme konusunda sizi yanıltmaması veya sizi zor güncelleştirmesine neden olmaz. Tercihlerinizi sınırlayan bir davranış olduğu kabul edilir. Önceki listeye ek olarak, seçenek eksikliğini sergileyen yazılım şunları da olabilir:
+Yazılım, cihazınızla ilgili kararlar alma konusunda sizi yanıltmamalı veya zorlamamalıdır. Seçimlerinizi sınırlayan davranış olarak kabul edilir. Önceki listeye ek olarak, seçim eksikliği gösteren yazılımlar şunları da gösterebilir:
 
-* Cihazınızın durumu hakkında abartılı iddialar gösterebilirsiniz.
+* Cihazınızın durumu hakkında abartılı beyanlar görüntüleyin.
 
-* Aygıtınızdaki dosyalar, kayıt defteri girdileri veya diğer öğeler hakkında yanıltıcı veya yanlış iddialarda bulunabilirsiniz.
+* Cihazınızdaki dosyalar, kayıt defteri girdileri veya diğer öğeler hakkında yanıltıcı veya yanlış talepler oluşturun.
 
-* Cihazınızın durumu hakkında alarm verici bir şekilde taleplerde bulunarak bu sorunların giderilmesi için ödeme ya da bazı eylemler gerektir.
+* Taleplerinizi cihazınızın durumu hakkında endişe verici bir şekilde görüntüleyin ve tasdikli sorunları düzeltmek için ödeme veya belirli eylemleri zorunlu kılın.
 
-Etkinliklerinizi veya verilerinizi depolar veya iletir yazılım:
+Etkinliklerinizi veya verilerinizi depolayan veya ileten yazılımlar:
 
-* Size bildirim vermek ve bunu yapmak için izin almak. Yazılım, verilerinizi depolama veya iletilen etkinlikleri gizlemek için onu yapılandıran bir seçenek içermesi gerekir.
+* Size bildirimde bulunur ve bunu yapmak için onay alırsınız. Yazılım, verilerinizi depolama veya iletme ile ilişkili etkinlikleri gizlemek için bunu yapılandıran bir seçenek içermemelidir.
 
-#### <a name="lack-of-control"></a>Denetim yok
+#### <a name="lack-of-control"></a>Denetim eksikliği
 
-Yazılımı aygıtınızda kontrol edebilirsiniz. Yazılım yetkilendirmeyi başlatabilecek, durdurabilecek veya başka bir şekilde iptal etmek zorunda olacağınız bir lisansa sahip olmak gerekir.
+Cihazınızdaki yazılımları denetleyebilmeniz gerekir. Yazılım yetkilendirmesini başlatabilmeniz, durdurabilmeniz veya iptal edebilmeniz gerekir.
 
-Denetim eksikliğini sergileyen yazılım:
+Denetim eksikliği gösteren yazılımlar:
 
-* Tarayıcı özelliklerini veya ayarlarını görüntülemenizi veya değiştirmenizi engelleyin veya sınırlandırma.
+* Tarayıcı özelliklerini veya ayarlarını görüntülemenizi veya değiştirmenizi engelleyin veya sınırlayın.
 
-* Yetkilendirme olmadan tarayıcı pencerelerini açın.
+* Tarayıcı pencerelerini yetkilendirme olmadan açın.
 
-* Bildirim vermeden ve izin almadan web trafiğini yönlendirin.
+* Bildirimde bulunmadan ve onay almadan web trafiğini yeniden yönlendirin.
 
-* Onayınız olmadan web sayfası içeriğini değiştirebilir veya değiştirebilirsiniz.
+* Onayınız olmadan web sayfası içeriğini değiştirin veya değiştirin.
 
-Gözatma deneyiminizi destekleyen yazılımlar yalnızca, tarayıcının desteklenen genişletilebilirlik modelini yükleme, yürütme, devre dışı bırakma veya kaldırma için kullan mutlaka. Desteklenen genişletilebilirlik modelleri sağlamayan tarayıcılar genişletilebilir değildir ve değiştirilmemelidir.
+Gözatma deneyiminizi değiştiren yazılımlar yalnızca yükleme, yürütme, devre dışı bırakma veya kaldırma için tarayıcının desteklenen genişletilebilirlik modelini kullanmalıdır. Desteklenen genişletilebilirlik modelleri sağlamayan tarayıcılar genişletilebilir değildir ve değiştirilmemelidir.
 
 #### <a name="installation-and-removal"></a>Yükleme ve kaldırma
 
-Yazılıma verilen yetkiyi başlatabilecek, durdurabilecek veya başka bir şekilde iptal edile bir lisansa sahip olmak gerekir. Yazılım yüklemeden önce izninizi almalı ve yüklemeniz, kaldırmanız veya devre dışı bırakmanız için açık ve açık bir yol sağlamalı.
+Yazılıma verilen yetkilendirmeyi başlatabilmeniz, durdurabilmeniz veya başka bir şekilde iptal edebilmeniz gerekir. Yazılım yüklemeden önce onayınızı almalıdır ve yüklemeniz, kaldırmanız veya devre dışı bırakmanız için açık ve anlaşılır bir yol sağlamalıdır.
 
-Kötü yükleme deneyimi *dağıtan yazılımlar Microsoft* tarafından sınıflandırılmış başka "istenmeyen yazılımları" paket olarak paket veya indirebilir.
+*Kötü yükleme deneyimi* sunan yazılımlar, Microsoft tarafından sınıflandırılan diğer "istenmeyen yazılımları" paketleyip indirebilir.
 
-Kötü kaldırma deneyimi *dağıtan yazılım* şunları olabilir:
+*Kötü kaldırma deneyimi* sunan yazılımlar şunları gerçekleştirebilir:
 
-* Kaldırmayı deneerek kafa karıştırıcı veya yanıltıcı istemler veya açılır görüntüler s ortaya çıkar.
+* Kaldırmayı denediğinizde kafa karıştırıcı veya yanıltıcı istemler veya açılır pencereler sunun.
 
-* Program Ekle/Kaldır gibi standart yükleme/kaldırma özellikleri başarısız oldu.
+* Program Ekle/Kaldır gibi standart yükleme/kaldırma özellikleri kullanılamaz.
 
 #### <a name="advertising-and-advertisements"></a>Reklam ve reklamlar
 
-Yazılımın kendi dışında bir ürünü veya hizmeti yükselten yazılım, bilgisayar deneyiminizi engellemeye neden olabilir. Reklamlar sunan yazılımları yüklerken net bir seçiminiz ve denetiminiz olması gerekir.
+Bir ürünü veya hizmeti yazılımın kendisi dışında yükselten yazılım, bilgi işlem deneyiminizi engelleyebilir. Reklam sunan yazılımları yüklerken net bir seçim ve denetime sahip olmanız gerekir.
 
 Yazılım tarafından sunulan reklamlar:
 
-* Kullanıcıların reklamları kapatması için belirgin bir yol sağlar. Reklamları kapatma eylemi başka bir reklam açmaz.
+* Kullanıcıların reklamı kapatması için açık bir yol ekleyin. Reklamı kapatma eylemi başka bir reklam açmamalıdır.
 
-* Tanıtımda sunulan yazılımın adını da yazın.
+* Reklamı sunan yazılımın adını ekleyin.
 
-Bu reklamları sunan yazılım:
+Bu reklamları sunan yazılım şunları yapmalıdır:
 
-* Yazılım için, gösterilen reklamda gösterilen adla standart bir kaldırma yöntemi s s aracı sağla.
+* Sunduğu reklamda gösterildiği gibi aynı adı kullanarak yazılım için standart bir kaldırma yöntemi sağlayın.
 
 Size gösterilen reklamlar:
 
-* Web sitesi içeriğinden ayırt edilebilir olabilir.
+* Web sitesi içeriğinden ayırt edilebilir olun.
 
-* Yanıltıcı, hileli veya kafanızı karıştırmayın.
+* Yanıltma, aldatma veya karıştırma.
 
 * Kötü amaçlı kod içermez.
 
-* Dosya indirme için çağırma.
+* Dosya indirme çağırmaz.
 
 #### <a name="consumer-opinion"></a>Tüketici görüşü
 
-Microsoft, analiz için yazılım gönderebilirsiniz, dünya çapında bir analist ve zeka [sistemi ağı kullanır](https://www.microsoft.com/wdsi/filesubmission). Katılımınız, Microsoft'un yeni kötü amaçlı yazılımları hızla belirlemesi için yardımcı olur. Çözümlemeden sonra, Microsoft tanımlanan ölçütlere uyan yazılımlar için Güvenlik zekası oluşturur. Bu Güvenlik zekası, yazılımı kötü amaçlı yazılım olarak tanımlar ve yazılımdan koruma çözümleri ve diğer Microsoft Microsoft Defender Virüsten Koruma tüm kullanıcılar tarafından kullanılabilir.
+Microsoft, [analiz için yazılım gönderebileceğiniz](https://www.microsoft.com/wdsi/filesubmission) dünya çapında bir analistler ve zeka sistemleri ağı sunar. Katılımınız, Microsoft'un yeni kötü amaçlı yazılımları hızla tanımlamalarına yardımcı olur. Analizden sonra Microsoft, açıklanan ölçütleri karşılayan yazılımlar için Güvenlik zekası oluşturur. Bu Güvenlik bilgileri yazılımı kötü amaçlı yazılım olarak tanımlar ve Microsoft Defender Virüsten Koruma ve diğer Microsoft kötü amaçlı yazılımdan koruma çözümleri aracılığıyla tüm kullanıcılar tarafından kullanılabilir.
 
-## <a name="potentially-unwanted-application-pua"></a>İstenmeyen olabilecek uygulama (PUA)
+## <a name="potentially-unwanted-application-pua"></a>İstenmeyebilecek uygulama (PUA)
 
-Kullanıcı üretkenliğini korumak ve kullanıcı deneyimi deneyiminin keyfini çıkarmak için olan PUA Windows korumamız. Bu koruma daha üretken, performansa sahip ve harika deneyimler Windows yardımcı olur. Birden çok tabanlı uygulama veya posta Chromium PUA korumasını Microsoft Edge Microsoft Defender Virüsten Koruma için bkz. Olası istenmeyen uygulamaları [algılama ve engelleme](/microsoft-365/security/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).
+PUA korumamız, kullanıcı üretkenliğini korumayı ve keyifli Windows deneyimler sağlamayı amaçlar. Bu koruma daha üretken, performanslı ve keyifli Windows deneyimler sunmaya yardımcı olur. Chromium tabanlı Microsoft Edge ve Microsoft Defender Virüsten Koruma PUA korumasını etkinleştirme hakkında yönergeler için bkz. [İstenmeyebilecek uygulamaları algılama ve engelleme](/microsoft-365/security/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).
 
-*PUA'lar kötü amaçlı yazılım olarak kabul edilir.*
+*PUA'lar kötü amaçlı yazılım olarak kabul edilmez.*
 
-Microsoft, yazılımı PUA olarak sınıflandırmak için belirli kategorileri ve kategori tanımlarını kullanır.
+Microsoft, yazılımları PUA olarak sınıflandırmak için belirli kategorileri ve kategori tanımlarını kullanır.
 
-* **Reklam yazılımı:** Reklamlar veya promosyonlar görüntüleyen ya da kendi dışında bir yazılımda diğer ürünler veya hizmetler için anketler tamamlamanız istenen yazılım. Bu, web sayfalarına reklam eken yazılımlar içerir.
+* **Reklam yazılımı:** Reklamlar veya promosyonlar görüntüleyen ya da kendi dışındaki yazılımlardaki diğer ürünler veya hizmetler için anketleri tamamlamanızı isteyen yazılım. Bu, web sayfalarına reklam ekleyen yazılımları içerir.
 
-* **Yazılım (Enterprise:** Ağ taşkınları veya özel olarak eşler arası dosya paylaşım teknolojileriyle kullanılan diğer dosyaları oluşturmak veya indirmek için kullanılan yazılım.
+* **Torrent yazılımı (yalnızca Enterprise):** Özel olarak eşler arası dosya paylaşım teknolojileriyle kullanılan torrentleri veya diğer dosyaları oluşturmak veya indirmek için kullanılan yazılım.
 
-* **Şifreleme yazılımı (yalnızca Enterprise yazılımı): Şifrelemeleri** meydana etmek için cihaz kaynaklarınızı kullanan yazılım.
+* **Şifreleme yazılımı (yalnızca Enterprise):** Kripto para madencileri için cihaz kaynaklarınızı kullanan yazılım.
 
-* **Bundling yazılımı:** Aynı varlıkla geliştirnmiş veya yazılımın çalışması için gerekli dışında başka bir yazılım yüklemek için teklif sunan yazılım. Ayrıca, bu belgede belirtilen ölçütlere göre PUA olarak nitelendirilen başka bir yazılım yüklemesi de sunan yazılımlardır.
+* **Paketleme yazılımı:** Aynı varlık tarafından geliştirilmeyen veya yazılımın çalışması için gerekli olmayan diğer yazılımları yüklemeyi teklif eden yazılım. Ayrıca, bu belgede belirtilen ölçütlere göre PUA olarak nitelendirilen diğer yazılımları yüklemeyi teklif eden yazılımlar.
 
-* **Pazarlama yazılımı:** Pazarlama araştırması için kullanıcıların etkinliklerini izleyen ve kendi dışında uygulamalara veya hizmetlere ileten yazılım.
+* **Pazarlama yazılımı:** Kullanıcıların etkinliklerini izleyen ve pazarlama araştırması için kendi dışındaki uygulamalara veya hizmetlere ileten yazılım.
 
-* **İhale yazılımı:** Güvenlik ürünleri varlığında farklı davranan yazılımlar da dahil olmak üzere, güvenlik ürünleri tarafından algılamayı etkin bir şekilde geri etmeye çalışan yazılım.
+* **Kaçış yazılımı:** Güvenlik ürünlerinin varlığında farklı davranan yazılımlar da dahil olmak üzere güvenlik ürünleri tarafından algılamayı aktif olarak atlatmaya çalışan yazılım.
 
-* **Kötü endüstri itibarı:** Güvenlik sağlayıcılarının güvenlik ürünleriyle ilgili algılayan yazılım. Güvenlik sektörü, müşterileri korumaya ve deneyimlerini geliştirmeye adanmıştır. Microsoft ve güvenlik sektöründeki diğer kuruluşlar, kullanıcılara mümkün olan en iyi korumayı sağlamak için analiz ettiğimiz dosyalar hakkında sürekli bilgi alışverişinde kullanılmaktadır.
+* **Düşük sektör itibarı:** Güvenilen güvenlik sağlayıcılarının güvenlik ürünleriyle algıladıkları yazılım. Güvenlik sektörü, müşterileri korumaya ve deneyimlerini geliştirmeye kendini adamıştır. Microsoft ve güvenlik sektöründeki diğer kuruluşlar, kullanıcılara mümkün olan en iyi korumayı sağlamak için analiz ettiğimiz dosyalar hakkında sürekli bilgi alışverişinde bulunur.
 

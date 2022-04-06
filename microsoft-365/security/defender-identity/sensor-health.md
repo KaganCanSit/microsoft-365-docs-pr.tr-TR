@@ -1,6 +1,6 @@
 ---
-title: Microsoft Defender for Identity sensor health and settings in Microsoft 365 Defender
-description: Microsoft Defender for Identity algılayıcıları için yapılandırarak sistem durumunu nasıl takip Microsoft 365 Defender
+title: Kimlik için Microsoft Defender algılayıcı sağlığı ve ayarlarını Microsoft 365 Defender
+description: Algılayıcıları yapılandırmayı ve Kimlik için Microsoft Defender durumlarını takip etmeyi Microsoft 365 Defender
 ms.date: 06/07/2021
 ms.topic: how-to
 author: dcurwin
@@ -9,21 +9,21 @@ ms.service: microsoft-defender-for-identity
 ms.custom: admindeeplinkDEFENDER
 manager: raynew
 ms.collection: M365-security-compliance
-ms.openlocfilehash: f55cb36d9960fef2da977a2c50ebab5a9e0e9122
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 246fd5ca880ca2d7e187283d06f19d071f5d7e0e
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682030"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468533"
 ---
-# <a name="microsoft-defender-for-identity-sensor-health-and-settings-in-microsoft-365-defender"></a>Microsoft Defender for Identity sensor health and settings in Microsoft 365 Defender
+# <a name="microsoft-defender-for-identity-sensor-health-and-settings-in-microsoft-365-defender"></a>Kimlik için Microsoft Defender algılayıcı sağlığı ve ayarlarını Microsoft 365 Defender
 
 **Aşağıdakiler için geçerlidir:**
 
 - Microsoft 365 Defender
-- Kimlik için Defender
+- Kimlik için Microsoft Defender
 
-Bu makalede, Windows'da Kimlik algılayıcıları için [Microsoft Defender'ı](/defender-for-identity) yapılandırma [ve Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
+Bu makalede, algılayıcıların algılayıcılarını [Kimlik için Microsoft Defender ve](/defender-for-identity) [takip Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
 
 >[!IMPORTANT]
 >Kimlik Doğrulama ve Doğrulama Microsoft 365 Defender bir parçası olarak, kimlik için Defender portalında yer alan konumlarından bazı seçenekler ve ayrıntılar değiştirilmiştir. Hem tanıdık hem de yeni özellikleri nerede bulamıyorum? bulmak için lütfen aşağıdaki ayrıntıları okuyun.
@@ -32,7 +32,7 @@ Bu makalede, Windows'da Kimlik algılayıcıları için [Microsoft Defender'ı](
 
 1. Daha <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a>, Kimlikler'Ayarlar'e **gidin**.
 
-    ![Kimlikler'Ayarlar ardından Kimlikler'e gidin.](../../media/defender-identity/settings-identities.png)
+   :::image type="content" source="../../media/defender-identity/settings-identities.png" alt-text="Kimlikler sayfasındaki Kimlikler Ayarlar." lightbox="../../media/defender-identity/settings-identities.png":::
 
 1. Kimlik **algılayıcıları** için Defender'nizin tüm görüntü olarak Algılayıcılar sayfasını seçin. Her algılayıcı için, algılayıcının adını, etki alanı üyeliğini, sürüm numarasını, güncelleştirmelerin gecikirse, hizmet durumunu, güncelleştirme durumunu, durum durumunu, sağlık sorunlarının sayısını ve algılayıcının ne zaman oluşturulduğunda onu oluşturduğunuzu gösterir.
 
@@ -45,7 +45,7 @@ Bu makalede, Windows'da Kimlik algılayıcıları için [Microsoft Defender'ı](
 
     [![Algılayıcı filtreleri.](../../media/defender-identity/sensor-filters.png)](../../media/defender-identity/sensor-filters.png#lightbox)
 
-    ![Filtrelenmiş algılayıcı.](../../media/defender-identity/filtered-sensor.png)
+    :::image type="content" source="../../media/defender-identity/filtered-sensor.png" alt-text="Filtrelenmiş algılayıcı" lightbox="../../media/defender-identity/filtered-sensor.png":::
 
 1. Algılayıcılardan birini seçerek algılayıcı ve durumu hakkında bilgi edinen bir bölme görüntülenir.
 
@@ -53,17 +53,18 @@ Bu makalede, Windows'da Kimlik algılayıcıları için [Microsoft Defender'ı](
 
 1. Herhangi bir sağlık sorunuyla ilgili seçim yaparsanız, bu sorunlar hakkında daha fazla ayrıntıya sahip bir bölme elde edersiniz. Kapalı bir sorunu seçerseniz buradan yeniden açsanız iyi olur.
 
-    ![Sorunun ayrıntıları.](../../media/defender-identity/issue-details.png)
+   :::image type="content" source="../../media/defender-identity/issue-details.png" alt-text="Sorun ayrıntıları" lightbox="../../media/defender-identity/issue-details.png":::
+    
 
 1. Algılayıcıyı **yönet'i** seçerek algılayıcı ayrıntılarını yapılandırabilirsiniz bir bölme açılır.
 
-    ![Algılayıcıyı yönetin.](../../media/defender-identity/manage-sensor.png)
+   :::image type="content" source="../../media/defender-identity/manage-sensor.png" alt-text="Algılayıcıyı yönet seçeneği" lightbox="../../media/defender-identity/manage-sensor.png":::
 
-    ![Algılayıcı ayrıntılarını yapılandırabilirsiniz.](../../media/defender-identity/configure-sensor-details.png)
+   :::image type="content" source="../../media/defender-identity/configure-sensor-details.png" alt-text="Algılayıcıya göre ayarları yapılandırılan sayfa" lightbox="../../media/defender-identity/configure-sensor-details.png":::
 
 1. Algılayıcılar **sayfasında** , Dışarı Aktar'ı seçerek algılayıcılar listenizi bir .csv **aktarabilirsiniz**.
 
-    ![Algılayıcı listesini dışarı aktar.](../../media/defender-identity/export-sensors.png)
+   :::image type="content" source="../../media/defender-identity/export-sensors.png" alt-text="Algılayıcıların listesini dışarı aktar" lightbox="../../media/defender-identity/export-sensors.png":::
 
 ## <a name="add-a-sensor"></a>Algılayıcı ekleyin
 
@@ -71,11 +72,11 @@ Algılayıcılar **sayfasından** yeni bir algılayıcı eklemeniz gerekir.
 
 1. Algılayıcı **ekle'yi seçin**.
 
-    ![Algılayıcı ekleyin.](../../media/defender-identity/add-sensor.png)
+   :::image type="content" source="../../media/defender-identity/add-sensor.png" alt-text="Algılayıcı ekle seçeneği" lightbox="../../media/defender-identity/add-sensor.png":::
 
 1. Algılayıcı yükleyicisini indirmeniz için bir düğme ve oluşturulan bir erişim anahtarı sağlayan bir bölme açılır.
 
-    ![Yükleyici ve erişim anahtarını indirin.](../../media/defender-identity/installer-access-key.png)
+   :::image type="content" source="../../media/defender-identity/installer-access-key.png" alt-text="Yükleyiciyi indirme ve anahtarı yeniden oluşturma seçenekleri" lightbox="../../media/defender-identity/installer-access-key.png":::
 
 1. Paketi **yerel olarak kaydetmek** için Yükleyiciyi indir'i seçin. Zip dosyası aşağıdaki dosyaları içerir:
 

@@ -1,7 +1,7 @@
 ---
-title: Uç Nokta için Microsoft Defender (Linux) ile taramaları zamanlama
-description: Kuruluş varlıklarını daha iyi korumak için Uç Nokta için Microsoft Defender (Linux) için otomatik tarama zamanlaması yapmayı öğrenin.
-keywords: microsoft, defender, Uç Nokta için Microsoft Defender, linux, taramalar, virüsten koruma, uç nokta için microsoft defender (linux)
+title: Uç Nokta için Microsoft Defender (Linux) ile tarama zamanlama
+description: Kuruluşunuzun varlıklarını daha iyi korumak için Uç Nokta için Microsoft Defender (Linux) için otomatik tarama süresi zamanlamayı öğrenin.
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, linux, scans, virüsten koruma, uç nokta için microsoft defender (linux)
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,24 +14,24 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 05e8fccc200b39a606fa67a857631e215c8d4b1c
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 706284ed0adf49c4da6357b6bb8217d5a14268e1
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64467631"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64663500"
 ---
 # <a name="schedule-scans-with-microsoft-defender-for-endpoint-linux"></a>Uç Nokta için Microsoft Defender (Linux) ile tarama zamanlama
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 
-Linux için bir tarama çalıştırmak için bkz. [Desteklenen Komutlar](/microsoft-365/security/defender-endpoint/linux-resources#supported-commands).
+Linux taraması çalıştırmak için bkz [. Desteklenen Komutlar](/microsoft-365/security/defender-endpoint/linux-resources#supported-commands).
 
-Linux (ve Unix), zamanlanmış görevleri çalıştırabilecek **crontab** (Görev Zamanlayıcı gibi) adlı bir araciya sahip.
+Linux (ve Unix), zamanlanmış görevleri çalıştırabilmek için **crontab** (Görev Zamanlayıcı'ya benzer) adlı bir arağa sahiptir.
 
-## <a name="pre-requisite"></a>Önkul
+## <a name="pre-requisite"></a>Ön koşul
 
 > [!NOTE]
 > Tüm saat dilimlerinin listesini almak için aşağıdaki komutu çalıştırın: `timedatectl list-timezones`<br>
@@ -46,19 +46,19 @@ Linux (ve Unix), zamanlanmış görevleri çalıştırabilecek **crontab** (Gör
 
 Aşağıdaki komutları kullanın:
 
-### <a name="backup-crontab-entries"></a>Çapraz girdileri yedekleme
+### <a name="backup-crontab-entries"></a>Crontab girdilerini yedekleme
 
 ```bash
 sudo crontab -l > /var/tmp/cron_backup_200919.dat
 ```
 
 > [!NOTE]
-> Burada 200919 == YRMMDD
+> Where 200919 == YRMMDD
 
 > [!TIP]
-> Düzenlemeden veya kaldırmadan önce bunu yapmak.
+> Düzenlemeden veya kaldırmadan önce bunu yapın.
 
-Kırpmayı düzenlemek ve kök kullanıcı olarak yeni bir iş eklemek için:
+Crontab'ı düzenlemek ve kök kullanıcı olarak yeni bir iş eklemek için:
 
 ```bash
 sudo crontab -e
@@ -67,7 +67,7 @@ sudo crontab -e
 > [!NOTE]
 > Varsayılan düzenleyici VIM'dir.
 
-Şunları da görüyor olabileceğiniz gibi:
+Şunu görebilirsiniz:
 
 ```outbou
 0 * * * * /etc/opt/microsoft/mdatp/logrorate.sh
@@ -84,20 +84,20 @@ CRON_TZ=America/Los_Angeles
 ```
 
 > [!NOTE]
-> Bu örnekte, bunu 00 dakika ve 02:00 olarak ayarla kullandık. (24 saat biçiminde saat), ayın herhangi bir günü, herhangi bir ay, Cumartesi günleri. Bu, Cumartesi günü 02:00'de devam anlamına gelir. Pasifik (UTC -8).
+> Bu örnekte bunu 00 dakika ( 00:00) olarak ayarladık. (24 saat biçimindeki saat), ayın herhangi bir günü, herhangi bir ay, Cumartesi günleri. Yani cumartesileri saat 02:00'de çalışacak. Pasifik (UTC -8).
 
 "Esc" tuşuna basın
 
-Çift tırnak`:wq` içinde "" yazın.
+Çift tırnak işareti olmadan "`:wq`" yazın.
 
 > [!NOTE]
 > w == write, q == quit
 
-İşlerinizi görüntülemek için `sudo crontab -l`
+Cron işlerinizi görüntülemek için `sudo crontab -l`
 
 :::image type="content" source="../../media/linux-mdatp-1.png" alt-text="Linux mdatp sayfası" lightbox="../../media/linux-mdatp-1.png":::
 
-#### <a name="to-inspect-cron-job-runs"></a>İş ilanlarını incelemek için
+#### <a name="to-inspect-cron-job-runs"></a>Cron iş çalıştırmalarını incelemek için
 
 ```bash
 sudo grep mdatp /var/log/cron
@@ -109,11 +109,11 @@ sudo grep mdatp /var/log/cron
 sudo nano mdatp_cron_job.log
 ```
 
-## <a name="for-those-who-use-ansible-chef-or-puppet"></a>Ansible,Sina veya Yalçın'i kullananlar için
+## <a name="for-those-who-use-ansible-chef-or-puppet"></a>Ansible, Chef veya Puppet kullananlar için
 
 Aşağıdaki komutları kullanın:
 
-### <a name="to-set-cron-jobs-in-ansible"></a>Ansible'da iş kırpmayı ayarlamak için
+### <a name="to-set-cron-jobs-in-ansible"></a>Ansible'da cron işleri ayarlamak için
 
 ```bash
 cron - Manage cron.d and crontab entries
@@ -127,19 +127,19 @@ cron resource
 ```bash
 
 ```
-Daha <https://docs.chef.io/resources/cron/> fazla bilgi için bkz.
+Daha fazla bilgi için bkz <https://docs.chef.io/resources/cron/> .
 
-### <a name="to-set-cron-jobs-in-puppet"></a>Jobs'ta iş kırpmayı ayarlamak için
+### <a name="to-set-cron-jobs-in-puppet"></a>Puppet'da cron işleri ayarlamak için
 
 ```bash
 Resource Type: cron
 ```
 
-Daha <https://puppet.com/docs/puppet/5.5/types/cron.html> fazla bilgi için bkz.
+Daha fazla bilgi için bkz <https://puppet.com/docs/puppet/5.5/types/cron.html> .
 
-Çiğdem: Cron işleri ve zamanlanmış görevlerle otomatik oluşturma
+Puppet: Cron işleri ve zamanlanmış görevler ile otomatikleştirme
 
-Daha [https://puppet.com/blog/automating-puppet-cron-jobs-and-scheduled-tasks/](https://puppet.com/blog/automating-puppet-cron-jobs-and-scheduled-tasks/) fazla bilgi için bkz.
+Daha fazla bilgi için bkz [https://puppet.com/blog/automating-puppet-cron-jobs-and-scheduled-tasks/](https://puppet.com/blog/automating-puppet-cron-jobs-and-scheduled-tasks/) .
 
 ## <a name="additional-information"></a>Ek bilgiler
 
@@ -149,58 +149,58 @@ Daha [https://puppet.com/blog/automating-puppet-cron-jobs-and-scheduled-tasks/](
 man crontab
 ```
 
-### <a name="to-get-a-list-of-crontab-file-of-the-current-user"></a>Geçerli kullanıcının çapraz dosyasının listesini almak için
+### <a name="to-get-a-list-of-crontab-file-of-the-current-user"></a>Geçerli kullanıcının crontab dosyasının listesini almak için
 
 ```bash
 crontab -l
 ```
 
-### <a name="to-get-a-list-of-crontab-file-of-another-user"></a>Başka bir kullanıcının çapraz dosyasının listesini almak için
+### <a name="to-get-a-list-of-crontab-file-of-another-user"></a>Başka bir kullanıcının crontab dosyasının listesini almak için
 
 ```bash
 crontab -u username -l
 ```
 
-### <a name="to-backup-crontab-entries"></a>Çapraz girdileri yedeklemek için
+### <a name="to-backup-crontab-entries"></a>Crontab girdilerini yedeklemek için
 
 ```bash
 crontab -l > /var/tmp/cron_backup.dat
 ```
 
 > [!TIP]
-> Düzenlemeden veya kaldırmadan önce bunu yapmak.
+> Düzenlemeden veya kaldırmadan önce bunu yapın.
 
-### <a name="to-restore-crontab-entries"></a>Çapraz girdileri geri yüklemek için
+### <a name="to-restore-crontab-entries"></a>Crontab girdilerini geri yüklemek için
 
 ```bash
 crontab /var/tmp/cron_backup.dat
 ```
 
-### <a name="to-edit-the-crontab-and-add-a-new-job-as-a-root-user"></a>Kırpmayı düzenlemek ve kök kullanıcı olarak yeni iş eklemek için
+### <a name="to-edit-the-crontab-and-add-a-new-job-as-a-root-user"></a>Crontab'ı düzenlemek ve kök kullanıcı olarak yeni bir iş eklemek için
 
 ```bash
 sudo crontab -e
 ```
 
-### <a name="to-edit-the-crontab-and-add-a-new-job"></a>Kırpmayı düzenlemek ve yeni iş eklemek için
+### <a name="to-edit-the-crontab-and-add-a-new-job"></a>Crontab'ı düzenlemek ve yeni bir iş eklemek için
 
 ```bash
 crontab -e
 ```
 
-### <a name="to-edit-other-users-crontab-entries"></a>Diğer kullanıcının çapraz girdilerini düzenlemek için
+### <a name="to-edit-other-users-crontab-entries"></a>Diğer kullanıcının crontab girdilerini düzenlemek için
 
 ```bash
 crontab -u username -e
 ```
 
-### <a name="to-remove-all-crontab-entries"></a>Tüm çapraz girdileri kaldırmak için
+### <a name="to-remove-all-crontab-entries"></a>Tüm crontab girdilerini kaldırmak için
 
 ```bash
 crontab -r
 ```
 
-### <a name="to-remove-other-users-crontab-entries"></a>Diğer kullanıcının çapraz girdilerini kaldırmak için
+### <a name="to-remove-other-users-crontab-entries"></a>Diğer kullanıcının crontab girdilerini kaldırmak için
 
 ```bash
 crontab -u username -r
@@ -208,9 +208,9 @@ crontab -u username -r
 
 ### <a name="explanation"></a>Açıklama
 
-+—————- dakika (değerler: 0 - 59) (özel karakterler: , - * /)  <br>
-| +————- saat (değerler: 0 - 23) (özel karakterler: , - * /) <br>
-| | +———- günü (değerler: 1 - 31) (özel karakterler: , - * / L W C)  <br>
-| | | +——- ay (değerler: 1 - 12) (özel karakterler: ,- * / )  <br>
-| | | | +—- haftanın günü (değerler: 0 - 6) (Pazar=0 veya 7) (özel karakterler: , - * / L W C) <br>
-| | | | |*****komutu yürütüllecek
++—————- dakika (değerler: 0 - 59) (özel karakterler: , \- \* /)  <br>
+| +————- saat (değerler: 0 - 23) (özel karakterler: , \- \* /) <br>
+| | +———- ayın günü (değerler: 1 - 31) (özel karakterler: , \- \* / L W C)  <br>
+| | | +——- ay (değerler: 1 - 12) (özel karakterler: , \- \* / )  <br>
+| | | | +—- haftanın günü (değerler: 0 - 6) (Pazar=0 veya 7) (özel karakterler: , \- \* / L W C) <br>
+yürütülecek | | | | |****komut

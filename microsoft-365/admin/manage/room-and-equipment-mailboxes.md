@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: 9f518a6d-1e2c-4d44-93f3-e19013a1552b
 description: 'Kuruluşunuzdaki herkesin Outlook kullanarak toplantılar ya da etkinlikler için saklayabilmesi için, bir oda veya donanım posta kutusu oluşturun. '
-ms.openlocfilehash: 38df6be558c3f590e851460f8065712d73dbf4b0
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: afd24a2780478718cb74fdd6681d53a905f96b57
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985574"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64633271"
 ---
 # <a name="room-and-equipment-mailboxes"></a>Oda ve donanım posta kutuları
 
@@ -64,7 +64,7 @@ Oda veya donanım posta kutularını kullanmak için bilgisayarınızdan Outlook
   
 7. Amacı açıklayan bir ileti yazın ve gerekirse dosya ekleyin.
     
-8. Başkalarının toplantıya çevrimiçi olarak veya arayarak katılmasına izin vermek için **Skype Toplantısı**'nı seçin.
+8. Başkalarının çevrimiçi olarak katılmasına veya toplantıya arayla katılmasına izin vermek için **Toplantı'Teams seçin**.
     
 9. Davet ettiğiniz oda, donanım ve kişilerin uygun olduğundan emin olmak için üst taraftan **Zamanlama Yardımcısı**'nı seçin. Sonra takvimden uygun bir saati seçin.
 
@@ -97,7 +97,7 @@ Oda veya donanım posta kutusu ayarlamak için Posta <a href="https://go.microso
     
    - **Konum**: Oda numarası veya odanın bir bina ya da bölgedeki konumu.
     
-   - **Telefon numarası**: Odanın kendisinin numarası. Bu numara, Skype Kurumsal kullanıldığında oluşturulan toplantı telefon numarasından farklıdır.
+   - **Telefon numarası**: Odanın kendisinin numarası. Bu, telefon numarası kullanılarak oluşturulan toplantı telefon numarasından Microsoft Teams.
     
 4. **Ekle**'yi seçin.
     

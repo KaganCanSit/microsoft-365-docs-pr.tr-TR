@@ -1,4 +1,4 @@
-- name: Microsoft 365 yönetim merkezi yardım
+- name: Microsoft 365 yönetim merkezi yardımı
   href: index.yml
   items:
     - name: En iyi 20 yönetici yardımı makalesi
@@ -7,47 +7,47 @@
       href: admin-video-library.yml
     - name: Kullanmaya başlayın
       items:
-        - name: Kaydol
+        - name: Kaydolma
           href: admin-overview/sign-up-for-office-365.md
         - name: Microsoft 365'i deneme veya satın alma
           href: ../commerce/try-or-buy-microsoft-365.md
-        - name: Microsoft 365 Kurumsal kurulumlarınızı planlama
+        - name: İş için Microsoft 365 kurulumunuzu planlama
           href: setup/plan-your-setup.md
-        - name: Oturum açma için Microsoft 365 İş Ekstra
+        - name: Microsoft 365 İş Ekstra'ya kaydolma
           items:
-            - name: Kaydol
+            - name: Kaydolma
               href: ../business/sign-up.md
-            - name: Kurulum Microsoft 365 İş Ekstra ayarları
+            - name: Kurulum sihirbazı ile Microsoft 365 İş Ekstra'yı ayarlama
               href: ../business/set-up.md
             - name: Microsoft 365 İş Ekstra (video)
               href: admin-overview/what-is-microsoft-365.md
-        - name: Oturum açma için Microsoft 365 İş Standart
+        - name: Microsoft 365 İş Standart'a kaydolma
           items:
-            - name: Oturum açma için Microsoft 365 İş Standart
+            - name: Microsoft 365 İş Standart'a kaydolma
               href: ../admin/simplified-signup/signup-business-standard.md
-            - name: E-Microsoft 365 İş Standart
+            - name: Microsoft 365 İş Standart'ı ayarlama
               href: ../admin/setup/setup-business-standard.md
-            - name: Kullanıcıları davet et'Microsoft 365 İş Standart
+            - name: Kullanıcıları Microsoft 365 İş Standart'a davet etme
               href: ../admin/simplified-signup/admin-invite-business-standard.md
-            - name: E-posta davetini kabul Microsoft 365 İş Standart
+            - name: Microsoft 365 İş Standart için e-posta davetini kabul etme
               href: ../admin/simplified-signup/user-invite-business-standard.md
-            - name: 'Outlook, Yahoo, Gmail veya başka bir hesabı kullanarak Microsoft 365 İş Standart abonelik kuruluşuna e-posta daveti kabul etme'
+            - name: 'Outlook, Yahoo, Gmail veya başka bir hesap kullanarak Microsoft 365 İş Standart abonelik kuruluşuna e-posta davetini kabul etme'
               href: ../admin/simplified-signup/user-invite-msa-nodomain-join.md
             - name: Verileri Microsoft 365 İş Standart aboneliğime geçirme
               href: ../admin/simplified-signup/migrate-data-business-standard.md
-        - name: İş için Microsoft Apps'e kaydolma
+        - name: İş için Microsoft Uygulamaları'na kaydolma
           items:
-            - name: Oturum açma için İş için Microsoft 365 Uygulamaları
+            - name: İş için Microsoft 365 Uygulamaları'na kaydolma
               href: setup/signup--apps-business.md
-            - name: Her şey için İş için Microsoft 365 Uygulamaları
+            - name: İş için Microsoft 365 Uygulamaları'nı ayarlama
               href: setup/setup-apps-for-business.md
-        - name: Ayarlama Microsoft 365 İş Temel
+        - name: Microsoft 365 İş Temel’i ayarlama
           items:
-            - name: Microsoft 365 İş Temel
+            - name: Microsoft 365 Küçük İşletme
               href: setup/setup-business-basic.md
         - name: Kurulum sayfasını ve sihirbazı keşfetme
           href: setup/o365-setup-wizard-and-setup-page.md
-        - name: Bilgisayarlarda Windows 10 sağlama
+        - name: Windows 10 bilgisayarların güvenliğini sağlama
           href: setup/secure-win-10-pcs.md
         - name: Yazılım ve ürün anahtarlarını indirme
           href: setup/download-software-licenses-csp.md
@@ -57,13 +57,13 @@
           href: setup/set-up-windows-devices.md
         - name: Mobil cihazları ayarlama
           href: setup/set-up-mobile-devices.md
-        - name: İş Microsoft 365 için Outlook e-postası ayarlama (video)
+        - name: İş için Microsoft 365 e-postası için Outlook'u ayarlama (video)
           href: setup/setup-outlook.md
-        - name: Dosyaları başka bir OneDrive (video)
+        - name: Dosyaları OneDrive'a taşıma (video)
           href: setup/files-to-onedrive.md
-        - name: Dosyaları başka bir SharePoint (video)
+        - name: Dosyaları SharePoint'e taşıma (video)
           href: setup/files-to-sharepoint.md
-        - name: Verilerinizi Başka bir Microsoft 365
+        - name: Verilerinizi Microsoft 365'e geçirme
           href: setup/migrate-email-and-contacts-admin.md
         - name: Teams’i dağıtma
           href: /microsoftteams/how-to-roll-out-teams?bc=%2foffice365%2fadmin%2fbreadcrumb%2ftoc.json&toc=%2foffice365%2fadmin%2ftoc.json
@@ -77,13 +77,11 @@
           href: setup/customize-your-organization-theme.md
         - name: Şirket içi kullanıcılara ve kaynaklara erişme
           items:
-            - name: Etki alanı kullanıcılarını eşitleme Microsoft 365
+            - name: Etki alanı kullanıcılarını Microsoft 365 ile eşitleme
               href: setup/manage-domain-users.md
-            - name: Etki alanına katılmış Windows 10 cihazlarının yönetillerini etkinleştirme
-              href: setup/manage-windows-devices.md
             - name: Azure AD'ye katılmış bir cihazdan kaynaklara erişme
               href: setup/access-resources.md
-    - name: Genel bakış Microsoft 365 yönetim merkezi
+    - name: Microsoft 365 yönetim merkezine genel bakış
       items:
         - name: Yönetim merkezine genel bakış
           href: admin-overview/admin-center-overview.md
@@ -91,9 +89,9 @@
           href: add-users/about-admin-roles.md
         - name: Yönetici mobil uygulaması
           href: admin-overview/admin-mobile-app.md
-        - name: Yönetim merkezinden gelenler
+        - name: Yönetim merkezindeki yenilikler
           href: whats-new-in-preview.md
-        - name: Arama sonuçlarında Microsoft 365 yönetim merkezi
+        - name: Microsoft 365 yönetim merkezinde arama yapma
           href: manage/search-in-the-mac.md
         - name: Değişiklikleri yakından takip etme
           href: manage/stay-on-top-of-updates.md
@@ -103,15 +101,15 @@
       items:
         - name: 21Vianet tarafından sağlanan Office 365 hakkında
           href: services-in-china/services-in-china.md
-        - name: 21Vianet Office uygulaması tarafından Office 365 Android için Office 365'i indirme
+        - name: 21Vianet tarafından sağlanan Office 365 için Android için Office uygulamasını indirme
           href: services-in-china/download-office-app-for-Android.md
-        - name: 21Vianet Office uygulaması tarafından çalıştırılan Office 365 iOS için Office 365'i indirme
+        - name: 21Vianet tarafından sağlanan Office 365 için iOS için Office uygulamasını indirme
           href: services-in-china/download-office-app-for-iOS.md
         - name: Fapiao için başvurma
           href: services-in-china/apply-for-a-fapiao.md
         - name: Azure Information Protection desteği
           href: services-in-china/parity-between-azure-information-protection.md
-    - name: 'Kullanıcıları, grupları ve parolaları yönetme'
+    - name: 'Kullanıcıları, grupları ve şifreleri yönetme'
       items:
         - name: Kullanıcılar
           items:
@@ -127,7 +125,7 @@
               href: manage/remove-licenses-from-users.md
             - name: Konuk kullanıcılar
               href: add-users/about-guest-users.md
-            - name: Konuk gruba konuk Microsoft 365 ekleme
+            - name: Microsoft 365 grubuna konuk kullanıcılar ekleme
               href: create-groups/manage-guest-access-in-groups.md
             - name: Kullanıcı adı ve e-posta adresi değiştirme
               href: add-users/change-a-user-name-and-email-address.md
@@ -141,19 +139,19 @@
           items:
             - name: Genel bakış
               href: add-users/remove-former-employee.md
-            - name: Adım 1. Çalışanın oturum açmasını ve bu hizmetlere erişimi Microsoft 365 engelleme
+            - name: Adım 1. Bir çalışanın oturum açmasını önleyin ve Microsoft 365 hizmetlerine erişimi engelleyin
               href: add-users/remove-former-employee-step-1.md
-            - name: Adım 2. Eski çalışanın posta kutusunun içeriğini kaydetme
+            - name: Adım 2. Eski bir çalışanın posta kutusunun içeriğini kaydedin
               href: add-users/remove-former-employee-step-2.md
-            - name: Adım 3. Eski çalışanın mobil cihazını temizleme ve engelleme
+            - name: Adım 3. Eski bir çalışanın mobil cihazını silin ve engelleyin
               href: add-users/remove-former-employee-step-3.md
-            - name: Adım 4. Eski bir çalışanın e-postasını başka bir çalışana iletme veya paylaşılan posta kutusuna dönüştürme
+            - name: Adım 4. Eski bir çalışanın e-postasını başka bir çalışana iletin veya paylaşılan bir posta kutusuna dönüştürün
               href: add-users/remove-former-employee-step-4.md
-            - name: Adım 5. Başka bir çalışana kişisel veriler OneDrive verilerine Outlook verme
+            - name: Adım 5. Başka bir çalışanın OneDrive ve Outlook verilerine erişmesine izin verin
               href: add-users/remove-former-employee-step-5.md
-            - name: 6. Adım. Eski Microsoft 365 kullanıcı lisansını kaldırma
+            - name: Adım 6. Microsoft 365 lisansını eski bir çalışandan kaldırın
               href: add-users/remove-former-employee-step-6.md
-            - name: Adım 7. Eski çalışanın kullanıcı hesabını silme
+            - name: Adım 7. Eski bir çalışanın kullanıcı hesabını silin
               href: add-users/remove-former-employee-step-7.md
         - name: Gruplar
           items:
@@ -163,13 +161,13 @@
               href: create-groups/compare-groups.md
             - name: Grup oluşturma
               href: create-groups/create-groups.md
-            - name: Grupları açıkla
+            - name: Grupları açıklama
               href: create-groups/explain-groups-knowledge-worker.md
             - name: Grupları yönetme
               href: create-groups/manage-groups.md
             - name: Grup üyelerini ekleme veya kaldırma
               href: create-groups/add-or-remove-members-from-groups.md
-            - name: Silinmiş grubu geri yükleme
+            - name: Silinmiş bir grubu geri yükleme
               href: create-groups/restore-deleted-group.md
             - name: Gruplara konuk erişimini yönetme
               href: create-groups/manage-guest-access-in-groups.md
@@ -179,15 +177,15 @@
               href: add-users/reset-passwords.md
             - name: Kullanıcıların parolalarını sıfırlamasına izin verme
               href: add-users/let-users-reset-passwords.md
-            - name: Parolaları süresi hiçbir zaman dolmay olacak şekilde ayarlama
+            - name: Parolaları süresi hiçbir zaman dolmayacak şekilde ayarlama
               href: add-users/set-password-to-never-expire.md
-            - name: Kullanıcı parolalarını yeniden postala
+            - name: Kullanıcı parolalarını yeniden gönderme
               href: add-users/resend-user-password.md
             - name: Güçlü parolaları kapatma
               href: add-users/strong-password.md
-            - name: Parola süre sonu ilkesi ayarlama
+            - name: Parola süre sonu ilkesini ayarlama
               href: manage/set-password-expiration-policy.md
-    - name: E-postayı ve takvimleri yönetme
+    - name: E-posta ve takvimleri yönetme
       items:
         - name: Kullanıcı e-posta ayarları hakkında
           href: email/office-365-user-email-settings.md
@@ -195,7 +193,7 @@
           href: email/add-another-email-alias-for-a-user.md
         - name: Özel etki alanınızı kullanma
           href: email/change-email-address.md
-        - name: E-postayı ve kişileri başka bir Microsoft 365
+        - name: E-posta ve kişileri Microsoft 365'e geçirme
           href: setup/migrate-email-and-contacts-admin.md
         - name: İmzalar ve bildirimler oluşturma
           href: setup/create-signatures-and-disclaimers.md
@@ -217,11 +215,11 @@
               href: email/remove-license-from-shared-mailbox.md
             - name: Paylaşılan posta kutularında sorunları çözme
               href: email/resolve-issues-with-shared-mailboxes.md
-        - name: Odaklanmış Gelen Kutusu'nı ayarlama
+        - name: Odaklanmış Gelen Kutusu'nu ayarlama
           href: setup/configure-focused-inbox.md
         - name: Dağıtım grubuna kullanıcı veya kişi ekleme
           href: email/add-user-or-contact-to-distribution-list.md
-        - name: Organizasyonu için karışıklığı yönetme
+        - name: Kuruluşunuz için dağınıklığı yönetme
           href: email/configure-clutter.md
     - name: Etki alanlarını yönetme
       items:
@@ -231,23 +229,23 @@
           href: get-help-with-domains/buy-a-domain-name.md
         - name: Etki alanını kaldırma
           href: get-help-with-domains/remove-a-domain.md
-        - name: Etki alanını bir Microsoft 365 ana bilgisayara aktarma
+        - name: Etki alanını Microsoft 365'ten başka bir ana bilgisayara aktarma
           href: get-help-with-domains/transfer-a-domain-from-microsoft-to-another-host.md
-        - name: Özel Microsoft 365 alanımdan pilot uygulama
+        - name: Özel etki alanımdan Microsoft 365'i pilot
           href: misc/pilot-microsoft-365-from-my-custom-domain.md
         - name: Etki alanları SSS
           href: setup/domains-faq.yml
         - name: DNS yönergeleri
           items:
-            - name: Herhangi bir DNS ana bilgisayarının ad sunucularını değiştirme
+            - name: Herhangi bir DNS ana bilgisayarında ad sunucularını değiştirme
               href: get-help-with-domains/change-nameservers-at-any-domain-registrar.md
-            - name: Herhangi bir DNS ana bilgisayarlarında DNS kayıtları oluşturma
+            - name: Herhangi bir DNS ana bilgisayarında DNS kayıtları oluşturma
               href: get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md
         - name: Etki alanı sorunlarını giderme
           href: get-help-with-domains/find-and-fix-issues.md
     - name: Verilerinizi ve hizmetlerinizi yönetme
       items:
-        - name: Raporları Microsoft 365 kullanarak etkinlik etkinliklerini izleme
+        - name: Raporları kullanarak Microsoft 365 etkinliğini izleme
           href: activity-reports/activity-reports.md
         - name: Microsoft Üretkenlik Puanı - genel bakış
           href: productivity/productivity-score.md
@@ -256,17 +254,17 @@
               href: productivity/content-collaboration.md
             - name: İletişim
               href: productivity/communication.md
-            - name: Mobil kullanım
+            - name: Hareketlilik
               href: productivity/mobility.md
             - name: Ekip çalışması
               href: productivity/teamwork.md
             - name: Toplantılar
               href: productivity/meetings.md
-            - name: Microsoft 365 Uygulamaları durumu
+            - name: Microsoft 365 Uygulamaları sistem durumu
               href: productivity/apps-health.md
-            - name: Endpoint Analytics
+            - name: Uç Nokta Analizi
               href: /mem/analytics/productivity-score
-        - name: Kuruluş iletişim bilgilerinizi değiştirme
+        - name: Kuruluşunuzun iletişim bilgilerini değiştirme
           href: manage/change-address-contact-and-more.md
         - name: Yönetici iletişim bilgilerinizi güncelleştirme
           href: manage/update-phone-number-and-email-address.md
@@ -290,11 +288,11 @@
               href: manage/centralized-deployment-faq.yml
         - name: Endüstri haberlerini yönetme
           href: manage/manage-industry-news.md
-        - name: Betik Office ayarlarını yönetme
+        - name: Office Betikleri ayarlarını yönetme
           href: manage/manage-office-scripts-settings.md
         - name: İş ortağı veya yeniden satıcı bulma
           href: manage/find-your-partner-or-reseller.md
-        - name: Organizasyonunız için Microsoft geri bildirimlerini yönetme
+        - name: Kuruluşunuz için Microsoft geri bildirimlerini yönetme
           href: /admin/manage/manage-feedback-ms-org.md
         - name: Sürüm seçeneklerini ayarlama
           href: manage/release-options-in-office-365.md
@@ -310,21 +308,21 @@
               href: usage-analytics/get-the-latest-version-of-usage-analytics.md
             - name: Raporlarda gezinme ve raporları kullanma
               href: usage-analytics/navigate-and-utilize-reports.md
-            - name: Kullanım raporlarında etkin kullanıcılar hakkında
+            - name: Kullanım raporlarındaki etkin kullanıcılar hakkında
               href: usage-analytics/active-user-in-usage-reports.md
             - name: Raporları özelleştirme
               href: usage-analytics/customize-reports.md
-            - name: Kullanım analizi ve Microsoft 365 GCC
+            - name: Microsoft 365 GCC ile kullanım analizi
               href: usage-analytics/connect-to-gcc-data-with-usage-analytics.md
             - name: Kullanım analizi veri modeli hakkında
               href: usage-analytics/usage-analytics-data-model.md
             - name: Kullanım analizi hatalarını giderme
               href: usage-analytics/usage-analytics-errors.md
-        - name: Microsoft 365 Now yapılandırma kılavuzu ile destek tümleştirmesi
+        - name: ServiceNow yapılandırma kılavuzu ile Microsoft 365 destek tümleştirme
           items:
             - name: Yapılandırmaya genel bakış
               href: manage/servicenow-overview.md
-            - name: Temel kimlik doğrulamayı yapılandırma
+            - name: Temel kimlik doğrulamasını yapılandırma
               href: manage/servicenow-basic-authentication.md
             - name: Azure AD Kimlik Doğrulama Belirteci ile yapılandırma
               href: manage/servicenow-aad-oauth-token.md
@@ -332,33 +330,33 @@
               href: manage/servicenow-testing-the-configuration.md
             - name: Sorun giderme
               href: manage/servicenow-troubleshooting.md
-    - name: Abonelikleri ve faturalamayı yönetme
+    - name: Abonelikleri ve faturalandırmayı yönetme
       href: ../commerce/index.yml
-    - name: Organizasyon güvenliğinizi sağlama
+    - name: Kuruluşunuzun güvenliğini sağlayın
       items:
         - name: Verilerinizin güvenliğini sağlamanın en iyi 10 yolu
           href: security-and-compliance/secure-your-business-data.md
-        - name: Etki için çok faktörlü kimlik Microsoft 365
+        - name: Microsoft 365 için çok faktörlü kimlik doğrulama
           href: security-and-compliance/multi-factor-authentication-microsoft-365.md
         - name: Çok faktörlü kimlik doğrulamasını ayarlama
           href: security-and-compliance/set-up-multi-factor-authentication.md
-        - name: Öncelik hesaplarını yönetme ve izleme
+        - name: Öncelikli hesapları yönetme ve izleme
           href: setup/priority-accounts.md
-        - name: Idle oturum zaman aşımını açma
+        - name: Boşta oturumu zaman aşımını açma
           href: manage/idle-session-timeout-web-apps.md
-        - name: Office 2013 için Modern Kimlik Doğrulamayı Etkinleştirme
+        - name: Office 2013 için Modern Kimlik Doğrulamasını Etkinleştirme
           href: security-and-compliance/enable-modern-authentication.md
-        - name: Veri koruması için önkullar
-          href: security-and-compliance/pre-requisites-for-data-protection.md
+        - name: Veri koruması için önkoşullar
+          href: /microsoft-365/business-premium/m365bp-pre-requisites-for-data-protection.md
         - name: Tehdit korumasını artırma
           href: security-and-compliance/increase-threat-protection.md
-        - name: Güvenlik tarafından algılanan Microsoft Defender Virüsten Koruma
+        - name: Microsoft Defender Virüsten Koruma tarafından algılanan tehditler
           href: security-and-compliance/threats-detected-defender-av.md
-        - name: Algılanan tehditleri gözden geçirme ve önlem alma
+        - name: Algılanan tehditleri inceleme ve harekete geçme
           href: security-and-compliance/review-threats-take-action.md
         - name: Uyumluluk özelliklerini ayarlama
-          href: security-and-compliance/set-up-compliance.md
-        - name: Skoru güvenli hale
+          href: /microsoft-365/business-premium/m365bp-set-up-compliance.md
+        - name: Güvenlik puanı
           href: /microsoft-365/security/defender/microsoft-secure-score
         - name: GDPR uyumluluğu kılavuzu
           href: security-and-compliance/gdpr-compliance.md
@@ -369,44 +367,34 @@
         - name: Microsoft Intune belgeleri
           href: /mem/intune/
         - name: İlkeleri ve cihazları görüntüleme ve düzenleme
-          href: devices/view-policies-and-devices.md
+          href: /microsoft-365/business-premium/view-policies-and-devices.md
         - name: Şirket verilerini kaldırma
-          href: devices/remove-company-data.md
+          href: /microsoft-365/business-premium/m365bp-remove-company-data.md
         - name: Cihazları fabrika ayarlarına sıfırlama
           href: devices/reset-devices-to-factory-settings.md
-        - name: Intune ayarlarına harita koruma özellikleri
-          href: devices/map-protection-features-to-intune-settings.md
+        - name: Koruma özelliklerini Intune ayarlarına eşleme
+          href: /microsoft-365/business-premium/m365bp-map-protection-features-to-intune-settings.md
         - name: Cihaz durumları
           href: devices/device-states.md
-        - name: Bilgisayarlarda uygulama Windows 10 ayarları
+        - name: Windows 10 bilgisayarlar için uygulama koruma ayarları
           href: devices/protection-settings-for-windows-10-devices.md
-        - name: Android ve iOS için uygulama koruma ayarlarını ayarlama
-          href: devices/app-protection-settings-for-android-and-ios.md
+        - name: Android veya iOS'ta ayarları doğrulama
+          href: devices/validate-settings-on-android-or-ios.md
+        - name: Windows 10 bilgisayarlarda ayarları doğrulama
+          href: devices/validate-settings-on-windows-10-pcs.md
+        - name: Autopilot
           items:
-            - name: Android veya iOS'ta ayarları doğrulama
-              href: devices/validate-settings-on-android-or-ios.md
-        - name: Bilgisayarlarında cihaz koruma ayarlarını düzenleme Windows 10 oluşturma
-          href: devices/protection-settings-for-windows-10-pcs.md
-          items:
-            - name: Bilgisayarlarda ayarları Windows 10 doğrulama
-              href: devices/validate-settings-on-windows-10-pcs.md
-        - name: AutoPilot
-          items:
-            - name: AutoPilot cihazlarını ve profillerini ekleme
-              href: devices/add-autopilot-devices-and-profile.md
             - name: AutoPilot profillerini oluşturma ve düzenleme
-              href: devices/create-and-edit-autopilot-profiles.md
+              href: /microsoft-365/business-premium/m365bp-create-and-edit-autopilot-profiles.md
             - name: AutoPilot cihazlarını oluşturma ve düzenleme
               href: devices/create-and-edit-autopilot-devices.md
-            - name: AutoPilot Profili ayarları
-              href: devices/autopilot-profile-settings.md
-        - name: Microsoft 365 belgeleri için belgeler
+        - name: Kurumsal belgeler için Microsoft 365
           href: ../enterprise/index.yml
         - name: Temel Hareketlilik ve Güvenlik
           items:
             - name: Temel Hareketlilik ve Güvenlik'e Genel Bakış
               href: basic-mobility-security/overview.md
-            - name: Temel Mobil Kullanım ve Güvenlik ile Intune'i karşılaştırma
+            - name: Temel Hareketlilik ve Güvenlik ile Intune'u Karşılaştırma
               href: basic-mobility-security/choose-between-basic-mobility-and-security-and-intune.md
             - name: Temel Hareketlilik ve Güvenlik Özellikleri
               href: basic-mobility-security/capabilities.md
@@ -414,11 +402,11 @@
               href: basic-mobility-security/set-up.md
             - name: Cihaz güvenliği ilkeleri oluşturma
               href: basic-mobility-security/create-device-security-policies.md
-            - name: iOS cihazları için APNs sertifikası oluşturma
+            - name: iOS cihazları için APN sertifikası oluşturma
               href: basic-mobility-security/create-an-apns-certificate-for-ios-devices.md
             - name: Cihaz erişim ayarlarını yönetme
               href: basic-mobility-security/manage-device-access-settings.md
-            - name: Yönetilen cihazlar hakkında ayrıntılı bilgi al
+            - name: Yönetilen cihazlar hakkında ayrıntılı bilgi edinme
               href: basic-mobility-security/get-details-about-managed-devices.md
             - name: Kayıtlı cihazları yönetme
               href: basic-mobility-security/manage-enrolled-devices.md
@@ -428,37 +416,37 @@
               href: basic-mobility-security/privacy-and-security.md
             - name: Sık sorulan sorular
               href: basic-mobility-security/frequently-asked-questions.yml
-            - name: Mobil cihazları temizleme
+            - name: Mobil cihazları silme
               href: basic-mobility-security/wipe-mobile-device.md
             - name: Temel Hareketlilik ve Güvenlik'i kapatma
               href: basic-mobility-security/turn-off.md
             - name: Sorun giderme
               href: basic-mobility-security/troubleshoot.md
-    - name: Google Workspace'den M365'e geçiş
+    - name: Google Workspace'ten M365'e geçiş yapma
       items:
         - name: Genel bakış
           href: moveto-microsoft-365/move-from-google-workspace-overview.md
         - name: Microsoft 365’e kaydolma
           href: admin-overview/sign-up-for-office-365.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
-        - name: Google Microsoft 365 ayarlama
+        - name: Google geçişi için Microsoft 365'i ayarlayın
           href: moveto-microsoft-365/set-up-microsoft-365-forgoogle.md
-        - name: Mobil cihazlar için güvenlik Windows ayarlama
+        - name: Windows cihazları için güvenlik ilkelerini ayarlayın
           href: setup/secure-win-10-pcs.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
-        - name: Google Workspace Etki Alanı Ekleme
+        - name: Google Workspace Etki Alanı Ekleyin
           href: moveto-microsoft-365/add-google-domain.md
-        - name: Uygulama Office yükleme ve Microsoft Teams
+        - name: Office uygulamalarını ve Microsoft Teams'i yükleyin
           href: setup/install-applications.md?toc=/microsoft-365/admin/moveto-microsoft-365/toc.json&bc=/microsoft-365/admin/moveto-microsoft-365/breadcrumb/toc.json
-        - name: 'E-posta, takvim ve kişileri başka bir Microsoft 365'
+        - name: 'E-posta, takvim ve kişileri Microsoft 365''e taşıyın'
           href: moveto-microsoft-365/migrate-email.md
-        - name: Bağlan'e Microsoft 365
+        - name: Etki alanınızı Microsoft 365'e bağlayın
           href: moveto-microsoft-365/connect-domain-tom365.md
-        - name: Herkesin verilerini taşımak için Geçiş Yöneticisi'ni kullanma
+        - name: Herkesin verilerini taşımak için Taşıma Yöneticisi'ni kullanın
           href: moveto-microsoft-365/migrate-files-migration-manager.md
-        - name: Google Workspace'i iptal etme
+        - name: Google Workspace'i İptal Edin
           href: moveto-microsoft-365/cancel-google.md
     - name: Müşterilerle çalışma
       items:
-        - name: Site ve dosyaları konuk kullanıcılarla paylaşma
+        - name: Konuk kullanıcılarla siteleri ve dosyaları paylaşma
           href: manage/share-sites-with-external-users.md
         - name: Konuk kullanıcılarla takvimleri paylaşma
           href: manage/share-calendars-with-external-users.md

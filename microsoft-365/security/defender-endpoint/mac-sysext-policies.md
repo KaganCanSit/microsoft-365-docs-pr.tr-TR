@@ -1,7 +1,7 @@
 ---
 title: macOS Catalina için yeni yapılandırma profilleri ve macOS'un daha yeni sürümleri
 description: Bu konu başlığında, macOS Catalina'daki çekirdek uzantılarının ve macOS'un daha yeni sürümlerindeki çekirdek uzantılarının yerine gelen sistem uzantılarından yararlanmak için değiştirilmesi gereken değişiklikler açıklanmıştır.
-keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mac, kernel, sistem, uzantılar, catalina
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mac, kernel, system, extensions, catalina
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -18,27 +18,27 @@ ms.collection:
 ms.topic: conceptual
 ROBOTS: noindex,nofollow
 ms.technology: mde
-ms.openlocfilehash: 0cdf60708e84b0972099330d48f19b22d26766ba
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 53194aac16091b9afd9559b4f372c2d436c198bf
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011986"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474717"
 ---
 # <a name="new-configuration-profiles-for-macos-catalina-and-newer-versions-of-macos"></a>macOS Catalina için yeni yapılandırma profilleri ve macOS'un daha yeni sürümleri
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-macOS gelişimle uyumlu olarak, macOS'ta çekirdek uzantıları yerine sistem uzantılarını yararlanan uç nokta için Microsoft Defender güncelleştirmesini hazırlanıyoruz. Bu güncelleştirme yalnızca macOS Catalina (10.15.4) ve daha yeni macOS sürümleri için geçerli olur.
+macOS gelişimle hizalama olarak, macOS üzerinde çekirdek uzantıları yerine sistem uzantılarını Uç Nokta için Microsoft Defender bir güncelleştirme hazırlamaya hazırlanıyoruz. Bu güncelleştirme yalnızca macOS Catalina (10.15.4) ve daha yeni macOS sürümleri için geçerli olur.
 
-MacOS üzerinde uç nokta için Microsoft Defender'ı yönetilen bir ortamda (JAMF, Intune üzerinden veya başka bir MDM çözümü aracılığıyla) dağıttıysanız, yeni yapılandırma profillerini dağıtmanız gerekir. Bu adımların başarısızılması, kullanıcıların bu yeni bileşenleri çalıştırmak için onay istemleri almalarına neden olur.
+MacOS üzerinde yönetilen bir Uç Nokta için Microsoft Defender (JAMF, Intune veya başka bir MDM çözümü aracılığıyla) dağıtım yaptıysanız, yeni yapılandırma profillerini dağıtmanız gerekir. Bu adımların başarısızılması, kullanıcıların bu yeni bileşenleri çalıştırmak için onay istemleri almalarına neden olur.
 
 ## <a name="jamf"></a>JAMF
 
@@ -54,25 +54,25 @@ Sistem uzantılarını onaylamak için aşağıdaki yükü oluşturun:
     - **com.microsoft.wdav.epsext**
     - **com.microsoft.wdav.netext**
 
-    ![Onaylanan sistem uzantıları ekran görüntüsü.](images/mac-approved-system-extensions.png)
+    :::image type="content" source="images/mac-approved-system-extensions.png" alt-text=" Onaylanan sistem uzantıları sayfası" lightbox="images/mac-approved-system-extensions.png":::
 
 ### <a name="privacy-preferences-policy-control"></a>Gizlilik Tercihleri İlke Denetimi
 
-Uç Nokta Uç Nokta Güvenlik Uzantısı için Microsoft Defender'a Tam Disk Erişimi vermek için aşağıdaki JAMF yüklemesini ekleyin. Bu ilke, uzantıyı aygıtınızda çalıştırmanız için önk gerekli bir ilkedir.
+Yeni Uç Nokta Güvenlik Uzantısına Tam Disk Erişimi vermek için aşağıdaki JAMF Uç Nokta için Microsoft Defender ekleyin. Bu ilke, uzantıyı aygıtınızda çalıştırmanız için önk gerekli bir ilkedir.
 
 1. Seçenekler **Gizlilik Tercihleri** \> **İlke Denetimi'ne tıklayın**.
 2. Tanımlayıcı `com.microsoft.wdav.epsext` ve **Paket** türü `Bundle ID` **olarak kullanın**.
 3. Kod Gereksinimini `identifier "com.microsoft.wdav.epsext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
 4. Uygulama **veya hizmeti** **SystemPolicyAllFiles olarak ayarlayın ve** İzin Ver'e **erişin**.
 
-    ![Gizlilik Tercihleri İlke Denetimi.](images/mac-system-extension-privacy.png)
+   :::image type="content" source="images/mac-system-extension-privacy.png" alt-text=" Gizlilik Tercihleri İlke Denetimi menü öğesi" lightbox="images/mac-system-extension-privacy.png":::
 
 ### <a name="network-extension-policy"></a>Ağ Uzantısı İlkesi
 
-Uç Nokta Algılama ve Yanıt özellikleri kapsamında, macOS'ta Uç Nokta için Microsoft Defender yuva trafiğini inceler ve bu bilgileri Microsoft 365 Defender raporlar. Aşağıdaki ilke, ağ uzantısının bu işlevi gerçekleştirmesi için izin verir.
+MacOS'ta Uç Nokta Algılama ve Yanıt özellikleri Uç Nokta için Microsoft Defender, yuva trafiğini inceler ve bu bilgileri Microsoft 365 Defender raporlar. Aşağıdaki ilke, ağ uzantısının bu işlevi gerçekleştirmesi için izin verir.
 
 > [!NOTE]
-> JAMF'in, macOS üzerinde Uç Nokta için Microsoft Defender'ın cihaza yüklemiş olduğu ağ uzantılarının etkinleştirilmesi için önkoşul olan içerik filtreleme ilkeleri için yerleşik destek seçeneği vardır. Dahası, JAMF bazen dağıtılan ilkelerin içeriğini değiştirir.
+> JAMF'in, cihaza macOS üzerinde Uç Nokta için Microsoft Defender ağ uzantılarının etkinleştirilmesi için önkoşul olan içerik filtreleme ilkeleri için yerleşik destek değildir. Dahası, JAMF bazen dağıtılan ilkelerin içeriğini değiştirir.
 > Bu nedenle, aşağıdaki adımlar yapılandırma profilinin imzalanmasını içeren geçici bir çözüm sağlar.
 
 1. Metin düzenleyicisi kullanarak aşağıdaki içeriği cihazınıza `com.microsoft.network-extension.mobileconfig` kaydedin:
@@ -174,11 +174,11 @@ Uç Nokta Algılama ve Yanıt özellikleri kapsamında, macOS'ta Uç Nokta için
 
 ## <a name="intune"></a>Intune
 
-### <a name="intune-system-extensions-policy"></a>Intune Sistem Uzantıları İlkesi
+### <a name="intune-system-extensions-policy"></a>Intune Uzantıları İlkesi
 
 Sistem uzantılarını onaylamak için:
 
-1. Intune'da Cihaz **yapılandırmasını** **Yönet'i**\> açın. Profilleri **Yönet** \> **Profil** **Oluştur'a**\> tıklayın.
+1. Cihaz Intune yapılandırmasını **yönet'i** \> **açın**. Profilleri **Yönet** \> **Profil** **Oluştur'a**\> tıklayın.
 2. Profil için bir ad seçin. **Platform=macOS'u** **Profile type=Extensions olarak değiştirme**. **Oluştur**’u seçin.
 3. Sekmede `Basics` , bu yeni profile bir ad girin.
 4. `Configuration settings` Sekmede, bölüme aşağıdaki girdileri `Allowed system extensions` ekleyin:
@@ -193,7 +193,7 @@ Sistem uzantılarını onaylamak için:
    |com.microsoft.wdav.netext|UBF8T346G9|
    |||
 
-   ![Sistem yapılandırma profilleri ekran görüntüsü.](images/mac-system-extension-intune2.png)
+   :::image type="content" source="images/mac-system-extension-intune2.png" alt-text=" Sistem yapılandırma profilleri sayfası" lightbox="images/mac-system-extension-intune2.png":::
 
 5. Sekmede `Assignments` bu profili Tüm Cihazlar için **Tüm Kullanıcılar'& attayabilirsiniz**.
 6. Bu yapılandırma profilini gözden geçirin ve oluşturun.
@@ -310,12 +310,12 @@ sysext.xml: OK
 
 Bu özel yapılandırma profilini dağıtmak için:
 
-1. Intune'da Cihaz **yapılandırmasını** **Yönet'i**\> açın. Profilleri **Yönet** \> **Profil** **Oluştur'a**\> tıklayın.
+1. Cihaz Intune yapılandırmasını **yönet'i** \> **açın**. Profilleri **Yönet** \> **Profil** **Oluştur'a**\> tıklayın.
 2. Profil için bir ad seçin. **Platform=macOS ve Profil** **türü=Özel'i seçin**. **Yapılandır'ı seçin**.
 3. Yapılandırma profilini açın **vesysext.xml.** Bu dosya önceki adımda oluşturulmuş.
 4. **Tamam**'ı seçin.
 
-    ![Intune ekran görüntüsünde sistem uzantısı.](images/mac-system-extension-intune.png)
+   :::image type="content" source="images/mac-system-extension-intune.png" alt-text="Sayfa içinde sistem Intune." lightbox="images/mac-system-extension-intune.png":::
 
 5. Sekmede `Assignments` bu profili Tüm Cihazlar için **Tüm Kullanıcılar'& attayabilirsiniz**.
 6. Bu yapılandırma profilini gözden geçirin ve oluşturun.

@@ -19,23 +19,23 @@ ms.collection:
 - m365solution-symantecmigrate
 ms.topic: article
 ms.custom: migrationguides
-ms.date: 11/30/2021
+ms.date: 04/01/2022
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
-ms.openlocfilehash: 79c56345177b84cd6acbfa6c9a694ab56bc76c1c
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 5dd5c78c366a708104b4662be86d71056d6a726a
+ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64466663"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64632721"
 ---
 # <a name="switch-to-microsoft-defender-for-endpoint---phase-2-setup"></a>Geçiş Uç Nokta için Microsoft Defender - Aşama 2: Kurulum
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-|[![Aşama 1: Hazırlık.](images/phase-diagrams/prepare.png#lightbox)](switch-to-mde-phase-1.md)<br/>[Aşama 1: Hazırlama](switch-to-mde-phase-1.md)|![Aşama 2: Ayarlama.](images/phase-diagrams/setup.png#lightbox)<br/>Aşama 2: Ayarlama|[![Aşama 3: Ekleme3.](images/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Aşama 3: Ekleme](switch-to-mde-phase-3.md)|
+|[![Aşama 1: Hazırlık.](images/phase-diagrams/prepare.png#lightbox)](switch-to-mde-phase-1.md)<br/>[Aşama 1: Hazırlık](switch-to-mde-phase-1.md)|![Aşama 2: Ayarlama.](images/phase-diagrams/setup.png#lightbox)<br/>Aşama 2: Kurulum|[![Aşama 3: Ekleme3.](images/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Aşama 3: Katılım](switch-to-mde-phase-3.md)|
 |---|---|---|
 ||*Buradasınız!*||
 
@@ -52,34 +52,14 @@ ms.locfileid: "64466663"
 Microsoft dışı virüsten Windows veya kötü amaçlı yazılımdan koruma çözümünüz yüklü olduğunda, Microsoft Defender Virüsten Koruma veya devre dışı bırakılmış olabilir. Farklı bir Windows uç nokta Uç nokta için Defender'a ekli olduğunda, Microsoft Defender Virüsten Koruma edilgen modda ve Microsoft olmayan bir virüsten koruma çözümüyle birlikte çalıştırabilirsiniz. Daha fazla bilgi edinmek için bkz. [Uç Nokta için Defender ile Virüsten Koruma](microsoft-defender-antivirus-compatibility.md#antivirus-protection-without-defender-for-endpoint).
 
 Uç nokta için Defender'a geçiş yaparken, yeniden yüklemek veya etkinleştirmek için bazı adımları Microsoft Defender Virüsten Koruma. Aşağıdaki tabloda, iş istemcileriniz ve sunucularınız üzerinde Windows açık almaktadır.
-<br/> <br/>
 
 |Uç nokta türü|Ne yapmalı?|
 |---|---|
-|Windows istemciler (örneğin, kimlik ve bağlantı Windows 10 uç Windows 11)|Genel olarak, bu istemcilerde herhangi bir Windows işlem Microsoft Defender Virüsten Koruma kaldırmanız gerekir. İşte nedeni: <br/><br/> Microsoft Defender Virüsten Koruma hala yüklü olması gerekir, ancak büyük olasılıkla geçiş işleminin bu noktasında devre dışıdır. <br/><br/> Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü yüklüyse ve istemciler uç nokta için Defender'a henüz yüklenmemişse, Microsoft Defender Virüsten Koruma devre dışı bırakılır. <br/><br/> Daha sonra, istemci uç noktaları Uç Nokta için Defender'a ekli olduğunda, bu uç noktalar Microsoft dışı bir virüsten koruma çözümü çalıştırıyorsa, Microsoft Defender Virüsten Koruma pasif moduna girer. <br/><br/> Microsoft dışı virüsten koruma çözümü kaldırılırsa, Microsoft Defender Virüsten Koruma moduna otomatik olarak girer.|
-|Windows sunucuları|Windows Server'da, e-Microsoft Defender Virüsten Koruma yeniden yüklemeniz ve kendiniz pasif moduna ayarlamanız gerekir. Bu Windows, Microsoft olmayan bir virüsten koruma/kötü amaçlı yazılım yüklü olduğunda, Microsoft Defender Virüsten Koruma olmayan virüsten koruma çözümüyle birlikte çalıştıramaz. Böyle durumlarda, Microsoft Defender Virüsten Koruma devre dışı bırakılır veya el ile kaldırılır. <br/><br/> Microsoft Defender Virüsten Koruma Server'da Windows yüklemek veya etkinleştirmek için aşağıdaki görevleri gerçekleştirin: <br/>- [Windows Server'da DisableAntiCcaware özelliğini false olarak ayarlama](#set-disableantispyware-to-false-on-windows-server) (yalnızca gerekiyorsa)<br/>- [E-Microsoft Defender Virüsten Koruma yeniden Windows Server 2016](#re-enable-microsoft-defender-antivirus-on-windows-server-2016)<br/>- [Microsoft Defender Virüsten Koruma Windows Server, sürüm 1803 veya sonraki bir sürüme yeniden yükleme](#re-enable-microsoft-defender-antivirus-on-windows-server-version-1803-or-later)<br/>- [Microsoft Defender Virüsten Koruma Server'da Windows moduna ayarlama](#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) <br/><br/>Windows Server'da e-postayı yeniden yükleme veya yeniden Microsoft Defender Virüsten Koruma sorunlarıyla karşılaşılan varsa, bkz. sorun giderme[: Microsoft Defender Virüsten Koruma Windows Server'da kaldırıyor](switch-to-mde-troubleshooting.md#microsoft-defender-antivirus-is-getting-uninstalled-on-windows-server).|
+|Windows istemciler (örneğin, kimlik ve bağlantı Windows 10 uç Windows 11)|Genel olarak, bu istemcilerde herhangi bir Windows işlem Microsoft Defender Virüsten Koruma kaldırmanız gerekir. Genel olarak Microsoft Defender Virüsten Koruma yüklü olması gerekir, ancak geçiş işleminin bu noktasında büyük olasılıkla devre dışıdır. <br/><br/> Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü yüklüyse ve istemciler uç nokta için Defender'a henüz yüklenmemişse, Microsoft Defender Virüsten Koruma devre dışı bırakılır. Daha sonra, istemci uç noktaları Uç Nokta için Defender'a ekli olduğunda, bu uç noktalar Microsoft dışı bir virüsten koruma çözümü çalıştırıyorsa, Microsoft Defender Virüsten Koruma pasif moduna girer. <br/><br/> Microsoft dışı virüsten koruma çözümü kaldırılırsa, Microsoft Defender Virüsten Koruma moduna otomatik olarak girer.|
+|Windows sunucuları|Windows Server'da, e-Microsoft Defender Virüsten Koruma yeniden yüklemeniz ve kendiniz pasif moduna ayarlamanız gerekir. Bu Windows, Microsoft olmayan bir virüsten koruma/kötü amaçlı yazılım yüklü olduğunda, Microsoft Defender Virüsten Koruma olmayan virüsten koruma çözümüyle birlikte çalıştıramaz. Böyle durumlarda, Microsoft Defender Virüsten Koruma devre dışı bırakılır veya el ile kaldırılır. <br/><br/> Microsoft Defender Virüsten Koruma Server'da Windows yüklemek veya etkinleştirmek için aşağıdaki görevleri gerçekleştirin: <br/>- [E-Microsoft Defender Virüsten Koruma yeniden Windows Server 2016](#re-enable-microsoft-defender-antivirus-on-windows-server-2016)<br/>- [Microsoft Defender Virüsten Koruma Windows Server, sürüm 1803 veya sonraki bir sürüme yeniden yükleme](#re-enable-microsoft-defender-antivirus-on-windows-server-version-1803-or-later)<br/>- [Microsoft Defender Virüsten Koruma Server'da Windows moduna ayarlama](#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) <br/><br/>Windows Server'da e-postayı yeniden yükleme veya yeniden Microsoft Defender Virüsten Koruma sorunlarıyla karşılaşılan varsa, bkz. sorun giderme[: Microsoft Defender Virüsten Koruma Windows Server'da kaldırıyor](switch-to-mde-troubleshooting.md#microsoft-defender-antivirus-is-getting-uninstalled-on-windows-server).|
 
 > [!TIP]
 > Microsoft virüsten koruma Microsoft Defender Virüsten Koruma durumları hakkında daha fazla bilgi edinmek için Uyumluluk [Microsoft Defender Virüsten Koruma bakın](microsoft-defender-antivirus-compatibility.md).
-
-### <a name="set-disableantispyware-to-false-on-windows-server"></a>Windows Server'da DisableAntiWare ayarını false olarak ayarlama
-
-[Geçmişte DisableAntiCcaware](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware) kayıt defteri anahtarı, mcAfee, Microsoft Defender Virüsten Koruma gibi başka bir virüsten koruma ürününü devre dışı bırakmak ve dağıtmak için kullanılmıştır. **Genelde, Windows** cihazlarınıza ve uç noktalarınıza bu kayıt defteri anahtarınız sahip olmazsınız;  `DisableAntiSpyware` ancak, yapılandırmadınız varsa, değerini false olarak ayarlamak için şu şekilde ayarlanır:
-
-1. Windows Server aygıtınızda Kayıt Defteri Düzenleyicisi'ni açın.
-
-2. `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`'a gidin.
-
-3. Bu klasörde **DisableAntiWordsware** adlı bir DWORD girdisi bakın.
-   - Bu girdiyi görmüyorsanız hazırsanız.
-   - **DisableAnti Birware görüyorsanız**, 4. adıma geçin.
-
-4. DisableAntiWordsware DWORD'e sağ tıklayın ve değiştir'i **seçin**.
-
-5. Değeri olarak ayarlayın `0`. (Bu eylem kayıt defteri anahtarının değerini *false olarak ayarlar*.)
-
-> [!TIP]
-> Bu kayıt defteri anahtarı hakkında daha fazla bilgi edinmek için [bkz. DisableAntiAntiWare](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware).
 
 ### <a name="re-enable-microsoft-defender-antivirus-on-windows-server-2016"></a>E-posta Microsoft Defender Virüsten Koruma yeniden Windows Server 2016
 
@@ -91,13 +71,12 @@ Kötü Amaçlı Yazılımdan Koruma [ve Command-Line Yardımcı Programı'nı](c
 
 3. Cihazı yeniden başlatın.
 
-
 ### <a name="re-enable-microsoft-defender-antivirus-on-windows-server-version-1803-or-later"></a>Microsoft Defender Virüsten Koruma Server, Windows Microsoft Defender Virüsten Koruma 1803 veya sonraki sürümler için yeniden etkinleştirme
 
 > [!IMPORTANT]
 > Aşağıdaki yordam yalnızca etki alanlarının aşağıdaki sürümlerini çalıştıran uç noktalar veya cihazlar Windows:
-> - Windows Server 2019
 > - Windows Server 2022
+> - Windows Server 2019
 > - Windows Server, sürüm 1803 (yalnızca çekirdek modu)
 
 1. Sunucu üzerinde yerel bir yönetici olarak Oturum Aç'Windows PowerShell.
@@ -128,15 +107,12 @@ Kötü Amaçlı Yazılımdan Koruma [ve Command-Line Yardımcı Programı'nı](c
 > [!TIP]
 > Artık R2 ve Microsoft Defender Virüsten Koruma 2016'da pasif Windows Server 2012 çalıştırabilirsiniz. Daha fazla bilgi için bkz[. Yükleme seçenekleri Uç Nokta için Microsoft Defender](configure-server-endpoints.md#options-to-install-the-microsoft-defender-for-endpoint-packages).
 
-1. Kayıt Defteri Düzenleyicisi'ni açın ve ardından
-
-   ```text
-   Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
-   ```
+1. Kayıt Defteri Düzenleyicisi'ni açın ve sonra 'a gidin `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
 
 2. **ForceDefenderPassiveMode** adlı bir DWORD girdisini düzenleyin (veya oluşturun) ve aşağıdaki ayarları belirtin:
 
    - DWORD değerini **1 olarak ayarlayın**.
+
    - **Taban'ın** altında **Onaltılı'ya seçin**.
 
 > [!NOTE]
@@ -149,7 +125,6 @@ Yukarıdaki yöntemi kullanarak Microsoft Defender Virüsten Koruma R2 ve 2016 W
 ## <a name="configure-defender-for-endpoint"></a>Uç Nokta için Defender'ı Yapılandırma
 
 Geçiş işleminin bu adımı, uç Microsoft Defender Virüsten Koruma yapılandırmayı içerir. Intune Intune, bununla birlikte, aşağıdaki tabloda listelenen yöntemlerden herhangi birini yapabilirsiniz:
-<br/><br/>
 
 |Yöntem|Ne yapmalı?|
 |---|---|
@@ -178,8 +153,7 @@ Yapılandırılan belirli dışlamalar, uç nokta veya Windows kullandığınız
 
 ## <a name="add-your-existing-solution-to-the-exclusion-list-for-microsoft-defender-antivirus"></a>Var olan çözümlerinizi dışlama listesine sizin için Microsoft Defender Virüsten Koruma
 
-Kurulum işleminin bu adımı sırasında, var olan çözümlerinizi dışlama listesine Microsoft Defender Virüsten Koruma eklersiniz. Dışlamalarınızı dışlamalarınızı aşağıdaki tabloda Microsoft Defender Virüsten Koruma yöntemlerden birini seçebilirsiniz:
-<br/><br/>
+Kurulum işleminin bu adımı sırasında, var olan çözümlerinizi dışlama listesine Microsoft Defender Virüsten Koruma eklersiniz. Dışlamalarınızı dışlamalarınızı aşağıdaki tabloda Microsoft Defender Virüsten Koruma yöntemlerden birini seçebilirsiniz: 
 
 |Yöntem|Ne yapmalı?|
 |---|---|
@@ -196,14 +170,16 @@ Bu taramalara [dışlamalar Microsoft Defender Virüsten Koruma,](/windows/secur
 Aşağıdaki noktaları unutmayın:
 
 - *Yol dışlamaları* belirli dosyaları ve bu dosyalara erişimle ilgili her türlü erişimi dışlar.
+
 - *süreç dışlamaları* , bir işleme dokunan her şeyi hariç tutmaz, ancak sürecin kendisini dışlamaz.
+
 - İşlem dışlamalarınızı yalnızca adlarına göre değil, tam yolları kullanarak listele. (Yalnızca ad yöntemi daha az güvenlidir.)
+
 - Her yürütülebilir dosyayı (.exe) hem yol dışlama hem de sürecin dışlanması olarak listelersanız, işlem ve dokunduğu her şey dışlar.
 
 ## <a name="set-up-your-device-groups-device-collections-and-organizational-units"></a>Cihaz gruplarınızı, cihaz koleksiyonlarınızı ve kuruluş birimlerinizi ayarlama
 
 Cihaz grupları, cihaz koleksiyonları ve kuruluş birimleri, güvenlik ekibimizin güvenlik ilkelerini verimli ve etkili bir şekilde yönetmelerini ve atamalarını sağlar. Aşağıdaki tabloda bu grupların her biri ve bunların nasıl yapılandırıldıları açık almaktadır. Organizasyonunız üç koleksiyon türü de kullanmay olabilir.
-<br/><br/>
 
 |Koleksiyon türü|Ne yapmalı?|
 |---|---|

@@ -16,12 +16,12 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: cdd368e7e78458067b9f363d41f7931ac5a2c0cd
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: 05375332df6542cd87e986bba68ef7c6753f8e36
+ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63754217"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64637972"
 ---
 # <a name="get-started-with-insider-risk-management"></a>İçeriden risk yönetimini kullanmaya başlama
 
@@ -36,9 +36,9 @@ Insider risk ilkelerinin, kuruluşta riski yönetmenize nasıl yardımcı olduğ
 
 Insider risk yönetimine başlamadan önce, yeni aboneliğinizi [Microsoft 365](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) eklentileri doğrulamanız gerekir. Insider risk yönetimine erişmek ve bu riski kullanmak için, organizasyon aşağıdaki aboneliklerden veya eklentilerden biri gerekir:
 
-- Microsoft 365 E5/A5/G5 aboneliği (ücretli veya deneme sürümü)
-- Microsoft 365 E3/A3/G3 aboneliği + Microsoft 365 E5/A5/G5 Uyumluluk eklentisi
-- Microsoft 365 E3/A3/G3 aboneliği + Microsoft 365 E5/A5/G5 Insider Risk Yönetimi eklentisi
+- Microsoft 365 E5/A5/F5/G5 aboneliği (ücretli veya deneme sürümü)
+- Microsoft 365 E3/A3/F3/G3 aboneliği + Microsoft 365 E5/A5/F5/G5 Uyumluluk eklentiniz
+- Microsoft 365 E3/A3/F3/G3 aboneliği + Microsoft 365 E5/A5/F5/G5 Insider Risk Yönetimi eklentisi
 - Office 365 E3 + Enterprise Mobil Kullanım ve Güvenlik E3 + Microsoft 365 E5 Uyumluluk eklenti
 
 Insider risk yönetimi ilkelerine dahil olan kullanıcılara yukarıdaki lisanslardan biri atanmalıdır.
@@ -221,13 +221,13 @@ Insider risk yönetimi, fiziksel denetim ve erişim platformlarından kullanıc�
 
 Takımınız için Fiziksel sertifika [ayarlama bağlayıcısı](import-physical-badging-data.md) yapılandırmayla ilgili adım adım kılavuz bilgileri için, Fiziksel badging verilerini içeri aktaracak şekilde bağlayıcı ayarlama makalesine bakın. Bağlayıcıyı yapılandırdıktan sonra bu yapılandırma adımlarına geri dönebilirsiniz.
 
-### <a name="configure-microsoft-defender-for-endpoint-optional"></a>Uç Nokta için Microsoft Defender'ı yapılandırma (isteğe bağlı)
+### <a name="configure-microsoft-defender-for-endpoint-optional"></a>E-Uç Nokta için Microsoft Defender yapılandırma (isteğe bağlı)
 
-[Uç Nokta için Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) , kurumsal ağların gelişmiş tehditleri engellemesini, algılamasını, araştırmasını ve yanıtlamasını önlemeye yardımcı olmak için tasarlanmış bir kurumsal uç nokta güvenlik platformudur. Organizasyonda güvenlik ihlallerinin daha iyi görünürlüğünü artırmak için, Insider risk yönetimi güvenlik ihlal ilkesi şablonlarından oluşturulan ilkelerde kullanılan etkinlikler için Uç nokta uyarıları için Defender'ı içeri aktararak ve filtresini gerçekleştirebilirsiniz.
+[Uç Nokta için Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), kurumsal ağların gelişmiş tehditleri engellemesini, algılamasını, araştırmasını ve yanıtlamasını önlemeye yardımcı olmak için tasarlanmış bir kurumsal uç nokta güvenlik platformudur. Organizasyonda güvenlik ihlallerinin daha iyi görünürlüğünü artırmak için, Insider risk yönetimi güvenlik ihlal ilkesi şablonlarından oluşturulan ilkelerde kullanılan etkinlikler için Uç nokta uyarıları için Defender'ı içeri aktararak ve filtresini gerçekleştirebilirsiniz.
 
-Güvenlik ihlal ilkeleri oluşturmanız gerekirse, güvenlik ihlal uyarılarını içeri aktarması için Defender Güvenlik Merkezi'nde Insider risk yönetimi tümleştirmesi için kuruluşta Uç Nokta için Microsoft Defender for Endpoint'ı etkinleştirmeniz ve Uç Nokta için Defender'ı etkinleştirmeniz gerekir. Gereksinimler hakkında daha fazla bilgi için, Uç nokta [için Microsoft Defender'a ilişkin en düşük gereksinimler makalesine](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements) bakın.
+Güvenlik ihlal ilkeleri oluşturmanız gerekirse, güvenlik ihlal uyarılarını içeri aktaracak şekilde Defender Güvenlik Merkezi'nde Insider risk yönetimi tümleştirmesi için, Uç Nokta için Microsoft Defender için Uç Nokta için Defender'ı etkinleştirmeniz gerekir. Gereksinimler hakkında daha fazla bilgi için Bu makaledeki [En düşük Uç Nokta için Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements) bakın.
 
-Insider risk [yönetimi tümleştirmesi için Uç Nokta için Defender'ı](/windows/security/threat-protection/microsoft-defender-atp/advanced-features#share-endpoint-alerts-with-microsoft-compliance-center) yapılandırmayla ilgili adım adım kılavuzlar için, Uç nokta için Defender'daki gelişmiş özellikleri yapılandırma makalesine bakın. Uç Nokta için Microsoft Defender'ı yapılandırdıktan sonra bu yapılandırma adımlarına geri dönebilirsiniz.
+Insider risk [yönetimi tümleştirmesi için Uç Nokta için Defender'ı](/windows/security/threat-protection/microsoft-defender-atp/advanced-features#share-endpoint-alerts-with-microsoft-compliance-center) yapılandırmayla ilgili adım adım kılavuzlar için, Uç nokta için Defender'daki gelişmiş özellikleri yapılandırma makalesine bakın. Yapılandırma adımlarını yapılandırdikten Uç Nokta için Microsoft Defender, bu yapılandırma adımlarına geri dönebilirsiniz.
 
 ## <a name="step-5-required-configure-insider-risk-settings"></a>5. Adım (gerekli): Insider risk ayarlarını yapılandırma
 
@@ -247,7 +247,7 @@ Insider risk [yönetimi tümleştirmesi için Uç Nokta için Defender'ı](/wind
     - [Dosya türü dışlamaları](insider-risk-management-settings.md#file-type-exclusions)
     - [Alışılmış dışı etkinlikler için puanı artırmak için günlük en az etkinlik sayısı](insider-risk-management-settings.md#minimum-number-of-daily-events-to-boost-score-for-unusual-activity)
     - [Ses düzeyi uyarısı](insider-risk-management-settings.md#alert-volume)
-    - [Uç nokta uyarısı durumu için Microsoft Defender](insider-risk-management-settings.md#microsoft-defender-for-endpoint-preview)
+    - [Uç Nokta için Microsoft Defender durumunu gösterir](insider-risk-management-settings.md#microsoft-defender-for-endpoint-preview)
     - [Etki alanı ayarları](insider-risk-management-settings.md#domains)
 6. Uyarıları dışarı **aktar sayfasında**, gerekirse Veri Yönetimi API'lerini kullanarak Insider risk Office 365 bilgilerini dışarı aktarmayı etkinleştirin.
 7. Öncelik kullanıcı **grupları sayfasında** , bir öncelik kullanıcı grubu oluşturun ve 3. Adım'da oluşturulmazsa **kullanıcıları ekleyin**.

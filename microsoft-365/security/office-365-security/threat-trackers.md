@@ -1,5 +1,5 @@
 ---
-title: Tehdit İzleyicileri - Yeni ve Dikkat çekici
+title: Tehdit İzleyicileri - Yeni ve Dikkat Çekici
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -16,98 +16,98 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: ''
-description: Organizasyonunu güvenlik endişelerini takip etmeye yardımcı olmak için, yeni Dikkate Değer İzleyiciler de dahil olmak üzere Tehdit İzleyicileri hakkında bilgi edinin.
+description: Kuruluşunuzun güvenlik endişelerini takip etmelerine yardımcı olmak için yeni Dikkat Çekici İzleyiciler de dahil olmak üzere Tehdit İzleyicileri hakkında bilgi edinin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: fc73604d6ea24de9c8a66a8586c6bbced0113421
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: ba038f94e711470242995a8ea0f082cd6d82dcda
+ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63034267"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "64663258"
 ---
-# <a name="threat-trackers---new-and-noteworthy"></a>Tehdit İzleyicileri - Yeni ve Dikkat çekici
+# <a name="threat-trackers---new-and-noteworthy"></a>Tehdit İzleyicileri - Yeni ve Dikkat Çekici
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Office 365 için Microsoft Defender plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-[Office 365 Tehdit Soruşturması ve Yanıt](office-365-ti.md) özellikleri, kuruluş güvenlik ekibinin siber güvenlik tehditlerini keşfetmesini ve bu tehditlere karşı eylemde yer almasını sağlar. Office 365 Araştırma ve Yanıt özelliklerinin arasında, Dikkat çekici izleyiciler de içinde olmak üzere Tehdit İzleyicisi özellikleri vardır. Bu yeni özelliklere ve sonraki adımlara genel bir bakış için bu makaleyi okuyun.
+[Office 365 Tehdit Araştırması ve Yanıt](office-365-ti.md) özellikleri, kuruluşunuzun güvenlik ekibinin siber güvenlik tehditlerini keşfetmesine ve buna karşı önlem almasına olanak tanır. Office 365 Tehdit Araştırması ve Yanıt özellikleri, Önemli izleyiciler de dahil olmak üzere Tehdit İzleyicisi özelliklerini içerir. Bu yeni özelliklere ve sonraki adımlara genel bir bakış elde etmek için bu makaleyi okuyun.
 
 > [!IMPORTANT]
-> Office 365 tehdit koruması özellikleriyle birlikte artık Plan 2 Office 365 için Microsoft Defender oldu. Daha fazla bilgi edinmek için bkz. Office 365 için [Microsoft Defender ve](https://products.office.com/exchange/advance-threat-protection) Hizmet [Açıklaması için Microsoft Defender Office 365.](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
+> Office 365 Tehdit Bilgileri artık ek tehdit koruma özellikleriyle birlikte Plan 2'yi Office 365 için Microsoft Defender. Daha fazla bilgi için bkz. [Office 365 için Microsoft Defender planları ve fiyatlandırması ve](https://products.office.com/exchange/advance-threat-protection) [Office 365 için Microsoft Defender Hizmet Açıklaması](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
 
-## <a name="what-are-threat-trackers"></a>Tehdit İzleyicisi nedir?
+## <a name="what-are-threat-trackers"></a>Tehdit İzleyicileri nedir?
 
-Tehdit İzleyicileri, şirketinizi etkilemesi gereken farklı siber güvenlik sorunları hakkında size bilgi sağlayan bilgilendirici pencere öğeleri ve görünümlerdir. Örneğin, Tehdit İzleyicileri'ni kullanarak popüler kötü amaçlı yazılım kampanyaları hakkında bilgileri görüntüebilirsiniz.
+Tehdit İzleyicileri, şirketinizi etkileyebilecek farklı siber güvenlik sorunları hakkında size zeka sağlayan bilgilendirici pencere öğeleri ve görünümlerdir. Örneğin, Tehdit İzleyicisi'ni kullanarak popüler kötü amaçlı yazılım kampanyalarıyla ilgili bilgileri görüntüleyebilirsiniz.
 
-![Kötü amaçlı yazılım kampanyaları gösteren Tehdit İzleyicisi örneği.](../../media/a883b5ac-8e2b-469a-90e0-f8ad39bb63b7.png)
+:::image type="content" source="../../media/a883b5ac-8e2b-469a-90e0-f8ad39bb63b7.png" alt-text="Kötü amaçlı yazılım kampanyalarını gösteren Tehdit İzleyicisi örneği" lightbox="../../media/a883b5ac-8e2b-469a-90e0-f8ad39bb63b7.png":::
 
-Çoğu izleyici sayfası, düzenli olarak güncelleştirilen popüler numaraları, en çok hangi sorunların büyültebilir veya büyülebilir olduğunu anlamanıza yardımcı pencere öğeleri ve daha ayrıntılı bilgi görüntüleyemiyorsanız Eylemler sütununda sizi Gezgin'e alan hızlı bağlantılardan içerir.
+İzleyici sayfalarının çoğunda düzenli aralıklarla güncelleştirilen popüler sayılar, hangi sorunların en büyük olduğunu veya en çok büyüdüğünü anlamanıza yardımcı olacak pencere öğeleri ve daha ayrıntılı bilgileri görüntüleyebileceğiniz **Eylemler** sütununda sizi Gezgin'e götüren hızlı bir bağlantı bulunur.
 
-![Explorer'da kampanya bilgileri örneği.](../../media/e426f220-fdcb-4dd9-99a2-db97dbcf71d5.png)
+:::image type="content" source="../../media/e426f220-fdcb-4dd9-99a2-db97dbcf71d5.png" alt-text="Gezgin'de kampanya bilgileri örneği" lightbox="../../media/e426f220-fdcb-4dd9-99a2-db97dbcf71d5.png":::
 
-İzleyiciler, Plan 2'de microsoft Defender ile elde Office 365 [özelliklerden yalnızca birkaçıdır](office-365-ti.md). Tehdit İzleyicileri [, Notyıldız izleyicileri](#noteworthy-trackers), Popüler [izleyiciler](#trending-trackers), [İzlanan sorgular](#tracked-queries) ve [Kaydedilmiş sorgular'dır](#saved-queries).
+İzleyiciler, [Office 365 için Microsoft Defender Plan 2](office-365-ti.md) ile elde ettiğiniz birçok harika özelliğin yalnızca birkaçıdır. Tehdit İzleyicileri [arasında Önemli izleyiciler](#noteworthy-trackers), [Popüler izleyiciler](#trending-trackers), [İzlenen sorgular](#tracked-queries) ve [Kaydedilen sorgular](#saved-queries) bulunur.
 
-Tehdit İzleyicisi'nizi görüntülemek ve kullanmak için Microsoft 365 Defender portalını <https://security.microsoft.com>'da açın ve İşbirliği tehdit izleyicisi **& e-posta adresine** \> **gidin**. Tehdit izleyicisi sayfasına **doğrudan gitmek** için kullanın <https://security.microsoft.com/threattracker>.
+Kuruluşunuzda Tehdit İzleyicilerinizi görüntülemek ve kullanmak için adresinden Microsoft 365 Defender portalını <https://security.microsoft.com>açın ve **E-posta & işbirliği** \> **Tehdit izleyicisi'ne** gidin. **Doğrudan Tehdit izleyicisi** sayfasına gitmek için kullanın<https://security.microsoft.com/threattrackerv2>.
 
 > [!NOTE]
-> Tehdit İzleyicileri'ni kullanmak için genel yönetici, güvenlik yöneticisi veya güvenlik okuyucusu gerekir. Aşağıdaki [portalda İzinler Microsoft 365 Defender bakın](permissions-microsoft-365-security-center.md).
+> Tehdit İzleyicisi'ni kullanmak için genel yönetici, güvenlik yöneticisi veya güvenlik okuyucusu olmanız gerekir. bkz. [Microsoft 365 Defender portalında İzinler](permissions-microsoft-365-security-center.md).
 
-### <a name="noteworthy-trackers"></a>Dikkat çekici izleyiciler
+### <a name="noteworthy-trackers"></a>Dikkate değer izleyiciler
 
-Dikkat çekici izleyiciler, hakkında bilgi edinmiz gerektiğini düşünüyoruz büyük ve küçük tehdit ve riskler bulan yerdir. Dikkat çekici izleyiciler, bu sorunların Microsoft 365 ortamınıza ek olarak neler olup olmadığı ve bunların kuruluşun Microsoft 365 kullanımını nasıl etkileyecekleri hakkında daha fazla ayrıntı içeren makalelerin (burada olduğu gibi) bağlantısını bulmanıza yardımcı Office 365. Bu büyük bir yeni tehdit (örn. Wannacry, Petya) veya yeni zorluklara neden olacak mevcut bir tehdit (diğer önemli Not Değer öğemiz - Nemucod gibi) burada sizin ve güvenlik ekibinin düzenli olarak gözden geçirmeniz ve incelemeniz gereken önemli öğeleri burada bulabilirsiniz.
+Dikkate değer izleyiciler, bilmeniz gerektiğini düşündüğümüz büyük ve küçük tehditleri ve riskleri bulacağınız yerdir. Dikkate değer izleyiciler, bu sorunların Microsoft 365 ortamınızda mevcut olup olmadığını bulmanıza ve ayrıca neler olduğuna ve kuruluşunuzun Office 365 kullanımını nasıl etkileyebileceklerine ilişkin daha fazla ayrıntı sağlayan makalelere (bunun gibi) bağlantı vermenize yardımcı olur. İster büyük bir yeni tehdit (ör. Wannacry, Petya) ister bazı yeni zorluklar yaratabilecek mevcut bir tehdit olsun (diğer ilk Değerli öğemiz - Nemucod gibi), sizin ve güvenlik ekibinizin düzenli aralıklarla gözden geçirmesi ve incelemesi gereken önemli yeni öğeleri bulacağınız yerdir.
 
-Genellikle Dikkat çekici izleyiciler, yeni tehditleri tanımlamız ve bu özelliğin sağladığı daha fazla görünürlüğüne ihtiyacınız olabileceğini düşünmemiz sayesinde yalnızca birkaç hafta boyunca yayınlanmıştır. Bir tehdit için en büyük riskler ortadan kaldırıldıktan sonra bu Dikkat çekici öğeyi kaldırmış oluruz. Böylece, ilgili diğer yeni öğelerle birlikte listeyi güncel ve güncel tutabilirsiniz.
+Genellikle dikkat çekici izleyiciler, yeni tehditleri tanımladığımız ve bu özelliğin sağladığı ek görünürlüğe ihtiyacınız olabileceğini düşündüğümüzde yalnızca birkaç hafta boyunca yayınlanır. Bir tehdit için en büyük risk geçtikten sonra bu Önemli öğeyi kaldıracağız. Bu şekilde, listeyi diğer ilgili yeni öğelerle güncel ve güncel tutabiliriz.
 
 ### <a name="trending-trackers"></a>Popüler izleyiciler
 
-Popüler izleyiciler (eski adı Kampanyalar), geçen hafta kurum e-postasında alınan yeni tehditleri vurgular.
+Popüler izleyiciler (eski adıyla Kampanyalar), geçtiğimiz hafta içinde kuruluşunuzun e-postasında alınan yeni tehditleri vurgular. Popüler izleyiciler görünümü, kuruluşunuzun Office 365 ortamını etkileyen e-posta tehditlerinin dinamik değerlendirmelerini sağlar. Bu görünümde kiracı düzeyinde kötü amaçlı yazılım eğilimleri gösterilir, artan, düz veya azalan kötü amaçlı yazılım ailelerini tanımlar ve yöneticilere hangi tehditlerin daha fazla dikkat gerektirdiği hakkında daha fazla içgörü sağlar.
 
-![Popüler kötü amaçlı yazılım kampanyaları widget'ı örneği.](../../media/d2ccc1a0-2a1d-4e36-99b5-6766c207772f.png)
+:::image type="content" source="../../media/d2ccc1a0-2a1d-4e36-99b5-6766c207772f.png" alt-text="Popüler kötü amaçlı yazılım kampanyaları pencere öğesi örneği" lightbox="../../media/d2ccc1a0-2a1d-4e36-99b5-6766c207772f.png":::
 
-Popüler izleyiciler, daha geniş şirket ortamının saldırılara karşı hazır olduğundan emin olmak için gözden geçirmeniz gereken yeni tehditlere dair size bir fikir verir.
+Popüler izleyiciler, daha geniş kurumsal ortamınızın saldırılara karşı hazır olduğundan emin olmak için gözden geçirmeniz gereken yeni tehditler hakkında fikir verir.
 
-### <a name="tracked-queries"></a>İzlanan sorgular
+### <a name="tracked-queries"></a>İzlenen sorgular
 
-İzilen sorgular, kaydedilmiş sorgularınızı kullanarak düzenli aralıklarla Microsoft 365 etkinliklerinizi değerlendirmenizi sağlar. Bu size etkinlik eğilimini verir ve önümüzdeki aylarda daha fazlası da gelecektir. İzilen sorgular otomatik olarak çalışır ve size sorgularınızı yeniden çalıştırmayı anımsamanıza gerek kalmadan güncel bilgiler sağlar.
+İzlenen sorgular, kuruluşunuzdaki Microsoft 365 etkinliğini düzenli aralıklarla değerlendirmek için kaydedilen sorgularınızdan yararlanılır. Bu size etkinlik trendi sunar ve önümüzdeki aylarda daha fazlası da gelir. İzlenen sorgular otomatik olarak çalıştırılır ve sorgularınızı yeniden çalıştırmayı hatırlamak zorunda kalmadan size güncel bilgiler verir.
 
-![Biri seçili olan, izlemeli sorgu örneği.](../../media/0c556174-06eb-4ae5-b32a-5ff76b9e4f13.png)
+:::image type="content" source="../../media/0c556174-06eb-4ae5-b32a-5ff76b9e4f13.png" alt-text="Bir sorgu seçiliyken izlenen sorgu örneği" lightbox="../../media/0c556174-06eb-4ae5-b32a-5ff76b9e4f13.png":::
 
 ### <a name="saved-queries"></a>Kaydedilen sorgular
 
-Kaydedilen sorgular, İzleyiciler bölümünde de bulunur. Daha hızlı ve tekrar tekrar görmek istediğiniz ortak Explorer aramalarını, her zaman yeniden oluşturmak zorunda kalmadan depolamak için Kaydedilen sorguları kullanabilirsiniz.
+Kaydedilen sorgular İzleyiciler bölümünde de bulunur. Her seferinde aramayı yeniden oluşturmak zorunda kalmadan, daha hızlı ve tekrar tekrar geri dönmek istediğiniz ortak Gezgin aramalarını depolamak için Kayıtlı sorgular'ı kullanabilirsiniz.
 
-![Seçili olan kaydedilmiş sorgu örneği.](../../media/188cf3ff-58f1-41ea-81aa-76158d8f40c3.png)
+:::image type="content" source="../../media/188cf3ff-58f1-41ea-81aa-76158d8f40c3.png" alt-text="Bir sorgu seçiliyken izlenen sorguların listesi" lightbox="../../media/188cf3ff-58f1-41ea-81aa-76158d8f40c3.png":::
 
-Her zaman, Explorer sayfasının en üstünde yer alan Sorguyu kaydet düğmesini kullanarak Dikkat çekici bir izleyici sorgusu  veya kendi Explorer sorgularınızı kaydedebilirsiniz. Orada kaydedilen her şey, İzleyici **sayfasındaki** Kaydedilmiş sorgular listesinde görünür.
+Gezgin sayfasının üst kısmındaki Sorguyu **kaydet** düğmesini kullanarak her zaman bir Dikkate Değer izleyici sorgusu veya kendi Explorer sorgularınızdan herhangi birini kaydedebilirsiniz. Oraya kaydedilen her şey İzleyici sayfasındaki **Kayıtlı sorgular** listesinde gösterilir.
 
 ## <a name="trackers-and-explorer"></a>İzleyiciler ve Gezgin
 
-E-postayı, içeriği veya diğer etkinlik Office incelerken (çok yakında), Explorer ve İzleyiciler birlikte, güvenlik risklerini ve tehditleri araştırmanıza ve izlemenıza yardımcı olur. İzleyiciler, buluta taşınırken işletmenizin daha iyi korunmasını sağlamak amacıyla yeni, önemli ve sık arama yapılan sorunları vurgular ve kullanıcılarınızı korumak için hep birlikte bilgiler sağlar.
+E-postayı, içeriği veya Office etkinlikleri (yakında) gözden geçirirken, Gezgin ve İzleyiciler güvenlik risklerini ve tehditlerini araştırmanıza ve izlemenize yardımcı olmak için birlikte çalışır. İzleyiciler, yeni, dikkate değer ve sık arama yapılan sorunları vurgulayarak kullanıcılarınızı korumaya yönelik bilgiler sağlar ve işletmenizin buluta taşındıkça daha iyi korunmasını sağlar.
 
-Bu veya diğer güvenlik özellikleri hakkında bize her zaman geri Microsoft 365 sağ alt köşedeki Geri Bildirim düğmesine tıklayarak ulaşabilirsiniz.
+Ayrıca sağ alt köşedeki **Geri Bildirim** düğmesine tıklayarak bu veya diğer Microsoft 365 güvenlik özellikleri hakkında bize her zaman geri bildirim sağlayabileceğinizi unutmayın.
 
-![Microsoft 365 Defender portalı seçin.](../../media/microsoft-365-defender-portal.png)
+:::image type="content" source="../../media/microsoft-365-defender-portal.png" alt-text="Microsoft 365 Defender portalı" lightbox="../../media/microsoft-365-defender-portal.png":::
 
-## <a name="trackers-and-microsoft-defender-for-office-365"></a>İzleyiciler ve Windows için Microsoft Defender Office 365
+## <a name="trackers-and-microsoft-defender-for-office-365"></a>İzleyiciler ve Office 365 için Microsoft Defender
 
-Bizim ilk dikkat çekici tehditimiz olan Bu tehdit, Ekler tarafından algılanan gelişmiş kötü amaçlı yazılım [Kasa vurgularız](safe-attachments.md). Office 365 Kurumsal E5 müşterisiysiniz ve Office 365 için [Microsoft Defender](defender-for-office-365.md) kullanmayacaksanız, o şekilde devam edebilirsiniz; abonelik kapsamındadır. Güvenlik Office 365 için Defender, güvenlik araçlarınız ve hizmetleriniz ile e-posta akışını filtrelemeye ek olarak Office 365 sağlar. Bununla birlikte, istenmeyen posta önleme ve [Kasa Bağlantılar](safe-links.md) özellikleri en iyi şekilde, ana e-posta güvenlik çözümünüz posta yoluyla geldiğinde Office 365.
+İlk Dikkate Değer tehditimizle, [Kasa Ekleri](safe-attachments.md) tarafından algılanan gelişmiş kötü amaçlı yazılım tehditlerini vurguluyoruz. Office 365 Kurumsal E5 müşterisiyseniz ve [Office 365 için Microsoft Defender](defender-for-office-365.md) kullanmıyorsanız aboneliğinize dahil olmalıdır. Office 365 için Defender, Office 365 hizmetlerinizle e-posta akışını filtrelayan başka güvenlik araçlarınız olsa bile değer sağlar. Ancak, ana e-posta güvenlik çözümünüz Office 365 üzerinden geçtiğinde istenmeyen posta önleme ve [Kasa Bağlantıları](safe-links.md) özellikleri en iyi sonucu verir.
 
-![Microsoft 365 Defender portalında Office 365 için Microsoft Defender.](../../media/policies.png)
+:::image type="content" source="../../media/policies.png" alt-text="Microsoft 365 Defender portalındaki Office 365 için Microsoft Defender" lightbox="../../media/policies.png":::
 
-Tehditlere karşı tehditlere karşı sadece geleneksel kötü amaçlı yazılımdan koruma taramaları çalıştırıyor olmak, saldırılara karşı yeterince iyi korunmaz anlamına gelir. Günümüzün daha gelişmiş olan saldırganları, yaygın olarak kullanılan araçları kullanarak geleneksel imza tabanlı kötü amaçlı yazılımdan koruma altyapıları tarafından tanınmayacak yeni, obfusced veya gecikmiş saldırılar oluşturur. En Kasa Özelliği, e-posta eklerini alır ve güvenli mi yoksa kötü amaçlı mı olduğunu belirlemek için bu ekleri sanal ortamda detons eder. Bu detonation işlemi, her dosyayı sanal bir bilgisayar ortamında açar, sonra da dosya açıldıktan sonra neler olduğunu izler. İster BIR PDF ister sıkıştırılmış bir dosya, ister Office dosyası olsun, kötü amaçlı kod bir dosyada gizlenerek, görüntülerken görüntülerken kişi bilgisayarlarında bu kodu açar. E-posta akışında dosyayı detoning ederek ve çözümleerek, Office 365 için Defender söz dizimleri, davranışları, dosya itibarını ve bir dizi varsayılan kurala dayalı olarak bu tehditleri bulur.
+Günümüzün tehditle dolu dünyasında, yalnızca geleneksel kötü amaçlı yazılımdan koruma taramaları çalıştırmak, saldırılara karşı yeterince iyi korunmadığınız anlamına gelir. Günümüzün daha gelişmiş saldırganları, geleneksel imza tabanlı kötü amaçlı yazılımdan koruma altyapıları tarafından tanınmayacak yeni, karartılmış veya gecikmeli saldırılar oluşturmak için yaygın olarak kullanılan araçları kullanır. Kasa Ekleri özelliği, e-posta eklerini alır ve güvenli veya kötü amaçlı olup olmadıklarını belirlemek için bunları sanal ortamda patlatır. Bu patlama işlemi her dosyayı bir sanal bilgisayar ortamında açar ve dosya açıldıktan sonra ne olduğunu izler. İster PDF, ister sıkıştırılmış dosya ister Office bir belge olsun, kötü amaçlı kod bir dosyada gizlenebilir ve bu kod yalnızca kurbanın bilgisayarında açması durumunda etkinleştirilir. E-posta akışında dosyayı patlatıp analiz ederek Office 365 için Defender özellikler davranışlara, dosya itibarına ve bir dizi buluşsal kurala göre bu tehditleri bulur.
 
-Yeni Dikkat çekici tehdit filtresi, Dosya Ekleri aracılığıyla son olarak algılanan Kasa vurgular. Bu algılamalar, daha önce E-posta akışınızı veya diğer müşterilerin Microsoft 365 tarafından bulunamaz olan yeni kötü amaçlı dosyalar olan öğeleri temsil eder. Dikkat Çekici Tehdit İzleyicisi'nde bulunan öğelere dikkat edin, onlara kimlerin hedef olduğunu bakın ve Gelişmiş Çözümleme sekmesinde gösterilen (Gezgin'de e-postanın konusunu tıklayarak bulunan) detonation ayrıntılarını gözden geçirin. Bu sekmeyi yalnızca Kasa Ekleri özelliği tarafından algılanan e-postalarda bulabilirsiniz. Bu dikkat çekici izleyici bu filtreyi içerir, ancak bu filtreyi Explorer'daki diğer aramalar için de kullanabilirsiniz.
+Yeni Dikkate Değer tehdit filtresi, Kasa Ekleri aracılığıyla yakın zamanda algılanan öğeleri vurgular. Bu algılamalar, daha önce e-posta akışınızda veya diğer müşterilerin e-postasında Microsoft 365 tarafından bulunmayan yeni kötü amaçlı dosyalar olan öğeleri temsil eder. Dikkate Değer Tehdit İzleyicisi'ndeki öğelere dikkat edin, kimlerin hedeflendiğini görün ve Gelişmiş Analiz sekmesinde gösterilen patlama ayrıntılarını gözden geçirin (Gezgin'de e-postanın konusuna tıklayarak bulunur). Bu sekmeyi yalnızca Kasa Ekler özelliği tarafından algılanan e-postalarda bulabileceğinizi unutmayın. Bu Dikkat çekici izleyici bu filtreyi içerir, ancak bu filtreyi Gezgin'deki diğer aramalar için de kullanabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- Henüz bu özelliklere sahip olmayan Office 365 Tehdit Soruşturması ve Yanıt özelliklerine sahip olmayanlar için bkz. Tehdit [soruşturması Office 365 Yanıt özelliklerini nasıl elde Office 365?](office-365-ti.md)
+- Kuruluşunuzda bu Office 365 Tehdit Araştırması ve Yanıt özellikleri yoksa bkz. [Tehdit Araştırma ve Yanıt özelliklerini nasıl Office 365?](office-365-ti.md)
 
-- Güvenlik ekibimizin doğru rollere ve izinlere atanmış olduğundan emin olun. Genel yönetici olmalı ya da Portalda Güvenlik Yöneticisi ya da Arama ve Temizleme rolünün Microsoft 365 Defender gerekir. Aşağıdaki [portalda İzinler Microsoft 365 Defender bakın](permissions-microsoft-365-security-center.md).
+- Güvenlik ekibinizin doğru rollere ve izinlere atandığından emin olun. Genel yönetici olmanız veya Microsoft 365 Defender portalında Güvenlik Yöneticisi veya Arama ve Temizleme rolünün atanmış olması gerekir. bkz. [Microsoft 365 Defender portalında İzinler](permissions-microsoft-365-security-center.md).
 
-- yeni İzleyiciler'in kendi ortamınıza nasıl göster Microsoft 365 izleyin. Uygun olduğunda, izleyicilerinizi Microsoft 365 Defender portalında Tehdit izleyicisi sayfasında  bulabilirsiniz<https://security.microsoft.com/threattracker>.
+- yeni İzleyicilerin Microsoft 365 ortamınızda gösterilmesini izleyin. Kullanılabilir olduğunda İzleyicilerinizi Microsoft 365 Defender portalındaki <https://security.microsoft.com/threattracker>**Tehdit izleyici** sayfasında bulabilirsiniz.
 
-- Henüz eklemedıysanız, diğer bağlantılara ve eklere erişim dahil olmak üzere, [Office 365 için Microsoft Defender'ı Kasa](defender-for-office-365.md) ve [Kasa öğrenin](safe-attachments.md).[](safe-links.md)
+- Henüz yapmadıysanız, Kasa bağlantıları ve [Kasa](defender-for-office-365.md) [Ekleri](safe-attachments.md) de dahil olmak üzere kuruluşunuz için [Office 365 için Microsoft Defender](safe-links.md) hakkında daha fazla bilgi edinin ve yapılandırın.

@@ -16,12 +16,12 @@ ms.custom:
 description: Yöneticiler, kuruluşlarında verimsiz veya bozuk posta akış kurallarını (aktarım kuralları olarak da bilinir) tanımlamak ve düzeltmek için Güvenlik & Uyumluluk Merkezi'nde Yavaş posta akışı kurallarını düzeltme içgörüsini kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: af6d727f84cdaaed1b7f7558313ac7d080a13c93
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 30dda2b890df9f33fbc9af04b5821fb24593a335
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681534"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468401"
 ---
 # <a name="fix-slow-mail-flow-rules-insight-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde posta akışı kurallarının yavaş & çözme
 
@@ -29,7 +29,7 @@ ms.locfileid: "63681534"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Verimsiz posta akış kuralları (aktarım kuralları olarak da bilinir), kurumda posta akışı gecikmelerine yol açabiliyor. Bu içgörü, kurum posta akışını etkileyen posta akışı kurallarını raporlar. Bu tür kurallara bazı örnekler verilmiştir:
@@ -44,7 +44,7 @@ Bu içgörü ancak koşul algılandığında görüntülenir (posta döngüleri 
 
 Bu bildirimi, posta akışı gecikmelerini azaltmaya yardımcı olacak posta akış kurallarını tanımlamanıza ve ince ayarlamalarnıza yardımcı olacak şekilde kullanabilirsiniz.
 
-![Posta akışı panosunun Sizin için önerilenler alanında yavaş posta akışı kuralları içgörülerini düzeltin.](../../media/mfi-fix-slow-mail-flow-rules.png)
+:::image type="content" source="../../media/mfi-fix-slow-mail-flow-rules.png" alt-text="Posta akışı panosunun Sizin için önerilenler alanında Yer alan Yavaş posta akışı kurallarını düzelt içgörü" lightbox="../../media/mfi-fix-slow-mail-flow-rules.png":::
 
 Widget'ta **Ayrıntıları görüntüle'ye** tıklarken, daha fazla bilgiyle birlikte bir açılır pencere açılır:
 
@@ -53,7 +53,7 @@ Widget'ta **Ayrıntıları görüntüle'ye** tıklarken, daha fazla bilgiyle bir
 - **Her ileti için harcanan ortalama süre**
 - **İletiye harcanan orta değer**: Üst kısmı zaman verilerinin alt yarısından ayıran orta değer.
 
-![Yavaş posta akışı kurallarını düzeltme içgörüseği üzerinde Ayrıntıları görüntüle'ye tık olduktan sonra görüntülenen ayrıntılar açılır görünümü.](../../media/mfi-fix-slow-mail-flow-rules-details.png)
+:::image type="content" source="../../media/mfi-fix-slow-mail-flow-rules-details.png" alt-text="Yavaş posta akışı kurallarını düzeltme içgörüseği üzerinde Ayrıntıları görüntüle'yi tıklatmaktan sonra görüntülenen Ayrıntılar açılır öğesini" lightbox="../../media/mfi-fix-slow-mail-flow-rules-details.png":::
 
 Posta akış kurallarında koşullar ve özel durumlar hakkında daha fazla bilgi için, bu konudaki Posta akışı kuralı koşulları ve özel durumları [(koşullar) Exchange Online](/Exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions).
 

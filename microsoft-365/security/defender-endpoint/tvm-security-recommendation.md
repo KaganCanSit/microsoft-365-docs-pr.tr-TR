@@ -1,7 +1,7 @@
 ---
 title: Güvenlik önerileri için Tehdit ve Güvenlik Açığı Yönetimi
 description: Aynı güvenlik önerisinde tehdit, ihlal olasılığı ve değere göre öncelik sırasına göre işlem Tehdit ve Güvenlik Açığı Yönetimi.
-keywords: Tehdit ve Güvenlik Açığı Yönetimi için Microsoft Defender TVM güvenlik önerisi, siber güvenlik önerisi, işlemli güvenlik önerisi
+keywords: Tehdit ve Güvenlik Açığı Yönetimi, Uç Nokta için Microsoft Defender tvm güvenlik önerisi, siber güvenlik önerisi, işlemli güvenlik önerisi
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 57c1909ff54fea6b9151e212f465abb75bab48f8
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: e7ff7a98e8550996068686b5b0805ea3a72cd6ae
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63325327"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468577"
 ---
 # <a name="security-recommendations---threat-and-vulnerability-management"></a>Güvenlik önerileri - Tehdit ve Güvenlik Açığı Yönetimi
 
@@ -29,18 +29,18 @@ ms.locfileid: "63325327"
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Tehdit ve güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 Organizasyonda tanımlanan siber güvenlik zayıf noktaları eyleme değiştirilebilir güvenlik önerilerine eşlenmiş ve etkilerinden önceliklidir. Önceliklendirmeli öneriler, güvenlik açıklarını azaltmak veya düzeltmek ve uyumluluğu düzeltmek için süreyi kısaltmaya yardımcı olur.
 
 Her güvenlik önerisi, işlemle ilgili düzeltme adımlarını içerir. Görev yönetimine yardımcı olması için öneri, Görev Yönetimi ve Yönetim Microsoft Intune Microsoft Endpoint Configuration Manager. Tehdit ortamınız değişirse öneri aynı zamanda ortamınıza sürekli bilgi toplayan bir öneri de değişir.
 
 > [!TIP]
-> Yeni güvenlik açığı olayları hakkında e-postalar almak için bkz. Uç Nokta için [Microsoft Defender'da güvenlik açığı e-posta bildirimlerini yapılandırma](configure-vulnerability-email-notifications.md)
+> Yeni güvenlik açığı olayları hakkında e-postalar almak için bkz. Güvenlik açığı [e-posta bildirimlerini güvenlik açığı Uç Nokta için Microsoft Defender](configure-vulnerability-email-notifications.md)
 
 ## <a name="how-it-works"></a>Nasıl çalışır?
 
@@ -70,7 +70,8 @@ Güvenlik Açığı yönetimi **gezinti menüsüne gidin** ve Güvenlik Açığ�
 
 Herhangi bir günde Güvenlik Yöneticisi olarak, [Tehdit ve Güvenlik Açığı Yönetimi](tvm-dashboard-insights.md) panosuna bakarak Cihazlar için [Microsoft Güvenli](tvm-microsoft-secure-score-devices.md) Puanı ile açık kalma puanınızı yan yana [](tvm-exposure-score.md) görebilirsiniz. Bunun amacı, kuruluş **güvenlik** açıklarından daha az açık kalma sürelerini düşürmek  ve kuruluş cihazınızın cihaz güvenliğini siber güvenlik tehdit saldırılarına karşı daha iyi karşı daha iyi durumda olacak şekilde artırmaktır. En önemli güvenlik önerileri listesi bu hedefe ulaşmanıza yardımcı olabilir.
 
-![Dört güvenlik önerisi olan En iyi güvenlik önerileri kartı örneği.](images/top-security-recommendations350.png)
+:::image type="content" source="images/top-security-recommendations350.png" alt-text="En önemli güvenlik önerileri kartı" lightbox="images/top-security-recommendations350.png":::
+
 
 En iyi güvenlik önerileri, önceki bölümde adı geçen önemli faktörlere dayalı olarak geliştirme fırsatlarının önceliklerini listelemektedir: tehdit, ihlal olasılığı ve değer. Öneri seçmek, sizi daha fazla ayrıntıya sahip güvenlik önerileri sayfasına götürebilirsiniz.
 
@@ -81,9 +82,9 @@ En iyi güvenlik önerileri, önceki bölümde adı geçen önemli faktörlere d
 Eğilim **değiştiklerine göre,** Maruz cihazlar grafiğinin rengi değişir. ışıklı cihazların sayısı yükselmeye devam ediyorsa renk kırmızıya dönüşer. Açığa çıkarıla cihazların sayısında bir azalma olursa, grafiğin rengi yeşile dönüşecek.
 
 > [!NOTE]
-> Tehdit ve güvenlik açığı yönetimi, 30 gün önce kullanılabilir **olan cihazları** gösterir. Bu, cihaz 7 gündür 'Etkin Değil' durumunda olduğu Uç Nokta için Microsoft Defender'ın geri kalanından farklıdır.
+> Tehdit ve güvenlik açığı yönetimi, 30 gün önce kullanılabilir **olan cihazları** gösterir. Bu, cihazın 'Etkin Uç Nokta için Microsoft Defender' durumunda bulunduğu 7 gündür kullanımda olmayan diğer sitelerden farklıdır.
 
-![Güvenlik önerileri için giriş sayfası örneği.](images/tvmsecrec-updated.png)
+:::image type="content" source="images/tvmsecrec-updated.png" alt-text="Güvenlik önerileri için giriş sayfası" lightbox="images/tvmsecrec-updated.png":::
 
 ### <a name="icons"></a>Simgeler
 
@@ -97,7 +98,7 @@ Yararlı simgeler şu an için hemen dikkat çekmenizi de sağlar:
 
 Araştırmak veya işleme almak istediğiniz güvenlik önerilerini seçin.
 
-:::image type="content" alt-text="Güvenlik önerisi uç sayfası örneği." source="images/secrec-flyouteolsw.png" lightbox="images/secrec-flyouteolsw.png":::
+:::image type="content" source="images/secrec-flyouteolsw.png" alt-text="Güvenlik önerisi uç sayfası" lightbox="images/secrec-flyouteolsw.png":::
 
 Uçarak çıkıştan, aşağıdaki seçeneklerden herhangi birini seçebilirsiniz:
 
@@ -122,7 +123,7 @@ Açığa çıkarulan cihazların sayısında büyük bir atlama ya da kuruluşun
 
 ## <a name="request-remediation"></a>Düzeltme isteği
 
-Düzeltme Tehdit ve Güvenlik Açığı Yönetimi özelliği, düzeltme isteği iş akışı aracılığıyla Güvenlik ve IT yöneticileri arasındaki boşluğu köprüler. Sizin gibi güvenlik yöneticileri, Güvenlik önerisi sayfasından Intune'a kadar olan bir güvenlik açığını **düzeltmek için IT** Yöneticisinden talepte bulunabilirsiniz. [Düzeltme seçenekleri hakkında daha fazla bilgi](tvm-remediation.md)
+Düzeltme Tehdit ve Güvenlik Açığı Yönetimi özelliği, düzeltme isteği iş akışı aracılığıyla Güvenlik ve IT yöneticileri arasındaki boşluğu köprüler. Sizin gibi güvenlik yöneticileri, Güvenlik öneri sayfasındaki güvenlik açığını düzeltmek için IT Yöneticisinden **izin Intune**. [Düzeltme seçenekleri hakkında daha fazla bilgi](tvm-remediation.md)
 
 ### <a name="how-to-request-remediation"></a>Düzeltme isteği nasıl olur?
 
@@ -140,7 +141,7 @@ Yalnızca "özel durumlar işleme" izinleri olan kullanıcılar özel durum ekle
 
 Özel durum oluşturmak istediğiniz bir güvenlik önerisi belirleyin ve sonra Özel Durum **seçenekleri'ne tıklayın**.
 
-!["Özel durum seçenekleri" düğmesinin bir güvenlik önerisi uç kutusunda konum olduğunu gösterme.](images/tvm-exception-options.png)
+:::image type="content" source="images/tvm-exception-options.png" alt-text="Güvenlik önerisinde uçarak çıkışta özel durum seçenekleri düğmesi" lightbox="images/tvm-exception-options.png":::
 
 Formu doldurun ve gönderin. Tüm özel durumlarınızı (mevcut ve geçmiş) görüntülemek için **Tehdit &** Güvenlik [](tvm-remediation.md) Açığı Yönetimi menüsünün altındaki Düzeltme sayfasına gidin ve Özel Durumlar sekmesini [seçin. Özel](tvm-exception.md#create-an-exception) durum oluşturma  hakkında daha fazla bilgi
 
@@ -152,7 +153,7 @@ Belirsiz, yanlış, eksik veya zaten düzeltilen güvenlik önerisi bilgilerini 
 
 2. Rapor etmek istediğiniz güvenlik önerisinin yanındaki üç noktayı seçin ve ardından Hatalı **bildir'i seçin**.
 
-    ![Güvenlik önerisinde "Yanlış bildir" düğmesinin yerini gösterme.](images/report-inaccuracy500.png)
+   :::image type="content" source="images/report-inaccuracy500.png" alt-text="Rapor yanlışlık düğmesi" lightbox="images/report-inaccuracy500.png":::
 
 3. Açılır bölmeden açılan menüden yanlış kategoriyi seçin, e-posta adresinizi ve yanlışla ilgili ayrıntıları doldurun.
 

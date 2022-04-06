@@ -27,18 +27,22 @@ search.appverid:
 - MOE150
 - BEA160
 description: E-Microsoft 365 İş Standart satın alırken, sahip olduğunuz bir etki alanını kullanma veya kayıt sırasında bir etki alanı satın alma seçeneğiniz vardır.
-ms.openlocfilehash: 51f88847a1e0ca04e216044172dbacf572fb82e3
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+ms.openlocfilehash: 791f719f50809f2aa178ca2ab72471aea534e111
+ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63012877"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64638037"
 ---
 # <a name="set-up-microsoft-365-business-standard-with-a-new-or-existing-domain"></a>Yeni Microsoft 365 İş Standart var olan bir etki alanıyla etki alanı ayarlama
 
 Yeni bir Microsoft 365 İş Standart, sahip olduğu bir etki alanını ekleme veya satın alma seçeneğiniz vardır. Yeni bir [abonelik için kaydolma Microsoft 365 İş Standart göz atabilirsiniz](../simplified-signup/signup-business-standard.md).
 
 Bu makalede, size zaten sahip olduğunuz mevcut bir etki alanını ekleme veya yeni etki alanı satın alma adımlarında yoleceğiz. Kayıt olurken yeni bir etki alanı satın aldısanız, etki alanınız ayarlanır ve Kullanıcı ekleme ve lisans [atama'ya geçebilirsiniz](#add-users-and-assign-licenses).
+
+## <a name="set-up-microsoft-365-for-business"></a>İşletmeler Microsoft 365 ayarlama
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE471FJ]
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
@@ -84,7 +88,7 @@ Hizmetleri ayarlamak için, DNS ana 2 veya etki alanı kayıt şirketinde kayıt
   
 1. Kurulum sihirbazı, genellikle kayıt şirketinizi algılar ve kayıt şirketinin web sitesinde NS kayıtlarınızı güncelleştirmek için adım adım yönergelere ulaşabileceğiniz bir bağlantı verir. Bu şekilde ayarlanamazsa, [ad sunucularını değiştirarak herhangi bir etki Office 365 alanı kayıt şirketiyle bağlantı kurabilirsiniz](../get-help-with-domains/change-nameservers-at-any-domain-registrar.md).
 
-    - Mevcut DNS kayıtlarınız, örneğin var olan bir web siteniz varsa, ancak DNS barındırma hizmetiniz etki alanı bağlantısı için etkinleştirilmişse [, Kayıtları](/office365/admin/get-help-with-domains/domain-connect) benim için **ekle'yi seçin**. Çevrimiçi **hizmetlerinizi seçin sayfasında**, tüm varsayılanları kabul edin ve Sonraki'yi seçin ve DNS barındırma hizmet  barındırması sayfasında Yetkilendir'i seçin.
+    - Mevcut DNS kayıtlarınız, örneğin var olan bir web siteniz varsa, ancak DNS barındırma hizmetiniz etki alanı bağlantısı için etkinleştirilmişse [, Kayıtları](/office365/admin/get-help-with-domains/domain-connect) benim için **ekle'yi seçin**. Etki **alanlarınızı seçin çevrimiçi hizmetler** varsayılanları kabul edin ve Sonraki'yi seçin ve DNS barındırma hizmet barındırması sayfasında Yetkilendir'i seçin.
     - Diğer DNS ana bilgisayarlarında mevcut DNS kayıtlarınız varsa (etki alanı bağlantısı için etkin değil), var olan hizmetlerin bağlı kalacağından emin olmak için kendi DNS kayıtlarınızı yönetmek istemeniz gerekir. Daha [fazla bilgi için etki alanı](/office365/admin/get-help-with-domains/dns-basics) temel bilgilerine bakın.
 
 2. Sihirbazda adımları izleyin; sizin için e-posta ve diğer hizmetler ayarlanır.

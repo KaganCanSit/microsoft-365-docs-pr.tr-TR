@@ -1,5 +1,5 @@
 ---
-title: Office 365 için Microsoft Defender'da tehditlere karşı koruma, Kötü amaçlı yazılımdan koruma, Kimlik avı önleme, İstenmeyen posta önleme, Kasa bağlantıları, Kasa ekleri, Sıfır saatlik otomatik temizleme (ZAP), MDO güvenlik yapılandırması
+title: Office 365 için Microsoft Defender, Kötü amaçlı yazılımdan koruma, Kimlik avı önleme, İstenmeyen posta önleme, Kasa bağlantıları, Kasa ekleri, Sıfır saatlik otomatik temizleme (ZAP), MDO güvenlik yapılandırmasında tehditlere karşı koruma
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -20,28 +20,28 @@ description: Yöneticiler tehdit koruması hakkında daha fazla bilgi Microsoft 
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 280cbd310742ecfe31ac8b565d285f7b464d3e24
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: e5a0be5171a2de07792cd259dc6547046d7c1630
+ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683855"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "64507197"
 ---
-# <a name="protect-against-threats"></a>Tehditlere karşı koruma
+# <a name="protect-against-threats"></a>Tehditlere karşı korunun
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Burada, uygulamanın öbeklere dönüş için Defender yapılandırmasını kesmeye Office 365 kılavuzu ve almaktadır. Office 365'de tehdit koruması özellikleri konusunda yeniysiniz, nereden başlayacağından emin değil veya en iyi şekilde bilgi edinmek *için bu kılavuzu* bir denetim listesi ve başlangıç noktası olarak kullanın.
+Burada, çalışma sayfalarının yapılandırmasını parçalara dönüştüren Office 365 için Defender kılavuzu ve almaktadır. Office 365'de tehdit koruması özellikleri konusunda yeniysiniz, nereden başlayacağından emin değil veya en iyi şekilde bilgi edinmek *için bu kılavuzu* bir denetim listesi ve başlangıç noktası olarak kullanın.
 
 > [!IMPORTANT]
 > **İlk başta önerilen ayarlar her** ilke için dahil edilir; bununla birlikte, birçok seçenek vardır ve ayarlarınızı belirli kuruluşun ihtiyaçlarını karşılayacak şekilde değiştirebilirsiniz. İlkelerinizi veya değişikliklerinizin veri merkeziniz üzerinden çalışması için yaklaşık 30 dakika bekleyin.
 >
-> Office 365 için Defender'da çoğu ilkenin el ile yapılandırmasını atlamak için, önceden ayarlanmış güvenlik ilkelerini Standart veya Katı düzeyinde kullanabilirsiniz. Daha fazla bilgi için bkz[. İlke için EOP'de ve Microsoft Defender'da önceden Office 365](preset-security-policies.md).
+> Bir yıl içinde çoğu ilkenin el ile yapılandırmasını Office 365 için Defender için, önceden ayarlanmış güvenlik ilkelerini Standart veya Katı düzeyinde kullanabilirsiniz. Daha fazla bilgi için bkz[. EOP'de önceden ayarlanmış güvenlik Office 365 için Microsoft Defender](preset-security-policies.md).
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -50,7 +50,7 @@ Burada, uygulamanın öbeklere dönüş için Defender yapılandırmasını kesm
 Tehdit koruması özellikleri tüm Microsoft veya *Office 365* dahil edilir; bununla birlikte, bazı aboneliklerin gelişmiş özellikleri vardır. Aşağıdaki tabloda, bu makalede yer alan koruma özellikleri ve en düşük abonelik gereksinimleri listelenmiştir.
 
 > [!TIP]
-> Denetimi açma yönergelerinin *ötesinde, adımlar* kötü amaçlı yazılımdan korunmaya, kimlik avından korunmaya ve istenmeyen posta önlemeye başlar. Bu adımlar, Office 365 Exchange Online Protection bir parçası olarak **işaretlenir**. Bu, (Office 365 için Defender) EOP'de yer alan ve bir araya gelene kadar Office 365 için **Defender** makalesinde garip görünebilir.
+> Denetimi açma yönergelerinin *ötesinde, adımlar* kötü amaçlı yazılımdan korunmaya, kimlik avından korunmaya ve istenmeyen posta önlemeye başlar. Bu adımlar, Office 365 Exchange Online Protection bir parçası olarak **işaretlenir**. EOP'de (Office 365 için Defender) içerdiğini ve bir derlemeyi **Office 365 için Defender** bu makalede bu tek şey olabilir.
 
 |Koruma türü|Abonelik gereksinimi|
 |---|---|
@@ -62,7 +62,7 @@ Tehdit koruması özellikleri tüm Microsoft veya *Office 365* dahil edilir; bun
 
 ### <a name="roles-and-permissions"></a>Roller ve izinler
 
-Yeni ilkeler için Defender Office 365'ı yapılandırmak için, size uygun bir rol atanmalıdır. Bu eylemleri gerçekleştiren roller için aşağıdaki tabloya bakın.
+İlkeleri Office 365 için Defender için, size uygun bir rol atanmalıdır. Bu eylemleri gerçekleştiren roller için aşağıdaki tabloya bakın.
 
 |Rol veya rol grubu|Daha fazla bilgi için|
 |---|---|
@@ -97,13 +97,13 @@ Kötü amaçlı yazılımdan koruma için önerilen ayarlar hakkında daha fazla
 
 Kötü amaçlı yazılımdan koruma ilkelerini yapılandırmaya yönelik ayrıntılı yönergeler için bkz. [EOP'de kötü amaçlı yazılımdan koruma ilkelerini yapılandırma](configure-anti-malware-policies.md).
 
-## <a name="part-2---anti-phishing-protection-in-eop-and-defender-for-office-365"></a>Bölüm 2 - EOP'de kimlik avı koruması ve Kimlik avı koruması Office 365
+## <a name="part-2---anti-phishing-protection-in-eop-and-defender-for-office-365"></a>Bölüm 2 - EOP ve kimlik avı korumaları hakkında Office 365 için Defender
 
-[Kimlik avı koruması,](anti-phishing-protection.md) [EOP içeren aboneliklerde kullanılabilir](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description). Gelişmiş kimlik avı koruması, windows için [Defender'da Office 365](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
+[Kimlik avı koruması,](anti-phishing-protection.md) [EOP içeren aboneliklerde kullanılabilir](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description). Kimlik avına karşı gelişmiş koruma özellikleri [Office 365 için Defender.](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
 
-Kimlik avına karşı koruma ilkeleri için önerilen ayarlar hakkında daha fazla bilgi için bkz. Kimlik avı için [Microsoft Defender'da](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365) [EOP](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings) kimlik avı koruma ilkesi ayarları ve Kimlik avıyla mücadele ilkesi Office 365.
+Kimlik avına karşı koruma ilkeleri için önerilen ayarlar hakkında daha fazla bilgi için bkz. [EOP](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings) kimlik avı koruma ilkesi ayarları ve Kimlik avıyla mücadele ilkesi [ayarları Office 365 için Microsoft Defender](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
 
-Aşağıdaki yordam, varsayılan kimlik avı önleme ilkesi yapılandırmayı açıklar. Ayarlar için Defender'da bulunan Office 365 açıkça işaretlenir.
+Aşağıdaki yordam, varsayılan kimlik avı önleme ilkesi yapılandırmayı açıklar. Ayarlar yalnızca başka bir Office 365 için Defender açık bir şekilde işaretlenir.
 
 1. kimlik **avıyla mücadele sayfasını** Microsoft 365 Defender açın<https://security.microsoft.com/antiphishing>.
 
@@ -139,11 +139,11 @@ Aşağıdaki yordam, varsayılan kimlik avı önleme ilkesi yapılandırmayı a�
 
      Bitirdiğinizde, **Kaydet**'i tıklatın.
 
-   <sup>\*</sup>Bu ayar yalnızca Windows için Defender'da Office 365.
+   <sup>\*</sup>Bu ayar yalnızca bu Office 365 için Defender.
 
 4. **Kaydet'e ve** ardından Kapat'a **tıklayın**
 
-Kimlik avı koruma ilkelerini yapılandırmaya yönelik ayrıntılı yönergeler için bkz. [EOP'de](configure-anti-phishing-policies-eop.md) kimlik avı koruma ilkelerini yapılandırma ve Kimlik avı için [Microsoft Defender'da](configure-mdo-anti-phishing-policies.md) kimlik avı ilkelerini yapılandırma Office 365.
+Kimlik avı koruma ilkelerini yapılandırmaya yönelik ayrıntılı yönergeler için bkz. [EOP'de](configure-anti-phishing-policies-eop.md) kimlik avı ilkelerini yapılandırma ve Kimlik avı önleme ilkelerini yapılandırma [Office 365 için Microsoft Defender](configure-mdo-anti-phishing-policies.md).
 
 ## <a name="part-3---anti-spam-protection-in-eop"></a>Bölüm 3 - EOP'de istenmeyen posta önleme koruması
 
@@ -186,18 +186,18 @@ Kimlik avı koruma ilkelerini yapılandırmaya yönelik ayrıntılı yönergeler
 
 İstenmeyen posta önleme ilkelerini yapılandırmaya yönelik ayrıntılı yönergeler için bkz. [EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).
 
-## <a name="part-4---protection-from-malicious-urls-and-files-safe-links-and-safe-attachments-in-defender-for-office-365"></a>Bölüm 4 - Kötü amaçlı URL'lere ve dosyalara karşı koruma (Kasa Için Defender'da Kasa Bağlantılara ve Bağlantılara Office 365)
+## <a name="part-4---protection-from-malicious-urls-and-files-safe-links-and-safe-attachments-in-defender-for-office-365"></a>Bölüm 4 - Kötü amaçlı URL'lere ve dosyalara karşı koruma (Kasa Bağlantılara ve Kasa Eklere Karşı Koruma) Office 365 için Defender
 
-Kötü amaçlı URL'lere ve dosyalara karşı tıklama süresi koruması, Microsoft [Defender for Office 365](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description). Tüm Ekler ve Bağlantılar [Kasa aracılığıyla](safe-attachments.md) [Kasa](safe-links.md) ayarlanır.
+Kötü amaçlı URL'lere ve dosyalara karşı tıklama süresi koruması, yeni url'leri ve dosyaları içeren [Office 365 için Microsoft Defender](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description). Tüm Ekler ve Bağlantılar [Kasa aracılığıyla](safe-attachments.md) [Kasa](safe-links.md) ayarlanır.
 
-### <a name="safe-attachments-policies-in-microsoft-defender-for-office-365"></a>Kasa için Microsoft Defender'da Ekleri Office 365
+### <a name="safe-attachments-policies-in-microsoft-defender-for-office-365"></a>Kasa Ek İlkelerini Office 365 için Microsoft Defender
 
 Ekler hakkında önerilen ayarlar hakkında daha fazla bilgi Kasa bkz.[ Kasa ayarlarına tıklayın](recommended-settings-for-eop-and-office365.md#safe-attachments-settings).
 
 1. Microsoft 365 Defender **portalında**, 'da Kasa ekleri sayfasını açın<https://security.microsoft.com/safeattachmentv2>.
 
 2. Ekler **Kasa, Genel** **ayarlar'a** tıklayın ve beliren açılır sayfada aşağıdaki ayarları yapılandırabilirsiniz:
-   - **SharePoint, OneDrive için Office 365** Defender'ı Microsoft Teams: Bu ayarı aç (![Aç/kapat).](../../media/scc-toggle-on.png)
+   - **E-Office 365 için Defender, SharePoint, OneDrive için** Microsoft Teams: Bu ayarı açma (![Aç/kapat).](../../media/scc-toggle-on.png)
 
      > [!IMPORTANT]
      > **E-posta Kasa, SharePoint, OneDrive** ve Microsoft Teams için Ekleri açmadan önce, denetim günlüğünün kuruluşta açık olduğunu doğrulayın. Bu eylem normalde, bir hesapta Denetim Günlükleri rolü atanmış olan biri Exchange Online. Daha fazla bilgi için bkz [. Denetim günlüğü aramalarını açma veya kapatma](../../compliance/turn-audit-log-search-on-or-off.md)!
@@ -230,11 +230,11 @@ Ekler hakkında önerilen ayarlar hakkında daha fazla bilgi Kasa bkz.[ Kasa aya
 
 Ekleri Yapılandırma hakkında ayrıntılı Kasa Ekleri İlkeleri ve Ekleri Kasa genel ayarları için aşağıdaki konulara bakın:
 
-- [Kasa Office 365 için Microsoft Defender'da Ekleri Ayarlama Office 365](set-up-safe-attachments-policies.md)
+- [E-Kasa ek ilkelerini Office 365 için Microsoft Defender](set-up-safe-attachments-policies.md)
 - [E-Kasa, E-posta SharePoint, OneDrive için Ekleri Açma Microsoft Teams](turn-on-mdo-for-spo-odb-and-teams.md)
 - [Microsoft 365 E5 aboneliğinde Güvenli Belgeler](safe-docs.md)
 
-### <a name="safe-links-policies-in-microsoft-defender-for-office-365"></a>Kasa için Microsoft Defender'da Bağlantılar Office 365
+### <a name="safe-links-policies-in-microsoft-defender-for-office-365"></a>Kasa Bağlantı ilkelerini Office 365 için Microsoft Defender
 
 Bağlantılar'ın önerilen ayarları hakkında daha fazla Kasa için bkz. [Kasa bağlantı ayarlarını değiştirme](recommended-settings-for-eop-and-office365.md#safe-links-settings).
 
@@ -255,16 +255,20 @@ Bağlantılar'ın önerilen ayarları hakkında daha fazla Kasa için bkz. [Kasa
      - **Ad**: Benzersiz ve açıklayıcı bir ad girin.
      - **Açıklama**: İsteğe bağlı bir açıklama girin.
    - **Kullanıcılar ve etki alanları** sayfası: Bu ilk ilkeniz olduğundan ve büyük olasılıkla kapsamı en üst düzeye çıkarmak istediğinizden, [](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) kabul edilen etki alanlarınızı Etki Alanları kutusuna **girmeyi** düşünebilirsiniz. Aksi takdirde, daha ayrıntılı **denetim için** **Kullanıcılar ve** Gruplar kutularını kullanabilirsiniz. Özel durumları belirtmek için Bu kullanıcıları, grupları ve etki **alanlarını dışla'ı seçerek ve** değerleri girebilirsiniz.
-   - **Koruma ayarları** sayfası:
-     - **İletilerde kötü amaçlı olabilecek bilinmeyen URL'lerin eylemlerini seçin**: Bu ayarı **Aç**.
-     - **Program içinde bilinmeyen veya kötü amaçlı olabilecek URL'ler Microsoft Teams** seçin: Bu ayarı **Aç**. Mart 2020'den sonra, bu ayar Önizleme'dedir ve yalnızca Microsoft Teams Teknolojisini Benimseme Programı (TAP) üyeleri tarafından kullanılabilir veya işlevseldir.
-     - **Dosyaları işaret edecek şüpheli bağlantılar ve bağlantılar için gerçek zamanlı URL tarama uygulama**: Bu ayarı seçin (aç).
+   - **Koruma & sayfasına tıklayın** :
+     - **E-posta bölümündeki kötü amaçlı olabilecek URL'lere eylem** :
+       - **Açma: Kasa, kullanıcılar** e-postada bağlantılara tıklayana kadar bilinen, kötü amaçlı bağlantıların listesini denetler: Bu ayarı seçin (aç).
+       - **Farklı Kasa Kuruluş içinde gönderilen e-posta iletilerine bağlantılar**: Bu ayarı seçin (aç).
+       - **Dosyaları işaret edecek şüpheli bağlantılar ve bağlantılar için gerçek zamanlı URL tarama uygulama**: Bu ayarı seçin (aç).
        - **İletiyi teslim etmek için URL tarama işleminin tamam bekleyin**: Bu ayarı seçin (aç).
-     - **Farklı Kasa Kuruluş içinde gönderilen e-posta iletilerine bağlantılar**: Bu ayarı seçin (aç).
-     - **Kullanıcı tıklatmalarını izleme**: Bu ayarın seçilmemiş olduğunu doğrulayın (kapalı).
-     - **Kullanıcıların özgün URL'ye tıklamalarına izin verme**: Bu ayarın açık olduğunu doğrulayın (seçili).
-     - Bildirim ve **uyarı** sayfalarında kuruluşun markasını görüntüleme: Bu ayarı seçmek (açma) yalnızca Şirket logonuzu yüklemek için [Microsoft 365](../../admin/setup/customize-your-organization-theme.md) temasını özelleştirme'daki yönergeleri izledikten sonra anlamlıdır.
-     - **Aşağıdaki URL'leri yeniden yazma:** Bu ayar için özel bir önerimiz yok. Daha fazla bilgi için, [Bağlantılar ilkeleri altında "Aşağıdaki URL'leri yeniden yazma" Kasa bakın](safe-links.md#do-not-rewrite-the-following-urls-lists-in-safe-links-policies).
+       - **URL'leri yeniden yazma, yalnızca Bağlantı API'si Kasa** yoluyla kontrol edin: Bu ayarın seçilmemiş olduğunu doğrulayın (kapatın).
+     - **Aşağıdaki URL'leri e-postaya yeniden yazma**: Bu ayar için özel bir önerimiz yok. Daha fazla bilgi için, [Bağlantılar ilkeleri altında "Aşağıdaki URL'leri yeniden yazma" Kasa bakın](safe-links.md#do-not-rewrite-the-following-urls-lists-in-safe-links-policies).
+     - **Sayfa Yapısı bölümünde kötü amaçlı olabilecek URL'Microsoft Teams** eylemi:
+       - ***Açma: Kasa, kullanıcılar** şu bağlantılarda bağlantılara tıklayana kadar bilinen, kötü amaçlı bağlantıların listesini Microsoft Teams: Bu ayarı seçin (aç).
+     - **Koruma ayarları bölümüne** tıklayın:
+       - **Kullanıcı tıklamalarını izleme**: Bu ayarın seçili olduğunu doğrulayın (açık).
+       - **Kullanıcıların özgün URL'ye tıklamalarına izin** ver: Bu ayarı kapat (seçili değil).
+       - Bildirim ve **uyarı** sayfalarında kuruluşun markasını görüntüleme: Bu ayarı seçmek (açma) yalnızca Şirket logonuzu yüklemek için [Microsoft 365](../../admin/setup/customize-your-organization-theme.md) temasını özelleştirme'daki yönergeleri izledikten sonra anlamlıdır.
    - **Bildirim** sayfası:
      - **Kullanıcılara nasıl bildirim yapmak gerekir?** bölüm: İsteğe bağlı olarak, Özelleştirilmiş bildirim **metnini girmek için** Özel bildirim metni kullan'ı seçin. Özel bildirim metnini **Microsoft Çeviri diline çevirmek üzere** Otomatik olarak yerelleştirme için Kullanıcı Arabirimini kullan'ı da kullanabilirsiniz. Aksi takdirde Varsayılan **bildirim metnini kullan'ın seçili olduğu bırakın** .
 
@@ -272,8 +276,8 @@ Bağlantılar'ın önerilen ayarları hakkında daha fazla Kasa için bkz. [Kasa
 
 Yeni bağlantılar için Bağlantılar Kasa genel ayarlarını yapılandırmaya yönelik ayrıntılı Kasa, aşağıdaki konulara bakın:
 
-- [Destek için Microsoft Defender Kasa da Bağlantılar ilkelerini Office 365](set-up-safe-links-policies.md)
-- [Web için Microsoft Defender'Kasa Bağlantılar için genel ayarları Office 365](configure-global-settings-for-safe-links.md)
+- [Web'Kasa Bağlantılar ilkelerini Office 365 için Microsoft Defender](set-up-safe-links-policies.md)
+- [Web'de Bağlantıları Kasa genel ayarlarını Office 365 için Microsoft Defender](configure-global-settings-for-safe-links.md)
 
 ### <a name="now-set-up-alerts-for-detected-files-in-sharepoint-online-or-onedrive-for-business"></a>Şimdi SharePoint Online'da veya başka bir OneDrive İş'de algılanan dosyalar için uyarılar ayarlayın
 
@@ -312,7 +316,7 @@ Uyarı ilkeleri hakkında daha fazla bilgi edinmek için bkz[. İlke Microsoft 3
 > Yapılandırmayı bitirdikten sonra, iş yükü soruşturmalarını başlatmak için bu bağlantıları kullanın:
 >
 > - [Tehdit koruması durum raporu](view-email-security-reports.md#threat-protection-status-report)
-> - [Office 365 için Defender Microsoft 365 Defender da karantinaya alınmış dosyaları yönetmek için Office 365](manage-quarantined-messages-and-files.md#use-the-microsoft-365-defender-portal-to-manage-quarantined-files-in-defender-for-office-365)
+> - [Microsoft 365 Defender portalında karantinaya alınmış dosyaları yönetmek için Office 365 için Defender](manage-quarantined-messages-and-files.md#use-the-microsoft-365-defender-portal-to-manage-quarantined-files-in-defender-for-office-365)
 > - [SharePoint Online'da kötü amaçlı dosya bulunursa, OneDrive ne Microsoft Teams](https://support.microsoft.com/office/01e902ad-a903-4e0f-b093-1e1ac0c37ad2)
 > - [Karantinaya alınan iletileri ve dosyaları bir yönetici olarak e-posta Microsoft 365](manage-quarantined-messages-and-files.md)
 
@@ -322,6 +326,6 @@ Tehdit koruması özelliklerini yapılandırdikten sonra, bu özelliklerin nası
 
 |Ne yapmalı?|Daha fazla bilgi edinmek için kaynaklar|
 |---|---|
-|Raporları görüntüerek tehdit koruması özelliklerinin organizasyonunız için nasıl çalıştığını görme|[E-posta güvenlik raporları](view-email-security-reports.md) <p> [Microsoft Defender Güvenlik raporları Office 365](view-reports-for-mdo.md) <p> [Tehdit Gezgini](threat-explorer.md)|
+|Raporları görüntüerek tehdit koruması özelliklerinin organizasyonunız için nasıl çalıştığını görme|[E-posta güvenlik raporları](view-email-security-reports.md) <p> [Raporlar Office 365 için Microsoft Defender](view-reports-for-mdo.md) <p> [Tehdit Gezgini](threat-explorer.md)|
 |Tehdit koruması ilkelerinizi gereken şekilde düzenli aralıklarla gözden geçirme ve düzeltme|[Güvenli Puan](../defender/microsoft-secure-score.md) <p> [Microsoft 365 soruşturma ve yanıt özelliklerini inceleme](./office-365-ti.md)|
 |Yeni özellikleri ve hizmet güncelleştirmelerini izleyin|[Standart ve Hedefli sürüm seçenekleri](../../admin/manage/release-options-in-office-365.md) <p> [İleti Merkezi](../../admin/manage/message-center.md) <p> [Microsoft 365 Yol Haritası](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=advanced%2Cthreat%2Cprotection) <p> [Hizmet Açıklamaları](/office365/servicedescriptions/office-365-service-descriptions-technet-library)|

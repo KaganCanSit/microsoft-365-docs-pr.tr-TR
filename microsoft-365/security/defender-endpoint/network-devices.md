@@ -17,36 +17,36 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 2affbe19484348a511487930d034da6799ca348c
-ms.sourcegitcommit: 282f3a58b8e11615b3e53328e6b89a6ac52008e9
+ms.openlocfilehash: f6092800de89ebfdeed35230b1ade296e0396a85
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "63019073"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468787"
 ---
 # <a name="network-device-discovery-and-vulnerability-management"></a>Ağ cihazı bulma ve güvenlik açığı yönetimi
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Tehdit ve güvenlik açığı yönetimi](next-gen-threat-and-vuln-mgt.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)
 
 > [!NOTE]
 > 04-13-2021'de\) yayımlanan [Ağ](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/network-device-discovery-and-vulnerability-assessments/ba-p/2267548) cihazı bulma ve güvenlik açığı değerlendirmesi Blogu\(, Uç Nokta için Defender'daki yeni  Ağ cihazı bulma özellikleri hakkında öngörüler sağlar. Bu makalede, Ağ cihazı bulma özelliği tarafından ele  alınan görevle ilgili genel bir bakış ve bu yeni özellikleri kullanmaya başlama hakkında ayrıntılı bilgi bulabilirsiniz.
 
 Ağ bulma özellikleri, mobil **portalın ve** uygulama <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">konsollarının Cihaz Microsoft 365 Defender</a> bölümünde Microsoft 365 Defender kullanılabilir.
 
-Önceden yapılandırılmış ağ cihazlarının düzenli olarak kimlik doğrulanmış taramalarını gerçekleştirmek üzere her ağ kesimi için belirlenmiş bir Microsoft Defender cihazı kullanılır. Bulunduktan sonra, Uç Nokta İçin Defender güvenlik Tehdit ve Güvenlik Açığı Yönetimi bulunan anahtarlar, yönlendiriciler, WLAN denetleyicileri, güvenlik duvarları ve VPN ağ geçitleri için tümleşik iş akışları sağlar.
+Önceden yapılandırılmış Uç Nokta için Microsoft Defender düzenli taramaları gerçekleştirmek için her ağ kesimi üzerinde belirlenen bir kimlik doğrulama cihazı kullanılır. Bulunduktan sonra, Uç Nokta İçin Defender güvenlik Tehdit ve Güvenlik Açığı Yönetimi bulunan anahtarlar, yönlendiriciler, WLAN denetleyicileri, güvenlik duvarları ve VPN ağ geçitleri için tümleşik iş akışları sağlar.
 
 Ağ cihazları bulunduktan ve sınıflandırılıldıktan sonra, güvenlik yöneticileri en son güvenlik önerilerini alma ve kuruluşları genelinde dağıtılan ağ cihazlarıyla ilgili son bulunan güvenlik açıklarını gözden geçirebilirsiniz.
 
 ## <a name="approach"></a>Yaklaşım
 
-Ağ cihazları standart uç nokta olarak yönetilmiyor Uç Nokta için Defender'ın, ağ cihazlarına yerleşik bir algılayıcısı olmaz. Bu tür cihazlar, uzaktan taramanın cihazlardan gerekli bilgileri edineni aracısız bir yaklaşım gerektirir. Ağ topolojisi ve özelliklerine bağlı olarak, uç nokta için Microsoft Defender'a ekli tek bir cihaz veya birkaç cihaz SNMP (salt okunur) kullanarak ağ cihazlarının kimliği doğrulanmış taramalarını gerçekleştirecek.
+Ağ cihazları standart uç nokta olarak yönetilmiyor Uç Nokta için Defender'ın, ağ cihazlarına yerleşik bir algılayıcısı olmaz. Bu tür cihazlar, uzaktan taramanın cihazlardan gerekli bilgileri edineni aracısız bir yaklaşım gerektirir. Ağ topolojisi ve özelliklerine bağlı olarak, Uç Nokta için Microsoft Defender'a ekli tek bir cihaz veya birkaç cihaz SNMP (salt okunur) kullanarak ağ cihazlarının kimliği doğrulanmış taramalarını gerçekleştirecek.
 
 İki tür cihaz olacağını unutmayın:
 
@@ -108,7 +108,7 @@ Değerlendirme işlerini yapılandırmak için aşağıdaki kullanıcı izni se�
 2. Ağ tarayıcısını indirin ve Uç nokta değerlendirme cihazı için belirlenmiş Defender'a yükleyin.
 
     > [!div class="mx-imgBorder"]
-    > ![Tarayıcıyı indir düğmesi.](images/assessment-jobs-download-scanner.png)
+    > :::image type="content" source="images/assessment-jobs-download-scanner.png" alt-text="Tarayıcıyı indir düğmesi" lightbox="images/assessment-jobs-download-scanner.png":::
 
 ## <a name="network-scanner-installation--registration"></a>Ağ tarayıcısı yüklemesi & kaydı
 
@@ -132,7 +132,7 @@ Ayarlar'daki **Değerlendirme işleri** sayfasında Ağ değerlendirme **işi ek
 Ağ cihazı envanteri içinde cihaz yinelemesi önlemek için, her IP adresinin birden çok değerlendirme cihazında yalnızca bir kez yapılandırıldığından emin olun.
 
 > [!div class="mx-imgBorder"]
-> ![Ağ değerlendirme işi ekle düğmesi.](images/assessment-jobs-add.png)
+> :::image type="content" source="images/assessment-jobs-add.png" alt-text="Ağ değerlendirme işi ekle düğmesi" lightbox="images/assessment-jobs-add.png":::
 
 Ağ değerlendirme iş adımları ekleme:
 
@@ -162,7 +162,7 @@ Sonuçlar ortaya çıktıktan sonra, düzenli taramaya hangi cihazların dahil o
 Yeni bulunan cihazlar, Cihaz envanteri **sayfasındaki** yeni Ağ cihazları **sekmesi altında** gösterilir. Değerlendirme işi ekledikten sonra cihazlar güncelleştirilene kadar iki saat kadar sürebilir.
 
 > [!div class="mx-imgBorder"]
-> ![Cihaz envanteri'nin Ağ cihazları bölümü.](images/assessment-jobs-device-inventory.png)
+> :::image type="content" source="images/assessment-jobs-device-inventory.png" alt-text="Cihaz envanteri'nin Ağ cihazları bölümü" lightbox="images/assessment-jobs-device-inventory.png":::
 
 ## <a name="troubleshooting"></a>Sorun giderme
 

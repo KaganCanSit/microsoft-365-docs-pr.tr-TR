@@ -181,15 +181,22 @@
       items:
         - name: Microsoft 365 hizmet sistem durumu
           href: microsoft-365-service-health.md
-        - name: Exchange Online izleme
-          href: microsoft-365-exchange-monitoring.md
+        - name: Microsoft 365 izleme
+          href: microsoft-365-monitoring.md
           items:
-            - name: Posta kutusu kullanımı için hizmet uyarıları
-              href: microsoft-365-mailbox-utilization-service-alerts.md
-            - name: MRS kaynak gecikmeleri için hizmet uyarıları
-              href: microsoft-365-mrs-source-delays-service-alerts.md
-            - name: Dış alıcılar için kuyruğa alınan iletiler için hizmet uyarıları
-              href: microsoft-365-external-recipient-service-alerts.md
+            - name: Exchange Online izleme
+              href: microsoft-365-exchange-monitoring.md
+              items:
+                - name: Posta kutusu kullanımı için hizmet uyarıları
+                  href: microsoft-365-mailbox-utilization-service-alerts.md
+                - name: MRS kaynak gecikmeleri için hizmet uyarıları
+                  href: microsoft-365-mrs-source-delays-service-alerts.md
+                - name: Dış alıcılar için kuyruğa alınan iletiler için hizmet uyarıları
+                  href: microsoft-365-external-recipient-service-alerts.md
+            - name: Microsoft 365 Uygulamaları izleme
+              href: microsoft-365-apps-monitoring.md
+            - name: Microsoft 365 Teams izleme
+              href: microsoft-365-teams-monitoring.md
         - name: Kurulum kılavuzları
           href: setup-guides-for-microsoft-365.md
     - name: Birden çok kiracı
@@ -406,8 +413,6 @@
           href: /Exchange/exchange-online
         - name: SharePoint
           href: /sharepoint/sharepoint-online
-        - name: Skype Kurumsal
-          href: /SkypeForBusiness/skype-for-business-online
         - name: Microsoft Teams
           href: /MicrosoftTeams/Teams-overview
         - name: Yammer
@@ -427,9 +432,7 @@
         - name: Exchange Online
           href: /Exchange/exchange-online
         - name: SharePoint
-          href: 'https://support.office.com/article/79eb0420-8cbd-4bcb-a90b-ddc7d3ab4b3a'
-        - name: Skype Kurumsal
-          href: /SkypeForBusiness/skype-for-business-online
+          href: /sharepoint/introduction
         - name: Microsoft Teams
           href: /microsoftteams/upgrade-monitor-quality
         - name: Yammer
@@ -449,8 +452,6 @@
                   href: introduction-to-performance-tuning-for-sharepoint-online.md
                 - name: SharePoint'te performans sorunlarını tanılama
                   href: diagnosing-performance-issues-with-sharepoint-online.md
-            - name: Skype Kurumsal Çevrimiçi Sürüm performansını ayarlama
-              href: tune-skype-for-business-online-performance.md
             - name: Project Online performansını iyileştirme
               href: /ProjectOnline/tune-project-online-performance
             - name: Performans sorunlarını giderme planı
@@ -574,13 +575,6 @@
           href: retrieve-customer-tenant-reporting-data-with-windows-powershell-for-delegated-ac.md
     - name: Microsoft Teams'i yönetme
       href: /microsoftteams/teams-powershell-install
-    - name: Skype Kurumsal Çevrimiçi Sürüm'ü yönetme
-      href: manage-skype-for-business-online-with-microsoft-365-powershell.md
-      items:
-        - name: Skype Kurumsal Çevrimiçi Sürüm ilkelerini yönetme
-          href: manage-skype-for-business-online-policies-with-microsoft-365-powershell.md
-        - name: Kullanıcı başına Skype Kurumsal Çevrimiçi Sürüm ilkeleri atama
-          href: assign-per-user-skype-for-business-online-policies-with-microsoft-365-powershell.md
     - name: Merkezi Dağıtım PowerShell ile eklentileri yönetme
       href: use-the-centralized-deployment-powershell-cmdlets-to-manage-add-ins.md
 - name: Windows ve Office 365 dağıtım laboratuvarı seti

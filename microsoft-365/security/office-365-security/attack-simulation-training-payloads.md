@@ -11,30 +11,30 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: ''
-description: Yöneticiler, Plan 2'de yer alan Microsoft Defender'da Saldırı benzetimi eğitimi için özel Office 365 oluşturabilir.
+description: Yöneticiler, Plan 2'de Saldırı benzetimi eğitimi için özel Office 365 için Microsoft Defender oluştur yapmayı öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: d670236aa81f4b5086263a75bbeceb8ca7e1e25f
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 8aa81a1940e564e9877af6a1848ff439aea58d8e
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679774"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468511"
 ---
-# <a name="create-custom-payloads-for-attack-simulation-training-in-defender-for-office-365"></a>Yeni görev için Defender'da Saldırı benzetimi eğitimi için özel Office 365
+# <a name="create-custom-payloads-for-attack-simulation-training-in-defender-for-office-365"></a>Yeni bir yıl içinde Saldırı benzetimi eğitimi için özel Office 365 için Defender
 
- [Office 365 için Microsoft Defender plan 2 için geçerlidir](defender-for-office-365.md)
+**Plan** [2 Office 365 için Microsoft Defender için geçerlidir](defender-for-office-365.md)
 
-Saldırı benzetimi eğitiminde yük, benzetimler ile kullanıcılara sunulan kimlik avı e-posta iletisi ve web sayfalarıdır. Microsoft 365 E5 için Microsoft Defender'da saldırı benzetimi eğitimi Office 365 Plan 2, kullanılabilen sosyal mühendislik teknikleri için güçlü bir yerleşik yük kataloğu sunar. Bununla birlikte, organizasyonu için daha iyi çalışacak özel yüklemeler oluşturmak istiyor da olabilirsiniz.
+Saldırı benzetimi eğitiminde yük, benzetimler ile kullanıcılara sunulan kimlik avı e-posta iletisi ve web sayfalarıdır. Microsoft 365 E5 veya Office 365 için Microsoft Defender Plan 2'de saldırı benzetimi eğitimi, kullanılabilen sosyal mühendislik teknikleri için güçlü bir yerleşik yük kataloğu sunar. Bununla birlikte, organizasyonu için daha iyi çalışacak özel yüklemeler oluşturmak istiyor da olabilirsiniz.
 
 Bu makalede, Saldırı benzetimi eğitimi altında kendi yüklemelerinizi nasıl oluşturabilirsiniz? Aşağıdaki konumlarda özel yük oluşturabilirsiniz:
 
 - Yük **sekmesi:** Microsoft 365 Defender portalında <https://security.microsoft.com>E-posta ve işbirliği **Saldırı benzetimi eğitimi** \>  \> **&'ler sekmesine** gidin. Doğrudan Yükleri **sekmesine gitmek için** kullanın<https://security.microsoft.com/attacksimulator?viewid=payload>.
-- Benzetim oluşturma sırasında: Benzetim oluşturma sihirbazının Yük seçme sayfasında  (üçüncü sayfa) özel yüklemeler oluşturabilirsiniz. Daha fazla bilgi için bkz[. Daha fazla bilgi için bkz. Kimlik avı saldırısının benzetimini Office 365](attack-simulation-training.md).
+- Benzetim oluşturma sırasında: Benzetim oluşturma sihirbazının Yük seçme sayfasında  (üçüncü sayfa) özel yüklemeler oluşturabilirsiniz. Daha fazla bilgi için bkz[. Kimlik avı saldırısının benzetimini Office 365 için Defender](attack-simulation-training.md).
 
-Saldırı benzetimi eğitimi hakkında bilgi almak için bkz. [Saldırı benzetimi eğitimlerini kullanmaya başlama](attack-simulation-training-get-started.md).
+Saldırı benzetimi eğitimi hakkında bilgi almak için Saldırı [benzetim Kullanmaya başlayın'i kullanma hakkında daha fazla bilgi için bkz](attack-simulation-training-get-started.md).
 
 > [!NOTE]
-> Bazı ticari markalar, logolar, simgeler, insignias ve diğer kaynak tanımlayıcıları yerel, eyalet ve federal yasalara göre daha yüksek koruma sağlar. Bu gibi göstergelerin yetkisiz kullanımı, kullanıcılara cezai para cezaları dahil olmak üzere penceler konur. Kapsamlı bir liste de dahil değil, bu listede Başkan Yardımcısı, Başkan Yardımcısı ve Tayyali üyeleri, CIA, CIA, Social Security, Medicare ve Medicaid, ABD İç Gelir Hizmeti ve Olimpiyatlar yer alıyor. Bu ticari marka kategorilerinin ötesinde, üçüncü taraf ticari markaların yapısal bir miktarda risk taşıyan kullanım ve değiştirilmesi. Yüklemede kendi ticari markalarınızı ve logolarınızı kullanmak, özellikle de kuruluş izinli olduğu bir yüklemede daha az riskli olabilir. Yük oluşturma veya yapılandırmada kullanımın ne olduğu veya uygun olmadığınız hakkında başka sorularınız varsa, yasal danışmanlarınıza danışmanız ile görüşmeniz gerekir.
+> Bazı ticari markalar, logolar, simgeler, insignias ve diğer kaynak tanımlayıcıları yerel, eyalet ve federal yasalara göre daha yüksek koruma sağlar. Bu gibi göstergelerin yetkisiz kullanımı, kullanıcılara cezai para cezaları dahil olmak üzere penceler konur. Kapsamlı bir liste olsa da, bu listede Başkan Yardımcısı, Başkan Yardımcısı ve Uluslararası iş üyeleri, CIA, CIA, Social Security, Medicare ve Medicaid, Birleşik Devletler Internal Revenue Service ve Olimpiyatlar yer almaktadır. Bu ticari marka kategorilerinin ötesinde, üçüncü taraf ticari markaların yapısal bir miktarda risk taşıyan kullanım ve değiştirilmesi. Yüklemede kendi ticari markalarınızı ve logolarınızı kullanmak, özellikle de kuruluş izinli olduğu bir yüklemede daha az riskli olabilir. Yük oluşturma veya yapılandırmada kullanımın ne olduğu veya uygun olmadığınız hakkında başka sorularınız varsa, yasal danışmanlarınıza danışmanız ile görüşmeniz gerekir.
 
 ## <a name="create-a-payload"></a>Yük oluşturma
 
@@ -147,7 +147,7 @@ Yük **yapılandır sayfasında** , yüklerinizi oluşturmanın zamanı geldi. K
       - **Ad ekle**: İleti gövdesine eklenen değer: `${userName}`.
       - **E-posta** ekle: İleti gövdesine eklenen değer şöyledir `${emailAddress}`: .
 
-      ![Office 365 için Microsoft Defender'daki Saldırı benzetimi eğitimi bölümündeki yükü oluşturma sihirbazının Yük yapılandırma sayfasındaki E-posta iletisi Office 365.](../../media/attack-sim-training-payloads-configure-payload-email-message.png)
+      :::image type="content" source="../../media/attack-sim-training-payloads-configure-payload-email-message.png" alt-text="Yeni hesapta saldırı benzetim eğitimi bölümündeki yük oluşturma sihirbazının Yük yapılandır sayfasındaki E-posta iletisi Office 365 için Microsoft Defender" lightbox="../../media/attack-sim-training-payloads-configure-payload-email-message.png":::
 
       **Kimlik avı bağlantı** denetimi: Bu denetim yalnızca, Seçme tekniği sayfasında Kimlik bilgisi **toplama, Eke** bağlantı veya **Url** ile sürücü-by'i **seçtiysanız** kullanılabilir.  Daha önce Kimlik Avı bağlantısı bölümüne seçtiğiniz URL'yi eklemek **için bu denetimi** kullanın.
 
@@ -204,7 +204,7 @@ Gösterge ekle **sayfasında Gösterge** **ekle'ye tıklayın**. Görüntülenen
 
   Göstergenin konumu olarak e-posta iletisi konusunu veya ileti gövdesini seçersiniz, Metin **seçin** düğmesi kullanılabilir. İleti konusu veya ileti gövdesinde göstergenin görünmesini istediğiniz metni seçmek için bu düğmeye tıklayın. Bitirdikten sonra Seç'e **tıklayın**.
 
-  ![Saldırı benzetim eğitimi'nin yük oluşturma sihirbazında bir göstergeye eklemek için ileti gövdesinde seçilen metin konumu.](../../media/attack-sim-training-payloads-add-indicators-select-location.png)
+  :::image type="content" source="../../media/attack-sim-training-payloads-add-indicators-select-location.png" alt-text="Saldırı benzetim eğitimi'nin yük oluşturma sihirbazında bir göstergeye eklemek için ileti gövdesinde seçilen metin konumu" lightbox="../../media/attack-sim-training-payloads-add-indicators-select-location.png":::
 
   - **Gösterge açıklaması**: Göstergenin varsayılan açıklamasını kabul edilebilir veya bunu özelleştirebilirsiniz.
 
@@ -232,15 +232,15 @@ Ana Yükü **gözden geçir sayfasında** , bölümün içindeki ayarları **de�
 
 Bitirdikten sonra Gönder'e **tıklayın**. Görüntülenen onay sayfasında Bitti'ye **tıklayın**.
 
-![Geçiş portalında Saldırı benzetimi eğitimi altında yükleme Microsoft 365 Defender gözden geçirebilirsiniz.](../../media/attack-sim-training-payloads-review-payload.png)
+:::image type="content" source="../../media/attack-sim-training-payloads-review-payload.png" alt-text="Yeni portalda Saldırı benzetimi eğitimi'nin Yüklerini Microsoft 365 Defender sayfası" lightbox="../../media/attack-sim-training-payloads-review-payload.png":::
 
 > [!IMPORTANT]
 > Oluşturduğunuz yüklerde Kaynak özelliği için **Kiracı** **değeri** olur. Benzetimler oluşturmak ve yüklerini seçmek için Kaynak değeri Kiracı'ya filtre **uygulamamayı** **seçin**.
 
 ## <a name="related-links"></a>İlgili bağlantılar
 
-[Saldırı benzetimi eğitimlerini kullanmaya başlama](attack-simulation-training-get-started.md)
+[Kullanmaya başlayın benzetimi eğitimlerini kullanma](attack-simulation-training-get-started.md)
 
 [Kimlik avı saldırı benzetimi oluşturma](attack-simulation-training.md)
 
-[Saldırı benzetimi eğitimi ile içgörüler edinin](attack-simulation-training-insights.md)
+[Saldırı simülasyonu eğitimiyle içgörüler elde etme](attack-simulation-training-insights.md)

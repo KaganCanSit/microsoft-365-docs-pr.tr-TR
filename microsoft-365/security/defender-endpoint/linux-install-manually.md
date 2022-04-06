@@ -1,8 +1,8 @@
 ---
-title: Linux'ta Uç Nokta için Microsoft Defender'ı el ile dağıtma
+title: Linux'Uç Nokta için Microsoft Defender el ile dağıtım
 ms.reviewer: ''
-description: Linux'ta Uç Nokta için Microsoft Defender'ın komut satırına el ile nasıl dağıtın açıklanır.
-keywords: microsoft, defender, Endpoint için Microsoft Defender, linux, yükleme, dağıtma, kaldırma, atlanabilir, linux, redhat, ubuntu, debian, sles, suse, centos, fedora, amazon linux 2
+description: Linux'ta Uç Nokta için Microsoft Defender komut çizgisini kullanarak el ile nasıl dağıtın açıklaması vardır.
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, linux, yükleme, dağıtma, kaldırma, kaldırılabilir, ansible, linux, redhat, ubuntu, debian, sles, suse, centos, fedora, amazon linux 2
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,26 +16,26 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: da05d702a2cb074ece2fec74371e7b5f560cb1ed
-ms.sourcegitcommit: babc2dad1c0e08a9237dbe4956ffd21c0214db83
+ms.openlocfilehash: 4d66dad57fa7b045062a0300327b76030c33dfab
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014338"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64468181"
 ---
-# <a name="deploy-microsoft-defender-for-endpoint-on-linux-manually"></a>Linux'ta Uç Nokta için Microsoft Defender'ı el ile dağıtma
+# <a name="deploy-microsoft-defender-for-endpoint-on-linux-manually"></a>Linux'Uç Nokta için Microsoft Defender el ile dağıtım
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 
-Bu makalede Linux'ta Uç Nokta için Microsoft Defender'ın el ile nasıl dağıt olduğu açıklanmıştır. Başarılı bir dağıtım için aşağıdaki görevlerin tamamlanmasını gerekir:
+Bu makalede Linux'ta el ile Uç Nokta için Microsoft Defender dağıtımı açıklanmıştır. Başarılı bir dağıtım için aşağıdaki görevlerin tamamlanmasını gerekir:
 
   - [Önkoşullar ve sistem gereksinimleri](#prerequisites-and-system-requirements)
   - [Linux yazılım deposunu yapılandırma](#configure-the-linux-software-repository)
@@ -48,7 +48,7 @@ Bu makalede Linux'ta Uç Nokta için Microsoft Defender'ın el ile nasıl dağı
 
 ## <a name="prerequisites-and-system-requirements"></a>Önkoşullar ve sistem gereksinimleri
 
-Başlamadan önce, geçerli yazılım sürümünün [önkoşullarının](microsoft-defender-endpoint-linux.md) ve sistem gereksinimlerinin açıklaması için bkz. Linux'ta Uç Nokta için Microsoft Defender.
+Başlamadan önce, geçerli yazılım [Uç Nokta için Microsoft Defender önkoşullarının](microsoft-defender-endpoint-linux.md) ve sistem gereksinimlerinin açıklaması için Bkz. Linux'ta sistem gereksinimleri.
 
 > [!WARNING]
 > Ürün yüklemesi sonrasında işletim sisteminizi yeni bir ana sürüme yükseltmek için ürünün yeniden yüklenmesi gerekir. Aşağıdaki adımları takip [edin ve](linux-resources.md#uninstall) Linux'ta Uç Nokta için Defender'ı kaldırmanız, işletim sistemini yükseltmeniz ve ardından Linux'ta Uç Nokta için Defender'ı yeniden yapılandırmanız gerekir.
@@ -105,7 +105,7 @@ Yeni özelliklerin önizlemesini görüntülemek ve erken geri bildirim sağlama
     sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
     ```
 
-    Seçili cihazlarda yeni özellikleri keşfetmek isterseniz, Linux'ta Uç Nokta için Microsoft Defender'ı Insider hızlı kanalına dağıtmak *da istiyor* da olabilir:
+    Ya da seçili cihazlarda yeni özellikleri keşfetmek isterseniz, Linux'ta Uç Nokta için Microsoft Defender insider hızlı kanalına *dağıtmak da istiyor* da olabilir:
 
     ```bash
     sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
@@ -131,7 +131,7 @@ Yeni özelliklerin önizlemesini görüntülemek ve erken geri bildirim sağlama
    > [!TIP]
    > Sürüm [sürüm] de içinde olmak üzere sistemle ilgili bilgileri tanımlamak için SPident *komutunu kullanın*.
 
-   Örneğin, SLES 12 kullanıyorsanız ve *prod* kanalından Linux'ta Uç Nokta için Microsoft Defender'ı dağıtmak isterseniz:
+   Örneğin, SLES 12 kullanıyorsanız ve *prod* kanalından Linux'Uç Nokta için Microsoft Defender dağıtım yapmak isterseniz:
 
    ```bash
    sudo zypper addrepo -c -f -n microsoft-prod https://packages.microsoft.com/config/sles/12/prod.repo
@@ -169,7 +169,7 @@ Yeni özelliklerin önizlemesini görüntülemek ve erken geri bildirim sağlama
    > [!TIP]
    > Sürüm [sürüm] de içinde olmak üzere sistemle ilgili bilgileri tanımlamak için hostnamectl *komutunu kullanın*.
 
-   Örneğin, Ubuntu 18.04 kullanıyorsanız ve *prod* kanalından Linux'ta Uç Nokta için Microsoft Defender'ı dağıtmak isterseniz:
+   Örneğin, Ubuntu 18.04 kullanıyorsanız ve *prod* kanalından Linux'Uç Nokta için Microsoft Defender dağıtmak isterseniz:
 
    ```bash
    curl -o microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
@@ -304,7 +304,7 @@ Ekleme paketini portaldan Microsoft 365 Defender indirin.
 2. İlk açılan menüde işletim sistemi olarak **Linux Server'ı** seçin. İkinci açılan menüde dağıtım yöntemi olarak **Yerel Betik'i** seçin.
 3. Ekleme **paketini indir'i seçin**. Dosyayı farklı bir WindowsDefenderATPOnboardingPackage.zip.
 
-    ![Microsoft 365 Defender portalın ekran görüntüsü.](images/portal-onboarding-linux.png)
+   :::image type="content" source="images/portal-onboarding-linux.png" alt-text="Microsoft 365 Defender portalında bir ekleme Microsoft 365 Defender indirme" lightbox="images/portal-onboarding-linux.png":::
 
 4. Komut isteminden, dosyanın size ait olduğunu doğrulayın ve arşivin içeriğini ayıkla:
 
@@ -460,7 +460,7 @@ Hata [oluştuğunda](linux-resources.md#log-installation-issues) yükleyici tara
     sudo yum-config-manager --disable packages-microsoft-com-fast-prod
     ```
 
-1. "Üretim kanalını" kullanarak Linux'ta Uç Nokta için Microsoft Defender'ı yeniden dağıtım.
+1. "Üretim kanalını" Uç Nokta için Microsoft Defender Linux üzerinde yeniden dağıtım kanalını yeniden dağıtım.
 
 ## <a name="uninstallation"></a>Kaldırma
 

@@ -1,5 +1,5 @@
 ---
-title: Etki Alanı için Dış Etki Alanı Adı Sistemi Office 365
+title: Office 365 için Dış Etki Alanı Adı Sistemi kayıtları
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
@@ -21,138 +21,138 @@ search.appverid:
 - MOE150
 - BCS160
 ms.assetid: c0531a6f-9e25-4f2d-ad0e-a70bfef09ac0
-description: Dış Etki Alanı Adı Sistemi kayıtlarının, dağıtım planlama ve dağıtım planlarında Office 365 listesi.
-ms.openlocfilehash: 3ba8345c17446f7f6d2d6b034415288eb994ee79
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+description: Office 365 dağıtımı planlarken kullanılacak dış Etki Alanı Adı Sistemi kayıtlarının başvuru listesi.
+ms.openlocfilehash: d2c73094da0547fbc02a4520d4361941b829619c
+ms.sourcegitcommit: a06bb81fbd727a790a8fe6a3746b8a3cf62a6b24
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64568444"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "64651355"
 ---
-# <a name="external-domain-name-system-records-for-office-365"></a>Etki Alanı için Dış Etki Alanı Adı Sistemi Office 365
+# <a name="external-domain-name-system-records-for-office-365"></a>Office 365 için Dış Etki Alanı Adı Sistemi kayıtları
 
 ![Etki alanı.](../media/e05b1c78-1df0-4200-ba40-6e26b7ead68f.png)
 
-**Office 365 için DNS kayıtlarının özelleştirilmiş bir listesini mi görmek Office 365 istiyor musunuz?** Kendi etki [alanınız için DNS kayıtlarını oluşturmak Office 365 bilgileri](../admin/get-help-with-domains/information-for-dns-records.md) Kendi Ayarları'Office 365.
+**Office 365 kuruluşunuz için dns kayıtlarının özelleştirilmiş bir listesini görmek mi istiyorsunuz?** Etki [alanınız için Office 365 DNS kayıtları oluşturmak için ihtiyacınız olan bilgileri](../admin/get-help-with-domains/information-for-dns-records.md) Office 365'de bulabilirsiniz.
 
-**Bu kayıtları etki alanı DNS barındırma barındıranıza (GoDaddy veya eNom gibi) eklemek için adım adım yardıma mı ihtiyacınız var?** [Birçok popüler DNS barındırması için adım adım yönergelerin bağlantılarını bulun](../admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md).
+**Bu kayıtları goDaddy veya eNom gibi etki alanınızın DNS ana bilgisayarına eklemek için adım adım yardıma mı ihtiyacınız var?** [Birçok popüler DNS ana bilgisayar için adım adım yönergelerin bağlantılarını bulun](../admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md).
 
-**Kendi özel dağıtımınız için başvuru listesini mi kullanmaktasınız?** Aşağıdaki liste, özel dağıtım dağıtım için başvuru olarak Office 365 kullanılmalıdır. Organizasyonunıza hangi kayıtların geçerli olduğunu seçmeniz ve uygun değerleri doldurmanız gerekir.
+**Kendi özel dağıtımınız için başvuru listesini kullanmak için mi takılıyorsunuz?** Aşağıdaki liste, özel Office 365 dağıtımınız için başvuru olarak kullanılmalıdır. Kuruluşunuza hangi kayıtların uygulanacağını seçmeniz ve uygun değerleri doldurmanız gerekir.
 
-**Geri dön** [için ağ planlaması ve performans ayarı'nı Office 365](./network-planning-and-performance.md).
+**Office 365** [için Ağ planlama ve performans ayarlama'ya Geri dön](./network-planning-and-performance.md).
 
-SPF ve MX kayıtları çoğunlukla en zor olan kayıttır. Bu makalenin sonundaki SPF kayıtları kılavuzumızı güncelledik. Etki alanınız için yalnızca _tek bir SPF kaydına sahip olaynizi unutmamanız gerekir_. Birden çok MX kaydına sahip olabilirsiniz; Bununla birlikte, bu da posta teslim sorunlarına neden olabilir. E-postaları tek bir posta sistemine yönlendiren tek bir MX kaydınız olması birçok olası sorunu ortadan kaldırır.
+Genellikle SPF ve MX kayıtları en zor olanıdır. Bu makalenin sonunda SPF kayıtları kılavuzumuzu güncelleştirdik. Hatırlamanız gereken önemli şey _, etki alanınız için yalnızca tek bir SPF kaydına sahip olabileceğinizdir_. Birden çok MX kaydınız olabilir; ancak bu, posta teslimi için sorunlara neden olabilir. E-postayı tek bir posta sistemine yönlendiren tek bir MX kaydına sahip olmak birçok olası sorunu ortadan kaldırır.
   
-Aşağıdaki bölümler, her bölümde hizmetlere göre Office 365. Etki alanınız için Office 365 DNS kayıtlarının özelleştirilmiş bir listesini görmek için, Office 365'de oturum açma ve DNS kayıtlarınızı oluşturmak için [Office 365 toplayın](https://support.office.com/article/77f90d4a-dc7f-4f09-8972-c1b03ea85a67).
+Aşağıdaki bölümler Office 365'de hizmete göre düzenlenmiştir. Etki alanınız için Office 365 DNS kayıtlarının özelleştirilmiş listesini görmek için Office 365 oturum açın ve [Office 365 DNS kayıtlarını oluşturmak için ihtiyacınız olan bilgileri toplayın](https://support.office.com/article/77f90d4a-dc7f-4f09-8972-c1b03ea85a67).
   
-## <a name="external-dns-records-required-for-office-365-core-services"></a>Hizmetler (temel hizmetler) Office 365 dış DNS kayıtları
+## <a name="external-dns-records-required-for-office-365-core-services"></a>Office 365 için gereken dış DNS kayıtları (çekirdek hizmetler)
 <a name="BKMK_ReqdCore"> </a>
 
-TXT kaydı, etki alanının sahibi olduğunu kanıtlamanız için gereklidir ve tüm müşteriler için gereklidir.
+TXT kaydı, etki alanının sahibi olduğunuzu kanıtlamak için gereklidir ve tüm müşteriler için gereklidir.
 
-CNAME kaydı yalnızca [21Vianet tarafından Office 365 kullanan müşteriler için gereklidir](/microsoft-365/admin/services-in-china/services-in-china). Bu, iş Office 365 kimlik platformuyla kimlik doğrulaması yapılması için iş istasyonlarını yönlendirenin. 
+CNAME kaydı yalnızca [21Vianet tarafından sağlanan Office 365](/microsoft-365/admin/services-in-china/services-in-china) kullanan müşteriler için gereklidir. Office 365 uygun kimlik platformuyla kimlik doğrulaması için iş istasyonlarını yönlendirebilmesini sağlar. 
 
 
   
-|**DNS kaydı** <br/> |**Amaç** <br/> |**Value to use** <br/> |**Geçerli olduğu yer:**|
+|**DNS kaydı** <br/> |**Amaç** <br/> |**Kullanılacak değer** <br/> |**Uygulandığı öğe**|
 |----------|-----------|------------|------------|
-|**TXT** <br/> **(Etki alanı doğrulaması)** <br/> |Etki Office 365 etki alanının sahibi olduğunu doğrulamak için etki alanı tarafından kullanılır. Başka bir şeyi etkilemez.  <br/> |**Ana bilgisayar:** @ (veya bazı DNS barındırma sağlayıcıları için etki alanı adınız)  <br/> **TXT Değeri:** _Metin kutusu tarafından sağlanan_ Office 365  <br/> Bu Office 365 **oluşturmak için** kullanabileceğiniz değerleri etki alanı kurulum sihirbazı sağlar.  <br/> |Tüm müşteriler|
-|**CNAME** <br/> **(Paket)** <br/> |Kimlik doğrulama Office 365 doğru kimlik platformuna yönlendirecek şekilde kullanıcı tarafından kullanılır. [Daha fazla bilgi](../admin/services-in-china/purpose-of-cname.md?viewFallbackFrom=o365-worldwide) <br/> **Bu** CNAME'nin yalnızca 21Vianet Office 365 için geçerli olduğunu unutmayın. Mevcut olan ve Office 365 21Vianet tarafından çalıştırnını değilse, özel etki alanınız üzerinde çalışan *kullanıcılar "özel* etki alanı sistemimizte değil" hatasını alırlar ve Office 365 lisanslarını etkinleştiremz. [Daha fazla bilgi](/office365/servicedescriptions/office-365-platform-service-description/office-365-operated-by-21vianet) |**Diğer Ad:** msoid  <br/> **Hedef:** clientconfig.partner.microsoftonline-p.net.cn  <br/> | Yalnızca 21Vianet müşterileri|
+|**TXT** <br/> **(Etki alanı doğrulaması)** <br/> |Office 365 tarafından yalnızca etki alanınızın sahibi olduğunuzu doğrulamak için kullanılır. Başka hiçbir şeyi etkilemez.  <br/> |**Ana bilgisayar:** @ (veya bazı DNS barındırma sağlayıcıları için etki alanı adınız)  <br/> **TXT Değeri:** Office 365 _tarafından sağlanan bir metin dizesi_  <br/> Office 365 **etki alanı kurulum sihirbazı**, bu kaydı oluşturmak için kullandığınız değerleri sağlar.  <br/> |Tüm müşteriler|
+|**CNAME** <br/> **(Paket)** <br/> |kimlik doğrulamasını doğru kimlik platformuna yönlendirmek için Office 365 tarafından kullanılır. [Daha fazla bilgi](../admin/services-in-china/purpose-of-cname.md?viewFallbackFrom=o365-worldwide) <br/> Bu CNAME'in yalnızca 21Vianet tarafından sağlanan Office 365 için geçerli olduğunu **unutmayın**. Varsa ve Office 365 21Vianet tarafından çalıştırılmazsa, özel etki alanınızdaki kullanıcılar "*özel etki alanı* sistemimizde yok" hatası alır ve Office 365 lisanslarını etkinleştiremez. [Daha fazla bilgi](/office365/servicedescriptions/office-365-platform-service-description/office-365-operated-by-21vianet) |**Diğer ad:** msoid  <br/> **Hedef:** clientconfig.partner.microsoftonline-p.net.cn  <br/> | Yalnızca 21Vianet müşterileri|
 
 
 
-## <a name="external-dns-records-required-for-email-in-office-365-exchange-online"></a>e-posta için gereken dış DNS Office 365 (Exchange Online)
+## <a name="external-dns-records-required-for-email-in-office-365-exchange-online"></a>Office 365 e-posta için gerekli dış DNS kayıtları (Exchange Online)
 <a name="BKMK_ReqdCore"> </a>
 
-E-posta Office 365 birkaç farklı kayıt gerektirir. Tüm müşterilerin kullanmaları gereken üç birincil kayıt Otomatik Bulma, MX ve SPF kayıtlarıdır.
+Office 365'da e-posta birkaç farklı kayıt gerektirir. Tüm müşterilerin kullanması gereken üç birincil kayıt Autodiscover, MX ve SPF kayıtlarıdır.
   
-- **Otomatik Bulma kaydı, istemci bilgisayarların** otomatik olarak bağlantı bulmalarına ve Exchange şekilde yapılandırmalarına olanak sağlar.
+- **Otomatik Bulma kaydı**, istemci bilgisayarların Exchange otomatik olarak bulmasına ve istemciyi düzgün yapılandırmasına olanak tanır.
 
-- **MX kaydı, diğer** posta sistemlerine etki alanınız için e-postayı nereye göndereceklerini söyler. **Not:** E-postanızı E-posta Office 365, etki alanının MX kaydını güncelleştirerek bu etki alanına gönderilen TÜM e-postaların E-postası adresine Office 365.  
-Yalnızca birkaç e-posta adresini başka bir adrese mi Office 365? Özel etki [Office 365 birkaç e-posta adresiyle pilot e-posta gönderebilirsiniz](https://support.office.com/article/39cee536-6a03-40cf-b9c1-f301bb6001d7).
+- **MX kaydı** , diğer posta sistemlerine etki alanınız için e-postanın nereye gönderileceği bildirir. **Not:** E-postanızı Office 365 olarak değiştirdiğinizde, etki alanınızın MX kaydını güncelleştirerek bu etki alanına gönderilen TÜM e-postalar Office 365 gelmeye başlar.  
+Yalnızca birkaç e-posta adresini Office 365 olarak değiştirmek mi istiyorsunuz? [Özel etki alanınızda birkaç e-posta adresiyle Pilot Office 365](https://support.office.com/article/39cee536-6a03-40cf-b9c1-f301bb6001d7) yapabilirsiniz.
 
-- **SPF için TXT kaydı** , alıcı e-posta sistemleri tarafından e-postanızı gönderen sunucunun sizin onaylayan sunuculardan biri olduğunu doğrulamak için kullanılır. Bu, kimlik avı ve e-posta kimlik avı gibi sorunları önlemeye yardımcı olur. Kaydınıza [neleri dahil edeceklerini anlamanıza yardımcı](external-domain-name-system-records.md#BKMK_SPFrecords) olması için bu makalede SPF için gereken Dış DNS kayıtlarına bakın.
+- **SPF için TXT kaydı** , alıcı e-posta sistemleri tarafından e-postanızı gönderen sunucunun sizin onayladığınız bir sunucu olduğunu doğrulamak için kullanılır. Bu, e-posta kimlik sahtekarlığı ve kimlik avı gibi sorunları önlemeye yardımcı olur. Kaydınıza nelerin dahil edileceklerini anlamanıza yardımcı olması için bu makaledeki [SPF için gereken Dış DNS kayıtlarına](external-domain-name-system-records.md#BKMK_SPFrecords) bakın.
 
-Federasyon kullanan e-Exchange e-posta müşterilerinin ayrıca tablonun altında listelenen CNAME ve TXT kayıtlarına da ihtiyacı olur.
+Exchange Federasyonu kullanan e-posta müşterileri, tablonun en altında listelenen ek CNAME ve TXT kaydına da ihtiyaç duyar.
   
-|**DNS kaydı** <br/> |**Amaç** <br/> |**Value to use** <br/> |
+|**DNS kaydı** <br/> |**Amaç** <br/> |**Kullanılacak değer** <br/> |
 |----------|-----------|------------|
-|**CNAME** <br/> **(Exchange Online)** <br/> |Diğer Outlook Otomatik Bulma hizmetini kullanarak istemcilerin Exchange Online kolay bağlanmalarını sağlar. Otomatik Bulma, ana bilgisayar için Exchange Server doğru ana bilgisayarı otomatik olarak bulur Outlook yapılandırdı.  <br/> |**Diğer Ad:** Otomatik Bulma  <br/> **Target:** autodiscover.outlook.com  <br/> |
-|**MX** <br/> **(Exchange Online)** <br/> |Posta, etki alanınız için gelen Exchange Online hizmet Office 365.  <br/> **Not:** E-posta bir Exchange Online, eski sisteminize işaret ediyor olan MX kayıtlarını kaldırmanız gerekir.   |**Etki alanı:** Örneğin, contoso.com  <br/> **Hedef e-posta sunucusu:**\<MX token\>. mail.protection.outlook.com  <br/> **Tercih/Öncelik:** Diğer tüm MX kayıtlardan daha düşük (bu sayede postanın Exchange Online) - örneğin, 1 veya 'düşük'  <br/>  Aşağıdaki adımları \<MX token\> takip edin:  <br/>  Etki Alanları'Office 365 yönetici Etki Alanları'Office 365 \> gidin.  <br/>  Etki alanınız için Eylem sütununda Sorunları düzelt'i seçin.  <br/>  MX kayıtları bölümünde Neyi düzeltmem gerekiyor? 'ı seçin.  <br/>  MX kaydınızı güncelleştirmek için bu sayfada yönergeleri izleyin.  <br/> [MX önceliği nedir?](../admin/setup/domains-faq.yml) <br/> |
-|**SPF (TXT)** <br/> **(Exchange Online)**  <br/> |Diğer kişilerin istenmeyen posta veya diğer kötü amaçlı e-postaları göndermek için etki alanınızı kullanmalarını önlemeye yardımcı olur. Sender Policy Framework (SPF) kayıtları, etki alanınıza e-posta gönderme yetkisi olan sunucuları tanımarak çalışır.  <br/> |[SPF için gereken dış DNS kayıtları](external-domain-name-system-records.md#BKMK_SPFrecords) <br/> |
-|**TXT** <br/> **(Exchange federasyonu)** <br/> |Karma dağıtımda Exchange federasyonu için kullanılır.  <br/> |**TXT kaydı 1:** Örneğin, contoso.com ve ilişkili olarak oluşturulan, etki alanına karşıt karma metindir (örneğin, Y96nu89138789315669824))  <br/> **TXT kaydı 2:** Örneğin, exchangedelegation.contoso.com oluşturulan ve ilişkilendirilmiş, etki alanına karşıt karma metindir (örneğin, Y3259071352452626169)  <br/> |
-|**CNAME** <br/> **(Exchange federasyonu)** <br/> |Şirket Outlook Federasyon kullanırken Otomatik Bulma hizmetini kullanarak Exchange Online hizmetine Exchange kolayca bağlanmalarını sağlar. Otomatik Bulma, otomatik olarak doğru ana Exchange Server ana bilgisayarı bulur ve Outlook için doğru ana bilgisayarı yapılandırr.  <br/> |**Diğer Ad:** Örneğin, Autodiscover.service.contoso.com  <br/> **Target:** autodiscover.outlook.com  <br/> |
+|**CNAME** <br/> **(Exchange Online)** <br/> |Outlook istemcilerinin Otomatik Bulma hizmetini kullanarak Exchange Online hizmetine kolayca bağlanmasına yardımcı olur. Otomatik bulma doğru Exchange Server konağı otomatik olarak bulur ve kullanıcılar için Outlook yapılandırılır.  <br/> |**Diğer ad:** Autodiscover  <br/> **Target:** autodiscover.outlook.com  <br/> |
+|**MX** <br/> **(Exchange Online)** <br/> |Etki alanınız için gelen postayı Office 365'deki Exchange Online hizmetine gönderir.  <br/> **Not:** E-posta Exchange Online aktarıldıktan sonra, eski sisteminize işaret eden MX kayıtlarını kaldırmanız gerekir.   |**Etki alanı:** Örneğin, contoso.com  <br/> **Hedef e-posta sunucusu:**\<MX token\>. mail.protection.outlook.com  <br/> **Yaşam Süresi (TTL) Değeri:** 3600 <br/> **Tercih/Öncelik:** Diğer MX kayıtlarından daha düşük (bu, postanın Exchange Online teslim edilmesini sağlar) - örneğin 1 veya 'düşük'  <br/>  Aşağıdaki adımları izleyerek bilgilerinizi \<MX token\> bulun:  <br/>  Office 365 oturum açın, Office 365 yönetici \> Etki Alanları'na gidin.  <br/>  Etki alanınızın Eylem sütununda Sorunları düzelt'i seçin.  <br/>  MX kayıtları bölümünde Neyi düzeltebilirim?  <br/>  MX kaydınızı güncelleştirmek için bu sayfadaki yönergeleri izleyin.  <br/> [MX önceliği nedir?](../admin/setup/domains-faq.yml) <br/> |
+|**SPF (TXT)** <br/> **(Exchange Online)**  <br/> |Başkalarının istenmeyen posta veya başka kötü amaçlı e-postalar göndermek için etki alanınızı kullanmasını önlemeye yardımcı olur. Gönderen ilkesi çerçevesi (SPF) kayıtları, etki alanınızdan e-posta gönderme yetkisine sahip sunucuları tanımlayarak çalışır.  <br/> |[SPF için gereken dış DNS kayıtları](external-domain-name-system-records.md#BKMK_SPFrecords) <br/> |
+|**TXT** <br/> **(federasyon Exchange)** <br/> |Karma dağıtım için Exchange federasyon için kullanılır.  <br/> |**TXT kaydı 1:** Örneğin, contoso.com ve özel olarak oluşturulan, etki alanına dayanıklı karma metin (örneğin, Y96nu89138789315669824)  <br/> **TXT kaydı 2:** Örneğin, exchangedelegation.contoso.com ve özel olarak oluşturulan, etki alanına dayanıklı karma metin (örneğin, Y3259071352452626169)  <br/> |
+|**CNAME** <br/> **(federasyon Exchange)** <br/> |şirketiniz Exchange federasyonu kullanırken otomatik bulma hizmetini kullanarak Outlook istemcilerinin Exchange Online hizmetine kolayca bağlanmasına yardımcı olur. Otomatik bulma doğru Exchange Server konağı otomatik olarak bulur ve kullanıcılarınız için Outlook yapılandırılır.  <br/> |**Diğer ad:** Örneğin, Autodiscover.service.contoso.com  <br/> **Target:** autodiscover.outlook.com  <br/> |
 
 
 ## <a name="external-dns-records-required-for-skype-for-business-online"></a>Skype Kurumsal Online için gereken dış DNS kayıtları
 <a name="BKMK_ReqdCore"> </a>
 
-Ağın doğru yapılandırıldığından emin olmak [için Office 365 URL'leri ve IP](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2#BKMK_LYO) adresi aralıklarını kullanarak atılması gereken belirli adımlar vardır.
+Ağınızın doğru yapılandırıldığından emin olmak için [Office 365 URL'leri ve IP adresi aralıklarını](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2#BKMK_LYO) kullanırken atılması gereken belirli adımlar vardır.
 
 > [!NOTE]
-> Bu DNS kayıtları, özellikle de Teams federasyon sorunlarının ortaya çıka Teams Skype Kurumsal karma senaryolarda da geçerlidir.
+> Bu DNS kayıtları, özellikle belirli federasyon sorunlarının ortaya çıkabileceği karma Teams ve Skype Kurumsal senaryosunda Teams için de geçerlidir.
   
-|**DNS kaydı** <br/> |**Amaç** <br/> |**Value to use** <br/> |
+|**DNS kaydı** <br/> |**Amaç** <br/> |**Kullanılacak değer** <br/> |
 |----------|-----------|------------|
-|**SRV** <br/> **(Skype Kurumsal Online)** <br/> |SIP Office 365 etkinleştirerek, etki alanınız dış istemcilerle anlık ileti (IM) özelliklerini paylaşmaya olanak sağlar. DAHA fazla bilgi Office 365 [URL'ler ve IP adresi aralıkları](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2#BKMK_LYO).  <br/> |**Hizmet:** sipfederationtls  <br/> **Protokol:** TCP  <br/> **Öncelik:** 100  <br/> **Ağırlık:** 1  <br/> **Bağlantı Noktası:** 5061  <br/> **Hedef:** sipfed.online.lync.com  <br/> **Not:** Dış bir DNS'de güvenlik duvarı veya ara sunucu SRV aramalarını engellerse, bu kaydı iç DNS kaydına eklemeniz gerekir.   |
-|**SRV** <br/> **(Skype Kurumsal Online)** <br/> |Diğer Skype Kurumsal Lync istemcileri arasındaki bilgi akışını eşgüdüm sağlamak için kullanılır.  <br/> |**Hizmet:** sip  <br/> **Protokol:** TLS  <br/> **Öncelik:** 100  <br/> **Ağırlık:** 1  <br/> **Bağlantı Noktası:** 443  <br/> **Hedef:** sipdir.online.lync.com  <br/> |
-|**CNAME** <br/> **(Skype Kurumsal Online)** <br/> |Skype Kurumsal Online hizmetini bulmak ve oturum a Skype Kurumsal için Lync istemcisi tarafından kullanılır.  <br/> |**Diğer Ad:** sip  <br/> **Hedef:** sipdir.online.lync.com  <br/> Daha fazla bilgi için bkz[. Office 365 URL'leri ve IP adresi aralıklarını yapılandırma](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2#BKMK_LYO).  <br/> |
-|**CNAME** <br/> **(Skype Kurumsal Online)** <br/> |Skype Kurumsal Online hizmetini bulmak ve oturum açmada yardımcı olmak için Lync mobil istemcisi tarafından kullanılır.  <br/> |**Diğer Ad:** lyncdiscover  <br/> **Hedef:** webdir.online.lync.com  <br/> |
+|**SRV** <br/> **(Skype Kurumsal Online)** <br/> |SIP federasyonunu etkinleştirerek Office 365 etki alanınızın anlık ileti (IM) özelliklerini dış istemcilerle paylaşmasına izin verir. [Office 365 URL'leri ve IP adresi aralıkları](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2#BKMK_LYO) hakkında daha fazla bilgi edinin.  <br/> |**Hizmet:** sipfederationtls  <br/> **Protokolü:** TCP  <br/> **Öncelik:** 100  <br/> **Ağırlık:** 1  <br/> **Bağlantı noktası:** 5061  <br/> **Hedef:** sipfed.online.lync.com  <br/> **Not:** Güvenlik duvarı veya ara sunucu dış DNS'de SRV aramalarını engelliyorsa, bu kaydı iç DNS kaydına eklemeniz gerekir.   |
+|**SRV** <br/> **(Skype Kurumsal Online)** <br/> |lync istemcileri arasındaki bilgi akışını koordine etmek için Skype Kurumsal tarafından kullanılır.  <br/> |**Hizmet:** sip  <br/> **Protokolü:** TLS  <br/> **Öncelik:** 100  <br/> **Ağırlık:** 1  <br/> **Bağlantı noktası:** 443  <br/> **Hedef:** sipdir.online.lync.com  <br/> |
+|**CNAME** <br/> **(Skype Kurumsal Online)** <br/> |Skype Kurumsal Online hizmetini bulmanıza ve oturum açmanıza yardımcı olması için Lync istemcisi tarafından kullanılır.  <br/> |**Diğer ad:** sip  <br/> **Hedef:** sipdir.online.lync.com  <br/> Daha fazla bilgi için bkz. [URL'leri ve IP adresi aralıklarını Office 365](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2#BKMK_LYO).  <br/> |
+|**CNAME** <br/> **(Skype Kurumsal Online)** <br/> |Skype Kurumsal Online hizmetini bulmanıza ve oturum açmanıza yardımcı olması için Lync mobil istemcisi tarafından kullanılır.  <br/> |**Diğer ad:** lyncdiscover  <br/> **Hedef:** webdir.online.lync.com  <br/> |
 
-## <a name="external-dns-records-required-for-office-365-single-sign-on"></a>Tek Kayıt Olarak Kayıt Için Office 365 Dış DNS Sign-On
+## <a name="external-dns-records-required-for-office-365-single-sign-on"></a>Office 365 Tek Sign-On için gereken dış DNS kayıtları
 <a name="BKMK_ReqdCore"> </a>
 
-|**DNS kaydı** <br/> |**Amaç** <br/> |**Value to use** <br/> |
+|**DNS kaydı** <br/> |**Amaç** <br/> |**Kullanılacak değer** <br/> |
 |----------|-----------|------------|
-|**Ana Bilgisayar (A)** <br/> |Çoklu oturum açma (SSO) için kullanılır. Active Directory Federasyon Hizmetleri (AD FS) (AD FS) federasyon sunucusu sunucu sunucu sunucunuza veya yük dengelemeli sanal IP'nize (VIP) bağlanmaları için şirket dışı kullanıcılarınız (ve  likesanız şirket içi kullanıcılarınız) için bitiş noktası sağlar.  <br/> |**Hedef:** Örneğin, sts.contoso.com  <br/> |
+|**Konak (A)** <br/> |Çoklu oturum açma (SSO) için kullanılır. Şirket içi kullanıcılarınızın (ve isterseniz şirket içi kullanıcılarınızın) Active Directory Federasyon Hizmetleri (AD FS) (AD FS) federasyon sunucusu proxy'lerinize veya yük dengeli sanal IP'nize (VIP) bağlanması için uç noktayı sağlar.  <br/> |**Hedef:** Örneğin, sts.contoso.com  <br/> |
 
 ## <a name="external-dns-records-required-for-spf"></a>SPF için gereken dış DNS kayıtları
 <a name="BKMK_SPFrecords"> </a>
 
 > [!IMPORTANT]
-> SPF kimlik sahtekarlığını önlemeye yardımcı olmak için tasarlanmıştır, ancak SPF’nin koruma sağlayamayacağı bazı kimlik sahtekarlığı yöntemleri vardır. Bunlara karşı korunmak için, SPF'yi ayarlamış olduktan sonra, SPF için DKIM ve DMARC'yi de Office 365. Kullanmaya başlamak için bkz[. DkIM kullanarak kendi etki alanınıza gönderilen giden e-postayı Office 365](../security/office-365-security/use-dkim-to-validate-outbound-email.md). Ardından, bkz. [DMARC kullanarak e-postayı doğrulamak için Office 365](../security/office-365-security/use-dmarc-to-validate-email.md).
+> SPF kimlik sahtekarlığını önlemeye yardımcı olmak için tasarlanmıştır, ancak SPF’nin koruma sağlayamayacağı bazı kimlik sahtekarlığı yöntemleri vardır. Bunlara karşı koruma sağlamak için SPF'yi ayarladıktan sonra DKIM ve DMARC'yi Office 365 için de yapılandırmanız gerekir. Başlamak için bkz. [Office 365'da etki alanınızdan gönderilen giden e-postayı doğrulamak için DKIM kullanma](../security/office-365-security/use-dkim-to-validate-outbound-email.md). Ardından bkz. [Office 365'da e-postayı doğrulamak için DMARC kullanma](../security/office-365-security/use-dmarc-to-validate-email.md).
   
-SPF kayıtları, diğer kişilerin istenmeyen posta veya diğer kötü amaçlı e-postaları göndermek için etki alanınızı kullanmalarını önlemeye yardımcı olan TXT kayıtlarıdır. Sender Policy Framework (SPF) kayıtları, etki alanınıza e-posta gönderme yetkisi olan sunucuları tanımarak çalışır.
+SPF kayıtları, başkalarının istenmeyen posta veya başka kötü amaçlı e-postalar göndermek için etki alanınızı kullanmasını önlemeye yardımcı olan TXT kayıtlarıdır. Gönderen ilkesi çerçevesi (SPF) kayıtları, etki alanınızdan e-posta gönderme yetkisine sahip sunucuları tanımlayarak çalışır.
   
-Etki alanınız için yalnızca bir SPF kaydı (başka bir ifadeyle, SPF'yi tanımlayan bir TXT kaydı) bulunabilir. Bu tek kayıt birkaç farklı eklemeye sahip olabilir, ancak sonuçta elde edilen toplam DNS aramaları 10'dan fazla olabilir (bu, hizmet reddi saldırılarını önlemeye yardımcı olur). Ortamınız için doğru SPF kaydı değerlerini oluşturmanıza veya güncelleştirmenize yardımcı olmak için aşağıdaki tabloya ve diğer örneklere bakın.
+Etki alanınız için yalnızca bir SPF kaydınız (yani SPF'yi tanımlayan bir TXT kaydı) olabilir. Bu tek kayıt birkaç farklı eklemeye sahip olabilir, ancak sonuçta elde edilen toplam DNS araması 10'dan fazla olamaz (bu, hizmet reddi saldırılarının önlenmesine yardımcı olur). Ortamınız için doğru SPF kayıt değerlerini oluşturmanıza veya güncelleştirmenize yardımcı olması için aşağıdaki tabloya ve diğer örneklere bakın.
   
 ### <a name="structure-of-an-spf-record"></a>SPF kaydının yapısı
 
-Tüm SPF kayıtları üç parça içerir: SPF kaydı olduğu bildirimi, e-postayı gönderecek etki alanları ve IP adresleri ve bir zorlama kuralı. Geçerli bir SPF kaydında bu üçüne de ihtiyacınız var. E-postayla yalnızca bu e-postayı Office 365 için yaygın bir SPF kaydının Exchange Online verilmiştir:
+Tüm SPF kayıtları üç bölümden oluşur: bunun bir SPF kaydı olduğu bildirimi, e-posta göndermesi gereken etki alanları ve IP adresleri ve bir zorlama kuralı. Üçünü de geçerli bir SPF kaydında kullanmanız gerekir. Yalnızca Exchange Online e-posta kullandığınızda Office 365 için yaygın bir SPF kaydı örneği aşağıda verilmişti:
   
 ``` dns
 TXT Name @
 Values: v=spf1 include:spf.protection.outlook.com -all
 ```
 
-Etki alanınıza gelen e-postayı alan bir e-posta sistemi SPF kaydına bakarak iletiyi gönderilen e-posta sunucusu Office 365, ileti kabul edilir. İletiyi alan sunucu eski posta sisteminizse veya İnternet'deki kötü amaçlı bir sistemse, örneğin SPF denetimi başarısız olabilir ve ileti teslim edilir olmaz. Bunun gibi denetimler kimlik avı ve kimlik avı iletilerini önlemeye yardımcı olur.
+Etki alanınızdan e-posta alan bir e-posta sistemi SPF kaydına bakar ve iletiyi gönderen e-posta sunucusu bir Office 365 sunucusuysa, ileti kabul edilir. İletiyi gönderen sunucu eski posta sisteminiz veya İnternet'te kötü amaçlı bir sistemse, örneğin SPF denetimi başarısız olabilir ve ileti teslim edilmeyebilir. Bu tür denetimler kimlik sahtekarlığı ve kimlik avı iletilerini önlemeye yardımcı olur.
   
-### <a name="choose-the-spf-record-structure-you-need"></a>Size gereken SPF kaydı yapısını seçme
+### <a name="choose-the-spf-record-structure-you-need"></a>İhtiyacınız olan SPF kayıt yapısını seçin
 
-Office 365 için yalnızca Exchange Online e-postası kullanmamanızın olduğu senaryolar için (örneğin, SharePoint Online'dan kaynaklanan e-postayı da kullanırken), kayıt değerine nelerin dahil olduğunu belirlemek için aşağıdaki tabloyu kullanın.
+Yalnızca Office 365 için Exchange Online e-posta kullanmadığınız senaryolar için (örneğin, SharePoint Online'dan gelen e-postayı kullandığınızda), kaydın değerine ne ekleneceğini belirlemek için aşağıdaki tabloyu kullanın.
   
 > [!NOTE]
-> Örneğin güvenlik duvarınız üzerinden e-posta trafiğini yönetmek için kenar e-posta sunucularını da içeren karmaşık bir senaryo varsa, daha ayrıntılı bir SPF kaydı ayarlayın. Nasıl olduğunu öğrenin: [SPF kayıtlarının, Office 365 için kayıtlarda SPF ayarlama](../security/office-365-security/set-up-spf-in-office-365-to-help-prevent-spoofing.md). Ayrıca, SPF'nin SPF'nin Office 365 birlikte nasıl çalıştığını öğrenmek için Office 365, gönderen ilke çerçevesi [(SPF)](../security/office-365-security/how-office-365-uses-spf-to-prevent-spoofing.md) kullanarak kimliği doğrunlamanın önlenmesine yardımcı olur.
+> Güvenlik duvarınız genelinde e-posta trafiğini yönetmek için uç e-posta sunucuları gibi karmaşık bir senaryonuz varsa, ayarlamanız gereken daha ayrıntılı bir SPF kaydına sahip olursunuz. Nasıl yapılacağını öğrenin: Kimlik [sahtekarlıklarını önlemeye yardımcı olmak için Office 365'da SPF kayıtlarını ayarlama](../security/office-365-security/set-up-spf-in-office-365-to-help-prevent-spoofing.md). Ayrıca, Office 365 [sahtekarlık önlemeye yardımcı olmak için Sender Policy Framework'ün (SPF) nasıl kullanıldığına ilişkin bilgi edinerek SPF'nin](../security/office-365-security/how-office-365-uses-spf-to-prevent-spoofing.md) Office 365 ile nasıl çalıştığı hakkında daha fazla bilgi edinebilirsiniz.
   
-| Sayı|Eğer kullanıyorsanız...  <br/> |Amaç  <br/> |Bunları ekleyin:  <br/> |
+| Sayı|Kullanıyorsanız...  <br/> |Amaç  <br/> |Bunları ekleyin  <br/> |
 |:-----|:-----|:-----|:-----|
 |1  <br/> |Tüm e-posta sistemleri (gerekli)  <br/> |Tüm SPF kayıtları bu değerle başlar  <br/> |v=spf1  <br/> |
-|2  <br/> |Exchange Online (yaygın)  <br/> |Yalnızca tek bir Exchange Online  <br/> |include:spf.protection.outlook.com  <br/> |
-|3  <br/> |Üçüncü taraf e-posta sistemi (daha az yaygın)  <br/> ||şunları içerir:\<email system like mail.contoso.com\>  <br/> |
-|4  <br/> |Şirket içi posta sistemi (daha az yaygın)  <br/> |Başka bir posta sistemiyle birlikte Exchange Online Protection veya Exchange Online kullanıyorsanız kullanın  <br/> |ip4:\<0.0.0.0\>  <br/> ip6:\< : : \>  <br/> şunları içerir:\<mail.contoso.com\>  <br/> Köşeli ayraç () içindeki\<\> değer, etki alanınız için e-posta gönderecek diğer posta sistemleri olmalıdır.  <br/> |
-|5  <br/> |Tüm e-posta sistemleri (gerekli)  <br/> ||-all  <br/> |
+|2  <br/> |Exchange Online (ortak)  <br/> |Yalnızca Exchange Online ile kullanın  <br/> |include:spf.protection.outlook.com  <br/> |
+|3  <br/> |Üçüncü taraf e-posta sistemi (daha az yaygın)  <br/> ||Içerir:\<email system like mail.contoso.com\>  <br/> |
+|4  <br/> |Şirket içi posta sistemi (daha az yaygın)  <br/> |Exchange Online Protection veya Exchange Online artı başka bir posta sistemi kullanıyorsanız kullanın  <br/> |ip4:\<0.0.0.0\>  <br/> ip6:\< : : \>  <br/> Içerir:\<mail.contoso.com\>  <br/> Köşeli ayraç\<\> () içindeki değer, etki alanınız için e-posta gönderecek diğer posta sistemleri olmalıdır.  <br/> |
+|5  <br/> |Tüm e-posta sistemleri (gerekli)  <br/> ||-tümü  <br/> |
 
-### <a name="example-adding-to-an-existing-spf-record"></a>Örnek: Var olan bir SPF kaydına ekleme
+### <a name="example-adding-to-an-existing-spf-record"></a>Örnek: Mevcut bir SPF kaydına ekleme
 <a name="bkmk_addtospf"> </a>
 
-Zaten bir SPF kaydına sahipsinizse bu kaydın değerlerini eklemeniz veya güncelleştirmeniz Office 365. Örneğin, bu sizin için var olan SPF contoso.com olduğunu var:
+Zaten bir SPF kaydınız varsa, Office 365 değerlerini eklemeniz veya güncelleştirmeniz gerekir. Örneğin, contoso.com için mevcut SPF kaydınızın şu olduğunu varsayalım:
   
 ``` dns
 TXT Name @
 Values: v=spf1 ip4:60.200.100.30 include:smtp.adatum.com -all
 ```
 
-Şimdi de SPF kaydınızı diğer iş Office 365. Size gereken değerleri içeren bir SPF kaydınız olacak şekilde geçerli kaydınızı düzenlersiniz. Daha Office 365 için "spf.protection.outlook.com".
+Şimdi Office 365 için SPF kaydınızı güncelleştiriyorsunuz. Geçerli kaydınızı düzenleyerek ihtiyacınız olan değerleri içeren bir SPF kaydına sahip olacaksınız. Office 365 için "spf.protection.outlook.com".
   
 Doğru:
   
@@ -171,23 +171,23 @@ Record 2:
 Values: v=spf1 include:spf.protection.outlook.com -all
 ```
 
-### <a name="more-examples-of-common-spf-values"></a>Diğer yaygın SPF değerleri örnekleri
+### <a name="more-examples-of-common-spf-values"></a>Yaygın SPF değerlerine daha fazla örnek
 <a name="bkmk_addtospf"> </a>
 
-Tam Office 365 paketini kullanıyorsanız ve sizin adına pazarlama e-postaları göndermek için MailChimp kullanıyorsanız, contoso.com'deki SPF kaydınız yukarıdaki tablodan 1, 3 ve 5. satırları kullanan aşağıdaki gibi olabilir. 1. ve 5. satırların gerekli olduğunu unutmayın.
+Tam Office 365 paketini kullanıyorsanız ve sizin adınıza pazarlama e-postaları göndermek için MailChimp kullanıyorsanız, contoso.com'daki SPF kaydınız aşağıdaki gibi görünebilir ve yukarıdaki tablodan 1, 3 ve 5. satırlar kullanılır. 1 ve 5. satırların gerekli olduğunu unutmayın.
   
 ``` dns
 TXT Name @
 Values: v=spf1 include:spf.protection.outlook.com include:servers.mcsv.net -all
 ```
 
-Alternatif olarak, hem Exchange hem de şirket içi posta sisteminden e-postanın gönderll olduğu bir Office 365 Exchange Karma yapılandırmanız varsa, contoso.com'deki SPF kaydınız şu şekilde olabilir:
+Alternatif olarak, hem Office 365 hem de şirket içi posta sisteminizden e-postanın gönderileceği Exchange Karma yapılandırmanız varsa, contoso.com'deki SPF kaydınız şöyle görünebilir:
   
 ``` dns
 TXT Name @
 Values: v=spf1 include:spf.protection.outlook.com include:mail.contoso.com -all
 ```
 
-Bunlar, etki alanınızı e-posta için Office 365'a eklerken var olan SPF kaydınızı uyarlamanıza yardımcı Office 365 örneklerdir. Örneğin güvenlik duvarınız üzerinden e-posta trafiğini yönetmek için kenar e-posta sunucularını da içeren karmaşık bir senaryo varsa, daha ayrıntılı bir SPF kaydı ayarlayın. Nasıl olduğunu öğrenin: [SPF kayıtlarının, Office 365 için kayıtlarda SPF ayarlama](../security/office-365-security/set-up-spf-in-office-365-to-help-prevent-spoofing.md).
+Bunlar, etki alanınızı e-posta için Office 365 eklediğinizde mevcut SPF kaydınızı uyarlamanıza yardımcı olabilecek bazı yaygın örneklerdir. Güvenlik duvarınız genelinde e-posta trafiğini yönetmek için uç e-posta sunucuları gibi karmaşık bir senaryonuz varsa, ayarlamanız gereken daha ayrıntılı bir SPF kaydına sahip olursunuz. Nasıl yapılacağını öğrenin: Kimlik [sahtekarlıklarını önlemeye yardımcı olmak için Office 365'da SPF kayıtlarını ayarlama](../security/office-365-security/set-up-spf-in-office-365-to-help-prevent-spoofing.md).
   
 İşte geri dönmek için kullanabileceğiniz kısa bir bağlantı: [https://aka.ms/o365edns]()

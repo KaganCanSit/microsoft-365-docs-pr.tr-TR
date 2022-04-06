@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 description: Donanım tabanlı yalıtımda en yeni özellikleri elde edin. Açıkları ve kötü amaçlı bağlantılar gibi geçerli ve ortaya çıkan saldırıların çalışan üretkenliğini ve kurumsal güvenliği kesintiye karşı engellemesini önle.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: da61ee2f5e29501e033ad44bc3fdb04ee2c042f0
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 1a8f752fd05499c9fec0d0c337c9ffee430f154f
+ms.sourcegitcommit: 7aa2441c1f2cc5b4b5495d6fdb993e563f86647f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64473331"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "64638081"
 ---
 # <a name="application-guard-for-office-for-admins"></a>Yöneticiler için Office Application Guard
 
@@ -51,7 +51,7 @@ Güncelleştirme kanallarını güncelleme hakkında Office fazla bilgi edinmek 
 * Microsoft 365 E5 veya Microsoft 365 E5 Güvenlik
 
 > [!NOTE]
-> Kurumlar için Microsoft 365 Uygulamaları tabanlı lisansa sahip olan kullanıcı, posta için Application Guard'a Office.
+> Kurumlar için Microsoft 365 Uygulamaları etkinleştirme veya cihaz tabanlı lisanslama lisansına sahip olan kullanıcı, lisans için Application Guard'a Office.
 
 ## <a name="deploy-application-guard-for-office"></a>Uygulama Koruması'nın Office
 
