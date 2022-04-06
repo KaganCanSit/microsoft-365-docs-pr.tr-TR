@@ -23,12 +23,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 0bab6d8aa8aaef29b67ed8460f2d48e65cd24aa1
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 4bba9797572193199dba0bd4c928693d94bf00de
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314329"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569168"
 ---
 # <a name="investigate-incidents-in-microsoft-365-defender"></a>E-Microsoft 365 Defender'de olayları araştır
 
@@ -48,11 +48,11 @@ Ayrıntılara atlamadan önce, olayın özelliklerine ve özetine göz atabilirs
 
 Onay işareti sütunundan olayı seçerek başlayabilirsiniz. İşte bir örnek.
 
-:::image type="content" source="../../media/investigate-incidents/incidents-ss-incident-select.png" alt-text="Onay işareti sütunundan bir olay seçme örneği." lightbox="../../media/investigate-incidents/incidents-ss-incident-select.png":::
+:::image type="content" source="../../media/investigate-incidents/incidents-ss-incident-select.png" alt-text="Portalda bir olayı Microsoft 365 Defender seçme" lightbox="../../media/investigate-incidents/incidents-ss-incident-select.png":::
 
 Bunu bildiğinizde, olay hakkında önem derecesi, atandığı kişi ve [MITRE ATT&trade;](https://attack.mitre.org/)&gibi önemli bilgilerle birlikte bir özet bölmesi açılır. İşte bir örnek.
 
-:::image type="content" source="../../media/investigate-incidents/incidents-ss-incident-side-panel.png" alt-text="Olay için özet bölmesi örneği." lightbox="../../media/investigate-incidents/incidents-ss-incident-side-panel.png":::
+:::image type="content" source="../../media/investigate-incidents/incidents-ss-incident-side-panel.png" alt-text="Portalda yer alan ve bir olayın özet ayrıntılarını Microsoft 365 Defender." lightbox="../../media/investigate-incidents/incidents-ss-incident-side-panel.png":::
 
 Buradan Olay sayfasını **aç'ı seçin**. Bu, daha fazla özet bilgi ve uyarılar, cihazlar, kullanıcılar, soruşturmalar ve kanıt için sekmeler bu olayın ana sayfasını açar.
 
@@ -62,7 +62,7 @@ Ayrıca, bir olayın ana sayfasını, olay sırasından olay adını seçerek de
 
 Özet **sayfası** , olayla ilgili olarak dikkat çekmek istediğiniz en önemli şeylerden bir anlık görüntü bakış sağlar.
 
-:::image type="content" source="../../media/incidents-overview/incidents-ss-incident-summary.png" alt-text="Portalda bir olay için Özet Microsoft 365 Defender örneği" lightbox="../../media/incidents-overview/incidents-ss-incident-summary.png":::
+:::image type="content" source="../../media/incidents-overview/incidents-ss-incident-summary.png" alt-text="Portalda bir olayın özet Microsoft 365 Defender." lightbox="../../media/incidents-overview/incidents-ss-incident-summary.png":::
 
 Bilgiler bu bölümlerde düzenlenmiştir.
 
@@ -82,12 +82,12 @@ Uyarılar **sekmesinde** , olayla ilgili uyarılar için uyarı kuyruğunı ve o
 
 - Önem Derecesi.
 - Uyarıya katılan varlıklar.
-- Uyarıların kaynağı (Kimlik için Microsoft Defender, Uç Nokta için Microsoft Defender, Office 365 için Microsoft Defender, Bulut Uygulamaları için Defender ve uygulama yönetimi eklentileri).
+- Uyarıların (Kimlik için Microsoft Defender, Uç Nokta için Microsoft Defender, Office 365 için Microsoft Defender, Bulut için Defender ve uygulamanın kaynağı yönetim eklenti)'yi seçin.
 - Birbirine bağlı bağlantının nedeni.
 
 İşte bir örnek.
 
-:::image type="content" source="../../media/investigate-incidents/incident-alerts.png" alt-text="Bir olay için Uyarılar sayfası örneği." lightbox="../../media/investigate-incidents/incident-alerts.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-alerts.png" alt-text="Microsoft 365 Defender portalında bir olay için Uyarılar bölmesi" lightbox="../../media/investigate-incidents/incident-alerts.png":::
 
 Varsayılan olarak, uyarıları kronolojik olarak sıralanan bu şekilde, saldırının zamanla nasıl oynandı olduğunu görebilirsiniz. Bir olay içinde bir uyarı Microsoft 365 Defender, genel olayın bağlamına özgü uyarı bilgilerini görüntüler. 
 
@@ -95,7 +95,7 @@ Uyarının olaylarını, diğer tetiklenen uyarıların geçerli uyarıya neden 
 
 İşte bir örnek.
 
-:::image type="content" source="../../media/investigate-incidents/incident-alert-example.png" alt-text="Olay içindeki uyarı ayrıntıları sayfası örneği." lightbox="../../media/investigate-incidents/incident-alert-example.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-alert-example.png" alt-text="Portalda bulunan bir olayda uyarı Microsoft 365 Defender." lightbox="../../media/investigate-incidents/incident-alert-example.png":::
 
 Olay uyarı sayfasında şu bölümler vardır:
 
@@ -117,11 +117,11 @@ Araştırma uyarılarında uyarı kuyruğu ve uyarı sayfalarının nasıl [kull
 
 Cihazlar **sekmesi** olayla ilgili tüm cihazları listeler. İşte bir örnek.
 
-:::image type="content" source="../../media/investigate-incidents/incident-devices.png" alt-text="Olay için Cihazlar sayfası örneği." lightbox="../../media/investigate-incidents/incident-devices.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-devices.png" alt-text="Mobil portalda bir olayın Cihazlar Microsoft 365 Defender sayfası" lightbox="../../media/investigate-incidents/incident-devices.png":::
 
 Cihazın ayrıntılarını, dizin verilerini, etkin uyarıları ve oturum açmış kullanıcıları görmek için cihazın onay işaretini seçin. Uç nokta cihaz envanteri için Defender'da cihaz ayrıntılarını görmek için cihazın adını seçin. İşte bir örnek.
 
-:::image type="content" source="../../media/investigate-incidents/incident-devices-details.png" alt-text="Uç Nokta için Defender için bir cihazlar sayfası örneği." lightbox="../../media/investigate-incidents/incident-devices-details.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-devices-details.png" alt-text="Ürün sayfasında Cihaz stoku seçeneğiyle ilgili Uç Nokta için Microsoft Defender." lightbox="../../media/investigate-incidents/incident-devices-details.png":::
 
 Cihaz sayfasında, cihaz hakkında tüm uyarıları, zaman çizelgesi ve güvenlik önerileri gibi ek bilgiler topleyebilirsiniz. Örneğin, Zaman Çizelgesi sekmesinde  makine zaman çizelgesinde ilerleyerek, makinede gözlemlenen tüm olayları ve davranışları, uyarılarla kesişen kronolojik sırayla görüntüleyebilirsiniz.
 
@@ -132,7 +132,7 @@ Cihaz sayfasında, cihaz hakkında tüm uyarıları, zaman çizelgesi ve güvenl
 
 Kullanıcılar **sekmesi** , olayın parçası veya ilgili olduğu belirlenen tüm kullanıcıları listeler. İşte bir örnek.
 
-:::image type="content" source="../../media/investigate-incidents/incident-users.png" alt-text="Olay için Kullanıcılar sayfası örneği." lightbox="../../media/investigate-incidents/incident-users.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-users.png" alt-text="Portalda Kullanıcılar Microsoft 365 Defender." lightbox="../../media/investigate-incidents/incident-users.png":::
 
 Kullanıcı hesabı tehditi, maruz kalma ve kişi bilgileriyle ilgili ayrıntıları görmek için kullanıcının onay işaretini seçin. Ek kullanıcı hesabı ayrıntılarını görmek için kullanıcı adını seçin.
 
@@ -143,15 +143,15 @@ Kullanıcıları araştırma içinde ek kullanıcı bilgilerini görüntülemeyi
 
 Posta **Kutuları** sekmesi, olayın parçası veya ilgili olduğu belirlenen tüm posta kutularını listeler. İşte bir örnek.
 
-:::image type="content" source="../../media/investigate-incidents/incident-mailboxes.png" alt-text="Olay için Posta Kutuları sayfası örneği." lightbox="../../media/investigate-incidents/incident-mailboxes.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-mailboxes.png" alt-text="Portalda bir olayın Posta Kutuları Microsoft 365 Defender." lightbox="../../media/investigate-incidents/incident-mailboxes.png":::
 
-Etkin uyarıların listesini görmek için posta kutusunun onay işaretini seçebilirsiniz. Office 365 için Defender'a ilişkin Gezgin sayfasında ek posta kutusu ayrıntılarını görmek için posta kutusu Office 365.
+Etkin uyarıların listesini görmek için posta kutusunun onay işaretini seçebilirsiniz. Posta kutunuza ilişkin Gezgin sayfasında ek posta kutusu ayrıntılarını görmek için posta kutusu adını Office 365 için Defender.
 
 ## <a name="investigations"></a>İncelemeler
 
-Araştırma **sekmesi** , bu olayda [uyarılar tarafından](m365d-autoir.md) tetiklenen tüm otomatik soruşturmaları listeler. Otomatik soruşturmalar, otomatik araştırmalarınızı uç nokta için Defender ve Office 365 için Defender'da çalıştıracak şekilde yapılandırmanıza bağlı olarak, düzeltme eylemleri gerçekleştirecek veya eylemlerin analist onayı için Office 365.
+Araştırma **sekmesi** , bu olayda [uyarılar tarafından](m365d-autoir.md) tetiklenen tüm otomatik soruşturmaları listeler. Otomatik soruşturmalar, otomatik araştırmalarınızı Uç Nokta için Defender'da çalıştıracak şekilde nasıl yapılandırıldığına bağlı olarak, düzeltme eylemleri gerçekleştirecek veya eylemlerin analist onayı için Office 365 için Defender.
 
-:::image type="content" source="../../media/investigate-incidents/incident-investigations.png" alt-text="Bir olay için Araştırma sayfası örneği." lightbox="../../media/investigate-incidents/incident-investigations.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-investigations.png" alt-text="Portalda yer alan bir olay için Microsoft 365 Defender sayfası" lightbox="../../media/investigate-incidents/incident-investigations.png":::
 
 Araştırma ve düzeltme durumu hakkında tam bilgi için araştırmanın ayrıntılar sayfasına gitmek için araştırmayı seçin. Araştırma kapsamında onay için bekleyen herhangi bir eylem varsa, bunlar Bekleyen eylemler **geçmişi sekmesinde** görüntülenir. Olay düzeltmesi kapsamında eylemde bulundur.
 
@@ -169,7 +169,7 @@ Daha fazla bilgi için bkz[. Otomatik araştırma ve Microsoft 365 Defender](m36
 
 Kanıt **ve Yanıt** sekmesi, olayda uyarılarda desteklenen tüm olayları ve şüpheli varlıkları gösterir. İşte bir örnek.
 
-:::image type="content" source="../../media/investigate-incidents/incident-evidence.png" alt-text="Bir olay için Kanıt ve Yanıt sayfası örneği." lightbox="../../media/investigate-incidents/incident-evidence.png":::
+:::image type="content" source="../../media/investigate-incidents/incident-evidence.png" alt-text="Microsoft 365 Defender portalında bir olay için Microsoft 365 Defender sayfası" lightbox="../../media/investigate-incidents/incident-evidence.png":::
 
 Microsoft 365 Defender, uyarılarda olayların tüm desteklenen olaylarını ve şüpheli varlıklarını otomatik olarak inceler ve önemli e-postalar, dosyalar, işlemler, hizmetler, IP Adresleri ve daha fazlası hakkında bilgi sağlar. Bu, olayda olası tehditleri hızla algılamanıza ve engellemeye yardımcı olur.
 
@@ -184,16 +184,16 @@ Bu **Graph** saldırının tüm kapsamını, saldırının zaman içinde ağın�
 1. Saldırının kronolojisini anlamak için uyarıları ve düğümleri zaman içinde grafikte oynatabilirsiniz.
 
 
-   :::image type="content" source="../../media/investigate-incidents/incident-graph-play.gif" alt-text="Sayfa üzerinde uyarıları ve düğümleri Graph örneği":::
+   :::image type="content" source="../../media/investigate-incidents/incident-graph-play.gif" alt-text="Sayfa üzerinde uyarıların ve düğümlerin Graph.":::
  
 
 2. Varlık bölmesini açın ve varlık ayrıntılarını gözden geçirmenizi ve dosya silme ya da cihazı yalıtma gibi düzeltme eylemlerine ilişkin işlem görüntülemenizi sağlar.
  
-   :::image type="content" source="../../media/investigate-incidents/incident-graph-entity-pane.png" alt-text="Giriş sayfasındaki varlık Graph örneği" lightbox="../../media/investigate-incidents/incident-graph-entity-pane.png":::
+   :::image type="content" source="../../media/investigate-incidents/incident-graph-entity-pane.png" alt-text="Microsoft 365 Defender portalında Graph sayfasındaki varlık bölmesi" lightbox="../../media/investigate-incidents/incident-graph-entity-pane.png":::
 
 3. İlgili olduğu varlık temel alarak uyarıları vurgulayın.
  
-   :::image type="content" source="../../media/investigate-incidents/incident-graph-alert.png" alt-text="Sayfa üzerinde uyarı Graph örneği" lightbox="../../media/investigate-incidents/incident-graph-alert.png":::
+   :::image type="content" source="../../media/investigate-incidents/incident-graph-alert.png" alt-text="Sayfa üzerinde uyarı Graph vurgusu" lightbox="../../media/investigate-incidents/incident-graph-alert.png":::
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -205,5 +205,5 @@ Gerekirse:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Olaylara genel bakış](incidents-overview.md)
-- [Olayları önceliklendirme](incident-queue.md)
-- [Olayları yönetme](manage-incidents.md)
+- [Olaylara öncelik belirleyin](incident-queue.md)
+- [Olayları yönetin](manage-incidents.md)

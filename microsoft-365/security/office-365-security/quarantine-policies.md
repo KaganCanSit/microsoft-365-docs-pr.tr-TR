@@ -17,16 +17,16 @@ ms.custom: ''
 description: Yöneticiler, kullanıcıların karantinaya alınmış iletilerde neler yapasını denetlemek için karantina ilkelerini kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8f015951fec4ea8fb9d433c8b48ccb26cd9e1222
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 5133b98609c29e54361b8fe108e8810858f0d8c8
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63321299"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467125"
 ---
 # <a name="quarantine-policies"></a>Karantina ilkeleri
 
-Exchange Online Protection (EOP _) ve_ Office 365 için Microsoft Defender'daki karantina ilkeleri (daha önce karantina etiketleri olarak bilinirdi) yöneticilerin, iletinin neden karantinaya alındığına bağlı olarak kullanıcıların karantinaya alınmış iletilerde neler yapacılarını denetlemesine olanak sağlar.
+Exchange Online Protection (EOP _) ve_ Office 365 için Microsoft Defender'de karantina ilkeleri (daha önce karantina etiketleri olarak bilinirdi) yöneticilerin, iletinin neden karantinaya alındığına bağlı olarak, kullanıcıların karantinaya alınmış iletilerde neler yapababileceklerini denetlemesine olanak sağlar.
 
 Geleneksel olarak, ileti neden karantinaya alındığına bağlı olarak kullanıcılara karantina iletileri için etkileşim düzeylerine izin verilmiş veya reddedilmiştir. Örneğin, kullanıcılar istenmeyen posta önleme filtresiyle istenmeyen posta veya toplu olarak karantinaya alınmış iletileri  görüntüp serbest bıraksa da, yüksek güveni olan kimlik avı veya kötü amaçlı yazılım olarak karantinaya alınmış iletileri görüntüden veya serbest bırakarak görüntüde bırak yayımlanan iletiler görüntüde değildir.
 
@@ -42,10 +42,6 @@ Tek tek karantina ilkesi izinleri, aşağıdaki önceden ayarlanmış izin grupl
 
 Önceden ayarlanmış izin gruplarında bulunan tek tek karantina ilkesi izinleri aşağıdaki tabloda açıklanmıştır:
 
-<br>
-
-****
-
 |İzin|Erişim yok|Sınırlı erişim|Tam erişim|
 |---|:---:|:---:|:---:|
 |**Göndereni engelleme** (_PermissionToBlockSender_)||![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
@@ -53,11 +49,8 @@ Tek tek karantina ilkesi izinleri, aşağıdaki önceden ayarlanmış izin grupl
 |**Önizleme** (_PermissionToPreview_)||![Onay işareti.](../../media/checkmark.png)|![Onay işareti.](../../media/checkmark.png)|
 |**Alıcıların iletiyi karantinadan bırakmasına izin verme** (_PermissionToRelease_)|||![Onay işareti.](../../media/checkmark.png)|
 |**Alıcıların bir iletinin karantinadan çıkarılmaz** için istekte olmasına izin verme (_PermissionToRequestRelease_)||![Onay işareti](../../media/checkmark.png)||
-|
 
 Varsayılan karantina ilkeleri, ilişkili izin grupları ve karantina bildirimlerinin etkin olup olmadığı aşağıdaki tabloda açıklanmıştır:
-
-<br>
 
 |Varsayılan karantina ilkesi|İzin grubu kullanıldı|Karantina bildirimleri etkinleştirilsin mi?|
 |---|---|---|
@@ -151,10 +144,6 @@ _EndUserQuarantinePermissionsValue_ parametresi, ikili değerden dönüştürül
 
 Tek tek her izin için gereken sıra ve değerler aşağıdaki tabloda açıklanmıştır:
 
-<br>
-
-****
-
 |İzin|Ondalık değer|İkili değer|
 |---|:---:|:---:|
 |PermissionToViewHeader<sup>\*</sup>|128|10000000|
@@ -165,7 +154,6 @@ Tek tek her izin için gereken sıra ve değerler aşağıdaki tabloda açıklan
 |PermissionToRelease<sup>\*\*\*</sup>|4|00000100|
 |PermissionToPreview|2|00000010|
 |PermissionToDelete|1|00000001|
-|
 
 <sup>\*</sup>0 değeri, karantinaya alınmış iletinin ayrıntılarında İleti üstbilgilerini görüntüle düğmesini gizlemez (düğme her zaman kullanılabilir).
 
@@ -174,10 +162,6 @@ Tek tek her izin için gereken sıra ve değerler aşağıdaki tabloda açıklan
 <sup>\*\*\*</sup> Bu değerlerin ikisini de 1 olarak ayarlayın. Birini 1,0 olarak ayarlayın veya her ikisini de 0 olarak ayarlayın.
 
 Sınırlı erişim izinleri için gerekli değerler:
-
-<br>
-
-****
 
 |İzin|Sınırlı erişim|
 |---|:--:|
@@ -191,7 +175,6 @@ Sınırlı erişim izinleri için gerekli değerler:
 |PermissionToDelete|1|
 |İkili değer|00011011|
 |Ondalık değer|27|
-|
 
 Bu örnek, önceki tabloda açıklandığı gibi Sınırlı erişim izinlerini ataan karantina bildirimleri açık olarak Sınırlı Erişim adlı yeni bir karantina ilkesi oluşturur.
 
@@ -207,18 +190,13 @@ Ayrıntılı söz dizimi ve parametre bilgileri için bkz [. New-QuarantinePolic
 
 _E-posta iletilerini_ karantinaya alan desteklenen koruma özelliklerinde, kullanılabilir karantina eylemlerine karantina ilkesi atabilirsiniz. İletileri karantinaya alan özellikler ve karantina ilkelerinin kullanılabilirliği aşağıdaki tabloda açıklanmıştır:
 
-<br>
-
-****
-
 |Özellik|Karantina ilkeleri destekli mi?|Kullanılan varsayılan karantina ilkeleri|
 |---|:---:|---|
 |[İstenmeyen posta önleme ilkeleri](configure-your-spam-filter-policies.md): <ul><li>**İstenmeyen** Posta (_spamAction_)</li><li>**Yüksek güven istenmeyen** posta (_HighConfidenceSpamAction_)</li><li>**Kimlik Avı** (_PhishSpamAction_)</li><li>**Yüksek güven kimlik avı** (_HighConfidencePhishAction_)</li><li>**Toplu** (_BulkSpamAction_)</li></ul>|Evet|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>AdminOnlyAccessPolicy (erişim yok)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li></ul>|
-|Kimlik avı önleme ilkeleri: <ul><li>[Kimliksiz zeka koruması](set-up-anti-phishing-policies.md#spoof-settings) (_AuthenticationFailAction_)</li><li>[Office 365 için Defender'da kimliğe bürünme koruması](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365):<ul><li>**İleti kimliğine bürünülen bir kullanıcı olarak algılanırsa** (_TargetedUserProtectionAction_)</li><li>**İleti kimliğine bürünülen bir etki alanı** olarak algılanırsa (_TargetedDomainProtectionAction_)</li><li>**Posta kutusu zekası kimliğine bürünülen kullanıcı algılarsa** (_MailboxIntelligenceProtectionAction_)</li></ul></li></ul>|Evet|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>Kimliğe bürünme koruması:<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li></ul></li></ul>|
+|Kimlik avı önleme ilkeleri: <ul><li>[Kimliksiz zeka koruması](set-up-anti-phishing-policies.md#spoof-settings) (_AuthenticationFailAction_)</li><li>[Office 365 için Defender'te kimliğe bürünme koruması](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365):<ul><li>**İleti kimliğine bürünülen bir kullanıcı olarak algılanırsa** (_TargetedUserProtectionAction_)</li><li>**İleti kimliğine bürünülen bir etki alanı** olarak algılanırsa (_TargetedDomainProtectionAction_)</li><li>**Posta kutusu zekası kimliğine bürünülen kullanıcı algılarsa** (_MailboxIntelligenceProtectionAction_)</li></ul></li></ul>|Evet|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>Kimliğe bürünme koruması:<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (Tam erişim)</li></ul></li></ul>|
 |[Kötü amaçlı yazılımdan koruma](configure-anti-malware-policies.md) ilkeleri: Tüm algılanan iletiler her zaman karantinaya alınır.|Evet|AdminOnlyAccessPolicy (erişim yok)|
 |[Kasa Korumasını Koruma](safe-attachments.md): <ul><li>Ekleri olan ve Ek ilkeleri (Etkinleştir ve Eylem) tarafından kötü amaçlı yazılım Kasa _e-posta_ _iletileri_</li><li>E-posta, OneDrive ve [Kasa Ekleri SharePoint tarafından kötü amaçlı yazılım olarak karantinaya Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li></ul>|<ul><li>Evet</li><li>Hayır</li></ul>|<ul><li>AdminOnlyAccessPolicy (erişim yok)</li><li>yok</li></ul>|
 |[Eylemle birlikte](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) posta akışı kuralları (aktarım kuralları olarak da bilinir): **İletiyi** barındırılan karantinaya (Karantina) _teslim._|Hayır|yok|
-|
 
 <sup>\*</sup> Bu [makalede daha önce açıklandığı gibi](#full-access-permissions-and-quarantine-notifications), kuruluşta DefaultFullAccessPolicy yerine NotificationEnabledPolicy kullanılabilir. Bu iki karantina ilkeleri arasındaki tek fark, NotificationEnabledPolicy'de karantina bildirimlerinin açılabilir ve DefaultFullAccessPolicy'de kapatılabilir.
 
@@ -247,7 +225,7 @@ Varsayılan karantina ilkeleri, önceden ayarlanmış izin grupları ve izinler 
 
    **Not**: Yeni bir ilke seniz, boş bir Karantina ilkesi  seçin değeri, bu karar için varsayılan karantina ilkesi olduğunu gösterir. İlkeyi daha sonra düzenleyseniz, boş değerlerin yerini önceki tabloda açıklandığı gibi asıl varsayılan karantina ilkesi adları alır.
 
-   ![İstenmeyen posta önleme ilkesinde ilke seçimlerini karantinaya alın.](../../media/quarantine-tags-in-anti-spam-policies.png)
+   :::image type="content" source="../../media/quarantine-tags-in-anti-spam-policies.png" alt-text="İstenmeyen posta önleme ilkesinde Karantina ilkesi seçimleri" lightbox="../../media/quarantine-tags-in-anti-spam-policies.png":::
 
 İstenmeyen posta önleme ilkelerini oluşturma ve değiştirme yönergelerinin tam yönergeleri [EOP'de istenmeyen posta önleme ilkelerini yapılandırma konusunda açıklanmıştır](configure-your-spam-filter-policies.md).
 
@@ -298,7 +276,7 @@ Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-HostedContentFil
 
 ### <a name="anti-phishing-policies"></a>Kimlik avı önleme ilkeleri
 
-Spoof Intelligence, EOP ve Defender'da akıllı Office 365. Kullanıcı kimliğe bürünme koruması, etki alanı kimliğe bürünme koruması ve posta kutusu zekası özellikleri yalnızca Office 365. Daha fazla bilgi için bkz[. Kimlik avıyla mücadele ilkeleri Microsoft 365](set-up-anti-phishing-policies.md).
+Spoof Intelligence EOP ve Office 365 için Defender. Kullanıcı kimliğe bürünme koruması, etki alanı kimliğe bürünme koruması ve posta kutusu zekası özellikleri yalnızca Office 365 için Defender. Daha fazla bilgi için bkz[. Kimlik avıyla mücadele ilkeleri Microsoft 365](set-up-anti-phishing-policies.md).
 
 1. Microsoft 365 Defender [portalında, İlkeler](https://security.microsoft.com) bölümünde **E-&** \> işbirliği **& kuralları** \>  \> Tehdit ilkeleri **Kimlik** avıyla **mücadele bölümüne** gidin.
 
@@ -327,12 +305,12 @@ Spoof Intelligence, EOP ve Defender'da akıllı Office 365. Kullanıcı kimliğe
 
    **Not**: Yeni bir ilke seniz, boş bir Karantina **ilkesi** uygula değeri, bu eylemin varsayılan karantina ilkesi kullanılır olduğunu gösterir. İlkeyi daha sonra düzenleyseniz, boş değerlerin yerini önceki tabloda açıklandığı gibi asıl varsayılan karantina ilkesi adları alır.
 
-   ![Kimlik avı önleme ilkesinde ilke seçimlerini karantinaya alın.](../../media/quarantine-tags-in-anti-phishing-policies.png)
+   :::image type="content" source="../../media/quarantine-tags-in-anti-phishing-policies.png" alt-text="Kimlik avı önleme ilkesinde Karantina ilkesi seçimleri" lightbox="../../media/quarantine-tags-in-anti-phishing-policies.png":::
 
 Kimlik avı önleme ilkelerini oluşturmaya ve değiştirmeye yönelik tüm yönergeler aşağıdaki konulardan edinebilirsiniz:
 
 - [EOP'de kimlik avı önleme ilkelerini yapılandırma](configure-anti-phishing-policies-eop.md)
-- [Kimlik avıyla mücadele ilkelerini Microsoft Defender'da Office 365](configure-mdo-anti-phishing-policies.md)
+- [E-postada kimlik avı önleme ilkelerini Office 365 için Microsoft Defender](configure-mdo-anti-phishing-policies.md)
 
 #### <a name="anti-phishing-policies-in-powershell"></a>PowerShell'de kimlik avı önleme ilkeleri
 
@@ -352,7 +330,7 @@ Kimlik avı koruma ilkeleri içinde karantina ilkeleri atamak için PowerShell k
   Get-AntiPhishPolicy | Format-List Name,Enable*Intelligence,Enable*Protection,*Action,*QuarantineTag
   ```
 
-  Varsayılan eylem değerleri ve Standart ve Katı için önerilen eylem değerleri hakkında bilgi için, Office 365 için [Microsoft Defender'da](recommended-settings-for-eop-and-office365.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365), kimlik avı önleme ilkelerinde [EOP](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings) kimlik avı koruma ilkesi ayarları ve Kimlik avı önleme ilkelerine kimliğe bürünme ayarları Office 365.
+  Varsayılan eylem değerleri ve Standart ve Katı için önerilen eylem değerleri hakkında bilgi için, bkz. Office 365 için Microsoft Defender'de kimlik avı önleme ilkelerinde [EOP](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings) kimlik avı koruma ilkesi ayarları ve Kimliğe [Bürünme ayarları](recommended-settings-for-eop-and-office365.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 - Kimlik avı önleme ilkeleri seniz, ilgili karantina ilkesi parametresine sahip olmayan kimlik avı önleme eylemi, karar için varsayılan karantina ilkesi [](#step-2-assign-a-quarantine-policy-to-supported-features) anlamına gelir.
 
@@ -437,7 +415,7 @@ New-MalwareFilterPolicy -Identity "Human Resources" -QuarantineTag NoAccess
 
 Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-MalwareFilterPolicy](/powershell/module/exchange/set-malwarefilterpolicy).
 
-### <a name="safe-attachments-policies-in-defender-for-office-365"></a>Kasa için Defender'da Ekleri Office 365
+### <a name="safe-attachments-policies-in-defender-for-office-365"></a>Kasa Ek İlkelerini Office 365 için Defender
 
 1. Microsoft 365 Defender [portalında](https://security.microsoft.com), İlkeler bölümünde **E-posta &** \> işbirliği **& kuralları** \>  \> Tehdit **Kasa ekleri** **gönderme bölümüne** gidin.
 
@@ -457,7 +435,7 @@ Ayrıntılı söz dizimi ve parametre bilgileri için bkz. [Set-MalwareFilterPol
 
    **Not**: Yeni bir ilke seniz, boş bir **Karantina ilkesi değeri** varsayılan karantina ilkesi kullanılır. İlkeyi daha sonra düzenleyseniz, boş değerin yerini, önceki tabloda açıklandığı gibi asıl varsayılan karantina ilkesi adı alır.
 
-Ekleri oluşturma ve değiştirme Kasa tam yönergeler, Kasa için Microsoft Defender'da Ekler ilkelerini [ayarlama makalesinde Office 365](set-up-safe-attachments-policies.md).
+Ekleri oluşturma ve değiştirme Kasa tam yönergeler, E-posta ve Kasa Ek İlkelerini [Ayarlama makalesinde Office 365 için Microsoft Defender](set-up-safe-attachments-policies.md).
 
 #### <a name="safe-attachments-policies-in-powershell"></a>Kasa PowerShell'de Ekleri Kaydetme
 
@@ -515,7 +493,7 @@ Karantina ilkelerinin genel ayarları, karantina ilkesinde karantina bildirimler
 
      Aşağıdaki ekran görüntüsünde, karantina bildiriminde özelleştirilmiş görünen ad gösterilir:
 
-     ![Karantina bildiriminde özelleştirilmiş bir gönderen görünen adı.](../../media/quarantine-tags-esn-customization-display-name.png)
+     :::image type="content" source="../../media/quarantine-tags-esn-customization-display-name.png" alt-text="Karantina bildiriminde özelleştirilmiş bir gönderen görünen adı" lightbox="../../media/quarantine-tags-esn-customization-display-name.png":::
 
    - **Bildirim:** Karantina bildirimlerinin en altına özel bir bildirim ekleyin. Yerelleştirilmiş metin **(Bir kuruluştan uyarı:** her zaman önce yer alan ve sizin belirttiğiniz metinden sonra gelen uyarıdır).
 
@@ -523,19 +501,19 @@ Karantina ilkelerinin genel ayarları, karantina ilkesinde karantina bildirimler
 
      Aşağıdaki ekran görüntüsü, karantina bildiriminde özelleştirilmiş bildirimi gösterir:
 
-     ![Karantina bildiriminin en altında özel bir bildirim.](../../media/quarantine-tags-esn-customization-disclaimer.png)
+     :::image type="content" source="../../media/quarantine-tags-esn-customization-disclaimer.png" alt-text="Karantina bildiriminin en altındaki özel bildirim" lightbox="../../media/quarantine-tags-esn-customization-disclaimer.png":::
 
    - **Dili seçin**: Karantina bildirimleri, alıcının dil ayarlarına göre yerelleştirilmiştir. Görünen ad ve Yasal Uyarı değerleri için farklı dillerde **özelleştirilmiş** **metinler belirtebilirsiniz** .
 
      İlk dil kutusundan en az bir dil seçin ve Ekle'ye **tıklayın**. Her dilin ardından Ekle'ye tıklayarak **birden çok** dil seçin. Bölüm dili kutusunda seçtiğiniz tüm diller görüntülenir:
 
-     ![Karantina ilkelerinin genel karantina bildirimi ayarlarında ikinci dil kutusunda seçilen diller.](../../media/quarantine-tags-esn-customization-selected-languages.png)
+     :::image type="content" source="../../media/quarantine-tags-esn-customization-selected-languages.png" alt-text="Karantina ilkelerinin genel karantina bildirim ayarlarında ikinci dil kutusunda seçilen diller" lightbox="../../media/quarantine-tags-esn-customization-selected-languages.png":::
 
    - **Şirket logosunu kullan**: Karantina bildirimlerinin en üstünde kullanılan varsayılan Microsoft logosunu değiştirmek için bu seçeneği belirtin. Bunu yapmak için, Özel logonuzu yüklemek üzere Microsoft 365 için Özel [tema'da](../../admin/setup/customize-your-organization-theme.md) verilen yönergeleri izleyebilirsiniz.
 
      Aşağıdaki ekran görüntüsünde karantina bildiriminde özel bir logo yer alır:
 
-     ![Karantina bildiriminde özel bir logo.](../../media/quarantine-tags-esn-customization-logo.png)
+     :::image type="content" source="../../media/quarantine-tags-esn-customization-logo.png" alt-text="Karantina bildiriminde özel logo" lightbox="../../media/quarantine-tags-esn-customization-logo.png":::
 
    - **Son kullanıcı istenmeyen posta bildirimi gönderme sıklığı (gün)**: Karantina bildirimleri için sıklığı seçin.
 
@@ -670,14 +648,14 @@ Karantina ilkesi Sınırlı erişim izinleri **atarsa** , kullanıcılar aşağ�
   - **Karantinadan kaldırma**
   - **Göndereni engelle**
 
-  ![Karantina ilkesi kullanıcıya Sınırlı erişim izinleri veriyorsa, karantinaya alınan ileti ayrıntılarında kullanılabilir düğmeler.](../../media/quarantine-tags-quarantined-message-details-limited-access.png)
+  :::image type="content" source="../../media/quarantine-tags-quarantined-message-details-limited-access.png" alt-text="Karantina ilkesi kullanıcıya sınırlı erişim izinleri veriyorsa, karantinaya alınan ileti ayrıntılarında kullanılabilir düğmeler" lightbox="../../media/quarantine-tags-quarantined-message-details-limited-access.png":::
 
 - **Karantina bildirimleri**: Aşağıdaki düğmeler kullanılabilir:
   - **Göndereni engelle**
   - **Sürüm isteği**
-  - **Gözden Geçir**
+  - **Gözden geçirin**
 
-  ![Karantina ilkesi kullanıcıya Sınırlı erişim izinleri veriyorsa, karantina bildiriminde kullanılabilir düğmeler.](../../media/quarantine-tags-esn-limited-access.png)
+  :::image type="content" source="../../media/quarantine-tags-esn-limited-access.png" alt-text="Karantina ilkesi kullanıcıya sınırlı erişim izinleri veriyorsa, karantina bildiriminde kullanılabilir düğmeler" lightbox="../../media/quarantine-tags-esn-limited-access.png":::
 
 #### <a name="full-access"></a>Tam erişim
 
@@ -690,14 +668,14 @@ Karantina ilkesi Tam erişim izinleri ( **tüm kullanılabilir** izinler) atarsa
   - **Karantinadan kaldırma**
   - **Göndereni engelle**
 
-  ![Karantina ilkesi kullanıcıya Tam erişim izinleri veriyorsa, karantinaya alınan ileti ayrıntılarında kullanılabilir düğmeler.](../../media/quarantine-tags-quarantined-message-details-full-access.png)
+  :::image type="content" source="../../media/quarantine-tags-quarantined-message-details-full-access.png" alt-text="Karantina ilkesi kullanıcıya tam erişim izinleri veriyorsa, karantinaya alınmış ileti ayrıntılarında kullanılabilir düğmeler" lightbox="../../media/quarantine-tags-quarantined-message-details-full-access.png":::
 
 - **Karantina bildirimleri**: Aşağıdaki düğmeler kullanılabilir:
   - **Göndereni engelle**
   - **Sürüm**
-  - **Gözden Geçir**
+  - **Gözden geçirin**
 
-  ![Karantina ilkesi kullanıcıya Tam erişim izinleri veriyorsa, karantina bildiriminde kullanılabilir düğmeler.](../../media/quarantine-tags-esn-full-access.png)
+  :::image type="content" source="../../media/quarantine-tags-esn-full-access.png" alt-text="Karantina ilkesi kullanıcıya tam erişim izinleri veriyorsa, karantina bildiriminde kullanılabilir düğmeler" lightbox="../../media/quarantine-tags-esn-full-access.png":::
 
 ### <a name="individual-permissions"></a>Tek tek izinler
 

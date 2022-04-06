@@ -16,12 +16,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Microsoft SharePoint Syntex için kaynakları nasıl bu SharePoint Syntex.
-ms.openlocfilehash: 3b8c85cfd405e68884df844c502473cdd95a4fa5
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
-ms.translationtype: MT
+ms.openlocfilehash: 1b57283b5818a7fa502e112d903f873863a6e1b6
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449436"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682074"
 ---
 # <a name="introduction-to-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'e giriş
 
@@ -41,7 +41,7 @@ Bu sayfada yer alan kaynaklar, kuruluşta diğer kaynakları ve kaynakları Shar
 
 ## <a name="get-started"></a>Kullanmaya başlayın
 
-Bu bölümdeki kaynaklar, aşağıdaki üç veri sınıflandırması ve ayıklama yöntemi hakkında daha fazla bilgi edinmek için yardımcı SharePoint Syntex: belgeyi anlama, form işleme ve önceden oluşturma.
+Bu bölümdeki kaynaklar, bir ekibin kullandığı veri sınıflandırma ve ayıklama yöntemleri hakkında daha fazla bilgi SharePoint Syntex. İki özel model türü vardır: [belgeyi anlama](document-understanding-overview.md) ve [form işleme ve](form-processing-overview.md) önceden [oluşturulmuş](prebuilt-overview.md) model türü.
 
 > [!NOTE]
 > SharePoint yönetim merkezinden bir içerik merkezi oluşturarak bu [SharePoint Syntex satın almadan SharePoint başlatabilirsiniz](create-a-content-center.md). Lisanssız kullanıcılar belge anlama modelleri oluşturabilir, ancak bunları belge kitaplığına uygulayamaz.

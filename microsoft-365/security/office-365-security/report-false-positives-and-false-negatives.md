@@ -13,12 +13,12 @@ ms.collection:
 description: Rapor İletisi özelliğini kullanarak pozitif ve yanlış negatif Outlook rapor etmeyi öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e5539525b6d752223c4895fc62ff49a90768a5b5
-ms.sourcegitcommit: dfa9f28a5a5055a9530ec82c7f594808bf28d0dc
+ms.openlocfilehash: f2181df44f8d193f8c19c508451733773bd20708
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "62997067"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473514"
 ---
 # <a name="report-false-positives-and-false-negatives-in-outlook"></a>Negatif sonuçlarda hatalı pozitif ve yanlış negatif Outlook
 
@@ -26,7 +26,7 @@ ms.locfileid: "62997067"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!NOTE]
@@ -69,9 +69,9 @@ Gelen Kutusu'daki veya Önemsiz E-posta dışındaki başka herhangi bir e-posta
 
 1. Seçili **iletinin sağ** üst köşesinde Diğer eylemler üç nokta öğesini seçin, açılan menüden İletiyi bildir'i seçin ve sonra da Gereksiz veya Kimlik  **Avı'ı** **seçin**.
 
-   ![İletiyi Bildir - Diğer eylemler.](../../media/report-message-more-actions.png)
+   :::image type="content" source="../../media/report-message-more-actions.png" alt-text="Diğer eylemler simgesi" lightbox="../../media/report-message-more-actions.png":::
 
-   ![Rapor İletisi - Gereksiz ve Kimlik Avı.](../../media/report-message-junk-phishing.png)
+   :::image type="content" source="../../media/report-message-junk-phishing.png" alt-text="Rapor İletisi bölmesinde Gereksiz ve Kimlik Avı seçeneği" lightbox="../../media/report-message-junk-phishing.png":::
 
 2. Seçilen iletiler analiz için Microsoft'a gönderilir ve:
    - İstenmeyen posta olarak bildirildiyse Önemsiz E-posta klasörüne taşındı.
@@ -81,9 +81,9 @@ Gelen Kutusu'daki veya Önemsiz E-posta dışındaki başka herhangi bir e-posta
 
 1. Seçili **iletinin sağ** üst köşesinde Diğer eylemler üç nokta öğesini seçin, açılan menüden İletiyi bildir'i seçin ve sonra da Gereksiz **Değil'i seçin**.
 
-   ![İletiyi Bildir - Diğer eylemler.](../../media/report-message-more-actions.png)
+   :::image type="content" source="../../media/report-message-more-actions.png" alt-text="Daha fazla eylem sağlayan simge" lightbox="../../media/report-message-more-actions.png":::
 
-   ![İletiyi Bildir - Gereksiz değil.](../../media/report-message-not-junk.png)
+   :::image type="content" source="../../media/report-message-not-junk.png" alt-text="Rapor İletisi bölmesinin altındaki Gereksiz Değil seçeneği" lightbox="../../media/report-message-not-junk.png":::
 
 2. Seçili ileti çözümleme için Microsoft'a gönderilir ve Gelen Kutusu'na veya belirtilen başka herhangi bir klasöre taşınır.
 

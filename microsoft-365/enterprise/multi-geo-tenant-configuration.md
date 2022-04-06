@@ -15,12 +15,12 @@ f1.keywords:
 ms.custom: seo-marvel-apr2020
 ms.localizationpriority: medium
 description: Bu makalede uydu konumları ekleme ve Multi-Geo için kiracınızı yapılandırma Microsoft 365 öğrenin.
-ms.openlocfilehash: 9842ff2295a64f544940f579d732c688735ae341
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 2bd0db24b364c642255ef2e902abad0495d24337
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312089"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64568888"
 ---
 # <a name="microsoft-365-multi-geo-tenant-configuration"></a>Microsoft 365 Multi-Geo kiracı yapılandırması
 
@@ -54,13 +54,13 @@ Uydu konumu eklemek için
 
 1. **Kapat**'ı seçin.
 
-Sağlama, kiracının boyutuna bağlı olarak birkaç saat ile 72 saat arasında sürebilir. Uydu konumunun sağlanması tamamlandıktan sonra bir e-posta onayı alırsınız. Yeni coğrafi konum, OneDrive yönetim merkezinin Coğrafi konumlar sekmesindeki haritada  mavi görüntülendiğinde, kullanıcıların tercih ettiği veri konumunu bu coğrafi konuma ayarlamaya devam edebilirsiniz. 
+Sağlama, kiracının boyutuna bağlı olarak birkaç saat ile 72 saat arasında sürebilir. Uydu konumunun sağlanması tamamlandıktan sonra bir e-posta onayı alırsınız. Yeni coğrafi konum, OneDrive yönetim merkezinin Coğrafi konumlar sekmesindeki haritada  mavi görüntülendiğinde, kullanıcıların tercih ettiği veri konumunu bu coğrafi konuma ayarlamaya devam edebilirsiniz.
 
 > [!IMPORTANT]
 > Yeni uydu konumunuz varsayılan ayarlarla ayarlanır. Bu, uydu konumunu yerel uyumluluk gereklerine uygun şekilde yapılandırmanıza olanak sağlar.
 
 ## <a name="setting-users-preferred-data-location"></a>Kullanıcıların tercih edilen veri konumunu ayarlama
-<span id="_Setting_a_User's" class="anchor"><span id="_Toc508109326" class="anchor"></span></span> 
+<span id="_Setting_a_User's" class="anchor"><span id="_Toc508109326" class="anchor"></span></span>
 
 Gerekli uydu konumlarını etkinleştirebilirsiniz ve kullanıcı hesaplarınızı uygun tercih edilen veri konumunu kullanmak üzere güncelleştirebilirsiniz. Her kullanıcı merkezi konumda kalıyor olsa bile, her kullanıcı için tercih edilen veri konumu ayarlamayı öneririz.
 
@@ -72,32 +72,36 @@ Gerekli uydu konumlarını etkinleştirebilirsiniz ve kullanıcı hesaplarınız
 
 Diğer Azure Active Directory (Azure AD) iki tür kullanıcı nesnesi vardır: yalnızca bulut kullanıcıları ve eşitlenmiş kullanıcılar. Lütfen kullanıcı türünüz için uygun yönergeleri izleyin.
 
-### <a name="synchronize-users-preferred-data-location-using-azure-ad-connect"></a>Kullanıcının Tercih Edilen Veri Konumunu Azure AD Depolama Alanı kullanarak Bağlan 
+### <a name="synchronize-users-preferred-data-location-using-azure-ad-connect"></a>Kullanıcının Tercih Edilen Veri Konumunu Azure AD Depolama Alanı kullanarak Bağlan
 
-Şirketinizin kullanıcıları şirket içi Active Directory sisteminden Azure AD'ye eşitlenmişse, bunların PreferredDataLocation ad'de doldurulması ve Azure AD ile eşitlenmesi gerekir.
+Şirketinizin kullanıcıları bir şirket içi Active Directory sisteminden Azure AD'ye eşitlenmişse, bunların PreferredDataLocation AD'de doldurulması ve Azure AD ile eşitlenmesi gerekir.
 
-Eşitlemeyi eşitleme Azure Active Directory Bağlan[:](/azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation) Şirket içi Active Directory Etki Alanı Hizmetleri'nden (AD DS) Azure AD'ye Tercih Edilen Veri Konumu eşitlemesi'ni yapılandırmak üzere Microsoft 365 kaynakları için tercih edilen veri konumunu yapılandırma.
+Eşitleme işlemi sırasındaki [Azure Active Directory Bağlan izleyin:](/azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation) Microsoft 365 Etki Alanı Hizmetleri'niz (AD DS) tarafından Azure AD'ye Tercih Edilen Veri Konumu eşitlemesi'ni yapılandırmak üzere şirket içi Active Directory edilen veri konumunu yapılandır.
 
 Standart kullanıcı oluşturma iş akışınız kapsamında kullanıcının Tercih Edilen Veri Konumu'nun ayarlamayı da eklemenizi öneririz.
 
 > [!IMPORTANT]
 > Herhangi bir sağlama OneDrive yeni kullanıcılar için, hesaba lisans atarak değişikliklerin kullanıcının OneDrive İş'da oturum a OneDrive için yayılması için kullanıcının PDL'si Azure AD ile eşitlendikten sonra en az 48 saat OneDrive İş. (Tercih edilen veri konumu, kullanıcı oturum atımadan önce ayar OneDrive İş yeni posta OneDrive doğru konumda sağlanmasını sağlar.)
 
-### <a name="setting-preferred-data-location-for-cloud-only-users"></a>Yalnızca bulut kullanıcıları için Tercih Edilen Veri Konumunu ayarlama 
+### <a name="setting-preferred-data-location-for-cloud-only-users"></a>Yalnızca bulut kullanıcıları için Tercih Edilen Veri Konumunu ayarlama
 
-Şirketinizin kullanıcıları şirket içi Active Directory sisteminden Azure AD'ye eşitlenmezse (bu, kullanıcıların Microsoft 365 veya Azure AD'de oluşturuldukları anlamına gelir) PDL'nin Şirket için Microsoft Azure Active Directory Modülü kullanılarak ayarlanmış Windows PowerShell.
+Şirketinizin kullanıcıları bir şirket içi Active Directory sisteminden Azure AD'ye eşitlenmezse (yani bu, kullanıcıların Microsoft 365 veya Azure AD'de oluşturulduklarından emin olmak için PDL'nin Microsoft Azure Active Directory Modülü kullanılarak Windows PowerShell.
 
 Bu bölümdeki yordamlar için [Microsoft Azure Active Directory Modülü için Windows PowerShell gerekir](https://www.powershellgallery.com/packages/MSOnline/1.1.166.0). Bu modülü zaten yüklemişsiniz, lütfen en son sürüme güncelleştirin.
 
-1.  [Bağlan için bir](/powershell/connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell) dizi genel yönetici kimlik bilgileriyle oturum açın.
+1. [Bağlan için bir](/powershell/connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell) dizi genel yönetici kimlik bilgileriyle oturum açın.
 
-2.  Her [kullanıcınız için tercih edilen veri konumunu ayarlamak üzere Set-MsolUser](/powershell/msonline/v1/set-msoluser) cmdlet'ini kullanın. Örneğin:
+2. Her [kullanıcınız için tercih edilen veri konumunu ayarlamak üzere Set-MsolUser](/powershell/msonline/v1/set-msoluser) cmdlet'ini kullanın. Örneğin:
 
-    `Set-MsolUser -userprincipalName Robyn.Buckley@Contoso.com -PreferredDatalocation EUR`
+   ```powershell
+   Set-MsolUser -UserPrincipalName Robyn.Buckley@Contoso.com -PreferredDatalocation EUR
+   ```
 
     Tercih edilen veri konumunun doğru güncelleştirildiğini onaylamak için, Get-MsolUser kontrol edin. Örneğin:
 
-    `(Get-MsolUser -userprincipalName Robyn.Buckley@Contoso.com).PreferredDatalocation`
+   ```powershell
+   (Get-MsolUser -UserPrincipalName Robyn.Buckley@Contoso.com).PreferredDatalocation
+   ```
 
 ![set-msoluser gösteren PowerShell penceresinin ekran görüntüsü.](../media/multi-geo-tenant-configuration-image3.png)
 
@@ -122,11 +126,8 @@ Kullanıcının kiracı içinde OneDrive sitesi yoksa, kullanıcının PDL değe
 Varsayılan olarak, her arama dizini ilgili coğrafi konumda yer alıyor olsa bile, bu giriş noktalarından yapılan aramalar toplam sonuçları verir:
 
 - OneDrive İş
-
 - Delve
-
 - SharePoint Giriş
-
 - Arama Merkezi
 
 Buna birden fazla coğrafi konumda arama, arama API'sini kullanan özel arama uygulamalarınız için SharePoint yapılandırabilirsiniz.
@@ -137,22 +138,22 @@ Sınırlamalar ve [farklılıklar gibi yönergeler OneDrive İş için Multi-Geo
 
 Aşağıda, Multi-Geo olarak şirketinize geniş bir şekilde bilgi Microsoft 365 doğrulama planınıza eklemek istediğiniz bazı temel kullanım örnekleri verilmiştir. Bu testleri ve şirketinize uygun ek kullanım durumlarını tamamlandıktan sonra, kullanıcıları ilk pilot grubunuza eklemeyi seçebilirsiniz.
 
-**OneDrive İş**
+**OneDrive İş**:
 
 OneDrive uygulama başlatıcıda Microsoft 365'ı seçin ve kullanıcının PDL'si tabanlı olarak otomatik olarak kullanıcı için uygun coğrafi konuma yönlendiril telefonlar olduğunu onaylayın. OneDrive İş konumda sağlamayı başlatabilirsiniz. Hazır olduktan sonra, bazı belgeleri karşıya yükleme ve indirmeyi deneyin.
 
-**OneDrive Mobil Uygulaması**
+**OneDrive Mobil Uygulaması**:
 
 test hesabı kimlik OneDrive ile OneDrive Mobil Uygulama'nıza oturum açın. Mobil cihazınızı kullanarak en son OneDrive İş ve bu dosyalarla etkileşim kurabilirsiniz.
 
-**OneDrive eşitleme istemcisi**
+**OneDrive eşitleme istemcisini**:
 
 Oturum açma sırasında OneDrive eşitleme istemcisinin coğrafi konumu OneDrive İş olarak algılamayı onaylayın. Eşitleme istemcisini indirmeniz gerekirse, eşitleme istemci **kitaplığında Eşitle'OneDrive** tıkekleyebilirsiniz.
 
-**Office uygulamaları**
+**Office uygulamaları**:
 
-Word gibi bir OneDrive İş bir uygulamada oturum Office erişebilirsiniz. Office uygulamasını açın ve "OneDrive – " öğesini <TenantName>seçin. Office dosyanızı OneDrive ve açabilirsiniz dosyaları gösterir.
+Word gibi bir OneDrive İş bir uygulamada oturum Office erişebilirsiniz. Office uygulamasını açın ve "OneDrive – " öğesini \<TenantName\>seçin. Office dosyanızı OneDrive ve açabilirsiniz dosyaları gösterir.
 
-**Paylaşım**
+**Paylaşım**:
 
 Daha fazla OneDrive deneyin. Kişi seçicinin coğrafi konumlarından bağımsız olarak tüm SharePoint çevrimiçi kullanıcılarınızı gösterip gösterir; bunu onaylayın.

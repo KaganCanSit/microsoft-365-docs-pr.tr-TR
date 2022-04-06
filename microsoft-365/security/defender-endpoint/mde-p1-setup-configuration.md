@@ -1,5 +1,5 @@
 ---
-title: Uç Nokta Plan 1 için Microsoft Defender'ı ayarlama ve yapılandırma
+title: Plan 1'i Uç Nokta için Microsoft Defender ve yapılandırma
 description: Uç Nokta Plan 1 için Defender'ı ayarlamayı ve yapılandırmayı öğrenin. Gereksinimleri gözden geçirmek, promosyon planlamak ve ortamınızı ayarlamak.
 search.appverid: MET150
 author: denisebmsft
@@ -16,23 +16,23 @@ f1.keywords: NOCSH
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: b169910c9f0ae96b68711b065af4e6147ddd3ae2
-ms.sourcegitcommit: f8267a0860de62dbd53ebb8a151a8e71a8ccda6a
+ms.openlocfilehash: 741450f2573e0d750a1d3de5012f97cf16a0780d
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63016609"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569102"
 ---
-# <a name="set-up-and-configure-microsoft-defender-for-endpoint-plan-1"></a>Uç Nokta Plan 1 için Microsoft Defender'ı ayarlama ve yapılandırma
+# <a name="set-up-and-configure-microsoft-defender-for-endpoint-plan-1"></a>Plan 1'i Uç Nokta için Microsoft Defender ve yapılandırma
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Bu makalede, Uç Nokta Planı 1 için Defender'ı ayarlama ve yapılandırma açıklanmıştır. Yardım ister kendiniz yapıyor olun, dağıtım sırasında bu makaleyi kılavuz olarak kullanabilirsiniz.  
 
 ## <a name="the-setup-and-configuration-process"></a>Kurulum ve yapılandırma işlemi
 
-:::image type="content" source="images/mde-p1-deploymentflow.png" alt-text="Uç Nokta Planı 1 için Microsoft Defender'ın kurulum ve dağıtım akışı":::
+:::image type="content" source="images/mde-p1-deploymentflow.png" alt-text="Uç Nokta için Microsoft Defender için kurulum ve dağıtım akışı Plan 1" lightbox="images/mde-p1-deploymentflow.png":::
 
 Uç Nokta Plan 1 için Defender genel kurulum ve yapılandırma işlemi aşağıdaki gibidir: <br/><br/>
 
@@ -40,7 +40,7 @@ Uç Nokta Plan 1 için Defender genel kurulum ve yapılandırma işlemi aşağı
 | Sayı  | Adım  | Açıklama  |
 |:---------:|:---------|:---------|
 | 1 | [Gereksinimleri gözden geçirme](#review-the-requirements)  | Lisans, tarayıcı, işletim sistemi ve veri merkezi gereksinimlerini listeler   |
-| 2 | [Dağıtımınızı planlama](#plan-your-deployment) | Göz önünde bulundur yapılacak çeşitli dağıtım yöntemlerini listeler ve hangi yöntemin kullanımına karar vermenizi yardım edecek daha fazla kaynağın bağlantılarını içerir  |
+| 2 | [Dağıtımınızı planlayın](#plan-your-deployment) | Göz önünde bulundur yapılacak çeşitli dağıtım yöntemlerini listeler ve hangi yöntemin kullanımına karar vermenizi yardım edecek daha fazla kaynağın bağlantılarını içerir  |
 | 3 | [Kiracı ortamınızı ayarlama](#set-up-your-tenant-environment) | Kiracı ortamınızı ayarlama görevlerini listeler |
 | 4 | [Roller ve izinler atama](#assign-roles-and-permissions) | Güvenlik ekibinin düşünmesi gereken rolleri ve izinleri listeler <br/><br/>**İpucu**: Roller ve izinler atandığı anda, güvenlik ekipleriniz güvenlik portalı üzerinden Microsoft 365 Defender başlatabilir. Daha fazla bilgi edinmek için bkz [. Başlarken](mde-plan1-getting-started.md). |
 | 5 | [Uç Nokta için Defender'a Ekleme](#onboard-to-defender-for-endpoint) | Uç Nokta Planı 1 için Defender'a almak için işletim sistemine göre çeşitli yöntemleri listeler ve her yönteme ilişkin daha ayrıntılı bilgilerin bağlantılarını içerir  |
@@ -53,21 +53,21 @@ Aşağıdaki tabloda, Uç Nokta Planı 1 için Defender'ın temel gereksinimleri
 
 | Gereksinim | Açıklama |
 |:---|:---|
-| Lisans gereksinimleri | Uç Nokta Plan 1 için Defender (eski adı Endpoint Lite için Microsoft Defender)|
+| Lisans gereksinimleri | Uç Nokta Plan 1 için Defender |
 | Tarayıcı gereksinimleri | Microsoft Edge <br/> Internet Explorer sürüm 11 <br/> Google Chrome |
 | İşletim sistemleri | Windows 10, sürüm 1709 veya sonrası <br/>macOS: 11.5 (Big Sur), 10.15.7 (Catalina) veya 10.14.6 (Mojave) <br/>iOS <br/>Android OS  |
-| Datacenter | Aşağıdaki veri merkezi konumlarından biri: <br/>- Avrupa Birliği <br/>- Birleşik Krallık <br/>- Amerika Birleşik Devletleri |
+| Datacenter | Aşağıdaki veri merkezi konumlarından biri: <br/>- Avrupa Birliği <br/>- Birleşik Krallık <br/>- Birleşik Devletler |
 
 
-## <a name="plan-your-deployment"></a>Dağıtımınızı planlama
+## <a name="plan-your-deployment"></a>Dağıtımınızı planlayın
 
 Dağıtımınızı planlarken, çeşitli farklı mimariler ve dağıtım yöntemleri arasında seçim seçebilirsiniz. Her kuruluş benzersizdir, dolayısıyla aşağıdaki tabloda listelenmiş olarak, göz önünde bulunduracak çeşitli seçenekleriniz vardır: <br/><br/>
 
 | Yöntem | Açıklama |
 |:---|:---|
-| [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) (Microsoft Endpoint Manager dahil) | Intune kullanarak bulut yerel ortamında uç noktaları yönetme |
-| [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) [Yapılandırma Yöneticisi](/mem/configmgr/core/understand/introduction) (Microsoft Endpoint Manager dahil) | Şirket içi ve bulut ortamına yayılan uç noktaları ve iş yüklerini yönetmek için Intune ve Configuration Manager kullanma |
-| [Yapılandırma Yöneticisi](/mem/configmgr/core/understand/introduction) | Şirket içi uç noktaları, Uç Nokta için Defender'ın bulut tabanlı gücüyle korumak için Configuration Manager'ı kullanma |
+| [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) (Microsoft Endpoint Manager dahil) | Yerel Intune uç noktaları yönetmek için kaynak kimlik bilgilerini kullanma |
+| [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) ve [Configuration Manager](/mem/configmgr/core/understand/introduction) (Microsoft Endpoint Manager dahil) | Şirket Intune Configuration Manager bulut ortamına yayılan uç noktaları ve iş yüklerini yönetmek için kullanıcı kimlik bilgilerini kullanma |
+| [Yapılandırma Yöneticisi](/mem/configmgr/core/understand/introduction) | Uç Configuration Manager için Defender'ın bulut tabanlı gücüyle şirket içi uç noktaları korumak üzere başkalarını kullanma |
 | Portaldan indirilen yerel Microsoft 365 Defender betiği | Pilot çalıştırmak veya yalnızca birkaç cihaza onboard yapmak için uç noktalarda yerel betikler kullanın |
 
 Dağıtım seçenekleriniz hakkında daha fazla bilgi edinmek için bkz. [Uç nokta dağıtımı için Defender'ı planlama](deployment-strategy.md). Aşağıdaki posteri indirin: 
@@ -77,7 +77,7 @@ Dağıtım seçenekleriniz hakkında daha fazla bilgi edinmek için bkz. [Uç no
 **[Dağıtım posterini al](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)**
 
 > [!TIP]
-> Dağıtımınızı planlama hakkında daha ayrıntılı bilgi için bkz. [Uç nokta dağıtımı için Microsoft Defender'ı planlama](deployment-strategy.md).
+> Dağıtımınızı planlama hakkında daha ayrıntılı bilgi için bkz. [Uç Nokta için Microsoft Defender planlama](deployment-strategy.md).
 
 ## <a name="set-up-your-tenant-environment"></a>Kiracı ortamınızı ayarlama
 
@@ -104,7 +104,7 @@ Aşağıdaki tabloda, kuruluşudaki Uç Nokta için Defender'da dikkate alıyaca
 
 | Rol | Açıklama |
 |:---|:---|
-| Genel yöneticiler (genel yöneticiler olarak da adlandırılır) <br/><br/> *En iyi yöntem olarak, genel yöneticilerin sayısını sınırlayın.* | Genel yöneticiler her türlü görevi gerçekleştirebilir. Şirketinizi genel yönetici olarak Microsoft 365 Uç Nokta Planı 1 için Microsoft Defender'a imzalayan kişi, varsayılan olarak genel yöneticidir. <br/><br/> Genel yöneticiler tüm kullanıcı portalları genelinde ayarlara erişim Microsoft 365 değiştirebilir. Örneğin: <br/>- Microsoft 365 yönetim merkezi ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)) <br/>- Microsoft Endpoint Manager merkezi ([https://endpoint.microsoft.com](https://endpoint.microsoft.com))  |
+| Genel yöneticiler (genel yöneticiler olarak da adlandırılır) <br/><br/> *En iyi yöntem olarak, genel yöneticilerin sayısını sınırlayın.* | Genel yöneticiler her türlü görevi gerçekleştirebilir. Şirketinizi genel yönetici olarak veya Microsoft 365 için Uç Nokta için Microsoft Defender Plan 1 varsayılan olarak genel yöneticidir. <br/><br/> Genel yöneticiler tüm kullanıcı portalları genelinde ayarlara erişim Microsoft 365 değiştirebilir. Örneğin: <br/>- Microsoft 365 yönetim merkezi ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)) <br/>- Microsoft Endpoint Manager merkezi ([https://endpoint.microsoft.com](https://endpoint.microsoft.com))  |
 | Güvenlik yöneticileri (güvenlik yöneticileri olarak da adlandırılır) | Güvenlik yöneticileri, güvenlik işleci görevlerinin yanı sıra aşağıdaki görevleri gerçekleştirebilir: <br/>- Güvenlikle ilgili ilkeleri izleme <br/>- Güvenlik tehditlerini ve uyarılarını yönetme <br/>- Raporları görüntüleme |
 | Güvenlik operatörü | Güvenlik işleçleri güvenlik okuyucusu görevlerinin yanı sıra aşağıdaki görevleri gerçekleştirebilir: <br/>- Algılanan tehditlerle ilgili bilgileri görüntüleme <br/>- Algılanan tehditleri araştırma ve yanıtlama  |
 | Güvenlik gözetmeni | Güvenlik okuyucuları aşağıdaki görevleri gerçekleştirebilir: <br/>- Posta hizmetleri genelinde güvenlikle Microsoft 365 ilkeleri görüntüleme <br/>- Güvenlik tehditlerini ve uyarıları görüntüleme <br/>- Raporları görüntüleme  |
@@ -119,7 +119,7 @@ Kuruluş uç noktalarını eklemeye hazır olduğunda, aşağıdaki tabloda list
 
 |Uç Nokta İşletim Sistemi | Ekleme yöntemleri|
 |---|---|
-| Windows 10 | [Yerel betik (10 cihaza kadar)](configure-endpoints-script.md) <br>  [Grup İlkesi](configure-endpoints-gp.md) <br>  [Microsoft Endpoint Manager/ Mobil Cihaz Yöneticisi](configure-endpoints-mdm.md) <br> [Microsoft Uç Noktası Yapılandırma Yöneticisi](configure-endpoints-sccm.md) <br> [VDI betikleri](configure-endpoints-vdi.md)  |
+| Windows 10 | [Yerel betik (10 cihaza kadar)](configure-endpoints-script.md) <br>  [Grup İlkesi](configure-endpoints-gp.md) <br>  [Microsoft Endpoint Manager/ Mobil Aygıt Yöneticisi](configure-endpoints-mdm.md) <br> [Microsoft Uç Noktası Yapılandırma Yöneticisi](configure-endpoints-sccm.md) <br> [VDI betikleri](configure-endpoints-vdi.md)  |
 | macOS | [Yerel betikler](mac-install-manually.md) <br> [Microsoft Endpoint Manager](mac-install-with-intune.md) <br> [JAMF Pro](mac-install-with-jamf.md) <br> [Mobil Cihaz Yönetimi](mac-install-with-other-mdm.md) |
 | iOS |[Uygulamaya dayalı](ios-install.md) |
 | Android | [Microsoft Endpoint Manager](android-intune.md) |
@@ -130,7 +130,7 @@ Ardından, yeni nesil koruma ve saldırı yüzeyini azaltma yeteneklerinizi yap�
 
 Aşağıdaki resimde [Microsoft Endpoint Manager](/mem) gibi, kuruluş cihazlarınızı ve güvenlik ayarlarını yönetmek için Microsoft Endpoint Manager'i kullanmanızı öneririz:
  
-:::image type="content" source="../../media/mde-p1/endpoint-policies.png" alt-text="MEM'de uç nokta güvenlik ilkeleri":::
+:::image type="content" source="../../media/mde-p1/endpoint-policies.png" alt-text="Micorosft web portalında uç Endpoint Manager ilkeleri" lightbox="../../media/mde-p1/endpoint-policies.png":::
 
 Yeni nesil korumanızı yeni nesil korumanızı Microsoft Endpoint Manager aşağıdaki adımları izleyin:
 
@@ -163,7 +163,7 @@ Saldırı yüzeyini azaltma, tüm bu saldırılara açık olan yerleri ve yönte
 
 Saldırı yüzeyini azaltma kuralları saldırı ve saldırıyı azaltma Windows. Aşağıdaki Microsoft Endpoint Manager gösterildiği gibi, Aşağıdaki adımların kullanılması önerilir:
 
-:::image type="content" source="../../media/mde-p1/mem-asrpolicies.png" alt-text="Saldırı yüzeyini azaltma kuralları Microsoft Endpoint Manager":::
+:::image type="content" source="../../media/mde-p1/mem-asrpolicies.png" alt-text="Microsoft Endpoint Manager portalında saldırı Microsoft Endpoint Manager kuralları" lightbox="../../media/mde-p1/mem-asrpolicies.png":::
 
 1. Yönetim merkezine Microsoft Endpoint Manager ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) ve oturum açma.
 
@@ -199,7 +199,7 @@ Denetimli klasör erişimi, [yalnızca güvenilen uygulamaların](controlled-fol
 
 Denetimli klasör Microsoft Endpoint Manager yapılandırmak için Denetimler'i kullanmalarını öneririz.
 
-:::image type="content" source="../../media/mde-p1/mem-asrpolicies.png" alt-text="Microsoft Endpoint Manager'te ASR ilkeleri":::
+:::image type="content" source="../../media/mde-p1/mem-asrpolicies.png" alt-text="Microsoft Endpoint Manager portalında ASR ilkeleri" lightbox="../../media/mde-p1/mem-asrpolicies.png":::
 
 1. Yönetim merkezine Microsoft Endpoint Manager ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) ve oturum açma. 
 
@@ -231,7 +231,7 @@ Denetimli klasör Microsoft Endpoint Manager yapılandırmak için Denetimler'i 
 
 Çıkarılabilir cihazlardaki çıkarılabilir cihaz ve dosyaları engellemek veya buna izin vermek üzere Uç Nokta için Defender'ı yapılandırabilirsiniz. Cihaz denetimi Microsoft Endpoint Manager için Microsoft Endpoint Manager'i kullanmanızı öneririz.
 
-:::image type="content" source="../../media/mde-p1/mem-admintemplates.png" alt-text="Microsoft Endpoint Manager şablonları oluşturma":::
+:::image type="content" source="../../media/mde-p1/mem-admintemplates.png" alt-text="Microsoft Endpoint Manager şablonları oluşturma" lightbox="../../media/mde-p1/mem-admintemplates.png":::
 
 1. Yönetim merkezine Microsoft Endpoint Manager ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) ve oturum açma. 
 
@@ -258,13 +258,13 @@ Denetimli klasör Microsoft Endpoint Manager yapılandırmak için Denetimler'i 
 10. Gözden Geçir **+ oluştur sekmesinde** , ilkenizin ayarlarını gözden geçirin ve sonra Oluştur'a **tıklayın**. İlke, kısa süre sonra Uç nokta için Defender'a alınan tüm uç noktalara uygulanacaktır.
 
 > [!TIP]
-> Daha fazla bilgi için bkz [. Uç Nokta için Microsoft Defender'ı kullanarak USB cihazları ve diğer çıkarılabilir medyaları denetleme](control-usb-devices-using-intune.md).
+> Daha fazla bilgi için bkz[. USB cihazlarını ve diğer çıkarılabilir medyayı klavyeyle Uç Nokta için Microsoft Defender](control-usb-devices-using-intune.md).
 
 ### <a name="network-protection"></a>Ağ koruması
 
 Ağ korumasıyla, kimlik avı dolandırıcılığı, açıkları kullanan yazılımlar ve İnternet'e yönelik diğer zararlı içerikleri barındıran tehlikeli etki alanlarına karşı korunmanıza yardımcı olabilir. Ağ korumasını Microsoft Endpoint Manager için Microsoft Endpoint Manager'i öneririz.
 
-:::image type="content" source="../../media/mde-p1/mem-endpointprotectionprofile.png" alt-text="Microsoft Endpoint Manager'da uç nokta koruma profili":::
+:::image type="content" source="../../media/mde-p1/mem-endpointprotectionprofile.png" alt-text="Microsoft Endpoint Manager portalında uç Microsoft Endpoint Manager profili" lightbox="../../media/mde-p1/mem-endpointprotectionprofile.png":::
 
 1. Yönetim merkezine Microsoft Endpoint Manager ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) ve oturum açma. 
 
@@ -293,7 +293,7 @@ Ağ korumasıyla, kimlik avı dolandırıcılığı, açıkları kullanan yazıl
 8. Gözden Geçir **+ oluştur sekmesinde** , ilkenizin ayarlarını gözden geçirin ve sonra Oluştur'a **tıklayın**. İlke, kısa süre sonra Uç nokta için Defender'a alınan tüm uç noktalara uygulanacaktır.
 
 > [!TIP]
-> Ağ korumasını etkinleştirmek için Grup İlkesi Windows PowerShell başka yöntemler kullanabilirsiniz. Daha fazla bilgi edinmek için bkz [. Ağ korumasını açma](enable-network-protection.md).
+> Ağ korumasını etkinleştirmek için, kimlik bilgileri Windows PowerShell grup ilkesi başka yöntemler kullanabilirsiniz. Daha fazla bilgi edinmek için bkz [. Ağ korumasını açma](enable-network-protection.md).
 
 ### <a name="web-protection"></a>Web koruması
 
@@ -352,7 +352,7 @@ Web korumasıyla, kuruluş cihazlarınızı web tehditlerine ve istenmeyen içer
 
 Ağ güvenlik duvarı, ağ güvenliği tehditlerinin azaltılmasına yardımcı olur. Güvenlik ekipleriniz, hangi trafiğin kuruluş cihazlarına veya bu cihazlardan akışa izin verdiğini belirleyen kurallar kurabilirsiniz. Ağ güvenlik Microsoft Endpoint Manager için Microsoft Endpoint Manager'i kullanmanızı öneririz. 
 
-:::image type="content" source="../../media/mde-p1/mem-firewallpolicy.png" alt-text="Güvenlik duvarı ilkesi Microsoft Endpoint Manager":::
+:::image type="content" source="../../media/mde-p1/mem-firewallpolicy.png" alt-text="Microsoft Endpoint Manager portalında güvenlik Microsoft Endpoint Manager ilkesi" lightbox="../../media/mde-p1/mem-firewallpolicy.png":::
 
 Temel güvenlik duvarı ayarlarını yapılandırmak için şu adımları izleyin:
 
@@ -403,4 +403,4 @@ WDAC dağıtımınızı planlamaya yardımcı olmak için aşağıdaki kaynaklar
 
 Artık kurulum ve yapılandırma sürecini takip etmeye başladığınıza göre, bir sonraki adımınız Uç Nokta için Defender'ı kullanmaya başlamanızdır. 
 
-- [Uç Nokta Planı 1 için Defender ile çalışmaya başlama](mde-plan1-getting-started.md)
+- [Kullanmaya başlayın Plan 1 için Defender ile Birlikte Uygulama](mde-plan1-getting-started.md)

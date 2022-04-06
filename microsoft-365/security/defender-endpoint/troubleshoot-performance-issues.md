@@ -1,6 +1,6 @@
 ---
 title: Performans sorunlarını giderme
-description: Uç Nokta için Microsoft Defender'da gerçek zamanlı koruma hizmetiyle ilgili yüksek CPU kullanımıyla ilgili sorunları giderin.
+description: Yeni hizmette gerçek zamanlı koruma hizmetiyle ilgili yüksek CPU kullanımıyla ilgili Uç Nokta için Microsoft Defender.
 keywords: sorun giderme, performans, yüksek CPU kullanımı, yüksek CPU kullanımı, hata, düzeltme, güncelleştirme uyumluluğu, işletim sistemi, monitör, rapor, Microsoft Defender Virüsten Koruma
 search.appverid: met150
 ms.prod: m365-security
@@ -16,12 +16,12 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 1dfe480f36d99acfdc9dcb36e63d2eed4f22054a
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: acd778b614128dc4927766e329f8d63fcd3fad54
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63014063"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467191"
 ---
 # <a name="troubleshoot-performance-issues-related-to-real-time-protection"></a>Gerçek zamanlı korumayla ilgili performans sorunlarını giderme
 
@@ -30,9 +30,9 @@ ms.locfileid: "63014063"
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Sisteminiz Uç Nokta için Microsoft Defender'daki gerçek zamanlı koruma hizmetiyle ilgili yüksek CPU kullanımı veya performans sorunlarına sahipse Microsoft desteğine bilet gönderebilirsiniz. Verileri tanılama verilerini toplama [Microsoft Defender Virüsten Koruma adımları izleyin](collect-diagnostic-data.md).
+Aynı zamanda sistem, Gerçek zamanlı koruma hizmetiyle ilgili yüksek CPU kullanımı veya performans sorunlarıyla Uç Nokta için Microsoft Defender, Microsoft desteğine bilet gönderabilirsiniz. Verileri tanılama verilerini toplama [Microsoft Defender Virüsten Koruma adımları izleyin](collect-diagnostic-data.md).
 
 Yönetici olarak, bu sorunları kendi başına da gidersiniz.
 
@@ -47,7 +47,7 @@ Ayrıca, aşağıdaki adımları takip edin ve Microsoft desteğine gönderimniz
 
 ## <a name="check-with-vendor-for-antivirus-exclusions"></a>Virüsten koruma dışlamalarını satıcıya denetleme
 
-Sistem performansını etkileyen yazılımı hemen tanımyabilirsiniz, yazılım satıcısının bilgi bankasına veya destek merkezine gidin. Virüsten koruma dışlamaları hakkında önerileri varsa arama. Satıcının web sitesinde bu yoksa, bu satıcıyla birlikte bir destek bileti açabilir ve bir bilet yayımlamalarını sorabilirsiniz.
+Sistem performansını etkileyen yazılımı hazır bir şekilde tanımyabilirsiniz, yazılım satıcısının Yazılım Satıcısı'bilgi bankası gidin. Virüsten koruma dışlamaları hakkında önerileri varsa arama. Satıcının web sitesinde bu yoksa, bu satıcıyla birlikte bir destek bileti açabilir ve bir bilet yayımlamalarını sorabilirsiniz.
 
 Yazılım satıcılarının hatalı pozitif sonuç sayısını en aza indirmek için [sektörle iş ortağı çalışma'daki çeşitli yönergeleri izlemelerini öneririz](https://www.microsoft.com/security/blog/2018/08/16/partnering-with-the-industry-to-minimize-false-positives/). Satıcı, yazılımlarını portal üzerinden [Microsoft Güvenlik Zekası gönderebilirsiniz](https://www.microsoft.com/wdsi/filesubmission?persona=SoftwareDeveloper).
 
@@ -87,7 +87,7 @@ Süreç İzleyicisi (ProcMon), gerçek zamanlı işlemleri gösteren gelişmiş 
     1. Engeli **kaldır'ın yanındaki kutuyu işaretleyin**.
     1. **Uygula'ya seçin**.
 
-    ![MOTW'ı kaldırın.](images/procmon-motw.png)
+    :::image type="content" source="images/procmon-motw.png" alt-text="MOTW'ı Kaldır sayfası" lightbox="images/procmon-motw.png":::
 
 3. Dosyanın sıkıştırması açarak `C:\temp` klasör yolunun bu şekilde olması gerekir `C:\temp\ProcessMonitor`.
 
@@ -100,21 +100,21 @@ Süreç İzleyicisi (ProcMon), gerçek zamanlı işlemleri gösteren gelişmiş 
 
         Günlük otomatik olarak başladığından, geçerli yakalamayı durdurmak için büyüteç simgesini seçin veya **Ctrl+E klavye kısayolunu kullanın**.
 
-        ![büyüteç simgesi.](images/procmon-magglass.png)
+        :::image type="content" source="images/procmon-magglass.png" alt-text="Büyüteç simgesi" lightbox="images/procmon-magglass.png":::
 
         Yakalamayı durdurmuş olduğunu doğrulamak için, büyüteç simgesinin şimdi kırmızı bir X ile görüntülendiğinden emin olur.
 
-        ![kırmızı eğik çizgi.](images/procmon-magglass-stop.png)
+        :::image type="content" source="images/procmon-magglass-stop.png" alt-text="Kırmızı eğik çizgi" lightbox="images/procmon-magglass-stop.png":::
 
         Ardından, önceki yakalamayı temizlemek için silgi simgesini seçin.
 
-        ![temizle simgesine dokunun.](images/procmon-eraser-clear.png)
+        :::image type="content" source="images/procmon-eraser-clear.png" alt-text="Temizle simgesi" lightbox="images/procmon-eraser-clear.png":::
 
         **Ctrl+X klavye kısayolunu da kullanabilirsiniz**.
 
     2. İkinci yol, komut satırı yönetici **olarak çalıştırmak** ve ardından İşlem İzleyicisi yolundan çalıştırmaktır:
 
-        ![cmd procmon.](images/cmd-procmon.png)
+       :::image type="content" source="images/cmd-procmon.png" alt-text="cmd procmon" lightbox="images/cmd-procmon.png":::
 
         ```console
         Procmon.exe /AcceptEula /Noconnect /Profiling
@@ -123,11 +123,11 @@ Süreç İzleyicisi (ProcMon), gerçek zamanlı işlemleri gösteren gelişmiş 
         > [!TIP]
         > İzlemeyi kolayca başlatmak ve durdurmak için, veri yakalama için ProcMon penceresini mümkün olduğunca küçük hale sürükleyin.
         >
-        > ![Procmon'i simge durumuna küçültme.](images/procmon-minimize.png)
+        > :::image type="content" source="images/procmon-minimize.png" alt-text="Simge durumuna küçültülmüş Yordam'ın görüntüleniyor sayfa" lightbox="images/procmon-minimize.png":::
 
 7. 6. adımda yordamlardan birini takip ettikten sonra, filtreleri ayarlamaya ilişkin bir seçenek göreceğiniz gibi. **Tamam**'ı seçin. Yakalama tamamlandıktan sonra sonuçları her zaman filtreleysiniz.
 
-    ![Filtreleme Işlemi Adı, Sistem Dışlama'dır.](images/procmon-filter-options.png)
+   :::image type="content" source="images/procmon-filter-options.png" alt-text="Filtre Uygulama İşlem Adı olarak Sistem Dışı Bırak'ın seçilecek sayfa" lightbox="images/procmon-filter-options.png":::
 
 8. Yakalamayı başlatmak için büyüteç simgesini yeniden seçin.
 
@@ -140,7 +140,7 @@ Süreç İzleyicisi (ProcMon), gerçek zamanlı işlemleri gösteren gelişmiş 
 
 11. Yakalamayı benzersiz bir adla ve .pml biçiminde kaydetmek için Dosya'ya ve ardından **Kaydet** ... **öğesini seçin**. Tüm etkinlikler ve Yerel İşlem **İzleyicisi Biçimi** **(PML) radyo düğmelerini seçmeye emin olun**.
 
-    ![ayarları kaydedin.](images/procmon-savesettings1.png)
+    :::image type="content" source="images/procmon-savesettings1.png" alt-text="Kaydetme ayarları sayfası" lightbox="images/procmon-savesettings1.png":::
 
 12. Daha iyi izleme için varsayılan yolu şu yerden `C:\temp\ProcessMonitor\LogFile.PML` `C:\temp\ProcessMonitor\%ComputerName%_LogFile_MMDDYEAR_Repro_of_issue.PML` değiştirebilirsiniz:
     - `%ComputerName%` cihazın adıdır
@@ -171,35 +171,36 @@ Alternatif olarak, WPR CLI *kullanarak* performans günlüklerini yakalama'daki 
 
 2. *Setler Windows altında Performans* Kaydedicisi'ne **Windows tıklayın**.
 
-    ![Başlat menüsü.](images/wpr-01.png)
+   :::image type="content" source="images/wpr-01.png" alt-text="Başlat menüsü" lightbox="images/wpr-01.png":::
 
     **Diğer'i seçin**. Yönetici **olarak çalıştır'ı seçin**.
 
 3. Kullanıcı Hesabı Denetimi iletişim kutusu görüntülendiğinde Evet'i **seçin**.
 
-    ![UAC.](images/wpt-yes.png)
+   :::image type="content" source="images/wpt-yes.png" alt-text="UAC sayfası" lightbox="images/wpt-yes.png":::
 
-4. Ardından, Uç nokta [çözümleme profili için Microsoft Defender'ı](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp) indirin ve gibi `MDAV.wprp` bir klasöre kaydedin `C:\temp`.
+4. Daha sonra, [Uç Nokta için Microsoft Defender çözümleme profilini](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp) indirin ve gibi bir `MDAV.wprp` klasöre kaydedin`C:\temp`.
 
 5. WPR iletişim kutusunda Diğer **seçenekler'i seçin**.
 
-    ![Diğer seçenekleri belirleyin.](images/wpr-03.png)
+   :::image type="content" source="images/wpr-03.png" alt-text="Daha fazla seçenek seçebilirsiniz" lightbox="images/wpr-03.png":::
+
 
 6. Profil **Ekle... öğesini** seçin ve dosyanın yolunu `MDAV.wprp` bulun.
 
-7. Bundan sonra, altında Uç nokta çözümlemesi için Microsoft Defender *adlı özel* ölçümler altında *yeni bir profil kümesi* görüyor olun.
+7. Bundan sonra, altında Çözümleme olarak adlandırılmış Özel *ölçümler altında* yeni *Uç Nokta için Microsoft Defender görüyor* gerekir.
 
-    ![dosyada.](images/wpr-infile.png)
+   :::image type="content" source="images/wpr-infile.png" alt-text="Dosya içinde" lightbox="images/wpr-infile.png":::
 
     > [!WARNING]
     > Windows Sunucunuz 64 GB veya daha büyük RAM'e sahipse, yerine özel `Microsoft Defender for Endpoint analysis for large servers` ölçü birimini kullanın`Microsoft Defender for Endpoint analysis`. Aksi takdirde, sisteminiz yüksek miktarda sayfasız havuz belleği veya arabellek tüketebilir ve bu da sistemin yetersizlik durumuna yol açabilirsiniz. Kaynak Çözümlemesi'nin kapsamını genişleterek hangi profillerin **ek gerektireceklerini seçebilirsiniz**.
     Bu özel profil, ayrıntılı performans çözümlemesi için gerekli bağlamı sağlar.
 
-8. WPR kullanıcı arabiriminde Uç nokta ayrıntılı çözümleme profili için Microsoft Defender özel ölçüsini kullanmak için:
+8. WPR kullanıcı arabiriminde Uç Nokta için Microsoft Defender ölçüm ölçüm profili kullanmak için:
 
     1. birinci düzey öncelik, Kaynak Çözümleme *ve Senaryo Çözümlemesi gruplarının* altında *hiçbir profilin seçilmey* *olduğundan emin* olun.
     2. Özel **ölçümler'i seçin**.
-    3. Uç nokta **çözümlemesi için Microsoft Defender'ı seçin**.
+    3. **Çözümlemeyi Uç Nokta için Microsoft Defender seçin**.
     4. Ayrıntı **düzeyi'nin altında** *Verbose'yi* seçin.
     5. Günlük **modu altında** Dosya **veya** Bellek'i seçin.
 
@@ -208,14 +209,14 @@ Alternatif olarak, WPR CLI *kullanarak* performans günlüklerini yakalama'daki 
 
 9. Artık verileri toplamaya hazır mısınız? Performans sorunu yeniden ortaya çıkmayla ilgili olan tüm uygulamalardan çıkın. WpR **penceresinin** yer kapladığı alanı küçük tutmak için Gizle seçeneklerini seçebilirsiniz.
 
-    ![Seçenekleri gizle'ye tıklayın.](images/wpr-08.png)
+   :::image type="content" source="images/wpr-08.png" alt-text="Gizle seçenekleri" lightbox="images/wpr-08.png":::
 
     > [!TIP]
     > İzlemeyi tam sayı saniyeye başlatmayı deneyin. Örneğin, 01:30:00. Bu, verileri çözümlemeyi kolaylaştırır. Ayrıca, sorunun tam olarak ne zaman yeniden üretil yaptığını zaman damgasını takip etmeye çalış.
 
 10. **Başlat**'ı seçin.
 
-    ![İzlemenin başlangıcını seçin.](images/wpr-09.png)
+    :::image type="content" source="images/wpr-09.png" alt-text="Kayıt sistemi bilgileri sayfası" lightbox="images/wpr-09.png":::
 
 11. Sorunu yeniden üretin.
 
@@ -224,38 +225,38 @@ Alternatif olarak, WPR CLI *kullanarak* performans günlüklerini yakalama'daki 
 
 12. **Kaydet**'i seçin.
 
-    ![Kaydet'i seçin.](images/wpr-10.png)
+    :::image type="content" source="images/wpr-10.png" alt-text="Kaydet seçeneği" lightbox="images/wpr-10.png":::
 
 13. Doldurma **Sorunun ayrıntılı bir açıklamasını yazın: sorun** ve sorunu nasıl yeniden ürettiyebilirsiniz.
 
-    ![Ayrıntıları doldurun.](images/wpr-12.png)
+    :::image type="content" source="images/wpr-12.png" alt-text="Doldurulan bölme" lightbox="images/wpr-12.png":::
 
     1. İzleme **dosyanın nereye kayded** olacağını belirlemek için Dosya Adı: öğesini seçin. Varsayılan olarak, 'a kaydedilir `%user%\Documents\WPR Files\`.
     1. **Kaydet**'i seçin.
 
 14. İzleme birleştirilirken bekleyin.
 
-    ![WPR genel izlemeyi topluyor.](images/wpr-13.png)
+    :::image type="content" source="images/wpr-13.png" alt-text="Genel izlemenin toplanıyor WPR" lightbox="images/wpr-13.png":::
 
 15. İzleme kaydedildiktan sonra Klasörü **aç'ı seçin**.
 
-    ![WPR izlemesi kaydedildi.](images/wpr-14.png)
+    :::image type="content" source="images/wpr-14.png" alt-text="WPR izlemenin kaydedil olduğu bildirimini görüntüleyen sayfa" lightbox="images/wpr-14.png":::
 
-    Microsoft Desteği'ne göndermenize hem dosyayı hem de klasörü dahil edin.
+    Gönderinize hem dosyayı hem de klasörü Microsoft Desteği.
 
-    ![Dosya ve klasör.](images/wpr-15.png)
+    :::image type="content" source="images/wpr-15.png" alt-text="Dosya ve klasörün ayrıntıları" lightbox="images/wpr-15.png":::
 
 ### <a name="capture-performance-logs-using-the-wpr-cli"></a>WPR CLI kullanarak performans günlüklerini yakalama
 
 Komut satırı aracı, *wpr.exe* ile başlayan işletim sisteminin bir Windows 8. Şu komut satırı aracını kullanarak bir WPR izlemesi wpr.exe:
 
-1. Gibi **[yerel bir dizinde adı olan](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp)** bir dosyaya performans izlemeleri için Uç `MDAV.wprp` nokta çözümleme profili için Microsoft Defender'ı indirin `C:\traces`.
+1. Gibi **[Uç Nokta için Microsoft Defender bir](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp)** dizinde adı olan bir dosyaya performans izlemesi için `MDAV.wprp` bir çözümleme profili indirin`C:\traces`.
 
 2. Başlat Menüsü **simgesine sağ tıklayın** ve Yönetici **(Windows PowerShell)** veya Komut İstemi **(Yönetici)** öğesini seçerek Yönetici komut istemi penceresini açın.
 
 3. Kullanıcı Hesabı Denetimi iletişim kutusu görüntülendiğinde Evet'i **seçin**.
 
-4. Yükseltilmiş istemde, uç nokta performans izlemesi için bir Microsoft Defender başlatmak üzere aşağıdaki komutu çalıştırın:
+4. Yükseltilmiş istemde, bir performans izlemesi başlatmak için Uç Nokta için Microsoft Defender çalıştırın:
 
     ```console
     wpr.exe -start C:\traces\MDAV.wprp!WD.Verbose -filemode

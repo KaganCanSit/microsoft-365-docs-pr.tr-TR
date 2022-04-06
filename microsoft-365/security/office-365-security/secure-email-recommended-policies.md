@@ -20,16 +20,16 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 6ab6ff7c043dcceacfbb07d0f6fec5e974999204
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: b4b47b5cd5b7f345d21f2fa60deec736d931c62f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682449"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473441"
 ---
 # <a name="policy-recommendations-for-securing-email"></a>E-postanın güvenliğini sağlamak için ilke önerileri
 
-Bu makalede, modern kimlik doğrulamayı ve koşullu erişimi destekleyen kurumsal e-posta ve e-posta istemcilerini korumak için önerilen Sıfır Güven kimliği ve cihaz erişimi ilkelerinin nasıl uygulan uygulanıyor olduğu açıklanmıştır. Bu kılavuz, Ortak kimlik [ve cihaz erişimi ilkelerine yöneliktir](identity-access-policies.md) ve birkaç ek öneri içerir.
+Bu makalede, modern kimlik doğrulamayı ve koşullu erişimi destekleyen kurumsal e-Sıfır Güven ve e-posta istemcilerini korumak için önerilen kimlik ve cihaz erişimi ilkelerinin nasıl uygulan uygulanıyor? Bu kılavuz, Ortak kimlik [ve cihaz erişimi ilkelerine yöneliktir](identity-access-policies.md) ve birkaç ek öneri içerir.
 
 Bu öneriler, şu üç farklı güvenlik ve koruma katmanına dayalıdır ve bu katman, ihtiyaçlarınızı ayrıntılı olarak temel alarak **uygulanır: başlangıç** **noktası, kurumsal** ve **özel güvenlik**. Bu güvenlik katmanları ve önerilen istemci işletim sistemleri hakkında daha fazla bilgi edinmek için önerilen güvenlik ilkeleri ve yapılandırmalara giriş önerisinde bu önerilerden [başvurulmalıdır](microsoft-365-policies-configurations.md).
 
@@ -39,7 +39,7 @@ Bu öneriler, kullanıcılarınızı, mobil cihazlarda iOS ve Android için Outl
 
 E-postayı korumak için, aşağıdaki diyagramda ortak kimlik ve cihaz erişimi ilkelerinden güncelleştirilen ilkeler çiziliyor.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-mail.png" alt-text="E-postanıza erişimi korumak için yapılan ilke güncelleştirmelerinin Exchange." lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-mail.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-mail.png" alt-text="Microsoft Exchange'a erişimi korumak için ilke güncelleştirmelerinin özeti" lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-mail.png":::
 
 ActiveSync istemcilerini engellemek için yeni Exchange Online ilkenin eklenmemiş olması gerekir. Bu, mobil cihazlarda Outlook güçler.
 
@@ -60,7 +60,7 @@ ActiveSync istemcilerini engellemek için yeni Exchange Online ilkenin eklenmemi
 
 Exchange ActiveSync mobil cihazlarda mesajlaşma ve takvim verilerini eşitlemek için kullanılabilir.
 
-Mobil cihazlarda, intune uygulama koruma ilkelerini (veya uygulama koruma ilkesinde tanımlanmamış desteklenen istemcileri) desteklemeyen modern kimlik doğrulama özellikli Exchange ActiveSync istemcileri ve temel kimlik doğrulaması kullanan Exchange ActiveSync istemcileri, Onaylanan uygulamalar ve UYGULAMA koruması gerektirme altında oluşturulan Koşullu Erişim ilkesine bağlı olarak [engellenir.](identity-access-policies.md#require-approved-apps-and-app-protection)
+Mobil cihazlarda, Intune uygulama koruma ilkelerini (veya uygulama koruma ilkesinde tanımlanmamış desteklenen istemcileri) desteklemeen modern kimlik doğrulama özellikli Exchange ActiveSync istemcileri ve temel kimlik doğrulaması kullanan Exchange ActiveSync [istemcileri içinde oluşturulan Koşullu Erişim ilkesine bağlı olarak engellenir Onaylanan uygulamalar ve UYGULAMA koruması gerektirme](identity-access-policies.md#require-approved-apps-and-app-protection).
 
 Diğer cihazlarda Exchange ActiveSync kimlik doğrulaması kullanmalarını engellemek için Tüm cihazlarda [Exchange ActiveSync](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#block-exchange-activesync-on-all-devices) engelleme'de yer alan ve mobil olmayan cihazlarda temel kimlik doğrulaması kullanan Exchange ActiveSync istemcilerinin Exchange Online.
 
@@ -86,7 +86,7 @@ Adımlar şunlardır:
    Set-OwaMailboxPolicy -Identity Default -ConditionalAccessPolicy ReadOnlyPlusAttachmentsBlocked
    ```
 
-5. Azure portalda, şu ayarlarla yeni bir Koşullu Erişim ilkesi oluşturun:
+5. Koşullu Azure portal, şu ayarlarla yeni bir Koşullu Erişim ilkesi oluşturun:
 
    **Ödevler** \> **Kullanıcılar ve gruplar**: Dahil etmek ve dışlamak için uygun kullanıcıları ve grupları seçin.
 
@@ -102,13 +102,13 @@ iOS ve Android için E-posta [kullanarak ileti işbirliği erişimini yönetme O
 
 ## <a name="set-up-message-encryption"></a>İleti şifrelemeyi ayarlama
 
-Azure Information Protection Office 365 İleti Şifrelemesi koruma özelliklerinden yararlanan yeni Uygulama Sistemi (OME) özellikleriyle, kuruluşlarınız korumalı e-postaları herhangi bir cihazdan herkesle kolayca paylaşabilir. Kullanıcılar, Microsoft 365.com, Gmail ve diğer e-posta hizmetlerini kullanan, diğer Outlook olmayan kuruluşlarla da korumalı iletiler gönderebilir ve alabilirsiniz.
+Azure Information Protection'daki koruma özelliklerinden yararlanan yeni İleti Şifrelemesi (OME) özellikleriyle, kuruluşlarınız korumalı e-postayı herhangi bir cihazla herkesle kolayca paylaşabilir. Office 365 Kullanıcılar, Microsoft 365.com, Gmail ve diğer e-posta hizmetlerini kullanan, diğer Outlook olmayan kuruluşlarla da korumalı iletiler gönderebilir ve alabilirsiniz.
 
-Daha fazla bilgi için bkz[. Yeni özellik Office 365 İleti Şifrelemesi ayarlama](../../compliance/set-up-new-message-encryption-capabilities.md).
+Daha fazla bilgi için bkz[. İleti Şifrelemesi Office 365 yenilerini ayarlama](../../compliance/set-up-new-message-encryption-capabilities.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-![4. Adım: Bulut Microsoft 365 için ilkeler.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png)
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="Bulut uygulamaları için Microsoft 365 ilkeleri" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
 
 Koşullu Erişim ilkelerini aşağıdakiler için yapılandırma:
 

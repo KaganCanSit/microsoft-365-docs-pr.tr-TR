@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 description: Donanım tabanlı yalıtımda en yeni özellikleri elde edin. Açıkları ve kötü amaçlı bağlantılar gibi geçerli ve ortaya çıkan saldırıların çalışan üretkenliğini ve kurumsal güvenliği kesintiye karşı engellemesini önle.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8a483c6430721e0540a7012dabfcbd4480fd7ad8
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: da61ee2f5e29501e033ad44bc3fdb04ee2c042f0
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63675382"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473331"
 ---
 # <a name="application-guard-for-office-for-admins"></a>Yöneticiler için Office Application Guard
 
@@ -39,7 +39,7 @@ Microsoft Defender Application Guard (Office için Application Office Guard) gü
 
 ### <a name="minimum-software-requirements"></a>Minimum yazılım gereksinimleri
 
-* **Windows**: Windows 10 Enterprise sürümü, İstemci Derlemesi sürüm 2004 (20H1) derleme 19041 veya sonrası. Windows 11'in tüm sürümleri de desteklenen bir uygulamadır. 
+* **Windows**: Windows 10 Enterprise sürümü, İstemci Derlemesi sürüm 2004 (20H1) derleme 19041 veya sonrası. Tüm Windows 11 desteklenen bir sürümdir. 
 * **Office**: Office Kanal ve Aylık Enterprise Kanalı, Derleme sürümü 2011 16.0.13530.10000 veya üzerinde. Office Semi-Annual Enterprise, Derleme 2108 veya sonraki sürümler. E-postanın 32 bit ve 64 bit Office sürümleri de destekle.
 * **Güncelleştirme paketi**: Windows 10 [kb4571756 toplu aylık güvenlik güncelleştirmesini güncelleştirme](https://support.microsoft.com/help/4571756/windows-10-update-KB4571756)
 
@@ -61,7 +61,7 @@ Güncelleştirme kanallarını güncelleme hakkında Office fazla bilgi edinmek 
 
 2. Özellikler **altında Microsoft Defender Application Guard'Windows** Tamam'ı **seçin**. Application Guard özelliğinin etkinleştirilmesi, sistemin yeniden başlatılmasını gerektirir. Şimdi veya 3. adımdan sonra yeniden başlatmayı seçebilirsiniz.
 
-   ![Windows GÖSTEREN ÖZELLİkLER iletişim kutusu.](../../media/ag03-deploy.png)
+   :::image type="content" source="../../media/ag03-deploy.png" alt-text="AG'Windows gösteren Kullanıcı Özellikleri iletişim kutusu" lightbox="../../media/ag03-deploy.png":::
 
    Özellik, aşağıdaki PowerShell komutunu yönetici olarak çalıştırarak da etkinleştirilebilir:
 
@@ -71,7 +71,7 @@ Güncelleştirme kanallarını güncelleme hakkında Office fazla bilgi edinmek 
 
 3. Bilgisayar **Microsoft Defender Application Guard Şablonunda** grup **\\\\ilkesi olan Yönetilen Mod'da veya Bileşenler Windows\\** içinde grup Microsoft Defender Application Guard. Seçenekler'in altındaki değeri **2** veya **3** olarak ayarp ardından Tamam veya Uygula'ya **seçerek bu** ilkeyi **açabilirsiniz**.
 
-   ![Yönetilen Mod'da AG'ye açma.](../../media/ag04-deploy.png)
+   :::image type="content" source="../../media/ag04-deploy.png" alt-text="Yönetilen Mod'da AG'ye açma seçeneği" lightbox="../../media/ag04-deploy.png":::
 
    Bunun yerine, karşılık gelen CSP İlkesini de ayarlayın:
 
@@ -88,15 +88,15 @@ Bu adım, sorunları tanımlamak ve düzeltmek için gereken verilerin Microsoft
 
 1. Dosya **Ayarlar'i** Başlat menüsü.
 
-   ![Başlat menüsü.](../../media/ag05-diagnostic.png)
+   :::image type="content" source="../../media/ag05-diagnostic.png" alt-text="Başlat menüsü" lightbox="../../media/ag05-diagnostic.png":::
 
 2. Gizlilik **Windows Ayarlar'i** **seçin**.
 
-   ![Windows Ayarlar seçin.](../../media/ag06-diagnostic.png)
+   :::image type="content" source="../../media/ag06-diagnostic.png" alt-text="Windows Ayarlar menüsü" lightbox="../../media/ag06-diagnostic.png":::
 
 3. Gizlilik altında Tanılama ve geri **bildirim & İsteğe** bağlı tanılama **verileri'ne seçin**.
 
-   ![Tanılama ve geri bildirim menüsü.](../../media/ag07a-diagnostic.png)
+   :::image type="content" source="../../media/ag07a-diagnostic.png" alt-text="Tanılama ve geri bildirim menüsü" lightbox="../../media/ag07a-diagnostic.png":::
 
 Tanılama ayarlarını yapılandırma hakkında Windows için bkz. [Windows verilerini yapılandırma](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management).
 
@@ -108,13 +108,13 @@ Application Guard'ın etkinleştirildiğinden Office için Word, Excel veya Powe
 
 Güvenilmeyen bir dosyayı ilk kez asanız, aşağıdaki örnekte Office bir giriş ekranı görebilirsiniz. Bir süre için Application Guard for Office etkinken ve dosya açıkken görüntülenebilir. Güvenilmeyen dosyaların sonraki açılışları daha hızlı olur.
 
-![Office uygulaması giriş ekranı.](../../media/ag08-confirm.png)
+:::image type="content" source="../../media/ag08-confirm.png" alt-text="Büyük Office uygulaması giriş sayfası" lightbox="../../media/ag08-confirm.png":::
 
 Açıldığında, dosyanın, uygulama koruması altında açılması için birkaç görsel gösterge Office:
 
 * Şeritte bir callout
 
-  ![Küçük App Guard notunu gösteren belge dosyası.](../../media/ag09-confirm.png)
+  :::image type="content" source="../../media/ag09-confirm.png" alt-text="Küçük App Guard notunu gösteren Doc dosyası" lightbox="../../media/ag09-confirm.png":::
 
 * Görev çubuğunda kalkanlı uygulama simgesi
 
@@ -186,21 +186,21 @@ Destek için Application Guard'ı Office sorunla karşılaşırsanız, Geri Bild
 
 Uygulama Koruması'Office belgeler açıldığında sorun Office e-postanın Office geri bildirim gönderebilirsiniz. Geri bildirim Office [Insider El Kitabı'na](https://insider.office.com/handbook) bakın.
 
-## <a name="integration-with-microsoft-defender-for-endpoint-and-microsoft-defender-for-office-365"></a>Uç Nokta için Microsoft Defender ve Güvenlik için Microsoft Defender ile Office 365
+## <a name="integration-with-microsoft-defender-for-endpoint-and-microsoft-defender-for-office-365"></a>Uç Nokta için Microsoft Defender ve Office 365 için Microsoft Defender ile tümleştirme
 
-Application Guard for Office is integrated with Microsoft Defender for Endpoint to provide monitoring and alerting on malicious activity that happens in the is yalıtılmış ortamda.
+Application Guard for Office is integrated with Uç Nokta için Microsoft Defender to provide monitoring and alerting on malicious activity that happens in the is yalıtılmış ortamda.
 
-[Kasa E365 E5'te Belgeler, microsoft e-posta](/microsoft-365/security/office-365-security/safe-docs) için Application Guard'da açılan belgeleri taramak için Uç Nokta için Microsoft Defender'ı kullanan bir Office. Ek bir koruma katmanı için, tarama sonuçları belirlenene kadar kullanıcılar Office Application Guard'dan ayrılamaz.
+[Kasa Microsoft E365 E5'te](/microsoft-365/security/office-365-security/safe-docs) Belgeler, Uç Nokta için Microsoft Defender tarafından koruma için Application Guard'da açılan belgeleri taramak için Office. Ek bir koruma katmanı için, tarama sonuçları belirlenene kadar kullanıcılar Office Application Guard'dan ayrılamaz.
 
-Uç Nokta için Microsoft Defender, kurumsal ağların gelişmiş tehditleri engellemesini, algılamasını, araştırmasını ve yanıtlamasını önlemeye yardımcı olmak için tasarlanmış bir güvenlik platformudur. Bu platform hakkında daha fazla ayrıntı için bkz. [Uç Nokta için Microsoft Defender](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp). Bu platforma cihaz ekleme hakkında daha fazla bilgi edinmek için bkz. [Uç nokta hizmeti için Microsoft Defender'a cihaz ekleme](/windows/security/threat-protection/microsoft-defender-atp/onboard-configure).
+Uç Nokta için Microsoft Defender ağları, gelişmiş tehditleri önlemeye, algılamaya, araştırmaya ve yanıtlamaya yardımcı olmak için tasarlanmış bir güvenlik platformudur. Bu platform hakkında daha fazla ayrıntı için bkz. [Uç Nokta için Microsoft Defender](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp). Bu platforma cihaz ekleme hakkında daha fazla bilgi edinmek için bkz. Cihazları [mobil Uç Nokta için Microsoft Defender ekleme](/windows/security/threat-protection/microsoft-defender-atp/onboard-configure).
 
-Ayrıca, uç nokta için Defender ile Office 365 için Microsoft Defender'ı da yapılandırebilirsiniz. Daha fazla bilgi için bkz. [Office 365 için Microsoft Defender ile Uç Nokta için Defender'ı Tümleştir.](integrate-office-365-ti-with-mde.md)
+Ayrıca, uç nokta için Office 365 için Microsoft Defender Defender ile çalışacak şekilde de yapılandırebilirsiniz. Daha fazla bilgi için, [E-posta Office 365 için Defender'i Uç Nokta için Microsoft Defender](integrate-office-365-ti-with-mde.md).
 
 ## <a name="limitations-and-considerations"></a>Sınırlamalar ve dikkate alınacak noktalar
 
 * Office için Application Guard, güvenilir olmayan belgeleri yalıtır ve böylece bilgisayarda güvenilir şirket kaynaklarına, intranete, kullanıcının kimliğine ve rastgele dosyalara erişiyemeyen bir korumalı moddur. Sonuç olarak, kullanıcı diskte yerel bir dosyadan resim ekleme gibi bu tür erişime bağımlı bir özel özellikle erişmeyi çalışırsa, erişim başarısız olur ve aşağıdaki örneğine benzer bir istem oluşturur. Güvenilmeyen bir belgenin güvenilen kaynaklara erişmesi için, kullanıcıların belgeden Application Guard korumasını kaldırması gerekir. 
 
-  ![Güvenli tutmanıza yardımcı olmak için bu özelliği kullanılamaz söyleyen iletişim kutusu.](../../media/ag10-limitations.png)
+  :::image type="content" source="../../media/ag09-confirm.png" alt-text="Güvenlik iletisi ve özellik durumunu belirten İletişim kutusu" lightbox="../../media/ag09-confirm.png":::
 
   > [!NOTE]
   > Kullanıcılara yalnızca dosyaya ve kaynağına ya da kaynağına güvenseler korumayı kaldırmalarını önerin.
@@ -241,5 +241,5 @@ Bu üç durumlu durumla karşılaş Office, Windows'te oturum akten sonra kullan
 * Desteklenmeyen dosya türleri koruma ilkesi için varsayılan ayar, şifrelenmiş veya Bilgi Hakları Yönetimi (IRM) ayarlanmış güvenilmeyen dosya türlerinin açılmasını engellemektir. Bu, şifreleme (gizli Microsoft Bilgi Koruması çok gizli) kullanarak hassas duyarlılık etiketleri içeren dosyaları içerir.
 * CSV ve HTML dosyaları şu anda desteklenmiyor.
 * Application Guard for Office şu anda NTFS sıkıştırılmış hacimleri ile çalışmıyor. "Ses düzeyi" hatasını ERROR_VIRTUAL_DISK_LIMITATION ses düzeyinin sıkıştırılmamış olarak sıkıştırılmamış olarak  denemesi gerekir.
-* .NET güncelleştirmeleri, dosyaların Application Guard'da açılmalarına neden olabilir. Geçici bir çözüm olarak, kullanıcılar bu hatayla karşı karşıya olduğunda cihazlarını yeniden başlatabilirsiniz. Korumalı Alan'da veya Korumalı [Alanı'nda açılmaya çalışılıyorken hata iletisi Windows Defender Application Guard hakkında Windows bilgi alın](https://support.microsoft.com/help/4575917/receiving-an-error-message-when-attempting-to-open-windows-defender-ap).
+* .NET güncelleştirmeleri, dosyaların Application Guard'da açılmalarına neden olabilir. Geçici bir çözüm olarak, kullanıcılar bu hatayla karşı karşıya olduğunda cihazlarını yeniden başlatabilirsiniz. İletiyi veya posta iletisini [açmaya çalışırken hata iletisi alma Windows Defender Application Guard daha fazla Windows Korumalı Alanı](https://support.microsoft.com/help/4575917/receiving-an-error-message-when-attempting-to-open-windows-defender-ap).
 * Ek bilgi [için lütfen Sık sorulan Microsoft Defender Application Guard - Yardım'a bakın.](/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard) 

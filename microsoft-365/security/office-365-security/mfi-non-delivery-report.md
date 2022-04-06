@@ -15,12 +15,12 @@ ms.custom:
 description: Yöneticiler, teslim edilemedi raporlarında (NDR'ler veya geri dönen iletiler olarak da bilinir) en sık karşılaşılan hata kodlarını izlemek için Güvenlik & Uyumluluk Merkezi'nde Posta akışı panosunda Teslim edilemedi ayrıntıları raporunu kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 73d48b831f42deca83b6b1b62fde09cd6c44562e
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: bc408f6bb28b11e77c49755b888c44e0ea4d9f57
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679642"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473749"
 ---
 # <a name="non-delivery-report-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde teslim & değil
 
@@ -28,12 +28,12 @@ ms.locfileid: "63679642"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 **Güvenlik** [&](https://protection.office.com) Uyumluluk Merkezi'nin Posta [](mail-flow-insights-v2.md) akışı panosunda, teslim edilemedi raporlarında (NDR'ler veya geri dönen iletiler olarak da bilinir) en çok karşılaşılan hata kodları yer alır. Bu rapor NDR'lerin ayrıntılarını gösterir; böylelikle e-posta teslim sorunlarını giderebilirsiniz.
 
-![Güvenlik ve Uyumluluk Merkezi'nin Posta akışı panosunda teslim & widget'ı.](../../media/mfi-non-delivery-report-widget.png)
+:::image type="content" source="../../media/mfi-non-delivery-report-widget.png" alt-text="Güvenlik ve Uyumluluk Merkezi'nin Posta akışı panosunda Teslim & widget'ı" lightbox="../../media/mfi-non-delivery-report-widget.png":::
 
 ## <a name="report-view-for-the-non-delivery-report"></a>Teslim olmayan rapor için rapor görünümü
 
@@ -43,7 +43,7 @@ Varsayılan olarak, tüm hata kodları etkinliği gösterilir. Aşağıdaki içi
 
 Grafikte belirli bir günün belirli bir rengin (hata kodu) üzerine gelindiğinde hatanın toplam ileti sayısını alırsınız.
 
-![Kabul edilmeyen etki alanı raporu rapor görünümü.](../../media/mfi-non-delivery-report-overview-view.png)
+:::image type="content" source="../../media/mfi-non-delivery-report-overview-view.png" alt-text="Kabul edilmeyen etki alanı raporu rapora göre Rapor görünümü" lightbox="../../media/mfi-non-delivery-report-overview-view.png":::
 
 ## <a name="details-table-view-for-the-non-delivery-report"></a>Teslim değil raporu için Ayrıntılar tablosu görünümü
 
@@ -65,7 +65,8 @@ Tabloda bir satır seçin; aşağıdaki bilgilerle birlikte bir açılır sayfa 
 - **Sayı**
 - **Örnek iletiler**: Etkilenen **iletilerden bir örneğine** dair [ileti izleme sonuçlarını görmek](message-trace-scc.md) için Örnek iletileri görüntüle'ye tıkabilirsiniz.
 
-![Teslim değil raporunda Ayrıntılar tablosu görünümünde bir satır seçdikten sonra ayrıntılar uçarak çıkış.](../../media/mfi-non-delivery-report-details-flyout.png)
+
+:::image type="content" source="../../media/mfi-non-delivery-report-details-flyout.png" alt-text="Teslim değil raporunda Ayrıntılar tablosu görünümünde bir satır seçdikten sonra Ayrıntılar uçarak çıkış" lightbox="../../media/mfi-non-delivery-report-details-flyout.png":::
 
 ## <a name="related-topics"></a>İlgili konular
 

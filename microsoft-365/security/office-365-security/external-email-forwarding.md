@@ -16,12 +16,12 @@ ms.custom:
 description: Bu makale dış e-posta iletme, Otomatik iletme, 5.7.520 Erişim Engellendi iletileri, dış iletmeyi devre dışı bırakma, 'Yöneticiniz dış iletmeyi devre dışı bıraktı' iletilerini ve giden istenmeyen posta önleme ilkesi gibi konuları kapsar.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 14b41f21efe3608096636444afd4b36de3742a85
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 8df0ff9902fe22fd44a0d15f7f01e13e791c7b12
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681424"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473617"
 ---
 # <a name="control-automatic-external-email-forwarding-in-microsoft-365"></a>E-postalarda otomatik dış e-posta iletmeyi Microsoft 365
 
@@ -29,7 +29,7 @@ ms.locfileid: "63681424"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Yönetici olarak, şirket gereksinimleriniz olabilir ve bu iletileri dış alıcılara (kuruluş dışından alıcılar) otomatik olarak iletilen iletileri kısıtlar veya kontrol eder. E-posta iletme kullanışlı olabilir, ancak bilgilerin olası açıklanması nedeniyle güvenlik riski de ortaya atabilirsiniz. Saldırganlar bu bilgileri kuruluşa veya iş ortaklarına saldırı yapmak için kullanabilir.
@@ -84,14 +84,15 @@ Aşağıdaki bilgiler, yönetim merkezinde (EAC) posta Exchange oluşturmak içi
   - **Üst bilgi adı**: `X-MS-Exchange-Inbox-Rules-Loop`
   - **Üst bilgi değeri**: `.`
 
-  Koşul şöyle görünür: **'X-MS-Exchange-Inbox-Rules-Loop'** üst bilgisi **'.'**
+  Koşul şöyle görünür: **'X-MS-Exchange-Inbox-Rules-Loop'** üst bilgisi **' ile eş.'**
 
   Bu koşul, üst bilgi için herhangi bir değerle eşler.
 
 - (İsteğe bağlı) **Aşağıdakini yapın** (eylem): İsteğe bağlı bir eylem yapılandırarak. Örneğin, üst bilgi adı  \> **X-İletili** olarak ve Doğru değeriyle **ileti üst** bilgisini ayarlamak için İleti özelliklerini değiştirme eylemini **kullanabilirsiniz**. Ancak, bir eylemi yapılandırmak gerekmez.
 - Bu **rupisi önem düzeyi için Düşük****, Orta** veya Yüksek **değerine** **ayarlayın**. Bu ayar, iletmeyi sağlayan [Exchange için Aktarım](view-email-security-reports.md#exchange-transport-rule-report) Kuralı raporunu kullanmana olanak sağlar.
 
-![İletili iletileri tanımlamak için EAC'de posta akışı kuralı özellikleri.](../../media/mail-flow-rule-for-forwarded-messages.png)
+:::image type="content" source="../../media/mail-flow-rule-for-forwarded-messages.png" alt-text="İletili iletileri tanımlamak için EAC'de Posta akışı kuralı özellikleri" lightbox="../../media/mail-flow-rule-for-forwarded-messages.png":::
+
 
 ## <a name="blocked-email-forwarding-messages"></a>İletileri iletirken engellenen e-posta
 

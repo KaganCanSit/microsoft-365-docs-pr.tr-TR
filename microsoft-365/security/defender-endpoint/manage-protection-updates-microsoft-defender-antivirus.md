@@ -15,12 +15,12 @@ manager: dansimp
 ms.custom: nextgen
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: c2ebb60d3cd5514d003991d26c5070b05e89fb37
-ms.sourcegitcommit: e3bff611439354e6339bb666a88682078f32ec13
+ms.openlocfilehash: 69c211e02b5bea12431e17bf2256405f96977b53
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014347"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467433"
 ---
 # <a name="manage-the-sources-for-microsoft-defender-antivirus-protection-updates"></a>Koruma güncelleştirmeleri için kaynakları Microsoft Defender Virüsten Koruma yönetme
 
@@ -28,8 +28,8 @@ ms.locfileid: "63014347"
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 <a id="protection-updates"></a>
 <!-- this has been used as anchor in VDI content -->
@@ -42,7 +42,7 @@ Virüsten korumanızın güncel korunması çok önemlidir. Güvenlik güncelle�
 Bu makalede güncelleştirmelerin nereden indirilmeleri gerektiği (geri dönüş sırası olarak da bilinir) açıklanmıştır. [Güncelleştirmelerin Microsoft Defender Virüsten Koruma ve güncelleştirmelerin](manage-updates-baselines-microsoft-defender-antivirus.md) diğer yönlerini (güncelleştirme zamanlama gibi) yapılandırma hakkında genel bir bilgi için bkz. Microsoft Defender Virüsten Koruma güncelleştirmelerini yönetme ve taban çizgilerini uygulama.
 
 > [!IMPORTANT]
-> Microsoft Defender Virüsten Koruma Güvenlik zekası güncelleştirmeleri Windows Güncelleştirmesi ile teslim edilir ve 21 Ekim 2019 Pazartesi'den itibaren tüm güvenlik zekası güncelleştirmeleri SHA-2'ye özel olarak imzalanacak. Güvenlik zekanızı güncelleştirmek için cihazlarınızı SHA-2'ye destek olacak şekilde güncelleştirilmiş olması gerekir. Daha fazla bilgi edinmek için bkz[. Windows WSUS için 2019 SHA-2 Kod İmzalama Desteği gereksinimi](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
+> Microsoft Defender Virüsten Koruma Güvenlik zekası güncelleştirmeleri Windows Update Pazartesi, 21 Ekim 2019'dan itibaren tüm güvenlik zekası güncelleştirmeleri SHA-2'ye özel olarak imzalanacak. Güvenlik zekanızı güncelleştirmek için cihazlarınızı SHA-2'ye destek olacak şekilde güncelleştirilmiş olması gerekir. Daha fazla bilgi edinmek için bkz[. Windows WSUS için 2019 SHA-2 Kod İmzalama Desteği gereksinimi](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
 
 <a id="fallback-order"></a>
 
@@ -65,7 +65,7 @@ Uç noktanın güncelleştirmeleri nereden alaları gerektiğini belirtebilirsin
 - [Ağ dosyası paylaşımı](#unc-share)
 - [Microsoft kötü amaçlı yazılımdan Microsoft Defender Virüsten Koruma için güvenlik zekası güncelleştirmeleri](https://www.microsoft.com/wdsi/defenderupdates) <sup>[[2](#fn1)]<sup></sup>
 
-(<a id="fn1">1</a>) Intune İç Tanım Güncelleştirme Sunucusu - Microsoft Defender Virüsten Koruma için tanım güncelleştirmelerini almak üzere SCCM/SUP kullanırsanız ve istemci cihazlarında engellenen Windows Update'e erişmeniz gerekirse, birlikte yönetime geçişebilir ve uç nokta koruma iş yükünü Intune'a atabilirsiniz. Intune'da yapılandırılan kötü amaçlı yazılımdan koruma ilkesinde, şirket içi WSUS'u güncelleştirme kaynağı olarak kullanmak üzere yapılandırılan bir 'iç tanım güncelleştirme sunucusu' seçeneği vardır. Bu, resmi WU sunucusundan kuruluş için onaylanan güncelleştirmeleri denetlemenizi ve ayrıca proxy'ye yardımcı olur ve ağ trafiğinin resmi Windows UPdates ağına kaydetmenizi sağlar.
+(<a id="fn1">1</a>) Intune Tanımı Güncelleştirme Sunucusu - Microsoft Defender Virüsten Koruma'ın tanım güncelleştirmelerini almak için SCCM/SUP kullanırsanız ve istemci cihazlarda Windows Update'e erişmeniz gerekirse, birlikte yönetime geçişebilir ve uç nokta koruma iş yükünü yükten Intune. Intune'da yapılandırılan kötü amaçlı yazılımdan koruma ilkesinde, şirket içi WSUS'u güncelleştirme kaynağı olarak kullanmak üzere yapılandırılan bir 'iç tanım güncelleştirme sunucusu' seçeneği vardır. Bu, resmi WU sunucusundan kuruluş için onaylanan güncelleştirmeleri denetlemenizi ve ayrıca proxy'ye yardımcı olur ve ağ trafiğinin resmi Windows UPdates ağına kaydetmenizi sağlar.
 
 (<a id="fn1">2</a>) İlkeniz ve kayıt defteriniz bunun eski adı olan Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi (MMPC) güvenlik zekası olarak listelenmiş olabilir.
 
@@ -86,20 +86,20 @@ Her kaynağın, aşağıdaki tabloda açıklandığı gibi güncelleştirmeleri 
 |Microsoft Update|Uç noktalarınızı doğrudan Microsoft Update'e bağlamak istiyor olun. Bu, kurumsal ağınıza düzenli olarak bağlanan uç noktalar için veya güncelleştirmelerinizi yönetmek için Windows Server Update Service kullanamıyorsanız yararlı olabilir.|
 |Dosya paylaşımı|İnternet'e bağlı olmayan cihazlarınız (VM'ler gibi) vardır. İnternet bağlantılı VM ana makinenizi kullanarak, güncelleştirmeleri ağ paylaşımına indirebilir ve sanal sanal makinenizin güncelleştirmeleri buradan edinebilirsiniz. Dosya [paylaşımlarının sanal masaüstü altyapısı](deployment-vdi-microsoft-defender-antivirus.md) (VDI) ortamlarında nasıl kullanılayları için VDI dağıtım kılavuzuna bakın.|
 |Microsoft Endpoint Manager|Microsoft Endpoint Manager'i kullanarak uç noktalarınızı güncelleştirebilirsiniz.|
-|Güvenlik zekası güncelleştirmeleri Microsoft Defender Virüsten Koruma Microsoft kötü amaçlı yazılımdan koruma (eski adı MMPC)|[Cihazlarınızı SHA-2'ye destek olacak şekilde güncelleştirilmiş olduğundan emin olun](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus). Microsoft Defender Virüsten Koruma Güvenlik zekası güncelleştirmeleri Windows Update aracılığıyla teslim edilir ve 21 Ekim 2019 Pazartesi günü başlayacak olan güvenlik zekası güncelleştirmeleri SHA-2'ye özel olarak imzalanacak. <br/>En son bulaşma nedeniyle veya VDI dağıtımı için güçlü, temel bir görüntü sağlanmasına yardımcı olmak için en son koruma [güncelleştirmelerini indirin](deployment-vdi-microsoft-defender-antivirus.md). Bu seçenek genellikle birincil kaynak olarak değil, yalnızca son geri dönüş kaynağı olarak kullanılmalıdır. Bu yalnızca, güncelleştirmeler Windows Server Update Hizmeti'nden veya Microsoft Update'den belirtilen [sayıda gün boyunca indirilene kadar kullanılmalıdır](/windows/threat-protection/microsoft-defender-antivirus/manage-outdated-endpoints-microsoft-defender-antivirus#set-the-number-of-days-before-protection-is-reported-as-out-of-date).|
+|Güvenlik zekası güncelleştirmeleri Microsoft Defender Virüsten Koruma Microsoft kötü amaçlı yazılımdan koruma (eski adı MMPC)|[Cihazlarınızı SHA-2'ye destek olacak şekilde güncelleştirilmiş olduğundan emin olun](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus). Microsoft Defender Virüsten Koruma Güvenlik zekası güncelleştirmeleri Windows Update teslim edilir ve 21 Ekim 2019 Pazartesi günü başlayacak olan güvenlik zekası güncelleştirmeleri SHA-2'ye özel olarak imzalanacak. <br/>En son bulaşma nedeniyle veya VDI dağıtımı için güçlü, temel bir görüntü sağlanmasına yardımcı olmak için en son koruma [güncelleştirmelerini indirin](deployment-vdi-microsoft-defender-antivirus.md). Bu seçenek genellikle birincil kaynak olarak değil, yalnızca son geri dönüş kaynağı olarak kullanılmalıdır. Bu yalnızca, güncelleştirmeler Windows Server Update Hizmeti'nden veya Microsoft Update'den belirtilen [sayıda gün boyunca indirilene kadar kullanılmalıdır](/windows/threat-protection/microsoft-defender-antivirus/manage-outdated-endpoints-microsoft-defender-antivirus#set-the-number-of-days-before-protection-is-reported-as-out-of-date).|
 
-Grup İlkesi, Veri Kaynağı, PowerShell cmdlet'leri ve WMI ile güncelleştirme kaynaklarının Microsoft Endpoint Configuration Manager yönetabilirsiniz.
+Güncelleştirme kaynaklarının ad, veri kaynağı, Microsoft Endpoint Configuration Manager, PowerShell cmdlet'leri ve WMI ile kullanılma grup ilkesi yönetabilirsiniz.
 
 > [!IMPORTANT]
 > Windows Server Update Service'i indirme konumu olarak ayarlıyorsanız, konumu belirtmek için hangi yönetim aracını kullanırsanız kullanın, güncelleştirmeleri onaylamanız gerekir. Windows Server Update Service ile otomatik bir onay kuralı kurabilirsiniz ve bu kural, güncelleştirmelerin günde en az bir kez gelmesinde yararlı olabilir. Daha fazla bilgi için bkz. [Tek başına Windows Server Update Service'te uç nokta koruma güncelleştirmelerini eşitleme](/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus).
 
 Bu makaledeki yordamlarda önce sıranın nasıl ayar bölümü ve ardından Etkinleştirdiyseniz Dosya **paylaşımı seçeneğinin** nasıl ayar olduğu açıklanmıştır.
 
-## <a name="use-group-policy-to-manage-the-update-location"></a>Güncelleştirme konumunu yönetmek için Grup İlkesi kullanma
+## <a name="use-group-policy-to-manage-the-update-location"></a>Güncelleştirme grup ilkesi yönetmek için Posta'ya yükleme
 
-1. Grup İlkesi yönetim makinenizin Grup İlkesi Yönetim [Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz Grup İlkesi Nesnesine sağ tıklayın ve Düzenle'ye **tıklayın**.
+1. Grup ilkesi yönetim makinenizin Yönetim [Konsolu'nu grup ilkesi](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), yapılandırmak istediğiniz Grup ilkesi Nesnesine sağ tıklayın ve Düzenle'ye **tıklayın**.
 
-2. Grup İlkesi **Yönetim Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin**.
+2. Genel Grup ilkesi **Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin**.
 
 3. **İlkeler'e** **ve ardından Yönetim şablonları'ne tıklayın**.
 
@@ -109,7 +109,7 @@ Bu makaledeki yordamlarda önce sıranın nasıl ayar bölümü ve ardından Etk
 
    2. Aşağıdaki ekran görüntüsünde gösterildiği gibi, kaynakları tek bir boruyla ayrılmış olarak girin. `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`
 
-      :::image type="content" source="../../media/wdav-order-update-sources.png" alt-text="kaynakların sıralarını listeleen grup ilkesi ayarı.":::
+      :::image type="content" source="../../media/wdav-order-update-sources.png" alt-text="Kaynakların sıralarını listeen grup ilkesi ayarı" lightbox="../../media/wdav-order-update-sources.png":::
 
    3. **Tamam**'ı seçin. Bu, koruma güncelleştirme kaynaklarının sıralamasını ayarlatır.
 
@@ -122,7 +122,7 @@ Bu makaledeki yordamlarda önce sıranın nasıl ayar bölümü ve ardından Etk
 > [!NOTE]
 > 1809'a kadar 1703 ve 1809 sürümleri olan Windows 10 için, ilke yolu **Windows Bileşenleri > Microsoft Defender Virüsten Koruma >** Sürüm 1903 olan Windows 10 için, ilke yolu Bileşenler **Windows olur > Microsoft Defender Virüsten Koruma > Zekası Güncelleştirmeleri**
 
-## <a name="use-configuration-manager-to-manage-the-update-location"></a>Güncelleştirme konumunu yönetmek için Yapılandırma Yöneticisi'ni kullanma
+## <a name="use-configuration-manager-to-manage-the-update-location"></a>Güncelleştirme Configuration Manager yönetmek için Posta'ya yükleme
 
 Güvenlik [Zekası Güncelleştirmelerini Yapılandırma (Endpoint Protection](/configmgr/protect/deploy-use/endpoint-definition-updates) dalı) yapılandırma Microsoft Endpoint Manager için bkz. Güvenlik Microsoft Endpoint Manager Güncelleştirmeleri.
 
@@ -155,7 +155,7 @@ Daha fazla bilgi için aşağıdaki makalelere bakın:
 
 - [Windows Defender WMIv2 API'leri](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
 
-## <a name="use-mobile-device-management-mdm-to-manage-the-update-location"></a>Güncelleştirme konumunu yönetmek için Mobil Cihaz Yönetimi'ne (MDM) sahip olun
+## <a name="use-mobile-device-management-mdm-to-manage-the-update-location"></a>Güncelleştirme Cihaz Yönetimi yönetmek için Mobil Cihaz (MDM) kullanma
 
 [MDM'yi yapılandırmayla ilgili ayrıntılar için bkz. İLKe CSP - Defender/SignatureUpdateFallbackOrder](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder).
 

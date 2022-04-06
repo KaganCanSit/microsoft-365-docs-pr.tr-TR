@@ -14,25 +14,26 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 4353bbfc0ce11c4a767ca599ecb23a1ab4f77a56
-ms.sourcegitcommit: 986ea76ecaceb5fe6b9616e553003e3c5b0df2e7
+ms.openlocfilehash: adf693bded45dcb44abd8d1e7892e5edc7b65585
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "63010793"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467169"
 ---
 # <a name="microsoft-365-defender-time-zone-settings"></a>Microsoft 365 Defender dilimi ayarlarını değiştirme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-settings-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-settings-abovefoldlink)
 
-Saat dilimi **menüsü Saat** dilimi ![ayarları simgesini kullanın1.](images/atp-time-zone.png) saat dilimini yapılandırarak lisans bilgilerini görüntülemeyi sağlar.
+Saat **dilimini yapılandırmak** ve lisans bilgilerini görüntülemek için Saat dilimi menüsünü kullanın.
+:::image type="content" source="images/atp-time-zone.png" alt-text="Saat dilimi ayarları-1" lightbox="images/atp-time-zone.png":::
 
 ## <a name="time-zone-settings"></a>Saat dilimi ayarları
 
@@ -40,37 +41,40 @@ Zaman, algılanması ve gerçek siber saldırıların değerlendirmesi ve çöz�
 
 Siberforensik soruşturmalar genellikle olay dizisini bir araya parça parça etmek için zaman damgalarını güvenmektedir. Sisteminizin doğru saat dilimi ayarlarını yansıtması önemlidir.
 
-Uç Nokta için Microsoft Defender Eşgüdümli Evrensel Saat (UTC) veya yerel saati  görüntüleniyor olabilir.
+Uç Nokta için Microsoft Defender Saat (UTC) veya yerel saat Eşgüdümli Evrensel Saat'i  görüntülemeyi sağlar.
 
-Geçerli saat dilimi ayarınız Microsoft Defender ayarlarında gösterilir. Görüntülenen saat dilimini, Saat dilimi menüsündeki Saat **Dilimi'nin** altında **Ayarlar > değiştirebilirsiniz**.
+Geçerli saat dilimi ayarınız Saat dilimi Uç Nokta için Microsoft Defender görüntülenir. Saat dilimi menüsünde görüntülenen saat dilimini **değiştirebilirsiniz** .
+
+:::image type="content" source="images/atp-time-zone-menu.png" alt-text="Saat dilimi ayarları-2" lightbox="images/atp-time-zone-menu.png":::
 
 ### <a name="utc-time-zone"></a>UTC saat dilimi
 
 Uç Nokta için Microsoft Defender varsayılan olarak UTC saati kullanır.
 
-Uç nokta saat dilimi için Microsoft Defender'ı UTC olarak ayar her kullanıcı için tüm sistem zaman damgasını (uyarılar, olaylar ve diğerleri) UTC'de görüntüler. Bu, güvenlik analistlerin dünyanın her yerinde farklı konumlarda çalışarak olayları araştırırken aynı zaman damgalarını kullanmalarına yardımcı olabilir.
+Saat Uç Nokta için Microsoft Defender UTC olarak ayarsanız tüm kullanıcılar için UTC'de tüm sistem zaman damgası (uyarılar, olaylar ve diğerleri) görüntülenir. Bu, güvenlik analistlerin dünyanın her yerinde farklı konumlarda çalışarak olayları araştırırken aynı zaman damgalarını kullanmalarına yardımcı olabilir.
 
 ### <a name="local-time-zone"></a>Yerel saat dilimi
 
-Uç nokta için Microsoft Defender'ın yerel saat dilimi ayarlarını kullanmalarını seçebilirsiniz. Tüm uyarılar ve olaylar yerel saat diliminiz kullanılarak görüntülenir.
+Yerel saat dilimi ayarlarını Uç Nokta için Microsoft Defender saat dilimi ayarlarını kullanmayı tercih edebilirsiniz. Tüm uyarılar ve olaylar yerel saat diliminiz kullanılarak görüntülenir.
 
-Yerel saat dilimi cihazınızın bölgesel ayarlarından alınır. Bölgesel ayarlarınızı değiştirirsiniz, Uç nokta saat dilimi için Microsoft Defender da değişir. Bu ayarın seçimi, Uç Nokta için Microsoft Defender'da görüntülenen zaman damgasının tüm Uç Nokta kullanıcıları için Microsoft Defender'ın yerel saatle hizalanması anlamına gelir. Farklı genel konumlarda yer alan analistler artık bölgesel ayarlarına göre Uç Nokta uyarıları için Microsoft Defender'ı görebilirler.
+Yerel saat dilimi cihazınızın bölgesel ayarlarından alınır. Bölgesel ayarlarınızı değiştirirsiniz, saat Uç Nokta için Microsoft Defender saat dilimi de değişir. Bu ayarın seçimi, aynı anda görüntülenen zaman damgasının Uç Nokta için Microsoft Defender tüm kullanıcılar için yerel saatle Uç Nokta için Microsoft Defender anlamına gelir. Farklı küresel konumlarda yer alan analistler, artık Uç Nokta için Microsoft Defender ayarlarına göre önemli uyarıları görebilirler.
 
 Analistler tek konumda yer alıyorsa, yerel saati seçme yararlı olabilir. Bu durumda, örneğin yerel kullanıcı şüpheli bir e-posta bağlantısına tıklamışsa, etkinlikleri yerel saatle daha kolay bir şekilde ilişkili yapmak daha kolay olabilir.
 
 ### <a name="set-the-time-zone"></a>Saat dilimini ayarlama
 
-Uç nokta saat dilimi için Microsoft Defender varsayılan olarak UTC'ye ayarlanır. Saat dilimini ayarlama, uç nokta görünümleri için tüm Microsoft Defender'ın saatlerini de değiştirir.
+Saat Uç Nokta için Microsoft Defender saat dilimi varsayılan olarak UTC'ye ayarlanır. Saat dilimini ayar her görünüm için saat Uç Nokta için Microsoft Defender değiştirir.
 
 Saat dilimini ayarlamak için:
 
-1. Portal **Saat Ayarlar** simgesinde [Microsoft 365 Defender menüsüne](https://security.microsoft.com/) ![tıklayın.](images/atp-time-zone.png)
-2. Güvenlik **merkezi'ne seçin**.
-3. Saat **Dilimi'ne** seçin ve saat dilimini UTC veya yerel saat diliminiz olarak ayarlayın.
+1. Saat dilimi **menüsüne** tıklayın.
+   :::image type="content" source="images/atp-time-zone.png" alt-text="Saat dilimi ayarları-3" lightbox="images/atp-time-zone.png":::
+1. Saat Dilimi **UTC göstergesini** seçin.
+1. Saat **Dilimi UTC'yi** veya yerel saat diliminizi (örneğin-7:00) seçin.
 
 ### <a name="regional-settings"></a>Bölgesel ayarlar
 
-Uç nokta için Microsoft Defender'a farklı tarih biçimleri uygulamak için Internet Explorer (IE) ve Uç Nokta (Edge) için bölgesel Microsoft Edge kullanın. Google Chrome gibi başka bir tarayıcı kullanıyorsanız, bu tarayıcının tarih ve saat ayarlarını değiştirmek için gerekli adımları izleyin. 
+İnternet'e farklı tarih biçimleri Uç Nokta için Microsoft Defender Internet Explorer (IE) ve Diğer (Edge) için bölgesel Microsoft Edge kullanın. Google Chrome gibi başka bir tarayıcı kullanıyorsanız, bu tarayıcının tarih ve saat ayarlarını değiştirmek için gerekli adımları izleyin. 
 
 #### <a name="internet-explorer-ie-and-microsoft-edge"></a>Internet Explorer (IE) ve Microsoft Edge
 

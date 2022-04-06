@@ -1,5 +1,5 @@
 ---
-title: Uç nokta için Microsoft Defender'a gereken en düşük gereksinimler
+title: En düşük Uç Nokta için Microsoft Defender
 description: Hizmete cihaz eklemeye için lisans gereksinimlerini ve gereksinimlerini anlama
 keywords: minimum gereksinimler, lisanslama, karşılaştırma tablosu
 ms.prod: m365-security
@@ -16,33 +16,33 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 03ac5ed0d63fb88639e9b7e1b55987bf328476e1
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+ms.openlocfilehash: 754537d11a4c183cd1057b94d583a31543d9e4a5
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63419079"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467367"
 ---
-# <a name="minimum-requirements-for-microsoft-defender-for-endpoint"></a>Uç nokta için Microsoft Defender'a gereken en düşük gereksinimler
+# <a name="minimum-requirements-for-microsoft-defender-for-endpoint"></a>En düşük Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-minreqs-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-minreqs-abovefoldlink)
 
 Hizmete cihaz ekleme için bazı minimum gereksinimler vardır. Hizmete cihazları eklemeye lisans, donanım ve yazılım gereksinimleri ve diğer yapılandırma ayarları hakkında bilgi edinebilirsiniz.
 
 > [!TIP]
 >
-> - Bu makalede, Uç Nokta Planı 2 için Microsoft Defender'a gereken en düşük gereksinimler açıklanmıştır. Uç Nokta Planı 1 için Defender hakkında bilgi arıyorsanız bkz. [Uç Nokta Planı 1 için Defender gereksinimleri](mde-p1-setup-configuration.md#review-the-requirements).
+> - Bu makalede, Plan 2'de Uç Nokta için Microsoft Defender en düşük gereksinimler açıklanmıştır. Uç Nokta Planı 1 için Defender hakkında bilgi arıyorsanız bkz. [Uç Nokta Planı 1 için Defender gereksinimleri](mde-p1-setup-configuration.md#review-the-requirements).
 > - Uç Nokta için Defender: Uç Nokta için Defender Teknik [Sürüm'de yapılan en son iyileştirmeler hakkında Community](https://techcommunity.microsoft.com/t5/Windows-Defender-Advanced-Threat/ct-p/WindowsDefenderAdvanced).
 > - Uç Nokta için Defender, son MITRE değerlendirmesinde endüstri lideri optikleri ve algılama özelliklerini gösteriyor. Okuma: [Analizler CK tabanlı değerlendirmede MITRE ATT&okuma](https://cloudblogs.microsoft.com/microsoftsecure/2018/12/03/insights-from-the-mitre-attack-based-evaluation-of-windows-defender-atp/).
 
 ## <a name="licensing-requirements"></a>Lisans gereksinimleri
-Uç nokta için Microsoft Defender lisans gereksinimleri hakkında bilgi için bkz. Uç nokta [lisans bilgileri için Microsoft Defender](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint).
+Lisanslama gereksinimleri hakkında bilgi Uç Nokta için Microsoft Defender için lisans [Uç Nokta için Microsoft Defender bkz](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint).
 
 
 Ayrıntılı lisans bilgileri için, Ürün Koşulları [sitesine bakın ve](https://www.microsoft.com/licensing/terms/) hüküm ve koşullar hakkında daha fazla bilgi edinmek için hesap ekibimizle birlikte çalışma.
@@ -76,7 +76,7 @@ Uç Nokta için Defender'a Erişim, aşağıdaki tarayıcıları desteklemeye de
 - Windows 10 Enterprise IoT
 
     >[!NOTE]
-    >Windows 10 IoT Enterprise, Uç Nokta için Microsoft Defender'da desteklenen bir işletim sistemiyken ve OEM'lerin/ODM'lerin ürün veya çözümlerinin bir parçası olarak bunu dağıtmalarına olanak sağlarken, müşterilerin ana bilgisayar tabanlı yüklü yazılım ve desteklanabilirlik konusunda OEM/ODM'nin rehberlerine uyması gerekir.
+    >Windows 10 IoT Enterprise, Uç Nokta için Microsoft Defender'de desteklenen bir işletim sistemidir ve OEM'lerin/ODM'lerin ürün veya çözümlerinin bir parçası olarak bunu dağıtmalarına olanak sağlarken, müşterilerin ana bilgisayar tabanlı yüklü yazılım ve desteklanabilirlik konusunda OEM/ODM'nin rehberlerine uyması gerekir.
 
 - Windows 10 Education
 - Windows 10 Pro
@@ -101,11 +101,11 @@ Bu güncelleştirmelerin desteklenen sürümleri hakkında daha fazla Windows 10
 > [!NOTE]
 > Makine sürümlerini (Windows gibi Windows CE Windows 10 Mobile makinelerini) desteklemez.
 >
-> Microsoft dışı sanallaştırma Windows 10 Enterprise 2016 LTSB kullanan Sanal Makineler, performans sorunlarıyla karşılaşabilirsiniz.
+> Sanal Makineler sanallaştırma Windows 10 Enterprise 2016 LTSB, Microsoft dışı sanallaştırma platformlarında çalıştırma sırasında performans sorunlarıyla karşılaşabilirsiniz.
 >
 > Sanal ortamlar için, LTSC 2019 veya Windows 10 Enterprise bir sonraki ortamlar kullanılması önerilir.
 
-Microsoft Windows işletim sistemlerinde bileşenler güncel olduğunda, Uç nokta desteği için Microsoft Defender ilgili işletim sisteminin yaşam döngüsüne uygun olur. Daha fazla bilgi için bkz. Yaşam Döngüsü [SSS](/lifecycle/faq/general-lifecycle). Yeni özellikler veya özellikler genellikle yalnızca yaşam döngüsünün sonuna ulaşmamış olan işletim sistemleri üzerinde sağlanır. Güvenlik zekası güncelleştirmeleri (tanım ve altyapı güncelleştirmeleri) ve algılama mantığı en azından şunları yapmaya kadar sağlanacaktır:
+Microsoft Windows işletim sistemlerinde bileşenler güncel olduğunda, Uç Nokta için Microsoft Defender destek ilgili işletim sisteminin yaşam döngüsüne göre devam eder. Daha fazla bilgi için bkz. Yaşam Döngüsü [SSS](/lifecycle/faq/general-lifecycle). Yeni özellikler veya özellikler genellikle yalnızca yaşam döngüsünün sonuna ulaşmamış olan işletim sistemleri üzerinde sağlanır. Güvenlik zekası güncelleştirmeleri (tanım ve altyapı güncelleştirmeleri) ve algılama mantığı en azından şunları yapmaya kadar sağlanacaktır:
 
 - Destek [tarihi sonu (](/lifecycle/products/) Genişletilmiş Güvenlik Güncelleştirmeleri (ESU) programı olan işletim sistemleri için).
 - [ESU tarihi sonu](/lifecycle/faq/extended-security-updates) (ESU programı olan işletim sistemleri için).
@@ -124,17 +124,17 @@ Microsoft Windows işletim sistemlerinde bileşenler güncel olduğunda, Uç nok
 
 ### <a name="network-and-data-storage-and-configuration-requirements"></a>Ağ ve veri depolama ve yapılandırma gereksinimleri
 
-Ekleme sihirbazını ilk kez çalıştıracakken, Uç nokta ile ilgili bilgiler için Microsoft Defender'ın nerede depolanmış olduğunu seçmeniz gerekir: Avrupa Birliği' nde, Birleşik Krallık'ta veya ABD veri merkezinde.
+Ekleme sihirbazını ilk kez başlatırken, Uç Nokta için Microsoft Defender ilgili bilgilerin depolandığı yeri seçmeniz gerekir: Avrupa Birliği'nde, Birleşik Krallık'ta veya Birleşik Devletler merkezinde.
 
 > [!NOTE]
 >
 > - İlk kurulumdan sonra veri depolama konumlarınızı değiştiremezsiniz.
-> - Microsoft'un [verilerinizi nerede ve nasıl depola ilgili daha fazla](data-storage-privacy.md) bilgi için Uç nokta veri depolaması ve gizliliği için Microsoft Defender'ı gözden geçirebilirsiniz.
+> - [Microsoft'Uç Nokta için Microsoft Defender nerede ve nasıl depola](data-storage-privacy.md) ilgili daha fazla bilgi için veri depolama ve gizlilik bilgilerini gözden geçirebilirsiniz.
 
 ### <a name="diagnostic-data-settings"></a>Tanılama veri ayarları
 
 > [!NOTE]
-> Uç Nokta için Microsoft Defender etkin olduğu sürece belirli bir tanılama düzeyi gerektirmez.
+> Uç Nokta için Microsoft Defender etkin olduğu sürece herhangi bir belirli tanılama düzeyi gerektirmez.
 
 Tanılama veri hizmetinin, kuruma bağlı tüm cihazlarda etkinleştirildiğinden emin olun.
 Varsayılan olarak, bu hizmet etkindir. Bu verilerden algılayıcı verileri edin tam olarak emin olmak için kontrol etmek iyi bir yöntemdir.
@@ -153,7 +153,7 @@ Varsayılan olarak, bu hizmet etkindir. Bu verilerden algılayıcı verileri edi
 
    Hizmet etkinleştirilmişse, sonuç aşağıdaki ekran görüntüsüne benzer olmalıdır:
 
-   ![diagtrack için sc query komutunun sonucu.](images/windefatp-sc-qc-diagtrack.png)
+   :::image type="content" source="images/windefatp-sc-qc-diagtrack.png" alt-text="diagtrack için sc sorgu komutunun sonucu" lightbox="images/windefatp-sc-qc-diagtrack.png":::
 
 Varsayılan ayar Otomatik Olarak Başlat'a ayar değil **START_TYPE hizmeti otomatik** olarak başlat olacak şekilde **AUTO_START**.
 
@@ -183,7 +183,7 @@ Uç nokta algılayıcısı için Defender, Uç nokta bulut hizmeti için Defende
 
 Ek ara sunucu yapılandırma ayarları hakkında daha fazla bilgi için bkz. [Cihaz ara sunucusunu ve İnternet bağlantı ayarlarını yapılandırma](configure-proxy-internet.md).
 
-Cihazları eklemeden önce tanılama veri hizmetinin etkinleştirilmesi gerekir. Windows 10 11'de Windows etkinleştirilir.
+Cihazları eklemeden önce tanılama veri hizmetinin etkinleştirilmesi gerekir. Hizmet, E-posta ve Windows 10 içinde Windows 11.
 
 ## <a name="microsoft-defender-antivirus-configuration-requirement"></a>Microsoft Defender Virüsten Koruma gereksinimini karşıla
 
@@ -204,9 +204,9 @@ Sunucularınızı işe alıyorsanız ve Microsoft Defender Virüsten Koruma sunu
 
 Cihazlarınız arasında birincil Microsoft Defender Virüsten Koruma koruma ürünü olarak çalıştıracaksanız Uç nokta için Defender aracısı başarılı bir şekilde kullanılır.
 
-Üçüncü taraf bir kötü amaçlı yazılımdan koruma istemcisi kullanıyorsanız ve Mobil Cihaz Yönetimi çözümleri veya Microsoft Endpoint Manager (geçerli dalı) kullanıyorsanız, ELAM sürücüsünün Microsoft Defender Virüsten Koruma emin olun. Daha fazla bilgi için bkz[. İlke tarafından Microsoft Defender Virüsten Koruma devre dışı bırakıldıktan emin olmak.](troubleshoot-onboarding.md#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy)
+Üçüncü taraf bir kötü amaçlı yazılımdan koruma istemcisi kullanıyorsanız ve Mobile Cihaz Yönetimi çözümleri veya Microsoft Endpoint Manager (geçerli dalı) kullanıyorsanız, ELAM sürücüsünün Microsoft Defender Virüsten Koruma emin olun. Daha fazla bilgi için bkz[. İlke tarafından Microsoft Defender Virüsten Koruma devre dışı bırakıldıktan emin olmak.](troubleshoot-onboarding.md#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy)
 
 ## <a name="related-topics"></a>İlgili konular
 
-- [Uç nokta dağıtımı için Microsoft Defender'ı ayarlama](production-deployment.md)
+- [Dağıtım Uç Nokta için Microsoft Defender ayarlama](production-deployment.md)
 - [Cihazları ekleme](onboard-configure.md)

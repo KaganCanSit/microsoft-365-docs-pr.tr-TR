@@ -14,12 +14,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Microsoft SharePoint Syntex'da önceden oluşturulmuş modeller hakkında bilgi SharePoint Syntex.
-ms.openlocfilehash: e7a23174deb5726bf05ee7af3fbc089e2d0820bd
-ms.sourcegitcommit: 6c57f1e90339d5a95c9e7875599dac9d3e032c3a
+ms.openlocfilehash: 1146e4947392ce0e0848632e55f22e5b8b8d2d91
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "63016445"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569058"
 ---
 # <a name="prebuilt-models-overview-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da önceden oluşturulmuş modellere genel SharePoint Syntex
 
@@ -36,6 +36,8 @@ Modelinizi yayımlandıktan sonra, erişiminiz olan herhangi bir belge kitaplı�
 ## <a name="requirements"></a>Gereksinimler
 
 - Desteklenen dosya biçimleri: JPEG, PNG, BMP, TIFF ve PDF (metin eklenmiş veya taranmış).
+
+- Desteklenen diller: Şu anda faturalardan yalnızca Birleşik Devletler dili faturaları desteklemektedir. Avustralya, Kanada, İngiltere, Birleşik Devletler Hindistan'dan yapılan İngilizce satış makbuzları da desteklemektedir.
 
 - Metin ekli PDF'ler, karakter ayıklama ve konumlarda hata olasılığını ortadan kaldırmak için en iyisidir.
 

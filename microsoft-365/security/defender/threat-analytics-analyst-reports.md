@@ -20,12 +20,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: article
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 364e83d03da53f5e6ffa8cecda4847e13c38f60e
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 68d6c0bed1f9484f4eed45924c57357b1c490e8f
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499495"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569388"
 ---
 # <a name="understand-the-analyst-report-in-threat-analytics-in-microsoft-365-defender"></a>Microsoft 365 Defender'de tehdit analizinde analist raporunu Microsoft 365 Defender
 
@@ -95,7 +95,7 @@ Virüsten koruma algılama listesi gibi, EDR uyarılarının bazıları da izlem
 
 Office 365 için Microsoft Defender'den gelen e-postayla ilgili algılamalar ve risk azaltmalar, analist raporlarına, ayrıca Uç Nokta için Microsoft Defender.
 
-Engellenmiş e-posta deneme bilgileri, saldırı etkili bir şekilde teslimat öncesinde engellenmiş veya gereksiz posta klasörüne teslim edilene kadar analist raporunda ele alınan tehdidin hedefi olup olmadığı hakkında size öngörüler sağlar.
+Engellenmiş e-posta deneme bilgileri, saldırı saldırının teslimden önce etkili bir şekilde engellenmiş veya gereksiz posta klasörüne teslim edilene kadar analist raporunda ele alınan bir tehdit hedefi olup olmadığı hakkında size öngörüler sağlar.
 
 ## <a name="find-subtle-threat-artifacts-using-advanced-hunting"></a>Gelişmiş avı kullanarak küçük tehdit yapıtlarını bulun
 
@@ -106,7 +106,7 @@ Algılamalar, izleme tehditlerini otomatik olarak tanımlamanıza ve durdurmanı
 Analist raporlarında yer alan gelişmiş arama sorguları Microsoft analistleri tarafından yoklandı ve gelişmiş arama sorgusu [düzenleyicisinde çalıştırmaya hazır](https://security.microsoft.com/advanced-hunting). Gelecekteki eşleşmelerde uyarıları tetikleyen [özel algılama kuralları](custom-detection-rules.md) oluşturmak için sorguları da kullanabilirsiniz.
 
 >[!NOTE]
-> Tehdit analizleri aynı zamanda [yeni Uç Nokta için Microsoft Defender.](/windows/security/threat-protection/microsoft-defender-atp/threat-analytics) Ancak, tehdit analizlerini kullanarak sahip olduğu Microsoft Defender ile Office Uç Nokta için Microsoft Defender arasında Microsoft 365 Defender tümleştirmesi olmaz.
+> Tehdit analizleri aynı zamanda [yeni Uç Nokta için Microsoft Defender.](/windows/security/threat-protection/microsoft-defender-atp/threat-analytics) Bununla birlikte, Office için Microsoft Defender ile Uç Nokta için Microsoft Defender.
 
 ## <a name="related-topics"></a>İlgili konular
 

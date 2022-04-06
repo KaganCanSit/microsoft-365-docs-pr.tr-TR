@@ -8,6 +8,7 @@ manager: dansimp
 ms.date: 09/18/2020
 audience: ITPro
 ms.topic: overview
+ms.collection: M365-security-compliance
 ms.localizationpriority: medium
 ms.assetid: 1270a65f-ddc3-4430-b500-4d3a481efb1e
 ms.custom:
@@ -15,20 +16,20 @@ ms.custom:
 description: Bu posta Exchange Online Protection (EOP) tek başına ve karma ortamlarda şirket içi e-posta kuruluşlarınızı korumaya nasıl yardımcı olduğunu öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ef4443c0ee9b029133bb2abfabdd9a2f00a52203
-ms.sourcegitcommit: 9f0e84835121ce6228fdc69182c24be7ad1cb20e
+ms.openlocfilehash: 3fb49a24ae378be990efd727450a06889cc50679
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015462"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473375"
 ---
-# <a name="exchange-online-protection-overview"></a>Exchange Online Protection genel bakış
+# <a name="exchange-online-protection-overview"></a>Exchange Online Protection’a genel bakış
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Exchange Online Protection (EOP), organizasyonlarınızı istenmeyen postalara, kötü amaçlı yazılımlara ve diğer e-posta tehditlerine karşı koruyan bulut tabanlı filtreleme hizmetidir. EOP, EOP'Microsoft 365 posta kutuları olan tüm Exchange Online vardır.
@@ -36,7 +37,7 @@ Exchange Online Protection (EOP), organizasyonlarınızı istenmeyen postalara, 
 > [!NOTE]
 > EOP, şirket içi posta kutularını ve karma ortamlarda korumak için kendi kendine de kullanılabilir ve şirket içi posta kutularını ve karma Exchange sağlar. Daha fazla bilgi için bkz. [Tek Exchange Online Protection](/exchange/standalone-eop/standalone-eop).
 
-EOP güvenlik özelliklerini ayarlama adımları ve güvenlikle ilgili karşılaştırması, EOP için Microsoft Defender'da Office 365 [tehditlere karşı koruma makalesinde yer almaktadır](protect-against-threats.md). EOP özellikleri için önerilen ayarlarAOP için önerilen ayarlar ve [Güvenlik için Microsoft Defender'da Office 365 vardır](recommended-settings-for-eop-and-office365.md).
+EOP güvenlik özelliklerini ayarlama adımları ve bu güvenlikle ilgili olarak edinilen ek güvenlikle karşılaştırma Office 365 için Microsoft Defender bkz. [tehditlere karşı koruma](protect-against-threats.md). EOP özellikleri için önerilen ayarlarAOP [için önerilen ayarlar ve güvenlik Office 365 için Microsoft Defender vardır](recommended-settings-for-eop-and-office365.md).
 
 Bu makalenin kalan bölümü EOP'nin nasıl çalıştığını ve EOP'de kullanılabilen özellikleri açıklar.
 
@@ -44,7 +45,7 @@ Bu makalenin kalan bölümü EOP'nin nasıl çalıştığını ve EOP'de kullan�
 
 EOP'nin nasıl çalıştığını anlamak için, gelen e-postayı nasıl işle çalıştığını görmek yardımcı olur:
 
-:::image type="content" source="../../media/tp_emailprocessingineopt3.png" alt-text="EOP'ye geçen ve Gereksiz posta veya karantinaya veya son kullanıcı posta teslimi kararlarından önce EOP'ye geçen ve Bağlantı, Kötü amaçlı yazılımdan koruma, Posta Akışı Kuralları eğik çizgi İlkesi Filtreleme ve İçerik Filtreleme aracılığıyla gelen e-postanın grafiği.":::
+:::image type="content" source="../../media/tp_emailprocessingineopt3.png" alt-text="EOP'ye geçen ve Gereksiz posta veya karantinaya veya son kullanıcı posta teslimi kararlarından önce EOP'ye geçen ve Bağlantı, Kötü amaçlı yazılımdan koruma, Posta Akışı Kuralları eğik çizgi İlkesi Filtreleme ve İçerik Filtreleme aracılığıyla gelen e-postanın grafiği" lightbox="../../media/tp_emailprocessingineopt3.png":::
 
 1. EOP'ye gelen bir ileti EOP geldiğinde, ilk olarak gönderenin itibarını kontrolen bağlantı filtrelemeden geçer. İstenmeyen postanın çoğunluğu bu noktada durdurulur ve EOP tarafından reddedilir. Daha fazla bilgi için bkz [. Bağlantı filtrelemeyi yapılandırma](configure-the-connection-filter-policy.md).
 
@@ -78,12 +79,9 @@ Tüm EOP abonelik planları genelinde gereksinimler, önemli sınırlar ve özel
 - EOP, istenmeyen posta göndermesi bilinen çok geniş bir etki alanı listesi kullanır.
 - EOP, birçok kötü amaçlı yazılımdan koruma altyapısı müşterilerimizin her zaman otomatik olarak korunmasına yardımcı olur.
 - EOP, ileti gövdesinde etkin yükü ve kötü amaçlı yazılım için tüm ileti eklerini inceler.
-- Koruma ilkeleri için önerilen değerler için bkz. [EOP ve Microsoft Defender için önerilen güvenlik Office 365.](recommended-settings-for-eop-and-office365.md)
+- Koruma ilkeleri için önerilen değerler için bkz[. EOP için önerilen ayarlar ve güvenlik Office 365 için Microsoft Defender bakın](recommended-settings-for-eop-and-office365.md).
 - Koruma ilkelerini yapılandırmaya yönelik hızlı yönergeler için bkz. [Tehditlere karşı koruma](protect-against-threats.md).
 
-<br>
-
-****
 |Özellik|Açıklamalar|
 |---|---|
 |**Koruma**||
@@ -94,7 +92,7 @@ Tüm EOP abonelik planları genelinde gereksinimler, önemli sınırlar ve özel
 |Kimlik avı önleme|[E-postada kimlik avı önleme Microsoft 365](set-up-anti-phishing-policies.md) <p> [EOP'de kimlik avı önleme ilkelerini yapılandırma](configure-anti-phishing-policies-eop.md)|
 |Anti-spoing protection|[EOP'de akıllı Spoof Intelligence içgörü](learn-about-spoof-intelligence.md) <p> [Kiracı İzin Ver/Engelleme Listesini Yönetme](tenant-allow-block-list.md)|
 |Teslim edilen kötü amaçlı yazılım, istenmeyen posta ve kimlik avı iletileri için sıfır saatlik otomatik temizleme (ZAP)|[Zap in Exchange Online](zero-hour-auto-purge.md)|
-|Önceden belirlenmiş güvenlik ilkeleri|[EOP ve Office 365 için Microsoft Defender'da önceden ayarlanmış güvenlik Office 365](preset-security-policies.md) <p> [EOP'de ve Office 365 için Microsoft Defender'da koruma ilkeleri için yapılandırma çözümleyicisi](configuration-analyzer-for-security-policies.md)|
+|Önceden belirlenmiş güvenlik ilkeleri|[EOP ve Office 365 için Microsoft Defender'da önceden ayarlanmış güvenlik ilkeleri](preset-security-policies.md) <p> [EOP ve veritabanı koruma ilkeleri için yapılandırma çözümleyicisi Office 365 için Microsoft Defender](configuration-analyzer-for-security-policies.md)|
 |Kiracı İzin Ver/Engelleme Listesi|[Kiracı İzin Ver/Engelleme Listesini Yönetme](tenant-allow-block-list.md)|
 |İleti gönderenleri için listeleri engelleme|[EOP'de engellenen gönderen listeleri oluşturma](create-block-sender-lists-in-office-365.md)|
 |İleti gönderenler için listelere izin verme|[EOP'de güvenilir gönderen listeleri oluşturma](create-safe-sender-lists-in-office-365.md)|
@@ -105,7 +103,7 @@ Tüm EOP abonelik planları genelinde gereksinimler, önemli sınırlar ve özel
 |Karantina - yöneticiler|[EOP'de yönetici olarak karantinaya alınmış iletileri ve dosyaları yönetme](manage-quarantined-messages-and-files.md) <p> [Karantinaya alınmış iletiler hakkında SSS](quarantine-faq.yml) <p> [İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md) <p> [İletide istenmeyen posta önleme ileti Microsoft 365](anti-spam-message-headers.md) <p> İleti Üst Bilgisi Çözümleyicisi'nde karantinaya alınmış iletilerin [ileti üst bilgilerini çözümebilirsiniz](https://mha.azurewebsites.net/).|
 |Karantina - son kullanıcılar|[EOP'de kullanıcı olarak karantinaya alınmış iletileri bulma ve serbest bırakma](find-and-release-quarantined-messages-as-a-user.md) <p> [Karantinaya alınmış iletileri serbest bırakmak ve rapor etmek için karantina bildirimlerini kullanma](use-spam-notifications-to-release-and-report-quarantined-messages.md) <p> [Karantina ilkeleri](quarantine-policies.md)|
 |**Posta akışı**||
-|Posta akış kuralları|[posta akışı kuralları (aktarım kuralları) Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) <p> [E-postada posta akışı kuralı koşulları ve özel durumları (koşullar) Exchange Online](/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions) <p> [E-postada posta akışı Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-actions) <p> [Posta akış kurallarını aynı adreste Exchange Online](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules) <p> [E-postada posta akışı kuralı Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-procedures)|
+|Posta akış kuralları|[Exchange Online'da posta akışı kuralları (aktarım kuralları)](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) <p> [E-postada posta akışı kuralı koşulları ve özel durumları (koşullar) Exchange Online](/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions) <p> [E-postada posta akışı Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-actions) <p> [Posta akış kurallarını aynı adreste Exchange Online](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules) <p> [E-postada posta akışı kuralı Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-procedures)|
 |Kabul edilen etki alanları|[Etki alanlarında kabul edilen etki alanlarını Exchange Online](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)|
 |Bağlayıcılar|[E-postada bağlayıcıları kullanarak posta Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow)|
 |Bağlayıcılar için Geliştirilmiş Filtreleme|[E-postada bağlayıcılar için gelişmiş Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors)|
@@ -125,5 +123,5 @@ Tüm EOP abonelik planları genelinde gereksinimler, önemli sınırlar ve özel
 |**Diğer özellikler**||
 |Coğrafi olarak yedekli bir genel sunucu ağı|EOP, en iyi kullanılabilirliği sağlamak için tasarlanmış dünya çapında bir veri merkezleri ağına çalışır. Daha fazla bilgi için, bu [makalenin önceki kısımlarında yer alan EOP](#eop-datacenters) veri merkezleri bölümüne bakın.|
 |Şirket içi sunucu posta kabul edilemezken ileti kuyruğa alma|Ertelenen mesajlar bir gün boyunca kuyruklarımızda kalır. İleti yeniden deneme deneme denemeleri, alıcının posta sisteminden geri alınan hataya dayalıdır. İletiler, ortalama olarak her 5 dakikada bir yeniden denenr. Daha fazla bilgi için [EOP sıraya alınan, ertelenmiş ve geri dönen iletiler hakkında SSS bölümüne bakın](eop-queued-deferred-and-bounced-messages-faq.yml).|
-|Office 365 İleti Şifrelemesi olarak kullanılabilen eklentiler|Daha fazla bilgi için bkz[. Şifreleme Office 365](../../compliance/encryption.md).|
+|Office 365 olarak kullanılabilen İleti Şifrelemesi|Daha fazla bilgi için bkz[. Şifreleme Office 365](../../compliance/encryption.md).|
 |||

@@ -1,6 +1,6 @@
 ---
-title: Office 365 için Microsoft Defender'da otomatik araştırma ve Office 365
-keywords: AIR, autoIR, Uç Nokta için Microsoft Defender, otomatik, araştırma, yanıt, düzeltme, tehdit, gelişmiş, tehdit, koruma
+title: Otomatik araştırma ve yanıt Office 365 için Microsoft Defender
+keywords: AIR, autoIR, Uç Nokta için Microsoft Defender, araştırma, yanıt, düzeltme, tehdit, gelişmiş, tehdit, koruma
 f1.keywords:
 - NOCSH
 author: dansimp
@@ -16,28 +16,28 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Microsoft Defender'daki otomatik araştırma ve yanıt özelliklerini otomatik araştırma ve yanıt özelliklerini Office 365.
+description: Kullanmaya başlayın araştırma ve yanıt özelliklerini kullanma hakkında daha Office 365 için Microsoft Defender.
 ms.custom:
 - air
 - seo-marvel-mar2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 70a5eba3eb78878cc1f15bdd711a3331e9af870a
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: e9cd2388d3551ccc0c180d20a92ec0c513472797
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680896"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473683"
 ---
-# <a name="automated-investigation-and-response-air-in-microsoft-defender-for-office-365"></a>İş için Microsoft Defender'da otomatik araştırma ve yanıt (AIR) Office 365
+# <a name="automated-investigation-and-response-air-in-microsoft-defender-for-office-365"></a>Web'de otomatik araştırma ve yanıt (AIR) Office 365 için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Geçerli olduğu yer:**
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-[Güvenlik işlemleri için Microsoft Defender Office 365](defender-for-office-365.md), güvenlik işlemlerinin ekip zamanını ve çabasını kaydeden güçlü otomatik araştırma ve yanıt (AIR) özellikleri içerir. Uyarılar tetiklendiğinden, güvenlik işlemleri ekibinin bu uyarıları incelemesi, önceliklerini belirlemesi ve yanıtlaması daha doğru olur. Gelen uyarıların hacmini takip etmek bunaltıcı olabilir. Bu görevlerden bazılarının otomatik olarak otomatik olarak gerçekleştirilirsiniz.
+[Office 365 için Microsoft Defender](defender-for-office-365.md), güvenlik işlemlerinin ekip zamanını ve çabasını kaydeden güçlü otomatik araştırma ve yanıt (AIR) özellikleri içerir. Uyarılar tetiklendiğinden, güvenlik işlemleri ekibinin bu uyarıları incelemesi, önceliklerini belirlemesi ve yanıtlaması daha doğru olur. Gelen uyarıların hacmini takip etmek bunaltıcı olabilir. Bu görevlerden bazılarının otomatik olarak otomatik olarak gerçekleştirilirsiniz.
 
 AIR, güvenlik işlemleri ekibimizin daha verimli ve etkili bir şekilde çalışmasına olanak sağlar. AIR özellikleri, bugün var olan iyi bilinen tehditlere yanıt olarak otomatik soruşturma süreçleri içerir. Uygun düzeltme eylemleri onay bekliyor; bu da güvenlik işlemleri ekibimizin algılanan tehditlere etkili bir şekilde yanıt vermesini sağlar. AIR ile güvenlik işlemleri ekipleriniz tetiklenen önemli uyarıları gözden kaybetmeden yüksek öncelikli görevlere odaklanabilirsiniz.
 
@@ -62,7 +62,7 @@ Uyarı tetiklenir ve bir güvenlik çalışma kitabı otomatik bir araştırma b
 4. Güvenlik işlemleri ekipleriniz araştırma [sonuçlarını ve önerilerini inceler](air-view-investigation-results.md), düzeltme eylemlerini [onaylar veya reddeder](air-review-approve-pending-completed-actions.md).
 5. Bekleyen düzeltme eylemleri onaylanır (veya reddedilir) gibi otomatik soruşturma tamamlanır.
 
-Düzeltme için Microsoft Defender Office 365 düzeltme eylemleri otomatik olarak gerçekleştirnmedi. Düzeltme eylemleri yalnızca kuruluşun güvenlik ekibinin onayıyla  alınır. AIR özellikleri, düzeltme eylemlerini tanımarak ve bilinçli bir karar verecek ayrıntıları sağlayarak güvenlik işlemleri ekip sürenizi tasarrufu sağlar.
+Bu Office 365 için Microsoft Defender, düzeltme eylemleri otomatik olarak gerçekleştir alınmaz. Düzeltme eylemleri yalnızca kuruluşun güvenlik ekibinin onayıyla  alınır. AIR özellikleri, düzeltme eylemlerini tanımarak ve bilinçli bir karar verecek ayrıntıları sağlayarak güvenlik işlemleri ekip sürenizi tasarrufu sağlar.
 
 Her otomatik araştırma sırasında ve sonrasında, güvenlik işlemleri ekipleriniz şunları şunları tamamlar:
 
@@ -75,7 +75,7 @@ Her otomatik araştırma sırasında ve sonrasında, güvenlik işlemleri ekiple
 
 ## <a name="how-to-get-air"></a>AIR'i nasıl almak için?
 
-İlke ve uyarılarınız [yapılandırılmışsa AIR Office 365 Microsoft Defender](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2) for Microsoft Defender'a dahildir. Yardıma mı ihtiyacınız var? Aşağıdaki koruma ayarlarını ayarlamak [veya yapılandırmak](protect-against-threats.md) için Tehditlere karşı koruma yönergelerini izleyin:
+İlkeleriniz ve [uyarılarınız Office 365 için Microsoft Defender](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2), AIR özellikleri bu özelliklere dahil edilir. Yardıma mı ihtiyacınız var? Aşağıdaki koruma ayarlarını ayarlamak [veya yapılandırmak](protect-against-threats.md) için Tehditlere karşı koruma yönergelerini izleyin:
 
 - [Denetim günlüğü](../../compliance/turn-audit-log-search-on-or-off.md) (açık olması gerekir)
 - [Kötü amaçlı yazılımdan koruma](protect-against-threats.md#part-1---anti-malware-protection-in-eop)
@@ -91,7 +91,7 @@ Microsoft 365, yönetici izinlerinin kötüye kullanımı, kötü amaçlı yazı
 
 |Uyarı|Önem Derecesi|Uyarı nasıl oluşturulur?|
 |---|---|---|
-|Kötü amaçlı olabilecek bir URL tıklaması algılandı|**Yüksek**|Bu uyarı, aşağıdaki uyarılardan biri ortaya çıkar: <ul><li>E-posta bağlantıları [Kasa tarafından](safe-links.md) korunan bir kullanıcı kötü amaçlı bir bağlantıya tıklar</li><li>URL'ler için karar değişiklikleri Microsoft Defender tarafından Office 365</li><li>Kullanıcılar Bağlantılar Kasa sayfalarını geçersiz kılar (kuruluşun Bağlantılar ilkesine [Kasa göre](set-up-safe-links-policies.md)).</li></ul> <p> Bu uyarıyı tetikleyen olaylar hakkında daha fazla bilgi için bkz[. Kasa ayarlama](set-up-safe-links-policies.md).|
+|Kötü amaçlı olabilecek bir URL tıklaması algılandı|**Yüksek**|Bu uyarı, aşağıdaki uyarılardan biri ortaya çıkar: <ul><li>E-posta bağlantıları [Kasa tarafından](safe-links.md) korunan bir kullanıcı kötü amaçlı bir bağlantıya tıklar</li><li>URL'ler için karar değişiklikleri kişi tarafından Office 365 için Microsoft Defender</li><li>Kullanıcılar Bağlantılar Kasa sayfalarını geçersiz kılar (kuruluşun Bağlantılar ilkesine [Kasa göre](set-up-safe-links-policies.md)).</li></ul> <p> Bu uyarıyı tetikleyen olaylar hakkında daha fazla bilgi için bkz[. Kasa ayarlama](set-up-safe-links-policies.md).|
 |Kullanıcı bir e-posta iletisi kötü amaçlı yazılım veya kimlik avı olarak bildiriliyor|**Bilgilendirme**|Bu uyarı, kuruluş kullanıcılarının Rapor İletisi eklentiyi veya Rapor Kimlik Avını Bildir eklentiyi kullanarak kimlik avı [e-postası](enable-the-report-message-add-in.md) olarak raporlalarına [geldiğinde oluşturulur](enable-the-report-phish-add-in.md).|
 |Kötü amaçlı yazılım içeren e-posta iletileri teslimden sonra kaldırılır|**Bilgilendirme**|Bu uyarı, kötü amaçlı yazılım içeren tüm e-posta iletileri organizasyonu içeren posta kutularına teslim edilirken oluşturulur. Bu olay oluşursa, Microsoft sıfır saatlik otomatik temizleme (ZAP) Exchange Online posta kutularından etkilenen [iletileri kaldırır](zero-hour-auto-purge.md).|
 |Kimlik avı URL'lerini içeren e-posta iletileri teslimden sonra kaldırılır|**Bilgilendirme**|Bu uyarı, kimlik avı içeren tüm iletiler kuruluş posta kutularına teslim edilirken oluşturulur. Bu olay oluşursa, Microsoft ZAP kullanan posta kutularına Exchange Online iletileri [kaldırır](zero-hour-auto-purge.md).|
@@ -112,7 +112,7 @@ Microsoft 365, yönetici izinlerinin kötüye kullanımı, kötü amaçlı yazı
 
 ## <a name="required-licenses"></a>Gerekli lisanslar
 
-[Plan 2 Office 365 için Microsoft Defender](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2) lisansları şu kişilere atanabilir:
+[Office 365 için Microsoft Defender Plan 2](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2) lisansları şu kişi için atanabilir:
 
 - Güvenlik yöneticileri (genel yöneticiler dahil)
 - Kuruluş güvenlik işlemleri ekibi (güvenlik okuyucuları ve Arama ve Temizleme **rolüne sahip olanlar dahil** )
@@ -120,11 +120,11 @@ Microsoft 365, yönetici izinlerinin kötüye kullanımı, kötü amaçlı yazı
 
 ## <a name="changes-are-coming-soon-in-your-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında değişiklikler Microsoft 365 Defender geliyor
 
-Air özelliklerini Office 365 için Microsoft Defender'da zaten kullanıyorsanız, gelişmiş Hava Microsoft 365 Defender [portalında bazı değişiklikler görmek Microsoft 365 Defender vardır](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal).
+Air özelliklerini daha önce Yeni Office 365 için Microsoft Defender kullanıyorsanız, gelişmiş Hava Veri Giriş Microsoft 365 Defender[.](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal)
 
-:::image type="content" source="../../media/m3d-action-center-unified.png" alt-text="Birleşik İşlem merkezi.":::
+:::image type="content" source="../../media/m3d-action-center-unified.png" alt-text="Birleşik İşlem merkezi" lightbox="../../media/m3d-action-center-unified.png":::
 
-Yeni ve geliştirilmiş Microsoft 365 Defender portalı<https://security.microsoft.com>, Office 365 için [Microsoft Defender'da](defender-for-office-365.md) ve Uç Nokta için [Microsoft Defender'da AIR özelliklerini bir araya getirir](../defender-endpoint/automated-investigations.md). Bu güncelleştirme ve geliştirmelerle, güvenlik işlemleri ekibinin tüm e-postanız, işbirliği içeriğiniz, kullanıcı hesaplarınız ve cihazlarınız genelindeki otomatik soruşturmalar ve düzeltme eylemleriyle ilgili ayrıntıları tek bir yerde görüntüleyebilirsiniz.
+Yeni ve geliştirilmiş Microsoft 365 Defender portal<https://security.microsoft.com>, uygulama içinde ve Office 365 için Microsoft Defender AIR [özelliklerini bir](defender-for-office-365.md) [araya Uç Nokta için Microsoft Defender](../defender-endpoint/automated-investigations.md). Bu güncelleştirme ve geliştirmelerle, güvenlik işlemleri ekibinin tüm e-postanız, işbirliği içeriğiniz, kullanıcı hesaplarınız ve cihazlarınız genelindeki otomatik soruşturmalar ve düzeltme eylemleriyle ilgili ayrıntıları tek bir yerde görüntüleyebilirsiniz.
 
 > [!TIP]
 > Yeni yönetim Microsoft 365 Defender, aşağıdaki yönetim merkezlerinin yerini almaktadır:
@@ -136,11 +136,11 @@ Yeni ve geliştirilmiş Microsoft 365 Defender portalı<https://security.microso
 
 ### <a name="what-to-expect"></a>Neler olabilir?
 
-Aşağıdaki tabloda, Microsoft Defender'daki Air'te gelecek değişiklikler ve iyileştirmeler Office 365.
+Aşağıdaki tabloda, çalışma haftası içinde AIR'de yapılan değişiklikler ve Office 365 için Microsoft Defender.
 
 |Öğe|Neler değişti?|
 |---|---|
-|**İncelemeler** sayfası|Güncelleştirilmiş **Araştırma sayfası** , Uç Nokta için [Microsoft Defender'da gördüğünüzle daha tutarlıdır](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations). Yeni, birleşik Araştırma görünümüyle uyumlu olan bazı genel biçim ve stil **değişiklikleri** göreceğiniz gibi. Örneğin, araştırma grafiği daha birleşik bir biçime sahip.|
+|**İncelemeler** sayfası|Güncelleştirilmiş **Araştırma sayfası**, bu sayfada gördüğünüzle daha [Uç Nokta için Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations). Yeni, birleşik Araştırma görünümüyle uyumlu olan bazı genel biçim ve stil **değişiklikleri** göreceğiniz gibi. Örneğin, araştırma grafiği daha birleşik bir biçime sahip.|
 |**Kullanıcılar** sekmesi|Kullanıcılar **sekmesi** artık Posta Kutuları **sekmesidir** . Kullanıcılar hakkında ayrıntılar Posta Kutusu **sekmesinde listelenir** .|
 |**E-posta** sekmesi|**E-posta** sekmesi kaldırıldı; **e-posta** ve e-posta kümesi öğelerinin listesini görmek için Varlıklar sekmesini ziyaret edin.|
 |**Varlıklar** sekmesi|Varlıklar **sekmesinde** , tüm özet görünümünü ve varlık türüne göre filtre uygulama olanağını içeren sekme içinde sekme stili vardır. Varlıklar **sekmesinde** artık Explorer'da **Aç seçeneğine** ek olarak bir Git **avı seçeneği** de vardır. Artık varlıkları ve tehditleri bulmak [ve](threat-explorer.md) [sonuçlara göre](../defender-endpoint/advanced-hunting-overview.md) filtrelemek için Explorer'ı veya gelişmiş atlığı kullanabilirsiniz.|

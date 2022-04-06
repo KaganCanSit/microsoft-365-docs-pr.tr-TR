@@ -20,40 +20,40 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b3ff79ead1e337bb78772109e57d34836d0f4ec9
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 29a00c20333c27fcd8138063f31316241b784572
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681622"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467037"
 ---
 # <a name="threat-explorer-and-real-time-detections"></a>Tehdit Gezgini ve Gerçek zamanlı algılamalar
 
 **Geçerli olduğu yer:**
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-[Kuruluşta Office 365 için Microsoft Defender](defender-for-office-365.md) varsa ve gerekli izinlere sahipsinizse [,](#required-licenses-and-permissions) **Explorer** veya Gerçek zamanlı algılamalar **(eski** adı *Gerçek* zamanlı raporlar) varsa, nelerin yeni olduğunu [bakın](#new-features-in-threat-explorer-and-real-time-detections)!. Güvenlik ve Uyumluluk &'nde Tehdit **yönetimi'ne** gidin ve Gezgin'i veya Gerçek zamanlı   **algılamalar'ı seçin**.
+Kuruluşta yeni Office 365 için Microsoft Defender [](defender-for-office-365.md)gerekli izinlere sahipse [,](#required-licenses-and-permissions) **Gezgininiz** veya Gerçek zamanlı algılamalar **(eski** adı *Gerçek* zamanlı raporlar), nelerin yeni olduğunu [bakın](#new-features-in-threat-explorer-and-real-time-detections)! Güvenlik ve Uyumluluk &'nde Tehdit **yönetimi'ne** gidin ve Gezgin'i veya Gerçek zamanlı   **algılamalar'ı seçin**.
 
-|Microsoft Defender for Office 365 Plan 2 ile şunları görüyorsunuz:|Microsoft Defender for Office 365 Plan 1 ile şunları görüyorsunuz:|
+|Office 365 için Microsoft Defender Plan 2'de şunları görüyorsunuz:|Plan 1 Office 365 için Microsoft Defender ile şunları görüyorsunuz:|
 |---|---|
 |![Tehdit gezgini.](../../media/threatmgmt-explorer.png)|![Gerçek zamanlı algılamalar](../../media/threatmgmt-realtimedetections.png)|
 
 Gezgin veya Gerçek zamanlı algılamalar, güvenlik işlemleri ekibimizin tehditleri etkili bir şekilde incelemelerine ve yanıtlamalarına yardımcı olur. Rapor aşağıdaki görüntüye benzer:
 
-![Tehdit yönetimi Gezgini'ne \> gidin.](../../media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png)
+:::image type="content" source="../../media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png" alt-text="Güvenlik ve Uyumluluk Portalı'& Explorer menü öğesi" lightbox="../../media/cab32fa2-66f1-4ad5-bc1d-2bac4dbeb48c.png":::
 
 Bu raporla şunlarıabilirsiniz:
 
 - [Güvenlik özellikleri tarafından algılanan kötü amaçlı Microsoft 365 görme](#see-malware-detected-in-email-by-technology)
 - [Kimlik avı URL'sini görüntüleme ve karar verilerine tıklama](#view-phishing-url-and-click-verdict-data)
-- [Gezgin'de bir görünümden otomatik bir araştırma](#start-automated-investigation-and-response) ve yanıt işlemi başlatın (yalnızca Plan 2 Office 365 Defender)
+- [Gezgin'de bir görünümden otomatik araştırma](#start-automated-investigation-and-response) ve yanıt işlemi başlatma (yalnızca Office 365 için Defender Plan 2)
 - [Kötü amaçlı e-postaları araştırma ve daha fazlası](#more-ways-to-use-explorer-and-real-time-detections)
 
 ## <a name="improvements-to-threat-hunting-experience"></a>Tehdit Arama Deneyiminde Geliştirmeler
 
 
-### <a name="introduction-of-alert-id-for-defender-for-office-365-alerts-within-explorerreal-time-detections"></a>Gezgin/Gerçek zamanlı algılamalar içinde Office 365 için Defender Uyarı Kimliği'ne Giriş
+### <a name="introduction-of-alert-id-for-defender-for-office-365-alerts-within-explorerreal-time-detections"></a>Gezgin/Gerçek zamanlı algılamalar Office 365 için Defender uyarılarının Uyarı Kimliği'ne giriş
 
 Bugün, bir uyarıdan Tehdit Gezgini'ne ilerlerseniz, Gezgin içinde filtrelenmiş bir görünüm açar ve bu görünüm Uyarı ilkesi kimliğine göre filtrelenmiş olarak açılır (Uyarı ilkesi için benzersiz bir tanımlayıcı olan ilke kimliği).
 Bu tümleştirmeyi, hem belirli uyarıyla hem de e-posta sayısıyla ilgili iletileri görmeniz için Tehdit Gezgini'nde ve Gerçek zamanlı algılamalarda uyarı kimliğini (aşağıda bir uyarı kimliği örneğine bakın) tanıtarak daha ilgili hale yapıyoruz. Ayrıca, bir iletinin bir uyarının parçası olup olduğunu görmenin yanı sıra bu iletiden belirli bir uyarıya da gezinebilirsiniz.
@@ -61,10 +61,10 @@ Bu tümleştirmeyi, hem belirli uyarıyla hem de e-posta sayısıyla ilgili ilet
 Tek bir uyarıyı görüntülerken, UYARı Kimliği URL'nin içinde kullanılabilir; bir örnek olarak .`https://protection.office.com/viewalerts?id=372c9b5b-a6c3-5847-fa00-08d8abb04ef1`
 
 > [!div class="mx-imgBorder"]
-> ![Uyarı Kimliği için filtreleme.](../../media/AlertID-Filter.png)
+> :::image type="content" source="../../media/AlertID-Filter.png" alt-text="Uyarı Kimliği için Filtreleme" lightbox="../../media/AlertID-Filter.png":::
 
 > [!div class="mx-imgBorder"]
-> ![Ayrıntılar ayrıntılarında uyarı kimliği.](../../media/AlertID-DetailsFlyout.png)
+> :::image type="content" source="../../media/AlertID-DetailsFlyout.png" alt-text="Ayrıntılar ayrıntılarıyla birlikte gelen Uyarı Kimliği" lightbox="../../media/AlertID-DetailsFlyout.png":::
 
 ### <a name="extending-the-explorer-and-real-time-detections-data-retention-and-search-limit-for-trial-tenants-from-7-to-30-days"></a>Deneme kiracıları için Gezginin (ve Gerçek zamanlı algılamaların) veri bekletme süresini ve arama sınırını 7 ile 30 gün arasında uzatma
 
@@ -80,7 +80,7 @@ Bu güncelleştirme kapsamında, Threat Explorer'dan dışarı aktarılabilir E-
 > [!NOTE]
 > Kullanıcı etiketleri özelliği *Önizleme'dedir*, herkes tarafından kullanılamaz ve değişebilir. Sürüm zamanlaması hakkında daha fazla bilgi için yol Microsoft 365 bakın.
 
-Kullanıcı etiketleri, Windows için Microsoft Defender'da belirli kullanıcı Office 365. Lisanslama ve yapılandırma gibi etiketler hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
+Kullanıcı etiketleri, E-posta'da belirli kullanıcı Office 365 için Microsoft Defender. Lisanslama ve yapılandırma gibi etiketler hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
 
 Threat Explorer'da, kullanıcı etiketleriyle ilgili bilgileri aşağıdaki deneyimlerde edinebilirsiniz.
 
@@ -89,7 +89,7 @@ Threat Explorer'da, kullanıcı etiketleriyle ilgili bilgileri aşağıdaki dene
 **E-posta** kılavuzunda Etiketler sütunu, gönderen veya alıcı posta kutularına uygulanmış olan tüm etiketleri içerir. Varsayılan olarak, önce öncelik hesapları gibi sistem etiketleri gösterilir.
 
 > [!div class="mx-imgBorder"]
-> ![E-posta kılavuz görünümünde etiketlere filtre uygulama.](../../media/tags-grid.png)
+> :::image type="content" source="../../media/tags-grid.png" alt-text="E-posta kılavuz görünümünde Filtre etiketleri" lightbox="../../media/tags-grid.png":::
 
 #### <a name="filtering"></a>Filtreleme
 
@@ -98,7 +98,7 @@ Etiketleri filtre olarak kullanabilirsiniz. Öncelik hesapları veya belirli kul
 [![Filtre etiketleri.](../../media/tags-filter-normal.png)](../../media/tags-filter-normal.png#lightbox)
 
 > [!div class="mx-imgBorder"]
-> ![Etiketlere filtre uygulamaz.](../../media/tags-filter-not.png)
+> :::image type="content" source="../../media/tags-filter-not.png" alt-text="Filtrelenmiş değil etiketler" lightbox="../../media/tags-filter-not.png":::
 
 #### <a name="email-detail-flyout"></a>E-posta ayrıntısı çıktısı
 
@@ -106,14 +106,14 @@ Gönderen ve alıcının etiketlerini tek tek görüntülemek için, ileti ayrı
 Gönderen ve alıcının tek tek etiketleriyle ilgili bilgiler de dışarı aktarıldı CSV verilerine genişletildi. Burada bu ayrıntıları iki ayrı sütunda gösterebilirsiniz.
 
 > [!div class="mx-imgBorder"]
-> ![E-posta Ayrıntıları etiketleri.](../../media/tags-flyout.png)
+> :::image type="content" source="../../media/tags-flyout.png" alt-text="E-posta Ayrıntıları etiketleri" lightbox="../../media/tags-flyout.png":::
 
 Etiket bilgileri, URL tıklamaları uçarak çıkışta da gösterilir. Görüntülemek için Kimlik Avı veya Tüm E-posta görünümüne ve ardından URL'ler veya URL **Tıklamaları** **sekmesine** gidin. Tek bir URL uç öğesini seçerek bu URL'ye ilişkin tıklamalar hakkında ek ayrıntıları (bu tıklamayla ilişkili etiketler dahil) görüntüye ekleyin.
 
 ### <a name="updated-timeline-view"></a>Güncelleştirilmiş Zaman Çizelgesi Görünümü
 
 > [!div class="mx-imgBorder"]
-> ![URL etiketleri.](../../media/tags-urls.png)
+> :::image type="content" source="../../media/tags-urls.png" alt-text="URL etiketleri" lightbox="../../media/tags-urls.png":::
 >
 Daha fazla bilgi edinmek için [bu videoyu izleyin](https://www.youtube.com/watch?v=UoVzN0lYbfY&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=4).
 
@@ -137,12 +137,12 @@ Algılama teknolojileri kümesi artık yeni algılama yöntemlerini ve istenmeye
 Artık e-posta açılır Ayrıntıları sekmesinde bir URL için belirli tehdide **bakabilirsiniz** . Tehdit kötü amaçlı yazılım, *kimlik* *avı*, *istenmeyen posta veya* yok *olabilir*.)
 
 > [!div class="mx-imgBorder"]
-> ![URL'nin tehditleri.](../../media/URL_Threats.png)
+> :::image type="content" source="../../media/URL_Threats.png" alt-text="URL tehditleri" lightbox="../../media/URL_Threats.png":::
 
 ### <a name="updated-timeline-view-upcoming"></a>Güncelleştirilmiş zaman çizelgesi görünümü (yaklaşan)
 
 > [!div class="mx-imgBorder"]
-> ![Güncelleştirilmiş Zaman Çizelgesi Görünümü.](../../media/Email_Timeline.png)
+> :::image type="content" source="../../media/Email_Timeline.png" alt-text="Güncelleştirilmiş Zaman Çizelgesi Görünümü" lightbox="../../media/Email_Timeline.png":::
 
 Zaman Çizelgesi görünümü, tüm teslim ve teslim sonrası olaylarını tanımlar. Bu olayların bir alt kümesi için, o noktada tanımlanan tehdit hakkında bilgi içerir. Zaman Çizelgesi görünümü, söz konusu eylemin sonucuyla birlikte 4 ek eylem (ZAP veya el ile düzeltme gibi) hakkında da bilgi sağlar. Zaman çizelgesi görünümü bilgileri şunları içerir:
 
@@ -159,7 +159,7 @@ Zaman Çizelgesi görünümü, tüm teslim ve teslim sonrası olaylarını tanı
 **Özgün teslim konumu,** başlangıçta bir e-postanın teslim yeri hakkında daha fazla bilgi verecek. **En son teslim konumu,** ZAP veya Silinmiş öğelere taşı gibi yönetici *eylemleri gibi sistem* eylemlerinin ardından e-postanın *nereye inmiş olduğunu gösterir*. En son teslim konumu, yöneticilere iletinin son bilinen konumunu teslim sonrası veya sistem/yönetici eylemlerini söylemeyi amaçlar. E-postada son kullanıcı eylemleri dahil değildir. Örneğin, kullanıcı bir iletiyi sildi veya iletiyi arşive/pst'ye taşıdı ise, iletinin "teslim" konumu güncelleştirilmez. Ancak bir sistem eylemi konumu güncellerse (örneğin, ZAP e-postanın karantinaya alınmasını sağlarsa), En **son** teslim konumu "karantina" olarak gösterilebilir.
 
 > [!div class="mx-imgBorder"]
-> ![Güncelleştirilmiş teslim konumları.](../../media/Updated_Delivery_Location.png)
+> :::image type="content" source="../../media/Updated_Delivery_Location.png" alt-text="Güncelleştirilmiş teslim konumları" lightbox="../../media/Updated_Delivery_Location.png":::
 
 > [!NOTE]
 > Teslim konumu ve Teslim **eyleminin** "bilinmiyor" **olarak** gösteril olabilir birkaç durumda:
@@ -169,7 +169,7 @@ Zaman Çizelgesi görünümü, tüm teslim ve teslim sonrası olaylarını tanı
 > - **En son teslim** konumu, bir yönetici/sistem eylemi (ZAP gibi) denenip denenmese de bilinmeyen bir ileti bulunamıyor. Normalde, eylem, kullanıcı iletiyi taşıdıktan veya sildikten sonra gerçekleşir. Böyle durumlarda, zaman çizelgesi **görünümünde Sonuç/Ayrıntılar** sütununu doğrulayın. "İleti kullanıcı tarafından taşındı veya silindi" ifadesinin nasıl silindiğinde bakın.
 
 > [!div class="mx-imgBorder"]
-> ![Zaman çizelgesi için teslim konumları.](../../media/Updated_Timeline_Delivery_Location.png)
+> :::image type="content" source="../../media/Updated_Timeline_Delivery_Location.png" alt-text="Zaman çizelgesi için teslim konumları" lightbox="../../media/Updated_Timeline_Delivery_Location.png":::
 
 ### <a name="additional-actions"></a>Ek eylemler
 
@@ -179,7 +179,7 @@ Zaman Çizelgesi görünümü, tüm teslim ve teslim sonrası olaylarını tanı
 > Bekleyen değişikliklerin bir parçası olarak, Şu anda Teslim Eylemi filtresinde ortaya çıkarılan "ZAP ile Kaldırıldı" değeri yok oluyor. Ek eylemler aracılığıyla ZAP denemesi ile tüm e-postaları aramanın bir **yolunuz olur**.
 
 > [!div class="mx-imgBorder"]
-> ![Gezgin'de Ek Eylemler.](../../media/Additional_Actions.png)
+> :::image type="content" source="../../media/Additional_Actions.png" alt-text="Gezgin'de ek eylemler" lightbox="../../media/Additional_Actions.png":::
 
 ### <a name="system-overrides"></a>Sistem geçersiz kılar
 
@@ -198,7 +198,7 @@ Zaman Çizelgesi görünümü, tüm teslim ve teslim sonrası olaylarını tanı
 [![Explorer'da Sistem Geçersiz Kılmaları.](../../media/System_Overrides.png)](../../media/System_Overrides.png#lightbox)
 
 > [!div class="mx-imgBorder"]
-> ![Sistem Explorer'da Kılavuzu Geçersiz Kılar.](../../media/System_Overrides_Grid.png)
+> :::image type="content" source="../../media/System_Overrides_Grid.png" alt-text="Explorer'da Sistem Kılavuzu Geçersiz Kılar" lightbox="../../media/System_Overrides_Grid.png":::
 
 ### <a name="improvements-for-the-url-and-clicks-experience"></a>URL ve tıklama deneyimi için iyileştirmeler
 
@@ -236,14 +236,14 @@ Artık tehdit kapsamını hızlıca kavramak için sistem veya özel kullanıcı
 > Kullanıcı etiketlerine göre filtreleme ve sıralama şu anda genel önizlemede. Bu işlev ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabilir. Microsoft, bu konuda sağlanan bilgilerle ilgili olarak açık veya zımni hiçbir garanti vermez.
 
 > [!div class="mx-imgBorder"]
-> ![Gezgin'de Etiketler sütunu.](../../media/threat-explorer-tags.png)
+> :::image type="content" source="../../media/threat-explorer-tags.png" alt-text="Gezgin'de Etiketler sütunu" lightbox="../../media/threat-explorer-tags.png":::
 
 ### <a name="timezone-improvements"></a>Saat dilimi geliştirmeleri
 
 Hem Portal'da e-posta kayıtlarının saat dilimini hem de Dışarı Aktarıldı verilerini bulabilirsiniz. E-posta Kılavuzu, Ayrıntılar ayrıntıları, E-posta Zaman Çizelgesi ve Benzer E-postalar gibi deneyimlerde görülebilir, dolayısıyla sonuç kümesi için saat dilimi temiz olur.
 
 > [!div class="mx-imgBorder"]
-> ![Saat dilimini Gezgin'de görüntüleme.](../../media/TimezoneImprovements.png)
+> :::image type="content" source="../../media/TimezoneImprovements.png" alt-text="Gezgin'de Saat dilimini görüntüleme" lightbox="../../media/TimezoneImprovements.png":::
 
 ### <a name="update-in-the-refresh-process"></a>Yenileme işlemiyle güncelleştirme
 
@@ -252,21 +252,21 @@ Bazı kullanıcılar otomatik yenileme (örneğin, tarihi değiştirir değişti
 Kullanıcılar farklı filtre aralıklarını (filtre kümesinden ve tarihten) uygulayabilir ve kaldırabilir; sorguyu tanımladikten sonra sonuçları filtrelemek için yenile düğmesini seçer. Yenile düğmesi artık ekranda da vurgulandır. Ayrıca ilgili araç ipucu ve ürünle ilgili belgeleri de güncelleydık.
 
 > [!div class="mx-imgBorder"]
-> ![Sonuçları filtrelemek için Yenile'yi seçin.](../../media/ManualRefresh.png)
+> :::image type="content" source="../../media/ManualRefresh.png" alt-text="Sonuçları filtrelemek için Yenile düğmesi" lightbox="../../media/ManualRefresh.png":::
 
 ### <a name="chart-drilldown-to-add-to-filters"></a>Filtrelere eklemek için grafik detaya gitme
 
 Artık filtre olarak eklemek için gösterge değerlerinin grafiğini grafik olarak ekleyebilirsiniz. Sonuçları **filtrelemek** için Yenile düğmesini seçin.
 
 > [!div class="mx-imgBorder"]
-> ![Filtrelemek istediğiniz grafiklerde detaya gitme.](../../media/ChartDrilldown.png)
+> :::image type="content" source="../../media/ChartDrilldown.png" alt-text="Filtrelemek istediğiniz grafiklerde detaya gitme" lightbox="../../media/ChartDrilldown.png":::
 
 ### <a name="in-product-information-updates"></a>Ürün bilgileri güncelleştirmeleri
 
 Artık ürün içinde, kılavuzdaki toplam arama sonucu sayısı gibi ek ayrıntılara bakın (aşağıya bakın). Filtreler, arama deneyimi ve sonuç kümesi hakkında daha fazla bilgi sağlayan etiketler, hata iletileri ve araç ipucu geliştirildi.
 
 > [!div class="mx-imgBorder"]
-> ![Ürün için bilgileri görüntüleme.](../../media/ProductInfo.png)
+> :::image type="content" source="../../media/ProductInfo.png" alt-text="2010 Ürün için 2013'te 2013'e kadar olan ürünlerle ilgili bilgiler" lightbox="../../media/ProductInfo.png":::
 
 ## <a name="extended-capabilities-in-threat-explorer"></a>Threat Explorer'daki genişletilmiş özellikler
 
@@ -277,7 +277,7 @@ Bugün, Üst Kötü Amaçlı Yazılım Aileleri bölümünde, e-postalar için K
 Her e-posta görünümü için çevrimdışı çözümleme deneme sayısıyla birlikte 3.000'e kadar olan hedefli kullanıcıların listesini dışarı aktarabilirsiniz. Buna ek olarak, deneme sayısını seçmek (örneğin, aşağıdaki resimde 13 girişim) Tehdit Gezgini'nde filtrelenmiş bir görünüm açar, böylece bu kullanıcıya yönelik e-postalar ve tehditlere ilişkin daha fazla ayrıntı görebilirsiniz.
 
 > [!div class="mx-imgBorder"]
-> ![En çok hedefli kullanıcılar.](../../media/Top_Targeted_Users.png)
+> :::image type="content" source="../../media/Top_Targeted_Users.png" alt-text="En çok hedefli kullanıcılar" lightbox="../../media/Top_Targeted_Users.png":::
 
 ### <a name="exchange-transport-rules"></a>Exchange aktarım kurallarını taşıma
 
@@ -298,7 +298,7 @@ Veri zenginleştirmenin bir parçası olarak, iletiye uygulanmış olan tüm far
 > E-posta kılavuzu, Ayrıntılar uçarak çıkış ve Dışarı Aktarıldı CSV içinde ETR'ler aşağıda gösterildiği gibi Ad/GUID ile gösterilir.
 >
 > > [!div class="mx-imgBorder"]
-> > ![Exchange Aktarım Kuralları.](../../media/ETR_Details.png)
+> > :::image type="content" source="../../media/ETR_Details.png" alt-text="Aktarım Exchange kuralları" lightbox="../../media/ETR_Details.png":::
 
 ### <a name="inbound-connectors"></a>Gelen bağlayıcıları
 
@@ -307,7 +307,7 @@ Bağlayıcılar, e-postanın e-postanız e-postanıza veya Microsoft 365 veya bi
 Bağlayıcı araması doğada "içerir"; bu da kısmi anahtar sözcük aramaların da çalışması gerektiği anlamına gelir. Ana kılavuz görünümü, Ayrıntılar dışarı aktarma aracı ve Dışarı Aktarıldı CSV içinde, bağlayıcılar burada gösterildiği gibi Ad/GUID biçiminde gösterilir:
 
 > [!div class="mx-imgBorder"]
-> ![Bağlayıcı ayrıntıları.](../../media/Connector_Details.png)
+> :::image type="content" source="../../media/Connector_Details.png" alt-text="Bağlayıcı ayrıntıları" lightbox="../../media/Connector_Details.png":::
 
 ## <a name="new-features-in-threat-explorer-and-real-time-detections"></a>Threat Explorer ve Gerçek zamanlı algılamalarda yeni özellikler
 
@@ -345,7 +345,7 @@ Bu örnekte Threat Explorer 2013 2013 2013'
 
 5. Kullanıcı veya **etki** alanı hakkında ek  >  kimliğe bürünme bilgilerini ve Algılandı konumunu görmek için E-posta sekmesiAyrındırmalar sekmesi altında herhangi bir *iletinin Konusu öğesini seçin*.
 
-    :::image type="content" source="../../media/threat-ex-views-impersonated-user-image.png" alt-text="Algılama konumunu ve algılanan tehdidi (burada kullanıcının kimlik avı kimliğine bürünme) gösteren korumalı bir kullanıcı için Tehdit Gezgini ayrıntıları bölmesi.":::
+    :::image type="content" source="../../media/threat-ex-views-impersonated-user-image.png" alt-text="Algılama konumunu ve algılanan tehdidi gösteren korumalı bir kullanıcı için Tehdit Gezgini ayrıntılar bölmesi (burada kullanıcının kimlik avı kimliğine bürünülme)" lightbox="../../media/threat-ex-views-impersonated-user-image.png":::
 
 > [!NOTE]
 > 3. veya 5. adımda, sırasıyla Algılama Teknolojisi'ne ve Kimliğe Bürünme etki  alanı veya Kimliğe Bürünme kullanıcısı'ı seçerseniz,  > *E-posta*  **sekmesiAyrındırma** Bilgileri sekmesinde kullanıcı veya  etki alanıyla ilgili bilgiler ve Algılandı konumu yalnızca Kimlik Avı Önleme ilkesi sayfasında listelenen kullanıcı veya etki alanıyla ilgili iletilerde gösterilir.
@@ -412,7 +412,7 @@ Gerçek zamanlı algılamalar raporunda aynı konuma almak için bu yolu izleyin
 > Ağ İleti kimliği, Gezgin veya ilişkili üçüncü taraf araçları aracılığıyla kimlik araması yapmak için tıklayma haritasını belirli postalara eşler. Bu tür aramalar, bir tıklama sonucuyla ilişkilendirilmiş olan e-postayı tanımlamaktadır. Birbiriyle ilişkili Ağ İleti kimliğinin olması daha hızlı ve daha güçlü bir çözümleme sağlar.
 
 > [!div class="mx-imgBorder"]
-> ![Gezgin'de Tıklatmalar sekmesi.](../../media/tp_ExportClickResultAndNetworkID.png)
+> :::image type="content" source="../../media/tp_ExportClickResultAndNetworkID.png" alt-text="Explorer'daki Tıklamalar sekmesi" lightbox="../../media/tp_ExportClickResultAndNetworkID.png":::
 
 ## <a name="see-malware-detected-in-email-by-technology"></a>E-postada teknolojiye göre algılanan kötü amaçlı yazılımları görme
 
@@ -423,19 +423,19 @@ Kötü amaçlı yazılımların e-postada bu teknolojiye göre sıralanmış ola
 2. Görünüm menüsünde, **Kötü Amaçlı** E-posta'ya **E-posta Gönder'i** \> **seçin**.
 
    > [!div class="mx-imgBorder"]
-   > ![Gezgin için Görünüm menüsü.](../../media/ExplorerViewEmailMalwareMenu.png)
+   > :::image type="content" source="../../media/ExplorerViewEmailMalwareMenu.png" alt-text="Gezgin için Görünüm menüsü" lightbox="../../media/ExplorerViewEmailMalwareMenu.png":::
 
 3. **Gönderen'e** tıklayın ve Temel Algılama **teknolojisi'ne** \> **tıklayın**.
 
    Algılama teknolojileriniz artık rapor için filtre olarak kullanılabilir.
 
    > [!div class="mx-imgBorder"]
-   > ![Kötü amaçlı yazılım algılama teknolojileri.](../../media/ExplorerEmailMalwareDetectionTech.png)
+   > :::image type="content" source="../../media/ExplorerEmailMalwareDetectionTech.png" alt-text="Kötü amaçlı yazılım algılama teknolojileri" lightbox="../../media/ExplorerEmailMalwareDetectionTech.png":::
 
 4. Bir seçenek belirleyin. Ardından, **filtreyi uygulamak** için Yenile düğmesini seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![Seçili algılama teknolojisi.](../../media/ExplorerEmailMalwareDetectionTechATP.png)
+   > :::image type="content" source="../../media/ExplorerEmailMalwareDetectionTechATP.png" alt-text="Seçili algılama teknolojisi" lightbox="../../media/ExplorerEmailMalwareDetectionTechATP.png":::
 
 Rapor, seçtiğiniz teknoloji seçeneği kullanılarak, kötü amaçlı yazılımın e-postada algıladık sonuçları gösterecek şekilde yenilenir. Buradan daha fazla analiz yürütesiniz.
 
@@ -450,14 +450,14 @@ Rapor, seçtiğiniz teknoloji seçeneği kullanılarak, kötü amaçlı yazılı
 2. Görünüm menüsünde **E-posta** **Kimlik Avını** \> **seçin**.
 
    > [!div class="mx-imgBorder"]
-   > ![Kimlik avı bağlamında Gezgin için Görünüm menüsü.](../../media/ExplorerViewEmailPhishMenu.png)
+   > :::image type="content" source="../../media/ExplorerViewEmailPhishMenu.png" alt-text="Kimlik avı bağlamında Gezgin için Görünüm menüsü" lightbox="../../media/ExplorerViewEmailPhishMenu.png":::
 
 3. **Gönderen'e** tıklayın ve karara tıklayın **URL'leri** \> **seçin**.
 
 4. Engellenmiş ve Geçersiz kılınan engelleme gibi bir veya daha fazla seçeneği belirleyin ve sonra filtreyi uygulamak için  seçeneklerle aynı satırda Yenile düğmesini seçin. (Tarayıcı pencerenizi yenilemeyin.)
 
    > [!div class="mx-imgBorder"]
-   > ![URL'ler ve kararlara tıklayın.](../../media/ThreatExplorerEmailPhishClickVerdictOptions.png)
+   > :::image type="content" source="../../media/ThreatExplorerEmailPhishClickVerdictOptions.png" alt-text="URL'ler ve kararlara tıklayın" lightbox="../../media/ThreatExplorerEmailPhishClickVerdictOptions.png":::
 
    Rapor, raporun altındaki URL sekmesinde iki farklı URL tablosu gösterecek şekilde yenilenir:
 
@@ -468,7 +468,7 @@ Rapor, seçtiğiniz teknoloji seçeneği kullanılarak, kötü amaçlı yazılı
    İki URL tablosu kimlik avı e-posta iletisinde teslim eylemine ve konuma göre en önemli URL'leri gösterir. Tablolarda, bir uyarıya rağmen engellenen veya ziyaret edilen URL tıklamaları gösterir; böylelikle kullanıcılara hangi olası hatalı bağlantıların sunlarak ve kullanıcıya tık yaptığını görmenizi sağlar. Buradan daha fazla analiz yürütesiniz. Örneğin, grafiğin altında, kuruluşun ortamında engellenmiş e-posta iletilerinde en üst URL'leri görebilirsiniz.
 
    > [!div class="mx-imgBorder"]
-   > ![Engellenmiş olan Gezgin URL'leri.](../../media/ExplorerPhishClickVerdictURLs.png)
+   > :::image type="content" source="../../media/ExplorerPhishClickVerdictURLs.png" alt-text="Engellenmiş olan Gezgin URL'leri" lightbox="../../media/ExplorerPhishClickVerdictURLs.png":::
 
    Daha ayrıntılı bilgi görüntülemek için bir URL seçin.
 
@@ -497,21 +497,21 @@ Rapor İletisi eklentisinde veya  Rapor Kimlik Avı eklentisinde *, kuruluşta* 
 2. Görünüm menüsünde **E-posta** **Gönderimleri'ne** \> **tıklayın**.
 
    > [!div class="mx-imgBorder"]
-   > ![E-postalar için Explorer'ın Görünüm menüsü.](../../media/explorer-view-menu-email-user-reported.png)
+   > :::image type="content" source="../../media/explorer-view-menu-email-user-reported.png" alt-text="E-postalar için Gezgin'in Görünüm menüsü" lightbox="../../media/explorer-view-menu-email-user-reported.png":::
 
 3. **Gönderen'e** tıklayın ve Temel Rapor **türü'ne** \> **tıklayın**.
 
 4. Kimlik Avı gibi bir **seçenek belirtin** ve sonra Yenile **düğmesini** seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![Kullanıcı tarafından bildirilen kimlik avı.](../../media/EmailUserReportedReportType.png)
+   > :::image type="content" source="../../media/EmailUserReportedReportType.png" alt-text="Kullanıcı tarafından bildirilen kimlik avı" lightbox="../../media/EmailUserReportedReportType.png":::
 
-Rapor, kuruluşta yer alan kişilerin kimlik avı girişimi olarak bildirilen e-posta iletileriyle ilgili verileri gösterecek şekilde yenilenir. Daha fazla çözümleme yapmak için bu bilgileri kullanabilir ve gerekirse Microsoft Defender'da kimlik avıyla mücadele ilkelerinizi daha [iyi Office 365](configure-mdo-anti-phishing-policies.md).
+Rapor, kuruluşta yer alan kişilerin kimlik avı girişimi olarak bildirilen e-posta iletileriyle ilgili verileri gösterecek şekilde yenilenir. Daha fazla çözümleme yapmak için bu bilgileri kullanabilir ve gerekirse, kimlik avıyla mücadele ilkelerinizi daha iyi [Office 365 için Microsoft Defender](configure-mdo-anti-phishing-policies.md).
 
 ## <a name="start-automated-investigation-and-response"></a>Otomatik araştırma ve yanıt başlatma
 
 > [!NOTE]
-> Plan 2 ve 2'nin son güncelleştirmeleri için *Microsoft Defender'Office 365 otomatik soruşturma* ve *Office 365 E5*.
+> Plan 2 ve Daha Fazla Bilgi'de *Office 365 için Microsoft Defender araştırma* ve *yanıt Office 365 E5*.
 
 [Otomatik araştırma ve yanıt,](automated-investigation-response-office.md) güvenlik işlemleri ekip sürenizi ve siber saldırıları araştırma ve azaltma için harcanan çabadan tasarruf sağlar. Güvenlik çalışma kitabını tetikleyen uyarılar yapılandırmaya ek olarak, Gezgin'de görünümden otomatik bir araştırma ve yanıt işlemi de başlatabilirsiniz. Ayrıntılar için bkz [. Örnek: Güvenlik yöneticisi Explorer'dan gelen bir soruşturmayı tetikler](automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 
@@ -527,11 +527,11 @@ Bu makalede ana hatlarıyla açıklanan senaryolara ek olarak, Gezgin'de (veya G
 
 ## <a name="required-licenses-and-permissions"></a>Gerekli lisanslar ve izinler
 
-Explorer veya [Gerçek zamanlı algılamaları Office 365](defender-for-office-365.md) için Microsoft Defender'a sahipsiniz.
+[Gezgin'Office 365 için Microsoft Defender](defender-for-office-365.md) gerçek zamanlı algılamaları kullanmak için bu iki yöntemi kullan mutlaka.
 
-- Explorer, Plan 2 için Defender'Office 365 dahil edilir.
-- Gerçek zamanlı algılamalar raporu, Plan 1'den Office 365 Defender'a dahildir.
-- Lisans atamayı, lisanslar için Defender ile korunması gereken tüm kullanıcılara Office 365. Gezgin ve Gerçek zamanlı algılamalar lisanslı kullanıcılar için algılama verilerini gösterir.
+- Explorer, Plan 2 Office 365 için Defender'ye dahildir.
+- Gerçek zamanlı algılamalar raporu Plan 1'Office 365 için Defender dahil edilir.
+- Korumalı olması gereken tüm kullanıcılara lisans atamayı Office 365 için Defender. Gezgin ve Gerçek zamanlı algılamalar lisanslı kullanıcılar için algılama verilerini gösterir.
 
 Gezgin'i veya Gerçek zamanlı algılamaları görüntülemek ve kullanmak için, güvenlik yöneticisine veya güvenlik okuyucuya verilenler gibi uygun izinlere sahip olmak gerekir.
 
@@ -555,10 +555,10 @@ Roller ve izinler hakkında daha fazla bilgi edinmek için aşağıdaki kaynakla
 
 ## <a name="differences-between-threat-explorer-and-real-time-detections"></a>Tehdit Gezgini ile Gerçek zamanlı algılamalar arasındaki farklar
 
-- Gerçek *zamanlı algılamalar raporu*, plan 1'den Office 365 Defender'da kullanılabilir. *Threat Explorer*, Plan 2'nin Office 365 Defender'da kullanılabilir.
+- Gerçek *zamanlı algılamalar raporu* Plan 1'Office 365 için Defender kullanılabilir. *Threat Explorer*, Plan 2 Office 365 için Defender'de kullanılabilir.
 - Gerçek zamanlı algılamalar raporu, algılamaları gerçek zamanlı olarak görüntülemeye olanak sağlar. Threat Explorer bunu da yapar, ancak belirli bir saldırı için ek ayrıntılar da sağlar.
 - Threat *Explorer'da* Tüm e-posta görünümü kullanılabilir, ancak Gerçek zamanlı algılamalar raporunda kullanılamaz.
-- Threat Explorer'da daha fazla filtreleme özelliği ve kullanılabilir eylem bulunmaktadır. Daha fazla bilgi için bkz. [Çevrimiçi Hizmet Office 365 için Microsoft Defender: Yeni planlar için Defender'da Office 365 kullanılabilirliği](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
+- Threat Explorer'da daha fazla filtreleme özelliği ve kullanılabilir eylem bulunmaktadır. Daha fazla bilgi için bkz. [Office 365 için Microsoft Defender Açıklaması: Proje planlarında Office 365 için Defender kullanılabilirliği](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability-across-advanced-threat-protection-atp-plans).
 
 ## <a name="other-articles"></a>Diğer makaleler
 

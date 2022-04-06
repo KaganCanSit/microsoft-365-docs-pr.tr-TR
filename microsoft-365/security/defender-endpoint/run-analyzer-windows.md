@@ -1,6 +1,6 @@
 ---
 title: İstemci çözümleyicisini çözümleyiciyi çalışma Windows
-description: Farklı bir güncelleştirmede Uç Nokta İstemcisi Çözümleyicisi için Microsoft Defender'ı Windows.
+description: Windows'de Uç Nokta için Microsoft Defender Çözümleyicisi'nin nasıl çalıştır Windows.
 keywords: istemci çözümleyicisi, algılayıcı, çözümleyici, mdeanalyzer, windows sorunlarını giderme
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -18,17 +18,17 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 092a89e41efebafae36e81f5faa7cd3b52fde8d9
-ms.sourcegitcommit: af73b93a904ce8604be319e8dc7cadaf65d50534
+ms.openlocfilehash: 5fa284f5c57214f356bb6b90e12ca60ae019d277
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/31/2022
-ms.locfileid: "63010097"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467147"
 ---
 # <a name="run-the-client-analyzer-on-windows"></a>İstemci çözümleyicisini çözümleyiciyi çalışma Windows
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 1. [MDE İstemci Çözümleyicisi aracını](https://aka.ms/mdatpanalyzer) araştırmaniz Windows makineye indirin.
 
@@ -61,17 +61,17 @@ Yukarıdakilere ek olarak, canlı yanıt kullanarak çözümleyici destek [günl
 Çözümleyicide yer alan tüm PowerShell betikleri ve modülleri Microsoft tarafından imzalanmıştır.
 Dosyalar herhangi bir şekilde değiştirildiyse, çözümleyicinin aşağıdaki hatayla birlikte çıkışı bekleniyor:
 
-![İstemci çözümleyicisi hatasının görüntüsü](images/sigerror.png)
+:::image type="content" source="images/sigerror.png" alt-text="İstemci çözümleyici hatası" lightbox="images/sigerror.png":::
 
 
 Bu hata gösteriliyorsa, hata issuerInfo.txt bu hatanın nedeni ve hangi dosyanın etkilendiği hakkında ayrıntılı bilgi içerir:
 
-![Issuer bilgi resmi](images/issuerinfo.png)
+:::image type="content" source="images/issuerinfo.png" alt-text="Issuer bilgileri" lightbox="images/issuerinfo.png":::
 
 
 Değişiklik yapıldıktan sonra MDEClientAnalyzer.ps1 içeriği:
 
-![Değiştirilmiş ps1 dosyasının görüntüsü](images/modified-ps1.png)
+:::image type="content" source="images/modified-ps1.png" alt-text="Değiştirilmiş ps1 dosyası" lightbox="images/modified-ps1.png":::
 
 
 

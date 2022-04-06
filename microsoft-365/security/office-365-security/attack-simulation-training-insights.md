@@ -13,16 +13,16 @@ ms.collection:
 ms.custom: ''
 description: Yöneticiler, uygulama portalında Saldırı benzetimi eğitiminin kullanıcıları nasıl etkilediğini Microsoft 365 Defender benzetim ve eğitim sonuçlardan içgörüler elde eder.
 ms.technology: mdo
-ms.openlocfilehash: c06cea01fcc7bb8fdc9c869fe8117f85eb627685
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: a360343fd4406dc79d072927fef41369bbe21ed8
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021808"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473903"
 ---
-# <a name="insights-and-reports-for-attack-simulation-training-in-defender-for-office-365"></a>Analizler için Defender'daki Saldırı benzetimi eğitimi hakkında daha fazla Office 365
+# <a name="insights-and-reports-for-attack-simulation-training-in-defender-for-office-365"></a>Analizler'te Saldırı benzetimi eğitimi için önemli Office 365 için Defender
 
- [Office 365 için Microsoft Defender plan 2 için geçerlidir](defender-for-office-365.md)
+**Plan** [2 Office 365 için Microsoft Defender için geçerlidir](defender-for-office-365.md)
 
 Microsoft, Plan 2 veya Office için Microsoft Defender'daki Saldırı benzetim eğitimi Microsoft 365 E5, benzetimlerin ve ilgili eğitimlerin sonuçlarından öngörüler ve raporlar sağlar. Bu bilgiler, kullanıcılarınızı tehdit hazırlığı ilerleme durumu hakkında bilgi sahibi olmanızı sağlar ve kullanıcılarınızı gelecekteki saldırılara daha iyi hazırlamak için önerilen sonraki adımlar konusunda bilgi sahibi olur.
 
@@ -33,7 +33,7 @@ Analizler raporlarına aşağıdaki konumlarda, Web portalında Saldırı benzet
 
 Bu makalenin kalan kalanında kullanılabilir bilgiler açıklanmıştır.
 
-Saldırı benzetimi eğitimi hakkında bilgi almak için bkz. [Saldırı benzetimi eğitimlerini kullanmaya başlama](attack-simulation-training-get-started.md).
+Saldırı benzetimi eğitimi hakkında bilgi almak için Saldırı [benzetim Kullanmaya başlayın'i kullanma hakkında daha fazla bilgi için bkz](attack-simulation-training-get-started.md).
 
 ## <a name="insights-and-reports-on-the-overview-tab-of-attack-simulation-training"></a>Analizler benzetim eğitimine genel bakış sekmesindeki rapor ve raporlar
 
@@ -49,9 +49,9 @@ Ayrıntıları görüntülemek için bir benzetim seçin.
 
 Tüm **benzetimleri görüntüle'yi seçmek** sizi Benzetimler **sekmesine** alır.
 
-Benzetim **başlat'ı seçmek** benzetim oluşturma sihirbazını başlatır. Daha fazla bilgi için bkz[. Daha fazla bilgi için bkz. Kimlik avı saldırısının benzetimini Office 365](attack-simulation-training.md).
+Benzetim **başlat'ı seçmek** benzetim oluşturma sihirbazını başlatır. Daha fazla bilgi için bkz[. Kimlik avı saldırısının benzetimini Office 365 için Defender](attack-simulation-training.md).
 
-![Hızlı Erişim portalının Saldırı benzetim eğitimi'nin Genel Bakış sekmesindeki son Microsoft 365 Defender kartı.](../../media/attack-sim-training-overview-recent-simulations-card.png)
+:::image type="content" source="../../media/attack-sim-training-overview-recent-simulations-card.png" alt-text="Yeni portalda Saldırı benzetimi eğitimi'nin Genel Bakış sekmesindeki Son benzetimler kartı Microsoft 365 Defender." lightbox="../../media/attack-sim-training-overview-recent-simulations-card.png":::
 
 ### <a name="behavior-impact-on-compromise-rate-card"></a>Güvenlik oranı kartı üzerindeki davranış etkisi
 
@@ -69,7 +69,7 @@ Kartta aşağıdaki özet bilgiler de gösterilir:
 - **kimlik avına karşı daha az** duyarlı kullanıcı: Sanal saldırıyla tehlikeye atılmış gerçek kullanıcı sayısı ile öngörülen güvenlik ödün oranı arasındaki fark. Gelecekte benzer saldırılar tarafından bu sayıda kullanıcının güvenliği ihlal edilmiş olma olasılığı daha düşük olacaktır.
 - **x%tahmini orandan daha iyi**: Kullanıcıların öngörülen güvenlik oranının aksine genel olarak ne yaptığını gösterir.
 
-![Güvenlik portalında yer alan Saldırı benzetimi eğitimi'nin Genel Bakış sekmesindeki güvenlik oranı kartı üzerindeki Microsoft 365 Defender.](../../media/attack-sim-training-overview-behavior-impact-card.png)
+:::image type="content" source="../../media/attack-sim-training-overview-behavior-impact-card.png" alt-text="Güvenlik portalı üzerindeki Saldırı benzetimi eğitimi'nin Genel Bakış sekmesinde güvenlik oranı kartı üzerindeki Microsoft 365 Defender etkisi" lightbox="../../media/attack-sim-training-overview-behavior-impact-card.png":::
 
 Daha ayrıntılı bir rapor görmek için Benzetimleri **ve eğitim ayrıntılı raporunu görüntüle'ye tıklayın**. Bu rapor, bu [makalenin ilerleyen sayfalarında açıklanmıştır](#training-efficacy-tab-for-the-attack-simulation-report).
 
@@ -77,11 +77,11 @@ Daha ayrıntılı bir rapor görmek için Benzetimleri **ve eğitim ayrıntılı
 
 Genel **Bakış sekmesindeki** Benzetim  kapsam kartı, bir benzetim **(** Benzetim kullanıcı) alan ve benzetim (benzetimsiz kullanıcılar) alan kullanıcıların yüzdesini **gösterir.** Grafikte bir bölümün üzerine gelerek her kategorideki gerçek kullanıcı sayısını bulabilirsiniz.
 
-Benzetimi **olmayan kullanıcılar için** benzetimi başlat'ı seçmek Benzetim oluşturma sihirbazını başlatır ve bu sihirbazda benzetimi almayan kullanıcılar Hedef kullanıcı sayfasında otomatik **olarak** seçilir. Daha fazla bilgi için bkz[. Daha fazla bilgi için bkz. Kimlik avı saldırısının benzetimini Office 365](attack-simulation-training.md).
+Benzetimi **olmayan kullanıcılar için** benzetimi başlat'ı seçmek Benzetim oluşturma sihirbazını başlatır ve bu sihirbazda benzetimi almayan kullanıcılar Hedef kullanıcı sayfasında otomatik **olarak** seçilir. Daha fazla bilgi için bkz[. Kimlik avı saldırısının benzetimini Office 365 için Defender](attack-simulation-training.md).
 
 Benzetim **kapsam raporunu görüntüle'yi** seçmek Sizi Saldırı [benzetimi raporu için Kullanıcı kapsamı sekmesine alır](#user-coverage-tab-for-the-attack-simulation-report).
 
-![Microsoft 365 Defender portalında, Saldırı benzetimi eğitimi'nin Genel Microsoft 365 Defender kartı.](../../media/attack-sim-training-overview-sim-coverage-card.png)
+:::image type="content" source="../../media/attack-sim-training-overview-sim-coverage-card.png" alt-text="Hızlı Erişim portalının Saldırı benzetim eğitimi'nin Genel Bakış sekmesindeki Benzetim Microsoft 365 Defender kartı" lightbox="../../media/attack-sim-training-overview-sim-coverage-card.png":::
 
 ### <a name="training-completion-card"></a>Eğitim tamamlama kartı
 
@@ -114,9 +114,9 @@ Yineleme raporunu **görüntüle'yi seçmek sizi** Saldırı benzetimi raporu [i
 
 Genel **Öneriler** sekmesindeki **genel bakış kartı**, çalıştıracak farklı benzetim türleri önerir.
 
-Başlat seçildiğinde **benzetim** oluşturma sihirbazı başlatılır ve Seçme tekniği sayfasında belirtilen benzetim türü otomatik **olarak** seçilir. Daha fazla bilgi için bkz[. Daha fazla bilgi için bkz. Kimlik avı saldırısının benzetimini Office 365](attack-simulation-training.md).
+Başlat seçildiğinde **benzetim** oluşturma sihirbazı başlatılır ve Seçme tekniği sayfasında belirtilen benzetim türü otomatik **olarak** seçilir. Daha fazla bilgi için bkz[. Kimlik avı saldırısının benzetimini Office 365 için Defender](attack-simulation-training.md).
 
-![Öneriler portalında Saldırı benzetim eğitimi'nin Genel Bakış Microsoft 365 Defender tıklayın.](../../media/attack-sim-training-overview-recommendations-card.png)
+:::image type="content" source="../../media/attack-sim-training-overview-recommendations-card.png" alt-text="Öneriler Microsoft 365 Defender portalında Saldırı benzetimi eğitimi'nin Genel Bakış sekmesindeki Microsoft 365 Defender kartı" lightbox="../../media/attack-sim-training-overview-recommendations-card.png":::
 
 ### <a name="attack-simulation-report"></a>Saldırı benzetimi raporu
 
@@ -126,7 +126,7 @@ Saldırı benzetimi **raporunu Görünüm** ... üzerine **tıklayarak Genel Bak
 
 Saldırı **benzetimi raporu** sayfasında, **Eğitim sanal sekmesi** varsayılan olarak seçilidir. Bu sekme, benzetimin kendisinde ek bağlam olacak şekilde, güvenlik oranı kartı üzerindeki davranış etkisi konusunda mevcut olan aynı bilgileri sağlar.
 
-![Microsoft 365 Defender portalında Saldırı benzetim raporu'nın eğitim Microsoft 365 Defender sekmesi.](../../media/attack-sim-report-training-efficacy-view.png)
+:::image type="content" source="../../media/attack-sim-report-training-efficacy-view.png" alt-text="Microsoft 365 Defender portalında Saldırı benzetimi raporu'nın Eğitim Microsoft 365 Defender sekmesi" lightbox="../../media/attack-sim-report-training-efficacy-view.png":::
 
 Grafikte Öngörülen güvenlik **ödün oranı ve Fiili** güvenliği **ihlal oranı görüntülenir**. Grafikte bir bölümün üzerine gelindiğinde, gerçek yüzde değerleri gösterilir.
 
@@ -150,7 +150,7 @@ Dışarı Aktar simgesine ![tıklarsanız.](../../media/m365-cc-sc-download-icon
 
 #### <a name="user-coverage-tab-for-the-attack-simulation-report"></a>Saldırı benzetimi raporu için kullanıcı kapsamı sekmesi
 
-![Uygulama portalında yer alan Saldırı benzetimi raporunun kullanıcı Microsoft 365 Defender sekmesi.](../../media/attack-sim-report-user-coverage-view.png)
+:::image type="content" source="../../media/attack-sim-report-user-coverage-view.png" alt-text="Microsoft 365 Defender portalında Saldırı benzetimi raporunun Kullanıcı kapsamı sekmesi" lightbox="../../media/attack-sim-report-user-coverage-view.png":::
 
 Kullanıcı **kapsamı sekmesinde** , grafikTemli kullanıcılar ve **Benzetimi** olmayan **kullanıcılar görüntülenir**. Grafikte bir veri noktasının üzerine gelindiğinde, gerçek değerler gösterilir.
 
@@ -174,7 +174,7 @@ Dışarı Aktar simgesine ![tıklarsanız.](../../media/m365-cc-sc-download-icon
 
 #### <a name="training-completion-tab-for-the-attack-simulation-report"></a>Saldırı benzetimi raporu için eğitim tamamlama sekmesi
 
-![Proje portalında Saldırı benzetimi raporunun Eğitim Microsoft 365 Defender sekmesi.](../../media/attack-sim-report-training-completion-view.png)
+:::image type="content" source="../../media/attack-sim-report-training-completion-view.png" alt-text="Proje portalında Saldırı benzetimi raporunun Eğitim Microsoft 365 Defender sekmesi" lightbox="../../media/attack-sim-report-training-completion-view.png":::
 
 Eğitim **tamamlanma sekmesindeki** grafikte **Tamamlanan, Sürüyor** ve **Tamamlanmamış** **benzetimlerin sayısı** görüntülenir. Grafikte bir bölümün üzerine gelindiğinde, gerçek değerler gösterilir.
 
@@ -207,7 +207,7 @@ Dışarı Aktar simgesine ![tıklarsanız.](../../media/m365-cc-sc-download-icon
 
 #### <a name="repeat-offenders-tab-for-the-attack-simulation-report"></a>Saldırı benzetimi raporu için yinelemeli sekme
 
-![Microsoft 365 Defender portalında Saldırı benzetimi raporunun yinelemesi sekmesini tekrarlayın.](../../media/attack-sim-report-repeat-offenders-view.png)
+:::image type="content" source="../../media/attack-sim-report-repeat-offenders-view.png" alt-text="Microsoft 365 Defender portalında Saldırı benzetimi raporunun Yineleme Microsoft 365 Defender sekmesi" lightbox="../../media/attack-sim-report-repeat-offenders-view.png":::
 
 _Tekrarlı bir yineleme_, ardışık benzetimler ile tehlikeye atılmış bir kullanıcıdır. Varsayılan ardışık benzetim sayısı ikidir, ancak saldırı benzetimi eğitimi'nin Ayarlar sekmesindeki  değeri değiştirebilirsiniz<https://security.microsoft.com/attacksimulator?viewid=setting>.
 
@@ -261,11 +261,11 @@ Bu bölümün kalan bölümünde, benzetim ayrıntıları sayfasında bulunan i�
 
 - Bağlantılar: **Kimlik bilgileri girildi** **ve Kimlik bilgileri girildi**.
 
-  ![Bağlantıyla ilgili benzetim ayrıntıları için benzetim etkisi bölümü.](../../media/attack-sim-training-sim-details-sim-impact-links.png)
+  :::image type="content" source="../../media/attack-sim-training-sim-details-sim-impact-links.png" alt-text="Bağlantıyla ilgili benzetim ayrıntıları için Benzetim etkisi bölümü" lightbox="../../media/attack-sim-training-sim-details-sim-impact-links.png":::
 
 - Ekler: **Ek açıldı** **ve Ek açılmadı**.
 
-  ![Eklerle ilgili benzetim ayrıntıları için benzetim etkisi bölümü.](../../media/attack-sim-training-sim-details-sim-impact-attachments.png)
+  :::image type="content" source="../../media/attack-sim-training-sim-details-sim-impact-attachments.png" alt-text="Eklerle ilgili benzetim ayrıntıları için Benzetim etkisi bölümü" lightbox="../../media/attack-sim-training-sim-details-sim-impact-attachments.png":::
 
 Grafikte bir bölümün üzerine gelindiğinde, her kategorinin gerçek sayıları gösterilir.
 
@@ -279,28 +279,28 @@ Grafikte bir bölümün üzerine gelindiğinde, her kategorinin gerçek sayılar
   - **EmailLinkClicked**: Benzetim mesajında bağlantıya kaç kullanıcı tıklamış?
   - **CredSupplied**: Bağlantıya tıklandıktan sonra, kaç kullanıcının kimlik bilgilerini sağladığını.
 
-    ![Bağlantıyla ilgili benzetim ayrıntıları için tüm kullanıcı etkinliği bölümü.](../../media/attack-sim-training-sim-details-all-user-activity-links.png)
+    :::image type="content" source="../../media/attack-sim-training-sim-details-all-user-activity-links.png" alt-text="Bağlantıyla ilgili benzetim ayrıntıları için Tüm kullanıcı etkinliği bölümü" lightbox="../../media/attack-sim-training-sim-details-all-user-activity-links.png":::
 
 - Ekler:
   - **Ek Açıldı**: Benzetim iletisinde eki açan kullanıcı sayısı.
 
-    ![Eklerle ilgili benzetim ayrıntıları için tüm kullanıcı etkinliği bölümü.](../../media/attack-sim-training-sim-details-all-user-activity-attachments.png)
+    :::image type="content" source="../../media/attack-sim-training-sim-details-all-user-activity-attachments.png" alt-text="Ekle ilgili benzetim ayrıntıları için Tüm kullanıcı etkinliği bölümü" lightbox="../../media/attack-sim-training-sim-details-all-user-activity-attachments.png":::
 
 ### <a name="training-completion-section"></a>Eğitim tamamlama bölümü
 
 **Benzetim ayrıntıları** sayfasındaki Eğitim tamamlanma bölümü, benzetim için gereken eğitimleri ve kaç kullanıcının eğitimleri tamamlamış olduğunu gösterir.
 
-![Ekle ilgili benzetim ayrıntıları için eğitim tamamlama bölümü.](../../media/attack-sim-training-sim-details-training-completed.png)
+:::image type="content" source="../../media/attack-sim-training-sim-details-training-completed.png" alt-text="Eklerle ilgili benzetim ayrıntıları için Eğitim tamamlanma bölümü" lightbox="../../media/attack-sim-training-sim-details-training-completed.png":::
 
 ## <a name="recommended-actions-section"></a>Önerilen eylemler bölümü
 
 **Benzetim ayrıntıları sayfasındaki** Önerilen eylemler bölümü [, Microsoft Güvenli](../defender/microsoft-secure-score.md) Puanı'nın öneri eylemlerini ve eylemin Güvenli Puanınıza etkisini gösterir. Bu öneriler benzetimde kullanılan yüke dayalıdır ve kullanıcılarınızı ve ortamınızı korumaya yardımcı olur. Listeden bir **Geliştirme eylemi** seçerek önerilen eylemi uygulayanın bulunduğu konuma varabilirsiniz.
 
-![Saldırı benzetimi eğitimi'nin Öneri eylemleri bölümü.](../../media/attack-sim-training-sim-details-recommended-actions.png)
+:::image type="content" source="../../media/attack-sim-training-sim-details-recommended-actions.png" alt-text="Saldırı benzetimi eğitimi'nin Öneri eylemleri bölümü" lightbox="../../media/attack-sim-training-sim-details-recommended-actions.png":::
 
 ## <a name="related-links"></a>İlgili Bağlantılar
 
-[Saldırı benzetimi eğitimlerini kullanmaya başlama](attack-simulation-training-get-started.md)
+[Kullanmaya başlayın benzetimi eğitimlerini kullanma](attack-simulation-training-get-started.md)
 
 [Kimlik avı saldırı benzetimi oluşturma](attack-simulation-training.md)
 

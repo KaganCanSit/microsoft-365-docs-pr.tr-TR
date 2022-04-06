@@ -28,12 +28,12 @@ ms.assetid: dd6a1fef-ec4a-4cf4-a25a-bb591c5811e3
 description: Bir kuruluşu Kasa ve kötü amaçlı URL'ler kullanan diğer saldırılara karşı korumak için Office 365 için Defender'daki Bağlantılar koruması hakkında bilgi edinebilirsiniz. Bağlantıları Teams Kasa ve Bağlantı iletilerinin Kasa bakın.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 736efeb805e45170ec6471b57fc35005d0a12311
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 8bd4773d3f712adf13ac2a006f5d8450c58fc89a
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320333"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682096"
 ---
 # <a name="safe-links-in-microsoft-defender-for-office-365"></a>Kasa için Microsoft Defender'daki Office 365
 
@@ -84,10 +84,6 @@ Bu makale, Bağlantı ayarları için aşağıdaki türlerde Kasa içerir:
 
 Aşağıdaki tabloda, Microsoft 365'Kasa ve Office 365 için Defender içeren Office 365 Bağlantıları ile ilgili senaryolar açık almaktadır (örneklerde lisansın olmamasının hiçbir zaman bir sorun olmadığı unutmayın).
 
-<br>
-
-****
-
 |Senaryo|Sonuç|
 |---|---|
 |Konuşma, pazarlama departmanının bir üyesidir. Kasa için bağlantılar Office 365, Kasa Bağlantıları için genel ayarlarda ve pazarlama bölümü üyeleri için Kasa Bağlantılar ilkesi vardır. Her zaman, PowerPoint bir sunu açar ve ardından sunuda bir URL'ye tıklar.|Her zaman, Tüm bağlantılar Kasa korunur. <p> Ayrıca, her iki Grup Kasa da dahil edilir ve Kasa uygulamaları için Links Office 365 açık olur. <p> Office 365 uygulamalarına bağlantıları koruma Kasa hakkında daha fazla bilgi için, bu [makalenin](#safe-links-settings-for-office-365-apps) devam Kasa Uygulamaları için Office 365 Bağlantıları ayarları bölümüne bakın.|
@@ -95,7 +91,6 @@ Aşağıdaki tabloda, Microsoft 365'Kasa ve Office 365 için Defender içeren Of
 |Pat'in kuruluşunda, hiçbir yönetici Kasa Bağlantısı ilkeleri oluşturmaz ama Kasa uygulamaları için Bağlantılar Office 365 açık olur. Pat bir Word belgesi açar ve dosyada bir URL'ye tıklar.|Pat, Diğer Bağlantılar Kasa korunmaz. <p> Her Kasa için Bağlantılar koruması Office 365 genel olarak açık olsa da, Pat etkin Kasa Bağlantıları ilkelerine dahil değildir ve dolayısıyla koruma uygulanamamalıdır.|
 |Lee'nin kuruluşunda, `https://tailspintoys.com` Bağlantı Ekleme Bağlantıları için genel ayarlarda yer alan aşağıdaki **URL'leri** engelle Kasa yapılandırılır. Zaten Lee Kasa içeren bir Bağlantı ilkesi var. Lee, URL'yi içeren bir e-posta iletisi alır `https://tailspintoys.com/aboutus/trythispage`. Lee URL'ye tıklar.|URL, Yılan için otomatik olarak engellenmiş olabilir; bu, listede yer alan URL girdisi ve Lee'nin kullandığı e-posta istemcisine bağlıdır. Daha fazla bilgi için, bu makalenin sonraki kısımlarında yer alan [Bağlantılar Kasa "Aşağıdaki URL'leri engelleme"](#block-the-following-urls-list-for-safe-links) listesine bakın.|
 |Hem Murat hem de Abd'de contoso.com. Uzun zaman önce, yöneticiler hem Murat Kasa hem de Murat için geçerli olan Bağlantılar ilkelerini yapılandırdı. Can, e-postanın kötü amaçlı bir URL içerdiğini bilmeyebilirsiniz.|Her zaman, **Kasa arasındaki** iletilere uygulanacak şekilde yapılandırılan Kasa Bağlantılar ilkesi Bağlantılar tarafından korunur. Daha fazla bilgi için, bu [makalenin Kasa e-posta iletileri için](#safe-links-settings-for-email-messages) bağlantılar ayarları bölümüne bakın.|
-|
 
 ## <a name="safe-links-settings-for-email-messages"></a>Kasa iletileri için bağlantı ayarlarını değiştirme
 
@@ -281,17 +276,12 @@ Yeni Bağlantılar'ın genel ayarlarında URL'lerin listesini Kasa yapılandıra
 
 Girebilirsiniz değer örnekleri ve sonuçları aşağıdaki tabloda açıklanmıştır:
 
-<br>
-
-****
-
 |Değer|Sonuç|
 |---|---|
 |`contoso.com` <p> veya <p> `*contoso.com*`|Etki alanı, alt etki alanları ve yolları engeller. Örneğin, `https://www.contoso.com`, `https://sub.contoso.com`ve `https://contoso.com/abc` engellenir.|
 |`https://contoso.com/a`|Engellemeler `https://contoso.com/a` ancak gibi ek alt yolları engellemez `https://contoso.com/a/b`.|
 |`https://contoso.com/a*`|Blokları `https://contoso.com/a` ve gibi ek altpath'leri.`https://contoso.com/a/b`|
 |`https://toys.contoso.com*`|Alt etki alanını engeller (`toys` bu örnekte), ancak diğer etki alanı URL'lerine (örneğin veya ) tıklamalara izin `https://contoso.com` verme `https://home.contoso.com`.|
-|
 
 ## <a name="do-not-rewrite-the-following-urls-lists-in-safe-links-policies"></a>Bağlantılar ilkelerinde "Aşağıdaki URL'leri yeniden Kasa" listeleri
 
@@ -323,17 +313,12 @@ Yeni veya var olan bağlantılar ilkelerinde listeye girişler Kasa için bkz. Y
 
 Girebilirsiniz değer örnekleri ve sonuçları aşağıdaki tabloda açıklanmıştır:
 
-<br>
-
-****
-
 |Değer|Sonuç|
 |---|---|
 |`contoso.com`|Alt etki alanlarına `https://contoso.com` veya yollara erişime izin verir, ancak bu izinler olmaz.|
 |`*.contoso.com/*`|Bir etki alanına, alt etki alanına ve yollara (örneğin, `https://www.contoso.com`, , veya `https://www.contoso.com`) erişime `https://maps.contoso.com`izin verir `https://www.contoso.com/a`. <p> Bu girdi yapısal olarak , veya `*contoso.com*`gibi sahte olabilecek sitelere izin vermemektedir, çünkü `https://www.falsecontoso.com``https://www.false.contoso.completelyfalse.com`|
 |`https://contoso.com/a`|erişime izin `https://contoso.com/a`verir, ancak bu gibi altpathlere erişim izni verir `https://contoso.com/a/b`|
 |`https://contoso.com/a/*`|Erişime ve `https://contoso.com/a` bunun gibi alt `https://contoso.com/a/b`|
-|
 
 ## <a name="warning-pages-from-safe-links"></a>Bağlantılardan uyarı Kasa sayfaları
 

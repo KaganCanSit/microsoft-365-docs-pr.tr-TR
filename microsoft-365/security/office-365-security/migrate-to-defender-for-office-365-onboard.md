@@ -1,5 +1,5 @@
 ---
-title: '3. Aşama için Microsoft Defender Office 365 na geçiş: Ekleme'
+title: 'Geçiş: Office 365 için Microsoft Defender Aşama 3: Ekleme'
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -16,28 +16,28 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: migrationguides
-description: Üçüncü taraf koruma hizmetlerinden veya cihazdan Microsoft Defender'a üçüncü taraf korumasından Microsoft Defender'a Office 365 tamamlayın.
+description: Üçüncü taraf koruma hizmetlerinden veya cihazından üçüncü taraf koruma hizmetine veya cihazdan üçüncü taraf korumasına Office 365 için Microsoft Defender tamamlayın.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3798bdb28bb44b5148574b4c09a372ff564e47e5
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: 9160a6fc79ba94e4cb86fb0f96f46e565c0f613c
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63010183"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467521"
 ---
-# <a name="migrate-to-microsoft-defender-for-office-365---phase-3-onboard"></a>Geçiş için Microsoft Defender'Office 365 - Aşama 3: Ekleme
+# <a name="migrate-to-microsoft-defender-for-office-365---phase-3-onboard"></a>Geçiş: Office 365 için Microsoft Defender - Aşama 3: Ekleme
 
 **Geçerli olduğu yer:**
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 
 <br>
 
-|[![Aşama 1: Hazırlık.](../../media/phase-diagrams/prepare.png)](migrate-to-defender-for-office-365-prepare.md) <br> [Aşama 1: Hazırlama](migrate-to-defender-for-office-365-prepare.md)|[![Aşama 2: Ayarlama.](../../media/phase-diagrams/setup.png)](migrate-to-defender-for-office-365-setup.md) <br> [Aşama 2: Ayarlama](migrate-to-defender-for-office-365-setup.md)|![Aşama 3: Ekleme.](../../media/phase-diagrams/onboard.png) <br> Aşama 3: Ekleme|
+|[![Aşama 1: Hazırlık.](../../media/phase-diagrams/prepare.png#lightbox)](migrate-to-defender-for-office-365-prepare.md) <br> [Aşama 1: Hazırlama](migrate-to-defender-for-office-365-prepare.md)|[![Aşama 2: Ayarlama.](../../media/phase-diagrams/setup.png#lightbox)](migrate-to-defender-for-office-365-setup.md) <br> [Aşama 2: Ayarlama](migrate-to-defender-for-office-365-setup.md)|![Aşama 3: Ekleme.](../../media/phase-diagrams/onboard.png) <br> Aşama 3: Ekleme|
 |---|---|---|
 |||*Buradasınız!*|
 
-Aşama **3'e hoş geldiniz: Üçüncü** yıl için **[Microsoft Defender'a Office 365](migrate-to-defender-for-office-365.md#the-migration-process)**! Bu geçiş aşaması aşağıdaki adımları içerir:
+Aşama **3: Geçiş işleminin** bir sonraki **[aşamaya geçişini Office 365 için Microsoft Defender](migrate-to-defender-for-office-365.md#the-migration-process)**! Bu geçiş aşaması aşağıdaki adımları içerir:
 
 1. [Güvenlik önlemlerini eklemeye Teams](#step-1-begin-onboarding-security-teams)
 2. [(İsteğe bağlı) Pilot kullanıcıların var olan koruma hizmetiniz tarafından filtre uygulamanın dışında tutulacak](#step-2-optional-exempt-pilot-users-from-filtering-by-your-existing-protection-service)
@@ -50,7 +50,7 @@ Aşama **3'e hoş geldiniz: Üçüncü** yıl için **[Microsoft Defender'a Offi
 
 ## <a name="step-1-begin-onboarding-security-teams"></a>1. Adım: Eklemeye başlama Güvenlik Teams
 
-Kuruluşta bir güvenlik müdahale ekibi varsa, şimdi sizin için Microsoft Defender'ı bilet sistemleri Office 365 yanıt süreçlerinize tümleştirmeye başlamanın tam zamanı. Bu kendi başına bir konu başlığıdır, ancak bazen gözden kaçırabilirsiniz. Güvenlik yanıtı ekibinin erkenden dahil olmasını sağlamak, MX kayıtlarınızı değiştirişte, kuruluşlarının tehditlerle başa çıkmaya hazır olmasını sağlar. Olay müdahalesi, aşağıdaki görevleri yerine idare etmek için iyi bir şekilde sahip olmak gerekir:
+Kuruluşta bir güvenlik müdahale ekibi varsa, şimdi bu ekipleri bilet sistemleri Office 365 için Microsoft Defender yanıt süreçlerinize tümleştirmeye başlamanın tam zamanı. Bu kendi başına bir konu başlığıdır, ancak bazen gözden kaçırabilirsiniz. Güvenlik yanıtı ekibinin erkenden dahil olmasını sağlamak, MX kayıtlarınızı değiştirişte, kuruluşlarının tehditlerle başa çıkmaya hazır olmasını sağlar. Olay müdahalesi, aşağıdaki görevleri yerine idare etmek için iyi bir şekilde sahip olmak gerekir:
 
 - Yeni araçları öğrenin ve bunları mevcut akışlara tümleştirin. Örneğin:
   - Karantinaya alınmış iletilerin yönetici yönetimi önemlidir. Yönergeler için bkz [. Karantinaya alınmış iletileri ve dosyaları yönetici olarak yönetme](manage-quarantined-messages-and-files.md).
@@ -59,7 +59,7 @@ Kuruluşta bir güvenlik müdahale ekibi varsa, şimdi sizin için Microsoft Def
 - Kurumsal işlemler için [uyarıları](../../compliance/alert-policies.md) ayarlama ve özelleştirme.
 - Olay kuyruğun yönetin ve olası riskleri düzeltmek.
 
-If your organization has purchased Microsoft Defender for Office 365 Plan 2, they should familiarizing themselves and using features such as Threat Explorer, Advanced Hunting, and Incidents. İlgili eğitimler için bkz.<https://aka.ms/mdoninja>
+If your organization has purchased Office 365 için Microsoft Defender at Plan 2, they should familiarizing themselves and using features such as Threat Explorer, Advanced Hunting, and Incidents. İlgili eğitimler için bkz.<https://aka.ms/mdoninja>
 
 Güvenlik yanıtı ekipleriniz filtrelenmemiş iletileri toplar ve çözümlerse, bu filtrelenmemiş iletileri almak için SecOps posta kutusunu yapılandırabilirsiniz. Yönergeler için bkz. [Gelişmiş teslim ilkesinde SecOps posta kutularını yapılandırma](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
 
@@ -67,18 +67,18 @@ Güvenlik yanıtı ekipleriniz filtrelenmemiş iletileri toplar ve çözümlerse
 
 SIEM/SOAR ile tümleştirme hakkında daha fazla bilgi için, aşağıdaki makalelere bakın:
 
-- [API'lere Microsoft 365 Defender genel bakış](/microsoft-365/security/defender/api-overview)
+- [Microsoft 365 Defender API'lerine genel bakış](/microsoft-365/security/defender/api-overview)
 - [Akış API'si](/microsoft-365/security/defender/streaming-api)
-- [Gelişmiş Av API'si](/microsoft-365/security/defender/api-advanced-hunting)
+- [Gelişmiş Avcılık API'si](/microsoft-365/security/defender/api-advanced-hunting)
 - [Olay API'leri](/microsoft-365/security/defender/api-incident)
 
-Eğer kuruluşta güvenlik müdahale ekibi yoksa veya mevcut süreç akışları hakkında bilgi edinebilirsiniz. Bu zamanı, destek için Defender'daki temel av ve yanıt özelliklerini Office 365. Daha fazla bilgi için bkz [. Tehdit soruşturması ve yanıtı](office-365-ti.md).
+Eğer kuruluşta güvenlik müdahale ekibi yoksa veya mevcut süreç akışlarıyla bu zamanı kullanarak özel bir ekipteki temel av ve yanıt özelliklerini Office 365 için Defender. Daha fazla bilgi için bkz [. Tehdit soruşturması ve yanıtı](office-365-ti.md).
 
 ### <a name="rbac-roles"></a>RBAC rolleri
 
-Office 365 için Defender'daki izinler rol tabanlı erişim denetimine (RBAC) dayalıdır ve Microsoft 365 Defender [portalında açıklanmıştır](permissions-microsoft-365-security-center.md). Bunlar, gözlerde tutmanız gereken önemli noktalardır:
+Aşağıdaki Office 365 için Defender, rol tabanlı erişim denetimine (RBAC) dayalıdır ve Microsoft 365 Defender [portalında açıklanmıştır](permissions-microsoft-365-security-center.md). Bunlar, gözlerde tutmanız gereken önemli noktalardır:
 
-- Azure AD rolleri, iş **yüklerinin tüm** iş yüklerine Microsoft 365. Örneğin, Azure portalda Güvenlik Yöneticisi'ne kullanıcı eklerseniz, bu kullanıcının her yerde Güvenlik Yöneticisi izinleri olur.
+- Azure AD rolleri, iş **yüklerinin tüm** iş yüklerine Microsoft 365. Örneğin, iş yerinde Güvenlik Yöneticisi'ne bir kullanıcı Azure portal, her yerde Güvenlik Yöneticisi izinleri olur.
 - & portalında e-posta ve işbirliği rolleri Microsoft 365 Defender Portalına, Microsoft 365 Defender Portalı'Microsoft 365 uyumluluk merkezi ve daha eski olan Güvenlik ve Uyumluluk Merkezi'ne & verin. Örneğin, Microsoft 365 Defender portalında Güvenlik Yöneticisi'ne kullanıcı eklerseniz, bu kullanıcının yalnızca Microsoft 365 Defender Portalı' Microsoft 365 uyumluluk merkezi ve Güvenlik &  erişimi olur.
 - Microsoft 365 Defender portalında birçok özellik Exchange Online PowerShell cmdlet'lerini temel almıştır ve bu nedenle Exchange Online'de ilgili rollerde (teknik olarak, rol grupları) rol grubu üyeliği gerekir (özellikle, ilgili özel olarak ilgili rollere erişim için Exchange Online  PowerShell cmdlet'leri).
 - Microsoft 365 Defender portalında & Azure AD rollerinin eşdeğeri olan ve güvenlik işlemleri için önemli olan E-posta özellikleri işbirliği rolleri vardır (örneğin, Önizleme rolü ve Arama ve Temizleme rolü).
@@ -87,7 +87,7 @@ Normalde, yalnızca güvenlik personelinin alt kümesinin kullanıcı posta kutu
 
 ## <a name="step-2-optional-exempt-pilot-users-from-filtering-by-your-existing-protection-service"></a>2. Adım: (İsteğe bağlı) Muaf pilot kullanıcıların var olan koruma hizmetiniz tarafından filtre uygulamasını geri alın
 
-Bu adım gerekli değildir, ancak pilot kullanıcılarınızı var olan koruma hizmetiniz tarafından filtrelemeyi at edecek şekilde yapılandırmayı düşünebilirsiniz. Bu eylem, Office 365 için Defender'ın pilot kullanıcıların tüm  filtreleme ve koruma görevlerini işlemesini sağlar. Pilot kullanıcılarınızı mevcut koruma hizmetiniz için muaf değilsanız, Office 365 için Defender yalnızca diğer hizmetten gelen (zaten filtrelenmiş olan iletileri filtreleme) tarafından etkin bir şekilde çalışır.
+Bu adım gerekli değildir, ancak pilot kullanıcılarınızı var olan koruma hizmetiniz tarafından filtrelemeyi at edecek şekilde yapılandırmayı düşünebilirsiniz. Bu eylem, Office 365 için Defender kullanıcıların **tüm** filtreleme ve koruma görevlerini işlemesini sağlar. Pilot kullanıcılarınızı var olan koruma hizmetiniz için muaf Office 365 için Defender, yalnızca diğer hizmetten gelen (zaten filtrelenmiş olan iletileri filtreleme) kaçıracak şekilde çalışır.
 
 > [!NOTE]
 > Geçerli koruma hizmetiniz bağlantı kaydırma özelliği sağladığı ancak Bağlantı işlevselliğiyle ilgili pilot Kasa gerekir. Bağlantıların çift kaydırma özelliği desteklanmaz.
@@ -127,7 +127,7 @@ Hazırsanız, posta kutusu zekası diğer bir kimliğe bürünme girişimleri ol
 
 - Katı koruma ayarlarının olduğu Kimlik avı önleme ilkesinde, Posta kutusu zekası, kimliğine bürünülen bir kullanıcı algılar ve bu kullanıcının değerini İletiyi karantinaya **alın olarak değiştirin**.
 
-İlkeleri değiştirmek için bkz. [Kimlik avı için Defender'da kimlik avı ilkelerini Office 365](configure-mdo-anti-phishing-policies.md).
+İlkeleri değiştirmek için bkz[. Kimlik avından korunma ilkelerini Office 365 için Defender](configure-mdo-anti-phishing-policies.md).
 
 Sonuçları gözlemledikten ve tüm ayarlamaları yaptıktan sonra, kullanıcı kimliğe bürünülerek algılanan iletileri karantinaya almak için bir sonraki bölüme ilerleyin.
 
@@ -137,7 +137,7 @@ Standart ve Katı ayarları temel alan kimlik avı önleme ilkelerinizin her iki
 
 Kullanıcı [kimliğe bürünme girişimleriyle](impersonation-insight.md) nelerin engellenmiş olduğunu görmek için kimliğe bürünme içgörüne bakın.
 
-İlkeleri değiştirmek için bkz. [Kimlik avı için Defender'da kimlik avı ilkelerini Office 365](configure-mdo-anti-phishing-policies.md).
+İlkeleri değiştirmek için bkz[. Kimlik avından korunma ilkelerini Office 365 için Defender](configure-mdo-anti-phishing-policies.md).
 
 Sonuçları gözlemledikten ve tüm ayarlamaları yapıldıktan sonra, etki alanı kimliğine bürünülerek algılanan iletileri karantinaya almak için sonraki bölüme ilerleyin.
 
@@ -147,7 +147,7 @@ Standart ve Katı ayarları temel alan kimlik avı önleme ilkelerinizin her iki
 
 Etki alanı [kimliğe bürünme](impersonation-insight.md) girişimleriyle nelerin engellenmiş olduğunu görmek için kimliğe bürünme içgörüne bakın.
 
-İlkeleri değiştirmek için bkz. [Kimlik avı için Defender'da kimlik avı ilkelerini Office 365](configure-mdo-anti-phishing-policies.md).
+İlkeleri değiştirmek için bkz[. Kimlik avından korunma ilkelerini Office 365 için Defender](configure-mdo-anti-phishing-policies.md).
 
 Sonuçları gözlemlemek ve gerekli ayarlamaları yapmak.
 
@@ -155,12 +155,12 @@ Sonuçları gözlemlemek ve gerekli ayarlamaları yapmak.
 
 Pilot kullanıcılarınız hatalı pozitif ve yanlış negatif sonuçlar bildirseler, iletiler portalında [Gönderiler sayfasında Microsoft 365 Defender görüntülenir](admin-submission.md). Yanlış tanımlanamayan iletileri çözümleme için Microsoft'a bildirebilirsiniz ve pilot uygulama ayarlarınıza ilişkin ayarları ve özel durumları gereken şekilde ayarlamak için bilgileri kullanabilirsiniz.
 
-Aşağıdaki özellikleri kullanarak, aşağıdaki özellikler için Defender'daki koruma ayarlarını izleyebilir ve Office 365:
+Aşağıdaki özellikleri kullanarak, koruma ayarlarını izleyebilir ve bu ayarları Office 365 için Defender:
 
 - [Karantina](manage-quarantined-messages-and-files.md)
 - [Tehdit Gezgini](email-security-in-microsoft-defender.md)
 - [E-posta güvenlik raporları](view-email-security-reports.md)
-- [Office 365 raporları için Defender](view-reports-for-mdo.md)
+- [Office 365 için Defender raporları](view-reports-for-mdo.md)
 - [Posta akışı içgörüleri](/exchange/monitoring/mail-flow-insights/mail-flow-insights)
 - [Posta akışı raporları](/exchange/monitoring/mail-flow-reports/mail-flow-reports)
 
@@ -192,7 +192,7 @@ MX kayıtlarınızı başka bir kayıtla işaret etmeye hazır olduğunda, bu b�
 
 2. SCL=-1 posta akış kuralını kapatın (silmeden kapatabilirsiniz).
 
-3. Önceki değişikliklerin geçerli olduğunu ve kullanıcı için Defender'ın Office 365 tüm kullanıcılar için düzgün etkinleştirildiğinden emin olun. Bu noktada, Office 365 için Defender'ın tüm koruma özellikleri, artık tüm alıcıların posta üzerinde eyleme girmesine izin veriliyor, ancak bu posta zaten var olan koruma hizmetiniz tarafından taranmış.
+3. Önceki değişikliklerin etkin olduğunu ve artık tüm kullanıcılar için Office 365 için Defender etkinleştirildiğinden emin olun. Bu noktada, Office 365 için Defender'un tüm koruma özelliklerinin tüm alıcıların posta üzerinde eyleme girmesine izin verilir, ancak bu posta zaten var olan koruma hizmetiniz tarafından taranmış olur.
 
 Daha büyük ölçekli veri kaydı ve ayarlamaları için bu aşamada duraklatabilirsiniz.
 
@@ -223,10 +223,10 @@ Herhangi bir noktada burada duraklatabilir ve değerlendire durabilirsiniz. Ama 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Tebrikler! İş için [Microsoft Defender'a geçiş işleminizi Office 365](migrate-to-defender-for-office-365.md#the-migration-process)! Bu geçiş kılavuzunda adımları takip etmiş olacağınız için, postanın doğrudan Posta'ya teslim Microsoft 365 çok daha sorunsuz olması gerekir.
+Tebrikler! Geçiş işleminizi [tamamladınız ve Office 365 için Microsoft Defender](migrate-to-defender-for-office-365.md#the-migration-process)! Bu geçiş kılavuzunda adımları takip etmiş olacağınız için, postanın doğrudan Posta'ya teslim Microsoft 365 çok daha sorunsuz olması gerekir.
 
-Şimdi siz, diğer iki işlem için Defender'ın normal çalışmasına ve bakımına Office 365. Pilot çalışma sırasında ancak daha büyük ölçekli olarak deneyimle ilgili sorunları izleyin ve izleyin. Kimlik [sahtesi içgörü ve](learn-about-spoof-intelligence.md) kimliğe bürünme içgörüleri çok yararlı olacaktır, ancak aşağıdaki etkinlikleri normal bir oluşum olarak değerlendirin:[](impersonation-insight.md)
+Şimdi, çalışma saatlerinin normal çalışmasına ve bakımına Office 365 için Defender. Pilot çalışma sırasında ancak daha büyük ölçekli olarak deneyimle ilgili sorunları izleyin ve izleyin. Kimlik [sahtesi içgörü ve](learn-about-spoof-intelligence.md) kimliğe bürünme içgörüleri çok yararlı olacaktır, ancak aşağıdaki etkinlikleri normal bir oluşum olarak değerlendirin:[](impersonation-insight.md)
 
-- Kullanıcı gönderimlerini ve özellikle de kullanıcı [tarafından bildirilen kimlik avı iletilerini gözden geçirme](https://docs.microsoft.com/microsoft-365/security/office-365-security/automated-investigation-response-office)
+- Kullanıcı gönderimlerini ve özellikle de kullanıcı [tarafından bildirilen kimlik avı iletilerini gözden geçirme](automated-investigation-response-office.md)
 - Tehdit koruması durumu raporunda [geçersiz kılmaları gözden geçirebilirsiniz](view-email-security-reports.md#threat-protection-status-report).
 - Fırsatları [ve riskli](/microsoft-365/security/defender/advanced-hunting-example) iletileri ayarlamak için Gelişmiş Arama sorgularını kullanın.

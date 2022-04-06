@@ -1,0 +1,59 @@
+### YamlMime:FAQ
+metadata:
+  title: Yazılım geliştirici SSS
+  ms.reviewer: 
+  description: Bu sayfa, yazılım geliştiricilerden gelen yaygın soruların yanıtlarını sağlar
+  keywords: wdsi, software, developer, faq, dispute, false-positive, classify, installer, software, bundler, blocking
+  search.product: eADQiWindows 10XVcnh
+  ms.prod: m365-security
+  ms.mktglfcycl: deploy
+  ms.sitesec: library
+  ms.pagetype: security
+  ms.author: dansimp
+  author: dansimp
+  ms.localizationpriority: medium
+  manager: dansimp
+  audience: ITPro
+  ms.collection: M365-security-compliance
+  ms.topic: faq
+  ms.technology: m365d
+  ms.openlocfilehash: 732361669e667aeab4f6781c8a82e7989ecf5b03
+  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 03/20/2022
+  ms.locfileid: "63706302"
+title: Yazılım geliştirici SSS
+summary: Bu sayfa, yazılım geliştiricileri tarafından bize gelen yaygın soruların yanıtlarını sağlar. Kötü amaçlı yazılım veya yanlış algılanan dosyaları göndermeyle ilgili genel kılavuz için, gönderme kılavuzunu okuyun.
+sections:
+- name: Yok sayıldı
+  questions:
+  - question: >
+      Microsoft bilinen bir liste veya hatalı pozitif önleme programı için dosyaları kabul eder mi?
+    answer: >
+      Hayır. Yazılım geliştiricilerin bu isteklerini kabul etmiyoruz. Güvenilir bir kök yetkili tarafından verilen dijital sertifikayla program dosyalarınızı tutarlı bir şekilde imzalamak, araştırma ekibimizin bir programın kaynağını hemen belirlemesine ve daha önce kazanılan bilgileri uygulamanıza yardımcı olur. Bazı durumlarda, bu durum program programının hızlı bir şekilde bilinen listeye eklenmiş olmasıyla sonuçlandırabilirsiniz. Daha az sık olarak, 'a dijital sertifikanızı güvenilir yayıncılar listesine ekler.
+  - question: >
+      Programımı algılamaya nasıl itiraz  olurum?
+    answer: >
+      Söz konusu dosyayı yazılım geliştiricisi olarak gönderin. Gönderimin son bir karara varıncaya kadar bekleyin.
+
+
+      Gönderiyi belirleme şeklimizi memnun değilseniz, Microsoft'a ulaşmak için gönderim sonuçlarıyla birlikte verilen geliştirici iletişim formunu kullanın. Sağlayılan bilgileri, gerekirse daha fazla araştırma yapmak için kullanacağız.
+
+
+      Tüm yazılım satıcılarını ve geliştiricilerin, Microsoft'un kötü amaçlı yazılımları ve Olası İstenmeyen Uygulamaları [(PUA) nasıl tanımları hakkında bilgi edin uygulamalarının okunmalarını sağlıyoruz](criteria.md).
+  - question: >
+      Microsoft neden programımın bir kopyasını istiyor?
+    answer: >
+      Kopyaları sağlamak çözümlememiz konusunda bize yardımcı olabilir. Toplantının [katılımcıları Microsoft Etkin Koruma Hizmeti (HARITALAR)](https://www.microsoft.com/msrc/mapp) bu istekleri zaman zaman alır. Sistemlerimiz dosyayı aldık ve işledikten sonra istekler durur.
+  - question: >
+      Microsoft neden yükleyicimi yazılım paketleyici olarak sınıflandıracak?
+    answer: >
+      İstenmeyen yazılım olarak sınıflandırılmış bir program sunmak için yönergeler içerir. İstenmeyen davranış [kabul](criteria.md) edilen davranışların uygulamalarını gözden geçirmek için sunduğumuz ölçütleri gözden geçirabilirsiniz.
+  - question: >
+      Güvenlik Duvarı programımı Windows Defender neden engelliyor?
+    answer: >
+      Güvenlik duvarı blokları, güvenlik duvarı Microsoft Defender Virüsten Koruma Diğer Microsoft kötü amaçlı yazılımlarla ilişkili değil. [Güvenlik Duvarı hakkında Windows Defender öğrenin](/windows/security/windows-firewall/windows-firewall-with-advanced-security.md).
+  - question: >
+      Neden Microsoft Defender SmartScreen programım yaygın olarak indirilemedi?
+    answer: Bu, yazılım ve diğer Microsoft kötü amaçlı Microsoft Defender Virüsten Koruma ilgili değil. [Daha fazla bilgi Microsoft Defender SmartScreen](/windows/security/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview.md)

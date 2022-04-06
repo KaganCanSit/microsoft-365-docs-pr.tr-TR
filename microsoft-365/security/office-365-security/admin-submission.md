@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Yöneticiler yenidencanlama için şüpheli e-postalar, şüpheli kimlik avı postaları, istenmeyen postalar ve diğer zararlı olabilecek iletiler, URL'ler ve e-posta ekleri göndermek için Microsoft 365 Defender portalında Gönderimler portalını kullanmayı öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 6a897ba6973dfba86e3d0628088bad419c61c04c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 34d608a6ea114fff8005069f3dc2ddc79c4be45e
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63324053"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682647"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Gönderimler portalını kullanarak şüpheli istenmeyen posta, kimlik avı, URL'ler ve dosyaları Microsoft'a gönderme
 
@@ -51,10 +51,10 @@ Microsoft'a e-posta iletileri, URL'ler ve ekleri göndermenin diğer yolları i�
 
 - Microsoft 365 Defender portalını açın<https://security.microsoft.com/>. Doğrudan Gönderiler **sayfasına gitmek için** kullanın <https://security.microsoft.com/reportsubmission>.
 
-- Microsoft'a ileti ve dosya göndermek için, aşağıdaki rol gruplarından birinin üyesi olmak gerekir:
+- Microsoft'a ileti ve dosya göndermek için, aşağıdaki rollerden biri gerekir:
   - **Güvenlik Yöneticisi** veya **Güvenlik Okuyucusu'Microsoft 365 Defender** [seçin](permissions-microsoft-365-security-center.md).
   
-    Bu makalenin devamsında açıklandığı gibi özel posta kutusuna kullanıcı gönderimlerini görüntülemek için [bu rol grubunda](#view-user-submissions-to-microsoft) üyelik gerekli olduğunu unutmayın.
+    Bu makalenin devamlarında açıklandığı gibi, özel posta kutusuna kullanıcı gönderimlerini görüntüleme için [bu](#view-user-submissions-to-microsoft) rollerden birinin gerekli olduğunu unutmayın.
 
 - Yöneticiler, posta kutusunda hala kullanılabilir ve kullanıcı veya başka bir yönetici tarafından temizlen iletileri yine sağlanacaksa, 30 günlük olarak gönderebilirsiniz.
 

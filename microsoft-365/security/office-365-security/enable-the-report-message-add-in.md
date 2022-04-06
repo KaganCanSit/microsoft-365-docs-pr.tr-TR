@@ -17,12 +17,12 @@ ms.collection:
 description: Tek tek kullanıcılar veya tüm kuruluş için Rapor İletisini veya Kimlik Avını Bildirme eklentilerini Outlook Web üzerinde Outlook etkinleştirebilirsiniz.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: dc4c03a0ed1f0a03d96776c841203c9131c3067c
-ms.sourcegitcommit: 9af389e4787383cd97bc807f7799ef6ecf0664d0
+ms.openlocfilehash: 758ee81852d9037ce39cbfdc6f2c2d6ad795aff2
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2022
-ms.locfileid: "63468888"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64466839"
 ---
 # <a name="enable-the-report-message-or-the-report-phishing-add-ins"></a>Rapor İletisi'yi veya Rapor Kimlik Avı eklentilerini etkinleştirme
 
@@ -30,7 +30,7 @@ ms.locfileid: "63468888"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!NOTE]
@@ -93,7 +93,7 @@ Set-OwaMailboxPolicy -Identity OwaMailboxPolicy-Default -ReportJunkEmailEnabled 
 
 2. HEMEN **TIKLA'ya tıklayın**.
 
-   ![İletiyi bildir: Şimdi al.](../../media/ReportMessageGETITNOW.png)
+   :::image type="content" source="../../media/ReportMessageGETITNOW.png" alt-text="Şimdi Al rapor iletisi" lightbox="../../media/ReportMessageGETITNOW.png":::
 
 3. Görüntülenen iletişim kutusunda, kullanım koşulları ve gizlilik ilkesi'ne tıklayın ve sonra da Devam'a **tıklayın**.
 
@@ -104,7 +104,7 @@ Eklenti yüklendikten ve etkinleştirildikten sonra, aşağıdaki simgeleri gör
 - Simge Outlook şöyle görünür:
 
     > [!div class="mx-imgBorder"]
-    > ![Rapor İletisi eklentileri simgesi Outlook.](../../media/OutlookReportMessageIcon.png)
+    > :::image type="content" source="../../media/OutlookReportMessageIcon.png" alt-text="Rapor İletisi eklenti simgesi Outlook" lightbox="../../media/OutlookReportMessageIcon.png":::
 
 - Simge Web üzerinde Outlook şöyle görünür:
 
@@ -119,19 +119,20 @@ Eklenti yüklendikten ve etkinleştirildikten sonra, aşağıdaki simgeleri gör
 1. Aşağıdaki [Microsoft 365 yönetim merkezi](https://admin.microsoft.com/AdminPortal/Home?#/homepage), **Tümleşik Ayarlar** \> **gidin**. Uygulamaları **al'a tıklayın**.
 
     > [!div class="mx-imgBorder"]
-    > ![Microsoft 365 yönetim merkezi Tümleşik uygulamalar](../../media/microsoft-365-admin-center-integrated-apps.png)
+    > :::image type="content" source="../../media/microsoft-365-admin-center-integrated-apps.png" alt-text="Microsoft 365 yönetim merkezi Tümleşik uygulamalar" lightbox="../../media/microsoft-365-admin-center-integrated-apps.png":::
+
 
 2. Görüntülenen **Microsoft 365 Uygulamaları** Arama kutusuna tıklayın, **Rapor İletisi** girin ve Ara Ara **simgesine** ![tıklayın.](../../media/search-icon.png) Sonuç listesinde İletiyi Bildir'i bulup **seçin**. 
 
 3. Uygulama ayrıntıları sayfası açılır. Şimdi **Al'ı seçin**. 
 
     > [!div class="mx-imgBorder"]
-    > ![Rapor İletisi eklentisi](../../media/microsoft-365-admin-center-report-message.png)  
+    > :::image type="content" source="../../media/microsoft-365-admin-center-report-message.png" alt-text="Rapor İletisi eklentisinde" lightbox="../../media/microsoft-365-admin-center-report-message.png":::
 
 4. Temel profil bilgilerini tamamlandıktan sonra Devam'a **tıklayın**. 
 
     > [!div class="mx-imgBorder"]
-    > ![Rapor İletisi eklenti profili kurulumu](../../media/microsoft-365-admin-center-profile-info.png)
+    > :::image type="content" source="../../media/microsoft-365-admin-center-profile-info.png" alt-text="Rapor İletisi eklenti profili kurulumu" lightbox="../../media/microsoft-365-admin-center-profile-info.png":::
 
 5. Yeni **Uygulama Dağıtımı** açılır. Aşağıdaki ayarları yapılandırabilirsiniz. Kurulumu **tamamlamak** üzere bir sonraki sayfaya gitmek için Sonraki'ne tıklayın. 
 
@@ -144,13 +145,13 @@ Eklenti yüklendikten ve etkinleştirildikten sonra, aşağıdaki simgeleri gör
      - **İzin isteklerini kabul etme**: Sonraki sayfaya gitmeden önce uygulama izinlerini ve özelliklerini dikkatle okuyun.
 
         > [!div class="mx-imgBorder"]
-        > ![Uygulama izinleri](../../media/microsoft-365-admin-center-deploy-new-app.png)
+        > :::image type="content" source="../../media/microsoft-365-admin-center-deploy-new-app.png" alt-text="İzin isteklerini kabul et sayfası" lightbox="../../media/microsoft-365-admin-center-deploy-new-app.png":::
 
      - **Dağıtımı bitir**: Eklentiyi gözden geçirip dağıtmayı bitirin. 
      - **Dağıtım tamamlandı**: Kurulumu **tamamlamak için** Bitti'yi seçin. 
 
         > [!div class="mx-imgBorder"]
-        > ![Dağıtım tamamlandı](../../media/microsoft-365-admin-center-deployment-complete.png)
+        > :::image type="content" source="../../media/microsoft-365-admin-center-deployment-complete.png" alt-text="Dağıtımın tamamlandı bildirimi iletisi" lightbox="../../media/microsoft-365-admin-center-deployment-complete.png":::
 
 ## <a name="edit-settings-for-the-report-message-add-in"></a>Rapor İletisi eklentisinde ayarları düzenleme
 
@@ -159,7 +160,7 @@ Eklenti yüklendikten ve etkinleştirildikten sonra, aşağıdaki simgeleri gör
 2. Görüntülenen açılır listeden, kullanıcı ayarlarını düzenlemek **için Kullanıcıları** düzenle'yi seçin.
 
     > [!div class="mx-imgBorder"]
-    > ![Rapor İletisi uçarak çıkış](../../media/microsoft-365-admin-center-report-message-edit.png)
+    > :::image type="content" source="../../media/microsoft-365-admin-center-report-message-edit.png" alt-text="Rapor İletisi uçarak çıkış" lightbox="../../media/microsoft-365-admin-center-report-message-edit.png":::
 
 3. Eklentiyi kaldırmak için aynı çıkışta **Eylemler'in** **altında** Uygulamayı kaldır'ı seçin. 
 
@@ -194,7 +195,7 @@ Eklenti yüklendikten ve etkinleştirildikten sonra, aşağıdaki simgeleri gör
 1. Aşağıdaki [Microsoft 365 yönetim merkezi](https://admin.microsoft.com/AdminPortal/Home?#/homepage), **Tümleşik Ayarlar** \> **gidin**. Uygulamaları **al'a tıklayın**.
 
     > [!div class="mx-imgBorder"]
-    > ![Microsoft 365 yönetim merkezi Tümleşik uygulamalar](../../media/microsoft-365-admin-center-integrated-apps.png)
+    > :::image type="content" source="../../media/microsoft-365-admin-center-integrated-apps.png" alt-text="Microsoft 365 yönetim merkezi Tümleşik uygulamalar" lightbox="../../media/microsoft-365-admin-center-integrated-apps.png":::
 
 2. Görüntülenen **Microsoft 365 Uygulamaları** Arama kutusuna tıklayın, Rapor Kimlik Avı girin ve Ara  Ara **simgesine** ![tıklayın.](../../media/search-icon.png) Sonuç listesinde Kimlik Avını **Bildir'i bulup seçin**. 
  
@@ -211,6 +212,6 @@ Eklenti yüklendikten ve etkinleştirildikten sonra, aşağıdaki simgeleri gör
 2. Görüntülenen açılır listeden, kullanıcı ayarlarını düzenlemek **için Kullanıcıları** düzenle'yi seçin.
 
     > [!div class="mx-imgBorder"]
-    > ![Rapor Kimlik Avı uçarak çıkış](../../media/microsoft-365-admin-center-report-phishing-edit.png)
+    > :::image type="content" source="../../media/microsoft-365-admin-center-report-phishing-edit.png" alt-text="Rapor Kimlik Avı çıktısı" lightbox="../../media/microsoft-365-admin-center-report-phishing-edit.png":::
 
 3. Eklentiyi kaldırmak için aynı çıkışta **Eylemler'in** **altında** Uygulamayı kaldır'ı seçin. 

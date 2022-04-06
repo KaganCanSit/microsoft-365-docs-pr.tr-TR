@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 4e819a9de9d5ccd66caab4bc13d8b11c1a95ab03
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: bd76eed421f4d926a956508961dc44a643dbb125
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63681732"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64467103"
 ---
 # <a name="permissions-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında izinler
 
@@ -33,7 +33,7 @@ ms.locfileid: "63681732"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Tüm yeni hizmetlerde yer alan güvenlik senaryolarını yönetmeniz Microsoft 365 gerekir. Ayrıca, organizasyonda doğru kullanıcılara doğru yönetici izinlerini verme esnekliğine de ihtiyacınız vardır.
@@ -55,7 +55,7 @@ Rol **grubu,** kişilerin portalda işlerini yapmalarına olanak sağlayan Micro
 
 Aşağıdaki Microsoft 365 Defender portalı>, atamanız gereken en yaygın görevler ve işlevler için varsayılan rol gruplarını içerir. Genel olarak, varsayılan rol gruplarına tek **tek kullanıcıları üye** olarak eklemenizi öneririz.
 
-![Rol gruplarıyla roller ve üyeler arasındaki ilişkiyi gösteren diyagram.](../../media/2a16d200-968c-4755-98ec-f1862d58cb8b.png)
+:::image type="content" source="../../media/2a16d200-968c-4755-98ec-f1862d58cb8b.png" alt-text="Rol grubunun rolleri ve üyeleriyle ilişkisi" lightbox="../../media/2a16d200-968c-4755-98ec-f1862d58cb8b.png":::
 
 ## <a name="roles-and-role-groups-in-the-microsoft-365-defender-portal"></a>Portalda yer alan roller Microsoft 365 Defender grupları
 
@@ -65,7 +65,7 @@ Aşağıdaki rol ve rol grubu türlerine, Microsoft 365 Defender portalında yer
 
 - **E&-posta** ve işbirliği rolleri: Bunlar, Güvenlik ve Uyumluluk Merkezi'nde bulunan & rol gruplarıyla aynıdır; ancak bunları doğrudan Microsoft 365 Defender yönetebilirsiniz. Burada atadığınız izinler Microsoft 365 Defender portalına, Microsoft 365 uyumluluk merkezi'ye ve Güvenlik & Uyumluluk Merkezi'ne özeldir ve diğer iş yükleri için gereken tüm izinleri Microsoft 365 değildir.
 
-![& portalında izinler ve Microsoft 365 Defender sayfası.](../../media/m365-sc-permissions-and-roles-page.png)
+:::image type="content" source="../../media/m365-sc-permissions-and-roles-page.png" alt-text="Microsoft 365 Defender portalında & izinleri sayfası" lightbox="../../media/m365-sc-permissions-and-roles-page.png":::
 
 ### <a name="azure-ad-roles-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında Azure AD rolleri
 
@@ -73,7 +73,7 @@ Microsoft 365 Defender portalını <https://security.microsoft.com> açıp **E-p
 
 Bir rol seçin, rolün açıklamasını ve kullanıcı atamalarını içeren ayrıntılar açılır öğesini görünür. Ancak bu atamaları yönetmek için ayrıntılar ayrıntılarında **, Azure AD'de üyeleri** yönet'e tıklamanız gerekir.
 
-![E-postada izinleri yönetmek Azure Active Directory.](../../media/permissions-manage-in-azure-ad-link.png)
+:::image type="content" source="../../media/permissions-manage-in-azure-ad-link.png" alt-text="Web'de izinleri yönetme Azure Active Directory" lightbox="../../media/permissions-manage-in-azure-ad-link.png":::
 
 Daha fazla bilgi için bkz[. 2010'da yönetici rollerini görüntüleme Azure Active Directory](/azure/active-directory/users-groups-roles/directory-manage-roles-portal).
 
@@ -85,7 +85,7 @@ Daha fazla bilgi için bkz[. 2010'da yönetici rollerini görüntüleme Azure Ac
 |**Güvenlik operatörü**|Kullanıcılarınızı, cihazlarınızı ve içeriğinizi görüntüleme, araştırma ve Microsoft 365 tehditlere yanıt verme. Daha fazla bilgi için bkz. [Güvenlik İşleci](/azure/active-directory/roles/permissions-reference#security-operator).|
 |**Güvenlik gözetmeni**|Kullanıcılarınıza, cihazlarınıza ve Microsoft 365 yönelik etkin tehditleri  görüntüp araştırabilirsiniz, ancak (Güvenlik işlecinin aksine) herhangi bir işlem gerçekleştirerek bu izinleri olmaz. Daha fazla bilgi için bkz. [Güvenlik Okuyucu](/azure/active-directory/roles/permissions-reference#security-reader).|
 |**Güvenlik yöneticisi**|Güvenlik ilkelerini yöneterek, Microsoft 365 ürünlerinde güvenlik analizini ve raporlarını gözden geçirerek ve tehdit ortamında hızlendirerek, kuruluş genel güvenliğini kontrol edin. Daha fazla bilgi için bkz. [Güvenlik Yöneticisi](/azure/active-directory/roles/permissions-reference#security-administrator).|
-|**Genel okuyucu**|Genel yönetici rolünün salt **okunur sürümü** . Tüm ayarları ve yönetim bilgilerini tüm Microsoft 365. Daha fazla bilgi için bkz. [Genel Okuyucu](/azure/active-directory/roles/permissions-reference#global-reader).|
+|**Genel okuyucu**|Bu rolün salt **Genel yönetici** sürümü. Tüm ayarları ve yönetim bilgilerini tüm Microsoft 365. Daha fazla bilgi için bkz. [Genel Okuyucu](/azure/active-directory/roles/permissions-reference#global-reader).|
 |**Saldırı benzetimi yöneticisi**|Saldırı benzetimi oluşturma [, benzetim](attack-simulation-training.md) başlatma/zamanlama ve benzetim sonuçlarının gözden geçirmesi gibi her yönüyle oluşturun ve yönetin. Daha fazla bilgi için bkz [. Saldırı Benzetimi Yöneticisi](/azure/active-directory/roles/permissions-reference#attack-simulation-administrator).|
 |**Saldırı yükü yazarı**|Saldırı yüklemeleri oluşturun ancak aslında bunları başlatamaz veya zamanlamayın. Daha fazla bilgi için bkz [. Saldırı Yük Yazarı](/azure/active-directory/roles/permissions-reference#attack-payload-author).|
 

@@ -16,12 +16,12 @@ manager: dansimp
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 79c435618f03a8bdbd69638c66b728597cd63cab
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 8727baa9bb1935a1186907ca5f3d9d4f82dad6d4
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998222"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473661"
 ---
 # <a name="review-microsoft-defender-antivirus-scan-results"></a>Tarama Microsoft Defender Virüsten Koruma gözden geçirme
 
@@ -29,13 +29,13 @@ ms.locfileid: "62998222"
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Bir Microsoft Defender Virüsten Koruma isteğe bağlı veya zamanlanmış tarama olabilir, bu tamamlandıktan [](run-scan-microsoft-defender-antivirus.md) sonra sonuçlar kaydedilir ve [](scheduled-catch-up-scans-microsoft-defender-antivirus.md)sonuçları görüntüabilirsiniz. 
 
 
-## <a name="use-configuration-manager-to-review-scan-results"></a>Tarama sonuçlarını gözden geçirmek için Yapılandırma Yöneticisi'ni kullanma
+## <a name="use-configuration-manager-to-review-scan-results"></a>Tarama Configuration Manager gözden geçirmek için arama sonuçlarını kullanma
 
 Bu [durumun nasıl iz Endpoint Protection bakın](/configmgr/protect/deploy-use/monitor-endpoint-protection).
 
@@ -47,7 +47,7 @@ Aşağıdaki cmdlet, uç noktayla ilgili her algılamayı geri dönecektir. Ayn�
 Get-MpThreatDetection
 ```
 
-:::image type="content" source="../../media/wdav-get-mpthreatdetection.png" alt-text="PowerShell cmdlet'leri ve çıktılarının ekran görüntüsü.":::
+:::image type="content" source="../../media/wdav-get-mpthreatdetection.png" alt-text="PowerShell cmdlet'leri ve çıktıları" lightbox="../../media/wdav-get-mpthreatdetection.png":::
 
 Çıkışı yalnızca belirli `-ThreatID` bir tehdit için algılamaları gösterecek şekilde sınırlandırma belirtsiniz.
 
@@ -57,7 +57,7 @@ Tehdit algılamalarını listeleyen ancak aynı tehdit algılamalarını tek bir
 Get-MpThreat
 ```
 
-:::image type="content" source="../../media/wdav-get-mpthreat.png" alt-text="PowerShell kodu.":::
+:::image type="content" source="../../media/wdav-get-mpthreat.png" alt-text="PowerShell kodu" lightbox="../../media/wdav-get-mpthreat.png":::
 
 [PowerShell cmdlet'lerini kullanarak PowerShell cmdlet'lerini](use-powershell-cmdlets-microsoft-defender-antivirus.md) yapılandırma ve çalıştırma hakkında daha fazla bilgi Microsoft Defender Virüsten Koruma [Defender Virüsten Koruma cmdlet'lerini](/powershell/module/defender/) Microsoft Defender Virüsten Koruma.
 

@@ -22,12 +22,12 @@ ms.custom:
 description: Yöneticiler tehlikeli veya istenmeyen iletilerin Exchange Online Protection bir etki altında bulunan EOP'de karantina hakkında bilgi edinebilirsiniz.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 509e093d1618cf17d8f5f880aa82a2c54e8204bf
-ms.sourcegitcommit: c11d4a2b9cb891ba22e16a96cb9d6389f6482459
+ms.openlocfilehash: ac2d1bf550fd340c1e94ed5f3503352b40ba6556
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62996453"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682779"
 ---
 # <a name="quarantined-email-messages-in-eop-and-defender-for-office-365"></a>EOP'de e-posta iletileri karantinaya alınmış ve Office 365
 
@@ -40,7 +40,7 @@ ms.locfileid: "62996453"
 
 Microsoft 365 kutusu olmayan Exchange Online ya da tek başına Exchange Online Protection (EOP) kuruluşlarına posta kutusu Exchange Online kuruluşlarda, karantina tehlikeli veya istenmeyen iletileri tutmak için kullanılabilir.
 
-Kötü amaçlı yazılımdan koruma ilkeleri, herhangi bir *ek kötü amaçlı* yazılım içeriyorsa iletiyi otomatik olarak karantinaya alır. Daha fazla bilgi için bkz. [EOP'de kötü amaçlı yazılımdan koruma ilkelerini yapılandırma](configure-anti-malware-policies.md).
+Kötü amaçlı yazılımdan koruma ilkeleri, herhangi bir _ek kötü amaçlı_ yazılım içeriyorsa iletiyi otomatik olarak karantinaya alır. Daha fazla bilgi için bkz. [EOP'de kötü amaçlı yazılımdan koruma ilkelerini yapılandırma](configure-anti-malware-policies.md).
 
 Varsayılan olarak, istenmeyen posta önleme İlkeleri kimlik avını karantinaya alır ve yüksek güvene sahip kimlik avı iletilerini karantinaya alır ve kullanıcının Gereksiz E-posta klasörüne istenmeyen posta, yüksek güvene sahip istenmeyen posta ve toplu e-posta iletileri sağlar. Ancak istenmeyen postayı karantinaya almak, yüksek güvene sahip istenmeyen posta ve toplu e-posta iletilerini karantinaya almak için de istenmeyen posta önleme ilkeleri oluşturabilir ve özelleştirebilirsiniz. Daha fazla bilgi için bkz. [EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).
 
@@ -58,10 +58,6 @@ Karantinaya alınmış iletilerle hem kullanıcılar hem de yöneticiler kullan�
 
 - Karantinaya alınmış iletilerin süre dolmadan önce karantinada tutulma süresi, iletinin neden karantinaya alındığına bağlı olarak değişir. İletileri karantinaya alan özellikler ve buna karşılık gelen bekletme dönemleri aşağıdaki tabloda açıklanmıştır:
 
-  <br>
-
-  ****
-
   |Karantina nedeni|Varsayılan bekletme süresi|Özelleştirilebilir mi?|Açıklamalar|
   |---|---|:---:|---|
   |İstenmeyen posta önleme ilkeleri tarafından karantinaya alınan iletiler: istenmeyen posta, yüksek güven istenmeyen posta, kimlik avı, yüksek güven amaçlı kimlik avı veya toplu.|15 gün: <ul><li>Varsayılan istenmeyen posta önleme ilkesinde.</li><li>PowerShell'de oluştur ilkelerin istenmeyen posta önleme ilkelerde.</li></ul> <p> İlke portalında kendi 30 günlük istenmeyen posta önleme Microsoft 365 Defender vardır.|Evet|İstenmeyen posta önleme ilkelerde bu değeri yapılandırarak (daha düşük) değeri yapılandırarak. Daha fazla bilgi için İstenmeyen posta önleme ilkelerini yapılandırma altında İstenmeyen postayı şu kadar süre karantinada **tutma (**_KarantinaRetentionPeriod_) [ayarına bakın](configure-your-spam-filter-policies.md).|
@@ -70,7 +66,6 @@ Karantinaya alınmış iletilerle hem kullanıcılar hem de yöneticiler kullan�
   |Kasa için Defender'Kasa Ekler ilkeleri tarafından karantinaya alınan Office 365 amaçlı yazılım iletileri).|15 gün|Hayır||
   |Posta akışı kuralları tarafından karantinaya alınan iletiler: Eylem İletiyi barındırılan **karantinaya (Karantina) teslim etmektir**.|30 gün|Hayır||
   |Dosyalar Kasa, SharePoint, OneDrive ve Microsoft Teams (kötü amaçlı yazılım dosyaları) için ekler tarafından karantinaya alındı.|15 gün|Hayır||
-  |
 
   İletinin kullanım süresi karantinadan dolduğunda, kurtarılamaz.
 
