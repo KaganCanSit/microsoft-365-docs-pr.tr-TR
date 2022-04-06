@@ -19,12 +19,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: f024f9d93b44e6d6a679311af914330f0e3db37c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 3057e66352b9bd658ddd4958986cbefd61e4e187
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312943"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682955"
 ---
 # <a name="policy-recommendations-for-securing-sharepoint-sites-and-files"></a>Site ve dosyaların güvenliğini SharePoint ilke önerileri
 
@@ -57,7 +57,6 @@ Aşağıdaki tabloda, gözden geçirmeniz ve güncelleştirmeniz veya yeni oluş
 ||[SharePoint denetimi ilkesi:](#sharepoint-access-control-policies) Yalnızca tarayıcı erişimine izin ver ve SharePoint cihazlardan belirli sitelere erişime izin ver.|Bu, dosyaların düzenlenmesini ve indir indirebilirsiniz. Siteleri belirtmek için PowerShell kullanın.|
 |**Özel güvenlik**|[*Her* zaman MFA gerektir](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Bulut SharePoint diğer özellikleri de ödeve dahil edin.|
 ||[SharePoint denetim ilkesi:](#use-app-enforced-restrictions-in-sharepoint) Belirli sitelere, SharePoint olmayan cihazlardan erişimi engelleme.|Siteleri belirtmek için PowerShell kullanın.|
-|
 
 ## <a name="use-app-enforced-restrictions-in-sharepoint"></a>Mobil uygulamada uygulamanın zorunlu SharePoint
 

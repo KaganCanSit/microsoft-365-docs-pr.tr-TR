@@ -1,6 +1,6 @@
 ---
-title: Mac'te Uç Nokta için Microsoft Defender'daki güncelleştirmeler
-description: Mac'te Uç Nokta için Microsoft Defender'ın önceki sürümlerine göre önemli değişiklikler hakkında bilgi edinin.
+title: Mac'te Uç Nokta için Microsoft Defender'
+description: Mac'te yeni sürümün önceki sürümlerine Uç Nokta için Microsoft Defender hakkında bilgi edinin.
 keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mac, yükleme, macos, whatsnew
 ms.prod: m365-security
 ms.mktglfcycl: security
@@ -15,22 +15,26 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 80245af54aa6f7a3328515257fe6e6e73f0739b0
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: d8b2c7725354facb01f8b12af502aae19856afe8
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63401042"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500749"
 ---
-# <a name="whats-new-in-microsoft-defender-for-endpoint-on-mac"></a>Mac'te Uç Nokta için Microsoft Defender'daki güncelleştirmeler
+# <a name="whats-new-in-microsoft-defender-for-endpoint-on-mac"></a>Mac'te Uç Nokta için Microsoft Defender'
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+
+## <a name="1016169-20122022161690"></a>101.61.69 (20.122022.16169.0)
+
+- Hata düzeltmeleri
 
 ## <a name="1016091-20122021160910"></a>101.60.91 (20.122021.16091.0)
 
@@ -39,8 +43,8 @@ ms.locfileid: "63401042"
 ## <a name="1015950-20122021159500"></a>101.59.50 (20.122021.15950.0)
 
 - Bu sürüm macOS 12.3 için destek ekler. MacOS 12.3'den başlayarak, [Apple Python 2.7'yi kaldırmıştı](https://developer.apple.com/documentation/macos-release-notes/macos-12_3-release-notes). MacOS üzerinde önceden yüklenmiş hiçbir Python sürümü varsayılan olarak olmayacaktır. **EYLEM GEREKIYOR**: 
-  - Kullanıcıların cihazlarını macOS Monterey 12.3 (veya daha yeni) sürümüne güncelleştirmeden önce, Mac için Uç Nokta için Microsoft Defender'ı 101.59.50 (veya daha yeni bir sürüm) olarak güncelleştirmeleri gerekir. Bu en düşük sürüm 101.59.50, macOS Monterey'de Mac için Uç Nokta için Microsoft Defender ile ilgili Python ile ilgili sorunları ortadan kaldırmanın önkoşullarıdır.
-  - Uzak dağıtımlarda, mevcut MDM kurulumlarının Mac için Uç Nokta sürüm 101.59.50 (veya daha yenisi) için Microsoft Defender'a güncelleştirilmiş olması gerekir. Mac için Uç Nokta sürümü için eski bir Microsoft Defender MDM aracılığıyla macOS Monterey 12.3'e (veya daha yenisine) itmek yükleme hatasına neden olur.
+  - Kullanıcıların cihazlarını macOS Monterey 12.3 (veya daha yeni) sürümüne güncelleştirmeden önce Mac için Uç Nokta için Microsoft Defender sürümünü 101.59.50 (veya daha yeni) sürümüne güncelleştirmeleri gerekir. Bu en düşük sürüm 101.59.50, macOS Monterey üzerinde Mac için Uç Nokta için Microsoft Defender Python ile ilgili sorunları ortadan kaldırmanın önkoşullarıdır.
+  - Uzak dağıtımlarda, var olan MDM kurulumların Mac için Uç Nokta için Microsoft Defender 101.59.50 (veya daha yeni) olarak güncelleştirilmiş olması gerekir. Mac için MDM'den daha eski bir Uç Nokta için Microsoft Defender macOS Monterey 12.3'e (veya daha yeni bir sürümü) itmek yükleme hatasına neden olur.
 
 ## <a name="1015910-20122012159100"></a>101.59.10 (20.122012.15910.0)
 
@@ -58,10 +62,10 @@ ms.locfileid: "63401042"
 - Uygulama", "Microsoft Defender ATP" olan "Microsoft Defender" olarak yeniden adlandırılmıştır. Son kullanıcılar aşağıdaki değişiklikleri gözlemler:
   - Uygulama yükleme yolu olarak değiştirildi `/Application/Microsoft Defender ATP.app` `/Applications/Microsoft Defender.app`.
   - Kullanıcı deneyimi içinde, "Microsoft Defender ATP" tekrarları "Microsoft Defender" ile değiştirilmiştir
-- Mac için Uç Nokta için Microsoft Defender ile dağıtılan ağ içerik filtresi nedeniyle bazı VPN uygulamalarının bağlanamama sorunu çözüldü
-- Belirli özelliklere sahip paketlerin yüklenmesine engel olan işletim sisteminde (OS) yapılan bir değişiklik nedeniyle, yükleme paketinin açılamadı olduğu macOS 12.2 beta 2'de bulunan bir sorun giderildi. Bu işletim sistemi değişikliğinin macOS 12.2'nin son sürümüne dahil olmadığını görünür ama gelecekteki bir macOS sürümünde yeniden aşınacak olması olasıdır. Bu nedenle, tüm kuruluş yöneticilerinin yönetim konsolunda Uç Nokta için Microsoft Defender paketini bu ürün sürümüne (veya daha yeni bir sürüme) yenilemelerini teşvik etmek için tüm kuruluş yöneticilerini bu ürünü yenilemelerini sağlaruz.
+- Mac için UÇ NOKTA IÇIN MICROSOFT DEFENDER ile dağıtılan ağ içerik filtresi nedeniyle bazı VPN uygulamalarının bağlanamama sorunu çözüldü
+- Belirli özelliklere sahip paketlerin yüklenmesine engel olan işletim sisteminde (OS) yapılan bir değişiklik nedeniyle, yükleme paketinin açılamadı olduğu macOS 12.2 beta 2'de bulunan bir sorun giderildi. Bu işletim sistemi değişikliğinin macOS 12.2'nin son sürümüne dahil olmadığını görünür ama gelecekteki bir macOS sürümünde yeniden aşınacak olması olasıdır. Bu nedenle tüm kuruluş yöneticilerinin, yönetim konsolunda yer alan Uç Nokta için Microsoft Defender paketini bu ürün sürümüne (veya daha yeni bir sürüme) yenilemelerini teşvik etmek için tüm kuruluş yöneticilerini cesaretlendirin.
 - Bazı M1 cihazlarda, ürünün geçersiz kötü amaçlı yazılımdan koruma tanımları ile takılıp kalmış ve çalışan bir tanım kümesine başarıyla güncelleştirilememe sorunu giderildi.
-- `mdatp health` çıkış, `full_disk_access_enabled` Mac için Uç Nokta için Microsoft Defender'ın tüm bileşenlerine Tam Disk Erişimi'nin verili olup olmadığını belirlemek için kullanılmaktadır adlı ek bir öznitelikle genişletildi.
+- `mdatp health`çıkış, `full_disk_access_enabled` Mac için Office 365'in tüm bileşenlerine Tam Disk Erişimi'nin verili olup olmadığını belirlemek için kullanılmaktadır adlı ek Uç Nokta için Microsoft Defender genişletildi.
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1015416-20121111154160"></a>101.54.16 (20.121111.15416.0)
@@ -117,7 +121,7 @@ ms.locfileid: "63401042"
 
 ## <a name="1013269-20121042132690"></a>101.32.69 (20.121042.13269.0)
 
-- Uç nokta için Microsoft Defender'ın anahtarlıklarına ve diğer uygulamalara eşzamanlı erişimin anahtarlık bozulmalarına neden olduğu soruna ilişkin bir sorun giderildi.
+- Birden fazla uygulama veya diğer uygulamalardan anahtarlıklara eşzamanlı Uç Nokta için Microsoft Defender anahtarlık bozulmalarına yol aç aça bir soruna ilişkin bir sorun giderildi.
 
 ## <a name="1012964-20121042129640"></a>101.29.64 (20.121042.12964.0)
 
@@ -133,7 +137,7 @@ ms.locfileid: "63401042"
 
 ## <a name="1012569-20121022125690"></a>101.25.69 (20.121022.12569.0)
 
-- macOS'ta Uç Nokta için Microsoft Defender artık ABD Kamu müşterileri için önizlemede kullanılabilir. Daha fazla bilgi için bkz. [US Government müşterileri için Uç Nokta için Microsoft Defender](gov.md).
+- Uç Nokta için Microsoft Defender macOS'ta bulunan müşteriler için önizleme, artık ABD Kamu müşterileri için önizleme olarak sunulmaktadır. Daha fazla bilgi için abd [Uç Nokta için Microsoft Defender için bkz.](gov.md)
 - Performans iyileştirmeleri (özel olarak XCode KodKodu uygulamasının kullanıldı olduğu durum için) ve & düzeltmeler.
 
 ## <a name="1012364-20121021123640"></a>101.23.64 (20.121021.12364.0)
@@ -154,7 +158,7 @@ ms.locfileid: "63401042"
 > [!NOTE]
 > Eski komut satırı aracının söz dizimi bu sürümde kullanım dışı bırakıldı. Yeni söz dizimi hakkında bilgi için bkz. [Kaynaklar](mac-resources.md#configuring-from-the-command-line).
 
-- Ağ uzantısını devre dışı bırakmak için yeni bir komut satırı anahtarı eklendi: `mdatp system-extension network-filter disable`. Bu komut, Mac'te Uç Nokta için Microsoft Defender ile ilgili ağ sorunlarını gidermek için yararlı olabilir
+- Ağ uzantısını devre dışı bırakmak için yeni bir komut satırı anahtarı eklendi: `mdatp system-extension network-filter disable`. Bu komut, Mac'te dosyalarla ilgili ağ sorunlarını gidermek Uç Nokta için Microsoft Defender olabilir
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1011921-20120101119210"></a>101.19.21 (20.120101.11921.0)
@@ -169,7 +173,7 @@ ms.locfileid: "63401042"
 
 ## <a name="1011375-20120101113750"></a>101.13.75 (20.120101.11375.0)
 
-- Uç nokta için Microsoft Defender, bir macOS 11 (Big Sur) hatasının çekirdekte paniğe neden olduğu durumlar için kaldırıldı
+- Bir macOS 11 Uç Nokta için Microsoft Defender (Big Sur) hatası tetiklendiğinde ve çekirdekte paniğe neden olan koşullar kaldırıldı
 - Mac 11'de (Big Sur) çalıştırılan Endpoint Security sistem uzantısında bellek sızıntısı düzeltildi
 - Hata düzeltmeleri
 
@@ -187,7 +191,7 @@ ms.locfileid: "63401042"
 
 - Bu ürün sürümü macOS Big Sur 11 beta 9 üzerinde doğrulandı
 
-- Komut satırı aracının yeni `mdatp` söz dizimi artık varsayılan araçtır. Yeni söz dizimi hakkında daha fazla bilgi için bkz. [macOS'ta Uç Nokta için Microsoft Defender Kaynakları](mac-resources.md#configuring-from-the-command-line)
+- Komut satırı aracının yeni `mdatp` söz dizimi artık varsayılan araçtır. Yeni söz dizimi hakkında daha fazla bilgi için bkz. [macOS'ta Uç Nokta için Microsoft Defender kaynakları](mac-resources.md#configuring-from-the-command-line)
 
   > [!NOTE]
   > Eski komut satırı aracının söz dizimi **1 Ocak 2021'de üründen kaldırılacaktır**.
@@ -244,15 +248,15 @@ ms.locfileid: "63401042"
 
 ## <a name="1010031"></a>101.00.31
 
-- [Intune kullanıcıları için geliştirilmiş ürün ekleme deneyimi](/mem/intune/apps/apps-advanced-threat-protection-macos)
+- Yeni kullanıcılar [için geliştirilmiş ürün Intune deneyimi](/mem/intune/apps/apps-advanced-threat-protection-macos)
 - [Virüsten koruma dışlamaları artık joker karakterleri destekliyor](mac-exclusions.md#supported-exclusion-types)
-- macOS bağlam menüsünden virüsten koruma taramalarını tetikleme özelliği eklendi. Artık Bulucu'daki bir dosyaya veya klasöre sağ tık tık ardından Uç nokta için **Microsoft Defender ile tara'yı seçebilirsiniz**
+- macOS bağlam menüsünden virüsten koruma taramalarını tetikleme özelliği eklendi. Artık Finder'daki bir dosyaya veya klasöre sağ tık tıklar ve Dosya ile **tara'yı Uç Nokta için Microsoft Defender**
 - Yerinde ürün yüklemeleri artık yükleyici tarafından açıkça izin verilmedi. Eski sürümü yüklemeden önce mevcut sürümü kaldırıp cihazınızı yeniden yapılandırmanız gerekir.
 - Diğer performans iyileştirmeleri & düzeltmeleri
 
 ## <a name="1009027"></a>100.90.27
 
-- Artık [macOS'ta Uç Nokta için](mac-updates.md#set-the-channel-name) Microsoft Defender için sistem genelindeki güncelleştirme kanalından farklı bir güncelleştirme kanalı kurebilirsiniz
+- Artık [macOS'ta sistem genelindeki](mac-updates.md#set-the-channel-name) güncelleştirme Uç Nokta için Microsoft Defender farklı bir güncelleştirme kanalı için güncelleştirme kanalını
 - Yeni ürün simgesi
 - Diğer kullanıcı deneyimi geliştirmeleri
 - Hata düzeltmeleri
@@ -289,7 +293,7 @@ ms.locfileid: "63401042"
 
 ## <a name="1007942"></a>100.79.42
 
-- Mac'te Uç Nokta için Microsoft Defender'ın bazen Time Machine'i engellemesi sorunu düzeltildi
+- Mac'te Uç Nokta için Microsoft Defender time machine'i engellemeye neden olan sorun düzeltildi
 - Arka uç hizmetiyle bağlantının test etmek için komut satırı yardımcı programına yeni bir anahtar eklendi
 
   ```bash
@@ -305,7 +309,7 @@ ms.locfileid: "63401042"
 
 ## <a name="1007099"></a>100.70.99
 
-- Gerçek zamanlı koruma etkinleştirildiğinde bazı kullanıcıların macOS Catalina'ya yükseltmesini etkileyen bir soruna değinildi. Bu düzensiz soruna Catalina yükseltme paketindeki Uç nokta kilitleme dosyaları için Microsoft Defender'ın tehditlere karşı tarama yaparken neden olduğu, yükseltme sırasında hatalara yol açtı.
+- Gerçek zamanlı koruma etkinleştirildiğinde bazı kullanıcıların macOS Catalina'ya yükseltmesini etkileyen bir soruna değinildi. Bu düzensiz soruna, Catalina Uç Nokta için Microsoft Defender paketi içindeki dosyaları tehditlere karşı tararken kilitleme hatası neden oldu ve yükseltme sırasında hatalara yol açtı.
 
 ## <a name="1006899"></a>100.68.99
 
@@ -317,9 +321,9 @@ ms.locfileid: "63401042"
 - macOS Catalina için destek eklendi
 
   > [!CAUTION]
-  > macOS 10.15 (Catalina) yeni güvenlik ve gizlilik iyileştirmeleri içerir. Bu sürümden başarak, uygulamalar varsayılan olarak açık izin alınmadan diskte bazı konumlara (Belgeler, İndirmeler, Masaüstü, vb.) erişemez. Bu iznin olmamasıyla, Uç Nokta için Microsoft Defender cihazınızı tam olarak koruyamaz.
+  > macOS 10.15 (Catalina) yeni güvenlik ve gizlilik iyileştirmeleri içerir. Bu sürümden başarak, uygulamalar varsayılan olarak açık izin alınmadan diskte bazı konumlara (Belgeler, İndirmeler, Masaüstü, vb.) erişemez. Bu iznin olmaması Uç Nokta için Microsoft Defender, cihazınızı tam olarak koruyamaz.
   >
-  > Bu izni vermek için kullanılan mekanizma, Uç Nokta için Microsoft Defender'ı nasıl dağıt kullandığınıza bağlıdır:
+  > Bu izni vermek için kullanılan mekanizma, bu izni nasıl dağıttılmışa Uç Nokta için Microsoft Defender:
   >
   > - El ile dağıtımlar için, El ile dağıtım konusunda yer alan [güncelleştirilmiş yönergelere](mac-install-manually.md#how-to-allow-full-disk-access) bakın.
   > - Yönetilen dağıtımlar için[, JAMF](mac-install-with-jamf.md) tabanlı dağıtım ve dağıtım Microsoft Intune [ilgili güncelleştirilmiş yönergelere](mac-install-with-intune.md#create-system-configuration-profiles) bakın.

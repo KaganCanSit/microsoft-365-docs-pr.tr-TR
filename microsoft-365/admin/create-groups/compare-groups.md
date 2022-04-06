@@ -24,18 +24,18 @@ search.appverid:
 - MOE150
 ms.assetid: 758759ad-63ee-4ea9-90a3-39f941897b7d
 description: Microsoft 365 üyeleri konuşmalar, dosyalar ve takvim olayları için bir grup e-postası ve paylaşılan çalışma alanı, Akış ve bir Planner alır.
-ms.openlocfilehash: cc70fdf534b7240fd914c42f01b2c89843d1372f
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 72da8af8acd0725a5d7509b84f08e4220f7772d4
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019452"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64594719"
 ---
 # <a name="compare-groups"></a>Grupları karşılaştırma
 
 Çalışma <a href="https://go.microsoft.com/fwlink/p/?linkid=2052855" target="_blank">**gruplarının**</a> Gruplar Microsoft 365 yönetim merkezi, şu tür gruplar oluşturabilir ve yönetebilirsiniz: 
 
-- **Microsoft 365 Grupları**, hem şirket içinde hem de dışında kullanıcılar arasında işbirliği için kullanılır. İş Birliği ve Planner gibi işbirliği hizmetlerini SharePoint içerirler.
+- **Microsoft 365 Grupları** şirket içinde ve dışında kullanıcılar arasında işbirliği için kullanılır. İş Birliği ve Planner gibi işbirliği hizmetlerini SharePoint içerirler.
 - **Dağıtım grupları** , bir grup kişinin e-posta bildirimleri göndermek için kullanılır.
 - **Güvenlik grupları**, e-posta siteleri gibi kaynaklara erişim SharePoint kullanılır.
 - **Posta etkin güvenlik grupları**, e-posta hesabı gibi kaynaklara erişim SharePoint ve bu kullanıcılara e-posta bildirimleri göndermek için kullanılır.
@@ -53,17 +53,19 @@ Bu grup türlerinin hepsi tek tek Power Automate.
 
 ## <a name="microsoft-365-groups"></a>Microsoft 365 Grupları
 
-Microsoft 365 Grupları, hem şirket içinde hem de dışında kullanıcılar arasında işbirliği için kullanılır. Grup üyeleri Microsoft 365 konuşmalar, dosyalar ve takvim olayları için bir grup e-postası ve paylaşılan çalışma alanı alır, Akış ve bir Planner alırlar.
+Microsoft 365 Grupları şirket içinde ve dışında kullanıcılar arasında işbirliği için kullanılır. Grup üyeleri Microsoft 365 konuşmalar, dosyalar ve takvim olayları için bir grup e-postası ve paylaşılan çalışma alanı alır, Akış ve bir Planner alırlar.
 
 Yönetici tarafından etkinleştirilmiş olduğu sürece, bir gruba kuruluş dışından [kişi eklersiniz](manage-guest-access-in-groups.md). Artık, dış gönderenlerin de grup e-posta adreslerine e-posta göndermesine izin verebilirsiniz.
 
-Microsoft 365 Grupları, [grup üyelerine](/azure/active-directory/users-groups-roles/groups-change-type) bölüm, konum, unvan gibi kullanıcı özniteliklerine göre otomatik olarak eklenmelerine veya kaldırılmasına izin veren Azure Active Directory'de dinamik üyelik için ya da yapılandırılabilir.
+Microsoft 365 Grupları, grup üyelerine [bölüm, konum](/azure/active-directory/users-groups-roles/groups-change-type), unvan vb. kullanıcı özniteliklerine göre otomatik olarak eklenmelerine veya kaldırılmasına izin veren Azure Active Directory'de dinamik üyelik için ya yapılabiliyor.
 
-Microsoft 365 Gruplarına iOS için Outlook ve Android için Outlook gibi mobil uygulamalar aracılığıyla erişilebilir.
+Microsoft 365 Grupları uygulamalarına iOS için Outlook Android için Outlook gibi mobil uygulamalar aracılığıyla erişilebilir.
 
 [Yönetici tarafından etkinleştirilirse](../../solutions/allow-members-to-send-as-or-send-on-behalf-of-group.md), ileti gönderebilir ya da grup üyeleri farklı olarak ya da grup e-posta adresi adına gönderim yapabilir. 
 
-Microsoft 365 Grupları diğer gruplarla iç içe Microsoft 365 dağıtım veya güvenlik gruplarıyla iç içe geçen grupları desteklemez.
+Microsoft 365 Grupları diğer iş gruplarıyla veya dağıtım veya güvenlik Microsoft 365 Grupları iç içe yerleştirmeyi desteklemez.
+
+Microsoft 365 Grupları site üzerinde kullanıcılara izin vermek SharePoint gruplardan (Sahipler, Üyeler veya Ziyaretçiler) biri eklenebilir.
 
 ## <a name="distribution-groups"></a>Dağıtım grupları
 
@@ -71,11 +73,11 @@ Microsoft 365 Grupları diğer gruplarla iç içe Microsoft 365 dağıtım veya 
 
 Dağıtım grupları, en çok da "A Binasındaki Kişiler" ya da "Contoso'daki herkes"gibi belirlenmiş bir grup kişiye bilgi yayınlamanız gereksinim duyduğunuz durumlar için uygundur.
 
-Dağıtım grupları Grup [olarak Microsoft 365 yükseltilebilir](../manage/upgrade-distribution-lists.md).
+Dağıtım grupları diğer [gruplara Microsoft 365 Grupları](../manage/upgrade-distribution-lists.md).
 
 Dağıtım grupları grup içinde bir eklenmiştir Microsoft Teams, ancak grubun kendisinin değil, yalnızca üyeler eklenir.
 
-Microsoft 365 grupları dağıtım gruplarının üyesi olabilir.
+Microsoft 365 Grupları grupların üyesi olamz.
 
 ## <a name="dynamic-distribution-groups"></a>Dinamik dağıtım grupları 
 
@@ -93,7 +95,7 @@ Güvenlik grupları, [Azure Active Directory 'de dinamik üyelik için yapıland
 
 Güvenlik grupları eklenmiştir.
 
-Microsoft 365 Grupları güvenlik gruplarının üyesi olmayacaktır.
+Microsoft 365 Grupları grupların üyesi olması gerekir.
 
 ## <a name="mail-enabled-security-groups"></a>Posta özellikli güvenlik grupları
 
@@ -117,8 +119,8 @@ Paylaşılan bir posta kutusunu Paylaşılan Posta Kutusu Grubu'Microsoft 365 ge
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Grupların Nasıl Microsoft 365 öğrenin](https://support.microsoft.com/office/b565caa1-5c40-40ef-9915-60fdb2d97fa2)
+[Daha fazla bilgi Microsoft 365 Grupları](https://support.microsoft.com/office/b565caa1-5c40-40ef-9915-60fdb2d97fa2)
 
-[Dağıtım listelerini Outlook'Microsoft 365 Gruplarına yükseltme](/microsoft-365/admin/manage/upgrade-distribution-lists)
+[Dağıtım listelerini Microsoft 365 Grupları'Outlook](/microsoft-365/admin/manage/upgrade-distribution-lists)
 
 [Neden Outlook'ta dağıtım listelerinizi gruplara yükseltmelisiniz?](https://support.microsoft.com/office/7fb3d880-593b-4909-aafa-950dd50ce188)

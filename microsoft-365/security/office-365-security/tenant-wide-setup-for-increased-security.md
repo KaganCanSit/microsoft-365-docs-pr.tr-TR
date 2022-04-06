@@ -21,12 +21,12 @@ ms.custom:
 description: Bu konu başlığı, kiracı ortamının güvenliğini etkileyen kiracı genelindeki ayarlar için önerilen Microsoft 365 gösterir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 82e96b4b35d5095a6844618125ee49f1dba6ffd6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 94da7316c5e749cf6dcc5e038c185bea4790765f
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63318530"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682889"
 ---
 # <a name="configure-your-microsoft-365-tenant-for-increased-security"></a>Kiracınızı Microsoft 365 güvenliği için yapılandırma
 
@@ -47,10 +47,6 @@ Office 365 Puanı, normal etkinliklerinize ve güvenlik ayarlarınıza göre kur
 
 Bu Microsoft 365 Defender, ortamınızı koruyan özellikler içerir. Ayrıca, izlemek ve önlem almak için kullanabileceğiniz raporları ve panoları da içerir. Bazı alanlar varsayılan ilke yapılandırmaları içerir. Bazı alanlar varsayılan ilkeleri veya kuralları içermemektedir. E-posta ve işbirliği **& bu ilkeleri ziyaret** \> **& kuralları** \> Tehdit ilkeleri **,** daha güvenli bir ortam için tehdit yönetimi ayarlarını ayarlamak için tehdit ilkelerini kullanır.
 
-<br>
-
-****
-
 |Alan|Varsayılan ilke?|Öneri|
 |---|---|---|
 |**Kimlik avı önleme**|Evet|Varsayılan kimlik avı koruma ilkesi burada açıklandığı gibi yapılandırma: EOP'de kimlik avı koruma ayarlarını ve Kimlik avı için [Defender'ı Office 365](protect-against-threats.md#part-2---anti-phishing-protection-in-eop-and-defender-for-office-365). <p> Daha fazla bilgi: <ul><li>[E-postada kimlik avı önleme Microsoft 365](set-up-anti-phishing-policies.md)</li><li>[Kimlik avı için Microsoft Defender'da önerilen kimlik avı önleme ilkesi Office 365](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365)</li><li> [Kimliğe bürünme içgörü](impersonation-insight.md)</li><li>[EOP'de akıllı Spoof Intelligence içgörü](learn-about-spoof-intelligence.md)</li><li>[Kiracı İzin Ver/Engelleme Listesi'ne tıklayın](tenant-allow-block-list.md).</li></ul>|
@@ -59,7 +55,6 @@ Bu Microsoft 365 Defender, ortamınızı koruyan özellikler içerir. Ayrıca, i
 |**Kasa için Microsoft Defender'daki Office 365**|Hayır|Bağlantılar'ın genel ayarlarını Kasa ve burada açıklandığı gibi Kasa Bağlantıları ilkesi oluşturun Kasa: Office 365 [için Microsoft Defender'da Bağlantı ayarlarını Office 365](protect-against-threats.md#safe-links-policies-in-microsoft-defender-for-office-365). <p> Daha fazla bilgi: <ul><li>[Önerilen Kasa Bağlantıları ayarları](recommended-settings-for-eop-and-office365.md#safe-links-settings)</li><li>[Bağlantılar Kasa ayarlama](set-up-safe-links-policies.md)</li><li>[Kasa için Microsoft Defender'daki Office 365](safe-links.md)</li><li>[Web için Microsoft Defender'Kasa Bağlantılar için genel ayarları Office 365](configure-global-settings-for-safe-links.md)</li></ul>|
 |**İstenmeyen posta önleme (posta filtreleme)**|Evet|Varsayılan istenmeyen posta önleme ilkesi burada açıklandığı gibi yapılandırma: [EOP'de istenmeyen posta önleme ayarlarını yapılandırma](protect-against-threats.md#part-3---anti-spam-protection-in-eop) <p> Daha fazla bilgi: <ul><li>[İstenmeyen posta önleme ilkesi ayarları](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings)</li><li>[EOP'de istenmeyen posta önleme koruması](anti-spam-protection.md)</li><li>[EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md)</li></ul>|
 |***E-posta Kimlik Doğrulaması***|Evet|E-posta kimlik doğrulaması, e-posta iletilerine ileti kaynağı ve gönderen hakkında doğrulanabilir bilgiler eklemek için DNS kayıtlarını kullanır. Microsoft 365 varsayılan etki alanı için e-posta kimlik doğrulamasını otomatik olarak yapılandırıyor (onmicrosoft.com), ancak Microsoft 365 yöneticileri de özel etki alanları için e-posta kimlik doğrulamasını yapılandırabilirsiniz. Üç kimlik doğrulama yöntemi kullanılır: <ul><li>Sender Policy Framework (veya SPF).</li><ul><li>Kurulum için bkz[. SPF'yi Microsoft 365 SPF'yi ayarlama.](set-up-spf-in-office-365-to-help-prevent-spoofing.md)</li></ul> <li>DomainKeys Identified Mail (DKIM).</li><ul><li>Bkz [. Özel etki alanınıza gönderilen giden e-postayı doğrulamak için DKIM kullanma](use-dkim-to-validate-outbound-email.md).</li><li>DKIM'yi yapılandırdıktan sonra, dkIM'yi Microsoft 365 Defender etkinleştirin.</li></ul><li>Etki Alanı Tabanlı İleti Kimlik Doğrulaması, Raporlama ve Uyumluluk (DMARC).</li><ul><li>DMARC kurulumu için [DMARC kullanarak e-postayı doğrula ve Microsoft 365](use-dmarc-to-validate-email.md).</li></ul></ul>|
-|
 
 > [!NOTE]
 > SPF'nin standart dışı dağıtımları, karma dağıtımları ve sorun giderme için: Microsoft 365, birlikte kullanma işlemi[, spoofing'i önlemek için Sender Policy Framework'i (SPF) kullanır](how-office-365-uses-spf-to-prevent-spoofing.md).
@@ -68,31 +63,21 @@ Bu Microsoft 365 Defender, ortamınızı koruyan özellikler içerir. Ayrıca, i
 
 Ortamının durumu hakkında daha fazla bilgi edinmek için bu raporları ve panoları ziyaret edin. Bu raporlarda yer alan veriler, organizasyonunız sizin için önemli hizmetleri kullandığı Office 365 hale gelecektir. Şimdilik hangi monitör ve işlem hakkında bilgi sahibi olasiniz.
 
-<br>
-
-****
-
 |Pano|Açıklama|
 |---|---|
 |E-posta güvenlik raporları|Bu raporlar tüm Exchange Online Protection. Daha fazla bilgi için bkz[. Microsoft 365 Defender portalında e-posta Microsoft 365 Defender görüntüleme](view-email-security-reports.md).|
 |Office 365 raporları için Defender|Raporlar yalnızca Office 365 için Defender'da Office 365. Daha fazla bilgi için bkz[. Office 365 portalında raporları görüntülemek Microsoft 365 Defender.](view-reports-for-mdo.md)|
 |Posta akışı raporları ve içgörüleri|Bu raporlar ve içgörüler, yönetim Exchange (EAC) içinde yer almaktadır. Daha fazla bilgi için bkz [. Posta akışı raporları](/exchange/monitoring/mail-flow-reports/mail-flow-reports) ve [Posta akışı içgörüleri](/exchange/monitoring/mail-flow-insights/mail-flow-insights).|
 |[Tehdit Gezgini (veya gerçek zamanlı algılamalar)](threat-explorer.md)|Kiracınızı araştırıyorsanız veya kiracınıza yönelik bir saldırıyla karşılaşıyorsanız tehditleri çözümlemek için Explorer'ı (veya gerçek zamanlı algılamaları) kullanın. Gezgin (ve gerçek zamanlı algılamalar raporu), size zaman içinde saldırı hacmini gösterir ve tehdit aileleri, altyapı ve daha fazlasını kullanarak bu verileri analiz edersiniz. Ayrıca, Olaylar listesi için tüm şüpheli e-postaları işaretebilirsiniz.|
-|
 
 ## <a name="configure-additional-exchange-online-tenant-wide-settings"></a>Kiracı genelindeki Exchange Online ayarları yapılandırma
 
 Önerilen birkaç ek ayara buradan bakabilirsiniz.
 
-<br>
-
-****
-
 |Alan|Öneri|
 |---|---|
 |**Posta akış kuralları** (aktarım kuralları olarak da bilinir)|Yürütülebilir dosya türlerini ve makro içeren dosya türlerini engelleyerek fidye yazılımlarına karşı Office için posta akış kuralı ekleyin. Daha fazla bilgi için bkz[. Kendi dosyalarında ileti eklerini incelemek için posta Exchange Online](/exchange/security-and-compliance/mail-flow-rules/inspect-message-attachments). <p> Aşağıdaki ek konulara bakın: <ul><li>[Fidye yazılımlarına karşı koruma](../../admin/security-and-compliance/secure-your-business-data.md#5-protect-against-ransomware)</li><li>[Yazılım ve Yazılıma Karşı Kötü Amaçlı Yazılım ve Fidye Yazılımına karşı Microsoft 365](/compliance/assurance/assurance-malware-and-ransomware-protection)</li><li>[bir fidye yazılımı saldırılarından kurtar'Office 365](recover-from-ransomware.md)</li></ul> <p> E-postanın dış etki alanlarına otomatik olarak iletimsini önlemek için bir posta akışı kuralı oluşturun. Daha fazla bilgi için bkz [. Güvenli Puanla İstemci Dış Yönlendirme Kurallarını Azaltma](/archive/blogs/office365security/mitigating-client-external-forwarding-rules-with-secure-score). <p> Daha fazla bilgi: [Posta akış kuralları (aktarım kuralları) Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules)|
 |**Modern kimlik doğrulama**|Modern kimlik doğrulaması, multi-factor authentication (MFA) kullanmanın önkoşullarıdır. E-posta dahil bulut kaynaklarına erişimin güvenliğini sağlamak için MFA'nın kullanılması önerilir. <p> Şu konulara bakın: <ul><li>[2010'da modern kimlik doğrulamayı etkinleştirme veya devre dışı Exchange Online](/Exchange/clients-and-mobile-in-exchange-online/enable-or-disable-modern-authentication-in-exchange-online)</li><li>[Skype Kurumsal Online: Kiracınızı modern kimlik doğrulaması için etkinleştirme](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx)</li></ul> <p> Modern kimlik doğrulama Office 2016 istemcileri, SharePoint Online ve OneDrive İş. <p> Daha fazla bilgi: [modern kimlik doğrulama Office 2013 ve Office 2016 istemci uygulamaları için nasıl çalışır?](../../enterprise/modern-auth-for-office-2013-and-2016.md)|
-|
 
 ## <a name="configure-tenant-wide-sharing-policies-in-sharepoint-admin-center"></a>Yönetim merkezinde kiracı genelinde paylaşım SharePoint yapılandırma
 
@@ -102,14 +87,9 @@ SharePoint düzeyinde yapılandırılan ekip siteleri, anonim erişim bağlantı
 
 Taban çizgisi korumasının hedeflerini desteklemek için, burada önerilen şekilde kiracı genelindeki paylaşım ilkelerini yapılandırın. Tek tek sitelerin paylaşım ayarları bu kiracı genelindeki ilkeye göre daha kısıtlayıcı olabilir, ancak izinli olmaz.
 
-<br>
-
-****
-
 |Alan|Varsayılan ilke içerir|Öneri|
 |---|---|---|
 |**Paylaşım** (SharePoint Online ve OneDrive İş)|Evet|Dış paylaşım varsayılan olarak etkinleştirilmiştir. Bu ayarların kullanılması önerilir: <ul><li>Kimliği doğrulanmış dış kullanıcılarla paylaşıma ve anonim erişim bağlantıları kullanmaya izin ver (varsayılan ayar).</li><li>Anonim erişim bağlantılarının süresi bu kadar gün içinde dolar. İsterseniz, 30 gün gibi bir sayı girin.</li><li>Varsayılan bağlantı türü: İç 'i (yalnızca kuruluşta yer alan kişiler) seçin. Anonim bağlantıları kullanarak paylaşmak isteyen kullanıcıların paylaşım menüsünden bu seçeneği tercihleri gerekir.</li></ul> <p> Daha fazla bilgi: [Dış paylaşıma genel bakış](/sharepoint/external-sharing-overview)|
-|
 
 SharePoint merkezi ve OneDrive İş merkezi aynı ayarları içerir. Yönetim merkezinde her iki ayar da geçerlidir.
 

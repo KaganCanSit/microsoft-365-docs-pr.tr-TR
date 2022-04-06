@@ -15,19 +15,19 @@ ms.reviewer: ''
 manager: dansimp
 ms.date: 02/27/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: da5add0e1f37a813e6962accbc391be6efba1cb1
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 9a67b05f089fd25e26f22508cbedb8f4b3ce086a
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64473001"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595092"
 ---
 # <a name="configure-and-validate-exclusions-based-on-file-extension-and-folder-location"></a>Dosya uzantısını ve klasör konumunu temel alarak dışlamaları yapılandırma ve doğrulama
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
 - [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
 Zamanlanmış taramalar Microsoft Defender Virüsten Koruma isteğe bağlı taramalar [ve her](schedule-antivirus-scans.md) zaman [açık, gerçek](run-scan-microsoft-defender-antivirus.md) zamanlı koruma ve izleme için geçerli olan [dışlamalar tanımlayabilirsiniz](configure-real-time-protection-microsoft-defender-antivirus.md). **Genel olarak, dışlamaları uygulama gerekmedilir**. Dışlamaları uygulama gerekirse, birkaç farklı türde seçim kullanabilirsiniz:
@@ -39,7 +39,7 @@ Zamanlanmış taramalar Microsoft Defender Virüsten Koruma isteğe bağlı tara
 > Microsoft Defender Virüsten Koruma dışlamalar, saldırı yüzeyini azaltma gibi Uç Nokta için Microsoft Defender özellikleri için uç noktada algılama ve yanıtlama [(EDR)](/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response) [geçerli değildir (ASR) kuralları ve](/microsoft-365/security/defender-endpoint/attack-surface-reduction) [denetimli klasör erişimi](/microsoft-365/security/defender-endpoint/controlled-folders). Bu makalede açıklanan yöntemleri kullanarak dışlayın dosyalar yine de uyarı uyarılarını EDR algılamaları tetikler.
 > Dosyaları genel olarak dışlamak için, bunları en Uç Nokta için Microsoft Defender [ekleyin](/microsoft-365/security/defender-endpoint/manage-indicators).
 
-## <a name="before-you-begin"></a>Başlamadan önce...
+## <a name="before-you-begin"></a>Başlamadan önce
 
 [Dışlama Öneriler tanımlamadan önce dışlamaları](configure-exclusions-microsoft-defender-antivirus.md) tanımlama hakkında daha fazla bilgi için bkz.
 
@@ -52,8 +52,7 @@ Bazı dosyaları taramaların dışında Microsoft Defender Virüsten Koruma, d�
 >
 > Otomatik dışlamalar yalnızca dışlamalar Windows Server 2016 sonrası için geçerlidir. Bu dışlamalar Windows Güvenliği PowerShell'de görünmez.
 
-Aşağıdaki tabloda, dosya uzantısına ve klasör konumuna bağlı olarak bazı dışlama örnekleri listerilmiştir. 
-<br/><br/>
+Aşağıdaki tabloda, dosya uzantısına ve klasör konumuna bağlı olarak bazı dışlama örnekleri listerilmiştir.
 
 |Dışlama|Örnekler|Dışlama listesi|
 |---|---|---|
@@ -111,7 +110,7 @@ Bkz[. Kötü amaçlı yazılım önleme ilkeleri oluşturma ve dağıtma:](/conf
     1. Seçeneği Etkin olarak **ayarlayın**.
     2. Seçenekler bölümünün **altında** Göster'i **seçin**.
     3. Her klasörü, Değer adı sütununu altında kendi **satırına** belirtin.
-    4. Dosya belirtirken, dosyanın sürücü harfi, klasör yolu, dosya adı ve uzantıyla birlikte tam bir yol girmeye emin olun. 
+    4. Dosya belirtirken, dosyanın sürücü harfi, klasör yolu, dosya adı ve uzantıyla birlikte tam bir yol girmeye emin olun.
     5. Değer **sütununa 0** **girin.**
 
 5. **Tamam**'ı seçin.
@@ -138,8 +137,6 @@ Cmdlet'lerin biçimi aşağıdaki gibidir:
 
 Aşağıdaki tabloda, PowerShell cmdlet'inin `<cmdlet>` bir bölümünde kullanabileceğiniz cmdlet'ler listelemektedir:
 
-<br/><br/>
-
 |Yapılandırma eylemi|PowerShell cmdlet'i|
 |:---|:---|
 |Listeyi oluşturma veya üzerine yazma|`Set-MpPreference`|
@@ -147,8 +144,6 @@ Aşağıdaki tabloda, PowerShell cmdlet'inin `<cmdlet>` bir bölümünde kullana
 |Listeden öğe kaldırma|`Remove-MpPreference`|
 
 Aşağıdaki tabloda, PowerShell cmdlet'inin `<exclusion list>` bölümünde kullanabileceğiniz değerler listelemektedir:
-
-<br/><br/>
 
 |Dışlama türü|PowerShell parametresi|
 |---|---|
@@ -225,8 +220,6 @@ Aşağıdaki tabloda joker karakterlerin nasıl kullanıl kullandığı açık o
 
 Aşağıdaki tabloda, sistem hesabı ortamı değişkenlerini listeler ve açıklar.
 
-<br/><br/>
-
 |Bu sistem ortamı değişkeni...|Buna yönlendirmeler|
 |---|---|
 |`%APPDATA%`|`C:\Users\UserName.DomainName\AppData\Roaming`|
@@ -296,8 +289,8 @@ Aşağıdaki yöntemlerden birini kullanarak dışlama listesinde öğeleri tuta
 
 - [Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)
 - [Microsoft Uç Noktası Yapılandırma Yöneticisi](/configmgr/protect/deploy-use/endpoint-antimalware-policies)
-- MpCmdRun
-- PowerShell
+- [MpCmdRun](command-line-arguments-microsoft-defender-antivirus.md)
+- [PowerShell](/powershell/module/defender)
 - [Windows Güvenliği uygulaması](microsoft-defender-security-center-antivirus.md)
 
 > [!IMPORTANT]

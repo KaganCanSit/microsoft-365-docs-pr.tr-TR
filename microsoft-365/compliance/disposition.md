@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Bir imha gözden geçirmesi kullanırken içeriğin silinmesini izleme ve yönetme veya kayıt olarak işaretlenen öğeler, yapılandırılan ayarlara göre otomatik olarak silinir.
-ms.openlocfilehash: 2d078eb00ffa6d2dd8279c7e5eb65a8fcfb6fa53
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+ms.openlocfilehash: dbc713c665367bb973fb8faded24015ad6c2d5c3
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63419191"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64594828"
 ---
 # <a name="disposition-of-content"></a>İçeriğin yok olanı
 
@@ -187,14 +187,16 @@ Gösterilen örnekte gördüğünüz gibi, desteklenen eylemler:
   
 - **Tasfiyeyi onayla**:
     - Bu eylem, disposition gözden geçirmenin geçici aşaması için seçildiğinde (birden çok aşama yapılandırdıyabilirsiniz): Öğe bir sonraki konumlandırma aşamasına taşınır.
-    - Bu eylem, disposition gözden geçirmenin son aşaması için seçildiğinde veya tek bir disposition aşaması olduğunda: Öğe kalıcı olarak silinmeye uygun olarak işaretlenir ve bu da 7 gün içinde olur.
+    - Bu eylem, yok sayma incelemesinin son aşaması için seçildiğinde veya bir kez yok sayma yalnızca bir aşamadır: Öğe kalıcı olarak silinmeye uygun olarak işaretlenir ve bu süreölçer işi 7 gün içinde işlem gösterir. Öğenin kalıcı olarak silinecek olan zamanlaması iş yüküne bağlıdır. Daha fazla bilgi için bkz[.](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive) SharePoint ve OneDrive için bekletme [nasıl çalışır ve Exchange](retention-policies-exchange.md#how-retention-works-for-exchange).
+
 - **Yeniden Etiketle**:
     - Bu eylem seçildiğinde, öğe özgün etiket için konumlandırma gözden geçirme sürecinden çıkar. Ardından öğe, yeni seçilen bekletme etiketinin bekletme ayarlarına tabi olur.
+
 - **Uzat**:
     - Bu eylem seçildiğinde, uzatılmış sürenin sonuna kadar etkili bir şekildeposition gözden geçirme askıya alınır ve ilk aşamadan sonra yeniden konumlandırma incelemesi tetiklenir.
+
 - **Gözden geçirenleri ekleme**:
     - Bu eylem seçildiğinde, kullanıcıdan gözden geçirme için başka kullanıcılar belirtmesi ve eklemesi istenir.
-    
     > [!NOTE]
     > Bu eylem, eklenen [kullanıcılara gerekli izinleri](#permissions-for-disposition) otomatik olarak atamaz. Bu izinleri yoksa, yok etme incelemesine katılamaz.
 

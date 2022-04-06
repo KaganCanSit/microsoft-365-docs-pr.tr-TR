@@ -16,12 +16,12 @@ ms.custom:
 f1.keywords: NOCSH
 recommendations: false
 description: Konukların belirli bir gruba eklenmesini engellemeyi öğrenin
-ms.openlocfilehash: 8a8a62b2a320fe000580651a2577f625a9ce1b90
-ms.sourcegitcommit: c2b5ce3150ae998e18a51bad23277cedad1f06c6
+ms.openlocfilehash: 4b9ebc6366934db52c30d51091ac9991ff82d8c3
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "63005432"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64570073"
 ---
 # <a name="prevent-guests-from-being-added-to-a-specific-microsoft-365-group-or-microsoft-teams-team"></a>Konukların belirli bir ekip üyesine veya bir Microsoft 365 grubuna Microsoft Teams engelleme
 
@@ -44,7 +44,7 @@ Grup düzeyi konuk erişimi ayarını [değiştirmek Azure Active Directory Powe
 > [!NOTE]
 > Bu komutları çalıştırmak için genel yönetici haklarına sahip olmak gerekir. 
 
-Konuk erişimini engellemek istediğiniz */<GroupName/>* grubun adını değiştirerek aşağıdaki betiği çalıştırın.
+Konuk erişimini engellemek istediğiniz *\<GroupName\>* grubun adını değiştirerek aşağıdaki betiği çalıştırın.
 
 ```PowerShell
 $GroupName = "<GroupName>"

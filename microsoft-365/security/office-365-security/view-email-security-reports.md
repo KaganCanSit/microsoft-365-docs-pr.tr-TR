@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b1d7d3dab26d4f9034294b2780875d33cb2fbef3
-ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
+ms.openlocfilehash: b6d085d2e3c1e9c1e032f468f56d67a393269fe1
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63557954"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683065"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Portalda e-posta Microsoft 365 Defender görüntüleme
 
@@ -48,10 +48,6 @@ Microsoft 365 Defender portalında, Microsoft 365'daki <https://security.microso
 
 Exchange Online Protection portalında yer alan, taşınan veya kullanımdan Office 365 için Microsoft Defender (EOP) ve Microsoft 365 Defender için Microsoft Defender raporları aşağıdaki tabloda açıklanmıştır.
 
-<br>
-
-****
-
 |Kullanım dışı olan rapor ve cmdlet'ler|Yeni rapor ve cmdlet'ler|İleti Merkezi Kimliği|Tarih|
 |---|---|:---:|:---:|
 |**URL izleme** <p> Get-URLTrace|[URL koruma raporu](view-reports-for-mdo.md#url-protection-report) <p> [Get-SafeLinksAggregateReport](/powershell/module/exchange/get-safelinksaggregatereport) <br> [Get-SafeLinksDetailReport](/powershell/module/exchange/get-safelinksdetailreport)|MC239999|Haziran 2021|
@@ -62,9 +58,8 @@ Exchange Online Protection portalında yer alan, taşınan veya kullanımdan Off
 |**E-posta raporunda kötü amaçlı yazılım algılandı** <p> Get-MailTrafficReport <br> Get-MailDetailMalwareReport|[Tehdit koruması durum raporu: Verileri Kötü Amaçlı E-postaLara Göre \> Görüntüleme](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250530|Haziran 2021|
 |**İstenmeyen posta algılama raporu** <p> Get-MailTrafficReport <br> Get-MailDetailSpamReport|[Tehdit koruması durum raporu: Verileri İstenmeyen E-posta Olarak Görüntüle \>](#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250529|Ekim 2021|
 |Get-AdvancedThreatProtectionDocumentReport <p> Get-AdvancedThreatProtectionDocumentDetail|[Get-ContentMalwareMdoAggregateReport](/powershell/module/exchange/get-contentmalwaremdoaggregatereport) <p> [Get-ContentMalwareMdoDetailReport](/powershell/module/exchange/get-contentmalwaremdodetailreport)|TBA|Mayıs 2022|
-|**Exchange Aktarım Kuralı raporu** <p> Get-MailTrafficPolicyReport <br> Get-MailDetailTransportRuleReport|[Exchange Aktarım Kuralı raporuna bir aktarım kuralı raporu yazma](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report) <p> cmdlet'yok|MC316157|Nisan 2022|
+|**Exchange Aktarım Kuralı raporu** <p> [Get-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|[Exchange Aktarım Kuralı raporuna bir aktarım kuralı raporu yazma](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report) <p> [Get-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|MC316157|Nisan 2022|
 |Get-MailTrafficTopReport|[Tehdit koruması durum raporu: Verileri Kötü Amaçlı E-postaLara Göre \> Görüntüleme](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Get-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport) <p> **Not**: Get-MailTrafficTopReport'ta şifreleme raporlama özelliklerinde hiçbir değişiklik yoktur.|MC315742|Nisan 2022|
-|
 
 ## <a name="compromised-users-report"></a>Güvenliği ihlal edilmiş kullanıcılar raporu
 
@@ -341,7 +336,7 @@ Windows **için Defender'daki** Posta gecikme Office 365, kurum içinde yaşanan
 
 Raporun toplam görünümü 90 günlük filtrelemeye izin verirken, ayrıntılı görünüm yalnızca on gün boyunca filtrelemeye izin verir.
 
-Raporu bir web portalında görüntülemek Microsoft 365 Defender E-posta  \> Raporları ve **işbirliği & E-posta** \> **& gidin**. **E-posta & raporları sayfasında**, **Bilgi tanıma algılamalarını bulun ve Ayrıntıları** **görüntüle'ye tıklayın**. Doğrudan rapora gitmek için ' i açın <https://security.microsoft.com/reports/SpoofMailReportV2>.
+Raporu bir web portalında görüntülemek Microsoft 365 Defender E-posta  \> Raporları ve **işbirliği & E-posta** \> **& gidin**. **E-posta & raporları sayfasında**, **Bilgi tanıma algılamalarını bulun ve Ayrıntıları** **görüntüle'ye tıklayın**. Doğrudan rapora gitmek için ' i açın <https://security.microsoft.com/reports/SpoofMailReport>.
 
 ![E-posta ve işbirliği raporları sayfasındaki & widget'ı.](../../media/spoof-detections-widget.png)
 

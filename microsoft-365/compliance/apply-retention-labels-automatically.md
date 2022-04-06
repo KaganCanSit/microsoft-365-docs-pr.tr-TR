@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Etiketleri, gerekenleri korumak için otomatik olarak uygulayabilecek ve ihtiyacınız olmayanları silecek şekilde otomatik etiketleme bekletme ilkeleri oluşturma
-ms.openlocfilehash: d1060bb4330c2dbb23c241cb3095f3b30869b58a
-ms.sourcegitcommit: e3bff611439354e6339bb666a88682078f32ec13
+ms.openlocfilehash: 2d141ef349c456b9e8397ea1c96a4e450eaa73fc
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014362"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500448"
 ---
 # <a name="automatically-apply-a-retention-label-to-retain-or-delete-content"></a>İçeriği tutmak veya silmek için otomatik olarak bekletme etiketi uygulama
 
@@ -127,7 +127,7 @@ Exchange:
 |Hassas bilgi türleri - yerleşik| Evet | Hayır |
 |Hassas bilgi türleri - özel| Evet | Hayır |
 |Belirli anahtar sözcükler veya aranabilir özellikler| Evet |Evet |
-|Eğitime uygun sınıflayıcılar| Evet | Evet (yalnızca son altı ay) |
+|Eğitilebilir sınıflandırıcılar| Evet | Evet (yalnızca son altı ay) |
 
 SharePoint ve OneDrive:
 
@@ -136,7 +136,7 @@ SharePoint ve OneDrive:
 |Hassas bilgi türleri - yerleşik| Evet | Evet |
 |Hassas bilgi türleri - özel| Evet | Hayır |
 |Belirli anahtar sözcükler veya aranabilir özellikler| Evet |Evet |
-|Eğitime uygun sınıflayıcılar| Evet | Evet (yalnızca son altı ay) |
+|Eğitilebilir sınıflandırıcılar| Evet | Evet (yalnızca son altı ay) |
 
 Buna SharePoint, taslakta olan veya hiç yayımlanmış olmayan öğeler de bu senaryo için destek desteklemez.
 
@@ -145,13 +145,13 @@ Buna SharePoint, taslakta olan veya hiç yayımlanmış olmayan öğeler de bu s
 > [!IMPORTANT]
 > Hassas bilgileri tanımarak otomatik olarak uygulayan e-postalar için, tüm posta kutuları otomatik olarak eklenir. Bu, posta kutularının gelen Microsoft 365 içerir.
 > 
-> Her ne kadar grup posta kutuları genellikle **Microsoft 365 Grupları** konumu seçerek dahil edilirse de, bu belirli ilke yapılandırması için grupların konumu yalnızca SharePoint grupların Microsoft 365 içerir.
+> Bu belirli ilke yapılandırması için grup posta kutuları genellikle Microsoft 365 Grupları seçerek  dahil edilir, ancak grupların konumu yalnızca SharePoint grupların bağlı olduğu Microsoft 365 içerir.
 
 Hassas bilgiler için otomatik uygula bekletme etiketi ilkeleri ekleyebilirsiniz ve bu şablonlarda veri kaybı önleme (DLP) ilkesi oluşturmayla aynı ilke şablonları listesi görüntülenir. Her şablon belirli türde hassas bilgileri aramanız için önceden yapılandırılmıştır. Aşağıdaki örnekte, hassas bilgi türleri Gizlilik kategorisine ve ABD Kişisel  Bilgileri **(PII) Verileri şablonuna göredir**:
 
 ![Hassas bilgi türlerine sahip ilke şablonları.](../media/sensitive-info-configuration.png)
 
-Duyarlılık bilgi türleri hakkında daha fazla bilgi edinmek için bkz[. Hassas bilgi türleri hakkında bilgi.](sensitive-information-type-learn-about.md#learn-about-sensitive-information-types) Şu anda [, bu senaryo için hassas bilgi türleri ve](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types) belge parmak izi [tanıma hakkında](document-fingerprinting.md) tam eşleşme hakkında bilgi edinebilirsiniz.
+Duyarlılık bilgi türleri hakkında daha fazla bilgi edinmek için bkz[. Hassas bilgi türleri hakkında bilgi.](sensitive-information-type-learn-about.md#learn-about-sensitive-information-types) Şu anda [, hassas bilgi türleri ve belge parmak izi](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types) [tanımaya dayalı tam veri](document-fingerprinting.md) eşleşmesi bu senaryo için desteklenmiyor.
 
 İlke şablonunu seçdikten sonra, herhangi bir tür hassas bilgi ekleyebilir veya kaldırabilir, güvenlik düzeyini ve örnek sayısını değiştirebilirsiniz. Önceki örnek ekran görüntüsünde, bekletme etiketinin yalnızca şu zamanlarda otomatik olarak uygulanması için bu seçenekler değiştirilmiştir:
   
@@ -176,17 +176,17 @@ Belirli sözcükleri, tümcecikleri veya aranabilir özelliklerin değerlerini i
 
 ![Sorgu düzenleyicisi.](../media/new-retention-query-editor.png)
 
-Anahtar Sözcük Sorgu Dili(KQL) kullanan sorgu söz dizimi hakkında daha fazla bilgi için bkz. [Anahtar Sözcük Sorgu Dili (KQL) söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
+Anahtar Sözcük Sorgu Dili (KQL) kullanan sorgu söz dizimi hakkında daha fazla bilgi için bkz. Anahtar Sözcük Sorgu Dili [(KQL) söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
 
 Sorgu tabanlı otomatik uygulama ilkeleri, içeriği tanımlamak için eBulma içerik arama ile aynı arama dizinini kullanır. Kullanabileceğiniz aranabilir özellikler hakkında daha fazla bilgi için bkz. Anahtar sözcük [sorguları ve İçerik Arama için arama koşulları](keyword-queries-and-search-conditions.md).
 
 Bekletme etiketlerini otomatik olarak uygulamak için anahtar sözcükleri veya aranabilir özellikleri kullanırken dikkat gereken bazı şeyler:
 
-- Daha SharePoint için, bu KQL sorgularında gezinilen özellikler ve özel özellikler destek desteklemez ve belgeler için yalnızca önceden tanımlanmış yönetilen özellikler kullan gerekir. Bununla birlikte, kiracı düzeyinde eşlemeleri, varsayılan olarak iyileştirici olarak etkinleştirilmiş önceden tanımlanmış yönetilen özelliklerle kullanabilirsiniz (RefinableDate00-19, RefinableString00-99, RefinableInt00-49, RefinableDecimals00-09 ve RefinableDouble00-09). Daha fazla bilgi için bkz[. SharePoint Server'da](/SharePoint/technical-reference/crawled-and-managed-properties-overview) gezinilen ve yönetilen özelliklere genel bakış ve yönergeler için bkz. [Yeni yönetilen özellik oluşturma](/sharepoint/manage-search-schema#create-a-new-managed-property).
+- Bu SharePoint için, gezinilen özellikler ve özel özellikler bu özellik KQL ve belgeler için yalnızca önceden tanımlanmış yönetilen özellikleri kullan gerekir. Bununla birlikte, kiracı düzeyinde eşlemeleri, varsayılan olarak iyileştirici olarak etkinleştirilmiş önceden tanımlanmış yönetilen özelliklerle kullanabilirsiniz (RefinableDate00-19, RefinableString00-99, RefinableInt00-49, RefinableDecimals00-09 ve RefinableDouble00-09). Daha fazla bilgi için bkz[. SharePoint Server'da](/SharePoint/technical-reference/crawled-and-managed-properties-overview) gezinilen ve yönetilen özelliklere genel bakış ve yönergeler için bkz. [Yeni yönetilen özellik oluşturma](/sharepoint/manage-search-schema#create-a-new-managed-property).
 
-- Özel özelliği iyileştirici özelliklerden biri ile eşlerken, bekletme etiketi için KQL sorgunuzda kullanmadan önce 24 saat bekleyin.
+- Özel özelliği iyileştirici özelliklerden birini eşlemeniz gerekirse, bunu bekletme etiketi için KQL sorguda kullanmadan önce 24 saat bekleyin.
 
-- Yönetilen SharePoint diğer adlar kullanılarak yeniden adlandırılamaz, ancak bunları etiketlerinizin KQL sorgularında kullanmayın. Her zaman yönetilen özelliğin gerçek adını belirtin; örneğin, "RefinableString01".
+- Yönetilen SharePoint diğer adlar kullanılarak yeniden adlandırılamaz, ancak bunları etiketlerinize KQL sorgular için kullanmayın. Her zaman yönetilen özelliğin gerçek adını belirtin; örneğin, "RefinableString01".
 
 - Boşluk veya özel karakter içeren değerleri aramak için, tümceciği içeren çift tırnak işareti (`" "`) kullanın; örneğin, `subject:"Financial Statements"`.
 
@@ -313,7 +313,7 @@ Bulut ekleri için bekletme etiketlerini otomatik olarak uygulamak üzere bir et
 Bu seçenek için konumları yapılandırarak şunları tercihebilirsiniz:
 
 - **SharePoint sitelerinde** depolanan paylaşılan dosyalar, SharePoint grupları ile bağlantılı olmayan ekip siteleri ve klasik Microsoft 365 siteleri içerir. 
-- **Microsoft 365 gruplarıyla** bağlantılı ekip sitelerinde depolanan paylaşılan dosyalar için grup Microsoft 365 içerir.
+- **Microsoft 365 Grupları** gruplarıyla bağlantılı ekip sitelerinde depolanan paylaşılan dosyalar için Microsoft 365 içerir.
 - **OneDrive sayfalarında** depolanan paylaşılan dosyaların hesaplarını OneDrive.
 
 Özgün dosyaları, e-posta iletilerini veya gelen iletileri korumak ya da silmek için ayrı bekletme ilkeleri Teams gerekir.

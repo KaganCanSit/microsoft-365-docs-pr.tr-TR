@@ -14,20 +14,20 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 8a1cafe4cd54b7313e0555127221173e23a41bbf
-ms.sourcegitcommit: dfa9f28a5a5055a9530ec82c7f594808bf28d0dc
+ms.openlocfilehash: 465c149e3ad82384b574b43c66da917a46e4a2ce
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "62997039"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474167"
 ---
 # <a name="use-sensitivity-labels-to-prioritize-incident-response"></a>Olay yanıtını önceliklendirmek için duyarlılık etiketlerini kullanma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
@@ -41,31 +41,31 @@ Uç Nokta için Defender, duyarlılık etiketlerinin kullanımıyla güvenlik ol
 Olay araştırmalarını önceliklendirmek için veri duyarlılığı etiketlerini kullanmayı öğrenin.
 
 > [!NOTE]
-> Etiketler Windows 10, sürüm 1809 sonraki Windows 10, sürüm 1809 için algılanır ve Windows 11.
+> Etiketler, etiket Windows 10, sürüm 1809 sonrası için algılanır ve Windows 11.
 
 1. Portalda Microsoft 365 Defender Olayları **ve Uyarıları &'ı** \> **seçin**.
 
 2. Veri duyarlılığı sütununu görmek için **ekranı sağa kaydırın** . Bu sütun, olaylarla ilgili cihazlarda gözlemlenen duyarlılık etiketlerini yansıtmalı ve hassas dosyaların olaydan etkilenebilir olup olmadığının göstergesini sağlar.
 
-    ![Veri duyarlılığı sütun resmi.](images/data-sensitivity-column.png)
+   :::image type="content" source="images/data-sensitivity-column.png" alt-text="Veri duyarlılığı sütunundaki Çok gizli seçeneği" lightbox="images/data-sensitivity-column.png":::
 
     Ayrıca, Veri duyarlılığına dayalı **olarak filtre de ebilirsiniz**
 
-    ![Veri duyarlılık filtresinin resmi.](images/data-sensitivity-filter.png)
+    :::image type="content" source="images/data-sensitivity-filter.png" alt-text="Veri duyarlılığı filtresi" lightbox="images/data-sensitivity-filter.png":::
 
 3. Daha fazla araştırma yapmak için olay sayfasını açın.
 
-    ![Olay sayfası ayrıntılarının görüntüsü.](images/incident-page.png)
+   :::image type="content" source="images/incident-page.png" alt-text="Olay sayfası ayrıntıları" lightbox="images/incident-page.png":::
 
 4. Duyarlılık etiketleri **olan** dosyaların depolanması cihazlarını tanımlamak için Cihazlar sekmesini seçin.
 
-    ![Cihaz sekmesinin resmi.](images/investigate-devices-tab.png)
+   :::image type="content" source="images/investigate-devices-tab.png" alt-text="Cihaz sekmesi" lightbox="images/investigate-devices-tab.png":::
 
 5. Hassas verileri depoyan cihazları seçin ve hangi dosyaların etki olacağını belirlemek için zaman çizelgesinde arama ekleyin, sonra verilerin korunmasını sağlamak için uygun önlemleri alabilirsiniz.
 
    Veri duyarlılığı etiketlerini arayarak cihaz zaman çizelgesinde gösterilen etkinlikleri daraltabilirsiniz. Bunu yapmak yalnızca etiket adı adı olan dosyalarla ilişkilendirilmiş olayları gösterir.
 
-    ![Etikete göre arama sonuçlarını daraltmış olarak cihaz zaman çizelgesinin resmi.](images/machine-timeline-labels.png)
+   :::image type="content" source="images/machine-timeline-labels.png" alt-text="Etikete göre arama sonuçlarını daraltmış olarak cihaz zaman çizelgesi" lightbox="images/machine-timeline-labels.png":::
 
 > [!TIP]
 > Bu veri noktaları ayrıca gelişmiş avlarda 'DeviceFileEvents' aracılığıyla da ortaya çıkar ve gelişmiş sorguların ve algılamanın hesap duyarlılığı etiketlerini ve dosya koruma durumunu dikkate almalarını sağlar.

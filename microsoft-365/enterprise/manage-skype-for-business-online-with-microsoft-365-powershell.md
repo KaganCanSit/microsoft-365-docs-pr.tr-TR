@@ -14,12 +14,12 @@ f1.keywords:
 ms.custom: ''
 ms.assetid: 054c16e6-9fd1-4e85-a0e6-81788b8410ea
 description: Skype Kurumsal Online ilkelerini, kullanıcı Microsoft 365 için PowerShell'i ve toplantı ayarlarını yönetmek için kullanın.
-ms.openlocfilehash: 40fc030c957fee2d31c18ea95f1939e3d9f0937b
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: cb546a7e4130509d7acd0021b3cb78df23c1819f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988125"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474482"
 ---
 # <a name="manage-skype-for-business-online-with-powershell"></a>PowerShell Skype Kurumsal Online'i yönetme
 
@@ -30,7 +30,10 @@ Skype Kurumsal online yöneticileri ilkeleri yönetmekten sorumludur. Aynı anda
 ## <a name="before-you-start"></a>Başlamadan önce
 
 > [!NOTE]
-> Skype Kurumsal Online Connector şu anda en son PowerShell modülünde Teams vardır. En son PowerShell Teams kullanıyorsanız, Skype Kurumsal Online Connector'ı yüklemenize gerek yok.
+> Skype Kurumsal Online Connector şu anda en son PowerShell modülünde Teams vardır. En son **PowerShell Teams** kullanıyorsanız, Skype Kurumsal Online Connector'ı yüklemenize gerek yok.
+
+> [!NOTE]
+> Skype Kurumsal Online Yöneticileri, PowerShell aracılığıyla **Teams** **Skype Kurumsal Online uygulama** ilkelerini yönetebilir.
 
 [Teams PowerShell modülünü yükleyin](/microsoftteams/teams-powershell-install).
 
@@ -69,8 +72,8 @@ Daha fazla bilgi için bkz.:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[PowerShell Microsoft 365'i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365’i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
 
-[Microsoft 365 için PowerShell'i Microsoft 365](getting-started-with-microsoft-365-powershell.md)
+[Kullanmaya başlayın PowerShell ile Microsoft 365](getting-started-with-microsoft-365-powershell.md)
 
 [Skype Kurumsal PowerShell cmdlet başvuruları](/powershell/module/skype/)

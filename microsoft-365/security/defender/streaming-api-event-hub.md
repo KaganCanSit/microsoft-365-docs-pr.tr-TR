@@ -17,12 +17,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 5658d2cbb0fd3f8307ceb6cb46057237436271eb
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: 064ce5f796d59994b9d7ec4c3403711b1d683e56
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63006776"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500485"
 ---
 # <a name="configure-microsoft-365-defender-to-stream-advanced-hunting-events-to-your-azure-event-hub"></a>Gelişmiş Microsoft 365 Defender etkinliklerini Azure Etkinlik Merkezi'nize akış olarak yapılandırmak için gelişmiş av etkinliklerini yapılandırma
 
@@ -70,7 +70,7 @@ Olay Merkezi ad alanı oluşturulduktan sonra şunları açıklamanız gerekir:
 
    Olay Merkezi kaynak **kimliğinizi almak için**, **AzureProperties** sekmesinde [Azure](https://ms.portal.azure.com/) >  Olay Merkezi ad alanı sayfanıza gidin ve > kimliği altındaki **metni kopyalayın**:
 
-   ![Olay Merkezi kaynak Kimliği1'in görüntüsü.](../defender-endpoint/images/event-hub-resource-id.png)
+   :::image type="content" source="../defender-endpoint/images/event-hub-resource-id.png" alt-text="Olay Merkezi kaynak kimliği" lightbox="../defender-endpoint/images/event-hub-resource-id.png":::
 
 8. Akış [API'sinde Microsoft 365 Defender](supported-event-types.md) türlerinin destek durumunu gözden geçirmek için olay akışı API'sinde desteklenen olay Microsoft 365 gidin.
 
@@ -116,7 +116,7 @@ Olay özellikleri için veri türlerini almak için şunları yapın:
 
 - Cihaz Bilgileri olayı için bir örnek:
 
-  ![Olay Merkezi kaynak Kimliği2'nin görüntüsü.](../defender-endpoint/images/machine-info-datatype-example.png)
+  :::image type="content" source="../defender-endpoint/images/machine-info-datatype-example.png" alt-text="Cihaz bilgileri için örnek bir sorgu" lightbox="../defender-endpoint/images/machine-info-datatype-example.png":::
 
 ## <a name="related-topics"></a>İlgili konular
 

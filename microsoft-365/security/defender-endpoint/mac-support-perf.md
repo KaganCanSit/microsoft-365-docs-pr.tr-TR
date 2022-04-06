@@ -1,6 +1,6 @@
 ---
-title: macOS'ta Uç Nokta için Microsoft Defender performans sorunlarını giderme
-description: macOS'ta Uç Nokta için Microsoft Defender'da performans sorunlarını giderin.
+title: macOS'ta Uç Nokta için Microsoft Defender sorunları giderme
+description: macOS'ta Uç Nokta için Microsoft Defender sorunlarını giderin.
 keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mac, performans
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,42 +15,43 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 1d39bd46afae270fc7ac2a9fab8b5f4a2b4aaeb2
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: e83400e444d4c8c733bea5552a31954bb019e358
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011876"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474057"
 ---
-# <a name="troubleshoot-performance-issues-for-microsoft-defender-for-endpoint-on-macos"></a>macOS'ta Uç Nokta için Microsoft Defender performans sorunlarını giderme
+# <a name="troubleshoot-performance-issues-for-microsoft-defender-for-endpoint-on-macos"></a>macOS'ta Uç Nokta için Microsoft Defender sorunları giderme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Aşağıdakiler için geçerlidir:**
 
-- [macOS'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [macOS Uç Nokta için Microsoft Defender üzerinde Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Bu konu başlığında, macOS'ta Uç Nokta için Microsoft Defender ile ilgili performans sorunlarını daraltmak için kullanılmaktadır.
+Bu konu başlığında, macOS'ta karşılaşılan performans sorunlarıyla ilgili performans sorunlarını daraltmak Uç Nokta için Microsoft Defender adımlarını sağlar.
 
-Gerçek zamanlı koruma (RTP), macOS üzerinde Uç Nokta için Microsoft Defender'ın cihazınızı sürekli izleyen ve tehditlere karşı koruyan bir özelliğidir. Dosya ve süreç izleme ve diğer üç taraftan oluşur.
+Gerçek zamanlı koruma (RTP), macOS üzerinde cihazınızı sürekli izleyen Uç Nokta için Microsoft Defender tehditlere karşı koruyan bir özelliktir. Dosya ve süreç izleme ve diğer üç taraftan oluşur.
 
-Çalıştırıyorsanız uygulamalara ve cihaz özelliklerinize bağlı olarak, macOS üzerinde Uç Nokta için Microsoft Defender'ı çalıştırmanız gerekirken alt performansla ilgili bir sorun yaşamanız olabilir. Özel olarak, kısa bir zaman aralığının çok sayıda kaynağına erişen uygulamalar veya sistem süreçleri macOS'ta Uç Nokta için Microsoft Defender'da performans sorunlarına yol açabilirsiniz.
+Çalıştırıyorsanız uygulamalara ve cihaz özelliklerinize bağlı olarak, macOS'ta çalışan uygulamalarınız ve cihaz özelliklerinize bağlı olarak, Uç Nokta için Microsoft Defender performansıyla deneyimleebilirsiniz. Özel olarak, kısa bir zaman süresinde birçok kaynaklara erişen uygulamalar veya sistem süreçleri, macOS'ta Uç Nokta için Microsoft Defender sorunlarına yol açabilirsiniz.
 
 Aşağıdaki adımlar, bu sorunları gidermek ve azaltmak için kullanılabilir:
 
-1. Aşağıdaki yöntemlerden birini kullanarak gerçek zamanlı korumayı devre dışı bırakın ve performansın geliştirip geliştiri olmadığınızı gözlemin. Bu yaklaşım, macOS'ta Uç Nokta için Microsoft Defender'ın performans sorunlarına katkıda olup olmadığını daraltmaya yardımcı olur.
+1. Aşağıdaki yöntemlerden birini kullanarak gerçek zamanlı korumayı devre dışı bırakın ve performansın geliştirip geliştiri olmadığınızı gözlemin. Bu yaklaşım, macOS'Uç Nokta için Microsoft Defender performans sorunlarına katkıda bulunmak isteyip olmadığını daraltmanıza yardımcı olur.
 
       Cihazınız organizasyonu tarafından yönetilmiyorsa, gerçek zamanlı koruma aşağıdaki seçeneklerden biri kullanılarak devre dışı bırakılabilir:
 
-    - Kullanıcı arabiriminden. macOS'ta Uç Nokta için Microsoft Defender'ı açın ve Ayarları **yönet'e gidin**.
+    - Kullanıcı arabiriminden. MacOS Uç Nokta için Microsoft Defender da ayarları açın ve Ayarları **yönet'e gidin**.
 
-      ![Gerçek zamanlı koruma ekran görüntüsünü yönetin.](images/mdatp-36-rtp.png)
+      :::image type="content" source="images/mdatp-36-rtp.png" alt-text=" Gerçek zamanlı korumayı yönet sayfası" lightbox="images/mdatp-36-rtp.png":::
+      
 
     - Terminal'den. Güvenlik nedeniyle bu işlem için yükseltme gerekir.
 
@@ -58,7 +59,7 @@ Aşağıdaki adımlar, bu sorunları gidermek ve azaltmak için kullanılabilir:
       mdatp config real-time-protection --value disabled
       ```
 
-      Cihazınız organizasyonu tarafından yönetiliyorsa, macOS üzerinde Uç nokta için Microsoft Defender tercihlerini ayarlama konusunda verilen yönergeler kullanılarak gerçek zamanlı koruma yöneticiniz [tarafından devre dışı bırakılabilir](mac-preferences.md).
+      Cihazınız organizasyonu tarafından yönetiliyorsa, macOS'ta mobil cihaz için tercihleri ayarlama konusunda verilen yönergeler kullanılarak gerçek zamanlı koruma [Uç Nokta için Microsoft Defender devre dışı bırakılabilir](mac-preferences.md).
 
       Gerçek zamanlı koruma kapalıyken performans sorunu devam ederse sorunun kaynağı ana bileşen uç noktada algılama ve yanıtlama olabilir. Bu durumda, diğer yönergeler ve risk azaltma için lütfen müşteri desteğine başvurun.
 
@@ -153,6 +154,6 @@ Aşağıdaki adımlar, bu sorunları gidermek ve azaltmak için kullanılabilir:
       > [!NOTE]
       > Uygulama, istatistikleri bellekte depolar ve yalnızca dosyanın başlatılıyor olduğu ve gerçek zamanlı koruma etkinleştirildiğinden bu yana etkinliklerini takip ediyor. Gerçek zamanlı korumanın kapalı olduğu dönemlerden önce veya bu süre içinde başlatılan süreçler sayılmaz. Buna ek olarak, yalnızca taramaları tetikleyen olaylar sayılır.
       >
-6. performans sorunlarına katkıda bulunan işlemler veya disk konumlarının dışlamaları olan macOS üzerinde Uç Nokta için Microsoft Defender'ı yapılandırın ve gerçek zamanlı korumayı yeniden etkinleştirin.
+6. MacOS Uç Nokta için Microsoft Defender performans sorunlarına katkıda bulunan işlemler veya disk konumlarının dışlamaları ile ilgili sorunları yapılandırın ve gerçek zamanlı korumayı yeniden etkinleştirin.
 
-     Ayrıntılar [için bkz. macOS'ta Uç Nokta için Microsoft Defender için dışlamaları yapılandırma ve](mac-exclusions.md) doğrulama.
+     Ayrıntılar [için bkz. macOS'ta Uç Nokta için Microsoft Defender dışlamaları yapılandırma ve](mac-exclusions.md) doğrulama.

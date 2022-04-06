@@ -23,12 +23,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 7532051d649be4d0e9320a372c53686879c31972
-ms.sourcegitcommit: a6651b841f111ea2776cab88bf2c80f805fa8e09
+ms.openlocfilehash: 7235bbdfb956369eebe960568921bc4bba86651a
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "63016242"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595136"
 ---
 # <a name="case-study---contoso-quickly-configures-an-inappropriate-text-policy-for-microsoft-teams-exchange-and-yammer-communications"></a>Örnek olay inceleme - Contoso iletişimleri kontrol, metin Microsoft Teams, metin Exchange uygunsuz bir metin Yammer yapılandırıyor
 
@@ -56,19 +56,14 @@ Contoso IT yöneticileri ve uyumluluk uzmanları, Microsoft 365'daki uyumluluk �
 
 İlk adım, Contoso'nun lisanslama Microsoft 365 uyumluluk çözümü için destek olduğunu onaylamaktır. İletişim uyumluluğuna erişmek ve bu uyumluluğu kullanmak için, Contoso IT yöneticilerinin Contoso'da aşağıdakilerden birinin olduğunu doğrulamaları gerekir:
 
-- Microsoft 365 E5 (ücretli veya deneme sürümü)
-- Microsoft 365 E3 + Microsoft 365 E5 Uyumluluk eklenti
-- Microsoft 365 E3 + Microsoft 365 E5 Insider Risk Yönetimi eklentisi
-- Microsoft 365 A5 (ücretli veya deneme sürümü)
-- Microsoft 365 A3 + Uyumluluk Microsoft 365 A5 eklentiyi ekleme
-- Microsoft 365 A3 + Microsoft 365 A5 Insider Risk Yönetimi eklentisi
-- Microsoft 365 G5 aboneliği (ücretli veya deneme sürümü)
-- Microsoft 365 G5 aboneliği + Microsoft 365 G5 Uyumluluk eklentiniz
-- Microsoft 365 G5 aboneliği + Microsoft 365 G5 Insider Risk Yönetimi eklentisinde
+- Microsoft 365 E5/A5/F5/G5 aboneliği (ücretli veya deneme sürümü)
+- Microsoft 365 E3/A3/F3/G5 aboneliği + Microsoft 365 E5/A5/F5/G5 Uyumluluk eklentiniz
+- Microsoft 365 E3/A3/F3/G5 aboneliği + Microsoft 365 E5/A5/F5/G5 Insider Risk Yönetimi eklentisi
 - Office 365 Kurumsal E5 aboneliği (ücretli veya deneme sürümü)
+- Office 365 A5 (ücretli veya deneme sürümü)
 - Office 365 Kurumsal E3 aboneliği + Office 365 Gelişmiş Uyumluluk eklentiyi içerir (artık yeni abonelikler için kullanılamaz, nota bakın)
 
-Ayrıca, iletişim uyumluluk ilkelerine dahil olan kullanıcıların yukarıdaki lisanslardan biri atanmalıdır.
+İletişim uyumluluk ilkelerine dahil olan kullanıcılara yukarıdaki lisanslardan biri atanmalıdır. Abonelikler ve lisanslar hakkında daha fazla bilgi için, [güvenlik Microsoft 365 uyumluluğu için yol & bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#communication-compliance).
 
 > [!IMPORTANT]
 > Office 365 Gelişmiş Uyumluluk artık tek başına abonelik olarak satılmaz. Geçerli aboneliklerin süresi dolduğunda, müşteriler aynı veya ek uyumluluk özelliklerini içeren yukarıdaki aboneliklerden birini kullanmalı.
@@ -183,7 +178,7 @@ Tüm Contoso kullanıcılarını eklemek için yeni bir grup oluşturmaları ger
 
 Tüm önkoşullar tamamlandığında, Contoso için IT yöneticileri ve uyumluluk uzmanları uygun olmayan metni izlemek üzere iletişim uyumluluk ilkesi yapılandırmaya hazırdır. Yeni uygun olmayan metin ilkesi şablonunu kullanmak, bu ilkeyi yapılandırmak basit ve hızlı bir işlemdir.
 
-1. Contoso IT yöneticileri ve uyumluluk uzmanları kuruluşta oturum **Microsoft 365 uyumluluk merkezi** sol gezinti **bölmesinden İletişim uyumluluğu** öğesini seçin. Bu eylem, iletişim **uyumluluk ilkesi** şablonlarına hızlı bağlantılar içeren Genel Bakış panosuyu açar. Bu şablonlar, **Şablon için Başla'ya** seçerek Uygun olmayan **metin şablonunu** izle'yi seçerler.
+1. Contoso IT yöneticileri ve uyumluluk uzmanları kuruluşta oturum **Microsoft 365 uyumluluk merkezi** sol gezinti **bölmesinden İletişim uyumluluğu** öğesini seçin. Bu eylem, iletişim **uyumluluk ilkesi** şablonlarına hızlı bağlantılar içeren Genel Bakış panosuyu açar. Uygun olmayan **metin şablonunu izlemek için,** şablon için **Kullanmaya başlayın'i** seçerler.
 
     ![İletişim uyumluluğu için uygun olmayan metin şablonu.](../media/communication-compliance-case-template.png)
 

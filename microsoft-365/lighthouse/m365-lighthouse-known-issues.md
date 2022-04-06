@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse Özellik alanına göre Deniz Feneri ile ilgili bilinen sorunların bir listesine bakın.
-ms.openlocfilehash: 4d19051de1b4466dabc535446182c7f630ee948b
-ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
+ms.openlocfilehash: 3151937d4552da09c9cfd6808db2bad8bafbbc46
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2022
-ms.locfileid: "63705402"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64594675"
 ---
 # <a name="known-issues-with-microsoft-365-lighthouse"></a>Güvenlikle ilgili bilinen Microsoft 365 Lighthouse
 
@@ -37,13 +37,13 @@ Bu makalede, özellik alanına göre Microsoft 365 Lighthouse sorunları listele
 
 | Sorun | Açıklama | Çözüm |
 | ---------------- | ---------------- | ---------------- |
-| **Silinmiş ilke görüntülenir** | Intune'dan bir cihaz uyumluluk ilkesi silindikten sonra, geçici olarak Deniz Feneri'nde görünür olmaya devam eder. MSP teknisyenleri silinmiş bir ilke içeren bir ilke karşılaştırması yapmaya çalışsalar, teknisyenler şu hatayı alır: "Bir sorun oluştu. Lütfen sayfayı yenileyin ve yeniden deneyin." | Hatayı çözmek için, silinen ilkeyi ilke karşılaştırmadan silin ve yalnızca var olan ilkeleri karşılaştırın. |
+| **Silinmiş ilke görüntülenir** | Bir cihaz uyumluluk ilkesi Posta'dan Intune, geçici olarak Deniz Feneri'nde görünmeye devam eder. MSP teknisyenleri silinmiş bir ilke içeren bir ilke karşılaştırması yapmaya çalışsalar, teknisyenler şu hatayı alır: "Bir sorun oluştu. Lütfen sayfayı yenileyin ve yeniden deneyin." | Hatayı çözmek için, silinen ilkeyi ilke karşılaştırmadan silin ve yalnızca var olan ilkeleri karşılaştırın. |
 
 ## <a name="threat-management"></a>Tehdit yönetimi
 
 | Sorun | Açıklama | Çözüm |
 | ---------------- | ---------------- | ---------------- |
-| **Tehdit adı eksik** | MSP teknisyenleri Tehdit Yönetimi sayfasındaki tehdit listesini görüntüleyseler, tehdit adı bazı tehdit olarak eksik olabilir. Bu durum, tehdidin algııldığı cihaz yakın zamanda Intune'dan kaldırıldığı zaman ortaya çıkar. | Sorun 48 saat içinde çözülecek. Ek adım gerekmez. |
+| **Tehdit adı eksik** | MSP teknisyenleri Tehdit Yönetimi sayfasındaki tehdit listesini görüntüleyseler, tehdit adı bazı tehdit olarak eksik olabilir. Tehdit olarak algılanan cihaz yakın zamanda Diğer Kişilerden kaldırıldığı zaman bu Intune. | Sorun 48 saat içinde çözülecek. Ek adım gerekmez. |
 
 ## <a name="baselines"></a>Taban çizgisi
 
@@ -65,20 +65,22 @@ Bu makalede, özellik alanına göre Microsoft 365 Lighthouse sorunları listele
 | **Denetim günlüklerinde Devre Dışı Bırak ve Yeniden Etkinleştir eylemleri listelenmiyor** | Şu anda Deniz Feneri'nin Denetim günlükleri sayfasında aşağıdaki etkinlikler bildir değildir: <ul><li>Ad: Çıkar eylemi \| : Müşteriyi devre dışı bırakma</li> <li>Ad: resetTenantOnboardingStatus \| Eylemi: Reactive customer</li></ul> | Geçici bir çözüm yok, ancak bir çözüm üzerinde çalışıyoruz. Düzeltme hizmette dağıtıldıktan sonra bu etkinlikler denetim günlüklerinde görüntülenir. |
 | **Filtre tüm kullanıcıları göster görünmüyor** | MSP teknisyenleri Başlatan'ı kullanarak filtrelemeye **geldiğinde, denetim** günlükleri oluşturma eylemlerini başlatan teknisyenlerin e-posta kimliklerine karşılık gelen tüm Kullanıcı Asıl Adları (UPN) listesi filtre altında tam olarak görüntülenmez.<br><br>Denetim günlüklerinin kendilerinin tümüyle görüntülendiğinden; Yalnızca Başlatan'ı kullanarak bunları **filtreleme** özelliği etkiler. | Geçici bir çözüm yok, ancak bir çözüm üzerinde çalışıyoruz. Düzeltme hizmette dağıtıldıktan sonra, filtre beklenen davranışa döner (filtreye göre filtre ekleyebilirsiniz UPN'lerin tam listesi görüntülenir). |
 
-## <a name="delegated-admin-permissionsdap"></a>Temsili Yönetici İzinleri (DAP)
+## <a name="delegated-admin-privilegesdap"></a>Temsilcili Yönetici Ayrıcalıkları (DAP)
 
 | Sorun | Açıklama | Çözüm |
 | ---------------- | ---------------- | ---------------- |
 | **DAP rollerini değiştirirken izinlerin gecikmesi** | MSP teknisyeni Yönetici Temsilcisi veya Yardım masası Aracısı grubuna eklenir veya gruptan kaldırılırsa, Deniz Feneri içindeki uygun izinleri yansıtmada gecikme olabilir. | Sorun 30 dakika içinde çözülecek. Ek adım gerekmez. |
 
-## <a name="granular-delegated-admin-permissionsgdap"></a>Ayrıntılı Temsilci Yönetici İzinleri (GDAP)
+## <a name="granular-delegated-admin-privilegesgdap"></a>Ayrıntılı Temsilci Yönetici Ayrıcalıkları (GDAP)
 
 > [!NOTE]
 > GDAP, iş [ortaklarının](/partner-center/announcements/2022-february#6) GDAP genel olarak kullanıma hazır olmadan önce ayrıntılı izinler atamasına olanak vermek için şu anda teknik önizlemededir.
 
+Şu anda DAP'nin Deniz Feneri'ne müşterileri eklemesi gerekiyor. Ayrıca daha güvenli, temsilcili erişim sağlamak için müşterilerinizle birlikte GDAP kurmanızı da öneririz. DAP ve GDAP birlikte çalışırken, her iki modelin de bulunduğu müşteriler için GDAP öncelik olacaktır. Kısa süre içinde yalnızca GDAP'ye (ve DAP) sahip olan müşteriler Deniz Feneri'ne yerabilecek.<br><br>
+
 | Sorun | Açıklama | Çözüm |
 | ---------------- | ---------------- | ---------------- |
-| **Deniz Feneri'nde çeşitli GDAP izin sorunları** | <ul><li>GDAP Güvenlik Yöneticileri, riskli kullanıcıları görüntüleyemiyor, riskleri yoksayamaz veya risk altında olan kullanıcıları onay yapamaz.</li><li>GDAP Güvenlik Okuyucuları riskli kullanıcıları görüntüdeyemiyor.</li><li>GDAP Genel Yöneticileri, hizmet durumunu görüntülemeye çalışırken bir hata iletisi görmektedir.</li></ul> | GDAP Genel Kullanılabilirliği'ne başlamadan önce, geçici çözüm kullanıcıya bir Genel Yönetici GDAP rolü veya Yönetici Aracısı DAP rolü atamaktır. Genel Yönetici GDAP rolü atama yönergeleri için bkz. Müşteri hizmetini yönetmek için ayrıntılı [yönetici izinlerini alma](/partner-center/gdap-obtain-admin-permissions-to-manage-customer). Yönetici Aracısı DAP rolü atama yönergeleri için bkz. [Kullanıcılara rol ve izin atama](/partner-center/permissions-overview). Lighthouse'da ortak kiracıda belirli rollerin Azure Active Directory gereken eylemlerin listesi için bkz. Portal [Microsoft 365 Lighthouse yapılandırma](/microsoft-365/lighthouse/m365-lighthouse-configure-portal-security).
+| **Deniz Feneri'nde çeşitli GDAP izin sorunları** | Bazı GDAP rolleri tek bir kiracılı deneyimde olduğu gibi, Deniz Feneri'nde müşteri verilerine erişim düzeyine sahip değildir. Aşağıdaki rollerden herhangi biri MSP teknisyenlerine tek tek atanırsa (bu, diğer GDAP rolleriyle birlikte değil) MSP teknisyenlerine tek tek atanırsa, aşağıdakiler gibi hatalarla karşılaşabilir:<ul><li>GDAP Güvenlik Yöneticileri, Deniz Feneri'nde riskli kullanıcıları görüntüleyemiyor, riskleri yok sayamaz veya risk altında olan kullanıcıları onay yapamaz.</li><li>GDAP Güvenlik Okuyucuları Deniz Feneri'nin içindeki riskli kullanıcıları görüntüde yapamaz.</li><li>GDAP Genel Yöneticileri, Deniz Feneri'nde hizmet durumunu görüntülemeye çalışırken bir hata iletisi görmektedir.</li><li>GDAP Genel Yöneticileri, Deniz Feneri'nde dağıtım planı adımlarını dağıtırken sorun yaşanıyor.</li></ul> | Bunun geçici çözümü, ihtiyaç olan müşteri verilerine erişim düzeyine bağlı olarak MSP teknisyenlerine GDAP rolleri birleşimi atamaktır. Deniz Feneri'nin kullanımı için önerilen GDAP rollerinin listesi için bkz. Deniz [Feneri'nde izinlere Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md).<br><br>GDAP Genel Yönetici izinlerinin bile Deniz Feneri'nde bir özelliğin kullanımına izin vermeyecek sorunlar için geçici çözüm, müşteriyi yönetmek için müşteri kiracılarından uygun yönetim merkezine erişmektir (örneğin, hizmet durumunu kontrol etmek için Microsoft 365 yönetim merkezi'e müşteri kiracıdan erişin). GDAP ilişkisini değiştirme yönergeleri için bkz. Müşteri hizmetini yönetmek için ayrıntılı yönetici izinleri alma [- İş Ortağı Merkezi](/partner-center/gdap-obtain-admin-permissions-to-manage-customer). |
 
 ## <a name="localization"></a>Yerelleştirme
 

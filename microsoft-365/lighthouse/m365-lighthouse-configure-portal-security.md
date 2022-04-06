@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Hizmet Sağlayıcıları (MSP) Microsoft 365 Lighthouse, portal güvenliğini yapılandırmayı öğrenin.
-ms.openlocfilehash: dd99330d520b409a93cfd5d1ca777c17b9ef4373
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: 4d12755ca1b02988dff3f5ba6be6dd0d8da172ad
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775950"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64594762"
 ---
 # <a name="configure-microsoft-365-lighthouse-portal-security"></a>Portal Microsoft 365 Lighthouse yapılandırma
 
@@ -39,7 +39,7 @@ Kullanıcılar Deniz Feneri'ne ilk kez erişdiğinde, deniz feneri hesaplarını
 
 Rol tabanlı erişim denetimi (RBAC), kullanıcı rollerine dayalı olarak kaynaklara veya bilgilere erişim sağlar. Deniz Feneri'nde müşteri kiracı verilerine ve ayarlarına erişim, genel programdan (CSP) Bulut Çözümü Sağlayıcısı rollerle sınırlıdır. Deniz Feneri'nde RBAC rolleri ayarlamak için, kullanıcılara ayrıntılı atamalar uygulamak için Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) kullanmanız önerilir. Kiracının başarılı bir şekilde eklemesi için temsili Yönetici Ayrıcalıkları (DAP) yine gereklidir, ancak yalnızca GDAP müşterileri yakın zamanda DAP'ye bağımlılık olmadan eklemede abilecektir. DAP ve GDAP bir müşteri için birlikte olduğunda GDAP izinleri öncelikli olur. 
 
-GDAP'yi çalışmaya başlamak için bkz [. Müşteri kiracılarını yönetmek için rolleri ayarlama](m365-lighthouse-set-up-roles.md).
+GDAP'yi çalışmaya başlamak için bkz. [GDAP'de izinlere Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md).
 
 MSP teknisyenleri Ayrıca Yönetici Temsilcisi veya Yardım masası Aracısı rollerini Temsilci Yönetici Ayrıcalıkları (DAP) aracılığıyla kullanarak Deniz Feneri'ne de erişebilirler.
 

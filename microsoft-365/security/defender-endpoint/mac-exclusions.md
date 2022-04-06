@@ -1,6 +1,6 @@
 ---
-title: Mac'te Uç Nokta için Microsoft Defender için dışlamaları yapılandırma ve doğrulama
-description: Mac'te Uç Nokta için Microsoft Defender için dışlamaları sağlama ve doğrulama. Dışlamalar dosyalar, klasörler ve işlemler için ayarlanmış olabilir.
+title: Mac'te dışlamaları yapılandırma Uç Nokta için Microsoft Defender doğrulama
+description: Mac'te dışlamaları sağlama Uç Nokta için Microsoft Defender doğrulama. Dışlamalar dosyalar, klasörler ve işlemler için ayarlanmış olabilir.
 keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mac, dışlamalar, taramalar, virüsten koruma
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,21 +15,21 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: a069e3dd3ef99f094f96318277e077c56b7cb974
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: bc16b601181775b3b12f1db0fcceecaa2bca33a8
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011969"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474101"
 ---
-# <a name="configure-and-validate-exclusions-for-microsoft-defender-for-endpoint-on-macos"></a>macOS'ta Uç Nokta için Microsoft Defender için dışlamaları yapılandırma ve doğrulama
+# <a name="configure-and-validate-exclusions-for-microsoft-defender-for-endpoint-on-macos"></a>macOS'ta dışlamaları yapılandırma Uç Nokta için Microsoft Defender doğrulama
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
@@ -71,13 +71,13 @@ Joker karakter|Açıklama|Örnek|Eşleşmeler|Eşmser değil
 
 ### <a name="from-the-management-console"></a>Yönetim konsolundan
 
-JAMF, Intune veya başka bir yönetim konsolundan dışlamaları yapılandırma hakkında daha fazla bilgi için bkz. [Mac'te Uç Nokta için Defender tercihlerini ayarlama](mac-preferences.md).
+JAMF, uygulama veya başka bir yönetim konsolundan dışlamaları yapılandırma hakkında Intune için bkz. Mac'te Uç Nokta için [Defender tercihlerini ayarlama](mac-preferences.md).
 
 ### <a name="from-the-user-interface"></a>Kullanıcı arabiriminden
 
 Aşağıdaki ekran görüntüsünde gösterildiği gibi, Uç nokta  \> için Defender uygulamasını açın ve Ayarları Ekle veya Dışlama **Kaldır...** ayarları yönet'e gidin:
 
-![Dışlamaları yönet ekran görüntüsü.](images/mdatp-37-exclusions.png)
+:::image type="content" source="images/mdatp-37-exclusions.png" alt-text="Dışlamaları yönet sayfası" lightbox="images/mdatp-37-exclusions.png":::
 
 Eklemek istediğiniz dışlama türünü seçin ve istemleri izleyin.
 

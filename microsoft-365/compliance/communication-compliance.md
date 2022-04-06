@@ -1,5 +1,5 @@
 ---
-title: İletişim uyumluluğu hakkında bilgi
+title: İletişim uyumluluğu hakkında daha fazla bilgi edinme
 description: E-Microsoft 365'de iletişim uyumluluğu hakkında bilgi Microsoft 365
 f1.keywords:
 - NOCSH
@@ -20,12 +20,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: c82514fda095d91ea4daa798450954fb9f5dac61
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 7690b93646c9b60467ca898c6167d72a7e819bb4
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450486"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64594806"
 ---
 # <a name="learn-about-communication-compliance-in-microsoft-365"></a>E-Microsoft 365'de iletişim uyumluluğu hakkında bilgi Microsoft 365
 
@@ -117,7 +117,7 @@ Uyarılar, ilke eşleşmeleri, eylemler ve eğilimler için yeni etkileşimli pa
 
 Çeşitli iletişim kanallarında ileti tarama ve yakalama, uyumluluk sorunlarını hızla gözden geçirme ve düzeltmeye yardımcı olmak için iletişim uyumluluğu ilkeleri:
 
-- **Microsoft Teams**: Ortak ve özel [Microsoft Teams](/MicrosoftTeams/Teams-overview) iletişimleri ve bireysel sohbetler, tek başına bir kanal kaynağı olarak veya diğer grup hizmetleriyle iletişim uyumluluğunu Microsoft 365 destekler. bir iletişim uyumluluğu ilkesinde denetleme yapmak için kullanıcıları ve grupları Microsoft Teams, dağıtım gruplarını veya belirli kullanıcı gruplarını el ile eklemeniz gerekir.
+- **Microsoft Teams**: Ortak ve özel [Microsoft Teams](/MicrosoftTeams/Teams-overview) iletişimleri ve bireysel sohbetler, tek başına bir kanal kaynağı olarak veya diğer grup hizmetleriyle iletişim uyumluluğunu Microsoft 365 destekler. bir iletişim uyumluluğu ilkesinde denetleme yapmak için kullanıcıları ve grupları Microsoft Teams, dağıtım gruplarını veya belirli kullanıcı gruplarını el ile eklemeniz gerekir. Teams özel kanallarda ve grup kanallarında uygunsuz iletileri kendi kendine bildirerek gözden geçirme ve düzeltme için sohbetleri de bildirebilirsiniz.
 - **Exchange Online**: E-posta [kutunuzda Exchange Online](/Exchange/exchange-online) posta Microsoft 365 tüm posta kutuları taramaya uygundur. İletişim uyumluluğu ilkesi koşullarıyla eşleşen e-postalar ve ekler, anında uyumluluk raporlarını izlemek ve almak için kullanılabilir. Exchange Online artık isteğe bağlı bir kaynak kanaldır ve iletişim uyumluluk ilkelerinde artık gerekli değildir.
 - **Yammer**: E-posta'daki özel iletiler [Yammer](/yammer/yammer-landing-page) genel topluluk konuşmaları iletişim uyumluluğu ilkelerde de desteklemektedir. Yammer, isteğe bağlı bir kanaldır ve [iletilerin ve](/yammer/configure-your-yammer-network/overview-native-mode) eklerin taranmalarını desteklemek için yerel modda çalışır.
 - **Skype Kurumsal Online**: İletişim uyumluluk ilkeleri, Skype Kurumsal Online'da sohbet iletişimlerini ve [ilişkili ekleri taramayı destekler](/SkypeForBusiness/skype-for-business-online).
@@ -133,7 +133,7 @@ Microsoft 365'ta iletişim uyumluluğuyla ilgili uyumluluk sorunlarını tanıml
 
 ![İletişim uyumluluğu iş akışı.](../media/communication-compliance-workflow.png)
 
-### <a name="configure"></a>Yapılandır
+### <a name="configure"></a>Yapılandırın
 
 Bu iş akışı adımlarında, uyumluluk gereksinimlerinizi tanımlayabilir ve geçerli iletişim uyumluluk ilkelerini yapılandırmış oluruz. İlke şablonları, yeni bir uyumluluk ilkesi yapılandırmanın yanı sıra gereksinimleriniz değiştiklerine göre ilkeleri hızla değiştirmek ve güncelleştirmek için de mükemmel bir yol sağlar. Örneğin, küçük bir grup kullanıcının iletişiminde uygunsuz içerik için bir ilkeyi, organizasyonlu tüm kullanıcılar için bir ilke yapılandırmadan önce hızla test etmek istiyor olabilir.
 
@@ -148,6 +148,7 @@ Aşağıdaki ilke şablonlarından birini Microsoft 365 uyumluluk merkezi:
 - **Finansal düzenlemelere uyumluluğu izleme**: Yasal düzenlemelerle ilişkili standart mali şartlara başvurular için iletişimi taramak üzere hızla bir ilke oluşturmak için bu şablonu kullanın.
 - **İlgi çakışması durumunu izleme**: İlgi çakışmalarını önlemeye yardımcı olmak için, iki grup veya iki kullanıcı arasındaki iletişimi izlemek üzere hızla bir ilke oluşturmak için bu şablonu kullanın.
 - **Özel ilke**: Belirli iletişim kanallarını, tek tek algılama koşullarını ve kurumda izlenir ve gözden geçirilen içerik miktarını yapılandırmak için bu şablonu kullanın.
+- **Kullanıcı tarafından bildirilen iletiler ilkesi**: Bu sistem ilkesi kanal, grup ve özel sohbet iletilerinden kullanıcı tarafından bildirilen iletileri destekler. Teams yönetim merkezinde varsayılan olarak etkindir.
 
 >[!TIP]
 >Hassas [bir bilgi türü](communication-compliance-configure.md#recommended-actions-preview) ilkesine ihtiyacınız olup olmadığını veya var olan uygunsuz içerik ilkelerini güncelleştirmeniz gerek olup olmadığını belirlemenize yardımcı olması için önerilen eylemleri kullanın.
@@ -162,7 +163,7 @@ Bu adımda, iletişim uyumluluk ilkelerinize uyması olarak algılanan sorunlar�
 - **Kullanıcı etkinlik geçmişini gözden** geçirme: İlke eşleşmeleri için kullanıcı iletisi etkinliklerinin geçmişini ve geçmiş bildirimler ve yükseltmeler gibi düzeltme eylemlerini görüntüleme.
 - **Filtreler**: Gözden geçirmek istediğiniz ileti uyarılarını hızla daraltmak için gönderen, alıcı, tarih ve konu gibi filtreleri kullanın.
 
-### <a name="remediate"></a>Düzeltmek
+### <a name="remediate"></a>Düzeltin
 
 Sonraki adım, aşağıdaki seçenekleri kullanarak araştırılan iletişim uyumluluk sorunlarını düzeltmektir:
 

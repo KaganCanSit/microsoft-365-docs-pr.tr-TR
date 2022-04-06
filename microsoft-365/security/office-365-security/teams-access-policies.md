@@ -20,16 +20,16 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: ec4aa28c25982ea81662ff26fa19f615d13cd314
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: b659853d9323b4a1503cd75cff66a83cbd06e85e
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64465409"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682911"
 ---
 # <a name="policy-recommendations-for-securing-teams-chats-groups-and-files"></a>Sohbet, grup ve Teams güvenliğini sağlamak için ilke önerileri
 
-Bu makalede, sohbetler, gruplar ve dosyalar Sıfır Güven içerikleri korumak için önerilen kimlik Microsoft Teams cihaz erişimi ilkelerinin nasıl uygulandığını açıklanmıştır. Bu kılavuz, ortak kimlik [ve cihaz erişim ilkelerine](identity-access-policies.md) ve özel ek bilgilerle birlikte Teams bilgi içerir. Bu Teams diğer ürünlerimizle tümleştiri olduğundan, bu sitelerin ve [](sharepoint-file-access-policies.md) dosyaların güvenliğini SharePoint için ilke önerileri ve e-postanın güvenliğini sağlamak için İlke [önerilerine de bakın](secure-email-recommended-policies.md).
+Bu makalede, sohbetler, gruplar ve dosyalar ve takvimler gibi içerikleri korumak Microsoft Teams önerilen Sıfır Güven kimliği ve cihaz erişimi ilkelerinin nasıl uygulanıyor? Bu kılavuz, ortak kimlik [ve cihaz erişim ilkelerine](identity-access-policies.md) ve özel ek bilgilerle birlikte Teams bilgi içerir. Bu Teams diğer ürünlerimizle tümleştiri olduğundan, bu sitelerin ve [](sharepoint-file-access-policies.md) dosyaların güvenliğini SharePoint için ilke önerileri ve e-postanın güvenliğini sağlamak için İlke [önerilerine de bakın](secure-email-recommended-policies.md).
 
 Bu öneriler, şu üç farklı güvenlik ve koruma katmanına dayalıdır Teams, şu şekilde ihtiyaçlarına göre uygulanabilir: başlangıç noktası, kurumsal ve özel güvenlik. Kimlik ve cihaz erişimi yapılandırmalarında, bu güvenlik katmanları ve bu öneriler tarafından başvurulan önerilen ilkeler hakkında [daha fazla bilgi edinebilirsiniz](microsoft-365-policies-configurations.md).
 
@@ -49,7 +49,7 @@ Hızlı bir şekilde çalışmaya baş etmek için bağımlı hizmetleri etkinle
 
 Bir çalışma diyagramında sohbeti, grupları ve Teams korumak için, aşağıdaki diyagramda ortak kimlik ve cihaz erişim ilkelerinden güncelleştirilen ilkeler gösteriliyor. Her ilkenin güncelleştirileceği ilke için, Teams ve bağımlı hizmetlerin bulut uygulamaları atamaya dahil olduğundan emin olun.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png" alt-text="Postane ve bağımlı hizmetlere erişimin korunmasına Teams ilke güncelleştirmelerinin özeti" lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png" alt-text="E-posta ve bağımlı hizmetlere erişimi Teams ilke güncelleştirmelerinin özeti." lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png":::
 
 Bu hizmetler, aşağıdakiler için bulut uygulamalarının atamaya dahil gerçekleştirilen bağımlı Teams:
 
@@ -77,7 +77,7 @@ Bu tabloda, yeni geçirilmesi gereken ilkeler ve ortak kimlik ve cihaz erişimi 
 
 Başvuru için, aşağıdaki diyagramda güven güven Teams gösterilen hizmetler yer almaktadır. Daha fazla bilgi ve çizim için bkz[. MICROSOFT TEAMS mimarlar için Microsoft 365 hizmetleriyle ilgili üretkenlik hizmetleri](../../solutions/productivity-illustrations.md).
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png" alt-text="Teams, OneDrive İş ve SharePoint bağımlılıkları gösteren Exchange" lightbox="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png" alt-text="Diyagram ve Teams, SharePoint OneDrive İş bağımlılıkları gösteren Exchange." lightbox="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png":::
 
 ## <a name="guest-and-external-access-for-teams"></a>Konuk ve dış erişim Teams
 
@@ -140,7 +140,7 @@ Uygulama İzin İlkeleri hakkında daha fazla bilgi için, [Microsoft Teams.](/m
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="4. Adım: Bulut uygulamaları Microsoft 365 ilkeleri" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
+![4. Adım: Bulut Microsoft 365 için ilkeler.](../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png)
 
 Koşullu Erişim ilkelerini aşağıdakiler için yapılandırma:
 

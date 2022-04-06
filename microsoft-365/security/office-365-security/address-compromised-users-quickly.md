@@ -13,25 +13,25 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: ''
 ms.date: 06/10/2021
-description: Plan 2 için Microsoft Defender'da otomatik soruşturma ve yanıt özellikleriyle güvenliği tehlikeye atılmış kullanıcı hesaplarını algılama ve ele Office 365 işlemi nasıl hızlandıracaklarını öğrenin.
+description: Plan 2'de otomatik soruşturma ve yanıt özellikleriyle güvenliği tehlikeye sahip kullanıcı hesaplarını algılama ve ele Office 365 için Microsoft Defender hakkında bilgi öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: cbc3c6c8a81d59bebbd5272e13e0f96de2257623
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: c1488598eb3a198a70997e755fe77a8a0c97e1c0
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63028454"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474372"
 ---
 # <a name="address-compromised-user-accounts-with-automated-investigation-and-response"></a>Otomatik soruşturma ve yanıtla güvenliği tehlikeye kullanıcı hesaplarını ele
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 
-Uygulama [için Microsoft Defender Office 365 Plan 2](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2) güçlü [otomatik soruşturma ve yanıt](office-365-air.md) (AIR) özellikleri içerir. Bu tür özellikler güvenlik işlemleri ekibinizi tehditlere karşı çok zaman ve çabadan tasarruf sağlar. Microsoft, güvenlik özelliklerini geliştirmeye devam etmektedir. Kısa süre önce, güvenliği tehlikeye atılmış bir kullanıcı güvenlik çalışma kitabını (şu anda önizlemede) içerecek şekilde AIR özellikleri geliştirilmişti. Güvenliği tehlikeye atılmış kullanıcı güvenliği playbook'ları hakkında daha fazla bilgi edinmek için bu makaleyi okuyun. Ayrıca, diğer ayrıntılar [için Microsoft Defender](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Speed-up-time-to-detect-and-respond-to-user-compromise-and-limit/ba-p/977053) ile kullanıcının güvenliğini algılamak ve buna yanıt vermek ve ihlal kapsamını sınırlamak için sürenizi hızlandırın blog gönderisini Office 365 bakın.
+[Office 365 için Microsoft Defender Plan 2](defender-for-office-365.md#microsoft-defender-for-office-365-plan-1-and-plan-2) güçlü [otomatik soruşturma ve yanıt](office-365-air.md) (AIR) özellikleri içerir. Bu tür özellikler güvenlik işlemleri ekibinizi tehditlere karşı çok zaman ve çabadan tasarruf sağlar. Microsoft, güvenlik özelliklerini geliştirmeye devam etmektedir. Kısa süre önce, güvenliği tehlikeye atılmış bir kullanıcı güvenlik çalışma kitabını (şu anda önizlemede) içerecek şekilde AIR özellikleri geliştirilmişti. Güvenliği tehlikeye atılmış kullanıcı güvenliği playbook'ları hakkında daha fazla bilgi edinmek için bu makaleyi okuyun. Ayrıca, daha ayrıntılı bilgi [](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Speed-up-time-to-detect-and-respond-to-user-compromise-and-limit/ba-p/977053) için, Kullanıcının güvenliği ihlalini algılamak ve buna yanıt vermek ve ihlal kapsamını sınırlamak için Office 365 için Microsoft Defender blog gönderisi'ne bakın.
 
 ![Güvenliği tehlikeye atılmış bir kullanıcı için otomatik araştırma.](/microsoft-365/media/office365atp-compduserinvestigation.jpg)
 
@@ -43,7 +43,7 @@ Güvenliği tehlikeye atılmış kullanıcı güvenliği playbook'ları, kurulu�
 
 ## <a name="compromised-user-alerts"></a>Güvenliği ihlal edilmiş kullanıcı uyarıları
 
-Bir kullanıcı hesabının güvenliği ihlal edilmiş durumdayken, atipik veya anormal davranışlar oluşur. Örneğin, kimlik avı ve istenmeyen posta iletileri güvenilir bir kullanıcı hesabından dahili olarak gönderebilirsiniz. Kullanıcı için Defender Office 365 e-posta düzenleri ve iş birliği etkinlikleri içinde bu tür etkinlikleri Office 365. Böyle bir durumda, uyarılar tetiklenir ve tehdit azaltma işlemi başlar.
+Bir kullanıcı hesabının güvenliği ihlal edilmiş durumdayken, atipik veya anormal davranışlar oluşur. Örneğin, kimlik avı ve istenmeyen posta iletileri güvenilir bir kullanıcı hesabından dahili olarak gönderebilirsiniz. Office 365 için Defender içindeki e-posta düzenleri ve işbirliği etkinlikleri gibi her tür Office 365. Böyle bir durumda, uyarılar tetiklenir ve tehdit azaltma işlemi başlar.
 
 Örneğin, şüpheli e-posta göndermesi nedeniyle tetiklenen bir uyarı var:
 
@@ -72,11 +72,11 @@ Kısıtlanmış kullanıcılar listesine gezinmek için birkaç seçeneğiniz va
 
 2. Uyarılar **sayfasında,** sonuçları süreye göre filtreleyebilirsiniz ve Kullanıcı'nın e-posta **göndermesini kısıtla ilkesi vardır**.
 
-   ![Portalda kısıtlı kullanıcılar için Microsoft 365 Defender Uyarılar sayfası.](../../media/m365-sc-alerts-page-with-restricted-user.png)
+   :::image type="content" source="../../media/m365-sc-alerts-page-with-restricted-user.png" alt-text="Portalda kısıtlı kullanıcılar için Microsoft 365 Defender Uyarılar sayfası" lightbox="../../media/m365-sc-alerts-page-with-restricted-user.png":::
 
 3. Adı tıklatarak girdiyi seçersanız, **gözden geçirmeniz** için ek ayrıntılar içeren, e-posta göndermesi kısıtlanmış bir Kullanıcı sayfası açılır. Uyarıyı yönet **düğmesinin** yanında Diğer seçenekler simgesine ![tıklayabilirsiniz.](../../media/m365-cc-sc-more-actions-icon.png) **Diğer seçenekler'i** **seçin ve ardından** Kısıtlanmış kullanıcı ayrıntılarını görüntüle'yi  seçerek kısıtlanmış kullanıcıları [serbest bırakabilirsiniz](removing-user-from-restricted-users-portal-after-spam.md).
 
-   ![Kullanıcı, Uyarılar merkezinden e-posta gönderme sayfasını kısıtlar.](../../media/m365-sc-alerts-user-restricted-from-sending-email-page.png)
+  :::image type="content" source="../../media/m365-sc-alerts-user-restricted-from-sending-email-page.png" alt-text="Kullanıcı e-posta göndermeyle kısıtlandı sayfası" lightbox="../../media/m365-sc-alerts-user-restricted-from-sending-email-page.png":::
 
 ### <a name="view-details-about-automated-investigations"></a>Otomatik soruşturmalar hakkında ayrıntıları görüntüleme
 
@@ -98,6 +98,6 @@ Daha fazla bilgi edinmek için bkz [. Araştırmanın ayrıntılarını görünt
 
 - [E-postaları e-posta içinde bulma ve Office 365](investigate-malicious-email-that-was-delivered.md)
 
-- [Uç nokta için Microsoft Defender'da AIR hakkında bilgi](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations)
+- [Uç Nokta için Microsoft Defender'de AIR hakkında bilgi Uç Nokta için Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations)
 
 - [Yakında nelerin Microsoft 365 bilgi için Yol Haritası'nın yeni bir yolunu ziyaret edin ve kısa bir süre içinde size yol haritasında yer alan bir yol haritası ile ilgili bilgi edinin](https://www.microsoft.com/microsoft-365/roadmap?filters=)

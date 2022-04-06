@@ -1,7 +1,7 @@
 ---
 title: Microsoft Tehdit Uzmanları
 ms.reviewer: ''
-description: Microsoft Tehdit Uzmanları Noktası için Microsoft Defender'a ek bir uzmanlık katmanı sağlar.
+description: Microsoft Tehdit Uzmanları, destek olmak için ek bir uzmanlık Uç Nokta için Microsoft Defender.
 keywords: yönetilen tehdit arama hizmeti, yönetilen tehdit avı, yönetilen algılama ve yanıt (MDR) hizmeti, MTE, Microsoft Tehdit Uzmanları, MTE-TAN, hedefli saldırı bildirimi, Hedefli Saldırı Bildirimi
 search.product: Windows 10
 ms.prod: m365-security
@@ -18,22 +18,22 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: cc9f0f4410e3f62a6f787efd01d899250cd67a93
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 82fbe21e4d18a741da4a098b8e24a303f4d47008
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011849"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473969"
 ---
 # <a name="microsoft-threat-experts"></a>Microsoft Tehdit Uzmanları
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Microsoft Tehdit Uzmanları, Güvenlik İşlem Merkezlerinize (SOC)'lara, benzersiz ortamlarınız için kritik tehditlerin kaçırılamaması için uzman düzeyinde izleme ve çözümlemeler sağlayan, yönetilen bir tehdit arama hizmetidir.
 
@@ -44,7 +44,7 @@ Bu yönetilen tehdit arama hizmeti, şu iki özellik aracılığıyla uzman odak
 > [!NOTE]
 > Yönetilen tehdit arama hizmetine başvurmadan önce, uygunluk gereksinimlerini Microsoft Teknik Servis sağlayıcınızla ve hesap ekibiyle tartışın.
 
-Uç nokta için Microsoft Defender müşterisiysiniz, ortamınız için en kritik tehditleri belirlemeye yardımcı olacak özel içgörüler ve çözümlemeler almak için **Microsoft Tehdit Uzmanları -** Hedefli Saldırı Bildirimleri'ne başvurmanız gerekir.
+Uç Nokta için Microsoft Defender müşterisiysiniz, ortamınız için en kritik tehditleri belirlemeye yardımcı olacak özel içgörüler ve çözümlemeler almak için **Microsoft Tehdit Uzmanları -** Hedefli Saldırı Bildirimleri'ne başvurmanız gerekir.
 
 Microsoft Tehdit Uzmanları - Hedefli Saldırı Bildirimleri avantajlarına kaydolmak için Ayarlar **Endpoints** \> **General** \> **Advanced features** \> **Microsoft Tehdit Uzmanları - Targeted Attack Notifications**  \> to apply (Hedefli Saldırı Bildirimleri) adresine gidin. Kabul edildiktan sonra Hedefli Saldırı Bildirimleri'nin avantajlarından faydalanacaksınız.
 
@@ -73,19 +73,19 @@ Bir tehdit **uzmanına danışma seçeneği** portalın çeşitli yerlerinde kul
 
 - ***Yardım ve destek menüsü***
 
-  ![MTE-EOD menü seçeneğinin ekran görüntüsü.](images/mte-eod-menu.png)
+  :::image type="content" source="images/mte-eod-menu.png" alt-text="MTE-EOD menü öğesi" lightbox="images/mte-eod-menu.png":::
 
 - ***Cihaz sayfası eylemleri menüsü***
 
-  ![MTE-EOD cihaz sayfası eylem menüsü seçeneğinin ekran görüntüsü.](images/mte-eod-machines.png)
+  :::image type="content" source="images/mte-eod-machines.png" alt-text="MTE-EOD cihaz sayfası eylem menüsü seçeneği" lightbox="images/mte-eod-machines.png":::
 
 - ***Uyarılar sayfa eylemleri menüsü***
 
-  ![MTE-EOD uyarı sayfası eylem menüsü seçeneğinin ekran görüntüsü.](images/mte-eod-alerts.png)
+  :::image type="content" source="images/mte-eod-alerts.png" alt-text="MTE-EOD uyarı sayfası eylem menüsü seçeneği" lightbox="images/mte-eod-alerts.png":::
 
 - ***Dosya sayfası eylemleri menüsü***
 
-  ![MTE-EOD dosya sayfası eylem menüsü seçeneğinin ekran görüntüsü.](images/mte-eod-file.png)
+  :::image type="content" source="images/mte-eod-file.png" alt-text="MTE-EOD dosya sayfası eylem menüsü seçeneği" lightbox="images/mte-eod-file.png":::
 
 > [!NOTE]
 > Microsoft Hizmetleri Merkezi aracılığıyla Talep Üzerine Uzman servis taleplerinizin durumunu izlemek için Müşteri Başarısı Hesap Yöneticinize iletişime geçebilirsiniz.

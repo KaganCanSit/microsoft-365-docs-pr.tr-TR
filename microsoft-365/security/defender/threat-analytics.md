@@ -2,7 +2,7 @@
 title: Yeni Microsoft 365 Defender'de tehdit Microsoft 365 Defender
 ms.reviewer: ''
 description: Yeni ortaya çıkan tehdit ve saldırı tekniklerini ve bunları nasıl durduracaklarını öğrenin. Organizasyon üzerindeki etkisini değerlendirin ve organizasyona karşı etkilerinızı değerlendirin.
-keywords: tehdit analizi, risk değerlendirme, Microsoft 365 Defender, M365D, azaltma durumu, güvenli yapılandırma, Office 365 için Microsoft Defender, Office 365 tehdit analizi için Microsoft Defender, MDO tehdit analizi, tümleşik MDE ve MDO tehdit analizi verileri, tehdit analizi veri tümleştirmesi, tümleşik Microsoft 365 Defender analizini geri edinin
+keywords: tehdit analizi, risk değerlendirme, Microsoft 365 Defender, M365D, azaltma durumu, güvenli yapılandırma, Office 365 için Microsoft Defender, Office 365 için Microsoft Defender  tehdit analizi, MDO tehdit analizi, tümleşik MDE ve MDO tehdit analizi verileri, tehdit analizi veri tümleştirmesi, Microsoft 365 Defender analiz
 ms.prod: microsoft-365-enterprise
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -19,12 +19,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 5cb9f0db07ad29618e0dc9d053f4904a70ca52f6
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 40e14f0bb6e38a6923e5e1d454981d49932f7ea1
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63450170"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500705"
 ---
 # <a name="threat-analytics-in-microsoft-365-defender"></a>Yeni Microsoft 365 Defender'de tehdit Microsoft 365 Defender
 
@@ -53,7 +53,7 @@ Tehdit analizinin en son tehditleri izleme ve bunları durdurma konusunda nasıl
 
 Tehdit analizine, Microsoft 365 güvenlik portalının gezinti çubuğunun sol üst tarafından veya hem etki hem de etkilenme açısından, kuruluşa yönelik en önemli tehditleri gösteren adanmış bir pano kartından erişebilirsiniz.
 
-![Tehdit analiz panosunun resmi.](../../media/threat-analytics/ta_inlandingpage_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_inlandingpage_mtp.png" alt-text="Tehdit çözümlemesi giriş sayfası" lightbox="../../media/threat-analytics/ta_inlandingpage_mtp.png":::
 
 Yüksek etki tehditlerine zarar vermek için en büyük potansiyel tehdit vardır, ancak tehditlere karşı yüksek saldırılar varlıklarınızı en korumasız tehditlere neden olur. Etkin veya devam eden kampanyalar hakkında görünürlük elde etmek ve tehdit analizleri aracılığıyla ne olacağını bilmek, güvenlik işlemleri ekibinizi bilgili kararlar alma konusunda yardımcı olabilir.
 
@@ -79,7 +79,7 @@ Threat Analytics panosu ([security.microsoft.com/threatanalytics3](https://secur
 
 Bu tehdidin raporunu görüntülemek için panodan bir tehdit seçin.
 
-![Tehdit analizi panosunun ekran görüntüsü.](../../media/threat-analytics/ta_dashboard_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_dashboard_mtp.png" alt-text="Tehdit analiz panosu" lightbox="../../media/threat-analytics/ta_dashboard_mtp.png":::
 
 _Threat analytics panosu. Ayrıca, okumak istediğiniz tehdit çözümleme raporuyla ilgili bir anahtar sözcükte Arama alanını da seçebilirsiniz._
 
@@ -98,7 +98,7 @@ Her tehdit çözümleme raporu birkaç bölümde bilgi sağlar:
 
 Genel **Bakış** bölümü, ayrıntılı analist raporunun bir önizlemesini sağlar. Ayrıca, organizasyonunız için tehdidin etkisini vurgulayan grafikler, hatalı ve eşleşmeyen cihazlarla etkilenmenizi de sağlar.
 
-![Tehdit analizi raporunun genel bakış bölümünün görüntüsü.](../../media/threat-analytics/ta_overview_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_overview_mtp.png" alt-text="Tehdit analizi raporunun genel bakış bölümü" lightbox="../../media/threat-analytics/../../media/threat-analytics/ta_overview_mtp.png":::
 
 _Tehdit analizi raporunun genel bakış bölümü_
 
@@ -133,21 +133,21 @@ Tehdit raporu listesini filtrenin ve belirli bir tehdit etiketine (kategori) vey
 Microsoft Tehdit İstihbaratı ekibi her tehdit raporuna tehdit etiketleri ekledi:
 
 - Dört tehdit etiketi artık kullanılabilir:
-  - Fidye yazılımı
-  - Kimlik avı
+  - Fidye Yazılımı
+  - Kimlik Avı
   - Güvenlik Açığı
   - Etkinlik grubu
 - Tehdit etiketleri, tehdit çözümleme sayfasının en üstünde görüntülenir. Her etiketin altında kullanılabilir rapor sayısı için sayaçlar vardır.
 
-  ![tehdit etiketleri.](../../media/threat-analytics/ta-threattags-mtp.png)
+  :::image type="content" source="../../media/threat-analytics/ta-threattags-mtp.png" alt-text="Tehdit etiketleri" lightbox="../../media/threat-analytics/ta-threattags-mtp.png":::
 
 - Liste ayrıca tehdit etiketlerine göre de sıralandırabilirsiniz:
 
-  ![listeler.](../../media/threat-analytics//ta-taglist-mtp.png)
+  :::image type="content" source="../../media/threat-analytics//ta-taglist-mtp.png" alt-text="Tehdit etiketleri bölümü" lightbox="../../media/threat-analytics//ta-taglist-mtp.png":::
 
 - Filtreler her tehdit etiketi ve rapor türü için kullanılabilir:
 
-  ![filtrelerini seçin.](../../media/threat-analytics/ta-threattag-filters-mtp.png)
+  :::image type="content" source="../../media/threat-analytics/ta-threattag-filters-mtp.png" alt-text="Filtreler sayfası" lightbox="../../media/threat-analytics/ta-threattag-filters-mtp.png":::
 
 ### <a name="analyst-report-get-expert-insight-from-microsoft-security-researchers"></a>Analist raporu: Microsoft güvenlik araştırmacısı'nın uzman içgörülerini alın
 
@@ -157,9 +157,9 @@ Analist **raporu bölümünde** , ayrıntılı uzman yazılarını okuyun. Rapor
 
 ### <a name="related-incidents-view-and-manage-related-incidents"></a>İlgili olaylar: İlgili olayları görüntüleme ve yönetme
 
-İlgili **olaylar sekmesi** , izlenilen tehditle ilgili tüm olayların listesini sağlar. Her olayla bağlantılı olayları atayanın veya uyarıları yönetin.
+İlgili **olaylar sekmesi** , izlenilen tehditle ilgili tüm olayların listesini sağlar. Her olayla bağlantılı olayları atayanın veya uyarıları yönetin. 
 
-![Tehdit analizi raporunun ilgili olaylar bölümünün görüntüsü.](../../media/threat-analytics/ta_related_incidents_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_related_incidents_mtp.png" alt-text="Tehdit analizi raporunun ilgili olaylar bölümü" lightbox="../../media/threat-analytics/ta_related_incidents_mtp.png":::
 
 _Tehdit analizi raporunun ilgili olaylar bölümü_
 
@@ -167,20 +167,20 @@ _Tehdit analizi raporunun ilgili olaylar bölümü_
 
 Etkin, çözümlenmemiş bir uyarıdan etkilenmesi, bir varlığın etkilendiği kabul edilir. **Etkiulan varlıklar** sekmesi, aşağıdaki etkiyi olan varlık türlerini listeler:
 
-- **Etkilenen** cihazlar: Uç nokta uyarıları için çözümlenmemiş Microsoft Defender uç noktaları. Bu uyarılar genellikle bilinen tehdit göstergeleri ve etkinliklerine karşı bir durumla karşı karşıya olur.
-- **Etkilenen posta kutuları**: Posta kutuları, e-posta iletileri almış olan ve bu iletiler için Microsoft Defender'ı tetikleyen Office 365 kutusudur. Uyarıları tetikleyen iletilerin çoğu normalde engellenmiş durumdayken, kullanıcı veya kuruluş düzeyi ilkeleri filtreleri geçersiz kılar.
+- **Etkilenen** cihazlar— Çözümlenmemiş veya çözümlenmemiş uç Uç Nokta için Microsoft Defender uç noktaları. Bu uyarılar genellikle bilinen tehdit göstergeleri ve etkinliklerine karşı bir durumla karşı karşıya olur.
+- **Etkilenen posta kutuları**: E-posta iletileri almış olan ve bu iletileri tetikleyen posta Office 365 için Microsoft Defender. Uyarıları tetikleyen iletilerin çoğu normalde engellenmiş durumdayken, kullanıcı veya kuruluş düzeyi ilkeleri filtreleri geçersiz kılar.
 
-![Tehdit analizi raporunun etkilenen varlıklar bölümünün resmi.](../../media/threat-analytics/ta_impacted_assets_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_impacted_assets_mtp.png" alt-text="Tehdit analizi raporunun etkilenen varlıklar bölümü" lightbox="../../media/threat-analytics/ta_impacted_assets_mtp.png":::
 
 _Tehdit analizi raporunun etkili varlıklar bölümü_
 
 ### <a name="prevented-email-attempts-view-blocked-or-junked-threat-emails"></a>Engellenmiş e-posta girişimleri: Engellenen veya gereksiz tehdit e-postalarını görüntüleme
 
-Microsoft Defender for Office 365 typically blocks email with known threat indicators, including malicious links or attachments. Bazı durumlarda, şüpheli içeriği denetlemeye yönelik proaktif filtreleme mekanizmaları, tehdit e-postalarını gereksiz posta klasörüne gönderir. Her iki durumda da, cihazda kötü amaçlı yazılım kodunu başlatma tehdidinin olasılığı azaltıldı.
+Office 365 için Microsoft Defender genellikle kötü amaçlı bağlantılar veya ekler de dahil olmak üzere bilinen tehdit göstergeleri içeren e-postaları engeller. Bazı durumlarda, şüpheli içeriği denetlemeye yönelik proaktif filtreleme mekanizmaları, tehdit e-postalarını gereksiz posta klasörüne gönderir. Her iki durumda da, cihazda kötü amaçlı yazılım kodunu başlatma tehdidinin olasılığı azaltıldı.
 
-**Engellenmiş e-posta** girişimleri sekmesi, teslimden önce engellenen veya Microsoft Defender tarafından gereksiz posta klasörüne gönderilen tüm e-postaları Office 365.
+**Engellenmiş e-posta** girişimleri sekmesi, teslimden önce engellenen veya başka bir kullanıcı tarafından gereksiz posta klasörüne gönderilen tüm e-Office 365 için Microsoft Defender.
 
-![Tehdit çözümleme raporunun engellenebilir e-posta girişimleri bölümünün resmi.](../../media/threat-analytics/ta_prevented_email_attempts_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_prevented_email_attempts_mtp.png" alt-text="Tehdit çözümleme raporunun engelleme e-posta girişimleri bölümü" lightbox="../../media/threat-analytics/ta_prevented_email_attempts_mtp.png":::
 
 _Tehdit analizi raporunun engelli e-posta girişimleri bölümü_
 
@@ -196,9 +196,9 @@ Saldırı **ve risk &** bölümünde, kurumsal olarak tehditlere karşı daha fa
 
 Bu bölümdeki azaltma bilgileri, rapor Tehdit ve Güvenlik Açığı Yönetimi çeşitli bağlantılarından [](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt)ayrıntılı detaya gitme bilgileri de sağlayan veri bağlantılarını içerir.
 
-![Güvenli yapılandırma ayrıntılarını gösteren bir tehdit analizi raporunun risk azaltma bölümünün görüntüsü.](../../media/threat-analytics/ta_mitigations_mtp.png)
+:::image type="content" source="../../media/threat-analytics/ta_mitigations_mtp.png" alt-text="Güvenli yapılandırma ayrıntılarını gösteren bir tehdit analizi raporunun risk azaltma bölümü" lightbox="../../media/threat-analytics/ta_mitigations_mtp.png":::
 
-![Bir tehdit analizi raporunun güvenlik açığı ayrıntılarını gösteren risk azaltma bölümünün resmi.](../../media/threat-analytics/ta_mitigations_mtp2.png)
+:::image type="content" source="../../media/threat-analytics/ta_mitigations_mtp2.png" alt-text="Bir tehdit analizi raporunun güvenlik açığı ayrıntılarını gösteren azaltma bölümü" lightbox="../../media/threat-analytics/ta_mitigations_mtp2.png":::
 
 _Tehdit & risk azaltmaları bölümü_
 
@@ -246,15 +246,15 @@ Tehdit analizi raporlarına yönelik e-posta bildirimlerini ayarlamak için aşa
 ## <a name="additional-report-details-and-limitations"></a>Ek rapor ayrıntıları ve sınırlamaları
 
 > [!NOTE]
-> Birleştirilmiş güvenlik deneyiminin bir parçası olarak tehdit çözümlemeleri, artık yalnızca Uç Nokta için Microsoft Defender'da değil, aynı zamanda Microsoft Defender for Office E5 lisans sahipleri için de sağlanmaktadır.
+> Birleştirilmiş güvenlik deneyiminin bir parçası olarak tehdit çözümlemeleri yalnızca Uç Nokta için Microsoft Defender'te değil, aynı zamanda E5 lisans sahipleri için Microsoft Defender Office için de kullanılabilir.
 >
-> Microsoft 365 güvenlik portalını (Microsoft 365 Defender) kullanmayacaksanız, rapor ayrıntılarını da (Office verileri için Microsoft Defender olmadan) Microsoft Defender Güvenlik Merkezi portalında (Uç nokta için Microsoft Defender) de bulabilirsiniz.
+> Microsoft 365 güvenlik portalını (Microsoft 365 Defender) kullanmayacaksanız, rapor ayrıntılarını da (Office için Microsoft Defender olmadan) Microsoft Defender Güvenlik Merkezi portalında ( Uç Nokta için Microsoft Defender).
 
 Tehdit analizi raporlarına erişmek için belirli rollere ve izinlere ihtiyacınız vardır. Ayrıntılar [için bkz. Rol tabanlı erişim denetiminde Microsoft 365 Defender](custom-roles.md) roller.
 
-- Uyarıları, olayları veya etkileyen varlık verilerini görüntülemek için, Office için Microsoft Defender veya Uç nokta uyarı verileri için Microsoft Defender veya her ikisini birden kabul etmek için izinlere sahip olmak gerekir.
+- Uyarıları, olayları veya etkileyen varlık verilerini görüntülemek için, uyarı verilerini veya her ikisini birden Office için Microsoft Defender Uç Nokta için Microsoft Defender izinlere sahip olmak gerekir.
 - Engelli e-posta girişimlerini görüntülemek için, bu denemeler için Microsoft Defender Office izinlere sahip olmak gerekir.
-- Risk azaltmaları görüntülemek için, Uç Nokta için Microsoft Defender'Tehdit ve Güvenlik Açığı Yönetimi verileri görüntüleme izinlerine sahip olmak gerekir.
+- Risk azaltmalarını görüntülemek için, verileri veri kaynağında Tehdit ve Güvenlik Açığı Yönetimi izin Uç Nokta için Microsoft Defender.
 
 Tehdit çözümleme verilerine bakarak şu faktörleri unutmayın:
 

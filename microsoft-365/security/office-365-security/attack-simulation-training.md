@@ -11,22 +11,22 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: ''
-description: Yöneticiler, Plan 2'ye yönelik Microsoft Defender'daki Saldırı benzetimi eğitimini kullanarak kimlik avı saldırılarının benzetimini yapmayı ve kullanıcılarını kimlik avı engellemesi konusunda Office 365 öğrenebilirsiniz.
+description: Yöneticiler, Plan 2'de Saldırı benzetimi eğitimini kullanarak kimlik avı saldırılarının benzetimini yapmayı ve kullanıcılarını kimlik avı engellemesi konusunda Office 365 için Microsoft Defender öğrenebilirsiniz.
 ms.technology: mdo
-ms.openlocfilehash: 5ce7b58410ea53e4f11d746ebc4583b125f1ade6
-ms.sourcegitcommit: 584b4757f715a3eedf748858461c568f45137438
+ms.openlocfilehash: 924fef8e5aba8a797cf6754b6c507624e51a64c2
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "63494436"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474321"
 ---
-# <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'daki Saldırı benzetimi eğitimi ile kimlik avı saldırılarının benzetimini Office 365
+# <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Office 365 için Defender'ta Saldırı benzetimi eğitimi ile kimlik avı saldırılarını benzetim Office 365 için Defender
 
- [Office 365 için Microsoft Defender plan 2 için geçerlidir](defender-for-office-365.md)
+**Plan** [2 Office 365 için Microsoft Defender için geçerlidir](defender-for-office-365.md)
 
-2. Plan 2 veya Office 365 Microsoft Defender'daki saldırı benzetim eğitimi, Microsoft 365 E5 siber benzetimler çalıştırmanıza olanak sağlar. Bu benzetimler güvenlik ilkelerinizi ve uygulamalarınızı test edin, ayrıca çalışanlarınızı saldırılara karşı duyarlılıklarını artırmaya ve azaltmaya eğitin. Bu makale, Saldırı benzetimi eğitimini kullanarak sanal bir kimlik avı saldırısı oluşturma konusunda size yol yardımcı oluyor.
+Plan 2 veya Office 365 için Microsoft Defender'daki saldırı benzetim eğitimi Microsoft 365 E5 siber benzetimleri çalıştırmanıza olanak sağlar. Bu benzetimler güvenlik ilkelerinizi ve uygulamalarınızı test edin, ayrıca çalışanlarınızı saldırılara karşı duyarlılıklarını artırmaya ve azaltmaya eğitin. Bu makale, Saldırı benzetimi eğitimini kullanarak sanal bir kimlik avı saldırısı oluşturma konusunda size yol yardımcı oluyor.
 
-Saldırı benzetimi eğitimi hakkında bilgi almak için bkz. [Saldırı benzetimi eğitimlerini kullanmaya başlama](attack-simulation-training-get-started.md).
+Saldırı benzetimi eğitimi hakkında bilgi almak için Saldırı [benzetim Kullanmaya başlayın'i kullanma hakkında daha fazla bilgi için bkz](attack-simulation-training-get-started.md).
 
 Sanal bir kimlik avı saldırısı başlatmak için aşağıdaki adımları uygulayın:
 
@@ -36,7 +36,7 @@ Sanal bir kimlik avı saldırısı başlatmak için aşağıdaki adımları uygu
 
 2. **Benzetimler sekmesinde** Benzetim simgesi ![başlat'ı seçin.](../../media/m365-cc-sc-create-icon.png) **Benzetim başlat.**
 
-   ![Microsoft 365 Defender portalında, Saldırı benzetim eğitimi'nin Benzetimler sekmesinde bir benzetim düğmesi başlatabilirsiniz.](../../media/attack-sim-training-simulations-launch.png)
+   :::image type="content" source="../../media/attack-sim-training-simulations-launch.png" alt-text="Analiz portalının Saldırı benzetim eğitimi'nin Benzetimler sekmesindeki Benzetim Microsoft 365 Defender başlatma" lightbox="../../media/attack-sim-training-simulations-launch.png":::
 
 3. Benzetim oluşturma sihirbazı açılır. Bu makalenin kalan kalanında, sayfaları ve bunların içerdiği ayarlar açıklanmıştır.
 
@@ -55,7 +55,7 @@ Select **technique sayfasında** , [MITRE ATT&CK Framework'den&seçin®](https:/
 
 Açıklamada Ayrıntıları **görüntüle bağlantısına** tıklarsanız, tekniğin ve teknikten elde edilen benzetim adımlarını açıklayan bir ayrıntılar açılır.
 
-![Seçme tekniği sayfasında kimlik bilgisi depolama tekniği için ayrıntılar uç sayfası.](../../media/attack-sim-training-simulations-select-technique-sim-steps.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-select-technique-sim-steps.png" alt-text="Seçme tekniği sayfasındaki kimlik bilgisi depolama tekniği için Ayrıntılar uç sayfası" lightbox="../../media/attack-sim-training-simulations-select-technique-sim-steps.png":::
 
 Bitirdikten sonra, Sonraki'ne **tıklayın**.
 
@@ -102,14 +102,14 @@ Aşağıdaki ayrıntılar, seçime yardımcı olmak için yük listesinde görü
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
-![Geçiş portalında Saldırı benzetimi eğitimi'nin yük Microsoft 365 Defender seçin.](../../media/attack-sim-training-simulations-select-payload.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload.png" alt-text="Geçiş portalında Saldırı benzetimi eğitimi'nin yük Microsoft 365 Defender sayfası" lightbox="../../media/attack-sim-training-simulations-select-payload.png":::
 
 Listeden bir yük seçersiniz, yükle ilgili ayrıntılar bir çıkışta gösterilir:
 
 - Genel **Bakış** sekmesi, yük hakkında bir örnek ve diğer ayrıntıları içerir.
 - **Benzetimler başlatıldı** sekmesi Benzetim adı, **Tıklama** oranı, Güvenliği **ihlal** **edildi oranı ve** **Eylem'i içerir**.
 
-![Geçiş portalında Saldırı benzetimi eğitimi altında ayrıntıları Microsoft 365 Defender.](../../media/attack-sim-training-simulations-select-payload-details.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details.png" alt-text="Yeni portalda Saldırı benzetimi eğitimi altında Yük ayrıntıları Microsoft 365 Defender." lightbox="../../media/attack-sim-training-simulations-select-payload-details.png":::
 
 Adı tıklatarak listeden bir yük seçin, bir ![Test yüklemesi gönder simgesi.](../../media/m365-cc-sc-create-icon.png) **Yükleme e-postanın** bir kopyasını inceleme için kendinize (şu anda oturum açmış olan kullanıcı) gönderebilirsiniz.
 
@@ -138,7 +138,7 @@ Hedef **kullanıcılar sayfasında** benzetimi alacak olan kullanıcıları seç
         - **Son üç ay içinde kullanıcılar bir benzetim tarafından hedef kitleye ulaşmdı**
         - **Yinelemelileri yineleme**
 
-      - **Kullanıcı etiketleri**: Kullanıcı etiketleri belirli kullanıcı grupları için tanımlayıcılardır (örneğin, Öncelik hesapları). Daha fazla bilgi için bkz[. Windows için Microsoft Defender'da Office 365](user-tags.md).
+      - **Kullanıcı etiketleri**: Kullanıcı etiketleri belirli kullanıcı grupları için tanımlayıcılardır (örneğin, Öncelik hesapları). Daha fazla bilgi için bkz[. Web'de Office 365 için Microsoft Defender](user-tags.md).
 
           Aşağıdaki seçenekleri kullanın:
 
@@ -156,7 +156,7 @@ Hedef **kullanıcılar sayfasında** benzetimi alacak olan kullanıcıları seç
         - Tüm **Başlığı Seç**
         - Mevcut Başlık değerlerini seçin.
 
-      ![Hedef kullanıcılar sayfasındaki Saldırı benzetimi eğitimi sayfasındaki kullanıcı filtrelemesi Microsoft 365 Defender.](../../media/attack-sim-training-simulations-target-users-filter-by-category.png)
+      :::image type="content" source="../../media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="Kullanıcı profili portalında Saldırı benzetimi eğitimi'nin Hedef kullanıcılar sayfasındaki Microsoft 365 Defender filtrelemesi" lightbox="../../media/attack-sim-training-simulations-target-users-filter-by-category.png":::
 
       Ölçütlerinizi tanımdikten sonra, etkilenen kullanıcılar görüntülenen Kullanıcı listesi bölümünde gösterilir  ve burada bulunan alıcıların bir bölümünü veya hepsini seçebilirsiniz.
 
@@ -194,7 +194,7 @@ Eğitim **atama sayfasında** benzetim için eğitimler atabilirsiniz. Eğitimde
       - **Benzetim sona erdikten 7 gün sonra**
   - **Eğitim yok**: Bu değeri seçerseniz, sayfada yer alan tek seçenek Giriş sayfası sayfasına sizi  alan Sonraki [**düğmesidir**](#landing-page).
 
-![Yeni portalda Saldırı benzetimi eğitimi'nin Eğitim ödev sayfasına önerilen Microsoft 365 Defender ekleyin.](../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png" alt-text="Yeni portalda, Saldırı benzetimi eğitimi sayfasındaki Eğitim atama sayfasına önerilen Microsoft 365 Defender ekleme seçeneği" lightbox="../../media/attack-sim-training-simulations-assign-training-add-recommended-training.png":::
 
 ### <a name="training-assignment"></a>Eğitim ödevi
 
@@ -236,7 +236,7 @@ Listede yer alan her eğitim için, Ata sütunundaki değerleri seçerek eğitim
 
 Gösterilen bir eğitimi kullanmak istemiyorsanız, Eğitim simgesini sil'e ![tıklayın.](../../media/m365-cc-sc-delete-icon.png) **Sil'i seçin**.
 
-![Geçiş portalında Saldırı benzetimi eğitimi'nin Microsoft 365 Defender sayfası.](../../media/attack-sim-training-training-assignment.png)
+:::image type="content" source="../../media/attack-sim-training-training-assignment.png" alt-text="Yeni portalda Saldırı benzetimi eğitimi'nin Eğitim Microsoft 365 Defender sayfası" lightbox="../../media/attack-sim-training-training-assignment.png":::
 
 Bitirdikten sonra, Sonraki'ne **tıklayın**.
 
@@ -280,7 +280,7 @@ Microsoft tarafından el ile yapılan giriş sayfaları 12 dilde kullanılabilir
 Bitirdikten sonra, Sonraki'ne **tıklayın**.
 
 > [!NOTE]
-> Bazı ticari markalar, logolar, simgeler, insignias ve diğer kaynak tanımlayıcıları yerel, eyalet ve federal yasalara göre daha yüksek koruma sağlar. Bu gibi göstergelerin yetkisiz kullanımı, kullanıcılara cezai para cezaları dahil olmak üzere penceler konur. Kapsamlı bir liste de dahil değil, bu listede Başkan Yardımcısı, Başkan Yardımcısı ve Tayyali üyeleri, CIA, CIA, Social Security, Medicare ve Medicaid, ABD İç Gelir Hizmeti ve Olimpiyatlar yer alıyor. Bu ticari marka kategorilerinin ötesinde, üçüncü taraf ticari markaların yapısal bir miktarda risk taşıyan kullanım ve değiştirilmesi. Yüklemede kendi ticari markalarınızı ve logolarınızı kullanmak, özellikle de kuruluş izinli olduğu bir yüklemede daha az riskli olabilir. Yük oluşturma veya yapılandırmada kullanımın ne olduğu veya uygun olmadığınız hakkında başka sorularınız varsa, yasal danışmanlarınıza danışmanız ile görüşmeniz gerekir.
+> Bazı ticari markalar, logolar, simgeler, insignias ve diğer kaynak tanımlayıcıları yerel, eyalet ve federal yasalara göre daha yüksek koruma sağlar. Bu gibi göstergelerin yetkisiz kullanımı, kullanıcılara cezai para cezaları dahil olmak üzere penceler konur. Kapsamlı bir liste olsa da, bu listede Başkan Yardımcısı, Başkan Yardımcısı ve Uluslararası iş üyeleri, CIA, CIA, Social Security, Medicare ve Medicaid, Birleşik Devletler Internal Revenue Service ve Olimpiyatlar yer almaktadır. Bu ticari marka kategorilerinin ötesinde, üçüncü taraf ticari markaların yapısal bir miktarda risk taşıyan kullanım ve değiştirilmesi. Yüklemede kendi ticari markalarınızı ve logolarınızı kullanmak, özellikle de kuruluş izinli olduğu bir yüklemede daha az riskli olabilir. Yük oluşturma veya yapılandırmada kullanımın ne olduğu veya uygun olmadığınız hakkında başka sorularınız varsa, yasal danışmanlarınıza danışmanız ile görüşmeniz gerekir.
 
 ## <a name="select-end-user-notification"></a>Son kullanıcı bildirimini seçme
 
@@ -374,4 +374,4 @@ Bölümün içindeki **ayarları değiştirmek** için her bölümde Düzenle'yi
 
 Bitirdikten sonra Gönder'e **tıklayın**.
 
-![Microsoft 365 Defender portalında Saldırı benzetimi eğitimi'nin benzetim Microsoft 365 Defender gözden geçirebilirsiniz.](../../media/attack-sim-training-simulations-review-simulation.png)
+:::image type="content" source="../../media/attack-sim-training-simulations-review-simulation.png" alt-text="Microsoft 365 Defender portalında Saldırı benzetimi eğitimi'nin benzetim Microsoft 365 Defender sayfası" lightbox="../../media/attack-sim-training-simulations-review-simulation.png":::

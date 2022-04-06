@@ -10,8 +10,8 @@ audience: Admin
 ms.topic: conceptual
 f1_keywords:
 - ms.o365.cc.AdminRoleGroups
+ms.collection: M365-security-compliance
 ms.localizationpriority: medium
-ms.collection: Strat_O365_IP
 search.appverid:
 - MOE150
 - MET150
@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 47ee051ab30669241a3283f1fb3f8fe86cf67f65
-ms.sourcegitcommit: 677dcc74aa898b2a17eb8430a32e675fea4e3fe5
+ms.openlocfilehash: c451266d8cc11fc877f1c6c9f1c214959fe41938
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63557851"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63683175"
 ---
 # <a name="permissions-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk & İzinler
 
@@ -62,10 +62,6 @@ Güvenlik ve Uyumluluk Merkezi'ne erişim & için Kullanıcıların Uyumluluk Y�
 
 > [!NOTE]
 > Güvenlik ve **Uyumluluk** Merkezi'nde & görüntülemek için yönetici olmak gerekir. Özel olarak, Rol Yönetimi rolüne atanmış olması  gerekir ve bu rol varsayılan olarak yalnızca Güvenlik ve Uyumluluk Merkezi'nde  Kuruluş & rol grubuna atanır. Ayrıca, Rol **Yönetimi rolü kullanıcıların** rol gruplarını görüntülemesini, oluşturmalarını ve değiştirmelerini sağlar.
-
-<br>
-
-****
 
 |Rol grubu|Açıklama|Atanan varsayılan roller|
 |---|---|---|
@@ -117,7 +113,6 @@ Güvenlik ve Uyumluluk Merkezi'ne erişim & için Kullanıcıların Uyumluluk Y�
 |**Hizmet Güvencesi Kullanıcısı**|Üyeler, Güvenlik ve Uyumluluk Merkezi'nin Hizmet & erişebilirsiniz. Hizmet güvencesi, Microsoft'un müşteri verisinde depolanan müşteri verileriyle ilgili uygulamalarını tanımlayan raporlar ve Microsoft 365. Ayrıca, üçüncü taraf denetim raporlarında bağımsız üçüncü taraf denetim Microsoft 365. Daha fazla bilgi için Güvenlik [ve Uyumluluk Merkezi'nde hizmet & bakın](../../compliance/service-assurance.md).|Hizmet Güvencesi Görünümü|
 |**Konu Hakları İsteği Yöneticileri**|Konu hakları istekleri oluşturun.|Vaka Yönetimi <p> Konu Hakları İsteği Yöneticisi <p> View-Only Durumu|
 |**Gözetmen İncelemesi**|Üyeler, kuruluşta hangi iletişimlerin gözden geçir define ilkelerini oluşturabilir ve yönetebilir. Daha fazla bilgi için bkz [. Organizasyonunız için iletişim uyumluluk ilkelerini yapılandırma](../../compliance/communication-compliance-configure.md).|Gözetmen İnceleme Yöneticisi|
-|
 
 > [!NOTE]
 > <sup>1</sup> Bu rol grubu, üyelere denetim günlüğünde arama yapmak veya Exchange raporları için DLP veya Defender gibi veri içeren raporları kullanmak için gereken izinleri Office 365 atamaz. Denetim günlüğünde arama yapmak veya tüm raporları görüntülemek için, kullanıcıya tüm raporlarda izin Exchange Online. Çünkü, denetim günlüğünde arama yapmak için kullanılan temel cmdlet, bir Exchange Online cmdlet'tir. Genel yöneticiler denetim günlüğünde arama yapın ve tüm raporları sınyınlar, otomatik olarak Denetim Merkezi'nin Kuruluş Yönetimi rol grubuna üye olarak Exchange Online. Daha fazla bilgi için [bkz. Güvenlik ve Uyumluluk Merkezi'nde denetim & arama.](../../compliance/search-the-audit-log-in-security-and-compliance.md)
@@ -169,10 +164,6 @@ Aşağıdaki rollerin varsayılan olarak Kuruluş Yönetimi rol grubuna atanmam�
 - Konu Hakları İsteği Yöneticisi
 - Gözetmen İnceleme Yöneticisi
 - Tenant AllowBlockList Manager
-
-<br>
-
-****
 
 |Rol|Açıklama|Varsayılan rol grubu atamaları|
 |---|---|---|
@@ -252,4 +243,3 @@ Aşağıdaki rollerin varsayılan olarak Kuruluş Yönetimi rol grubuna atanmam�
 |**Yalnızca Görüntüleme Alıcıları**|Kullanıcılar ve gruplar hakkında bilgileri görüntüleme.|Uyumluluk Yöneticisi <p> Uyumluluk Veri Yöneticisi <p> Genel Okuyucu <p> MailFlow Yöneticisi <p> Kuruluş Yönetimi|
 |**Yalnızca Görüntüleme Kaydı Yönetimi**|Kayıt yönetimi özelliğinin yapılandırmasını görüntüleme.|Uyumluluk Yöneticisi <p> Uyumluluk Veri Yöneticisi <p> <p> Genel Okuyucu <p> Kuruluş Yönetimi|
 |**Yalnızca görüntüleme bekletme yönetimi**|Bekletme ilkelerinin, bekletme etiketlerinin ve bekletme etiketi ilkelerinin yapılandırmasını görüntüleme.|Uyumluluk Yöneticisi <p> Uyumluluk Veri Yöneticisi <p> Genel Yönetici <p> Kuruluş Yönetimi|
-|

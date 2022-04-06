@@ -1,5 +1,5 @@
 ---
-title: Uç Nokta Cihaz Denetimi Çıkarılabilir Cihaz Koruma için Microsoft Defender Depolama Koruma
+title: Uç Nokta için Microsoft Defender Denetimi Çıkarılabilir Depolama Koruması Depolama a bakın
 description: Kullanıcı veya makine ya da her ikisinin de yetkisiz çıkarılabilir depolama medyasını kullanmalarını önlemeye yardımcı olan 'özellikleri anlama
 keywords: çıkarılabilir depolama medyası
 ms.prod: m365-security
@@ -14,23 +14,23 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: cc1c2a5fc05b795c0fc69ebc8a3b50dbf556960b
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 5913df59cb12d2f4d2d9dbec9c426bbf71769848
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998179"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569545"
 ---
-# <a name="microsoft-defender-for-endpoint-device-control-removable-storage-protection"></a>Uç Nokta Cihaz Denetimi Çıkarılabilir Cihaz Koruma için Microsoft Defender Depolama Koruma
+# <a name="microsoft-defender-for-endpoint-device-control-removable-storage-protection"></a>Uç Nokta için Microsoft Defender Denetimi Çıkarılabilir Depolama Koruması Depolama a bakın
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 [!INCLUDE [Prerelease](../includes/prerelease.md)]
 
-Uç Nokta için Microsoft Defender'da cihaz denetimi çıkarılabilir depolama koruması kullanıcıların, uç noktaların veya her ikisinin de yetkisiz çıkarılabilir depolama medyasını kullanmalarını engelleme.
+Birden çok cihazda çıkarılabilir depolama alanı koruması Uç Nokta için Microsoft Defender kullanıcıların, uç noktaların veya her ikisinin de yetkisiz çıkarılabilir depolama medyasını kullanmalarını önler.
 
 ## <a name="protection-policies"></a>Koruma ilkeleri
 
@@ -41,12 +41,12 @@ Uç Nokta için Microsoft Defender'da cihaz denetimi çıkarılabilir depolama k
 - *Denetim* Çıkarılabilir depolamada dışlamayla veya dışlama olmadan çeşitli cihaz özelliklerine bağlı olarak Okuma veya Yazma veya Yürütme erişimi.
 - *Engelleme* Okuma veya Yazma veya Dışlama olmadan erişim - Çeşitli cihaz özelliklerine göre belirli bir cihaza izin verme.
 
-**Windows 10 ve Windows 11 destek ayrıntıları:**
+**Windows 10 ve Windows 11 ayrıntılarına bakın**:
 
 - Cihaz düzeyinde kullanıcı düzeyinde uygulanır. veya her ikisini birden. Yalnızca belirli bir makinede belirli bir çıkarılabilir depolama alanına Okuma/Yazma/Yürütme erişimi gerçekleştiren belirli kişilerin erişmesine izin verme.
 - MEM OMA-URI ve GPO desteği.
 - 'Cihaz [Özellikleri' listelenmiştir](#device-properties).
-- Çıkarılabilir depolama alanı Windows için bkz[. Çıkarılabilir depolama alanı Erişim Denetimi](device-control-removable-storage-access-control.md).
+- Çıkarılabilir depolama Windows için bkz[. Çıkarılabilir depolama Access Control](device-control-removable-storage-access-control.md).
 
 **Desteklenen Platform** - Windows 10, Windows 11
 
@@ -62,12 +62,12 @@ Uç Nokta için Microsoft Defender'da cihaz denetimi çıkarılabilir depolama k
 
 **Özellikler -** Çeşitli cihaz özelliklerine göre yükleme işlemini dışlamayla veya dışlama olmadan engelin.
 
-**Windows 10 ve Windows 11 destek ayrıntıları:**
+**Windows 10 ve Windows 11 ayrıntılarına bakın**:
 
 - Cihaz düzeyinde uygulanır: Aynı ilke, oturum açmış olan tüm kullanıcılar için geçerlidir.
-- Nesne Microsoft Endpoint Manager İlkesi Nesnelerini destekler.
+- Nesne Microsoft Endpoint Manager nesne grup ilkesi destekler.
 - 'Cihaz [Özellikleri' listelenmiştir](#device-properties).
-- Usb cihazları ve diğer çıkarılabilir Windows hakkında daha fazla bilgi için bkz. Uç Nokta için [Microsoft Defender'ı kullanarak USB cihazları ve diğer çıkarılabilir medyayı denetleme](control-usb-devices-using-intune.md).
+- Usb cihazları ve diğer Windows medyayı denetleme hakkında daha fazla bilgi için bkz. [USB cihazlarını ve diğer çıkarılabilir medyayı Uç Nokta için Microsoft Defender](control-usb-devices-using-intune.md).
 
 **Desteklenen Platform** - Windows 10, Windows 11
 
@@ -99,17 +99,17 @@ Uç Nokta için Microsoft Defender'da cihaz denetimi çıkarılabilir depolama k
 
 ## <a name="device-properties"></a>Cihaz özellikleri
 
-Uç Nokta Cihaz Denetimi Için Microsoft Defender Çıkarılabilir Depolama Koruması, çıkarılabilir depolama erişimini aşağıdaki tabloda açıklanan özelliklere göre kısıtlamanıza olanak sağlar:
+Uç Nokta için Microsoft Defender Denetimi Çıkarılabilir Çıkarılabilir Depolama Koruması, çıkarılabilir depolama erişimini aşağıdaki tabloda açıklanan özelliklere göre kısıtlamanıza olanak sağlar:
 
 <br/><br/>
 
 |Özellik Adı|Geçerli İlkeler|İşletim Sistemleri için geçerlidir|Açıklama|
 |---|---|---|---|
-|Cihaz Sınıfı|[Uç Nokta için Microsoft Defender'ı kullanarak USB cihazlarını ve diğer çıkarılabilir medyayı denetleme](control-usb-devices-using-intune.md)|Windows|Cihaz Kimliği biçimleri hakkında bilgi için bkz. [cihaz kurulum sınıfı](/windows-hardware/drivers/install/overview-of-device-setup-classes). Aşağıdaki iki bağlantı Cihaz Kurulumu Sınıflarının tam listesini sağlar. 'Sistem Kullanımı' sınıfları çoğunlukla fabrikaya ait bir bilgisayar/makineyle gelen cihazlara başvururken, "Satıcı" sınıfları daha çok var olan bir bilgisayara/makineye bağlanıyor olabilir: Satıcılara Kullanılabilen Sistem Tanımlı Cihaz Kurulumu Sınıfları [- Windows](/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors) sürücüleri ve Sistem Kullanımı [- Windows](/windows-hardware/drivers/install/system-defined-device-setup-classes-reserved-for-system-use) sürücüleri için Ayrılmış Sistem Tanımlı Cihaz Kurulumu Sınıfları. **Not**: Cihaz Yüklemesi yalnızca Çıkarılabilir depolama alanı değil tüm cihazlara uygulanabilir.|
-|Birincil Kimlik|[Çıkarılabilir depolama alanı Erişim Denetimi](device-control-removable-storage-access-control.md)|Windows|Birincil kimlik çıkarılabilir depolama alanını, CD/DVD'yi ve Taşınabilir Windows/WPD'yi içerir.|
-|Cihaz Kimliği|[Çıkarılabilir depolama alanı Erişim Denetimi](device-control-removable-storage-access-control.md); <p> [Uç Nokta için Microsoft Defender'ı kullanarak USB cihazlarını ve diğer çıkarılabilir medyayı denetleme](control-usb-devices-using-intune.md)|Windows|Cihaz Kimliği biçimleri hakkında bilgi için bkz [. Standart USB Tanımlayıcıları](/windows-hardware/drivers/install/standard-usb-identifiers), örneğin, USBSTOR\DISK&VEN_GENERIC&PROD_FLASH_DISK&REV_8.07|
-|Donanım Kimliği|[Çıkarılabilir depolama alanı Erişim Denetimi](device-control-removable-storage-access-control.md) <p> [Uç Nokta için Microsoft Defender'ı kullanarak USB cihazlarını ve diğer çıkarılabilir medyayı denetleme](control-usb-devices-using-intune.md)|Windows|Sistemde USBSTOR\DiskGeneric_Flash_Disk___8.07 gibi bir dize tanımlanır; **Not**: Donanım kimliği benzersiz değildir; farklı cihazlar aynı değeri paylaşabilir.|
-|Örnek Kimliği|[Çıkarılabilir depolama alanı Erişim Denetimi](device-control-removable-storage-access-control.md) <p> Cihaz Yüklemesi|Windows|Dize, sistem içinde cihazı benzersiz olarak tanımlar; örneğin, USBSTOR\DISK&VEN_GENERIC&PROD_FLASH_DISK&REV_8.07\8735B611 veya&0|
-|Kolay Ad|[Çıkarılabilir depolama alanı Erişim Denetimi](device-control-removable-storage-access-control.md)|Windows|Cihaza bağlı bir dize, örneğin Genel Flash Disk USB Cihazı|
-|Satıcı Kimliği / Ürün Kimliği|[Çıkarılabilir depolama alanı Erişim Denetimi](device-control-removable-storage-access-control.md)|Windows <p> macOS|Satıcı Kimliği, USB komitenin satıcıya atadığınız dört basamaklı satıcı kodudur. Ürün Kimliği, satıcının cihaza atadığınız dört basamaklı ürün kodudur; Destek joker karakteri.|
-|Seri NumarasıKimlik|[Çıkarılabilir depolama alanı Erişim Denetimi](device-control-removable-storage-access-control.md)|Windows <p> macOS |Örneğin, <SerialNumberId>002324B534BCB431B000058A</SerialNumberId>|
+|Cihaz Sınıfı|[USB cihazlarını ve diğer çıkarılabilir medyayı KONTROL etmek için USB Uç Nokta için Microsoft Defender](control-usb-devices-using-intune.md)|Windows|Cihaz Kimliği biçimleri hakkında bilgi için bkz. [cihaz kurulum sınıfı](/windows-hardware/drivers/install/overview-of-device-setup-classes). Aşağıdaki iki bağlantı Cihaz Kurulumu Sınıflarının tam listesini sağlar. 'Sistem Kullanımı' sınıfları çoğunlukla fabrikaya ait bir bilgisayar/makineyle gelen cihazlara başvururken, "Satıcı" sınıfları daha çok var olan bir bilgisayara/makineye bağlanıyor olabilir: Satıcılara Kullanılabilen Sistem Tanımlı Cihaz Kurulumu Sınıfları [- Windows](/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors) sürücüleri ve Sistem Kullanımı [- Windows](/windows-hardware/drivers/install/system-defined-device-setup-classes-reserved-for-system-use) sürücüleri için Ayrılmış Sistem Tanımlı Cihaz Kurulumu Sınıfları. **Not**: Cihaz Yüklemesi yalnızca Çıkarılabilir depolama alanı değil tüm cihazlara uygulanabilir.|
+|Birincil Kimlik|[Çıkarılabilir depolama Access Control](device-control-removable-storage-access-control.md)|Windows|Birincil kimlik çıkarılabilir depolama alanını, CD/DVD'yi ve Taşınabilir Windows/WPD'yi içerir.|
+|Cihaz Kimliği|[Çıkarılabilir depolama Access Control](device-control-removable-storage-access-control.md); <p> [USB cihazlarını ve diğer çıkarılabilir medyayı KONTROL etmek için USB Uç Nokta için Microsoft Defender](control-usb-devices-using-intune.md)|Windows|Cihaz Kimliği biçimleri hakkında bilgi için bkz [. Standart USB Tanımlayıcıları](/windows-hardware/drivers/install/standard-usb-identifiers), örneğin, USBSTOR\DISK&VEN_GENERIC&PROD_FLASH_DISK&REV_8.07|
+|Donanım Kimliği|[Çıkarılabilir depolama Access Control](device-control-removable-storage-access-control.md) <p> [USB cihazlarını ve diğer çıkarılabilir medyayı KONTROL etmek için USB Uç Nokta için Microsoft Defender](control-usb-devices-using-intune.md)|Windows|Sistemde USBSTOR\DiskGeneric_Flash_Disk___8.07 gibi bir dize tanımlanır; **Not**: Donanım kimliği benzersiz değildir; farklı cihazlar aynı değeri paylaşabilir.|
+|Örnek Kimliği|[Çıkarılabilir depolama Access Control](device-control-removable-storage-access-control.md) <p> Cihaz Yüklemesi|Windows|Dize, sistem içinde cihazı benzersiz olarak tanımlar; örneğin, USBSTOR\DISK&VEN_GENERIC&PROD_FLASH_DISK&REV_8.07\8735B611 veya&0|
+|Kolay Ad|[Çıkarılabilir depolama Access Control](device-control-removable-storage-access-control.md)|Windows|Cihaza bağlı bir dize, örneğin Genel Flash Disk USB Cihazı|
+|Satıcı Kimliği / Ürün Kimliği|[Çıkarılabilir depolama Access Control](device-control-removable-storage-access-control.md)|Windows <p> macOS|Satıcı Kimliği, USB komitenin satıcıya atadığınız dört basamaklı satıcı kodudur. Ürün Kimliği, satıcının cihaza atadığınız dört basamaklı ürün kodudur; Destek joker karakteri.|
+|Seri NumarasıKimlik|[Çıkarılabilir depolama Access Control](device-control-removable-storage-access-control.md)|Windows <p> macOS |Örneğin, `<SerialNumberId>002324B534BCB431B000058A</SerialNumberId>`|

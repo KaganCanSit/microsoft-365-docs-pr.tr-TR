@@ -15,12 +15,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
 description: Yöneticilerin Hızlı Bloomberg sohbet aracından Hızlı Bloomberg sohbet aracından içeri aktarma ve arşivlemek için veri bağlayıcısı ayarlamayı ve bu bağlayıcıyı Microsoft 365.
-ms.openlocfilehash: 14495a219ce73b8d0cd4e937b4feae9aa2210da1
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 4205c678a6445203e4a057aab3b7c9d2c1acd1d8
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63313335"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569985"
 ---
 # <a name="set-up-a-connector-to-archive-instant-bloomberg-data"></a>Instant Bloomberg verilerini arşivlemek için bir bağlayıcı ayarlama
 
@@ -135,9 +135,15 @@ Son adım, bu bağlantıda bir Instant Bloomberg bağlayıcısı Microsoft 365 u
 
     - **SFTP bağlantı noktası:** Bloomberg SFTP sitesi bağlantı noktası numarası. Bağlayıcı bu bağlantı noktasını SFTP sitesine bağlanmak için kullanır.
 
-5. İçeri **aktaracak veri türlerini seçin sayfasında** , İletiler'den ayrı olarak içeri aktaracak gerekli veri türlerini **seçin**
+5. Kullanıcı **tanımla sayfasında** , verilerini içeri aktarma işlemi yapmak istediğiniz kullanıcıları belirtmek için aşağıdaki seçeneklerden birini belirtin.
 
-6. Hızlı **Bloomberg kullanıcılarını Yeni kullanıcılarla eşleme Microsoft 365**, otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlama
+    - **Kuruluş 2013'te çalışan tüm kullanıcılar**. Tüm kullanıcıların verilerini içeri aktar için bu seçeneği belirtin.
+
+    - **Yalnızca Mahkeme tutmada olan kullanıcılar**. Yalnızca posta kutuları Mahkeme tutmada bulunan kullanıcılara ait verileri içeri aktarmayı bu seçeneği belirtin. Bu seçenek, verileri LitigationHoldEnabled özelliği True olarak ayarlanmış kullanıcı posta kutularına içeri aktarmaktadır. Daha fazla bilgi için [bkz. Mahkeme tutma oluşturma](create-a-litigation-hold.md).
+
+6. İçeri **aktaracak veri türlerini seçin sayfasında** , İletiler'den ayrı olarak içeri aktaracak gerekli veri türlerini **seçin**
+
+7. Hızlı **Bloomberg kullanıcılarını Yeni kullanıcılarla eşleme Microsoft 365**, otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlama
 
    > [!NOTE]
    > Bağlayıcı, sohbet iletisi öğelerini belirli bir kullanıcının posta kutusuna içeri aktarıyor. Belirli bir kullanıcının posta **kutusunda InstantBloomberg** adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *CorporateEmailAddress özelliğinin değerini kullanarak* bunu yapar. Her sohbet iletisi bu özelliği içerir ve özellik, sohbet iletisi her katılımcının e-posta adresiyle doldurulur. *CorporateEmailAddress* özelliğinin değerini kullanarak otomatik kullanıcı eşlemeye ek olarak, CSV eşleme dosyasını karşıya yükerek özel eşleme de tanımlayabilirsiniz. Eşleme dosyası, her kullanıcı için Bloomberg UUID'sini Microsoft 365 posta kutusu adresini içerir. Otomatik kullanıcı eşlemesini etkinleştirir ve özel eşleme sağlarsanız, bağlayıcının önce özel eşleme dosyasına bakacak her sohbet öğesi için özel eşleme dosyası görüntüler. Kullanıcının Bloomberg UUID'sine karşılık gelen geçerli bir kullanıcı Microsoft 365 bulamazsa, bağlayıcıda sohbet *öğesinin CorporateEmailAddress* özelliği kullanılır. Bağlayıcı, özel eşleme dosyasında veya Microsoft 365 öğenin *CorporateEmailAddress* özelliğinde geçerli bir kullanıcı bulamazsa, öğe aktarılmaz.
@@ -215,11 +221,17 @@ Bloomberg SFTP siteniz yapılandırıldıktan sonra, sıradaki adım bu bağlant
 
 7. Bağlantı başarıyla doğrulandıktan sonra, Sonraki'ne **tıklayın**.
 
-8. Hızlı **Bloomberg kullanıcılarını Harita Microsoft 365 sayfasında** otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlar.
+8. Kullanıcı **tanımla sayfasında** , verilerini içeri aktarma işlemi yapmak istediğiniz kullanıcıları belirtmek için aşağıdaki seçeneklerden birini belirtin.
+
+    - **Kuruluş 2013'te çalışan tüm kullanıcılar**. Tüm kullanıcıların verilerini içeri aktar için bu seçeneği belirtin.
+
+    - **Yalnızca Mahkeme tutmada olan kullanıcılar**. Yalnızca posta kutuları Mahkeme tutmada bulunan kullanıcılara ait verileri içeri aktarmayı bu seçeneği belirtin. Bu seçenek, verileri LitigationHoldEnabled özelliği True olarak ayarlanmış kullanıcı posta kutularına içeri aktarmaktadır. Daha fazla bilgi için [bkz. Mahkeme tutma oluşturma](create-a-litigation-hold.md).
+
+9. Hızlı **Bloomberg kullanıcılarını Harita Microsoft 365 sayfasında** otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlar.
 
    > [!NOTE]
    > Bağlayıcı, sohbet iletisi öğelerini belirli bir kullanıcının posta kutusuna içeri aktarıyor. Belirli bir kullanıcının posta **kutusunda InstantBloomberg** adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *CorporateEmailAddress özelliğinin değerini kullanarak* bunu yapar. Her sohbet iletisi bu özelliği içerir ve özellik, sohbet iletisi her katılımcının e-posta adresiyle doldurulur. *CorporateEmailAddress* özelliğinin değerini kullanarak otomatik kullanıcı eşlemeye ek olarak, CSV eşleme dosyasını karşıya yükerek özel eşleme de tanımlayabilirsiniz. Eşleme dosyası, her kullanıcı için Bloomberg UUID'sini Microsoft 365 posta kutusu adresini içerir. Otomatik kullanıcı eşlemesini etkinleştirir ve özel eşleme sağlarsanız, bağlayıcının önce özel eşleme dosyasına bakacak her sohbet öğesi için özel eşleme dosyası görüntüler. Kullanıcının Bloomberg UUID'sine karşılık gelen geçerli bir kullanıcı Microsoft 365 bulamazsa, bağlayıcıda sohbet *öğesinin CorporateEmailAddress* özelliği kullanılır. Bağlayıcı, özel eşleme dosyasında veya Microsoft 365 öğenin *CorporateEmailAddress* özelliğinde geçerli bir kullanıcı bulamazsa, öğe aktarılmaz.
 
-9. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için** Son'a tıklayın.
+10. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için** Son'a tıklayın.
 
-10. Yeni bağlayıcı **için içeri aktarma** işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin. Bağlayıcı hakkında bilgi içeren çıkış sayfasını görüntülemek için bağlayıcıya tıklayın.
+11. Yeni bağlayıcı **için içeri aktarma** işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin. Bağlayıcı hakkında bilgi içeren çıkış sayfasını görüntülemek için bağlayıcıya tıklayın.

@@ -15,20 +15,20 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: d57097d255b9f64782320dbd380f90b7a98573cb
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: df5cbf5297a17dafb80a93ed49c7f7d81bc49d68
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63008091"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474387"
 ---
-# <a name="view-and-organize-the-microsoft-defender-for-endpoint-incidents-queue"></a>Uç Nokta Olayları için Microsoft Defender'ı görüntüleme ve düzenleme
+# <a name="view-and-organize-the-microsoft-defender-for-endpoint-incidents-queue"></a>Olay kuyruğu Uç Nokta için Microsoft Defender ve düzenleme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
@@ -47,7 +47,7 @@ Olaylar sırası görünümünü özelleştirmek için seçebileceğiniz çeşit
 - Sayfalar arasında gezinme
 - Filtre uygulama
 
-![Olay kuyruğu resmi.](images/atp-incident-queue.png)
+:::image type="content" source="images/atp-incident-queue.png" alt-text="Olaylar sırası" lightbox="images/atp-incident-queue.png":::
 
 ## <a name="sort-and-filter-the-incidents-queue"></a>Olayları sırala ve filtrele
 Olay listesini sınırlandırarak daha odaklanmış bir görünüm elde etmek için aşağıdaki filtreleri uygulayabilirsiniz.
@@ -85,6 +85,6 @@ Olayın kapsamını bir bakışta anlamak için, olay adları etkilenen uç nokt
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Olay sırası](/microsoft-365/security/defender-endpoint/view-incidents-queue)
-- [Olayları yönetme](manage-incidents.md)
-- [Olayları araştırma](investigate-incidents.md)
+- [Olayları yönetin](manage-incidents.md)
+- [Olayları araştırın](investigate-incidents.md)
 

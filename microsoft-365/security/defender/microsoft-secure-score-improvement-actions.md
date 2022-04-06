@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: b969efd9d83fa34ded01f8be7db7aaf4db971128
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 8991c2aca277d2a08e5f8924a5e5cb354df6dc1f
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498651"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569448"
 ---
 # <a name="assess-your-security-posture-with-microsoft-secure-score"></a>Microsoft Güvenli Puanı ile güvenlik nedenlerinizi değerlendirin
 
@@ -80,7 +80,7 @@ Belirli bir geliştirme eylemlerini seçin, tam sayfa açılır sayfası görün
 
 Eylemi tamamlamak için birkaç seçenek vardır:
 
-- Yapılandırma **ekranına** gitmek ve değişikliği yapmak için Yönet'i seçin. Bundan sonra, eylemin değer olduğu noktaları hareket hareket ettirecek şekilde kazanırsınız. Puanların güncelleştirilsi genellikle yaklaşık 24 saat sürer.
+- Yapılandırma **ekranına Microsoft 365 Defender** değişikliği yapmak için Aşağıdaki ekranda yönet'i seçin. Bundan sonra, eylemin değer olduğu noktaları uçarak çıkışta görünür hale gelirsiniz. Puanların güncelleştirilsi genellikle yaklaşık 24 saat sürer.
 
 - Geliştirme **eyleminin** doğrudan bağlantısını kopyalamak için Paylaş'ı seçin. Bağlantıyı paylaşmak için e-posta, e-posta adresi veya posta Microsoft Teams da Microsoft Planner.
 

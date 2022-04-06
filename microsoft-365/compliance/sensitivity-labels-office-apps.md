@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Masaüstü, mobil ve web için Office uygulamalarının duyarlılık etiketlerini yönetmeye ilişkin BILGI.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 4a2b68e3e85b2c621a002ce762b7ec59ce31c891
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: 2bfd7dfd0cf56c8546cd21e5127bc8ef432e1cc5
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63712762"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64594784"
 ---
 # <a name="manage-sensitivity-labels-in-office-apps"></a>Office uygulamalarında duyarlılık etiketlerini yönetme
 
@@ -29,13 +29,13 @@ ms.locfileid: "63712762"
 
 Microsoft 365 uyumluluk merkezi veya eşdeğer [](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) etiketleme merkezinden duyarlılık etiketleri yayımlaydıktan sonra, kullanıcılar verileri oluşturduktan veya düzenlenerek sınıflandırmak ve korumak için Office uygulamaları içinde görünmeye başlar.
 
-Uygulamalarda duyarlılık etiketlerini başarıyla yönetmenize yardımcı olması için bu Office kullanın. Örneğin, yerleşik etiketlemeyi desteklemek için ihtiyacınız olan uygulamaların en düşük sürümlerini tanımlayabilir ve Azure Information Protection birleşik etiketleme istemcisiyle etkileşimleri ve diğer uygulama ve hizmetlerle uyumluluğu anlıyoruz.
+Uygulamalarda duyarlılık etiketlerini başarıyla yönetmenize yardımcı olması için bu Office kullanın. Örneğin, yerleşik etiketlemeyi desteklemek için ihtiyacınız olan uygulamaların en düşük sürümlerini tanımlayabilir ve Azure Information Protection birleşik etiketleme istemcisiyle etkileşimleri ve diğer uygulamalar ve hizmetlerle uyumluluğu anlıyoruz.
 
 ## <a name="labeling-client-for-desktop-apps"></a>Masaüstü uygulamaları için etiketleme istemcisi
 
 Windows Mac için Office masaüstü uygulamalarına yerleşik olarak Windows duyarlılık etiketlerini kullanmak için, Office. Bu etiket istemcisi bazen "Kalıcı" olarak da adlandırılan Office tek başına Office desteklemez.
 
-Office abonelik sürümleri için Kurumlar için Microsoft 365 Uygulamaları'e yükselte Windows, [Azure Information Protection birleşik etiketleme istemcisini kullanabilirsiniz](/azure/information-protection/rms-client/aip-clientv2).
+Office abonelik sürümleri için Kurumlar için Microsoft 365 Uygulamaları'e yükselte Office, Windows bilgisayarlar için [Azure Information Protection birleşik etiketleme istemcisini kullanabilirsiniz](/azure/information-protection/rms-client/aip-clientv2).
 
 ## <a name="support-for-sensitivity-label-capabilities-in-apps"></a>Uygulamalarda duyarlılık etiketi özellikleri desteği
 
@@ -47,7 +47,7 @@ Yeni sürümler Office uygulamaları, farklı güncelleştirme kanalları için 
 
 Office iOS ve Android için Office: Duyarlılık etiketleri yerleşik olarak [Office uygulaması.](https://www.microsoft.com/en-us/microsoft-365/blog/2020/02/19/new-office-app-android-ios-available/)
 
-Ek özellikler, yalnızca bu bilgisayarlarda çalışan Azure Information Protection birleşik etiketleme istemcisini Windows kullanılabilir. Bu ayrıntılar için bkz[. Bilgisayar etiket istemcilerini Windows karşılaştırma](/azure/information-protection/rms-client/use-client#compare-the-labeling-clients-for-windows-computers).
+Azure Birleşik Etiket İstemcisi'Information Protection yalnızca bu bilgisayarlarda çalışan birleşik etiketleme istemcisini Windows kullanılabilir. Bu ayrıntılar için bkz[. Bilgisayar etiket istemcilerini Windows karşılaştırma](/azure/information-protection/rms-client/use-client#compare-the-labeling-clients-for-windows-computers).
 
 > [!TIP]
 > Tablolarda en düşük sürümleri sahip olduğunuz sürümlerle karşılaştırıldığında, baştaki sıfırları yok bırakmak için sürüm sürümlerinin yaygın uygulama olduğunu unutmayın.
@@ -65,7 +65,7 @@ Listelenen sayılar, her Office için gereken en düşük uygulama sürümü say
 |-----------|-------:|----|----|--------|----|
 |[Etiketi el ile uygulama, değiştirme veya kaldırma](https://support.microsoft.com/en-us/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)| Güncel Kanal: 1910+ <br /><br> Aylık Enterprise Kanalı: 1910+ <br /><br> Semi-Annual Enterprise Kanalı: 2002+ | 16.21+     | 2.21+ | 16.0.11231+ | [Evet - kabul etmek](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Yeni belgelere varsayılan](sensitivity-labels.md#what-label-policies-can-do) etiket uygulama                                         | Güncel Kanal: 1910+ <br /><br> Aylık Enterprise Kanalı: 1910+ <br /><br> Semi-Annual Enterprise Kanalı: 2002+ | 16.21+     | 2.21+ | 16.0.11231+ | [Evet - kabul etmek](sensitivity-labels-sharepoint-onedrive-files.md)                                                        |
-|[Var olan belgelere](sensitivity-labels.md#what-label-policies-can-do) varsayılan etiket uygulama | Önizleme: Geçerli Kanala [(Önizleme) Geliyor](https://office.com/insider) | Önizleme: Geçerli Kanala [(Önizleme) Geliyor](https://office.com/insider) | Gözden geçirme altında | Gözden geçirme altında | Rolling out: [Yes - opt-in](sensitivity-labels-sharepoint-onedrive-files.md) |
+|[Var olan belgelere](sensitivity-labels.md#what-label-policies-can-do) varsayılan etiket uygulama | Önizleme: Geçerli Kanala [(Önizleme) Geliyor](https://office.com/insider) | Önizleme: Geçerli Kanala [(Önizleme) Geliyor](https://office.com/insider) | Gözden geçirme altında | Gözden geçirme altında | [Evet - kabul etmek](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Etiketi değiştirmek için gerekçe gerektirme](sensitivity-labels.md#what-label-policies-can-do)                     | Güncel Kanal: 1910+ <br /><br> Aylık Enterprise Kanalı: 1910+  <br /><br> Semi-Annual Enterprise Kanalı: 2002+ | 16.21+     | 2.21+ | 16.0.11231+ | [Evet - kabul etmek](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Özel yardım sayfasına yardım bağlantısı sağlama](sensitivity-labels.md#what-label-policies-can-do)                       | Güncel Kanal: 1910+ <br /><br> Aylık Enterprise Kanalı: 1910+ <br /><br> Semi-Annual Enterprise Kanalı: 2002+ | 16.21+     | 2.21+ | 16.0.11231+ | [Evet - kabul etmek](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[İçeriği işaretleme](sensitivity-labels.md#what-sensitivity-labels-can-do)                                              | Güncel Kanal: 1910+ <br /><br> Aylık Enterprise Kanalı: 1910+ <br /><br> Semi-Annual Enterprise Kanalı: 2002+ | 16.21+     | 2.21+ | 16.0.11231+ | [Evet - kabul etmek](sensitivity-labels-sharepoint-onedrive-files.md) |
@@ -115,19 +115,19 @@ Yerleşik Office istemcisi, duyarlılık etiketlerini ve duyarlılık etiketi il
 
 Yerleşik Office istemcisini kullanmak için, uyumluluk merkezinden kullanıcılara yayımlanmış bir veya daha fazla etiket ilkeniz [](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) ve desteklenen bir etiket [Office.](#support-for-sensitivity-label-capabilities-in-apps)
 
-Bu koşulların her ikisi de karşısa, ancak bu uygulamalara ve uygulamalara yerleşik etiketleri kapatmanız Windows Office, aşağıdaki Grup İlkesi ayarını kullanın:
+Bu koşulların her ikisi de karşısa, ancak Windows Office uygulamalarına yerleşik etiketleri kapatmanız gerekirse, aşağıdaki son grup ilkesi kullanın:
 
 1. Kullanıcı Yapılandırması **/Yönetim Şablonları/Microsoft Office 2016/Güvenlik Ayarları'na Ayarlar**.
 
 2. Duyarlılık **etiketlerini uygulamak ve 0'a Office için Duyarlılık özelliğini Office'i** **ayarlayın**. 
  
-Grup İlkesi kullanarak veya Office bulut [ilkesi hizmetini kullanarak bu ayarı dağıtın](/DeployOffice/overview-office-cloud-policy-service). Bu ayar, söz Office yeniden başlatıldığında etkin olur. 
+Grup ilkesi kullanarak veya Office ilke [hizmetini kullanarak bu ayarı dağıtın](/DeployOffice/overview-office-cloud-policy-service). Bu ayar, söz Office yeniden başlatıldığında etkin olur. 
 
 Bu ayar Windows Office uygulamalarına özgü olduğundan, Windows'ta duyarlılık etiketlerini (Power BI gibi) veya diğer platformları (macOS, mobil cihazlar ve tabletler gibi) destekleyen diğer Web için Office. Kullanıcıların bazılarının veya tüm uygulamaların, tüm platformların duyarlılık etiketlerini görmelerini ve kullanmalarını istemiyorsanız, bu kullanıcılara duyarlılık etiketi ilkesi atamayın. 
 
-### <a name="office-built-in-labeling-client-and-the-azure-information-protection-client"></a>Office etiketleme istemcisini ve Azure Information Protection istemcisini içerir
+### <a name="office-built-in-labeling-client-and-the-azure-information-protection-client"></a>Office etiketleme istemcisini ve Azure Information Protection istemcisini edinin
 
-Kullanıcıların Windows bilgisayarlarında [Azure Information Protection (AIP)](/azure/information-protection/rms-client/aip-clientv2) istemcisi yüklüyse, onları destekleyen Windows Office varsayılan olarak [yerleşik etiketler kapalıdır](#labeling-client-for-desktop-apps). AIP istemcisi tarafından kullanılan yerleşik Office bir eklenti kullanmamalarının nedeni, daha fazla kararlılık ve daha iyi performanstır. Ayrıca, gelişmiş sınıflayıcılar gibi en son özellikleri de desteklerler.
+Kullanıcıların Windows bilgisayarlarında [Azure Information Protection (AIP)](/azure/information-protection/rms-client/aip-clientv2) istemcisi yüklüyse, varsayılan olarak onları destekleyen Windows Office uygulamalarda yerleşik [etiketler kapalıdır](#labeling-client-for-desktop-apps). AIP istemcisi tarafından kullanılan yerleşik Office bir eklenti kullanmamalarının nedeni, daha fazla kararlılık ve daha iyi performanstır. Ayrıca, gelişmiş sınıflayıcılar gibi en son özellikleri de desteklerler.
 
 AIP istemcisiyle seçenekleri etiketleme hakkında daha fazla bilgi edinmek için bkz. Office uygulamaları için AIP eklentisinde yerleşik [MIP etiketlemeyi seçme.](sensitivity-labels-aip.md)
 
@@ -135,13 +135,13 @@ AIP istemcisiyle seçenekleri etiketleme hakkında daha fazla bilgi edinmek içi
 
 Word, Excel ve PowerPoint dosyaları için yerleşik etiketlemesi olan Office uygulamaları Open XML biçimini (.docx ve .xlsx gibi) destekler ancak Microsoft Office 97-2003 biçimi (.doc ve .xls gibi), Belge Biçimini Aç (.odt ve .ods gibi) veya diğer biçimler için desteklemez. Bir dosya türü yerleşik etiketleme için desteklenmiyorsa Duyarlılık düğmesi dosya dosyasında Office uygulaması.
 
-Azure Information Protection birleşik etiketleme istemcisi hem Open XML biçimini hem de Microsoft Office 97-2003 biçimini destekler. Daha fazla bilgi için, [o istemcinin yönetici kılavuzunda Azure Information Protection](/azure/information-protection/rms-client/clientv2-admin-guide-file-types) birleşik etiketleme istemcisi tarafından desteklenen dosya türlerine bakın.
+Azure Information Protection birleşik etiketleme istemcisi hem Open XML biçimini hem de Microsoft Office 97-2003 biçimini destekler. Daha fazla bilgi için bkz[. Azure](/azure/information-protection/rms-client/clientv2-admin-guide-file-types) Information Protection tarafından desteklenen dosya türleri, o istemcinin yönetici kılavuzundan birleşik etiketleme istemcisi.
 
 Diğer etiketleme çözümleri için, desteklenen dosya türleri için onların belgelerine bakın.
 
 ## <a name="protection-templates-and-sensitivity-labels"></a>Koruma şablonları ve duyarlılık etiketleri
 
-Yerleşik etiketleme [kullanırken](/azure/information-protection/configure-policy-templates), Office 365 İleti Şifrelemesi için tanımladığınız şablonlar gibi Office tanımlı koruma şablonları Office uygulamalarda görünmez. Bu basitleştirilmiş deneyim, şifreleme etkinleştirilmiş duyarlılık etiketlerine aynı ayarların dahil olması nedeniyle koruma şablonu seçmeye gerek olmadığını yansıtıyor.
+İleti [Şifrelemesi](/azure/information-protection/configure-policy-templates) için tanımladığınız şablonlar gibi yönetici tanımlı koruma Office 365, yerleşik etiketleme kullanırken Office uygulamalarının içinde görünmez. Bu basitleştirilmiş deneyim, şifreleme etkinleştirilmiş duyarlılık etiketlerine aynı ayarların dahil olması nedeniyle koruma şablonu seçmeye gerek olmadığını yansıtıyor.
 
 EncryptionTemplateId parametresiyle [New-Label](/powershell/module/exchange/new-label) cmdlet'ini kullanarak var olan bir şablonu *duyarlılık etiketine dönüştürebilirsiniz* .
 
@@ -175,7 +175,7 @@ Anlamlı raporlamayla daha tutarlı bir etiket deneyimi için, kullanıcılara y
 - Kullanıcıların seçmesini engellemek için IRM ayarlarını devre dışı bırakmayı düşünebilirsiniz:
     - Outlook için Windows: 
         - Kayıt defteri anahtarları (DWORD:00000001) *DisableDNF ve* *DisableEO* HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM
-        - Şifrele düğmesi için Grup İlkesi **ayarının Varsayılan şifrelemeyi yapılandır seçeneğinin** yapılandırılmamış olduğundan emin olun
+        - Şifrele düğmesi grup ilkesi Varsayılan **şifrelemeyi yapılandır ayarının** yapılandırılmamış olduğundan emin olun
     - Mac için Outlook: 
         - Keys *DisableEncryptOnly ve* *DisableDoNotForward* güvenlik ayarları Belgelenmiş In [Set preferences for Mac için Outlook](/DeployOffice/mac/preferences-outlook)
     - Web üzerinde Outlook: 
@@ -204,9 +204,9 @@ Gizli etiketi şifrelemeyi **ve Genel** etiketinin şifreleme uygulamayacağı *
 
 **RMS ile** desteklenen uygulamalar: Duyarlılık etiketlerini desteklemez, RMS tarafından desteklenen bir uygulamada etiketli ve şifrelenmiş bir belge veya [e-posta](/azure/information-protection/requirements-applications#rms-enlightened-applications) açarsanız, uygulama yine de şifreleme ve hak yönetimini zorunlu kılınır.
 
-**Azure Information Protection** istemcisiyle: Azure Information Protection istemcisini kullanarak belgelere ve e-postalara uygulayan duyarlılık etiketlerini Office Azure Information Protection istemcisini kullanarak görüntüp değiştirebilirsiniz.
+**Azure Information Protection** istemcisiyle: Azure Information Protection istemcisini kullanarak Office yerleşik etiketleme istemcisiyle belgelere ve e-postalara uygulayan duyarlılık etiketlerini görüntüp değiştirebilirsiniz.
 
-**E-postaların diğer Office**: Yetkili kullanıcılar etiketli belgeleri ve e-postaları diğer Office. Bununla birlikte, etiketi yalnızca desteklenen sürümlerde veya Azure Information Protection Office istemcisini kullanarak  görüntüp değiştirebilirsiniz. Desteklenen Office uygulaması sürümleri önceki bölümde [listelenir](#support-for-sensitivity-label-capabilities-in-apps).
+**E-postaların diğer Office**: Yetkili kullanıcılar etiketli belgeleri ve e-postaları diğer Office. Bununla birlikte, etiketi yalnızca desteklenen sürümlerde veya Azure Office istemcisini kullanarak Information Protection değiştirebilirsiniz. Desteklenen Office uygulaması sürümleri önceki bölümde [listelenir](#support-for-sensitivity-label-capabilities-in-apps).
 
 ## <a name="support-for-sharepoint-and-onedrive-files-protected-by-sensitivity-labels"></a>Duyarlılık SharePoint tarafından korunan OneDrive ve dosya ekleme desteği
 
@@ -252,13 +252,13 @@ Bununla birlikte, yineleme gecikme süresi nedeniyle bu senaryoda otomatik konuk
 
 ### <a name="conditional-access-policies"></a>Koşullu Erişim ilkeleri
 
-Koşullu Erişim ilkeleri, [Azure Active Directory uygulanmışsa](/azure/active-directory/conditional-access/overview), bu ilkelerin yapılandırmasını kontrol edin. İlkeler Bilgi **Koruması Microsoft Azure** ve ilke dış kullanıcılara genişletiliyorsa, bu dış kullanıcıların kendi kiracılarında Azure AD hesapları olsa bile kiracıda konuk hesapları olmalıdır.
+Koşullu Erişim ilkeleri, [Azure Active Directory uygulanmışsa](/azure/active-directory/conditional-access/overview), bu ilkelerin yapılandırmasını kontrol edin. İlkeler dış **Microsoft Azure Information Protection** ilkeler dış kullanıcılara genişletiliyorsa, kendi kiracılarında Azure AD hesapları olsa bile bu dış kullanıcıların kiracıda bir konuk hesabı olmalıdır.
 
 Bu konuk hesabı olmadan, şifreli belgeyi açıp bir hata iletisiyle onu göremz. İleti metni, Azure Active Directory Dış kullanıcı olarak kiracıya hesabının eklenmeleri gerektiğini ve bu senaryo için Farklı bir kullanıcı hesabıyla oturum açma ve yeniden oturum açma bilgilerini yanlış olarak **bildirebilirsiniz**.
 
-Kiracınız içinde, etiketleriniz tarafından şifrelenmiş belgeleri açması gereken dış kullanıcılar için konuk hesapları oluşturamazsanız ve yapılandırmazsanız, Azure Information Protection'ı Koşullu Erişim ilkelerinden kaldırmanız veya dış kullanıcıları ilkelerden çıkarmanız gerekir.
+Kiracınız içinde, etiketleriniz tarafından şifrelenmiş belgeleri açması gereken dış kullanıcılar için konuk hesapları oluşturamazsanız ve yapılandırmazsanız, Azure Information Protection'yi Koşullu Erişim ilkelerinden kaldırmanız veya dış kullanıcıları ilkelerden çıkarmanız gerekir.
 
-Duyarlılık etiketleri tarafından kullanılan şifreleme hizmeti olan Koşullu Erişim ve Azure Information Protection hakkında daha fazla bilgi için sık sorulan [Azure Information Protection'ın](/azure/information-protection/faqs#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work) koşullu erişim için kullanılabilir bir bulut uygulaması olarak listelenmiş olduğunu görüyorum. Bu nasıl çalışır?
+Duyarlılık etiketleri tarafından kullanılan şifreleme hizmeti olan Koşullu Erişim ve Azure Information Protection hakkında daha fazla bilgi için sık sorulan soruya bakın. [Azure Information Protection'i](/azure/information-protection/faqs#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work) koşullu erişim için kullanılabilir bir bulut uygulaması olarak listelenmiş olarak görüyorum. Bu nasıl çalışır?
 
 ## <a name="when-office-apps-apply-content-marking-and-encryption"></a>Uygulama Office içerik işaretleme ve şifreleme uygulama
 
@@ -277,7 +277,7 @@ Bu dosyalar bir Office masaüstü uygulamasında açıldığında, içerik işar
 
 Bazı uygulamaların dışında duyarlılık Office senaryolar şunlardır:
 
-- Azure Information Protection birleşik etiketleme istemcisini tarayıcı, Dosya Gezgini ve PowerShell 
+- Azure Birleşik Dosya Gezgini istemcisinin tarayıcı, Information Protection ve PowerShell 
 
 - E-posta ve posta SharePoint için otomatik OneDrive
 
@@ -344,7 +344,7 @@ Diğer dinamik görsel işaretler gibi söz dizimi de büyük/harfe duyarlıdır
 
 > [!IMPORTANT]
 > 
-> [Azure Information Protection birleşik etiketleme istemcisi,](/azure/information-protection/rms-client/install-unifiedlabelingclient-app) zorunlu etiketleme olarak da bilinen bu yapılandırmayı destekler. En düşük sürümler için Office sayfasındaki [özellikler bölümünde yer](#support-for-sensitivity-label-capabilities-in-apps) alan tablolara bakın.
+> [Azure Information Protection birleşik etiketleme istemcisi](/azure/information-protection/rms-client/install-unifiedlabelingclient-app), zorunlu etiketleme olarak da bilinen bu yapılandırmayı destekler. En düşük sürümler için Office sayfasındaki [özellikler bölümünde yer](#support-for-sensitivity-label-capabilities-in-apps) alan tablolara bakın.
 >
 > E-postalarda değil de, belgeler için zorunlu etiketleme kullanmak için, bu belgelere özgü seçeneklerin nasıl yapılandır Outlook sonraki bölümde verilen yönergelere bakın.
 > 
@@ -371,13 +371,13 @@ Bu ayarın ne zaman kullanımına ilişkin kılavuz için ilke ayarlarıyla ilgi
 > [!NOTE]
 > Zorunlu etiketlemeye ek olarak belgeler ve e-postalar için varsayılan etiket ilkesi ayarını da kullanıyorsanız: 
 >
-> Varsayılan etiket, zorunlu etiketlemeye göre her zaman önceliğe sahip olur. Bununla birlikte, belgeler için Azure Information Protection birleşik etiketleme istemcisi tüm etiketsiz belgelere varsayılan etiketi uygularken, yerleşik etiketleme, etiketsiz var olan belgelere değil yeni belgelere varsayılan etiketi uygular. Davranış olarak bu farklılık, varsayılan etiket ayarıyla zorunlu etiketlemeyi kullanırsanız, kullanıcıların yerleşik etiketlemeyi Azure Information Protection birleşik etiketleme istemcisini kullanmalarından daha sık kullanmaları için daha sık duyarlılık etiketi uygulamalarının istenecek olması anlamına gelir.
+> Varsayılan etiket, zorunlu etiketlemeye göre her zaman önceliğe sahip olur. Bununla birlikte, belgeler için Azure Information Protection birleşik etiketleme istemcisi tüm etiketsiz belgelere varsayılan etiketi uygularken, yerleşik etiketleme, etiketsiz var olan belgelere değil yeni belgelere varsayılan etiketi uygular. Bu davranış farkı, varsayılan etiket ayarıyla zorunlu etiketlemeyi kullanırsanız, kullanıcıların yerleşik etiketlemeyi Azure Information Protection birleşik etiketleme istemcisini kullanmalarından daha sık kullanmaları istenecek.
 > 
 > Şimdi de Office olan ve var olan belgeler için varsayılan etiketi destekleyen yerleşik uygulamaları kullanmanın bir diğer adı. Ayrıntılar için Word, [Excel](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint) ve PowerPoint.
 
 ## <a name="outlook-specific-options-for-default-label-and-mandatory-labeling"></a>Outlook ve zorunlu etiketleme için özel seçenekler
 
-Yerleşik etiketleme için, bu sayfada Outlook için özellikler tablosu ve Varsayılan etiket ve zorunlu etiketleme için farklı ayarlar satırlarını kullanarak [Outlook'in](#sensitivity-label-capabilities-in-outlook) bu özellikleri destekleyen en düşük sürümlerini **bulun**. Azure Information Protection birleşik etiketleme istemcisinin tüm sürümleri, bu Outlook seçenekleri destekler.
+Yerleşik etiketleme için, bu sayfada Outlook için özellikler tablosu ve Varsayılan etiket ve zorunlu etiketleme için farklı ayarlar satırlarını kullanarak [Outlook'in](#sensitivity-label-capabilities-in-outlook) bu özellikleri destekleyen en düşük sürümlerini **bulun**. Azure'un tüm sürümleri Information Protection birleştirilmiş etiketleme istemcisi bu Outlook seçenekleri destekler.
 
 Outlook uygulaması, belgeler için varsayılan etiket ayarından farklı bir varsayılan etiket ayarını desteklediğinde:
 
@@ -394,7 +394,7 @@ Outlook uygulaması zorunlu etiketlemeyi kapatmayı desteklemediğinde: Kullanı
 > [!NOTE]
 > [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) veya [New-LabelPolicy](/powershell/module/exchange/new-labelpolicy) cmdlet'lerini kullanarak PowerShell gelişmiş ayarlarını **OutlookDefaultLabel** ve **DisableMandatoryInOutlook'u** yapılandırdınız:
 > 
-> Bu PowerShell ayarları için seçtiğiniz değerler uyumluluk merkezinde etiket ilkesi yapılandırmasına yansıtılır ve bu ayarları destekleyen Outlook uygulamaları için otomatik olarak çalışır. Diğer PowerShell gelişmiş ayarları, yalnızca Azure Information Protection birleşik etiketleme istemcisi için desteklenmiş olarak kalır.
+> Bu PowerShell ayarları için seçtiğiniz değerler uyumluluk merkezinde etiket ilkesi yapılandırmasına yansıtılır ve bu ayarları destekleyen Outlook uygulamaları için otomatik olarak çalışır. Diğer PowerShell gelişmiş ayarları Azure için yalnızca birleşik Information Protection istemci için destek kalır.
 
 ## <a name="auditing-labeling-activities"></a>Etiket etkinliklerini denetleme
 

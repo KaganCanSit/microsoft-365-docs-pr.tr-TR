@@ -22,12 +22,12 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.openlocfilehash: 0bd86f7ba05ce04743f547292105875f3b8234b1
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: e4ac7636b019b0e8c1d00487e95335ede4600d85
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499077"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64570051"
 ---
 # <a name="the-action-center"></a>İşlem merkezi
 
@@ -82,7 +82,7 @@ Uygun izinlere ve aşağıdaki aboneliklerden bir veya birden fazlasına sahipsa
 
 İşlem merkezinde verileri özelleştirilebilir, sıra koruma, filtreleme ve dışarı aktarabilirsiniz.
 
-:::image type="content" source="../../media/m3d-action-center-columnsfilters.png" alt-text="İşlem Merkezi'nin sıralama, filtreleme ve özelleştirme özellikleri." lightbox="../../media/m3d-action-center-columnsfilters.png":::
+:::image type="content" source="../../media/m3d-action-center-columnsfilters.png" alt-text="İşlem Merkezi'nin sıralama, filtreleme ve özelleştirme özellikleri" lightbox="../../media/m3d-action-center-columnsfilters.png":::
 
 - Öğeleri artan veya azalan düzende sıralamak için bir sütun başlığı seçin.
 - Son gün, hafta, 30 gün veya 6 aya yönelik verileri görüntülemek için zaman süresi filtresini kullanın.

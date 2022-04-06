@@ -17,19 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: İlkelere uygulanacak bekletme ilkeleri hakkında Yammer.
-ms.openlocfilehash: 3759f39a9ef2067d9719d4cf83d73ee7b67ef125
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+ms.openlocfilehash: 48b7f00df2f01d1b84af1962d91551752334c8b1
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63010851"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595114"
 ---
 # <a name="learn-about-retention-for-yammer"></a>Müşteri için bekletme hakkında bilgi Yammer
 
 >*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
-
-> [!NOTE]
-> Bu özellik önizlemededir ve değişebilir.
 
 Bu makaledeki bilgiler Bekletme hakkında bilgi [edin' makalesine](retention.md) özgü bilgiler olduğundan saklama hakkında bilgi Yammer.
 
@@ -61,11 +58,6 @@ Bir bekletme ilkesi kullanarak topluluk iletilerinden ve kullanıcı iletilerind
 Topluluk iletilerinin kopyaları, kullanıcılardan @bahsed olduğunda veya kullanıcıya bir yanıt hakkında bildirim göndererek kullanıcı posta kutularının gizli klasöründe de depolanıyor olabilir. Bu iletiler bir topluluk iletisi olarak kaynaklasa da, kullanıcı iletilerine Yammer saklama ilkesi genellikle topluluk iletilerinin kopyalarını içerir. Sonuç olarak, kullanıcı iletileri özel iletiyle sınırlı değildir.
 
 Bu gizli klasörler, kullanıcılar veya yöneticiler için doğrudan erişilebilir olacak şekilde tasarlanmasa da, uyumluluk yöneticilerinin eBulma araçlarıyla arama yapmak için depolayamları yerine verileri depolar.
-
-> [!IMPORTANT]
-> Topluluk iletilerinin kopyaları kullanıcı posta kutularında da depolanamay olduğundan, Yammer kullanıcı iletilerine bir silme eylemiyle birlikte bir bekletme ilkesi özgün topluluk iletisi Yammer uygulamasındaki kullanıcılar tarafından görülmeyebilir.
-> 
-> Bununla birlikte, özgün iletinin bir kopyası yine topluluk grubu posta kutusunun gizli klasöründe kullanılabilir ve uyumluluk amacıyla eKbulma aramaleriyle erişilebilir.
 
 İletiler Exchange Yammer, yalnızca Yammer iletileri veya kullanıcı iletileri konumları için yapılandırılmış bir **bekletme** **Yammer** içerir.
 
@@ -185,12 +177,12 @@ Kullanıcı dosya depolanmışsa, Yammer ve [klasörlerin](retention-policies-sh
 
 ## <a name="limitations"></a>Sınırlamalar
 
-Yammer bekletme ilkeleri şu anda önizlemededir ve bekletme işlevselliğini en iyi duruma getirme üzerinde sürekli olarak çalışıyoruz. Bu arada, topluluk iletilerini ve kullanıcı iletilerini göndermek üzere bekletmeyi Yammer sınırlamayı da içerir:
+Topluluk iletilerini ve kullanıcı iletilerini bekletmeyi Yammer aşağıdaki sınırlamaya dikkat:
 
 - Bu kullanıcı **iletileri konumu** Yammer **Düzenle'yi** seçerek konuk ve posta kutusu olmayan kullanıcıları görebilirler. Bekletme ilkeleri bu kullanıcılar için tasarlanmamalıdır, bu nedenle onları seçmemelisiniz.
 
 ## <a name="configuration-guidance"></a>Yapılandırma kılavuzu
 
-Bekletmeyi yeni bir web günlüğünde yapılandırmaya Microsoft 365 [bkz. Bilgi yönetimiyle çalışmaya başlama](get-started-with-information-governance.md).
+Bekletmeyi yeni bir web günlüğünde yapılandırmaya Microsoft 365 bkz[. Kullanmaya başlayın yönetimiyle birlikte düzenleme](get-started-with-information-governance.md).
 
 İlke için bir bekletme ilkesi yapılandırmaya hazırsanız, bkz. Yammer [ilkeleri oluşturma ve yapılandırma](create-retention-policies.md).

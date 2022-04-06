@@ -17,12 +17,12 @@ description: Portalda tehditlere yönelik araştırma yapmak ve onları yanıtla
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 959d3d676f07a7816b622d5db53252c846340d2a
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: d21773694e1dc9472a9a8ac566c8eaacc00fcab8
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988140"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682867"
 ---
 # <a name="views-in-threat-explorer-and-real-time-detections"></a>Tehdit Gezgini'nde görünümler ve gerçek zamanlı algılamalar
 
@@ -42,8 +42,6 @@ ms.locfileid: "62988140"
 
 Gezgin'i (veya gerçek zamanlı algılamalar raporunu) ilk kez açarsanız, varsayılan görünüm son 7 gün için e-posta kötü amaçlı yazılım algılamalarını gösterir. Ayrıca bu rapor, Kasa Bağlantıları tarafından algılanan kötü amaçlı URL'ler ve Ekler tarafından algılanan kötü amaçlı dosyalar gibi Office 365 [](safe-links.md)algılamaları için Microsoft Defender [Kasa gösterebilir](safe-attachments.md). Bu rapor, (ücretli P2 aboneliği için Microsoft Defender ile) son 30 gün Office 365 değiştirilebilir. Deneme abonelikleri yalnızca son yedi gün için veri içerir.
 
-****
-
 |Abonelik|Yardımcı Program|Veri Günleri|
 |---|---|---|
 |Office 365 P1 denemesi için Microsoft Defender|Gerçek zamanlı algılamalar|7|
@@ -51,7 +49,6 @@ Gezgin'i (veya gerçek zamanlı algılamalar raporunu) ilk kez açarsanız, vars
 |Office 365 P2 denemesi için ücretli P1 testi Defender için Microsoft Defender Office 365|Tehdit Gezgini|7|
 |Office 365 P2 denemesi için Microsoft Defender|Tehdit Gezgini|7|
 |ücretli Office 365 P2 için Microsoft Defender|Tehdit Gezgini|30|
-|
 
 > [!NOTE]
 > Yakında Gezgini (ve Gerçek zamanlı algılamalar) veri bekletme süresini ve deneme kiracıları için arama sınırını 7 ile 30 gün arasında genişleteceğiz. Bu değişiklik, yol haritası öğesi no. 70544'in bir parçası olarak izlenmektedir ve şu anda bir aşamalı olarak üzerindedir.

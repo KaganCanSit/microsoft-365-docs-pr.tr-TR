@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-mar2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 41ba3bcf31725cd5a9fb8b25bc22b6c8bb591363
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: 7173d45fed25fe1d0d1e93dbcc259046c1f221cd
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64569301"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474277"
 ---
 # <a name="how-automated-investigation-and-response-works-in-microsoft-defender-for-office-365"></a>Otomatik araştırma ve yanıt Çalışma'da Office 365 için Microsoft Defender
 
@@ -77,7 +77,7 @@ Düzeltme, çalışma kitabının son aşamasıdır. Bu aşamada, inceleme ve av
 
 ## <a name="example-a-security-administrator-triggers-an-investigation-from-threat-explorer"></a>Örnek: Güvenlik yöneticisi Threat Explorer'dan gelen bir soruşturmayı tetikler
 
-Bir uyarı tarafından tetiklenen otomatik soruşturmalara ek olarak, kuruluş güvenlik işlemleri ekibi Tehdit Gezgini'nde bir görünümden otomatik bir soruşturma da [tetikler](threat-explorer.md). Bu araştırma aynı zamanda bir uyarı oluşturur Microsoft 365 Defender olayları ve dış SIEM araçları bu araştırmanın tetikle ilgili olduğunu görebilir.
+Bir uyarı tarafından tetiklenen otomatik soruşturmalara ek olarak, kuruluş güvenlik işlemleri ekibi Tehdit Gezgini'nde bir görünümden otomatik bir soruşturma da [tetikler](threat-explorer.md).  Bu araştırma aynı zamanda bir uyarı oluşturur ve böylece Microsoft 365 Defender ve dış SIEM araçları bu araştırmanın tetik tetikle olduğunu görebilir.
 
 Örneğin, Gezgin'de Kötü Amaçlı Yazılım **görünümünü kullanmakta** olduğunu varsayalım. Grafiğin altındaki sekmeleri kullanarak E-posta sekmesini **seçin** . Listeden bir veya daha fazla öğe seçmeniz, **+ Eylemler** düğmesini etkinleştirir.
 

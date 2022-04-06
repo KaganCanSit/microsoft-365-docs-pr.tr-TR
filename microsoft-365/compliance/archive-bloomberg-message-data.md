@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, aynı gün içinde Bloomberg İletisi e-posta aracından verileri içeri aktaracak ve arşivlayacak bir veri bağlayıcısı Microsoft 365. Bu, üçüncü taraf veri kaynaklarından verileri Microsoft 365'da arşivlemenize olanak sağlar ve böylece yasal saklama, İçerik Arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanarak kurumnizin üçüncü taraf verilerini yönetebilirsiniz.
-ms.openlocfilehash: 3897909c185aabad48483db9b42fcf6b552a68a3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 5b1f32760542bf9ace2adaa8640571f665ba3ffb
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63317843"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569875"
 ---
 # <a name="set-up-a-connector-to-archive-bloomberg-message-data"></a>Bloomberg İleti verilerini arşivlemek için bağlayıcı ayarlama
 
@@ -145,14 +145,20 @@ Son adım, bu bağlantıda bir Bloomberg İletisi bağlayıcısı Microsoft 365 
 
 7. Bağlantı başarıyla doğrulandıktan sonra, Sonraki'ne **tıklayın**.
 
-8. Map **Bloomberg Message users to Microsoft 365 sayfasında**, otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlar.
+8. Kullanıcı **tanımla sayfasında** , verileri içeri aktarıla kullanıcıları belirtin.
+
+     - **Kuruluş 2013'te çalışan tüm kullanıcılar**. Tüm kullanıcıların verilerini içeri aktar için bu seçeneği belirtin.
+
+     - **Yalnızca Mahkeme tutmada olan kullanıcılar**. Yalnızca posta kutuları Mahkeme tutmada bulunan kullanıcılara ait verileri içeri aktarmayı bu seçeneği belirtin. Bu seçenek, verileri LitigationHoldEnabled özelliği True olarak ayarlanmış kullanıcı posta kutularına içeri aktarmaktadır. Daha fazla bilgi için [bkz. Mahkeme tutma oluşturma](create-a-litigation-hold.md).
+
+9. Map **Bloomberg Message users to Microsoft 365 sayfasında**, otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlar.
 
    > [!NOTE]
    > Bağlayıcı ileti öğelerini belirli bir kullanıcının posta kutusuna içeri aktarıyor. Belirli bir kullanıcının posta **kutusunda BloombergMessage** adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *CorporateEmailAddress özelliğinin değerini kullanarak* bunu yapar. Her sohbet iletisi bu özelliği içerir ve özellik, sohbet iletisi her katılımcının e-posta adresiyle doldurulur. *CorporateEmailAddress* özelliğinin değerini kullanarak otomatik kullanıcı eşlemeye ek olarak, CSV eşleme dosyasını karşıya yükerek özel eşleme de tanımlayabilirsiniz. Eşleme dosyası, her kullanıcı için Bloomberg UUID'sini Microsoft 365 posta kutusu adresini içerir. Otomatik kullanıcı eşlemesini etkinleştirir ve özel eşleme sağlarsanız, bağlayıcının önce özel eşleme dosyasına bakacak her ileti öğesi için özel eşlemesi olur. Kullanıcının Bloomberg UUID'sine karşılık gelen geçerli bir kullanıcı Microsoft 365 bulamazsa, bağlayıcıda sohbet *öğesinin CorporateEmailAddress* özelliği kullanılır. Bağlayıcı, özel eşleme dosyasında veya ileti Microsoft 365 *CorporateEmailAddress* özelliğinde geçerli bir kullanıcı bulamazsa, öğe aktarılmaz.
 
-9. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için** Son'a tıklayın.
+10. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için** Son'a tıklayın.
 
-10. Yeni bağlayıcı **için içeri aktarma** işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin. Bağlayıcı hakkında bilgi içeren çıkış sayfasını görüntülemek için bağlayıcıya tıklayın.
+11. Yeni bağlayıcı **için içeri aktarma** işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin. Bağlayıcı hakkında bilgi içeren çıkış sayfasını görüntülemek için bağlayıcıya tıklayın.
 
 ## <a name="set-up-a-connector-using-private-keys"></a>Özel tuşları kullanarak bağlayıcı ayarlama
 
@@ -223,14 +229,20 @@ Bloomberg SFTP siteniz yapılandırıldıktan sonra, sıradaki adım bu sitede b
 
 7. Bağlantı başarıyla doğrulandıktan sonra, Sonraki'ne **tıklayın**.
 
-8. Map **Bloomberg Message users to Microsoft 365 sayfasında**, otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlar.
+8. Kullanıcı **tanımla sayfasında** , verilerini içeri aktar
+
+     - **Kuruluş 2013'te çalışan tüm kullanıcılar**. Tüm kullanıcıların verilerini içeri aktar için bu seçeneği belirtin.
+
+     - **Yalnızca Mahkeme tutmada olan kullanıcılar**. Yalnızca posta kutuları Mahkeme tutmada bulunan kullanıcılara ait verileri içeri aktarmayı bu seçeneği belirtin. Bu seçenek, verileri LitigationHoldEnabled özelliği True olarak ayarlanmış kullanıcı posta kutularına içeri aktarmaktadır. Daha fazla bilgi için [bkz. Mahkeme tutma oluşturma](create-a-litigation-hold.md).
+
+9. Map **Bloomberg Message users to Microsoft 365 sayfasında**, otomatik kullanıcı eşlemesini etkinleştirin ve gerektiğinde özel kullanıcı eşlemesi sağlar.
 
    > [!NOTE]
    > Bağlayıcı ileti öğelerini belirli bir kullanıcının posta kutusuna içeri aktarıyor. Belirli bir kullanıcının posta **kutusunda BloombergMessage** adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *CorporateEmailAddress özelliğinin değerini kullanarak* bunu yapar. Her sohbet iletisi bu özelliği içerir ve özellik, sohbet iletisi her katılımcının e-posta adresiyle doldurulur. *CorporateEmailAddress* özelliğinin değerini kullanarak otomatik kullanıcı eşlemeye ek olarak, CSV eşleme dosyasını karşıya yükerek özel eşleme de tanımlayabilirsiniz. Eşleme dosyası, her kullanıcı için Bloomberg UUID'sini Microsoft 365 posta kutusu adresini içerir. Otomatik kullanıcı eşlemesini etkinleştirir ve özel eşleme sağlarsanız, bağlayıcının önce özel eşleme dosyasına bakacak her ileti öğesi için özel eşlemesi olur. Kullanıcının Bloomberg UUID'sine karşılık gelen geçerli bir kullanıcı Microsoft 365 bulamazsa, bağlayıcıda sohbet *öğesinin CorporateEmailAddress* özelliği kullanılır. Bağlayıcı, özel eşleme dosyasında veya ileti Microsoft 365 *CorporateEmailAddress* özelliğinde geçerli bir kullanıcı bulamazsa, öğe aktarılmaz.
 
-9. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için** Son'a tıklayın.
+10. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için** Son'a tıklayın.
 
-10. Yeni bağlayıcı **için içeri aktarma** işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin. Bağlayıcı hakkında bilgi içeren çıkış sayfasını görüntülemek için bağlayıcıya tıklayın.
+11. Yeni bağlayıcı **için içeri aktarma** işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin. Bağlayıcı hakkında bilgi içeren çıkış sayfasını görüntülemek için bağlayıcıya tıklayın.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 

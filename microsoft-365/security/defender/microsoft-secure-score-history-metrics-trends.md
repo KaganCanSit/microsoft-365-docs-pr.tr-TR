@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: 22a8c8cdd5ebcaa8038c37b73aeeb6c5f80d4267
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: d740ab4fb999697edc9ce7c8f662f6d5c6681fdf
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021708"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500507"
 ---
 # <a name="track-your-microsoft-secure-score-history-and-meet-goals"></a>Microsoft Güvenli Puan geçmişinizi izleme ve hedefleri karşılama
 
@@ -40,13 +40,13 @@ Geçmiş sekmesinde, zaman içinde kuruluş puanının **grafiğini** görüntü
 
 Grafiğin altında, seçilen zaman aralığında  alınan tüm eylemlerin ve sonuçta elde edilen noktalar ve kategori gibi özniteliklerinin listesi yer almaktadır. Bir tarih aralığını özelleştirilebilir ve kategoriye göre filtre uygulanmış olarak filtre uygulanmış olabilir.
 
-![Etkinlik geçmişi.'](../../media/secure-score/secure-score-history-activity.png)
+:::image type="content" source="../../media/secure-score/secure-score-history-activity.png" alt-text="Portalda etkinlik geçmişini açıklayan Microsoft 365 Defender" lightbox="../../media/secure-score/secure-score-history-activity.png":::
 
 Bir etkinlikle ilişkilendirilmiş geliştirme eylemlerini seçersiniz, tam geliştirme eylemi uçarak çıkış görünür.
 
 Bu belirli geliştirme eyleminin tüm geçmişini görüntülemek için, çıkışta geçmiş bağlantısını seçin.
 
-![Geliştirme eylem geçmişi.](../../media/secure-score/secure-score-history-flyout.png)
+:::image type="content" source="../../media/secure-score/secure-score-history-flyout.png" alt-text="Portalda geliştirme işlemiyle ilgili geçmiş Microsoft 365 Defender bölmesi" lightbox="../../media/secure-score/secure-score-history-flyout.png":::
 
 ## <a name="discover-trends-and-set-goals"></a>Eğilimleri keşfedin ve hedefler ayarlayın
 
@@ -66,7 +66,7 @@ Puanınızı sizinkiyle benzer kuruluşlarla karşılaştırmayı görmek için 
 
 Karşılaştırma çubuğu grafiği Genel Bakış **sekmesinde** kullanılabilir. Puanı ve puanı fırsatı görüntülemek için grafiğin üzerine gelin. 
 
-**Sizin gibi kuruluşlar aynı** bölgede yer alan diğer kiracıların (karşılaştıracak en az beş veya daha çok kiracımız olması şartıyla) ve sizinkiyle benzer bir kuruluş boyutunun ortalama puanıdır.
+:::image type="content" source="../../media/secure-score/secure-score-comparison-bar.png" alt-text="Portalda benzer kuruluşun puanlarını çubuk grafik Microsoft 365 Defender" lightbox="../../media/secure-score/secure-score-comparison-bar.png":::
 
 Karşılaştırma verileri anonimleştirilmiştir, dolayısıyla diğer kiracıların hangi kiracılar arasında yer yaptığını tam olarak bilmiyorum.
 
@@ -76,7 +76,7 @@ Karşılaştırma verileri anonimleştirilmiştir, dolayısıyla diğer kiracıl
 
 Ölçümler **ve & sekmesinde** , organizasyon un Güvenli Puanı'nın diğer kuruluşların zaman içindeki puanıyla karşılaştırması hakkında bilgi edinebilirsiniz.
 
-![Benzer kuruluşun zaman içinde puanlarının çizgi grafiği.](../../media/secure-score/secure-score-comparison-trend.png)
+:::image type="content" source="../../media/secure-score/secure-score-comparison-trend.png" alt-text="Portalda, benzer kuruluşun zaman içinde puanlarını alan bir Microsoft 365 Defender grafiği" lightbox="../../media/secure-score/secure-score-comparison-trend.png":::
 
 ## <a name="we-want-to-hear-from-you"></a>Bize haber almak için
 
@@ -85,6 +85,6 @@ Herhangi bir sorun varsa, Güvenlik, Gizlilik ve Uyumluluk topluluğuna [gönder
 ## <a name="related-resources"></a>İlgili kaynaklar
 
 - [Microsoft Güvenli Puanına genel bakış](microsoft-secure-score.md)
-- [Güvenlik nedenlerinizi değerlendirin](microsoft-secure-score-improvement-actions.md)
-- [Neler geliyor?](microsoft-secure-score-whats-coming.md)
-- [Yenilikler](microsoft-secure-score-whats-new.md)
+- [Güvenlik duruşlarınızı değerlendirin](microsoft-secure-score-improvement-actions.md)
+- [Yapılacak yenilikler](microsoft-secure-score-whats-coming.md)
+- [Yeni gelenler](microsoft-secure-score-whats-new.md)

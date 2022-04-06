@@ -1,5 +1,5 @@
 ---
-title: Uç Nokta için Microsoft Defender'da cihaz durumu ve uyumluluk raporu
+title: Uç Nokta için Microsoft Defender'da cihaz durumu ve uyumluluk Uç Nokta için Microsoft Defender
 description: Cihaz durumu algılamalarını, virüsten koruma durumunu, işletim sistemi platformunu ve Windows 10 durumu ve uyumluluk raporunu kullanarak farklı sürümleri izleme
 keywords: health state, antivirus, os platform, windows 10 version, version, health, compliance, state
 ms.prod: m365-security
@@ -14,29 +14,29 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: eaa9d05fd62127949e6a0b40de8d42a79c446d4d
-ms.sourcegitcommit: 2b9d40e888ff2f2b3385e2a90b50d719bba1e653
+ms.openlocfilehash: bf89c0e57cbe14980b15ecf6f5a88f6db2b83e84
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "62996992"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64474035"
 ---
-# <a name="device-health-and-compliance-report-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'da cihaz durumu ve uyumluluk raporu
+# <a name="device-health-and-compliance-report-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'da cihaz durumu ve uyumluluk Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Cihaz durumu raporu, kurum cihazları hakkında üst düzey bilgiler sağlar. Rapor, algılayıcıların durumu, virüsten koruma durumu, işletim sistemi platformları ve 11. Windows 10 sürümlerini Windows popüler bilgileri içerir.
+Cihaz durumu raporu, kurum cihazları hakkında üst düzey bilgiler sağlar. Rapor algılayıcı durumu, virüsten koruma durumu, işletim sistemi platformları ve yazılım (ve işletim sistemi) sürümlerini Windows 10 popüler Windows 11 içerir.
 
 Pano iki bölüm halinde yapılandırılmıştır:
 
-:::image type="content" alt-text="Cihaz raporunun resmi." source="images/device-reports.png" lightbox="images/device-reports.png":::
+:::image type="content" source="images/device-reports.png" alt-text="Cihaz raporu" lightbox="images/device-reports.png":::
 
 
 <br>

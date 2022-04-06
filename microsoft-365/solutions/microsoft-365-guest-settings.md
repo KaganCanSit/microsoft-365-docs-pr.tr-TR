@@ -20,22 +20,22 @@ ms.custom:
 ms.localizationpriority: high
 recommendations: false
 description: Kuruluş dışından kişilerle paylaşımı etkileyebilecek Microsoft 365 paylaşım ayarları hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: 2b6aac7a02c6c7c5feda041a2b06147c67dfa285
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 9cb6eb52c523bba624af5f830c3c34c4edaf86b8
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63316541"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64594850"
 ---
 # <a name="microsoft-365-guest-sharing-settings-reference"></a>Microsoft 365 konuk paylaşımı ayarları başvurusu
 
-Bu makalede, iş yükleri için kuruluş dışından kişilerle paylaşımı etkileyebilecek çeşitli ayarlara Microsoft 365: Teams, Microsoft 365 Grupları, SharePoint ve OneDrive. Bu ayarlar Azure Active Directory, Microsoft 365, Teams ve SharePoint yönetim merkezlerinde yer alır.
+Bu makalede, iş yükleri olarak organizasyon dışındaki kullanıcılarla paylaşımı etkileyebilecek çeşitli ayarlar için Microsoft 365, Teams, Microsoft 365 Grupları, SharePoint ve OneDrive. Bu ayarlar Azure Active Directory, Microsoft 365, Teams ve SharePoint yönetim merkezlerinde yer alır.
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 
 **Yönetici rolü:** Genel yönetici
 
-Azure Active Directory, dizin hizmetidir ve Microsoft 365. Kurumsal Azure Active Directory ayarları, gruplarda, Teams gruplarında, Microsoft 365 gruplarında ve SharePoint paylaşımı OneDrive.
+Azure Active Directory, dizin hizmetidir ve Microsoft 365. Kurumsal Azure Active Directory ayarları doğrudan kuruluş, kuruluş Teams, Microsoft 365 Grupları, SharePoint ve OneDrive.
 
 > [!NOTE]
 > Bu ayarlar yalnızca, SharePoint [Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration-preview) ile SharePoint ve OneDrive tümleştirmesi yapılandırıldığında yapılan ayarları etkiler. Aşağıdaki tabloda bunun yapılandırıldığından emin olduğu varsayıldı.
@@ -46,7 +46,7 @@ Azure Active Directory, dizin hizmetidir ve Microsoft 365. Kurumsal Azure Active
 
 ![Kurumsal İlişkiler Azure Active Directory sayfası Ayarlar ekran görüntüsü.](../media/azure-ad-organizational-relationships-settings.png)
 
-| Ayar | Default | Açıklama |
+| Ayar | Varsayılan | Açıklama |
 |:-----|:-----|:-----|
 |Konuk kullanıcı erişimi|Konuk kullanıcıların dizin nesnelerinin özelliklerine ve üyeliklerine erişimi sınırlıdır|Konukların çalışma [sayfalarında sahip olduğu izinleri Azure Active Directory](/azure/active-directory/fundamentals/users-default-permissions).|
 |Konuk daveti ayarları|Kuruluşta herkes, konuk ve yönetici olmayan konuk kullanıcıları davet ediyor olabilir|Konukların, üyelerin ve yöneticilerin kuruluşa konuk davet edip etmeyeceklerini belirler. <p> Bu ayar, Microsoft 365 ve video paylaşım Teams deneyimi SharePoint.|
@@ -59,7 +59,7 @@ Bu ayarlar kullanıcıların dizine davet edilmelerini etkiler. Bu etki, zaten d
 
 **Yönetici rolü:** Genel yönetici
 
-Grup Microsoft 365 yönetim merkezi paylaşmak ve grupları paylaşmak için kuruluş Microsoft 365 vardır.
+Bu Microsoft 365 yönetim merkezi paylaşım ve güvenlik ayarları için kuruluş Microsoft 365 Grupları.
 
 ### <a name="sharing"></a>Paylaşım
 
@@ -67,20 +67,20 @@ Grup Microsoft 365 yönetim merkezi paylaşmak ve grupları paylaşmak için kur
 
 ![Ekip sitesi güvenlik ve gizlilik konuk paylaşımı ayarının Microsoft 365 yönetim merkezi.](../media/sharepoint-security-privacy-sharing-setting.png)
 
-| Ayar | Default | Açıklama |
+| Ayar | Varsayılan | Açıklama |
 |:-----|:-----|:-----|
 |Kullanıcıların kuruluşa yeni konuk eklemesine izin verme|On|Evet olarak **ayarlanırsa**, Azure AD üyeleri Azure AD aracılığıyla konukları davetlayabilir; hayır olarak **ayarlanırsa**, olamazlar. Evet olarak **ayarlanmazsa**, Microsoft 365 üyeleri konukları sahip onayıyla davetlayabilir. Microsoft 365 grubu üyeleri sahip onayı olan konukları davetlayabilir ancak sahipleri onaylamak için genel yönetici olmalı. <p> Üyeler davet **etme,** konuk yerine Azure AD'de bulunan üyelere başvurur ve davette yer alan site veya grup üyelerini Microsoft 365. <p> Bu, Kurumsal ilişkiler **ayarları içinde Üyeler davet** Azure Active Directory aynıdır.|
 
 ### <a name="microsoft-365-groups"></a>Microsoft 365 Grupları
 
-**Gezinti:** [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) >  **Ayarlar** >  **Gizle ve Gruplar**> Microsoft 365 ayarları
+**Gezinti:** [Microsoft 365 yönetim merkezi](https://admin.microsoft.com) >  **Ayarlar** >  **Org ayarları ve** > Microsoft 365 Grupları
 
-![Grup Grup Microsoft 365 ayarlarının ekran Microsoft 365 yönetim merkezi.](../media/office-365-groups-guest-settings.png)
+![Konuk ayarlarını Microsoft 365 Grupları ayarlarının ekran Microsoft 365 yönetim merkezi.](../media/office-365-groups-guest-settings.png)
 
-| Ayar | Default | Açıklama |
+| Ayar | Varsayılan | Açıklama |
 |:-----|:-----|:-----|
-|Kuruluş dışındaki grup üyelerinin grup içeriğine erişmesine izin verme|On|Açık olarak ayar **konuklar** grup içeriğine erişebilirsiniz; bu ayar **Kapalı** olarak ayarlanırken hayır. Konukların grup **gruplarında veya** grup gruplarında etkileşim kurduğu tüm senaryolarda bu Microsoft 365 Açık Teams.|
-|Grup sahiplerinin, kuruluş dışındaki kişilerin gruplara eklemesine izin verme|On|Açık **olduğunda**, Grup Microsoft 365 veya Teams gruplara yeni konuklar davet etmelerini sağlar. Kapalı **olduğunda**, bunu ifade etmeyer. Konukların gruplara **ekli** olduğu tüm senaryolarda bu ayar Açık olur.|
+|Kuruluş dışındaki grup üyelerinin grup içeriğine erişmesine izin verme|On|Açık olarak ayar **konuklar** grup içeriğine erişebilirsiniz; bu ayar **Kapalı** olarak ayarlanırken hayır. Konukların diğer **konuklarla** veya iş yerleriyle etkileşim kurduğu tüm senaryolar için Microsoft 365 Grupları Açık Teams.|
+|Grup sahiplerinin, kuruluş dışındaki kişilerin gruplara eklemesine izin verme|On|Açık **olduğunda**, grup Microsoft 365 Grupları veya Teams yeni konukları gruba davet etme. Kapalı **olduğunda**, bunu ifade etmeyer. Konukların gruplara **ekli** olduğu tüm senaryolarda bu ayar Açık olur.|
 
 Bu ayarlar kuruluş düzeyindedir. [PowerShell kullanarak grup düzeyinde bu ayarları](/azure/active-directory/users-groups-roles/groups-settings-cmdlets#create-settings-for-a-specific-group) değiştirme hakkında bilgi için bkz. Belirli bir grup için ayarlar oluşturma.
 
@@ -96,7 +96,7 @@ Diğer Teams ayarlarının kullanılabilir olması için Ana konuk erişimine **
 
 ![Konuk erişimi Teams iki durumlu düğmenin ekran görüntüsü.](../media/teams-guest-access-toggle.png)
 
-| Ayar | Default | Açıklama |
+| Ayar | Varsayılan | Açıklama |
 |:-----|:-----|:-----|
 |E-postada konuk erişimine izin Teams|Kapalı|Konuk erişimini genel olarak erişim için Teams veya kapatın. Bu ayarın bir kez değiştirilene kadar yürürlüğe girecekleri 24 saat sürebilir.|
 
@@ -106,7 +106,7 @@ Diğer Teams ayarlarının kullanılabilir olması için Ana konuk erişimine **
 
 ![Konuk arama Teams ekran görüntüsü.](../media/teams-guest-calling-setting.png)
 
-| Ayar | Default | Açıklama |
+| Ayar | Varsayılan | Açıklama |
 |:-----|:-----|:-----|
 |Özel arama yapma|On|Açık **olduğunda** konuklar Teams'da eşler arası aramalar **Teams Ise,** onu cevaplayabilir.|
 
@@ -116,7 +116,7 @@ Diğer Teams ayarlarının kullanılabilir olması için Ana konuk erişimine **
 
 ![Konuk toplantı Teams ekran görüntüsü.](../media/teams-guest-meeting-settings.png)
 
-| Ayar | Default | Açıklama |
+| Ayar | Varsayılan | Açıklama |
 |:-----|:-----|:-----|
 |IP videosuna izin ver|On|Konuklar **Açık** olduğunda, aramalarında ve toplantılarında videoyu kullanabilir; Kapalı **olduğunda**, bunu onlar da göremz.|
 |Ekran paylaşım modu|Tüm ekran|Devre **Dışı** Bırak'a geldiğinde, konuklar bir gün içinde ekranlarını Teams. Tek uygulama **olarak ayar konuklar** ekranlarında yalnızca tek bir uygulamayı paylaşabilir. Tüm ekran **olarak ayar olduğunda**, konuklar bir uygulamayı veya tüm ekranlarını paylaşmayı seçebilir.|
@@ -128,7 +128,7 @@ Diğer Teams ayarlarının kullanılabilir olması için Ana konuk erişimine **
 
 ![Konuk ileti Teams ekran görüntüsü.](../media/teams-guest-messaging-settings.png)
 
-| Ayar | Default | Açıklama |
+| Ayar | Varsayılan | Açıklama |
 |:-----|:-----|:-----|
 |Gönderilen iletileri düzenleme|On|Açık **olduğunda** konuklar daha önce gönderdiği iletileri düzenleyebilir; Kapalı **olduğunda**, bunu onlar da göremz.|
 |Gönderilen iletileri silme|On|Açık **olduğunda**, konuklar daha önce gönderdiği iletileri silebilir; Kapalı **olduğunda**, bunu onlar da göremz.|
@@ -143,31 +143,31 @@ Diğer Teams ayarlarının kullanılabilir olması için Ana konuk erişimine **
 
 **Yönetici rolü:** SharePoint yönetici
 
-Bu ayarlar, kuruluşta tüm siteleri etkiler. Bunlar doğrudan grup Microsoft 365 grupları veya Teams etkilemez, ancak kullanıcı deneyimi sorunlarından kaçınmak için bu ayarları Microsoft 365 Grupları ve Grupları ayarlarıyla Teams öneririz. (Örneğin, Teams'te konuk paylaşımına izin verilmiyorsa ancak SharePoint'te konuk Teams'ta konuk erişimi olmaz, çünkü Teams dosyaları SharePoint.)
+Bu ayarlar, kuruluşta tüm siteleri etkiler. Bu ayarlar kullanıcı Microsoft 365 Grupları Teams etkilemez; bununla birlikte, kullanıcı deneyimi sorunlarından kaçınmak için bu Microsoft 365 Grupları ve Teams ayarlarıyla hizalamayı öneririz. (Örneğin, Teams'te konuk paylaşımına izin verilmiyorsa ancak SharePoint'te konuk Teams'ta konuk erişimi olmaz, çünkü Teams dosyaları SharePoint.)
 
 ### <a name="sharepoint-and-onedrive-sharing-settings"></a>SharePoint ve OneDrive ayarlarını değiştirme
 
 OneDrive sitelerin hiyerarşisi bir SharePoint olduğundan, kuruluş düzeyindeki paylaşım ayarları aynı diğer sitelerde olduğu gibi OneDrive siteleri de SharePoint etkiler.
 
-**Gezinti:** SharePoint merkezi > <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Paylaşımı**</a>
+**Gezinti:** SharePoint merkezini **İlkeler >** >  <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Olarak Yönet**</a>
 
 ![Kuruluş düzeyi SharePoint ayarlarının ekran görüntüsü.](../media/external-sharing.png)
 
-| Ayar | Default | Açıklama |
+| Ayar | Varsayılan | Açıklama |
 |:-----|:-----|:-----|
 |SharePoint|Herkes|Siteler için izin verilen en izinli paylaşım SharePoint belirtir.|
 |OneDrive|Herkes|Belirli siteler için izin verilen en izinli OneDrive belirtir. Bu ayar, izin verilen ayardan SharePoint olamaz.|
 
 ### <a name="sharepoint-and-onedrive-advanced-sharing-settings"></a>SharePoint paylaşım OneDrive ayarlarına tıklayın ve tıklayın
 
-**Gezinti:** SharePoint merkezi > <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Paylaşımı**</a>
+**Gezinti:** SharePoint merkezini **İlkeler >** >  <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Olarak Yönet**</a>
 
 ![Kuruluş düzeyi SharePoint paylaşım ayarlarının ekran görüntüsü.](../media/external-sharing.png)
 
-| Ayar | Default | Açıklama |
+| Ayar | Varsayılan | Açıklama |
 |:-----|:-----|:-----|
 |Dış paylaşımı etki alanına göre sınırlama|Kapalı|Bu ayar paylaşım için izin verilen veya engellenen etki alanlarının listesini belirtmenize olanak sağlar. İzin verilen etki alanları belirtilmişse paylaşım davetleri yalnızca bu etki alanlarına gönderilebilir. Reddedilen etki alanları belirtilirse, paylaşım davetleri bu etki alanlarına gönderilmez. <p> Bu ayar, kuruluş SharePoint tüm OneDrive sitelerini etkiler.|
-|Yalnızca belirli güvenlik gruplarında yer alan kullanıcıların dışarıdan paylaşımda  olmasına izin verme|Kapalı|SharePoint ve OneDrive'da kimlerin konuklarla paylaşım yapanı sınırlamak OneDrive, paylaşımı belirtilen güvenlik gruplarında yer alan kişiler ile sınırlayabilir. Bu ayarlar gruplarda veya gruplarda Microsoft 365 paylaşımı Teams. Belge ve klasör paylaşımı yalnızca belirtilen güvenlik gruplarında yer alan kişiler tarafından yapasa da, grup veya ekip aracılığıyla davet edilen konuklar da ilişkili siteye erişim sahibi olabilir. <p> Belirtilen her grup için, bu kullanıcılardan hangisinin Herkes bağlantılarıyla paylaşa birini seçebilirsiniz.|
+|Yalnızca belirli güvenlik gruplarında yer alan kullanıcıların dışarıdan paylaşımda  olmasına izin verme|Kapalı|SharePoint ve OneDrive'da kimlerin konuklarla paylaşım yapanı sınırlamak OneDrive, paylaşımı belirtilen güvenlik gruplarında yer alan kişiler ile sınırlayabilir. Bu ayarlar e-posta veya posta Microsoft 365 Grupları paylaşımı Teams. Belge ve klasör paylaşımı yalnızca belirtilen güvenlik gruplarında yer alan kişiler tarafından yapasa da, grup veya ekip aracılığıyla davet edilen konuklar da ilişkili siteye erişim sahibi olabilir. <p> Belirtilen her grup için, bu kullanıcılardan hangisinin Herkes bağlantılarıyla paylaşa birini seçebilirsiniz.|
 |Konukların paylaşım davetleri gönderilirken aynı hesabı kullanarak oturum açması gerekir|Kapalı|Konukların davet gönderildiği adresten farklı bir e-posta adresi kullanarak site paylaşım davetlerini kullanmalarını engellemektedir. <p> [SharePoint ve OneDrive Azure AD B2B (Önizleme)](/sharepoint/sharepoint-azureb2b-integration-preview) ile tümleştirme bu ayarı kullanmaz, çünkü tüm konuklar davetin gönderildiği e-posta adresine bağlı olarak dizine eklenir. Siteye erişmek için alternatif e-posta adresleri kullanılamaz.|
 |Konukların sahip olmadığını öğeleri paylaşmasına izin verme|On|Açık **olduğunda**, konuklar sahip olmadığınız öğeleri diğer kullanıcılarla veya konuklarla paylaşabilir; Kapalı **olduğunda** , bu iki tinlik (Kapalı) olarak kabul kullanılamaz. Konuklar her zaman tam denetimine sahip olduğu öğeleri paylaşabilir.|
 |Doğrulama kodu kullanan kişilerin, birkaç gün sonra yeniden doğrulaması gerekiyor|Kapalı|Bu ayar, belirli sayıda gün sonra tek seferlik geçiş kodu ile kimlik doğrulaması kullanan kullanıcıların yeniden kimlik doğrulaması gerektirmeyi sağlar.|
@@ -177,11 +177,11 @@ OneDrive sitelerin hiyerarşisi bir SharePoint olduğundan, kuruluş düzeyindek
 
 Dosya ve klasörler SharePoint ve OneDrive'de paylaşılırken, alıcılara dosya veya klasörün kendi kendilerine doğrudan erişim vermek yerine, dosya veya klasör üzerinde izinleri olan bir bağlantı gönderilir. Çeşitli türlerde bağlantılar vardır ve kullanıcılara sunulan dosya veya klasörü paylaştıklarına varsayılan bağlantı türünü seçebilirsiniz. Herkes bağlantıları için izinleri ve süre sonu *seçeneklerini de kullanabilirsiniz* .
 
-**Gezinti:** SharePoint merkezi > <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Paylaşımı**</a>
+**Gezinti:** SharePoint merkezini **İlkeler >** >  <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Olarak Yönet**</a>
 
 ![Kuruluş düzeyi SharePoint klasörleri paylaşma ayarlarının ekran görüntüsü.](../media/sharepoint-organization-files-folders-sharing-settings.png)
 
-| Ayar | Default | Açıklama |
+| Ayar | Varsayılan | Açıklama |
 |:-----|:-----|:-----|
 |Dosya ve klasör bağlantıları|Bağlantıya sahip herkes|Kullanıcı bir dosya veya klasörü paylaştığında, varsayılan olarak hangi paylaşım bağlantısının gösterl olduğunu belirtir. Kullanıcılar isterse paylaşmadan önce seçeneği değiştirebilirler. Varsayılan olarak Bağlantısı olan herkes ve  Bir site için Herkes paylaşımına izin verilmiyor olarak ayarlanırsa, bu sitenin  varsayılan ayarı Yalnızca sizinki olan kişiler gösterilir.|
 |Bu bağlantıların süresi bu kadar gün içinde dolacak|Kapalı (son kullanma tarihi yok)|Herkes bağlantısı oluşturulduktan ve *bu bağlantının süresinin* dolması sonrasındaki gün sayısını belirtir. Süresi dolmuş bağlantılar yenilenmez. Sona erme tarihi geçen paylaşıma devam etmek için yeni bağlantı oluşturun.|
@@ -207,7 +207,7 @@ Sitenin duyarlılık etiketi uygulanmışsa, bu etiket dış paylaşım ayarlar�
 
 ![Site dış SharePoint ayarlarının ekran görüntüsü.](../media/sharepoint-site-external-sharing-settings.png)
 
-| Ayar | Default | Açıklama |
+| Ayar | Varsayılan | Açıklama |
 |:-----|:-----|:-----|
 |Site içeriği ile paylaşabilirsiniz|Site türüne göre değişir (aşağıdaki tabloya bakın)|Bu site için izin verilen dış paylaşım türünü gösterir. Burada kullanılabilen seçenekler, ilgili kuruluş düzeyinde paylaşım ayarlarına SharePoint.|
 
@@ -219,7 +219,7 @@ Bağlantı türü ve izinleri için varsayılan ayarları ve her site için Herk
 
 ![Site SharePoint bağlantı paylaşım ayarlarının ekran görüntüsü.](../media/sharepoint-site-link-sharing-settings.png)
 
-| Ayar | Default | Açıklama |
+| Ayar | Varsayılan | Açıklama |
 |:-----|:-----|:-----|
 |Etki alanına göre paylaşımı sınırlama|Kapalı|Bu ayar paylaşım için izin verilen veya engellenen etki alanlarının listesini belirtmenize olanak sağlar. İzin verilen etki alanları belirtilmişse paylaşım davetleri yalnızca bu etki alanlarına gönderilebilir. Reddedilen etki alanları belirtilirse, paylaşım davetleri bu etki alanlarına gönderilmez. <p> Bu ayar, kuruluş veya Azure AD düzeyinde ayarlanmış etki alanı kısıtlamalarını geçersiz kılmak için kullanılamaz.|
 |Varsayılan paylaşım bağlantı türü|Kuruluş düzeyi ayarıyla aynı|Bu ayar, bu site içinde kullanıcılara sunulan varsayılan paylaşım bağlantısını belirtmenize olanak sağlar. Kuruluş *düzeyi ayarıyla aynı seçenek* , kuruluş ve site paylaşımı ayarlarının bir birleşimiyle tanımlanır.|
@@ -234,7 +234,7 @@ Aşağıdaki tabloda her site türü için varsayılan paylaşım ayarı göster
 |:-----|:-----|
 |Klasik|**Yalnızca kuruluşta yer alan kişiler**|
 |OneDrive|**Herkes**|
-|Grup bağlantılı siteler (site Teams)|**Grup Grupları ayarı Grup sahiplerinin** kuruluş Microsoft 365 kişi eklemesine izin  ver ayarı Açık ise yeni ve mevcut konuklar **Açık** durumdadır; aksi takdirde Yalnızca mevcut **konuklar**|
+|Grup bağlantılı siteler (site Teams)|**Grup sahiplerinin kuruluş dışındaki kişilerini** gruplara eklemesine Microsoft 365 Grupları  ayarı Açık ise yeni ve mevcut konuklar Açık durumdadır **; aksi** takdirde Yalnızca mevcut **konuklar**|
 |İletişim|**Yalnızca kuruluşta yer alan kişiler**|
 |Grup (Ekip Sitesi yok) #STS3 modern siteler|**Yalnızca kuruluşta yer alan kişiler**|
 
@@ -247,4 +247,4 @@ Aşağıdaki tabloda her site türü için varsayılan paylaşım ayarı göster
 
 [Web'de konuk Microsoft Teams](/MicrosoftTeams/guest-access)
 
-[Gruplara konuk Microsoft 365 ekleme](https://support.office.com/article/bfc7a840-868f-4fd6-a390-f347bf51aff6)
+[Konuk ekleme Microsoft 365 Grupları](https://support.office.com/article/bfc7a840-868f-4fd6-a390-f347bf51aff6)

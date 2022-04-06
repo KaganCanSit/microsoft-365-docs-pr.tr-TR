@@ -19,12 +19,12 @@ ms.custom:
 description: Bir etki alanı içinde Sender Policy Framework'i (SPF) özel etki alanınız ile kullanmak için Etki Alanı Adı Hizmeti (DNS) kaydını nasıl Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ab7bd0e579bfe26236eb009dc09689ddb90f2782
-ms.sourcegitcommit: 43adb0d91af234c34e22d450a9c1d26aa745c2ca
+ms.openlocfilehash: a25efbce5b9f8141575a88baa3fdd85b099dfbd6
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "62988822"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682977"
 ---
 # <a name="set-up-spf-to-help-prevent-spoofing"></a>SPF'yi, sanallık engellemeye yardımcı olacak şekilde ayarlama
 
@@ -77,10 +77,6 @@ Etki alanları için SPF TXT Office 365 özel etki alanları veya alt etki alanl
 
 1. Aşağıdaki tabloda, SPF söz dizimi hakkında bilgi sahibi olduğunu denetleyin.
 
-    <br>
-
-    ****
-
     |Element|Eğer kullanıyorsanız...|Müşteriler arasında sık karşılaşılan bir durum mu var?|Bunu ekleyin...|
     |---|---|---|---|
     |1|Herhangi bir e-posta sistemi (gerekli)|Ortak. Tüm SPF TXT kayıtları bu değerle başlar|`v=spf1`|
@@ -90,7 +86,6 @@ Etki alanları için SPF TXT Office 365 özel etki alanları veya alt etki alanl
     |5|Üçüncü taraf e-posta sistemi|Yaygın değil|`include:<domain_name>` <p> \<domain_name\> üçüncü taraf e-posta sisteminin etki alanıdır.|
     |6|Şirket içi e-posta sistemi. Örneğin, Exchange Online Protection başka bir e-posta sistemi|Yaygın değil|Her ek posta sistemi için bunlardan birini kullanın: <p> `ip4:<IP_address>` <br> `ip6:<IP_address>` <br> `include:<domain_name>` <p> \<IP_address\> ve \<domain_name\> etki alanınız adına posta gönderen diğer e-posta sisteminin IP adresi ve etki alanıdır.|
     |7|Herhangi bir e-posta sistemi (gerekli)|Ortak. Tüm SPF TXT kayıtları bu değerle sona erer|`<enforcement rule>` <p> Bu birkaç değerden biri olabilir. Değerini öneririz `-all`.|
-    |
 
 2. Henüz bunu yapmadıysanız, tablonun söz dizimini kullanarak SPF TXT kaydınızı form açın.
 

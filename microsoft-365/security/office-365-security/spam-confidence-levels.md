@@ -19,12 +19,12 @@ ms.custom:
 description: Yöneticiler, EOP'de (EOP) gönderilen iletilere uygulanan istenmeyen posta güven Exchange Online Protection bilgi edinebilirsiniz.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a5a7bfd34fdb23b0bef94119f53adaa9ecc0c4a1
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 7783eb0655a6e3b0457a45057b920c87388e4c05
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984315"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682933"
 ---
 # <a name="spam-confidence-level-scl-in-eop"></a>EOP'de istenmeyen posta güven düzeyi (SCL)
 
@@ -39,15 +39,12 @@ Microsoft 365 kutusu olmayan Exchange Online veya tek başına Exchange Online P
 
 SCL'nin anlamı ve iletilere  alınan varsayılan eylemler aşağıdaki tabloda açıklanmıştır. İstenmeyen posta filtreleme kararını temel alarak iletiler üzerinde gerçekleştirebilirsiniz işlemler hakkında daha fazla bilgi için bkz. [EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).
 
-****
-
 |SCL|Tanım|Varsayılan eylem|
 |:---:|---|---|
 |-1|İleti istenmeyen posta filtrelemeyi atlandı. Örneğin, ileti güvenilir gönderenden gönderilmiş, güvenilir alıcıya gönderilmiş veya IP İzin Listesi'nin bir e-posta kaynağı sunucusundan gönderilmiş olabilir. Daha fazla bilgi için bkz [. EOP'de güvenilir gönderen listeleri oluşturma](create-safe-sender-lists-in-office-365.md).|İletiyi alıcıların gelen kutusunda teslim edin.|
 |0, 1|İstenmeyen posta filtreleme, iletinin istenmeyen posta olmadığını belirledi.|İletiyi alıcıların gelen kutusunda teslim edin.|
 |5, 6|İletiyi İstenmeyen Posta olarak işaretlenen istenmeyen posta **filtreleme**|İletiyi alıcıların Gereksiz E-posta klasörüne teslim edin.|
 |9|İletiyi Yüksek güvene sahip istenmeyen posta olarak **işaretlenen istenmeyen posta filtresi**|İletiyi alıcıların Gereksiz E-posta klasörüne teslim edin.|
-|
 
 İstenmeyen posta filtrelemesi tarafından SCL 2, 3, 4, 7 ve 8'in kullanılma olmadığını fark edin.
 

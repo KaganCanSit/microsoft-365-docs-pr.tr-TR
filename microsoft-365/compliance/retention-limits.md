@@ -18,12 +18,12 @@ search.appverid:
 - MET150
 hideEdit: true
 description: Bekletme ilkeleri ve bekletme etiketi ilkeleri için ilke başına en fazla ilke ve öğe sayısını anlama
-ms.openlocfilehash: 4cd8fc5f141f9e039a271e8534e156e4df0582e9
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+ms.openlocfilehash: 4c175a9e43440c58f74da334a38bc73dae5b76e4
+ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63419135"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "64595026"
 ---
 # <a name="limits-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri sınırları
 
@@ -116,8 +116,16 @@ SharePoint örnek:
 
 İçeriğin [yok olması](disposition.md) için dikkat gereken bazı sınırlamalar vardır:
 
-- Her bekletme etiketi için aşama başına bekleyen 1.000.000 öğe
-
-- Öğe at edildikten sonra en fazla yedi yıl boyunca saklama kanıtı ve bu süre için bekletme etiketi başına 1.000.000 öğe sınırlaması. 
+- Kiracı başına en fazla sayı:
     
-Kayıt olarak işaretlenmiş öğeler için bu sınırın 1.000.000'in üzerinde olan bir yok durum kanıtına ihtiyacınız varsa [Microsoft Desteği'ne başvurun](../admin/get-help-support.md).
+    - Aşağıdaki temlik gözden geçirme durumları arasında 16.000.000 öğe: bekleyen disposition veya onaylı disposition
+        
+    - Kayıt olarak işaretlenmiş 16.000.000 öğe otomatik olarak atılır (imhayı incelemez)
+
+- Her bekletme etiketi için maksimum numaralar:
+    
+    - Her bekletme etiketi için aşama başına bekleyen 1.000.000 öğe
+    
+    - Öğe at edildikten sonra en fazla yedi yıl boyunca saklama kanıtı ve bu süre için bekletme etiketi başına 1.000.000 öğe sınırlaması. 
+        
+        Kayıt olarak işaretlenmiş öğeler için bu sınırın 1.000.000'in üzerinde olan bir yok durum kanıtına ihtiyacınız varsa, ilgili [Microsoft Desteği.](../admin/get-help-support.md)

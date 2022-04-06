@@ -1,5 +1,5 @@
 ---
-title: Adım 3. Office 365 için Microsoft Defender'ı değerlendirmeye genel bakış
+title: Adım 3. Değerlendirme Office 365 için Microsoft Defender genel bakış
 description: Gereklilikler, eval özelliğini etkinleştirme veya etkinleştirme ve pilot ayarlama gibi MDO pilotlarını ayarlama adımlarını öğrenmek için bu genel bakışı kullanın.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -21,31 +21,30 @@ ms.collection:
 - m365solution-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 0f564d308384cff466f0cd51e0c6a791150a605e
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 0fece71510237f086e6a6f499a9b6b8b76de2a0e
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320823"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500309"
 ---
-# <a name="step-3-enable-and-pilot-microsoft-defender-for-office-365"></a>Adım 3. Office 365 için Microsoft Defender'ı etkinleştirme ve pilot uygulama
+# <a name="step-3-enable-and-pilot-microsoft-defender-for-office-365"></a>Adım 3. Etkinleştirme ve pilot Office 365 için Microsoft Defender
 
 **Aşağıdakiler için geçerlidir:**
 - Microsoft 365 Defender
 
-Bu makalede Office 365 için Microsoft Defender'ı etkinleştirme ve pilot uygulama işlemi ana hatlarıyla açıklanmıştır. Bu işleme başlamadan önce, [Microsoft 365 Defender'ı](eval-overview.md) değerlendirmeyle ilgili genel süreci gözden geçirmeyi ve [Microsoft 365 Defender değerlendirme ortamını oluşturduğunuzdan emin olun](eval-create-eval-environment.md). 
+Bu makalede, kullanıcı izinlerini etkinleştirme ve pilot Office 365 için Microsoft Defender. Bu işleme başlamadan önce, değerlendirme sürecini gözden geçirmeyi Microsoft 365 Defender değerlendirme ortamını [oluşturduğunuzdan Microsoft 365 Defender gerekir](eval-create-eval-environment.md).[](eval-overview.md) 
 <br>
 
-Office 365 için Microsoft Defender'ı etkinleştirmek ve pilot yapmak için aşağıdaki adımları kullanın.
+Bu özellikleri etkinleştirmek ve pilot Office 365 için Microsoft Defender.
 
-![Office için Microsoft Defender'ı Defender değerlendirme ortamına ekleme adımları.](../../media/defender/m365-defender-office-eval-steps.png)
+:::image type="content" source="../../media/defender/m365-defender-office-eval-steps.png" alt-text="Microsoft Defender değerlendirme ortamına Office için Microsoft Defender ekleme adımları" lightbox="../../media/defender/m365-defender-office-eval-steps.png":::
 
 Aşağıdaki tabloda, çizimde yer alan adımlar açık gösterilmiştir.
 
-| |Adım  |Açıklama  |
+| Seri Numarası|Adım  |Açıklama  |
 |---------|---------|---------|
-|1|[Mimari gereksinimlerini ve temel kavramları gözden geçirin](eval-defender-office-365-architecture.md)    | Office mimarisi için Defender'ı an edin ve Exchange Online ortamının mimari önkoşullarının karşı olduğundan emin olun.       |
+|1|[Mimari gereksinimlerini ve temel kavramları gözden geçirin](eval-defender-office-365-architecture.md)    | Güvenlik mimarisini anlamak Office Defender'ı anlıyoruz ve Exchange Online ortamının mimari önkoşullarının karşı olduğundan emin olun.       |
 |2|[Değerlendirme ortamını etkinleştirme](eval-defender-office-365-enable-eval.md)     |   Değerlendirme ortamını ayarlama adımlarını izleyin.      |
 |3|[Pilot ayarlama ](eval-defender-office-365-pilot.md)    |    Pilot gruplar oluşturun, korumayı yapılandıryın ve önemli özelliklerle panoları yakından izleyin.     |
-||||
 

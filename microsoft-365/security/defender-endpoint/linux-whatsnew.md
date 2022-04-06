@@ -1,7 +1,7 @@
 ---
-title: Linux'ta Uç Nokta için Microsoft Defender'daki güncelleştirmeler
-description: Linux'ta Uç Nokta için Microsoft Defender'da yapılan önemli değişikliklerin listesi.
-keywords: microsoft, defender, Endpoint için Microsoft Defender, linux, whatsnew, sürüm
+title: Linux'ta Uç Nokta için Microsoft Defender olan yeniler
+description: Linux'ta Uç Nokta için Microsoft Defender değişikliklerin listesi.
+keywords: microsoft, defender, Uç Nokta için Microsoft Defender, linux, whatsnew, sürüm
 ms.prod: m365-security
 ms.mktglfcycl: security
 ms.sitesec: library
@@ -15,19 +15,24 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 48b278d23cd724cade823d2a6b052b11d02a3a13
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: 45b5bbcc1268c1f425b914a3f8279fe8dcc583f2
+ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63401098"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64569963"
 ---
-# <a name="whats-new-in-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender'daki güncelleştirmeler
+# <a name="whats-new-in-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender olan yeniler
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+
+## <a name="1016274-30122022162740"></a>101.62.74 (30.122022.16274.0)
+
+- Daha eski çekirdek sürümlerinde çalıştırlarda ürünün 2 GB'den büyük dosyalara erişimi yanlış şekilde engellemesi sorununa yönelik sorun giderildi
+- Hata düzeltmeleri
 
 ## <a name="1016093-30122012160930"></a>101.60.93 (30.122012.16093.0)
 
@@ -41,6 +46,7 @@ ms.locfileid: "63401098"
 ## <a name="1015880-30122012158800"></a>101.58.80 (30.122012.15880.0)
 
 - Komut satırı aracı artık karantinaya alınmış dosyaları, dosyanın başlangıçta algılandığından farklı bir konuma geri yüklemeyi destekler. Bu, aracılığıyla yapılabilir `mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`.
+- Bu sürümden başlayarak Linux için ağ koruması isteğe bağlı olarak değerlendirebilirsiniz
 - Hata düzeltmeleri
 
 ## <a name="1015662-30121122156620"></a>101.56.62 (30.121122.15662.0)
@@ -53,7 +59,7 @@ ms.locfileid: "63401098"
 
 ## <a name="1015257-30121092152570"></a>101.52.57 (30.121092.15257.0)
 
-- Java uygulamaları tarafından kullanılırken korumasız log4j jarları algılama özelliği eklendi. Makine, yüklenen log4j kavanozları ile Java işlemlerini çalıştırarak düzenli olarak inceleniyor. Bilgiler Uç Nokta için Microsoft Defender arka uç noktasına gönderilir ve portalın Güvenlik Açığı Yönetimi alanında ortaya çıkar.
+- Java uygulamaları tarafından kullanılırken korumasız log4j jarları algılama özelliği eklendi. Makine, yüklenen log4j kavanozları ile Java işlemlerini çalıştırarak düzenli olarak inceleniyor. Bilgiler kullanıcı arka Uç Nokta için Microsoft Defender ve portalın Güvenlik Açığı Yönetimi alanında açığa çıkar.
 
 ## <a name="1014776-30121092147760"></a>101.47.76 (30.121092.14776.0)
 
@@ -62,7 +68,7 @@ ms.locfileid: "63401098"
 
 ## <a name="1014513-30121082145130"></a>101.45.13 (30.121082.14513.0)
 
-- Bu sürümden başlayarak, aşağıdaki dağıtımlara Uç Nokta desteği için Microsoft Defender'ı getiriyoruz: 
+- Bu sürümden itibaren, aşağıdaki Uç Nokta için Microsoft Defender destek getiriyoruz: 
   - RHEL6.7-6.10 ve CentOS6.7-6.10 sürümleri.
   - Amazon Linux 2
   - Fedora 33 veya daha yüksek
@@ -95,8 +101,8 @@ ms.locfileid: "63401098"
 
 ## <a name="1012572-30121022125630"></a>101.25.72 (30.121022.12563.0)
 
-- Linux'ta Uç Nokta için Microsoft Defender artık ABD Kamu müşterileri için önizlemede kullanılabilir. Daha fazla bilgi için bkz. [US Government müşterileri için Uç Nokta için Microsoft Defender](gov.md).
-- DİYANE dosya sistemi olan sistemlerde Linux'ta Uç Nokta için Microsoft Defender kullanımının işletim sisteminin takılması sorunu düzeltildi
+- Uç Nokta için Microsoft Defender Linux'ta yeni kullanıcılar, ABD Kamu müşterileri için önizlemede kullanılabilir. Daha fazla bilgi için abd [Uç Nokta için Microsoft Defender için bkz.](gov.md)
+- DİYANE dosya sistemi olan Uç Nokta için Microsoft Defender Linux'ta sistemlerde sistem kullanımının işletim sisteminin takılması sorunu düzeltildi
 - Performans iyileştirmeleri & hata düzeltmeleri
 
 ## <a name="1012563-30121022125630"></a>101.25.63 (30.121022.12563.0)
