@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 2837b6009c143ea724d8c13d2548eeeca80e431d
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 827b22ea2fb5e0864157dfae6748aa97ee4baf29
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63321327"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499957"
 ---
 # <a name="step-2-remediate-your-first-incident"></a>Adım 2. İlk olayınızı düzeltmek
 
@@ -42,7 +42,7 @@ Microsoft 365 Defender, analistlerin el ile başlatacakları çeşitli düzeltme
 
 ## <a name="actions-on-devices"></a>Cihazlardaki eylemler
 
-- **Cihazı yalıt** - Bu etkinlik, kötü amaçlı yazılım yayılmasını en aza indirmek için tüm ağ trafiğini (İnternet ve iç) hemen engeller ve analistlerin kötü niyetli bir oyuncu saldırıya devam etmeden analize devam olmasına izin verir. Yalnızca Identity için Microsoft Defender hizmet bulutuna izin verilir ve dolayısıyla Kimlik için Microsoft Defender cihazı izlemeye devam eder. 
+- **Cihazı yalıt** - Bu etkinlik, kötü amaçlı yazılım yayılmasını en aza indirmek için tüm ağ trafiğini (İnternet ve iç) hemen engeller ve analistlerin kötü niyetli bir oyuncu saldırıya devam etmeden analize devam olmasına izin verir. Yalnızca Kimlik için Microsoft Defender hizmeti bulutuna izin verilen bağlantı, Kimlik için Microsoft Defender izlemeye devam etmektir. 
 - **Uygulama yürütmeyi** kısıtlama - Bir uygulamanın çalışmasına kısıtlamak için, yalnızca dosyaların Microsoft tarafından verilen bir sertifikayla imzalandıklarından çalışmasını sağlayan bir kod bütünlüğü ilkesi uygulanır. Bu kısıtlama yöntemi, güvenliği tehlikeye atılmış cihazları denetimi altına alan ve kötü amaçlı başka etkinlikler gerçekleştiren bir saldırganı önlemeye yardımcı olabilir.
 - **Virüsten Koruma taraması** çalıştırma - Microsoft Defender Virüsten Koruma virüsten koruma çözümü olsun ya da değildir, diğer virüsten koruma çözümleriyle birlikte bir tarama çalıştırabilirsiniz. Birincil uç nokta koruma çözümü başka bir virüsten koruma satıcısı ürünü ise, Defender Virüsten Koruma'ı Pasif modunda çalıştırabilirsiniz.
 - **Otomatik araştırma başlatma** - Cihazda yeni genel amaçlı otomatik araştırma başlatabilirsiniz. Bir araştırma çalışırken, cihazdan oluşturulan diğer tüm uyarılar, bu araştırma tamamlanana kadar devam eden otomatik bir soruşturmaya eklenir. Buna ek olarak, diğer cihazlarda da aynı tehdit görülürse, bu cihazlar araştırmaya eklenir.
@@ -52,7 +52,7 @@ Microsoft 365 Defender, analistlerin el ile başlatacakları çeşitli düzeltme
 
 ## <a name="actions-on-files"></a>Dosyalarda eylemler
 
-- **Dosyayı durdurma ve karantinaya** al - Bu eylem, işlemleri çalıştırmayı durdurmayı, dosyaları dörtte bir olarak çalıştırmayı ve tüm kayıt defteri anahtarları gibi kalıcı verileri silmeyi içerir. Bu eylem, dosyanın son 30 gün Windows 11 Windows 10, sürüm 1703 veya daha sonraki bir sürüme sahip cihazlarda geçerli olur. 
+- **Dosyayı durdurma ve karantinaya** al - Bu eylem, işlemleri çalıştırmayı durdurmayı, dosyaları dörtte bir olarak çalıştırmayı ve tüm kayıt defteri anahtarları gibi kalıcı verileri silmeyi içerir. Bu eylem, dosyanın son 30 gün Windows 11 Windows 10, sürüm 1703 veya daha sonraki bir sürümüne sahip cihazlarda geçerli olur. 
 - **Dosyayı engellemek veya dosyaya izin** vermek için göstergeler ekleyin - Kötü amaçlı olabilecek dosyaları veya kötü amaçlı yazılımdan şüpheleniyorsanız yasaklamanız nedeniyle organizasyonda bir saldırının daha fazla yayılmasını önle. Bu işlem, dosyanın kuruluş cihazlarına okunma, yazma veya yürütmesini engellemeye yöneliktir.
 - **Dosya indirme veya toplama** – Bu eylem analistlerin kuruluş tarafından daha fazla çözümleme yapmak için parola korumalı bir dosya .zip arşiv dosyasında dosya indirmelerine olanak sağlar.
 - **Derin çözümleme** – Bu eylem, dosyayı güvenli, tam araçlı bir bulut ortamında yürütür. Derin çözümleme sonuçları, dosyanın etkinliklerini, gözlemlenen davranışları ve bırakılan dosyalar, kayıt defteri değişiklikleri ve IP adresleriyle iletişim gibi ilişkili yapıları gösterir. 
@@ -64,11 +64,11 @@ Olayı algılama [, değerlendirme ve çözümleme'de örneği](first-incident-a
 3. Kötü amaçlı dosyanın karantinada olduğundan emin SharePoint
 4. Hangi uç noktaların kötü amaçlı yazılımdan etkilendiğini denetleme
 5. Sistemleri yeniden oluşturma
-6. Diğer kullanıcılara benzer Bulut Uygulamaları için Microsoft Defender uyarılarını denetleme
-7. Tor IP adresini engellemek üzere Uç Nokta için Microsoft Defender'da özel bir gösterge oluşturma
-8. Aşağıdaki resimde gösterilenler gibi bu tür bir uyarı için Bulut Uygulamaları için Microsoft Defender'da bir yönetim eylemi oluşturun:
+6. Diğer kullanıcılar için Microsoft Defender for Cloud Apps uyarılarının benzer olup denetleme
+7. Bir Tor IP Uç Nokta için Microsoft Defender için özel bir gösterge oluşturma
+8. Bu tür uyarılar için Microsoft Defender for Cloud Apps resimde gösterilenler gibi bir yönetim eylemi oluşturun:
 
-   :::image type="content" source="../../media/first-incident-remediate/first-incident-mcas-governance.png" alt-text="Bulut Uygulamaları için Microsoft Defender portalında yönetim eylemleri örneği.":::
+   :::image type="content" source="../../media/first-incident-remediate/first-incident-mcas-governance.png" alt-text="Microsoft Defender for Cloud Apps portalında yönetim eylemleri" lightbox="../../media/first-incident-remediate/first-incident-mcas-governance.png":::
 
 Düzeltme eylemlerinin çoğu bu işlemde uygulanabilir ve Microsoft 365 Defender.
 
@@ -85,7 +85,7 @@ Playbooks, Power Automate ölçütlerin tetiklendiğinde belirli etkinlikleri ot
 
 İşte bir örnek.
  
-:::image type="content" source="../../media/first-incident-remediate/first-incident-power-automate.png" alt-text="Özel iş Power Automate otomasyon akışı örneği."::: 
+:::image type="content" source="../../media/first-incident-remediate/first-incident-power-automate.png" alt-text="Özel Power Automate süreç otomasyon akışı" lightbox="../../media/first-incident-remediate/first-incident-power-automate.png"::: 
  
 Çalışma kitapları, çözümlenen [olaylardan düzeltme eylemleri](first-incident-post.md) oluşturmak için olay sonrası inceleme sırasında da oluşturulabilir. 
 
@@ -98,5 +98,5 @@ Bir olayın [olay sonrası incelemesini nasıl gerçekleştireceklerini öğreni
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Olaylara genel bakış](incidents-overview.md)
-- [Olayları araştırma](investigate-incidents.md)
-- [Olayları yönetme](manage-incidents.md)
+- [Olayları araştırın](investigate-incidents.md)
+- [Olayları yönetin](manage-incidents.md)

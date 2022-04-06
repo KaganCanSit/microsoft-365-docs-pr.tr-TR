@@ -22,12 +22,12 @@ ms.topic: how-to
 ms.custom:
 - autoir
 ms.technology: mdo
-ms.openlocfilehash: 98164fd42a0ed2e2d79e2319823363057d15e7d3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 4b1de0e19cbf241936aa02f957cdd0920f2a580a
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63318613"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682493"
 ---
 # <a name="how-to-report-false-positivesnegatives-in-automated-investigation-and-response-capabilities"></a>Otomatik araştırma ve yanıt yeteneklerinde hatalı pozitif/negatifleri bildirme
 
@@ -68,15 +68,10 @@ Cihazınız güvenli olsa bile, bir dosya, Office 365 IP adresi, URL veya etki a
 
 Tehdit Gezgini'nde, güvenlik işlemleri ekipleriniz bir eylemden etkilenen bir e-posta bulabilir ve bu işlemi geri alabilir.
 
-<br>
-
-****
-
 |Senaryo|Geri Alma Seçenekleri|Daha fazla bilgi|
 |---|---|---|
 |Bir e-posta iletisi kullanıcının Gereksiz E-posta klasörüne yönlendirildi|<ul><li>İletiyi kullanıcının Silinmiş Öğeler klasörüne taşıma</li><li>İletiyi kullanıcının Gelen Kutusu'na taşıma</li><li>İletiyi silme</li></ul>|[Teslim edilen kötü amaçlı e-postaları bulma ve Office 365](investigate-malicious-email-that-was-delivered.md)|
 |E-posta iletisi veya dosya karantinaya alındı|<ul><li>E-postayı veya dosyayı serbest bırakma</li><li> E-postayı veya dosyayı silme</li></ul>|[Karantinaya alınan iletileri yönetici olarak yönetme](manage-quarantined-messages-and-files.md)|
-|
 
 ### <a name="undo-an-action-in-the-action-center"></a>İşlem merkezinde eylemi geri alma
 

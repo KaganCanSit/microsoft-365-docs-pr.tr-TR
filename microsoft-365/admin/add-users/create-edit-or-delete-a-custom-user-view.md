@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 ms.assetid: 4fe7f6ac-be8e-4b57-9e13-24ff889a4b28
 description: Aynı görünümde özel kullanıcı görünümü oluşturmak, düzenlemek veya silmek için filtreleri Microsoft 365.
-ms.openlocfilehash: 479f6c566cea407e75c6fb14f76db418c127aeb4
-ms.sourcegitcommit: 6dcc3b039e0f0b9bae17c386f14ed2b577b453a6
+ms.openlocfilehash: cf3e286a7d8f0e9b5f9741541974b2125df505ad
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63018878"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499605"
 ---
 # <a name="create-edit-or-delete-a-custom-user-view"></a>Özel kullanıcı görünümü oluşturma, düzenleme veya silme
 
@@ -118,7 +118,7 @@ Ayrıca bölüm, şehir, il, ülke veya bölge veya iş unvanı gibi organizasyo
 
 ## <a name="related-content"></a>İlgili içerik
 
-[İlke genel Microsoft 365 yönetim merkezi](İlk Microsoft 365 yönetim merkezi](.. /admin-overview/admin-center-overview.md) (video)\
+[Videoya genel Microsoft 365 yönetim merkezi](../admin-overview/admin-center-overview.md) (video)\
 [Yönetici rolleri hakkında](../add-users/about-admin-roles.md) (video)\
 [Kuruluş için Microsoft 365 temasını özelleştirme](../setup/customize-your-organization-theme.md) (makale)
 

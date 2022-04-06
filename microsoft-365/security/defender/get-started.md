@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Defender'i Microsoft 365 Defender
+title: Microsoft 365 Defender’ı kullanmaya başlayın
 ms.reviewer: ''
 description: Hızlı bir şekilde çalışmaya başlama için hangi adımları Microsoft 365 Defender
 keywords: microsoft 365 Defender'ı başlat, aç, başlat, dağıt
@@ -20,14 +20,14 @@ ms.collection:
 ms.custom: intro-get-started
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 747f8e389b90e20aad7162277b3e62b0a80ae3c7
-ms.sourcegitcommit: 36a19d80fe3f053df0fec398a7ff2dfc777f9730
+ms.openlocfilehash: 4429226eaebc254676fac5589a2a25ca51acdeb6
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/30/2021
-ms.locfileid: "63021551"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499935"
 ---
-# <a name="get-started-with-microsoft-365-defender"></a>Microsoft 365 Defender'i Microsoft 365 Defender
+# <a name="get-started-with-microsoft-365-defender"></a>Microsoft 365 Defender’ı kullanmaya başlayın
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
@@ -38,7 +38,7 @@ Microsoft 365 Defender, kurum genelinde güvenliği izleyiş ve yöneten birleş
 
 İster Microsoft güvenlik ürünleri paketini yeni ister tek tek iş akışlarını biliyor olun, bu konu başlığı sizi güvenlik ürünleriyle çalışmaya başlamak için gereken basit adımlarda Microsoft 365 Defender.
 
-![Bu adımları takip etmeye Microsoft 365 Defender resmi.](../../media/mtp/get-started-m365d.png)
+:::image type="content" source="../../media/mtp/get-started-m365d.png" alt-text="Portala başlama adımları Microsoft 365 Defender." lightbox="../../media/mtp/get-started-m365d.png":::
 
 Genel olarak, işe başlamak için aşağıdaki adımları takip etmek gerekir:
 

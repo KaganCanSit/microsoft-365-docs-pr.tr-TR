@@ -13,12 +13,13 @@ ms.assetid: 64535a0a-1044-413f-8bc2-ed8e8a0bc54c
 description: Microsoft, kendi kendine destek ve yardım desteği de dahil olmak üzere EOP için çeşitli yerlerde ve yöntemlerde yardım sağlar.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f4db5851edcbb4daa2a0be1fa36770b7bb2d4b94
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.collection: M365-security-compliance
+ms.openlocfilehash: 080a61b0ed20843d5962f1901b8d8fece73d8f4b
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62996160"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681050"
 ---
 # <a name="help-and-support-for-eop"></a>EOP için yardım ve destek
 
@@ -77,8 +78,6 @@ Premier Desteği'nin, organizasyona yapılan IT yatırımlarından en iyi şekil
 
 Microsoft, dünya geneli için ürün desteği için yerel veya ücretsiz telefon numaraları sağlar. Bu destek merkezlerinin birçoğu, iş saatlerinde veya günde 24 saat İngilizce olarak yerel dilinize yardım sağlar. Aşağıda listelenen konumu görmüyorsanız, yerel destek telefon numaranızı bulmak için yukarıda açıklandığı gibi Sanal Temsilci'ye tıklayın.
 
-****
-
 |Ülke veya bölge|Satın alma öncesi ve faturayla ilgili sorular|Teknik Destek soruları|
 |---|---|---|
 |Brezilya|Ücretsiz: 08007621146 <br> Yerel: 1147001999|Aynı|
@@ -89,7 +88,6 @@ Microsoft, dünya geneli için ürün desteği için yerel veya ücretsiz telefo
 |İspanya|Ücretsiz: 900 814 197 <br> Yerel: 912 718 160|Aynı|
 |Birleşik Krallık|Ücretsiz: 0800 032 6417 <br> Yerel: 0203 450 6455|Aynı|
 |Amerika Birleşik Devletleri|Ücretsiz: 1-877-913-2707|Ücretsiz: 1-800-865-9408|
-|
 
 ## <a name="for-more-information-about-eop-documentation"></a>EOP belgeleri hakkında daha fazla bilgi için
 

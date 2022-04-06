@@ -15,12 +15,12 @@ search.appverid:
 - MET150
 recommendations: false
 description: dlp ilkesi koşulları ve özel durumları hakkında bilgi
-ms.openlocfilehash: 771674b82e50987397fc1ae754f0b96719a04ae5
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+ms.openlocfilehash: 9b735d139950399fb80e9063e7d9fdd1176c2d2b
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63401122"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500067"
 ---
 # <a name="dlp-policy-conditions-exceptions-and-actions"></a>DLP ilkesi koşulları, özel durumlar ve eylemler
 
@@ -154,7 +154,7 @@ Gönderen adresinin konumunu bir DLP kural düzeyinde yapılandırmak için, par
 |Öneme sahip|koşul: *WithImportance* <br/> özel durum: *ExceptIfWithImportance*|Önem|Belirtilen önem düzeyiyle işaretlenmiş iletiler.|
 |İçerik karakter kümesi sözcükler içeriyor|koşul: *ContentCharacterSetContainsWords* <br/> *ExceptIfContentCharacterSetContainsWords*|Karakter Kümeleri|Belirtilen karakter kümesi adlardan herhangi birini bulunduran iletiler.|
 |Gönderen geçersiz k oldu mu|koşul: *HasSenderOverride* <br/> özel durum: *ExceptIfHasSenderOverride*|yok|Gönderenin veri kaybı önleme (DLP) politikasını geçersiz kılmayı seçtiği iletiler. DLP ilkeleri hakkında daha fazla bilgi için bkz [. Veri kaybını önleme hakkında bilgi](./dlp-learn-about-dlp.md)|
-|İleti türü eşleşmeleri|koşul: *MessageTypeMatches* <br/> özel durum: *ExceptIfMessageTypeMatches*|MessageType|Belirtilen türde iletiler.|
+|İleti türü eşleşmeleri|koşul: *MessageTypeMatches* <br/> özel durum: *ExceptIfMessageTypeMatches*|MessageType|Belirtilen türde iletiler. **Not**: Kullanılabilir ileti türleri Otomatik yanıt, Otomatik iletme, Şifreli (S/MIME), Takvim, İzin denetimli (hak yönetimi), Sesli mesaj, İmzalı, Okundu bilgisi ve Onay isteği'dir. |
 |İleti boyutu, büyüktür veya eşittir|koşul: *MessageSizeOver* <br/> özel durum: *ExceptIfMessageSizeOver*|`Size`|Toplam boyutu (ileti artı ekleri) belirtilen değerden büyük veya buna eşit olan iletiler. **Not**: Posta kutularına ilişkin ileti boyutu sınırları, posta akışı kurallarında yer alan kurallardan önce değerlendirilir. Posta kutusu için fazla büyük olan bir ileti, bu koşula sahip bir kural ileti üzerinde eyleme geçemeden reddedilir.|
 |
 
@@ -177,7 +177,7 @@ Bu tabloda, DLP'de kullanılabilen eylemler açık bulunmaktadır.
 |Gönderenin yöneticisini alıcı olarak ekleme|AddRecipients|İlk özellik: *AddedManagerAction*</br>İkinci özellik: *Alan*|Gönderenin yöneticisini belirtilen alıcı türü (To, Bilgi, Gizli) olarak iletiye ekler veya gönderene ya da alıcıya bildirmeden iletiyi gönderenin yöneticisine yeniden yönlendirer. Bu eylem yalnızca gönderenin Manager özniteliği Active Directory'de tanımlandığı durumda çalışır. Bu parametre şu söz dizimi kullanır: @{AddManagerAsRecipientType = "<Bilgi \|\|Gizli>"}|
 Konu için hazırlık|PrependSubject|Dize|Belirtilen metni iletinin Konu alanına ekler. Boşluk veya iki nokta üst üste (iki nokta üst üste) :) ifadesini özgün konu metninden ayırt etmek için, belirtilen metnin son karakteridir.</br>Aynı dizenin konu metni içeren iletilere (örneğin, yanıtlar) eklenmesini önlemek için, kurala "Konu sözcükler içerir" (ExceptIfSubjectContainsWords) özel durumu ekleyin.|
 |HTML yasal uyarı uygulama|ApplyHtmlDisclaimer|Birinci özellik: *Metin*</br>İkinci özellik: *Konum*</br>Üçüncü özellik: *Geri dönüş eylemi*|İletinin gerekli bulunduğu konuma belirtilen HTML tekzlesini uygular.</br>Bu parametre şu söz dizimlerini kullanır: @{ Text = " " ; Konum = <Ekle \|Ekle>; FallbackAction = <Wrap Ignore \|Reject \|> }|
-|Kullanıcı Office 365 İleti Şifrelemesi hakları korumasını kaldırma|RemoveRMSTemplate|yok|E-Office 365 uygulanan şifrelemeyi kaldırır|
+|İleti Office 365 korumasını ve hak korumasını kaldırma|RemoveRMSTemplate|yok|E-Office 365 uygulanan şifrelemeyi kaldırır|
 |İletiyi barındırılan karantinaya teslim |_Karantina_|yok| Bu eylem şu anda genel **önizlemede.** Bu aşama sırasında, DLP ilkeleri tarafından karantinaya alınan e-postalar ilke türünü ExchangeTransportRule olarak gösterir.</br> İletiyi EOP'de karantinaya teslim ediyor. Daha fazla bilgi için bkz. [EOP'de e-posta iletileri karantinaya alınmış](/microsoft-365/security/office-365-security/quarantine-email-messages).|
 |
 

@@ -20,12 +20,12 @@ ms.custom: ''
 description: For Office 365 için Microsoft Defender'da Kampanya Görünümleri hakkında Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 479963323dad613f3a17a527f94bbd5963487f76
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: d8fad29e82b647d309d3b7046e36bd03b64de81d
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021807"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682559"
 ---
 # <a name="campaign-views-in-microsoft-defender-for-office-365"></a>Yardım için Microsoft Defender'da Kampanya Office 365
 
@@ -211,10 +211,6 @@ Diyagram aşağıdaki bilgileri içerir:
 - **Gönderen etki alanları**
 - **Filtre kararları**: Karar değerleri, İstenmeyen posta iletisi önleme üst bilgilerde açıklandığı gibi kullanılabilir kimlik avı ve istenmeyen posta filtreleme [kararlarına yöneliktir](anti-spam-message-headers.md). Kullanılabilir değerler aşağıdaki tabloda açıklanmıştır:
 
-  <br>
-
-  ****
-
   |Değer|İstenmeyen posta filtresi kararını|Açıklama|
   |---|---|---|
   |**İzin verildi**|`SFV:SKN` <p> `SFV:SKI`|İleti istenmeyen posta değil olarak işaretlendi ve/veya istenmeyen posta filtrelemesi tarafından değerlendirilmeden önce filtreleme atlandı. Örneğin, ileti bir posta akışı kuralı (aktarım kuralı olarak da bilinir) tarafından istenmeyen posta değil olarak işaretlendi. <p> İleti istenmeyen posta filtrelemesi diğer nedenlerle atlandı. Örneğin, gönderen ve alıcı aynı kuruluşta gibi görünür.|
@@ -227,7 +223,6 @@ Diyagram aşağıdaki bilgileri içerir:
   |**Kullanıcı İzin Ver**<sup>\*</sup>|`SFV:SFE`|İleti istenmeyen posta filtrelemesini atlandı çünkü gönderen kullanıcının Posta Gönderenler Kasa içinde yer alıyor.|
   |**Kullanıcı Bloğu**<sup>\*\*</sup>|`SFV:BLK`|İleti, gönderen kullanıcının Engellenen Gönderenler listesinde yer alıyor olduğu için istenmeyen posta filtrelemesi tarafından engellendi.|
   |**ZAP**|yok|[Sıfır saatlik otomatik temizleme (ZAP),](zero-hour-auto-purge.md) teslim edilen iletiyi Gereksiz E-posta klasörüne veya karantinaya taşıdı. Eylemi istenmeyen posta önleme [ilkelerde yapılandırmış oluruz](configure-your-spam-filter-policies.md).|
-  |
 
   <sup>\*</sup> İzin verilen ileti hizmet tarafından engellenmiş olabilir, çünkü istenmeyen posta önleme ilkelerinizi gözden geçirebilirsiniz.
 

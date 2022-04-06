@@ -19,12 +19,12 @@ ms.custom: ''
 description: Google Postini, Barracuda Spam ve Virüs Güvenlik Duvarı veya Cisco IronPort gibi üçüncü taraf koruma hizmetlerinden veya cihazlarından Microsoft Defender'a geçiş için doğru Office 365 öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c80d9e6005b5f9f329164dbc4ba0ebfed6a05a1b
-ms.sourcegitcommit: e09ced3e3628bf2ccb84d205d9699483cbb4b3b0
+ms.openlocfilehash: af24829f8d3e4186de6e1c537d545515667627b8
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2021
-ms.locfileid: "62990613"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682361"
 ---
 # <a name="migrate-from-a-third-party-protection-service-or-device-to-microsoft-defender-for-office-365"></a>Üçüncü taraf koruma hizmeti veya cihazından Microsoft Defender'a geçiş Office 365
 
@@ -76,16 +76,11 @@ Aşağıdaki tabloda açıklandığı gibi, üçüncü taraf koruma hizmetlerind
 
 ![Office 365 için Defender'a Office 365.](../../media/phase-diagrams/migration-phases.png)
 
-<p>
-
-****
-
 |Aşama|Açıklama|
 |---|---|
 |[Geçişe hazırlanma](migrate-to-defender-for-office-365-prepare.md)|<ol><li>[Mevcut koruma hizmetinizin ayarlarının envanterini alın](migrate-to-defender-for-office-365-prepare.md#inventory-the-settings-at-your-existing-protection-service)</li><li>[Microsoft 365'te mevcut koruma yapılandırmanızı denetleme](migrate-to-defender-for-office-365-prepare.md#check-your-existing-protection-configuration-in-microsoft-365)</li><li>[Posta yönlendirme yapılandırmanızı denetleme](migrate-to-defender-for-office-365-prepare.md#check-your-mail-routing-configuration)</li><li>[İletileri farklı bir yere Microsoft 365](migrate-to-defender-for-office-365-prepare.md#move-features-that-modify-messages-into-microsoft-365)</li><li>[İstenmeyen posta ve toplu kullanıcı deneyimlerini tanımlama](migrate-to-defender-for-office-365-prepare.md#define-spam-and-bulk-user-experiences)</li><li>[Öncelik hesaplarını tanımlama ve belirleme](migrate-to-defender-for-office-365-prepare.md#identify-and-designate-priority-accounts)</li></ol>|
 |[Defender'ı Office 365](migrate-to-defender-for-office-365-setup.md)|<ol><li>[Pilot kullanıcılar için dağıtım grupları oluşturma](migrate-to-defender-for-office-365-setup.md#step-1-create-distribution-groups-for-pilot-users)</li><li>[Kullanıcı iletisi raporlaması için kullanıcı gönderimi yapılandırma](migrate-to-defender-for-office-365-setup.md#step-2-configure-user-submission-for-user-message-reporting)</li><li>[SCL=-1 posta akış kuralını koruma veya oluşturma](migrate-to-defender-for-office-365-setup.md#step-3-maintain-or-create-the-scl-1-mail-flow-rule)</li><li>[Bağlayıcılar için Geliştirilmiş Filtrelemeyi Yapılandırma](migrate-to-defender-for-office-365-setup.md#step-4-configure-enhanced-filtering-for-connectors)</li><li>[Pilot koruma ilkeleri oluşturma](migrate-to-defender-for-office-365-setup.md#step-5-create-pilot-protection-policies)</li></ol>|
 |[Office 365 için Defender'a Office 365](migrate-to-defender-for-office-365-onboard.md)|<ol><li>[Güvenlik önlemlerini eklemeye Teams](migrate-to-defender-for-office-365-onboard.md#step-1-begin-onboarding-security-teams)</li><li>[(İsteğe bağlı) Pilot kullanıcıların var olan koruma hizmetiniz tarafından filtre uygulamanın dışında tutulacak](migrate-to-defender-for-office-365-onboard.md#step-2-optional-exempt-pilot-users-from-filtering-by-your-existing-protection-service)</li><li>[Akıllı ifadeyi ayarlama](migrate-to-defender-for-office-365-onboard.md#step-3-tune-spoof-intelligence)</li><li>[Kimliğe bürünme koruması ve posta kutusu zekası ayarlama](migrate-to-defender-for-office-365-onboard.md#step-4-tune-impersonation-protection-and-mailbox-intelligence)</li><li>[Ölçmek ve ayarlamak için kullanıcı gönderimlerinden veri kullanma](migrate-to-defender-for-office-365-onboard.md#step-5-use-data-from-user-submissions-to-measure-and-adjust)</li><li>[(İsteğe bağlı) Pilot uygulamanıza daha fazla kullanıcı ekleyin ve daha fazla kullanıcı ekleyin](migrate-to-defender-for-office-365-onboard.md#step-6-optional-add-more-users-to-your-pilot-and-iterate)</li><li>[SCL=Microsoft 365-1 posta akış kuralını tüm kullanıcılara genişletme ve kapatma](migrate-to-defender-for-office-365-onboard.md#step-7-extend-microsoft-365-protection-to-all-users-and-turn-off-the-scl-1-mail-flow-rule)</li><li>[MX kayıtlarınızı değiştirme](migrate-to-defender-for-office-365-onboard.md#step-8-switch-your-mx-records)</li></ol>|
-|
 
 ## <a name="next-step"></a>Sonraki adım
 

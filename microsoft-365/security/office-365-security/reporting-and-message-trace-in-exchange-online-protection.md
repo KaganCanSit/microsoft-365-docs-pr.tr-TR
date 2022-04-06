@@ -8,6 +8,7 @@ manager: dansimp
 ms.date: ''
 audience: ITPro
 ms.topic: overview
+ms.collection: M365-security-compliance
 ms.localizationpriority: medium
 ms.assetid: f40253f2-50a1-426e-9979-be74ba74cb61
 ms.custom:
@@ -15,12 +16,12 @@ ms.custom:
 description: Bu makalede, Güvenlik Koruması (EOP) yöneticileri tarafından kullanılabilen raporlar Microsoft Exchange Online sorun giderme araçları hakkında bilgi edinebilirsiniz.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d4f0289054baec0e5bcedf4e9e3d434ab51ef92b
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 929fce14a9e128b724b4aa69d88e4a3062ed5640
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62986512"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682427"
 ---
 # <a name="reporting-and-message-trace-in-eop"></a>EOP'de raporlama ve ileti izleme
 
@@ -71,16 +72,11 @@ Yöneticiler tarafından yapılan belirli değişiklikleri izler. Bu raporlar ya
 
 Aşağıdaki tabloda EOP raporlama ve ileti izleme verileri ne zaman ve ne kadar süreyle kullanılabilir olduğu açık almaktadır.
 
-<br>
-
-****
-
 |Rapor türü|Kullanılabilir veriler (geriye dönüp bak)|Gecikme süresi|
 |---|---|---|
 |Posta koruması özet raporları|90 gün|İleti verileri toplama işlemi büyük ölçüde 24-48 saat içinde tamamlanır. Bazı küçük artımlı toplu değişiklikler en çok 5 gün olabilir.|
 |Posta koruması ayrıntı raporları|90 gün|7 saatten az olan ayrıntılı veriler için verilerin 24 saat içinde görünmesi gerekir, ancak 48 saate kadar tamamlanamayabilirsiniz. Bazı küçük artımlı değişiklikler en çok 5 gün olabilir. <p> 7 günlükten daha eski iletilerin ayrıntılı raporlarını görüntülemek için, sonuçlar birkaç saat sürebilir.|
 |İleti izleme verileri|90 gün|7 günlükten az olan iletiler için bir ileti izleme çalıştırsanız, iletilerin 5-30 dakika içinde görünmesi gerekir.<p> 7 günlükten daha eski iletiler için bir ileti izleme çalıştırsanız, sonuçlar birkaç saat kadar sürebilir.|
-|
 
 > [!NOTE]
 > Hem yönetim merkezi hem de uzak PowerShell üzerinden veri kullanılabilirliği ve gecikme süresi aynı olur.

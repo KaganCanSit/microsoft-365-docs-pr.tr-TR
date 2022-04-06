@@ -17,12 +17,12 @@ ms.topic: article
 ms.collection:
 - M365-security-compliance
 - m365initiative-m365-defender
-ms.openlocfilehash: 8a8de691ff08b50b56c34ed9e779cc97d48c5fcd
-ms.sourcegitcommit: d32654bdfaf08de45715dd362a7d42199bdc1ee7
+ms.openlocfilehash: 0bf6a6ecf48889228391688e41fb79070c3194a1
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63755823"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682228"
 ---
 # <a name="configure-and-manage-microsoft-threat-experts-capabilities-through-microsoft-365-defender"></a>Web siteniz aracılığıyla Microsoft Tehdit Uzmanları özelliklerini yapılandırma Microsoft 365 Defender
 
@@ -52,15 +52,15 @@ Uç Nokta ve Microsoft 365 Defender için Microsoft Defender'a zaten sahipsinizs
 
 2. **Uygula'ya seçin**.
 
-    :::image type="content" source="../../media/mte/mte-collaboratewithmte.png" alt-text="Portalda Microsoft Tehdit Uzmanları Ayarları Microsoft 365 Defender sayfası" lightbox="../../media/mte/mte-collaboratewithmte.png":::
+    ![Resim Microsoft Tehdit Uzmanları.](../../media/mte/mte-collaboratewithmte.png)
 
 3. Microsoft'un uygulamanız hakkında size ulaşamalarını istediğiniz adı ve e-posta adresinizi girin.
 
-    :::image type="content" source="../../media/mte/mte-apply.png" alt-text="Microsoft Tehdit Uzmanları Microsoft 365 Defender portalında Microsoft 365 Defender sayfası" lightbox="../../media/mte/mte-apply.png":::
-  
+    ![Uygulamanın Microsoft Tehdit Uzmanları.](../../media/mte/mte-apply.png)
+
 4. Gizlilik [bildirimini okuyun](https://privacy.microsoft.com/en-us/privacystatement) ve **bitirerek** Gönder'i seçin. Başvurunız onaylandıktan sonra bir hoş geldiniz e-postası alırsınız.
 
-    :::image type="content" source="../../media/mte/mte-applicationconfirmation.png" alt-text="Microsoft Tehdit Uzmanları portalında uygulama Microsoft 365 Defender onayı" lightbox="../../media/mte/mte-applicationconfirmation.png":::
+    ![Uygulama Microsoft Tehdit Uzmanları resmi.](../../media/mte/mte-applicationconfirmation.png)
 
 5. Hoş geldiniz e-postanızı aldıktan sonra, otomatik olarak hedefli saldırı bildirimlerini almaya başlarsınız.
 
@@ -105,13 +105,13 @@ Microsoft Tehdit Uzmanları portalın içinden Microsoft 365 Defender kurabilirs
 
 2. Üst menüden? öğesini seçin **. Bir tehdit uzmanına danışın**.
 
-    :::image type="content" source="../../media/mte/incidents-action-mte-highlighted.png" alt-text="Microsoft Tehdit Uzmanları portalında yer alan menüden Talep Üzerine Microsoft 365 Defender." lightbox="../../media/mte/incidents-action-mte-highlighted.png":::
+    ![Menüden Microsoft Tehdit Uzmanları Uzmanlara Özel'in görüntüsü.](../../media/mte/incidents-action-mte-highlighted.png)
 
     Açılır bir ekran açılır.
 
     Üst bilgide, bir deneme aboneliği mi yoksa tam deneme sürümü ya da Microsoft Tehdit Uzmanları Uzman isteğe bağlı abonelik mi olduğu belirtiliyor.
 
-    :::image type="content" source="../../media/mte/mte-trial.png" alt-text="Microsoft Tehdit Uzmanları Microsoft 365 Defender portalında ISTEĞE Bağlı Microsoft 365 Defender ekranı" lightbox="../../media/mte/mte-trial.png":::
+    ![Uzman Microsoft Tehdit Uzmanları isteğe bağlı deneme aboneliği ekranı görüntüsü.](../../media/mte/mte-trial.png)
 
     Araştırma **konu** alanı, isteğinize uygun sayfanın bağlantısıyla önceden doldurulur.
 

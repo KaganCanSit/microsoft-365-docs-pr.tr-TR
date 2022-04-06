@@ -1,7 +1,7 @@
 ---
 title: ASR kuralları dağıtım önkoşulları
 description: Saldırı yüzeyini azaltma (ASR) kurallarını dağıtma hakkında genel bakış ve önkoşul kılavuzu sağlar.
-keywords: Saldırı yüzeyini azaltma kuralları dağıtımı, ASR dağıtımı, asr kurallarını etkinleştirme, ASR'yi yapılandırma, izinsiz giriş engelleme sistemi, koruma kuralları, istismardan koruma kuralları, istismardan koruma kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma
+keywords: Saldırı yüzeyini azaltma kuralları dağıtımı, ASR dağıtımı, asr kurallarını etkinleştirme, ASR'yi yapılandırma, izinsiz giriş engelleme sistemi, koruma kuralları, istismardan koruma kuralları, istismardan koruma kuralları, bulaşma önleme kuralları, Uç nokta için Microsoft Defender, ASR kurallarını yapılandırma
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -20,18 +20,18 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 4703867449877a35d6621b76072b9420a0cdbdec
-ms.sourcegitcommit: 0ae89b71b202aceabd5061f0d5b46d030d93e931
+ms.openlocfilehash: 37eb6edb32c78df7ae23fe7cb52b249f81ca18b3
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64520561"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682184"
 ---
 # <a name="asr-rules-deployment-prerequisites"></a>ASR kuralları dağıtım önkoşulları
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Saldırı yüzeyleri, kuruluşlarının siber tehditlere ve saldırılara açık olduğu tüm yerlerdir. Kuruluş saldırı yüzeyleri, bir saldırganın, kuruluş cihazları veya ağlarının güvenliğini tehlikeye at olduğu tüm yerleri içerir. Saldırı yüzeyinizi azaltmak, kuruluş cihazlarınızı ve ağın korunması anlamına gelir; bu da saldırganları saldırıya daha az yol bırakır. Saldırı yüzeyini azaltma (ASR) kurallarını (bu uygulamadaki birçok güvenlik özelliğinde yer alan Uç Nokta için Microsoft Defender) yapılandırmanıza yardımcı olabilir.
+Saldırı yüzeyleri, kuruluşlarının siber tehditlere ve saldırılara açık olduğu tüm yerlerdir. Kuruluş saldırı yüzeyleri, bir saldırganın, kuruluş cihazları veya ağlarının güvenliğini tehlikeye at olduğu tüm yerleri içerir. Saldırı yüzeyinizi azaltmak, kuruluş cihazlarınızı ve ağın korunması anlamına gelir; bu da saldırganları saldırıya daha az yol bırakır. Saldırı yüzeyini azaltma (ASR) kurallarını (Uç Nokta için Microsoft Defender'da bulunan birçok güvenlik özelliği) yapılandırmanıza yardımcı olabilir.
 
 ASR kuralları, şu tür belirli yazılım davranışlarını hedefler:
 
@@ -46,9 +46,9 @@ Farklı saldırı yüzeylerini azaltarak ilk başta saldırıların önlenmesine
 >[!IMPORTANT]
 >Bu kılavuz, ASR kurallarının nasıl yapılandırı olduğuna karar vermede size yardımcı olacak resimler ve örnekler sağlar; bu resim ve örnekler ortamınız için en iyi yapılandırma seçeneklerini yansıtmayabilirsiniz.
 
-Başlamadan önce Saldırı yüzeyini [azaltmaya genel bakış ve](overview-attack-surface-reduction.md) Saldırı yüzeyini azaltma kurallarının yeniden ortaya çıkarımı - Temel bilgiler için [Bölüm 1'i](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-1/ba-p/1306420) gözden geçirebilirsiniz. Kapsam alanlarını ve olası etkiyi anlamak için, geçerli ASR kuralları kümesine aşinalık sahibi olursunuz; Saldırı [yüzeyini azaltma kuralları başvuru kılavuzuna bakın](attack-surface-reduction-rules-reference.md).  ASR kuralları kümesi hakkında bilgi sahibi olurken, kural başına GUID eşlemelerini not edin; bkz. [ASR kuralları ve GUID matrisi](attack-surface-reduction-rules-reference.md#asr-rules-and-guids-matrix).
+Başlamadan önce Saldırı yüzeyini [azaltmaya genel bakış ve](overview-attack-surface-reduction.md) Saldırı yüzeyini azaltma kurallarının yeniden ortaya çıkarımı - Temel bilgiler için [Bölüm 1'i](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-1/ba-p/1306420) gözden geçirebilirsiniz. Kapsam alanlarını ve olası etkiyi anlamak için, geçerli ASR kuralları kümesine aşinalık sahibi olursunuz; Saldırı [yüzeyini azaltma kuralları başvuru kılavuzuna bakın](attack-surface-reduction-rules-reference.md).
 
-ASR kuralları, farklı bir uygulama içerisinde saldırı yüzeyini azaltma yeteneklerine Uç Nokta için Microsoft Defender. Bu belge, insan tarafından işletilen fidye yazılımı ve diğer tehditlere benzer gelişmiş tehditleri durdurmak için ASR kurallarının etkili bir şekilde dağıtımı hakkında daha ayrıntılı bilgi içerir.  
+ASR kuralları, Uç Nokta için Microsoft Defender'da saldırı yüzeyini azaltma özelliğinin yalnızca bir özelliğidir. Bu belge, insan tarafından işletilen fidye yazılımı ve diğer tehditlere benzer gelişmiş tehditleri durdurmak için ASR kurallarının etkili bir şekilde dağıtımı hakkında daha ayrıntılı bilgi içerir.  
 
 ### <a name="rules-by-category"></a>Kategoriye göre kurallar
 
@@ -73,13 +73,13 @@ ASR kurallarını uygulamanın birden çok yöntemi mümkün olsa da, bu kılavu
 
 - Azure Active Directory
 - Microsoft Uç Nokta Yönetimi (MEM)
-- Windows 10 ve Windows 11 cihazları
-- Uç Nokta için Microsoft Defender E5 veya Windows E5 lisansları
+- Windows 10 ve Windows 11 cihaz
+- Uç Nokta E5 veya Windows E5 lisansları için Microsoft Defender
 
-ASR kuralları ve raporlamadan tam olarak yararlanmak için, Microsoft 365 Defender E5 lisansı ve A5 Windows A5 kullanmanız önerilir. Daha fazla bilgi: [En düşük gereksinimler Uç Nokta için Microsoft Defender](minimum-requirements.md).
+ASR kuralları ve raporlamadan tam olarak yararlanmak için, Microsoft 365 Defender E5 lisansı ve A5 Windows A5 kullanmanız önerilir. Daha fazla bilgi: [Uç nokta için Microsoft Defender'a gereken en düşük gereksinimler](minimum-requirements.md).
 
 >[!Note]
->ASR kurallarını yapılandırmanın birden çok yöntemi vardır. ASR kuralları şu şekilde ya yapılandırabilirsiniz: Microsoft Endpoint Manager (MEM), PowerShell, grup ilkesi, Microsoft System Center Configuration Manager (SCCM), MEM OMA-URI.
+>ASR kurallarını yapılandırmanın birden çok yöntemi vardır. ASR kuralları şu şekilde ya yapılandırabilirsiniz: Microsoft Endpoint Manager (MEM), PowerShell, Grup İlkesi, Microsoft System Center Configuration Manager (SCCM), MEM OMA-URI.
 >Altyapı _gereksinimleri (yukarıda_ ) için listelenenden farklı bir altyapı yapılandırması kullanıyorsanız, diğer yapılandırmaları kullanarak saldırı yüzeyini azaltma kurallarını dağıtma hakkında daha fazla bilgi edinmek için buradan [öğrenebilirsiniz](enable-attack-surface-reduction.md): Saldırı yüzeyini azaltma kurallarını etkinleştirme.  
 
 ### <a name="asr-rules-dependencies"></a>ASR kuralları bağımlılıkları
@@ -122,10 +122,10 @@ Geçerli Microsoft Defender Virüsten Koruma tutmak, HATALı pozitif sonuçları
 İşletmeler için iş alanı işlemlerinizi etkiabilecek tüm yeni ve geniş ölçekli uygulamalar gibi, planlama ve uygulama yöntemleriniz açısından da önemlidir. Kötü amaçlı yazılımları önlemeye yönelik ASR kurallarının güçlü özellikleri nedeniyle, benzersiz müşteri iş akışlarınıza en uygun şekilde çalışmalarını sağlamak için bu kuralların dikkatli bir şekilde planlanmaları ve dağıtımı gereklidir. Ortamınıza çalışmak için, ASR kurallarını dikkatle planlamanız, test edin, uygulaymalısınız ve faaliyete geçirmelisiniz.  
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="images/asr-rules-deployment-phases.png" alt-text="ASR kuralları dağıtım aşamaları" lightbox="images/asr-rules-deployment-phases.png":::
+> ![ASR kuralları dağıtım aşamaları](images/asr-rules-deployment-phases.png)
 
 >[!Note]
->Microsoft'a uygun olmayan HIPS kullanan ve Uç Nokta için Microsoft Defender saldırı yüzeyini azaltma kurallarına geçiş yapan Müşteriler için: Siz Denetim modundan Engelleme moduna geçiş yapana kadar Microsoft, müşterilerin HIPS çözümlerini ASR kuralları dağıtımıyla yan yana çalıştırmalarını tavsiye eder. Dışlama önerileri için üçüncü taraf virüsten koruma satıcınıza ulaşmanız gerektiğini unutmayın.  
+>Microsoft'a yönelik olmayan bir HIPS kullanan ve Uç nokta saldırı yüzeyini azaltma kuralları için Microsoft Defender'a geçiş yapan Müşteriler için: Microsoft, denetimden Engelleme moduna geçiş yapana kadar müşterilerin HIPS çözümlerini ASR kuralları dağıtımıyla yan yana çalıştırmalarını tavsiye eder. Dışlama önerileri için üçüncü taraf virüsten koruma satıcınıza ulaşmanız gerektiğini unutmayın.  
 
 ## <a name="additional-topics-in-this-deployment-collection"></a>Bu dağıtım koleksiyonunda yer alan ek konular
 
@@ -163,7 +163,7 @@ Geçerli Microsoft Defender Virüsten Koruma tutmak, HATALı pozitif sonuçları
 
 ### <a name="microsoft-defender"></a>Microsoft Defender
 
-[Uç Nokta için Microsoft Defender'da yanlış pozitifleri/negatifleri ele alın](defender-endpoint-false-positives-negatives.md)
+[Uç nokta için Microsoft Defender'da hatalı pozitif/negatifleri adresle](defender-endpoint-false-positives-negatives.md)
 
 [Bulut teslimi koruma ve Microsoft Defender Virüsten Koruma](cloud-protection-microsoft-defender-antivirus.md)
 
@@ -177,7 +177,7 @@ Geçerli Microsoft Defender Virüsten Koruma tutmak, HATALı pozitif sonuçları
 
 [Dağıtım planı oluşturma Windows](/windows/deployment/update/create-deployment-plan)
 
-[IT'yi farklı bir veritabanına dağıtılmış olarak kullanmak için rol tabanlı erişim denetimi (RBAC) ve kapsam Intune](/mem/intune/fundamentals/scope-tags)
+[Intune'da dağıtılan IT için rol tabanlı erişim denetimi (RBAC) ve kapsam etiketlerini kullanma](/mem/intune/fundamentals/scope-tags)
 
 [E-Microsoft Intune'de cihaz Microsoft Intune](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment)
 

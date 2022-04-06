@@ -21,12 +21,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 41583a89abc3418799263dc46643fbe06a07e818
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: c09a3880a9f117d0ce5ce6e5edf3736192fc9c95
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63712850"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499869"
 ---
 # <a name="investigate-alerts-in-microsoft-365-defender"></a>E-postada uyarıları Microsoft 365 Defender
 
@@ -45,15 +45,15 @@ Daha Microsoft 365 Defender, ilgili uyarılar olay oluşturmak için bir [araya 
 
 Uyarılar **sırası geçerli** uyarı kümelerini gösterir. Microsoft 365 Defender portalının hızlı başlatında, Olaylar **& veya Uyarılar >** sırasında [uyarı kuyruğuna Microsoft 365 Defender](https://go.microsoft.com/fwlink/p/?linkid=2077139).
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-queue.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-queue.png" alt-text="Microsoft 365 Defender portalında uyarı kuyruğu örneği":::
+:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-queue.png" alt-text="Microsoft 365 Defender portalında Uyarılar bölümü" lightbox="../../media/investigate-alerts/alerts-ss-alerts-queue.png":::
 
-Uç Nokta için Microsoft Defender, Güvenlik için Microsoft Defender ve Güvenlik için Microsoft Defender gibi farklı Microsoft Office 365 Microsoft 365 Defender uyarıları burada görünür.
+Uyarı, güvenlik hizmeti ve güvenlik Uç Nokta için Microsoft Defender Office 365 için Microsoft Defender Microsoft Microsoft 365 Defender uyarıları burada görünür.
 
 Varsayılan olarak, portalda Microsoft 365 Defender sırasındaki uyarı sırası son 30 gün içinde gelen yeni ve devam eden uyarıları görüntüler. En son uyarı listenin en üstünde yer alıyor, böylece ilk olarak siz de onu görüyorsunuz. 
 
 Varsayılan uyarılar kuyruğundan Filtre'yi seçerek **uyarıların bir** alt kümesini belirtebilirsiniz. Filtre bölmesini görmek için bu bölmeyi de görebilirsiniz. İşte bir örnek.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-filter.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-filter.png" alt-text="Microsoft 365 Defender portalında uyarılar sırası için filtreler bölmesi örneği":::
+:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-filter.png" alt-text="Filtre portalının Filtreler Microsoft 365 Defender." lightbox="../../media/investigate-alerts/alerts-ss-alerts-filter.png":::
 
 Uyarıları şu ölçütlere göre filtreleyabilirsiniz:
 
@@ -63,9 +63,9 @@ Uyarıları şu ölçütlere göre filtreleyabilirsiniz:
 - Varlıklar (etkilene varlıklar)
 - Otomatik soruşturma durumu
 
-## <a name="required-roles-for-defender-for-office-365-alerts"></a>Güvenlik uyarıları için Defender Office 365 rolleri
+## <a name="required-roles-for-defender-for-office-365-alerts"></a>Uyarılarda Office 365 için Defender rolleri
 
-Kullanıcı uyarıları için Microsoft Defender'a erişmek için aşağıdaki rollerden herhangi Office 365 gerekir:
+Bu uyarılara erişmek için aşağıdaki rollerden herhangi biri Office 365 için Microsoft Defender gerekir:
 
 - Daha Azure Active Directory (Azure AD) genel rolleri için:
 
@@ -91,7 +91,9 @@ Kullanıcı uyarıları için Microsoft Defender'a erişmek için aşağıdaki r
 
 Ana uyarı sayfasını görmek için uyarının adını seçin. İşte bir örnek.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-main.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-main.png" alt-text="Portalda uyarının ayrıntılar Microsoft 365 Defender":::
+:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-main.png" alt-text="Microsoft 365 Defender portalında uyarının ayrıntıları" lightbox="../../media/investigate-alerts/alerts-ss-alerts-main.png":::
+
+Ayrıca, Uyarıyı yönet **bölmesinden Ana uyarı sayfasını** aç **eylemlerini de seçin** .
 
 Bu bölümlerde bir uyarı sayfası oluşur: 
 
@@ -102,7 +104,7 @@ Uyarı sayfası genelinde, herhangi bir varlığın yanındaki üç noktayı (**
 
 ### <a name="alert-sources"></a>Kaynakları uyarın
 
-Microsoft 365 Defender için Microsoft Defender, Office 365 için Microsoft Defender, Bulut Uygulamaları için Microsoft Defender ve Bulut Uygulamaları için Microsoft Defender uygulaması yönetim eklentisini gibi çözümlerden uyarılar gelebilir. Uyarıda, ön karakter içeren uyarılar farkedebilirsiniz. Aşağıdaki tablo, uyarı kaynaklarının eşlemesini, uyarının ön ekli karakterini temel alarak anlamanıza yardımcı olacak kılavuz bilgiler sağlar.
+Microsoft 365 Defender uyarıları alan, alan, Uç Nokta için Microsoft Defender, Office 365 için Microsoft Defender gibi çözümlerden gelebilir. Microsoft Defender for Cloud Apps için eklenti ve uygulama yönetimi Microsoft Defender for Cloud Apps. Uyarıda, ön karakter içeren uyarılar farkedebilirsiniz. Aşağıdaki tablo, uyarı kaynaklarının eşlemesini, uyarının ön ekli karakterini temel alarak anlamanıza yardımcı olacak kılavuz bilgiler sağlar.
 
 > [!NOTE]
 > - Hazır GUID'ler yalnızca birleşik uyarılar sırası, birleşik uyarılar sayfası, birleşik araştırma ve birleşik olay gibi birleşik deneyimlere özeldir.
@@ -138,7 +140,7 @@ Ayrıntılar sayfasında, seçilen uyarının ayrıntıları ve bu uyarıyla ilg
 
 Uyarıyı yönetmek için, **uyarı sayfasının** özet ayrıntılar bölümünde Uyarıyı yönet'i seçin. Tek bir uyarı için, burada Uyarıyı yönet **bölmesinin bir örneği** ve gösterilir.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-manage.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-manage.png" alt-text="Microsoft 365 Defender portalında Yönetme uyarı bölmesi örneği":::
+:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-manage.png" alt-text="Microsoft 365 Defender portalında Manage alert bölümü" lightbox="../../media/investigate-alerts/alerts-ss-alerts-manage.png":::
 
 Yönet **uyarı bölmesi** şunları görüntülemenizi veya belirtmenizi sağlar:
 
@@ -157,7 +159,7 @@ Yönet **uyarı bölmesi** şunları görüntülemenizi veya belirtmenizi sağla
 - Uyarıyla ilgili bir açıklama.
 
 > [!NOTE]
-> Etiketlerin kullanımıyla uyarıyı yönetmenin bir yolu. Microsoft Defender For Office 365 etiketleme özelliği artımlı olarak dağıtımda ve şu anda önizlemededir. <br>
+> Etiketlerin kullanımıyla uyarıyı yönetmenin bir yolu. Bu özellik için etiketleme Office 365 için Microsoft Defender artımlı olarak dağıtımdadır ve şu anda önizlemededir. <br>
 > Şu anda, değiştirilmiş etiket adları yalnızca güncelleştirmeden sonra oluşturulan *uyarılara* uygulanır. Değişiklik öncesinde oluşturulan uyarılar, güncelleştirilmiş etiket adını yansıtmaz. 
 
 Belirli bir *uyarıya benzer bir uyarı* kümesi yönetmek için uyarı sayfasının özet ayrıntılar  bölümündeki **INSIGHT** kutusunda Benzer uyarıları görüntüle'yi seçin.
@@ -194,9 +196,9 @@ Modern güvenlik işlemlerinin (SecOps) ekiplerinin etkin bir şekilde çalışm
 
 Her ikisi de doğruysa, SecOps uyarıyı yasal bir seyahat olarak işaretler ve sorunu çözer. Bu uyarı çözümlendikten Microsoft Teams bu alan alanla birlikte bir bildirim postalanmıştır.
 
-### <a name="connect-power-automate-to-microsoft-defender-for-cloud-apps"></a>Bağlan Power Automate Uygulamaları için Microsoft Defender'a Geç
+### <a name="connect-power-automate-to-microsoft-defender-for-cloud-apps"></a>Bağlan Power Automate'Microsoft Defender for Cloud Apps
 
-Otomasyon oluşturmak için bir API belirteci gerekir ve bu belirteci bulut Power Automate Microsoft Defender'a bağlanabilirsiniz.
+Otomasyon oluşturmak için, Power Automate'a bağlanamadan önce bir API belirteci Microsoft Defender for Cloud Apps.
 
 1. Ekle **Ayarlar** e tıklayın, **Güvenlik uzantıları'yı** seçin ve ARDıNDAN API **belirteçleri** sekmesinde Belirteç **ekle'ye** tıklayın.
 
@@ -206,7 +208,7 @@ Otomasyon oluşturmak için bir API belirteci gerekir ve bu belirteci bulut Powe
 
 Adım adım ayrıntılı işlem için buradaki videoya [bakın](https://www.microsoft.com/en-us/videoplayer/embed/RWFIRn).
 
-Bu videoda ayrıca Bulut Uygulamaları için Defender'a power automate ile nasıl bağlan bağlantısı olduğu da açık almaktadır.
+Bu videoda ayrıca, power automate to connect power automate to Bulut için Defender açık almaktadır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

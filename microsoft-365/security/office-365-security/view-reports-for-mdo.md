@@ -1,5 +1,5 @@
 ---
-title: Office 365 için Defender raporlarını görüntüleme
+title: Office 365 raporları için Defender'ı görüntüleme
 f1.keywords:
 - CSH
 ms.author: chrisda
@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7532d5be8febda1b4dc4dfc0a0860516188ecfc5
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: de0dd5b7c0466a722a788ee3fe4e6c843d70f5eb
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775630"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680984"
 ---
 # <a name="view-defender-for-office-365-reports-in-the-microsoft-365-defender-portal"></a>yeni portalda Office 365 raporları için Defender'Microsoft 365 Defender görüntüleme
 
@@ -88,8 +88,8 @@ Posta **gecikme süresi raporu sayfasında** , Posta gecikme süresi raporu **sa
 
 Hangi sekmeyi seç olursa olsun, grafik iletileri aşağıdaki kategorilerde düzenlenmiş olarak gösterir:
 
-- **Genel**
-- **Detonation**
+- **Posta teslim gecikme süresi**
+- **Detonations**
 
 Grafikte bir kategorinin üzerine gelindiğinde, her kategorideki gecikme süresinin dökümünü görüntüebilirsiniz.
 
@@ -100,20 +100,17 @@ Filtre'ye **tıklarsanız**, aşağıdaki değerlere göre hem grafiği hem de a
 - **Tarih (UTC)**: **Başlangıç tarihi** ve **Bitiş tarihi**
 - **İleti görünümü**: Aşağıdaki değerlerden biri:
   - **Tüm iletiler**
-  - **Detonated messages**: One of the following values:
-    - **Satır içi detonasyonu**: Teslimden önce tümüyle test edilmiş iletileri içerir.
-    - **Zaman uyumsuz detonasyonu**
+  - **Ek veya URL içeren iletiler**
+  - **Detonated messages**
 
 Filtreleri yapılandırmayı bitirdikten sonra, Filtreleri Uygula, İptal **et** **veya Temizle'yi** **tıklatın**.
 
 Grafiğin altındaki ayrıntılar tablosunda aşağıdaki bilgiler kullanılabilir:
 
 - **Tarih (UTC)**
-- **Gecikme süresi**
+- **Yüzdebirlik**: **50**, **90** veya **99**
 - **İleti sayısı**
-- **50. yüzdebirlik**
-- **90. yüzdebirlik**
-- **99. yüzdebirlik**
+- **Genel gecikme süresi**
 
 Ana rapor sayfasında Dışarı Aktar ![simgesi.](../../media/m365-cc-sc-download-icon.png) **[Dışarı](view-email-security-reports.md#export-report)** Aktar düğmesi kullanılabilir.
 

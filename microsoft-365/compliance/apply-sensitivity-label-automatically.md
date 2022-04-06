@@ -17,14 +17,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Duyarlılık etiketi  oluşturduktan sonra, dosyalara ve e-postalara otomatik olarak bir etiket atayabilirsiniz veya kullanıcılardan önerdiğiniz etiketi seçmelerini istenebilirsiniz.
-ms.openlocfilehash: 166905abb1dc08bcf9fe34e80c3ff3f44813501b
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 80f3b5c69e482301dd8c4e926959087c7149a529
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449814"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499671"
 ---
-# <a name="apply-a-sensitivity-label-to-content-automatically"></a>Otomatik olarak içeriğe duyarlılık etiketi uygulama
+# <a name="apply-a-sensitivity-label-to-content-automatically"></a>İçeriğe otomatik olarak bir hassasiyet etiketi uygulama
 
 >*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
 
@@ -45,7 +45,7 @@ Duyarlılık etiketi  oluşturduktan sonra, belirttiğiniz koşullarla eşleşen
 
 - Kullanıcılar belgeleri düzenlerken veya e-postaları düzenlerken (ayrıca yanıtla veya ilet) istemci tarafı etiketleme: Dosyalar ve e-postalar için (Word, Excel, PowerPoint ve diğer **e-postalar dahil)** otomatik etiketleme için yapılandırılmış bir Outlook.
 
-    Bu yöntem, kullanıcılara etiket önerilerini ve otomatik olarak etiket uygulamayı destekler. Ancak her iki durumda da, içeriği doğru etiketlemeye yardımcı olmak için kullanıcı etiketi kabul etmeye veya reddetmeye karar verir. Belge kaydedmeden önce bile etiketin uygulanama süresi nedeniyle, istemci tarafı etiketlemesi belgelerde çok az gecikmeye neden olur. Bununla birlikte, tüm istemci uygulamaları otomatik etiketlemeyi desteklemez. Bu özellik, bazı Azure Information Protection birleşik etiketleme istemcisinin yanı sıra [bazı Office](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) sürümleriyle yerleşik olarak etiket özelliğiyle de destekler.
+    Bu yöntem, kullanıcılara etiket önerilerini ve otomatik olarak etiket uygulamayı destekler. Ancak her iki durumda da, içeriği doğru etiketlemeye yardımcı olmak için kullanıcı etiketi kabul etmeye veya reddetmeye karar verir. Belge kaydedmeden önce bile etiketin uygulanama süresi nedeniyle, istemci tarafı etiketlemesi belgelerde çok az gecikmeye neden olur. Bununla birlikte, tüm istemci uygulamaları otomatik etiketlemeyi desteklemez. Bu özellik, bazı Office sürümleriyle yerleşik etiketleme ve aynı zamanda Azure [](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps)birleşik Information Protection istemcisi tarafından da destekler.
 
     Yapılandırma yönergeleri için, [bu sayfada yer alan uygulamaların otomatik Office yapılandırma](#how-to-configure-auto-labeling-for-office-apps) sayfasına bakın.
 
@@ -70,8 +70,8 @@ Duyarlılık etiketi  oluşturduktan sonra, belirttiğiniz koşullarla eşleşen
     Belirli bir etiket için otomatik Exchange:
     
     - OFFICE uygulamalarıyla el ile etiketlemeden veya otomatik etiketlemeden farklı olarak, PDF ekleri Office ekleri de otomatik etiketleme ilkesinde belirttiğiniz koşullar için taranır. Eşleşme olduğunda, e-posta eki etiketli ancak etiketli değildir.
-        - PDF dosyaları için, etiket şifreleme uygularsa, kiracınız PDF ekleri için [etkinleştirildiğinde bu Office 365 İleti Şifrelemesi (OME)](ome.md) kullanılarak [şifrelenir](ome-faq.yml#are-pdf-file-attachments-supported-).
-        - Bu Office için Word, PowerPoint ve Excel dosyaları desteklene. Etiket şifreleme uygularsa, bu etiket Office 365 İleti Şifrelemesi [(OME) kullanılarak şifrelenir](ome.md).
+        - PDF dosyaları için, etiket şifreleme uygularsa, kiracınız PDF ekleri için [etkinleştirildiğinde bu dosyalar Office 365 İleti Şifrelemesi (OME)](ome.md) kullanılarak [şifrelenir](ome-faq.yml#are-pdf-file-attachments-supported-).
+        - Bu Office için Word, PowerPoint ve Excel dosyaları desteklene. Etiket şifreleme uygularsa, bu etiket İleti Şifrelemesi [(OME) Office 365 kullanılarak şifrelenir](ome.md).
     - IRM şifrelemesi Exchange posta akışı kuralları veya veri kaybı önleme (DLP) ilkeleriniz varsa: İçerik bu kurallar veya ilkeler ve otomatik etiket ilkesiyle tanımsızsız olduğunda, etiket uygulanır. Bu etiket şifreleme uygularsa, ilgili posta akış kuralları veya DLP Exchange IRM ayarları yoksayılır. Ancak bu etiket şifreleme uygulamayacaksa, posta akış kuralları veya DLP ilkelerine yönelik IRM ayarları etikete ek olarak uygulanır.
     - IRM şifrelemesi olmayan e-postaların yerini, otomatik etiketleme kullanılarak bir eşleşme olduğunda ise bir şifreleme ayarlarıyla değiştirirsiniz.
     - Gelen e-posta, otomatik etiketleme koşullarınız ile bir eşleşme olduğunda etiketlenmiş olur. Bu etiket şifreleme için [yapılandırılmışsa](encryption-sensitivity-labels.md), gönderen her zaman kuruluşundan geldiğinde bu şifreleme uygulanır. Varsayılan olarak, gönderen kuruluş dışından olduğunda bu şifreleme uygulanmaz, ancak e-posta için ek ayarlar yapılandırarak ve  Hak Yönetimi sahibi belirterek uygulanabilir.
@@ -140,7 +140,7 @@ E-posta otomatik etiketleme ilkeleri için yapılandırılabilir ayar, E-posta *
 
 Bir uygulamanın yerleşik etiketlemesi Office için, Office uygulamalarda otomatik etiketleme için gereken [](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) en düşük Office kontrol edin.
 
-Azure Information Protection birleşik etiketleme istemcisi yalnızca yerleşik ve özel duyarlı bilgi türlerinde otomatik etiketlemeyi destekler ve Tam Veri Eşleşmesi (EDM) veya adlandırılmış varlıklar kullanan, eğitilebilir sınıflayıcıları veya hassas bilgi türlerini desteklemez.
+Azure Information Protection birleşik etiketleme istemcisi yalnızca yerleşik ve özel hassas bilgi türlerinde otomatik etiketlemeyi destekler ve Tam Veri Eşleşmesi (EDM) veya adlandırılmış varlıklar kullanan, eğitilebilir sınıflayıcıları veya hassas bilgi türlerini desteklemez.
 
 Bir duyarlılık Office için [otomatik etiket ayarları](create-sensitivity-labels.md) kullanılabilir. Etiketin **kapsamı için &-posta** dosyalarının seçili olduğundan emin olun:
 
@@ -199,9 +199,9 @@ Tercih ederseniz, kullanıcılarınıza etiketi uygulamalarını önerebilirsini
 
 ![Kullanıcılara duyarlılık etiketi öneri seçeneği.](../media/Sensitivity-labels-Recommended-label-option.png)
 
-Aşağıda, bir etiketi önerilen eylem olarak uygulamak için özel ilke ipucu olan bir koşul yapılandırıldığında Azure Information Protection birleşik etiketleme istemcisinde yer alan bir istem örneği ve birleştirilmiştir. İlke ipucunda görüntülenecek metni seçebilirsiniz.
+Burada, bir etiketi önerilen eylem olarak uygulamak için özel bir ilke ipucuyla bir koşul yapılandırıldığında Azure Information Protection birleşik etiketleme istemcisinde yer alan bir istem örneği ve göstermektedir. İlke ipucunda görüntülenecek metni seçebilirsiniz.
 
-![Önerilen bir etiketi uygulama istemi.](../media/Sensitivity-label-Prompt-for-required-label.png)
+![Önerilen bir etiketi uygulama istemi.](../media/Sensitivity-label-prompt-for-required-label.png)
 
 ### <a name="when-automatic-or-recommended-labels-are-applied"></a>Otomatik veya önerilen etiketler uygulandığında
 
@@ -235,7 +235,7 @@ Otomatik etiket ilkelerini yapılandırmadan önce önkoşulları farkında olun
 
 - Benzetim modu:
   - Denetim Microsoft 365 açık olması gerekir. Denetimi açmanız gerekirse veya denetimin zaten aç olup olmadığı konusunda emin değilsanız, bkz. [Denetim günlüğü aramalarını açma veya kapatma](turn-audit-log-search-on-or-off.md).
-  - Dosya veya e-posta içeriğini kaynak görünümde görüntülemek için, İçerik Gezgini İçerik  Görüntüleyicisi rol grubunda bulunan Veri Sınıflandırma İçerik Görüntüleyicisi rolüne ya da Bilgi Koruma ve Bilgi Koruma  Güvenlik Güvenlik Nedenleri rol gruplarına (şu anda önizlemede) sahip olmak gerekir.  Gerekli rol olmadan, Eşleşmeli Öğeler sekmesinden bir öğe seçerek önizleme **bölmesini görmeyebilirsiniz** . Genel yöneticiler varsayılan olarak bu role sahip değildir.
+  - Dosya veya e-posta içeriğini kaynak görünümde görüntülemek için, İçerik Gezgini İçerik  Görüntüleyicisi rol grubunda bulunan Veri Sınıflandırma İçerik Görüntüleyicisi rolüne ya da **Information Protection ve Information Protection** **Süreler rol gruplarına** (şu anda önizlemede) sahip olmak gerekir. Gerekli rol olmadan, Eşleşmeli Öğeler sekmesinden bir öğe seçerek önizleme **bölmesini görmeyebilirsiniz** . Genel yöneticiler varsayılan olarak bu role sahip değildir.
 
 - Dosyaları tek tek SharePoint otomatik olarak OneDrive:
   - SharePoint [ve OneDrive'de Office dosyaları için duyarlılık SharePoint etkinleştirmişsiniz](sensitivity-labels-sharepoint-onedrive-files.md).
@@ -395,7 +395,7 @@ Etiketleme ilerleme durumu, ilkeyle etiketlanacak dosyaları, son yedi gün içi
 Ayrıca, uygun izinlere sahipken içerik gezginini kullanarak otomatik etiketleme [ilkenizin](data-classification-content-explorer.md) sonuçlarını [daabilirsiniz](data-classification-content-explorer.md#permissions):
 
 - **İçerik Gezgini Liste Görüntüleyicisi** rol grubu bir dosyanın etiketini görmenizi sağlar, ancak dosyanın içeriğini görmenizi engeller.
-- **İçerik Gezgini İçerik Görüntüleyicisi** rol grubu ve **Bilgi Koruması** ve **Bilgi** Koruması Bire bir rol grubu (şu anda önizlemede olan) dosyanın içeriğini görmenizi sağlar.
+- **İçerik Gezgini İçerik Görüntüleyicisi** rol **grubu, Information Protection** **ve Information Protection** Biraları rol grupları (şu anda önizlemede olan) dosyanın içeriğini görmenizi sağlar.
 
 > [!TIP]
 > Hassas bilgilerle birlikte belgeleri olan ancak etiketsiz konumları tanımlamak için içerik gezginini de kullanabilirsiniz. Bu bilgileri kullanarak, bu konumları otomatik etiketleme ilkenize eklemeyi ve tanımlanan hassas bilgi türlerini kurallar olarak eklemeyi düşünebilirsiniz.

@@ -14,12 +14,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Yapılandırma paketini, Microsoft 365 Uç nokta veri kaybı önleme hizmetine dahil etmek için sanal masaüstü altyapısı (VDI) cihazında dağıtın.
-ms.openlocfilehash: 6ac13edde066319a5174234450dac67c29209b1b
-ms.sourcegitcommit: 8eca41cd21280ffcb1f50cafce7a934e5544f302
+ms.openlocfilehash: 00804c93022f21715e3604eeb45c22caa4745f91
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "62999580"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682162"
 ---
 # <a name="onboard-non-persistent-virtual-desktop-infrastructure-devices"></a>Kalıcı olmayan sanal masaüstü altyapısı cihazlarını ekleme
 
@@ -42,7 +42,7 @@ Microsoft 365 kalıcı olmayan sanal masaüstü altyapısı (VDI) oturumu ekleme
 
 VDA'ları eklemeye yönelik zorluklarla ilgili sorunlar olabilir. Aşağıda, bu senaryoyla ilgili tipik güçlükler ve sorunlar yermaktadır:
 
-- Gerçek sağlama öncesinde bu oturumlara önceden Microsoft 365 yerleşik olarak sağlanması gereken kısa Microsoft 365 oturumları hazırlama.
+- Gerçek sağlama öncesinde son oturumlara Microsoft 365 olan kısa Microsoft 365 erken ekleme.
 - Cihaz adı normalde yeni oturumlar için yeniden kullanılır.
 
 VDI cihazları Uyumluluk merkezi'Microsoft 365 aşağıdaki gibi görünebilir:
@@ -64,7 +64,7 @@ Aşağıdaki adımlar, VDI cihazlarını ekleme adımlarını size yönlendirece
 
 4. Paketi **indir'e** tıklayın ve .zip kaydedin.
 
-5. Dosyadan ayıklanan DeviceCompliancePackage klasöründeki dosyaları .zip yolunun `golden/master` altındaki görüntüye kopyalayın `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup`.
+5. Dosyadan ayıklanan DeviceCompliancePackage klasöründeki dosyaları .zip yolunun `golden` altındaki görüntüye kopyalayın `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup`.
 
 6. Her cihaz için tek bir girdi uygulayıyorsanız, DeviceComplianceOnboardingScript.cmd'yi kopyalayın.
 
@@ -90,9 +90,9 @@ Aşağıdaki adımlar, VDI cihazlarını ekleme adımlarını size yönlendirece
 
 10. Çözümlerinizi test etmek için:
     1. Tek bir cihazla havuz oluşturun.
-    1. Cihazda oturum açma.
-    1. Cihazdan logoff.
-    1. Cihazda başka bir kullanıcıyla oturum açma.
+    1. Cihazda oturum açın.
+    1. Cihazdan oturumu kapatın.
+    1. Başka bir kullanıcıyla cihazda oturum açın.
     1. **Her cihaza tek bir giriş için**: Bir cihazda yalnızca bir giriş Microsoft Defender Güvenlik Merkezi.
        **Her cihaz için birden çok giriş için**: Bir cihazda birden çok Microsoft Defender Güvenlik Merkezi.
 
@@ -102,7 +102,7 @@ Aşağıdaki adımlar, VDI cihazlarını ekleme adımlarını size yönlendirece
 
 ## <a name="updating-non-persistent-virtual-desktop-infrastructure-vdi-images"></a>Kalıcı olmayan sanal masaüstü altyapısı (VDI) görüntülerini güncelleştirme
 
-En iyi uygulama olarak, altın yaması/asıl resimlere yama yapmak için çevrimdışı hizmet araçlarının kullanılması önerilir.
+En iyi uygulama olarak, altın renkli resimlere yama yapmak için çevrimdışı hizmet araçlarının kullanılması önerilir.
 
 Örneğin, resim çevrimdışıyken bir güncelleştirme yüklemek için aşağıdaki komutları kullanabilirsiniz:
 
@@ -120,7 +120,7 @@ DISM komutları ve çevrimdışı hizmet hakkında daha fazla bilgi için lütfe
 
 Çevrimdışı hizmet, kalıcı olmayan VDI ortamınız için uygun bir seçenek yoksa tutarlılık ve algılayıcı sağlığı sağlamak için aşağıdaki adımlar atılacaktır:
 
-1. Çevrimiçi bakım veya düzeltme eki için ana resmi önyükledikten sonra, Microsoft 365 izleme algılayıcısı'nın kapatmak için bir offboard betiği çalıştırın. Daha fazla bilgi için bkz [. Yerel betik kullanarak çıkartan cihazlar](device-onboarding-script.md#offboard-devices-using-a-local-script).
+1. Çevrimiçi bakım veya düzeltme eki için altın resmi önyükledikten sonra, cihaz izleme algılayıcısı olan Microsoft 365 kapatmak için bir offboard betiği çalıştırın. Daha fazla bilgi için bkz [. Yerel betik kullanarak çıkartan cihazlar](device-onboarding-script.md#offboard-devices-using-a-local-script).
 
 2. CmD penceresinde aşağıdaki komutu çalıştırarak algılayıcının durdurulurken durdurulur:
 
@@ -140,7 +140,7 @@ DISM komutları ve çevrimdışı hizmet hakkında daha fazla bilgi için lütfe
     exit
     ```
 
-5. Altın/ana resmi her zaman olduğu gibi yeniden kapatabilirsiniz.
+5. Altın resmi her zaman olduğu gibi yeniden kapatabilirsiniz.
 
 ## <a name="related-topics"></a>İlgili konular
 

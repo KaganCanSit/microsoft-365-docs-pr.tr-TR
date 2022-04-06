@@ -16,12 +16,12 @@ ms.collection:
 description: Güvenlik Office 365 ve 2 için EOP'den Office 365 Defender'a, Standart ile Katı güvenlik yapılandırmaları ve daha fazlası. Sahip olduğunuz özellikleri ve özelliklerinizin nasıl güvenli olduğunu anlıyoruz.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 20bb1dcf9c34f0f7507d8fec7c9025de03461533
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
-ms.translationtype: MT
+ms.openlocfilehash: 31eaa1c2ae44799c15a782d121ad2068eaa40c25
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63317031"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681116"
 ---
 # <a name="microsoft-defender-for-office-365-security-overview"></a>Güvenlik için Microsoft Defender Office 365 a genel bakış
 
@@ -52,7 +52,6 @@ Bu şekilde ele alınan bu üç bileşeni görmeye alışık olabilirsiniz:
 |EOP|Office 365 P1 için Microsoft Defender|Office 365 P2 için Microsoft Defender|
 |---|---|---|
 |Geniş, toplu tabanlı, bilinen saldırılar önler.|E-postayı ve işbirliğini sıfır günlük kötü amaçlı yazılımlardan, kimlik avından ve iş e-postalarından ödün vermeden korur.|İhlal sonrası araştırma, arama ve yanıt eklerinin yanı sıra otomasyon ve benzetim (eğitim için) ekler.|
-|
 
 Ancak mimari açısından, her parçanın her biri bir güvenlik vurgusu olan kümülatif güvenlik katmanları olarak düşünerek başlayalım. Şöyle ki:
 
@@ -86,7 +85,6 @@ Exchange Online Protection **:**
 |Engelleme/Algılama|Araştır|Yanıtla|
 |---|---|---|
 |Teknolojiler şunlardır:<ul><li>istenmeyen posta</li><li>kimlik avı</li><li>kötü amaçlı yazılım</li><li>toplu posta</li><li>akıllı ifade</li><li>kimliğe bürünme algılama</li><li>Yönetici Karantinası</li><li>Yönetici ve kullanıcı Hatalı Pozitif ve Yanlış Negatif gönderileri</li><li>URL'ler ve Dosyalar için İzin Ver/Engelle</li><li>Raporlar</li></ul>|<li>Denetim günlüğü araması</li><li>İleti İzleme</li>|<li>Sıfır saatlik otomatik temizleme (ZAP)</li><li>İzin Ver ve Engelle listelerini iyileştirme ve sınama</li>|
-|
 
 EOP'de daha fazla bilgi almak için bu **[makaleye atlayın](exchange-online-protection-overview.md)**.
 

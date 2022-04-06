@@ -10,12 +10,12 @@ ms.author: tiaraquan
 manager: dougeby
 ms.topic: article
 audience: Admin
-ms.openlocfilehash: badf2d65f2b29e265a1312cb1d5f4802a44f3cb3
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+ms.openlocfilehash: 8457331f0895c66d1aa0ad54cfc43cd001a9bd9e
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011953"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681094"
 ---
 # <a name="fix-issues-found-by-the-readiness-assessment-tool"></a>Hazırlık değerlendirme aracı tarafından bulunan sorunları düzeltme
 
@@ -68,7 +68,7 @@ Koşullu erişim ilkeleri Microsoft'un Yönetilen Masaüstü'nüz tarafından In
 
 | Sonuç  | Anlamı |
 | ----- | ----- |
-| Hazır değil | Tüm kullanıcıları hedef alan en az bir koşullu erişim ilkeniz vardır. <br><br> Kayıt sırasında, Microsoft Yönetilen Masaüstü hizmeti hesaplarını ilgili koşullu erişim ilkelerinin dışında tutacağız ve bu hesaplara erişimi kısıtlamak için yeni koşullu erişim ilkeleri uygulamamız gerekir. <br><br> Kayıt sonrasında, Microsoft Yönetilen Masaüstü koşullu erişim Microsoft Endpoint Manager. Bu hizmet hesapları hakkında daha fazla bilgi için bkz. [Standart işletim yordamları](../service-description/operations-and-monitoring.md#standard-operating-procedures). |
+| Hazır değil | Tüm kullanıcıları hedef alan en az bir koşullu erişim ilkeniz vardır. <br><br> Kayıt sırasında, Microsoft Yönetilen Masaüstü hizmeti hesaplarını ilgili koşullu erişim ilkelerinin dışında tutmak ve bu hesaplara erişimi kısıtlamak için yeni koşullu erişim ilkeleri uygulamaya çalışacağız. Ancak başarısız olursak, bu durum kayıt deneyiminiz sırasında hatalara neden olabilir. En iyi yöntem olarak, Microsoft Yönetilen Masaüstü hizmeti hesaplarının dahil olmadığını belirli bir Azure AD grubunu hedef alan bir atama oluşturun. <br><br> Kayıt sonrasında, Microsoft Yönetilen Masaüstü koşullu erişim Microsoft Endpoint Manager. Bu hizmet hesapları hakkında daha fazla bilgi için bkz. [Standart işletim yordamları](../service-description/operations-and-monitoring.md#standard-operating-procedures). |
 | Danışma | Microsoft Yönetilen Masaüstü'nin Microsoft Yönetilen Masaüstü hizmetini yönetmesini engelleyen koşullu erişim ilkeleriniz var. <br><br> Kayıt sırasında, Microsoft Yönetilen Masaüstü hizmeti hesaplarını ilgili koşullu erişim ilkelerinin dışında tutacağız ve bu hesaplara erişimi kısıtlamak için yeni koşullu erişim ilkeleri uygulamamız gerekir. <br><br> Bu hizmet hesapları hakkında daha fazla bilgi için bkz. [Standart işletim yordamları](../service-description/operations-and-monitoring.md#standard-operating-procedures). |
 | Error | Intune Yönetici rolü, bu denetim için yeterli izinlere sahip değildir. Bu denetimi çalıştırmak için ayrıca şu Azure AD rollerinin atanmış olduğu da gerekir: <ul><li>Güvenlik Okuyucu</li><li>Güvenlik Yöneticisi</li><li>Koşullu Erişim Yöneticisi</li><li>Genel Okuyucu</li><li>Cihaz Yöneticisi</li></ul>
 ### <a name="device-compliance-policies"></a>Cihaz Uyumluluğu ilkeleri

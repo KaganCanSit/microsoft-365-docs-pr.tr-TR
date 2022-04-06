@@ -17,12 +17,12 @@ ms.collection:
 description: Yöneticiler, posta kutularında gereksiz e-posta ayarlarını yapılandırmayı Exchange Online öğrenebilir. Bu ayarların birçoğu aynı anda veya başka bir Outlook kullanıcıların Web üzerinde Outlook.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d3a55b1f49430d3c2a61b0db44e3ce8f8a060093
-ms.sourcegitcommit: 3140e2866de36d57a27d27f70d47e8167c9cc907
+ms.openlocfilehash: 9e2db8fc6c88e3945081d3b2800aa5ea9cd57a11
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2021
-ms.locfileid: "62988840"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682471"
 ---
 # <a name="configure-junk-email-settings-on-exchange-online-mailboxes"></a>Posta kutularına gereksiz e-Exchange Online yapılandırma
 
@@ -65,17 +65,12 @@ Yöneticiler Exchange Online kutuları (Kasa Gönderenler listesi, Kasa Alıcıl
 
 Posta kutusu güvenilir liste koleksiyonunda Kasa Gönderenler listesi, Kasa Listesi ve Engellenen Gönderenler listesi yer almaktadır. Varsayılan olarak, kullanıcılar güvenli liste koleksiyonunu Kendi Posta Kutuları veya Posta Kutuları Outlook Web üzerinde Outlook. Yöneticiler, kullanıcının posta kutusunda güvenilir liste koleksiyonunu yapılandırmak için **Set-Mailbox BirEmailConfiguration** cmdlet'inde buna karşılık gelen parametreleri kullanabilir. Bu parametreler aşağıdaki tabloda açıklanmıştır.
 
-<br>
-
-****
-
 |Parametre Set-MailboxJunkEmailConfiguration|Web üzerinde Outlook ayarı|
 |---|---|
 |_BlockedSendersAndDomains_|**Bu gönderenlerden veya etki alanlarından e-postaları Gereksiz E-posta klasörüme taşıma**|
 |_ContactsTrusted_|**Kişilerimin e-postaya güven**|
 |_TrustedListsOnly_|**Yalnızca sitemin gönderenleri ve etki alanları Kasa e-postalarına güven ve Kasa listelerine güven**|
 |_TrustedSendersAndDomains_<sup>\*</sup>|**Bu gönderenlerden gelen e-postaları Gereksiz E-posta klasörüme taşıma**|
-|
 
 <sup>\*</sup>**Notlar**:
 

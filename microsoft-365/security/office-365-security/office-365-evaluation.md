@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7a00dc92383e71d105faf0975468e47bc38ed60e
-ms.sourcegitcommit: dbce0b6e74ae2efec42fe2b3b82c8e8cabe0ddbe
+ms.openlocfilehash: 0f5d82e9baaca7209f8a91a7f1984aa38e3102e6
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "63016301"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681754"
 ---
 # <a name="evaluate-microsoft-defender-for-office-365"></a>Microsoft Defender'ı Office 365
 
@@ -92,10 +92,6 @@ Uygun role sahip olduktan sonra önerilen yol, Microsoft 365 yönetim merkezi'ta
 
 Aşağıdaki roller gereklidir:
 
-<br>
-
-****
-
 |Görev|Rol (Exchange Online)|
 |---|---|
 |Ücretsiz denemeyi alın veya Office 365 için Microsoft Defender'ı (Plan 2) satın alın|Faturalama yöneticisi rolü VEYA Genel yönetici rolü|
@@ -103,7 +99,6 @@ Aşağıdaki roller gereklidir:
 |Değerlendirme ilkesi düzenleme|Uzak ve Kabul Edilen Etki Alanları rolü; Güvenlik yöneticisi rolü|
 |Değerlendirme ilkesi silme|Uzak ve Kabul Edilen Etki Alanları rolü; Güvenlik yöneticisi rolü |
 |Değerlendirme raporunu görüntüleme|Güvenlik yöneticisi rolü VEYA Güvenlik okuyucusu rolü|
-|
 
 ### <a name="enhanced-filtering-for-connectors"></a>Bağlayıcılar için Geliştirilmiş Filtreleme
 

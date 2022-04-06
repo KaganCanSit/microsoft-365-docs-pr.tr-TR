@@ -18,12 +18,12 @@ ms.custom:
 description: Yöneticiler, EOP'de (EOP) istenmeyen posta önleme ilkelerde bulunan Gelişmiş İstenmeyen Posta Filtresi (ASF) Exchange Online Protection bilgi edinebilirsiniz.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 71eeaec20ab64b5faa535ddb2f9e688b9b9192d9
-ms.sourcegitcommit: bf3965b46487f6f8cf900dd9a3af8b213a405989
+ms.openlocfilehash: 6a34507866be90a197fcbed7bd1038cbcec61c84
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "62989978"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682317"
 ---
 # <a name="advanced-spam-filter-asf-settings-in-eop"></a>EOP'de Gelişmiş İstenmeyen Posta Filtresi (ASF) ayarları
 
@@ -68,25 +68,16 @@ Her ASF ayarı için, istenmeyen posta önleme ilkelerde aşağıdaki seçenekle
 
 Aşağıdaki **İstenmeyen** posta puanı ARTıR ASF ayarları, algılanan iletilerin istenmeyen posta güven düzeyini (SCL) 5 veya 6 olarak ayarlar. Bu, **İstenmeyen** posta filtresi kararını ve istenmeyen posta önleme ilkelerde ilgili eylemi ifade ediyor.
 
-<br>
-
-****
-
 |İstenmeyen posta önleme ilkesi ayarı|Açıklama|X üstbilgisi eklendi|
 |---|---|---|
 |**Uzak web sitelerine resim bağlantıları** <p> *IncreaseScoreWithImageLinks*|Uzak sitelere `<Img>` (örneğin, http kullanarak) HTML etiketi bağlantıları içeren iletiler istenmeyen posta olarak işaretlenir.|`X-CustomSpam: Image links to remote sites`|
 |**URL'de sayısal IP adresi** <p> *IncreaseScoreWithNumericIps*|Sayısal tabanlı URL'ler içeren iletiler (genellikle IP adresleri) istenmeyen posta olarak işaretlenir.|`X-CustomSpam: Numeric IP in URL`|
 |**URL başka bir bağlantı noktasına yönlendirme** <p> *IncreaseScoreWithRedirectToOtherPort*|80 (HTTP), 8080 (alternatif HTTP) veya 443 (HTTPS) dışında TCP bağlantı noktalarına yönlendiren köprüler içeren ileti istenmeyen posta olarak işaretlenir.|`X-CustomSpam: URL redirect to other port`|
 |**.biz veya .info web sitelerinin bağlantıları** <p> *IncreaseScoreWithBizOrInfoUrls*|İletinin gövdesinde `.biz` `.info` yer alan veya bağlantı bulunan iletiler istenmeyen posta olarak işaretlenir.|`X-CustomSpam: URL to .biz or .info websites`|
-|
 
 ## <a name="mark-as-spam-settings"></a>İstenmeyen posta ayarları olarak işaretleme
 
 Aşağıdaki **İstenmeyen** posta olarak işaretle ASF ayarları, algılanan iletilerin SCL'sini 9 olarak ayarlar. Bu, Yüksek  güven güveni olan istenmeyen posta filtresi kararını ve istenmeyen posta önleme ilkelerde ilgili eylemi ifade ediyor.
-
-<br>
-
-****
 
 |İstenmeyen posta önleme ilkesi ayarı|Açıklama|X üstbilgisi eklendi|
 |---|---|---|
@@ -99,16 +90,10 @@ Aşağıdaki **İstenmeyen** posta olarak işaretle ASF ayarları, algılanan il
 |**HTML'de nesne etiketleri** <p> *MarkAsSpamObjectTagsInHtml*|HTML etiketleri içeren iletiler `<object>` yüksek güven istenmeyen posta olarak işaretlenir. <p> Bu etiket, eklentilerin veya uygulamaların HTML penceresinde çalışmasına olanak sağlar.|`X-CustomSpam: Object tag in html`|
 |**Hassas sözcükler** <p> *MarkAsSpamSensitiveWordList*|Microsoft, olası rahatsız edici iletilerle ilişkilendirilmiş, ancak düzenlenilmeyen dinamik bir sözcük listesi sağlar. <p> Konu veya ileti gövdesinde hassas sözcük listesinden sözcükler içeren iletiler yüksek güven istenmeyen posta olarak işaretlenir.|`X-CustomSpam: Sensitive word in subject/body`|
 |**SPF kaydı: zor başarısız** <p> *MarkAsSpamSpfRecordFail*|Kaynak e-posta etki alanı için DNS'deki SPF Sender Policy Framework (SPF) kaydında belirtilmemiş bir IP adresinden gönderilen iletiler yüksek güven istenmeyen posta olarak işaretlenir. <p> Bu ayar için sınama modu kullanılamaz.|`X-CustomSpam: SPF Record Fail`|
-|
 
 Aşağıdaki **İstenmeyen** posta ASF olarak işaretle ayarları, algılanan iletilerin SCL'sini 6 olarak ayarlar. Bu, **İstenmeyen** posta filtresi karar ve istenmeyen posta önleme ilkelerde ilgili eyleme karşılık gelir.
-
-<br>
-
-****
 
 |İstenmeyen posta önleme ilkesi ayarı|Açıklama|X üstbilgisi eklendi|
 |---|---|---|
 |**Gönderen Kimliği filtrelemesi zor başarısız** <p> *MarkAsSpamFromAddressAuthFail*|Koşullu Gönderen Kimliği denetimine geçmeyen iletiler istenmeyen posta olarak işaretlenir. <p> Bu ayar, sahte gönderenler içeren ileti üst bilgilerine karşı korunmanıza yardımcı olmak için bir SPF denetimi ile Gönderen Kimliği denetimi birleştirir. <p> Bu ayar için sınama modu kullanılamaz.|`X-CustomSpam: SPF From Record Fail`|
 |**Geri geri yayan** <p> *MarkAsSpamNdrBackscatter*|*Geri çıktı, e-posta* iletilerine sahte gönderenler tarafından neden olan, teslim edilemeyen raporlar (NDR'ler veya geri dönen iletiler olarak da bilinir) işe yaramaz. Daha fazla bilgi için bkz [. Geri gelen iletiler ve EOP](backscatter-messages-and-eop.md). <p> Bu ayarı aşağıdaki ortamlarda yapılandırmaya gerek yok, çünkü geçerli NDR'ler teslim edilir ve geri ifade istenmeyen posta olarak işaretlenir: <ul><li>Microsoft 365 posta kutusu olan Exchange Online olabilir.</li><li>Giden e-postayı EOP aracılığıyla *yönlendiren şirket içi* e-posta kuruluşları.</li></ul> <p> Gelen e-postayı şirket içi posta kutularına koruyan tek başına EOP ortamlarında, bu ayarı açma veya kapatmada aşağıdaki sonuç yer alır: <ul><li> **Açık**: Geçerli NDR'ler teslim edilir ve geri ifade istenmeyen posta olarak işaretlenir.</li><li>**Kapalı**: Geçerli NDR'ler ve geri çıktılar normal istenmeyen posta filtrelemesi üzerinden gider. Geçerli NDR'lerin çoğu özgün ileti gönderene teslim edilir. Geri geri ifadelerin hepsi değil, bazıları istenmeyen posta olarak işaretlenir. Tanım olarak, geri çıktı yalnızca orijinal gönderene değil, kimliği doğru olan gönderene teslim edilir.</li></ul> <p> Bu ayar için sınama modu kullanılamaz.|`X-CustomSpam: Backscatter NDR`|
-|

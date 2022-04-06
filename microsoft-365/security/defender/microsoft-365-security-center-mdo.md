@@ -1,7 +1,7 @@
 ---
 title: Microsoft 365 Defender'da Office 365 için Microsoft Defender
 description: Güvenlik Ve Uyumluluk Merkezi'nde güvenlik & değişiklikler hakkında bilgi Microsoft 365 Defender.
-keywords: Microsoft 365, Microsoft 365 Defender ile çalışmaya başlama, Office 365 için Microsoft Defender, Uç Nokta için Microsoft Defender, MDO, MDE, tek bölmeli cam, yeni güvenlik portalı, yeni Defender güvenlik portalı
+keywords: Microsoft 365, Microsoft 365 Defender, Office 365 için Microsoft Defender, Uç Nokta için Microsoft Defender, MDO, MDE, tek bölmeli cam, yeni güvenlik portalı, yeni Defender güvenlik portalı
 ms.date: 02/21/2021
 ms.author: tracyp
 author: msfttracyp
@@ -17,12 +17,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.prod: m365-security
 ms.technology: m365d
-ms.openlocfilehash: c38054e55442a01d8e659ab4281e4790f57c7755
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: a42805ea9b803818bd538e24a3fa626a00dac348
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63014151"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64499847"
 ---
 # <a name="microsoft-defender-for-office-365-in-microsoft-365-defender"></a>Microsoft 365 Defender'da Office 365 için Microsoft Defender
 
@@ -46,7 +46,7 @@ Aşağıdaki tabloda, Güvenlik Ve Uyumluluk Merkezi ile Uyumluluk Merkezi aras�
 |Sınıflandırma||Bkz [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/homepage)||
 |Veri kaybını önleme||Bkz [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/homepage)||
 |Kayıt yönetimi||Bkz [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/homepage)||
-|Bilgi yönetimi||Bkz [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/homepage)||
+|Bilgi Yönetişimi||Bkz [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/homepage)||
 |Tehdit yönetimi|[E-posta & İşbirliği](https://security.microsoft.com/homepage)|||
 |İzinler|[İzinler & rolleri](https://security.microsoft.com/emailandcollabpermissions)|Bkz [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/homepage)||
 |Posta akışı|||Yönetim [Exchange bakın](https://admin.exchange.microsoft.com/#/)|
@@ -68,15 +68,15 @@ Uyumlulukla ilgili öğeleri arıyorsanız, Uyumluluk <a href="https://go.micros
 
 ## <a name="new-and-improved-capabilities"></a>Yeni ve geliştirilmiş özellikler
 
-Sol gezinti veya hızlı başlatma çubuğu tanıdık gelecek. Bununla birlikte, Bulut için Bu Defender'da bazı yeni ve güncelleştirilmiş öğeler vardır.
+Sol gezinti veya hızlı başlatma çubuğu tanıdık gelecek. Bununla birlikte, bu yeni ve güncelleştirilmiş öğeler Bulut için Defender.
 
 Birleşik Microsoft 365 Defender çözümüyle, tehdit sinyallerini bir araya bir arada hazırlar, tehdidin tam kapsamını ve etkisini ve bunun şu anda kuruluşu nasıl etkiley ifadesinin olduğunu belirlersiniz.
 
-:::image type="content" source="../../media/M365-defender-converge-experience.png" alt-text="Yakınsa Microsoft 365 Defender deneyimin resmi.":::
+:::image type="content" source="../../media/M365-defender-converge-experience.png" alt-text="Yakın Microsoft 365 Defender deneyim" lightbox="../../media/M365-defender-converge-experience.png":::
 
-Güvenlik koruması Office 365 e-posta iletileri, bağlantılar (URL'ler) ve işbirliği araçları tarafından tehditlere karşı kuruluşu korur.
+Office 365 için Defender e-posta iletileri, bağlantılar (URL'ler) ve işbirliği araçları tarafından tehditlere karşı organizasyonlarınızı korur.
 
-:::image type="content" source="../../media/Defender-for-O365.png" alt-text="Office 365 için Defender görüntüsü.":::
+:::image type="content" source="../../media/Defender-for-O365.png" alt-text="Office 365 için Defender portalı" lightbox="../../media/Defender-for-O365.png":::
 
 ### <a name="incidents-and-alerts"></a>Olaylar ve uyarılar
 
@@ -85,7 +85,7 @@ E-postanız, cihazlarınız ve kimlikleriniz arasında olay ve uyarı yönetimin
 - [Araştırmalar hakkında daha fazla bilgi](incidents-overview.md)
 - [Uyarıları yönetme hakkında daha fazla bilgi](/windows/security/threat-protection/microsoft-defender-atp/review-alerts)
 
-![Uyarılar ve Eylemler hızlı başlatma çubuğu.](../../media/converge-1-alerts-and-actions.png)
+:::image type="content" source="../../media/converge-1-alerts-and-actions.png" alt-text="Yeni portalda Uyarılar ve Eylemler hızlı Microsoft 365 Defender başlatma çubuğu" lightbox="../../media/converge-1-alerts-and-actions.png":::
 
 ### <a name="hunting"></a>Avlama
 
@@ -93,7 +93,7 @@ Gelişmiş av sorgularını kullanarak uç noktalarınız genelinde tehdit, köt
 
 [İhlal](/windows/security/threat-protection/microsoft-defender-atp/custom-detection-rules) etkinliğine ve hatalı yapılandırılmış cihazlara işaret eden olayları önceden izlemenizi yardımcı olmak için gelişmiş arama sorgularından özel algılama kuralları oluşturabilirsiniz.
 
-İşte bu örnekte[, iş için](advanced-hunting-example.md) Microsoft Defender'da gelişmiş Office 365.
+İşte bu örnekte[, 2013'te](advanced-hunting-example.md) gelişmiş Office 365 için Microsoft Defender.
 
 ### <a name="action-center"></a>İşlem merkezi
 
@@ -105,7 +105,7 @@ Gelişmiş av sorgularını kullanarak uç noktalarınız genelinde tehdit, köt
 
 Uzman Microsoft güvenlik araştırmacılarından tehdit zekası elde edin. Threat Analytics, ortaya çıkan tehditlere karşı güvenlik ekiplerinin daha verimli çalışmalarına yardımcı olur. Threat Analytics şunları içerir:
 
-- İş için Microsoft Defender'dan e-postayla ilgili algılamalar ve Office 365. Bu, uç nokta için Microsoft Defender'da zaten mevcut olan uç nokta verilerine ektir.
+- E-postayla ilgili algılamalar ve risk azaltmaları Office 365 için Microsoft Defender. Bu, uç nokta verilerinden zaten kullanılabilen uç nokta verilerine Uç Nokta için Microsoft Defender.
 - Tehditlerle ilgili olaylar görünümü.
 - Raporlarda işlemlenebilir bilgileri hızla tanımlamak ve kullanmak için gelişmiş deneyim.
 
@@ -117,7 +117,7 @@ Tehdit analizi ile ortaya çıkan [tehditleri izleme ve yanıtlama hakkında dah
 
 Kullanıcılarının e-postalarına yönelik tehditleri takip edin ve araştırin, kampanyaları takip edin ve daha birçok şey. Güvenlik ve Uyumluluk Merkezi'& kullandıysanız, bu bilgi size tanıdık gelecektir.
 
-:::image type="content" source="../../media/converge-3-email-and-collab-new.png" alt-text="E-posta Posta & Collab (veya MSDO) için, sol tarafında hızlı başlat menüsü Microsoft 365 Defender.":::
+:::image type="content" source="../../media/converge-3-email-and-collab-new.png" alt-text="Web portalının sol gezinti & Collab (veya MSDO) için Hızlı Başlat Microsoft 365 Defender" lightbox="../../media/converge-3-email-and-collab-new.png":::
 
 #### <a name="email-entity-page"></a>E-posta varlık sayfası
 
@@ -127,11 +127,11 @@ Kullanıcılarının e-postalarına yönelik tehditleri takip edin ve araştıri
 
 Raporları görüntüleme, ayarlarınızı değiştirme ve kullanıcı rollerini değiştirme.
 
-:::image type="content" source="../../media/converge-4-access-and-reporting-new.png" alt-text="Rapor portalının sol Microsoft 365 Defender izinler ve raporlama için hızlı Microsoft 365 Defender menüsü.":::
+:::image type="content" source="../../media/converge-4-access-and-reporting-new.png" alt-text="Rapor portalının sol Microsoft 365 Defender izinler ve raporlama için hızlı Microsoft 365 Defender menüsü" lightbox="../../media/converge-4-access-and-reporting-new.png":::
 
 > [!NOTE]
 > DomainKeys Tanımlanan Posta (DKIM), hedef e-posta sistemlerinin özel etki alanınız üzerinden giden iletilere güvenmelerini sağlar.
-> Office 365 kullanıcıları için Defender'da DKIM tuşlarını *artık MICROSOFT 365 DEFENDER:*  \>  \>  \> <https://security.microsoft.com/threatpolicy>\> aracılığıyla yönetebilir ve döndürebilir veya İlke ve kurallar tehdit ilkeleri & **DKIM bölümüne gidin**.
+> Kullanıcıların Office 365 için Defender için DKIM tuşlarını *artık MICROSOFT 365 DEFENDER:* aracılığıyla yönetebilir ve döndürebilirsiniz veya <https://security.microsoft.com/threatpolicy> \> İlke ve kurallar & **Tehdit** \> \> ilkeleri **Kuralları bölümü** \> **DKIM'ye gidin**.
 >
 > Daha fazla bilgi için bkz [. Özel etki alanınıza gönderilen giden e-postayı doğrulamak için DKIM kullanma](/microsoft-365/security/office-365-security/use-dkim-to-validate-outbound-email).
 
@@ -145,7 +145,7 @@ Bu tablo, Güvenlik ve Uyumluluk Merkezi ile Güvenlik ve Uyumluluk Merkezi aras
 
 |Alan|Değişiklik açıklaması|
 |---|---|
-|[İnceleme](../office-365-security/office-365-air.md#changes-are-coming-soon-in-your-microsoft-365-defender-portal)|Air özelliklerini, Uç Nokta için [Defender ve Office 365](/microsoft-365/security/office-365-security/defender-for-office-365) [Defender'da bir araya getirir](../defender-endpoint/automated-investigations.md). Bu güncelleştirme ve geliştirmelerle, güvenlik işlemleri ekibinin tüm e-postanız, işbirliği içeriğiniz, kullanıcı hesaplarınız ve cihazlarınız genelindeki otomatik soruşturmalar ve düzeltme eylemleriyle ilgili ayrıntıları tek bir yerde görüntüleyebilirsiniz.|
+|[İnceleme](../office-365-security/office-365-air.md#changes-are-coming-soon-in-your-microsoft-365-defender-portal)|Air özelliklerini, Uç Nokta için [Office 365 için Defender](/microsoft-365/security/office-365-security/defender-for-office-365) [Defender'da bir araya getirir](../defender-endpoint/automated-investigations.md). Bu güncelleştirme ve geliştirmelerle, güvenlik işlemleri ekibinin tüm e-postanız, işbirliği içeriğiniz, kullanıcı hesaplarınız ve cihazlarınız genelindeki otomatik soruşturmalar ve düzeltme eylemleriyle ilgili ayrıntıları tek bir yerde görüntüleyebilirsiniz.|
 |[Uyarı sırası](../../compliance/alert-policies.md)|Güvenlik **Ve Uyumluluk Merkezi'nde** bulunan Görünüm & bölmesi, güvenlik uyarılarının bağlantılarını Microsoft 365 Defender. Uyarı Sayfasını **Aç bağlantısına tıklayın** ve Microsoft 365 Defender tıklayın. Uyarılar sırasında **herhangi bir uyarıya** tıklayarak Office 365 sayfasına erişebilirsiniz.|
 |[Saldırı Benzetimi eğitimi](../office-365-security/attack-simulation-training-insights.md)|Organizasyon içinde gerçekçi saldırı senaryolarını çalıştırmak için Saldırı Benzetimi eğitimini kullanın. Bu sanal saldırılar, gerçek bir saldırıdan önce iş gücünüzü eğitmek için yardımcı olabilir. Saldırı benzetimi eğitimi, daha fazla seçenek, gelişmiş rapor ve geliştirilmiş eğitim akışları saldırı benzetimi ve eğitim senaryolarınızı daha kolay teslim etmeye ve yönetmeye yardımcı olur.|
 |
@@ -156,22 +156,22 @@ Bu alanlarda değişiklik olmaz:
 - [İlkeler & Kuralları](../../compliance/alert-policies.md)
 - [Kampanya](../office-365-security/campaigns.md)
 - [Gönderiler](../office-365-security/admin-submission.md)
-- [Gözden Geçir](./m365d-action-center.md)
+- [Gözden geçirin](./m365d-action-center.md)
 - [Tehdit İzleyicisi](../office-365-security/threat-trackers.md)
 
 Ayrıca, bu **makalenin altındaki** İlgili Bilgiler bölümüne de bakın.
 
 > [!IMPORTANT]
-> Daha <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalı</a> , ve içinde güvenlik özelliklerini <https://securitycenter.windows.com>bir araya sunar<https://protection.office.com>. Ancak, ne göreceğiniz aboneliğinize bağlıdır. Örneğin, tek başına abonelikler olarak yalnızca Office 365 Plan 1 veya 2 için Microsoft Defender'a sahipsanız, Uç Noktalar için Güvenlik ve Office için Defender plan 1 müşterileri Threat Analytics gibi öğeleri görmüyor.
+> Daha <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalı</a> , ve içinde güvenlik özelliklerini <https://securitycenter.windows.com>bir araya sunar<https://protection.office.com>. Ancak, ne göreceğiniz aboneliğinize bağlıdır. Örneğin, tek Office 365 için Microsoft Defender Abonelikler olarak yalnızca Office 365 için Microsoft Defender Plan 1 veya 2'niz varsa, Uç Noktalar için Güvenlik ve Office için Defender'a yönelik özellikleri göremeyeceksiniz Office Plan 1 müşterileri Threat Analytics gibi öğeleri görmüyor.
 
 > [!TIP]
-> EOP Exchange Online Protection için Defender'ın temel bir öğesi olduğu için tüm yeni EOP (EOP Microsoft 365 Defender) işlevleri Office 365.
+> EOP Exchange Online Protection temel bir elektronik Microsoft 365 Defender öğe olduğu için tüm yeni EOP (EOP) işlevleri Office 365 için Defender.
 
 ## <a name="microsoft-365-defender-home-page"></a>Microsoft 365 Defender Giriş sayfası
 
 Portalın Giriş sayfası, çalışma ortamınıza ilişkin güvenlik durumu hakkında önemli özet Microsoft 365 ortaya çıkar.
 
-Rehberli **turu kullanarak,** Uç Nokta veya E-posta'da kısa bir tur atarak & sayfalarına göz atabilirsiniz. Burada gördüğünüzlerin, sizin Uç Nokta için Defender ve/veya Uç Nokta için Defender lisansınız Office 365 bağlı olduğunu unutmayın.
+Rehberli **turu kullanarak,** Uç Nokta veya E-posta'da kısa bir tur atarak & sayfalarına göz atabilirsiniz. Burada gördüğünüzlerin, kullanıcı lisansınıza ve/veya Uç Nokta için Defender Office 365 için Defender lisansa bağlı olduğunu unutmayın.
 
 Ayrıca, Karşılaştırma için Güvenlik ve Uyumluluk & bağlantısı da mevcuttur. Son bağlantı, son **güncelleştirmelerin açık** olduğu 'Yeni'ler sayfasıdır.
 

@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 74e9f6e0ae60b322ed4ec50c5b1a9db278dbb2e6
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 4e819a9de9d5ccd66caab4bc13d8b11c1a95ab03
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021691"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681732"
 ---
 # <a name="permissions-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında izinler
 
@@ -77,10 +77,6 @@ Bir rol seçin, rolün açıklamasını ve kullanıcı atamalarını içeren ayr
 
 Daha fazla bilgi için bkz[. 2010'da yönetici rollerini görüntüleme Azure Active Directory](/azure/active-directory/users-groups-roles/directory-manage-roles-portal).
 
-<br>
-
-****
-
 |Rol|Açıklama|
 |---|---|
 |**Genel yönetici**|Tüm hizmetlerde, tüm yönetim Microsoft 365 erişim. Yalnızca genel yöneticiler diğer yönetici rollerini atayır. Daha fazla bilgi için bkz [. Genel Yönetici / Şirket Yöneticisi](/azure/active-directory/roles/permissions-reference#global-administrator--company-administrator).|
@@ -92,7 +88,6 @@ Daha fazla bilgi için bkz[. 2010'da yönetici rollerini görüntüleme Azure Ac
 |**Genel okuyucu**|Genel yönetici rolünün salt **okunur sürümü** . Tüm ayarları ve yönetim bilgilerini tüm Microsoft 365. Daha fazla bilgi için bkz. [Genel Okuyucu](/azure/active-directory/roles/permissions-reference#global-reader).|
 |**Saldırı benzetimi yöneticisi**|Saldırı benzetimi oluşturma [, benzetim](attack-simulation-training.md) başlatma/zamanlama ve benzetim sonuçlarının gözden geçirmesi gibi her yönüyle oluşturun ve yönetin. Daha fazla bilgi için bkz [. Saldırı Benzetimi Yöneticisi](/azure/active-directory/roles/permissions-reference#attack-simulation-administrator).|
 |**Saldırı yükü yazarı**|Saldırı yüklemeleri oluşturun ancak aslında bunları başlatamaz veya zamanlamayın. Daha fazla bilgi için bkz [. Saldırı Yük Yazarı](/azure/active-directory/roles/permissions-reference#attack-payload-author).|
-|
 
 ### <a name="email--collaboration-roles-in-the-microsoft-365-defender-portal"></a>E& portalda e-posta Microsoft 365 Defender işbirliği rolleri
 

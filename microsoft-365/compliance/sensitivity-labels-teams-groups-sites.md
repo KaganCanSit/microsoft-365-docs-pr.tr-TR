@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Farklı sitelerde ve farklı gruplarda yer alan SharePoint Microsoft Teams korumak için duyarlılık Microsoft 365 kullanın.
-ms.openlocfilehash: b5eb295e83e2a87a538201fe58c221f3f9400f97
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+ms.openlocfilehash: 759f7a6403eb41a6a853ed1f9b844ebd1ef679cc
+ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63714927"
+ms.lasthandoff: 03/28/2022
+ms.locfileid: "64500023"
 ---
 # <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Aynı sitelerde, gruplarda ve Microsoft Teams sitelerde Microsoft 365 için duyarlılık SharePoint kullanma
 
@@ -190,14 +190,16 @@ Siteler ve gruplar için yapılandırılmış duyarlılık etiketleri oluşturma
 
 ### <a name="creating-and-publishing-labels-that-are-configured-for-sites-and-groups"></a>Siteler ve gruplar için yapılandırılmış etiketler oluşturma ve yayımlama
 
-Yeni bir duyarlılık etiketi oluşturulduğunda ve yayımlanır ve bir saat içinde ekip, grup ve sitelerde kullanıcılar tarafından görülebilir. Bununla birlikte, mevcut bir etiketi değiştirirsanız, 24 saate kadar izin kullanın. Site ve grup ayarları için yapılandırılan etiket kullanıcılarınız için bir etiket yayımlamak üzere aşağıdaki kılavuzu kullanın:
+Site ve grup ayarları için yapılandırılan etiket kullanıcılarınız için bir etiket yayımlamak üzere aşağıdaki kılavuzu kullanın:
 
 1. Duyarlılık etiketini oluşturduktan ve yapılandırdikten sonra, yalnızca birkaç test kullanıcısına uygulanan bir etiket ilkesine bu etiketi ekleyin.
 
 2. Değişikliğin çoğaltılması için bekleyin:
-
-   - Yeni etiket: Bir saat bekleyin.
-   - Mevcut etiket: 24 saat bekleyin.
+    
+   - Yeni etiket: En az bir saat bekleyin.
+   - Mevcut etiket: En az 24 saat bekleyin.
+    
+    Etiketlerin zamanlaması hakkında daha fazla bilgi için bkz. [Yeni etiketlerin ne zaman yürürlüğe girecekleri ve değişiklikler ne zaman etkili olacak](create-sensitivity-labels.md#when-to-expect-new-labels-and-changes-to-take-effect)?
 
 3. Bu bekleme süresinde, 1. adımda oluşturduğunuz etiketle bir ekip, Microsoft 365 grubu veya SharePoint sitesi oluşturmak için test kullanıcı hesaplarından birini kullanın.
 
@@ -205,7 +207,7 @@ Yeni bir duyarlılık etiketi oluşturulduğunda ve yayımlanır ve bir saat iç
 
 ### <a name="modifying-published-labels-that-are-configured-for-sites-and-groups"></a>Siteler ve gruplar için yapılandırılmış olarak yayımlanan etiketleri değiştirme
 
-En iyi yöntem olarak, etiket ekiplere, gruplara veya sitelere uygulandıktan sonra bir duyarlılık etiketi için site ve grup ayarlarını değiştirmezsiniz. Bunu yapmak için, değişikliklerin etiket uygulanmış olan tüm kapsayıcılara çoğaltılması için 24 saat beklemeyi unutmayın.
+En iyi yöntem olarak, etiket ekiplere, gruplara veya sitelere uygulandıktan sonra bir duyarlılık etiketi için site ve grup ayarlarını değiştirmezsiniz. Bunu yapmak için, değişikliklerin etiket uygulanmış olan tüm kapsayıcılara çoğaltılması için en az 24 saat beklemeyi unutmayın.
 
 Buna ek olarak, değişiklikleriniz Dış **kullanıcılara erişim ayarını da içerecekse** :
 
@@ -219,7 +221,7 @@ Site ve grup ayarlarının etkin olduğu bir duyarlılık etiketini siler ve bu 
 
 1. Duyarlılık etiketini, etiketin olduğu tüm etiket ilkelerinden kaldırın.
 
-2. Bir saat bekleyin.
+2. En az bir saat bekleyin.
 
 3. Bu bekleme süresinden sonra bir ekip, grup veya site oluşturmayı deneyin ve etiketin artık görünür olmadığını onaylayın.
 
@@ -240,11 +242,11 @@ Birden çok siteye duyarlılık etiketi [uygulamaniz gerekirse PowerShell'i kull
 
 Artık duyarlılık etiketini veya etiketlerini gruplara veya gruplara Microsoft 365 hazır mısınız? Yönergeler için Azure AD belgelerine geri dönme:
 
-- [Azure portalda yeni bir gruba etiket atama](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#assign-a-label-to-a-new-group-in-azure-portal)
+- [Yeni grup için bir etiket Azure portal](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#assign-a-label-to-a-new-group-in-azure-portal)
 
-- [Azure portalda mevcut bir gruba etiket atama](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#assign-a-label-to-an-existing-group-in-azure-portal)
+- [Aynı grupta var olan bir gruba etiket Azure portal](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#assign-a-label-to-an-existing-group-in-azure-portal)
 
-- [Azure portalda var olan bir gruptan etiket kaldırın](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#remove-a-label-from-an-existing-group-in-azure-portal).
+- [Çalışma grubunda var olan bir gruptan Azure portal](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels#remove-a-label-from-an-existing-group-in-azure-portal).
 
 ### <a name="apply-a-sensitivity-label-to-a-new-team"></a>Yeni bir ekipe duyarlılık etiketi uygulama
 

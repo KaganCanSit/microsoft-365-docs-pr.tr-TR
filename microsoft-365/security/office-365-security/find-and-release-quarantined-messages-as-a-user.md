@@ -20,12 +20,12 @@ ms.custom:
 description: Kullanıcılar, kullanıcılara teslim olması gereken karantinaya alınmış iletileri Exchange Online Protection (EOP) içinde görüntülemeyi ve yönetmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1cfdd441cff8481ef1ec7ea5ef3cabc54f062694
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 35aa801d0d981f68de5c62a1928e1f85d82ee95d
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021645"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63682405"
 ---
 # <a name="find-and-release-quarantined-messages-as-a-user-in-eop"></a>EOP'de kullanıcı olarak karantinaya alınmış iletileri bulma ve serbest bırakma
 
@@ -39,10 +39,6 @@ ms.locfileid: "63021645"
 Microsoft 365 posta kutusu olmayan Exchange Online ya da tek başına Exchange Online Protection Exchange Online Protection EOP Exchange Online) kuruluşlarında, karantinada tehlikeli veya istenmeyen iletiler karantinaya alın. Daha fazla bilgi için bkz. [EOP'de karantina](quarantine-email-messages.md).
 
 Normal bir kullanıcı (yönetici olarak değil), karantinaya  alınmış iletinin alıcısı olarak sizin için kullanılabilir varsayılan özellikler aşağıdaki tabloda açıklanmıştır:
-
-<br>
-
-****
 
 |Karantina nedeni|Görünüm|Sürüm|Silme|
 |---|:---:|:---:|:---:|
@@ -64,7 +60,6 @@ Normal bir kullanıcı (yönetici olarak değil), karantinaya  alınmış iletin
 |Kasa dosyalarını kötü amaçlı yazılım olarak SharePoint, OneDrive Microsoft Teams için ekleri karantinaya alın.||||
 |**Posta akış kuralları (aktarım kuralları)**||||
 |E-posta iletilerini karantinaya alan posta akışı kuralları.||||
-|
 
 _Karantina ilkeleri_, desteklenen özelliklerde iletinin neden karantinaya alındığına bağlı olarak, kullanıcıların karantinaya alınmış iletilerde ne yapmalarına [izin verilmiyor?](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features) Varsayılan karantina ilkeleri, geçmiş özelliklerini önceki tabloda açıklandığı gibi zorlar. Yöneticiler desteklenen özelliklerde kullanıcılar için daha az kısıtlayıcı veya daha kısıtlayıcı özellikler tanımlayan özel karantina ilkeleri oluşturabilir ve uygulayabilir. Daha fazla bilgi için bkz. [Karantina ilkeleri](quarantine-policies.md).
 
