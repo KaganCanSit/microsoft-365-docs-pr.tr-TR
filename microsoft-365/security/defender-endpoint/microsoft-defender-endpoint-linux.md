@@ -17,12 +17,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ebcfea808e64c89772f36fb22f5dfd75e6e8e27f
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 805f857a95fab03f8356c5162db1509122e7250a
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525814"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680830"
 ---
 # <a name="microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender
 
@@ -40,6 +40,9 @@ Bu konuda, Linux'ta Uç Nokta için Microsoft Defender'ı yükleme, yapılandır
 > Linux'ta Uç Nokta için Microsoft Defender ile birlikte diğer üçüncü taraf uç nokta koruma ürünlerinin de çalıştır olması performans sorunlarına ve öngörülemeyen yan etkilere neden olabilir. Microsoft dışı uç nokta koruması ortamınızın mutlak bir gereksinimi ise, virüsten koruma işlevini Pasif modunda çalıştıracak şekilde yapılandırdikten sonra Linux EDR uç noktası için Defender'ın avantajını güvenle [kullanabilirsiniz](linux-preferences.md#enforcement-level-for-antivirus-engine).
 
 ## <a name="how-to-install-microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender'ı yükleme
+
+Linux için Microsoft Defender Uç Noktası kötü amaçlı yazılımdan koruma ve uç noktada algılama ve yanıtlama (EDR) özelliklerini içerir. 
+
 
 ### <a name="prerequisites"></a>Önkoşullar
 

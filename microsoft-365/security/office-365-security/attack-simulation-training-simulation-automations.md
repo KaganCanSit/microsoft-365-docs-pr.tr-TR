@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Yöneticiler, Plan 2 için Microsoft Defender'da belirtilen koşullar karşılandıklarında başlatan belirli teknikler ve yüklemeler içeren otomatik benzetimler Office 365 öğrenebilir.
 ms.technology: mdo
-ms.openlocfilehash: 327091706ed7c8c2a6f1f1180af7888ed67c1a57
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 3ad24a8b6d2be18fb7ef5fd49be7f2197b3be3a7
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63526186"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680962"
 ---
 # <a name="simulation-automations-for-attack-simulation-training"></a>Saldırı benzetimi eğitimi için benzetim otomasyonları
 
@@ -230,15 +230,10 @@ Giriş **sayfası sayfasında** , yükleme benzetimde bir yük açılırsa kulla
 
 - **Giriş sayfası tercihini** seçin: Kullanılabilir değerler, aşağıdaki tabloda açıklandığı gibi [Yük](#select-payloads) seçin sayfasındaki önceki seçimlerinize bağlıdır:
 
-  <br>
-
-  ****
-
   |Yüklemeleri seç sayfasında seçim|Giriş sayfası tercihini seçme için kullanılabilir değerler|
   |---|---|
   |El ile|Microsoft varsayılan giriş sayfasını kullanma <p> Kendi giriş sayfanızı oluşturma <p> Özel URL kullanma <p> **Not**: **Daha önce Sosyal mühendislik** tekniklerini seçin sayfasında Kötü amaçlı yazılım eki veya  Kötü amaçlı yazılıma bağlantı ekle'yi seçtiysanız Özel URL [değeri kullan seçeneği](#select-one-or-more-social-engineering-techniques) kullanılamaz.|
   |Rastgele|Microsoft varsayılan giriş sayfasını kullanma|
-  |
 
   Kullanılabilir Giriş **sayfası tercih değerlerini** ve ilişkili ayarlarını seçin seçeneği aşağıdaki listede açıklanmıştır:
 

@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-mar2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e01fe2bdc5765c77500ae98e9c8177a35c683fca
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 70a5eba3eb78878cc1f15bdd711a3331e9af870a
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63324571"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680896"
 ---
 # <a name="automated-investigation-and-response-air-in-microsoft-defender-for-office-365"></a>İş için Microsoft Defender'da otomatik araştırma ve yanıt (AIR) Office 365
 
@@ -89,10 +89,6 @@ Buna ek olarak, özellikle [de Tehdit yönetimi kategorisindeki varsayılan ilke
 
 Microsoft 365, yönetici izinlerinin kötüye kullanımı, kötü amaçlı yazılım etkinliği, olası dış ve iç tehditlere Exchange bilgi yönetimi risklerini belirlemeye yardımcı olan birçok yerleşik uyarı ilkeleri sağlar. Varsayılan uyarı [ilkelerinin birkaçı otomatik](../../compliance/alert-policies.md#default-alert-policies) soruşturmaları tetikler. Aşağıdaki tabloda otomatik soruşturmaları tetikleyen uyarılar, Microsoft 365 Defender portalında önem derecesi ve bunların nasıl oluşturulacakları açık almaktadır:
 
-<br>
-
-****
-
 |Uyarı|Önem Derecesi|Uyarı nasıl oluşturulur?|
 |---|---|---|
 |Kötü amaçlı olabilecek bir URL tıklaması algılandı|**Yüksek**|Bu uyarı, aşağıdaki uyarılardan biri ortaya çıkar: <ul><li>E-posta bağlantıları [Kasa tarafından](safe-links.md) korunan bir kullanıcı kötü amaçlı bir bağlantıya tıklar</li><li>URL'ler için karar değişiklikleri Microsoft Defender tarafından Office 365</li><li>Kullanıcılar Bağlantılar Kasa sayfalarını geçersiz kılar (kuruluşun Bağlantılar ilkesine [Kasa göre](set-up-safe-links-policies.md)).</li></ul> <p> Bu uyarıyı tetikleyen olaylar hakkında daha fazla bilgi için bkz[. Kasa ayarlama](set-up-safe-links-policies.md).|
@@ -101,7 +97,6 @@ Microsoft 365, yönetici izinlerinin kötüye kullanımı, kötü amaçlı yazı
 |Kimlik avı URL'lerini içeren e-posta iletileri teslimden sonra kaldırılır|**Bilgilendirme**|Bu uyarı, kimlik avı içeren tüm iletiler kuruluş posta kutularına teslim edilirken oluşturulur. Bu olay oluşursa, Microsoft ZAP kullanan posta kutularına Exchange Online iletileri [kaldırır](zero-hour-auto-purge.md).|
 |Şüpheli e-posta gönderme desenleri algılandı|**Orta**|Bu uyarı, kurumdan biri şüpheli e-posta gönderdiğinde ve e-posta göndermesi kısıtlanmışsa oluşturulur. Uyarı, hesabın güvenliği ihlal edilmiş ancak kullanıcının kısıtlanmaları için yeterince ciddi olmadığını belirten erken bir uyarıdır. <p> Nadiren de olsa, bu ilke tarafından oluşturulan bir uyarı anormal olabilir. Bununla birlikte, kullanıcı hesabının güvenliği ihlal [edilmiş olup olmadığını denetlemeyi de göz atabilirsiniz](responding-to-a-compromised-email-account.md).|
 |Kullanıcının e-posta göndermesi kısıtlandı|**Yüksek**|Bu uyarı, kurumdan bir kişinin giden posta göndermesi kısıtlanmışsa oluşturulur. Bu uyarı normalde bir e-posta [hesabının güvenliği ihlal edilmiş durumda olur](responding-to-a-compromised-email-account.md). <p> Kısıtlanmış kullanıcılar hakkında daha fazla bilgi için bkz. Microsoft 365'da Engellenen [kullanıcıları Kısıtlanmış Kullanıcılar Microsoft 365](removing-user-from-restricted-users-portal-after-spam.md).|
-|
 
 > [!TIP]
 > Uyarı ilkeleri hakkında daha fazla bilgi edinmek veya varsayılan ayarları düzenlemek için bkz[.](../../compliance/alert-policies.md) İlke Microsoft 365 uyumluluk merkezi.
@@ -109,10 +104,6 @@ Microsoft 365, yönetici izinlerinin kötüye kullanımı, kötü amaçlı yazı
 ## <a name="required-permissions-to-use-air-capabilities"></a>AIR özelliklerini kullanmak için gerekli izinler
 
 İzinler, aşağıdaki tabloda açıklananlar gibi belirli roller aracılığıyla vetir:
-
-<br>
-
-****
 
 |Görev|Gerekli rol(ler)|
 |---|---|
@@ -147,10 +138,6 @@ Yeni ve geliştirilmiş Microsoft 365 Defender portalı<https://security.microso
 
 Aşağıdaki tabloda, Microsoft Defender'daki Air'te gelecek değişiklikler ve iyileştirmeler Office 365.
 
-<br>
-
-****
-
 |Öğe|Neler değişti?|
 |---|---|
 |**İncelemeler** sayfası|Güncelleştirilmiş **Araştırma sayfası** , Uç Nokta için [Microsoft Defender'da gördüğünüzle daha tutarlıdır](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations). Yeni, birleşik Araştırma görünümüyle uyumlu olan bazı genel biçim ve stil **değişiklikleri** göreceğiniz gibi. Örneğin, araştırma grafiği daha birleşik bir biçime sahip.|
@@ -161,7 +148,6 @@ Aşağıdaki tabloda, Microsoft Defender'daki Air'te gelecek değişiklikler ve 
 |**Kanıt** sekmesi|Yeni Kanıt **sekmesi** eylemlerle ilgili bulguların temellerini gösterir. Her kanıt parçasıyla ilgili eylemler, bekleyen bir eylemi seçerek açılan yan bölmede onaylanır (veya reddedilir).|
 |**İşlem merkezi**|Güncelleştirilmiş **İşlem Merkezi** (<https://security.microsoft.com/action-center>), e-posta, cihazlar ve kimlikler genelinde bekleyen ve tamamlanmış eylemleri bir araya getirir. Daha fazla bilgi edinmek için bkz. İşlem merkezi. (Daha fazla bilgi edinmek için bkz [. İşlem merkezi](../defender/m365d-action-center.md).)|
 |**Olaylar** sayfası|Olaylar **sayfası,** soruşturmaların daha iyi birleştirilmiş bir görünümünü sağlamak için artık birden çok soruşturmayı bir arada ilişkili yapıyor. ([Olaylar hakkında daha fazla bilgi öğrenin](../defender/incidents-overview.md).)|
-|
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

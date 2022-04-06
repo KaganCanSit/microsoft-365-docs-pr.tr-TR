@@ -19,12 +19,12 @@ ms.custom:
 description: Tehdit Koruması Durumu'Office 365 gözden geçirmek ve güvenlik uyarılarını görüntülemek ve bu uyarılara yönelik eylemde kullanmak için yeni Güvenlik Panosu'Office 365 kullanın.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 977fc897ecee859648fb1097e573cd0a8289768e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 1f9706a92cf07f23656e6865fe69f11b04d58544
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985343"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680530"
 ---
 # <a name="security-dashboard-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'& panosu
 
@@ -54,14 +54,9 @@ Tehdit Yönetimi Özeti widget'i, son yedi (7) gün boyunca kuruluşlarının te
 
 Tehdit Yönetimi Özeti'ne bakarak göreceğiniz bilgiler aboneliğinizin içeriğine bağlıdır. Aşağıdaki tabloda, bu tabloyla ilgili olarak hangi bilgilerin Office 365 E3 Office 365 E5.
 
-<br>
-
-****
-
 |Office 365 E3|Office 365 E5|
 |---|---|
 |Kötü amaçlı yazılım iletileri engellendi<br>Kimlik avı iletileri engellendi<br>Kullanıcılar tarafından bildirilen iletiler<br><br><br><br>|Kötü amaçlı yazılım iletileri engellendi<br>Kimlik avı iletileri engellendi<br>Kullanıcılar tarafından bildirilen iletiler<br>Sıfır gün kötü amaçlı yazılım engellendi<br>Algılanan gelişmiş kimlik avı iletileri<br>Engellenen kötü amaçlı URL'ler|
-|
 
 Tehdit Yönetimi Özeti widget'ini görüntülemek veya bu widget'a erişmek için, güvenlik raporlarında Defender'ı Office 365 gerekir. Daha fazla bilgi edinmek için bkz. Raporlar [için Defender'ı görüntülemek Office 365 gereklidir?](view-reports-for-mdo.md#what-permissions-are-needed-to-view-the-defender-for-office-365-reports).
 
@@ -73,15 +68,10 @@ Tehdit Koruması Durumu widget'ı, kimlik avının ve kötü amaçlı yazılıml
 
 Ayrıntılar, Microsoft 365 aboneliğinizin Microsoft Defender Exchange Online Protection(EOP) [](exchange-online-protection-overview.md) ekli veya bu uygulama olmadan da dahil [Office 365](defender-for-office-365.md).
 
-<br>
-
-****
-
 |Aboneliğiniz şunları da içerirse...|Bu ayrıntıları göreceğiz|
 |---|---|
 |EOP, ancak windows için Microsoft Defender'Office 365|EOP tarafından algılanan ve engellenen kötü amaçlı e-posta.<p> Tehdit [Koruması Durumu raporuna (EOP) bakın](view-email-security-reports.md#threat-protection-status-report).|
 |Office 365 için Microsoft Defender|EOP ve Office 365 için Defender tarafından algılanan ve engellenen kötü amaçlı içerik ve kötü amaçlı Office 365 <p> Kötü amaçlı yazılımdan koruma altyapısı tarafından engellenen benzersiz [e-posta](zero-hour-auto-purge.md) iletilerinin sayısı, sıfır saatlik otomatik temizleme ve Office 365 özellikleri için Defender (Kasa Bağlantıları, [Kasa](safe-links.md) Ekleri ve [Office 365 için Defender'da](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) Kimlik avından [](safe-attachments.md)koruma). <p> Tehdit [koruması durum raporuna bakın](view-reports-for-mdo.md#threat-protection-status-report).|
-|
 
 Tehdit Koruması Durumu widget'sini görüntülemek veya bu widget'a erişmek için, güvenlik raporlarında Defender'ı Office 365 gerekir. Daha fazla bilgi edinmek için bkz[. Yeni raporlar için Defender'ı görüntülemek Office 365 gereklidir?](view-reports-for-mdo.md#what-permissions-are-needed-to-view-the-defender-for-office-365-reports)
 
@@ -93,17 +83,12 @@ Genel Haftalık Tehdit Algılamaları widget'ı son yedi (7) gün içinde e-post
 
 Ölçümler aşağıdaki tabloda açıklandığı gibi hesaplanır:
 
-<br>
-
-****
-
 |Metrik|Nasıl hesaplanır?|
 |---|---|
 |Taranan iletiler|Alıcı sayısıyla çarpımlı taranan e-posta iletilerinin sayısı|
 |Tehditler durduruldu|Kötü amaçlı yazılım içeren ve alıcı sayısıyla çarpıldı olarak tanımlanan e-posta iletilerinin sayısı|
 |Office 365 [için Defender tarafından Office 365](defender-for-office-365.md)|Office 365 için Defender ile engellenen e-posta iletilerinin alıcı sayısıyla çarpımını|
 |Teslimden sonra kaldırıldı|Sıfır saatlik otomatik temizleme [(ZAP)](zero-hour-auto-purge.md) ile alıcı sayısıyla çarpılmış iletilerin sayısı|
-|
 
 ## <a name="malware"></a>Kötü amaçlı yazılım
 

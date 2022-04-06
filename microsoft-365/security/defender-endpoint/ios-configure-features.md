@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 3179ab18ab27bb41f5c0b1577d73ff48b3470b98
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 85ddada93e20e36648fccdb0fe9b2b34ab473212
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63326083"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681490"
 ---
 # <a name="configure-microsoft-defender-for-endpoint-on-ios-features"></a>iOS'ta Uç Nokta için Microsoft Defender'ı yapılandırma
 
@@ -143,6 +143,24 @@ iOS'ta Uç Nokta için Defender yöneticilerin iOS cihazlarda da özel gösterge
 
 > [!NOTE]
 > iOS'ta Uç Nokta için Defender yalnızca IP adresleri ve URL'ler/etki alanları için özel göstergeler oluşturmayı destekler.
+
+## <a name="configure-option-to-send-in-app-feedback"></a>Uygulama içinde geri bildirim gönderme seçeneğini yapılandırma 
+
+Müşteriler artık Uç nokta için Defender uygulamasından Microsoft'a geri bildirim verileri gönderme olanağını yapılandırma seçeneğine sahip. Geri bildirim verileri Microsoft'un ürünleri geliştirmesine ve sorunları gidermesine yardımcı olur.
+
+> [!NOTE]
+> US Government cloud müşterileri için, geri bildirim veri toplama varsayılan **olarak devre dışı** bırakılmıştır. 
+
+Microsoft'a geri bildirim verileri gönderme seçeneğini yapılandırmak için aşağıdaki adımları kullanın:
+
+1. Bu [Microsoft Endpoint Manager ve](https://go.microsoft.com/fwlink/?linkid=2109431) **AppsApp** >  >  yapılandırma **ilkeleriAddManaged** >  **cihazlar'a gidin**.
+1. İlkeye bir ad ver: **iOS/iPadOS >** Platform Ayarları, profil türünü seçin.
+1. Hedef **uygulama olarak Uç Nokta için Microsoft Defender'ı** seçin.
+1. Uygulama Ayarlar, Yapılandırma tasarımcısını **kullan'ı** seçin ve anahtar ve değer **türü olarak Boolean olarak DefenderSendFeedback'i** **ekleyin**.
+   - Son kullanıcıların geri bildirim sağlama yeteneğini kaldırmak için, değeri bu ilke olarak `false` ayarlayın ve kullanıcılara attayın. Varsayılan olarak, bu değer olarak ayarlanır `true`. ABD Kamu müşterileri için varsayılan değer 'false' olarak ayarlanır.
+   - Olarak ayarlanmış olan kullanıcılar için `true`uygulama içinde Microsoft'a Geri Bildirim verileri gönderme seçeneği olacaktır (Menü > Geri Bildirim & Microsoft'> Gönderme)
+1. **Sonraki'ne** tıklayın ve bu profili hedefli cihazlara/kullanıcılara attayin.
+
 
 ## <a name="report-unsafe-site"></a>Güvenli olmayan siteyi bildirme
 

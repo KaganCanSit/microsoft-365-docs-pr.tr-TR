@@ -21,12 +21,12 @@ ms.custom:
 - air
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8d2812f9f2e1100a923dc5f9bb22a9b6df218a78
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 3ff4317fc195a175a2b622c13ea4683a5e010b1c
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63321733"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680719"
 ---
 # <a name="custom-or-third-party-reporting-solutions-for-microsoft-defender-for-office-365"></a>Microsoft Defender for Office 365 için özel veya üçüncü taraf raporlama çözümleri
 
@@ -44,7 +44,6 @@ Microsoft [Defender For Office 365](defender-for-office-365.md) ile otomatik [so
 |[Uygulama Yönetimi API'leriyle Office 365 başlama](/office/office-365-management-api/get-started-with-office-365-management-apis)|Yönetim Office 365 API'si, verilerinize erişmesi için uygulamanıza kimlik doğrulama hizmetleri sağlamak Microsoft 365 kullanır. Bunu ayarlamak için bu makaledeki adımları izleyin.|
 |[Office 365 Yönetimi Etkinliği API başvurusu](/office/office-365-management-api/office-365-management-activity-api-reference)|Office 365 ve Azure AD etkinlik günlüklerinden kullanıcı, yönetici, sistem, ilke eylemleri ve Microsoft 365 olayları hakkında bilgi almak için Microsoft 365 Yönetim Etkinliği API'sini kullanabilirsiniz. Bunun nasıl çalıştığını öğrenmek için bu makaleyi okuyun.|
 |[Office 365 Yönetimi Etkinlik API'si şeması](/office/office-365-management-api/office-365-management-activity-api-schema)|Office 365 Management Activity API aracılığıyla [](/office/office-365-management-api/office-365-management-activity-api-schema#common-schema) kullanılabilen belirli veri türleri hakkında bilgi edinmek için, Ortak şema ve [Office 365 için Defender](/office/office-365-management-api/office-365-management-activity-api-schema#office-365-advanced-threat-protection-and-threat-investigation-and-response-schema) ve tehdit soruşturması ve yanıt şeması hakkında genel bir bakış elde edin.|
-|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

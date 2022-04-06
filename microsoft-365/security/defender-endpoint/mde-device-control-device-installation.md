@@ -1,6 +1,6 @@
 ---
-title: Uç Nokta Cihaz Denetimi Cihazı Yüklemesi için Microsoft Defender
-description: Bu konu başlığı altında, Uç Nokta Cihaz Denetimi Cihazı Yüklemesi için Microsoft Defender hakkında bilgi edinebilirsiniz
+title: Uç Nokta için Microsoft Defender Denetim Cihazı Yüklemesi
+description: Bu konu başlığı altında, Cihaz Denetimi Cihazı Uç Nokta için Microsoft Defender hakkında bilgi edinebilirsiniz
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -13,26 +13,26 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 3ff727f95dd62c205cee7e9606cb024a5ea88bda
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: ccef3ec748983db89b6ceca9b8092eafbef0d899
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63014057"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472627"
 ---
-# <a name="microsoft-defender-for-endpoint-device-control-device-installation"></a>Uç Nokta Cihaz Denetimi Cihazı Yüklemesi için Microsoft Defender
+# <a name="microsoft-defender-for-endpoint-device-control-device-installation"></a>Uç Nokta için Microsoft Defender Denetim Cihazı Yüklemesi
 
 **Geçerli olduğu yer:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Uç Nokta Cihaz Denetim Cihazı Yüklemesi için Microsoft Defender aşağıdaki görevi gerçekleştirebilirsiniz:
+Uç Nokta için Microsoft Defender Denetim Cihazı Yüklemesi, aşağıdaki görevi yerineyma olanak sağlar:
 
 - Kişilerin belirli cihazları yüklemesini engelin.
 - Kişilerin belirli cihazları yüklemesine izin ver, ancak diğer cihazları engelle.
 
 > [!NOTE]
-> Cihaz Yükleme ve Çıkarılabilir depolama erişimi denetimi arasındaki farkı bulmak için bkz. Uç Nokta Cihaz Denetimi Çıkarılabilir Veya Koruma için [Microsoft Defender Depolama.](/microsoft-365/security/defender-endpoint/device-control-removable-storage-protection?view=o365-worldwide&preserve-view=true)
+> Cihaz Yükleme ve Çıkarılabilir depolama erişimi denetimi arasındaki farkı bulmak için bkz. Cihaz [Denetimi Çıkarılabilir Uç Nokta için Microsoft Defender Koruma'ya Depolama bakın](/microsoft-365/security/defender-endpoint/device-control-removable-storage-protection?view=o365-worldwide&preserve-view=true).
 
 |Ayrıcalık|İzin|
 |---|---|
@@ -45,7 +45,7 @@ Uç Nokta Cihaz Denetim Cihazı Yüklemesi için Microsoft Defender aşağıdaki
 
 ## <a name="prepare-your-endpoints"></a>Uç noktalarınızı hazırlama
 
-Server 2022'de, Windows 10 11 cihazda Windows Kurulumu Windows dağıtın.
+Sunucu 2022'Windows 10, Windows 11 cihazlara Windows Kurulumu dağıtın.
 
 ## <a name="device-properties"></a>Cihaz özellikleri
 
@@ -62,9 +62,9 @@ Daha fazla bilgi için bkz. [Windows](/windows/client-management/manage-device-i
 
 ### <a name="allow-installation-of-devices-that-match-any-of-these-device-ids"></a>Bu Cihaz Kimlikleri ile eşleşmeye izin ver cihazların yüklenmesine izin ver
 
-Bu ilke ayarı, Donanım Kimliklerini Tak ve Çalıştır listesini ve yüklemesine izin verilen cihazlar için Windows kimlikleri belirtmenize olanak tanır. Bu ilke ayarı yalnızca, Tüm cihazla eşleşme ölçütleri ilkesi  ayarı genelinde Cihaz yüklemesine izin ver ve Engelle için katmanlı değerlendirme sırası uygula ayarı etkinleştirildiğinde kullanılacak şekilde tasarlanmıştır.
+Bu ilke ayarı, yük devre dışı olan Tak ve Kullan kimlikleri ve uyumlu kimlikleri Windows bir liste belirtmenize olanak tanır. Bu ilke ayarı yalnızca, Tüm cihazla eşleşme ölçütleri ilkesi  ayarı genelinde Cihaz yüklemesine izin ver ve Engelle için katmanlı değerlendirme sırası uygula ayarı etkinleştirildiğinde kullanılacak şekilde tasarlanmıştır.
 
-Tüm cihazla eşleşme ölçütleri ilkesi ayarı genelinde Cihaz  yüklemesine izin ver ve Engelle ilkeleri için katmanlı değerlendirme sırası uygula ayarıyla birlikte bu ilke ayarı etkinleştirildiğinde, Windows'in, özellikle hiyerarşide aynı veya daha üst katmanda yer alan başka bir ilke ayarı özellikle bu yüklemeyi engellemediği sürece, Oluştur ve Çalıştır donanım kimliği veya uyumlu kimlik bulunan tüm cihaz varsa bu cihazı yüklemesine veya güncelleştirmesine izin verilir.  örneğin, aşağıdaki ilke ayarları gibi:
+Tüm cihaz yükleme ilkelerinin Cihaz yüklemesine izin  ver ve Engelle ilkeleri için katmanlı değerlendirme sırası uygula ayarıyla birlikte bu ilke ayarı etkinleştirildiğinde, Windows'un, hiyerarşide özellikle aynı veya daha üst katmanda yer alan başka bir ilke ayarı özellikle engellemediği sürece, Tak ve Kullan donanım kimliği veya uyumlu kimliği bulunan tüm cihazlarında, kendi Tak ve Kullan donanım kimliği veya uyumlu kimliği bulunan tüm cihazı yüklemesine veya güncelleştirmesine izin verilir  kuruluma devam edebilirsiniz. Örneğin:
 
 - Bu cihaz kimlikleri ile eşleşmesi cihazlar yüklemesini engelin.
 - Bu cihaz örneği kimliklerinin eşleşmesini engelleyen cihazlar yüklemesini engelin.
@@ -72,13 +72,13 @@ Tüm cihazla eşleşme ölçütleri ilkesi ayarı genelinde Cihaz  yüklemesine 
 Tüm cihaz **yükleme ölçütleri ilkesi** genelinde Cihaz yüklemesine izin ver ve Engelle için katmanlı değerlendirme sırası uygula ilke ayarı bu ilke ayarıyla etkinleştirilmemişse, özellikle yüklemeyi engelleyen diğer tüm ilke ayarları geçerli olur.
 
 > [!NOTE]
-> Diğer **ilke** ayarları ilkesi ayarında, Cihaz yüklemesine izin ver ve Cihazı yükleme ilkelerini tüm cihazla  uyumlu, desteklenen hedef Windows 10 Windows sürümleri ve 11. Mümkün olduğunda, tüm cihazla eşleşme ölçütleri  ilkesi ayarında Cihaz yüklemesine izin ver ve Engelle ilkeleri için Katmanlı değerlendirme sırası uygula'nın kullanılması önerilir.
+> Diğer **ilke** ayarları ilkesi ayarında, Cihaz yüklemesine izin ver ve Cihazı yükleme ilkelerini tüm cihaz genelinde  izin ver ve Engelle için katmanlı değerlendirme sırası uygula ilke ayarı, desteklenen hedef Windows 10 sürümleri ve ayarları için ölçüt ilkesi ayarıyla Windows 11. Mümkün olduğunda, tüm cihazla eşleşme ölçütleri  ilkesi ayarında Cihaz yüklemesine izin ver ve Engelle ilkeleri için Katmanlı değerlendirme sırası uygula'nın kullanılması önerilir.
 
 ### <a name="allow-installation-of-devices-that-match-any-of-these-device-instance-ids"></a>Bu cihaz örneği kimliklerinin herhangi biri ile eşleşmesi olan cihazların yüklenmesine izin ver
 
-Bu ilke ayarı, cihaz yüklemesine izin verilen cihazlar için Tak ve Çalıştır cihaz Windows kimliklerini belirtmenizi sağlar. Bu ilke ayarı yalnızca, Tüm cihazla eşleşme ölçütleri ilkesi  ayarı genelinde Cihaz yüklemesine izin ver ve Engelle için katmanlı değerlendirme sırası uygula ayarı etkinleştirildiğinde kullanılacak şekilde tasarlanmıştır.
+Bu ilke ayarı, yüklemesine izin verilen cihazlar Tak ve Kullan cihaz örneği kimliklerinin Windows listesini belirtmenizi sağlar. Bu ilke ayarı yalnızca, Tüm cihazla eşleşme ölçütleri ilkesi  ayarı genelinde Cihaz yüklemesine izin ver ve Engelle için katmanlı değerlendirme sırası uygula ayarı etkinleştirildiğinde kullanılacak şekilde tasarlanmıştır.
 
-Bu ilke ayarı Tüm cihazla eşleşme ölçütleri ilkesi  ayarı genelinde Cihaz yüklemesine izin ver ve Engelle için katmanlı değerlendirme sırası uygula ayarıyla birlikte etkinleştirildiğinde, Windows'in, Eklenti ve Oynat cihaz örneği kimliği, hiyerarşide özellikle aynı veya daha üst katmanda yer alan başka bir ilke ayarı özellikle bu yüklemeyi engellemediği sürece, oluştursanız bile, Ekle ve Çalıştır cihaz örneği kimliği bulunan herhangi bir cihazı yüklemesine veya güncelleştirmesine izin verilir.  örneğin, aşağıdaki ilke ayarları gibi:
+Tüm cihazla eşleşme ölçütleri ilkesi ayarı genelinde Cihaz  yüklemesine izin ver ve Engelle ilkeleri için katmanlı değerlendirme sırası uygula ayarıyla birlikte bu ilke ayarı etkinleştirildiğinde, Windows'in, Tak ve Kullan cihaz örneği kimliği, hiyerarşide aynı veya daha üst katmanda yer alan başka bir ilke ayarı sizin oluşturmakta olduğu listede görünen herhangi bir cihazı yüklemesine veya güncelleştirmesine izin verilir. Ancak hiyerarşide özellikle aynı veya daha üst katmanda yer alan başka bir ilke ayarı bunu engellemediği sürece  yükleme işlemini gerçekleştirin:
 
 - Bu cihaz örneği kimlikleri ile eşleşmeye neden olan cihazların yüklenmesine engel olun
 
@@ -126,7 +126,7 @@ Bu ilke ayarı, belirli bir cihaz için birden çok yükleme ilkesi ayarı geçe
 
 ### <a name="prevent-installation-of-devices-that-match-any-of-these-device-ids"></a>Bu cihaz kimlikleri ile eşleşmeye neden olan cihazların yüklemesini engelleme
 
-Bu ilke ayarı, donanım kimliklerini Tak ve Çalıştır listesini ve yüklemeyi engelleyen cihazlar için Windows kimlikler belirtmenize olanak tanır. Varsayılan olarak, bu ilke ayarı kullanıcıların cihaz yüklemelerine izin veren diğer tüm Windows ilke ayarına göre önceliklidir.
+Bu ilke ayarı, donanım kimlikleri listesini Tak ve Kullan ve yüklemesi engel Windows cihazlar için uyumlu kimlikler belirtmenize olanak tanır. Varsayılan olarak, bu ilke ayarı kullanıcıların cihaz yüklemelerine izin veren diğer tüm Windows ilke ayarına göre önceliklidir.
 
 > [!NOTE]
 > Geçerli cihazlar için bu ilke ayarının yerine geçmek amacıyla bu cihaz örneği **kimlikleri** ilke ayarına uyan cihazların yüklenmesine izin ver ayarını etkinleştirmek için, Cihaz yükleme ilkelerinin  tüm cihazla eşleşmesi ölçüt ilkesi ayarında İzin Ver ve Cihazı yükleme ilkelerini engelleme için katmanlı değerlendirme sırası uygula ayarını etkinleştirin.
@@ -137,7 +137,7 @@ Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, cihazlar d
 
 ### <a name="prevent-installation-of-devices-that-match-any-of-these-device-instance-ids"></a>Bu cihaz örneği kimlikleri ile eşleşmeye neden olan cihazların yüklenmesine engel olun
 
-Bu ilke ayarı, cihaz yüklemesi engel olan cihazlar için Tak ve Çalıştır cihaz Windows kimlikleri belirtmenize olanak tanır. Bu ilke ayarı, kullanıcıların cihaz yüklemelerine izin veren diğer tüm Windows ilke ayarına göre önceliklidir.
+Bu ilke ayarı, yüklemeyi engelleyen Tak ve Kullan cihaz örneği kimliklerinin Windows listesini belirtmenize olanak tanır. Bu ilke ayarı, kullanıcıların cihaz yüklemelerine izin veren diğer tüm Windows ilke ayarına göre önceliklidir.
 
 Bu ilke ayarını etkinleştirirseniz, Windows kimliği sizin oluşturmanızda cihaz örneği kimliği görünen bir cihazı yüklemesi engellenebilir. Bir uzak masaüstü sunucusunda bu ilke ayarını etkinleştirirseniz, ilke ayarı belirtilen cihazların uzak masaüstü istemcisinde uzak masaüstü sunucusuna yeniden yönlendirilmesine etki ediyordur.
 
@@ -165,9 +165,9 @@ Bu ilke ayarını etkinleştirirseniz, Windows çıkarılabilir cihazların yük
 
 Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, Windows olarak çıkarılabilir cihazlar için sürücü paketlerini izin verilen veya diğer ilke ayarlarının engellemiş olduğu şekilde yükleyebilir ve güncelleştirebilirsiniz.
 
-## <a name="common-removable-storage-access-control-scenarios"></a>Ortak Çıkarılabilir Depolama Access Denetimi senaryoları
+## <a name="common-removable-storage-access-control-scenarios"></a>Ortak Çıkarılabilir Depolama Access Control senaryoları
 
-Uç Nokta Çıkarılabilir veya Erişim Denetimi'Depolama Microsoft Defender'ı tanımanıza yardımcı olmak için, takip etmek için bazı yaygın senaryoları bir araya getirdik.
+Çıkarılabilir Çıkarılabilir Uç Nokta için Microsoft Defender hakkında bilgi sahibi Depolama Access Control, takip etmek için bazı yaygın senaryoları bir araya getirdik.
 
 ### <a name="scenario-1-prevent-installation-of-all-usb-devices-while-allowing-an-installation-of-only-an-authorized-usb-thumb-drive"></a>Senaryo 1: Yalnızca yetkili bir USB usb sürücü yüklemelerine izin verirken tüm USB cihazlarının yüklemesini engelleme
 
@@ -177,9 +177,9 @@ Bu senaryoda, aşağıdaki ilkeler kullanılır:
 - Tüm cihaz eşleşme ölçütleri genelinde Cihaz yüklemesine izin ver ve Engelle ilkeleri için katmanlı değerlendirme sırası uygulama.
 - Bu cihaz örnek kimliklerinin herhangi biri ile eş alan cihazların yüklenmesine izin ver veya Bu cihaz kimlikleri ile eşleşmeye izin ver cihazların yüklenmesine izin ver.
 
-#### <a name="deploying-and-managing-policy-via-intune"></a>Intune aracılığıyla ilke dağıtma ve yönetme
+#### <a name="deploying-and-managing-policy-via-intune"></a>Posta yoluyla ilke dağıtma ve Intune
 
-Cihaz yükleme özelliği, Intune aracılığıyla cihaza ilke uygulamana olanak sağlar.
+Cihaz yükleme özelliği, cihaza mobil cihaz üzerinden ilke Intune olanak sağlar.
 
 #### <a name="licensing"></a>Lisanslama
 
@@ -187,7 +187,7 @@ Cihaz yükleme işlemini başlatmadan önce cihaz aboneliğinizi Microsoft 365 [
 
 #### <a name="permission"></a>İzin
 
-Intune'da ilke dağıtımı için, hesabın cihaz yapılandırma profillerini oluşturma, düzenleme, güncelleştirme veya silme izinleri olması gerekir. Bu izinlerle özel roller oluşturabilir veya yerleşik rollerden herhangi birini kullanabilirsiniz:
+Hesapta ilke Intune için, hesabın cihaz yapılandırma profillerini oluşturma, düzenleme, güncelleştirme veya silme izinleri olması gerekir. Bu izinlerle özel roller oluşturabilir veya yerleşik rollerden herhangi birini kullanabilirsiniz:
 
 - İlke ve profil Yöneticisi rolü
 - Cihaz Yapılandırması profilleri için Rapor Oluştur/Düzenle/Güncelleştir/Oku/Sil/Görüntüle izinleri açıkken özel bir rol de kullanabilirsiniz
@@ -200,35 +200,37 @@ In Microsoft Endpoint Manager [https://endpoint.microsoft.com/](https://endpoint
 1. Yapılandırma **Bu cihaz kurulum sınıflarını eşleyen sürücüleri kullanarak cihazların yüklemesini engelle**.
 
     - Uç nokta güvenliği > Saldırı yüzeyini azaltmayı > İlke Oluşturma > Platform: Windows 10 (ve sonrası) &: Cihaz denetimi.
-
-      :::image type="content" source="../../media/devicepolicy-editprofile.png" alt-text="profili düzenle":::
-
+    
+      :::image type="content" source="../../media/devicepolicy-editprofile.png" alt-text="Profili düzenle sayfası" lightbox="../../media/devicepolicy-editprofile.png":::
+    
 2. BIR USB cihazı takın ve aşağıdaki hata iletisini alırsınız:
 
-      :::image type="content" source="../../media/devicepolicy-errormsg.png" alt-text="hata iletisi":::
+      :::image type="content" source="../../media/devicepolicy-errormsg.png" alt-text="Hata iletisi" lightbox="../../media/devicepolicy-errormsg.png":::
 
 3. Tüm **cihaz eşleşme ölçütleri genelinde Cihaz yükleme ilkelerine İzin Ver ve Engelle için Katmanlı değerlendirme sırası uygulama'ya olanak sağlar**.
 
     - **şimdilik yalnızca OMA-URI'yi** destekleme: Cihazlar > Yapılandırma profilleri > Profil > Platformu: Windows 10 (ve sonrası) & Profil: Özel
-
-      :::image type="content" source="../../media/devicepolicy-editrow.png" alt-text="satır düzenleme":::
+    
+      :::image type="content" source="../../media/devicepolicy-editrow.png" alt-text="Satır Düzenle sayfası" lightbox="../../media/devicepolicy-editrow.png":::
 
 4. İzin verilen USB Örneği Kimliğini etkinleştir ve ekle – Bu cihaz kimlikleri ile **eşleşmesi olan cihazların yüklenmesine izin ver**.
 
     - Adım 1 Cihaz denetimi profilini güncelleştirme
+    
+      :::image type="content" source="../../media/devicepolicy-devicecontrol.png" alt-text="Cihaz Denetimi sayfasındaki bir tanımlayıcı" lightbox="../../media/devicepolicy-devicecontrol.png":::
+       
+    PCI\CC_0C03 ekleme; PCI\CC_0C0330; PCI\VEN_8086; PNP0CA1; PNP0CA1&HOST; USB\ROOT_HUB30; USB\ROOT_HUB20; Üst ekran USB20_HUB üzerindeki USB\USB20_HUB bağlantısı, tek bir USB thumb-drive'ı etkinleştirmek için tek bir donanım kimliğini etkinleştirmek için yeterli değildir. Hedef usb cihazının önceki tüm USB cihazlarının engellenmiş (izin verilmiyor) olduğundan da emin olun. PnP Aygıt Yöneticisi yükleme yolunu görmek için Bağlantılara göre cihazlar'ın görünümünü açıp "Bağlantılara göre cihazlar" olarak değiştirebilirsiniz. Bu durumda hedef USB usb sürücüsüne de izin verilmiyor olabilir: 
 
-      :::image type="content" source="../../media/devicepolicy-devicecontrol.png" alt-text="cihaz denetimi":::
-
-    PCI\CC_0C03 ekleme; PCI\CC_0C0330; PCI\VEN_8086; PNP0CA1; PNP0CA1&HOST; USB\ROOT_HUB30; USB\ROOT_HUB20; Üst ekran USB20_HUB üzerindeki USB\USB20_HUB bağlantısı, tek bir USB thumb-drive'ı etkinleştirmek için tek bir donanım kimliğini etkinleştirmek için yeterli değildir. Hedef usb cihazının önceki tüm USB cihazlarının engellenmiş (izin verilmiyor) olduğundan da emin olun. Cihaz Yöneticisi'ni açabilir ve PnP ağacına cihazların yüklenme yolunu görmek için görünümü 'Bağlantılara göre cihazlar' olarak değiştirebilirsiniz. Bu durumda hedef USB usb sürücüsüne de izin verilmiyor olabilir:
+    PCI\CC_0C03 ekleme; PCI\CC_0C0330; PCI\VEN_8086; PNP0CA1; PNP0CA1&HOST; USB\ROOT_HUB30; USB\ROOT_HUB20; Üst ekran USB20_HUB üzerindeki USB\USB20_HUB bağlantısı, tek bir USB thumb-drive'ı etkinleştirmek için tek bir donanım kimliğini etkinleştirmek için yeterli değildir. Hedef usb cihazının önceki tüm USB cihazlarının engellenmiş (izin verilmiyor) olduğundan da emin olun. PnP Aygıt Yöneticisi yükleme yolunu görmek için Bağlantılara göre cihazlar'ın görünümünü açıp "Bağlantılara göre cihazlar" olarak değiştirebilirsiniz. Bu durumda hedef USB usb sürücüsüne de izin verilmiyor olabilir:
 
     - "Intel(R) USB 3.0 kullanılabilir Ana Bilgisayar Denetleyicisi – 1.0 (Microsoft)" -> PCI\CC_0C03
     - "USB Kök Merkezi (USB 3.0)" -> USB\ROOT_HUB30
     - "Generic USB Hub" -> USB\USB20_HUB
 
-    :::image type="content" source="../../media/devicepolicy-devicemgr.png" alt-text="cihaz denetimi":::
+    :::image type="content" source="../../media/devicepolicy-devicemgr.png" alt-text="Sayfa içinde Görünüm Aygıt Yöneticisi." lightbox="../../media/devicepolicy-devicemgr.png":::
 
     > [!NOTE]
-    > Sistemdeki bazı cihazların, sisteme yüklemelerini tanımlamak için çeşitli bağlantı katmanları vardır. USB flash sürücüler bu tür cihazlardır. Dolayısıyla, bir sistemde bunları engelleme veya izin verme konularına bakarak, her cihaz için bağlantı yolunu anlamak önemlidir. Sistemlerde yaygın olarak kullanılan ve bu gibi durumlarda "İzin Ver listesi" oluşturmak için iyi bir başlangıç sağlayan birkaç genel cihaz kimlikleri vardır. Aşağıdaki örneklerden biridir (tüm USB'ler için her zaman aynı değildir; Cihaz Yöneticisi aracılığıyla yönetmek istediğiniz cihazın PnP ağacını anlamanız gerekir):
+    > Sistemdeki bazı cihazların, sisteme yüklemelerini tanımlamak için çeşitli bağlantı katmanları vardır. USB flash sürücüler bu tür cihazlardır. Dolayısıyla, bir sistemde bunları engelleme veya izin verme konularına bakarak, her cihaz için bağlantı yolunu anlamak önemlidir. Sistemlerde yaygın olarak kullanılan ve bu gibi durumlarda "İzin Ver listesi" oluşturmak için iyi bir başlangıç sağlayan birkaç genel cihaz kimlikleri vardır. Aşağıdaki örneklerden biridir (tüm USB'ler için her zaman aynı değildir; aşağıdaki tablodan yönetmek istediğiniz cihazın PnP ağacını anlamanız Aygıt Yöneticisi:
     >
     > PCI\CC_0C03; PCI\CC_0C0330; PCI\VEN_8086; PNP0CA1; PNP0CA1&HOST (Ana Bilgisayar Denetleyicileri için)/ USB\ROOT_HUB30; USB\ROOT_HUB20 (USB Kök Hub'lar için)/ USB\USB20_HUB (Genel USB Hub'lar için)/
     >
@@ -238,11 +240,11 @@ In Microsoft Endpoint Manager [https://endpoint.microsoft.com/](https://endpoint
 
 5. İzin verilen USB'i yeniden takın. Artık buna izin verilmiyor ve kullanılabilir olduğunu görüyorsunuz.
 
-    :::image type="content" source="../../media/devicepolicy-removedrive.png" alt-text="sürücüyü kaldır":::
+    :::image type="content" source="../../media/devicepolicy-removedrive.png" alt-text="Sürücü ayrıntılarını kaldır sayfası" lightbox="../../media/devicepolicy-removedrive.png":::
 
-#### <a name="deploying-and-managing-policy-via-group-policy"></a>Grup İlkesi aracılığıyla ilke dağıtma ve yönetme
+#### <a name="deploying-and-managing-policy-via-group-policy"></a>Posta yoluyla ilke dağıtma ve grup ilkesi
 
-Cihaz yükleme özelliği, Grup İlkesi aracılığıyla ilke uygulamana olanak sağlar.
+Cihaz yükleme özelliği, mobil cihaz üzerinden ilke grup ilkesi.
 
 #### <a name="licensing"></a>Lisanslama
 
@@ -250,9 +252,9 @@ Cihaz yüklemesi'ne erişmek ve bu cihazı kullanmak için E3'Windows gerekir.
 
 #### <a name="deploying-policy"></a>İlke dağıtma
 
-Dağıtım ayrıntılarını burada bulabilirsiniz: [Grup İlkesi (Grup İlkesi (Windows 10) - Windows İstemcisi ile Cihaz Yükleme'Windows.](/windows/client-management/manage-device-installation-with-group-policy)
+Dağıtım ayrıntılarını burada bulabilirsiniz: grup ilkesi [(Windows 10) - Windows Client ile Cihaz Windows.](/windows/client-management/manage-device-installation-with-group-policy)
 
-## <a name="view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'Depolama Access Denetimi'nin çıkarılabilir verilerini görüntüleme
+## <a name="view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint"></a>Çıkarılabilir veri kaynağında Depolama Access Control Denetimi Çıkarılabilir'i Uç Nokta için Microsoft Defender
 
 En [Microsoft 365 portalı](https://sip.security.microsoft.com/homepage), Cihaz Denetim Cihazı Yüklemesi tarafından engellenen çıkarılabilir depolama alanını gösterir. Güvenlik Microsoft 365 için aşağıdaki aboneliğe sahip olmak gerekir:
 
@@ -270,7 +272,7 @@ DeviceEvents
 | order by Timestamp desc
 ```
 
-:::image type="content" source="../../media/block-removable-storage2.png" alt-text="depolamayı engelleme":::
+:::image type="content" source="../../media/block-removable-storage2.png" alt-text="Depolamayı engelle" lightbox="../../media/block-removable-storage2.png":::
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
@@ -289,4 +291,5 @@ DeviceRegistryEvents
 
 Tek bir USB başparmak sürücüsü yalnızca tek bir donanım kimliğini etkinleştirmek için yeterli değildir. Hedef usb cihazlarının önünde yer alan tüm USB cihazlarının engellenmiş (izin verilmiyor) olduğundan emin olun.
 
-:::image type="content" source="../../media/devicemgrscrnshot.png" alt-text="Cihaz yükleme hakkında sss":::
+:::image type="content" source="../../media/devicemgrscrnshot.png" alt-text="Cihaz yükleme hakkında sss" lightbox="../../media/devicemgrscrnshot.png":::
+

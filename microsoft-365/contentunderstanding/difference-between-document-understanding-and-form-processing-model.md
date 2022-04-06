@@ -13,20 +13,20 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Belge anlama modeli ile form işleme modeli arasındaki önemli farkları öğrenin.
-ms.openlocfilehash: 0605beb2b034343cc53e32058905870f75f811a4
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+ms.openlocfilehash: e5de4c55cc8a559ad03d722b1f7235797db76e07
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63419298"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681292"
 ---
 # <a name="differences-between-document-understanding-and-form-processing-models"></a>Belgeyi anlama ile form işleme modelleri arasındaki farklar 
 
-Microsoft SharePoint Syntex'daki içeriği anlamanız, belge kitaplıklarına yüklenen belgeleri tanımlamanıza SharePoint sınıflandırmanıza ve her dosyadan ilgili bilgileri ayıklamanıza olanak sağlar.  Örneğin, dosyalar SharePoint belge kitaplığına yüklendiğinden, Satın Alma Siparişleri olarak tanımlanan tüm dosyalar bu şekilde sınıflandırılır  ve sonra özel bir belge kitaplığı görünümünde görüntülenir. Buna ek olarak, her dosyadan belirli bilgileri (örneğin, *POSTA* Numarası ve *Toplam*) çekebilir ve belge kitaplığı görünümde bir sütun olarak görüntüebilirsiniz. 
+Microsoft SharePoint Syntex içeriğinin anlaşılması, SharePoint kitaplıklarına yüklenen belgeleri tanımlamanıza, sınıflandırmanıza ve sonra da her dosyadan ilgili bilgileri ayıklamanıza olanak sağlar. Örneğin, dosyalar SharePoint belge kitaplığına yüklendiğinden, Satın Alma Siparişleri olarak tanımlanan tüm dosyalar bu şekilde sınıflandırılır  ve sonra özel bir belge kitaplığı görünümünde görüntülenir. Buna ek olarak, her dosyadan belirli bilgileri (örneğin, *POSTA* Numarası ve *Toplam*) çekebilir ve belge kitaplığı görünümde bir sütun olarak görüntüebilirsiniz. 
 
 İçeriğin anlaşılması, gereken *bilgileri* tanımlamak ve ayıklamak için modeller oluşturmanıza olanak sağlar. Modeller arama, iş süreçleri, uyumluluk ve diğer birçok konu ile ilgili iş sorunlarını çözmenize yardımcı olacak değerlidir.
 
-Kullanabileceğiniz iki model türü vardır:
+Kullanabileceğiniz iki özel model türü vardır:
 
 - [Belge anlama modelleri](document-understanding-overview.md)
 - [Form işleme modelleri](form-processing-overview.md)
@@ -52,7 +52,7 @@ Belge anlama modelleri, içerik merkezi sitesinde SharePoint yönetilir.
 > [!NOTE]
 > Girdi belgeleri hakkında daha fazla bilgi için bkz [. Form işleme modeli gereksinimleri ve sınırlamaları](/ai-builder/form-processing-model-requirements). 
 
-Form işleme modelleri Power Apps [AI Builder'da](/ai-builder/overview) oluşturulur, ancak oluşturma işlemi doğrudan SharePoint kitaplığından başlatılır. Kullanıcının, onun için bir form işleme modeli oluşturamadan önce, belge kitaplığında form işleme modeli oluşturmanın etkinleştirilmiş olması gerekir. Yöneticiler, yönetici ayarlarının anlaşılması için içerikte form işleme modeli oluşturulmasını etkinleştirebilirsiniz. Form işleme modelleri, belge kitaplığına yüklendiklerinde dosyaları işlemeye için PowerAutomate akışlarını kullanır.
+Form işleme modelleri Power Apps [AI Builder'da](/ai-builder/overview) oluşturulur, ancak oluşturma işlemi doğrudan SharePoint kitaplığından başlatılır. Kullanıcının, onun için bir form işleme modeli oluşturamadan önce, belge kitaplığında form işleme modeli oluşturmanın etkinleştirilmiş olması gerekir. Yöneticiler, yönetici ayarlarının anlaşılması için içerikte form işleme modeli oluşturulmasını etkinleştirebilirsiniz. Form işleme modelleri, Power Automate dosyaları belge kitaplığına yüklerken bu dosyaları işlemeye uygun akışlar kullanır.
 
 Belge anlama modeli ekleyebilirsiniz, SharePoint Türleri galerisine kaydedilen yeni bir [](https://support.microsoft.com/office/use-content-types-to-manage-content-consistently-on-a-site-48512bcb-6527-480b-b096-c03b7ec1d978) SharePoint içerik türü oluşturabilirsiniz. Ayrıca, gerekirse modelinizi tanımlamak için var olan içerik türlerini de kullanabilirsiniz.
 
@@ -79,7 +79,7 @@ Form işlemenin ne zaman ve ne zaman belge kullanımı olduğunu anlamak için a
 | Sınıflandırma türü| Settable classifier is used to give clues the system on what data extract.| Ayıklamak istediğiniz veriler üzerinde belge konumu atamak için makine öğretimini kullanarak isteğe bağlı ayıklayıcılarla eğitilebilir sınıflandırıcı.|
 | Konumlar | Tek bir belge kitaplığı için eğitim.| Birden çok kitaplı kitaplara uygulanabilir.|
 | Desteklenen dosya türleri| PDF, JPG, PNG biçimi, toplam 50 MB ve 500 sayfayla eğitin.| Negatif örnekler de dahil olmak üzere 5-10 PDF, Office veya e-posta dosyasıyla eğitin.<br>Office dosyası 64k karakterde kesilir. OCR taranan dosyalar 20 sayfayla sınırlıdır.|
-| Yönetilen Meta Verilerle Tümleştir | Hayır | Evet, yapılandırılmış yönetilen meta veri alanına başvuran eğitim varlık ayıklayı tarafından.|
+| Yönetilen meta verilerle tümleştirin | Hayır | Evet, yapılandırılmış yönetilen meta veri alanına başvuran eğitim varlık ayıklayı tarafından.|
 | Uyumluluk özellikleri etkin Microsoft Bilgi Koruması tümleştirmesi | Yayımlanmış Bekletme etiketlerini ayarlayın.<br>Duyarlılık etiketlerini ayarlayın. | Yayımlanmış Bekletme etiketlerini ayarlayın.<br>Yayımlanmış Duyarlılık etiketlerini ayarlayın. |
 | Desteklenen bölgeler| Form işleme, Power Platform'a dayandır. Power Platform ve AI Builder'ın genel kullanılabilirliği hakkında bilgi için bkz. [Power Platform kullanılabilirliği](https://dynamics.microsoft.com/geographic-availability/). | Tüm bölgelerde kullanılabilir.|
 | İşlem maliyeti | AI Builder kredilerini kullanır.<br>Krediler 1M toplu olarak satın alınabilir.<br>300'den fazla lisans satın SharePoint Syntex 1M kredisi dahil edilir.<br>1M kredisi 2.000 dosya sayfası işlemeye olanak sağlayacaktır.<br>| Yok |

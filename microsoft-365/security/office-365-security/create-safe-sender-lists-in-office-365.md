@@ -18,12 +18,12 @@ ms.custom:
 description: Yöneticiler, EOP'de (EOP) gelen iletilere izin vermek için kullanılabilen ve tercih Exchange Online Protection bilgi edinebilirsiniz.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b1edcbba31075e9880b8ea2034f4ffde50bb71e9
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 0370b72ccf29469bd88679d589d715d8897c921f
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64465739"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681688"
 ---
 # <a name="create-safe-sender-lists-in-eop"></a>EOP'de güvenilir gönderen listeleri oluşturma
 
@@ -31,7 +31,7 @@ ms.locfileid: "64465739"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
+- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Exchange Online posta kutuları olan bir Microsoft 365 müşterisi veya Exchange Online posta kutuları olmayan tek başına bir Exchange Online Protection (EOP) müşterisiysiniz, EOP kullanıcıların güvenilen gönderenlerden e-posta almalarını sağlamanın çeşitli yollarını sunar. Bu seçenekler posta Exchange kuralları (aktarım kuralları olarak da bilinir), Outlook Kasa Gönderenler, IP İzin Verilenler Listesi (bağlantı filtreleme) ve istenmeyen posta önleme ilkelerinde izin verilen gönderenler listelerini veya izin verilen etki alanı listelerini içerir. Toplu olarak, bu seçenekleri güvenilir gönderenler listeleri _olarak düşünebilirsiniz_.
@@ -101,8 +101,7 @@ Aşağıdaki örnekte, istenmeyen posta filtrelemeyi atlamak için e-contoso.com
 
       İleti bir posta akış kuralı nedeniyle istenmeyen posta filtrelemeyi atlasa, `SFV:SKN` **değer değeri X-Forefront-Antispam-Report üst bilgisinde damgalanır** . İleti IP İzin Listesi'nin içinde yer alan bir kaynaktansa, değer `IPV:CAL` de eklenir. Bu değerler sorun gidermede size yardımcı olabilir.
 
-      :::image type="content" source="../../media/1-AllowList-SkipFilteringFromContoso.png" alt-text="EAC'de istenmeyen posta filtrelemeyi atlamak için Posta akışı kuralı ayarları" lightbox="../../media/1-AllowList-SkipFilteringFromContoso.png":::
-
+![EAC'de istenmeyen posta filtrelemeyi atlamak için posta akışı kuralı ayarları.](../../media/1-AllowList-SkipFilteringFromContoso.png)
 
 ## <a name="use-outlook-safe-senders"></a>Gönderenleri Outlook Kasa kullanma
 

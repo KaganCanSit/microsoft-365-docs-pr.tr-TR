@@ -15,19 +15,19 @@ ms.date: 10/18/2021
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: c955ab15640a8c3154e14ba0201946e109f832a9
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 48a411d836669a47479daa68a83a96c3e65b949f
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015208"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64473243"
 ---
 # <a name="turn-on-block-at-first-sight"></a>Bloğu ilk görüşte açma
 
 **Aşağıdakiler için geçerlidir:**
 
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Bu makalede, "ilk görüşte engelle" olarak bilinen virüsten koruma/kötü amaçlı yazılımdan koruma özelliği ve kurum için ilk görüşte blok özelliğinin nasıl etkinleştirdiği açıklanmıştır.
 
@@ -50,10 +50,10 @@ Bu makalede, "ilk görüşte engelle" olarak bilinen virüsten koruma/kötü ama
 
 Microsoft Defender Virüsten Koruma, doğru, akıllı ve gerçek zamanlı koruma sağlamak için çeşitli algılama ve önleme teknolojileri kullanır.
 
-![Microsoft Defender AV motorlarının listesi.](images/microsoft-defender-atp-next-generation-protection-engines.png)  
+:::image type="content" source="images/microsoft-defender-atp-next-generation-protection-engines.png" alt-text="Microsoft Defender AV motorlarının listesi" lightbox="images/microsoft-defender-atp-next-generation-protection-engines.png":::
 
 > [!TIP]
-> Daha fazla bilgi edinmek için bkz. (Blog) Yeni nesil koruma uç nokta [için Microsoft Defender'ın temel noktasını kullanarak gelişmiş teknolojileri öğrenin](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/).
+> Daha fazla bilgi edinmek için bkz[. (Blog)](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/) Yeni nesil korumanın temel Uç Nokta için Microsoft Defender teknolojileri öğrenme.
 
 ## <a name="a-few-things-to-know-about-block-at-first-sight"></a>İlk görüşte blok hakkında bilmek gereken birkaç şey
 
@@ -83,15 +83,15 @@ Microsoft Defender Virüsten Koruma, doğru, akıllı ve gerçek zamanlı koruma
    - **Buluta göre dosya tarama için zaman uzantısı**: 50
    - **Örnek göndermeden önce kullanıcılara sor**: Tüm verileri sorulmadan gönder
 
-   :::image type="content" source="../../media/intune-block-at-first-sight.png" alt-text="İlk görüşte Intune config bloğu.":::
+   :::image type="content" source="../../media/intune-block-at-first-sight.png" alt-text="Intune görüşte yapılandırma bloğu" lightbox="../../media/intune-block-at-first-sight.png":::
 
 4. Ayarlarınızı kaydedin.
 
 > [!TIP]
 >
 > - Dosya engelleme düzeyini Yüksek olarak **ayarlanması** , güçlü bir algılama düzeyi uygular. Olası bir durumda, dosya engellemenin geçerli dosyaların hatalı olarak algılanmasına neden olması durumunda, güvenlik işlemleri ekipleri karantinaya alınmış dosyaları [geri yükleyebilir](./restore-quarantined-files-microsoft-defender-antivirus.md).
-> - Intune'da cihaz Microsoft Defender Virüsten Koruma yapılandırma hakkında daha fazla bilgi için bkz. Intune'da [cihaz kısıtlama ayarlarını Microsoft Intune](/intune/device-restrictions-configure).
-> - Intune'Microsoft Defender Virüsten Koruma ilgili cihaz kısıtlamalarının listesi için bkz. [Intune'da Windows 10 ayarları için cihaz kısıtlaması](/intune/device-restrictions-windows-10#microsoft-defender-antivirus).
+> - Mobil cihazda cihaz kısıtlamalarını Microsoft Defender Virüsten Koruma hakkında daha fazla bilgi için Intune Sayfasında [cihaz kısıtlama ayarlarını yapılandırma Microsoft Intune](/intune/device-restrictions-configure).
+> - Intune'Microsoft Defender Virüsten Koruma ilgili cihaz kısıtlamalarının listesi için bkz. Windows 10 ayarları için cihaz [Intune](/intune/device-restrictions-windows-10#microsoft-defender-antivirus).
 
 ## <a name="turn-on-block-at-first-sight-with-microsoft-endpoint-manager"></a>Blokları ilk görüşte aç Microsoft Endpoint Manager
 
@@ -108,18 +108,18 @@ Microsoft Defender Virüsten Koruma, doğru, akıllı ve gerçek zamanlı koruma
    - **Bulut teslimi koruma düzeyi**: Yüksek
    - **Microsoft Defender Virüsten Koruma Saniye Olarak Uzatılmış Zaman Aşımı**: 50
 
-   :::image type="content" source="images/endpointmgr-antivirus-cloudprotection.png" alt-text="Yeni uygulamanın ilk görme Endpoint Manager.":::
+   :::image type="content" source="images/endpointmgr-antivirus-cloudprotection.png" alt-text="Yeni portalda ilk görme Microsoft Endpoint Manager engelleme" lightbox="images/endpointmgr-antivirus-cloudprotection.png":::
 
 4. Grup Microsoft Defender Virüsten Koruma, Tüm kullanıcılar, Tüm cihazlar veya Tüm **kullanıcılar** **ve cihazlar** gibi **bir gruba kullanıcı profili uygulayabilirsiniz**.
 
-## <a name="turn-on-block-at-first-sight-with-group-policy"></a>Grup İlkesi ile ilk görüşte blokları açma
+## <a name="turn-on-block-at-first-sight-with-group-policy"></a>Blokları ilk görüşte aç grup ilkesi
 
 > [!NOTE]
-> Engeli ilk görüşte açmak Microsoft Endpoint Manager Intune veya Başka bir şey kullanmalarını öneririz.
+> Birinci görüşte Intune için Microsoft Endpoint Manager veya otomatik olarak açmalarını öneririz.
 
-1. Grup İlkesi yönetim bilgisayarınızda Grup İlkesi Yönetim [Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz Grup İlkesi Nesnesine sağ tıklayın ve Düzenle'yi **seçin**.
+1. Bilgisayarınızdan grup ilkesi Yönetim Konsolu'nu [grup ilkesi](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), yapılandırmak istediğiniz Grup ilkesi Nesnesine sağ tıklayın ve Düzenle'yi **seçin**.
 
-2.  Grup İlkesi **Yönetim Düzenleyicisi'ni kullanarak**, **HARITALAR'da Bilgisayar yapılandırması** \> \> **Windows Şablonları** \> **Microsoft Defender Virüsten Koruma** \> **gidin**.
+2. Sistem  Yönetim **grup ilkesi kullanarak,** **HARITALAR'da Bilgisayar yapılandırması** \> \> **Yönetim Windows'Microsoft Defender Virüsten Koruma** \>  \> **gidin**.
 
 3. HARITALAR bölümünde 'İlk Görüşte Engelle **' özelliğini yapılandır'a** çift tıklayın ve bunu Etkin olarak ayarlayın **ve tamam'ı** **seçin**.
 
@@ -128,7 +128,7 @@ Microsoft Defender Virüsten Koruma, doğru, akıllı ve gerçek zamanlı koruma
 
 4. HARITALAR bölümünde, Daha fazla çözümleme gerektiğinde dosya **örnekleri gönder'e çift tıklayın** ve bunu Etkin olarak **ayarlayın**. Daha **fazla çözümleme gerektiğinde Dosya örnekleri gönder'in altında** Tüm örnekleri **gönder'i ve** sonra Tamam'ı **seçin**.
 
-5. Grup İlkesi Nesnenizi ağ üzerinde her zaman olduğu gibi yeniden sırayın.
+5. Grup ilkesi Nesnenizi ağ üzerinde her zaman olduğu gibi yeniden sırayın.
 
 ## <a name="confirm-block-at-first-sight-is-enabled-on-individual-client-devices"></a>tek tek istemci cihazlarda ilk görüşte engellemenin etkinleştirildiğinden onaylayın
 
@@ -138,14 +138,14 @@ Windows Güvenliği uygulamasını kullanarak, ilk görüşte bloğun tek tek is
 
 2. Virüs **ve &'i seçin** ve ardından Virüs koruması altında, & koruma ayarlarını **yönet'i Ayarlar**.
 
-   :::image type="content" source="../../media/wdav-protection-settings-wdsc.png" alt-text="Windows Güvenliği uygulamasında virüs koruması & ayarları etiketinin ekran görüntüsü":::
+   :::image type="content" source="../../media/wdav-protection-settings-wdsc.png" alt-text="Virüs ve & uygulamasında tehdit koruması ayarları Windows Güvenliği." lightbox="../../media/wdav-protection-settings-wdsc.png":::
 
 3. Bulut **teslimi korumasının ve Otomatik** örnek **gönderimin her ikisinin** de açık olduğunu onaylayın.
 
 > [!NOTE]
 >
-> - Önkoşul ayarları Grup İlkesi kullanılarak yapılandırılır ve dağıtılırsa, bu bölümde açıklanan ayarlar gri olur ve uç noktaların tek tek kullanımı için kullanılamaz.
-> - Grup İlkesi Nesnesi aracılığıyla yapılan değişikliklerin, ayarın Grup İlkesi Nesnesinde güncelleştirilmeden önce tek tek uç noktalara dağıtılması Windows Ayarlar.
+> - Önkoşul ayarları grup ilkesi kullanılarak yapılandırılır ve dağıtılırsa, bu bölümde açıklanan ayarlar gri olur ve uç noktaların tek tek kullanımı için kullanılamaz.
+> - Nesnede yapılan grup ilkesi, ayar Tek tek güncelleştirilmeden önce nesnenin tek tek uç noktalara dağıtılması Windows Ayarlar.
 
 ## <a name="validate-block-at-first-sight-is-working"></a>İlk görüşte bloğun çalıştığını doğrulama
 
@@ -181,11 +181,11 @@ Bulut özellikli korumanın çalıştığını doğrulamak için Ağınız ile b
 
 6. Ayarlarınızı gözden geçirin ve kaydedin.
 
-### <a name="turn-off-block-at-first-sight-with-group-policy"></a>Grup İlkesi ile ilk görüşte engellemeyi kapatma
+### <a name="turn-off-block-at-first-sight-with-group-policy"></a>Görme engeli ilk görüşte grup ilkesi
 
-1. Grup İlkesi yönetim bilgisayarınızda Grup İlkesi Yönetim [Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz Grup İlkesi Nesnesine sağ tıklayın ve Düzenle'yi **seçin**.
+1. Grup ilkesi yönetim bilgisayarınızda, [grup ilkesi](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) Yönetim Konsolu'nu açın, yapılandırmak istediğiniz grup ilkesi Nesne'ye sağ tıklayın ve Düzenle'yi **seçin**.
 
-2. Grup İlkesi **Yönetim Düzenleyicisi'ni kullanarak Bilgisayar** **yapılandırması'ne gidin ve** Yönetim **şablonları'ı seçin**.
+2. Yönetim **Grup ilkesi'ni kullanarak Bilgisayar** **yapılandırması'ne gidin ve** Yönetim **şablonları'ı seçin**.
 
 3. HARITALAR'da Windows **bileşenleri Microsoft Defender Virüsten Koruma** \>  \> **genişletin**.
 
@@ -202,7 +202,7 @@ Kurumsal yönetici veya IT yöneticisi değilseniz Pro ilk görüşte blok hakk�
 
 Bir kuruluş tarafından yönetilmiyor kişisel cihazınız varsa ilk görüşte engellemeyi nasıl açabilirsiniz veya kapatabilirsiniz. Windows Güvenliği'i ilk görüşte yönetmek için Windows Güvenliği uygulamasını kullanabilirsiniz.
 
-1. Windows 10 veya Windows 11 bilgisayarınızda Windows Güvenliği açın.
+1. Bilgisayarınızdan Windows 10 Windows 11 bilgisayarınızdan Windows Güvenliği.
 
 2. Virüs **ve tehdit &'yi seçin**.
 

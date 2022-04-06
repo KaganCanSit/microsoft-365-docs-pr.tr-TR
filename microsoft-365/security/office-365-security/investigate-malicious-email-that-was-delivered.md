@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8b3ff937b014eae69c501812ac542f6537b25f8d
-ms.sourcegitcommit: cde34d38bdfb6335b980f1c48c6b218da6a64bf8
+ms.openlocfilehash: 4f3c992ad94d63b44d2f89acff6bb295728a0804
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/20/2022
-ms.locfileid: "63014108"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681446"
 ---
 # <a name="investigate-malicious-email-that-was-delivered-in-microsoft-365"></a>Dosyada teslim edilen kötü amaçlı e-postaları Microsoft 365
 
@@ -58,16 +58,11 @@ Aşağıdaki gereksinimlerin karşı olduğundan emin olun:
 
 İleti üst bilgilerini görüntüleme veya e-posta iletisi içeriğini indirme gibi bazı eylemleri gerçekleştirmek için, Uygun olan başka bir rol  grubuna Önizleme rolünün eklenmiş olması gerekir. Aşağıdaki tablo gerekli rolleri ve izinleri net bir şekilde açıklamayı sağlar.
 
-<br>
-
-****
-
 |Etkinlik|Rol grubu|Önizleme rolü gerekli mi?|
 |---|---|---|
 |Tehditleri çözümlemek için Tehdit Gezgini'ni (ve Gerçek zamanlı algılamaları) kullanma|Genel Yönetici <p> Güvenlik Yöneticisi <p> Güvenlik Okuyucu|Hayır|
 |Hem e-posta iletilerinin üst bilgilerini görüntülemek hem de karantinaya alınmış e-posta iletilerini önizlemek ve indirmek için Tehdit Gezgini'ni (ve Gerçek zamanlı algılamaları) kullanın|Genel Yönetici <p> Güvenlik Yöneticisi <p> Güvenlik Okuyucu|Hayır|
 |Üstbilgileri görüntülemek, e-postayı önizlemek (yalnızca e-posta varlık sayfasında) ve posta kutularına teslim edilen e-posta iletilerini indirmek için Threat Explorer'ı kullanın|Genel Yönetici <p> Güvenlik Yöneticisi <p> Güvenlik Okuyucu <p> Önizleme|Evet|
-|
 
 > [!NOTE]
 > **Önizleme** bir rol grubu değil, bir rol grubu. Önizleme rolü, portalda var olan bir rol grubuna veya yeni bir rol grubuna Microsoft 365 Defender gerekir. Daha fazla bilgi için bkz[. Microsoft 365 Defender portalına.](permissions-microsoft-365-security-center.md)
@@ -138,10 +133,6 @@ Tehdit Gezgini, iletileri bulma ve silme, kötü amaçlı e-posta gönderenin IP
 
     **Geçersiz kılmalar**: Bu filtre, postanın ayrıntılar sekmesinde görünen bilgileri alır ve bunu, postalara izin verme ve engellemeye izin veren kuruluş veya kullanıcı ilkelerinin geçersiz k olduğu yeri göstermek *için kullanır*. Bu filtreyle ilgili en önemli şey, kuruluş güvenlik ekibinin yapılandırma nedeniyle teslim edilen şüpheli e-postaların ne kadar olduğunu görmelerine yardımcı olmasıdır. Bu, onlara gerektiğinde izin ve blokları değiştirme fırsatı verir. Bu filtrenin sonuç kümesi elektronik tabloya aktarabilirsiniz.
 
-    <br>
-
-    ****
-
     |Tehdit Gezgini Geçersiz Kılmaları|Bunların anlamı|
     |---|---|
     |Kuruluş İlkesi tarafından izin verildi|Posta, kuruluş ilkesi tarafından yönlendirildi ve posta kutusuna izin verildi.|
@@ -149,7 +140,6 @@ Tehdit Gezgini, iletileri bulma ve silme, kötü amaçlı e-posta gönderenin IP
     |Kuruluş İlkesi tarafından engellenen dosya uzantısı|Dosyanın, kuruluş ilkesi tarafından yönlendirilen posta kutusuna teslimi engellendi.|
     |Kullanıcı İlkesi tarafından İzin Verildi|Posta, kullanıcı ilkesi tarafından yönlendirildi ve posta kutusuna izin verildi.|
     |Kullanıcı İlkesi tarafından engellendi|Posta'nın, kullanıcı ilkesi tarafından yönlendirilen posta kutusuna teslimi engellenmiş.|
-    |
 
     **URL tehditi**: URL tehdit alanı, bir URL tarafından sunulan  tehdidi göstermek için e-postanın ayrıntılar sekmesine ekli olarak bulunmaktadır. Bir  URL tarafından sunulan tehditlerde *Kötü Amaçlı* *Yazılım, Kimlik* Avı veya *İstenmeyen* Posta ve tehdit olmayan bir URL'de tehdit yoktur bölümü vardır.
 

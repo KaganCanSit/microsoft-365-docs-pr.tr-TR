@@ -18,12 +18,12 @@ ms.custom: ''
 description: Yöneticiler, EOP'de (EOP) istenmeyen posta önleme ilkelerini görüntülemeyi, oluşturma Exchange Online Protection ve silmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1ac240f402d230362cb33ea818e62c1e0629eb39
-ms.sourcegitcommit: 966344e1aa442a4d10a0fb05f56badd38c833bb2
+ms.openlocfilehash: 8550d55553b1c406fa21ce362e201a8bbe3d5aea
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2022
-ms.locfileid: "63015569"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681314"
 ---
 # <a name="configure-anti-spam-policies-in-eop"></a>EOP'de istenmeyen posta önleme ilkelerini yapılandırma
 
@@ -148,10 +148,6 @@ Microsoft 365 Defender portalında özel bir istenmeyen posta önleme ilkesi olu
      - Onay işareti ( ![Onay işareti.](../../media/checkmark.png)) eylemin kullanılabilir olduğunu gösterir (tüm eylemler tüm kararlarda kullanılamaz).
      - Onay işareti sonrasındaki yıldız işareti ( <sup>\*</sup> ), istenmeyen posta filtreleme kararının varsayılan eylemlerini gösterir.
 
-     <br>
-
-     ****
-
      |Eylem|İstenmeyen posta|Yüksek<br>güven<br>istenmeyen posta|Kimlik avı|Yüksek<br>güven<br>kimlik avı|Toplu|
      |---|:---:|:---:|:---:|:---:|:---:|
      |**İletiyi Gereksiz E-posta klasörüne** taşı: İleti posta kutusuna teslim edilir ve Gereksiz E-posta klasörüne taşınır. <sup>1</sup>|![Onay işareti.](../../media/checkmark.png)<sup>\*</sup>|![Onay işareti.](../../media/checkmark.png)<sup>\*</sup>|![Onay işareti.](../../media/checkmark.png)|![Onay işareti](../../media/checkmark.png)|![Onay işareti](../../media/checkmark.png)<sup>\*</sup>|
@@ -161,7 +157,6 @@ Microsoft 365 Defender portalında özel bir istenmeyen posta önleme ilkesi olu
      |**İletiyi** silme: Tüm ekler dahil olmak üzere iletinin tamamını sessiz bir şekilde siler.|![Onay işareti.](../../media/checkmark.png)|![Onay işareti](../../media/checkmark.png)|![Onay işareti](../../media/checkmark.png)||![Onay işareti](../../media/checkmark.png)|
      |**İletiyi** karantinaya alın: İletiyi, hedeflenen alıcılar yerine karantinaya gönderir. <p> İletinin daha sonra Karantina kutusunda karantinada tutulacak ne kadar süreyle **tutulacaklarını** belirtirsiniz. <p> Görüntülenen İlke [seçin kutusunda](quarantine-policies.md) , istenmeyen posta filtresi kararının karantinaya alınmış iletilerine uygulanan karantina **ilkesi** belirtirsiniz. Daha fazla bilgi için bkz. [Karantina ilkeleri](quarantine-policies.md). <sup>3</sup>|![Onay işareti.](../../media/checkmark.png)|![Onay işareti](../../media/checkmark.png)|![Onay işareti](../../media/checkmark.png)<sup>\*</sup>|![Onay işareti](../../media/checkmark.png)<sup>\*</sup>|![Onay işareti](../../media/checkmark.png)|
      |**Eylem yok**|||||![Onay işareti](../../media/checkmark.png)|
-     |
 
      > <sup>1</sup> EOP, artık iletileri gereksiz e-posta kuralı yerine Gereksiz E-posta klasörüne yönlendirecek şekilde kendi posta akışı teslim aracısını kullanıyor. **Set-MailboxJokEmailConfiguration** cmdlet'inde _Enabled_ parametresi artık posta akışını hiçbir şekilde etkilemeyecektir. Daha fazla bilgi için bkz[. Posta kutuları üzerinde gereksiz Exchange Online yapılandırma](configure-junk-email-settings-on-exo-mailboxes.md).
      >

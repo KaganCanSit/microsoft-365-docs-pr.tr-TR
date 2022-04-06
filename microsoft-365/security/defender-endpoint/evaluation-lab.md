@@ -1,7 +1,7 @@
 ---
-title: Uç nokta değerlendirme laboratuvarı için Microsoft Defender
-description: Uç nokta özellikleri için Microsoft Defender hakkında bilgi edinmek, saldırı benzetimleri çalıştırmak ve tehditleri nasıl önlemektedir, algıla ve düzeltmektedir.
-keywords: Uç nokta, değerlendirme, laboratuvar, benzetim, windows 10, windows server 2019 için Microsoft Defender'ı değerlendirme, değerlendirme laboratuvarı
+title: Uç Nokta için Microsoft Defender değerlendirme laboratuvarı
+description: Daha fazla Uç Nokta için Microsoft Defender öğrenin, saldırı benzetimleri çalıştırın ve tehditleri nasıl önlemektedir, algılar ve düzelter.
+keywords: Uç Nokta için Microsoft Defender, değerlendirme, laboratuvar, benzetim, windows 10, windows server 2019, değerlendirme laboratuvarı
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -16,26 +16,26 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 11927ccd5b132a0ecb3e1a42ddc4622bd5b0d9af
-ms.sourcegitcommit: 726a72f135358603c2fde3f4067d834536e6deb2
+ms.openlocfilehash: 2b4c1cd9c37921fbb54633c0fc1bf2e42d308081
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014315"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472891"
 ---
-# <a name="microsoft-defender-for-endpoint-evaluation-lab"></a>Uç nokta değerlendirme laboratuvarı için Microsoft Defender
+# <a name="microsoft-defender-for-endpoint-evaluation-lab"></a>Uç Nokta için Microsoft Defender değerlendirme laboratuvarı
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
+> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
 
 Kapsamlı bir güvenlik ürünü değerlendirmesini yapmak,  end-end saldırı benzetimi yapamadan önce karmaşık bir ortam ve cihaz yapılandırması gerektiren karmaşık bir işlem olabilir. Karmaşıklık düzeyine eklemek, benzetim etkinliklerinin, uyarıların ve sonuçların değerlendirme sırasında yansıtıldıklarını izlemenin en zorluğudur.
 
-Uç nokta değerlendirme için Microsoft Defender laboratuvar, cihaz ve ortam yapılandırmasının karmaşıklıklarını ortadan kaldıracak şekilde tasarlanmıştır; böylelikle platformun özelliklerini değerlendirmeye, benzetimler çalıştırmaya ve önleme, algılama ve düzeltme özelliklerini iş üzerinde görmeye odaklanabilirsiniz.
+Uç Nokta için Microsoft Defender değerlendirme laboratuvarı, cihaz ve ortam yapılandırmasının karmaşıklıklarını ortadan kaldıracak şekilde tasarlanmıştır; böylelikle platformun özelliklerini değerlendirmeye, benzetimler çalıştırmaya ve önleme, algılama ve düzeltme özelliklerini iş üzerinde görmeye odaklanabilirsiniz.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qLUM]
 
@@ -43,7 +43,7 @@ Basitleştirilmiş ayarlama deneyimiyle, kendi test senaryolarınızı ve önced
 
 Platformun otomatik soruşturmalar, gelişmiş arama ve tehdit analizi gibi güçlü özelliklerine tam erişim sağlar, böylece Uç Nokta için Defender'ın sunduğu kapsamlı koruma yığınını test edin.
 
-En son işletim sistemi sürümlerinin ve doğru güvenlik bileşenlerinin yanı sıra Office 2019 Standard yüklü olacak şekilde önceden yapılandırılmış olarak gelen Windows 10, Windows 11, Windows Server 2019, Windows Server 2016 ve Linux (Ubuntu) cihazlarını ebilirsiniz.
+En son işletim sistemi sürümlerinin ve doğru güvenlik bileşenlerinin yanı sıra Office 2019 Standard'ı yüklemek üzere önceden yapılandırılmış olarak gelen Windows 10, Windows 11, Windows Server 2019, Windows Server 2016 ve Linux (Ubuntu) cihazlarını ebilirsiniz.
 
 Ayrıca tehdit tehditlerini de yükleyebilirsiniz. Portaldan çıkmanıza gerek kalmadan Uç Nokta için Defender özelliklerini test etmeye yardımcı olmak için, Uç Nokta için Defender sektör lideri tehdit platformları ile ortak bir şekilde çalışır.
 
@@ -51,7 +51,7 @@ Tercih ettiğiniz sonuçları yükleyin, değerlendirme laboratuvarı içinde se
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Değerlendirme laboratuvarına erişmek için lisans [gereksinimlerini](minimum-requirements.md#licensing-requirements) karşılamanız veya Uç Nokta için Microsoft Defender'a deneme erişiminiz olmalıdır.
+Değerlendirme laboratuvarına erişmek için [lisans gereksinimlerini karşılamanız](minimum-requirements.md#licensing-requirements) veya test Uç Nokta için Microsoft Defender deneme erişiminiz vardır.
 
 Şunları yapmak için **Güvenlik ayarlarını yönetme izinlerine sahip** olmak gerekir:
 
@@ -64,9 +64,9 @@ Rol tabanlı erişim denetimi (RBAC) etkinleştirdiyse ve en az bir makine grubu
 
 Daha fazla bilgi için bkz [. Rol oluşturma ve yönetme](user-roles.md).
 
-Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink)
+Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink)
 
-## <a name="get-started-with-the-lab"></a>Laboratuvarla çalışmaya başlama
+## <a name="get-started-with-the-lab"></a>Kullanmaya başlayın laboratuvarla birlikte gönder
 
 Menüden laboratuvara erişebilirsiniz. Gezinti menüsünde Değerlendirme ve Değerlendirme laboratuvarı **için > seçin**.
 
@@ -82,22 +82,22 @@ Zaten bir laboratuvarınız var mı? Yeni tehdit tehditlerini etkinleştiren ve 
 
 1. Gezinti bölmesinde Değerlendirme ve Değerlendirme & **laboratuvar'ı** \> **ve** ardından Kurulum **laboratuvarı'nı seçin**.
 
-    :::image type="content" source="../../media/evaluationtutormenu.png" alt-text="Değerlendirme laboratuvarı hoş geldiniz sayfasının görüntüsü.":::
+   :::image type="content" source="../../media/evaluationtutormenu.png" alt-text="Değerlendirme laboratuvarı karşılama sayfası" lightbox="../../media/evaluationtutormenu.png":::
 
 2. Değerlendirme gereksinimlerinize bağlı olarak, daha uzun bir süre için daha az cihaza veya daha fazla cihaza sahip bir ortamı daha kısa bir süre için ayarlamayı seçebilirsiniz. Tercih ettiğiniz laboratuvar yapılandırmasını ve ardından Sonraki'yi **seçin**.
 
-    ![Laboratuvar yapılandırma seçeneklerinin resmi.](images/lab-creation-page.png)
+    :::image type="content" source="images/lab-creation-page.png" alt-text="Laboratuvar yapılandırma seçenekleri" lightbox="images/lab-creation-page.png":::
 
 3. (İsteğe bağlı) Laboratuvara tehdit tehditlerini yüklemeyi seçebilirsiniz.
 
-    ![Yükleme aracısı resmi.](images/install-agent.png)
+    :::image type="content" source="images/install-agent.png" alt-text="Yükleme aracısı sayfası" lightbox="images/install-agent.png":::
 
    > [!IMPORTANT]
    > İlk olarak hüküm ve bilgi paylaşım açıklamalarını kabul etmek ve buna izin sağlamak gerekir.
 
 4. Kullanmak istediğiniz tehdit benzetimi temsilcisini seçin ve ayrıntılarınızı girin. Ayrıca, tehdit tehditlerini daha sonra yüklemek de seçebilirsiniz. Laboratuvar kurulumu sırasında tehdit benzetimi aracılarını yüklemeyi seçerseniz, bunları seçtiğiniz cihazlara rahatça yüklemenin avantajından yararlanabilirsiniz.
 
-    ![Özet sayfasının görüntüsü.](images/lab-setup-summary.png)
+   :::image type="content" source="images/lab-setup-summary.png" alt-text="Özet sayfası" lightbox="images/lab-setup-summary.png":::
 
 5. Özeti gözden geçirerek Kurulum **laboratuvarı'nı seçin**.
 
@@ -105,7 +105,7 @@ Laboratuvar kurulumu işlemi tamamlandıktan sonra cihazlar ekleyebilir ve benze
 
 ## <a name="add-devices"></a>Cihaz ekle
 
-Ortamınıza bir cihaz eklerken, Uç Nokta için Defender bağlantı ayrıntılarına sahip iyi yapılandırılmış bir cihaz ayarlar. Windows 10, Windows 11, Windows Server 2019, Windows Server 2016 ve Linux (Ubuntu)  eklersiniz.
+Ortamınıza bir cihaz eklerken, Uç Nokta için Defender bağlantı ayrıntılarına sahip iyi yapılandırılmış bir cihaz ayarlar. Windows 10, Windows 11, Windows Server 2019, Windows Server 2016 ve Linux (Ubuntu) abilirsiniz.
 
 Cihaz, işletim sistemi ve Office 2019 Standard'ın yanı sıra Java, Python ve SysIntenals gibi diğer uygulamaların en güncel sürümüyle yapılandırılır.
 
@@ -134,7 +134,9 @@ Otomatik araştırma ayarları kiracı ayarlarına bağımlıdır. Varsayılan o
 
 1. Panodan Cihaz **ekle'yi seçin**.
 
-2. Eklemek istediğiniz cihaz türünü seçin. Windows 10, Windows 11, Windows Server 2019, Windows Server 2016 ve Linux (Ubuntu) eklemeyi seçebilirsiniz. 
+2. Eklemek istediğiniz cihaz türünü seçin. Windows 10, Windows 11 Server 2019, Windows, Windows Server 2016 ve Linux (Ubuntu) ile 3.5.
+
+   :::image type="content" source="../../media/add-machine-optionsnew.png" alt-text="Cihaz seçenekleriyle laboratuvar kurulumu" lightbox="../../media/add-machine-optionsnew.png":::
 
    > [!NOTE]
    > Cihaz oluşturma işlemiyle ilgili bir sorun olursa bu size bildirilecek ve yeni bir istek göndermeniz gerekir. Cihaz oluşturma başarısız olursa, izin verilen genel kotada sayılmaz.
@@ -144,13 +146,14 @@ Otomatik araştırma ayarları kiracı ayarlarına bağımlıdır. Varsayılan o
    > [!NOTE]
    > Parola yalnızca bir kez görüntülenir. Daha sonra kullanmak üzere kaydetmeyi deneyin.
 
-    :::image type="content" source="../../media/add-machine-eval-lab-new.png" alt-text="Bağlantı ayrıntılarıyla birlikte eklenen cihazın resmi.":::
+    :::image type="content" source="../../media/add-machine-eval-lab-new.png" alt-text="Bağlantı ayrıntılarıyla eklenen cihaz" lightbox="../../media/add-machine-eval-lab-new.png":::
 
 4. Cihaz ayarlama başlar. Bu yaklaşık 30 dakika kadar sürebilir.
 
 5. Cihazlar sekmesini seçerek test cihazlarının durumunu, risk ve pozlama düzeylerini ve kurulumların **durumunu** görebilirsiniz.
 
-    ![Cihazlar sekmesinin resmi.](images/machines-tab.png)
+   :::image type="content" source="images/machines-tab.png" alt-text="Cihazlar sekmesi" lightbox="images/machines-tab.png":::
+    
 
    > [!TIP]
    > SütunDaki **Bilgi durumu** sütununda bilgi simgesinin üzerine gelerek bir aracının yükleme durumunu öğrenebilirsiniz.
@@ -162,7 +165,7 @@ Mevcut tüm cihazlar kullanılıyor ve silindiğinde daha fazla cihaz için iste
 
 1. Değerlendirme laboratuvarı panosundan Daha fazla cihaz **için istekte bulun'ı seçin**.
 
-   ![Daha fazla cihaz isteği resmi.](images/request-more-devices.png)
+   :::image type="content" source="images/request-more-devices.png" alt-text="Daha fazla cihaz isteği seçeneği" lightbox="images/request-more-devices.png":::
 
 2. Yapılandırmanızı seçin.
 3. İsteği gönderin.
@@ -196,11 +199,10 @@ Yeni ortaya çıkan tehditlerle [ilgili raporları görüntülemek](advanced-hun
 
 1. Bağlan seçin ve saldırı benzetimini çalıştırarak cihazınıza **Bağlan**.
 
-    ![Test cihazları için bağlan düğmesinin resmi.](images/test-machine-table.png)
+    :::image type="content" source="images/test-machine-table.png" alt-text="Test Bağlan için Mobil Cihaz düğmesi" lightbox="images/test-machine-table.png":::
 
 
-2. Diğer **Windows için**: RDP dosyasını kaydedin ve Kaydet'i seçerek **Bağlan**.<br> 
-    ![Uzak masaüstü bağlantısı görüntüsü.](images/remote-connection.png)
+   :::image type="content" source="images/remote-connection.png" alt-text="Uzak masaüstü bağlantısı ekranı" lightbox="images/remote-connection.png":::
 
     **Linux cihazları** için: Yerel bir SSH istemcisi ve sağlanan komutu kullan gerekir. 
 
@@ -208,13 +210,13 @@ Yeni ortaya çıkan tehditlerle [ilgili raporları görüntülemek](advanced-hun
     > [!NOTE]
     > İlk kurulum sırasında kayıtlı parolanın kopyası yoksa, menüden Parolayı sıfırla'yı seçerek **parolayı** sıfırlayabilirsiniz:
     >
-    > ![Parola sıfırlama resmi.](images/reset-password-test-machine.png)
+    > :::image type="content" source="images/reset-password-test-machine.png" alt-text="Parolayı sıfırla seçeneği" lightbox="images/reset-password-test-machine.png":::
     >
     > Cihaz, durumunu "Parola sıfırlamayı yürütünecek" olarak değiştirir ve birkaç dakika içinde yeni parolanız da size sunulacaktır.
 
 3. Cihaz oluşturma adımı sırasında görüntülenen parolayı girin.
 
-   ![Kimlik bilgilerini girmek için gereken pencerenin resmi.](images/enter-password.png)
+   :::image type="content" source="images/enter-password.png" alt-text="Kimlik bilgilerini girmek için ekranınız" lightbox="images/enter-password.png":::
 
 4. Cihazda Do-it-yourself saldırı benzetimlerini çalıştırın.
 
@@ -222,7 +224,7 @@ Yeni ortaya çıkan tehditlerle [ilgili raporları görüntülemek](advanced-hun
 
 Laboratuvar kurulumu sırasında desteklenen tehdit tehditlerinin herhangi birini yüklemenize izin verirse, yerleşik benzetimleri değerlendirme laboratuvar cihazları üzerinde çalıştırabilirsiniz.
 
-Üçüncü taraf platformları kullanarak tehdit benzetimleri yapmak, Microsoft Defender'ı Uç nokta özellikleri için laboratuvar ortamıyla sınırlı olarak değerlendirmenin iyi bir yoludur.
+Üçüncü taraf platformları kullanarak tehdit benzetimleri yapmak, laboratuvar ortamıyla sınırlı Uç Nokta için Microsoft Defender özellikleri değerlendirmenin iyi bir yoludur.
 
 > [!NOTE]
 >
@@ -235,7 +237,7 @@ Laboratuvar kurulumu sırasında desteklenen tehdit tehditlerinin herhangi birin
 
 2. Bir tehdit tehditi seçin.
 
-    ![Tehdit seçimi görüntüsü.](images/select-simulator.png)
+   :::image type="content" source="images/select-simulator.png" alt-text="Tehdit seçimi" lightbox="images/select-simulator.png":::
 
 3. Kullanılabilir benzetimlere göz atmak için bir benzetim seçin veya benzetim galerisine bakın.
 
@@ -249,15 +251,15 @@ Laboratuvar kurulumu sırasında desteklenen tehdit tehditlerinin herhangi birin
 
 6. Benzetimler sekmesini seçerek bir benzetimin **ilerlemesini** görüntüleyin. Benzetim durumunu, etkin uyarıları ve diğer ayrıntıları görüntüleme.
 
-    ![Benzetimler sekmesinin resmi.](images/simulations-tab.png)
+   :::image type="content" source="images/simulations-tab.png" alt-text="Benzetimler sekmesi" lightbox="images/simulations-tab.png":::
 
-Benzetimlerinizi çalıştırdikten sonra, laboratuvar ilerleme çubuğunda ilerlemenizi ve Uç Nokta için Microsoft Defender'ı incelemenizi, otomatik bir araştırma ve düzeltme **tetikledikten sonra, size yardımcı oluruz**. Bu özellikle toplanan ve analiz edilen kanıtlara göz atabilirsiniz.
+Benzetimlerinizi çalıştırdikten sonra, laboratuvar ilerleme çubuğunda ilerlemenizi ve otomatik bir Uç Nokta için Microsoft Defender düzeltmeyi tetikleyen laboratuvar ilerleme **çubuğunu incelemenizi teşvikiyoruz**. Bu özellikle toplanan ve analiz edilen kanıtlara göz atabilirsiniz.
 
 Zengin sorgu dili ve ham telemetri kullanarak gelişmiş arama yoluyla saldırı kanıtı için avına devam edin ve Tehdit çözümlemelerinde belgelenmiş dünya çapında tehditlere göz atabilirsiniz.
 
 ## <a name="simulation-gallery"></a>Benzetim galerisi
 
-Uç nokta için Microsoft Defender, platformun özelliklerini portaldan kolayca test etmek için çeşitli tehdit benzetim platformları ile ortak çalışmalar yaptı.
+Uç Nokta için Microsoft Defender portalda platformun özelliklerini test etmek için size kullanışlı erişim vermek üzere çeşitli tehdit benzetim platformları ile ortak çalışmalar yaptı.
 
 Menüden Benzetimler ve öğreticiler  **Benzetimler kataloğu'ne** \> gidip kullanılabilir **tüm benzetimleri**  izleyin.
 
@@ -265,21 +267,21 @@ Desteklenen üçüncü taraf tehdit benzetimi aracılarının listesi listelenir
 
 Herhangi bir benzetimi katalogdan kolayca çalıştırabilirsiniz.
 
-![Benzetimler kataloğu görüntüsü.](images/simulations-catalog.png)
+:::image type="content" source="images/simulations-catalog.png" alt-text="Benzetimler kataloğu" lightbox="images/simulations-catalog.png":::
 
 Her benzetim, saldırı senaryosuyla ilgili ayrıntılı bir açıklamaya ve kullanılan MITRE saldırı teknikleri ve çalıştırdınız Gelişmiş av sorgularına örnek başvurular gibi başvurularla birlikte gelir.
 
 **Örnekler:**
 
-![Benzetim açıklaması ayrıntılarının resmi1.](images/simulation-details-aiq.png)
+:::image type="content" source="images/simulation-details-aiq.png" alt-text="Kalıcılık yöntemleri için benzetim açıklaması ayrıntılar bölmesi örneği" lightbox="images/simulation-details-aiq.png":::
 
-![Benzetim açıklaması ayrıntıları2 resmi.](images/simulation-details-sb.png)
+:::image type="content" source="images/simulation-details-sb.png" alt-text="APT29 için benzetim açıklaması ayrıntıları" lightbox="images/simulation-details-sb.png":::
 
 ## <a name="evaluation-report"></a>Değerlendirme raporu
 
 Laboratuvar raporları, cihazlar üzerinde yapılan benzetimlerin sonuçlarını özetler.
 
-![Değerlendirme raporunun resmi.](images/eval-report.png)
+:::image type="content" source="images/eval-report.png" alt-text="Değerlendirme raporu" lightbox="images/eval-report.png":::
 
 Bir bakışta şunları hızla görebilirsiniz:
 
@@ -290,10 +292,10 @@ Bir bakışta şunları hızla görebilirsiniz:
 - Algılama kaynakları
 - Otomatik soruşturmalar
 
-## <a name="provide-feedback"></a>Geri bildirim sağlama
+## <a name="provide-feedback"></a>Geri bildirim gönderin
 
 Geri bildiriminiz, ortamınızı gelişmiş saldırılardan koruma konusunda daha iyi bir yer alsak da bize yardımcı olur. Ürün özellikleri ve değerlendirme sonuçlarından deneyimlerinizi ve yeteneğinizi paylaşın.
 
 Geri bildirim sağla'ya seçerek görüşlerinizi **bize bildirin**.
 
-![Geri bildirim sağlama resmi.](images/send-us-feedback-eval-lab.png)
+:::image type="content" source="images/send-us-feedback-eval-lab.png" alt-text="Geri bildirim sayfası" lightbox="images/send-us-feedback-eval-lab.png":::

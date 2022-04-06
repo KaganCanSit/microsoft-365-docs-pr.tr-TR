@@ -19,12 +19,12 @@ description: Çalışma değerlendirmesinde otomatik bir soruşturma Microsoft 3
 ms.date: 01/29/2021
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 54b9389d323c1e775b50bf63beaa33b0c4b0cae6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: bf9fe34a88444d9d8ec6dccf4b22a507e55dfb00
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314091"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680808"
 ---
 # <a name="details-and-results-of-an-automated-investigation-in-microsoft-365"></a>Bir ekipte otomatik bir soruşturmanın ayrıntıları ve Microsoft 365
 
@@ -41,10 +41,6 @@ Office 365 [için](office-365-air.md) [Microsoft Defender'da](defender-for-offic
 
 Araştırma durumu, çözümlemenin ve eylemlerin ilerleme durumunu gösterir. Araştırma çalıştırıldığı için durum, tehditlerin bulunıp buluna olmadığını ve eylemlerin onaylanıp onaylanmayacaklarını belirtecek şekilde değişir.
 
-<br>
-
-****
-
 |Durum|Açıklama|
 |---|---|
 |**Başlıyor**|Araştırma tetiklenir ve çalışmaya başlamayı bekler.|
@@ -58,7 +54,6 @@ Araştırma durumu, çözümlemenin ve eylemlerin ilerleme durumunu gösterir. A
 |**Başarısız**|En az bir araştırma çözümleyicisi düzgün tamamlanamaya neden olan bir sorun ile gitti. <p> **NOT** Düzeltme eylemleri onaylandıktan sonra bir soruşturma başarısız olursa, düzeltme eylemleri yine de başarılı olabilir. Araştırma ayrıntılarını görüntüleme.|
 |**Azaltma tarafından Sıraya Alınanlar**|Bir araştırma kuyruğa alındı. Diğer soruşturmalar tamamlandıktan sonra kuyruğa alınan soruşturmalar başlar. Azaltma, düşük hizmet performansını önlemeye yardımcı olur.  <p> **İpucu**: Bekleyen eylemler, kaç yeni araştırmanın çalıştırıla birlikte çalıştırılana kadar sınırlandırabilirsiniz. Bekleyen eylemleri [onaylayın (veya reddedin](air-review-approve-pending-completed-actions.md#approve-or-reject-pending-actions)).|
 |**Azaltma ile Sonlandırıldı**|Araştırma fazla uzun süre kuyrukta tutulsa, durur. <p> **İpucu**: Threat [Explorer'dan bir araştırma başlatabilirsiniz](automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).|
-|
 
 ## <a name="view-details-of-an-investigation"></a>Araştırmanın ayrıntılarını görüntüleme
 

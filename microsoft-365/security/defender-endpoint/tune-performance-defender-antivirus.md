@@ -14,18 +14,18 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 91dd3dc8563e7bd443362c47190139101a5ede61
-ms.sourcegitcommit: 4c207a9bdbb6c8ba372ae37907ccefca031a49f8
+ms.openlocfilehash: b5d9346746dba3b7b4c75909cb8e36e47c3c9d99
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "63016700"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472517"
 ---
 # <a name="performance-analyzer-for-microsoft-defender-antivirus"></a>Sistem için performans çözümleyicisi Microsoft Defender Virüsten Koruma
 
 **Geçerli olduğu yer:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 **Performans çözümleyicisi Microsoft Defender Virüsten Koruma nedir?**
 
@@ -74,7 +74,7 @@ Komut satırı parametreleri ve seçenekleri hakkında daha fazla bilgi için [b
 
 Kullanıcı, sorguya bağlı olarak, tarama sayısı, süre (toplam/min/ortalama/mak/ortan), yol, süreç ve tarama nedeni ile ilgili verileri 2. Aşağıdaki resimde, etkiyi taramaya karşı basit bir sorgu olan ilk 10 dosyanın örnek çıktısı gösterilmiştir. 
 
-:::image type="content" source="images/example-output.png" alt-text="Temel TopFiles sorgusu için örnek çıktı":::
+:::image type="content" source="images/example-output.png" alt-text="Temel TopFiles sorgusu için örnek çıktı" lightbox="images/example-output.png":::
 
 ### <a name="additional-functionality-exporting-and-converting-to-csv-and-json"></a>Ek işlevler: CSV ve JSON'a aktarma ve dönüştürme
 
@@ -94,7 +94,7 @@ Performans çözümleyicisi sonuçları da CSV veya JSON dosyasına dışarı ak
 ### <a name="requirements"></a>Gereksinimler
 Microsoft Defender Virüsten Koruma çözümleyicisi aşağıdaki önkoşullara sahip:
 
-- Desteklenen Windows sürümleri: Windows 10, Windows 11, Windows Server 2016 ve üzeri
+- Desteklenen Windows sürümleri: Windows 10, Windows 11 ve Windows Server 2016 sürümleri
 - Platform Sürümü: 4.18.2108.7+
 - PowerShell Sürümü: PowerShell Sürüm 5.1, PowerShell ISE, Uzak PowerShell (4.18.2201.10+), PowerShell 7.x (4.18.2201.10+)
 
@@ -120,7 +120,7 @@ Cmdlet`New-MpPerformanceRecording`, taramaların performans Microsoft Defender V
 
 Bu `New-MpPerformanceRecording` cmdlet, dosya performansında düşüşe neden olan sorunlu dosyalar hakkında bilgi Microsoft Defender Virüsten Koruma. Bu araç "OLDUĞU GIBI" sağlanır ve dışlamalar hakkında öneriler sağlamak üzere değildir. Dışlamalar, uç noktalarınız üzerinde koruma düzeyini düşürebilirsiniz. Varsa, dışlamalar dikkatli bir şekilde tanımlanmalıdır.
 
-Performans çözümleyicisi hakkında daha fazla bilgi için bkz. [Performans Çözümleyicisi](/windows-hardware/test/wpt/windows-performance-analyzer) belgeleri.
+Performans çözümleyicisi hakkında daha fazla bilgi için bkz[. Performans Analizi](/windows-hardware/test/wpt/windows-performance-analyzer) bakın.
 
 > [!IMPORTANT]
 > Bu cmdlet, yükseltilmiş yönetici ayrıcalıkları gerektirir.
@@ -217,7 +217,7 @@ Get-MpPerformanceReport    [-Path] <String>
 
 Performans çözümleyicisi, sistem performansının düşmesine neden olan sorunlu dosyalar hakkında bilgi Microsoft Defender Virüsten Koruma. Bu araç "OLDUĞU GIBI" sağlanır ve dışlamalar hakkında öneriler sağlamak üzere değildir. Dışlamalar, uç noktalarınız üzerinde koruma düzeyini düşürebilirsiniz. Varsa, dışlamalar dikkatli bir şekilde tanımlanmalıdır.
 
-Performans çözümleyicisi hakkında daha fazla bilgi için bkz. [Performans Çözümleyicisi](/windows-hardware/test/wpt/windows-performance-analyzer) belgeleri.
+Performans çözümleyicisi hakkında daha fazla bilgi için bkz[. Performans Analizi](/windows-hardware/test/wpt/windows-performance-analyzer) bakın.
 
 **Desteklenen işletim sistemi sürümleri**
 

@@ -1,7 +1,7 @@
 ---
 title: Dış alıcılar hizmet uyarıları
-ms.author: kvice
-author: kelleyvice-msft
+ms.author: markjjo
+author: markjjo
 manager: scotv
 ms.date: ''
 audience: Admin
@@ -19,18 +19,18 @@ ms.custom:
 f1.keywords:
 - NOCSH
 description: Posta kutularının tutarak posta kutusu kotasına ulaştığını izlemek için dış alıcılar hizmet uyarılarını kullanın.
-ms.openlocfilehash: 8db8e090ec5430f13153bc3edf5b3315c041d9cf
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: 931be51ee51bd5557633415004eed9a1c7e77888
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64568016"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63705222"
 ---
 # <a name="service-alerts-for-messages-pending-delivery-to-external-recipients-in-exchange-online-monitoring"></a>Dış alıcılara teslimi bekleyen iletiler için hizmet uyarıları Exchange Online izlemede
 
 Hizmet uyarıları, yöneticileri posta kuyruğa alma dışında gelen dış alıcılara bilgi Exchange Online. Bu uyarılar Microsoft dışından düzeltme eylemleri gerektirebilecektir, ancak düzeltmek için gereken bilgileri size de sağ herhangi bir şekilde sağ iseler.
 
-Bu hizmet uyarıları aşağıdaki Microsoft 365 yönetim merkezi. Bu hizmet uyarılarını görüntülemek için Durum'a  > <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">**Hizmet durumu**</a> >  **Exchange Online** ardından Etkin sorunlar **sekmesine** tıklayın. Bu hizmet uyarılarını "Dış Alıcılara Sıraya Alınan İleti Eşiğin Üstünde" adıdır.
+Bu hizmet uyarıları aşağıdaki Microsoft 365 yönetim merkezi. Bu hizmet uyarılarını görüntülemek için <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">**HealthService health (HealthService**</a> >  health > ) Exchange Online sonra da **Etkin sorunlar sekmesine** tıklayın. Bu hizmet uyarılarını "Dış Alıcılara Sıraya Alınan İleti Eşiğin Üstünde" adıdır.
 
 ![İzleme panosunda görüntülenen dış alıcılara teslimi bekleyen iletiler Exchange Online uyarısı.](../media/microsoft-365-exchange-monitoring/ExternalRecipientsServiceAlerts1.png)
 

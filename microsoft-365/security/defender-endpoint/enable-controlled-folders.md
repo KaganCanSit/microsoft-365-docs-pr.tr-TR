@@ -16,25 +16,25 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: d8ff1b5946ccdcbc35a219bc0e656c2e23d6f3ea
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b62ff851cbee58cf3b29a2b4dde6fb1b6107dd85
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63327665"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472825"
 ---
 # <a name="enable-controlled-folder-access"></a>Denetimli klasör erişimini etkinleştirme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
-[Denetimli klasör erişimi](controlled-folders.md) , değerli verileri fidye yazılımı gibi kötü amaçlı uygulamalara ve tehditlere karşı korumanıza yardımcı olur. Denetimli klasör erişimi Windows 10, Windows 11 ve Windows Server 2019'a dahildir. Denetimli klasör erişimi, [Windows Server 2012R2 ve 2016 için modern, birleşik çözümün bir parçası olarak da dahil edilir](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
+[Denetimli klasör erişimi](controlled-folders.md) , değerli verileri fidye yazılımı gibi kötü amaçlı uygulamalara ve tehditlere karşı korumanıza yardımcı olur. Denetimli klasör erişimi sunucu Windows 10, Windows 11 ve Windows server 2019'a dahildir. Denetimli klasör erişimi, [Windows Server 2012R2 ve 2016 için modern, birleşik çözümün bir parçası olarak da dahil edilir](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
 
 Şu yöntemlerden herhangi birini kullanarak denetimli klasör erişimini etkinleştirebilirsiniz:
 
@@ -47,7 +47,7 @@ ms.locfileid: "63327665"
 
 [Denetim modu](evaluate-controlled-folder-access.md) , cihazın normal kullanımını etkilemeden özelliğin nasıl çalışa çalış çalışa çalışmaya (ve olayları gözden geçirme) olanak sağlar.
 
-Yerel yönetici listesi birleştirmeyi devre dışı bırakan Grup İlkesi ayarları, denetimli klasör erişim ayarlarını geçersiz kılar. Ayrıca, denetimli klasör erişimi aracılığıyla yerel yönetici tarafından ayarlanmış korumalı klasörleri ve izin verilen uygulamaları geçersiz kılar. Bu ilkeler şunlardır:
+grup ilkesi liste birleştirmeyi devre dışı bırakan tüm ayarlar denetimli klasör erişim ayarlarını geçersiz kılar. Ayrıca, denetimli klasör erişimi aracılığıyla yerel yönetici tarafından ayarlanmış korumalı klasörleri ve izin verilen uygulamaları geçersiz kılar. Bu ilkeler şunlardır:
 
 - Microsoft Defender Virüsten Koruma **Yönetici birleştirme davranışını yapılandırma**
 - System Center Endpoint Protection **Dışlama ve geçersiz kılma eklemesine izin verme**
@@ -65,7 +65,7 @@ Yerel liste birleştirmeyi devre dışı bırakma hakkında daha fazla bilgi iç
 > [!NOTE]
 > *Bu yöntem Windows Server 2012R2 veya 2016'da kullanılamaz.
 > 
-> Denetimli klasör erişimi Grup İlkesi, PowerShell veya MDM CSP'lerle yapılandırılırsa, cihaz yeniden başlatıldıktan sonra Windows Güvenliği uygulamasında durum değişir.
+> Denetimli klasör erişimi grup ilkesi, PowerShell veya MDM CSP'lerle yapılandırılırsa, cihaz yeniden başlatıldıktan sonra Windows Güvenliği uygulamasında durum değişir.
 > Bu araçlardan herhangi birini **kullanarak** özellik Denetim moduna Windows Güvenliği durum, Kapalı olarak **gösterir**.
 > Kullanıcı profili verilerini koruyorsanız, kullanıcı profilinin yükleme sürücüsünde varsayılan Windows öneririz.
 
@@ -117,9 +117,9 @@ Uygulamaların korumalı klasörlerde değişiklik yapmalarına izin vermek içi
 
 ## <a name="group-policy"></a>Grup İlkesi
 
-1. Grup İlkesi yönetim aygıtınızda, Grup İlkesi [Yönetim Konsolu'nu](https://technet.microsoft.com/library/cc731212.aspx) açın, yapılandırmak istediğiniz Grup İlkesi Nesnesine sağ tıklayın ve Düzenle'yi **seçin**.
+1. Mobil grup ilkesi cihazınızın Yönetim [Konsolu'nu grup ilkesi](https://technet.microsoft.com/library/cc731212.aspx), yapılandırmak istediğiniz Grup ilkesi Nesnesine sağ tıklayın ve Düzenle'yi **seçin**.
 
-2. Grup İlkesi **Yönetim Düzenleyicisi'nde** Bilgisayar **yapılandırması'ne gidin ve** Yönetim **şablonları'ı seçin**.
+2. Grup ilkesi **Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin ve** Yönetim **şablonları'ı seçin**.
 
 3. Denetimli klasör erişimi **Windows Exploit Guard > Microsoft Defender Virüsten Koruma > Windows Defender bileşenleri > ağacı genişletin**.
 
@@ -130,10 +130,10 @@ Uygulamaların korumalı klasörlerde değişiklik yapmalarına izin vermek içi
    - **Yalnızca disk değişikliğini engelle** - Güvenilmeyen uygulamaların diske yazma denemeleri, Olay Windows kaydedilir. Bu günlükler **,** \> Microsoft \> \> Windows Windows Defender 1123'te Uygulamalar ve Hizmet Günlükleri \> \> makalesinde bulunabilir.
    - **Yalnızca denetim disk değişikliği** - Korumalı diske yazma denemeleri, Windows olay günlüğüne (  \> Uygulamalar ve Hizmet Günlükleri **Microsoft** \> **Windows Windows Defender** \>  \> \> **1124** altında) kaydedilir. Korumalı klasörlerdeki dosyaları değiştirme veya silme girişimleri kaydedilemez.
 
-      ![Açılan gruptaki Etkin ve Denetim Modu'nda seçili grup ilkesi seçeneğinin ekran görüntüsü.](../../media/cfa-gp-enable.png)
+    :::image type="content" source="../../media/cfa-gp-enable.png" alt-text="Grup ilkesi seçeneği Etkin ve Denetim Modu seçili" lightbox="../../media/cfa-gp-enable.png":::
 
 > [!IMPORTANT]
-> Denetimli klasör erişimini tümüyle etkinleştirmek için Grup İlkesi seçeneğini Etkin olarak ayarlamalı **ve seçenekler açılan** menüsünde Engelle'yi seçilmelidir.
+> Denetimli klasör erişimini tümüyle etkinleştirmek için, klasör grup ilkesi **olarak** ayarlamalı ve seçenekler açılan menüsünde Engelle'yi seçilmelidir.
 
 ## <a name="powershell"></a>PowerShell
 

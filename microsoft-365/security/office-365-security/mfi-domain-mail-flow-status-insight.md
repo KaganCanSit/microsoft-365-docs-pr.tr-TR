@@ -15,12 +15,12 @@ ms.custom:
 description: Yöneticiler, MX kayıtlarıyla ilgili posta akışı sorunlarını gidermek için Güvenlik & ve Uyumluluk Merkezi'nde Posta akışı panosunda En üst etki alanı posta akışı durumu içgörüsini kullanmayı öğrenebilirler.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3994859c1d5a4e0026f61dcc24a9735c6122ad15
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 1a22589ece98e497c55d61d29256b2480a2f55d3
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64465431"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679730"
 ---
 # <a name="top-domain-mail-flow-status-insight-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde en üstteki etki & durumu içgörü
 
@@ -28,14 +28,14 @@ ms.locfileid: "64465431"
 
 **Geçerli olduğu yer:**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
+- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Güvenlik **ve Uyumluluk Merkezi'nin** Posta akışı panosundaki En üst etki [alanı posta akışı](https://protection.office.com) durumu &, size kuruluşun geçerli posta akışı durumunu verir.[](mail-flow-insights-v2.md)
 
 Bu içgörü, posta akışı sorunları yaşayan etki alanlarını tanımlamanıza ve ***gidermenize yardımcı*** olur. Örneğin, etki alanının süresi sona erdiğinde veya etki alanında yanlış bir MX kaydı olduğundan etki alanı dış e-posta alınamıyor.
 
-:::image type="content" source="../../media/mfi-top-domain-mail-flow-status-widget.png" alt-text="Güvenlik ve Uyumluluk Merkezi'nin Posta akışı panosunda En üst & durumu widget'ı" lightbox="../../media/mfi-top-domain-mail-flow-status-widget.png":::
+![Güvenlik ve Uyumluluk Merkezi'nde Posta akışı panosunda en üst & durumu widget'ı.](../../media/mfi-top-domain-mail-flow-status-widget.png)
 
 Widget'ta **Ayrıntıları görüntüle'ye** tıklarken, her bir etki alanının durumuyla ilgili daha fazla ayrıntı gösteren bir Etki Alanı durumu açılır öğesi görüntülenir:
 
@@ -49,7 +49,7 @@ Widget'ta **Ayrıntıları görüntüle'ye** tıklarken, her bir etki alanının
 
 Daha fazla etki **alanıyla ilgili aynı** bilgileri görmek için Daha fazla görüntüle'ye tıkabilirsiniz.
 
-:::image type="content" source="../../media/mfi-top-domain-mail-flow-status-view-details.png" alt-text="The Details flyout in the Top domain mail flow status insight" lightbox="../../media/mfi-top-domain-mail-flow-status-view-details.png":::
+![En üst etki alanı posta akışı durumu içgörüsinde Ayrıntılar uçarak çıkış.](../../media/mfi-top-domain-mail-flow-status-view-details.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

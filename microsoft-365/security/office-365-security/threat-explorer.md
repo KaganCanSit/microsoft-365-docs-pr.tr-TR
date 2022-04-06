@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: de26921b0067cbcb5ad6019e0da62d6e5511d440
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: b3ff79ead1e337bb78772109e57d34836d0f4ec9
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021786"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681622"
 ---
 # <a name="threat-explorer-and-real-time-detections"></a>Tehdit Gezgini ve Gerçek zamanlı algılamalar
 
@@ -35,14 +35,9 @@ ms.locfileid: "63021786"
 
 [Kuruluşta Office 365 için Microsoft Defender](defender-for-office-365.md) varsa ve gerekli izinlere sahipsinizse [,](#required-licenses-and-permissions) **Explorer** veya Gerçek zamanlı algılamalar **(eski** adı *Gerçek* zamanlı raporlar) varsa, nelerin yeni olduğunu [bakın](#new-features-in-threat-explorer-and-real-time-detections)!. Güvenlik ve Uyumluluk &'nde Tehdit **yönetimi'ne** gidin ve Gezgin'i veya Gerçek zamanlı   **algılamalar'ı seçin**.
 
-<br>
-
-****
-
 |Microsoft Defender for Office 365 Plan 2 ile şunları görüyorsunuz:|Microsoft Defender for Office 365 Plan 1 ile şunları görüyorsunuz:|
 |---|---|
 |![Tehdit gezgini.](../../media/threatmgmt-explorer.png)|![Gerçek zamanlı algılamalar](../../media/threatmgmt-realtimedetections.png)|
-|
 
 Gezgin veya Gerçek zamanlı algılamalar, güvenlik işlemleri ekibimizin tehditleri etkili bir şekilde incelemelerine ve yanıtlamalarına yardımcı olur. Rapor aşağıdaki görüntüye benzer:
 
@@ -374,26 +369,16 @@ Bu nasıl yapılır? Teslim durumu şimdi iki sütuna ayrıldı:
 
 *Teslim eylemi* , var olan ilkeler veya algılamalar nedeniyle e-posta üzerinde ilen eylemdir. E-posta için olası eylemler şu şekildedir:
 
-<br>
-
-****
-
 |Teslim edildi|Gereksiz|Engellendi|Değiştirildi|
 |---|---|---|---|
 |E-posta kullanıcının gelen kutusu veya klasörüne teslim edildi ve kullanıcı buna erişebilirsiniz.|E-posta kullanıcının Gereksiz veya Silinmiş klasörüne gönderilmiştir ve kullanıcı buna erişim iznine sahip olabilir.|Karantinaya alınan, başarısız olan veya bırakılan e-postalar. Bu postalara kullanıcı erişemez.|E-postada, ekin kötü amaçlı olduğunu .txt dosyalarla değiştirilmiş kötü amaçlı ekler vardı.|
-|
 
 Kullanıcı şunları görebilir ve göremz:
-
-<br>
-
-****
 
 |Son kullanıcılar için erişilebilir|Son kullanıcılar için erişilemez|
 |---|---|
 |Teslim edildi|Engellendi|
 |Gereksiz|Değiştirildi|
-|
 
 **Teslim konumu** , teslim sonrası çalıştırmayı gösteren ilke ve algılamaların sonuçlarını gösterir. Teslim **_eylemiyle bağlantılıdır_**. Olası değerler bunlardır:
 

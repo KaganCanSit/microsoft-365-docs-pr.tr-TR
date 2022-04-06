@@ -7,6 +7,7 @@ author: dansimp
 manager: dansimp
 audience: ITPro
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.localizationpriority: medium
 ms.assetid: cb801985-3c89-4979-9c18-17829a4cb563
 ms.custom:
@@ -14,12 +15,12 @@ ms.custom:
 description: Yöneticiler, kuruluşlarına posta döngülerini tanımlamak ve düzeltmek için Güvenlik & ve Uyumluluk Merkezi'nde Posta akışı panosunda Olası posta döngüsü düzeltme içgörüsini kullanmayı öğrenebilirler.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: adc022d2c6e72edf739f34a3e58bbc882b6fbde2
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: a80555f438ceb9431638e727ff0b84c3268ac1c1
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988767"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63679708"
 ---
 # <a name="fix-possible-mail-loop-insight-in-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde olası posta döngüsü & çözme
 

@@ -1,5 +1,5 @@
 ---
-title: Information Protection Azure Microsoft Bilgi Koruması (AIP) eklentisinde yerleşik Office uygulamaları (MIP) olarak etiketlemeyi seçme
+title: Azure Microsoft Bilgi Koruması Koruma (AIP) eklentisinde, Office uygulamaları için yerleşik etiket (MIP) etiketini seçme
 f1.keywords:
 - CSH
 ms.author: cabailey
@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Azure Information Protection (AIP) birleşik etiketleme istemcisini kullanırken, AIP eklentisini kullanmak yerine Office uygulamaları için yerleşik etiketleme kullanmanın avantajlarını öğrenin.
-ms.openlocfilehash: 38aee57720f38793f4f61cc871a9bee556e28690
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 88849422d295cc7caf2eb39837f7f1bb82b7a378
+ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498615"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63704732"
 ---
 # <a name="why-choose-mip-built-in-labeling-over-the-aip-add-in-for-office-apps"></a>Office uygulamaları için AIP eklentisinde yerleşik MIP etiketlemeyi neden Office?
 
@@ -38,7 +38,7 @@ AIP istemcisi yüklü olduğunda, Office Windows'de yerleşik etiketleme kapalı
 
 AIP istemcisini aynı uygulama içinde yüklü ancak Office bırakarak AIP istemcisinin diğer özellikleri destekle kalır:
 
-- Kullanıcıların tüm dosya türlerine Dosya Gezgini için Dosya Seçenekleri'ne sağ tıklayın.
+- Kullanıcıların tüm dosya türlerine etiket uygulayabilecekleri Dosya Gezgini'nde seçeneklere sağ tıklayın.
 
 - Metin, resim veya PDF belgelerinin şifrelenmiş dosyalarını görüntüleyen bir görüntüleyici.
 
@@ -46,9 +46,9 @@ AIP istemcisini aynı uygulama içinde yüklü ancak Office bırakarak AIP istem
 
 - Şirket içi veri depolarında depolanan hassas bilgileri keşfeden ve isteğe bağlı olarak bu içeriği etiket alan bir tarayıcı.
 
-Etiketleri diğer uygulamaların ötesine genişleten bu özellikler hakkında daha fazla Office için, AIP belgelerinde yer alan [Azure Information Protection](/azure/information-protection/rms-client/clientv2-admin-guide) birleşik etiketleme istemcisi yönetici kılavuzuna bakın.
+Etiketleri diğer uygulamaların ötesine genişleten bu özellikler hakkında Office için, AIP belgelerinde yer alan [Azure Information Protection](/azure/information-protection/rms-client/clientv2-admin-guide) birleşik etiketleme istemcisi yönetici kılavuzuna bakın.
 
-Etiketlemeden bağımsız olarak, şifreleme hizmetinin kiracı düzeyinde yönetimi için [AIPService](/powershell/module/aipservice) PowerShell modülünü kullanmaya devamabilirsiniz. Örneğin, veri kurtarma şifrelemesini kaldırmanız, AIP istemcisi tarafından açılmış belgeleri izlemeniz ve iptalniz ve çevrimdışı erişim için kullanım lisansı geçerlilik dönemini yapılandırmanız için süper kullanıcı erişimini yapılandırabilirsiniz. Daha fazla bilgi için bkz[. PowerShell kullanarak Azure Information Protection yönetme](/azure/information-protection/administer-powershell).
+Etiketlemeden bağımsız olarak, şifreleme hizmetinin kiracı düzeyinde yönetimi için [AIPService](/powershell/module/aipservice) PowerShell modülünü kullanmaya devamabilirsiniz. Örneğin, veri kurtarma şifrelemesini kaldırmanız, AIP istemcisi tarafından açılmış belgeleri izlemeniz ve iptalniz ve çevrimdışı erişim için kullanım lisansı geçerlilik dönemini yapılandırmanız için süper kullanıcı erişimini yapılandırabilirsiniz. Daha fazla bilgi için bkz [. PowerShell kullanarak Azure Information Protection'dan Korumayı Yönetme](/azure/information-protection/administer-powershell).
 
 ## <a name="decide-whether-to-use-built-in-labeling-for-office-apps-or-the-aip-add-in"></a>Bir uygulama veya AIP eklentisinde yerleşik Office kullanmaya karar verme
 
@@ -71,7 +71,7 @@ Windows Office uygulamalarınız için AIP eklentinizi yalnızca, kullanıcılar
 Bazı özellikler yalnızca Office uygulamaları için yerleşik etiketleme ile destekler ve AIP eklentisinde destek desteklemez. Şunlar dahildir:
 
 - Otomatik ve önerilen etiketleme için:
-    - Eğitilebilir sınıflayıcılar, [tam veri eşleşmesi](classifier-learn-about.md) [(EDM)](sit-learn-about-exact-data-match-based-sits.md) ve adlandırılmış varlıklar içeren akıllı sınıflandırma [hizmetlerine erişim](named-entities-learn.md)
+    - Eğitilebilir sınıflayıcılar, Tam [Veri Eşleşmesi](classifier-learn-about.md) [(EDM)](sit-learn-about-exact-data-match-based-sits.md) ve adlandırılmış varlıklar içeren akıllı sınıflandırma [hizmetlerine erişim](named-entities-learn.md)
     - Kullanıcılar yazarak hassas bilgileri algılama
     - Word'de, kullanıcılar tanımlanan hassas içeriği gözden geçirebilirsiniz ve kaldırabilir
 - Kullanıcıların izin atamasına izin verilen etiketler için, kullanıcılara veya gruplara farklı izinler (Okuma veya Değiştirme) izni verebilirsiniz
@@ -88,7 +88,7 @@ Yerleşik etiketleme için yeni etiketleme özellikleri ne zaman kullanılabilir
 
 ## <a name="how-to-disable-the-aip-add-in-to-use-built-in-labeling-for-office-apps"></a>Office uygulamaları için yerleşik etiketlemeyi kullanmak üzere AIP eklentisini devre dışı bırakma
 
-AIP istemcisini etiketi Office uygulamalarının ötesine genişletip istemcinin eklentisini Office uygulamalarına yüklemesini önlemek için yüklemişseniz, [Office 2013 ve Office 2016](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) programlarının grup ilkesi ayarları nedeniyle Yüklenmemiş  Eklenti Yok altında belgelenmiş olarak yönetilen eklentilerin grup ilkesi ayarını kullanın.
+AIP istemcisini, etiketleri Office uygulamalarının ötesine genişletip istemcinin eklentisini Office uygulamalarına yüklemesini önlemek için yüklemişseniz, [Office 2013 ve Office 2016](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) programlarının grup ilkesi ayarları  nedeniyle Yüklenmedi altında belgelenmiş olarak Yönetilen eklentilerin Grup İlkesi ayarı Listesini kullanın.
 
 Yerleşik etiketlemeyi destekleyen Windows Office uygulamalarınız için Microsoft Word 2016, Excel 2016, PowerPoint 2016 ve Outlook 2016 yapılandırmasını kullanın, AIP **istemcisi için aşağıdaki programlı tanımlayıcıları (ProgID) belirtin ve 0: Eklenti her zaman devre dışı bırakılır (engellenir)**
 
@@ -100,12 +100,12 @@ Yerleşik etiketlemeyi destekleyen Windows Office uygulamalarınız için Micros
 |Outlook | `MSIP.OutlookAddin` |
 | | | 
 
-Grup ilkesi kullanarak veya Office ilke [hizmetini kullanarak bu ayarı dağıtın](/DeployOffice/overview-office-cloud-policy-service).
+Grup İlkesi kullanarak veya Office bulut [ilkesi hizmetini kullanarak bu ayarı dağıtın](/DeployOffice/overview-office-cloud-policy-service).
 
 > [!IMPORTANT]
-> grup ilkesi ayarını kullanıyorsanız Duyarlılık etiketlerini uygulamak ve görüntülemek için **Office'te** Duyarlılık özelliğini kullanın ve bunu **1** olarak ayarlayın. Bazı durumlarda AIP eklentileri Office uygulamalarına yüklenmeye devam ediyor olabilir. Eklentinin her uygulamaya yüklenmesini engellemek bu durumdan engellenmesine neden olur.
+> Grup İlkesi ayarını kullanıyorsanız duyarlılık etiketlerini uygulamak ve görüntülemek için **Office'te** Duyarlılık özelliğini kullanın ve bunu **1** olarak ayarlayın. Bazı durumlarda AIP eklentisi Office uygulamalarına yüklenmeye devam ediyor olabilir. Eklentinin her uygulamaya yüklenmesini engellemek bu durumdan engellenmesine neden olur.
 
-Alternatif olarak Word, Excel, **PowerPoint** ve Microsoft Azure Information Protection Office eklentisini etkileşimli olarak devre dışı Outlook. Bu yöntem tek bir bilgisayar ve geçici test için uygundur. Yönergeler için bkz[. Programlarda eklentileri görüntüleme, yönetme Office yükleme](https://support.office.com/article/16278816-1948-4028-91e5-76dca5380f8d).
+Alternatif olarak Word, Excel, PowerPoint ve Microsoft Azure'den Microsoft Azure Information Office **Protection** eklentisini etkileşimli olarak devre dışı Outlook. Bu yöntem tek bir bilgisayar ve geçici test için uygundur. Yönergeler için bkz[. Programlarda eklentileri görüntüleme, yönetme Office yükleme](https://support.office.com/article/16278816-1948-4028-91e5-76dca5380f8d).
 
 Hangi yöntemi seçerseniz seçin, uygulamalar yeniden başlatıldığında Office geçerli olur.
 

@@ -1,5 +1,5 @@
 ---
-title: Uç Nokta için Microsoft Defender'da tehdit koruması raporu
+title: Yeni Uç Nokta için Microsoft Defender'de tehdit Uç Nokta için Microsoft Defender
 description: Tehdit koruması raporunu kullanarak uyarı algılamalarını, kategorileri ve önem derecelerini izleme
 keywords: uyarı algılama, kaynak, kategoriye göre uyarı, önem derecesi, uyarı sınıflandırması, belirleme
 ms.prod: m365-security
@@ -14,20 +14,20 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 84893d7f015ec354bc27ac706c00e864705a42e5
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 55a620343aa7cda05def64acc9027925aaa96a1e
+ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998197"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "64472605"
 ---
-# <a name="threat-protection-report-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'da tehdit koruması raporu
+# <a name="threat-protection-report-in-microsoft-defender-for-endpoint"></a>Yeni Uç Nokta için Microsoft Defender'de tehdit Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
 **Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
@@ -36,7 +36,7 @@ Tehdit koruması raporu, kurumda oluşturulan uyarılar hakkında üst düzey bi
 
 Pano iki bölüm halinde yapılandırılmıştır:
 
-![Tehdit koruması raporunun resmi.](images/threat-protection-reports.png)
+:::image type="content" source="images/threat-protection-reports.png" alt-text="Tehdit koruması raporu" lightbox="images/threat-protection-reports.png":::
 
 Bölüm|Açıklama
 ---|---
@@ -69,7 +69,7 @@ Uyarı eğilimleri popüler uyarı bilgilerini gösterirken, uyarı özeti geçe
 
 Rapor, aşağıdaki uyarı özniteliklerini görüntüleyen kartlardan yapılır:
 
-- **Algılama kaynakları**: Uyarıları tetiklemek için Uç Nokta için Microsoft Defender tarafından kullanılan verileri sağlayan algılayıcılar ve algılama teknolojileri hakkında bilgi gösterir.
+- **Algılama kaynakları**: Uyarıları tetiklemek için alıcılar tarafından kullanılan verileri sağlayan algılayıcılar ve Uç Nokta için Microsoft Defender teknolojileri hakkında bilgi gösterir.
 - **Tehdit kategorileri**: Güvenlik işlemleriniz için olası odak alanlarını gösteren uyarıları tetikleyen tehdit veya saldırı etkinlik türlerini gösterir.
 - **Önem derecesi**: Uyarıların önem düzeyi gösterir ve uyarıların, organizasyon açısından tehditlere yönelik kolektif olası etkilerini ve bu uyarıların yanıt düzeyini gösterir.
 - **Durum**: El ile uyarı yanıtlarının verimliliğini ve otomatik düzeltmenin (etkinse) ne kadar verimli olduğunu gösteren uyarıların çözüm durumunu gösterir.

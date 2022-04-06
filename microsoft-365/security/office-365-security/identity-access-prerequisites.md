@@ -19,12 +19,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: 1dbcfbff2a45cd3dfbc453f84eaa73e178174aee
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 445cb497abfaa0e7e4322268a761aafbaa0e31d6
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312019"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680918"
 ---
 # <a name="prerequisite-work-for-implementing-zero-trust-identity-and-device-access-policies"></a>Sıfır Güven kimliği ve cihaz erişim ilkelerinin uygulanması için önkoşul çalışma
 
@@ -54,7 +54,6 @@ Aşağıdaki tabloda, not edildi dışındaki tüm kimlik modellerine uygulanaca
 |[Kimlik Azure Active Directory'yi etkinleştirin](/azure/active-directory/identity-protection/overview-identity-protection). Azure AD Identity Protection, kuruluş kimliklerini etkileyen olası güvenlik açıklarını algılamanıza ve düşük, orta ve yüksek oturum açma riski ile kullanıcı riski olan otomatik bir düzeltme ilkesi yapılandırmanıza olanak sağlar.||Microsoft 365 E5 E5 Microsoft 365 E3 ile iş veya güvenlik ekleme|
 |**Exchange Online** Online [için ve](/Exchange/clients-and-mobile-in-exchange-online/enable-or-disable-modern-authentication-in-exchange-online) [Skype Kurumsal'da modern kimlik doğrulamayı etkinleştirin](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx). Modern kimlik doğrulaması, MFA'nın kullanımı için önkoşuldur. Modern kimlik doğrulama Office 2016 ve 2019 istemcileri, posta SharePoint için varsayılan OneDrive İş.||Microsoft 365 E3 E5|
 |Azure AD [için sürekli erişim](microsoft-365-continuous-access-evaluation.md) değerlendirmesini etkinleştirin. Sürekli erişim değerlendirme, etkin kullanıcı oturumlarını önceden sonlandırılır ve gerçek zamanlı olarak kiracı ilkesi değişikliklerini zorlar.||Microsoft 365 E3 E5|
-|
 
 ## <a name="recommended-client-configurations"></a>Önerilen istemci yapılandırmaları
 
@@ -87,7 +86,6 @@ Aşağıdaki e-posta istemcileri modern kimlik doğrulamayı ve Koşullu Erişim
 |**Android**|Android için Outlook'i|[En yeni](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook&hl=en)|
 |**macOS**|Outlook|2019 ve 2016|
 |**Linux**|Desteklenmiyor||
-|
 
 ### <a name="recommended-client-platforms-when-securing-documents"></a>Belgelerin güvenliğini sağlarken önerilen istemci platformları
 
@@ -101,7 +99,6 @@ Güvenli belgeler ilkesi uygulandığında aşağıdaki istemcilerin kullanılma
 |iOS|Destekleniyor|Destekleniyor|Destekleniyor|Destekleniyor|Yok|
 |macOS|Destekleniyor|Destekleniyor|Yok|Yok|Desteklenmiyor|
 |Linux|Desteklenmiyor|Desteklenmiyor|Desteklenmiyor|Desteklenmiyor|Desteklenmiyor|
-|
 
 ### <a name="microsoft-365-client-support"></a>Microsoft 365 desteği
 

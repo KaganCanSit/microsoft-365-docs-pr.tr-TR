@@ -21,12 +21,12 @@ ms.custom:
 description: Microsoft Defender'daki tehdit soruşturması ve yanıt özellikleri hakkında bilgi Office 365 öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ce7541010999b87e49880446594a79593a16a30a
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 91a366b8169c783671145b73f66b0fde93b5fffe
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63312971"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680675"
 ---
 # <a name="threat-investigation-and-response"></a>Tehdit soruşturması ve yanıt
 
@@ -113,10 +113,6 @@ Office 365 için Microsoft Defender rol tabanlı erişim denetimi kullanır. Azu
 > - [Microsoft 365 Defender portalında izinler](permissions-microsoft-365-security-center.md)
 > - [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference)
 
-<br>
-
-****
-
 |Etkinlik|Roller ve izinler|
 |---|---|
 |Threat & Vulnerability Management panosunun (veya yeni Güvenlik [panosunun) kullanımı](security-dashboard.md) <p> Son veya mevcut tehditlerle ilgili bilgileri görüntüleme|Aşağıdakilerden biri: <ul><li>**Genel Yönetici**</li><li>**Güvenlik Yöneticisi**</li><li>**Güvenlik Okuyucu**</li></ul> <p> Bu roller Azure Active Directory () veya Microsoft 365 yönetim merkezi<https://portal.azure.com>.<https://admin.microsoft.com>|
@@ -124,7 +120,6 @@ Office 365 için Microsoft Defender rol tabanlı erişim denetimi kullanır. Azu
 |Olayları Görüntüleme (Araştırma olarak da adlandırılır) <p> Olay e-posta iletileri ekleme|Aşağıdakilerden biri: <ul><li>**Genel Yönetici**</li><li>**Güvenlik Yöneticisi**</li><li>**Güvenlik Okuyucu**</li></ul> <p> Bu roller Azure Active Directory () veya Microsoft 365 yönetim merkezi<https://portal.azure.com>.<https://admin.microsoft.com>|
 |Olayda e-posta eylemlerini tetikleme <p> Şüpheli e-posta iletilerini bulma ve silme|Aşağıdakilerden biri: <ul><li>**Genel Yönetici**</li><li>**Güvenlik Yöneticisi** ile **birlikte Arama ve Temizleme** rolü</li></ul> <p> Genel **Yönetici** ve **Güvenlik Yöneticisi** rolleri Azure Active Directory (<https://portal.azure.com>) veya üst bilgi Microsoft 365 yönetim merkezi.<https://admin.microsoft.com> <p> Arama **ve Temizleme rolü** , Microsoft 36 Defender **portalında ( &** işbirliği rollerinin E-posta Adresi'nden atanabilir<https://security.microsoft.com>.|
 |Plan 2'den Office 365 için Microsoft Defender'ı Uç Nokta için Microsoft Defender ile tümleştirin <p> Plan 2'de Office 365 için Microsoft Defender'ı SIEM sunucusuyla tümleştirin|Genel **Yönetici veya** herhangi **bir kullanıcıya**<https://portal.azure.com> () veya Azure Active Directory Güvenlik Yöneticisi rolü Microsoft 365 yönetim merkezi<https://admin.microsoft.com>. <p> --- **artı** --- <p> Ek uygulamalarda (Microsoft Defender Güvenlik Merkezi veya SIEM sunucunuzda[) atanan](/windows/security/threat-protection/microsoft-defender-atp/user-roles) uygun bir rol.|
-|
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

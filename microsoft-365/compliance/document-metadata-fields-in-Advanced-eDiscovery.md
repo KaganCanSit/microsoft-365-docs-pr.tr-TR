@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Bu makalede, Microsoft 365'te bir gözden geçirme kümesinde yer alan Advanced eDiscovery meta veri alanlarını tanımlar.
-ms.openlocfilehash: a1ce1cf43cb2b5d741731948288ab60f48cf5352
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: e07afbcfff0c6cae748ac6104879ec25f046cbf5
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015502"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680741"
 ---
 # <a name="document-metadata-fields-in-advanced-ediscovery"></a>Veri kaynağında belge meta Advanced eDiscovery
 
@@ -66,7 +66,7 @@ Aşağıdaki tabloda, çalışma sayfalarındaki bir gözden geçirme kümesinde
 |Teams Duyuru Başlığı|TeamsAnnouncementTitle|TeamsAnnouncementTitle|Ekip duyurus [unvanları](https://support.microsoft.com/office/send-an-announcement-to-a-channel-8f244ea6-235a-4dcc-9143-9c5b801b4992).|
 |||Converted_file_path|Dönüştürülmüş dışarı aktarma dosyasının yolu. Yalnızca Microsoft iç kullanımları için.|
 |Custo bire bir|Custo bire bir|Custo bire bir|Öğenin ilişkilendirilen koruyucu adı.|
-|Tarih|Tarih|Tarih|Tarih, dosya türüne bağlı olan hesaplanan alandır.<p>E-posta: Gönderilme tarihi<br>E-posta ekleri: Belgenin son değiştirilme tarihi;kullanılamıyorsa ebeveynin Gönderme tarihi<br>Eklenmiş belgeler: Belgenin son değiştirilme tarihi; kullanılamıyorsa, ebeveynin son değiştirme tarihi<br>SPO belgeleri (modern ekleri içerir): SharePoint Son değiştirme tarihi'ne tıklayın; yoksa belgelerin son değiştirilme tarihi'ne tıklayın<br>Belge Office 365: Son değiştirme tarihi<br>Toplantılar: Toplantı başlangıç tarihi<br>Sesli Mesaj: Gönderilme tarihi<br>IM: Gönderilme tarihi<br>Teams: Gönderme tarihi|
+|Tarih|Tarih|Tarih|Tarih, dosya türüne bağlı olan hesaplanan alandır.<p>**E-posta**: Gönderilme tarihi<br>**E-posta ekleri**: Belgenin son değiştirilme tarihi; uygun değilse ebeveynin gönderme tarihi<br>**Eklenmiş belgeler**: Belgenin son değiştirilme tarihi; kullanılamıyorsa, ebeveynin son değiştirme tarihi<br>**SPO belgeleri (modern ekleri içerir)**: Belgenin son değiştirilme tarihi; kullanılamıyorsa son SharePoint tarihine göre<br>**Belge Office 365:** Son değiştirme tarihi<br>**Toplantılar**: Toplantı başlangıç tarihi<br>**Sesli Mesaj**: Gönderilme tarihi<br>**IM**: Gönderilme tarihi<br>**Teams**: Gönderme tarihi|
 |Belge yorumları|DocComments|Doc_comments|Belge meta verilerinden açıklamalar.|
 |Belge şirketi||Doc_company|Belge meta verilerinden şirket.|
 |Oluşturulan belge tarihi|CreatedTime|Doc_date_created|Belge meta verilerinden tarih oluşturma.|

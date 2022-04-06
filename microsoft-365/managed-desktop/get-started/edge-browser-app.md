@@ -10,12 +10,12 @@ audience: ITpro
 ms.topic: article
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-ms.openlocfilehash: aab02ec260f0131ab32d28834152f50b84abce21
-ms.sourcegitcommit: d4797cfc15c732f1a7ef21e4f944e672a7170f9a
+ms.openlocfilehash: 6c012b97c3d318e18dda9eb7eaee4336058b792d
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "63016658"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63680486"
 ---
 # <a name="microsoft-edge"></a>Microsoft Edge
 
@@ -26,7 +26,7 @@ ms.locfileid: "63016658"
 - Cihazlar arasında platformlar arası destek ve profillerle eşitlenen sorunsuz deneyim.
 
 > [!IMPORTANT]
-> Internet Explorer 11 masaüstü uygulaması 15 Haziran 2022'de kaldırılmış olacak ve destekten çıkar (kapsamda neler olduğunu görmek için bkz. [SSS](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549). Bugün kullanabileceğiniz aynı IE11 uygulamaları ve siteleri, Internet Explorer Microsoft Edge içinde açabilirsiniz. [Daha fazla bilgi edinmek için buraya tıklayın](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> Internet Explorer 11 masaüstü uygulaması 15 Haziran 2022'de kaldırılmış olacak ve destekten çıkar (kapsamda neler olduğunu görmek için bkz. [SSS](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549). Bugün kullanabileceğiniz aynı IE11 uygulamalarını ve siteleri, Internet Explorer modu ile Microsoft Edge içinde de açabilirsiniz. [Daha fazla bilgi edinmek için buraya tıklayın](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 ## <a name="updates-to-microsoft-edge"></a>Güncelleştirmeler Microsoft Edge
 
@@ -75,7 +75,7 @@ Microsoft Yönetilen Masaüstü cihazlarında Microsoft Edge için güvenlik tem
 
 | Ayar | Varsayılan değer | Açıklama
 | ------ | ------ | ------ |
-| Parola yöneticisine parola kaydetmeyi etkinleştirme | Devre dışı | Parola yöneticisi varsayılan olarak devre dışıdır. Bu özelliğin etkinleştirilmesi sizin için bir destek isteğinde bulunarak hizmet mühendislerimiz bu ayarı ortamınıza etkinleştirebilirsiniz. |
+| Parola yöneticisine parola kaydetmeyi etkinleştirme | Devre dışı | Parola yöneticisi varsayılan olarak devre dışıdır. Bu özelliğin etkinleştirilmesi için bir destek isteği dosyalasanız ve mühendislerimiz bu ayarı ortamınız içinde etkinleştirebilirsiniz. |
 
 ### <a name="internet-explorer-mode-in-microsoft-edge"></a>Microsoft Edge'te Internet Explorer Modu
 

@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse, hata iletilerini ve sorunlarını giderme konusunda yardım alır.
-ms.openlocfilehash: 957177dd20817f9b3d5fbc378f22b19eeaef1f7f
-ms.sourcegitcommit: 601ab9ad2b624e3b5e04eed927a08884c885c72a
+ms.openlocfilehash: e39eea66222852d8f331aa6bc68b386bea3da763
+ms.sourcegitcommit: a216617d6ff27fe7d3089a047fbeaac5d72fd25c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "64403687"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "63705442"
 ---
 # <a name="troubleshoot-and-resolve-problems-and-error-messages-in-microsoft-365-lighthouse"></a>E-posta iletileriyle ilgili sorunları ve hata iletilerini Microsoft 365 Lighthouse
 
@@ -53,14 +53,11 @@ Bu makalede, E-posta iletileri kullanılırken karşılaşabilirsiniz hata ileti
 
 **Neden:** Müşteri kiracınız aşağıdaki ölçütlere uygun değil:
 
-  - Müşteri kiracılarını yönety etmek için Yönetilen Hizmet Sağlayıcısı (MSP) için temsilci (DAP) ayarlanmış olması* gerekir
-  - En az bir lisans Microsoft 365 İş Ekstra, Microsoft 365 E3 lisansınız veya Windows 365 Business lisansınız olmalı
+  - Yönetilen Hizmet Sağlayıcısı (MSP) için temsilci (DAP) veya ayrıntılı temsilcili (GDAP) yönetici ayrıcalıklarının ayarlanmış olması gerekir
+  - En az bir kullanıcı veya Microsoft 365 İş Ekstra lisansına Microsoft 365 E3 gerekir
   - 1000'den fazla lisanslı kullanıcıya sahip olmalı 
 
-**Çözüm:** Aşağıdaki tabloda, eylem gerektiren farklı kiracı durumları açıkladığı gibi, bunları nasıl çözeceklerini de açıklar.
-
-*Temsilci Yönetici Ayrıcalıkları (DAP), müşterileri Deniz Feneri'ne ekleme için gereklidir. Ayrıca, daha güvenli ve temsilcili erişim sağlamak için müşterilerinizle Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) kurmanızı öneririz. DAP ve GDAP birlikte çalışırken, her iki modelin de bulunduğu müşteriler için GDAP öncelik olacaktır. Kısa süre içinde yalnızca GDAP'ye (ve DAP) sahip olan müşteriler Deniz Feneri'ne yerabilecek.<br><br>
-
+**Çözüm:** Aşağıdaki tabloda, eylem gerektiren farklı kiracı durumları açıkladığı gibi, bunları nasıl çözeceklerini de açıklar.<br><br>
 
 | Durum | Açıklama | Çözüm |
 |--|--|--|
@@ -107,7 +104,7 @@ DAP ilişkileri olan müşteriler için, iş ortağı yöneticisinin sizi İş O
 
 **Neden:** Müşteri kiracısı içindeki kullanıcı yapılandırmayı Microsoft Intune tamamlamadınız.
 
-**Çözüm:** Müşteri kiracısı içindeki kiracının temel yapılandırma Intune tamamlamış olduğunu doğrulayın. Müşteri kiracısı için kimlik yapılandırmasının Intune doğrulandıktan sonra sorun devam ederse Destek'e başvurun. Daha fazla bilgi için bkz[. Destek almak için Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+**Çözüm:** Müşteri kiracısı içinde Intune için temel yapılandırma adımlarını tamamlamış olduğunu doğrulayın. Intune yapılandırmasının müşteri kiracısı için tamamlandıktan sonra sorun devam ederse Destek'e başvurun. Daha fazla bilgi için bkz[. Destek almak için Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
 
 ### <a name="cant-access-partner-tenant-data-in-lighthouse"></a>Deniz Feneri'nde iş ortağı kiracı verilerine erişlanamıyor
 
@@ -119,9 +116,9 @@ DAP ilişkileri olan müşteriler için, iş ortağı yöneticisinin sizi İş O
 
 ### <a name="i-dont-see-any-customer-tenant-data-on-the-device-compliance-and-threat-management-pages-of-lighthouse"></a>Deniz Feneri'nin Cihaz uyumluluğu ve Tehdit yönetimi sayfalarında müşteri kiracısı verilerini göremiyorum
 
-**Neden 1:** Müşteri kiracısı kiracı bu kiracıya ekleme Intune. Müşteri kiracısı Deniz Feneri'nin Cihaz uyumluluğu veya Tehdit yönetimi sayfalarında kullanılamaz, ancak müşteri kiracı kiracısı kiracıya Intune.
+**Neden 1:** Müşteri kiracısı Intune'a eklemeyi henüz tamamlamış değil. Müşteri kiracısı Intune'a eklemeyi tamamlayana kadar Deniz Feneri'nin Cihaz uyumluluğu veya Tehdit yönetimi sayfalarında müşteri kiracı verileri kullanılamaz.
 
-**Çözüm:** Verilerini görüntülemeye çalışırken müşteri kiracısına kullanıcı eklemesi tamamlandığından emin Intune. Deniz Feneri'nde Intune, cihaz verilerinizin Deniz Feneri'nde görünmesi için 4 saat bekleyin.
+**Çözüm:** Verilerini görüntülemeye çalışırken müşteri kiracısını Intune'a eklemenin tamamlandıktan sonra olduğunu doğrulayın. Intune'da ekleme işlemi tamamlandıktan sonra, Deniz Feneri'nde cihaz verileri için 4 saat bekleyin.
 
 **Neden 2:** Müşteri kiracısı kısa süre önce Deniz Feneri'ne alındı ve veriler Deniz Feneri'ne yükleniyor.
 

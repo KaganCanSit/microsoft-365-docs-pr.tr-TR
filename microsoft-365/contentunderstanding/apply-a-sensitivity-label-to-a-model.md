@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Bir veya daha fazla bilgi için bir modele duyarlılık SharePoint Syntex.
-ms.openlocfilehash: 624b441084b418d2bcfc3ab6b623da0f5a969fe8
-ms.sourcegitcommit: b6ab10ba95e4b986065c51179ead3810cc1e2a85
+ms.openlocfilehash: 189db9314e01a52618890daf6b0e5d4e81317de9
+ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63018851"
+ms.lasthandoff: 03/20/2022
+ms.locfileid: "63681710"
 ---
 # <a name="apply-a-sensitivity-label-to-a-model-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da bir modele duyarlılık SharePoint Syntex
 
@@ -26,7 +26,7 @@ Microsoft SharePoint Syntex'de modelleri [anlamak](../compliance/sensitivity-lab
 
 Duyarlılık etiketleri modellerinizi tanımları olan belgelere şifreleme uygulamanıza izin sağlar. Örneğin, modelinizin yalnızca belge kitaplığınıza yüklenen banka hesabı numaraları veya kredi kartı numaraları içeren mali belgeleri tanımlamanın yanı sıra, bu içeriğe kimlerin eriş erişeceklerini ve nasıl kullanılamayacaklarını kısıtlamak için şifreleme ayarlarıyla yapılandırılmış bir duyarlılık etiketi de uygulamanızı istiyor olun. SharePoint Syntex uygun etiket [düzeni kurallarına](../compliance/apply-sensitivity-label-automatically.md#how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label) uymaz ve ayrıca kullanıcı tarafından dosyaya el ile uygulanan mevcut bir etiketin üzerine yazılmaz. 
 
-Modelinizin giriş sayfasındaki model ayarları aracılığıyla modelinize önceden var olan bir duyarlılık etiketi uygulayabilirsiniz. Model ayarlarından seçilk için etiketin zaten yayımlanmış olması gerekir.
+Modelinizin giriş sayfasındaki model ayarları aracılığıyla modelinize önceden var olan bir duyarlılık etiketi uygulayabilirsiniz. Model ayarlarından seçilk için etiketin zaten yayımlanmış olması gerekir. Etiketler Word (Office .docx), PowerPoint (.pptx) ve Excel (.xlsx) dosyalarına uygulanır. 
 
 > [!Important]
 > Duyarlılık etiketlerinin belgenize uygulanarak modelleri anlaması için, etiketlerin Uyumluluk Merkezi'nde [oluşturularak Microsoft 365 yayımlanır](../admin/security-and-compliance/set-up-compliance.md).
