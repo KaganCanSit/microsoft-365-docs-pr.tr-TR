@@ -1,5 +1,5 @@
 ---
-title: Veri Kaybı Önleme ilke başvurusu
+title: Veri Kaybı Önleme ilkesi başvurusu
 f1.keywords: CSH
 ms.author: chrfox
 author: chrfox
@@ -19,125 +19,125 @@ ms.collection:
 recommendations: false
 description: DLP ilkesi bileşeni ve yapılandırma başvurusu
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: 9b9658db71ea9945cedb746ec688eff5018a4ba4
-ms.sourcegitcommit: 0ae89b71b202aceabd5061f0d5b46d030d93e931
+ms.openlocfilehash: d6bc24f313d1998979a460bcd41e87ccbe8abc5c
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64520626"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64704933"
 ---
-# <a name="data-loss-prevention-policy-reference"></a>Veri Kaybı Önleme ilke başvurusu
+# <a name="data-loss-prevention-policy-reference"></a>Veri Kaybı Önleme ilkesi başvurusu
 
-Veri kaybı önleme (DLP) ilkelerinin yapılandırılan birçok bileşeni vardır. Etkili bir ilke oluşturmak için, her bileşenin amacının ne olduğunu ve bunun yapılandırmasının ilkenin davranışını nasıl değiştir yaptığını anlamanız gerekir. Bu makalede, DLP ilkelerinin ayrıntılı anatomisi açıklanmıştır.
+Veri kaybı önleme (DLP) ilkelerinin yapılandırılması gereken birçok bileşen vardır. Etkili bir ilke oluşturmak için, her bileşenin amacını ve yapılandırmasının ilkenin davranışını nasıl değiştirdiğini anlamanız gerekir. Bu makale, DLP ilkesinin ayrıntılı anatomisini sağlar.
 
 ## <a name="policy-templates"></a>İlke şablonları 
 
-DLP ilkesi şablonları dört kategoride önceden sıralandı:
+DLP ilkesi şablonları dört kategoriye önceden sıralanır:
 
-- Finansal bilgi türlerini algılayan ve **koruyanlar** .
-- Tıbbi ve sağlık bilgilerini algılayan **ve koruyanlar** .
-- Gizlilik bilgisi türlerini algılayan ve koruyan **bilgiler** .
-- Diğer **kişilerden** biri sizin kuruluş ihtiyaçlarını karşı karşılamazsa, kendi ilkenizi oluşturmak için kullanabileceğiniz özel bir şablon.
+- **Finansal** bilgi türlerini algılayıp koruyabilenler.
+- **Tıbbi ve sağlık** bilgilerini algılayıp koruyabilen bilgiler.
+- **Gizlilik** bilgileri türlerini algılayıp koruyabilenler.
+- Diğer ilkelerden biri kuruluşunuzun ihtiyaçlarını karşılamıyorsa kendi ilkenizi oluşturmak için kullanabileceğiniz **özel** bir şablon.
 
-Bu tabloda, tüm ilke şablonları ve bunların kapsıyor olduğu hassas bilgi türleri (SIT) liste vardır. 
+Bu tabloda, tüm ilke şablonları ve bunların kapsadıkları hassas bilgi türleri (SIT) listelenir. 
 
 güncelleştirme: 23.06.2021
 
-|Kategori| Şablon | SIT |
+|Kategori| Şablon | OTURUP |
 |---------|---------|---------|
 |Finansal| Avustralya Finansal Verileri| - [SWIFT kodu](sensitive-information-type-entity-definitions.md#swift-code) </br> - [Avustralya vergi dosyası numarası](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Avustralya banka hesap numarası](sensitive-information-type-entity-definitions.md#australia-bank-account-number) </br> - [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number)|
 |Finansal| Kanada Finansal verileri |- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [Kanada banka hesap numarası](sensitive-information-type-entity-definitions.md#canada-bank-account-number)|
-|Finansal| France Financial data |- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [AB banka kartı numarası](sensitive-information-type-entity-definitions.md#eu-debit-card-number)|
+|Finansal| Fransa Finansal verileri |- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [AB banka kartı numarası](sensitive-information-type-entity-definitions.md#eu-debit-card-number)|
 |Finansal| Almanya Finansal Verileri |- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [AB banka kartı numarası](sensitive-information-type-entity-definitions.md#eu-debit-card-number)|
 |Finansal| İsrail Finansal Verileri |- [İsrail banka hesap numarası](sensitive-information-type-entity-definitions.md#israel-bank-account-number) </br> - [SWIFT kodu](sensitive-information-type-entity-definitions.md#swift-code) </br> - [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number)|
 |Finansal| Japonya Finansal Verileri |- [Japonya banka hesap numarası](sensitive-information-type-entity-definitions.md#japan-bank-account-number) </br> - [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number)|
 |Finansal| PCI Veri Güvenliği Standardı (PCI DSS)|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number)|
-|Finansal| Suudi Arabistan Siber Olay Önleme Yasası|- [SWIFT kodu](sensitive-information-type-entity-definitions.md#swift-code) </br> - [Uluslararası bankacılık hesap numarası (IBAN)](sensitive-information-type-entity-definitions.md#international-banking-account-number-iban) |
-|Finansal| Suudi Arabistan Mali Verileri |- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [SWIFT kodu](sensitive-information-type-entity-definitions.md#swift-code) </br> - [Uluslararası bankacılık hesap numarası (IBAN)](sensitive-information-type-entity-definitions.md#international-banking-account-number-iban)|
+|Finansal| Suudi Arabistan Siber Suçlarla Mücadele Yasası|- [SWIFT kodu](sensitive-information-type-entity-definitions.md#swift-code) </br> - [Uluslararası bankacılık hesap numarası (IBAN)](sensitive-information-type-entity-definitions.md#international-banking-account-number-iban) |
+|Finansal| Suudi Arabistan Finansal Verileri |- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [SWIFT kodu](sensitive-information-type-entity-definitions.md#swift-code) </br> - [Uluslararası bankacılık hesap numarası (IBAN)](sensitive-information-type-entity-definitions.md#international-banking-account-number-iban)|
 |Finansal| Birleşik Krallık Finansal Verileri|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [AB banka kartı numarası](sensitive-information-type-entity-definitions.md#eu-debit-card-number) </br> - [SWIFT kodu](sensitive-information-type-entity-definitions.md#swift-code)|
 |Finansal| ABD Finansal Verileri|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [ABD banka hesap numarası](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [ABA Yönlendirme Numarası](sensitive-information-type-entity-definitions.md#aba-routing-number)|
 |Finansal| ABD Federal Ticaret Komisyonu (FTC) Tüketici Kuralları|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [ABD banka hesap numarası](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [ABA Yönlendirme Numarası](sensitive-information-type-entity-definitions.md#aba-routing-number)|
-|Finansal| U.S. Gramm-Leach-Bliley Act (GLBA) Enhanced|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [ABD banka hesap numarası](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [ABD Bireysel Vergi Mükellefi Kimlik Numarası (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [ABD/İngiltere pasaport numarası](sensitive-information-type-entity-definitions.md#usuk-passport-number) </br> -[ABD sürücüsünün lisans numarası](sensitive-information-type-entity-definitions.md#us-drivers-license-number)</br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [ABD Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
-|Finansal| ABD Gramm-Leach-Bliley Act (GLBA)|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [ABD banka hesap numarası](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [ABD Bireysel Vergi Mükellefi Kimlik Numarası (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
-|Sağlık ve sağlık| Avustralya Sağlık Kayıtları Yasası (HRIP Yasası) Geliştirilmiş |- [Avustralya vergi dosyası numarası](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Avustralya tıbbi hesap numarası](sensitive-information-type-entity-definitions.md#australia-medical-account-number) </br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [Tüm Tıbbi Hüküm ve Koşullar](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions) </br> - [Avustralya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#australia-physical-addresses)|
-|Sağlık ve sağlık| Avustralya Sağlık Kayıtları Yasası (HRIP Yasası)|- [Avustralya vergi dosyası numarası](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Avustralya tıbbi hesap numarası](sensitive-information-type-entity-definitions.md#australia-medical-account-number)|
-|Sağlık ve sağlık| Kanada Sağlık Bilgileri Yasası (HIA) |- [Kanada pasaport numarası](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Kanada sosyal sigorta numarası](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Kanada sağlık hizmet numarası](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Kanada Kişisel Sağlık Kimlik Numarası](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
-|Sağlık ve sağlık| Kanada Kişisel Sağlık Bilgileri Yasası (PHIA) Manitoba|- [Kanada sosyal sigorta numarası](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Kanada sağlık hizmet numarası](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Kanada Kişisel Sağlık Kimlik Numarası](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
-|Sağlık ve sağlık| Kanada Kişisel Sağlık Yasası (PHIPA) Ontario |- [Kanada pasaport numarası](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Kanada sosyal sigorta numarası](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Kanada sağlık hizmet numarası](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Kanada Kişisel Sağlık Kimlik Numarası](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
-|Sağlık ve sağlık| B.K. Tıbbi Raporlara Erişim Yasası|- [ABD ulusal sağlık hizmet numarası](sensitive-information-type-entity-definitions.md#uk-national-health-service-number) </br> - [U.K. ulusal sigorta numarası (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino)|
-|Sağlık ve sağlık| ABD Sağlık Sigortası Yasası (HIPAA) Geliştirilmiş|</br> - [Uluslararası hastalık sınıflandırması (ICD-9-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-9-cm) </br> - [Ulusal hukuk sınıflandırması (ICD-10-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-10-cm) </br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [Tüm Tıbbi Hüküm ve Koşullar](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions) </br> - [ABD Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
-|Sağlık ve sağlık| ABD Sağlık Sigortası Yasası (HIPAA)| - [Uluslararası hastalık sınıflandırması (ICD-9-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-9-cm) </br> - [Ulusal hukuk sınıflandırması (ICD-10-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-10-cm)|
-|Gizlilik| Avustralya Gizlilik Yasası Geliştirilmiş|- [Avustralya sürücüsünün lisans numarası](sensitive-information-type-entity-definitions.md#australia-drivers-license-number) </br> - [Avustralya pasaport numarası](sensitive-information-type-entity-definitions.md#australia-passport-number) </br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [Tüm Tıbbi Hüküm ve Koşullar](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions) </br> - [Avustralya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#australia-physical-addresses)|
-|Gizlilik| Avustralya Gizlilik Yasası|- [Avustralya sürücüsünün lisans numarası](sensitive-information-type-entity-definitions.md#australia-drivers-license-number) </br> - [Avustralya pasaport numarası](sensitive-information-type-entity-definitions.md#australia-passport-number)|
-|Gizlilik| Avustralya Kişisel Bilgileri (PII) Verileri|- [Avustralya vergi dosyası numarası](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Avustralya sürücüsünün lisans numarası](sensitive-information-type-entity-definitions.md#australia-drivers-license-number)|
-|Gizlilik| Kanada Kişisel Bilgileri (PII) Verileri|- [Kanada sürücüsünün lisans numarası](sensitive-information-type-entity-definitions.md#canada-drivers-license-number)</br> - [Kanada banka hesap numarası](sensitive-information-type-entity-definitions.md#canada-bank-account-number) </br> - [Kanada pasaport numarası](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Kanada sosyal sigorta numarası](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Kanada sağlık hizmet numarası](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Kanada Kişisel Sağlık Kimlik Numarası](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
-|Gizlilik| Canada Personal Information Protection Act (PIPA)|- [Kanada pasaport numarası](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Kanada sosyal sigorta numarası](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Kanada sağlık hizmet numarası](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Kanada Kişisel Sağlık Kimlik Numarası](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
-|Gizlilik| Kanada Kişisel Information Protection Yasası (PIPEDA)|- [Kanada sürücüsünün lisans numarası](sensitive-information-type-entity-definitions.md#canada-drivers-license-number) </br> - [Kanada banka hesap numarası](sensitive-information-type-entity-definitions.md#canada-bank-account-number) </br> - [Kanada pasaport numarası](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Kanada sosyal sigorta numarası](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Kanada sağlık hizmet numarası](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Kanada Kişisel Sağlık Kimlik Numarası](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
+|Finansal| U.S. Gramm-Leach-Bliley Act (GLBA) Enhanced|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [ABD banka hesap numarası](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [ABD Bireysel Vergi Mükellefi Kimlik Numarası (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [ABD/Birleşik Krallık pasaport numarası](sensitive-information-type-entity-definitions.md#usuk-passport-number) </br> -[ABD ehliyet numarası](sensitive-information-type-entity-definitions.md#us-drivers-license-number)</br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [ABD Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
+|Finansal| ABD Gramm-Leach-Bliley Yasası (GLBA)|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [ABD banka hesap numarası](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [ABD Bireysel Vergi Mükellefi Kimlik Numarası (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
+|Tıbbi ve sağlık| Avustralya Sağlık Kayıtları Yasası (HRIP Yasası) Geliştirildi |- [Avustralya vergi dosyası numarası](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Avustralya tıbbi hesap numarası](sensitive-information-type-entity-definitions.md#australia-medical-account-number) </br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [Tüm Tıbbi Hüküm ve Koşullar](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions) </br> - [Avustralya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#australia-physical-addresses)|
+|Tıbbi ve sağlık| Avustralya Sağlık Kayıtları Yasası (HRIP Yasası)|- [Avustralya vergi dosyası numarası](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Avustralya tıbbi hesap numarası](sensitive-information-type-entity-definitions.md#australia-medical-account-number)|
+|Tıbbi ve sağlık| Kanada Sağlık Bilgileri Yasası (HIA) |- [Kanada pasaport numarası](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Kanada sosyal sigorta numarası](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Kanada sağlık hizmeti numarası](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Kanada Kişisel Sağlık Kimlik Numarası](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
+|Tıbbi ve sağlık| Kanada Kişisel Sağlık Bilgileri Yasası (PHIA) Manitoba|- [Kanada sosyal sigorta numarası](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Kanada sağlık hizmeti numarası](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Kanada Kişisel Sağlık Kimlik Numarası](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
+|Tıbbi ve sağlık| Kanada Kişisel Sağlık Yasası (PHIPA) Ontario |- [Kanada pasaport numarası](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Kanada sosyal sigorta numarası](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Kanada sağlık hizmeti numarası](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Kanada Kişisel Sağlık Kimlik Numarası](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
+|Tıbbi ve sağlık| INGİLTERE. Tıbbi Raporlara Erişim Yasası|- [Birleşik Krallık ulusal sağlık hizmeti numarası](sensitive-information-type-entity-definitions.md#uk-national-health-service-number) </br> - [Birleşik Krallık ulusal sigorta numarası (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino)|
+|Tıbbi ve sağlık| ABD Sağlık Sigortası Yasası (HIPAA) Geliştirildi|</br> - [Uluslararası hastalık sınıflandırması (ICD-9-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-9-cm) </br> - [Uluslararası hastalık sınıflandırması (ICD-10-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-10-cm) </br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [Tüm Tıbbi Hüküm ve Koşullar](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions) </br> - [ABD Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
+|Tıbbi ve sağlık| ABD Sağlık Sigortası Yasası (HIPAA)| - [Uluslararası hastalık sınıflandırması (ICD-9-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-9-cm) </br> - [Uluslararası hastalık sınıflandırması (ICD-10-CM)](sensitive-information-type-entity-definitions.md#international-classification-of-diseases-icd-10-cm)|
+|Gizlilik| Gelişmiş Avustralya Gizlilik Yasası|- [Avustralya ehliyet numarası](sensitive-information-type-entity-definitions.md#australia-drivers-license-number) </br> - [Avustralya pasaport numarası](sensitive-information-type-entity-definitions.md#australia-passport-number) </br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [Tüm Tıbbi Hüküm ve Koşullar](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions) </br> - [Avustralya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#australia-physical-addresses)|
+|Gizlilik| Avustralya Gizlilik Yasası|- [Avustralya ehliyet numarası](sensitive-information-type-entity-definitions.md#australia-drivers-license-number) </br> - [Avustralya pasaport numarası](sensitive-information-type-entity-definitions.md#australia-passport-number)|
+|Gizlilik| Avustralya Kişisel Bilgiler (PII) Verileri|- [Avustralya vergi dosyası numarası](sensitive-information-type-entity-definitions.md#australia-tax-file-number) </br> - [Avustralya ehliyet numarası](sensitive-information-type-entity-definitions.md#australia-drivers-license-number)|
+|Gizlilik| Kanada Kişisel Bilgiler (PII) Verileri|- [Kanada ehliyet numarası](sensitive-information-type-entity-definitions.md#canada-drivers-license-number)</br> - [Kanada banka hesap numarası](sensitive-information-type-entity-definitions.md#canada-bank-account-number) </br> - [Kanada pasaport numarası](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Kanada sosyal sigorta numarası](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Kanada sağlık hizmeti numarası](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Kanada Kişisel Sağlık Kimlik Numarası](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
+|Gizlilik| Kanada Kişisel Information Protection Yasası (PIPA)|- [Kanada pasaport numarası](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Kanada sosyal sigorta numarası](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Kanada sağlık hizmeti numarası](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Kanada Kişisel Sağlık Kimlik Numarası](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
+|Gizlilik| Kanada Kişisel Information Protection Yasası (PIPEDA)|- [Kanada ehliyet numarası](sensitive-information-type-entity-definitions.md#canada-drivers-license-number) </br> - [Kanada banka hesap numarası](sensitive-information-type-entity-definitions.md#canada-bank-account-number) </br> - [Kanada pasaport numarası](sensitive-information-type-entity-definitions.md#canada-passport-number)</br> - [Kanada sosyal sigorta numarası](sensitive-information-type-entity-definitions.md#canada-social-insurance-number) </br> - [Kanada sağlık hizmeti numarası](sensitive-information-type-entity-definitions.md#canada-health-service-number) </br> - [Kanada Kişisel Sağlık Kimlik Numarası](sensitive-information-type-entity-definitions.md#canada-personal-health-identification-number-phin)|
 |Gizlilik| Fransa Veri Koruma Yasası|- [Fransa ulusal kimlik kartı (CNI)](sensitive-information-type-entity-definitions.md#france-national-id-card-cni) </br> - [Fransa sosyal güvenlik numarası (INSEE)](sensitive-information-type-entity-definitions.md#france-social-security-number-insee)|
-|Gizlilik| Fransa Kişisel Bilgileri (PII) Verileri|- [Fransa sosyal güvenlik numarası (INSEE)](sensitive-information-type-entity-definitions.md#france-social-security-number-insee) </br> - [Fransa sürücü lisans numarası](sensitive-information-type-entity-definitions.md#france-drivers-license-number) </br> - [Fransa pasaport numarası](sensitive-information-type-entity-definitions.md#france-passport-number) </br> - [Fransa ulusal kimlik kartı (CNI)](sensitive-information-type-entity-definitions.md#france-national-id-card-cni)|
-|Gizlilik| Gelişmiş Genel Veri Koruma Yönetmeliği (GDPR)|- [Avusturya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#austria-physical-addresses) </br> - [Belçika Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#belgium-physical-addresses)</br> - [Bulgaristan Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#bulgaria-physical-addresses)</br> - [Hırvatistan Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#croatia-physical-addresses)</br> - [Kıbrıs Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#cyprus-physical-addresses)</br> - [Çek Cumhuriyeti Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#czech-republic-physical-addresses)</br> - [Danimarka Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#denmark-physical-addresses)</br> - [Estonya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#estonia-physical-addresses)</br> - [Finlandiya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#finland-physical-addresses)</br> - [Fransa Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#france-physical-addresses)</br> - [Almanya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#germany-physical-addresses)</br> - [Yunanistan Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#greece-physical-addresses)</br> - [Macaristan Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#hungary-physical-addresses)</br> - [İrlanda Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#ireland-physical-addresses)</br> - [İtalya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#italy-physical-addresses)</br> - [Letonya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#latvia-physical-addresses)</br> - [Litvanya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#lithuania-physical-addresses)</br> - [Luxembourg Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#luxemburg-physical-addresses)</br> - [Malta Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#malta-physical-addresses)</br> - [Hollanda Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#netherlands-physical-addresses)</br> - [Polonya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#poland-physical-addresses)</br> - [Portekizce Fiziksel Adresler](sensitive-information-type-entity-definitions.md#portugal-physical-addresses)</br> - [Romanya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#romania-physical-addresses)</br> - [Slovakya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#slovakia-physical-addresses)</br> - [Slovenya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#slovenia-physical-addresses)</br> - [İspanya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#spain-physical-addresses)</br> - [İsveç Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#sweden-physical-addresses)</br> - [Avusturya Sosyal Güvenlik Numarası](sensitive-information-type-entity-definitions.md#austria-social-security-number)</br> - [France Social Security Number (INSEE)](sensitive-information-type-entity-definitions.md#france-social-security-number-insee)</br> - [Yunanistan Sosyal Güvenlik Numarası (AMKA)](sensitive-information-type-entity-definitions.md#greece-social-security-number-amka)</br> - [Macarca Sosyal Güvenlik Numarası (TAJ)](sensitive-information-type-entity-definitions.md#hungary-social-security-number-taj)</br> - [İspanya Sosyal Güvenlik Numarası (SSN)](sensitive-information-type-entity-definitions.md#spain-social-security-number-ssn)</br> - [Avusturya Kimlik Kartı](sensitive-information-type-entity-definitions.md#austria-identity-card)</br> - [Kıbrıs Kimlik Kartı](sensitive-information-type-entity-definitions.md#cyprus-identity-card)</br> - [Almanya Kimlik Kartı Numarası](sensitive-information-type-entity-definitions.md#germany-identity-card-number)</br> - [Malta Kimlik Kartı Numarası](sensitive-information-type-entity-definitions.md#malta-identity-card-number)</br> - [Fransa Ulusal Kimlik Kartı (CNI)](sensitive-information-type-entity-definitions.md#france-national-id-card-cni)</br> - [Yunanistan Ulusal Kimlik Kartı](sensitive-information-type-entity-definitions.md#greece-national-id-card)</br> - [Finlandiya Ulusal Kimliği](sensitive-information-type-entity-definitions.md#finland-national-id)</br> - [Polonya Ulusal Kimliği (PESEL)](sensitive-information-type-entity-definitions.md#poland-national-id-pesel)</br> - [İsveç Ulusal Kimliği](sensitive-information-type-entity-definitions.md#sweden-national-id)</br> - [Hırvatistan Kişisel Kimlik (OIB) Numarası](sensitive-information-type-entity-definitions.md#croatia-personal-identification-oib-number)</br> - [Çek Kişisel Kimlik Numarası](sensitive-information-type-entity-definitions.md#czech-personal-identity-number)</br> - [Danimarka Kişisel Kimlik Numarası](sensitive-information-type-entity-definitions.md#denmark-personal-identification-number)</br> - [Estonya Kişisel Kimlik Kodu](sensitive-information-type-entity-definitions.md#estonia-personal-identification-code)</br> - [Macaristan Kişisel Kimlik Numarası](sensitive-information-type-entity-definitions.md#hungary-personal-identification-number)</br> - [Luxemburg Ulusal Kimlik Numarası (Doğal kişiler)](sensitive-information-type-entity-definitions.md#luxemburg-national-identification-number-natural-persons)</br> - [Luxemburg Ulusal Kimlik Numarası (Doğal olmayan kişiler)](sensitive-information-type-entity-definitions.md#luxemburg-national-identification-number-non-natural-persons)</br> - [İtalya Mali Kodu](sensitive-information-type-entity-definitions.md#italy-fiscal-code)</br> - [Letonya Kişisel Kodu](sensitive-information-type-entity-definitions.md#latvia-personal-code)</br> - [Litvanya Kişisel Kodu](sensitive-information-type-entity-definitions.md#lithuania-personal-code)</br> - [Romanya Kişisel Sayısal Kodu (CNP)](sensitive-information-type-entity-definitions.md#romania-personal-numeric-code-cnp)</br> - [Hollanda Genel Hizmet Numarası (BSN)](sensitive-information-type-entity-definitions.md#netherlands-citizens-service-bsn-number)</br> - [Ireland Personal Public Service (PPS) Numarası](sensitive-information-type-entity-definitions.md#ireland-personal-public-service-pps-number)</br> - [Bulgaristan Muntaz](sensitive-information-type-entity-definitions.md#bulgaria-uniform-civil-number)</br> - [Belçika Ulusal Numarası](sensitive-information-type-entity-definitions.md#belgium-national-number)</br> - [İspanya DNI](sensitive-information-type-entity-definitions.md#spain-dni)</br> - [Slovenya benzersiz ana numarayı](sensitive-information-type-entity-definitions.md#slovenia-unique-master-citizen-number)</br> - [Slovakya Kişisel Numarası](sensitive-information-type-entity-definitions.md#slovakia-personal-number)</br> - [Portekiz Portekiz Kart Numarası](sensitive-information-type-entity-definitions.md#portugal-citizen-card-number)</br> - [Malta Vergi No Numarası](sensitive-information-type-entity-definitions.md#malta-tax-identification-number)</br> - [Avusturya Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#austria-tax-identification-number)</br> - [Kıbrıs Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#cyprus-tax-identification-number)</br> - [Fransa Vergi Tanımlama Numarası (numéro SPI.)](sensitive-information-type-entity-definitions.md#france-tax-identification-number)</br> - [Almanya Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#germany-tax-identification-number)</br> - [Yunan Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#greece-tax-identification-number)</br> - [Macaristan Vergi Tanımlama Numarası](sensitive-information-type-entity-definitions.md#hungary-tax-identification-number)</br> - [Hollanda Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#netherlands-tax-identification-number)</br> - [Polonya Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#poland-tax-identification-number)</br> - [Portekiz Vergi Tanımlama Numarası](sensitive-information-type-entity-definitions.md#portugal-tax-identification-number)</br> - [Slovenya Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#slovenia-tax-identification-number)</br> - [İspanya Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#spain-tax-identification-number)</br> - [İsveç Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#sweden-tax-identification-number)</br> - [Avusturya Sürücü Lisansı](sensitive-information-type-entity-definitions.md#austria-drivers-license-number)</br> - [Belçika Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#belgium-drivers-license-number)</br> - [Bulgaristan Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#bulgaria-drivers-license-number)</br> - [Hırvatistan Sürücüsü Lisans Numarası](sensitive-information-type-entity-definitions.md#croatia-drivers-license-number)</br> - [Kıbrıs Sürücüsü Lisans Numarası](sensitive-information-type-entity-definitions.md#cyprus-drivers-license-number)</br> - [Çek Sürücüsü Lisans Numarası](sensitive-information-type-entity-definitions.md#czech-drivers-license-number)</br> - [Danimarka Sürücüsü Lisans Numarası](sensitive-information-type-entity-definitions.md#denmark-drivers-license-number)</br> - [Estonya Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#estonia-drivers-license-number)</br> - [Finlandiya Sürücüsü Lisans Numarası](sensitive-information-type-entity-definitions.md#finland-drivers-license-number)</br> - [Fransa Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#france-drivers-license-number)</br> - [Almanca Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#germany-drivers-license-number)</br> - [Yunanistan Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#greece-drivers-license-number)</br> - [Macaristan Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#hungary-drivers-license-number)</br> - [İrlanda Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#ireland-drivers-license-number)</br> - [İtalya Sürücüsü Lisans Numarası](sensitive-information-type-entity-definitions.md#italy-drivers-license-number)</br> - [Letonya Sürücüsü Lisans Numarası](sensitive-information-type-entity-definitions.md#latvia-drivers-license-number)</br> - [Litvanya Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#lithuania-drivers-license-number)</br> - [Luxemburg Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#luxemburg-drivers-license-number)</br> - [Malta Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#malta-drivers-license-number)</br> - [Hollanda Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#netherlands-drivers-license-number)</br> - [Polonya Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#poland-drivers-license-number)</br> - [Portekiz Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#portugal-drivers-license-number)</br> - [Romanya Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#romania-drivers-license-number)</br> - [Slovakya Sürücüsü Lisans Numarası](sensitive-information-type-entity-definitions.md#slovakia-drivers-license-number)</br> - [Slovenya Sürücüsü Lisans Numarası](sensitive-information-type-entity-definitions.md#slovenia-drivers-license-number)</br> - [İspanya Sürücüsü Lisans Numarası](sensitive-information-type-entity-definitions.md#spain-drivers-license-number)</br> - [İsveç Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#sweden-drivers-license-number)</br> - [Avusturya Pasaport Numarası](sensitive-information-type-entity-definitions.md#austria-passport-number)</br> - [Belçika Pasaport Numarası](sensitive-information-type-entity-definitions.md#belgium-passport-number)</br> - [Bulgaristan Pasaport Numarası](sensitive-information-type-entity-definitions.md#bulgaria-passport-number)</br> - [Hırvatistan Pasaport Numarası](sensitive-information-type-entity-definitions.md#croatia-passport-number)</br> - [Kıbrıs Pasaport Numarası](sensitive-information-type-entity-definitions.md#cyprus-passport-number)</br> - [Çek Cumhuriyeti Pasaport Numarası](sensitive-information-type-entity-definitions.md#czech-passport-number)</br> - [Danimarka Pasaport Numarası](sensitive-information-type-entity-definitions.md#denmark-passport-number)</br> - [Estonya Pasaport Numarası](sensitive-information-type-entity-definitions.md#estonia-passport-number)</br> - [Finlandiya Pasaport Numarası](sensitive-information-type-entity-definitions.md#finland-passport-number)</br> - [Fransa Pasaport Numarası](sensitive-information-type-entity-definitions.md#france-passport-number)</br> - [Almanca Pasaport Numarası](sensitive-information-type-entity-definitions.md#germany-passport-number)</br> - [Yunanistan Pasaport Numarası](sensitive-information-type-entity-definitions.md#greece-passport-number)</br> - [Macaristan Pasaport Numarası](sensitive-information-type-entity-definitions.md#hungary-passport-number)</br> - [İrlanda Pasaport Numarası](sensitive-information-type-entity-definitions.md#ireland-passport-number)</br> - [İtalya Pasaport Numarası](sensitive-information-type-entity-definitions.md#italy-passport-number)</br> - [Letonya Pasaport Numarası](sensitive-information-type-entity-definitions.md#latvia-passport-number)</br> - [Litvanya Pasaport Numarası](sensitive-information-type-entity-definitions.md#lithuania-passport-number)</br> - [Luxemburg Passport Numarası](sensitive-information-type-entity-definitions.md#luxemburg-passport-number)</br> - [Malta Pasaport Numarası](sensitive-information-type-entity-definitions.md#malta-passport-number)</br> - [Hollanda Pasaport Numarası](sensitive-information-type-entity-definitions.md#netherlands-passport-number)</br> - [Polonya Pasaport](sensitive-information-type-entity-definitions.md#poland-passport-number)</br> - [Portekiz Pasaport Numarası](sensitive-information-type-entity-definitions.md#portugal-passport-number)</br> - [Romanya Pasaport Numarası](sensitive-information-type-entity-definitions.md#romania-passport-number)</br> - [Slovakya Pasaport Numarası](sensitive-information-type-entity-definitions.md#slovakia-passport-number)</br> - [Slovenya Pasaport Numarası](sensitive-information-type-entity-definitions.md#slovenia-passport-number)</br> - [İspanya Pasaport Numarası](sensitive-information-type-entity-definitions.md#spain-passport-number)</br> - [İsveç Pasaport Numarası](sensitive-information-type-entity-definitions.md#sweden-passport-number)</br> - [AB Banka Kartı Numarası](sensitive-information-type-entity-definitions.md#eu-debit-card-number)</br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names)|
-|Gizlilik| Genel Veri Koruma Yönetmeliği (GDPR)|- [AB banka kartı numarası](sensitive-information-type-entity-definitions.md#eu-debit-card-number) </br> - [AB sürücü lisans numarası](sensitive-information-type-entity-definitions.md#eu-drivers-license-number) </br> - [AB ulusal kimlik numarası](sensitive-information-type-entity-definitions.md#eu-national-identification-number)</br> - [AB pasaport numarası](sensitive-information-type-entity-definitions.md#eu-passport-number) </br> - [AB sosyal güvenlik numarası veya eşdeğer tanımlama](sensitive-information-type-entity-definitions.md#eu-social-security-number-or-equivalent-identification)</br> - [AB Vergi tanımlama numarası](sensitive-information-type-entity-definitions.md#eu-tax-identification-number)|
-|Gizlilik| Almanya Kişisel Bilgileri (PII) Verileri|- [Almanya sürücü lisans numarası](sensitive-information-type-entity-definitions.md#germany-drivers-license-number) </br> - [Almanya pasaport numarası](sensitive-information-type-entity-definitions.md#germany-passport-number)| 
-|Gizlilik| İsrail Kişisel Bilgileri (PII) Verileri|- [İsrail ulusal kimlik numarası](sensitive-information-type-entity-definitions.md#israel-national-identification-number)| 
-|Gizlilik| İsrail Gizliliği Koruma|- [İsrail ulusal kimlik numarası](sensitive-information-type-entity-definitions.md#israel-national-identification-number)</br> - [İsrail banka hesap numarası](sensitive-information-type-entity-definitions.md#israel-bank-account-number)|
-|Gizlilik| Geliştirilmiş Japonya Kişisel Bilgileri (PII) Verileri|- [Japonya Sosyal Sigorta Numarası (SN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin)</br> - [Japonya Numaram - Kişisel](sensitive-information-type-entity-definitions.md#japan-my-number---personal)</br> - [Japonya pasaport numarası](sensitive-information-type-entity-definitions.md#japan-passport-number)</br> - [Japonya sürücü lisans numarası](sensitive-information-type-entity-definitions.md#japan-drivers-license-number)</br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [Japonya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#all-physical-addresses)|
-|Gizlilik| Japonya Kişisel Bilgileri (PII) Verileri|- [Japonya'daki yerleşik kayıt numarası](sensitive-information-type-entity-definitions.md#japan-resident-registration-number) </br> - [Japonya Sosyal Sigorta Numarası (SN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin)|
-|Gizlilik| Geliştirilmiş Kişisel Bilgilerin Japonya Koruması|- [Japonya Sosyal Sigorta Numarası (SN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin) </br> - [Japonya Numaram - Kişisel](sensitive-information-type-entity-definitions.md#japan-my-number---personal)</br> - [Japonya pasaport numarası](sensitive-information-type-entity-definitions.md#japan-passport-number) </br> - [Japonya sürücü lisans numarası](sensitive-information-type-entity-definitions.md#japan-drivers-license-number)</br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [Japonya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#all-physical-addresses)|
-|Gizlilik| Japonya Kişisel Bilgilerin Korunması|- [Japonya'daki yerleşik kayıt numarası](sensitive-information-type-entity-definitions.md#japan-resident-registration-number)</br> - [Japonya Sosyal Sigorta Numarası (SN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin)|
-|Gizlilik| Suudi Arabistan Kişisel Kimliğine Tanımlayıcı (PII) Verileri|- [Suudi Arabistan Ulusal Kimliği](sensitive-information-type-entity-definitions.md#saudi-arabia-national-id)|
-|Gizlilik| B.K. Veri Koruma Yasası|- [U.K. ulusal sigorta numarası (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino) </br> - [ABD/İngiltere pasaport numarası](sensitive-information-type-entity-definitions.md#usuk-passport-number) </br> - [SWIFT kodu](sensitive-information-type-entity-definitions.md#swift-code)|
-|Gizlilik| B.K. Gizlilik ve Elektronik İletişim Düzenlemeleri|- [SWIFT kodu](sensitive-information-type-entity-definitions.md#swift-code)|
-|Gizlilik| B.K. Kişisel Kimliği Tanımlayıcı Bilgiler (PII) Verileri|- [U.K. ulusal sigorta numarası (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino) </br> - [ABD/İngiltere pasaport numarası](sensitive-information-type-entity-definitions.md#usuk-passport-number)|
-|Gizlilik| B.K. Kişisel Bilgiler Çevrimiçi Uygulama Kodu (PIOCP)|- [U.K. ulusal sigorta numarası (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino) </br> - [ABD ulusal sağlık hizmet numarası](sensitive-information-type-entity-definitions.md#uk-national-health-service-number) </br> - [SWIFT kodu](sensitive-information-type-entity-definitions.md#swift-code)|
-|Gizlilik| GELIŞMIŞ ABD S S stiyla Act Enhanced|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [ABD banka hesap numarası](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [ABD Bireysel Vergi Mükellefi Kimlik Numarası (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [ABD Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
-|Gizlilik| ABD S. Act|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [ABD banka hesap numarası](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [ABD Bireysel Vergi Mükellefi Kimlik Numarası (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
-|Gizlilik| ABD Kişisel Bilgileri (PII) Gelişmiş Verileri|- [ABD Bireysel Vergi Mükellefi Kimlik Numarası (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [ABD/İngiltere pasaport numarası](sensitive-information-type-entity-definitions.md#usuk-passport-number)</br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [ABD Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
-|Gizlilik| ABD Kişisel Bilgileri (PII) Verileri|- [ABD Bireysel Vergi Mükellefi Kimlik Numarası (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [ABD/İngiltere pasaport numarası](sensitive-information-type-entity-definitions.md#usuk-passport-number)|
-|Gizlilik| Gelişmiş ABD Eyaleti İhlal Bildirimi Yasaları|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [ABD banka hesap numarası](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> -[ABD sürücüsünün lisans numarası](sensitive-information-type-entity-definitions.md#us-drivers-license-number) </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [ABD/İngiltere pasaport numarası](sensitive-information-type-entity-definitions.md#usuk-passport-number)</br> - [Tüm Tıbbi Hüküm ve Koşullar](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions)|
-|Gizlilik| ABD Eyaleti İhlal Bildirimi Yasaları|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [ABD banka hesap numarası](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> -[ABD sürücüsünün lisans numarası](sensitive-information-type-entity-definitions.md#us-drivers-license-number) </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
-|Gizlilik| ABD Eyaleti Sosyal Güvenlik Numarası Gizlilik Yasaları|- [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
+|Gizlilik| Fransa Kişisel Bilgiler (PII) Verileri|- [Fransa sosyal güvenlik numarası (INSEE)](sensitive-information-type-entity-definitions.md#france-social-security-number-insee) </br> - [Fransa ehliyet numarası](sensitive-information-type-entity-definitions.md#france-drivers-license-number) </br> - [Fransa pasaport numarası](sensitive-information-type-entity-definitions.md#france-passport-number) </br> - [Fransa ulusal kimlik kartı (CNI)](sensitive-information-type-entity-definitions.md#france-national-id-card-cni)|
+|Gizlilik| Genel Veri Koruma Yönetmeliği (GDPR) Geliştirildi|- [Avusturya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#austria-physical-addresses) </br> - [Belçika Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#belgium-physical-addresses)</br> - [Bulgaristan Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#bulgaria-physical-addresses)</br> - [Hırvatistan Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#croatia-physical-addresses)</br> - [Kıbrıs Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#cyprus-physical-addresses)</br> - [Çek Cumhuriyeti Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#czech-republic-physical-addresses)</br> - [Danimarka Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#denmark-physical-addresses)</br> - [Estonya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#estonia-physical-addresses)</br> - [Finlandiya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#finland-physical-addresses)</br> - [Fransa Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#france-physical-addresses)</br> - [Almanya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#germany-physical-addresses)</br> - [Yunanistan Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#greece-physical-addresses)</br> - [Macaristan Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#hungary-physical-addresses)</br> - [İrlanda Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#ireland-physical-addresses)</br> - [İtalya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#italy-physical-addresses)</br> - [Letonya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#latvia-physical-addresses)</br> - [Litvanya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#lithuania-physical-addresses)</br> - [Lüksemburg Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#luxemburg-physical-addresses)</br> - [Malta Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#malta-physical-addresses)</br> - [Hollanda Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#netherlands-physical-addresses)</br> - [Polonya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#poland-physical-addresses)</br> - [Portekizce Fiziksel Adresler](sensitive-information-type-entity-definitions.md#portugal-physical-addresses)</br> - [Romanya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#romania-physical-addresses)</br> - [Slovakya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#slovakia-physical-addresses)</br> - [Slovenya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#slovenia-physical-addresses)</br> - [İspanya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#spain-physical-addresses)</br> - [İsveç Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#sweden-physical-addresses)</br> - [Avusturya Sosyal Güvenlik Numarası](sensitive-information-type-entity-definitions.md#austria-social-security-number)</br> - [Fransa Sosyal Güvenlik Numarası (INSEE)](sensitive-information-type-entity-definitions.md#france-social-security-number-insee)</br> - [Yunanistan Sosyal Güvenlik Numarası (AMKA)](sensitive-information-type-entity-definitions.md#greece-social-security-number-amka)</br> - [Macar Sosyal Güvenlik Numarası (TAJ)](sensitive-information-type-entity-definitions.md#hungary-social-security-number-taj)</br> - [İspanya Sosyal Güvenlik Numarası (SSN)](sensitive-information-type-entity-definitions.md#spain-social-security-number-ssn)</br> - [Avusturya Kimlik Kartı](sensitive-information-type-entity-definitions.md#austria-identity-card)</br> - [Kıbrıs Kimlik Kartı](sensitive-information-type-entity-definitions.md#cyprus-identity-card)</br> - [Almanya Kimlik Kartı Numarası](sensitive-information-type-entity-definitions.md#germany-identity-card-number)</br> - [Malta Kimlik Kartı Numarası](sensitive-information-type-entity-definitions.md#malta-identity-card-number)</br> - [Fransa Ulusal Kimlik Kartı (CNI)](sensitive-information-type-entity-definitions.md#france-national-id-card-cni)</br> - [Yunanistan Ulusal Kimlik Kartı](sensitive-information-type-entity-definitions.md#greece-national-id-card)</br> - [Finlandiya Ulusal Kimliği](sensitive-information-type-entity-definitions.md#finland-national-id)</br> - [Polonya Ulusal Kimliği (PESEL)](sensitive-information-type-entity-definitions.md#poland-national-id-pesel)</br> - [İsveç Ulusal Kimliği](sensitive-information-type-entity-definitions.md#sweden-national-id)</br> - [Hırvatistan Kişisel Kimlik (OIB) Numarası](sensitive-information-type-entity-definitions.md#croatia-personal-identification-oib-number)</br> - [Çek Kişisel Kimlik Numarası](sensitive-information-type-entity-definitions.md#czech-personal-identity-number)</br> - [Danimarka Kişisel Kimlik Numarası](sensitive-information-type-entity-definitions.md#denmark-personal-identification-number)</br> - [Estonya Kişisel Kimlik Kodu](sensitive-information-type-entity-definitions.md#estonia-personal-identification-code)</br> - [Macaristan Kişisel Kimlik Numarası](sensitive-information-type-entity-definitions.md#hungary-personal-identification-number)</br> - [Luxemburg Ulusal Kimlik Numarası (Gerçek kişiler)](sensitive-information-type-entity-definitions.md#luxemburg-national-identification-number-natural-persons)</br> - [Luxemburg Ulusal Kimlik Numarası (Gerçek olmayan kişiler)](sensitive-information-type-entity-definitions.md#luxemburg-national-identification-number-non-natural-persons)</br> - [İtalya Mali Kodu](sensitive-information-type-entity-definitions.md#italy-fiscal-code)</br> - [Letonya Kişisel Kodu](sensitive-information-type-entity-definitions.md#latvia-personal-code)</br> - [Litvanya Kişisel Kodu](sensitive-information-type-entity-definitions.md#lithuania-personal-code)</br> - [Romanya Kişisel Sayısal Kodu (CNP)](sensitive-information-type-entity-definitions.md#romania-personal-numeric-code-cnp)</br> - [Hollanda VatandaşLık Hizmeti (BSN) Numarası](sensitive-information-type-entity-definitions.md#netherlands-citizens-service-bsn-number)</br> - [İrlanda Kişisel Kamu Hizmeti (PPS) Numarası](sensitive-information-type-entity-definitions.md#ireland-personal-public-service-pps-number)</br> - [Bulgaristan Tekdüzen Sivil Numarası](sensitive-information-type-entity-definitions.md#bulgaria-uniform-civil-number)</br> - [Belçika Ulusal Numarası](sensitive-information-type-entity-definitions.md#belgium-national-number)</br> - [İspanya DNI](sensitive-information-type-entity-definitions.md#spain-dni)</br> - [Slovenya Benzersiz Ana Vatandaş Numarası](sensitive-information-type-entity-definitions.md#slovenia-unique-master-citizen-number)</br> - [Slovakya Kişisel Numarası](sensitive-information-type-entity-definitions.md#slovakia-personal-number)</br> - [Portekiz Vatandaş Kart Numarası](sensitive-information-type-entity-definitions.md#portugal-citizen-card-number)</br> - [Malta Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#malta-tax-identification-number)</br> - [Avusturya Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#austria-tax-identification-number)</br> - [Kıbrıs Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#cyprus-tax-identification-number)</br> - [Fransa Vergi Kimlik Numarası (numéro SPI.)](sensitive-information-type-entity-definitions.md#france-tax-identification-number)</br> - [Almanya Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#germany-tax-identification-number)</br> - [Yunan Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#greece-tax-identification-number)</br> - [Macaristan Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#hungary-tax-identification-number)</br> - [Hollanda Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#netherlands-tax-identification-number)</br> - [Polonya Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#poland-tax-identification-number)</br> - [Portekiz Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#portugal-tax-identification-number)</br> - [Slovenya Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#slovenia-tax-identification-number)</br> - [İspanya Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#spain-tax-identification-number)</br> - [İsveç Vergi Kimlik Numarası](sensitive-information-type-entity-definitions.md#sweden-tax-identification-number)</br> - [Avusturya Sürücü Belgesi](sensitive-information-type-entity-definitions.md#austria-drivers-license-number)</br> - [Belçika Ehliyet Numarası](sensitive-information-type-entity-definitions.md#belgium-drivers-license-number)</br> - [Bulgaristan Ehliyet Numarası](sensitive-information-type-entity-definitions.md#bulgaria-drivers-license-number)</br> - [Hırvatistan Ehliyet Numarası](sensitive-information-type-entity-definitions.md#croatia-drivers-license-number)</br> - [Kıbrıs Ehliyet Numarası](sensitive-information-type-entity-definitions.md#cyprus-drivers-license-number)</br> - [Çek Ehliyet Numarası](sensitive-information-type-entity-definitions.md#czech-drivers-license-number)</br> - [Danimarka Ehliyet Numarası](sensitive-information-type-entity-definitions.md#denmark-drivers-license-number)</br> - [Estonya Sürücü Lisans Numarası](sensitive-information-type-entity-definitions.md#estonia-drivers-license-number)</br> - [Finlandiya Ehliyet Numarası](sensitive-information-type-entity-definitions.md#finland-drivers-license-number)</br> - [Fransa Ehliyet Numarası](sensitive-information-type-entity-definitions.md#france-drivers-license-number)</br> - [Alman Sürücü Belgesi Numarası](sensitive-information-type-entity-definitions.md#germany-drivers-license-number)</br> - [Yunanistan Ehliyet Numarası](sensitive-information-type-entity-definitions.md#greece-drivers-license-number)</br> - [Macaristan Ehliyet Numarası](sensitive-information-type-entity-definitions.md#hungary-drivers-license-number)</br> - [İrlanda Ehliyet Numarası](sensitive-information-type-entity-definitions.md#ireland-drivers-license-number)</br> - [İtalya Ehliyet Numarası](sensitive-information-type-entity-definitions.md#italy-drivers-license-number)</br> - [Letonya Ehliyet Numarası](sensitive-information-type-entity-definitions.md#latvia-drivers-license-number)</br> - [Litvanya Sürücü Belgesi Numarası](sensitive-information-type-entity-definitions.md#lithuania-drivers-license-number)</br> - [Luxemburg Ehliyet Numarası](sensitive-information-type-entity-definitions.md#luxemburg-drivers-license-number)</br> - [Malta Sürücü Belgesi Numarası](sensitive-information-type-entity-definitions.md#malta-drivers-license-number)</br> - [Hollanda Ehliyet Numarası](sensitive-information-type-entity-definitions.md#netherlands-drivers-license-number)</br> - [Polonya Sürücü Belgesi Numarası](sensitive-information-type-entity-definitions.md#poland-drivers-license-number)</br> - [Portekiz Sürücü Ehliyeti Numarası](sensitive-information-type-entity-definitions.md#portugal-drivers-license-number)</br> - [Romanya Ehliyet Numarası](sensitive-information-type-entity-definitions.md#romania-drivers-license-number)</br> - [Slovakya Sürücü Ehliyeti Numarası](sensitive-information-type-entity-definitions.md#slovakia-drivers-license-number)</br> - [Slovenya Ehliyet Numarası](sensitive-information-type-entity-definitions.md#slovenia-drivers-license-number)</br> - [İspanya Ehliyet Numarası](sensitive-information-type-entity-definitions.md#spain-drivers-license-number)</br> - [İsveç Ehliyet Numarası](sensitive-information-type-entity-definitions.md#sweden-drivers-license-number)</br> - [Avusturya Pasaport Numarası](sensitive-information-type-entity-definitions.md#austria-passport-number)</br> - [Belçika Pasaport Numarası](sensitive-information-type-entity-definitions.md#belgium-passport-number)</br> - [Bulgaristan Pasaport Numarası](sensitive-information-type-entity-definitions.md#bulgaria-passport-number)</br> - [Hırvatistan Pasaport Numarası](sensitive-information-type-entity-definitions.md#croatia-passport-number)</br> - [Kıbrıs Pasaport Numarası](sensitive-information-type-entity-definitions.md#cyprus-passport-number)</br> - [Çek Cumhuriyeti Pasaport Numarası](sensitive-information-type-entity-definitions.md#czech-passport-number)</br> - [Danimarka Pasaport Numarası](sensitive-information-type-entity-definitions.md#denmark-passport-number)</br> - [Estonya Pasaport Numarası](sensitive-information-type-entity-definitions.md#estonia-passport-number)</br> - [Finlandiya Pasaport Numarası](sensitive-information-type-entity-definitions.md#finland-passport-number)</br> - [Fransa Pasaport Numarası](sensitive-information-type-entity-definitions.md#france-passport-number)</br> - [Alman Pasaport Numarası](sensitive-information-type-entity-definitions.md#germany-passport-number)</br> - [Yunanistan Pasaport Numarası](sensitive-information-type-entity-definitions.md#greece-passport-number)</br> - [Macaristan Pasaport Numarası](sensitive-information-type-entity-definitions.md#hungary-passport-number)</br> - [İrlanda Pasaport Numarası](sensitive-information-type-entity-definitions.md#ireland-passport-number)</br> - [İtalya Pasaport Numarası](sensitive-information-type-entity-definitions.md#italy-passport-number)</br> - [Letonya Pasaport Numarası](sensitive-information-type-entity-definitions.md#latvia-passport-number)</br> - [Litvanya Pasaport Numarası](sensitive-information-type-entity-definitions.md#lithuania-passport-number)</br> - [Luxemburg Pasaport Numarası](sensitive-information-type-entity-definitions.md#luxemburg-passport-number)</br> - [Malta Pasaport Numarası](sensitive-information-type-entity-definitions.md#malta-passport-number)</br> - [Hollanda Pasaport Numarası](sensitive-information-type-entity-definitions.md#netherlands-passport-number)</br> - [Polonya Pasaportu](sensitive-information-type-entity-definitions.md#poland-passport-number)</br> - [Portekiz Pasaport Numarası](sensitive-information-type-entity-definitions.md#portugal-passport-number)</br> - [Romanya Pasaport Numarası](sensitive-information-type-entity-definitions.md#romania-passport-number)</br> - [Slovakya Pasaport Numarası](sensitive-information-type-entity-definitions.md#slovakia-passport-number)</br> - [Slovenya Pasaport Numarası](sensitive-information-type-entity-definitions.md#slovenia-passport-number)</br> - [İspanya Pasaport Numarası](sensitive-information-type-entity-definitions.md#spain-passport-number)</br> - [İsveç Pasaport Numarası](sensitive-information-type-entity-definitions.md#sweden-passport-number)</br> - [AB Banka Kartı Numarası](sensitive-information-type-entity-definitions.md#eu-debit-card-number)</br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names)|
+|Gizlilik| Genel Veri Koruma Yönetmeliği (GDPR)|- [AB banka kartı numarası](sensitive-information-type-entity-definitions.md#eu-debit-card-number) </br> - [AB ehliyet numarası](sensitive-information-type-entity-definitions.md#eu-drivers-license-number) </br> - [AB ulusal kimlik numarası](sensitive-information-type-entity-definitions.md#eu-national-identification-number)</br> - [AB pasaport numarası](sensitive-information-type-entity-definitions.md#eu-passport-number) </br> - [AB sosyal güvenlik numarası veya eşdeğer kimlik](sensitive-information-type-entity-definitions.md#eu-social-security-number-or-equivalent-identification)</br> - [AB Vergi kimlik numarası](sensitive-information-type-entity-definitions.md#eu-tax-identification-number)|
+|Gizlilik| Almanya Kişisel Bilgiler (PII) Verileri|- [Almanya ehliyet numarası](sensitive-information-type-entity-definitions.md#germany-drivers-license-number) </br> - [Almanya pasaport numarası](sensitive-information-type-entity-definitions.md#germany-passport-number)| 
+|Gizlilik| İsrail Kişisel Bilgiler (PII) Verileri|- [İsrail ulusal kimlik numarası](sensitive-information-type-entity-definitions.md#israel-national-identification-number)| 
+|Gizlilik| İsrail'de Gizliliğin Korunması|- [İsrail ulusal kimlik numarası](sensitive-information-type-entity-definitions.md#israel-national-identification-number)</br> - [İsrail banka hesap numarası](sensitive-information-type-entity-definitions.md#israel-bank-account-number)|
+|Gizlilik| Japonya Kişisel Bilgiler (PII) Verileri geliştirildi|- [Japonya Sosyal Sigorta Numarası (SIN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin)</br> - [Japonya Numaram - Kişisel](sensitive-information-type-entity-definitions.md#japan-my-number---personal)</br> - [Japonya pasaport numarası](sensitive-information-type-entity-definitions.md#japan-passport-number)</br> - [Japonya ehliyet numarası](sensitive-information-type-entity-definitions.md#japan-drivers-license-number)</br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [Japonya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#all-physical-addresses)|
+|Gizlilik| Japonya Kişisel Bilgiler (PII) Verileri|- [Japonya'da ikamet eden kayıt numarası](sensitive-information-type-entity-definitions.md#japan-resident-registration-number) </br> - [Japonya Sosyal Sigorta Numarası (SIN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin)|
+|Gizlilik| Japonya Kişisel Bilgilerin Korunması Geliştirildi|- [Japonya Sosyal Sigorta Numarası (SIN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin) </br> - [Japonya Numaram - Kişisel](sensitive-information-type-entity-definitions.md#japan-my-number---personal)</br> - [Japonya pasaport numarası](sensitive-information-type-entity-definitions.md#japan-passport-number) </br> - [Japonya ehliyet numarası](sensitive-information-type-entity-definitions.md#japan-drivers-license-number)</br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [Japonya Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#all-physical-addresses)|
+|Gizlilik| Japonya Kişisel Bilgilerin Korunması|- [Japonya'da ikamet eden kayıt numarası](sensitive-information-type-entity-definitions.md#japan-resident-registration-number)</br> - [Japonya Sosyal Sigorta Numarası (SIN)](sensitive-information-type-entity-definitions.md#japan-social-insurance-number-sin)|
+|Gizlilik| Suudi Arabistan Kişisel Olarak Tanımlanabilir (PII) Verileri|- [Suudi Arabistan Ulusal Kimliği](sensitive-information-type-entity-definitions.md#saudi-arabia-national-id)|
+|Gizlilik| INGİLTERE. Veri Koruma Yasası|- [Birleşik Krallık ulusal sigorta numarası (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino) </br> - [ABD/Birleşik Krallık pasaport numarası](sensitive-information-type-entity-definitions.md#usuk-passport-number) </br> - [SWIFT kodu](sensitive-information-type-entity-definitions.md#swift-code)|
+|Gizlilik| INGİLTERE. Gizlilik ve Elektronik İletişim Düzenlemeleri|- [SWIFT kodu](sensitive-information-type-entity-definitions.md#swift-code)|
+|Gizlilik| INGİLTERE. Kişisel Bilgiler (PII) Verileri|- [Birleşik Krallık ulusal sigorta numarası (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino) </br> - [ABD/Birleşik Krallık pasaport numarası](sensitive-information-type-entity-definitions.md#usuk-passport-number)|
+|Gizlilik| INGİLTERE. Kişisel Bilgiler Çevrimiçi Uygulama Kodu (PIOCP)|- [Birleşik Krallık ulusal sigorta numarası (NINO)](sensitive-information-type-entity-definitions.md#uk-national-insurance-number-nino) </br> - [Birleşik Krallık ulusal sağlık hizmeti numarası](sensitive-information-type-entity-definitions.md#uk-national-health-service-number) </br> - [SWIFT kodu](sensitive-information-type-entity-definitions.md#swift-code)|
+|Gizlilik| ABD Vatanseverlik Yasası Geliştirildi|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [ABD banka hesap numarası](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [ABD Bireysel Vergi Mükellefi Kimlik Numarası (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [ABD Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
+|Gizlilik| ABD Vatanseverlik Yasası|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [ABD banka hesap numarası](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> - [ABD Bireysel Vergi Mükellefi Kimlik Numarası (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
+|Gizlilik| ABD Kişisel Bilgiler (PII) Verileri İyileştirilmiş|- [ABD Bireysel Vergi Mükellefi Kimlik Numarası (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [ABD/Birleşik Krallık pasaport numarası](sensitive-information-type-entity-definitions.md#usuk-passport-number)</br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names)</br> - [ABD Fiziksel Adresleri](sensitive-information-type-entity-definitions.md#us-physical-addresses)|
+|Gizlilik| ABD Kişisel Bilgiler (PII) Verileri|- [ABD Bireysel Vergi Mükellefi Kimlik Numarası (ITIN)](sensitive-information-type-entity-definitions.md#us-individual-taxpayer-identification-number-itin)  </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [ABD/Birleşik Krallık pasaport numarası](sensitive-information-type-entity-definitions.md#usuk-passport-number)|
+|Gizlilik| ABD Eyalet İhlali Bildirim Yasaları Geliştirildi|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [ABD banka hesap numarası](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> -[ABD ehliyet numarası](sensitive-information-type-entity-definitions.md#us-drivers-license-number) </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)</br> - [Tüm Tam Adlar](sensitive-information-type-entity-definitions.md#all-full-names) </br> - [ABD/Birleşik Krallık pasaport numarası](sensitive-information-type-entity-definitions.md#usuk-passport-number)</br> - [Tüm Tıbbi Hüküm ve Koşullar](sensitive-information-type-entity-definitions.md#all-medical-terms-and-conditions)|
+|Gizlilik| ABD Eyalet İhlali Bildirim Yasaları|- [Kredi kartı numarası](sensitive-information-type-entity-definitions.md#credit-card-number) </br> - [ABD banka hesap numarası](sensitive-information-type-entity-definitions.md#us-bank-account-number)</br> -[ABD ehliyet numarası](sensitive-information-type-entity-definitions.md#us-drivers-license-number) </br> - [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
+|Gizlilik| ABD Devlet Sosyal Güvenlik Numarası Gizlilik Yasaları|- [ABD sosyal güvenlik numarası (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn)|
 
-## <a name="locations"></a>Konumlar
+## <a name="locations"></a>Konum
 
 DLP ilkesi, birden çok konumda hassas bilgiler içeren öğeleri bulabilir ve koruyabilir.
 
-|Konum  |Kapsam dahil/Dışarıda bırak  |Veri durumu  |Ek önkullar |
+|Konum  |Kapsamı dahil et/hariç tut  |Veri durumu  |Ek önkoşullar |
 |---------|---------|---------|---------|
-|Exchange e-postayı çevrimiçi olarak gönderme |dağıtım grubu | data-in-motion| Hayır |
-|SharePoint çevrimiçi siteleri   |siteler       | data-at-rest </br> data-in-use | Hayır|
-|OneDrive İş hesapları| hesap veya dağıtım grubu |data-at-rest </br> data-in-use|Hayır|
-|Teams ve kanal iletilerini gönderme     | hesap veya dağıtım grubu |data-in-motion </br> data-in-use |  Hayır       |
-|Bulut Uygulamaları için Microsoft Defender   | bulut uygulama örneği       |data-at-rest         | - [Microsoft dışı bulut uygulamaları için veri kaybı önleme ilkelerini kullanma](dlp-use-policies-non-microsoft-cloud-apps.md#use-data-loss-prevention-policies-for-non-microsoft-cloud-apps)        |
-|Cihazlar  |kullanıcı veya grup         |data-at-rest </br>  data-in-use </br>  data-in-motion         |- [Uç nokta Microsoft 365 kaybı önleme hakkında bilgi](endpoint-dlp-learn-about.md#learn-about-microsoft-365-endpoint-data-loss-prevention) </br>- [Kullanmaya başlayın noktası veri kaybını önlemeyle ilgili bilgiler](endpoint-dlp-getting-started.md#get-started-with-endpoint-data-loss-prevention) </br>- [Mobil cihaz için cihaz ara sunucularını ve İnternet bağlantısı Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
-|Şirket içi depolar (dosya paylaşımları ve SharePoint)    |depo         | data-at-rest         | - [Şirket içi Microsoft 365 önleme hakkında bilgi](dlp-on-premises-scanner-learn.md#learn-about-the-microsoft-365-data-loss-prevention-on-premises-scanner) </br> - [Kullanmaya başlayın kaybı önleme ile birlikte, şirket içi tarayıcı](dlp-on-premises-scanner-get-started.md#get-started-with-the-data-loss-prevention-on-premises-scanner)         |
-|PowerBI| çalışma alanları | data-in-use | Hayır|
+|Çevrimiçi e-posta Exchange |dağıtım grubu | hareket halindeki veriler| Hayır |
+|Çevrimiçi siteleri SharePoint   |Site       | bekleyen veriler </br> kullanımdaki veriler | Hayır|
+|hesapları OneDrive İş| hesap veya dağıtım grubu |bekleyen veriler </br> kullanımdaki veriler|Hayır|
+|Sohbet ve kanal iletilerini Teams     | hesap veya dağıtım grubu |hareket halindeki veriler </br> kullanımdaki veriler |  Hayır       |
+|Bulut Uygulamaları için Microsoft Defender   | bulut uygulaması örneği       |bekleyen veriler         | - [Microsoft dışı bulut uygulamaları için veri kaybı önleme ilkelerini kullanma](dlp-use-policies-non-microsoft-cloud-apps.md#use-data-loss-prevention-policies-for-non-microsoft-cloud-apps)        |
+|Aygıtları  |kullanıcı veya grup         |bekleyen veriler </br>  kullanımdaki veriler </br>  hareket halindeki veriler         |- [uç nokta veri kaybı önleme Microsoft 365 hakkında bilgi edinin](endpoint-dlp-learn-about.md#learn-about-microsoft-365-endpoint-data-loss-prevention) </br>- [Uç nokta veri kaybı önleme ile Kullanmaya başlayın](endpoint-dlp-getting-started.md#get-started-with-endpoint-data-loss-prevention) </br>- [Information Protection için cihaz ara sunucusu ve internet bağlantısı ayarlarını yapılandırma](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
+|Şirket içi depolar (dosya paylaşımları ve SharePoint)    |Depo         | bekleyen veriler         | - [şirket içi tarayıcı Microsoft 365 veri kaybı önleme hakkında bilgi edinin](dlp-on-premises-scanner-learn.md#learn-about-the-microsoft-365-data-loss-prevention-on-premises-scanner) </br> - [Şirket içi tarayıcıda veri kaybı önleme ile Kullanmaya başlayın](dlp-on-premises-scanner-get-started.md#get-started-with-the-data-loss-prevention-on-premises-scanner)         |
+|PowerBI| Çalışma alanları | kullanımdaki veriler | Hayır|
 
-Dağıtım grubuna belirli dağıtım gruplarını dahil Exchange, DLP ilkesi yalnızca o grubun üyelerine yöneliktir. Benzer şekilde, bir dağıtım grubu dışlamak, o dağıtım grubunun tüm üyelerini ilke değerlendirmesinde dışlar. Bir ilkenin kapsamını dağıtım listelerinin, dinamik dağıtım gruplarının ve güvenlik gruplarının üyelerine kapsamyı seçmeyi seçebilirsiniz. DLP ilkesi, bu tür dahil edilmeler ve dışlamaların en fazla 50'sine neden olabilir.
+Exchange belirli dağıtım gruplarını dahil etmeyi seçerseniz, DLP ilkesinin kapsamı yalnızca bu grubun üyeleriyle tamamlanır. Benzer şekilde bir dağıtım grubunu dışlamak, bu dağıtım grubunun tüm üyelerini ilke değerlendirmesinin dışında tutar. İlkenin kapsamını dağıtım listelerinin, dinamik dağıtım gruplarının ve güvenlik gruplarının üyelerine göre belirleyebilirsiniz. DLP ilkesi bu tür 50'den fazla ekleme ve dışlama içeremez.
 
-Belirli site sitelerini veya SharePoint hesaplarını dahil OneDrive veya hariç tutmayı seçerseniz, DLP ilkesi bu tür dahil edilmesi gereken en fazla 100 site ve dışlama içerebilir. Bu sınır mevcut olsa da, kuruluş genelinde bir ilke veya konumların tamamına uygulanan bir ilke uygulayarak bu sınırı aşabilirsiniz.
+Belirli SharePoint siteleri veya OneDrive hesaplarını dahil etmeyi veya hariç tutmayı seçerseniz, DLP ilkesi bu tür 100'den fazla ekleme ve dışlama içeremez. Bu sınır mevcut olsa da, kuruluş genelinde bir ilke veya tüm konumlar için geçerli olan bir ilke uygulayarak bu sınırı aşabilirsiniz.
 
-Belirli kullanıcı hesaplarını veya gruplarını dahil OneDrive hariç tutmayı seçerseniz, DLP ilkesi dahil edilme veya dışlama olarak en fazla 100 kullanıcı hesabı veya 50 grup içere seçebilir.
+Belirli OneDrive hesaplarını veya gruplarını dahil etmeyi veya hariç tutmayı seçerseniz, DLP ilkesi 100'den fazla kullanıcı hesabı veya dahil etme veya dışlama olarak 50 grup içeremez.
 
-### <a name="location-support-for-how-content-can-be-defined"></a>İçeriğin nasıl tanımlan içeriğe sahip olacağını destekleyen konum desteği
+### <a name="location-support-for-how-content-can-be-defined"></a>İçeriğin nasıl tanımlanabileceği için konum desteği
 
-DLP ilkeleri hassas öğeleri hassas bir bilgi türüyle (SIT) veya bir duyarlılık etiketiyle veya bekletme etiketiyle eşleştirerek algılar. Her konum, hassas içerik tanımlamanın farklı yöntemlerini destekler. Bir ilkede konumları birleştirerek, içeriğin nasıl tanımlansa bile tek bir konumda tanımlan bir şekilden nasıl tanımlanlandığı değişebilir. 
+DLP ilkeleri hassas öğeleri hassas bilgi türüyle (SIT) veya duyarlılık etiketiyle veya bekletme etiketiyle eşleştirerek algılar. Her konum, hassas içerik tanımlamanın farklı yöntemlerini destekler. İlkedeki konumları birleştirdiğinizde içeriğin nasıl tanımlandığı, tek bir konumla tanımlanma biçiminden farklı olabilir. 
 
 > [!IMPORTANT]
-> Bir ilke için birden çok konum seçimseniz, içerik tanımı kategorisi için "hayır" değeri "evet" değerinden daha öncelikli olur. Örneğin, yalnızca sitelere SharePoint ilke bir veya birden çok SIT tarafından, duyarlılık etiketine veya bekletme etiketine göre hassas öğelerin algılanabilir. Ancak, sohbet ve kanal ***SharePoint konumlarını*** Teams, ilke yalnızca SIT tarafından hassas öğeleri algılamayı destekler.
+> İlke için birden çok konum seçtiğinizde, içerik tanımı kategorisi için "hayır" değeri "evet" değerinden önceliklidir. Örneğin, yalnızca SharePoint siteleri seçtiğinizde, ilke hassas öğelerin bir veya daha fazla SIT tarafından, duyarlılık etiketiyle veya bekletme etiketiyle algılanmasını destekler. Ancak, SharePoint siteleri seçip sohbet ***ve*** kanal iletileri konumlarını Teams, ilke yalnızca SIT ile hassas öğelerin algılanması için destek sağlar.
 
-|Konum| İçerik SIT tarafından tanımlanabilir| İçerik duyarlılık etiketi olarak tanımlanabilir| İçerik bekletme etiketine göre tanımlanabilir|
+|Konum| İçerik SIT ile tanımlanabilir| İçerik tanımlanabilir duyarlılık etiketi| İçerik bekletme etiketiyle tanımlanabilir|
 |---------|---------|---------|---------|
-|Exchange e-postayı çevrimiçi olarak gönderme|Evet| Evet| Hayır|
-|SharePoint çevrimiçi siteleri| Evet| Evet| Evet|
-|OneDrive İş hesapları| Evet| Evet| Evet|
-|Teams Sohbet ve Kanal iletilerini gönderme | Evet| Hayır| Hayır|
-|Cihazlar |Evet | Evet|  Hayır|
+|Çevrimiçi e-posta Exchange|Evet| Evet| Hayır|
+|Çevrimiçi siteleri SharePoint| Evet| Evet| Evet|
+|hesapları OneDrive İş| Evet| Evet| Evet|
+|Sohbet ve Kanal iletilerini Teams | Evet| Hayır| Hayır|
+|Aygıtları |Evet | Evet|  Hayır|
 |Bulut Uygulamaları için Microsoft Defender | Evet| Evet| Evet|
 |Şirket içi depolar| Evet| Evet| Hayır|
 |PowerBI|Evet | Evet| Hayır|
 
 > [!NOTE]
-> DLP, e-postalarda ve eklerde duyarlılık etiketlerini algılamayı destekler. Bkz. DLP ilkelerde duyarlılık [etiketlerini koşullar olarak kullanma](dlp-sensitivity-label-as-condition.md#use-sensitivity-labels-as-conditions-in-dlp-policies).
+> DLP, e-postalardaki ve eklerdeki duyarlılık etiketlerini algılamayı destekler Bkz. [DLP ilkelerinde duyarlılık etiketlerini koşullar olarak kullanma](dlp-sensitivity-label-as-condition.md#use-sensitivity-labels-as-conditions-in-dlp-policies).
 
 ## <a name="rules"></a>Kurallar
 
@@ -149,300 +149,316 @@ DLP ilkeleri hassas öğeleri hassas bir bilgi türüyle (SIT) veya bir duyarlı
 - How do I tune the behavior of a Policy through the tuning of rules
 - what's in a rule-->
 
-Kurallar, DLP ilkelerinin iş mantığıdır. Bunlar şunları oluşur:
+Kurallar, DLP ilkelerinin iş mantığıdır. Şunlardan oluşur:
 
-- [**Eşlendiğinde**](#conditions) ilkeyi tetikleyen koşullar
-- [**Koşullarla**](#exceptions) ilgili özel durumlar
-- [**İlke**](#actions) tetiklendiğinde eylemleri
-- [**Kullanıcılarınıza,**](#user-notifications-and-policy-tips) bir ilkeyi tetikleyen bir şey yaptığı konusunda bilgi verilmesini sağlar ve onları org'un hassas bilgileri nasıl işlemde olmasını istediği konusunda eğitin
-- [**Yönetici tarafından yapılandırıldığında**](#user-overrides) Kullanıcı Geçersiz Kılmaları, kullanıcıların bir engelleme eylemlerini seçmeli olarak geçersiz k olmasına izin verme
-- [**Olay Bir**](#incident-reports) kural eşleşmesi olduğunda yöneticileri ve diğer önemli paydaşları bilgilendiren raporlar
-- [**Kural değerlendirme**](#additional-options) önceliğini tanımlayan ve daha fazla kural ve ilke işlemeyi durduran Ek Seçenekler.
+- Eşleştirildiğinde ilkeyi tetikleyen [**koşullar**](#conditions)
+- [**Koşulların özel durumları**](#exceptions)
+- [**İlke**](#actions) tetiklendiğinde yapılması gereken eylemler
+- [**Kullanıcılarınızı**](#user-notifications-and-policy-tips) ilkeyi tetikleyen bir işlem yaparken bilgilendirmek ve kuruluşunuzun hassas bilgilerin nasıl ele alındığını öğrenmek için eğitmeye yardımcı olan kullanıcı bildirimleri
+- Yönetici tarafından yapılandırıldığında [**Kullanıcı Geçersiz Kılmaları**](#user-overrides), kullanıcıların bir engelleme eylemini seçmeli olarak geçersiz kılmasına izin verir
+- Kural eşleşmesi gerçekleştiğinde yöneticileri ve diğer önemli paydaşları bilgilendiren [**Olay Raporları**](#incident-reports)
+- Kural değerlendirmesinin önceliğini tanımlayan ve daha fazla kural ve ilke işlemeyi durdurabilen [**Ek Seçenekler**](#additional-options).
 
- İlke bir veya birden çok kural içerir. Kurallar, her ilkede en yüksek öncelikli kuralla başlayarak sırayla yürütülür.
+ İlke bir veya daha fazla kural içerir. Kurallar, her ilkedeki en yüksek öncelikli kuraldan başlayarak sırayla yürütülür.
 
 ### <a name="the-priority-by-which-rules-are-processed"></a>Kuralların işlenme önceliği
 
 #### <a name="hosted-service-workloads"></a>Barındırılan hizmet iş yükleri
 
-Exchange Online, SharePoint Online ve OneDrive İş gibi barındırılan hizmet iş yükleri için, her kurala oluşturulma sırasıyla bir öncelik atanır. Başka bir ifadeyle, ilk oluşturulan kuralın birinci önceliğe, ikinci oluşturulan kuralın ikinci önceliğe sahip olduğu, bu şekilde devam anlamına gelir. 
+Exchange Online, çevrimiçi ve OneDrive İş SharePoint gibi barındırılan hizmet iş yükleri için her kurala oluşturulduğu sırada bir öncelik atanır. Bu, ilk oluşturulan kuralın ilk önceliğe sahip olduğu, ikinci oluşturulan kuralın ikinci önceliğe sahip olduğu vb. anlamına gelir. 
   
 ![Öncelik sırasına göre kurallar](../media/dlp-rules-in-priority-order.png)
 
-İçerik kurallara göre değerlendirildikten sonra, kurallar öncelik sırasına göre işlenir. İçerik birden çok kuralla eşlerise, en kısıtlayıcı *eyleme sahip* olan ilk kural uygulanır. Örneğin, içerik aşağıdaki kuralların hepsiyle eş site olursa, bu en yüksek öncelikli, en kısıtlayıcı kural olduğundan *3* . Kural zorunlu kılındı:
+İçerik kurallara göre değerlendirildiğinde, kurallar öncelik sırasına göre işlenir. İçerik birden çok kuralla eşleşiyorsa, *en* kısıtlayıcı eyleme sahip olan ilk kural değerlendirilir. Örneğin, içerik aşağıdaki kuralların tümüyle eşleşiyorsa, kural *3* en yüksek öncelikli ve en kısıtlayıcı kural olduğundan zorlanır:
   
-- 1. Kural: Yalnızca kullanıcılara haber verenler
-- 2. Kural: Kullanıcılara haber verir, erişimi kısıtlar ve kullanıcının geçersiz kılmalarına izin verir
-- *3. Kural: Kullanıcılara haber verme, erişimi kısıtlama ve kullanıcının geçersiz kılmalarına izin verme*
+- Kural 1: Yalnızca kullanıcılara bildirir
+- Kural 2: Kullanıcılara bildirir, erişimi kısıtlar ve kullanıcı geçersiz kılmalarına izin verir
+- *Kural 3: Kullanıcılara bildirir, erişimi kısıtlar ve kullanıcı geçersiz kılmalarına izin vermez*
 - Kural 4: Erişimi kısıtlar
 
-1, 2 ve 4 kuralları değerlendirilir, ancak uygulanmaz. Bu örnekte, tüm kurallarla ilgili eşleşmeler denetim günlüklerine kaydedilir ve DLP raporlarında gösterilir; ama yalnızca en kısıtlayıcı kural uygulanır.
+Kurallar 1, 2 ve 4 değerlendirilir ancak uygulanmaz. Bu örnekte, tüm kuralların eşleşmeleri denetim günlüklerine kaydedilir ve yalnızca en kısıtlayıcı kural uygulansa bile DLP raporlarında gösterilir.
 
-Belirli bir koruma gereksinimini karşılamak için bir kural kullanabilir ve sonra belirli bir düzenlemeye uymak için gereken kuralların hepsi gibi, ortak koruma gereksinimlerini bir araya group etmek için bir DLP ilkesi kullanabilirsiniz.
+Belirli bir koruma gereksinimini karşılamak için bir kural kullanabilir ve ardından belirli bir düzenlemeye uymak için gereken tüm kurallar gibi ortak koruma gereksinimlerini gruplandırmak için bir DLP ilkesi kullanabilirsiniz.
   
-Örneğin, Sağlık Sigortası Taşınabilirlik ve Sorumluluk Yasası'ne (HIPAA) tabi olan bilgilerin varlığını algılamanıza yardımcı olacak bir DLP ilkeye sahip olabilirsiniz. Bu DLP ilkesi, kuruluş dışından kişilerle paylaşılan bu hassas bilgileri içeren herhangi bir belgeyi (koşullar) bularak ve ardından belgeye erişimi engelleyerek ve bir bildirim (eylemler) göndererek HIPAA verilerini (ne) tüm SharePoint Online sitelerinde ve tüm OneDrive İş sitelerinde (nerede) korumaya yardımcı olabilir. Bu gereksinimler tek tek kurallar olarak saklanır ve yönetim ve raporlamayı basitleştirmek için DLP ilkesi olarak birlikte gruptur.
+Örneğin, Sağlık Sigortası Taşınabilirlik ve Sorumluluk Yasası'na (HIPAA) tabi bilgilerin varlığını algılamanıza yardımcı olan bir DLP ilkeniz olabilir. Bu DLP ilkesi, kuruluşunuzun dışındaki kişilerle paylaşılan bu hassas bilgileri içeren herhangi bir belgeyi (koşullar) bulup belgeye erişimi engelleyerek ve bir bildirim göndererek tüm SharePoint Çevrimiçi sitelerde ve tüm OneDrive İş sitelerinde (nerede) HIPAA verilerinin (ne olduğu) korunmasına yardımcı olabilir. Bu gereksinimler tek tek kurallar olarak depolanır ve yönetimi ve raporlamayı basitleştirmek için bir DLP ilkesi olarak gruplandırılır.
   
-![Diyagram, DLP ilkesinde konumlar ve kurallar olduğunu gösterir](../media/c006860c-2d00-42cb-aaa4-5b5638d139f7.png)
+![Diyagram, DLP ilkesinin konumlar ve kurallar içerdiğini gösterir](../media/c006860c-2d00-42cb-aaa4-5b5638d139f7.png)
 
 #### <a name="for-endpoints"></a>Uç noktalar için
 
-Uç noktalarda kuralların önceliği, oluşturulma sırasına göre de atanır. Başka bir ifadeyle, ilk oluşturulan kuralın birinci önceliğe, ikinci oluşturulan kuralın ikinci önceliğe sahip olduğu, bu şekilde devam anlamına gelir. 
+Uç noktalardaki kuralların önceliği, oluşturulduğu sıraya göre de atanır. Bu, ilk oluşturulan kuralın ilk önceliğe sahip olduğu, ikinci oluşturulan kuralın ikinci önceliğe sahip olduğu vb. anlamına gelir. 
 
-Uç nokta üzerinde bir dosya birden çok DLP ilkeleriyle eşleildiğinde, içerikte zorunlu kılınan ilk kural kısıtlamalarla etkinleştirilir. Örneğin, içerik aşağıdaki kuralların hepsiyle eş site olursa, bu kısıtlamayla yapılandırılan en yüksek öncelikli kural olduğundan Kural *2 zorunlu kılındı*.
-  
-- 1. Kural: Yalnızca kullanıcılara haber verenler
-- *2. Kural: Kullanıcılara haber verir, erişimi kısıtlar ve kullanıcının geçersiz kılmalarına izin verir*
-- 3. Kural: Kullanıcılara haber verme, erişimi kısıtlama ve kullanıcının geçersiz kılmalarına izin verme
-- Kural 4: Erişimi kısıtlar
+Uç nokta üzerindeki bir dosya birden çok DLP ilkesiyle eşleştiğinde, [uç nokta etkinliklerinde](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on) en kısıtlayıcı zorlamayla etkinleştirilen ilk kural, içeriğe uygulanan kuraldır. Örneğin, içerik aşağıdaki kuralların tümüyle eşleşiyorsa, en kısıtlayıcı olduğu için 2. kural diğer kurallardan önceliklidir.
 
-1, 3 ve 4 kuralları değerlendirilir, ancak uygulanmaz. Bu örnekte, tüm kurallarla ilgili eşleşmeler denetim günlüklerine kaydedilir ve DLP raporlarında gösterilir; ama yalnızca kısıtlamalı ilk kural uygulanır.
+- Kural 1: Yalnızca tüm etkinlikleri denetler 
+- *Kural 2: tüm etkinlikleri engeller*
+- Kural 3: Son kullanıcının geçersiz kılma seçeneğiyle tüm etkinlikleri engeller
 
-Uç noktalara uygulanan kurallar için, uygulanırken istediğiniz kısıtlamaların uygulandığından emin olmak için kural önceliğini yeniden sırala özelliğiden faydalanın.
+Aşağıdaki örnekte Kural 1, en kısıtlayıcı olduğu için diğer eşleşen kurallardan önceliklidir.
 
-### <a name="conditions"></a>Koşullar
+- *Kural 1: etkinliği engeller ve kullanıcının geçersiz kılınmasına izin vermez*
+- Kural 2: etkinliği engeller ve kullanıcı geçersiz kılmalarına izin verir
+- Kural 3: Yalnızca tüm etkinlikleri denetler
+- Kural 4: zorlama yok
 
-Koşullar kapsayıcıdır ve kuralın neleri baktıracaklarını ve bu öğelerin hangi bağlamda kullanıla hazır olduğunu tanımladığınız yerdir. Kuralın &#8212; bir öğe bu şekilde göründüğünü ve böyle bir öğenin &#8212; bir eşleşme  olduğunu ve ilkede kalan eylemlerin bu öğeye alınması gerektiğini söyler. Farklı risk düzeylerine farklı eylemler atamak için koşullar kullanabilirsiniz. Örneğin, şirket içinde paylaşılan hassas içerik daha düşük bir risk olabilir ve kuruluş dışındaki kişilerle paylaşılan hassas içerikten daha az eylem gerektirir.
+Diğer tüm kurallar değerlendirilir ancak eylemleri uygulanmaz. Denetim günlükleri, dosyaya uygulanan en kısıtlayıcı kuralı gösterir. Eşleşen birden fazla kural varsa ve bunlar eşit derecede kısıtlayıcıysa, ilke ve kural önceliği dosyaya hangi kuralın uygulanacağını yönetir.
+
+Uç noktalar için, DLP'nin desteklenen tüm etkinlikler için gerçekleştirdiği eylemleri belirli bir ekleme koşulları kümesi için tek bir kuralda yapılandırabilirsiniz.
+
+### <a name="conditions"></a>Koşul -ları
+
+Koşullar kapsayıcıdır ve kuralın ne aramasını istediğinizi ve bu öğelerin kullanıldığı bağlamı tanımladığınız yerdir. Kurala &#8212;, *buna* benzeyen ve *bu şekilde kullanılan* bir öğe bulduğunuzda &#8212; bir eşleşme olduğunu ve ilkedeki eylemlerin geri kalanının bu öğe üzerinde gerçekleştirilmesi gerektiğini söyler. Farklı risk düzeylerine farklı eylemler atamak için koşulları kullanabilirsiniz. Örneğin, şirket içinde paylaşılan hassas içerik daha düşük riskli olabilir ve kuruluş dışındaki kişilerle paylaşılan hassas içerikten daha az eylem gerektirebilir.
 
 > [!NOTE]
-> Ana kuruluşun Active Directory'sinde veya başka bir kiracıda konuk hesabı olmayan Azure Active Directory, kuruluş içindeki kişiler olarak kabul edilir. 
+> Bir konak kuruluşun Active Directory'sinde veya Azure Active Directory kiracısında konuk olmayan hesapları olan kullanıcılar, kuruluşun içindeki kişiler olarak kabul edilir. 
 
 #### <a name="content-contains"></a>İçerik içeriği
 
- Tüm konumlar İçerik içerir **koşullarını** destekler. Bu (mantıksal VEYA) işleçlerden herhangi **birini veya Tüm** **bu (mantıksal** VE) işleçleri kullanarak, her içerik türünün birden çok örneğini seçmeye ve koşulları daha da daraltabilirsiniz:
+ Tüm konumlar **İçerik içerir** koşulunu destekler. Her içerik türünün birden çok örneğini seçebilir ve **bunlardan herhangi birini** (mantıksal VEYA) veya **Bunların tümü** (mantıksal AND) işleçlerini kullanarak koşulları daha da daraltabilirsiniz:
 
 - [hassas bilgi türleri](sensitive-information-type-learn-about.md#learn-about-sensitive-information-types)
 - [duyarlılık etiketleri](sensitivity-labels.md)
 - [bekletme etiketleri](retention.md#using-a-retention-label-as-a-condition-in-a-dlp-policy)
 
-İlkeyi [uygulamak istediğiniz](#location-support-for-how-content-can-be-defined) konumlara bağlı olarak bu ilkeyi seçin. 
+ilkeyi uygulamayı seçtiğiniz [konumlara](#location-support-for-how-content-can-be-defined) bağlı olarak. 
 
-Kural yalnızca, seçki olarak tüm duyarlılık **etiketlerinin ve bekletme etiketlerinin** **varlığı için** bilgi edinecek. 
+Kural yalnızca seçtiğiniz **duyarlılık etiketlerinin** ve **bekletme etiketlerinin** varlığını arar. 
 
-SITS'ler, gerektiğinde [**değiştirebilecekleri**](https://www.microsoft.com/videoplayer/embed/RE4Hx60) önceden tanımlanmış bir güven düzeyine sahip olur. Daha fazla bilgi için bkz [. Güven düzeyleri hakkında daha fazla bilgi](sensitive-information-type-learn-about.md#more-on-confidence-levels). 
+SID'ler, gerekirse değiştirebileceğiniz önceden tanımlanmış bir [**güvenilirlik düzeyine**](https://www.microsoft.com/videoplayer/embed/RE4Hx60) sahiptir. Daha fazla bilgi için bkz. [Güvenilirlik düzeyleri hakkında daha fazla bilgi](sensitive-information-type-learn-about.md#more-on-confidence-levels). 
 
 > [!IMPORTANT]
-> SITS'lerin en fazla benzersiz örnek sayısı parametresini tanımlamanın iki farklı yolu vardır. Daha fazla bilgi edinmek için bkz [. SIT için örnek sayısı desteklenen değerler](create-a-custom-sensitive-information-type.md#instance-count-supported-values-for-sit).
+> SID'lerin, en fazla benzersiz örnek sayısı parametresini tanımlamanın iki farklı yolu vardır. Daha fazla bilgi edinmek için bkz [. SIT için örnek sayısı desteklenen değerler](create-a-custom-sensitive-information-type.md#instance-count-supported-values-for-sit).
 
 #### <a name="condition-context"></a>Koşul bağlamı
 
-Kullanılabilir bağlam seçenekleri, seçtiğiniz konuma bağlı olarak değişir. Birden çok konum seçersiniz, yalnızca konumların ortak koşulları kullanılabilir.
+Kullanılabilir bağlam seçenekleri, seçtiğiniz konuma bağlı olarak değişir. Birden çok konum seçerseniz, yalnızca konumların ortak olduğu koşullar kullanılabilir.
 
-##### <a name="conditions-exchange-supports"></a>Koşullar Exchange destekler
+##### <a name="conditions-exchange-supports"></a>Exchange tarafından desteklenen koşullar
 
 - İçerik içeriği
-- İçerik paylaşılan yer Microsoft 365
-- İçerik alındı
-- Gönderen IP adresi:
-- Gönderen ilke ipucu geçersiz k oldu mu
-- Gönderen:
-- Gönderen etki alanı:
+- İçerik Microsoft 365
+- İçerik şu kaynaktan alınır:
+- Gönderen IP adresi
+- Gönderen ilke ipucunu geçersiz kıldı mı?
+- Gönderen
+- Gönderen etki alanı
 - Gönderen adresi sözcükler içeriyor
-- Gönderen adresi desenler içerir
-- Sender AD Özniteliği sözcük veya tümcecik içeriyor
-- Sender AD Özniteliği desenlere eşler
-- Gönderen üyesidir
+- Gönderen adresi desenler içeriyor
+- Sender AD Özniteliği sözcükler veya tümcecikler içeriyor
+- Gönderen AD Özniteliği desenleri eşleştirir
+- Gönderen,
 - E-posta eklerinin içeriği taranamadı
-- Herhangi bir e-posta ekin içeriğinin tarama işlemi tamamlanmadı
-- Ek parola korumalıdır
+- E-posta eklerinin içeriği taramayı tamamlamadı
+- Ek parola korumalı
 - Dosya uzantısı
-- Alıcı şu üyenin üyesidir:
-- Alıcı etki alanı:
+- Alıcı,
+- Alıcı etki alanı
 - Alıcı
 - Alıcı adresi sözcükler içeriyor
-- Alıcı adresi desenlere eşler
-- Alıcı AD Özniteliği sözcük veya tümcecik içeriyor
-- Alıcı AD Özniteliği desenlere eşler
-- Belge adı sözcük veya tümcecik içeriyor
-- Belge adı desenlere eşler
-- Belge özelliği şu şekildedir:
-- Belge boyutu eşit veya büyüktür
-- Belge içeriği sözcükler veya tümcecikler içerir
-- Belge içeriği desenlere eşler
-- Konu sözcük veya tümcecik içeriyor
-- Konu eşleşmeleri desenlerini
-- Konu veya Gövde sözcük veya tümcecik içeriyor
-- Konu veya gövde desenlerini eşler
+- Alıcı adresi desenleri eşleştirir
+- Alıcı AD Özniteliği sözcükler veya tümcecikler içeriyor
+- Alıcı AD Özniteliği desenleri eşleştirir
+- Belge adı sözcükler veya tümcecikler içeriyor
+- Belge adı desenler ile eşleşir
+- Belge özelliği şudur:
+- Belge boyutu eşittir veya büyüktür
+- Belge içeriği sözcükler veya tümcecikler içeriyor
+- Belge içeriği desenler ile eşleşir
+- Konu sözcükleri veya tümcecikleri içerir
+- Konu desenleri eşleştirir
+- Konu veya Gövde sözcükleri veya tümcecikleri içerir
+- Konu veya gövde desenleri eşleştirir
 - İçerik karakter kümesi sözcükler içeriyor
-- Üst bilgi sözcük veya tümcecik içeriyor
-- Üst bilgi eşleşme düzenleri
+- Üst bilgi sözcükler veya tümcecikler içeriyor
+- Üst bilgi desenleri eşleştirir
 - İleti boyutu eşittir veya büyüktür
 - İleti türü:
-- İletinin önem öneme sahip olduğu
+- İletinin önemi
 
-##### <a name="conditions-sharepoint-supports"></a>Koşullar SharePoint destekler
+##### <a name="conditions-sharepoint-supports"></a>SharePoint destekleyen koşullar
  
 - İçerik içeriği
-- İçerik paylaşılan yer Microsoft 365
+- İçerik Microsoft 365
+- Oluşturan belge
+- Üyesi tarafından oluşturulan belge
+- Belge adı sözcükler veya tümcecikler içeriyor
+- Belge adı desenler ile eşleşir
+- Belge boyutu üst
+- Belge özelliği şudur:
 - Dosya uzantısı
-- Belge özelliği şu şekildedir:
 
-##### <a name="conditions-onedrive-accounts-supports"></a>Hesap OneDrive desteklemektedir
+##### <a name="conditions-onedrive-accounts-supports"></a>Hesapların desteklediği koşullar OneDrive
 
 - İçerik içeriği
-- İçerik paylaşılan yer Microsoft 365
+- İçerik Microsoft 365
+- Oluşturan belge
+- Üyesi tarafından oluşturulan belge
+- Belge adı sözcükler veya tümcecikler içeriyor
+- Belge adı desenler ile eşleşir
+- Belge boyutu üst
+- Belge özelliği şudur:
 - Dosya uzantısı
-- Belge özelliği şu şekildedir:
 
-##### <a name="conditions-teams-chat-and-channel-messages-supports"></a>Sohbet Teams kanal iletilerinin desteklediği koşullar
-
-- İçerik içeriği
-- İçerik paylaşılan yer Microsoft 365
-- Gönderen: (Önizleme)
-- Gönderen etki alanı : (Önizleme)
-- Alıcı etki alanı : (Önizleme)
-- Alıcı: (Önizleme)
-
-##### <a name="conditions-devices-supports"></a>Cihazlar'ın desteklediği koşullar
+##### <a name="conditions-teams-chat-and-channel-messages-supports"></a>Sohbet ve kanal iletilerinin desteklediği koşullar Teams
 
 - İçerik içeriği
-- Bkz. [İzlemek ve üzerinde işlem gerçekleştirebilirsiniz uç nokta etkinlikleri](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on)
+- İçerik Microsoft 365
+- Gönderen 
+- Gönderen etki alanı 
+- Alıcı etki alanı 
+- Alıcı 
 
-##### <a name="conditions-microsoft-defender-for-cloud-apps-supports"></a>Koşullar Microsoft Defender for Cloud Apps destekler
+##### <a name="conditions-devices-supports"></a>Cihazların desteklediği koşullar
 
 - İçerik içeriği
-- İçerik paylaşılan yer Microsoft 365
+- Bkz [. üzerinde izleyebileceğiniz ve eylem gerçekleştirebileceğiniz uç nokta etkinlikleri](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on)
 
-##### <a name="conditions-on-premises-repositories-supports"></a>Şirket içi depolar koşulları desteklemektedir
+##### <a name="conditions-microsoft-defender-for-cloud-apps-supports"></a>Microsoft Defender for Cloud Apps desteklediği koşullar
+
+- İçerik içeriği
+- İçerik Microsoft 365
+
+##### <a name="conditions-on-premises-repositories-supports"></a>Şirket içi depoların desteklediği koşullar
 
 - İçerik içeriği
 - Dosya uzantısı
-- Belge özelliği şu şekildedir:
+- Belge özelliği şudur:
 
-##### <a name="conditions-powerbi-supports"></a>PowerBI'nin desteklediği koşullar
+##### <a name="conditions-powerbi-supports"></a>PowerBI'ın desteklediği koşullar
 
 - İçerik içeriği
 
 #### <a name="condition-groups"></a>Koşul grupları
 
-Bazen tek bir SIT tarafından tanımlanan ABD Sosyal Güvenlik Numarası içeren tüm içerik gibi yalnızca bir şeyi tanımlamak için bir kurala ihtiyacınız olabilir. Ancak, tanımlamaya çalıştığı öğe türlerinin daha karmaşık olduğu ve dolayısıyla tanımlanması daha zor olan birçok senaryoda, koşulları tanımlarken daha fazla esneklik gereklidir.
+Bazen, tek bir SIT ile tanımlanan ABD Sosyal Güvenlik Numarası içeren tüm içerikler gibi yalnızca bir şeyi tanımlamak için bir kurala ihtiyacınız vardır. Ancak tanımlamaya çalıştığınız öğe türlerinin daha karmaşık olduğu ve bu nedenle tanımlanmasının daha zor olduğu birçok senaryoda, koşulları tanımlamada daha fazla esneklik gerekir.
 
-Örneğin, ABD Sağlık Sigortası Yasası'nın (HIPAA) içeriğini tanımlamak için:
+Örneğin, ABD Sağlık Sigortası Yasası'na (HIPAA) tabi içeriği tanımlamak için şunları aramanız gerekir:
   
-- ABD Sosyal Güvenlik Numarası veya A.S. Yaptırım Daire (DEA) Numarası gibi belirli türlerde hassas bilgileri içeren içerik.
+- ABD Sosyal Güvenlik Numarası veya Uyuşturucu Uygulama Kurumu (DEA) Numarası gibi belirli türde hassas bilgiler içeren içerik.
     
     VE
     
-- Hastanın bakımı veya tıbbi hizmetlerin açıklamaları hakkında iletişimler gibi, tanımlaması daha zor içerikler sağlanır. Bu içeriğin belirlenmesi, Uluslararası Teklif Sınıflandırması (ICD-9-CM veya ICD-10-CM) gibi büyük anahtar sözcük listelerinden eşleşen anahtar sözcükler gerektirir.
+- Bir hastanın bakımıyla ilgili iletişim veya sağlanan tıbbi hizmetlerin açıklamaları gibi tanımlanması daha zor olan içerikler. Bu içeriğin tanımlanması için Uluslararası Hastalık Sınıflandırması (ICD-9-CM veya ICD-10-CM) gibi büyük anahtar sözcük listelerinden anahtar sözcüklerin eşleşmesi gerekir.
     
-Bu tür verileri, koşulları gruplama ve gruplar arasında mantıksal işleçler (VE, VEYA) kullanarak tanımlayabilirsiniz.
+Bu tür verileri, koşulları gruplandırarak ve gruplar arasında mantıksal işleçler (AND, OR) kullanarak tanımlayabilirsiniz.
     
-**A.B.D. Sağlık Sigortası Yasası (HIPPA)** için koşullar aşağıdaki gibi grup gruplandı:
+**ABD Sağlık Sigortası Yasası (HIPPA)** için koşullar şu şekilde gruplandırılır:
 
 ![HIPPA ilke koşulları](../media/dlp-rules-condition-groups-booleans.png)
 
-İlk grup tanıyı tanı alan SITS'ler ve ikinci grup tanıyı tanı alan SITS'leri içerir.
+İlk grup, ve tek tek tanımlayan SCT'leri, ikinci grup ise tıbbi tanıyı tanımlayan SID'leri içerir.
 
-### <a name="exceptions"></a>Özel Durumlar
+### <a name="exceptions"></a>Özel durum
 
-Kurallarda, özel durumlar, bir öğeyi ilkenin dışında tutmak için kullanılan koşulları tanımlar. Mantıksal olarak, kapsayıcı koşullar ve bağlamdan sonra değerlendirilen özel kullanım koşulları. Kurala, &#8212; gibi görünen ve bu şekilde kullanılan bir öğenin bir eşleşme olması  ve ilkenin diğer eylemlerinin  bu öğe üzerinde gerçek dışı olması gerektiği ***(... hariç***) açık &#8212; 
+Kurallarda özel durumlar, bir öğeyi ilkenin dışında tutmak için kullanılan koşulları tanımlar. Mantıksal olarak, kapsayıcı koşullar ve bağlamdan sonra değerlendirilen özel koşullar. Kurala &#8212; böyle *görünen ve bir* *eşleşme gibi kullanılan* bir öğe bulduğunuzda ve ilkedeki eylemlerin geri kalan kısmının bu öğe üzerinde gerçekleştirilip gerçekleştirilmediğini söyler&#8212; 
 
-Örneğin HIPPA ilkesine uygun olarak, Aşağıdaki gibi Belçika sürücüleri lisans numarası içeren tüm öğeyi dışarıda tutmak için kuralı değiştirebiliriz:
+Örneğin, HIPPA ilkesine uygun olarak, belçika sürücü lisans numarası içeren herhangi bir öğeyi dışlamak için aşağıdaki gibi kuralı değiştirebiliriz:
 
-![Dışlamaların olduğu HIPPA ilkesi](../media/dlp-rule-exceptions.png)
+![Dışlamalar içeren HIPPA ilkesi](../media/dlp-rule-exceptions.png)
 
-Konum tarafından desteklenen özel durumlar koşulları, tüm ekleme koşullarıyla aynıdır ve desteklenen her koşula "Tek fark" eklenmesidir. Kural yalnızca özel durumlar içeriyorsa, dışlama ölçütlerine uyan tüm e-postalara veya dosyalara uygulanır.
+Konum tarafından desteklenen özel durum koşulları, tüm ekleme koşullarıyla aynıdır ve tek fark desteklenen her koşula "Eğer hariç" öğesinin önceden eklenmesidir. Kural yalnızca özel durumlar içeriyorsa, dışlama ölçütlerini karşılamayan tüm e-postalara veya dosyalara uygulanır.
 
-Tüm konumlar kapsayıcı koşulu destekleyenin:
+Tüm konumlar kapsayıcı koşulu desteklediği gibi:
 
 - İçerik içeriği
 
-bunun istisnası şu olabilir:
+özel durum şöyle olacaktır:
 
-- **İçeriğin içeriği** hariç 
+- **İçeriğin** 
 
-### <a name="actions"></a>Eylemler 
+### <a name="actions"></a>Eylem 
 
-Kapsayıcı ***koşullar** _ ve özel durumlar filtreleri ile bunu yapan her öğe _**_, kurala uygulanan kuralda _**_ tanımlanmış tüm eylemlere sahip olacaktır. Eylemi desteklemek için gerekli seçenekleri yapılandırmalısiniz. Örneğin, _Exchange _ *Restrict erişimi* ile seçin veya Microsoft 365 konumlar* eylemini şifrelersanız, şu seçeneklerden birini seçmeniz gerekir:
+Kapsayıcı ***koşullar** _ ve özel _*_durum_*_ filtreleri aracılığıyla bunu yapan tüm öğelere, kuralda tanımlanan _*_tüm eylemler_*_ uygulanır. Eylemi desteklemek için gerekli seçenekleri yapılandırmanız gerekir. Örneğin, _ *Erişimi kısıtla veya Microsoft 365 konumlarındaki içeriği şifrele** eylemiyle Exchange seçerseniz şu seçenekler arasından seçim yapmanız gerekir:
 
-- Kullanıcıların paylaşılan içerikler, SharePoint, OneDrive ve paylaşılan Teams engelleme
-    - Herkesi engelle. Yalnızca içerik sahibi, son değiştirici ve site yöneticisi erişim iznine sahip olmaya devam eder
-    - Yalnızca kuruluş dışından kişi engelin. Kurum içindeki kullanıcılar da erişime sahip olmaya devam edecektir.
-- E-posta iletilerini şifrele (yalnızca e-posta iletileri Exchange)
+- Kullanıcıların paylaşılan SharePoint, OneDrive ve Teams içeriğine erişmesini engelleme
+    - Herkesi engelleyin. Yalnızca içerik sahibi, son değiştirici ve site yöneticisinin erişimi devam eder
+    - Yalnızca kuruluşunuzun dışındaki kişileri engelleyin. Kuruluşunuz içindeki kullanıcıların erişimi devam eder.
+- E-posta iletilerini şifreleme (yalnızca Exchange içeriği için geçerlidir)
 
-Bir kuralda kullanılabilen eylemler, seçilmiş olan konumlara bağlıdır. İlkenin uygulanıyor olması için yalnızca bir konum seçerseniz, kullanılabilir eylemler aşağıda listelenmiştir.
+Bir kuralda kullanılabilen eylemler, seçilen konumlara bağlıdır. İlkenin uygulanacağı tek bir konum seçerseniz, kullanılabilir eylemler aşağıda listelenmiştir.
 
 > [!IMPORTANT]
-> SharePoint Online ve OneDrive İş konumları için, hassas bilgiler algılandıktan hemen sonra, belgenin tüm dış kullanıcılar için paylaşılıyor olup olmadığına bakılmaksızın, iç kullanıcılar belgeye erişmeye devam eder.
+> SharePoint Çevrimiçi ve OneDrive İş konumları için, belgenin tüm dış kullanıcılar için paylaşılıp paylaşılmadığına bakılmaksızın, hassas bilgiler algılandığında belgeler proaktif olarak engellenir ve iç kullanıcılar belgeye erişmeye devam eder.
 
-#### <a name="exchange-location-actions"></a>Exchange eylemleri
+#### <a name="exchange-location-actions"></a>konum eylemlerini Exchange
 
-- Belirli konumlarda erişimi kısıtlama veya Microsoft 365 şifreleme
+- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
 - Üst bilgileri ayarlama
-- Üst bilgi kaldır
-- İletiyi belirli kullanıcılara yönlendirme
+- Üst bilgiyi kaldır
+- İletiyi belirli kullanıcılara yeniden yönlendirme
 - Onay için iletiyi gönderenin yöneticisine iletme
 - Onay için iletiyi belirli onaylayanlara iletme
-- Alıcıyı Son kutusuna ekleme
+- Alıcıyı Alıcı kutusuna ekleme
 - Bilgi kutusuna alıcı ekleme
 - Gizli kutusuna alıcı ekleme
 - Gönderenin yöneticisini alıcı olarak ekleme
 - O365 İleti Şifrelemesi ve hak koruması kaldırıldı
-- Ön e-posta Konusunu Hazırlama
-- E-posta Konusunu Değiştirme
-- HTML Yasal Uyarı ekleme
+- Önceden Ekli E-posta Konusu
+- E-posta Konusunu Değiştir
+- HTML Bildirimi Ekle
 
-#### <a name="sharepoint-sites-location-actions"></a>SharePoint sitesi konum eylemlerini nasıl gerçekleştirebilirsiniz?
+#### <a name="sharepoint-sites-location-actions"></a>Sitelerin konum eylemlerini SharePoint
 
-- Belirli konumlarda erişimi kısıtlama veya Microsoft 365 şifreleme
+- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
 
-#### <a name="onedrive-account-location-actions"></a>OneDrive konumu eylemlerini geri seçin
+#### <a name="onedrive-account-location-actions"></a>hesap konumu eylemlerini OneDrive
 
-- Belirli konumlarda erişimi kısıtlama veya Microsoft 365 şifreleme
+- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
 
-#### <a name="teams-chat-and-channel-messages-actions"></a>Teams Sohbet ve Kanal İletileri eylemlerini geri gönderme
+#### <a name="teams-chat-and-channel-messages-actions"></a>Sohbet ve Kanal İletileri eylemlerini Teams
 
-- Belirli konumlarda erişimi kısıtlama veya Microsoft 365 şifreleme
+- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
 
-#### <a name="devices-actions"></a>Cihazlar eylemleri
+#### <a name="devices-actions"></a>Cihaz eylemleri
 
-- Mobil cihazlarda etkinlikleri denetleme Windows kısıtlama
+- Windows cihazlarda etkinlikleri denetleme veya kısıtlama
 
-Bu ayarları kullanmak için **, DLP** ayarlarında ve bu ayarları kullanmak istediğiniz ilkede seçenekleri yapılandırmaniz gerekir. Daha fazla [bilgi için bkz. Kısıtlanmış uygulamalar ve](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) uygulama grupları.
+Bu ayarları kullanmak için **, DLP ayarlarında** ve bunları kullanmak istediğiniz ilkede seçenekleri yapılandırmanız gerekir. Daha fazla bilgi için bkz [. Kısıtlı uygulamalar ve uygulama grupları](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) .
 
-Cihaz konumu birçok alt etkinleştirme (koşullar) ve eylem sağlar. Daha fazla bilgi edinmek için [bkz. İzlemek ve üzerinde işlem gerçekleştirebilirsiniz uç nokta etkinlikleri](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on).
+Cihazların konumu birçok alt etkinlik (koşul) ve eylem sağlar. Daha fazla bilgi edinmek için bkz [. İzleyebileceğiniz ve üzerinde işlem yapabileceğiniz uç nokta etkinlikleri](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on).
 
-Belirli cihazlarda **etkinlikleri denetle** veya kısıtla Windows, hizmet etki alanı veya tarayıcıya göre kullanıcı etkinliklerini kısıtlayabilirsiniz ve DLP'nin gerçekleştirmektedir:
+**Windows cihazlardaki etkinlikleri denetle veya kısıtla'yı** seçtiğinizde, kullanıcı etkinliklerini hizmet etki alanına veya tarayıcıya göre kısıtlayabilir ve DLP'nin gerçekleştirdiği eylemlerin kapsamını belirleyebilirsiniz:
 
 - Tüm uygulamalar
-- Tanımladığınız kısıtlı uygulamaların listesiyle
-- Tanımladığınız kısıtlı uygulama grubu (önizleme).
+- Tanımladığınız kısıtlı uygulamaların listesine göre
+- Tanımladığınız kısıtlı bir uygulama grubu (önizleme).
 
 ##### <a name="service-domain-and-browser-activities"></a>Hizmet etki alanı ve tarayıcı etkinlikleri
 
-Bulut hizmeti etki alanlarına ve İzin Ver **/** Engelle tarayıcılar  listesini (bkz. Tarayıcı ve hassas verilere yönelik etki alanı kısıtlamalarına [bakın)](dlp-configure-endpoint-settings.md#browser-and-domain-restrictions-to-sensitive-data) yapılandırırsanız ve kullanıcı korumalı bir dosyayı bulut hizmeti etki alanına karşıya yüklemeyi veya izin verilmeyen bir tarayıcıdan erişmeyi denerseniz, `Audit only`ilke eylemlerini ' veya `Block with override``Block` etkinliği yapılandırabilirsiniz.
+**İzin Ver/Engelle bulut hizmeti etki alanlarını** ve **İzin Verilmeyen tarayıcılar** listesini yapılandırdığınızda (bkz [. Hassas verilere yönelik tarayıcı ve etki alanı kısıtlamaları](dlp-configure-endpoint-settings.md#browser-and-domain-restrictions-to-sensitive-data)) ve kullanıcı korumalı bir dosyayı bulut hizmeti etki alanına yüklemeyi veya izin verilmeyen bir tarayıcıdan erişmeyi denediğinde, ilke eylemini , `Block with override`veya `Block` etkinliği olarak `Audit only`yapılandırabilirsiniz.
 
 ##### <a name="file-activities-for-all-apps"></a>Tüm uygulamalar için dosya etkinlikleri
 
-Tüm **uygulamalar için dosya etkinlikleri seçeneğiyle** , Dosya etkinliklerini kısıtlama **veya** Belirli etkinliklere **kısıtlama uygulama seçeneğini belirleyin**. Belirli etkinliklere kısıtlama uygulamayı seçerek, kullanıcı DLP korumalı bir öğeye eriştiğinde burada sizin eylemleriniz uygulanır. DLP'ye şu `Block with override``Block` kullanıcı `Audit only`etkinlikleri için , (eylemler) anlatabilirsiniz:
+**Tüm uygulamalar için Dosya etkinlikleri** seçeneğiyle **, Dosya etkinliklerini kısıtlama** veya **Belirli etkinliklere kısıtlama uygula'yı** seçersiniz. Belirli etkinliklere kısıtlama uygulamayı seçtiğinizde, burada seçtiğiniz eylemler bir kullanıcı DLP korumalı bir öğeye eriştiğinde uygulanır. Bu kullanıcı etkinliklerinde DLP'ye `Audit only`, `Block with override`( `Block` eylemleri) söyleyebilirsiniz:
 
 - **Panoya kopyala**
-- **USB çıkarılabilir sürücüye kopyala** 
+- **USB çıkarılabilir sürücüye kopyalama** 
 - **Ağ paylaşımına kopyalama**
-- **Yazdır**
-- **Izin verilmeyen bir uygulama kullanarak kopyalama Bluetooth taşıma**
+- **Yazdırma**
+- **İzin verilmeyen bir Bluetooth uygulamasını kullanarak kopyalama veya taşıma**
 - **Uzak masaüstü hizmetleri**
 
 
-##### <a name="restricted-app-activities"></a>Kısıtlanmış uygulama etkinlikleri  
+##### <a name="restricted-app-activities"></a>Kısıtlı uygulama etkinlikleri  
 
-Önceden Izin verilmeyen uygulamalar olarak adlandırılan bu uygulamalara kısıtlama yapmak istediğiniz Uç Nokta DLP ayarlarında bir uygulama listesi tanımlarsiniz. Bir kullanıcı listedeki bir uygulamayı kullanarak DLP korumalı bir dosyaya erişmeye çalışırsa, `Audit only`bunun için , veya `Block with override`etkinliği `Block` seçebilirsiniz. Uygulama kısıtlanmış uygulama **grubunun bir üyesi** ise, Kısıtlanmış uygulama etkinlikleri içinde tanımlanan DLP eylemleri geçersiz kılınır. Ardından, kısıtlanmış uygulama grubunda tanımlanan eylemler uygulanır.
+Daha önce İzin verilmeyen uygulamalar olarak adlandırılan uygulama listesini, kısıtlama uygulamak istediğiniz Uç Nokta DLP ayarlarında tanımlarsınız. Kullanıcı, listedeki bir uygulamayı kullanarak DLP korumalı bir dosyaya erişmeye çalıştığında, , `Block with override`veya `Block` etkinliği yapabilirsiniz`Audit only`. **Kısıtlı uygulama etkinliklerinde** tanımlanan DLP eylemleri, uygulama kısıtlı uygulama grubunun üyesiyse geçersiz kılınabilir. Ardından kısıtlı uygulama grubunda tanımlanan eylemler uygulanır.
 
-##### <a name="file-activities-for-apps-in-restricted-app-groups-preview"></a>Kısıtlı uygulama gruplarında uygulamalar için dosya etkinlikleri (önizleme)
+##### <a name="file-activities-for-apps-in-restricted-app-groups-preview"></a>Kısıtlı uygulama gruplarındaki uygulamalar için dosya etkinlikleri (önizleme)
 
-Kısıtlanmış uygulama gruplarınızı Uç Nokta DLP ayarlarında tanımlar ve ilkelerinize kısıtlanmış uygulama grupları eklersiniz. İlkeye kısıtlanmış bir uygulama grubu eklerken, şu seçeneklerden birini seçmeniz gerekir:
+Sınırlı uygulama gruplarınızı Uç Nokta DLP ayarlarında tanımlar ve ilkelerinize kısıtlanmış uygulama grupları eklersiniz. bir ilkeye kısıtlı bir uygulama grubu eklediğinizde, şu seçeneklerden birini belirlemeniz gerekir:
 
 - Dosya etkinliğini kısıtlama
 - Tüm etkinliklere kısıtlama uygulama
-- Belirli etkinliklere kısıtlama uygulama
+- Belirli bir etkinliğe kısıtlama uygulama
 
-Kısıtlama uygula seçenekleriden birini belirtir  ve kullanıcı DLP korumalı bir dosyaya, kısıtlanmış uygulama grubunda yer alan bir uygulamayı kullanarak erişmeye çalışırsa, `Audit only`veya `Block with override``Block` etkinliklere göre yapabilirsiniz. Burada tanımladığınız DLP eylemleri, uygulamanın tüm uygulamaları için **Kısıtlanmış** uygulama etkinlikleri ve Dosya etkinlikleri içinde **tanımlanan eylemleri** geçersiz kılar.
+*Kısıtlamaları uygula* seçeneklerinden birini belirlediğinizde ve kullanıcı kısıtlanmış uygulama grubunda yer alan bir uygulamayı kullanarak DLP korumalı bir dosyaya erişmeye çalıştığında, , `Block with override`veya `Block` etkinliğine göre yapabilirsiniz`Audit only`. Burada tanımladığınız DLP eylemleri **, Uygulamanın tüm uygulamaları için Kısıtlı uygulama etkinlikleri** ve **Dosya etkinlikleri** bölümünde tanımlanan eylemleri geçersiz kılar.
 
-Daha fazla [bilgi için bkz. Kısıtlanmış uygulamalar ve](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) uygulama grupları. 
+Daha fazla bilgi için bkz [. Kısıtlı uygulamalar ve uygulama grupları](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) . 
 
-#### <a name="microsoft-defender-for-cloud-apps-actions"></a>Microsoft Defender for Cloud Apps eylemleri
+#### <a name="microsoft-defender-for-cloud-apps-actions"></a>eylemleri Microsoft Defender for Cloud Apps
 
-- Belirli konumlarda erişimi kısıtlama veya Microsoft 365 şifreleme
-- Üçüncü Taraf Uygulamalarını Kısıtla
+- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
+- Üçüncü Taraf Uygulamalarını Kısıtlama
 
 #### <a name="on-premises-repositories-actions"></a>Şirket içi depo eylemleri
 
@@ -450,43 +466,43 @@ Daha fazla [bilgi için bkz. Kısıtlanmış uygulamalar ve](dlp-configure-endpo
 
 #### <a name="powerbi-actions"></a>PowerBI eylemleri
 
-- Kullanıcıları e-posta ve ilke ipuçlarıyla bilgilendirin
-- Yöneticiye uyarı gönder
+- Kullanıcılara e-posta ve ilke ipuçlarıyla bildirme
+- Yöneticiye uyarı gönderme
 
-#### <a name="actions-available-when-you-combine-locations"></a>Konumları birleştirinca kullanılabilen eylemler
+#### <a name="actions-available-when-you-combine-locations"></a>Konumları birleştirdiğinizde kullanılabilen eylemler
 
-İlkenin Exchange için Geçerli Konum'Exchange başka bir konum seçmek için
+İlkenin uygulanacağı Exchange ve başka bir tek konumu seçerseniz,
 
-- Belirli konumlarda erişimi kısıtlama veya Microsoft 365 şifreleme
+- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
 
 ve
 
-- Yer olmayan konumun tüm Exchange.
+- Exchange olmayan konum için tüm eylemler
 
-eylemleri kullanılabilir.
+eylemler kullanılabilir olacaktır.
 
-İlkenin uygulanmak Exchange veya daha fazla konum seçmek için
+İlkenin uygulanacağı iki veya daha fazla Exchange olmayan konum seçerseniz,
 
-- Belirli konumlarda erişimi kısıtlama veya Microsoft 365 şifreleme
+- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
 
 VE
 
-- Posta olmayan konumlar için Exchange eylemleri 
+- Exchange olmayan konumlar için tüm eylemler 
 
-eylemleri kullanılabilir.
+eylemler kullanılabilir olacaktır.
 
-Örneğin, Konum olarak Exchange Cihazlar'ı seçersiniz, şu eylemler kullanılabilir:
+Örneğin, konum olarak Exchange ve Cihazlar'ı seçerseniz şu eylemler kullanılabilir:
 
-- Belirli konumlarda erişimi kısıtlama veya Microsoft 365 şifreleme
-- Mobil cihazlarda etkinlikleri denetleme Windows kısıtlama
+- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
+- Windows cihazlarda etkinlikleri denetleme veya kısıtlama
 
-Cihazlar ve Cihazlar'Microsoft Defender for Cloud Apps bu eylemleri gerçekleştirebilirsiniz:
+Cihazlar'ı ve Microsoft Defender for Cloud Apps seçerseniz şu eylemler kullanılabilir:
 
-- Belirli konumlarda erişimi kısıtlama veya Microsoft 365 şifreleme
-- Mobil cihazlarda etkinlikleri denetleme Windows kısıtlama
-- Üçüncü Taraf Uygulamalarını Kısıtla
+- erişimi kısıtlama veya Microsoft 365 konumlardaki içeriği şifreleme
+- Windows cihazlarda etkinlikleri denetleme veya kısıtlama
+- Üçüncü Taraf Uygulamalarını Kısıtlama
 
-Bir eylemin etkili olup olmadığı, ilkenin modunu nasıl yapılandırmış olduğunu bağlıdır. İlk önce Sına seçeneğini seçerek ilke ipucuyla veya bu ipucu göstermeden test modunda **çalıştırmayı seçebilirsiniz** . İlkeyi oluşturduktan hemen bir saat sonra çalıştırmayı tercih ediyorsanız, hemen aç seçeneğini kullanarak  ilkeyi kaydetmeyi ve daha sonra kapatma seçeneğini seçerek ilkeyi kaydederek yeniden **dönebilirsiniz**. 
+Bir eylemin etkili olup olmayacağı, ilke modunu nasıl yapılandırdığınıza bağlıdır. **İlk** olarak test et seçeneğini belirleyerek ilke ipucunu göstererek veya göstermeden ilkeyi test modunda çalıştırmayı seçebilirsiniz. İlkeyi oluşturulduktan bir saat sonra hemen **aç seçeneğini** belirleyerek çalıştırmayı seçebilir veya yalnızca kaydetmeyi ve daha sonra geri dönmek için **Kapalı tut** seçeneğini belirleyebilirsiniz. 
 
 
 <!-- This section needs to explain that the actions available depend on the locations selected AND that the observed behavior of a policy is produced through an interaction of the configured actions AND the configured status (off, test, apply) of a policy. It will detail the purpose of each of the available actions and the location/desired outcome interaction and provide examples eg. how to use the Restrict Third Party apps in the context of a policy that is applied to endpoints so that users can't use a upload content to a third party site or the interaction of on-premises scanner with restrict access or remove on-premises files.  Also what happens when I select multiple locations? provide abundant examples for most common scenarios-->
@@ -503,37 +519,37 @@ for where they are used/expected behavior-->
 
 <!--You can use notifications and overrides to educate your users about DLP policies and help them remain compliant without blocking their work. For example, if a user tries to share a document containing sensitive information, a DLP policy can both send them an email notification and show them a policy tip in the context of the document library that allows them to override the policy if they have a business justification.-->
 
-Kullanıcı bir kuralın koşullarına ve özel durumlarına uygun bağlamda hassas bir öğe üzerinde eylem girişiminde bulunsa, kullanıcı bildirimi e-postaları ve bağlam ilkesi ipucu açılan menüleri aracılığıyla bu konuda bilgi edinebilirsiniz. Bu bildirimler, farkındalık artıran ve kişilerin kurum dLP ilkeleri hakkında eğitilmesine yardımcı olduğundan yararlı olur.
+Kullanıcı, bir kuralın koşullarını ve özel durumlarını karşılayan bir bağlamda hassas bir öğe üzerinde eylem gerçekleştirmeye çalıştığında, kullanıcı bildirim e-postaları ve bağlam ilkesi ipucu açılır pencereleri aracılığıyla bu öğe hakkında bilgi edinebilirsiniz. Bu bildirimler, farkındalığı artırdığından ve kişilerin kuruluşunuzun DLP ilkeleri hakkında eğitilmesine yardımcı olduğundan yararlıdır.
 
-Örneğin, OneDrive İş sitesinde, Excel bilgileri (PII) içeren ve bir konukla paylaşılan çalışma kitabı gibi içerikler.
+Örneğin, kişisel bilgileri (PII) içeren ve bir konukla paylaşılan OneDrive İş bir sitedeki Excel çalışma kitabı gibi içerikler.
 
-![İleti çubuğu, posta çubuğunda ilke ipucu Excel 2016](../media/7002ff54-1656-4a6c-993f-37427d6508c8.png)
+![İleti çubuğu, Excel 2016 ilke ipucunu gösterir](../media/7002ff54-1656-4a6c-993f-37427d6508c8.png)
 
 > [!NOTE]
 > Bildirim e-postaları korumasız gönderilir.
 
-Ayrıca, kişilerin geçerli bir ticari ihtiyaçları varsa [](#user-overrides)veya ilke hatalı pozitif bir sonuç algı içeriyorsa engellemelerini engellemek üzere ilkeyi geçersiz kılma seçeneği de veebilirsiniz.
+Ayrıca kişilere [ilkeyi geçersiz kılma](#user-overrides) seçeneği de verebilirsiniz; böylece geçerli bir iş ihtiyaçları varsa veya ilke yanlış pozitif algılarsa engellenmez.
 
-Kullanıcı bildirimleri ve ilke ipuçları yapılandırma seçenekleri, seçtiğiniz izleme konumlara bağlı olarak değişir. Seçtiysanız:
+Kullanıcı bildirimleri ve ilke ipuçları yapılandırma seçenekleri, seçtiğiniz izleme konumlarına bağlı olarak değişir. Şunu seçtiyseniz:
 
 - Exchange
 - SharePoint
 - OneDrive
-- Teams Sohbet ve Kanal
+- sohbeti ve kanalı Teams
 - Bulut Uygulamaları için Defender
 
 
-Çeşitli Microsoft uygulamaları için kullanıcı bildirimlerini etkinleştirebilirsiniz/devre dışı abilirsiniz, bkz. [Veri Kaybı Önleme ilke ipuçları başvurusu](dlp-policy-tips-reference.md#data-loss-prevention-policy-tips-reference)
+Çeşitli Microsoft uygulamaları için kullanıcı bildirimlerini etkinleştirebilir/devre dışı bırakabilirsiniz, bkz. [Veri Kaybı Önleme ilkesi ipuçları başvurusu](dlp-policy-tips-reference.md#data-loss-prevention-policy-tips-reference)
 
-- Kullanıcıları Office 365 **bir ilke ipucuyla bilgilendirin Office 365** etkinleştirebilirsiniz..
-    - içeriği gönderen, paylaşan veya son değiştiren kullanıcıya gönderilen e-posta bildirimleri VEYA
-    - belirli kullanıcıları bilgilendirme
+- İlke ipucuyla **Office 365 hizmetindeki kullanıcılara bildirme** özelliğini etkinleştirebilir/devre dışı bırakabilirsiniz.
+    - veya içeriğini gönderen, paylaşan veya son değiştiren kullanıcıya e-posta bildirimleri gönderme
+    - belirli kişilere bildirme
 
-ve e-posta metnini, konuyu ve ilke ipucu metnini özelleştirin.
+ve e-posta metnini, konusunu ve ilke ipucu metnini özelleştirin.
 
-![Exchange, SharePoint, OneDrive, Sohbet ve Kanal Teams uygulamaları için kullanılabilen kullanıcı bildirimi ve ilke ipucu Bulut için Defender seçenekleri](../media/dlp-user-notification-non-devices.png)
+![Exchange, SharePoint, OneDrive, Teams Sohbet ve Kanal ile Bulut için Defender Uygulamaları için kullanılabilen kullanıcı bildirimi ve ilke ipucu yapılandırma seçenekleri](../media/dlp-user-notification-non-devices.png)
 
-Yalnızca cihazlar'i seçtiyseniz Exchange, SharePoint, OneDrive, Teams Sohbet ve Kanal ve Bulut için Defender Uygulamaları'nın yanı sıra, mobil cihazlarda görüntülenen bildirim başlığını ve içeriği özelleştirme seçeneğiyle aynı Windows 10 seçin.
+Yalnızca Cihazlar'ı seçtiyseniz sohbet ve kanal Teams Exchange, SharePoint, OneDrive, Teams uygulamaları ve Bulut için Defender uygulamaları için sağlanan tüm seçeneklerin yanı sıra Windows 10 görüntülenen bildirim başlığını ve içeriğini özelleştirme seçeneğine sahip olursunuz Aygıt.
 
 ![Cihazlar için kullanılabilen kullanıcı bildirimi ve ilke ipucu yapılandırma seçenekleri](../media/dlp-user-notification-devices.png)  
 
@@ -541,43 +557,43 @@ Bu parametreleri kullanarak metnin başlığını ve gövdesini özelleştirebil
 
 |Ortak ad  |Parametre  |Örnek
 |---------|---------|---------|
-|dosya adı     |%%FileName%% | Contoso belgesi 1 |
+|dosya adı     |%%FileName%% | Contoso belge 1 |
 |işlem adı     |%%ProcessName%% | Word |
 |ilke adı     |%%PolicyName%%| Contoso çok gizli |
-|eylem | %%AppliedActions%% | Panodan başka bir uygulamaya belge içeriği yapıştırma |
+|Eylem | %%AppliedActions%% | panodaki belge içeriğini başka bir uygulamaya yapıştırma |
 
-**%%AppliedActions%%** bu değerleri ileti gövdesine alır:
+**%%AppliedActions%%** bu değerleri ileti gövdesiyle değiştirmektedir:
 
 
-|eylem ortak adı |%%AppliedActions%% parametresi yerine konan değer |
+|eylem ortak adı |%%AppliedActions%% parametresi için yerine değer girildi |
 |---------|---------|
-|kaldırılabilir depolama alanına kopyalama    |*çıkarılabilir depolama alanına yazma*         |
-|ağ paylaşımına kopyala     |*ağ paylaşımına yazma*         |
-|yazdırma     |*yazdırma*         |
-|Panodan yapıştırma  |*panodan yapıştırma*         |
-|bluetooth ile kopyalama   |*Aktarma yoluyla Bluetooth*         |
-|izin verilmeyen bir uygulamayla aç     |*bu uygulamayla açma*         |
-|uzak masaüstüne (RDP) kopyalama     |*uzak masaüstüne aktarma*         |
-|izin verilmeyen web sitesine yükleme     |*bu siteye yükleme*         |
-|izin verilmeyen bir tarayıcı kullanarak öğeye erişme     |*Bu tarayıcıyla açma*         |
+|kaldırılabilir depolamaya kopyalama    |*çıkarılabilir depolama birimine yazma*         |
+|ağ paylaşımına kopyalama     |*ağ paylaşımına yazma*         |
+|Yazdırma     |*Baskı*         |
+|panodan yapıştırma  |*panodan yapıştırma*         |
+|bluetooth üzerinden kopyalama   |*Bluetooth aracılığıyla aktarma*         |
+|izin verilmeyen bir uygulamayla açma     |*bu uygulamayla açma*         |
+|uzak masaüstüne kopyalama (RDP)     |*uzak masaüstüne aktarma*         |
+|izin verilmeyen bir web sitesine yükleme     |*bu siteye yükleniyor*         |
+|öğeye izin verilmeyen bir tarayıcı üzerinden erişme     |*bu tarayıcıyla açma*         |
 
 Bu özelleştirilmiş metni kullanma
 
-*%%AppliedActions%% %%ProcessName%% üzerinden %%FileName%% dosya adı kuruluş tarafından izin verilmez. %%PolicyName%% politikasını atlamak için "İzin Ver" öğesini tıklatın* 
+*%%AppliedActions%% %%ProcessName%% aracılığıyla %%FileName%% dosya adı kuruluşunuz tarafından kullanılamaz. %%PolicyName%% ilkesini atlamak istiyorsanız 'İzin Ver' seçeneğine tıklayın* 
 
 bu metni özelleştirilmiş bildirimde üretir:
 
-*panodan yapıştırma Dosya Adı: E-posta yoluyla Contoso WINWORD.EXE belge 1'e kuruluş tarafından izin verilmiyor. Contoso için çok gizli olan ilkeyi atlamak için 'İzin Ver' düğmesine tıklayın*
+*panodan yapıştırma Dosya Adı: WINWORD.EXE aracılığıyla Contoso doc 1'e kuruluşunuz izin vermez. Contoso son derece gizli ilkesini atlamak istiyorsanız 'İzin Ver' düğmesine tıklayın*
  
 
 > [!NOTE]
-> Kullanıcı bildirimleri ve ilke ipuçları Şirket içi konumda kullanılamaz
+> Şirket içi konumu için kullanıcı bildirimleri ve ilke ipuçları kullanılamıyor
 
 > [!NOTE]
-> Yalnızca en yüksek önceliğe sahip ilke ipucu, en kısıtlayıcı kural gösterilir. Örneğin, içeriğe erişimi engelleyen bir kuraldan gelen ilke ipucu, doğrudan bildirim gönderen bir kuraldan gelen bir ilke ipucu üzerinde gösterilir. Bu, kişilerin ilke ipuçları basamaklarını görmelerini önler.
+> Yalnızca en yüksek önceliğe ve en kısıtlayıcı kurala ait ilke ipucu gösterilir. Örneğin, içeriğe erişimi engelleyen bir kuraldan gelen ilke ipucu, yalnızca bildirim gönderen bir kuraldan gelen ilke ipucu üzerinden gösterilir. Bu, kişilerin ilke ipuçlarının art arda görülmesini önler.
 
-Kullanıcı bildirimi ve ilke ipucu yapılandırması ve kullanımı hakkında daha fazla bilgi edinmek ve bildirim ve ipucu metnini özelleştirme dahil, bkz. 
-- [E-posta bildirimleri gönderin ve DLP ilkeleriyle ilgili ilke ipuçlarını gösterme](use-notifications-and-policy-tips.md#send-email-notifications-and-show-policy-tips-for-dlp-policies).
+Bildirim ve ipucu metnini özelleştirme de dahil olmak üzere kullanıcı bildirimi ve ilke ipucu yapılandırması ve kullanımı hakkında daha fazla bilgi edinmek için bkz. 
+- [E-posta bildirimleri gönderin ve DLP ilkeleri için ilke ipuçlarını gösterin](use-notifications-and-policy-tips.md#send-email-notifications-and-show-policy-tips-for-dlp-policies).
   
 <!--The email can notify the person who sent, shared, or last modified the content and, for site content, the primary site collection administrator and document owner. In addition, you can add or remove whomever you choose from the email notification.
   
@@ -601,26 +617,26 @@ Here's what a policy tip looks like in a OneDrive for Business account.
 > The default behavior of a DLP policy, when there is no alert configured, is not to alert or trigger. This applies only to default information types. For custom information types, the system will alert even if there is no action defined in the policy.
 -->
 
-### <a name="user-overrides"></a>Kullanıcı geçersiz kılar
+### <a name="user-overrides"></a>Kullanıcı geçersiz kılmaları
 
-Kullanıcı geçersiz kılmalarının amacı, kullanıcılara Exchange, SharePoint, OneDrive veya Teams'daki hassas öğeler üzerinde uzlaştırma, DLP ilkesi engelleme eylemlerini atlama yolu vermektir ve böylece çalışmalarını sürdürebilirsiniz. Kullanıcı geçersiz kılmaları yalnızca Office 365 hizmetlarında kullanıcıları ilke ipucuyla bilgilendir etkinleştirildiğinde etkindir; dolayısıyla kullanıcı geçersiz kılmaları Bildirimler ve İlke ipuçlarıyla birlikte çalışır. 
+**Kullanıcı geçersiz kılmalarının** amacı, DLP ilkesinin çalışmalarına devam edebilmeleri için kullanıcılara Exchange, SharePoint, OneDrive veya Teams hassas öğeler üzerinde eylemleri engelleme gerekçeleriyle atlamaları için bir yol vermektir. Kullanıcı geçersiz kılmaları yalnızca **Office 365 hizmetlerindeki kullanıcılara bir ilke ipucuyla bildir** seçeneği etkinleştirildiğinde etkinleştirilir, bu nedenle kullanıcı geçersiz kılmaları Bildirimler ve İlke ipuçlarıyla el ele gider. 
 
 ![DLP ilkesi için kullanıcı geçersiz kılma seçenekleri](../media/dlp-user-overrides.png)
 
 > [!NOTE]
-> Şirket içi depo konumu için kullanıcı geçersiz kılmaları kullanılamaz.
+> Şirket içi depolar konumu için kullanıcı geçersiz kılmaları kullanılamaz.
 
-Normalde, kuruluş bir ilkeyi ilk kez etkinleştirirken kullanıcı geçersiz kılmaları yararlı olur. Herhangi bir geçersiz gerekçelendirmeden ve hatalı pozitif sonuçlardan elde ettiyseniz, geri bildirim ilkenin ayarını belirlemeye yardımcı olur. 
+Genellikle, kuruluşunuz bir ilkeyi ilk dağıttığında kullanıcı geçersiz kılmaları yararlıdır. Geçersiz kılma gerekçelerinden ve hatalı pozitif sonuçların belirlenmesinden elde ettiğiniz geri bildirim, ilkenin ayarlanmasına yardımcı olur. 
 
 <!-- This section covers what they are and how to best use them in conjunction with Test/Turn it on right away and link out to where to find the business justification for the override (DLP reports?  https://docs.microsoft.com/en-us/microsoft-365/compliance/view-the-dlp-reports?view=o365-worldwide)  https://docs.microsoft.com/en-us/microsoft-365/compliance/view-the-dlp-reports?view=o365-worldwide#view-the-justification-submitted-by-a-user-for-an-override-->
 
-- En kısıtlayıcı kuralda yer alan ilke ipuçları kişilerin kuralı geçersiz k olmasına izin vermiyorsa, bu kuralı geçersiz kılmak da içeriğin eş olduğu diğer tüm kuralları geçersiz kılar.
+- En kısıtlayıcı kuraldaki ilke ipuçları kişilerin kuralı geçersiz kılmasına izin verirse, bu kuralın geçersiz kılınmış olması, içeriğin eşleştirilen diğer kuralları da geçersiz kılar.
  
 <!--![User notifications and user overrides sections of DLP rule editor](../media/37b560d4-6e4e-489e-9134-d4b9daf60296.png)-->
  
 Kullanıcı geçersiz kılmaları hakkında daha fazla bilgi edinmek için bkz:
 
-- [Kullanıcı tarafından geçersiz kılma için gönderilen gerekçeyi görüntüleme](view-the-dlp-reports.md#view-the-justification-submitted-by-a-user-for-an-override)
+- [Geçersiz kılma için kullanıcı tarafından gönderilen gerekçeyi görüntüleme](view-the-dlp-reports.md#view-the-justification-submitted-by-a-user-for-an-override)
 
 ### <a name="incident-reports"></a>Olay raporları
 
@@ -630,25 +646,25 @@ Kullanıcı geçersiz kılmaları hakkında daha fazla bilgi edinmek için bkz:
 https://docs.microsoft.com/en-us/microsoft-365/compliance/view-the-dlp-reports?view=o365-worldwide
 https://docs.microsoft.com/en-us/microsoft-365/compliance/dlp-configure-view-alerts-policies?view=o365-worldwide-->
 
-Bir kuralla eşleşmesi durumunda, olayın ayrıntılarını uyumluluk görevlisinize (veya seçtiğiniz herhangi bir kişi) bir olay raporu gönderebilirsiniz. Raporda, eşleni öğe, kuralla eşleşmeye neden olan gerçek içerik ve içeriği son değiştiren kişinin adı hakkında bilgiler yer sağlar. E-posta iletileri için, rapor bir DLP ilkesiyle eşleşen özgün iletinin bir eki olarak da yer alır.
+Bir kural eşleştirildiğinde, uyumluluk yöneticinize (veya seçtiğiniz kişilere) olayın ayrıntılarını içeren bir olay raporu gönderebilirsiniz. Rapor, eşleşen öğe, kuralla eşleşen gerçek içerik ve içeriği son değiştiren kişinin adı hakkında bilgi içerir. E-posta iletileri için rapor, DLP ilkesiyle eşleşen özgün iletiyi ek olarak da içerir.
 
-DLP, olay bilgilerini diğer Microsoft 365 Koruma Hizmetleri'ne ([Insider Risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365) gibi) Microsoft 365. Olay bilgilerini Insider risk yönetimine almak için, Olay raporları için **önem düzeyini Yüksek** olarak **ayarlanız gerekir**.
+DLP, olay bilgilerini Microsoft 365 [Insider Risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365) gibi diğer Microsoft 365 bilgi koruma hizmetlerine iletir. Olay bilgilerini insider risk yönetimine almak için **Olay raporları** önem düzeyini **Yüksek** olarak ayarlamanız gerekir.
 
 <!--![Page for configuring incident reports](../media/31c6da0e-981c-415e-91bf-d94ca391a893.png)-->
 
-Bir etkinlik gürültülü olabilir ya da belirli bir süre içinde eşleşme sayısına veya öğe hacmine bağlı olarak daha az uyarıya neden olan bir kuralla her eşleşmede uyarılar gönderebilirsiniz.
+Bir etkinlik bir kuralla her eşleştiğinde uyarılar gönderilebilir. Bu uyarılar gürültülü olabilir veya belirli bir süre içindeki eşleşme sayısına veya öğe hacmine göre daha az uyarıya toplanabilir.
 
-![Bir kural her eşleşmede uyarı gönderme veya zaman içinde daha az rapora toplama](../media/dlp-incident-reports-aggregation.png)
+![bir kural her eşleştiğinde veya zaman içinde daha az rapora toplendiğinde uyarı gönderme](../media/dlp-incident-reports-aggregation.png)
 
-DLP, e-postaları Çevrimiçi olarak SharePoint öğeleri OneDrive İş tarar. SharePoint Online ve OneDrive İş'de DLP, yeni öğelerin yanı sıra var olan öğeleri de tarar ve eşleşme bulunan her zaman bir olay raporu üretir. Diğer Exchange Online, DLP yalnızca yeni e-posta iletilerini tarar ve bir ilke eşleşmesi varsa rapor üretir. DLP ***, bir posta*** kutusunda veya arşivde depolanan daha önce var olan e-posta öğelerini taramaz veya eşleşmez.
+DLP, e-postayı Çevrimiçi veya OneDrive İş öğeler SharePoint farklı tarar. SharePoint Online ve OneDrive İş'da DLP, mevcut öğelerin yanı sıra yeni öğeleri de tarar ve bir eşleşme bulunduğunda bir olay raporu oluşturur. Exchange Online'da DLP yalnızca yeni e-posta iletilerini tarar ve ilke eşleşmesi varsa bir rapor oluşturur. DLP, posta kutusunda veya arşivde depolanan önceden var olan e-posta öğelerini ***taramaz veya eşleştirmez*** .
 
 ### <a name="additional-options"></a>Ek seçenekler
 
-Bir ilkede birden çok kuralız varsa, düzenlemekte olan kuralla bir eşleşme varsa diğer kural işlemeyi kontrol etmek ve kuralın değerlendirilme önceliğini ayarlama ek seçeneklerini kullanabilirsiniz.
+bir ilkede birden çok kuralınız varsa, düzenlemekte olduğunuz kuralla bir eşleşme olup olmadığını denetlemek ve kuralın değerlendirilme önceliğini ayarlamak için **Ek seçenekleri** kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md#learn-about-data-loss-prevention)
-- [Veri kaybı önleme (DLP) planı](dlp-overview-plan-for-dlp.md#plan-for-data-loss-prevention-dlp)
+- [Veri kaybı önlemeyi planlama (DLP)](dlp-overview-plan-for-dlp.md#plan-for-data-loss-prevention-dlp)
 - [Bir şablondan DLP ilkesi oluşturma](create-a-dlp-policy-from-a-template.md#create-a-dlp-policy-from-a-template)
 - [Bir DLP ilkesi oluşturma, test etme ve ayarlama](create-test-tune-dlp-policy.md#create-test-and-tune-a-dlp-policy)

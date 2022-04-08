@@ -8,42 +8,45 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 03a9acc9-f29c-456b-9fb2-0f49474b2708
-description: Randevu oluşturmak ve Microsoft Bookings uygulaması aracılığıyla bir çalışan atamak için bu yönergeleri izleyin.
-ms.openlocfilehash: 3c71a3f96aa79e55c857078aad77a14e37d9009b
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Randevu oluşturmak ve Microsoft Bookings uygulaması aracılığıyla çalışan atamak için bu yönergeleri izleyin.
+ms.openlocfilehash: d30d9ba7fe00305ef370a554fc53ebebc5b5d284
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988135"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64715329"
 ---
 # <a name="create-a-manual-booking"></a>El ile rezervasyon oluşturma
 
-Rezervasyonlar iki farklı şekilde zamanlanmış ve personele açık olabilir. İlk yol, müşterinin web sitenize ek olarak tek başına bir rezervasyon sayfası veya eklenmiş bir rezervasyon sayfası kullanmasıdır. Bunun diğer yolu, örneğin müşterinin randevuyu aramaları gibi durumlarda sizin veya çalışanlardan birinin randevuyu el ile girebilirsiniz. Bu makale el ile senaryoyu kapsar.
+> [!NOTE]
+> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
-1. Uygulama Microsoft 365 başlatıcısını ve ardından **Bookings'i seçin**.
+Bookings zamanlanabilir ve iki farklı şekilde personel oluşturulabilir. İlk yol, müşteri tarafından tek başına bir rezervasyon sayfası veya web sitenize eklediğiniz ekli bir rezervasyon sayfası kullanmaktır. Diğer yol, sizin veya çalışanlarınızdan birinin rezervasyonları el ile girmesidir( örneğin, bir müşteri randevu için aradığında). Bu makale el ile senaryoyu kapsar.
 
-   ![Uygulama başlatıcıda Bookings'in resmi.](../media/bookings-applauncher.png)
+1. Microsoft 365'da Uygulama başlatıcıyı ve ardından **Bookings'ı** seçin.
 
-1. Gezinti bölmesinde Takvim Yeni **rezervasyon'a** \> **tıklayın**.
+   ![Uygulama başlatıcıdaki Bookings görüntüsü.](../media/bookings-applauncher.png)
 
-   ![Yeni rezervasyon kullanıcı arabiriminin resmi.](../media/bookings-newbooking.png)
+1. Gezinti bölmesinde **Takvim** \> **Yeni ayırma'yı** seçin.
 
-1. Sağlanacak hizmeti seçin. Hizmet [kurulumu yönergeleri için bkz. Microsoft Bookings'te](define-service-offerings.md) hizmet tekliflerinizi tanımlama.
+   ![Yeni rezervasyon kullanıcı arabiriminin görüntüsü.](../media/bookings-newbooking.png)
+
+1. Sağlanacak hizmeti seçin. Hizmet kurulumu yönergeleri için bkz. [hizmet tekliflerinizi Microsoft Bookings tanımlama](define-service-offerings.md).
 
 1. Ad, e-posta adresi, telefon numarası ve diğer ilgili ayrıntılar dahil olmak üzere müşteri bilgilerini girin.
 
-1. Hizmeti sağlamak için personel üyesini seçin. Gösterilen personel üyelerinin listesi, hizmetler sayfasında neleri ayarlayma olduğunu temel alarak gösterilir.
+1. Hizmeti sağlamak için personel üyesini seçin. Gösterilen personel üyeleri listesi, hizmetler sayfasında ne ayarladığınıza bağlıdır.
 
-   ![Personel listesi kullanıcı arabiriminin resmi.](../media/bookings-staff-list.png)
+   ![Personel listesi kullanıcı arabiriminin görüntüsü.](../media/bookings-staff-list.png)
 
-1. Tarih, saat, konum ve diğer ilgili bilgiler dahil olmak üzere hizmet ayrıntılarını girin. Müşteri için geçerli bir e-posta adresi girdiniz mi,  Kaydet düğmesi Gönder olarak değişir ve müşteriye onay gönderildiğini söyleyen bir not görüyorsunuz. Müşteri onayı, takvimine eklemesi için bir ek içerir. Seçilen personel üyeleri ayrıca randevu bilgilerini de toplantı davetlerini alır ve kendi kişisel takvimlerine ekleyebilirler.
+1. Tarih, saat, konum ve diğer ilgili bilgiler de dahil olmak üzere hizmet ayrıntılarını girin. Müşteri için geçerli bir e-posta adresi girdiğinizde müşteriye bir onay gönderileceğini belirten bir not görürsünüz. Müşteri onayı, takvimine eklemeleri için bir ek içerir. Seçilen personel üyeleri, randevu bilgilerini kişisel takvimlerine ekleyebilmeleri için toplantı davetlerini de alır.
 
-1. **E-posta anımsatıcı ekle'yi seçin**.
+1. **E-posta anımsatıcısı ekle'yi** seçin.
 
-1. Anımsatıcının ne zaman gönderilmesi gerektiğini, **nereye gönderl** olacağını ( **Müşteri, Personel**, **Tüm** katılımcılar) ve anımsatıcı mesajının ne zaman gönder olacağını belirtin.
+1. Anımsatıcının ne zaman gönderileceğini, nereye gönderileceğini (**Müşteri**, **Personel**, **Tüm katılımcılar**) ve anımsatıcı iletisinin ne olacağını belirtin.
 
-1. **Gönder'i** \> **seçin**.
+1. **Rezervasyon oluştur'u** seçin.
 
-   Müşterinizin şu anımsatıcıyı içeren örnek bir e-posta:
+   Aşağıda, müşterinizin alacağı anımsatıcının örnek bir e-postası verilmiştir:
 
-:::image type="content" source="../media/bookings-confirmed-email.png" alt-text="Ekran görüntüsü: El ile rezervasyondan gelen örnek onay e-postası":::
+:::image type="content" source="../media/bookings-confirmed-email.png" alt-text="Ekran görüntüsü: El ile rezervasyondan örnek onay e-postası":::

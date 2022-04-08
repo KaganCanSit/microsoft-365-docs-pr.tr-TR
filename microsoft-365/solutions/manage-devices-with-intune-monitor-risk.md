@@ -20,38 +20,32 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: e64006873c3419b9c6d93d3b367a5753f5478738
-ms.sourcegitcommit: a06bb81fbd727a790a8fe6a3746b8a3cf62a6b24
+ms.openlocfilehash: b8f15212916566e169efa63556b897600f7092a3
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64651421"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64705260"
 ---
 # <a name="step-6-monitor-device-risk-and-compliance-to-security-baselines"></a>6. Adım. Cihaz riskini ve güvenlik temel hatlarına uyumluluğu izleyin
 
 Kuruluşunuz Uç Nokta için Microsoft Defender dağıttıktan sonra, Microsoft Intune Uç Nokta için Defender ile tümleştirerek cihazlarınız hakkında daha fazla içgörü ve koruma elde edebilirsiniz. Mobil cihazlar için bu, erişim koşulu olarak cihaz riskini izleme özelliğini içerir. Windows cihazlarda bu cihazların güvenlik temellerine uyumluluğunu izleyebilirsiniz. 
 
-Not: Uç Nokta için Microsoft Defender dağıtımı, ekleme uç noktalarını içerir. Microsoft 365 capabilties için cihazları ekleme hakkında daha fazla bilgi için bkz[. Cihazları kaydetme ve ekleme](manage-devices-with-intune-overview.md#enrolling-devices-vs-onboarding-devices).  
+Uç Nokta için Microsoft Defender dağıtımı, ekleme uç noktalarını içerir. Uç noktaları eklemek için Intune kullandıysanız (önerilir), Microsoft Intune Zaten Uç Nokta için Defender'a bağlamışsınızdır. Uç Nokta için Defender'a uç noktaları eklemek için farklı bir yöntem kullandıysanız, [Intune ile Uç Nokta için Microsoft Defender](/mem/intune/protect/advanced-threat-protection-configure) arasında hizmet-hizmet bağlantısını ayarladığınızdan emin olmak için bkz. Intune'de Uç Nokta için Microsoft Defender yapılandırma. 
+
 
 ![Uç Nokta için Defender ve Microsoft Intune tümleştirme çizimi](../media/devices/devices-defender-for-endpoint-steps.png#lightbox)
 
 Bu çizimde:
 - Uç Nokta için Microsoft Defender, cihazlar için tehdit korumasının karmaşıklık düzeyini büyük ölçüde artırır. 
 - Microsoft Intune, Uygulama Koruma İlkeleri ayarlamanıza ve cihazları yönetmenize (yapılandırma değişiklikleri dahil) olanak tanırken, Uç Nokta için Defender cihazlarınızı sürekli olarak tehditlere karşı izler ve saldırıları düzeltmek için otomatik eylem gerçekleştirebilir. 
-- Uç Nokta için Defender'a cihaz eklemek için Intune kullanabilirsiniz. Bunu yaptığınızda, bu cihazların uç nokta veri kaybı önleme (DLP) dahil olmak üzere Microsoft 365 Uyumluluk özellikleriyle çalışmasını da sağlarsınız.
+- Cihaz riskini ve güvenlik temellerine uyumluluğu izlemek için Microsoft Intune Uç Nokta için Defender'a bağlayabilirsiniz.
 
 Bu makale şu adımları içerir:
-- Uç Nokta için Defender'a Bağlan Microsoft Intune
 - Cihaz riskini izleme
 - Güvenlik temellerine uyumluluğu izleme
 
 Uç Nokta için Defender henüz ayarlanmamışsa, [değerlendirme ve pilot ortamı ayarlamak](../security/defender/eval-defender-endpoint-overview.md) için tehdit koruması yöneticinizle birlikte çalışın. Bu makaledeki özellikleri denemek için pilot grupla çalışabilirsiniz.
-
-## <a name="connect-microsoft-intune-to-defender-for-endpoint"></a>Uç Nokta için Defender'a Bağlan Microsoft Intune
-
-uç nokta için Defender ile Microsoft Intune tümleştirmesini yapılandırmak kolaydır. Bu makaleyi kullanın: [Intune'da Uç Nokta için Microsoft Defender yapılandırın](/mem/intune/protect/advanced-threat-protection-configure). 
-
-![Uç Nokta için Microsoft Defender için Bağlan Intune](../media/devices/connect-intune-to-microsoft-defender.png#lightbox)
 
 ## <a name="monitor-device-risk-as-a-condition-for-access"></a>Erişim koşulu olarak cihaz riskini izleme
 
@@ -84,7 +78,7 @@ Güvenlik temellerini dağıtmak ve bu ayarlara uyumluluğu izlemek için bu tab
 |2     |  Intune için Windows güvenlik temeli ayarlarını dağıtın. 5. Adım'daki yönergeleri izlediyseniz bunu zaten başarmış olabilirsiniz [. Yapılandırma profillerini dağıtma](manage-devices-with-intune-configuration-profiles.md).        |
 |3    |  Intune için Uç Nokta için Defender temel ayarlarını dağıtın. Profili oluşturmak ve temel sürümü seçmek için bkz. [Microsoft Intune güvenlik temeli profillerini yönetme](/mem/intune/protect/security-baselines-configure).<br><br>Buradaki yönergeleri de izleyebilirsiniz: [Uç Nokta için Microsoft Defender güvenlik temelini gözden geçirin ve atayın](../security/defender-endpoint/configure-machines-security-baseline.md#review-and-assign-the-microsoft-defender-for-endpoint-security-baseline).     |
 |4     | Uç Nokta için Defender'da [cihaz yapılandırma yönetiminde Güvenlik temeli kartını](../security/defender-endpoint/configure-machines.md) gözden geçirin.          |
-| | |
+
 
 ## <a name="next-steps"></a>Sonraki adımlar
 [7. Adım'a gidin. Uç noktalarda bilgi koruma özellikleriyle DLP uygulayın](manage-devices-with-intune-dlp-mip.md).

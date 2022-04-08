@@ -1,5 +1,5 @@
 ---
-title: Microsoft Bookings için raporlama bilgileri
+title: Microsoft Bookings raporlama bilgileri
 ms.author: kwekua
 author: kwekuako
 manager: scotv
@@ -8,39 +8,42 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 03a9acc9-f29c-456b-9fb2-0f49474b2708
-description: Bookings etkinliğinizin 4 aylık görünümünü nasıl göreceğinizi öğrenin
-ms.openlocfilehash: 70d73da86e40555a5754a4284cbfbb0510e8c9e6
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bookings etkinliğinizin 4 aylık görünümünü nasıl görebileceğinizi öğrenin
+ms.openlocfilehash: 191194d112fe231c1a2f64245d33850ecb1266c0
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984700"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714317"
 ---
 # <a name="reporting-info-for-bookings"></a>Bookings için raporlama bilgileri
 
-Bookings takviminizin dört aylık görünümünü artık bir TSV dosyasında görüntüebilirsiniz. TSV dosyası size dört aylık veri gösterir, ancak bir yıl boyunca farklı dört aylık dönemler de seçin.
+> [!NOTE]
+> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
-Bu randevu düzeyi bilgileri Bookings takviminiz çevresinde müşteri etkinliğini görselleştirmek için kullanılabilir. TSV dosyaları, sekmeyle ayrılmış değer dosyalarıdır. Bunun gibi bir dosyayı, herhangi bir metin düzenleyicisiyle veya elektronik tablo programıyla, başka bir Excel.
+Artık bir TSV dosyasında Bookings takviminizin dört aylık görünümünü görebilirsiniz. TSV dosyasında dört aylık veriler gösterilir, ancak bir yıl boyunca farklı dört aylık dönemler seçebilirsiniz.
 
-## <a name="see-four-months-of-booking-activity"></a>Rezervasyon etkinliğinin dört aylarını görme
+Bu randevu düzeyi bilgileri, Bookings takviminizdeki müşteri etkinliğini görselleştirmek için kullanılabilir. TSV dosyaları sekmeyle ayrılmış değer dosyalarıdır. Bunun gibi bir dosyayı Excel gibi herhangi bir metin düzenleyicisi veya elektronik tablo programıyla görüntüleyebilir veya düzenleyebilirsiniz.
 
-1. Uygulama Microsoft 365 başlatıcısını ve ardından **Bookings'i seçin**.
+## <a name="see-four-months-of-booking-activity"></a>Dört aylık Booking etkinliğine bakın
 
-1. Bookings giriş sayfasında Dışarı Aktar'ı **seçin**.
+1. Microsoft 365'da Uygulama başlatıcıyı ve ardından **Bookings'ı** seçin.
 
-1. Son verileri **dışarı aktar sayfasında** tarih aralığınızı ve ardından Dışarı Aktar'ı **seçin**.
+1. Bookings giriş sayfasında **Dışarı Aktar'ı** seçin.
 
-1. Dosyayı yeni bir adla kaydedin ve .xls xlsx biçiminde belirtin.
+1. **Son verileri dışarı aktar** sayfasında tarih aralığınızı seçin ve **Dışarı Aktar'ı** seçin.
+
+1. Dosyayı yeni bir adla kaydedin ve .xls veya xlsx biçimini belirtin.
 
 1. Bookings takviminizin dört aylık görünümünü görmek için dosyayı açın.
 
-1. Raporunuz için tarihi seçin ve sonra da Dışarı **Aktar'ı seçin**.
+1. Raporunuzun tarihini seçin ve **Dışarı Aktar'ı** seçin.
 
-1. İndirilen rapor, var olan alanların yanı sıra yeni bir alan kümesi de içerir.
+1. İndirilen rapor, mevcut alanlara ek olarak yeni bir alan kümesi içerir.
 
-Raporda aşağıdaki alanlar vardır.
+Rapor aşağıdaki alanları içerir.
 
- - **Tarih & Saati**
+ - **Tarih & Saat**
 - **Müşteri Adı**
 - **Müşteri E-postası**
 - **Müşteri Telefon**
@@ -53,11 +56,11 @@ Raporda aşağıdaki alanlar vardır.
 
 Geliştirilmiş rapor artık aşağıdaki alanları içerir.
 
-- **Fiyatlandırma Türü**   Hizmeti oluştururken hizmet için varsayılan fiyatlandırma türü kümesi.
+- **Fiyatlandırma Türü**   Hizmet oluşturulurken bir hizmet için varsayılan fiyatlandırma türü ayarlanır.
 - **Fiyat**   Seçilen fiyatlandırma türüne karşılık gelen fiyat.
-- **Para birimi**   Bir işletme için ayarlanmış para birimi türü.
-- **Bilgi Katılımcıları**   Bir rezervasyon için e-posta bildirimlerini alan alıcılar. Bu, bir Teams mobil uygulamasından belirtilebilir.
-- **Oturum Alan Katılımcı Sayısı**   Kaç müşteri bir grup rezervasyon hizmeti için rezervasyon yaptı.
-- **Metin Bildirimleri Etkin**   Müşterilerin METINle ilgili SMS bildirimleri almaları.
-- **Özel Alanlar**   Tek bir rezervasyonla ilgili tüm sorular ve yanıtlar bu alanda bir araya edilir.
-- **Kayıt Kimliği**   Bu, bir grup hizmetinin aynı rezervasyonlarını belirlemek için yararlıdır.
+- **Para birimi**   bir işletme için ayarlanan para birimi türü.
+- **Bilgi Katılımcıları**   Rezervasyon için e-posta bildirimlerini alacak alıcılar. Bu, rezervasyon oluşturulurken Teams uygulamasından belirtilebilir.
+- **Kaydolan Katılımcı Sayısı**   Grup rezervasyon hizmeti için kaç müşteri rezervasyonu yaptı?
+- **Metin Bildirimleri Etkin**   Müşterilerin SMS ile ilgili bildirimler alıp alamayacağı.
+- **Özel Alanlar**   Tek bir rezervasyonla ilgili tüm sorular ve yanıtlar bu alanda birleştirilir.
+- **Rezervasyon Kimliği**   Bu, bir grup hizmetinin aynı rezervasyonlarını tanımlamak için yararlıdır.

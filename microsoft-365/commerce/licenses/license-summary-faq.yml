@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Sözleşmeler Hakkında Sık Sorulan Sorular
+  title: Sözleşmeler hakkında SSS
   author: cmcatee-MSFT
   ms.author: cmcatee
   manager: scotv
@@ -11,13 +11,13 @@ metadata:
   ms.service: o365-administration
   ms.custom: commerce_vl
   ms.localizationpriority: medium
-  description: Lisans sözleşmelerini iptal Microsoft 365 yönetim merkezi sık sorulan sorular.
-  ms.openlocfilehash: a38bf6fb9a327ccda557986264d8b9a56454f6f2
-  ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+  description: Microsoft 365 yönetim merkezi lisans sözleşmeleri hakkında sık sorulan sorular.
+  ms.openlocfilehash: 16b6abd5d49b1b72fb93f981762140a98105b297
+  ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/12/2022
-  ms.locfileid: "63705322"
+  ms.lasthandoff: 04/08/2022
+  ms.locfileid: "64714163"
 title: Sözleşmeler Hakkında Sık Sorulan Sorular
 summary: ''
 sections:
@@ -26,85 +26,85 @@ sections:
   - question: >
       Sözleşmeler listesini neden görebilirim?
     answer: >
-      Geçerli bir Toplu Lisans (VL) kullanıcısıysanız, Sözleşmeler listesini bakın. Aşağıdaki gereksinimleri karşılarsanız bir VL kullanıcısı olursanız:
+      Geçerli bir Toplu Lisanslama (VL) kullanıcısıysanız Sözleşmeler listesini görebilirsiniz. Aşağıdaki gereksinimlerden birini karşılıyorsanız bir VL kullanıcısısınız:
 
 
-      - Bir yasal Toplu Lisans Programı formundaki sözleşmeler için kişi olarak listelenmişsiniz. Kişi türleri Birincil Kişi, BildirimlerE karşılık gelen, Çevrimiçi Erişim Kişisi, Yazılım Güvencesi Yöneticisi, Çevrimiçi Hizmet Yöneticisi veya Abonelik Yöneticisi'dir.
+      - Yasal Toplu Lisanslama Programı formunda sözleşmeler için ilgili kişi olarak listelenirsiniz. Kişi türleri Birincil Kişi, Bildirim Muhabiri, Çevrimiçi Erişim Kişisi, Yazılım Güvencesi Yöneticisi, Online Services Manager veya Abonelikler Yöneticisi'ni içerir.
 
       - Sözleşmelere erişimi olan bir Yöneticisiniz.
   - question: >
-      Lisans Kimliği nedir?
+      Lisanslama Kimliği nedir?
     answer: >
-      Lisans Kimliği, siparişlerin kuruluş tarafından hangi program düzeyinde yerleştiril olacağını tanımlar. Aşağıdakilerin herhangi birini temsil ediyor olabilir:
+      Lisans kimliği, bir kuruluş tarafından siparişlerin verilebileceği program düzeyini tanımlar. Aşağıdakilerden herhangi birini temsil edebilir:
 
 
       - Kayıt (Enterprise veya Program seçme)
 
-      - Sözleşme (Open Value programı)
+      - Sözleşme (Açık Değer programı)
 
       - Lisans (Açık Lisans programı)
 
-      - Genel Müşteri Numarası (PCN) (Select Plus programı)
+      - Genel Müşteri Numarası (PCN) (Artı programı seçin)
 
 
-      Yetkilendirmeler ve site izinleri, kurum için kullanılabilir Lisans Kimlikleri tarafından belirlenir.
+      Yetkilendirmeler ve site izinleri, kuruluşunuzun kullanabileceği Lisans kimliklerine göre belirlenir.
   - question: >
-      MPSA sözleşmem nerede?
+      MPSA sözleşmelerim nerede?
     answer: >
-      Microsoft Ürün ve Hizmet Sözleşmesi (MPSA) lisans bilgileri [Microsoft Business Center veya İş İçin Microsoft Store](https://businessaccount.microsoft.com/Customer)[.](https://businessstore.microsoft.com/store) Bu sözleşmeler listesinde HIÇBIR MPSA bilgisi görüntülenmez. [MPSA hakkında bilgi edinmek için](https://www.microsoft.com/Licensing/MPSA/default.aspx):
+      Microsoft Ürün ve Hizmet Sözleşmesi (MPSA) lisans bilgileri [Microsoft İş Merkezi'nde](https://businessaccount.microsoft.com/Customer) veya [İş İçin Microsoft Store](https://businessstore.microsoft.com/store) yönetilir. Bu sözleşme listesinde HIÇBIR MPSA bilgisi görüntülenmez. [MPSA hakkında bilgi edinin](https://www.microsoft.com/Licensing/MPSA/default.aspx).
   - question: >
-      Kuruluşum için bazı Lisans Kimlikleri neden listede görüntülenmiyor?
+      Kuruluşum için bazı Lisanslama kimlikleri neden listede görüntülenmiyor?
     answer: >
-      Lisans Kimliği, yalnızca oturum oturum eden kullanıcının Lisans Kimliği ayrıntılarını görüntüleme izni varsa görüntülenir. Aşağıdaki ölçütlerden birini size, kuruluş adına belirli bir Lisans Kimliğini görüntüleme izni verildi:
+      Lisans Kimliği yalnızca oturum açan kullanıcının Lisans Kimliği ayrıntılarını görüntüleme izni varsa görüntülenir. Kuruluşunuz adına belirli bir Lisans kimliğini görüntüleme izni, aşağıdaki ölçütlerden birini karşılamanıza izin verilir:
 
 
-      - Bir yasal Toplu Lisans Programı formundaki sözleşmeler için kişi olarak listelenmişsiniz. Kişi türleri Birincil Kişi, BildirimlerE karşılık gelen, Çevrimiçi Erişim Kişisi, Yazılım Güvencesi Yöneticisi, Çevrimiçi Hizmet Yöneticisi veya Abonelik Yöneticisi'dir.
+      - Yasal Toplu Lisanslama Programı formunda sözleşmeler için ilgili kişi olarak listelenirsiniz. Kişi türleri Birincil Kişi, Bildirim Muhabiri, Çevrimiçi Erişim Kişisi, Yazılım Güvencesi Yöneticisi, Online Services Manager veya Abonelikler Yöneticisi'ni içerir.
 
-      - Sözleşmelere erişim izni olan Yöneticisiniz.
+      - Sözleşmelere erişimi olan Yönetici sizsiniz.
 
 
-      VL izin rolleri ve bunların izin verilen eylemleri hakkında daha fazla bilgi için İzinler SSS [bölümüne bakın](https://docs.microsoft.com/licensing/permissions-faq).
+      VL izin rolleri ve izin verilebilen eylemleri hakkında daha fazla bilgi için [bkz. İzinler SSS](https://docs.microsoft.com/licensing/permissions-faq).
   - question: >
-      Yeni lisans siparişlerinin sözleşmeler listesinde görünmesi ne kadar sürdü?
-    answer: "En son satın alınan lisanslar genellikle Microsoft iş ortağından siparişinizi aldıktan sonra 10 saat içinde listede görüntülenir. İş ortağınız satın alma siparişini Microsoft'a iletirse, birkaç günlük gecikmeler birkaç hafta kadar sürebilir. Lisanslar, Açık Lisans dışındaki tüm programlar için sipariş için Kapsam Başlangıç dönemi karşı karşılaştığında özette görüntülenir.\n\nKişi listesinde aşağıdaki veriler kullanılabilir:\n\n|**Sütunun adı**|**Açıklama**|\n|:-----|:-----|\n|Lisans Kimliği |Belirli Lisans Kimliği'ne göre önemli kişiler ve kuruluş lisansları |\n|Ana Program Ayrıntıları |Lisans programıyla, önemli kişiler ve ilgili Lisans Kimlikleri |\n|MBSA Ayrıntıları |Microsoft İş ve Hizmet Sözleşmesi (MBSA) ile ilişkilendirilmiş önemli kişiler ve ilgili Lisans Kimlikleri | \n|Kuruluş | Lisans Kuruluşu|\n|Konum |Lisans Kuruluşlarının şehir ve ilçe bileşimi |\n|Bitiş tarihi |Lisansın bitiş tarihi |    \n|Durum |Lisansın durumu| \n"
+      Yeni lisans siparişlerinin sözleşmeler listesinde görünmesi ne kadar sürer?
+    answer: "Son satın alınan lisanslar genellikle Microsoft'un siparişinizi Microsoft iş ortağından aldıktan sonraki 10 saat içinde listede görüntülenir. İş ortağınız satın alma siparişini Microsoft'a iletmeyi geciktirirse birkaç gün ile birkaç hafta arasındaki gecikmeler oluşabilir. Lisanslar, Open License dışındaki tüm programlar için siparişin Kapsam Başlangıç dönemi karşılandığında özette görüntülenir.\n\nAşağıdaki veriler kişi listesinde bulunur:\n\n|**Sütunun Adı**|**Açıklama**|\n|:-----|:-----|\n|Lisans kimliği |Belirli lisans kimliğine göre kuruluşunuzun önemli kişileri ve ilgili lisansları |\n|Üst Program Ayrıntıları |Lisans programıyla kuruluşunuz için önemli kişiler ve ilgili Lisans kimlikleri |\n|MBSA Ayrıntıları |Microsoft İş ve Hizmet Sözleşmesi (MBSA) ile ilişkili olarak kuruluşunuz için önemli kişiler ve ilgili Lisans kimlikleri | \n|Organizasyon | Lisans Kuruluşu|\n|Konum |Lisans Organizasyonu'nun şehir ve ilçe birleşimi |\n|Bitiş tarihi |Lisansın Bitiş tarihi |    \n|Durum |Lisansın durumu| \n"
   - question: >
       Lisans Özeti nedir?
     answer: >
-      Lisans Özeti, izin kümenize ek olarak tüm etkin ve etkin olmayan Lisans Kimlikleri için Microsoft ürün ailesi başına gerçek zamanlı Toplu Lisans yetkilendirmelerini ve sürümünü görüntüler.
+      Lisans Özeti, izin kümenizdeki tüm etkin ve etkin olmayan Lisans kimlikleri için Microsoft ürün ailesi ve sürümü başına gerçek zamanlı Toplu Lisans yetkilendirmelerini görüntüler.
 
 
-      Lisans Özeti, 1994'te başlayan geleneksel Microsoft Toplu Lisans programları ile ilgili satın alma bilgilerini görüntüler. Bu programlar şunları içerir ancak bunlarla sınırlı değildir: Aç, Değer Aç, Seç, Artı Seç ve Enterprise.
+      Lisans Özeti, 1994'te başlayan geleneksel Microsoft Toplu Lisans programlarına ilişkin satın alma bilgilerini görüntüler. Bu programlar Açık, Değer Aç, Seç, Artı Seç ve Enterprise içerir ancak bunlarla sınırlı değildir.
 
 
-      MPSA programı ile satın alınan lisanslar VLSC İlişki Özeti'ne dahil değildir ve Microsoft İş Merkezi'nde ayrı [olarak 22'ye edilebilir](https://businessaccount.microsoft.com/customer).
+      MPSA programı kapsamında satın alınan lisanslar VLSC İlişki Özeti'ne dahil değildir ve [Microsoft İş Merkezi'nde](https://businessaccount.microsoft.com/customer) ayrı olarak görüntülenebilir.
 
 
-      Lisans Özeti'ne erişme ve bunu oluşturma
+      Lisans Özeti'ne erişme ve oluşturma
 
-      1.  Oturum açma Microsoft 365 yönetim merkezi.
+      1.  Microsoft 365 yönetim merkezi oturum açın.
 
-      2.   >  BillingYour **productsVolume** >  **licensingContracts** >  adresine gidin.
+      2.  **BillingYour** >  **productsVolume** >  **licensingContracts** >  bölümüne gidin.
 
 
-      Lisans Özeti'ne görüntülemek için Lisans Kimliklerini filtreleme
+      Lisans Özetinde görüntülenecek Lisans Kimliklerini filtreleme
 
-      1.  Bu özete dahil edilecek Lisans Kimliklerini seçmek için onay kutularını kullanın.
+      1.  Bu özete eklenecek Lisans Kimliklerini seçmek için onay kutularını kullanın.
 
-      2.  Lisans Özeti **Oluştur'a seçin**. Lisans Özeti yalnızca seçili Lisans Kimlikleri için oluşturulur.
-- name: Lisans Özeti'ne anlama
+      2.  **Lisans Özeti Oluştur'u** seçin. Lisans Özeti yalnızca seçili Lisans kimlikleri için oluşturulur.
+- name: Lisans Özetini Anlama
   questions:
   - question: >
-      Lisans Hakkı nedir?
+      Lisans Yetkilendirmesi nedir?
     answer: >
-      Lisans Hakkı, lisans sözleşmesinde ayrıntılı olarak ayrıntılı olarak yer alan yazılım ürünlerini yükleme ve kullanma hakkınızı temsil eder.
+      Lisans Yetkilendirmesi, lisans sözleşmesinde açıklandığı gibi yazılım ürünlerini yükleme ve kullanma hakkınızı temsil eder.
   - question: >
       Etkin Miktar nedir?
     answer: >
-      Etkin Miktar, ürün başına lisans yetkilendirmelerinin ve yükseltmelerin olduğu sürüm sayısıdır. Bu uygulama, organizasyonda ürüne ve sürüme göre lisans eksiklikleri mi yoksa fazlalıkları mı olduğunu belirlemek için kullanılır.
+      Geçerlilik Miktarı, yükseltmeleri olan ürün ve sürüm başına lisans yetkilendirmelerinin sayısıdır. Kuruluşunuzun ürün ve sürüme göre lisans eksikliklerine veya fazlalıklarına sahip olup olmadığını belirlemek için kullanılır.
   - question: >
       Etkin SA (Yazılım Güvencesi) Miktarı nedir?
     answer: >
-      Etkin SA Miktarı, Lisans Özeti'nde görüntülenir. Tüm Microsoft Toplu Lisans programları genelinde Yazılım Güvencesi (sürüm yükseltme koruması) kapsamındaki lisans sayısını temsil eder. Etkin SA Miktarı, aşağıdakiler de dahil olmak üzere tüm Yazılım Güvencesi türlerini içerir:
+      Etkin SA Miktarı, Lisans Özeti'nde görüntülenir. Tüm Microsoft Toplu Lisans programlarında Yazılım Güvencesi (sürüm yükseltme koruması) kapsamındaki lisans sayısını temsil eder. Etkin SA Miktarı, aşağıdakiler dahil olmak üzere tüm Yazılım Güvencesi türlerini içerir:
 
       - Lisans ve Yazılım Güvencesi (L&SA)
 
@@ -112,33 +112,33 @@ sections:
 
       - SA Step-Up
   - question: >
-      Neden Etkin Miktar ve/veya Etkin SA Miktar'ı '0' olarak görüyorum?
-    answer: "Lisans özeti, kuruma dağıtma ve kullanma yetkisi olan lisansları göstermek üzere hazırlanmaktadır. \n\nOluşturulan lisans deyiminde Etkin Miktar sıfır olarak gösteriliyorsa, bu, kurumuz için seçilen lisans kimlikleri kümesi koşulları altında lisansı kullanma hakkına sahip olmadığını gösterir. \n\nEtkin SA Miktarı sıfır olarak gösteriliyorsa, bu ifadeyi oluşturmak için kullanılan lisans kimlikleri kümesi altındaki lisansların geçerli veya etkin bir Yazılım Güvencesi kapsamına sahip olmadığını ifade ediyor. \n\n**NOT** Çevrimiçi Hizmetler lisansları için Etkin SA Miktarı her zaman sıfır olur, çünkü Çevrimiçi Hizmetlerde onlarla ilişkilendirilmiş SA'lar yok. \n"
+      Neden Etkin Miktar ve/veya Etkin SA Miktarı'nın '0' olduğunu görüyorum?
+    answer: "Lisans özeti, kuruluşunuzun dağıtma ve kullanma hakkına sahip olduğu lisansları göstermeye yöneliktir. \n\nOluşturulan lisans bildirimindeki Geçerlilik Miktarı sıfır olarak gösteriliyorsa, kuruluşunuzun söz konusu bildirim için seçilen lisans kimlikleri kümesinin koşulları altındaki lisansı kullanma hakkı olmadığı anlamına gelir. \n\nEtkin SA Miktarı sıfır olarak gösteriliyorsa, bu, deyimi oluşturmak için kullanılan lisans kimlikleri kümesi altındaki lisansların geçerli veya etkin bir Yazılım Güvencesi kapsamına sahip olmadığı anlamına gelir. \n\n>[!NOTE]\n>Çevrimiçi Hizmetler lisansları için, Çevrimiçi Hizmetler ile ilişkilendirilmiş SA'lar olmadığından Etkin SA Miktarı her zaman sıfırdır. \n"
   - question: >
-      Lisans Özeti Orijinal Ekipman Üreticisi (OEM) veya perakende lisans bilgilerini içerir mi?
+      Lisans Özeti Özgün Ekipman Üreticisi (OEM) veya perakende lisans bilgilerini içeriyor mu?
     answer: >
-      Hayır. Lisans Özeti yalnızca Toplu Lisans programları aracılığıyla kuruluş tarafından alınan lisansları görüntüler.
-  - question: "Lisans Özeti, kuruluşumda hangi yazılımın dağıtıldı olduğunu görüntüler mi? \n"
+      Hayır. Lisans Özeti yalnızca toplu lisanslama programları aracılığıyla kuruluşunuz tarafından alınan lisansları görüntüler.
+  - question: "Lisans Özeti, kuruluşumda dağıtılan yazılımları görüntülüyor mu? \n"
     answer: >
-      Hayır. Microsoft'un Lisans Özeti'nden ürün dağıtımı ayrıntılarının listesini sağlaması mümkün değildir. Lisans Özeti, kuruma yükleme ve kullanma yetkisi olan ancak şu anda dağıtılan yazılımı değil, yazılımı gösterir.
+      Hayır. Microsoft'un Lisans Özeti'nde ürün dağıtım ayrıntılarının listesini sağlaması mümkün değildir. Lisans Özeti, kuruluşunuzun yükleme ve kullanma hakkına sahip olduğu yazılımı gösterir ancak şu anda dağıtılan yazılımı göstermez.
   - question: >
       Ürün Havuzu nedir?
     answer: >
-      Lisans Havuzu lisansları ürün türüne göre grup sağlar. Microsoft Toplu Lisanslama ürünleri üç havuza göre düzenlemektedir:
+      Lisans Havuzu lisansları ürün türüne göre gruplandırıyor. Microsoft Toplu Lisanslama, ürünleri üç havuz halinde düzenler:
 
 
-      - Uygulamalar (örneğin, Office)
+      - Uygulamalar (örneğin, Office sürümleri)
 
-      - Sistemler (örneğin, işletim sisteminin Windows)
+      - Sistemler (örneğin, Windows işletim sisteminin sürümleri)
 
-      - Sunucular (örneğin, Exchange Server, SQL Server ve Windows Server)
+      - Sunucular (örneğin, Exchange Server, SQL Server ve Windows Sunucusu)
   - question: >
-      Lisans Verilen Nedir?
-    answer: "Microsoft Toplu Lisanslama bazen, belirli bir ürünün satın alımının müşteriye başka bir ürünün kullanımına hakkı olduğu bir promosyon sunar. Promosyonlar normalde, satın alınan üründe etkin Yazılım Güvencesi veya Yükseltme Avantajı kapsamına koşullu olarak geçmeyi sağlar. Örneğin:\n\n- Bir müşteri 2016 için 1 lisans Exchange Server satın aldı.\n- Teklif sırasında işlemde etkin Yazılım Güvencesi veya Yükseltme Avantajı kapsamı vardır.\n- Microsoft, 2016'da satın Skype Kurumsal Sunucu lisansını 1 lisans Exchange Server sunar.\n\nLisans Ver, müşterinin promosyon ürününü kullanma hakkı veya \"bağışları\"dır. Yukarıdaki örnekte, müşteriye Müşteriye Müşteri Hizmetleri hizmetleri Skype Kurumsal Sunucu.\n\nLisans Verilenler hakkında daha fazla bilgi için [Microsoft Ürün Koşulları'ne bakın](https://www.microsoft.com/licensing/terms/welcome/welcomepage). \n"
+      Lisans Verme nedir?
+    answer: "Bazen, Microsoft Toplu Lisanslama belirli bir ürünün satın alınması müşteriye başka bir ürünün kullanımına hak kazandığı bir promosyon sunar. Promosyonlar genellikle satın alınan üründeki etkin Yazılım Güvencesi veya Yükseltme Avantajı kapsamına bağlıdır. Örneğin:\n\n- Müşteri, Exchange Server 2016 için 1 lisans satın alır.\n- İşlem, teklif sırasında etkin Yazılım Güvencesi veya Yükseltme Avantajı kapsamına sahiptir.\n- Microsoft, Exchange Server 2016'da satın alınan 1 Skype Kurumsal Sunucu lisansı için promosyon sunar.\n\nLisans Verme, müşteriye promosyon ürününü kullanma hakkı verendir veya \"verir\". Yukarıdaki örnekte müşteriye Skype Kurumsal Sunucu kullanımı verilmiştir.\n\nLisans Vermeler hakkında daha fazla bilgi için [Microsoft Ürün Koşulları'na](https://www.microsoft.com/licensing/terms/welcome/welcomepage) bakın. \n"
   - question: >
-      Lisans Lisanslarımı nasıl görebilirim?
+      Lisans Hibelerimi nasıl görebilirim?
     answer: >
-      Lisans Grant'ler Sözleşmeler listesine ve İndirmeler ve Lisans Anahtarları& görüntülenir. Ürün listesinde, Lisans Verilenlerinden alınan ürünler, ilk satın almaların parçası olmadığını belirtmek için yıldız işareti (*) ile gösterilir.
+      Lisans Verme işlemleri Sözleşmeler listesine ve İndirilenler & Anahtarları'na yansıtılır. Ürünler listesinde, Lisans Vermeleri'nden alınan ürünler, özgün satın alma işleminin bir parçası olmadıklarını belirtmek için yıldız işareti (*) ile gösterilir.
   - question: >
-      Yardımlı Destek ile iletişime geçin
-    answer: Müşteriler ayrıca telefonla [veya Web Formu](https://docs.microsoft.com/licensing/contact-us) ile Bizimle de iletişime geçebilirsiniz. Microsoft, Web Formu gönderimlerini 24 saat içinde yanıtlar.
+      Yardımlı Desteğe Başvurun
+    answer: Müşteriler ayrıca telefonla veya Web Formu ile [Bize Başvurabilir](https://docs.microsoft.com/licensing/contact-us) . Microsoft, Web Formu gönderimlerine 24 saat içinde yanıt verir.

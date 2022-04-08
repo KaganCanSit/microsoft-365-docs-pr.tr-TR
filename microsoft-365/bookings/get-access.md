@@ -1,5 +1,5 @@
 ---
-title: Microsoft Bookings'e Erişim Elde Edin
+title: Microsoft Bookings Erişimi Alma
 ms.author: kwekua
 author: kwekuako
 manager: scotv
@@ -8,34 +8,39 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 5382dc07-aaa5-45c9-8767-502333b214ce
-description: Microsoft 365'da Bookings özelliğine nasıl erişim Microsoft 365.
-ms.openlocfilehash: f77a2b63b9c8ce88b1f9f7236f748713656d688e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft 365'da Bookings özelliğine nasıl erişeceğinizi öğrenin.
+ms.openlocfilehash: e399540711cdf0f5e9556ac1ac8aeed32d00db52
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984661"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714273"
 ---
 # <a name="get-access-to-microsoft-bookings"></a>Microsoft Bookings’e erişim elde etme
 
-Bu konuda Bookings'e ilk kez nasıl erişim olduğu açıklanmıştır. Ayrıca, kurumda Bookings'i nasıl aç aç kapatacaklarını da söyler. Ayrıca, Bookings'e erişmeleri ve kullanmaları için kullanıcılarınıza nasıl lisans atayabilirsiniz?
+> [!NOTE]
+> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
-## <a name="access-bookings-for-the-first-time"></a>Bookings'e ilk kez erişme
+Bu konuda, Bookings ilk kez nasıl erişilen açıklanır. Ayrıca, kuruluşunuzda Bookings nasıl açabileceğinizi veya kapatabileceğinizi de bildirir. Ayrıca, Bookings erişebilmeleri ve kullanabilmeleri için kullanıcılarınıza nasıl lisans atayabileceğiniz de açıklanır.
 
-EĞER YÖNETICINIZ size Bookings için erişim verdiyseniz uygulamaya İnternet üzerinden Office.
+## <a name="access-bookings-for-the-first-time"></a>Bookings ilk kez erişme
 
-[Bookings'i ilk kez](https://outlook.office.com/bookings/onboarding) kullanarak bir takvim oluşturabilir ve işlerinizi ayarlayabilirsiniz.
+BT yöneticiniz size Bookings erişimi verdiyse, uygulamaya çevrimiçi Office aracılığıyla erişebilirsiniz.
 
-1. Şimdi **al'ı seçin** ve Rezervasyon **takvimi ekle'yi seçin**. Bu sayfada ilk kez uygun değilse başka bir rezervasyon takvimi seçerek veya başka bir rezervasyon takvimi için arama yapma seçeneğiniz vardır.
+[Bookings](https://outlook.office.com/bookings/onboarding) ilk kez kullandığınızda bir takvim oluşturacak ve işinizi ayarlayacaksınız.
 
-2. İş adı ve iş türlerinizi girin ve Devam'ı **seçin**.
+1. **Kullanmaya başlayın'ı** seçin, iş adınızı ve iş türünüzü girin ve ardından **Takvim oluştur'u** seçin.
 
-Şimdi Bookings'i organizasyonunız için ayarlamaya hazır mısınız? Bu bağlantıyı kullanarak, uygulama başlatıcıdan veya [bookings](https://outlook.office.com/bookings/onboarding) sayfasından Bookings office.com. Bookings özelliklerinizi ayarlamaya devam etmek için aşağıdaki konuları kullanın.
+1. Bu sayfada ilk kez kullanmıyorsanız, başka bir rezervasyon takvimi seçebilir veya başka bir rezervasyon takvimi için arama yapabilirsiniz.
 
-- [İş bilginizi girin](enter-business-information.md)
-- [Bookings'e personel ekleme](add-staff.md)
-- [Hizmet tekliflerinizi tanımlayın](define-service-offerings.md)
-- [İş kapanışları, izinler ve izin zamanlarını zamanlama](schedule-closures-time-off-vacation.md)
+2. İşletmenizin adını ve iş türünü girin ve **Devam'ı** seçin.
+
+Artık kuruluşunuz için Bookings ayarlamaya hazırsınız. Bu [bağlantıyla](https://outlook.office.com/bookings/onboarding) Bookings sayfasına uygulama başlatıcıdan veya office.com ulaşabilirsiniz. Bookings özelliklerinizi ayarlamaya devam etmek için aşağıdaki konuları kullanın.
+
+- [İş bilginizi girme](enter-business-information.md)
+- [Bookings’e personel ekleme](add-staff.md)
+- [Hizmet tekliflerinizi tanımlama](define-service-offerings.md)
+- [İş bitiş, mesai dışı saatlerini ve tatil zamanlarını planlayın](schedule-closures-time-off-vacation.md)
 - [Zamanlama ilkelerinizi ayarlama](set-scheduling-policies.md)
 - [Çalışan çalışma saatlerini ayarlama](employee-hours.md)
 - [Rezervasyon sayfanızı özelleştirme ve yayımlama](customize-booking-page.md)

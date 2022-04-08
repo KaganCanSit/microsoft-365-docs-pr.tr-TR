@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Microsoft Evde Kullanım Programı sorulan soruları (SSS) inceleyin
+  title: Microsoft Evde Kullanım Programı SSS
   author: cmcatee-MSFT
   ms.author: cmcatee
   manager: scotv
@@ -17,104 +17,104 @@ metadata:
   - okr_SMB
   - AdminSurgePortfolio
   search.appverid: MET150
-  description: Bu konuda sık sorulan sorular (SSS) Microsoft Evde Kullanım Programı.
+  description: Microsoft Evde Kullanım Programı hakkında sık sorulan sorular (SSS).
   ms.date: 05/01/2021
-  ms.openlocfilehash: 2a97fd487ecc25fe06500608cb35701853258e03
-  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+  ms.openlocfilehash: 3ab4bb4023b09184b349f9a64fbb4533644d64ed
+  ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63680126"
-title: Microsoft Evde Kullanım Programı sorulan soruları (SSS) inceleyin
+  ms.lasthandoff: 04/08/2022
+  ms.locfileid: "64714427"
+title: Microsoft Evde Kullanım Programı sık sorulan sorular (SSS)
 summary: >
-  Toplu Lisanslama müşterileri, Microsoft Evde Kullanım Programı web sitesinde yer alan Bilgileri (HUP) [İş İçin Microsoft Store kullanır](https://go.microsoft.com/fwlink/?linkid=2139192).
+  Toplu Lisanslama müşterileri İş İçin Microsoft Store [web sitesindeki Microsoft Evde Kullanım Programı](https://go.microsoft.com/fwlink/?linkid=2139192) (HUP) kullanır.
 
 
-  Diğer tüm müşteriler şu adımı kullanarak HUP'ye erişim sağlar:
+  Diğer tüm müşteriler şu adımı kullanarak HUP'ye erişmektedir:
 
 
-  - Microsoft yönetim merkezinde [**BillingYour**](https://go.microsoft.com/fwlink/p/?linkid=842054) >  products sayfasına gidin, Avantajlar **sekmesini seçin ve** ardından **HUP sekmesini** seçin.
+  - Microsoft yönetim merkezinde [**FaturalamaUygula**](https://go.microsoft.com/fwlink/p/?linkid=842054) >  sayfasına gidin, **Avantajlar** sekmesini ve ardından **HUP** sekmesini seçin.
 sections:
 - name: Yok sayıldı
   questions:
   - question: >
-      Bu Microsoft Evde Kullanım Programı?
+      Microsoft Evde Kullanım Programı nedir?
     answer: >
-      Bu Microsoft Evde Kullanım Programı (HUP), uygun şirketlere sahip çalışanların Microsoft tüketici ürünlerini indirimli olarak satın almalarını sağlar. Evde Kullanım Programı ürün sayfasını ziyaret ederek her ürün teklifi için [geçerli indirimleri kontrol edebilirsiniz](https://www.microsoft.com/home-use-program).
+      Microsoft Evde Kullanım Programı (HUP), uygun şirketlerdeki çalışanların Microsoft tüketici ürünlerini indirimli olarak satın almasına olanak tanır. [Evde Kullanım Programı ürün sayfasını](https://www.microsoft.com/home-use-program) ziyaret ederek her ürün teklifi için geçerli indirimleri de kontrol edebilirsiniz.
   - question: >
-      Evde Kullanım Programı hangi pazarlarda sunulur?
-    answer: "Kişisel Microsoft 365 Aile indirimleri, bu özel durumlar ile dünya çapındaki uygun şirketlere sunulur:\n\n- Lübnan, Macao, Rusya ve Venezuela: Bu teklif bu pazarlarda kullanılamaz.\n- Çin ve Hong Kong: Bu pazarlarda bir yıllık abonelik sağlanmaktadır. Çin için, [Çin'Microsoft 365 ziyaret edin](https://www.microsoftstore.com.cn/home-use-program/invite). Hong Kong için, indirimli [Microsoft 365 Satın Al'ı ziyaret edin](https://www.microsoftestore.com.hk/partner/hup?locale=en_HK).\n- Japonya: Microsoft 365 Aile kullanılamıyor.\n- Belirli Surface cihazları ve aksesuar indirimleri belirli pazarlarda uygun şirketlere sunulur. \n"
+      Evde Kullanım Programı hangi pazarlarda sunulmaktadır?
+    answer: "Microsoft 365 Aile ve Kişisel aboneliklerdeki indirimler, şu istisnalar dışında dünya çapında uygun şirketlere sunulur:\n\n- Lübnan, Makao, Rusya ve Venezuela: Bu teklif bu pazarlarda mevcut değildir.\n- Çin ve Hong Kong: Bu pazarlarda bir yıllık abonelik mevcuttur. Çin için, [Çin'deki Microsoft 365](https://www.microsoftstore.com.cn/home-use-program/invite) ziyaret edin. Hong Kong için [Microsoft 365 indirimli fiyatla satın alın](https://www.microsoftestore.com.hk/partner/hup?locale=en_HK) sayfasını ziyaret edin.\n- Japonya: Microsoft 365 Aile kullanılamıyor.\n- Belirli Surface cihaz ve aksesuarlarındaki indirimler, belirli pazarlardaki uygun şirketlere sunulur. \n"
   - question: >
-      Bir kuruluş HUP indirimleri için nasıl uygun?
-    answer: "Çalışanların küçük bir indirimden yararlana Microsoft Evde Kullanım Programı için geçerli bir kurumsal e-posta adresine ve etkin bir Microsoft Hesabına ihtiyaçları vardır ve sizin de aşağıdaki ölçütlerden birini karşılaması gerekir:\n\n- Yazılım Güvencesi'ne uygun uygulamalar Office müşteriler\n- Yazılım Güvencesi'Microsoft 365/Microsoft 365 E3/E5'e sahip olan müşteriler\n- E5'te bir veya farklı ≥ 2.000 lisans satın alan ticari ve Microsoft 365 E3 müşteriler\n- Eğitim ve kar amacı gütmeyen müşteriler\n- Son 12 ay içinde uygun Power BI, Office, Surface cihazları & aksesuarları, Windows ve Mobil Kullanım için 250.000 ABD Doları veya daha Enterprise abd doları harcaan ticari ve Enterprise müşteriler \n"
+      Bir kuruluş HUP indirimlerini nasıl hak eder?
+    answer: "Çalışanların Microsoft Evde Kullanım Programı indirimden yararlanması için geçerli bir kurumsal e-posta adresi ve etkin bir Microsoft Hesabı gerekir ve kuruluşunuzun aşağıdaki ölçütlerden birini karşılaması gerekir:\n\n- Uygun Office uygulamaları için etkin Yazılım Güvencesi'ne sahip müşteriler\n- Yazılım Güvencesinden Microsoft 365/Microsoft 365 E3/E5'e sahip müşteriler\n- Microsoft 365 E3/E5 ≥ 2.000 lisans satın alan ticari ve kamu müşterileri\n- Eğitim ve kar amacı gütmeyen müşteriler\n- Son 12 ay içinde uygun Power BI, Office, Surface cihazları & aksesuarları, Windows ve Enterprise Mobility için 250.000 ABD doları veya daha fazla harcama yapan ticari ve kamu müşterileri \n"
   - question: >
-      Evde Kullanım Programı/ Azure Active Directory AAD için neden Azure Active Directory) hesabım İş İçin Microsoft Store?
+      Evde Kullanım Programı/ İş İçin Microsoft Store kullanmak için neden bir Azure Active Directory (AAD) hesabı oluşturmam gerekiyor?
     answer: >
-      Evde Kullanım Programı'nın çok daha geniş bir lisans ve ürün avantajlarından yararlanmasını güncelleştirmek ve modernleştirmek için, HUP'i gerçekleştirmemizi değiştirmemiz gerekiyor. İş İçin Microsoft Store, uygunluk doğrulaması yapmak ve HUP avantajlarını atamak için kullanılır. Bunun için de AAD'e bağlı olarak VLSC'den bilgileri bağlama ve kuruluş çalışanlarının e-posta etki alanlarını doğrulama. Daha fazla bilgi için bkz[. İş için Azure AD hesaplarına Office 365 için](/microsoft-store/sign-up-microsoft-store-for-business#o365-welcome).
+      Evde Kullanım Programı'nı daha geniş bir lisans ve ürün avantajı yelpazesine güncelleştirmek ve modernleştirmek için HUP'yi yerine getirme şeklimizi değiştirmemiz gerekiyordu. İş İçin Microsoft Store uygunluk doğrulaması ve HUP avantajları atamak için kullanılır ve bunun için VLSC'den bilgi bağlamak ve kuruluşunuzun çalışanlarının üzerinde olduğu e-posta etki alanlarını doğrulamak için AAD dayanır. Daha fazla bilgi için bkz. [İş için Office 365 aracılığıyla Azure AD hesaplarına kaydolma](/microsoft-store/sign-up-microsoft-store-for-business#o365-welcome).
   - question: >
-      Yönetilen bir kiracının atanmış IT Yöneticisi olmak için ne yapabilirim?
+      yönetilen bir kiracının atanmış BT Yöneticisi Nasıl yaparım??
     answer: >
-      Şirket etki alanının sahibi olduğunu kanıtlamak için (ör. contoso.com) DNS'de özel bir kayıt oluşturmanız gerekir.
+      Şirket etki alanınızın sahibi olduğunuzu kanıtlamak için DNS'de özel bir kayıt oluşturmanız gerekir, örneğin contoso.com.
 
 
-      Yönetilen kiracı olma işleminin adım adım süreci için bkz. Azure Active'de yönetilemeyen bir dizini [yönetici olarak alma](/azure/active-directory/users-groups-roles/domains-admin-takeover).
+      Yönetilen kiracı olmaya yönelik adım adım bir işlem için bkz. [Azure Active'de yönetilmeyen bir dizini yönetici olarak devralma](/azure/active-directory/users-groups-roles/domains-admin-takeover).
   - question: >
-      Evde Kullanım Programı avantajını çalışanlarına tanıtmaya yardımcı olmak için hangi kaynaklar kullanılabilir?
+      Evde Kullanım Programı avantajını çalışanlara tanıtmaya yardımcı olmak için hangi kaynaklar kullanılabilir?
     answer: >
-      Programı çalışanlarınıza tanıtmanıza [yardımcı olmak için](https://www.microsoft.com/home-use-program/resources) Evde Kullanım Programı giriş sayfasında yer alan kaynakları kullanın. Dijital ve yazdırılabilir el ilanları, e-posta ve bültenlerde kullanım için verbiage ve Evde Kullanım Programı'nın en iyi tanıtımını yapmaya yönelik kılavuzlar bulabilirsiniz.
+      Programı çalışanlarınıza tanıtmanıza yardımcı olması için [Evde Kullanım Programı](https://www.microsoft.com/home-use-program/resources) giriş sayfasında bulunan kaynakları kullanın. Dijital ve yazdırılabilir el ilanları, e-postalarda ve bültenlerde kullanım için ayrıntı ve Evde Kullanım Programı'nı en iyi şekilde tanıtma konusunda rehberlik bulacaksınız.
   - question: >
-      Uygun bir çalışanın satın alma için uygun bir Microsoft Evde Kullanım Programı adımlar nedir?
+      Uygun bir çalışanın Microsoft Evde Kullanım Programı satın alma işlemi gerçekleştirmesi için adımlar nelerdir?
     answer: >
-      1. **Kaydol** Sayfayı [Microsoft Evde Kullanım Programı ve](https://www.microsoft.com/home-use-program) Tamam düğmesini Başlarken seçin. Çalışanlar şirket e-posta adreslerini girer.
+      1. **Kaydol** [Microsoft Evde Kullanım Programı sayfasına](https://www.microsoft.com/home-use-program) gidin ve Başlarken düğmesini seçin. Çalışanlar kurumsal e-posta adreslerini girer.
 
-      2. **Onayla**  Kurumsal e-posta adresi gelen kutularına, programa uygunluklarını doğrulayanın bir bağlantısını içeren bir e-posta gönderilir.
+      2. **Onaylamak**  Şirket e-posta adresi gelen kutusuna, program için uygunluklarını doğrulayan bir bağlantı içeren bir e-posta gönderilir.
 
-      3. **Oturum Aç** Kimlik doğrulaması yapıldıktan sonra, kuruluşun Evde Kullanım Programı avantajına göre kendi kişisel e-posta adresleriyle ilişkili Microsoft hesabını sağlayarak satın alma sürecine başlarlar. Daha fazla bilgi için bkz [. Microsoft hesabınızla oturum açma](https://support.microsoft.com/help/4028195/microsoft-account-sign-in).
+      3. **Oturum Aç** Kimlikleri doğrulandıktan sonra, kişisel e-posta adresleriyle ilişkili Microsoft hesabını sağlayarak satın alma işlemine başlarlar ve bu sayede kuruluşun Evde Kullanım Programı avantajına göre kendilerine sağlanan ürünlerdeki indirimleri görüntüleyebilirler. Daha fazla bilgi için bkz. [Microsoft hesabınızda oturum açma](https://support.microsoft.com/help/4028195/microsoft-account-sign-in).
 
-      4. **Alışveriş** Satın alma, satın alma işlenme Microsoft Store.
+      4. **Dükkanı** Satın alma işlemi Microsoft Store işlenir ve tamamlanır.
   - question: >
-      Bir çalışan e-posta Microsoft 365 abonesi Microsoft Evde Kullanım Programı, bu bizim kuruluşlarımızın iş aboneliği Microsoft 365 cihaz sınırını nasıl etkiler?
+      Bir çalışan Microsoft Evde Kullanım Programı aracılığıyla Microsoft 365 abone olursa, bu durum kuruluşunuzun Microsoft 365 iş aboneliğini ve cihaz sınırını nasıl etkiler?
     answer: >
-      Evde Kullanım Programı aracılığıyla yapılan yüklemelerin, organizasyon organizasyon veya iş Microsoft 365 üzerinde hiçbir etkisi yoktur. Çalışanlar Microsoft 365 cihazlarında e-postayı etkinleştir olduğunda, iş hesaplarını değil, kendi kişisel Microsoft hesaplarını kullanırlar. Kuruluşlarının IT yöneticileri Evde Kullanım Programı aracılığıyla yapılan hiçbir satın almaları yönetmez veya desteklemez.
+      Evde Kullanım Programı aracılığıyla yapılan yüklemelerin kuruluşunuzun Microsoft 365 iş aboneliği üzerinde hiçbir etkisi yoktur. Çalışanlar Microsoft 365 kişisel cihazlarında etkinleştirdiğinde, iş hesabını değil kişisel Microsoft hesabını kullanır. Kuruluşunuzun BT yöneticileri Evde Kullanım Programı aracılığıyla yapılan satın almaları yönetmez veya desteklemez.
   - question: >
-      Kuruluşum için iş avantajını yönetmede sorun Microsoft Evde Kullanım Programı. Nereden destek bu olabilir?
+      Kuruluşumun Microsoft Evde Kullanım Programı avantajını yönetirken sorun yaşıyorum. Nereden destek alabilirim?
     answer: >
-      Toplu Lisanslama Hizmeti Merkezi'ne veya Toplu Lisanslama Hizmeti Merkezi'ne İş İçin Microsoft Store sorunları destekleme için [bkz. VLSC Desteği](https://www.microsoft.com/Licensing/servicecenter/default.aspx?wa=wsignin1.0).
+      Toplu Lisanslama Hizmet Merkezi'nden geçiş veya İş İçin Microsoft Store erişim sorunları için bkz. [VLSC Desteği](https://www.microsoft.com/Licensing/servicecenter/default.aspx?wa=wsignin1.0).
 
 
-      İş İçin Microsoft Store'a erişdikten sonra avantajı görüntülemeyle ilgili sorunlar için bkz. [İş için Store Yönetici desteği](/microsoft-store/)
+      İş İçin Microsoft Store erişildikten sonra avantajı görüntüleme sorunları için bkz[. İş İçin Mağaza Yöneticisi desteği](/microsoft-store/)
   - question: >
-      2021 ve/veya Visio Professional 2021 satın alma seçeneğini neden Project Professional değilim?
+      Neden Visio Professional 2021 ve/veya Project Professional 2021 satın alma seçeneği görmüyorum?
     answer: >
-      Çalışanlardan biri önceki programdan yararlanmışsa ve Visio Professional 2021 ve/veya Project Professional 2021 indirimlerini arıyorsa, lütfen uygunluk doğrulama sürecine gidin ve kişisel Microsoft hesabınızla oturum açın, bu ürünleri satın almak için Diğer **Office** ürünleri'ne gidin. Beklenen indirimleri görmüyorsanız, bu ek avantajları istemek için işvereninin Evde Kullanım Programı yöneticisine başvurun.
+      Çalışanlarınızdan biri önceki programdan yararlandıysa ve Visio Professional 2021 ve/veya Project Professional 2021 indirimleri arıyorsa lütfen uygunluk doğrulama sürecini gözden geçirin ve kişisel Microsoft hesabınızla oturum açtıktan sonra bu ürünleri satın almak için **Diğer Office ürünleri'ne** gidin. Beklenen indirimlerin uygulandığını görmüyorsanız, bu ek avantajları sormak için işvereninizin Evde Kullanım Programı yöneticisine başvurun.
   - question: >
-      Çalışanlarımızın bu program hakkında soruları veya satın alma ve yüklemeyle ilgili dede ihtiyacı varsa ne olur?
+      Çalışanlarımın bu program hakkında soruları varsa veya satın alma ve yükleme konusunda desteğe ihtiyaç duyuyorsa ne olur?
     answer: >
-      Çalışanların soruları varsa onları aşağıdaki kaynaklara bakın:
+      Çalışanların soruları varsa aşağıdaki kaynaklara başvurun:
 
 
       - [Satın alma ve yükleme sonrası SSS](https://products.office.com/microsoft-office-for-home-and-school-faq)
 
 
-      - [Evde Kullanım Programı Çalışan SSS](https://www.microsoft.com/home-use-program/frequently-asked-questions)
+      - [Evde Kullanım Programı Çalışanı hakkında SSS](https://www.microsoft.com/home-use-program/frequently-asked-questions)
 
-       Teknik konularla ilgili yardım için [bkz. Microsoft Desteği](https://support.microsoft.com/). Şu konuda yardım bulabilirsiniz:
+       Teknik sorunlarla ilgili yardım için bkz. [Microsoft Desteği](https://support.microsoft.com/). Şu yardımlar için bulabilirsiniz:
 
       - Sipariş durumu
 
       - Faturalama
 
-      - Yükleme Office
+      - Office yükleme
 
-      - Office'te oturum Office
+      - Office oturum açma
   - question: >
-      Şirketim evde kullanım programına neden katılmalı?
-    answer: "Evde Kullanım Programı, şirketin Microsoft yatırım getirisini en üst düzeye çıkarmalarına yardımcı olur. Programa katılmanın avantajları şunlardır: \n\n- IT eğitimiyle ilgili ihtiyacı azaltma \n- Yardım masası ve eğitim maliyetlerini düşürme \n- Çalışanların evde Microsoft 365 tanımasına olanak tanıma \n- Yazılımda yer alan ve üretkenliği artıran yüksek yazılım \n"
+      Şirketim neden Evde Kullanım Programı'na katılmalı?
+    answer: "Evde Kullanım Programı, şirketinizin Microsoft yatırımlarının getirisini en üst düzeye çıkarmanıza yardımcı olur. Programa katılmanın avantajları şunlardır: \n\n- BT eğitimi gereksinimini azaltma \n- Yardım masası ve eğitim maliyetlerini düşürme \n- Çalışanların evde Microsoft 365 tanımasına izin verme \n- Üretkenliği artırabilecek yazılım yeterliliğini artırma \n"
   - question: >
-      Çalışanlara bu Microsoft Evde Kullanım Programı nasıl avantaj sağlar?
+      Microsoft Evde Kullanım Programı çalışanlara nasıl fayda sağlar?
     answer: >
-      Çalışanlar Microsoft 365 bir indirimle ürün satın alınca, ofiste evde aynı yazılımı kullanabilirler. Bu, üretkenliklerini artırmaya, becerilerini geliştirmelerine ve iş memnuniyetini geliştirmelerine yardımcı olur.
+      Çalışanlar Microsoft 365 ürünleri önemli bir indirimle satın aldıklarında, ofiste kullandıkları yazılımları evde de kullanabilirler. Bu, üretkenliklerini artırmaya, becerilerini geliştirmeye ve iş memnuniyetini artırmaya yardımcı olur.
   - question: >
-      Bir çalışan şirketten ayrılırsa ne olur?
-    answer: "Microsoft 365 abonelik teklifine uygun olan ve program aracılığıyla satın alınan çalışanlar için, organizasyonda çalışma durumlarından bağımsız olarak, çalışanın aboneliği etkin olduğu sürece indirimli fiyat uygulanır. Bununla birlikte, ticari kullanım hakları, çalışma sona erdiğinde sona erer. Office 2019 yazılım teklifleri için uygun çalışanların, şirketten ayrılarak Evde Kullanım Programı aracılığıyla satın Office yazılımlarını kaldırmaları gerekir. \n"
-additionalContent: "\n## <a name=\"related-content\"></a>İlgili içerik\n  [Evde Kullanım Programı SSS](https://www.microsoft.com/home-use-program/frequently-asked-questions). (article)\\\n  [Microsoft Toplu Lisanslama Hizmeti Merkezi](https://www.microsoft.com/Licensing/servicecenter/default.aspx?wa=wsignin1.0) (bağlantı sayfası)\\\n  [İş İçin Microsoft Store Yöneticisi desteği](/microsoft-store/) (bağlantı sayfası)\\\n  [İş İçin Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2139192) (bağlantı sayfası)\\\n  [Evde Kullanım Programı çalışan deposu](https://www.microsoft.com/home-use-program) (bağlantı sayfası)\\\n  [Microsoft Lisanslama: Evde Kullanım Programına genel bakış](https://www.microsoft.com/licensing/licensing-programs/software-assurance-by-benefits?activetab=software-assurance-by-benefits-tab:primaryr4) (bağlantı sayfası)"
+      Bir çalışan şirketten ayrıldığında ne olur?
+    answer: "Microsoft 365 abonelik teklifine hak kazanan ve program aracılığıyla satın almış çalışanlar için, kuruluşunuzdaki çalışma durumlarına bakılmaksızın, çalışanın aboneliği etkin kaldığı sürece indirimli fiyat uygulanır. Ancak, ticari kullanım hakları, istihdamları sona erdiğinde sona erer. Office 2019 yazılım tekliflerine hak kazanan çalışanlar için, çalışan şirketten ayrıldıktan sonra Evde Kullanım Programı aracılığıyla satın alınan Office yazılımını kaldırmaları gerekir. \n"
+additionalContent: "\n## <a name=\"related-content\"></a>İlgili içerik\n  [Evde Kullanım Programı hakkında SSS](https://www.microsoft.com/home-use-program/frequently-asked-questions). (makale)\\\n  [Microsoft Toplu Lisanslama Hizmet Merkezi](https://www.microsoft.com/Licensing/servicecenter/default.aspx?wa=wsignin1.0) (bağlantı sayfası)\\\n  [İş İçin Microsoft Store Yönetici desteği](/microsoft-store/) (bağlantı sayfası)\\\n  [İş İçin Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2139192) (bağlantı sayfası)\\\n  [Evde Kullanım Programı çalışan deposu](https://www.microsoft.com/home-use-program) (bağlantı sayfası)\\\n  [Microsoft Lisanslama: Evde Kullanım Programına genel bakış](https://www.microsoft.com/licensing/licensing-programs/software-assurance-by-benefits?activetab=software-assurance-by-benefits-tab:primaryr4) (bağlantı sayfası)"

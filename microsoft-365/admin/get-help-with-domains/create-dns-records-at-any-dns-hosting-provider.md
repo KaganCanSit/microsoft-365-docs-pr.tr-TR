@@ -23,12 +23,12 @@ ms.custom:
 - AdminTemplateSet
 - business_assist
 - admindeeplinkMAC
-ms.openlocfilehash: 17a3a63dfb3faedb5ff213b24dd14abd57f55bb3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 08d28a5586c92d0e439170807f750150d9fbe17c
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63316933"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64704789"
 ---
 # <a name="add-dns-records-to-connect-your-domain"></a>Etki alanınızı bağlamak için DNS kayıtları ekleme
 
@@ -97,14 +97,16 @@ Etkinleştirmek istediğiniz hizmetlere bağlı olarak farklı türlerde çeşit
 
 MX kaydına yönelik bilgileri, yönetim merkezi etki alanı kurulum sihirbazından alırsınız.
 
-Barındırma sağlayıcınızın web sitesinde yeni bir MX kaydı ekleyin.
-Alanların aşağıdaki değerlere ayarlandığından emin olun:
+Barındırma sağlayıcınızın web sitesinde yeni bir MX kaydı ekleyin. Alanların aşağıdaki değerlere ayarlandığından emin olun:
 
 - Kayıt Türü: `MX`
 - Öncelik: Kullanılabilir en yüksek değere ayarlayın; genellikle `0` olur.
 - Ana Bilgisayar Adı: `@`
 - İşaret edilen adres: Yönetim merkezindeki değeri kopyalayın ve buraya yapıştırın.
-- TTL: `3600` (veya varsayılan sağlayıcınız)
+- TTL: `3600`
+
+> [!NOTE]
+> Exchange Online, yalnızca 6 saatten (21.600 saniye) kısa TTL değerlerini destekler.
 
 Kaydı kaydedin ve ardından diğer tüm MX kayıtlarını kaldırın.
 

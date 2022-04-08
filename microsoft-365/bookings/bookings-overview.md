@@ -8,38 +8,47 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 47403d64-a067-4754-9ae9-00157244c27d
-description: Web tabanlı bir rezervasyon takvimi içeren ve personelinizin takvimini en iyi duruma getirmek ve müşterilerinize randevu rezervasyonu için esneklik sağlamak için Outlook ile tümleştirilmiş olan Microsoft Bookings uygulamasına genel bakış.
-ms.openlocfilehash: 0db665a0eb080d76bd90f24887ca7043b00b0dde
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Web tabanlı bir rezervasyon takvimi içeren ve personelinizin takvimini iyileştirmek ve müşterilerinize randevu rezervasyonu için esneklik sağlamak için Outlook ile tümleşen Microsoft Bookings uygulamasına genel bakış.
+ms.openlocfilehash: 90f298c2947796a06fe67fc3fd1f190282639024
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983248"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64715197"
 ---
 # <a name="microsoft-bookings"></a>Microsoft Kayıtları
 
-Microsoft Bookings, randevuları zamanlamayı ve yönetmeyi çok kolaylaştırır. Bookings, web tabanlı bir rezervasyon takvimi içerir ve Outlook personelinizin takvimini en iyi duruma getirmek ve müşterilerinize en uygun zaman için rezervasyon esnekliği sağlamak için Outlook ile tümleştirilmiştir. E-posta ve SMS metin bildirimleri, gösteri gösterilerini azaltmayı ve müşteri memnuniyetini artırmayı sağlar Organizasyonunız yinelenen zamanlama görevlerinde azaltarak zaman kazandırır. Yerleşik bir esneklik ve özelleştirme olanağıyla Bookings, kuruluşun birçok farklı parçasının duruma ve gereksinimlerine uyacak şekilde tasarleştirilebilir.
+> [!NOTE]
+> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
+
+Microsoft Bookings randevuları zamanlamayı ve yönetmeyi çok kolaylaştırır. Bookings web tabanlı bir rezervasyon takvimi içerir ve personelinizin takvimini iyileştirmek ve müşterilerinize kendileri için en uygun zamanı ayırma esnekliği sağlamak için Outlook ile tümleşir. E-posta ve SMS kısa mesaj bildirimleri, gösterilmemesini azaltır ve müşteri memnuniyetini artırır. Kuruluşunuz, yinelenen zamanlama görevlerinde azalmayla zaman kazandırır. Yerleşik esneklik ve özelleştirme yeteneği sayesinde, Bookings kuruluşun birçok farklı bölümünün durumuna ve gereksinimlerine uyacak şekilde tasarlanabilir.
 
 > [!NOTE]
-> Bookings takvimi, aynı e-posta Exchange Online.
+> Bookings takvimi, Exchange Online bir posta kutusudur.
 
-Bookings'i kullanarak kuruluş toplantılarınızı çevrimiçi toplantılarla sanal hale [Microsoft Teams Skype Kurumsal.](https://support.microsoft.com/office/overview-of-the-bookings-app-in-teams-7b8569e1-0c8a-444e-b712-d9968b05110b) Çevrimiçi toplantı olarak ayrılmış her randevu, katılımcılara bir web tarayıcısı, telefon arayarak bağlanılan telefon ya da Skype veya Teams uygulaması aracılığıyla katılmaları için gönderilen benzersiz bir toplantı bağlantısı oluşturur. Bookings, Teams'de bir uygulama olarak da kullanılabilir. Bu uygulama Bookings takvimleri oluşturmanıza, personel atamanıza ve bir daha randevudan hiç ayrılmadan mevcut randevuları zamanlamanız ve mevcut randevuları yönetmenize Teams.
+kuruluşunuzun toplantılarını Microsoft Teams ve Skype Kurumsal aracılığıyla çevrimiçi toplantılarla sanal hale getirmek için [Bookings](https://support.microsoft.com/office/overview-of-the-bookings-app-in-teams-7b8569e1-0c8a-444e-b712-d9968b05110b) kullanın. Çevrimiçi toplantı olarak ayrılan her randevu, katılımcılara web tarayıcısı, telefon arayarak bağlanma veya Skype ya da Teams uygulaması aracılığıyla katılabilmeleri için katılımcılara gönderilen benzersiz bir toplantı bağlantısı oluşturur. Bookings, Teams'da Bookings takvimler oluşturmanıza, personel atamanıza ve hem yeni randevular zamanlamanıza hem de Teams hiç ayrılmadan mevcut randevuları yönetmenize olanak tanıyan bir uygulama olarak da kullanılabilir.
 
-Bookings'in üç birincil bileşeni vardır:
+Bookings üç birincil bileşeni vardır:
 
-- Müşterilerinizle müşterileriniz, hizmeti sağlayacak veya randevuyu çalıştıracak personel üyesiyle randevular zamanlaması için bir rezervasyon sayfası. Bu web tabanlı zamanlama sayfası doğrudan bağlantı, Facebook sayfanız ve hatta web sitenize ekleme yoluyla paylaşabilirsiniz.
+- Müşterilerinizin ve müşterilerinizin hizmeti sağlaması veya randevuyu çalıştırması gereken personel üyesiyle randevu zamanlayabilecekleri bir rezervasyon sayfası. Bu web tabanlı zamanlama sayfası doğrudan bağlantı, Facebook sayfanız ve hatta web sitenize bağlantı ekleme yoluyla paylaşılabilir.
 
-- Bir kuruluş içindeki Bookings takvim sahipleri ve yöneticilerinin randevu türlerini ve ayrıntılarını tanımlayabilmektedir, personel zamanlamalarını ve uygunluk durumunu yönetebilir, çalışma saatlerini ayarlayarak randevuların nasıl zamanlandığı özelleştirilebilir. Web tabanlı, işletmeye yönelik bir sayfa kümesi içeren bir web uygulaması. Bu sayfalar çok yönlülük ve bir Bookings takvimini kişinin veya kuruluşun farklı gereksinimlerine uyacak şekilde özelleştirme olanağı sağlar.
+- Bir kuruluştaki Bookings takvim sahiplerinin ve yöneticilerinin randevu türlerini ve ayrıntılarını tanımlayabildiği, personel zamanlamalarını ve kullanılabilirliğini yönetebileceği, iş saatlerini ayarlayabildiği ve randevuların zamanlanma şeklini özelleştirebileceği, web tabanlı, işletmeye yönelik bir dizi sayfa içeren bir web uygulaması. Bu sayfalar çok yönlülük ve Bookings takvimi kişinin veya kuruluşun çeşitli gereksinimlerine uyacak şekilde özelleştirme olanağı sağlar.
 
-- Bookings takvim sahipleri ve yöneticilerinin tüm randevularını görmelerine, müşteri listelerine ve iletişim bilgilerine erişmelerine ve hareket halinde el ile rezervasyonlar yaptıkları, işletmeye yönelik bir mobil uygulama.
+- Bookings takvim sahiplerinin ve yöneticilerinin tüm randevularını görebileceği, müşteri listelerine ve iletişim bilgilerine erişebileceği ve hareket halindeyken el ile rezervasyonlar yapabilecekleri, işletmeye yönelik mobil uygulama.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
 Microsoft Bookings aşağıdaki aboneliklerde kullanılabilir:
 
-- Office 365: A3, A5, E3, E5, F1, F3
-- Microsoft 365: A3, A5, E3, E5, F1, F3, İş Standart, İş Premium
+- Office 365: A3, A5, E1, E3, E5, F1, F3
+- Microsoft 365: A3, A5, E1, E3, E5, F1, F3, Business Basic, Business Standard, Business Premium
 
-## <a name="get-started-using-bookings"></a>Bookings'i kullanmaya başlama
+## <a name="watch-introducing-microsoft-bookings"></a>İzleyin: Microsoft Bookings Tanıtımı
 
-Microsoft [Bookings'e erişim iznine sahip olmak için bkz](get-access.md). Bookings'i açmak veya kapatmak için bkz [. Bookings'i organizasyonu için açma veya kapatma](turn-bookings-on-or-off.md).
+> [!VIDEO https://youtu.be/G2HOsM767Sw]
+
+Bookings, küçük işletmelerin müşterileriyle randevu zamanlamasını ve yönetmesini kolaylaştırır.
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+Başlamak için bkz. [Microsoft Bookings erişme](get-access.md). Bookings açmak veya kapatmak için bkz[. Kuruluşunuz için Bookings açma veya kapatma](turn-bookings-on-or-off.md).

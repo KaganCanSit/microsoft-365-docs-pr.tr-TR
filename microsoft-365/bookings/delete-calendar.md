@@ -1,5 +1,5 @@
 ---
-title: Rezervasyon takvimini silme
+title: Rezervasyon takvimi silme
 ms.author: kwekua
 author: kwekuako
 manager: scotv
@@ -8,68 +8,71 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 8c3a913c-2247-4519-894d-b6263eeb9920
-description: Bookings Microsoft 365 yönetim merkezi takvimlerini Windows PowerShell takvimleri silmek için takvimi veya takvimi kullanın.
-ms.openlocfilehash: 48556951382b95316ffdb9e07c1c561758276ded
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bookings takvimleri silmek için Microsoft 365 yönetim merkezi veya Windows PowerShell kullanın.
+ms.openlocfilehash: 5b91a6b2c3d3d0637a017b0250ec45394958e147
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983370"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714383"
 ---
-# <a name="delete-a-booking-calendar-in-bookings"></a>Bookings'te bir rezervasyon takvimini silme
+# <a name="delete-a-booking-calendar-in-bookings"></a>Bookings'da rezervasyon takvimini silme
 
-Bu makalede istenmeyen bir rezervasyon takvimini nasıl silebilirsiniz? Randevu takvimini takvim Microsoft 365 yönetim merkezi PowerShell'i kullanabilirsiniz. Bookings takvimi, Takvim'de bulunan bir Exchange Online, dolayısıyla rezervasyon takvimini silmek için ilgili kullanıcı hesabını silebilirsiniz.
+> [!NOTE]
+> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
+
+Bu makalede, istenmeyen bir rezervasyon takvimini nasıl silebileceğiniz açıklanmaktadır. rezervasyon takvimini Microsoft 365 yönetim merkezi silebilir veya PowerShell'i kullanabilirsiniz. Bookings takvimi, Exchange Online bir posta kutusu olduğundan, rezervasyon takvimini silmek için ilgili kullanıcı hesabını silersiniz.
 
 > [!IMPORTANT]
-> 2017 veya daha önce oluşturduğunuz tüm rezervasyon takvimleri, bu konudaki PowerShell yönergeleri kullanılarak silinmelidir. 2018 veya sonrasında oluşturulan tüm rezervasyon takvimleri takvim takvimlerinden Microsoft 365 yönetim merkezi.
+> 2017 veya daha önce oluşturduğunuz tüm rezervasyon takvimlerinin bu konudaki PowerShell yönergeleri kullanılarak silinmesi gerekir. 2018 veya sonrasında oluşturulan tüm rezervasyon takvimleri Microsoft 365 yönetim merkezi silinebilir.
 
-Rezervasyon takvimi, rezervasyon takvimiyle ilgili tüm bilgilerin ve verilerin depolandığı takvimdir. Bunlar:
+Rezervasyon takvimi, aşağıdakiler dahil olmak üzere bu rezervasyon takvimi ve verileriyle ilgili tüm bilgilerin depolandığı yerdir:
 
 - Rezervasyon takvimi oluşturulduğunda eklenen iş bilgileri, logo ve çalışma saatleri
 - Rezervasyon takvimi oluşturulduğunda eklenen ilgili personel ve hizmetler
-- Randevular oluşturulduktan sonra rezervasyon takvimine eklenen tüm rezervasyonlar ve izin randevuları.
+- Tüm rezervasyonlar ve izin randevuları oluşturulduktan sonra rezervasyon takvimine eklenir.
 
 > [!WARNING]
-> Bir rezervasyon takvimi silindikten sonra, bu ek bilgiler de kalıcı olarak silinir ve kurtarılamaz.
+> Rezervasyon takvimi silindikten sonra bu ek bilgiler de kalıcı olarak silinir ve kurtarılamaz.
 
-## <a name="delete-a-booking-calendar-in-the-microsoft-365-admin-center"></a>Takvimde bir rezervasyon takvimini Microsoft 365 yönetim merkezi
+## <a name="delete-a-booking-calendar-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi bir rezervasyon takvimini silme
 
-1. En son Microsoft 365 yönetim merkezi.
+1. Microsoft 365 yönetim merkezi gidin.
 
 1. Yönetim merkezinde **Kullanıcılar** 'ı seçin.
 
-   ![Kullanıcı Arabirimi'nin Microsoft 365 yönetim merkezi.](../media/bookings-admin-center-users.png)
+   ![Microsoft 365 yönetim merkezi'deki Kullanıcılar kullanıcı arabiriminin görüntüsü.](../media/bookings-admin-center-users.png)
 
 1. **Etkin Kullanıcılar** sayfasında silmek istediğiniz kullanıcıların adlarını seçin ve ardından **Kullanıcıyı sil**'i seçin.
 
-   ![Kullanıcı Arabirimini Sil'in Microsoft 365 yönetim merkezi.](../media/bookings-delete-user.png)
+   ![Microsoft 365 yönetim merkezi'de Kullanıcı Kullanıcı Arabirimini Sil'in görüntüsü.](../media/bookings-delete-user.png)
 
-## <a name="delete-a-booking-calendar-using-exchange-online-powershell"></a>Exchange Online PowerShell kullanarak rezervasyon Exchange Online silme
+## <a name="delete-a-booking-calendar-using-exchange-online-powershell"></a>Exchange Online PowerShell kullanarak rezervasyon takvimini silme
 
-[PowerShell Bağlan Exchange Online hakkında](/powershell/exchange/exchange-online-powershell-v2) önkoşullar ve yol gösterici bilgi için bkz. PowerShell'e Exchange Online.
+[Exchange Online PowerShell'e](/powershell/exchange/exchange-online-powershell-v2) bağlanmak için önkoşullar ve yönergeler için bkz. PowerShell Exchange Online Bağlan.
 
-Bu adımları gerçekleştirmek için, "Yönetici olarak çalıştır" seçeneğini kullanarak çalıştırılan etkin bir Microsoft PowerShell komut penceresi kullanıyorsanız gerekir.
+Bu adımları gerçekleştirmek için, "Yönetici olarak çalıştır" seçeneğini belirleyerek çalıştırdığınız etkin bir Microsoft PowerShell komut penceresi kullanıyor olmanız gerekir.
 
-1. PowerShell penceresinde, aşağıdaki komutu çalıştırarak EXO V2 modülünü yükleme:
+1. PowerShell penceresinde aşağıdaki komutu çalıştırarak EXO V2 modülünü yükleyin:
 
    ```powershell
    Import-Module ExchangeOnlineManagement
    ```
 
    > [!NOTE]
-   > [EXO V2 modülünü zaten yüklemişsiniz](/powershell/exchange/exchange-online-powershell-v2#install-and-maintain-the-exo-v2-module), önceki komut yazıldığı gibi çalışır.
+   > [EXO V2 modülünü zaten yüklediyseniz](/powershell/exchange/exchange-online-powershell-v2#install-and-maintain-the-exo-v2-module), önceki komut yazıldığında çalışır.
    
-2. Çalıştırmak için gereken komut aşağıdaki söz dizimlerini kullanır:
+2. Çalıştırmanız gereken komut aşağıdaki söz dizimini kullanır:
 
    ```powershell
    Connect-ExchangeOnline -UserPrincipalName <UPN> 
    ```
 
-   - _\<UPN\>_ kullanıcı asıl adı biçimindeki hesabınızdır (örneğin, `john@contoso.com`).
+   - _\<UPN\>_ , kullanıcı asıl adı biçimindeki hesabınızdır (örneğin, `john@contoso.com`).
 
-3. İstendiğinde, kalıcı olarak silmek istediğiniz rezervasyon Microsoft 365 barındıran kiracının kiracı yöneticisi kimlik bilgileriyle oturum açın.
+3. İstendiğinde, kalıcı olarak silmek istediğiniz rezervasyon takvimini barındıran Microsoft 365 kiracıda kiracı yöneticisi kimlik bilgileriyle oturum açın.
 
-4. Bu komut işlemeyi tamamlaydıktan sonra, kiracınıza rezervasyon posta kutularının listesini almak için aşağıdaki komutu girin:
+4. Bu komutun işlenmesi tamamlandıktan sonra, kiracınızdaki rezervasyon posta kutularının listesini almak için aşağıdaki komutu girin:
 
    ```powershell
    Get-EXOMailbox -RecipientTypeDetails SchedulingMailbox
@@ -82,9 +85,9 @@ Bu adımları gerçekleştirmek için, "Yönetici olarak çalıştır" seçeneğ
    ```
 
    > [!IMPORTANT]
-   > Kalıcı olarak silmek istediğiniz rezervasyon posta kutusu diğer adının tam adını yazmaya dikkat edin.
+   > Kalıcı olarak silmek istediğiniz rezervasyon posta kutusu diğer adının tam adını yazarken dikkatli olun.
 
-6. Takvimin silindi olduğunu doğrulamak için aşağıdaki komutu girin:
+6. Takvimin silindiğini doğrulamak için aşağıdaki komutu girin:
 
    ```powershell
     Get-EXOMailbox -RecipientTypeDetails SchedulingMailbox

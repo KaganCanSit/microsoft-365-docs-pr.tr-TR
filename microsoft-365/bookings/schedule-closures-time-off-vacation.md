@@ -1,5 +1,5 @@
 ---
-title: İş kapanışları, izinler ve izin zamanlarını zamanlama
+title: İş bitiş, mesai dışı saatlerini ve tatil zamanlarını planlayın
 ms.author: kwekua
 author: kwekuako
 manager: scotv
@@ -8,54 +8,61 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: e3c0a4ee-e3d8-4fbe-bd8f-16d1c712d1f4
-description: Çalışanların belirtilen süreler boyunca rezervasyonlar için uygun olmadığı işaretlensin diye Bookings takviminden ofis kapanışları ve çalışan izinlerini zamanlamayın.
-ms.openlocfilehash: ea0b9b9870d5331d58b8f0e9f7671853d0e3433b
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: Çalışanların belirtilen zamanlarda rezervasyon için uygun değil olarak işaretlenmesi için, Bookings takviminden ofis kapanışlarını ve çalışan izinlerini planlayın.
+ms.openlocfilehash: 138079643c9fbc86918a071f935ebe96d7989e68
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015186"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714779"
 ---
-# <a name="schedule-business-closures-time-off-and-vacation-time"></a>İş kapanışları, izinler ve izin zamanlarını zamanlama
+# <a name="schedule-business-closures-time-off-and-vacation-time"></a>İş bitiş, mesai dışı saatlerini ve tatil zamanlarını planlayın
 
-Zaman zaman tatiller veya ekip etkinlikleri için işlerinizi kapatmak ister ya da çalışanlarının hastalık nedeniyle, tatilde veya başka nedenlerle uygun olmadığı durumlarda izine ihtiyacı olabilir. Microsoft Bookings takviminden izin zaman kullanabilirsiniz ve çalışan belirtilen süre boyunca rezervasyon için uygun olmayacaktır. İşletme yeniden açıldıktan veya çalışanlar işe döndüklerinde, herkes rezervasyon sayfasında kurulmuş çalışma saatlerine göre listelenir.
+> [!NOTE]
+> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
-İş kapanışları veya çalışan kapatmaları zamanlaması için bu videoyu izleyin veya aşağıdaki adımları izleyin.
+Bazen tatiller veya ekip etkinlikleri için işletmenizi kapatmak istersiniz ya da çalışanlarınızın hasta, tatil veya başka nedenlerle müsait olmadığında izine ihtiyacı olur. Microsoft Bookings takviminden izin zamanlayabilirsiniz ve çalışan belirtilen süre boyunca rezervasyonlar için kullanılamaz. İşletme yeniden açıldıktan veya çalışanlar işe döndükten sonra, herkes belirtilen çalışma saatlerine göre rezervasyon sayfasında listelenir.
+
+İş kapanışlarını veya çalışanlarını devre dışı bırakmak için bu videoyu izleyin veya aşağıdaki adımları izleyin.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2TxDC]
 
 ## <a name="schedule-ad-hoc-business-closures"></a>Geçici iş kapanışlarını zamanlama
 
-1. Uygulama Microsoft 365 başlatıcısını ve ardından Bookings'i seçin.
+1. Microsoft 365'da uygulama başlatıcıyı ve ardından **Bookings'ı** seçin.
 
-1. Gezinti bölmesinde TakvimDeleki **Zaman'ı** \> **seçin**.
+1. Takviminizi seçin. 
 
-   ![Bookings takvim görünümü ve izin düğmesinin resmi.](../media/bookings-calendar-timeoff.png)
+1. Üst gezinti bölmesinde **, zaman ekle'yi** seçin.
 
-1. Başlık, başlangıç ve bitiş tarihi ve saatleri, konumu ve ek notlar gibi ayrıntıları doldurun.
+   ![Bookings takvim görünümünün ve izin düğmesinin resmi.](../media/bookings-calendar-timeoff.png)
 
-1. Tüm **gün etkinlik'i seçin**.
+1. Başlık, başlangıç ve bitiş tarihi ile saatleri, konum ve ek notlar da dahil olmak üzere ayrıntıları doldurun.
+
+1. **Tüm gün süren etkinlik'i** seçin.
 
 1. Tüm personel üyelerini seçin.
 
 1. **Kaydet**'i seçin.
 
-Müşteri, ofis kapalı olduğu bir günde hizmet zamanlamayı dener, rezervasyon sayfasında bir ileti görebilir.
+Müşteri ofisin kapalı olduğu bir günde hizmet zamanlamayı denediğinde rezervasyon sayfasında bir ileti görür.
 
-   ![Müşterinin izin sırasında rezervasyon yapmaya çalışırken gördüğü örnek ileti görüntüsü.](../media/bookings-timeoff-message.png)
+   ![Müşterinin izin sırasında rezervasyon yapmaya çalışırken gördüğü örnek iletinin resmi.](../media/bookings-timeoff-message.png)
 
-## <a name="schedule-employee-time-off"></a>Çalışan izinlerini zamanlama
+## <a name="schedule-employee-time-off"></a>Çalışana izin zamanlaması zamanlama
 
-1. Uygulama Microsoft 365 başlatıcıyı ve ardından **Bookings'i seçin**.
+1. Microsoft 365'da uygulama başlatıcıyı ve ardından **Bookings'ı** seçin.
 
-   ![Uygulama başlatıcının görüntüsü.](../media/bookings-applauncher.png)
+   ![Uygulama başlatıcı görüntüsü.](../media/bookings-applauncher.png)
 
-1. Gezinti bölmesinde TakvimDeleki **Zaman'ı** \> **seçin**.
+1. Takviminizi seçin.
 
-   ![Bookings takvim görünümü ve izin düğmesinin resmi.](../media/bookings-calendar-timeoff.png)
+1. Üst gezinti bölmesinde **, zaman ekle'yi** seçin.
 
-1. Başlık, başlangıç ve bitiş tarihi ve saatleri, konum ve diğer notlar gibi ayrıntıları doldurun. Çalışan tam bir gün veya birkaç gün boyunca yok olacaksa, Tüm gün **etkinlik'i seçin**.
+   ![Bookings takvim görünümünün ve izin düğmesinin resmi.](../media/bookings-calendar-timeoff.png)
 
-1. Zaman zamanlarını alan personel üyesini veya üyeleri seçin.
+1. Başlık, başlangıç ve bitiş tarihi ve saatleri, konum ve diğer notlar gibi ayrıntıları doldurun. Çalışan tam gün veya birkaç gün boyunca gidecekse **Tüm gün etkinliği'ni** seçin.
+
+1. Personel üyesini veya izinli olan üyeleri seçin.
 
 1. **Kaydet**'i seçin.

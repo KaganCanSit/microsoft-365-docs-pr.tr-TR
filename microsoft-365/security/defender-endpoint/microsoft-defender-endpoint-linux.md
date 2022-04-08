@@ -17,12 +17,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: dcc4ed070e900f9df892abb58cd05cdad2dca619
-ms.sourcegitcommit: 2f6a0096038d09f0e43e1231b01c19e0b40fb358
+ms.openlocfilehash: 5f04933d54bf02732fea34df25b25e3996e23932
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64687021"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64705109"
 ---
 # <a name="microsoft-defender-for-endpoint-on-linux"></a>Linux'ta Uç Nokta için Microsoft Defender
 
@@ -48,6 +48,10 @@ Linux için Uç Nokta için Microsoft Defender kötü amaçlı yazılımdan koru
 
 - Microsoft 365 Defender portalına erişim
 - [Sistemli](https://systemd.io/) sistem yöneticisini kullanarak Linux dağıtımı
+
+  >[!NOTE]
+  >RHEL/CentOS 6.x dışında sistem yöneticisi kullanan Linux dağıtımı hem SystemV hem de Upstart'ı destekler.
+
 - Linux ve BASH betiği oluşturmada başlangıç düzeyinde deneyim
 - Cihazdaki yönetim ayrıcalıkları (el ile dağıtım durumunda)
 

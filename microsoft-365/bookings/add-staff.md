@@ -1,5 +1,5 @@
 ---
-title: Bookings'e personel ekleme
+title: Bookings’e personel ekleme
 ms.author: kwekua
 author: kwekuako
 manager: scotv
@@ -7,102 +7,102 @@ audience: Admin
 ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
-description: Personel listenizi oluşturmak ve ad, telefon numarası ve e-posta adresi gibi personel üyesi ayrıntılarını yönetmek için bu sayfayı kullanın.
-ms.openlocfilehash: 03ebf5c21e40d53e87067866e05fc37c2c255331
-ms.sourcegitcommit: 23166424125b80b2d615643f394a3c023cba641d
+description: Bu sayfayı, personel listenizi oluşturmak ve ad, telefon numarası ve e-posta adresi gibi personel üyesi ayrıntılarını yönetmek için kullanın.
+ms.openlocfilehash: 2df48efe321a91c1eb2df712e954033eb28357aa
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "63016296"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64713943"
 ---
-# <a name="add-staff-to-bookings"></a>Bookings'e personel ekleme
+# <a name="add-staff-to-bookings"></a>Bookings’e personel ekleme
 
-Bookings'te Personel sayfası, personel listenizi oluşturtunuz ve ad, telefon numarası ve e-posta adresi gibi personel üyesi ayrıntılarını yönetebilirsiniz. Buradan her personel üyesi için çalışma saatleri de ayarlayabiliyoruz.
+> [!NOTE]
+> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
+
+Bookings'deki Personel sayfası, personel listenizi oluşturduğunuz ve ad, telefon numarası ve e-posta adresi gibi personel üyesi ayrıntılarını yönettiğiniz yerdir. Ayrıca buradan her personel için çalışma saatleri ayarlayabilirsiniz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Bookings, Microsoft 365 bir özelliği olsa da, tüm personel üyelerinizin bir eğitim Microsoft 365 olması gerekmez. Rezervasyon al ve değişiklikleri zamanlaması için tüm personel üyelerinin geçerli bir e-posta adresine sahip olması gerekir.
+Bookings bir Microsoft 365 özelliği olsa da, tüm personelinizin Microsoft 365 hesabı olması gerekmez. Tüm personelin rezervasyon alabilmesi ve değişiklikleri zamanlaması için geçerli bir e-posta adresi olmalıdır.
 
-## <a name="watch-add-your-staff-to-bookings"></a>İzle: Personelinizi Bookings'e ekleme
+## <a name="watch-add-your-staff-to-bookings"></a>İzleyin: Personelinizi Bookings ekleme
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWuVka]
 
 ## <a name="steps"></a>Adımlar
 
-> [!NOTE]
-> Bu adımlar henüz yeni Bookings deneyiminde mevcut değildir.
+1. Giriş sayfasından takviminizi seçin. 
 
-1. Personeli yönet sayfasına [gidin ve Personel](https://outlook.office.com/bookings/staff) **ekle'yi seçin**
+2. Sol bölmedeki personel seçeneğine gidin ve **Yeni personel ekle'yi** seçin.
 
-2. Personel **Ekle düğmesini** seçin.
+3. Kuruluşunuzun içinden personel eklerken, **kişi ekle** alanına adlarını yazın ve açılan menüde göründüklerinde seçin. Diğer alanlar otomatik olarak doldurulur.
 
-3. Kurum içinde personeli eklerken, Kişi ekle alanına bu kişilerin adını yazın  ve açılan menüde görünenleri seçin. Diğer alanlar otomatik olarak yüklenir.
+    Personel üyesi eklendikten sonra, adının yanındaki **x** işaretini seçip **Kişi ekle** alanını düzenleyerek tüm Bookings iletişimlerde görünen adı düzenleyebilirsiniz. Bu, personel üyelerinin müşteriler için belirli bir unvanın veya adın görüntülenmesini istiyorsanız yararlı olabilir; örneğin, Adele Vance'i "Dr. Vance, MD" olarak listeleme.
 
-    Bir personel üyesi eklendiktan sonra tüm Bookings iletişimlerinde görünen adı, adının yanındaki **x'i** seçerek ve Kişi ekle **alanını düzenleyerek düzenleyebilirsiniz** . Personel üyelerinin müşteriler için belirli bir unvan veya ad görüntülenebilir. Örneğin, Adele Vance'yi "Dr. Vance, MD" olarak listelemek bu yararlı olabilir.
-
-4. Kurum dışından personel eklemek için e-postalarını ve diğer bilgilerini el ile doldurun.
+4. Kuruluşunuzun dışından personel eklemek için e-postalarını ve diğer bilgilerini el ile doldurun.
 
     > [!NOTE]
-    > Kiracınız dışından personel Bookings ile serbest/meşgul bilgilerini paylaşabilecektir.
+    > Kiracınızın dışındaki personel serbest/meşgul bilgilerini Bookings ile paylaşamaz.
 
 5. Her personel üyesi için bir rol seçin: Yönetici, Görüntüleyici veya Konuk.
-    - **Yöneticiler tüm** ayarları düzenleyebilir, personel ekleyemez ve kaldırabilir, rezervasyon oluşturabilir, düzenleyebilir veya silebilir.
-    - **Görüntüleyenler** takvimde tüm rezervasyonları görebilir ancak bunları değiştiremez veya silemezler. Ayarlara salt okunur erişimleri vardır.
-    - **Konuklar** rezervasyonlara atanabilir, ancak rezervasyon posta kutusunu açabilirsiniz.
+    - **Yöneticiler** tüm ayarları düzenleyebilir, personel ekleyip kaldırabilir ve rezervasyon oluşturabilir, düzenleyebilir veya silebilir.
+    - **İzleyiciler** takvimdeki tüm rezervasyonları görebilir, ancak değiştiremez veya silemez. Ayarlara salt okunur erişimleri vardır.
+    - **Konuklar** rezervasyonlara atanabilir ancak rezervasyon posta kutusunu açamaz.
 
-6. Personel **e-postalarını etkinleştirmek için, Tüm personele e-postayla** bildir'i seçin. Aşağıdaki örnek bir e-postadır:
+6. Personel **e-postalarını etkinleştirmek için kendisine atanan bir rezervasyon oluşturulduğunda veya değiştirildiğinde Tüm personele e-posta yoluyla bildir'i** seçin. Aşağıda örnek bir e-posta verilmiştir:
 
-    :::image type="content" source="media/bookings-notify-all-email.jpg" alt-text="Bookings'den gelen bir bildirim e-postası.":::
+    :::image type="content" source="media/bookings-notify-all-email.jpg" alt-text="Bookings'dan bir bildirim e-postası.":::
 
-7. Personel **üyelerinin takvimlerinden Office 365**/meşgul bilgisinin Bookings aracılığıyla bookings hizmetleri için kullanılabilirliği etkilemesini istemeniz durumu takviminde Olaylar'ı seçin.
+7. Personel üyelerinin takvimlerinden gelen serbest/meşgul bilgilerinin Bookings aracılığıyla rezervasyon hizmetleri için kullanılabilirliği etkilemesini istiyorsanız Office 365 takvimdeki **etkinlikler kullanılabilirliği etkiler'i** seçin.
 
-    Örneğin, bir personel üyesinin Çarşamba günü 15:00'da zamanlanan bir ekip toplantısı veya kişisel randevu varsa, Bookings o zaman yuvasında uygun olmadığı için personel üyesini rezerve edilmeyi gösterir. Bu zaman, aşağıdaki örnekte gösterildiği gibi Bookings takvim görünümünde meşgul veya belirsiz olarak görünür.
+    Örneğin, bir personel üyesinin bir ekip toplantısı veya Çarşamba günü saat 15:00'te zamanlanmış kişisel bir randevusu varsa, Bookings bu personel üyesini ilgili zaman diliminde rezervasyon yapılamaz olarak gösterir. Bu süre, aşağıdaki örnekte gösterildiği gibi Bookings takvim görünümünde meşgul veya belirsiz olarak görünür.
 
-    :::image type="content" source="media/bookings-busy-tentative-view.jpg" alt-text="Bir Bookings takviminin görünümü.":::
+    :::image type="content" source="media/bookings-busy-tentative-view.jpg" alt-text="Bookings takviminin görünümü.":::
 
 > [!IMPORTANT]
-> Çift rezervasyon yapmaktan kaçınmak ve personel üyelerinizin uygunluk durumunu en iyi duruma getirmek için bu ayarı açık bırakmanızı (varsayılan olarak açıktır) kesinlikle öneririz.
+> Çift rezervasyondan kaçınmak ve personel üyelerinizin uygunluk durumunu iyileştirmek için bu ayarı açık bırakmanızı (varsayılan olarak açıktır) kesinlikle öneririz.
 
-8. Personel **üyelerinizin** tüm kitapçık zamanlarını yalnızca İş Bilgileri sayfasındaki İş saatleri bölümünde ayar kitapçık saatlerinden farklı olacak şekilde ayarlamak için  İş saatlerini kullan'ı seçin.
+8. Personel üyelerinizin tüm rezerve edilebilir zamanlarını yalnızca İş Bilgileri sayfasındaki İş saatleri bölümünde ayarladığınız iş saatleri içinde olacak şekilde ayarlamak için **İş saatlerini** **kullan'ı** seçin.
 
-    Bu kutunun seçimini kaldırarak personele, rezervasyon yapılabilirken daha fazla sınırlayıcı olan özel saatler verilir. Bu, personel üyesinin yalnızca Salı ve Çarşamba günlerini sitede bulunduğu veya sabahlarını bir randevu türüne ve diğer türler için öğleden sonraları ayırmaları gereken senaryolarda yararlıdır.
+    Bu kutunun seçimini kaldırarak, personele rezervasyon yapabilecekleri zaman daha fazla sınıra sahip özel saatler verilebilir. Bu, personel üyesinin yalnızca Salı ve Çarşamba günleri sitede olabileceği veya sabahlarını bir randevu türü için, öğleden sonralarını ise diğer türler için ayırdığı senaryolar için yararlıdır.
 
     > [!NOTE]
-    > Bookings, Bir Bookings Takvimi'ne 100'e kadar personel üyesini destekler.
+    > Bookings bir Bookings Takviminde en fazla 100 personel üyesini destekler.
 
-## <a name="make-a-bookings-user-a-super-user-without-adding-them-as-staff-in-bookings"></a>Bir Bookings kullanıcıyı Bookings'te Personel olarak eklemeden süper kullanıcı yapma
+## <a name="make-a-bookings-user-a-super-user-without-adding-them-as-staff-in-bookings"></a>Bookings kullanıcıyı Bookings'da Personel olarak eklemeden süper kullanıcı yapma
 
-Bir kişiyi Bookings'te müşterilere veya müşterilere sağlamak zorunda kalmadan personel listeniz'e ekleyebilirsiniz. Bu kullanıcıya süper kullanıcı olduktan sonra rezervasyon posta kutusunun yöneticisi olur. Bir rezervasyon posta kutusunun yöneticisi olmak, rezervasyon posta kutusuna tam erişim ve farklı gönderme izinlerine sahip olarak tanımlanır.
+Bookings'da bir kişiyi müşterilerin veya müşterilerin kullanımına sunmadan personel listenize eklemek isteyebilirsiniz. Onları süper kullanıcı yaptığınızda, rezervasyon posta kutusunun yöneticisi olur. Bir rezervasyon posta kutusunun yöneticisi olmak, rezervasyon posta kutusuna tam erişim ve farklı gönderme izinlerine sahip olmak olarak tanımlanır.
 
 > [!NOTE]
-> Bu adımlar yalnızca eklenen kullanıcı Bookings'te bir **görüntüleyici rolüne** henüz atanmamışsa çalışır.
+> Bu adımlar yalnızca eklenen kullanıcıya Bookings'de zaten bir **görüntüleyici** rolü atanmamışsa çalışır.
 
-1. [Bağlan PowerShell Microsoft 365'e çok zaman var](/office365/enterprise/powershell/connect-to-office-365-powershell#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
+1. [PowerShell ile Microsoft 365 Bağlan](/office365/enterprise/powershell/connect-to-office-365-powershell#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
 
-2. PowerShell kullanarak, aşağıdaki komutlarla tam erişim attayın:
+2. PowerShell'i kullanarak aşağıdaki komutlarla tam erişim atayın:
 
     ```powershell
     Add-MailboxPermission -Identity <bookingmailbox@emailaddress> -User <adminusers@emailaddress> -AccessRights FullAccess -Deny:$false
     ```
 
-3. Daha sonra gönderme izinleri atamak için bu komutu çalıştırın.
+3. Ardından farklı gönderme izinleri atamak için bu komutu çalıştırın.
 
     ```powershell
     Add-RecipientPermission -Identity <bookingmailbox@emailaddress> -Trustee <adminusers@emailaddress> -AccessRights SendAs -Confirm:$false
     ```
 
-Bu örnekte, Allie Bellew'i Contoso çocuk bakım rezervasyon posta kutusuna eklemeye yardımcı olacak örnek bir PowerShell komutu yer alır.
+Aşağıda, Allie Bellew'i Contoso kreş rezervasyon posta kutusuna eklemeye yönelik örnek bir PowerShell komutu verilmiştir.
 
-1. Önce şu komutu çalıştırın:
+1. İlk olarak şu komutu çalıştırın:
 
     ```powershell
     Add-MailboxPermission -Identity "daycare@contoso.com" -User "Allie Bellew" -AccessRights FullAccess -InheritanceType All
     ```
 
-2. Sonra şu komutu çalıştırın:
+2. Ardından şu komutu çalıştırın:
 
     ```powershell
     Add-RecipientPermission -Identity "daycare@contoso.com" -Trustee "Allie Bellew" -AccessRights SendAs -Confirm:$false
     ```
 
-**Allie Bellew'in** artık yönetici erişimi var, ancak Bookings'te uygun personel olarak görünmüyor.
+**Allie Bellew** artık yönetici erişimine sahip ancak Bookings'da rezervasyon yapılabilir personel olarak görünmüyor.

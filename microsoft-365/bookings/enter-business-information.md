@@ -1,5 +1,5 @@
 ---
-title: İş bilginizi girin
+title: İş bilginizi girme
 ms.author: kwekua
 author: kwekuako
 manager: scotv
@@ -8,78 +8,81 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 828a17db-956a-401e-bb62-d153b6dffd53
-description: Microsoft Bookings'te işletme adı, adresi, telefon numarası, web sitesi URL'si, logosu ve iş saatleri de dahil olmak üzere Bizim Hakkında sayfanızı oluşturmak için bu yönergeleri izleyin.
-ms.openlocfilehash: 313e85166c02afa5a52f4cd4fb6cf25a7077ad26
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft Bookings'da iş adı, adres, telefon numarası, web sitesi URL'si, logo ve iş saatleri dahil olmak üzere Hakkımızda sayfanızı oluşturmak için bu yönergeleri izleyin.
+ms.openlocfilehash: 9931a5c00147a6f6b9b0cd4ef9550d783b8771fd
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984662"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64715351"
 ---
-# <a name="enter-your-business-information"></a>İş bilginizi girin
-
-Microsoft Bookings'te, web uygulaması içindeki İş Bilgileri sayfası normalde bir işletmenin "Bizim Hakkında" sayfasında bu sayfada bula bütün ayrıntıları içerir. Bu ayrıntılar ilgili bir ad, adres, telefon numarası, web sitesi URL'si, gizlilik ilkesi URL'si, logosu ve iş saatleri gibi ayrıntıları içerir.
-
-Burada sağlaytınız bilgiler müşterilerin ve müşterilerin randevu rezervasyonu yapmak için (rezervasyon sayfası olarak bilinir) sayfanın yanı sıra Bookings tarafından onlara gönderilen ileti ve anımsatıcılarda görüntülenir. Aşağıda, rezervasyon sayfasında bu bilgilerden bir örnek vurgulanmıştır.
-
-   ![Microsoft Bookings'te İş Bilgileri sayfa örneği görüntüsü.](../media/bookings-business-info.png)
+# <a name="enter-your-business-information"></a>İş bilginizi girme
 
 > [!NOTE]
-> Microsoft [Bookings'e erişim iznine sahip olmak için bkz](get-access.md). Bookings'i açmak veya kapatmak için bkz [. Bookings'i organizasyonu için açma veya kapatma](turn-bookings-on-or-off.md).
+> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
-## <a name="provide-business-name-and-contact-information"></a>İş adı ve iletişim bilgilerini sağlama
+Microsoft Bookings'da, web uygulamasının İş Bilgileri sayfası genellikle bir işletmenin "Hakkımızda" sayfasında bulabileceğiniz tüm ayrıntıları içerir. Bu ayrıntılar arasında ilgili ad, adres, telefon numarası, web sitesi URL'si, gizlilik ilkesi URL'si, logo ve iş saatleri yer alır.
 
-1. Uygulama Microsoft 365 başlatıcısını ve ardından **Bookings'i seçin**.
+Burada sağladığınız bilgiler, müşterilerin ve müşterilerin randevu rezervasyonu için kullandıkları sayfada (rezervasyon sayfası olarak bilinir) ve Bookings tarafından gönderilen iletilerde ve anımsatıcılarda görüntülenir. Rezervasyon sayfasındaki bu bilgilere bir örnek aşağıda vurgulanır.
 
-1. Gezinti bölmesinde, Ayarlar  -> **Business bilgilerini seçin**.
+   ![Microsoft Bookings'deki İş Bilgileri sayfa örneğinin resmi.](../media/bookings-business-info.png)
 
-1. Temel **ayrıntılar bölümünde** , Bookings takviminiz için kullanmak istediğiniz iş adını, adresinizi ve telefon numarasını girin.
+> [!NOTE]
+> Başlamak için bkz. [Microsoft Bookings erişme](get-access.md). Bookings açmak veya kapatmak için bkz[. Kuruluşunuz için Bookings açma veya kapatma](turn-bookings-on-or-off.md).
 
-:::image type="content" source="../media/bookings-business-basic-details.png" alt-text="Ekran görüntüsü: Temel iş bilgilerini girmek için sayfa":::
+## <a name="provide-business-name-and-contact-information"></a>İş adı ve iletişim bilgilerini sağlayın
 
-Müşteri **yanıtlarını gönder kutusuna rezervasyon onayları** ve anımsatıcılara e-posta yanıtlarını iletirken tercih edilen e-posta adresini yazın.
+1. Microsoft 365'da Uygulama başlatıcıyı ve ardından **Bookings'ı** seçin.
 
-Web **Sitesi URL'si** alanına, işletmeniz için giriş sayfasının URL'sini girin.
+1. Gezinti bölmesinde, sol bölmedeki **CalendarBusiness**  ->  bilgileriniz'i seçin.
 
-Gizlilik ilkesi **ve koşulları** ve **koşulları & URL'lerini** girin.
+1. **Temel ayrıntılar** bölümünde, Bookings takviminizde kullanmak istediğiniz iş adınızı, adresinizi ve telefon numaranızı girin.
 
-1. İş **logosu bölümünde** , işletme logonuzu Bookings uygulamasına henüz yüklemedıysanız işletme logonuzu ekleyin.
+:::image type="content" source="../media/bookings-business-basic-details.png" alt-text="Ekran görüntüsü: Temel iş bilgilerinizi girmek için sayfa":::
 
-1. İş **saatlerinizi ayarlayın bölümünde** , iş saatlerini işlem saatlerinizi ayarlayın. Bu saatler tüm rezervasyonların kısıtlandı olduğu saatlerdir. Hizmetler ve Personel sayfalarında, her hizmet için ve her personel için randevuların ne zaman rezerve olara **ayarlanana ek** **zaman kısıtlamaları da ayarlanılabilir** .
+**Müşteri yanıtlarını gönder** bölümünde, rezervasyon onaylarına ve anımsatıcılarına gönderilen e-posta yanıtlarının iletileceği tercih edilen e-posta adresini yazın.
 
-İş bilgileri sayfasındaki İş saatleri'nin altında, her günün başlangıç ve bitiş saatlerini seçmek için açılan saatleri kullanın. Başlangıç **+** ve bitiş saati seçicileri eklemek için tıklayın.
+**Web Sitesi URL'si** alanına, işletmenizin giriş sayfasının URL'sini girin.
 
-Varsayılan olarak, Bookings uygulamasındaki iş saatleri 08:00 olarak ayarlanır. ile 17:00 arasında (Pazartesi - Cuma) Zaman, 15 dakikalık artışlarla sağlanır. Bookings uygulaması 12 saatlik saati kullanır.
+**Gizlilik ilkesini** ve **koşulları & koşulları** URL'lerini girin.
+
+1. **İş logosu** bölümünde, iş logonuzu Bookings uygulamasına henüz yüklemediyseniz iş logonuzu ekleyin.
+
+1. **İş saatlerinizi ayarlayın** bölümünde, çalışma saatlerinizi çalışma saatlerinize ayarlayın. Tüm rezervasyonların kısıtlandığı saatler bunlardır. **Hizmetler** ve **Personel** sayfalarında her hizmet ve her personel için randevuların ne zaman rezerve edilebileceğine ilişkin ek zaman kısıtlamaları ayarlanabilir.
+
+İş bilgileri sayfasındaki İş saatleri'nin altında açılan menüleri kullanarak her gün için başlangıç ve bitiş saatlerini seçin. Başlangıç ve bitiş zamanı seçicileri eklemek için tıklayın **+** .
+
+Varsayılan olarak, Bookings uygulamasındaki iş saatleri 08:00 olarak ayarlanır. pazartesiden cumaya kadar saat 17:00'ye kadar. Süreler 15 dakikalık artışlarla sağlanır. Bookings uygulaması 12 saatlik saati kullanır.
 
 1. **Kaydet**'i seçin.
 
 ### <a name="how-to-set-hours-for-a-split-shift"></a>Bölünmüş vardiya için saatleri ayarlama
 
-Personel toplantılarını yapmak, stoku güncelleştirmek veya diğer iş ayrıntılarıyla ilgilenmek için her günün veya haftanın bir bölümünü engellemeniz gerekiyor olabilir. Bookings uygulaması, müşteri randevularını belirtilen zaman yuvaları ile sınırlandırmanıza olanak sağlar.
+Personel toplantıları yapmak, envanteri güncelleştirmek veya diğer iş ritmi ayrıntılarıyla ilgilenmek için her gün veya haftanın bir bölümünü engellemeniz gerekebilir. Bookings uygulaması, müşteri randevularını belirtilen zaman aralıklarınızla sınırlamanıza olanak tanır.
 
-Örneğin, personel toplantılarınızı her Perşembe saat 01.30 ile 2:30 arasında yapmak istiyor ve tüm personel üyelerinizin katılamalarını için bu saati engellemek istiyor olabilirsiniz. Bunu yapmak için:
+Örneğin, her Perşembe saat 1'den 2:30'a kadar personel toplantılarınız var ve tüm personel üyelerinizin katılabilmesi için bu süreyi engellemek istiyorsunuz. Bunu yapmak için:
 
-1. İş bilgileri sayfasındaki İş saatleri'nin altında Perşembe günleri için başlangıç ve bitiş saati seçin. Bu örnekte, 08:00'i ayarlay ile 13:00 arasında
+1. İş bilgileri sayfasındaki İş saatleri'nin altında Perşembe günleri için bir başlangıç ve bitiş saati seçin. Bu örnekte sabah 8:00'i ayarlayacağız. saat 13:00'e kadar.
 
-1. Perşembe **+** için yeni bir satır oluşturmak için seçin.
+1. Perşembe için yeni bir satır oluşturmak için seçin **+** .
 
-   ![İş saatleri kullanıcı arabiriminin resmi.](../media/bookings-split-shift.png)
+   ![İş saatleri kullanıcı arabiriminin görüntüsü.](../media/bookings-split-shift.png)
 
-1. Yeni satırda 2:30'ı seçin. ve 18:00 için bitiş saati için.
+1. Yeni satırda 14:30'ı seçin. başlangıç saati ve 18:00 için. öğesini seçin.
 
-   ![Saatlerin ekli olduğu İş saatleri kullanıcı arabiriminin resmi.](../media/bookings-split-shift-hours.png)
+   ![Saatlerin eklendiği İş saatleri kullanıcı arabiriminin görüntüsü.](../media/bookings-split-shift-hours.png)
 
 1. Kaydet'i seçin.
 
-    Bir müşteri rezervasyon sayfanıza geldiğinde, Perşembe günü 1 ile 2:30 arasında işletmenizin kapalı olduğunu görebilir.
+    Bir müşteri rezervasyon sayfanıza gittiğinde, işletmenizin Perşembe günleri saat 1 ile 2:30 arasındadır kapalı olduğunu görür.
 
-## <a name="upload-your-logo"></a>Upload logonuzu kapatma
+## <a name="upload-your-logo"></a>Logonuzu Upload
 
-İş logonuzu Bookings uygulamasına henüz yüklemedıysiniz, bunu İş bilgileri sayfasından da açabilirsiniz.
+İş logonuzu henüz Bookings uygulamasına yüklemediyseniz, bunu İş bilgileri sayfasından yapabilirsiniz.
 
-1. İş bilgileri sayfasında, Logoyu değiştir'Upload değiştir'i **seçin**.
+1. İş bilgileri sayfasındaki Upload logosunun altında **Değiştir'i** seçin.
 
-1. Bir **Upload seçin**.
+1. **fotoğraf Upload** seçin.
 
    ![Fotoğraf yükle düğmesinin resmi.](../media/bookings-upload-photo.png)
 

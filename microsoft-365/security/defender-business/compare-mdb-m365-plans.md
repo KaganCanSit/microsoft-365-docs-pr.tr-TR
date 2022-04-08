@@ -1,6 +1,6 @@
 ---
-title: Küçük ve orta ölçekli Microsoft 365 kurumsal planlarda güvenlik özelliklerini karşılaştırma
-description: İş için Defender ile Uç Nokta için Defender arasındaki farkları anlıyoruz. Her plana nelerin dahil olduğunu bilmek, şirket için bilinçli bir karar ataymanıza yardımcı olabilir.
+title: Küçük ve orta ölçekli işletmeler için Microsoft 365 planlarındaki güvenlik özelliklerini karşılaştırma
+description: İş için Defender ile Uç Nokta için Defender arasındaki farkları anlayın. Her plana nelerin dahil olduğunu bilmek, şirketiniz için bilinçli bir karar vermenize yardımcı olabilir.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -17,93 +17,91 @@ ms.collection:
 - SMB
 - m365-initiative-defender-business
 - m365-security-compliance
-ms.openlocfilehash: 793c078621424bca89ccc4c6d88c79054ab059cd
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: d7651e9ec4ec3cfbf3fe8e853b6de1de9e50dae1
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63526034"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714691"
 ---
-# <a name="compare-microsoft-defender-for-business-to-microsoft-365-business-premium"></a>İş için Microsoft Defender ile Microsoft 365 İş Ekstra
+# <a name="compare-microsoft-defender-for-business-to-microsoft-365-business-premium"></a>İş için Microsoft Defender Microsoft 365 İş Ekstra ile karşılaştırma
 
 > [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve talep etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak yayınlatır. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
+> İş için Microsoft Defender, 1 Mart 2022'de başlayarak [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşterilerine dağıtılıyor. Tek başına abonelik olarak İş için Defender önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşteriler ve BT İş Ortakları tarafından aşamalı olarak kullanıma sunulacaktır. Önizleme, [bir dizi ilk senaryo](mdb-tutorials.md#try-these-preview-scenarios) içerir ve düzenli olarak özellikler ekleyeceğiz.
 > 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-Microsoft, küçük ve orta ölçekli işletmeler için çeşitli planlar da dahil olmak üzere çok çeşitli bulut çözümleri ve hizmetleri sunar. Örneğin, [Microsoft 365 İş Ekstra](../../business/microsoft-365-business-overview.md) gibi üretkenlik özelliklerinin yanı sıra güvenlik ve cihaz yönetimi özelliklerini de Office içerir. Bu makale, Microsoft 365 İş Ekstra, İş için Microsoft Defender ve Uç Nokta için Microsoft Defender'a hangi güvenlik özelliklerinin dahil olduğunu netleştirmeye yardımcı olmak üzere tasarlanmıştır.
+Microsoft, küçük ve orta ölçekli işletmeler için çeşitli planlar da dahil olmak üzere çok çeşitli bulut çözümleri ve hizmetleri sunar. Örneğin[, Microsoft 365 İş Ekstra](../../business/microsoft-365-business-overview.md) güvenlik ve cihaz yönetimi özelliklerinin yanı sıra Office uygulamaları gibi üretkenlik özelliklerini içerir. Bu makale, cihaz koruması gibi hangi güvenlik özelliklerinin Microsoft 365 İş Ekstra, İş için Microsoft Defender ve Uç Nokta için Microsoft Defender dahil olduğunu netleştirmeye yardımcı olmak için tasarlanmıştır.
 
-Microsoft Defender for Business, tek başına bir teklif olarak veya Microsoft 365 İş Ekstra (1 Mart 2022'den itibaren) olarak sunulmaktadır.
+İş için Microsoft Defender tek başına teklif olarak veya Microsoft 365 İş Ekstra (1 Mart 2022'de başlayarak) kapsamında kullanılabilir.
 
 >
-> **Bir dakika mı kaldı?**
-> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+> **Bir dakikan var mı?**
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">İş için Microsoft Defender hakkındaki kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
-**Bu makaleyi kullanarak**:
+**Aşağıdakiler için bu makaleyi kullanın**:
 
-- [İş için Microsoft Defender(tek başına) ile Microsoft 365 İş Ekstra](#compare-security-features-in-microsoft-defender-for-business-to-microsoft-365-business-premium)
-- [İş için Defender'ı (tek başına) Uç nokta kurumsal teklifleri için Microsoft Defender ile karşılaştırma](#compare-microsoft-defender-for-business-to-microsoft-defender-for-endpoint-plans-1-and-2)
+- [İş için Microsoft Defender (tek başına) ile Microsoft 365 İş Ekstra karşılaştırma](#compare-security-features-in-microsoft-defender-for-business-to-microsoft-365-business-premium)
+- [İş için Defender'ı (tek başına) Uç Nokta için Microsoft Defender kurumsal tekliflerle karşılaştırma](#compare-microsoft-defender-for-business-to-microsoft-defender-for-endpoint-plans-1-and-2)
 
-**İş için Microsoft Defender'ı Microsoft 365 bir Microsoft 365 aboneliğiniz yok.** microsoft Defender for Business Microsoft 365 İş Ekstra küçük ve orta ölçekli işletmeler için tek başına bir güvenlik çözümü olarak kullanılabilir. Zaten standart veya Microsoft 365 İş Temel varsa, daha fazla tehdit koruması özelliği elde etmek için Microsoft 365 İş Ekstra'e yükseltin veya İş için Microsoft Defender'ı eklemeyi düşünün. 
+**İş için Microsoft Defender satın almak ve kullanmak için Microsoft 365 aboneliğiniz olması gerekmez.** İş için Microsoft Defender Microsoft 365 İş Ekstra dahildir ve küçük ve orta ölçekli işletmeler için tek başına bir güvenlik çözümü olarak kullanılabilir. Zaten Microsoft 365 İş Temel veya Standart'larınız varsa, daha fazla tehdit koruması özelliği elde etmek için Microsoft 365 İş Ekstra yükseltme veya İş için Microsoft Defender eklemeyi göz önünde bulundurun. 
 
-## <a name="compare-security-features-in-microsoft-defender-for-business-to-microsoft-365-business-premium"></a>İş için Microsoft Defender'daki güvenlik özelliklerini Microsoft 365 İş Ekstra
+## <a name="compare-security-features-in-microsoft-defender-for-business-to-microsoft-365-business-premium"></a>İş için Microsoft Defender'daki güvenlik özelliklerini Microsoft 365 İş Ekstra ile karşılaştırma
 
 > [!NOTE]
-> Bu makale, İş için Microsoft Defender (tek başına bir plan olarak) ve Microsoft 365 İş Ekstra (İş için Defender'ı içerir) ile birlikte bulunan tehdit koruması özelliklerine üst düzey bir genel bakış sağlamak üzere hazırlanmıştır. Bu makale, hizmet açıklaması veya lisanslama belgesi olarak amaçlanmaz. Daha fazla bilgi için güvenlik [Microsoft 365 uyumluluğu için lisanslama & bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+> Bu makale, İş için Microsoft Defender (tek başına plan olarak) ve Microsoft 365 İş Ekstra (İş için Defender'ı da içerir) dahil edilen tehdit koruma özelliklerine üst düzey bir genel bakış sağlamayı amaçlar. Bu makale, hizmet açıklaması veya lisans sözleşmesi belgesi olarak hizmet vermek üzere tasarlanmamıştır. Daha fazla bilgi için bkz[. güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
 
-**1 Mart 2022'den itibaren, İş için Defender yeni bir Microsoft 365 İş Ekstra. Tek başına bir teklif olarak İş için Defender hala önizlemede.**
+**1 Mart 2022'de, İş için Defender Microsoft 365 İş Ekstra kapsamında kullanıma sunulmaya başlayacaktır. Tek başına teklif olarak İş için Defender hala önizleme aşamasındadır.**
 
-Aşağıdaki tabloda, İş için Defender'daki (bağımsız) güvenlik özellikleri ve özellikleri ile Microsoft 365 İş Ekstra. 
+Aşağıdaki tabloda İş için Defender'daki (tek başına) güvenlik özellikleri ve özellikleri Microsoft 365 İş Ekstra ile karşılaştırılıyor. 
 
  <br/><br/>
 
-| Özellik/Özellik | [İş için Microsoft Defender](mdb-overview.md)<br/>(tek başına; şu anda önizlemede) | [Microsoft 365 Business Premium](../../business/microsoft-365-business-overview.md)<br/>(İş için Defender'ı içerir) |
+| Özellik/Yetenek | [İş için Microsoft Defender](mdb-overview.md)<br/>(tek başına; şu anda önizleme aşamasında) | [Microsoft 365 Business Premium](../../business/microsoft-365-business-overview.md)<br/>(İş için Defender'ı içerir) |
 |:---|:---|:---|
-| E-posta koruması | Evet <br/>- [Microsoft Defender Virüsten Koruma ile e-posta tarama](../defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus.md) | Evet <br/>- [Exchange Online Protection](../office-365-security/exchange-online-protection-overview.md) <br/>- [Microsoft Defender Virüsten Koruma ile e-posta tarama](../defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus.md) |
-| Antispam koruması | Evet <br/>- Cihazlar için | Evet <br/>- Cihazlar için<br/>- İletiler Microsoft 365 ekleri gibi e-posta içeriğini daha fazla bilgi için |
-| Kötü amaçlı yazılımlardan koruma | Evet<br/>- Cihazlar için | Evet <br/>- Cihazlar için<br/>- İletiler Microsoft 365 ekleri gibi e-posta içeriğini daha fazla bilgi için |
-| [Yeni nesil koruma](../defender-endpoint/microsoft-defender-antivirus-in-windows-10.md) <br/> (virüsten koruma ve kötü amaçlı yazılımlardan koruma) | Evet<br/>- Microsoft Defender Virüsten Koruma ve sonraki Windows 10 dahildir  | Evet <br/>- Microsoft Defender Virüsten Koruma ve sonraki Windows 10 dahildir<br/>- Yerleşik cihazlar için yeni nesil koruma ilkeleri |
-| [Saldırı yüzeyini azaltma](../defender-endpoint/overview-attack-surface-reduction.md) <br/>(Güvenlik duvarı koruması veya Windows 10 için ASR kuralları) | Evet  | Evet  |
+| E-posta koruması | Evet <br/>- [Microsoft Defender Virüsten Koruma ile e-posta taraması](../defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus.md) | Evet <br/>- [Exchange Online Protection](../office-365-security/exchange-online-protection-overview.md) <br/>- [Microsoft Defender Virüsten Koruma ile e-posta taraması](../defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus.md) |
+| Antispam koruması | Evet <br/>- Cihazlar için | Evet <br/>- Cihazlar için<br/>- İletiler ve ekler gibi Microsoft 365 e-posta içeriği için |
+| Kötü amaçlı yazılımdan koruma | Evet<br/>- Cihazlar için | Evet <br/>- Cihazlar için<br/>- İletiler ve ekler gibi Microsoft 365 e-posta içeriği için |
+| [Yeni nesil koruma](../defender-endpoint/microsoft-defender-antivirus-in-windows-10.md) <br/> (virüsten koruma ve kötü amaçlı yazılımdan koruma) | Evet<br/>- Microsoft Defender Virüsten Koruma Windows 10 ve sonraki sürümlere dahildir  | Evet <br/>- Microsoft Defender Virüsten Koruma Windows 10 ve sonraki sürümlere dahildir<br/>- Eklenen cihazlar için yeni nesil koruma ilkeleri |
+| [Saldırı yüzeyini azaltma](../defender-endpoint/overview-attack-surface-reduction.md) <br/>(Windows 10 veya sonraki sürümlerde ASR kuralları ve güvenlik duvarı koruması) | Evet  | Evet  |
 | [Uç nokta algılama ve yanıt](../defender-endpoint/overview-endpoint-detection-response.md) <br/>(davranış tabanlı algılama ve el ile yanıt eylemleri) | Evet | Evet |
 | [Otomatik araştırma ve yanıt](../defender-endpoint/automated-investigations.md) | Evet | Evet |
-| [Tehdit & güvenlik açığı yönetimi](../defender-endpoint/tvm-dashboard-insights.md) | Evet | Evet |
+| [Tehdit ve Güvenlik Açığı Yönetimi](../defender-endpoint/tvm-dashboard-insights.md) | Evet | Evet |
 | Merkezi yönetim ve raporlama  | Evet  | Evet  |
-| [API'ler](../defender-endpoint/apis-intro.md) <br/>(özel uygulamalarla veya raporlama çözümleriyle tümleştirme için)  | Evet | Evet |
+| [Apı 'leri](../defender-endpoint/apis-intro.md) <br/>(özel uygulamalar veya raporlama çözümleriyle tümleştirme için)  | Evet | Evet |
 
 
-## <a name="compare-microsoft-defender-for-business-to-microsoft-defender-for-endpoint-plans-1-and-2"></a>İş için Microsoft Defender ile Uç Nokta Planları 1 ve 2 için Microsoft Defender'ı karşılaştırma
+## <a name="compare-microsoft-defender-for-business-to-microsoft-defender-for-endpoint-plans-1-and-2"></a>İş için Microsoft Defender Uç Nokta için Microsoft Defender Plan 1 ve 2 ile karşılaştırma
 
-İş için Defender küçük ve orta ölçekli işletmelere Uç Nokta için Defender'ın kurumsal sınıf özellikleri getirir. 
+İş için Defender, uç nokta için Defender'ın kurumsal düzeydeki özelliklerini küçük ve orta ölçekli işletmelere getirir. 
 
-Aşağıdaki tabloda, İş için Defender'daki güvenlik özellikleri ve özellikleri ile Uç Nokta Planları 1 ve 2 için Microsoft Defender karşılaştırıldı. <br/><br/>
+Aşağıdaki tabloda, İş için Defender'daki güvenlik özellikleri ve özellikleri Uç Nokta için Microsoft Defender Plan 1 ve 2 ile karşılaştırır. <br/><br/>
 
-| Özellik/Özellik | [İş için Defender](mdb-overview.md) (önizleme) | [Uç Nokta Plan 1 için Defender](../defender-endpoint/defender-endpoint-plan-1.md) | [Uç Nokta Plan 2 için Defender](../defender-endpoint/microsoft-defender-endpoint.md) |
-|:---|:---|:---|
+| Özellik/Yetenek | [İş için Defender](mdb-overview.md)<br/>(tek başına; şu anda önizleme aşamasında) | [Uç Nokta için Defender Plan 1](../defender-endpoint/defender-endpoint-plan-1.md) | [Uç Nokta için Defender Plan 2](../defender-endpoint/microsoft-defender-endpoint.md) |
+|:---|:---|:---|:---|
 | [Merkezi yönetim](../defender-endpoint/manage-atp-post-migration.md) <sup>[[1](#fn1)]</sup> | Evet | Evet | Evet |
 | [Basitleştirilmiş istemci yapılandırması](mdb-simplified-configuration.md) | Evet | Hayır | Hayır |
-| [Tehdit & güvenlik açığı yönetimi](../defender-endpoint/next-gen-threat-and-vuln-mgt.md) | Evet | Hayır | Evet |
-| [Saldırı yüzeyini azaltma özellikleri](../defender-endpoint/overview-attack-surface-reduction.md) | Evet | Evet | Evet |
+| [Tehdit ve Güvenlik Açığı Yönetimi](../defender-endpoint/next-gen-threat-and-vuln-mgt.md) | Evet | Hayır | Evet |
+| [Saldırı yüzeyi azaltma özellikleri](../defender-endpoint/overview-attack-surface-reduction.md) | Evet | Evet | Evet |
 | [Yeni nesil koruma](../defender-endpoint/next-generation-protection.md) | Evet | Evet | Evet |
 | [Uç nokta algılama ve yanıt](../defender-endpoint/overview-endpoint-detection-response.md) | Evet <sup>[[2](#fn2)]</sup> | Hayır | Evet |
 | [Otomatik araştırma ve yanıt](../defender-endpoint/automated-investigations.md) | Evet <sup>[[2](#fn2)]</sup> | Hayır | Evet |
-| [Tehdit avı](../defender-endpoint/advanced-hunting-overview.md) ve altı aylık veri bekletme | Hayır | Hayır | Evet |
-| [Tehdit analizleri](../defender-endpoint/threat-analytics.md) | Evet <sup>[[2](#fn2)]</sup> | Hayır | Evet |
-| [Platformlar arası destek](../defender-endpoint/minimum-requirements.md) <br/>(Windows, macOS, iOS ve Android OS) | Evet <sup>[[3](#fn3)]</sup> | Evet | Evet |
+| [Tehdit avcılığı](../defender-endpoint/advanced-hunting-overview.md) ve altı aylık veri saklama | Hayır | Hayır | Evet |
+| [Tehdit analizi](../defender-endpoint/threat-analytics.md) | Evet <sup>[[2](#fn2)]</sup> | Hayır | Evet |
+| [Platformlar arası destek](../defender-endpoint/minimum-requirements.md) <br/>(Windows, macOS, iOS ve Android işletim sistemi) | Evet <sup>[[3](#fn3)]</sup> | Evet | Evet |
 | [Microsoft Tehdit Uzmanları](../defender-endpoint/microsoft-threat-experts.md) | Hayır | Hayır | Evet |
 | İş Ortağı API'leri | Evet | Evet | Evet |
 | [Microsoft 365 Lighthouse tümleştirmesi](../../lighthouse/m365-lighthouse-overview.md) <br/>(Müşteri kiracıları genelinde güvenlik olaylarını görüntülemek için) | Evet | Hayır | Hayır |
 
-(<a id="fn1">1</a>) Mobil portalda () veya Microsoft 365 Defender aracı ([https://security.microsoft.com](https://security.microsoft.com) )[https://endpoint.microsoft.com](https://endpoint.microsoft.com) gibi başka bir araçla cihazları Microsoft Endpoint Manager.
+(<a id="fn1">1</a>) cihazları Microsoft 365 Defender portalına () veya Microsoft Endpoint Manager ([https://security.microsoft.com](https://security.microsoft.com)[https://endpoint.microsoft.com](https://endpoint.microsoft.com) gibi başka bir araçla) ekleyin ve yönetin.
 
-(<a id="fn2">2</a>) Bu özellikler küçük ve orta ölçekli işletmeler için en iyi duruma getirilmiştir.
+(<a id="fn2">2</a>) Bu özellikler küçük ve orta ölçekli işletmeler için iyileştirilmiştir.
 
-(<a id="fn3">3</a>) Önizleme programı Windows, istemci cihazlarının önizleme portalında () Microsoft 365 Defender.[https://security.microsoft.com](https://security.microsoft.com)
+(<a id="fn3">3</a>) Önizleme programı sırasında Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com)) Windows istemci cihazları desteklenir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [İş için Microsoft Defender gereksinimlerine bakın](mdb-requirements.md)
-
-- [İş için Microsoft Defender'ı almak](get-defender-business.md)
-
-- [İş için Microsoft Defender'ı ayarlamayı ve yapılandırmayı öğrenin](mdb-setup-configuration.md) 
+- [İş için Microsoft Defender alma](get-defender-business.md)
+- [İş için Microsoft Defender ayarlamayı ve yapılandırmayı öğrenin](mdb-setup-configuration.md) 

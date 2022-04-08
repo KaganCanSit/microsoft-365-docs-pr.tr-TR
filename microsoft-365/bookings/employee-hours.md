@@ -1,5 +1,5 @@
 ---
-title: Microsoft Bookings'te çalışan çalışma saatleri
+title: Microsoft Bookings’de çalışanların çalışma saatleri
 ms.author: kwekua
 author: kwekuako
 manager: scotv
@@ -8,21 +8,24 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 0968717e-b61f-4b06-987c-6c1464541782
-description: Microsoft Bookings'te çalışanların çalışma saatlerini ve uygunluk durumunu ayarlayın.
-ms.openlocfilehash: ef283043ecccc959d8ee42da661770a7f95337fe
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft Bookings'de çalışanların çalışma saatlerini ve uygunluk durumunu ayarlayın.
+ms.openlocfilehash: 533cf3075c01753061f153d6dcf16bdb02bfa5a3
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62977687"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714801"
 ---
-# <a name="employee-working-hours-in-microsoft-bookings"></a>Microsoft Bookings'te çalışan çalışma saatleri
+# <a name="employee-working-hours-in-microsoft-bookings"></a>Microsoft Bookings’de çalışanların çalışma saatleri
 
-Çalışanların çalışma saatlerini ayarlama, müşterileriniz rezervasyon yapmaya çalışırken uygunluk durumlarının doğru bir şekilde göstermesini sağlar. Varsayılan olarak, çalışanlardan her biri için çalışma saatleri Microsoft Bookings uygulamasında kurduğunız iş saatlerinden aynı olur. İş bilgilerini girin bölümündeki "İş saatlerinizi ayarlama" [bölümüne bakın](enter-business-information.md).
+> [!NOTE]
+> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
-Personel **sayfasında** , çalışan çalışma saatlerini işletmenizin ve çalışanlarının gereksinimlerine uygun olarak özelleştirebilirsiniz.
+Çalışan çalışma saatlerini ayarlamak, müşterileriniz rezervasyon yapmaya çalıştığında uygunluk durumunun doğru bir şekilde gösterilmesini sağlar. Varsayılan olarak, çalışanlarınızın her biri için çalışma saatleri, Microsoft Bookings uygulamasında oluşturduğunuz iş saatlerine göre değişir. [İş bilgilerini girme](enter-business-information.md) bölümünün "İş saatlerinizi ayarlama" bölümüne bakın.
 
-Müşterilerin ofis dışındayken onları rezervasyonlayamalarını sağlamak için personel üyeleri için izinler almak için bkz. İş kapanışları [,](schedule-closures-time-off-vacation.md) izinler ve izin zamanları planlama.
+**Personel** sayfasında, çalışan çalışma saatlerini işletmenizin ve çalışanlarınızın ihtiyaçlarına uyacak şekilde özelleştirebilirsiniz.
+
+Müşterilerin iş yeri dışındayken rezervasyon yapmaması için personel üyeleri için izin rezervasyonu yapmak istiyorsanız yönergeler için bkz. [İş kapanışları, izin ve tatil zamanı zamanlama](schedule-closures-time-off-vacation.md) .
 
 ## <a name="customize-employee-working-hours"></a>Çalışan çalışma saatlerini özelleştirme
 
@@ -30,31 +33,33 @@ Bir çalışanın çalışma saatlerini ayarlamak için bu videoyu izleyin veya 
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWuXUq]
 
-1. Uygulama Microsoft 365 başlatıcıyı ve ardından **Bookings'i seçin**.
+1. Microsoft 365'da uygulama başlatıcıyı ve ardından **Bookings'ı** seçin.
+
+1. Takviminizi seçin. 
 
 1. Gezinti bölmesinde **Personel'i** seçin ve ardından saatlerini ayarlamak istediğiniz personel üyesini seçin.
 
-   ![Adın vurgulu olduğu Bookings personel ekranı görüntüsü.](../media/bookings-staff-name-highlight.png)
+   ![Adı vurgulanmış Bookings personel ekranının resmi.](../media/bookings-staff-name-highlight.png)
 
-1. Çalışma saatleri'nin altında İş **saatlerini kullan onay** kutusunu temizleyin.
+1. Çalışma saatleri'nin altında **İş saatlerini kullan** onay kutusunu temizleyin.
 
-1. Her günün başlangıç ve bitiş saatlerini seçmek için açılan saatleri kullanın. Zaman, 15 dakikalık artışlarla kullanılabilir.
+1. Her gün için başlangıç ve bitiş saatlerini seçmek için açılan menüleri kullanın. Süreler 15 dakikalık artışlarla kullanılabilir.
 
-   ![Bookings personel çalışma saatleri ekran görüntüsü.](../media/bookings-staff-hours.png)
+   ![Bookings personelin çalışma saatleri ekranının görüntüsü.](../media/bookings-staff-hours.png)
 
-1. Başlangıç **+** ve bitiş saati seçicileri eklemek için tıklayın.
+1. Başlangıç ve bitiş zamanı seçicileri eklemek için seçin **+** .
 
 1. Kaydet'i seçin.
 
-## <a name="set-an-employees-days-off"></a>Çalışanın izinlerini ayarlama
+## <a name="set-an-employees-days-off"></a>Çalışanın izin günlerini ayarlama
 
-Bir çalışan için izin zamanlarken, bu çalışan rezervasyon sayfasında uygun görünmüyor. Rezervasyon sayfasını kullanan müşteriler, o gün servis için onu zamanlamayacaktır.
+Bir çalışan için bir gün izin zamanladığınızda, bu çalışan rezervasyon sayfasında kullanılamaz görünür. Rezervasyon sayfasını kullanan müşteriler, o gün servis için onu zamanlayamaz.
 
-1. Çalışma saatleri ekranında, **çalışanın** izinli olduğu günün yanındaki x'i seçin.
+1. Çalışma saatleri ekranında, çalışanın kapalı olacağı günün yanındaki **x** işaretini seçin.
 
-   ![Fareyi x düğmesinin üzerinde olan Bookings personel çalışma saatleri ekranı görüntüsü.](../media/bookings-staff-time-off.png)
+   ![Fareyle x düğmesinin üzerinde Bookings personelin çalışma saatleri ekranının görüntüsü.](../media/bookings-staff-time-off.png)
 
-1. Daha önce izin olarak işaretlenmiş bir günü zamanlamayı yapmak için, **+** zamanlamayı yapmak istediğiniz günün yanındaki işareti seçin.
+1. Daha önce izinli olarak işaretlenmiş bir gün zamanlamak istiyorsanız, zamanlamak istediğiniz günün yanındaki işareti seçin **+** .
 
 > [!TIP]
-> Çalışan izin zamanını veya diğer büyük izin bloklarını zamanlamanız için, İş kapanışları, izinler ve izin zamanlarını zamanlama'nın "Çalışan izinlerini zamanlama" [bölümüne bakın](schedule-closures-time-off-vacation.md#schedule-employee-time-off).
+> Çalışanların tatil süresini veya diğer büyük izin bloklarını zamanlanıyorsa [, İşletme kapanışlarını, izin ve tatil süresini zamanlama'nın "Çalışan izinlerini zamanlama](schedule-closures-time-off-vacation.md#schedule-employee-time-off)" bölümüne bakın.

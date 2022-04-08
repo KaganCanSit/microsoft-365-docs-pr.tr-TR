@@ -21,17 +21,17 @@ ms.collection:
 ms.custom: ''
 keywords: ''
 description: Kuruluşunuz için DLP ilkeleri oluşturmak üzere bilgi koruma ve idare ekibinizle birlikte çalışarak Uç Nokta DLP'sini uygulayın.
-ms.openlocfilehash: 605923c377aca77f84861116b38b6ef07f95ca4f
-ms.sourcegitcommit: a06bb81fbd727a790a8fe6a3746b8a3cf62a6b24
+ms.openlocfilehash: ab0be14f0a20f35044489e7f3ad0ba3f60180bcd
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64651311"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64705215"
 ---
 # <a name="step-7-implement-data-loss-prevention-dlp-with-information-protection-capabilities"></a>7. Adım. Bilgi koruma yetenekleriyle veri kaybı önleme (DLP) uygulayın
 
 
-Kuruluşunuz verilerinizi anlamak, veri duyarlılığı şeması geliştirmek ve şemayı uygulamak için zaten zaman ayırmışsa, veri kaybı önleme (DLP) ilkelerini kullanarak bu şemanın öğelerini uç noktalara genişletmeye hazır olabilirsiniz. 
+Kuruluşunuz Microsoft 365 Information Protection kullanıyorsa ve verilerinizi anlamak, veri duyarlılığı şeması geliştirmek ve şemayı uygulamak için zaman ayırmışsa, veri kaybı önleme (DLP) ilkelerini kullanarak bu şemanın öğelerini uç noktalara genişletmeye hazır olabilirsiniz. 
 
 Microsoft Endpoint veri kaybı önleme (Endpoint DLP) şu anda şunlar için geçerlidir:
 - Windows 10, Windows 11
@@ -47,8 +47,6 @@ Bilgi koruma ve idare ekibiniz DLP ilkelerini uç noktalara genişletmeye hazır
 
 ![Cihaz yöneticisi için uç nokta DLP adımları](../media/devices/endpoint-dlp-steps.png#lightbox)
 
-[2. Adımı tamamladıysanız. Cihazları Intune](manage-devices-with-intune-enroll.md) ve [6. Adım'a kaydedin. Cihaz riskini ve güvenlik temellerine uyumluluğu izlemek için cihazları Uç Nokta için Defender'a kaydedin](manage-devices-with-intune-monitor-risk.md); cihazlarınız Uç Nokta DLP için zaten etkinleştirilmiştir. 
-
 
 Bilgi koruma ekibinizle çalışmak için aşağıdaki adımları kullanın.
 
@@ -56,6 +54,5 @@ Bilgi koruma ekibinizle çalışmak için aşağıdaki adımları kullanın.
 |Adım  |Açıklama  |
 |---------|---------|
 |1     |  [uç nokta veri kaybını önleme Microsoft 365 hakkında bilgi edinin](../compliance/endpoint-dlp-learn-about.md).        |
-|2     | Uç Nokta DLP için cihazları etkinleştirin. Cihazlarınızı Uç Nokta için Microsoft Defender'a eklerseniz, cihazlarınız Uç Nokta DLP için zaten etkindir. Cihazlarınız Uç Nokta için Defender'a eklenmemişse yönergeler için [bkz. Uç nokta veri kaybı önleme ile Kullanmaya başlayın](../compliance/endpoint-dlp-getting-started.md).|
+|2     | Uç Nokta DLP için cihazları ekleme. Cihazları Uç Nokta için Microsoft Defender'a dahil ettiyseniz, uç nokta DLP de dahil olmak üzere cihazlarınız zaten Microsoft 365 Uyumluluğu için eklenmiştir. Cihazlarınız Uç Nokta için Defender'a eklenmemişse yönergeler için [bkz. Uç nokta veri kaybı önleme ile Kullanmaya başlayın](../compliance/endpoint-dlp-getting-started.md). Eklemenin nasıl çalıştığı hakkında daha fazla bilgi için bkz [. Cihazları kaydetme ve cihazları ekleme](manage-devices-with-intune-overview.md#enrolling-devices-vs-onboarding-devices)|
 |3     |   İlkeleri tanımlamak, test etmek ve ayarlamak için bilgi koruma ve idare ekibinizle birlikte çalışın. Bu, sonuçları izlemeyi içerir. Şu kaynaklara bakın:<br>- [Uç nokta veri kaybı önlemeyi kullanma](../compliance/endpoint-dlp-using.md)<br>- [Veri kaybı önleme raporlarını görüntüleme](../compliance/view-the-dlp-reports.md)      |
-|     |         |

@@ -8,41 +8,44 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 4b2c84ec-64d3-4027-af4c-40f69e7b37c9
-description: İşletmeniz için zamanlama ilkelerini ayarlamayı öğrenin. Zamanlama ilkeleri randevuların süresinin yanı sıra kabul edilebilir müşteri aday ve iptal sürelerini de içerir.
-ms.openlocfilehash: e2d59feec2cb50bd51f4b6d2a411b48183a5d549
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: İşletmeniz için zamanlama ilkeleri ayarlamayı öğrenin. Zamanlama ilkeleri randevuların uzunluğunun yanı sıra kabul edilebilir müşteri adayı ve iptal sürelerini içerir.
+ms.openlocfilehash: 8093a1c207a418f5d73e7e748727a4da93546a5a
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973577"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714295"
 ---
 # <a name="set-your-scheduling-policies"></a>Zamanlama ilkelerinizi ayarlama
 
-Tüm randevular aynı şey değildir. Bazıları yalnızca birkaç dakika sürerken, diğerleri saatler veya daha uzun sürebilir. Microsoft Bookings'te, rezervasyon sayfası işletmeniz için zamanlama ilkelerini ayar sayfanızdır. Zamanlama ilkeleri randevuların uzunluğunu, kabul edilebilir müşteri adayı ve iptal sürelerini ve rezervasyon değişikliklerinin otomatik bildirimlerini içerir. Hizmetler sayfasındaki her hizmet için, yalnızca o hizmete yönelik ek süre ayarları ve ilkeler ile ek özelleştirmeler eklenebilir.
+> [!NOTE]
+> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
 
-Burada ayar ilkeleri en üst düzey ilkelerdir. Hizmetlerinizi hizmet temelinde değiştirmeyi seçmedikçe, bu hizmetler otomatik olarak tüm hizmetlere uygulanır. Örneğin, ilk danışmalar, iptaller için bir günlük bildirim gibi çoğu hizmet için kabul edilebilir bir bildirim olduğunu belirtilebilir. Ancak golf dersleri gibi tesis rezervasyonları veya ücretleri gerektiren hizmetler için üç gün önceden uyarılabilirsiniz. Hizmetler sayfasında bu hizmet düzeyi ilkesini kurabilirsiniz. Yönergeler [için bkz. Hizmet tekliflerinizi](define-service-offerings.md) tanımlama.
+Tüm randevular aynı değildir. Bazıları yalnızca birkaç dakika, bazıları ise saat veya daha uzun sürebilir. Microsoft Bookings'de, rezervasyon sayfası işletmeniz için zamanlama ilkelerini ayarladığınız yerdir. Zamanlama ilkeleri randevuların uzunluğunu, kabul edilebilir müşteri adayı ve iptal sürelerini ve rezervasyon değişikliklerinin otomatik bildirimlerini içerir. Hizmetler sayfasındaki her hizmet için, yalnızca bu hizmet için geçerli olan ek süre ayarları ve ilkeleriyle ek özelleştirme eklenebilir.
 
-## <a name="types-of-scheduling-policies"></a>Zamanlama ilkelerinin türleri
+Burada ayarladığınız ilkeler en üst düzey ilkelerdir. Bu hizmetler, hizmet başına değişiklik yapmayı seçmediğiniz sürece, sunduğun tüm hizmetlere otomatik olarak uygulanır. Örneğin, ilk danışmalar gibi çoğu hizmet için iptaller için bir günlük bildirim kabul edilebilir olduğunu varsayalım. Ancak tesis rezervasyonları veya golf dersleri gibi ücretler gerektiren hizmetler için üç günlük bildirim gerektirebilir. Bu hizmet düzeyi ilkesini Hizmetler sayfasında ayarlayabilirsiniz. Yönergeler için bkz. [Hizmet tekliflerinizi tanımlama](define-service-offerings.md) .
 
-Bu tabloda, rezervasyon sayfasında bulunan çeşitli zamanlama ilkeleri açık bulunmaktadır.
+## <a name="types-of-scheduling-policies"></a>Zamanlama ilkeleri türleri
 
-| İlke | Açıklama |
+Bu tabloda, rezervasyon sayfasında bulunan çeşitli zamanlama ilkeleri açıklanmaktadır.
+
+| Ilkesi | Açıklama |
 |---|---|
-| Zaman artışları | Randevular arasındaki aralıkları belirler. Zaman artışlarınızı 5 dakika ile 4 saat arasında belirtabilirsiniz. Ayrıca, kendi özelleştirilmiş zaman artışlarınızı da belirtebilirsiniz. Örneğin, 15 dakikalık bir zaman aralığı, bir müşterinin 8:00, 8:15, 8:30 gibi bir randevu planlaması anlamına gelir. Buna karşılık, 60 dakikalık bir aralık, randevuların yalnızca saatte kullanılabilir olduğu anlamına gelir. (Hizmet sürelerini ayarlamak için bkz [. Hizmet tekliflerinizi tanımlama](define-service-offerings.md).) |
-| Çalışma saatlerini geri ayama süresi | Personel planınızı, zamanlanan randevuları temel alarak hazırlarsınız; böylece herhangi bir günde kaç müşterinizin hizmet için geldiğini önceden bilmek önemlidir. Müşteri aday süresi ilkesi, müşterilerin randevuyu kabul etmeleri veya iptal etmeleri için önceden belirtilen saat sayısını belirtmenize olanak sağlar. |
-| En fazla gün önceden | Müşterilerin ne kadar önceden randevu randevu al ulaşacaklarını sınırlamak istemiyorsanız, sizin için bu ayar bu kadardır! En fazla 365 gün veya daha uzun süreyle ayarlama. |
-| Bir rezervasyon oluşturulduğunda veya değiştir olduğunda bildirme | Bir müşteri herhangi bir randevuya randevu aken veya mevcut bir randevuyu değiştirirken e-posta almak istediğiniz zaman bu seçeneği belirleyin. E-posta, İş bilgileri sayfasında belirtilen posta kutusuna gider. Ayrıntılar [için bkz. İş bilginizi](enter-business-information.md) girme. |
+| Zaman artışları | Randevular arasındaki aralıkları belirler. Zaman artışlarınızı 5 dakikadan 4 saate ayarlayabilirsiniz. Ayrıca kendi özelleştirilmiş zaman artışlarınızı da ayarlayabilirsiniz. Örneğin 15 dakikalık bir aralık, müşterinin 8:00, 8:15, 8:30 vb. saatte 60 dakikalık bir randevu zamanlayabilir olduğu anlamına gelir. Buna karşılık, 60 dakikalık bir aralık, randevuların yalnızca saatte kullanılabildiğini gösterir. (Hizmet sürelerini ayarlamak için bkz. [Hizmet tekliflerinizi tanımlama](define-service-offerings.md).) |
+| Saat cinsinden sağlama süresi | Personel planınızı zamanlanmış randevuları temel alarak oluşturursunuz, bu nedenle belirli bir günde hizmet için kaç müşterinin geldiğini önceden bilmeniz önemlidir. Sağlama süresi ilkesi, müşterilerin randevu alması veya iptal etmesi gereken saat sayısını önceden belirtmenize olanak tanır. |
+| En fazla gün önceden | Müşterilerin randevu alabilmesi için ne kadar önceden sınırlamak istiyorsanız, bu sizin için bir ayardır! En fazla 365 gün veya daha uzun süre ayarlayabilirsiniz. |
+| Rezervasyon oluşturulduğunda veya değiştirildiğinde bildirme | Müşteri randevu aldığında veya var olan bir randevuyu değiştirdiğinde e-posta almak istediğinizde bu seçeneği belirleyin. E-posta, İş bilgileri sayfasında belirtilen posta kutusuna gider. Ayrıntılar için bkz [. İş bilgilerinizi girme](enter-business-information.md) . |
 
 ## <a name="set-your-policies"></a>İlkelerinizi ayarlama
 
-1. Uygulama Microsoft 365 başlatıcısını ve ardından Bookings'i seçin.
+1. Microsoft 365'da uygulama başlatıcıyı ve ardından Bookings'ı seçin.
 
-1. Gezinti bölmesinde Rezervasyon **sayfası'ni seçin**.
+1. Gezinti bölmesinde **Rezervasyon sayfası'nı** seçin.
 
-1. Zamanlama ilkesi bölümünün altında **ilkelerinizi** seçin.
+1. **İlke zamanlama bölümünde ilkelerinizi** seçin.
 
-1. Kaydet ve **yayımla'yı seçin**.
+1. **Kaydet ve yayımla'yı** seçin.
 
 ## <a name="publish-the-booking-page"></a>Rezervasyon sayfasını yayımlama
 
-Rezervasyon sayfanızı yayımlamaya hazır olduğunda Kaydet ve **yayımla'yı seçin**. Daha [fazla bilgi için bkz. Rezervasyon sayfanızı](customize-booking-page.md) özelleştirme ve yayımlama.
+Rezervasyon sayfanızı yayımlamaya hazır olduğunuzda **Kaydet ve yayımla'yı** seçin. Daha fazla bilgi için [bkz. Rezervasyon sayfanızı özelleştirme ve yayımlama](customize-booking-page.md) .

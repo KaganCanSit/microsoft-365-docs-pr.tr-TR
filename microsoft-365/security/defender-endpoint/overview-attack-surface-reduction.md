@@ -1,8 +1,8 @@
 ---
 title: Saldırı yüzeyini azaltmayı (ASR) anlama ve kullanma
 ms.reviewer: ''
-description: Uç nokta için Microsoft Defender'ın saldırı yüzeyini azaltma özellikleri hakkında bilgi öğrenin.
-keywords: asr, saldırı yüzeyini azaltma, Endpoint için Microsoft Defender, microsoft defender, virüsten koruma, av, windows defender
+description: Uç Nokta için Microsoft Defender saldırı yüzeyi azaltma özellikleri hakkında bilgi edinin.
+keywords: asr, saldırı yüzeyi azaltma, saldırı yüzeyi azaltma kuralları, Uç Nokta için Microsoft Defender, microsoft defender, virüsten koruma, av, windows defender
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -19,150 +19,160 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 9c489d28467582e0f95f3fde7440ff43022c44e1
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 5b71134f9a7d33880e9762701e825c3fbf708f6b
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682052"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64705099"
 ---
-# <a name="understand-and-use-attack-surface-reduction-capabilities"></a>Saldırı yüzeyini azaltma özelliklerini anlama ve kullanma
+# <a name="understand-and-use-attack-surface-reduction-capabilities"></a>Saldırı yüzeyi azaltma özelliklerini anlama ve kullanma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > [!TIP]
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Saldırı yüzeyleri, kuruluşlarının siber tehditlere ve saldırılara açık olduğu tüm yerlerdir. Uç nokta için Defender, saldırı alanlarınızı azaltmanıza yardımcı olacak çeşitli özellikler içerir. Saldırı yüzeyini azaltma hakkında daha fazla bilgi edinmek için aşağıdaki videoyu izleyin.
+Saldırı yüzeyleri, kuruluşunuzun siber tehditlere ve saldırılara karşı savunmasız olduğu tüm yerlerdir. Uç Nokta için Defender, saldırı yüzeylerinizi azaltmaya yardımcı olacak çeşitli özellikler içerir. Saldırı yüzeyini azaltma hakkında daha fazla bilgi edinmek için aşağıdaki videoyu izleyin.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4woug]
 
-## <a name="configure-attack-surface-reduction-capabilities"></a>Saldırı yüzeyini azaltma özelliklerini yapılandırma
+## <a name="configure-attack-surface-reduction-capabilities"></a>Saldırı yüzeyi azaltma özelliklerini yapılandırma
 
-Ortamınıza saldırı yüzeyini azaltmayı yapılandırmak için şu adımları izleyin:
+Ortamınızda saldırı yüzeyi azaltmayı yapılandırmak için şu adımları izleyin:
 
-1. [Sistem yalıtlığı için donanım tabanlı Microsoft Edge](/windows/security/threat-protection/microsoft-defender-application-guard/install-md-app-guard).
+1. [Microsoft Edge için donanım tabanlı yalıtımı etkinleştirin](/windows/security/threat-protection/microsoft-defender-application-guard/install-md-app-guard).
 
-2. Uygulama denetimi etkinleştirme.
+2. Uygulama denetimini etkinleştirin.
 
-   1. Temel ilkeleri gözden Windows. Bkz [. Örnek Temel İlkeler](/windows/security/threat-protection/windows-defender-application-control/example-wdac-base-policies).
-   2. Uygulama [denetimi Windows Defender kılavuzuna bakın](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-design-guide).
-   3. Uygulama Denetimi [(WDAC) Windows Defender dağıtma'ya bakın](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
+   1. Windows'da temel ilkeleri gözden geçirin. Bkz [. Örnek Temel İlkeler](/windows/security/threat-protection/windows-defender-application-control/example-wdac-base-policies).
+   2. [Uygulama Denetimi tasarım kılavuzuna Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-design-guide) bakın.
+   3. Bkz[. Windows Defender Uygulama Denetimi (WDAC) ilkelerini dağıtma](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
 
 3. [Denetimli klasör erişimini etkinleştirin](enable-controlled-folders.md).
 
-4. [Ağ korumasını açma](enable-network-protection.md).
+4. [Ağ koruması'nı açın](enable-network-protection.md).
 
-5. [Exploit Protection'i etkinleştirin](enable-exploit-protection.md).
+5. [Yararlanma korumasını etkinleştirin](enable-exploit-protection.md).
 
-6. [Saldırı yüzeyini azaltma kurallarını dağıtın](attack-surface-reduction-rules-deployment.md).
+6. [Saldırı yüzeyi azaltma kurallarını dağıtın](attack-surface-reduction-rules-deployment.md).
 
 7. Ağ güvenlik duvarınızı ayarlayın.
 
-   1. Gelişmiş güvenlikli Güvenlik [Windows Defender genel bir bakış elde.](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security)
-   2. Güvenlik duvarı [Windows Defender tasarımına karar](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide) vermek için Güvenlik Duvarı tasarım kılavuzunu kullanın.
-   3. Gelişmiş güvenlik [Windows Defender duvarı ayarlamak](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide) için Güvenlik Duvarı dağıtım kılavuzunu kullanın.
+   1. [Gelişmiş güvenlik özelliklerine sahip Windows Defender Güvenlik Duvarı'na](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security) genel bir bakış edinin.
+   2. Güvenlik duvarı ilkelerinizi nasıl tasarlamak istediğinize karar vermek için Windows Defender Güvenlik Duvarı [tasarım kılavuzunu](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide) kullanın.
+   3. Kuruluşunuzun [güvenlik duvarını](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide) gelişmiş güvenlikle ayarlamak için Windows Defender Güvenlik Duvarı dağıtım kılavuzunu kullanın.
 
 > [!TIP]
-> Çoğu durumda saldırı yüzeyini azaltma özelliklerini yapılandırarak çeşitli yöntemlerden birini seçebilirsiniz:
+> Çoğu durumda, saldırı yüzeyi azaltma özelliklerini yapılandırırken çeşitli yöntemler arasından seçim yapabilirsiniz:
 >
-> - Microsoft Endpoint Manager (artık Microsoft Intune ve Microsoft Endpoint Configuration Manager)
+> - Microsoft Endpoint Manager (artık Microsoft Intune ve Microsoft Endpoint Configuration Manager içerir)
 > - Grup İlkesi
 > - PowerShell cmdlet'leri
 
-## <a name="test-attack-surface-reduction-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'da saldırı yüzeyini azaltmayı test eder
+## <a name="test-attack-surface-reduction-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'de saldırı yüzeyini azaltmayı test edin
 
-Kuruluş güvenlik ekibinin bir parçası olarak, nasıl çalışacaklarını görmek üzere denetim modunda çalıştıracak şekilde saldırı yüzeyini azaltma özelliklerini yapılandırabilirsiniz. Denetim modunda şunları etkinleştirebilirsiniz:
+Kuruluşunuzun güvenlik ekibinin bir parçası olarak, nasıl çalışacaklarını görmek için saldırı yüzeyi azaltma özelliklerini denetim modunda çalışacak şekilde yapılandırabilirsiniz. Denetim modunda aşağıdaki ASR güvenlik özelliklerini etkinleştirebilirsiniz:
 
 - Saldırı yüzeyini azaltma kuralları
 - Exploit protection
 - Ağ koruması
-- Denetim modunda denetimli klasör erişimi
+- Ve denetimli klasör erişimi
 
-Denetim modu, özelliği etkinleştirmiş olsaydı *neler* olacağının kaydını görmenizi sağlar.
+Denetim modu, özelliği etkinleştirmiş olsaydınız neler *olacağının* kaydını görmenizi sağlar.
 
-Özelliklerin nasıl çalışta olduğunu test etmek için denetim modunu etkinleştirebilirsiniz. Yalnızca test için denetim modunun etkinleştirilmesi, denetim modunun iş hattı uygulamalarınızı etkilemesini önlemeye yardımcı olur. Ayrıca, belirli bir süre boyunca kaç şüpheli dosya değiştirme girişiminin olduğu hakkında da fikir de eldeebilirsiniz.
+Özelliklerin nasıl çalışacağını test ederken denetim modunu etkinleştirebilirsiniz. Yalnızca test için denetim modunun etkinleştirilmesi, denetim modunun iş kolu uygulamalarınızı etkilemesini önlemeye yardımcı olur. Ayrıca belirli bir süre içinde kaç şüpheli dosya değişikliği girişimi gerçekleştiği hakkında da bir fikir edinebilirsiniz.
 
-Özellikler, uygulamaların, betiklerin veya dosyaların değiştirilmesini engellemez veya engellemez. Öte yandan, Windows Günlüğü özellikleri tamamen etkinleştirmiş gibi olayları kaydedecek. Denetim moduyla, etkinleştirildiğinde özelliğin neleri etkileyeceğini görmek için olay günlüğünü gözden geçirebilirsiniz.
+Özellikler uygulamaların, betiklerin veya dosyaların değiştirilmesini engellemez veya engellemez. Ancak Windows Olay Günlüğü, özelliklerin tamamen etkin olduğu gibi olayları kaydeder. Denetim moduyla, etkinse özelliğin neleri etkileyeceğini görmek için olay günlüğünü gözden geçirebilirsiniz.
 
-Denetlenen girdileri bulmak için Uygulamalar ve Hizmetler  \> **Microsoft** \> Windows **Windows Defender** \>  \> **gidin**.
+Denetlenen girdileri bulmak için **Microsoft** \> **Windows** \>  \> Windows Defender **Operasyonel** **Uygulamalar ve Hizmetler'e** \> gidin.
 
-Her olay için daha büyük ayrıntılar almak üzere Uç Nokta için Defender'ı kullanın. Saldırı yüzeyini azaltma kurallarını araştırırken bu ayrıntılar özellikle yararlı olur. Uç nokta konsolu için Defender'ın kullanımı [, uyarı zaman çizelgesi ve soruşturma senaryolarının bir parçası olarak sorunları araştırmana olanak sağlar](investigate-alerts.md).
+Her olayla ilgili daha fazla ayrıntı almak için Uç Nokta için Defender'ı kullanın. Bu ayrıntılar özellikle saldırı yüzeyi azaltma kurallarını araştırmak için yararlıdır. Uç Nokta için Defender konsolunu kullanmak [, uyarı zaman çizelgesi ve araştırma senaryolarının bir parçası olarak sorunları araştırmanıza](investigate-alerts.md) olanak tanır.
 
-Grup İlkesi, PowerShell ve yapılandırma hizmet sağlayıcılarını (CSP) kullanarak denetim modunu etkinleştirebilirsiniz.
+grup ilkesi, PowerShell ve yapılandırma hizmeti sağlayıcılarını (CSP) kullanarak denetim modunu etkinleştirebilirsiniz.
 
 > [!TIP]
-> Özelliklerin çalıştığını onaylamak ve nasıl Windows Defender görmek için [demo.wd.microsoft.com'da](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) Test Planı web sitesini ziyaret edebilirsiniz.
+> Ayrıca özelliklerin çalıştığını onaylamak ve nasıl çalıştıklarını görmek için [demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) Windows Defender Testground web sitesini ziyaret edebilirsiniz.
 
 > [!NOTE]
 > demo.wd.microsoft.com'daki Uç Nokta için Defender tanıtım sitesi kullanım dışıdır ve gelecekte kaldırılacaktır.
 
-| Denetim seçenekleri | Denetim modunu etkinleştirme | Etkinlikleri görüntüleme |
+| Denetim seçenekleri | Denetim modunu etkinleştirme | Olayları görüntüleme |
 |---|---|---|
-| Denetim tüm olaylar için geçerlidir | [Denetimli klasör erişimini etkinleştirme](enable-controlled-folders.md) | [Denetimli klasör erişimi olayları](evaluate-controlled-folder-access.md#review-controlled-folder-access-events-in-windows-event-viewer) |
-| Denetim tek tek kurallar için geçerlidir | [1. Adım: Denetimi kullanarak ASR kurallarını test edin](attack-surface-reduction-rules-deployment-test.md#step-1-test-asr-rules-using-audit) | [2. Adım: Saldırı yüzeyini azaltma kuralları raporlama sayfasını anlama](attack-surface-reduction-rules-deployment-test.md#step-2-understand-the-attack-surface-reduction-rules-reporting-page-in-the-microsoft-365-defender-portal) |
+| Denetim tüm olaylar için geçerlidir | [Denetimli klasör erişimini etkinleştirin](enable-controlled-folders.md) | [Denetimli klasör erişim olayları](evaluate-controlled-folder-access.md#review-controlled-folder-access-events-in-windows-event-viewer) |
+| Denetim tek tek kurallar için geçerlidir | [1. Adım: Denetim modunu kullanarak ASR kurallarını test edin](attack-surface-reduction-rules-deployment-test.md#step-1-test-asr-rules-using-audit) | [2. Adım: Saldırı yüzeyi azaltma kuralları raporlama sayfasını anlama](attack-surface-reduction-rules-deployment-test.md#step-2-understand-the-attack-surface-reduction-rules-reporting-page-in-the-microsoft-365-defender-portal) |
 | Denetim tüm olaylar için geçerlidir | [Ağ korumasını etkinleştirme](enable-network-protection.md) | [Ağ koruma olayları](evaluate-network-protection.md#review-network-protection-events-in-windows-event-viewer) |
-| Denetim, tek tek risk azaltmalara uygulanır | [Exploit Protection'i etkinleştirme](enable-exploit-protection.md) | [Exploit protection events](exploit-protection.md#review-exploit-protection-events-in-windows-event-viewer) |
+| Denetim, tek tek risk azaltmaları için geçerlidir | [Exploit Protection'i etkinleştirin](enable-exploit-protection.md) | [Güvenlik açığından yararlanma koruma olayları](exploit-protection.md#review-exploit-protection-events-in-windows-event-viewer) |
 
-## <a name="view-attack-surface-reduction-events"></a>Saldırı yüzeyini azaltma etkinliklerini görüntüleme
+### <a name="attack-surface-reduction-asr-rules"></a>Saldırı yüzeyini azaltma (ASR) kuralları
 
-Hangi kuralların veya ayarların çalıştığını izlemek için Olay Görüntüleyicisi'nde saldırı yüzeyini azaltma etkinliklerini gözden geçirebilirsiniz. Ayrıca, her türlü ayarın "gürültülü" olup olmadığını veya günlük iş akışınızı etkiley olup olmadığını da belirlenebilirsiniz.
+Saldırı yüzeyi azaltma (ASR) kuralları yaygın, bilinen saldırı yüzeylerini sağlamlaştırmak için önceden tanımlanmıştır. Saldırı yüzeyi azaltma kurallarını uygulamak için kullanabileceğiniz çeşitli yöntemler vardır. Tercih edilen yöntem aşağıdaki saldırı yüzeyi azaltma (ASR) kuralları dağıtım konularında belgelenmiştir:
 
-Özellikleri değerlendirirken etkinlikleri gözden geçirmek yararlı olur. Özellikler veya ayarlar için denetim modunu etkinleştirebilir ve ardından tam olarak etkinleştirilmişse neler olacağını gözden geçirebilirsiniz.
+- [Saldırı yüzeyini azaltma (ASR) kuralları dağıtımına genel bakış](attack-surface-reduction-rules-deployment.md)
+- [Saldırı yüzeyi azaltma (ASR) kuralları dağıtım planı](attack-surface-reduction-rules-deployment-plan.md)
+- [Test saldırı yüzeyi azaltma (ASR) kuralları](attack-surface-reduction-rules-deployment-test.md)
+- [Saldırı yüzeyi azaltma (ASR) kurallarını etkinleştirme](attack-surface-reduction-rules-deployment-implement.md)
+- [Saldırı yüzeyini azaltma (ASR) kurallarını kullanıma hazır hale getirme](attack-surface-reduction-rules-deployment-operationalize.md)
 
-Bu bölümde tüm olaylar, ilişkili özellikleri veya ayarları listelenmiş, özel görünümlerin nasıl özel görünümler oluşturularak belirli olaylara filtre uygulanmış olarak nasıl oluşturul açık olduğu anlatıldı.
+## <a name="view-attack-surface-reduction-events"></a>Saldırı yüzeyi azaltma olaylarını görüntüleme
 
-E5 aboneliğiniz varsa ve Uç Nokta için Microsoft Defender kullanıyorsanız, Windows Güvenliği, bloklar ve uyarılar hakkında [ayrıntılı raporlama alın](microsoft-defender-endpoint.md).
+Hangi kuralların veya ayarların çalıştığını izlemek için Olay Görüntüleyicisi saldırı yüzeyi azaltma olaylarını gözden geçirin. Ayrıca herhangi bir ayarın çok "gürültülü" olup olmadığını veya günlük iş akışınızı etkilenip etkilemediğini de belirleyebilirsiniz.
 
-### <a name="use-custom-views-to-review-attack-surface-reduction-capabilities"></a>Saldırı yüzeyini azaltma özelliklerini gözden geçirmek için özel görünümleri kullanma
+Özellikleri değerlendirirken olayları gözden geçirmek kullanışlıdır. Özellikler veya ayarlar için denetim modunu etkinleştirebilir ve ardından tam olarak etkinleştirildiğinde neler olacağını gözden geçirebilirsiniz.
 
-Etkinlik Görüntüleyicisi'nde özel Windows yalnızca belirli özelliklere ve ayarlara yönelik olayları görmek için. En kolay yol, özel görünümü BIR XML dosyası olarak içeri aktarmanızdır. XML'yi doğrudan bu sayfadan kopyaleyebilirsiniz.
+Bu bölümde tüm olaylar, ilişkili özellikleri veya ayarları listelenir ve belirli olaylara filtre uygulamak için özel görünümlerin nasıl oluşturulacağı açıklanır.
 
-Ayrıca, özelliğe karşılık gelen olay alanına el ile de gezinebilirsiniz.
+E5 aboneliğiniz varsa ve [Uç Nokta için Microsoft Defender kullanıyorsanız](microsoft-defender-endpoint.md) Windows Güvenliği bir parçası olarak olaylar, bloklar ve uyarılar hakkında ayrıntılı raporlama alın.
 
-#### <a name="import-an-existing-xml-custom-view"></a>Varolan bir XML özel görünümünü içeri aktarma
+### <a name="use-custom-views-to-review-attack-surface-reduction-capabilities"></a>Saldırı yüzeyi azaltma özelliklerini gözden geçirmek için özel görünümleri kullanma
 
-1. Boş bir .txt oluşturun ve kullanmak istediğiniz özel görünümün XML dosyasını .txt. Kullanmak istediğiniz özel görünümlerin her biri için bunu kullanın. Dosyaları aşağıdaki gibi yeniden adlandırabilirsiniz (dosya türünü aşağıdaki gibi .txt .xml:
+yalnızca belirli özelliklere ve ayarlara yönelik olayları görmek için Windows Olay Görüntüleyicisi özel görünümler oluşturun. En kolay yol, özel görünümü XML dosyası olarak içeri aktarmaktır. XML'yi doğrudan bu sayfadan kopyalayabilirsiniz.
+
+Ayrıca özelliğe karşılık gelen olay alanına el ile de gidebilirsiniz.
+
+#### <a name="import-an-existing-xml-custom-view"></a>Var olan bir XML özel görünümünü içeri aktarma
+
+1. Boş bir .txt dosyası oluşturun ve kullanmak istediğiniz özel görünüm için XML'yi .txt dosyasına kopyalayın. Bunu, kullanmak istediğiniz özel görünümlerin her biri için yapın. Dosyaları aşağıdaki gibi yeniden adlandırın (türü .txt .xml olarak değiştirdiğinizden emin olun):
     - Denetimli klasör erişimi olayları özel görünümü: *cfa-events.xml*
-    - Exploit protection events custom view: *ep-events.xml*
-    - Saldırı yüzeyini azaltma etkinlikleri özel görünümü: *asr-events.xml*
-    - Ağ/ koruma olayları özel görünümü: *np-events.xml*
+    - Yararlanma koruması olayları özel görünümü: *ep-events.xml*
+    - Saldırı yüzeyi azaltma olayları özel görünümü: *asr-events.xml*
+    - Ağ/koruma olayları özel görünümü: *np-events.xml*
 
-2. Olay **Görüntüleyicisi'ne** olay Başlat menüsü Görüntüleyicisi'ni **açın**.
+2. Başlat menüsü **olay görüntüleyicisi** yazın ve **Olay Görüntüleyicisi** açın.
 
-3. Eylem Özel **Görünümü** \> **İçeri Aktar... seçeneğini seçin.**
+3. **Eylem** \> **Özel Görünümü İçeri Aktar...** seçeneğini belirleyin.
 
    > [!div class="mx-imgBorder"]
-   > ![Bile görüntüleyicisi penceresinin sol tarafından Özel görünümü içeri aktar'ı vurgulayan animasyon.](images/events-import.gif)
+   > ![Çift görüntüleyici penceresinin sol tarafındaki Özel görünümü içeri aktar seçeneğini vurgulayan animasyon.](images/events-import.gif)
 
-4. İstediğiniz özel görünüm için XML dosyasını ayıklayın ve seçin.
+4. İstediğiniz özel görünüm için XML dosyasını ayıkladığınız yere gidin ve seçin.
 
 5. **Aç**'ı seçin.
 
-6. Yalnızca bu özellikle ilgili olayları göstermek için filtre olan özel bir görünüm oluşturacak.
+6. Yalnızca bu özellikle ilgili olayları gösterecek şekilde filtreleyen özel bir görünüm oluşturur.
 
 #### <a name="copy-the-xml-directly"></a>XML'yi doğrudan kopyalama
 
-1. Olay **Görüntüleyicisi'ne** Başlat menüsü Görüntüleyicisi'ni Windows **açın**.
+1. Başlat menüsü **olay görüntüleyicisi** yazın ve Windows **Olay Görüntüleyicisi** açın.
 
-2. Sol panelde, **Eylemler'in altında Özel** Görünüm **Oluştur... öğesini seçin.**
+2. Sol paneldeki **Eylemler'in** altında **Özel Görünüm Oluştur...** öğesini seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![Olay görüntüleyici penceresinde özel görünüm oluştur seçeneğini vurgulayan animasyon.](images/events-create.gif)
+   > ![Olay görüntüleyicisi penceresinde özel görünüm oluştur seçeneğini vurgulayan animasyon.](images/events-create.gif)
 
-3. XML sekmesine gidin ve Sorguyu el ile **düzenle'yi seçin**. XML seçeneğini kullanırsanız, Filtre sekmesini kullanarak sorguyu **düzenley neler** olduğunu bir uyarıyla görebilirsiniz. **Evet**'i seçin.
+3. XML sekmesine gidin ve **Sorguyu el ile düzenle'yi** seçin. XML seçeneğini kullanıyorsanız **Filtre** sekmesini kullanarak sorguyu düzenleyemezsiniz uyarısı görürsünüz. **Evet**'i seçin.
 
 4. Olayları filtrelemek istediğiniz özelliğin XML kodunu XML bölümüne yapıştırın.
 
-5. **Tamam**'ı seçin. Filtreniz için bir ad belirtin. Bu, yalnızca bu özellikle ilgili olayları gösterecek şekilde filtre oluşturan özel bir görünüm oluşturur.
+5. **Tamam**'ı seçin. Filtreniz için bir ad belirtin. Bu, yalnızca bu özellikle ilgili olayları gösterecek şekilde filtreleyen özel bir görünüm oluşturur.
 
-#### <a name="xml-for-attack-surface-reduction-rule-events"></a>Saldırı yüzeyini azaltma kuralı olayları için XML
+#### <a name="xml-for-attack-surface-reduction-rule-events"></a>Saldırı yüzeyi azaltma kuralı olayları için XML
 
 ```xml
 <QueryList>
@@ -173,7 +183,7 @@ Ayrıca, özelliğe karşılık gelen olay alanına el ile de gezinebilirsiniz.
 </QueryList>
 ```
 
-#### <a name="xml-for-controlled-folder-access-events"></a>Denetimli klasör erişimi olayları için XML
+#### <a name="xml-for-controlled-folder-access-events"></a>Denetimli klasör erişim olayları için XML
 
 ```xml
 <QueryList>
@@ -184,7 +194,7 @@ Ayrıca, özelliğe karşılık gelen olay alanına el ile de gezinebilirsiniz.
 </QueryList>
 ```
 
-#### <a name="xml-for-exploit-protection-events"></a>Exploit protection events için XML
+#### <a name="xml-for-exploit-protection-events"></a>Açıklardan yararlanma koruması olayları için XML
 
 ```xml
 <QueryList>
@@ -215,17 +225,17 @@ Ayrıca, özelliğe karşılık gelen olay alanına el ile de gezinebilirsiniz.
 </QueryList>
 ```
 
-### <a name="list-of-attack-surface-reduction-events"></a>Saldırı yüzeyini azaltma etkinliklerinin listesi
+### <a name="list-of-attack-surface-reduction-events"></a>Saldırı yüzeyi azaltma olaylarının listesi
 
-Tüm saldırı yüzeyini azaltma olayları Microsoft > Windows'de Uygulamalar ve **> Hizmet Günlükleri > Windows** ardından aşağıdaki tabloda listelenmiş olarak klasör veya sağlayıcı altında yer alır.
+Tüm saldırı yüzeyi azaltma olayları **, Microsoft > Windows > Uygulamalar ve Hizmet Günlükleri'nin** altında ve ardından aşağıdaki tabloda listelendiği gibi klasör veya sağlayıcı altında bulunur.
 
-Bu olaylara, Olay görüntüleyicisinde Windows erişabilirsiniz:
+Bu olaylara Windows Olay görüntüleyicisi'nde erişebilirsiniz:
 
-1. Başlat menüsünü **açın** , olay **görüntüleyicisi yazın** ve Olay Görüntüleyicisi'nin **sonucu** seçin.
-2. **Microsoft > Windows >'>'i** genişletin ve ardından aşağıdaki tabloda Sağlayıcı **/kaynak altında listelenen** klasöre gidin.
-3. Olayları görmek için alt öğeye çift tıklayın. Olaylar arasında kaydırarak bulmak için birini bulun.
+1. **Başlat** menüsünü açın ve **olay görüntüleyicisi** yazın ve **ardından Olay Görüntüleyicisi** sonucunu seçin.
+2. **Microsoft > Windows > Uygulama ve Hizmet Günlükleri'ni** genişletin ve aşağıdaki tabloda **Sağlayıcı/kaynak** altında listelenen klasöre gidin.
+3. Olayları görmek için alt öğeye çift tıklayın. Aradığınızı bulmak için olayları kaydırın.
 
-   ![Olay Görüntüleyicisi'ni kullanmayı gösteren animasyon.](images/event-viewer.gif)
+   ![Olay Görüntüleyicisi kullanarak gösteren animasyon.](images/event-viewer.gif)
 
 <br>
 
@@ -233,59 +243,65 @@ Bu olaylara, Olay görüntüleyicisinde Windows erişabilirsiniz:
 
 |Özellik|Sağlayıcı/kaynak|Olay Kimliği|Açıklama|
 |---|---|:---:|---|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|1|ACG denetimi|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|2|ACG zorunlu|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|3|Alt işlemlerin denetimine izin verme|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|4|Alt işlemlerin engel olmasına izin verme|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|5|Düşük bütünlük resimleri denetimini engelleme|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|6|Düşük bütünlük resimleri bloğu|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|7|Uzaktan resim denetimini engelleme|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|8|Uzak resimleri engelleme|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|9|win32k sistem aramaları denetimini devre dışı bırakma|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|10|win32k sistem çağrıları engellemesini devre dışı bırakma|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|11|Kod bütünlüğü koruması denetimi|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|12|Kod bütünlüğü koruma bloğu|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|13|EAF denetimi|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|14|EAF zorunlu kılınma|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|15|EAF+ denetim|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|16|EAF+ zorunlu|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|17|IAF denetimi|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|18|IAF zorunlu|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|19|STACKPivot denetimi|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|20|STACKPivot zorunlu|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|21|BUBANI ArayanYopya Denetimi denetle|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|22|ENFORCE CallerCheck enforce|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|23|BURAK SimExec denetimi|
-|Exploit protection|Security-Mitigations (Kernel Modu/Kullanıcı Modu)|24|BURAK SimExec zorunlu|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|1|ACG denetimi|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|2|ACG zorlama|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|3|Alt işlemlerin denetimine izin verme|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|4|Alt işlemler bloğuna izin verme|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|5|Düşük bütünlük görüntü denetimini engelleme|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|6|Düşük bütünlükte görüntüleri engelleme bloğu|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|7|Uzak görüntüleri engelleme denetimi|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|8|Uzak görüntüleri engelle bloğu|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|9|win32k sistem çağrıları denetimini devre dışı bırakma|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|10|win32k sistem çağrıları bloğunu devre dışı bırakma|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|11|Kod bütünlüğü koruma denetimi|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|12|Kod bütünlüğü koruma bloğu|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|13|EAF denetimi|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|14|EAF zorlama|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|15|EAF+ denetimi|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|16|EAF+ zorlama|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|17|IAF denetimi|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|18|IAF zorlama|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|19|ROP StackPivot denetimi|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|20|ROP StackPivot zorlama|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|21|ROP Çağıranı Denetimi denetleme|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|22|ROP CallerCheck zorlama|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|23|ROP SimExec denetimi|
+|Exploit protection|Security-Mitigations (Çekirdek Modu/Kullanıcı Modu)|24|ROP SimExec zorlama|
 |Exploit protection|WER-Diagnostics|5|CFG Bloğu|
-|Exploit protection|Win32K (İşlemde)|260|Güvenilmeyen Yazı Tipi|
-|Ağ koruması|Windows Defender (İşlem)|5007|Ayarların değiştir olduğu olay|
-|Ağ koruması|Windows Defender (İşlem)|1125|Denetim modunda Ağ korumasının çalışma olduğu olay|
-|Ağ koruması|Windows Defender (İşlem)|1126|Block-mode'da Ağ korumasının müdahalesi sırasında olay|
-|Denetimli klasör erişimi|Windows Defender (İşlem)|5007|Ayarların değiştir olduğu olay|
-|Denetimli klasör erişimi|Windows Defender (İşlem)|1124|Denetlenen Denetimli klasör erişimi olayı|
-|Denetimli klasör erişimi|Windows Defender (İşlem)|1123|Engellenmiş Denetimli klasör erişimi olayı|
-|Denetimli klasör erişimi|Windows Defender (İşlem)|1127|Engellenmiş Denetimli klasör erişimi sektör yazma bloğu olayı|
-|Denetimli klasör erişimi|Windows Defender (İşlem)|1128|Denetlenen Denetimli klasör erişimi sektör yazma bloğu olayı|
-|Saldırı yüzeyini azaltma|Windows Defender (İşlem)|5007|Ayarların değiştir olduğu olay|
-|Saldırı yüzeyini azaltma|Windows Defender (İşlem)|1122|Denetim modunda kural geldiğinde olay|
-|Saldırı yüzeyini azaltma|Windows Defender (İşlem)|1121|Engelleme modunda kural geldiğinde olay|
+|Exploit protection|Win32K (Operasyonel)|260|Güvenilmeyen Yazı Tipi|
+|Ağ koruması|Windows Defender (Operasyonel)|5007|Ayarlar değiştirildiğinde gerçekleşen olay|
+|Ağ koruması|Windows Defender (Operasyonel)|1125|Ağ koruması Denetim modunda tetiklendiğinde gerçekleşen olay|
+|Ağ koruması|Windows Defender (Operasyonel)|1126|Ağ koruması Blok modunda tetiklendiğinde gerçekleşen olay|
+|Denetimli klasör erişimi|Windows Defender (Operasyonel)|5007|Ayarlar değiştirildiğinde gerçekleşen olay|
+|Denetimli klasör erişimi|Windows Defender (Operasyonel)|1124|Denetlenen Denetimli klasör erişimi olayı|
+|Denetimli klasör erişimi|Windows Defender (Operasyonel)|1123|Engellenen Denetimli klasör erişimi olayı|
+|Denetimli klasör erişimi|Windows Defender (Operasyonel)|1127|Engellenen Denetimli klasör erişimi kesim yazma bloğu olayı|
+|Denetimli klasör erişimi|Windows Defender (Operasyonel)|1128|Denetlenen Denetimli klasör erişimi kesimi yazma bloğu olayı|
+|Saldırı yüzeyini azaltma|Windows Defender (Operasyonel)|5007|Ayarlar değiştirildiğinde gerçekleşen olay|
+|Saldırı yüzeyini azaltma|Windows Defender (Operasyonel)|1122|Denetim modunda kural tetiklendiğinde gerçekleşen olay|
+|Saldırı yüzeyini azaltma|Windows Defender (Operasyonel)|1121|Kuralın Blok modunda tetiklenmesi olayı|
 
 >[!NOTE]
-> Kullanıcı açısından bakıldığında, ASR Uyarı modu bildirimleri saldırı yüzeyini azaltma kuralları için Windows Bildirimi olarak yapılır.
+> Kullanıcının bakış açısından, ASR Uyarı modu bildirimleri saldırı yüzeyi azaltma kuralları için Windows Bildirim olarak yapılır.
 >
 > ASR'de Ağ Koruması yalnızca Denetim ve Engelleme modları sağlar.
 
 ## <a name="resources-to-learn-more-about-attack-surface-reduction"></a>Saldırı yüzeyini azaltma hakkında daha fazla bilgi edinmek için kaynaklar
 
-Videoda da belirtildiği gibi, Uç Nokta için Defender çeşitli saldırı yüzeyini azaltma özellikleri içerir. Daha fazla bilgi edinmek için aşağıdaki kaynakları kullanın:
+Videoda belirtildiği gibi, Uç Nokta için Defender çeşitli saldırı yüzeyi azaltma özellikleri içerir. Daha fazla bilgi edinmek için aşağıdaki kaynakları kullanın:
 
 | Makale | Açıklama |
 |:---|:---|
-| [Donanım tabanlı yalıtım](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) | Bir sistem başlatılırken ve çalışırken bütünlüğünü koruyun ve koruyun. Yerel ve uzak doğrulama aracılığıyla sistem bütünlüğünü doğrulama. Kötü amaçlı web sitelerine karşı Microsoft Edge için kapsayıcı yalıtım kullanın. |
-| [Uygulama denetimi](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) | Uygulamalarınızı çalıştırmak için güven kazanmak amacıyla uygulama denetimi kullanın. |
-| [Denetimli klasör erişimi](controlled-folders.md) | Kötü amaçlı veya şüpheli uygulamaların (dosya şifreleme fidye yazılımı da içinde) önemli sistem klasörlerinizin dosyalarında değişiklik yapmalarını önlemeye yardımcı olun (Yazılım Microsoft Defender Virüsten Koruma) |
-| [Ağ koruması](network-protection.md) | Ağ trafiğinize ve kuruma bağlı cihazlarında bağlantı için korumayı genişletebilirsiniz. (Gerekli Microsoft Defender Virüsten Koruma) |
-| [Exploit protection](exploit-protection.md) | Kuruluşun kullandığı işletim sistemlerinin ve uygulamalarının istismara karşı korunmasına yardımcı olun. Exploit protection ayrıca üçüncü taraf virüsten koruma çözümleriyle de çalışır. |
-| [Saldırı yüzeyini azaltma kuralları](attack-surface-reduction.md) | Uygulamalarınız, kötü amaçlı yazılımı durdurmanıza yardımcı olan akıllı kurallarla güvenlik açıklarını (saldırı yüzeyleri) azaltabilirsiniz. (Gerekli Microsoft Defender Virüsten Koruma). |
-| [Cihaz denetimi](device-control-report.md) | Kuruluşta çıkarılabilir depolama alanı ve USB sürücüleri gibi cihazlarda kullanılan medyayı denetleyerek ve bu medyayı denetleyerek veri kaybına karşı koruma sağlar. |
+| [Donanım tabanlı yalıtım](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) | Sistem başlatılırken ve çalışırken sistemin bütünlüğünü koruyun ve koruyun. Yerel ve uzak kanıtlama aracılığıyla sistem bütünlüğünü doğrulayın. Kötü amaçlı web sitelerine karşı korunmaya yardımcı olmak için Microsoft Edge için kapsayıcı yalıtımını kullanın. |
+| [Uygulama denetimi](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) | Uygulamalarınızın çalışması için güven kazanmaları için uygulama denetimini kullanın. |
+| [Denetimli klasör erişimi](controlled-folders.md) | Kötü amaçlı veya şüpheli uygulamaların (dosya şifrelemeli fidye yazılımı kötü amaçlı yazılımları dahil) anahtar sistem klasörlerinizdeki dosyalarda değişiklik yapmasını önlemeye yardımcı olun (Microsoft Defender Virüsten Koruma gerektirir) |
+| [Ağ koruması](network-protection.md) | Kuruluşunuzun cihazlarında ağ trafiğinize ve bağlantınıza yönelik korumayı genişletin. (Microsoft Defender Virüsten Koruma gerektirir) |
+| [Exploit protection](exploit-protection.md) | Kuruluşunuzun kullandığı işletim sistemlerinin ve uygulamaların kötüye kullanılmaktan korunmasına yardımcı olun. Yararlanma koruması, üçüncü taraf virüsten koruma çözümleriyle de çalışır. |
+| [Cihaz denetimi](device-control-report.md) | Kuruluşunuzdaki çıkarılabilir depolama birimi ve USB sürücüleri gibi cihazlarda kullanılan medyayı izleyerek ve denetleyerek veri kaybına karşı koruma sağlar. |
+| [Saldırı yüzeyini azaltma (ASR) kuralları dağıtım kılavuzu](attack-surface-reduction-rules-deployment.md) | Saldırı yüzeyi azaltma kurallarını dağıtmaya yönelik genel bakış bilgilerini ve önkoşullarını sunar |
+| [Saldırı yüzeyi azaltma (ASR) kuralları dağıtım planı](attack-surface-reduction-rules-deployment-plan.md) | Saldırı yüzeyi azaltma kuralları dağıtımı için önerilen adımları listeler |
+| [Test saldırı yüzeyi azaltma (ASR) kuralları](attack-surface-reduction-rules-deployment-test.md) | Saldırı yüzeyi azaltma kurallarını test etmek için denetim modunu kullanma adımlarını sağlar. |
+| [Saldırı yüzeyi azaltma (ASR) kurallarını etkinleştirme](attack-surface-reduction-rules-deployment-implement.md) | Saldırı yüzeyi azaltma kurallarını test (denetim) modundan etkin, etkin (Engelle) moduna geçiş adımlarını gösterir |
+| [Saldırı yüzeyini azaltma (ASR) kurallarını kullanıma hazır hale getirme](attack-surface-reduction-rules-deployment-operationalize.md) | Günlük gözden geçirme ve bakım etkinlikleri hakkında bilgi sağlar. |
+| [Saldırı yüzeyi azaltma (ASR) kuralları başvurusu](attack-surface-reduction-rules-reference.md) | Her saldırı yüzeyi azaltma kuralı hakkında ayrıntılı bilgi sağlar. |
+| [Saldırı yüzeyini azaltma kuralları](attack-surface-reduction.md) | Kötü amaçlı yazılımları durdurmaya yardımcı olan akıllı kurallarla uygulamalarınızdaki güvenlik açıklarını (saldırı yüzeyleri) azaltın. (Microsoft Defender Virüsten Koruma gerektirir). |

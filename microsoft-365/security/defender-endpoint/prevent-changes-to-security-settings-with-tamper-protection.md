@@ -17,16 +17,16 @@ ms.custom:
 - nextgen
 - admindeeplinkDEFENDER
 ms.technology: mde
-ms.date: 01/18/2022
+ms.date: 04/07/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 3ccda70af88b8e99afde125311b074025242646a
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: a9092ebb941806324646fffd86dd00b54fa87cc6
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64667438"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714977"
 ---
 # <a name="protect-security-settings-with-tamper-protection"></a>Değişiklik korumasıyla güvenlik ayarlarını koruyun
 
@@ -37,24 +37,22 @@ ms.locfileid: "64667438"
 
 Kurcalama koruması, Windows'nin aşağıdaki sürümlerinden birini çalıştıran cihazlar için kullanılabilir:
 
-- Windows 10
 - Windows 11
-- Çoklu oturum Windows 10 Enterprise
 - Çoklu oturum Windows 11 Enterprise 
-- Windows Server 2019
+- Windows 10
+- Çoklu oturum Windows 10 Enterprise
 - Windows Server 2022
+- Windows Server 2019
 - Windows Server, sürüm 1803 veya üzeri
 - Windows Server 2016
 - Windows Server 2012 R2
 
 > [!NOTE]
-> Windows Server 2012 R2'de kurcalama koruması, modern birleşik çözüm paketi kullanılarak eklenen cihazlar için kullanılabilir. Daha fazla bilgi için bkz. [Windows Server 2012 R2 ve 2016 Önizlemesi için modern birleşik çözümde yeni işlevler](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
+> Windows Server 2012 R2'de kurcalama koruması, modern birleşik çözüm paketi kullanılarak Uç Nokta için Microsoft Defender eklenen cihazlar için kullanılabilir. Daha fazla bilgi için bkz. [Windows Server 2012 R2 ve 2016 Önizlemesi için modern birleşik çözümde yeni işlevler](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
 
 ## <a name="overview"></a>Genel bakış
 
-Bazı siber saldırılar sırasında kötü aktörler, makinelerinizde virüsten koruma gibi güvenlik özelliklerini devre dışı bırakmaya çalışır. Kötü aktörler verilerinize daha kolay erişim elde etmek, kötü amaçlı yazılım yüklemek veya verilerinizi, kimliğinizi ve cihazlarınızı başka bir şekilde kullanmak için güvenlik özelliklerinizi devre dışı bırakmak ister. Kurcalama koruması, bu tür şeylerin oluşmasını önlemeye yardımcı olur.
-
-Kurcalama koruması ile kötü amaçlı uygulamaların aşağıdaki gibi eylemler gerçekleştirmesi engellenir:
+Bazı siber saldırılar sırasında kötü aktörler, makinelerinizde virüsten koruma gibi güvenlik özelliklerini devre dışı bırakmaya çalışır. Kötü aktörler verilerinize daha kolay erişim elde etmek, kötü amaçlı yazılım yüklemek veya verilerinizi, kimliğinizi ve cihazlarınızı başka bir şekilde kullanmak için güvenlik özelliklerinizi devre dışı bırakmak ister. Kurcalama koruması, bu tür şeylerin oluşmasını önlemeye yardımcı olur. Kurcalama koruması ile kötü amaçlı uygulamaların aşağıdaki gibi eylemler gerçekleştirmesi engellenir:
 
 - Virüs ve tehdit korumasını devre dışı bırakma
 - Gerçek zamanlı korumayı devre dışı bırakma
@@ -76,8 +74,6 @@ Kurcalama koruması, güvenlik ayarlarınızı görüntülemenizi engellemez. Ay
 
 ### <a name="what-do-you-want-to-do"></a>Ne yapmak istiyorsunuz?
 
-<br/><br/>
-
 |Bu görevi gerçekleştirmek için...|Bu bölüme bakın...|
 |---|---|
 |Kiracınız genelinde kurcalama korumasını yönetme <p> Kurcalama korumasını açmak veya kapatmak için Microsoft 365 Defender portalını kullanma|[Microsoft 365 Defender kullanarak kuruluşunuz için kurcalama korumasını yönetme](#manage-tamper-protection-for-your-organization-using-the-microsoft-365-defender-portal)|
@@ -88,16 +84,16 @@ Kurcalama koruması, güvenlik ayarlarınızı görüntülemenizi engellemez. Ay
 |Güvenlik önerilerinizi gözden geçirin|[Güvenlik önerilerini gözden geçirme](#review-your-security-recommendations)|
 |Sık sorulan soruların listesini gözden geçirin (SSS)|[SSS'lere göz atın](#view-information-about-tampering-attempts)|
 
-Kurcalama korumasını etkinleştirmek için kullandığınız yönteme veya yönetim aracına bağlı olarak, bulut tabanlı koruma bağımlılığı olabilir.
+## <a name="potential-dependency-on-cloud-protection"></a>Bulut korumasına olası bağımlılık  
+  
+Kurcalama korumasını etkinleştirmek için kullandığınız yönteme veya yönetim aracına bağlı olarak, [bulut tabanlı korumaya](cloud-protection-microsoft-defender-antivirus.md) bağımlılık olabilir. Bulut tabanlı koruma, bulut koruması veya Microsoft Gelişmiş Koruma Hizmeti (MAPS) olarak da adlandırılır.
 
 Aşağıdaki tabloda yöntemler, araçlar ve bağımlılıklar hakkında ayrıntılar sağlanır.
 
-<br/><br/>
-
-|Kurcalama koruması nasıl etkinleştirilir?|Bulut tabanlı koruma bağımlılığı (MAPS)|
+| Kurcalama koruması nasıl etkinleştirilir? | Bulut korumasına bağımlılık |
 |---|---|
 |Microsoft Intune|Hayır|
-|Microsoft Endpoint Configuration Manager + Kiracı Ekleme|Hayır|
+|Kiracı Ekleme ile Microsoft Endpoint Configuration Manager|Hayır|
 |Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com))|Evet|
 
 ## <a name="manage-tamper-protection-for-your-organization-using-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalını kullanarak kuruluşunuz için kurcalama korumasını yönetme
@@ -105,11 +101,8 @@ Aşağıdaki tabloda yöntemler, araçlar ve bağımlılıklar hakkında ayrınt
 Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com) ) kullanılarak kiracınız için kurcalama koruması açılabilir veya kapatılabilir. Aklınızda bulundurmak istediğiniz birkaç nokta şunlardır:
 
 - Şu anda, yeni dağıtımlar için Microsoft 365 Defender portalında kurcalama korumasını yönetme seçeneği varsayılan olarak açıktır. Mevcut dağıtımlar için, değişiklik koruması kabul temelinde kullanılabilir. Kabul etmek için <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> **Uç Noktalar** \> **Gelişmiş özellikler** \> **Kurcalama** **koruması'nı Ayarlar** \> seçin.
-
 - kurcalama korumasını yönetmek için Microsoft 365 Defender portalını kullandığınızda, Intune veya kiracı ekleme yöntemini kullanmanız gerekmez.
-
 - Microsoft 365 Defender portalında kurcalama korumasını yönettiğinizde, bu ayar kiracı genelinde uygulanır ve Windows 10 çalıştıran tüm cihazlarınızı Windows 10 Enterprise çok oturumlu, Windows 11 Windows 11 Enterprise  çok oturumlu, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019 veya Windows Server 2022. Kurcalama korumasına ince ayar yapmak (örneğin bazı cihazlarda kurcalama korumasına sahip olmak, diğerleri için kapalı olmak gibi), [kiracı eklemeli Microsoft Endpoint Manager veya Configuration Manager](#manage-tamper-protection-for-your-organization-with-configuration-manager-version-2006) kullanın.[](#manage-tamper-protection-for-your-organization-using-microsoft-endpoint-manager)
-
 - Karma bir ortamınız varsa, Intune'de yapılandırılan kurcalama koruma ayarları, Microsoft 365 Defender portalında yapılandırılan ayarlardan önceliklidir.
 
 ### <a name="requirements-for-managing-tamper-protection-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında kurcalama korumasını yönetme gereksinimleri
@@ -118,12 +111,12 @@ Microsoft 365 Defender portalı ([https://security.microsoft.com](https://securi
 
 - Windows cihazlarınız aşağıdaki Windows sürümlerinden birini çalıştırıyor olmalıdır:
   
-  - Windows 10
   - Windows 11
-  - Çoklu oturum Windows 10 Enterprise
   - Çoklu oturum Windows 11 Enterprise 
-  - Windows Server 2019
+  - Windows 10
+  - Çoklu oturum Windows 10 Enterprise
   - Windows Server 2022
+  - Windows Server 2019
   - Windows Server, sürüm 1803 veya üzeri
   - Windows Server 2016
   - Windows Server 2012 R2
@@ -131,10 +124,12 @@ Microsoft 365 Defender portalı ([https://security.microsoft.com](https://securi
 Sürümler hakkında daha fazla bilgi için bkz. [Windows 10 sürüm bilgileri](/windows/release-health/release-information).
 
 - Cihazlarınız [Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint/onboarding) eklenmelidir.
-
 - Cihazlarınız kötü amaçlı yazılımdan koruma platformu sürümünü `4.18.2010.7` (veya üzeri) ve kötü amaçlı yazılımdan koruma altyapısı sürümünü `1.1.17600.5` (veya üzerini) kullanıyor olmalıdır. ([Microsoft Defender Virüsten Koruma güncelleştirmelerini yönetin ve temelleri uygulayın](manage-updates-baselines-microsoft-defender-antivirus.md).)
-
 - [Bulut tabanlı koruma](enable-cloud-protection-microsoft-defender-antivirus.md) açık olmalıdır.
+
+> [!NOTE]
+> Microsoft 365 Defender portalı aracılığıyla kurcalama koruması etkinleştirildiğinde, kurcalama korumasının etkin durumunun denetlenebilmesi için bulut tabanlı koruma gerekir.  
+> Kasım 2021 güncelleştirmesi (platform sürümü`4.18.2111.5`) ile başlayarak, bir cihaz için bulut tabanlı koruma açık değilse ve Microsoft 365 Defender portalında kurcalama koruması açıksa, bu cihaz için üzerinde değişiklik korumasının yanı sıra bulut tabanlı koruma da otomatik olarak açılır.   
 
 ### <a name="turn-tamper-protection-on-or-off-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında kurcalama korumasını açma (veya kapatma)
 
@@ -153,15 +148,10 @@ Kuruluşunuz Microsoft Endpoint Manager (MEM) kullanıyorsa, Microsoft Endpoint 
 ### <a name="requirements-for-managing-tamper-protection-in-endpoint-manager"></a>Endpoint Manager'de kurcalama korumasını yönetme gereksinimleri
 
 - Cihazlarınız [Uç Nokta için Microsoft Defender](/microsoft-365/security/defender-endpoint/onboarding) eklenmelidir.
-
 - Genel yönetici, güvenlik yöneticisi veya güvenlik işlemleri gibi uygun [izinlere](/microsoft-365/security/defender-endpoint/assign-portal-access) sahip olmanız gerekir.
-
 - Kuruluşunuz [cihazları yönetmek için Microsoft Endpoint Manager](/mem/endpoint-manager-getting-started) kullanır. (Microsoft Endpoint Manager (MEM) lisansları gereklidir; MEM Microsoft 365 E3/E5, Enterprise Mobility + Security E3/E5, Microsoft 365 İş Ekstra, Microsoft 365 F1/F3, Microsoft 365 Kamu G3/G5 ve karşılık gelen eğitim lisansları.)
-
 - Windows cihazlarınız Windows 11 veya Windows 10 [1709, 1803](/windows/release-health/status-windows-10-1709), [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019) veya üzerini [](/windows/release-health/status-windows-10-1803)çalıştırıyor olmalıdır. (Sürümler hakkında daha fazla bilgi için bkz. [Windows 10 sürüm bilgileri](/windows/release-health/release-information).)
-
 - Güvenlik bilgileri 1.287.60.0 (veya üzeri) sürümüne güncelleştirilmiş Windows [güvenliği](https://www.microsoft.com/wdsi/definitions) kullanıyor olmanız gerekir.
-
 - Cihazlarınız kötü amaçlı yazılımdan koruma platformu sürüm 4.18.1906.3 (veya üzeri) ve kötü amaçlı yazılımdan koruma altyapısı sürümünü `1.1.15500.X` (veya üzeri) kullanıyor olmalıdır. ([Microsoft Defender Virüsten Koruma güncelleştirmelerini yönetin ve temelleri uygulayın](manage-updates-baselines-microsoft-defender-antivirus.md).)
 
 ### <a name="turn-tamper-protection-on-or-off-in-microsoft-endpoint-manager"></a>Microsoft Endpoint Manager'da kurcalama korumasını açma (veya kapatma)
@@ -207,9 +197,7 @@ Aşağıdaki kaynaklara bakın:
 > [!NOTE]
 > Kurcalama koruması, kayıt defteri aracılığıyla Microsoft Defender Virüsten Koruma ayarlarını değiştirme girişimlerini engeller.
 >
-> Kurcalama korumasının Microsoft dışı güvenlik ürünlerini veya bu ayarları değiştiren kurumsal yükleme betiklerini engellemediğinden emin olmak için **Windows Güvenliği** gidin ve **Güvenlik zekasını** 1.287.60.0 veya sonraki bir sürüme güncelleştirin. (Bkz [. Güvenlik bilgileri güncelleştirmeleri](https://www.microsoft.com/wdsi/definitions).)
->
-> Bu güncelleştirmeyi yaptıktan sonra, kurcalama koruması kayıt defteri ayarlarınızı korumaya devam eder ve hataları döndürmeden bunları değiştirmeye çalışır.
+> Kurcalama korumasının Microsoft dışı güvenlik ürünlerini veya bu ayarları değiştiren kurumsal yükleme betiklerini engellemediğinden emin olmak için **Windows Güvenliği** gidin ve **Güvenlik zekasını** 1.287.60.0 veya sonraki bir sürüme güncelleştirin. (Bkz [. Güvenlik bilgileri güncelleştirmeleri](https://www.microsoft.com/wdsi/definitions).) Bu güncelleştirmeyi yaptıktan sonra, kurcalama koruması kayıt defteri ayarlarınızı korumaya devam eder ve hataları döndürmeden bunları değiştirmeye çalışır.
 
 Ev kullanıcısıysanız veya güvenlik ekibi tarafından yönetilen ayarlara tabi değilseniz, kurcalama korumasını yönetmek için Windows Güvenliği uygulamasını kullanabilirsiniz. Kurcalama koruması gibi güvenlik ayarlarını değiştirmek için cihazınızda uygun yönetici izinlerine sahip olmanız gerekir.
 
@@ -259,13 +247,10 @@ Tehdit & Güvenlik Açığı Yönetimi hakkında daha fazla bilgi edinmek için 
 
 ### <a name="on-which-versions-of-windows-can-i-configure-tamper-protection"></a>Windows hangi sürümlerinde kurcalama korumasını yapılandırabilirim?
 
-Uç Nokta için Microsoft Defender ile birlikte işletim sistemi [1709](/windows/release-health/status-windows-10-1709), [1803](/windows/release-health/status-windows-10-1803), [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019) veya [üzerini Windows 10](/microsoft-365/security/defender-endpoint).
-  
-Çoklu oturum Windows 10 Enterprise
-
-Windows 11
-
-Çoklu oturum Windows 11 Enterprise
+- Windows 11
+- Çoklu oturum Windows 11 Enterprise
+- Uç Nokta için Microsoft Defender ile birlikte işletim sistemi [1709](/windows/release-health/status-windows-10-1709), [1803](/windows/release-health/status-windows-10-1803), [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019) veya [üzerini Windows 10](/microsoft-365/security/defender-endpoint).
+- Çoklu oturum Windows 10 Enterprise
   
 Kiracı eklemeli Configuration Manager, sürüm 2006 kullanıyorsanız, kurcalama koruması Windows Server 2012 R2, Windows Server 2016, Windows Server 2019 ve Windows Server 2022'ye genişletilebilir. Bkz [. Kiracı ekleme: Yönetim merkezinden uç nokta güvenliği Virüsten koruma ilkesi oluşturma ve dağıtma (önizleme)](/mem/configmgr/tenant-attach/deploy-antivirus-policy).
 
@@ -329,8 +314,6 @@ Güvenlik operasyonları ekibiniz, aşağıdaki örnek gibi avcılık sorguları
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Microsoft Intune için Endpoint Protection ile Windows bilgisayarların güvenliğini sağlamaya yardımcı olun](/intune/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)
-
-[Uç Nokta için Microsoft Defender genel bakışını edinin](/microsoft-365/security/defender-endpoint)
-
-[Birlikte daha iyi: Microsoft Defender Virüsten Koruma ve Uç Nokta için Microsoft Defender](why-use-microsoft-defender-antivirus.md)
+- [Microsoft Intune için Endpoint Protection ile Windows bilgisayarların güvenliğini sağlamaya yardımcı olun](/intune/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)
+- [Uç Nokta için Microsoft Defender genel bakışını edinin](/microsoft-365/security/defender-endpoint)
+- [Birlikte daha iyi: Microsoft Defender Virüsten Koruma ve Uç Nokta için Microsoft Defender](why-use-microsoft-defender-antivirus.md)

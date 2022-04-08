@@ -1,5 +1,5 @@
 ---
-title: Organizasyonunız için hizmet olarak yazılım uygulamalarını yönetme
+title: Kuruluşunuz için SAAS uygulamalarını yönetme
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -18,37 +18,37 @@ ms.custom:
 - AdminSurgePortfolio
 - admindeeplinkMAC
 search.appverid: MET150
-description: Aynı e-postada üçüncü taraf uygulamalarını etkinleştirmeyi ve Microsoft 365 yönetim merkezi.
+description: Microsoft 365 yönetim merkezi'da üçüncü taraf uygulamaları etkinleştirmeyi ve yönetmeyi öğrenin.
 ms.date: 04/15/2021
-ms.openlocfilehash: 1a8593e967f899f748f4124567028177777851e4
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: c85a0c93ee7f17953f7877cc1fd97765e0e63afd
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63319721"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64713877"
 ---
-# <a name="manage-third-party-app-subscriptions-for-your-organization"></a>Organizasyon için üçüncü taraf uygulama aboneliklerini yönetme
+# <a name="manage-third-party-app-subscriptions-for-your-organization"></a>Kuruluşunuz için üçüncü taraf uygulama aboneliklerini yönetme
 
-Yeni dönemde üçüncü taraf uygulamaların lisanslarını ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">faturalarını Microsoft 365 yönetim merkezi</a>. Güncelleştirilmiş özellikler arasında gelişmiş abonelik yönetimi, fatura bilgilerine gelişmiş erişim ve faturaları yönetmeye ilişkin gelişmiş esneklik yerlenmektedir. Abonelik yönetimi Microsoft'un güncelleştirilmiş ticaret platformuna dayalıdır. Bu durum, müşterilerin doğrudan veya bir üçüncü taraf sağlayıcıdan satın alan hizmet olarak yazılım uygulamaları için geçerlidir.
+Yeni <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> üçüncü taraf uygulamalar için lisansları ve faturalamayı yönetebilirsiniz. Güncelleştirilmiş özellikler arasında gelişmiş abonelik yönetimi, faturalama bilgilerine gelişmiş erişim ve faturaları yönetme esnekliği yer alır. Abonelik yönetimi, Microsoft'un güncelleştirilmiş ticaret platformlarını temel alır. Bu, müşterilerin doğrudan veya üçüncü taraf sağlayıcıdan satın aldığı hizmet olarak yazılım uygulamaları için geçerlidir.
 
-## <a name="how-to-get-software-as-a-service-apps"></a>Hizmet olarak yazılım uygulamaları nasıl edinebilirsiniz?
+## <a name="how-to-get-software-as-a-service-apps"></a>Hizmet olarak yazılım uygulamaları edinme
 
 Üçüncü taraf uygulamaları satın almanın birkaç yolu vardır.
 
-- **Doğrudan satın alma** – Müşteriler Azure Marketi'nden veya [AppSource'tan](https://azuremarketplace.microsoft.com/marketplace/) doğrudan [abonelik satın alınabilir](https://appsource.microsoft.com/).
-- **İş ortağı satın** alma – Abonelik satın almak için İş Ortağı Merkezi aracılığıyla bir iş ortağıyla birlikte çalışabilirsiniz.
-- **Microsoft teklifi** – Microsoft Sales tarafından üçüncü taraf uygulamaları içeren bir teklife yanıt verin.
+- **Doğrudan satın alma** – Müşteriler [Azure Market](https://azuremarketplace.microsoft.com/marketplace/) veya [AppSource'tan](https://appsource.microsoft.com/) doğrudan abonelik satın alabilir.
+- **İş ortağı satın alma** – Abonelik satın almak için İş Ortağı Merkezi aracılığıyla bir iş ortağıyla çalışın.
+- **Microsoft teklifi** – Microsoft Sales'ten üçüncü taraf uygulamaları içeren bir teklife yanıt verin.
 
-Müşteriler uygulamaları satın alan ve Microsoft Müşteri Sözleşmesi'ne uygun olarak kabul eden müşteriler, bunları Microsoft 365 yönetim merkezi veya daha fazla İş İçin Microsoft Store.
+Müşteriler uygulamaları satın alıp Microsoft Müşteri Sözleşmesi kabul ettikten sonra bunları Microsoft 365 yönetim merkezi veya İş İçin Microsoft Store yönetebilir.
 
-Uygulama sağlayıcıları, uygulamalarını düz bir fiyatla veya kullanıcılar için lisans satın alarak satarlar.
+Uygulama sağlayıcıları uygulamalarını sabit bir fiyatla veya kullanıcılar için lisans satın alarak satar.
 
-- **Düz fiyat** – Site tabanlı fiyatlandırma olarak da adlandırılan uygulamalarda aylık veya yıllık fiyatla fiyat ödenmektedir. Uygulama sayfasında, lisans miktarı Sınırsız olarak listelenir.
-- **Lisanslar** – Uygulamalar lisansa göre fiyatlandı. Müşteriler kendi kuruluşlarında her kullanıcıya lisans ataıyor
+- **Sabit fiyat** – Site tabanlı fiyatlandırma olarak da adlandırılan uygulamalar aylık veya yıllık fiyatla fiyatlanır. Uygulama sayfasında lisans miktarı Sınırsız'da listelenir.
+- **Lisanslar** – Uygulamalar lisansa göre fiyatlendirilir. Müşteriler, kuruluşlarındaki her kullanıcıya lisans atar
 
 ## <a name="supported-regions"></a>Desteklenen bölgeler
 
-Üçüncü taraf uygulamaları desteği şu bölgelerde kullanılabilir:
+Bu bölgelerde üçüncü taraf uygulamalar için destek sağlanır:
 
 - Arjantin
 - Avustralya
@@ -65,64 +65,64 @@ Uygulama sağlayıcıları, uygulamalarını düz bir fiyatla veya kullanıcıla
 
 ## <a name="activate-third-party-apps"></a>Üçüncü taraf uygulamalarını etkinleştirme
 
-Yöneticilerin, üçüncü taraf uygulamaları kullanıcılara atamadan önce etkinleştirmesi gerekir. Bu uygulamalar üçüncü taraf yayıncının portalında etkinleştirilir.
+Yöneticilerin üçüncü taraf uygulamaları kullanıcılara atamadan önce etkinleştirmesi gerekir. Bu uygulamalar üçüncü taraf yayımcının portalında etkinleştirilir.
 
 1. Yönetim merkezinde **BillingYour** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=2125823" target="_blank">productsApps</a> >  sayfasına gidin.
 2. Yönetmek istediğiniz uygulamayı bulun ve seçin.
-3. Bu **Ayarlar & altında**, **Yayıncının portalında Yönet'i seçin**.
+3. **Ayarlar & eylemleri'nin** **altında Yayımcının portalında Yönet'i** seçin.
 
-Uygulamayı etkinleştirebilirsiniz ve uygulama yayıncının sitesine yönlendirildiniz.
+Uygulamayı etkinleştirebileceğiniz uygulama yayımcısının sitesine yönlendirilirsiniz.
 
 ## <a name="manage-third-party-apps"></a>Üçüncü taraf uygulamalarını yönetme
 
-Yöneticiler, üçüncü taraf uygulamaları iki konumda yönetir: Microsoft 365 yönetim merkezi ve üçüncü taraf uygulama sağlayıcısının portalı.
+Yöneticiler üçüncü taraf uygulamaları iki konumda yönetir: Microsoft 365 yönetim merkezi ve üçüncü taraf uygulama sağlayıcısının portalı.
 
-Her portalda neler yapabilirsiniz?
+Her portalda yapabilecekleri aşağıda bulabilirsiniz.
 
 | Microsoft 365 yönetici merkezi | Uygulama yayımcısı portalı |
 | --- | --- |
-| Lisans miktarını değiştirme <br> Faturanızı ödeme gibi yönetme <br> Faturanızı ödeme gibi yönetme <br> Ödeme yöntemini değiştirme (kredi kartı) <br> Faturayı görüntüle <br> Uygulama aboneliğini iptal etme | Uygulamayı ayarlama (her uygulama için bir kez) <br> Kullanıcılara lisans atama <br> Teknik destek |
+| Lisans miktarını değiştirme <br> Faturanızı nasıl ödediğinizi yönetin <br> Faturanızı nasıl ödediğinizi yönetin <br> Ödeme yöntemini değiştirme (kredi kartı) <br> Faturayı görüntüle <br> Uygulama aboneliğini iptal etme | Uygulamayı ayarlama (her uygulama için bir kez) <br> Kullanıcılara lisans atama <br> Teknik destek |
 
-Uygulama etkinleştirildikten sonra iptal edilen, süresi dolmadıkça veya ödeme güncel tutulmadıkça etkin kalır. Bu olaylar uygulama durumunu devre dışı olarak değiştirir. Uygulama devre dışı bırakıldıktan sonra yeniden etkinleştirılamaz. Uygulamayı kullanmaya devam etmek için bir kopyasını daha satın alın.
+Uygulama etkinleştirildikten sonra iptal edilmediği, süresi dolmadığı veya ödeme güncel tutulmadığı sürece etkin kalır. Bu olaylar, uygulama durumunu devre dışı olarak değiştirir. Bir uygulama devre dışı bırakıldıktan sonra yeniden etkinleştirilemiyor. Uygulamayı kullanmaya devam etmek için başka bir kopyasını satın alın.
 
 ## <a name="assign-licenses"></a>Lisans atama
 
-Yöneticilerin kullanıcılara atamadan önce üçüncü taraf uygulamaları etkinleştirmesi gerekir. Üçüncü taraf yayıncının portalında etkinleştirilirler. Uygulama sayfasındaki Kullanıcı **eylemleri Ayarlar &** lisans atama bağlantısını seçin.
+Yöneticilerin üçüncü taraf uygulamaları kullanıcılara atamadan önce etkinleştirmesi gerekir. Üçüncü taraf yayımcının portalında etkinleştirilirler. Uygulama sayfasındaki **Ayarlar & eylemlerin** altında lisans atama bağlantısını seçin.
 
 1. Yönetim merkezinde **BillingYour** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=2125823" target="_blank">productsApps</a> >  sayfasına gidin.
 2. Yönetmek istediğiniz uygulamayı bulun ve seçin.
-3. Bu **Ayarlar & altında**, yayımcının **portalında Yönet bağlantısını seçin**.
+3. **Ayarlar & eylemleri'nin** altında **Yayımcının portalında yönet** bağlantısını seçin.
 
 ## <a name="change-license-quantity"></a>Lisans miktarını değiştirme
 
-Yöneticiler, kuruluşlarına ait lisans sayısını değiştirebilir. Bu yalnızca lisans tabanlı fiyatlandırmayla satın alınan uygulamalar için geçerlidir.
+Yöneticiler, kuruluşlarının sahip olduğu lisansların sayısını değiştirebilir. Bu yalnızca lisans tabanlı fiyatlandırmayla satın alınan uygulamalar için geçerlidir.
 
 1. Yönetim merkezinde **BillingYour** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=2125823" target="_blank">productsApps</a> >  sayfasına gidin.
 2. Yönetmek istediğiniz uygulamayı bulun ve seçin.
-3. Lisans **miktarını değiştir'i seçin**.
+3. **Lisans miktarını değiştir'i** seçin.
 
 ## <a name="manage-payment-methods"></a>Ödeme yöntemlerini yönetme
 
-Hizmet olarak yazılım uygulamalarının her biri, bu uygulamalara atanmış bir fatura profiline sahip olur. Fatura profilleri, faturanıza hangi ürünlerin dahil olduğunu ve faturalarınızı nasıl ödeyebileceğinizi özelleştirmenizi sağlar. Bunlar:
+Hizmet olarak yazılım uygulamalarının her birine atanmış bir faturalama profili vardır. Faturalama profilleri, faturanıza hangi ürünlerin dahil olduğunu ve faturalarınızı nasıl ödediğinizi özelleştirmenize olanak sağlar. Bunlar şunları içerir:
 
 - **Ödeme yöntemleri** – Kredi kartları veya çek/havale
 - **İletişim bilgileri** – Fatura adresi ve kişi adı
-- **Roller** – Ödeme profilini değiştirmenizi, faturaları ödemenizi veya satın alma yapmak için fatura profilinde ödeme yöntemini kullanmanizi sağlayan roller.
+- **Roller** – Faturalama profilini değiştirmenize, faturaları ödemenize veya satın alma işlemi yapmak için faturalama profilindeki ödeme yöntemini kullanmanıza olanak sağlayan roller.
 
-Fatura profilleri hakkında daha fazla bilgi için bkz. [Fatura profillerini anlama](/microsoft-store/billing-profile).
+Faturalama profilleri hakkında daha fazla bilgi için bkz. [Faturalama profillerini anlama](/microsoft-store/billing-profile).
 
-### <a name="change-the-billing-profile-on-a-software-as-a-service-app-subscription"></a>Hizmet olarak yazılım aboneliğinde ödeme profilini değiştirme
+### <a name="change-the-billing-profile-on-a-software-as-a-service-app-subscription"></a>Hizmet olarak yazılım uygulaması aboneliğinde faturalama profilini değiştirme
 
 1. Yönetim merkezinde **BillingYour** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=2125823" target="_blank">productsApps</a> >  sayfasına gidin.
 2. Yönetmek istediğiniz uygulamayı bulun ve seçin.
-3. Ödeme **profili'nin yanında** Düzenle'yi **seçin**.
+3. **Faturalama profili'nin** yanındaki **Düzenle'yi** seçin.
 
 Faturalar hakkında daha fazla bilgi için bkz. [Faturanızı veya faturanızı anlama](billing-and-payments/understand-your-invoice.md).
 
-## <a name="cancel-a-software-as-a-service-app-subscription"></a>Hizmet olarak yazılım aboneliğini iptal etme
+## <a name="cancel-a-software-as-a-service-app-subscription"></a>Hizmet olarak yazılım uygulaması aboneliğini iptal etme
 
-Uygulama sayfasından, hizmet olarak yazılım uygulamasını iptal edebilirsiniz.
+Hizmet olarak yazılım uygulamasını uygulama sayfasından iptal edebilirsiniz.
 
 1. Yönetim merkezinde **BillingYour** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=2125823" target="_blank">productsApps</a> >  sayfasına gidin.
 2. Yönetmek istediğiniz uygulamayı bulun ve seçin.
-3. Abonelik **Ayarlar & aboneliği iptal** **et'i seçin**.
+3. **Ayarlar & eylemleri'nin** altında **Aboneliği iptal et'i** seçin.

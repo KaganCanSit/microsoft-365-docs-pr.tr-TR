@@ -1,5 +1,5 @@
 ---
-title: iOS ve Android için Microsoft Bookings uygulamasını edin
+title: iOS ve Android için Microsoft Bookings uygulamasını edinin
 ms.author: kwekua
 author: kwekuako
 manager: scotv
@@ -8,38 +8,41 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 01b79cb0-e206-4a3a-aaef-b10941770f87
-description: Bookings mobil uygulamaları henüz dünya çapında kullanılamıyor. Bu makalede, uygulamaların şu anda kullanılabilir olduğu yerel listeler listelanmıştır.
-ms.openlocfilehash: 3eb13338f933a650d723b749f2e3a1786f82e506
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bookings mobil uygulamaları henüz dünya çapında kullanılamamaktadır. Bu makalede, uygulamaların şu anda kullanılabilir olduğu yerel ayarlar listelenir.
+ms.openlocfilehash: ab74c74906a226461354ec3b14f82371dc405d38
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985571"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714735"
 ---
-# <a name="get-the-microsoft-bookings-app-for-ios-and-android"></a>iOS ve Android için Microsoft Bookings uygulamasını edin
+# <a name="get-the-microsoft-bookings-app-for-ios-and-android"></a>iOS ve Android için Microsoft Bookings uygulamasını edinin
 
-Microsoft Bookings, iOS ve Android için mobil uygulama olarak kullanılabilir. iOS için Bookings uygulaması Apple'ın desteklediği tüm bölgelerde ve ülkelerde kullanılabilir. Uygulamayı [iTunes App Store'dan indirebilirsiniz](https://apps.apple.com/app/microsoft-bookings/id1065657468). Android için Bookings uygulaması ABD ve Kanada'daki [Google Play Store'dan](https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings) indirilebilir.
+> [!NOTE]
+> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
+
+Microsoft Bookings, iOS ve Android için mobil uygulama olarak kullanılabilir. iOS için Bookings uygulaması, Apple'ın desteklediği tüm bölgelerde ve ülkelerde kullanılabilir. Uygulamayı [iTunes App Store'ndan](https://apps.apple.com/app/microsoft-bookings/id1065657468) indirebilirsiniz. Android için Bookings uygulaması, ABD ve Kanada'daki [Google Play Store'dan](https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings) indirilebilir.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Başlamadan önce Web üzerinde Bookings'i ayarlaym gerekir.
+Başlamadan önce web'de Bookings ayarlamanız gerekir.
 
-1. Size uygun uygulama listesinin alfabetik sıralanmış listesini görmek için uygulama başlatıcıdan Tüm Microsoft 365'yi seçin. Buradan belirli bir uygulama için arama
+1. Kullanabileceğiniz Microsoft 365 uygulamalarının alfabetik listesini görmek için uygulama başlatıcıdan Tüm uygulamalar'ı seçin. Buradan belirli bir uygulamayı arayabilirsiniz
 
-   ![Uygulama başlatıcının görüntüsü.](../media/bookings-all-apps-launcher.png)
+   ![Uygulama başlatıcı görüntüsü.](../media/bookings-all-apps-launcher.png)
 
-2. Uygulama giriş [sayfasına Office, uygulama](https://office.com) başlatıcıdan **Bookings'i seçin**.
+2. [Office giriş sayfasına](https://office.com) gidin ve uygulama başlatıcıdan **Bookings'ı** seçin.
 
-3. Şimdi **al'ı seçin**.
+3. **Şimdi edinin'i** seçin.
 
-4. Sahibi veya çalıştırdınız ya da sahip olduğunuz işletme veya kuruluşun adını ve türünü girin.
+4. Sahip olduğunuz veya çalıştırdığınız işletmenin veya kuruluşun adını ve türünü belirtin.
 
-5. Şimdi Bookings'i organizasyonunız için ayarlamaya hazır mısınız? [Bookings'i ayarlamayı tamamlamak için Microsoft Bookings](bookings-overview.md) başlığında yer alan adımları izleyin.
+5. Artık kuruluşunuz için Bookings ayarlamaya hazırsınız. Bookings ayarlamayı tamamlamak için [Microsoft Bookings](bookings-overview.md) konudaki adımları izleyin.
 
-## <a name="download-the-bookings-app"></a>Bookings uygulamasını indirin
+## <a name="download-the-bookings-app"></a>Bookings uygulamasını indirme
 
-Bookings web uygulamasını ayardan sonra cihazınızın çevrimiçi mağazasına gidip Bookings uygulamasını indirin ve yönetici hesabınızla oturum açın.
+Bookings web uygulamasını ayarladıktan sonra cihazınızın çevrimiçi mağazasına gidin, Bookings uygulamasını indirin ve yönetici hesabınızla oturum açın.
 
 ## <a name="view-only-mode"></a>Yalnızca görüntüleme modu
 
-Bookings'te okuma-yazma erişimi verilmedi tüm kullanıcılar mobil uygulamayı yine de yalnızca görüntüleme modunda kullanabilir. Bir rezervasyon takvimine eklenen Bookings lisansı olan herkes kendi zamanlamalarını, randevu ayrıntılarını ve iş bilgilerini görebilir. Yalnızca görüntüleme erişimi olan bir kullanıcı değişiklik veya düzenleme olamaz ve müşteri listesine erişleyemez.
+Bookings'de okuma-yazma erişimi verilmeyen tüm kullanıcılar mobil uygulamayı yalnızca görüntüleme modunda kullanmaya devam edebilir. Bir rezervasyon takvimine eklenen Bookings lisansına sahip herkes kendi ve iş arkadaşlarının zamanlamalarını, randevu ayrıntılarını ve iş bilgilerini görebilir. Yalnızca görüntüleme erişimi olan bir kullanıcı değişiklik veya düzenleme yapamaz ve müşteri listesine erişemez.

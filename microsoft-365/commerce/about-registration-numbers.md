@@ -1,5 +1,5 @@
 ---
-title: Kayıt numaraları hakkında ve inceleme bildirimlerinin altında
+title: Kayıt numaraları ve gözden geçirme bildirimleri hakkında
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -18,49 +18,49 @@ ms.custom:
 - commerce_purchase
 - okr_SMB
 - AdminSurgePortfolio
-description: Microsoft ürünleri veya hizmetleri satın alırken kayıt numaraları ve inceleme bildirimi hakkında bilgi alın.
+description: Microsoft ürünlerini veya hizmetlerini satın alırken kayıt numaraları ve gözden geçirme bildirimleri hakkında bilgi edinin.
 ms.date: 02/02/2022
-ms.openlocfilehash: 1f8efbbacfcccf6e6a654d150fa77ecef6dc7234
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: f287903ae9cded49a81e1c775388e579f2a4f0b8
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320209"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714207"
 ---
-# <a name="about-registration-numbers-and-under-review-notifications"></a>Kayıt numaraları hakkında ve inceleme bildirimlerinin altında
+# <a name="about-registration-numbers-and-under-review-notifications"></a>Kayıt numaraları ve inceleme bildirimleri hakkında
 
-Bu makale yalnızca doğrudan Microsoft'tan ürün veya hizmet satın alan veya etkinleştiren ticari müşteriler için geçerlidir. Bu makale, doğrudan bir iş ortağıyla çalışan Toplu Lisanslama veya bulut çözüm sağlayıcısı (CSP) müşterileri için geçerli değildir.
+Bu makale yalnızca doğrudan Microsoft'tan ürün veya hizmet satın alan veya etkinleştiren ticari müşteriler için geçerlidir. Bu makale, doğrudan bir iş ortağıyla çalışan Toplu Lisanslama veya bulut çözümü sağlayıcısı (CSP) müşterileri için geçerli değildir.
 
 ## <a name="what-is-a-registration-number"></a>Kayıt numarası nedir?  
 
-Hesap ayrıntılarınızı gözden geçirmek için kayıt numarasını (Vergi Kimliği Numarası (TIN) olarak da adlandırılır) kullanırız. Bu, Microsoft'un size ürün ve hizmet s verip sağlayayayıı belirlememizi sağlar. Bir ülke veya bölge için hangi kayıt numaralarının gerekli olduğu hakkında bilgi için bkz. [Vergi Tanımlama Numaraları](https://www.oecd.org/tax/automatic-exchange/crs-implementation-and-assistance/tax-identification-numbers/).
+Hesabınızın ayrıntılarını gözden geçirmek için kayıt numarasını (Vergi Kimlik Numarası (TIN) olarak da adlandırılır) kullanırız. Bu, Microsoft'un size ürün ve hizmet sağlayıp sağlayamadığını belirlememize olanak tanır. Bir ülke veya bölge için hangi kayıt numaralarının gerekli olduğu hakkında bilgi için bkz. [Vergi Kimlik Numaraları](https://www.oecd.org/tax/automatic-exchange/crs-implementation-and-assistance/tax-identification-numbers/).
 
-Kayıt numarasının zorunlu olduğu ülkelerde, metin kutusunun üzerindeki etiket, ne tür bir numaranın gerekli olduğunu gösterir.
+Kayıt numarasının zorunlu olduğu ülkelerde, metin kutusunun üstündeki etiket, hangi sayı türünün gerekli olduğunu gösterir.
 
-Örneğin, aşağıdaki ekran görüntüsünde etiket CNPJ (Brezilya) kayıt numarası gerektiğini gösterir.
+Örneğin, aşağıdaki ekran görüntüsünde etiket bir CNPJ (Brezilya) kayıt numarası gerektiğini gösterir.
 
-:::image type="content" source="../media/macregnum-cnpj-screenshot-400.png" alt-text="C N P J numarası için kayıt numarası alanını ekran görüntüsü.":::
+:::image type="content" source="../media/macregnum-cnpj-screenshot-400.png" alt-text="C N P J numarası için kayıt numarası alanının ekran görüntüsü.":::
 
-Kayıt numarasının isteğe bağlı olduğu ülkelerde, şirket yasal kayıt numarası sağlamayı seçebilirsiniz. Bu alana kişisel kimlik girmeyin.
+Kayıt numarasının isteğe bağlı olduğu ülkeler için bir şirket yasal kayıt numarası sağlamayı seçebilirsiniz. Bu alana kişisel kimlik girmeyin.
 
-Aşağıdaki ekran görüntüsü, kayıt numarasının isteğe bağlı olduğu bir örneği gösterir.
+Aşağıdaki ekran görüntüsünde kayıt numarasının ne zaman isteğe bağlı olduğuna ilişkin bir örnek gösterilmektedir.
 
-:::image type="content" source="../media/macregnum-reg-screenshot_400.png" alt-text="İsteğe bağlı kayıt numarası alanını ekran görüntüsü.":::
+:::image type="content" source="../media/macregnum-reg-screenshot_400.png" alt-text="İsteğe bağlı kayıt numarası alanının ekran görüntüsü.":::
 
-Geçerli bir kayıt numaranız yoksa Vergi Kimliği [Numaraları'ne bakın](https://www.oecd.org/tax/automatic-exchange/crs-implementation-and-assistance/tax-identification-numbers/).
+Geçerli bir kayıt numaranız yoksa bkz. [Vergi Kimlik Numaraları](https://www.oecd.org/tax/automatic-exchange/crs-implementation-and-assistance/tax-identification-numbers/).
 
-## <a name="what-should-i-do-if-i-get-an-under-review-notification"></a>gözden geçirme bildirimi alsam ne yapabilirim?  
+## <a name="what-should-i-do-if-i-get-an-under-review-notification"></a>Gözden geçirme bildirimi alırsam ne yapmalıyım?  
 
-Bir satın alma işlemini tamamlasanız, hesabınız gözden geçirildi bildirimini alırsınız. Gözden geçirme işlemi sırasında,  >  FaturalandırmaBilling hesapları sayfasına göz atarak ve satın alma işleminizi tamamlamak için kullanılan hesabı seçerek durumu kontrol edebilirsiniz.<a href="https://go.microsoft.com/fwlink/p/?linkid=2084771" target="_blank"></a>
+Satın alma işlemini tamamladığınızda hesabınızın gözden geçirildiğini belirten bir bildirim alabilirsiniz. Gözden geçirme işlemi sırasında <a href="https://go.microsoft.com/fwlink/p/?linkid=2084771" target="_blank">BillingBilling</a>  >  hesapları sayfasına gidip satın alma işleminizi tamamlamak için kullandığınız hesabı seçerek durumu de kontrol edebilirsiniz.
 
-Gözden geçirme işleminin tamamlanması normalde yaklaşık bir gün sürer, ancak daha uzun sürebilir.
+Gözden geçirme işleminin tamamlanması normalde yaklaşık bir gün sürer ancak daha uzun sürebilir.
 
-Aşağıdaki ekran görüntüsünde, ödeme sırasında görüntülenen gözden geçirme bildirimi gösterilir.
+Aşağıdaki ekran görüntüsü, kullanıma alma sırasında görüntülenen gözden geçirme bildirimini gösterir.
 
-:::image type="content" source="../media/macregnum_statuscheckout_screenshot_400.png" alt-text="Çıkış sayfasındaki hesap inceleme bildiriminin ekran görüntüsü.":::
+:::image type="content" source="../media/macregnum_statuscheckout_screenshot_400.png" alt-text="Ödeme sayfasındaki hesap gözden geçirme bildiriminin ekran görüntüsü.":::
 
-Ayrıca, hesabınızla ilgili tüm Genel yöneticilere ve Fatura yöneticilerine de bir e-posta bildirimi gönderilir. Bazı durumlarda bildirim, hesapta Faturalandırma Hesabı Sahipleri veya Fatura Hesabı Katkıda Bulunanlar rolüne sahip olan kullanıcılara gönderilir. Bildirim, şu anda bir incelemenin devam ediyor olduğunu bildirmektedir. Gözden geçirme işlemi tamamlandıktan sonra bir onay e-posta bildirimi gönderilir.
+Hesabınızdaki tüm Genel ve Faturalama yöneticilerine de bir e-posta bildirimi gönderilir. Bazı durumlarda, bildirim hesapta Ödeme Hesabı Sahipleri veya Ödeme Hesabı Katkıda Bulunanları rolüne sahip kullanıcılara gönderilir. Bildirimde şu anda bir incelemenin devam etmekte olduğu belirtilir. Gözden geçirme işlemi tamamlandıktan sonra bir onay e-posta bildirimi gönderilir.
 
-Aşağıdaki ekran görüntüsünde, fatura hesabı ayrıntıları sayfasında görüntülenen bildirim gösterilir.
+Aşağıdaki ekran görüntüsünde ödeme hesabı ayrıntıları sayfasında görüntülenen bildirim gösterilmektedir.
 
-:::image type="content" source="../media/macregnum-statusbillacct-screenshot_700.png" alt-text="Fatura hesapları sayfasındaki inceleme bildirimi altında yer alan bildirimin ekran görüntüsü.":::
+:::image type="content" source="../media/macregnum-statusbillacct-screenshot_700.png" alt-text="Faturalama hesapları sayfasındaki gözden geçirme bildiriminin ekran görüntüsü.":::

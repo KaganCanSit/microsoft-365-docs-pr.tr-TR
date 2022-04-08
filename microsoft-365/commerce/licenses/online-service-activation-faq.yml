@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Program Aç hakkında Sık Sorulan Sorular için çevrimiçi hizmet etkinleştirme
+  title: Open programı için çevrimiçi hizmet etkinleştirme hakkında SSS
   author: cmcatee-MSFT
   ms.author: cmcatee
   manager: scotv
@@ -11,66 +11,66 @@ metadata:
   ms.service: o365-administration
   ms.custom: commerce_vl
   ms.localizationpriority: medium
-  description: Program Aç hakkında Sık Sorulan Sorular için çevrimiçi hizmet etkinleştirme
-  ms.openlocfilehash: d123714434896c559473769af30106833db83eb0
-  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+  description: Open programı için çevrimiçi hizmet etkinleştirme sık sorulan sorular
+  ms.openlocfilehash: 9bc7be1d04c28ad2f4a67e4bd6eb76461f7eb258
+  ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63679994"
-title: Program Aç hakkında Sık Sorulan Sorular için çevrimiçi hizmet etkinleştirme
+  ms.lasthandoff: 04/08/2022
+  ms.locfileid: "64713789"
+title: Open programı için çevrimiçi hizmet etkinleştirme sık sorulan sorular
 summary: ''
 sections:
 - name: Genel
   questions:
   - question: >
-      Aç programları aracılığıyla satın alınan çevrimiçi hizmetleri (Open, Open Value ve Open Value Subscription) nasıl etkinleştirebilirsiniz?
+      Open programları (Open, Open Value ve Open Value Subscription) aracılığıyla satın alınan çevrimiçi hizmetler etkinleştirmek Nasıl yaparım??
     answer: >
-      Açık müşteriler çevrimiçi hizmetleri iki şekilde etkinleştirebilir:
+      Açık müşteriler çevrimiçi hizmetler iki şekilde etkinleştirebilir:
 
-      - Açık program ailesi aracılığıyla çevrimiçi hizmetlerinizi sipariş verdikten sonra, bir bağlantı ve hizmetlerinizi etkinleştirme yönergelerini içeren bir e-posta alırsınız.
+      - Çevrimiçi hizmetler Open programı ailesi aracılığıyla sipariş ettikten sonra, hizmetlerinizi etkinleştirmek için bir bağlantı ve yönergeler içeren bir e-posta alırsınız.
 
       VEYA
 
-      - Toplu [Lisanslama Hizmeti Merkezi'nde (VLSC)](https://www.microsoft.com/Licensing/Servicecenter/default.aspx) Açık program müşterileri Çevrimiçi Hizmet Etkinleştirme bölümüne gidip şu lisansı seçerek şunları yönetebilir:
+      - [Toplu Lisanslama Hizmet Merkezi 'nden (VLSC)](https://www.microsoft.com/Licensing/Servicecenter/default.aspx) Açık program müşterileri Çevrimiçi Hizmet Etkinleştirme bölümüne gidebilir ve yönetecek lisansı seçebilir:
 
 
-      1. Etkinleştirme bağlantısını yönet'i ve ardından Etkinleştirmeyi Başlat'ı seçin. Ürün etkinleştirme penceresi açılır ve anahtar önceden gösterilir.
+      1. Etkinleştirmeyi yönet bağlantısını ve ardından Etkinleştirmeyi Başlat'ı seçin. Ürün etkinleştirme penceresi açılır ve anahtarı önceden doldurur.
 
       2. Ürün etkinleştirmeyi tamamlamak için kalan etkinleştirme adımlarına devam edin.
 
 
       Başarılı etkinleştirme, Toplu Lisanslama Çevrimiçi Hizmet Etkinleştirme web sitesinde 48 saat içinde tamamlanır.
 
-      Çevrimiçi lisansları etkinleştirme hakkında Microsoft Azure için Open [Licensing Başlarken Azure ile etkinleştirme hakkında bilgi edinin](https://azure.microsoft.com/offers/ms-azr-0111p/).
+      Microsoft Azure etkinleştirme hakkında bilgi için bkz. [Açık Lisanslama'da Azure ile Başlarken](https://azure.microsoft.com/offers/ms-azr-0111p/).
   - question: >
-      Azure siparişimi göremiyorum. Ne yapmalıyım?
+      Azure siparişimi görmüyorum. Ne yapmalıyım?
     answer: >
-      Azure siparişleri anahtarlar aracılığıyla etkinleştirilir. Anahtarlarınızı VLSC'nin İndirmeler ve Anahtarlar sekmesinden edinin ve [Open Licensing sayfasında Azure Başlarken sayfasına anahtarı girin](https://azure.microsoft.com/offers/azure-open/).
+      Azure siparişleri anahtarlar aracılığıyla etkinleştirilir. Anahtarlarınızı VLSC'deki İndirmeler ve Anahtarlar sekmesinden alın ve [Açık Lisanslama'da Azure](https://azure.microsoft.com/offers/azure-open/) ile Başlarken sayfasına anahtarı girin.
   - question: >
-      İş veya okul hesabı nedir ve çevrimiçi hizmetleri etkinleştirmek için neden bir hesap gerekiyor?
+      İş veya okul hesabı nedir ve çevrimiçi hizmetler etkinleştirmek için neden bir hesap gerekiyor?
     answer: >
-      İş veya okul hesabı, kullanıcıların iş veya okul hesabıyla kuruluşta oturum açmasını Microsoft hizmetleri. Oturum açma normalde kuruluş adı, username@orgname.com-username@orgname.onmicrosoft.com-posta etki alanı adı olan *E-posta veya* Oturum Açma formunu kullanır.
+      İş veya okul hesabı, kullanıcıların kuruluş Microsoft hizmetleri oturum açmasına yöneliktir. Oturum açma işlemi genellikle username@orgname.com veya username@orgname.onmicrosoft.com biçimini kullanır; burada *kuruluş adı* , kuruluş e-posta etki alanı adıdır.
   - question: >
-      Kuruluşumda zaten bir hesabın olup olduğunu nasıl bilebilirsiniz?
-    answer: "İş veya okul hesabınızla ilişkilendirilmiş kuruluş adı etkinleştiren hizmetin Lisans Kimliği'den alınır. Bir hesap varsa, kuruluş adı Kuruluş Hesabı kuruluşunda önceden doldurulmuş olur ve ilk çevrimiçi hizmet siparişinin kuruluşuna önceden bağlanmış olur. Kayıt işlemi, kuruma hesabınız olup olmadığını doğrular. \n\nŞirket alanı **kullanılabilirse** , oturum açma ve hizmeti etkinleştirmek için kayıt işlemini bitirin. Bu alan kullanılamıyorsa, kuruluşu kaydetmelisiniz. Bir hesabın kuruluşuna kaydolmak için Genel yönetici olmak gerekir.\n\nİş veya okul hesabı talep ettiyseniz, isteğiniz kuruluşa gönderilir Kayıt isteğinizi veren veya kabul eden Kiracı yöneticisi. Microsoft VLSC Online Hizmet Etkinleştirmesi'nde oturum aken bu iş veya okul hesabını kullanın.\n"
+      Kuruluşumun zaten bir hesabı olup olmadığını Nasıl yaparım? biliyor musunuz?
+    answer: "İş veya okul hesabınızla ilişkilendirilmiş kuruluş adı, etkinleştirmekte olduğunuz hizmetin Lisans Kimliğinden alınır. Bir hesap varsa, kuruluş adı Kuruluş Hesabı kurulumunda önceden doldurulur ve özgün çevrimiçi hizmet siparişinden kuruluşunuza zaten bağlanır. Kayıt işlemi, kuruluşunuzun bir hesabı olup olmadığını doğrular. \n\n**Şirket** alanı kullanılabilir durumdaysa, oturum açmak ve hizmeti etkinleştirmek için kayıt işlemini tamamlayın. Bu alan kullanılamıyorsa, kuruluşu kaydetmeniz gerekir. Bir hesaba kuruluş kaydetmek için bir Genel yönetici olmanız gerekir.\n\nbir iş veya okul hesabı istediğinizde, isteğiniz kuruluşunuza kayıt isteğinizi veren veya reddeden Kiracı yöneticinize gönderilir. Microsoft VLSC Çevrimiçi Hizmet Etkinleştirmesi'nde oturum açarken bu iş veya okul hesabını kullanın.\n"
   - question: >
-      Çevrimiçi bir hizmeti etkinleştirdikten sonra etkinleştirme portalı neden oturumum açık?
-    answer: "Açık Lisans programı altında Çevrimiçi Hizmetleri etkinleştirirken, her sözleşme ayrı olarak etkinleştirilir. Lisansların yanlış kiracıda etkinleştirilmey olduğundan emin olmak için, her etkinleştirme ayrı oturumda ele alınarak etkinleştirilmiş olur. \n"
+      Çevrimiçi bir hizmeti etkinleştirdikten sonra etkinleştirme portalı neden oturumu kapatıyor?
+    answer: "Çevrimiçi Hizmetleri Açık Lisans programı altında etkinleştirirken, her sözleşme ayrı ayrı etkinleştirilir. Lisansların yanlış kiracıda etkinleştirilmediğinden emin olmak için her etkinleştirme ayrı bir oturumda işlenir. \n"
   - question: >
-      Açık Lisans satın almaları için Çevrimiçi Hizmet Etkinleştirme nasıl çalışır?
+      Çevrimiçi Hizmet Etkinleştirme açık lisans satın alma işlemleri için nasıl çalışır?
     answer: >
-      Açık Sözleşmeler için Microsoft Online Services anahtarsız işleme etkinleştirme modeline taşındı. Çevrimiçi hizmetleri aç siparişi verdikten sonra, hizmetlerinizi etkinleştirme bağlantısını ve yönergeleri içeren bir e-posta alırsınız.
+      Açık Sözleşmeler için Microsoft Online Services anahtarsız işleme etkinleştirme modeline geçti. Open çevrimiçi hizmetler sipariş ettikten sonra, hizmetlerinizi etkinleştirmek için bir bağlantı ve yönergeler içeren bir e-posta alırsınız.
   - question: >
-      Satın almaımı farklı bir kuruluşa atamak istediğimde ne olacak?
+      Satın alma işlemimi farklı bir kuruluşa atamak istersem ne olur?
     answer: >
-      Ürünleri yeni bir kuruluşa atamak için, yeni bir kuruluş oluşturmak için kaydolma adımlarını izleyin. Buradan, satın aldığınız lisansları veya ürünleri atabilirsiniz.
+      Ürünleri yeni bir kuruluşa atamak için kaydolma adımlarını izleyerek yeni bir kuruluş oluşturun. Buradan satın aldığınız tüm koltukları veya ürünleri atayabilirsiniz.
   - question: >
-      Çevrimiçi hizmetimi etkinleştirdi. Toplu Lisanslama Hizmeti Merkezi'nin Etkinleştirmeleri Yönet sayfasındaki hizmetimi etkinleştirmem gerekiyor hala neden hala açık?
+      Çevrimiçi hizmetimi etkinleştirdim. Neden hala Toplu Lisanslama Hizmet Merkezi'nin Etkinleştirmeleri Yönet sayfasında hizmetimi etkinleştirmem gerektiği söylenmektedir?
     answer: >
-      Etkinleştirilen hizmetin, Etkinleştirmeleri Yönet sayfasında Etkin durumda görünmesi 24 **saat kadar** sürebilir.
+      Etkinleştirdiğiniz hizmetin **Etkinleştirmeleri Yönet** sayfasında **Etkinleştirildi** durumu olarak görünmesi 24 saat kadar sürebilir.
   - question: >
-      Destek ile nasıl iletişime geçim?
+      Desteğe başvurmak Nasıl yaparım??
     answer: >
-      Destek almak için telefon veya web üzerinden bize [başvurun](/licensing/contact-us). Microsoft, web formu gönderimlerini 24 saat içinde yanıtlar.
+      Destek için telefon veya web için bkz [. Bize Ulaşın](/licensing/contact-us). Microsoft, web formu gönderimlerine 24 saat içinde yanıt verir.
 additionalContent: "\n## <a name=\"additional-resources\"></a>Ek kaynaklar\n\n- [Ürün anahtarları hakkında SSS](product-keys-faq.yml)\n\n- [İndirmeler hakkında SSS](downloads-faq.yml)"

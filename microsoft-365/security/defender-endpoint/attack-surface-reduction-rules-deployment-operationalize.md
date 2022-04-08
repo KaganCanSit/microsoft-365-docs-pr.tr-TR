@@ -1,7 +1,7 @@
 ---
-title: Saldırı yüzeyini azaltma (ASR) kuralları dağıtımı
-description: Saldırı yüzeyini azaltma kuralları dağıtımınızı faaliyete geçirmek için kılavuz sağlar.
-keywords: Saldırı yüzeyini azaltma kuralları dağıtımı, ASR dağıtımı, asr kurallarını etkinleştirme, ASR'yi yapılandırma, izinsiz giriş engelleme sistemi, koruma kuralları, istismardan koruma kuralları, istismardan koruma kuralları, bulaşma önleme kuralları, Uç nokta için Microsoft Defender, ASR kurallarını yapılandırma
+title: Saldırı yüzeyini azaltma (ASR) kurallarını kullanıma hazır hale getirme
+description: Saldırı yüzeyi azaltma kuralları dağıtımınızı kullanıma hazır hale getirmek için rehberlik sağlar.
+keywords: Saldırı yüzeyi azaltma kuralları dağıtımı, ASR dağıtımı, ASR kurallarını etkinleştirme, ASR'yi yapılandırma, konak yetkisiz erişim önleme sistemi, koruma kuralları, açıktan yararlanma önleme kuralları, kötüye kullanıma karşı koruma kuralları, kötüye kullanma kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -20,71 +20,73 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 73597ff3b56189952999993df05f13a0caeacb0c
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 2c666a8b31308fb3cfb18a9a35211e49d886eab0
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63683109"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64705395"
 ---
-# <a name="step-4-operationalize-asr-rules"></a>4. Adım: ASR kurallarını işlem durumaleştirme
+# <a name="operationalize-attack-surface-reduction-asr-rules"></a>Saldırı yüzeyini azaltma (ASR) kurallarını kullanıma hazır hale getirme
 
-Saldırı yüzeyini azaltma (ASR) kurallarının tam olarak dağıtıldıktan sonra ASR ile ilgili etkinlikleri izlemek ve yanıtlamak için ilgili süreçlerinizi işlemenizi çok önemlidir.
+Saldırı yüzeyi azaltma (ASR) kurallarını tam olarak dağıttıktan sonra, ASR ile ilgili etkinlikleri izlemek ve yanıtlamak için gerekli işlemlerin olması çok önemlidir.
 
-## <a name="managing-false-positives"></a>Hatalı pozitif sonuç yönetimi
+## <a name="managing-false-positives"></a>Hatalı pozitif sonuçları yönetme
 
-Her tehdit koruması çözümünde hatalı pozitif/negatif sonuçlar oluşabilir. Yanlış pozitif sonuçlar, bir varlık (dosya veya işlem gibi) algılandığında ve kötü amaçlı olarak tanımlandığında (varlık aslında bir tehdit değilse de) durumlardır. Buna karşılık, hatalı negatif bir varlık, tehdit olarak algılanmadı ancak kötü amaçlı bir varlıktır. Hatalı pozitif ve yanlış negatif sonuçlar hakkında daha fazla bilgi için bkz: Uç Nokta için [Microsoft Defender'da hatalı pozitif/negatifleri adresle](defender-endpoint-false-positives-negatives.md)
+Herhangi bir tehdit koruması çözümünde hatalı pozitifler/negatifler oluşabilir. Hatalı pozitifler, varlığın (dosya veya işlem gibi) algılandığı ve kötü amaçlı olarak tanımlandığı durumlardır, ancak varlık aslında bir tehdit değildir. Buna karşılık, hatalı negatif, tehdit olarak algılanan ancak kötü amaçlı olan bir varlıktır. Hatalı pozitifler ve hatalı negatifler hakkında daha fazla bilgi için bkz. [Uç Nokta için Microsoft Defender](defender-endpoint-false-positives-negatives.md)
 
-## <a name="keeping-up-with-reports"></a>Raporları takip edin
+## <a name="keeping-up-with-reports"></a>Raporları takip etme
 
-Raporların tutarlı, düzenli bir şekilde gözden geçirmesi, ASR kurallarının dağıtımını korumanın ve yeni ortaya çıkan tehditlere karşı temlik sağlamanın vazgeçilmez bir yönüdür. Kuruluş, ASR kurallarıyla ilgili bildirilen olaylarla güncel bir tempoda, ASR kuralları olaylarının zamanlanmış incelemelerini almalı. İncelemeler, kurum büyüklüğüne bağlı olarak günlük, saatlik veya sürekli izleme olabilir.
+Raporların tutarlı ve düzenli olarak gözden geçirilmesi, ASR kuralları dağıtımınızı korumanın ve yeni ortaya çıkan tehditleri yakından izlemenin önemli bir yönüdür. Kuruluşunuzun ASR kuralları tarafından bildirilen olaylarla güncel kalmasını sağlayacak bir tempoda ASR kuralları olaylarının zamanlanmış gözden geçirmeleri olmalıdır. Kuruluşunuzun boyutuna bağlı olarak incelemeler günlük, saatlik veya sürekli izleme olabilir.
 
-## <a name="hunting"></a>Avlama
+## <a name="hunting"></a>Avcı -lık
 
-Gelişmiş avlama özelliği[, Microsoft 365 Defender özelliklerinden](https://security.microsoft.com) biridir. Gelişmiş av hakkında bilgi sahibi değilsanız, bkz. Gelişmiş [avla tehditlere karşı önceden arama.](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-overview)
-
-> [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender gelişmiş av](images/asr-defender365-advanced-hunting2.png)
-
-Gelişmiş av, Microsoft Defender ATP Uç Nokta Algılama ve Yanıt (EDR) tarafından tüm makinelerden toplanacak yakalan (ham) verilerin 30 günü içinde keşfetmenize olanak sağlayan sorgu tabanlı bir (Kusto Sorgu Dili) tehdit arama aracıdır. Gelişmiş arama yoluyla, ilginç göstergeleri ve varlıkları bulmak için etkinlikleri önceden inceebilirsiniz. Verilere esnek erişim, hem bilinen hem de potansiyel tehditlere karşı kısıtlanmamış arama kolaylaştırır.
-
-Gelişmiş arama yoluyla, ASR kuralları bilgilerini ayıklamak, rapor oluşturmak ve verilen bir ASR kuralı denetimi bağlamında ayrıntılı bilgi almak veya etkinliği engellemek mümkündür.
-
- Bu portalda, cihaz olaylarının gelişmiş av bölümündeki DeviceEvents tablosundan ASR kuralları olaylarını Microsoft 365 Defender edebilirsiniz. Örneğin, aşağıdaki sorgu gibi basit bir sorgu, son 30 gün boyunca veri kaynağı olarak ASR kurallarına sahip tüm olayları bildirabilir ve bunları ActionType sayısına göre özetler; bu durumda bu, ASR kuralının gerçek kodadı olur.
-
-Ilerleyen av portalında gösterilen ASR etkinlikleri, saatte bir görülen benzersiz işlemlerle kısıtlandı. ASR olay zamanı, etkinliğin o saat içinde ilk kez görülme zamanıdır.
+[Microsoft 365 Defender](https://security.microsoft.com) en güçlü özelliklerinden biri gelişmiş avcılıktır. Gelişmiş avcılık hakkında bilginiz yoksa bkz. Gelişmiş [avcılık ile tehditleri proaktif olarak avlama](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-overview).
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender arama sorgusu komut satırı](images/asr-defender365-advanced-hunting3.png)
+> :::image type="content" source="images/asr-defender365-advanced-hunting2.png" alt-text="Microsoft 365 Defender portalındaki Gelişmiş Avcılık sayfası" lightbox="images/asr-defender365-advanced-hunting2.png":::
+
+Gelişmiş avcılık, Microsoft Defender ATP Uç Nokta Algılama ve Yanıtı'nın (EDR) tüm makinelerinizden topladığı 30 güne kadar yakalanan (ham) verileri keşfetmenizi sağlayan sorgu tabanlı (Kusto Sorgu Dili) bir tehdit avcılığı aracıdır. Gelişmiş avcılık sayesinde, ilginç göstergeleri ve varlıkları bulmak için olayları proaktif olarak inceleyebilirsiniz. Verilere esnek erişim, hem bilinen hem de olası tehditler için kısıtlanmamış avlanmayı kolaylaştırır.
+
+Gelişmiş avcılık sayesinde ASR kural bilgilerini ayıklamak, raporlar oluşturmak ve belirli bir ASR kural denetimi veya engelleme olayının bağlamı hakkında ayrıntılı bilgi almak mümkündür.
+
+ ASR kuralları olaylarını, Microsoft 365 Defender portalının gelişmiş avcılık bölümündeki DeviceEvents tablosundan sorgulayabilirsiniz. Örneğin, aşağıdaki gibi basit bir sorgu, son 30 gün içinde veri kaynağı olarak ASR kuralları olan tüm olayları raporlayabilir ve bunları ActionType sayısına göre özetler ve bu durumda ASR kuralının gerçek kod adı olur.
+
+Ilerleyen tehdit avcılığı portalında gösterilen ASR olayları saatte bir görülen benzersiz süreçlere kısıtlanıyor. ASR olayının saati, olayın bu saat içinde ilk kez görülmesidir.
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender gelişmiş arama sorgusu sonuçları](images/asr-defender365-advanced-hunting4.png)
-
-Yukarıdakilerde, AsrLsassCredentialTheft için 187 olay kaydedilmiştir:
-
-- 102 For Blocked
-- Denetlenenler için 85
-- AsrOffice Için 2 olayYayıldız (Denetlenen için 1 ve Engelleme için 1)
-- AsrPsexecWmiProcessAudited için 8 olay
-
-AsrOfficeProcess kuralına odaklanmak ve söz konusu gerçek dosyalar ve işlemlerle ilgili ayrıntıları almak için, ActionType filtresini değiştirin ve özetleme çizgisini istediğiniz alanların projeksiyonu ile değiştirin (bu durumda, bunlar DeviceName, FileName, FolderPath, vb.).
+> :::image type="content" source="images/asr-defender365-advanced-hunting3.png" alt-text="Microsoft 365 Defender portalındaki Gelişmiş tehdit avcılığı sorgusu komut satırı" lightbox="images/asr-defender365-advanced-hunting3.png":::
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender gelişmiş av sorgusu odaklandı](images/asr-defender365-advanced-hunting4b.png)
+> :::image type="content" source="images/asr-defender365-advanced-hunting4.png" alt-text="Gelişmiş tehdit avcılığı sorgusu, Microsoft 365 Defender portalında sonuçlanıyor" lightbox="images/asr-defender365-advanced-hunting4.png":::
+
+Yukarıdakiler AsrLsassCredentialTheft için 187 olayın kaydedildiğini göstermektedir:
+
+- Engellenenler için 102
+- Denetim için 85
+- AsrOfficeChildProcess için 2 olay (Denetlenen için 1 ve Blok için 1)
+- AsrPsexecWmiChildProcessAudited için 8 olay
+
+AsrOfficeChildProcess kuralına odaklanmak ve ilgili gerçek dosya ve işlemlerin ayrıntılarını almak istiyorsanız, ActionType filtresini değiştirin ve özet satırını istenen alanların bir projeksiyonuyla değiştirin (bu durumda Bunlar DeviceName, FileName, FolderPath vb.).
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Defender arama sorgusu odaklanan sonuçlar](images/asr-defender365-advanced-hunting5b.png)
+> :::image type="content" source="images/asr-defender365-advanced-hunting4b.png" alt-text="Microsoft 365 Defender portalında Gelişmiş tehdit avcılığı sorgusu odaklı örnek" lightbox="images/asr-defender365-advanced-hunting4b.png":::
 
-Gelişmiş aramanın asıl avantajı, sorguları zevke uygun şekilde şekillendirebilirsiniz. Sorguyu şekillendirerek, tek bir makineye bir şey sabitlemek ya da ortamın tamamına ilişkin öngörüler ayıklamak istediğinizden bağımsız olarak, neler olduğunu tam olarak görebilirsiniz.
+> [!div class="mx-imgBorder"]
+> :::image type="content" source="images/asr-defender365-advanced-hunting5b.png" alt-text="Gelişmiş tehdit avcılığı sorgusuna odaklanan sonuçlar Microsoft 365 Defender portalında" lightbox="images/asr-defender365-advanced-hunting5b.png":::
 
-Arama seçenekleri hakkında daha fazla bilgi için bkz: Saldırı yüzeyini azaltma kurallarının [yeniden ortaya çıkarımı - Bölüm 3](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-3/ba-p/1360968).
+Gelişmiş avcılık özelliğinin gerçek avantajı, sorguları istediğiniz gibi şekillendirebilmenizdir. Sorgunuzu şekillendirerek, tek bir makinede bir şeyi saptamak veya ortamınızın tamamından içgörüler ayıklamak istemeniz fark etmeksizin neler olduğunu tam olarak görebilirsiniz.
 
-## <a name="topics-in-this-deployment-collection"></a>Bu dağıtım koleksiyonunda konular
+Avlanma seçenekleri hakkında daha fazla bilgi için bkz. [Saldırı yüzeyini azaltma kurallarını kaldırma - Bölüm 3](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-3/ba-p/1360968).
 
-[ASR kuralları dağıtım önkoşulları](attack-surface-reduction-rules-deployment.md)
+## <a name="topics-in-this-deployment-collection"></a>Bu dağıtım koleksiyonundaki konular
 
-[1. Adım: ASR kuralları dağıtımını planlama](attack-surface-reduction-rules-deployment-plan.md)
+[Saldırı yüzeyini azaltma (ASR) kuralları dağıtımına genel bakış](attack-surface-reduction-rules-deployment.md)
 
-[2. Adım: ASR kurallarını test edin](attack-surface-reduction-rules-deployment-test.md)
+[Saldırı yüzeyi azaltma (ASR) kuralları dağıtım planı](attack-surface-reduction-rules-deployment-plan.md)
 
-[3. Adım: ASR kurallarını uygulama](attack-surface-reduction-rules-deployment-implement.md)
+[Test saldırı yüzeyi azaltma (ASR) kuralları](attack-surface-reduction-rules-deployment-test.md)
+
+[Saldırı yüzeyi azaltma (ASR) kurallarını etkinleştirme](attack-surface-reduction-rules-deployment-implement.md)
+
+[Saldırı yüzeyi azaltma (ASR) kuralları başvurusu](attack-surface-reduction-rules-reference.md)

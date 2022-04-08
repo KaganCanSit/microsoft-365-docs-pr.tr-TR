@@ -1,5 +1,5 @@
 ---
-title: Microsoft Bookings'te ölçümler ve etkinlik izleme
+title: Microsoft Bookings'de ölçümler ve etkinlik izleme
 ms.author: kwekua
 author: kwekuako
 manager: scotv
@@ -8,21 +8,24 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 060a9781-c8a2-4e85-a769-31e6417d05b3
-description: Gelir ve müşteri etkinliğini kolayca izlemenizi sağlayan çeşitli ölçümler ana Bookings sayfasında yer almaktadır.
-ms.openlocfilehash: a897c2e4ea3f8175fd8e23fa9cb43713a7b8b12d
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+description: Ana Bookings sayfasında çeşitli ölçümler bulunur ve böylece geliri ve müşteri etkinliğini kolayca izleyebilirsiniz.
+ms.openlocfilehash: 0177361ca3bad2a690e982d4294855a461cca8f4
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015178"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64713525"
 ---
 # <a name="microsoft-bookings-metrics-and-activity-tracking"></a>Microsoft Bookings ölçümleri ve etkinlik izleme
 
-Gelir ve müşteri etkinliğini kolayca izlemenizi sağlayan çeşitli ölçümler ana Bookings sayfasında yer almaktadır.
+> [!NOTE]
+> Bu makale, Microsoft Bookings en son sürümüyle etkileşim kurmanıza yardımcı olur. Önceki sürümler önümüzdeki aylarda kullanımdan kaldırılacak.
+
+Ana Bookings sayfasında çeşitli ölçümler bulunur ve böylece geliri ve müşteri etkinliğini kolayca izleyebilirsiniz.
 
 | Metrik | Açıklama |
 |:---|:---|
-| Bookings etkinlikleri | 30 günlük etkinlik dönemi, son 30 günü (bugün dahil) gösterir. **Yapılan rezervasyonlar**, **Tahmini gelir** ve **Rezerve edilen müşteriler** hesaplandı. |
-| Yapılan Bookings | Bugün veya son 30 gün içinde yapılan rezervasyonların sayısı. Bu bilgileri, tahmini satış beklentilerinize uygun olup olamaylarınızı görmek ve önümüzdeki 30 gün için tahmin yapmak için kullanabilirsiniz. |
-| Tahmini gelir | Bu, Bookings aracılığıyla kazandığınız tahmini geliri gösterir ve her hizmet için tanımlanmamış fiyat üzerinden hesaplanır. Bu bir tahmindir çünkü hizmet zamanında farklı bir ücret tahsil ettiysiniz, bu ücret saatlik ücrete ayarlanmıştır, ipuçları almış veya müşteri henüz ödememiş olabilir. Örneğin, hizmetiniz saatte 10 $ ücretlendirme yaparken rezervasyon 2 saat kadar ise Bookings bu hizmet için yalnızca 10 $ hesaplar.<br/><br/>**Önemli:** Bu yalnızca bir tahmindir ve elde edilen geliri garanti değildir. |
-| Ayrılmış müşteriler | Bugün ve son 30 gün için randevu rezerve eden müşterilerin sayısı.<br/><br/>**Not:** Bu ölçüm, toplam randevu sayısı değil, randevular için rezervasyon yapan müşterilerin sayısını gösterir. Örneğin, bir müşteri son 30 günde üç randevu rezerve ettiyse ve her biri için bir rezervasyon yapan iki müşteri daha varsa, üç müşteri için rezervasyon yapılmış olduğunu görüyorsunuz. |
+| Bookings etkinlikleri | 30 günlük etkinlik dönemi, bugün dahil olmak üzere son 30 günü gösterir. **Bookings,** **Tahmini gelir** ve **Rezervasyonu yapılan müşterilerin** tümü hesaplanır. |
+| Bookings | Bugün gerçekleşen veya son 30 gün içinde gerçekleşen rezervasyonların sayısı. Tahmini satış beklentilerinizi karşılayıp karşılamadığınızı görmek ve sonraki 30 günün tahminini yapmak için bu bilgileri kullanabilirsiniz. |
+| Tahmini gelir | Bu, Bookings üzerinden kazandığınız tahmini geliri gösterir ve her hizmet için tanımladığınız fiyata göre hesaplanır. Bu bir tahmindir çünkü hizmet zamanında farklı bir ücret tahsil etmiş olabilirsiniz, ücret saatlik ücrete ayarlanmıştır, ipuçları almışsınızdır veya bir müşteri henüz ödeme yapmamış olabilir. Örneğin, hizmetiniz saatte 10 ABD doları ücret alıyorsa ve rezervasyon 2 saat sürüyorsa Bookings söz konusu hizmet için yalnızca 10 ABD doları tahmini yapılır.<br/><br/>**Önemli:** Bu yalnızca bir tahmindir ve gerçek gelirinizi garanti etmez. |
+| Rezervasyon yapılan müşteriler | Bugün ve son 30 gün için randevu alan müşterilerin sayısı.<br/><br/>**Not:** Bu ölçüm, randevuları rezerve eden müşterilerin sayısını gösterir, toplam randevu sayısını göstermez. Örneğin, bir müşteri son 30 gün içinde üç randevu rezervasyonu yaptıysa ve iki müşteri de her biri için bir rezervasyon yaptıysa, üç müşterinin rezervasyon yaptığını görürsünüz. |

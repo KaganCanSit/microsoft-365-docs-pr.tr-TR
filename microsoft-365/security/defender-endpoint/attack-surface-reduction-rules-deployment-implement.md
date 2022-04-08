@@ -1,5 +1,5 @@
 ---
-title: Saldırı yüzeyi azaltma (ASR) kuralları dağıtımı uygulama
+title: Saldırı yüzeyi azaltma (ASR) kurallarını etkinleştirme
 description: Saldırı yüzeyi azaltma kuralları dağıtımınızı uygulamak için rehberlik sağlar.
 keywords: Saldırı yüzeyi azaltma kuralları dağıtımı, ASR dağıtımı, ASR kurallarını etkinleştirme, ASR'yi yapılandırma, konak yetkisiz erişim önleme sistemi, koruma kuralları, açıktan yararlanma önleme kuralları, kötüye kullanıma karşı koruma kuralları, kötüye kullanma kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma
 search.product: eADQiWindows 10XVcnh
@@ -20,14 +20,14 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 675d881c3737b67cfdc0207be85285f71455d65c
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 19e654c979428e25d1365cbab5b6f75b39adbdb3
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666976"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64705526"
 ---
-# <a name="step-3-implement-asr-rules"></a>3. Adım: ASR kurallarını uygulayın
+# <a name="enable-attack-surface-reduction-asr-rules"></a>Saldırı yüzeyi azaltma (ASR) kurallarını etkinleştirme
 
 Saldırı yüzeyi azaltma (ASR) kurallarının uygulanması, ilk test halkasını etkin, işlevsel bir duruma taşır.
 
@@ -131,10 +131,12 @@ Bir kuralın tetiklenip bir uygulama veya dosyayı engellemesi için bildirimi �
 
 ## <a name="additional-topics-in-this-deployment-collection"></a>Bu dağıtım koleksiyonundaki ek konular
 
-[ASR kuralları dağıtım önkoşulları](attack-surface-reduction-rules-deployment.md)
+[Saldırı yüzeyini azaltma (ASR) kuralları dağıtımına genel bakış](attack-surface-reduction-rules-deployment.md)
 
-[1. Adım: ASR kuralları dağıtımını planlayın](attack-surface-reduction-rules-deployment-plan.md)
+[Saldırı yüzeyi azaltma (ASR) kuralları dağıtım planı](attack-surface-reduction-rules-deployment-plan.md)
 
-[2. Adım: ASR kurallarını test edin](attack-surface-reduction-rules-deployment-test.md)
+[Test saldırı yüzeyi azaltma (ASR) kuralları](attack-surface-reduction-rules-deployment-test.md)
 
-[4. Adım: ASR kurallarını kullanıma hazır hale getirin](attack-surface-reduction-rules-deployment-operationalize.md)
+[Saldırı yüzeyini azaltma (ASR) kurallarını kullanıma hazır hale getirme](attack-surface-reduction-rules-deployment-operationalize.md)
+
+[Saldırı yüzeyi azaltma (ASR) kuralları başvurusu](attack-surface-reduction-rules-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: ASR kuralları dağıtım önkoşulları
+title: Saldırı yüzeyini azaltma (ASR) kuralları dağıtımına genel bakış
 description: Saldırı yüzeyi azaltma (ASR) kurallarını dağıtma hakkında genel bakış ve önkoşul yönergeleri sağlar.
 keywords: Saldırı yüzeyi azaltma kuralları dağıtımı, ASR dağıtımı, ASR kurallarını etkinleştirme, ASR'yi yapılandırma, konak yetkisiz erişim önleme sistemi, koruma kuralları, açıktan yararlanma önleme kuralları, kötüye kullanıma karşı koruma kuralları, kötüye kullanma kuralları, bulaşma önleme kuralları, Uç Nokta için Microsoft Defender, ASR kurallarını yapılandırma
 search.product: eADQiWindows 10XVcnh
@@ -20,16 +20,14 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 0180bfcef9d478dcf8e334a180ea3df993585e00
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 8743d13939e73e25cefd08724d9a2f8d5a7fa410
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666426"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64705548"
 ---
-# <a name="asr-rules-deployment-prerequisites"></a>ASR kuralları dağıtım önkoşulları
-
-## <a name="before-you-begin"></a>Başlamadan önce
+# <a name="attack-surface-reduction-asr-rules-deployment-overview"></a>Saldırı yüzeyini azaltma (ASR) kuralları dağıtımına genel bakış
 
 Saldırı yüzeyleri, kuruluşunuzun siber tehditlere ve saldırılara karşı savunmasız olduğu tüm yerlerdir. Kuruluşunuzun saldırı yüzeyleri, bir saldırganın kuruluşunuzun cihazlarını veya ağlarını tehlikeye atabileceği tüm yerleri içerir. Saldırı yüzeyinizi azaltmak, kuruluşunuzun cihazlarını ve ağını korumak anlamına gelir ve bu da saldırganlara saldırı için daha az yol bırakır. Uç Nokta için Microsoft Defender bulunan birçok güvenlik özelliğinden biri olan saldırı yüzeyi azaltma (ASR) kurallarının yapılandırılması yardımcı olabilir.
 
@@ -40,6 +38,8 @@ ASR kuralları aşağıdakiler gibi belirli yazılım davranışlarını hedefle
 - Uygulamaların genellikle normal gündelik çalışma sırasında gerçekleşmeyen davranışlar
 
 Farklı saldırı yüzeylerini azaltarak saldırıların gerçekleşmesini önlemeye yardımcı olabilirsiniz.
+
+## <a name="before-you-begin"></a>Başlamadan önce
 
 İlk hazırlığınız sırasında, yerleştireceğimiz sistemlerin özelliklerini anlamanız çok önemlidir. Özellikleri anlamak, kuruluşunuzu korumak için hangi ASR kurallarının en önemli olduğunu belirlemenize yardımcı olur. Ayrıca, ASR dağıtımınızın hazırlanmasında ilgilenmeniz gereken çeşitli önkoşullar vardır.
 
@@ -129,13 +129,13 @@ Microsoft Defender Virüsten Koruma sürümleri güncel tutmak ASR kurallarını
 
 ## <a name="additional-topics-in-this-deployment-collection"></a>Bu dağıtım koleksiyonundaki ek konular
 
-[1. Aşama: Plan](attack-surface-reduction-rules-deployment-plan.md)
+[Test saldırı yüzeyi azaltma (ASR) kuralları](attack-surface-reduction-rules-deployment-test.md)
 
-[2. Aşama: Test](attack-surface-reduction-rules-deployment-test.md)
+[Saldırı yüzeyi azaltma (ASR) kurallarını etkinleştirme](attack-surface-reduction-rules-deployment-implement.md)
 
-[3. Aşama: Uygulama](attack-surface-reduction-rules-deployment-implement.md)
+[Saldırı yüzeyini azaltma (ASR) kurallarını kullanıma hazır hale getirme](attack-surface-reduction-rules-deployment-operationalize.md)
 
-[4. Aşama: Kullanıma Hazır Hale Getirme](attack-surface-reduction-rules-deployment-operationalize.md)
+[Saldırı yüzeyi azaltma (ASR) kuralları başvurusu](attack-surface-reduction-rules-reference.md)
 
 ## <a name="reference"></a>Başvuru
 
@@ -155,7 +155,7 @@ Microsoft Defender Virüsten Koruma sürümleri güncel tutmak ASR kurallarını
 
 [Kötü amaçlı yazılım bulaşmasını önlemek için saldırı yüzeyi azaltma kurallarını kullanma](attack-surface-reduction.md)
 
-[Saldırı yüzeyi azaltma kurallarını etkinleştirme](enable-attack-surface-reduction.md)
+[Saldırı yüzeyi azaltma kurallarını etkinleştirme - alternatif yapılandırmalar](enable-attack-surface-reduction.md)
 
 [Saldırı yüzeyi azaltma kuralları başvurusu](attack-surface-reduction-rules-reference.md)
 

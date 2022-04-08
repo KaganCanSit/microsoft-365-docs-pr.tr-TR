@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: a5ffc97c6b2cfd1016da1f218ab2a16c153a5528
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: a39a0a55592ba8f76403f9e8d9aaf7416cb35228
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666294"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714251"
 ---
 # <a name="understand-next-generation-configuration-settings-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da yeni nesil yapılandırma ayarlarını anlama
 
@@ -88,7 +88,7 @@ Aşağıdaki tabloda, İş için Defender için önceden yapılandırılmış ay
 | [Ağ dosyalarını tarama](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles) | Varsayılan olarak [AllowScanningNetworkFiles](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles) etkin değildir ve ağ dosyaları taranmaz. |
 | [E-posta iletilerini tarama](/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning) | Varsayılan olarak [AllowEmailScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning) etkin değildir ve e-posta iletileri taranmaz. |
 | [Karantinaya alınan kötü amaçlı yazılımların tutulacak gün sayısı (0-90)](/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware) | Varsayılan olarak, [DaysToRetainCleanedMalware](/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware) bu ayar sıfır (0) gün olarak ayarlanır. Karantinadakilerin otomatik olarak kaldırılmadığını Artifacts.  |
-| [Örnek onayı gönderme](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) | Varsayılan olarak [SubmitSamplesConsent](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) , güvenli örneklerin otomatik olarak gönderilmesini sağlar. Güvenli örneklere örnek olarak, , , ve `.exe` kişisel bilgiler (PII) içermeyen dosyalar verilebilir`.bat`. `.dll``.scr` Bir dosya PII içeriyorsa, kullanıcı örnek gönderimin devam etmesine izin vermek için bir istek alır.<br/><br/>[Bulut koruması ve örnek gönderim hakkında daha fazla bilgi edinin](../defender-endpoint/cloud-protection-microsoft-antivirus-sample-submission.md) |
+| [Örnek onayı gönderme](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) | Varsayılan olarak [SubmitSamplesConsent](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) , güvenli örnekleri otomatik olarak gönderecek şekilde ayarlanır. Güvenli örneklere örnek olarak, , , ve `.exe` kişisel bilgiler (PII) içermeyen dosyalar verilebilir`.bat`. `.dll``.scr` Bir dosya PII içeriyorsa, kullanıcı örnek gönderimin devam etmesine izin vermek için bir istek alır.<br/><br/>[Bulut koruması ve örnek gönderim hakkında daha fazla bilgi edinin](../defender-endpoint/cloud-protection-microsoft-antivirus-sample-submission.md) |
 | [Çıkarılabilir sürücüleri tarama](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning) | Varsayılan olarak [AllowFullScanRemovableDriveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning) , cihazlarda USB başparmak sürücüleri gibi çıkarılabilir sürücüleri tarayacak şekilde yapılandırılır.<br/><br/>[Kötü amaçlı yazılımdan koruma ilkesi ayarları hakkında daha fazla bilgi edinin](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#list-of-antimalware-policy-settings)   |
 | [Günlük hızlı tarama süresini çalıştırma](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime) | Varsayılan olarak [ScheduleQuickScanTime](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime) 02:00 olarak ayarlanır.<br/><br/>[Tarama ayarları hakkında daha fazla bilgi edinin](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#scan-settings).   |
 | [Taramayı çalıştırmadan önce imza güncelleştirmelerini denetleme](/windows/client-management/mdm/policy-csp-defender#defender-checkforsignaturesbeforerunningscan) | Varsayılan olarak [CheckForSignaturesBeforeRunningScan, virüsten](/windows/client-management/mdm/policy-csp-defender#defender-checkforsignaturesbeforerunningscan) koruma/kötü amaçlı yazılımdan koruma taramaları çalıştırmadan önce güvenlik bilgileri güncelleştirmelerini denetlemek üzere yapılandırılır.<br/><br/>Tarama ayarları ve [Güvenlik bilgileri güncelleştirmeleri](../defender-endpoint/manage-updates-baselines-microsoft-defender-antivirus.md#security-intelligence-updates) [hakkında daha fazla bilgi edinin](/mem/configmgr/protect/deploy-use/endpoint-antimalware-policies#scan-settings).   |

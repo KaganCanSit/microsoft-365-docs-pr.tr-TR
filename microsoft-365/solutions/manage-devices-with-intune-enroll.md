@@ -4,7 +4,7 @@ ms.author: bcarter
 author: brendacarter
 f1.keywords:
 - enroll devices into management
-- enroll devices with Intune
+- enroll devices to Intune
 - Intune mobile device platforms
 manager: dougeby
 audience: ITPro
@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: 177c21b46357ca890994751b9f4d7597a57c6b64
-ms.sourcegitcommit: a06bb81fbd727a790a8fe6a3746b8a3cf62a6b24
+ms.openlocfilehash: 98c98298b5bb6728a0f8526e0406fb1fe02654f0
+ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64651289"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "64704724"
 ---
 # <a name="step-2-enroll-devices-to-intune"></a>Adım 2. Cihazları Intune kaydetme
 
@@ -47,7 +47,7 @@ KCG Windows cihazları kaydetme gibi ek seçenekler için bkz. [Windows cihazlar
 
 ## <a name="ios-and-ipados-enrollment"></a>iOS ve iPadOS kaydı
 
-Kullanıcıya ait (KCG) cihazlar için kullanıcıların kişisel cihazlarını Intune yönetimi için kaydetmesine izin vererek aşağıdaki yöntemlerden birini kullanabilirsiniz.
+Kullanıcıya ait (KCG) cihazlar için kullanıcıların kişisel cihazlarını Intune kaydetmesine izin vererek aşağıdaki yöntemlerden birini kullanabilirsiniz.
 - Cihaz kaydı, tipik KCG kaydı olarak düşünebilirsiniz. Yöneticilere çok çeşitli yönetim seçenekleri sağlar.
 - Kullanıcı kaydı, yöneticilere cihaz yönetimi seçeneklerinin bir alt kümesini sağlayan daha kolay bir kayıt işlemidir. Bu özellik şu anda önizleme aşamasındadır.
 

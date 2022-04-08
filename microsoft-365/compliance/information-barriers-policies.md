@@ -1,6 +1,6 @@
 ---
-title: Bilgi engellerini çalışmaya başlama
-description: Bilgi engelleriyle çalışmaya nasıl başlay ola öğrenin.
+title: Bilgi engellerini kullanmaya başlama
+description: Bilgi engellerini kullanmaya başlamayı öğrenin.
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -15,68 +15,68 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 1a9b6a4000b6d96fa8fe60b3abc60ff01676073e
-ms.sourcegitcommit: 7b83e2605895fee5c73cd1d01f4cd16e1457a69f
+ms.openlocfilehash: fb6de09c0c020631f42d8f2f09cb236affb94417
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "62990628"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64713547"
 ---
-# <a name="get-started-with-information-barriers"></a>Bilgi engellerini çalışmaya başlama
+# <a name="get-started-with-information-barriers"></a>Bilgi engellerini kullanmaya başlama
 
-Bilgi engelleriyle, kullanıcıların belirli kesimlerinin birbirleriyle iletişim kurmasını önleyen veya belirli kesimlerin yalnızca diğer bazı kesimlerle iletişim kurmasına olanak verecek ilkeler tanımlayabilirsiniz. Bilgi engeli ilkeleri, kurum gerek ilgili endüstri standartları ve düzenlemelerine uyumluluğunu korumanıza ve olası ilgi çakışmalarını önlemenize yardımcı olabilir. Daha fazla bilgi için bkz [. Bilgi engelleri hakkında bilgi öğrenme](information-barriers.md).
+Bilgi engelleriyle, belirli kullanıcı segmentlerinin birbiriyle iletişim kurmasını önlemek veya belirli kesimlerin yalnızca belirli diğer segmentlerle iletişim kurmasına izin vermek için tasarlanmış ilkeler tanımlayabilirsiniz. Bilgi engeli ilkeleri, kuruluşunuzun ilgili endüstri standartları ve düzenlemeleriyle uyumluluğu sürdürmesine ve olası çıkar çakışmalarını önlemesine yardımcı olabilir. Daha fazla bilgi için bkz. [Bilgi engelleri hakkında bilgi edinin](information-barriers.md).
 
-Bu makalede, bilgi engeli ilkelerinin nasıl yapılandırıldığından emin olun. Çeşitli adımlar söz konusu olduğundan, bilgi engeli ilkelerini yapılandırmaya başlamadan önce tüm süreci gözden geçirmeyi unutmayın.
+Bu makalede, bilgi engeli ilkelerinin nasıl yapılandırıldığı açıklanır. Çeşitli adımlar söz konusu olduğundan, bilgi engeli ilkelerini yapılandırmaya başlamadan önce sürecin tamamını gözden geçirmeyi unutmayın.
 
 > [!TIP]
-> Bu makale, bilgi [engeli ilkelerinizi](#example-scenario-contosos-departments-segments-and-policies) planlamanıza ve tanımlamanıza yardımcı olacak örnek bir senaryo içerir.
+> Bu makale, bilgi engeli ilkelerinizi planlamanıza ve tanımlamanıza yardımcı olacak [örnek bir senaryo](#example-scenario-contosos-departments-segments-and-policies) içerir.
 
-## <a name="concepts"></a>Kavramlar
+## <a name="concepts"></a>Kavram
 
-Bilgi engeli olan ilkeler tanımladığınız zaman, kullanıcı hesabı öznitelikleri, kesimler, 'blok' ve/veya 'izin ver' ilkeleri ve ilke uygulamasıyla çalışırsınız.
+Bilgi engelleri için ilkeler tanımladığınızda, kullanıcı hesabı öznitelikleri, segmentler, 'engelle' ve/veya 'izin ver' ilkeleri ve ilke uygulamasıyla çalışırsınız.
 
-- Kullanıcı hesabı öznitelikleri Azure Active Directory Exchange Online. Bu öznitelikler bölüm, iş unvanı, konum, ekip adı ve diğer iş profili ayrıntılarını içerebilir.
-- Kesimler, seçilen kullanıcı hesabı özniteliği kullanılarak Microsoft 365 uyumluluk merkezi kullanıcı **kümesidir**. (Desteklenen [özniteliklerin listesine bakın](information-barriers-attributes.md).)
-- Bilgi engeli ilkeleri iletişim sınırlarını veya kısıtlamalarını belirler. Bilgi engeli ilkelerini tanımlarken, iki tür ilkeden birini seçersiniz:
-  - *İlkeleri* engelle, bir segmentin başka bir segmentle iletişim kurmasını önle.
-  - *İlkelere* izin ver, bir segmentin yalnızca belirli diğer kesimlerle iletişim kurmasına olanak sağlar.
-- İlke uygulaması, tüm bilgi engeli ilkeleri tanımlandığı ve bunları kuruluş içinde uygulamaya hazır hale geldikten sonra yapılır.
+- Kullanıcı hesabı öznitelikleri Azure Active Directory (veya Exchange Online) içinde tanımlanır. Bu öznitelikler departman, iş unvanı, konum, ekip adı ve diğer iş profili ayrıntılarını içerebilir.
+- Segmentler, seçilen **kullanıcı hesabı özniteliği kullanılarak Microsoft 365 uyumluluk merkezi tanımlanan kullanıcı kümeleridir**. ( [Desteklenen özniteliklerin listesine](information-barriers-attributes.md) bakın.)
+- Bilgi engeli ilkeleri, iletişim sınırlarını veya kısıtlamalarını belirler. Bilgi engeli ilkeleri tanımladığınızda, iki tür ilke arasından seçim yapabilirsiniz:
+  - *İlkeleri engelleme* , bir kesimin başka bir kesimle iletişim kurmasını engeller.
+  - *İlkelere izin ver* , bir segmentin yalnızca belirli diğer segmentlerle iletişim kurmasına izin verir.
+- İlke uygulaması tüm bilgi engeli ilkeleri tanımlandıktan sonra yapılır ve bunları kuruluşunuzda uygulamaya hazır olursunuz.
 
 ## <a name="configuration-at-a-glance"></a>Bir bakışta yapılandırma
 
 | **Adımlar** | **Nelerin dahil olduğu** |
 |:------|:----------------|
-| **1. Adım**: [Önkoşulların karşı olduğundan emin olun](#step-1-make-sure-prerequisites-are-met) | - Gerekli lisanslara ve [izinlere sahip olduğunu doğrulayın](information-barriers.md#required-licenses-and-permissions)<br/>- Dizininizin kullanıcıları bölümleme için veri de dahil olduğunu doğrulama<br/>- Arama için kapsamı olan dizin aramalarını Microsoft Teams<br/>- Denetim günlüğünün açık olduğundan emin olun<br/>- Adres defteri Exchange ilgili ilkelerin var olduğundan emin olun<br/>- PowerShell kullanma (örnekler verilmiştir)<br/>- E-postanın kullanımı için Microsoft Teams izni sağlama (adımlar dahildir) |
-| **2. Adım**: [Kuruluşta kullanıcıları kesimlere göre bölümleme](#step-2-segment-users-in-your-organization) | - Hangi ilkelerin gerektiğini belirleme<br/>- Tanımlamak üzere bir kesimler listesi yapma<br/>- Hangi özniteliklerin kullanılamayacaklarını belirleme<br/>- İlke filtreleri açısından kesimleri tanımlayın |
-| **3. Adım**: [Bilgi engeli ilkelerini tanımlama](#step-3-define-information-barrier-policies) | - İlkelerinizi tanımlayın (henüz geçerli değildir)<br/>- İki tür (engelle veya izin ver) seçin |
-| **4. Adım**: [Bilgi engeli ilkelerini uygulama](#step-4-apply-information-barrier-policies) | - İlkeleri etkin durum olarak ayarlama<br/>- İlke uygulamasını çalıştırın<br/>- İlke durumunu görüntüleme |
-| **5. Adım**: [Web ve SharePoint (isteğe bağlı) OneDrive engellerini yapılandırma](#step-5-configuration-for-information-barriers-on-sharepoint-and-onedrive) | - İletişim ve eğitim için SharePoint engellerini OneDrive |
-| **6. Adım**: [Bilgi engelleri modları (isteğe bağlı)](#step-6-information-barriers-modes) | - Uygunsa bilgi engeli modlarını güncelleştirin |
+| **1. Adım**: [Önkoşulların karşılandığından emin olun](#step-1-make-sure-prerequisites-are-met) | - [Gerekli lisanslara ve izinlere](information-barriers.md#required-licenses-and-permissions) sahip olduğunuzu doğrulayın<br/>- Dizininizin kullanıcıları segmentlere ayırmaya yönelik veriler içerdiğini doğrulayın<br/>- [Microsoft Teams için ada göre aramayı](/microsoftteams/teams-scoped-directory-search) etkinleştirme<br/>- Denetim günlüğünün açık olduğundan emin olun<br/>- Exchange adres defteri ilkelerinin uygulanmadığından emin olun<br/>- PowerShell kullanma (örnekler sağlanır)<br/>- Microsoft Teams için yönetici onayı sağlayın (adımlar dahildir) |
+| **2. Adım**: [Kuruluşunuzdaki kullanıcıları segmentlere ayırma](#step-2-segment-users-in-your-organization) | - Hangi ilkelerin gerekli olduğunu belirleme<br/>- Tanımlayacak segmentlerin listesini oluşturma<br/>- Hangi özniteliklerin kullanılacağını belirleme<br/>- İlke filtreleri açısından segmentleri tanımlama |
+| **3. Adım**: [Bilgi engeli ilkelerini tanımlama](#step-3-define-information-barrier-policies) | - İlkelerinizi tanımlayın (henüz geçerli değildir)<br/>- İki tür arasından seçim yapın (engelle veya izin ver) |
+| **4. Adım**: [Bilgi engeli ilkelerini uygulama](#step-4-apply-information-barrier-policies) | - İlkeleri etkin duruma ayarlama<br/>- İlke uygulamasını çalıştırma<br/>- İlke durumunu görüntüleme |
+| **5. Adım**: [SharePoint ve OneDrive ile ilgili bilgi engelleri için yapılandırma (isteğe bağlı)](#step-5-configuration-for-information-barriers-on-sharepoint-and-onedrive) | - SharePoint ve OneDrive için bilgi engellerini yapılandırma |
+| **6. Adım**: [Bilgi engelleri modları (isteğe bağlı)](#step-6-information-barriers-modes) | - Varsa bilgi engeli modlarını güncelleştirme |
 
-## <a name="step-1-make-sure-prerequisites-are-met"></a>1. Adım: Önkoşulların karşı olduğundan emin olun
+## <a name="step-1-make-sure-prerequisites-are-met"></a>1. Adım: Önkoşulların karşılandığından emin olun
 
-Gerekli lisanslara [ve izinlere ek olarak](information-barriers.md#required-licenses-and-permissions), bilgi engellerini yapılandırmadan önce aşağıdaki gereksinimlerin karşı gerektiğinden emin olun:
+[Gerekli lisanslara ve izinlere](information-barriers.md#required-licenses-and-permissions) ek olarak, bilgi engellerini yapılandırmadan önce aşağıdaki gereksinimlerin karşılandığından emin olun:
 
-- **Dizin verileri**: Kuruluş yapının dizin verilerine yansıyan olduğundan emin olun. Bu eylemi yapmak için, grup üyeliği, bölüm adı vb. kullanıcı hesabı özniteliklerinin Grup Üyeliği (veya Bölüm Adı) içinde Azure Active Directory doğru doldurulduğundan Exchange Online. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
-  - [Bilgi engeli ilkeleri için öznitelikler](information-barriers-attributes.md)
-  - [Profili kullanarak kullanıcının profil bilgilerini ekleme veya Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
-  - [Kullanıcı hesabı özelliklerini Office 365 PowerShell ile yapılandırma](../enterprise/configure-user-account-properties-with-microsoft-365-powershell.md)
+- **Dizin verileri**: Kuruluşunuzun yapısının dizin verilerine yansıtıldığından emin olun. Bu eylemi gerçekleştirmek için grup üyeliği, departman adı gibi kullanıcı hesabı özniteliklerinin Azure Active Directory (veya Exchange Online) içinde doğru dolduruldığından emin olun. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
+  - [Bilgi engeli ilkeleri öznitelikleri](information-barriers-attributes.md)
+  - [Azure Active Directory kullanarak kullanıcının profil bilgilerini ekleme veya güncelleştirme](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
+  - [Office 365 PowerShell ile kullanıcı hesabı özelliklerini yapılandırma](../enterprise/configure-user-account-properties-with-microsoft-365-powershell.md)
 
-- **Kapsamı olan dizin araması**: Kuruluşta ilk bilgi engeli politikasını tanımlamadan önce, belirli bir dizin arama kapsamını belirlemeli ve [Microsoft Teams.](/MicrosoftTeams/teams-scoped-directory-search) Bilgi engeli ilkelerini ayarlamadan veya tanımlamadan önce, kapsamlı dizin arama özelliğini etkinleştirdikten sonra en az 24 saat bekleyin.
+- **Kapsamlı dizin araması**: Kuruluşunuzun ilk bilgi engeli ilkesini tanımlamadan önce, [Microsoft Teams'de kapsamlı dizin aramasını etkinleştirmeniz](/MicrosoftTeams/teams-scoped-directory-search) gerekir. Bilgi engeli ilkelerini ayarlamadan veya tanımlamadan önce kapsamlı dizin aramasını etkinleştirdikten sonra en az 24 saat bekleyin.
 
-- **Exchange Online engeller**: Bilgi engeli ilkelerinin çalışması için, hedef kullanıcılara bir lisans Exchange Online gerekir.
+- **Exchange Online lisansları**: Bilgi engeli ilkeleri yalnızca hedef kullanıcılara bir Exchange Online lisansı atanmışsa çalışır.
 
-- **Denetim günlüğünün etkinleştirildiğinden** emin olun: İlke uygulamasının durumuna bakmak için, denetim günlüğünün açık olması gerekir. Bu kuruluşlarda denetim Microsoft 365 varsayılan olarak etkinleştirilir. Bazı kuruluşlar belirli nedenlerle denetimi devre dışı bırakmıştır. If auditing is disabled for your organization, it might be because another administrator has turned it. Bu adımı tamamlarken denetimi yeniden açmanın bir sorun olduğunu doğrulamanızı öneririz. Daha fazla bilgi için [bkz. Denetim günlüğü aramalarını açma veya kapatma](turn-audit-log-search-on-or-off.md).
+- **Denetim günlüğünün etkin olduğunu doğrulayın**: İlke uygulamasının durumunu aramak için denetim günlüğünün açık olması gerekir. Denetim, Microsoft 365 kuruluşlar için varsayılan olarak etkindir. Bazı kuruluşlar belirli nedenlerle denetimi devre dışı bırakmış olabilir. Kuruluşunuzda denetim devre dışı bırakıldıysa, bunun nedeni başka bir yöneticinin kapatması olabilir. Bu adımı tamamlarken denetimi yeniden açmanın uygun olduğunu onaylamanızı öneririz. Daha fazla bilgi için bkz [. Denetim günlüğü aramasını açma veya kapatma](turn-audit-log-search-on-or-off.md).
 
-- **Adres defteri ilkeleri yok**: Bilgi engeli ilkelerini tanımlamadan ve uygulamadan önce, adres defteri Exchange ilkelerinin uygulamay olduğundan emin olun. Bilgi engelleri adres defteri ilkelerine dayalıdır, ancak iki tür ilke uyumlu değildir. Bu tür ilkeleriniz varsa, önce adres defteri [ilkelerinizi kaldırmayı unutmayın](/exchange/address-books/address-book-policies/remove-an-address-book-policy) . Bilgi engeli ilkeleri etkinleştirildikten ve hiyerarşik adres defteri etkinleştirildikten sonra, bilgi engeli segmentinde yer görmeyen tüm kullanıcılar Exchange online'da [](/exchange/address-books/hierarchical-address-books/hierarchical-address-books) hiyerarşik adres kitabını görebilir.****
+- **Adres defteri ilkesi yok**: Bilgi engeli ilkelerini tanımlamadan ve uygulamadan önce Exchange adres defteri ilkelerinin uygulanmadığından emin olun. Bilgi engelleri adres defteri ilkelerini temel alır, ancak iki tür ilke uyumlu değildir. Bu tür ilkeleriniz varsa, önce [adres defteri ilkelerinizi kaldırdığınızdan](/exchange/address-books/address-book-policies/remove-an-address-book-policy) emin olun. Bilgi engeli ilkeleri etkinleştirildikten ve hiyerarşik adres defteri etkinleştirildikten sonra, bilgi engeli segmentinde **_yer almamış_** tüm kullanıcılar çevrimiçi Exchange [hiyerarşik adres defterini](/exchange/address-books/hierarchical-address-books/hierarchical-address-books) görür.
 
-- **PowerShell kullanmayı yönetme**: Şu anda, bilgi engeli ilkeleri Güvenlik ve Uyumluluk Merkezi PowerShell& tanımlanır ve yönetilir. Bu makalede birkaç örnek sağlanmıştır, ancak PowerShell cmdlet'leri ve parametreleri hakkında bilgi sahibi olmak gerekir. Ayrıca, PowerShell modülü Azure Active Directory gerekir.
-  - [Bağlan ve Uyumluluk & PowerShell'e](/powershell/exchange/connect-to-scc-powershell)
-  - [Graph Azure Active Directory PowerShell'i Graph](/powershell/azure/active-directory/install-adv2)
+- **PowerShell kullanarak yönetme**: Şu anda Güvenlik & Uyumluluk Merkezi PowerShell'de bilgi engeli ilkeleri tanımlanmış ve yönetilmektedir. Bu makalede çeşitli örnekler sağlansa da PowerShell cmdlet'leri ve parametreleri hakkında bilgi sahibi olmanız gerekir. Azure Active Directory PowerShell modülüne de ihtiyacınız olacaktır.
+  - [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell)
+  - [Graph için Azure Active Directory PowerShell'i yükleme](/powershell/azure/active-directory/install-adv2)
 
-- Microsoft Teams'te bilgi engellerini yönetici onayı: **IB** ilkeleriniz olduğunda, IB uyumlu olmayan kullanıcıları Gruplar'dan (örneğin, gruplara dayalı Teams kanal) kaldırabilirler. Bu yapılandırma, kuruma ilişkin ilkelerin ve yasal düzenlemelere uygun olmaya yardımcı olur. Bilgi engeli ilkelerinin kaynak kodda beklendiği gibi çalışması için aşağıdaki Microsoft Teams.
+- **Microsoft Teams bilgi engelleri için yönetici onayı**: IB ilkeleriniz geçerli olduğunda, IB uyumluluğu olmayan kullanıcıları Gruplar'dan (gruplara dayalı Teams kanalları) kaldırabilirler. Bu yapılandırma, kuruluşunuzun ilkeler ve düzenlemeler ile uyumlu kalmasını sağlamaya yardımcı olur. Bilgi engeli ilkelerinin Microsoft Teams beklendiği gibi çalışmasını sağlamak için aşağıdaki yordamı kullanın.
 
-   1. [Önkoşul: Azure Active Directory için PowerShell'i Graph](/powershell/azure/active-directory/install-adv2).
+   1. Önkoşul: [Graph için Azure Active Directory PowerShell'i yükleyin](/powershell/azure/active-directory/install-adv2).
 
    1. Aşağıdaki PowerShell cmdlet'lerini çalıştırın:
 
@@ -88,271 +88,271 @@ Gerekli lisanslara [ve izinlere ek olarak](information-barriers.md#required-lice
       Start-Process  "https://login.microsoftonline.com/common/adminconsent?client_id=$appId"
       ```
 
-   1. İstendiğinde, iş veya okul hesabınızla oturum açın ve Office 365.
+   1. İstendiğinde, Office 365 için iş veya okul hesabınızı kullanarak oturum açın.
 
-   1. İstenen **izinler iletişim kutusunda** bilgileri gözden geçirin ve kabul et'i **seçin**. Uygulama tarafından istenen izinler aşağıda verilmiştir.
+   1. **İstenen izinler** iletişim kutusunda bilgileri gözden geçirin ve **kabul et'i** seçin. Uygulama tarafından istenen izinler aşağıda verilmiştir.
 
       > [!div class="mx-imgBorder"]
-      > ![resmine tıklayın.](https://user-images.githubusercontent.com/8932063/107690955-b1772300-6c5f-11eb-9527-4235de860b27.png)
+      > ![Görüntü.](https://user-images.githubusercontent.com/8932063/107690955-b1772300-6c5f-11eb-9527-4235de860b27.png)
 
-Tüm önkoşullar karşılandığı zaman, sonraki adıma geçin.
+Tüm önkoşullar karşılandığında sonraki adıma geçin.
 
 > [!TIP]
-> Planınızı hazırlamanıza yardımcı olmak için, bu makalede örnek bir senaryo yer almaktadır. [Contoso'nun bölümlerine, kesimlerine ve ilkelerine bakın](#example-scenario-contosos-departments-segments-and-policies).
+> Planınızı hazırlamanıza yardımcı olmak için bu makalede örnek bir senaryo yer alır. [Bkz. Contoso'nun bölümleri, kesimleri ve ilkeleri](#example-scenario-contosos-departments-segments-and-policies).
 
-## <a name="step-2-segment-users-in-your-organization"></a>2. Adım: Kuruluşta kullanıcıları kesimlere göre bölümleme
+## <a name="step-2-segment-users-in-your-organization"></a>2. Adım: Kuruluşunuzdaki kullanıcıları segmentlere ayırma
 
-Bu adımda, hangi bilgi engeli ilkelerinin gerekli olduğunu belirler, segmentlerinizi tanımlamak için bir kesimler listesi oluşturur ve sonra da kesimlerinizi tanımlarsınız.
+Bu adım sırasında hangi bilgi engeli ilkelerinin gerekli olduğunu belirler, tanımlayacak segmentlerin listesini oluşturur ve ardından segmentlerinizi tanımlarsınız.
 
-### <a name="determine-what-policies-are-needed"></a>Hangi ilkelerin gerektiğini belirleme
+### <a name="determine-what-policies-are-needed"></a>Hangi ilkelerin gerekli olduğunu belirleme
 
-Yasal düzenlemeler ve endüstri düzenlemelerini göz önünde bulundurarak, organizasyon içinde bilgi engeli ilkelerine ihtiyaç olacak gruplar kimler? Liste yapma. Başka bir grupla iletişim kurmasını engelleyen gruplar var mı? Yalnızca bir veya iki grupla iletişim kurmasına izin verilen gruplar var mı? İki gruptan birini ait olarak ihtiyacınız olan ilkeleri düşünmelisiniz:
+Yasal ve sektör düzenlemeleri göz önünde bulundurularak, kuruluşunuzda bilgi engeli ilkelerine ihtiyaç duyan gruplar kimlerdir? Liste oluşturma. Başka bir grupla iletişim kurması engellenmesi gereken gruplar var mı? Yalnızca bir veya iki diğer grupla iletişim kurmasına izin verilmesi gereken gruplar var mı? İhtiyacınız olan ilkeleri iki gruptan birine ait olarak düşünün:
 
-- "Engelle" ilkeleri, bir grubun başka bir grupla iletişim kurmasını engelleme.
-- "İzin Ver" ilkeleri, bir grubun yalnızca belirli belirli gruplarla iletişim kurmasına olanak sağlar.
+- "Engelle" ilkeleri bir grubun başka bir grupla iletişim kurmasını engeller.
+- "İzin ver" ilkeleri, bir grubun yalnızca diğer belirli, belirli gruplarla iletişim kurmasına olanak sağlar.
 
-İlk grup ve ilke listeniz olduğunda, ihtiyacınız olacak kesimleri belirlemek için devam edin.
+İlk grup ve ilke listenize sahip olduğunuzda, ihtiyacınız olacak segmentleri tanımlamaya devam edin.
 
-### <a name="identify-segments"></a>Kesimleri belirleme
+### <a name="identify-segments"></a>Segmentleri tanımlama
 
-İlkeler listenizin yanı sıra, organizasyonunız için kesimlerin listesini de hazır olun. Bilgi engeli ilkelerine dahil olacak kullanıcılar bir segmente dahil olmalıdır. Bir kullanıcı yalnızca bir segmentte olabilirken segmentlerinizi dikkatle plan edin. Her segmente tek bir bilgi engeli ilkesi uygulanabilir.
-
-> [!IMPORTANT]
-> Bir kullanıcı yalnızca tek bir segmentte olabilir.
-
-Kuruluş dizin verilerinde kesimler tanımlamak için hangi öznitelikleri kullanabileceğinizi belirler. *Department, MemberOf* *veya* desteklenen özniteliklerden herhangi birini kullanabilirsiniz. Kullanıcılar için seçenilen öznitelikte değerlerin olduğundan emin olun. [Bilgi engelleri için desteklenen özniteliklerin listesine bakın](information-barriers-attributes.md).
+İlk ilke listenize ek olarak, kuruluşunuz için segmentlerin listesini oluşturun. Bilgi engeli ilkelerine dahil edilecek kullanıcılar bir segmente ait olmalıdır. Kullanıcı yalnızca bir segmentte olabileceği için segmentlerinizi dikkatli bir şekilde planlayın. Her segmentte yalnızca bir bilgi engeli ilkesi uygulanabilir.
 
 > [!IMPORTANT]
-> **Sonraki bölüme başlamadan önce dizin verilerinizde, kesimleri tanımlamak için kullanabileceğiniz özniteliklere ilgili değerler olduğundan emin olun**. Dizin verilerinizde kullanmak istediğiniz özniteliklerin değerleri yoksa, bilgi engelleriyle devammeden önce kullanıcı hesaplarının bu bilgileri içerecek şekilde güncelleştirilmiş olması gerekir. Bu konuda yardım almak için aşağıdaki kaynaklara bakın:<br/>- [Kullanıcı hesabı özelliklerini Office 365 PowerShell ile yapılandırma](../enterprise/configure-user-account-properties-with-microsoft-365-powershell.md)<br/>- [Profili kullanarak kullanıcının profil bilgilerini ekleme veya Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
+> Kullanıcı yalnızca bir segmentte olabilir.
 
-### <a name="define-segments-using-powershell"></a>PowerShell kullanarak kesimleri tanımlama
+Kuruluşunuzun dizin verilerinde segmentleri tanımlamak için hangi öznitelikleri kullanacağınızı belirleyin. *Department*, *MemberOf* veya desteklenen özniteliklerden herhangi birini kullanabilirsiniz. Kullanıcılar için seçtiğiniz öznitelikte değerler olduğundan emin olun. [Bilgi engelleri için desteklenen özniteliklerin listesine bakın](information-barriers-attributes.md).
 
-Kesimlerin tanımlanması kullanıcıları etkilemez; yalnızca bilgi engeli ilkelerinin tanımlanmayacak ve sonra uygulanacak aşamayı ayarlar.
+> [!IMPORTANT]
+> **Sonraki bölüme geçmeden önce dizin verilerinizin, segmentleri tanımlamak için kullanabileceğiniz öznitelik değerlerine sahip olduğundan emin olun**. Dizin verilerinizin kullanmak istediğiniz öznitelikler için değerleri yoksa, bilgi engellerine geçmeden önce kullanıcı hesaplarının bu bilgileri içerecek şekilde güncelleştirilmesi gerekir. Bu konuda yardım almak için aşağıdaki kaynaklara bakın:<br/>- [Office 365 PowerShell ile kullanıcı hesabı özelliklerini yapılandırma](../enterprise/configure-user-account-properties-with-microsoft-365-powershell.md)<br/>- [Azure Active Directory kullanarak kullanıcının profil bilgilerini ekleme veya güncelleştirme](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
 
-1. Kullanmak istediğiniz öznitelike karşılık gelen **UserGroupFilter** parametresiyle **New-OrganizationSegment** cmdlet'ini kullanın.[](information-barriers-attributes.md)
+### <a name="define-segments-using-powershell"></a>PowerShell kullanarak segmentleri tanımlama
 
-    | Söz dizimi | Örnek |
+Segmentlerin tanımlanması kullanıcıları etkilemez; yalnızca bilgi engeli ilkelerinin tanımlanıp uygulanacağı aşamayı ayarlar.
+
+1. Kullanmak istediğiniz [özniteliğe](information-barriers-attributes.md) karşılık gelen **UserGroupFilter** parametresiyle **New-OrganizationSegment** cmdlet'ini kullanın.
+
+    | Sözdizimi | Örnek |
     |:---------|:----------|
-    | `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"` |`New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"` <p>Bu örnekte, İk adlı bir *segment, Department* *özniteliğinde bir* değer olan *İk kullanılarak tanımlanır* . **Cmdlet'in -eq** bölümü "eşittir" anlamına gelir. (Alternatif olarak, - **ne kullanarak** "eşittir değil" anlamına da kullanabilirsiniz. Bkz [. Segment tanımlarında "eşittir" ve "eşit değil" kullanma](#using-equals-and-not-equals-in-segment-definitions).) |
+    | `New-OrganizationSegment -Name "segmentname" -UserGroupFilter "attribute -eq 'attributevalue'"` |`New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"` <p>Bu örnekte, *departman* özniteliğindeki bir değer olan *İk* kullanılarak *İk* adlı bir kesim tanımlanmıştır. Cmdlet'in **-eq** bölümü "eşittir" anlamına gelir. (Alternatif olarak, "eşit değil" anlamına gelen **-ne** kullanabilirsiniz. Bkz [. Segment tanımlarında "eşittir" ve "eşit değil" kullanma](#using-equals-and-not-equals-in-segment-definitions).) |
 
-    Her cmdlet'i çalıştırdikten sonra, yeni segmentle ilgili ayrıntıların bir listesini görüyor olması gerekir. Ayrıntılar, segmentin türünü ve bunu oluşturan veya en son değiştireni, daha sonra böyle devam eden bilgileri içerir. 
+    Her cmdlet'i çalıştırdıktan sonra yeni segmentle ilgili ayrıntıların listesini görmeniz gerekir. Ayrıntılar arasında segmentin türü, kimin oluşturduğu veya en son değiştirildiği vb. yer alır. 
 
-2. Tanımlamak istediğiniz her segment için bu işlemi yinelayın.
+2. Tanımlamak istediğiniz her segment için bu işlemi yineleyin.
 
     > [!IMPORTANT]
-    > **Kesimlerin çakışmay olduğundan emin olun**. Bilgi engellerinden etkilenen her kullanıcı, bir (ve yalnızca bir) segmente ait olmalı. Hiçbir kullanıcı iki veya daha fazla kesime ait olması gerekir. (Örnek [: Bu makaledeki Contoso'nun tanımlı](#contosos-defined-segments) kesimleri'ne bakın.)
+    > **Segmentlerinizin çakışmadığından emin olun**. Bilgi engellerinden etkilenecek her kullanıcı bir (ve yalnızca bir) segmente ait olmalıdır. Hiçbir kullanıcı iki veya daha fazla kesime ait olmamalıdır. (Bu makaledeki [Örnek: Contoso'nun tanımlı kesimleri](#contosos-defined-segments) bölümüne bakın.)
 
-Segmentlerinizi tanımdikten sonra, bilgi engeli ilkelerini [tanımlamaya devam edin](#step-3-define-information-barrier-policies).
+Segmentlerinizi tanımladıktan sonra [bilgi engeli ilkelerini tanımlamaya](#step-3-define-information-barrier-policies) devam edin.
 
-### <a name="using-equals-and-not-equals-in-segment-definitions"></a>Segment tanımlarında "eşittir" ve "eşittir değil" kullanma
+### <a name="using-equals-and-not-equals-in-segment-definitions"></a>Segment tanımlarında "equals" ve "not equals" kullanma
 
-Aşağıdaki örnekte, "Bölüm eşittir İk" gibi bir segment tanımlarız. 
+Aşağıdaki örnekte, "Departman İk'ya eşittir" şeklinde bir segment tanımlıyoruz. 
 
 | Örnek | Not |
 |:----------|:-------|
-|`New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"` | Bu örnekte, segment **tanımında -eq** olarak ifade edilmiştir ve "eşittir" parametresi vardır. |
+|`New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"` | Bu örnekte segment tanımının **-eq** olarak belirtilen bir "equals" parametresi içerdiğine dikkat edin. |
 
-Ayrıca, aşağıdaki tabloda gösterildiği gibi ,ne olarak gösterilen "eşit değil" parametresi kullanarak kesimler tanımlayabilirsiniz:
+Segmentleri, aşağıdaki tabloda gösterildiği gibi **-ne** olarak belirtilen bir "eşit değil" parametresi kullanarak da tanımlayabilirsiniz:
 
-| Söz dizimi | Örnek |
+| Sözdizimi | Örnek |
 |:---------|:----------|
-| `New-OrganizationSegment -Name "NotSales" -UserGroupFilter "Department -ne 'Sales'"` | Bu örnekte, SatışLar *bölümünde yer alan* herkesi içeren Satış Değil adlı bir segment tanımla *kullandık*. **Cmdlet'in -** ne bölümü "eşit değil" anlamına gelir. |
+| `New-OrganizationSegment -Name "NotSales" -UserGroupFilter "Department -ne 'Sales'"` | Bu örnekte *Satış'ta olmayan* herkesi içeren *NotSales* adlı bir segment tanımladık. Cmdlet'in **-ne** kısmı "eşit değil" anlamına gelir. |
 
-"Eşittir" veya "eşittir" kullanarak kesimler tanımlamaya ek olarak, hem "eşittir" hem de "eşit değil" parametrelerini kullanarak da bir segment tanımlayabilirsiniz. Mantıksal VE ve OR işleçlerini kullanarak karmaşık *grup filtreleri* *de tanımlayabilirsiniz* .
+"eşittir" veya "eşit değil" kullanarak segment tanımlamaya ek olarak, "eşittir" ve "eşit değil" parametrelerini kullanarak bir segment tanımlayabilirsiniz. Mantıksal *AND* ve *OR* işleçlerini kullanarak karmaşık grup filtreleri de tanımlayabilirsiniz.
 
-| Söz dizimi | Örnek |
+| Sözdizimi | Örnek |
 |:---------|:----------|
-| `New-OrganizationSegment -Name "LocalFTE" -UserGroupFilter "Location -eq 'Local'" -and "Position -ne 'Temporary'"` | Bu örnekte, yerel olarak bulunan ve konumları Geçici olarak listelenmiyor kişilerini içeren *LocalFTE* adlı bir segment *tanımladik*. |
-| `New-OrganizationSegment -Name "Segment1" -UserGroupFilter "MemberOf -eq 'group1@contoso.com'' -and MemberOf -ne 'group3@contoso.com'"`| Bu örnekte, *Segment1* adlı bir segment tanımladır ve bu segmente üye değil group1@contoso.com üyesi olan group3@contoso.com. |
-| `New-OrganizationSegment -Name "Segment2" -UserGroupFilter "MemberOf -eq 'group2@contoso.com' -or MemberOf -ne 'group3@contoso.com'"` | Bu örnekte, *Segment2* adlı bir segment tanımladır ve bu segmente üye değil group2@contoso.com üyesi olan group3@contoso.com. |
-| `New-OrganizationSegment -Name "Segment1and2" -UserGroupFilter "(MemberOf -eq 'group1@contoso.com' -or MemberOf -eq 'group2@contoso.com') -and MemberOf -ne 'group3@contoso.com'"`| Bu örnekte, *Segment1and2* adlı bir segment tanımladık ve bu segmente üye group1@contoso.com group2@contoso.com hem de group3@contoso.com. |
+| `New-OrganizationSegment -Name "LocalFTE" -UserGroupFilter "Location -eq 'Local'" -and "Position -ne 'Temporary'"` | Bu örnekte, yerel olarak bulunan ve konumları *Geçici* olarak listelenmeyen kişileri içeren *LocalFTE* adlı bir segment tanımladık. |
+| `New-OrganizationSegment -Name "Segment1" -UserGroupFilter "MemberOf -eq 'group1@contoso.com'' -and MemberOf -ne 'group3@contoso.com'"`| Bu örnekte, group3@contoso.com üyesi değil group1@contoso.com üyesi olan kişileri içeren *Segment1* adlı bir segment tanımladık. |
+| `New-OrganizationSegment -Name "Segment2" -UserGroupFilter "MemberOf -eq 'group2@contoso.com' -or MemberOf -ne 'group3@contoso.com'"` | Bu örnekte, group3@contoso.com üyesi değil group2@contoso.com üyesi olan kişileri içeren *Segment2* adlı bir segment tanımladık. |
+| `New-OrganizationSegment -Name "Segment1and2" -UserGroupFilter "(MemberOf -eq 'group1@contoso.com' -or MemberOf -eq 'group2@contoso.com') -and MemberOf -ne 'group3@contoso.com'"`| Bu örnekte, group3@contoso.com üyesi değil group1@contoso.com ve group2@contoso.com üyelerini içeren *Segment1and2* adlı bir segment tanımladık. |
 
 > [!TIP]
-> Mümkünse "-eq" veya "-ne" içeren segment tanımlarını kullanın. Karmaşık segment tanımlarını tanımlamamaya deneyin.
+> Mümkünse, "-eq" veya "-ne" içeren segment tanımlarını kullanın. Karmaşık segment tanımları tanımlamamaya çalışın.
 
 ## <a name="step-3-define-information-barrier-policies"></a>3. Adım: Bilgi engeli ilkelerini tanımlama
 
-Belirli kesimler arasındaki iletişimi engellemeye mi yoksa iletişimi belirli kesimlere göre mi sınırlandırma ihtiyacınız olduğunu belirler. İdeal olarak, kuruma yönelik olarak yasal gereksinimlerle ve endüstri gereksinimleriyle uyumlu olduğundan emin olmak için en az sayıda ilkeyi kullanacağız.
+Belirli segmentler arasındaki iletişimi engellemeniz mi yoksa iletişimleri belirli segmentlerle sınırlamanız mı gerektiğini belirleyin. İdeal olarak, kuruluşunuzun yasal ve sektör gereksinimleriyle uyumlu olduğundan emin olmak için en az ilke sayısını kullanırsınız.
 
-Kullanıcı segmentleri listeniz ve tanımlamak istediğiniz bilgi engeli ilkeleri listeniz ile bir senaryo seçin ve ardından adımları izleyin.
+Kullanıcı segmentleri listeniz ve tanımlamak istediğiniz bilgi engeli ilkeleriyle bir senaryo seçin ve adımları izleyin.
 
-- [1. Senaryo: Kesimler arasındaki iletişimi engelleme](#scenario-1-block-communications-between-segments)
-- [Senaryo 2: Bir segmentin yalnızca başka bir segmentle iletişim kurmasına izin verme](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment)
+- [Senaryo 1: Segmentler arasındaki iletişimi engelleme](#scenario-1-block-communications-between-segments)
+- [Senaryo 2: Bir segmentin yalnızca bir diğer segmentle iletişim kurmasına izin verme](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment)
 
 > [!IMPORTANT]
-> **İlkeleri tanımlarken bir segmente birden çok ilke atamadığınızdan emin olun**. Örneğin, Satış adlı bir segment için tek bir ilke *tanımlarsanız*, Satışlar için ek bir ilke *tanımlamayın*.<p> Ayrıca, bilgi engeli ilkelerini tanımlarken, bu ilkeleri uygulamaya hazır olana kadar devre dışı durumuna ayarladığınızdan emin olun. İlkeleri tanımlama (veya düzenleme), bu ilkeler etkin durum olarak ayarlanıncaya ve sonra uygulanmadan kullanıcıları etkilemez.
+> **İlkeleri tanımlarken bir segmente birden fazla ilke atamadığınızdan emin olun**. Örneğin, *Satış* adlı bir segment için bir ilke tanımlarsanız, *Sales* için ek bir ilke tanımlamayın.<p> Ayrıca, bilgi engeli ilkelerini tanımlarken, uygulamaya hazır olana kadar bu ilkeleri etkin olmayan duruma ayarladığınızdan emin olun. İlkelerin tanımlanması (veya düzenlenmesi) bu ilkeler etkin duruma ayarlanıp sonra uygulanana kadar kullanıcıları etkilemez.
 
-(Bu [makaledeki Örnek: Contoso'nun bilgi engeli](#contosos-information-barrier-policies) ilkelerine bakın.)
+(Bu makaledeki [Örnek: Contoso'nun bilgi engeli ilkelerine](#contosos-information-barrier-policies) bakın.)
 
-### <a name="scenario-1-block-communications-between-segments"></a>1. Senaryo: Kesimler arasındaki iletişimi engelleme
+### <a name="scenario-1-block-communications-between-segments"></a>Senaryo 1: Segmentler arasındaki iletişimi engelleme
 
-Kesimlerin birbirleriyle iletişim kurmalarını engellemek için iki ilke tanımlarsınız: her yön için bir ilke. Her ilke yalnızca tek bir yolla iletişimi engeller.
+Segmentlerin birbiriyle iletişim kurmasını engellemek istediğinizde iki ilke tanımlarsınız: her yön için bir ilke. Her ilke iletişimi yalnızca tek bir yolla engeller.
 
-Örneğin, Segment A ile Segment B arasındaki iletişimi engellemek istediğiniz varsayalım. Bu durumda, Segment A'nın Segment B ile iletişim kurmasını önleyen bir ilke tanımlar, ardından da Segment B'nin Segment A ile iletişim kurmasını önlemek için ikinci bir ilke tanımlarsanız.
+Örneğin, Segment A ile Segment B arasındaki iletişimi engellemek istediğinizi varsayalım. Bu durumda, Segment A'nın Segment B ile iletişim kurmasını engelleyen bir ilke tanımlarsınız ve ardından B Segmenti'nin A Segmenti ile iletişim kurmasını önlemek için ikinci bir ilke tanımlarsınız.
 
-1. İlk engelleme ilkenizi tanımlamak için **, New-InformationBarrierPolicy** cmdlet'ini **SegmentsBlocked parametresiyle** kullanın.
+1. İlk engelleme ilkenizi tanımlamak için **SegmentsBlocked** parametresiyle **New-InformationBarrierPolicy** cmdlet'ini kullanın.
 
-    | Söz dizimi | Örnek |
+    | Sözdizimi | Örnek |
     |:--------|:----------|
-    | `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segment1name" -SegmentsBlocked "segment2name"` | `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive` <p> Bu örnekte, Satış adlı bir segment için *Satış-Araştırma* adlı bir ilke *tanımladık*. Etkin ve uygulandığında, bu ilke Satış ekibini olan kişilerin *Araştırma adlı bir* bölümdeki insanlarla iletişim kurmasını *engellemeyi sağlar*. |
+    | `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segment1name" -SegmentsBlocked "segment2name"` | `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive` <p> Bu örnekte Sales adlı bir segment için *Sales-Research* *adlı bir* ilke tanımladık. Etkin ve uygulandığında, bu ilke *Sales'teki* kişilerin *Araştırma* adlı bir segmentteki kişilerle iletişim kurmasını engeller. |
 
-2. İkinci engelleme segmentini tanımlamak için **, New-InformationBarrierPolicy** cmdlet'ini **segmentsBlocked** parametresiyle yeniden kullanın; bu kez kesimler ters çevrildi.
+2. İkinci engelleme segmentinizi tanımlamak için, **SegmentlerBlocked** parametresiyle **New-InformationBarrierPolicy** cmdlet'ini yeniden kullanın; bu kez segmentler ters çevrildi.
 
     | Örnek | Not |
     |:----------|:-------|
-    |`New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Inactive` | Bu örnekte, Araştırma'nın Satışlarla iletişim *kurmasını önlemek için Araştırma-Satış* *adlı* bir ilke *tanımladık*. |
+    |`New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Inactive` | Bu örnekte, Research'in *Satış* ile iletişim kurmasını önlemek için *Research-Sales* adlı bir ilke tanımladık. |
 
-3. Aşağıdaki eylemlerden biri ile devam edin:
+3. Aşağıdaki eylemlerden birine geçin:
 
-   - (Gerekirse) [Bir segmentin yalnızca başka bir segmentle iletişim kurmasına olanak sağlayan bir ilke tanımlama](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment) 
-   - (Tüm ilkeleriniz tanımlandığı zaman) [Bilgi engeli ilkelerini uygulama](#step-4-apply-information-barrier-policies)
+   - (Gerekirse) [Bir segmentin yalnızca bir diğer segmentle iletişim kurmasına izin veren bir ilke tanımlama](#scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment) 
+   - (Tüm ilkeleriniz tanımlandıktan sonra) [Bilgi engeli ilkelerini uygulama](#step-4-apply-information-barrier-policies)
 
-### <a name="scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment"></a>Senaryo 2: Bir segmentin yalnızca başka bir segmentle iletişim kurmasına izin verme
+### <a name="scenario-2-allow-a-segment-to-communicate-only-with-one-other-segment"></a>Senaryo 2: Bir segmentin yalnızca bir diğer segmentle iletişim kurmasına izin verme
 
-1. Bir segmentin yalnızca bir kesimle başka bir segmentle iletişim kurmasına izin vermek için **, New-InformationBarrierPolicy** cmdlet'ini **SegmentsAllowed parametresiyle** kullanın.
+1. Bir segmentin yalnızca bir diğer segmentle iletişim kurmasına izin vermek için, **SegmentlerAllowed** parametresiyle **New-InformationBarrierPolicy** cmdlet'ini kullanın.
 
-    | Söz dizimi | Örnek |
+    | Sözdizimi | Örnek |
     |:----------|:----------|
-    | `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segment1name" -SegmentsAllowed "segment2name","segment1name"` | `New-InformationBarrierPolicy -Name "Manufacturing-HR" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR","Manufacturing" -State Inactive` <p> Bu örnekte, Üretim adlı bir segment için *Üretim-İk* adlı bir ilke *tanımladık*. Etkin ve uygulandığında, bu ilke Üretim'de *çalışan* kişilerin yalnızca İk adlı bir segmentte yer alan kullanıcılarla iletişim kurmasına olanak *sağlar*. (Bu durumda, *Üretim* İk'nın bir parçası değil kullanıcılarla iletişim *kuramaz*.) |
+    | `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segment1name" -SegmentsAllowed "segment2name","segment1name"` | `New-InformationBarrierPolicy -Name "Manufacturing-HR" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR","Manufacturing" -State Inactive` <p> Bu örnekte, Manufacturing adlı bir segment için *Manufacturing-HR* *adlı bir* ilke tanımladık. Etkin ve uygulandığında, bu ilke *Üretim'deki* kişilerin yalnızca *İk* adlı segmentteki kişilerle iletişim kurmasına olanak tanır. (Bu durumda *, Üretim* *İk'nın* parçası olmayan kullanıcılarla iletişim kuramaz.) |
 
-    **Gerekirse, aşağıdaki örnekte gösterildiği gibi, bu cmdlet ile birden çok kesim belirtebilirsiniz.**
+    **Gerekirse, aşağıdaki örnekte gösterildiği gibi bu cmdlet ile birden çok kesim belirtebilirsiniz.**
 
-    | Söz dizimi | Örnek |
+    | Sözdizimi | Örnek |
     |:---------|:----------|
-    | `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segment1name" -SegmentsAllowed "segment2name", "segment3name","segment1name"` | `New-InformationBarrierPolicy -Name "Research-HRManufacturing" -AssignedSegment "Research" -SegmentsAllowed "HR","Manufacturing","Research" -State Inactive` <p> Bu örnekte, Araştırma kesiminin yalnızca İk ve Üretim ile  iletişim kurmasını sağlayan *bir ilke* *tanımladık*. |
+    | `New-InformationBarrierPolicy -Name "policyname" -AssignedSegment "segment1name" -SegmentsAllowed "segment2name", "segment3name","segment1name"` | `New-InformationBarrierPolicy -Name "Research-HRManufacturing" -AssignedSegment "Research" -SegmentsAllowed "HR","Manufacturing","Research" -State Inactive` <p> Bu örnekte *, Araştırma* segmentinin yalnızca *İk* ve *Üretim* ile iletişim kurmasını sağlayan bir ilke tanımladık. |
 
-    Belirli kesimlerin yalnızca diğer belirli kesimlerle iletişim kurmasına izin vermek üzere tanımlamak istediğiniz her ilke için bu adımı yinele.
+    Belirli segmentlerin yalnızca belirli belirli segmentlerle iletişim kurmasına izin vermek için tanımlamak istediğiniz her ilke için bu adımı yineleyin.
 
-2. Aşağıdaki eylemlerden biri ile devam edin:
+2. Aşağıdaki eylemlerden birine geçin:
 
-   - (Gerekirse) [Kesimler arasındaki iletişimi engellemek için ilke tanımlama](#scenario-1-block-communications-between-segments) 
-   - (Tüm ilkeleriniz tanımlandığı zaman) [Bilgi engeli ilkelerini uygulama](#step-4-apply-information-barrier-policies)
+   - (Gerekirse) [Segmentler arasındaki iletişimi engellemek için bir ilke tanımlama](#scenario-1-block-communications-between-segments) 
+   - (Tüm ilkeleriniz tanımlandıktan sonra) [Bilgi engeli ilkelerini uygulama](#step-4-apply-information-barrier-policies)
 
 ## <a name="step-4-apply-information-barrier-policies"></a>4. Adım: Bilgi engeli ilkelerini uygulama
 
-Bilgi engeli ilkelerini, siz etkin durum durumuna ayarlamadan ve ardından ilkeleri uygulamadan önce geçerli olmaz.
+Bilgi engeli ilkeleri etkin duruma ayarlayıp ilkeleri uygulayana kadar geçerli olmaz.
 
-1. Tanımlanmış **ilkelerin listesini görmek için Get-InformationBarrierPolicy** cmdlet'ini kullanın. Her ilkenin durumunu ve kimliğini (GUID) notun.
+1. Tanımlanmış ilkelerin listesini görmek için **Get-InformationBarrierPolicy** cmdlet'ini kullanın. Her ilkenin durumunu ve kimliğini (GUID) not edin.
 
-    Söz dizimi: `Get-InformationBarrierPolicy`
+    Sözdizimi: `Get-InformationBarrierPolicy`
 
-2. Bir ilkeyi etkin durum olarak ayarlamak için **Set-InformationBarrierPolicy** cmdlet'ini **Identity** parametresiyle ve State parametresi **de Etkin** olarak **ayarlanır**. 
+2. bir ilkeyi etkin duruma ayarlamak için, **Bir Identity** parametresiyle **Set-InformationBarrierPolicy** cmdlet'ini ve **State parametresini Etkin** olarak ayarlayın. 
 
-    | Söz dizimi | Örnek |
+    | Sözdizimi | Örnek |
     |:---------|:----------|
-    | `Set-InformationBarrierPolicy -Identity GUID -State Active` | `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -State Active` <p> Bu örnekte, guid *43c37853-ea10-4b90-a23d-ab8c93772471* olan bir bilgi engeli ilkesi ayarladık. |
+    | `Set-InformationBarrierPolicy -Identity GUID -State Active` | `Set-InformationBarrierPolicy -Identity 43c37853-ea10-4b90-a23d-ab8c93772471 -State Active` <p> Bu örnekte GUID *43c37853-ea10-4b90-a23d-ab8c93772471* olan bir bilgi engeli ilkesini etkin duruma ayarlayacağız. |
 
-    Bu adımı her ilkeye uygun şekilde yinelayın.
+    Bu adımı her ilke için uygun şekilde yineleyin.
 
-3. Bilgi engeli ilkelerinizi etkin durum için ayarlamayı bitirdikten sonra, Güvenlik ve Uyumluluk Merkezi'nde **Start-InformationBarrierPoliciesApplication** cmdlet'ini & kullanın.
+3. Bilgi engeli ilkelerinizi etkin duruma ayarlamayı bitirdiğinizde, Güvenlik & Uyumluluk Merkezi'ndeki **Start-InformationBarrierPoliciesApplication** cmdlet'ini kullanın.
 
-    Söz dizimi: `Start-InformationBarrierPoliciesApplication`
+    Sözdizimi: `Start-InformationBarrierPoliciesApplication`
 
-    çalıştırdikten sonra `Start-InformationBarrierPoliciesApplication`, sistemin ilkeleri uygulamaya başlaması için 30 dakika kadar bekleyin. Sistem, kullanıcıya göre ilkeler uygular. Sistem, saatte yaklaşık 5.000 kullanıcı hesabını işler.
+    komutunu çalıştırdıktan `Start-InformationBarrierPoliciesApplication`sonra, sistemin ilkeleri uygulamaya başlaması için 30 dakika bekleyin. Sistem, ilkeler kullanıcı tarafından kullanıcı tarafından uygulanır. Sistem saatte yaklaşık 5.000 kullanıcı hesabını işler.
 
-### <a name="view-status-of-user-accounts-segments-policies-or-policy-application"></a>Kullanıcı hesaplarının, kesimlerin, ilkelerin veya ilke uygulamasının durumunu görüntüleme
+### <a name="view-status-of-user-accounts-segments-policies-or-policy-application"></a>Kullanıcı hesaplarının, kesimlerinin, ilkelerin veya ilke uygulamasının durumunu görüntüleme
 
-PowerShell ile, aşağıdaki tabloda listelenen gibi kullanıcı hesaplarının, kesimlerin, ilkelerin ve ilke uygulamasının durumunu görüntüebilirsiniz.
+PowerShell ile aşağıdaki tabloda listelendiği gibi kullanıcı hesaplarının, segmentlerin, ilkelerin ve ilke uygulamasının durumunu görüntüleyebilirsiniz.
 
-| Bu bilgileri görüntülemek için | Bu eylemi benim 1 |
+| Bu bilgileri görüntülemek için | Bu eylemi gerçekleştirin |
 |:---------------|:----------|
-| Kullanıcı hesapları | **Identity parametreleriyle Get-InformationBarrierRecipientStatus** cmdlet'ini kullanın. <p> Söz dizimi: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` <p> Ad, diğer ad, ayırt edici ad, kurallı etki alanı adı, e-posta adresi veya GUID gibi her bir kişiyi benzersiz olarak tanımlayan herhangi bir değeri kullanabilirsiniz. <p> Örnek: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` <p> Bu örnekte, Office 365'de iki kullanıcı hesabına başvururuz: *İbrhan için ayses* *ve* *Alex* *için alexw*. <p> (Bu cmdlet'i tek bir kullanıcı için de kullanabilirsiniz: `Get-InformationBarrierRecipientStatus -Identity <value>`) <p> Bu cmdlet, öznitelik değerleri ve uygulanan herhangi bir bilgi engeli ilkeleri gibi kullanıcılarla ilgili bilgileri döndürür.|
-| Kesimler | **Get-OrganizationSegment** cmdlet'ini kullanın.<p> Söz dizimi: `Get-OrganizationSegment` <p> Bu cmdlet, organizasyonunız için tanımlanmış tüm kesimlerin listesini görüntüler. |
-| Bilgi engeli ilkeleri | **Get-InformationBarrierPolicy** cmdlet'ini kullanın. <p> Söz dizimi: `Get-InformationBarrierPolicy` <p> Bu cmdlet, tanımlanmış bilgi engeli ilkelerinin listesini ve bunların durumunu görüntüler. |
-| En yeni bilgi engeli ilke uygulaması | **Get-InformationBarrierPoliciesApplicationStatus** cmdlet'ini kullanın. <p> Söz dizimi: `Get-InformationBarrierPoliciesApplicationStatus`<p> Bu cmdlet, ilke uygulamasının tamamlandıktan, başarısız veya devam eden bir durumla ilgili bilgileri görüntüler. |
-| Tüm bilgi engeli ilke uygulamaları|Kullanım `Get-InformationBarrierPoliciesApplicationStatus -All`<p> Bu cmdlet, ilke uygulamasının tamamlandıktan, başarısız veya devam eden bir durumla ilgili bilgileri görüntüler.|
+| Kullanıcı hesapları | Kimlik parametreleriyle **Get-InformationBarrierRecipientStatus** cmdlet'ini kullanın. <p> Sözdizimi: `Get-InformationBarrierRecipientStatus -Identity <value> -Identity2 <value>` <p> Ad, diğer ad, ayırt edici ad, kurallı etki alanı adı, e-posta adresi veya GUID gibi her kullanıcıyı benzersiz olarak tanımlayan herhangi bir değeri kullanabilirsiniz. <p> Örnek: `Get-InformationBarrierRecipientStatus -Identity meganb -Identity2 alexw` <p> Bu örnekte, Office 365'de iki kullanıcı hesabına başvuracağız: *Megan* için *meganb* ve *Alex* için *alexw*. <p> (Bu cmdlet'i tek bir kullanıcı için de kullanabilirsiniz: `Get-InformationBarrierRecipientStatus -Identity <value>`) <p> Bu cmdlet, kullanıcılar hakkında öznitelik değerleri ve uygulanan tüm bilgi engeli ilkeleri gibi bilgileri döndürür.|
+| Segment | **Get-OrganizationSegment** cmdlet'ini kullanın.<p> Sözdizimi: `Get-OrganizationSegment` <p> Bu cmdlet, kuruluşunuz için tanımlanan tüm segmentlerin listesini görüntüler. |
+| Bilgi engeli ilkeleri | **Get-InformationBarrierPolicy** cmdlet'ini kullanın. <p> Sözdizimi: `Get-InformationBarrierPolicy` <p> Bu cmdlet, tanımlanan bilgi engeli ilkelerinin listesini ve bunların durumunu görüntüler. |
+| En son bilgi engeli ilkesi uygulaması | **Get-InformationBarrierPoliciesApplicationStatus** cmdlet'ini kullanın. <p> Sözdizimi: `Get-InformationBarrierPoliciesApplicationStatus`<p> Bu cmdlet, ilke uygulamasının tamamlanıp tamamlanmadığı, başarısız olup olmadığı veya devam edip etmediğiyle ilgili bilgileri görüntüler. |
+| Tüm bilgi engeli ilkesi uygulamaları|Kullanın `Get-InformationBarrierPoliciesApplicationStatus -All`<p> Bu cmdlet, ilke uygulamasının tamamlanıp tamamlanmadığı, başarısız olup olmadığı veya devam edip etmediğiyle ilgili bilgileri görüntüler.|
 
 <!-- IN the " The most recent information barrier policy application, add link to troubleshooting topic -->
 
 ### <a name="what-if-i-need-to-remove-or-change-policies"></a>İlkeleri kaldırmam veya değiştirmem gerekirse ne olur?
 
-Bilgi engeli ilkelerinizi yönetmenize yardımcı olacak kaynaklara mevcuttur.
+Bilgi engeli ilkelerinizi yönetmenize yardımcı olacak kaynaklar sağlanır.
 
-- Bilgi engelleriyle ilgili bir sorun olursa bilgi [engellerini giderme'ye bakın](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting).
-- İlkelerin uygulanmalarını durdurmak için bkz. [İlke uygulamasını durdurma](information-barriers-edit-segments-policies.md#stop-a-policy-application).
-- Bilgi engeli ilkesi kaldırmak için bkz [. İlkeyi kaldırma](information-barriers-edit-segments-policies.md#remove-a-policy).
-- Kesimlerde veya ilkelerde değişiklik yapmak için bkz. [Bilgi engeli ilkelerini düzenleme (veya kaldırma](information-barriers-edit-segments-policies.md)).
+- Bilgi engelleriyle ilgili bir sorun olursa bkz [. Bilgi engelleriyle ilgili sorunları giderme](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting).
+- İlkelerin uygulanmasını durdurmak için bkz. [İlke uygulamasını durdurma](information-barriers-edit-segments-policies.md#stop-a-policy-application).
+- Bilgi engeli ilkesini kaldırmak için bkz. [İlkeyi kaldırma](information-barriers-edit-segments-policies.md#remove-a-policy).
+- Segmentlerde veya ilkelerde değişiklik yapmak için bkz. [Bilgi engeli ilkelerini düzenleme (veya kaldırma).](information-barriers-edit-segments-policies.md)
 
-## <a name="step-5-configuration-for-information-barriers-on-sharepoint-and-onedrive"></a>5. Adım: İletişim ve eğitim SharePoint engellerini OneDrive
+## <a name="step-5-configuration-for-information-barriers-on-sharepoint-and-onedrive"></a>5. Adım: SharePoint ve OneDrive ile ilgili bilgi engelleri için yapılandırma
 
-Bu hizmetlere ve hizmetlere SharePoint OneDrive engellerini yapılandırıyorsanız, bu hizmetlerle ilgili bilgi engellerini etkinleştirmeniz gerekir. Ayrıca, bu hizmetler için bilgi engellerini yapılandırıyorsanız, bu hizmetler için bilgi engellerini etkinleştirmeniz Microsoft Teams. Yeni Microsoft Teams ekip oluşturulduğunda, otomatik olarak SharePoint bir site oluşturulur ve dosyalar deneyimi Microsoft Teams ekiple ilişkilendirilz. Bu sitede ve dosyalarda varsayılan olarak bilgi engeli SharePoint ilkelerine bağlı değildir.
+SharePoint ve OneDrive için bilgi engelleri yapılandırıyorsanız, bu hizmetlerle ilgili bilgi engellerini etkinleştirmeniz gerekir. Ayrıca, Microsoft Teams için bilgi engelleri yapılandırıyorsanız bu hizmetlerle ilgili bilgi engellerini etkinleştirmeniz gerekir. bir Microsoft Teams ekibi oluşturulduğunda, otomatik olarak bir SharePoint sitesi oluşturulur ve dosya deneyimi için Microsoft Teams ile ilişkilendirilir. Bilgi engeli ilkeleri bu SharePoint sitesinde ve dosyalarında varsayılan olarak kabul edilmez.
 
-E-SharePoint OneDrive engellerini etkinleştirmek için, Bu makaledeki Bilgi engellerini kullanma makalesinde [SharePoint](/sharepoint/information-barriers) izleyin.
+SharePoint ve OneDrive bilgi engellerini etkinleştirmek için bilgi [engellerini SharePoint ile kullanma](/sharepoint/information-barriers) makalesindeki yönergeleri ve adımları izleyin.
 
 ## <a name="step-6-information-barriers-modes"></a>6. Adım: Bilgi engelleri modları
 
-Modlar, kaynağın IB moduna bağlı olarak bir kaynak Microsoft 365, paylaşımı ve üyeliği güçlendirmeye yardımcı olabilir. Modlar Grup, Microsoft 365, Microsoft Teams, OneDrive ve SharePoint etkinleştirilmiş durumdadır ve yeni veya var olan IB yapılandırmanız içinde otomatik olarak etkinleştirilir.
+Modlar, kaynağın IB moduna göre Microsoft 365 kaynağın erişimini, paylaşımını ve üyeliğini güçlendirmeye yardımcı olabilir. Modlar Microsoft 365 Grupları, Microsoft Teams, OneDrive ve SharePoint sitelerinde desteklenir ve yeni veya mevcut IB yapılandırmanızda otomatik olarak etkinleştirilir.
 
-Aşağıdaki IB modları, kaynaklarda Microsoft 365 destekler:
+Aşağıdaki IB modları Microsoft 365 kaynaklarda desteklenir:
 
 | **Mod** | **Açıklama** | **Örnek** |
 |:-----|:------------|:--------|
-| **Aç** | Kaynakla ilişkilendirilmiş herhangi bir IB Microsoft 365 yok. Herkes kaynağın üyesi olmak için davet edilemez. | Organizasyonunız için piknik etkinliği için oluşturulmuş bir ekip sitesi. |
-| **Owner Moderated (önizleme)** | Kaynakta yer alan Microsoft 365 IB ilkesi, kaynak sahibinin IB ilkesinden belirlenir. Kaynak sahipleri, IB ilkelerine göre herhangi bir kullanıcıyı kaynağa davet etmelerini sağlar. Bu mod, şirketin sahibi tarafından denetlenen uyumlu olmayan segment kullanıcıları arasında işbirliğine izin vermek istediği zaman yararlıdır. IB ilkesi başına yalnızca kaynak sahibi yeni üyeler ekleyebilir. | İk Başkan Yardımcısı Satış ve Araştırma temsilcileriyle işbirliği yapmak istiyor. Aynı siteye SharePoint Satış ve Araştırma segmenti kullanıcılarını eklemek için IB  modu Sahibi Ile ayarlanmış yeni bir müşteri merkezi sitesi. Kaynağa uygun üyelerin eklendiknden emin olmak, sahibin sorumluluğundadır. |
-| **Örtülü** | Kaynakta yer alan IB Microsoft 365 bölümleri, kaynak üyeleri IB ilkesinden devralınan bir ilkedir. Sahibi, kaynağın var olan üyeleriyle uyumlu olduğu sürece üyeleri ekleyebilir. Bu, varsayılan IB modudur ve Microsoft Teams. | Satış segmenti kullanıcısı, Microsoft Teams uyumlu kesimlerle işbirliği yapmak üzere bir ekip oluşturur. |
-| **Belirtik** | Kaynakla ilişkilendirilmiş Microsoft 365 BB ilkesi, kaynakla ilişkilendirilmiş olan kesimlere göredir. Kaynak sahibi veya SharePoint yöneticinin kaynak üzerinde kesimleri yönetme özelliği vardır.  | Yalnızca Satış segmenti üyeleri için, Satış segmentini siteyle bağimlı olarak birlikte kullanmaları için oluşturulmuş bir site.   |
+| **Açık** | Microsoft 365 kaynağıyla ilişkilendirilmiş IB ilkeleri veya kesimleri yoktur. Herkes kaynağın üyesi olmaya davet edilebilir. | Kuruluşunuz için piknik etkinliği için oluşturulmuş bir ekip sitesi. |
+| **Sahip Denetimli (önizleme)** | Microsoft 365 kaynağının IB ilkesi, kaynak sahibinin IB ilkesinden belirlenir. Kaynak sahipleri, IB ilkelerine göre herhangi bir kullanıcıyı kaynağa davet edebilir. Şirketiniz, sahibi tarafından denetlenen uyumsuz segment kullanıcıları arasında işbirliğine izin vermek istediğinde bu mod kullanışlıdır. IB ilkesine göre yalnızca kaynak sahibi yeni üyeler ekleyebilir. | İk Başkan Yardımcısı, Satış ve Araştırma VM'leri ile işbirliği yapmak istiyor. Hem Satış hem de Araştırma segmenti kullanıcılarını aynı siteye eklemek için IB modu *Sahip Moded* ile ayarlanan yeni bir SharePoint sitesi. Kaynağa uygun üyelerin eklendiğinden emin olmak sahibin sorumluluğundadır. |
+| **Örtülü** | Microsoft 365 kaynağının IB ilkesi veya kesimleri, kaynak üyeleri IB ilkesinden devralınır. Sahip, kaynağın mevcut üyeleriyle uyumlu olduğu sürece üye ekleyebilir. Bu, Microsoft Teams için varsayılan IB modudur. | Satış segmenti kullanıcısı, kuruluştaki diğer uyumlu segmentlerle işbirliği yapmak için bir Microsoft Teams ekibi oluşturur. |
+| **Açık** | Microsoft 365 kaynağının IB ilkesi, kaynakla ilişkili segmentlere göredir. Kaynak sahibi veya SharePoint yöneticisi, kaynak üzerindeki segmentleri yönetebilir.  | Yalnızca Satış segmenti üyelerinin, Satış segmentini siteyle ilişkilendirerek işbirliği yapmaları için oluşturulmuş bir site.   |
 
-Bilgi engeli modları ve bunların hizmetler genelinde nasıl yapılandırıldıları hakkında daha fazla bilgi için, aşağıdaki makalelere bakın:
+Bilgi engeli modları ve hizmetler arasında nasıl yapılandırıldıkları hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
-- [Bilgi engelleri modları ve Microsoft Teams](/microsoftteams/information-barriers-in-teams)
+- [Bilgi engeli modları ve Microsoft Teams](/microsoftteams/information-barriers-in-teams)
 - [Bilgi engelleri modları ve OneDrive](/onedrive/information-barriers)
 - [Bilgi engelleri modları ve SharePoint](/sharepoint/information-barriers)
 
 ## <a name="example-scenario-contosos-departments-segments-and-policies"></a>Örnek senaryo: Contoso'nun bölümleri, kesimleri ve ilkeleri
 
-Kuruluşun kesimleri ve ilkeleri tanımlama yaklaşımının nasıl olduğunu görmek için aşağıdaki örnek senaryoyu göz önünde bulundurabilirsiniz.
+Bir kuruluşun segmentleri ve ilkeleri tanımlamaya nasıl yaklaşabileceğini görmek için aşağıdaki örnek senaryoyu göz önünde bulundurun.
 
-### <a name="contosos-departments-and-plan"></a>Contoso'nun departmanları ve planı
+### <a name="contosos-departments-and-plan"></a>Contoso'nun bölümleri ve planı
 
-Contoso'da beş bölüm vardır: İk, Satış, Pazarlama, Araştırma ve Üretim. Endüstri düzenlemelerine uygun kalmak için, bazı departmanların kişileriyle aşağıdaki tabloda belirtilen şekilde başka departmanlarla iletişim kurmaları gerekir:
+Contoso'nun beş bölümü vardır: İk, Satış, Pazarlama, Araştırma ve Üretim. Endüstri düzenlemeleriyle uyumlu kalmak için, bazı departmanlardaki kişilerin aşağıdaki tabloda listelendiği gibi diğer departmanlarla iletişim kurmaması gerekir:
 
-| Segment | Konuşarak | Konuşamaz |
+| Segment | Konuşabilirsiniz | Konuşamıyor |
 |:----------|:--------------|:-----------------|
-| İk | Herkes | (kısıtlama yok) |
-| Satış | İk, Pazarlama, üretim | Araştırma |
+| HR | Herkes | (kısıtlama yok) |
+| Satış | İk, Pazarlama, Üretim | Araştırma |
 | Pazarlama | Herkes | (kısıtlama yok) |
-| Araştırma | İk, Pazarlama, üretim | Satış |
-| İmalat | İk, Pazarlama | İk veya Pazarlama dışında herkes |
+| Araştırma | İk, Pazarlama, Üretim | Satış |
+| Üretim | İk, Pazarlama | İk veya Pazarlama dışında herkes |
 
-Bu yapı için, Contoso'nun planı üç bilgi engeli ilkeleri içerir:
+Bu yapı için Contoso'nun planı üç bilgi engeli ilkesi içerir:
 
-1. Satış'ın Araştırma ile iletişim kurmasını engellemek için tasarlanmış bir ilke (ve Araştırma'nın Satışlarla iletişim kurmasını engellemek için başka bir ilke).
+1. Satış'ın Araştırma ile iletişim kurmasını engellemek için tasarlanmış bir ilke (ve Araştırma'nın Satış ile iletişim kurmasını engelleyen başka bir ilke).
 
-2. Üretim'in yalnızca İk ve Pazarlama ile iletişim kurmasını sağlayacak şekilde tasarlanmış bir ilke.
+2. Üretim'in yalnızca İk ve Pazarlama ile iletişim kurmasını sağlamak için tasarlanmış bir ilke.
 
-Bu senaryoda, İk veya Pazarlama için ilkeler tanımlamanız gerekmez.
+Bu senaryo için İk veya Pazarlama ilkeleri tanımlamak gerekli değildir.
 
-### <a name="contosos-defined-segments"></a>Contoso'nun tanımlanmış kesimleri
+### <a name="contosos-defined-segments"></a>Contoso'nun tanımlı kesimleri
 
-Contoso, kesimleri tanımlamak için Azure Active Directory Department özniteliğini aşağıdaki gibi kullanır:
+Contoso, segmentleri tanımlamak için Azure Active Directory'deki Department özniteliğini aşağıdaki gibi kullanır:
 
 | Bölüm | Segment Tanımı |
 |:-------------|:---------------------|
-| İk | `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"` |
+| HR | `New-OrganizationSegment -Name "HR" -UserGroupFilter "Department -eq 'HR'"` |
 | Satış | `New-OrganizationSegment -Name "Sales" -UserGroupFilter "Department -eq 'Sales'"` |
 | Pazarlama | `New-OrganizationSegment -Name "Marketing" -UserGroupFilter "Department -eq 'Marketing'"` |
 | Araştırma | `New-OrganizationSegment -Name "Research" -UserGroupFilter "Department -eq 'Research'"` |
-| İmalat | `New-OrganizationSegment -Name "Manufacturing" -UserGroupFilter "Department -eq 'Manufacturing'"` |
+| Üretim | `New-OrganizationSegment -Name "Manufacturing" -UserGroupFilter "Department -eq 'Manufacturing'"` |
 
-Tanımlı kesimlerle, Contoso ilkeler tanımlamaya devam eder.
+Contoso, tanımlanan segmentlerle ilkeleri tanımlamaya devam eder.
 
 ### <a name="contosos-information-barrier-policies"></a>Contoso'nun bilgi engeli ilkeleri
 
 Contoso, aşağıdaki tabloda açıklandığı gibi üç ilke tanımlar:
 
-| İlke | İlke Tanımı |
+| Ilkesi | İlke Tanımı |
 |:---------|:--------------------|
-| **İlke 1: Satışların Araştırma ile iletişim kurmasını engelleme** | `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive` <p> Bu örnekte, bilgi engeli ilkesi *Satış-Araştırma olarak adlandırılan bir ilkedir*. Bu ilke etkin ve uygulandığında, Satış segmentinde yer alan kullanıcıların Araştırma segmentinde yer alan kullanıcılarla iletişim kurmasını engellemeye yardımcı olur. Bu ilke tek yol ilkedir; Araştırma'nın Satışlarla iletişim kurmasını engellemez. Bunun için, İlke 2 gereklidir. |
-| **İlke 2: Araştırmanın Satışlarla iletişim kurmasını engelleme** | `New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Inactive` <p> Bu örnekte, bilgi engeli ilkesi *Araştırma-Satış olarak adlandırılan bir ilkedir*. Bu ilke etkin ve uygulandığında, Araştırma segmentinde yer alan kullanıcıların Satış segmentinde yer alan kullanıcılarla iletişim kurmasını engellemeye yardımcı olur. |
-| **İlke 3: Üretim'in yalnızca İk ve Pazarlama ile iletişim kurmasına izin verme** | `New-InformationBarrierPolicy -Name "Manufacturing-HRMarketing" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR","Marketing","Manufacturing" -State Inactive` <p> Bu durumda, bilgi engeli ilkesi *Üretim-İkPazarlama olarak adlandırılan bir ilkedir*. Bu ilke etkin ve uygulandığında, Üretim yalnızca İk ve Pazarlama ile iletişim kurabilir. İk ve Pazarlama diğer kesimlerle iletişim kurma kısıtlaması değildir. |
+| **İlke 1: Satışların Araştırma ile iletişim kurmasını engelleme** | `New-InformationBarrierPolicy -Name "Sales-Research" -AssignedSegment "Sales" -SegmentsBlocked "Research" -State Inactive` <p> Bu örnekte, bilgi engeli ilkesi *Sales-Research* olarak adlandırılır. Bu ilke etkin ve uygulandığında, Satış segmentindeki kullanıcıların Araştırma segmentindeki kullanıcılarla iletişim kurmasını önlemeye yardımcı olur. Bu ilke tek yönlü bir ilkedir; Araştırma'nın Satış ile iletişim kurmasını engellemez. Bunun için İlke 2 gereklidir. |
+| **İlke 2: Araştırmanın Satış ile iletişim kurmasını engelleme** | `New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -State Inactive` <p> Bu örnekte, bilgi engeli ilkesi *Research-Sales* olarak adlandırılır. Bu ilke etkin ve uygulandığında, Araştırma segmentindeki kullanıcıların Satış segmentindeki kullanıcılarla iletişim kurmasını önlemeye yardımcı olur. |
+| **İlke 3: Üretimin yalnızca İk ve Pazarlama ile iletişim kurmasına izin ver** | `New-InformationBarrierPolicy -Name "Manufacturing-HRMarketing" -AssignedSegment "Manufacturing" -SegmentsAllowed "HR","Marketing","Manufacturing" -State Inactive` <p> Bu durumda, bilgi engeli ilkesi *Manufacturing-HRMarketing* olarak adlandırılır. Bu ilke etkin ve uygulandığında, Üretim yalnızca İk ve Pazarlama ile iletişim kurabilir. İk ve Pazarlama'nın diğer segmentlerle iletişim kurması kısıtlanmaz. |
 
-Kesimler ve ilkeler tanımlandığı için, Contoso **başlangıç-informationBarrierPoliciesApplication** cmdlet'ini çalıştırarak ilkeleri uygular.
+Segmentler ve ilkeler tanımlandığında Contoso, **Start-InformationBarrierPoliciesApplication** cmdlet'ini çalıştırarak ilkeleri uygular.
 
-Cmdlet bitir olduğunda, Contoso yasal ve endüstri gereksinimleriyle uyumludur.
+Cmdlet tamamlandığında Contoso yasal ve sektör gereksinimleriyle uyumludur.
 
 ## <a name="resources"></a>Kaynaklar
 
-- [Bilgi engellerine genel bir bakış elde edin](information-barriers.md)
-- [Bu konuda bilgi engelleri hakkında daha fazla Microsoft Teams](/MicrosoftTeams/information-barriers-in-teams)
-- [SharePoint Online'daki bilgi engelleri hakkında daha fazla bilgi](/sharepoint/information-barriers)
-- [Bu konuda bilgi engelleri hakkında daha fazla OneDrive](/onedrive/information-barriers)
+- [Bilgi engellerine genel bakış edinin](information-barriers.md)
+- [Microsoft Teams bilgi engelleri hakkında daha fazla bilgi edinin](/MicrosoftTeams/information-barriers-in-teams)
+- [SharePoint Online'da bilgi engelleri hakkında daha fazla bilgi edinin](/sharepoint/information-barriers)
+- [OneDrive bilgi engelleri hakkında daha fazla bilgi edinin](/onedrive/information-barriers)
