@@ -14,12 +14,12 @@ search.appverid: MET150
 description: Tehdit düzeltme
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: dbb86061ddd7d94cf37a38d21d99d75eaaa44fae
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 98b425c39cd12aea55714e9ade192e2e770b26cd
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64704908"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714856"
 ---
 # <a name="remediate-malicious-email-delivered-in-office-365"></a>Office 365'te teslim edilen kötü amaçlı e-postaları düzeltme
 
@@ -42,10 +42,6 @@ Yöneticiler e-postalar üzerinde gerekli eylemleri gerçekleştirebilir, ancak 
 Güvenlik ekipleri, Explorer'daki arama ve filtreleme özelliklerini kullanarak tehditleri el ile tanımladığında *el ile avlanma* gerçekleşir. El ile e-posta düzeltmesi, düzeltilmesi gereken bir e-posta kümesi tanımlandıktan sonra herhangi bir e-posta görünümü (*Kötü Amaçlı Yazılım*, *Kimlik Avı* veya *Tüm e-posta*) aracılığıyla tetiklenebilir.
 
 :::image type="content" source="../../media/microsoft-365-defender-threat-explorer-manual-remediation.png" alt-text="Office 365 Gezgini'nde tarihe göre el ile avcılık ekran görüntüsü.":::
-
-*Eylem günlükleri* Başarılı, başarısız ve zaten hedefte gibi düzeltme durumunun ayrıntılarını gösterir.
-
-:::image type="content" source="../../media/microsoft-365-defender-action-center-history.png" alt-text="İşlem Merkezi, başarılı, başarısız ve zaten hedefte olan düzeltme durumunun ayrıntılarını gösterir.":::
 
 Güvenlik ekipleri, e-postaları çeşitli yollarla seçmek için Explorer'ı kullanabilir:
 
@@ -83,12 +79,11 @@ Birleşik İşlem Merkezi son 30 güne ait düzeltme eylemlerini gösterir. Gezg
 
 Düzeltme adı, onay kimliği, Araştırma Kimliği, oluşturma tarihi, açıklama, durum, eylem kaynağı, eylem türü, karar verme ölçütü, durum gibi ilgili ayrıntıları görüntülemek için herhangi bir düzeltme öğesini açın. Ayrıca eylem ayrıntılarını, e-posta kümesi ayrıntılarını, uyarıyı ve Olay ayrıntılarını içeren bir yan bölme açar.
 
-- *Araştırma sayfasını açın* ; daha az ayrıntı ve sekme içeren bir yönetici Araştırması açılır. Aşağıdaki gibi ayrıntıları gösterir: ilgili uyarı, düzeltme için seçilen varlık, gerçekleştirilen eylem, düzeltme durumu, varlık sayısı, günlükler, eylemi onaylayan. Bu araştırma, yönetici tarafından el ile yapılan araştırmanın kaydını tutar ve yönetici tarafından yapılan seçimlerin ayrıntılarını içerir, bu nedenle yönetici eylem araştırması olarak adlandırılır. Araştırma üzerinde işlem yapmanıza ve zaten onaylanmış durumda olduğunu uyarmanıza gerek yoktur.   
-- *E-posta sayısı* Tehdit Gezgini aracılığıyla gönderilen e-postaların sayısını görüntüler. Bu e-postalar eyleme dönüştürülebilir veya eyleme dönüştürülemez olabilir. 
-- *Eylem günlükleri* Başarılı/ başarısız/ zaten hedefte gibi düzeltme durumunun ayrıntılarını gösterir
+- *Araştırma sayfasını açın* ; daha az ayrıntı ve sekme içeren bir yönetici Araştırması açılır. Aşağıdaki gibi ayrıntıları gösterir: ilgili uyarı, düzeltme için seçilen varlık, gerçekleştirilen eylem, düzeltme durumu, varlık sayısı, günlükler, eylemi onaylayan. Bu araştırma, yönetici tarafından el ile yapılan araştırmanın kaydını tutar ve yönetici tarafından yapılan seçimlerin ayrıntılarını içerir, bu nedenle yönetici eylem araştırması olarak adlandırılır. Araştırma üzerinde işlem yapmanıza ve zaten onaylanmış durumda olduğunu uyarmanıza gerek yoktur.
+- *E-posta sayısı* Tehdit Gezgini aracılığıyla gönderilen e-postaların sayısını görüntüler. Bu e-postalar eyleme dönüştürülebilir veya eyleme dönüştürülemez olabilir.
+- *Eylem günlükleri* Başarılı, başarısız ve zaten hedefte gibi düzeltme durumlarının ayrıntılarını gösterin.
 
-  > [!div class="mx-imgBorder"]
-  > [![eyleme dönüştürülebilir ve eyleme dönüştürülemez tehditler içeren işlem merkezinin ekran görüntüsü.](../../media/tp-RemediationArticle5.png)](../../media/tp-RemediationArticle5.png#lightbox)
+:::image type="content" source="../../media/microsoft-365-defender-action-center-history-panel.png" alt-text="Gelen Kutusuna Taşı seçeneğinin açık olduğu İşlem Merkezi.":::
 
   - **Eyleme dönüştürülebilir**: Aşağıdaki bulut posta kutusu konumlarındaki e-postalar üzerinde işlem yapılabilir ve taşınabilir:
     - Gelen kutusu

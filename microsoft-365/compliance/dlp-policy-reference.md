@@ -19,12 +19,12 @@ ms.collection:
 recommendations: false
 description: DLP ilkesi bileşeni ve yapılandırma başvurusu
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: d6bc24f313d1998979a460bcd41e87ccbe8abc5c
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 169fb93f7343fd038af9e7b8ae789dabc871c6aa
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64704933"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64714009"
 ---
 # <a name="data-loss-prevention-policy-reference"></a>Veri Kaybı Önleme ilkesi başvurusu
 
@@ -202,8 +202,6 @@ Aşağıdaki örnekte Kural 1, en kısıtlayıcı olduğu için diğer eşleşen
 - Kural 4: zorlama yok
 
 Diğer tüm kurallar değerlendirilir ancak eylemleri uygulanmaz. Denetim günlükleri, dosyaya uygulanan en kısıtlayıcı kuralı gösterir. Eşleşen birden fazla kural varsa ve bunlar eşit derecede kısıtlayıcıysa, ilke ve kural önceliği dosyaya hangi kuralın uygulanacağını yönetir.
-
-Uç noktalar için, DLP'nin desteklenen tüm etkinlikler için gerçekleştirdiği eylemleri belirli bir ekleme koşulları kümesi için tek bir kuralda yapılandırabilirsiniz.
 
 ### <a name="conditions"></a>Koşul -ları
 

@@ -1,5 +1,5 @@
 ---
-title: Ürün anahtarı kullanarak ödemesi yapılan aboneliğe lisans ekleme veya aboneliği uzatma
+title: Ürün anahtarı kullanarak lisans ekleme
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -18,62 +18,62 @@ ms.custom:
 - TopSMBIssues
 - AdminSurgePortfolio
 search.appverid: MET150
-description: Ürün anahtarıyla aboneliğinize lisans ekleme veya aboneliğinizin süresini uzatmayı öğrenin.
+description: Ürün anahtarıyla aboneliğinize lisans eklemeyi veya aboneliğinizi genişletmeyi öğrenin.
 ROBOTS: NOINDEX
 ms.date: 04/07/2021
-ms.openlocfilehash: 4d14f00115059cf28cff71ac126b1f0fdfbb3890
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: df2c4d65f80aedb79e08f6efcab2873256e88d2f
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63311878"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64715307"
 ---
-# <a name="add-licenses-to-or-extend-a-subscription-paid-for-using-a-product-key"></a>Ürün anahtarı kullanarak ödemesi yapılan aboneliğe lisans ekleme veya aboneliği uzatma
+# <a name="add-licenses-to-or-extend-a-subscription-paid-for-using-a-product-key"></a>Ürün anahtarı kullanmak için ödenen aboneliğe lisans ekleme veya aboneliği genişletme
 
-Ön ödemeli lisanslar size 25 karakterli bir alfasayısal kod olarak verilir. Gereksinilen lisansları satın aldıktan sonra, bunları aboneliğinize  eklersiniz. Ayrıca, aboneliğinizin son kullanma tarihini uzatmak için de ürün anahtarı kullanabilirsiniz.
+Ön ödemeli lisanslar size 25 karakterli bir alfasayısal kod olarak verilir. İhtiyacınız olan lisansları satın aldıktan sonra bunları aboneliğinize ekleyebilirsiniz. Aboneliğinizin sona erme tarihini uzatmak için bir ürün anahtarı da kullanabilirsiniz.
 
 > [!NOTE]
-> Yeni ürün anahtarı satın almak istemiyorsanız, aboneliğinize kredi kartı veya banka hesabı eklemek ya da daha fazla lisansa ödeme yapmak ya da aboneliğinizin son kullanma tarihini uzatmak istediğiniz zaman bunu seçebilirsiniz. Daha fazla bilgi için bkz [. Aboneliğinizi yenileme](../subscriptions/renew-your-subscription.md).
+> Yeni bir ürün anahtarı satın almak istemiyorsanız, daha fazla lisans için ödeme yapmak veya aboneliğinizin son kullanma tarihini uzatmak için aboneliğinize her zaman bir kredi kartı veya banka hesabı eklemeyi seçebilirsiniz. Daha fazla bilgi için bkz. [Aboneliğinizi yenileme](../subscriptions/renew-your-subscription.md).
   
 ## <a name="add-licenses-to-your-subscription"></a>Aboneliğinize lisans ekleme
 
 ::: moniker range="o365-worldwide"
 
-1. Yönetim merkezinde Ürünlerinizi Faturalandırma **sayfasına** \> gidin.<a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank"></a>
+1. Yönetim merkezinde **Faturalama** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Ürünleriniz</a> sayfasına gidin.
 ::: moniker-end
 
 ::: moniker range="o365-21vianet"
 
-1. Yönetim merkezinde Ürünlerinizi Faturalandırma **sayfasına** \> gidin.<a href="https://go.microsoft.com/fwlink/p/?linkid=850626" target="_blank"></a>
+1. Yönetim merkezinde **Faturalama** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850626" target="_blank">Ürünleriniz</a> sayfasına gidin.
 ::: moniker-end
 
-2. Ürünler **sekmesinde** , lisans eklemek istediğiniz aboneliği seçin.
-3. Abonelik ayrıntıları sayfasındaki Lisanslar **bölümünde Daha fazla** lisans **ekle'yi seçin**.
-4. Daha fazla **lisans ekle bölmesinde Yeni ve** kullanılmamış **bir ürün anahtarı kullan'ı seçin ve sonra** da Sonraki'yi **seçin**.
-5. Ürün anahtarını girin ve Ardından Sonraki'yi **seçin**.
+2. **Ürünler** sekmesinde, lisans eklemek istediğiniz aboneliği seçin.
+3. Abonelik ayrıntıları sayfasındaki **Lisanslar** bölümünde **Daha fazla lisans ekle'yi** seçin.
+4. **Daha fazla lisans ekle bölmesinde** **Yeni ve kullanılmayan bir ürün anahtarı kullan'ı** ve ardından **İleri'yi** seçin.
+5. Ürün anahtarını girin ve **İleri'yi** seçin.
     > [!NOTE]
-    > Birden fazla ürün anahtarınız varsa Başka bir ürün anahtarı **ekle'yi seçerek** bunları girsiniz.
-6. Sipariş ayrıntılarınızı gözden geçirin ve Ardından Kullan'ı **seçin**.
+    > Birden fazla ürün anahtarınız varsa, bunları girmek için **Başka bir ürün anahtarı ekle'yi** seçebilirsiniz.
+6. Sipariş ayrıntılarınızı gözden geçirin ve **Kullan'ı** seçin.
   
 ## <a name="extend-the-expiration-date-of-your-subscription"></a>Aboneliğinizin sona erme tarihini uzatma
 
 ::: moniker range="o365-worldwide"
 
-1. Yönetim merkezinde Ürünlerinizi Faturalandırma **sayfasına** \> gidin.<a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank"></a>
+1. Yönetim merkezinde **Faturalama** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Ürünleriniz</a> sayfasına gidin.
 ::: moniker-end
 
 ::: moniker range="o365-21vianet"
 
-1. Yönetim merkezinde Ürünlerinizi Faturalandırma **sayfasına** \> gidin.<a href="https://go.microsoft.com/fwlink/p/?linkid=850626" target="_blank"></a>
+1. Yönetim merkezinde **Faturalama** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850626" target="_blank">Ürünleriniz</a> sayfasına gidin.
 ::: moniker-end
 
-2. Ürünler **sekmesinde** , uzatmak istediğiniz aboneliği seçin.
-3. Abonelik ayrıntıları sayfasında, Abonelik ve ödeme **ayarları bölümünde Bitiş tarihini** **uzat'ı seçin**.
-4. Yenileme veya **kullanıcı lisansları ekleme sayfasında Yeni** ve kullanılmamış bir ürün anahtarı kullan'ı **seçin ve sonra** da Sonraki'yi **seçin**.
-5. Ürün anahtarını girin ve Ardından Sonraki'yi **seçin**.
+2. **Ürünler** sekmesinde, genişletmek istediğiniz aboneliği seçin.
+3. Abonelik ayrıntıları sayfasındaki **Abonelik ve ödeme ayarları** bölümünde **Bitiş tarihini genişlet'i** seçin.
+4. **Kullanıcı lisanslarını yenile veya ekle** sayfasında **Yeni ve kullanılmayan bir ürün anahtarı kullan'ı** ve ardından **İleri'yi** seçin.
+5. Ürün anahtarını girin ve **İleri'yi** seçin.
     > [!NOTE]
-    > Birden fazla ürün anahtarınız varsa Başka bir ürün anahtarı **ekle'yi seçerek** bunları girsiniz.
-6. Sipariş ayrıntılarınızı gözden geçirin ve Ardından Kullan'ı **seçin**.
+    > Birden fazla ürün anahtarınız varsa, bunları girmek için **Başka bir ürün anahtarı ekle'yi** seçebilirsiniz.
+6. Sipariş ayrıntılarınızı gözden geçirin ve **Kullan'ı** seçin.
 
 ## <a name="related-articles"></a>İlgili makaleler
 

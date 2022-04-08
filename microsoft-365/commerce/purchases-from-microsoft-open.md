@@ -1,5 +1,5 @@
 ---
-title: Microsoft Open'tan satın aldığınız ürün anahtarınızı girin
+title: Microsoft Open ürün anahtarınızı girin
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -18,51 +18,51 @@ ms.custom:
 - AdminSurgePortfolio
 search.appverid: MET150
 ROBOTS: NOINDEX
-description: İşletmeler için Office aboneliğinizin nasıl etkinleştir, yenilendir veya Microsoft 365 öğrenin.
+description: İş için Microsoft 365 aboneliğini etkinleştirmeyi, yenilemeyi veya lisans eklemeyi öğrenin.
 ms.date: 10/21/2020
-ms.openlocfilehash: 3ed0d47587d04b4058b878ec938a216a0083f36b
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 2f877438571c261217305651121d33b3f14697b4
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63330181"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64715153"
 ---
-# <a name="enter-your-product-key-purchased-from-microsoft-open"></a>Microsoft Open'tan satın aldığınız ürün anahtarınızı girin
+# <a name="enter-your-product-key-purchased-from-microsoft-open"></a>Microsoft Open'dan satın alınan ürün anahtarınızı girin
 
-Microsoft Açık Lisans Microsoft 365 iş satın [aldıysanız](https://go.microsoft.com/fwlink/p/?LinkID=613298), bu makale size göredir. Ürün anahtarı satın alan toplu lisanslama müşterileri bu konuyu takip etmek için aboneliği etkinleştirmek, yenilemek veya lisans eklemek için bu konuyu takip edebilirsiniz.
+İş için Microsoft 365 bir [Microsoft Açık Lisans Programı'ndan](https://go.microsoft.com/fwlink/p/?LinkID=613298) satın aldıysanız, bu makale size yöneliktir. Ürün anahtarı satın alan toplu lisanslama müşterileri, bir aboneliğe lisansları etkinleştirmek, yenilemek veya eklemek için bu konuyu izleyebilir.
   
- **Hemen yardıma mı ihtiyacınız var?** [Microsoft Destek'i arayın](../admin/get-help-support.md).
+ **Hemen yardıma mı ihtiyacınız var?** [Microsoft Desteği ara](../admin/get-help-support.md).
   
  **Başka bir şey mi gerekiyor?**
 
- **Ürün Anahtarı Ev Microsoft 365 Kişisel hakkında yardım için** bkz [. Ürün anahtarlarını diğer Office](https://support.microsoft.com/office/12a5763a-d45c-4685-8c95-a44500213759).
+ **Microsoft 365 Ev veya Kişisel ile ilgili yardım için** bkz. [ürün anahtarlarını Office ile kullanma](https://support.microsoft.com/office/12a5763a-d45c-4685-8c95-a44500213759).
   
- **Perakende satış Microsoft 365 İş Standart satın almayla ilgili yardım** için bkz. Perakende satış [mağazasından satın aldığınız ürün anahtarınızı girme](enter-your-product-key.md).
+ **Perakende satış mağazasından satın alınan Microsoft 365 İş Standart ile ilgili yardım için** bkz. [Perakende mağazasından satın alınan ürün anahtarınızı girme](enter-your-product-key.md).
   
-## <a name="activate-renew-or-add-licenses-to-a-subscription-purchased-from-microsoft-open"></a>Microsoft Open'dan satın alınan bir aboneliğe lisans ekleme, yenileme veya lisans ekleme
+## <a name="activate-renew-or-add-licenses-to-a-subscription-purchased-from-microsoft-open"></a>Microsoft Open'dan satın alınan bir aboneliğe lisansları etkinleştirme, yenileme veya ekleme
 
-Microsoft Açık Microsoft 365 Programı'nden lisans satın aldıysanız, aboneliği etkinleştirir, yeniler veya lisanslar eklerken sistem anahtarı sizin için otomatik olarak girer.
+Microsoft 365 bir Microsoft Açık Lisans Programı'ndan satın aldıysanız, aboneliği etkinleştirdiğinizde, yenilediğinizde veya aboneliğe lisans eklediğinizde sistem anahtarı sizin için otomatik olarak girer.
   
-1. Bir iş ortağından anahtar satın Microsoft 365, Microsoft'tan gelen bir etkinleştirme bağlantısı içeren e-postayı kontrol edin.
+1. bir Microsoft 365 iş ortağından anahtar satın aldıktan sonra, Microsoft'tan gelen ve etkinleştirme bağlantısı içeren bir e-posta için gelen kutunuzu denetleyin.
 
     > [!TIP]
-    >  Bu e-posta toplu lisans sözleşmesinde çevrimiçi yönetici olarak listelenen kişiye gönderilir. Kimin çevrimiçi yönetici olarak atan olduğundan emin değilseniz iş ortağınıza Microsoft 365. 
+    >  Bu e-posta toplu lisans sözleşmesinde çevrimiçi yönetici olarak listelenen kişiye gönderilir. Kimlerin çevrimiçi yönetici olarak atandığından emin değilseniz Microsoft 365 iş ortağınıza sorun. 
   
-2. İş veya okul hesabınızla oturum açmak için e-postadaki bağlantıyı izleyin, Open Lisans Sözleşmesi'ni kabul edin ve aboneliğinizi yenileyin. Adım adım kılavuz için, Yeni aboneliği etkinleştirme, var olan aboneliği yenileme veya var olan aboneliğe lisans ekleme işlemlerinin anlat olduğu PDF dosyasını (Çevrimiçi Hizmetleri Etkinleştirme[: Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=618100) Aboneliği) indirin.
+2. İş veya okul hesabınızla oturum açmak için e-postadaki bağlantıyı izleyin, Open Lisans Sözleşmesi'ni kabul edin ve aboneliğinizi yenileyin. Adım adım izlenecek yol için, yeni bir aboneliği etkinleştirmeyi, mevcut aboneliği yenilemeyi veya mevcut aboneliğe lisans eklemeyi kapsayan [Çevrimiçi Hizmetleri Etkinleştirme: aboneliği Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=618100) PDF kılavuzunu indirin.
 
 > [!NOTE]
-> Toplu lisanslama müşterileri Toplu Lisanslama Hizmeti Merkezi'nde [abonelikleri etkinleştirmeyi de seçebilir](https://go.microsoft.com/fwlink/p/?LinkID=282016). Nasıl yapıldığını öğrenmek için [Çevrimiçi Hizmetleri Toplu Lisanslama Hizmet Merkezi Aracılığıyla Etkinleştirme](https://go.microsoft.com/fwlink/p/?LinkId=618096) adlı PDF kılavuzunu indirin.
+> Toplu lisanslama müşterileri, [Toplu Lisanslama Hizmet Merkezi'nde](https://go.microsoft.com/fwlink/p/?LinkID=282016) abonelikleri etkinleştirmeyi de seçebilir. Nasıl yapıldığını öğrenmek için [Çevrimiçi Hizmetleri Toplu Lisanslama Hizmet Merkezi Aracılığıyla Etkinleştirme](https://go.microsoft.com/fwlink/p/?LinkId=618096) adlı PDF kılavuzunu indirin.
   
 ## <a name="whats-next"></a>Sırada ne var?
 
-İş için yeni Microsoft 365, işletmeniz için [e-Microsoft 365 ayarlamayı öğrenin](../admin/setup/setup.md).
+İşletmeler için Microsoft 365 yeniyseniz [kuruluşunuz için Microsoft 365 ayarlamayı](../admin/setup/setup.md) öğrenin.
   
-## <a name="still-having-trouble-with-product-keys"></a>Ürün anahtarlarla ilgili hala sorun mu yaşıyorsunuz?
+## <a name="still-having-trouble-with-product-keys"></a>Ürün anahtarlarıyla ilgili hala sorun mu yaşıyorsunuz?
 
-Sık karşılaşılan hatalar ve çözümler listesini bir göz atabilirsiniz: [Ürün anahtarıyla ilgili sorun mu var?](product-key-errors-and-solutions.md)
+Yaygın hataların ve çözümlerin listesine göz atın: [Ürün anahtarınızla ilgili sorunlar mı var?](product-key-errors-and-solutions.md)
   
 İş ortakları şu konuya bakabilir: [İş ortakları: Müşteri aboneliğini kurmak için ürün anahtarını kullanma](https://support.microsoft.com/office/cf22c50f-95c9-4fa2-b959-c264de256d40).
   
 Toplu lisans müşterileri daha fazla bilgi edinmek için [Microsoft Toplu Lisanslama Hizmeti Merkezi eğitim ve kaynakları](https://go.microsoft.com/fwlink/p/?LinkId=618103) adresini ziyaret edebilir.
   
-Bir kişi ile konuşmak için [Microsoft Destek'i de arayın](../admin/get-help-support.md).
+Ya da bir kişiyle konuşmak istiyorsanız[, Microsoft Desteği arayın](../admin/get-help-support.md).

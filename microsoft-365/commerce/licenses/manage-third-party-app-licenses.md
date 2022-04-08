@@ -1,5 +1,5 @@
 ---
-title: Birden çok uygulamada ISV uygulama lisanslarını Microsoft 365 yönetim merkezi
+title: ISV uygulama lisanslarını yönetme
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -18,51 +18,51 @@ ms.custom:
 - AdminSurgePortfolio
 search.appverid:
 - MET150
-description: Yazılım lisanslarında bağımsız yazılım satıcısı (ISV) uygulamalarının lisanslarını Microsoft 365 yönetim merkezi.
+description: Microsoft 365 yönetim merkezi bağımsız yazılım satıcısı (ISV) uygulamalarının lisanslarını yönetmeyi öğrenin.
 ms.date: 06/15/2021
-ms.openlocfilehash: 8530a9bdc13ec0ebee0857b8cfcd47b498460409
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b652b8394b4958788ba49844708a3f80477e2489
+ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63328995"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64715417"
 ---
-# <a name="manage-isv-app-licenses-in-the-microsoft-365-admin-center"></a>Birden çok uygulamada ISV uygulama lisanslarını Microsoft 365 yönetim merkezi
+# <a name="manage-isv-app-licenses-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi ISV uygulama lisanslarını yönetme
 
-Bağımsız bir yazılım satıcısı (ISV) uygulaması, Microsoft dışında bir yazılım satıcısından satın alan bir uygulamadır.
+Bağımsız yazılım satıcısı (ISV) uygulaması, Microsoft dışında bir yazılım satıcısından satın alınan bir uygulamadır.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Lisansları atamak için Genel, Lisans veya Kullanıcı yöneticisi olmak gerekir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
+Lisansları atamak için Genel, Lisans veya Kullanıcı yöneticisi olmanız gerekir. Daha fazla bilgi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
 
-## <a name="assign-isv-app-licenses-to-users-or-groups"></a>Kullanıcılara veya gruplara ISV uygulaması lisansları atama
+## <a name="assign-isv-app-licenses-to-users-or-groups"></a>Kullanıcılara veya gruplara ISV uygulama lisansları atama
 
-1. Faturalar Microsoft 365 yönetim merkezi **,** <a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">BillingLicenses</a> >  sayfasına gidin.
+1. Microsoft 365 yönetim merkezi **Faturalama** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">Lisansları</a> sayfasına gidin.
 2. Lisans atamak istediğiniz uygulamayı seçin.
-3. Lisans ayrıntıları sayfasında Lisans **ata'ya tıklayın**.
-4. Lisans **ata bölmesinde** , bir kullanıcının veya grubun adını yazmaya başlayın ve ardından sonuçlardan bunu listeye eklemek için seçin.
-5. Bitirdikten sonra Ata'ya ve **sonra Kapat'a** **seçin**.
+3. Lisans ayrıntıları sayfasında **Lisans ata'yı** seçin.
+4. **Lisans ata** bölmesinde, bir kullanıcı veya grubun adını yazmaya başlayın ve ardından sonuçlar arasından seçerek listeye ekleyin.
+5. İşiniz bittiğinde **Ata'yı** ve ardından **Kapat'ı** seçin.
 
-## <a name="unassign-isv-app-licenses-from-users-or-groups"></a>Kullanıcılardan veya gruplardan ISV uygulama lisanslarının atamasını iptal et
+## <a name="unassign-isv-app-licenses-from-users-or-groups"></a>Kullanıcılardan veya gruplardan ISV uygulama lisanslarının atamasını kaldırma
 
-1. Yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">BillingLicenses</a>  >  sayfasında.
-2. Lisans atamalarını iptal etmek istediğiniz uygulamayı seçin.
-3. Lisans ayrıntıları sayfasında, lisansları kaldırmak için kullanıcıları ve grupları seçin, ardından Lisans atamalarını kaldır'ı seçin.
-4. İletişim kutusunda, lisansları kaldırmak istediğiniz onaylayın ve sonra Atamayı Kaldır'ı seçin.
+1. Yönetim merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">BillingLicenses</a>  >  sayfası.
+2. Lisans atamasını silmek istediğiniz uygulamayı seçin.
+3. Lisans ayrıntıları sayfasında, lisansların kaldırılacağı kullanıcıları ve grupları seçin ve ardından Lisansların atamasını kaldır'ı seçin.
+4. İletişim kutusunda, lisansları kaldırmak istediğinizi onaylayın, ardından Atamayı Kaldır'ı seçin.
 
 ## <a name="add-or-remove-isv-app-licenses-for-your-account"></a>Hesabınız için ISV uygulama lisansları ekleme veya kaldırma
 
-ISV uygulama lisansları uygulama satıcısı tarafından yönetilir. Hesabınıza lisans eklemek veya kaldırmak için satıcıyla iletişime geçin.
+ISV uygulama lisansları uygulama satıcısı tarafından yönetilir. Hesabınız için lisans eklemek veya kaldırmak için satıcıya başvurun.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Satın almış olabileceğiniz ISV uygulamasına bağlı olarak, bir sonraki adımınız uygulamayı kuruluş ortamına yüklemek olabilir. Uygulamayı yüklemek kullanıcılarınız için kullanılabilir. Ortamınıza ISV uygulaması yüklemek için aşağıdaki adımları kullanın.
+Satın aldığınız ISV uygulamasına bağlı olarak, sonraki adımınız uygulamayı kuruluşunuzun ortamına yüklemek olabilir. Uygulamayı yüklemek, uygulamayı kullanıcılarınız için kullanılabilir hale getirir. Ortamınıza bir ISV uygulaması yüklemek için aşağıdaki adımları kullanın.
 
-1. Yönetim merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">BillingLicenses</a>  >  sayfasında.
+1. Yönetim merkezinde <a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">BillingLicenses</a>  >  sayfası.
 2. Hesabınıza yüklemek istediğiniz uygulamayı seçin.
-3. Lisans ayrıntıları sayfasında Bu ürünü **yükle'yi seçin**. Uygulamayı ortamınıza yüklemeniz gereken farklı bir platform sitesine yönlendirildiniz.
+3. Lisans ayrıntıları sayfasında **Bu ürünü yükle'yi** seçin. Uygulamayı ortamınıza yüklediğiniz farklı bir platform sitesine yönlendirilirsiniz.
 
 ## <a name="related-content"></a>İlgili içerik
 
 [Kullanıcılara lisans atama](../../admin/manage/assign-licenses-to-users.md) (makale) \
-[Kullanıcılardan lisans atamalarını iptal et](../../admin/manage/remove-licenses-from-users.md) (makale)
+[Kullanıcılardan lisans atamalarını kaldırma](../../admin/manage/remove-licenses-from-users.md) (makale)
