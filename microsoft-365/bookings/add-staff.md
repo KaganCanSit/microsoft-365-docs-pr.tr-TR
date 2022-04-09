@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 description: Bu sayfayı, personel listenizi oluşturmak ve ad, telefon numarası ve e-posta adresi gibi personel üyesi ayrıntılarını yönetmek için kullanın.
-ms.openlocfilehash: 2df48efe321a91c1eb2df712e954033eb28357aa
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: ca938acf4bfb567d366c7ffd684e8bce8c9eea74
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64713943"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746807"
 ---
 # <a name="add-staff-to-bookings"></a>Bookings’e personel ekleme
 
@@ -58,7 +58,7 @@ Bookings bir Microsoft 365 özelliği olsa da, tüm personelinizin Microsoft 365
 
     Örneğin, bir personel üyesinin bir ekip toplantısı veya Çarşamba günü saat 15:00'te zamanlanmış kişisel bir randevusu varsa, Bookings bu personel üyesini ilgili zaman diliminde rezervasyon yapılamaz olarak gösterir. Bu süre, aşağıdaki örnekte gösterildiği gibi Bookings takvim görünümünde meşgul veya belirsiz olarak görünür.
 
-    :::image type="content" source="media/bookings-busy-tentative-view.jpg" alt-text="Bookings takviminin görünümü.":::
+    :::image type="content" source="media/bookings-busy-tentative-view-2.png" alt-text="Bookings takviminin görünümü.":::
 
 > [!IMPORTANT]
 > Çift rezervasyondan kaçınmak ve personel üyelerinizin uygunluk durumunu iyileştirmek için bu ayarı açık bırakmanızı (varsayılan olarak açıktır) kesinlikle öneririz.

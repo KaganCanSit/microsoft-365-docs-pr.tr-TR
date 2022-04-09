@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 0968717e-b61f-4b06-987c-6c1464541782
 description: Microsoft Bookings'de çalışanların çalışma saatlerini ve uygunluk durumunu ayarlayın.
-ms.openlocfilehash: 533cf3075c01753061f153d6dcf16bdb02bfa5a3
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: f87a5f13ace9689cd838942e6558529659671238
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714801"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64747280"
 ---
 # <a name="employee-working-hours-in-microsoft-bookings"></a>Microsoft Bookings’de çalışanların çalışma saatleri
 
@@ -27,19 +27,19 @@ ms.locfileid: "64714801"
 
 Müşterilerin iş yeri dışındayken rezervasyon yapmaması için personel üyeleri için izin rezervasyonu yapmak istiyorsanız yönergeler için bkz. [İş kapanışları, izin ve tatil zamanı zamanlama](schedule-closures-time-off-vacation.md) .
 
-## <a name="customize-employee-working-hours"></a>Çalışan çalışma saatlerini özelleştirme
+## <a name="watch-set-employee-working-hours"></a>İzleme: Çalışan çalışma saatlerini ayarlama
 
 Bir çalışanın çalışma saatlerini ayarlamak için bu videoyu izleyin veya aşağıdaki adımları izleyin.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWuXUq]
 
+## <a name="customize-employee-working-hours"></a>Çalışan çalışma saatlerini özelleştirme
+
 1. Microsoft 365'da uygulama başlatıcıyı ve ardından **Bookings'ı** seçin.
 
-1. Takviminizi seçin. 
+1. Takviminizi seçin.
 
 1. Gezinti bölmesinde **Personel'i** seçin ve ardından saatlerini ayarlamak istediğiniz personel üyesini seçin.
-
-   ![Adı vurgulanmış Bookings personel ekranının resmi.](../media/bookings-staff-name-highlight.png)
 
 1. Çalışma saatleri'nin altında **İş saatlerini kullan** onay kutusunu temizleyin.
 

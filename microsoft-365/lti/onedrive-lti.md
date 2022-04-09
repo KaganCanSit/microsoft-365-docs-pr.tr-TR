@@ -1,5 +1,5 @@
 ---
-title: Birlikte Microsoft OneDrive Learning Birlikte Çalışabilirlik Araçlarını Kullanma
+title: Microsoft OneDrive LTI'yi Tuval ile tümleştirme
 ms.author: heidip
 author: MicrosoftHeidi
 manager: serdars
@@ -12,94 +12,94 @@ f1.keywords:
 ms.collection: M365-modern-desktop
 ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
-description: Yeni Birlikte Çalışma Araçları Birlikte Çalışma Uygulaması ile ödev oluşturun ve not edin, ders içeriğini oluşturun ve sergiyi oluşturun, dosyalar üzerinde gerçek Microsoft OneDrive Learning işbirliği yapın.
-ms.openlocfilehash: 68622305e6a277b44538d4a05ee42a6b680749f3
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+description: Tuval için yeni Microsoft OneDrive Learning Araçları Birlikte Çalışabilirlik Uygulaması ile ödevler oluşturun ve notlayın, kurs içeriğini derleyin ve dosyalar üzerinde gerçek zamanlı olarak işbirliği yapın.
+ms.openlocfilehash: ce02be23d98d1dc54ae02a21f9bf1678d06c3d8f
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021675"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64747236"
 ---
-# <a name="integrate-microsoft-onedrive-lti-with-canvas"></a>LTI'Microsoft OneDrive Canvas ile tümleştirin
+# <a name="integrate-microsoft-onedrive-lti-with-canvas"></a>Microsoft OneDrive LTI'yi Tuval ile tümleştirme
 
-LTI Microsoft OneDrive Canvas ile tümleştirme, iki adımlı bir işlemdir. İlk adım Canvas'da Microsoft OneDrive ve ikinci adım da Canvas kurslarının Microsoft OneDrive olarak kullanılabilir.
+Microsoft OneDrive LTI'yi Tuval ile tümleştirmek iki adımlı bir işlemdir. İlk adım Canvas'da Microsoft OneDrive etkinleştirir ve ikinci adım Microsoft OneDrive LTI'yi Tuval kurslarında kullanılabilir hale getirir.
 
 ## <a name="recommended-browser-settings"></a>Önerilen tarayıcı ayarları
 
-- Tanımlama bilgileri, tanımlama bilgileri Microsoft OneDrive.
-- Açılan pencerelerin bir yıl için engellenmiş Microsoft OneDrive.
+- Tanımlama bilgileri Microsoft OneDrive için etkinleştirilmelidir.
+- Açılır pencereler Microsoft OneDrive için engellenmemelidir.
 
 > [!NOTE]
-> - Tanımlama bilgileri Chrome tarayıcı incognito modunda varsayılan olarak etkin değildir ve bunun etkinleştirilmesi gerekir.
-> - Microsoft OneDrive LTI, tarayıcıda özel modda Microsoft Edge çalışır. Tanımlama bilgilerini engellemediyseniz (varsayılan olarak etkindir) emin olun.
+> - Tanımlama bilgileri Chrome tarayıcı gizli modunda varsayılan olarak etkin değildir ve etkinleştirilmesi gerekir.
+> - Microsoft OneDrive LTI, Microsoft Edge tarayıcıdaki özel modda çalışır. Tanımlama bilgilerini engellemediğinizden emin olun (varsayılan olarak etkindir).
 
-## <a name="enable-microsoft-onedrive-lti-in-canvas"></a>Canvas'Microsoft OneDrive LTI'yi etkinleştirme
+## <a name="enable-microsoft-onedrive-lti-in-canvas"></a>Tuvalde Microsoft OneDrive LTI'yi etkinleştirme
 
 > [!IMPORTANT]
-> Bu tümleştirmeyi gerçekleştiren kişi Canvas yöneticisi ve kullanıcı kiracısı yöneticisi Microsoft 365 gerekir.
+> Bu tümleştirmeyi gerçekleştiren kişi Tuval yöneticisi ve Microsoft 365 kiracısının yöneticisi olmalıdır.
 
-1. <a href="https://onedrivelti.microsoft.com/admin" target="_blank">LTI Kayıt Microsoft OneDrive oturum açma</a>
-1. Yönetici Onayı **düğmesini seçin** ve izinleri kabul edin.
+1. <a href="https://onedrivelti.microsoft.com/admin" target="_blank">Microsoft OneDrive LTI Kayıt Portalı'na oturum</a> açın
+1. **Yönetici Onayı** düğmesini seçin ve izinleri kabul edin.
 
 > [!CAUTION]
-> Bu adım gerçekleştirile değilse, aşağıdaki adım size bir hata verir ve hatayı alırsanız bu adımı bir saat süreyle aşamazsınız.
+> Bu adım gerçekleştirilmezse, aşağıdaki adım size bir hata verir ve hatayı aldıktan sonra bu adımı bir saat boyunca gerçekleştiremezsiniz.
 
-3. Yeni **LTI Kiracısı Oluştur düğmesini** seçin. LTI Kayıt sayfasında açılan listeden **Tuval'i** seçin ve Canvas örneğinizin temel URL'sini girin.
+3. **Yeni LTI Kiracısı oluştur** düğmesini seçin. LTI Kaydı sayfasında açılan **listeden Tuval'i** seçin ve Tuval örneğinizin temel URL'sini girin.
 
 > [!NOTE]
-> Canvas örneğiniz , örneğin https://contoso.test.instructure.com]()https://contoso.test.instructure.com) ise, URL'nin tamamı girilir.
+> Tuval örneğininiz https://contoso.test.instructure.com](https://contoso.test.instructure.com) ise, url'nin tamamı girilmelidir.
 
-:::image type="content" source="media/OneDrive-LTI-07.png" alt-text="LTI tüketici platformu ve URL metin alanını seçmek için açılan alanla birlikte LTI kiracı yönetim sayfası.":::
+:::image type="content" source="media/OneDrive-LTI-07.png" alt-text="LTI tüketici platformunu ve URL metin alanını seçmek için açılan alan içeren LTI kiracı yönetimi sayfası.":::
 
-4. Kopyala düğmesini (sağ üst kısmında iki sayfayı gösteren bir simge) seçerek JSON'u kopyalayın. Bu, Canvas'da anahtarı oluşturmak için kullanılır.
+4. **Kopyala** düğmesini (sağdaki iki sayfayı üst üste gösteren bir simge) seçerek JSON'yi kopyalayın. Bu, Tuval'de anahtarı oluşturmak için kullanılır.
 
-:::image type="content" source="media/OneDrive-LTI-08.png" alt-text="Görüntülenen JSON metnini kopyalayıp anahtar nesil Canvas'da görüntülenebilir hale gelecek kopyala düğmesini gösteren resim.":::
+:::image type="content" source="media/OneDrive-LTI-08.png" alt-text="Görüntülenen JSON metnini kopyalayacak ve Tuval'de anahtar oluşturma için kullanılabilir hale getiren kopyala düğmesini gösteren resim.":::
 
-5. Canvas örneğinize yönetici olarak oturum açın ve **sayfanın sol** tarafındaki menüden Geliştirici Anahtarları'ı seçin. Açılan sayfada, sayfanın sağ üst köşesindeki açılan **listesinden LTI** Anahtarı'nın seçerek bir geliştirici anahtarı oluşturun.
+5. Tuval örneğinizde yönetici olarak oturum açın ve sayfanın sol tarafındaki menüden **Geliştirici Anahtarları'nı** seçin. Açılan listeden, sayfanın sağ üst kısmındaki açılan **listedeN LTI Anahtarı'nı** seçerek bir geliştirici anahtarı oluşturun.
 
-:::image type="content" source="media/OneDrive-LTI-14.png" alt-text="Geliştirici Tuşları'nın seçili olduğu sol gezinti çubuğunu ve sayfanın sağında açılan bir açılan listesinden LTI tuşu girdisini gösteren ekran görüntüsü.":::
+:::image type="content" source="media/OneDrive-LTI-14.png" alt-text="Geliştirici Anahtarları'nın seçili olduğu sol gezinti çubuğunu ve sayfanın sağındaki açılan listeden LTI anahtarı girişini gösteren ekran görüntüsü.":::
 
-6. Yapılandır sayfasında, Yöntem açılan listesinde yöntem  olarak JSON Yapıştır'ı seçin ve 4. Adımda kopyalayıp görüntülenen metin alanına **JSON** metnini yapıştırın.
+6. Yapılandır sayfasındaki **Yöntem** açılan menüsünde, yöntem olarak **JSON Yapıştır'ı** seçin ve 4. Adımda kopyaladığınız JSON metnini görüntülenen metin alanına yapıştırın.
 
     > [!TIP]
-    > **İsteğe Bağlı Adım:** Okullu eğitimciler kendi kendilerine ders gezintilerinde hangi bağlantıların görüntü olduğunu kontrol etmek isterseniz, ``default`` kopyalanan JSON'da parametreyi değiştirebilirsiniz. Parametre ``default`` otomatik olarak ayarlanır ``enabled`` ; öte yandan, parametrenin ``default`` ``disabled`` değiştirilmesi eğitimcilerin kendi derslerini gezintisini seçmelerine olanak sağlar.
+    > **İsteğe Bağlı Adım:** Okulunuzun eğitimcileri, kendi kurslarının gezintisinde hangi bağlantıların görüneceğini kendileri denetlemek isterse kopyalanan JSON'da parametresini değiştirebilirsiniz ``default`` . ``default`` Parametre otomatik olarak ayarlanır``enabled``; ancak parametresini ``default`` ``disabled`` olarak değiştirmek, eğitimcilerin kendi kurslarının gezintisini seçmesine olanak tanır.
     >
-    > Eğitimciler kendi ders gezinti bağlantılarını nasıl değiştir olduğu hakkında daha fazla bilgi için Bkz. Kurs [Gezintisi bağlantılarını nasıl yönetirim?](https://community.canvaslms.com/t5/Instructor-Guide/How-do-I-manage-Course-Navigation-links/ta-p/1020)
+    > Eğitimcilerin kurs gezinti bağlantılarını nasıl değiştirebileceği hakkında daha fazla bilgi için bkz. [Kurs Gezintisi bağlantılarını yönetmek Nasıl yaparım??](https://community.canvaslms.com/t5/Instructor-Guide/How-do-I-manage-Course-Navigation-links/ta-p/1020)
 
-7. Anahtarı kaydedin; Canvas'da Kapalı durumda **kullanılabilir duruma** gelir. Anahtarı Açık **olarak seçin** ve bir sonraki adımda **kullanılacak Ayrıntılar** sütununda verilen anahtarı kopyalayın.
+7. Anahtarı kaydettiğinizde Tuval'de **Kapalı** durumda kullanılabilir duruma gelir. Anahtarı **Açık** duruma getirin ve sonraki adımda kullanılacak **Ayrıntılar** sütununda verilen anahtarı kopyalayın.
 
-:::image type="content" source="media/OneDrive-LTI-19.png" alt-text="Anahtar kapalı durumda ayarlanmış olarak Canvas sayfası. Anahtarın açık olması ve anahtarın bu sayfanın ayrıntılar sütunundan kopyalanmış olması gerekir.":::
+:::image type="content" source="media/OneDrive-LTI-19.png" alt-text="Anahtarı kapalı durumda ayarlanmış Tuval sayfası. Bu özelliğin açık olması ve anahtarın bu sayfadaki ayrıntılar sütunundan kopyalanması gerekir.":::
 
-8. LTI Kayıt Microsoft OneDrive dönmek ve anahtarı **Canvas Client ID alanına** yapıştırın. Hazır **olduğunda** , Sonraki'yi seçin.
+8. Microsoft OneDrive LTI Kayıt portalına dönün ve anahtarı **Tuval İstemci Kimliği** alanına yapıştırın. Hazır olduğunuzda **İleri'yi** seçin.
 
-:::image type="content" source="media/OneDrive-LTI-20.png" alt-text="JSON metninin ve anahtarın kopyalanan metin kutusunun olduğu LTI kiracı kayıt sayfası.":::
+:::image type="content" source="media/OneDrive-LTI-20.png" alt-text="Anahtarın kopyalanması gereken JSON metnini ve metin kutusunu gösteren LTI kiracı kaydı sayfası.":::
 
 9. Değişikliklerinizi gözden geçirin ve kaydedin. Başarılı kayıtta bir ileti görüntülenir.
-10. Kayıt ayrıntılarınız, giriş sayfasında **LTI** Kiracıları Görüntüle düğmesi seçerek de inceleyebilirsiniz.
+10. Kayıt ayrıntılarınız, giriş sayfasındaki **LTI Kiracılarını Görüntüle** düğmesi seçilerek de gözden geçirilebilir.
 
-## <a name="enable-microsoft-onedrive-lti-in-canvas-courses"></a>Canvas Microsoft OneDrive'da LTI'yi etkinleştirme
+## <a name="enable-microsoft-onedrive-lti-in-canvas-courses"></a>Tuval Kurslarında Microsoft OneDrive LTI'yi etkinleştirme
 
-Canvas yöneticisi LTI'Microsoft OneDrive tüm kurslar için bu özelliği etkinleştir olabilir. Belirli Microsoft OneDrive bir kursta LTI gerekirse (tüm kurslar için değil), eğitimcinin kurs ayarları içindeki aynı adımları izlemesi gerekir.
+Tuval yöneticisi tüm kurslar için Microsoft OneDrive LTI'yi etkinleştirebilir. Belirli bir kursta (tüm kurslarda değil) Microsoft OneDrive LTI gerekiyorsa, kurs eğitimcisinin kurs ayarlarında aynı adımları izlemesi gerekir.
 
-1. Yönetici olarak oturum açın ve **Yönetici Ayarlar gidin**.
-2. Uygulamalar bölümüne **gidin ve** Uygulama Yapılandırmalarını **Görüntüle düğmesini** seçin.
-3. Uygulama **Ekle düğmesini** seçin.
-4. Yapılandırma **Türü açılan** listesinde İstemci Kimliğine **Göre seçeneğini** belirtin.
-5. Daha önce oluşturulan geliştirici anahtarının değerini İstemci Kimliği **alanına yapıştırın** ve Gönder **düğmesini** seçin.
+1. Yönetici olarak oturum açın ve **Ayarlar** bölümüne gidin.
+2. **Uygulamalar** bölümüne gidin ve **Uygulama Yapılandırmalarını Görüntüle** düğmesini seçin.
+3. **Uygulama Ekle** düğmesini seçin.
+4. **Yapılandırma Türü** açılan listesinde **İstemci Kimliğine Göre** seçeneğini belirleyin.
+5. Daha önce oluşturulan geliştirici anahtarının değerini **İstemci Kimliği** alanına yapıştırın ve **Gönder** düğmesini seçin.
 
-:::image type="content" source="media/OneDrive-LTI-31.png" alt-text="Yapılandırma türü açılan menüsünün altındaki İstemci Kimliğine Göre seçeneğini gösteren uygulama ekle sayfası.":::
+:::image type="content" source="media/OneDrive-LTI-31.png" alt-text="Yapılandırma türü açılan menüsünün altında İstemci kimliğine göre seçeneğini gösteren uygulama ekle sayfası.":::
 
-## <a name="collaboration-settings-for-microsoft-onedrive-lti-in-canvas-courses"></a>Canvas Ayarlar'da Microsoft OneDrive için LTI işbirliği çalışma
-
-> [!NOTE]
-> İşbirliğinin eğitimcilere ve öğrencilere yönelik çalışması için işbirliği ayarını etkinleştirmeniz gerekir. Ayarın etkinleştirilmemiş olduğundan emin olmak için aşağıdaki adımları izleyin.
-
-1. Yönetici olarak oturum açma ve **Yönetici Ayarlar gidin**.
-1. Özellik **Seçenekleri bölümüne** gidin ve ardından Kurs **bölümüne** gidin.
-1. Dış İşbirliği **Aracı özelliğini etkinleştirilmemiş** olarak ayarlayın.
+## <a name="collaboration-settings-for-microsoft-onedrive-lti-in-canvas-courses"></a>Tuval kurslarında Microsoft OneDrive LTI için işbirliği Ayarlar
 
 > [!NOTE]
-> İşbirliği tek tek öğrencilere ve öğrenci gruplarına atanabilir. Tek tek öğrencilere atama varsayılan olarak çalışır. Öğrenci grubuna işbirliğini atay olmak için şu adımları izleyin:
+> İşbirliğinin eğitimciler ve öğrenciler için çalışması için işbirliği ayarını etkinleştirmemeniz gerekir. Ayarın etkinleştirilmediğinden emin olmak için aşağıdaki adımları izleyin.
 
-1. Yönetici olarak oturum açma ve Geliştirici **Anahtarları bölümüne** gidin.
-1. Değeri yüksek olan anahtarı 170000000000710 olarak **ayarlayın**.
+1. Yönetici olarak oturum açın ve **Ayarlar** bölümüne gidin.
+1. **Özellik Seçenekleri** bölümüne ve ardından **Kurs** bölümüne gidin.
+1. **Dış İşbirliği Aracı** özelliğini etkinleştirilmemiş olarak ayarlayın.
+
+> [!NOTE]
+> İşbirliği tek tek öğrencilere ve öğrenci gruplarına atanabilir. Tek tek öğrencilere atama varsayılan olarak çalışır. Öğrenci grubuna işbirliği atayabilmek için şu adımları izleyin:
+
+1. Yönetici olarak oturum açın ve **Geliştirici Anahtarları** bölümüne gidin.
+1. 170000000000710 değerine sahip anahtarı bulun ve **Açık** olarak ayarlayın.

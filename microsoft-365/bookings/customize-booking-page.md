@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 116d7a84-a7a0-4911-a1e9-debb2cca7c43
 description: Microsoft Bookings uygulamasındaki rezervasyon sayfanızın renk temasını değiştirin.
-ms.openlocfilehash: 4fd33d39c9fda4588d24b51a70d589965fece28f
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: bd6c3fc601800cdfca93e9e1a6adc494df1bd67e
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64713899"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64747202"
 ---
 # <a name="customize-and-publish-your-booking-page"></a>Rezervasyon sayfanızı özelleştirme ve yayımlama
 
@@ -37,7 +37,7 @@ Aşağıdaki bölümde rezervasyon sayfanızı ayarlama ve sayfanızı yayımlam
 
     dahili Rezervasyon Sayfası şöyle görünür:
 
-    :::image type="content" source="media/bookings-Self-Service_2.jpg" alt-text="Bookings Sayfası.":::
+    :::image type="content" source="media/bookings-internal-page-1.png" alt-text="Bookings Sayfası.":::
 
 - **Rezervasyon sayfası erişim denetimi: Kuruluşumdan kitap almak için bir Microsoft 365 hesabı iste** Bu seçeneğin belirtilmesi, yalnızca kuruluşunuzdaki kişilerin sayfanızı görüntülemesine veya herhangi bir hizmet ayırmasına izin verir. Sayfaya erişim, ziyaretçinin kiracıdaki bir hesaba ait olduğundan emin olmak için kimlik bilgileri denetimleri aracılığıyla yetkilendirilmiştir.
 
@@ -55,7 +55,7 @@ Aşağıdaki bölümde rezervasyon sayfanızı ayarlama ve sayfanızı yayımlam
 
 Rezervasyon sayfanızı yayımladığınızda, müşteriler sizinle randevu rezervasyonu yapabilecekleri rezervasyon sayfanızı görür. Müşteriye yönelik rezervasyon sayfası şöyle görünür:
 
-:::image type="content" source="media/bookings-self-service.jpg" alt-text="Müşteriye yönelik rezervasyon sayfası.":::
+:::image type="content" source="media/bookings-self-service-2.png" alt-text="Müşteriye yönelik rezervasyon sayfası.":::
 
 ## <a name="publish-the-booking-page"></a>Rezervasyon sayfasını yayımlama
 
@@ -75,4 +75,4 @@ Bu videoyu izleyin veya rezervasyon sayfanızı yayımlamak veya yayımdan kald�
 
 ## <a name="unpublish-the-booking-page"></a>Rezervasyon sayfasını yayımdan kaldırma
 
- - Rezervasyon sayfasını yayımdan kaldırmak için Rezervasyon sayfasına gidin ve **Yayımdan kaldır'ı** seçin.
+Rezervasyon sayfasını yayımdan kaldırmak için Rezervasyon sayfasına gidin ve **Yayımdan kaldır'ı** seçin.

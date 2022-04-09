@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 94af3e22-aca6-4e91-8b91-1cd5a02a9ea8
 description: Microsoft Bookings dil ve saat dilimi ayarlarınızı değiştirin. Rezervasyonlar yanlış zamanda oluşturulduysa, Bookings yanlış saat dilimi için ayarlanmış olabilir.
-ms.openlocfilehash: 1f319ae91b635bf7c45542d2872c92763d1426f7
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: cb6735640f85456568f0d0492a265046ab127e9c
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64715373"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746981"
 ---
 # <a name="set-language-and-time-zones-in-microsoft-bookings"></a>Microsoft Bookings'da dil ve saat dilimlerini ayarlama
 
@@ -33,7 +33,7 @@ Rezervasyon takviminin dilini ve saat dilimini ayarlamak için:
 
 1. Microsoft 365 oturum açın ve giriş sayfasındaki (aşağıdaki ekran görüntüsünde gösterildiği gibi) veya Microsoft 365 Uygulama Başlatıcısı'ndaki Outlook kutucuğunu seçin.
 
-   ![Microsoft 365 giriş sayfasındaki Outlook kutucuğun resmi.](../media/bookings-outlook-tile.png)
+   :::image type="content" source="../media/bookings-outlook-tile.png" alt-text="Microsoft 365 giriş sayfasında kutucuğu Outlook.":::
 
 1. Outlook açıldıktan sonra, kişisel ve hesap ayarlarınızı açmak için ekranın sağ üst köşesindeki **dişli simgesini** seçin, ardından **Ayarlar** paneli arama kutusunda "saat dilimi" araması yapın. Panel, bu hesap için geçerli kişisel dil ve saat dilimi ayarlarınızı gösterecek şekilde güncelleştirilir. Yukarıda belirtildiği gibi, bu ayar rezervasyon takviminin dilini ve saat dilimini de denetler.
 
@@ -49,6 +49,6 @@ Rezervasyon takviminin dilini ve saat dilimini ayarlamak için:
 
    ![Ekran görüntüsü: Dil ve saat dilimi ayarlarını değiştirme bağlantısı.](../media/bookings-region-language-timezone-settings.png)
 
-1. Dilinizi ve geçerli saat diliminizi seçip Tamam'ı seçin.
+1. Dilinizi ve geçerli saat diliminizi seçip **Tamam'ı** seçin.
 
-   ![Ekran görüntüsü: Dil ve saat dilimi ayarları.](../media/bookings-region-timezone-settings.png)
+   :::image type="content" source="../media/bookings-region-timezone-settings-1.png" alt-text="Dil ve saat dilimi ayarları.":::

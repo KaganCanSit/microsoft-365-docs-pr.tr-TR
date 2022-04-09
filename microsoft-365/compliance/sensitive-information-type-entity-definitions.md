@@ -18,53 +18,53 @@ ms.collection:
 hideEdit: true
 feedback_system: None
 recommendations: false
-description: DLP ilkeleriniz içinde kullanımınıza hazır birçok hassas bilgi türü vardır. Bu makalede, tüm bu hassas bilgi türleri listelanmıştır ve her tür algılana kadar bir DLP ilkesi ne için arama yaptığını gösterir.
-ms.openlocfilehash: a3d2592af6b7692b5a5e634947deb811412b5650
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+description: DLP ilkelerinizde kullanmaya hazır birçok hassas bilgi türü vardır. Bu makalede bu hassas bilgi türlerinin tümü listelenmiştir ve bir DLP ilkesinin her türü algıladığında ne arayacağını gösterir.
+ms.openlocfilehash: 298b756a1cdfd63406992c18bf8281375f7f9370
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63015525"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746534"
 ---
 # <a name="sensitive-information-type-entity-definitions"></a>Hassas bilgi türü varlık tanımları
 
-Bu makalede tüm hassas bilgi türü varlık tanımları listelanmıştır. Her tanım, her türü algılamak için bir DLP ilkesi için nelerin göründüğünü gösterir. Hassas bilgi türleri hakkında daha fazla bilgi edinmek için bkz. [Hassas bilgi türleri](sensitive-information-type-learn-about.md)
+Bu makalede tüm hassas bilgi türü varlık tanımları listelenir. Her tanım, bir DLP ilkesinin her türü algılamak için ne arayacağını gösterir. Hassas bilgi türleri hakkında daha fazla bilgi edinmek için bkz [. Hassas bilgi türleri](sensitive-information-type-learn-about.md)
 
 > [!NOTE]
-> Güven düzeyi eşlemesi (yüksek/orta/düşük) ve doğruluk sayısı (1 ile 100 arasında sayısal değer)
-> - Düşük güven: 65 veya daha düşük
-> - Orta güven: 75
-> - Yüksek güven: 85
+> Doğruluk numarasıyla güvenilirlik düzeyinin (yüksek/orta/düşük) eşlemesi (1 ile 100 arasında sayısal değer)
+> - Düşük güvenilirlik: 65 veya altı
+> - Orta güvenilirlik: 75
+> - Yüksek güvenilirlik: 85
 
 
 ## <a name="aba-routing-number"></a>ABA yönlendirme numarası
 
 ### <a name="format"></a>Biçim
 
-Biçimlendirilmiş veya biçimlendirilmemiş bir desende dokuz basamak
+biçimlendirilmiş veya biçimlendirilmemiş bir desende olabilecek dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
-- 00-12, 21-32, 61-72 veya 80 aralıklarında iki basamak
-- İki basamak
+- 00-12, 21-32, 61-72 veya 80 aralığındaki iki basamak
+- iki basamak
 - isteğe bağlı kısa çizgi
 - dört basamak
 - isteğe bağlı kısa çizgi
 - basamak
 
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-İlkenin, 300 karakter yakınlık içinde bu tür hassas bilgiler algılandığında orta düzeyde güveni vardır:
-- İşlev Func_aba_routing desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_ABA_Routing bulunur.
+İlke, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_aba_routing desenle eşleşen içeriği bulur.
+- Keyword_ABA_Routing anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev Func_aba_routing desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev Func_aba_routing desenle eşleşen içeriği bulur.
 
 ```xml
     <!-- ABA Routing Number -->
@@ -79,30 +79,30 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_aba_routing"></a>Keyword_aba_routing
 
 - aba numarası
-- aba #
-- aba
+- Aba #
+- Aba
 - abarouting #
 - abaroutingnumber
 - americanbankassociationrouting #
 - americanbankassociationroutingnumber
-- banka yönlendirme #
-- banka yönlendirmesayısı
-- yönlendirme #
+- bankrouting #
+- bankroutingnumber
+- Yönlendirme #
 - yönlendirme no
 - yönlendirme numarası
-- yönlendirme toplu taşıma numarası
-- yönlendirme #
+- yönlendirme aktarım numarası
+- Yönlendirme #
 - RTN
 
 
 ## <a name="all-full-names"></a>Tüm tam adlar
 
-Tüm tam adlar, paketli bir varlıktır. Avustralya, Çin, Japonya, ABD ve AB'deki ülkelerde bulunan desteklenen tüm ülkelerden/bölgelerden kişilerin tam adlarını algılar. Tam adların tüm olası eşleşmelerini algılamak için bu SIT'i kullanın.
+Tüm tam adlar, paketlenmiş adlı bir varlıktır. Avustralya, Çin, Japonya, ABD ve AB'deki ülkeleri içeren tüm desteklenen ülkelerden/bölgelerden gelen kişilerin tam adlarını algılar. Tam adların tüm olası eşleşmelerini algılamak için bu SIT'i kullanın.
 
 ### <a name="format"></a>Biçim
 
@@ -112,21 +112,21 @@ Tüm tam adlar, paketli bir varlıktır. Avustralya, Çin, Japonya, ABD ve AB'de
 
 Çeşitli.
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır.
 
 ### <a name="description"></a>Açıklama
 
-Bu adlı varlık SIT, bir insan tarafından büyük güvenle ad olarak tanımlanacak kişisel adlarla eştir. Örneğin, verilen bir addan oluşan bir dize bulunursa ve bunu bir aile adı takip ediyorsa, büyük güvenle bir eşleşme yapılır. Üç birincil kaynak kullanır:
+Bu adlandırılmış varlık SIT, bir insanın yüksek güvene sahip bir ad olarak tanımlayacağı kişisel adlarla eşleşir. Örneğin, belirli bir addan oluşan bir dize bulunursa ve ardından bir aile adı gelirse, yüksek güvenle bir eşleşme yapılır. Üç birincil kaynak kullanır:
 
 -   Verilen adların sözlüğü.
--   Aile adlarını içeren bir sözlük.
--   Adların nasıl oluştuğuna desenler.
+-   Aile adlarının sözlüğü.
+-   Adların nasıl oluşturulduğuna ait desenler.
 
-Bu üç kaynak, her ülke için farklıdır.  Zaman *Zaman dizeleri Eşleşmeyi* tetikler. Yaygın olarak verilen/aile adlara, nadir kullanılan adlardan daha yüksek güven verilir. Öte yandan, desen kısmi eşleşmelere de izin verir. Sözlükte verilen bir ad bulunursa ve onu sözlükte yer alan aile adı takip ediyorsa, kısmi bir eşleşme tetiklenir. Örneğin, *Tomas Richard* kısmi eşleşmeyi tetikler. Kısmi eşleşmelere daha düşük güven verilir.
+Üç kaynak her ülke için farklıdır.  *Olivia Wilson'ın* dizeleri eşleşmeyi tetikler. Sık kullanılan verilen/aile adları nadir adlara göre daha yüksek bir güvene sahip olur. Ancak, desen kısmi eşleşmelere de izin verir. Sözlükten belirli bir ad bulunursa ve bunu sözlükte olmayan bir aile adı izlerse, kısmi bir eşleşme tetikler. Örneğin *, Tomas Richard* kısmi eşleşme tetikler. Kısmi eşleşmelere daha düşük güvenilirlik verilir.
 
-Buna ek olarak, insanların adları belirten olarak göreceği desenler de uygun bir güvenle eş olur. Like *O. Gerçekten*, *O.P. Her*, *Dr. O. P. S. 10000000* .  veya *T. Richard, Jr.* eşleşmeleri olabilir.
+Ayrıca, bir insanın adların göstergesi olarak göreceği desenler de uygun güvenle eşleştirilir. *O. Wilson*, *O.P. Wilson*, *Dr. O. P. Wilson**, Wilson, O.P. gibi.* ya da *T. Richard, Jr.* eşleşme olabilir.
 
 ### <a name="supported-languages"></a>Desteklenen diller
 
@@ -162,7 +162,7 @@ Buna ek olarak, insanların adları belirten olarak göreceği desenler de uygun
 
 ## <a name="all-medical-terms-and-conditions"></a>Tüm tıbbi hüküm ve koşullar
 
-Tüm tıbbi hüküm ve koşullar, tıbbi hüküm ve sağlık koşullarını algılayan, paketli bir adlandırılmış kurumdur. Yalnızca İngilizce terimleri algılar. Sağlık hüküm ve koşullarının tüm olası eşleşmelerini algılamak için bu SIT'i kullanın.
+Tüm tıbbi hüküm ve koşullar, tıbbi hüküm ve tıbbi koşulları algılayan paketlenmiş bir adlandırılmış varlıktır. Yalnızca İngilizce terimleri algılar. Tıbbi hüküm ve koşulların tüm olası eşleşmelerini algılamak için bu SIT'i kullanın.
 
 ### <a name="format"></a>Biçim
 
@@ -172,37 +172,37 @@ Sözlük
 
 Sözlük
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="description"></a>Açıklama
 
-Bu paketli varlık, özel sözlüklerde mevcut olan tıbbi koşulların sözlüğünü içeren metinle eştir. Desteklenen her dil için bir özel sözlük vardır. Bu sözlükler birçok uluslararası tıbbi kaynaktandır. Çok fazla sayıda hatalı pozitif sonuç riski olmadan, sözlükler mümkün olduğunca fazla sağlık durumu içerir. Her girdi, kapsam sağlamak için yaygın olarak tek bir koşula göre yazılmış farklı formları içerir; örneğin:
+Bu paketlenmiş adlandırılmış varlık, seçilmiş sözlüklerde bulunan tıbbi koşullardan bahseden metinlerle eşleşir. Desteklenen dil başına bir seçilmiş sözlük vardır. Sözlükler birçok uluslararası tıbbi kaynaktan alınmaktadır. Sözlükler, çok sayıda hatalı pozitif riski olmadan mümkün olduğunca çok sayıda tıbbi durum içerir. Her giriş, kapsamı güvence altına almak için tek bir koşulun yaygın olarak yazılmasını sağlayan farklı formlar içerir, örneğin:
 
 - *TB*
-- *boruktüroz*
+- *Tüberküloz*
 - *phthisis pulmonalis*
 
 ### <a name="contains"></a>Içerir
 
-Bu paketli varlık SIT bu tek tek SIT'leri içerir.
+Bu paketlenmiş adlandırılmış varlık SIT, bu tek tek SID'leri içerir.
 
-- Kan testi koşulları 
-- Ilaç türleri
-- 10000 Yıl Sonra
+- Kan testi terimleri 
+- İlaç türleri
+- Hastalık
 - Genel ilaç adları
-- ABD Engellilik Değerlendirmesinde Sosyal Güvenlik kapsamında listelenen engellilik bozuklukları
-- Laboratuvar test koşulları
+- ABD Sosyal Güvenlik Altında Engellilik Değerlendirmesi'nde listelenen bozukluklar
+- Laboratuvar test terimleri
 - Tıbbi koşullarla ilgili yaşam tarzları
 - Tıbbi uzmanlıklar
-- Yordamlar
-- Ilaç adları
+- Cerrahi prosedürler
+- Marka ilaç adları
 
 
 ## <a name="all-physical-addresses"></a>Tüm Fiziksel Adresler
 
-Tüm fiziksel adresler, desteklenen tüm ülkelerin/bölgelerin fiziksel adresleriyle ilgili desenleri algılayan, paketli bir VARLıK SIT'tir.
+Tüm fiziksel adresler, desteklenen tüm ülkelerden/bölgelerden fiziksel adreslerle ilgili desenleri algılayan paketlenmiş bir varlık SIT'tir.
 
 ### <a name="format"></a>Biçim
 
@@ -212,26 +212,26 @@ Tüm fiziksel adresler, desteklenen tüm ülkelerin/bölgelerin fiziksel adresle
 
 Çeşitli
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="description"></a>Açıklama
 
-Sokak adreslerinin eşleşmesi, bir insan tarafından posta adresi olarak tanımlanacak dizeleri eşleştirecek şekilde tasarlanmıştır. Bunu yapmak için birkaç birincil kaynak kullanır:
+Sokak adreslerinin eşleşmesi, bir insanın sokak adresi olarak tanımlayacağı dizelerle eşleşecek şekilde tasarlanmıştır. Bunu yapmak için birkaç birincil kaynak kullanır:
 
--   Düzenleme, ilçe ve bölgelerin bir sözlüğü.
--   Yol, Sokak veya Cadde gibi sokak soneklerinin bir sözlüğü.
--   Posta kodu desenleri.
+-   Yerleşimler, ilçeler ve bölgelerin sözlüğü.
+-   Yol, Sokak veya Avenue gibi sokak sonekleri sözlüğü.
+-   Posta kodlarının desenleri.
 -   Adres biçimlerinin desenleri.
 
-Kaynaklar her ülke için farklıdır. Birincil kaynaklar, verilen ülkede kullanılan adres biçimlerinin desenleridir. Mümkün olan en fazla adresin eş olduğundan emin olmak için farklı biçimler seçilir. Bu biçimler esneklik sağlar; örneğin, adres posta kodunu atlar veya şehir adını atlar ya da sokak son eki yoktur. Her durumda, bu tür eşleşmeler eşleşmenin güvenlerini artırmak için kullanılır.
+Kaynaklar her ülke için farklıdır. Birincil kaynaklar, belirli bir ülkede kullanılan adres biçimlerinin desenleridir. Mümkün olduğunca çok adresin eşleştiğinden emin olmak için farklı biçimler seçilir. Bu biçimler esneklik sağlar; örneğin, bir adres posta kodunu atlar veya bir şehir adını atlar veya sokak soneki olmayan bir caddeye sahip olabilir. Her durumda, bu tür eşleşmeler eşleşmenin güvenilirliğini artırmak için kullanılır.
 
-Desenler genel konumlarla değil tek tek adreslerin eşleşmesi için tasarlanmıştır. Dolayısıyla *Redmond, WA 98052* veya *Main Street, Albuquerque* gibi dizeler eşleşmez.
+Desenler, genel konumlarla değil tek tek adreslerle eşleşecek şekilde tasarlanmıştır. Bu nedenle *Redmond, WA 98052* veya *Main Street, Albuquerque* gibi dizeler eşleştirilmeyecek.
 
 ### <a name="contains"></a>Içerir
 
-Bu paketli varlık SIT'i şu bireysel SI'ları içerir:
+Bu paketlenmiş adlandırılmış varlık SIT şu ayrı SID'leri içerir:
 
 - Avustralya fiziksel adresleri
 - Avusturya fiziksel adresleri
@@ -270,7 +270,7 @@ Bu paketli varlık SIT'i şu bireysel SI'ları içerir:
 - İsviçre fiziksel adresleri
 - Türkiye fiziksel adresleri
 - Birleşik Krallık fiziksel adresleri
-- Amerika Birleşik Devletleri'nde fiziksel adresler
+- Fiziksel adresleri Birleşik Devletler
 
 ### <a name="supported-languages"></a>Desteklenen diller
 
@@ -304,7 +304,7 @@ Bu paketli varlık SIT'i şu bireysel SI'ları içerir:
 - Turkish
 
 
-## <a name="argentina-national-identity-dni-number"></a>Arjantin ulusal kimliği (DNI) numarası
+## <a name="argentina-national-identity-dni-number"></a>Arjantin ulusal kimlik (DNI) numarası
 
 ### <a name="format"></a>Biçim
 
@@ -313,21 +313,21 @@ Noktalı veya noktasız sekiz basamak
 ### <a name="pattern"></a>Desen
 
 Sekiz basamak:
-- İki basamak
-- isteğe bağlı bir nokta
+- iki basamak
+- isteğe bağlı bir dönem
 - üç basamak
-- isteğe bağlı bir nokta
+- isteğe bağlı bir dönem
 - üç basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_argentina_national_id desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_argentina_national_id bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_argentina_national_id desenle eşleşen içeriği bulur.
+- Keyword_argentina_national_id anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Argentina National Identity (DNI) Number -->
@@ -339,11 +339,11 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_argentina_national_id"></a>Keyword_argentina_national_id
 
-- Arjantin Ulusal Kimliği numarası
+- Arjantin Ulusal Kimlik numarası
 - cedula
 - cédula
 - dni
@@ -354,33 +354,33 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - rnp
 
 
-## <a name="argentina-unique-tax-identification-key-cuitcuil"></a>Argentina Unique Tax Identification Key (CUIT/CUIL)
+## <a name="argentina-unique-tax-identification-key-cuitcuil"></a>Arjantin Benzersiz Vergi Tanımlama Anahtarı (CUIT/CUIL)
 
 ### <a name="format"></a>Biçim
 
-Çizgili 11 basamak
+Tireli 11 basamak
 
 ### <a name="pattern"></a>Desen
 
-Çizgili 11 basamak:
+Tireli 11 basamak:
 - 20, 23, 24, 27, 30, 33 veya 34'te iki basamak
 - kısa çizgi (-)
 - sekiz basamak
 - kısa çizgi (-)
-- tek bir onay rakamı
+- bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev, `Func_Argentina_Unique_Tax_Key` desene eşleşen içeriği bulur.
-- Anahtar sözcük `Keyword_Argentina_Unique_Tax_Key` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev `Func_Argentina_Unique_Tax_Key` , desenle eşleşen içeriği bulur.
+- 'den `Keyword_Argentina_Unique_Tax_Key` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev, `Func_Argentina_Unique_Tax_Key` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev `Func_Argentina_Unique_Tax_Key` , desenle eşleşen içeriği bulur.
 
 ```xml
     <!-- Argentina Unique Tax Identification Key (CUIT/CUIL) -->
@@ -395,45 +395,45 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_argentina_unique_tax_key"></a>Keyword_Argentina_Unique_Tax_Key
 
-- Alkışve Unica de Identificacion Tributaria
+- Clave Unica de Identificacion Tributaria
 - CUIT
-- benzersiz kimlik kodu 
-- Cupve Única de Identificación Tributaria
-- benzersiz kimlik kodu
-- CUIL
-- Benzersiz Vergi Kimliği Anahtarı
-- Benzersiz Kimlik Kimliği Anahtarı
-- Kimliğinin Benzersiz Anahtarı
-- Benzersiz İş Kimlik Kodu
-- İş Kimliğinin Benzersiz Kodu
-- Benzersiz İş Tanımlama Anahtarı
-- İş Kimliğinin Benzersiz Anahtarı
-- Benzersiz Vergi Kodu Kodu
-- Benzersiz Vergi Numarası Anahtarı
-- Benzersiz İş Gücü Kimlik Kodu
-- İş Gücü Kimliğinin Benzersiz Kodu
+- benzersiz iş gücü tanımlama kodu 
+- Clave Única de Identificación Tributaria
+- benzersiz iş kimliği kodu
+- CUİL
+- Benzersiz Vergi Tanımlama Anahtarı
 - Benzersiz İş Gücü Kimlik Anahtarı
-- İş Gücü Kimliğinin Benzersiz Anahtarı
-- vergi no
+- Benzersiz İşgücü Anahtarı Belirleme
+- Benzersiz İş Tanımlama Kodu
+- Benzersiz İş Kodu Tanımlaması
+- Benzersiz İş Tanımlama Anahtarı
+- Benzersiz İş Anahtarı Belirleme
+- Benzersiz Vergi Kodu Belirleme
+- Vergi Tanımlamanın Benzersiz Anahtarı
+- Benzersiz İşgücü Tanımlama Kodu
+- Benzersiz İşgücü Kimlik Kodu
+- Benzersiz İşgücü Tanımlama Anahtarı
+- Benzersiz İşgücü Anahtarı Belirleme
+- vergi kimliği
 - taxID #
 - taxId
-- aracısayı
+- taxidnumber
 - vergi numarası
-- vergi yok
-- vergi #
-- vergi #
+- vergi no
+- Vergi #
+- Vergi #
 - vergi mükellefi kimliği
 - vergi mükellefi numarası
-- vergi mükellefi yok
-- vergi mükellefi #
-- vergi mükellefi #
+- vergi mükellefi hayır
+- Vergi mükellefi #
+- Vergi mükellefi #
 - vergi kimliği
-- vergi kimliği
-- Número de Identificación Mali
+- vergi belirleme
+- Número de Identificación Fiscal
 - número de contribuyente
 
 
@@ -441,32 +441,32 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-Banka şube numarası olan veya olmayan altı ile 10 basamak arasında
+banka eyalet şube numarası olan veya olmayan altı ile 10 basamak
 
 ### <a name="pattern"></a>Desen
 
-Hesap numarası 6 ile 10 basamak arasındadır.
+Hesap numarası 6 ile 10 basamaktır.
 
-Avustralya banka şube numarası:
+Avustralya banka eyalet şube numarası:
 - üç basamak
 - kısa çizgi
 - üç basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade Regex_australia_bank_account_number desene eşleşen içeriği bulur.
-- Bir arama Keyword_australia_bank_account_number anahtar sözcüğü bulunur.
-- Normal ifade Regex_australia_bank_account_number_bsb desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade Regex_australia_bank_account_number desenle eşleşen içeriği bulur.
+- Keyword_australia_bank_account_number anahtar sözcüğü bulunur.
+- Normal ifade Regex_australia_bank_account_number_bsb desenle eşleşen içeriği bulur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_australia_bank_account_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_australia_bank_account_number desenle eşleşen içeriği bulur.
 
-- Bir arama Keyword_australia_bank_account_number anahtar sözcüğü bulunur.
+- Keyword_australia_bank_account_number anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Australia Bank Account Number -->
@@ -483,44 +483,44 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
  </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_australia_bank_account_number"></a>Keyword_australia_bank_account_number
 
 - swift banka kodu
-- karşılık gelen banka
+- muhabir banka
 - temel para birimi
-- abd hesabı
+- usa hesabı
 - tutucu adresi
 - banka adresi
 - bilgi hesabı
-- fon aktarımları
+- fon transferleri
 - banka ücretleri
 - banka ayrıntıları
 - bankacılık bilgileri
 - tam adlar
-- iaea
+- Uaea
 
 
 ## <a name="australia-business-number"></a>Avustralya iş numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-İsteğe bağlı sınırlayıcılar ile 11 basamak
+İsteğe bağlı sınırlayıcılarla 11 basamak
 
 ### <a name="pattern"></a>Desen
 
-İsteğe bağlı sınırlayıcılar ile 11 basamak:
+İsteğe bağlı sınırlayıcıları olan 11 basamak:
 
-- İki basamak
+- iki basamak
 - isteğe bağlı kısa çizgi veya boşluk
 - üç basamak
 - isteğe bağlı kısa çizgi veya boşluk
@@ -528,18 +528,18 @@ Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
 - isteğe bağlı kısa çizgi veya boşluk
 - üç basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_australian_business_number desene eşleşen içeriği bulur.
-- Anahtar sözcük Keywords_australian_business_number bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_australian_business_number desenle eşleşen içeriği bulur.
+- Keywords_australian_business_number anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_australian_business_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_australian_business_number desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Australia Business Number -->
@@ -553,36 +553,36 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_australia_business_number"></a>Keyword_australia_business_number
 
 - avustralya iş no
 - iş numarası
-- abn #
+- Abn #
 - businessid #
 - iş kimliği
-- abn
+- Abn
 - businessno #
 
 
 ## <a name="australia-company-number"></a>Avustralya şirket numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Sınırlayıcıları olan dokuz basamak
+sınırlayıcılı dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
-Sınırlayıcılarla dokuz basamak:
+sınırlayıcılı dokuz basamak:
 
 - üç basamak
 - boşluk
@@ -591,18 +591,18 @@ Sınırlayıcılarla dokuz basamak:
 - üç basamak
 
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_Australian_Company_Number desene eşleşen içeriği bulur.
-- Bir Keyword_Australian_Company_Number anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_Australian_Company_Number desenle eşleşen içeriği bulur.
+- Keyword_Australian_Company_Number anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev Func_Australian_Company_Number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev Func_Australian_Company_Number desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Australia Company Number -->
@@ -616,20 +616,20 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_australia_company_number"></a>Keyword_australia_company_number
 
-- acn
-- avustralya şirket no
-- avustralya şirket no #
-- Avustralya şirket numarası
-- Avustralyalı şirket hayır
-- Avustralyalı şirket hayır #
-- Avustralyalı şirket numarası
+- -bilirsiniz
+- avustralya şirketi hayır
+- avustralya şirketi hayır #
+- avustralya şirket numarası
+- avustralyalı şirket hayır
+- avustralyalı şirket hayır #
+- avustralya şirket numarası
 
 
-## <a name="australia-drivers-license-number"></a>Avustralya sürücüsünün lisans numarası
+## <a name="australia-drivers-license-number"></a>Avustralya ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
@@ -639,29 +639,29 @@ dokuz harf ve rakam
 
 dokuz harf ve rakam:
 
-- İki basamak veya harf (büyük/küçük harfe duyarlı değildir)
-- İki basamak
-- beş rakam veya harf (büyük/küçük harfe duyarlı değildir)
+- iki basamak veya harf (büyük/küçük harfe duyarlı değil)
+- iki basamak
+- beş basamak veya harf (büyük/küçük harfe duyarlı değil)
 
 VEYA
 
-- bir - iki isteğe bağlı harf (büyük/küçük harfe duyarlı değildir)
-- dört ile dokuz basamak arasında
+- bir-iki isteğe bağlı harf (büyük/küçük harfe duyarlı değil)
+- dört -dokuz basamak
 
 VEYA
 
-- dokuz rakam veya harf (büyük/küçük harfe duyarlı değildir)
+- dokuz basamak veya harf (büyük/küçük harfe duyarlı değil)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_australia_drivers_license_number desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_australia_drivers_license_number bulunur.
-- Anahtar sözcük Keyword_australia_drivers_license_number_exclusions anahtar sözcük bulunamıyor.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_australia_drivers_license_number desenle eşleşen içeriği bulur.
+- Keyword_australia_drivers_license_number anahtar sözcüğü bulunur.
+- Keyword_australia_drivers_license_number_exclusions anahtar sözcüğü bulunamadı.
 
 ```xml
 <!-- Australia Drivers License Number -->
@@ -676,92 +676,92 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_australia_drivers_license_number"></a>Keyword_australia_drivers_license_number
 
 - uluslararası sürüş izinleri
-- Avustralya otomobil birliği
+- avustralya otomobil birliği
 - uluslararası sürüş izni
 - DriverLicence
 - DriverLicences
 - Sürücü Lic
-- Sürücü Lisansı
+- Sürücü Belgesi
 - Sürücü Lisansları
 - DriversLic
 - DriversLicence
 - DriversLicences
 - Sürücüler Lic
-- SürücülerLics
-- Sürücüler Lisansı
-- Sürücüler Lisansları
+- Sürücüler Lics
+- Sürücü Lisansı
+- Sürücü Lisansları
 - Driver'Lic
+- Driver'Lics
+- Sürücü Belgesi
 - Sürücü Lisansları
-- Sürücü Lisansı
-- Sürücü Lisansları
-- Sürücü' Lic
-- Sürücü Lisansları
-- Sürücü Lisansı
+- Driver' Lic
+- Sürücü Lics
+- Sürücü Belgesi
 - Sürücü Lisansları
 - Driver'sLic
-- Sürücü Lisansları
-- Sürücü Lisansları
-- Sürücü Lisansları
-- Sürücü Lisans'ı
-- Sürücü Lisansları
-- Sürücü Lisansı
+- Driver'sLics
+- Driver'sLicence
+- Driver'sLicences
+- Sürücü Lic
+- Sürücü Lics
+- Sürücü Belgesi
 - Sürücü Lisansları
 - DriverLic #
 - DriverLics #
 - DriverLicence #
 - DriverLicences #
 - Sürücü Lic #
-- Sürücü Lisansları #
-- Sürücü Lisansı #
+- Sürücü Lics #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
 - DriversLic #
 - DriversLics #
 - DriversLicence #
 - DriversLicences #
 - Sürücüler Lic #
-- SürücülerLics #
-- Sürücüler Lisansı #
-- Sürücüler Lisansları #
+- Sürücüler Lics #
+- Sürücü Lisansı #
+- Sürücü Lisansları #
 - Driver'Lic #
+- Driver'Lics #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
-- Sürücü Lisansı #
-- Sürücü Lisansları #
-- Sürücü' Lic #
-- Sürücü Lisansları #
-- Sürücü Lisansı #
+- Driver' Lic #
+- Sürücü Lics #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
 - Driver'sLic #
-- Sürücü Lisansları #
-- Sürücü Lisansları #
-- Sürücü Lisansları #
-- Sürücü Lisans'ı #
-- Sürücü Lisansları #
-- Sürücü Lisansı #
+- Driver'sLics #
+- Driver'sLicence #
+- Driver'sLicences #
+- Sürücü Lic #
+- Sürücü Lics #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
 
 #### <a name="keyword_australia_drivers_license_number_exclusions"></a>Keyword_australia_drivers_license_number_exclusions
 
-- aaa
+- Acar
 - DriverLicense
 - DriverLicenses
 - Sürücü Lisansı
 - Sürücü Lisansları
 - DriversLicense
 - DriversLicenses
-- Sürücüler Lisansı
-- Sürücüler Lisansları
 - Sürücü Lisansı
 - Sürücü Lisansları
-- Sürücü Lisansı
+- Sürücü Belgesi
 - Sürücü Lisansları
-- Sürücü Lisans'ı
+- Sürücü Belgesi
 - Sürücü Lisansları
-- Sürücü Lisansı
+- Driver'sLicense
+- Sürücü Lisansları
+- Sürücü Belgesi
 - Sürücü Lisansları
 - DriverLicense #
 - DriverLicenses #
@@ -769,15 +769,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - Sürücü Lisansları #
 - DriversLicense #
 - DriversLicenses #
-- Sürücüler Lisansı #
-- Sürücüler Lisansları #
 - Sürücü Lisansı #
 - Sürücü Lisansları #
-- Sürücü Lisansı #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
-- Sürücü Lisans'ı #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
-- Sürücü Lisansı #
+- Driver'sLicense #
+- Sürücü Lisansları #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
 
 
@@ -791,20 +791,20 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 10-11 basamak:
 - İlk basamak 2-6 aralığındadır
-- Dokuzuncu basamak bir onay rakamıdır
-- Onuncu basamak, sorun rakamıdır
-- 11. basamak (isteğe bağlı) tek sayıdır
+- Dokuzuncu basamak bir denetim basamadır
+- Onuncu basamak sorun basamaktır
+- 11. basamak (isteğe bağlı) tek tek sayıdır
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_australian_medical_account_number desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_Australia_Medical_Account_Number bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_australian_medical_account_number desenle eşleşen içeriği bulur.
+- Keyword_Australia_Medical_Account_Number anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
 
 ```xml
@@ -817,19 +817,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_australia_medical_account_number"></a>Keyword_Australia_Medical_Account_Number
 
 - banka hesabı ayrıntıları
-- sağlıkla ilgili ödemeler
-- konut kredisi hesabı
+- medicare ödemeleri
+- ipotek hesabı
 - banka ödemeleri
 - bilgi dalı
 - kredi kartı kredisi
-- Department of human services
+- insan hizmetleri bölümü
 - yerel hizmet
-- sıhhi
+- Medicare
 
 
 ## <a name="australia-passport-number"></a>Avustralya pasaport numarası
@@ -843,18 +843,18 @@ sekiz veya dokuz alfasayısal karakter
 - bir harf (N, E, D, F, A, C, U, X) ve ardından yedi basamak veya
 - İki harf (PA, PB, PC, PD, PE, PF, PU, PW, PX, PZ) ve ardından yedi basamak.
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene `Regex_australia_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük `Keyword_australia_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade `Regex_australia_passport_number` , desenle eşleşen içeriği bulur.
+- 'den `Keyword_australia_passport_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- Normal ifade desene `Regex_australia_passport_number` eşleşen içerik bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- Normal ifade `Regex_australia_passport_number` , desenle eşleşen içeriği bulur.
 
 ```xml
     <!-- Australia Passport Number -->
@@ -869,62 +869,62 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_australia_passport_number"></a>Keyword_australia_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 - pasaport ayrıntıları
-- neden ve teslimi
-- Avustralya commonwealth
-- departman
+- göçmenlik ve vatandaşlık
+- avustralya birleşik topluluğu
+- göç departmanı
 - ulusal kimlik kartı
 - seyahat belgesi
-- yetkili verme
+- veren yetkili
 
 
 ## <a name="australia-physical-addresses"></a>Avustralya fiziksel adresleri 
 
-İşle ilgili olmayan bir adlandırılmış varlık, Avustralya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Sarılmamış adlandırılmış varlık, Avustralya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
-orta
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
+Orta
 
 
 ## <a name="australia-tax-file-number"></a>Avustralya vergi dosyası numarası
 
 ### <a name="format"></a>Biçim
 
-sekiz ile dokuz basamak arasında
+sekiz ila dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
-Tipik olarak boşluklarla sunulan sekiz ile dokuz basamak arasında:
+sekiz ila dokuz basamak genellikle aşağıdaki gibi boşluklarla gösterilir:
 - üç basamak
-- isteğe bağlı bir boşluk
+- isteğe bağlı bir alan
 - üç basamak
-- isteğe bağlı bir boşluk
-- Son rakamın onay rakamı olduğu iki ile üç basamak arasında
+- isteğe bağlı bir alan
+- son basamak bir denetim basamağı olduğunda iki ile üç basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_australian_tax_file_number desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_Australia_Tax_File_Number Keyword_number_exclusions anahtar sözcük bulunamıyor.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_australian_tax_file_number desenle eşleşen içeriği bulur.
+- Keyword_Australia_Tax_File_Number veya Keyword_number_exclusions anahtar sözcüğü bulunamadı.
+- Sağlama toplamı geçer.
 
 ```xml
    <!-- Australia Tax File Number -->
@@ -936,41 +936,41 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_australia_tax_file_number"></a>Keyword_australia_tax_file_number
 
-- Avustralya iş numarası
-- kâr marjı vergi oranı
-- sıhhare lezy
+- avustralya iş numarası
+- marjinal vergi oranı
+- medicare levy
 - portföy numarası
-- hizmet eskileri
-- stoping tax
-- bireysel vergi iadesini
+- hizmet gazileri
+- stopaj vergisi
+- bireysel vergi iadesi
 - vergi dosyası numarası
-- tfn
+- Tfn
 
 
-## <a name="austria-drivers-license-number"></a>Avusturya sürücü lisans numarası
+## <a name="austria-drivers-license-number"></a>Avusturya ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcılar olmadan sekiz basamak
+boşluk ve sınırlayıcı içermeyen sekiz basamak
 
 ### <a name="pattern"></a>Desen
 
 sekiz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
 
-- Normal ifade desene  `Regex_austria_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_austria_eu_driver's_license_number` bulunur.
+- Normal ifade  `Regex_austria_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_austria_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Austria Driver's License Number -->
@@ -985,15 +985,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -1001,93 +1001,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -1095,23 +1095,23 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
 
-#### <a name="keywords_austria_eu_drivers_license_number"></a>Keywords_austria_eu_driver's_license_number
+#### <a name="keywords_austria_eu_drivers_license_number"></a>Keywords_austria_eu_driver s_license_number
 
-- fuhrerschein
+- führerschein
 - führerschein
 - Führerscheine
 - Führerscheinnummer
@@ -1120,10 +1120,10 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ## <a name="austria-identity-card"></a>Avusturya kimlik kartı
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -1135,20 +1135,20 @@ Harflerin, basamakların ve özel karakterlerin 24 karakterlik birleşimi
 
 24 karakter:
 
--  22 harf (büyük/küçük harfe duyarlı değil), basamaklar, eğik çizgi, eğik çizgi veya artı işaretleri
+-  22 harf (büyük/küçük harfe duyarlı değil), basamaklar, ters eğik çizgi, eğik çizgi veya artı işareti
 
-- İki harf (büyük/küçük harfe duyarlı değil), basamaklar, eğik çizgi, eğik çizgi, artı işaretleri veya eşittir işaretleri
+- iki harf (büyük/küçük harfe duyarlı değil), basamaklar, ters eğik çizgi, eğik çizgi, artı işareti veya eşittir işareti
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
-Uygulanamaz
+Geçerli değil
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
 
-- Normal ifade desene  `Regex_austria_eu_national_id_card` eşleşen içerik bulur.
-- Anahtar sözcük  `Keywords_austria_eu_national_id_card` bulunur.
+- Normal ifade  `Regex_austria_eu_national_id_card` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_austria_eu_national_id_card` bir anahtar sözcük bulunur.
 
 ```xml
       <!-- Austria Identity Card -->
@@ -1160,7 +1160,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_austria_eu_national_id_card"></a>Keywords_austria_eu_national_id_card
 
@@ -1179,24 +1179,24 @@ Bir harf ve ardından isteğe bağlı bir boşluk ve yedi basamak
 
 Bir harf, yedi basamak ve bir boşluk birleşimi:
 
-- tek harf (büyük/harfe duyarlı değildir)
+- bir harf (büyük/küçük harfe duyarlı değil)
 - bir boşluk (isteğe bağlı)
 - yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
-uygulanamaz
+geçerli değil
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_austria_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_austria_eu_passport_number` bulunur.
-- Normal ifade, `Regex_eu_passport_date1` tarihi D.AA.YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_austria_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_austria_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date1` tarihi DD.AA.YYYY biçiminde bulur veya bir `Keywords_eu_passport_date` anahtar sözcük bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_austria_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_austria_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_austria_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_austria_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Austria Passport Number -->
@@ -1222,19 +1222,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_austria_eu_passport_number"></a>Keywords_austria_eu_passport_number
@@ -1249,15 +1249,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="austria-physical-addresses"></a>Avusturya fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Avusturya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Avusturya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
@@ -1272,22 +1272,22 @@ Belirtilen biçimde 10 basamak
 
 10 basamak:
 
-- Seri numarasına karşılık gelen üç basamak
-- tek bir onay rakamı
-- Doğum tarihine karşılık gelen altı basamak (DDMMY)
+- seri numarasına karşılık gelen üç basamak
+- bir denetim basamalı
+- doğum tarihine karşılık gelen altı basamak (DDMMYY)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_austria_eu_ssn_or_equivalent` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_austria_eu_ssn_or_equivalent` , desenle eşleşen içeriği bulur.
 - anahtar sözcüğü  `Keywords_austria_eu_ssn_or_equivalent` bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_austria_eu_ssn_or_equivalent` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_austria_eu_ssn_or_equivalent` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Austria Social Security Number -->
@@ -1306,28 +1306,28 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_austria_eu_ssn_or_equivalent"></a>Keywords_austria_eu_ssn_or_equivalent
 
-- Avusturya ssn
-- ehic sayı
+- avusturya ssn
+- ehik sayı
 - ehic no
 - sigorta kodu
-- sigortakodu #
+- insurancecode #
 - sigorta numarası
 - sigorta no
 - krankenkassennummer
 - krankenversicherung
 - socialsecurityno
 - socialsecurityno #
-- sosyal güvenlik yok
+- sosyal güvenlik hayır
 - sosyal güvenlik numarası
 - sosyal güvenlik kodu
 - sozialversicherungsnummer
 - sozialversicherungsnummer #
-- so bire bir sicherheit kein
-- solislesicherheitkein #
+- soziale sicherheit kein
+- sozialesicherheitkein #
 - ssn #
 - ssn
 - versicherungscode
@@ -1339,30 +1339,30 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-isteğe bağlı kısa çizgi ve eğik çizgiyle dokuz basamak
+isteğe bağlı kısa çizgi ve eğik çizgi içeren dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
-İsteğe bağlı kısa çizgi ve eğik çizgiyle dokuz basamak:
+isteğe bağlı kısa çizgi ve eğik çizgi içeren dokuz basamak:
 
-- İki basamak
+- iki basamak
 - kısa çizgi (isteğe bağlı)
 - üç basamak
 - eğik çizgi (isteğe bağlı)
 - dört basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_austria_eu_tax_file_number` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_austria_eu_tax_file_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_austria_eu_tax_file_number` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_austria_eu_tax_file_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev,  `Func_austria_eu_tax_file_number` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev  `Func_austria_eu_tax_file_number` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Austria Tax Identification Number -->
@@ -1377,38 +1377,38 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_austria_eu_tax_file_number"></a>Keywords_austria_eu_tax_file_number
 
-- österreich
+- Österreich
 - st.nr.
 - steuernummer
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 - vergi numarası
 
 
-## <a name="austria-value-added-tax"></a>Avusturya katma değeri vergileri
+## <a name="austria-value-added-tax"></a>Avusturya katma değer vergisi
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -1422,27 +1422,27 @@ Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
 
 - A veya a
 - T veya t
-- İsteğe bağlı boşluk
+- İsteğe bağlı alan
 - U veya u
-- isteğe bağlı boşluk
+- isteğe bağlı alan
 - iki veya üç basamak
-- isteğe bağlı boşluk
+- isteğe bağlı alan
 - dört basamak
-- isteğe bağlı boşluk
+- isteğe bağlı alan
 - bir veya iki basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_Austria_Value_Added_Tax desene eşleşen içeriği bulur.
-- Farklı bir Keyword_Austria_Value_Added_Tax anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_Austria_Value_Added_Tax desenle eşleşen içeriği bulur.
+- Keyword_Austria_Value_Added_Tax anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_Austria_Value_Added_Tax desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_Austria_Value_Added_Tax desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Austria Value Added Tax -->
@@ -1456,17 +1456,17 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_austria_value_added_tax"></a>Keyword_austria_value_added_tax
 
 - kdv numarası
-- kdv #
-- AVUSTURYA KDV numarası
+- Kdv #
+- avusturya kdv numarası
 - kdv no.
 - vatno #
 - katma değer vergi numarası
-- AVUSTURYA KDV
+- avusturya kdv
 - mwst
 - umsatzsteuernummer
 - mwstnummer
@@ -1474,32 +1474,32 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - umsatzsteuer-identifikationsnummer
 - kdv kimlik numarası
 - atu numarası
-- kullanıcı arabirimi numarası
+- uid numarası
 
 
-## <a name="azure-documentdb-auth-key"></a>Azure DocumentDB kimlik doğrulaması anahtarı
+## <a name="azure-documentdb-auth-key"></a>Azure DocumentDB kimlik doğrulama anahtarı
 
 ### <a name="format"></a>Biçim
 
-"DocumentDb" dizesini, ardından aşağıdaki desende belirtilen karakterleri ve dizeleri içerir.
+"DocumentDb" dizesinin ardından aşağıdaki desende belirtilen karakterler ve dizeler gelir.
 
 ### <a name="pattern"></a>Desen
 
 - "DocumentDb" dizesi
-- 3-200 arasında küçük veya büyük harfler, basamaklar, simgeler, özel karakterler veya boşluklar herhangi bir bileşimi
+- 3-200 arasında küçük veya büyük harf, rakam, simge, özel karakter veya boşluk birleşimi
 - Büyüktür simgesi (>), eşittir işareti (=), tırnak işareti (") veya kesme işareti (')
-- 86 küçük veya büyük harf, rakam, eğik çizgi (/) veya artı işareti (+) birleşimi
+- 86 küçük veya büyük harf, basamak, eğik çizgi (/) veya artı işareti (+) birleşimi
 - İki eşittir işareti (=)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade CEP_Regex_AzureDocumentDBAuthKey desene eşleşen içeriği bulur.
-- Normal CEP_CommonExampleKeywords ifade, desene eşleşen içeriği bulamıyor.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade CEP_Regex_AzureDocumentDBAuthKey desenle eşleşen içeriği bulur.
+- Normal ifade CEP_CommonExampleKeywords desenle eşleşen içeriği bulmaz.
 
 ```xml
 <!-- Azure Document DB Auth Key -->
@@ -1513,54 +1513,54 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="cep_commonexamplekeywords"></a>CEP_CommonExampleKeywords
 
-(Teknik olarak, bu hassas bilgi türü bu anahtar sözcükleri bir anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.)
+(Teknik olarak, bu hassas bilgi türü bu anahtar sözcükleri anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.)
 
-- contoso
-- fabrikam
-- northwind
-- korumalı alan
-- onebox
-- localhost
+- Contoso
+- Fabrikam
+- Northwind
+- Sandbox
+- Onebox
+- Localhost
 - 127.0.0.1
-- testacs.<!--no-hyperlink-->com
-- s-int.<!--no-hyperlink-->net
+- testacs.<!--no-hyperlink-->Com
+- s-int.<!--no-hyperlink-->Net
 
 
 ## <a name="azure-iaas-database-connection-string-and-azure-sql-connection-string"></a>Azure IAAS veritabanı bağlantı dizesi ve Azure SQL bağlantı dizesi
 
 ### <a name="format"></a>Biçim
 
-"Sunucu", "sunucu" veya "veri kaynağı" dizesi ve ardından "cloudapp.azure" dizesiyle birlikte aşağıdaki düzende belirtilen karakterler ve dizeler gelir.<!--no-hyperlink-->com" veya "cloudapp.azure.<!--no-hyperlink-->net" veya "database.windows.<!--no-hyperlink-->net" ve "Password" ya da "password" ya da "pwd" dizelerini kullanın.
+"Sunucu", "sunucu" veya "veri kaynağı" dizesi, ardından "cloudapp.azure" dizesi de dahil olmak üzere aşağıdaki desende özetlenen karakterler ve dizeler.<!--no-hyperlink-->com" veya "cloudapp.azure.<!--no-hyperlink-->net" veya "database.windows.<!--no-hyperlink-->net" ve "Password" veya "password" ya da "pwd" dizesi.
 
 ### <a name="pattern"></a>Desen
 
 - "Sunucu", "sunucu" veya "veri kaynağı" dizesi
-- sıfır ile iki boşluk karakteri arasında
+- sıfırdan iki boşluk karakterine
 - eşittir işareti (=)
-- sıfır ile iki boşluk karakteri arasında
-- 1-200 arası küçük veya büyük harfler, basamaklar, simgeler, özel karakterler veya boşluklar arasında herhangi bir birleşim
+- sıfırdan iki boşluk karakterine
+- 1-200 arasında küçük veya büyük harf, rakam, simge, özel karakter veya boşluk birleşimi
 - "cloudapp.azure.<!--no-hyperlink-->com", "cloudapp.azure.<!--no-hyperlink-->net" veya "database.windows.<!--no-hyperlink-->net"
-- 1-300 arası küçük veya büyük harfler, basamaklar, simgeler, özel karakterler veya boşluklar arasında herhangi bir birleşim
-- "Parola", "parola" veya "pwd" dizesi
-- sıfır ile iki boşluk karakteri arasında
+- 1-300 arasında küçük veya büyük harf, rakam, simge, özel karakter veya boşluk birleşimi
+- "Password", "password" veya "pwd" dizesi
+- sıfırdan iki boşluk karakterine
 - eşittir işareti (=)
-- sıfır ile iki boşluk karakteri arasında
-- noktalı virgül (noktalı virgül, tırnak işareti (") ;) veya kesme işareti (') olmayan bir veya birden çok karakter
+- sıfırdan iki boşluk karakterine
+- noktalı virgül (;), tırnak işareti (") veya kesme işareti (') olmayan bir veya daha fazla karakter
 - noktalı virgül (;), tırnak işareti (") veya kesme işareti (')
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade CEP_Regex_AzureConnectionString desene eşleşen içeriği bulur.
-- Normal CEP_CommonExampleKeywords ifade, desene eşleşen içeriği bulamıyor.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade CEP_Regex_AzureConnectionString desenle eşleşen içeriği bulur.
+- Normal ifade CEP_CommonExampleKeywords desenle eşleşen içeriği bulmaz.
 
 ```xml
 <!--Azure IAAS Database Connection String and Azure SQL Connection String-->
@@ -1574,54 +1574,54 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="cep_common_example_keywords"></a>CEP_common_example_keywords
 
-(Teknik olarak, bu hassas bilgi türü bu anahtar sözcükleri bir anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.)
+(Teknik olarak, bu hassas bilgi türü bu anahtar sözcükleri anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.)
 
-- contoso
-- fabrikam
-- northwind
-- korumalı alan
-- onebox
-- localhost
+- Contoso
+- Fabrikam
+- Northwind
+- Sandbox
+- Onebox
+- Localhost
 - 127.0.0.1
-- testacs.<!--no-hyperlink-->com
-- s-int.<!--no-hyperlink-->net
+- testacs.<!--no-hyperlink-->Com
+- s-int.<!--no-hyperlink-->Net
 
 
 ## <a name="azure-iot-connection-string"></a>Azure IoT bağlantı dizesi
 
 ### <a name="format"></a>Biçim
 
-"Ana BilgisayarAdı" dizesi, ardından "azure-devices" dizelerini de içeren, aşağıdaki düzende ana hatları verilen karakter ve dizeleri içerir.<!--no-hyperlink-->net" ve "SharedAccessKey".
+"HostName" dizesinin ardından, "azure-devices" dizeleri de dahil olmak üzere aşağıdaki desende özetlenen karakterler ve dizeler.<!--no-hyperlink-->net" ve "SharedAccessKey".
 
 ### <a name="pattern"></a>Desen
 
-- "Ana BilgisayarAdı" dizesi
-- sıfır ile iki boşluk karakteri arasında
+- "HostName" dizesi
+- sıfırdan iki boşluk karakterine
 - eşittir işareti (=)
-- sıfır ile iki boşluk karakteri arasında
-- 1-200 arası küçük veya büyük harfler, basamaklar, simgeler, özel karakterler veya boşluklar arasında herhangi bir birleşim
+- sıfırdan iki boşluk karakterine
+- 1-200 arasında küçük veya büyük harf, rakam, simge, özel karakter veya boşluk birleşimi
 - "azure-devices.<!--no-hyperlink-->net"
-- 1-200 arası küçük veya büyük harfler, basamaklar, simgeler, özel karakterler veya boşluklar arasında herhangi bir birleşim
+- 1-200 arasında küçük veya büyük harf, rakam, simge, özel karakter veya boşluk birleşimi
 - "SharedAccessKey" dizesi
-- sıfır ile iki boşluk karakteri arasında
+- sıfırdan iki boşluk karakterine
 - eşittir işareti (=)
-- sıfır ile iki boşluk karakteri arasında
-- herhangi bir 43 küçük veya büyük harf, rakam, eğik çizgi (/) veya artı işareti (+)
+- sıfırdan iki boşluk karakterine
+- 43 küçük veya büyük harf, basamak, eğik çizgi (/) veya artı işareti (+) birleşimi
 - eşittir işareti (=)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade CEP_Regex_AzureIoTConnectionString desene eşleşen içeriği bulur.
-- Normal CEP_CommonExampleKeywords ifade, desene eşleşen içeriği bulamıyor.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade CEP_Regex_AzureIoTConnectionString desenle eşleşen içeriği bulur.
+- Normal ifade CEP_CommonExampleKeywords desenle eşleşen içeriği bulmaz.
 
 ```xml
 <!--Azure IoT Connection String-->
@@ -1635,44 +1635,44 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="cep_common_example_keywords"></a>CEP_common_example_keywords
 
-Bu hassas bilgi türü, bu anahtar sözcükleri bir anahtar sözcük listesi değil, normal bir ifade kullanarak tanımlar.
+Bu hassas bilgi türü, bu anahtar sözcükleri anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.
 
-- contoso
-- fabrikam
-- northwind
-- korumalı alan
-- onebox
-- localhost
+- Contoso
+- Fabrikam
+- Northwind
+- Sandbox
+- Onebox
+- Localhost
 - 127.0.0.1
-- testacs.<!--no-hyperlink-->com
-- s-int.<!--no-hyperlink-->net
+- testacs.<!--no-hyperlink-->Com
+- s-int.<!--no-hyperlink-->Net
 
 
 ## <a name="azure-publish-setting-password"></a>Azure yayımlama ayarı parolası
 
 ### <a name="format"></a>Biçim
 
-"userpwd=" dizesi ve ardından bir alfasayısal dize.
+"userpwd=" dizesi ve ardından alfasayısal dize.
 
 ### <a name="pattern"></a>Desen
 
 - "userpwd=" dizesi
-- 60 küçük harf veya rakam birleşimi
+- 60 küçük harf veya basamak birleşimi
 - tırnak işareti (")
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade CEP_Regex_AzurePublishSettingPasswords desene eşleşen içeriği bulur.
-- Normal CEP_CommonExampleKeywords ifade, desene eşleşen içeriği bulamıyor.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade CEP_Regex_AzurePublishSettingPasswords desenle eşleşen içeriği bulur.
+- Normal ifade CEP_CommonExampleKeywords desenle eşleşen içeriği bulmaz.
 
 
 ```xml
@@ -1687,49 +1687,49 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="cep_common_example_keywords"></a>CEP_common_example_keywords
 
-Bu hassas bilgi türü, bu anahtar sözcükleri bir anahtar sözcük listesi değil, normal bir ifade kullanarak tanımlar.
+Bu hassas bilgi türü, bu anahtar sözcükleri anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.
 
-- contoso
-- fabrikam
-- northwind
-- korumalı alan
-- onebox
-- localhost
+- Contoso
+- Fabrikam
+- Northwind
+- Sandbox
+- Onebox
+- Localhost
 - 127.0.0.1
-- testacs.<!--no-hyperlink-->com
-- s-int.<!--no-hyperlink-->net
+- testacs.<!--no-hyperlink-->Com
+- s-int.<!--no-hyperlink-->Net
 
 
-## <a name="azure-redis-cache-connection-string"></a>Azure Önbelleği yeniden dağıt bağlantı dizesi
+## <a name="azure-redis-cache-connection-string"></a>Azure Redis cache bağlantı dizesi
 
 ### <a name="format"></a>Biçim
 
-"redis.cache.windows.<!--no-hyperlink-->net" ifadesini, ardından da "password" veya "pwd" dizesini içeren aşağıdaki düzende belirtilen karakterleri ve dizeleri takip edin.
+"redis.cache.windows.<!--no-hyperlink-->net" ve ardından "password" veya "pwd" dizesi de dahil olmak üzere aşağıdaki desende belirtilen karakter ve dizeler gelir.
 
 ### <a name="pattern"></a>Desen
 
 - "redis.cache.windows.<!--no-hyperlink-->net"
-- 1-200 arası küçük veya büyük harfler, basamaklar, simgeler, özel karakterler veya boşluklar arasında herhangi bir birleşim
+- 1-200 arasında küçük veya büyük harf, rakam, simge, özel karakter veya boşluk birleşimi
 - "password" veya "pwd" dizesi
-- sıfır ile iki boşluk karakteri arasında
+- sıfırdan iki boşluk karakterine
 - eşittir işareti (=)
-- sıfır ile iki boşluk karakteri arasında
-- Küçük veya büyük harf, rakam, eğik çizgi (/) veya artı işareti (+) olan 43 karakterin herhangi bir bileşimi
+- sıfırdan iki boşluk karakterine
+- küçük veya büyük harf, rakam, eğik çizgi (/) veya artı işareti (+) olan 43 karakterden oluşan herhangi bir birleşim
 - eşittir işareti (=)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade CEP_Regex_AzureRedisCacheConnectionString desene eşleşen içeriği bulur.
-- Normal CEP_CommonExampleKeywords ifade, desene eşleşen içeriği bulamıyor.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade CEP_Regex_AzureRedisCacheConnectionString desenle eşleşen içeriği bulur.
+- Normal ifade CEP_CommonExampleKeywords desenle eşleşen içeriği bulmaz.
 
 ```xml
 <!--Azure Redis Cache Connection String-->
@@ -1743,47 +1743,47 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="cep_common_example_keywords"></a>CEP_common_example_keywords
 
-(Teknik olarak, bu hassas bilgi türü bu anahtar sözcükleri bir anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.)
+(Teknik olarak, bu hassas bilgi türü bu anahtar sözcükleri anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.)
 
-- contoso
-- fabrikam
-- northwind
-- korumalı alan
-- onebox
-- localhost
+- Contoso
+- Fabrikam
+- Northwind
+- Sandbox
+- Onebox
+- Localhost
 - 127.0.0.1
-- testacs.<!--no-hyperlink-->com
-- s-int.<!--no-hyperlink-->net
+- testacs.<!--no-hyperlink-->Com
+- s-int.<!--no-hyperlink-->Net
 
 
 ## <a name="azure-sas"></a>Azure SAS
 
 ### <a name="format"></a>Biçim
 
-"sig" dizesi, ardından aşağıdaki desende belirtilen karakter ve dizeleri içerir.
+"sig" dizesinin ardından aşağıdaki desende özetlenen karakterler ve dizeler gelir.
 
 ### <a name="pattern"></a>Desen
 
 - "sig" dizesi
-- sıfır ile iki boşluk karakteri arasında
+- sıfırdan iki boşluk karakterine
 - eşittir işareti (=)
-- sıfır ile iki boşluk karakteri arasında
-- küçük ya da büyük harf, rakam veya yüzde işareti (%) olan 43-53 karakter arasında herhangi bir birleşim
+- sıfırdan iki boşluk karakterine
+- küçük veya büyük harf, rakam veya yüzde işareti (%) olan 43-53 karakter arasında herhangi bir birleşim
 - "%3d" dizesi
-- Küçük veya büyük harf, rakam veya yüzde işareti (%) olmayan herhangi bir karakter
+- küçük veya büyük harf, rakam veya yüzde işareti (%) olmayan herhangi bir karakter
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade CEP_Regex_AzureSAS desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade CEP_Regex_AzureSAS desenle eşleşen içeriği bulur.
 
 ```xml
 <!--Azure SAS-->
@@ -1794,37 +1794,37 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-## <a name="azure-service-bus-connection-string"></a>Azure hizmet verisi bağlantı dizesi
+## <a name="azure-service-bus-connection-string"></a>Azure service bus bağlantı dizesi
 
 ### <a name="format"></a>Biçim
 
-"EndPoint" dizesi, ardından "servicebus.windows" dizelerini de içeren, aşağıdaki düzende ana hatları verilen karakter ve dizeleri içerir.<!--no-hyperlink-->net" ve "SharedAccesKey".
+"EndPoint" dizesinin ardından aşağıdaki desende belirtilen karakterler ve dizeler ve "servicebus.windows" dizeleri de dahil olmak üzere.<!--no-hyperlink-->net" ve "SharedAccesKey".
 
 ### <a name="pattern"></a>Desen
 
 - "EndPoint" dizesi
-- sıfır ile iki boşluk karakteri arasında
+- sıfırdan iki boşluk karakterine
 - eşittir işareti (=)
-- sıfır ile iki boşluk karakteri arasında
-- 1-200 arası küçük veya büyük harfler, basamaklar, simgeler, özel karakterler veya boşluklar arasında herhangi bir birleşim
+- sıfırdan iki boşluk karakterine
+- 1-200 arasında küçük veya büyük harf, rakam, simge, özel karakter veya boşluk birleşimi
 - "servicebus.windows.<!--no-hyperlink-->net"
-- 1-200 arası küçük veya büyük harfler, basamaklar, simgeler, özel karakterler veya boşluklar arasında herhangi bir birleşim
+- 1-200 arasında küçük veya büyük harf, rakam, simge, özel karakter veya boşluk birleşimi
 - "SharedAccessKey" dizesi
-- sıfır ile iki boşluk karakteri arasında
+- sıfırdan iki boşluk karakterine
 - eşittir işareti (=)
-- sıfır ile iki boşluk karakteri arasında
-- Küçük veya büyük harf, rakam, eğik çizgi (/) veya artı işareti (+) olan 43 karakterin herhangi bir bileşimi
+- sıfırdan iki boşluk karakterine
+- küçük veya büyük harf, rakam, eğik çizgi (/) veya artı işareti (+) olan 43 karakterden oluşan herhangi bir birleşim
 - eşittir işareti (=)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade CEP_Regex_AzureServiceBusConnectionString desene eşleşen içeriği bulur.
-- Normal CEP_CommonExampleKeywords ifade, desene eşleşen içeriği bulamıyor.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade CEP_Regex_AzureServiceBusConnectionString desenle eşleşen içeriği bulur.
+- Normal ifade CEP_CommonExampleKeywords desenle eşleşen içeriği bulmaz.
 
 ```xml
 <!--Azure Service Bus Connection String-->
@@ -1838,53 +1838,53 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="cep_common_example_keywords"></a>CEP_common_example_keywords
 
-(Teknik olarak, bu hassas bilgi türü bu anahtar sözcükleri bir anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.)
+(Teknik olarak, bu hassas bilgi türü bu anahtar sözcükleri anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.)
 
-- contoso
-- fabrikam
-- northwind
-- korumalı alan
-- onebox
-- localhost
+- Contoso
+- Fabrikam
+- Northwind
+- Sandbox
+- Onebox
+- Localhost
 - 127.0.0.1
-- testacs.<!--no-hyperlink-->com
-- s-int.<!--no-hyperlink-->net
+- testacs.<!--no-hyperlink-->Com
+- s-int.<!--no-hyperlink-->Net
 
 
-## <a name="azure-storage-account-key"></a>Azure depolama hesap anahtarı
+## <a name="azure-storage-account-key"></a>Azure depolama hesabı anahtarı
 
 ### <a name="format"></a>Biçim
 
-"DefaultEndpointsProtocol" dizesi ve ardından aşağıdaki düzende ana hatları verilen karakter ve dizeler ("AccountKey" dizesini içerir).
+"DefaultEndpointsProtocol" dizesi ve ardından "AccountKey" dizesi de dahil olmak üzere aşağıdaki desende özetlenen karakterler ve dizeler gelir.
 
 ### <a name="pattern"></a>Desen
 
 - "DefaultEndpointsProtocol" dizesi
-- sıfır ile iki boşluk karakteri arasında
+- sıfırdan iki boşluk karakterine
 - eşittir işareti (=)
-- sıfır ile iki boşluk karakteri arasında
-- 1-200 arası küçük veya büyük harfler, basamaklar, simgeler, özel karakterler veya boşluklar arasında herhangi bir birleşim
+- sıfırdan iki boşluk karakterine
+- 1-200 arasında küçük veya büyük harf, rakam, simge, özel karakter veya boşluk birleşimi
 - "AccountKey" dizesi
-- sıfır ile iki boşluk karakteri arasında
+- sıfırdan iki boşluk karakterine
 - eşittir işareti (=)
-- sıfır ile iki boşluk karakteri arasında
-- Küçük veya büyük harf, rakam, eğik çizgi (/) veya artı işareti (+) olan 86 karakterin herhangi bir bileşimi
+- sıfırdan iki boşluk karakterine
+- küçük veya büyük harf, rakam, eğik çizgi (/) veya artı işareti (+) olan 86 karakterden oluşan herhangi bir birleşim
 - iki eşittir işareti (=)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade CEP_Regex_AzureStorageAccountKey desene eşleşen içeriği bulur.
-- Normal CEP_AzureEmulatorStorageAccountFilter ifade, desene eşleşen içeriği bulamıyor.
-- Normal CEP_CommonExampleKeywords ifade, desene eşleşen içeriği bulamıyor.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade CEP_Regex_AzureStorageAccountKey desenle eşleşen içeriği bulur.
+- Normal ifade CEP_AzureEmulatorStorageAccountFilter desenle eşleşen içeriği bulmaz.
+- Normal ifade CEP_CommonExampleKeywords desenle eşleşen içeriği bulmaz.
 
 ```xml
 <!--Azure Storage Account Key-->
@@ -1899,49 +1899,49 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="cep_azure_emulator_storage_account_filter"></a>CEP_azure_emulator_storage_account_filter
 
-(Teknik olarak, bu hassas bilgi türü bu anahtar sözcükleri bir anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.)
+(Teknik olarak, bu hassas bilgi türü bu anahtar sözcükleri anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.)
 
 - Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==
 
 #### <a name="cep_common_example_keywords"></a>CEP_common_example_keywords
 
-(Teknik olarak, bu hassas bilgi türü bu anahtar sözcükleri bir anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.)
+(Teknik olarak, bu hassas bilgi türü bu anahtar sözcükleri anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.)
 
-- contoso
-- fabrikam
-- northwind
-- korumalı alan
-- onebox
-- localhost
+- Contoso
+- Fabrikam
+- Northwind
+- Sandbox
+- Onebox
+- Localhost
 - 127.0.0.1
-- testacs.<!--no-hyperlink-->com
-- s-int.<!--no-hyperlink-->net
+- testacs.<!--no-hyperlink-->Com
+- s-int.<!--no-hyperlink-->Net
 
 
-## <a name="azure-storage-account-key-generic"></a>Azure Depolama hesabı anahtarı (generic)
+## <a name="azure-storage-account-key-generic"></a>Azure Depolama hesap anahtarı (genel)
 
 ### <a name="format"></a>Biçim
 
-Aşağıdaki modelde belirtilen 86 küçük veya büyük harf, rakam, eğik çizgi (/) veya artı işareti (+), bunların ardından gelen veya bunların ardından gelen herhangi bir karakter.
+86 küçük veya büyük harf, rakam, eğik çizgi (/) veya artı işareti (+) birleşimi, aşağıdaki desende ana hatlarıyla belirtilen karakterlerden önce veya takip eder.
 
 ### <a name="pattern"></a>Desen
 
-- sıfır simgesinden (>), kesme işareti ('), eşittir işareti (=), tırnak işareti (") veya sayı işaretinden (#)
-- Küçük veya büyük harf, rakam, eğik çizgi (/) veya artı işareti (+) olan 86 karakterin herhangi bir bileşimi
+- sıfır ile büyüktür simgesinden birine (>), kesme işareti ('), eşittir işareti (=), tırnak işareti (") veya sayı işareti (#)
+- küçük veya büyük harf, basamak, eğik çizgi (/) veya artı işareti (+) olan 86 karakterden oluşan herhangi bir birleşim
 - iki eşittir işareti (=)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade CEP_Regex_AzureStorageAccountKeyGeneric desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade CEP_Regex_AzureStorageAccountKeyGeneric desenle eşleşen içeriği bulur.
 
 ```xml
 <!--Azure Storage Account Key (Generic)-->
@@ -1953,25 +1953,25 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 ```
 
 
-## <a name="belgium-drivers-license-number"></a>Belçika sürücü lisans numarası
+## <a name="belgium-drivers-license-number"></a>Belçika ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcı olmayan 10 basamak
+Boşluk ve sınırlayıcı içermeyen 10 basamak
 
 ### <a name="pattern"></a>Desen
 
 10 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_belgium_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya `Keywords_eu_driver's_license_number` `Keywords_belgium_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_belgium_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_belgium_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Belgium Driver's License Number -->
@@ -1986,15 +1986,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -2002,93 +2002,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -2096,29 +2096,29 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
-#### <a name="keywords_belgium_eu_drivers_license_number"></a>Keywords_belgium_eu_driver's_license_number
+#### <a name="keywords_belgium_eu_drivers_license_number"></a>Keywords_belgium_eu_driver s_license_number
 
 - rijbewijs
 - rijbewijsnummer
 - führerschein
 - führerscheinnummer
 - füehrerscheinnummer
-- fuhrerschein
-- fuehrerschein
-- fuhrerscheinnummer
+- führerschein
+- führerschein
+- führerscheinnummer
 - fuehrerscheinnummer
 - permis de conduire
 - numéro permis conduire
@@ -2132,27 +2132,27 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="pattern"></a>Desen
 
-11 rakam artı sınırlayıcılar:
-- YY biçiminde altı basamaklı ve isteğe bağlı iki dönem. Doğum tarihi için AA.DD
-- Nokta, çizgi, boşluktan isteğe bağlı bir sınırlayıcı
-- Üç sıralı basamak (erkekler için tek, kadınlar için bile)
-- Nokta, çizgi, boşluktan isteğe bağlı bir sınırlayıcı
-- iki onay rakamı
+11 basamak ve sınırlayıcılar:
+- YY biçiminde altı basamak ve iki isteğe bağlı nokta. Doğum tarihi için MM.DD
+- Nokta, tire, boşluktan isteğe bağlı sınırlayıcı
+- üç sıralı basamak (erkekler için, hatta dişiler için)
+- Nokta, tire, boşluktan isteğe bağlı sınırlayıcı
+- iki denetim basamağı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_belgium_national_number desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_belgium_national_number bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_belgium_national_number desenle eşleşen içeriği bulur.
+- Keyword_belgium_national_number anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev Func_belgium_national_number desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev Func_belgium_national_number desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- Belgium National Number -->
@@ -2167,32 +2167,32 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_belgium_national_number"></a>Keyword_belgium_national_number
 
-- olarak aantal
-- bnn #
-- bnn
+- belasting aantal
+- Bnn #
+- Bnn
 - carte d'identité
 - identifiant national
 - identifiantnational #
 - identificatie
-- tanımlama
+- Kimlik
 - identifikation
 - identifikationsnummer
 - identifizierung
 - identité
 - identiteit
 - identiteitskaart
-- kimlik
-- 1912
-- ulusal numara
-- national register
-- ulusalsayı #
-- ulusalsayı
-- nif #
-- nif
+- Kimlik
+- Yazıt
+- ulusal sayı
+- ulusal kayıt defteri
+- nationalnumber #
+- nationalnumber
+- Nif #
+- Nif
 - numéro d'assuré
 - numéro de registre national
 - numéro de sécurité
@@ -2202,57 +2202,57 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - numéronational #
 - kişisel kimlik numarası
 - personalausweis
-- kişiselsayı #
+- personalidnumber #
 - registratie
-- kayıt
+- Kayıt
 - registrationsnumme
 - registrierung
 - sosyal güvenlik numarası
 - ssn #
 - ssn
 - steuernummer
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 
 
 ## <a name="belgium-passport-number"></a>Belçika pasaport numarası
 
 ### <a name="format"></a>Biçim
 
-boşluk veya sınırlayıcı yok, iki harf ve ardından da altı basamak
+boşluk veya sınırlayıcı içermeyen iki harf ve ardından altı basamak
 
 ### <a name="pattern"></a>Desen
 
-İki harf ve ardından altı basamak
+iki harf ve ardından altı basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
-uygulanamaz
+geçerli değil
 
 ### <a name="definition"></a>Tanım
 
- DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_belgium_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_belgium_eu_passport_number` bulunur.
-- Normal ifade, `Regex_eu_passport_date2` tarihi DD MM YY biçiminde veya bir anahtar sözcük veya `Keywords_eu_passport_date` `Keywords_belgium_eu_passport_number` bulunur biçimde bulur
+ DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_belgium_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_belgium_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date2` , tarihi DD AA YY biçiminde veya anahtar sözcük olarak `Keywords_eu_passport_date` bulur veya `Keywords_belgium_eu_passport_number` bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_belgium_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_belgium_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_belgium_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_belgium_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Belgium Passport Number -->
@@ -2280,55 +2280,55 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_belgium_eu_passport_number"></a>Keywords_belgium_eu_passport_number
 
-- numéro passeport
+- numéro passport
 - paspoort nr
 - paspoort-nr
 - paspoortnummer
 - paspoortnummers
-- Passeport carte
-- Passeportportre
+- Passport carte
+- Passport livre
 - Pass-Nr
 - Passnummer
 - reisepass kein
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="belgium-physical-addresses"></a>Belçika fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Belçika'dan gelen fiziksel adreslerle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Belçika'dan gelen fiziksel adreslerle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
-## <a name="belgium-value-added-tax-number"></a>Belçika değeri eklenen vergi numarası
+## <a name="belgium-value-added-tax-number"></a>Belçika katma değer vergi numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -2340,27 +2340,27 @@ Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
 
 12 karakterli alfasayısal desen:
 
-- a letter B or b
-- E harfi veya e harfi
-- basamak 0
-- 1 ile 9 arasında bir basamak
-- isteğe bağlı bir nokta veya Kısa çizgi veya boşluk
+- B veya b harfi
+- E veya e harfi
+- bir basamak 0
+- 1'den 9'a kadar olan bir basamak
+- isteğe bağlı nokta veya Kısa Çizgi veya boşluk
 - dört basamak
-- isteğe bağlı bir nokta veya Kısa çizgi veya boşluk
+- isteğe bağlı nokta veya Kısa Çizgi veya boşluk
 - dört basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_belgium_value_added_tax_number desene eşleşen içeriği bulur.
-- Bir başka Keywords_belgium_value_added_tax_number anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_belgium_value_added_tax_number desenle eşleşen içeriği bulur.
+- Keywords_belgium_value_added_tax_number anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_belgium_value_added_tax_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_belgium_value_added_tax_number desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Belgium Value Added Tax Number -->
@@ -2375,34 +2375,34 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
     </Version>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_belgium_value_added_tax_number"></a>Keyword_belgium_value_added_tax_number
 
 - nº tva
 - kdv numarası
-- kdv yok
+- kdv no
 - numéro t.v.a
 - umsatzsteuer-identifikationsnummer
 - umsatzsteuernummer
-- btw
-- btw #
-- kdv #
+- Btw
+- Btw #
+- Kdv #
 
 
-## <a name="blood-test-terms"></a>Kan testi koşulları
+## <a name="blood-test-terms"></a>Kan testi terimleri
 
-Bu bakıla sahip olmayan bu varlık, *hCG* gibi kan testleri ile ilgili terimleri algılar. Yalnızca İngilizce terimleri destekler. Ayrıca SIT adlı tüzel kişi [SIT adlı sağlık hüküm ve koşullarına](#all-medical-terms-and-conditions) da dahildir.
+Bu unbundled adlandırılmış varlık *, hCG* gibi kan testleriyle ilgili terimleri algılar. Yalnızca İngilizce terimleri destekler. Ayrıca entity SIT adlı [tüm tıbbi hüküm ve koşullar](#all-medical-terms-and-conditions) paketinde yer alır.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Yüksek
 
-## <a name="brand-medication-names"></a>Ilaç adları
+## <a name="brand-medication-names"></a>Marka ilaç adları
 
-Bu bakıla adlandırılmış varlık, *Tylenol* gibi marka ilaçlarının adlarını algılar. Yalnızca İngilizce terimleri destekler. Ayrıca SIT adlı tüzel kişi [SIT adlı sağlık hüküm ve koşullarına](#all-medical-terms-and-conditions) da dahildir.
+Bu unbundled adlı varlık *, Tylenol* gibi marka ilaç adlarını algılar. Yalnızca İngilizce terimleri destekler. Ayrıca entity SIT adlı [tüm tıbbi hüküm ve koşullar](#all-medical-terms-and-conditions) paketinde yer alır.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Yüksek
 
@@ -2411,7 +2411,7 @@ Yüksek
 
 ### <a name="format"></a>Biçim
 
-Onay basamakları içeren ve biçimlendirilemeyen 11 basamak
+Denetim basamağı içeren ve biçimlendirilebilen veya biçimlendirilemeyen 11 basamak
 
 ### <a name="pattern"></a>Desen
 
@@ -2422,25 +2422,25 @@ Biçimlendirilmiş:
 - dönem
 - üç basamak
 - kısa çizgi
-- basamamlı iki basamak
+- denetim basamakları olan iki basamak
 
-Biçimlendirilmemiş:
-- Son iki basamamanın çek basamakları olduğu 11 basamak
+Biçimlendir -ilmemiş:
+- Son iki basamağın denetim basamakları olduğu 11 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_brazil_cpf desene eşleşen içeriği bulur.
-- Bir başka Keyword_brazil_cpf anahtar sözcük bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_brazil_cpf desenle eşleşen içeriği bulur.
+- Keyword_brazil_cpf anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_brazil_cpf desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_brazil_cpf desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- Brazil CPF Number -->
@@ -2455,7 +2455,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_brazil_cpf"></a>Keyword_brazil_cpf
 
@@ -2463,47 +2463,47 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - Kimlik
 - Kayıt
 - Gelir
-- Cadastro de Pesoas Físicas
+- Cadastro de Pessoas Físicas
 - Imposto
 - Identificação
 - Inscrição
 - Receita
 
 
-## <a name="brazil-legal-entity-number-cnpj"></a>Brezilya yasal varlık numarası (CNPJ)
+## <a name="brazil-legal-entity-number-cnpj"></a>Brezilya tüzel kişilik numarası (CNPJ)
 
 ### <a name="format"></a>Biçim
 
-Kayıt numarası, dal numarası ve çek basamakları ile sınırlayıcıları içeren 14 basamak
+Kayıt numarası, dal numarası ve denetim basamakları ile sınırlayıcıları içeren 14 basamak
 
 ### <a name="pattern"></a>Desen
 
-14 rakam, artı olarak sınırlayıcılar:
+14 basamak ve sınırlayıcılar:
 
-- İki basamak
+- iki basamak
 - dönem
 - üç basamak
 - dönem
-- üç basamak (ilk sekiz basamak kayıt numarasıdır)
+- üç basamak (bu ilk sekiz basamak kayıt numarasıdır)
 - eğik çizgi
 - dört basamaklı dal numarası
 - kısa çizgi
-- basamamlı iki basamak
+- denetim basamakları olan iki basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_brazil_cnpj desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_brazil_cnpj bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_brazil_cnpj desenle eşleşen içeriği bulur.
+- Keyword_brazil_cnpj anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_brazil_cnpj desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_brazil_cnpj desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- Brazil Legal Entity Number (CNPJ) -->
@@ -2518,27 +2518,27 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_brazil_cnpj"></a>Keyword_brazil_cnpj
 
 - CNPJ
 - CNPJ/MF
 - CNPJ-MF
-- Ulusal Yasal Varlıklar Kayıt Defteri
-- Taxpayers Kayıt Defteri
-- Tüzel kişi
-- Yasal varlıklar
+- Tüzel Kişiliklerin Ulusal Kayıt Defteri
+- Vergi Mükellefleri Kayıt Defteri
+- Tüzel
+- Tüzel kişilikler
 - Kayıt Durumu
 - Business
 - Şirket
 - CNPJ
-- Cadastro Nacional da Pezsoa Luciaídica
+- Cadastro Nacional da Pessoa Jurídica
 - Cadastro Geral de Contribuintes
 - CGC
-- Pezsoa pesídica
-- Pezsoas pesídicas
-- Situação cadastral
+- Pessoa jurídica
+- Pessoas jurídicas
+- Situação kadastro
 - Inscrição
 - Empresa
 
@@ -2547,36 +2547,36 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-Registro Geral (eski biçim): Dokuz basamaklı
+Registro Geral (eski biçim): Dokuz basamak
 
 Registro de Identidade (RIC) (yeni biçim): 11 basamak
 
 ### <a name="pattern"></a>Desen
 
 Registro Geral (eski biçim):
-- İki basamak
+- iki basamak
 - dönem
 - üç basamak
 - dönem
 - üç basamak
 - kısa çizgi
-- bir rakam, bir onay rakamıdır
+- denetim basamalı bir basamak
 
 Registro de Identidade (RIC) (yeni biçim):
 - 10 basamak
 - kısa çizgi
-- bir rakam, bir onay rakamıdır
+- denetim basamalı bir basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_brazil_rg desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_brazil_rg bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_brazil_rg desenle eşleşen içeriği bulur.
+- Keyword_brazil_rg anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
 
 ```xml
@@ -2589,7 +2589,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_brazil_rg"></a>Keyword_brazil_rg
 
@@ -2599,37 +2599,37 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - número de rregistro
 - registro de Iidentidade
 - registro geral
-- RG (bu anahtar sözcük büyük/harfe duyarlıdır)
-- RIC (bu anahtar sözcük büyük/harfe duyarlıdır)
+- RG (bu anahtar sözcük büyük/küçük harfe duyarlıdır)
+- RIC (bu anahtar sözcük büyük/küçük harfe duyarlıdır)
 
 
 ## <a name="brazil-physical-addresses"></a>Brezilya fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Brezilya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Brezilya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
-## <a name="bulgaria-drivers-license-number"></a>Bulgaristan sürücü lisans numarası
+## <a name="bulgaria-drivers-license-number"></a>Bulgaristan ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcılar olmadan dokuz basamak
+boşluk ve sınırlayıcı içermeyen dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
 dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_bulgaria_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_bulgaria_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_bulgaria_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_bulgaria_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Bulgaria Driver's License Number -->
@@ -2644,15 +2644,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -2660,93 +2660,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -2754,14 +2754,14 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
@@ -2780,26 +2780,26 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcılar olmadan dokuz basamak
+boşluk ve sınırlayıcı içermeyen dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
 dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_bulgaria_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_bulgaria_eu_passport_number` bulunur.
-- Normal ifade, `Regex_eu_passport_date1` tarihi D.AA.YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_bulgaria_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_bulgaria_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date1` tarihi DD.AA.YYYY biçiminde bulur veya bir `Keywords_eu_passport_date` anahtar sözcük bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_bulgaria_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_bulgaria_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_bulgaria_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_bulgaria_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Bulgaria Passport Number -->
@@ -2824,74 +2824,74 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_bulgaria_eu_passport_number"></a>Keywords_bulgaria_eu_passport_number
 
 - номер на паспорта
 - номер на паспорт
-- паспорт No
+- паспорт Hayır
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="bulgaria-physical-addresses"></a>Bulgaristan fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Bulgaristan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Bulgaristan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
-## <a name="bulgaria-uniform-civil-number"></a>Bulgaristan muntalik (ABD)
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+## <a name="bulgaria-uniform-civil-number"></a>Bulgaristan üniforma sivil numarası
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcı olmayan 10 basamak
+Boşluk ve sınırlayıcı içermeyen 10 basamak
 
 ### <a name="pattern"></a>Desen
 
-Boşluk ve sınırlayıcı olmayan 10 basamak
+Boşluk ve sınırlayıcı içermeyen 10 basamak
 
-- Doğum tarihine karşılık gelen altı basamak (YYAAA)
-- Doğum siparişine karşılık gelen iki basamak
-- Cinsiyete karşılık gelen tek basamak: Erkek için çift basamak, kadın için tek basamak
-- tek bir onay rakamı
+- doğum tarihine karşılık gelen altı basamak (YYMMDD)
+- doğum sırasına karşılık gelen iki basamak
+- cinsiyete karşılık gelen bir basamak: Erkek için çift basamak ve kadın için tek bir basamak
+- bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_bulgaria_eu_national_id_card` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_bulgaria_eu_national_id_card` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_bulgaria_eu_national_id_card` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_bulgaria_eu_national_id_card` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_bulgaria_eu_national_id_card` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_bulgaria_eu_national_id_card` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Bulgaria Uniform Civil Number -->
@@ -2910,37 +2910,37 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_bulgaria_eu_national_id_card"></a>Keywords_bulgaria_eu_national_id_card
 
-- bnn #
-- bnn
+- Bnn #
+- Bnn
 - bucn #
 - bucn
-- edinen grahdanski nomer
+- edinen grazhdanski nomer
 - egn #
 - egn
 - kimlik numarası
 - ulusal kimlik
-- ulusal numara
-- ulusalsayı #
-- ulusalsayı
+- ulusal sayı
+- nationalnumber #
+- nationalnumber
 - kişisel kimlik
 - kişisel hayır
 - kişisel numara
-- kişiselsayı #
+- personalidnumber #
 - sosyal güvenlik numarası
 - ssn #
 - ssn
-- tekdüdüz kimlik
-- uniform civil no
-- muntalik (muntaz)
+- tekdüzen sivil kimlik
+- tek tip sivil hayır
+- tek tip sivil numara
 - uniformcivilno #
 - uniformcivilno
 - uniformcivilnumber #
 - uniformcivilnumber
-- benzersiz benzersiz benzersiz benzersiz numara
+- benzersiz vatandaşlık numarası
 - егн #
 - егн
 - единен граждански номер
@@ -2951,10 +2951,10 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - национален номер
 - номер на гражданството
 - униформ id
-- униформ грамдански id
+- униформ граждански id
 - униформ граждански не
 - униформ граждански номер
-- униформграмданскиid #
+- униформгражданскиid #
 - униформгражданскине. #
 
 
@@ -2968,27 +2968,27 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 Kanada Banka Hesap Numarası 7 veya 12 basamaktır.
 
-Kanada banka hesabı taşıma numarası:
+Kanada banka hesabı geçiş numarası:
 - beş basamak
 - kısa çizgi
-- üç basamak VEYA
+- üç basamak OR
 - sıfır "0"
 - sekiz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade Regex_canada_bank_account_number desene eşleşen içeriği bulur.
-- Farklı bir Keyword_canada_bank_account_number anahtar sözcük bulunur.
-- Normal ifade Regex_canada_bank_account_transit_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade Regex_canada_bank_account_number desenle eşleşen içeriği bulur.
+- Keyword_canada_bank_account_number anahtar sözcüğü bulunur.
+- Normal ifade Regex_canada_bank_account_transit_number desenle eşleşen içeriği bulur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade Regex_canada_bank_account_number desene eşleşen içeriği bulur.
-- Farklı bir Keyword_canada_bank_account_number anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade Regex_canada_bank_account_number desenle eşleşen içeriği bulur.
+- Keyword_canada_bank_account_number anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Canada Bank Account Number -->
@@ -3005,63 +3005,63 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_canada_bank_account_number"></a>Keyword_canada_bank_account_number
 
-- Kanada tasarruf bonoları
-- Canada revenue agency
-- Kanada mali kurumu
-- doğrudan ödeme formu
-- Kanada(Kanada)
-- hukuk temsilcisi
-- noter genel
-- Oaths için tirnak
+- kanada tasarruf bonoları
+- kanada gelir ajansı
+- kanada finans kurumu
+- doğrudan para yatırma formu
+- kanada vatandaşı
+- yasal temsilci
+- noter
+- yeminler komiseri
 - çocuk bakımı avantajı
 - evrensel çocuk bakımı
-- Kanada'da çocuk vergi avantajı
+- kanada çocuk vergisi avantajı
 - gelir vergisi avantajı
-- harmonize satış vergisi
+- uyumlaştırılmış satış vergisi
 - sosyal sigorta numarası
-- gelir vergisi geri ödemesi
-- çocuk vergi avantajı
-- bölgeli ödemeler
-- kuruluş numarası
-- yatırılan ödeme isteği
+- gelir vergisi iadesi
+- çocuk vergisi avantajı
+- bölgesel ödemeler
+- kurum numarası
+- para yatırma isteği
 - bankacılık bilgileri
-- doğrudan ödeme
+- doğrudan para yatırma
 
 
-## <a name="canada-drivers-license-number"></a>Kanada sürücüsünün lisans numarası
+## <a name="canada-drivers-license-number"></a>Kanada ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-İle göre değişir
+İllere göre değişir
 
 ### <a name="pattern"></a>Desen
 
-Kapsayan çeşitli desenler:
+Çeşitli desenler kapsayan:
 - Alberta
-- İngiliz Kolombiyası
+- britanya Kolumbiyası
 - Manitoba
-- New Brunswick
+- Yeni Brunswick
 - Newfoundland/Labrador
 - Nova Scotia
 - Ontario
-- Prince Edward Adası
+- Prens Edward Adası
 - Quebec
 - Saskatchewan
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_[province_name]_drivers_license_number desene eşleşen içeriği bulur.
-- Bir Keyword_[province_name]_drivers_license_name anahtar sözcüğü bulunur.
-- Anahtar sözcük Keyword_canada_drivers_license bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_[province_name]_drivers_license_number desenle eşleşen içeriği bulur.
+- Keyword_[province_name]_drivers_license_name bir anahtar sözcük bulundu.
+- Keyword_canada_drivers_license anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Canada Driver's License Number -->
@@ -3119,12 +3119,12 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_province_name_drivers_license_name"></a>Keyword_[province_name]_drivers_license_name
 
-- İl kısaltması, örneğin AB
-- İl adı, örneğin Alberta
+- Bölge kısaltması, örneğin AB
+- Bölge adı, örneğin Alberta
 
 #### <a name="keyword_canada_drivers_license"></a>Keyword_canada_drivers_license
 
@@ -3139,10 +3139,10 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - DriverLicence
 - DriverLicences
 - Sürücü Lic
-- Sürücü Lisansları
+- Sürücü Lics
 - Sürücü Lisansı
 - Sürücü Lisansları
-- Sürücü Lisansı
+- Sürücü Belgesi
 - Sürücü Lisansları
 - DriversLic
 - DriversLics
@@ -3151,52 +3151,52 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - DriversLicense
 - DriversLicenses
 - Sürücüler Lic
-- SürücülerLics
-- Sürücüler Lisansı
-- Sürücüler Lisansları
-- Sürücüler Lisansı
-- Sürücüler Lisansları
+- Sürücüler Lics
+- Sürücü Lisansı
+- Sürücü Lisansları
+- Sürücü Lisansı
+- Sürücü Lisansları
 - Driver'Lic
+- Driver'Lics
+- Sürücü Belgesi
 - Sürücü Lisansları
-- Sürücü Lisansı
+- Sürücü Belgesi
 - Sürücü Lisansları
-- Sürücü Lisansı
+- Driver' Lic
+- Sürücü Lics
+- Sürücü Belgesi
 - Sürücü Lisansları
-- Sürücü' Lic
-- Sürücü Lisansları
-- Sürücü Lisansı
-- Sürücü Lisansları
-- Sürücü Lisansı
+- Sürücü Belgesi
 - Sürücü Lisansları
 - Driver'sLic
+- Driver'sLics
+- Driver'sLicense
 - Sürücü Lisansları
-- Sürücü Lisans'ı
+- Driver'sLicence
+- Driver'sLicences
+- Sürücü Lic
+- Sürücü Lics
+- Sürücü Belgesi
 - Sürücü Lisansları
-- Sürücü Lisansları
-- Sürücü Lisansları
-- Sürücü Lisans'ı
-- Sürücü Lisansları
-- Sürücü Lisansı
-- Sürücü Lisansları
-- Sürücü Lisansı
+- Sürücü Belgesi
 - Sürücü Lisansları
 - Permis de Conduire
-- id
-- kimlikler
+- Kimliği
+- Kimlik
 - kimlik kartı numarası
 - kimlik kartı numaraları
-- kimlik kartı #
+- idcard #
 - idcard #s
 - kimlik kartı
 - kimlik kartı kartları
-- kimlik kartı
+- idcard
 - kimlik numarası
 - kimlik numaraları
-- tanımlama #
+- Kimlik #
 - tanımlama #s
 - kimlik kartı
 - kimlik kartları
-- tanımlama
+- Kimlik
 - DL #
 - DLS #
 - CDL #
@@ -3208,7 +3208,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - DriverLicence #
 - DriverLicences #
 - Sürücü Lic #
-- Sürücü Lisansları #
+- Sürücü Lics #
 - Sürücü Lisansı #
 - Sürücü Lisansları #
 - Sürücü Lisansı #
@@ -3220,47 +3220,47 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - DriversLicence #
 - DriversLicences #
 - Sürücüler Lic #
-- SürücülerLics #
-- Sürücüler Lisansı #
-- Sürücüler Lisansları #
-- Sürücüler Lisansı #
-- Sürücüler Lisansları #
+- Sürücüler Lics #
+- Sürücü Lisansı #
+- Sürücü Lisansları #
+- Sürücü Lisansı #
+- Sürücü Lisansları #
 - Driver'Lic #
+- Driver'Lics #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
-- Sürücü Lisansı #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
-- Sürücü Lisansı #
+- Driver' Lic #
+- Sürücü Lics #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
-- Sürücü' Lic #
-- Sürücü Lisansları #
-- Sürücü Lisansı #
-- Sürücü Lisansları #
-- Sürücü Lisansı #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
 - Driver'sLic #
+- Driver'sLics #
+- Driver'sLicense #
 - Sürücü Lisansları #
-- Sürücü Lisans'ı #
+- Driver'sLicence #
+- Driver'sLicences #
+- Sürücü Lic #
+- Sürücü Lics #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
-- Sürücü Lisansları #
-- Sürücü Lisansları #
-- Sürücü Lisans'ı #
-- Sürücü Lisansları #
-- Sürücü Lisansı #
-- Sürücü Lisansları #
-- Sürücü Lisansı #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
 - Permis de Conduire #
-- id #
-- kimlikler #
+- Kimliği #
+- Kimlik #
 - kimlik kartı #
 - kimlik kartı kartları #
-- kimlik kartı #
+- idcard #
 - kimlik kartı #
 - kimlik kartları #
-- tanımlama #
+- Kimlik #
 
 
-## <a name="canada-health-service-number"></a>Kanada sağlık hizmet numarası
+## <a name="canada-health-service-number"></a>Kanada sağlık hizmeti numarası
 
 ### <a name="format"></a>Biçim
 
@@ -3270,15 +3270,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 10 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_canada_health_service_number desene eşleşen içeriği bulur.
-- Farklı bir Keyword_canada_health_service_number anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_canada_health_service_number desenle eşleşen içeriği bulur.
+- Keyword_canada_health_service_number anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Canada Health Service Number -->
@@ -3292,40 +3292,40 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_canada_health_service_number"></a>Keyword_canada_health_service_number
 
 - kişisel sağlık numarası
 - hasta bilgileri
 - sağlık hizmetleri
-- özel hizmetler
-- otomobil kaza
+- uzmanlık hizmetleri
+- otomobil kazası
 - hasta hastanesi
-- tir
-- çalışan telafisi
-- engellilik
+- Psikiyatrist
+- işçi tazminatı
+- Engelli
 
 
 ## <a name="canada-passport-number"></a>Kanada pasaport numarası
 
 ### <a name="format"></a>Biçim
 
-İki büyük harf, ardından altı basamak
+iki büyük harf ve ardından altı basamak
 
 ### <a name="pattern"></a>Desen
 
-İki büyük harf, ardından altı basamak
+iki büyük harf ve ardından altı basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_canada_passport_number desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_canada_passport_number Keyword_passport anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_canada_passport_number desenle eşleşen içeriği bulur.
+- Keyword_canada_passport_number veya Keyword_passport anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Canada Passport Number -->
@@ -3340,17 +3340,17 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_canada_passport_number"></a>Keyword_canada_passport_number
 
-- Kanada'dan(Kanada)
-- Kanada pasaport
-- pasaport uygulaması
+- kanada vatandaşlığı
+- kanada pasaportu
+- pasaport başvurusu
 - pasaport fotoğrafları
-- sertifikalı çeviri aracı
-- Kanada'da yaşayanlar
-- işleme saatleri
+- sertifikalı çevirmen
+- kanada vatandaşları
+- işlem süreleri
 - yenileme uygulaması
 
 #### <a name="keyword_passport"></a>Keyword_passport
@@ -3361,21 +3361,21 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - Pasaport #
 - PassportID
 - Passportno
-- pasaportsayı
+- passportnumber
 - パスポート
 - パスポート番号
 - パスポートのNum
 - パスポート＃
-- Numéro de passeport
-- Passeport n °
-- Passeport Non
-- Passeport #
-- Passeport #
-- PasseportNon
-- Passeportn °
+- Numéro de passport
+- Passport n °
+- Passport Non
+- Passport #
+- Passport #
+- PassportNon
+- Passportn °
 
 
-## <a name="canada-personal-health-identification-number-phin"></a>Kanada kişisel sağlık tanımlama numarası (PHIN)
+## <a name="canada-personal-health-identification-number-phin"></a>Kanada kişisel sağlık kimlik numarası (PHIN)
 
 ### <a name="format"></a>Biçim
 
@@ -3385,15 +3385,15 @@ dokuz basamak
 
 dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_canada_phin desene eşleşen içeriği bulur.
-- Anahtar sözcük ve Keyword_canada_phin Keyword_canada_provinces anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_canada_phin desenle eşleşen içeriği bulur.
+- Keyword_canada_phin veya Keyword_canada_provinces en az iki anahtar sözcük bulunur.
 
 ```xml
 <!-- Canada PHIN -->
@@ -3408,49 +3408,49 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_canada_phin"></a>Keyword_canada_phin
 
 - sosyal sigorta numarası
-- durum bilgileri harekete
-- gelir vergi bilgileri
+- sistem durumu bilgileri eylemi
+- gelir vergisi bilgileri
 - manitoba health
-- sağlık kaydı
-- satın almalar
+- sistem durumu kaydı
+- reçeteli satın almalar
 - avantaj uygunluğu
 - kişisel sağlık
 - vekaletname
 - kayıt numarası
 - kişisel sağlık numarası
-- referans referansı
-- professional
-- hasta başvurusu
-- sağlık ve sağlık
+- uygulayıcı başvurusu
+- wellness professional
+- hasta referansı
+- sağlık ve sağlıklı yaşam
 
 #### <a name="keyword_canada_provinces"></a>Keyword_canada_provinces
 
 - Nunavut
 - Quebec
-- Kuzeybatı Toprakları
+- Kuzeybatı Bölgeleri
 - Ontario
-- İngiliz Kolombiyası
+- britanya Kolumbiyası
 - Alberta
 - Saskatchewan
 - Manitoba
 - Yukon
 - Newfoundland ve Labrador
-- New Brunswick
+- Yeni Brunswick
 - Nova Scotia
-- Prince Edward Adası
+- Prens Edward Adası
 - Kanada
 
 
 ## <a name="canada-physical-addresses"></a>Kanada fiziksel adresleri
 
-Buundled adlandırılmış varlık, Kanada'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Kanada'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
@@ -3459,7 +3459,7 @@ Orta
 
 ### <a name="format"></a>Biçim
 
-isteğe bağlı tireler veya boşluklar ile dokuz basamak
+isteğe bağlı kısa çizgi veya boşluk içeren dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
@@ -3472,24 +3472,24 @@ Biçimlendirilmiş:
 
 Biçimlendirilmemiş: dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_canadian_sin desene eşleşen içeriği bulur.
-- Aşağıdaki düzenlerden en az ikisi:
-    - Anahtar sözcük Keyword_sin bulunur.
-    - Bir başka Keyword_sin_collaborative anahtar sözcük bulunur.
-    - İşlev Func_eu_date doğru tarih biçimindeki bir tarihi bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_canadian_sin desenle eşleşen içeriği bulur.
+- Aşağıdaki desenlerden en az ikisi:
+    - Keyword_sin anahtar sözcüğü bulunur.
+    - Keyword_sin_collaborative anahtar sözcüğü bulunur.
+    - İşlev Func_eu_date doğru tarih biçiminde bir tarih bulur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_unformatted_canadian_sin desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_sin bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_unformatted_canadian_sin desenle eşleşen içeriği bulur.
+- Keyword_sin anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- Canada Social Insurance Number -->
@@ -3509,32 +3509,32 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_sin"></a>Keyword_sin
 
-- sin
+- Günah
 - sosyal sigorta
 - numero d'assurance sociale
-- neden
+- Günah
 - ssn
 - ssns
 - sosyal güvenlik
 - numero d'assurance social
 - ulusal kimlik numarası
 - ulusal kimlik
-- sin #
+- Günah #
 - soc ins
 - sosyal ins
 
 #### <a name="keyword_sin_collaborative"></a>Keyword_sin_collaborative
 
+- sürücü belgesi
 - sürücü lisansı
-- sürücüler lisansı
+- sürücü belgesi
 - sürücü lisansı
-- sürücüler lisansı
 - DOB
-- Doğum Tarihi
+- Doğum tarihi
 - Doğum günü
 - Doğum tarihi
 
@@ -3543,33 +3543,33 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-Yedi ile sekiz basamak arasında artı bir onay rakamı veya harf sınırlayıcılar
+yedi ila sekiz basamak artı bir çek basamağı veya harfi sınırlandıran
 
 ### <a name="pattern"></a>Desen
 
-Yedi ile sekiz basamak arasında artı sınırlayıcılar:
-- bir ile iki basamak arasında
-- isteğe bağlı bir nokta
+yedi ila sekiz basamak artı sınırlayıcılar:
+- bir-iki basamak
+- isteğe bağlı bir dönem
 - üç basamak
-- isteğe bağlı bir nokta
+- isteğe bağlı bir dönem
 - üç basamak
-- Tire
-- tek basamaklı veya büyük/küçük harf (büyük/küçük harfe duyarlı değildir) bir onay rakamıdır
+- tire
+- bir basamak veya harf (büyük/küçük harfe duyarlı değil) bu bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_chile_id_card desene eşleşen içeriği bulur.
-- Bir başka Keyword_chile_id_card anahtar sözcük bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_chile_id_card desenle eşleşen içeriği bulur.
+- Keyword_chile_id_card anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_chile_id_card desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_chile_id_card desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- Chile Identity Card Number -->
@@ -3584,7 +3584,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_chile_id_card"></a>Keyword_chile_id_card
 
@@ -3596,26 +3596,26 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - número de identificación nacional
 - rol único nacional
 - rol único tributario
-- RUN
-- BIRAYI
+- ÇALIŞTIRMAK
+- RUT
 - tarjeta de identificación
 - Rol Unico Nacional
 - Rol Unico Tributario
-- RUN #
-- BIRAYI #
+- ÇALIŞTIRMAK #
+- RUT #
 - nationaluniqueroleID #
 - nacional identidad
 - número identificación
 - identidad número
-- numero identificacion
-- çok fazla şey oldu
+- çok sayıda identificacion
+- identidad numero
 - Şili kimliği hayır.
 - Şili kimlik numarası
 - Şili kimliği #
 - Benzersiz Vergi Kayıt Defteri
 - Benzersiz Tributary Rolü
 - Benzersiz Vergi Rolü
-- Benzersiz Tributer Numarası
+- Benzersiz Tributary Numarası
 - Benzersiz Ulusal Numara
 - Benzersiz Ulusal Rol
 - Ulusal benzersiz rol
@@ -3626,7 +3626,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - R.U.N
 
 
-## <a name="china-resident-identity-card-prc-number"></a>Çin'de yerleşik kimlik kartı (ÇK) numarası
+## <a name="china-resident-identity-card-prc-number"></a>Çin yerleşik kimlik kartı (PRC) numarası
 
 ### <a name="format"></a>Biçim
 
@@ -3635,25 +3635,25 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 ### <a name="pattern"></a>Desen
 
 18 basamak:
-- Adres kodu olan altı basamak
-- YYYYAAD şeklinde, doğum tarihi olan sekiz basamak
-- Sipariş kodu olan üç basamak
-- bir rakam, bir onay rakamıdır
+- adres kodu olan altı basamak
+- doğum tarihi olan YYYYMMDD biçiminde sekiz basamak
+- sipariş kodu olan üç basamak
+- denetim basamalı bir basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_china_resident_id desene eşleşen içeriği bulur.
-- Bir başka Keyword_china_resident_id anahtar sözcük bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_china_resident_id desenle eşleşen içeriği bulur.
+- Keyword_china_resident_id anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_china_resident_id desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_china_resident_id desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- China Resident Identity Card (PRC) Number -->
@@ -3668,12 +3668,12 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 ### <a name="keyword_china_resident_id"></a>Keyword_china_resident_id
 
 - Yerleşik Kimlik Kartı
-- ÇÇY
+- ÇHC
 - Ulusal Kimlik Kartı
 - 身份证
 - 居民 身份证
@@ -3688,29 +3688,29 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-Biçimlendirilmiş veya biçimlendirilmemiş (dddddd) ve Luhn testini geçmesi gereken 14 - 19 basamak.
+Biçimlendirilebilen veya biçimlendirilemeyen 14 ile 19 basamak (dddddd) ve luhn testini geçmesi gerekir.
 
 ### <a name="pattern"></a>Desen
 
-Visa, MasterCard, Discover Card, JCB, American Express, hediye kartları, diner kartları, Rupay ve China UnionPay gibi dünya çapındaki tüm önemli markalardan kartları algılar.
+Visa, MasterCard, Discover Card, JCB, American Express, hediye kartları, restoran kartları, Rupay ve China UnionPay dahil olmak üzere dünya çapındaki tüm büyük markaların kartlarını algılar.
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
-Evet, Luhn denetimi
+Evet, Luhn çeki
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_credit_card desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_credit_card desenle eşleşen içeriği bulur.
 - Aşağıdakilerden biri doğrudur:
-    - Farklı bir Keyword_cc_verification anahtar sözcük bulunur.
-    - Bir Keyword_cc_name anahtar sözcüğü bulunur.
-    - İşlev Func_expiration_date doğru tarih biçimindeki bir tarihi bulur.
-- Denetimli denetimler geçer.
+    - Keyword_cc_verification anahtar sözcüğü bulunur.
+    - Keyword_cc_name anahtar sözcüğü bulunur.
+    - İşlev Func_expiration_date doğru tarih biçiminde bir tarih bulur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev Func_credit_card desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev Func_credit_card desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- Credit Card Number -->
@@ -3729,48 +3729,48 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_cc_verification"></a>Keyword_cc_verification
 
-- kart doğrulaması
+- kart doğrulama
 - kart kimlik numarası
-- cvn
-- cid
+- Cvn
+- Cid
 - cvc2
 - cvv2
-- pin bloğu
+- raptiye bloğu
 - güvenlik kodu
 - güvenlik numarası
-- güvenlik yok
+- güvenlik no
 - sorun numarası
-- sorun no
+- sorun yok
 - cryptogramme
 - numéro de sécurité
 - numero de securite
 - kreditkartenprüfnummer
 - kreditkartenprufnummer
 - prüfziffer
-- teta
+- prufziffer
 - sicherheits Kode
 - sicherheitscode
 - sicherheitsnummer
 - verfalldatum
 - codice di verifica
-- cod. sicurezza
+- Cod. sicurezza
 - cod sicurezza
-- n autorizzazzane
+- n autorizzazione
 - código
 - codigo
-- cod. seg
+- Cod. Sönmez
 - cod seg
 - código de segurança
 - codigo de seguranca
 - codigo de segurança
 - código de seguranca
 - cód. segurança
-- cod. seguranca
-- cod. segurança
+- Cod. seguranca
+- Cod. segurança
 - cód. seguranca
 - cód segurança
 - cod seguranca
@@ -3785,7 +3785,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - gultigkeitsdatum
 - scadenza
 - data scad
-- fecha de expiracion
+- fecha de süre sonu
 - fecha de venc
 - vencimiento
 - válido hasta
@@ -3795,9 +3795,9 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - data de expiracao
 - data em que expira
 - validade
-- valor
+- Cesaret
 - vencimento
-- işlem
+- Işlem
 - işlem numarası
 - başvuru numarası
 - セキュリティコード
@@ -3808,56 +3808,56 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 #### <a name="keyword_cc_name"></a>Keyword_cc_name
 
-- amex
-- American Express
+- Amex
+- american express
 - americanexpress
-- americano americano
-- Visa
+- americano espresso
+- Vize
+- Mastercard
 - ana kart
-- ana kart
-- mc
-- mastercards
+- Mc
+- Mastercard
 - ana kartlar
 - diner's Club
-- diners kulüp
+- diners club
 - dinersclub
-- keşfedin
-- kart keşfetme
+- Keşfetmek
+- kartı bulma
 - discovercard
-- kartları keşfetme
+- kartları bulma
 - JCB
-- Brand Smart
-- Japonca kart bürosu
-- karblanka
-- karblanka
+- BrandSmart
+- japon kart bürosu
+- carte blanche
+- carteblanche
 - kredi kartı
-- bilgi #
-- bilgi#:
+- Cc #
+- cc#:
 - son kullanma tarihi
-- exp date
-- Son kullanma tarihi
-- tarih d'son kullanma tarihi
+- exp tarihi
+- süre sonu tarihi
+- d'süre sonu tarihi
 - date d'exp
-- son kullanma tarihi
+- süre sonu tarihi
 - banka kartı
-- bankcard
+- Bankcard
 - kart numarası
-- kart num
-- kartsayı
+- kart numarası
+- kartsayısı
 - kartsayıları
 - kart numaraları
 - kredi kartı
 - kredi kartları
 - kredi kartları
-- ccn
-- kart sahibi
-- kart sahibi
+- Ccn
+- kart tutucu
+- Kart
 - kart tutucular
-- kartholders
-- kart kontrol edin
-- checkcard
-- kartları denetleme
-- checkcards
+- Kart
+- onay kartı
+- onay kartı
+- onay kartları
+- onay kartları
 - banka kartı
 - banka kartı
 - banka kartları
@@ -3866,24 +3866,24 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - atmcard
 - atm kartları
 - atmcards
-- enroute
-- rota
+- Enroute
+- Yolda
 - kart türü
-- KartMember Acct
-- kartmember hesabı
-- Cardno
+- Cardmember Acct
+- cardmember hesabı
+- Can
 - Kurumsal Kart
-- Şirket kartları
+- Kurumsal kartlar
 - Kart türü
 - kart hesap numarası
 - kart üyesi hesabı
-- KartMember Acct.
-- kartı hayır.
-- kart yok
+- Cardmember Acct.
+- kart no.
+- kart hayır
 - kart numarası
 - carte bancaire
 - carte de crédit
-- carte de kredisi
+- carte de credit
 - numéro de carte
 - numero de carte
 - nº de la carte
@@ -3902,11 +3902,11 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - kreditkarten-nummer
 - carta di credito
 - carta credito
-- n. carta
+- n. Carta
 - n carta
-- nr. carta
+- Nr. Carta
 - nr carta
-- numero carta
+- çok sayıda carta
 - numero della carta
 - numero di carta
 - tarjeta credito
@@ -3920,7 +3920,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - tarjeta débito
 - tarjeta de débito
 - nº de tarjeta
-- hayır. de tarjeta
+- No. de tarjeta
 - no de tarjeta
 - numero de tarjeta
 - número de tarjeta
@@ -3939,7 +3939,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - número do cartão
 - numero do cartão
 - número do cartao
-- numero do cartao
+- çok sayıda do cartao
 - número de cartão
 - numero de cartão
 - número de cartao
@@ -3948,14 +3948,14 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - nº do cartao
 - nº. do cartão
 - no do cartão
-- no do cartao
-- hayır. do cartão
-- hayır. do cartao
+- hayır cartao
+- No. do cartão
+- No. cartao yapma
 - rupay
-- union pay
+- sendika ödemesi
 - unionpay
-- diner's
-- diners
+- lokantalar
+- Diners
 - クレジットカード番号
 - クレジットカードナンバー
 - クレジットカード＃
@@ -3989,26 +3989,26 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - 银联
 
 
-## <a name="croatia-drivers-license-number"></a>Hırvatistan sürücü lisans numarası
+## <a name="croatia-drivers-license-number"></a>Hırvatistan ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcılar olmadan sekiz basamak
+boşluk ve sınırlayıcı içermeyen sekiz basamak
 
 ### <a name="pattern"></a>Desen
 
 sekiz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
 
-- Normal ifade desene  `Regex_croatia_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya `Keywords_eu_driver's_license_number` `Keywords_croatia_eu_driver's_license_number` bulunur.
+- Normal ifade  `Regex_croatia_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_croatia_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Croatia Driver's License Number -->
@@ -4023,15 +4023,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -4039,93 +4039,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -4133,14 +4133,14 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
@@ -4149,12 +4149,12 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 #### <a name="keywords_croatia_eu_drivers_license_number"></a>Keywords_croatia_eu_driver's_license_number
 
-- vozačka hervola
-- vozačke hervole
+- vozačka dozvola
+- vozačke dozvole
 
 
 ## <a name="croatia-identity-card-number"></a>Hırvatistan kimlik kartı numarası
-Bu varlık, AB Ulusal Kimlik Numarası hassas bilgi türü içinde yer almaktadır. Tek başına hassas bilgi türü bir varlık olarak kullanılabilir.
+Bu varlık, AB Ulusal Kimlik Numarası hassas bilgi türüne dahil edilir. Tek başına hassas bilgi türü varlığı olarak kullanılabilir.
 
 ### <a name="format"></a>Biçim
 
@@ -4164,15 +4164,15 @@ dokuz basamak
 
 art arda dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_croatia_id_card desene eşleşen içeriği bulur.
-- Bir başka Keyword_croatia_id_card anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_croatia_id_card desenle eşleşen içeriği bulur.
+- Keyword_croatia_id_card anahtar sözcüğü bulunur.
 
 ```xml
 <!--Croatia Identity Card Number-->
@@ -4184,64 +4184,64 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_croatia_id_card"></a>Keyword_croatia_id_card
 
-- maystorski broj graıana
-- ana ana ana sayı
+- majstorski broj građana
+- ana vatandaş numarası
 - nacionalni identifikacijski broj
 - ulusal kimlik numarası
 - oib #
 - oib
 - osobna iskaznica
-- osobni id
+- osobni kimliği
 - osobni identifikacijski broj
 - kişisel kimlik numarası
 - porezni broj
 - porezni identifikacijski broj
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 
 
 ## <a name="croatia-passport-number"></a>Hırvatistan pasaport numarası
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcılar olmadan dokuz basamak
+boşluk ve sınırlayıcı içermeyen dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
 dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_croatia_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_croatia_eu_passport_number` bulunur.
-- Normal ifade, `Regex_eu_passport_date1` tarihi D.AA.YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_croatia_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_croatia_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date1` tarihi DD.AA.YYYY biçiminde bulur veya bir `Keywords_eu_passport_date` anahtar sözcük bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_croatia_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_croatia_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_croatia_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_croatia_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Croatia Passport Number -->
@@ -4266,25 +4266,25 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_croatia_eu_passport_number"></a>Keywords_croatia_eu_passport_number
 
 - broj putovnice
-- br. Putovnice
+- Br. Putovnice
 - br putovnice
 
 ## <a name="croatia-personal-identification-oib-number"></a>Hırvatistan kişisel kimlik (OIB) numarası
@@ -4297,22 +4297,22 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 11 basamak:
 - 10 basamak
-- son basamak bir onay rakamıdır
+- son basamak bir denetim basamadır
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_croatia_oib_number desene eşleşen içeriği bulur.
-- Bir arama Keywords_croatia_eu_tax_file_number anahtar sözcüğü bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_croatia_oib_number desenle eşleşen içeriği bulur.
+- Keywords_croatia_eu_tax_file_number anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_croatia_oib_number desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_croatia_oib_number desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
       <!-- Croatia Personal Identification (OIB) Number -->
@@ -4327,68 +4327,68 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_croatia_oib_number"></a>Keyword_croatia_oib_number
 
-- maystorski broj graıana
-- ana ana ana sayı
+- majstorski broj građana
+- ana vatandaş numarası
 - nacionalni identifikacijski broj
 - ulusal kimlik numarası
 - oib #
 - oib
 - osobna iskaznica
-- osobni id
+- osobni kimliği
 - osobni identifikacijski broj
 - kişisel kimlik numarası
 - porezni broj
 - porezni identifikacijski broj
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 
 
 ## <a name="croatia-physical-addresses"></a>Hırvatistan fiziksel adresleri
 
-Bu şaşırtıcı olmayan bir adlandırılmış varlık, Hırvatistan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu adı kaldırılmış varlık, Hırvatistan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
-## <a name="cyprus-drivers-license-number"></a>Kıbrıs sürücüleri lisans numarası
+## <a name="cyprus-drivers-license-number"></a>Kıbrıs ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcı olmayan 12 basamak
+Boşluk ve sınırlayıcı içermeyen 12 basamak
 
 ### <a name="pattern"></a>Desen
 
 12 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_cyprus_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_cyprus_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_cyprus_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_cyprus_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Cyprus Driver's License Number -->
@@ -4403,15 +4403,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -4419,93 +4419,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -4513,20 +4513,20 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
-#### <a name="keywords_cyprus_eu_drivers_license_number"></a>Keywords_cyprus_eu_driver's_license_number
+#### <a name="keywords_cyprus_eu_drivers_license_number"></a>Keywords_cyprus_eu_driver s_license_number
 
 - άδεια οδήγησης
 - αριθμό άδειας οδήγησης
@@ -4535,30 +4535,30 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ## <a name="cyprus-identity-card"></a>Kıbrıs kimlik kartı
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcı olmayan 10 basamak
+Boşluk ve sınırlayıcı içermeyen 10 basamak
 
 ### <a name="pattern"></a>Desen
 
 10 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
-uygulanamaz
+geçerli değil
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_cyprus_eu_national_id_card` eşleşen içerik bulur.
-- Anahtar sözcük  `Keywords_cyprus_eu_national_id_card` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_cyprus_eu_national_id_card` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_cyprus_eu_national_id_card` bir anahtar sözcük bulunur.
 
 ```xml
       <!-- Cyprus Identity Card -->
@@ -4570,13 +4570,13 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_cyprus_eu_national_id_card"></a>Keywords_cyprus_eu_national_id_card
 
 - kimlik kartı numarası
 - kimlik kartı numarası
-- kimlik karti
+- kimlik kartı
 - ulusal kimlik numarası
 - kişisel kimlik numarası
 - ταυτοτητασ
@@ -4586,26 +4586,26 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-bir harf ve ardından boşluk veya sınırlayıcı olmayan 6-8 basamak
+bir harf ve ardından boşluk veya sınırlayıcı içermeyen 6-8 basamak
 
 ### <a name="pattern"></a>Desen
 
-bir harf ve ardından altı ile sekiz basamak
+bir harf ve ardından altı ila sekiz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_cyprus_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_cyprus_eu_passport_number` bulunur.
-- Normal ifade `Regex_cyprus_eu_passport_date` , tarihi D/AA/YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_cyprus_eu_passport_date` bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_cyprus_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_cyprus_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_cyprus_eu_passport_date` tarihi DD/AA/YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_cyprus_eu_passport_date` bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_cyprus_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_cyprus_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_cyprus_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_cyprus_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Cyprus Passport Number -->
@@ -4631,60 +4631,60 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_cyprus_eu_passport_number"></a>Keywords_cyprus_eu_passport_number
 
 - αριθμό διαβατηρίου
-- olarak dam
+- yeni bir şey
 - Αριθμός Διαβατηρίου
 - κυπριακό διαβατήριο
 - διαβατήριο #
 - διαβατήριο
 - αριθμός διαβατηρίου
-- Pasaport Kimliği
-- pasaport numarası
-- Pasaport hayır.
+- PasaportKimlik
+- pasaport akdi
+- Pasaport no.
 - Αρ. Διαβατηρίου
 
 #### <a name="keywords_cyprus_eu_passport_date"></a>Keywords_cyprus_eu_passport_date
 
-- son kullanma tarihi
-- verilen
+- tarihinde sona eriyor
+- yayım tarihi
 
 
 ## <a name="cyprus-physical-addresses"></a>Kıbrıs fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Kıbrıs'tan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Kıbrıs'tan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
-## <a name="cyprus-tax-identification-number"></a>Kıbrıs vergi tanımlama numarası
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+## <a name="cyprus-tax-identification-number"></a>Kıbrıs vergi kimlik numarası
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Sekiz basamak ve belirtilen desende bir harf
+sekiz basamak ve belirtilen desende bir harf
 
 ### <a name="pattern"></a>Desen
 
@@ -4692,20 +4692,20 @@ sekiz basamak ve bir harf:
 
 - "0" veya "9"
 - yedi basamak
-- tek harf (büyük/harfe duyarlı değildir)
+- bir harf (büyük/küçük harfe duyarlı değil)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
-uygulanamaz
+geçerli değil
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_cyprus_eu_tax_file_number` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_cyprus_eu_tax_file_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_cyprus_eu_tax_file_number` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_cyprus_eu_tax_file_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_cyprus_eu_tax_file_number` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_cyprus_eu_tax_file_number` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Cyprus Tax Identification Number -->
@@ -4720,61 +4720,61 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_cyprus_eu_tax_file_number"></a>Keywords_cyprus_eu_tax_file_number
 
+- vergi kimliği
+- vergi tanımlama kodu
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi kimlik kodu
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tic #
-- tic
-- tin kimliği
+- Tic #
+- Tic
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 - vergi kimlik kodu
-- vergi kimlik numarası
+- vergi kimlik adedi
 - αριθμός φορολογικού μητρώου
 - κωδικός φορολογικού μητρώου
 - φορολογική ταυτότητα
 - φορολογικού κωδικού
 
 
-## <a name="czech-drivers-license-number"></a>Çek sürücü lisans numarası
+## <a name="czech-drivers-license-number"></a>Çek ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-İki harf ve ardından da altı basamak
+iki harf ve ardından altı basamak
 
 ### <a name="pattern"></a>Desen
 
 sekiz harf ve rakam:
 
-- letter 'E' (büyük/harfe duyarlı değildir)
-- bir harf
+- 'E' harfi (büyük/küçük harfe duyarlı değil)
+- bir mektup
 - boşluk (isteğe bağlı)
 - altı basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_czech_republic_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_czech_republic_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_czech_republic_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_czech_republic_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <Entity id="86b40d3b-d8ea-4c36-aab0-ef9416a6769c" patternsProximity="300" recommendedConfidence="75">
@@ -4789,15 +4789,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -4805,93 +4805,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -4899,51 +4899,51 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
-#### <a name="keywords_czech_republic_eu_drivers_license_number"></a>Keywords_czech_republic_eu_driver's_license_number
+#### <a name="keywords_czech_republic_eu_drivers_license_number"></a>Keywords_czech_republic_eu_driver s_license_number
 
-- čidičskú prúkaz
-- čidičské prčkazy
-- číslo ùidičského prčkazu
-- čísla ùidičskích prčkaz
+- řidičský prúkaz
+- řidičské průkazy
+- číslo řidičského průkazu
+- čísla řidičských průkazů
 
 
 ## <a name="czech-passport-number"></a>Çek pasaport numarası
 
 ### <a name="format"></a>Biçim
 
-Boşluk veya sınırlayıcılar olmadan sekiz basamak
+boşluk veya sınırlayıcı içermeyen sekiz basamak
 
 ### <a name="pattern"></a>Desen
 
-Boşluk veya sınırlayıcılar olmadan sekiz basamak
+boşluk veya sınırlayıcı içermeyen sekiz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_czech_republic_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_czech_republic_eu_passport_number` bulunur.
-- Normal ifade, `Regex_eu_passport_date1` tarihi D.AA.YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_czech_republic_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_czech_republic_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date1` tarihi DD.AA.YYYY biçiminde bulur veya bir `Keywords_eu_passport_date` anahtar sözcük bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_czech_republic_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_czech_republic_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_czech_republic_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_czech_republic_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Czech Republic Passport Number -->
@@ -4969,19 +4969,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_czech_republic_eu_passport_number"></a>Keywords_czech_republic_eu_passport_number
@@ -4989,49 +4989,49 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - cestovní pas
 - číslo pasu
 - cestovní pasu
-- passeport no
+- passport no
 - čísla pasu
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="czech-personal-identity-number"></a>Çek kişisel kimlik numarası
 
 ### <a name="format"></a>Biçim
 
-İsteğe bağlı eğik çizgi (eski biçim) 10 basamaklı, isteğe bağlı eğik çizgi (yeni biçim) olan dokuz basamak
+isteğe bağlı eğik çizgili dokuz basamak (eski biçim) 10 basamak ve isteğe bağlı eğik çizgi (yeni biçim)
 
 ### <a name="pattern"></a>Desen
 
-dokuz rakam (eski biçim):
-- Doğum tarihini temsil eden altı basamak
+dokuz basamak (eski biçim):
+- doğum tarihini temsil eden altı basamak
 - isteğe bağlı eğik çizgi
 - üç basamak
 
 10 basamak (yeni biçim):
-- Doğum tarihini temsil eden altı basamak
+- doğum tarihini temsil eden altı basamak
 - isteğe bağlı eğik çizgi
-- Son rakamın bir onay rakamı olduğu dört basamak
+- son basamak bir denetim basamağı olan dört basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
 
-- İşlev Func_czech_id_card desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_czech_id_card bulunur.
-- Denetimli denetimler geçer.
+- İşlev Func_czech_id_card desenle eşleşen içeriği bulur.
+- Keyword_czech_id_card anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
 
-- İşlev Func_czech_id_card_new_format desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+- İşlev Func_czech_id_card_new_format desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- Czech Personal Identity Number -->
@@ -5048,83 +5048,83 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Version>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_czech_id_card"></a>Keyword_czech_id_card
 
 - doğum numarası
-- çek Cumhuriyeti kimliği
-- çekidno #
+- çek cumhuriyeti kimliği
+- czechidno #
 - daňové číslo
 - identifikační číslo
-- kimlik hayır
+- kimlik no
 - kimlik numarası
 - identityno #
 - identityno
 - sigorta numarası
 - ulusal kimlik numarası
-- ulusalsayı #
-- ulusal numara
+- nationalnumber #
+- ulusal sayı
 - osobní číslo
-- kişiselsayı #
+- personalidnumber #
 - kişisel kimlik numarası
 - kişisel kimlik numarası
 - kişisel numara
-- pid #
-- pid
-- pojištňní číslo
+- Pıd #
+- Pıd
+- pojištění číslo
 - rč
-- hanne cislo
-- cafené číslo
+- rodne cislo
+- rodné číslo
 - ssn
 - ssn #
 - sosyal güvenlik numarası
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
-- benzersiz tanımlama numarası
+- Teneke #
+- benzersiz kimlik numarası
 
 
 ## <a name="czech-republic-physical-addresses"></a>Çek Cumhuriyeti fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Çek Cumhuriyeti'nden gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Çek Cumhuriyeti'nden gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
-## <a name="denmark-drivers-license-number"></a>Danimarka sürücü lisans numarası
+## <a name="denmark-drivers-license-number"></a>Danimarka ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcılar olmadan sekiz basamak
+boşluk ve sınırlayıcı içermeyen sekiz basamak
 
 ### <a name="pattern"></a>Desen
 
 sekiz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_denmark_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_denmark_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_denmark_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_denmark_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Denmark Driver's License Number -->
@@ -5139,15 +5139,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -5155,93 +5155,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -5249,20 +5249,20 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
-#### <a name="keywords_denmark_eu_drivers_license_number"></a>Keywords_denmark_eu_driver's_license_number
+#### <a name="keywords_denmark_eu_drivers_license_number"></a>Keywords_denmark_eu_driver s_license_number
 
 - kørekort
 - kørekortnummer
@@ -5272,26 +5272,26 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcılar olmadan dokuz basamak
+boşluk ve sınırlayıcı içermeyen dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
 dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_denmark_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_denmark_eu_passport_number` bulunur.
-- Normal ifade `Regex_eu_passport_date2` , tarihi D MM YY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_denmark_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_denmark_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date2` tarihi DD AA YY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_denmark_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_denmark_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_denmark_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_denmark_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Denmark Passport Number -->
@@ -5318,31 +5318,31 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_denmark_eu_passport_number"></a>Keywords_denmark_eu_passport_number
 
 - pasnummer
-- Passeport n°
+- Passport n°
 - pasnumre
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="denmark-personal-identification-number"></a>Danimarka kişisel kimlik numarası
@@ -5354,24 +5354,24 @@ Kısa çizgi içeren 10 basamak
 ### <a name="pattern"></a>Desen
 
 10 basamak:
-- Doğum tarihi olan  DAAAY biçiminde altı basamak
+- doğum tarihi olan DDMMYY biçiminde altı basamak
 - isteğe bağlı bir boşluk veya kısa çizgi
-- Son rakamın onay rakamı olduğu dört basamak
+- son basamağın bir denetim basamağı olduğu dört basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Func_denmark_eu_tax_file_number desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_denmark_id bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Func_denmark_eu_tax_file_number desenle eşleşen içeriği bulur.
+- Keyword_denmark_id anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- Normal ifade Func_denmark_eu_tax_file_number desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- Normal ifade Func_denmark_eu_tax_file_number desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- Denmark Personal Identification Number -->
@@ -5387,28 +5387,28 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_denmark_id"></a>Keyword_denmark_id
 
 - centrale personregister
 - civilt registreringssystem
-- cpr
-- cpr #
+- Cpr
+- Cpr #
 - gesundheitskarte nummer
 - gesundheitsversicherungkarte nummer
-- sağlık kartı
-- sağlık sigorta kartı numarası
-- sağlık sigorta numarası
+- sistem durumu kartı
+- sağlık sigortası kart numarası
+- sağlık sigortası numarası
 - kimlik numarası
 - identifikationsnummer
 - identifikationsnummer #
 - kimlik numarası
 - krankenkassennummer
 - nationalid #
-- ulusalsayı #
-- ulusal numara
-- kişiselsayı #
+- nationalnumber #
+- ulusal sayı
+- personalidnumber #
 - personalidentityno #
 - kişisel kimlik numarası
 - personnummer
@@ -5417,40 +5417,40 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - rejsesygesikringskort
 - ssn
 - ssn #
-- skat id
+- skat kimliği
 - skat kode
 - skat nummer
 - skattenummer
 - sosyal güvenlik numarası
-- sundhedsforringringskort
-- sundhedsforringsnummer
+- sundhedsforsikringskort
+- sundhedsforsikringsnummer
 - sundhedskort
 - sundhedskortnummer
 - sygesikring
 - sygesikringkortnummer
 - vergi kodu
-- seyahat sağlık sigorta kartı
+- seyahat sağlık sigortası kartı
 - uniqueidentityno #
 - vergi numarası
-- vergi sicil numarası
-- vergi no
-- vergi numarası
-- iş bire bir #
+- vergi kayıt numarası
+- vergi kimliği
+- vergi kimlik numarası
+- taksiye bindi #
 - vergi numarası #
-- vergi yok
+- vergi no
 - taxno #
 - vergi numarası
-- vergi numarası yok
-- tin #
-- yaln #
-- aracısayı #
-- vergi yok #
-- tin kimliği
+- vergi tanımlama no
+- Teneke #
+- taxidno #
+- taxidnumber #
+- vergi no #
+- teneke kimlik
 - tin no
 - cpr.nr
 - cprnr
 - cprnummer
-- personnr
+- kişi
 - personregister
 - sygesikringsbevis
 - sygesikringsbevisnr
@@ -5464,49 +5464,49 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ## <a name="denmark-physical-addresses"></a>Danimarka fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık Danimarka'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Danimarka'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
-## <a name="diseases"></a>10000 Yıl Sonra
+## <a name="diseases"></a>Hastalık
 
-Bu bakıla sahip olmayan bu varlık, özel adlar gibi, özel adlara eşleşen *metinleri algılar*. Yalnızca İngilizce terimleri destekler. Ayrıca SIT adlı tüzel kişi [SIT adlı sağlık hüküm ve koşullarına](#all-medical-terms-and-conditions) da dahildir.
+Bu unbundled adlı varlık *, diyabet* gibi hastalık adlarıyla eşleşen metinleri algılar. Yalnızca İngilizce terimleri destekler. Ayrıca entity SIT adlı [tüm tıbbi hüküm ve koşullar](#all-medical-terms-and-conditions) paketinde yer alır.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Yüksek
 
 
-## <a name="drug-enforcement-agency-dea-number"></a>Enforcement Agency (DEA) numarası
+## <a name="drug-enforcement-agency-dea-number"></a>Uyuşturucu Uygulama Dairesi (DEA) numarası
 
 ### <a name="format"></a>Biçim
 
-İki harf ve ardından da yedi basamak
+iki harf ve ardından yedi basamak
 
 ### <a name="pattern"></a>Desen
 
-Desen aşağıdakilerin hepsini içermeli:
-- bu olası harf kümesinden bir harf (büyük/küçük harfe duyarlı değildir): abcdefghjklmnprstux, bir kayıt kodudur
-- tek harfli (büyük/harfe duyarlı değildir), kayıt şirketi adının ilk harfi veya '9' rakamıdır
-- yedi basamak, son basamak onay rakamı
+Desen aşağıdakilerin tümünü içermelidir:
+- Bu olası harf kümesinden bir harf (büyük/küçük harfe duyarlı değil): Kayıt yapan kod olan A/B/F/G/M/P/R
+- bir harf (büyük/küçük harfe duyarlı değil), kayıt sahibinin soyadının veya '9' rakamının ilk harfidir
+- yedi basamak, sonuncusu ise denetim basamağıdır
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_dea_number desene eşleşen içeriği bulur.
-- Anahtar sözcük `Keyword_dea_number` bulundu
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_dea_number desenle eşleşen içeriği bulur.
+- 'den `Keyword_dea_number` bir anahtar sözcük bulundu
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_dea_number desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_dea_number desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
     <!-- DEA Number -->
@@ -5528,38 +5528,38 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_dea_number"></a>Keyword_dea_number
 
-- dea
-- dea #
-- uygulama yönetimi
-- enişlek zorlama acentesi
+- Dea
+- Dea #
+- uyuşturucu uygulama uygulaması
+- uyuşturucu uygulama kurumu
 
 
-## <a name="estonia-drivers-license-number"></a>Estonya sürücüsünün lisans numarası
+## <a name="estonia-drivers-license-number"></a>Estonya ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-İki harf ve ardından da altı basamak
+iki harf ve ardından altı basamak
 
 ### <a name="pattern"></a>Desen
 
-İki harf ve altı basamak:
+iki harf ve altı basamak:
 
-- "ET" harfleri (büyük/küçük harfe duyarlı değildir)
+- "ET" harfleri (büyük/küçük harfe duyarlı değil)
 - altı basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_estonia_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_estonia_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_estonia_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_estonia_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Estonia Driver's License Number -->
@@ -5574,15 +5574,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -5590,93 +5590,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -5684,51 +5684,51 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
-#### <a name="keywords_estonia_eu_drivers_license_number"></a>Keywords_estonia_eu_driver's_license_number
+#### <a name="keywords_estonia_eu_drivers_license_number"></a>Keywords_estonia_eu_driver s_license_number
 
 - permis de conduire
-- juubaubaderid
-- ju bir sayı
-- ju birauba
+- juhilubade numbrid
+- juhiloa numarası
+- juhiluba
 
 
 ## <a name="estonia-passport-number"></a>Estonya pasaport numarası
 
 ### <a name="format"></a>Biçim
 
-bir harf ve ardından boşluk veya sınırlayıcı yok yedi basamak
+bir harf ve ardından boşluk veya sınırlayıcı içermeyen yedi basamak
 
 ### <a name="pattern"></a>Desen
 
 bir harf ve ardından yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_estonia_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_estonia_eu_passport_number` bulunur.
-- Normal ifade, `Regex_eu_passport_date1` tarihi D.AA.YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_estonia_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_estonia_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date1` tarihi DD.AA.YYYY biçiminde bulur veya bir `Keywords_eu_passport_date` anahtar sözcük bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_estonia_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_estonia_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_estonia_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_estonia_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Estonia Passport Number -->
@@ -5754,19 +5754,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_estonia_eu_passport_number"></a>Keywords_estonia_eu_passport_number
@@ -5775,44 +5775,44 @@ eesti kodaniku passi number passinumbrid document number document no dokumendi n
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="estonia-personal-identification-code"></a>Estonya Kişisel Kimlik Kodu
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcı olmayan 11 basamak
+Boşluk ve sınırlayıcı içermeyen 11 basamak
 
 ### <a name="pattern"></a>Desen
 
 11 basamak:
 
-- cinsiyete ve doğum yüzyılına karşılık gelen bir basamak (tek sayı erkek, çift sayı kadın; 1-2: 19. yüzyıl; 3-4: 20. yüzyıl; 5-6: 21. yüzyıl)
-- Doğum tarihine karşılık gelen altı basamak (YYAAA)
-- Aynı tarihte doğan kişiyi ayıran seri numarasına karşılık gelen üç basamak
-- tek bir onay rakamı
+- cinsiyete ve doğum yüzyılına karşılık gelen bir basamak (tek sayı erkek, hatta kadın sayısı; 1-2: 19. yüzyıl; 3-4: 20. yüzyıl; 5-6: 21. yüzyıl)
+- doğum tarihine karşılık gelen altı basamak (YYMMDD)
+- aynı tarihte doğan kişileri ayıran seri numarasına karşılık gelen üç basamak
+- bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_estonia_eu_national_id_card` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_estonia_eu_national_id_card` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_estonia_eu_national_id_card` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_estonia_eu_national_id_card` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_estonia_eu_national_id_card` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_estonia_eu_national_id_card` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Estonia Personal Identification Code -->
@@ -5831,47 +5831,47 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_estonia_eu_national_id_card"></a>Keywords_estonia_eu_national_id_card
 
 - id-kaart
-- ik
+- ık
 - isikukood #
 - isikukood
-- maksu id
+- maksu kimliği
 - maksukohustuslase identifitseerimisnumber
 - maksunumber
 - ulusal kimlik numarası
-- ulusal numara
+- ulusal sayı
 - kişisel kod
 - kişisel kimlik numarası
 - kişisel kimlik kodu
 - kişisel kimlik numarası
-- kişiselsayı #
+- personalidnumber #
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 
 
 ## <a name="estonia-physical-addresses"></a>Estonya fiziksel adresleri
 
-Buundled adlı varlık, Estonya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Estonya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
@@ -5884,23 +5884,23 @@ Orta
 
 ### <a name="pattern"></a>Desen
 
-Karmaşık ve güçlü desen
+Karmaşık ve sağlam desen
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_eu_debit_card desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_eu_debit_card desenle eşleşen içeriği bulur.
 - Aşağıdakilerden en az biri doğrudur:
-    - Bir başka Keyword_eu_debit_card anahtar sözcük bulunur.
-    - Anahtar sözcük Keyword_card_terms_dict bulunur.
-    - Anahtar sözcük Keyword_card_security_terms_dict bulunur.
-    - Bir arama Keyword_card_expiration_terms_dict anahtar sözcüğü bulunur.
-    - İşlev Func_expiration_date doğru tarih biçimindeki bir tarihi bulur.
-- Denetimli denetimler geçer.
+    - Keyword_eu_debit_card anahtar sözcüğü bulunur.
+    - Keyword_card_terms_dict anahtar sözcüğü bulunur.
+    - Keyword_card_security_terms_dict anahtar sözcüğü bulunur.
+    - Keyword_card_expiration_terms_dict anahtar sözcüğü bulunur.
+    - İşlev Func_expiration_date doğru tarih biçiminde bir tarih bulur.
+- Sağlama toplamı geçer.
 
 ```xml
     <!-- EU Debit Card Number -->
@@ -5918,25 +5918,25 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_eu_debit_card"></a>Keyword_eu_debit_card
 
 - hesap numarası
 - kart numarası
-- kartı hayır.
+- kart no.
 - güvenlik numarası
-- bilgi #
+- Cc #
 
 #### <a name="keyword_card_terms_dict"></a>Keyword_card_terms_dict
 
 - acct nbr
 - acct num
 - acct no
-- American Express
+- american express
 - americanexpress
-- americano americano
-- amex
+- americano espresso
+- Amex
 - atm kartı
 - atm kartları
 - atm kaart
@@ -5947,18 +5947,18 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - bancontact
 - banka kartı
 - bankkaart
-- kart sahibi
+- kart tutucu
 - kart tutucular
-- kart num
+- kart numarası
 - kart numarası
 - kart numaraları
 - kart türü
 - cardano numerico
-- kart sahibi
-- kartholders
-- kartsayı
+- Kart
+- Kart
+- kartsayısı
 - kartsayıları
-- carta carta
+- carta bianca
 - carta credito
 - carta di credito
 - cartao de credito
@@ -5966,25 +5966,25 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - cartao de debito
 - cartao de débito
 - carte bancaire
-- karblanka
+- carte blanche
 - carte bleue
-- carte de kredisi
+- carte de credit
 - carte de crédit
 - carte di credito
-- karblanka
+- carteblanche
 - cartão de credito
 - cartão de crédito
 - cartão de debito
 - cartão de débito
-- cb
-- ccn
-- kart kontrol edin
-- kartları denetleme
-- checkcard
-- checkcards
-- biraat
-- cirrus
-- cirrus-edc-olog
+- Cb
+- Ccn
+- onay kartı
+- onay kartları
+- onay kartı
+- onay kartları
+- chequekaart
+- Cirrus
+- cirrus-edc-maestro
 - controlekaart
 - controlekaarten
 - kredi kartı
@@ -5998,23 +5998,23 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - banka kartı
 - banka kartları
 - debito automatico
-- diners kulüp
+- diners club
 - dinersclub
-- keşfedin
-- kart keşfetme
-- kartları keşfetme
+- Keşfetmek
+- kartı bulma
+- kartları bulma
 - discovercard
-- discovercards
+- keşif kartları
 - débito automático
-- edc
+- Edc
 - eigentümername
-- Avrupa banka kartı
-- yaşay
-- ya da
-- in via 365
-- Japonca kart bürosu
+- avrupa banka kartı
+- hoofdkaart
+- hoofdkaarten
+- viaggio'da
+- japon kart bürosu
 - japanse kaartdienst
-- jcb
+- Jcb
 - kaart
 - kaart num
 - kaartaantal
@@ -6032,25 +6032,25 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - kreditkarteninstitut
 - kreditkartennummer
 - kreditkartentyp
-- olarak yenile
+- Maestro
 - ana kart
 - ana kartlar
-- ana kart
-- mastercards
-- mc
-- nakit para
+- Mastercard
+- Mastercard
+- Mc
+- bay nakit
 - n carta
-- carta
+- Carta
 - no de tarjeta
-- no do cartao
+- hayır cartao
 - no do cartão
-- hayır. de tarjeta
-- hayır. do cartao
-- hayır. do cartão
+- No. de tarjeta
+- No. cartao yapma
+- No. do cartão
 - nr carta
-- nr. carta
+- Nr. Carta
 - numeri di scheda
-- numero carta
+- çok sayıda carta
 - numero de cartao
 - numero de carte
 - numero de cartão
@@ -6058,7 +6058,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - numero della carta
 - numero di carta
 - numero di scheda
-- numero do cartao
+- çok sayıda do cartao
 - numero do cartão
 - numéro de carte
 - nº carta
@@ -6085,10 +6085,10 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - schede matrici
 - scoprono la scheda
 - scoprono le schede
-- solo
+- Solo
 - supporti di scheda
 - supporto di scheda
-- değiştir
+- Anahtarı
 - tarjeta atm
 - tarjeta credito
 - tarjeta de atm
@@ -6100,29 +6100,29 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - tipo della scheda
 - ufficio giapponese della
 - scheda
-- v ödeme
+- v pay
 - v-pay
-- visa
+- Vize
 - visa plus
-- visa electron
-- visto
+- visa elektron
+- Visto
 - visum
 - vpay
 
 #### <a name="keyword_card_security_terms_dict"></a>Keyword_card_security_terms_dict
 
 - kart kimlik numarası
-- kart doğrulaması
+- kart doğrulama
 - cardi la verifica
-- cid
+- Cid
 - cod seg
 - cod seguranca
 - cod segurança
 - cod sicurezza
-- cod. seg
-- cod. seguranca
-- cod. segurança
-- cod. sicurezza
+- Cod. Sönmez
+- Cod. seguranca
+- Cod. segurança
+- Cod. sicurezza
 - codice di sicurezza
 - codice di verifica
 - codigo
@@ -6132,10 +6132,10 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - cryptogram
 - cryptogramme
 - cv2
-- cvc
+- Cvc
 - cvc2
-- cvn
-- cvv
+- Cvn
+- Cvv
 - cvv2
 - cód seguranca
 - cód segurança
@@ -6145,15 +6145,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - código de seguranca
 - código de segurança
 - de kaart controle
-- atlft nr uit
-- sorun no
+- geeft nr uit
+- sorun yok
 - sorun numarası
 - kaartidentificatienummer
 - kreditkartenprufnummer
 - kreditkartenprüfnummer
 - kwestieaantal
-- hayır. dell'edizione
-- hayır. di sicurezza
+- No. dell'edizione
+- No. di sicurezza
 - numero de securite
 - numero de verificacao
 - numero dell'edizione
@@ -6162,19 +6162,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - numero di sicurezza
 - numero van veiligheid
 - numéro de sécurité
-- nº autorizzazzane
+- nº autorizzazione
 - número de verificação
-- perno il blobloblo
-- pin bloğu
-- teta
+- perno il blocco
+- raptiye bloğu
+- prufziffer
 - prüfziffer
 - güvenlik kodu
-- güvenlik yok
+- güvenlik no
 - güvenlik numarası
 - sicherheits kode
 - sicherheitscode
 - sicherheitsnummer
-- speldbdbdb
+- speldblok
 - veiligheid nr
 - veiligheidsaantal
 - veiligheidscode
@@ -6198,13 +6198,13 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - de afloop
 - espira
 - espira
-- exp date
+- exp tarihi
 - exp datum
-- son kullanma tarihi
-- son kullanma
-- son kullanma tarihi
-- son kullanma tarihi
-- fecha de expiracion
+- Sona erme
+- Sona er
+- Sona eri -yor
+- Bitiş
+- fecha de süre sonu
 - fecha de venc
 - gultig bis
 - gultigkeitsdatum
@@ -6212,10 +6212,10 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - gültigkeitsdatum
 - la scadenza
 - scadenza
-- değere edilebilir
+- değerli
 - validade
 - valido hasta
-- valor
+- Cesaret
 - venc
 - vencimento
 - vencimiento
@@ -6226,9 +6226,9 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - válido hasta
 
 
-## <a name="eu-drivers-license-number"></a>AB sürücü lisans numarası
+## <a name="eu-drivers-license-number"></a>AB ehliyet numarası
 
-Bu varlıklar AB'nin Lisans Numarası'dır ve hassas bilgi türleridir.
+Bu varlıklar AB Sürücü Lisans Numarası'ndadır ve hassas bilgi türleridir.
 
 - [Avusturya](#austria-drivers-license-number)
 - [Belçika](#belgium-drivers-license-number)
@@ -6257,12 +6257,12 @@ Bu varlıklar AB'nin Lisans Numarası'dır ve hassas bilgi türleridir.
 - [Slovenya](#slovenia-drivers-license-number)
 - [İspanya](#spain-drivers-license-number)
 - [İsveç](#sweden-drivers-license-number)
-- [B.K.](#uk-drivers-license-number)
+- [INGİLTERE.](#uk-drivers-license-number)
 
 
 ## <a name="eu-national-identification-number"></a>AB ulusal kimlik numarası
 
-Bu varlıklar AB Ulusal Kimlik Numarası'dır ve hassas bilgi türleridir.
+Bu varlıklar AB Ulusal Kimlik Numarası'ndadır ve hassas bilgi türleridir.
 
 - [Avusturya](#austria-identity-card)
 - [Belçika](#belgium-national-number)
@@ -6290,12 +6290,12 @@ Bu varlıklar AB Ulusal Kimlik Numarası'dır ve hassas bilgi türleridir.
 - [Slovakya](#slovakia-personal-number)
 - [Slovenya](#slovenia-unique-master-citizen-number)
 - [İspanya](#spain-dni)
-- [B.K.](#uk-national-insurance-number-nino)
+- [INGİLTERE.](#uk-national-insurance-number-nino)
 
 
 ## <a name="eu-passport-number"></a>AB pasaport numarası
 
-Bu varlıklar AB pasaport numarasındadır ve hassas bilgi türleridir. Bu varlıklar AB pasaport sayı paketinde yer alıyor.
+Bu varlıklar AB pasaport numarasındadır ve hassas bilgi türleridir. Bu varlıklar AB pasaport numarası paketinde yer alır.
 
 - [Avusturya](#austria-passport-number)
 - [Belçika](#belgium-passport-number)
@@ -6324,12 +6324,12 @@ Bu varlıklar AB pasaport numarasındadır ve hassas bilgi türleridir. Bu varl�
 - [Slovenya](#slovenia-passport-number)
 - [İspanya](#spain-passport-number)
 - [İsveç](#sweden-passport-number)
-- [ABD/İngiltere pasaport numarası](#usuk-passport-number)
+- [ABD/Birleşik Krallık pasaport numarası](#usuk-passport-number)
 
 
-## <a name="eu-social-security-number-or-equivalent-identification"></a>AB sosyal güvenlik numarası veya eşdeğer tanımlama
+## <a name="eu-social-security-number-or-equivalent-identification"></a>AB sosyal güvenlik numarası veya eşdeğer kimlik
 
-Bunlar, AB Sosyal Güvenlik Numarası veya eşdeğer kimlik bilgilerine sahip olan varlıklardır ve hassas bilgi türleridir.
+Bunlar, AB Sosyal Güvenlik Numarası veya eşdeğer kimlik bilgilerindeki varlıklardır ve hassas bilgi türleridir.
 
 - [Avusturya](#austria-social-security-number)
 - [Belçika](#belgium-national-number)
@@ -6346,9 +6346,9 @@ Bunlar, AB Sosyal Güvenlik Numarası veya eşdeğer kimlik bilgilerine sahip ol
 - [İsveç](#sweden-national-id)
 
 
-## <a name="eu-tax-identification-number"></a>AB Vergi tanımlama numarası
+## <a name="eu-tax-identification-number"></a>AB Vergi kimlik numarası
 
-Bu varlıklar AB Vergi numarası hassas bilgi türündedir.
+Bu varlıklar AB Vergi tanımlama numarasına duyarlı bilgi türündedir.
 
 - [Avusturya](#austria-tax-identification-number)
 - [Belçika](#belgium-national-number)
@@ -6377,10 +6377,10 @@ Bu varlıklar AB Vergi numarası hassas bilgi türündedir.
 - [Slovenya](#slovenia-tax-identification-number)
 - [İspanya](#spain-tax-identification-number)
 - [İsveç](#sweden-tax-identification-number)
-- [B.K.](#uk-unique-taxpayer-reference-number)
+- [INGİLTERE.](#uk-unique-taxpayer-reference-number)
 
 
-## <a name="finland-drivers-license-number"></a>Finlandiya sürücüsünün lisans numarası
+## <a name="finland-drivers-license-number"></a>Finlandiya ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
@@ -6393,17 +6393,17 @@ Kısa çizgi içeren 10 basamak:
 - altı basamak
 - kısa çizgi
 - üç basamak
-- basamak veya harf
+- bir rakam veya harf
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_finland_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_finland_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_finland_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_finland_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Finland Driver's License Number -->
@@ -6418,15 +6418,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -6434,93 +6434,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -6528,14 +6528,14 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
@@ -6546,7 +6546,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 - ajokortti
 - permis de conduire
-- ajokortin çok sayıda
+- ajokortin çok
 - kuljettaja lic.
 - körkort
 - körkortnummer
@@ -6555,12 +6555,12 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - ajokortin numerot
 
 
-## <a name="finland-european-health-insurance-number"></a>Finlandiya Avrupa sağlık sigorta numarası
+## <a name="finland-european-health-insurance-number"></a>Finlandiya Avrupa sağlık sigortası numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -6576,15 +6576,15 @@ Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
 - isteğe bağlı bir boşluk veya kısa çizgi
 - 10 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Kayıtexex Regex_Finland_European_Health_Insurance_Number desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_Finland_European_Health_Insurance_Number bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Regex Regex_Finland_European_Health_Insurance_Number desenle eşleşen içeriği bulur.
+- Keyword_Finland_European_Health_Insurance_Number anahtar sözcüğü bulunur.
 
 ```xml
       <!-- Finland European Health Insurance Number -->
@@ -6595,17 +6595,17 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_finland_european_health_insurance_number"></a>Keyword_finland_european_health_insurance_number
 
 - ehic #
 - ehic
-- finlandehicnumber #
+- finlandiyaehicnumber #
 - finska sjukförsäkringskort
-- sağlık kartı
-- sağlık sigorta kartı
-- sağlık sigorta numarası
+- sistem durumu kartı
+- sağlık sigortası kartı
+- sağlık sigortası numarası
 - hälsokort
 - sairaanhoitokortin
 - sairausvakuutuskortti
@@ -6620,30 +6620,30 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-Altı basamak artı bir yüzyıl artı üç basamak ve bir de onay basamaklarını gösteren bir karakter
+altı basamak artı bir yüzyıl artı üç basamak artı bir onay basamağı gösteren bir karakter
 
 ### <a name="pattern"></a>Desen
 
-Desen aşağıdakilerin hepsini içermeli:
-- Doğum tarihi olan  DAAAY biçiminde altı basamak
-- century marker ('-', '+' veya 'a')
+Desen aşağıdakilerin tümünü içermelidir:
+- doğum tarihi olan DDMMYY biçiminde altı basamak
+- yüzyıl işaretçisi ('-', '+' veya 'a')
 - üç basamaklı kişisel kimlik numarası
-- bir onay rakamı olan basamak veya harf (büyük/küçük harfe duyarlı değil)
+- denetim basamağı olan bir rakam veya harf (büyük/küçük harfe duyarsız)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_finnish_national_id desene eşleşen içeriği bulur
-- Keyword_finnish_national_id anahtar sözcüğü bulunur
-- denetimli denetimler geçer
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- işlevi Func_finnish_national_id desenle eşleşen içeriği bulur
+- Keyword_finnish_national_id anahtar sözcüğü bulundu
+- sağlama toplamı geçer
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_finnish_national_id desene eşleşen içeriği bulur
-- denetimli denetimler geçer
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- işlevi Func_finnish_national_id desenle eşleşen içeriği bulur
+- sağlama toplamı geçer
 
 ```xml
       <!-- Finnish National ID-->
@@ -6658,47 +6658,47 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 - ainutlaatuinen henkilökohtainen tunnus
 - henkilökohtainen tunnus
 - henkilötunnus
 - henkilötunnusnumero #
 - henkilötunnusnumero
-- hetu
-- id no
+- Hetu
+- kimlik no
 - kimlik numarası
 - kimlik numarası
-- identite bir çok
+- identiteetti numero
 - kimlik numarası
-- kimliksayı
+- idnumber
 - kansallinen henkilötunnus
 - kansallisen henkilökortin
 - ulusal kimlik kartı
-- national id No.
+- ulusal kimlik no.
 - kişisel kimlik
 - kişisel kimlik kodu
-- kişiselsayı #
+- personalidnumber #
 - personbeteckning
 - personnummer
 - sosyal güvenlik numarası
 - sosiaaliturvatunnus
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 - tunnistenumero
 - tunnus numero
 - tunnusluku
@@ -6711,30 +6711,30 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ## <a name="finland-passport-number"></a>Finlandiya pasaport numarası
 
-Bu varlık EU Passport Number hassas bilgi türünde mevcuttur ve tek başına hassas bilgi türü bir varlık olarak kullanılabilir.
+Bu varlık AB Pasaport Numarası hassas bilgi türünde kullanılabilir ve tek başına hassas bilgi türü varlığı olarak kullanılabilir.
 
 ### <a name="format"></a>Biçim
-dokuz harf ve rakam bileşimi
+dokuz harf ve rakamın birleşimi
 
 ### <a name="pattern"></a>Desen
-dokuz harf ve rakam birleşimi:
-- İki harf (büyük/küçük harfe duyarlı değildir)
+dokuz harf ve rakamın birleşimi:
+- iki harf (büyük/küçük harfe duyarlı değil)
 - yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene `Regex_finland_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya `Keywords_eu_passport_number` `Keyword_finland_passport_number` bulunur.
-- Normal ifade, `Regex_eu_passport_date1` tarihi D.AA.YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade `Regex_finland_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keyword_finland_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date1` tarihi DD.AA.YYYY biçiminde bulur veya bir `Keywords_eu_passport_date` anahtar sözcük bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene `Regex_finland_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya `Keywords_eu_passport_number` `Keyword_finland_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade `Regex_finland_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keyword_finland_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Finland Passport Number -->
@@ -6759,49 +6759,49 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keyword_finland_passport_number"></a>Keyword_finland_passport_number
 
 - suomalainen passi
 - passin numero
-- passin numero( #
+- çok sayıda geçiş. #
 - passin numero #
-- passin numero(
+- çok sayıda geçiş.
 - passi #
-- geçiş numarası
+- passi numarası
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="finland-physical-addresses"></a>Finlandiya fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Finlandiya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Finlandiya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
-## <a name="france-drivers-license-number"></a>Fransa sürücü lisans numarası
+## <a name="france-drivers-license-number"></a>Fransa ehliyet numarası
 
-Bu varlık AB Sürücü's Lisans Numarası hassas bilgi türünde mevcuttur ve tek başına hassas bilgi türü bir varlık olarak kullanılabilir.
+Bu varlık, AB Sürücü Lisans Numarası hassas bilgi türünde kullanılabilir ve tek başına hassas bilgi türü varlığı olarak kullanılabilir.
 
 ### <a name="format"></a>Biçim
 
@@ -6809,17 +6809,17 @@ Bu varlık AB Sürücü's Lisans Numarası hassas bilgi türünde mevcuttur ve t
 
 ### <a name="pattern"></a>Desen
 
-Fransızca telefon numaraları gibi benzer düzenlerde indirim yapmak için doğrulamaya sahip 12 basamak
+Fransız telefon numaraları gibi benzer desenleri indirime kadar doğrulama ile 12 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_french_drivers_license desene eşleşen içeriği bulur.
-- bir Keyword_french_drivers_license anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- işlevi Func_french_drivers_license desenle eşleşen içeriği bulur.
+- Keyword_french_drivers_license anahtar sözcüğü bulunur.
 
 ```xml
     <!-- France Driver's License Number -->
@@ -6831,15 +6831,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_french_drivers_license"></a>Keyword_french_drivers_license
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -6847,93 +6847,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -6941,14 +6941,14 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
@@ -6961,12 +6961,12 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - numéros de licence
 
 
-## <a name="france-health-insurance-number"></a>Fransa sağlık sigorta numarası
+## <a name="france-health-insurance-number"></a>Fransa sağlık sigortası numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -6979,21 +6979,21 @@ Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
 21 basamaklı sayı:
 
 - 10 basamak
-- isteğe bağlı bir boşluk
+- isteğe bağlı bir alan
 - 10 basamak
-- isteğe bağlı bir boşluk
+- isteğe bağlı bir alan
 - basamak
 
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- kayıtex Regex_France_Health_Insurance_Number desene eşleşen içeriği bulur.
-- bu sözcükten Keyword_France_Health_Insurance_Number anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- regex Regex_France_Health_Insurance_Number desenle eşleşen içeriği bulur.
+- Keyword_France_Health_Insurance_Number anahtar sözcüğü bulunur.
 
 ```xml
       <!-- France Health Insurance Number -->
@@ -7004,7 +7004,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_france_health_insurance_number"></a>Keyword_France_health_insurance_number
 
@@ -7023,15 +7023,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 12 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- Normal ifade Regex_france_cni desene eşleşen içeriği bulur.
-- Bir başka Keywords_france_eu_national_id_card anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- Normal ifade Regex_france_cni desenle eşleşen içeriği bulur.
+- Keywords_france_eu_national_id_card anahtar sözcüğü bulunur.
 
 ```xml
     <!-- France CNI -->
@@ -7043,7 +7043,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_france_eu_national_id_card"></a>Keywords_france_eu_national_id_card
 
@@ -7062,33 +7062,33 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ## <a name="france-passport-number"></a>Fransa pasaport numarası
 
-Bu varlık AB Pasaport Numarası hassas bilgi türünde kullanılabilir. Ayrıca tek başına hassas bilgi türü bir varlık olarak da kullanılabilir.
+Bu varlık, AB Pasaport Numarası hassas bilgi türünde kullanılabilir. Tek başına hassas bilgi türü varlığı olarak da kullanılabilir.
 
 ### <a name="format"></a>Biçim
 
-dokuz rakam ve harf
+dokuz basamak ve harf
 
 ### <a name="pattern"></a>Desen
 
-dokuz rakam ve harf:
-- İki basamak
-- İki harf (büyük/küçük harfe duyarlı değildir)
+dokuz basamak ve harf:
+- iki basamak
+- iki harf (büyük/küçük harfe duyarlı değil)
 - beş basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev, `Func_fr_passport` desene eşleşen içeriği bulur.
-- Anahtar sözcük veya `Keywords_eu_passport_number` `Keywords_france_eu_passport_number` bulunur.
-- Normal ifade, `Regex_eu_passport_date3` tarihi DD MM YYYY biçiminde veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur biçimde bulur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev `Func_fr_passport` , desenle eşleşen içeriği bulur.
+- veya `Keywords_france_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date3` tarihi DD AA YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev, `Func_fr_passport` desene eşleşen içeriği bulur.
-- Anahtar sözcük veya `Keywords_eu_passport_number` `Keywords_france_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev `Func_fr_passport` , desenle eşleşen içeriği bulur.
+- veya `Keywords_france_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 
 ```xml
@@ -7115,49 +7115,49 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_france_eu_passport_number"></a>Keywords_france_eu_passport_number
 
-- numéro de passeport
-- passeport n °
-- passeport non
-- passeport #
-- passeport #
-- passeportnon
-- passeportn °
-- passeport français
-- passeportportre
-- passeport carte
-- numéro passeport
-- passeport n°
-- n° du passeport
-- n° passeport
+- numéro de passport
+- passport n °
+- passport non
+- passport #
+- passport #
+- passportnon
+- passportn °
+- passport français
+- passport livre
+- passport carte
+- numéro passport
+- passport n°
+- n° du passport
+- n° geçiş noktası
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="france-physical-addresses"></a>Fransa fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Fransa'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Fransa'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
@@ -7170,25 +7170,25 @@ Orta
 
 ### <a name="pattern"></a>Desen
 
-İki desenden birini eşleşmesi gerekir:
-- 13 basamak, ardından bir boşluk ve ardından iki basamak<br/>
+İki desenden biriyle eşleşmelidir:
+- 13 basamak ve ardından bir boşluk ve ardından iki basamak<br/>
 veya
-- Art arda 15 basamak
+- Ardışık 15 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev, `Func_french_insee` desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_fr_insee bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev `Func_french_insee` , desenle eşleşen içeriği bulur.
+- Keyword_fr_insee anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev, Func_french_insee veya Func_fr_insee desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_french_insee veya Func_fr_insee desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
     <!-- France INSEE -->
@@ -7206,7 +7206,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_fr_insee"></a>Keyword_fr_insee
 
@@ -7219,14 +7219,14 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - ulusal kimlik
 - ulusal kimlik
 - no d'identité
-- hayır. d'identité
+- No. d'identité
 - numéro d'assurance
 - numéro d'identité
-- çok sayıda d'identite
+- numero d'identite
 - numéro de sécu
 - numéro de sécurité sociale
 - no d'identite
-- hayır. d'identite
+- No. d'identite
 - ssn
 - ssn #
 - sécurité sociale
@@ -7238,7 +7238,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sosyal sigorta numarası
 
 
-## <a name="france-tax-identification-number"></a>Fransa vergi tanımlama numarası
+## <a name="france-tax-identification-number"></a>Fransa vergi kimlik numarası
 
 ### <a name="format"></a>Biçim
 
@@ -7249,7 +7249,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 13 basamak
 
 - 0, 1, 2 veya 3 olması gereken bir basamak
-- Bir rakam
+- Bir basamak
 - Boşluk (isteğe bağlı)
 - İki basamak
 - Boşluk (isteğe bağlı)
@@ -7257,21 +7257,21 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - Boşluk (isteğe bağlı)
 - Üç basamak
 - Boşluk (isteğe bağlı)
-- Üç onay rakamı
+- Üç denetim basamağı
 
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_france_eu_tax_file_number` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_france_eu_tax_file_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_france_eu_tax_file_number` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_france_eu_tax_file_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_france_eu_tax_file_number` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_france_eu_tax_file_number` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- France Tax Identification Number (numéro SPI.) -->
@@ -7291,68 +7291,68 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_france_eu_tax_file_number"></a>Keywords_france_eu_tax_file_number
 
 - numéro d'identification fiscale
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 
 
-## <a name="france-value-added-tax-number"></a>Fransa'da katma değer vergi numarası
+## <a name="france-value-added-tax-number"></a>Fransa katma değer vergi numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-13 karakter alfasayısal desen
+13 karakterli alfasayısal desen
 
 ### <a name="pattern"></a>Desen
 
 13 karakter alfasayısal desen:
 
-- İki harf - FR (büyük/küçük harfe duyarlı değil)
+- iki harf - FR (büyük/küçük harfe duyarsız)
 - isteğe bağlı bir boşluk veya kısa çizgi
-- İki harf veya basamak
-- isteğe bağlı bir boşluk, nokta, kısa çizgi veya virgül
+- iki harf veya basamak
+- isteğe bağlı boşluk, nokta, kısa çizgi veya virgül
 - üç basamak
-- isteğe bağlı bir boşluk, nokta, kısa çizgi veya virgül
+- isteğe bağlı boşluk, nokta, kısa çizgi veya virgül
 - üç basamak
-- isteğe bağlı bir boşluk, nokta, kısa çizgi veya virgül
+- isteğe bağlı boşluk, nokta, kısa çizgi veya virgül
 - üç basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_france_value_added_tax_number desene eşleşen içeriği bulur.
-- Bir Keywords_france_value_added_tax_number anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_france_value_added_tax_number desenle eşleşen içeriği bulur.
+- Keywords_france_value_added_tax_number anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_france_value_added_tax_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_france_value_added_tax_number desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- France Value Added Tax Number -->
@@ -7366,58 +7366,58 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_france_value_added_tax_number"></a>Keyword_France_value_added_tax_number
 
 - kdv numarası
-- kdv yok
-- kdv #
+- kdv no
+- Kdv #
 - katma değer vergisi
-- olarak tanımlama no numéro d'identification taxe sur valeur ajoutée
+- siren kimliği no numéro d'identification taxe sur valeur ajoutée
 - taxe valeur ajoutée
 - taxe sur la valeur ajoutée
 - n° tva
 - numéro de tva
-- numéro d'identification atom
+- numéro d'identification siren
 
 
 ## <a name="generic-medication-names"></a>Genel ilaç adları
 
-Bu bakıla sahip olmayan bu varlık, asetatoz gibi genel *ilaçların adlarını algılar*. Yalnızca İngilizce terimleri destekler. Ayrıca SIT adlı tüzel kişi [SIT adlı sağlık hüküm ve koşullarına](#all-medical-terms-and-conditions) da dahildir.
+Bu unbundled adlandırılmış varlık, *asetaminofen* gibi genel ilaçların adlarını algılar. Yalnızca İngilizce terimleri destekler. Ayrıca entity SIT adlı [tüm tıbbi hüküm ve koşullar](#all-medical-terms-and-conditions) paketinde yer alır.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Yüksek
 
 
-## <a name="germany-drivers-license-number"></a>Almanya sürücü lisans numarası
+## <a name="germany-drivers-license-number"></a>Almanya ehliyet numarası
 
-Bu hassas bilgi türü varlık AB Sürücü'sinde Lisans Numarası hassas bilgi türüne dahildir. Ayrıca tek başına hassas bilgi türü bir varlık olarak da kullanılabilir.
+Bu hassas bilgi türü varlığı, AB Sürücü Lisans Numarası hassas bilgi türüne dahil edilir. Tek başına hassas bilgi türü varlığı olarak da kullanılabilir.
 
 ### <a name="format"></a>Biçim
 
-11 rakam ve harf birleşimi
+11 basamak ve harf birleşimi
 
 ### <a name="pattern"></a>Desen
 
-11 rakam ve harf (büyük/küçük harfe duyarlı değildir):
-- basamak veya harf
-- İki basamak
+11 basamak ve harf (büyük/küçük harfe duyarlı değildir):
+- bir rakam veya harf
+- iki basamak
 - altı basamak veya harf
 - basamak
-- basamak veya harf
+- bir rakam veya harf
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_german_drivers_license desene eşleşen içeriği bulur.
-- Bir arama Keyword_german_drivers_license_number anahtar sözcüğü bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_german_drivers_license desenle eşleşen içeriği bulur.
+- Keyword_german_drivers_license_number anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
 ```xml
     <!-- German Driver's License Number -->
@@ -7429,7 +7429,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_german_drivers_license_number"></a>Keyword_german_drivers_license_number
 
@@ -7439,35 +7439,35 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - ausstellende behorde
 - ausstellende behoerde
 - führerschein
-- fuhrerschein
-- fuehrerschein
+- führerschein
+- führerschein
 - führerscheinnummer
-- fuhrerscheinnummer
+- führerscheinnummer
 - fuehrerscheinnummer
 - führerschein- 
-- fuhrerschein- 
-- fuehrerschein- 
+- führerschein- 
+- führerschein- 
 - führerscheinnummernr
-- fuhrerscheinnummernr
+- führerscheinnummernr
 - fuehrerscheinnummernr
 - führerscheinnummerklasse
-- fuhrerscheinnummerklasse
+- führerscheinnummerklasse
 - fuehrerscheinnummerklasse
 - nr-führerschein
-- nr-fuhrerschein
+- nr-führerschein
 - nr-fuehrerschein
 - no-führerschein
-- no-fuhrerschein
+- führerschein yok
 - no-fuehrerschein
 - n-führerschein
-- n-fuhrerschein
+- n-führerschein
 - n-fuehrerschein
 - permis de conduire
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -7475,93 +7475,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -7569,14 +7569,14 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dlno
 
@@ -7585,39 +7585,39 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-1 Kasım 2010'dan itibaren: Dokuz ile on bir harf ve basamak
+1 Kasım 2010'dan bu yana: Dokuz - on bir harf ve rakam
 
 1 Nisan 1987 ile 31 Ekim 2010 arasında: 10 basamak
 
 ### <a name="pattern"></a>Desen
 
 1 Kasım 2010'dan bu yana: 9 - 11 karakter alfasayısal desen
-- bir L, M, N, P, R, T, V, W, X, Y (büyük/harfe duyarlı değil)
-- C, F, G, H, J, K, L, M, N, P, R, T, V, W, X, Y ve Z'de sekiz basamak veya harf (büyük/küçük harfe duyarlı değil)
-- isteğe bağlı onay basamakları
+- one L, M, N, P, R, T, V, W, X, Y (büyük/küçük harfe duyarsız)
+- C, F, G, H, J, K, L, M, N, P, R, T, V, W, X, Y ve Z'de sekiz basamak veya harf (büyük/küçük harfe duyarsız)
+- isteğe bağlı denetim basamalı
 - İsteğe bağlı d/D
 
 1 Nisan 1987 ile 31 Ekim 2010 arasında:
 - 10 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev, `Func_german_id_card_with_check` desene eşleşen içeriği bulur.
-- Anahtar sözcük `Keyword_germany_id_card` bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev `Func_german_id_card_with_check` , desenle eşleşen içeriği bulur.
+- 'den `Keyword_germany_id_card` bir anahtar sözcük bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade `Regex_germany_id_card` desene eşleşen içerik bulur (2010 öncesi veya 2010 öncesi ya da 10 basamaklık bir desen verilen 9 karakter.
-- Bir başka Keyword_germany_id_card anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade `Regex_germany_id_card` , desenle eşleşen içeriği bulur (2010 öncesi verilmiş onay basamağı olmayan 9 karakter veya 2010'da verilen 10 basamak deseni).
+- Keyword_germany_id_card anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev, `Func_german_id_card_with_check` desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev `Func_german_id_card_with_check` , desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 
 ```xml
@@ -7639,13 +7639,13 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_germany_id_card"></a>Keyword_germany_id_card
 
 - ausweis
 - gpid
-- tanımlama
+- Kimlik
 - identifikation
 - identifizierungsnummer
 - kimlik kartı
@@ -7666,29 +7666,29 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="pattern"></a>Desen
 
-- C, F, G, H, J, K (büyük/harfe duyarlı değil) içinde bir harf
-- C, F, G, H, J, K, L, M, N, P, R, T, V, W, X, Y ve Z'de sekiz basamak veya harf (büyük/küçük harfe duyarlı değil)
-- isteğe bağlı onay basamakları
+- C, F, G, H, J, K dilinde bir harf (büyük/küçük harfe duyarsız)
+- C, F, G, H, J, K, L, M, N, P, R, T, V, W, X, Y ve Z'de sekiz basamak veya harf (büyük/küçük harfe duyarsız)
+- isteğe bağlı denetim basamalı
 - İsteğe bağlı d/D
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev, `Func_german_passport_checksum` desene eşleşen içeriği bulur.
-- Anahtar sözcük veya `Keyword_german_passport` `Keywords_eu_passport_number_common` bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev `Func_german_passport_checksum` , desenle eşleşen içeriği bulur.
+- veya `Keywords_eu_passport_number_common` anahtar `Keyword_german_passport` sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev, `Func_german_passport` dokuz karakter düzenine (sayısal denetimi ve isteğe bağlı d/D olmadan) eşleşen içeriği bulur.
-- Anahtar sözcük veya `Keyword_german_passport` `Keywords_eu_passport_number_common` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev `Func_german_passport` dokuz karakter deseni ile eşleşen içerik bulur (denetim basamalı ve isteğe bağlı d/D olmadan).
+- veya `Keywords_eu_passport_number_common` anahtar `Keyword_german_passport` sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev, `Func_german_passport_checksum` desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev `Func_german_passport_checksum` , desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
     <!-- German Passport Number -->
@@ -7715,7 +7715,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_german_passport"></a>Keyword_german_passport
 
@@ -7726,63 +7726,63 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - Reisepass-Nr
 - Passnummer
 - reisepässe
-- passeport no.
-- passeport no
+- passport no.
+- passport no
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 
 ## <a name="germany-physical-addresses"></a>Almanya fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Almanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Almanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
-## <a name="germany-tax-identification-number"></a>Almanya vergi tanımlama numarası
+## <a name="germany-tax-identification-number"></a>Almanya vergi kimlik numarası
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcı olmayan 11 basamak
+Boşluk ve sınırlayıcı içermeyen 11 basamak
 
 ### <a name="pattern"></a>Desen
 
 11 basamak
 
 - İki basamak
-- İsteğe bağlı bir boşluk
+- İsteğe bağlı bir alan
 - Üç basamak
-- İsteğe bağlı bir boşluk
+- İsteğe bağlı bir alan
 - Üç basamak
-- İsteğe bağlı bir boşluk
+- İsteğe bağlı bir alan
 - İki basamak
-- tek bir onay rakamı
+- bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_germany_eu_tax_file_number` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_germany_eu_tax_file_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_germany_eu_tax_file_number` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_germany_eu_tax_file_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_germany_eu_tax_file_number` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_germany_eu_tax_file_number` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Germany Tax Identification Number -->
@@ -7797,41 +7797,41 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_germany_eu_tax_file_number"></a>Keywords_germany_eu_tax_file_number
 
 - identifikationsnummer
-- suer kimliği
+- steuer kimliği
 - steueridentifikationsnummer
 - steuernummer
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
-- zinn #
-- zinn
+- Teneke #
+- Zinn #
+- Zinn
 - zinnnummer
 
 
-## <a name="germany-value-added-tax-number"></a>Almanya'nın katma değer vergi numarası
+## <a name="germany-value-added-tax-number"></a>Almanya katma değer vergi numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -7843,27 +7843,27 @@ Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
 
 11 karakterli alfasayısal desen:
 
-- a letter D or d
-- E harfi veya e harfi
-- isteğe bağlı bir boşluk
+- D veya d harfi
+- E veya e harfi
+- isteğe bağlı bir alan
 - üç basamak
-- isteğe bağlı boşluk veya virgül
+- isteğe bağlı bir alan veya virgül
 - üç basamak
-- isteğe bağlı boşluk veya virgül
+- isteğe bağlı bir alan veya virgül
 - üç basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_germany_value_added_tax_number desene eşleşen içeriği bulur.
-- Bir Keywords_germany_value_added_tax_number anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_germany_value_added_tax_number desenle eşleşen içeriği bulur.
+- Keywords_germany_value_added_tax_number anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_germany_value_added_tax_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_germany_value_added_tax_number desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Germany Value Added Tax Number -->
@@ -7877,40 +7877,40 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_germany_value_added_tax_number"></a>Keyword_germany_value_added_tax_number
 
 - kdv numarası
-- kdv yok
-- kdv #
+- kdv no
+- Kdv #
 - vat# mehrwertsteuer
 - mwst
 - mehrwertsteuer identifikationsnummer
 - mehrwertsteuer nummer
 
 
-## <a name="greece-drivers-license-number"></a>Yunanistan sürücü lisans numarası
+## <a name="greece-drivers-license-number"></a>Yunanistan ehliyet numarası
 
-Bu varlık, AB'nin Lisans Numarası hassas bilgi türüne dahildir. Ayrıca tek başına hassas bilgi türü bir varlık olarak da kullanılabilir.
+Bu varlık, AB Sürücü Lisans Numarası hassas bilgi türüne dahil edilir. Tek başına hassas bilgi türü varlığı olarak da kullanılabilir.
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcılar olmadan dokuz basamak
+boşluk ve sınırlayıcı içermeyen dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
 dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_greece_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_greece_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_greece_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_greece_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Greece Driver's License Number -->
@@ -7925,15 +7925,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -7941,93 +7941,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -8035,14 +8035,14 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
@@ -8061,32 +8061,32 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-7-8 harf ve rakam ile çizgi birleşimi
+7-8 harf ve sayı ile tire birleşimi
 
 ### <a name="pattern"></a>Desen
 
 Yedi harf ve sayı (eski biçim):
 - Bir harf (Yunan alfabesinin herhangi bir harfi)
-- Tire
+- Kısa çizgi
 - Altı basamak
 
 Sekiz harf ve sayı (yeni biçim):
-- Hem Yunanca hem de Latin alfabelerinde büyük harf karakterler bulunan iki harf (ABEZHIKMNOPTYX)
-- Tire
+- Büyük harf karakteri hem Yunanca hem de Latin alfabelerinde (ABEZHIKMNOPTYX) oluşan iki harf
+- Kısa çizgi
 - Altı basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade Regex_greece_id_card desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_greece_id_card bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade Regex_greece_id_card desenle eşleşen içeriği bulur.
+- Keyword_greece_id_card anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- Normal ifade Regex_greece_id_card desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- Normal ifade Regex_greece_id_card desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Greece National ID Card -->
@@ -8101,14 +8101,14 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_greece_id_card"></a>Keyword_greece_id_card
 
-- Yunanca kimlik
-- Yunanca ulusal kimliği
-- Yunanca kişisel kimlik kartı
-- Yunanca yunanca kimlik
+- yunanca kimlik
+- yunan uyruklu kimlik
+- yunan kişisel kimlik kartı
+- yunan polis kimliği
 - kimlik kartı
 - tautotita
 - ταυτότητα
@@ -8119,26 +8119,26 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-İki harf ve ardından boşluk veya sınırlayıcı yok, yedi basamak
+İki harf ve ardından boşluk veya sınırlayıcı içermeyen yedi basamak
 
 ### <a name="pattern"></a>Desen
 
-İki harf, ardından yedi basamak
+İki harf ve ardından yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_greece_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_greece_eu_passport_number` bulunur.
-- Normal ifade `Regex_greece_eu_passport_date` , tarihi AAAA YY biçiminde (Örnek - 28 Ağu 19) veya bir anahtar sözcük `Keywords_greece_eu_passport_date` bulur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_greece_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_greece_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_greece_eu_passport_date` tarihi DD AAA YY biçiminde bulur (Örnek - 28 Ağustos 19) veya anahtar sözcüğü `Keywords_greece_eu_passport_date` bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_greece_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_greece_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_greece_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_greece_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Greece Passport Number -->
@@ -8164,19 +8164,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_greece_eu_passport_number"></a>Keywords_greece_eu_passport_number
@@ -8188,43 +8188,43 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ## <a name="greece-physical-addresses"></a>Yunanistan fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Yunanistan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Yunanistan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 ## <a name="greece-social-security-number-amka"></a>Yunanistan Sosyal Güvenlik Numarası (AMKA)
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcı olmayan 11 basamak
+Boşluk ve sınırlayıcı içermeyen 11 basamak
 
 ### <a name="pattern"></a>Desen
 
-- Doğum tarihi olarak altı basamak YYAAA
+- Doğum tarihi olarak altı basamak YYMMDD
 - Dört basamak
-- bir onay basamakı
+- denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_greece_eu_ssn` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_greece_eu_ssn_or_equivalent` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_greece_eu_ssn` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_greece_eu_ssn_or_equivalent` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_greece_eu_ssn` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_greece_eu_ssn` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Greece Social Security Number (AMKA) -->
@@ -8239,47 +8239,47 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_greece_eu_ssn_or_equivalent"></a>Keywords_greece_eu_ssn_or_equivalent
 
 - ssn
 - ssn #
-- sosyal güvenlik yok
+- sosyal güvenlik hayır
 - socialsecurityno #
 - sosyal güvenlik numarası
-- amka
+- Özdemir
 - a.m.k.a.
 - Αριθμού Μητρώου Κοινωνικής Ασφάλισης
 
 
 ## <a name="greece-tax-identification-number"></a>Yunanistan vergi kimlik numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcı olmayan dokuz basamak
+Boşluk ve sınırlayıcı içermeyen dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
-Dokuz rakam
+Dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
-Uygulanamaz
+Geçerli değil
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
 
-- Normal ifade desene  `Regex_greece_eu_tax_file_number` eşleşen içerik bulur.
-- Anahtar sözcük  `Keywords_greece_eu_tax_file_number` bulunur.
+- Normal ifade  `Regex_greece_eu_tax_file_number` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_greece_eu_tax_file_number` bir anahtar sözcük bulunur.
 
 ```xml
       <!-- Greek Tax Identification Number -->
@@ -8291,33 +8291,33 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_greece_eu_tax_file_number"></a>Keywords_greece_eu_tax_file_number
 
-- afm #
-- afm
-- aμμ|aμμ αμμμμ αμμ 1
-- aμμ
+- Afm #
+- Afm
+- aφμ|aφμ αριθμός
+- aφμ
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
+- vergi kayıt numarası
 - vergi kayıt defteri no
 - vergi kayıt defteri numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
 - taxregistryno #
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 - αριθμός φορολογικού μητρώου
 - τον αριθμό φορολογικού μητρώου
 - φορολογικού μητρώου νο
@@ -8327,29 +8327,30 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-8-9 harf ve sayı ile son karakterin çevresinde isteğe bağlı parantezlerin bileşimi
+Son karakter çevresinde 8-9 harf ve rakam ile isteğe bağlı parantezlerin birleşimi
 
 ### <a name="pattern"></a>Desen
 
 8-9 harf birleşimi:
-- 1-2 harf (büyük/küçük harfe duyarlı değildir)
+- 1-2 harf (büyük/küçük harfe duyarlı değil)
 - Altı basamak
-- Son karakter (herhangi bir rakam veya A harfi), onay rakamıdır ve isteğe bağlı olarak parantez içine alınır.
+- isteğe bağlı alan
+- isteğe bağlı olarak parantez içine alınmış bir onay karakteri (herhangi bir rakam veya A harfi)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_hong_kong_id_card desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_hong_kong_id_card bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_hong_kong_id_card desenle eşleşen içeriği bulur.
+- Keyword_hong_kong_id_card anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev Func_hong_kong_id_card desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev Func_hong_kong_id_card desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- Hong Kong Identity Card (HKID) number -->
@@ -8364,7 +8365,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_hong_kong_id_card"></a>Keyword_hong_kong_id_card
 
@@ -8407,29 +8408,29 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - 香港特別行政區非永久性居民身分証
 
 
-## <a name="hungary-drivers-license-number"></a>Macaristan sürücünün lisans numarası
+## <a name="hungary-drivers-license-number"></a>Macaristan ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-İki harf ve ardından da altı basamak
+İki harf ve ardından altı basamak
 
 ### <a name="pattern"></a>Desen
 
 İki harf ve altı basamak:
 
-- İki harf (büyük/küçük harfe duyarlı değildir)
+- İki harf (büyük/küçük harfe duyarlı değil)
 - Altı basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
 
-- Normal ifade desene  `Regex_hungary_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_hungary_eu_driver's_license_number` bulunur.
+- Normal ifade  `Regex_hungary_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_hungary_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <Entity id="9d31c46b-6e6b-444c-aeb1-6dd7e604bb24" patternsProximity="300" recommendedConfidence="75">
@@ -8443,15 +8444,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -8459,93 +8460,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -8553,51 +8554,51 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
 
-#### <a name="keywords_hungary_eu_drivers_license_number"></a>Keywords_hungary_eu_driver's_license_number
+#### <a name="keywords_hungary_eu_drivers_license_number"></a>Keywords_hungary_eu_driver s_license_number
 
 - vezetoi engedely
-- vezetazı engedély
-- vezetazı engedélyek
+- vezetői engedély
+- vezetői engedélyek
 
 
 ## <a name="hungary-passport-number"></a>Macaristan pasaport numarası
 
 ### <a name="format"></a>Biçim
 
-İki harf ve ardından boşluk veya sınırlayıcı yok, altı veya yedi basamak
+İki harf ve ardından boşluk veya sınırlayıcı içermeyen altı veya yedi basamak
 
 ### <a name="pattern"></a>Desen
 
-İki harf, ardından altı veya yedi basamak
+İki harf ve ardından altı veya yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_hungary_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_hungary_eu_passport_number` bulunur.
-- Normal ifade `Regex_hungary_eu_passport_date` , tarihi AAAA/AAA YY (Örnek - 01 MÁR/MAR 12) `Keywords_eu_passport_date` biçiminde veya bir anahtar sözcük bulunan
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_hungary_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_hungary_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_hungary_eu_passport_date` tarihi DD AAA/AAA YY biçiminde bulur (Örnek - 01 MÁR/MAR 12) veya anahtar sözcüğü `Keywords_eu_passport_date` bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_hungary_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_hungary_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_hungary_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_hungary_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Hungary Passport Number -->
@@ -8622,39 +8623,39 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_hungary_eu_passport_number"></a>Keywords_hungary_eu_passport_number
 
 - útlevél száma
-- Útlevá száma
+- Útlevelek száma
 - útlevél szám
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="hungary-personal-identification-number"></a>Macaristan kişisel kimlik numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -8666,25 +8667,25 @@ Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
 
 11 basamak:
 
-- Cinsiyete karşılık gelen bir rakam, erkek için 1, Kadın için 2. Diğer sayılar, 1900'den önce doğan veya çift yataklı olan insanlar için de mümkündür.
-- Doğum tarihine karşılık gelen altı basamak (YYAAA)
+- Cinsiyete karşılık gelen bir basamak, erkek için 1, kadın için 2. 1900'lü yıllardan önce doğan veya çifte vatandaşlığa sahip vatandaşlar için de başka sayılar mümkündür.
+- Doğum tarihine karşılık gelen altı basamak (YYMMDD)
 - Seri numarasına karşılık gelen üç basamak
-- Tek bir onay rakamı
+- Bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
 
-- İşlev,  `Func_hungary_eu_national_id_card` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_hungary_eu_national_id_card` bulunur.
+- İşlev  `Func_hungary_eu_national_id_card` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_hungary_eu_national_id_card` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
 
-- İşlev,  `Func_hungary_eu_national_id_card` desene eşleşen içeriği bulur.
+- İşlev  `Func_hungary_eu_national_id_card` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Hungary Personal Identification Number -->
@@ -8703,24 +8704,24 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_hungary_eu_national_id_card"></a>Keywords_hungary_eu_national_id_card
 
 - kimlik numarası
 - kimlik numarası
 - sz ig
-- sz. ig.
+- Sz. ıg.
 - sz.ig.
-- személyazonosító ig buvány
-- személyi ig biravány
+- személyazonosító igazolvány
+- személyi igazolvány
 
 
 ## <a name="hungary-physical-addresses"></a>Macaristan fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Macaristan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Macaristan'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
@@ -8729,26 +8730,26 @@ Orta
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcı olmayan dokuz basamak
+Boşluk ve sınırlayıcı içermeyen dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
-Dokuz rakam
+Dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
 
-- İşlev,  `Func_hungary_eu_ssn_or_equivalent` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_hungary_eu_ssn_or_equivalent` bulunur.
+- İşlev  `Func_hungary_eu_ssn_or_equivalent` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_hungary_eu_ssn_or_equivalent` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
 
-- İşlev,  `Func_hungary_eu_ssn_or_equivalent` desene eşleşen içeriği bulur.
+- İşlev  `Func_hungary_eu_ssn_or_equivalent` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Hungarian Social Security Number (TAJ) -->
@@ -8763,64 +8764,64 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_hungary_eu_ssn_or_equivalent"></a>Keywords_hungary_eu_ssn_or_equivalent
 
-- Macarca sosyal güvenlik numarası
+- macar sosyal güvenlik numarası
 - sosyal güvenlik numarası
 - socialsecuritynumber #
 - hssn #
 - socialsecuritynno
 - hssn
-- taj
-- taj #
+- Taj
+- Taj #
 - ssn
 - ssn #
-- sosyal güvenlik yok
+- sosyal güvenlik hayır
 - áfa
-- ayyzösségi adószám
-- általááá forgalmi adó szám
+- közösségi adószám
+- általános forgalmi adó szám
 - hozzáadottérték adó
 - áfa szám
 - magyar áfa szám
 
 
-## <a name="hungary-tax-identification-number"></a>Macaristan vergi tanımlama numarası
+## <a name="hungary-tax-identification-number"></a>Macaristan vergi kimlik numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Boşluk veya sınırlayıcı yok 10 basamak
+Boşluk veya sınırlayıcı içermeyen 10 basamak
 
 ### <a name="pattern"></a>Desen
 
 10 basamak:
 
-- "8" olması gereken bir rakam
+- "8" olması gereken bir basamak
 - Sekiz basamak
-- Tek bir onay rakamı
+- Bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
 
-- İşlev,  `Func_hungary_eu_tax_file_number` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_hungary_eu_tax_file_number` bulunur.
+- İşlev  `Func_hungary_eu_tax_file_number` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_hungary_eu_tax_file_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
 
-- İşlev,  `Func_hungary_eu_tax_file_number` desene eşleşen içeriği bulur.
+- İşlev  `Func_hungary_eu_tax_file_number` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Hungary Tax Identification Number -->
@@ -8839,70 +8840,70 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_hungary_eu_tax_file_number"></a>Keywords_hungary_eu_tax_file_number
 
 - adóazonosító szám
 - adóhatóság szám
 - adószám
-- Macarca tin
+- macar tenekesi
 - hungatiantin #
-- vergi dairesi no
+- vergi dairesi hayır
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 - kdv numarası
 
 
-## <a name="hungary-value-added-tax-number"></a>Macaristan değeri eklenen vergi numarası
+## <a name="hungary-value-added-tax-number"></a>Macaristan katma değer vergi numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-10 karakter alfasayısal desen
+10 karakterli alfasayısal desen
 
 ### <a name="pattern"></a>Desen
 
 10 karakter alfasayısal desen:
 
-- İki harf - HU veya hu
-- isteğe bağlı boşluk
+- iki harf - HU veya hu
+- isteğe bağlı alan
 - sekiz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
 
-- İşlev Func_hungarian_value_added_tax_number desene eşleşen içeriği bulur.
-- Anahtar sözcük Keywords_hungarian_value_added_tax_number bulunur.
+- İşlev Func_hungarian_value_added_tax_number desenle eşleşen içeriği bulur.
+- Keywords_hungarian_value_added_tax_number anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
 
-- İşlev Func_hungarian_value_added_tax_number desene eşleşen içeriği bulur.
+- İşlev Func_hungarian_value_added_tax_number desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Hungarian Value Added Tax Number -->
@@ -8917,69 +8918,69 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_hungary_value_added_tax_number"></a>Keyword_Hungary_value_added_tax_number
 
-- kdv
+- Kdv
 - katma değer vergi numarası
-- kdv #
+- Kdv #
 - vatno #
 - macarvatno #
-- vergi no.
-- katma değer vergi áfa
-- ayyzösségi adószám
-- általááá forgalmi adó szám
+- vergi no
+- katma değer vergisi áfa
+- közösségi adószám
+- általános forgalmi adó szám
 - hozzáadottérték adó
 - áfa szám
 
 
 ## <a name="iceland-physical-addresses"></a>İzlanda fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, İzlanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, İzlanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
-## <a name="impairments-listed-in-the-us-disability-evaluation-under-social-security"></a>SOSYAL GÜVENLIK kapsamındaki ABD Engellilik Değerlendirmesinde listelenen engellilik bozuklukları
+## <a name="impairments-listed-in-the-us-disability-evaluation-under-social-security"></a>Abd'de Sosyal Güvenlik KapsamındaKi Engellilik Değerlendirmesinde listelenen bozukluklar
 
-Bu bakıla sahip olmayan bu varlık, ABD Engellilik Değerlendirme'de, disk kupa gibi, Sosyal Güvenlik kapsamındaki engellilik algılamada bulunan adları *algılar*. Yalnızca İngilizce terimleri destekler. Ayrıca SIT adlı tüzel kişi [SIT adlı sağlık hüküm ve koşullarına](#all-medical-terms-and-conditions) da dahildir.
+Bu unbundled adlı varlık, ABD Sosyal Güvenlik Kapsamında EngelliLik Değerlendirmesi bölümünde listelenen kas *distrofisi gibi bozuklukların adlarını algılar*. Yalnızca İngilizce terimleri destekler. Ayrıca entity SIT adlı [tüm tıbbi hüküm ve koşullar](#all-medical-terms-and-conditions) paketinde yer alır.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Yüksek
 
 
-## <a name="india-drivers-license-number"></a>Hindistan Sürücü Lisans Numarası
+## <a name="india-drivers-license-number"></a>Hindistan Ehliyet Numarası
 
 ### <a name="format"></a>Biçim
 
-15 karakter alfasayısal desen
+15 karakterli alfasayısal desen
 
 ### <a name="pattern"></a>Desen
 
 15 harf veya rakam:
 - eyalet kodunu gösteren iki harf
-- isteğe bağlı boşluk veya kısa çizgi
-- Şehir kodunu gösteren iki rakam
-- isteğe bağlı boşluk veya kısa çizgi
-- sorunun yıl gösteren dört basamak
-- isteğe bağlı boşluk veya kısa çizgi
+- isteğe bağlı boşluk veya tire
+- şehir kodunu gösteren iki basamak
+- isteğe bağlı boşluk veya tire
+- sorunun yılını gösteren dört basamak
+- isteğe bağlı boşluk veya tire
 - yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene `Regex_india_driving_license` eşleşen içerik bulur.
-- Anahtar sözcük `Keywords_eu_driver's_license_number_common` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade `Regex_india_driving_license` , desenle eşleşen içeriği bulur.
+- 'den `Keywords_eu_driver's_license_number_common` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene `Regex_india_driving_license` eşleşen içerik bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade `Regex_india_driving_license` , desenle eşleşen içeriği bulur.
 
 
 ```xml
@@ -8995,15 +8996,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number_common"></a>Keywords_eu_driver's_license_number_common
+#### <a name="keywords_eu_drivers_license_number_common"></a>Keywords_eu_driver s_license_number_common
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -9011,93 +9012,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -9105,14 +9106,14 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
@@ -9124,32 +9125,32 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-15 karakter alfasayısal desen
+15 karakterli alfasayısal desen
 
 ### <a name="pattern"></a>Desen
 
 15 harf veya rakam:
-- Geçerli durum kodunu temsil eden iki basamak
+- geçerli durum kodunu temsil eden iki basamak
 - isteğe bağlı bir boşluk veya tire
 - Kalıcı Hesap Numarasını (PAN) temsil eden on karakter 
 - bir harf veya rakam
 - isteğe bağlı bir boşluk veya tire
-- bir harf 'z' veya 'Z'
+- tek harfli 'z' veya 'Z'
 - isteğe bağlı bir boşluk veya tire
-- tek bir onay rakamı
+- bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev, `Func_india_gst_number` desene eşleşen içeriği bulur.
-- Anahtar sözcük `Keyword_india_gst_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev `Func_india_gst_number` , desenle eşleşen içeriği bulur.
+- 'den `Keyword_india_gst_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev, `Func_india_gst_number` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev `Func_india_gst_number` , desenle eşleşen içeriği bulur.
 
 
 ```xml
@@ -9165,11 +9166,11 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_india_gst_number"></a>Keyword_india_gst_number
 
-- gst
+- Gst
 - gstin
 - mal ve hizmet vergisi
 - mal ve hizmet vergisi
@@ -9184,24 +9185,24 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 ### <a name="pattern"></a>Desen
 
 10 harf veya rakam:
-- Üç harf (büyük/küçük harfe duyarlı değildir)
-- C, P, H, F, A, T, B, L, J, G harfli (büyük/küçük harfe duyarlı değildir)
-- Bir harf
+- Üç harf (büyük/küçük harfe duyarlı değil)
+- C, P, H, F, A, T, B, L, J, G harfi (büyük/küçük harfe duyarlı değildir)
+- Bir mektup
 - Dört basamak
-- Alfabetik onay rakamı olan bir harf
+- Alfabetik denetim basamakları olan bir harf
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade Regex_india_permanent_account_number desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_india_permanent_account_number bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade Regex_india_permanent_account_number desenle eşleşen içeriği bulur.
+- Keyword_india_permanent_account_number anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- Normal ifade Regex_india_permanent_account_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- Normal ifade Regex_india_permanent_account_number desenle eşleşen içeriği bulur.
 
 
 ```xml
@@ -9219,12 +9220,12 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_india_permanent_account_number"></a>Keyword_india_permanent_account_number
 
 - Kalıcı Hesap Numarası
-- YATAY KAYDıRMA
+- PAN
 
 ## <a name="india-unique-identification-aadhaar-number"></a>Hindistan benzersiz tanımlama (Aadhaar) numarası
 
@@ -9235,28 +9236,28 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 ### <a name="pattern"></a>Desen
 
 12 basamak:
-- 0 veya 1 değil rakam
+- 0 veya 1 olmayan bir basamak
 - Üç basamak
-- İsteğe bağlı bir boşluk veya kısa çizgi
+- İsteğe bağlı bir boşluk veya tire
 - Dört basamak
-- İsteğe bağlı bir boşluk veya kısa çizgi
-- Son basamak, yani onay rakamı
+- İsteğe bağlı bir boşluk veya tire
+- Denetim basamalı olan son basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_india_aadhaar desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_india_aadhar bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_india_aadhaar desenle eşleşen içeriği bulur.
+- Keyword_india_aadhar anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
 
-- İşlev Func_india_aadhaar desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+- İşlev Func_india_aadhaar desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- India Unique Identification (Aadhaar) number -->
@@ -9270,22 +9271,22 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
   </Pattern>
 </Entity>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_india_aadhar"></a>Keyword_india_aadhar
 - aadhaar
-- aadhar
-- aadhar #
-- kullanıcı arabirimi
+- Acar
+- Acar #
+- Uıd
 - आधार
 - uidai
 
 
-## <a name="india-voter-id-card"></a>Hindistan Kimlik Kartı
+## <a name="india-voter-id-card"></a>Hindistan Seçmen Kimlik Kartı
 
 ### <a name="format"></a>Biçim
 
-10 karakter alfasayısal desen
+10 karakterli alfasayısal desen
 
 ### <a name="pattern"></a>Desen
 
@@ -9293,18 +9294,18 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - üç harf
 - yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene `Regex_india_voter_id_card` eşleşen içerik bulur.
-- Anahtar sözcük `Keyword_india_voter_id_card` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade `Regex_india_voter_id_card` , desenle eşleşen içeriği bulur.
+- 'den `Keyword_india_voter_id_card` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- Normal ifade desene `Regex_india_voter_id_card` eşleşen içerik bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- Normal ifade `Regex_india_voter_id_card` , desenle eşleşen içeriği bulur.
 
 
 ```xml
@@ -9320,48 +9321,48 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_india_voter_id_card"></a>Keyword_india_voter_id_card
 
-- 1912
-- bilginlik
-- card
-- bilgi kartı
-- seçici fotoğraflı kimlik kartı
-- DESTANSı
+- Seçmen
+- voterid
+- oy kartı
+- voteridcard
+- seçim fotoğrafı kimlik kartı
+- EPİK
 - ECI
-- election commmision
+- seçim takdiri
 
 
 ## <a name="indonesia-identity-card-ktp-number"></a>Endonezya kimlik kartı (KTP) numarası
 
 ### <a name="format"></a>Biçim
 
-İsteğe bağlı dönemler içeren 16 basamak
+İsteğe bağlı dönemleri içeren 16 basamak
 
 ### <a name="pattern"></a>Desen
 
 16 basamak:
 - İki basamaklı il kodu
 - Nokta (isteğe bağlı)
-- İki basamaklı regency or city code
+- İki basamaklı kayıt defteri veya şehir kodu
 - İki basamaklı alt dağıtım kodu
 - Nokta (isteğe bağlı)
-- Doğum tarihi olan  DAAAY biçiminde altı basamak
+- Doğum tarihi olan DDMMYY biçiminde altı basamak
 - Nokta (isteğe bağlı)
 - Dört basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
 
-- Normal ifade Regex_indonesia_id_card desene eşleşen içeriği bulur.
-- Bir Keyword_indonesia_id_card anahtar sözcüğü bulunur.
+- Normal ifade Regex_indonesia_id_card desenle eşleşen içeriği bulur.
+- Keyword_indonesia_id_card anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Indonesia Identity Card (KTP) Number -->
@@ -9372,7 +9373,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_indonesia_id_card"></a>Keyword_indonesia_id_card
 
@@ -9384,90 +9385,90 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 
 ### <a name="format"></a>Biçim
 
-Ülke kodu (iki harf) artı onay basamakları (iki basamaklı) artı bban numarası (en çok 30 karakter)
+Ülke kodu (iki harf) artı çek basamakları (iki basamak) artı bban numarası (30 karaktere kadar)
 
 ### <a name="pattern"></a>Desen
 
-Desen aşağıdakilerin hepsini içermeli:
+Desen aşağıdakilerin tümünü içermelidir:
 
 - İki harfli ülke kodu
-- İki basamaklı onay kutusu (ardından isteğe bağlı bir boşluk)
-- Dört harf veya rakamdan oluşur 1-7 grupları (boşluklarla ayrılabilir)
+- İki denetim basamağı (ardından isteğe bağlı bir boşluk)
+- Dört harf veya rakamdan oluşan 1-7 grup (boşluklarla ayrılabilir)
 - 1-3 harf veya rakam
 
-Her ülkenin biçimi biraz farklıdır. IBAN'a duyarlı bilgi türü şu 60 ülkeyi kapsar:
+Her ülkenin biçimi biraz farklıdır. IBAN hassas bilgi türü şu 60 ülkeyi kapsar:
 
-- reklam
-- ae
+- Reklam
+- Ae
 - al
-- saat
-- az
-- ba
+- konumunda
+- Az
+- Ba
 - be
-- bg
-- 10 gün içinde
-- ch
-- cr
-- cy
-- cz
+- Bg
+- bh
+- Caner
+- Cr
+- Cy
+- Cz
 - de
-- dk
-- yap
+- Dk
+- do
 - ee
-- es
-- fi
-- fo
-- fr
-- GB
-- ge
-- gi
-- gl
-- gr
-- sa
-- hu
-- ie
-- il
+- Es
+- Fi
+- Fo
+- Fr
+- Gb
+- Ge
+- Gı
+- Gl
+- Gr
+- Hr
+- Hu
+- Yani
+- ıl
 - is
-- bunu
-- kw
-- kz
-- lb
-- li
-- lt
-- lu
-- lv
-- mc
+- bu
+- Kw
+- Kz
+- Lb
+- Li
+- Teğmen
+- Lu
+- Lv
+- Mc
 - md
-- ben
-- mk
-- mr
-- mt
+- Beni
+- Mk
+- Bay
+- Mt
 - mu
-- nl
-- hayır
-- pl
-- pt
-- ro
+- Nl
+- No
+- Pl
+- Pt
+- Ro
 - rs
-- sa
-- s
-- si
-- mürekkep
-- sm
-- tn
+- Sa
+- Se
+- Si
+- sk
+- Sm
+- Tn
 - tr
-- vg
+- Vg
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
 
-- İşlev Func_iban desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+- İşlev Func_iban desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <Entity id="e7dc4711-11b7-4cb0-b88b-2c394a771f0e" patternsProximity="300" recommendedConfidence="85">
@@ -9477,12 +9478,12 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 Yok
 
 
-## <a name="international-classification-of-diseases-icd-10-cm"></a>Ulusal hukuk sınıflandırması (ICD-10-CM)
+## <a name="international-classification-of-diseases-icd-10-cm"></a>Uluslararası hastalık sınıflandırması (ICD-10-CM)
 
 ### <a name="format"></a>Biçim
 
@@ -9490,20 +9491,20 @@ Sözlük
 
 ### <a name="pattern"></a>Desen
 
-Anahtar Sözcük
+Anahtar kelime
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Bir başka Dictionary_icd_10_updated anahtar sözcük bulunur.
-- Farklı bir Dictionary_icd_10_codes anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Dictionary_icd_10_updated anahtar sözcüğü bulunur.
+- Dictionary_icd_10_codes anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Güncelleştirilmiş bir Dictionary_icd_10_ anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Dictionary_icd_10_ güncelleştirilmiş anahtar sözcüğü bulunur.
 
 ```xml
       <!-- ICD-10 CM -->
@@ -9518,11 +9519,11 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-Uluslararası Hastalık Sınıflandırması, Onuncu Düzeltme, Klinik Değişiklik [(ICD-10-CM)](https://go.microsoft.com/fwlink/?linkid=852604)'ye dayalı olan, Dictionary_icd_10_updated anahtar sözcük sözlüğünden herhangi bir terim. Bu tür, sigorta kodlarını değil, yalnızca terimi aramaz.
+Uluslararası [Hastalık Sınıflandırması, Onuncu Düzeltme, Klinik Modifikasyon (ICD-10-CM)](https://go.microsoft.com/fwlink/?linkid=852604) temelinde Dictionary_icd_10_updated anahtar sözcük sözlüğünden herhangi bir terim. Bu tür yalnızca terimi arar, sigorta kodlarını aramaz.
 
-Uluslararası Hastalık Sınıflandırması, Onuncu Düzeltme, Klinik Değişiklik [(ICD-10-CM)](https://go.microsoft.com/fwlink/?linkid=852604)'ye dayalı olan Dictionary_icd_10_codes anahtar sözcük sözlüğünden herhangi bir terim. Bu tür açıklamayı değil, yalnızca sigorta kodlarını aramaz.
+Uluslararası [Hastalık Sınıflandırması, Onuncu Düzeltme, Klinik Modifikasyon (ICD-10-CM)](https://go.microsoft.com/fwlink/?linkid=852604) temelinde Dictionary_icd_10_codes anahtar sözcük sözlüğünden herhangi bir terim. Bu tür yalnızca sigorta kodlarını arar, açıklamayı aramaz.
 
 
 ## <a name="international-classification-of-diseases-icd-9-cm"></a>Uluslararası hastalık sınıflandırması (ICD-9-CM)
@@ -9533,20 +9534,20 @@ Sözlük
 
 ### <a name="pattern"></a>Desen
 
-Anahtar Sözcük
+Anahtar kelime
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Bir başka Dictionary_icd_9_updated anahtar sözcük bulunur.
-- Anahtar sözcük Dictionary_icd_9_codes bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Dictionary_icd_9_updated anahtar sözcüğü bulunur.
+- Dictionary_icd_9_codes anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Bir başka Dictionary_icd_9_updated anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Dictionary_icd_9_updated anahtar sözcüğü bulunur.
 
 ```xml
     <Entity id="fa3f9c74-ee07-4c52-b5f2-085d6b2c0ec4" patternsProximity="300" recommendedConfidence="85">
@@ -9560,41 +9561,41 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-Uluslararası Hastalık Sınıflandırması,Dokuzuncu Düzeltme, Klinik Değişiklik [(ICD-9-CM)](https://go.microsoft.com/fwlink/?linkid=852605)'yi temel alan Dictionary_icd_9_updated anahtar sözcük sözlüğünden herhangi bir terim. Bu tür, sigorta kodlarını değil, yalnızca terimi aramaz.
+Uluslararası [Hastalık Sınıflandırması, Dokuzuncu Düzeltme, Klinik Modifikasyon (ICD-9-CM)](https://go.microsoft.com/fwlink/?linkid=852605) temelinde Dictionary_icd_9_updated anahtar sözcük sözlüğünden herhangi bir terim. Bu tür yalnızca terimi arar, sigorta kodlarını aramaz.
 
-Uluslararası Teklif Sınıflandırması,Dokuzuncu Düzeltme, Klinik Değişiklik [(ICD-9-CM)'](https://go.microsoft.com/fwlink/?linkid=852605)yi temel alan Dictionary_icd_9_codes anahtar sözcük sözlüğünden herhangi bir terim. Bu tür açıklamayı değil, yalnızca sigorta kodlarını aramaz.
+Uluslararası [Hastalık Sınıflandırması, Dokuzuncu Düzeltme, Klinik Modifikasyon (ICD-9-CM)](https://go.microsoft.com/fwlink/?linkid=852605) temelinde Dictionary_icd_9_codes anahtar sözcük sözlüğünden herhangi bir terim. Bu tür yalnızca sigorta kodlarını arar, açıklamayı aramaz.
 
 ## <a name="ip-address"></a>IP adresi
 
 ### <a name="format"></a>Biçim
 
 #### <a name="ipv4"></a>IPv4:
-IPv4 adreslerinin biçimlendirilmiş (nokta) ve biçimlendirilmemiş (nokta yok) sürümlerini hesap eden karmaşık desen
+IPv4 adreslerinin biçimlendirilmiş (dönemler) ve biçimlendirilmemiş (noktasız) sürümlerini hesaplayan karmaşık desen
 
 #### <a name="ipv6"></a>IPv6:
-Biçimlendirilmiş IPv6 sayılarını (iki nokta üst üste içeren) hesaba katan karmaşık desen
+Biçimlendirilmiş IPv6 sayılarını (iki nokta üst üste dahil) hesaplayan karmaşık desen
 
 ### <a name="pattern"></a>Desen
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-IPv6 için, DLP ilkesi bu tür hassas bilgileri 300 karakter yakınlıkta algılandığında yüksek güvene sahip olmalıdır:
-- Normal ifade Regex_ipv6_address desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_ipaddress anahtar sözcük bulunamıyor.
+IPv6 için bir DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının yüksek güveni vardır:
+- Normal ifade Regex_ipv6_address desenle eşleşen içeriği bulur.
+- Keyword_ipaddress anahtar sözcüğü bulunamadı.
 
-IPv4 için, DLP ilkesi 300 karakter yakınlık içinde olursa, bu tür hassas bilgiler algılandığından büyük güven verir:
-- Normal ifade Regex_ipv4_address desene eşleşen içeriği bulur.
-- Bir arama Keyword_ipaddress anahtar sözcüğü bulunur.
+IPv4 için, bir DLP ilkesi, 300 karaktere yakınsa bu tür hassas bilgiler algılamıştır:
+- Normal ifade Regex_ipv4_address desenle eşleşen içeriği bulur.
+- Keyword_ipaddress anahtar sözcüğü bulunur.
 
-IPv6 için, DLP ilkesi bu tür hassas bilgileri 300 karakter yakınlıkta algılandığında yüksek güvene sahip olmalıdır:
-- Normal ifade Regex_ipv6_address desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_ipaddress anahtar sözcük bulunamıyor.
+IPv6 için bir DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının yüksek güveni vardır:
+- Normal ifade Regex_ipv6_address desenle eşleşen içeriği bulur.
+- Keyword_ipaddress anahtar sözcüğü bulunamadı.
 
 ```xml
     <!-- IP Address --> 
@@ -9620,38 +9621,38 @@ IPv6 için, DLP ilkesi bu tür hassas bilgileri 300 karakter yakınlıkta algıl
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_ipaddress"></a>Keyword_ipaddress
 
-- IP (Bu anahtar sözcük büyük/harfe duyarlıdır)
+- IP (bu anahtar sözcük büyük/küçük harfe duyarlıdır)
 - ip adresi
 - ip adresleri
 - internet protokolü
-- IP-כתובת   Bir
+- IP-כתובת ה
 
 
 ## <a name="ip-address-v4"></a>IP Adresi v4
 
 ### <a name="format"></a>Biçim
 
-IPv4 adreslerinin biçimlendirilmiş (nokta) ve biçimlendirilmemiş (nokta yok) sürümlerini hesap eden karmaşık desen
+IPv4 adreslerinin biçimlendirilmiş (dönemler) ve biçimlendirilmemiş (noktasız) sürümlerini hesaplayan karmaşık desen
 
 ### <a name="pattern"></a>Desen
 
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene `Regex_ipv4_address` eşleşen içerik bulur.
-- Anahtar sözcük `Keyword_ipaddress` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade `Regex_ipv4_address` , desenle eşleşen içeriği bulur.
+- 'den `Keyword_ipaddress` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene `Regex_ipv4_address` eşleşen içerik bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade `Regex_ipv4_address` , desenle eşleşen içeriği bulur.
 
 
 ```xml
@@ -9667,38 +9668,38 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_ipaddress"></a>Keyword_ipaddress
 
-- IP (büyük/büyük/harfe duyarlı)
+- IP (büyük/küçük harfe duyarlı)
 - ip adresi
 - ip adresleri
 - internet protokolü
-- IP-כתובת   Bir
+- IP-כתובת ה
 
 
 ## <a name="ip-address-v6"></a>IP Adresi v6
 
 ### <a name="format"></a>Biçim
 
-Biçimlendirilmiş IPv6 sayılarını (iki nokta üst üste içeren) hesaba katan karmaşık desen
+Biçimlendirilmiş IPv6 sayılarını (iki nokta üst üste dahil) hesaplayan karmaşık desen
 
 ### <a name="pattern"></a>Desen
 
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene `Regex_ipv6_address` eşleşen içerik bulur.
-- Anahtar sözcük `Keyword_ipaddress` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade `Regex_ipv6_address` , desenle eşleşen içeriği bulur.
+- 'den `Keyword_ipaddress` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene `Regex_ipv6_address` eşleşen içerik bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade `Regex_ipv6_address` , desenle eşleşen içeriği bulur.
 
 
 ```xml
@@ -9714,40 +9715,40 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_ipaddress"></a>Keyword_ipaddress
 
-- IP (büyük/büyük/harfe duyarlı)
+- IP (büyük/küçük harfe duyarlı)
 - ip adresi
 - ip adresleri
 - internet protokolü
-- IP-כתובת   Bir
+- IP-כתובת ה
 
 
-## <a name="ireland-drivers-license-number"></a>İrlanda sürücü lisans numarası
+## <a name="ireland-drivers-license-number"></a>İrlanda ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-Altı basamaklı, ardından dört harf
+Altı basamak ve ardından dört harf
 
 ### <a name="pattern"></a>Desen
 
 Altı basamak ve dört harf:
 
 - Altı basamak
-- Dört harf (büyük/küçük harfe duyarlı değildir)
+- Dört harf (büyük/küçük harfe duyarlı değil)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
 
-- Normal ifade desene  `Regex_ireland_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_ireland_eu_driver's_license_number` bulunur.
+- Normal ifade  `Regex_ireland_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_ireland_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Ireland Driver's License Number -->
@@ -9762,15 +9763,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -9778,93 +9779,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -9872,14 +9873,14 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
@@ -9895,29 +9896,29 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-İki harf veya rakam, ardından boşluk veya sınırlayıcı yokken yedi basamak
+İki harf veya basamak ve ardından boşluk veya sınırlayıcı içermeyen yedi basamak
 
 ### <a name="pattern"></a>Desen
 
-İki harf veya rakam, ardından yedi basamak:
+İki harf veya basamak ve ardından yedi basamak:
 
-- İki rakam veya harf (büyük/küçük harfe duyarlı değildir)
+- İki basamak veya harf (büyük/küçük harfe duyarlı değil)
 - Yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_ireland_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_ireland_eu_passport_number` bulunur.
-- Normal ifade `Regex_ireland_eu_passport_date` , tarihi AAAA/AAA YYYY (Örnek - 01 BEA/MAY 1988) `Keywords_eu_passport_date` biçiminde veya bir anahtar sözcük bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_ireland_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_ireland_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_ireland_eu_passport_date` tarihi DD AAA/AAA YYYY biçiminde bulur (Örnek - 01 BEA/MAY 1988) veya anahtar sözcüğü `Keywords_eu_passport_date` bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_ireland_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_ireland_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_ireland_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_ireland_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Ireland Passport Number -->
@@ -9943,24 +9944,24 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_ireland_eu_passport_number"></a>Keywords_ireland_eu_passport_number
 
-- passeport numero
+- passport numero
 - uimhreacha pasanna
 - uimhir pas
 - uimhir phas
@@ -9970,45 +9971,45 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
-## <a name="ireland-personal-public-service-pps-number"></a>İrlanda kişisel genel hizmet (PPS) numarası
+## <a name="ireland-personal-public-service-pps-number"></a>İrlanda kişisel kamu hizmeti (PPS) numarası
 
 ### <a name="format"></a>Biçim
 
 Eski biçim (31 Aralık 2012'ye kadar):
-- Yedi rakam ve ardından 1-2 harf
+- yedi basamak ve ardından 1-2 harf
 
 Yeni biçim (1 Ocak 2013 ve sonrası):
-- Yedi basamaklı, ardından iki harf
+- yedi basamak ve ardından iki harf
 
 ### <a name="pattern"></a>Desen
 
 Eski biçim (31 Aralık 2012'ye kadar):
 - yedi basamak
-- bir ile iki harf arasında (büyük/küçük harfe duyarlı değildir)
+- bir-iki harf (büyük/küçük harfe duyarlı değil)
 
 Yeni biçim (1 Ocak 2013 ve sonrası):
 - yedi basamak
-- alfabetik bir onay rakamı olan harf (büyük/küçük harfe duyarlı değildir)
-- A-I aralığında veya "W" aralığında isteğe bağlı bir harf
+- alfabetik bir denetim basamalı harf (büyük/küçük harfe duyarlı değil)
+- A-I veya "W" aralığında isteğe bağlı bir harf
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_ireland_pps desene eşleşen içeriği bulur.
-- Bir başka Keywords_ireland_eu_national_id_card anahtar sözcük bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_ireland_pps desenle eşleşen içeriği bulur.
+- Keywords_ireland_eu_national_id_card anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev Func_ireland_pps desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev Func_ireland_pps desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
       <!-- Ireland Personal Public Service (PPS) Number -->
@@ -10023,25 +10024,25 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_ireland_eu_national_id_card"></a>Keywords_ireland_eu_national_id_card
 
 - istemci kimlik hizmeti
 - kimlik numarası
 - kişisel kimlik numarası
-- kişisel genel hizmet numarası
+- kişisel kamu hizmeti numarası
 - kişisel hizmet no
-- phephebruta seirbhíse poiblí
+- phearsanta seirbhíse poiblí
 - pps no
 - pps numarası
 - pps num
-- pps hizmeti no
+- pps hizmeti hayır
 - ppsn
 - ppsno #
 - ppsno
-- psp
-- genel hizmet no
+- Psp
+- kamu hizmeti hayır
 - publicserviceno #
 - publicserviceno
 - gelir ve sosyal sigorta numarası
@@ -10051,31 +10052,31 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - seirbhís aitheantais istemcisi
 - uimh
 - uimhir aitheantais chánach
-- uimhir aitheantais phephefenta
-- uimhir phephepheirbhíse poiblí
+- uimhir aitheantais phearsanta
+- uimhir phearsanta seirbhíse poiblí
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 
 
 ## <a name="ireland-physical-addresses"></a>İrlanda fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, İrlanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, İrlanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
@@ -10089,24 +10090,24 @@ Orta
 ### <a name="pattern"></a>Desen
 
 Biçimlendirilmiş:
-- İki basamak
-- Tire
+- iki basamak
+- tire
 - üç basamak
-- Tire
+- tire
 - sekiz basamak
 
-Biçimlendirilmemiş:
-- Birbirini arda 13 basamak
+Biçimlendir -ilmemiş:
+- Ardışık 13 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_israel_bank_account_number desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_israel_bank_account_number bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_israel_bank_account_number desenle eşleşen içeriği bulur.
+- Keyword_israel_bank_account_number anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Israel Bank Account Number -->
@@ -10120,7 +10121,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_israel_bank_account_number"></a>Keyword_israel_bank_account_number
 
@@ -10140,16 +10141,16 @@ dokuz basamak
 
 art arda dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_israeli_national_id_number desene eşleşen içeriği bulur.
-- Farklı bir Keyword_Israel_National_ID anahtar sözcük bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_israeli_national_id_number desenle eşleşen içeriği bulur.
+- Keyword_Israel_National_ID anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- Israel National ID Number -->
@@ -10163,7 +10164,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_israel_national_id"></a>Keyword_Israel_National_ID
 
@@ -10175,41 +10176,41 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 -   هوية إسرائ يلية
 -   رقم الهوية
 -   عدد هوية فريدة من نوعها
--   kimliksayı #
+-   idnumber #
 -   kimlik numarası
--   kimlik hayır        
--   kimliksayı #
+-   kimlik no        
+-   identitynumber #
 -   kimlik numarası
--   İsrailidentitynumber       
+-   israeliidentitynumber       
 -   kişisel kimlik
 -   benzersiz kimlik  
 
 
-## <a name="italy-drivers-license-number"></a>İtalya sürücü lisans numarası
+## <a name="italy-drivers-license-number"></a>İtalya ehliyet numarası
 
-Bu tür varlık AB'nin Lisans Numarası hassas bilgi türüne dahildir. Ayrıca tek başına hassas bilgi türü bir varlık olarak da kullanılabilir.
+Bu tür varlık, AB Sürücü Lisans Numarası hassas bilgi türüne dahil edilir. Tek başına hassas bilgi türü varlığı olarak da kullanılabilir.
 
 ### <a name="format"></a>Biçim
 
-10 harf ve rakam birleşimi
+10 harf ve rakamın birleşimi
 
 ### <a name="pattern"></a>Desen
 
-10 harf ve rakam birleşimi:
-- tek harf (büyük/harfe duyarlı değildir)
-- "A" veya "V" harfi (büyük/küçük harfe duyarlı değildir)
+10 harf ve rakamın birleşimi:
+- bir harf (büyük/küçük harfe duyarlı değil)
+- "A" veya "V" harfi (büyük/küçük harfe duyarlı değil)
 - yedi basamak
-- tek harf (büyük/harfe duyarlı değildir)
+- bir harf (büyük/küçük harfe duyarlı değil)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene `Regex_italy_drivers_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya `Keywords_eu_driver's_license_number` `Keyword_italy_drivers_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade `Regex_italy_drivers_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keyword_italy_drivers_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
     <!-- Italy Driver's license Number -->
@@ -10224,15 +10225,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -10240,93 +10241,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -10334,14 +10335,14 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
@@ -10349,48 +10350,48 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 #### <a name="keyword_italy_drivers_license_number"></a>Keyword_italy_drivers_license_number
 
-- sayısız di patent
+- numero di patente
 - patente di guida
-- patente guida
+- patent guida
 - patenti di guida
 - patenti guida
 
 
 ## <a name="italy-fiscal-code"></a>İtalya mali kodu
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-belirtilen desende harf ve basamakların 16 karakterlik bir bileşimi
+Belirtilen desendeki harf ve rakamlardan oluşan 16 karakterlik bir birleşim
 
 ### <a name="pattern"></a>Desen
 
-Harf ve basamakların 16 karakterlik birleşimi:
-- Aile adı'nın ilk üç ssonantine karşılık gelen üç harf
-- Adın ilk, üçüncü ve dördüncü consonantlarına karşılık gelen üç harf
-- Doğum yılı son rakamlarına karşılık gelen iki basamak
-- Doğum ayındaki harfe karşılık gelen tek harf; harfler alfabetik sırada kullanılır, ama yalnızca A - E, H, L, M, P, R - T harfleri kullanılır (dolayısıyla, Ocak A ve Ekim R'ye karşılıktır)
-- Cinsiyetler arasında ayrım yapmak için doğum günü ile doğum günü arasında karşılık gelen iki basamak, kadınlar için doğum günü 40'a eklenir
-- Kişinin doğum tarihine özgü alan koduna karşılık gelen dört basamak (ülke çapında kodlar yabancı ülkeler için kullanılır)
-- tek parity basamak
+Harf ve rakamlardan oluşan 16 karakterlik bir birleşim:
+- aile adındaki ilk üç harfe karşılık gelen üç harf
+- addaki birinci, üçüncü ve dördüncü ünsüzlere karşılık gelen üç harf
+- doğum yılının son rakamlarına karşılık gelen iki basamak
+- doğum ayının harfine karşılık gelen bir harf— harfler alfabetik sırada kullanılır, ancak yalnızca A-E, H, L, M, P, R to T harfleri kullanılır (ocak A ve Ekim ayı R olur)
+- cinsiyetleri ayırt etmek için doğum ayının gününe karşılık gelen iki basamak, kadınlar için doğum gününe 40 eklenir
+- kişinin doğduğu belediyeye özgü alan koduna karşılık gelen dört basamak (ülke genelindeki kodlar yabancı ülkeler için kullanılır)
+- tek eşlikli basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_italy_eu_national_id_card` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_italy_eu_national_id_card` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_italy_eu_national_id_card` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_italy_eu_national_id_card` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_italy_eu_national_id_card` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_italy_eu_national_id_card` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Italy Fiscal Code -->
@@ -10405,71 +10406,71 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_italy_eu_national_id_card"></a>Keywords_italy_eu_national_id_card
 
-- mali dönemler
-- mali dönemler
+- codice fiscal
+- kodice fiscale
 - codice id personale
 - codice personale
 - mali kod
-- numero certificific personale
+- numero certificato personale
 - numero di identificazione fiscale
 - numero id personale
-- çok kişisel
+- çok sayıda kişisel
 - kişisel sertifika numarası
 - kişisel kod
 - kişisel kimlik kodu
 - kişisel kimlik numarası
 - personalcodeno #
 - vergi kodu
-- vergi no
-- vergi numarası yok
-- vergi numarası
+- vergi kimliği
+- vergi tanımlama no
 - vergi kimlik numarası
-- vergi yok #
-- vergi yok
+- vergi kimlik numarası
+- vergi no #
+- vergi no
 - vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 
 
 ## <a name="italy-passport-number"></a>İtalya pasaport numarası
 
 ### <a name="format"></a>Biçim
 
-boşluk veya sınırlayıcı yok, iki harf veya rakam, ardından da yedi basamak
+iki harf veya basamak ve ardından boşluk veya sınırlayıcı içermeyen yedi basamak
 
 ### <a name="pattern"></a>Desen
 
-İki harf veya rakam, ardından yedi basamak:
+iki harf veya rakam ve ardından yedi basamak:
 
-- İki basamak veya harf (büyük/küçük harfe duyarlı değildir)
+- iki basamak veya harf (büyük/küçük harfe duyarlı değil)
 - yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
-uygulanamaz
+geçerli değil
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_italy_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_italy_eu_passport_number` bulunur.
-- Normal ifade `Regex_italy_eu_passport_date` , tarihi AAAA/AAA YYYY (Örnek - 01 GEN/OCA 1988) `Keywords_eu_passport_date` biçiminde veya bir anahtar sözcük bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_italy_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_italy_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_italy_eu_passport_date` tarihi DD AAA/AAA YYYY biçiminde bulur (Örnek - 01 GEN/JAN 1988) veya anahtar sözcüğü `Keywords_eu_passport_date` bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_italy_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_italy_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_italy_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_italy_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Italy Passport Number -->
@@ -10495,19 +10496,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_italy_eu_passport_number"></a>Keywords_italy_eu_passport_number
@@ -10515,60 +10516,60 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - italiana passaporto
 - passaporto italiana
 - passaporto numero
-- numéro passeport
+- numéro passport
 - numero di passaporto
 - numeri del passaporto
-- passeport italien
+- passport italien
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="italy-physical-addresses"></a>İtalya fiziksel adresleri
 
-Buundled adlı varlık, İtalya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, İtalya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
-## <a name="italy-value-added-tax-number"></a>İtalya değeri eklenen vergi numarası
+## <a name="italy-value-added-tax-number"></a>İtalya katma değer vergi numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-İsteğe bağlı sınırlayıcılarla 13 karakter alfasayısal desen
+İsteğe bağlı sınırlayıcılarla 13 karakterli alfasayısal desen
 
 ### <a name="pattern"></a>Desen
 
-İsteğe bağlı sınırlayıcılarla 13 karakter alfasayısal desen:
+İsteğe bağlı sınırlayıcılarla 13 karakterlik alfasayısal desen:
 
-- I veya i
+- Ben veya ben
 - T veya t
 - isteğe bağlı boşluk, nokta, kısa çizgi veya virgül
 - 11 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_italy_value_added_tax_number desene eşleşen içeriği bulur.
-- Farklı bir Keywords_italy_value_added_tax_number anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_italy_value_added_tax_number desenle eşleşen içeriği bulur.
+- Keywords_italy_value_added_tax_number anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_italy_value_added_tax_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_italy_value_added_tax_number desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Italy Value Added Tax -->
@@ -10583,15 +10584,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_italy_value_added_tax_number"></a>Keyword_italy_value_added_tax_number
 
 - kdv numarası
-- kdv yok
-- kdv #
-- iva
-- iva #
+- kdv no
+- Kdv #
+- ıva
+- ıva #
 
 
 ## <a name="japan-bank-account-number"></a>Japonya banka hesap numarası
@@ -10602,29 +10603,29 @@ yedi veya sekiz basamak
 
 ### <a name="pattern"></a>Desen
 
-banka hesabı numarası:
+banka hesap numarası:
 - yedi veya sekiz basamak
-- banka hesabı şube kodu:
+- banka hesabı dal kodu:
 - dört basamak
-- boşluk veya kısa çizgi (isteğe bağlı)
+- boşluk veya tire (isteğe bağlı)
 - üç basamak
 
-Checksum
+Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_jp_bank_account desene eşleşen içeriği bulur.
-- Farklı bir Keyword_jp_bank_account anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_jp_bank_account desenle eşleşen içeriği bulur.
+- Keyword_jp_bank_account anahtar sözcüğü bulunur.
 - Aşağıdakilerden biri doğrudur:
-- İşlev Func_jp_bank_account_branch_code desene eşleşen içeriği bulur.
-- Bir başka Keyword_jp_bank_branch_code anahtar sözcük bulunur.
+- İşlev Func_jp_bank_account_branch_code desenle eşleşen içeriği bulur.
+- Keyword_jp_bank_branch_code anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_jp_bank_account desene eşleşen içeriği bulur.
-- Farklı bir Keyword_jp_bank_account anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_jp_bank_account desenle eşleşen içeriği bulur.
+- Keyword_jp_bank_account anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Japan Bank Account Number -->
@@ -10646,38 +10647,38 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_jp_bank_account"></a>Keyword_jp_bank_account
 
-- Hesap Numarasını Denetleme
-- Hesabı Denetleme
-- Hesabı Denetleme #
-- Acct Numarasını Denetleme
-- Acct Denetimi #
-- Acct No denetlendi.
-- Hesap No denetlendi.
+- Hesap Numarası Denetleniyor
+- Hesap Denetleniyor
+- Hesap Denetleniyor #
+- Acct Numarası Denetleniyor
+- Acct Denetleniyor #
+- Tahakkuk No denetleniyor.
+- Hesap No denetleniyor.
 - Banka Hesap Numarası
 - Banka Hesabı
 - Banka Hesabı #
 - Banka Tahakkuk Numarası
-- Banka Acct #
-- Banka Acct No.
+- Banka Hesabı #
+- Banka Tahakkuk No
 - Banka Hesabı No.
-- Tasarruf Hesap Numarası
+- Tasarruf Hesabı Numarası
 - Tasarruf Hesabı
 - Tasarruf Hesabı #
-- Tasarruf Tasarruf Sayısı
-- Tasarruf Tasarrufları #
-- Tasarruf Tasarruf Tasarrufları Hayır.
-- Tasarruf Hesabı Hayır.
-- Borç Hesap Numarası
+- TasarrufLar Acct Numarası
+- TasarrufLar Acct #
+- TasarrufLar Tahakkuk No
+- Tasarruf Hesabı No.
+- Banka Hesabı Numarası
 - Borç Hesabı
 - Borç Hesabı #
 - Borç Tahakkuk Numarası
 - Borç Hesabı #
-- Borç Bakiyesi No.
-- Borç Hesabı No.
+- Borç Tahakkuk No
+- Borç Hesabı No
 - 口座番号
 - 銀行口座
 - 銀行口座番号
@@ -10697,7 +10698,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - 支店コード
 - 店番号
 
-## <a name="japan-drivers-license-number"></a>Japonya sürücü lisans numarası
+## <a name="japan-drivers-license-number"></a>Japonya ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
@@ -10705,17 +10706,17 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="pattern"></a>Desen
 
-Art arda 12 basamak
+Ardışık 12 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_jp_drivers_license_number desene eşleşen içeriği bulur.
-- Bir başka Keyword_jp_drivers_license_number anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_jp_drivers_license_number desenle eşleşen içeriği bulur.
+- Keyword_jp_drivers_license_number anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Japan Driver's License Number -->
@@ -10727,19 +10728,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_jp_drivers_license_number"></a>Keyword_jp_drivers_license_number
 
 - driverlicense
 - driverslicense
 - driver'slicense
-- driverslicenses
-- sürücü dilimleri
-- driverlicenses
-- dl #
-- dls #
-- lic #
+- sürücü lisansları
+- driver'slicenses
+- sürücü lisansları
+- Dl #
+- Dls #
+- Lisansı #
 - lics #
 - 運転免許証
 - 運転免許
@@ -10770,10 +10771,10 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ## <a name="japan-my-number---corporate"></a>Japonya Numaram - Kurumsal
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -10785,21 +10786,21 @@ Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
 
 13 basamaklı sayı:
 
-- bir ile dokuz basamaktan bir basamak
+- bir basamaktan dokuza
 - 12 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_japanese_my_number_corporate desene eşleşen içeriği bulur.
-- Farklı bir Keywords_japanese_my_number_corporate anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_japanese_my_number_corporate desenle eşleşen içeriği bulur.
+- Keywords_japanese_my_number_corporate anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_japanese_my_number_corporate desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_japanese_my_number_corporate desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Japanese My Number – Corporate -->
@@ -10814,7 +10815,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_japan_my_number_corporate"></a>Keyword_japan_my_number_corporate
 
@@ -10832,10 +10833,10 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ## <a name="japan-my-number---personal"></a>Japonya Numaram - Kişisel
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -10848,23 +10849,23 @@ Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
 12 basamaklı sayı:
 
 - dört basamak
-- isteğe bağlı bir boşluk, nokta veya kısa çizgi
+- isteğe bağlı boşluk, nokta veya kısa çizgi
 - dört basamak
-- isteğe bağlı bir boşluk, nokta veya kısa çizgi
+- isteğe bağlı boşluk, nokta veya kısa çizgi
 - dört basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_japanese_my_number_personal desene eşleşen içeriği bulur.
-- Bir arama Keywords_japanese_my_number_personal anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_japanese_my_number_personal desenle eşleşen içeriği bulur.
+- Keywords_japanese_my_number_personal anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev Func_japanese_my_number_personal desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev Func_japanese_my_number_personal desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Japanese My Number – Personal -->
@@ -10879,7 +10880,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_japan_my_number_personal"></a>Keyword_japan_my_number_personal
 
@@ -10899,21 +10900,21 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-İki harf ve ardından da yedi basamak
+iki harf ve ardından yedi basamak
 
 ### <a name="pattern"></a>Desen
 
-İki harf (büyük/küçük harfe duyarlı değil) ve ardından yedi basamak
+iki harf (büyük/küçük harfe duyarlı değil) ve ardından yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_jp_passport desene eşleşen içeriği bulur.
-- Farklı bir Keyword_jp_passport anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_jp_passport desenle eşleşen içeriği bulur.
+- Keyword_jp_passport anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Japan Passport Number -->
@@ -10925,7 +10926,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_jp_passport"></a>Keyword_jp_passport
 
@@ -10945,7 +10946,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - 旅券ナンバー
 
 
-## <a name="japan-residence-card-number"></a>Japonya İkamet kartı numarası
+## <a name="japan-residence-card-number"></a>Japonya konut kartı numarası
 
 ### <a name="format"></a>Biçim
 
@@ -10954,19 +10955,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 ### <a name="pattern"></a>Desen
 
 12 harf ve rakam:
-- İki harf (büyük/küçük harfe duyarlı değildir)
+- iki harf (büyük/küçük harfe duyarlı değil)
 - sekiz basamak
-- İki harf (büyük/küçük harfe duyarlı değildir)
+- iki harf (büyük/küçük harfe duyarlı değil)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_jp_residence_card_number desene eşleşen içeriği bulur.
-- Bir başka Keyword_jp_residence_card_number anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_jp_residence_card_number desenle eşleşen içeriği bulur.
+- Keyword_jp_residence_card_number anahtar sözcüğü bulunur.
 
 ```xml
 <!--Japan Residence Card Number-->
@@ -10978,18 +10979,18 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_jp_residence_card_number"></a>Keyword_jp_residence_card_number
 
 - İkamet kartı numarası
-- İkamet kartı hayır
+- İkamet kartı no
 - İkamet kartı #
 - 在留カード番号
 - 在留カード
 - 在留番号
 
-## <a name="japan-resident-registration-number"></a>Japonya'daki yerleşik kayıt numarası
+## <a name="japan-resident-registration-number"></a>Japonya'da ikamet eden kayıt numarası
 
 ### <a name="format"></a>Biçim
 
@@ -10997,17 +10998,17 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="pattern"></a>Desen
 
-Birbirini arda 11 basamak
+Ardışık 11 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_jp_resident_registration_number desene eşleşen içeriği bulur.
-- Arama sözcüğünden Keyword_jp_resident_registration_number anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_jp_resident_registration_number desenle eşleşen içeriği bulur.
+- Keyword_jp_resident_registration_number anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Japan Resident Registration Number -->
@@ -11019,15 +11020,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_jp_resident_registration_number"></a>Keyword_jp_resident_registration_number
 
 - Yerleşik Kayıt Numarası
-- Bölge Sakinlerinin Temel Kayıt Defteri Numarası
+- Yerleşikler Temel Kayıt Defteri Numarası
 - Yerleşik Kayıt No.
 - Yerleşik Kayıt No.
-- Bölge Sakinlerinin Temel Kayıt Defteri No.
+- Residents Basic Registry No.
 - Temel Yerleşik Kayıt No.
 - 外国人登録証明書番号
 - 証明書番号
@@ -11035,7 +11036,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - 外国人登録証
 
 
-## <a name="japan-social-insurance-number-sin"></a>Japonya sosyal sigorta numarası (SN)
+## <a name="japan-social-insurance-number-sin"></a>Japonya sosyal sigorta numarası (SIN)
 
 ### <a name="format"></a>Biçim
 
@@ -11046,22 +11047,22 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 7-12 basamak:
 - dört basamak
 - kısa çizgi (isteğe bağlı)
-- altı basamak VEYA
-- 7-12 art arda basamaklar
+- altı basamak OR
+- 7-12 ardışık basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_jp_sin desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_jp_sin bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_jp_sin desenle eşleşen içeriği bulur.
+- Keyword_jp_sin anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_jp_sin_pre_1997 desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_jp_sin bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_jp_sin_pre_1997 desenle eşleşen içeriği bulur.
+- Keyword_jp_sin anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Japan Social Insurance Number -->
@@ -11077,12 +11078,12 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_jp_sin"></a>Keyword_jp_sin
 
 - Sosyal Sigorta No.
-- Sosyal Sigorta Num
+- Sosyal Sigorta Numarası
 - Sosyal Sigorta Numarası
 - 健康保険被保険者番号
 - 健保番号
@@ -11091,7 +11092,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - 雇用保険番号
 - 保険証番号
 - 社会保険番号
-- 社İpnot保険No.
+- 社会保険No.
 - 社会保険
 - 介護保険
 - 介護保険被保険者番号
@@ -11101,37 +11102,37 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - 厚生年金被保険者整理番号
 
 
-## <a name="lab-test-terms"></a>Laboratuvar test koşulları
+## <a name="lab-test-terms"></a>Laboratuvar test terimleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Laboratuvar testleri ile ilgili, *C-doğrualt gibi terimleri algılar*. Yalnızca İngilizce terimleri destekler. Ayrıca SIT adlı tüzel kişi [SIT adlı sağlık hüküm ve koşullarına](#all-medical-terms-and-conditions) da dahildir.
+Bu unbundled adlandırılmış varlık *, İnsülin C-peptid* gibi laboratuvar testleriyle ilgili terimleri algılar. Yalnızca İngilizce terimleri destekler. Ayrıca entity SIT adlı [tüm tıbbi hüküm ve koşullar](#all-medical-terms-and-conditions) paketinde yer alır.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Yüksek
 
 
-## <a name="latvia-drivers-license-number"></a>Letonya sürücüsünün lisans numarası
+## <a name="latvia-drivers-license-number"></a>Letonya ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-Üç harf, ardından altı basamak
+üç harf ve ardından altı basamak
 
 ### <a name="pattern"></a>Desen
 
 üç harf ve altı basamak:
 
-- üç harf (büyük/küçük harfe duyarlı değildir)
+- üç harf (büyük/küçük harfe duyarlı değil)
 - altı basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_latvia_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_latvia_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_latvia_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_latvia_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Latvia Driver's License Number -->
@@ -11146,15 +11147,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -11162,93 +11163,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -11256,21 +11257,21 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
 
-#### <a name="keywords_latvia_eu_drivers_license_number"></a>Keywords_latvia_eu_driver'S_LICENSE_NUMBER
+#### <a name="keywords_latvia_eu_drivers_license_number"></a>Keywords_latvia_eu_driver's_license_number
 
 - autovadītāja apliecība
 - autovadītāja apliecības
@@ -11281,29 +11282,29 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-boşluk veya sınırlayıcı yok, iki harf veya rakam, ardından da yedi basamak
+iki harf veya basamak ve ardından boşluk veya sınırlayıcı içermeyen yedi basamak
 
 ### <a name="pattern"></a>Desen
 
-İki harf veya rakam, ardından yedi basamak:
+iki harf veya rakam ve ardından yedi basamak:
 
-- İki basamak veya harf (büyük/küçük harfe duyarlı değildir)
+- iki basamak veya harf (büyük/küçük harfe duyarlı değil)
 - yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_latvia_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_latvia_eu_passport_number` bulunur.
-- Normal ifade, `Regex_eu_passport_date1` tarihi D.AA.YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_latvia_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_latvia_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date1` tarihi DD.AA.YYYY biçiminde bulur veya bir `Keywords_eu_passport_date` anahtar sözcük bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_latvia_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_latvia_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_latvia_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_latvia_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Latvia Passport Number -->
@@ -11329,34 +11330,34 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number_common"></a>Keywords_eu_passport_number_common
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_latvia_eu_passport_number"></a>Keywords_latvia_eu_passport_number
 
-- pase numurs
+- pase numurlar
 - pase numur
 - pases numuri
 - pases nr
-- passeport no
-- n° du Passeport
+- passport no
+- n° du Passport
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="latvia-personal-code"></a>Letonya kişisel kodu
@@ -11369,32 +11370,32 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 Eski biçim
 
-11 rakam ve kısa çizgi:
+11 basamak ve kısa çizgi:
 
-- Doğum tarihine karşılık gelen altı basamak (DDMMY)
+- doğum tarihine karşılık gelen altı basamak (DDMMYY)
 - kısa çizgi
-- doğum yüzyılı için bir basamak ("19. yüzyıl için 0", 20. yüzyıl için "1", 21. yüzyıl için "2" )
+- doğum yüzyıla karşılık gelen bir basamak ("19. yüzyıl için 0", 20. yüzyıl için "1" ve 21. yüzyıl için "2")
 - rastgele oluşturulan dört basamak
 
 Yeni biçim
 
 11 basamak
 
-- İki basamaklı "32"
-- Dokuz rakam
+- İki basamak "32"
+- Dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev veya  `Func_latvia_eu_national_id_card` kayıtex, `Regex_latvia_eu_national_id_card_new_format` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_latvia_eu_national_id_card` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_latvia_eu_national_id_card` veya regex `Regex_latvia_eu_national_id_card_new_format` desenle eşleşen içeriği bulur.
+- 'den  `Keywords_latvia_eu_national_id_card` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev veya  `Func_latvia_eu_national_id_card` kayıtex, `Regex_latvia_eu_national_id_card_new_format` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_latvia_eu_national_id_card` veya regex `Regex_latvia_eu_national_id_card_new_format` desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Latvia Personal Code -->
@@ -11425,29 +11426,29 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_latvia_eu_national_id_card"></a>Keywords_latvia_eu_national_id_card
 
 - yönetim numarası
-- alē nē
+- alvas nē
 - doğum numarası
-- hizmet numarası
-- hukuk numarası
-- elektronik nüfus numarası
+- vatandaş numarası
+- sivil numara
+- elektronik sayım numarası
 - elektronik numara
 - mali kod
-- sağlık kullanıcı numarası
-- id #
+- sağlık hizmeti kullanıcı numarası
+- Kimliği #
 - id-code
 - kimlik numarası
 - identifikācijas numurs
 - id-number
-- tek bir numara
+- bireysel sayı
 - latvija alva
 - nacionālais id
 - ulusal kimlik
-- ulusal tanımlayıcı numara
+- ulusal tanımlayıcı sayı
 - ulusal kimlik numarası
 - ulusal sigorta numarası
 - ulusal kayıt numarası
@@ -11464,79 +11465,79 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - kişisel numara
 - kişisel sayısal kod
 - personalcodeno #
-- personas kods
+- personas kodlar
 - nüfus tanımlama kodu
-- genel hizmet numarası
+- kamu hizmeti numarası
 - kayıt numarası
 - gelir numarası
 - sosyal sigorta numarası
 - sosyal güvenlik numarası
 - eyalet vergi kodu
 - vergi dosyası numarası
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
-- 2010'un numarası
+- Teneke #
+- seçmen sayısı
 
 
 ## <a name="latvia-physical-addresses"></a>Letonya fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Letonya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Letonya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
 ## <a name="liechtenstein-physical-addresses"></a>Liechtenstein fiziksel adresleri
 
-Buundled adlandırılmış varlık, Liechtenstein'dan gelen fiziksel adresle ilgili desenler algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir. 
+Bu unbundled adlandırılmış varlık Liechtenstein fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir. 
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
 ## <a name="lifestyles-that-relate-to-medical-conditions"></a>Tıbbi koşullarla ilgili yaşam tarzları
 
-Bu bakıla sahip olmayan bu varlık, yaşam biçimiyle ilgili, sadece tinlik gibi tıbbi bir koşula neden olan terimleri *algılar*. Yalnızca İngilizce terimleri destekler. Ayrıca SIT adlı tüzel kişi [SIT adlı sağlık hüküm ve koşullarına](#all-medical-terms-and-conditions) da dahildir.
+Bu unbundled adlı varlık *, sigara gibi* tıbbi bir duruma neden olabilecek yaşam tarzlarıyla ilgili terimleri algılar. Yalnızca İngilizce terimleri destekler. Ayrıca entity SIT adlı [tüm tıbbi hüküm ve koşullar](#all-medical-terms-and-conditions) paketinde yer alır.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Yüksek
 
 
-## <a name="lithuania-drivers-license-number"></a>Litvanya sürücü lisans numarası
+## <a name="lithuania-drivers-license-number"></a>Litvanya ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcılar olmadan sekiz basamak
+boşluk ve sınırlayıcı içermeyen sekiz basamak
 
 ### <a name="pattern"></a>Desen
 
 sekiz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_lithuania_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_lithuania_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_lithuania_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_lithuania_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Lithuania Driver's License Number -->
@@ -11551,15 +11552,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -11567,93 +11568,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -11661,61 +11662,61 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
 
-#### <a name="keywords_lithuania_eu_drivers_license_number"></a>Keywords_lithuania_eu_driver's_license_number
+#### <a name="keywords_lithuania_eu_drivers_license_number"></a>Keywords_lithuania_eu_driver s_license_number
 
-- vairuotojo pažym bujimas
-- vairuotojo pažym  birjimo numeris
-- vairuotojo pa birayijimo numeriai
+- vairuotojo pažymėjimas
+- vairuotojo pažymėjimo numeris
+- vairuotojo pažymėjimo numeriai
 
 
 ## <a name="lithuania-personal-code"></a>Litvanya kişisel kodu
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcı olmayan 11 basamak
+Boşluk ve sınırlayıcı içermeyen 11 basamak
 
 ### <a name="pattern"></a>Desen
 
-Boşluk ve sınırlayıcı olmayan 11 basamak:
+Boşluk ve sınırlayıcı içermeyen 11 basamak:
 
-- kişinin cinsiyetine ve doğum yüzyılı ile ilgili bir basamak (1-6)
-- Doğum tarihine karşılık gelen altı basamak (YYAAA)
-- Doğum tarihin seri numarasına karşılık gelen üç basamak
-- tek bir onay rakamı
+- kişinin cinsiyetine ve doğum yüzyılına karşılık gelen bir basamak (1-6)
+- doğum tarihine karşılık gelen altı basamak (YYMMDD)
+- doğum tarihinin seri numarasına karşılık gelen üç basamak
+- bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_lithuania_eu_tax_file_number` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_lithuania_eu_tax_file_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_lithuania_eu_tax_file_number` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_lithuania_eu_tax_file_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_lithuania_eu_tax_file_number` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_lithuania_eu_tax_file_number` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Lithuania Personal Code -->
@@ -11734,49 +11735,49 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_lithuania_eu_national_id_card"></a>Keywords_lithuania_eu_national_id_card
 
 - asmeninis skaitmeninis kodas
 - asmens kodas
-- hizmet numarası
-- mokesčių kimliği
+- vatandaş hizmet numarası
+- mokesčių id
 - mokesčių identifikavimas numeris
 - mokesčių identifikavimo numeris
-- mokesčių sayısı
+- mokesčių numeris
 - ulusal kimlik numarası
 - kişisel kod
 - kişisel sayısal kod
 - piliečio paslaugos numeris
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 - unikalus identifikavimo kodas
 - unikalus identifikavimo numeris
-- benzersiz tanımlama numarası
+- benzersiz kimlik numarası
 - benzersiz kimlik numarası
 - uniqueidentityno #
 
 
 ## <a name="lithuania-physical-addresses"></a>Litvanya fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Litvanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Litvanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
@@ -11785,26 +11786,26 @@ Orta
 
 ### <a name="format"></a>Biçim
 
-sekiz basamaklı veya boşluk veya sınırlayıcısız harfler
+boşluk veya sınırlayıcı içermeyen sekiz basamak veya harf
 
 ### <a name="pattern"></a>Desen
 
-sekiz basamaklı veya harfler (büyük/küçük harfe duyarlı değildir)
+sekiz basamak veya harf (büyük/küçük harfe duyarlı değil)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
-uygulanamaz
+geçerli değil
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_lithuania_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_lithuania_eu_passport_number` bulunur.
-- Normal ifade, `Regex_eu_passport_date3` tarihi DD MM YYYY biçiminde veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur biçimde bulur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_lithuania_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_lithuania_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date3` tarihi DD AA YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_lithuania_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_lithuania_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_lithuania_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_lithuania_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Lithuania Passport Number -->
@@ -11830,52 +11831,52 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_lithuania_eu_passport_number"></a>Keywords_lithuania_eu_passport_number
 
-- amerika numeris
-- olarak sayımeriai
-- olarak nr
+- paso numeris
+- paso numeriai
+- paso nr
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
-## <a name="luxemburg-drivers-license-number"></a>Luxemburg sürücü lisans numarası
+## <a name="luxemburg-drivers-license-number"></a>Luxemburg ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcılar olmadan altı basamak
+boşluk ve sınırlayıcı içermeyen altı basamak
 
 ### <a name="pattern"></a>Desen
 
 altı basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_luxemburg_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_luxemburg_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_luxemburg_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_luxemburg_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Luxemburg Driver's License Number -->
@@ -11890,15 +11891,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -11906,93 +11907,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -12000,57 +12001,57 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
 
-#### <a name="keywords_luxemburg_eu_drivers_license_number"></a>Keywords_luxemburg_eu_driver's_license_number
+#### <a name="keywords_luxemburg_eu_drivers_license_number"></a>Keywords_luxemburg_eu_driver s_license_number
 
 - fahrerlaubnis
 - Führerschäin
 
-## <a name="luxemburg-national-identification-number-natural-persons"></a>Luxemburg ulusal kimlik numarası (doğal kişiler)
+## <a name="luxemburg-national-identification-number-natural-persons"></a>Luxemburg ulusal kimlik numarası (gerçek kişiler)
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Boşluk veya sınırlayıcı yok 13 basamak
+Boşluk veya sınırlayıcı içermeyen 13 basamak
 
 ### <a name="pattern"></a>Desen
 
 13 basamak:
 
 - 11 basamak
-- iki onay rakamı
+- iki denetim basamağı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
-evet
+Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_luxemburg_eu_tax_file_number` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_luxemburg_eu_national_id_card` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_luxemburg_eu_tax_file_number` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_luxemburg_eu_national_id_card` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_luxemburg_eu_tax_file_number` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_luxemburg_eu_tax_file_number` , desenle eşleşen içeriği bulur.
 
 
 ```xml
@@ -12070,33 +12071,33 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_luxemburg_eu_national_id_card"></a>Keywords_luxemburg_eu_national_id_card
 
-- eindeutige id
+- eindeutige kimliği
 - eindeutige id-nummer
 - eindeutigeid #
-- kimlik personeli
+- id personel
 - idpersonnelle #
 - idpersonnelle
 - tek tek kod
 - bireysel kimlik
 - bireysel kimlik
 - bireysel kimlik
-- numéro d'identification personel
+- numéro d'identification personeli
 - kişisel kimlik
 - kişisel kimlik
 - kişisel kimlik
 - personalidno #
-- kişiselsayı #
+- personalidnumber #
 - persönliche identifikationsnummer
 - benzersiz kimlik
 - benzersiz kimlik
 - uniqueidkey #
 
 
-## <a name="luxemburg-national-identification-number-non-natural-persons"></a>Luxemburg ulusal kimlik numarası (doğal olmayan kişiler)
+## <a name="luxemburg-national-identification-number-non-natural-persons"></a>Luxemburg ulusal kimlik numarası (gerçek olmayan kişiler)
 
 ### <a name="format"></a>Biçim
 
@@ -12106,27 +12107,27 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 11 basamak
 
-- İki basamak
-- isteğe bağlı bir boşluk
+- iki basamak
+- isteğe bağlı bir alan
 - üç basamak
-- isteğe bağlı bir boşluk
+- isteğe bağlı bir alan
 - üç basamak
-- isteğe bağlı bir boşluk
-- İki basamak
-- tek bir onay rakamı
+- isteğe bağlı bir alan
+- iki basamak
+- bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_luxemburg_eu_tax_file_number_non_natural` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_luxemburg_eu_tax_file_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_luxemburg_eu_tax_file_number_non_natural` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_luxemburg_eu_tax_file_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_luxemburg_eu_tax_file_number_non_natural` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_luxemburg_eu_tax_file_number_non_natural` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Luxemburg National Identification Number (Non-natural persons) -->
@@ -12145,73 +12146,73 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_luxemburg_eu_tax_file_number"></a>Keywords_luxemburg_eu_tax_file_number
 
 - carte de sécurité sociale
-- étain non
+- étain olmayan
 - étain #
 - identifiant d'impôt
-- Luxembourg tax identifikatiounsnummer
+- lüksemburg vergi identifikatiounsnummer
 - numéro d'étain
-- numéro d'identification fiscal luxembourge tanıtıcı
+- numéro d'identification fiscal luxembourgeois
 - numéro d'identification fiscale
 - sosyal güvenlik
-- sounglunterstützung
+- sozialunterstützung
 - sozialversécherung
 - sozialversicherungsausweis
-- s steier kimliği
+- steier id
 - steier identifikatiounsnummer
-- s steier nummer
-- suer kimliği
+- steier nummer
+- steuer kimliği
 - steueridentifikationsnummer
 - steuernummer
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
-- zinn #
-- zinn
+- Teneke #
+- Zinn #
+- Zinn
 - zinnzahl
 
 
-## <a name="luxemburg-passport-number"></a>Luxemburg Passport numarası
+## <a name="luxemburg-passport-number"></a>Luxemburg pasaport numarası
 
 ### <a name="format"></a>Biçim
 
-sekiz basamaklı veya boşluk veya sınırlayıcısız harfler
+boşluk veya sınırlayıcı içermeyen sekiz basamak veya harf
 
 ### <a name="pattern"></a>Desen
 
-sekiz basamaklı veya harfler (büyük/küçük harfe duyarlı değildir)
+sekiz basamak veya harf (büyük/küçük harfe duyarlı değil)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_luxemburg_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_luxemburg_eu_passport_number` bulunur.
-- Normal ifade, `Regex_eu_passport_date3` tarihi DD MM YYYY biçiminde veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur biçimde bulur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_luxemburg_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_luxemburg_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date3` tarihi DD AA YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_luxemburg_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_luxemburg_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_luxemburg_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_luxemburg_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Luxemburg Passport Number -->
@@ -12237,49 +12238,49 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_luxemburg_eu_passport_number"></a>Keywords_luxemburg_eu_passport_number
 - ausweisnummer
-- luxembourg pass
-- luxembourg passeport
-- Lüksemburg Pasaport
-- no de passeport
+- lüksemburg geçişi
+- lüksemburg passport
+- lüksemburg pasaportu
+- geçiş yok
 - no-reisepass
 - nr-reisepass
-- numéro de passeport
-- net'i geç
-- nr geçiş
+- numéro de passport
+- net geçirme
+- nr'ı geç
 - passnummer
-- passeport nombre
+- passport nombre
 - reisepässe
 - reisepass-nr
 - reisepassnummer
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="luxemburg-physical-addresses"></a>Luxemburg fiziksel adresleri
 
-Buundled adlı varlık, Luxemburg'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık Luxemburg'daki fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
@@ -12293,22 +12294,22 @@ Orta
 ### <a name="pattern"></a>Desen
 
 12 basamak:
-- Doğum tarihi olan YYAAAA biçiminde altı basamak
-- Tire (isteğe bağlı)
-- İki harfli doğum yeri kodu
-- Tire (isteğe bağlı)
+- doğum tarihi olan YYMMDD biçiminde altı basamak
+- tire (isteğe bağlı)
+- iki harfli doğum yeri kodu
+- tire (isteğe bağlı)
 - üç rastgele basamak
 - tek basamaklı cinsiyet kodu
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade Regex_malaysia_id_card_number desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_malaysia_id_card_number bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade Regex_malaysia_id_card_number desenle eşleşen içeriği bulur.
+- Keyword_malaysia_id_card_number anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Malaysia ID Card Number -->
@@ -12321,37 +12322,37 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_malaysia_id_card_number"></a>Keyword_malaysia_id_card_number
 
 - dijital uygulama kartı
 - i/c
 - i/c hayır
-- ic
+- ıc
 - ic no
 - kimlik kartı
-- kimlik Kartı
+- kimlik kartı
 - kimlik kartı
 - k/p
-- k/p hayır
-- olarak tüm gün iş bire bir gün devam ediyor
-- aplikasi digital
-- olarak pengenalan Malaysia
+- k/p no
+- kad akuan diri
+- kad aplikasi digital
+- kad pengenalan malaysia
 - kp
-- kp hayır
+- kp no
 - mykad
 - mykas
 - mykid
-- nis
+- mypr
 - mytentera
-- Malezya kimlik kartı
-- Malezya kimlik kartı
+- malezya kimlik kartı
+- malezya kimlik kartı
 - nric
 - kişisel kimlik kartı
 
 
-## <a name="malta-drivers-license-number"></a>Malta sürücü lisans numarası
+## <a name="malta-drivers-license-number"></a>Malta ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
@@ -12361,21 +12362,21 @@ Belirtilen desende iki karakter ve altı basamak birleşimi
 
 iki karakter ve altı basamak birleşimi:
 
-- İki karakter (büyük/küçük harfe duyarlı değil, rakam veya harf)
+- iki karakter (büyük/küçük harfe duyarlı değil basamaklar veya harfler)
 - boşluk (isteğe bağlı)
 - üç basamak
 - boşluk (isteğe bağlı)
 - üç basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_malta_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_malta_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_malta_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_malta_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Malta Driver's License Number -->
@@ -12390,15 +12391,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -12406,93 +12407,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -12500,58 +12501,58 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
 
-#### <a name="keywords_malta_eu_drivers_license_number"></a>Keywords_malta_eu_driver's_license_number
+#### <a name="keywords_malta_eu_drivers_license_number"></a>Keywords_malta_eu_driver s_license_number
 
-- liċenzja tas-bire birQan
-- liċenzji tas-wieq
+- liċenzja tas-sewqan
+- liċenzji tas-sewwieq
 
 
 ## <a name="malta-identity-card-number"></a>Malta kimlik kartı numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Yedi basamaklı ve ardından bir harf
+yedi basamak ve ardından bir harf
 
 ### <a name="pattern"></a>Desen
 
-Yedi basamaklı ve ardından bir harf:
+yedi basamak ve ardından bir harf:
 
 - yedi basamak
-- "M, G, A, P, L, H, B, Z" (büyük/küçük harfe duyarlı değil)
+- "M, G, A, P, L, H, B, Z" içinde bir harf (büyük/küçük harfe duyarsız)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
-Uygulanamaz
+Geçerli değil
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_malta_eu_national_id_card` eşleşen içerik bulur.
-- Anahtar sözcük  `Keywords_malta_eu_national_id_card` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_malta_eu_national_id_card` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_malta_eu_national_id_card` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- Normal ifade desene  `Regex_malta_eu_national_id_card` eşleşen içerik bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- Normal ifade  `Regex_malta_eu_national_id_card` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Malta Identity Card Number -->
@@ -12566,11 +12567,11 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_malta_eu_national_id_card"></a>Keywords_malta_eu_national_id_card
 
-- hizmet numarası
+- vatandaş hizmet numarası
 - id tat-taxxa
 - identifika numru tal-biljett
 - kodiċi numerali personali
@@ -12578,10 +12579,10 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - numru ta 'identifikazzjoni tat-taxxa
 - numru ta 'identifikazzjoni uniku
 - numru ta' identità uniku
-- numru tas-zzzz taċ-ċittadin
+- numru tas-servizz taċ-ċittadin
 - numru tat-taxxa
 - kişisel sayısal kod
-- benzersiz tanımlama numarası
+- benzersiz kimlik numarası
 - benzersiz kimlik numarası
 - uniqueidentityno #
 
@@ -12590,26 +12591,26 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-Boşluk veya sınırlayıcı olmayan yedi basamak
+boşluk veya sınırlayıcı içermeyen yedi basamak
 
 ### <a name="pattern"></a>Desen
 
 yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_malta_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_malta_eu_passport_number` bulunur.
-- Anahtar sözcük `Keywords_eu_passport_date` bulundu
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_malta_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_malta_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- 'den `Keywords_eu_passport_date` bir anahtar sözcük bulundu
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_malta_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_malta_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_malta_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_malta_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Malta Passport Number -->
@@ -12632,19 +12633,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_malta_eu_passport_number"></a>Keywords_malta_eu_passport_number
@@ -12655,52 +12656,52 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="malta-physical-addresses"></a>Malta fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık Malta'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Malta'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
-## <a name="malta-tax-identification-number"></a>Malta vergi tanımlama numarası
+## <a name="malta-tax-identification-number"></a>Malta vergi kimlik numarası
 
 ### <a name="format"></a>Biçim
 
-Maltese ulusalları için:
-- Belirtilen desende yedi basamak ve bir harf
+Malta uyruklular için:
+- belirtilen düzende yedi basamak ve bir harf
 
-Maltese dışı milliler ve Maltese varlıkları:
+Malta uyruklu olmayanlar ve Maltalı varlıklar:
 - dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
-Maltese ulusalları: yedi basamak ve bir harf
+Malta uyruklular: yedi rakam ve bir harf
 
 - yedi basamak
-- tek harf (büyük/harfe duyarlı değildir)
+- bir harf (büyük/küçük harfe duyarlı değil)
 
-Maltese dışı milliler ve Maltese varlıkları: dokuz basamak
+Malta uyruklu olmayanlar ve Malta varlıkları: dokuz basamak
 
 - dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Geçerli değil
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Kayıtex,  `Regex_malta_eu_tax_file_number`  desene `Regex_malta_eu_tax_file_number_non_maltese_national` eşleşen içeriği bulur veya bulur.
-- Anahtar sözcük  `Keywords_malta_eu_tax_file_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Regex  `Regex_malta_eu_tax_file_number`  veya `Regex_malta_eu_tax_file_number_non_maltese_national` desenle eşleşen içeriği bulur.
+- 'den  `Keywords_malta_eu_tax_file_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- Kayıtex,  `Regex_malta_eu_tax_file_number` desene `Regex_malta_eu_tax_file_number_non_maltese_national` eşleşen içeriği bulur veya bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- Regex  `Regex_malta_eu_tax_file_number` veya `Regex_malta_eu_tax_file_number_non_maltese_national` desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Malta Tax ID Number -->
@@ -12722,11 +12723,11 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_malta_eu_tax_file_number"></a>Keywords_malta_eu_tax_file_number
 
-- hizmet numarası
+- vatandaş hizmet numarası
 - id tat-taxxa
 - identifika numru tal-biljett
 - kodiċi numerali personali
@@ -12734,38 +12735,38 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - numru ta 'identifikazzjoni tat-taxxa
 - numru ta 'identifikazzjoni uniku
 - numru ta' identità uniku
-- numru tas-zzzz taċ-ċittadin
+- numru tas-servizz taċ-ċittadin
 - numru tat-taxxa
 - kişisel sayısal kod
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
-- benzersiz tanımlama numarası
+- Teneke #
+- benzersiz kimlik numarası
 - benzersiz kimlik numarası
 - uniqueidentityno #
 
 ## <a name="medical-specialities"></a>Tıbbi uzmanlıklar
 
-Bu bakıla sahip olmayan bu varlık, tıbbi uzmanlık alanıyla ilgili koşulları (örneğin, *şüpheli) algılar*.  Yalnızca İngilizce terimleri destekler. Ayrıca SIT adlı tüzel kişi [SIT adlı sağlık hüküm ve koşullarına](#all-medical-terms-and-conditions) da dahildir.
+Bu unbundled adlandırılmış varlık, *dermatoloji* gibi tıbbi uzmanlıklarla ilgili terimleri algılar.  Yalnızca İngilizce terimleri destekler. Ayrıca entity SIT adlı [tüm tıbbi hüküm ve koşullar](#all-medical-terms-and-conditions) paketinde yer alır.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Yüksek
 
-## <a name="medicare-beneficiary-identifier-mbi-card"></a>Medicare Yardım Tanımlayıcı (MBI) kartı
+## <a name="medicare-beneficiary-identifier-mbi-card"></a>Medicare Beneficiary Identifier (MBI) kartı
 
 ### <a name="format"></a>Biçim
 
@@ -12774,29 +12775,29 @@ Yüksek
 ### <a name="pattern"></a>Desen
 
 - 1 ile 9 arasında bir basamak
-- S, L, O, I, B, Z dışında bir harf
-- S, L, O, I, B, Z hariç bir rakam veya harf
-- bir rakam
-- isteğe bağlı Tire
-- S, L, O, I, B, Z dışında bir harf
-- S, L, O, I, B, Z hariç bir rakam veya harf
-- bir rakam
-- isteğe bağlı Tire
+- S, L, O, I, B, Z hariç bir harf
+- S, L, O, I, B, Z hariç bir basamak veya harf
+- bir basamak
+- isteğe bağlı kısa çizgi
+- S, L, O, I, B, Z hariç bir harf
+- S, L, O, I, B, Z hariç bir basamak veya harf
+- bir basamak
+- isteğe bağlı kısa çizgi
 - S, L, O, I, B, Z hariç iki harf
-- İki basamak
+- iki basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_mbi_card` eşleşen içerik bulur.
-- Anahtar sözcük  `Keyword_mbi_card` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_mbi_card` , desenle eşleşen içeriği bulur.
+- 'den  `Keyword_mbi_card` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_mbi_card` eşleşen içerik bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_mbi_card` , desenle eşleşen içeriği bulur.
 
 ```xml
     <!-- Medicare Beneficiary Identifier (MBI) card -->
@@ -12811,47 +12812,47 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_mbi_card"></a>Keyword_mbi_card
 
 - mbi
 - mbi #
-- akare hak sahibi #
-- medicare hak sahibi tanımlayıcı
-- alan hak sahibi no
-- hhare hak sahibi sayı
-- akare hak sahibi #
+- medicare hak sahibi #
+- medicare hak sahibi tanımlayıcısı
+- medicare hak sahibi hayır
+- medicare hak sahibi numarası
+- medicare hak sahibi #
 
 
-## <a name="mexico-unique-population-registry-code-curp"></a>Mexico Unique Population Registry Code (CURP)
+## <a name="mexico-unique-population-registry-code-curp"></a>Meksika Benzersiz Nüfus Kayıt Defteri Kodu (CURP)
 
 ### <a name="format"></a>Biçim
 
-18 karakter alfasayısal desen
+18 karakterli alfasayısal desen
 
 ### <a name="pattern"></a>Desen
 
-- dört harf (büyük/küçük harfe duyarlı değil)
-- Geçerli bir tarihi gösteren altı basamak
-- a letter - H/s veya M/m
+- dört harf (büyük/küçük harfe duyarsız)
+- geçerli bir tarihi gösteren altı basamak
+- a letter - H/h veya M/m
 - Geçerli bir Meksika eyalet kodunu gösteren iki harf
 - üç harf
 - bir harf veya rakam
-- bir rakam
+- bir basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_mexico_population_registry_code` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keyword_mexico_population_registry_code` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_mexico_population_registry_code` , desenle eşleşen içeriği bulur.
+- 'den  `Keyword_mexico_population_registry_code` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_mexico_population_registry_code` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_mexico_population_registry_code` , desenle eşleşen içeriği bulur.
 
 ```xml
     <!-- Mexico Unique Population Registry Code (CURP) -->
@@ -12866,31 +12867,31 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_mexico_population_registry_code"></a>Keyword_mexico_population_registry_code
 
-- Alkışve Única de Registro de Población
-- Alkışve Unica de Registro de Poblacion
+- Clave Única de Registro de Población
+- Clave Unica de Registro de Poblacion
 - Benzersiz Nüfus Kayıt Defteri Kodu 
 - benzersiz nüfus kodu
 - CURP
 - Kişisel Kimlik
 - Benzersiz Kimlik
 - personalid
-- kişiselsayı
+- personalidnumber
 - uniqueidkey
-- benzersizsayı
-- cupve única
-- alkışve unica
-- alkışve kişisel Identidad
-- kişisel Identidad Alkış
-- AlkışveÚnica
-- alkışveunica
-- yalçınIdentidad
+- uniqueidnumber
+- clave única
+- clave unica
+- clave kişisel Identidad
+- kişisel Identidad Clave
+- ClaveÚnica
+- claveunica
+- clavepersonalIdentidad
 
 
-## <a name="netherlands-citizens-service-bsn-number"></a>Hollanda genel hizmet numarası (BSN)
+## <a name="netherlands-citizens-service-bsn-number"></a>Hollanda vatandaşlık hizmeti (BSN) numarası
 
 ### <a name="format"></a>Biçim
 
@@ -12905,16 +12906,16 @@ sekiz-dokuz basamak:
 - boşluk (isteğe bağlı)
 - iki-üç basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_netherlands_bsn desene eşleşen içeriği bulur.
-- Bir başka Keyword_netherlands_bsn anahtar sözcük bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_netherlands_bsn desenle eşleşen içeriği bulur.
+- Keyword_netherlands_bsn anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
 ```xml
       <!-- Netherlands Citizen's Service (BSN) Number -->
@@ -12926,52 +12927,52 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_netherlands_eu_national_id_card"></a>Keywords_netherlands_eu_national_id_card
 
 - bsn #
 - bsn
-- servicenummer
-- hizmet numarası
+- burgerservicenummer
+- vatandaş hizmet numarası
 - kişi numarası
 - kişisel numara
 - kişisel sayısal kod
-- ilgili kişi numarası
+- kişiyle ilgili numara
 - persoonlijk nummer
-- persoonlijke numerieke kodu
+- persoonlijke numerieke code
 - persoonsgebonden
 - persoonsnummer
 - sociaal-fiscaal nummer
-- sosyal-mali numara
+- sosyal-mali sayı
 - sofi
 - sofinummer
 - uniek identificatienummer
 - uniek identiteitsnummer
-- benzersiz tanımlama numarası
+- benzersiz kimlik numarası
 - benzersiz kimlik numarası
 - uniqueidentityno #
 
 
-## <a name="netherlands-drivers-license-number"></a>Hollanda sürücü lisans numarası
+## <a name="netherlands-drivers-license-number"></a>Hollanda ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcı olmayan 10 basamak
+Boşluk ve sınırlayıcı içermeyen 10 basamak
 
 ### <a name="pattern"></a>Desen
 
 10 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_netherlands_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_netherlands_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_netherlands_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_netherlands_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Netherlands Driver's License Number -->
@@ -12986,15 +12987,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -13002,93 +13003,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -13096,21 +13097,21 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
 
-#### <a name="keywords_netherlands_eu_drivers_license_number"></a>Keywords_netherlands_eu_driver's_license_number
+#### <a name="keywords_netherlands_eu_drivers_license_number"></a>Keywords_netherlands_eu_driver s_license_number
 
 - permis de conduire
 - rijbewijs
@@ -13124,26 +13125,26 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-Boşluk veya sınırlayıcı yok dokuz harf veya basamak
+boşluk veya sınırlayıcı içermeyen dokuz harf veya basamak
 
 ### <a name="pattern"></a>Desen
 
 dokuz harf veya rakam
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
-uygulanamaz
+geçerli değil
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_netherlands_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_netherlands_eu_passport_number` bulunur.
-- Normal ifade `Regex_netherlands_eu_passport_date` tarihi AAAA/AAA YYYY biçiminde bulur (Örnek - 26 MAA/MAR 2012)
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_netherlands_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_netherlands_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_netherlands_eu_passport_date` tarihi DD AAA/AAA YYYY biçiminde bulur (Örnek - 26 MAA/MAR 2012)
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_netherlands_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_netherlands_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_netherlands_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_netherlands_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Netherlands Passport Number -->
@@ -13166,19 +13167,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_netherlands_eu_passport_number"></a>Keywords_netherlands_eu_passport_number
@@ -13191,42 +13192,42 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ## <a name="netherlands-physical-addresses"></a>Hollanda fiziksel adresleri
 
-Buundled adlı varlık, Hollanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Hollanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
-## <a name="netherlands-tax-identification-number"></a>Hollanda vergi tanımlama numarası
+## <a name="netherlands-tax-identification-number"></a>Hollanda vergi kimlik numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Boşluk veya sınırlayıcı olmayan dokuz basamak
+boşluk veya sınırlayıcı içermeyen dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
 dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_netherlands_eu_tax_file_number` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_netherlands_eu_tax_file_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_netherlands_eu_tax_file_number` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_netherlands_eu_tax_file_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev,  `Func_netherlands_eu_tax_file_number` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev  `Func_netherlands_eu_tax_file_number` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Netherlands Tax Identification Number -->
@@ -13241,84 +13242,84 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_netherlands_eu_tax_file_number"></a>Keywords_netherlands_eu_tax_file_number
 
 - btw nummer
-- hol tümcedenske vergi kimliği
-- hulandes impuesto id number
+- hollânske vergi tanımlaması
+- hulandes impuesto kimlik numarası
 - hulandes impuesto identification
-- identificatienummer insting
-- identificatienummer van insting
-- impuesto tanımlama numarası
-- impuesto sayı
-- nederlands her zaman kimlik numarası
-- nederlands her şey identificatie
-- nederlands her şey identificatienummer
-- nederlandsavastingnummer
-- nederlandse her zaman identificatie
-- Hollanda Vergi Kimliği
-- Hollanda Vergi Kimliği
-- Hollanda tin
-- Hollanda tin'i
-- vergi no
-- vergi numarası yok
-- vergi numarası
+- identificatienummer belasting
+- identificatienummer van belasting
+- impuesto kimlik numarası
+- impuesto numarası
+- nederlands belasting id nummer
+- nederlands belasting identificatie
+- nederlands belasting identificatienummer
+- nederlands belastingnummer
+- nederlandse belasting identificatie
+- hollanda vergi tanımlaması
+- hollanda vergi tanımlaması
+- hollanda tenekesi
+- hollanda'nın tenekesi
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
 - vergi tanımlama tal
-- vergi yok #
-- vergi yok
+- vergi no #
+- vergi no
 - vergi numarası
-- vergi sicil numarası
+- vergi kayıt numarası
 - vergi tal
-- iş bire bir #
-- yaln #
-- aracısayı #
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 
 
-## <a name="netherlands-value-added-tax-number"></a>Hollanda'nın katma değer vergi numarası
+## <a name="netherlands-value-added-tax-number"></a>Hollanda katma değer vergi numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-14 karakter alfasayısal desen
+14 karakterli alfasayısal desen
 
 ### <a name="pattern"></a>Desen
 
 14 karakterli alfasayısal desen:
 
 - N veya n
-- L veya l
+- L veya ben
 - isteğe bağlı boşluk, nokta veya kısa çizgi
 - dokuz basamak
 - isteğe bağlı boşluk, nokta veya kısa çizgi
 - B veya b
-- İki basamak
+- iki basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_netherlands_value_added_tax_number desene eşleşen içeriği bulur.
-- Bir başka Keywords_netherlands_value_added_tax_number anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_netherlands_value_added_tax_number desenle eşleşen içeriği bulur.
+- Keywords_netherlands_value_added_tax_number anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_netherlands_value_added_tax_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_netherlands_value_added_tax_number desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Netherlands Value Added Tax Number -->
@@ -13333,56 +13334,56 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_netherlands_value_added_tax_number"></a>Keyword_netherlands_value_added_tax_number
 
 - kdv numarası
-- kdv yok
-- kdv #
+- kdv no
+- Kdv #
 - wearde tafoege tax getal
-- btw n bir
+- btw nûmer
 - btw-nummer
 
 
 ## <a name="new-zealand-bank-account-number"></a>Yeni Zelanda banka hesap numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-İsteğe bağlı sınırlayıcıyla 14 basamaklı - 16 basamaklı desen
+İsteğe bağlı sınırlayıcı ile 14 basamaklıdan 16 basamaklı desene
 
 ### <a name="pattern"></a>Desen
 
-İsteğe bağlı sınırlayıcıyla 14 basamaklı - 16 basamaklı desen:
+İsteğe bağlı sınırlayıcı ile 14 basamaklıdan 16 basamaklı desene:
 
-- İki basamak
+- iki basamak
 - isteğe bağlı kısa çizgi veya boşluk
-- üç ile dört basamak arasında
+- üç-dört basamak
 - isteğe bağlı kısa çizgi veya boşluk
 - yedi basamak
 - isteğe bağlı kısa çizgi veya boşluk
-- İki ile üç basamak arasında
+- iki ile üç basamak
 - seçenekler kısa çizgi veya boşluk
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_new_zealand_bank_account_number desene eşleşen içeriği bulur.
-- Farklı bir Keywords_new_zealand_bank_account_number anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_new_zealand_bank_account_number desenle eşleşen içeriği bulur.
+- Keywords_new_zealand_bank_account_number anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_new_zealand_bank_account_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_new_zealand_bank_account_number desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- New Zealand Bank Account Number -->
@@ -13397,7 +13398,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_new_zealand_bank_account_number"></a>Keyword_new_zealand_bank_account_number
 
@@ -13408,38 +13409,38 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - bank_acct_nbr
 
 
-## <a name="new-zealand-drivers-license-number"></a>Yeni Zelanda sürücüsünün lisans numarası
+## <a name="new-zealand-drivers-license-number"></a>Yeni Zelanda ehliyet numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-sekiz karakter alfasayısal desen
+sekiz karakterli alfasayısal desen
 
 ### <a name="pattern"></a>Desen
 
-sekiz karakter alfasayısal desen
+sekiz karakterli alfasayısal desen
 
 - iki harf
 - altı basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_newzealand_driver_license_number desene eşleşen içeriği bulur.
-- Anahtar sözcük Keywords_newzealand_driver_license_number bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_newzealand_driver_license_number desenle eşleşen içeriği bulur.
+- Keywords_newzealand_driver_license_number anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev Func_newzealand_driver_license_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev Func_newzealand_driver_license_number desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- New Zealand Driver License Number -->
@@ -13454,92 +13455,92 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_new_zealand_drivers_license_number"></a>Keyword_new_zealand_drivers_license_number
 
-- driverlicence
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- driver'lic
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- driver'slic
+- sürücü dilimleri
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- driverlic #
+- sürücü #
 - driverlics #
-- driverlicence #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
-- driverslicence #
-- driverslicences #
+- sürücüler #
+- sürücüler #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- driver'lic #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- driver'slic #
+- sürücü dilimleri #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
 - uluslararası sürüş izni
 - uluslararası sürüş izinleri
-- nz otomobil birliği
-- yeni Zelanda otomobil birliği
+- nz automobile association
+- new zealand automobile association
 
 
 ## <a name="new-zealand-inland-revenue-number"></a>Yeni Zelanda iç gelir numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-isteğe bağlı sınırlayıcılar ile sekiz veya dokuz basamak
+isteğe bağlı sınırlayıcılarla sekiz veya dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
-isteğe bağlı sınırlayıcılar ile sekiz veya dokuz basamak
+isteğe bağlı sınırlayıcılarla sekiz veya dokuz basamak
 
 - iki veya üç basamak
 - isteğe bağlı bir boşluk veya kısa çizgi
@@ -13547,18 +13548,18 @@ isteğe bağlı sınırlayıcılar ile sekiz veya dokuz basamak
 - isteğe bağlı bir boşluk veya kısa çizgi
 - üç basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_new_zealand_inland_revenue_number desene eşleşen içeriği bulur.
-- Bir arama Keywords_new_zealand_inland_revenue_number anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_new_zealand_inland_revenue_number desenle eşleşen içeriği bulur.
+- Keywords_new_zealand_inland_revenue_number anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_new_zealand_inland_revenue_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_new_zealand_inland_revenue_number desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- New Zealand Inland Revenue Number -->
@@ -13573,43 +13574,43 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_new_zealand_inland_revenue_number"></a>Keyword_new_zealand_inland_revenue_number
 
-- Hayır.
+- ird hayır.
 - ird no #
 - nz ird
-- yeni Zelanda
-- üçüncü numara
+- yeni zelanda ird
+- ird numarası
 - iç gelir numarası
 
 
-## <a name="new-zealand-ministry-of-health-number"></a>Sağlık numarasıyla ilgili yeni Zelanda
+## <a name="new-zealand-ministry-of-health-number"></a>Yeni Zelanda sağlık bakanlığı numarası
 
 ### <a name="format"></a>Biçim
 
-Üç harf ve dört basamak
+üç harf ve dört basamak
 
 ### <a name="pattern"></a>Desen
 
-- üç harfli (büyük/küçük harfe duyarlı değil) "I" ve "O" dışında
+- 'I' ve 'O' dışında üç harf (büyük/küçük harfe duyarlı değil)
 - dört basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_new_zealand_ministry_of_health_number desene eşleşen içeriği bulur.
-- Bir arama Keyword_nz_terms anahtar sözcüğü bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_new_zealand_ministry_of_health_number desenle eşleşen içeriği bulur.
+- Keyword_nz_terms anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_new_zealand_ministry_of_health_number desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_new_zealand_ministry_of_health_number desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
     <!-- New Zealand Health Number -->
@@ -13624,32 +13625,32 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_nz_terms"></a>Keyword_nz_terms
 
 - NHI
 - Yeni Zelanda
-- National Health Index
+- Ulusal Sağlık Endeksi
 - NHI #
-- National Health Index #
+- Ulusal Sağlık Endeksi #
 
 
 ## <a name="new-zealand-physical-addresses"></a>Yeni Zelanda fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Yeni Zelanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Yeni Zelanda'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
 ## <a name="new-zealand-social-welfare-number"></a>Yeni Zelanda sosyal yardım numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -13667,18 +13668,18 @@ dokuz basamak
 - isteğe bağlı kısa çizgi
 - üç basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_newzealand_social_welfare_number desene eşleşen içeriği bulur.
-- Farklı bir Keywords_newzealand_social_welfare_number anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_newzealand_social_welfare_number desenle eşleşen içeriği bulur.
+- Keywords_newzealand_social_welfare_number anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev Func_newzealand_social_welfare_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev Func_newzealand_social_welfare_number desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Newzealand Social Welfare Number -->
@@ -13694,13 +13695,13 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Version>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_new_zealand_social_welfare_number"></a>Keyword_new_zealand_social_welfare_number
 
 - sosyal yardım #
 - sosyal yardım #
-- sosyal yardım No.
+- sosyal yardım no.
 - sosyal yardım numarası
 - swn #
 
@@ -13714,24 +13715,24 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 ### <a name="pattern"></a>Desen
 
 11 basamak:
-- Doğum tarihi olan  DAAAY biçiminde altı basamak
+- doğum tarihi olan DDMMYY biçiminde altı basamak
 - üç basamaklı tek tek sayı
-- iki onay rakamı
+- iki denetim basamağı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_norway_id_number desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_norway_id_number bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_norway_id_number desenle eşleşen içeriği bulur.
+- Keyword_norway_id_number anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_norway_id_numbe desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_norway_id_numbe desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- Norway Identification Number -->
@@ -13746,12 +13747,12 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_norway_id_number"></a>Keyword_norway_id_number
 
 - Kişisel kimlik numarası
-- Norveççe Kimlik Numarası
+- Norveç kimlik numarası
 - Kimlik Numarası
 - Kimlik
 - Personnummer
@@ -13760,9 +13761,9 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ## <a name="norway-physical-addresses"></a>Norveç fiziksel adresleri
 
-Buundled adlı varlık, Norveç'teki fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Norveç'ten gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
@@ -13780,17 +13781,17 @@ Kısa çizgilerle ayrılmış 12 basamak
 - kısa çizgi
 - yedi basamak
 - kısa çizgi
-- bir rakam
+- bir basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_philippines_unified_id desene eşleşen içeriği bulur.
-- Bir başka Keyword_philippines_id anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_philippines_unified_id desenle eşleşen içeriği bulur.
+- Keyword_philippines_id anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Philippines Unified Multi-Purpose ID number -->
@@ -13802,7 +13803,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_philippines_id"></a>Keyword_philippines_id
 
@@ -13812,7 +13813,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - Pinag-isang Multi-Layunin Kimliği
 
 
-## <a name="poland-drivers-license-number"></a>Polonya sürücüsünün lisans numarası
+## <a name="poland-drivers-license-number"></a>Polonya ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
@@ -13824,19 +13825,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 - beş basamak
 - eğik çizgi
-- İki basamak
+- iki basamak
 - eğik çizgi
 - yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_poland_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_poland_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_poland_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_poland_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Poland Driver's License Number -->
@@ -13851,15 +13852,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -13867,93 +13868,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -13961,21 +13962,21 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
 
-#### <a name="keywords_poland_eu_drivers_license_number"></a>Keywords_poland_eu_driver's_license_number
+#### <a name="keywords_poland_eu_drivers_license_number"></a>Keywords_poland_eu_driver s_license_number
 
 - prawo jazdy
 - prawa jazdy
@@ -13985,22 +13986,22 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-Üç harf ve altı rakam
+üç harf ve altı basamak
 
 ### <a name="pattern"></a>Desen
 
-Üç harf (büyük/küçük harfe duyarlı değil) ve ardından altı basamak
+üç harf (büyük/küçük harfe duyarlı değil) ve ardından altı basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_polish_national_id desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_polish_national_id_passport_number bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_polish_national_id desenle eşleşen içeriği bulur.
+- Keyword_polish_national_id_passport_number anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- Poland Identity Card-->
@@ -14012,17 +14013,17 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_poland_national_id_passport_number"></a>Keyword_poland_national_id_passport_number
 
-- Dowód osósty
+- Dowód osobisty
 - Numer dowodu osobistego
-- Herwa i numer dowodu osobistego
-- Zaman (i nr dowodu osobistego)
-- Zamanwa i nr dowodu tośsamości
-- Dowód Tośsamości
-- dow. işletim sistemi.
+- Nazwa i numer dowodu osobistego
+- Nazwa i nr dowodu osobistego
+- Nazwa i nr dowodu tożsamości
+- Dowód Tożsamości
+- Dow. Os.
 
 
 ## <a name="poland-national-id-pesel"></a>Polonya ulusal kimliği (PESEL)
@@ -14033,24 +14034,24 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="pattern"></a>Desen
 
-- YYAAAA biçimindeki doğum tarihini temsil eden altı basamak
+- YYMMDD biçiminde doğum tarihini temsil eden altı basamak
 - dört basamak
-- tek bir onay rakamı
+- bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_pesel_identification_number desene eşleşen içeriği bulur.
-- Farklı bir Keyword_pesel_identification_number anahtar sözcük bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_pesel_identification_number desenle eşleşen içeriği bulur.
+- Keyword_pesel_identification_number anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_pesel_identification_number desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_pesel_identification_number desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
       <!-- Poland National ID (PESEL) -->
@@ -14065,53 +14066,53 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_pesel_identification_number"></a>Keyword_pesel_identification_number
 
-- dowód osósty
-- dowódos busty
+- dowód osobisty
+- dowódosobisty
 - niepowtarzalny numer
 - niepowtarzalnynumer
 - nr.-pesel
 - nr-pesel
 - numer identyfikacyjny
 - pesel
-- tośsamości narodowej
+- tożsamości narodowej
 
 
 ## <a name="poland-passport-number"></a>Polonya pasaport numarası
 
-Bu hassas bilgi türü varlık, AB Pasaport Numarası duyarlı bilgi türüne dahildir. Ayrıca tek başına hassas bilgi türü bir varlık olarak da kullanılabilir.
+Bu hassas bilgi türü varlığı AB Pasaport Numarası hassas bilgi türüne dahil edilir. Tek başına hassas bilgi türü varlığı olarak da kullanılabilir.
 
 ### <a name="format"></a>Biçim
 
-İki harf ve yedi basamak
+iki harf ve yedi basamak
 
 ### <a name="pattern"></a>Desen
 
 İki harf (büyük/küçük harfe duyarlı değil) ve ardından yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev, `Func_polish_passport_number_v2` desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
-- Anahtar sözcük veya `Keywords_eu_passport_number` `Keyword_polish_national_passport_number` bulunur.
-- Anahtar sözcük `Keywords_eu_passport_date` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev `Func_polish_passport_number_v2` , desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
+- veya `Keyword_polish_national_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- 'den `Keywords_eu_passport_date` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev, `Func_polish_passport_number_v2` desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
-- Anahtar sözcük veya `Keywords_eu_passport_number` `Keyword_polish_national_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev `Func_polish_passport_number_v2` , desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
+- veya `Keyword_polish_national_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev, `Func_polish_passport_number_v2` desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev `Func_polish_passport_number_v2` , desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
       <!-- Poland Passport Number -->
@@ -14137,19 +14138,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keyword_polish_national_passport_number"></a>Keyword_polish_national_passport_number
@@ -14158,32 +14159,32 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - numery paszportów
 - numery paszportowe
 - nr paszportu
-- nr. paszportu
+- Nr. paszportu
 - nr paszportów
-- n° passeport
-- passeport n°
+- n° geçiş noktası
+- passport n°
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="poland-physical-addresses"></a>Polonya fiziksel adresleri
 
-Buundled adlandırılmış varlık, Polonya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Polonya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
 ## <a name="poland-regon-number"></a>Polonya REGON numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -14195,23 +14196,23 @@ Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
 
 dokuz basamaklı veya 14 basamaklı sayı:
 
-- dokuz rakam veya
+- dokuz basamak veya
 - dokuz basamak
-- kısa çizgi
+- Tire
 - beş basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_polish_regon_number desene eşleşen içeriği bulur.
-- Bir Keywords_polish_regon_number anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_polish_regon_number desenle eşleşen içeriği bulur.
+- Keywords_polish_regon_number anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev Func_polish_regon_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev Func_polish_regon_number desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Polish REGON Number  -->
@@ -14225,52 +14226,52 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
         </Pattern>
       </Entity>
 ```
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_poland_regon_number"></a>Keywords_poland_regon_number
 
-- regon kimliği
+- regon id
 - istatistiksel sayı
 - istatistiksel kimlik
 - istatistiksel hayır
-- regon numarası
+- regon sayısı
 - regonid #
 - regonno #
 - şirket kimliği
-- companyid #
+- şirket kimliği #
 - companyidno #
-- numer statystyczny
+- sayı statystyczny
 - numeru regon
 - numerstatystyczny #
 - numeruregon #
 
 
-## <a name="poland-tax-identification-number"></a>Polonya vergi tanımlama numarası
+## <a name="poland-tax-identification-number"></a>Polonya vergi kimlik numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Boşluk veya sınırlayıcı yok 11 basamak
+Boşluk veya sınırlayıcı içermeyen 11 basamak
 
 ### <a name="pattern"></a>Desen
 
 11 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_poland_eu_tax_file_number` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_poland_eu_tax_file_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_poland_eu_tax_file_number` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_poland_eu_tax_file_number` bir anahtar sözcük bulunur.
 
 
 ```xml
@@ -14283,40 +14284,40 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_poland_eu_tax_file_number"></a>Keywords_poland_eu_tax_file_number
 
-- nip #
-- nip
-- numer identyfikacji podathan
-- numeridentyfikacjipodatvir #
+- Nip #
+- Nip
+- numer identyfikacji podatkowej
+- numeridentyfikacjipodatkowej #
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
-- kdv no #
+- Teneke #
+- kdv kimliği #
+- kdv kimliği
 - kdv no
-- kdv yok
 - kdv numarası
-- kdvid #
-- kdvid
+- vatid #
+- vatid
 - vatno #
 
 
-## <a name="portugal-citizen-card-number"></a>Portekiz kart numarası
+## <a name="portugal-citizen-card-number"></a>Portekiz vatandaşı kart numarası
 
 ### <a name="format"></a>Biçim
 
@@ -14326,15 +14327,15 @@ sekiz basamak
 
 sekiz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade Regex_portugal_citizen_card desene eşleşen içeriği bulur.
-- Farklı bir Keyword_portugal_citizen_card anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade Regex_portugal_citizen_card desenle eşleşen içeriği bulur.
+- Keyword_portugal_citizen_card anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Portugal Citizen Card Number -->
@@ -14346,61 +14347,61 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_portugal_citizen_card"></a>Keyword_portugal_citizen_card
 
 - bilhete de identidade
 - cartão de cidadão
-- Kart
+- vatandaş kartı
 - belge numarası
 - documento de identificação
 - kimlik numarası
-- kimlik no
+- tanımlama no
 - kimlik numarası
-- kimlik kartı hayır
+- kimlik kartı no
 - kimlik kartı numarası
 - ulusal kimlik kartı
-- nic
+- Nıc
 - número bi de portugal
 - número de identificação civil
-- número de identificação mali
+- número de identificação fiscal
 - número do documento
-- portekiz bi numarası
+- portugal bi numarası
 
 
-## <a name="portugal-drivers-license-number"></a>Portekiz sürücü lisans numarası
+## <a name="portugal-drivers-license-number"></a>Portekiz ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-two patterns - two letters followed followed 5-8 digits with special characters
+iki desen - iki harf ve ardından özel karakterler içeren 5-8 basamak
 
 ### <a name="pattern"></a>Desen
 
-Desen 1: İki harf, ardından özel karakterlerle 5/6:
-- İki harf (büyük/küçük harfe duyarlı değildir)
+Desen 1: İki harf ve ardından özel karakterlerle 5/6:
+- İki harf (büyük/küçük harfe duyarlı değil)
 - Kısa çizgi
 - Beş veya Altı basamak
 - Boşluk
-- Bir rakam
+- Bir basamak
 
-Desen 2: Bir harf ve ardından özel karakterlerle 6/8 basamak:
-- Tek harf (büyük/büyük/harfe duyarlı değildir)
+Desen 2: Bir harf ve ardından özel karakterler içeren 6/8 basamak:
+- Bir harf (büyük/küçük harfe duyarlı değil)
 - Kısa çizgi
 - Altı veya sekiz basamak
 - Boşluk
-- Bir rakam
+- Bir basamak
 
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_portugal_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_portugal_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_portugal_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_portugal_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Portugal Driver's License Number -->
@@ -14415,15 +14416,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -14431,93 +14432,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -14525,26 +14526,26 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
 
-#### <a name="keywords_portugal_eu_drivers_license_number"></a>Keywords_portugal_eu_driver's_license_number
+#### <a name="keywords_portugal_eu_drivers_license_number"></a>Keywords_portugal_eu_driver s_license_number
 
-- cart de motorista
-- cartista motorista
-- cartaş de habilitação
-- cartlis habilitação
+- carteira de motorista
+- carteira motorista
+- carteira de habilitação
+- carteira habilitação
 - número de licença
 - número licença
 - permissão de condução
@@ -14557,29 +14558,29 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-bir harf ve ardından boşluk veya sınırlayıcı yok olarak altı basamak
+bir harf ve ardından boşluk veya sınırlayıcı içermeyen altı basamak
 
 ### <a name="pattern"></a>Desen
 
 bir harf ve ardından altı basamak:
 
-- tek harf (büyük/harfe duyarlı değildir)
+- bir harf (büyük/küçük harfe duyarlı değil)
 - altı basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_portugal_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_portugal_eu_passport_number` bulunur.
-- Normal ifade, `Regex_eu_passport_date1` tarihi D.AA.YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_portugal_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_portugal_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date1` tarihi DD.AA.YYYY biçiminde bulur veya bir `Keywords_eu_passport_date` anahtar sözcük bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_portugal_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_portugal_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_portugal_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_portugal_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Portugal Passport Number -->
@@ -14605,75 +14606,75 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_portugal_eu_passport_number"></a>Keywords_portugal_eu_passport_number
 
 - número do passaporte
-- Portekizce pasaport
-- portekizce geçiş
-- Portekizce geçiş
+- portekiz pasaportu
+- portekizce passport
+- portekizce passaporte
 - passaporte nº
-- passeport nº
+- passport nº
 - números de passaporte
-- Portekizce pasaport
+- portekizce pasaportlar
 - número passaporte
 - números passaporte
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="portugal-physical-addresses"></a>Portekiz fiziksel adresleri
 
-Buundled adlandırılmış varlık, Portekiz'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Portekiz'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
-## <a name="portugal-tax-identification-number"></a>Portekiz vergi tanımlama numarası
+## <a name="portugal-tax-identification-number"></a>Portekiz vergi kimlik numarası
 
 ### <a name="format"></a>Biçim
 
-İsteğe bağlı boşluklar olan dokuz basamak
+isteğe bağlı boşluklar içeren dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
 - üç basamak
-- isteğe bağlı bir boşluk
+- isteğe bağlı bir alan
 - üç basamak
-- isteğe bağlı bir boşluk
+- isteğe bağlı bir alan
 - üç basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_portugal_eu_tax_file_number` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_portugal_eu_tax_file_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_portugal_eu_tax_file_number` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_portugal_eu_tax_file_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev,  `Func_portugal_eu_tax_file_number` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev  `Func_portugal_eu_tax_file_number` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Portugal Tax Identification Number -->
@@ -14688,35 +14689,35 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_portugal_eu_tax_file_number"></a>Keywords_portugal_eu_tax_file_number
 
-- cpf #
-- cpf
-- nif #
-- nif
+- Cpf #
+- Cpf
+- Nif #
+- Nif
 - número de identificação fisca
 - çok sayıda mali
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 
 
-## <a name="romania-drivers-license-number"></a>Romanya sürücü lisans numarası
+## <a name="romania-drivers-license-number"></a>Romanya ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
@@ -14725,18 +14726,18 @@ bir karakter ve ardından sekiz basamak
 ### <a name="pattern"></a>Desen
 
 bir karakter ve ardından sekiz basamak:
-- tek harf (büyük/büyük/harfe duyarlı değildir) veya basamak
+- bir harf (büyük/küçük harfe duyarlı değil) veya basamak
 - sekiz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_romania_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_romania_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_romania_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_romania_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Romania Driver's License Number -->
@@ -14751,15 +14752,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -14767,93 +14768,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -14861,14 +14862,14 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
@@ -14876,38 +14877,38 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 #### <a name="keywords_romania_eu_drivers_license_number"></a>Keywords_romania_eu_driver's_license_number
 
-- permis de conduisere
-- permisului de condurine
-- permisului conduisere
-- permisele de conduazie
-- permisele conduazie
-- permis conduisere
+- permis de conducere
+- permisului de conducere
+- permisului conducere
+- permisele de conducere
+- permisele conducere
+- permis conducere
 
 
 ## <a name="romania-passport-number"></a>Romanya pasaport numarası
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcılar olmadan sekiz veya dokuz basamak
+boşluk ve sınırlayıcı içermeyen sekiz veya dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
 sekiz veya dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_romania_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_romania_eu_passport_number` bulunur.
-- Normal ifade `Regex_romania_eu_passport_date` , tarihi AAAA/AAA YY (Örnek- 01 ŞUB/ŞUB 10) `Keywords_eu_passport_date` biçiminde veya bir anahtar sözcük bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_romania_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_romania_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_romania_eu_passport_date` tarihi DD MMM/AAA YY biçiminde bulur (Örnek- 01 ŞUB/ŞUB 10) veya anahtar sözcüğü `Keywords_eu_passport_date` bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_romania_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_romania_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_romania_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_romania_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Romania Passport Number -->
@@ -14933,63 +14934,63 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_romania_eu_passport_number"></a>Keywords_romania_eu_passport_number
 
-numrul parul parulportului numarul bului numerele paışaportului Paışaport nr
+numărul pașaportului numarul kararılui numerele pașaportului Pașaport nr
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="romania-personal-numeric-code-cnp"></a>Romanya kişisel sayısal kodu (CNP)
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcı olmayan 13 basamak
+Boşluk ve sınırlayıcı içermeyen 13 basamak
 
 ### <a name="pattern"></a>Desen
 
 - 1-9 arasında bir basamak
-- Doğum tarihini temsil eden altı basamak (YYAAA)
-- İki basamak; 01-52 veya 99 olabilir
+- doğum tarihini temsil eden altı basamak (YYMMDD)
+- 01-52 veya 99 olabilecek iki basamak
 - dört basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_romania_eu_national_id_card` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_romania_eu_national_id_card` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_romania_eu_national_id_card` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_romania_eu_national_id_card` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_romania_eu_national_id_card` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_romania_eu_national_id_card` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Romania Personal Numerical Code (CNP) -->
@@ -15004,55 +15005,55 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_romania_eu_national_id_card"></a>Keywords_romania_eu_national_id_card
 
-- cnp #
-- cnp
+- Cnp #
+- Cnp
 - cod identificare personal
-- cod numeric personal
+- cod sayısal kişisel
 - cod unic identificare
 - codnumericpersonal #
-- mali dönemler hakkında daha fazla ifade.
-- identificarea fiscalÜnr #
+- codul fiscal nr.
+- identificarea fiscală nr #
 - id-ul taxei
 - sigorta numarası
-- sigorta numarası #
+- insurancenumber #
 - ulusal kimlik #
 - ulusal kimlik
 - ulusal kimlik numarası
-- num identificare personal
-- numır kimlikleri
-- num bir kişisel unic
-- numridentitate #
-- numridentitate
-- numãrpersonalunic #
-- numãrpersonalunic
-- num birru de identificare mali
-- numrul de identificare mali
+- număr identificare personal
+- număr identitate
+- număr kişisel unic
+- număridentitate #
+- număridentitate
+- numărpersonalunic #
+- numărpersonalunic
+- număru de identificare fiscală
+- numărul de identificare fiscală
 - kişisel sayısal kod
-- sabitleme #
-- sabitleme
-- vergi dosyası yok
+- Pin #
+- Pin
+- vergi dosyası no
 - vergi dosyası numarası
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
-- benzersiz tanımlama numarası
+- Teneke #
+- benzersiz kimlik numarası
 - benzersiz kimlik numarası
 - uniqueidentityno #
 - uniqueidentityno
@@ -15060,19 +15061,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ## <a name="romania-physical-addresses"></a>Romanya fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Romanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Romanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
-## <a name="russia-passport-number-domestic"></a>Yurt içi Rusya pasaport numarası
+## <a name="russia-passport-number-domestic"></a>Rusya pasaport numarası yurt içi
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -15084,21 +15085,21 @@ Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
 
 10 basamaklı sayı:
 
-- İki basamak
+- iki basamak
 - isteğe bağlı bir boşluk veya kısa çizgi
-- İki basamak
-- isteğe bağlı bir boşluk
+- iki basamak
+- isteğe bağlı bir alan
 - altı basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Kayıtex türü Regex_Russian_Passport_Number_Domestic desene eşleşen içeriği bulur.
-- Bir Keyword_Russian_Passport_Number anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Regex Regex_Russian_Passport_Number_Domestic desenle eşleşen içeriği bulur.
+- Keyword_Russian_Passport_Number anahtar sözcüğü bulunur.
 
 ```xml
       <!-- Russian Passport Number Domestic -->
@@ -15110,16 +15111,16 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_russia_passport_number_domestic"></a>Keyword_russia_passport_number_domestic
 
 - pasaport numarası
-- pasaport yok
-- pasaport #
+- pasaport no
+- Pasaport #
 - pasaport kimliği
-- Passportno #
-- pasaportsayı #
+- passportno #
+- passportnumber #
 - паспорт нет
 - паспорт id
 - pоссийской паспорт
@@ -15132,10 +15133,10 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ## <a name="russia-passport-number-international"></a>Rusya pasaport numarası uluslararası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -15147,19 +15148,19 @@ dokuz basamaklı sayı
 
 dokuz basamaklı sayı:
 
-- İki basamak
+- iki basamak
 - isteğe bağlı bir boşluk veya kısa çizgi
 - yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Kayıtexex Regex_Russian_Passport_Number_International desene eşleşen içeriği bulur.
-- Bir Keyword_Russian_Passport_Number anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Regex Regex_Russian_Passport_Number_International desenle eşleşen içeriği bulur.
+- Keyword_Russian_Passport_Number anahtar sözcüğü bulunur.
 
 ```xml
       <!-- Russian Passport Number International -->
@@ -15171,16 +15172,16 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_russia_passport_number_international"></a>Keywords_russia_passport_number_international
 
 - pasaport numarası
-- pasaport yok
-- pasaport #
+- pasaport no
+- Pasaport #
 - pasaport kimliği
-- Passportno #
-- pasaportsayı #
+- passportno #
+- passportnumber #
 - паспорт нет
 - паспорт id
 - pоссийской паспорт
@@ -15199,17 +15200,17 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="pattern"></a>Desen
 
-Birbirini arda 10 basamak
+Ardışık 10 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_saudi_arabia_national_id desene eşleşen içeriği bulur.
-- Bir Keyword_saudi_arabia_national_id anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_saudi_arabia_national_id desenle eşleşen içeriği bulur.
+- Keyword_saudi_arabia_national_id anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Saudi Arabia National ID -->
@@ -15223,7 +15224,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_saudi_arabia_national_id"></a>Keyword_saudi_arabia_national_id
 
@@ -15242,24 +15243,24 @@ dokuz harf ve rakam
 ### <a name="pattern"></a>Desen
 
 - dokuz harf ve rakam:
-- "F", "G", "S" veya "T" harfi (büyük/harfe duyarlı değildir)
+- "F", "G", "M", "S" veya "T" harfi (büyük/küçük harfe duyarlı değildir)
 - yedi basamak
-- alfabetik onay basamakları
+- alfabetik denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade Regex_singapore_nric desene eşleşen içeriği bulur.
-- Farklı bir Keyword_singapore_nric anahtar sözcük bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade Regex_singapore_nric desenle eşleşen içeriği bulur.
+- Keyword_singapore_nric anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_singapore_nric desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_singapore_nric desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- Singapore National Registration Identity Card (NRIC) Number -->
@@ -15274,11 +15275,11 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_singapore_nric"></a>Keyword_singapore_nric
 
-- National Registration Identity Card
+- Ulusal Kayıt Kimlik Kartı
 - Kimlik Kartı Numarası
 - NRIC
 - IC
@@ -15288,7 +15289,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - 身份證
 
 
-## <a name="slovakia-drivers-license-number"></a>Slovakya sürücü lisans numarası
+## <a name="slovakia-drivers-license-number"></a>Slovakya sürücü ehliyeti numarası
 
 ### <a name="format"></a>Biçim
 
@@ -15298,18 +15299,18 @@ bir karakter ve ardından yedi basamak
 
 bir karakter ve ardından yedi basamak
 
-- tek harf (büyük/büyük/harfe duyarlı değildir) veya basamak
+- bir harf (büyük/küçük harfe duyarlı değil) veya basamak
 - yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_slovakia_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_slovakia_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_slovakia_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_slovakia_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Slovakia Driver's License Number -->
@@ -15324,15 +15325,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -15340,93 +15341,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -15434,52 +15435,52 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
 
-#### <a name="keywords_slovakia_eu_drivers_license_number"></a>Keywords_slovakia_eu_driver's_license_number
+#### <a name="keywords_slovakia_eu_drivers_license_number"></a>Keywords_slovakia_eu_driver s_license_number
 
-- vodičskč preukaz
+- vodičský preukaz
 - vodičské preukazy
 - vodičského preukazu
-- vodičskčch preukazov
+- vodičských preukazov
 
 
 ## <a name="slovakia-passport-number"></a>Slovakya pasaport numarası
 
 ### <a name="format"></a>Biçim
 
-bir basamak veya harf, ardından boşluk veya sınırlayıcı yokken yedi basamak
+sekiz veya dokuz karakterli alfasayısal desen
 
 ### <a name="pattern"></a>Desen
 
-bir rakam veya harf (büyük/harfe duyarlı değil) ve ardından yedi basamak
+bir harf (büyük/küçük harfe duyarlı değil) ve ardından yedi basamak veya iki harf (büyük/küçük harfe duyarlı değil) ve ardından altı veya yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_slovakia_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_slovakia_eu_passport_number` bulunur.
-- Normal ifade, `Regex_eu_passport_date1` tarihi D.AA.YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_slovakia_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_slovakia_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date1` tarihi DD.AA.YYYY biçiminde bulur veya bir `Keywords_eu_passport_date` anahtar sözcük bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_slovakia_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_slovakia_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_slovakia_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_slovakia_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Slovakia Passport Number -->
@@ -15505,19 +15506,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_slovakia_eu_passport_number"></a>Keywords_slovakia_eu_passport_number
@@ -15525,47 +15526,47 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - číslo pasu
 - čísla pasov
 - pas č.
-- Passeport n°
-- n° Passeport
+- Passport n°
+- n° Geçiş Noktası
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="slovakia-personal-number"></a>Slovakya kişisel numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-İsteğe bağlı ters eğik çizgi içeren dokuz veya 10 basamak
+isteğe bağlı ters eğik çizgi içeren dokuz veya 10 basamak
 
 ### <a name="pattern"></a>Desen
 
-- Doğum tarihini temsil eden altı basamak
+- doğum tarihini temsil eden altı basamak
 - isteğe bağlı eğik çizgi (/)
 - üç basamak
-- isteğe bağlı bir onay rakamı
+- isteğe bağlı bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_slovakia_eu_national_id_card` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_slovakia_eu_national_id_card` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_slovakia_eu_national_id_card` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_slovakia_eu_national_id_card` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev,  `Func_slovakia_eu_national_id_card` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev  `Func_slovakia_eu_national_id_card` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Slovakia Personal Number -->
@@ -15581,7 +15582,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Version>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_slovakia_eu_national_id_card"></a>Keywords_slovakia_eu_national_id_card
 
@@ -15591,74 +15592,74 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - číslo občianského preukazu
 - daňové číslo
 - kimlik numarası
-- kimlik no
+- tanımlama no
 - kimlik numarası
 - identifikačná karta č
 - identifikačné číslo
-- kimlik kartı hayır
+- kimlik kartı no
 - kimlik kartı numarası
 - národná identifikačná značka č
-- ulusal numara
-- ulusalsayı #
-- cafezeti személyazonosító igttivány
-- kişiselsayı #
+- ulusal sayı
+- nationalnumber #
+- nemzeti személyazonosító igazolvány
+- personalidnumber #
 - rč
-- hanne cislo
-- cafené číslo
+- rodne cislo
+- rodné číslo
 - sosyal güvenlik numarası
 - ssn #
 - ssn
-- személyi ig biryavány szám
-- személyi ig biryavány száma
-- személyig birvány szám
-- vergi dosyası yok
+- személyi igazolvány szám
+- személyi igazolvány száma
+- személyigazolvány szám
+- vergi dosyası no
 - vergi dosyası numarası
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 
 
 ## <a name="slovakia-physical-addresses"></a>Slovakya fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Slovakya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Slovakya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
-## <a name="slovenia-drivers-license-number"></a>Slovenya sürücü lisans numarası
+## <a name="slovenia-drivers-license-number"></a>Slovenya ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcılar olmadan dokuz basamak
+boşluk ve sınırlayıcı içermeyen dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
 dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_slovenia_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_slovenia_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_slovenia_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_slovenia_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Slovenia Driver's License Number -->
@@ -15673,15 +15674,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -15689,93 +15690,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -15783,14 +15784,14 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
@@ -15809,30 +15810,30 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-boşluk veya sınırlayıcı yok, iki harf ve ardından da yedi basamak
+boşluk veya sınırlayıcı içermeyen iki harf ve ardından yedi basamak
 
 ### <a name="pattern"></a>Desen
 
-İki harf ve ardından da yedi basamak:
+iki harf ve ardından yedi basamak:
 
 - "P" harfi
-- büyük harf
+- bir büyük harf
 - yedi basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_slovenia_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_slovenia_eu_passport_number` bulunur.
-- Normal ifade, `Regex_eu_passport_date1` tarihi D.AA.YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_slovenia_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_slovenia_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_eu_passport_date1` tarihi DD.AA.YYYY biçiminde bulur veya bir `Keywords_eu_passport_date` anahtar sözcük bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_slovenia_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_slovenia_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_slovenia_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_slovenia_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Slovenia Passport Number -->
@@ -15858,25 +15859,25 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_slovenia_eu_passport_number"></a>Keywords_slovenia_eu_passport_number
 
 - številka potnega lista
-- potek veljav herti
+- potek veljavnosti
 - potni listesi #
 - datum rojstva
 - potni listesi
@@ -15884,50 +15885,50 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="slovenia-physical-addresses"></a>Slovenya fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Slovenya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Slovenya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
 ## <a name="slovenia-tax-identification-number"></a>Slovenya vergi kimlik numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Boşluk veya sınırlayıcı yok sekiz basamak
+boşluk veya sınırlayıcı içermeyen sekiz basamak
 
 ### <a name="pattern"></a>Desen
 
 - 1-9 arasında bir basamak
 - altı basamak
-- tek bir onay rakamı
+- bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_slovenia_eu_tax_file_number` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_slovenia_eu_tax_file_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_slovenia_eu_tax_file_number` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_slovenia_eu_tax_file_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev,  `Func_slovenia_eu_tax_file_number` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev  `Func_slovenia_eu_tax_file_number` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Slovenia Tax Identification Number -->
@@ -15942,67 +15943,67 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_slovenia_eu_tax_file_number"></a>Keywords_slovenia_eu_tax_file_number
 
 - davčna številka
 - identifikacijska številka davka
 - številka davčne datoteke
-- vergi dosyası yok
+- vergi dosyası no
 - vergi dosyası numarası
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 
 
-## <a name="slovenia-unique-master-citizen-number"></a>Slovenya benzersiz ana numarayı
+## <a name="slovenia-unique-master-citizen-number"></a>Slovenya Benzersiz Ana Vatandaş Numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Boşluk veya sınırlayıcı olmayan 13 basamak
+Boşluk veya sınırlayıcı içermeyen 13 basamak
 
 ### <a name="pattern"></a>Desen
 
 Belirtilen desende 13 basamak:
 
-- Doğum tarihine karşılık gelen yedi basamak (DDMMLLL) ve burada "LLL" doğum yılı son üç basamabdır
-- Doğum alanına karşılık gelen iki basamak "50"
-- Cinsiyet ve seri numarası bileşimine karşılık gelen üç basamak aynı gün doğum günü doğum günü. Erkek için 000-499, kadın için 500-999.
-- tek bir onay rakamı
+- doğum tarihine (DDMMLLL) karşılık gelen yedi basamak; burada "LLL" doğum yılının son üç basamağını ifade eder
+- doğum alanına karşılık gelen iki basamak "50"
+- aynı gün doğan kişiler için cinsiyet ve seri numarasının birleşimine karşılık gelen üç basamak. Erkek için 000-499, kadın için 500-999.
+- bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_slovenia_eu_national_id_card` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_slovenia_eu_national_id_card` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_slovenia_eu_national_id_card` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_slovenia_eu_national_id_card` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_slovenia_eu_national_id_card` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_slovenia_eu_national_id_card` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Slovenia Unique Master Citizen Number -->
@@ -16017,19 +16018,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_slovenia_eu_national_id_card"></a>Keywords_slovenia_eu_national_id_card
 
-- edinstvena številka glavnega dršavljana
+- edinstvena številka glavnega državljana
 - emšo
 - enotna maticna številka obcana
 - kimlik kartı
 - kimlik numarası
 - identifikacijska številka
 - kimlik kartı
-- nacionalna kimliği
-- nacionalni potni listesi
+- nacionalna id
+- nacionalni potni list
 - ulusal kimlik
 - osebna izkaznica
 - osebni koda
@@ -16038,11 +16039,11 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - kişisel kod
 - kişisel numara
 - kişisel sayısal kod
-- številka dršavljana
-- benzersiz benzersiz benzersiz telefon numarası
+- številka državljana
+- benzersiz vatandaş numarası
 - benzersiz kimlik numarası
 - benzersiz kimlik numarası
-- benzersiz ana ürün numarası
+- benzersiz ana vatandaş numarası
 - benzersiz kayıt numarası
 - uniqueidentityno #
 - uniqueidentityno #
@@ -16052,27 +16053,27 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-Boşluk içeremez 13 basamak
+Boşluk içerebilen 13 basamak
 
 ### <a name="pattern"></a>Desen
 
 13 basamak:
-- Doğum tarihi olan YYAAAA biçiminde altı basamak
+- doğum tarihi olan YYMMDD biçiminde altı basamak
 - dört basamak
-- tek basamaklı bir ekinlik göstergesi
+- tek basamaklı vatandaşlık göstergesi
 - "8" veya "9" rakamı
-- bir basamak, yani bir çek numarası numarası
+- sağlama toplamı olan bir basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_south_africa_identification_number desene eşleşen içeriği bulur.
-- Bir arama Keyword_south_africa_identification_number anahtar sözcüğü bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_south_africa_identification_number desenle eşleşen içeriği bulur.
+- Keyword_south_africa_identification_number anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- South Africa Identification Number -->
@@ -16084,7 +16085,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_south_africa_identification_number"></a>Keyword_south_africa_identification_number
 
@@ -16093,7 +16094,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - Kimlik
 
 
-## <a name="south-korea-resident-registration-number"></a>Güney Kore yerleşik kayıt numarası
+## <a name="south-korea-resident-registration-number"></a>Güney Kore ikamet kayıt numarası
 
 ### <a name="format"></a>Biçim
 
@@ -16102,27 +16103,27 @@ Kısa çizgi içeren 13 basamak
 ### <a name="pattern"></a>Desen
 
 13 basamak:
-- Doğum tarihi olan YYAAAA biçiminde altı basamak
+- doğum tarihi olan YYMMDD biçiminde altı basamak
 - kısa çizgi
 - yüzyıla ve cinsiyete göre belirlenen bir rakam
-- dört basamaklı bölge-doğum kodu
-- yukarıdaki sayıların özdeş olduğu birini ayırt etmek için kullanılan bir rakam
-- bir onay basamakları seçin.
+- dört basamaklı doğum bölgesi kodu
+- önceki sayıların özdeş olduğu kişileri ayırt etmek için kullanılan bir basamak
+- onay basamalı.
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_south_korea_resident_number desene eşleşen içeriği bulur.
-- Farklı bir Keyword_south_korea_resident_number anahtar sözcük bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_south_korea_resident_number desenle eşleşen içeriği bulur.
+- Keyword_south_korea_resident_number anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_south_korea_resident_number desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_south_korea_resident_number desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- South Korea Resident Registration Number -->
@@ -16137,12 +16138,12 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_south_korea_resident_number"></a>Keyword_south_korea_resident_number
 
 - Ulusal kimlik kartı
-- Sökenin Kayıt Numarası
+- Vatandaşın Kayıt Numarası
 - Jumin deungnok beonho
 - RRN
 - 주민등록번호
@@ -16150,10 +16151,10 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ## <a name="spain-dni"></a>İspanya DNI
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -16163,24 +16164,24 @@ sekiz basamak ve ardından bir karakter
 
 ### <a name="pattern"></a>Desen
 
-Yedi basamak ve ardından bir karakter
+yedi basamak ve ardından bir karakter
 
 - sekiz basamak
 - İsteğe bağlı bir boşluk veya kısa çizgi
-- tek bir onay harfi (büyük/harfe duyarlı değildir)
+- bir onay harfi (büyük/küçük harfe duyarlı değil)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev veya  `Func_spain_eu_DL_and_NI_number_citizen` desene `Func_spain_eu_DL_and_NI_number_foreigner` eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_spain_eu_national_id_card"` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_spain_eu_DL_and_NI_number_citizen` veya `Func_spain_eu_DL_and_NI_number_foreigner` desenle eşleşen içeriği bulur.
+- 'den  `Keywords_spain_eu_national_id_card"` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev veya  `Func_spain_eu_DL_and_NI_number_citizen` desene `Func_spain_eu_DL_and_NI_number_foreigner` eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_spain_eu_DL_and_NI_number_citizen` veya `Func_spain_eu_DL_and_NI_number_foreigner` desenle eşleşen içeriği bulur.
 
 
 ```xml
@@ -16203,7 +16204,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_spain_eu_national_id_card"></a>Keywords_spain_eu_national_id_card
 
@@ -16219,18 +16220,18 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - ulusal kimlik
 - nationalid #
 - nationalidno #
-- nie #
-- nie
+- Nie #
+- Nie
 - nienúmero #
 - número de identificación
 - número nacional identidad
 - kişisel kimlik numarası
-- kişisel kimlik hayır
+- kişisel kimlik no
 - benzersiz kimlik numarası
-- uniqueid #
+- Uniqueıd #
 
 
-## <a name="spain-drivers-license-number"></a>İspanya sürücüsü lisans numarası
+## <a name="spain-drivers-license-number"></a>İspanya ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
@@ -16241,20 +16242,20 @@ sekiz basamak ve ardından bir karakter
 sekiz basamak ve ardından bir karakter:
 
 - sekiz basamak
-- tek basamaklı veya harf (büyük/harfe duyarlı değildir)
+- bir basamak veya harf (büyük/küçük harfe duyarlı değil)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev veya  `Func_spain_eu_DL_and_NI_number_citizen` desene `Func_spain_eu_DL_and_NI_number_foreigner` eşleşen içeriği bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_spain_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_spain_eu_DL_and_NI_number_citizen` veya `Func_spain_eu_DL_and_NI_number_foreigner` desenle eşleşen içeriği bulur.
+- veya `Keywords_spain_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev veya  `Func_spain_eu_DL_and_NI_number_citizen` desene `Func_spain_eu_DL_and_NI_number_foreigner` eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_spain_eu_DL_and_NI_number_citizen` veya `Func_spain_eu_DL_and_NI_number_foreigner` desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Spain Driver's License Number -->
@@ -16282,15 +16283,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -16298,93 +16299,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -16392,21 +16393,21 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
 
-#### <a name="keywords_spain_eu_drivers_license_number"></a>Keywords_spain_eu_driver's_license_number
+#### <a name="keywords_spain_eu_drivers_license_number"></a>Keywords_spain_eu_driver s_license_number
 
 - permiso de conducción
 - permiso conducción
@@ -16426,30 +16427,30 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-boşluk veya sınırlayıcı olmayan harflerle sayıların sekiz veya dokuz karakterlik birleşimi
+boşluk veya sınırlayıcı içermeyen sekiz veya dokuz karakterlik harf ve sayıların birleşimi
 
 ### <a name="pattern"></a>Desen
 
-harf ve sayıların sekiz veya dokuz karakterlik birleşimi:
+harflerin ve sayıların sekiz veya dokuz karakterlik bir birleşimi:
 
-- İki basamak veya harf
-- bir rakam veya harf (isteğe bağlı)
+- iki basamak veya harf
+- bir basamak veya harf (isteğe bağlı)
 - altı basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
-Uygulanamaz
+Geçerli değil
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade desene  `Regex_spain_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_spain_eu_passport_number` bulunur.
-- Normal ifade `Regex_spain_eu_passport_date` , tarihi DD-AA-YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade  `Regex_spain_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_spain_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- Normal ifade `Regex_spain_eu_passport_date` tarihi DD-AA-YYYY biçiminde bulur veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_spain_eu_passport_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_passport_number` `Keywords_spain_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_spain_eu_passport_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_spain_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
       <!-- Spain Passport Number -->
@@ -16475,19 +16476,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_spain_eu_passport_number"></a>Keywords_spain_eu_passport_number
@@ -16499,23 +16500,23 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - número de pasaporte
 - números pasaporte
 - pasaporte no
-- Passeport n°
-- n° Passeport
+- Passport n°
+- n° Geçiş Noktası
 - pasaporte no.
 - pasaporte n°
-- İspanya Pasaport
+- İspanya pasaportu
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="spain-physical-addresses"></a>İspanya fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, İspanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, İspanya'dan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
@@ -16530,26 +16531,26 @@ Orta
 ### <a name="pattern"></a>Desen
 
 11-12 basamak:
-- İki basamak
+- iki basamak
 - eğik çizgi (isteğe bağlı)
-- yedi ile sekiz basamak arasında
+- yedi ila sekiz basamak
 - eğik çizgi (isteğe bağlı)
-- İki basamak
+- iki basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_spanish_social_security_number desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
-- - Anahtar sözcük  `Keywords_spain_eu_ssn_or_equivalent` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_spanish_social_security_number desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
+- - 'den  `Keywords_spain_eu_ssn_or_equivalent` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_spanish_social_security_number desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_spanish_social_security_number desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
     <!-- Spain SSN -->
@@ -16564,74 +16565,74 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_spain_eu_passport_number"></a>Keywords_spain_eu_passport_number
 
 - ssn
 - ssn #
 - socialsecurityno
-- sosyal güvenlik yok
+- sosyal güvenlik hayır
 - sosyal güvenlik numarası
 - número de la seguridad social
 
 
-## <a name="spain-tax-identification-number"></a>İspanya vergi tanımlama numarası
+## <a name="spain-tax-identification-number"></a>İspanya vergi kimlik numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Belirtilen desende yedi veya sekiz basamak ve bir veya iki harf
+belirtilen düzende yedi veya sekiz basamak ve bir veya iki harf
 
 ### <a name="pattern"></a>Desen
 
-İspanya Ulusal Kimlik Kartı bulunan İspanyolca Doğal Kişiler:
+İspanya Ulusal Kimlik Kartı olan İspanyol Gerçek Kişiler:
 
 - sekiz basamak
-- büyük harf (büyük/küçük harfe duyarlı)
+- bir büyük harf (büyük/küçük harfe duyarlı)
 
-İspanya Ulusal Kimlik Kartı olmayan yerleşik olmayan spaniardlar
+İspanya Ulusal Kimlik Kartı olmayan yerleşik olmayan İspanyollar
 
-- büyük harf "L" (büyük/küçük harfe duyarlı)
+- bir büyük harf "L" (büyük/küçük harfe duyarlı)
 - yedi basamak
-- büyük harf (büyük/küçük harfe duyarlı)
+- bir büyük harf (büyük/küçük harfe duyarlı)
 
-İspanya Ulusal Kimlik Kartı olmayan 14 yıllık yaş altında yaşayan yerleşik spaniardlar:
+İspanya Ulusal Kimlik Kartı olmayan 14 yaşın altındaki yerleşik İspanyollar:
 
-- büyük harf "K" (büyük/küçük harfe duyarlı)
+- bir büyük harf "K" (büyük/küçük harfe duyarlı)
 - yedi basamak
-- büyük harf (büyük/küçük harfe duyarlı)
+- bir büyük harf (büyük/küçük harfe duyarlı)
 
-Yabancı'nın Kimlik Numarası ile özel olarak belirlendi
+Yabancı Kimlik Numarası olan Yabancılar
 
-- "X", "Y" veya "Z" olan büyük harf (büyük/küçük harfe duyarlı)
+- "X", "Y" veya "Z" (büyük/küçük harfe duyarlı) olan bir büyük harf
 - yedi basamak
-- büyük harf (büyük/küçük harfe duyarlı)
+- bir büyük harf (büyük/küçük harfe duyarlı)
 
-Yabancının Kimlik Numarası olmadan yabancı
+Yabancı Kimlik Numarası Olmayan Yabancılar
 
 - "M" olan bir büyük harf (büyük/küçük harfe duyarlı)
 - yedi basamak
-- büyük harf (büyük/küçük harfe duyarlı)
+- bir büyük harf (büyük/küçük harfe duyarlı)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev veya  `Func_spain_eu_tax_file_number` desene `Func_spain_eu_DL_and_NI_number_citizen` eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_spain_eu_tax_file_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_spain_eu_tax_file_number` veya `Func_spain_eu_DL_and_NI_number_citizen` desenle eşleşen içeriği bulur.
+- 'den  `Keywords_spain_eu_tax_file_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev veya  `Func_spain_eu_tax_file_number` desene `Func_spain_eu_DL_and_NI_number_citizen` eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_spain_eu_tax_file_number` veya `Func_spain_eu_DL_and_NI_number_citizen` desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Spain Tax Identification Number -->
@@ -16653,67 +16654,67 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_spain_eu_tax_file_number"></a>Keywords_spain_eu_tax_file_number
 
-- cif
+- Cıf
 - cifid #
 - cifnúmero #
 - número de contribuyente
-- número de identificación mali
+- número de identificación fiscal
 - número de impuesto corporativo
-- spanishcifid #
-- spanishcifid
+- İspanyolca #
+- İspanyolca
 - spanishcifno #
 - spanishcifno
-- vergi dosyası yok
+- vergi dosyası no
 - vergi dosyası numarası
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 
 
-## <a name="sql-server-connection-string"></a>SQL Server dizesini seçin
+## <a name="sql-server-connection-string"></a>bağlantı dizesini SQL Server
 
 ### <a name="format"></a>Biçim
 
-"Kullanıcı Kimliği", "Kullanıcı Kimliği", "kullanıcı arabirimi" veya "UserId" dizesi ve ardından aşağıdaki desende ana hatlarıyla belirtilen karakterler ve dizeler.
+"Kullanıcı Kimliği", "Kullanıcı Kimliği", "uid" veya "UserId" dizesi ve ardından aşağıdaki desende özetlenen karakterler ve dizeler.
 
 ### <a name="pattern"></a>Desen
 
-- "Kullanıcı Kimliği", "Kullanıcı Kimliği", "kullanıcı arabirimi" veya "UserId" dizesi
-- 1-200 arası küçük veya büyük harfler, basamaklar, simgeler, özel karakterler veya boşluklar arasında herhangi bir birleşim
-- "Parola" veya "pwd" dizesinin önünde küçük harf olmayan "pwd" dizesi
+- "Kullanıcı Kimliği", "Kullanıcı Kimliği", "uid" veya "UserId" dizesi
+- 1-200 arasında küçük veya büyük harf, rakam, simge, özel karakter veya boşluk birleşimi
+- "Password" veya "pwd" dizesinde "pwd" harfinin önüne küçük harf eklenmez
 - eşittir işareti (=)
-- Dolar işareti ($), yüzde simgesi (%), simgeden büyük (>), simge (@), tırnak işareti ("), noktalı virgül (;), sol küme ayracı([) veya sol köşeli ayraç ({) olmayan herhangi bir karakter
-- noktalı virgül (;), eğik çizgi (/) veya tırnak işareti (") olmayan 7-128 karakter birleşimi
+- dolar işareti ($), yüzde simgesi (%), simgeden büyük (>), simge (@), tırnak işareti ("), noktalı virgül (;), sol ayraç([) veya sol köşeli ayraç ({) olmayan herhangi bir karakter
+- noktalı virgül (;), eğik çizgi (/) veya tırnak işareti (") olmayan 7-128 karakterden oluşan herhangi bir birleşim
 - noktalı virgül (;) veya tırnak işareti (")
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- Normal ifade CEP_Regex_SQLServerConnectionString desene eşleşen içeriği bulur.
-- Bir CEP_GlobalFilter anahtar sözcüğü bulunamıyor.
-- Normal CEP_PasswordPlaceHolder ifadesi desene eşleşen içeriği bulamıyor.
-- Normal CEP_CommonExampleKeywords ifade, desene eşleşen içeriği bulamıyor.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- Normal ifade CEP_Regex_SQLServerConnectionString desenle eşleşen içeriği bulur.
+- CEP_GlobalFilter anahtar sözcüğü bulunamadı.
+- Normal ifade CEP_PasswordPlaceHolder desenle eşleşen içeriği bulmaz.
+- Normal ifade CEP_CommonExampleKeywords desenle eşleşen içeriği bulmaz.
 
 ```sql
 <!---SQL Server Connection String>
@@ -16729,51 +16730,51 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="cep_globalfilter"></a>CEP_GlobalFilter
 
 - bazı parolalar
 - somepassword
 - secretPassword
-- örnek
+- Örnek
 
 #### <a name="cep_passwordplaceholder"></a>CEP_PasswordPlaceHolder
 
-Bu hassas bilgi türü, bu anahtar sözcükleri bir anahtar sözcük listesi değil, normal bir ifade kullanarak tanımlar.
+Bu hassas bilgi türü, bu anahtar sözcükleri anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.
 
 - Parola veya pwd ve ardından 0-2 boşluk, eşittir işareti (=), 0-2 boşluk ve yıldız (*) -OR-
-- Password veya pwd ve ardından:
+- Parola veya pwd ve ardından:
     - Eşittir işareti (=)
-    - Küçük simge (<)
-    - Büyük veya küçük harf, rakam, yıldız (*), kısa çizgi (-), alt çizgi (_) veya boşluk karakteri olan 1-200 karakterden herhangi biri
+    - Küçüktür simgesi (<)
+    - Büyük veya küçük harf, basamak, yıldız işareti (*), kısa çizgi (-), altı çizili (_) veya boşluk karakteri olan 1-200 karakterden oluşan herhangi bir birleşim
     - Büyüktür simgesi (>)
 
 #### <a name="cep_commonexamplekeywords"></a>CEP_CommonExampleKeywords
 
-Bu hassas bilgi türü, bu anahtar sözcükleri bir anahtar sözcük listesi değil, normal bir ifade kullanarak tanımlar.
+Bu hassas bilgi türü, bu anahtar sözcükleri anahtar sözcük listesi değil normal bir ifade kullanarak tanımlar.
 
-- contoso
-- fabrikam
-- northwind
-- korumalı alan
-- onebox
-- localhost
+- Contoso
+- Fabrikam
+- Northwind
+- Sandbox
+- Onebox
+- Localhost
 - 127.0.0.1
-- testacs.<!--no-hyperlink-->com
-- s-int.<!--no-hyperlink-->net
+- testacs.<!--no-hyperlink-->Com
+- s-int.<!--no-hyperlink-->Net
 
 
-## <a name="surgical-procedures"></a>Yordamlar
+## <a name="surgical-procedures"></a>Cerrahi prosedürler
 
-Bu bakıla sahip olmayan varlık, ek yordamları gibi yordamlarla ilgili *terimleri algılar*.  Yalnızca İngilizce terimleri destekler. Ayrıca SIT adlı tüzel kişi [SIT adlı sağlık hüküm ve koşullarına](#all-medical-terms-and-conditions) da dahildir.
+Bu unbundled adlı varlık, *apandisektomi* gibi cerrahi prosedürlerle ilgili terimleri algılar.  Yalnızca İngilizce terimleri destekler. Ayrıca entity SIT adlı [tüm tıbbi hüküm ve koşullar](#all-medical-terms-and-conditions) paketinde yer alır.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Yüksek
 
 
-## <a name="sweden-drivers-license-number"></a>İsveç sürücüsünün lisans numarası
+## <a name="sweden-drivers-license-number"></a>İsveç ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
@@ -16787,15 +16788,15 @@ Kısa çizgi içeren 10 basamak:
 - kısa çizgi
 - dört basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade desene  `Regex_sweden_eu_driver's_license_number` eşleşen içerik bulur.
-- Anahtar sözcük veya  `Keywords_eu_driver's_license_number` `Keywords_sweden_eu_driver's_license_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade  `Regex_sweden_eu_driver's_license_number` , desenle eşleşen içeriği bulur.
+- veya `Keywords_sweden_eu_driver's_license_number` anahtar `Keywords_eu_driver's_license_number` sözcüğü bulunur.
 
 ```xml
       <!-- Sweden Driver's License Number -->
@@ -16810,15 +16811,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -16826,93 +16827,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -16920,29 +16921,29 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
 
-#### <a name="keywords_sweden_eu_drivers_license_number"></a>Keywords_sweden_eu_driver's_license_number
+#### <a name="keywords_sweden_eu_drivers_license_number"></a>Keywords_sweden_eu_driver s_license_number
 
 - ajokortti
-- permis de conduisere
-- ajokortin çok sayıda
+- permis de conducere
+- ajokortin çok
 - kuljettajat lic.
 - drivere lic.
 - körkort
-- numrul permisului de condulişe
+- numărul permisului de conducere
 -  שאָפער דערלויבעניש נומער
 - förare lic.
 -  דריווערס דערלויבעניש
@@ -16958,25 +16959,25 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 ### <a name="pattern"></a>Desen
 
 10 veya 12 basamak ve isteğe bağlı sınırlayıcı:
-- İki basamak (isteğe bağlı)
-- Tarih biçimindeki altı basamak YYAAA
-- "-" veya "+" sınırlayıcı (isteğe bağlı)
+- iki basamak (isteğe bağlı)
+- YYMMDD tarih biçiminde altı basamak
+- "-" veya "+" sınırlayıcısı (isteğe bağlı)
 - dört basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev, `Func_swedish_national_identifier` desene eşleşen içeriği bulur.
-- Anahtar sözcük `Keywords_swedish_national_identifier` bulundu
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev `Func_swedish_national_identifier` , desenle eşleşen içeriği bulur.
+- 'den `Keywords_swedish_national_identifier` bir anahtar sözcük bulundu
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev, `Func_swedish_national_identifier` desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev `Func_swedish_national_identifier` , desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 
 ```xml
@@ -16992,20 +16993,20 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_swedish_national_identifier"></a>Keywords_swedish_national_identifier
 
-- id no
-- kimlik numarası
-- id #
 - kimlik no
+- kimlik numarası
+- Kimliği #
+- tanımlama no
 - kimlik numarası
 - identifikationsnumret #
 - identifikationsnumret
 - identitetshandling
 - kimlik belgesi
-- kimlik hayır
+- kimlik no
 - kimlik numarası
 - id-nummer
 - kişisel kimlik
@@ -17022,22 +17023,22 @@ sekiz basamak
 
 ### <a name="pattern"></a>Desen
 
-art arda sekiz basamak
+ardışık sekiz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- normal ifade Regex_sweden_passport_number desene eşleşen içeriği bulur.
-- veya bulunan bir `Keywords_eu_passport_number` anahtar `Keyword_sweden_passport` sözcük.
-- Normal ifade `Regex_sweden_eu_passport_date` AAA/AAA YY (01 OCA/OCA 12) biçiminde bir tarih veya bir anahtar sözcük `Keywords_eu_passport_date` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- normal ifade Regex_sweden_passport_number desenle eşleşen içeriği bulur.
+- veya `Keyword_sweden_passport` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- normal ifade `Regex_sweden_eu_passport_date` DD MMM/AAA YY (01 OCA/JAN 12) biçiminde bir tarih bulur veya bir `Keywords_eu_passport_date` anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- normal ifade Regex_sweden_passport_number desene eşleşen içeriği bulur.
-- veya bulunan bir `Keywords_eu_passport_number` anahtar `Keyword_sweden_passport` sözcük.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- normal ifade Regex_sweden_passport_number desenle eşleşen içeriği bulur.
+- veya `Keyword_sweden_passport` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 
 ```xml
@@ -17064,64 +17065,64 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keyword_sweden_passport"></a>Keyword_sweden_passport
 
-- kayıt kartı
+- yabancı kayıt kartı
 - g3 işleme ücretleri
 - birden çok giriş
-- Numéro de passeport
-- passeport n °
-- passeport non
-- passeport #
-- passeport #
-- passeportnon
-- passeportn °
+- Numéro de passport
+- passport n °
+- passport non
+- passport #
+- passport #
+- passportnon
+- passportn °
 - passnummer
-- nr geçiş
-- schengen visa
-- schengen visas
-- tek giriş
+- nr'ı geç
+- schengen vizesi
+- schengen vizeleri
+- tek girdi
 - sverige pass
-- visa requirements
-- visa processing
-- visa type
+- vize gereksinimleri
+- vize işleme
+- vize türü
 
 #### <a name="keywords_eu_passport_date"></a>Keywords_eu_passport_date
 
-- çıkış tarihi
-- son kullanma tarihi
+- sorun tarihi
+- süre sonu tarihi
 
 
 ## <a name="sweden-physical-addresses"></a>İsveç fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, İsveç'ten gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, İsveç'ten gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
-## <a name="sweden-tax-identification-number"></a>İsveç vergi tanımlama numarası
+## <a name="sweden-tax-identification-number"></a>İsveç vergi kimlik numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -17133,25 +17134,25 @@ Belirtilen desende 10 basamak ve bir simge
 
 10 basamak ve bir simge:
 
-- Doğum tarihine karşılık gelen altı basamak (YYAAA)
-- artı veya eksi işareti
-- aşağıdaki üç basamaklı kimlik numarasını benzersiz hale
-  - 1990'dan önce verilen sayılar için, yedinci ve sekizinci basamakta doğum ilçesi veya yabancı olarak doğum yapan kişiler tanımlamak
-  - dokuzuncu konumdaki rakam, erkek için tek sayıya, kadın için bile cinsiyeti gösterir
-- tek bir onay rakamı
+- doğum tarihine karşılık gelen altı basamak (YYMMDD)
+- artı işareti veya eksi işareti
+- kimlik numarasını benzersiz hale getiren üç basamak:
+  - 1990'den önce verilen sayılar için yedinci ve sekizinci basamak, doğum ilçesini veya yabancı doğumlu kişileri tanımlar
+  - dokuzuncu konumdaki rakam, cinsiyeti erkek için tek, hatta kadın için gösterir
+- bir denetim basamalı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev,  `Func_sweden_eu_tax_file_number` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_sweden_eu_tax_file_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev  `Func_sweden_eu_tax_file_number` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_sweden_eu_tax_file_number` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_sweden_eu_tax_file_number` desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_sweden_eu_tax_file_number` , desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Sweden Tax Identification Number -->
@@ -17170,7 +17171,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_sweden_eu_tax_file_number"></a>Keywords_sweden_eu_tax_file_number
 
@@ -17179,24 +17180,24 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - skatt id nummer
 - skatt identifikation
 - skattebetalarens identifikationsnummer
-- tverige tin
+- sverige tenekesi
 - vergi dosyası
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
 - vergi numarası
-- vergi yok #
-- vergi yok
-- vergi numarası
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 
 
 ## <a name="swift-code"></a>SWIFT kodu
@@ -17208,21 +17209,21 @@ dört harf ve ardından 5-31 harf veya rakam
 ### <a name="pattern"></a>Desen
 
 dört harf ve ardından 5-31 harf veya rakam:
-- dört harfli banka kodu (büyük/harfe duyarlı değildir)
-- isteğe bağlı bir boşluk
+- dört harfli banka kodu (büyük/küçük harfe duyarlı değildir)
+- isteğe bağlı bir alan
 - 4-28 harf veya rakam (Temel Banka Hesap Numarası (BBAN))
-- isteğe bağlı bir boşluk
-- bir ile üç harf veya rakama (BBAN'nın kalanı)
+- isteğe bağlı bir alan
+- bir ile üç harf veya basamak (BBAN'ın geri kalanı)
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_swift desene eşleşen içeriği bulur.
-- Farklı bir Keyword_swift anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_swift desenle eşleşen içeriği bulur.
+- Keyword_swift anahtar sözcüğü bulunur.
 
 ```xml
 <Entity id="cb2ab58c-9cb8-4c81-baf8-a4e106791df4" patternsProximity="300" recommendedConfidence="75">
@@ -17233,28 +17234,28 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_swift"></a>Keyword_swift
 
-- standartlaştırma için uluslararası kuruluş 9362
+- standardizasyon için uluslararası kuruluş 9362
 - iso 9362
 - iso9362
-- swift #
+- Swift #
 - swiftcode
 - swiftnumber
 - swiftroutingnumber
 - swift kodu
-- swift sayı #
+- swift numarası #
 - swift yönlendirme numarası
-- bic sayı
+- bic numarası
 - bic kodu
-- bic #
-- bic #
+- Bıc #
+- Bıc #
 - banka tanımlayıcı kodu
-- Organisation internationale de normalisation 9362
+- Organizasyon internationale de normalisation 9362
 - rapide #
-- SWIFT kodu
+- kod SWIFT
 - le numéro de swift
 - swift numéro d'acheminement
 - le numéro BIC
@@ -17275,19 +17276,19 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ## <a name="switzerland-physical-addresses"></a>İsviçre fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, İsviçre'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, İsviçre'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
 ## <a name="switzerland-ssn-ahv-number"></a>İsviçre SSN AHV numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -17300,25 +17301,25 @@ Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
 13 basamaklı sayı:
 
 - üç basamak - 756
-- isteğe bağlı bir nokta
+- isteğe bağlı nokta
 - dört basamak
-- isteğe bağlı bir nokta
+- isteğe bağlı nokta
 - dört basamak
-- isteğe bağlı bir nokta
-- İki basamak
+- isteğe bağlı nokta
+- iki basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_swiss_social_security_number_ahv desene eşleşen içeriği bulur.
-- Farklı bir Keywords_swiss_social_security_number_ahv anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_swiss_social_security_number_ahv desenle eşleşen içeriği bulur.
+- Keywords_swiss_social_security_number_ahv anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_swiss_social_security_number_ahv desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_swiss_social_security_number_ahv desenle eşleşen içeriği bulur.
 
 ```xml
       <!-- Swiss SSN AHV Number -->
@@ -17333,13 +17334,13 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_swiss_ssn_ahv_number"></a>Keyword_swiss_ssn_AHV_number
 
 - ahv
 - ssn
-- pid
+- Pıd
 - sigorta numarası
 - personalidno #
 - sosyal güvenlik numarası
@@ -17351,9 +17352,9 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - avs numarası
 - kişisel kimlik no versicherungsnummer
 - identifikationsnummer
-- einzigartige identität nijer
+- einzigartige identität nicht
 - sozialversicherungsnummer
-- kimlik personeli kimliği
+- kimlik personel kimliği
 - numéro de sécurité sociale
 
 
@@ -17361,29 +17362,29 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-bir harf (İngilizce) ve ardından dokuz basamaklı
+bir harf (İngilizce) ve ardından dokuz basamak
 
 ### <a name="pattern"></a>Desen
 
-bir harf (İngilizce) ve ardından dokuz basamaklı:
-- tek harf (İngilizce, büyük/harfe duyarlı değil)
+bir harf (İngilizce) ve ardından dokuz basamak:
+- bir harf (büyük/küçük harfe duyarlı değil İngilizce)
 - "1" veya "2" rakamı
 - sekiz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_taiwanese_national_id desene eşleşen içeriği bulur.
-- Bir arama Keyword_taiwanese_national_id anahtar sözcüğü bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_taiwanese_national_id desenle eşleşen içeriği bulur.
+- Keyword_taiwanese_national_id anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_taiwanese_national_id desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_taiwanese_national_id desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- Taiwanese National ID -->
@@ -17398,7 +17399,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_taiwan_national_id"></a>Keyword_taiwan_national_id
 
@@ -17422,8 +17423,8 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="format"></a>Biçim
 
-- biyometrik pasaport numarası: dokuz rakam
-- biyometrik olmayan pasaport numarası: dokuz rakam
+- biyometrik pasaport numarası: dokuz basamak
+- biyometrik olmayan pasaport numarası: dokuz basamak
 
 ### <a name="pattern"></a>Desen
 biyometrik pasaport numarası:
@@ -17433,15 +17434,15 @@ biyometrik pasaport numarası:
 biyometrik olmayan pasaport numarası:
 - dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_taiwan_passport desene eşleşen içeriği bulur.
-- Bir arama Keyword_taiwan_passport anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_taiwan_passport desenle eşleşen içeriği bulur.
+- Keyword_taiwan_passport anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Taiwan Passport Number -->
@@ -17453,18 +17454,18 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_taiwan_passport"></a>Keyword_taiwan_passport
 
 - ROC pasaport numarası
 - Pasaport numarası
-- Pasaport yok
-- Pasaport Num
+- Pasaport no
+- Passport Num
 - Pasaport #
 - 护照
 - 中華民國護照
-- Zhōnghuá Mínguó hùzhào
+- Zhônghuá Mínguó hùzhào
 
 
 ## <a name="taiwan-resident-certificate-arctarc-number"></a>Tayvan'da yerleşik sertifika (ARC/TARC) numarası
@@ -17476,18 +17477,18 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 ### <a name="pattern"></a>Desen
 
 10 harf ve rakam:
-- İki harf (büyük/küçük harfe duyarlı değildir)
+- iki harf (büyük/küçük harfe duyarlı değil)
 - sekiz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_taiwan_resident_certificate desene eşleşen içeriği bulur.
-- Bir arama Keyword_taiwan_resident_certificate anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_taiwan_resident_certificate desenle eşleşen içeriği bulur.
+- Keyword_taiwan_resident_certificate anahtar sözcüğü bulunur.
 
 ```xml
 <!-- Taiwan Resident Certificate (ARC/TARC) -->
@@ -17499,24 +17500,24 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_taiwan_resident_certificate"></a>Keyword_taiwan_resident_certificate
 
 - Yerleşik Sertifika
-- Yerleşik Sertifika
+- Resident Cert
 - Yerleşik Sertifika.
 - Kimlik kartı
-- 2010'da Yerleşik Sertifika
+- Yabancı Yerleşik Sertifika
 - ARC
-- Tayvan Bölgesi Yerleşik Sertifikası
+- Tayvan Alan Yerleşik Sertifikası
 - TARC
 - 居留證
 - 外僑居留證
 - 台灣地區居留證
 
 
-## <a name="thai-population-identification-code"></a>Tayca nüfus tanımlama kodu
+## <a name="thai-population-identification-code"></a>Tay nüfus tanımlama kodu
 
 ### <a name="format"></a>Biçim
 
@@ -17528,18 +17529,18 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - ilk basamak sıfır veya dokuz değil
 - 12 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_Thai_Citizen_Id desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_Thai_Citizen_Id bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_Thai_Citizen_Id desenle eşleşen içeriği bulur.
+- Keyword_Thai_Citizen_Id anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_Thai_Citizen_Id desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_Thai_Citizen_Id desenle eşleşen içeriği bulur.
 
 ```xml
 <!-- Thai Citizen ID -->
@@ -17554,7 +17555,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_thai_citizen_id"></a>Keyword_thai_citizen_Id
 
@@ -17575,18 +17576,18 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 11 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_Turkish_National_Id desene eşleşen içeriği bulur.
-- Bir arama Keyword_Turkish_National_Id anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_Turkish_National_Id desenle eşleşen içeriği bulur.
+- Keyword_Turkish_National_Id anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_Turkish_National_Id desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_Turkish_National_Id desenle eşleşen içeriği bulur.
 
 ```xml
 <!-- Turkish National Identity -->
@@ -17601,63 +17602,63 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_turkish_national_id"></a>Keyword_turkish_national_id
 
 - TC Kimlik No
-- TC Kimlik numarası
-- Zaman numarası
-- Her zaman olduğu gibi,
+- TC Kimlik sn.
+- Vatandaşlık sn.
+- Vatandaşlık no
 
 
 ## <a name="turkey-physical-addresses"></a>Türkiye fiziksel adresleri
 
-Bu şaşırtıcı olmayan adlandırılmış varlık, Türkiye'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlı varlık, Türkiye'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
-## <a name="types-of-medication"></a>Ilaç türleri
+## <a name="types-of-medication"></a>İlaç türleri
 
-Bu bakıla adlandırılmış varlık, ilaç adlarını, örneğin sk *.*  Yalnızca İngilizce terimleri destekler. Ayrıca SIT adlı tüzel kişi [SIT adlı sağlık hüküm ve koşullarına](#all-medical-terms-and-conditions) da dahildir.
+Bu unbundled adlı varlık *, insülin* gibi ilaç adlarını algılar.  Yalnızca İngilizce terimleri destekler. Ayrıca entity SIT adlı [tüm tıbbi hüküm ve koşullar](#all-medical-terms-and-conditions) paketinde yer alır.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Yüksek
 
 
-## <a name="uk-drivers-license-number"></a>B.K. sürücü lisans numarası
+## <a name="uk-drivers-license-number"></a>INGİLTERE. ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
-Belirtilen biçimdeki 18 harf ve rakam birleşimi
+Belirtilen biçimdeki 18 harf ve basamak birleşimi
 
 ### <a name="pattern"></a>Desen
 
 18 harf ve rakam:
-- Bir harfin yerine beş harf (büyük/küçük harfe duyarlı değildir) veya "9" rakamı.
-- Bir rakam.
-- Doğum tarihi için tarih biçiminde MMDDY biçiminde beş basamak. Sürücü kadın ise yedinci karakter 50 artırılır; örneğin, 01 - 12 yerine 51 - 62 arasında olabilir.
-- İki harfli (büyük/küçük harf duyarlı değildir) veya bir harfin yerine "9" rakamı.
+- Harf yerine beş harf (büyük/küçük harfe duyarlı değil) veya "9" rakamı.
+- Bir basamak.
+- Doğum tarihi için MMDDY tarih biçiminde beş basamak. Sürücü kadınsa yedinci karakter 50 artırılır; örneğin, 01 ile 12 yerine 51 - 62.
+- Harf yerine iki harf (büyük/küçük harfe duyarlı değil) veya "9" rakamı.
 - Beş basamak.
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev, `Func_uk_drivers_license` desene eşleşen içeriği bulur.
-- Anahtar sözcük `Keywords_eu_driver's_license_number` bulunur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev `Func_uk_drivers_license` , desenle eşleşen içeriği bulur.
+- 'den `Keywords_eu_driver's_license_number` bir anahtar sözcük bulunur.
+- Sağlama toplamı geçer.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev, `Func_uk_drivers_license` desene eşleşen içeriği bulur.
-- Denetimli denetimler geçer.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev `Func_uk_drivers_license` , desenle eşleşen içeriği bulur.
+- Sağlama toplamı geçer.
 
 ```xml
     <!-- U.K. Driver's License Number -->
@@ -17672,15 +17673,15 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
-#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver's_license_number
+#### <a name="keywords_eu_drivers_license_number"></a>Keywords_eu_driver s_license_number
 
-- driverlic
+- sürücü
 - driverlics
 - driverlicense
-- driverlicenses
-- driverlicence
+- sürücü lisansları
+- sürücülik
 - driverlicences
 - sürücü lic
 - sürücü lisansları
@@ -17688,93 +17689,93 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- driverslic
-- driverslics
-- driverslicence
-- driverslicences
+- sürücüler
+- sürücüler
+- sürücüler
+- sürücüler
 - driverslicense
-- driverslicenses
+- sürücü lisansları
 - sürücüler lic
-- sürücüler lisansları
-- sürücüler lisansı
-- sürücüler lisansları
-- sürücüler lisansı
+- sürücüler lics
+- sürücü lisansı
+- sürücü lisansları
+- sürücü lisansı
 - sürücü lisansları
 - driver'lic
 - driver'lics
-- sürücü'lisansı
+- sürücü lisansı
 - sürücü lisansları
-- driver'licence
-- driver'licences
-- sürücü'lic
+- sürücü belgesi
+- sürücü lisansları
+- driver'lic
 - sürücü lisansları
 - sürücü lisansı
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü slic
-- sürücü'slics
-- driver'slicense
+- driver'slic
 - sürücü dilimleri
-- sürücü dilimleyicisi
-- sürücü dilimleyicileri
-- sürücü lic'i
+- driver'slicense
+- driver'slicenses
+- sürücü dilimi
+- sürücü dilimleri
+- sürücü lic
+- sürücü lics
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
+- sürücü belgesi
 - sürücü lisansları
-- sürücü lisansı
-- sürücü lisansları
-- dl #
-- dls #
-- driverlic #
+- Dl #
+- Dls #
+- sürücü #
 - driverlics #
 - driverlicense #
-- driverlicenses #
-- driverlicence #
+- sürücü lisansları #
+- sürücülik #
 - driverlicences #
 - sürücü lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
 - sürücü lisansları #
-- driverslic #
-- driverslics #
+- sürücüler #
+- sürücüler #
 - driverslicense #
-- driverslicenses #
-- driverslicence #
-- driverslicences #
+- sürücü lisansları #
+- sürücüler #
+- sürücüler #
 - sürücüler lic #
-- sürücüler lisansları #
-- sürücüler lisansı #
-- sürücüler lisansları #
-- sürücüler lisansı #
+- sürücüler lics #
+- sürücü lisansı #
+- sürücü lisansları #
+- sürücü lisansı #
 - sürücü lisansları #
 - driver'lic #
 - driver'lics #
-- sürücü'lisansı #
+- sürücü lisansı #
 - sürücü lisansları #
-- driver'licence #
-- driver'licences #
-- sürücü'lic #
+- sürücü belgesi #
+- sürücü lisansları #
+- driver'lic #
 - sürücü lisansları #
 - sürücü lisansı #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü slic #
-- sürücü'slics #
-- driver'slicense #
+- driver'slic #
 - sürücü dilimleri #
-- sürücü dilimleyicisi #
-- sürücü dilimleyicileri #
-- sürücü lic'i #
+- driver'slicense #
+- driver'slicenses #
+- sürücü dilimi #
+- sürücü dilimleri #
+- sürücü lic #
+- sürücü lics #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
+- sürücü belgesi #
 - sürücü lisansları #
-- sürücü lisansı #
-- sürücü lisansları #
-- sürüş lisansı 
-- sürüş lisansı
+- Ehliyet 
+- Ehliyet
 - dlno #
 - driv lic
 - driv licen
@@ -17782,39 +17783,39 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - driv lisansları
 - driv lisansı
 - driv lisansları
-- sürücü lisanslı
-- sürücüler lisanslı
+- sürücü lisans
+- sürücüler lisans
 - sürücü lisans
 - sürüş lic
-- sürücü lisans
-- sürüş lisansları
-- sürüş lisansı
-- sürüş lisansı
+- sürüş licen
+- sürücü lisansları
+- Ehliyet
+- ehliyetler
 - sürüş izni
 - dl no
 - dlno
 - dl numarası
 
 
-## <a name="uk-electoral-roll-number"></a>B.K. seçici rulo numarası
+## <a name="uk-electoral-roll-number"></a>INGİLTERE. seçim rulosu numarası
 
 ### <a name="format"></a>Biçim
 
-İki harf ve ardından 1-4 basamak
+iki harf ve ardından 1-4 basamak
 
 ### <a name="pattern"></a>Desen
 
-İki harf (büyük/küçük harfe duyarlı değil) ve ardından 1-4 sayı
+iki harf (büyük/küçük harfe duyarlı değil) ve ardından 1-4 sayı
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_uk_electoral desene eşleşen içeriği bulur.
-- Bir Keyword_uk_electoral anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_uk_electoral desenle eşleşen içeriği bulur.
+- Keyword_uk_electoral anahtar sözcüğü bulunur.
 
 ```xml
 <!-- U.K. Electoral Number -->
@@ -17828,17 +17829,17 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_uk_electoral"></a>Keyword_uk_electoral
 
-- kurul üyesi adaylığı
-- nomination form
-- seçici kaydı
-- seçici rulo
+- konsey adaylığı
+- adaylık formu
+- seçmen kaydı
+- seçim rulosu
 
 
-## <a name="uk-national-health-service-number"></a>B.K. ulusal sağlık hizmeti numarası
+## <a name="uk-national-health-service-number"></a>INGİLTERE. ulusal sağlık hizmeti numarası
 
 ### <a name="format"></a>Biçim
 
@@ -17853,19 +17854,19 @@ Boşluklarla ayrılmış 10-17 basamak
 - boşluk
 - dört basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Evet
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_uk_nhs_number desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_uk_nhs_number desenle eşleşen içeriği bulur.
 - Aşağıdakilerden biri doğrudur:
-    - Farklı bir Keyword_uk_nhs_number anahtar sözcük bulunur.
-    - Farklı bir Keyword_uk_nhs_number1 anahtar sözcük bulunur.
-    - Bir başka Keyword_uk_nhs_number_dob anahtar sözcük bulunur.
-- Denetimli denetimler geçer.
+    - Keyword_uk_nhs_number anahtar sözcüğü bulunur.
+    - Keyword_uk_nhs_number1 anahtar sözcüğü bulunur.
+    - Keyword_uk_nhs_number_dob anahtar sözcüğü bulunur.
+- Sağlama toplamı geçer.
 
 ```xml
 <!-- U.K. NHS Number -->
@@ -17881,20 +17882,20 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_uk_nhs_number"></a>Keyword_uk_nhs_number
 
 - ulusal sağlık hizmeti
-- nhs
-- hizmet yetkilisi
-- sağlık yetkilisi
+- Nhs
+- sağlık hizmetleri yetkilisi
+- sistem durumu yetkilisi
 
 #### <a name="keyword_uk_nhs_number1"></a>Keyword_uk_nhs_number1
 
 - hasta kimliği
-- hasta kimliği
-- hasta no
+- hasta belirleme
+- hasta hayır
 - hasta numarası
 
 #### <a name="keyword_uk_nhs_number_dob"></a>Keyword_uk_nhs_number_dob
@@ -17906,46 +17907,46 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri alg
 - Doğum Tarihi
 
 
-## <a name="uk-national-insurance-number-nino"></a>B.K. ulusal sigorta numarası (NINO)
+## <a name="uk-national-insurance-number-nino"></a>INGİLTERE. ulusal sigorta numarası (NINO)
 
-Bu hassas bilgi türü varlık, AB Ulusal Kimlik Numarası hassas bilgi türüne dahildir. Ayrıca tek başına hassas bilgi türü bir varlık olarak da kullanılabilir.
+Bu hassas bilgi türü varlığı AB Ulusal Kimlik Numarası hassas bilgi türüne dahil edilir. Tek başına hassas bilgi türü varlığı olarak da kullanılabilir.
 
 ### <a name="format"></a>Biçim
 
-Boşluk veya tirelerle ayrılmış yedi karakter veya dokuz karakter
+boşluk veya tirelerle ayrılmış yedi karakter veya dokuz karakter
 
 ### <a name="pattern"></a>Desen
 
-İki olası model:
+iki olası desen:
 
-- İki harf (geçerli NINOS bu ön ekte yalnızca belirli karakterleri kullanır; bu desen büyük/küçük harfe duyarlı değildir)
+- iki harf (geçerli NINO'lar bu ön ekte yalnızca belirli karakterler kullanır; bu desen bunu doğrular; büyük/küçük harfe duyarlı değildir)
 - altı basamak
-- ya 'A', 'B', 'C' veya 'D' (ön ek gibi, sonekte yalnızca belirli karakterlere izin verilir; büyük/küçük harfe duyarlı değildir)
+- 'A', 'B', 'C' veya 'D' (ön ek gibi, son ekte yalnızca belirli karakterlere izin verilir; büyük/küçük harfe duyarlı değildir)
 
 VEYA
 
 - iki harf
-- boşluk veya kısa çizgi
-- İki basamak
-- boşluk veya kısa çizgi
-- İki basamak
-- boşluk veya kısa çizgi
-- İki basamak
-- boşluk veya kısa çizgi
-- ya 'A', 'B', 'C' veya 'D'
+- boşluk veya tire
+- iki basamak
+- boşluk veya tire
+- iki basamak
+- boşluk veya tire
+- iki basamak
+- boşluk veya tire
+- 'A', 'B', 'C' veya 'D'
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_uk_nino desene eşleşen içeriği bulur.
-- Bir arama Keyword_uk_nino anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_uk_nino desenle eşleşen içeriği bulur.
+- Keyword_uk_nino anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_uk_nino desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_uk_nino desenle eşleşen içeriği bulur.
 
 ```xml
     <!-- U.K. NINO -->
@@ -17960,68 +17961,68 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_uk_nino"></a>Keyword_uk_nino
 
 - ulusal sigorta numarası
 - ulusal sigorta katkıları
 - koruma eylemi
-- sigorta
+- Sigorta
 - sosyal güvenlik numarası
 - sigorta uygulaması
 - tıbbi uygulama
 - sosyal sigorta
-- tıbbi dikkat
+- tıbbi müdahale
 - sosyal güvenlik
-- büyük Britanya
+- Ingiltere
 - NI Numarası
 - NI Hayır.
 - NI #
 - NI #
-- sigorta #
-- sigorta numarası
-- nationalins bire bir #
-- nationalinsnumber
+- Sigorta #
+- insurancenumber
+- ulusal dayanıklılık #
+- nationalinsurancenumber
 
 
-## <a name="uk-physical-addresses"></a>B.K. fiziksel adresler
+## <a name="uk-physical-addresses"></a>INGİLTERE. fiziksel adresler
 
-Buundled adlı varlık, ABD'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, Birleşik Krallık'tan gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
 
 
-## <a name="uk-unique-taxpayer-reference-number"></a>B.K. Benzersiz Vergi Mükellefi Başvuru Numarası
+## <a name="uk-unique-taxpayer-reference-number"></a>INGİLTERE. Benzersiz Vergi Mükellefi Başvuru Numarası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
 ### <a name="format"></a>Biçim
 
-Boşluk ve sınırlayıcı olmayan 10 basamak
+Boşluk ve sınırlayıcı içermeyen 10 basamak
 
 
 ### <a name="pattern"></a>Desen
 
 10 basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev,  `Func_uk_eu_tax_file_number` desene eşleşen içeriği bulur.
-- Anahtar sözcük  `Keywords_uk_eu_tax_file_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev  `Func_uk_eu_tax_file_number` , desenle eşleşen içeriği bulur.
+- 'den  `Keywords_uk_eu_tax_file_number` bir anahtar sözcük bulunur.
 
 ```xml
       <!-- U.K. Unique Taxpayer Reference Number -->
@@ -18033,27 +18034,27 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_uk_eu_tax_file_number"></a>Keywords_uk_eu_tax_file_number
 
 - vergi numarası
 - vergi dosyası
+- vergi kimliği
+- vergi tanımlama no
+- vergi kimlik numarası
+- vergi no #
 - vergi no
-- vergi numarası yok
-- vergi numarası
-- vergi yok #
-- vergi yok
-- vergi sicil numarası
-- iş bire bir #
-- yaln #
-- aracısayı #
+- vergi kayıt numarası
+- taksiye bindi #
+- taxidno #
+- taxidnumber #
 - taxno #
 - vergi numarası #
 - vergi numarası
-- tin kimliği
+- teneke kimlik
 - tin no
-- tin #
+- Teneke #
 
 
 ## <a name="us-bank-account-number"></a>ABD banka hesap numarası
@@ -18064,17 +18065,17 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 
 ### <a name="pattern"></a>Desen
 
-6-17 art arda basamaklar
+6-17 ardışık basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Normal ifade Regex_usa_bank_account_number desene eşleşen içeriği bulur.
-- Bir Keyword_usa_Bank_Account anahtar sözcüğü bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Normal ifade Regex_usa_bank_account_number desenle eşleşen içeriği bulur.
+- Keyword_usa_Bank_Account anahtar sözcüğü bulunur.
 
 ```xml
 <!-- U.S. Bank Account Number -->
@@ -18086,40 +18087,40 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_usa_bank_account"></a>Keyword_usa_Bank_Account
 
-- Hesap Numarasını Denetleme
-- Hesabı Denetleme
-- Hesabı Denetleme #
-- Acct Numarasını Denetleme
-- Acct Denetimi #
-- Acct No denetlendi.
-- Hesap No denetlendi.
+- Hesap Numarası Denetleniyor
+- Hesap Denetleniyor
+- Hesap Denetleniyor #
+- Acct Numarası Denetleniyor
+- Acct Denetleniyor #
+- Tahakkuk No denetleniyor.
+- Hesap No denetleniyor.
 - Banka Hesap Numarası
 - Banka Hesabı #
 - Banka Tahakkuk Numarası
-- Banka Acct #
-- Banka Acct No.
+- Banka Hesabı #
+- Banka Tahakkuk No
 - Banka Hesabı No.
-- Tasarruf Hesap Numarası
+- Tasarruf Hesabı Numarası
 - Tasarruf Hesabı.
 - Tasarruf Hesabı #
-- Tasarruf Tasarruf Sayısı
-- Tasarruf Tasarrufları #
-- Tasarruf Tasarruf Tasarrufları Hayır.
-- Tasarruf Hesabı Hayır.
-- Borç Hesap Numarası
+- TasarrufLar Acct Numarası
+- TasarrufLar Acct #
+- TasarrufLar Tahakkuk No
+- Tasarruf Hesabı No.
+- Banka Hesabı Numarası
 - Borç Hesabı
 - Borç Hesabı #
 - Borç Tahakkuk Numarası
 - Borç Hesabı #
-- Borç Bakiyesi No.
-- Borç Hesabı No.
+- Borç Tahakkuk No
+- Borç Hesabı No
 
 
-## <a name="us-drivers-license-number"></a>ABD sürücüsünün lisans numarası
+## <a name="us-drivers-license-number"></a>ABD ehliyet numarası
 
 ### <a name="format"></a>Biçim
 
@@ -18127,26 +18128,26 @@ Duruma bağlıdır
 
 ### <a name="pattern"></a>Desen
 
-eyalete bağlıdır - örneğin, New York:
-- sizi    ddd ile eşecek şekilde biçimlendirilmiş dokuz basamak.
-- ddddddd gibi dokuz rakam eş olmaz.
+eyalete bağlıdır; örneğin, New York:
+- ddd ddd ddd gibi biçimlendirilmiş dokuz basamak eşleşir.
+- ddd gibi dokuz basamak eşleşmez.
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_new_york_drivers_license_number desene eşleşen içeriği bulur.
-- Arama sözcüğünden Keyword_[state_name]_drivers_license_name anahtar sözcük bulunur.
-- Anahtar sözcük Keyword_us_drivers_license bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_new_york_drivers_license_number desenle eşleşen içeriği bulur.
+- Keyword_[state_name]_drivers_license_name anahtar sözcüğü bulundu.
+- Keyword_us_drivers_license anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev Func_new_york_drivers_license_number desene eşleşen içeriği bulur.
-- Arama sözcüğünden Keyword_[state_name]_drivers_license_name anahtar sözcük bulunur.
-- Farklı bir Keyword_us_drivers_license_abbreviations anahtar sözcük bulunur.
-- Anahtar sözcük Keyword_us_drivers_license anahtar sözcük bulunamıyor.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev Func_new_york_drivers_license_number desenle eşleşen içeriği bulur.
+- Keyword_[state_name]_drivers_license_name anahtar sözcüğü bulundu.
+- Keyword_us_drivers_license_abbreviations anahtar sözcüğü bulunur.
+- Keyword_us_drivers_license anahtar sözcüğü bulunamadı.
 
 ```xml
 <Entity id="dfeb356f-61cd-459e-bf0f-7c6d28b458c6 patternsProximity="300">
@@ -18166,7 +18167,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_us_drivers_license_abbreviations"></a>Keyword_us_drivers_license_abbreviations
 
@@ -18175,17 +18176,18 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - CDL
 - CDLS
 - Kimlik
-- Kimlikler
+- Kimlik
 - DL #
 - DLS #
 - CDL #
 - CDLS #
+- KİMLİĞİ #
 - Kimlik #
-- Kimlikler #
 - Kimlik numarası
 - Kimlik numaraları
-- LIC
-- LIC #
+- LİSANSI
+- LİSANSI #
+- DLN
 
 #### <a name="keyword_us_drivers_license"></a>Keyword_us_drivers_license
 
@@ -18194,7 +18196,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - DriverLicense
 - DriverLicenses
 - Sürücü Lic
-- Sürücü Lisansları
+- Sürücü Lics
 - Sürücü Lisansı
 - Sürücü Lisansları
 - DriversLic
@@ -18202,28 +18204,28 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - DriversLicense
 - DriversLicenses
 - Sürücüler Lic
-- SürücülerLics
-- Sürücüler Lisansı
-- Sürücüler Lisansları
+- Sürücüler Lics
+- Sürücü Lisansı
+- Sürücü Lisansları
 - Driver'Lic
+- Driver'Lics
+- Sürücü Belgesi
 - Sürücü Lisansları
-- Sürücü Lisansı
-- Sürücü Lisansları
-- Sürücü' Lic
-- Sürücü Lisansları
-- Sürücü Lisansı
+- Driver' Lic
+- Sürücü Lics
+- Sürücü Belgesi
 - Sürücü Lisansları
 - Driver'sLic
+- Driver'sLics
+- Driver'sLicense
 - Sürücü Lisansları
-- Sürücü Lisans'ı
-- Sürücü Lisansları
-- Sürücü Lisans'ı
-- Sürücü Lisansları
-- Sürücü Lisansı
+- Sürücü Lic
+- Sürücü Lics
+- Sürücü Belgesi
 - Sürücü Lisansları
 - kimlik numarası
 - kimlik numaraları
-- tanımlama #
+- Kimlik #
 - kimlik kartı
 - kimlik kartları
 - kimlik kartı
@@ -18233,7 +18235,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - DriverLicense #
 - DriverLicenses #
 - Sürücü Lic #
-- Sürücü Lisansları #
+- Sürücü Lics #
 - Sürücü Lisansı #
 - Sürücü Lisansları #
 - DriversLic #
@@ -18241,24 +18243,24 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - DriversLicense #
 - DriversLicenses #
 - Sürücüler Lic #
-- SürücülerLics #
-- Sürücüler Lisansı #
-- Sürücüler Lisansları #
+- Sürücüler Lics #
+- Sürücü Lisansı #
+- Sürücü Lisansları #
 - Driver'Lic #
+- Driver'Lics #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
-- Sürücü Lisansı #
-- Sürücü Lisansları #
-- Sürücü' Lic #
-- Sürücü Lisansları #
-- Sürücü Lisansı #
+- Driver' Lic #
+- Sürücü Lics #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
 - Driver'sLic #
+- Driver'sLics #
+- Driver'sLicense #
 - Sürücü Lisansları #
-- Sürücü Lisans'ı #
-- Sürücü Lisansları #
-- Sürücü Lisans'ı #
-- Sürücü Lisansları #
-- Sürücü Lisansı #
+- Sürücü Lic #
+- Sürücü Lics #
+- Sürücü Belgesi #
 - Sürücü Lisansları #
 - kimlik kartı #
 - kimlik kartları #
@@ -18269,48 +18271,48 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 #### <a name="keyword_state_name_drivers_license_name"></a>Keyword_[state_name]_drivers_license_name
 
 - eyalet kısaltması (örneğin, "NY")
-- eyalet adını (örneğin, "İstanbul")
+- eyalet adı (örneğin, "New York")
 
 
-## <a name="us-individual-taxpayer-identification-number-itin"></a>ABD tek tek vergi mükellefi kimlik numarası (ITIN)
+## <a name="us-individual-taxpayer-identification-number-itin"></a>ABD bireysel vergi mükellefi kimlik numarası (ITIN)
 
 ### <a name="format"></a>Biçim
 
-"9" ile baş eden ve dördüncü basamak olarak "7" veya "8" içeren dokuz basamak, isteğe bağlı olarak boşluk veya tirelerle biçimlendirildi
+"9" ile başlayan ve dördüncü basamak olarak "7" veya "8" içeren dokuz basamak, isteğe bağlı olarak boşluk veya tirelerle biçimlendirilmiş
 
 ### <a name="pattern"></a>Desen
 
-biçimlendirilmiş:
+Biçimlendirilmiş:
 - "9" rakamı
-- İki basamak
-- boşluk veya kısa çizgi
+- iki basamak
+- boşluk veya tire
 - "7" veya "8"
 - basamak
-- boşluk veya kısa çizgi
+- boşluk veya tire
 - dört basamak
 
-biçimlendirilmemiş:
+Biçimlendir -ilmemiş:
 - "9" rakamı
-- İki basamak
+- iki basamak
 - "7" veya "8"
 - beş basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_formatted_itin desene eşleşen içeriği bulur.
-- Bir başka Keyword_itin anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_formatted_itin desenle eşleşen içeriği bulur.
+- Keyword_itin anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_unformatted_itin desene eşleşen içeriği bulur.
-- Bir başka Keyword_itin anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_unformatted_itin desenle eşleşen içeriği bulur.
+- Keyword_itin anahtar sözcüğü bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlevin Func_formatted_itin veya Func_unformatted_itin desene eşleşen içeriği bulur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev Func_formatted_itin veya Func_unformatted_itin desenle eşleşen içeriği bulur.
 
 ```xml
     <!-- U.S. Individual Taxpayer Identification Number (ITIN) -->
@@ -18332,29 +18334,29 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_itin"></a>Keyword_itin
 
-- vergi mükellefi
-- vergi no
+- Vergi mükellefi
 - vergi kimliği
-- itin
+- vergi belirleme
+- bu
 - i.t.i.n.
 - ssn
-- tin
+- Teneke
 - sosyal güvenlik
-- vergi mükellefi
+- vergi ödeyen
 - itins
-- iş bire bir
-- vergi mükellefi
+- taksiye bindi
+- bireysel vergi mükellefi
 
 
 ## <a name="us-physical-addresses"></a>ABD fiziksel adresleri
 
-Buundled adlandırılmış varlık, ABD'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca SIT adlı varlıkla [birlikte gelen Tüm Fiziksel](#all-physical-addresses) Adresler'e de dahildir.
+Bu unbundled adlandırılmış varlık, ABD'den gelen fiziksel adresle ilgili desenleri algılar. Ayrıca, varlık SIT adlı [paketlenmiş Tüm Fiziksel Adresler'e](#all-physical-addresses) de dahildir.
 
-### <a name="confidence-level"></a>Güven düzeyi
+### <a name="confidence-level"></a>Güvenilirlik düzeyi
 
 Orta
 
@@ -18363,36 +18365,36 @@ Orta
 
 ### <a name="format"></a>Biçim
 
-Biçimlendirilmiş veya biçimlendirilmemiş bir desende yer alan dokuz basamak
+dokuz basamak, biçimlendirilmiş veya biçimlendirilmemiş bir desende olabilir
 
 > [!NOTE]
-> 2011'in ortasından önce verilen SSN'de, ssnnin bazı bölümlerinin geçerli olması için belirli aralıklar içinde olması gereken güçlü bir biçimlendirmesi vardır (ancak denetim sayısı yoktur).
+> 2011'in ortasından önce verilirse, SSN'nin geçerli olması için sayının belirli bölümlerinin belirli aralıklar içinde yer alması gereken güçlü biçimlendirmesi vardır (ancak sağlama toplamı yoktur).
 
 ### <a name="pattern"></a>Desen
 
-dört işlev, dört farklı düzende SSN'ler için bakın:
-- Func_ssn, tireler veya boşluklarla biçimlendirilmiş, 2011 öncesi güçlü biçimlendirmeye sahip SSN'leri (biçimlendirilmiş SSN'ler) bulur
-- Func_unformatted_ssn SSN'leri 2011 öncesi, art arda dokuz basamaklı (ddddddddd) biçimlendirilmemiş, güçlü biçimlendirmeye sahip SSN'leri bulur
-- Func_randomized_formatted_ssn tireler veya boşluklarla biçimlendirilmiş 2011 sonrası SSN'leri bulur (dd-dd-dddd VEYA  daği biçimlendirilmiş SSN'ler)
-- Func_randomized_unformatted_ssn art arda dokuz basamaklı (ddddddd) olarak biçimlendirilmemiş 2011 sonrası SSN'leri bulur
+dört işlev, SSN'leri dört farklı desende arar:
+- Func_ssn, tire veya boşluklarla biçimlendirilmiş 2011 öncesi güçlü biçimlendirmeye sahip SSN'leri bulur (ddd-dd-dddd VEYA ddd dd d)
+- Func_unformatted_ssn, 2011 öncesi güçlü biçimlendirmesi olan ve ardışık dokuz basamak (dddd) olarak biçimlendirilmemiş SSN'leri bulur
+- Func_randomized_formatted_ssn 2011 sonrası kısa çizgi veya boşluklarla biçimlendirilmiş SSN'leri bulur (ddd-dd-dd VEYA ddd dd d)
+- Func_randomized_unformatted_ssn, ardışık dokuz basamak (ddddd) olarak biçimlendirilmemiş 2011 sonrası SSN'leri bulur
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev, `Func_ssn` desene eşleşen içeriği bulur.
-- Anahtar sözcük `Keyword_ssn` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev `Func_ssn` , desenle eşleşen içeriği bulur.
+- 'den `Keyword_ssn` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_unformatted_ssn' deseniyle eşleşen içeriği bulur.
-- Anahtar sözcük `Keyword_ssn` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Func_unformatted_ssn işlevi desenle eşleşen içeriği bulur.
+- 'den `Keyword_ssn` bir anahtar sözcük bulunur.
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından daha fazla güven verir:
-- İşlev veya `Func_randomized_formatted_ssn` desene `Func_randomized_unformatted_ssn` eşleşen içeriği bulur.
-- Anahtar sözcük `Keyword_ssn` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının güvenilirliği düşüktür:
+- İşlev `Func_randomized_formatted_ssn` veya `Func_randomized_unformatted_ssn` desenle eşleşen içeriği bulur.
+- 'den `Keyword_ssn` bir anahtar sözcük bulunur.
 
 
 ```xml
@@ -18417,7 +18419,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
   </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_ssn"></a>Keyword_ssn
 
@@ -18425,7 +18427,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - sosyal güvenlik numarası
 - sosyal güvenlik #
 - sosyal güvenlik #
-- sosyal güvenlik yok
+- sosyal güvenlik hayır
 - Sosyal Güvenlik #
 - Soc Sn
 - SSN
@@ -18435,7 +18437,7 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
 - SSID
 
 
-## <a name="usuk-passport-number"></a>ABD pasaport numarası
+## <a name="usuk-passport-number"></a>Birleşik Krallık pasaport numarası
 
 ### <a name="format"></a>Biçim
 
@@ -18446,20 +18448,20 @@ dokuz basamak
 - bir harf veya rakam
 - sekiz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgileri algılandığından büyük güven verir:
-- İşlev Func_usa_uk_passport desene eşleşen içeriği bulur.
-- Anahtar sözcük veya `Keywords_eu_passport_number` `Keywords_uk_eu_passport_number` bulunur.
-- Anahtar sözcük `Keywords_eu_passport_date` bulundu
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgileri algılamıştır:
+- İşlev Func_usa_uk_passport desenle eşleşen içeriği bulur.
+- veya `Keywords_uk_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
+- 'den `Keywords_eu_passport_date` bir anahtar sözcük bulundu
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- İşlev Func_usa_uk_passport desene eşleşen içeriği bulur.
-- Anahtar sözcük veya `Keywords_eu_passport_number` `Keywords_uk_eu_passport_number` bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- İşlev Func_usa_uk_passport desenle eşleşen içeriği bulur.
+- veya `Keywords_uk_eu_passport_number` anahtar `Keywords_eu_passport_number` sözcüğü bulunur.
 
 ```xml
     <!-- U.S. / U.K. Passport Number -->
@@ -18482,33 +18484,33 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
     </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keywords_eu_passport_number"></a>Keywords_eu_passport_number
 
-- pasaport #
-- pasaport #
-- Passportid
-- pasaport
-- Passportno
-- pasaport yok
-- pasaportsayı
+- Pasaport #
+- Pasaport #
+- passportid
+- Pasaport
+- passportno
+- pasaport no
+- passportnumber
 - pasaport numarası
-- pasaportlar
+- passportnumbers
 - pasaport numaraları
 
 #### <a name="keywords_uk_eu_passport_number"></a>Keywords_uk_eu_passport_number
 
-- İngiliz pasaport
-- İngiltere pasaport
+- İngiliz pasaportu
+- uk passport
 
 
-## <a name="ukraine-passport-domestic"></a>Ukrayna pasaportunu yurt içi
+## <a name="ukraine-passport-domestic"></a>Ukrayna pasaportu yurt içi
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -18520,15 +18522,15 @@ dokuz basamak
 
 dokuz basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Kayıtexex Regex_Ukraine_Passport_Domestic desene eşleşen içeriği bulur.
-- Bir başka Keyword_Ukraine_Passport_Domestic anahtar sözcük bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Regex Regex_Ukraine_Passport_Domestic desenle eşleşen içeriği bulur.
+- Keyword_Ukraine_Passport_Domestic anahtar sözcüğü bulunur.
 
 ```xml
       <!-- Ukraine Passport Domestic -->
@@ -18540,24 +18542,24 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_ukraine_passport_domestic"></a>Keyword_ukraine_passport_domestic
 
-- Ukrayna pasaport
+- ukrayna pasaportu
 - pasaport numarası
-- pasaport yok
+- pasaport no
 - паспорт України
 - номер паспорта
 - персональний
 
 
-## <a name="ukraine-passport-international"></a>Ukrayna pasaportunu uluslararası
+## <a name="ukraine-passport-international"></a>Ukrayna pasaportu uluslararası
 
-Bu hassas bilgi türü yalnızca şu kişilerde kullanılabilir:
+Bu hassas bilgi türü yalnızca şu durumlarda kullanılabilir:
 - veri kaybı önleme ilkeleri
 - iletişim uyumluluk ilkeleri
-- bilgi yönetimi
+- bilgi idaresi
 - kayıt yönetimi
 - Bulut Uygulamaları için Microsoft Defender
 
@@ -18568,18 +18570,18 @@ sekiz karakterli alfasayısal desen
 ### <a name="pattern"></a>Desen
 
 sekiz karakterli alfasayısal desen:
-- İki harf veya basamak
+- iki harf veya basamak
 - altı basamak
 
-### <a name="checksum"></a>Checksum
+### <a name="checksum"></a>Sağlama toplamı
 
 Hayır
 
 ### <a name="definition"></a>Tanım
 
-DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin algılandığından orta düzeyde güven sağlar:
-- Kayıtexex Regex_Ukraine_Passport_International desene eşleşen içeriği bulur.
-- Anahtar sözcük Keyword_Ukraine_Passport_International bulunur.
+DLP ilkesi, 300 karaktere yakın olduğunda bu tür hassas bilgiler algılandığının orta düzeyde güvenilirliğine sahiptir:
+- Regex Regex_Ukraine_Passport_International desenle eşleşen içeriği bulur.
+- Keyword_Ukraine_Passport_International anahtar sözcüğü bulunur.
 
 ```xml
       <!-- Ukraine Passport International -->
@@ -18591,13 +18593,13 @@ DLP ilkesi, 300 karakter yakınlık içinde olursa, bu tür hassas bilgilerin al
       </Entity>
 ```
 
-### <a name="keywords"></a>Anahtar Sözcükler
+### <a name="keywords"></a>Anahtar kelime -ler
 
 #### <a name="keyword_ukraine_passport_international"></a>Keyword_ukraine_passport_international
 
-- Ukrayna pasaport
+- ukrayna pasaportu
 - pasaport numarası
-- pasaport yok
+- pasaport no
 - паспорт України
 - номер паспорта
 

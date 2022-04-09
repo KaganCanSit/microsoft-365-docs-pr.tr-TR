@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 5382dc07-aaa5-45c9-8767-502333b214ce
 description: Microsoft 365'da Bookings özelliğine nasıl erişeceğinizi öğrenin.
-ms.openlocfilehash: e399540711cdf0f5e9556ac1ac8aeed32d00db52
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: fd81b64916b1798982470ad8e6aa6e28b0a14fdf
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714273"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746771"
 ---
 # <a name="get-access-to-microsoft-bookings"></a>Microsoft Bookings’e erişim elde etme
 
@@ -33,7 +33,7 @@ BT yöneticiniz size Bookings erişimi verdiyse, uygulamaya çevrimiçi Office a
 
 1. Bu sayfada ilk kez kullanmıyorsanız, başka bir rezervasyon takvimi seçebilir veya başka bir rezervasyon takvimi için arama yapabilirsiniz.
 
-2. İşletmenizin adını ve iş türünü girin ve **Devam'ı** seçin.
+1. İşletmenizin adını ve iş türünü girin ve **Devam'ı** seçin.
 
 Artık kuruluşunuz için Bookings ayarlamaya hazırsınız. Bu [bağlantıyla](https://outlook.office.com/bookings/onboarding) Bookings sayfasına uygulama başlatıcıdan veya office.com ulaşabilirsiniz. Bookings özelliklerinizi ayarlamaya devam etmek için aşağıdaki konuları kullanın.
 

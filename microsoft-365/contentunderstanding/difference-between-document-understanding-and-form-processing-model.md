@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Belge anlama modeli ile form işleme modeli arasındaki temel farklar hakkında bilgi edinin.
-ms.openlocfilehash: ee51b60b69bc2ec489f074a73555cbc6f1a17143
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: a3f36adbf261ef290aada8efe1c0643ee1ce570f
+ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664645"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64738397"
 ---
 # <a name="differences-between-document-understanding-and-form-processing-models"></a>Belge anlama ve form işleme modelleri arasındaki farklar 
 
@@ -85,6 +85,7 @@ Form işlemenin ne zaman kullanılacağını ve belge anlamanın ne zaman kullan
 | İşlem maliyeti | AI Builder kredilerini kullanır.<br>Krediler 1M toplu olarak satın alınabilir.<br>300+SharePoint Syntex lisansları satın alındığında 1M kredi dahil edilir.<br>1M kredi, 2.000 dosya sayfası işlenmesine izin verir.<br>| Yok |
 | Kapasite | Varsayılan Power Platform ortamını kullanır (Dataverse veritabanının desteklendiği özel ortamlar). | Kapasite kısıtlamaları yoktur.|
 | Desteklenen diller| [Daha fazla 73 dil için dil](/power-platform-release-plan/2021wave2/ai-builder/form-processing-new-language-support) desteği. | Modeller tüm Latin alfabesi dillerinde çalışır. İngilizceye ek olarak: Almanca, İsveççe, Fransızca, İspanyolca, İtalyanca ve Portekizce.|
+
 
 ## <a name="see-also"></a>Ayrıca Bkz
 

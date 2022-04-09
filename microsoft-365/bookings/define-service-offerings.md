@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 4a1c391e-524f-48e0-bef8-185df3a9634b
 description: Hizmet adı, açıklama, konum, süre ve fiyatlandırma gibi hizmet teklifleri bilgilerini girme yönergeleri. Hizmeti sağlamak için uygun çalışanları da etiketleyebilirsiniz.
-ms.openlocfilehash: 7d4bd5d8e75610785176f8c527576b0609cf71a4
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 576babc8a1cc64734c3d11f761b3b848d3fb2639
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714405"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746685"
 ---
 # <a name="define-your-service-offerings-in-bookings"></a>hizmet tekliflerinizi Bookings'de tanımlama
 
@@ -89,8 +89,6 @@ Ayrıca, birisi rezervasyon sayfanız aracılığıyla bir hizmet rezervasyonu y
 
 4. **Kullanılabilirlik seçenekleri** sayfasında, zamanlama ilkeniz ve personelinizin uygunluk durumu için **Rezervasyon sayfanızdan** seçtiğiniz seçenekleri görebilirsiniz. Daha fazla bilgi için bkz [. Zamanlama ilkelerinizi ayarlama](set-scheduling-policies.md).
 
-    :::image type="content" source="media/bookings-maximum-attendees.jpg" alt-text="Bookings'da maksimum katılımcıyı ayarlama örneği.":::
-
 5. **Varsayılan fiyat**  Bu, Self-Service sayfasında görüntülenecek fiyattır. **Fiyat ayarlanmadı** seçilirse maliyet veya fiyatlandırmaya dair hiçbir fiyat veya başvuru görünmez.
 
 6. **Notlar** Bu alan, rezervasyonu yapılan personelin rezervasyon etkinliğinde ve Bookings web uygulamasının Takvim sekmesinde görünen olayda görünür.
@@ -101,7 +99,7 @@ Ayrıca, birisi rezervasyon sayfanız aracılığıyla bir hizmet rezervasyonu y
 
 8. **Anımsatıcılar ve Onaylar** sayfasında, gönderdiğiniz anımsatıcıları ve bildirimleri ayarlayabilirsiniz. Anımsatıcılar ve bildirimler, randevudan önce belirli bir zamanda müşterilere, personel üyelerine veya her ikisine de gönderilir. Tercihinize göre her randevu için birden çok ileti oluşturulabilir.
 
-   :::image type="content" source="media/bookings-remind-confirm.jpg" alt-text="Bookings bir onay e-postası.":::
+   :::image type="content" source="media/bookings-remind-confirm-2.png" alt-text="Bookings bir onay e-postası.":::
 
    Yeniden zamanlama veya müşterilerin randevu için getirmesi gerekenler gibi istediğiniz ek metinleri buraya ekleyebilirsiniz. Aşağıda, **E-posta Onayı için ek bilgiler** alanında görülen özgün onay e-postasına eklenen özelleştirilmiş metin örneği verilmiştir:
 

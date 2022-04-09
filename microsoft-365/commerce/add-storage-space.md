@@ -25,12 +25,12 @@ ms.custom:
 search.appverid: MET150
 description: Microsoft 365 aboneliğinize dosya depolama alanı ekleyin. Ek dosya depolama alanıyla, SharePoint daha fazla içerik depolayabilirsiniz.
 ms.date: 04/02/2021
-ms.openlocfilehash: 687233ed91e358c3f48332a0b07aa3213734b71b
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: da66bac2bde52f5bcd899b73e5927008b40227dc
+ms.sourcegitcommit: 6fefc15dd78139316597083b702286097d45d4dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731537"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737471"
 ---
 # <a name="add-more-sharepoint-storage-to-your-subscription"></a>Aboneliğinize daha fazla SharePoint depolama alanı ekleyin
 
@@ -112,4 +112,4 @@ Office 365 Ek Dosya Depolama Alanı aşağıdaki aboneliklere sağlanır:
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Site depolama sınırlarını yönetme](/sharepoint/manage-site-collection-storage-limits) (makale)
+[Site depolama sınırlarını yönetme](/sharepoint/manage-site-collection-storage-limits) (makale)\

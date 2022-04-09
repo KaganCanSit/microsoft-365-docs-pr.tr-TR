@@ -1,5 +1,5 @@
 ---
-title: Microsoft SharePoint Syntex
+title: Ayıklayıcı oluşturma Microsoft SharePoint Syntex
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -12,15 +12,15 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Microsoft SharePoint Syntex'de nasıl ayıklaıcı oluştur SharePoint Syntex.
-ms.openlocfilehash: 1d0aebf610897d07d051ba9e5f3e218dd582bbad
-ms.sourcegitcommit: 966344e1aa442a4d10a0fb05f56badd38c833bb2
+description: Microsoft SharePoint Syntex'da ayıklayıcı oluşturmayı öğrenin.
+ms.openlocfilehash: 4ea60912ca29e53aeedf9ee0ea85d662a580707e
+ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2022
-ms.locfileid: "63015562"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64738575"
 ---
-# <a name="create-an-extractor-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'de ayıklaıcı oluşturma
+# <a name="create-an-extractor-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'de ayıklayıcı oluşturma
 
 
 <br/>
@@ -29,65 +29,63 @@ ms.locfileid: "63015562"
 
 <br/> 
 
-Belirli belge türlerinin kimliğini ve sınıflandırmayı otomatikleştirmek için sınıflandırıcı modeli oluşturmadan önce veya oluşturduktan sonra, isteğe bağlı olarak bu belgelerden belirli bilgileri almak için modelinize ayıklayıcılar eklemeyi seçebilirsiniz. Örneğin, modelinizin yalnızca belge kitaplığınıza eklenen tüm Sözleşme Yenileme belgelerini  tanımlaması değil, her belgenin Hizmet Başlangıç tarihini de belge kitaplığında bir  sütun değeri olarak görüntülemesini istiyor olabilirsiniz.
+Belirli belge türlerini tanımlamayı ve sınıflandırmayı otomatikleştirmek için bir sınıflandırıcı modeli oluşturmadan önce veya sonra, isteğe bağlı olarak modelinize ayıklayıcılar ekleyerek bu belgelerden belirli bilgileri çekmeyi seçebilirsiniz. Örneğin, modelinizin yalnızca belge kitaplığınıza eklenen tüm *Sözleşme Yenileme* belgelerini tanımlamasını değil, aynı zamanda her belgenin *Hizmet Başlangıç tarihini* belge kitaplığında sütun değeri olarak görüntülemesini de isteyebilirsiniz.
 
-Belge içinde ayıklamak istediğiniz her varlık için bir ayıklaıcı oluşturmanız gerekir. Örneğimizde, model tarafından tanımlanan **** herContract   **Renewaldocument** içinService Start  Date belgeyi ayıklamak we want to extract.  **TümContract Renewaldocuments**  belge kitaplığında, her belgenin Hizmet Başlangıç tarihi değerini gösteren bir sütunla bir görünüm görmek istiyoruz. 
+Belgede ayıklamak istediğiniz her varlık için bir ayıklayıcı oluşturmanız gerekir. Örneğimizde, model tarafından tanımlanan  **eachContract Renewaldocument**   **içinService Başlangıç Tarihi'ni**  ayıklamak istiyoruz.  **AllContract Renewaldocuments**  belge kitaplığında, her belgenin **Hizmet Başlangıç** tarihi değerini gösteren bir sütunla birlikte bir görünüm görebilmek istiyoruz. 
 
 > [!NOTE]
-> Bir ayıklayıcı oluşturmak için, daha önce karşıya yüklediğiniz aynı dosyaları sınıflandırıcıyı eğitmek için kullanırsiniz. 
+> Ayıklayıcı oluşturmak için sınıflandırıcıyı eğitmek için daha önce karşıya yüklediğiniz dosyaları kullanırsınız. 
 
-## <a name="name-your-extractor"></a>Ayıklayanın adını yazın
+## <a name="name-your-extractor"></a>Ayıklayıcınızı adlandırma
 
-1. Model giriş sayfasında, Ayıklar oluştur ve **eğitim ayıkla kutucuğunda** Eğitim **ayıkla'ya tıklayın**.
+1. Model giriş sayfasındaki **Ayıklayıcı oluştur ve eğit** kutucuğunda **Ayıklayıcıyı eğit'i** seçin.
 
-2. Yeni **varlık ayıklaıcı ekranında** , Yeni ayıklaıcı adı **alanına ayıklaıcının adını** yazın. Örneğin, her Sözleşme **Yenileme belgelerinden** hizmet başlangıç tarihini ayıklamak için bu adı Hizmet Başlangıç Tarihi olarak yazın. Daha önce oluşturulmuş bir sütunu (örneğin, yönetilen bir meta veri sütunu) yeniden kullanabilirsiniz.
+2. **Yeni varlık ayıklayıcısı** ekranında, **Yeni ayıklayıcı adı alanına ayıklayıcınızın adını** yazın. Örneğin, her Sözleşme Yenileme belgesinden hizmet başlangıç tarihini ayıklamak istiyorsanız Hizmet Başlangıç **Tarihi** olarak adlandırın. Daha önce oluşturulmuş bir sütunu (örneğin, yönetilen meta veri sütunu) yeniden de kullanabilirsiniz.
 
-    Varsayılan olarak, sütun türü Tek **satır metindir**. Sütun türünü değiştirmek için Gelişmiş **ayarlarS** >  sütun türü'ne tıklayın ve sonra da kullanmak istediğiniz türü seçin.
+    Varsayılan olarak, sütun türü **Tek satırlık metindir**. Sütun türünü değiştirmek istiyorsanız **Gelişmiş ayarlarSütun** >  **türü'nü** seçin ve ardından kullanmak istediğiniz türü seçin.
 
-    ![Sütun türü seçeneğini gösteren Yeni varlık ayıkla panelinin Gelişmiş ayarlar bölümünün ekran görüntüsü.](../media/content-understanding/advanced-settings-column-type.png) 
+    ![Sütun türü seçeneğini gösteren Yeni varlık ayıklayıcı panelinin Gelişmiş ayarlar bölümünün ekran görüntüsü.](../media/content-understanding/advanced-settings-column-type.png) 
 
     > [!NOTE]
-    > Sütun türü Tek satır metin olan **ayıklayıcılar için** en yüksek karakter sınırı 255'tir. Sınırı aşan tüm karakterler kesilir.
+    > **Tek satırlık metin** sütun türüne sahip ayıklayıcılar için en fazla karakter sınırı 255'tir. Sınırı aşan yazdığınız tüm karakterler kesilir.
 
-3. Bitir bittiğinde Oluştur'a **tıklayın**.
+3. İşiniz bittiğinde **Oluştur'u** seçin.
 
 ## <a name="add-a-label"></a>Etiket ekleme
 
-Sonraki adım, örnek eğitim dosyalarında ayıklamak istediğiniz varlığı etiketlemektir.
+Sonraki adım, örnek eğitim dosyalarınızda ayıklamak istediğiniz varlığı etiketlemektir.
 
-Ayıklaıcıyı oluşturmak, ayıklayıcı sayfasını açar. Burada, örnek dosyalarınızın listesini ve listede ilk dosyanın görüntüleyicide görüntülendiğinden emin olun.
+Ayıklayıcı oluşturulurken ayıklayıcı sayfası açılır. Burada, listedeki ilk dosyanın görüntüleyicide görüntülendiği örnek dosyalarınızın listesini görürsünüz.
 
-1. Görüntüleyiciden, dosyalardan ayıklamak istediğiniz verileri seçin. Örneğin, Başlangıç Hizmet Tarihini ayıklamak istediğiniz *zaman ilk* dosyada (Pazartesi *, 14 Ekim 2019) tarih değerini vurgularsınız*. ve ardından **Kaydet'e tıklayın**.  Etiketli örnekler listesinde, Etiket sütununu altında dosyadaki **değerin görüntüleniyor olması** gerekir.
-2. Otomatik **olarak kaydetmek** ve listede bir sonraki dosyayı görüntüleyicide açmak için Sonraki dosya'ya tıklayın. Ya da **Kaydet'i** seçin ve Etiketli örnekler **listesinden başka bir dosya** seçin.
-3. Görüntüleyicide, 1. ve 2. adımları yinelayın, ardından etiketi beş dosyanın hepsinde kaydedene kadar tekrarlayın.
+1. Görüntüleyiciden, dosyalardan ayıklamak istediğiniz verileri seçin. Örneğin, *Başlangıç Hizmeti Tarihi'ni* ayıklamak istiyorsanız, ilk dosyadaki tarih değerini vurgularsınız (*Pazartesi, 14 Ekim 2019*). ve ardından **Kaydet'i** seçin. Etiketlenmiş örnekler listesinde, **Etiket** sütununun altındaki dosyadan değerin görüntülendiğini görmeniz gerekir.
+2. Otomatik kaydetmek için **sonraki dosya'ya** tıklayın ve görüntüleyicideki listede bir sonraki dosyayı açın. Alternatif olarak **Kaydet'i** ve ardından **Etiketli örnekler** listesinden başka bir dosya seçin.
+3. Görüntüleyicide 1. ve 2. adımları yineleyin, ardından etiketi beş dosyaya da kaydedene kadar yineleyin.
 
-    ![Gelişmiş ayarlar'a tıklayın.](../media/content-understanding/select-service-start-date.png) 
+    ![Gelişmiş ayarlar.](../media/content-understanding/select-service-start-date.png) 
 
  
-Beş dosya etiketlenin ardından, eğitime devam etme konusunda sizi bilgilendiren bir bildirim başlığı görüntülenir. Daha fazla belge etiketlemeyi seçebilir veya eğitime ilerleyebilirsiniz. 
+Beş dosyayı etiketledikten sonra, eğitime geçmenizi bildiren bir bildirim başlığı görüntülenir. Daha fazla belge etiketlemeyi veya eğitime ilerlemeyi seçebilirsiniz. 
 
-### <a name="use-find-to-search-your-file"></a>Dosyanızı aramak için Bul'ı kullanma
+### <a name="use-find-to-search-your-file"></a>Dosyanızda arama yapmak için Bul'u kullanma
 
-Bul özelliğini **kullanarak** belgenize etiket almak istediğiniz bir varlık arayabilirsiniz.
+Belgenizde etiketlemek istediğiniz bir varlığı aramak için **Bul** özelliğini kullanabilirsiniz.
 
-   ![Dosyada bulur.](../media/content-understanding/find-feature.png) 
+   ![Dosyada bul.](../media/content-understanding/find-feature.png) 
 
-Büyük bir belgede arama ediyorsanız veya belgede varlığın birden çok örneği varsa, Bul özelliği yararlı olur. Birden çok örnek bulursanız, etiket olarak görüntüleyicide ilgili konuma gitmek için arama sonuçlarında ihtiyacınız olan örneği seçin.
-
+Büyük bir belgeyi arıyorsanız veya belgede varlığın birden çok örneği varsa Bul özelliği kullanışlıdır. Birden çok örnek bulursanız, arama sonuçlarında ihtiyacınız olan örneği seçerek görüntüleyicide bu konuma gidip etiketleyebilirsiniz.
 
 ## <a name="add-an-explanation"></a>Açıklama ekleme
 
-Örneğimizde, varlık biçiminin kendisine ve örnek belgelerde var olan çeşitlemelere ilişkin ipucu sağlayan bir açıklama oluşturlerimiz olacak. Örneğin, tarih değeri aşağıdakiler gibi çeşitli biçimlerde olabilir:
+Örneğimizde, varlık biçiminin kendisi ve örnek belgelerde sahip olabileceği çeşitlemeler hakkında ipucu sağlayan bir açıklama oluşturacağız. Örneğin, tarih değeri aşağıdakiler gibi çeşitli biçimlerde olabilir:
 - 10/14/2019
-- 14 Ekim 2019
+- 14 Ekim 2019, Cumartesi
 - 14 Ekim 2019 Pazartesi
- 
 
-Hizmet Başlangıç Tarihini *belirlemeye yardımcı olmak* için desen açıklaması oluşturabilirsiniz.
+*Hizmet Başlangıç Tarihi'ni* tanımlamaya yardımcı olmak için bir desen açıklaması oluşturabilirsiniz.
 
-1. Açıklama bölümünde Yeni'yi **seçin** ve bir ad yazın (örneğin, *Tarih*).
-2. Tür için Desen **listesi'ne tıklayın**.
-3. Değer için, örnek dosyalarda görünecekleri tarih çeşitlelesiniz. Örneğin, 00.00.0000 olarak görünen tarih biçimleriniz varsa, belgelerinize görünen çeşitlemeleri girin; örneğin:
+1. Açıklama bölümünde **Yeni'yi** seçin ve bir ad (örneğin, *Tarih*) yazın.
+2. Tür için **Desen listesi'ne** tıklayın.
+3. Değer için, örnek dosyalarda göründükleri şekilde tarih çeşitlemesi sağlayın. Örneğin, 00.00.0000 olarak görünen tarih biçimleriniz varsa, belgelerinizde görünen çeşitlemeleri girersiniz, örneğin:
     - 0/0/0000
     - 0/00/0000
     - 00/0/0000
@@ -95,71 +93,100 @@ Hizmet Başlangıç Tarihini *belirlemeye yardımcı olmak* için desen açıkla
 4. **Kaydet**'i seçin.
 
 > [!NOTE]
-> Açıklama türleri hakkında daha fazla bilgi edinmek için bkz. [Açıklama türleri](./explanation-types-overview.md).  
+> Açıklama türleri hakkında daha fazla bilgi için bkz. [Açıklama türleri](./explanation-types-overview.md).  
 
 
 ### <a name="use-the-explanation-library"></a>Açıklama kitaplığını kullanma
 
-Tarih gibi öğeler için açıklamalar oluştururken, açıklama kitaplığını kullanmak tüm çeşitlemeleri el ile girmekten daha kolaydır.[](./explanation-types-overview.md) Açıklama kitaplığı, önceden yapılmış bir tümcecik ve desen açıklamaları kümesidir. Kitaplık, tarihler, telefon numaraları, posta kodları ve daha birçok ortak tümcecik veya desen listesi için tüm biçimleri sağlar. 
+Tarihler gibi öğeler için açıklama oluşturmak için açıklama [kitaplığını kullanmak](./explanation-types-overview.md) , tüm varyasyonları el ile girmekten daha kolaydır. Açıklama kitaplığı, önceden oluşturulmuş bir tümcecik ve desen açıklamaları kümesidir. Kitaplık, tarihler, telefon numaraları, posta kodları ve diğerleri gibi ortak tümcecik veya desen listeleri için tüm biçimleri sağlamaya çalışır. 
 
-Hizmet Başlangıç *Tarihi örneğinde* , açıklama kitaplığında Tarih'in önceden yerleşik açıklamasını *kullanmak daha* verimli olur:
+*Hizmet Başlangıç Tarihi* örneği için, açıklama kitaplığında *Date* için önceden oluşturulmuş açıklamayı kullanmak daha verimlidir:
 
-1. Açıklama bölümünde **Yeni'yi** ve **ardından** Açıklama **kitaplığından'ı seçin**.
-2. Açıklama kitaplığından Tarih'i **seçin**. Tanınan tüm tarih çeşitlemelerini görüntüabilirsiniz.
+1. **Açıklama bölümünde** **Yeni'yi** ve ardından **Açıklama kitaplığından'ı** seçin.
+2. Açıklama kitaplığından **Tarih'i** seçin. Tanınan tüm tarih çeşitlemelerini görüntüleyebilirsiniz.
 3. **Ekle**'yi seçin.
 
     ![Açıklama kitaplığı.](../media/content-understanding/explanation-library.png) 
 
-4. Açıklama **oluştur sayfasında** , açıklama *kitaplığından* gelen tarih bilgileri alanları otomatik olarak doldurur. **Kaydet**'i seçin.
+4. **Açıklama oluştur** sayfasında, açıklama kitaplığındaki *Tarih* bilgileri alanları otomatik olarak doldurur. **Kaydet**'i seçin.
 
     ![Tarih.](../media/content-understanding/date-explanation-library.png) 
 
 ## <a name="train-the-model"></a>Modeli eğitin 
 
-Açıklamanızı kaydetme eğitiminize başlar. Modeliniz etiketli örnek dosyalardan verileri ayıklamak için yeterli bilgiye sahipse, Her dosyayı Eşleşme etiketiyle etiketlenmiş olarak **gösterirsiniz**.  
+Açıklamanızı kaydetmek eğitimi başlatır. Modelinizde etiketlenmiş örnek dosyalarınızdan verileri ayıklamak için yeterli bilgi varsa, her dosyayı **Eşleştir** ile etiketlenmiş olarak görürsünüz.  
 
-![Eşleşme.](../media/content-understanding/match2.png) 
+![Maç.](../media/content-understanding/match2.png) 
 
-Açıklamanın ayıklamak istediğiniz verileri bulmak için yeterli bilgisi yoksa, her dosya Eşleşmez olarak **etiketlenmiş olur**. Eşleşmeyen dosyalara **tıklar ve** eşleşmeyen nedenler hakkında daha fazla bilgi edinebilirsiniz.
+Açıklama, ayıklamak istediğiniz verileri bulmak için yeterli bilgiye sahip değilse, her dosya **Uyumsuz** olarak etiketlenir. **Eşleşmeyen** dosyalar'ı seçerek neden uyuşmazlık olduğu hakkında daha fazla bilgi edinebilirsiniz.
 
 
 ## <a name="add-another-explanation"></a>Başka bir açıklama ekleme
 
-Eşleşmeyenler genellikle, sağladığımız açıklamanın etiketli dosyalarımız ile hizmet başlangıç tarihi değerini ayıklamak için yeterli bilgi sağlamamış olduğuna ilişkin bir göstergedir. Belgeyi düzenlemeniz veya başka bir açıklama eklemeniz gerekir.
+Genellikle uyuşmazlık, sağladığımız açıklamanın hizmet başlangıç tarihi değerini etiketli dosyalarımızla eşleşecek şekilde ayıklamak için yeterli bilgi sağlamadığının göstergesidir. Düzenlemeniz veya başka bir açıklama eklemeniz gerekebilir.
 
-Örneğimiz için, Hizmet Başlangıç metin *dizesinin her zaman gerçek* değerin önünde olduğunu fark etmiş oluruz. Hizmet Başlangıç Tarihini belirlemeye yardımcı olmak için bir tümcecik açıklaması oluşturmanız gerekir.
+Örneğimizde, her zaman başlangıç *hizmeti tarihi metin dizesinin* gerçek değerden önce olduğuna dikkat edin. Hizmet Başlangıç Tarihi'ni tanımlamaya yardımcı olmak için bir tümcecik açıklaması oluşturmanız gerekir.
 
-1. Açıklama bölümünde Yeni'yi **seçin** ve bir ad yazın (örneğin, Önek *Dizesi*).
-2. Tür için Tümcecik **listesi'ne tıklayın**.
-3. Hizmet *Başlangıç Tarihini değer* olarak kullanın.
+1. Açıklama bölümünde **Yeni'yi** seçin ve bir ad yazın (örneğin, *Ön Ek Dizesi*).
+2. Tür için **Tümcecik listesi'ni** seçin.
+3. Değer olarak *Hizmet Başlangıç Tarihi'ni* kullanın.
 4. **Kaydet**'i seçin.
 
-    ![Önek dizesi.](../media/content-understanding/prefix-string.png) 
+    ![Ön ek dizesi.](../media/content-understanding/prefix-string.png) 
 
 ## <a name="train-the-model-again"></a>Modeli yeniden eğitin
 
-Açıklama kaydederek eğitim, bu kez örnekteki her iki açıklamayı da kullanarak yeniden başlatılır. Modeliniz etiketli örnek dosyalardan verileri ayıklamak için yeterli bilgiye sahipse, Her dosyayı Match etiketli olarak **görüyorsunuz**. 
+Açıklamanın kaydedilmesi eğitimi yeniden başlatır ve bu kez örnekteki her iki açıklamayı da kullanır. Modelinizde etiketlenmiş örnek dosyalardan verileri ayıklamak için yeterli bilgi varsa, her dosyayı **Eşleştir** ile etiketlenmiş olarak görürsünüz. 
 
-Etiketli dosyalarınıza yeniden  bir Eşleşme eşleşmesi alırsanız, büyük olasılıkla modele belge türünü belirlemek için daha fazla bilgi sağlamak veya mevcut dosyalarda değişiklik yapmak için başka bir açıklama oluşturmanız gerekir.
+Etiketli dosyalarınızda yeniden **Uyuşmazlık** alırsanız, modele belge türünü tanımlamak için daha fazla bilgi sağlamak için başka bir açıklama oluşturmanız veya mevcut dosyalarınızda değişiklik yapmayı göz önünde bulundurmanız gerekebilir.
 
-## <a name="test-your-model"></a>Modelinizi test etmek
+## <a name="test-your-model"></a>Modelinizi test etme
 
-Etiketli örnek dosyalarınız için bir eşleşme alırsanız, artık modelinizi diğer etiketsiz örnek dosyalar üzerinde test edersiniz. Bu isteğe bağlıdır, ancak modeli daha önce kullanmadan önce fitness'i veya hazırlığı değerlendirmek için, modeli daha önce kullanmamış olduğu dosyalar üzerinde test etmek için yararlı bir adımdır.
+Etiketli örnek dosyalarınızda bir eşleşme alırsanız, artık modelinizi etiketlenmemiş kalan örnek dosyalarda test edebilirsiniz. Bu isteğe bağlıdır, ancak modeli kullanmadan önce modelin daha önce görmediği dosyalarda test ederek "uygunluk" veya hazır olma durumunu değerlendirmek için kullanışlı bir adımdır.
 
-1. Model giriş sayfasından Sına **sekmesine** tıklayın.  Bu, modeli etiketsiz örnek dosyalarınız üzerinde çalıştırır.
-2. Test **dosyaları listesinde** , örnek dosyalarınız modelin ihtiyacınız olan bilgileri ayıklayana kadar mümkün olup olduğunu gösterecek şekilde görüntülenir. Belgelerinizi belirlemede sınıflandırıcının ne kadar etkili olduğunu belirlemenize yardımcı olması için bu bilgileri kullanın.
+1. Model giriş sayfasında **Test** sekmesini seçin.  Bu, modeli etiketlenmemiş örnek dosyalarınızda çalıştırır.
 
-    ![Dosyalarınızı test etmek için.](../media/content-understanding/test-filies-extractor.png) 
+2. **Test dosyaları** listesinde, örnek dosyalarınız modelin ihtiyacınız olan bilgileri ayıklayıp ayıklayamayacağını göstermek için görüntülenir. Sınıflandırıcınızın belgelerinizi tanımlamadaki etkinliğini saptamaya yardımcı olması için bu bilgileri kullanın.
+
+    ![Dosyalarınızda test edin.](../media/content-understanding/test-filies-extractor.png) 
+
+### <a name="further-refine-an-extractor"></a>Ayıklayıcıyı daha fazla daraltma
+
+Yinelenen varlıklarınız varsa ve yalnızca bir değeri veya belirli sayıda değeri ayıklamak istiyorsanız, nasıl işleneceğini belirtmek için bir kural ayarlayabilirsiniz. Ayıklanan bilgileri daraltacak bir kural eklemek için şu adımları izleyin:
+
+1. Model giriş sayfasındaki **Varlık ayıklayıcıları** bölümünde, daraltmak istediğiniz ayıklayıcıyı seçin ve ardından **Ayıklanan bilgileri iyileştir'i** seçin.
+
+    ![Ayıklanan bilgileri iyileştir seçeneğinin vurgulandığı Varlık ayıklayıcıları bölümünün ekran görüntüsü.](../media/content-understanding/refine-extracted-info.png) 
+
+2. **Ayıklanan bilgileri daralt** sayfasında aşağıdaki kurallardan birini seçin:
+
+    - İlk değerlerden birini veya daha fazlasını tutma
+    - Son değerlerden birini veya daha fazlasını tutma
+    - Yinelenen değerleri kaldırma
+    - İlk satırlardan birini veya daha fazlasını tutma
+    - Son satırlardan birini veya daha fazlasını tutma
+ 
+    ![Kural seçeneklerini gösteren Ayıklanan bilgileri daralt sayfasının ekran görüntüsü.](../media/content-understanding/refine-extracted-info-page.png) 
+
+3. Kullanmak istediğiniz satır veya değer sayısını girin ve **İyileştir'i** seçin.
+
+4. Çizgi veya değer sayısını değiştirerek bir kuralı düzenlemek istiyorsanız, düzenlemek istediğiniz ayıklayıcıyı seçin, **Ayıklanan bilgileri daralt'ı** seçin, sayıyı değiştirin ve **kaydet'i** seçin.
+
+5. Ayıklayıcıyı test ettiğinizde, iyileştirmeyi **Test Dosyaları** listesinin **İyileştirme sonucu** sütununda görebilirsiniz. 
+
+    ![İyileştirme sonucu sütununu gösteren Test Dosyaları listesi.](../media/content-understanding/test-filies-extractor-2.png) 
+
+6. Ayıklayıcıdaki bir iyileştirme kuralını silmek istiyorsanız, kuralı kaldırmak istediğiniz ayıklayıcıyı seçin, **Ayıklanan bilgileri daralt'ı** ve ardından **Sil'i** seçin.
 
 ## <a name="see-also"></a>Ayrıca Bkz
 [Sınıflandırıcı oluşturma](create-a-classifier.md)
 
 [Açıklama türleri](explanation-types-overview.md)
 
-[Ayıklaıcı oluştururken terim deposu taksonomilerinden faydalanma](leverage-term-store-taxonomy.md)
+[Ayıklayıcı oluştururken terim deposu taksonomisini kullanma](leverage-term-store-taxonomy.md)
 
-[Belge Anlama'ya genel bakış](document-understanding-overview.md)
+[Document Understanding'e genel bakış](document-understanding-overview.md)
 
 [Model uygulama](apply-a-model.md) 
 
-[SharePoint Syntex Modu](accessibility-mode.md)
+[erişilebilirlik modunu SharePoint Syntex](accessibility-mode.md)

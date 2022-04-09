@@ -1,6 +1,6 @@
 ---
-title: İş için Microsoft Defender'ı ayarlama ve yapılandırma
-description: İş için Microsoft Defender'ın kurulum ve yapılandırma sürecine genel bir bakış elde edin
+title: İş için Microsoft Defender ayarlama ve yapılandırma
+description: İş için Microsoft Defender için kurulum ve yapılandırma işlemine genel bakış elde edin
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -17,41 +17,39 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 7dbe825a103303d62e536eca9ea59819c0e97aea
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 5fbf56b4b3c3fc76b863a6839902ad108d1cf8d5
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63524831"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746590"
 ---
-# <a name="set-up-and-configure-microsoft-defender-for-business"></a>İş için Microsoft Defender'ı ayarlama ve yapılandırma
+# <a name="set-up-and-configure-microsoft-defender-for-business"></a>İş için Microsoft Defender ayarlama ve yapılandırma
 
 > [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
+> İş için Microsoft Defender, 1 Mart 2022'de başlayarak [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşterilerine dağıtılıyor. Tek başına abonelik olarak İş için Defender önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşterilere ve BT İş Ortaklarına aşamalı olarak dağıtılacaktır. Önizleme, [bir dizi ilk senaryo](mdb-tutorials.md#try-these-preview-scenarios) içerir ve düzenli olarak özellikler ekleyeceğiz.
 > 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
 
-İş için Microsoft Defender, özellikle küçük ve orta ölçekli işletmeler için tasarlanmış, kolaylaştırılmış bir kurulum ve yapılandırma deneyimi sağlar. Bu makaleyi kılavuz olarak kullanın.
+İş için Microsoft Defender, özellikle küçük ve orta ölçekli işletmeler için tasarlanmış kolaylaştırılmış kurulum ve yapılandırma deneyimi sağlar. Bu makaleyi kılavuz olarak kullanın.
 
 >
-> **Bir dakika mı kaldı?**
-> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+> **Bir dakikan var mı?**
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">İş için Microsoft Defender hakkındaki kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
 ## <a name="the-setup-and-configuration-process"></a>Kurulum ve yapılandırma işlemi
 
-:::image type="content" source="media/mdb-setup-process-2.png" alt-text="İş için Microsoft Defender'ı ayarlama ve yapılandırma işlemi.":::
+:::image type="content" source="media/mdb-setup-process-2.png" alt-text="İş için Microsoft Defender için kurulum ve yapılandırma işlemi.":::
 
 | Adım  | Makale | Açıklama  |
 |---------|---------|--------|
-| 1 | [Gereksinimleri gözden geçirme](mdb-requirements.md) | İş için Microsoft Defender'a yönelik, desteklenen işletim sistemleri de içinde olmak üzere gereksinimleri gözden geçirebilirsiniz. Bkz. [İş için Microsoft Defender gereksinimleri](mdb-requirements.md). |
-| 2 | [Roller ve izinler atama](mdb-roles-permissions.md)     | Güvenlik ekibinizi kullanan kişilerin, algılanan tehditleri ve düzeltme eylemlerini gözden geçirme, & ilkeleri görüntüleme, cihaz ekleme & raporları kullanma gibi görevleri gerçekleştirmek için izinlere ihtiyacı vardır. Bu izinleri belirli roller aracılığıyla veebilirsiniz. Bkz [. Rol ve izin atama](mdb-roles-permissions.md).        |
-| 3 | [E-posta bildirimlerini ayarlama](mdb-email-notifications.md) | Uyarıların tetiklendiğinde veya yeni güvenlik açıkları keşfedlendiğinde e-posta bildirimlerini kimlerin a alacaklarını belirtebilirsiniz. Bkz [. E-posta bildirimlerini ayarlama](mdb-email-notifications.md).| 
-| 4 | [Cihazları ekleme](mdb-onboard-devices.md)     | İşletmeler için Microsoft Defender ayarlanmıştır; böylece, şirketin cihazlarını eklemeye yardımcı olmak için çeşitli seçenekler arasında seçim yapabilirsiniz. Bkz [. Cihazları İş için Microsoft Defender'a ekleme](mdb-onboard-devices.md).         |
-| 5 | [Güvenlik ayarlarınızı ve ilkelerinizi yapılandırma](mdb-configure-security-settings.md) | Güvenlik ayarlarınızı ve ilkelerinizi yapılandırmak için, basitleştirilmiş bir yapılandırma işlemi veya güvenlik ilkeleri gibi çeşitli seçenekler Microsoft Endpoint Manager. Bkz [. Güvenlik ayarlarınızı ve ilkelerinizi yapılandırma](mdb-configure-security-settings.md). |
+| 1 | [Gereksinimleri gözden geçirin](mdb-requirements.md) | İş için Microsoft Defender için desteklenen işletim sistemleri de dahil olmak üzere gereksinimleri gözden geçirin. Bkz. [İş için Microsoft Defender gereksinimleri](mdb-requirements.md). |
+| 2 | [Rol ve izin atama](mdb-roles-permissions.md)     | Güvenlik ekibinizdeki kişilerin algılanan tehditleri & düzeltme eylemlerini gözden geçirme, & düzenleme ilkelerini görüntüleme, cihazları ekleme ve raporları kullanma gibi görevleri gerçekleştirmek için izinlere ihtiyacı vardır. Bu izinleri belirli roller aracılığıyla vekleyebilirsiniz. Bkz [. Rol ve izin atama](mdb-roles-permissions.md).        |
+| 3 | [E-posta bildirimlerini ayarlama](mdb-email-notifications.md) | Uyarılar tetiklendiğinde veya yeni güvenlik açıkları bulunduğunda kimlerin e-posta bildirimleri alacağını belirtebilirsiniz. Bkz. [E-posta bildirimlerini ayarlama](mdb-email-notifications.md).| 
+| 4 | [Cihazları ekleme](mdb-onboard-devices.md)     | İş için Microsoft Defender, şirketinizin cihazlarını eklemek için çeşitli seçenekler arasından seçim yapabileceğiniz şekilde ayarlanır. Bkz[. cihazları İş için Microsoft Defender ekleme](mdb-onboard-devices.md).         |
+| 5 | [Güvenlik ayarlarınızı ve ilkelerinizi yapılandırma](mdb-configure-security-settings.md) | Basitleştirilmiş bir yapılandırma işlemi veya Microsoft Endpoint Manager dahil olmak üzere güvenlik ayarlarınızı ve ilkelerinizi yapılandırmak için çeşitli seçenekler arasından seçim yapabilirsiniz. Bkz [. Güvenlik ayarlarınızı ve ilkelerinizi yapılandırma](mdb-configure-security-settings.md). |
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Şu şekilde devam edin:
-
-- [1. Adım: İş için Microsoft Defender gereksinimlerini gözden geçirme](mdb-requirements.md)
+1. [Adım: İş için Microsoft Defender gereksinimlerini gözden geçirin](mdb-requirements.md).

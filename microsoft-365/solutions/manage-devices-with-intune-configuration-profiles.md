@@ -18,12 +18,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: dfdffc95c39d471e071db8f83e88b9ba67e143e8
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: fe137e626d5199f1709504d025411586965ae9fd
+ms.sourcegitcommit: 6fefc15dd78139316597083b702286097d45d4dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731559"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64737418"
 ---
 # <a name="step-5-deploy-device-profiles-in-microsoft-intune"></a>Adım 5. Microsoft Intune'de cihaz profillerini dağıtma
 
@@ -48,7 +48,7 @@ Windows 10 ve Windows 11 için kullanılabilen Intune Windows güvenlik temeller
 
 Daha sonra Uç Nokta için Microsoft Defender ayarlandığında ve Intune bağladığınızda Uç Nokta için Defender temellerini dağıtın. Bu konu başlığı, bu serinin sonraki makalesinde ele alınmıştır: [6. Adım. Cihaz riskini ve güvenlik temellerine uyumluluğunu izleyin](manage-devices-with-intune-monitor-risk.md).
 
-Bu güvenlik temellerinin CIS veya NIST uyumlu olmadığını ancak önerilerini yakından yansıttığını anlamak önemlidir. Daha fazla bilgi için bkz. [Intune güvenlik temelleri CIS veya NIST uyumlu mu?](/mem/intune/protect/security-baselines#are-the-intune-security-baselines-cis-or-nist-compliant)
+Bu güvenlik temellerinin CIS veya NIST uyumlu olmadığını ancak önerilerini yakından yansıttığını anlamak önemlidir. Daha fazla bilgi için bkz. [Intune güvenlik temelleri CIS veya NIST uyumlu mu?](https://docs.microsoft.com/mem/intune/protect/security-baselines#are-the-intune-security-baselines-cis-or-nist-compliant)
 
 ## <a name="customize-configuration-profiles-for-your-organization"></a>Kuruluşunuz için yapılandırma profillerini özelleştirme
 

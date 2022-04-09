@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 03a9acc9-f29c-456b-9fb2-0f49474b2708
 description: Randevu oluşturmak ve Microsoft Bookings uygulaması aracılığıyla çalışan atamak için bu yönergeleri izleyin.
-ms.openlocfilehash: d30d9ba7fe00305ef370a554fc53ebebc5b5d284
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 0428c697def774a67384b14c4d9b2c48e2851794
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64715329"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64747258"
 ---
 # <a name="create-a-manual-booking"></a>El ile rezervasyon oluşturma
 
@@ -25,7 +25,7 @@ Bookings zamanlanabilir ve iki farklı şekilde personel oluşturulabilir. İlk 
 
 1. Microsoft 365'da Uygulama başlatıcıyı ve ardından **Bookings'ı** seçin.
 
-   ![Uygulama başlatıcıdaki Bookings görüntüsü.](../media/bookings-applauncher.png)
+    :::image type="content" source="../media/bookings-applauncher.png" alt-text="Uygulama başlatıcıda Bookings.":::
 
 1. Gezinti bölmesinde **Takvim** \> **Yeni ayırma'yı** seçin.
 
@@ -49,4 +49,4 @@ Bookings zamanlanabilir ve iki farklı şekilde personel oluşturulabilir. İlk 
 
    Aşağıda, müşterinizin alacağı anımsatıcının örnek bir e-postası verilmiştir:
 
-:::image type="content" source="../media/bookings-confirmed-email.png" alt-text="Ekran görüntüsü: El ile rezervasyondan örnek onay e-postası":::
+   :::image type="content" source="media/bookings-remind-confirm-2.png" alt-text="Ekran görüntüsü: El ile rezervasyondan örnek onay e-postası":::

@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: reference
-ms.date: 03/15/2022
+ms.date: 04/08/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.collection:
 - SMB
 - m365-initiative-defender-business
 - m365-security-compliance
-ms.openlocfilehash: d7651e9ec4ec3cfbf3fe8e853b6de1de9e50dae1
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 76e47f1d4ebb7aa32c65f235ee9b2ede9a051a2d
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714691"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746612"
 ---
 # <a name="compare-microsoft-defender-for-business-to-microsoft-365-business-premium"></a>İş için Microsoft Defender Microsoft 365 İş Ekstra ile karşılaştırma
 
@@ -87,9 +87,9 @@ Aşağıdaki tabloda, İş için Defender'daki güvenlik özellikleri ve özelli
 | [Yeni nesil koruma](../defender-endpoint/next-generation-protection.md) | Evet | Evet | Evet |
 | [Uç nokta algılama ve yanıt](../defender-endpoint/overview-endpoint-detection-response.md) | Evet <sup>[[2](#fn2)]</sup> | Hayır | Evet |
 | [Otomatik araştırma ve yanıt](../defender-endpoint/automated-investigations.md) | Evet <sup>[[2](#fn2)]</sup> | Hayır | Evet |
-| [Tehdit avcılığı](../defender-endpoint/advanced-hunting-overview.md) ve altı aylık veri saklama | Hayır | Hayır | Evet |
+| [Tehdit avcılığı](../defender-endpoint/advanced-hunting-overview.md) ve altı aylık veri saklama <sup>[[3](#fn3)]</sup> | Hayır | Hayır | Evet |
 | [Tehdit analizi](../defender-endpoint/threat-analytics.md) | Evet <sup>[[2](#fn2)]</sup> | Hayır | Evet |
-| [Platformlar arası destek](../defender-endpoint/minimum-requirements.md) <br/>(Windows, macOS, iOS ve Android işletim sistemi) | Evet <sup>[[3](#fn3)]</sup> | Evet | Evet |
+| [Platformlar arası destek](../defender-endpoint/minimum-requirements.md) <br/>(Windows, macOS, iOS ve Android işletim sistemi) | Evet <sup>[[4](#fn4)]</sup> | Evet | Evet |
 | [Microsoft Tehdit Uzmanları](../defender-endpoint/microsoft-threat-experts.md) | Hayır | Hayır | Evet |
 | İş Ortağı API'leri | Evet | Evet | Evet |
 | [Microsoft 365 Lighthouse tümleştirmesi](../../lighthouse/m365-lighthouse-overview.md) <br/>(Müşteri kiracıları genelinde güvenlik olaylarını görüntülemek için) | Evet | Hayır | Hayır |
@@ -98,7 +98,9 @@ Aşağıdaki tabloda, İş için Defender'daki güvenlik özellikleri ve özelli
 
 (<a id="fn2">2</a>) Bu özellikler küçük ve orta ölçekli işletmeler için iyileştirilmiştir.
 
-(<a id="fn3">3</a>) Önizleme programı sırasında Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com)) Windows istemci cihazları desteklenir.
+(<a id="fn3">3</a>) İş için Defender'da zaman çizelgesi sekmesi yoktur.
+
+(<a id="fn4">4</a>) Önizleme programı sırasında Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com)) Windows istemci cihazları desteklenir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

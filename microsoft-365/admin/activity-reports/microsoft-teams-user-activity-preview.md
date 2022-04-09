@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 yönetim merkezi Teams etkinlik raporlarını raporlar
+title: Kullanıcı etkinlik raporlarını Microsoft 365 yönetim merkezi Teams
 ms.author: kwekua
 author: kwekua
 manager: scotv
@@ -18,53 +18,73 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Kullanıcı etkinliği raporunu nasıl Microsoft Teams hakkında bilgi edinin ve Teams öngörüler elde edin.
-ms.openlocfilehash: cfb503c09577d4538371ad6a5b35520d8da24bdb
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+description: Microsoft Teams kullanıcı etkinliği raporunu almayı ve kuruluşunuzdaki Teams etkinliğiyle ilgili içgörüler elde etmeyi öğrenin.
+ms.openlocfilehash: dd2a507276077a808fcd5e0881eb26dfcd0a91ef
+ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63400846"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64738243"
 ---
-# <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-user-activity"></a>Microsoft 365 Merkezinde Rapor Raporları - Microsoft Teams etkinliğini gösterir
+# <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-user-activity"></a>Yönetim merkezinde raporları Microsoft 365 - Microsoft Teams kullanıcı etkinliği
 
-Rapor Microsoft 365 panosu, kurum kurum genelindeki ürünlerde etkinliğin genel görünümünü gösterir. Bu pano sayesinde her bir üründeki etkinliklerle ilgili daha ayrıntılı bilgi edinmek için ürün düzeyinde raporları ayrıntılı olarak inceleyebilirsiniz. [Raporlara genel bakış konusunu](activity-reports.md) gözden geçirin. Microsoft Teams kullanıcı etkinliği raporunda, kuruluşunuzdaki Microsoft Teams etkinliğiyle ilgili öngörüler edinebilirsiniz.
+Microsoft 365 Raporları panosu, kuruluşunuzdaki ürünler genelindeki etkinliğe genel bakışı gösterir. Bu pano sayesinde her bir üründeki etkinliklerle ilgili daha ayrıntılı bilgi edinmek için ürün düzeyinde raporları ayrıntılı olarak inceleyebilirsiniz. [Raporlara genel bakış konusunu](activity-reports.md) gözden geçirin. Microsoft Teams kullanıcı etkinliği raporunda, kuruluşunuzdaki Microsoft Teams etkinliğiyle ilgili öngörüler edinebilirsiniz.
  
 ## <a name="how-to-get-to-the-microsoft-teams-user-activity-report"></a>Microsoft Teams kullanıcı etkinliği raporuna ulaşma
 
 1. Yönetim merkezinde, **Raporlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2074756" target="_blank">Kullanımı</a> sayfasına gidin.
-2. Pano giriş sayfasında, etkinlik kartında **Daha fazla** görüntüle Microsoft Teams tıklayın.
+2. Pano giriş sayfasında, Microsoft Teams etkinlik kartındaki **Daha fazla görüntüle** düğmesine tıklayın.
 
 ## <a name="interpret-the-microsoft-teams-user-activity-report"></a>Microsoft Teams kullanıcı etkinliği raporunu yorumlama
 
-Kullanıcı etkinliği sekmesini seçerek Teams raporunda **görüntüleyebilirsiniz**. <br/>![Microsoft 365 sağlar - Microsoft Teams etkinliğini gösterir.](../../media/1011877f-3cf0-4417-9447-91d0b2312aab.png)
+Kullanıcı etkinliği sekmesini seçerek Teams raporundaki **kullanıcı etkinliğini** görüntüleyebilirsiniz. <br/>![Microsoft 365 raporları - kullanıcı etkinliğini Microsoft Teams.](../../media/user-activity-charts.png)
 
-Raporda **sütun eklemek** veya kaldırmak için Sütunları seç'i seçin.  <br/> ![Teams etkinlik raporunu değiştirme - Sütunları seçin.](../../media/6d3c013e-2c5e-4d66-bb41-998aa4bd1c20.png)
+Rapora sütun eklemek veya rapordan sütun kaldırmak için Sütunları **seç'i** seçin.  <br/> ![Kullanıcı etkinliği raporunu Teams - sütunları seçin.](../../media/user-activity-columns.png)
 
-Ayrıca, Dışarı Aktar bağlantısını seçerek Excel .csv verilerini bir Excel .csv dosyasına **aktarabilirsiniz**. Bu işlem tüm kullanıcıların verilerini dışarı aktarır ve daha fazla çözümleme yapmak için basit sıralama ve filtreleme işlemlerini kullanmanıza olanak tanır. 2000'den az kullanıcınız varsa, raporun kendi içindeki tabloda sıralama ve filtreleme yapabilirsiniz. 2000'den çok kullanıcınız varsa, filtrelemek ve sıralamak için verileri dışarı aktarmanız gerekir. Ses zamanı, video **zamanı ve** **ekran** paylaşım süresi için dışarı **aktarıldı biçimi** ISO8601 süre biçimini izler.
+Dışarı **Aktar bağlantısını** seçerek rapor verilerini bir Excel .csv dosyasına da aktarabilirsiniz. Bu işlem tüm kullanıcıların verilerini dışarı aktarır ve daha fazla çözümleme yapmak için basit sıralama ve filtreleme işlemlerini kullanmanıza olanak tanır. 2000'den az kullanıcınız varsa, raporun kendi içindeki tabloda sıralama ve filtreleme yapabilirsiniz. 2000'den çok kullanıcınız varsa, filtrelemek ve sıralamak için verileri dışarı aktarmanız gerekir. **Ses süresi**, **video süresi** ve **ekran paylaşım süresi** için dışarı aktarılan biçim ISO8601 süre biçimini izler.
 
-Yeni **Microsoft Teams aktivite** raporu, son 7 gün, 30 gün, 90 gün veya 180 günlük eğilimler için 2013'te 2013'te 2013'ü 2013'e kadar olan eğilimler için 2013'te 2013'ü gösterir. Ancak rapordaki belirli bir günü seçersiniz, tablo geçerli tarihten (raporun oluşturulma tarihine değil) itibaren 28 güne kadar olan verileri gösterir.
+**Microsoft Teams kullanıcı etkinliği** raporu son 7 gün, 30 gün, 90 gün veya 180 günlük eğilimler için görüntülenebilir. Ancak raporda belirli bir gün seçerseniz, tablo geçerli tarihten itibaren (raporun oluşturulduğu tarihten değil) 28 güne kadar olan verileri gösterir.
 
-Veri kalitesini sağlamak için, son üç gün içinde günlük veri doğrulama denetimleri gerçekleştirluyoruz ve tespit edilen boşlukları dolduruyoruz. İşlem sırasında geçmiş verilerde farklar olduğunu farkebilirsiniz.
+Veri kalitesini sağlamak için son üç güne ilişkin günlük veri doğrulama denetimleri gerçekleştiriyoruz ve algılanan boşlukları dolduracağız. İşlem sırasında geçmiş verilerde farklılıklar fark edebilirsiniz.
 
 |Öğe|Açıklama|
 |:-----|:-----|
 |**Metrik**|**Tanım**|
 |Kullanıcı adı  <br/> |Kullanıcının e-posta adresi. Asıl e-posta adresini görüntüleyebilir veya bu alanın anonim olmasını sağlayabilirsiniz.   <br/> |
-|Kanal iletileri   <br/> |Kullanıcının belirtilen süre boyunca bir ekip sohbeti'ne posta gönderen benzersiz iletilerin sayısı.  <br/> |
-|Sohbet iletileri   <br/> |Kullanıcının belirtilen süre boyunca özel bir sohbete göndermesi için gönderilen benzersiz iletilerin sayısı.  <br/> |
-|Toplam toplantı sayısı   <br/> |Kullanıcının belirtilen süre boyunca katıldığı çevrimiçi toplantıların sayısı.  <br/> |
-|Bire bir aramalar   <br/> | Kullanıcının belirtilen süre boyunca katıldığı 1:1 arama sayısı.  <br/> |
-|Son etkinlik tarihi (UTC)  <br/> |Kullanıcının bir etkinlik etkinliğine katıldığı son Microsoft Teams.<br/> |
-|Geçici olarak katılan toplantılar   <br/> | Kullanıcının belirtilen süre boyunca katıldığı geçici toplantı sayısı.  <br/> |
-|Geçici olarak düzenlenen toplantılar <br/> |Kullanıcının belirtilen süre boyunca düzenlediği geçici toplantı sayısı. <br/>|
-|Düzenlenen toplam toplantılar  <br/> |Kullanıcının belirtilen süre boyunca düzenlediği bir defalık zamanlanmış, Yinelenen, özel ve sınıflandırılmamış toplantıların toplamı.  <br/> |
-|Toplam katılımlı toplantılar  <br/> |Kullanıcının belirtilen süre boyunca katıldığı bir defalık zamanlanmış, yinelenen, özel ve sınıflandırılmamış toplantıların toplamı.  <br/> |
-|Tek sefer olarak zamanlanmış toplantılar  <br/> |Kullanıcının belirtilen süre boyunca düzenlediği, bir defalık zamanlanmış toplantıların sayısı.  <br/> |
-|Zamanlanmış yinelenen toplantılar düzenlenmiş  <br/> |Kullanıcının belirtilen süre boyunca düzenlediği yinelenen toplantıların sayısı.  <br/> |
-|Tek sefer olarak zamanlanan toplantılar  <br/> |Kullanıcının belirtilen süre boyunca katıldığı bir defalık zamanlanmış toplantıların sayısı.  <br/> |
-|Zamanlanan yinelenen toplantıya katılan toplantılar  <br/> |Kullanıcının belirtilen süre boyunca katıldığı yinelenen toplantıların sayısı.  <br/> |
-|Lisansı var  <br/> |Kullanıcının e-posta hesabı kullanma lisansı varsa Teams. <br/>|
-|Diğer etkinlikler  <br/>|Kullanıcı etkindir, ancak raporda sunulan eylem türlerinden farklı etkinlikler gerçekleştirmiştir (kanal iletilerini ve sohbet iletilerini gönderme veya yanıtlama, bire bir arama ve toplantı zamanlama veya buna katılma). Örnek eylemler, kullanıcı e-posta Teams durumunu veya son durum Teams değiştirir ya da Kanal Mesajı gönderisi açtığında yanıtlanmaz.  <br/>|
-|Sınıflandırılmamış toplantılar <br/>|Zamanlama, yinelenen veya geçici olarak sınıflandırılamaz. Bunlar sayı olarak kısadır ve çoğunlukla oynanmış telemetri bilgileri nedeniyle belirlenemeyen bir bilgidir. |
-|||
+|Kiracı adı  <br/> |Kullanıcının ait olduğu iç veya dış kiracının adı.   <br/> <br/> Bir kullanıcı dış kiracıya aitse, ilgili veri ölçümleri (örneğin, posta iletileri, yanıt iletileri vb.) yöneticinin kiracısının paylaşılan kanallarındaki etkileşimlerine göre hesaplanır. Kullanıcı tarafından kendi kiracısında (belirli bir kiracının paylaşılan kanalları dışında) yapılan etkileşimler, belirli bir kiracının yönetici kullanım raporu için dikkate alınmaz.  |
+|Paylaşılan kanal kiracı adları   <br/> |Kullanıcının katıldığı paylaşılan kanalların iç veya dış kiracılarının adları.   <br/> |
+|Kanal iletileri   <br/> |Kullanıcının belirtilen zaman aralığında bir ekip sohbetinde yayınladığı benzersiz iletilerin sayısı.  <br/> |
+|Mesaj   <br/> |Belirtilen zaman aralığındaki tüm kanallardaki posta iletilerinin sayısı <br/> |
+|Yanıt   <br/> |Belirtilen süre boyunca tüm kanallarda yanıtlanan ileti sayısı. <br/> |
+|Acil iletiler    <br/> |Belirtilen zaman aralığındaki acil ileti sayısı. <br/> |
+|Sohbet iletileri   <br/> |Kullanıcının belirtilen zaman aralığında özel bir sohbette yayınladığı benzersiz iletilerin sayısı.  <br/> |
+|Toplam toplantı sayısı   <br/> |Kullanıcının belirtilen zaman aralığında katıldığı çevrimiçi toplantı sayısı.  <br/> |
+|1:1 aramaları   <br/> | Kullanıcının belirtilen süre boyunca katıldığı 1:1 çağrısı sayısı.  <br/> |
+|Son etkinlik tarihi (UTC)  <br/> |Kullanıcının bir Microsoft Teams etkinliğine katıldığı son tarih.<br/> |
+|Geçici olarak katılmış toplantılar   <br/> | Bir kullanıcının belirtilen zaman aralığında katıldığı geçici toplantı sayısı.  <br/> |
+|Düzenli toplantılar <br/> |Kullanıcının belirtilen süre boyunca düzenlediği geçici toplantı sayısı. <br/>|
+|Toplam düzenli toplantı sayısı  <br/> |Kullanıcının belirtilen süre boyunca düzenlediği tek seferlik zamanlanmış, Yinelenen, geçici ve sınıflandırılmamış toplantıların toplamı.  <br/> |
+|Toplam katılan toplantı sayısı  <br/> |Bir kullanıcının belirtilen süre boyunca katıldığı tek seferlik zamanlanmış, yinelenen, geçici ve sınıflandırılmamış toplantıların toplamı.  <br/> |
+|Tek seferlik zamanlanmış olarak düzenlenmiş toplantılar  <br/> |Kullanıcının belirtilen zaman aralığında düzenlediği tek seferlik zamanlanmış toplantı sayısı.  <br/> |
+|Toplantılar düzenlenmiş zamanlanmış yinelenen  <br/> |Kullanıcının belirtilen zaman aralığında düzenlediği yinelenen toplantı sayısı.  <br/> |
+|Bir kerelik zamanlanmış zamanlanmış toplantılara katılma  <br/> |Bir kullanıcının belirtilen zaman aralığında katıldığı tek seferlik zamanlanmış toplantıların sayısı.  <br/> |
+|Toplantılara katılan zamanlanmış yinelenen toplantılar  <br/> |Kullanıcının belirtilen zaman aralığında katıldığı yinelenen toplantıların sayısı.  <br/> |
+|Lisanslıdır  <br/> |Kullanıcı Teams kullanma lisansına sahipse seçilir. <br/>|
+|Diğer etkinlikler  <br/>|Kullanıcı etkindir ancak raporda sunulan eylem türlerinden (kanal iletilerini ve sohbet iletilerini gönderme veya yanıtlama, 1:1 aramaları ve toplantılarını zamanlama veya katılma) dışında başka etkinlikler gerçekleştirmiştir. Örnek eylemler, kullanıcı Teams durumunu veya Teams durum iletisini değiştirdiğinde veya kanal iletisi gönderisini açtığında ancak yanıt vermediğinde güncelleştirilir.  <br/>|
+|Sınıflandırılmamış toplantılar <br/>|Zamanlama, yinelenen veya geçici olarak sınıflandırılamayan. Bunlar sayı olarak kısadır ve çoğunlukla üzerinde oynanmış telemetri bilgileri nedeniyle tanımlanamaz. |
+
+## <a name="make-the-user-specific-data-anonymous"></a>Kullanıcıya özgü verileri anonim hale getirme
+
+Teams kullanıcı etkinlik raporundaki verileri anonim hale getirmek için genel yönetici olmanız gerekir. Bu, rapordaki görünen ad, e-posta ve Azure Active Directory Nesne Kimliği gibi tanımlanabilir bilgileri (MD5 karmalarını kullanarak) ve bunların dışarı aktarmasını gizler.
+
+1. Microsoft 365 yönetim merkezi **Ayarlar** **Org Ayarlar** >  gidin ve **Hizmetler** sekmesinin altında **Raporlar'ı** seçin.
+
+2. **Raporlar'ı** ve ardından **Anonim tanımlayıcıları görüntüle'yi** seçin. Bu ayar hem Microsoft 365 yönetim merkezi hem de Teams yönetim merkezindeki kullanım raporlarına uygulanır.
+
+3. **Değişiklikleri kaydet'i** seçin.
+
+
+## <a name="see-also"></a>Ayrıca bkz.
+[cihaz kullanım raporunu Microsoft Teams](../activity-reports/microsoft-teams-device-usage-preview.md)
+
+[kullanım etkinliği raporunu Microsoft Teams](../activity-reports/microsoft-teams-usage-activity.md) 

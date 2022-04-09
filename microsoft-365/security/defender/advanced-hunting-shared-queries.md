@@ -18,12 +18,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 21dbcdebbb640e15ef4023c0bf0cfdaf4739fdb7
-ms.sourcegitcommit: 2f6a0096038d09f0e43e1231b01c19e0b40fb358
+ms.openlocfilehash: d943f91685e3ee9d6bf12c3a47fbf68e5966dc9d
+ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64686999"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64738486"
 ---
 # <a name="use-shared-queries-in-advanced-hunting"></a>Gelişmiş avcılıkta paylaşılan sorguları kullanma
 
@@ -73,10 +73,11 @@ Sorgunuzu doğrudan gelişmiş tehdit avcılığı sorgu düzenleyicisinde açan
 ## <a name="access-community-queries-in-the-github-repo"></a>GitHub deposunda topluluk sorgularını erişme  
 Microsoft güvenlik araştırmacıları, [GitHub'daki belirli bir genel depoda](https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries/Microsoft%20365%20Defender) düzenli olarak gelişmiş avlanma sorgularını paylaşır. Bu depoya yapılan katkılar yayımlanmadan önce gözden geçirilir. Katkıda bulunmak için [ücretsiz olarak GitHub katılın](https://github.com/).
 
-Bu sorguları **Community sorguları** açılan listesinde de kolayca bulabilirsiniz.
+Bu sorguları **Community sorguları** açılan menüsünde de kolayca bulabilirsiniz.
 
 :::image type="content" source="../../media/advanced-hunting-shared-queries-2.png" alt-text="Microsoft 365 Defender portalına kaydedilmek üzere olan yeni sorgu" lightbox="../../media/advanced-hunting-shared-queries-2.png":::
 
+Community sorgular *Kampanyalar*, *Koleksiyon*, *Savunma kaçaması* ve benzeri klasörler halinde gruplandırılır. Sorgu hakkında daha fazla bilgi, sorgunun kendisinde satır içi açıklamalar olarak sağlanır. 
 
 >[!tip]
 >Microsoft güvenlik araştırmacıları, yeni ortaya çıkan tehditlerle ilişkili etkinlikleri ve göstergeleri bulmak için kullanabileceğiniz gelişmiş tehdit avcılığı sorguları da sağlar. Bu sorgular, [Microsoft 365 Defender'daki tehdit analizi](/windows/security/threat-protection/microsoft-defender-atp/threat-analytics) raporlarının bir parçası olarak sağlanır.

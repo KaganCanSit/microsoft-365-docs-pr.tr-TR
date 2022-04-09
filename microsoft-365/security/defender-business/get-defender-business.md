@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/15/2022
+ms.date: 04/08/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security-compliance
-ms.openlocfilehash: cb85f5391a6ee6c25d4f82f6f6819132bb8d3b02
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 830149a1592aa2985b603d2e9f317250c7c2606a
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64663060"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746546"
 ---
 # <a name="get-microsoft-defender-for-business"></a>İş için Microsoft Defender alma
 
@@ -115,27 +115,16 @@ Kabul e-postanızı aldığınızda deneme aboneliğinizi şu şekilde etkinleş
 
 3. İlk kez oturum açtığınızda Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/)) bölümüne gidersiniz. Bkz. [Microsoft 365 yönetim merkezi genel bakış](../../admin/admin-overview/admin-center-overview.md).
 
-4. Aşağıdaki yordamlardan birini kullanın:
+4. Aşağıdaki yordamlardan birini kullanın:<br/>
 
-   - Microsoft 365 aboneliğini ilk kez ayarlıyorsanız **Kılavuzlu kuruluma git'i** seçin ve aşağıdaki adımları tamamlayın:
-
-      a. Office uygulamalarınızı şimdi yükleyin veya bu adımı atlamak için **Devam'ı** seçin. (Office uygulamalarınızı daha sonra yükleyebilirsiniz.)
-
-      b. Şirketinizin bir etki alanı varsa, şimdi ekleyebilirsiniz (bu seçenek önerilir). Alternatif olarak, şimdilik varsayılan `.onmicrosoft.com` etki alanınızı kullanmayı seçebilirsiniz.
-
-      c. Kullanıcı ekleyin ve lisans atayın. Listelediğiniz her kullanıcıya otomatik olarak bir lisans atanır. Bkz. [Kullanıcıları ekleme ve lisansları aynı anda atama](../../admin/add-users/add-users.md).
-
-   - Mevcut bir Microsoft 365 kiracısına deneme sürümü ekliyorsanız, kullanıcılara yeni lisanslarınızı atamak için şu adımları izleyin:
-
-      a. Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/)) gidin ve oturum açın.
-
-      b. Gezinti bölmesinde **KullanıcılarEtkin** >  kullanıcılar'ı seçin. Kullanıcı listesini gözden geçirin. 
-
-      c. Lisansları atamak için [Kullanıcılara lisans atama](../../admin/manage/assign-licenses-to-users.md) başlığı altında yer alan yönergeleri izleyin.
+   | Senaryo | Yordam |
+   |:---|:---|
+   | İlk kez bir Microsoft 365 aboneliği ayarlıyorsunuz. | **Kılavuzlu kuruluma git'i** seçin ve aşağıdaki adımları tamamlayın:<br/><br/>1. Office uygulamalarınızı şimdi yükleyin veya bu adımı atlamak için **Devam'ı** seçin. (Office uygulamalarınızı daha sonra yükleyebilirsiniz.)<br/><br/>2. Şirketinizin bir etki alanı varsa, şimdi ekleyebilirsiniz (bu seçenek önerilir). Alternatif olarak, şimdilik varsayılan `.onmicrosoft.com` etki alanınızı kullanmayı seçebilirsiniz.<br/><br/>3. Kullanıcı ekleyin ve lisans atayın. Listelediğiniz her kullanıcıya otomatik olarak bir lisans atanır. Bkz. [Kullanıcıları ekleme ve lisansları aynı anda atama](../../admin/add-users/add-users.md). |
+   | Mevcut bir Microsoft 365 kiracısına deneme sürümü ekliıyorsunuz. | 1. Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/)) gidin ve oturum açın.<br/><br/>2. Gezinti bölmesinde **KullanıcılarEtkin** >  kullanıcılar'ı seçin. Kullanıcı listesini gözden geçirin. <br/><br/>3. Lisansları atamak için [Kullanıcılara lisans atama](../../admin/manage/assign-licenses-to-users.md) başlığı altında yer alan yönergeleri izleyin. |
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [İş için Microsoft Defender ayarlayın ve yapılandırın](mdb-setup-configuration.md).
+1. [İş için Microsoft Defender'de kurulum sihirbazını kullanın](mdb-use-wizard.md) veya [İş için Defender'ın kurulum ve yapılandırma işlemine bakın](mdb-setup-configuration.md).
 
-- [İş için Microsoft Defender için yardım ve destek almayı öğrenin](mdb-get-help.md)
+2. [İş için Defender için nasıl yardım ve destek alabileceğinizi görün](mdb-get-help.md) (yardıma ihtiyacınız olması durumunda)

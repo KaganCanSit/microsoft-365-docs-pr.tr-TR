@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 828a17db-956a-401e-bb62-d153b6dffd53
 description: Microsoft Bookings'da iş adı, adres, telefon numarası, web sitesi URL'si, logo ve iş saatleri dahil olmak üzere Hakkımızda sayfanızı oluşturmak için bu yönergeleri izleyin.
-ms.openlocfilehash: 9931a5c00147a6f6b9b0cd4ef9550d783b8771fd
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 5d0505b0b23515bef0bdcc94206d8f3b856479c4
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64715351"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746900"
 ---
 # <a name="enter-your-business-information"></a>İş bilginizi girme
 
@@ -25,7 +25,7 @@ Microsoft Bookings'da, web uygulamasının İş Bilgileri sayfası genellikle bi
 
 Burada sağladığınız bilgiler, müşterilerin ve müşterilerin randevu rezervasyonu için kullandıkları sayfada (rezervasyon sayfası olarak bilinir) ve Bookings tarafından gönderilen iletilerde ve anımsatıcılarda görüntülenir. Rezervasyon sayfasındaki bu bilgilere bir örnek aşağıda vurgulanır.
 
-   ![Microsoft Bookings'deki İş Bilgileri sayfa örneğinin resmi.](../media/bookings-business-info.png)
+   ![Microsoft Bookings'deki İş Bilgileri sayfa örneğinin resmi.](../media/bookings-business-info-2.png)
 
 > [!NOTE]
 > Başlamak için bkz. [Microsoft Bookings erişme](get-access.md). Bookings açmak veya kapatmak için bkz[. Kuruluşunuz için Bookings açma veya kapatma](turn-bookings-on-or-off.md).
@@ -34,7 +34,7 @@ Burada sağladığınız bilgiler, müşterilerin ve müşterilerin randevu reze
 
 1. Microsoft 365'da Uygulama başlatıcıyı ve ardından **Bookings'ı** seçin.
 
-1. Gezinti bölmesinde, sol bölmedeki **CalendarBusiness**  ->  bilgileriniz'i seçin.
+1. Gezinti bölmesinde, sol bölmedeki **CalendarBusiness**  >  bilgileriniz'i seçin.
 
 1. **Temel ayrıntılar** bölümünde, Bookings takviminizde kullanmak istediğiniz iş adınızı, adresinizi ve telefon numaranızı girin.
 
@@ -66,11 +66,11 @@ Personel toplantıları yapmak, envanteri güncelleştirmek veya diğer iş ritm
 
 1. Perşembe için yeni bir satır oluşturmak için seçin **+** .
 
-   ![İş saatleri kullanıcı arabiriminin görüntüsü.](../media/bookings-split-shift.png)
+   ![İş saatleri kullanıcı arabiriminin görüntüsü.](../media/bookings-split-shift-1.png)
 
 1. Yeni satırda 14:30'ı seçin. başlangıç saati ve 18:00 için. öğesini seçin.
 
-   ![Saatlerin eklendiği İş saatleri kullanıcı arabiriminin görüntüsü.](../media/bookings-split-shift-hours.png)
+   ![Saatlerin eklendiği İş saatleri kullanıcı arabiriminin görüntüsü.](../media/bookings-split-shift-hours-1.png)
 
 1. Kaydet'i seçin.
 

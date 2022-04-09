@@ -321,6 +321,8 @@
       items:
         - name: Office 2013
           items:
+            - name: Office 2013 istemcilerinden ve sunucularından yükseltme
+              href: upgrade-office-2013-clients-servers.md
             - name: Office 2013 masaüstü
               href: /DeployOffice/endofsupport/plan-upgrade-older-versions-office
             - name: Exchange Server 2013
