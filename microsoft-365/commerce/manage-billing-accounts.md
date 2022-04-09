@@ -1,11 +1,11 @@
 ---
-title: Fatura hesaplarını anlama
+title: Ödeme hesaplarını anlama
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: tugu, jmueller
+ms.reviewer: mijeffer, jmueller
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -19,66 +19,66 @@ ms.custom:
 - AdminTemplateSet
 - admindeeplinkMAC
 search.appverid: MET150
-description: Fatura hesapları ve bunların hesap ayarlarını, faturaları, ödeme yöntemlerini ve satın almaları yönetmek için nasıl kullanıldıklarını öğrenin.
+description: Ödeme hesapları ve hesap ayarlarını, faturaları, ödeme yöntemlerini ve satın almaları yönetmek için nasıl kullanıldıkları hakkında bilgi edinin.
 ms.date: 03/17/2021
-ms.openlocfilehash: 8d80e94cbb415f93015673065e47d2fe36194bc0
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 45f9e9d9a174094badaae8087803fbdb3eec3f3b
+ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63315785"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64731405"
 ---
-# <a name="understand-billing-accounts"></a>Fatura hesaplarını anlama
+# <a name="understand-billing-accounts"></a>Ödeme hesaplarını anlama
 
-Microsoft ürünlerini denemek veya satın almak için kaydolarak bir fatura hesabı oluşturulur. Hesap ayarlarınızı, faturalarınızı, ödeme yöntemlerinizi ve satın almalarınızı yönetmek için fatura hesabını kullanırsınız. Birden çok ödeme hesabına erişebilirsiniz. Örneğin, doğrudan Microsoft 365 için oturum veya kuruluşun Microsoft Ürün Kurumsal Anlaşma Hizmet Sözleşmesi'ne veya & Microsoft Müşteri Sözleşmesi'ne erişiminiz olabilir. Bu senaryoların her biri için ayrı bir fatura hesabınız olur.
+Microsoft ürünlerini denemek veya satın almak için kaydolduğunuz zaman bir ödeme hesabı oluşturulur. Hesap ayarlarınızı, faturalarınızı, ödeme yöntemlerinizi ve satın alma işlemlerinizi yönetmek için ödeme hesabınızı kullanırsınız. Birden çok ödeme hesabına erişebilirsiniz. Örneğin, doğrudan Microsoft 365 kaydolmuş veya kuruluşunuzun Kurumsal Anlaşma, Microsoft Ürün & Hizmet Sözleşmesi veya Microsoft Müşteri Sözleşmesi erişiminiz vardır. Bu senaryoların her biri için ayrı bir ödeme hesabınız olur.
 
-Aşağıdaki <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> hesapları şu anda desteklemektedir:
+<a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> şu anda aşağıdaki ödeme hesabı türünü destekler:
 
-- Microsoft Online Services Programı: Bu fatura hesabı, doğrudan bir kullanıcı aboneliğine Microsoft 365 oluşturulur.
-- Microsoft Ürün & Hizmet Sözleşmesi (MPSA) Programı: Bu fatura hesabı, kuruluş yazılım ve çevrimiçi hizmet satın almak için MPSA Toplu Lisanslama sözleşmesi imzala geldiğinde oluşturulur.
-- Microsoft Müşteri Sözleşmesi: Bu fatura hesabı, organizasyonunız bağımsız olarak bir Microsoft temsilcisiyle, yetkili bir iş ortağıyla veya satın almalarla birlikte geldiğinde oluşturulur.
+- Microsoft Online Services Programı: Bu ödeme hesabı, doğrudan bir Microsoft 365 aboneliğine kaydolduğunuz zaman oluşturulur.
+- Microsoft Ürünleri & Hizmetleri Sözleşmesi (MPSA) Programı: Bu ödeme hesabı, kuruluşunuz yazılım ve çevrimiçi hizmetler satın almak için bir MPSA Toplu Lisanslama sözleşmesi imzaladığında oluşturulur.
+- Microsoft Müşteri Sözleşmesi: Bu ödeme hesabı, kuruluşunuz bir Microsoft temsilcisi, yetkili bir iş ortağı veya bağımsız olarak satın alma işlemleriyle çalıştığında oluşturulur.
 
-Fatura <a href="https://go.microsoft.com/fwlink/p/?linkid=2084771" target="_blank">hesapları sayfası</a> , Microsoft ile ticari hesaplarınızı görüntülemenizi sağlar. Varsayılan olarak, kuruluşta doğrudan satın alma zamanı veya Toplu Lisans düzenlemesi aracılığıyla kabul edilen bir sözleşmeyle ilişkilendirilmiş en az bir fatura hesabı vardır.
+<a href="https://go.microsoft.com/fwlink/p/?linkid=2084771" target="_blank">Faturalama hesapları</a> sayfası, Microsoft ile ticari hesaplarınızın bir görünümünü sağlar. Varsayılan olarak, kuruluşunuzun doğrudan satın alma sırasında veya Toplu Lisanslama düzenlemesi aracılığıyla kabul edilen bir sözleşmeyle ilişkilendirilmiş en az bir ödeme hesabı vardır.
 
-## <a name="understand-billing-account-details"></a>Fatura hesabı ayrıntılarını anlama
+## <a name="understand-billing-account-details"></a>Ödeme hesabı ayrıntılarını anlama
 
-Fatura hesapları ayrıntı **sayfasının en üstünde** , hesap profiliniz vardır ve hesabınızla ilgili yasal ve vergi bilgilerini içerir. Yasal adresinizi ve telefon numaranızı değiştirmek için profilinizi güncelleştirebilirsiniz. Bu hesap, satın aldığınız ürünlerin ödemelerini alan tüzel kişidir.
+**Faturalama hesapları** ayrıntı sayfasının üst kısmında hesap profiliniz yer alır ve kuruluşunuzla ilgili yasal ve vergi bilgilerini içerir. Yasal adresinizi ve telefon numaranızı değiştirmek için profilinizi güncelleştirebilirsiniz. Bu hesap, satın aldığınız ürünler için ödeme yapılan tüzel kişiliktir.
 
-Aşağıdaki tabloda, Fatura hesapları ayrıntı sayfasında gördüğünüz **önemli terimler** listelanmaktadır.
+Aşağıdaki tabloda **Faturalama hesapları** ayrıntı sayfasında gördüğünüz önemli terimler listelanmıştır.
 
 | Alan adı | Açıklama |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Satılacak adres | Ödemeden sorumlu olan tüzel kişi ve faturada kimlik. Burada sağlanan adres, satın alma sırasında alternatif bir sevkiyat adresi sağlamayı tercih olmadığınız sürece vergi oranınızı belirlemek için kullanılır. Daha fazla bilgi için bkz. [Vergi bilgileri](billing-and-payments/tax-information.md). |
-| Segment | Kuruluşun iş segmentini tanımlayan salt okunur bir alan (Ticari, Eğitim, Kamu veya Kar amacı gütmeyen kuruluş). |
-| Hesap durumu | Microsoft ile ticari hesabınız durumunu belirten salt okunur bir alan. |
-| Vergi No | ABD dışındansanız KDV veya yerel eşdeğeri sağlaymanız gerekir. Daha fazla bilgi için bkz. [Vergi bilgileri](billing-and-payments/tax-information.md). |
-| Sözleşme | Doğrudan satın alma ya da Toplu Lisans düzenlemesi aracılığıyla bir fatura hesabı oluşturulduğunda, kuruluşun bir belgeyi kabul veya imzalaması, hesabın koşullarıyla ilgili koşulları & bir sözleşme kabul eder veya imzalar. Uygunsa, bu görünümde sözleşme geçmişi listelene. Güncelleştirilmiş şartları kabul etmek zorundaysanız, Sözleşmeyi onayla **bağlantısı** görüntülenir. |
-| Ödeme profilleri | Fatura profili faturanızı, faturayı kimin aldığı, faturanın nasıl teslim aldığı, ödeme koşulları ve PO numarası gibi özelliklerini tanımlar. Faturalamayı tüm organizasyona dağıtmak için, birden çok fatura profili oluşturabilir ve satın alma zamanında uygun ödeme profilini tanımlayabilirsiniz. Fatura profilleri ve bunları kullanarak organizasyonunız için daha esnek faturalama seçenekleri oluşturmak üzere nasıl kullanabileceğiniz hakkında daha fazla bilgi için Fatura [profillerini anlama.](billing-and-payments/manage-billing-profiles.md) |
+| Alıcı adresi | Ödemeden sorumlu olan ve faturada tanımlanan tüzel kişilik. Burada sağlanan adres, satın alma işlemi sırasında alternatif bir sevkiyat adresi sağlamayı tercih etmediğiniz sürece vergi oranınızı belirlemek için kullanılır. Daha fazla bilgi için bkz [. Vergi bilgileri](billing-and-payments/tax-information.md). |
+| Segment | Kuruluşunuzun iş segmentini (Ticari, Eğitim, Kamu veya Kar Amacı Gütmeyen Kuruluş) tanımlayan salt okunur bir alan. |
+| Hesap durumu | Microsoft ile ticari hesabınızın durumunu belirten salt okunur bir alan. |
+| Vergi Kimliği | Birleşik Devletler dışındaysanız, kdv veya yerel eşdeğeri sağlamanız gerekir. Daha fazla bilgi için bkz [. Vergi bilgileri](billing-and-payments/tax-information.md). |
+| Sözleşme | Doğrudan satın alma veya Toplu Lisanslama düzenlemesi aracılığıyla bir ödeme hesabı oluşturulduğunda, kuruluş için imzalayan kişi hesabın koşullarını & koşullarını ana hatlarıyla belirten bir sözleşmeyi kabul eder veya imzalar. Uygunsa, bu görünümde bir sözleşme geçmişi listelenir. Güncelleştirilmiş koşulları kabul etmek zorundaysanız **Sözleşmeyi onayla** bağlantısı görüntülenir. |
+| Faturalama profilleri | Faturalama profili faturanızı alan kişiler, faturanın teslim şekli, ödeme koşulları ve po numarası gibi faturanızın özelliklerini tanımlar. Faturalamayı kuruluşunuza dağıtmak için birden çok faturalama profili oluşturabilir ve satın alma sırasında uygun faturalama profilini belirleyebilirsiniz. Faturalama profilleri ve bunları kuruluşunuz için daha esnek faturalama seçenekleri oluşturmak üzere nasıl kullanabileceğiniz hakkında daha fazla bilgi için [Faturalama profillerini anlama](billing-and-payments/manage-billing-profiles.md). |
 
 > [!NOTE]
-> Satılacak kişi adını veya **adresini** değiştirmeniz gerekiyor, ancak Düzenleme bağlantısını görmüyorsanız, değiştirmek için [deha](../admin/get-help-support.md) başvurun. Satılacak ad **değişikliği isteği** için kredi denetimi gerekir. Bu [formu doldurun](https://www.microsoft.com/download/details.aspx?id=102732) ve destek ile iletişim kurarak aşağıdaki belgelerden birini Microsoft ile paylaşmaya hazır olun:
+> **Alıcı** adını veya adresini değiştirmeniz gerekiyorsa ancak **Düzenle** bağlantısını görmüyorsanız, değiştirmek için [desteğe başvurmanız](../admin/get-help-support.md) gerekir. **Alıcı** adı değişikliği istekleri için kredi denetimi gerekir. [Bu formu](https://www.microsoft.com/download/details.aspx?id=102732) doldurun ve desteğe başvurarak aşağıdaki belgelerden birini Microsoft ile paylaşmaya hazır olun:
 >
-> - Resmi olarak verilen belge veya kayıt mektubu
-> - Yerel şirketin kayıt defterinin çıktısını çıktısı
+> - Kamu tarafından verilen belge veya kayıt mektubu
+> - Yerel şirketin kayıt defterinden yazdırma
 >
-> Destek, yalnızca müşteri adı değişikliklerinin olduğu ancak varlığın aynı kalmasıyla birlikte ad ve adres değişikliklerinde yardımcı olabilir. Sağlanan belgelerde, yalnızca varlığın adının değiştiğini açıkça gösterlanmalıdır. Değişiklik, satış satışları, denetimler değişikliği veya Müşteri Bağlı Kuruluşlarının ayrım yapma ya da "geri çevirme" gibi bir işlem sonucu elde edildiyse, lütfen Microsoft Satıcınıza ulaşın.
+> Destek, yalnızca müşteri adının değiştiği ancak varlığın aynı kaldığı ad ve adres değişiklikleri konusunda yardımcı olabilir. Sağlanan belgeler yalnızca varlığın adının değiştiğini açıkça göstermelidir. Değişiklik, işletme satışı, denetim değişikliği veya Müşteri Bağlı Kuruluşunun bir sapması veya "değişimi" de dahil olmak üzere bir işlemin sonucuysa lütfen Microsoft Satıcınızla iletişime geçin.
 
 ## <a name="shipping-addresses"></a>Sevkiyat adresleri
 
-Bu bölümde, fatura hesabınızla ilişkilendirilmiş sevkiyat adresleri listelemektedir. Bir satın almada, satın alma adresinizin nereye sevk edildiği veya nerede olduğunu belirlemek için bu adresi kullanabilirsiniz. Sevkiyat adresi düzenlenebilir. Sevkiyat adresi ekleyebilir veya mevcut adresi güncelleştirebilirsiniz. Bu adres, alışverişin vergi oranını belirlemek için kullanılır.
+Bu bölümde, ödeme hesabınızla ilişkili sevkiyat adresleri listelenir. Satın alma işlemi yaparken, satın alma işleminizin nereye sevk edildiği veya kullanıldığını belirlemek için bu adresi kullanabilirsiniz. Sevkiyat adresi düzenlenebilir. Sevkiyat adresi ekleyebilir veya mevcut adresi güncelleştirebilirsiniz. Bu adres, satın alma işleminizin vergi oranını belirlemek için kullanılır.
 
-## <a name="understand-access-to-billing-accounts"></a>Fatura hesaplarına erişimi anlama
+## <a name="understand-access-to-billing-accounts"></a>Ödeme hesaplarına erişimi anlama
 
-Diğer kullanıcılara, rol ve izinler aracılığıyla fatura <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> erişim sabilirsiniz. Fatura hesabı sahibi, faturalandırma hesabına erişim iznini yalnızca bir faturalama hesabı sahibine verebilirsiniz. Kullanıcılara aşağıdaki rollerden birini atabilirsiniz:
+Roller ve izinler aracılığıyla <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">başkalarına Microsoft 365 yönetim merkezi</a> ödeme hesabına erişim sağlayabilirsiniz. Yalnızca bir ödeme hesabı sahibi ödeme hesabına erişim izni verebilir. Kullanıcılara aşağıdaki rollerden birini atayabilirsiniz:
 
-- **Fatura hesabı sahibi** &mdash; İzinleri atayın, hesapları düzenleyin, sözleşmeleri imzalar ve hesapları görüntüleyemez.
-- **Fatura hesabı katkıda bulunanı** &mdash; Hesapları düzenleyebilir, sözleşme imzalar ve hesapları  görüntüleyemez.
-- **Fatura hesabı okuyucu** &mdash; Hesapları  bakabilirsiniz.
+- **Ödeme hesabı sahibi** &mdash; İzinler atayabilir, hesapları düzenleyebilir, sözleşme imzalayabilir ve hesapları görüntüleyebilir.
+- **Ödeme hesabı katkıda bulunanı** &mdash; Hesapları düzenleyebilir, sözleşme imzalayabilir ve hesapları görüntüleyebilir.
+- **Ödeme hesabı okuyucusu** &mdash; Hesapları görüntüleyebilir.
 
 > [!Note]
-> Fatura hesabı rolleri yalnızca fatura hesapları için geçerlidir ve diğer ödeme senaryoları Microsoft 365 yönetim merkezi değildir.
+> Ödeme hesabı rolleri yalnızca ödeme hesapları için geçerlidir ve diğer Microsoft 365 yönetim merkezi senaryoları için geçerli değildir.
 
 ## <a name="related-content"></a>İlgili içerik
 
 [Vergi bilgileri](billing-and-payments/tax-information.md) (makale) \
-[Ödeme profillerini anlama](billing-and-payments/manage-billing-profiles.md) (makale)
+[Faturalama profillerini anlama](billing-and-payments/manage-billing-profiles.md) (makale)

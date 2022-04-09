@@ -5,7 +5,7 @@ f1.keywords:
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: tugu, jmueller
+ms.reviewer: mijeffer, jmueller
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -14,25 +14,25 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 search.appverid: MET150
-description: 'Farklı bölgelerde işletmeler için aboneliğiniz için ne kadar vergi Microsoft 365 ücret alın aylık öğrenin. '
 ms.custom:
 - commerce_billing
 - okr_SMB
 - AdminSurgePortfolio
 - AdminTemplateSet
+description: Farklı bölgelerdeki Microsoft 365 iş aboneliğiniz için ne kadar vergi tahsil edeceğinizi öğrenin.
 ms.date: 03/17/2021
-ms.openlocfilehash: 421abe7b69323be783831d9ce5de45c21ec98536
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 35442bc495b6179a844bdbe3a6b98a4f58556140
+ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63313405"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64731239"
 ---
 # <a name="tax-information"></a>Vergi bilgileri
 
-Diğer ürünleri Microsoft 365 satın alırsanız, ödenen vergiler iki şekilden biri ile belirlenir: iş adresiniz veya farklı ise sevkiyat adresiniz. Organizasyonunız Amerika Birleşik Devletleri'nde ise, Bir Federal İşveren Kimlik Numarası (FEIN) sağlay gerekir.
+Microsoft 365 ürün ve hizmet satın aldığınızda, ödediğiniz vergiler iki şeyden birine göre belirlenir: iş adresiniz veya farklıysa sevkiyat adresiniz. Kuruluşunuz Birleşik Devletler ise Federal İşveren Kimlik Numarası (FEIN) sağlamanız gerekir.
 
-Aşağıdaki ülkelerdeki işletmeler KDV numarasını veya yerel eşdeğerini sağlanıyor olabilir:
+Aşağıdaki ülkelerdeki işletmeler KDV numaralarını veya yerel eşdeğerlerini sağlayabilir:
 
 :::row:::
     :::column:::
@@ -61,7 +61,7 @@ Aşağıdaki ülkelerdeki işletmeler KDV numarasını veya yerel eşdeğerini s
 - Hindistan*
 - Endonezya
 - İrlanda
-- Isle of Man
+- Man Adası
 - İtalya
     :::column-end:::
     :::column:::
@@ -98,31 +98,31 @@ Aşağıdaki ülkelerdeki işletmeler KDV numarasını veya yerel eşdeğerini s
 *Listelenen ülkelerin çoğunda KDV numarası veya yerel eşdeğeri sağlamak isteğe bağlıdır. Brezilya ve Hindistan için vergi tanımlayıcı numarası gereklidir.
 
 > [!Note]
-> De yardıma ihtiyaç olursa destek temsilcisine VERMEK için FEIN, KDV numaranız veya yerel eşdeğeri hazır olsun.
+> Desteğe başvurmanız gerekiyorsa FEIN, KDV numaranız veya yerel eşdeğeriniz destek temsilcisine vermeye hazır olmalıdır.
 
 ## <a name="europe-the-middle-east-and-africa-emea"></a>Avrupa, Orta Doğu ve Afrika (EMEA)
 
-EMEA Microsoft 365 hizmetleri satın alırken, bu satın alma Value-Added vergisine tabi olabilir.
+EMEA bölgesinde Microsoft 365 hizmetleri satın aldığınızda, bu satın alma işlemi Value-Added Vergisine (KDV) tabi olabilir.
   
-- Avrupa Birliği Üyesi bir ülkede bulunuyorsanız, Arjantin, Belarus, Norveç, Türkiye veya Birleşik Arap Emirlikleri'nde bulunuyorsanız ve geçerli yerel KDV numaranız yoksa, Microsoft Ireland Operations Ltd. hesabınız için ayarlanmış olan fatura ülkeyi temel alarak geçerli yerel KDV oranını uygulayacaktır.
+- Avrupa Birliği Üye Devleti, Ermenistan, Belarus, Norveç, Türkiye veya Birleşik Arap Emirlikleri'nde bulunuyorsanız ve geçerli yerel KDV kimliğinizi belirtmezseniz, Microsoft Ireland Operations Ltd. hesabınızın ayarlandığı faturalama ülkesine bağlı olarak geçerli yerel KDV oranını uygular.
 
-- Liechtenstein, Rusya, Sırbistan, Güney Afrika veya İsviçre'de bulunuyorsanız KDV no'nızı sağlasanız da sağlamasanız da KDV uygulanır.
+- Liechtenstein, Rusya, Sırbistan, Güney Afrika veya İsviçre'de bulunuyorsanız, KDV kimliğinizi sağlamanıza bakılmaksızın KDV uygulanır.
 
-- AB müşterileri IÇIN, KDV numaranızı doğrulaymadan önce bu numaranın doğrulama için KDV Bilgileri Hizmet Sistemi'Exchange (VIES) bulunuyor olması gerekir. KDV numaranız doğrulanamazsa yerel vergi dairenize ulaşın.
+- AB müşterileri için, KDV kimliğinizi doğrulamadan önce KDV Bilgileri Exchange Sistemi'nde (VIES) doğrulama için kullanılabilir olması gerekir. KDV kimliğiniz doğrulanamazsa yerel vergi yetkilinize başvurun.
 
-Şu ifda sıfır KDV oranına uygun olabilir:
+Şu durumlarda KDV sıfır derecelendirmesi için uygun olabilirsiniz:
   
-- **İrlanda dışında bir Avrupa Birliği Üyesi Eyaleti'ndesiniz:** Geçerli yerel KDV no'nızı s sağlamayı siniz. Böylece, Microsoft Ireland Operations Ltd. tarafından işlem sıfır fiyatla KDV'ye ayarlanır. Bununla birlikte, yerel KDV muhasebe yükümlülüğün olabilir. Herhangi bir endişeniz varsa vergi danışmanlarınıza sorun. Yönergeler için bkz [. KDV Numaranızı ekleme](#add-your-vat-id).
+- **İrlanda dışında bir Avrupa Birliği Üye Devleti'ndesiniz:** Geçerli yerel KDV kimliğinizi belirtebilirsiniz. Bu, Microsoft Ireland Operations Ltd.'nin işlemi sıfır oranlı KDV olarak kullanmasına olanak tanır. Ancak, yerel bir KDV muhasebesi yükümlülüğüne sahip olabilirsiniz. Herhangi bir endişeniz varsa vergi danışmanlarınıza danışın. Yönergeler için bkz. [KDV kimliğinizi ekleme](#add-your-vat-id).
 
-- **İrlanda'da bulunuyor ve ilgili geçerli KDV muafiyet sertifikalarına sahipsiniz:** Microsoft Ireland Operations Ltd.'nin işlemi KDV'den muaf kullanma hakkı olabilir. Sağlamadıysanız, KDV No'larını sağlasanız da sağlamasanız da Microsoft Ireland Operations Ltd. geçerli İrlanda KDV oranını uygular.
+- **İrlanda'dasınız ve ilgili geçerli KDV muafiyeti sertifikasına sahipsiniz:** Microsoft Ireland Operations Ltd. işlemi KDV'den muaf tutma hakkına sahip olabilir. Bunu yapmazsanız, Microsoft Ireland Operations Ltd. GEÇERLI İrlanda KDV oranını uygular( KDV kimliği sağlasanız da sağlamasanız da).
 
-- **Arjantin, Belarus, Norveç, Türkiye veya Birleşik Arap Emirlikleri'ndeyler:** Yerel KDV No'nızı s sağlamayı siniz. Bu, Microsoft Ireland Operations Ltd. kredisini işlem için sıfır KDV olarak geri ödeme olarak yetkilendirmektir. Bununla birlikte, yerel KDV muhasebe yükümlülüğün olabilir, bu nedenle herhangi bir endişeniz varsa lütfen vergi danışmanlarınıza sorun. Yönergeler için bkz [. KDV Numaranızı ekleme](#add-your-vat-id).
+- **Ermenistan, Beyaz Rusya, Norveç, Türkiye veya Birleşik Arap Emirlikleri'ndesiniz:** Yerel KDV Kimliğinizi belirtebilirsiniz. Bu, Microsoft Ireland Operations Ltd.'ye işlemi sıfır oranlı KDV ile alma hakkı döndürür. Ancak, yerel bir KDV muhasebesi yükümlülüğünüz olabilir, bu nedenle herhangi bir endişeniz varsa lütfen vergi danışmanlarınıza danışın. Yönergeler için bkz. [KDV kimliğinizi ekleme](#add-your-vat-id).
 
 ## <a name="asia-pacific-countries-apac"></a>Asya Pasifik ülkeleri (APAC)
 
-Microsoft Bölgesel Satış ofisi tarafından fatura alındıysanız, "Microsoft Bölgesel Satış Pte. Ltd." görünür ve geçerli katma değer, satış veya benzeri vergiler için ücret tahsil edilecektir.
+Microsoft Bölgesel Satış ofisi tarafından faturalandırıldıysanız, "Microsoft Bölgesel SatışLar Pte. Ltd." faturanızda görünür ve geçerli katma değer, satış veya benzeri vergiler için ücretlendirilebilirsiniz.
   
-Aşağıdaki konumlardan biri tarafından fatura alındıysanız geçerli yerel vergiler uygulanır. Konum, [faturanıza dahildir](view-your-bill-or-invoice.md):
+Aşağıdaki konumlardan birinden faturalandırıldıysanız geçerli yerel vergi uygulanır. Konum [faturanıza](view-your-bill-or-invoice.md) eklenir:
   
 - Hindistan
 - Japonya
@@ -132,45 +132,45 @@ Aşağıdaki konumlardan biri tarafından fatura alındıysanız geçerli yerel 
 
 ## <a name="north-central-and-south-america"></a>Kuzey, Orta ve Güney Amerika
 
-ABD, Kanada, Meksika, Şili ve Kolombiya'da, ürünün yapısına ve konumunuza bağlı olarak çeşitli vergi oranları uygulanır.
+Birleşik Devletler, Kanada, Meksika, Şili ve Kolombiya'da, ürünün doğasına ve konumunuza bağlı olarak çeşitli vergi oranları uygulanır.
   
-Faturalamanız Microsoft Corporation tarafından yapılıyorsa [(](view-your-bill-or-invoice.md)faturanıza bakın ve ABD, Kanada, Porto Riko, Şili ve Kolombiya dışında Microsoft 365'e oturum aldıysanız, vergi genel olarak ücret alınmaz.
+Faturanız Microsoft Corporation tarafından yapılıyorsa ([faturanıza bakın](view-your-bill-or-invoice.md) ve Birleşik Devletler, Kanada, Porto Riko, Şili ve Kolombiya dışında Microsoft 365 kaydolmuşsanız vergi genellikle ücretlendirilmemektedir.
 
-## <a name="add-your-vat-id"></a>KDV No'nızı ekleyin
+## <a name="add-your-vat-id"></a>KDV kimliğinizi ekleme
 
-1. Yönetim merkezinde Ürünlerinizi Faturalandırma **sayfasına** \> gidin.<a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank"></a>
-2. Ürünler **sekmesinde** güncelleştirmek istediğiniz aboneliği seçin.
-3. Abonelik ayrıntıları sayfasında, Hizmet kullanımı **adresi bölümünde Hizmet kullanım** adresini **düzenle'yi seçin**.
-4. Hizmet **kullanım adresini düzenle bölmesindeki** **KDV** numarası kutusuna, ön ek ile birlikte ve boşluklar olmadan KDV Numaranızı girin.
+1. Yönetim merkezinde **Faturalama** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Ürünleriniz</a> sayfasına gidin.
+2. **Ürünler** sekmesinde, güncelleştirmek istediğiniz aboneliği seçin.
+3. Abonelik ayrıntıları sayfasındaki **Hizmet kullanım adresi** bölümünde **Hizmet kullanım adresini düzenle'yi** seçin.
+4. **Hizmet kullanım adresini düzenle** bölmesindeki **KDV numarası** kutusuna ön ek dahil ve boşluk bırakmadan KDV kimliğinizi girin.
 5. **Kaydet**'i seçin.
 
 ## <a name="how-taxes-are-calculated"></a>Vergiler nasıl hesaplanır?
 
-Satış vergileri, birim fiyatıyla hesaplanır ve toplanır.
+Satış vergileri birim fiyatına göre hesaplanır ve ardından toplanır.
 
 Örneğin:
 
->*(birim fiyat X vergi oranı) X miktar = toplam satış vergisi*
+>*(birim fiyatı X vergi oranı) X miktar = toplam satış vergisi*
 
 -veya-
 
->(1,29 X 0,095 TL) X 100 = $12,25
+>($1,29 X 0,095) X 100 = 12,25 USD
 
-## <a name="apply-for-tax-exempt-status"></a>Vergi muafiyeti için başvurma
+## <a name="apply-for-tax-exempt-status"></a>Vergi muafiyeti durumu için uygula
 
-Pazar vergi muafiyeti durumu için uygunsanız, organizasyonunız için [vergi](../../admin/get-help-support.md) muafiyeti durumu kurmak üzere bir hizmet isteği başlatabilirsiniz.
+Pazarınızda vergi muafiyeti durumu için uygunsanız, kuruluşunuz için vergi muafiyeti durumu oluşturmak üzere [bir hizmet isteği başlatın](../../admin/get-help-support.md) .
 
-|Ülke veya yerel | Belgeler |
+|Ülke veya yerel ayar | Belge |
 |------------------|----------------|
-| Kanada | Muaf Çalışma Sertifikası (veya eşdeğer yetki belgesi) |
-| Şili | IVA durumu/BUL (Registro Unico Tributario) |
-| Kolombiya | IVA durumu/BUL (Registro Unico Tributario) |
-| Vergi muafiyeti olan uluslararası kuruluşlar | Yerel vergi dairelerinden sertifika / mektup onayı |
-| İrlanda | 13B/56A Vergi Muafiyet Sertifikası|
-| Amerika Birleşik Devletleri | Satış Vergi Muafiyeti Sertifikası |
+| Kanada | Muafiyet Sertifikası (veya eşdeğer yetki belgesi) |
+| Şili | IVA durumu/RUT (Registro Unico Tributario) |
+| Kolombiya | IVA durumu/RUT (Registro Unico Tributario) |
+| Vergi muafiyeti olan uluslararası kuruluşlar | Yerel vergi dairelerinden sertifikasyon / mektup onayı |
+| İrlanda | 13B/56A Vergi Muafiyeti Sertifikası|
+| Amerika Birleşik Devletleri | Satış Vergisi Muafiyeti Sertifikası |
 | Porto Riko | Certificado de Compras Exentas |
   
 ## <a name="related-content"></a>İlgili içerik
   
-[Faturanızı veya faturanızı görüntüleme](view-your-bill-or-invoice.md) (makale)\
-[Faturanızı veya faturanızı anlama](understand-your-invoice.md) (makale)
+[Fatura ekstrenizi veya faturanızı görüntüleme](view-your-bill-or-invoice.md) (makale)\
+[Fatura ekstrenizi veya faturanızı anlama](understand-your-invoice.md) (makale)

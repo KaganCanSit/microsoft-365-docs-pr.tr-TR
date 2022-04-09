@@ -1,7 +1,7 @@
 ---
 title: Microsoft 365 Defender'daki yenilikler
-description: Microsoft 365 Defender'daki yeni özellikleri ve işlevleri Microsoft 365 Defender
-keywords: Microsoft 365 Defender, ga, genel olarak kullanılabilir, özellikler, kullanılabilir, yeni
+description: Microsoft 365 Defender'deki yeni özellikleri ve işlevleri listeler
+keywords: Microsoft 365 Defender, ga, genel kullanıma sunulan, özellikler, kullanılabilir, yeni sürümündeki yenilikler
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -17,125 +17,123 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: aebf7a82a886540374176c06535e9f0097e73a03
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 053326cacaeb2b4110f71edaa290ed10454aa720
+ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499825"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64731658"
 ---
 # <a name="whats-new-in-microsoft-365-defender"></a>Microsoft 365 Defender'daki yenilikler
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-> Bu deneyimi Microsoft 365 Defender? Bunu bir [laboratuvar ortamında değerlendirin veya](m365d-evaluation.md?ocid=cx-docs-MTPtriallab) [üretimde pilot projenizi çalıştırın](m365d-pilot.md?ocid=cx-evalpilot).
+>Aşağıdaki özellikler önizleme aşamasındadır veya Microsoft 365 Defender en son sürümünde genel kullanıma sunulmuştur (GA).
 
-Aşağıdaki özellikler, Microsoft 365 Defender'in en son sürümüne önizlemede veya genel olarak (GA) Microsoft 365 Defender.
-
-RSS akışı: Bu sayfa güncelleştirildiğinde, akış okuyucuya aşağıdaki URL'yi kopyalayıp yapıştırarak bilgi alın:
+RSS akışı: Aşağıdaki URL'yi kopyalayıp akış okuyucunuza yapıştırarak bu sayfa güncelleştirildiğinde bildirim alın:
 
 ```http
 https://docs.microsoft.com/api/search/rss?search=%22Lists+the+new+features+and+functionality+in+Microsoft+365+defender%22&locale=en-us
 ```
 
-Diğer Microsoft Defender güvenlik ürünleriyle ilgili yeniliklerle ilgili daha fazla bilgi için bkz:
+Diğer Microsoft Defender güvenlik ürünleriyle ilgili yenilikler hakkında daha fazla bilgi için bkz:
 
 - [Office 365 için Microsoft Defender’daki yenilikler](../office-365-security/whats-new-in-defender-for-office-365.md)
-- [Uç Nokta için Microsoft Defender’daki yenilikler](../defender-endpoint/whats-new-in-microsoft-defender-endpoint.md)
-- [Kimlik için Microsoft Defender'daki Kimlik için Microsoft Defender](/defender-for-identity/whats-new)
-- [Microsoft Defender for Cloud Apps'daki Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+- [Uç Nokta için Microsoft Defender'deki yenilikler](../defender-endpoint/whats-new-in-microsoft-defender-endpoint.md)
+- [Kimlik için Microsoft Defender'deki yenilikler](/defender-for-identity/whats-new)
+- [Microsoft Defender for Cloud Apps'deki yenilikler](/cloud-app-security/release-notes)
 
-Ayrıca ürün güncelleştirmelerini ve önemli bildirimleri ileti merkezi aracılığıyla [da alabilirsiniz](https://admin.microsoft.com/Adminportal/Home#/MessageCenter). 
+Ayrıca, ürün güncelleştirmelerini ve önemli bildirimleri [ileti merkezi](https://admin.microsoft.com/Adminportal/Home#/MessageCenter) üzerinden de alabilirsiniz. 
 
 
 
 ## <a name="march-2022"></a>Mart 2022
 
-- (Önizleme) Olay sırası, araştırmanıza yardımcı olmak için tasarlanmış çeşitli özelliklerle geliştirilmiştir. Geliştirmeler arasında kimliğine veya adına göre olayları arama, özel bir zaman aralığı belirtme gibi özellikler yer almaktadır.
+- (Önizleme) Olay kuyruğu, araştırmalarınıza yardımcı olmak için tasarlanmış çeşitli özelliklerle geliştirilmiştir. Geliştirmeler, olayları kimliğe veya ada göre arama, özel bir zaman aralığı belirtme ve diğerleri gibi özellikleri içerir.
 
 ## <a name="december-2021"></a>Aralık 2021
 
-- (GA) Tablo `DeviceTvmSoftwareEvidenceBeta` , belirli bir yazılımın cihazda nerede algılandığından dair kanıtı görüntülemeniz için gelişmiş aramada kısa vadeli olarak eklenmiştir.
+- (GA) Tablo, `DeviceTvmSoftwareEvidenceBeta` belirli bir yazılımın bir cihazda nerede algılandığının kanıtını görüntülemenizi sağlamak için gelişmiş avcılıkta kısa vadeli olarak eklenmiştir.
 
 ## <a name="november-2021"></a>Kasım 2021
 
-- (Önizleme) Uygulamaları otomatik olarak kullanmak için Bulut için Defender yönetimi eklenti özelliği artık tüm Microsoft 365 Defender. Uygulama yönetimi, Microsoft kimlik doğrulama API'leri aracılığıyla microsoft veri erişim izni Microsoft 365 OAuth özelliği Graph sağlar. Uygulama yönetimi, bu uygulamaların ve kullanıcılarının Microsoft 365'te depolanan hassas verilerinize nasıl erişerek, bunları kullanma ve paylaşma konusunda eyleme  edilebilir içgörüler ve otomatik ilke uyarıları ve eylemleri aracılığıyla tam görünürlük, düzeltme ve yönetim sağlar. [Uygulama yönetimi hakkında daha fazla bilgi öğrenin](/cloud-app-security/app-governance-manage-app-governance).
-- (Önizleme) Gelişmiş [av sayfası](advanced-hunting-overview.md) artık çok sekmeli destek, akıllı kaydırma, akıcı şema sekmeleri, sorgular için hızlı düzenleme seçenekleri, sorgu kaynak kullanım göstergesi ve sorguyu daha sorunsuz ve ince ayar kolaylaştırmak için diğer iyileştirmeler içerir.
-- (Önizleme) Artık araştırmanız gereken [yeni veya](advanced-hunting-link-to-incident.md) mevcut bir olayda gelişmiş arama sorgusu sonuçlarından etkinlikleri veya kayıtları eklemek için olay özelliği bağlantısını kullanabilirsiniz.
+- (Önizleme) Bulut için Defender Uygulamalarına yönelik uygulama idare eklentisi özelliği artık Microsoft 365 Defender'de kullanılabilir. Uygulama idaresi, Microsoft Graph API'leri aracılığıyla Microsoft 365 verilere erişen OAuth özellikli uygulamalar için tasarlanmış bir güvenlik ve ilke yönetimi özelliği sağlar. Uygulama idaresi, bu uygulamaların ve kullanıcılarının eyleme dönüştürülebilir içgörüler ve otomatik ilke uyarıları ve eylemleri aracılığıyla Microsoft 365 depolanan hassas verilerinize erişme, bunları kullanma ve paylaşma konusunda tam görünürlük, düzeltme ve idare sağlar. [Uygulama idaresi hakkında daha fazla bilgi edinin](/cloud-app-security/app-governance-manage-app-governance).
+- (Önizleme) [Gelişmiş tehdit avcılığı](advanced-hunting-overview.md) sayfasında artık çok sekmeli destek, akıllı kaydırma, kolaylaştırılmış şema sekmeleri, sorgular için hızlı düzenleme seçenekleri, sorgu kaynağı kullanım göstergesi ve sorgulamayı daha sorunsuz ve hassas hale getirmek için diğer geliştirmeler yer alır.
+- (Önizleme) Artık [olay bağlantısını](advanced-hunting-link-to-incident.md) kullanarak gelişmiş tehdit avcılığı sorgu sonuçlarından olayları veya kayıtları araştırdığınız yeni veya var olan bir olaya ekleyebilirsiniz.
 
 ## <a name="october-2021"></a>Ekim 2021
 
-- (GA) Gelişmiş avlarda [CloudAppEvents tablosuna daha fazla sütun](advanced-hunting-cloudappevents-table.md) eklenmiştir. Artık , `AccountType`, `IsExternalUser`, `IsImpersonated`ve `IPTags`sorgularınızı `IPCategory``UserAgentTags` dahil etmek için kullanabilirsiniz.
+- (GA) Gelişmiş avcılıkta [CloudAppEvents](advanced-hunting-cloudappevents-table.md) tablosuna daha fazla sütun eklendi. Artık `AccountType`sorgularınıza , `IsExternalUser`, `IsImpersonated`, `IPTags`, `IPCategory`ve `UserAgentTags` ekleyebilirsiniz.
 
 ## <a name="september-2021"></a>Eylül 2021
 
-- (GA) Office 365 için Microsoft Defender verilerini veri akışı API'sinde Microsoft 365 Defender veri akışı API'sinde kullanılabilir. Akış API'sinde desteklenen etkinlik türleri'nin Microsoft 365 Defender [ve durumlarını görebilirler](supported-event-types.md).
-- (GA) Office 365 için Microsoft Defender gelişmiş avda kullanılabilen veriler artık genel olarak kullanılabilir.
+- (GA) Office 365 için Microsoft Defender olay verileri Microsoft 365 Defender olay akışı API'sinde kullanılabilir. [Akış API'sinde Desteklenen Microsoft 365 Defender olay türlerinde olay türlerinin](supported-event-types.md) kullanılabilirliğini ve durumunu görebilirsiniz.
+- (GA) Gelişmiş avcılıkta kullanılabilen Office 365 için Microsoft Defender verileri artık genel kullanıma sunulmuştur.
 - (GA) Kullanıcı hesaplarına olay ve uyarı atama
 
-  Bir olayı ve bu olayla ilişkili tüm uyarıları, Ata **:** hesabından bir olayın Olayları yönet bölmesinde veya uyarının Yönet uyarı bölmesindeki kullanıcı hesabına atekleyebilirsiniz. 
+  Bir olayı ve onunla ilişkili tüm uyarıları, bir olayın **Olay yönetme** bölmesinde veya uyarının **Uyarıyı yönet** **bölmesindeki Ata:** öğesinden bir kullanıcı hesabına atayabilirsiniz.
 
 ## <a name="august-2021"></a>Ağustos 2021
 
-- (Önizleme) Office 365 için Microsoft Defender avda kullanılabilen veri
+- (Önizleme) Office 365 için Microsoft Defender verileri gelişmiş avcılıkta kullanılabilir
 
-  E-posta tablolarında yer alan yeni sütunlar, gelişmiş arama kullanarak daha kapsamlı soruşturmalar için e-posta tabanlı tehditlerle ilgili daha fazla içgörü sağlar. Artık E-posta `AuthenticationDetails` Olayları'na, [](./advanced-hunting-emailevents-table.md)`FileSize` [EmailAttachmentInfo](./advanced-hunting-emailattachmentinfo-table.md)`ThreatTypes` `DetectionMethods` ve [EmailPostDeliveryEvents tablolarına sütun](./advanced-hunting-emailpostdeliveryevents-table.md) olabilirsiniz.
+  E-posta tablolarındaki yeni sütunlar, gelişmiş tehdit avcılığı kullanarak daha kapsamlı araştırmalara yönelik e-posta tabanlı tehditler hakkında daha fazla içgörü sağlayabilir. Artık sütunu [EmailEvents'e](./advanced-hunting-emailevents-table.md), `FileSize` [EmailAttachmentInfo'ya](./advanced-hunting-emailattachmentinfo-table.md) ve `ThreatTypes` `DetectionMethods` [EmailPostDeliveryEvents tablolarına](./advanced-hunting-emailpostdeliveryevents-table.md) ekleyebilirsiniz`AuthenticationDetails`.
 
 - (Önizleme) Olay grafiği
 
-  Bir **Graph** Özet sekmesindeki yeni sekmede saldırının tüm kapsamı, saldırının zaman içinde ağınıza nasıl yay başladığı, ilk kez nasıl başladığı ve saldırgan nereye gittiğini görebilirsiniz.
+  Bir olayın **Özet** sekmesindeki yeni **Graph** sekmesinde saldırının tam kapsamı, saldırının zaman içinde ağınız üzerinden nasıl yayıldığı, nereden başladığı ve saldırganın ne kadar ileri gittiği gösterilir.
 
 ## <a name="july-2021"></a>Temmuz 2021
 
 - [Professional hizmetleri kataloğu](https://sip.security.microsoft.com/interoperability/professional_services)
 
-  Desteklenen iş ortağı bağlantılarıyla platformun algılama, soruşturma ve tehdit zekası özelliklerini geliştirin.
+  Desteklenen iş ortağı bağlantıları ile platformun algılama, araştırma ve tehdit bilgileri özelliklerini geliştirin.
 
 ## <a name="june-2021"></a>Haziran 2021
 
 - (Önizleme) [Tehdit etiketleri başına raporları görüntüleme](threat-analytics.md#view-reports-per-threat-tags)
 
-  Tehdit etiketleri belirli tehdit kategorilerine odaklanmanıza ve en uygun raporları gözden geçirmenıza yardımcı olur.
+  Tehdit etiketleri belirli tehdit kategorilerine odaklanmanıza ve en ilgili raporları gözden geçirmenize yardımcı olur.
 
 - (Önizleme) [Akış API'si](../defender-endpoint/raw-data-export.md)
 
-  Microsoft 365 Defender Gelişmiş Arama aracılığıyla etkinlik Hub'ları ve/veya Azure depolama hesabına tüm etkinliklerin akışını destekler.
+  Microsoft 365 Defender, Gelişmiş Tehdit Avcılığı aracılığıyla bir Event Hubs ve/veya Azure depolama hesabına sağlanan tüm olayların akışını destekler.
 
-- (Önizleme) [Gelişmiş avda harekete geç](advanced-hunting-take-action.md)
+- (Önizleme) [Gelişmiş avcılıkta harekete geçme](advanced-hunting-take-action.md)
 
-  Gelişmiş aramalarda bulunan tehditlere veya tehditlere karşı hızlı bir şekilde [tehdit veya tehditlere karşı koruma sağlar](advanced-hunting-overview.md).
+  Tehditleri hızla içerir veya [gelişmiş avcılıkta](advanced-hunting-overview.md) bulduğunuz güvenliği aşılmış varlıkları ele alır.
 
-- (Önizleme) [Portal içinde şema başvurusu](advanced-hunting-schema-tables.md#get-schema-information-in-the-security-center)
+- (Önizleme) [Portal içi şema başvurusu](advanced-hunting-schema-tables.md#get-schema-information-in-the-security-center)
 
-  Doğrudan güvenlik merkezinde gelişmiş av şeması tabloları hakkında bilgi edinebilirsiniz. Tablo ve sütun açıklamalarına ek olarak, bu başvuru desteklenen olay türlerini (`ActionType` değerleri) ve örnek sorguları da içerir.
+  Gelişmiş tehdit avcılığı şema tabloları hakkında doğrudan güvenlik merkezinden bilgi edinin. Tablo ve sütun açıklamalarına ek olarak, bu başvuru desteklenen olay türlerini (`ActionType` değerleri) ve örnek sorguları içerir.
 
 - (Önizleme) [DeviceFromIP() işlevi](advanced-hunting-devicefromip-function.md)
 
-  Belirli bir zaman aralığında belirli bir IP adresine veya adresine hangi cihazlara atanmış olduğu hakkında bilgi edinebilirsiniz.
+  Belirli bir zaman aralığında belirli bir IP adresine veya adreslerine atanmış cihazlar hakkında bilgi edinin.
 
 ## <a name="may-2021"></a>Mayıs 2021
 
-- [Portalda yeni Microsoft 365 Defender sayfası](https://techcommunity.microsoft.com/t5/microsoft-365-defender/easily-find-anomalies-in-incidents-and-alerts/ba-p/2339243)
+- [Microsoft 365 Defender portalındaki yeni uyarı sayfası](https://techcommunity.microsoft.com/t5/microsoft-365-defender/easily-find-anomalies-in-incidents-and-alerts/ba-p/2339243)
 
-  Saldırıya ilişkin bağlam için gelişmiş bilgiler sağlar. Hangi diğer tetiklenen uyarının geçerli uyarıya ve dosyalar, kullanıcılar ve posta kutuları da dahil olmak üzere saldırıya katılan tüm etkilenen varlıklara ve etkinliklere neden olduğunuabilirsiniz. Daha [fazla bilgi için Uyarıları](/microsoft-365/security/defender/investigate-alerts) araştırma'ya bakın.
+  Bir saldırının bağlamı için gelişmiş bilgiler sağlar. Geçerli uyarıya başka hangi tetiklenen uyarının neden olduğunu ve saldırıda dosyalar, kullanıcılar ve posta kutuları dahil olmak üzere etkilenen tüm varlıkları ve etkinlikleri görebilirsiniz. Daha fazla bilgi için bkz [. Uyarıları araştırma](/microsoft-365/security/defender/investigate-alerts) .
 
-- [Yeni portalda olaylar ve uyarılar için Microsoft 365 Defender grafiği](https://techcommunity.microsoft.com/t5/microsoft-365-defender/new-alert-page-for-microsoft-365-defender-incident-detections/ba-p/2350425)
+- [Microsoft 365 Defender portalında olaylar ve uyarılar için eğilim grafiği](https://techcommunity.microsoft.com/t5/microsoft-365-defender/new-alert-page-for-microsoft-365-defender-incident-detections/ba-p/2350425)
 
-  Tek bir olay için birden fazla uyarı olup olmadığını veya kuruluş birkaç farklı olayla saldırıya karşı saldırıda olup olmadığını belirler. Daha [fazla bilgi için bkz. Olayları](/microsoft-365/security/defender/incident-queue) önceliklendirme.
+  Tek bir olay için birkaç uyarı olup olmadığını veya kuruluşunuzun birkaç farklı olayla saldırı altında olduğunu belirleyin. Daha fazla bilgi için bkz. [Olayları önceliklendirme](/microsoft-365/security/defender/incident-queue) .
 
 ## <a name="april-2021"></a>Nisan 2021
 
 - Microsoft 365 Defender
 
-  Gelişmiş [Microsoft 365 Defender portalı](https://security.microsoft.com) kullanılabilir. Bu yeni deneyim, tek bir portalda Uç nokta, Office 365 için Defender Defender for Identity ve daha fazlası için Defender'ı bir araya getirir. Burası, güvenlik denetimlerinizi yönetmek için yeni bir evdir. [Nelerin yeni olduğunu öğrenin](./microsoft-365-defender.md#the-microsoft-365-defender-portal).
+  Geliştirilmiş [Microsoft 365 Defender](https://security.microsoft.com) portalı artık kullanılabilir. Bu yeni deneyim, Uç Nokta için Defender, Office 365 için Defender, Kimlik için Defender ve daha fazlasını tek bir portalda bir araya getirir. Burası, güvenlik denetimlerinizi yönetmek için yeni bir evdir. [Yeni olanları öğrenin](./microsoft-365-defender.md#the-microsoft-365-defender-portal).
 
-- [Microsoft 365 Defender çözümleme raporu](threat-analytics.md)
+- [Microsoft 365 Defender tehdit analizi raporu](threat-analytics.md)
 
-  Tehdit analizleri, etkin saldırılara yanıt verme ve etkisini en aza indirmeye yardımcı olur. Ayrıca, yeni çözümler tarafından engellenmiş saldırı Microsoft 365 Defender ve daha fazla maruz kalma riskini azaltan ve onları daha fazla güvenlik için önleyen eylemler gerçekleştirin. Birleşik güvenlik deneyiminin bir parçası olarak tehdit çözümlemeleri, Uç Nokta için Microsoft Defender E5 lisans sahipleri için Office Microsoft Defender'da kullanılabilir.
+  Tehdit analizi, etkin saldırıların etkisini yanıtlamanıza ve en aza indirmenize yardımcı olur. Ayrıca Microsoft 365 Defender çözümleri tarafından engellenen saldırı girişimleri hakkında bilgi edinebilir ve daha fazla maruz kalma riskini azaltan ve dayanıklılığı artıran önleyici eylemler gerçekleştirebilirsiniz. Birleşik güvenlik deneyiminin bir parçası olarak tehdit analizi artık Uç Nokta için Microsoft Defender ve Office E5 lisans sahipleri için Microsoft Defender için kullanılabilir.
 
 ## <a name="march-2021"></a>Mart 2021
 
 - [CloudAppEvents tablosu](advanced-hunting-cloudappevents-table.md)
 
-  Bulut uygulamaları ve hizmetleriyle ilgili çeşitli bulut uygulamaları ve hizmetlerinde yer alan olaylar hakkında bilgi Microsoft Cloud App Security. Bu tablo, daha önce tabloda kullanılabilen bilgileri de `AppFileEvents` içerir.
+  Microsoft Cloud App Security kapsamındaki çeşitli bulut uygulamaları ve hizmetlerindeki olaylar hakkında bilgi edinin. Bu tablo, daha önce tabloda bulunan `AppFileEvents` bilgileri de içerir.
 

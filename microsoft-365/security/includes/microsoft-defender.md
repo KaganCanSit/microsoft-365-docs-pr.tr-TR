@@ -5,12 +5,12 @@ author: dansimp
 ms.prod: m365-security
 ms.topic: include
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: dd348da0895a6cb341aecb7a386609a32d83cb82
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: f20ae3cbec03531ad39adfa99c41891722482ddf
+ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "62959942"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64731030"
 ---
-> [!IMPORTANT]
-> Gelişmiş Microsoft 365 Defender <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">portalı</a> kullanılabilir. Bu yeni deneyim, Microsoft 365 Defender portalında Uç Nokta için Defender, Office 365, Microsoft 365 Defender için Defender gibi Microsoft 365 Defender getirir. [Nelerin yeni olduğunu öğrenin](/microsoft-365/security/mtp/overview-security-center).
+> [!NOTE]
+> Microsoft 365 Defender mı yaşamak istiyorsunuz? [Microsoft 365 Defender değerlendirme ve pilot](/microsoft-365/security/defender/eval-overview?ocid=cx-docs-MTPtriallab) uygulama hakkında daha fazla bilgi edinin.

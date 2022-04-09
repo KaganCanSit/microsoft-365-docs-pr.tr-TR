@@ -20,12 +20,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: b8f15212916566e169efa63556b897600f7092a3
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 9000a56bb0bf4819f4fc2e9bf7553a19772efe66
+ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705260"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "64730890"
 ---
 # <a name="step-6-monitor-device-risk-and-compliance-to-security-baselines"></a>6. Adım. Cihaz riskini ve güvenlik temel hatlarına uyumluluğu izleyin
 
@@ -51,9 +51,9 @@ Uç Nokta için Defender henüz ayarlanmamışsa, [değerlendirme ve pilot ortam
 
 Uç Nokta için Microsoft Defender dağıtıldığında tehdit riski sinyallerinden yararlanabilirsiniz. Bu, risk puanına göre cihazlara erişimi engellemenize olanak tanır. Microsoft, orta veya daha düşük risk puanına sahip cihazlara erişime izin vermenizi önerir.
 
-Android ve iOS/iPadOS için tehdit sinyalleri Uygulama Koruma İlkeleriniz (APP) içinde kullanılabilir. Bunu yapılandırma hakkında bilgi için bkz. [Cihaz risk düzeyini ayarlamak için uygulama koruma ilkesi oluşturma ve atama](/mem/intune/protect/advanced-threat-protection-configure).
+Android ve iOS/iPadOS için tehdit sinyalleri Uygulama Koruma İlkeleriniz (APP) içinde kullanılabilir. Bunu yapılandırma hakkında bilgi için bkz. [Cihaz risk düzeyini ayarlamak için uygulama koruma ilkesi oluşturma ve atama](/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level).
 
-Tüm platformlar için mevcut cihaz uyumluluk ilkelerinde risk düzeyini ayarlayabilirsiniz. [Cihaz risk düzeyini ayarlamak için bkz. Uyumluluk ilkesi oluşturma ve atama](/mem/intune/protect/advanced-threat-protection-configure).
+Tüm platformlar için mevcut cihaz uyumluluk ilkelerinde risk düzeyini ayarlayabilirsiniz. Bkz. [Koşullu erişim ilkesi oluşturma](/mem/intune/protect/advanced-threat-protection-configure#create-a-conditional-access-policy).
 
 ## <a name="deploy-security-baselines-and-monitor-compliance-to-these-settings"></a>Güvenlik temellerini dağıtma ve bu ayarlara uyumluluğu izleme
 
