@@ -23,12 +23,12 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 - admindeeplinkEXCHANGE
 description: Kuruluşunuzun ileti saklama, eKeşif ve saklama gereksinimlerini desteklemek için arşiv posta kutularını etkinleştirmeyi veya devre dışı bırakmayı öğrenin.
-ms.openlocfilehash: be7939f11c6aea0161f76c3796ca2ff8bd515ba0
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+ms.openlocfilehash: 9e30178dcab731ae61a9db5374218a608e4e47af
+ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63010837"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64738391"
 ---
 # <a name="enable-archive-mailboxes-in-the-compliance-center"></a>Uyumluluk merkezinde posta kutularını arşivlemeyi etkinleştirme
 
@@ -48,20 +48,19 @@ Microsoft 365 uyumluluk merkezinde **Arşiv** sayfasını görmüyorsanız, yön
 
 2. Microsoft 365 uyumluluk merkezinin sol bölmesinde, **Bilgi yönetişimi**’ne ve ardından **Arşiv** sekmesine tıklayın.
 
-   **Arşiv** sayfası görüntülenir. Arşiv **posta kutusu** sütunu, her kullanıcı için bir arşiv posta kutusunun etkin mi yoksa devre dışı mı olduğunu gösterir.
+   **Arşiv** sayfası görüntülenir. **Arşiv posta kutusu** sütunu, her kullanıcı için bir arşiv posta kutusunun etkinleştirilmiş olup olmadığını gösterir.
 
    > [!NOTE]
    > **Arşiv** sayfası en fazla 500 kullanıcı gösterir.
 
-3. Posta kutuları listesinde, arşiv posta kutusunu etkinleştirmek istediğiniz kullanıcıyı seçin.
+3. Posta kutuları listesinde, arşiv posta kutusunu etkinleştirmek istediğiniz kullanıcıyı seçin ve **Arşivi Etkinleştir**'i seçin.
 
    ![Arşiv posta kutusunu etkinleştirmek için seçili kullanıcının ayrıntılar bölmesinde Etkinleştir'e tıklayın.](../media/8b53cdec-d5c9-4c28-af11-611f95c37b34.png)
 
-4. Seçili kullanıcının ayrıntılar bölmesinde, **Etkinleştir**'e tıklayın.
 
    Arşiv posta kutusunu etkinleştirirseniz, kullanıcının posta kutusundaki posta kutusuna atanan arşivleme ilkesinden daha eski olan öğelerin yeni arşiv posta kutusuna taşınacağını söyleyen bir uyarı görüntülenir. Exchange Online posta kutularına atanan bekletme ilkesinin bir parçası olan varsayılan arşiv ilkesi, öğeleri, öğenin posta kutusuna teslim edildiği veya kullanıcı tarafından oluşturulduğu tarihten iki yıl sonra arşiv posta kutusuna taşır. Daha fazla bilgi için bu makalenin **Daha fazla bilgi** bölümüne bakın.
 
-5. Arşiv posta kutusunu etkinleştirmek için **Evet**'e tıklayın.
+5. Arşiv posta kutusunu etkinleştirmek için **Etkinleştir**'i seçin.
 
    Arşiv posta kutusunu oluşturmak birkaç dakika sürebilir. Oluşturulduğunda, seçili kullanıcı için ayrıntılar bölmesinde **Arşiv posta kutusu: etkin** olarak görüntülenir. **Yenile** ![Yenile simgesine](../media/O365-MDM-Policy-RefreshIcon.gif) tıklamanız gerekebilir. ayrıntılar bölmesindeki bilgileri güncelleştirmek için.
 
@@ -80,18 +79,17 @@ Arşiv posta kutusunu devre dışı bırakmak için:
 
 2. Microsoft 365 uyumluluk merkezinin sol bölmesinde, **Bilgi yönetişimi**’ne ve ardından **Arşiv** sekmesine tıklayın.
 
-   **Arşiv** sayfası görüntülenir. Arşiv **posta kutusu** sütunu, her kullanıcı için bir arşiv posta kutusunun etkin mi yoksa devre dışı mı olduğunu gösterir.
+   **Arşiv** sayfası görüntülenir. **Arşiv posta kutusu** sütunu, her kullanıcı için bir arşiv posta kutusunun etkinleştirilmiş olup olmadığını gösterir.
 
    > [!NOTE]
    > **Arşiv** sayfası en fazla 500 kullanıcı gösterir.
 
-3. Posta kutuları listesinde, arşiv posta kutusunu devre dışı bırakmak istediğiniz kullanıcıyı seçin.
+3. Posta kutuları listesinde, arşiv posta kutusunu devre dışı bırakmak istediğiniz kullanıcıyı seçin ve **Arşivi Devre Dışı Bırak**'ı seçin.
 
-4. Ayrıntılar bölmesinde **Devre Dışı Bırak**'a tıklayın.
 
    Arşiv posta kutusunu yeniden etkinleştirmek için 30 gününüz olduğunu ve 30 gün sonra arşivdeki tüm bilgilerin kalıcı olarak silineceğini söyleyen bir uyarı iletisi görüntülenir.
 
-5. Arşiv posta kutusunu devre dışı bırakmak için **Evet**'e tıklayın.
+5. Arşiv posta kutusunu devre dışı bırakmak için **Devre Dışı Bırak**'ı seçin.
 
    Arşiv posta kutusunu devre dışı bırakmak birkaç dakika sürebilir. Devre dışı bırakıldığında, seçili kullanıcı için ayrıntılar bölmesinde **Arşiv posta kutusu: devre dışı** olarak görüntülenir. **Yenile** ![Yenile simgesine](../media/O365-MDM-Policy-RefreshIcon.gif) tıklamanız gerekebilir. ayrıntılar bölmesindeki bilgileri güncelleştirmek için.
 

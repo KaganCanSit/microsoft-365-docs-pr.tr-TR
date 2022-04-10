@@ -1,16 +1,24 @@
-- name: M365 Office LTI
+- name: Microsoft 365 LTI
   href: index.md
+- name: Microsoft OneLTI yönetimi
+  href: manage-microsoft-one-lti.md
 - name: Canvas tümleştirmeleri
   items:
-    - name: LTI'Microsoft OneDrive Canvas ile kullanma
+    - name: Canvas ile Microsoft OneDrive LTI kullanma
       href: onedrive-lti.md
     - name: Canvas ile Microsoft Teams sınıflarını kullanma
       href: teams-classes-with-canvas.md
-    - name: Canvas ile Microsoft Teams kullanma
+    - name: Canvas ile Microsoft Teams toplantılarını kullanma
       href: teams-meetings-with-canvas.md
 - name: Blackboard tümleştirmeleri
   items:
-    - name: Blackboard Microsoft OneDrive LTI kullanma
+    - name: Blackboard ile Microsoft OneDrive LTI kullanma
       href: onedrive-lti-blackboard.md
-    - name: Blackboard Microsoft Teams Ultra Öğrenme ile diğer sınıflara da yer yok
+    - name: Blackboard Learn Ultra ile Microsoft Teams sınıflarını kullanma
       href: teams-classes-with-blackboard.md
+- name: Moodle tümleştirmeleri
+  items:
+    - name: Moodle eklentisini ayarlama ve yapılandırma
+      href: moodle-plugin-configuration.md
+    - name: Moodle ile Microsoft Teams sınıflarını ve toplantılarını kullanma
+      href: teams-classes-meetings-with-moodle.md

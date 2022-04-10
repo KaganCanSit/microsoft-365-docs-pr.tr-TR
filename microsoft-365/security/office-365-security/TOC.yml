@@ -218,6 +218,12 @@
           href: /exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes
     - name: Araştır
       items:
+        - name: Office 365 için Defender Güvenlik İşlemleri Kılavuzu
+          items:
+            - name: Office 365 için Defender Güvenlik İşlemleri Kılavuzu
+              href: mdo-sec-ops-guide.md
+            - name: Microsoft 365 Defender'da Office 365 için Defender'dan olayları ve uyarıları yönetme
+              href: mdo-sec-ops-manage-incidents-and-alerts.md
         - name: Tehdit Gezgini görünümleri
           href: threat-explorer-views.md
         - name: Kampanya Görünümleri
