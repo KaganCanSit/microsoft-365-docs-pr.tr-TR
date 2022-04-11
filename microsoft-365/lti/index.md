@@ -1,5 +1,5 @@
 ---
-title: LTI Uygulamalarına Genel Bakış
+title: Microsoft LTI uygulamalarına genel bakış
 ms.author: heidip
 author: MicrosoftHeidi
 manager: serdars
@@ -12,68 +12,82 @@ search.appverid: ''
 ms.collection:
 - M365-modern-desktop
 ms.localizationpriority: ''
-description: M365 Learning Araçları Birlikte Çalışabilirlik (LTI) Office uygulamaları kullanma ve Office uygulamalarını Learning Yönetim Sistemi (LMS) ile tümleştirerek eğitimcilere nasıl yardımcı olacaklarını öğrenin.
-ms.openlocfilehash: d6fbce11bf583a168f6b0d71f9aa15f144179515
-ms.sourcegitcommit: b71a8fdda2746f18fde2c94d188be89f9cab45f2
-ms.translationtype: MT
+description: Öğrenme Araçları Birlikte Çalışabilirliği (LTI) Microsoft uygulamaları hakkında bilgi edinin ve Microsoft uygulamalarını Öğrenme Yönetim Sistemine (LMS) ile tümleştirirken eğitimcilere nasıl yardımcı olacaklarını öğrenin.
+ms.openlocfilehash: 8140b89b4bfeb26f64e8949f6d7835ca59645cbe
+ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/21/2021
-ms.locfileid: "62970603"
+ms.lasthandoff: 04/09/2022
+ms.locfileid: "64746777"
 ---
-# <a name="integrating-microsoft-products-with-your-learning-management-system-lms"></a>Microsoft ürünlerini Learning Yönetim Sistemi (LMS) ile tümleştirme
+# <a name="integrating-microsoft-products-with-your-learning-management-system-lms"></a>Microsoft ürünlerini Öğrenme Yönetim Sisteminizle (LMS) tümleştirme
 
-- [OneDrive Tuvalli LTI](#onedrive-lti-with-canvas)
-- [Teams Canvas ile LTI Toplantıları](#teams-meetings-lti-with-canvas)
-- [Teams LTI](#teams-classes-lti)
+Microsoft Eğitim ve üçüncü taraf iş ortaklarımız, öğretim ve öğrenme akışının çözüm sınırlarını her zaman aştığının farkındadır. Daha sorunsuz deneyimler sunmak, eğitimcilerin ve öğrencilerin araçları idare etmek yerine hedeflerine odaklanmasını sağlamak için çalışıyoruz. Öğrenme Yönetim Sistemleri (LMS) içinde ve bunlarla birlikte, öğretim ve öğrenmenin gerçekleştiği her yerde Microsoft ürünlerini tümleştiriyoruz.
 
-Microsoft Eğitim ve üçüncü taraf iş ortaklarımız, öğretim ve öğrenme akışının çözüm sınırlarının değişken olarak kesiştirebilir. Daha sorunsuz deneyimler sağlamak, eğitimcileri ve öğrenenleri araçları biraz çalışmak yerine hedeflerine odaklanmaya devam etmek için çalışıyoruz. Microsoft ürünlerini, öğretim ve öğrenmenin olduğu her yerde, Microsoft ürünlerini Learning Sistemleri (LMS) dahil olmak üzere tümlemektedir. Microsoft'un en iyilerini doğrudan LMS'nize getiren Learning Araçları Birlikte Çalışabilirlik [(LTI)](https://www.imsglobal.org/activity/learning-tools-interoperability) standardını kullanarak bir araç paketi oluşturmak için LMS iş ortaklarımızla birlikte çalıştık.
+LMS iş ortaklarımızla birlikte çalışarak Microsoft'un en iyilerini doğrudan LMS'nize getiren [Öğrenme Araçları Birlikte Çalışabilirliği (LTI) standardını](https://www.imsglobal.org/activity/learning-tools-interoperability) kullanarak bir araç paketi oluşturduk.
 
-Bu araçlar arasında yeni bir LTI OneDrive, yeni bir toplantı LTI Teams ve yeni sınıf sınıfı bir LTI Teams vardır. Bu yeni araçlar, LTI 1.3 ve LTI Advantage standartlarına yüksek düzeyde güvenli ve tam uyumludur. En OneDrive LTI uygulaması, eğitimcilerin ve öğrencilerin bir LMS OneDrive te doğrudan ödev ve içerik oluşturma iş akışlarına bulut depolaması ve Office 365 dosyaları getirmesine olanak sağlar. En Teams Toplantılar LTI uygulaması, eğitimcilerin ve öğrencilerin LMS'leri içindeki bir toplantı merkezi üzerinden Teams Toplantılarını yönetmelerine, zamanlamalarına ve erişmelerine olanak sağlar. Sınıf Sınıfı Teams LTI uygulaması, eğitimcilerin günlük takım güncelleştirmeleri ile LMS kurs listesiyle LMS ders listesi kullanarak LMS'leri içinde eğitimleri için bir ekip oluşturmalarını sağlar. Böylece öğrenciler doğrudan LMS'nin içinde takıma erişim sağlarından erişin. Bu yeni araçları müşterilere sunmak ve geri bildirimlerinize göre çözümlerimizi geliştirmeye devam etmek bizi heyecanlandırmaktadır.
+Bu araçlar şunlardır:
 
-## <a name="onedrive-lti-with-canvas"></a>OneDrive Tuvalli LTI
+- [OneDrive LTI](#onedrive-lti-apps)
+- [Teams Toplantıları LTI](#teams-meetings-lti)
+- [Teams Sınıflar LTI](#teams-classes-lti)
 
-Learning Yönetim Sistemi'niz (LMS) ile Microsoft OneDrive hakkında daha fazla bilgi edinmek için bkz.
+Microsoft OneLTI araçlarını yönetme hakkında genel bilgi için bkz. [Herhangi bir LMS için Microsoft OneLTI'yi yönetme](manage-microsoft-one-lti.md).
 
-- **İş Microsoft Office 365 doğrudan iş akışlarınıza getirir**
+## <a name="onedrive-lti-apps"></a>Onedrive LTI uygulamaları
 
-En Microsoft OneDrive LTI uygulaması, aşağıdakileri içeren en önemli iş akışlarınıza kullanıcılarınızı Microsoft OneDrive Microsoft Office 365 için LMS'niz ile tümleştirilmiştir:
+Öğrenme Yönetim Sisteminizle (LMS) Microsoft OneDrive’ı kullanma hakkında daha fazla bilgi edinin.
 
-- Kaynak ekleme ve içeriği düzenleme.
-- İşbirliğine dayalı belgeler başlatma.
-- Ödev oluşturma ve puanlama.
+- **Microsoft 365 uygulamasını doğrudan iş akışlarınıza getirir**
 
-- **En son LTI standartlarıyla güvenli ve tam uyumlu**
+Microsoft OneDrive LTI uygulaması, Microsoft OneDrive ve Microsoft 365 uygulamalarını şunları da içeren en önemli iş akışlarınıza doğrudan getirmek için LMS'nizle tümleştirilir:
 
-En Microsoft OneDrive LTI Uygulaması, LTI 1.3 ve LTI Avantajı ile uyumludur. Bu avantaj, üst düzeyde güvenli ve sıkı bir şekilde tümleşik kullanıcı deneyimine olanak sağlar.
+- Kaynakları ekleme ve içeriği düzenleme.
+- İşbirliğine dayalı belgeleri başlatma.
+- Ödev oluşturma ve not verme.
 
-- **Modern ve Zengin Kullanıcı Deneyimi**
+- **Güvenli ve en son LTI standartlarıyla ve tam uyumlu**
 
-En Microsoft OneDrive LTI Uygulaması, Microsoft'un en iyilerini LMS deneyiminize hemen getirir. Daha modern bir kullanıcı deneyimi sunan ve Office 365 dosyaları için yeni ve genişletilmiş Microsoft OneDrive dosya seçici ve zengin düzenleme deneyimleriyle daha modern bir kullanıcı deneyimi sunan LMS'nizin mevcut Office 365 tümleştirmesini Office geliştiriyoruz. Ayrıca Microsoft bundan sonra Microsoft OneDrive LTI uygulamasına tamamen sahip olur ve bu da Microsoft'tan otomatik olarak en yeni ve en iyi şekilde sahip olacağınız anlamına gelir.
+Microsoft OneDrive LTI Uygulaması, güvenli ve tümleşik bir kullanıcı deneyimi sağlayan LTI 1.3 ve LTI Advantage ile uyumludur.
 
-Aşağıdaki Microsoft OneDrive LTI Uygulaması şunları sağlar:
+- **Modern ve kapsamlı kullanıcı deneyimi**
 
-- Word Office 365, sunular dahil olmak üzere daha fazla PowerPoint ve Zengin Excel Düzenleyicisi'ne yükleme.
-- Bulut Office 365 dağıtın.
-- Dosyalarınızı görüntülemek ve düzenlemek için kişisel Microsoft OneDrive düzenleyebilirsiniz.
-- Kurs üyelerinin paylaşılan belgeler üzerinde gerçek zamanlı olarak birlikte çalışıldıklarına yönelik işbirliği oluşturun.
-- Kişisel Microsoft OneDrive okul hesapları da dahil olmak üzere birden çok kullanıcı hesabına erişin.
-- Tüm Office 365 kurs modülleriyle tümleştirin.
-- LMS'niz ile çoklu oturum açma için Microsoft hesabını kullanın.
+Modern bir kullanıcı deneyimi sunarak, genişletilmiş bir Microsoft OneDrive dosya seçici ve Office dosyaları için kapsamlı düzenleme deneyimleri sağlayarak LMS'nizdeki mevcut Microsoft 365 tümleştirmesini geliştiriyoruz.
 
-Yapılandırma adımları için bkz. [LTI'Microsoft OneDrive Tuval ile tümleştirin](onedrive-lti.md).
+OneDrive LTI uygulaması Microsoft'a ait olduğundan Microsoft'tan en son güncelleştirmeleri her zaman otomatik olarak edinebilirsiniz.
 
-## <a name="teams-lti-apps"></a>Teams LTI uygulamalarını kullanma
+Microsoft OneDrive LTI Uygulaması şunları yapmanızı sağlar:
 
-### <a name="teams-meetings-lti-with-canvas"></a>Teams Canvas ile LTI Toplantıları
+- Word belgeleri, PowerPoint sunular ve Zengin İçerik Düzenleyicisi'nden Excel gibi Microsoft 365 dosyaları ekleme.
+- Microsoft 365 bulut atamalarını dağıtma.
+- Kişisel ve kurs Microsoft OneDrive dosyalarınızı görüntüleme ve düzenleme.
+- Kurs üyelerinin paylaşılan belgeler üzerinde gerçek zamanlı olarak birlikte çalışabileceği işbirlikleri oluşturma.
+- Kişisel ve okul hesapları dahil olmak üzere birden çok Microsoft OneDrive hesabına erişme.
+- Microsoft 365 dosyalarını kurs modüllerinizle tümleştirme.
+- LMS'nizle çoklu oturum açmak için Microsoft hesabınızı kullanma.
 
-Microsoft Teams toplantılar LTI uygulaması, yöneticilerin toplantılarını Teams kurumlarının LMS kursuna dahillerine yardımcı olur. Eğitimciler ve öğrenciler LMS'lerinin içinde geçmiş ve yaklaşan toplantıları tiktenerek tek tek veya yinelenen toplantılar planlar ve kursla ilgili ekip toplantılarına katılabilir.
+Yapılandırma adımları için bkz:
 
-Yapılandırma adımları için bkz. [Canvas ile Microsoft Teams toplantılarını kullanma](teams-meetings-with-canvas.md).
+- [Tuval ile Microsoft OneDrive LTI](onedrive-lti.md).
+- [Blackboard ile Microsoft OneDrive LTI](onedrive-lti-blackboard.md).
 
-### <a name="teams-classes-lti"></a>Teams LTI
+## <a name="teams-lti-apps"></a>Teams LTI uygulamaları
 
-Sınıf Microsoft Teams LTI uygulaması eğitimcilerin ve öğrencilerin LMS'leri arasında geçişlerine yardımcı olur ve Teams. Kullanıcılar, kursuyla ilişkilendirilmiş sınıf ekiplerine doğrudan LMS'lerinin içinden erişim sağlar. Yapılandırma adımlarını aşağıda bulabilirsiniz:
+### <a name="teams-meetings-lti"></a>Teams toplantıları LTI
 
-- **Teams Canvas ile LTI Sınıflarını Kullan'Microsoft Teams** [Canvas ile birlikte kullanın](teams-classes-with-canvas.md).
+Microsoft Teams toplantıları LTI uygulaması, Teams toplantılarını LMS kurslarıyla bir araya getirir. Eğitimciler ve öğrenciler, LMS'leri üzerinden geçmiş ve yaklaşan toplantıları görüntüleyebilir, tek veya yinelenen toplantılar programlayabilir ve kursla ilgili ekip toplantılarına katılabilir.
 
-- **Teams Sınıfı LTI'larını Blackboard** ile kullanma [Microsoft Teams Ultra Öğrenme ile sınıf kullanma](teams-classes-with-blackboard.md)
+Yapılandırma adımları için bkz:
+
+- [Tuval ile Microsoft Teams Toplantıları](teams-meetings-with-canvas.md).
+- [Moodle ile Microsoft Teams Toplantıları](teams-classes-meetings-with-moodle.md).
+
+### <a name="teams-classes-lti"></a>Teams sınıflar LTI
+
+Microsoft Teams sınıflar LTI uygulaması, eğitimcilerin ve öğrencilerin LMS ile Teams arasında gezinmelerine yardımcı olur. Kullanıcılar, LMS'leri içinde kendi kurslarıyla ilişkili sınıf ekiplerine erişebilir.
+
+Yapılandırma adımları için bkz:
+
+- [Tuval ile Teams Sınıflar LTI](teams-classes-with-canvas.md).
+- [Blackboard ile Teams Sınıflar LTI](teams-classes-with-blackboard.md).
+- [Moodle ile Teams Sınıflar LTI](teams-classes-meetings-with-moodle.md).
