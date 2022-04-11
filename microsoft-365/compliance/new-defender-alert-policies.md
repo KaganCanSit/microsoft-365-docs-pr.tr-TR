@@ -1,5 +1,5 @@
 ---
-title: Office 365 için Microsoft Defender'daki yeni uyarı Office 365
+title: Office 365 için Microsoft Defender'da yeni uyarı ilkeleri
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -18,111 +18,108 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkDEFENDER
 ROBOTS: noindex,nofollow
-description: İş için Microsoft Defender'a yönelik yeni uyarı ilkelerini Office 365. Ayrıca, yeni uyarı ilkeleriyle değiştirilmiş olan iki uyarı ilkelerini de gerildireceğiz.
-ms.openlocfilehash: 895a1fa51b9db5991bdb5235fd467bbac581d02e
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+description: Office 365 için Microsoft Defender için yeni uyarı ilkeleri yayınlıyoruz. Ayrıca, yeni ilkelerle değiştirilen iki mevcut uyarı ilkesi de kullanımdan kaldırılmıştır.
+ms.openlocfilehash: afdc547fc658b40c2eee7a92ef2043326e159b32
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63005468"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64759489"
 ---
-# <a name="new-alert-policies-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'daki yeni uyarı Office 365
+# <a name="new-alert-policies-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender'da yeni uyarı ilkeleri
 
-Microsoft Defender for Office 365 is introducing new and improved alert policies related to post-delivery detections. Bu, ilgili Otomatik Araştırma ve Yanıt (AIR) & kitaplarına yönelik iyileştirmeleri içerir. Buna ek olarak, bu ilkeler tarafından oluşturulan uyarıları organizasyonu üzerindeki etkisiyle daha iyi hizalamak için altı varsayılan uyarı ilkelerinin önem derecesini değiştireceğiz.
+Office 365 için Microsoft Defender, teslim sonrası algılamalarla ilgili yeni ve geliştirilmiş uyarı ilkeleri kullanıma sunm Office 365 için Microsoft Defender. Bu, bunlarla ilişkili Otomatik Araştırma & Yanıtı (AIR) playbook'larında yapılan iyileştirmeleri içerir. Ayrıca, bu ilkeler tarafından oluşturulan uyarıları kuruluşunuz üzerindeki etkileriyle daha iyi uyumlu hale getirmek için altı varsayılan uyarı ilkesi için önem derecesi sınıflandırmasını değiştiriyoruz.
 
-## <a name="post-delivery-detections"></a>Teslim sonrası algılamaları
+## <a name="post-delivery-detections"></a>Teslim sonrası algılamalar
 
-Office 365 için Microsoft Defender otomatik temizlemesi (ZAP) gelen kutusundan iletileri kaldırıyorsa, teslim sonrası algılamalarla ilgili dört yeni varsayılan uyarı ilkeleri tanıteceğiz. Bu dört yeni uyarı ilkeleri, ZAP senaryolarını kapsıyor olan mevcut iki varsayılan uyarı ilkelerinin yerini alacak ve kuruluşlara temel algılama ve ilgili göstergeler hakkında gelişmiş ayrıntılar sağlayacaktır. Bu uyarılar (ve bu uyarılardan tetiklenen AIR çalışma kitapları) URL kötü amaçlı bir dosyayı mı yoksa dosyanın kötü amaçlı bir URL'yi mi içerdiği de dahil olmak üzere e-postaların ve varlıkların tehditlerini doğru biçimde yakalar.
+Office 365 için Microsoft Defender Sıfır saat otomatik temizleme (ZAP) gelen kutusundan iletileri kaldırdıktan sonra teslim sonrası algılamalarla ilgili dört yeni varsayılan uyarı ilkesi sunacağız. Bu dört yeni uyarı ilkesi, ZAP senaryolarını kapsayan mevcut iki varsayılan uyarı ilkesiyle değiştirilecek ve kuruluşlara temel algılama ve ilgili göstergeler hakkında gelişmiş ayrıntılar sağlayacaktır. Bu uyarılar (ve bu uyarılardan tetiklenecek AIR playbook'ları), URL'nin kötü amaçlı bir dosyaya işaret edip etmediğini veya dosyanın kötü amaçlı bir URL içermesi de dahil olmak üzere e-postaların ve varlıkların tehditlerini doğru bir şekilde yakalar.
 
-Aşağıdaki tabloda, kaldırılacak yeni uyarı ilkeleri ve var olan uyarı ilkeleri listelemektedir. Bu, [kuruluşlarınızı nasıl etkileyecek? bölümüne](#how-this-will-affect-your-organization) bakın.
+Aşağıdaki tabloda yeni uyarı ilkeleri ve kaldırılacak mevcut uyarı ilkeleri listelenir. Dağıtımla ilgili ayrıntılar için [Bunun kuruluşunuzu nasıl etkileyeceği](#how-this-will-affect-your-organization) bölümüne bakın.
 
-| Yeni veya var olan uyarı ilkesi | Uyarı ilkesi adı | Uyarı ilkesi kimliği|
-|:-----------------------------|:----------------|:--------------|
-| Yeni| **Teslimden sonra kötü amaçlı URL içeren e-posta iletileri kaldırıldı**   | 8e6ba277-ef39-404e-aaf1-294f6d9a2b88 |
-| Yeni| **Teslimden sonra kötü amaçlı dosya içeren e-posta iletileri kaldırıldı**  | 4b1820ec-39dc-45f3-abf6-5ee80df51fd2 |
-| Yeni| **Bir kampanyadan gelen e-posta iletileri teslim edildi ve daha sonra kaldırıldı** | c8522cbb-9368-4e25-4ee9-08d8d899dfab |
-| Yeni|**E-posta iletileri teslimden sonra kaldırıldı**                | b8f6b088-5487-4c70-037c-08d8d71a43fe |
-| Mevcut (kaldırılır)| **Teslimden sonra kimlik avı URL'lerini içeren e-posta iletileri kaldırılıyor**| EA8169FA-0678-4751-8854-AEBEA7ADECEB |
-| Mevcut (kaldırılır)| **Teslimden sonra kötü amaçlı yazılımları içeren e-posta iletileri kaldırıldı**| 0179B3F7-3FDA-40C3-8F24-278563978DBB |
-||||
+|Yeni veya mevcut uyarı ilkesi|Uyarı ilkesi adı|Uyarı ilkesi kimliği|
+|---|---|---|
+|Yeni|**Kötü amaçlı URL içeren e-posta iletileri teslimden sonra kaldırıldı**|8e6ba277-ef39-404e-aaf1-294f6d9a2b88|
+|Yeni|**Kötü amaçlı dosya içeren e-posta iletileri teslimden sonra kaldırıldı**|4b1820ec-39dc-45f3-abf6-5ee80df51fd2|
+|Yeni|**Kampanyadan gelen e-posta iletileri teslim edildi ve daha sonra kaldırıldı**|c8522cbb-9368-4e25-4ee9-08d8d899dfab|
+|Yeni|**Teslimden sonra e-posta iletileri kaldırıldı**|b8f6b088-5487-4c70-037c-08d8d71a43fe|
+|Var (kaldırılacak)|**Kimlik avı URL'lerini içeren e-posta iletileri teslimden sonra kaldırıldı**|EA8169FA-0678-4751-8854-AEBEA7ADECEB|
+|Var (kaldırılacak)|**Kötü amaçlı yazılım içeren e-posta iletileri teslimden sonra kaldırıldı**|0179B3F7-3FDA-40C3-8F24-278563978DBB|
 
-## <a name="alert-severity-enhancements"></a>Önem derecesi iyileştirmelerini uyarın
+## <a name="alert-severity-enhancements"></a>Uyarı önem derecesi geliştirmeleri
 
-Aşağıdaki tabloda, önem derece sınıflandırmaları değiştiriliyor olan varsayılan uyarı ilkeleri tanımmektedir. Bu uyarı ilkelerinin önem derecesini, kuruluş üzerindeki olası risk ve etkiyle daha iyi uyumlu olacak şekilde değiştiriliyor ve güvenlik ekiplerinin bu ilkelerle oluşturulan uyarılara önceliklerini belirlemesine yardımcı oluyoruz.
+Aşağıdaki tablo için önem derecesi sınıflandırmaları değiştirilen varsayılan uyarı ilkelerini tanımlar. Kuruluşunuzdaki olası risk ve etkiyle daha iyi uyum sağlamak ve güvenlik ekiplerinizin bu ilkeler tarafından oluşturulan uyarıları önceliklendirmesine yardımcı olmak için bu uyarı ilkeleri için önem derecesi sınıflandırmasını değiştiriyoruz.
 
-| Uyarı| Uyarı ilkesi kimliği| Eski önem derecesi| Yeni önem derecesi  |
-|:----------|:---------------|:------------|:--------------|
-| **Şüpheli e-posta iletme etkinliği**| BFD48F06-0865-41A6-85FF-ADB746423EBF | Orta| Yüksek|
-| **Kullanıcı tarafından kötü amaçlı yazılım veya kimlik avı olarak bildirilen e-posta** | B26A5770-0C38-434A-9380-3A3C2C27BBB3 | Bilgilendirme | Düşük|
-| **Kimlik avı olarak bildirilen e-postada olağan dışı artış** | A00D8C62-9320-4EEA-A7E5-966B9AC09558 | Yüksek| Orta |
-| **Yönetici Gönderimi sonucu tamamlandı** | AE9B83DD-6039-4EA9-B675-6B0AC3BF4A41 | Düşük| Bilgilendirme |
-| **Yönlendirme/yeniden yönlendirme kuralı oluşturma** | D59A8FD4-1272-41EE-9408-86F7BCF72479 | Düşük| Bilgilendirme |
-| **eBulma araması başlatıldı veya dışarı aktarıldı** | 6FDC5710-3998-47F0-AFBB-57CEFD7378A | Meduim | Bilgilendirme |
-|||||
+|Uyarı|Uyarı ilkesi kimliği|Eski önem derecesi|Yeni önem derecesi|
+|---|---|---|---|
+|**Şüpheli e-posta iletme etkinliği**|BFD48F06-0865-41A6-85FF-ADB746423EBF|Orta|Yüksek|
+|**Kullanıcı tarafından kötü amaçlı yazılım veya kimlik avı olarak bildirilen e-posta**|B26A5770-0C38-434A-9380-3A3C2C27BBB3|Bilgi|Düşük|
+|**Kimlik avı olarak bildirilen e-postada olağan dışı artış**|A00D8C62-9320-4EEA-A7E5-966B9AC09558|Yüksek|Orta|
+|**Yönetici Gönderimi sonucu tamamlandı**|AE9B83DD-6039-4EA9-B675-6B0AC3BF4A41|Düşük|Bilgi|
+|**İletme/yeniden yönlendirme kuralı oluşturma**|D59A8FD4-1272-41EE-9408-86F7BCF72479|Düşük|Bilgi|
+|**eBulma araması başlatıldı veya dışarı aktarıldı**|6FDC5710-3998-47F0-AFBB-57CEFD7378A|Meduim|Bilgi|
 
 ## <a name="when-will-these-changes-happen"></a>Bu değişiklikler ne zaman gerçekleşecek?
 
-Aşağıdaki tabloda, yeni uyarı ilkelerinin teslim sonrası uyarıları tetikleyene başlayacağı tarihi tanımlar. Tabloda ayrıca, var olan iki uyarı ilkelerinin ne zaman kaldırıldığı da tanımlar.
+Aşağıdaki tabloda, yeni uyarı ilkelerinin teslim sonrası uyarıları tetiklemeye ne zaman başlayacağı gösterilmiştir. Tabloda, mevcut iki uyarı ilkesi ne zaman kaldırılacağı da tanımlanır.
 
-| Uyarı ilkesi| Tarih |
-|:------------|:-----|
-| **Teslimden sonra kötü amaçlı URL içeren e-posta iletileri kaldırıldı** (yeni) | Uyarılar 11 Nisan 2021'de tetik tetik başlayacaktır|
-| **Teslimden sonra kötü amaçlı dosya içeren e-posta iletileri kaldırıldı** (yeni) | Uyarılar 11 Nisan 2021'de tetik tetik başlayacaktır |
-| **Bir kampanyadan gelen e-posta iletileri teslim edildi ve daha sonra kaldırıldı** (yeni) | Uyarılar 28 Mayıs 2021'de tetik tetik başlayacaktır|
-| **Kötü amaçlı e-postalar teslim edildi ve daha sonra kaldırıldı** (yeni) | Uyarılar 28 Mayıs 2021'de tetik tetik başlayacaktır|
-| **Teslimden sonra kaldırılan kimlik avı URL'lerini içeren** e-posta iletileri (var olan, kaldırılacak)| Uyarı ilkesi Haziran 2021'de kaldırıldı. Bu [değişikliklere hazırlanmak için ne yapmak gerekir? bölümüne](#what-you-need-to-do-to-prepare-for-these-changes) bakın.|
-| **Teslimden sonra kötü amaçlı yazılımları içeren e-posta** iletileri kaldırıldı (var olan ileti kaldırılacak) | Uyarı ilkesi Haziran 2021'de kaldırıldı. Bu [değişikliklere hazırlanmak için ne yapmak gerekir? bölümüne](#what-you-need-to-do-to-prepare-for-these-changes) bakın. |
-|||
+|Uyarı ilkesi|Tarih|
+|---|---|
+|**Teslimden sonra kötü amaçlı URL içeren e-posta iletileri kaldırıldı** (yeni)|Uyarılar 11 Nisan 2021'de tetiklenecek|
+|**Kötü amaçlı dosya içeren e-posta iletileri teslimden sonra kaldırıldı** (yeni)|Uyarılar 11 Nisan 2021'de tetiklenecek|
+|**Kampanyadan gelen e-posta iletileri teslim edildi ve daha sonra kaldırıldı** (yeni)|Uyarılar 28 Mayıs 2021'de tetiklenecek|
+|**Kötü amaçlı e-postalar teslim edildi ve daha sonra kaldırıldı** (yeni)|Uyarılar 28 Mayıs 2021'de tetiklenecek|
+|**Kimlik avı URL'lerini içeren e-posta iletileri teslimden sonra kaldırıldı** (mevcut, kaldırılacak)|Uyarı ilkesi Haziran 2021'de kaldırıldı. [Bu değişikliklere hazırlanmak için yapmanız gerekenler](#what-you-need-to-do-to-prepare-for-these-changes) bölümüne bakın.|
+|**Teslimden sonra kaldırılan kötü amaçlı yazılım içeren e-posta iletileri** (mevcut, kaldırılacak)|Uyarı ilkesi Haziran 2021'de kaldırıldı. [Bu değişikliklere hazırlanmak için yapmanız gerekenler](#what-you-need-to-do-to-prepare-for-these-changes) bölümüne bakın.|
 
-Uyarı önem düzeyi değişiklikleri 14 Mayıs 2021'e kadar tüm kuruluşlara aktaracak.
+Uyarı önem derecesi değişiklikleri 14 Mayıs 2021'e kadar tüm kuruluşlara dağıtılacaktır.
 
-## <a name="how-this-will-affect-your-organization"></a>Bunun organizasyonlarınızı nasıl etkileyeceğini
+## <a name="how-this-will-affect-your-organization"></a>Bu durum kuruluşunuzu nasıl etkileyecek?
 
-Yeni uyarılar tetik tetiklenir ve yukarıda listelenen tarihlerde, organizasyonda AIR soruşturmalarını tetikler. Kaldırılacak olan iki uyarıyı işlemden kaldırmış olan güvenlik kuruluşları üzerindeki etkiyi azaltmak için, var olan uyarı ilkeleri tarafından tetiklenen uyarıları ve 5 Nisan 2021  ile 28 Mayıs 2021 arasında yeni uyarı ilkelerinin tetikleyen uyarılarını görmeye devam ediyorsanız. Bunun olması, güvenlik ekiplerine gerekli değişiklikleri işlemek için zaman sağlamaktır. Bu kısa süre içinde güvenlik ekiplerinin artan uyarı sesine yardımcı olması için, hem var olan uyarılar hem de yeni uyarılar aynı AIR soruşturması ile bağlantılı ve aynı Olay ile bağlantılı olacaktır. Daha açık olarak bu, uyarılar, AIR soruşturmaları ve Olaylar için aşağıdaki davranışı içerir:
+Yeni uyarılar tetiklenmeye başlar ve yukarıda listelenen tarihlerde kuruluşunuzda AIR araştırmalarını tetikler. Kaldırılacak iki uyarıyı kullanıma hazır hale getiren güvenlik kuruluşları üzerindeki etkisini azaltmak için, mevcut uyarı ilkeleri tarafından tetiklenen uyarıları ve 5 Nisan 2021 *ile* 28 Mayıs 2021 tarihleri arasında yeni uyarı ilkeleri tarafından tetiklenen uyarıları görürsünüz. Bu, güvenlik ekiplerine gerekli değişiklikleri işlemek için zaman sağlamaktır. Bu kısa süre boyunca güvenlik ekiplerine artan uyarı hacminde yardımcı olmak için hem mevcut uyarılar hem de yeni uyarılar aynı AIR araştırması ile ilişkilendirilecek ve aynı Olayla ilişkilendirilecektir. Daha açık belirtmek gerekirse, uyarılar, AIR araştırmaları ve Olaylar için aşağıdaki davranışlar da buna dahildir:
 
-- **Uyarılar**: Tasarım olarak, mevcut ve yeni uyarılarda aşağıdaki uyarı çiftlerini görüyorsunuz:
+- **Uyarılar**: Tasarım gereği, mevcut ve yeni uyarılar arasında aşağıdaki uyarı çiftlerini görürsünüz:
 
-  - **Teslimden sonra kimlik avı URL'lerini içeren e-posta iletileri kaldırılıyor** AND **Email messages containing malicious URL removed after delivery**
+  - **Kimlik avı URL'lerini içeren e-posta iletileri teslimden sonra kaldırıldı** VE **Kötü amaçlı URL içeren e-posta iletileri teslimden sonra kaldırıldı**
 
-  - **Teslimden sonra kötü amaçlı yazılımları içeren e-posta iletileri kaldırıldı** AND **Email messages containing malicious file removed after delivery**
+  - **Kötü amaçlı yazılım içeren e-posta iletileri teslimden sonra kaldırıldı** VE **Kötü amaçlı dosya içeren e-posta iletileri teslimden sonra kaldırıldı**
 
-  ![Yeni ve var olan uyarılar için uyarı çiftleri.](../media/DefenderAlerts.png)
+  ![Yeni ve mevcut uyarılar için uyarı çiftleri.](../media/DefenderAlerts.png)
 
-   Bu uyarı çiftlerini yönetme hakkında daha fazla bilgi için Bu [değişikliklere hazırlanmak için ne yapmak gerekir? bölümüne](#what-you-need-to-do-to-prepare-for-these-changes) bakın.
+   Bu uyarı çiftlerini yönetme hakkında daha fazla bilgi [için bu değişikliklere hazırlanmak için yapmanız gerekenler](#what-you-need-to-do-to-prepare-for-these-changes) bölümüne bakın.
 
-- **AIR Investigations**: Uyarılar, biri "tetikleyici" ve diğeri de "tekrarlanan" olarak sınıflandırılmış uyarılarla tek bir AIR İncelemesi ile bağlantılıdır.
+- **AIR İncelemeleri**: Uyarılar tek bir AIR Araştırmasıyla ilişkilendirilecek ve uyarılardan biri "tetikleme" ve diğeri "tekrarlanan" olarak sınıflandırılacaktır.
 
-  ![AIR Investigations'te uyarı çiftleri.](../media/AIRAlerts.png)
+  ![AIR Araştırmalarında uyarı çiftleri.](../media/AIRAlerts.png)
 
-- **Olaylar**: Her iki uyarı da aynı Olayla bağlantılıdır
+- **Olaylar**: Her iki uyarı da aynı Olayla ilişkilendirilecektir
 
-  ![Olaylar'da uyarı çiftleri.](../media/IncidentsAlerts.png)
+  ![Olaylar'daki uyarı çiftleri.](../media/IncidentsAlerts.png)
 
-## <a name="what-you-need-to-do-to-prepare-for-these-changes"></a>Bu değişikliklere hazırlanmak için gerekenler
+## <a name="what-you-need-to-do-to-prepare-for-these-changes"></a>Bu değişikliklere hazırlanmak için yapmanız gerekenler
 
-Bu uyarılar, neleri hazırlamanız için ihtiyacınız olduğunu, kurum tarafından nasıl kullanılır? belirler. Uyarıları işlemden geçirdiysanız ve bunları bir API, bir uyarı e-posta bildirimi aracılığıyla ya da <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> veya <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> kullanıyorsanız, iş akışlarınızı değiştirmeniz gerekir.
+Kuruluşunuzun bu uyarıları nasıl kullandığı, hazırlanmak için yapmanız gerekenleri belirler. Uyarıları kullanıma hazır hale getirdiyseniz ve bunları bir API, uyarı e-posta bildirimi veya <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> ya da <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> kullanıyorsanız, iş akışlarınızı değiştirmeniz gerekir.
 
-**Bu uyarıları işlemden geçirmek için değilken aşağıdaki işlemlerden birini yapabilirsiniz:**
+**Bu uyarıları kullanıma hazır hale getirmediyseniz aşağıdakilerden birini yapabilirsiniz:**
 
-- Aşağıdaki uyarı ilkelerini (kaldırılan) devre dışı bırakarak, kurum içinde uyarı ses düzeyini azaltma:
+- Kuruluşunuzdaki uyarı hacmini azaltmak için aşağıdaki uyarı ilkelerini (kaldırılmakta olan) devre dışı bırakın:
 
-  - **Teslimden sonra kimlik avı URL'lerini içeren e-posta iletileri kaldırılıyor**
+  - **Kimlik avı URL'lerini içeren e-posta iletileri teslimden sonra kaldırıldı**
 
-  - **Teslimden sonra kötü amaçlı yazılımları içeren e-posta iletileri kaldırıldı**
+  - **Kötü amaçlı yazılım içeren e-posta iletileri teslimden sonra kaldırıldı**
 
-- Hiçbir şey yapma. Mevcut uyarı ilkelerini 28 Mayıs 2021'de devre dışı bırakeceğiz.
+- Hiçbir şey yapma. Mevcut uyarı ilkelerini 28 Mayıs 2021'de devre dışı bırakacağız.
 
-**Bu uyarıları işlemden geçirdiysanız:**
+**Bu uyarıları kullanıma hazır hale getirdiyseniz:**
 
-- 28 Mayıs 2021'de var olan uyarı ilkesi kaldırmayı denerek, yeni uyarıları iş akışlarınız kapsamında tüket yapmaya başlayabilirsiniz. Bilet sisteminiz, uyarı e-posta bildirimleri veya uyarı adı ya da uyarı ilkesi Kimliğine (CorrelationId) bağlı olan SIEM çözümünü içeren bir güvenlik posta kutunuz varsa, değişikliği kabul etmek için mantığı değiştirmeniz gerekir.
+- 28 Mayıs 2021'de mevcut uyarı ilkesinin kaldırılmasını tahmin ederek yeni uyarıları iş akışlarınızın bir parçası olarak kullanmaya başlayın. Bilet sisteminizde özel mantığınız, uyarı e-posta bildirimleri aldığınız bir güvenlik posta kutunuz veya uyarı adına veya uyarı ilkesi kimliğine (CorrelationId) bağlı olan bir SIEM çözümü varsa, değişikliği karşılamak için mantığı değiştirmeniz gerekir.
 
   > [!NOTE]
-  > Uyarılar, soruşturmalar ve olaylarda yer alan bilgiler değişmez. Aslında bu bilgiler, tehditlerle ilgili ek ayrıntılarla geliştirilmiştir.
+  > Uyarılar, araştırmalar ve olaylardaki bilgiler değişmemiştir. Aslında bu bilgiler, bunlarla ilişkili tehditler hakkında ek ayrıntılarla geliştirilmiştir.
 
-- Değişikliklerinizi yaptıktan sonra, var olan uyarı ilkelerini devre dışı bırakarak, kurumda uyarı ses düzeyini azaltarak şunları kullanabilirsiniz:
+- Değişiklikleri yaptıktan sonra, kuruluşunuzdaki uyarı hacmini azaltmak için mevcut uyarı ilkelerini devre dışı bırakabilirsiniz:
 
-  - **Teslimden sonra kimlik avı URL'lerini içeren e-posta iletileri kaldırılıyor**
+  - **Kimlik avı URL'lerini içeren e-posta iletileri teslimden sonra kaldırıldı**
 
-  - **Teslimden sonra kötü amaçlı yazılımları içeren e-posta iletileri kaldırıldı**
+  - **Kötü amaçlı yazılım içeren e-posta iletileri teslimden sonra kaldırıldı**
 
-  Alternatif olarak, bu uyarı ilkelerini 28 Mayıs 2021'de silene kadar etkinleştirebilirsiniz.
+  Alternatif olarak, bu uyarı ilkelerini 28 Mayıs 2021'de silene kadar etkin bırakabilirsiniz.

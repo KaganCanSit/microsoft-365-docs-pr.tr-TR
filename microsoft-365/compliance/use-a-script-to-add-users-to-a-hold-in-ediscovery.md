@@ -1,5 +1,5 @@
 ---
-title: Core eKovery durumunda kullanıcıları tik olarak tutmak için betik kullanma
+title: Core eBulma örneğinde bir ayrı tutmaya kullanıcı eklemek için betik kullanma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -21,79 +21,79 @@ ms.assetid: bad352ff-d5d2-45d8-ac2a-6cb832f10e73
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkSPO
-description: Bir betiği çalıştırarak sitelerde yer alan posta kutularını & OneDrive İş bir eBulma durumuyla ilişkilendirilmiş yeni bir tutma durumuna nasıl Microsoft 365 uyumluluk merkezi.
-ms.openlocfilehash: fd11ccb6c262cd0e31a65d2a1f95d5dbcd92869c
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365 uyumluluk merkezi bir eBulma olayıyla ilişkili yeni bir ayrı tutmaya posta kutuları & OneDrive İş siteleri eklemek için bir betik çalıştırmayı öğrenin.
+ms.openlocfilehash: a678649ebd15a34bdfe5765449d41feae1b14901
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314567"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64761251"
 ---
-# <a name="use-a-script-to-add-users-to-a-hold-in-a-core-ediscovery-case"></a>Core eKovery durumunda kullanıcıları tik olarak tutmak için betik kullanma
+# <a name="use-a-script-to-add-users-to-a-hold-in-a-core-ediscovery-case"></a>Core eBulma örneğinde bir ayrı tutmaya kullanıcı eklemek için betik kullanma
 
-Güvenlik & Uyumluluk Merkezi PowerShell, eBulma olaylarını oluşturma ve yönetmeyle ilgili zaman alıcı görevleri otomatikleştirmenize izin veren cmdlet'ler sağlar. Şu anda, çok fazla sayıda özel kişi içerik konumu Microsoft 365 uyumluluk merkezi durumda Çekirdek eKbulma durumu kullanmak zaman ve hazırlık aşamasındadır. Örneğin, yerinde tutma oluşturmadan önce, yerinde OneDrive İş her sitenin URL'sini toplamalı. Ardından yerinde tutmak istediğiniz her kullanıcı için, o kullanıcının posta kutusunu ve posta kutusunu OneDrive İş yerinde tutmanız gerekir. Bu işlemi otomatikleştirmek için bu makaledeki betiği kullanabilirsiniz.
+Güvenlik & Uyumluluk Merkezi PowerShell, eBulma servis taleplerini oluşturma ve yönetmeyle ilgili zaman alan görevleri otomatikleştirmenize olanak sağlayan cmdlet'ler sağlar. Şu anda Microsoft 365 uyumluluk merkezi Core eKescovery dosyasını kullanarak çok sayıda koruyucu içerik konumunu beklemeye almak zaman alır ve hazırlık yapılır. Örneğin, ayrı tutma oluşturmadan önce, ayrı tutmaya yerleştirmek istediğiniz her OneDrive İş sitesinin URL'sini toplamanız gerekir. Ardından, beklemeye almak istediğiniz her kullanıcı için posta kutusunu ve OneDrive İş sitesini ayrı tutmaya eklemeniz gerekir. Bu işlemi otomatikleştirmek için bu makaledeki betiği kullanabilirsiniz.
   
-Betik size, kuruluş sitem etki alanının adını ( `contoso` örneğin, URL'de https://contoso-my.sharepoint.com), var olan eBulma davanın adını, davayla ilişkilendirilmiş yeni tutmanın adını, yerinde tutmak istediğiniz kullanıcıların e-posta adreslerinin listesini ve sorgu tabanlı bir tutma oluşturmak istediğiniz bir arama sorgusunu) ister. Ardından betik, OneDrive İş sitesinin URL'sini alır, yeni tutma oluşturur ve ardından listeden her kullanıcının posta kutusunu OneDrive İş kutusunu ve OneDrive İş sitesini yerinde tutma olarak ekler. Betik, yeni tutma hakkında bilgi içeren günlük dosyalarını da üretir.
+Betik, kuruluşunuzun Sitem etki alanının adını ister (örneğin, URL'dehttps://contoso-my.sharepoint.com), `contoso` var olan bir eBulma servis talebinin adı, servis talebiyle ilişkili yeni ayrı tutmanın adı, beklemeye almak istediğiniz kullanıcıların e-posta adreslerinin listesi ve sorgu tabanlı ayrı tutma oluşturmak istiyorsanız kullanmak üzere bir arama sorgusu. Betik daha sonra listedeki her kullanıcı için OneDrive İş sitesinin URL'sini alır, yeni ayrı tutmayı oluşturur ve ardından listedeki her kullanıcı için posta kutusunu ve OneDrive İş sitesini ayrı tutmaya ekler. Betik ayrıca yeni ayrı tutma hakkında bilgi içeren günlük dosyaları da oluşturur.
   
-Bunu yapmak için gereken adımlar:
+Bunun gerçekleşmesi için adımlar şunlardır:
   
-[1. Adım: SharePoint Online Yönetim Kabuğu'nu yükleme](#step-1-install-the-sharepoint-online-management-shell)
+[1. Adım: SharePoint Online Management Shell'i yükleme](#step-1-install-the-sharepoint-online-management-shell)
   
-[2. Adım: Kullanıcı listesi oluşturma](#step-2-generate-a-list-of-users)
+[2. Adım: Kullanıcıların listesini oluşturma](#step-2-generate-a-list-of-users)
   
-[3. Adım: Betiği çalıştırarak  tutma ve kullanıcıları ekleme](#step-3-run-the-script-to-create-a-hold-and-add-users)
+[3. Adım: Betiği çalıştırarak ayrı tutma oluşturma ve kullanıcı ekleme](#step-3-run-the-script-to-create-a-hold-and-add-users)
   
-## <a name="before-you-add-users-to-a-hold"></a>Kullanıcıları  basılı tutmadan önce
+## <a name="before-you-add-users-to-a-hold"></a>Ayrı tutmaya kullanıcı eklemeden önce
 
-- 3. Adımda betiği çalıştırmak için Microsoft 365 uyumluluk merkezi'de eBulma Yöneticisi rol grubunun bir üyesi SharePoint ve SharePoint Online yöneticisi olun. Daha fazla bilgi için bkz. Uyumluluk Merkezi'nde [eBulma izinleri Office 365 Güvenlik & atama](assign-ediscovery-permissions.md).
+- 3. Adımda betiği çalıştırmak için Microsoft 365 uyumluluk merkezi eBulma Yöneticisi rol grubunun üyesi ve SharePoint Online yöneticisi olmanız gerekir. Daha fazla bilgi için bkz[. Office 365 Güvenlik & Uyumluluk Merkezi'nde eBulma izinleri atama](assign-ediscovery-permissions.md).
 
-- Bir eBulma durumuyla ilişkilendirilmiş bir eBulma olaylarına en çok 1.000 posta kutusu ve 100 site Microsoft 365 uyumluluk merkezi. Yerinde yerinde tutmak istediğiniz her kullanıcının bir OneDrive İş sitesi olduğunu varsayarak, bu makaledeki betiği kullanarak 100 kullanıcıdan en fazla 100'lerini yerinde tutabilirsiniz.
+- Microsoft 365 uyumluluk merkezi bir eBulma olayıyla ilişkili bir ayrı tutmaya en fazla 1.000 posta kutusu ve 100 site eklenebilir. Beklemeye almak istediğiniz her kullanıcının bir OneDrive İş sitesi olduğunu varsayarsak, bu makaledeki betiği kullanarak ayrı tutmaya en fazla 100 kullanıcı ekleyebilirsiniz.
 
-- 2. Adımda oluştursunu kullanıcıların listesini ve 3. Adım'daki betiği de aynı klasöre kaydetmeye dikkat edin. Bu, betiği çalıştırmayı kolaylaştırır.
+- 2. Adımda oluşturduğunuz kullanıcıların listesini ve 3. Adım'daki betiği aynı klasöre kaydettiğinizden emin olun. Bu, betiği çalıştırmayı kolaylaştırır.
 
-- Betik, kullanıcıların listesini var olan bir vakayla ilişkilendirilmiş yeni bir tutma durumuna ekler. Betiği çalıştırmadan önce, tutmak istediğiniz durumla ilişkilendirmek istediğiniz durumların oluşturulmuş olduğundan emin olun.
+- Betik, kullanıcıların listesini mevcut bir servis talebiyle ilişkili yeni bir ayrı tutmaya ekler. Betiği çalıştırmadan önce ayrı tutma işlemini ilişkilendirmek istediğiniz durumun oluşturulduğundan emin olun.
 
-- Bu makaledeki betik, Güvenlik ve Uyumluluk Merkezi PowerShell'e & Çevrimiçi Yönetim Kabuğu'SharePoint destekler. Betiği olduğu gibi, bir çalışan veya Microsoft 365 Microsoft 365 GCC kullanabilirsiniz. Office 365 Germany kuruluşu, Microsoft 365 GCC Yüksek kuruluşu veya Microsoft 365 DoD kuruluşu isanız betiği düzenlemek ve başarılı bir şekilde çalıştırmak için gerekir. Özel olarak, `Connect-IPPSSession` Güvenlik ve Uyumluluk Merkezi PowerShell'e bağlanmak için satırı düzenlemeli ve *ConnectionUri* ile *AzureADAuthorizationEndpointUri* parametrelerini (ve kuruluş türünüz için uygun değerleri) & gerekir. Daha fazla bilgi için Güvenlik ve Uyumluluk [Bağlan PowerShell'& örneklere bakın](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa).
+- Bu makaledeki betik, Güvenlik & Uyumluluk Merkezi PowerShell ve SharePoint Çevrimiçi Yönetim Kabuğu'na bağlanırken modern kimlik doğrulamasını destekler. Microsoft 365 veya Microsoft 365 GCC bir kuruluşsanız betiği olduğu gibi kullanabilirsiniz. Office 365 Almanya kuruluşu, Microsoft 365 GCC High kuruluşu veya Microsoft 365 DoD kuruluşuysanız, betiği başarıyla çalıştırmak için düzenlemeniz gerekir. Özellikle, Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmak için satırı `Connect-IPPSSession` düzenlemeniz ve *ConnectionUri* ve *AzureADAuthorizationEndpointUri* parametrelerini (ve kuruluşunuzun türü için uygun değerleri) kullanmanız gerekir. Daha fazla bilgi için [bkz. Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa) örnekleri.
 
-- Betiğin Güvenlik ve Uyumluluk Merkezi PowerShell& ve Çevrimiçi Yönetim Kabuğu SharePoint bağlantısı otomatik olarak kesilir.
+- Betiğin Güvenlik & Uyumluluk Merkezi PowerShell ve SharePoint Online Management Shell bağlantısı otomatik olarak kesilir.
 
-- Betik en az hata işlemeyi içerir. Bunun birincil amacı, posta kutusunu ve kullanıcı OneDrive İş siteyi hızlı ve kolay bir şekilde yerinde tutmaktır.
+- Betik en az hata işleme içerir. Birincil amacı, her kullanıcının posta kutusunu ve OneDrive İş sitesini hızlı ve kolay bir şekilde beklemeye almaktır.
 
-- Bu konu başlığı altında verilen örnek betikler, hiçbir Microsoft standart destek programı veya hizmeti kapsamında desteklenemmektedir. Örnek betikler hiçbir garanti olmaksızın OLDUĞU GIBI verilmektedir. Microsoft, ticarete uygunluk veya belirli bir amaca uygunluk ile ilgili zımni garantiler dahil ancak bununla sınırlı olmaksızın her türlü zımni garantiyi bundan sonra feragat ediyor. Örnek betiklerin ve belgelerin kullanımından veya performansından doğan tüm riskler size aittir. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya dağıtımında yer alan diğer herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından ya da kullanılamazlığından kaynaklanan hiçbir zarardan (ticari kar kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil ancak ancak bu zararlar dahil ancak ancak hiçbir zarardan sorumlu olmayacaktır),  Microsoft bu tür zarar olasılığı hakkında bilgilansa bile.
+- Bu konuda sağlanan örnek betikler, herhangi bir Microsoft standart destek programı veya hizmeti altında desteklenmez. Örnek betikler, herhangi bir garanti olmadan OLDUĞU GIBI sağlanır. Microsoft, satılabilirlik veya belirli bir amaca uygunlukla ilgili zımni garantiler dahil ancak bunlarla sınırlı olmaksızın tüm zımni garantileri de reddeder. Örnek betiklerin ve belgelerin kullanımından veya performansından kaynaklanan tüm risk sizinle kalır. Hiçbir durumda Microsoft, yazarları veya betiklerin oluşturulması, üretimi veya teslimi ile ilgili herhangi bir kişi, örnek betiklerin veya belgelerin kullanımından veya kullanılamama durumundan kaynaklanan herhangi bir zarardan (bunlarla sınırlı olmaksızın, iş kârı kaybı, iş kesintisi, iş bilgisi kaybı veya diğer maddi kayıplar dahil) sorumlu tutulamaz,  Microsoft'a bu tür hasarlar olabileceği bildirilmiş olsa bile.
 
-## <a name="step-1-install-the-sharepoint-online-management-shell"></a>1. Adım: SharePoint Online Yönetim Kabuğu'nu yükleme
+## <a name="step-1-install-the-sharepoint-online-management-shell"></a>1. Adım: SharePoint Online Management Shell'i yükleme
 
-İlk adım, yerel bilgisayarınızda SharePoint Çevrimiçi Yönetim Kabuğu'nun yüklü olmasıdır. Bu yordamda kabuk kullanmak zorunda değilsiniz, ancak 3. Adımda çalıştıracakları betik için gerekli önkulları içerdiği için onu yüklemeniz gerekir. Bu önkoşullar betiğin SharePoint Online ile iletişim kurmasına olanak OneDrive İş sağlar.
+İlk adım, yerel bilgisayarınızda yüklü değilse SharePoint Çevrimiçi Yönetim Kabuğu'nun yüklenmesidir. Bu yordamda kabuğu kullanmanız gerekmez, ancak 3. Adımda çalıştırdığınız betiğin gerektirdiği önkoşulları içerdiğinden bunu yüklemeniz gerekir. Bu önkoşullar, betiğin OneDrive İş sitelerinin URL'lerini almak için SharePoint Online ile iletişim kurmasına olanak sağlar.
   
-[SharePoint Online](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) Yönetim Kabuğu'Windows PowerShell ortamını ayarlama'ya gidin ve yerel bilgisayarınıza SharePoint Çevrimiçi Yönetim Kabuğu'SharePoint 1. Adımı ve 2. Adımı gerçekleştirin.
+[SharePoint Çevrimiçi Yönetim Kabuğu Windows PowerShell ortamını ayarlama'ya](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) gidin ve SharePoint Online Management Shell'i yerel bilgisayarınıza yüklemek için 1. ve 2. Adım'ı gerçekleştirin.
 
-## <a name="step-2-generate-a-list-of-users"></a>2. Adım: Kullanıcı listesi oluşturma
+## <a name="step-2-generate-a-list-of-users"></a>2. Adım: Kullanıcıların listesini oluşturma
 
-3. Adım'daki betik, bir eBulma durumuyla ilişkilendirilmiş bir tutma durumu oluşturmanın yanı sıra posta kutularını ve kullanıcı listesinin OneDrive İş sitelerini de tutma için ekler. Metin dosyasına yalnızca e-posta adreslerini yazarak veya Windows PowerShell'te bir komut çalıştırarak e-posta adreslerinin listesini alın ve bunları bir dosyaya kaydedin (betiği 3. Adımda kaydeden aynı klasörde bulunur).
+3. Adım'daki betik, eBulma olayıyla ilişkili bir ayrı tutma oluşturur ve bir kullanıcı listesinin posta kutularını ve OneDrive İş sitelerini ayrı tutmaya ekler. E-posta adreslerini bir metin dosyasına yazabilir veya Windows PowerShell'da bir komut çalıştırarak e-posta adreslerinin listesini alabilir ve bir dosyaya kaydedebilirsiniz (betiği 3. Adımda kaydedebileceğiniz klasörde bulunur).
   
-İşte bir PowerShell komutu (Exchange Online kuruluşuyla bağlantılı uzak PowerShell kullanarak çalıştırarak), kurumdaki tüm kullanıcıların e-posta adreslerinin listesini almak ve bunu HoldUsers.txt adlı bir metin dosyasına kaydetmek için kullanabilirsiniz.
+Kuruluşunuzdaki tüm kullanıcıların e-posta adreslerinin listesini almak ve HoldUsers.txt adlı bir metin dosyasına kaydetmek için bir PowerShell komutu (Exchange Online kuruluşunuza bağlı uzak PowerShell kullanarak çalıştırılır).
   
 ```powershell
 Get-Mailbox -ResultSize unlimited -Filter { RecipientTypeDetails -eq 'UserMailbox'} | Select-Object PrimarySmtpAddress > HoldUsers.txt
 ```
 
-Bu komutu çalıştırdikten sonra, metin dosyasını açın ve özellik adını içeren üstbilgiyi kaldırın,  `PrimarySmtpAddress`. Ardından, 3. Adımda oluştury istediğiniz kullanıcıların e-posta adreslerini kaldırın. E-posta adresleri listesinden önce veya sonra boş satırlar olmadığını kontrol edin.
+Bu komutu çalıştırdıktan sonra, metin dosyasını açın ve özellik adını içeren üst bilgiyi kaldırın. `PrimarySmtpAddress` Ardından, 3. Adımda oluşturacağınız ayrı tutmaya eklemek istediğiniz kullanıcılar dışındaki tüm e-posta adreslerini kaldırın. E-posta adresleri listesinden önce veya sonra boş satır olmadığından emin olun.
   
-## <a name="step-3-run-the-script-to-create-a-hold-and-add-users"></a>3. Adım: Betiği çalıştırarak  tutma ve kullanıcıları ekleme
+## <a name="step-3-run-the-script-to-create-a-hold-and-add-users"></a>3. Adım: Betiği çalıştırarak ayrı tutma oluşturma ve kullanıcı ekleme
 
-Bu adımda betiği çalıştırınca, sizden aşağıdaki bilgileri istenir. Betiği çalıştırmadan önce bu bilgilerin hazır olduğundan emin olun.
+Bu adımda betiği çalıştırdığınızda sizden aşağıdaki bilgileri isteyecektir. Betiği çalıştırmadan önce bu bilgilerin hazır olduğundan emin olun.
   
-- **Kullanıcı kimlik bilgileriniz:** Betik, PowerShell ile Güvenlik ve Uyumluluk Merkezi'ne & kimlik bilgilerinizi kullanır. Ayrıca, kullanıcı listesi için SharePoint Online'a erişmek OneDrive İş bu kimlik bilgilerini kullanır.
+- **Kullanıcı kimlik bilgileriniz:** Betik, PowerShell ile Güvenlik & Uyumluluk Merkezi'ne bağlanmak için kimlik bilgilerinizi kullanır. Kullanıcı listesinin OneDrive İş URL'lerini almak üzere SharePoint Online'a erişmek için de bu kimlik bilgilerini kullanır.
 
-- **SharePoint etki SharePoint adı:** Betik, yönetim merkezinden bağlana kadar bu <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">adı SharePoint istiyor</a>. Ayrıca, kuruluş url'leri OneDrive alanı adını kullanır. Örneğin, yönetim merkezinizin URL'si `https://contoso-admin.sharepoint.com` ve yönetim merkezinin URL'si OneDrive `https://contoso-my.sharepoint.com``contoso` ise, betik sizden etki alanı adınızı isteminde geldiğinde siz de girersiniz.
+- **SharePoint etki alanınızın adı:** Betik, <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint yönetim merkezine</a> bağlanabilmesi için bu adı girmenizi ister. Ayrıca kuruluşunuzdaki OneDrive URL'leri için etki alanı adını kullanır. Örneğin, yönetim merkezinizin `https://contoso-admin.sharepoint.com` URL'si ve OneDrive URL'si ise`https://contoso-my.sharepoint.com`, betik sizden etki alanı adınızı isterse girersiniz`contoso`.
 
-- **Vakanın adı:** Var olan bir vakanın adı. Betik, bu vakayla ilişkilendirilmiş yeni bir tutma oluşturacak.
+- **Servis talebinin adı:** Mevcut bir servis talebinin adı. Betik, bu servis talebiyle ilişkili yeni bir ayrı tutma oluşturur.
 
-- **Tutma adı:** Betiğin basılı tutma adı, belirtilen vakayı oluşturabilir ve bu vakayla ilişkilendirilecek.
+- **Ayrı tutmanın adı:** Betiği tutma adı oluşturulur ve belirtilen servis talebiyle ilişkilendirilecektir.
 
-- **Sorgu tabanlı bir tutma sorgusu:** Sorgu tabanlı bir tutma oluşturabilir ve böylelikle yalnızca belirtilen arama ölçütlerine uyan içeriğin yerine basılı tutabilirsiniz. Tüm içeriği yerinde tutmak için, arama sorgusu girmeniz istendiğinde **Enter** tuşuna basmanız gerekir.
+- **Sorgu tabanlı ayrı tutma için arama sorgusu:** Yalnızca belirtilen arama ölçütlerini karşılayan içeriğin beklemeye alınabilmesi için sorgu tabanlı bir ayrı tutma oluşturabilirsiniz. Tüm içeriği beklemeye almak için, arama sorgusu istendiğinde **Enter tuşuna** basmanız gerekir.
 
-- **Tutmayı açma veya açmama:** Betiğin oluşturulduktan sonra 12 saat içinde etkinleştirilmesini veya betiğin etkinleştirilmeden  hold oluşturması s olabilir. Betiği basılı tutmanız yoksa, daha sonra Microsoft 365 uyumluluk merkezi veya aşağıdaki PowerShell komutlarını çalıştırarak açabilirsiniz:
+- **Ayrı tutmayı açma veya açmama:** Betiğin oluşturulduktan sonra ayrı tutma özelliğini açmasını sağlayabilir veya betiğin etkinleştirmeden ayrı tutma oluşturmasını sağlayabilirsiniz. Betiği ayrı tutmada açmadıysanız, Microsoft 365 uyumluluk merkezi daha sonra veya aşağıdaki PowerShell komutlarını çalıştırarak açabilirsiniz:
 
   ```powershell
   Set-CaseHoldPolicy -Identity <name of the hold> -Enabled $true
@@ -103,11 +103,11 @@ Bu adımda betiği çalıştırınca, sizden aşağıdaki bilgileri istenir. Bet
   Set-CaseHoldRule -Identity <name of the hold> -Disabled $false
   ```
 
-- **Kullanıcı listesini içeren metin dosyasının adı** - 2. Adım'da yer alan ve tutma için ekleyebilirsiniz kullanıcı listesini içeren metin dosyasının adı. Bu dosya betikle aynı klasörde yer alıyorsa, yalnızca dosyanın adını yazmanız (örneğin, TamamHoldUsers.txt. Metin dosyası başka bir klasörde yer alan dosyanın tam yol adını yazın.
+- **Kullanıcı listesini içeren metin dosyasının** adı - 2. Adım'da yer alan ve ayrı tutmaya eklenecek kullanıcıların listesini içeren metin dosyasının adı. Bu dosya betikle aynı klasörde yer alıyorsa, dosyanın adını yazmanız (örneğin, HoldUsers.txt). Metin dosyası başka bir klasördeyse, dosyanın tam yol adını yazın.
 
-Betiğin sizden istenecek bilgileri topladığı zaman, son adım betiği çalıştırarak yeni  hold'i oluşturmak ve kullanıcı eklemektir.
+Betiğin sizden soracağı bilgileri topladıktan sonra, son adım betiği çalıştırarak yeni ayrı tutma oluşturmak ve kullanıcılar eklemektir.
   
-1. dosya adı son eksini kullanarak Windows PowerShell betik dosyasına aşağıdaki metni kaydedin`.ps1`. Örneğin, `AddUsersToHold.ps1`.
+1. dosya adı soneki `.ps1`kullanarak aşağıdaki metni Windows PowerShell betik dosyasına kaydedin. Örneğin, `AddUsersToHold.ps1`.
 
 ```powershell
 #script begin
@@ -273,7 +273,7 @@ Write-host "Script complete!" -foregroundColor Yellow
 #script end
 ```
 
-2. Yerel bilgisayarınızda, Windows PowerShell açın ve betiği kaydedttiğiniz klasöre gidin.
+2. Yerel bilgisayarınızda Windows PowerShell açın ve betiği kaydettiğiniz klasöre gidin.
 
 3. Betiği çalıştırın; örneğin:
 
@@ -281,16 +281,16 @@ Write-host "Script complete!" -foregroundColor Yellow
    .\AddUsersToHold.ps1
    ```
 
-4. Betiğin sizden istendiğinde bilgileri girin.
+4. Betiğin sizden sorduğunu bilgileri girin.
 
-   Betik, Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanır, eBulma durumunda yeni tutma oluşturur ve posta kutularını ve posta kutularını OneDrive İş kullanıcıların listesini ekler. eBulma sayfasındaki **vakaya gidip** yeni Microsoft 365 uyumluluk merkezi görebilirsiniz.
+   Betik, Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanır ve eBulma durumunda yeni ayrı tutma oluşturur ve listedeki kullanıcılar için posta kutularını ve OneDrive İş ekler. Yeni ayrı tutma işlemini görüntülemek için Microsoft 365 uyumluluk merkezi **eBulma** sayfasında servis talebine gidebilirsiniz.
 
-Betiğin çalıştırması bittiğinde, aşağıdaki günlük dosyalarını oluşturur ve bunları betiğin bulunduğu klasöre kaydeder.
+Betiğin çalışması tamamlandıktan sonra aşağıdaki günlük dosyalarını oluşturur ve betiğin bulunduğu klasöre kaydeder.
   
-- **LocationsOnHold.txt:** Betiğin başarıyla beklemede OneDrive İş posta kutularının ve sitelerinin listesini içerir.
+- **LocationsOnHold.txt:** Betiğin başarıyla beklemeye aldığı posta kutularının ve OneDrive İş sitelerinin listesini içerir.
 
-- **LocationsNotOnHold.txt:** Betiğin yerinde OneDrive İş posta kutularının ve diğer sitelerin listesini içerir. Kullanıcının bir posta kutusu varsa ancak OneDrive İş sitesi yoksa, kullanıcı yerinde OneDrive İş site listesine dahil edilir.
+- **LocationsNotOnHold.txt:** Betiğin beklemeye almadığı posta kutularının ve OneDrive İş sitelerin listesini içerir. Kullanıcının posta kutusu varsa ancak OneDrive İş sitesi yoksa, kullanıcı beklemeye alınmamış OneDrive İş siteleri listesine eklenir.
 
-- **GetCaseHoldPolicy.txt:** Betiğin yeni tutma oluşturdukten sonra çalıştırıldı olan yeni tutma için **Get-CaseHoldPolicy** cmdlet'inin çıktısını içerir. Bu cmdlet'in döndürülen bilgilerinde, posta kutuları ve posta kutuları OneDrive İş sitelerine yerleştirildiğinde ve tutmanın etkinleştirildiğinde veya devre dışı bırakılmıştır. 
+- **GetCaseHoldPolicy.txt:** Yeni ayrı tutma oluşturulduktan sonra betiğin çalıştırıldığı yeni ayrı tutma için **Get-CaseHoldPolicy** cmdlet'inin çıkışını içerir. Bu cmdlet tarafından döndürülen bilgiler, posta kutuları ve OneDrive İş siteleri ayrı tutmanın etkinleştirilip etkinleştirilmediğini ve devre dışı bırakılıp bırakılmadığını içeren kullanıcıların listesini içerir. 
 
-- **GetCaseHoldRule.txt:** **Get-CaseHoldRule** cmdlet'inin, betiğin yeni tutma oluşturdukten sonra çalıştırıldı olan yeni tutma çıktısını içerir. Bu cmdlet tarafından döndürülen bilgiler, sorgu tabanlı bir tutma oluşturmak için betiği kullandıysanız arama sorgusunu içerir.
+- **GetCaseHoldRule.txt:** Yeni ayrı tutma oluşturulduktan sonra betiğin çalıştırıldığı yeni ayrı tutma için **Get-CaseHoldRule** cmdlet'inin çıkışını içerir. Bu cmdlet tarafından döndürülen bilgiler, sorgu tabanlı ayrı tutma oluşturmak için betiği kullandıysanız arama sorgusunu içerir.

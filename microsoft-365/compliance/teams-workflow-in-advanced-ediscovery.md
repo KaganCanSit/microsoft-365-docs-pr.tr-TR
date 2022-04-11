@@ -1,5 +1,5 @@
 ---
-title: Teams'da iş akışı Advanced eDiscovery
+title: Advanced eDiscovery'da iş akışını Teams
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -13,296 +13,296 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: M365-security-compliance
-description: Aynı siteden içeriği korumayı, toplamayı, gözden geçirmeyi ve Microsoft Teams hakkında Advanced eDiscovery.
-ms.openlocfilehash: 9565beea342fe9587195d632fdc94cdc746faf5e
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+description: Advanced eDiscovery'da Microsoft Teams içeriği korumayı, toplamayı, gözden geçirmeyi ve dışarı aktarmayı öğrenin.
+ms.openlocfilehash: ecd114f9ea68cefb03e55453176a0c8b323620cc
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64568126"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64758805"
 ---
-# <a name="advanced-ediscovery-workflow-for-content-in-microsoft-teams"></a>Advanced eDiscovery için iş akışını Microsoft Teams
+# <a name="advanced-ediscovery-workflow-for-content-in-microsoft-teams"></a>Microsoft Teams içeriği için iş akışı Advanced eDiscovery
 
-Bu makalede, verileri korumak, toplamak, gözden geçirmek ve bu içerikten içerik dışarı Advanced eDiscovery için kapsamlı bir yordamlar, yönergeler ve en iyi Microsoft Teams. Bu makalenin amacı, eBulma iş akışınızı daha iyi bir içerik için Teams etmektir.
+Bu makalede, Microsoft Teams içeriğini korumak, toplamak, gözden geçirmek ve dışarı aktarmak için Advanced eDiscovery kullanmaya yönelik kapsamlı yordamlar, yönergeler ve en iyi yöntemler sunulmaktadır. Bu makalenin amacı, eBulma iş akışınızı Teams içerik için iyileştirmenize yardımcı olmaktır.
 
-İçerik toplama ve işleme için Teams bir içerik kategorisi vardır ve bunu kullanarak Advanced eDiscovery:
+Advanced eDiscovery kullanarak toplayıp işleyebileceğiniz beş Teams içerik kategorisi vardır:
 
-- **Teams bir sohbetler.** bir konuşmada paylaşılan sohbet iletileri, gönderiler ve Teams iki kişi arasında.  Teams bir sohbetler, konuşma olarak da *çağrılır*.
+- **Teams 1:1 sohbetleri**. İki kişi arasındaki Teams konuşmada paylaşılan sohbet iletileri, gönderiler ve ekler.  Teams 1:1 sohbetleri *konuşma olarak da* adlandırılır.
 
-- **Teams sohbetleri seçin**. Üç veya daha fazla kişi arasında bir konuşmada paylaşılan sohbet Teams gönderileri ve ekler. Ayrıca *1:N sohbetler* veya *grup konuşmaları olarak da adlandırılan*.
+- **Grup sohbetlerini Teams**. Üç veya daha fazla kişi arasındaki Teams konuşmada paylaşılan sohbet iletileri, gönderiler ve ekler. *1:N* sohbetleri veya *grup konuşmaları* olarak da adlandırılır.
 
-- **Teams seçin**. Standart bir kanalda paylaşılan sohbet iletileri, gönderiler, yanıtlar ve Teams.
+- **Teams kanalları**. Standart bir Teams kanalında paylaşılan sohbet iletileri, gönderiler, yanıtlar ve ekler.
 
-- **Özel kanallar**. Özel bir kanalda paylaşılan ileti gönderileri, yanıtlar ve Teams.
+- **Özel kanallar**. Özel bir Teams kanalında paylaşılan ileti gönderileri, yanıtlar ve ekler.
 
-- **Paylaşılan kanallar**. Paylaşılan bir kanalda paylaşılan ileti gönderileri, yanıtlar ve Teams.
+- **Paylaşılan kanallar**. Paylaşılan bir Teams kanalında paylaşılan ileti gönderileri, yanıtlar ve ekler.
 
-## <a name="where-teams-content-is-stored"></a>İçerik Teams depolandığı yer
+## <a name="where-teams-content-is-stored"></a>Teams içeriğinin depolandığı yer
 
-Advanced eDiscovery'Teams içeriklerini yönetmenin önkoşulları, Advanced eDiscovery'te toplayabilirsiniz, iş bulundurabilir ve gözden geçirebilirsiniz Teams içeriğinin türünü ve bu içeriğin Microsoft 365. Aşağıdaki tabloda, Teams türü ve her biri nerede depolandığı listeledir.
+Advanced eDiscovery'da Teams içeriğini yönetmenin önkoşullarından biri, Advanced eDiscovery toplayabileceğiniz, işleyebileceğiniz ve gözden geçirebileceğiniz Teams içeriğinin türünü ve bu içeriğin Microsoft 365 nerede depolandığını anlamaktır. Aşağıdaki tabloda Teams içerik türü ve bunların depolandığı yer listeleniyor.
 
-|&nbsp;|Sohbet iletilerinin ve gönderilerinin konumu|Dosya ve eklerin konumu|
+|&nbsp;|Sohbet iletilerinin ve gönderilerinin konumu|Dosyaların ve eklerin konumu|
 |---|---|---|
-|Teams bire bir sohbetler|Bire bir sohbetlerde yer alan mesajlar, tüm sohbet Exchange Online posta kutusunda saklanır.|Bire bir sohbette paylaşılan dosyalar, dosyayı OneDrive İş kişinin hesaplarında depolanır.|
-|Teams sohbetleri grup sohbetleri|Grup sohbetleri'nin iletileri tüm sohbet Exchange Online posta kutusunda saklanır.|Grup sohbetlerde paylaşılan dosyalar, OneDrive İş paylaşan kişinin hesaplarında depolanır.|
-|Teams kanalların|Tüm kanal iletileri ve gönderileri, ekiple Exchange Online posta kutusunda depolanır.|Kanalda paylaşılan dosyalar, ekiple ilişkilendirilmiş SharePoint Online sitesinde depolanır.|
-|Özel kanallar|Özel kanalda gönderilen iletiler, Exchange Online tüm üyelerinin posta kutularında depolanır.|Özel kanalda paylaşılan dosyalar, özel kanalla ilişkilendirilmiş SharePoint Bir Çevrimiçi Site'de depolanır.|
-|Paylaşılan kanallar|Paylaşılan kanala gönderilen iletiler, paylaşılan kanalla ilişkilendirilmiş sistem posta kutusunda depolanır. <sup>1</sup>|Paylaşılan kanalda paylaşılan dosyalar, paylaşılan kanalla ilişkilendirilmiş SharePoint Online sitesinde depolanır.|
+|Teams 1:1 sohbetleri|1:1 sohbetlerindeki iletiler, tüm sohbet katılımcılarının Exchange Online posta kutusunda depolanır.|1:1 sohbetinde paylaşılan dosyalar, dosyayı paylaşan kişinin OneDrive İş hesabında depolanır.|
+|Grup sohbetlerini Teams|Grup sohbetlerindeki iletiler, tüm sohbet katılımcılarının Exchange Online posta kutusunda depolanır.|Grup sohbetlerinde paylaşılan dosyalar, dosyayı paylaşan kişinin OneDrive İş hesabında depolanır.|
+|kanalları Teams|Tüm kanal iletileri ve gönderileri, ekiple ilişkilendirilmiş Exchange Online posta kutusunda depolanır.|Kanalda paylaşılan dosyalar, ekiple ilişkilendirilmiş SharePoint Online sitesinde depolanır.|
+|Özel kanallar|Özel kanalda gönderilen iletiler, özel kanalın tüm üyelerinin Exchange Online posta kutularında depolanır.|Özel kanalda paylaşılan dosyalar, özel kanalla ilişkilendirilmiş ayrılmış bir SharePoint Online sitesinde depolanır.|
+|Paylaşılan kanallar|Paylaşılan kanalda gönderilen iletiler, paylaşılan kanalla ilişkilendirilmiş bir sistem posta kutusunda depolanır. <sup>1</sup>|Paylaşılan kanalda paylaşılan dosyalar, paylaşılan kanalla ilişkilendirilmiş ayrılmış bir SharePoint Çevrimiçi sitesinde depolanır.|
 
 > [!NOTE]
-> <sup>1</sup> Paylaşılan kanalda gönderilen iletileri aramak (ve korumak) için, üst Ekip için Exchange Online kutunuzu aramanız veya belirtmeniz gerekir.
+> <sup>1</sup> Paylaşılan bir kanalda gönderilen iletileri aramak (ve korumak) için üst Ekip için Exchange Online posta kutusunu aramanız veya belirtmeniz gerekir.
 
-## <a name="create-a-case-for-teams-content"></a>İçerik oluşturmak için Teams oluşturma
+## <a name="create-a-case-for-teams-content"></a>Teams içerik için servis talebi oluşturma
 
-Advanced eDiscovery'da Teams için ilk adım, içerik yönetimi için iyileştirilmiş yeni vaka biçimini kullanarak vaka Teams oluşturmaktır. dosya içeriği için yeni vaka biçimini kullanmanın avantajları Teams vardır:
+Advanced eDiscovery'da Teams içeriği yönetmenin ilk adımı, Teams içeriği yönetmek için iyileştirilmiş yeni servis talebi biçimini kullanarak bir servis talebi oluşturmaktır. Teams içerik için yeni büyük/küçük harf biçimini kullanmanın avantajları şunlardır:
 
-- Aynı konuşmada yanıt veren öğeler içeren ek iletilerin otomatik olarak toplanıyor ve gözden geçirme kümelerine ekli olduğu konuşma dizileri desteği.
+- Aynı konuşmada yanıt veren öğeler içeren ek iletilerin otomatik olarak toplandığı ve gözden geçirme kümelerine eklendiği konuşma yazışması desteği.
 
-- Teams sohbet konuşmaları, kümeleri gözden geçirmek için otomatik olarak HTML döküm dosyası olarak eklenir. Konuşmalarda paylaşılan bulut ekleri de gözden geçirme kümesine eklenir. Bu, yanıt veren öğeleri olan konuşmalara bağlam sağlar ve sohbet tabanlı içerikle üretilen toplam öğe sayısını azaltmaya yardımcı olur.
+- Teams sohbet konuşmaları otomatik olarak gözden geçirme kümelerine HTML transkript dosyası olarak eklenir. Konuşmalarda paylaşılan bulut ekleri de gözden geçirme kümesine eklenir. Bu, yanıt veren öğelerle konuşmalara bağlam sağlamaya ve sohbet tabanlı içerik tarafından üretilen toplam öğe sayısını azaltmaya yardımcı olur.
 
-- Gözden geçirme kümelerine 1 TB'a kadar olan koleksiyonlar eklenebilir ve bu da bir olayda büyük miktarda Teams içeriği toplamana ve toplamaya izin vermenizi sağlar.
+- Gözden geçirme kümelerine 1 TB'a kadar olan koleksiyonlar eklenebilir ve bu da büyük miktarlarda Teams içeriği toplamanıza olanak sağlar.
 
-Artan büyük/büyük harf sınırları hakkında daha fazla bilgi için bkz[. Büyük/yeni harf Advanced eDiscovery](advanced-ediscovery-new-case-format.md).
+Artan büyük/küçük harf sınırları hakkında daha fazla bilgi için bkz. [Advanced eDiscovery'de yeni servis talebi biçimini kullanma](advanced-ediscovery-new-case-format.md).
 
-Vaka oluşturmak için:
+Servis talebi oluşturmak için:
 
-1. Gidin ve <https://compliance.microsoft.com> oturum açma.
+1. <https://compliance.microsoft.com> adresine gidin ve oturum açın.
 
-2. Gezinti bölmesinin sol bölmesinde, Microsoft 365 uyumluluk merkezi **eBulma'ya > tıklayın**.
+2. Microsoft 365 uyumluluk merkezi sol gezinti bölmesinde **eBulma > Gelişmiş'e** tıklayın.
 
-3. Olay **Advanced eDiscovery** Vakalar sekmesine **tıklayın ve** sonra da Vaka **oluştur'a tıklayın**.
+3. **Advanced eDiscovery** sayfasında **Servis Talepleri** sekmesine ve ardından **Servis talebi oluştur'a** tıklayın.
 
-   Yeni **eBulma olay sayfası** görüntülenir. Büyük **/küçük harf** biçimi bölümünde, yeni büyük/küçük harf biçimini kullanarak büyük/küçük harf oluşturma seçeneği vardır.
+   **Yeni eBulma servis talebi** açılır sayfası görüntülenir. **Olay biçimi** bölümü, yeni büyük/küçük harf biçimini kullanarak servis talebi oluşturma seçeneği sağlar.
 
-   ![Yeni eBulma olay sayfasındaki büyük harf seçeneği.](..\media\AeDNewCaseFormat1.png)
+   ![Yeni eBulma servis talebi sayfasındaki büyük harf seçeneği.](..\media\AeDNewCaseFormat1.png)
 
-4. Vakayı adlandırdikten sonra Yeni **seçeneğini belirleyin** ve ardından Kaydet'e **tıkerek** vakayı oluşturun.
+4. Olayı adlandırdıktan sonra **, Yeni** seçeneğini belirleyin ve ardından Büyük/küçük harf oluşturmak için **Kaydet'e** tıklayın.
 
-## <a name="add-teams-custodial-data-sources-and-preserve-teams-content"></a>Özel Teams kaynakları ekleme ve özel Teams koruma  
+## <a name="add-teams-custodial-data-sources-and-preserve-teams-content"></a>Teams koruyucu veri kaynakları ekleme ve Teams içeriği koruma  
 
-Sonraki adım, araştırmanız kapsamında veri koruyucu olan kullanıcıları tanımlamak ve bunları ve bunların içerik konumlarını önceki bölümde oluşturduğunuz vakaya koruyucu olarak eklemektir. Koruyucular eklerken, onların posta kutusunu ve özel OneDrive kaynaklarını belirtebilirsiniz. Ayrıca, araştırmanız Teams korunması için bu konumları hızla yasal tutmaları için özel içerik konumlarını koruyucu veri kaynağı olarak belirtebilirsiniz. Ayrıca, içeriği toplamayı ve gözden geçirme kümesine eklemenizi de kolaylaştırır.
+Sonraki adım, araştırmanızdaki veri koruyucuları olan kullanıcıları belirlemek ve bunları ve içerik konumlarını önceki bölümde oluşturduğunuz davaya koruyucu olarak eklemektir. Koruyucu eklediğinizde, posta kutularını ve OneDrive hesabını koruyucu veri kaynakları olarak belirtebilirsiniz. Ayrıca Teams içerik konumlarını koruyucu veri kaynakları olarak belirterek bu konumları araştırmanız sırasında içeriği korumak üzere yasal saklamaya hızlıca yerleştirebilirsiniz. Ayrıca içerik toplamayı ve bir gözden geçirme kümesine eklemeyi de kolaylaştırır.
 
-Bir vakaya koruyucular eklemek ve özel veri kaynaklarını korumak için:
+Bir olaya koruyucu eklemek ve koruyucu veri kaynaklarını korumak için:
 
-1. Önceki bölümde Advanced eDiscovery büyük/yeni olay durumuna gidin ve ardından Veri **kaynakları'ne tıklayın**.
+1. Önceki bölümde oluşturduğunuz Advanced eDiscovery servis talebine gidin ve **veri kaynakları'na** tıklayın.
 
-2. Veri kaynakları **sayfasında Veri** kaynağı **ekleYeni** >  **koruyucular ekle'ye tıklayın**.
+2. **Veri kaynakları** sayfasında **Veri kaynağı** >  **ekleYeni koruyucu ekle'ye** tıklayın.
 
-3. **Yeni koruyucu sihirbazında**, kullanıcı adının veya diğer adının ilk bölümünü yazarak vakaya bir veya birden çok koruyucu ekleyin. Doğru kişiyi buktan sonra listeye eklemek için adını seçin.  
+3. **Yeni koruyucu** sihirbazında, kullanıcı adının veya diğer adının ilk bölümünü yazarak bir veya daha fazla kullanıcıyı servis talebine koruyucu olarak ekleyin. Doğru kişiyi buldukta adını seçerek listeye ekleyin.  
 
-4. Custo custo bir belgeyle otomatik olarak ilişkilendirilmiş birincil veri kaynaklarını görüntülemek ve custo custo custo ötele ilişkilendirmek için başka konumlar seçmek için genişletin.
+4. Koruyucuyla otomatik olarak ilişkilendirilen birincil veri kaynaklarını görüntülemek ve koruyucuyla ilişkilendirilecek diğer konumları seçmek için her koruyucuyu genişletin.
 
-   ![Custo bir veri kaynakları.](..\media\TeamsCustodialDataLocations1.png)
+   ![Koruyucu veri kaynakları.](..\media\TeamsCustodialDataLocations1.png)
 
-5. Daha fazla içeriğe özel veri kaynakları eklemek için bu Teams izleyin. Veri **konumu** eklemek için Düzenle'ye tıklayın.
+5. Teams içerik için koruyucu veri kaynakları eklemek için bu yönergeleri izleyin. Veri konumu eklemek için **Düzenle'ye** tıklayın.
 
-   - **Posta Kutuları**. Custo bir posta kutusu varsayılan olarak seçilidir. Özel veri olarak bire bir sohbetler, grup sohbetleri ve özel kanal sohbetleri eklemek (ve korumak) için bu seçeneği seçili durumda tutabilirsiniz.
+   - **Posta kutuları**. Koruyucunun posta kutusu varsayılan olarak seçilidir. 1:1 sohbetleri, grup sohbetlerini ve özel kanal sohbetlerini koruyucu veriler olarak eklemek (ve korumak) için bunu seçili tutun.
 
-   - **OneDrives**. Custohal'in OneDrive hesabı varsayılan olarak seçilidir. Bire bir sohbetlerde ve grup sohbetlarında paylaşılan dosyaları özel veriler olarak eklemek (ve korumak) için bu seçeneği seçili durumda tutabilirsiniz.
+   - **OneDrive'lar**. Koruyucunun OneDrive hesabı varsayılan olarak seçilidir. 1:1 sohbetlerinde ve grup sohbetlerinde paylaşılan dosyaları koruyucu veriler olarak eklemek (ve korumak) için bunu seçili tutun.
 
-   - **SharePoint**. Herhangi SharePoint paylaşılan kanalla ilişkilendirilmiş özel veya paylaşılan kanal ekleme Custo custodial data olarak kanalda paylaşılan dosyaları özel veriler olarak eklemek (ve korumak) için bir üyedir. **Düzenle'ye** tıklayın ve özel veya paylaşılan SharePoint ilgili sitenin URL'sini ekleyin. Bir kullanıcının üyesi olduğu özel ve paylaşılan kanalların nasıl bulunacağı hakkında bilgi edinmek için, özel ve paylaşılan kanalların [eBulma'ya bakın](/microsoftteams/ediscovery-investigation#ediscovery-of-private-and-shared-channels).
+   - **SharePoint**. Bir kanalda paylaşılan dosyaların koruyucu veriler olarak eklenmesi (ve korunması) için, koruyucunun üyesi olduğu herhangi bir özel veya paylaşılan kanalla ilişkilendirilmiş SharePoint sitesini ekleyin. **Düzenle'ye** tıklayın ve özel veya paylaşılan bir kanalla ilişkilendirilmiş SharePoint sitesinin URL'sini ekleyin. Kullanıcının üyesi olduğu özel ve paylaşılan kanalları nasıl bulacağınızı öğrenmek için bkz. [Özel ve paylaşılan kanalları bulma](/microsoftteams/ediscovery-investigation#ediscovery-of-private-and-shared-channels).
 
-   - **Teams**. Custo ortaklarının üyesi olduğu ekipleri, özel veriler olarak ekleyebilir (ve) tüm kanal iletileriyle bir kanalda paylaşılan tüm Teams ekleyin. Bu, koruyucuların üyesi olduğu paylaşılan kanalın üst ekibi için posta kutusunu eklemeyi içerir. **Düzenle'ye tıklarken**, koruyucu ekibin her bir ekibiyle ilişkilendirilmiş posta kutusu ve site bir üye olarak görüntülenir. Özel dosyayla ilişkilendirmek istediğiniz ekipleri seçin. Her ekip için hem ilgili posta kutusunu hem de siteyi seçmeniz gerekir.
+   - **Teams**. Koruyucunun üyesi olduğu ekipleri, tüm kanal iletilerini ve bir Teams kanalına paylaşılan tüm dosyaları gözetim verileri olarak eklemek (ve korumak) için ekleyin. Bu, koruyucunun üyesi olduğu paylaşılan bir kanalın üst ekibi için posta kutusu eklemeyi içerir. **Düzenle'ye** tıkladığınızda, koruyucunun üyesi olduğu her ekiple ilişkili posta kutusu ve site listede görüntülenir. Koruyucuyla ilişkilendirmek istediğiniz ekipleri seçin. Her ekip için ilgili posta kutusunu ve siteyi seçmeniz gerekir.
 
    > [!NOTE]
-   > Ayrıca, koruyucuların bir koruyucu veri Teams üyesi olmayan posta kutusunu ve posta kutusunun sitesini de  eklersiniz. Bunu yapmak için **Ekip sitesi ile** birlikte Exchange **SharePoint** yanındaki Düzenle'ye  tıklar ve ekiple ilişkili posta kutusunu ve siteyi eklersiniz.
+   > Ayrıca, koruyucuların üyesi Teams posta kutusunu ve sitesini koruyucu veri konumu olarak ekleyebilirsiniz. Bunu yapmak için **Exchange** ve **SharePoint** yanındaki **Düzenle'ye** tıklayıp ekiple ilişkili posta kutusunu ve siteyi eklersiniz.
 
-6. Özel kişi ekdikten ve özel veri kaynaklarını yapılandırdikten sonra, **Tutma ayarları sayfasını** görüntülemek için **Sonraki'ne** tıklayın.
+6. Koruyucuları ekledikten ve koruyucu veri kaynaklarını yapılandırdıktan sonra, **Tutma ayarları** sayfasını görüntülemek için **İleri'ye** tıklayın.
 
-   Koruyucuların listesi görüntülenir ve Tut sütunundaki **onay kutusu** varsayılan olarak seçilidir. Bu, her custo custo ve ardından bir veri kaynağına yerleştiril olacağını belirtti. Bu verileri korumak için bu onay kutularını seçili bırakın.
+   Koruyucuların listesi görüntülenir ve **Ayrı Tut** sütunundaki onay kutusu varsayılan olarak seçilidir. Bu, her bir koruyucuyla ilişkilendirdiğiniz veri kaynaklarına bir ayrı tutma uygulanacağını gösteriyordu. Bu verileri korumak için bu onay kutularını seçili bırakın.
 
-7. Tutma ayarları **sayfasında,** koruyucu ayarları **gözden geçirmek** için Sonraki'ne tıklayın. **Vakaya** koruyucuları eklemek için Gönder'e tıklayın.
+7. **Saklama ayarları** sayfasında, koruyucu ayarlarını gözden geçirmek için **İleri'ye** tıklayın. Servis talebine koruyucuları eklemek için **Gönder'e** tıklayın.
 
-Bir olayda veri kaynaklarını ekleme ve koruma hakkında daha fazla bilgi Advanced eDiscovery bkz:
+Advanced eDiscovery bir durumda veri kaynaklarını ekleme ve koruma hakkında daha fazla bilgi için bkz:
 
-- [Bir vakaya koruyucular ekleme Advanced eDiscovery ekleme](add-custodians-to-case.md)
+- [Advanced eDiscovery servis talebine koruyucu ekleme](add-custodians-to-case.md)
 
-- [Özel durum durumuna özel olmayan veri Advanced eDiscovery ekleme](non-custodial-data-sources.md)
+- [Advanced eDiscovery servis talebine gözetimsiz veri kaynakları ekleme](non-custodial-data-sources.md)
 
-## <a name="collect-teams-content-and-add-to-review-set"></a>İçerik Teams toplama ve gözden geçirme kümesine ekleme
+## <a name="collect-teams-content-and-add-to-review-set"></a>Teams içerik toplama ve gözden geçirme kümesine ekleme
 
-Vakaya koruyucular ekledikten ve custo bir veri kaynağında içeriği korurken, iş akışının bir sonraki adımı araştırmanız ile ilgili Teams içeriğini aramak ve daha fazla gözden geçirme ve çözümleme yapmak için bir gözden geçirme kümesine eklemektir. Exchange'ta e-posta ve SharePoint'ta belgeler gibi diğer Microsoft 365 hizmetlerinden içerikle birlikte Teams içeriği toplamak normal bir durum olsa da, bu bölüm özellikle koleksiyonda Teams içeriği toplamaya odaklanır. Gözden geçirme kümesine eklemek istediğiniz içeriği Teams başka koleksiyonlar da oluşturabilirsiniz.
+Olaya koruyucuları ekledikten ve koruyucu veri kaynaklarında içeriği korudikten sonra, iş akışının bir sonraki adımı araştırmanızla ilgili Teams içeriği aramak ve daha fazla inceleme ve analiz için bir gözden geçirme kümesine eklemektir. Exchange e-posta ve SharePoint'daki belgeler gibi diğer Microsoft 365 hizmetlerden içerikle birlikte Teams içerik toplamak normal olsa da, bu bölüm özellikle bir koleksiyonda Teams içerik toplamaya odaklanır. Gözden geçirme kümesine eklemek için Teams olmayan içerik toplayan ek koleksiyonlar oluşturabilirsiniz.
 
-Olay için Teams toplayabilirsiniz, iş akışında iki adım vardır:
+Bir servis talebi için Teams içerik topladığınızda, iş akışında iki adım vardır:
 
-1. **Taslak koleksiyonu oluşturun**.  İlk adım, arama *ölçütlerinize uyan* öğelerin tahmini bir taslak koleksiyonu oluşturmaktır. Arama sorgusuyla eşleşmeye neden olan sonuçlar hakkında, bulunan öğelerin toplam sayısı, boyutu, bunların bulunduğu farklı veri kaynakları ve arama sorgusuyla ilgili istatistikler gibi bilgileri görüntüebilirsiniz. Koleksiyon tarafından döndürülen öğelerden bir örneğinin önizlemesini de görüntüebilirsiniz. Bu istatistikleri kullanarak, arama sorgusunu değiştirebilir ve taslak koleksiyonunu, davanıza uygun içeriği toplarkenn memnun olana kadar sonuçları daraltmak için gereken sayıda çalıştırabilirsiniz.
+1. **Taslak koleksiyon oluşturma**.  İlk adım, arama ölçütlerinizle eşleşen öğelerin tahmini olan bir *taslak koleksiyonu* oluşturmaktır. Bulunan öğelerin toplam sayısı ve boyutu, bulundukları farklı veri kaynakları ve arama sorgusuyla ilgili istatistikler gibi arama sorgusuyla eşleşen sonuçlar hakkındaki bilgileri görüntüleyebilirsiniz. Koleksiyon tarafından döndürülen öğelerin bir örneğini de önizleyebilirsiniz. Bu istatistikleri kullanarak arama sorgusunu değiştirebilir ve taslak koleksiyonu gerektiği kadar yeniden çalıştırarak, olayınızla ilgili içeriği topladığınıza memnun kalana kadar sonuçları daraltabilirsiniz.
 
-2. **Taslak koleksiyonunu gözden geçirme kümesine kaydetme**. Taslak koleksiyonunun sonuçlarından memnun olduktan sonra, koleksiyonu bir gözden geçirme kümesine işlersiniz. Taslak koleksiyonu işlerken, koleksiyon tarafından döndürülen öğeler gözden geçirme, çözümleme ve dışarı aktarma için bir gözden geçirme kümesine eklenir.
+2. **Taslak koleksiyonu gözden geçirme kümesine işleme**. Taslak koleksiyonun sonuçlarından memnun olduktan sonra, koleksiyonu bir gözden geçirme kümesine işleyebilirsiniz. Bir taslak koleksiyonu işlediğiniz zaman, koleksiyon tarafından döndürülen öğeler gözden geçirme, analiz ve dışarı aktarma için bir gözden geçirme kümesine eklenir.
 
-Ayrıca, bir taslak koleksiyonu çalıştırmama ve koleksiyonu 2013 veya 2013/2013'lerde bir gözden geçirme kümesine doğrudan ekleme seçeneğiniz vardır.
+Ayrıca, bir taslak koleksiyonu çalıştırmama ve koleksiyonu oluşturup çalıştırdığınızda koleksiyon sonuçlarını doğrudan bir gözden geçirme kümesine ekleme seçeneğiniz vardır.
 
-İçerik koleksiyonu oluşturmak için Teams:
+Teams içerik koleksiyonu oluşturmak için:
 
-1. Önceki bölümde Advanced eDiscovery koruyucuları ekley istediğiniz durum durumuna gidin ve **Koleksiyonlar'a tıklayın**.
+1. Önceki bölümde koruyucuları eklediğiniz Advanced eDiscovery servis talebine gidin ve **Koleksiyonlar'a** tıklayın.
 
-2. Koleksiyonlar **sayfasında New** **collectionStandard** >  **collection'ı seçin**.
+2. **Koleksiyonlar** sayfasında Yeni **koleksiyonStandard koleksiyonu'nu** >  seçin.
 
 3. Koleksiyon için bir ad (gerekli) ve açıklama (isteğe bağlı) yazın.
 
-4. Özel veri **kaynakları sayfasında, eklileri** seç'e tıklayın ve vakaya eklileri seçin.
+4. **Koruyucu veri kaynakları** sayfasında, olaya eklediğiniz **koruyucuları seçmek için Koruyucuları seç'e** tıklayın.
 
-   Koruyucular listesi Select **custodians** flyout sayfasında görüntülenir.
+   Olay koruyucularının listesi, **Koruyucuları seçin** açılır sayfasında görüntülenir.
 
-5. Bir veya daha fazla koruyucu seçin ve Ekle'ye **tıklayın**.
+5. Bir veya daha fazla koruyucu seçin ve **ekle'ye** tıklayın.
 
-   Koleksiyona belirli koruyucular eklemenizden sonra, her özel kişi için belirli veri kaynaklarının listesi görüntülenir. Bunlar, özel durumuna custo bir eklenmiştir. Tüm koruyucu veri kaynakları varsayılan olarak seçilidir. Bu, Teams ve custo ortaklarından herhangi birini veya kanalları içerir.
+   Koleksiyona belirli koruyucular ekledikten sonra, her koruyucu için belirli veri kaynaklarının listesi görüntülenir. Bunlar, olaya koruyucu eklerken yapılandırdığınız veri kaynaklarıdır. Tüm koruyucu veri kaynakları varsayılan olarak seçilir. Bu, bir koruyucuyla ilişkilendirdiğiniz tüm Teams veya kanalları içerir.
 
-   daha fazla içerik toplarken aşağıdaki Teams öneririz:
+   Teams içerik toplarken aşağıdakilerin yapılması önerilir:
 
-   - Koruyucuların OneDrive veli hesaplarını koleksiyon kapsamından kaldırın (**Her custo OneDrive custo yassı** sütunundaki onay kutusunun işaretini kaldırın). Bu, bire bir sohbetlere ve grup sohbetlere eklenmiş yinelenen dosya koleksiyonunun önüne geçmek için kullanılır. Bulut ekleri, taslak koleksiyonunu gözden geçirme kümesine işlerken koleksiyonda bulunan her konuşmadan otomatik olarak toplanır. Bu yöntem kullanılarak (koleksiyonun bir OneDrive bir parçası olarak bu hesaplarda arama yapmak yerine), 1:1'e eklenen dosyalar ve grup sohbetleri, paylaşıldıkları konuşmada grupılır.
+   - Koruyucuların OneDrive hesaplarını koleksiyon kapsamından kaldırın (her koruyucu için **Koruyucunun OneDrive** sütunundaki onay kutusunun seçimini kaldırarak). Bu, 1:1 sohbetlerine ve grup sohbetlerine eklenmiş yinelenen dosyaların toplanmasını engeller. Taslak koleksiyonu gözden geçirme kümesine kaydettiğinizde, koleksiyonda bulunan her konuşmadan bulut ekleri otomatik olarak toplanır. Bu yöntem kullanılarak (koleksiyonun bir parçası olarak OneDrive hesapları aramak yerine), 1:1'e eklenen dosyalar ve grup sohbetleri paylaşıldıkları konuşmada gruplandırılır.
 
-   - Özel veya paylaşılan kanallarda paylaşılan **dosyaları içeren tüm** siteleri SharePoint siteyi kaldırmak için Ek site sütunundaki onay kutusunun işaretini kaldırın. Bunu yapmak, özel veya paylaşılan kanal konuşmalarına eklenmiş yinelenen dosyaları toplamayı ortadan kaldırmaz, çünkü taslak koleksiyonunu işlerken ve paylaşılan konuşmalarda gruplandırılan bulut ekleri otomatik olarak gözden geçirme kümesine eklenir.
+   - Özel veya paylaşılan kanallarda paylaşılan dosyaları içeren SharePoint sitelerini kaldırmak için **Ek site** sütunundaki onay kutusunun seçimini kaldırın. Bunun yapılması, özel veya paylaşılan kanal konuşmalarına eklenmiş yinelenen dosyaların toplanmasını ortadan kaldırır çünkü bu bulut ekleri taslak koleksiyonu işlediğinizde gözden geçirme kümesine otomatik olarak eklenir ve paylaşıldıkları konuşmalarda gruplandırılır.
 
-6. Daha önce koruyucu veri kaynakları olarak Teams adımlarını izlediysanız, bu adımı atlayıp İleri'yi **seçin**. Aksi takdirde, Özel  olmayan veri kaynakları sihirbaz sayfasında, koleksiyonda arama yapmak için vakaya eklemış olduğunuz Teams özel olmayan veri kaynaklarını seçebilirsiniz.
+6. Daha önce Teams içeriği koruyucu veri kaynakları olarak ekleme adımlarını izlediyseniz, bu adımı atlayabilir ve **İleri'yi** seçebilirsiniz. Aksi takdirde, **Gözetimsiz veri kaynakları** sihirbazı sayfasında, koleksiyonda arama yapmak için büyük/küçük harfe eklemiş olabileceğiniz Teams içerik içeren gözetimsiz veri kaynaklarını seçebilirsiniz.
 
-7. Daha önce koruyucu veri kaynakları olarak Teams adımlarını izlediysanız, bu adımı atlayıp İleri'yi **seçin**. Aksi takdirde, **Ek konumlar** sihirbazı sayfasında koleksiyonda arama yapmak için başka veri kaynakları eklersiniz. Örneğin, özel veya özel olmayan veri kaynağı olarak ekilmeyen bir ekibin posta kutusunu ve sitesini  eklersiniz. Aksi takdirde **İleri'yi seçin** ve bu adımı at edin.
+7. Daha önce Teams içeriği koruyucu veri kaynakları olarak ekleme adımlarını izlediyseniz, bu adımı atlayabilir ve **İleri'yi** seçebilirsiniz. Aksi takdirde, **Ek konumlar** sihirbazı sayfasında, koleksiyonda arama yapmak için başka veri kaynakları ekleyebilirsiniz. Örneğin, bir ekip için posta kutusunu ve siteyi, gözetim veya gözetim dışı veri kaynağı olarak eklenmemiş bir ekip için ekleyebilirsiniz. Aksi takdirde **İleri'yi** seçin ve bu adımı atlayın.
 
-8. Koşullar sihirbazı **sayfasında**, önceki sihirbaz sayfalarında belirttiğiniz veri Teams içeriği toplamak için arama sorgusunu yapılandırabilirsiniz. Koleksiyonun kapsamını daraltmak için çeşitli anahtar sözcükler ve arama koşulları kullanabilirsiniz. Daha fazla bilgi için bkz [. Koleksiyonlar için arama sorguları oluşturma](building-search-queries.md).
+8. **Koşullar** sihirbazı sayfasında, arama sorgusunu önceki sihirbaz sayfalarında belirttiğiniz veri kaynaklarından Teams içerik toplayacak şekilde yapılandırın. Koleksiyonun kapsamını daraltmak için çeşitli anahtar sözcükler ve arama koşulları kullanabilirsiniz. Daha fazla bilgi için bkz. [Koleksiyonlar için arama sorguları oluşturma](building-search-queries.md).
 
-   En kapsamlı Teams sohbet konuşmalarını (1:1, grup sohbetleri ve kanal sohbetleri dahil) en kapsamlı koleksiyonunun sağlanmasına yardımcı olmak için Tür koşullarını  kullanın ve **Anlık iletiler seçeneğini** belirleyin. Ayrıca koleksiyonun kapsamını araştırmanız ile ilgili öğelere daraltmak için bir tarih aralığı veya birkaç anahtar sözcük de dahil öneririz. Tür ve Tarih seçeneklerini kullanan örnek bir sorgunun **ekran** **görüntüsü:**
+   Teams sohbet konuşmalarının (1:1, grup ve kanal sohbetleri dahil) en kapsamlı koleksiyonunu sağlamaya yardımcı olmak için **Tür** koşulunu kullanın ve **Anlık iletiler** seçeneğini belirleyin. Ayrıca, koleksiyonun kapsamını araştırmanızla ilgili öğelere daraltmak için bir tarih aralığı veya birkaç anahtar sözcük de eklemenizi öneririz. **Tür** ve **Tarih** seçeneklerini kullanan örnek sorgunun ekran görüntüsü aşağıda verilmiştir:
 
-   ![İçerik toplama sorgusu Teams.](..\media\TeamsConditionsQueryType.png)
+   ![Teams içerik toplamak için sorgu.](..\media\TeamsConditionsQueryType.png)
 
-9. Taslak **kaydetme veya toplama** sihirbazı sayfasında, taslak koleksiyonu oluşturmak veya koleksiyonu gözden geçirme kümesine işlemek istediğinize bağlı olarak, birini yapın.
+9. **Taslağı kaydet veya topla** sihirbazı sayfasında, taslak koleksiyonu oluşturmak mı yoksa koleksiyonu gözden geçirme kümesine işlemek mi istediğinize bağlı olarak aşağıdakilerden birini yapın.
 
-   ![Taslak koleksiyonunu kaydedin veya koleksiyonu kaydedin.](..\media\TeamsDraftCommitCollection.png)
+   ![Taslak koleksiyonu veya işleme koleksiyonunu kaydedin.](..\media\TeamsDraftCommitCollection.png)
 
-   1. **Koleksiyonu taslak olarak kaydedin**. Taslak koleksiyonu oluşturmak için bu seçeneği belirtin. Daha önce de belirtildiği gibi, taslak koleksiyonları gözden geçirme kümesine koleksiyon sonuçlarını eklemez. Arama sonuçlarının, koleksiyon kapsamındaki veri kaynaklarıyla ilgili arama sorgusuyla eşleşmesi için bir tahmin döndürür. Bu size, [koleksiyon istatistiklerini ve raporlarını[(koleksiyon-istatistik-reports.md)] görüntüleme ve taslak koleksiyonunu düzenleme ve yeniden çalıştırma fırsatı verir. Bir taslak koleksiyonunun sonucundan memnunsanız, bunu bir gözden geçirme kümesine de işlersiniz. Daha fazla bilgi için bkz [. Taslak koleksiyonu oluşturma](create-draft-collection.md).
+   1. **Koleksiyonu taslak olarak kaydedin**. Taslak koleksiyon oluşturmak için bu seçeneği belirleyin. Daha önce açıklandığı gibi taslak koleksiyon, koleksiyon sonuçlarını gözden geçirme kümesine eklemez. Koleksiyon kapsamındaki veri kaynakları için arama sorgusuyla eşleşen arama sonuçlarının tahminini döndürür. Bu size [koleksiyon istatistiklerini ve raporlarını [(collection-statistics-reports.md)] görüntüleme ve taslak koleksiyonu düzenleme ve yeniden çalıştırma fırsatı verir. Taslak koleksiyonun sonucundan memnun olduğunuzda, bunu bir gözden geçirme kümesine işleyebilirsiniz. Daha fazla bilgi için bkz. [Taslak koleksiyonu oluşturma](create-draft-collection.md).
 
-   2. **Öğeleri toplayın ve gözden geçirme kümesine ekleyin**. Koleksiyonu çalıştırmak ve sonra da sonuçları gözden geçirme kümesine eklemek için bu seçeneği belirtin. Koleksiyonu yeni veya var olan bir gözden geçirme kümesine  eklersiniz. Konuşma iletilerinin (konuşma *Teams) ve* bulut eklerini toplama ile ilgili bağlamsal bilgileri toplama seçenekleri varsayılan olarak seçilidir ve seçilmez. Bu seçenekler otomatik olarak uygulanır. Bu seçenekler, içeriğinizi ilk kez oluşturulduğunda kullanılan yeni büyük/yeni Teams uygulanır. Koleksiyonları gözden geçirme kümesine kaydetme hakkında daha fazla bilgi için bkz. [Taslak koleksiyonunu gözden geçirme kümesine kaydetme](commit-draft-collection.md).
+   2. **Öğeleri toplayın ve bir gözden geçirme kümesine ekleyin**. Koleksiyonu çalıştırmak ve sonuçları gözden geçirme kümesine eklemek için bu seçeneği belirleyin. Koleksiyonu yeni veya mevcut bir gözden geçirme kümesine ekleyebilirsiniz. Bağlamsal Teams konuşma iletilerini (*konuşma yazışması* olarak da adlandırılır) toplama ve bulut eklerini toplama seçenekleri varsayılan olarak seçilidir ve seçilemez. Bu seçenekler, Teams içerik için servis talebini ilk oluşturduğunuzda kullandığınız yeni büyük/küçük harf biçimi nedeniyle otomatik olarak uygulanır. Koleksiyonları bir gözden geçirme kümesine işleme hakkında daha fazla bilgi için bkz. Taslak [koleksiyonu gözden geçirme kümesine işleme](commit-draft-collection.md).
 
-10. Koleksiyonu yapılandırmayı bitirdikten sonra, koleksiyonu göndererek bir taslak koleksiyonu oluşturun veya öğeleri toplayın ve bunları gözden geçirme kümesine ekleyin.
+10. Koleksiyonu yapılandırmayı tamamladıktan sonra, taslak koleksiyon oluşturmak veya öğeleri toplamak için koleksiyonu gönderin ve bunları bir gözden geçirme kümesine ekleyin.
 
-   Koleksiyonu gözden geçirme kümesine ekleme işlemi tamamlandığında, Koleksiyonlar sekmesinde koleksiyonun durum değeri Kabul Edilen olarak **ayarlanır**.
+   Koleksiyonu gözden geçirme kümesine ekleme işlemi tamamlandığında **Koleksiyonlar** sekmesinde koleksiyonun durum değeri **Kabul Edilen** olarak ayarlanır.
 
-## <a name="review-teams-content-in-a-review-set"></a>Gözden Teams gözden geçirme kümesinde içeriği gözden geçirme
+## <a name="review-teams-content-in-a-review-set"></a>Gözden geçirme kümesindeki Teams içeriği gözden geçirme
 
-Gözden geçirme kümesine Teams içerik koleksiyonları eklemenizden sonra, bir sonraki adım içeriği araştırmanıza uygun olacak şekilde gözden geçirmek ve gerekirse bu içeriği kararttır etmektir. İçerik içeriklerini gözden geçirmek Teams önemli bir önkoşul, Advanced eDiscovery konuşmalarını ve eklerini gözden geçirme kümesine eklerken sohbet Teams işlemlerinin nasıl işle ilgili olduğunu anlamaktır. İçerik içeriğinin Teams işlemi sonucunda aşağıdaki üç sonuç elde olur:
+bir gözden geçirme kümesine Teams içerik koleksiyonları ekledikten sonra, sonraki adım içeriği araştırmanızla ilgisi için gözden geçirmek ve gerekirse iptal etmektir. Teams içeriği gözden geçirmenin önemli önkoşullarından biri, Advanced eDiscovery bir gözden geçirme kümesine eklerken sohbet konuşmalarını ve eklerini Teams nasıl işlediğini anlamaktır. Teams içeriğinin işlenmesi aşağıdaki üç şeye neden olur:
 
-- **[Gruplama](#grouping)**. Konuşmaların yanıtlarını, gönderilerini ve Teams birlikte gruplandırıldı ve gözden geçirme kümesinde sunuldu. Bu, sohbet görüşmesinde ayıklanan ve grup sohbeti içinde bulunan ekleri de içerir.
+- **[Gruplandırma](#grouping)**. konuşmaların Teams iletilerin, gönderilerin ve yanıtların birlikte gruplandırılıp gözden geçirme kümesinde sunulması. Ayrıca sohbet konuşmalarındaki eklerin ayıklanması ve konuşma içinde gruplanması da buna dahildir.
 
-- **[Döküm konuşma yazışması](#transcript-conversation-threading)**. Nasıl Advanced eDiscovery koleksiyon ölçütlerine uyan öğelerle ilgili bağlam sağlamak üzere bir konuşmadan hangi ek içeriklerin top toplan bilgilerine karar verir.
+- **[Transkript konuşma yazışması](#transcript-conversation-threading)**. Advanced eDiscovery, toplama ölçütleriyle eşleşen öğelerle ilgili bağlam sağlamak için bir konuşmadan hangi ek içeriğin toplandığını belirler.
 
-- **[Deduplication](#deduplication-of-teams-content)**. Yinelenen Advanced eDiscovery içeriği nasıl Teams işleyeni.
+- **[Yinelenenleri kaldırma](#deduplication-of-teams-content)**. Advanced eDiscovery yinelenen Teams içeriğini işleme.
 
-- **[Meta Veri.](#metadata-for-teams-content)** Toplanmış ve Advanced eDiscovery gözden Teams içeriği bu içeriğe ekleyen meta veri özellikleri.
+- **[Meta veriler](#metadata-for-teams-content)**. Advanced eDiscovery Teams içeriğe toplanıp bir inceleme kümesine eklendikten sonra eklediği meta veri özellikleri.
 
-Meta verileri gruplama, konuşma dizisini, Teams kaldırmayı anlamanız, içeriğin gözden Teams yardımcı olacaktır. Bu bölümde ayrıca, [gözden geçirme kümesinde Teams görüntülemeye yönelik ipuçları da yer almaktadır](#tips-for-viewing-teams-content-in-a-review-set).
+Gruplandırma, konuşma yazışması oluşturma, yinelenenleri kaldırma ve Teams meta verilerini anlamak, Teams içeriğinin gözden geçirilmesini ve analizini iyileştirmenize yardımcı olur. Bu bölümde, [bir inceleme kümesindeki Teams içeriği görüntülemeye yönelik ipuçları da bulunur](#tips-for-viewing-teams-content-in-a-review-set).
 
-### <a name="grouping"></a>Gruplama
+### <a name="grouping"></a>Grup -landırma
 
-Konuşmalardan içerik Teams gözden geçirme kümesine ekli olduğunda, iletiler, gönderiler ve konuşmalardan gelen yanıtlar HTML döküm dosyalarında bir araya toplanır. Tek bir sohbet konuşmada birden fazla döküm dosyası olabilir. Bu döküm dosyalarının önemli bir işlevi, metin Teams tek tek iletiler olarak değil sürekli konuşmalar olarak sunmaktır. Bu, önceki adımda koleksiyonlarınızı arama ölçütlerine uyan öğeler için bağlam sağlar ve gözden geçirme kümesinde toplanan öğe sayısını azaltır. Dökümler ve ilişkili öğeler aile veya konuşmaya *göre* *gruplandı.* FamilyId meta veri özelliği için aynı ailedeki öğelerin **değeri** aynı olur. Aynı konuşmadaki öğeler, ConversationId meta veri özelliği **için aynı değere** sahip olur.
+Teams sohbet konuşmalarındaki içerik bir gözden geçirme kümesine eklendiğinde, konuşmalardan gelen iletiler, gönderiler ve yanıtlar HTML transkript dosyalarında toplanır. Tek bir sohbet konuşması birden çok transkript dosyası içerebilir. Bu transkript dosyalarının önemli bir işlevi, Teams içeriği tek tek (veya ayrı) iletiler olarak değil sürekli konuşmalar olarak sunmaktır. Bu, önceki adımda koleksiyonlarınızın arama ölçütleriyle eşleşen öğeler için bağlam sağlamaya ve gözden geçirme kümesinde toplanan öğe sayısını azaltmaya yardımcı olur. Transkriptler ve ilişkili öğeler *aileye* veya *konuşmaya* göre gruplandırılabilir. Aynı ailedeki öğeler **FamilyId** meta veri özelliği için aynı değere sahip olacaktır. Aynı konuşmadaki öğeler **, ConversationId** meta veri özelliği için aynı değere sahip olur.
 
-Aşağıdaki tabloda, farklı türlerde sohbet içeriğinin Teams ve konuşmaya göre nasıl gruplu olduğu açıklandı.
+Aşağıdaki tabloda, farklı türlerdeki Teams sohbet içeriğinin aile ve konuşmaya göre nasıl gruplandırıldığı açıklanmaktadır.
 
-|Teams türü|Aileye göre grupla|Konuşmaya göre grupla|
+|İçerik türünü Teams|Aileye göre gruplandır|Konuşmaya göre gruplandırma|
 |---|---|---|
-|Teams bire bir sohbetler ve grup sohbetleri|Bir döküm ve tüm ekleri ve ayıklanan öğeler aynı **FamilyId'i paylaşır**. Her dökümün benzersiz bir **FamilyId'si var**.|Aynı konuşma içindeki tüm döküm dosyaları ve aile öğeleri aynı **ConversationId'i paylaşır**. Bu, aşağıdaki öğeleri içerir: <ul><li>Aynı ConversationId'yi paylaşan tüm dökümlerin tüm ayıklanan öğeleri **ve ekleri**.</li><li>Aynı sohbet görüşmesinin tüm dökümleri</li><li>Her dökümün tüm koruyucu kopyaları</li><li>Aynı sohbet görüşmelerinden sonraki koleksiyonlardan dökümler</li></ul> <br/> Bire Teams sohbetleri ve grup sohbeti konuşmalarını takip etmek için, her biri konuşma içinde farklı bir zaman dilimine karşılık gelen birden fazla döküm dosyamız olabilir. Bu döküm dosyaları aynı katılımcılarla aynı konuşmadan geldiklerinden, aynı **ConversationId'leri paylaşırlar**.|
-|Standart, özel ve paylaşılan kanal sohbetleri|Her gönderiyle tüm yanıtlar ve ekler kendi döküm metnine kaydedilir. Bu döküm ve tüm ekleri ve ayıklanan öğeler aynı **FamilyId'i paylaşır**.|Her gönderinin ve ekleri ile ayıklanan öğelerin benzersiz bir **ConversationId'si vardır**. Aynı gönderiden sonraki koleksiyonlar veya yeni yanıtlar varsa, bu koleksiyonların sonucunda elde edilen delta dökümleri de **aynı ConversationId'ye sahip olur**.|
+|Teams 1:1 ve grup sohbetleri|Bir transkript ve tüm ekleri ve ayıklanan öğeler aynı **FamilyId değerini** paylaşır. Her transkript benzersiz bir **FamilyId'ye** sahiptir.|Aynı konuşmadaki tüm transkript dosyaları ve bunların aile öğeleri aynı **ConversationId değerini** paylaşır. Bu, aşağıdaki öğeleri içerir: <ul><li>Aynı **ConversationId'yi** paylaşan tüm transkriptlerin ayıklanan tüm öğeleri ve ekleri.</li><li>Aynı sohbet konuşması için tüm transkriptler</li><li>Her transkriptin tüm koruyucu kopyaları</li><li>Aynı sohbet konuşmasından sonraki koleksiyonlardan dökümler</li></ul> <br/> Teams 1:1 ve grup sohbeti konuşmaları için, her biri konuşma içinde farklı bir zaman dilimine karşılık gelen birden çok transkript dosyanız olabilir. Bu transkript dosyaları aynı katılımcılarla aynı konuşmadan geldiği için aynı **ConversationId** değerini paylaşır.|
+|Standart, özel ve paylaşılan kanal sohbetleri|Her gönderi ve tüm yanıtlar ve ekler kendi transkriptine kaydedilir. Bu transkript ve tüm ekleri ve ayıklanan öğeler aynı **FamilyId değerini** paylaşır.|Her gönderinin ve eklerinin ve ayıklanan öğelerin benzersiz bir **ConversationId değeri** vardır. Aynı gönderiden sonraki koleksiyonlar veya yeni yanıtlar varsa, bu koleksiyonlardan elde edilen değişim transkriptleri de aynı **ConversationId'ye** sahip olur.|
 
-Aile veya **konuşmaya** göre gruplu içeriği görüntülemek için, incelemenin Teams çubuğundaki Grup denetimi'ne tıklayın.
+Aile veya konuşmaya göre gruplandırılmış Teams içeriği görüntülemek için gözden geçirme kümesinin komut çubuğundaki **Grup** denetimini kullanın.
 
 ![Komut çubuğunda grup denetimi.](..\media\TeamsGroupControl.png)
 
-- Aile **eklerini grupla'ya** Teams göre grupla içeriğini görüntülemek için Aile eklerini grupla'ya tıklayın. Her döküm dosyası gözden geçirme kümesi öğeleri listesinde bir satırda görüntülenir. Ekler öğenin altına iç içe geçmiştir.
+- Aileye göre gruplandırılmış Teams içeriği görüntülemek için Aile **eklerini** gruplandır'ı seçin. Her transkript dosyası, gözden geçirme kümesi öğeleri listesindeki bir satırda görüntülenir. Ekler öğenin altına iç içe yerleştirilmiştir.
 
-- İçeriği **konuşmaya Teams için Yammer Teams veya konuşmaları** yeniden Teams sohbeti seçin. Her konuşma, gözden geçirme kümesi öğeleri listesinde bir satırda görüntülenir. Döküm dosyaları ve ekleri en üst düzey konuşmanın altında iç içe geçmiştir.
+- Konuşmaya göre gruplandırılmış Teams içeriği görüntülemek için **Grup Teams veya Yammer konuşmaları** seçin. Her konuşma, gözden geçirme kümesi öğeleri listesindeki bir satırda görüntülenir. Transkript dosyaları ve ekleri üst düzey konuşmanın altında iç içe yerleştirilmiştir.
 
 > [!NOTE]
-> Bulut ekleri, içinde görünen konuşmalarla gruptur. Bu gruplama, dosyanın ekli olduğu iletinin döküm dosyası olarak **aynı FamilyId** ve iletide görünen konuşmayla aynı **ConversationId** atanarak işler. Bu, bulut eklerinin birden çok kopyasının, farklı konuşmalara eklenmişse gözden geçirme kümesine ekleneceği anlamına gelir.
+> Bulut ekleri, göründükleri konuşmalarla gruplandırılır. Bu gruplandırma, dosyanın eklendiği iletinin transkript dosyasıyla aynı **FamilyId** değeri ve iletinin göründüğü konuşmayla aynı **ConversationId** değeri atanarak gerçekleştirilir. Bu, farklı konuşmalara eklenmiş bulut eklerinin birden çok kopyasının gözden geçirme kümesine eklenebileceği anlamına gelir.
 
-#### <a name="viewing-transcript-files-for-conversations"></a>Konuşmalar için döküm dosyalarını görüntüleme
+#### <a name="viewing-transcript-files-for-conversations"></a>Konuşmalar için transkript dosyalarını görüntüleme
 
-Gözden geçirme kümesinde transkript dosyalarını görüntülerken, bazı iletiler mor renkle vurgulanır. Vurgulanan iletiler, görüntülemekte olduğunu dökümün hangi özel kopyasına bağlı olarak olduğunu bağlıdır. Örneğin, Kullanıcı4 ile Kullanıcı2 arasındaki bire bir sohbette, User4'in posta kutusunda toplanan döküme bakarak User4 tarafından gönderilen iletiler mor renkle vurgulanır. User2'nin aynı konuşmanın döküm metnine bakarak, Kullanıcı2 tarafından gönderilen iletiler mor renkle vurgulanır. Bu vurgulama davranışı, kullanıcının Teams istemcide mor renkle vurgulanan aynı istemci deneyimine Teams dayalıdır.
+Transkript dosyalarını bir gözden geçirme kümesinde görüntülerken, iletilerden bazıları mor renkle vurgulanır. Vurgulanan iletiler, görüntülemekte olduğunuz transkriptin hangi koruyucu kopyasına bağlıdır. Örneğin, User4 ile User2 arasındaki 1:1 sohbetinde, User4 tarafından gönderilen iletiler, User4'ün posta kutusundan toplanan dökümü görüntülediğinizde mor renkle vurgulanır. Kullanıcı2'nin aynı konuşmanın dökümünü görüntülediğinizde, User2 tarafından gönderilen iletiler mor renkle vurgulanır. Bu vurgulama davranışı, kullanıcının gönderilerinin Teams istemcisinde mor renkle vurgulandığı aynı Teams istemci deneyimini temel alır.
 
-Aşağıdaki ekran görüntüleri gözden geçirme kümesinde Teams istemcisinde konuşmanın bir örneğini ve aynı konuşmanın döküm dosyasını gösterir. Döküm dosyasındaki mor vurgu, döküm dosyasının Kullanıcı2'nin posta kutusundan toplanmış olduğunu gösterir.
+Aşağıdaki ekran görüntüleri, Teams istemcisindeki konuşmanın bir örneğini ve inceleme kümesindeki aynı konuşmanın transkript dosyasını gösterir. Döküm dosyasındaki mor vurgulama, transkriptin User2'nin posta kutusundan toplandığını gösterir.
 
 ##### <a name="conversation-in-teams-client"></a>Teams istemcisinde konuşma
 
-![Gözden geçirme kümesinde döküm dosyasında gösterilen konuşma.](..\media\TeamsClient1.png)
+![Gözden geçirme kümesindeki transkript dosyasında gösterilen konuşma.](..\media\TeamsClient1.png)
 
-##### <a name="conversation-in-transcript-file"></a>Döküm dosyasındaki konuşma
+##### <a name="conversation-in-transcript-file"></a>Transkript dosyasında konuşma
 
-![İstemcide gösterilen konuşmanın Teams.](..\media\TeamsTranscript1.png)
+![Teams istemcisinde gösterilen konuşmanın aynısı.](..\media\TeamsTranscript1.png)
 
-### <a name="transcript-conversation-threading"></a>Döküm konuşma yazışması
+### <a name="transcript-conversation-threading"></a>Transkript konuşma yazışması oluşturma
 
-Advanced eDiscovery'daki yeni vaka biçimindeki konuşma dizileri işlevselliği, araştırmanıza uygun olacak öğelerle ilgili bağlamsal içeriği tanımlamanıza yardımcı olur. Bu özellik, önünde ve öğeleri takip eden sohbet iletilerinin koleksiyon sırasındaki arama sorgusuyla eşleşmesi için ayrı konuşma görünümleri oluşturur. Bu özellik, aynı programda tüm sohbet konuşmalarını (zincir konuşmalar olarak adlandırılan) verimli *bir şekilde ve* hızlı bir şekilde inceleme Microsoft Teams. Daha önce de açıklaması gibi, konuşmalar gözden geçirme kümesine içerik Advanced eDiscovery HTML döküm dosyalarında yeniden Teams yeniden vardır.
+Advanced eDiscovery'da yeni olay biçimindeki konuşma yazışması işlevi, araştırmanızla ilgili olabilecek öğelerle ilgili bağlamsal içeriği belirlemenize yardımcı olur. Bu özellik, koleksiyon sırasında arama sorgusuyla eşleşen öğelerden önce gelen ve izleyen sohbet iletilerini içeren ayrı konuşma görünümleri oluşturur. Bu özellik, Microsoft Teams'da sohbet konuşmalarını (*yazışmalı konuşmalar* olarak adlandırılır) verimli ve hızlı bir şekilde gözden geçirmenizi sağlar. Daha önce açıklandığı gibi, Advanced eDiscovery bir gözden geçirme kümesine Teams içerik eklediğinde sohbet konuşmaları HTML transkript dosyalarında yeniden oluşturulur.
 
-Advanced eDiscovery tarafından öğelerle ilgili bağlam sağlayan ek iletileri ve yanıtların döküm dosyalarını eklemek için kullanılan mantık, bu içeriği toplarken kullanılan toplama sorgusuyla (yanıt veren *öğeler olarak adlandırılan*) Teams ve hazırlar. Farklı iş parçacığı oluşturma davranışları sohbet türlerine ve yanıt veren öğeleri toplamak için kullanılan arama sorgusuna dayalıdır. İki yaygın koleksiyon senaryosu vardır:
+Advanced eDiscovery tarafından, öğelerle ilgili bağlam sağlayan ek iletiler ve yanıtlar transkript dosyalarını eklemek için kullanılan mantık, Teams içerik toplarken kullandığınız koleksiyon sorgusuyla (*yanıt veren öğeler* olarak adlandırılır) eşleşmektedir. Farklı iş parçacığı oluşturma davranışları, yanıt veren öğeleri toplamak için kullanılan sohbet türlerini ve arama sorgusunu temel alır. İki yaygın koleksiyon senaryosu vardır:
 
-- Anahtar sözcükler ve özellik:değer çiftleri gibi arama parametrelerini kullanan sorgular
+- Anahtar sözcükler ve property:value çiftleri gibi arama parametrelerini kullanan sorgular
 
 - Yalnızca tarih aralıklarını kullanan sorgular
 
-|Teams türü|Arama parametreleriyle sorgular|Tarih aralıkları ile sorgular|
+|İçerik türünü Teams|Arama parametrelerine sahip sorgular|Tarih aralıklarına sahip sorgular|
 |---|---|---|
-|Teams bire bir sohbetler ve grup sohbetleri|Yanıt veren öğelerden 12 saat önce ve 12 saat sonra gönderilen iletiler, tek bir döküm dosyasında yanıt veren öğeyle birlikte gruptur.|24 saatlik bir pencerede gelen iletiler, tek bir döküm dosyasında grup İlkesini içerir.|
-|Kanal sohbetleri için standart, Teams ve paylaşılan sohbetler|Yanıt veren öğeleri ve buna karşılık gelen tüm yanıtları içeren her gönderi, tek bir döküm dosyasında gruplandırılır.|Yanıt veren öğeleri ve buna karşılık gelen tüm yanıtları içeren her gönderi, tek bir döküm dosyasında gruplandırılır.|
+|Teams 1:1 ve grup sohbetleri|Duyarlı öğelerden 12 saat önce ve 12 saat sonra gönderilen iletiler, duyarlı öğeyle tek bir transkript dosyasında gruplandırılır.|24 saatlik bir zaman penceresindeki iletiler tek bir transkript dosyasında gruplandırılır.|
+|Standart, özel ve paylaşılan Teams kanal sohbetleri|Duyarlı öğeler ve karşılık gelen tüm yanıtları içeren her gönderi tek bir transkript dosyasında gruplandırılır.|Duyarlı öğeler ve karşılık gelen tüm yanıtları içeren her gönderi tek bir transkript dosyasında gruplandırılır.|
 
-### <a name="deduplication-of-teams-content"></a>İçerik Teams kaldırma
+### <a name="deduplication-of-teams-content"></a>Teams içeriğinin yinelenenlerini kaldırma
 
-Aşağıdaki listede, gözden geçirme kümesi içinde içerik toplarken Teams kaldırma (ve yineleme) davranışı açık almaktadır.
+Aşağıdaki listede, bir gözden geçirme kümesinde Teams içerik toplanırken yinelenenleri kaldırma (ve yinelenenleri kaldırma) davranışı açıklanmaktadır.
 
-- Gözden geçirme kümesine eklenen her döküm dosyasının, veri konumlarında depolanan içeriğe bire bir eşlemesi gerekir. Bu Advanced eDiscovery, gözden geçirme kümesine Teams herhangi bir içerik toplamaz. Bir sohbet iletisi zaten gözden geçirme kümesinde toplanmışsa, Advanced eDiscovery aynı veri konumdan aynı iletiyi sonraki koleksiyonlarda yer alan gözden geçirme kümesine eklemez.
+- Gözden geçirme kümesine eklenen her transkript dosyası, veri konumlarında depolanan içeriğe bire bir eşleme olmalıdır. Bu, Advanced eDiscovery gözden geçirme kümesine önceden eklenmiş Teams içeriği toplamadığı anlamına gelir. Bir sohbet iletisi zaten bir gözden geçirme kümesinde toplanmışsa, Advanced eDiscovery sonraki koleksiyonlarda aynı veri konumundan aynı iletiyi gözden geçirme kümesine eklemez.
 
-- Bire bir ve grup sohbetleri için iletilerin kopyaları her konuşma katılımcılarının posta kutusunda depolanır. Farklı katılımcıların posta kutularında var olan aynı konuşmanın kopyaları, farklı meta verilerle toplanır. Sonuç olarak, konuşmanın her bir örneği benzersiz olarak kabul edilir ve ayrı döküm dosyalarında gözden geçir kümesine getiriler. Dolayısıyla bire bir sohbetin veya grup sohbetlerinin tüm katılımcıları bir vakaya koruyucu olarak eklenir ve bir koleksiyonun kapsamına dahil edilirse, her dökümün kopyaları (aynı olay için) gözden geçirme kümesine eklenir ve aynı **ConversationId** ile birlikte gruplanır. Bu kopyaların her biri, karşılık gelen bir custo ortak ile ilişkilendirildi. **İpucu**: Gözden **geçirme kümesi listesinde Custo belirli** bir sütun, karşılık gelen döküm dosyasının custo custo bir tanımlar.
+- 1:1 ve grup sohbetleri için, iletilerin kopyaları her konuşma katılımcısının posta kutusunda depolanır. Farklı katılımcıların posta kutularında bulunan aynı konuşmanın kopyaları farklı meta verilerle toplanır. Sonuç olarak, konuşmanın her örneği benzersiz olarak değerlendirilir ve ayrı transkript dosyalarında gözden geçirme kümesine getirilir. Bu nedenle, 1:1 veya grup sohbetinin tüm katılımcıları bir durumda koruyucu olarak eklenirse ve bir koleksiyonun kapsamına dahil edilirse, her transkriptin kopyaları (aynı koruma için) gözden geçirme kümesine eklenir ve aynı **ConversationId** ile birlikte gruplandırılır. Bu kopyaların her biri ilgili bir koruyucu ile ilişkilendirilir. **İpucu**: Gözden geçirme kümesi listesindeki **Koruyucu** sütunu, ilgili transkript dosyasının koruyucusunu tanımlar.
 
-- Aynı konuşmadan sonraki öğeler koleksiyonunda, aynı konuşmadan daha önce toplanan metin dökümleriyle birlikte gözden geçirme kümesine ve gruplara (aynı **ConversationId** paylaşarak) yalnızca daha önce toplamamış olan delta içeriği eklenir. İşte bu davranışa bir örnek:
+- Aynı konuşmadaki sonraki öğe koleksiyonlarında, yalnızca daha önce toplanmamış olan delta içeriği gözden geçirme kümesine eklenir ve aynı konuşmadan daha önce toplanan transkriptlerle gruplandırılır (aynı **ConversationId** paylaşılarak). Bu davranışa bir örnek aşağıda verilmişti:
 
-   1. Koleksiyon A, Kullanıcı1 ile Kullanıcı2 arasındaki bir konuşmada iletileri toplar ve gözden geçirme kümesi ekler.
+   1. Toplama A, Kullanıcı1 ile Kullanıcı2 arasındaki konuşmadaki iletileri toplar ve gözden geçirme kümesine ekler.
 
-   2. Koleksiyon B aynı konuşmadan ileti toplar, ancak Koleksiyon A çalıştırlır ve Kullanıcı1 ile Kullanıcı2 arasında yeni iletiler vardır.
+   2. B Koleksiyonu aynı konuşmadaki iletileri toplar, ancak A Koleksiyonu çalıştırıldığından bu yana Kullanıcı1 ile Kullanıcı2 arasında yeni iletiler vardır.
 
-   3. Gözden geçirme kümesine yalnızca B Koleksiyonu'daki yeni iletiler eklenir. Bu iletiler ayrı bir döküm dosyasına eklenir, ancak yeni döküm, A Koleksiyonu'nda aynı ConversationId tarafından yer alan dökümlerle **birlikte grupludur**.
+   3. Gözden geçirme kümesine yalnızca Koleksiyon B'deki yeni iletiler eklenir. Bu iletiler ayrı bir transkript dosyasına eklenir, ancak yeni transkript, Collection A'dan alınan transkriptlerle aynı **ConversationId** ile gruplandırılır.
 
-   Bu davranış, sohbeti takip eden tüm Teams geçerlidir.
+   Bu davranış, tüm Teams sohbet türleri için geçerlidir.
 
 ### <a name="metadata-for-teams-content"></a>Teams içeriği için meta veriler
 
-Binlerce veya milyonlarca öğeyle büyük gözden geçirme kümelerde, içeriği daraltmak için gözden geçirmenizin kapsamını Teams zor olabilir. Gözden geçirmenize yardımcı olmak için Teams içeriğinizin içeriğine özel meta veri Teams vardır. Bu özellikleri kullanarak gözden geçirme listesinde sütunları düzenleyebilir ve filtreleri ve sorguları yapılandırarak[](review-set-search.md), bu içeriğin gözden Teams kullanabilirsiniz. Dışarı aktarma sonrası veya üçüncü taraf eKbulma araçlarında yer alan Teams verileri Advanced eDiscovery düzenlemenize ve görüntülemenize yardımcı olmak için, bu meta veri özellikleri de bu meta veri özellikleriyle birlikte yer almaktadır.
+Binlerce veya milyonlarca öğe içeren büyük inceleme kümelerinde, incelemenizin kapsamını Teams içerikle daraltmak zor olabilir. gözden geçirmenize Teams içeriğe odaklanmanıza yardımcı olmak için, Teams içeriğe özgü meta veri özellikleri vardır. Gözden geçirme listesindeki sütunları düzenlemek ve Teams içeriğinin gözden geçirilmesini iyileştirmek için [filtreleri ve sorguları yapılandırmak](review-set-search.md) için bu özellikleri kullanabilirsiniz. Bu meta veri özellikleri, dışarı aktarma sonrasında veya üçüncü taraf eBulma araçlarında içeriği düzenlemenize ve görüntülemenize yardımcı olmak için Teams içeriği Advanced eDiscovery dışarı aktardığınızda da eklenir.
 
-Aşağıdaki tabloda, bu içeriklerin meta veri Teams açık almaktadır.
+Aşağıdaki tabloda, Teams içerik için meta veri özellikleri açıklanmaktadır.
 
-|Meta Veri özelliği|Açıklama|
+|Meta veri özelliği|Açıklama|
 |---|---|
-|containsEditedMessage|Döküm dosyasının düzenlenmiş bir ileti içerdiğini gösterir. Düzenlenmiş iletiler, döküm dosyasını görüntülerken tanımlanır.|
-|ConversationId|Öğenin ilişkilendirilen konuşmayı tanımlayan GUID. Bu özellik için aynı konuşmadan metin döküm dosyaları ve ekler aynı değere sahip olur.|
-|Konuşma adı|Döküm dosyasının veya ekin ilişkilendiril olduğu konuşmanın adı. Grup Teams bire bir sohbetler ve grup sohbetleri yapmak için bu özelliğin değeri, konuşmanın tüm katılımcılarının UPN'dir. Örneğin, `User3 <User3@contoso.onmicrosoft.com>,User4 <User4@contoso.onmicrosoft.com>,User2 <User2@contoso.onmicrosoft.com>`. Teams (standart, özel ve paylaşılan) sohbetlerde konuşma adı için aşağıdaki biçim kullanılabilir: `<Team name>,<Channel name>`.Örneğin, `eDiscovery vNext, General`.|
-|ConversationType|Ekip sohbeti türünü gösterir. Bire Teams sohbetler ve grup sohbetleri için bu özelliğin değeri şöyledir`Group`: . Standart, özel ve paylaşılan kanal sohbetleri için değer : `Channel`.|
-|Tarih|Döküm dosyasındaki ilk iletinin zaman damgasıdır.|
-|FamilyId|Sohbet konuşmalarının döküm dosyasını tanımlayan GUID. Ekler, bu özellik için dosyanın ekli olduğu iletiyi içeren döküm dosyasıyla aynı değere sahip olur.|
-|FileClass|Bu tür bir içeriği gösterir. Sohbetlerde Teams değeri vardır`Conversation`. Buna karşılık, Exchange-posta iletilerinin değeri vardır`Email`.|
-|MessageKind|İletinin tür özelliği. Teams değeri vardır`microsoftteams , im`.|
-|Alıcılar|Döküm konuşması içinde ileti alan tüm kullanıcıların listesi.|
-|TeamsChannelName|Dökümün Teams adı.|
+|ContainsEditedMessage|Transkript dosyasının düzenlenmiş ileti içerip içermediğini gösterir. Transkript dosyası görüntülenirken düzenlenen iletiler tanımlanır.|
+|ConversationId|Öğenin ilişkili olduğu konuşmayı tanımlayan bir GUID. Aynı konuşmadaki transkript dosyaları ve ekleri bu özellik için aynı değere sahiptir.|
+|Konuşma adı|Transkript dosyasının veya ekin ilişkili olduğu konuşmanın adı. Teams 1:1 ve grup sohbetleri için bu özelliğin değeri, konuşmanın tüm katılımcılarının UPN'sinin birleştirilmiş olmasıdır. Örneğin, `User3 <User3@contoso.onmicrosoft.com>,User4 <User4@contoso.onmicrosoft.com>,User2 <User2@contoso.onmicrosoft.com>`. Teams kanal (standart, özel ve paylaşılan) sohbetleri konuşma adı için şu biçimi kullanır: `<Team name>,<Channel name>`. Örneğin, `eDiscovery vNext, General`.|
+|ConversationType|Ekip sohbetinin türünü gösterir. Teams 1:1 ve grup sohbetleri için bu özelliğin değeri şeklindedir`Group`. Standart, özel ve paylaşılan kanal sohbetleri için değeri şeklindedir `Channel`.|
+|Tarih|Transkript dosyasındaki ilk iletinin zaman damgası.|
+|FamilyId|Sohbet konuşması için transkript dosyasını tanımlayan guid. Ekler, bu özellik için dosyanın eklendiği iletiyi içeren transkript dosyasıyla aynı değere sahip olur.|
+|FileClass|Bu içerik türünü gösterir. Teams sohbetlerdeki öğeler değerine `Conversation`sahiptir. Buna karşılık, Exchange e-posta iletileri değerine `Email`sahiptir.|
+|MessageKind|İleti türü özelliği. Teams içerik değerine `microsoftteams , im`sahiptir.|
+|Alıcı|Transkript konuşmasının içinde ileti alan tüm kullanıcıların listesi.|
+|TeamsChannelName|Transkripti Teams kanal adı.|
 
-Meta veri özellikleriyle ilgili diğer Advanced eDiscovery için bkz. Meta [veri alanlarında belge Advanced eDiscovery](document-metadata-fields-in-Advanced-eDiscovery.md).
+Diğer Advanced eDiscovery meta veri özelliklerinin açıklamaları için bkz[. Advanced eDiscovery'da belge meta veri alanları](document-metadata-fields-in-Advanced-eDiscovery.md).
 
-## <a name="export-teams-content"></a>İçerik Teams aktarma
+## <a name="export-teams-content"></a>Teams içeriğini dışarı aktarma
 
-Gözden geçirme kümesinde içeriği gözden geçirdikten Teams olduktan sonra, incelemenize yanıt veren içeriğin yer alan döküm dosyalarını dışarı aktarabilirsiniz. İçerik türü için belirli bir dışarı Teams yok. Her döküm dosyası HTML ileti dosyası olarak dışarı aktarıldı. Bu dosya, tek tek sohbet iletileri için tüm meta verileri içeren gizli CDATA etiketleri de içerir. Önceki bölümde ele edilen meta veri özellikleri, içerik Teams dahil edilir.  
+Bir gözden geçirme kümesindeki içeriği gözden geçirip Teams sonra, araştırmanıza yanıt veren içerik içeren transkript dosyalarını dışarı aktarabilirsiniz. Teams içerik için belirli bir dışarı aktarma ayarı yoktur. Her transkript dosyası bir HTML ileti dosyası olarak dışarı aktarılır. Bu dosya, tek tek sohbet iletileri için tüm meta verileri içeren gizli CDATA etiketlerini de içerir. önceki bölümde açıklanan meta veri özellikleri, Teams içerik dışarı aktarıldığında eklenir.  
 
-Yükleme dosyasında her döküm dosyasına başvurur ve yükleme dosyasındaki Export_native_path yolu kullanarak yer almaktadır. Döküm dosyaları Konuşmalar klasöründeki kök dışarı aktarma klasöründe bulunur.
+Her transkript dosyasına yük dosyasında başvurulur ve yükleme dosyasındaki Export_native_path alanındaki göreli yol kullanılarak bulunabilir. Transkript dosyaları kök dışarı aktarma klasöründeki Konuşmalar klasöründe bulunur.
 
-## <a name="tips-for-viewing-teams-content-in-a-review-set"></a>İpuçları gözden Teams görüntüleme deneyimi
+## <a name="tips-for-viewing-teams-content-in-a-review-set"></a>bir gözden geçirme kümesinde Teams içeriği görüntülemek için İpuçları
 
-Burada, gözden geçirme kümesinde içeriği Teams için bazı ipuçları ve en iyi yöntemler ve yer vardır.
+Bir inceleme kümesinde Teams içeriği görüntülemeye yönelik bazı ipuçları ve en iyi yöntemler aşağıdadır.
 
-- İçerik **içeriğinin gözden** geçirmesini iyileştirmek üzere sütunları eklemek ve düzenlemek için komut çubuğundaki Sütunları özelleştir Teams kullanın.
+- Teams içeriğinin gözden geçirilmesini iyileştirmek üzere sütun eklemek ve düzenlemek için komut çubuğundaki Sütunları **özelleştir** denetimini kullanın.
 
-  ![Sütunları eklemek, kaldırmak ve düzenlemek için Sütun uçunu düzenle sayfasını kullanın.](..\media\EditReviewSetColumns.png)
+  ![Sütunları eklemek, kaldırmak ve düzenlemek için Sütunu düzenle açılır sayfasını kullanın.](..\media\EditReviewSetColumns.png)
 
-   İçerik eklemek ve kaldırmak için yararlı olan sütunları Teams kaldırabilirsiniz. Ayrıca, Sütunları düzenleme sayfası içinde sürükleyip bırakarak da **sütunların sırasını** sıralayabilirsiniz. Ayrıca, sıralamada sütunlarda benzer Teams içeriği gruplandıran sütunlara göre de sıralayabilirsiniz.
+   Teams içerik için yararlı olan sütunları ekleyebilir ve kaldırabilirsiniz. Sütunların sırasını, **sütunu düzenle** açılır sayfasında sürükleyip bırakarak da sıralayabilirsiniz. Ayrıca, sıraladığınız sütun için benzer değerlere sahip Teams içeriği gruplandırmak için sütunları sıralayabilirsiniz.
 
-- Custo veya **Recipients**, file type Teams Message **type gibi** içeriklerini gözden geçirmenizi yardımcı **olacak** **yararlı sütunlar**.
+- Teams içeriği gözden geçirmenize yardımcı olacak yararlı sütunlar **arasında Koruyucu**, **Alıcılar** ve **Dosya türü** veya **İleti türü bulunur**.
 
-- belirli [bir](review-set-search.md) içeriği Teams için ilgili özellikler için Teams kullanın. Önceki bölümde açıklanan meta veri özelliklerinin çoğu için filtreler vardır.
+- Teams içeriği hızla görüntülemek için Teams ilgili özellikler için [filtreleri](review-set-search.md) kullanın. Önceki bölümde açıklanan meta veri özelliklerinin çoğu için filtreler vardır.
 
 ## <a name="reference-guide"></a>Başvuru kılavuzu
 
-İşte, bu kılavuzda Advanced eDiscovery kullanma Microsoft Teams. Bu kılavuz, verileri korumak, toplamak, gözden Advanced eDiscovery kaynak içeriklerini korumak, gözden geçirmek ve dışarı aktarmada Microsoft Teams.
+Microsoft Teams için Advanced eDiscovery kullanmaya yönelik hızlı başvuru kılavuzu aşağıda verilmiştir. Bu kılavuzda, Microsoft Teams içeriğini korumak, toplamak, gözden geçirmek ve dışarı aktarmak için Advanced eDiscovery kullanımına yönelik anahtar noktaları özetlemektedir.
 
-![Microsoft Teams için Advanced eDiscovery kullanma başvuru kılavuzuna Microsoft Teams.](../media/AeDTeamsReferenceGuide-thumbnail.png)
+![Microsoft Teams için Advanced eDiscovery kullanma başvuru kılavuzunun küçük resmi.](../media/AeDTeamsReferenceGuide-thumbnail.png)
 
 [PDF dosyası olarak indirme](https://download.microsoft.com/download/9/e/4/9e4eec6f-c476-452f-b414-4bd4b5c39dca/AeDTeamsReferenceGuide.pdf)

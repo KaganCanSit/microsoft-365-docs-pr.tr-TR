@@ -15,95 +15,94 @@ ms.collection:
 search.appverid:
 - MET150
 description: Veri kaybı önleme (DLP) ilkesi tasarlamayı öğrenin
-ms.openlocfilehash: 14e9fbb5efd20ddcf3d0a47da41a0cce89c88cee
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: af09197784607dd6c8f8d939f4d091b365d51799
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63526326"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64760613"
 ---
 # <a name="design-a-data-loss-prevention-policy"></a>Veri kaybı önleme ilkesi tasarlama
 
-Bir ilkeyi uygulamaya başlamadan önce tasarlamaya zaman yaratmak, istenen sonuçlara daha hızlı şekilde ulaşabilirsiniz. Bu, ilkeyi oluşturma ve ardından tek başına deneme ve hatayla ayarlamalar yapmaktan daha az sayıda ve daha az istenmeden oluşur. İlke tasarımlarınızı belgelenmiş olarak ayarlamak iletişim, ilke incelemeleri, sorun giderme ve daha fazla ayarlamada da size yardımcı olur.
+İlkeyi uygulamadan önce tasarlamaya zaman ayırarak istediğiniz sonuçlara daha hızlı ve daha az istenmeyen sorunla ulaşabilirsiniz. Bu, ilkeyi oluşturmaktan ve ardından yalnızca deneme ve hataya göre ayarlamaya kıyasla daha azdır. İlke tasarımlarınızın belgelenmesi iletişimlerde, ilke incelemelerinde, sorun gidermede ve daha fazla ayarlamada da size yardımcı olur.
 
 <!--, but excessive tuning to get the intended results can be time consuming.
 
  if you have to do a lot of tuning to get a policy to yield the intended results can be time consuming .-->
 
-DLP'de Microsoft 365 çalışıyorsanız, ilke tasarlamaya başlamadan önce şu makalelerde çalışma yararlı olur:
+Microsoft 365 DLP kullanmaya yeni başladıysanız, ilke tasarlamaya başlamadan önce şu makalelere göz atabilirsiniz:
 
-- [Veri kaybını önleme hakkında bilgi edinmek](dlp-learn-about-dlp.md#learn-about-data-loss-prevention) - Bu makalede, veri kaybı önleme disiplini ve Microsoft'un DLP'yi uygulama hakkında bilgi sağlar
-- [Veri kaybını önleme (DLP) planını](dlp-overview-plan-for-dlp.md#plan-for-data-loss-prevention-dlp) kullanın; bu makale üzerinde çalışarak şunları will:
-    - [Paydaşları tanımlama](dlp-overview-plan-for-dlp.md#identify-stakeholders)
-    - [Korunması için hassas bilgi kategorilerini açıkla](dlp-overview-plan-for-dlp.md#describe-the-categories-of-sensitive-information-to-protect)
-    - [Hedef ve strateji ayarlama](dlp-overview-plan-for-dlp.md#set-goals-and-strategy)
-- [Veri Kaybı Önleme ilke başvurusu](dlp-policy-reference.md#data-loss-prevention-policy-reference) - Bu makalede, bir DLP ilkesi tüm bileşenleri ve bunların her birinin bir ilkenin davranışını nasıl etkilemektedir
+- [Veri kaybı önleme hakkında bilgi edinin](dlp-learn-about-dlp.md#learn-about-data-loss-prevention) - bu makalede veri kaybı önleme uzmanlık alanı ve Microsoft'un DLP uygulaması tanıtılarak
+- [Veri kaybı önlemeyi (DLP) planlama](dlp-overview-plan-for-dlp.md#plan-for-data-loss-prevention-dlp) - bu makale üzerinde çalışarak şunları yapacaksınız:
+  - [Paydaşları belirleme](dlp-overview-plan-for-dlp.md#identify-stakeholders)
+  - [Korunacak hassas bilgi kategorilerini açıklama](dlp-overview-plan-for-dlp.md#describe-the-categories-of-sensitive-information-to-protect)
+  - [Hedefleri ve stratejiyi belirleme](dlp-overview-plan-for-dlp.md#set-goals-and-strategy)
+- [Veri Kaybı Önleme ilkesi başvurusu](dlp-policy-reference.md#data-loss-prevention-policy-reference) - bu makalede DLP ilkesinin tüm bileşenleri ve her birinin ilkenin davranışını nasıl etkilediği tanıtılmıştır
 
 ## <a name="policy-design-overview"></a>İlke tasarımına genel bakış
 
-[İlke tasarlama,](#policy-design-process) büyük ölçüde iş ihtiyaçlarınızı net bir şekilde tanımlama [,](#define-intent-for-the-policy) bunları bir ilke amacı bildiriminde belgelama ve sonra da bu ihtiyaçları ilke [yapılandırmasına eşlemeyle ilgilidir](#map-business-needs-to-policy-configuration). İlke tasarımı kararlarınızı bazılarına bilgi vermek için planlama aşamasında kararlarınızı kullanırsiniz. 
+[İlke tasarlamak](#policy-design-process) çoğunlukla [iş gereksinimlerinizi net bir şekilde tanımlamak, bunları bir ilke amacı bildiriminde belgeleyip](#define-intent-for-the-policy) [bu gereksinimleri ilke yapılandırmasına eşlemektir](#map-business-needs-to-policy-configuration). İlke tasarımı kararlarınızdan bazılarını bilgilendirmek için planlama aşamanızda alınan kararları kullanacaksınız.
 
-### <a name="define-intent-for-the-policy"></a>İlkenin amacını tanımlama 
+### <a name="define-intent-for-the-policy"></a>İlkenin amacını tanımlama
 
-Tek bir deyimde var olan her ilkenin iş amacını özetlemeniz gerekir. Bu bildirimin geliştirilmesi, kurum içinde konuşmaları geliştirecek ve tam olarak dikkati çekiyorsa, bu ifade ilkeyi doğrudan iş amacına bağlar ve ilke tasarımına yönelik bir yol haritası sağlar. Veri kaybını [önlemeyi planlama (DLP)](dlp-overview-plan-for-dlp.md#overview-of-planning-process) makalesinde yer alan adımlar, ilke amacı bildiriminize başlamanıza yardımcı olur.  
+Tek bir deyimde sahip olduğunuz her ilkenin iş amacını özetleyebilmelidir. Bu deyimin geliştirilmesi, kuruluşunuzdaki konuşmaları yönlendirecek ve tamamen ayrıntılı bir şekilde açıklandığında, bu bildirim ilkeyi doğrudan bir iş amacına bağlar ve ilke tasarımı için bir yol haritası sağlar. [Veri kaybı önlemeyi planlama (DLP)](dlp-overview-plan-for-dlp.md#overview-of-planning-process) makalesindeki adımlar, ilke amacı bildiriminizi kullanmaya başlamanıza yardımcı olur.
 
-[DLP ilkesi yapılandırmasına genel bakış için tüm](dlp-learn-about-dlp.md#dlp-policy-configuration-overview) DLP ilkelerinin şunları gerekli olduğunu unutmayın:
+[DLP ilkesi yapılandırmasına genel bakış](dlp-learn-about-dlp.md#dlp-policy-configuration-overview) bölümünden tüm DLP ilkelerinin şunları yapmanız gerektiğini unutmayın:
 
-- İzlemek istediğiniz şeyi seçme
+- İzlemek istediğiniz şeyi seçin
 - İzlemek istediğiniz yeri seçin
-- İlkenin bir öğeye uygulanması için eşleşmesi gereken koşulları seçme
-- İlke koşullarına uygun olduğunda eylemi seçme 
+- Bir ilkenin bir öğeye uygulanması için eşleşmesi gereken koşulları seçme
+- İlke koşulları karşılandığında gerçekleştirecek eylemi seçin
 
-Örneğin, burada, dört soruya yanıt veren bir amaç deyiminin kurgusal ilk taslağı ve bir örneği bulunmaktadır: 
+Örneğin, dört sorunun da yanıtlarını sağlayan bir amaç bildiriminin kurgusal ilk taslağı aşağıda verilmiştir:
 
-*"BIZ ABD'de tabanlı bir kuruluşuz ve HIPPA'nın kapsamış olduğu hassas sağlık hizmetleri bilgilerini OneDrive/SharePoint'de depolanan hassas sağlık bilgileri içeren Office belgelerini algılamamız ve Teams sohbeti ve kanal iletisinde paylaşılan bu bilgilere karşı korumamız ve herkesin bunları yetkisiz üçüncü taraflarla paylaşmasını kısıtlamamız gerekir."* 
+*"ABD merkezli bir kuruluşuz ve HIPPA tarafından kapsanan ve OneDrive/SharePoint depolanan hassas sağlık hizmetleri bilgilerini içeren Office belgeleri algılamamız ve Teams sohbet ve kanal iletilerinde paylaşılmakta olan bilgilere karşı koruma sağlamamız ve herkesin bunları yetkisiz üçüncü taraflarla paylaşmasını kısıtlamamız gerekiyor".*
 
-Bir ilke tasarımı geliştirirken, büyük olasılıkla bildirimi değiştirir ve genişletersiniz.
+İlke tasarımı geliştirirken büyük olasılıkla deyimini değiştirecek ve genişleteceksiniz.
 
-### <a name="map-business-needs-to-policy-configuration"></a>İşle ilgili ihtiyaçları ilke yapılandırmasına eşleme
+### <a name="map-business-needs-to-policy-configuration"></a>İş gereksinimlerini ilke yapılandırmasıyla eşleme
 
-Şimdi örnek taslak deyimini alta bırakarak DLP ilkesi yapılandırma noktalarıyla eşlenin.
+Örnek taslak deyimini bölelim ve DLP ilkesi yapılandırma noktalarıyla eşleyelim.
 
-|Deyim  |Yanıtlandı yapılandırma sorusu ve yapılandırma eşlemesi  |
+|Deyim  |Yapılandırma sorusu yanıtlandı ve yapılandırma eşlemesi  |
 |---------|---------|
-| "Biz ABD'de tabanlı bir kuruluşuz ve HIPPA tarafından kapsa Office sağlık hizmetleri bilgilerini içeren farklı belgeler algılamamız gerekiyor...  |- **Neleri izleyebilirsiniz**: Office, ABD Sağlık [Sigortası Yasası (HIPAA) şablonunu](what-the-dlp-policy-templates-include.md#us-health-insurance-act-hipaa) kullanın </br>- **Eşleşme** için koşullar: (önceden yapılandırılmış ancak düzenlenebilir) - öğe; ABD SSN ve Muntaz Yaptırım Daire (DEA) numarası, Uluslararası Daire Sınıflandırması (ICD-9-CM), Uluslararası Hastalık Sınıflandırması (ICD-10-CM), içeriği kuruluşum dışındaki kişilerle paylaşılır  </br> - konuşmaları, güven düzeyi ve örnek sayısı (sızıntı sızıntıları olarak [](sensitive-information-type-learn-about.md#more-on-confidence-levels)adlandırılan) algılama için [tetikleyen](dlp-policy-reference.md#content-contains) eşiği netleştirmeye devam eder.|
-|... ve bu bilgilerin sohbet OneDrive kanal SharePoint Teams paylaşılmalarına karşı korumak... |- **Izlanacak yer**: [Sohbet](dlp-policy-reference.md#locations)/kanal hesapları veya dağıtım grupları dahil OneDrive SharePoint ve sohbet/kanal Teams dahil ederek veya dışlayarak konumcoping. |
-|... ve herkesin bu öğeleri yetkisiz üçüncü taraflarla paylaşmasını kısıtla."  | - **Alacak işlemler**: [Belirli](dlp-policy-reference.md#actions) *konumlarda erişimi kısıtla veya içeriği Microsoft 365 gerekir* </br> - Paylaşım kısıtlamaları, bildirimler ve uyarılar gibi farkındalık eylemleri ve kullanıcının engelleme eylemlerini geçersiz kılmaya izin verme gibi kullanıcı gücü eylemleri gibi koruyucu işlemler de dahil olmak üzere bir ilke tetiklendiğinde hangi eylemlerin gerçekleştirilmesi konusunda konuşmalar devam ediyor |
+| "ABD merkezli bir kuruluşuz ve HIPPA'nın kapsadığı hassas sağlık hizmetleri bilgilerini içeren Office belgeleri algılamamız gerekiyor...  |- **İzlenecekler**: belgeleri Office, [ABD Sağlık Sigortası Yasası (HIPAA)](what-the-dlp-policy-templates-include.md#us-health-insurance-act-hipaa) şablonunu kullanın </br>- **Eşleşme koşulları**: (önceden yapılandırılmış ancak düzenlenebilir) - öğe ABD SSN ve Uyuşturucu Uygulama Dairesi (DEA) numarası, Uluslararası Hastalık Sınıflandırması (ICD-9-CM), Uluslararası Hastalık Sınıflandırması (ICD-10-CM) içerir, içerik kuruluşum dışındaki kişilerle paylaşılır  </br> - [güvenilirlik düzeyleri](sensitive-information-type-learn-about.md#more-on-confidence-levels) ve [örnek sayısı](dlp-policy-reference.md#content-contains) (sızıntıya dayanıklılık olarak adlandırılır) gibi algılama için tetikleme eşiğini netleştirmek için konuşmaları destekler.|
+|... OneDrive/SharePoint depolanan ve sohbet ve kanal iletileri Teams paylaşılan bilgilere karşı koruma sağlar... |- **İzlenecek yer**: OneDrive ve SharePoint siteleri ve Teams sohbet/kanal hesaplarını veya dağıtım gruplarını ekleyerek veya hariç tutarak [konum kapsamını](dlp-policy-reference.md#locations) belirleme. |
+|... ve herkesin bu öğeleri yetkisiz üçüncü taraflarla paylaşmalarını kısıtlayın."  | - **Yapılması gereken eylemler**[:](dlp-policy-reference.md#actions) *Erişimi kısıtla veya içeriği Microsoft 365 konumlarda şifrele* </br> - Paylaşım kısıtlamaları gibi koruyucu eylemler, bildirimler ve uyarılar gibi farkındalık eylemleri ve bir engelleme eyleminin kullanıcı geçersiz kılınmasına izin verme gibi kullanıcı güçlendirme eylemleri de dahil olmak üzere bir ilke tetiklendiğinde hangi eylemlerin gerçekleştirilmesi konusunda konuşmayı teşvik eder |
 
-Bu örnek, bir DLP ilkesine bağlı yapılandırma noktalarının hepsini kapsıyorsa, genişletilebilir olması gerekir. Ancak, kendi DLP ilkesi amacı ifadelerinizi geliştirirken doğru yönü düşünmenizi sağlar.
-
-> [!IMPORTANT]
-> Hassas bilgi türlerini, duyarlılık etiketlerini ve bekletme etiketlerini ve kullanılabilir eylemleri kullanıp kullanamayyabilirsiniz; seçenkler üzerindeki etkiyi unutmayın. Bkz. [Veri Kaybı Önleme ilke başvurusu](dlp-policy-reference.md#data-loss-prevention-policy-reference).
-
-## <a name="policy-design-process"></a>İlke Tasarım Süreci
-
-1. Aşağıdaki adımları tamamlayın:
-    1. [Veri kaybını önleme (DLP) planını](dlp-overview-plan-for-dlp.md#plan-for-data-loss-prevention-dlp) kullanın; bu makale üzerinde çalışarak şunları will:
-        1. [Paydaşlarınızı tanımlama](dlp-overview-plan-for-dlp.md#identify-stakeholders)
-        1. [Korunması için hassas bilgi kategorilerini açıkla](dlp-overview-plan-for-dlp.md#describe-the-categories-of-sensitive-information-to-protect)
-        1. [Hedef ve strateji ayarlama](dlp-overview-plan-for-dlp.md#set-goals-and-strategy)
-        1. [İlke dağıtım planınızı tanımlama](dlp-overview-plan-for-dlp.md#policy-deployment)
-
-1. DLP [ilkesinin tüm bileşenlerini](dlp-policy-reference.md#data-loss-prevention-policy-reference) ve her birinin bir ilkenin davranışını nasıl etkileyeni anlıyoruz, böylece Veri Kaybı Önleme ilke başvurusuna aşinalık sahibi olursunuz.
-
-1. [DLP ilke şablonlarının neleri dahil olduğunu kendinizi ifade edin](what-the-dlp-policy-templates-include.md#what-the-dlp-policy-templates-include).
-
-1. İlke amacı bildiriminizi önemli paydaşlarla birlikte geliştirin. Bu makalenin önceki örneğine bakın.
-
-1. Bu ilkenin genel DLP ilkesi stratejinize nasıl uyduğunu belirler.
+Bu örnek bir DLP ilkesinin tüm yapılandırma noktalarını kapsamaz, genişletilmesi gerekir. Ancak kendi DLP ilke amaç ifadelerinizi geliştirirken doğru yönde düşünmenizi sağlamalıdır.
 
 > [!IMPORTANT]
-> İlkeler oluşturulduktan sonra yeniden adlandırılamaz. Bir ilkeyi yeniden adlandırmak zorundaysanız, istediğiniz adla yeni bir ilke oluşturmalı ve eski ilkeyi devre dışı 12'den kaldırabilirsiniz. Bu nedenle, tüm ilkelerinizin şu anda kullanabileceği adlandırma yapısına karar verin. 
+> Seçtiğiniz konumların hassas bilgi türlerini, duyarlılık etiketlerini ve bekletme etiketlerini ve kullanılabilir eylemleri kullanıp kullanamayacağınızı etkileyip etkilemediğini unutmayın. Bkz. [Veri Kaybı Önleme ilkesi başvurusu](dlp-policy-reference.md#data-loss-prevention-policy-reference).
 
-6. İlke amacı bildiriminizdeki öğeleri yapılandırma seçenekleriyle eşler.
+## <a name="policy-design-process"></a>İlke Tasarım süreci
 
-7. Önceden tanımlanmış veya özel olarak hangi ilke şablonundan başlayacağınızı seçin.
+1. [Veri kaybı önlemeyi planlama (DLP)](dlp-overview-plan-for-dlp.md#plan-for-data-loss-prevention-dlp) başlığı altında yer alan adımları tamamlayın. Bu makalede şunları yapacaksınız:
+   1. [Paydaşlarınızı belirleme](dlp-overview-plan-for-dlp.md#identify-stakeholders)
+   1. [Korunacak hassas bilgi kategorilerini açıklama](dlp-overview-plan-for-dlp.md#describe-the-categories-of-sensitive-information-to-protect)
+   1. [Hedefleri ve stratejiyi belirleme](dlp-overview-plan-for-dlp.md#set-goals-and-strategy)
+   1. [İlke dağıtım planınızı tanımlama](dlp-overview-plan-for-dlp.md#policy-deployment)
 
-8. Şablonun üzerinden geçerek, ilkeyi oluşturmadan önce gereken tüm bilgileri birleştirin. İlke amacı bildiriminizin kapsamında olmayan bazı yapılandırma noktaları olduğunu büyük olasılıkla fark edersiniz. Tamam. Eksik yapılandırma noktalarının gereksinimlerini karşılamak için proje katılımcılarımıza geri gidin. 
+2. DLP ilkesinin tüm bileşenlerini ve her birinin bir ilkenin davranışını nasıl etkilediğini anlamak için [Veri Kaybı Önleme ilke başvurusu](dlp-policy-reference.md#data-loss-prevention-policy-reference) hakkında bilgi edinin.
 
-9. Tüm ilke ayarlarının yapılandırmasını belgelenin ve bunları proje katılımcılarınızı gözden geçirin. İlke amacı deyimi eşlemenizi, artık tümüyle işlerine hazır olan yapılandırma noktalarıyla yeniden kullanabilirsiniz.
+3. [DLP ilke şablonlarının neler içerdiğini](what-the-dlp-policy-templates-include.md#what-the-dlp-policy-templates-include) öğrenin.
 
-10. [Taslak ilke](create-test-tune-dlp-policy.md#create-test-and-tune-a-dlp-policy) oluşturun ve ilke dağıtım [planınıza geri](dlp-overview-plan-for-dlp.md#policy-deployment) bakın.
+4. Temel paydaşlarınızla ilke amacı bildiriminizi geliştirin. Bu makalenin önceki bölümlerindeki örne bakın.
+
+5. Bu ilkenin genel DLP ilke stratejinize nasıl uyduğunu belirleyin.
+
+   > [!IMPORTANT]
+   > İlkeler oluşturulduktan sonra yeniden adlandırılamaz. İlkeyi yeniden adlandırmanız gerekiyorsa, istenen ada sahip yeni bir ilke oluşturmanız ve eskisini devre dışı bırakmanız gerekir. Bu nedenle, tüm ilkelerinizin şimdi kullanacağı adlandırma yapısına karar verin.
+
+6. İlke amaç bildiriminizdeki öğeleri yapılandırma seçenekleriyle eşleyin.
+
+7. Hangi ilke şablonundan başlayacağınıza karar verin, önceden tanımlı veya özel.
+
+8. İlkeyi oluşturmadan önce şablonu gözden geçirip gerekli tüm bilgileri bir araya getirebilirsiniz. İlke amaç bildiriminizde yer almayan bazı yapılandırma noktaları olduğunu fark edebilirsiniz. Tamam. Eksik yapılandırma noktalarının gereksinimlerini çözmek için paydaşlarınıza Geri dön.
+
+9. Tüm ilke ayarlarının yapılandırmasını belgeleyin ve paydaşlarınızla birlikte gözden geçirin. İlke amacı deyiminizi yapılandırma noktalarına eşlemeyi yeniden kullanabilirsiniz. Bu durum artık tamamen ayrıntılı bir şekilde açıklanmış durumdadır.
+
+10. [Bir](create-test-tune-dlp-policy.md#create-test-and-tune-a-dlp-policy) taslak ilke oluşturun ve [ilke dağıtım](dlp-overview-plan-for-dlp.md#policy-deployment) planınıza geri dönün.
 
 <!--## Policy design examples
 
@@ -134,11 +133,11 @@ Bu örnek, bir DLP ilkesine bağlı yapılandırma noktalarının hepsini kapsı
 
 
 - whether the protective actions you need are supported throught the associated location or if you need to compromise to extend coverage
-    - also usefule for identifying the most restrictive actions available 
+    - also usefule for identifying the most restrictive actions available
     - (we shouldn't mention here that the "content contains" condition is the primary staple for a DLP policy and should be utilized as a starting point for policy creation. The other workload-specific conditions can be ustilized as an extended or granular control of company's DLP policy. Useful for when "too much" data is being restricted and known sensitive data typically falls under certain conditions.)
     - (We can mention here that their quantitative goal such as "protect X% of data across all locations while maintaining x productivity" can be monitored throught alerts or reports. If protection is too high of working against their established goals, they can come back to policy and tweak their conditions/actions)
-- Finally, you should have a union of what, hwo and when to be covered which will easily map to generating a live policy via Microsoft DLP. 
-- 
+- Finally, you should have a union of what, hwo and when to be covered which will easily map to generating a live policy via Microsoft DLP.
+-
 5. At this stage you should asses how you should start this policy. ***LINK OUT TO DEPLOYING A POLICY COVERED IN THE PLANNING TOPIC TOO***
     - Test: your company is very large, conservative or the actions established are pretty restrictive
     - Test w/ notifications: same as above, but you get to test out investigation cadence or volume
@@ -165,11 +164,10 @@ Here are some examples of more detailed policy intent statement to configuration
 
 -->
 
-
 ## <a name="see-also"></a>Ayrıca Bkz
 
-- [Veri kaybını önleme hakkında bilgi](dlp-learn-about-dlp.md#learn-about-data-loss-prevention)
-- [Veri kaybı önleme (DLP) planı](dlp-overview-plan-for-dlp.md#plan-for-data-loss-prevention-dlp)
-- [Veri Kaybı Önleme ilke başvurusu](dlp-policy-reference.md#data-loss-prevention-policy-reference)
-- [Veri Kaybı Önleme ilke ipuçları başvurusu](dlp-policy-tips-reference.md#data-loss-prevention-policy-tips-reference)
-- [DLP ilkesi oluşturma, sınama ve ayarlama](create-test-tune-dlp-policy.md#create-test-and-tune-a-dlp-policy)
+- [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md#learn-about-data-loss-prevention)
+- [Veri kaybı önlemeyi planlama (DLP)](dlp-overview-plan-for-dlp.md#plan-for-data-loss-prevention-dlp)
+- [Veri Kaybı Önleme ilkesi başvurusu](dlp-policy-reference.md#data-loss-prevention-policy-reference)
+- [Veri Kaybı Önleme ilkesi ipuçları referansı](dlp-policy-tips-reference.md#data-loss-prevention-policy-tips-reference)
+- [Bir DLP ilkesi oluşturma, test etme ve ayarlama](create-test-tune-dlp-policy.md#create-test-and-tune-a-dlp-policy)

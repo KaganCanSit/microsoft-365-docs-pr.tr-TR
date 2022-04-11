@@ -18,21 +18,21 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-description: Güvenlik ve Uyumluluk Merkezi'nde anahtar sözcük sözlüğü Office 365 temel & öğrenin.
-ms.openlocfilehash: ca88c57739c8734f9fcdb5d3356a44dc6a72faa5
-ms.sourcegitcommit: 99067d5eb1fa7b094e7cdb1f7be65acaaa235a54
+description: Office 365 Güvenlik & Uyumluluk Merkezi'nde anahtar sözcük sözlüğü oluşturmanın temel adımlarını öğrenin.
+ms.openlocfilehash: 64e431b5d2ef01e85eff55f39f4436786f45664b
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2022
-ms.locfileid: "63010057"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64758607"
 ---
 # <a name="create-a-keyword-dictionary"></a>Anahtar sözcük sözlüğü oluşturma
 
-Veri kaybı önleme (DLP), hassas öğelerinizi tanımlayabilir, izleyebilir ve koruyabilir. Hassas öğeleri belirlemek bazen, özellikle de genel içeriği (sağlıkla ilgili iletişim gibi) veya uygunsuz veya açık bir dilin belirlenmesi için anahtar sözcükler aramanız gerekir. Hassas bilgi türlerinde anahtar sözcük listeleri oluşturabileceksiniz, ancak anahtar sözcük listelerinin boyutu sınırlıdır ve bunları oluşturmak veya düzenlemek için XML'de değişiklik yapmak gerekir. Anahtar sözcük sözlükleri anahtar sözcüklerin daha kolay yönetimini ve çok daha büyük bir ölçekte, sözlükte 1 MB'ye kadar terimleri (sıkıştırma sonrası) destekler ve her dili destekler. Sıkıştırma sonrasında kiracı sınırı da 1 MB olur. 1 MB'lık sıkıştırma sonrası sınırı, kiracı genelindeki tüm sözlüklerin 1 milyon karaktere yakın olması anlamına gelir.
+Veri kaybı önleme (DLP), hassas öğelerinizi tanımlayabilir, izleyebilir ve koruyabilir. Hassas öğelerin tanımlanması bazen özellikle genel içeriği (sağlık hizmetleriyle ilgili iletişim gibi) veya uygunsuz veya açık dili tanımlarken anahtar sözcüklerin aranması gerekir. Hassas bilgi türlerinde anahtar sözcük listeleri oluşturabilirsiniz ancak anahtar sözcük listelerinin boyutu sınırlıdır ve bunları oluşturmak veya düzenlemek için XML'nin değiştirilmesi gerekir. Anahtar sözcük sözlükleri, sözlükte 1 MB'a kadar terimleri (sıkıştırma sonrası) destekleyen ve herhangi bir dili destekleyen anahtar sözcüklerin daha basit bir şekilde yönetilmesini ve çok daha büyük bir ölçekte yönetilmesini sağlar. Sıkıştırmadan sonra kiracı sınırı da 1 MB'tır. 1 MB sıkıştırma sonrası sınırı, kiracı genelinde birleştirilen tüm sözlüklerin 1 milyona yakın karaktere sahip olabileceği anlamına gelir.
 
 ## <a name="keyword-dictionary-limits"></a>Anahtar sözcük sözlüğü sınırları
 
-Kiracı başına oluşturulacak en fazla 50 anahtar sözcükli sözlük tabanlı hassas bilgi türü vardır. Kiracınıza kaç anahtar sözcük sözlüğünün olduğunu bulmak için, Bağlan'daki yordamları kullanarak kiracınıza bağlanmak ve bu PowerShell betiğini çalıştırmak için Güvenlik & Uyumluluk Merkezi [PowerShell'e](/powershell/exchange/connect-to-scc-powershell) bağlanın.
+Kiracı başına oluşturulabilecek 50 anahtar sözcük sözlüğü tabanlı hassas bilgi türü sınırı vardır. Kiracınızda kaç anahtar sözcük sözlükünüzün olduğunu öğrenmek için, [Bağlan güvenlik & Uyumluluk Merkezi PowerShell'e](/powershell/exchange/connect-to-scc-powershell) bağlanarak kiracınıza bağlanın ve bu PowerShell betiğini çalıştırın.
 
 ```powershell
 $rawFile = $env:TEMP + "\rule.xml"
@@ -72,57 +72,57 @@ Remove-Item $rawFile
 
 ## <a name="basic-steps-to-creating-a-keyword-dictionary"></a>Anahtar sözcük sözlüğü oluşturmanın temel adımları
 
-Sözlüğü ekleyebilirsiniz anahtar sözcükler, en yaygın olarak hizmette veya PowerShell cmdlet'i tarafından içeri aktarılan bir dosyadan (.csv veya .txt listesi gibi), doğrudan PowerShell cmdlet'ine veya var olan bir sözlükten gelen çeşitli kaynaklardan gelebilir. Anahtar sözcük sözlüğü ekleyebilirsiniz, aynı temel adımları izleyin:
+Sözlüğünüzün anahtar sözcükleri, en yaygın olarak hizmette veya PowerShell cmdlet'i tarafından içeri aktarılan bir dosyadan (.csv veya .txt listesi gibi), doğrudan PowerShell cmdlet'ine girdiğiniz bir listeden veya mevcut bir sözlükten gelen çeşitli kaynaklardan gelebilir. Anahtar sözcük sözlüğü oluşturduğunuzda aynı temel adımları izlersiniz:
 
-1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">*Uyumluluk</a> Microsoft 365 uyumluluk merkezi'i kullanın veya **PowerShell Güvenlik &amp; Uyumluluk Merkezi'ne bağlanın**.
+1. *<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> kullanın veya **Güvenlik &amp; Uyumluluk Merkezi PowerShell'e bağlanın**.
 
-2. **Anahtar sözcüklerinizi hedeflene kaynağından tanımlayın veya yüklenin**. Sihirbaz ve cmdlet, özel bir anahtar sözcük sözlüğü oluşturmak için virgülle ayrılmış bir anahtar sözcük listesini kabul eder; dolayısıyla bu adım, anahtar sözcüklerinizin geldiği yere bağlı olarak biraz değişiklik gösterir. Bunlar aktarıldıktan sonra kodlanmış ve bir byte dizisine dönüştürülürler.
+2. **Anahtar sözcüklerinizi hedeflenen kaynağınızdan tanımlayın veya yükleyin**. Sihirbaz ve cmdlet,özel anahtar sözcük sözlüğü oluşturmak için virgülle ayrılmış bir anahtar sözcük listesi kabul eder, bu nedenle bu adım anahtar sözcüklerinizin nereden geldiğine bağlı olarak biraz farklılık gösterir. Yüklendikten sonra, içeri aktarılmadan önce kodlanır ve bir bayt dizisine dönüştürülür.
 
-3. **Sözlüğü oluşturun**. Bir ad ve açıklama seçin ve sözlüğü oluşturun.
+3. **Sözlüğünüzü oluşturun**. Bir ad ve açıklama seçin ve sözlüğünüzü oluşturun.
 
-## <a name="create-a-keyword-dictionary-using-the-security--compliance-center"></a>Güvenlik ve Uyumluluk Merkezi'nde anahtar sözcük & oluşturma
+## <a name="create-a-keyword-dictionary-using-the-security--compliance-center"></a>Güvenlik & Uyumluluk Merkezi'ni kullanarak anahtar sözcük sözlüğü oluşturma
 
-Özel sözlükte anahtar sözcükleri oluşturmak ve içeri aktarma için aşağıdaki adımları kullanın:
+Özel bir sözlük için anahtar sözcükler oluşturmak ve içeri aktarmak için aşağıdaki adımları kullanın:
 
-1. Bağlan'e <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a>.
+1. Microsoft 365 uyumluluk merkezi <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Bağlan</a>.
 
-2. Sınıflandırmalar **ve Hassas > türleri'ne gidin**.
+2. **Sınıflandırmalar > Hassas bilgi türleri'ne** gidin.
 
-3. **Oluştur'a** tıklayın ve hassas **bilgi türünüz** **için** Ad ve Açıklama girin, sonra da Sonraki'yi **seçin**
+3. **Oluştur'u** seçin ve hassas bilgi türünüz için bir **Ad** ve **Açıklama** girin, ardından **İleri'yi** seçin
 
-4. Öğe **ekle'yi seçin**, sonra **da açılan listede** İçeriği algıla listesinde **Sözlük (Büyük anahtar sözcükler** ) öğesini seçin.
+4. **Öğe ekle'yi** ve **ardından Açılan** **listeden Sözlük (Büyük anahtar sözcükler)** öğesini seçin.
 
-5. Sözlük **ekle'yi seçin**
+5. **Sözlük ekle'yi** seçin
 
-6. Arama denetimi altında, Burada **yeni anahtar sözcük sözlükleri oluşturabilirsiniz öğesini seçin**.
+6. Arama denetimi altında **Burada yeni anahtar sözcük sözlükleri oluşturabilirsiniz'i** seçin.
 
-7. Özel **sözlüğüniz** için Ad girin.
+7. Özel sözlüğünüz için bir **Ad** girin.
 
-8. İçeri **Aktar'ı** seçin ve anahtar **sözcük dosya** **türünüze bağlı** olarak Metinden'i veya Csv'den'i seçin.
+8. **İçeri Aktar'ı** seçin ve anahtar sözcük dosya türünüze bağlı olarak **Metinden** veya **Csv'den'i** seçin.
 
-9. Dosya iletişim kutusunda yerel bilgisayarınızdan veya ağ dosya paylaşımından anahtar sözcük dosyasını seçin ve sonra da Aç'ı **seçin**.
+9. Dosya iletişim kutusunda yerel bilgisayarınızdan veya ağ dosya paylaşımınızdan anahtar sözcük dosyasını seçin ve ardından **Aç'ı** seçin.
 
-10. **Kaydet'i** seçin ve sonra Anahtar sözcük sözlükleri **listesinden özel sözlüğünü** seçin.
+10. **Kaydet'i** seçin ve anahtar **sözcük sözlükleri** listesinden özel sözlüğünüzü seçin.
 
-11. **Ekle'yi** ve ardından Sonraki'yi **seçin**.
+11. **Ekle'yi** ve ardından **İleri'yi** seçin.
 
-12. Hassas bilgi türü seçimlerinizi gözden geçirip son olarak bitirin ve ardından Son'a **tıklayın**.
+12. Hassas bilgi türü seçimlerinizi gözden geçirin ve sonlandırın, ardından **Son'u** seçin.
 
 ## <a name="create-a-keyword-dictionary-from-a-file-using-powershell"></a>PowerShell kullanarak bir dosyadan anahtar sözcük sözlüğü oluşturma
 
-Büyük bir sözlük oluşturmanız gereken durumlarda, çoğunlukla bir dosyadan veya başka bir kaynaktan dışarı aktarıldı bir listeden anahtar sözcükler kullanmaktır. Bu durumda, dış e-postada ekrana gelen uygunsuz dilin listesini içeren bir anahtar sözcük sözlüğü oluşturabilirsiniz. İlk olarak Güvenlik [Bağlan Uyumluluk Merkezi PowerShell& e gerek vardır](/powershell/exchange/connect-to-scc-powershell).
+Genellikle büyük bir sözlük oluşturmanız gerektiğinde, bir dosyadan veya başka bir kaynaktan dışarı aktarılan bir listeden anahtar sözcükler kullanmaktır. Bu durumda, dış e-postada ekrana alınacak uygun olmayan dilin listesini içeren bir anahtar sözcük sözlüğü oluşturacaksınız. Öncelikle [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell) gerekir.
 
 1. Anahtar sözcükleri bir metin dosyasına kopyalayın ve her anahtar sözcüğün ayrı bir satırda olduğundan emin olun.
 
-2. Metin dosyasını Unicode kodlamayla kaydedin. Farklı Not Defteri \> **Kodlama Unicode'u** \>  \> **kaydedin**.
+2. Metin dosyasını Unicode kodlama ile kaydedin. Not Defteri \> **Kodlama** \> **Unicode** **Olarak** \> Kaydet'te.
 
-3. Bu cmdlet'i çalıştırarak dosyayı değişken olarak okuyun:
+3. Şu cmdlet'i çalıştırarak dosyayı bir değişkene okuyun:
 
     ```powershell
     $fileData = [System.IO.File]::ReadAllBytes('<filename>')
     ```
 
-4. Şu cmdlet'i çalıştırarak sözlüğü oluşturun:
+4. Bu cmdlet'i çalıştırarak sözlüğü oluşturun:
 
     ```powershell
     New-DlpKeywordDictionary -Name <name> -Description <description> -FileData $fileData
@@ -130,7 +130,7 @@ Büyük bir sözlük oluşturmanız gereken durumlarda, çoğunlukla bir dosyada
 
 ## <a name="using-keyword-dictionaries-in-custom-sensitive-information-types-and-dlp-policies"></a>Özel hassas bilgi türlerinde ve DLP ilkelerinde anahtar sözcük sözlüklerini kullanma
 
-Anahtar sözcük sözlükleri, özel hassas bilgi türünün eşleşme gereksinimlerinin bir parçası olarak veya hassas bir bilgi türünün kendileri olarak kullanılabilir. Her ikisi için de özel bir [hassas bilgi türü oluşturmanız gerekir](create-a-custom-sensitive-information-type-in-scc-powershell.md). Hassas bir bilgi türü oluşturmak için bağlantılı makaledeki yönergeleri izleyin. XML'iniz olduktan sonra, sözlüğün bunu kullanabileceği GUID tanımlayıcısı gerekir.
+Anahtar sözcük sözlükleri, özel bir hassas bilgi türü için eşleştirme gereksinimlerinin bir parçası olarak veya hassas bilgi türü olarak kullanılabilir. Her ikisi de [özel bir hassas bilgi türü](create-a-custom-sensitive-information-type-in-scc-powershell.md) oluşturmanızı gerektirir. Hassas bir bilgi türü oluşturmak için bağlantılı makaledeki yönergeleri izleyin. XML'yi aldıktan sonra, sözlüğün kullanabilmesi için GUID tanımlayıcısına ihtiyacınız olacaktır.
 
 ```xml
 <Entity id="9e5382d0-1b6a-42fd-820e-44e0d3b15b6e" patternsProximity="300" recommendedConfidence="75">
@@ -140,13 +140,13 @@ Anahtar sözcük sözlükleri, özel hassas bilgi türünün eşleşme gereksini
 </Entity>
 ```
 
-Sözlüğün kimliğini almak için, bu komutu çalıştırın ve **Identity özellik değerini** kopyalayın:
+Sözlüğünüzün kimliğini almak için şu komutu çalıştırın ve **Identity** özellik değerini kopyalayın:
 
 ```powershell
 Get-DlpKeywordDictionary -Name "Diseases"
 ```
 
-Komutun çıkışı şöyle görünüyor:
+Komutun çıkışı şöyle görünür:
 
 `RunspaceId        : 138e55e7-ea1e-4f7a-b824-79f2c4252255`
 `Identity          : 8d2d44b0-91f4-41f2-94e0-21c1c5b5fc9f`
@@ -157,7 +157,7 @@ Komutun çıkışı şöyle görünüyor:
 `IsValid           : True`
 `ObjectState       : Unchanged`
 
-Kimliği özel hassas bilgi türü xml'nize yapıştırın ve karşıya yükleyin. Artık sözlüğüz hassas bilgi türleri listesinde görünür ve kaç anahtar sözcüğün eşleşmesi için gerekli olduğunu belirterek bunu ilkenize göre hemen kullanabilirsiniz.
+Kimliği özel hassas bilgi türünüzün XML'ine yapıştırın ve karşıya yükleyin. Artık sözlüğünüz hassas bilgi türleri listenizde görünür ve bunu doğrudan ilkenizde kullanabilir ve kaç anahtar sözcüğün eşleşmesi gerektiğini belirtebilirsiniz.
 
 ```xml
 <Entity id="d333c6c2-5f4c-4131-9433-db3ef72a89e8" patternsProximity="300" recommendedConfidence="85">
@@ -174,28 +174,28 @@ Kimliği özel hassas bilgi türü xml'nize yapıştırın ve karşıya yükleyi
 ```
 
 > [!NOTE]
-> Microsoft 365 Koruması aşağıdakiler için çift byte karakter kümesi dillerini destekler:
+> Microsoft 365 Information Protection için çift baytlık karakter kümesi dillerini destekler:
 >
 > - Çince (basitleştirilmiş)
 > - Çince (geleneksel)
 > - Korean
 > - Japanese
 >
-> Bu destek, hassas bilgi türlerinde kullanılabilir. Daha fazla [bilgi için çift byte karakter kümesi sürüm notları (önizleme) için Bilgi koruma](mip-dbcs-relnotes.md) desteği'ne bakın.
+> Bu destek, hassas bilgi türleri için kullanılabilir. Daha fazla bilgi için bkz. [Çift bayt karakter kümeleri için bilgi koruma desteği sürüm notları (önizleme).](mip-dbcs-relnotes.md)
 
 > [!TIP]
-> Çince/Japonca karakterler ve tek bir byte karakteri içeren desenleri algılamak veya Çince/Japonca ve İngilizce dillerini içeren desenleri algılamak için anahtar sözcüğün veya regex'in iki çeşitleni tanımlayın.
+> Çince/Japonca karakterler ve tek bayt karakterler içeren desenleri algılamak veya Çince/Japonca ve İngilizce içeren desenleri algılamak için anahtar sözcüğün veya regex'in iki değişkenini tanımlayın.
 >
-> - Örneğin, "机密的document" gibi bir anahtar sözcüğü algılamak için, anahtar sözcüğün iki çeşitleni kullanın; Japonca ve İngilizce metin arasında boşluk olmayan ve Japonca ve İngilizce metinler arasında boşluk olmayan bir metin. Dolayısıyla SIT'e eklenecek anahtar sözcükler "机密的 belgesi" ve "机密的document" olabilir. Benzer şekilde, "東京オリンピック2020" tümceciği algılamak için iki değişken kullanılmalıdır: "東京オリンピック 2020" ve "東京オリンピック2020".
+> - Örneğin, "机密的document" gibi bir anahtar sözcüğü algılamak için anahtar sözcüğün iki değişkenini kullanın; Biri Japonca ve İngilizce metin arasında boşluk, diğeri ise Japonca ve İngilizce metin arasında boşluk olmadan. Bu nedenle, SIT'e eklenecek anahtar sözcükler "机密的 belgesi" ve "机密的document" olmalıdır. Benzer şekilde, "東京オリンピック2020" ifadesini algılamak için iki değişken kullanılmalıdır; "東京オリンピック 2020" ve "東京オリンピック2020".
 >
-> Anahtar sözcükler/tümcecikler listesi Çince/Japonca sözcükler de (yalnızca İngilizce gibi) içeriyorsa, Çince/Japonca/çift byte karakterleriyle birlikte, iki sözlük/anahtar sözcük listesi oluşturmanız önerilir. Çince/Japonca/çift byte karakter içeren anahtar sözcükler için bir tane ve yalnızca İngilizce için bir tane daha.
+> Çince/Japonca/çift bayt karakterlerle birlikte, anahtar sözcükler/tümcecikler listesinde Çince/Japonca olmayan sözcükler de varsa (yalnızca İngilizce gibi), iki sözlük/anahtar sözcük listesi oluşturmanız önerilir. Biri Çince/Japonca/çift bayt karakter içeren anahtar sözcükler için, diğeri ise yalnızca İngilizce için.
 >
-> - Örneğin, "Çok gizli", "機密性が高い" ve "机密的document" ifadelerini içeren bir anahtar sözcük sözlüğü/listesi oluşturmak için iki anahtar sözcük listesi oluşturmanız gerekir.
->     1. Çok gizli
->     2. 機密性が高い, 机密的document ve 机密的 belgesi
+> - Örneğin, "Çok gizli", "機密性が高い" ve "机密的document" ifadelerini içeren bir anahtar sözcük sözlüğü/listesi oluşturmak istiyorsanız, iki anahtar sözcük listesi oluşturmanız gerekir.
+>   1. Çok gizli
+>   2. 機密性が高い, 机密的document ve 机密的 belgesi
 >
-> Çift bayt kısa çizgi veya çift byte dönemi kullanarak bir kayıtex oluşturulurken, bir kayıtex içinde bir kısa çizgi veya nokta gibi iki karakterin de kaçışta olduğundan emin olun. Başvuru için örnek bir kayıtex:
+> Çift bayt kısa çizgi veya çift bayt dönemi kullanarak bir regex oluştururken, bir kısa çizgi veya bir regex'teki nokta gibi karakterlerin her ikisine de kaçış yaptığınızdan emin olun. Başvuru için örnek bir regex aşağıda verilmiştir:
 >
-> - `(?<!\d)([４][０-９]{3}[\-?\－\t]*[０-９]{4}`
+> - `(?<!\d)([4][0-9]{3}[\-?\-\t]*[0-9]{4}`
 >
-> Anahtar sözcük listesinde sözcük eşleşmesi yerine dize eşleşmesi kullanılması önerilir.
+> Anahtar sözcük listesinde sözcük eşleşmesi yerine dize eşleşmesi kullanmanızı öneririz.

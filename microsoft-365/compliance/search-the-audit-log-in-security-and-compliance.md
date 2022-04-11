@@ -1,5 +1,5 @@
 ---
-title: Denetim günlüğünde arama Microsoft 365 uyumluluk merkezi
+title: Microsoft 365 uyumluluk merkezi denetim günlüğünde arama yapma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -17,24 +17,24 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 0d4d0f35-390b-4518-800e-0c7ec95e946c
-description: Bu Microsoft 365 uyumluluk merkezi, birleşik denetim günlüğünde arama yapmak ve kurumda kullanıcı ve yönetici etkinliğini görüntülemek için kullanın.
+description: Kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntülemek üzere birleşik denetim günlüğünde arama yapmak için Microsoft 365 uyumluluk merkezi kullanın.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: ea440ac03c648a7ae77d99d0a7be091d4f72fa64
-ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
+ms.openlocfilehash: edf5bfd91313c621707d1bdc35074bfe7fe9585c
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63405945"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64759931"
 ---
-# <a name="search-the-audit-log-in-the-compliance-center"></a>Uyumluluk merkezinde denetim günlüğünde arama yapın
+# <a name="search-the-audit-log-in-the-compliance-center"></a>Uyumluluk merkezinde denetim günlüğünde arama yapma
 
-Kullanıcının belirli bir belgeyi görüntüp görüntülemediğni veya posta kutusundan bir öğeyi temiz olup bulamadığnı bulmanız mı gerekiyor? Öyleyse, birleştirilmiş denetim günlüğünde arama yapmak için Microsoft 365 uyumluluk merkezi günlüğünde arama yapmak ve kuruluşta kullanıcı ve yönetici etkinliğini görüntülemek için Denetim Günlüğü arama aracını kullanabilirsiniz. Onlarca farklı hizmet ve Microsoft 365 gerçekleştirilen binlerce kullanıcı ve yönetici işlemi, kuruluşun birleşik denetim günlüğünde yakalanır, kaydedilir ve korunur. Bu işlemlerin denetim kayıtlarını aramak, görüntülemek ve dışarı aktararak (CSV dosyasına) aramak, görüntülemek ve dışarı aktarmak için, organizasyonu kullanan kullanıcılar denetim günlüğü arama aracını kullanabilir.
+Kullanıcının belirli bir belgeyi görüntüleyip görüntülemediğini veya bir öğeyi posta kutusundan temizleyip temizlemediğini bulmanız mı gerekiyor? Öyleyse, kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntülemek üzere birleşik denetim günlüğünde arama yapmak için Microsoft 365 uyumluluk merkezi'deki denetim günlüğü arama aracını kullanabilirsiniz. Onlarca Microsoft 365 hizmeti ve çözümünde gerçekleştirilen binlerce kullanıcı ve yönetici işlemi, kuruluşunuzun birleşik denetim günlüğünde yakalanır, kaydedilir ve saklanır. Kuruluşunuzdaki kullanıcılar, bu işlemlerin denetim kayıtlarını aramak, görüntülemek ve dışarı aktarmak (CSV dosyasına) için denetim günlüğü arama aracını kullanabilir.
 
-## <a name="microsoft-365-services-that-support-auditing"></a>Microsoft 365 desteği olan diğer hizmetler
+## <a name="microsoft-365-services-that-support-auditing"></a>Denetimi destekleyen Microsoft 365 hizmetleri
 
-Neden birleşik denetim günlüğü? Denetim günlüğünde, farklı hizmetlerde gerçekleştirilen etkinlikler için Microsoft 365 vardır. Aşağıdaki tabloda, birleşik Microsoft 365 tarafından desteklenen hizmet ve özellikler (alfabetik sırada) listelemektedir.
+Neden birleşik denetim günlüğü? Çünkü denetim günlüğünde farklı Microsoft 365 hizmetlerinde gerçekleştirilen etkinlikleri arayabilirsiniz. Aşağıdaki tabloda, birleşik denetim günlüğü tarafından desteklenen Microsoft 365 hizmetleri ve özellikleri (alfabetik sırada) listelenmektedir.
 
 | Microsoft 365 hizmeti veya özelliği | Kayıt türleri|
 |:---------|:---------|
@@ -44,10 +44,10 @@ Neden birleşik denetim günlüğü? Denetim günlüğünde, farklı hizmetlerde
 | İçerik gezgini|LabelContentExplorer|
 | Veri kaybı önleme (DLP)|ComplianceDLPSharePoint, ComplianceDLPExchange, DLPEndpoint|
 | Dynamics 365|CRM|
-| eKbulma|Keşif, AeD|
+| Ediscovery|Bulma, AeD|
 | Tam Veri Eşleşmesi|MipExactDataMatch|
 | Exchange Online|ExchangeAdmin, ExchangeItem, ExchangeItemAggregated |
-| Formlar|MicrosoftForms|
+| Forms|MicrosoftForms|
 | Bilgi engelleri|InformationBarrierPolicyApplication|
 | Microsoft 365 Defender|AirInvestigation, AirManualInvestigation, AirAdminActionInvestigation, MS365DCustomDetection|
 | Microsoft Teams|MicrosoftTeams|
@@ -62,82 +62,82 @@ Neden birleşik denetim günlüğü? Denetim günlüğünde, farklı hizmetlerde
 | Duyarlılık etiketleri|MIPLabel, SensitivityLabelAction, SensitivityLabeledFileAction, SensitivityLabelPolicyMatch|
 | SharePoint Online|SharePoint, SharePointFileOperation,SharePointSharingOperation, SharePointListOperation, SharePointCommentOperation |
 | Stream|MicrosoftStream|
-| Tehdit İstihbaratı|ThreatIntelligence, ThreatIntelligenceUrl, ThreatFinder, ThreatIntelligenceAtpContent|
+| Tehdit Analizi|ThreatIntelligence, ThreatIntelligenceUrl, ThreatFinder, ThreatIntelligenceAtpContent|
 | Workplace Analytics|WorkplaceAnalytics|
 | Yammer|Yammer|
 |||
 
-Önceki tabloda listelenen hizmetlerin her biri üzerinde denetlenen işlemler hakkında daha fazla bilgi için, bu makalenin Denetlenen [etkinlikler bölümüne](#audited-activities) bakın.
+Önceki tabloda listelenen hizmetlerin her birinde denetlenen işlemler hakkında daha fazla bilgi için bu makaledeki [Denetlenen etkinlikler](#audited-activities) bölümüne bakın.
 
-Önceki tabloda, Exchange Online PowerShell'de **Search-UnifiedAuditLog** cmdlet'ini kullanarak veya bir PowerShell betiği kullanarak ilgili hizmette etkinlikler için denetim günlüğünde arama yapmak için kullanmak üzere kayıt türü değeri de tanımlandı. Bazı hizmetlerin, aynı hizmet kapsamındaki farklı etkinlik türleri için birden çok kayıt türü vardır. Denetim kayıt türlerinin daha eksiksiz bir listesi için bkz. Office 365 [Yönetim Etkinliği API'si şeması](/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
+Önceki tabloda, Exchange Online PowerShell'de **Search-UnifiedAuditLog** cmdlet'ini kullanarak veya bir PowerShell betiği kullanarak ilgili hizmetteki etkinlikler için denetim günlüğünde arama yapmak için kullanılacak kayıt türü değeri de tanımlanır. Bazı hizmetlerin aynı hizmet içindeki farklı etkinlik türleri için birden çok kayıt türü vardır. Denetim kaydı türlerinin daha eksiksiz bir listesi için bkz. [Office 365 Yönetim Etkinliği API'si şeması](/office/office-365-management-api/office-365-management-activity-api-schema#auditlogrecordtype).
 
  Denetim günlüğünde arama yapmak için PowerShell kullanma hakkında daha fazla bilgi için bkz:
 
 - [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog)
 
-- [Denetim günlüğünde arama yapmak için PowerShell betiği kullanma](audit-log-search-script.md)
+- [Denetim günlüğünü aramak için PowerShell betiği kullanma](audit-log-search-script.md)
 
-## <a name="before-you-search-the-audit-log"></a>Denetim günlüğünde aramadan önce
+## <a name="before-you-search-the-audit-log"></a>Denetim günlüğünde arama yapmadan önce
 
-Denetim günlüğünde arama yapmaya başlamadan önce aşağıdaki öğeleri okuduğundan emin olun.
+Denetim günlüğünde arama yapmaya başlamadan önce aşağıdaki öğeleri okuduğunuzdan emin olun.
 
-- Denetim günlüğü araması, kurumsal kuruluşlar tarafından denetlenen Microsoft 365 Office 365 açıktır. Denetim günlüğü aramanın açık olduğunu doğrulamak için, PowerShell'de aşağıdaki Exchange Online çalıştırabilirsiniz:
+- Microsoft 365 ve Office 365 kuruluşlarında denetim günlüğü araması varsayılan olarak açıktır. Denetim günlüğü aramasının açık olduğunu doğrulamak için Exchange Online PowerShell'de aşağıdaki komutu çalıştırabilirsiniz:
 
   ```powershell
   Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled
   ```
 
-  `True` *UnifiedAuditLogIngestionEnabled* özelliğinin değeri, denetim günlüğü aramasında izinlerin açık olduğunu gösterir. Daha fazla bilgi için bkz [. Denetim günlüğü aramalarını açma veya kapatma](turn-audit-log-search-on-or-off.md).
+  *UnifiedAuditLogIngestionEnabled* özelliğinin değeri`True`, denetim günlüğü aramasının açık olduğunu gösterir. Daha fazla bilgi için bkz [. Denetim günlüğü aramasını açma veya kapatma](turn-audit-log-search-on-or-off.md).
 
-- Denetim günlüğünde arama View-Only için Exchange Online Günlükleri veya Denetim Günlükleri rolüne atanmış Exchange Online gerekir. Varsayılan olarak, bu roller yönetim merkezinin İzinler sayfasında yer alan Uyumluluk Yönetimi ve Kuruluş Exchange atanır. Office 365 ve Microsoft 365 genel yöneticiler otomatik olarak Kuruluş Yönetimi rol grubuna üye olarak Exchange Online. Kullanıcıya denetim günlüğünde en düşük düzeydeki ayrıcalıklarla arama yapma olanağı vermek için, Exchange Online'de özel bir rol grubu oluşturabilir, View-Only Denetim Günlükleri veya Denetim Günlükleri rolünü ekleyebilir ve sonra da kullanıcıyı yeni rol grubunun üyesi olarak ebilirsiniz. Daha fazla bilgi için bkz[. Gruptaki rol gruplarını Exchange Online](/Exchange/permissions-exo/role-groups).
+- Denetim günlüğünde arama yapmak için Exchange Online'da View-Only Denetim Günlükleri veya Denetim Günlükleri rolüne atanmış olmanız gerekir. Varsayılan olarak, bu roller Exchange yönetim merkezindeki **İzinler** sayfasındaki Uyumluluk Yönetimi ve Kuruluş Yönetimi rol gruplarına atanır. Office 365 ve Microsoft 365'deki genel yöneticiler otomatik olarak Exchange Online'da Kuruluş Yönetimi rol grubunun üyeleri olarak eklenir. Kullanıcıya en düşük ayrıcalık düzeyiyle denetim günlüğünde arama yapma olanağı vermek için, Exchange Online'da özel bir rol grubu oluşturabilir, View-Only Denetim Günlükleri veya Denetim Günlükleri rolünü ekleyebilir ve kullanıcıyı yeni rol grubunun bir üyesi olarak ekleyebilirsiniz. Daha fazla bilgi için bkz. [Exchange Online rol gruplarını yönetme](/Exchange/permissions-exo/role-groups).
 
   > [!IMPORTANT]
-  > Kullanıcıya denetim View-Only İzinler sayfasındaki Denetim Günlükleri veya Denetim Günlükleri Microsoft 365 uyumluluk merkezi atarsanız,  denetim günlüğünde arama yapmak mümkün olmayacaktır. İzinleri aynı dosyanın Exchange Online. Çünkü, denetim günlüğünde arama yapmak için kullanılan temel cmdlet, bir Exchange Online cmdlet'tir.
+  > Kullanıcıya Microsoft 365 uyumluluk merkezi İzinler sayfasında Denetim Günlükleri veya Denetim **Günlükleri** rolünü View-Only atarsanız, denetim günlüğünde arama yapamaz. İzinleri Exchange Online atamanız gerekir. Bunun nedeni, denetim günlüğünde arama yapmak için kullanılan temel cmdlet'in Exchange Online bir cmdlet olmasıdır.
 
-- Kullanıcı veya yönetici tarafından denetlenen bir etkinlik gerçekleştirilen, bir denetim kaydı oluşturulur ve kuruluşun denetim günlüğünde depolanır. Denetim kaydının korunma süresi (denetim günlüğünde aranabilir) süresi Office 365 veya Microsoft 365 Kurumsal aboneliğinize ve özel olarak belirli kullanıcılara atanan lisansın türüne bağlıdır.
+- Bir kullanıcı veya yönetici tarafından denetlenen bir etkinlik gerçekleştirildiğinde, bir denetim kaydı oluşturulur ve kuruluşunuz için denetim günlüğünde depolanır. Denetim kaydının tutulacak süresi (ve denetim günlüğünde aranabilir) Office 365 veya Microsoft 365 Kurumsal aboneliğinize ve özellikle belirli kullanıcılara atanan lisansın türüne bağlıdır.
 
-  - Office 365 E5 veya Microsoft 365 E5 lisansı atanmış kullanıcılar için (ya da Microsoft 365 E5 Uyumluluk veya Microsoft 365 E5 eBulma ve Denetim eklenti lisansına sahip kullanıcılar), Azure Active Directory, Exchange ve SharePoint etkinlikleri varsayılan olarak bir yıl süreyle korunur. Kuruluşlar ayrıca, diğer hizmetlerde bir yıla kadar olan etkinliklerle ilgili denetim kayıtlarını tutmak için denetim günlüğü bekletme ilkeleri oluşturabilir. Daha fazla bilgi için bkz [. Denetim günlüğü bekletme ilkelerini yönetme](audit-log-retention-policies.md).
-
-    > [!NOTE]
-    > Bir yıllık denetim kayıtlarının elde tutulması için özel önizleme programına organizasyonunız katıldısa, genel kullanılabilirlik sürümü tarihi önce oluşturulan denetim kayıtlarının bekletme süresi sıfırlanmaz.
-
-  - E5 dışında bir lisansa veya başka bir Office 365 Microsoft 365 atanmış kullanıcılar için, denetim kayıtları 90 gün boyunca korunur. Birleşik denetim günlüğünü destekleyen Office 365 Microsoft 365 aboneliklerin listesi için, güvenlik [ve uyumluluk merkezi hizmet açıklamasına bakın](/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center).
+  - Office 365 E5 veya Microsoft 365 E5 lisansı (veya Microsoft 365 E5 Uyumluluk veya Microsoft 365 E5 eBulma ve Denetim eklentisi lisansına sahip kullanıcılar) atanan kullanıcılar için, Azure Active Directory, Exchange ve SharePoint etkinliği varsayılan olarak bir yıl boyunca saklanır. Kuruluşlar ayrıca diğer hizmetlerdeki etkinliklerin denetim kayıtlarını bir yıla kadar saklamak için denetim günlüğü saklama ilkeleri oluşturabilir. Daha fazla bilgi için bkz. [Denetim günlüğü saklama ilkelerini yönetme](audit-log-retention-policies.md).
 
     > [!NOTE]
-    > Posta kutusu denetimi varsayılan olarak açık olduğunda bile, bazı kullanıcılar için posta kutusu denetim olaylarının Microsoft 365 uyumluluk merkezi'ta veya Office 365 Yönetim Etkinliği API'si aracılığıyla yer olmadığını farkebilirsiniz. Daha fazla bilgi için bkz [. Posta kutusu denetim günlüğü hakkında daha fazla bilgi](enable-mailbox-auditing.md#more-information).
+    > Kuruluşunuz denetim kayıtlarının bir yıllık saklaması için özel önizleme programına katıldıysa, genel kullanılabilirlik dağıtım tarihinden önce oluşturulan denetim kayıtlarının saklama süresi sıfırlanmaz.
 
-- Kuruluşlarınız için denetim günlüğü aramalarını kapatmak için, aşağıdaki komutu Exchange Online bağlı uzak PowerShell'de çalıştırabilirsiniz:
+  - Başka herhangi bir (E5 olmayan) Office 365 veya Microsoft 365 lisansı atanmış kullanıcılar için denetim kayıtları 90 gün boyunca saklanır. Birleşik denetim günlüğünü destekleyen Office 365 ve Microsoft 365 aboneliklerinin listesi için [güvenlik ve uyumluluk merkezi hizmet açıklamasına](/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center) bakın.
+
+    > [!NOTE]
+    > Posta kutusu denetimi varsayılan olarak açık olsa bile, bazı kullanıcılar için posta kutusu denetim olaylarının Microsoft 365 uyumluluk merkezi veya Office 365 Yönetim Etkinliği API'sinin denetim günlüğü aramalarında bulunmadığını fark edebilirsiniz. Daha fazla bilgi için bkz. [Posta kutusu denetim günlüğü hakkında daha fazla bilgi](enable-mailbox-auditing.md#more-information).
+
+- Kuruluşunuz için denetim günlüğü aramasını kapatmak istiyorsanız, Exchange Online kuruluşunuza bağlı uzak PowerShell'de aşağıdaki komutu çalıştırabilirsiniz:
 
   ```powershell
   Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $false
   ```
 
-    Denetim aramanızı yeniden açmak için, PowerShell'de aşağıdaki Exchange Online çalıştırabilirsiniz:
+    Denetim aramasını yeniden açmak için Exchange Online PowerShell'de aşağıdaki komutu çalıştırabilirsiniz:
 
   ```powershell
   Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
   ```
 
-  Daha fazla bilgi için bkz [. Denetim günlüğü aramalarını kapatma](turn-audit-log-search-on-or-off.md).
+  Daha fazla bilgi için bkz. [Denetim günlüğü aramasını kapatma](turn-audit-log-search-on-or-off.md).
 
-- Daha önce de belirtildiği gibi, denetim günlüğünde arama yapmak için kullanılan temel cmdlet, **Search-UnifiedAuditLog** olan bir Exchange Online cmdlet'tir. Başka bir ifadeyle, bu cmdlet'i kullanarak denetim günlüğünde arama yapmak için denetim sayfasındaki arama **aracını Microsoft 365 uyumluluk merkezi.** Bu cmdlet'i Exchange Online PowerShell'de çalıştırabilirsiniz. Daha fazla bilgi için bkz. [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog).
+- Daha önce belirtildiği gibi, denetim günlüğünde arama yapmak için kullanılan temel alınan cmdlet, **Search-UnifiedAuditLog** olan bir Exchange Online cmdlet'idir. Bu, Microsoft 365 uyumluluk merkezi **Denetim sayfasındaki arama** aracını kullanmak yerine denetim günlüğünde arama yapmak için bu cmdlet'i kullanabileceğiniz anlamına gelir. Bu cmdlet'i Exchange Online PowerShell'de çalıştırmanız gerekir. Daha fazla bilgi için bkz [. Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog).
 
-  **Search-UnifiedAuditLog** cmdlet'i tarafından döndürülen arama sonuçlarını bir CSV dosyasına aktarma hakkında bilgi için, Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme konusunda yer alan "İpuçları denetim günlüğünü dışarı aktarma ve görüntüleme" bölümüne [bakın](export-view-audit-log-records.md#tips-for-exporting-and-viewing-the-audit-log).
+  **Search-UnifiedAuditLog** cmdlet'i tarafından döndürülen arama sonuçlarını csv dosyasına dışarı aktarma hakkında bilgi için, Denetim [günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md#tips-for-exporting-and-viewing-the-audit-log) bölümündeki "Denetim günlüğünü dışarı aktarma ve görüntüleme İpuçları" bölümüne bakın.
 
-- Denetim günlüğünden verileri programlı olarak indirmek için, PowerShell betiği kullanmak yerine Office 365 Yönetim Etkinliği API'sini öneririz. En Office 365 Yönetimi Etkinlik API'si, işletme, güvenlik ve uyumluluk izleme çözümleri geliştirmek için kullanabileceğiniz bir REST web hizmetidir. Daha fazla bilgi için bkz[. Office 365 API başvurusu.](/office/office-365-management-api/office-365-management-activity-api-reference)
+- Denetim günlüğünden program aracılığıyla veri indirmek istiyorsanız, PowerShell betiği kullanmak yerine Office 365 Yönetim Etkinliği API'sini kullanmanızı öneririz. Office 365 Yönetim Etkinliği API'si, kuruluşunuz için işlemler, güvenlik ve uyumluluk izleme çözümleri geliştirmek için kullanabileceğiniz bir REST web hizmetidir. Daha fazla bilgi için bkz. [Office 365 Yönetim Etkinliği API başvurusu](/office/office-365-management-api/office-365-management-activity-api-reference).
 
-- Azure Active Directory (Azure AD), etki alanınız için dizin Microsoft 365. Birleşik denetim günlüğü, yönetim portalında veya Azure yönetim portalında gerçekleştirilen kullanıcı, Microsoft 365 yönetim merkezi, uygulama, etki <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank"></a> alanı ve dizin etkinliklerini içerir. Azure AD olaylarının tam listesi için bkz. [Denetim Azure Active Directory Olaylarını denetleme](/azure/active-directory/reports-monitoring/concept-audit-logs).
+- Azure Active Directory (Azure AD), Microsoft 365 için dizin hizmetidir. Birleşik denetim günlüğü, <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> veya Azure yönetim portalında gerçekleştirilen kullanıcı, grup, uygulama, etki alanı ve dizin etkinliklerini içerir. Azure AD olaylarının tam listesi için bkz. [Denetim Raporu Olayları Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
-- Bir olay gerçekleşirken ilgili denetim günlüğü kaydının bir denetim günlüğü araması sonucunda döndürül olması 30 dakika veya 24 saate kadar sürebilir. Aşağıdaki tabloda, iş yer alan farklı hizmetler için gereken Microsoft 365.
+- İlgili denetim günlüğü kaydının bir denetim günlüğü aramasının sonuçlarında döndürüldükten sonra bir olayın gerçekleşmesi 30 dakika veya 24 saate kadar sürebilir. Aşağıdaki tabloda, Microsoft 365'deki farklı hizmetler için gereken süre gösterilmektedir.
 
   |Microsoft 365 hizmeti veya özelliği|30 dakika|24 saat|
   |---|:---:|:---:|
-  |Güvenlik ve Tehdit Microsoft 365 için Defender|![Onay işareti.](../media/checkmark.png)||
+  |Microsoft 365 ve Tehdit Bilgileri için Defender|![Onay işareti.](../media/checkmark.png)||
   |Azure Active Directory (kullanıcı oturum açma olayları)||![Onay işareti.](../media/checkmark.png)|
   |Azure Active Directory (yönetici olayları)||![Onay işareti.](../media/checkmark.png)|
-  |Veri Kaybını Önleme|![Onay işareti.](../media/checkmark.png)||
+  |Veri Kaybı Önleme|![Onay işareti.](../media/checkmark.png)||
   |Dynamics 365 CRM||![Onay işareti.](../media/checkmark.png)|
-  |eKbulma|![Onay işareti.](../media/checkmark.png)||
+  |Ediscovery|![Onay işareti.](../media/checkmark.png)||
   |Exchange Online|![Onay işareti.](../media/checkmark.png)||
   |Microsoft Power Automate||![Onay işareti.](../media/checkmark.png)|
   |Microsoft Stream|![Onay işareti.](../media/checkmark.png)||
@@ -152,133 +152,133 @@ Denetim günlüğünde arama yapmaya başlamadan önce aşağıdaki öğeleri ok
   |Microsoft Forms|![Onay işareti.](../media/checkmark.png)||
   ||||
 
-- Denetim günlüğü Power BI varsayılan olarak etkin değildir. Denetim günlüğünde Power BI etkinlikleri aramak için bu yönetim portalında denetimi Power BI gerekir. Yönergeler için, yönetim portalında yer alan "Denetim günlükleri" [Power BI bakın](/power-bi/service-admin-portal#audit-logs).
+- Power BI için denetim günlüğü varsayılan olarak etkin değildir. Denetim günlüğünde Power BI etkinlik aramak için, Power BI yönetici portalında denetimi etkinleştirmeniz gerekir. Yönergeler için Power BI [yönetici portalındaki](/power-bi/service-admin-portal#audit-logs) "Denetim günlükleri" bölümüne bakın.
 
-## <a name="search-the-audit-log"></a>Denetim günlüğünde arama
+## <a name="search-the-audit-log"></a>Denetim günlüğünde arama yapma
 
-Denetim günlüğünde arama ve arama Microsoft 365.
+Microsoft 365'da denetim günlüğünde arama yapma işlemi aşağıdadır.
 
 [1. Adım: Denetim günlüğü araması çalıştırma](#step-1-run-an-audit-log-search)
 
 [2. Adım: Arama sonuçlarını görüntüleme](#step-2-view-the-search-results)
 
-[3. Adım: Arama sonuçlarını dosyaya aktarma](#step-3-export-the-search-results-to-a-file)
+[3. Adım: Arama sonuçlarını bir dosyaya aktarma](#step-3-export-the-search-results-to-a-file)
 
 ### <a name="step-1-run-an-audit-log-search"></a>1. Adım: Denetim günlüğü araması çalıştırma
 
-1. Gidin ve <https://compliance.microsoft.com> oturum açma.
+1. <https://compliance.microsoft.com> adresine gidin ve oturum açın.
 
     > [!TIP]
-    > Oturum açma bilgilerine erişmek için gizli gözatma oturumu (normal oturum Microsoft 365 uyumluluk merkezi) kullanın, çünkü bu oturum açmış durumdaki oturum açma bilgilerinizin kullanımını engellez. Google Chrome'da (gizli pencere olarak adlandırılan) Microsoft Edge'da veya gizli gözatma oturumunda InPrivate Gözatma oturumu açmak için **CTRL+SHIFT+N** tuşlarına basın.
+    > Microsoft 365 uyumluluk merkezi erişmek için özel gözatma oturumu (normal oturum değil) kullanın çünkü bu, şu anda oturum açtığınız kimlik bilgilerinin kullanılmasını engeller. Microsoft Edge'da InPrivate Gözatma oturumu veya Google Chrome'da özel gözatma oturumu (gizli pencere olarak adlandırılır) açmak için **CTRL+SHIFT+N** tuşlarına basın.
 
-2. Denetim bölmesinin sol Microsoft 365 uyumluluk merkezi'a **tıklayın**.
+2. Microsoft 365 uyumluluk merkezi sol bölmesinde **Denetim'e** tıklayın.
 
-    **Denetim sayfası** görüntülenir.
+    **Denetim** sayfası görüntülenir.
 
-    ![Ölçütleri yapılandırarak raporu çalıştırmak için Ara'ya tıklayın.](../media/AuditLogSearchPage1.png)
+    ![Ölçütleri yapılandırın ve ardından raporu çalıştırmak için Ara'ya tıklayın.](../media/AuditLogSearchPage1.png)
 
     > [!NOTE]
-    > Kullanıcı **ve yönetici etkinliği kaydını başlat bağlantısı** görüntüleniyorsa, denetimi açmak için bu bağlantıya tıklayın. Bu bağlantıyı görmüyorsanız, organizasyonunız için denetim açıktır.
+    > **Kullanıcı ve yönetici etkinliği kaydını başlat** bağlantısı görüntüleniyorsa, denetimi açmak için bu bağlantıya tıklayın. Bu bağlantıyı görmüyorsanız, kuruluşunuz için denetim açıktır.
 
-3. Arama **sekmesinde** , aşağıdaki arama ölçütlerini yapılandırabilirsiniz:
+3. **Arama** sekmesinde aşağıdaki arama ölçütlerini yapılandırın:
 
-   1. **Başlangıç tarihi** ve **Bitiş tarihi**: Varsayılan olarak son yedi gün seçilidir. Bir tarih ve saat aralığında 2013 olayları görüntülemek için, o tarih ve saat aralığını seçin. Tarih ve saat, yerel saatle birlikte sunulacaktır. Belirtmezseniz, en uzun tarih aralığı 90 gündür. Seçilen tarih aralığı 90'dan fazla gün ise, bir hata görüntülenir.
+   1. **Başlangıç tarihi** ve **Bitiş tarihi**: Son yedi gün varsayılan olarak seçilidir. Bu dönemde gerçekleşen olayları görüntülemek için bir tarih ve saat aralığı seçin. Tarih ve saat yerel saatte gösterilir. Belirtebileceğiniz maksimum tarih aralığı 90 gündür. Seçilen tarih aralığı 90 günden büyükse bir hata görüntülenir.
 
     > [!TIP]
-    > En uzun tarih aralığı olan 90 gün kullanıyorsanız, Başlangıç tarihi için geçerli **saati seçin**. Aksi takdirde, başlangıç tarihini bitiş tarihinden önce olduğunu söyleyen bir hata alırsınız. Denetimi son 90 gün içinde tekrar kullandıysanız, en uzun tarih aralığı denetimin açık olduğu tarihten önce baş yürümez.
+    > En fazla 90 gün tarih aralığı kullanıyorsanız **Başlangıç tarihi** için geçerli saati seçin. Aksi takdirde, başlangıç tarihinin bitiş tarihinden önce olduğunu belirten bir hata alırsınız. Son 90 gün içinde denetimi açtıysanız, maksimum tarih aralığı denetimin açıldığı tarihten önce başlayamaz.
 
-   2. **Etkinlikler**: Arayabilirsiniz etkinlikleri görüntülemek için açılan listeye tıklayın. Kullanıcı ve yönetici etkinlikleri, ilgili etkinlik grupları halinde düzenlenmiştir. Belirli etkinlikleri seçerek veya etkinlik grubu adına tıklar ve gruptaki tüm etkinlikleri seçersiniz. Ayrıca, seçimi temizlemek için seçili bir etkinliği de tıklarsiniz. Siz arama çalıştırdikten sonra, yalnızca seçili etkinliklere ait denetim günlüğü girdileri görüntülenir. Tüm etkinlikler **için sonuçları göster seçildiğinde** , seçilen kullanıcı veya kullanıcı grubu tarafından gerçekleştirilen tüm etkinliklere yönelik sonuçlar görüntülenir.<br/><br/>Denetim günlüğüne 100'den fazla kullanıcı ve yönetici etkinlikleri kaydedilir. Farklı **hizmetlerin her bir** etkinliğine ilişkin açıklamaları görmek için, bu makalenin konu başlığı altında Denetlenen etkinlikler sekmesine tıklayın.
+   2. **Etkinlikler**: Arayabileceğiniz etkinlikleri görüntülemek için açılan listeye tıklayın. Kullanıcı ve yönetici etkinlikleri ilgili etkinlik grupları halinde düzenlenir. Belirli etkinlikleri seçebilir veya etkinlik grubu adına tıklayarak gruptaki tüm etkinlikleri seçebilirsiniz. Seçimi temizlemek için seçili bir etkinliğe de tıklayabilirsiniz. Aramayı çalıştırdıktan sonra, yalnızca seçili etkinlikler için denetim günlüğü girişleri görüntülenir. **Tüm etkinlikler için sonuçları göster** seçildiğinde, seçilen kullanıcı veya kullanıcı grubu tarafından gerçekleştirilen tüm etkinliklerin sonuçları görüntülenir.<br/><br/>Denetim günlüğüne 100'den fazla kullanıcı ve yönetici etkinliği kaydedilir. Farklı hizmetlerin her birindeki her etkinliğin açıklamalarını görmek için bu makalenin konu başlığındaki **Denetlenen etkinlikler** sekmesine tıklayın.
 
-   3. **Kullanıcılar**: Bu kutuya tıklayın ve arama sonuçlarını görüntülemek için bir veya birden çok kullanıcı seçin. Bu kutuda seçtiğiniz kullanıcılar tarafından gerçekleştirilen seçili etkinliğin denetim günlüğü girdileri, sonuç listesinde görüntülenir. Tüm kullanıcılara (ve hizmet hesaplarına) ait girdilerin kuruma geri dönmesi için bu kutuyu boş bırakın.
+   3. **Kullanıcılar**: Bu kutuya tıklayın ve arama sonuçlarını görüntülemek üzere bir veya daha fazla kullanıcı seçin. Bu kutuda seçtiğiniz kullanıcılar tarafından gerçekleştirilen seçili etkinliğin denetim günlüğü girişleri, sonuç listesinde görüntülenir. Kuruluşunuzdaki tüm kullanıcıların (ve hizmet hesaplarının) girdilerini döndürmek için bu kutuyu boş bırakın.
 
-   4. **Dosya, klasör veya site**: Belirtilen anahtar sözcüğü içeren klasör dosyasıyla ilgili etkinliği aramak için dosya veya klasör adının bir veya hepsini yazın. Dosya veya klasörün URL'sini de belirtebilirsiniz. URL kullanıyorsanız, tam URL yolunun yaz olduğundan emin olun veya URL'nin bir bölümünü yazın; özel karakter ya da boşluk içerme (bununla birlikte, joker karakter ()\* kullanımı destekler).<br/><br/>Kuruma ait tüm dosya ve klasörlere ait girdilerin geri dönmesi için bu kutuyu boş bırakın.
+   4. **Dosya, klasör veya site**: Belirtilen anahtar sözcüğü içeren klasör dosyasıyla ilgili etkinliği aramak için bir dosya veya klasör adının bir kısmını veya tümünü yazın. Ayrıca bir dosya veya klasörün URL'sini de belirtebilirsiniz. URL kullanıyorsanız, tam URL yolunu yazdığınızdan veya URL'nin bir bölümünü yazdığınızdan emin olun, özel karakter veya boşluk eklemeyin (ancak joker karakter (\*) kullanılması desteklenir).<br/><br/>Kuruluşunuzdaki tüm dosya ve klasörlerin girdilerini döndürmek için bu kutuyu boş bırakın.
 
     > [!TIP]
     >
-    > - Bir **siteyle** ilgili tüm etkinlikleri arıyorsanız, URL'den sonra bir siteye ilişkin tüm girdileri vermek için joker karakteri (\*) ekleyin; örneğin, `"https://contoso-my.sharepoint.com/personal*"`.
+    > - **Bir siteyle** ilgili tüm etkinlikleri arıyorsanız, url'nin arkasına joker karakteri (\*) ekleyerek bu sitenin tüm girdilerini döndürebilirsiniz; örneğin, `"https://contoso-my.sharepoint.com/personal*"`.
     >
-    > - Bir dosyayla ilgili tüm etkinlikleri arıyorsanız **, bu** dosyayla ilgili tüm girdilerin geri dönmesi için dosya adının önünde joker karakteri (\*) ekleyin; örneğin, `"*Customer_Profitability_Sample.csv"`.
+    > - Bir **dosyayla** ilgili tüm etkinlikleri arıyorsanız, dosya adının önüne joker karakteri (\*) ekleyerek bu dosyanın tüm girdilerini (örneğin, `"*Customer_Profitability_Sample.csv"`) döndürebilirsiniz.
 
-4. Arama **ölçütlerinizi** kullanarak arama çalıştırmak için Ara'ya tıklayın.
+4. Arama ölçütlerinizi kullanarak aramayı çalıştırmak için **Ara'ya** tıklayın.
 
-   Arama sonuçları yüklenir ve birkaç dakika sonra yeni bir sayfada görüntülenir. Arama tamamlandığında, bulunan sonuç sayısı görüntülenir. 150 olaylık artışlarla en çok 50.000 olay görüntülenir. Arama ölçütlerine uyan 50.000'den fazla olay varsa, yalnızca 50.000 sıralanmamış olay görüntülenir.
+   Arama sonuçları yüklenir ve birkaç dakika sonra yeni bir sayfada görüntülenir. Arama tamamlandığında, bulunan sonuç sayısı görüntülenir. 150 olaylık artışlarla en fazla 50.000 olay görüntülenir. Arama ölçütlerini karşılayan 50.000'den fazla olay varsa, yalnızca döndürülen 50.000 sıralanmamış olay görüntülenir.
 
-   ![Arama tamamlendikten sonra sonuç sayısı görüntülenir.](../media/986216f1-ca2f-4747-9480-e232b5bf094c.png)
+   ![Arama tamamlandıktan sonra sonuç sayısı görüntülenir.](../media/986216f1-ca2f-4747-9480-e232b5bf094c.png)
 
-#### <a name="tips-for-searching-the-audit-log"></a>İpuçları günlüğünde arama aramanın nasıl iş olduğunu denetleme
+#### <a name="tips-for-searching-the-audit-log"></a>Denetim günlüğünde arama için İpuçları
 
-- Etkinlik adına tıklayarak aramak istediğiniz belirli etkinlikleri seçin. Veya grup adına tıklayarak bir gruptaki (Dosya ve klasör etkinlikleri **gibi) tüm** etkinlikler için arama da gerçekleştirebilirsiniz. Bir etkinlik seçiliyse, bu etkinliği tıklar ve seçimi iptal edebilirsiniz. Ayrıca, anahtar sözcüğü içeren etkinlikleri görüntülemek için arama kutusunu da kullanabilirsiniz.
+- Etkinlik adına tıklayarak aranacak belirli etkinlikleri seçebilirsiniz. Ya da grup adına tıklayarak bir gruptaki tüm etkinlikleri ( **Dosya ve klasör etkinlikleri** gibi) arayabilirsiniz. Bir etkinlik seçiliyse, seçimi iptal etmek için bu etkinliğe tıklayabilirsiniz. Yazdığınız anahtar sözcüğü içeren etkinlikleri görüntülemek için arama kutusunu da kullanabilirsiniz.
 
-  ![Tüm etkinlikleri seçmek için etkinlik grup adına tıklayın.](../media/3cde97cb-6f35-47c0-8612-ecd9c6ac36a3.png)
+  ![Tüm etkinlikleri seçmek için etkinlik grubu adına tıklayın.](../media/3cde97cb-6f35-47c0-8612-ecd9c6ac36a3.png)
 
-- Yönetici denetim **günlüğünde yer alan olayları görüntülemek için**, Etkinlikler listesinde  Tüm etkinlikler için Exchange seçmeniz gerekir. Bu denetim günlüğünden gelen olaylar için sonuçların Etkinlik sütununda bir cmdlet adı (örneğin, **Set-Mailbox**) görüntülenir. Daha fazla bilgi için, **bu konunun Denetlenen** etkinlikler sekmesine tıklayın ve sonra da Exchange **etkinliklerine tıklayın**.
+- Exchange yönetici denetim günlüğündeki olayları görüntülemek için **Etkinlikler** listesindeki **tüm etkinlikler için sonuçları göster'i** seçmeniz gerekir. Bu denetim günlüğündeki olaylar, sonuçlardaki **Etkinlik** sütununda bir cmdlet adı (örneğin, **Set-Mailbox**) görüntüler. Daha fazla bilgi için bu **konudaki Denetlenen etkinlikler** sekmesine tıklayın ve ardından **yönetici etkinlikleri Exchange** tıklayın.
 
-  Benzer şekilde, Etkinlikler listesinde karşılık gelen bir öğesi olmayan bazı **denetim etkinlikleri de** vardır. Bu etkinlikler için yapılan işlemlerin adını biliyorsanız, tüm etkinlikler için arama yapmak ve ardından arama sonuçlarını CSV dosyasına aktardikten sonra işlemleri filtrelemek için bu işlemlere filtre uygulamanız gerekir.
+  Benzer şekilde, **Etkinlikler** listesinde karşılık gelen bir öğeye sahip olmayan bazı denetim etkinlikleri vardır. Bu etkinlikler için işlemin adını biliyorsanız, tüm etkinlikleri arayabilir ve arama sonuçlarını bir CSV dosyasına aktardıktan sonra işlemleri filtreleyebilirsiniz.
 
-- Geçerli **arama ölçütlerini** temizlemek için Temizle'ye tıklayın. Tarih aralığı, varsayılan değer olan son yedi gün değerine döner. Ayrıca, tüm seçili **etkinlikleri iptal etmek için Tüm etkinliklerin sonuçlarını göstermek için** de Tüm temizle'yi tıklatın.
+- Geçerli arama ölçütlerini temizlemek için **Temizle'ye** tıklayın. Tarih aralığı, son yedi günün varsayılan değerini döndürür. Tüm seçili etkinlikleri iptal **etmek üzere tüm etkinliklerin sonuçlarını göstermek için Tümünü temizle'ye** de tıklayabilirsiniz.
 
-- 50.000 sonuç bulunursa, büyük olasılıkla arama ölçütlerine uyan 50.000'den çok olay olduğunu varsayabilirsiniz. Daha az sonuç elde etmek için arama  \> ölçütlerini daraltarak aramaya yeniden çalıştırabilirsiniz veya Sonuçları dışarı aktar Tüm sonuçları indir'i seçerek tüm arama sonuçlarını dışarı **aktarabilirsiniz**.
+- 50.000 sonuç bulunursa, büyük olasılıkla arama ölçütlerine uyan 50.000'den fazla olay olduğunu varsayabilirsiniz. Arama ölçütlerini daraltabilir ve daha az sonuç döndürmek için aramayı yeniden çalıştırabilir veya Sonuçları \> **dışarı aktar** **Tüm sonuçları indir'i** seçerek arama sonuçlarının tümünü dışarı aktarabilirsiniz.
 
 ### <a name="step-2-view-the-search-results"></a>2. Adım: Arama sonuçlarını görüntüleme
 
-Denetim günlüğü aramanın sonuçları Denetim günlüğü **araması sayfasındaki** **Sonuçlar'ın altında** görüntülenir. Daha önce de belirtildiği gibi, 150 olaylık artışlarla en çok 50.000 (en yeni) olay görüntülenir. Sonraki 150 olayları **görüntülemek için kaydırma çubuğunu kullanın veya Shift + End** tuşlarına basın.
+Denetim günlüğü aramasının sonuçları Denetim **günlüğü arama** sayfasındaki **Sonuçlar** altında görüntülenir. Daha önce belirtildiği gibi, en fazla 50.000 (en yeni) olay 150 olaylık artışlarla görüntülenir. Sonraki 150 olayı görüntülemek için kaydırma çubuğunu kullanın veya **Shift + End** tuşlarına basın.
 
 Sonuçlar, arama tarafından döndürülen her olay hakkında aşağıdaki bilgileri içerir:
 
-- **Tarih**: Olayın yaşandığı tarih ve saat (yerel saatinize göre).
+- **Tarih**: Olayın gerçekleştiği tarih ve saat (yerel saatinizde).
 
-- **IP adresi**: Etkinlik günlüğe kaydedilirken kullanılan cihazın IP adresi. IP adresi, IPv4 veya IPv6 adres biçiminde görüntülenir.
+- **IP adresi**: Etkinlik günlüğe kaydedilirken kullanılan cihazın IP adresi. IP adresi IPv4 veya IPv6 adres biçiminde görüntülenir.
 
    > [!NOTE]
-  > Bazı hizmetlerde, bu alanda görüntülenen değer etkinliği yapan kişi tarafından kullanılan cihazın IP adresi değil, kullanıcı adına hizmeti çağıran güvenilen bir uygulamanın IP adresi (örneğin, Web üzerinde Office uygulamaları) olabilir. Ayrıca, ilgili etkinlikler için yönetici etkinliği (veya sistem hesabı tarafından gerçekleştirilen Azure Active Directory), IP adresi günlüğe kaydedilmez ve bu alanda görüntülenen değerdir`null`.
+  > Bazı hizmetler için, bu alanda görüntülenen değer, etkinliği gerçekleştiren kişinin kullandığı cihazın IP adresi değil, kullanıcı adına hizmete çağrı yapan güvenilir bir uygulamanın IP adresi (örneğin, Web üzerinde Office uygulamalar) olabilir. Ayrıca, Azure Active Directory ile ilgili olaylar için yönetici etkinliği (veya bir sistem hesabı tarafından gerçekleştirilen etkinlik) için IP adresi günlüğe kaydedilmez ve bu alanda görüntülenen değer olur`null`.
 
 - **Kullanıcı**: Olayı tetikleyen eylemi gerçekleştiren kullanıcı (veya hizmet hesabı).
 
-- **Etkinlik**: Kullanıcı tarafından gerçekleştirilen etkinlik. Bu değer, Etkinlikler açılan listesinde seçtiğiniz **etkinliklere** karşılık gelen bir değerdir. Yönetici denetim günlüğünden Exchange için, bu sütundaki değer bir Exchange cmdlet'tir.
+- **Etkinlik**: Kullanıcı tarafından gerçekleştirilen etkinlik. Bu değer **, Etkinlikler** açılan listesinde seçtiğiniz etkinliklere karşılık gelir. Exchange yönetici denetim günlüğündeki bir olay için bu sütundaki değer bir Exchange cmdlet'idir.
 
-- **Öğe**: İlgili etkinliğin sonucunda oluşturulan veya değiştirilen nesne. Örneğin, görüntülenen veya değiştirilen dosya ya da güncelleştirilen kullanıcı hesabı. Tüm etkinliklerin bu sütunda değeri yoktur.
+- **Öğe**: İlgili etkinliğin sonucu olarak oluşturulan veya değiştirilen nesne. Örneğin, görüntülenen veya değiştirilen dosya veya güncelleştirilen kullanıcı hesabı. Tüm etkinliklerin bu sütunda değeri yoktur.
 
-- **Ayrıntı**: Etkinlik hakkında ek bilgiler. Bir kez daha, tüm etkinliklerin değeri yoktur.
+- **Ayrıntı**: Etkinlik hakkında ek bilgiler. Yine, tüm etkinliklerin bir değeri yoktur.
 
 > [!TIP]
-> Sonuçları sıralamak için **Sonuçlar'ın altındaki** sütun başlığına tıklayın. Sonuçları A'dan Z'ye veya Z'den A'ya sıralayın. Sonuçları en eskiden en yeniye veya en yeniden en eskiye doğru sıralamak için Tarih üst bilginize tıklayın.
+> Sonuçları sıralamak için **Sonuçlar'ın** altında bir sütun başlığına tıklayın. Sonuçları A'dan Z'ye veya Z'den A'ya sıralayabilirsiniz. Sonuçları en eskiden en yeniye veya en yeniden en eskiye sıralamak için **Tarih** üst bilgisine tıklayın.
 
 #### <a name="view-the-details-for-a-specific-event"></a>Belirli bir olayın ayrıntılarını görüntüleme
 
-Arama sonuçları listesinde olay kaydına tıklayarak, olayla ilgili daha fazla ayrıntı görüntüebilirsiniz. Olay kaydından ayrıntılı özellikleri içeren bir çıkış sayfası görüntülenir. Görüntülenen özellikler, olayın oluştuğu hizmete bağlıdır. 
+Arama sonuçları listesinde olay kaydına tıklayarak bir olay hakkında daha fazla ayrıntı görüntüleyebilirsiniz. Olay kaydındaki ayrıntılı özellikleri içeren bir açılır sayfa görüntülenir. Görüntülenen özellikler, olayın gerçekleştiği hizmete bağlıdır. 
 
-### <a name="step-3-export-the-search-results-to-a-file"></a>3. Adım: Arama sonuçlarını dosyaya aktarma
+### <a name="step-3-export-the-search-results-to-a-file"></a>3. Adım: Arama sonuçlarını bir dosyaya aktarma
 
-Denetim günlüğü aramalarının sonuçlarını yerel bilgisayarınızdan bir virgülle ayrılmış değer (CSV) dosyasına aktarabilirsiniz. Bu dosyayı başka bir dosyada Microsoft Excel arama, sıralama, filtreleme ve tek sütunu (birden çok özellik içeren) birden çok sütuna bölme gibi özellikleri kullanabilirsiniz.
+Denetim günlüğü aramasının sonuçlarını yerel bilgisayarınızdaki virgülle ayrılmış değer (CSV) dosyasına aktarabilirsiniz. Bu dosyayı Microsoft Excel açabilir ve arama, sıralama, filtreleme ve tek bir sütunu (birden çok özellik içeren) birden çok sütuna bölme gibi özellikleri kullanabilirsiniz.
 
-1. Denetim günlüğü arama çalıştırın ve ardından istediğiniz sonuçları elde inceye kadar arama ölçütlerini düzeltin.
+1. Bir denetim günlüğü araması çalıştırın ve istediğiniz sonuçları elde edene kadar arama ölçütlerini düzeltin.
 
-2. Arama sonuçları sayfasında Dışarı Aktar Tüm **sonuçları** **yükle'ye** >  tıklayın.
+2. Arama sonuçları sayfasında **Dışarı Aktar** >  **Tüm sonuçları indir'e** tıklayın.
 
-   Denetim günlüğünden arama ölçütlerine uyan tüm girdiler BIR CSV dosyasına dışarı aktarıldı. Denetim günlüğünden alınan ham veriler CSV dosyasına kaydedilir. Denetim günlüğü girdisine ilişkin ek bilgiler, CSV'de **Denetim Verileri adlı** sütuna ek olarak yer almaktadır.
+   Denetim günlüğünden arama ölçütlerine uyan tüm girdiler CSV dosyasına aktarılır. Denetim günlüğündeki ham veriler bir CSV dosyasına kaydedilir. Denetim günlüğü girdisindeki ek bilgiler CSV'de **AuditData** adlı bir sütuna eklenir.
 
      > [!IMPORTANT]
-     > Tek bir denetim günlüğü aramalarından CSV dosyasına en çok 50.000 girdi indirebilirsiniz. CSV dosyasına 50.000 girdi indirilirse, büyük olasılıkla arama ölçütlerine uyan 50.000'den çok olay olduğunu varsayabilirsiniz. Bu sınırdan fazlasını dışarı aktarmayı deneyin ve denetim günlüğü girdilerinin sayısını azaltmak için bir tarih aralığı kullanmayı deneyin. 50.000'den fazla girdiyi dışarı aktaracak şekilde, daha küçük tarih aralıklarında birden çok arama çalıştırmaya gerek kullanabilirsiniz.
+     > Tek bir denetim günlüğü aramasından CSV dosyasına en fazla 50.000 girdi indirebilirsiniz. CSV dosyasına 50.000 girdi indirilirse, büyük olasılıkla arama ölçütlerine uyan 50.000'den fazla olay olduğunu varsayabilirsiniz. Bu sınırdan daha fazlasını dışarı aktarmak için, denetim günlüğü girdilerinin sayısını azaltmak için bir tarih aralığı kullanmayı deneyin. 50.000'den fazla girişi dışarı aktarmak için daha küçük tarih aralıklarıyla birden çok arama çalıştırmanız gerekebilir.
 
-3. Dışarı aktarma işlemi tamamlandıktan sonra, pencerenin en üstünde CSV dosyasını açmanızı ve yerel bilgisayarınıza kaydetmenizi istediğiniz bir ileti görüntülenir. Csv dosyasına, İndirmeler klasöründen de erişebilirsiniz.
+3. Dışarı aktarma işlemi tamamlandıktan sonra pencerenin üst kısmında CSV dosyasını açmanızı ve yerel bilgisayarınıza kaydetmenizi isteyen bir ileti görüntülenir. CSV dosyasına İndirmeler klasöründen de erişebilirsiniz.
 
 #### <a name="more-information-about-exporting-and-viewing-audit-log-search-results"></a>Denetim günlüğü arama sonuçlarını dışarı aktarma ve görüntüleme hakkında daha fazla bilgi
 
-- Tüm arama sonuçlarını indirmişken, CSV dosyası Oluşturma **Tarihi**, **Kullanıcı** Kimlikleri, İşlemler **ve Denetim** Verileri **sütunlarını içerir**. **Denetim Verileri sütunu** her olay hakkında ek bilgi içerir (uyumluluk merkezinde arama sonuçlarını görüntülendiğinde görüntülenen ayrıntılı bilgilere benzer). Bu sütundaki veriler, denetim günlüğü kaydından birden çok özelliği içeren JSON nesnelerinden oluşur. JSON *nesnesinde* her özellik:değer çifti virgülle ayrılır. denetim verileri sütununu birden çok sütuna bölmek için Excel'de Power Query Düzenleyicisi'nde JSON dönüştürme aracını kullanabilirsiniz; böylece JSON nesnesinde her özelliğin kendi sütunu olur. Bu özellik, bu özelliklerden birini veya birden fazlasını sıralama ve filtrelemenizi sağlar. Power Query Düzenleyicisi'ni kullanarak JSON nesnesini dönüştürmeye ilişkin adım adım yönergeler için bkz. Denetim günlüğü kayıtlarını dışarı aktarma [, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
+- Tüm arama sonuçlarını indirdiğinizde CSV dosyası **CreationDate**, **UserIds**, **Operations** ve **AuditData** sütunlarını içerir. **AuditData** sütunu her olay hakkında ek bilgiler içerir (uyumluluk merkezinde arama sonuçlarını görüntülediğinizde açılır sayfada görüntülenen ayrıntılı bilgilere benzer). Bu sütundaki veriler, denetim günlüğü kaydından birden çok özellik içeren bir JSON nesnesinden oluşur. JSON nesnesindeki her *özellik:değer* çifti virgülle ayrılır. **AuditData** sütununu birden çok sütuna bölerek JSON nesnesindeki her özelliğin kendi sütununa sahip olması için Excel'daki Power Query Düzenleyicisi JSON dönüştürme aracını kullanabilirsiniz. Bu, bu özelliklerden birini veya daha fazlasını sıralamanıza ve filtrelemenize olanak tanır. JSON nesnesini dönüştürmek için Power Query Düzenleyicisi kullanarak adım adım yönergeler için bkz. [Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
 
-  Denetim Verileri sütununu **böldikten** sonra, belirli bir etkinlik türünün ayrıntılı  özelliklerini görüntülemek için İşlemler sütununa göre filtre kullanabilirsiniz.
+  **AuditData** sütununu böldükten sonra, belirli bir etkinlik türünün ayrıntılı özelliklerini görüntülemek için **İşlemler** sütununu filtreleyebilirsiniz.
 
-- Farklı hizmetlerden olaylar içeren bir arama sorgusunun tüm sonuçlarını indirerek, eylemin gerçekleştir  olduğu hizmete bağlı olarak CSV dosyasındaki Denetim Verileri sütununda farklı özellikler bulunur. Örneğin, Exchange Azure AD denetim günlüklerinden gelen girdiler, eylemin başarılı olup olmadığını gösteren **ResultStatus** adlı bir özellik içerir. Bu özellik diğer olaylara SharePoint. Benzer şekilde SharePoint etkinliklerin de dosya ve klasörle ilgili etkinlikler için site URL'sini tanımlayan bir özelliği vardır. Bu davranışı azaltmak için, tek bir hizmetten gelen etkinliklere yönelik sonuçları dışarı aktarmada farklı aramalar kullanmayı göz önünde bulundurabilirsiniz.
+- Farklı hizmetlerden olaylar içeren bir arama sorgusundan tüm sonuçları indirdiğinizde, CSV dosyasındaki **AuditData** sütunu eylemin hangi hizmette gerçekleştirildiğine bağlı olarak farklı özellikler içerir. Örneğin, Exchange ve Azure AD denetim günlüklerindeki girdiler, eylemin başarılı olup olmadığını gösteren **ResultStatus** adlı bir özellik içerir. Bu özellik SharePoint'daki olaylara dahil değildir. Benzer şekilde, SharePoint olayları, dosya ve klasörle ilgili etkinlikler için site URL'sini tanımlayan bir özelliğe sahiptir. Bu davranışı azaltmak için, etkinliklerin sonuçlarını tek bir hizmetten dışarı aktarmak için farklı aramalar kullanmayı göz önünde bulundurun.
 
-  Tüm sonuçları indir uygulandığında CSV dosyasındaki **Denetim** Verileri sütununda listelenen özelliklerin birçoğuna ve her birinin uygulandığı hizmete ilişkin açıklama için bkz. Denetim günlüğünde ayrıntılı [özellikler](detailed-properties-in-the-office-365-audit-log.md).
+  Tüm sonuçları ve her birinin geçerli olduğu hizmeti indirdiğinizde CSV dosyasındaki **AuditData** sütununda listelenen özelliklerin birçoğunun açıklaması için bkz. [Denetim günlüğündeki Ayrıntılı özellikler](detailed-properties-in-the-office-365-audit-log.md).
 
 ## <a name="audited-activities"></a>Denetlenen etkinlikler
 
-Bu bölümdeki tablolarda, bu bölümdeki tablolarda denetlenen Microsoft 365. Bu olayları aramak için güvenlik ve uyumluluk merkezinde denetim günlüğünde arama yapın.
+Bu bölümdeki tablolarda, Microsoft 365 denetlenen etkinlikler açıklanmaktadır. Güvenlik ve uyumluluk merkezindeki denetim günlüğünde arama yaparak bu olayları arayabilirsiniz.
 
-Bu tablolar, ilgili etkinlikleri veya belirli bir hizmetten gelen etkinlikleri gruplar. Tablolarda, Etkinlikler açılan listesinde görüntülenen kolay ad ve arama sonuçlarını  dışarı aktarsanız bir denetim kaydının ayrıntılı bilgisinde ve CSV dosyasında görüntülenen ilgili işlemi içeren işlem adı yer almaktadır. Ayrıntılı bilgilerin açıklamaları için bkz. [Denetim günlüğünde ayrıntılı özellikler](detailed-properties-in-the-office-365-audit-log.md).
+Bu tablolar ilgili etkinlikleri veya belirli bir hizmetten gelen etkinlikleri gruplandırır. Tablolar, **Etkinlikler** açılan listesinde görüntülenen kolay adı ve bir denetim kaydının ayrıntılı bilgilerinde ve arama sonuçlarını dışarı aktardığınızda CSV dosyasında görünen ilgili işlemin adını içerir. Ayrıntılı bilgilerin açıklamaları için [denetim günlüğündeki Ayrıntılı özellikler bölümüne](detailed-properties-in-the-office-365-audit-log.md) bakın.
 
-Belirli bir tabloya gitmek için aşağıdaki bağlantılardan birini tıklatın.
+Belirli bir tabloya gitmek için aşağıdaki bağlantılardan birine tıklayın.
 
 :::row:::
     :::column:::
@@ -288,7 +288,7 @@ Belirli bir tabloya gitmek için aşağıdaki bağlantılardan birini tıklatın
         [Klasör etkinlikleri](#folder-activities)
     :::column-end:::
     :::column:::
-        [SharePoint etkinlikleri ekleme](#sharepoint-list-activities)
+        [Liste etkinliklerini SharePoint](#sharepoint-list-activities)
     :::column-end:::
 :::row-end:::
 
@@ -309,7 +309,7 @@ Belirli bir tabloya gitmek için aşağıdaki bağlantılardan birini tıklatın
         [Site yönetimi etkinlikleri](#site-administration-activities)
     :::column-end:::
     :::column:::
-        [Exchange kutusu etkinliklerini geri alın](#exchange-mailbox-activities)
+        [Posta kutusu etkinliklerini Exchange](#exchange-mailbox-activities)
     :::column-end:::
     :::column:::
         [Kullanıcı yönetimi etkinlikleri](#user-administration-activities)
@@ -354,10 +354,10 @@ Belirli bir tabloya gitmek için aşağıdaki bağlantılardan birini tıklatın
 
 :::row:::
     :::column:::
-        [Microsoft Teams Sağlık etkinlikleri](#microsoft-teams-healthcare-activities)
+        [Microsoft Teams Healthcare etkinlikleri](#microsoft-teams-healthcare-activities)
     :::column-end:::
     :::column:::
-        [Microsoft Teams Vardiyalar etkinlikleri](#microsoft-teams-shifts-activities)
+        [Microsoft Teams Vardiyaları etkinlikleri](#microsoft-teams-shifts-activities)
     :::column-end:::
     :::column:::
         [Yammer etkinlikleri](#yammer-activities)
@@ -381,7 +381,7 @@ Belirli bir tabloya gitmek için aşağıdaki bağlantılardan birini tıklatın
         [İçerik gezgini etkinlikleri](#content-explorer-activities)
     :::column-end:::
     :::column:::
-        [Etkinlikleri karantinaya alın](#quarantine-activities)
+        [Karantina etkinlikleri](#quarantine-activities)
     :::column-end:::
     :::column:::
         [Microsoft Forms etkinlikleri](#microsoft-forms-activities)
@@ -396,7 +396,7 @@ Belirli bir tabloya gitmek için aşağıdaki bağlantılardan birini tıklatın
         [Bekletme ilkesi ve bekletme etiketi etkinlikleri](#retention-policy-and-retention-label-activities)
     :::column-end:::
     :::column:::
-        [E-posta etkinliklerini brifing](#briefing-email-activities)
+        [E-posta etkinliklerini bilgilendirme](#briefing-email-activities)
     :::column-end:::
 :::row-end:::
 
@@ -408,390 +408,390 @@ Belirli bir tabloya gitmek için aşağıdaki bağlantılardan birini tıklatın
         [Bilgi engelleri etkinlikleri](#information-barriers-activities)
     :::column-end:::
     :::column:::
-        [Disposition review activities](#disposition-review-activities)
+        [Gözden geçirme etkinliklerini değerlendirme](#disposition-review-activities)
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        [İletişim uyumluluğu etkinlikleri](#communication-compliance-activities)
+        [İletişim uyumluluk etkinlikleri](#communication-compliance-activities)
     :::column-end:::
     :::column:::
-        [Etkinlikleri bildirme](#report-activities)
+        [Rapor etkinlikleri](#report-activities)
     :::column-end:::
     :::column:::
-        [Exchange etkinliklerini yönet](#exchange-admin-audit-log)
+        [yönetici etkinliklerini Exchange](#exchange-admin-audit-log)
     :::column-end:::
 :::row-end:::
 
 ### <a name="file-and-page-activities"></a>Dosya ve sayfa etkinlikleri
 
-Aşağıdaki tabloda, SharePoint Online ve OneDrive İş'de dosya ve sayfa etkinlikleri açık OneDrive İş.
+Aşağıdaki tabloda, SharePoint Online ve OneDrive İş'daki dosya ve sayfa etkinlikleri açıklanmaktadır.
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Dosyaya erişildi|FileAccessed|Kullanıcı veya sistem hesabı bir dosyaya erişmektedir. Kullanıcı bir dosyaya eriştirilsin mi, fileAccessed olayı sonraki beş dakika boyunca aynı kullanıcı için yeniden aynı dosya için günlüğe kaydedilmez.|
-|(yok)|FileAccessedExtended|Bu durum, "Dosyaya erişildi" (FileAccessed) etkinliğiyle ilgilidir. Aynı kişi bir dosyaya uzun bir süre boyunca (3 saate kadar) sürekli olarak erişenin FileAccessedExtended etkinliği günlüğe kaydedilir. <br/><br/> FileAccessedExtended etkinliklerinin günlüğe kaydediliş amacı, bir dosyaya sürekli olarak erişilirken günlüğe kaydedilen FileAccessed etkinlikleri sayısını azaltmaktır. Bu, aynı kullanıcı etkinliğine karşı birden çok FileAccessed kaydı gürültünün azaltılmasına ve başlangıçtaki (ve daha önemli olan) FileAccessed etkinliğine odaklanmanıza yardımcı olur.|
-|Dosyanın bekletme etiketi değiştirildi|ComplianceSettingChanged|Belgeye uygulanmış veya belgeden kaldırılmış bir bekletme etiketi. Bir bekletme etiketi el ile veya otomatik olarak iletiye uygulandığında bu olay tetiklenir.|
-|Kayıt durumu kilitli olarak değiştirildi|LockRecord|Belgeyi kayıt kilitli olarak sınıflara alan bir bekletme etiketinin kayıt durumu. Bu, belgenin değiştirilile veya silinemez olduğu anlamına gelir. Yalnızca site için katılımcı izni atanan kullanıcılar belgenin kayıt durumunu değiştirebilir.|
-|Kayıt durumu kilidi açık olarak değiştirildi|UnlockRecord|Belgeyi kayıt kilidinin açık olduğu şekilde sınıflandı olarak sınıflandına sahip bir bekletme etiketinin kayıt durumu. Bu, belgenin değiştirilil geri silinebilir veya silinebilir olduğu anlamına gelir. Yalnızca site için katılımcı izni atanan kullanıcılar belgenin kayıt durumunu değiştirebilir.|
-|Dosya iade edildi|FileCheckedIn|Kullanıcı belge kitaplığından kullanıma alınmış bir belgeyi iade etti.|
-|Dosya kullanıma alınmış|FileCheckedOut|Kullanıcı belge kitaplığında bulunan bir belgeyi kontrol etti. Kullanıcılar, kendileriyle paylaşılan belgeleri iade etmek ve bu belgelerde değişiklik yapmak için kullanılabilir.|
-|Dosya kopyalandı|FileCopied|Kullanıcı siteden bir belge kopyalatır. Kopyalanan dosya sitede başka bir klasöre kaydedilebilir.|
-|Dosya silindi|FileDeleted|Kullanıcı siteden bir belge sildi.|
-|Dosya geri dönüşüm kutusu'dan silindi|FileDeletedFirstStageRecycleBin|Kullanıcı sitenin geri dönüşüm kutusunu kullanarak dosyayı sildi.|
-|Dosya ikinci aşama geri dönüşüm kutusu'dan silindi|FileDeletedSecondStageRecycleBin|Kullanıcı sitenin ikinci aşama geri dönüşüm kutusunu kullanarak dosyayı sildi.|
-|Kayıt olarak işaretlenen dosya silindi|RecordDelete|Kayıt olarak işaretlenmiş bir belge veya e-posta silinmiştir. Öğelere kayıt olarak işaret alan bir bekletme etiketi uygulandığında, öğe kayıt olarak kabul edilir.|
-|Algılanan belge duyarlılık eşleşmesi|DocumentSensitivityMismatchDetected|Kullanıcı bir belgeyi bir duyarlılık etiketiyle korunan bir siteye yükledi ve belgenin siteye uygulanan duyarlılık etiketinden daha yüksek öncelikli bir duyarlılık etiketi var. Örneğin, Gizli etiketli bir belge Genel etiketli bir siteye karşıya karşıya yüklenen bir belgedir. <br/><br/> Belgenin siteye uygulanan duyarlılık etiketinden daha düşük öncelikli bir duyarlılık etiketi varsa bu olay tetikli değildir. Örneğin, Genel etiketli bir belge Gizli etiketli bir siteye karşıya karşıya yük olur. Duyarlılık etiketi önceliği hakkında daha fazla bilgi için bkz. [Etiket önceliği (sipariş konuları)](sensitivity-labels.md#label-priority-order-matters).|
-|Dosyada kötü amaçlı yazılım algılandı|FileMalwareDetected|SharePoint virüsten koruma altyapısı bir dosyada kötü amaçlı yazılım algılar.|
-|Dosya kullanıma alındı|FileCheckOutDiscarded|Kullanıcı kullanıma alınmış bir dosyayı atmış (veya geri almış) . Bu, kullanıma alındıklarında dosya üzerinde yaptığı tüm değişikliklerin atılmış olduğu ve belgenin belge kitaplığında sürümüne kaydedilene kadar geçerli olduğu anlamına gelir.|
-|İndirilen dosya|FileDownloaded|Kullanıcı siteden bir belge indirildi.|
-|Dosya değiştirildi|FileModified|Kullanıcı veya sistem hesabı, siteden bir belgenin içeriği veya özellikleri üzerinde değişiklik gösterir. Aynı kullanıcı aynı belgenin içeriğinde veya özelliklerinde değişiklik olduğunda sistem, başka bir FileModified olayı için günlük oluşturmadan önce beş dakika bekler.|
-|(yok)|FileModifiedExtended|Bu durum, "Değiştirilmiş dosya" (FileModified) etkinliğiyle ilgilidir. Aynı kişi bir dosyayı uzun bir süre boyunca (3 saate kadar) sürekli olarak değiştiren FileModifiedExtended etkinliği günlüğe kaydedilir. <br/><br/> FileModifiedExtended etkinliklerinin günlüğe kaydedilme amacı, bir dosya sürekli olarak değiştirildiğinde günlüğe kaydedilen FileModified etkinlikleri sayısını azaltmaktır. Bu, aynı kullanıcı etkinliğine uygun olması için birden fazla FileModified kaydı gürültünün azaltılmasına ve başlangıçtaki (ve daha önemli olan) FileModified etkinliğine odaklanmanıza yardımcı olur.|
-|Dosya taşındı|FileMoved|Kullanıcı bir belgeyi sitenin geçerli bulunduğu konumdan yeni bir konuma taşır.|
-|(yok)|FilePreviewed|Kullanıcı site sitesinde veya site SharePoint önizlemede OneDrive İş görüntüdedir. Bu olaylar genellikle, resim galerisini görüntüleme gibi tek bir etkinliği temel alan yüksek hacimlerde gerçekleşir.|
-|Gerçekleştirilen arama sorgusu|SearchQueryPerformed|Kullanıcı veya sistem hesabı, e-posta SharePoint içinde bir OneDrive İş. Hizmet hesabının arama sorgusu gerçekleştirdiği bazı yaygın senaryolar arasında sitelere ve OneDrive hesaplarına eBulma bekletmesi ve bekletme ilkesi uygulama ve site içeriğine otomatik bekletme veya duyarlılık etiketleri uygulama yer almaktadır.|
-|Dosya geri dönüştürüldi | FileRecycled | Kullanıcı dosyayı Geri Dönüşüm Kutusu'na SharePoint taşır. |
-|Klasör geri dönüştürüldi | FolderRecycled | Kullanıcı klasörü Geri Dönüşüm Kutusu'SharePoint taşır. |
-|Dosyanın tüm ikincil sürümleri geri dönüştürüldi|FileVersionsAllMinorsRecycled|Kullanıcı dosyanın sürüm geçmişinden tüm ikincil sürümleri sildi. Silinen sürümler sitenin geri dönüşüm kutusuna taşınır.|
-|Dosyanın tüm sürümleri geri dönüştürüldi|FileVersionsAllRecycled|Kullanıcı dosyanın sürüm geçmişinden tüm sürümleri sildi. Silinen sürümler sitenin geri dönüşüm kutusuna taşınır.|
-|Dosyanın sürümü geri dönüştürüldi|FileVersionRecycled|Kullanıcı dosyanın sürüm geçmişinden bir sürümü sildi. Silinen sürüm sitenin geri dönüşüm kutusu'na taşınır.|
-|Dosya yeniden adlandırıldı|FileRenamed|Kullanıcı siteden bir belgeyi yeniden adlandırdı.|
-|Dosya geri yüklendi|FileRestored|Kullanıcı sitenin geri dönüşüm kutusunu kullanarak bir belgeyi geri yükledi.|
-|Dosya karşıya yüklendi|FileUploaded|Kullanıcı sitedeki bir klasöre belge yükledi.|
-|Sayfa görüntülandı|PageViewed|Kullanıcı sitede bir sayfayı görüntüler. Bu, Web tarayıcısı kullanarak belge kitaplığında yer alan dosyaları görüntülemeyi içermez. Kullanıcı sayfayı görüntülenin, sonraki beş dakika boyunca aynı sayfa için aynı kullanıcı için PageViewed olayı yeniden günlüğe kaydedilmez.|
-|(yok)|PageViewedExtended|Bu durum, "Sayfa görüntü edildi" (PageViewed) etkinliğiyle ilgilidir. Aynı kişi bir web sayfasını uzun bir süre boyunca (3 saate kadar) sürekli olarak görüntülerken PageViewedExtended etkinliği günlüğe kaydedilir. <br/><br/> PageViewedExtended etkinliklerinin günlüğe kaydedilme amacı, bir sayfa sürekli olarak görüntü olduğunda günlüğe kaydedilen PageViewed etkinlikleri sayısını azaltmaktır. Bu, aynı kullanıcı etkinliğine yönelik birden fazla PageViewed kaydı gürültünün azaltılmasına ve başlangıçtaki (ve daha önemli olan) PageViewed etkinliğine odaklanmanıza yardımcı olur.|
-|İstemci tarafından sinyal gelen görünümü|ClientViewSignaled|Kullanıcının istemcisi (web sitesi veya mobil uygulama gibi) belirtilen sayfanın kullanıcı tarafından görüntümüş olduğunu sinyalini verdi. Bu etkinlik genellikle bir sayfa için PagePrefetched etkinliği takip eden günlüğe kaydedilir. <br/><br/>**NOT**: ClientViewSignaled olayları sunucu tarafından değil istemci tarafından sinyallenenin olması nedeniyle, olayın sunucu tarafından günlüğe kaydedilmeyebilir ve dolayısıyla denetim günlüğünde görünmeyebilirsiniz. Ayrıca denetim kaydında yer alan bilgilerin güvenilir olması da mümkün olabilir. Bununla birlikte, kullanıcının kimliği sinyali oluşturmak için kullanılan belirteç tarafından doğrulanmış olduğundan, ilgili denetim kaydında listelenen kullanıcının kimliği doğrudur. Sistem, aynı kullanıcının istemcisi sayfanın kullanıcı tarafından yeniden görüntülmüş olduğunu işaret ediyorken, aynı olayın günlüğe kaydedilemeden önce beş dakika bekler.|
-|(yok)|PagePrefetched|Kullanıcının istemcisi (web sitesi veya mobil uygulama gibi), kullanıcının göz atarak performansı iyileştirmesine yardımcı olmak için belirtilen sayfayı talep etmiştir. Bu olay, sayfa içeriğine kullanıcının istemcisine hizmet olduğunu göstermek için günlüğe kaydedilir. Bu olay kullanıcının sayfaya gezinen tam bir göstergesi değildir. <br/><br/> Sayfa içeriği istemci tarafından işlenen zaman (kullanıcının isteğine göre) ClientViewSignaled olayı oluşturul etmelidir. İstemcilerin bazıları önceden getiri olduğunu gösterirken bazıları önceden getirileri desteklemez ve bu nedenle bazı önceden getirileri PageViewed etkinlikleri olarak günlüğe kaydedilebilirsiniz.|
+|Erişilen dosya|FileAccessed|Kullanıcı veya sistem hesabı bir dosyaya erişir. Kullanıcı bir dosyaya eriştiğinde, FileAccessed olayı aynı kullanıcı için sonraki beş dakika boyunca aynı dosya için yeniden günlüğe kaydedilmez.|
+|(yok)|FileAccessedExtended|Bu, "Erişilen dosya" (FileAccessed) etkinliğiyle ilgilidir. Bir FileAccessedExtended olayı, aynı kişi uzun bir süre boyunca (3 saate kadar) bir dosyaya sürekli eriştiğinde günlüğe kaydedilir. <br/><br/> FileAccessedExtended olaylarının günlüğe kaydedilmesinin amacı, bir dosyaya sürekli erişildiğinde günlüğe kaydedilen FileAccessed olaylarının sayısını azaltmaktır. Bu, temelde aynı kullanıcı etkinliği için birden çok FileAccessed kaydının gürültüsünü azaltmaya yardımcı olur ve ilk (ve daha önemli) FileAccessed olayına odaklanmanızı sağlar.|
+|Dosya için bekletme etiketi değiştirildi|ComplianceSettingChanged|Belgeye bekletme etiketi uygulandı veya belgeden kaldırıldı. Bekletme etiketi el ile veya otomatik olarak iletiye uygulandığında bu olay tetikleniyor.|
+|Kayıt durumu kilitli olarak değiştirildi|LockRecord|Belgeyi kayıt olarak sınıflandırır bekletme etiketinin kayıt durumu kilitlendi. Başka bir deyişle, belge değiştirilemez veya silinemez. Yalnızca site için en az katkıda bulunan izni atanmış kullanıcılar belgenin kayıt durumunu değiştirebilir.|
+|Kayıt durumu kilidi açık olarak değiştirildi|UnlockRecord|Belgeyi kayıt kilidi açılmış olarak sınıflandıran bekletme etiketinin kayıt durumu. Bu, belgenin değiştirilebileceği veya silinebileceği anlamına gelir. Yalnızca site için en az katkıda bulunan izni atanmış kullanıcılar belgenin kayıt durumunu değiştirebilir.|
+|İade edilmiş dosya|FileCheckedIn|Kullanıcı, belge kitaplığından kullanıma aldıkları bir belgeyi iade etti.|
+|Kullanıma alınan dosya|FileCheckedOut|Kullanıcı, belge kitaplığında bulunan bir belgeyi kullanıma alır. Kullanıcılar, kendileriyle paylaşılan belgeleri kullanıma alabilir ve belgelerde değişiklik yapabilir.|
+|Kopyalanan dosya|FileCopied|Kullanıcı bir siteden belge kopyalar. Kopyalanan dosya sitedeki başka bir klasöre kaydedilebilir.|
+|Dosya silindi|FileDeleted|Kullanıcı siteden bir belgeyi siler.|
+|Geri dönüşüm kutusundan dosya silindi|FileDeletedFirstStageRecycleBin|Kullanıcı sitenin geri dönüşüm kutusundan bir dosyayı siler.|
+|İkinci aşama geri dönüşüm kutusundan dosya silindi|FileDeletedSecondStageRecycleBin|Kullanıcı sitenin ikinci aşama geri dönüşüm kutusundan bir dosyayı siler.|
+|Kayıt olarak işaretlenmiş dosya silindi|RecordDelete|Kayıt olarak işaretlenmiş bir belge veya e-posta silindi. Öğelere kayıt olarak işaretleyen bir bekletme etiketi içeriğe uygulandığında, öğe kayıt olarak kabul edilir.|
+|Belge duyarlılığı uyuşmazlığı algılandı|DocumentSensitivityMismatch Algılandı|Kullanıcı bir belgeyi duyarlılık etiketiyle korunan bir siteye yükler ve belge, siteye uygulanan duyarlılık etiketinden daha yüksek öncelikli duyarlılık etiketine sahiptir. Örneğin, Gizli etiketli bir belge Genel etiketli bir siteye yüklenir. <br/><br/> Belge, siteye uygulanan duyarlılık etiketinden daha düşük öncelikli duyarlılık etiketine sahipse bu olay tetiklenmiyor. Örneğin, Genel etiketli bir belge Gizli etiketli bir siteye yüklenir. Duyarlılık etiketi önceliği hakkında daha fazla bilgi için bkz. [Etiket önceliği (sipariş önemlidir)](sensitivity-labels.md#label-priority-order-matters).|
+|Dosyada kötü amaçlı yazılım algılandı|FileMalware Algılandı|SharePoint virüsten koruma altyapısı bir dosyadaki kötü amaçlı yazılımları algılar.|
+|Atılan dosya kullanıma alma|FileCheckOutDiscarded|Kullanıcı kullanıma alınmış bir dosyayı atar (veya geri alır). Bu, kullanıma alındığı sırada dosyada yaptıkları değişikliklerin atıldığı ve belge kitaplığındaki belge sürümüne kaydedilmediği anlamına gelir.|
+|İndirilen dosya|FileDownloaded|Kullanıcı siteden bir belge indirir.|
+|Değiştirilen dosya|FileModified|Kullanıcı veya sistem hesabı, sitedeki bir belgenin içeriğini veya özelliklerini değiştirir. Sistem, aynı kullanıcı aynı belgenin içeriğini veya özelliklerini değiştirdiğinde başka bir FileModified olayını günlüğe kaydedebilmesi için beş dakika bekler.|
+|(yok)|FileModifiedExtended|Bu, "Değiştirilmiş dosya" (FileModified) etkinliğiyle ilgilidir. Aynı kişi bir dosyayı uzun bir süre (3 saate kadar) sürekli değiştirdiğinde FileModifiedExtended olayı günlüğe kaydedilir. <br/><br/> FileModifiedExtended olaylarının günlüğe kaydedilmesinin amacı, bir dosya sürekli değiştirildiğinde günlüğe kaydedilen FileModified olaylarının sayısını azaltmaktır. Bu, temelde aynı kullanıcı etkinliği için birden çok FileModified kaydının gürültüsünü azaltmaya yardımcı olur ve ilk (ve daha önemli) FileModified olayına odaklanmanızı sağlar.|
+|Dosya taşındı|FileMoved|Kullanıcı bir belgeyi sitedeki geçerli konumundan yeni bir konuma taşır.|
+|(yok)|FilePreviewed|Kullanıcı, bir SharePoint veya OneDrive İş sitesinde dosyaların önizlemesini gösterir. Bu olaylar genellikle görüntü galerisini görüntüleme gibi tek bir etkinliğe bağlı olarak yüksek hacimlerde gerçekleşir.|
+|Gerçekleştirilen arama sorgusu|SearchQueryPerformed|Kullanıcı veya sistem hesabı SharePoint veya OneDrive İş arama gerçekleştirir. Hizmet hesabının arama sorgusu gerçekleştirdiği bazı yaygın senaryolar arasında sitelere ve OneDrive hesaplarına eBulma saklama ve bekletme ilkesi uygulama ve site içeriğine bekletme veya duyarlılık etiketlerini otomatik uygulama yer alır.|
+|Dosyayı geri dönüştüren | FileRecycled | Kullanıcı bir dosyayı SharePoint Geri Dönüşüm Kutusu'na taşır. |
+|Klasörü geri dönüştüren | FolderRecycled | Kullanıcı bir klasörü SharePoint Geri Dönüşüm Kutusu'na taşır. |
+|Dosyanın tüm ikincil sürümleri geri dönüştürüldi|FileVersionsAllMinorsRecycled|Kullanıcı, dosyanın sürüm geçmişinden tüm ikincil sürümleri siler. Silinen sürümler sitenin geri dönüşüm kutusuna taşınır.|
+|Dosyanın tüm sürümleri geri dönüştürüldi|FileVersionsAllRecycled|Kullanıcı dosyanın sürüm geçmişinden tüm sürümleri siler. Silinen sürümler sitenin geri dönüşüm kutusuna taşınır.|
+|Dosyanın geri dönüştürülmüş sürümü|FileVersionRecycled|Kullanıcı bir dosyanın sürüm geçmişinden bir sürümü siler. Silinen sürüm sitenin geri dönüşüm kutusuna taşınır.|
+|Dosya yeniden adlandırıldı|FileRenamed|Kullanıcı sitedeki bir belgeyi yeniden adlandırır.|
+|Geri yüklenen dosya|FileRestored|Kullanıcı sitenin geri dönüşüm kutusundan bir belgeyi geri yükler.|
+|Karşıya yüklenen dosya|FileUploaded|Kullanıcı sitedeki bir klasöre belge yükler.|
+|Görüntülenen sayfa|PageViewed|Kullanıcı sitedeki bir sayfayı görüntüler. Bu, belge kitaplığında bulunan dosyaları görüntülemek için Web tarayıcısı kullanmayı içermez. Kullanıcı bir sayfayı görüntüledikten sonra, PageViewed olayı sonraki beş dakika boyunca aynı kullanıcı için aynı sayfa için yeniden günlüğe kaydedilmez.|
+|(yok)|PageViewedExtended|Bu, "Görüntülenen sayfa" (PageViewed) etkinliğiyle ilgilidir. Bir PageViewedExtended olayı, aynı kişi uzun bir süre boyunca (3 saate kadar) sürekli olarak bir web sayfasını görüntülediğinde günlüğe kaydedilir. <br/><br/> PageViewedExtended olaylarının günlüğe kaydedilmesinin amacı, bir sayfa sürekli görüntülendiğinde günlüğe kaydedilen PageViewed olaylarının sayısını azaltmaktır. Bu, temelde aynı kullanıcı etkinliği için birden çok PageViewed kaydının gürültüsünü azaltmaya yardımcı olur ve ilk (ve daha önemli) PageViewed olayına odaklanmanızı sağlar.|
+|İstemci tarafından sinyallenenleri görüntüleme|ClientViewSignaled|Kullanıcının istemcisi (web sitesi veya mobil uygulama gibi) belirtilen sayfanın kullanıcı tarafından görüntülendiğinin sinyalini verdi. Bu etkinlik genellikle bir sayfa için PagePrefetched olayından sonra günlüğe kaydedilir. <br/><br/>**NOT**: ClientViewSignaled olayları sunucu yerine istemci tarafından sinyallendirildiğinden, olay sunucu tarafından günlüğe kaydedilmemiş olabilir ve bu nedenle denetim günlüğünde görünmeyebilir. Denetim kaydındaki bilgilerin güvenilir olmayabileceği de mümkündür. Ancak, kullanıcının kimliği sinyali oluşturmak için kullanılan belirteç tarafından doğrulandığından, ilgili denetim kaydında listelenen kullanıcının kimliği doğrudur. Sistem, aynı kullanıcının istemcisi sayfanın kullanıcı tarafından yeniden görüntülendiğini bildirirken aynı olayı günlüğe kaydedebilmesi için beş dakika bekler.|
+|(yok)|PagePrefetched|Kullanıcının istemcisi (web sitesi veya mobil uygulama gibi), kullanıcı göz atarsa performansı iyileştirmeye yardımcı olmak için belirtilen sayfayı istedi. Bu olay, sayfa içeriğinin kullanıcının istemcisine sunulduğuna işaret etmek için günlüğe kaydedilir. Bu olay, kullanıcının sayfaya gidip gitmediğinin kesin bir göstergesi değildir. <br/><br/> Sayfa içeriği istemci tarafından işlendiğinde (kullanıcının isteğine göre) bir ClientViewSignaled olayı oluşturulmalıdır. Tüm istemciler önceden getirme işlemini belirtmeyi desteklemez ve bu nedenle bazı önceden getirilen etkinlikler bunun yerine PageViewed olayları olarak günlüğe kaydedilebilir.|
 ||||
 
-#### <a name="frequently-asked-questions-about-fileaccessed-and-filepreviewed-events"></a>FileAccessed ve FilePreviewed etkinlikleri hakkında sık sorulan sorular
+#### <a name="frequently-asked-questions-about-fileaccessed-and-filepreviewed-events"></a>FileAccessed ve FilePreviewed olayları hakkında sık sorulan sorular
 
-**Kullanıcı dışı etkinlikler FilePreviewed audit records that contain a user agent like "OneDriveMpc-Transform_Thumbnail"?**
+**Kullanıcı olmayan etkinlikler"OneDriveMpc-Transform_Thumbnail" gibi bir kullanıcı aracısı içeren FilePreviewed denetim kayıtlarını tetikleyebilir mi?**
 
-Kullanıcıya özel eylemlerin bunlar gibi olaylar oluşturması senaryoların farkındayız. Kullanıcı profili kartı açma gibi kullanıcı eylemleri (Web üzerinde Outlook'ta bir iletide adına veya e-posta adresine tıklarsanız) benzer olaylara neden olabilir.
+Kullanıcı dışı eylemlerin bunlara benzer olaylar oluşturduğu senaryoların farkında değildir. Kullanıcı profili kartını açma gibi kullanıcı eylemleri (Web üzerinde Outlook bir iletideki adına veya e-posta adresine tıklayarak) benzer olaylar oluşturabilir.
 
-**Kullanıcı her OneDriveMpc-Transform_Thumbnail bilerek tetiklenir mi?**
+**OneDriveMpc-Transform_Thumbnail çağrıları her zaman kullanıcı tarafından kasıtlı olarak tetikleniyor mu?**
 
-Hayır. Ancak benzer olaylar, tarayıcının önceden getirme sonucu olarak günlüğe kaydedilebilirsiniz.
+Hayır. Ancak tarayıcı ön getirme işleminin sonucu olarak benzer olaylar günlüğe kaydedilebilir.
 
-**Microsoft tarafından kaydedilmiş bir IP adresi üzerinden bir FilePreviewed etkinliği geliyorsa, bu önizlemenin kullanıcının cihazı ekranında görüntüleniyor olduğu anlamına mı gelir?**
+**Microsoft tarafından kayıtlı bir IP adresinden filePreviewed olayının geldiğini görürsek, bu önizlemenin kullanıcının cihazının ekranında görüntülendiği anlamına mı gelir?**
 
-Hayır. Olay, tarayıcının önceden getirme sonucu günlüğe kaydedilmiş olabilir.
+Hayır. Olay, tarayıcı ön getirme işleminin sonucu olarak günlüğe kaydedilmiş olabilir.
 
-**Belgenin önizlemesini oluşturan bir kullanıcının FileAccessed olayları oluşturması senaryoları var mı?**
+**Belge önizlemesi kullanan bir kullanıcının FileAccessed olayları oluşturduğu senaryolar var mı?**
 
-Hem FilePreviewed hem de FileAccessed olayları kullanıcının aramasını dosyanın okundu veya küçük resim işlemede bir okuma sonucunda olduğunu gösterir. Bu olaylar, erişim hedefine göre önizlemeyle uyumlu olacak şekilde tasarlanmış olmalarına karşılık, olay ayrımı kullanıcının amacına uygun değildir.
+Hem FilePreviewed hem de FileAccessed olayları, kullanıcının çağrısının dosyanın okunmasını (veya dosyanın küçük resim işlemesinin okunmasını) gösterdiğini gösterir. Bu olaylar önizleme ve erişim amacına uygun olarak tasarlanırken, olay ayrımı kullanıcının amacının garantisi değildir.
 
-#### <a name="the-appsharepoint-user-in-audit-records"></a>Denetim kayıtlarında\@ appsharepoint kullanıcısı
+#### <a name="the-appsharepoint-user-in-audit-records"></a>Denetim kayıtlarındaki appsharepoint\@ kullanıcısı
 
-Bazı dosya etkinliklerinin (ve diğer SharePoint ilgili etkinliklerin denetim kayıtlarında), etkinliği gerçekleştiren kullanıcının (Kullanıcı ve KullanıcıKimliği alanlarında tanımlanan) başarılı olduğunu app@sharepoint. Bu, etkinliği gerçekleştiren "kullanıcı"nın bir uygulama olduğunu gösterir. Bu durumda uygulamaya, SharePoint'de kullanıcı, yönetici veya hizmet adına kuruluş genelinde eylemler (SharePoint sitesi veya OneDrive hesabı arama gibi) gerçekleştirme izinleri ve verildi. Bir uygulamaya izin verme süreci yalnızca Uygulama erişimi *SharePoint olarak da çağrılır*. Bu, kullanıcı yerine bir SharePoint gerçekleştirmek üzere kullanıcılara sunulan kimlik doğrulamasının uygulama tarafından gerçekleştirilene kadar olduğunu gösterir. Bu nedenle, app@sharepoint kayıtlarda bu kullanıcı tanımlanır. Daha fazla bilgi için bkz[. Yalnızca SharePoint kullanarak erişim izni.](/sharepoint/dev/solution-guidance/security-apponly-azureacs)
+Bazı dosya etkinliklerinin (ve diğer SharePoint ilgili etkinliklerin) denetim kayıtlarında, etkinliği gerçekleştiren kullanıcının (User ve UserId alanlarında tanımlanan) app@sharepoint olduğunu fark edebilirsiniz. Bu, etkinliği gerçekleştiren "kullanıcının" bir uygulama olduğunu gösterir. Bu durumda uygulamaya kullanıcı, yönetici veya hizmet adına kuruluş genelinde eylemler (SharePoint site veya OneDrive hesabı arama gibi) gerçekleştirmek için SharePoint izinleri verilmiştir. Bir uygulamaya izin verme işlemi, *Yalnızca Uygulama erişimi SharePoint* olarak adlandırılır. Bu, bir eylem gerçekleştirmek için SharePoint sunulan kimlik doğrulamasının kullanıcı yerine bir uygulama tarafından yapıldığını gösterir. bu nedenle app@sharepoint kullanıcı belirli denetim kayıtlarında tanımlanır. Daha fazla bilgi için bkz. [Yalnızca Uygulama SharePoint kullanarak erişim izni verme](/sharepoint/dev/solution-guidance/security-apponly-azureacs).
 
-Örneğin, app@sharepoint " Arama sorgusu" ve "Erişilen dosya" olaylarına kullanıcı olarak sık sık tanımlanır. Bunun nedeni, kuruluşlarda erişim izni SharePoint App-Only olan bir uygulama, sitelere ve site hesaplarına bekletme ilkeleri uygularken arama sorguları gerçekleştirir ve dosyalara OneDrive olur.
+Örneğin, app@sharepoint genellikle "Gerçekleştirilen arama sorgusu" ve "Erişilen dosya" olayları için kullanıcı olarak tanımlanır. Bunun nedeni, kuruluşunuzda SharePoint App-Only erişimi olan bir uygulamanın sitelere ve OneDrive hesaplarına bekletme ilkeleri uygularken arama sorguları gerçekleştirmesi ve dosyalara erişmesidir.
 
-Bir denetim kaydında etkinlik gerçekleştirilen app@sharepoint olarak bu kayıtta yer alan diğer senaryolar:
+Bir denetim kaydında etkinlik gerçekleştiren kullanıcı olarak app@sharepoint tanımlanabileceği diğer birkaç senaryo aşağıdadır:
 
-- Microsoft 365 Gruplar'a. Kullanıcı veya yönetici yeni bir grup oluşturduğunda, site koleksiyonu oluşturmak, listeleri güncelleştirmek ve site grubuna üye eklemek için denetim SharePoint oluşturulur. Bu görevler grubu oluşturan kullanıcı adına bir uygulama gerçekleştirilir.
+- Microsoft 365 Grupları. Kullanıcı veya yönetici yeni bir grup oluşturduğunda, site koleksiyonu oluşturmak, listeleri güncelleştirmek ve bir SharePoint grubuna üye eklemek için denetim kayıtları oluşturulur. Bu görevler, grubu oluşturan kullanıcı adına bir uygulama gerçekleştirilir.
 
-- Microsoft Teams. Grupların Microsoft 365 gibi, site koleksiyonu oluşturmak, listeleri güncelleştirmek ve ekip oluşturulduğunda bir SharePoint grubuna üye eklemek için denetim kayıtları oluşturulur.
+- Microsoft Teams. Microsoft 365 Grupları benzer şekilde, bir ekip oluşturulduğunda site koleksiyonu oluşturmak, listeleri güncelleştirmek ve bir SharePoint grubuna üye eklemek için denetim kayıtları oluşturulur.
 
-- Uyumluluk özellikleri. Yönetici bekletme ilkeleri, eBulma bekletmeleri ve otomatik olarak duyarlılık etiketleri uygulama gibi uyumluluk özelliklerini uygularken.
+- Uyumluluk özellikleri. Bir yönetici bekletme ilkeleri, eBulma tutmaları ve duyarlılık etiketlerini otomatik uygulama gibi uyumluluk özelliklerini uyguladığında.
 
-Bu ve diğer senaryolarda, belirtilen kullanıcı kısa bir zaman diliminde ve genellikle birbirinin birkaç saniye içinde app@sharepoint'i içeren birden çok denetim kaydı olduğunu da fark etmezsiniz. Bu ayrıca, büyük olasılıkla aynı kullanıcı tarafından başlatılan görev tarafından tetiklanıldığını da gösterir. Ayrıca, denetim kaydında ApplicationDisplayName ve EventData alanları olayı tetikleyen senaryoyu veya uygulamayı tanımlamanıza yardımcı olabilir.
+Bu ve diğer senaryolarda, belirtilen kullanıcı olarak app@sharepoint birden çok denetim kaydının kısa bir zaman dilimi içinde (genellikle birkaç saniye içinde) oluşturulduğunu da fark edeceksiniz. Bu, büyük olasılıkla aynı kullanıcı tarafından başlatılan görev tarafından tetiklendiklerini de gösterir. Ayrıca, denetim kaydındaki ApplicationDisplayName ve EventData alanları, olayı tetikleyen senaryoyu veya uygulamayı belirlemenize yardımcı olabilir.
 
 ### <a name="folder-activities"></a>Klasör etkinlikleri
 
-Aşağıdaki tabloda, SharePoint Online ve OneDrive İş. Daha önce de açıkıldığı gibi, bazı SharePoint denetim kayıtları, eylemi başlatan kullanıcı veya app@sharepoint kullanıcı adına etkinlik gerçekleştirilen kullanıcıya gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarında appsharepoint\@ kullanıcısı](#the-appsharepoint-user-in-audit-records).
+Aşağıdaki tabloda, SharePoint Online ve OneDrive İş klasör etkinlikleri açıklanmaktadır. Daha önce açıklandığı gibi, bazı SharePoint etkinliklerinin denetim kayıtları, app@sharepoint kullanıcının eylemi başlatan kullanıcı veya yönetici adına etkinlik gerçekleştirdiğini gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarındaki appsharepoint\@ kullanıcısı](#the-appsharepoint-user-in-audit-records).
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Klasör kopyalandı|FolderCopied|Kullanıcı sitedeki bir klasörü siteden başka bir konuma SharePoint OneDrive İş.|
-|Klasör oluşturuldu|FolderCreated|Kullanıcı sitede bir klasör oluşturur.|
-|Klasör silindi|FolderDeleted|Kullanıcı siteden klasör sildi.|
-|Klasör geri dönüşüm kutusu'dan silindi|FolderDeletedFirstStageRecycleBin|Kullanıcı sitedeki geri dönüşüm kutusunu bir klasörü sildi.|
-|Klasör ikinci aşama geri dönüşüm kutusu'dan silindi|FolderDeletedSecondStageRecycleBin|Kullanıcı sitedeki ikinci aşama geri dönüşüm kutusu'na klasörü sildi.|
-|Klasör değiştirildi|FolderModified|Kullanıcı sitedeki bir klasörde değişiklik yaptı. Bu, klasörün meta verilerini değiştirmeyi (etiketleri ve özellikleri değiştirme gibi) içerir.|
-|Klasör taşındı|FolderMoved|Kullanıcı klasörü sitede farklı bir konuma taşır.|
-|Klasör yeniden adlandırıldı|FolderRenamed|Kullanıcı sitedeki bir klasörü yeniden adlandırdı.|
-|Klasör geri yüklendi|FolderRestored|Kullanıcı sitedeki geri dönüşüm kutusu tarafından silinmiş bir klasörü geri yüklemiş.|
+|Kopyalanan klasör|KlasörKopied|Kullanıcı siteden bir klasörü SharePoint veya OneDrive İş başka bir konuma kopyalar.|
+|Klasör oluşturuldu|KlasörOluştur|Kullanıcı sitede bir klasör oluşturur.|
+|Klasör silindi|KlasörDeleted|Kullanıcı siteden bir klasörü siler.|
+|Klasör geri dönüşüm kutusundan silindi|FolderDeletedFirstStageRecycleBin|Kullanıcı sitedeki geri dönüşüm kutusundan bir klasörü siler.|
+|İkinci aşama geri dönüşüm kutusundan klasör silindi|FolderDeletedSecondStageRecycleBin|Kullanıcı sitedeki ikinci aşama geri dönüşüm kutusundan bir klasörü siler.|
+|Değiştirilen klasör|FolderModified|Kullanıcı sitedeki bir klasörü değiştirir. Bu, etiketleri ve özellikleri değiştirme gibi klasör meta verilerini değiştirmeyi içerir.|
+|Taşınan klasör|Klasör Taşınan|Kullanıcı bir klasörü sitedeki farklı bir konuma taşır.|
+|Klasör yeniden adlandırıldı|FolderRenamed|Kullanıcı sitedeki bir klasörü yeniden adlandırır.|
+|Geri yüklenen klasör|FolderRestored|Kullanıcı silinen bir klasörü sitedeki geri dönüşüm kutusundan geri yükler.|
 ||||
 
-### <a name="sharepoint-list-activities"></a>SharePoint etkinlikleri ekleme
+### <a name="sharepoint-list-activities"></a>Liste etkinliklerini SharePoint
 
-Aşağıdaki tabloda, kullanıcıların SharePoint Online'da listeler ve liste öğeleriyle etkileşim kurması ile ilgili etkinlikler açık almaktadır. Daha önce de açıkıldığı gibi, bazı SharePoint denetim kayıtları, eylemi başlatan kullanıcı veya app@sharepoint kullanıcı adına etkinlik gerçekleştirilen kullanıcıya gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarında appsharepoint\@ kullanıcısı](#the-appsharepoint-user-in-audit-records).
+Aşağıdaki tabloda, kullanıcıların SharePoint Online'daki liste ve liste öğeleriyle ne zaman etkileşime geçtiğiyle ilgili etkinlikler açıklanmaktadır. Daha önce açıklandığı gibi, bazı SharePoint etkinliklerinin denetim kayıtları, app@sharepoint kullanıcının eylemi başlatan kullanıcı veya yönetici adına etkinlik gerçekleştirdiğini gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarındaki appsharepoint\@ kullanıcısı](#the-appsharepoint-user-in-audit-records).
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Liste oluşturuldu|ListCreated|Kullanıcı özel bir liste SharePoint oluşturdu.|
-|Liste sütunu oluşturuldu|ListColumnCreated|Kullanıcı yeni bir SharePoint sütunu oluşturdu. Liste sütunu, bir veya birden çok liste sütununa eklenmiş SharePoint dir.|
-|Oluşturulan liste içerik türü|ListContentTypeCreated|Bir kullanıcı liste içerik türü oluşturdu. Liste içerik türü, bir veya birden çok içerik listesine eklenen içerik SharePoint olur.|
-|Liste öğesi oluşturuldu|ListItemCreated|Bir kullanıcı mevcut dosya listesinde bir SharePoint oluşturdu.|
-|Site sütunu oluşturuldu|SiteColumnCreated|Kullanıcı site sütununu SharePoint oluşturdu. Site sütunu, listeye ekli olmayan bir sütun olabilir. Site sütunu aynı zamanda belirli bir web'de herhangi bir liste tarafından  kullanılan bir meta veri yapısıdır.|
-|Site içerik türü oluşturuldu|Oluşturulan Site İçerik Türü|Bir kullanıcı site içerik türü oluşturdu. Site içerik türü, üst siteye eklenen bir içerik t type'tır.|
-|Liste silindi|ListDeleted|Bir kullanıcı silinmiş SharePoint sildi.|
-|Silinmiş liste sütunu|Silinmiş Liste Sütunu|Kullanıcı bir liste SharePoint sildi.|
-|Silinmiş liste içerik türü|ListContentTypeDeleted|Bir kullanıcı liste içerik türünü sildi.|
-|Silinmiş liste öğesi|Liste Öğesi Silindi|Kullanıcı bir liste SharePoint sildi.|
-|Site sütunu silindi|SiteColumnDeleted|Bir kullanıcı site SharePoint sildi.|
+|Oluşturulan liste|ListCreated|Kullanıcı bir SharePoint listesi oluşturdu.|
+|Liste sütunu oluşturuldu|ListColumnCreated|Kullanıcı bir SharePoint listesi sütunu oluşturdu. Liste sütunu, bir veya daha fazla SharePoint listesine eklenmiş bir sütundur.|
+|Oluşturulan liste içerik türü|ListContentTypeCreated|Kullanıcı bir liste içerik türü oluşturdu. Liste içerik türü, bir veya daha fazla SharePoint listesine eklenmiş bir içerik türüdür.|
+|Liste öğesi oluşturuldu|ListItemCreated|Kullanıcı var olan bir SharePoint listesinde öğe oluşturdu.|
+|Site sütunu oluşturuldu|SiteColumnCreated|Kullanıcı bir SharePoint site sütunu oluşturdu. Site sütunu, listeye eklenmemiş bir sütundur. Site sütunu aynı zamanda belirli bir web'deki herhangi bir liste tarafından kullanılabilecek bir meta veri yapısıdır.|
+|Site içerik türü oluşturuldu|Site ContentType Oluşturuldu|Kullanıcı bir site içerik türü oluşturdu. Site içerik türü, üst siteye eklenmiş bir içerik türüdür.|
+|Silinen liste|ListDeleted|Kullanıcı bir SharePoint listesini sildi.|
+|Silinen liste sütunu|Liste Sütunu Silindi|Kullanıcı bir SharePoint listesi sütununu sildi.|
+|Silinen liste içerik türü|ListContentTypeDeleted|Kullanıcı liste içerik türünü sildi.|
+|Liste öğesi silindi|Liste Öğesi Silindi|Kullanıcı bir SharePoint liste öğesini sildi.|
+|Site sütunu silindi|SiteColumnDeleted|Kullanıcı bir SharePoint site sütununu sildi.|
 |Site içerik türü silindi|SiteContentTypeDeleted|Kullanıcı site içerik türünü sildi.|
-|Geri dönüştürülen liste öğesi|ListItemRecycled|Kullanıcı, bir SharePoint öğesini Geri Dönüşüm Kutusu'na taşıdı.|
-|Liste geri yüklendi|ListRestored|Kullanıcı Geri Dönüşüm Kutusu'SharePoint bir liste geri yüklendi.|
-|Liste öğesi geri yüklendi|ListItemRestored|Kullanıcı Geri Dönüşüm Kutusu'SharePoint bir öğe geri yüklendi.|
-|Liste güncelleştirildi|ListUpdated|Kullanıcı bir veya SharePoint değiştirerek posta listesini güncellemiştir.|
-|Güncelleştirilmiş liste sütunu|ListColumnUpdated|Kullanıcı bir veya SharePoint değiştirerek liste sütununu güncellemiştir.|
-|Güncelleştirilmiş liste içerik türü|ListContentTypeUpdated|Kullanıcı bir veya birden çok özelliği değiştirerek liste içerik türünü güncellemiştir.|
-|Güncelleştirilmiş liste öğesi|ListItemUpdated|Kullanıcı bir veya SharePoint değiştirerek bir liste öğesini güncellemiştir.|
-|Site sütunu güncelleştirildi|SiteColumnUpdated|Kullanıcı bir veya SharePoint değiştirerek site sütununu güncellemiştir.|
-|Güncelleştirilmiş site içerik türü|SiteContentTypeUpdated|Kullanıcı bir veya birden çok özelliği değiştirerek site içerik türünü güncellemiştir.|
-|Görüntülenen liste öğesi|ListItemViewed|Bir kullanıcı bir liste SharePoint görüntüledi. Kullanıcı liste öğesini görüntülenin, sonraki beş dakika boyunca aynı liste öğesi için aynı kullanıcı için ListItemViewed olayı yeniden günlüğe kaydedilmez.|
+|Geri dönüştürülen liste öğesi|ListItemRecycled|Kullanıcı bir SharePoint liste öğesini Geri Dönüşüm Kutusu'na taşıdı.|
+|Geri yüklenen liste|ListRestored|Kullanıcı Geri Dönüşüm Kutusu'ndan bir SharePoint listesini geri yükledi.|
+|Geri yüklenen liste öğesi|ListItemRestored|Kullanıcı Geri Dönüşüm Kutusu'ndan bir SharePoint listesi öğesini geri yükledi.|
+|Güncelleştirilmiş liste|ListUpdated|Kullanıcı bir veya daha fazla özelliği değiştirerek bir SharePoint listesini güncelleştirdi.|
+|Güncelleştirilmiş liste sütunu|ListColumnUpdated|Kullanıcı bir veya daha fazla özelliği değiştirerek bir SharePoint listesi sütununu güncelleştirdi.|
+|Güncelleştirilmiş liste içerik türü|ListContentTypeUpdated|Kullanıcı bir veya daha fazla özelliği değiştirerek liste içerik türünü güncelleştirdi.|
+|Güncelleştirilmiş liste öğesi|ListItemUpdated|Bir kullanıcı, bir veya daha fazla özelliği değiştirerek bir SharePoint liste öğesini güncelleştirdi.|
+|Site sütunu güncelleştirildi|SiteColumnUpdated|Kullanıcı bir veya daha fazla özelliği değiştirerek bir SharePoint site sütununu güncelleştirdi.|
+|Güncelleştirilmiş site içerik türü|SiteContentTypeUpdated|Kullanıcı, bir veya daha fazla özelliği değiştirerek site içerik türünü güncelleştirdi.|
+|Görüntülenen liste öğesi|ListItemViewed|Kullanıcı bir SharePoint liste öğesini görüntüledi. Bir kullanıcı liste öğesini görüntüledikten sonra, ListItemViewed olayı aynı kullanıcı için sonraki beş dakika boyunca aynı liste öğesi için yeniden günlüğe kaydedilmez.|
 ||||
 
 ### <a name="sharing-and-access-request-activities"></a>Paylaşım ve erişim isteği etkinlikleri
 
-Aşağıdaki tabloda, SharePoint Online ve OneDrive İş'de kullanıcı paylaşımı ve erişim isteği etkinlikleri açık OneDrive İş. Paylaşım olayları için, Sonuçlar'ın altındaki  Ayrıntı sütunu öğenin paylaşıldı olduğu kullanıcının veya grubun adını tanımlar ve bu kullanıcının mı yoksa grubun kuruluşta mı üye mi yoksa konuk mu olduğunu tanımlar. Daha fazla bilgi için [bkz. Denetim günlüğünde paylaşım denetimini kullanma](use-sharing-auditing.md).
+Aşağıdaki tabloda, SharePoint Online ve OneDrive İş'da kullanıcı paylaşım ve erişim isteği etkinlikleri açıklanmaktadır. Olayları paylaşmak için **, Sonuçlar** altındaki **Ayrıntı** sütunu öğenin paylaşıldığı kullanıcının veya grubun adını ve söz konusu kullanıcının veya grubun kuruluşunuzdaki bir üye veya konuk olup olmadığını tanımlar. Daha fazla bilgi için bkz. [Denetim günlüğünde paylaşım denetimini kullanma](use-sharing-auditing.md).
 
 > [!NOTE]
-> Kullanıcılar, kullanıcı *nesnesinin* UserType özelliğine bağlı olarak üye veya konuk olabilir. Bir üye genellikle çalışandır ve konuklar da genellikle kuruluş dışından işbirliği yapan bir konuk olur. Kullanıcı paylaşım davetini kabul eder (ve henüz kuruluşun bir parçası değilse), kuruluş dizinde onun için bir konuk hesabı oluşturulur. Konuk kullanıcının dizininize hesabı olduktan sonra, kaynaklar o kullanıcıyla doğrudan paylaşılıyor olabilir (davet gerektirmeden).
+> Kullanıcılar, kullanıcı nesnesinin UserType özelliğine göre  *üye*  veya  *konuk*  olabilir. Üye genellikle bir çalışandır ve konuk genellikle kuruluşunuzun dışında bir ortak çalışandır. Bir kullanıcı paylaşım davetini kabul ettiğinde (ve henüz kuruluşunuzun bir parçası değilse), kuruluşunuzun dizininde onun için bir konuk hesabı oluşturulur. Konuk kullanıcının dizininizde bir hesabı olduğunda kaynaklar doğrudan onlarla paylaşılabilir (davet gerektirmeden).
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Site koleksiyonuna izin düzeyi eklendi|PermissionLevelAdded|Site koleksiyonuna bir izin düzeyi eklenmiştir.|
-|Erişim isteği kabul edildi|AccessRequestAccepted|Siteye, klasöre veya belgeye erişim isteği kabul edildi ve istekte bulunan kullanıcıya erişim verildi.|
-|Paylaşım daveti kabul edildi|SharingInvitationAccepted|Kullanıcı (üye veya konuk) bir paylaşım davetini kabul etmiş ve kaynağa erişim ve verisi verii. Bu olay, davet edilen kullanıcı ve daveti kabul etmek için kullanılan e-posta adresi hakkında bilgi içerir (bunlar farklı olabilir). Bu etkinliğe çoğunlukla, kullanıcıya kaynak için nasıl erişim verilmesini (örneğin, kullanıcı kaynağına erişimi olan bir gruba ekleme gibi) açıklayan ikinci bir olay eşlik ediyor.|
-|Paylaşım daveti engellendi|SharingInvitationBlocked|Kuruluşta yer alan bir kullanıcı tarafından gönderilen paylaşım daveti, hedef kullanıcının etki alanı temel alarak dış paylaşıma izin veren veya dış paylaşımı engellenmiş olan bir dış paylaşım ilkesi nedeniyle engellendi. Bu durumda, paylaşım daveti engellenmiş çünkü: <br/> Hedef kullanıcının etki alanı, izin verilen etki alanları listesine dahil değildir. <br/> Veya <br/> Hedef kullanıcının etki alanı, engellenen etki alanları listesine eklenir. <br/> Etki alanları temel alınarak dış paylaşıma izin verme veya engelleme hakkında daha fazla bilgi için bkz. [SharePoint Online'da kısıtlı etki alanları paylaşımı ve OneDrive İş](/sharepoint/restricted-domains-sharing).|
-|Erişim isteği oluşturuldu|AccessRequestCreated|Kullanıcı, erişim iznine sahip olduğu bir site, klasör veya belgeye erişim isteğinda ekleyebilirsiniz.|
-|Şirkette paylaşılabilir bağlantı oluşturuldu|CompanyLinkCreated|Kullanıcı kaynağa şirket genelinde bir bağlantı oluşturdu. Şirket genelindeki bağlantılar yalnızca kuruluş üyeleri tarafından kullanılabilir. Konuklar tarafından kullanılamaz.|
-|Anonim bağlantı oluşturuldu|AnonymousLinkCreated|Kullanıcı kaynağa bir anonim bağlantı oluşturdu. Bu bağlantıya sahip olan herkes kimlik doğrulaması yapmak zorunda kalmadan kaynağa erişebilirsiniz.|
-|Güvenli bağlantı oluşturuldu|SecureLinkCreated|Bu öğeye bir güvenli paylaşım bağlantısı oluşturulmuş.|
-|Paylaşım daveti oluşturuldu|SharingInvitationCreated|Kullanıcı SharePoint Online'da veya OneDrive İş dizininde yer alan bir kullanıcıyla kaynak paylaştırdı.|
-|Silinmiş güvenli bağlantı|SecureLinkDeleted|Güvenli paylaşım bağlantısı silindi.|
-|Erişim isteği reddedildi|AccessRequestDenied|Site, klasör veya belgeye erişim isteği reddedilmiştir.|
-|Şirkette paylaşılabilir bağlantı kaldırıldı|CompanyLinkRemoved|Kullanıcı kaynağın şirket genelindeki bağlantısını kaldırdı. Artık bu bağlantı kaynağa erişmek için kullanılamaz.|
-|Anonim bağlantı kaldırıldı|AnonymousLinkRemoved|Kullanıcı kaynağa olan anonim bağlantıyı kaldırdı. Artık bu bağlantı kaynağa erişmek için kullanılamaz.|
-|Dosya, klasör veya site paylaşıldı|SharingSet|Kullanıcı (üye veya konuk) dosya, klasör veya siteyi SharePoint OneDrive İş dizinindeki bir kullanıcıyla paylaştırdı. Bu etkinliğin **Ayrıntı** sütunundaki değer, kaynağın paylaşıldı olduğu kullanıcının adını tanımlar ve bu kullanıcının üye mi yoksa konuk mu olduğunu tanımlar. <br/><br/> Bu etkinliğe çoğunlukla, kullanıcıya kaynak için nasıl erişim verilmesini açıklayan ikinci bir olay eşlik ediyor. Örneğin, kullanıcı kaynağına erişimi olan bir gruba ekleme.|
-|Güncelleştirilmiş erişim isteği|AccessRequestUpdated|Öğeye erişim isteği güncelleştirildi.|
-|Anonim bağlantı güncelleştirildi|AnonymousLinkUpdated|Kullanıcı kaynağa olan anonim bağlantıyı güncellemiştir. Arama sonuçlarını dışarı aktararak, güncelleştirilen alan EventData özelliğine dahil edilir.|
-|Güncelleştirilmiş paylaşım daveti|SharingInvitationUpdated|Dış paylaşım daveti güncelleştirildi.|
-|Anonim bağlantı kullanıldı|AnonymousLinkUsed|Anonim bir kullanıcı, anonim bağlantı kullanarak bir kaynağa erişdi. Kullanıcının kimliği bilinmiyor olabilir, ancak kullanıcının IP adresi gibi diğer ayrıntıları da öğrenebilirsiniz.|
-|Dosya, klasör veya sitenin paylaşılmayan adı|SharingRevoked|Kullanıcı (üye veya konuk) daha önce başka bir kullanıcıyla paylaşılmış olan dosya, klasör veya sitenin paylaşımını sildi.|
-|Şirkette paylaşılabilir bağlantı kullanıldı|CompanyLinkUsed|Kullanıcı şirket çapında bir bağlantı kullanarak bir kaynağa erişti.|
-|Kullanılan güvenli bağlantı|SecureLinkUsed|Bir kullanıcı güvenli bağlantı kullandı.|
-|Kullanıcı güvenli bağlantıya eklendi|AddedToSecureLink|Bir kullanıcı, güvenli paylaşım bağlantısını kullanabileceği varlıklar listesine eklendi.|
-|Kullanıcı güvenli bağlantıdan kaldırıldı|RemovedFromSecureLink|Bir kullanıcı güvenli paylaşım bağlantısı kullanabileceği varlıklar listesinden çıkarıldı.|
-|Paylaşım davetini geri kaldırıldı|SharingInvitationRevoked|Kullanıcı bir kaynağın paylaşım davetini geri çekildi.|
+|Site koleksiyonuna izin düzeyi eklendi|PermissionLevelAdded|Site koleksiyonuna izin düzeyi eklendi.|
+|Kabul edilen erişim isteği|AccessRequestAccepted|Site, klasör veya belgeye erişim isteği kabul edildi ve istekte bulunan kullanıcıya erişim verildi.|
+|Kabul edilen paylaşım daveti|SharingInvitationAccepted|Kullanıcı (üye veya konuk) paylaşım davetini kabul etti ve bir kaynağa erişim izni verildi. Bu olay, davet edilen kullanıcı ve daveti kabul etmek için kullanılan e-posta adresi hakkında bilgiler içerir (farklı olabilir). Bu etkinliğe genellikle kullanıcıya kaynağa nasıl erişim verildiğini açıklayan ikinci bir olay eşlik eder. Örneğin, kullanıcıyı kaynağa erişimi olan bir gruba ekler.|
+|Engellenen paylaşım daveti|SharingInvitationBlocked|Kuruluşunuzdaki bir kullanıcı tarafından gönderilen paylaşım daveti, hedef kullanıcının etki alanına göre dış paylaşıma izin veren veya reddeden bir dış paylaşım ilkesi nedeniyle engellenir. Bu durumda paylaşım daveti engellendi çünkü: <br/> Hedef kullanıcının etki alanı izin verilen etki alanları listesine dahil değildir. <br/> Veya <br/> Hedef kullanıcının etki alanı engellenen etki alanları listesine eklenir. <br/> Etki alanları temelinde dış paylaşıma izin verme veya bunları engelleme hakkında daha fazla bilgi için bkz. [SharePoint Online'da kısıtlı etki alanları paylaşımı ve OneDrive İş](/sharepoint/restricted-domains-sharing).|
+|Erişim isteği oluşturuldu|AccessRequestCreated|Kullanıcı erişim izni olmayan bir siteye, klasöre veya belgeye erişim ister.|
+|Şirket tarafından paylaşılabilir bağlantı oluşturuldu|CompanyLinkCreated|Kullanıcı bir kaynağa şirket genelinde bir bağlantı oluşturmuştur. şirket genelinde bağlantılar yalnızca kuruluşunuzdaki üyeler tarafından kullanılabilir. Konuklar tarafından kullanılamazlar.|
+|Anonim bağlantı oluşturuldu|AnonymousLinkCreated|Kullanıcı bir kaynağa anonim bağlantı oluşturdu. Bu bağlantıya sahip olan herkes kimliğinin doğrulanması gerekmeden kaynağa erişebilir.|
+|Güvenli bağlantı oluşturuldu|SecureLinkCreated|Bu öğeye güvenli bir paylaşım bağlantısı oluşturuldu.|
+|Paylaşım daveti oluşturuldu|SharingInvitationCreated|Kullanıcı SharePoint Online'da bir kaynak paylaştı veya kuruluşunuzun dizininde olmayan bir kullanıcıyla OneDrive İş.|
+|Güvenli bağlantı silindi|SecureLinkDeleted|Güvenli paylaşım bağlantısı silindi.|
+|Erişim isteği reddedildi|AccessRequestDenied|Site, klasör veya belgeye erişim isteği reddedildi.|
+|Şirket tarafından paylaşılabilir bağlantı kaldırıldı|ŞirketLinkRemoved|Kullanıcı bir kaynağa şirket genelindeki bağlantıyı kaldırdı. Bağlantı artık kaynağa erişmek için kullanılamaz.|
+|Anonim bağlantı kaldırıldı|AnonymousLinkRemoved|Kullanıcı bir kaynağa anonim bağlantı kaldırdı. Bağlantı artık kaynağa erişmek için kullanılamaz.|
+|Paylaşılan dosya, klasör veya site|SharingSet|Kullanıcı (üye veya konuk), SharePoint veya OneDrive İş içindeki bir dosyayı, klasörü veya siteyi kuruluşunuzun dizinindeki bir kullanıcıyla paylaştı. Bu etkinliğin **Ayrıntı** sütunundaki değer, kaynağın paylaşıldığı kullanıcının adını ve bu kullanıcının üye mi yoksa konuk mu olduğunu tanımlar. <br/><br/> Bu etkinliğe genellikle kullanıcıya kaynağa nasıl erişim verildiğini açıklayan ikinci bir olay eşlik eder. Örneğin, kullanıcıyı kaynağa erişimi olan bir gruba ekleme.|
+|Güncelleştirilmiş erişim isteği|AccessRequestUpdated|Bir öğeye erişim isteği güncelleştirildi.|
+|Anonim bağlantı güncelleştirildi|AnonymousLinkUpdated|Kullanıcı bir kaynağa anonim bağlantı güncelleştirdi. Güncelleştirilmiş alan, arama sonuçlarını dışarı aktardığınızda EventData özelliğine eklenir.|
+|Paylaşım daveti güncelleştirildi|SharingInvitationUpdated|Dış paylaşım daveti güncelleştirildi.|
+|Anonim bağlantı kullanıldı|AnonymousLinkUsed|Anonim bir kullanıcı, bir kaynağa anonim bağlantı kullanarak erişmiş. Kullanıcının kimliği bilinmiyor olabilir, ancak kullanıcının IP adresi gibi diğer ayrıntıları alabilirsiniz.|
+|Paylaşılmayan dosya, klasör veya site|SharingRevoked|Kullanıcı (üye veya konuk), daha önce başka bir kullanıcıyla paylaşılan bir dosya, klasör veya sitenin paylaşımını kaldırmıştı.|
+|Şirket tarafından paylaşılabilir bağlantı kullanıldı|CompanyLinkUsed|Kullanıcı şirket genelinde bir bağlantı kullanarak bir kaynağa erişti.|
+|Kullanılan güvenli bağlantı|SecureLinkUsed|Kullanıcı güvenli bir bağlantı kullandı.|
+|Kullanıcı güvenli bağlantıya eklendi|AddedToSecureLink|Güvenli paylaşım bağlantısı kullanabilen varlıklar listesine bir kullanıcı eklendi.|
+|Kullanıcı güvenli bağlantıdan kaldırıldı|RemovedFromSecureLink|Bir kullanıcı, güvenli paylaşım bağlantısı kullanabilen varlıklar listesinden kaldırıldı.|
+|Paylaşım daveti geri çekildi|SharingInvitationRevoked|Kullanıcı bir kaynağa paylaşım daveti çekti.|
 ||||
 
 ### <a name="synchronization-activities"></a>Eşitleme etkinlikleri
 
-Aşağıdaki tabloda, SharePoint Online ve OneDrive İş'de dosya eşitleme etkinlikleri liste OneDrive İş.
+Aşağıdaki tabloda, SharePoint Online ve OneDrive İş dosya eşitleme etkinlikleri listelenir.
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Bilgisayarın dosyaları eşitlemesine izin verildi|ManagedSyncClientAllowed|Kullanıcı siteyle başarılı bir eşitleme ilişkisi kurmıştır. Eşitleme ilişkisinin başarılı olması için, kullanıcının bilgisayarının kuruluşta belge kitaplıklarına erişen etki alanları listesine (güvenilir alıcılar *listesi olarak adlandırılan*) eklenmiş bir etki alanına üye olmasıdır. <br/><br/> Bu özellik hakkında daha fazla bilgi için bkz. Windows PowerShell alıcılar listesinde yer alan etki OneDrive eşitleme etki alanlarını etkinleştirmek için [cmdlet'leri kullanma](/powershell/module/sharepoint-online/).|
-|Bilgisayarın dosyaları eşitlemesi engellendi|UnmanagedSyncClientBlocked|Kullanıcı, kuruluş etki alanına üye olmayan veya kuruluşun belge kitaplıklarına erişen etki alanları listesine (güvenilir alıcılar listesi olarak adlandırılan  *)*  eklenmiştir. Eşitleme ilişkisine izin verilmez ve kullanıcının bilgisayarının belge kitaplığına dosya eşitlemesi, indirmesi veya karşıya yüklemesi engellenir. <br/><br/> Bu özellik hakkında bilgi için bkz. Windows PowerShell alıcılar listesinde yer alan etki OneDrive eşitleme etki alanlarını etkinleştirmek için [cmdlet'leri kullanma](/powershell/module/sharepoint-online/).|
-|Dosyalar bilgisayara indirildi|FileSyncDownloadedFull|Kullanıcı bir dosyayı SharePoint belge kitaplığından veya OneDrive eşitleme uygulamasını (OneDrive.exe) kullanarak OneDrive İş bilgisayarınıza indirmiştir.|
-|Dosya değişiklikleri bilgisayara indirildi|FileSyncDownloadedPartial|Bu olay, eski OneDrive İş eşitleme uygulaması (eşitleme) ile birlikte Groove.exe.|
-|Dosyalar belge kitaplığına yüklendi|FileSyncUploadedFull|Kullanıcı belge kitaplığı SharePoint nda veya OneDrive eşitleme uygulamasını (OneDrive.exe) kullanarak belge kitaplığında yeni bir dosya OneDrive İş dosyada değişiklikler OneDrive.exe.|
-|Dosya değişiklikleri belge kitaplığına yüklendi|FileSyncUploadedPartial|Bu olay, eski OneDrive İş eşitleme uygulaması (eşitleme) ile birlikte Groove.exe.|
+|Bilgisayarın dosyaları eşitlemesine izin verildi|ManagedSyncClientAllowed|Kullanıcı bir siteyle başarıyla eşitleme ilişkisi kurar. Kullanıcının bilgisayarı, kuruluşunuzdaki belge kitaplıklarına erişebilen etki alanları listesine ( *güvenli alıcılar listesi* olarak adlandırılır) eklenmiş bir etki alanının üyesi olduğundan eşitleme ilişkisi başarılı olur. <br/><br/> Bu özellik hakkında daha fazla bilgi için bkz[. Güvenli alıcılar listesindeki etki alanları için OneDrive eşitleme etkinleştirmek için Windows PowerShell cmdlet'leri kullanma](/powershell/module/sharepoint-online/).|
+|Bilgisayarın dosyaları eşitlemesi engellendi|UnmanagedSyncClientBlocked|Kullanıcı, kuruluşunuzun etki alanının üyesi olmayan veya kuruluşunuzdaki belge kitaplıklarına erişebilen etki alanları listesine (  *güvenilir alıcılar listesi*  olarak adlandırılır) eklenmemiş bir etki alanının üyesi olan bir bilgisayardan siteyle eşitleme ilişkisi kurmaya çalışır. Eşitleme ilişkisine izin verilmez ve kullanıcının bilgisayarının dosyaları bir belge kitaplığına eşitlemesi, indirmesi veya karşıya yüklemesi engellenir. <br/><br/> Bu özellik hakkında bilgi için bkz. [Güvenli alıcılar listesindeki etki alanları için OneDrive eşitleme etkinleştirmek için Windows PowerShell cmdlet'lerini kullanma](/powershell/module/sharepoint-online/).|
+|Bilgisayara indirilen dosyalar|FileSyncDownloadedFull|Kullanıcı SharePoint belge kitaplığından veya OneDrive eşitleme uygulamasını (OneDrive.exe) kullanarak OneDrive İş bilgisayarına dosya indirir.|
+|Bilgisayara indirilen dosya değişiklikleri|FileSyncDownloadedPartial|Bu olay, eski OneDrive İş eşitleme uygulaması (Groove.exe) ile birlikte kullanım dışı bırakıldı.|
+|Belge kitaplığına dosya yüklendi|FileSyncUploadedFull|Kullanıcı, OneDrive eşitleme uygulamasını (OneDrive.exe) kullanarak yeni bir dosyayı veya değişiklikleri SharePoint belge kitaplığına veya OneDrive İş bir dosyaya yükler.|
+|Belge kitaplığına yüklenen dosya değişiklikleri|FileSyncUploadedPartial|Bu olay, eski OneDrive İş eşitleme uygulaması (Groove.exe) ile birlikte kullanım dışı bırakıldı.|
 ||||
 
 ### <a name="site-permissions-activities"></a>Site izinleri etkinlikleri
 
-Aşağıdaki tabloda, sitelere erişim vermek (ve iptal etmek) için SharePoint izin atama ve grupları kullanma ile ilgili olaylar listelemektedir. Daha önce de açıkıldığı gibi, bazı SharePoint denetim kayıtları, eylemi başlatan kullanıcı veya app@sharepoint kullanıcı adına etkinlik gerçekleştirilen kullanıcıya gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarında appsharepoint\@ kullanıcısı](#the-appsharepoint-user-in-audit-records).
+Aşağıdaki tabloda, SharePoint izin atama ve sitelere erişim vermek (ve iptal etmek) için grupları kullanma ile ilgili olaylar listeleniyor. Daha önce açıklandığı gibi, bazı SharePoint etkinliklerinin denetim kayıtları, app@sharepoint kullanıcının eylemi başlatan kullanıcı veya yönetici adına etkinlik gerçekleştirdiğini gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarındaki appsharepoint\@ kullanıcısı](#the-appsharepoint-user-in-audit-records).
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Site koleksiyonu yöneticisi eklendi|SiteCollectionAdminAdded|Site koleksiyonu yöneticisi veya sahibi, bir kişiyi site için site koleksiyonu yöneticisi olarak eklemektedir. Site koleksiyonu yöneticilerinin site koleksiyonu ve tüm alt siteler üzerinde tam denetim izinleri vardır. Bu etkinlik, yönetici bir kullanıcının OneDrive hesabına erişme izni verdiği zaman da (SharePoint yönetim merkezinde kullanıcı profilini düzenleyerek veya kullanıcı hesabını [Microsoft 365 yönetim merkezi.](/office365/admin/add-users/get-access-to-and-back-up-a-former-user-s-data)|
-|Grup grubuna kullanıcı veya SharePoint eklendi|AddedToGroup|Kullanıcı grup grubuna bir üye veya SharePoint ekledi. Bu, bilerek yapılan bir eylem olabileceği gibi paylaşım olayı gibi başka bir etkinliğin sonucu da olabilir.|
-|İzin düzeyi devralması bozuldu|PermissionLevelsInheritanceBroken|Öğe değiştirildi, böylece artık üst öğesinden izin düzeylerini devralmaz.|
-|Paylaşım devralması bozuldu|SharingInheritanceBroken|Öğe değiştirildi, böylece artık üst öğesinden paylaşım izinlerini devralmaz.|
-|Grup oluşturuldu|GroupAdded|Site yöneticisi veya sahibi, site için bir grup oluşturur veya bir grubun oluşturularak sonuç olarak bir görev gerçekleştirir. Örneğin, kullanıcı ilk kez bir dosyanın paylaşımına bağlantı oluşturduğunda, kullanıcının kendi sitelerine bir sistem OneDrive İş eklenir. Bu olay, kullanıcının paylaşılan bir dosyaya düzenleme izinleri içeren bir bağlantı oluşturması sonucu da olabilir.|
-|Grup silindi|GroupRemoved|Kullanıcı siteden bir grubu sildi.|
-|Değiştirilmiş erişim isteği ayarı|WebRequestAccessModified|Erişim isteği ayarları sitede değiştirildi.|
-|Değiştirilmiş 'Üyeler Paylaşabilir' ayarı|WebMembersCanShareModified|**Paylaşabilirsiniz Üyeleri** ayarı sitede değiştirildi.|
-|Site koleksiyonunda izin düzeyi değiştirildi|PermissionLevelModified|Site koleksiyonunda bir izin düzeyi değiştirilmiştir.|
-|Site izinleri değiştirildi|SitePermissionsModified|Site yöneticisi veya sahibi (veya sistem hesabı), siteden bir gruba atanan izin düzeyini değiştirir. Gruptan tüm izinler kaldırılmışsa da bu etkinlik günlüğe kaydedilir. <br/><br/> **NOT**: Bu işlem SharePoint Online'da SharePoint. İlgili olayları bulmak için, **Site** koleksiyonu yöneticisi eklendi, Grup için kullanıcı veya grup eklendi, **SharePoint Kullanıcıya** grup oluşturma izni **verildi, Grup** oluşturuldu ve Grup silindi gibi diğer izin etkinliklerini **arayabilirsiniz.** |
-|Site koleksiyonundan izin düzeyi kaldırıldı|PermissionLevelRemoved|Site koleksiyonundan bir izin düzeyi kaldırılmıştır.|
-|Site koleksiyonu yöneticisi kaldırıldı|SiteCollectionAdminRemoved|Site koleksiyonu yöneticisi veya sahibi, bir kişiyi sitenin koleksiyon yöneticisi olarak kaldırır. Bu etkinlik, yöneticinin kendi kullanıcı hesabı için site koleksiyonu yöneticileri listesinden (kullanıcı profilini OneDrive yönetim merkezinde düzenleyerek) kendilerini site koleksiyonu yöneticileri listesinden kaldırıyor SharePoint kaydedilir.  Denetim günlüğü arama sonuçlarında bu etkinliğin sonuç olarak dönmesi için, tüm etkinlikleri aramanız gerekir.|
-|Kullanıcı veya grup grup SharePoint kaldırıldı|RemovedFromGroup|Kullanıcı grup grubundan bir üyeyi veya SharePoint kaldırılmıştır. Bu, bilerek yapılan bir eylem olabileceği gibi, unsharing olayı gibi başka bir etkinliğin sonucu da olabilir.|
-|Site yöneticisi izinleri istenen|SiteAdminChangeRequest|Kullanıcı, bir site koleksiyonunda site koleksiyonu yöneticisi olarak eklenme isteğinda lenmiştir. Site koleksiyonu yöneticilerinin site koleksiyonu ve tüm alt siteler üzerinde tam denetim izinleri vardır.|
-|Paylaşım devralma geri yüklendi|SharingInheritanceReset|Öğenin üst öğesinden paylaşım izinlerini devralmasını sağlarken değişiklik yapıldı.|
-|Grup güncelleştirildi|GroupUpdated|Site yöneticisi veya sahibi, site için bir grubun ayarlarını değiştirmektedir. Bu, grubun adını, grup üyeliğini kimlerin görüntüleyemez veya düzenleyemez? ve üyelik isteklerinin nasıl işlenemez? içerebilir.|
+|Site koleksiyonu yöneticisi eklendi|SiteCollectionAdminAdded|Site koleksiyonu yöneticisi veya sahibi, site için bir kişiyi site koleksiyonu yöneticisi olarak ekler. Site koleksiyonu yöneticileri, site koleksiyonu ve tüm alt siteler için tam denetim izinlerine sahiptir. Bu etkinlik, yönetici kullanıcının OneDrive hesabına (SharePoint yönetim merkezinde kullanıcı profilini düzenleyerek veya Microsoft 365 yönetim merkezi kullanarak) erişim verdiğinde de [günlüğe](/office365/admin/add-users/get-access-to-and-back-up-a-former-user-s-data) kaydedilir.|
+|SharePoint grubuna kullanıcı veya grup eklendi|AddedToGroup|Kullanıcı bir SharePoint grubuna üye veya konuk ekledi. Bu kasıtlı bir eylem veya paylaşım olayı gibi başka bir etkinliğin sonucu olabilir.|
+|İzin düzeyi devralmayı bozdu|PermissionLevelsInheritanceBroken|Bir öğe, artık üst öğesinden izin düzeylerini devralmaması için değiştirildi.|
+|Paylaşım devralmayı bozdu|SharingInheritanceBroken|Öğe artık üst öğesinden paylaşım izinlerini devralmaması için değiştirildi.|
+|Grup oluşturuldu|GroupAdded|Site yöneticisi veya sahibi site için bir grup oluşturur veya bir grubun oluşturulmasına neden olan bir görev gerçekleştirir. Örneğin, bir kullanıcı dosyayı paylaşmak için ilk kez bir bağlantı oluşturduğunda, kullanıcının OneDrive İş sitesine bir sistem grubu eklenir. Bu olay, kullanıcının paylaşılan bir dosyaya yönelik düzenleme izinlerine sahip bir bağlantı oluşturmasının bir sonucu da olabilir.|
+|Grup silindi|GroupRemoved|Kullanıcı siteden bir grubu siler.|
+|Değiştirilmiş erişim isteği ayarı|WebRequestAccessModified|Erişim isteği ayarları bir sitede değiştirildi.|
+|'Üyeler Paylaşabilir' ayarı değiştirildi|WebMembersCanShareModified|**Üyeler Paylaşabilir** ayarı sitede değiştirildi.|
+|Site koleksiyonunda değiştirilmiş izin düzeyi|PermissionLevelModified|Site koleksiyonunda izin düzeyi değiştirildi.|
+|Değiştirilen site izinleri|SitePermissionsModified|Site yöneticisi veya sahibi (veya sistem hesabı), sitedeki bir gruba atanan izin düzeyini değiştirir. Tüm izinler bir gruptan kaldırılırsa bu etkinlik de günlüğe kaydedilir. <br/><br/> **NOT**: Bu işlem SharePoint Online'da kullanım dışı bırakılmıştır. İlgili olayları bulmak için **Site koleksiyonu yöneticisi eklendi, SharePoint** **grubuna kullanıcı veya grup eklendi**, Grup **oluşturmasına izin verilen kullanıcı**, **Oluşturulan grup** ve **Silinmiş grup** gibi izinle ilgili diğer etkinlikleri arayabilirsiniz.|
+|Site koleksiyonundan izin düzeyi kaldırıldı|PermissionLevelRemoved|Site koleksiyonundan izin düzeyi kaldırıldı.|
+|Site koleksiyonu yöneticisi kaldırıldı|SiteCollectionAdminRemoved|Site koleksiyonu yöneticisi veya sahibi, sitenin site koleksiyonu yöneticisi olarak bir kişiyi kaldırır. Bu etkinlik, yönetici bir kullanıcının OneDrive hesabının site koleksiyonu yöneticileri listesinden (SharePoint yönetim merkezinde kullanıcı profilini düzenleyerek) kendisini kaldırdığında da günlüğe kaydedilir.  Bu etkinliği denetim günlüğü arama sonuçlarında döndürmek için tüm etkinlikleri aramanız gerekir.|
+|SharePoint grubundan kullanıcı veya grup kaldırıldı|RemovedFromGroup|Kullanıcı bir üyeyi veya konuğu SharePoint grubundan kaldırdı. Bu kasıtlı bir eylem veya paylaşılmayan olay gibi başka bir etkinliğin sonucu olabilir.|
+|İstenen site yöneticisi izinleri|SiteAdminChangeRequest|Kullanıcı, site koleksiyonu için site koleksiyonu yöneticisi olarak eklenmesini istemektedir. Site koleksiyonu yöneticileri, site koleksiyonu ve tüm alt siteler için tam denetim izinlerine sahiptir.|
+|Paylaşım devralma geri yüklendi|SharingInheritanceReset|Öğenin paylaşım izinlerini üst öğesinden devralması için bir değişiklik yapıldı.|
+|Güncelleştirilmiş grup|GroupUpdated|Site yöneticisi veya sahibi, bir site için grubun ayarlarını değiştirir. Bu, grubun adını değiştirmeyi, grup üyeliğini kimlerin görüntüleyebileceğini veya düzenleyebileceğini ve üyelik isteklerinin nasıl işlenme şeklini içerebilir.|
 ||||
 
 ### <a name="site-administration-activities"></a>Site yönetimi etkinlikleri
 
-Aşağıdaki tabloda, SharePoint Online'da site yönetimi görevlerinin sonucunda SharePoint liste vardır. Daha önce de açıkıldığı gibi, bazı SharePoint denetim kayıtları, eylemi başlatan kullanıcı veya app@sharepoint kullanıcı adına etkinlik gerçekleştirilen kullanıcıya gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarında appsharepoint\@ kullanıcısı](#the-appsharepoint-user-in-audit-records).
+Aşağıdaki tabloda, SharePoint Online'da site yönetimi görevlerinden kaynaklanan olaylar listelendir. Daha önce açıklandığı gibi, bazı SharePoint etkinliklerinin denetim kayıtları, app@sharepoint kullanıcının eylemi başlatan kullanıcı veya yönetici adına etkinlik gerçekleştirdiğini gösterir. Daha fazla bilgi için bkz [. Denetim kayıtlarındaki appsharepoint\@ kullanıcısı](#the-appsharepoint-user-in-audit-records).
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|İzin verilen veri konumu eklendi|AllowedDataLocationAdded|Bir SharePoint yöneticisi veya genel yönetici çok coğrafi bir ortamda izin verilen bir veri konumu ekledi.|
-|Muaf kullanıcı aracısı eklendi|ExemptUserAgentSet|Bir SharePoint yöneticisi veya genel yönetici, yönetim merkezinde muaf kullanıcı aracıları listesine bir kullanıcı SharePoint ekledi.|
-|Coğrafi konum yöneticisi eklendi|GeoAdminAdded|Bir SharePoint yöneticisi veya genel yönetici bir kullanıcıyı bir konumun coğrafi yöneticisi olarak ekledi.|
-|Kullanıcının grup oluşturmasına izin verildi|AllowGroupCreationSet|Site yöneticisi veya sahibi, siteye bir izin düzeyi ekler ve bu izin atanan kullanıcının o site için bir grup oluşturma izni verir.|
-|Sitenin coğrafi olarak taşınması iptal edildi|SiteGeoMoveCancelled|Bir SharePoint yöneticisi veya genel yönetici sitenin coğrafi olarak SharePoint veya OneDrive başarılı bir şekilde iptal etmiştir. Multi-Geo özelliği, bir kuruluşun birden çok Microsoft veri merkezi coğrafyasına (geo) yayılmasına olanak sağlar. Daha fazla bilgi için bkz[. OneDrive ve SharePoint Online'da Multi-Geo Özellikleri](../enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md).|
-|Paylaşım ilkesi değiştirildi|SharingPolicyChanged|Bir SharePoint yöneticisi veya genel yönetici SharePoint Yönetim Merkezi'ni veya Microsoft 365 yönetim merkezi, SharePoint Yönetim Kabuğu'SharePoint değiştirmiştir. Kurum içinde paylaşım ilkesinde ayarlarda yapılan her değişiklik günlüğe kaydedilir. Değiştirilen ilke, olay kaydının ayrıntılı özelliklerinde **ModifiedProperties** alanında tanımlanır.|
-|Cihaz erişim ilkesi değiştirildi|DeviceAccessPolicyChanged|Bir SharePoint yöneticisi veya genel yönetici, kurum için yönetim dışı cihazlar ilkesi değiştirmiştir. Bu ilke, SharePoint bir OneDrive olmayan cihazlardan Microsoft 365 OneDrive ve posta cihazlarına erişimi kontrol eder. Bu ilkenin yapılandırılması için Enterprise Mobility + Security gerekir. Daha fazla bilgi için bkz. [Yönetilmeyen cihazlardan erişimi denetleme](/sharepoint/control-access-from-unmanaged-devices).|
-|Muaf kullanıcı aracıları değiştirildi|CustomizeExemptUsers|Bir SharePoint yöneticisi veya genel yönetici, yönetim merkezinde muaf kullanıcı aracıları SharePoint özelleştirdi. Hangi kullanıcı aracılarının dizine almak için bir web sayfasının tamamını almaktan muaf tutulacaklarını belirtebilirsiniz. Bu, muaf olduğunu belirttiğiniz kullanıcı aracısı bir InfoPath formuyla karşılaştığında, formun tüm web sayfası yerine XML dosyası olarak döndürülecektir. Bu InfoPath formlarında dizin oluşturmayı daha hızlı sağlar.|
-|Ağ erişim ilkesi değiştirildi|NetworkAccessPolicyChanged|Bir SharePoint yöneticisi veya genel yönetici, SharePoint Online PowerShell kullanarak veya SharePoint Online PowerShell kullanarak konum tabanlı erişim ilkesi (güvenilir ağ sınırı olarak da denir) SharePoint değiştirmiştir. Bu tür ilkeler, sizin belirttiğiniz yetkili IP SharePoint ve OneDrive kaynakları için kimlerin erişeni kontrol eder. Daha fazla bilgi için bkz[. SharePoint Online'a erişimi denetleme ve OneDrive konuma göre verileri denetleme](/sharepoint/control-access-based-on-network-location).|
-|Sitenin coğrafi olarak taşınması tamamlandı|SiteGeoMoveCompleted|Genel yönetici tarafından zamanlanan bir siteyi coğrafi olarak taşıma başarılı bir şekilde tamamlanmıştır. Multi-Geo özelliği, bir kuruluşun birden çok Microsoft veri merkezi coğrafyasına (geo) yayılmasına olanak sağlar. Daha fazla bilgi için bkz[. OneDrive ve SharePoint Online'da Multi-Geo Özellikleri](../enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md).|
-|Gönderilen bağlantısı oluşturuldu|SendToConnectionAdded|Genel SharePoint yöneticisi veya genel yönetici, yönetim merkezinin Kayıt yönetimi sayfasında yeni bir SharePoint oluşturur. Gönder bağlantısı, belge deposunun veya kayıt merkezinin ayarlarını belirtir. Gönder bağlantısı seniz, İçerik Düzenleyicisi belgeleri belirtilen konuma gönderebilir.|
-|Site koleksiyonu oluşturuldu|SiteCollectionCreated|Bir SharePoint yöneticisi veya genel yönetici SharePoint Online kuruluşunda bir site koleksiyonu oluşturur veya bir kullanıcı kendi OneDrive İş sağlar.|
-|Sahipsiz merkez sitesi silindi|HubSiteOrphanHubDeleted|Bir SharePoint yöneticisi veya genel yönetici, ilişkili sitesi olmayan bir merkez sitesi olan artık bir merkez sitesini sildi. Sahipsiz bir hub, büyük olasılıkla özgün hub sitenin silinmesi nedeniyle kaynaklandı.|
-|Gönder bağlantısı silindi|SendToConnectionRemoved|Bir SharePoint yöneticisi veya genel yönetici, yönetim merkezinin Kayıt yönetimi sayfasındaki Gönder SharePoint silebilir.|
+|İzin verilen veri konumu eklendi|AllowedDataLocationAdded|bir SharePoint veya genel yönetici, çok coğrafi bir ortamda izin verilen bir veri konumu ekledi.|
+|Muaf kullanıcı aracısı eklendi|ExemptUserAgentSet|SharePoint veya genel yönetici, SharePoint yönetim merkezindeki muaf kullanıcı aracıları listesine bir kullanıcı aracısı ekledi.|
+|Coğrafi konum yöneticisi eklendi|GeoAdminAdded|SharePoint veya genel yönetici, bir kullanıcıyı konumun coğrafi yöneticisi olarak ekledi.|
+|Kullanıcının grup oluşturmasına izin verildi|AllowGroupCreationSet|Site yöneticisi veya sahibi bir siteye izin düzeyi ekler ve bu izin atanmış bir kullanıcının bu site için grup oluşturmasına izin verir.|
+|site coğrafi taşıma iptal edildi|SiteGeoMoveCancelled|SharePoint veya genel yönetici bir SharePoint veya OneDrive site coğrafi taşıma işlemini başarıyla iptal eder. Multi-Geo özelliği, bir kuruluşun coğrafi bölge olarak adlandırılan birden çok Microsoft veri merkezi coğrafyasına yayılmasına olanak tanır. Daha fazla bilgi için bkz[. OneDrive ve SharePoint Online'da Multi-Geo Özellikleri](../enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md).|
+|Paylaşım ilkesi değiştirildi|SharingPolicyChanged|SharePoint veya genel yönetici, Microsoft 365 yönetim merkezi, SharePoint yönetim merkezini veya Çevrimiçi Yönetim Kabuğu'SharePoint kullanarak SharePoint paylaşım ilkesini değiştirdi. Kuruluşunuzdaki paylaşım ilkesindeki ayarlarda yapılan tüm değişiklikler günlüğe kaydedilir. Değiştirilen ilke, olay kaydının ayrıntılı özelliklerindeki **ModifiedProperties** alanında tanımlanır.|
+|Cihaz erişim ilkesi değiştirildi|DeviceAccessPolicyChanged|SharePoint veya genel yönetici, kuruluşunuz için yönetilmeyen cihazlar ilkesini değiştirdi. Bu ilke, kuruluşunuza katılmış olmayan cihazlardan SharePoint, OneDrive ve Microsoft 365 erişimini denetler. Bu ilkenin yapılandırılması için bir Enterprise Mobility + Security aboneliği gerekir. Daha fazla bilgi için bkz. [Yönetilmeyen cihazlardan erişimi denetleme](/sharepoint/control-access-from-unmanaged-devices).|
+|Muaf kullanıcı aracıları değiştirildi|CustomizeExemptUsers|SharePoint veya genel yönetici, SharePoint yönetim merkezinde muaf kullanıcı aracılarının listesini özelleştirdi. Dizine eklenecek web sayfasının tamamını almaktan muaf tutulacak kullanıcı aracılarını belirtebilirsiniz. Bu, muaf olarak belirttiğiniz bir kullanıcı aracısı bir InfoPath formuyla karşılaştığında formun web sayfasının tamamı yerine XML dosyası olarak döndürüleceği anlamına gelir. Bu, InfoPath formlarının dizinini oluşturmayı hızlandırır.|
+|Ağ erişim ilkesi değiştirildi|NetworkAccessPolicyChanged|SharePoint veya genel yönetici, SharePoint yönetim merkezinde veya SharePoint Online PowerShell kullanarak konum tabanlı erişim ilkesini (güvenilen ağ sınırı olarak da adlandırılır) değiştirdi. Bu ilke türü, belirttiğiniz yetkili IP adresi aralıklarına göre kuruluşunuzdaki SharePoint ve OneDrive kaynaklara kimlerin erişebileceğini denetler. Daha fazla bilgi için bkz. [SharePoint Online'a erişimi denetleme ve ağ konumuna göre verileri OneDrive](/sharepoint/control-access-based-on-network-location).|
+|Tamamlanan site coğrafi taşıma|SiteGeoMoveCompleted|Kuruluşunuzdaki bir genel yönetici tarafından zamanlanan site coğrafi taşıma işlemi başarıyla tamamlandı. Multi-Geo özelliği, bir kuruluşun coğrafi bölge olarak adlandırılan birden çok Microsoft veri merkezi coğrafyasına yayılmasına olanak tanır. Daha fazla bilgi için bkz[. OneDrive ve SharePoint Online'da Multi-Geo Özellikleri](../enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md).|
+|Gönderilen bağlantı oluşturuldu|SendToConnectionAdded|SharePoint veya genel yönetici, SharePoint yönetim merkezindeki Kayıtlar yönetim sayfasında yeni bir Gönder bağlantısı oluşturur. Gönder bağlantısı, belge deposunun veya kayıt merkezinin ayarlarını belirtir. Gönder bağlantısı oluşturduğunuzda, İçerik Düzenleyicisi belgeleri belirtilen konuma gönderebilir.|
+|Site koleksiyonu oluşturuldu|SiteCollectionCreated|SharePoint veya genel yönetici, SharePoint Online kuruluşunuzda bir site koleksiyonu oluşturur veya bir kullanıcı OneDrive İş sitesini sağlar.|
+|Yalnız bırakılmış hub sitesi silindi|HubSiteOrphanHubDeleted|bir SharePoint veya genel yönetici, kendisiyle ilişkilendirilmiş sitesi olmayan bir merkez sitesi olan yalnız bırakılmış hub sitesini sildi. Yalnız bırakılmış hub'ın nedeni büyük olasılıkla özgün hub sitesinin silinmesidir.|
+|Gönderilen bağlantı silindi|SendToConnectionRemoved|SharePoint veya genel yönetici, SharePoint yönetim merkezindeki Kayıtlar yönetim sayfasındaki Gönder bağlantısını siler.|
 |Site silindi|SiteDeleted|Site yöneticisi siteyi siler.|
-|Belge önizleme etkinleştirildi|PreviewModeEnabledSet|Site yöneticisi, site için belge önizlemesini sağlar.|
-|Eski iş akışı etkinleştirildi|LegacyWorkflowEnabledSet|Site yöneticisi veya sahibi siteye SharePoint 2013 İş Akışı Görevi içerik türünü eklemektedir. Ayrıca genel yöneticiler aynı zamanda genel yönetim merkezinde kuruluşun tamamı için SharePoint etkinleştir olabilir.|
-|Enabled Office on Demand|OfficeOnDemandSet|Site yöneticisi, Office masaüstü uygulamalarının en son sürümüne erişmelerine olanak sağlayan Office izin verdi. Office Özel Istekler, SharePoint yönetim merkezinde etkinleştirilir ve tam, yüklü Microsoft 365 uygulamalarını içeren bir Office gerektirir.|
-|Kişi Aramaları için etkin sonuç kaynağı|PeopleResultsScopeSet|Site yöneticisi, bir site için Kişi Aramaları için sonuç kaynağını oluşturur.|
-|RSS akışları etkinleştirildi|NewsFeedEnabledSet|Site yöneticisi veya sahibi site için RSS akışlarını etkindir. Genel yöneticiler, genel yönetim merkezinde kuruluşun tamamı için RSS SharePoint etkinleştir olabilir.|
-|Merkez sitesine katılmış site|HubSiteJoined|Site sahibi kendi sitesini bir merkez sitesiyle ilişkilendirdi.|
-|Site koleksiyonu kotası değiştirildi|SiteCollectionQuotaModified|Site yöneticisi, site koleksiyonunda kotada değişiklik yaptı.|
-|Kayıtlı merkez sitesi|HubSiteRegistered|Bir SharePoint yöneticisi veya genel yönetici bir merkez sitesi oluşturur. Sonuçlar, sitenin bir merkez sitesi olarak kaydedilir.|
-|İzin verilen veri konumu kaldırıldı|AllowedDataLocationDeleted|Bir SharePoint yöneticisi veya genel yönetici çok coğrafi bir ortamda izin verilen veri konumunu kaldırılmış olabilir.|
-|Coğrafi konum yöneticisi kaldırıldı|GeoAdminDeleted|Bir SharePoint yöneticisi veya genel yönetici bir konumun coğrafi yöneticisi olarak bir kullanıcı kaldırılmıştır.|
-|Site yeniden adlandırıldı|SiteRenamed|Site yöneticisi veya sahibi siteyi yeniden adlandırıyor|
-|Sitenin coğrafi olarak taşınması zamanlandı|SiteGeoMoveScheduled|Bir SharePoint yöneticisi veya genel yönetici sitenin coğrafi olarak SharePoint veya OneDrive başarılı bir şekilde zamanmıştır. Multi-Geo özelliği, bir kuruluşun birden çok Microsoft veri merkezi coğrafyasına (geo) yayılmasına olanak sağlar. Daha fazla bilgi için bkz[. OneDrive ve SharePoint Online'da Multi-Geo Özellikleri](../enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md).|
-|Ana bilgisayar sitesini ayarlama|HostSiteSet|Bir SharePoint yöneticisi veya genel yönetici, kişisel siteleri veya diğer siteleri barındırmak için OneDrive İş değiştirir.|
-|Coğrafi konum için depolama kotasını ayarlama|GeoQuotaAllocated|Bir SharePoint yöneticisi veya genel yönetici, çok coğrafi bir ortamda coğrafi konum için depolama kotasını yapılandırmış olabilir.|
-|Merkez sitesinden katılmamış site|HubSiteUnjoined|Site sahibi merkez sitesinden kendi sitesini aşiyar.|
-|Kaydı olmayan merkez sitesi|HubSiteUnregistered|Bir SharePoint yöneticisi veya genel yönetici, siteyi merkez sitesi olarak değiştirmemiş olabilir. Bir merkez sitesi kaydısız olduğunda, artık merkez sitesi olarak işlevsizdir.|
+|Etkin belge önizlemesi|PreviewModeEnabledSet|Site yöneticisi bir site için belge önizlemesini etkinleştirir.|
+|Etkin eski iş akışı|LegacyWorkflowEnabledSet|Site yöneticisi veya sahibi SharePoint 2013 İş Akışı Görevi içerik türünü siteye ekler. Genel yöneticiler, SharePoint yönetim merkezinde kuruluşun tamamı için iş akışlarını da etkinleştirebilir.|
+|İsteğe Bağlı Office Etkinleştirildi|OfficeOnDemandSet|Site yöneticisi, kullanıcıların Office masaüstü uygulamalarının en son sürümüne erişmesini sağlayan İsteğe Bağlı Office etkinleştirir. İsteğe Bağlı Office SharePoint yönetim merkezinde etkinleştirilir ve tam, yüklü Office uygulamaları içeren bir Microsoft 365 aboneliği gerektirir.|
+|Kişi Aramaları için etkin sonuç kaynağı|PeopleResultsScopeSet|Site yöneticisi, site için Kişi Aramaları için sonuç kaynağını oluşturur.|
+|Etkin RSS akışları|NewsFeedEnabledSet|Site yöneticisi veya sahibi bir site için RSS akışlarını etkinleştirir. Genel yöneticiler, SharePoint yönetim merkezinde kuruluşun tamamı için RSS akışlarını etkinleştirebilir.|
+|Hub sitesine katılmış site|HubSiteJoined|Site sahibi, sitesini bir hub sitesiyle ilişkilendirir.|
+|Değiştirilen site koleksiyonu kotası|SiteCollectionQuotaModified|Site yöneticisi, site koleksiyonu kotasını değiştirir.|
+|Kayıtlı hub sitesi|HubSiteRegistered|SharePoint veya genel yönetici bir merkez sitesi oluşturur. Sonuçlar, sitenin bir hub sitesi olarak kayıtlı olmasıdır.|
+|İzin verilen veri konumu kaldırıldı|AllowedDataLocationDeleted|SharePoint veya genel yönetici, çok coğrafi bir ortamda izin verilen bir veri konumunu kaldırdı.|
+|Coğrafi konum yöneticisi kaldırıldı|GeoAdminDeleted|SharePoint veya genel yönetici, bir kullanıcıyı konumun coğrafi yöneticisi olarak kaldırdı.|
+|Site yeniden adlandırıldı|SiteRenamed|Site yöneticisi veya sahibi siteyi yeniden adlandırır|
+|Zamanlanmış site coğrafi taşıma|SiteGeoMoveScheduled|SharePoint veya genel yönetici bir SharePoint veya OneDrive site coğrafi taşımayı başarıyla zamanlar. Multi-Geo özelliği, bir kuruluşun coğrafi bölge olarak adlandırılan birden çok Microsoft veri merkezi coğrafyasına yayılmasına olanak tanır. Daha fazla bilgi için bkz[. OneDrive ve SharePoint Online'da Multi-Geo Özellikleri](../enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365.md).|
+|Konak sitesini ayarlama|HostSiteSet|SharePoint veya genel yönetici, belirlenen siteyi kişisel veya OneDrive İş siteleri barındıracak şekilde değiştirir.|
+|Coğrafi konum için depolama kotası ayarlama|GeoQuotaAllocated|SharePoint veya genel yönetici, çok coğrafi ortamdaki bir coğrafi konum için depolama kotasını yapılandırdı.|
+|Merkez sitesinden ayrılmamış site|HubSiteUnjoined|Site sahibi, sitenin merkez sitesinden ayrılmasını sağlar.|
+|Kayıtlı olmayan hub sitesi|HubSiteUnregistered|SharePoint veya genel yönetici sitenin kaydını merkez sitesi olarak kaldırıyor. Bir hub sitesinin kaydı kaldırıldığında, artık hub sitesi olarak çalışmaz.|
 ||||
 
-### <a name="exchange-mailbox-activities"></a>Exchange kutusu etkinliklerini geri alın
+### <a name="exchange-mailbox-activities"></a>Posta kutusu etkinliklerini Exchange
 
-Aşağıdaki tabloda, posta kutusu denetim günlüğü tarafından günlüğe kaydedilebilir etkinlikler listelene. Posta kutusu sahibi, temsilci kullanıcı veya yönetici tarafından gerçekleştirilen posta kutusu etkinlikleri, 90 gün boyunca denetim günlüğüne otomatik olarak kaydedilir. Yöneticinin, tüm kullanıcılarınız için posta kutusu denetim günlüğünü kapatması mümkündür. Bu durumda, hiçbir kullanıcının posta kutusu eylemi günlüğe kaydedilmez. Daha fazla bilgi için bkz. [Posta kutusu denetimini yönetme](enable-mailbox-auditing.md).
+Aşağıdaki tabloda, posta kutusu denetim günlüğü tarafından günlüğe kaydedilebilecek etkinlikler listelenir. Posta kutusu sahibi, temsilci kullanıcı veya yönetici tarafından gerçekleştirilen posta kutusu etkinlikleri, denetim günlüğüne otomatik olarak 90 güne kadar günlüğe kaydedilir. Bir yöneticinin kuruluşunuzdaki tüm kullanıcılar için posta kutusu denetim günlüğünü kapatması mümkündür. Bu durumda, hiçbir kullanıcı için hiçbir posta kutusu eylemi günlüğe kaydedilmez. Daha fazla bilgi için bkz. [Posta kutusu denetimini yönetme](enable-mailbox-auditing.md).
 
- Ayrıca, Exchange Online PowerShell'de [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlet'ini kullanarak posta kutusu Exchange Online arayabilirsiniz.
+ Exchange Online PowerShell'de [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlet'ini kullanarak da posta kutusu etkinliklerini arayabilirsiniz.
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Erişilen posta kutusu öğeleri|MailItemsAccessed|İletiler posta kutusunda okundu veya erişildi. Bu etkinliğin denetim kayıtları iki şekilde tetiklenir: posta istemcisi (Outlook gibi) iletiler üzerinde bir bağlama işlemi gerçekleştirirken veya posta protokolleri (Exchange ActiveSync veya IMAP gibi) öğeleri bir posta klasöründe eşitlesin. Bu etkinlik yalnızca lisans veya lisans Office 365 kullanıcılar için Microsoft 365 E5 kaydedilir. Güvenliği ihlal edilmiş e-posta hesabını incelerken, bu etkinliğin denetim kayıtlarını çözümlemek yararlı olur. Daha fazla bilgi için, Gelişmiş Denetim'in "Gelişmiş Denetim olayları" [bölümüne bakın](advanced-audit.md#advanced-audit-events). |
-|Temsilci posta kutusu izinleri eklendi|Add-MailboxPermission|Yönetici, kullanıcıya (temsilci olarak bilinir) başka bir kişinin posta kutusu için FullAccess posta kutusu izni atadı. FullAccess izni, temsilciye diğer kişinin posta kutusunu açma ve posta kutusunun içeriğini okuma ve yönetme izni verir. Bu etkinliğin denetim kaydı, hizmette yer alan bir sistem hesabı Microsoft 365 düzenli aralıklarla kuruluş adına bakım görevlerini gerçekleştirirken de oluşturulur. Sistem hesabı tarafından gerçekleştirilen yaygın bir görev, sistem posta kutularının izinlerini güncelleştirmektir. Daha fazla bilgi için bkz[. Posta kutusu denetim Exchange hesapları](#system-accounts-in-exchange-mailbox-audit-records).|
-|Takvim klasörüne temsilci erişimi olan kullanıcı eklendi veya kaldırıldı|UpdateCalendarDelegation|Bir kullanıcı başka bir kullanıcının posta kutusunun takvimine temsilci olarak eklenmiştir veya kaldırılmıştır. Takvim temsilcisi, aynı kuruluşta yer alan başka birine posta kutusu sahibinin takvimini yönetme izni verir.|
-|Klasöre izinler eklendi|AddFolderPermissions|Bir klasör izni eklendi. Klasör izinleri, bir posta kutusu içinde yer alan klasörlere ve bu klasörlerde yer alan iletilere, kuruluşta hangi kullanıcıların eriş erişeni kontrol edin.|
-|İletiler başka bir klasöre kopyalandı|Kopyala|İleti başka bir klasöre kopyalandı.|
-|Oluşturulan posta kutusu öğesi|Oluştur|Posta kutusunun Takvim, Kişiler, Notlar veya Görevler klasöründe bir öğe oluşturulur. Örneğin, yeni bir toplantı isteği oluşturulur. İleti oluşturma, gönderme veya alma denetlenz. Ayrıca, posta kutusu klasörü oluşturma denetlenz.|
-|Web uygulamasında yeni gelen Outlook kuralı oluşturuldu|New-InboxRule|Posta kutusu sahibi veya posta kutusuna erişimi olan başka bir kullanıcı, web uygulamasında bir Outlook kuralı oluşturdu.|
-|Silinmiş Öğeler klasöründen silinmiş iletiler|SoftDelete|İleti kalıcı olarak silinmiştir veya Silinmiş Öğeler klasöründen silinmiştir. Bu öğeler Kurtarılabilir Öğeler klasörüne taşınır. Kullanıcı bir tirtir ve Shift+Delete tuşlarına basarak kurtarılabilir Öğeler **klasörüne de taşınır**.|
-|İletiyi kayıt olarak etiketleme|ApplyRecordLabel|İleti bir kayıt olarak sınıflandırılmış. Bu durum, içeriği kayıt olarak sınıflanan bir bekletme etiketi iletiye el ile veya otomatik olarak uygulandığında ortaya çıkar.|
-|İletiler başka bir klasöre taşındı|Taşıma|İleti başka bir klasöre taşınmış.|
-|İletiler Silinmiş Öğeler klasörüne taşındı|MoveToDeletedItems|İleti silinmiştir ve Silinmiş Öğeler klasörüne taşınmış.|
-|Klasör izni değiştirildi|UpdateFolderPermissions|Klasör izni değiştirildi. Klasör izinleri, kuruluşta hangi kullanıcıların posta kutusu klasörlerine ve klasördeki iletilere erişe bir denetimde bulunur.|
-|Web uygulamasından gelen Outlook kuralı|Set-InboxRule|Posta kutusu sahibi veya posta kutusuna erişimi olan başka bir kullanıcı, Outlook web uygulamasını kullanarak gelen kutusu kuralını değiştirdi.|
-|İletiler posta kutusundan temizildi|HardDelete|İleti Kurtarılabilir Öğeler klasöründen temiz edildi (posta kutusundan kalıcı olarak silindi).|
-|Temsilci posta kutusu izinleri kaldırıldı|Remove-MailboxPermission|Yönetici, kişinin posta kutusundan Tam Erişim iznini (temsilciye atanmış olan izin) kaldırılmıştır. FullAccess izni kaldırıldıktan sonra, temsilci diğer kişinin posta kutusunu açamaz veya kişinin posta kutusuyla ilgili hiçbir içeriğe erişamaz.|
-|Klasörden izinler kaldırıldı|RemoveFolderPermissions|Klasör izni kaldırılmıştır. Klasör izinleri, bir posta kutusu içinde yer alan klasörlere ve bu klasörlerde yer alan iletilere, kuruluşta hangi kullanıcıların eriş erişeni kontrol edin.|
-|İleti gönderildi|Gönderin|İleti gönderildi, yanıtlandı veya iletildi. Bu etkinlik yalnızca lisans veya lisans Office 365 kullanıcılar için Microsoft 365 E5 kaydedilir. Daha fazla bilgi için, Gelişmiş Denetim'in "Gelişmiş Denetim olayları" [bölümüne bakın](advanced-audit.md#advanced-audit-events).|
-|İleti Farklı Gönder izinleri kullanılarak gönderildi|SendAs|Farklı Gönder izni kullanılarak bir ileti gönderilmiştir. Bu, başka bir kullanıcının iletiyi, posta kutusu sahibinden geliyor gibi gönderdiği anlamına gelir.|
-|İleti Adına Gönder izinleri kullanılarak gönderildi|SendOnBehalf|SendOnBehalf izni kullanılarak bir ileti gönderilmiştir. Bu, başka bir kullanıcının iletiyi posta kutusu sahibi adına gönderdiği anlamına gelir. İleti, iletinin kimin adına gönderildiğini ve aslında kim tarafından gönderildiğini alıcıya gösterir.|
-|Outlook istemcisinde güncelleştirilmiş gelen Outlook kuralları|UpdateInboxRules|Posta kutusu sahibi veya posta kutusu kuralı oluşturulan, değiştirilen veya kaldırılan posta kutusuna erişimi olan başka bir kullanıcı, Outlook.|
-|İleti güncelleştirildi|Güncelleştirme|İleti veya özellikleri değiştirilmiştir.|
-|Kullanıcı posta kutusunda oturum etti|MailboxLogin|Kullanıcı posta kutusunda oturum alaştırdı.|
-|İletiyi kayıt olarak etiketleme||Kullanıcı e-posta iletisine bir bekletme etiketi uyguladı ve bu etiket öğeyi kayıt olarak işaretlemek üzere yapılandırıldı. |
+|Erişilen posta kutusu öğeleri|MailItemsAccessed|İletiler posta kutusunda okundu veya bu iletilere erişildi. Bu etkinliğin denetim kayıtları iki yoldan biriyle tetiklenir: posta istemcisi (Outlook gibi) iletilerde bağlama işlemi gerçekleştirdiğinde veya posta protokolleri (Exchange ActiveSync veya IMAP gibi) posta klasöründeki öğeleri eşitlediğinde. Bu etkinlik yalnızca Office 365 veya Microsoft 365 E5 lisansı olan kullanıcılar için günlüğe kaydedilir. Bu etkinlik için denetim kayıtlarını analiz etmek, güvenliği aşılmış e-posta hesabı araştırılırken yararlıdır. Daha fazla bilgi için Gelişmiş Denetim'in " [Gelişmiş Denetim](advanced-audit.md#advanced-audit-events) olayları" bölümüne bakın. |
+|Temsilci posta kutusu izinleri eklendi|Add-MailboxPermission|Yönetici, kullanıcıya (temsilci olarak bilinir) FullAccess posta kutusu iznini başka bir kişinin posta kutusuna atadı. FullAccess izni, temsilcinin diğer kişinin posta kutusunu açmasına ve posta kutusunun içeriğini okumasına ve yönetmesine olanak tanır. Bu etkinliğin denetim kaydı, Microsoft 365 hizmetindeki bir sistem hesabı kuruluşunuz adına düzenli aralıklarla bakım görevleri gerçekleştirdiğinde de oluşturulur. Sistem hesabı tarafından gerçekleştirilen yaygın bir görev, sistem posta kutuları için izinleri güncelleştirmektir. Daha fazla bilgi için bkz. [posta kutusu denetim kayıtları Exchange sistem hesapları](#system-accounts-in-exchange-mailbox-audit-records).|
+|Takvim klasörüne temsilci erişimi olan kullanıcı eklendi veya kaldırıldı|UpdateCalendarDelegation|Kullanıcı, başka bir kullanıcının posta kutusunun takvimine temsilci olarak eklendi veya kaldırıldı. Takvim temsilcisi, aynı kuruluştaki başka birine posta kutusu sahibinin takvimini yönetme izni verir.|
+|Klasöre izinler eklendi|AddFolderPermissions|Klasör izni eklendi. Klasör izinleri, kuruluşunuzdaki hangi kullanıcıların bir posta kutusundaki klasörlere ve bu klasörlerde bulunan iletilere erişebileceğini denetler.|
+|İletileri başka bir klasöre kopyalandı|Kopya|İleti başka bir klasöre kopyalandı.|
+|Posta kutusu öğesi oluşturuldu|Oluşturma|Posta kutusunun Takvim, Kişiler, Notlar veya Görevler klasöründe bir öğe oluşturulur. Örneğin, yeni bir toplantı isteği oluşturulur. İleti oluşturma, gönderme veya alma denetlenmiyor. Ayrıca, posta kutusu klasörü oluşturma işlemi denetlenmiyor.|
+|Outlook web uygulamasında yeni gelen kutusu kuralı oluşturuldu|New-InboxRule|Posta kutusu sahibi veya posta kutusuna erişimi olan başka bir kullanıcı, Outlook web uygulamasında bir gelen kutusu kuralı oluşturdu.|
+|Silinmiş Öğeler klasöründen silinen iletiler|SoftDelete|İleti kalıcı olarak silinmiş veya Silinmiş Öğeler klasöründen silinmiş. Bu öğeler Kurtarılabilir Öğeler klasörüne taşınır. İletiler, kullanıcı tarafından seçildiğinde ve **Shift+Delete** tuşlarına basıldığında kurtarılabilir Öğeler klasörüne de taşınır.|
+|İleti kayıt olarak etiketlendi|ApplyRecordLabel|İleti kayıt olarak sınıflandırıldı. Bu durum, içeriği kayıt olarak sınıflandırır bir bekletme etiketi el ile veya iletiye otomatik olarak uygulandığında oluşur.|
+|İletiler başka bir klasöre taşındı|Hareket|İleti başka bir klasöre taşındı.|
+|İletiler Silinmiş Öğeler klasörüne taşındı|MoveToDeletedItems|Bir ileti silindi ve Silinmiş Öğeler klasörüne taşındı.|
+|Değiştirilen klasör izni|UpdateFolderPermissions|Klasör izni değiştirildi. Klasör izinleri, kuruluşunuzdaki hangi kullanıcıların posta kutusu klasörlerine ve klasördeki iletilere erişebileceğini denetler.|
+|Outlook web uygulamasından değiştirilen gelen kutusu kuralı|Set-InboxRule|Posta kutusu sahibi veya posta kutusuna erişimi olan başka bir kullanıcı, Outlook web uygulamasını kullanarak gelen kutusu kuralını değiştirdi.|
+|İletileri posta kutusundan temizleme|HardDelete|Kurtarılabilir Öğeler klasöründen bir ileti temizlendi (posta kutusundan kalıcı olarak silindi).|
+|Temsilci posta kutusu izinleri kaldırıldı|Remove-MailboxPermission|Yönetici, bir kişinin posta kutusundan FullAccess iznini (temsilciye atanmış olan) kaldırdı. FullAccess izni kaldırıldıktan sonra, temsilci diğer kişinin posta kutusunu açamaz veya içindeki herhangi bir içeriğe erişemez.|
+|Klasörden izinler kaldırıldı|RemoveFolderPermissions|Klasör izni kaldırıldı. Klasör izinleri, kuruluşunuzdaki hangi kullanıcıların bir posta kutusundaki klasörlere ve bu klasörlerde bulunan iletilere erişebileceğini denetler.|
+|İleti gönderildi|Gönderin|Bir ileti gönderildi, yanıtlandı veya iletildi. Bu etkinlik yalnızca Office 365 veya Microsoft 365 E5 lisansı olan kullanıcılar için günlüğe kaydedilir. Daha fazla bilgi için Gelişmiş Denetim'in " [Gelişmiş Denetim](advanced-audit.md#advanced-audit-events) olayları" bölümüne bakın.|
+|Farklı Gönder izinleri kullanılarak gönderilen ileti|GöndermeLer|SendAs izni kullanılarak bir ileti gönderildi. Bu, başka bir kullanıcının iletiyi posta kutusu sahibinden gelmiş gibi gönderdiği anlamına gelir.|
+|Adına Gönder izinleri kullanılarak gönderilen ileti|SendOnBehalf|SendOnBehalf izni kullanılarak bir ileti gönderildi. Bu, başka bir kullanıcının iletiyi posta kutusu sahibi adına gönderdiği anlamına gelir. İleti, iletinin adına gönderildiği alıcıyı ve iletiyi gerçekten göndereni belirtir.|
+|Outlook istemcisinden gelen kutusu kuralları güncelleştirildi|UpdateInboxRules|Posta kutusu sahibi veya Outlook istemcisini kullanarak gelen kutusu kuralı oluşturulan, değiştirilen veya kaldırılan posta kutusuna erişimi olan başka bir kullanıcı.|
+|İleti güncelleştirildi|Güncelleştirme|İleti veya özellikleri değiştirildi.|
+|Kullanıcı posta kutusunda oturum açtı|MailboxLogin|Kullanıcı posta kutusunda oturum açtı.|
+|İletiyi kayıt olarak etiketleme||Kullanıcı bir e-posta iletisine bekletme etiketi uyguladı ve bu etiket öğeyi kayıt olarak işaretlemek için yapılandırıldı. |
 ||||
 
-#### <a name="system-accounts-in-exchange-mailbox-audit-records"></a>Posta kutusu denetim Exchange kayıtlarına sistem hesapları
+#### <a name="system-accounts-in-exchange-mailbox-audit-records"></a>Exchange posta kutusu denetim kayıtlarındaki sistem hesapları
 
-Bazı posta kutusu etkinliklerinin (özellikle **Add-MailboxPermissions**) denetim kayıtlarında, etkinliği yapan (ve Kullanıcı ve KullanıcıKimliği alanlarında tanımlananları) NT AUTHORITY\SYSTEM veya NT AUTHORITY\SYSTEM(Microsoft.Exchange) olduğunu farkebilirsiniz. Servicehost). Bu, etkinliği gerçekleştiren "kullanıcı"nın Microsoft bulut Exchange bir sistem hesabı olduğunu gösterir. Bu sistem hesabı genellikle, kuruluş adına zamanlanmış bakım görevleri gerçekleştirir. Örneğin, NT AUTHORITY\SYSTEM(Microsoft.Exchange. ServiceHost) hesabı, sistem posta kutusu olan DiscoverySearchMailbox'ın izinlerini güncelleştirmektir. Bu güncelleştirmenin amacı, DiscoverySearchMailbox için Keşif Yönetimi rol grubuna FullAccess izninin (varsayılan olan) atandığı doğrulamaktır. Bu, eBulma yöneticilerinin kuruluşlarında gerekli görevleri gerçekleştireceklerini sağlar.
+Bazı posta kutusu etkinliklerinin denetim kayıtlarında (özellikle **Add-MailboxPermissions**), etkinliği gerçekleştiren kullanıcının (ve User ve UserId alanlarında tanımlanan) NT AUTHORITY\SYSTEM veya NT AUTHORITY\SYSTEM(Microsoft.Exchange) olduğunu fark edebilirsiniz. Servicehost). Bu, etkinliği gerçekleştiren "kullanıcının" Microsoft bulutundaki Exchange hizmetindeki bir sistem hesabı olduğunu gösterir. Bu sistem hesabı genellikle kuruluşunuz adına zamanlanmış bakım görevleri gerçekleştirir. Örneğin, NT AUTHORITY\SYSTEM(Microsoft.Exchange) tarafından gerçekleştirilen yaygın bir denetim etkinliği. ServiceHost) hesabı, bir sistem posta kutusu olan DiscoverySearchMailbox üzerindeki izinleri güncelleştirmektir. Bu güncelleştirmenin amacı, DiscoverySearchMailbox için Bulma Yönetimi rol grubuna FullAccess izninin (varsayılandır) atandığını doğrulamaktır. Bu, eBulma yöneticilerinin kuruluşlarında gerekli görevleri gerçekleştirebilmesini sağlar.
 
-**Add-MailboxPermission** için bir denetim kaydında belirlenebilir başka bir sistem kullanıcı Administrator@apcprd03.prod.outlook.com. Bu hizmet hesabı, DiscoverySearchMailbox sistem posta kutusunun Keşif Yönetimi rol grubuna atanan FullAccess iznini doğrulama ve güncelleştirmeyle ilgili posta kutusu denetim kayıtlarına da dahildir. Özel olarak, Microsoft destek personeli Administrator@apcprd03.prod.outlook.com bir RBAC rolü tanılama aracı çalıştır çalıştırıyorsa, söz konusu hesapta yer alan denetim kayıtlarının tetiklenir.
+**Add-MailboxPermission** için bir denetim kaydında tanımlanabilir başka bir sistem kullanıcı hesabı Administrator@apcprd03.prod.outlook.com. Bu hizmet hesabı, DiscoverySearchMailbox sistem posta kutusu için Bulma Yönetimi rol grubuna FullAccess izninin atandığını doğrulama ve güncelleştirmeyle ilgili posta kutusu denetim kayıtlarına da eklenir. Özellikle, Administrator@apcprd03.prod.outlook.com hesabını tanımlayan denetim kayıtları genellikle Microsoft destek personeli kuruluşunuz adına bir RBAC rol tanılama aracı çalıştırdığında tetiklenir.
 
 ### <a name="user-administration-activities"></a>Kullanıcı yönetimi etkinlikleri
 
-Aşağıdaki tabloda, yönetici hesabı Azure yönetim portalını kullanarak bir kullanıcı hesabını ekleyenin veya değiştirirken günlüğe kaydedilen kullanıcı Microsoft 365 yönetim merkezi etkinlikleri [](https://go.microsoft.com/fwlink/p/?linkid=2024339) listelemektedir.
+Aşağıdaki tabloda, yönetici [Microsoft 365 yönetim merkezi](https://go.microsoft.com/fwlink/p/?linkid=2024339) veya Azure yönetim portalını kullanarak kullanıcı hesabı eklediğinde veya değiştirdiğinde günlüğe kaydedilen kullanıcı yönetimi etkinlikleri listelenmektedir.
 
 > [!NOTE]
-> Aşağıdaki tabloda bulunan İşlem **sütununda listelenen** işlem adları nokta ( ) içerir `.` . Denetim günlüğünde arama sırasında bir PowerShell komutunda işlemi belirtirken, denetim bekletme ilkeleri oluştururken, uyarı ilkeleri oluştururken veya etkinlik uyarıları oluştururken işlemi belirtirse, bu dönemi işlem adına dahil etmek gerekir. Ayrıca, işlem adını içeren çift tırnak işareti (`" "`) kullanmaya da dikkat etmek gerekir.
+> Aşağıdaki tablodaki **İşlem** sütununda listelenen işlem adları bir nokta ( `.` ) içerir. Denetim günlüğünde arama yaparken, denetim bekletme ilkeleri oluştururken, uyarı ilkeleri oluştururken veya etkinlik uyarıları oluştururken işlemi bir PowerShell komutunda belirtirseniz, işlemi adına nokta eklemeniz gerekir. İşlem adını içermek için çift tırnak işareti (`" "`) kullandığınızdan da emin olun.
 
-|Etkinlik|Operation|Açıklama|
+|Etkinlik|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Kullanıcı eklendi|seçin.|Bir kullanıcı hesabı oluşturulmuş.|
-|Kullanıcı lisansı değiştirildi|Kullanıcı lisansını değiştir'i seçin.|Kullanıcıya atanan lisans değiştirilmiştir. Hangi lisansların değişikliklerin olduğunu görmek için, ilgili Kullanıcı **güncelleştirildi etkinliğine** bakın.|
-|Kullanıcı parolası değiştirildi|Kullanıcı parolasını değiştir'i seçin.|Kullanıcı parolasını değiştirir. Kullanıcıların kendi parolalarını sıfırlamasına izin vermek için, kendi kendine parola sıfırlamanın kurumda (tüm kullanıcılar veya seçili kullanıcılar için) etkinleştirilmesi gerekir. Ayrıca, kendi kendine parola sıfırlama etkinliğini aynı zamanda kendi Azure Active Directory. Daha fazla bilgi için bkz [. Azure AD parola yönetimi için raporlama seçenekleri](/azure/active-directory/authentication/howto-sspr-reporting).
-|Kullanıcı silindi|Kullanıcı silme.|Bir kullanıcı hesabı silinmiştir.|
-|Kullanıcı parolasını sıfırlama|Kullanıcı parolasını sıfırlayın.|Yönetici kullanıcının parolasını sıfırlar.|
-|Kullanıcıya parola değiştirmesini gereken özellik ayarla|Kullanıcı parolasını değiştirmeye zorlar ayarlayın.|Yönetici, kullanıcının bir sonraki oturumda parolasını değiştirmesini gereken özelliği Microsoft 365.|
-|Lisans özelliklerini ayarlama|Lisans özelliklerini ayarlama.|Yönetici, bir kullanıcıya atanan lisansın özellikleri üzerinde değişiklik yaptı.|
-|Kullanıcı güncelleştirildi|Kullanıcı güncelleştirme.|Yönetici, kullanıcı hesabının bir veya birden çok özelliklerini değiştirir. Güncelleştirilebilir kullanıcı özelliklerinin listesi için, Denetim Raporu Olayları'nın "Kullanıcı özniteliklerini güncelleştirme" [Azure Active Directory bakın](/azure/active-directory/reports-monitoring/concept-audit-logs).|
+|Kullanıcı eklendi|Kullanıcı ekle'yi seçin.|Bir kullanıcı hesabı oluşturuldu.|
+|Kullanıcı lisansı değiştirildi|Kullanıcı lisansını değiştirin.|Kullanıcıya atanan lisans değişti. Hangi lisansların değişiklik olduğunu görmek için ilgili **Güncelleştirilmiş kullanıcı** etkinliğine bakın.|
+|Kullanıcı parolası değiştirildi|Kullanıcı parolasını değiştirin.|Kullanıcı parolasını değiştirir. Kullanıcıların parolalarını sıfırlamasına izin vermek için kuruluşunuzda self servis parola sıfırlamanın (tüm veya seçili kullanıcılar için) etkinleştirilmesi gerekir. Azure Active Directory'de self servis parola sıfırlama etkinliğini de izleyebilirsiniz. Daha fazla bilgi için bkz. [Azure AD parola yönetimi için raporlama seçenekleri](/azure/active-directory/authentication/howto-sspr-reporting).
+|Silinen kullanıcı|Kullanıcıyı silin.|Bir kullanıcı hesabı silindi.|
+|Kullanıcı parolasını sıfırlama|Kullanıcı parolasını sıfırlayın.|Yönetici, bir kullanıcının parolasını sıfırlar.|
+|Kullanıcıyı parolayı değiştirmeye zorlayan özelliği ayarlama|Zorla kullanıcı parolasını değiştir'i ayarlayın.|Yönetici, kullanıcının Microsoft 365 bir sonraki oturum açmasında kullanıcıyı parolasını değiştirmeye zorlayan özelliği ayarlar.|
+|Lisans özelliklerini ayarlama|Lisans özelliklerini ayarlayın.|Yönetici, kullanıcıya atanan lisanslı bir kullanıcının özelliklerini değiştirir.|
+|Güncelleştirilmiş kullanıcı|Kullanıcıyı güncelleştirin.|Yönetici, bir kullanıcı hesabının bir veya daha fazla özelliğini değiştirir. Güncelleştirilebilecek kullanıcı özelliklerinin listesi için [Denetim Raporu Olaylarını Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs) "Kullanıcı özniteliklerini güncelleştirme" bölümüne bakın.|
 ||||
 
 ### <a name="azure-ad-group-administration-activities"></a>Azure AD grup yönetimi etkinlikleri
 
-Aşağıdaki tabloda, yönetici veya kullanıcı bir Microsoft 365 Grubu oluşturduğunda veya değiştirirken ya da yönetici Microsoft 365 yönetim merkezi veya Azure yönetim portalını kullanarak güvenlik grubu oluşturduğunda günlüğe kaydedilen grup yönetimi etkinlikleri listelemektedir.[](https://go.microsoft.com/fwlink/p/?linkid=2024339) Çalışma sayfalarındaki gruplar hakkında daha fazla Microsoft 365 için bkz. Çalışma sayfalarında [Grupları görüntüleme, Microsoft 365 yönetim merkezi](../admin/create-groups/create-groups.md).
+Aşağıdaki tabloda, bir yönetici veya kullanıcı bir Microsoft 365 Grubu oluşturduğunda veya değiştirdiğinde ya da yönetici [Microsoft 365 yönetim merkezi veya Azure](https://go.microsoft.com/fwlink/p/?linkid=2024339) yönetim portalını kullanarak bir güvenlik grubu oluşturduğunda günlüğe kaydedilen grup yönetimi etkinlikleri listelenmektedir. Microsoft 365 grupları hakkında daha fazla bilgi için bkz. [Microsoft 365 yönetim merkezi Grupları görüntüleme, oluşturma ve silme](../admin/create-groups/create-groups.md).
 
 > [!NOTE]
-> Aşağıdaki tabloda bulunan İşlem **sütununda listelenen** işlem adları nokta ( ) içerir `.` . Denetim günlüğünde arama sırasında bir PowerShell komutunda işlemi belirtirken, denetim bekletme ilkeleri oluştururken, uyarı ilkeleri oluştururken veya etkinlik uyarıları oluştururken işlemi belirtirse, bu dönemi işlem adına dahil etmek gerekir. Ayrıca, işlem adını içeren çift tırnak işareti (`" "`) kullanmaya da dikkat etmek gerekir.
+> Aşağıdaki tablodaki **İşlem** sütununda listelenen işlem adları bir nokta ( `.` ) içerir. Denetim günlüğünde arama yaparken, denetim bekletme ilkeleri oluştururken, uyarı ilkeleri oluştururken veya etkinlik uyarıları oluştururken işlemi bir PowerShell komutunda belirtirseniz, işlemi adına nokta eklemeniz gerekir. İşlem adını içermek için çift tırnak işareti (`" "`) kullandığınızdan da emin olun.
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Grup eklendi|Grup ekle'yi seçin.|Bir grup oluşturulmuş.|
-|Gruba üye eklendi|Gruba üye ekleme.|Gruba bir üye eklendi.|
-|Grup silindi|Grubu sil'i seçin.|Bir grup silinmiştir.|
-|Gruptan üye kaldırıldı|Gruptan üye kaldırma.|Gruptan bir üye kaldırılmıştır.|
-|Grup güncelleştirildi|Grubu güncelleştir'i seçin.|Grubun özelliği değiştirilmiştir.|
+|Grup eklendi|Grup ekle'yi seçin.|Bir grup oluşturuldu.|
+|Gruba üye eklendi|Gruba üye ekleyin.|Gruba bir üye eklendi.|
+|Grup silindi|Grubu sil'i seçin.|Bir grup silindi.|
+|Gruptan üye kaldırıldı|Gruptan üyeyi kaldırın.|Gruptan bir üye kaldırıldı.|
+|Güncelleştirilmiş grup|Grubu güncelleştirin.|Bir grubun özelliği değiştirildi.|
 ||||
 
 ### <a name="application-administration-activities"></a>Uygulama yönetimi etkinlikleri
 
-Aşağıdaki tabloda, yönetici Azure AD'de kayıtlı bir uygulamayı ekleyenin veya bir uygulamayı değiştirirken günlüğe kaydedilen uygulama yöneticisi etkinlikleri listelemektedir. Kimlik doğrulaması için Azure AD'ye güvenen tüm uygulamanın dizine kaydedilmiş olması gerekir.
+Aşağıdaki tabloda, bir yönetici Azure AD'de kayıtlı bir uygulamayı eklediğinde veya değiştirdiğinde günlüğe kaydedilen uygulama yöneticisi etkinlikleri listelenir. Kimlik doğrulaması için Azure AD'yi kullanan tüm uygulamalar dizine kaydedilmelidir.
 
 > [!NOTE]
-> Aşağıdaki tabloda bulunan İşlem **sütununda listelenen** işlem adları nokta ( ) içerir `.` . Denetim günlüğünde arama sırasında bir PowerShell komutunda işlemi belirtirken, denetim bekletme ilkeleri oluştururken, uyarı ilkeleri oluştururken veya etkinlik uyarıları oluştururken işlemi belirtirse, bu dönemi işlem adına dahil etmek gerekir. Ayrıca, işlem adını içeren çift tırnak işareti (`" "`) kullanmaya da dikkat etmek gerekir.
+> Aşağıdaki tablodaki **İşlem** sütununda listelenen işlem adları bir nokta ( `.` ) içerir. Denetim günlüğünde arama yaparken, denetim bekletme ilkeleri oluştururken, uyarı ilkeleri oluştururken veya etkinlik uyarıları oluştururken işlemi bir PowerShell komutunda belirtirseniz, işlemi adına nokta eklemeniz gerekir. İşlem adını içermek için çift tırnak işareti (`" "`) kullandığınızdan da emin olun.
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Temsilci girdisi eklendi|Temsilci girdisi ekleme.|Azure AD'de bir uygulamaya kimlik doğrulama izni oluşturulmuş veya ve verilmiş.|
-|Hizmet sorumlusu eklendi|Hizmet sorumlusu ekleme.|Uygulama Azure AD'ye kaydedilmiştir. Uygulama, dizinde bir hizmet sorumlusuyla temsil edildi.|
-|Hizmet sorumlusuna kimlik bilgileri eklendi|Hizmet sorumlusu kimlik bilgilerini ekleyin.|Azure AD'de hizmet sorumlusuna kimlik bilgileri eklenmiştir. Hizmet ilkesi dizinde bir uygulamayı temsil eder.|
-|Temsilci girdisi kaldırıldı|Temsilci girdisini kaldırma.|Azure AD'de bir uygulamada kimlik doğrulama izni kaldırılmıştır.|
-|Dizinden hizmet sorumlusu kaldırıldı|Hizmet sorumlusu kaldırma.|Azure AD'den bir uygulama silinmiştir/kaydı silinmiştir. Uygulama, dizinde bir hizmet sorumlusuyla temsil edildi.|
-|Hizmet sorumlusundan kimlik bilgileri kaldırıldı|Hizmet sorumlusu kimlik bilgilerini kaldırın.|Azure AD'de hizmet sorumlusundan kimlik bilgileri kaldırılmıştır. Hizmet ilkesi dizinde bir uygulamayı temsil eder.|
-|Temsilci girdisini ayarlama|Temsilci girdisini ayarlama.|Azure AD'de bir uygulama için kimlik doğrulama izni güncelleştirilmiştir.|
+|Temsilci girdisi eklendi|Temsilci girdisi ekleyin.|Azure AD'de bir uygulamaya kimlik doğrulama izni oluşturuldu/verildi.|
+|Hizmet sorumlusu eklendi|Hizmet sorumlusu ekleyin.|Azure AD'de bir uygulama kaydedildi. Bir uygulama, dizindeki bir hizmet sorumlusu tarafından temsil edilir.|
+|Hizmet sorumlusuna kimlik bilgileri eklendi|Hizmet sorumlusu kimlik bilgileri ekleyin.|Kimlik bilgileri Azure AD'deki bir hizmet sorumlusuna eklendi. Hizmet ilkesi, dizindeki bir uygulamayı temsil eder.|
+|Temsilci girdisi kaldırıldı|Temsilci girdisini kaldırın.|Azure AD'deki bir uygulamadan kimlik doğrulama izni kaldırıldı.|
+|Dizinden hizmet sorumlusu kaldırıldı|Hizmet sorumlusunu kaldırın.|Azure AD'den bir uygulama silindi/kaydı silindi. Bir uygulama, dizindeki bir hizmet sorumlusu tarafından temsil edilir.|
+|Hizmet sorumlusundan kimlik bilgileri kaldırıldı|Hizmet sorumlusu kimlik bilgilerini kaldırın.|Kimlik bilgileri Azure AD'deki bir hizmet sorumlusundan kaldırıldı. Hizmet ilkesi, dizindeki bir uygulamayı temsil eder.|
+|Temsilci girişini ayarlama|Temsilci girişini ayarlayın.|Azure AD'deki bir uygulama için kimlik doğrulama izni güncelleştirildi.|
 ||||
 
 ### <a name="role-administration-activities"></a>Rol yönetimi etkinlikleri
 
-Aşağıdaki tabloda, yönetici iş sayfasında veya Azure yönetim portalında yönetici rollerini yönetirken günlüğe kaydedilen Azure AD [Microsoft 365 yönetim merkezi](https://go.microsoft.com/fwlink/p/?linkid=2024339) etkinlikleri listelemektedir.
+Aşağıdaki tabloda, yönetici [Microsoft 365 yönetim merkezi](https://go.microsoft.com/fwlink/p/?linkid=2024339) veya Azure yönetim portalında yönetici rollerini yönettiğinde günlüğe kaydedilen Azure AD rol yönetimi etkinlikleri listelenmektedir.
 
 > [!NOTE]
-> Aşağıdaki tabloda bulunan İşlem **sütununda listelenen** işlem adları nokta ( ) içerir `.` . Denetim günlüğünde arama sırasında bir PowerShell komutunda işlemi belirtirken, denetim bekletme ilkeleri oluştururken, uyarı ilkeleri oluştururken veya etkinlik uyarıları oluştururken işlemi belirtirse, bu dönemi işlem adına dahil etmek gerekir. Ayrıca, işlem adını içeren çift tırnak işareti (`" "`) kullanmaya da dikkat etmek gerekir.
+> Aşağıdaki tablodaki **İşlem** sütununda listelenen işlem adları bir nokta ( `.` ) içerir. Denetim günlüğünde arama yaparken, denetim bekletme ilkeleri oluştururken, uyarı ilkeleri oluştururken veya etkinlik uyarıları oluştururken işlemi bir PowerShell komutunda belirtirseniz, işlemi adına nokta eklemeniz gerekir. İşlem adını içermek için çift tırnak işareti (`" "`) kullandığınızdan da emin olun.
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Role üye ekleme|Role üye ekleme.|Grup yöneticisi rolüne bir kullanıcı Microsoft 365.|
-|Kullanıcı dizin rolünden kaldırıldı|Üyeyi rolden kaldır.|Bir kullanıcı izinde yönetici rolünden Microsoft 365.|
-|Şirket iletişim bilgilerini ayarlama|Şirket iletişim bilgilerini ayarlama.|Organizasyonunız için şirket düzeyinde iletişim tercihleri güncelleştirilmiştir. Bu, abonelikle ilgili olarak E-posta tarafından gönderilen e-posta Microsoft 365 ve hizmetlerle ilgili teknik bildirimleri içerir.|
+|Role üye ekleme|Role üye ekleyin.|Microsoft 365'da yönetici rolüne bir kullanıcı eklendi.|
+|Dizin rolünden kullanıcı kaldırıldı|Üyeyi rolden kaldırın.|Microsoft 365'daki yönetici rolünden kullanıcı kaldırıldı.|
+|Şirket iletişim bilgilerini ayarlama|Şirket iletişim bilgilerini ayarlayın.|Kuruluşunuz için şirket düzeyinde iletişim tercihleri güncelleştirildi. Bu, Microsoft 365 tarafından gönderilen abonelikle ilgili e-posta adreslerini ve hizmetlerle ilgili teknik bildirimleri içerir.|
 ||||
 
 ### <a name="directory-administration-activities"></a>Dizin yönetimi etkinlikleri
 
-Aşağıdaki tabloda, yönetici azure ad dizininde veya Azure yönetim portalında kuruluşunı yönetirken günlüğe kaydedilen[,](https://go.microsoft.com/fwlink/p/?linkid=2024339) Azure AD Microsoft 365 yönetim merkezi etkinlikleri listelemektedir.
+Aşağıdaki tabloda, bir yönetici kuruluşunu [Microsoft 365 yönetim merkezi](https://go.microsoft.com/fwlink/p/?linkid=2024339) veya Azure yönetim portalında yönettiğinde günlüğe kaydedilen Azure AD dizini ve etki alanıyla ilgili etkinlikler listelenmektedir.
 
 > [!NOTE]
-> Aşağıdaki tabloda bulunan İşlem **sütununda listelenen** işlem adları nokta ( ) içerir `.` . Denetim günlüğünde arama sırasında bir PowerShell komutunda işlemi belirtirken, denetim bekletme ilkeleri oluştururken, uyarı ilkeleri oluştururken veya etkinlik uyarıları oluştururken işlemi belirtirse, bu dönemi işlem adına dahil etmek gerekir. Ayrıca, işlem adını içeren çift tırnak işareti (`" "`) kullanmaya da dikkat etmek gerekir.
+> Aşağıdaki tablodaki **İşlem** sütununda listelenen işlem adları bir nokta ( `.` ) içerir. Denetim günlüğünde arama yaparken, denetim bekletme ilkeleri oluştururken, uyarı ilkeleri oluştururken veya etkinlik uyarıları oluştururken işlemi bir PowerShell komutunda belirtirseniz, işlemi adına nokta eklemeniz gerekir. İşlem adını içermek için çift tırnak işareti (`" "`) kullandığınızdan da emin olun.
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Şirkete etki alanı eklendi|Şirkete etki alanı ekleyin.|Organizasyona etki alanı eklendi.|
-|Dizine iş ortağı eklendi|Şirkete iş ortağı ekleyin.|Kuruluşa iş ortağı (yönetici temsilcisi) eklendi.|
-|Şirketten etki alanı kaldırıldı|Şirketten etki alanı kaldırma.|Etki alanı, kuruluştan kaldırıldı.|
-|Dizinden iş ortağı kaldırıldı|Şirketten iş ortağı kaldırma.|Kuruluştan iş ortağı (yönetici temsilcisi) kaldırıldı.|
-|Şirket bilgilerini ayarlama|Şirket bilgilerini ayarlama.|Kuruluşun şirket bilgileri güncelleştirilmiştir. Bu, abonelikle ilgili olarak E-posta hizmeti tarafından gönderilen Microsoft 365 e-posta adreslerini ve bu hizmetlerle ilgili teknik Microsoft 365 içerir.|
-|Etki alanı kimlik doğrulamasını ayarlama|Etki alanı kimlik doğrulamasını ayarlayın.|Kurum için etki alanı kimlik doğrulama ayarı değiştirildi.|
-|Etki alanı için federasyon ayarları güncelleştirildi|Etki alanında federasyon ayarlarını yapın.|Kuruluş için federasyon (dış paylaşım) ayarları değiştirildi.|
-|Parola ilkesi ayarlama|Parola ilkesi ayarlama.|Kuruluşta kullanıcı parolalarının uzunluk ve karakter kısıtlamaları değiştirilmiştir.|
-|Azure AD eşitlemesi açık|DirSyncEnabled bayrağını ayarlayın.|Dizin için etki alanı için bir dizini Azure AD Eşitleme.|
-|Etki alanı güncelleştirildi|Etki alanını güncelleştir'i seçin.|Kuruluşta bir etki alanının ayarları güncelleştirildi.|
-|Doğrulanmış etki alanı|Etki alanını doğrulama.|Kuruluşta bir etki alanının sahibi olduğu doğrulanmıştır.|
-|Doğrulanmış e-postayla etki alanı doğrulandı|Doğrulanmış e-postayla etki alanını doğrulayın.|E-posta doğrulaması, kuruluşta bir etki alanının sahibi olduğunu doğrulamak için kullanılır.|
+|Şirkete etki alanı eklendi|Şirkete etki alanı ekleyin.|Kuruluşunuza bir etki alanı eklendi.|
+|Dizine bir iş ortağı eklendi|Şirkete iş ortağı ekleyin.|Kuruluşunuza bir iş ortağı (yönetici temsilcisi) eklendi.|
+|Şirketten etki alanı kaldırıldı|Şirketten etki alanını kaldırın.|Kuruluşunuzdan bir etki alanı kaldırıldı.|
+|Dizinden bir iş ortağı kaldırıldı|İş ortağını şirketten kaldırın.|Kuruluşunuzdan bir iş ortağı (yönetici temsilcisi) kaldırıldı.|
+|Şirket bilgilerini ayarlama|Şirket bilgilerini ayarlayın.|Kuruluşunuz için şirket bilgileri güncelleştirildi. Bu, Microsoft 365 tarafından gönderilen abonelikle ilgili e-posta adreslerini ve Microsoft 365 hizmetleriyle ilgili teknik bildirimleri içerir.|
+|Etki alanı kimlik doğrulamayı ayarlama|Etki alanı kimlik doğrulamayı ayarlayın.|Kuruluşunuz için etki alanı kimlik doğrulaması ayarı değiştirildi.|
+|Etki alanı için federasyon ayarları güncelleştirildi|Etki alanında federasyon ayarlarını yapın.|Kuruluşunuz için federasyon (dış paylaşım) ayarları değiştirildi.|
+|Parola ilkesini ayarlama|Parola ilkesini ayarlayın.|Kuruluşunuzdaki kullanıcı parolalarının uzunluk ve karakter kısıtlamaları değiştirildi.|
+|Azure AD eşitlemeyi açtı|DirSyncEnabled bayrağını ayarlayın.|Azure AD Eşitleme için bir dizini etkinleştiren özelliği ayarlayın.|
+|Güncelleştirilmiş etki alanı|Etki alanını güncelleştirin.|Kuruluşunuzdaki bir etki alanının ayarları güncelleştirildi.|
+|Doğrulanmış etki alanı|Etki alanını doğrulayın.|Kuruluşunuzun bir etki alanının sahibi olduğu doğrulandı.|
+|Doğrulanmış e-posta doğrulanmış etki alanı|Doğrulanmış e-posta etki alanını doğrulayın.|Kuruluşunuzun bir etki alanının sahibi olduğunu doğrulamak için e-posta doğrulamasını kullandınız.|
 ||||
 
 ### <a name="ediscovery-activities"></a>eBulma etkinlikleri
 
-Güvenlik ve uyumluluk merkezinde veya ilgili PowerShell cmdlet'leri çalıştırarak gerçekleştirilen İçerik Arama ve eBulma ile ilgili etkinlikler denetim günlüğüne kaydedilir. Bu, aşağıdaki etkinlikleri içerir:
+Güvenlik ve uyumluluk merkezinde veya ilgili PowerShell cmdlet'leri çalıştırılarak gerçekleştirilen İçerik Arama ve eBulma ile ilgili etkinlikler denetim günlüğüne kaydedilir. Bu, aşağıdaki etkinlikleri içerir:
 
-- eBulma servis durumlarını oluşturma ve yönetme
+- eBulma servis taleplerini oluşturma ve yönetme
 
 - İçerik Aramalarını oluşturma, başlatma ve düzenleme
 
@@ -799,375 +799,375 @@ Güvenlik ve uyumluluk merkezinde veya ilgili PowerShell cmdlet'leri çalıştı
 
 - İçerik Arama için izin filtrelemeyi yapılandırma
 
-- eBulma Yönetici rolünü yönetme
+- eBulma Yöneticisi rolünü yönetme
 
-Günlüğe kaydedilen eBulma etkinliklerinin listesi ve ayrıntılı açıklaması için bkz. Denetim günlüğünde [eBulma etkinliklerini arama](search-for-ediscovery-activities-in-the-audit-log.md).
+Günlüğe kaydedilen eBulma etkinliklerinin listesi ve ayrıntılı açıklaması için bkz. [Denetim günlüğünde eBulma etkinliklerini arama](search-for-ediscovery-activities-in-the-audit-log.md).
 
 > [!NOTE]
-> **eBulma** etkinlikleri altında listelenen etkinliklerden ve Etkinlikler açılan listesinde **yer alan Advanced eDiscovery** etkinliklerinin arama sonuçlarında görüntülenebilir olması 30 dakika kadar sürer. Buna karşılık, eBulma cmdlet etkinliklerinden gelen ilgili olayların arama sonuçlarında görünmesi 24 saat kadar sürebilir.
+> **eBulma** etkinlikleri altında listelenen etkinliklerden kaynaklanan olayların ve **Etkinlikler açılan listesindeki** **etkinliklerin Advanced eDiscovery** arama sonuçlarında görüntülenmesi 30 dakikaya kadar sürer. Buna karşılık, eBulma cmdlet etkinliklerinden gelen olayların arama sonuçlarında görünmesi 24 saate kadar sürer.
 
 ### <a name="advanced-ediscovery-activities"></a>Advanced eDiscovery etkinlikleri
 
-Denetim günlüğünde, çalışma sayfalarındaki etkinlikler için Advanced eDiscovery. Bu etkinliklerin açıklaması için, denetim günlüğünde [eKbulma](search-for-ediscovery-activities-in-the-audit-log.md#advanced-ediscovery-activities) etkinliklerini arama Advanced eDiscovery" bölümüne bakın.
+Denetim günlüğünde Advanced eDiscovery etkinlikleri için de arama yapabilirsiniz. Bu etkinliklerin açıklaması [için denetim günlüğünde eBulma](search-for-ediscovery-activities-in-the-audit-log.md#advanced-ediscovery-activities) etkinliklerini arama bölümündeki "Advanced eDiscovery etkinlikler" bölümüne bakın.
 
 ### <a name="power-bi-activities"></a>Power BI etkinlikleri
 
-Denetim günlüğünde, çalışma sayfalarındaki etkinlikler için Power BI. Proje etkinliklerini Power BI için, "Power BI tarafından denetlenen etkinlikler" bölümüne ([Kurum içinde denetimi kullanma) bakın](/power-bi/service-admin-auditing#activities-audited-by-power-bi).
+denetim günlüğünde Power BI etkinlikleri arayabilirsiniz. Power BI etkinlikleri hakkında bilgi için, [Kuruluşunuzda denetimi kullanma](/power-bi/service-admin-auditing#activities-audited-by-power-bi) bölümündeki "Power BI tarafından denetlenen etkinlikler" bölümüne bakın.
 
-Denetim günlüğü Power BI varsayılan olarak etkin değildir. Denetim günlüğünde Power BI etkinlikleri aramak için bu yönetim portalında denetimi Power BI gerekir. Yönergeler için, yönetim portalında yer alan "Denetim günlükleri" [Power BI bakın](/power-bi/service-admin-portal#audit-logs).
+Power BI için denetim günlüğü varsayılan olarak etkin değildir. Denetim günlüğünde Power BI etkinlik aramak için, Power BI yönetici portalında denetimi etkinleştirmeniz gerekir. Yönergeler için Power BI [yönetici portalındaki](/power-bi/service-admin-portal#audit-logs) "Denetim günlükleri" bölümüne bakın.
 
 ### <a name="workplace-analytics-activities"></a>Workplace Analytics etkinlikleri
 
-Workplace Analytics, grupların organizasyonunız genelinde nasıl işbirliği  olduğuyla ilgili içgörü sağlar. Aşağıdaki tabloda, workplace Analytics'te Yönetici rolüne veya Analist rollerine atanmış kullanıcılar tarafından gerçekleştirilen etkinlikler listelemektedir. Analist rolüne atanan kullanıcılar tüm hizmet özelliklerine tam erişime sahiptir ve çözümleme yapmak için ürünü kullanırlar. Yönetici rolüne atanan kullanıcılar gizlilik ayarlarını ve sistem varsayılanlarını yapılandırabilir ve workplace Analytics'te kurumsal verileri hazırlar, karşıya yükleyebilir ve doğrular. Daha fazla bilgi için bkz. [Workplace Analytics](/workplace-analytics/index-orig).
+Workplace Analytics, grupların kuruluşunuz genelinde nasıl işbirliği yaptığını gösteren içgörüler sağlar. Aşağıdaki tabloda, Workplace Analytics'te Yönetici rolüne veya Analist rollerine atanmış kullanıcılar tarafından gerçekleştirilen etkinlikler listelenmiştir. Analist rolüne atanan kullanıcılar tüm hizmet özelliklerine tam erişime sahiptir ve analiz yapmak için ürünü kullanır. Yönetici rolüne atanan kullanıcılar gizlilik ayarlarını ve sistem varsayılanlarını yapılandırabilir ve Workplace Analytics'te kuruluş verilerini hazırlayabilir, karşıya yükleyebilir ve doğrulayabilir. Daha fazla bilgi için bkz [. Workplace Analytics](/workplace-analytics/index-orig).
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Erişilen OData bağlantısı|AccessedOdataLink|Analist sorgu için OData bağlantısına erişdi.|
-|Sorgu iptal edildi|CanceledQuery|Analist çalışan sorguyu iptal etti.|
-|Toplantı dışlaması oluşturuldu|MeetingExclusionCreated|Analist toplantı dışlama kuralı oluşturdu.|
-|Silinen sonuç|DeletedResult|Analist sorgu sonuçlarını sildi.|
-|Rapor indirildi|DownloadedReport|Analist sorgu sonuç dosyasını indirdi.|
-|Yürütülür sorgu|ExecutedQuery|Analist bir sorgu çalıştırdı.|
-|Güncelleştirilmiş veri erişimi ayarı|UpdatedDataAccessSetting|Yönetici veri erişim ayarlarını güncellemiştir.|
-|Güncelleştirilmiş gizlilik ayarı|UpdatedPrivacySetting|Yönetici tarafından güncelleştirilmiş gizlilik ayarları; örneğin, en küçük grup boyutu.|
-|Kuruluş verileri karşıya yüklendi|UploadedOrgData|Yönetici kuruluş veri dosyasını yükledi.|
-|Kullanıcı oturum açtı<sup>*</sup>| UserLoggedIn |Bir kullanıcı kendi hesabıyla Microsoft 365 oturum açın.|
-|Kullanıcı oturumu kapatıldı<sup>*</sup>| UserLoggedOff |Bir kullanıcı hesabıyla oturum Microsoft 365 oturumları.
-|Araştırıldı|ViewedExplore|Bir veya birden çok Sayfa sekmesinde analist görünümü olan görsel öğeler.|
+|Erişilen OData bağlantısı|AccessedOdataLink|Analist bir sorgunun OData bağlantısına erişmiş.|
+|sorgu iptal edildi|CanceledQuery|Analist çalışan sorguyu iptal etti.|
+|Toplantı dışlaması oluşturuldu|MeetingExclusionCreated|Analist bir toplantı dışlama kuralı oluşturdu.|
+|Silinen sonuç|DeletedResult|Analist bir sorgu sonucunu sildi.|
+|İndirilen rapor|İndirilen Rapor|Analist bir sorgu sonuç dosyası indirdi.|
+|Yürütülen sorgu|ExecutedQuery|Analist bir sorgu çalıştırmıştı.|
+|Güncelleştirilmiş veri erişimi ayarı|UpdatedDataAccessSetting|Yönetici, veri erişim ayarlarını güncelleştirdi.|
+|Güncelleştirilmiş gizlilik ayarı|UpdatedPrivacySetting|Yönetici, gizlilik ayarlarını güncelleştirdi; örneğin, en düşük grup boyutu.|
+|Karşıya yüklenen kuruluş verileri|UploadedOrgData|Yönetici kurumsal veri dosyasını karşıya yükledi.|
+|Oturum açan kullanıcı<sup>*</sup>| UserLoggedIn |Microsoft 365 kullanıcı hesabında oturum açan bir kullanıcı.|
+|Kullanıcı oturumu kapattı<sup>*</sup>| UserLoggedOff |Bir kullanıcı, Microsoft 365 kullanıcı hesabında oturumu kapatmış.
+|Araştırıldı|ViewedExplore|Analist görselleştirmeleri bir veya daha fazla Araştır sayfası sekmesinde görüntüledi.|
 ||||
 
 > [!NOTE]
-> <sup>*</sup>Bunlar, Azure Active Directory açma ve kapatma etkinlikleridir. Bu etkinlikler, kurumda Workplace Analytics'i açmasanız bile günlüğe kaydedilir. Kullanıcı oturum açma etkinlikleri hakkında daha fazla bilgi için bkz. Oturum [açma günlüklerinde Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins).
+> <sup>*</sup>Bunlar Azure Active Directory oturum açma ve kapatma etkinlikleridir. Kuruluşunuzda Workplace Analytics açık olmasa bile bu etkinlikler günlüğe kaydedilir. Kullanıcı oturum açma etkinlikleri hakkında daha fazla bilgi için bkz. [Azure Active Directory oturum açma günlükleri](/azure/active-directory/reports-monitoring/concept-sign-ins).
 
 ### <a name="microsoft-teams-activities"></a>Microsoft Teams etkinlikleri
 
-Denetim günlüğünde, kullanıcı ve yönetici etkinlikleri için arama Microsoft Teams. Teams, çalışma sayfalarındaki sohbet merkezi çalışma Microsoft 365. Ekibin konuşmalarını, toplantılarını, dosyalarını ve notlarını tek bir yerde bir araya getirir. Denetlenen en Teams açıklamaları için bkz. Denetim günlüğünde [denetlenen olayları Microsoft Teams](/microsoftteams/audit-log-events#teams-activities).
+Microsoft Teams'de kullanıcı ve yönetici etkinlikleri için denetim günlüğünde arama yapabilirsiniz. Teams, Microsoft 365'da sohbet merkezli bir çalışma alanıdır. Bir ekibin konuşmalarını, toplantılarını, dosyalarını ve notlarını tek bir yerde bir araya getirir. Denetlenen Teams etkinliklerinin açıklamaları için bkz[. denetim günlüğünde Microsoft Teams olayları arama](/microsoftteams/audit-log-events#teams-activities).
 
-### <a name="microsoft-teams-healthcare-activities"></a>Microsoft Teams Sağlık etkinlikleri
+### <a name="microsoft-teams-healthcare-activities"></a>Microsoft Teams Healthcare etkinlikleri
 
-If your organization is using the [Patients application](/MicrosoftTeams/expand-teams-across-your-org/healthcare/patients-app-overview) in Microsoft Teams, you can search the audit log for activities for the using the Patients app. Ortamınız Hastalar uygulamasını destekleyecek şekilde yapılandırılmışsa Etkinlikler seçici listesinde bu etkinlikler için ek **bir etkinlik** grubu vardır.
+Kuruluşunuz Microsoft Teams'de [Hastalar uygulamasını](/MicrosoftTeams/expand-teams-across-your-org/healthcare/patients-app-overview) kullanıyorsa, Denetim günlüğünde Hastalar uygulamasını kullanarak ilgili etkinlikler için arama yapabilirsiniz. Ortamınız Hastalar uygulamasını destekleyecek şekilde yapılandırılmışsa, **Etkinlikler seçici listesinde** bu etkinlikler için ek bir etkinlik grubu sağlanır.
 
-![Microsoft Teams seçici listesinde Sağlık etkinlikleri'ne tıklayın.](../media/TeamsHealthcareAuditActivities.png)
+![Etkinlikler seçici listesinde Healthcare etkinliklerini Microsoft Teams.](../media/TeamsHealthcareAuditActivities.png)
 
-Hastalar uygulaması etkinliklerinin açıklaması için bkz. Hastalar [uygulaması için denetim günlükleri](/MicrosoftTeams/expand-teams-across-your-org/healthcare/patients-audit).
+Hastalar uygulaması etkinliklerinin açıklaması için bkz. [Hastalar uygulaması için denetim günlükleri](/MicrosoftTeams/expand-teams-across-your-org/healthcare/patients-audit).
 
-### <a name="microsoft-teams-shifts-activities"></a>Microsoft Teams Vardiyalar etkinlikleri
+### <a name="microsoft-teams-shifts-activities"></a>Microsoft Teams Vardiyaları etkinlikleri
 
-If your organization is usings app in Microsoft Teams, you can search the audit log for activities for the using the Shifts app. Ortamınız Vardiyalar uygulamalarını destekleyecek şekilde yapılandırılmışsa, Etkinlikler seçici listesinde bu etkinlikler için ek **bir etkinlik** grubu vardır.
+Kuruluşunuz Microsoft Teams'da Vardiyalar uygulamasını kullanıyorsa, Denetim günlüğünde Vardiyalar uygulamasını kullanarak ile ilgili etkinlikler için arama yapabilirsiniz. Ortamınız Vardiyalar uygulamalarını destekleyecek şekilde yapılandırılmışsa, **Etkinlikler seçici listesinde** bu etkinlikler için ek bir etkinlik grubu kullanılabilir.
 
-Vardiyalar uygulama etkinliklerinin açıklaması için bkz. Denetim günlüğünde [Vardiyalar'daki olayları Microsoft Teams](/microsoftteams/audit-log-events#shifts-in-teams-activities).
+Vardiyalar uygulama etkinliklerinin açıklaması için bkz[. denetim günlüğünde Microsoft Teams olayları arama](/microsoftteams/audit-log-events#shifts-in-teams-activities).
 
 ### <a name="yammer-activities"></a>Yammer etkinlikleri
 
-Aşağıdaki tabloda, denetim günlüğüne kaydedilen Yammer ve yönetici etkinlikleri listele. Denetim Yammer ilgili etkinlikleri geri dönmek için, Etkinlikler listesinde Tüm etkinlikler için sonuçları **göster'i** **seçmeniz** gerekir. Arama sonuçlarını daraltmak için tarih **aralığı kutularını** ve Kullanıcılar listesini kullanın.
+Aşağıdaki tabloda, denetim günlüğüne kaydedilen Yammer kullanıcı ve yönetici etkinlikleri listelenir. Denetim günlüğünden Yammer ilgili etkinlikleri döndürmek için **Etkinlikler** listesindeki **Tüm etkinlikler için sonuçları göster'i** seçmeniz gerekir. Arama sonuçlarını daraltmak için tarih aralığı kutularını ve **Kullanıcılar** listesini kullanın.
 
 > [!NOTE]
-> Bazı Yammer etkinlikleri yalnızca Gelişmiş Denetim'de kullanılabilir. Bu da, kullanıcıların denetim günlüğüne kaydedilmeden önce uygun lisansa atanmaları gerekir. Yalnızca Gelişmiş Denetim'de bulunan etkinlikler hakkında daha fazla bilgi için bkz. Gelişmiş [Microsoft 365](advanced-audit.md#advanced-audit-events). Gelişmiş Denetim lisans gereksinimleri için bkz[. Aşağıdaki Denetim çözümleri Microsoft 365](auditing-solutions-overview.md#licensing-requirements). <br/><br/>Aşağıdaki tabloda, Gelişmiş Denetim etkinlikleri yıldız (*) ile vurgulanır.
+> Bazı Yammer denetim etkinlikleri yalnızca Gelişmiş Denetim'de kullanılabilir. Bu, bu etkinlikler denetim günlüğüne kaydedilmeden önce kullanıcılara uygun lisansın atanması gerektiği anlamına gelir. Yalnızca Gelişmiş Denetim'de kullanılabilen etkinlikler hakkında daha fazla bilgi için bkz. [Microsoft 365'de Gelişmiş Denetim](advanced-audit.md#advanced-audit-events). Gelişmiş Denetim lisanslama gereksinimleri için bkz. [Microsoft 365'de denetim çözümleri](auditing-solutions-overview.md#licensing-requirements). <br/><br/>Aşağıdaki tabloda Gelişmiş Denetim etkinlikleri yıldız (*) ile vurgulanır.
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Veri bekletme ilkesi değiştirildi|SoftDeleteSettingsUpdated|Doğrulanmış yönetici ağ verileri bekletme ilkesi ayarını Kalıcı Olarak Sil veya Otomatik Olarak Sil olarak günceller. Bu işlemi yalnızca doğrulanmış yöneticiler gerçekleştirin.|
-|Ağ yapılandırması değiştirildi|NetworkConfigurationUpdated|Ağ yöneticisi veya doğrulanmış yönetici Yammer yapılandırmasını değiştirir. Bu, verileri dışarı aktarma ve sohbeti etkinleştirme aralığını ayarlamayı içerir.|
-|Ağ profili ayarları değiştirildi|ProcessProfileFields|Ağ yöneticisi veya doğrulanmış yönetici, ağ kullanıcıları için üye profillerde görünen bilgileri değiştirir.|
-|Özel içerik modu değiştirildi|SupervisorAdminToggled|Doğrulanmış yönetici,  *Özel İçerik Modu'ni*  çalışır veya kapatmış olur. Bu mod, yöneticinin özel gruplarda yer alan gönderileri ve bireysel kullanıcılar (veya kullanıcı grupları) arasındaki özel iletileri görüntüleyebiliyor. Yalnızca doğrulanmış yöneticiler bu işlemi gerçekleştirin.|
-|Güvenlik yapılandırması değiştirildi|NetworkSecurityConfigurationUpdated|Doğrulanmış yönetici, Yammer yapılandırmasını günceller. Bu, parola süre sonu ilkelerini ve IP adreslerinde kısıtlamaları ayarlamayı içerir. Bu işlemi yalnızca doğrulanmış yöneticiler gerçekleştirin.|
-|Dosya oluşturuldu|FileCreated|Kullanıcı dosyayı karşıya yükler.|
+|Veri saklama ilkesi değiştirildi|SoftDeleteSettingsUpdated|Doğrulanmış yönetici, ağ veri saklama ilkesi ayarını Sabit Silme veya Geçici Silme olarak güncelleştirir. Bu işlemi yalnızca doğrulanmış yöneticiler gerçekleştirebilir.|
+|Ağ yapılandırması değiştirildi|NetworkConfigurationUpdated|Ağ veya doğrulanmış yönetici Yammer ağının yapılandırmasını değiştirir. Bu, verileri dışarı aktarma aralığını ayarlamayı ve sohbeti etkinleştirmeyi içerir.|
+|Ağ profili ayarları değiştirildi|ProcessProfileFields|Ağ veya doğrulanmış yönetici, ağ kullanıcıları ağı için üye profillerinde görünen bilgileri değiştirir.|
+|Özel içerik modu değiştirildi|SupervisorAdminToggled|Doğrulanmış yönetici  *Özel İçerik Modu'nu*  açar veya kapatır. Bu mod, bir yöneticinin gönderileri özel gruplar halinde görüntülemesine ve tek tek kullanıcılar (veya kullanıcı grupları) arasındaki özel iletileri görüntülemesine olanak tanır. Bu işlemi yalnızca doğrulanmış yöneticiler gerçekleştirebilir.|
+|Değiştirilen güvenlik yapılandırması|NetworkSecurityConfigurationUpdated|Doğrulanmış yönetici, Yammer ağının güvenlik yapılandırmasını güncelleştirir. Bu, parola süre sonu ilkelerini ve IP adreslerinde kısıtlamaları ayarlamayı içerir. Bu işlemi yalnızca doğrulanmış yöneticiler gerçekleştirebilir.|
+|Dosya oluşturuldu|FileCreated|Kullanıcı bir dosyayı karşıya yükler.|
 |Grup oluşturuldu|GroupCreation|Kullanıcı bir grup oluşturur.|
-|İleti oluşturuldu<sup>*</sup>|MessageCreated|Kullanıcı bir ileti oluşturur.|
-|Grup silindi|GroupDeletion|Gruptan bir grup Yammer.|
-|İleti silindi|MessageDeleted|Kullanıcı iletiyi sildi.|
-|İndirilen dosya|FileDownloaded|Kullanıcı dosyayı indirir.|
-|Dışarı aktarıldı veriler|DataExport|Doğrulanmış yönetici, Yammer verilerini dışarı aktarıyor. Bu işlemi yalnızca doğrulanmış yöneticiler gerçekleştirin.|
-|Topluluk erişimi başarısız oldu<sup>*</sup>|CommunityAccessFailure|Kullanıcı bir topluluka erişemedi.|
-|Dosyaya erişim başarısız oldu<sup>*</sup>|FileAccessFailure|Kullanıcı bir dosyaya erişemedi.|
+|İleti oluşturuldu<sup>*</sup>|İletiOluştur|Kullanıcı bir ileti oluşturur.|
+|Grup silindi|GroupDeletion|Bir grup Yammer silinir.|
+|İleti silindi|MessageDeleted|Kullanıcı bir iletiyi siler.|
+|İndirilen dosya|FileDownloaded|Kullanıcı bir dosya indirir.|
+|Dışarı aktarılan veriler|DataExport|Doğrulanmış yönetici Yammer ağ verilerini dışarı aktarır. Bu işlemi yalnızca doğrulanmış yöneticiler gerçekleştirebilir.|
+|Topluluğa erişilemedi<sup>*</sup>|CommunityAccessFailure|Kullanıcı bir topluluğa erişemedi.|
+|Dosyaya erişilemedi<sup>*</sup>|FileAccessFailure|Kullanıcı bir dosyaya erişemedi.|
 |İletiye erişemedi<sup>*</sup>|MessageAccessFailure|Kullanıcı bir iletiye erişemedi.|
-|Dosya paylaşıldı|FileShared|Kullanıcı bir dosyayı başka bir kullanıcıyla paylaştığında.|
-|Ağ kullanıcısı askıya alındı|NetworkUserSuspended|Ağ yöneticisi veya doğrulanmış yönetici kullanıcının askıya alınmasına (devre dışı bırak) Yammer.|
-|Kullanıcı askıya alındı|UserSuspension|Kullanıcı hesabı askıya alındı (devre dışı bırakıldı).|
-|Dosya açıklaması güncelleştirildi|FileUpdateDescription|Kullanıcı dosyanın açıklamasını değiştirir.|
-|Dosya adı güncelleştirildi|FileUpdateName|Kullanıcı dosyanın adını değiştirir.|
-|İleti güncelleştirildi<sup>*</sup>|MessageUpdated|Kullanıcı iletiyi günceller.|
-|Dosya görüntülandı|FileVisited|Kullanıcı dosyayı görüntüler.|
-|İleti görüntü alındı<sup>*</sup>|MessageViewed|Kullanıcı iletiyi görüntüler.|
+|Paylaşılan dosya|FileShared|Kullanıcı başka bir kullanıcıyla dosya paylaşır.|
+|Askıya alınan ağ kullanıcısı|NetworkUserSuspended|Ağ veya doğrulanmış yönetici, kullanıcıyı Yammer askıya alır (devre dışı bırakır).|
+|Askıya alınan kullanıcı|UserSuspension|Kullanıcı hesabı askıya alındı (devre dışı bırakıldı).|
+|Güncelleştirilmiş dosya açıklaması|FileUpdateDescription|Kullanıcı dosyanın açıklamasını değiştirir.|
+|Güncelleştirilmiş dosya adı|FileUpdateName|Kullanıcı dosyanın adını değiştirir.|
+|İleti güncelleştirildi<sup>*</sup>|MessageUpdated|Kullanıcı bir iletiyi güncelleştirir.|
+|Görüntülenen dosya|FileVisited|Kullanıcı bir dosyayı görüntüler.|
+|görüntülenen ileti<sup>*</sup>|MessageViewed|Kullanıcı bir iletiyi görüntüler.|
 ||||
 
 ### <a name="microsoft-power-automate-activities"></a>Microsoft Power Automate etkinlikleri
 
-Denetim günlüğünde, bir günlükte (eski adı Power Automate etkinlik) için Microsoft Flow. Bu etkinlikler, akışları oluşturma, düzenleme ve silmeyi ve akış izinlerini değiştirmeyi içerir. Etkinlik etkinliklerini denetleme hakkında Power Automate için, web günlüğünde Power Automate [denetim etkinliklerinin kullanılabilir olduğu bloga Microsoft 365 uyumluluk merkezi](https://flow.microsoft.com/blog/security-and-compliance-center).
+denetim günlüğünde Power Automate(eski adıyla Microsoft Flow) etkinlikler için arama yapabilirsiniz. Bu etkinlikler arasında akış oluşturma, düzenleme ve silme ve akış izinlerini değiştirme yer alır. Power Automate etkinliklerinin denetimi hakkında bilgi için [Microsoft 365 uyumluluk merkezi'da kullanıma sunulan denetim olayları Power Automate bloga](https://flow.microsoft.com/blog/security-and-compliance-center) bakın.
 
 ### <a name="microsoft-power-apps-activities"></a>Microsoft Power Apps etkinlikleri
 
-Denetim günlüğünde, herhangi bir uygulamada uygulamayla ilgili etkinlikler için Power Apps. Bu etkinlikler bir uygulama oluşturmayı, başlatmayı ve yayımlamayı içerir. Uygulamalara izin atama da denetlenebilir. Tüm etkinlik etkinliklerini Power Apps için bkz. Günlük [Power Apps](/power-platform/admin/logging-powerapps#what-events-are-audited).
+Power Apps'da uygulamayla ilgili etkinlikler için denetim günlüğünde arama yapabilirsiniz. Bu etkinlikler arasında uygulama oluşturma, başlatma ve yayımlama yer alır. Uygulamalara izin atama işlemi de denetlenmektedir. Tüm Power Apps etkinliklerin açıklaması için bkz. [Power Apps için etkinlik günlüğü](/power-platform/admin/logging-powerapps#what-events-are-audited).
 
 ### <a name="microsoft-stream-activities"></a>Microsoft Stream etkinlikleri
 
-Microsoft Stream'de etkinlikler için denetim günlüğünde arama yapın. Bu etkinlikler, kullanıcılar tarafından gerçekleştirilen video etkinliklerini, grup kanalı etkinliklerini ve kullanıcıları yönetme, kuruluş ayarlarını yönetme ve raporları dışarı aktarma gibi yönetici etkinliklerini içerir. Bu etkinliklerin açıklaması için Microsoft Stream'de Denetim Günlükleri'nin "Stream'de günlüğe kaydedilen [eylemler" bölümüne bakın](/stream/audit-logs#actions-logged-in-stream).
+denetim günlüğünde Microsoft Stream etkinlikleri arayabilirsiniz. Bu etkinlikler kullanıcılar tarafından gerçekleştirilen video etkinliklerini, grup kanalı etkinliklerini ve kullanıcıları yönetme, kuruluş ayarlarını yönetme ve raporları dışarı aktarma gibi yönetici etkinliklerini içerir. Bu etkinliklerin açıklaması için Microsoft Stream Denetim [Günlükleri'ndeki "Stream'de günlüğe](/stream/audit-logs#actions-logged-in-stream) kaydedilen eylemler" bölümüne bakın.
 
 ### <a name="content-explorer-activities"></a>İçerik gezgini etkinlikleri
 
-Aşağıdaki tabloda, içerik gezgininde denetim günlüğüne kaydedilen etkinlikler listeledir. Aşağıdaki kaynakta yer alan Veri sınıflandırmaları aracında erişilen içerik Microsoft 365 uyumluluk merkezi. Daha fazla bilgi için bkz [. Veri sınıflandırma içerik gezginini kullanma](data-classification-content-explorer.md).
+Aşağıdaki tabloda, içerik gezgininde denetim günlüğüne kaydedilen etkinlikler listelenmektedir. Microsoft 365 uyumluluk merkezi Veri sınıflandırmaları aracından erişilen içerik gezgini. Daha fazla bilgi için bkz. [Veri sınıflandırması içerik gezginini kullanma](data-classification-content-explorer.md).
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Öğeye erişildi|LabelContentExplorerAccessedItem|Yönetici (veya İçerik Gezgini İçerik Görüntüleyicisi rol grubunun üyesi olan bir kullanıcı) e-posta iletisi veya belgeyi görüntülemek için içerik SharePoint/OneDrive kullanır.|
+|Erişilen öğe|LabelContentExplorerAccessedItem|Yönetici (veya İçerik Gezgini İçerik Görüntüleyicisi rol grubunun üyesi olan bir kullanıcı), e-posta iletisini veya SharePoint/OneDrive belgesini görüntülemek için içerik gezginini kullanır.|
 ||||
 
-### <a name="quarantine-activities"></a>Etkinlikleri karantinaya alın
+### <a name="quarantine-activities"></a>Karantina etkinlikleri
 
-Aşağıdaki tabloda, denetim günlüğünde arayabilirsiniz karantina etkinlikleri liste almaktadır. Karantina hakkında daha fazla bilgi için bkz. [E-posta iletilerini karantinaya alındı](../security/office-365-security/quarantine-email-messages.md).
+Aşağıdaki tabloda, denetim günlüğünde arayabileceğiniz karantina etkinlikleri listelenir. Karantina hakkında daha fazla bilgi için bkz. [E-posta iletilerini karantinaya alma](../security/office-365-security/quarantine-email-messages.md).
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Karantina iletisi silindi|KarantinaDelete|Bir kullanıcı zararlı olduğu kabulilen bir e-posta iletisi sildi.|
-|Karantina iletisi dışarı aktarıldı|QuarantineExport|Bir kullanıcı zararlı olduğu kabulilen bir e-posta iletisi dışarı aktardı.|
-|Önizlemeli karantina iletisi|KarantinaPreview|Bir kullanıcı zararlı olduğu kabulilen bir e-posta iletisi önizlemesi yaptı.|
-|İleti karantinaya alındı|KarantinaRelease|Bir kullanıcı karantinadan alınan ve zararlı olduğu kabulilen bir e-posta iletisi yayımladı.|
-|Karantina iletisi üst bilgisi görüntü alındı|QuarantineViewHeader|Bir kullanıcı üst bilgide, zararlı olduğu kabul edildi bir e-posta iletisi görüntüledi.|
+|Karantina iletisi silindi|QuarantineDelete|Bir kullanıcı, zararlı olduğu düşünülen bir e-posta iletisini sildi.|
+|Dışarı aktarılan karantina iletisi|QuarantineExport|Kullanıcı, zararlı olduğu düşünülen bir e-posta iletisini dışarı aktardı.|
+|Önizlemeli karantina iletisi|QuarantinePreview|Bir kullanıcı, zararlı olduğu düşünülen bir e-posta iletisinin önizlemesini görüntüledi.|
+|Karantina iletisi yayımlandı|QuarantineRelease|Bir kullanıcı karantinadan zararlı olduğu düşünülen bir e-posta iletisi yayımladı.|
+|Karantina iletisinin üst bilgisi görüntülendi|QuarantineViewHeader|Kullanıcı üst bilgiyi, zararlı olduğu düşünülen bir e-posta iletisiyle görüntüledi.|
 ||||
 
 ### <a name="microsoft-forms-activities"></a>Microsoft Forms etkinlikleri
 
-Bu bölümdeki tablolarda, Microsoft Forms'da denetim günlüğüne kaydedilen kullanıcı ve yönetici etkinlikleri yer almaktadır. Microsoft Forms analiz için veri toplamak için kullanılan bir form/test/anket aracıdır. Açıklamalarda aşağıda belirtilenin, bazı işlemler ek etkinlik parametreleri içerir.
+Bu bölümdeki tablolar, denetim günlüğüne kaydedilen Microsoft Forms kullanıcı ve yönetici etkinlikleridir. Microsoft Forms, analiz için veri toplamak için kullanılan bir form/test/anket aracıdır. Açıklamalarda aşağıda belirtilen durumlarda, bazı işlemler ek etkinlik parametreleri içerir.
 
-Bir Forms etkinliği ortak yazar veya anonim yanıtlayan tarafından gerçekleştirilse, biraz daha farklı bir şekilde günlüğe kaydedilir. Daha fazla bilgi için ortak [yazarlar ve anonim yanıtlayanlar tarafından gerçekleştirilen Forms etkinlikleri bölümüne](#forms-activities-performed-by-coauthors-and-anonymous-responders) bakın.
+Bir Forms etkinliği bir ortak yazar veya anonim yanıtlayıcı tarafından gerçekleştiriliyorsa, biraz farklı günlüğe kaydedilir. Daha fazla bilgi için [, birlikte yazanlar ve anonim yanıtlayanlar tarafından gerçekleştirilen Formlar etkinlikleri](#forms-activities-performed-by-coauthors-and-anonymous-responders) bölümüne bakın.
 
 > [!NOTE]
-> Bazı Forms denetim etkinlikleri yalnızca Gelişmiş Denetim'de kullanılabilir. Bu da, kullanıcıların denetim günlüğüne kaydedilmeden önce uygun lisansa atanmaları gerekir. Yalnızca Gelişmiş Denetim'de bulunan etkinlikler hakkında daha fazla bilgi için bkz. Gelişmiş [Microsoft 365](advanced-audit.md#advanced-audit-events). Gelişmiş Denetim lisans gereksinimleri için bkz[. Aşağıdaki Denetim çözümleri Microsoft 365](auditing-solutions-overview.md#licensing-requirements). <br/><br/>Aşağıdaki tabloda, Gelişmiş Denetim etkinlikleri yıldız (*) ile vurgulanır.
+> Bazı Forms denetim etkinlikleri yalnızca Gelişmiş Denetim'de kullanılabilir. Bu, bu etkinlikler denetim günlüğüne kaydedilmeden önce kullanıcılara uygun lisansın atanması gerektiği anlamına gelir. Yalnızca Gelişmiş Denetim'de kullanılabilen etkinlikler hakkında daha fazla bilgi için bkz. [Microsoft 365'de Gelişmiş Denetim](advanced-audit.md#advanced-audit-events). Gelişmiş Denetim lisanslama gereksinimleri için bkz. [Microsoft 365'de denetim çözümleri](auditing-solutions-overview.md#licensing-requirements). <br/><br/>Aşağıdaki tabloda Gelişmiş Denetim etkinlikleri yıldız (*) ile vurgulanır.
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Açıklama oluşturuldu|CreateComment|Form sahibi teste yorum veya puan ekler.|
-|Form oluşturuldu|CreateForm|Form sahibi yeni bir form oluşturur. <br><br>Property DataMode:string, geçerli formun yeni veya var olan bir Excel değeri DataSync'e eşitlene kadar ayar olduğunu gösterir. Özelliği ExcelWorkbookLink:string geçerli formun Excel çalışma kitabı kimliğini gösterir.|
-|Düzenlenen form|Formu Düzenle|Form sahibi soru oluşturma, kaldırma veya düzenleme gibi bir formu düzenler. *EditOperation:string özelliği*, düzenleme işlemi adını gösterir. Olası işlemler:<br/>- CreateQuestion<br/>- CreateQuestionChoice <br/>- DeleteQuestion <br/>- DeleteQuestionChoice <br/>- DeleteFormImage <br/>- DeleteQuestionImage <br/>- UpdateQuestion <br/>- UpdateQuestionChoice <br/>- UploadFormImage/Bing/OneDrive <br/>- UploadQuestionImage <br/>- ChangeTheme <br><br>FormImage, Forms'da kullanıcının bir sorgu veya arka plan teması gibi bir resim yükleyage tüm yerlerini içerir.|
-|Form taşındı|MoveForm|Form sahibi formu taşır. <br><br>Property DestinationUserId:string, formu hareket eden kişinin kullanıcı kimliğini gösterir. Property NewFormId:string, yeni kopyalanan formun yeni kimliğidir. Property IsDelegateAccess:boolean, geçerli form taşıma eyleminin yönetici temsilci sayfası üzerinden gerçekleştirileni gösterir.|
-|Form silindi|DeleteForm|Form sahibi formu siler. Buna SoftDelete (kullanılan silme seçeneği ve geri dönüşüm kutusu'na taşınan form) ve HardDelete (Geri dönüşüm kutusu boşaltıldı) dahildir.|
-|Görüntülenen form (tasarım süresi)|Görünüm Formu|Form sahibi mevcut bir formu düzenleme için açar. <br><br>Özellik Erişimi Reddedildi:boolean, izin denetimi nedeniyle geçerli formun erişiminin reddedilmiş olduğunu gösterir. Özellik FromSummaryLink:boolean özet bağlantı sayfasından geçerli isteğin olduğunu gösterir.|
-|Önizlemesi yapılan form|Önizleme Formu|Form sahibi, Preview işlevini kullanarak formun önizlemesini gösterir.|
-|Form dışarı aktarıldı|Dışarı Aktarma Formu|Form sahibi sonuçları başka bir Excel. <br><br>Özellik Dışarı Aktarma Biçimi:dize, Excel İndir veya Çevrimiçi olduğunu gösterir.|
-|Kopyalama için izin verilen paylaşım formu|AllowShareFormForCopy|Form sahibi formu diğer kullanıcılarla paylaşmak için bir şablon bağlantısı oluşturur. Form sahibi şablon URL'sini oluşturmak için tıkladığında bu olay günlüğe kaydedilir.|
-|Kopyalama için izin verilmeyen paylaşım formu|DisallowShareFormForCopy|Form sahibi şablon bağlantısını siler.|
-|Form birlikte yazar eklendi|AddFormCoauthor|Kullanıcı, yanıtların tasarımına/görünümüne yardımcı olmak için işbirliği bağlantısı kullanır. Bu olay, kullanıcı bir collab URL'si kullandığında günlüğe kaydedilir (collab URL'si ilk kez oluşturulmaz).|
-|Form birlikte yazar kaldırıldı|RemoveFormCoauthor|Form sahibi işbirliği bağlantısını siler.|
-|Yanıt sayfası görüntü alındı|ViewRuntimeForm|Kullanıcı görüntülemek için bir yanıt sayfası açtı. Kullanıcı yanıt gönderip göndermese de göndermese de bu olay günlüğe kaydedilir.|
-|Yanıt oluşturuldu|CreateResponse|Yeni yanıt almaya benzer.  Bir kullanıcı forma yanıt gönderttirdi. <br><br>Property ResponseId:string and Property ResponderId:string hangi sonucun görüntü görüntülemekte olduğunu gösterir. <br><br>Anonim bir yanıtlayan için, ResponderId özelliği null olur.|
-|Yanıt güncelleştirildi|UpdateResponse|Form sahibi testte bir açıklamayı veya puanı güncellemiştir. <br><br>Property ResponseId:string and Property ResponderId:string hangi sonucun görüntü görüntülemekte olduğunu gösterir. <br><br>Anonim bir yanıtlayan için, ResponderId özelliği null olur.|
+|Açıklama oluşturuldu|CreateComment|Form sahibi teste açıklama veya puan ekler.|
+|Form oluşturuldu|CreateForm|Form sahibi yeni bir form oluşturur. <br><br>Property DataMode:string, özellik değeri DataSync'e eşitse geçerli formun yeni veya mevcut bir Excel çalışma kitabıyla eşitlenecek şekilde ayarlandığını gösterir. ExcelWorkbookLink:string özelliği, geçerli formun ilişkili Excel çalışma kitabı kimliğini gösterir.|
+|Düzenlenen form|EditForm|Form sahibi soru oluşturma, kaldırma veya düzenleme gibi bir formu düzenler. *EditOperation:string* özelliği, düzenleme işleminin adını gösterir. Olası işlemler şunlardır:<br/>- CreateQuestion<br/>- CreateQuestionChoice <br/>- DeleteQuestion <br/>- DeleteQuestionChoice <br/>- DeleteFormImage <br/>- DeleteQuestionImage <br/>- UpdateQuestion <br/>- UpdateQuestionChoice <br/>- UploadFormImage/Bing/Onedrive <br/>- UploadQuestionImage <br/>- ChangeTheme <br><br>FormImage, Formlar'da kullanıcının sorgu veya arka plan teması gibi bir görüntüyü karşıya yükleyebileceği herhangi bir yer içerir.|
+|Taşınan form|MoveForm|Form sahibi formu taşır. <br><br>DestinationUserId:string özelliği, formu taşıyan kişinin kullanıcı kimliğini gösterir. NewFormId:string özelliği, yeni kopyalanan formun yeni kimliğidir. IsDelegateAccess:boolean özelliği, geçerli form taşıma eyleminin yönetici temsilcisi sayfası üzerinden gerçekleştirildiğini gösterir.|
+|Silinen form|DeleteForm|Form sahibi formu siler. Buna SoftDelete (kullanılan silme seçeneği ve geri dönüşüm kutusuna taşınan form) ve HardDelete (Geri dönüşüm kutusu boşaltıldı) dahildir.|
+|Görüntülenen form (tasarım zamanı)|Görünüm Formu|Form sahibi, düzenlemek üzere var olan bir formu açar. <br><br>AccessDenied:boolean özelliği, izin denetimi nedeniyle geçerli formun erişiminin reddedilmiş olduğunu gösterir. FromSummaryLink:boolean özelliği, geçerli isteğin özet bağlantı sayfasından geldiğini gösterir.|
+|Ön izleme formu|PreviewForm|Form sahibi, Preview işlevini kullanarak formun önizlemesini gösterir.|
+|Dışarı aktarılan form|ExportForm|Form sahibi sonuçları Excel dışarı aktarır. <br><br>ExportFormat:string Özelliği, Excel dosyasının İndir veya Çevrimiçi olduğunu gösterir.|
+|Kopyalama için izin verilen paylaşım formu|AllowShareFormForCopy|Form sahibi, formu diğer kullanıcılarla paylaşmak için bir şablon bağlantısı oluşturur. Form sahibi şablon URL'sini oluşturmak için tıkladığında bu olay günlüğe kaydedilir.|
+|Kopya için izin verilmeyen paylaşım formu|DisallowShareFormForCopy|Form sahibi şablon bağlantısını siler.|
+|Form birlikte yazma eklendi|AddFormCoauthor|Kullanıcı, yanıtları tasarlamaya/görüntülemeye yardımcı olmak için bir işbirliği bağlantısı kullanır. Bu olay, kullanıcı bir harmanlama URL'si kullandığında günlüğe kaydedilir (harmanlama URL'si ilk oluşturulduğunda günlüğe kaydedilmez).|
+|Form birlikte yazması kaldırıldı|RemoveFormCoauthor|Form sahibi işbirliği bağlantısını siler.|
+|Görüntülenen yanıt sayfası|ViewRuntimeForm|Kullanıcı görüntülemek için bir yanıt sayfası açtı. Bu olay, kullanıcının yanıt gönderip göndermediğine bakılmaksızın günlüğe kaydedilir.|
+|Yanıt oluşturuldu|CreateResponse|Yeni yanıt almaya benzer.  Kullanıcı bir forma yanıt gönderdi. <br><br>Property ResponseId:string ve Property ResponderId:string hangi sonucun görüntülendiğini gösterir. <br><br>Anonim yanıtlayıcı için ResponderId özelliği null olur.|
+|Güncelleştirilmiş yanıt|UpdateResponse|Form sahibi, testte bir açıklamayı veya puanı güncelleştirdi. <br><br>Property ResponseId:string ve Property ResponderId:string hangi sonucun görüntülendiğini gösterir. <br><br>Anonim yanıtlayıcı için ResponderId özelliği null olur.|
 |Tüm yanıtlar silindi|DeleteAllResponses|Form sahibi tüm yanıt verilerini siler.|
-|Yanıt silindi|DeleteResponse|Form sahibi bir yanıtı siler. <br><br>Property ResponseId:string, silinen yanıtı gösterir.|
-|Yanıtlar görüntü edildi|ViewResponses|Form sahibi toplanan yanıtların listesini görüntüler. <br><br>Özellik Görünüm Türü:dize, form sahibinin Ayrıntı'nın mı yoksa Toplama'nın mı görüntüleyle ilgili olduğunu gösterir|
-|Yanıt görüntü alındı|ViewResponse|Form sahibi belirli bir yanıtı görüntüler. <br><br>Property ResponseId:string and Property ResponderId:string hangi sonucun görüntü görüntülemekte olduğunu gösterir. <br><br>Anonim bir yanıtlayan için, ResponderId özelliği null olur.|
-|Özet bağlantısı oluşturuldu|GetSummaryLink|Form sahibi sonuçları paylaşmak için özet sonuçları bağlantısı oluşturur.|
+|Yanıt Silindi|Deleteresponse|Form sahibi bir yanıtı siler. <br><br>Property ResponseId:string, yanıtın silindiğini gösterir.|
+|Görüntülenen yanıtlar|ViewResponses|Form sahibi, toplanan yanıt listesini görüntüler. <br><br>ViewType:string Özelliği, form sahibinin Ayrıntı mı yoksa Toplama mı görüntülediğini gösterir|
+|Görüntülenen yanıt|ViewResponse|Form sahibi belirli bir yanıtı görüntüler. <br><br>Property ResponseId:string ve Property ResponderId:string hangi sonucun görüntülendiğini gösterir. <br><br>Anonim yanıtlayıcı için ResponderId özelliği null olur.|
+|Özet bağlantısı oluşturuldu|GetSummaryLink|Form sahibi, sonuçları paylaşmak için özet sonuçlar bağlantısı oluşturur.|
 |Silinen özet bağlantısı|DeleteSummaryLink|Form sahibi özet sonuçları bağlantısını siler.|
-|Güncelleştirilmiş form kimlik avı durumu|UpdatePhishingStatus|Son güvenlik durumunun değişip değişmemiş olup olmadığı önemli değildir (örneğin, form artık Kapalı veya Açık durumda olsa da, iç güvenlik durumu için ayrıntılı değer her değiştirnişinde bu olay günlüğe kaydedilir). Bu, yinelenen olayları son bir güvenlik durumu değişikliği olmadan da göreceğinizi anlamına gelir. Bu olayın olası durum değerleri şöyledir:<br/>- Take Down <br/>- Yönetici tarafından Aşağı Al <br/>- Yönetici Engeli Kaldırıldı <br/>- Otomatik Engellendi <br/>- Otomatik Engellemesi Kaldır <br/>- Müşteri Bildirildi <br/>- MüşteriYi Sıfırla Bildirdi|
-|Kullanıcı kimlik avı durumu güncelleştirildi|UpdateUserPhishingStatus|Kullanıcı güvenliği durumuna göre değeri her değiştirişte bu olay günlüğe kaydedilir. Kullanıcı Microsoft Online güvenlik ekibi tarafından ele alınan bir kimlik avı  formu oluşturduğunda denetim kaydında kullanıcı durumunun Değeri Kimlik AvıCı Olarak Onaylanır. Yönetici kullanıcının engellemesini kaldırırsa, kullanıcının durumu değeri Normal Kullanıcı Olarak Sıfırla **olarak ayarlanır**.|
-|Gönderilmiş Formlar Pro daveti|ProInvitation|Kullanıcı bir denemeyi etkinleştirmek Pro tıkladığında.|
-|Form ayarı güncelleştirildi<sup>*</sup> |UpdateFormSetting|Form sahibi bir veya birden çok form ayarlarını günceller. <br><br>Özellik FormSettingName:string güncelleştirilmiş hassas ayarların adını gösterir. Property NewFormSettings:string, güncelleştirilmiş ayarların adını ve yeni değerini gösterir. Özellik thankYouMessageContainsLink:boolean, güncelleştirilmiş teşekkür iletisinde URL bağlantısı olduğunu belirtir.|
-|Kullanıcı ayarı güncelleştirildi|UpdateUserSetting|Form sahibi kullanıcı ayarını günceller. <br><br>Özellik UserSettingName:string ayarın adını ve yeni değerini gösterir|
-|Listelenen formlar<sup>*</sup>|Liste Formları|Form sahibi formların listesini görüntü alıyor. <br><br>Özellik Görünüm Türü:dize, form sahibinin hangi görünümde olduğunu gösterir: Tüm Formlar, Benimle Paylaşılan veya Grup Formları|
-|Yanıt gönderildi|SubmitResponse|Kullanıcı forma bir yanıt gönderdi. <br><br>IsInternalForm:boolean özelliği, yanıtlayan, form sahibiyle aynı kuruluş içinde ise bunu gösterir.|
-|Etkinleştirildi herkes yanıtla ayarı<sup>*</sup>|AllowAnonymousResponse|Form sahibi, herhangi birinin formu yanıtlamasına izin veren ayarı etkinleştirir.|
-|Devre dışı bırakılmış herkes yanıtla ayarı<sup>*</sup>|DisallowAnonymousResponse|Form sahibi, herhangi birinin formu yanıtlamasına izin veren ayarı devre dışı bırakır.|
-|Belirli kişiler yanıt yanıtla ayarını etkinleştirdi<sup>*</sup>|EnableSpecificResponse|Form sahibi, yalnızca geçerli kuruluşta yer alan belirli kişilerin veya belirli grupların formu yanıtlamasına izin veren ayarı etkinleştirir.|
-|Devre dışı bırakılmış belirli kişiler yanıt olabilir ayarı<sup>*</sup>|DisableSpecificResponse|Form sahibi, yalnızca geçerli kuruluşta yer alan belirli kişilerin veya belirli grupların formu yanıtlamasına izin veren ayarı devre dışı bırakır.|
-|Belirli bir yanıtlayan eklendi<sup>*</sup>|AddSpecificResponder|Form sahibi, belirli yanıtlayanlar listesine yeni bir kullanıcı veya grup ekler.|
-|Belirli bir yanıtlayan kaldırıldı<sup>*</sup>|RemoveSpecificResponder|Form sahibi belirli yanıtlayanlar listesinden bir kullanıcı veya grubu kaldırır.|
-|Devre dışı bırakılmış işbirliği<sup>*</sup>|DisableCollaboration|Form sahibi, formda işbirliği ayarını devre dışı bırakır.|
-|İş Office 365 veya okul hesabı işbirliği için etkinleştirildi<sup>*</sup>|EnableWorkOrSchoolCollaboration|Form sahibi, iş veya okul hesabı olan Microsoft 365 form görüntülemelerine ve düzenlemelerine izin veren ayarı etkinleştirir.|
-|Kuruluşumda birlikte çalışan kişiler etkinleştirildi<sup>*</sup>|EnableSameOrgCollaboration|Form sahibi, geçerli kuruluşta yer alan kullanıcıların formu görüntülemelerine ve düzenlemelerine izin veren ayarı etkinleştirir.|
-|Belirli kişiler işbirliği etkinleştirildi<sup>*</sup>|EnableSpecificCollaboaration|Form sahibi, yalnızca geçerli kuruluşta yer alan belirli kişilerin veya belirli grupların formu görüntüleme ve düzenlemelerine izin veren ayarı etkinleştirir.|
-|Çalışma kitabına Excel bağlandı<sup>*</sup>|ConnectToExcelWorkbook|Formu bir çalışma kitabına Excel. <br><br>Özelliği ExcelWorkbookLink:string geçerli formun Excel çalışma kitabı kimliğini gösterir.|
-|Koleksiyon oluşturuldu|CollectionCreated|Form sahibi bir koleksiyon oluşturdu.|
-|Koleksiyon güncelleştirildi|CollectionUpdated|Form sahibi koleksiyon özelliğini günceller.|
-|Geri Dönüşüm Kutusu'dan koleksiyonu silindi|Collection Biraçıkla|Form sahibi Geri Dönüşüm Kutusu'dan bir koleksiyonu kalıcı olarak sildi.|
-|Koleksiyonu Geri Dönüşüm Kutusu'na taşındı|CollectionSoftDeleted|Form sahibi koleksiyonu Geri Dönüşüm Kutusu'na taşıdı.|
-|Koleksiyonu yeniden adlandırıldı|CollectionRenamed|Form sahibi koleksiyonun adını değiştirdi.|
-|Formu koleksiyona taşıdı|MovedFormIntoCollection|Form sahibi formu koleksiyona taşıdı.|
-|Formu koleksiyonun dışarı taşındı|MovedFormOutofCollection|Form sahibi formu koleksiyonun dışarı taşıdı.|
+|Form kimlik avı durumu güncelleştirildi|UpdatePhishingStatus|Bu olay, iç güvenlik durumunun ayrıntılı değeri değiştirildiğinde, bunun son güvenlik durumunu değiştirip değiştirmediğine bakılmaksızın günlüğe kaydedilir (örneğin, form artık Kapalı veya Açık durumdadır). Bu, son güvenlik durumu değişikliği olmadan yinelenen olaylar görebileceğiniz anlamına gelir. Bu olayın olası durum değerleri şunlardır:<br/>- Aşağı Al <br/>- Yönetici tarafından Indir <br/>- Yönetici Engeli Kaldırıldı <br/>- Otomatik Engellendi <br/>- Otomatik Engeli Kaldırıldı <br/>- Müşteri Tarafından Bildirilen <br/>- Bildirilen Müşteriyi Sıfırla|
+|Kullanıcı kimlik avı durumu güncelleştirildi|UpdateUserPhishingStatus|Bu olay, kullanıcı güvenlik durumu değeri her değiştirildiğinde günlüğe kaydedilir. Denetim kaydındaki kullanıcı durumunun değeri, Kullanıcı Microsoft Online güvenlik ekibi tarafından indirilmiş bir kimlik avı formu oluşturduğunda **Kimlik Avı Olarak Onaylandı şeklindedir** . Yönetici kullanıcının engellemesini kaldırırsa, kullanıcının durumunun değeri **Normal Kullanıcı Olarak Sıfırla olarak** ayarlanır.|
+|Gönderilmiş Formlar Pro daveti|ProInvitation|Kullanıcı bir Pro deneme sürümünü etkinleştirmek için tıklar.|
+|Güncelleştirilmiş form ayarı<sup>*</sup> |UpdateFormSetting|Form sahibi bir veya birden çok form ayarlarını güncelleştirir. <br><br>FormSettingName:string özelliği, güncelleştirilmiş hassas ayarların adını gösterir. NewFormSettings:string özelliği, güncelleştirilmiş ayarların adını ve yeni değerini gösterir. thankYouMessageContainsLink:boolean özelliği, güncelleştirilmiş teşekkür iletisinin bir URL bağlantısı içerdiğini gösterir.|
+|Kullanıcı ayarı güncelleştirildi|UpdateUserSetting|Form sahibi bir kullanıcı ayarını güncelleştirir. <br><br>UserSettingName:string Özelliği ayarın adını ve yeni değerini gösterir|
+|Listelenen formlar<sup>*</sup>|ListForms|Form sahibi form listesini görüntülüyor. <br><br>ViewType:string Özelliği, form sahibinin hangi görünüme baktığını gösterir: Tüm Formlar, Benimle Paylaşılan veya Grup Formları|
+|Gönderilen yanıt|SubmitResponse|Kullanıcı bir forma yanıt gönderir. <br><br>IsInternalForm:boolean özelliği, yanıtlayanın form sahibiyle aynı kuruluş içinde olup olmadığını gösterir.|
+|Herkes yanıt verebilir ayarını etkinleştirdi<sup>*</sup>|AllowAnonymousResponse|Form sahibi, herhangi birinin forma yanıt vermesini sağlayan ayarı açar.|
+|Devre dışı bırakılan herkes yanıt verebilir ayarı<sup>*</sup>|DisallowAnonymousResponse|Form sahibi ayarı kapatarak herhangi birinin forma yanıt vermesini sağlar.|
+|Etkin belirli kişiler yanıt verebilir ayarı<sup>*</sup>|EnableSpecificResponse|Form sahibi ayarı açar ve yalnızca geçerli kuruluştaki belirli kişilerin veya belirli grupların forma yanıt vermesine izin verir.|
+|Devre dışı bırakılan belirli kişiler yanıt verebilir ayarı<sup>*</sup>|DisableSpecificResponse|Form sahibi ayarı kapatarak yalnızca geçerli kuruluştaki belirli kişilerin veya belirli grupların forma yanıt vermesini sağlar.|
+|Belirli bir yanıtlayıcı eklendi<sup>*</sup>|AddSpecificResponder|Form sahibi, belirli yanıtlayıcılar listesine yeni bir kullanıcı veya grup ekler.|
+|Belirli yanıtlayıcı kaldırıldı<sup>*</sup>|RemoveSpecificResponder|Form sahibi, bir kullanıcıyı veya grubu belirli yanıtlayıcılar listesinden kaldırır.|
+|Devre dışı bırakılmış işbirliği<sup>*</sup>|DisableCollaboration|Form sahibi, formda işbirliği ayarını kapatır.|
+|İş veya okul hesabı işbirliği Office 365 etkinleştirildi<sup>*</sup>|EnableWorkOrSchoolCollaboration|Form sahibi, Microsoft 365 iş veya okul hesabı olan kullanıcıların formu görüntülemesine ve düzenlemesine izin veren ayarı açar.|
+|Kuruluşumdaki kişilerin işbirliğine olanak sağladı<sup>*</sup>|EnableSameOrgCollaboration|Form sahibi, geçerli kuruluştaki kullanıcıların formu görüntülemesine ve düzenlemesine izin veren ayarı açar.|
+|Belirli kişilerin işbirliğini etkinleştirdi<sup>*</sup>|EnableSpecificCollaboaration|Form sahibi, yalnızca geçerli kuruluştaki belirli kişilerin veya belirli grupların formu görüntülemesine ve düzenlemesine izin veren ayarı açar.|
+|Excel çalışma kitabına bağlı<sup>*</sup>|ConnectToExcelWorkbook|Formu bir Excel çalışma kitabına bağladı. <br><br>ExcelWorkbookLink:string özelliği, geçerli formun ilişkili Excel çalışma kitabı kimliğini gösterir.|
+|Koleksiyon oluşturma|KoleksiyonOluştur|Form sahibi bir koleksiyon oluşturdu.|
+|Koleksiyon güncelleştirildi|CollectionUpdated|Form sahibi bir koleksiyon özelliğini güncelleştirdi.|
+|Geri Dönüşüm Kutusu'ndan silinen koleksiyon|CollectionHardDeleted|Form sahibi Geri Dönüşüm Kutusu'ndan bir koleksiyonu sabit olarak sildi.|
+|Koleksiyon Geri Dönüşüm Kutusu'na taşındı|CollectionSoftDeleted|Form sahibi bir koleksiyonu Geri Dönüşüm Kutusu'na taşıdı.|
+|Koleksiyon yeniden adlandırıldı|CollectionRenamed|Form sahibi koleksiyonun adını değiştirdi.|
+|Formu koleksiyona taşıma|MovedFormIntoCollection|Form sahibi formu koleksiyona taşıdı.|
+|Formu koleksiyon dışına taşıma|MovedFormOutofCollection|Form sahibi formu koleksiyon dışına taşıdı.|
 ||||
 
-#### <a name="forms-activities-performed-by-coauthors-and-anonymous-responders"></a>Ortak yazarlar ve anonim yanıtlayanlar tarafından gerçekleştirilen form etkinlikleri
+#### <a name="forms-activities-performed-by-coauthors-and-anonymous-responders"></a>Birlikte yazanlar ve anonim yanıtlayanlar tarafından gerçekleştirilen form etkinlikleri
 
-Formlar tasar olduğunda ve yanıtları çözümlerken işbirliğini destekler. Form işbirliği yapan, ortak yazar *olarak bilinir*. Birlikte yazar olarak, formu silme veya taşıma dışında, form sahibinin yapanın her şeyi birlikte yazar. Formlar, anonim olarak yanıt ver kullanıcılara yanıt ver veren bir form oluşturmanıza da olanak sağlar. Bu, yanıtlayanların bir formu yanıtlamak için kuruluşta oturumlarının olması gerek olmadığını anlamına gelir.
+Formlar tasarlanırken ve yanıtlar çözümlenirken formlar işbirliğini destekler. Form ortak çalışanı *ortak yazar* olarak bilinir. Birlikte yazanlar, formu silmek veya taşımak dışında form sahibinin yapabilecekleri her şeyi yapabilir. Formlar ayrıca anonim olarak yanıt verilebilen bir form oluşturmanıza da olanak tanır. Bu, yanıtlayanın bir forma yanıt verebilmek için kuruluşunuzda oturum açması gerek olmadığı anlamına gelir.
 
-Aşağıdaki tabloda, ortak yazarlarla anonim yanıtlayanlar tarafından gerçekleştirilen etkinlikler için denetim kaydında yer alan denetim etkinlikleri ve bilgileri açık almaktadır.
+Aşağıdaki tabloda, birlikte yazanlar ve anonim yanıtlayanlar tarafından gerçekleştirilen etkinliklere ilişkin denetim etkinlikleri ve denetim kaydındaki bilgiler açıklanmaktadır.
 
-|Etkinlik türü|İç veya dış kullanıcı|Günlüğe kaydedilen kullanıcı kimliği|Oturum açan kuruluş|Forms kullanıcı türü|
+|Etkinlik türü|İç veya dış kullanıcı|Günlüğe kaydedilen kullanıcı kimliği|Oturum açan kuruluş|Form kullanıcı türü|
 |:-----|:-----|:-----|:-----|:-----|
-|Birlikte yazar etkinlikleri|İç|UPN|Form sahibinin kuruluş|Birlikte yazar|
-|Birlikte yazar etkinlikleri|Dış|UPN<br>|Birlikte yazarla kuruluş<br>|Birlikte yazar|
-|Birlikte yazar etkinlikleri|Dış|`urn:forms:coauthor#a0b1c2d3@forms.office.com`<br>(Kimliğin ikinci bölümü karmadır ve farklı kullanıcılar için farklıdır)|Form sahibinin kuruluş<br>|Birlikte yazar|
-|Yanıt etkinlikleri|Dış|UPN<br>|Yanıtlayan'ın kuruluş şeması<br>|Yanıtlayan|
-|Yanıt etkinlikleri|Dış|`urn:forms:external#a0b1c2d3@forms.office.com`<br>(Kullanıcı Kimliğinin ikinci bölümü karmadır ve farklı kullanıcılar için farklıdır)|Form sahibinin kuruluş|Yanıtlayan|
-|Yanıt etkinlikleri|Anonim|`urn:forms:anonymous#a0b1c2d3@forms.office.com`<br>(Kullanıcı Kimliğinin ikinci bölümü karmadır ve farklı kullanıcılar için farklıdır)|Form sahibinin kuruluş|Yanıtlayan|
+|Birlikte yazma etkinlikleri|Iç|UPN|Form sahibinin kuruluşu|Birlikte yazma|
+|Birlikte yazma etkinlikleri|Dış|UPN<br>|Coauthor'ın kuruluşu<br>|Birlikte yazma|
+|Birlikte yazma etkinlikleri|Dış|`urn:forms:coauthor#a0b1c2d3@forms.office.com`<br>(Kimliğin ikinci bölümü, farklı kullanıcılar için farklı olacak bir karmadır)|Form sahibinin kuruluşu<br>|Birlikte yazma|
+|Yanıt etkinlikleri|Dış|UPN<br>|Yanıtlayıcının kuruluşu<br>|Yanıtlayıcı|
+|Yanıt etkinlikleri|Dış|`urn:forms:external#a0b1c2d3@forms.office.com`<br>(Kullanıcı Kimliğinin ikinci bölümü, farklı kullanıcılar için farklı olacak bir karmadır)|Form sahibinin kuruluşu|Yanıtlayıcı|
+|Yanıt etkinlikleri|Anonim|`urn:forms:anonymous#a0b1c2d3@forms.office.com`<br>(Kullanıcı Kimliğinin ikinci bölümü, farklı kullanıcılar için farklı olacak bir karmadır)|Form sahibinin kuruluşu|Yanıtlayıcı|
 ||||
 
 ### <a name="sensitivity-label-activities"></a>Duyarlılık etiketi etkinlikleri
 
-Aşağıdaki tabloda duyarlılık etiketlerinin kullanımından sonuç olan [olaylar listele.](sensitivity-labels.md)
+Aşağıdaki tabloda [duyarlılık etiketlerinin](sensitivity-labels.md) kullanılmasından kaynaklanan olaylar listelenir.
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-|Siteye duyarlılık etiketi uygulandı|SensitivityLabelApplied|Bir siteye veya siteye SharePoint Teams.|
-|Duyarlılık etiketi siteden kaldırıldı|SensitivityLabelRemoved|Bir siteden veya siteden SharePoint Teams kaldırıldı.|
-|Dosyaya duyarlılık etiketi uygulandı|FileSensitivityLabelApplied|Belgeye, Microsoft 365 uygulamaları kullanılarak bir duyarlılık Web üzerinde Office. veya otomatik etiketleme ilkesi gibi bir ilkeye de neden olabilir.|
-|Dosyaya uygulanan duyarlılık etiketi değiştirildi|FileSensitivityLabelChanged<br /><br>SensitivityLabelUpdated|Bir belgeye farklı bir duyarlılık etiketi uygulanmış. <br /><br>Bu etkinliğin işlemleri, etiketin nasıl değiştirildiklarına bağlı olarak değişir:<br /> - Web üzerinde Office etiketleme ilkesi (FileSensitivityLabelChanged) <br /> - Microsoft 365 uygulamaları (SensitivityLabelUpdated)|
-|Sitenin duyarlılık etiketi değiştirildi|SensitivityLabelChanged|Bir siteye veya siteye farklı bir duyarlılık SharePoint Teams.|
-|Duyarlılık etiketi dosyadan kaldırıldı|FileSensitivityLabelRemoved|Duyarlılık etiketi, Microsoft 365 uygulamaları, Web üzerinde Office, otomatik etiket ilkesi veya [Unlock-SPOSensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedFile) cmdlet'i kullanılarak belgeden kaldırılmıştır.|
+|Siteye duyarlılık etiketi uygulandı|SensitivityLabelApplied|bir SharePoint veya Teams sitesine duyarlılık etiketi uygulandı.|
+|Duyarlılık etiketi siteden kaldırıldı|SensitivityLabelRemoved|Bir SharePoint veya Teams sitesinden duyarlılık etiketi kaldırıldı.|
+|Dosyaya duyarlılık etiketi uygulandı|FileSensitivityLabelApplied|Microsoft 365 uygulamaları Web üzerinde Office kullanılarak belgeye duyarlılık etiketi uygulandı. veya otomatik etiketleme ilkesi.|
+|Dosyaya uygulanan duyarlılık etiketi değiştirildi|FileSensitivityLabelChanged<br /><br>SensitivityLabelUpdated|Belgeye farklı bir duyarlılık etiketi uygulandı. <br /><br>Bu etkinliğin işlemleri, etiketin nasıl değiştirildiğine bağlı olarak farklıdır:<br /> - Web üzerinde Office veya otomatik etiketleme ilkesi (FileSensitivityLabelChanged) <br /> - Microsoft 365 uygulamaları (SensitivityLabelUpdated)|
+|Sitede duyarlılık etiketi değiştirildi|SensitivityLabelChanged|bir SharePoint veya Teams sitesine farklı bir duyarlılık etiketi uygulandı.|
+|Dosyadan duyarlılık etiketi kaldırıldı|FileSensitivityLabelRemoved|Microsoft 365 uygulamaları, Web üzerinde Office, otomatik etiketleme ilkesi veya [Unlock-SPOSensitivityLabelEncryptedFile](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedFile) cmdlet'i kullanılarak belgeden duyarlılık etiketi kaldırıldı.|
 ||||
 
 ### <a name="retention-policy-and-retention-label-activities"></a>Bekletme ilkesi ve bekletme etiketi etkinlikleri
 
-Aşağıdaki tabloda, oluşturulan, [yeniden yapılandırılan](retention.md) veya silinen bekletme ilkeleri ve bekletme etiketlerine yönelik yapılandırma etkinlikleri açıklandı.
+Aşağıdaki tabloda [, bekletme ilkeleri ve bekletme etiketleri](retention.md) oluşturulduğunda, yeniden yapılandırıldığında veya silindiğinde yapılandırmasını açıklar.
 
-|Kolay ad|Operation|Açıklama|
+|Kolay ad|Işlem|Açıklama|
 |:-----|:-----|:-----|
-| Uyarlanabilir kapsam üyeliği değiştirildi |ApplicableAdaptiveScopeChange |Kullanıcılar, siteler veya gruplar uyarlanabilir kapsama eklenmiştir veya bu kapsamdan kaldırılmıştır. Bu değişiklikler, kapsamın sorgusunu çalıştırmanın sonuçlarıdır. Değişiklikler sistem tarafından başlatıldıklarından, bildirilen kullanıcı kullanıcı hesabı yerine GUID olarak görüntülenir.|
-| Bekletme ilkesi için yapılandırılmış ayarlar |NewRetentionComplianceRule |Yönetici, yeni bir bekletme ilkesi için bekletme ayarlarını yapılandırdı. Bekletme ayarları, öğelerin ne kadar korunacaklarını ve bekletme süresi dolduğunda öğelere ne olacağını (öğeleri silme, öğeleri tutma veya saklama ve sonra da silme gibi) içerir. Bu etkinlik, [New-RetentionComplianceRule cmdlet'ini çalıştırmaya](/powershell/module/exchange/new-retentioncompliancerule) da karşılık gelir.|
-| Uyarlanabilir kapsam oluşturuldu |NewAdaptiveScope |Yönetici uyarlanabilir bir kapsam oluşturdu.|
+| Uyarlamalı kapsam üyeliği değiştirildi |ApplicableAdaptiveScopeChange |Kullanıcılar, siteler veya gruplar uyarlamalı kapsama eklendi veya bu kapsamdan kaldırıldı. Bu değişiklikler, kapsamın sorgusunu çalıştırmanın sonuçlarıdır. Değişiklikler sistem tarafından başlatıldığından, bildirilen kullanıcı kullanıcı hesabı yerine GUID olarak görüntülenir.|
+| Bekletme ilkesi için yapılandırılmış ayarlar |NewRetentionComplianceRule |Yönetici, yeni bir bekletme ilkesi için bekletme ayarlarını yapılandırdı. Bekletme ayarları, öğelerin ne kadar süreyle tutulacaklarını ve bekletme süresi dolduğunda öğelere ne olacağını (öğeleri silme, öğeleri saklama veya saklama ve sonra silme gibi) içerir. Bu etkinlik, [New-RetentionComplianceRule](/powershell/module/exchange/new-retentioncompliancerule) cmdlet'ini çalıştırmaya da karşılık gelir.|
+| Uyarlamalı kapsam oluşturuldu |NewAdaptiveScope |Yönetici uyarlamalı bir kapsam oluşturdu.|
 | Bekletme etiketi oluşturuldu |NewComplianceTag |Yönetici yeni bir bekletme etiketi oluşturdu.|
 | Bekletme ilkesi oluşturuldu |NewRetentionCompliancePolicy|Yönetici yeni bir bekletme ilkesi oluşturdu.|
-| Silinmiş uyarlanabilir kapsam | RemoveAdaptiveScope| Yönetici uyarlanabilir kapsamı sildi.|
-| Bekletme ilkesinden silinen ayarlar| RemoveRetentionComplianceRule<br/>| Yönetici, bekletme ilkesi yapılandırma ayarlarını sildi. Yönetici bir bekletme ilkesi silebilir veya [Remove-RetentionComplianceRule](/powershell/module/exchange/Remove-RetentionComplianceRule) cmdlet'ini çalıştırıyorsa, büyük olasılıkla bu etkinlik günlüğe kaydedilir.|
-| Silinmiş bekletme etiketi |RemoveComplianceTag | Yönetici bir bekletme etiketini sildi.|
-| Silinmiş bekletme ilkesi |RemoveRetentionCompliancePolicy<br/> |Yönetici bir bekletme ilkesi sildi. |
-| Bekletme etiketleri için mevzuat kaydı seçeneği etkinleştirildi<br/> |SetRestrictiveRetentionUI |Yönetici, [Set-RegulatoryComplianceUI](/powershell/module/exchange/set-regulatorycomplianceui) cmdlet'ini son olarak, bir yöneticinin bekletme etiketi için kullanıcı arabirimi yapılandırma seçeneğini seçerek içeriği yasal düzenleme kaydı olarak işaretlemesi için kullandı.|
-| Güncelleştirilmiş uyarlanabilir kapsam | SetAdaptiveScope | Yönetici, var olan bir uyarlanabilir kapsam için açıklamayı veya sorguyu değiştirdi. |
-| Bekletme ilkesi için güncelleştirilmiş ayarlar | SetRetentionComplianceRule | Yönetici, var olan bir bekletme ilkesi için bekletme ayarlarını değiştirmiştir. Bekletme ayarları, öğelerin ne kadar korunacaklarını ve bekletme süresi dolduğunda öğelere ne olacağını (öğeleri silme, öğeleri tutma veya saklama ve sonra da silme gibi) içerir. Bu etkinlik, [Set-RetentionComplianceRule cmdlet'ini çalıştırmaya](/powershell/module/exchange/set-retentioncompliancerule) da karşılık gelir. |
-| Güncelleştirilmiş bekletme etiketi |SetComplianceTag  | Yönetici, var olan bir bekletme etiketini güncellemiştir.|
-| Güncelleştirilmiş bekletme ilkesi |SetRetentionCompliancePolicy |Yönetici var olan bir bekletme ilkesi güncellemiştir. Bu olayı tetikleyen güncelleştirmeler, bekletme ilkesine uygulanan içerik konumlarını eklemeyi veya hariç tutmayı içerir.|
+| Uyarlamalı kapsam silindi | RemoveAdaptiveScope| Yönetici uyarlamalı bir kapsamı sildi.|
+| Bekletme ilkesinden silinen ayarlar| RemoveRetentionComplianceRule<br/>| Yönetici bir bekletme ilkesinin yapılandırma ayarlarını sildi. Büyük olasılıkla, bir yönetici bir bekletme ilkesini sildiğinde veya [Remove-RetentionComplianceRule](/powershell/module/exchange/Remove-RetentionComplianceRule) cmdlet'ini çalıştırdığında bu etkinlik günlüğe kaydedilir.|
+| Silinen bekletme etiketi |RemoveComplianceTag | Yönetici bir bekletme etiketini sildi.|
+| Bekletme ilkesi silindi |RemoveRetentionCompliancePolicy<br/> |Yönetici bir bekletme ilkesini sildi. |
+| Bekletme etiketleri için düzenleme kaydı seçeneği etkinleştirildi<br/> |SetRestrictiveRetentionUI |Yönetici [Set-RegulatoryComplianceUI](/powershell/module/exchange/set-regulatorycomplianceui) cmdlet'ini çalıştırarak bir yöneticinin içeriği düzenleyici kayıt olarak işaretlemek üzere bekletme etiketi için kullanıcı arabirimi yapılandırma seçeneğini belirleyebilmesini sağlar.|
+| Uyarlamalı kapsam güncelleştirildi | SetAdaptiveScope | Yönetici, mevcut uyarlamalı kapsamın açıklamasını veya sorgusunu değiştirdi. |
+| Bekletme ilkesi için güncelleştirilmiş ayarlar | SetRetentionComplianceRule | Yönetici, mevcut bir bekletme ilkesinin bekletme ayarlarını değiştirdi. Bekletme ayarları, öğelerin ne kadar süreyle tutulacaklarını ve bekletme süresi dolduğunda öğelere ne olacağını (öğeleri silme, öğeleri saklama veya saklama ve sonra silme gibi) içerir. Bu etkinlik, [Set-RetentionComplianceRule](/powershell/module/exchange/set-retentioncompliancerule) cmdlet'ini çalıştırmaya da karşılık gelir. |
+| Bekletme etiketi güncelleştirildi |SetComplianceTag  | Yönetici mevcut bir bekletme etiketini güncelleştirdi.|
+| Bekletme ilkesi güncelleştirildi |SetRetentionCompliancePolicy |Yönetici mevcut bir bekletme ilkesini güncelleştirdi. Bu olayı tetikleyen güncelleştirmeler, bekletme ilkesinin uygulandığı içerik konumlarını eklemeyi veya dışlamayı içerir.|
 ||||
 
-### <a name="briefing-email-activities"></a>E-posta etkinliklerini brifing
+### <a name="briefing-email-activities"></a>E-posta etkinliklerini bilgilendirme
 
-Aşağıdaki tabloda, Brifing e-postası içinde yer alan ve denetim günlüğüne Microsoft 365 liste vardır. Brifing e-postası hakkında daha fazla bilgi için bkz:
+Aşağıdaki tabloda, Microsoft 365 denetim günlüğüne kaydedilen Brifing e-postası etkinlikleri listelenir. Brifing e-postası hakkında daha fazla bilgi için bkz:
 
-- [Brifing e-postası'ne genel bakış](/Briefing/be-overview)
+- [Brifing e-postaya genel bakış](/Briefing/be-overview)
 
-- [Brifing e-postası yapılandırma](/Briefing/be-admin)
+- [Brifing e-postasını yapılandırma](/Briefing/be-admin)
 
-|**Kolay ad**|**Operation**|**Açıklama**|
+|**Kolay ad**|**Işlem**|**Açıklama**|
 |:----|:-----|:-----|
-|Güncelleştirilmiş kuruluş gizlilik ayarları|UpdatedOrganizationBriefingSettings|Yönetici, Brifing e-postası için kuruluş gizlilik ayarlarını günceller. |
-|Güncelleştirilmiş kullanıcı gizlilik ayarları|UpdatedUserBriefingSettings|Yönetici, Brifing e-postası için kullanıcı gizlilik ayarlarını günceller.
+|Kuruluş gizlilik ayarları güncelleştirildi|UpdatedOrganizationBriefingSettings|Yönetici, Brifing e-postası için kuruluşun gizlilik ayarlarını güncelleştirir. |
+|Güncelleştirilmiş kullanıcı gizlilik ayarları|UpdatedUserBriefingSettings|Yönetici, Brifing e-postası için kullanıcı gizlilik ayarlarını güncelleştirir.
 ||||
 
 ### <a name="myanalytics-activities"></a>MyAnalytics etkinlikleri
 
-Aşağıdaki tabloda, denetim günlüğüne kaydedilen MyAnalytics etkinlikleri Microsoft 365 listele. MyAnalytics hakkında daha fazla bilgi için bkz. [Yöneticiler için MyAnalytics](/workplace-analytics/myanalytics/overview/mya-for-admins).
+Aşağıdaki tabloda, myAnalytics'teki Microsoft 365 denetim günlüğüne kaydedilen etkinlikler listelenir. MyAnalytics hakkında daha fazla bilgi için bkz. [Yöneticiler için MyAnalytics](/workplace-analytics/myanalytics/overview/mya-for-admins).
 
-|**Kolay ad**|**Operation**|**Açıklama**|
+|**Kolay ad**|**Işlem**|**Açıklama**|
 |:-----|:-----|:-----|
-|Güncelleştirilmiş kuruluş MyAnalytics ayarları|UpdatedOrganizationMyAnalyticsSettings|Yönetici MyAnalytics için kuruluş düzeyinde ayarları günceller. |
-|Güncelleştirilmiş kullanıcı MyAnalytics ayarları|UpdatedUserMyAnalyticsSettings|Yönetici MyAnalytics için kullanıcı ayarlarını günceller.|
+|Kuruluş MyAnalytics ayarları güncelleştirildi|UpdatedOrganizationMyAnalyticsSettings|Yönetici, MyAnalytics için kuruluş düzeyi ayarlarını güncelleştirir. |
+|Kullanıcı MyAnalytics ayarları güncelleştirildi|UpdatedUserMyAnalyticsSettings|Yönetici, MyAnalytics için kullanıcı ayarlarını güncelleştirir.|
 ||||
 
 ### <a name="information-barriers-activities"></a>Bilgi engelleri etkinlikleri
 
-Aşağıdaki tabloda, denetim günlüğüne kaydedilen bilgi engellerinin etkinlikleri Microsoft 365. Bilgi engelleri hakkında daha fazla bilgi için bkz. Engelin ortadan [kaldıran bilgi Microsoft 365](information-barriers.md).
+Aşağıdaki tabloda, Microsoft 365 denetim günlüğüne kaydedilen bilgi engellerindeki etkinlikler listelenir. Bilgi engelleri hakkında daha fazla bilgi için bkz. [Microsoft 365 bilgi engelleri hakkında bilgi edinin](information-barriers.md).
 
-|**Kolay ad**|**Operation**|**Açıklama**|
+|**Kolay ad**|**Işlem**|**Açıklama**|
 |:----------------|:------------|:--------------|
-| Siteye kesimler eklendi | SegmentsAdded | Bir SharePoint yöneticisi, genel yönetici veya site sahibi site için bir veya birden çok bilgi engeli ekledi. |
-| Sitenin kesimleri değiştirildi | SegmentsChanged | Bir SharePoint yöneticisi veya genel yönetici sitenin bir veya daha fazla bilgi kesiminin kesimlerini değiştirmiştir. |
-| Siteden kesimler kaldırıldı | SegmentsRemoved | Bir SharePoint yöneticisi veya genel yönetici sitenin bir veya daha fazla bilgi engelini kaldırılmıştır. |
+| Siteye segmentler eklendi | SegmentlerEkli | bir SharePoint, genel yönetici veya site sahibi siteye bir veya daha fazla bilgi engeli ekledi. |
+| Sitenin segmentleri değiştirildi | SegmentlerDeğiştirildi | SharePoint veya genel yönetici, sitenin bir veya daha fazla bilgi engelini değiştirdi. |
+| Bir siteden segmentler kaldırıldı | SegmentlerRemoved | SharePoint veya genel yönetici, siteden bir veya daha fazla bilgi engeli segmentini kaldırdı. |
 ||||
 
-### <a name="disposition-review-activities"></a>Disposition review activities
+### <a name="disposition-review-activities"></a>Gözden geçirme etkinliklerini değerlendirme
 
-Aşağıdaki tabloda, bir öğe yapılandırılmış bekletme döneminin sonuna geldiğinde gözden geçirenin edatını inceleyen etkinlikleri listelemektedir. Daha fazla bilgi için bkz [. İçeriği görüntüleme ve görüntüleme](disposition.md#viewing-and-disposing-of-content).
+Aşağıdaki tabloda, bir öğe yapılandırılan saklama süresinin sonuna ulaştığında gözden geçirenin yaptığı etkinlikler listelenir. Daha fazla bilgi için bkz [. İçeriği görüntüleme ve yok etme](disposition.md#viewing-and-disposing-of-content).
 
-|**Kolay ad**|**Operation**|**Açıklama**|
+|**Kolay ad**|**Işlem**|**Açıklama**|
 |:-----|:-----|:-----|
-|Onayın onayı|OnaylamaSeski|Disposition gözden geçiren biri, öğeyi bir sonraki konumlandırma aşamasına taşımak için öğenin yok olduğunu onaylar. Öğe, disposition gözden geçirmenin tek veya son aşamasında ise, disposition onayı öğeyi kalıcı silme için uygun olarak işaretledi.|
-|Uzatılmış bekletme süresi|ExtendRetention|Disposition gözden geçiren öğenin bekletme süresi uzatıldı.|
-|Yeniden etiketli öğe|RelabelItem|A disposition reviewer relabeled the retention label.|
-|Gözden geçirenler eklendi|AddReviewer|Bir disposition gözden geçiren geçerli disposition gözden geçirme aşamasına bir veya daha fazla kullanıcı ekledi.|
+|Onaylanan elden çıkarma|ApproveDisposal|Bir değerlendirme gözden geçireni, öğenin bir sonraki değerlendirme aşamasına taşımak için elden geçirmesini onayladı. Öğe, değerlendirme gözden geçirmesinin tek veya son aşamasındaysa, değerlendirme onayı öğeyi kalıcı silme için uygun olarak işaretledi.|
+|Genişletilmiş saklama süresi|ExtendRetention|Değerlendirme gözden geçiren, öğenin saklama süresini uzattı.|
+|Yeniden etiketlenmiş öğe|RelabelItem|Bir değerlendirme gözden geçireni bekletme etiketini yeniden etiketledi.|
+|Gözden geçirenler eklendi|AddReviewer|Bir değerlendirme gözden geçireni, geçerli değerlendirme gözden geçirme aşamasına bir veya daha fazla kullanıcı ekledi.|
 ||||
 
-### <a name="communication-compliance-activities"></a>İletişim uyumluluğu etkinlikleri
+### <a name="communication-compliance-activities"></a>İletişim uyumluluk etkinlikleri
 
-Aşağıdaki tabloda, denetim günlüğüne kaydedilen iletişim uyumluluk Microsoft 365 listele. Daha fazla bilgi için bkz[. Web'de iletişim Microsoft 365](communication-compliance.md).
+Aşağıdaki tabloda, Microsoft 365 denetim günlüğüne kaydedilen iletişim uyumluluk etkinlikleri listelenir. Daha fazla bilgi için bkz. [Microsoft 365'de iletişim uyumluluğu hakkında bilgi edinin](communication-compliance.md).
 
-|**Kolay ad**|**Operation**|**Açıklama**|
+|**Kolay ad**|**Işlem**|**Açıklama**|
 |:-----|:-----|:-----|
-|İlke güncelleştirmesi|SupervisionPolicyCreated, VeliSaatPolicyUpdated, VeliSaat|İletişim uyumluluk yöneticisi bir ilke güncelleştirmesi gerçekleştirdi.|
-|İlke eşleşmesi|UzleMatch|Kullanıcı bir ilkenin koşuluna eşleşen bir ileti gönderdi.|
-|İletilere uygulanan etiket|SupervisoryReviewTag|Etiketler iletilere veya iletilere uygulanır; çözülür.|
+|İlke güncelleştirmesi|SupervisionPolicyCreated, SupervisionPolicyUpdated, SupervisionPolicyDeleted|İletişim uyumluluk yöneticisi bir ilke güncelleştirmesi gerçekleştirmiştir.|
+|İlke eşleşmesi|SupervisionRuleMatch|Kullanıcı bir ilkenin koşuluyla eşleşen bir ileti gönderdi.|
+|İletilere uygulanan etiket|SupervisoryReviewTag|etiketler iletilere uygulanır veya iletiler çözümlenir.|
 ||||
 
-### <a name="report-activities"></a>Etkinlikleri bildirme
+### <a name="report-activities"></a>Rapor etkinlikleri
 
-Aşağıdaki tabloda, denetim günlüğüne kaydedilen kullanım raporlarına Microsoft 365 listele.
+Aşağıdaki tabloda, Microsoft 365 denetim günlüğüne kaydedilen kullanım raporlarına yönelik etkinlikler listelenir.
 
-|**Kolay ad**|**Operation**|**Açıklama**|
+|**Kolay ad**|**Işlem**|**Açıklama**|
 |:-----|:-----|:-----|
-|Güncelleştirilmiş kullanım raporu gizlilik ayarları|UpdateUsageReportsPrivacySetting|Yönetici tarafından kullanım raporları için gizlilik ayarları güncelleştirildi. |
+|Kullanım raporu gizlilik ayarları güncelleştirildi|UpdateUsageReportsPrivacySetting|Yönetici kullanım raporları için gizlilik ayarlarını güncelleştirdi. |
 ||||
 
-### <a name="exchange-admin-audit-log"></a>Exchange denetim günlüğü
+### <a name="exchange-admin-audit-log"></a>yönetici denetim günlüğünü Exchange
 
-Exchange yöneticisi denetim günlüğü (Microsoft 365'ta varsayılan olarak etkindir) yönetici (veya yönetim izinleri atanmış bir kullanıcı) Exchange Online kuruluşunda bir değişiklik yaptıktan sonra denetim günlüğünde bir olayı günlüğe kaydeder. Exchange yönetim merkezi kullanılarak veya Exchange Online'de cmdlet çalıştırarak yapılan değişiklikler, Exchange yönetici denetim günlüğüne kaydedilir. **Get-**, **Search** veya **Test** fiilleriyle başlayan cmdlet'ler denetim günlüğüne kaydedilmez. Oturum açmada yönetici denetim günlüğüyle ilgili daha ayrıntılı Exchange için bkz. [Yönetici denetim günlüğü](/exchange/administrator-audit-logging-exchange-2013-help).
+Exchange yönetici denetim günlüğü (Microsoft 365 varsayılan olarak etkindir) bir yönetici (veya yönetici izinleri atanmış bir kullanıcı) Exchange Online kuruluşunuzda değişiklik yaptığında denetim günlüğüne bir olay kaydeder. Exchange yönetim merkezi kullanılarak veya Exchange Online PowerShell'de bir cmdlet çalıştırılarak yapılan değişiklikler Exchange yönetici denetim günlüğüne kaydedilir. **Get-**, **Search** veya **Test** fiilleriyle başlayan cmdlet'ler denetim günlüğüne kaydedilmez. Exchange yönetici denetim günlüğü hakkında daha ayrıntılı bilgi için bkz. [Yönetici denetim günlüğü](/exchange/administrator-audit-logging-exchange-2013-help).
 
 > [!IMPORTANT]
-> Yönetici Exchange Online günlüğüne (veya denetim günlüğüne) oturum Exchange bazı yeni cmdlet'ler vardır. Bu cmdlet'lerin birçoğu müşteri hizmetleriyle Exchange Online ve Microsoft veri merkezi personeli veya hizmet hesapları tarafından çalıştırıldı. Bu cmdlet'ler, çok sayıda "gürültülü" denetim olaylarının ortaya çıkarılamay olduğundan günlüğe kaydedilmez. Denetlenen bir Exchange Online cmdlet'i varsa, lütfen Microsoft Desteği'ne bir tasarım değişikliği isteği (DCR) gönderin.
+> Exchange yönetici denetim günlüğüne (veya denetim günlüğüne) kaydedilmemiş bazı Exchange Online cmdlet'leri. Bu cmdlet'lerin çoğu Exchange Online hizmetinin bakımıyla ilgilidir ve Microsoft veri merkezi personeli veya hizmet hesapları tarafından çalıştırılır. Bu cmdlet'ler çok sayıda "gürültülü" denetim olayına neden olacağından günlüğe kaydedilmez. Denetlenmeyen bir Exchange Online cmdlet'i varsa, lütfen Microsoft Desteği bir tasarım değişikliği isteği (DCR) gönderin.
 
-Burada, denetim günlüğünde arama Exchange yönetici etkinliklerini aramak için bazı ipuçları ve almaktadırsınız:
+Denetim günlüğünde arama yaparken Exchange yönetici etkinliklerini aramak için bazı ipuçları şunlardır:
 
-- Yönetici denetim günlüğünden girdilerin Exchange için, Etkinlikler listesinde Tüm etkinlikler için sonuçları  **göster'i seçmeniz** gerekir. Arama sonuçlarını, Exchange belirli bir tarih  aralığında belirli bir tarih aralığında belirli bir yönetici tarafından çalıştıracak şekilde daraltmak için, tarih aralığı kutularını ve Kullanıcılar listesini kullanın.
+- Exchange yönetici denetim günlüğündeki girdileri döndürmek için **Etkinlikler** listesindeki **Tüm etkinlikler için sonuçları göster'i** seçmeniz gerekir. Belirli bir tarih aralığında belirli bir Exchange yöneticisi tarafından çalıştırılan cmdlet'lerin arama sonuçlarını daraltmak için tarih aralığı kutularını ve **Kullanıcılar** listesini kullanın.
 
-- Yönetici denetim günlüğünden olayları Exchange için, Etkinlik sütununa tıklar ve  cmdlet adlarını alfabetik düzende sıralar.
+- Exchange yönetici denetim günlüğündeki olayları görüntülemek için, cmdlet adlarını alfabetik sırada sıralamak için **Etkinlik** sütununa tıklayın.
 
-- Hangi cmdlet'in çalıştırıldısı, hangi parametrelerin ve parametre değerlerinin kullanılmış olduğu ve hangi nesnelerin etkilendiği hakkında bilgi almak için Tüm sonuçları indir seçeneğini belirterek arama **sonuçlarını dışarı aktarabilirsiniz** . Daha fazla bilgi için bkz [. Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
+- Hangi cmdlet'in çalıştırıldığı, hangi parametrelerin ve parametre değerlerinin kullanıldığı ve hangi nesnelerin etkilendiği hakkında bilgi almak için **Tüm sonuçları indir** seçeneğini belirleyerek arama sonuçlarını dışarı aktarabilirsiniz. Daha fazla bilgi için bkz. [Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md).
 
-- Ayrıca, Exchange Online `Search-UnifiedAuditLog -RecordType ExchangeAdmin` PowerShell'de bu komutu kullanarak yalnızca yönetici denetim günlüğünden Exchange getirebilirsiniz. Arama sonuçlarında ilgili denetim günlüğü girdisi için bir Exchange cmdlet'i çalıştırıldıktan sonra 30 dakika kadar sürebilir. Daha fazla bilgi için bkz. [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog). **Search-UnifiedAuditLog** cmdlet'i tarafından döndürülen arama sonuçlarını bir CSV dosyasına aktarma hakkında bilgi için, Denetim günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme konusunda yer alan "İpuçları denetim günlüğünü dışarı aktarma ve görüntüleme" bölümüne [bakın](export-view-audit-log-records.md#tips-for-exporting-and-viewing-the-audit-log).
+- Exchange yönetici denetim günlüğünden yalnızca denetim kayıtlarını döndürmek için PowerShell'Exchange Online komutunu da kullanabilirsiniz`Search-UnifiedAuditLog -RecordType ExchangeAdmin`. İlgili denetim günlüğü girişinin arama sonuçlarında döndürülürken bir Exchange cmdlet'inin çalıştırılması 30 dakika kadar sürebilir. Daha fazla bilgi için bkz [. Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog). **Search-UnifiedAuditLog** cmdlet'i tarafından döndürülen arama sonuçlarını csv dosyasına dışarı aktarma hakkında bilgi için, Denetim [günlüğü kayıtlarını dışarı aktarma, yapılandırma ve görüntüleme](export-view-audit-log-records.md#tips-for-exporting-and-viewing-the-audit-log) bölümündeki "Denetim günlüğünü dışarı aktarma ve görüntüleme İpuçları" bölümüne bakın.
 
-- Ayrıca, Exchange Exchange yönetim merkezini kullanarak veya Exchange Online PowerShell'de **Search-AdminAuditLog'u** çalıştırarak da Exchange Online görüntüabilirsiniz. Bu, özellikle yöneticiler tarafından gerçekleştirilen etkinlikleri aramak için iyi bir Exchange Online olur. Yönergeler için bkz:
+- Ayrıca, Exchange yönetim merkezini kullanarak veya Exchange Online PowerShell'de **Search-AdminAuditLog** komutunu çalıştırarak olayları Exchange yönetici denetim günlüğünde görüntüleyebilirsiniz. Bu, Exchange Online yöneticileri tarafından gerçekleştirilen etkinliği özel olarak aramanın iyi bir yoludur. Yönergeler için bkz:
 
   - [Yönetici denetim günlüğünü görüntüleme](/exchange/security-and-compliance/exchange-auditing-reports/view-administrator-audit-log)
 
   - [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog)
 
-   Aynı yönetici etkinliklerinin aynı Exchange hem yönetici denetim günlüğüne hem de denetim Exchange günlüğe kaydedileceğini unutmayın.
+   Aynı Exchange yönetici etkinliklerinin hem Exchange yönetici denetim günlüğüne hem de denetim günlüğüne kaydedildiğini unutmayın.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
-**Şu anda Microsoft 365 olan hizmetler arasında ne fark vardır?**
+**Şu anda denetlenen farklı Microsoft 365 hizmetleri nelerdir?**
 
-Exchange Online, SharePoint Online, OneDrive İş, Azure Active Directory, Microsoft Teams, Dynamics 365, Office 365 için Defender gibi en çok kullanılan hizmetler ve Power BI denetime alındı. Denetlenen [hizmetlerin listesi için](search-the-audit-log-in-security-and-compliance.md) bu makalenin başına bakın.
+Exchange Online, SharePoint Online, OneDrive İş, Azure Active Directory, Microsoft Teams, Dynamics 365, Office 365 için Defender, ve Power BI denetleniyor. Denetlenen hizmetlerin listesi için [bu makalenin başlangıcına](search-the-audit-log-in-security-and-compliance.md) bakın.
 
-**Microsoft 365'te denetim hizmeti tarafından hangi etkinlikler Microsoft 365?**
+**Microsoft 365'da hangi etkinlikler denetim hizmeti tarafından denetlenir?**
 
-Denetlenen [etkinliklerin listesi](#audited-activities) ve açıklaması için bu makaledeki Denetlenen etkinlikler bölümüne bakın.
+[Denetlenen etkinliklerin](#audited-activities) listesi ve açıklaması için bu makaledeki Denetlenen etkinlikler bölümüne bakın.
 
-**Denetim kaydının bir olay gerçekleştikten sonra kullanılabilir olması ne kadar zaman alır?**
+**Bir olay gerçekleştikten sonra denetim kaydının kullanılabilir olması ne kadar sürer?**
 
-Çoğu denetim verisi 30 dakika içinde kullanılabilir ancak ilgili denetim günlüğü girişinin arama sonuçlarında görüntülensi için bir olayın gerçekleşmesi 24 saat kadar sürebilir. Farklı hizmetlerde yer [alan olayların](#before-you-search-the-audit-log) ne kadar süreyle kullanılabilir olacağını gösteren, bu makalenin Denetim günlüğünde aramadan önce bölümündeki tabloya bakın.
+Denetim verilerinin çoğu 30 dakika içinde kullanılabilir ancak ilgili denetim günlüğü girişinin arama sonuçlarında görüntülenmesi bir olay gerçekleştikten sonra 24 saat kadar sürebilir. Bu makalenin [Denetim günlüğünde arama yapmadan önce](#before-you-search-the-audit-log) bölümünde yer alan ve farklı hizmetlerdeki olayların kullanılabilir olması için gereken süreyi gösteren tabloya bakın.
 
-**Denetim kayıtları ne kadar süreyle korunur?**
+**Denetim kayıtları ne kadar süreyle saklanır?**
 
-Daha önce de belirtildiği gibi, microsoft e5 lisansı atanmış kullanıcılar (Office 365 E5 veya Microsoft 365 E5 eklenti lisansına sahip kullanıcılar) tarafından gerçekleştirilen etkinlikler için denetim kayıtları bir yıl süreyle korunur. Birleşik denetim günlüğünü destekleyen diğer tüm aboneliklerde, denetim kayıtları 90 gün boyunca korunur.
+Daha önce açıklandığı gibi, Office 365 E5 veya Microsoft E5 lisansına (veya Microsoft 365 E5 eklenti lisansına sahip kullanıcılara) atanan kullanıcılar tarafından gerçekleştirilen etkinliklerin denetim kayıtları bir yıl boyunca saklanır. Birleşik denetim günlüğünü destekleyen diğer tüm abonelikler için denetim kayıtları 90 gün boyunca saklanır.
 
-**Denetim verilerine programatik olarak erişebilir miyim?**
+**Denetim verilerine program aracılığıyla erişebilir miyim?**
 
-Evet. Denetim Office 365 api'si, denetim günlüklerini programatik olarak getirmek için kullanılır.  Çalışmaya başlama için bkz[. Yönetim API'lerini Office 365 başlama](/office/office-365-management-api/get-started-with-office-365-management-apis).
+Evet. Office 365 Yönetim Etkinliği API'si, denetim günlüklerini program aracılığıyla getirmek için kullanılır.  Başlamak için bkz. [Office 365 Yönetim API'leriyle Kullanmaya başlayın](/office/office-365-management-api/get-started-with-office-365-management-apis).
 
-**Güvenlik ve uyumluluk merkezini veya Office 365 Yönetim Etkinliği API'sini kullanma dışında denetim günlükleri Office 365 var mı?**
+**Güvenlik ve uyumluluk merkezini veya Office 365 Yönetim Etkinliği API'sini kullanmak dışında denetim günlüklerini almanın başka yolları var mı?**
 
-Hayır. Denetim hizmetlerinden veri almak için tek yol bunlardır.
+Hayır. Denetim hizmetinden veri almanın tek iki yolu bunlardır.
 
-**Denetim günlüklerini yakalamak istediğim her hizmette denetimi tek tek etkinleştirmem gerekir mi?**
+**Denetim günlüklerini yakalamak istediğim her hizmette denetimi tek tek etkinleştirmem gerekiyor mu?**
 
-Hizmetlerin çoğunda, siz başlangıçta organizasyonunız için denetimi etkinleştirdikten sonra denetim varsayılan olarak etkinleştirilir (bu makaledeki Denetim günlüğünde aramadan [](#before-you-search-the-audit-log) önce bölümünde açıklanmıştır).
+Çoğu hizmette, kuruluşunuz için denetimi ilk kez açtıktan sonra denetim varsayılan olarak etkinleştirilir (bu [makalenin Denetim günlüğünde arama yapmadan önce](#before-you-search-the-audit-log) bölümünde açıklandığı gibi).
 
-**Denetim hizmeti kayıtların yeniden çoğaltılmasında destek var mı?**
+**Denetim hizmeti kayıtların yinelenenleri kaldırmayı destekliyor mu?**
 
-Hayır. Denetim hizmeti pipeline is near real time, and therefore can't support de-duplication.
+Hayır. Denetim hizmeti işlem hattı neredeyse gerçek zamanlıdır ve bu nedenle yinelenenleri kaldırmayı destekleyemez.
 
 **Denetim verileri nerede depolanır?**
 
-Şu anda NA (Kuzey Amerika), EMEA (Avrupa, Orta Doğu ve Afrika) ve APAC (Asya Pasifik) bölgelerinde potansiyel dağıtımları denetlemektedir. Bu bölgelerde yer alan kiracıların denetim verileri bu bölgede depolanır. Çok coğrafi kiracılı kiracılarda, kiracının tüm bölgelerinden toplanan denetim verileri yalnızca kiracının giriş bölgesinde depolanır. Bununla birlikte, verileri yük dengeleme için ve yalnızca canlı site sorunları sırasında bu bölgeler arasında akışla akariz. Bu etkinlikleri gerçekleştir verileri gerçekleştirdir, iletilim verileri şifrelenir. 
+Şu anda NA (Kuzey Amerika), EMEA (Avrupa, Orta Doğu ve Afrika) ve APAC (Asya Pasifik) bölgelerinde denetim işlem hattı dağıtımlarımız var. Bu bölgelerde barındırılan kiracıların denetim verileri bölgede depolanır. Çok coğrafi kiracılı kiracılar için, kiracının tüm bölgelerinden toplanan denetim verileri yalnızca kiracının ana bölgesinde depolanır. Ancak, verileri yük dengeleme için ve yalnızca canlı site sorunları sırasında bu bölgelere akabiliriz. Bu etkinlikleri gerçekleştirdiğimizde aktarımdaki veriler şifrelenir. 
 
-**Verileri denetleme şifrelenmiş mi?**
+**Denetim verileri şifrelenir mi?**
 
-Denetim verileri, birleşik denetim Exchange dağıtıldığında aynı bölgede yer alan posta kutularında (saklanan veriler) depolanır. Posta kutusu verileri, posta kutusu tarafından şifrelenmez Exchange. Bununla birlikte, Microsoft veri merkezlerindeki veri sunucularının sayısı BitLocker Exchange, hizmet düzeyinde şifreleme tüm posta kutusu verilerini şifreler. Daha fazla bilgi için bkz[. Microsoft 365 Encryption for Skype Kurumsal, OneDrive İş, SharePoint Online, and Exchange Online](/compliance/assurance/assurance-encryption-for-microsoft-365-services).
+Denetim verileri, birleşik denetim işlem hattının dağıtıldığı bölgedeki Exchange posta kutularında (bekleyen veriler) depolanır. Bekleyen posta kutusu verileri Exchange tarafından şifrelenmez. Ancak Microsoft veri merkezlerindeki Exchange sunucular BitLocker aracılığıyla şifrelenmediğinden hizmet düzeyinde şifreleme tüm posta kutusu verilerini şifreler. Daha fazla bilgi için bkz[. Skype Kurumsal, OneDrive İş, SharePoint Online ve Exchange Online için Microsoft 365 Şifreleme](/compliance/assurance/assurance-encryption-for-microsoft-365-services).
 
-Geçişte olan posta verileri her zaman şifrelenir.
+Aktarımdaki posta verileri her zaman şifrelenir.

@@ -1,5 +1,5 @@
 ---
-title: Configuration Manager Windows 10 11 Windows cihaz ekleme ve kullanma
+title: Configuration Manager kullanarak Windows 10 ve Windows 11 cihazları ekleme
 f1.keywords: NOCSH
 ms.author: chrfox
 author: chrfox
@@ -14,85 +14,90 @@ ms.collection:
 ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
-description: Yapılandırma paketini hizmete dahil etmek üzere cihazlara dağıtmak için Configuration Manager'i kullanın.
-ms.openlocfilehash: 9f9edc9543a446f98622ff80d8cceec406a2658a
-ms.sourcegitcommit: 8eca41cd21280ffcb1f50cafce7a934e5544f302
+description: Yapılandırma paketini hizmete eklenmeleri için cihazlara dağıtmak için Configuration Manager kullanın.
+ms.openlocfilehash: 2cca9cc073ca08c7fabb19511a4253e4a682057a
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "62999582"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64760723"
 ---
-# <a name="onboard-windows-10-and-windows-11-devices-using-configuration-manager"></a>Configuration Manager Windows 10 11 Windows cihaz ekleme ve kullanma
+# <a name="onboard-windows-10-and-windows-11-devices-using-configuration-manager"></a>Configuration Manager kullanarak Windows 10 ve Windows 11 cihazları ekleme
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
 - [Microsoft 365 Uç nokta veri kaybı önleme (DLP)](./endpoint-dlp-learn-about.md)
-- [Insider risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
+- [İçeriden risk yönetimi](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
 
-### <a name="onboard-devices-using-system-center-configuration-manager"></a>System Center Configuration Manager kullanarak cihazları System Center Configuration Manager
+### <a name="onboard-devices-using-system-center-configuration-manager"></a>System Center Configuration Manager kullanarak cihazları ekleme
 
-1. Microsoft Uyumluluk Merkezi'.zip (*DeviceComplianceOnboardingPackage.zip*) [yapılandırma paketini edin.](https://compliance.microsoft.com/)
+1. [Microsoft Uyumluluk merkezinden](https://compliance.microsoft.com/) yapılandırma paketini .zip dosyasını (*DeviceComplianceOnboardingPackage.zip*) alın.
 
-2. Gezinti bölmesinde,Device <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank"></a> > **OnboardingOnboarding** >  **Ayarlar'ı seçin**.
+2. Gezinti bölmesinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> >  **Cihaz EklemeOnboarding'i** >  seçin.
 
-3. Dağıtım yöntemi **alanında**, **2012/2012 R2/1511/1602 Microsoft Endpoint Configuration Manager'yi seçin**.
+3. **Dağıtım yöntemi** alanında **Microsoft Endpoint Configuration Manager 2012/2012 R2/1511/1602'yi** seçin.
 
-4. Paketi **indir'i** seçin ve dosyayı .zip kaydedin.
+4. **Paketi indir'i** seçin ve .zip dosyasını kaydedin.
 
-5. .zip dosyasının içeriğini, paketi dağıtacak olan ağ yöneticileri tarafından erişilebilen, paylaşılan, salt okunur bir konuma ayıklar. *DeviceComplianceOnboardingScript.cmd adlı bir dosyanız olmalıdır*.
+5. .zip dosyasının içeriğini, paketi dağıtacak ağ yöneticileri tarafından erişilebilen paylaşılan, salt okunur bir konuma ayıklayın. *DeviceComplianceOnboardingScript.cmd* adlı bir dosyanız olmalıdır.
 
-6. [2012 R2 Configuration Manager'da](/previous-versions/system-center/system-center-2012-R2/gg699369(v=technet.10)) Paketler ve Programlar makalesinde System Center dağıtın.
+6. [System Center 2012 R2 Configuration Manager'deki Paketler ve Programlar makalesindeki](/previous-versions/system-center/system-center-2012-R2/gg699369(v=technet.10)) adımları izleyerek paketi dağıtın.
 
-7. Paketin dağıtımı için önceden tanımlanmış bir cihaz koleksiyonu seçin.
+7. Paketin dağıtılacağı önceden tanımlanmış bir cihaz koleksiyonu seçin.
 
 > [!NOTE]
-> Microsoft 365 koruması, kutuda Olmayan Deneyim [(OOBE) aşamasında eklemeyi desteklemez](https://answers.microsoft.com/en-us/windows/wiki/windows_10/how-to-complete-the-windows-10-out-of-box/47e3f943-f000-45e3-8c5c-9d85a1a0cf87). Kullanıcıların yükleme veya yükseltme sonrasında OOBE'Windows tamamlandığından emin olun.
+> Microsoft 365 bilgi koruması, İlk [Çalıştırma Deneyimi (OOBE)](https://answers.microsoft.com/en-us/windows/wiki/windows_10/how-to-complete-the-windows-10-out-of-box/47e3f943-f000-45e3-8c5c-9d85a1a0cf87) aşamasında ekleme işlemini desteklemez. Windows yükleme veya yükseltmeyi çalıştırdıktan sonra kullanıcıların OOBE'i tamamladığınızdan emin olun.
 
 > [!TIP]
-> Cihazı işe seçtikten sonra, bir cihazın hizmete düzgün bir şekilde yer olduğunu doğrulamak için bir algılama testi çalıştırmayı seçebilirsiniz. Daha fazla bilgi için bkz [. Yeni eklenen Uç nokta cihazı için Microsoft Defender'da algılama testi çalıştırma](/windows/security/threat-protection/microsoft-defender-atp/run-detection-test).
+> Cihazı ekledikten sonra, bir cihazın hizmete düzgün şekilde eklendiğini doğrulamak için bir algılama testi çalıştırmayı seçebilirsiniz. Daha fazla bilgi için bkz. [Yeni eklenen Uç Nokta için Microsoft Defender cihazında algılama testi çalıştırma](/windows/security/threat-protection/microsoft-defender-atp/run-detection-test).
 >
-> Bir cihazın yerleşik olup olduğunu sürekli olarak kontrol etmek için Configuration Manager uygulamasında bir algılama kuralı oluşturanın mümkün olduğunu unutmayın. Uygulama, paket ve programdan farklı türde bir nesnedir.
-> Cihaz henüz eklememişse (bekleyen OOBE tamamlanma nedeniyle veya başka bir nedenle), kural durum değişikliğini algılayana kadar Configuration Manager cihazı eklemeyi yeniden denetir.
+> Bir cihazın eklenip eklenmediğini sürekli denetlemek için bir Configuration Manager uygulamasında algılama kuralı oluşturmanın mümkün olduğunu unutmayın. Uygulama, paket ve programdan farklı bir nesne türüdür.
+> Bir cihaz henüz eklenmiyorsa (bekleyen OOBE tamamlaması veya başka bir nedenden dolayı) Configuration Manager kural durum değişikliğini algılayana kadar cihazı eklemeyi yeniden dener.
 >
-> Bu davranış, "OnboardingState" kayıt defteri değerinin (REG_DWORD türü) = 1 olup REG_DWORD bir kural denetimi oluşturarak gerçek olabilir.
-> Bu kayıt defteri değeri, "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status" altında yer almaktadır.
-Daha fazla bilgi için bkz. [R2 Yapılandırma Yöneticisi'System Center Algılama Yöntemlerini Yapılandırma](/previous-versions/system-center/system-center-2012-R2/gg682159(v=technet.10)#step-4-configure-detection-methods-to-indicate-the-presence-of-the-deployment-type).
+> Bu davranış, "OnboardingState" kayıt defteri değerinin (REG_DWORD türü) = 1 olup olmadığını denetleyerek bir algılama kuralı denetimi oluşturularak gerçekleştirilebilir.
+> Bu kayıt defteri değeri "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status" altında bulunur.
+Daha fazla bilgi için bkz. [System Center 2012 R2 Configuration Manager'de Algılama Yöntemlerini Yapılandırma](/previous-versions/system-center/system-center-2012-R2/gg682159(v=technet.10)#step-4-configure-detection-methods-to-indicate-the-presence-of-the-deployment-type).
 
 ### <a name="configure-sample-collection-settings"></a>Örnek koleksiyon ayarlarını yapılandırma
 
-Her cihaz için, derin çözümleme için bir dosya göndermek için bir istek göndererek, Microsoft Defender Güvenlik Merkezi örneklerin cihazdan toplanabilir olup olmadığını ifade etmek için bir yapılandırma değeri ayarlayın.
+Her cihaz için, ayrıntılı analiz için bir dosya göndermek üzere Microsoft Defender Güvenlik Merkezi aracılığıyla bir istek yapıldığında cihazdan örneklerin toplanıp toplanmayacağını belirtmek için bir yapılandırma değeri ayarlayabilirsiniz.
 
 > [!NOTE]
 > Bu yapılandırma ayarları genellikle Configuration Manager aracılığıyla yapılır.
 
-Bir cihaza örnek paylaşım ayarını değiştirmek için Configuration Manager'da yapılandırma öğesi için bir uyumluluk kuralı değiştirebilirsiniz.
+Bir cihazdaki örnek paylaşım ayarını değiştirmek için Configuration Manager'da yapılandırma öğesi için bir uyumluluk kuralı ayarlayabilirsiniz.
 
-Bu kural, *hedefli cihazlarda kayıt* defteri anahtarının değerini şikayet olduğundan emin olmak için ayaran bir uyumluluk kuralı yapılandırma öğesidir.
+Bu kural, şikayette olduklarından emin olmak için hedeflenen cihazlarda bir kayıt defteri anahtarının değerini ayarlayan *düzeltici* bir uyumluluk kuralı yapılandırma öğesi olmalıdır.
 
 Yapılandırma aşağıdaki kayıt defteri anahtarı girdisi aracılığıyla ayarlanır:
 
-```
-Path: “HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection”
+```text
+Path: "HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection"
 Name: "AllowSampleCollection"
 Value: 0 or 1
 ```
-Burada:<br>
-Anahtar türü bir D-WORD'tür. <br>
-Olası değerler:
-- 0 - Bu cihazdan örnek paylaşıma izin vermiyor
-- 1 - Bu cihazdan tüm dosya türlerinin paylaşımına izin verir
 
-Kayıt defteri anahtarının mevcut olması durumunda varsayılan değer 1'tir.
+Nerede:
 
-Uyumluluk Yönetimi hakkında daha System Center Configuration Manager için bkz. [2012 R2 Configuration Manager'da System Center ayarlarına giriş](/previous-versions/system-center/system-center-2012-R2/gg682139(v=technet.10)).
+Anahtar türü bir D-WORD'dür.
+
+Olası değerler şunlardır:
+
+- 0 - bu cihazdan örnek paylaşımına izin vermez
+- 1 - Bu cihazdan tüm dosya türlerinin paylaşılmasına izin verir
+
+Kayıt defteri anahtarının mevcut olmaması durumunda varsayılan değer 1'dir.
+
+System Center Configuration Manager Uyumluluğu hakkında daha fazla bilgi için bkz. [System Center 2012 R2 Configuration Manager'da uyumluluk ayarlarına giriş](/previous-versions/system-center/system-center-2012-R2/gg682139(v=technet.10)).
 
 
 ## <a name="other-recommended-configuration-settings"></a>Önerilen diğer yapılandırma ayarları
-Cihazları hizmete verdikten sonra, aşağıdaki önerilen yapılandırma ayarlarıyla etkinleştirerek, dahil edilen tehdit koruması yeteneklerine sahip olmak önemlidir.
+
+Cihazları hizmete ekledikten sonra, aşağıdaki önerilen yapılandırma ayarlarıyla etkinleştirerek dahil edilen tehdit koruması özelliklerinden yararlanmak önemlidir.
 
 ### <a name="device-collection-configuration"></a>Cihaz koleksiyonu yapılandırması
-Uç Nokta Yapılandırma Yöneticisi (2002 veya sonraki bir sürüm) kullanıyorsanız, sunucuları veya alt düzey istemcileri içerecek şekilde dağıtımı genişletmeyi seçebilirsiniz.
 
+Endpoint Configuration Manager, sürüm 2002 veya üzerini kullanıyorsanız, sunucuları veya alt düzey istemcileri içerecek şekilde dağıtımı genişletmeyi seçebilirsiniz.
 
 ### <a name="next-generation-protection-configuration"></a>Yeni nesil koruma yapılandırması
 
@@ -100,112 +105,112 @@ Aşağıdaki yapılandırma ayarları önerilir:
 
 **Tarama**
 
-- USB sürücü gibi çıkarılabilir depolama cihazlarını tarama: Evet
+- USB sürücüleri gibi çıkarılabilir depolama cihazlarını tara: Evet
 
 **Gerçek Zamanlı Koruma**
 
 - Davranış İzlemeyi Etkinleştir: Evet
-- İndirme sırasında ve yükleme öncesinde İstenmeyen Olabilecek Uygulamalara karşı korumayı etkinleştir: Evet
+- İndirme sırasında ve yükleme öncesinde İstenmeyebilecek Uygulamalara karşı korumayı etkinleştirin: Evet
 
 **Bulut Koruma Hizmeti**
 
-- Bulut Koruma Hizmeti üyelik türü: Gelişmiş üyelik
+- Cloud Protection Hizmeti üyelik türü: Gelişmiş üyelik
 
-**Saldırı yüzeyini azaltma** Denetlenecek tüm kullanılabilir kuralları yapılandırma.
+**Saldırı yüzeyini azaltma** Denetim için tüm kullanılabilir kuralları yapılandırın.
 
 > [!NOTE]
-> Bu etkinliklerin engellenmesi, yasal iş işlemlerini kesintiye uğratmaya neden olabilir. Her şeyi denetlemeye, hangilerinin güvenli olduğunu belirlemek ve ardından hatalı pozitif algılamaları olan uç noktalarda bu ayarları etkinleştirmek en iyi yaklaşımdır.
+> Bu etkinliklerin engellenmesi meşru iş süreçlerini kesintiye uğratabilir. En iyi yaklaşım, her şeyi denetime ayarlamak, hangilerinin güvenli olduğunu belirlemek ve ardından hatalı pozitif algılamaları olmayan uç noktalarda bu ayarları etkinleştirmektir.
 
 **Ağ koruması**
 
-Denetim veya engelleme modunda ağ korumasını etkinleştirmeden önce, destek sayfasından edinilen kötü amaçlı yazılımdan koruma platform güncelleştirmesini [yüklemişsinizdir](https://support.microsoft.com/en-us/help/4560203/windows-defender-anti-malware-platform-binaries-are-missing).
-
+Denetim veya blok modunda ağ korumasını etkinleştirmeden önce, [destek sayfasından](https://support.microsoft.com/en-us/help/4560203/windows-defender-anti-malware-platform-binaries-are-missing) edinilebilen kötü amaçlı yazılımdan koruma platformu güncelleştirmesini yüklediğinizden emin olun.
 
 **Denetimli klasör erişimi**
 
-Özelliği en az 30 gün boyunca denetim modunda etkinleştirin. Bu sürenin ardından algılamaları gözden geçirin ve korumalı dizinlere yazmasına izin verilen uygulamaların listesini oluşturun.
+Özelliği en az 30 gün boyunca denetim modunda etkinleştirin. Bu sürenin sonunda algılamaları gözden geçirin ve korumalı dizinlere yazmasına izin verilen uygulamaların listesini oluşturun.
 
-Daha fazla bilgi için Denetimli [klasör erişimini değerlendirme.](/windows/security/threat-protection/microsoft-defender-atp/evaluate-controlled-folder-access)
+Daha fazla bilgi için bkz [. Denetimli klasör erişimini değerlendirme](/windows/security/threat-protection/microsoft-defender-atp/evaluate-controlled-folder-access).
 
+## <a name="offboard-devices-using-configuration-manager"></a>Configuration Manager kullanarak cihazları çıkarma
 
-## <a name="offboard-devices-using-configuration-manager"></a>Configuration Manager kullanan offboard cihazları
-
-Güvenlik nedeniyle, Offboard cihazları için kullanılan paketin süresi, indirildikten 30 gün sonra sona erer. Bir cihaza gönderilen süresi dolmuş offboard paketleri reddedilir. Bir çıkartan kullanım paketini indirirken, paketlerin son kullanma tarihi size bildirilecek ve paket adına bu paket de dahil edilecektir.
+Güvenlik nedeniyle, cihazları kullanıma almak için kullanılan paketin süresi, indirildiği tarihten 30 gün sonra dolar. Bir cihaza gönderilen süresi dolan çıkarma paketleri reddedilir. Bir çıkarma paketini indirirken, paketlerin son kullanma tarihi size bildirilir ve paket adına da eklenir.
 
 > [!NOTE]
-> Ekleme ve çıkarma ilkeleri aynı cihazda aynı anda dağıtıldığından, öngörülemeyen zararlara neden olur.
+> Ekleme ve çıkarma ilkeleri aynı cihazda aynı anda dağıtılmamalıdır, aksi takdirde bu öngörülemeyen çakışmalara neden olur.
 
-### <a name="offboard-devices-using-microsoft-endpoint-configuration-manager-current-branch"></a>Geçerli dalı kullanan Microsoft Endpoint Configuration Manager cihazlar
+### <a name="offboard-devices-using-microsoft-endpoint-configuration-manager-current-branch"></a>Geçerli dalı kullanarak cihazları Microsoft Endpoint Configuration Manager çıkarma
 
-Geçerli dalınız Microsoft Endpoint Configuration Manager bkz[. Çıkara bir yapılandırma dosyası oluşturma](/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#create-an-offboarding-configuration-file).
+Geçerli dal Microsoft Endpoint Configuration Manager kullanıyorsanız bkz. [Çıkarma yapılandırma dosyası oluşturma](/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#create-an-offboarding-configuration-file).
 
-### <a name="offboard-devices-using-system-center-2012-r2-configuration-manager"></a>System Center 2012 R2 Configuration Manager kullanan offboard cihazları
+### <a name="offboard-devices-using-system-center-2012-r2-configuration-manager"></a>System Center 2012 R2 Configuration Manager kullanarak cihazları çıkarma
 
-1. Bir panodan çıkar <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">paketine Microsoft 365 uyumluluk merkezi</a>:
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi'dan</a> çıkarma paketini alın:
 
-2. Gezinti bölmesinde,Device <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank"></a> >  **onboardingOffboarding Ayarlar'ı**>  **seçin**.
+2. Gezinti bölmesinde <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> >   **Cihaz eklemeYeni**>  **ekleme'yi** seçin.
 
-3. İşletim Windows 10 olarak iş'i seçin.
+3. İşletim sistemi olarak Windows 10 seçin.
 
-4. Dağıtım yöntemi **alanında**, **2012/2012 R2/1511/1602 Microsoft Endpoint Configuration Manager'yi seçin**.
+4. **Dağıtım yöntemi** alanında **Microsoft Endpoint Configuration Manager 2012/2012 R2/1511/1602'yi** seçin.
 
-5. Paketi **indir'i** seçin ve dosyayı .zip kaydedin.
+5. **Paketi indir'i** seçin ve .zip dosyasını kaydedin.
 
-6. .zip dosyasının içeriğini, paketi dağıtacak olan ağ yöneticileri tarafından erişilebilen, paylaşılan, salt okunur bir konuma ayıklar. *DeviceComplianceOffboardingScript_valid_until_YYYY-MM-DD.cmd adlı bir dosyanız olmalıdır*.
+6. .zip dosyasının içeriğini, paketi dağıtacak ağ yöneticileri tarafından erişilebilen paylaşılan, salt okunur bir konuma ayıklayın. *DeviceComplianceOffboardingScript_valid_until_YYYY-MM-DD.cmd* adlı bir dosyanız olmalıdır.
 
-7. [2012 R2 Configuration Manager'da](/previous-versions/system-center/system-center-2012-R2/gg699369(v=technet.10)) Paketler ve Programlar makalesinde System Center dağıtın.
+7. [System Center 2012 R2 Configuration Manager'deki Paketler ve Programlar makalesindeki](/previous-versions/system-center/system-center-2012-R2/gg699369(v=technet.10)) adımları izleyerek paketi dağıtın.
 
-8. Paketin dağıtımı için önceden tanımlanmış bir cihaz koleksiyonu seçin.
+8. Paketin dağıtılacağı önceden tanımlanmış bir cihaz koleksiyonu seçin.
 
 > [!IMPORTANT]
-> Offboard, cihazın algılayıcı verilerini portala göndermeyi durdurmaya neden olur, ancak sahip olduğu uyarılara başvuru da dahil olmak üzere cihazdan alınan veriler 6 ay süreyle korunur.
-
+> Kullanıma alma, cihazın portala algılayıcı verileri göndermeyi durdurmasına neden olur, ancak sahip olduğu uyarılara başvuru da dahil olmak üzere cihazdaki veriler 6 aya kadar saklanır.
 
 ## <a name="monitor-device-configuration"></a>Cihaz yapılandırmasını izleme
 
-Geçerli dalı kullanıyorsanız, Configuration Manager Microsoft Endpoint Configuration Manager uç nokta için yerleşik Microsoft Defender panosunun kullanın. Daha fazla bilgi için bkz [. Microsoft Defender Gelişmiş Tehdit Koruması - Monitör](/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#monitor).
+Geçerli Microsoft Endpoint Configuration Manager dal kullanıyorsanız, Configuration Manager konsolundaki yerleşik Uç Nokta için Microsoft Defender panosunu kullanın. Daha fazla bilgi için bkz. [Microsoft Defender Gelişmiş Tehdit Koruması - İzleyici](/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#monitor).
 
 System Center 2012 R2 Configuration Manager kullanıyorsanız izleme iki bölümden oluşur:
 
-1. Yapılandırma paketinin doğru dağıtıldığından ve ağ ağınız kapsamındaki cihazlarda çalıştırıldığından (veya başarıyla çalıştırıldığından) emin olun.
+1. Yapılandırma paketinin doğru dağıtıldığını ve ağınızdaki cihazlarda çalıştığını (veya başarıyla çalıştırıldığını) onaylayın.
 
-2. Cihazların Microsoft 365 cihaz ekleme hizmetiyle uyumlu olup değildir (bu, cihazın ekleme işlemini tamamlayasını sağlar ve verileri hizmete bildirmeye devam eder).
+2. Cihazların Microsoft 365 cihaz ekleme hizmetiyle uyumlu olup olmadığını denetleme (bu, cihazın ekleme işlemini tamamlayabilmesini ve verileri hizmete bildirmeye devam etmesini sağlar).
 
-### <a name="confirm-the-configuration-package-has-been-correctly-deployed"></a>Yapılandırma paketinin doğru dağıtıldığından emin olun
+### <a name="confirm-the-configuration-package-has-been-correctly-deployed"></a>Yapılandırma paketinin doğru dağıtıldığını onaylayın
 
-1. Yapılandırma Yöneticisi konsolunda, gezinti **bölmesinin** en altındaki İzleme'ye tıklayın.
+1. Configuration Manager konsolunda, gezinti bölmesinin alt kısmındaki **İzleme'ye** tıklayın.
 
-2. Genel **Bakış'ı** ve ardından **Dağıtımlar'ı seçin**.
+2. **Genel Bakış'ı** ve ardından **Dağıtımlar'ı** seçin.
 
-3. Paket adını içeren dağıtımı seçin.
+3. Dağıtımda paket adını seçin.
 
-4. Tamamlama İstatistikleri ve İçerik Durumu **altında durum göstergelerini** **gözden geçirebilirsiniz**.
+4. **Tamamlanma İstatistikleri** ve **İçerik Durumu** altındaki durum göstergelerini gözden geçirin.
 
-    Başarısız dağıtımlar (Hata olan **cihazlar, Gereksinimleri** Karşılamıyor veya Başarısız durumları) **varsa, cihaz** sorunlarını gidermeniz gerekir. Daha fazla bilgi için bkz. [Microsoft Defender Gelişmiş Tehdit Koruması ekleme sorunlarını giderme](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding).
+    Başarısız dağıtımlar varsa ( **Hata**, **Gereksinimler Karşılanmadı** veya **Başarısız durumlarına** sahip cihazlar) cihazlarda sorun gidermeniz gerekebilir. Daha fazla bilgi için bkz. [Microsoft Defender Gelişmiş Tehdit Koruması ekleme sorunlarını giderme](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding).
 
-    ![Hatasız başarılı bir dağıtım gösteren Configuration Manager.](../media/sccm-deployment.png)
+    ![Configuration Manager hatasız başarılı dağıtım gösteriyor.](../media/sccm-deployment.png)
 
-### <a name="check-that-the-devices-are-compliant-with-the-microsoft-365-endpoint-data-loss-prevention-service"></a>Cihazların Microsoft 365 Uç nokta veri kaybı önleme hizmetiyle uyumlu olup değildir
+### <a name="check-that-the-devices-are-compliant-with-the-microsoft-365-endpoint-data-loss-prevention-service"></a>Cihazların Microsoft 365 Uç Nokta veri kaybı önleme hizmetiyle uyumlu olup olmadığını denetleyin
 
-System Center 2012 R2 Configuration Manager'da dağıtımınızı izlemek için yapılandırma öğesi için bir uyumluluk kuralı kurabilirsiniz.
+Dağıtımınızı izlemek için System Center 2012 R2 Configuration Manager yapılandırma öğesi için bir uyumluluk kuralı ayarlayabilirsiniz.
 
 > [!NOTE]
-> Bu yordam ve kayıt defteri girdisi, Uç Nokta için Defender'ın yanı sıra Uç Nokta DLP için de geçerlidir.
+> Bu yordam ve kayıt defteri girdisi Hem Uç Nokta DLP'sine hem de Uç Nokta için Defender'a uygulanır.
 
-Bu kural, *hedefli cihazlarda kayıt* defteri anahtarının değerini izleyen, düzeltilmeyen bir uyumluluk kuralı yapılandırma öğesidir.
+Bu kural, hedeflenen cihazlarda bir kayıt defteri anahtarının değerini izleyen *düzeltilmeyen* bir uyumluluk kuralı yapılandırma öğesi olmalıdır.
 
-Aşağıdaki kayıt defteri anahtarı girdisini izleme:
+Aşağıdaki kayıt defteri anahtarı girdisini izleyin:
+
+```text
+Path: "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status"
+Name: "OnboardingState"
+Value: "1"
 ```
-Path: “HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status”
-Name: “OnboardingState”
-Value: “1”
-```
-Daha fazla bilgi için bkz[. 2012 R2 Configuration Manager'da System Center ayarlarına giriş](/previous-versions/system-center/system-center-2012-R2/gg682139(v=technet.10)).
+
+Daha fazla bilgi için bkz. [System Center 2012 R2 Configuration Manager'de uyumluluk ayarlarına giriş](/previous-versions/system-center/system-center-2012-R2/gg682139(v=technet.10)).
 
 ## <a name="related-topics"></a>İlgili konular
-- [Grup Windows 10 kullanarak Windows 11 cihazı ekleme ve kullanma](device-onboarding-gp.md)
-- [Mobil Windows 10 araçları Windows 11 cihaza ekleme ve kullanma](device-onboarding-mdm.md)
-- [Yerel bir Windows 10 kullanarak Windows 10 ve 11 Windows cihaz kullanın](device-onboarding-script.md)
-- [Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını ekleme](device-onboarding-vdi.md)
-- [Yeni eklenen Uç nokta cihazı için Microsoft Defender'da bir algılama testi çalıştırma](/windows/security/threat-protection/microsoft-defender-atp/run-detection-test)
-- [Microsoft Defender Gelişmiş Tehdit Koruması'nın ekleme sorunlarını giderme](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)
+
+- [grup ilkesi kullanarak Windows 10 ve Windows 11 cihazları ekleme](device-onboarding-gp.md)
+- [Mobil Cihaz Yönetimi araçlarını kullanan Windows 10 ve Windows 11 cihazlarının katılımı](device-onboarding-mdm.md)
+- [Yerel bir komut dosyası kullanan Windows 10 ve Windows 11 cihazlarının katılımı](device-onboarding-script.md)
+- [Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarının katılımı](device-onboarding-vdi.md)
+- [Yeni eklenen bir Uç Nokta için Microsoft Defender cihazında algılama testi çalıştırma](/windows/security/threat-protection/microsoft-defender-atp/run-detection-test)
+- [Microsoft Defender Gelişmiş Tehdit Koruması ekleme sorunlarını giderme](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)

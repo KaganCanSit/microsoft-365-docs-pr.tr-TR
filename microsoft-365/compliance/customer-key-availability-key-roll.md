@@ -1,5 +1,5 @@
 ---
-title: Müşteri Anahtarını veya uygunluk anahtarını döndürme veya döndürme
+title: Bir Müşteri Anahtarını veya uygunluk anahtarını toplama veya döndürme
 ms.author: krowley
 author: kccross
 manager: laurawi
@@ -11,49 +11,49 @@ search.appverid:
 - MET150
 ms.collection:
 - M365-security-compliance
-description: Müşteri Anahtarı ile kullanılan Azure Anahtar Kasasında depolanan müşteri kök anahtarlarının nasıl yuvarlanacaklarını öğrenin. Hizmetler arasında Exchange Online, Skype Kurumsal, SharePoint Online, OneDrive İş ve Teams vardır.
-ms.openlocfilehash: 5f2de108d493e4b6d4233f4a932a24f524e468bb
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+description: Müşteri Anahtarı ile birlikte kullanılan Azure Key Vault depolanan müşteri kök anahtarlarının nasıl alındığını öğrenin. Hizmetler Exchange Online, Skype Kurumsal, SharePoint Online, OneDrive İş ve Teams dosyalarını içerir.
+ms.openlocfilehash: 81d82f49c056f5a6ec9b8731b549aee68d5d658b
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62999138"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64761361"
 ---
-# <a name="roll-or-rotate-a-customer-key-or-an-availability-key"></a>Müşteri Anahtarını veya uygunluk anahtarını döndürme veya döndürme
+# <a name="roll-or-rotate-a-customer-key-or-an-availability-key"></a>Bir Müşteri Anahtarını veya uygunluk anahtarını toplama veya döndürme
 
 > [!CAUTION]
-> Yalnızca, güvenlik veya uyumluluk gereksinimleriniz anahtarın sizin için önemli olduğu zaman Müşteri Anahtarı ile birlikte kullanılan bir şifreleme anahtarını geri alma. Ayrıca, ilkelerle ilişkili veya ilkelerle ilişkilendirilmiş hiçbir anahtarı silmeyin. Anahtarlarınızı yuvarlarken, önceki anahtarlarla şifrelenmiş içerik olur. Örneğin, etkin posta kutuları sık sık yeniden şifrelenirken, etkin olmayan, bağlantısı kesilmiş ve devre dışı bırakılmış posta kutuları yine önceki anahtarlarla şifrelenir. SharePoint Online, geri yükleme ve kurtarma amacıyla içeriğin yedeğini gerçekleştirir, bu nedenle hala eski anahtarlar kullanılarak arşivlenmiş içerikler olabilir.
+> Yalnızca güvenlik veya uyumluluk gereksinimleriniz anahtarın alınması gerektiğini belirlediğinde Müşteri Anahtarı ile kullandığınız bir şifreleme anahtarını yuvarlayın. Ayrıca, ilkelerle ilişkilendirilmiş veya ilişkili anahtarları silmeyin. Anahtarlarınızı yuvarladığınızda, önceki anahtarlarla şifrelenmiş içerik olacaktır. Örneğin, etkin posta kutuları sık sık yeniden şifrelenirken, etkin olmayan, bağlantısı kesilmiş ve devre dışı bırakılmış posta kutuları önceki anahtarlarla yine de şifrelenebilir. SharePoint Online, geri yükleme ve kurtarma amacıyla içeriğin yedeğini gerçekleştirir, bu nedenle eski anahtarları kullanan arşivlenmiş içerik olabilir.
 
-## <a name="about-rolling-the-availability-key"></a>Kullanılabilirlik anahtarının yuvarlanma hakkında
+## <a name="about-rolling-the-availability-key"></a>Kullanılabilirlik anahtarını döndürme hakkında
 
-Microsoft, kullanılabilirlik anahtarının doğrudan kontrollerini müşterilere açığa çıkarmaz. Örneğin, yalnızca Azure Anahtar Kasasında sahip olduğunuz anahtarları döndürebilir (döndürün). Microsoft 365, kullanılabilirlik anahtarlarını dahili olarak tanımlanan bir zamanlamada öteler. Bu önemli rulolar için müşteriye yönelik, hizmet düzeyinde sözleşme (SLA) yoktur. Microsoft 365, hizmet kodunu otomatik, Microsoft 365 olmayan bir işlemde kullanarak kullanılabilirlik anahtarını döndürebilir. Microsoft yöneticileri roll işlemini başlatıyor olabilir. Anahtar, anahtar deposuna doğrudan erişime gerek kalmadan otomatik mekanizmalar kullanılarak alınır. Microsoft yöneticilerine kullanılabilirlik anahtarı gizli deposuna erişim sağlanmaz. Kullanılabilirlik tuşu yuvarlama, ilk başta anahtarı oluşturmak için kullanılan mekanizmadan yararlanıyor. Kullanılabilirlik anahtarı hakkında daha fazla bilgi için bkz [. Kullanılabilirlik anahtarını anlama](customer-key-availability-key-understand.md).
+Microsoft, kullanılabilirlik anahtarının doğrudan denetimini müşterilere sunmaz. Örneğin, yalnızca Azure Key Vault sahip olduğunuz anahtarları yuvarlayabilir (döndürebilirsiniz). Microsoft 365, kullanılabilirlik anahtarlarını dahili olarak tanımlanmış bir zamanlamaya göre yuvarlar. Bu anahtar dağıtımlar için müşteriye yönelik, hizmet düzeyi sözleşmesi (SLA) yoktur. Microsoft 365, otomatik, el ile olmayan bir işlemde Microsoft 365 hizmet kodunu kullanarak kullanılabilirlik anahtarını döndürür. Microsoft yöneticileri, roll işlemini başlatabilir. Anahtar, anahtar deposuna doğrudan erişim olmadan otomatik mekanizmalar kullanılarak alınır. Kullanılabilirlik anahtarı gizli deposuna erişim Microsoft yöneticilerine sağlanmaz. Kullanılabilirlik anahtarı yuvarlama, başlangıçta anahtarı oluşturmak için kullanılan mekanizmayı kullanır. Kullanılabilirlik anahtarı hakkında daha fazla bilgi için bkz. [Kullanılabilirlik anahtarını anlama](customer-key-availability-key-understand.md).
 
 > [!IMPORTANT]
-> Exchange Online de Skype Kurumsal deP oluşturan müşteriler tarafından kullanılabilirlik anahtarları etkili bir şekilde top edilebilir, çünkü sizin Exchange Online her DEP için benzersiz bir kullanılabilirlik anahtarı oluşturulur. SharePoint Online, OneDrive İş ve Teams dosyalarının kullanılabilirlik anahtarları orman düzeyinde yer alan ve DEP'ler ile müşteriler arasında paylaşılır; başka bir ifadeyle, yuvarlama yalnızca Microsoft şirket içinde tanımlanmış bir zamanlamada gerçekleşir. Her yeni DEP oluşturulduğunda kullanılabilirlik anahtarının yuvarlanma riskini azaltmak için SharePoint, OneDrive ve Teams kiracı ara anahtarını (TIK) her yeni DEP oluşturulduğunda müşteri kök anahtarları ve kullanılabilirlik anahtarıyla sarılmış anahtarı alır.
+> Exchange Online ve Skype Kurumsal kullanılabilirlik anahtarları, oluşturduğunuz her DEP için benzersiz bir kullanılabilirlik anahtarı oluşturulduğundan yeni bir DEP oluşturan müşteriler tarafından etkili bir şekilde alınabilir. SharePoint Online, OneDrive İş ve Teams dosyaları için kullanılabilirlik anahtarları orman düzeyinde bulunur ve DEP'ler ve müşteriler arasında paylaşılır, yani sıra yalnızca Microsoft tarafından dahili olarak tanımlanmış bir zamanlamada gerçekleşir. Her yeni DEP oluşturulduğunda kullanılabilirlik anahtarını döndürmeme riskini azaltmak için, her yeni DEP oluşturulduğunda müşteri kök anahtarları ve kullanılabilirlik anahtarı tarafından sarmalanan anahtar olan kiracı ara anahtarını (TIK) SharePoint, OneDrive ve Teams yuvarlayın.
 
-## <a name="request-a-new-version-of-each-existing-root-key-you-want-to-roll"></a>Var olan her kök anahtarın yeni bir sürümünü alma isteğinde olun
+## <a name="request-a-new-version-of-each-existing-root-key-you-want-to-roll"></a>Almak istediğiniz mevcut her kök anahtarın yeni bir sürümünü isteyin
 
-Bir anahtarı yuvarlarken, var olan anahtarın yeni bir sürümünü talep edin. Var olan bir anahtarın yeni sürümünü talep etmek için, aynı cmdlet olan [Add-AzKeyVaultKey'i](/powershell/module/az.keyvault/add-azkeyvaultkey) kullanır ve ilk yerinde anahtarı oluşturmak için de aynı söz dizimi kullanılır. Veri Şifreleme İlkesi (DEP) ile ilişkilendirilmiş anahtarın yuvarlanması bittiğinde, Müşteri Anahtarının yeni anahtarı kullanmaya başladığından emin olmak için başka bir cmdlet çalıştırın. Bu adımı her Azure Anahtar Kasasında (AKV) kullanın.
+Bir anahtarı yuvarladığınızda, mevcut anahtarın yeni bir sürümünü isteyebilirsiniz. Mevcut anahtarın yeni bir sürümünü istemek için, [add-AzKeyVaultKey](/powershell/module/az.keyvault/add-azkeyvaultkey) cmdlet'ini, anahtarı oluştururken kullandığınız söz dizimiyle birlikte kullanırsınız. Veri Şifreleme İlkesi (DEP) ile ilişkili herhangi bir anahtarı döndürmeyi tamamladıktan sonra, Müşteri Anahtarı'nın yeni anahtarı kullanmaya başladığından emin olmak için başka bir cmdlet çalıştırırsınız. Bu adımı her Azure Key Vault (AKV) içinde gerçekleştirin.
 
 Örneğin:
 
-1. Azure PowerShell ile Azure aboneliğinde oturum Azure PowerShell. Yönergeler için bkz[. Posta ile Azure PowerShell](/powershell/azure/authenticate-azureps).
+1. Azure PowerShell ile Azure aboneliğinizde oturum açın. Yönergeler için bkz. [Azure PowerShell ile oturum açma](/powershell/azure/authenticate-azureps).
 
-2. Aşağıdaki Add-AzKeyVaultKey gösterildiği gibi cmdlet'i çalıştırın:
+2. Aşağıdaki örnekte gösterildiği gibi Add-AzKeyVaultKey cmdlet'ini çalıştırın:
 
    ```powershell
    Add-AzKeyVaultKey -VaultName Contoso-CK-EX-NA-VaultA1 -Name Contoso-CK-EX-NA-VaultA1-Key001 -Destination HSM -KeyOps @('wrapKey','unwrapKey') -NotBefore (Get-Date -Date "12/27/2016 12:01 AM")
    ```
 
-   Bu örnekte, **Contoso-CK-EX-EX-NA-VaultA1-Key001** adlı bir anahtar **Contoso-CK-EX-NA-VaultA1** kasasında yer alır, cmdlet anahtarın yeni bir sürümünü oluşturur. Bu işlem, anahtarın sürüm geçmişinde önceki anahtar sürümlerini korur. Şifrelerini halen şifreleen verilerin şifresini çözmek için önceki anahtar sürümüne ihtiyacınız vardır. DEP ile ilişkili anahtarın yuvarlanması tamamlandıktan sonra, Müşteri Anahtarının yeni anahtarı kullanmaya başladığından emin olmak için fazladan bir cmdlet çalıştırın. Aşağıdaki bölümlerde cmdlet'ler daha ayrıntılı olarak açıklanmaktadır.
+   Bu örnekte **Contoso-CK-EX-NA-VaultA1-Key001** adlı bir anahtar **Contoso-CK-EX-NA-VaultA1** kasasında bulunduğundan, cmdlet anahtarın yeni bir sürümünü oluşturur. Bu işlem, anahtarın sürüm geçmişinde önceki anahtar sürümlerini korur. Şifrelemeye devam eden verilerin şifresini çözmek için önceki anahtar sürümüne ihtiyacınız vardır. DEP ile ilişkili herhangi bir anahtarın sıralanmasını tamamladıktan sonra, Müşteri Anahtarının yeni anahtarı kullanmaya başladığından emin olmak için fazladan bir cmdlet çalıştırın. Aşağıdaki bölümlerde cmdlet'ler daha ayrıntılı olarak açıklanmaktadır.
   
-## <a name="update-the-keys-for-multi-workload-deps"></a>Çok iş yüküne sahip DEP'ler için anahtarları güncelleştirme
+## <a name="update-the-keys-for-multi-workload-deps"></a>Çoklu iş yükü DEP'leri için anahtarları güncelleştirme
 
-Birden çok iş yüküyle kullanılan bir DEP ile ilişkili Azure Anahtar Kasa anahtarlarının birini alırken DEP'i yeni anahtara işaretacak şekilde güncelleştirmeniz gerekir. Bu işlem uygunluk anahtarını döndürmez.
+Birden çok iş yüküyle kullanılan bir DEP ile ilişkili Azure Key Vault anahtarlarından birini yuvarladığınızda, DEP'yi yeni anahtara işaret eden şekilde güncelleştirmeniz gerekir. Bu işlem kullanılabilirlik anahtarını döndürmez.
 
-Müşteri Anahtarı'nın birden çok iş yükünü şifrelemek üzere yeni anahtarı kullanmalarını sağlamak için şu adımları tamamlayın:
+Müşteri Anahtarı'na birden çok iş yükünü şifrelemek için yeni anahtarı kullanmasını bildirmek için şu adımları tamamlayın:
 
-1. Yerel bilgisayarınızda, genel yönetici veya uyumluluk yöneticisi izinleri olan bir iş veya okul hesabı kullanarak, Windows PowerShell penceresinde [Exchange Online PowerShell'e](/powershell/exchange/connect-to-exchange-online-powershell) bağlanın.
+1. Yerel bilgisayarınızda, kuruluşunuzda genel yönetici veya uyumluluk yöneticisi izinlerine sahip bir iş veya okul hesabı kullanarak [Windows PowerShell penceresinde Exchange Online PowerShell'e bağlanın](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Set-M365DataAtRestEncryptionPolicy cmdlet'ini çalıştırın.
   
@@ -69,23 +69,23 @@ Burada *PolicyName* , ilkenin adı veya benzersiz kimliğidir. Örneğin, Contos
 Set-M365DataAtRestEncryptionPolicy -Identity "Contoso_Global" -Refresh
 ```
 
-## <a name="update-the-keys-for-exchange-online-deps"></a>DEP'ler için Exchange Online güncelleştirme
+## <a name="update-the-keys-for-exchange-online-deps"></a>Exchange Online DEP anahtarlarını güncelleştirme
 
-Exchange Online ve Skype Kurumsal ile kullanılan bir DEP ile ilişkili Azure Anahtar Kasa anahtarlarının birini alırken DEP'i yeni anahtara işaretacak şekilde güncelleştirmeniz gerekir. Bu, uygunluk anahtarını döndürmez.
+Exchange Online ve Skype Kurumsal ile kullanılan bir DEP ile ilişkili Azure Key Vault anahtarlarından birini yuvarladığınızda, DEP'yi yeni anahtara işaret eden şekilde güncelleştirmeniz gerekir. Bu, kullanılabilirlik anahtarını döndürmez.
 
-Müşteri Anahtarı'nın posta kutularını şifrelemek için yeni anahtarı kullanmalarını sağlamak için, aşağıdaki Set-DataEncryptionPolicy cmdlet'ini çalıştırın:
+Müşteri Anahtarı'na posta kutularını şifrelemek için yeni anahtarı kullanmasını bildirmek için Set-DataEncryptionPolicy cmdlet'ini aşağıdaki gibi çalıştırın:
 
-1. Azure PowerShell'de Set-DataEncryptionPolicy cmdlet'ini Azure PowerShell:
+1. Set-DataEncryptionPolicy cmdlet'ini Azure PowerShell çalıştırın:
   
    ```powershell
    Set-DataEncryptionPolicy -Identity <DataEncryptionPolicyID> -Refresh
    ```
 
-2. Posta kutusunun DataEncryptionPolicyID özelliğinin değerini kontrol etmek için, Posta kutusuna [atanan DEP'yi belirleme'de yer alan adımları kullanın](customer-key-manage.md#determine-the-dep-assigned-to-a-mailbox). Hizmet güncelleştirilmiş anahtarı uygularken bu özelliğin değeri değişir.
+2. Posta kutusunun DataEncryptionPolicyID özelliğinin değerini denetlemek için, Posta [kutusuna atanan DEP'yi belirleme'deki](customer-key-manage.md#determine-the-dep-assigned-to-a-mailbox) adımları kullanın. Hizmet güncelleştirilmiş anahtarı uyguladığında bu özelliğin değeri değişir.
   
-## <a name="update-the-keys-for-sharepoint-online-onedrive-for-business-and-teams-files"></a>SharePoint Online, OneDrive İş ve dosya Teams güncelleştirme
+## <a name="update-the-keys-for-sharepoint-online-onedrive-for-business-and-teams-files"></a>SharePoint Online, OneDrive İş ve Teams dosyalarının anahtarlarını güncelleştirme
 
-SharePoint Online, bir defada yalnızca bir tuş amama izin verir. Her iki anahtarı da bir anahtar kasasında almak için ilk işlemi bekleyin. Microsoft, bu sorunu önlemek için işlemlerinizi basamaklamanızı öneririz. SharePoint Online ve OneDrive İş'da kullanılan bir DEP ile ilişkili Azure Anahtar Kasa anahtarlarının herhangi birini yuvarlarken DEP'i yeni anahtara işaretacak şekilde güncelleştirmeniz gerekir. Bu, uygunluk anahtarını döndürmez.
+SharePoint Online, aynı anda yalnızca bir anahtar almanızı sağlar. Anahtar kasasında her iki anahtarı da yuvarlamak istiyorsanız, ilk işlemin tamamlanmasını bekleyin. Microsoft, bu sorundan kaçınmak için işlemlerinizi kademelendirmenizi önerir. SharePoint Online ve OneDrive İş ile kullanılan bir DEP ile ilişkili Azure Key Vault anahtarlarından birini yuvarladığınızda, DEP'yi yeni anahtara işaret eden şekilde güncelleştirmeniz gerekir. Bu, kullanılabilirlik anahtarını döndürmez.
 
 1. Update-SPODataEncryptionPolicy cmdlet'ini aşağıdaki gibi çalıştırın:
   
@@ -93,9 +93,9 @@ SharePoint Online, bir defada yalnızca bir tuş amama izin verir. Her iki anaht
    Update-SPODataEncryptionPolicy  <SPOAdminSiteUrl> -KeyVaultName <ReplacementKeyVaultName> -KeyName <ReplacementKeyName> -KeyVersion <ReplacementKeyVersion> -KeyType <Primary | Secondary>
    ```
 
-   Bu cmdlet, SharePoint Online ve OneDrive İş için anahtar alma işlemini başlatırken, eylem hemen tamamlanmadı.
+   Bu cmdlet, SharePoint Online ve OneDrive İş için anahtar alma işlemini başlatırken, eylem hemen tamamlanmaz.
 
-2. Anahtar rulosu işlemi ilerlemesini görmek için, aşağıdaki gibi Get-SPODataEncryptionPolicy cmdlet'i çalıştırın:
+2. Anahtar alma işleminin ilerleme durumunu görmek için Get-SPODataEncryptionPolicy cmdlet'ini aşağıdaki gibi çalıştırın:
 
    ```powershell
    Get-SPODataEncryptionPolicy <SPOAdminSiteUrl>
@@ -103,10 +103,10 @@ SharePoint Online, bir defada yalnızca bir tuş amama izin verir. Her iki anaht
 
 ## <a name="related-articles"></a>İlgili makaleler
 
-- [Müşteri Hizmetleri için Müşteri Anahtarı ile hizmet Office 365](customer-key-overview.md)
+- [Office 365 için Müşteri Anahtarı ile hizmet şifrelemesi](customer-key-overview.md)
 
-- [Müşteri Için Müşteri Anahtarını Office 365](customer-key-set-up.md)
+- [Office 365 için Müşteri Anahtarını Ayarlama](customer-key-set-up.md)
 
-- [Müşteri Için Müşteri Anahtarını Office 365](customer-key-manage.md)
+- [Office 365 için Müşteri Anahtarını Yönetme](customer-key-manage.md)
 
-- [Kullanılabilirlik anahtarı hakkında bilgi](customer-key-availability-key-understand.md)
+- [Kullanılabilirlik anahtarı hakkında bilgi edinin](customer-key-availability-key-understand.md)

@@ -1,5 +1,5 @@
 ---
-title: E Exchange Online bağlantılarının güvenliğini sağlamak için Aktarım Katmanı Güvenliği'nin (TLS) kullanımı
+title: Exchange Online, e-posta bağlantılarının güvenliğini sağlamak için Aktarım Katmanı Güvenliği'nin (TLS) nasıl kullanıldığı
 f1.keywords:
 - NOCSH
 ms.author: krowley
@@ -17,70 +17,70 @@ ms.assetid: 4cde0cda-3430-4dc0-b489-f2c0736c929f
 ms.collection:
 - M365-security-compliance
 - Strat_O365_IP
-description: E-Exchange Online güvenli Microsoft 365 Aktarım Katmanı Güvenliği (TLS) ve İletme Gizliliğini (FS) nasıl kullanabileceğinizi ve nasıl kullanabileceğinizi öğrenin. Ayrıca Microsoft tarafından verilen sertifika hakkında daha fazla bilgi Exchange Online.
-ms.openlocfilehash: 1caf4a8425f4a8e7c340e8a52d785027e99a1618
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+description: E-posta iletişimlerinin güvenliğini sağlamak için Aktarım Katmanı Güvenliği (TLS) ve İletme Gizliliği (FS) Exchange Online ve Microsoft 365 nasıl kullanıldığını öğrenin. Ayrıca Exchange Online için Microsoft tarafından verilen sertifika hakkında da bilgi edinin.
+ms.openlocfilehash: 7f6d4cb20299e98fc186409977c8ef7b36d329ca
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "62998284"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64760833"
 ---
-# <a name="how-exchange-online-uses-tls-to-secure-email-connections"></a>E Exchange Online bağlantılarının güvenliğini sağlamak için TLS'yi nasıl kullanır?
+# <a name="how-exchange-online-uses-tls-to-secure-email-connections"></a>Exchange Online, e-posta bağlantılarının güvenliğini sağlamak için TLS'yi nasıl kullanır?
 
-E-Exchange Online güvenli Microsoft 365 Aktarım Katmanı Güvenliği (TLS) ve İletme Gizliliğini (FS) nasıl kullanabileceğinizi ve nasıl kullanabileceğinizi öğrenin. Ayrıca, Microsoft tarafından güvenlik için verilen sertifika hakkında Exchange Online.
+E-posta iletişimlerinin güvenliğini sağlamak için Aktarım Katmanı Güvenliği (TLS) ve İletme Gizliliği (FS) Exchange Online ve Microsoft 365 nasıl kullanıldığını öğrenin. Ayrıca, Exchange Online için Microsoft tarafından verilen sertifika hakkında bilgi sağlar.
   
-## <a name="tls-basics-for-microsoft-365-and-exchange-online"></a>TLS'de temel Microsoft 365 ve Exchange Online
+## <a name="tls-basics-for-microsoft-365-and-exchange-online"></a>Microsoft 365 ve Exchange Online için TLS temel bilgileri
 
-TLS'den önce gelen Aktarım Katmanı Güvenliği (TLS) ve SSL, bilgisayarlar arasındaki bağlantıyı şifrelemek için güvenlik sertifikaları kullanarak ağ üzerinden iletişimi güvenli hale gelen şifreleme protokolleridir. TLS, Güvenli Yuva Katmanı'nın (SSL) yerine kullanılır ve genellikle SSL 3.1 olarak adlandırılır. Exchange Online, Exchange sunucularıyla Exchange sunucuları ile şirket içi Exchange sunucuları veya alıcılarının posta sunucuları gibi diğer sunucular arasındaki bağlantıları şifrelemek için TLS kullanır. Bağlantı şifrelenirken, bu bağlantı üzerinden gönderilen tüm veriler şifreli kanal aracılığıyla gönderilir. Bununla birlikte, TLS şifreli bir bağlantı üzerinden gönderilmiş bir iletiyi iletirsiniz, bu iletinin şifrelenmiş olması gerekmez. TLS iletiyi şifrelemez, yalnızca bağlantıyı şifrelemez.
+AKTARıM Katmanı Güvenliği (TLS) ve TLS'den önce gelen SSL, bilgisayarlar arasındaki bağlantıyı şifrelemek için güvenlik sertifikaları kullanarak ağ üzerinden iletişimi güvenli hale getiren şifreleme protokolleridir. TLS, Güvenli Yuva Katmanı'nın (SSL) yerini alır ve genellikle SSL 3.1 olarak adlandırılır. Exchange Online, Exchange sunucuları arasındaki bağlantıları ve Exchange sunucuları ile şirket içi Exchange sunucularınız veya alıcılarınızın posta sunucuları gibi diğer sunucular arasındaki bağlantıları şifrelemek için TLS kullanır. Bağlantı şifrelendiğinde, bu bağlantı üzerinden gönderilen tüm veriler şifrelenmiş kanal üzerinden gönderilir. Ancak, TLS ile şifrelenmiş bir bağlantı üzerinden gönderilen bir iletiyi iletirseniz, bu ileti mutlaka şifrelenmez. TLS iletiyi şifrelemez, yalnızca bağlantıyı şifreler.
   
-İletiyi şifrelemek istemiyorsanız, ileti içeriğini şifrelenen bir şifreleme teknolojisi kullanın. Örneğin, İleti Şifrelemesi'Office S/MIME kullanabilirsiniz. [E-posta şifreleme hakkında bilgi Office 365](email-encryption.md) ve [Office 365 İleti Şifrelemesi (OME)](ome.md) içinde e-posta şifrelemesi Office 365.
+İletiyi şifrelemek istiyorsanız, ileti içeriğini şifreleyen bir şifreleme teknolojisi kullanın. Örneğin, Office İleti Şifrelemesi veya S/MIME kullanabilirsiniz. Office 365 ileti şifrelemesi hakkında bilgi için bkz. [Office 365'de e-posta](email-encryption.md) şifrelemesi ve [Office 365 İleti Şifrelemesi (OME).](ome.md)
   
-TLS'yi, Microsoft ile şirket içi kuruluş arasında veya iş ortağı gibi başka bir kuruluş arasında yazışmaların güvenli bir kanalını ayarlamak istediğiniz durumlarda kullanın. Exchange Online e-postanızı güvence altına almak için her zaman TLS kullanmayı denemenize rağmen karşı taraf TLS güvenliği sunmasa da bunu yapmak zorunda değildir. Bağlayıcıları kullanarak şirket içi sunucularınıza veya önemli iş ortaklarına tüm postayı nasıl güvenli hale gönderebilirsiniz hakkında bilgi almak için okumaya *devam edin*.
+Microsoft ile şirket içi kuruluşunuz veya iş ortağı gibi başka bir kuruluş arasında güvenli bir yazışma kanalı ayarlamak istediğiniz durumlarda TLS'yi kullanın. Exchange Online her zaman e-postanızın güvenliğini sağlamak için önce TLS'yi kullanmayı dener, ancak diğer taraf TLS güvenliği sağlamazsa kullanamaz. *Bağlayıcıları* kullanarak şirket içi sunucularınıza veya önemli iş ortaklarınıza gelen tüm postaların güvenliğini nasıl sağlayabileceğinizi öğrenmek için okumaya devam edin.
 
-Müşterilerimize en iyi sınıf şifrelemeyi sağlamak için Microsoft, [Office 365](tls-1.0-and-1.1-deprecation-for-office-365.md) ve Office 365 GCC'de Aktarım Katmanı Güvenliği (TLS) sürüm 1.0 ve 1.1'i [kullanımdan Office 365 GCC](tls-1-2-in-office-365-gcc.md). Ancak, TLS olmadan şifrelenmemiş SMTP bağlantısını kullanmaya devam edersiniz. Şifreleme olmadan e-posta iletimini önerilmez.  
+Microsoft, müşterilerimize sınıfının en iyisi şifrelemeyi sağlamak için Office 365 ve [Office 365 GCC](tls-1.0-and-1.1-deprecation-for-office-365.md) Aktarım Katmanı Güvenliği (TLS) 1.0 ve 1.1 sürümlerini kullanım dışı [bırakmıştır](tls-1-2-in-office-365-gcc.md). Ancak, şifrelenmemiş smtp bağlantısını tls olmadan kullanmaya devam edebilirsiniz. Şifreleme olmadan e-posta iletimini önermeyiz.  
   
-## <a name="how-exchange-online-uses-tls-between-exchange-online-customers"></a>EXCHANGE ONLINE, diğer müşteriler arasında TLS Exchange Online i nasıl kullanır?
+## <a name="how-exchange-online-uses-tls-between-exchange-online-customers"></a>Exchange Online Exchange Online müşterileri arasında TLS'i nasıl kullanır?
 
-Exchange Online her zaman veri merkezlerimizde TLS 1.2 Exchange Online diğer veri sunucularına olan bağlantıları şifreler. İletiyi, kurum içindeki bir alıcıya gönderirken, Exchange Online TLS kullanılarak otomatik olarak şifreli bir bağlantı üzerinden gönderilir. Exchange Online ayrıca, İletme Güvenliği kullanılarak güvenliği sağlanacak TLS kullanarak şifrelenmiş bağlantılar üzerinden diğer müşterilere de e-posta gönderir.
+Exchange Online sunucuları her zaman TLS 1.2 ile veri merkezlerimizdeki diğer Exchange Online sunuculara bağlantıları şifreler. Kuruluşunuzdaki bir alıcıya ileti gönderdiğinizde, Exchange Online tls kullanarak iletiyi otomatik olarak şifrelenmiş bir bağlantı üzerinden gönderir. Exchange Online ayrıca, İletme Gizliliği kullanılarak güvenliği sağlanan TLS kullanarak şifrelenmiş bağlantılar üzerinden diğer müşterilere gönderdiğiniz e-postaları da gönderir.
   
-## <a name="how-microsoft-365-uses-tls-between-microsoft-365-and-external-trusted-partners"></a>Dış Microsoft 365, güvenilir iş ortakları arasında Microsoft 365 TLS'yi nasıl kullanır?
+## <a name="how-microsoft-365-uses-tls-between-microsoft-365-and-external-trusted-partners"></a>Microsoft 365 Microsoft 365 ve dış, güvenilen iş ortakları arasında TLS'yi nasıl kullanır?
 
-Varsayılan olarak, Exchange Online *her zaman fırsat fırsatlarını kullanır*. Fırsatçı TLS, Exchange Online bağlantıları her zaman en güvenli TLS sürümüyle şifrelemeye çalıştığından, sonra da TLS şifreleme listesinde aşağı doğru ilerler ve her iki tarafta da anlaşılacak bir şifreleme bulana kadar çalışır. Bu alıcıya Exchange Online güvenli bağlantılar kullanmalarını sağlayacak şekilde yapılandırmadıysanız, alıcı kuruluş TLS şifrelemeyi desteklemiyorsa ileti varsayılan olarak şifreleme olmadan gönderilir. Fırsat TLS, çoğu işletme için yeterlidir. Ancak tıp, bankacılık veya kamu kuruluşları gibi uyumluluk gereksinimleri olan işletmeler için, Exchange Online'yi gerekli olacak şekilde yapılandırarak veya TLS'yi zorlarsiniz. Yönergeler için bkz. [Kendi adres mektuplarında bağlayıcıları kullanarak posta Office 365](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
+Varsayılan olarak, Exchange Online her zaman *fırsatçı TLS* kullanır. Fırsatçı TLS, Exchange Online bağlantıları her zaman önce TLS'nin en güvenli sürümüyle şifrelemeye çalıştığı, ardından her iki tarafın da kabul ettiği bir şifre bulana kadar TLS şifreleri listesinde aşağı doğru çalıştığı anlamına gelir. alıcıya gönderilen iletilerin güvenli bağlantılar kullanmasını sağlamak için Exchange Online yapılandırmadıysanız, alıcı kuruluş TLS şifrelemesini desteklemiyorsa ileti varsayılan olarak şifreleme olmadan gönderilir. Fırsatçı TLS çoğu işletme için yeterlidir. Bununla birlikte, tıbbi, bankacılık veya kamu kuruluşları gibi uyumluluk gereksinimleri olan işletmeler için Exchange Online TLS'yi zorunlu kılması veya zorunlu kılması için yapılandırabilirsiniz. Yönergeler için bkz[. Office 365'da bağlayıcıları kullanarak posta akışını yapılandırma](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
   
-TlS'yi organizasyonla güvenilir bir iş ortağı kuruluş arasında yapılandırmaya karar Exchange Online, güvenilir iletişim kanalları oluşturmak için zorunlu *TLS'yi* kullanabilirsiniz. Zorunlu TLS, iş ortağı kuruluşlarının size posta Exchange Online sertifikayla kimlik doğrulaması yapmalarını gerektirir. İş ortağının kendi sertifikalarını yönetmesi gerekir. Exchange Online e-posta sağlayıcısına gelmeden önce yetkisiz erişimden gönderirken iletileri korumak için bağlayıcıları kullanır. Posta akışını yapılandırmak için bağlayıcıları kullanma hakkında bilgi için bkz. Kendi adres mektuplarında [bağlayıcıları kullanarak posta Office 365](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
+Kuruluşunuzla güvenilir bir iş ortağı kuruluş arasında TLS yapılandırmaya karar verirseniz, Exchange Online *zorlanmış TLS* kullanarak güvenilir iletişim kanalları oluşturabilirsiniz. Zorlamalı TLS, iş ortağı kuruluşunuzun size posta göndermek için bir güvenlik sertifikasıyla Exchange Online kimliğini doğrulamasını gerektirir. İş ortağınızın kendi sertifikalarını yönetmesi gerekir. Exchange Online, gönderdiğiniz iletileri alıcının e-posta sağlayıcısına ulaşmadan önce yetkisiz erişimden korumak için bağlayıcıları kullanır. Posta akışını yapılandırmak için bağlayıcıları kullanma hakkında bilgi için bkz[. Office 365'da bağlayıcıları kullanarak posta akışını yapılandırma](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
   
 ## <a name="tls-and-hybrid-exchange-server-deployments"></a>TLS ve karma Exchange Server dağıtımları
 
-Karma bir Exchange dağıtımı yönetiyorsanız, posta kutuları yalnızca Exchange'te olan alıcılara posta göndermek için güvenlik sertifikası kullanarak şirket içi Exchange sunucunuzda kimlik Office 365 doğrulaması yapılması Microsoft 365. Sonuç olarak, şirket içi güvenlik sertifikalarınızı ve sunucularınızı yönetmek için kendi güvenlik Exchange gerekir. Ayrıca, bu sunucu sertifikalarını güvenli bir şekilde depolamanız ve korumanız gerekir. Karma dağıtımlarda sertifikaları yönetme hakkında daha fazla bilgi için bkz. [Karma dağıtımlar için sertifika gereksinimleri](/exchange/certificate-requirements).
+Karma Exchange dağıtımını yönetiyorsanız, posta kutuları yalnızca Office 365 olan alıcılara posta göndermek için şirket içi Exchange sunucunuzun güvenlik sertifikası kullanarak Microsoft 365 kimlik doğrulaması yapması gerekir. Sonuç olarak, şirket içi Exchange sunucularınız için kendi güvenlik sertifikalarınızı yönetmeniz gerekir. Ayrıca bu sunucu sertifikalarını güvenli bir şekilde depolamanız ve korumanız gerekir. Karma dağıtımlarda sertifikaları yönetme hakkında daha fazla bilgi için bkz. [Karma dağıtımlar için sertifika gereksinimleri](/exchange/certificate-requirements).
   
-## <a name="how-to-set-up-forced-tls-for-exchange-online-in-office-365"></a>Office 365'de zorlanan TLS Exchange Online nasıl ayarlanır Office 365
+## <a name="how-to-set-up-forced-tls-for-exchange-online-in-office-365"></a>Office 365'de Exchange Online için zorunlu TLS ayarlama
 
-Diğer Exchange Online, gönderilen ve alınan tüm e-postalarınızı güvenlik altına almak amacıyla zorlanan TLS'nin çalışması için, TLS gerektiren birden çok bağlayıcıyı ayarlaym gerekir. Kullanıcı posta kutularına gönderilen iletiler için bir bağlayıcıya ve kullanıcı posta kutularından gönderilen iletiler için de başka bir bağlayıcıya ihtiyacınız vardır. Bu bağlayıcıları, Exchange yönetim merkezinde Office 365. Yönergeler için bkz. [Kendi adres mektuplarında bağlayıcıları kullanarak posta Office 365](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
+Exchange Online müşterileri için, gönderilen ve alınan tüm e-postalarınızın güvenliğini sağlamak için TLS'nin çalışmasını zorunlu hale getirmek için TLS gerektiren birden fazla bağlayıcı ayarlamanız gerekir. Kullanıcı posta kutularına gönderilen iletiler için bir bağlayıcı ve kullanıcı posta kutularından gönderilen iletiler için başka bir bağlayıcı gerekir. Bu bağlayıcıları Office 365'daki Exchange yönetim merkezinde oluşturun. Yönergeler için bkz[. Office 365'da bağlayıcıları kullanarak posta akışını yapılandırma](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/use-connectors-to-configure-mail-flow).
 
-## <a name="tls-certificate-information-for-exchange-online"></a>İletişim için TLS sertifika Exchange Online
+## <a name="tls-certificate-information-for-exchange-online"></a>Exchange Online için TLS sertifika bilgileri
 
-Kullanıcı tarafından kullanılan sertifika Exchange Online aşağıdaki tabloda açıklanmıştır. İş ortağınız e-posta sunucusunda zorlamalı TLS ayarıyorsa, bu bilgiyi onlara sağlaymanız gerekir. Güvenlik nedenleriyle, sertifikalarımız zaman zaman değişir. Geçerli sertifika 24 Eylül 2020'den itibaren geçerlidir.
+Exchange Online tarafından kullanılan sertifika bilgileri aşağıdaki tabloda açıklanmıştır. İş ortağınız e-posta sunucusunda zorunlu TLS ayarlanıyorsa, bu bilgileri onlara sağlamanız gerekir. Güvenlik nedeniyle sertifikalarımız zaman zaman değişir. Geçerli sertifika 24 Eylül 2020'den itibaren geçerlidir.
 
-### <a name="current-certificate-information-valid-from-september-24-2020"></a>Geçerli sertifika bilgileri 24 Eylül 2020'den itibaren geçerli
+### <a name="current-certificate-information-valid-from-september-24-2020"></a>24 Eylül 2020'den itibaren geçerli sertifika bilgileri
   
 | Öznitelik | Değer |
 |:-----|:-----|
-|Sertifika yetkilisi kök issuer|DigiCert CA – 1|
+|Sertifika yetkilisi kök veren|DigiCert CA - 1|
 |Sertifika adı|mail.protection.outlook.com|
-|Kuruluş|Microsoft Corporation|
+|Organizasyon|Microsoft Corporation|
 |Kuruluş birimi|www.digicert.com|
-|Sertifika anahtar gücü|2048|
+|Sertifika anahtarı gücü|2048|
 
-## <a name="get-more-information-about-tls-certificates-and-microsoft-365-and-download-certificates"></a>TLS, sertifikalar ve sertifikalar hakkında daha fazla bilgi Microsoft 365 sertifika indirme ve indirme
+## <a name="get-more-information-about-tls-certificates-and-microsoft-365-and-download-certificates"></a>TLS, sertifikalar ve Microsoft 365 hakkında daha fazla bilgi edinin ve sertifikaları indirin
 
-[Microsoft 365 zincirleri ve sertifika indirmelerini yükleme](encryption-office-365-certificate-chains.md)
+[şifreleme zincirlerini ve sertifika indirmelerini Microsoft 365](encryption-office-365-certificate-chains.md)
 
 [Microsoft 365 şifreleme zincirleri ve sertifika indirmeleri - DOD ve GCC High](encryption-office-365-certificate-chains-itar.md)
 
-Desteklenen şifreleme paketlerinin listesi için bkz. Şifreleme [hakkında teknik başvuru ayrıntıları](technical-reference-details-about-encryption.md).
+Desteklenen şifreleme paketlerinin listesi için bkz. [Şifreleme hakkında teknik başvuru ayrıntıları](technical-reference-details-about-encryption.md).
   
-[İş ortağı kuruluşla güvenli posta akışı için bağlayıcıları ayarlama](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-for-secure-mail-flow-with-a-partner)
+[İş ortağı kuruluşuyla güvenli posta akışı için bağlayıcıları ayarlama](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-for-secure-mail-flow-with-a-partner)
   
 [Gelişmiş e-posta güvenliğine sahip bağlayıcılar](/previous-versions/exchange-server/exchange-150/dn942516(v=exchg.150))
   
-[Şifreleme Microsoft 365](encryption.md)
+[Microsoft 365'de şifreleme](encryption.md)

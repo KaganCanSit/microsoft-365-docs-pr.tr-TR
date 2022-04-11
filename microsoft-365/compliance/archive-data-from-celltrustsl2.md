@@ -1,5 +1,5 @@
 ---
-title: CellTrust SL2 platformundan verileri arşivle ve Microsoft 365
+title: CellTrust SL2 platformundaki verileri Microsoft 365 arşivle
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,104 +11,104 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Mobil iletişim verilerini içeri aktarma ve arşivlemek için CellTrust SL2 veri bağlayıcısı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 420da07fcb878f047d8252b713360be122c85870
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Mobil iletişim verilerini içeri aktarmak ve arşivlemek için CellTrust SL2 veri bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
+ms.openlocfilehash: e5e07e4138445e46cdd21edc0cfb01d871dd3b6e
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63324305"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64761164"
 ---
-# <a name="archive-data-from-celltrust-sl2-to-microsoft-365"></a>CellTrust SL2'den verileri arşivle'den Microsoft 365
+# <a name="archive-data-from-celltrust-sl2-to-microsoft-365"></a>CellTrust SL2'den Microsoft 365 verileri arşivle
 
-CellTrust SL2, mobil iletişim verilerini yakalar ve FINRA, HIPAA, FOIA ve TCPA gibi yasal düzenlemelere ilişkin elektronik keşif gereksinimlerini karşılamak için önde gelen arşivleme teknolojileriyle tümleştirilmiştir. SL2 Veri Bağlayıcısı, mobil iletişim öğelerini bu öğelere Microsoft 365. Bu makalede, arşivleme için CellTrust SL2 Veri Bağlayıcısı'Microsoft 365 SL2 veri bağlayıcısı kullanarak SL2'yi veri kaynağıyla tümleştirme işlemi açıklanmıştır. Bu işlemi tamamlamak için CellTrust SL2 hizmetine abone olduğunuz ve SL2 mimarisini biliyor olmanız gerekir. CellTrust SL2 hakkında daha fazla bilgi için bkz.<https://www.celltrust.com>
+CellTrust SL2 mobil iletişim verilerini yakalar ve FINRA, HIPAA, FOIA ve TCPA gibi düzenlemelere yönelik elektronik keşif gereksinimlerini karşılamak için önde gelen arşivleme teknolojileriyle tümleşir. SL2 Veri Bağlayıcısı mobil iletişim öğelerini Microsoft 365 aktarır. Bu makalede, arşivleme için CellTrust SL2 Veri Bağlayıcısı'nı kullanarak SL2'yi Microsoft 365 ile tümleştirme işlemi açıklanmaktadır. Bu işlemi tamamladığınızda CellTrust SL2 hizmetine abone olduğunuz ve SL2 mimarisi hakkında bilgi sahibi olduğunuz varsayılır. CellTrust SL2 hakkında bilgi için bkz <https://www.celltrust.com>. .
 
-Microsoft 365'ta kullanıcı posta kutularına veri aktarıldıktan sonra, Microsoft 365 Saklama, eBulma, Microsoft 365 bekletme ilkeleri ve iletişim uyumluluğu gibi uyumluluk özelliklerini uygulayabilirsiniz. Verileri başka bir dosyada içeri aktararak ve arşivlenen CellTrust SL2 Veri Bağlayıcısı'nın Microsoft 365, kurum kurum ve mevzuat ilkeleriyle uyumlu kalmalarına yardımcı olabilir.
+Veriler Microsoft 365 kullanıcı posta kutularına aktarıldıktan sonra, Dava Tutma, eBulma, Microsoft 365 bekletme ilkeleri ve iletişim uyumluluğu gibi Microsoft 365 uyumluluk özelliklerini uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için CellTrust SL2 Veri Bağlayıcısı'nı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
-## <a name="overview-of-archiving-with-the-celltrust-sl2-data-connector"></a>CellTrust SL2 Veri Bağlayıcısı ile arşivlemeye genel bakış
+## <a name="overview-of-archiving-with-the-celltrust-sl2-data-connector"></a>CellTrust SL2 Veri Bağlayıcısı ile arşivleme genel bakış
 
-CellTrust'ın SL2 platformu, birden çok kaynakta yer alan iletişim verilerini yakalar. SL2 veri kaynakları, Kişiler'den Kişiye (P2P) veya Uygulamaya Göre (A2P) kaynaktır. Bu makalede açıklanan işlem yalnızca P2P veri kaynaklarıyla ilgilidir. Tüm P2P veri kaynakları için, işbirliğinde en az bir taraf SL2 hizmetine abone olan bir SL2 kullanıcısıdır. Aşağıdaki genel bakış makalesinde, aynı tabloda CellTrust SL2 Veri Bağlayıcısı'nın Microsoft 365.
+CellTrust'ın SL2 platformu, birden çok kaynaktan gelen iletişim verilerini yakalar. SL2 veri kaynakları, Kişiden Kişiye (P2P) veya Uygulamadan Kişiye (A2P) veri kaynaklarıdır. Bu makalede açıklanan işlem yalnızca P2P veri kaynaklarıyla ilgili. Tüm P2P veri kaynakları için işbirliğindeki en az bir taraf, SL2 hizmetine abone olan bir SL2 kullanıcısıdır. Aşağıdaki genel bakış, Microsoft 365'de CellTrust SL2 Veri Bağlayıcısı'nı kullanma işlemini açıklar.
 
-![CellTrust SL2 hizmeti için iş akışı arşivleme.](../media/CellTrustSL2ConnectorWorkflow.png)
+![CellTrust SL2 hizmeti için arşivleme iş akışı.](../media/CellTrustSL2ConnectorWorkflow.png)
 
-1. SL2 kullanıcıları, iş veya hizmetlerde SL2 hizmetlerinden veri gönderir ve Microsoft Azure.
+1. SL2 kullanıcıları Microsoft Azure'da SL2 hizmetlerine veri gönderir ve bu hizmetlerden veri alır.
 
-2. CellTrust'ın SL2 Bulut Hizmeti ortamında, kuruluşun SL2 etki alanı vardır. Etki alanınız bir veya daha fazla kuruluş birimine (OU) sahip olabilir. SL2 Bulut Hizmeti, verilerinizi Microsoft Azure platformunda üst düzeyde güvenli bir alana aktararak verilerinizin son derece güvenli bir Microsoft Azure sağlar. SL2 planınıza (Enterprise, SMB veya Kamu) bağlı olarak, etki alanınız Microsoft Azure Global'da veya Microsoft Azure barındırıldı.
+2. Kuruluşunuzun CellTrust'ın SL2 Bulut Hizmeti ortamında bir SL2 etki alanı vardır. Etki alanınızda bir veya daha fazla kuruluş birimi (OU) olabilir. SL2 Bulut Hizmeti, verilerinizi Microsoft Azure platformundaki son derece güvenli bir alana aktarır ve böylece verileriniz hiçbir zaman Microsoft Azure ortamından ayrılmaz. SL2 planınıza (Enterprise, SMB veya Kamu) bağlı olarak, etki alanınız Microsoft Azure Global veya Microsoft Azure Kamu'da barındırılır.
 
-3. CellTrust SL2 Veri Bağlayıcısı'ı oluşturdukta, etki alanınız ve OU'lar (SL2 planınız ne olursa olsun) verileri Microsoft 365. Veri akışı, veri kaynakları, OUs veya tek başına etki alanı temel alarak raporlamayı destekleyecek şekilde yapılandırılmıştır. Sonuç olarak, kuruma tüm veri kaynaklarınızı akışla akışı için yalnızca bir bağlayıcının Microsoft 365.
+3. CellTrust SL2 Veri Bağlayıcısı'nı oluşturduktan sonra etki alanınız ve OU'larınız (SL2 planınızdan bağımsız olarak) Microsoft 365'a veri göndermeye başlar. Veri akışı, veri kaynaklarına, OU'lara veya etki alanına göre raporlamayı destekleyecek şekilde yapılandırılmıştır. Sonuç olarak, kuruluşunuzun tüm veri kaynaklarınızı Microsoft 365 beslemek için yalnızca bir bağlayıcıya ihtiyacı vardır.
 
-4. Bağlayıcı, her eşlenmiş kullanıcının altında **CellTrust SL2 Office 365 bir lisansa sahip bir klasör oluşturur**. Bu eşleme, bir e-posta adresi kullanarak CellTrust SL2 Office 365 bir posta kutusuna bağlar. CellTrust SL2'deki bir kullanıcı kimliğinde Office 365 yoksa, kullanıcının verileri arşivlenir.
+4. Bağlayıcı, eşlenen her kullanıcının altında **CellTrust SL2** adlı uygun bir Office 365 lisansına sahip bir klasör oluşturur. Bu eşleme, bir CellTrust SL2 kullanıcısını bir e-posta adresi kullanarak Office 365 posta kutusuna bağlar. CellTrust SL2'deki bir kullanıcı kimliğinin Office 365 eşleşmesi yoksa, kullanıcının verileri arşivlenmez.
 
 ## <a name="before-you-set-up-a-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-- CellTrust SL2 bulut hizmeti ortamında etki alanınız olduğunu doğrulayın. SL2 üretim veya deneme etki alanı alma hakkında ek bilgi için [CellTrust ile iletişime geçin](https://www.celltrust.com/contact-us/#form).
+- CellTrust SL2 bulut hizmeti ortamında bir etki alanınız olduğunu doğrulayın. Üretim veya deneme SL2 etki alanı edinme hakkında ek bilgi için [CellTrust'a başvurun](https://www.celltrust.com/contact-us/#form).
 
-- SL2 etki alanının yönetici hesabına erişmek için kimlik bilgilerini alın.
+- SL2 etki alanınızın yönetici hesabına erişmek için kimlik bilgilerini alın.
 
-- 1. Adımda CellTrust SL2 veri bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yöneticisi rolü atanabilir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- 1. Adımda CellTrust SL2 veri bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, Microsoft 365 uyumluluk merkezi **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft 365 uyumluluk merkezi İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu CellTrust veri bağlayıcısı ABD GCC tarafından Microsoft 365 ortamlarda kullanılabilir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu CellTrust veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir ve bu nedenle Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-create-a-celltrust-sl2-connector"></a>1. Adım: CellTrust SL2 bağlayıcısı oluşturma
 
-İlk adım, dosyanın içinde bir veri bağlayıcısı Microsoft 365 uyumluluk merkezi.
+İlk adım, Microsoft 365 uyumluluk merkezi bir veri bağlayıcısı oluşturmaktır.
 
-1. Sol gezinti <https://compliance.microsoft.com> bölmesinde **Veri bağlayıcıları'nın** üzerine gidin ve bu bağlayıcılara tıklayın.
+1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** <https://compliance.microsoft.com> gidin ve tıklayın.
 
-2. Genel Bakış **sekmesinde Filtre'ye** **tıklayın,** **CellTrust'ı** seçin ve filtreyi uygula'yı seçin.
+2. **Genel Bakış** sekmesinde **Filtre'ye** tıklayın ve **CellTrust'a Göre'yi** seçin ve ardından filtreyi uygulayın.
 
-   ![CellTrust bağlayıcılarını görüntülemek için filtreyi yapılandır.](../media/DataConnectorsFilter.png)
+   ![CellTrust bağlayıcılarını görüntülemek için filtreyi yapılandırın.](../media/DataConnectorsFilter.png)
 
-3. **CellTrust SL2 (önizleme)'ye tıklayın**.
+3. **CellTrust SL2 (önizleme)'** ye tıklayın.
 
-4. **CellTrust SL2 (önizleme) ürün açıklaması** sayfasında Bağlayıcı **ekle'ye tıklayın**.
+4. **CellTrust SL2 (önizleme)** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
-5. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+5. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-6. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve Ardından Sonraki'ye **tıklayın**. Siz girdikten sonra, bağlayıcıyı **Veri bağlayıcıları** sayfasında girersiniz.
+6. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve **İleri'ye** tıklayın. Girdiğiniz ad, bağlayıcıyı oluşturduktan sonra **Veri bağlayıcıları** sayfasında tanımlar.
 
-7. **CellTrust hesabınızla oturum açın sayfasında CellTrust'da** **Oturum Açın'a tıklayın**. Yeni bir tarayıcı penceresinde, güven için **CellTrust Portalı'Microsoft 365** yeniden yönlendirildisiniz.
+7. **CellTrust hesabınızda oturum açın sayfasında,** **CellTrust'da Oturum Aç'a** tıklayın. Yeni bir tarayıcı penceresinde **Microsoft 365 için CellTrust Portalı'na** yönlendirilirsiniz.
 
-## <a name="step-2-select-the-domains-or-ous-to-archive"></a>2. Adım: Arşivlemek istediğiniz etki alanlarını veya OUs'u seçin
+## <a name="step-2-select-the-domains-or-ous-to-archive"></a>2. Adım: Arşive eklenecek etki alanlarını veya OU'ları seçin
 
-Sonraki adım, CellTrust SL2 etki alanınız için bir yönetici hesabında oturum açmalı ve arşivlenen etki alanlarını ve OUS'ları Microsoft 365.
+Bir sonraki adım, CellTrust SL2 etki alanınız için bir yönetici hesabında oturum açmak ve Microsoft 365 arşivleyebilmek için etki alanlarını ve OU'ları seçmektir.
 
-1. CellTrust Microsoft 365 **Bağlayıcısı** sayfasında, oturum açma sayfasını görüntülemek için SL2 bulut hizmetinin ortamınızı seçin.
+1. CellTrust **Microsoft 365 Bağlayıcısı** sayfasında, oturum açma sayfasını görüntülemek için SL2 bulut hizmetinde ortamınızı seçin.
 
-   Normalde, ortamınızı temsil eden bir seçenek görüyor olur. Öte yandan, etki alanlarınız birden çok ortamda yer aldısa, her ortam için seçenekler de vardır. Seçiminizi yaptıktan sonra SL2 oturum açma sayfasına yönlendirilin.
+   Genellikle ortamınızı temsil eden bir seçenek görmeniz gerekir. Ancak, birden fazla ortamda etki alanınız varsa, her ortam için seçenekleri görürsünüz. Seçim yaptıktan sonra SL2 oturum açma sayfasına yönlendirilirsiniz.
 
 2. Etki Alanı veya OU Yönetici hesabı kimlik bilgilerinizle oturum açın.
 
-   SL2 etki alanı yöneticisi olarak oturum açın, etki alanı adınızı ve bu etki alanındaki OUs'ları seçin. OUS'niz yoksa, yalnızca etki alanının adını görüyorsunuz. OU Yöneticisi olarak oturum açmak için yalnızca OU'nizin adını görüyorsunuz.
+   SL2 etki alanı yöneticisi olarak oturum açarsanız, etki alanınızın adını ve o etki alanındaki OU'ları görürsünüz. OU'larınız yoksa, yalnızca etki alanınızın adını görürsünüz. OU Yöneticisi olarak oturum açarsanız yalnızca OU'nuzun adını görürsünüz.
 
-3. Arşivlemek istediğiniz iş birimlerini etkinleştirin. Etki alanı seçilirken OUs otomatik olarak seç olmaz. Arşivlemek için her OU'yi ayrı olarak etkinleştirmeniz gerekir.
+3. Arşivlediğiniz iş birimlerini etkinleştirin. Etki alanı seçildiğinde OU'lar otomatik olarak seçilmez. Her OU'yı arşivlemeniz için ayrı ayrı etkinleştirmeniz gerekir.
 
-   ![Arşivlemek için OUs'u etkinleştirin.](../media/EnableCellTrustOUs.png)
+   ![Arşiv için OU'ları etkinleştirin.](../media/EnableCellTrustOUs.png)
 
-4. Seçimlerinizi tamamladikten sonra, tarayıcı penceresini kapatın ve çalışma sayfasındaki sihirbaz Microsoft 365 uyumluluk merkezi. Birkaç saniye sonra, sihirbaz kullanıcıları eşlemenin bir sonraki adımına otomatik olarak ilerler.
+4. Seçimlerinizi bitirdiğinizde tarayıcı penceresini kapatın ve Microsoft 365 uyumluluk merkezi sihirbaz sayfasına dönün. Birkaç saniye sonra sihirbaz otomatik olarak kullanıcıları eşlemenin bir sonraki adımına ilerler.
 
 ## <a name="step-3-map-users-and-complete-the-connector-setup"></a>3. Adım: Kullanıcıları eşleme ve bağlayıcı kurulumunu tamamlama
 
-Son adım, kullanıcıları eşlemek ve aşağıdaki bağlantıda bağlayıcı kurulumunu tamamlamak Microsoft 365 uyumluluk merkezi.
+Son adım, kullanıcıları eşlemek ve Microsoft 365 uyumluluk merkezi bağlayıcı kurulumunu tamamlamaktır.
 
-1. Kullanıcı eşleme **sayfasında, kullanıcıların** **e-posta** adresi hem SL2'de hem de Başka bir dosyada aynı ise Otomatik kullanıcı eşlemesini Microsoft 365. Aksi takdirde, kullanıcıların SL2 adreslerini kendi adres defteri adreslerine eşleen bir CSV dosyası yükerek e-posta Microsoft 365 gerekir.
+1. Kullanıcılar için e-posta adresi hem SL2 hem de Microsoft 365 aynıysa, **Kullanıcı eşleme** sayfasında **Otomatik kullanıcı eşlemesini etkinleştir'i** seçin. Aksi takdirde, kullanıcıların SL2 adresini Microsoft 365 adresleriyle eşleyen bir CSV dosyasını karşıya yükleyerek e-posta adreslerini el ile kullanmanız gerekir.
 
-2. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için** Son'a tıklayın.
+2. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve ardından **Son'a** tıklayarak bağlayıcıyı oluşturun.
 
-   Yeni bağlayıcı, Veri bağlayıcıları **sayfasındaki listeye** eklenir.
+   Yeni bağlayıcı **, Veri bağlayıcıları** sayfasındaki listeye eklenir.
 
-## <a name="get-help-from-celltrust"></a>CellTrust'dan yardım al
+## <a name="get-help-from-celltrust"></a>CellTrust'dan yardım alma
 
-CellTrust SL2 veri bağlayıcısı ayarlama konusunda yardım almak için [CellTrust](https://www.celltrust.com/contact-us/#support) Müşteri Desteği sayfasına bakın.
+CellTrust SL2 veri bağlayıcısını ayarlama konusunda yardım için CellTrust ile iletişim kurma hakkında ayrıntılar için CellTrust [Müşteri Desteği sayfasına](https://www.celltrust.com/contact-us/#support) bakın.
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- Etki alanı yöneticisi, etki alanı için veya bu etki alanındaki herhangi bir OUs için bir bağlayıcı kurabilirsiniz. OU Yönetici hesabını kullanıyorsanız, yalnızca belirli bir OU için bağlayıcı kurabilirsiniz.
+- Etki alanı yöneticisi, etki alanı için bir bağlayıcı veya o etki alanındaki herhangi bir OU ayarlayabilir. OU Yönetici hesabını kullanıyorsanız, yalnızca ilgili OU için bir bağlayıcı ayarlayabilirsiniz.
 
-- Yukarıdaki adımları başarıyla tamamlamak için, size bir lisans Microsoft 365 E5 ve yönetici hakları için Microsoft Office sahip olmak gerekir.
+- Yukarıdaki adımları başarıyla tamamlamak için Microsoft 365 E5 lisansına sahip olmanız ve uygun Microsoft Office yönetici haklarına sahip olmanız gerekir.
 
-- Yeni bağlayıcıyı test etmek için SL2 mobil uygulamanızı veya SL2 portalını kullanarak bir metin mesajı gönderin. Gelen Kutunuza Microsoft 365 ve Gelen **Kutunuzda CellTrust SL2** klasörünü açın. Posta kutunuzda kısa mesajların yer alması birkaç dakika sürebilir.
+- Yeni bağlayıcıyı test etmek için SL2 mobil uygulamanızı kullanarak veya SL2 portalınızdan kısa mesaj gönderin. Microsoft 365 posta kutunuza gidin ve Gelen Kutunuzda **CellTrust SL2** klasörünü açın. Kısa mesajların posta kutunuzda görünmesi birkaç dakika sürebilir.
 
-- Birçok yasa ve düzenleme, elektronik iletişimin, istenen durumlarda kanıt olarak üretilecek şekilde korunmasını gerektirir. Elektronik Keşif (eBulma), elektronik iletişimin üretimine uyumlu olmak için kullanılır. Enterprise Arşivleme (EIA) çözümleri eBulma gerçekleştirmek için tasarlanmıştır ve bekletme ilkesi yönetimi, veri sınıflandırması ve içerik idaresi gibi özellikler sağlar. Microsoft 365, kuruluşu etkileyen yasal düzenlemelere ve standartlara uyumluluk için uzun vadeli bir bekletme çözümü sunar.
+- Birçok yasa ve düzenleme, elektronik iletişimin istendiğinde kanıt olarak üretilebileceği şekilde korunmasını gerektirir. Elektronik Bulma (eKeşif) elektronik iletişimin üretimine uyum sağlamak için kullanılır. Enterprise Bilgi Arşivleme (EIA) çözümleri, eBulma gerçekleştirmek için tasarlanmıştır ve bekletme ilkesi yönetimi, veri sınıflandırması ve içerik denetimi gibi özellikler sağlar. Microsoft 365, kuruluşunuzu etkileyen düzenlemelere ve standartlara uyum için uzun vadeli bir saklama çözümü sunar.
 
-- Bu belgede *kullanılan arşivleme* terimi, dijital bir Bilgi Arşivleme (EIA) çözümünde kullanım bağlamında arşivleme Enterprise ifade eder. EIA çözümlerinin yasal işlemler, mahkemeler, denetimler ve soruşturmalar için belgeler üreten eBulma özellikleri vardır. Olağanüstü durum kurtarma ve iş sürekliliği sağlamak için kullanılan yedekleme ve geri yükleme bağlamında arşivleme, bu belgenin içindeki terimin hedeflenen kullanımı değildir.
+- Bu belgede kullanılan *arşivleme* terimi, bir Enterprise Bilgi Arşivleme (ÇED) çözümü içinde kullanım bağlamında arşivlemeyi ifade eder. EIA çözümleri, yasal işlemler, davalar, denetimler ve soruşturmalar için belgeler üreten eBulma özelliklerine sahiptir. Olağanüstü durum kurtarma ve iş sürekliliği için kullanılan yedekleme ve geri yükleme bağlamında arşivleme, bu belgedeki terimin amaçlanan kullanımı değildir.

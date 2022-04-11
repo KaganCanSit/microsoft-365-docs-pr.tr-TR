@@ -1,5 +1,5 @@
 ---
-title: Şablondan DLP ilkesi oluşturma
+title: Bir şablondan DLP ilkesi oluşturma
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -19,72 +19,72 @@ search.appverid:
 ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkCOMPLIANCE
-description: Bu makalede, DLP ilkelerinin nasıl oluşturularak DLP'ye dahil edilen şablonlardan birini kullanarak nasıl Office 365.
-ms.openlocfilehash: 965e5198887ec64072efffd35ffa7739c90af6a4
-ms.sourcegitcommit: e3bff611439354e6339bb666a88682078f32ec13
+description: Bu makalede, Office 365'da yer alan şablonlardan birini kullanarak DLP ilkeleri oluşturmayı öğreneceksiniz.
+ms.openlocfilehash: 3617e1f067f4b29470feedcf7381b41a400887f9
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63014375"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64759113"
 ---
-# <a name="create-a-dlp-policy-from-a-template"></a>Şablondan DLP ilkesi oluşturma
+# <a name="create-a-dlp-policy-from-a-template"></a>Bir şablondan DLP ilkesi oluşturma
 
-DLP ilkeleriyle çalışmaya başlamanın en kolay ve en yaygın yolu, Uyumluluk Merkezi'nde yer alan şablonlardan Microsoft 365 kullanmaktır. Bu şablonlardan birini olduğu gibi kullanabilir veya kuralları, kuruluşun belirli uyumluluk gereksinimlerini karşılayacak şekilde özelleştirebilirsiniz.
+DLP ilkelerini kullanmaya başlamanın en kolay ve en yaygın yolu, Microsoft 365 Uyumluluk merkezinde yer alan şablonlardan birini kullanmaktır. Bu şablonlardan birini olduğu gibi kullanabilir veya kuruluşunuzun özel uyumluluk gereksinimlerini karşılamak için kuralları özelleştirebilirsiniz.
 
-Microsoft 365, çok çeşitli genel mevzuat ve iş politikası ihtiyaçlarını karşılamanıza yardımcı olacak, kullanıma hazır 40'tan fazla şablon içerir. Bkz. [Tam liste](dlp-policy-reference.md#policy-templates) için ilke şablonları. 
+Microsoft 365, çok çeşitli ortak mevzuat ve iş politikası gereksinimlerini karşılamanıza yardımcı olabilecek 40'ın üzerinde kullanıma hazır şablon içerir. Bkz. Tam liste için [ilke şablonları](dlp-policy-reference.md#policy-templates) . 
 
-Var olan kuralları değiştirerek veya yenilerini ekleyerek şablonun ince ayarını da kullanabilirsiniz. Örneğin, bir kurala yeni tür hassas bilgi ekleyebilir, kuralda sayıları değiştirerek tetiklenmeyi zorlaştırıp kolaylaştırabilirsiniz, kişilerin bir işletme gerekçesi sağlayarak kuralda eylemleri geçersiz k olmasına izin ve yerine gelen bildirimleri ve olay raporlarını değiştirebilirsiniz. DLP ilkesi şablonu, birçok yaygın uyumluluk senaryosu için esnek bir başlangıç noktasıdır.
+Mevcut kurallarından herhangi birini değiştirerek veya yenilerini ekleyerek bir şablona ince ayar yapabilirsiniz. Örneğin, bir kurala yeni türde hassas bilgiler ekleyebilir, kuraldaki sayıları değiştirerek tetiklenmesini zorlaştırabilir veya kolaylaştırabilir, kişilerin bir iş gerekçesi sağlayarak bir kuraldaki eylemleri geçersiz kılabilir veya bildirimlerin ve olay raporlarının gönderileceği kişileri değiştirebilirsiniz. DLP ilkesi şablonu, birçok yaygın uyumluluk senaryosu için esnek bir başlangıç noktasıdır.
 
-Ayrıca, varsayılan kuralların olmadığını Özel şablonunu seçebilir ve DLP ilkenizi sıfırdan yapılandırarak, kuruma özel uyumluluk gereksinimlerini karşılarsınız.
+Ayrıca, varsayılan kuralları olmayan Özel şablonu seçebilir ve kuruluşunuza özgü uyumluluk gereksinimlerini karşılamak için DLP ilkenizi sıfırdan yapılandırabilirsiniz.
 
 ## <a name="permissions"></a>İzinler
 
-DLP ilkeleri oluşturacak uyumluluk ekibimizin üyelerinin Uyumluluk Merkezi için izinleri olmalıdır. Varsayılan olarak, kiracı yöneticiniz uyumluluk görevlilerine ve diğer kullanıcılara erişim izni vetir. Şu adımları izleyin:
+DLP ilkeleri oluşturacak uyumluluk ekibinizin üyelerinin Uyumluluk Merkezi'ne yönelik izinlere sahip olması gerekir. Varsayılan olarak, kiracı yöneticinizin erişimi uyumluluk görevlilerine ve diğer kişilere erişim verebilir. Şu adımları izleyin:
   
-1. Grup içinde bir Microsoft 365 oluşturun ve uyumluluk yetkililerini ekleyin.
+1. Microsoft 365'de bir grup oluşturun ve gruba uyumluluk görevlileri ekleyin.
     
-2. Güvenlik Uyumluluk Merkezi'nin **İzinler** sayfasında bir rol &amp; grubu oluşturun. 
+2. Güvenlik &amp; Uyumluluk Merkezi'nin **İzinler** sayfasında bir rol grubu oluşturun. 
 
-3. Rol grubunu oluştururken, rol grubuna **aşağıdaki rolü eklemek** için Rolleri Seçin bölümünü kullanın: **DLP Uyumluluk Yönetimi**.
+3. Rol grubunu oluştururken Rol **Seç** bölümünü kullanarak rol grubuna şu rolü ekleyin: **DLP Uyumluluk Yönetimi**.
     
-4. Daha önce **oluşturduğunuz** üye grubunu rol Microsoft 365 için Üye Seç bölümünü kullanın.
+4. Daha önce oluşturduğunuz Microsoft 365 grubunu rol grubuna eklemek için **Üyeleri Seç** bölümünü kullanın.
 
-DLP **ilkelerinin ve DLP** raporlarının yalnızca görüntüleme ayrıcalıklarına sahip rol grubu oluşturmak için Yalnızca Görüntüleme DLP Uyumluluk Yönetimi rolünü kullanın.
+DLP ilkeleri ve DLP raporları için yalnızca görüntüleme ayrıcalıklarına sahip rol grubu oluşturmak için **Yalnızca Görüntüleme DLP Uyumluluk Yönetimi** rolünü kullanın.
 
-Daha fazla bilgi için bkz[. Kullanıcılara Uyumluluk Merkezi'Office 365 erişme izni verme](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
+Daha fazla bilgi için bkz. [Kullanıcılara Office 365 Uyumluluk Merkezi'ne erişim verme](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
   
-İlkeleri uygulamak için değil de DLP ilkesi oluşturmak ve uygulamak için bu izinler gereklidir.
+Bu izinler, ilkeleri zorlamamak için bir DLP ilkesi oluşturmak ve uygulamak için gereklidir.
 
 ### <a name="roles-and-role-groups-in-preview"></a>Önizlemede Roller ve Rol Grupları
 
-Önizlemede, erişim denetimlerinize ince ayar yapmak için test etmek için deney erişiminiz olan roller ve rol grupları vardır.
+Önizlemede, erişim denetimlerinizde ince ayar yapmak için test yapabileceğiniz roller ve rol grupları vardır.
 
-İşte önizlemede olan Microsoft Bilgi Koruması (MIP) rollerinin listesi. Bu roller hakkında daha fazla bilgi edinmek [için Güvenlik ve Uyumluluk Merkezi'& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
+Önizleme aşamasında olan Microsoft Bilgi Koruması (MIP) rollerinin listesi aşağıdadır. Bunlar hakkında daha fazla bilgi edinmek için bkz [. Güvenlik & Uyumluluk Merkezi'ndeki Roller](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Bilgi Koruması Yöneticisi
-- Bilgi Koruma Analisti
-- Bilgi Koruma Koruma Koruma Koruması
-- Bilgi Koruma Okuyucusu
+- Information Protection Yöneticisi
+- Information Protection Analisti
+- Information Protection Araştırmacısı
+- Information Protection Okuyucu
 
-Önizlemede olan MIP rol gruplarının listesi burada ve ve şekildedir. Bu gruplar hakkında daha fazla bilgi [edinmek için Güvenlik ve Uyumluluk Merkezi'nde & bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center).
+Önizleme aşamasında olan MIP rol gruplarının listesi aşağıdadır. hakkında daha fazla bilgi edinmek için bkz [. Güvenlik & Uyumluluk Merkezi'ndeki Rol grupları](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center)
 
-- Bilgi Koruması
-- Bilgi Koruması Yöneticileri
-- Bilgi Koruma Analistleri
-- Bilgi Koruma Koruma KorumaLarı
-- Bilgi Koruma Okuyucuları
+- Information Protection
+- Information Protection Yöneticileri
+- Information Protection Analistleri
+- Information Protection Araştırmacıları
+- Information Protection Okuyucular
 
 ### <a name="create-the-dlp-policy-from-a-template"></a>Şablondan DLP ilkesi oluşturma
 
-1. Oturum <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">açma Microsoft 365 uyumluluk merkezi.</a>
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> oturum açın.
 
-2. Uyumluluk Merkezi'nin sol \> gezintisinde **Çözümler** \> \> **Veri kaybı önleme** **İlkeleri** \> \> **+ İlke oluştur**.
+2. Uyumluluk Merkezi'nde \> sol gezinti \> **Çözümleri** \> **Veri kaybı önleme** \> **İlkeleri** \> **+ İlke oluştur'u seçin**.
 
-    ![İlke oluştur düğmesi.](../media/b1e48a08-92e2-47ca-abdc-4341694ddc7c.png)
+    ![İlke düğmesi oluşturun.](../media/b1e48a08-92e2-47ca-abdc-4341694ddc7c.png)
           
-3. Sonraki seçeneğine ihtiyacınız olan hassas bilgi türlerini koruyan DLP ilkesi şablonunu \> **seçin**.
+3. **İleri'ye** ihtiyacınız \> olan hassas bilgi türlerini koruyan DLP ilkesi şablonunu seçin.
 
-4. İlkeyi Sonraki olarak \> **adlayın**.
+4. İlkeyi \> **İleri olarak adlandırın**.
  
 <!--In this example, you'll select **Privacy** \> **U.S. Personally Identifiable Information (PII) Data** because it already includes most of the types of sensitive information that you want to protect - you'll add a couple later.
 
@@ -92,38 +92,38 @@ Daha fazla bilgi için bkz[. Kullanıcılara Uyumluluk Merkezi'Office 365 erişm
 
     ![Page for choosing a DLP policy template.](../media/775266f6-ad87-4080-8d7c-97f2e7403b30.png)-->
 
-5. DLP ilkesi tarafından korunmasını istediğiniz konumları seçmek ve her konum için varsayılan kapsamı kabul etmek veya kapsamı özelleştirmek için. Bkz [. Tanınma](dlp-policy-reference.md#locations) seçenekleri için konumlar.
+5. DLP ilkesinin korumasını istediğiniz konumları seçmek ve her konum için varsayılan kapsamı kabul etmek veya kapsamı özelleştirmek için. Bkz [. Kapsam](dlp-policy-reference.md#locations) belirleme seçenekleri için konumlar.
 
 6. \> **İleri**'yi seçin.
  
 1. Şunlardan birini yapın:
 
-   - Düzen **menüsünde Tüm Office 365** \> **seçin**.
-   - Sonraki **için Belirli konumları seçmeme izin ver'i** \> **seçin**. Bu örnek için bunu seçin.
+   - **sonraki** **Office 365 tüm konumlar'ı** \> seçin.
+   - Belirli konumları \> **seçmeme izin ver** **İleri'yi** seçin. Bu örnek için bunu seçin.
 
-   Tüm e-posta hesapları veya tüm Exchange hesapları gibi bir konumun tamamını dahil etmek veya dışarıda OneDrive için, söz konusu konumun durumunu açın veya kapatın.
+   Tüm Exchange e-posta veya tüm OneDrive hesapları gibi bir konumun tamamını dahil etmek veya hariç tutmak için bu konumun **Durumunu** açın veya kapatın.
 
-   Yalnızca belirli siteleri veya SharePoint hesapları OneDrive İş için Durum'u açık olarak değiştirin ve sonra belirli siteleri  veya hesapları seçmek için Ekle'nin altındaki bağlantılara  tıklayın. Bir siteye ilke uygulandığında, bu ilkede yapılandırılan kurallar otomatik olarak o sitenin tüm alt sitelere uygulanır.
+   Yalnızca belirli SharePoint siteleri veya OneDrive İş hesaplarını eklemek için **Durum'u** açık olarak değiştirin ve **ardından Ekle** altındaki bağlantılara tıklayarak belirli siteleri veya hesapları seçin. Bir siteye ilke uyguladığınızda, bu ilkede yapılandırılan kurallar otomatik olarak o sitenin tüm alt sitelerine uygulanır.
 
-   ![DLP ilkesi uygulananın konumları için seçenekler.](../media/all-locations.png)
+   ![DLP ilkesinin uygulanabileceği konumlar için seçenekler.](../media/all-locations.png)
 
-   Bu örnekte, tüm OneDrive İş hesaplarında depolanan hassas bilgileri korumak için hem Exchange e-postası hem  de **SharePoint** sitesi için Durum bilgisini kapatın ve OneDrive hesapları için **durum bilgisini açık bırakın**.
+   Bu örnekte, tüm OneDrive İş hesaplarında depolanan hassas bilgileri korumak için hem **Exchange e-posta** hem de **SharePoint sitelerin** **Durumu'nu** kapatın ve **OneDrive hesapları** için **Durum'u** açık bırakın.
 
-7. Gözden **Geçir'i seçin ve sonraki şablondan varsayılan ayarları** \> **özelleştirin**.
+7. **Gözden geçir'i seçin ve şablondan** \> varsayılan ayarları **özelleştirin İleri**.
 
-8. DLP ilkesi şablonu, belirli hassas bilgi türlerini algılayan ve bu türlerde işlemde layan ve bu eylemler için önceden tanımlanmış koşullar ve eylemler içeren önceden tanımlanmış kurallar içerir. Var olan kuralları düzenleyebilir, silebilir veya kapatarak yenilerini  eklersiniz. Bitir bittiğinde, Sonraki'ne **tıklayın**.
+8. DLP ilke şablonu, belirli türlerdeki hassas bilgileri algılayan ve bu tür hassas bilgileri algılayan ve buna göre hareket eden koşullar ve eylemler içeren önceden tanımlanmış kurallar içerir. Mevcut kurallardan herhangi birini düzenleyebilir, silebilir veya kapatabilir ya da yenilerini ekleyebilirsiniz. İşiniz bittiğinde **İleri'ye** tıklayın.
 
-    ![US PII ilkesi şablonunda genişletilmiş kurallar.](../media/3bc9f1b6-f8ad-4334-863a-24448bb87687.png)
+    ![US PII ilke şablonunda genişletilmiş kurallar.](../media/3bc9f1b6-f8ad-4334-863a-24448bb87687.png)
 
-9. Bu içerik, kuruluş içinde veya kuruluş dışında paylaşılırken bu konumlardan birini seçtiysanız, algılamayı seçin:
+9. Bu konumlardan birini seçtiyseniz, bu içeriğin kuruluşunuz içinde veya kuruluşunuzun dışında ne zaman paylaşileceğini algılamayı seçin:
     1. Exchange
     1. SharePoint
     1. OneDrive
-    1. Teams Sohbet ve Kanal İletileri 
+    1. Sohbet ve Kanal İletilerini Teams 
 
 10. **İleri**'yi seçin.
 
-11. **2010'da**, Koruma eylemleri sayfasında ilke ipucu bildirimlerini ve bildirim e-postalarını özelleştirebilirsiniz. Etkinleştir **İçerik ilke koşullarıyla eş olduğunda, ilke** ipuçlarını kullanıcılara gösterin ve onlara e-posta bildirimi gönderin, ardından İpucu ve **e-postayı özelleştir'i seçin**.
+11. İsterseniz **Koruma eylemleri** sayfasında ilke ipucu bildirimlerini ve bildirim e-postalarını özelleştirebilirsiniz. **İçerik ilke koşullarıyla eşleştiğinde seçeneğini etkinleştirin, ilke ipuçlarını kullanıcılara gösterin ve onlara bir e-posta bildirimi gönderin**, ardından **İpucunu ve e-postayı özelleştir'i** seçin.
 12. **İleri**'yi seçin.
 
 
@@ -215,7 +215,7 @@ Here are the different statuses and what they mean.
 
 |Status|Explanation|
 |---|---|
-|**Turning on…**|The policy is being deployed to the content sources that it includes. The policy is not yet enforced on all sources.|
+|**Turning on...**|The policy is being deployed to the content sources that it includes. The policy is not yet enforced on all sources.|
 |**Testing, with notifications**|The policy is in test mode. The actions in a rule are not applied, but policy matches are collected and can be viewed by using the DLP reports. Notifications about policy matches are sent to the specified recipients.|
 |**Testing, without notifications**|The policy is in test mode. The actions in a rule are not applied, but policy matches are collected and can be viewed by using the DLP reports. Notifications about policy matches are not sent to the specified recipients.|
 |**On**|The policy is active and enforced. The policy was successfully deployed to all its content sources.|

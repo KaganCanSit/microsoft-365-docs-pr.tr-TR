@@ -1,5 +1,5 @@
 ---
-title: Microsoft Uyumluluk Yöneticisi premium değerlendirmeler denemesi çalışma kitabı
+title: Microsoft Compliance Manager premium değerlendirmeleri deneme playbook'u
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -14,84 +14,84 @@ ROBOTS: NOINDEX, NOFOLLOW
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Uyumluluk Yöneticisi premium değerlendirmeleri deneme çalışma kitabı.
-ms.openlocfilehash: 47b9e37cb3b73733028254849048cf1f0f058448
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+description: Microsoft Compliance Manager premium değerlendirmeleri deneme playbook'u.
+ms.openlocfilehash: f50060fa5e9f037fbe1301496f18422684c38d3d
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63680082"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64759865"
 ---
-# <a name="trial-playbook-microsoft-compliance-manager-premium-assessments"></a>Deneme çalışma kitabı: Microsoft Uyumluluk Yöneticisi premium değerlendirmeleri
+# <a name="trial-playbook-microsoft-compliance-manager-premium-assessments"></a>Deneme playbook'u: Microsoft Compliance Manager premium değerlendirmeleri
 
-Microsoft Uyumluluk Yöneticisi premium değerlendirme denemesi çalışma kitabına hoş geldiniz.
+Microsoft Compliance Manager premium değerlendirme denemesi playbook'una hoş geldiniz.
 
-Bu çalışma kitabı, kapsamlı premium değerlendirme şablonları (eklenti) setini kullanmayı öğreterek 90 günlük ücretsiz denemenizi en iyi şekilde değerlendirmenize yardımcı olur.
+Bu playbook, kapsamlı premium değerlendirme şablonlarının (eklenti) nasıl kullanılacağını öğreterek 90 günlük ücretsiz denemenizden en iyi şekilde yararlanmanıza yardımcı olur.
 
-Microsoft önerilerini kullanarak, premium değerlendirme şablonlarının riskleri değerlendirmesine ve küresel, bölgesel ve endüstriyel mevzuat gereksinimlerine etkili bir şekilde yanıt vermede size nasıl yardımcı olduğunu hızlıca göreceğiniz gibi.
+Microsoft önerilerini kullanarak premium değerlendirme şablonlarının kuruluşunuzun riskleri değerlendirmesine ve küresel, bölgesel ve endüstriyel mevzuat gereksinimlerine verimli bir şekilde yanıt vermesine nasıl yardımcı olabileceğini hızlı bir şekilde göreceksiniz.
 
-## <a name="step-1-get-to-know-compliance-manager"></a>1. Adım: Uyumluluk Yöneticisi'ni hakkında bilgi
+## <a name="step-1-get-to-know-compliance-manager"></a>1. Adım: Uyumluluk Yöneticisi'ne alışma
 
-Uyumluluk [Yöneticisi genel bakış sayfamız](compliance-manager.md) , Uyumluluk Yöneticisi'nin ne olduğunu ve nasıl çalıştığını kapsamlı bir şekilde gözden geçirmek için ilk durakdır. Aşağıdaki bağlantıları kullanarak belgelerimizin önemli bölümlerine de geçebilirsiniz:
+[Uyumluluk Yöneticisi'ne genel bakış sayfamız](compliance-manager.md), Uyumluluk Yöneticisi'nin ne olduğu ve nasıl çalıştığına ilişkin kapsamlı bir inceleme için en iyi ilk duraktır. Aşağıdaki bağlantıları kullanarak belgelerimizin önemli bölümlerine doğrudan geçmek de isteyebilirsiniz:
 
 1. [Uyumluluk puanınızı anlama](compliance-manager.md#understanding-your-compliance-score)
-1. [Önemli öğelere genel bakış: denetimler, değerlendirmeler, şablonlar ve geliştirme eylemleri](compliance-manager.md#key-elements-controls-assessments-templates-improvement-actions)
-1. [Uyumluluk Yöneticisi panosunun ne olduğunu anlama](compliance-manager-setup.md#understand-the-compliance-manager-dashboard)
-1. [Pano görünüme filtre uygulama](compliance-manager-setup.md#filtering-your-dashboard-view)
-1. [Geliştirme eylemleri hakkında bilgi](compliance-manager-setup.md#improvement-actions-page)
+1. [Önemli öğelere genel bakış: denetimler, değerlendirmeler, şablonlar ve iyileştirme eylemleri](compliance-manager.md#key-elements-controls-assessments-templates-improvement-actions)
+1. [Uyumluluk Yöneticisi panosunu anlama](compliance-manager-setup.md#understand-the-compliance-manager-dashboard)
+1. [Pano görünümünüzü filtreleme](compliance-manager-setup.md#filtering-your-dashboard-view)
+1. [İyileştirme eylemleri hakkında bilgi edinin](compliance-manager-setup.md#improvement-actions-page)
 1. [Değerlendirmeleri anlama](compliance-manager.md#assessments)
-1. [Microsoft Uyumluluk Yapılandırma Yöneticisi'ni kullanarak ortamınızı hızlı bir şekilde tarama](compliance-manager-mcca.md)
+1. [Microsoft Uyumluluk Configuration Manager kullanarak ortamınızda hızlı bir tarama yapın](compliance-manager-mcca.md)
 
-## <a name="step-2-configure-compliance-manager"></a>2. Adım: Uyumluluk Yöneticisi'ni yapılandırma
+## <a name="step-2-configure-compliance-manager"></a>2. Adım: Uyumluluk Yöneticisini Yapılandırma
 
-Değerlendirmelerle çalışmaya ve denetimleri uygulamaya ve uyumluluk puanınızı iyileştirmeye ilişkin iyileştirme eylemleri yapmaya başlayabilirsiniz.
+Değerlendirmelerle çalışmaya başlayın ve denetimleri uygulamak ve uyumluluk puanınızı geliştirmek için iyileştirme eylemleri gerçekleştirin.
 
-1. [İlk değerlendirmenizi oluşturmak ve yönetmek için önceden yerleşik bir şablon seçme](compliance-manager-assessments.md)
-1. [Değerlendirme oluşturmak için şablonların nasıl kullanıla olduğunu anlama](compliance-manager-templates.md)
-1. [Değerlendirmelerizdeki denetimleri tamamlamak için geliştirme eylemleri üzerinde uygulama ve test çalışmaları gerçekleştirme](compliance-manager-improvement-actions.md)
-1. [Farklı eylemlerin uyumluluk puanınızı nasıl etkileyeni daha iyi anlıyoruz](compliance-score-calculation.md)
+1. [İlk değerlendirmenizi oluşturmak ve yönetmek için önceden oluşturulmuş bir şablon seçin](compliance-manager-assessments.md)
+1. [Değerlendirme oluşturmak için şablonların nasıl kullanılacağını anlama](compliance-manager-templates.md)
+1. [Değerlendirmelerinizdeki denetimleri tamamlamak için iyileştirme eylemleri üzerinde uygulama ve test çalışmaları gerçekleştirme](compliance-manager-improvement-actions.md)
+1. [Farklı eylemlerin uyumluluk puanınızı nasıl etkilediğini daha iyi anlama](compliance-score-calculation.md)
 
 ## <a name="step-3-review-included-assessment-templates"></a>3. Adım: Dahil edilen değerlendirme şablonlarını gözden geçirme
 
-Uyumluluk Yöneticisi, değerlendirmeleri oluşturmak için kapsamlı bir şablon kümesi sağlar. Bu şablonlar, verilerin toplanması ve kullanımının geçerli olduğu ulusal, bölgesel ve sektöre özgü gereksinimlere uymalarına yardımcı olur. Aboneliğinize dahil olan şablonların listesine buradan [bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#which-assessments-are-included-by-default-free-of-cost).
+Uyumluluk Yöneticisi, değerlendirme oluşturmak için kapsamlı bir şablon kümesi sağlar. Bu şablonlar, kuruluşunuzun verilerin toplanması ve kullanımını yöneten ulusal, bölgesel ve sektöre özgü gereksinimlere uymasına yardımcı olabilir. Aboneliğinize dahil edilen şablonların listesini [burada görebilirsiniz](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#which-assessments-are-included-by-default-free-of-cost).
 
-Uyumluluk Yöneticisi, eklenti olarak satın alınan 300'den fazla mevzuat veya premium şablon da sunar. Listeye buradan [bakın](compliance-manager-templates-list.md#premium-templates). Tüm premium şablonları (aboneliğinize dahil olan veya eklenti olarak satın alınan şablonlarla) bu şablonların evrensel sürümünü alırsınız ve bu da herhangi bir ürün veya hizmetle uyumluluğunu yönetmenize olanak sağlar. Premium değerlendirme denemesi sırasında bu özel değerlendirme şablonlarını  denemeniz gerekir.
+Uyumluluk Yöneticisi, eklenti olarak satın alınabilen 300'in üzerinde mevzuat veya premium şablon da sunar. Listeye [buradan](compliance-manager-templates-list.md#premium-templates) bakın. Tüm premium şablonlarla (aboneliğinize dahil edilir veya eklenti olarak satın alınır) bu şablonların evrensel sürümünü alırsınız ve bu sayede herhangi bir ürün veya hizmetle uyumluluğunuzu yönetebilirsiniz. Premium değerlendirme denemesi sırasında bu premium değerlendirme şablonlarını deneyebilirsiniz.
 
 ## <a name="step-4-enable-the-premium-assessment-trial"></a>4. Adım: Premium değerlendirme denemesini etkinleştirme
 
-Deneme lisansları 90 gün boyunca 25 premium şablon kullanabilirsiniz. 300'den fazla premium şablondan birini seçebilirsiniz. Aynı anda 25 şablonun hepsini seçmeniz gerekmez. Seçili olan lisanslı şablonlar, deneme lisansınızı edinen 4 saat içinde kullanımınıza hazır olur.
+Deneme lisansları, 90 gün boyunca 25 premium şablon kullanmanıza olanak tanır. 300'den fazla premium şablon listesinden seçim yapabilirsiniz. 25 şablonun tümünü aynı anda seçmeniz gerekmez. Seçildikten sonra, lisanslı şablonlar deneme lisansınızı aldıktan sonraki 4 saat içinde kullanımınıza sunulur.
 
-Uyumluluk Yöneticisi panosu aracılığıyla veya Premium Uyumluluk denemesi aracılığıyla Değerlendirme Eklentisini etkinleştirmenin iki Microsoft 365 vardır.
+Premium Değerlendirme Eklentisi denemesini etkinleştirmenin iki yolu vardır: Uyumluluk Yöneticisi panosu veya Microsoft 365 Uyumluluk denemesi aracılığıyla.
 
-### <a name="enable-trial-via-the-compliance-manager-dashboard"></a>Denemeyi Uyumluluk Yöneticisi panosu aracılığıyla etkinleştirme
+### <a name="enable-trial-via-the-compliance-manager-dashboard"></a>Uyumluluk Yöneticisi panosu aracılığıyla denemeyi etkinleştirme
 
-1. Uyumluluk Yöneticisi panosunda, başlıkta **Şimdi deneyin'i** seçin.
-1. Premium **şablon denemelerine** erişmek için Evet'i seçin.
+1. Uyumluluk Yöneticisi panosunda başlıkta **Şimdi deneyin'i** seçin.
+1. Premium şablon denemelerine erişmek için **Evet'i** seçin.
 
-### <a name="enable-trial-via-the-compliance-trial"></a>Denemeyi Uyumluluk denemesi aracılığıyla etkinleştirme
+### <a name="enable-trial-via-the-compliance-trial"></a>Uyumluluk denemesi aracılığıyla denemeyi etkinleştirme
 
-1. Uyumluluk Merkezi'nde, sol **gezinti bölmesinde** Denemeler'i seçin. Kullanılabilir denemeler görüntülenir.
-1. Uyumluluk **Yöneticisi premium değerlendirmeleri** için Şimdi deneyin'i seçin.
-1. Bir bilgi sayfası ve denemeyi ayarlamadan önce daha fazla bilgi edinebilirsiniz.
-1. **Ayarla'ya seçtiğiniz** zaman, değişikliklerin etkili bir şekilde yürürlüğe girecekleri iki saat kadar sürebilir. Kullanılabilir şablonları görmek için yeniden oturum açmanız gerekir.
+1. Uyumluluk Merkezi'nde sol gezinti bölmesinde **Denemeler'i** seçin. Kullanılabilir denemeler görüntülenir.
+1. Uyumluluk Yöneticisi premium değerlendirmeleri için **Şimdi deneyin'i** seçin.
+1. Size bir bilgi sayfası ve denemeyi ayarlamadan önce daha fazla bilgi edinme olanağı sunulacaktır.
+1. **Ayarla'yı** seçtiğinizde değişikliklerin etkili olması iki saat kadar sürebilir. Kullanılabilir şablonları görmek için yeniden oturum açmanız gerekir.
 
-### <a name="during-the-trial"></a>Deneme süresi boyunca
+### <a name="during-the-trial"></a>Deneme süresince
 
-Premium değerlendirme denemesini başladıktan sonra, panoda sizi şu şekilde güncelleştirmeye neden olan bir özet görürsünüz:
+Premium değerlendirme denemesine başladıktan sonra panoda sizi güncelleştiren bir özet görürsünüz:
 
-- Oluşturulan yeni değerlendirme sayısı
-- 2010'da yapılan geliştirme eylemlerinin sayısı
-- Deneme sırasında uyumluluk puanınıza uygun olarak kazanılan puanlar
+- Oluşturulan yeni değerlendirmelerin sayısı
+- Gerçekleştirilen iyileştirme eylemlerinin sayısı
+- Deneme sırasında kazanılan puanlar uyumluluk puanınıza doğru
 - Kullanılabilir şablonların bağlantıları
-- Denemede kalan süre
+- Deneme süresi kaldı
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-**Microsoft Docs**: Uyumluluk Yöneticisi premium değerlendirmelerinin nasıl olduğu ve bunları organizasyonunız için en iyi şekilde nasıl uygulayacağı hakkında ayrıntılı bilgi edinebilirsiniz. [Belgeler'i ziyaret edin](compliance-manager-templates.md).
+**Microsoft Docs**: Uyumluluk Yöneticisi premium değerlendirmelerinin nasıl çalıştığı ve bunları kuruluşunuz için en iyi şekilde nasıl uygulayacakları hakkında ayrıntılı bilgi edinin. [Docs'u](compliance-manager-templates.md) ziyaret edin.
 
-**Videolar nasıl edin:** Daha fazla bilgi edinmek için aşağıdaki videolara göz atabilirsiniz:
+**Nasıl yapılır videoları**: Daha fazla bilgi edinmek için aşağıdaki videolara göz atın:
 
-- [Uyumluluk Yöneticisi ile değerlendirmeler oluşturun ve ilerlemenizi takip edin](https://techcommunity.microsoft.com/t5/video-hub/create-assessments-and-monitor-your-progress-with-compliance/ba-p/1687992?search-action-id=375363186777&search-result-uid=1687992)
-- [Uyumluluk Yöneticisi'nde değerlendirmeleri gereksinimlerinize uygun olarak genişletme ve özelleştirme](https://techcommunity.microsoft.com/t5/video-hub/extend-and-customize-assessments-to-suit-your-needs-in/ba-p/1687991?search-action-id=375363186777&search-result-uid=1687991)
+- [Uyumluluk Yöneticisi ile değerlendirmeler oluşturma ve ilerlemenizi izleme](https://techcommunity.microsoft.com/t5/video-hub/create-assessments-and-monitor-your-progress-with-compliance/ba-p/1687992?search-action-id=375363186777&search-result-uid=1687992)
+- [Uyumluluk Yöneticisi'nde değerlendirmeleri gereksinimlerinize uyacak şekilde genişletme ve özelleştirme](https://techcommunity.microsoft.com/t5/video-hub/extend-and-customize-assessments-to-suit-your-needs-in/ba-p/1687991?search-action-id=375363186777&search-result-uid=1687991)
 
-**Premium değerlendirme satın alma**: Kullanılabilir planlar ve fiyatlandırma hakkında bilgi edinin. [Microsoft 365 yönetim merkezi - Hizmet satın alma'ya ziyaret edin](https://admin.microsoft.com/#/catalog/offer-details/compliance-manager-premium-assessment-add-on/46E9BF2A-3C8D-4A69-A7E7-3DA04687636D)
+**Premium değerlendirme satın alma**: Kullanılabilir planlar ve fiyatlandırma hakkında bilgi edinin. [Microsoft 365 yönetim merkezi ziyaret edin - Hizmetleri satın alın](https://admin.microsoft.com/#/catalog/offer-details/compliance-manager-premium-assessment-add-on/46E9BF2A-3C8D-4A69-A7E7-3DA04687636D)

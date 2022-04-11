@@ -1,5 +1,5 @@
 ---
-title: Microsoft Uyumluluk Yöneticisi'nde değerlendirme şablonlarını değiştirme
+title: Microsoft Compliance Manager'da değerlendirme şablonlarını değiştirme
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,100 +17,100 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Uyumluluk Yöneticisi'nde değerlendirme şablonlarını değiştirmeyi anlama.
-ms.openlocfilehash: d409c21d31c909e7e6a59c308c7087e26ec78e24
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft Uyumluluk Yöneticisi'nde değerlendirme şablonlarını değiştirme hakkında bilgi edinin.
+ms.openlocfilehash: 589e13e766e35d38eed985a0e7bb9e21544c370d
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320571"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64758541"
 ---
-# <a name="modify-assessment-templates-in-microsoft-compliance-manager"></a>Microsoft Uyumluluk Yöneticisi'nde değerlendirme şablonlarını değiştirme
+# <a name="modify-assessment-templates-in-microsoft-compliance-manager"></a>Microsoft Compliance Manager'da değerlendirme şablonlarını değiştirme
 
-Uyumluluk Yöneticisi'nde değerlendirmelerle çalışırken, oluşturduğunuz bir değerlendirme şablonunu değiştirmek istiyor olabilirsiniz. İşlem, şablon [verilerinizle](compliance-manager-templates-create.md) biçimlendirilmiş bir Excel karşıya yüklediğiniz şablon oluşturma sürecine benzer.
+Uyumluluk Yöneticisi'nde değerlendirmelerle çalışırken, oluşturduğunuz bir değerlendirme şablonunu değiştirmek isteyebilirsiniz. bu işlem, şablon verilerinizi içeren biçimlendirilmiş bir Excel dosyasını karşıya yükleyebilmek için şablon [oluşturma](compliance-manager-templates-create.md) işlemine benzer.
 
-Bununla birlikte, dosyanızı var olan şablon verisinde yapılan değişikliklerle biçimlendiren ve dikkat dikkat gereken ayrıntılar vardır. **Korumak istediğiniz verilerin üzerine yazılmaması için bu yönergeleri dikkatle gözden geçirmenizi öneririz.**
+Ancak, dosyanızı var olan şablon verilerinde yapılan değişikliklerle biçimlendirdiğinizde bilmeniz gereken ayrıntılar vardır. **Saklamak istediğiniz mevcut verilerin üzerine yazmadığınızdan emin olmak için bu yönergeleri dikkatle gözden geçirmenizi öneririz.**
 
-Bu elektronik tablonun biçimi hakkında daha fazla bilgi edinmek için bkz[. Elektronik tabloyla şablon Excel](compliance-manager-templates-format-excel.md).
+Bu elektronik tablonun biçimi hakkında daha fazla bilgi edinmek için bkz. [Şablon verilerinizi Excel ile biçimlendirme](compliance-manager-templates-format-excel.md).
 
-## <a name="format-your-excel-file-to-modify-an-existing-template"></a>Var olan Excel değiştirmek için Excel dosyanızı biçimlendirme
+## <a name="format-your-excel-file-to-modify-an-existing-template"></a>Var olan bir şablonu değiştirmek için Excel dosyanızı biçimlendirme
 
-Bir  **araya getirme şablonlarısayfanıza** , değiştirmek istediğiniz şablonu seçin; bu şablon ayrıntılar sayfasını da getirir. Ardından,  **RaporaPort'Excel**. Tüm Excel verilerini indiren bir dosya indirecek. Dosyayı yerel makinenize kaydedin.
+**Değerlendirme şablonları** sayfanızdan, değiştirmek istediğiniz şablonu seçin ve bu şablonun ayrıntılar sayfası açılır. Ardından **Excel dışarı aktar'ı** seçin. Tüm şablon verilerinizi içeren bir Excel dosyası indirilir. Dosyayı yerel makinenize kaydedin.
 
-Bu dosyayla çalışmak için, aşağıdaki bir bölüme atlayıp ihtiyacınız olan yönergeleri hızla bulun:
+Bu dosyayla çalışmak için, ihtiyacınız olan yönergeleri hızla bulmak için aşağıdaki bölüme atlayın:
 
 - [Ana şablon özniteliklerini düzenleme](#edit-the-main-template-attributes)
-- [Geliştirme eylemi ekleme](#add-an-improvement-action)
-- [Geliştirme eyleminin bilgilerini düzenleme](#edit-an-improvement-actions-information)
-- [Geliştirme eyleminin adını değiştirme](#change-an-improvement-actions-name)
-- [Geliştirme eylemlerini kaldırma](#remove-an-improvement-action)
+- [İyileştirme eylemi ekleme](#add-an-improvement-action)
+- [İyileştirme eyleminin bilgilerini düzenleme](#edit-an-improvement-actions-information)
+- [İyileştirme eyleminin adını değiştirme](#change-an-improvement-actions-name)
+- [İyileştirme eylemini kaldırma](#remove-an-improvement-action)
 - [Denetimi kaldırma](#remove-a-control)
 
 ### <a name="edit-the-main-template-attributes"></a>Ana şablon özniteliklerini düzenleme
 
-Şablonlar **sekmesinde** başlık sütununda, **inScopeServices** sütununda ve başka  herhangi bir sütunda eklenen her şeyi düzenleyebilirsiniz. Bununla birlikte, ürün veya sertifika sütunlarında hiçbir **şeyi** **düzenleyemezsiniz** .
+**Şablonlar** sekmesinde **başlık sütunundaki**, **inScopeServices** sütunundaki ve eklemiş olabileceğiniz diğer sütunlardaki her şeyi düzenleyebilirsiniz. Ancak **, ürün** veya **sertifikasyon** sütunlarında hiçbir şeyi düzenleyemezsiniz.
 
-### <a name="add-an-improvement-action"></a>Geliştirme eylemi ekleme
+### <a name="add-an-improvement-action"></a>İyileştirme eylemi ekleme
 
-1. Eylemler **sekmesine** gidin. Mevcut eylemlerinizin altındaki ilk boş satıra gerekli alanlara bilgi ekleyin.
-2. **ControlFamily sekmenize** gidin. Geliştirme işlemi eşlemenizin bulunduğu satırı bulun. Yeni eyleminizi bu satırdaki **controlActionTitle** sütununa ekleyin (bu alanda birden çok eylemi iki noktalı virgülle ayırmayı unutmayın, arasında boşluk yoktur).
+1. **Eylemler** sekmesine gidin. Bilgilerinizi, mevcut eylemlerinizin altındaki ilk boş satırdaki gerekli alanlara ekleyin.
+2. **ControlFamily** sekmenize gidin. geliştirme eyleminizin eşlenmesi denetimini içeren satırı bulun. Yeni eyleminizi bu satırdaki **controlActionTitle** sütununa ekleyin (bu alandaki birden çok eylemi iki noktalı virgülle ayırmayı unutmayın; aralarında boşluk yoktur).
 3. Elektronik tablonuzu kaydedin.
 
-### <a name="edit-an-improvement-actions-information"></a>Geliştirme eyleminin bilgilerini düzenleme
+### <a name="edit-an-improvement-actions-information"></a>İyileştirme eyleminin bilgilerini düzenleme
 
-Geliştirme eyleminin başlığı dışında bilgilerini *değiştirebilirsiniz*. B sütunlarından herhangi bir hücreyi düzenleyebilirsiniz ve dosyayı şablona geri aktarsanız bile, bu şablonda yapılan geliştirme eylemleri artık güncelleştirilmiş verileri içerir.
+*Başlığı dışında* herhangi bir geliştirme eyleminin bilgilerini değiştirebilirsiniz. B sütunlarından herhangi bir hücreyi düzenleyebilirsiniz ve dosyayı şablona geri aktardığınızda, bu şablondaki iyileştirme eylemleri artık güncelleştirilmiş verileri içerir.
 
-**ActionTitle'yi** (A sütunu) düzenleyemezsiniz, çünkü bunu düzenlersanız, Uyumluluk Yöneticisi bunun yeni bir geliştirme eylemi olduğunu kabul ediyor. Geliştirme eyleminin adını değiştirmek için hemen aşağıdaki yönergelere bakın.
+Bunu yaparsanız, Uyumluluk Yöneticisi bunu yeni bir geliştirme eylemi olarak değerlendirdiğinden **actionTitle** (A sütunu) öğesini düzenleyemezsiniz. İyileştirme eyleminin adını değiştirmek istiyorsanız aşağıdaki yönergelere hemen bakın.
 
-### <a name="change-an-improvement-actions-name"></a>Geliştirme eyleminin adını değiştirme
+### <a name="change-an-improvement-actions-name"></a>İyileştirme eyleminin adını değiştirme
 
-Geliştirme eyleminin adını değiştirmek için, elektronik tabloda var olan bir adı yeni bir adla değiştir geçerek açıkça atamanız gerekir. Şu adımları izleyin:
+İyileştirme eyleminin adını değiştirmek istiyorsanız, var olan bir adı yeni bir adla değiştirdiğiniz elektronik tabloda açıkça belirtmiş olmanız gerekir. Şu adımları izleyin:
 
-1. Elektronik **tablonuzun** Eylemler sekmesinde, A sütunundan sonra elektronik tablo için yeni bir sütun ekleyin.
-2. Şimdi B sütunu olan bu yeni sütunda, üst bilgi olarak 1. satıra girin: **oldActionTitle**.
-3. A sütununu kopyalayıp B sütununa yapıştırın. Bu, değiştirmek istediğiniz varolan geliştirme eylem başlıklarınızı B sütununa koyar.
-4. A **sütunundaki actionTitle'de**, eski adı silin ve geliştirme eyleminiz için yeni adla değiştirin.
+1. Elektronik tablonuzun **Eylemler** sekmesinde, A sütunundan sonra elektronik tabloya yeni bir sütun ekleyin.
+2. Şimdi B sütunu olan bu yeni sütunda, üst bilgisi olarak 1. **satıra koyun: oldActionTitle**.
+3. A sütununun içeriğini kopyalayın ve B sütununa yapıştırın. Bu, değiştirmek istediğiniz mevcut geliştirme eylemi başlıklarınızı B sütununa yerleştirir.
+4. A sütununda **actionTitle**, eski adı silin ve iyileştirme eyleminiz için yeni adla değiştirin.
 
-Denetimlerde başvurularak tanınmak için, hem geliştirme eylemleriniz hem de Microsoft eylemleri için eylem başlıklarının İngilizce yaz gerektiğini unutmayın.
+Denetimlerde başvurulduğunda tanınması için hem geliştirme eylemleriniz hem de Microsoft eylemleri için eylem başlıklarının İngilizce yazılması gerektiğini unutmayın.
 
-### <a name="remove-an-improvement-action"></a>Geliştirme eylemlerini kaldırma
+### <a name="remove-an-improvement-action"></a>İyileştirme eylemini kaldırma
 
-Geliştirme eylemlerini şablondan kaldırmak için, o şablona başvurulan her denetimden kaldırmanız gerekir. Elektronik tablonuzu değiştirmek için aşağıdaki adımları izleyin:
+Şablondan bir iyileştirme eylemini kaldırmak için, şablona başvuran her denetimden kaldırmanız gerekir. Elektronik tablonuzu değiştirmek için aşağıdaki adımları izleyin:
 
-1. **ControlFamily sekmesinde**, kaldırmak istediğiniz geliştirme eyleminin başlığını aratır.
-2. Geliştirme eyleminin başlığını göründüğü hücrelerde silin. Geliştirme eylemi bu satırdaki tek eylemse, satırın tamamını silin (denetimi kaldırır).
-3. Eylemler **sekmesinde** , sildiren geliştirme eylemlerini içeren satırı silin.
+1. **ControlFamily** sekmesinde, kaldırmak istediğiniz geliştirme eyleminin başlığını arayın.
+2. İyileştirme eyleminin başlığını göründüğü hücrelerde silin. Geliştirme eylemi söz konusu satırdaki tek eylemse, satırın tamamını silin (denetimi kaldırır).
+3. **Eylemler** sekmesinde, sildiğiniz geliştirme eylemini içeren satırı silin.
 4. Elektronik tablonuzu kaydedin.
 
-Elektronik tablonuzu şablona geri aktarsanız da geliştirme eyleminiz şablondan kaldırılır.
+Elektronik tablonuzu şablona geri aktardığınızda, geliştirme eyleminiz şablondan kaldırılır.
 
-Bir geliştirme eyleminin şablondan kaldırılması, geliştirme eylemlerini Uyumluluk Yöneticisi'den tamamen kaldırmaz. Bu eyleme başka bir şablon yine de başvurulabilirsiniz.
+Şablondan iyileştirme eylemini kaldırmak, geliştirme eylemini Uyumluluk Yöneticisi'nden tamamen kaldırmaz. Bu eyleme başka bir şablon tarafından başvurulabilir.
 
 ### <a name="remove-a-control"></a>Denetimi kaldırma
 
-Denetimi kaldırmak için aşağıdaki adımları takip edin ve elektronik tablonuzu yeniden içeri aktarın:
+Denetimi kaldırmak için aşağıdaki adımları izleyerek elektronik tablonuzu değiştirin ve ardından elektronik tablonuzu yeniden içeri aktarın:
 
-1. **ControlFamily sekmesinde**, denetimAdı sütununda kaldırmak istediğiniz **denetimi** bulun.
-2. Bu denetimin satırı silin.
-    - Bu silinmiş denetim başka hiçbir denetim tarafından başvurulmayacak geliştirme eylemleri içeriyorsa, bu geliştirme eylemlerini Eylemler sekmesinden **kaldırmanız** gerekir. Aksi takdirde, doğrulama hatası alırsınız.
+1. **ControlFamily** sekmesinde, kaldırmak istediğiniz denetimi **controlName** sütununda bulun.
+2. Bu denetimin satırını silin.
+    - Bu silinen denetim başka bir denetim tarafından başvurulmayan iyileştirme eylemleri içeriyorsa, bu iyileştirme eylemlerini **Eylemler** sekmesinden kaldırmanız gerekir. Aksi takdirde doğrulama hatası alırsınız.
 
 3. Elektronik tablonuzu kaydedin.
 
-Elektronik tablonuzu şablona geri aktarsanız, denetiminiz şablondan kaldırılır.
+Elektronik tablonuzu şablona geri aktardığınızda, denetiminiz şablondan kaldırılır.
 
 ## <a name="modify-template-info-in-compliance-manager"></a>Uyumluluk Yöneticisi'nde şablon bilgilerini değiştirme
 
-Dosyanız Excel ve kaydedildikten sonra bu adımları izleyin.
+Excel dosyanız tamamlandıktan ve kaydedildikten sonra aşağıdaki adımları izleyin.
 
-1. Değerlendirme şablonu sayfasını yeniden açın ve şablonlarınızı seçin. Şablon ayrıntıları sayfasında, şablonda değişiklik **sihirbazını başlatmak için** Şablonu değiştir'i seçin.
-2. Dosyanın **Upload gözat'ı** **seçerek** dosyanızı bulun ve Excel yükleyin.
-3. Dosyanız ile ilgili sorun yoksa karşıya yüklenen dosyanın adını sonraki ekranda gösterir. Devam **etmek** için Sonraki'yi seçin (dosyayı değiştirmek için farklı bir **Upload seçin**).
-    - Dosyanız ile ilgili bir sorun varsa, sorunun ne olduğunu en üst düzeye alan bir hata iletisiyle açıklar. Dosyanızı düzeltmeniz ve yeniden karşıya yüklemeniz gerekir. Elektronik tablonuzu yanlış biçimlendirilmişse veya bazı alanlarda geçersiz bilgiler varsa hatalar meydana gelir.
+1. Değerlendirme şablonu sayfasını yeniden açın ve şablonunuzu seçin. Şablonunuzun ayrıntılar sayfasında Şablonu **değiştir'i** seçerek değişiklik sihirbazını başlatın.
+2. **Upload dosya** ekranında **Gözat'ı** seçerek Excel dosyanızı bulun ve karşıya yükleyin.
+3. Dosyanızla ilgili bir sorun yoksa, bir sonraki ekranda karşıya yüklenen dosyanın adı gösterilir. Devam etmek için **İleri'yi** seçin (dosyayı değiştirmeniz gerekiyorsa **farklı bir dosya Upload** seçin).
+    - Dosyanızla ilgili bir sorun varsa, en üstteki hata iletisi sorunun ne olduğunu açıklar. Dosyanızı düzeltmeniz ve yeniden karşıya yüklemeniz gerekir. Elektronik tablonuz yanlış biçimlendirilirse veya belirli alanlarda geçersiz bilgiler varsa hatalar oluşur.
 
-4. Gözden **Geçir ve bitiş** ekranı, geliştirme eylemlerinin ve denetimlerin sayısını ve şablon için en yüksek puanı gösterir. Onaylamaya hazır olduğunda, Sonraki'yi **seçin**.
-5. Son ekran şablonun değiştiril olduğunu onaylar. **Sihirbazdan çıkmak** için Bitti'yi seçin.
+4. **Gözden geçir ve bitir** ekranı, iyileştirme eylemlerinin ve denetimlerinin sayısını ve şablonun en yüksek puanını gösterir. Onaylamaya hazır olduğunuzda **İleri'yi** seçin.
+5. Son ekran, şablonun değiştirildiğini onaylar. **Sihirbazdan çıkmak için Bitti'yi** seçin.
 
-Artık şablonunuz yaptığınız değişiklikleri içerir. Bu değiştirilmiş şablonu kullanan tüm değerlendirmeler artık bekleyen güncelleştirmeleri gösterir ve şablonda yapılan değişiklikleri yansıtmak için değerlendirmelerde yapılan güncelleştirmeleri kabul etmek gerekir. Değerlendirmelere ilişkin [güncelleştirmeler hakkında daha fazla bilgi alın](compliance-manager-assessments.md#accept-updates-to-assessments).
+Şablonunuz artık yaptığınız değişiklikleri içerecektir. Bu değiştirilen şablonu kullanan tüm değerlendirmelerde artık bekleyen güncelleştirmeler gösterilir ve şablonda yapılan değişiklikleri yansıtmak için değerlendirmelerdeki güncelleştirmeleri kabul etmeniz gerekir. [Değerlendirme güncelleştirmeleri](compliance-manager-assessments.md#accept-updates-to-assessments) hakkında daha fazla bilgi edinin.
 
 > [!NOTE]
-> Uyumluluk Yöneticisi'ni İngilizce dışında bir dilde kullanıyorsanız, şablonu başka bir dilde dışarı aktararak İngilizce metinlerden bazılarının İngilizce olduğunu Excel. Denetimlerin tanınması için eylemlerin başlıkları (hem geliştirme eylemleriniz hem de uygun olduğunda Microsoft eylemleri) İngilizce olması gerekir. Eylem başlığında değişiklik yaptıysanız, dosyanın doğru şekilde içeri aktar olması için bunu İngilizce yazmayı lütfen kullanın.
+> Uyumluluk Yöneticisi'ni İngilizce dışında bir dilde kullanıyorsanız, şablonu Excel dışarı aktardığınızda bazı metinlerin İngilizce göründüğünü fark edersiniz. Denetimlerin tanınması için eylemlerin başlıkları (hem geliştirme eylemleriniz hem de uygun olduğunda Microsoft eylemleri) İngilizce olmalıdır. Bir eylem başlığında değişiklik yaparsanız, dosyanın doğru içeri aktarılması için bunu İngilizce yazdığınızdan emin olun.

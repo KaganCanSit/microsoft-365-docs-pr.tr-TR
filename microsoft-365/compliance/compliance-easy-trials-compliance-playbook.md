@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 çözümleri deneme sürümü oynatma kitabı
+title: Microsoft 365 uyumluluk çözümleri deneme playbook'u
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -14,29 +14,29 @@ ROBOTS: NOINDEX, NOFOLLOW
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft 365 çözümleri deneme sürümü oynatma kitabınız.
-ms.openlocfilehash: e0d48ba9c4a5ca50869b64d6312fe845ef9bf50c
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+description: Microsoft 365 uyumluluk çözümleri deneme playbook'u.
+ms.openlocfilehash: 8c5456344a97a0cfc4564c228eeba20067682070
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679906"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64759180"
 ---
-# <a name="trial-playbook-microsoft-365-compliance-solutions"></a>Deneme oynatma kitabı: Microsoft 365 Uyumluluk çözümleri
+# <a name="trial-playbook-microsoft-365-compliance-solutions"></a>Deneme playbook'u: Microsoft 365 Uyumluluk çözümleri
 
-Uyumluluk çözümleri deneme Microsoft 365 defterine hoş geldiniz. Bu çalışma kitabı, uyumluluk ve güvenlik ürünlerinin güçlü ve kapsamlı özelliklerini keşfetmenize yardımcı olarak 90 günlük ücretsiz denemenizi en Microsoft 365 yardımcı olur.
+Microsoft 365 uyumluluk çözümleri deneme playbook'una hoş geldiniz. Bu playbook, Microsoft 365 uyumluluk ve güvenlik ürünlerinin güçlü ve kapsamlı özelliklerini keşfetmenize yardımcı olarak 90 günlük ücretsiz denemenizden en iyi şekilde yararlanabilirsiniz.
 
-Her çözümün  çalışıyor olması, kuruluşun uyumluluk  gereklerini karşılamak için bilinçli kararlar ademeye yardımcı olur.
+Her çözümü denemek, kuruluşunuzun uyumluluk gereksinimlerini karşılamak için bilinçli kararlar oluşturmanıza yardımcı olur.
 
 Özellikler:
 
 - [Gelişmiş Denetim](#advanced-audit)
 - [İletişim Uyumluluğu](#communication-compliance)
 - [Uyumluluk Yöneticisi](#compliance-manager)
-- [Veri Kaybını Önleme](#data-loss-prevention)
-- [eKbulma](#ediscovery)
-- [Bilgi Koruması](#information-protection)
-- [Insider Risk Yönetimi](#insider-risk-management)
+- [Veri Kaybı Önleme](#data-loss-prevention)
+- [Ediscovery](#ediscovery)
+- [Information Protection](#information-protection)
+- [Insider Risk Management](#insider-risk-management)
 - [Kayıt Yönetimi](#records-management)
 
 İsteğe bağlı eklentiler:
@@ -44,396 +44,396 @@ Her çözümün  çalışıyor olması, kuruluşun uyumluluk  gereklerini karş�
 - [Uyumluluk Yöneticisi premium değerlendirmeleri](#compliance-manager-premium-assessments)
 - [Microsoft Priva Gizlilik Risk Yönetimi ve Microsoft Priva Konu Hakları İstekleri](#microsoft-priva-privacy-risk-management-and-microsoft-priva-subject-rights-requests)
 
-## <a name="compliance-actions-with-microsoft-365"></a>Uyumluluk eylemleri ve Microsoft 365
+## <a name="compliance-actions-with-microsoft-365"></a>Microsoft 365 ile Uyumluluk Eylemleri
 
-Microsoft'un uyumluluk çözümlerini, kuruluşun meta verilerini değiştirmeden kolayca ve hızla deneyin. Önceliklerinize bağlı olarak, hemen değeri görmek için bu çözüm alanlarından herhangi biri ile başlayabilirsiniz. Aşağıda, müşterilerimiz tarafından iletilecek kurumsal kaygılar ve başlangıç olarak önerilen beş çözüm verilmiştir.
+Kuruluşunuzun meta verilerini değiştirmeden Microsoft'un uyumluluk çözümlerini kolayca ve hızlı bir şekilde denemeye başlayın. Önceliklerinize bağlı olarak, hemen değeri görmek için bu çözüm alanlarından herhangi biriyle başlayabilirsiniz. Aşağıda müşterilerimizin iletmiş olduğu en önemli kuruluş endişeleri ve başlangıç olarak önerilen çözümler yer almaktadır.
 
-:::image type="content" source="../media/compliance-trial/workflow.png" alt-text="Uyumluluk eylemleri ve Microsoft 365":::
+:::image type="content" source="../media/compliance-trial/workflow.png" alt-text="Microsoft 365 ile uyumluluk eylemleri":::
 
 ## <a name="advanced-audit"></a>Gelişmiş Denetim
 
-**Soruşturma yürütme**
+**Araştırma yapma**
 
-Gelişmiş Denetim, araştırma yapmak için gereken denetim günlüğü bekletmesini artırarak, güvenlik ve uyumluluk kapsamını belirlemeye yardımcı olan önemli olaylara erişim sağlayarak ve güvenlik güvenliğinin kapsamını daha hızlı belirleyerek denetim günlüğü bekletmesini artırarak kuruluşların denetim ve uyumluluk Office 365 yardımcı olur.
+Gelişmiş Denetim, kuruluşların araştırma yapmak için gereken denetim günlüğü saklama süresini artırarak, güvenliğin kapsamını belirlemeye yardımcı olan önemli olaylara erişim sağlayarak ve Office 365 Yönetim Etkinliği API'sine daha hızlı erişim sağlayarak adli ve uyumluluk araştırmaları gerçekleştirmelerine yardımcı olur.
 
-### <a name="step-1-apply-the-e5-license-to-each-user-for-which-youd-like-to-generate-e5-events"></a>1 [. Adım: E5 olaylarını oluşturmak için her kullanıcıya E5 lisansını uygulama](set-up-advanced-audit.md#step-1-set-up-advanced-audit-for-users)
-
-> [!TIP]
-> Deneme için en iyi yöntem: 1. Gün
-
-MailItemsAccessed ve Send gibi önemli olayları günlüğe yazma yeteneği gibi gelişmiş Denetim özellikleri, kullanıcılara uygun bir E5 lisansı atamayı gerektirir. Buna ek olarak, bu kullanıcılar için Gelişmiş Denetim uygulaması/hizmet planı da etkinleştirilmelidir.
-
-Kullanıcılar için Gelişmiş Denetim'i ayarlama - Kullanıcılara Gelişmiş Denetim uygulamasının atandığı doğrulamak için, her kullanıcı [için aşağıdaki adımları gerçekleştirin](set-up-advanced-audit.md#step-1-set-up-advanced-audit-for-users).
-
-1. Gelişmiş Denetim olaylarını etkinleştirme - Exchange Online [PowerShell'de](/powershell/exchange/connect-to-exchange-online-powershell) her kullanıcı için [SearchQueryInitiatedExchange ve SearchQueryInitiatedSharePoint'i](set-up-advanced-audit.md#step-2-enable-advanced-audit-events) etkinleştirin.
-1. Denetim bekletme ilkelerini ayarlama - [kuruluş güvenlik işlemlerinin](set-up-advanced-audit.md#step-3-set-up-audit-retention-policies) , IT'lerinin ve uyumluluk ekiplerinin gereksinimlerini karşılamak için ek denetim günlüğü bekletme ilkeleri oluşturun.
-1. Gelişmiş Denetim olaylarını arama - [Araştırma araştırmalarını yürüten çok önemli](set-up-advanced-audit.md#step-4-search-for-advanced-audit-events) Gelişmiş Denetim olaylarını ve diğer etkinlikleri arama.
-
-### <a name="step-2-create-new-audit-log-policies-to-specify-how-long-to-retain-audit-logs-in-your-org-for-activities-performed-by-users-and-define-priority-levels-for-your-policies"></a>2. Adım: Kullanıcılar tarafından gerçekleştirilen etkinlikler için kuruluşta denetim günlüklerinin ne kadar süreyle tutularak gerçekleştirileceklerini belirtmek ve ilkeleriniz için öncelik düzeyleri tanımlamak üzere yeni [Denetim Günlüğü ilkeleri oluşturun](audit-log-retention-policies.md#before-you-create-an-audit-log-retention-policy)
+### <a name="step-1-apply-the-e5-license-to-each-user-for-which-youd-like-to-generate-e5-events"></a>1. Adım: [E5 olaylarını oluşturmak istediğiniz her kullanıcıya E5 lisansını uygulama](set-up-advanced-audit.md#step-1-set-up-advanced-audit-for-users)
 
 > [!TIP]
-> Deneme için en iyi yöntem: İlk 30 gün içinde oluşturun
+> Deneme için en iyi uygulama: 1. Gün
 
-Denetim günlüğü bekletme ilkeleri, denetim ilkesi yönetimi kapsamındaki yeni Gelişmiş Denetim Microsoft 365. Denetim günlüğü bekletme ilkesi, denetim günlüklerinin kurumda ne kadar süreyle tutula tutula tutula açık olduğunu belirtmenize olanak sağlar.
+MailItemsAccessed ve Send gibi önemli olayları günlüğe kaydetme gibi Gelişmiş Denetim özellikleri için kullanıcılara uygun bir E5 lisansı atanması gerekir. Ayrıca, bu kullanıcılar için Gelişmiş Denetim uygulaması/hizmet planı etkinleştirilmelidir.
 
-1. Denetim günlüğü bekletme ilkesi oluşturmadan önce, [ilkenizi oluşturmadan önce bunu](audit-log-retention-policies.md#before-you-create-an-audit-log-retention-policy) bilmek gereken önemli şeyler vardır.
-1. [Denetim günlüğü bekletme ilkesi oluşturma](audit-log-retention-policies.md#create-an-audit-log-retention-policy)
-1. [Denetim günlüğü bekletme ilkelerini yönetme Microsoft 365 uyumluluk merkezi](audit-log-retention-policies.md#manage-audit-log-retention-policies-in-the-microsoft-365-compliance-center) - Denetim günlüğü bekletme ilkeleri, Denetim bekletme ilkeleri sekmesinde (pano olarak da denir) listelenir. Denetim bekletme ilkelerini görüntülemek, düzenlemek ve silmek için panoyu kullanabilirsiniz.
-1. PowerShell'de denetim günlüğü bekletme ilkelerini oluşturma ve yönetme - Denetim günlüğü bekletme ilkelerini oluşturmak ve yönetmek için Güvenlik & Uyumluluk Merkezi [PowerShell'i de kullanabilirsiniz](audit-log-retention-policies.md#create-and-manage-audit-log-retention-policies-in-powershell). PowerShell'i kullanmanın bir nedeni, kullanıcı arabiriminde olmayan bir kayıt türü veya etkinliği için ilke oluşturmaktır.
+Kullanıcılar için Gelişmiş Denetim'i ayarlama - Gelişmiş Denetim uygulamasının kullanıcılara atandığını doğrulamak [için her kullanıcı için aşağıdaki adımları uygulayın](set-up-advanced-audit.md#step-1-set-up-advanced-audit-for-users).
+
+1. Gelişmiş Denetim olaylarını etkinleştirme - Exchange Online [PowerShell'deki](/powershell/exchange/connect-to-exchange-online-powershell) her kullanıcı için [SearchQueryInitiatedExchange ve SearchQueryInitiatedSharePoint'in](set-up-advanced-audit.md#step-2-enable-advanced-audit-events) denetlenebilmesini etkinleştirin.
+1. Denetim saklama ilkelerini ayarlama - Kuruluşunuzun güvenlik işlemlerinin, BT'nin ve uyumluluk ekiplerinin gereksinimlerini karşılamak için [ek denetim günlüğü saklama ilkeleri oluşturun](set-up-advanced-audit.md#step-3-set-up-audit-retention-policies) .
+1. Gelişmiş Denetim olaylarını arama - Adli araştırma yaparken [önemli Gelişmiş Denetim olayları](set-up-advanced-audit.md#step-4-search-for-advanced-audit-events) ve diğer etkinlikleri arayın.
+
+### <a name="step-2-create-new-audit-log-policies-to-specify-how-long-to-retain-audit-logs-in-your-org-for-activities-performed-by-users-and-define-priority-levels-for-your-policies"></a>2. Adım: [Kullanıcılar tarafından gerçekleştirilen etkinlikler için kuruluşunuzda denetim günlüklerinin ne kadar süre tutulacağını belirtmek ve ilkeleriniz için öncelik düzeylerini tanımlamak için yeni Denetim Günlüğü ilkeleri oluşturun](audit-log-retention-policies.md#before-you-create-an-audit-log-retention-policy)
+
+> [!TIP]
+> Deneme için en iyi uygulama: İlk 30 gün içinde oluşturma
+
+Denetim günlüğü saklama ilkeleri, Microsoft 365'deki yeni Gelişmiş Denetim özelliklerinin bir parçasıdır. Denetim günlüğü saklama ilkesi, kuruluşunuzda denetim günlüklerinin ne kadar süre tutulacağını belirtmenize olanak tanır.
+
+1. Bir denetim günlüğü saklama ilkesi oluşturmadan önce, ilkenizi oluşturmadan önce [bilmeniz gereken önemli şeyler](audit-log-retention-policies.md#before-you-create-an-audit-log-retention-policy) .
+1. [Denetim günlüğü saklama ilkesi oluşturma](audit-log-retention-policies.md#create-an-audit-log-retention-policy)
+1. [denetim günlüğü saklama ilkelerini Microsoft 365 uyumluluk merkezi](audit-log-retention-policies.md#manage-audit-log-retention-policies-in-the-microsoft-365-compliance-center) - Denetim günlüğü saklama ilkeleri Denetim bekletme ilkeleri sekmesinde (pano olarak da adlandırılır) listelenir. Denetim bekletme ilkelerini görüntülemek, düzenlemek ve silmek için panoyu kullanabilirsiniz.
+1. PowerShell'de denetim günlüğü saklama ilkeleri oluşturma ve yönetme - Güvenlik & Uyumluluk Merkezi PowerShell'i kullanarak [denetim günlüğü saklama ilkeleri oluşturabilir ve yönetebilirsiniz](audit-log-retention-policies.md#create-and-manage-audit-log-retention-policies-in-powershell). PowerShell'i kullanmanın bir nedeni, kullanıcı arabiriminde bulunmayan bir kayıt türü veya etkinliği için ilke oluşturmaktır.
 
 ## <a name="communication-compliance"></a>İletişim Uyumluluğu
 
-**Yürütme ilkesi ihlallerini tanımlama ve bu ihlallere karşı harekete geç**
+**Davranış kuralları ilke ihlallerini belirleme ve buna göre işlem yapma**
 
-İletişim uyumluluğu, uygun olmayan iletileri algılamanıza, olası ilke ihlallerini araştırmanıza ve düzeltmek için adımlar atarak uyumlu ve sağlıklı bir çalışma ortamını desteklemeye yardımcı olmak için iletişim ihlallerini akıllı bir şekilde tanımlamanıza yardımcı olur.
+İletişim uyumluluğu, uygunsuz iletileri algılamanıza, olası ilke ihlallerini araştırmanıza ve düzeltmeye yönelik adımlar atmanıza yardımcı olarak uyumlu ve sağlıklı bir çalışma ortamını desteklemek için iletişim ihlallerini akıllı bir şekilde belirlemenize yardımcı olur.
 
 ### <a name="step-1-enable-permissions-for-communication-compliance"></a>1. Adım: [İletişim uyumluluğu için izinleri etkinleştirme](communication-compliance-configure.md#step-1-required-enable-permissions-for-communication-compliance)
 
 > [!TIP]
-> Deneme için en iyi yöntem: 1. Gün
+> Deneme için en iyi uygulama: 1. Gün
 
-[Tüm uyumluluk kullanıcılarını İletişim Uyumluluğu rol grubuna attayabilirsiniz](communication-compliance-configure.md#step-1-required-enable-permissions-for-communication-compliance).
+[Tüm uyumluluk kullanıcılarını İletişim Uyumluluğu rol grubuna atayın](communication-compliance-configure.md#step-1-required-enable-permissions-for-communication-compliance).
+
 ### <a name="step-2-enable-the-audit-log"></a>2. Adım: [Denetim günlüğünü etkinleştirme](communication-compliance-configure.md#step-2-required-enable-the-audit-log)
 
 > [!TIP]
 > Deneme için en iyi uygulama: İlk 30 gün içinde kurulum
 
-Bu özelliği kullanmak için, denetimi açarak kuruluşta kullanıcı ve yönetici etkinliğini kaydetmeye başlaysını seçin. Bunu açabilirsiniz, etkinlik denetim günlüğüne kaydedilir ve raporda ilebilir. Daha fazla bilgi edinmek için [bkz. Denetim günlüğü aramalarını açma veya kapatma](turn-audit-log-search-on-or-off.md).
+Bu özelliği kullanmak için, kuruluşunuzun kuruluşunuzda kullanıcı ve yönetici etkinliğini kaydetmeye başlayabilmesi için denetimi açın. Bunu açtığınızda, etkinlik denetim günlüğüne kaydedilir ve raporda görüntülenebilir. Daha fazla bilgi için bkz [. Denetim günlüğü aramasını açma veya kapatma](turn-audit-log-search-on-or-off.md).
 
-### <a name="step-3-create-a-communication-compliance-policy"></a>3. Adım [: İletişim uyumluluk ilkesi oluşturma](communication-compliance-policies.md)
+### <a name="step-3-create-a-communication-compliance-policy"></a>3. Adım: [İletişim uyumluluk ilkesi oluşturma](communication-compliance-policies.md)
 
-[Mevcut şablonları kullanarak iletişim uyumluluk ilkesi oluşturma](communication-compliance-policies.md): 1- Uygunsuz içerik; 2- Hassas bilgiler; 3- Yasal düzenlemelere uyum; 4- Faiz çakışması.
+[Mevcut şablonları kullanarak iletişim uyumluluk ilkesi oluşturma](communication-compliance-policies.md): 1- Uygunsuz içerik; 2- Hassas bilgiler; 3- Mevzuat uyumluluğu; 4- Çıkar çatışması.
 
 ### <a name="step-4-investigate-and-remediate-alerts"></a>4. Adım: [Uyarıları araştırma ve düzeltme](communication-compliance-investigate-remediate.md)
 
-[İletişim uyumluluk uyarılarını araştırarak](communication-compliance-investigate-remediate.md) düzeltmek.
+İletişim uyumluluk uyarılarını [araştırın ve düzeltin](communication-compliance-investigate-remediate.md).
 
 ## <a name="compliance-manager"></a>Uyumluluk Yöneticisi
 
-**Kuruluş uyumluluğunızı kolayca yönetin**
+**Kuruluş uyumluluğunuzu kolayca yönetin**
 
-Uyumluluk Yöneticisi, veri koruma risklerinizi envanterini almaktan denetimleri uygulamanın karmaşıklıklarını yönetmeye, yasal düzenlemeler ve sertifikalarla güncel kalmanıza ve denetçilere bildirmeye kadar uyumluluk yolculuğunuz boyunca size yardımcı olabilir.
+Uyumluluk Yöneticisi, veri koruma risklerinizin envanterini almaktan denetimleri uygulama, düzenlemeler ve sertifikalarla güncel kalma ve denetçilere raporlama gibi karmaşıklıkları yönetmeye kadar uyumluluk yolculuğunuz boyunca size yardımcı olabilir.
 
-### <a name="step-1-get-to-know-compliance-manager"></a>1. Adım: [Uyumluluk Yöneticisi'ni hakkında bilgi](compliance-manager-quickstart.md#first-visit-get-to-know-compliance-manager)
+### <a name="step-1-get-to-know-compliance-manager"></a>1. Adım: [Uyumluluk Yöneticisi'ne alışma](compliance-manager-quickstart.md#first-visit-get-to-know-compliance-manager)
 
 > [!TIP]
-> Deneme için en iyi yöntem: 1. Gün
+> Deneme için en iyi uygulama: 1. Gün
 
-Uyumluluk Yöneticisi genel bakış sayfamız, Uyumluluk Yöneticisi'nin ne olduğunu ve nasıl çalıştığını kapsamlı bir şekilde gözden geçirmek için ilk durakdır. Aşağıdaki bağlantıları kullanarak belgelerimizin önemli bölümlerine de geçebilirsiniz:
+Uyumluluk Yöneticisi'ne genel bakış sayfamız, Uyumluluk Yöneticisi'nin ne olduğu ve nasıl çalıştığına ilişkin kapsamlı bir inceleme için en iyi ilk duraktır. Aşağıdaki bağlantıları kullanarak belgelerimizin önemli bölümlerine doğrudan geçmek de isteyebilirsiniz:
 
 - [Uyumluluk puanınızı anlama](compliance-manager.md#understanding-your-compliance-score)
-- [Önemli öğelere genel bakış: denetimler, değerlendirmeler, şablonlar ve geliştirme eylemleri](compliance-manager.md#key-elements-controls-assessments-templates-improvement-actions)
-- [Uyumluluk Yöneticisi panosunun ne olduğunu anlama](compliance-manager-setup.md#understand-the-compliance-manager-dashboard)
-- [Pano görünüme filtre uygulama](compliance-manager-setup.md#filtering-your-dashboard-view)
-- [Geliştirme eylemleri hakkında bilgi](compliance-manager-setup.md#improvement-actions-page)
+- [Önemli öğelere genel bakış: denetimler, değerlendirmeler, şablonlar ve iyileştirme eylemleri](compliance-manager.md#key-elements-controls-assessments-templates-improvement-actions)
+- [Uyumluluk Yöneticisi panosunu anlama](compliance-manager-setup.md#understand-the-compliance-manager-dashboard)
+- [Pano görünümünüzü filtreleme](compliance-manager-setup.md#filtering-your-dashboard-view)
+- [İyileştirme eylemleri hakkında bilgi edinin](compliance-manager-setup.md#improvement-actions-page)
 - [Değerlendirmeleri anlama](compliance-manager.md#assessments)
-- [Microsoft Uyumluluk Yapılandırma Yöneticisi'ni kullanarak ortamınızı hızlı bir şekilde tarama](compliance-manager-mcca.md)
+- [Microsoft Uyumluluk Configuration Manager kullanarak ortamınızda hızlı bir tarama yapın](compliance-manager-mcca.md)
 
 ![Uyumluluk Yöneticisi - pano.](../media/compliance-manager-dashboard.png "Uyumluluk Yöneticisi panosu")
 
-### <a name="step-2-configure-compliance-manager-to-manage-your-compliance-activities"></a>2. Adım: [Uyumluluk etkinliklerinizi yönetmek için Uyumluluk Yöneticisi'ni yapılandırma](compliance-manager-assessments.md)
+### <a name="step-2-configure-compliance-manager-to-manage-your-compliance-activities"></a>2. Adım: [Uyumluluk Yöneticisini uyumluluk etkinliklerinizi yönetecek şekilde yapılandırma](compliance-manager-assessments.md)
 
 > [!TIP]
-> Deneme için en iyi uygulama: İlk 30 gün içinde denetleme
+> Deneme için en iyi uygulama: İlk 30 gün içinde inceleme
 
-Değerlendirmelerle çalışmaya ve denetimleri uygulamaya ve uyumluluk puanınızı iyileştirmeye ilişkin iyileştirme eylemleri yapmaya başlayabilirsiniz.
+Değerlendirmelerle çalışmaya başlayın ve denetimleri uygulamak ve uyumluluk puanınızı geliştirmek için iyileştirme eylemleri gerçekleştirin.
 
-1. [İlk değerlendirmenizi oluşturmak ve yönetmek için önceden yerleşik bir şablon seçin](compliance-manager-assessments.md).
-1. [Değerlendirme oluşturmak için şablonların nasıl kullanıla olduğunu anlıyoruz](compliance-manager-templates.md).
-1. [Değerlendirmelerizdeki denetimleri tamamlamak için geliştirme eylemleri üzerinde uygulama ve test çalışmaları gerçekleştirin](compliance-manager-improvement-actions.md).
-1. [Farklı eylemlerin uyumluluk puanınızı nasıl etkileyeni daha iyi anlıyoruz](compliance-score-calculation.md).
+1. [İlk değerlendirmenizi oluşturmak ve yönetmek için önceden oluşturulmuş bir şablon seçin](compliance-manager-assessments.md).
+1. [Değerlendirme oluşturmak için şablonların nasıl kullanılacağını anlama](compliance-manager-templates.md).
+1. [Değerlendirmelerinizdeki denetimleri tamamlamak için iyileştirme eylemleri üzerinde uygulama ve test çalışmaları gerçekleştirin](compliance-manager-improvement-actions.md).
+1. [Farklı eylemlerin uyumluluk puanınızı nasıl etkilediğini daha iyi anlayın](compliance-score-calculation.md).
 
 > [!NOTE]
-> Microsoft 365 veya Office 365 E1 E3 aboneliği Microsoft Veri Koruma Temel şablonu içerir. Microsoft 365 veya Office 365 E5, E5 Uyumluluğu aşağıdakiler için şablonlar içerir:
+> Microsoft 365 veya Office 365 E1/E3 aboneliği Microsoft Veri Koruma Temeli şablonunu içerir. E5 Uyumluluğu, Microsoft 365 veya Office 365 E5 için şablonlar içerir:
 >
 > - Microsoft Veri Koruma Temeli
 > - Avrupa Birliği GDPR  
 > - ISO/IEC 27001,
 > - NIST 800-53
 >
-> Uyumluluk Yöneticisi, eklenti olarak satın alınan 300'den fazla mevzuat veya premium şablon içerir. Listeye buradan bakın. Herhangi bir premium şablonla (aboneliğinize dahil olan veya eklenti olarak satın alınan şablonlar) bu şablonların evrensel sürümünü alırsınız ve bu da herhangi bir ürün veya hizmetle uyumluluğunu yönetmenize olanak sağlar
+> Uyumluluk Yöneticisi, eklenti olarak satın alınabilecek 300'in üzerinde mevzuat veya premium şablon içerir. Listeye buradan bakın. Tüm premium şablonlarla (aboneliğinize dahil edilir veya eklenti olarak satın alınır) bu şablonların evrensel sürümünü alırsınız ve herhangi bir ürün veya hizmetle uyumluluğunuzu yönetmenizi sağlar
 
-### <a name="step-3-scaling-up-use-advanced-functionality-to-meet-your-custom-needs"></a>3. Adım: [Ölçeklendirme: Özel ihtiyaçları karşılamak için gelişmiş işlevselliği kullanma](compliance-manager-templates-create.md)
+### <a name="step-3-scaling-up-use-advanced-functionality-to-meet-your-custom-needs"></a>3. Adım: [Ölçeği artırma: Özel gereksinimlerinizi karşılamak için gelişmiş işlevleri kullanın](compliance-manager-templates-create.md)
 
-Özel değerlendirmeler şunların için yararlıdır:
+Özel değerlendirmeler şunlar için yararlıdır:
 
-- Üçüncü taraf uygulamaları ve Microsoft 365, şirket içi uygulamalar ve diğer varlıklar gibi üçüncü taraf ürünleri için uyumluluğu yönetme
+- Üçüncü taraf uygulamalar ve hizmetler, şirket içi uygulamalar ve diğer varlıklar gibi Microsoft 365 olmayan ürünler için uyumluluğu yönetme
 - Kendi özel veya işletmeye özgü uyumluluk denetimlerinizi yönetme
 
-1. [Kendi denetimlerinizi ve geliştirme eylemlerinizi ekleyerek Uyumluluk Yöneticisi şablonunu genişletme](compliance-manager-templates-extend.md)
-1. [Kendi özel şablonlarınızı oluşturma](compliance-manager-templates-create.md)
-1. [Denetimleri ve eylemleri eklemek veya kaldırmak için var olan şablonu değiştirme](compliance-manager-templates-modify.md)
-1. [Geliştirme eylemlerinin otomatik testlerini ayarlama](compliance-manager-setup.md#set-up-automated-testing)
+1. [Kendi denetimlerinizi ve iyileştirme eylemlerinizi ekleyerek Uyumluluk Yöneticisi şablonunu genişletme](compliance-manager-templates-extend.md)
+1. [Kendi özel şablonunuzu oluşturma](compliance-manager-templates-create.md)
+1. [Denetimleri ve eylemleri eklemek veya kaldırmak için mevcut şablonu değiştirme](compliance-manager-templates-modify.md)
+1. [İyileştirme eylemlerinin otomatik testini ayarlama](compliance-manager-setup.md#set-up-automated-testing)
 1. [Geliştirme eylemlerini başka bir kullanıcıya yeniden atama](compliance-manager-setup.md#reassign-improvement-actions-to-another-user)
 
-## <a name="data-loss-prevention"></a>Veri Kaybını Önleme
+## <a name="data-loss-prevention"></a>Veri Kaybı Önleme
 
 **Hassas verileri koruma**
 
-İş standartları ve endüstri yönetmeliklerine uygun olması için, kuruluşların yanlışlıkla açıklanmasını önlemek için hassas bilgileri korumaları gerekir. Tüm iş yer genelinde hassas bilgileri tanımlamak, izlemek ve otomatik olarak korumak için veri kaybı önleme Microsoft 365.
+kuruluşların iş standartlarına ve sektör düzenlemelerine uyum sağlamak için hassas bilgileri yanlışlıkla açığa çıkmasını önlemek için koruması gerekir. Microsoft 365 hassas bilgileri tanımlamak, izlemek ve otomatik olarak korumak için veri kaybı önleme ilkeleri ayarlayın.
 
-### <a name="step-1-protect-data-loss-on-teams-locations"></a>1. Adım: [Konumlarda veri Teams koruma](dlp-microsoft-teams.md#dlp-licensing-for-microsoft-teams)
+### <a name="step-1-protect-data-loss-on-teams-locations"></a>1. Adım: [Teams konumlarda veri kaybını koruma](dlp-microsoft-teams.md#dlp-licensing-for-microsoft-teams)
 
 > [!TIP]
-> Deneme için en iyi yöntem: 1. Gün
+> Deneme için en iyi uygulama: 1. Gün
 
-Kuruluşta veri kaybı önleme (DLP) varsa, bir kanalda veya sohbet oturumunda kişilerin hassas bilgileri paylaşmasını Microsoft Teams ilkeler tanımlayabilirsiniz.
+Kuruluşunuzda veri kaybı önleme (DLP) varsa, kişilerin bir Microsoft Teams kanalında veya sohbet oturumunda hassas bilgileri paylaşmasını engelleyen ilkeler tanımlayabilirsiniz.
 
-1. DLP [Lisanslama Lisansları hakkında Microsoft Teams ve DLP koruma kapsamı hakkında bilgi](dlp-microsoft-teams.md#dlp-licensing-for-microsoft-teams)
-1. [Varolan Microsoft Teams DLP ilkelerine konum olarak ekleme](dlp-microsoft-teams.md#add-microsoft-teams-as-a-location-to-existing-dlp-policies)
-1. [Varsayılan DLP ilkemizi daha iyi Teams](mip-easy-trials.md) [DLP ilkesi tanımlama veya DLP için yeni bir DLP Microsoft Teams](dlp-microsoft-teams.md#define-a-new-dlp-policy-for-microsoft-teams)
+1. [Microsoft Teams için DLP Lisansı ve DLP korumasının kapsamı](dlp-microsoft-teams.md#dlp-licensing-for-microsoft-teams) hakkında bilgi edinin
+1. [Mevcut DLP ilkelerine konum olarak Microsoft Teams ekleme](dlp-microsoft-teams.md#add-microsoft-teams-as-a-location-to-existing-dlp-policies)
+1. [Teams için varsayılan DLP ilkemizi yapılandırın](mip-easy-trials.md) veya [Microsoft Teams için yeni bir DLP ilkesi tanımlayın](dlp-microsoft-teams.md#define-a-new-dlp-policy-for-microsoft-teams)
 
-### <a name="step-2-protect-data-loss-on-device-locations"></a>2. Adım: [Cihaz konumlarda veri kaybını koruma](endpoint-dlp-getting-started.md)
+### <a name="step-2-protect-data-loss-on-device-locations"></a>2. Adım: [Cihaz konumlarında veri kaybını koruma](endpoint-dlp-getting-started.md)
 
 > [!TIP]
 > Deneme için en iyi uygulama: İlk 30 gün içinde kurulum
 
-Microsoft Endpoint DLP, en son cihazları Windows 10 hassas öğelerin ne zaman kullanılmış ve paylaşılıyor olduğunu algılamaya olanak tanır.
+Microsoft Endpoint DLP, Windows 10 cihazları izlemenize ve hassas öğelerin ne zaman kullanıldığını ve paylaşılmasını algılamanıza olanak tanır.
 
-1. Uç noktalarınızı hazırlama - Bu gereksinimleri karşılamak Windows 10 Uç Nokta DLP'yi dağıtmayı planlayınız Windows 10 macOS cihazlarının [](endpoint-dlp-getting-started.md)
-1. [Cihazları cihaz yönetimine ekleme](endpoint-dlp-getting-started.md)  - Bir cihazdaki hassas öğeleri izlemek ve korumak için önce cihaz izlemeyi etkinleştirmeniz ve uç noktaları eklemeniz gerekir. Bu eylemlerin ikisi de Uyumluluk Portalı'Microsoft 365 yapılır.
-   - Senaryo 1 – [Henüz](endpoint-dlp-getting-started.md) eklememiş olan ekleme cihazları.
-   - Senaryo 2 - [Uç Nokta için Microsoft Defender zaten dağıtılır ve raporlama uç noktaları vardır](endpoint-dlp-getting-started.md). Tüm bu uç noktalar yönetilen cihazlar listesinde görünür.
-1. [Cihazlar için varsayılan DLP ilkemizi yapılandırma veya](mip-easy-trials.md#dlp-for-devices) [Cihazlar için yeni DLP ilkesi tanımlama](endpoint-dlp-learn-about.md).
-1. [DLP Uyarıları Yönetimi panosunda](dlp-configure-view-alerts-policies.md) Uç Nokta DLP uyarılarını görüntüleme.
-1. [Etkinlik gezgininde Uç Nokta DLP](data-classification-activity-explorer.md) verilerini görüntüleme.
+1. Uç noktalarınızı hazırlama - [Bu gereksinimleri karşılamak](endpoint-dlp-getting-started.md) için Uç Nokta DLP'sini dağıtmayı planladığınız Windows 10 ve macOS cihazlarının
+1. [Cihazları cihaz yönetimine ekleme](endpoint-dlp-getting-started.md)  - Cihazdaki hassas öğeleri izleyip koruyabilmeniz için önce cihaz izlemeyi etkinleştirmeniz ve uç noktalarınızı eklemeniz gerekir. Bu eylemlerin her ikisi de Microsoft 365 Uyumluluk portalında gerçekleştirilir.
+   - Senaryo 1 – [Henüz eklenmemiş cihazları](endpoint-dlp-getting-started.md) ekleme.
+   - Senaryo 2 - [Uç Nokta için Microsoft Defender zaten dağıtıldı ve içinde raporlama yapılan uç noktalar var](endpoint-dlp-getting-started.md). Tüm bu uç noktalar yönetilen cihazlar listesinde görünür.
+1. [Cihazlar için varsayılan DLP ilkemizi yapılandırın veya Cihazlar için](mip-easy-trials.md#dlp-for-devices) [yeni bir DLP ilkesi tanımlayın](endpoint-dlp-learn-about.md).
+1. DLP Uyarıları Yönetimi panosunda [Uç Nokta DLP uyarılarını görüntüleyin](dlp-configure-view-alerts-policies.md).
+1. Etkinlik gezgininde [Uç Nokta DLP verilerini görüntüleyin](data-classification-activity-explorer.md).
 
-### <a name="step-3-expand-policies-in-scope-or-protection"></a>3. Adım: [Kapsam veya korumada ilkeleri genişletme](dlp-learn-about-dlp.md#dlp-policy-configuration-overview)
+### <a name="step-3-expand-policies-in-scope-or-protection"></a>3. Adım: [Kapsam veya korumadaki ilkeleri genişletme](dlp-learn-about-dlp.md#dlp-policy-configuration-overview)
 
-DLP ilkelerinizi yapılandırma esnekliğiniz vardır. Daha fazla konumu, hassas bilgi türlerini veya etiketleri korumak Teams için varsayılan DLP ilkemizi kullanarak başlayabilir ve bu ilkeleri genişletebilirsiniz. Ayrıca, ilke eylemlerine göre genişletebilirsiniz ve uyarıyı özelleştirebilirsiniz.
+DLP ilkelerinizi yapılandırma konusunda esnekliğe sahipsiniz. Teams ve cihazlar için varsayılan DLP ilkemizle başlayabilir ve ek konumları, hassas bilgi türlerini veya etiketleri korumak için bu ilkeleri genişletebilirsiniz. Ayrıca, ilke eylemlerini genişletebilir ve uyarıları özelleştirebilirsiniz.
 
 1. Konum ekleme
-1. Korumak için hassas bilgi türleri veya etiketleri ekleme
+1. Korumak için hassas bilgi türleri veya etiketler ekleme
 1. Eylem ekleme
    - Teams:
       - [Hassas belgelere dış erişimi engelleme](dlp-microsoft-teams.md#prevent-external-access-to-sensitive-documents)
-      - [Kullanıcıları eğitip ilke ipuçlarını özelleştirme yönergelerini almaya yardımcı olacak ilke ipuçları al](dlp-microsoft-teams.md#policy-tips-help-educate-users)
-   - Cihazlar: yalnızca denetimden engellemeye geçiş
-1. [Veri kaybı önleme ilkeleri için uyarıları yapılandırma ve görüntüleme - Uyumluluk Microsoft 365'| Microsoft Docs](dlp-configure-view-alerts-policies.md)
+      - [Kullanıcıları eğitmeye yardımcı olacak ilke ipuçları ve ilke ipuçlarını özelleştirme yönergeleri alma](dlp-microsoft-teams.md#policy-tips-help-educate-users)
+   - Cihazlar: Yalnızca denetimden engellemeye geçme
+1. [Veri kaybı önleme ilkeleri için uyarıları yapılandırma ve görüntüleme - uyumluluk | Microsoft 365 Microsoft Docs](dlp-configure-view-alerts-policies.md)
 
-## <a name="ediscovery"></a>eKbulma
+## <a name="ediscovery"></a>Ediscovery
 
-**Uçtan  uç iş akışıyla daha fazlasını keşfetme**
+**Uçtan uca iş akışıyla daha fazlasını keşfedin**
 
-Kuruluşun iç ve dış soruşturmalarına yanıt veren içerikleri korumak, toplamak, çözümlemek ve dışarı aktarmak için  uç iş akışılardan faydalanın. Yasal ekipler, bir olaya dahil olan koruyucularla iletişim kurarak yasal tutma bildirimi işleminin tamamını yönetebilir.
+Kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği korumak, toplamak, analiz etmek ve dışarı aktarmak için uçtan uca iş akışından yararlanın. Yasal ekipler, bir davaya dahil olan koruyucularla iletişim kurarak yasal tutma bildirim sürecinin tamamını da yönetebilir.
 
 ### <a name="step-1-required-permissions"></a>1. Adım (gerekli): [İzinler](https://aka.ms/ediscoveryninja)
 
 > [!TIP]
-> Deneme için en iyi yöntem: 1. Gün
+> Deneme için en iyi uygulama: 1. Gün
 
-Kullanıcıya Advanced eDiscovery veya bir davanın üyesi olarak Advanced eDiscovery için, kullanıcıya uygun izinler atanabilir.
+Advanced eDiscovery erişmek veya bir Advanced eDiscovery servis talebinin üyesi olarak eklemek için kullanıcıya uygun izinlerin atanması gerekir.
 
-1. [EBulma Advanced eDiscovery ayarlama – eBulma izinleri atama](get-started-with-advanced-ediscovery.md#step-2-assign-ediscovery-permissions)
-1. [Vakaya üye ekleme veya vakadan üye kaldırma](add-or-remove-members-from-a-case-in-advanced-ediscovery.md)
+1. [Advanced eDiscovery ayarlama – eBulma izinlerini atama](get-started-with-advanced-ediscovery.md#step-2-assign-ediscovery-permissions)
+1. [Bir vakaya üye ekleme veya kaldırma](add-or-remove-members-from-a-case-in-advanced-ediscovery.md)
 
-### <a name="step-2-required-create-a-case"></a>2. Adım (gerekli): Olay oluşturma
+### <a name="step-2-required-create-a-case"></a>2. Adım (gerekli): Servis Talebi Oluşturma
 
 > [!TIP]
-> Deneme için en iyi yöntem: İlk 30 gün içinde oluşturun
+> Deneme için en iyi uygulama: İlk 30 gün içinde oluşturma
 
-Diğer kuruluşlar kritik eK Advanced eDiscovery için Microsoft 365 çözümlerini bu çözümde kullanır. Bu düzenlemelere ilişkin taleplere, soruşturmalara ve mahkemelere yanıt vermeyi kapsar.
+Daha fazla kuruluş, kritik eBulma işlemleri için Microsoft 365'da Advanced eDiscovery çözümünü kullanır. Bu, mevzuat isteklerine, araştırmalara ve davalara yanıt vermeyi içerir.
 
-1. Posta Advanced eDiscovery Yönetme – Güvenlik Advanced eDiscovery Uyumluluk Merkezi'& kullanarak vakaları [yapılandırmayı, Advanced eDiscovery'te](/learn/modules/manage-advanced-ediscovery) iş akışını yönetmeyi ve arama sonuçlarını çözümlemeyi Advanced eDiscovery öğrenin.
-1. [eBulma'nın yeni vaka biçimini ilerlet'i kullanarak eBulma vakası oluşturma](advanced-ediscovery-new-case-format.md)
-1. [Vakayı kapatma veya silme](close-or-delete-case.md) - Dava veya soruşturma tamamlandığında, vakayı veya soruşturmayı kapatarak veya silebilirsiniz. Ayrıca, kapalı bir vakayı yeniden açılmıştır.
+1. Advanced eDiscovery yönetme: [Güvenlik & Uyumluluk Merkezi'ni kullanarak Advanced eDiscovery yapılandırmayı, servis taleplerini yönetmeyi, Advanced eDiscovery iş akışını yönetmeyi ve Advanced eDiscovery arama sonuçlarını analiz etmeyi öğrenin](/learn/modules/manage-advanced-ediscovery).
+1. [Advance eDiscovery'nin yeni servis talebi biçimini kullanarak eBulma olayı oluşturma](advanced-ediscovery-new-case-format.md)
+1. [Bir olayı kapatma veya silme](close-or-delete-case.md) - Yasal dava veya araştırma tamamlandığında, kapatabilir veya silebilirsiniz. Kapatılan bir olayı da yeniden açabilirsiniz.
 
 ### <a name="step-3-optional-settings"></a>3. Adım (isteğe bağlı): Ayarlar
 
-Kuruluşların kişilerin vakaları oluşturmasına ve kullanmaya başlamasına izin vermek için, kuruluşun tüm örnekleri için geçerli olan genel ayarları yapılandırmanız gerekir. Şu anda tek genel ayar avukat-istemci ayrıcalık algılaması **özelliğidir** (gelecekte daha fazla genel ayar kullanılabilir).
+Kuruluşunuzdaki kişilerin örnek oluşturmaya ve kullanmaya başlamasına izin vermek için, kuruluşunuzdaki tüm durumlar için geçerli olan genel ayarları yapılandırmanız gerekir. Şu anda tek genel ayar **avukat-istemci ayrıcalık algılamadır** (gelecekte daha fazla genel ayar sağlanacaktır).
 
-1. [Genel Advanced eDiscovery'i Ayarlar](get-started-with-advanced-ediscovery.md#step-3-configure-global-settings-for-advanced-ediscovery)
-1. [Arama ve çözümleme ayarlarını yapılandırma](configure-search-and-analytics-settings-in-advanced-ediscovery.md)
-1. [İş yerlerinde işleri Advanced eDiscovery](managing-jobs-ediscovery20.md)
+1. [Advanced eDiscovery ayarlama – Genel Ayarlar](get-started-with-advanced-ediscovery.md#step-3-configure-global-settings-for-advanced-ediscovery)
+1. [Arama ve analiz ayarlarını yapılandırma](configure-search-and-analytics-settings-in-advanced-ediscovery.md)
+1. [Advanced eDiscovery'da işleri yönetme](managing-jobs-ediscovery20.md)
 
 ### <a name="step-4-optional-compliance-boundaries"></a>4. Adım (isteğe bağlı): [Uyumluluk Sınırları](set-up-compliance-boundaries.md)
 
-Uyumluluk sınırları, eBulma yöneticilerinin aray kontrolü yaptığı kullanıcı içerik konumlarını (posta kutuları, OneDrive hesapları ve SharePoint siteleri gibi) kontrol altına alan bir kuruluş içinde mantıksal sınırlar oluşturabilir. Ayrıca, kuruluş içinde yasal, insan kaynakları veya diğer soruşturmaları yönetmek için kullanılan eBulma olaylarına kimlerin eriş erişeni de kontrol etmek için kullanılırlar.
+Uyumluluk sınırları, eBulma yöneticilerinin arayabileceği kullanıcı içerik konumlarını (posta kutuları, OneDrive hesapları ve SharePoint siteleri gibi) denetleen bir kuruluş içinde mantıksal sınırlar oluşturur. Ayrıca kuruluşunuzdaki yasal, insan kaynaklarını veya diğer soruşturmaları yönetmek için kullanılan eBulma olaylarına kimlerin erişebileceğini de denetler.
 
-![Uyumluluk sınırları, eBulma durumlarına erişimi denetim altına alan kuruluşlara ve yönetici rolü gruplarına erişimi denetim altına alan arama izinleri filtrelerinden oluşur.](../media/M365_ComplianceBoundary_OrgChart_v2.png)
+![Uyumluluk sınırları, eBulma olaylarına erişimi denetleen ajanslara ve yönetici rol gruplarına erişimi denetleen arama izinleri filtrelerinden oluşur.](../media/M365_ComplianceBoundary_OrgChart_v2.png)
 
-eBulma soruşturmaları için uyumluluk sınırlarını ayarlayın:
+eBulma araştırmaları için uyumluluk sınırlarını ayarlayın:
 
-1. [Kuruluşları tanımlamak için bir kullanıcı özniteliği belirleme](set-up-compliance-boundaries.md#step-1-identify-a-user-attribute-to-define-your-agencies)
-1. [Her acente için bir rol grubu oluşturma](set-up-compliance-boundaries.md#step-2-create-a-role-group-for-each-agency)
-1. [Uyumluluk sınırını zorunlu aramak için arama izinleri filtresi oluşturma](set-up-compliance-boundaries.md#step-3-create-a-search-permissions-filter-to-enforce-the-compliance-boundary)
-1. [Bir şirket içi soruşturmalar için eBulma vakası oluşturma](set-up-compliance-boundaries.md#step-4-create-an-ediscovery-case-for-intra-agency-investigations)
+1. [Ajanslarınızı tanımlamak için bir kullanıcı özniteliği tanımlama](set-up-compliance-boundaries.md#step-1-identify-a-user-attribute-to-define-your-agencies)
+1. [Her ajans için bir rol grubu oluşturma](set-up-compliance-boundaries.md#step-2-create-a-role-group-for-each-agency)
+1. [Uyumluluk sınırını zorlamak için arama izinleri filtresi oluşturma](set-up-compliance-boundaries.md#step-3-create-a-search-permissions-filter-to-enforce-the-compliance-boundary)
+1. [Kurum içi araştırmalarda eBulma olayı oluşturma](set-up-compliance-boundaries.md#step-4-create-an-ediscovery-case-for-intra-agency-investigations)
 
-### <a name="step-5-optional-learn-about-content-search-tool"></a>5. Adım (isteğe bağlı): [İçerik arama aracı hakkında bilgi](search-for-content.md)
+### <a name="step-5-optional-learn-about-content-search-tool"></a>5. Adım (isteğe bağlı): [İçerik arama aracı hakkında bilgi edinin](search-for-content.md)
 
-Microsoft 365 uyumluluk merkezi posta kutularında, SharePoint sitelerinde ve Exchange OneDrive konumlarında e-postayı, Skype Kurumsal'te anlık ileti konuşmalarını hızlı bir şekilde bulmak için Skype Kurumsal. İçerik arama aracını kullanarak, Grup Sohbetleri ve Grupları Birleştirme gibi işbirliği araçlarında e-postaları, belgeleri ve anlık Microsoft Teams Microsoft 365 kullanabilirsiniz.
+Exchange posta kutularında e-postayı, SharePoint sitelerdeki ve OneDrive konumlardaki belgeleri ve Skype Kurumsal'daki anlık ileti konuşmalarını hızla bulmak için Microsoft 365 uyumluluk merkezi İçerik arama aracını kullanın. Microsoft Teams ve Microsoft 365 Grupları gibi işbirliği araçlarında e-posta, belge ve anlık ileti konuşmalarını aramak için içerik arama aracını kullanabilirsiniz.
 
-- [Arama hakkında daha Advanced eDiscovery bilgi](search-for-content.md#search-for-content)
+- [Advanced eDiscovery arama hakkında daha fazla bilgi edinin](search-for-content.md#search-for-content)
 
-## <a name="information-protection"></a>Bilgi Koruması
+## <a name="information-protection"></a>Information Protection
 
-**Hassas bilgileri keşfetme, sınıflandırma ve koruma**
+**Hassas bilgilerinizi keşfetme, sınıflandırma ve koruma**
 
-Hassas Microsoft Bilgi Koruması içinde yer alan veya seyahat her yerde bu içeriği bu şekilde sınıflandırmanıza ve korumanıza yardımcı olmak için, daha fazla etiket ve duyarlılık etiketi kullanın.
+Hassas içeriğinizi yaşadığınız veya seyahat ettiğiniz her yerde keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olmak için Microsoft Bilgi Koruması ve duyarlılık etiketleri uygulayın.
 
 ### <a name="step-1-start-your-information-protection-trial"></a>1. Adım: [Bilgi koruma denemenizi başlatma](mip-easy-trials.md)
 
 > [!TIP]
-> Deneme için en iyi yöntem: 1. Gün
+> Deneme için en iyi uygulama: 1. Gün
 
-Uygun müşteriler, iş için varsayılan etiketleri ve Microsoft Bilgi Koruması. Denemede varsayılan yapılandırmayı etkinleştirirken, kiracınız için tüm ilkelerin yapılandırılması yaklaşık 2 dakika sürer ve bu varsayılan ilkelerin sonuçlarını görmek 24 saate kadar sürer.
+Uygun müşteriler Microsoft Bilgi Koruması için varsayılan etiketleri ve ilkeleri etkinleştirebilir. Deneme sürümünde varsayılan yapılandırmayı etkinleştirdiğinizde, kiracınız için tüm ilkelerin yapılandırılması yaklaşık 2 dakika ve bu varsayılan ilkelerin sonuçlarını görmek 24 saate kadar sürer.
 
-Varsayılan yapılandırmayı seçin ve tek tıklamayla aşağıdakiler otomatik olarak yapılandırılır:
+Varsayılan yapılandırmayı seçerek, 1 tıklamayla aşağıdakiler otomatik olarak yapılandırılır:
 
 - Duyarlılık etiketleri ve duyarlılık etiketi ilkesi
 - İstemci tarafı otomatik etiketleme
 - Hizmet tarafı otomatik etiketleme
-- Verileri ve cihazlarınız için veri kaybı önleme (DLP) Teams ilkeleri
+- Teams ve cihazlar için veri kaybı önleme (DLP) ilkeleri
 
-[Varsayılan etiketleri ve ilkeleri etkinleştirme](mip-easy-trials.md#activate-the-default-labels-and-policies). Gerekirse, yapılandırma tamamlandıktan sonra el ile düzenleyebilirsiniz.
+[Varsayılan etiketleri ve ilkeleri etkinleştirin](mip-easy-trials.md#activate-the-default-labels-and-policies). Gerekirse, yapılandırma tamamlandıktan sonra el ile düzenleyebilirsiniz.
 
 ### <a name="step-2-automatically-apply-sensitivity-labels-to-documents"></a>2. Adım: [Belgelere duyarlılık etiketlerini otomatik olarak uygulama](apply-sensitivity-label-automatically.md)
 
 > [!TIP]
 > Deneme için en iyi uygulama: İlk 30 gün içinde kurulum
 
-Duyarlılık etiketi  oluşturduktan sonra, belirttiğiniz koşullarla eşleşen dosyalara ve e-postalara otomatik olarak bu etiketi atabilirsiniz.
+Duyarlılık etiketi oluşturduğunuzda, belirttiğiniz koşullarla eşleştiğinde bu etiketi dosyalara ve e-postalara otomatik olarak atayabilirsiniz.
 
-1. [Duyarlılık etiketlerini oluşturma ve yapılandırma](create-sensitivity-labels.md#create-and-configure-sensitivity-labels)
-1. [Tüm kullanıcılara duyarlılık etiketi ilkesi yayımlama](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy)
+1. [Duyarlılık etiketleri oluşturma ve yapılandırma](create-sensitivity-labels.md#create-and-configure-sensitivity-labels)
+1. [Duyarlılık etiketi ilkesini tüm kullanıcılara yayımlama](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy)
 1. [Otomatik etiketleme ilkesi oluşturma](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy)
-   - Etiketin uygulanmalarını istediğiniz bilgileri seçin
+   - Etiketin uygulanmasını istediğiniz bilgileri seçin
    - Etiket uygulanacak konumları tanımlama
    - Uygulanacak etiketi seçin
-   - [Benzetim modunda çalıştırma ilkesi](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy)
+   - [İlkeyi simülasyon modunda çalıştırma](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy)
 
 ![Otomatik etiketleme için yeni ilke yapılandırması.](../media/auto-labeling-wizard.png)
 
-### <a name="step-3-review-and-turn-on-auto-labeling-policy"></a>3. Adım: [Otomatik etiketleme İlkesini gözden geçirme ve açma](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange)
+### <a name="step-3-review-and-turn-on-auto-labeling-policy"></a>3. Adım: [Otomatik etiketleme ilkesini gözden geçirme ve açma](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange)
 
-Information **protectionAuto-labeling**  >  sayfasında, otomatik etiketleme ilkenizi Benzetim **bölümünde görebilirsiniz**.
+**Şimdi Information protectionAuto** >  **etiketleme** sayfasında **Simülasyon** bölümünde otomatik etiketleme ilkenizi görürsünüz.
 
-Yapılandırma ve durum ayrıntılarını görmek için ilkenizi seçin. Benzetim tamamlandığında, hangi e-posta veya belgelerin belirtilen kurallarla eş olduğunu görmek için Gözden geçirlanacak öğeler sekmesini seçin.
+Yapılandırmanın ve durumun ayrıntılarını görmek için ilkenizi seçin. Simülasyon tamamlandığında, hangi e-postaların veya belgelerin belirtilen kurallarla eşleştiğine bakmak için Gözden geçirilir öğeler sekmesini seçin.
 
-Benzetim olmadan ilkeyi çalıştırmaya hazırsanız, **İlkeyi aç seçeneğini** belirleyin.
+İlkeyi simülasyon olmadan çalıştırmaya hazır olduğunuzda İlkeyi **aç** seçeneğini belirleyin.
 
-## <a name="insider-risk-management"></a>Insider Risk Yönetimi
+## <a name="insider-risk-management"></a>Insider Risk Management
 
 **Insider risklerini algılama ve düzeltme**
 
-şirket içi riskleri hızlı bir şekilde tanımlamanıza, dengelemeye ve düzeltmeye yardımcı olacak yapay zekadan faydalanabilirsiniz. Microsoft 365 Azure hizmetlerinden günlükleri kullanarak, insider risk sinyallerini izleten ilkeler tanımlayabilir ve sonra kullanıcı eğitiminin tanıtımını alma veya bir araştırmanın başlatıldığı gibi düzeltme eylemleri gerçekleştirebilirsiniz.
+İç riskleri hızla belirlemenize, önceliklendirmenize ve düzeltmenize yardımcı olmak için yapay zekadan yararlanın. Microsoft 365 ve Azure hizmetlerindeki günlükleri kullanarak, içeriden risk sinyallerini izleyen ilkeler tanımlayabilir, ardından kullanıcı eğitimini yükseltme veya araştırma başlatma gibi düzeltme eylemleri gerçekleştirebilirsiniz.
 
 ### <a name="step-1-required-enable-permissions-for-insider-risk-management"></a>1. Adım (gerekli): [Insider risk yönetimi için izinleri etkinleştirme](insider-risk-management-configure.md#step-1-required-enable-permissions-for-insider-risk-management)
 
 > [!TIP]
-> Deneme için en iyi yöntem: 1. Gün
+> Deneme için en iyi uygulama: 1. Gün
 
 Insider risk yönetimi özelliklerini yönetmek için izinleri yapılandırmak için kullanılan dört rol grubu vardır.
 
-[Kullanıcıları bir Insider risk yönetimi rol grubuna ekleyin.](insider-risk-management-configure.md#add-users-to-an-insider-risk-management-role-group)
+[Kullanıcıları bir insider risk yönetimi rol grubuna ekleyin.](insider-risk-management-configure.md#add-users-to-an-insider-risk-management-role-group)
 
-İzinleri görmüyorsanız doğru rolleri atamak için lütfen kiracı yöneticinizle iletişime gidin.
+İzinleri göremiyorsanız, doğru rolleri atamak için lütfen kiracı yöneticinizle görüşün.
 
-### <a name="step-2-start-with-user-quick-start-guide"></a>2. Adım: [Kullanıcı hızlı başlangıç kılavuzu ile başlama](insider-risk-management-configure.md#recommended-actions-preview)
+### <a name="step-2-start-with-user-quick-start-guide"></a>2. Adım: [Kullanıcı hızlı başlangıç kılavuzuyla başlama](insider-risk-management-configure.md#recommended-actions-preview)
 
-Hızlı bir şekilde işe başlandı ve önerilen eylemlerle Insider risk yönetimi yeteneklerine en iyi şekilde sahip olun. Genel Bakış sayfasında yer alan önerilen eylemler, ilkeleri yapılandırma ve dağıtma ve ilke eşleşmelerinden uyarı oluşturan kullanıcı eylemleri için soruşturma eylemlerine yönelik işlemlerde size yol bu konuda yol yardımcı olur.
+Önerilen eylemlerle hızlıca başlayın ve içeriden risk yönetimi özelliklerinden en iyi şekilde yararlanın. Genel Bakış sayfasına eklenen önerilen eylemler, ilkeleri yapılandırma ve dağıtma ve ilke eşleşmelerinden uyarı oluşturan kullanıcı eylemleri için araştırma eylemleri gerçekleştirme adımlarında size yol gösterir.
 
-[Insider risk yönetimini yapılandırmaya](insider-risk-management-configure.md#recommended-actions-preview) başlamaya başlama için listeden bir öneri seçin.
+Insider risk yönetimini yapılandırmaya başlamak için [listeden bir öneri seçin](insider-risk-management-configure.md#recommended-actions-preview).
 
 ![Insider risk yönetimi önerilen eylemler.](../media/insider-risk-recommended-actions.png)
 
-Önerilen her eylem, gereksinimleri, neler beklemeniz gerekenler ve özelliğin kuruluş içinde yapılandırılma etkisini de içinde olmak üzere, öneriye yönelik gerekli etkinliklerde size yol sunar.
+Önerilen her eylem, gereksinimler, beklenecekler ve özelliğin kuruluşunuzdaki yapılandırmasının etkisi de dahil olmak üzere öneri için gerekli etkinliklerde size yol gösterir.
 
-### <a name="step-3-required-enable-the-microsoft-365-audit-log"></a>3. Adım (gerekli): [Denetim Microsoft 365 etkinleştirme](insider-risk-management-configure.md#step-2-required-enable-the-microsoft-365-audit-log)
+### <a name="step-3-required-enable-the-microsoft-365-audit-log"></a>3. Adım (gerekli): [Microsoft 365 denetim günlüğünü etkinleştirme](insider-risk-management-configure.md#step-2-required-enable-the-microsoft-365-audit-log)
 
-Bu kuruluşlarda denetim Microsoft 365 varsayılan olarak etkinleştirilir. Bazı kuruluşlar belirli nedenlerle denetimi devre dışı bırakmıştır. If auditing is disabled for your organization, it might be because another administrator has turned it. Bu adımı tamamlarken denetimi yeniden açmanın bir sorun olduğunu doğrulamanızı öneririz.
+Denetim, Microsoft 365 kuruluşlar için varsayılan olarak etkindir. Bazı kuruluşlar belirli nedenlerle denetimi devre dışı bırakmış olabilir. Kuruluşunuzda denetim devre dışı bırakıldıysa, bunun nedeni başka bir yöneticinin kapatması olabilir. Bu adımı tamamlarken denetimi yeniden açmanın uygun olduğunu onaylamanızı öneririz.
 
-Denetimi açma adım adım yönergeler için bkz. [Denetim günlüğü aramalarını açma veya kapatma](turn-audit-log-search-on-or-off.md). Denetimi açmak için denetim günlüğünün hazır olduğunu ve birkaç saat içinde hazırlık tamamlandıktan sonra arama çalıştırabilirsiniz iletisi görüntülenir. Bu eylemi yalnızca bir kez yapmak gerekir. Denetim günlüğünü kullanma hakkında daha fazla Microsoft 365 için bkz. [Denetim günlüğünde arama.](search-the-audit-log-in-security-and-compliance.md)
+Denetimi açmak için adım adım yönergeler için bkz. [Denetim günlüğü aramasını açma veya kapatma](turn-audit-log-search-on-or-off.md). Denetimi açtıktan sonra, denetim günlüğünün hazırlandığını ve hazırlık tamamlandıktan birkaç saat sonra bir arama çalıştırabileceğinizi belirten bir ileti görüntülenir. Bu eylemi yalnızca bir kez yapmanız gerekir. Microsoft 365 denetim günlüğünü kullanma hakkında daha fazla bilgi için bkz[. Denetim günlüğünde arama](search-the-audit-log-in-security-and-compliance.md) yapma.
 
 ### <a name="step-4-required-enable-and-view-insider-risk-analytics-insights"></a>4. Adım (gerekli): [Insider risk analizi içgörülerini etkinleştirme ve görüntüleme](insider-risk-management-configure.md#step-3-optional-enable-and-view-insider-risk-analytics-insights)
 
-Insider risk yönetimi analizi, insider risk ilkelerini yapılandırmadan, organizasyonda olası insider risklerini değerlendirmenizi sağlar. İncelemelerin rapor olarak gözden geçirilmeden önce analiz tarama sonuçları 48 saat kadar sürebilir. Analiz içgörüleri hakkında daha fazla bilgi edinmek için [Insider risk yönetimi ayarları: Analiz (önizleme)](insider-risk-management-settings.md) ve [Insider Risk Management Analytics videosunu inceleyin. Insider risk](https://www.youtube.com/watch?v=5c0P5MCXNXk) durumlarınızı anlamanıza yardımcı olur ve riskli kullanıcıları tanımlamak için uygun ilkeleri ayarerek önlem ayasınız.
+Insider risk yönetimi analizi, herhangi bir insider risk ilkesi yapılandırmadan kuruluşunuzdaki olası insider risklerini değerlendirmenizi sağlar. Analiz tarama sonuçlarının, içgörülerin gözden geçirilebilir raporlar olarak kullanılabilir hale gelmesi 48 saat kadar sürebilir. Analiz içgörüleri hakkında daha fazla bilgi edinmek için [Insider risk yönetimi ayarları: Analiz (önizleme)](insider-risk-management-settings.md) bölümüne bakın ve insider risk duruşunuzu anlamanıza yardımcı olmak ve riskli kullanıcıları tanımlamak için uygun ilkeleri ayarlayarak eyleme geçmenize yardımcı olmak için [Insider Risk Management Analytics videosunu](https://www.youtube.com/watch?v=5c0P5MCXNXk) gözden geçirin.
 
-Insider risk Analytics'i etkinleştirmek için Insider Risk Yönetimi veya Insider Risk Yönetimi Yöneticisi'ne üye olmak gerekir. Insider risk analizini etkinleştirmek için [bu adımları tamamlayın](insider-risk-management-configure.md).
+Insider risk Analizi'ni etkinleştirmek için Insider Risk Management veya Insider Risk Management Yöneticisi üyesi olmanız gerekir. [Insider risk analizini etkinleştirmek için bu adımları tamamlayın](insider-risk-management-configure.md).
 
 ## <a name="records-management"></a>Kayıt Yönetimi
 
-**İş açısından kritik kayıtlar için bekletme zamanlamayı otomatikleştirme**
+**İş açısından kritik kayıtlar için bekletme zamanlamasını otomatikleştirme**
 
-Kurumsal düzenlemeler, yasal ve iş açısından kritik kayıtlar için bekletme zamanlamayı otomatikleştirmek üzere tümleşik Kayıt Yönetimi özelliklerini kullanın. Oluşturmadan işbirliğine, kayıt bildiriminden bekletmeye ve yok durumuna kadar tüm içerik yaşam döngüsü desteği elde edin.
+Kurumsal düzenleme, yasal ve iş açısından kritik kayıtların bekletme zamanlamasını otomatikleştirmek için tümleşik Kayıt Yönetimi özelliklerini kullanın. Oluşturmadan işbirliğine, kayıt bildirimine, saklamaya ve elden çıkarma işlemine kadar tam içerik yaşam döngüsü desteği alın.
 
-### <a name="step-1-dynamically-target-retention-policies-with-adaptive-policy-scopes"></a>1. Adım: Uyarlanabilir İlke Kapsamları olan dinamik olarak hedef bekletme ilkeleri
+### <a name="step-1-dynamically-target-retention-policies-with-adaptive-policy-scopes"></a>1. Adım: Uyarlamalı İlke Kapsamları ile bekletme ilkelerini dinamik olarak hedefleme
 
 > [!TIP]
-> Deneme için en iyi yöntem: 1. Gün
+> Deneme için en iyi uygulama: 1. Gün
 
-Uyarlanabilir ilke kapsamları, belirli kullanıcılara, gruplara veya sitelere AD özniteliklerine göre dinamik olarak bir ilke hedeflemeniz için olanak sağlar.
+Uyarlamalı ilke kapsamları, bir ilkeyi AD özniteliklerine göre belirli kullanıcılara, gruplara veya sitelere dinamik olarak hedeflemenizi sağlar.
 
-Kapsamlar için öznitelikler listeden seçilebilir veya gelişmiş sorgu oluşturucusu kullanılarak özelleştirilebilir.
+Kapsamların öznitelikleri listeden seçilebilir veya gelişmiş sorgu oluşturucu kullanılarak özelleştirilebilir.
 
-Uyarlamalı ilke kapsamlarını kullanan ilkeler, kuruluş, katılan veya katılan yeni çalışanlarla değiştikleriyle güncel kalır. Buna ek olarak, ilkeye dahil edilen 100/1000 konum önceki sınırlara tabi değildir.
+Uyarlamalı ilke kapsamlarını kullanan ilkeler, yeni çalışanların katılması veya ayrılmasıyla kuruluş değiştikçe güncel kalır. Ayrıca, ilkeye dahil edilen 100/1.000 konumun önceki sınırlarına tabi değildir.
 
-- Uyarlanabilir [İlke Kapsamı](retention.md#adaptive-or-static-policy-scopes-for-retention) oluşturma ve bu kapsamı bekletme ilkesiyle kullanma
+- [Uyarlamalı İlke Kapsamı](retention.md#adaptive-or-static-policy-scopes-for-retention) oluşturma ve bunu bekletme ilkesiyle kullanma
 
-### <a name="step-2-automate-labeling-of-sensitive-information-with-the-ability-to-review-before-disposal"></a>2. Adım: Hassas bilgilerin etiketlerini, dağıtımdan önce gözden geçirme özelliğiyle otomatikleştirme
+### <a name="step-2-automate-labeling-of-sensitive-information-with-the-ability-to-review-before-disposal"></a>2. Adım: Elden çıkarmadan önce gözden geçirme özelliğiyle hassas bilgilerin etiketlenmesi otomatikleştirin
 
 > [!TIP]
 > Deneme için en iyi uygulama: İlk 30 gün içinde kurulum
 
-Bekletme etiketleri, kredi kartı numarası gibi hassas bilgiler algılayan içeriğe otomatik olarak uygulanacak şekilde ayarlanmış olabilir. Böylece, kullanıcıların etiket etkinliğini el ile gerçekleştirmesi gerekmez.
+Bekletme etiketleri, kredi kartı numarası gibi hassas bilgiler algıladığında içeriğe otomatik olarak uygulanacak şekilde ayarlanabilir. Bu, kullanıcıların etiketleme etkinliğini el ile gerçekleştirme gereksinimini ortadan kaldırır.
 
-Bekletme döneminin sonunda, belirttiğiniz kullanıcılara ("gözden geçirenler") içeriği gözden geçirmeleri ve kalıcı olarak kaldırma eylemlerini onaylamaları için bir bilgi verilir. Bu şekilde, bir şeyin daha uzun süre tutul olması gerekirse, böyle olabilir.
+Saklama süresinin sonunda, belirttiğiniz kullanıcılara ("gözden geçirenler") içeriği gözden geçirmeleri ve kalıcı elden çıkarma eylemini onaylamaları bildirilir. Bu şekilde, bir şeyin daha uzun süre saklanması gerekiyorsa, olabilir.
 
-Etiket uygulaması etkinliği ve disposition gözden geçirme etkinliğinin her ikisi de Kayıt Yönetimine Genel Bakış ekranından ılamaz.
+Hem etiket uygulaması etkinliği hem de edat gözden geçirme etkinliği Kayıt Yönetimine Genel Bakış ekranınızda görüntülenebilir.
 
-1. [Hassas bilgiler içeren içeriğe bekletme etiketlerini otomatik olarak uygulama](retention.md#retention-labels)
-1. Bekletme döneminin sonunda konumlandırma [incelemesiyle bir](disposition.md#disposition-reviews) bekletme etiketi oluşturma ve uygulama
+1. [Hassas bilgiler içeren içeriğe bekletme etiketlerini otomatik uygulama](retention.md#retention-labels)
+1. Bekletme döneminin [sonundaki değerlendirmeyi içeren](disposition.md#disposition-reviews) bir bekletme etiketi oluşturma ve uygulama
 
-### <a name="step-3-label-content-as-records-automatically-using-trainable-classifiers"></a>3. Adım: Eğitilebilir sınıflayıcıları kullanarak içeriği otomatik olarak kayıt olarak etiketleme
+### <a name="step-3-label-content-as-records-automatically-using-trainable-classifiers"></a>3. Adım: Eğitilebilir sınıflandırıcıları kullanarak içeriği otomatik olarak kayıt olarak etiketleme
 
-İçerik kayıt olarak bildirildikten sonra, öğeye izin verilen veya engellenen eylemler, öğelerle ilgili ek etkinlikler günlüğe kaydedilir ve bekletme döneminin sonunda öğeler silinirse silinme kanıtınız olur.
+İçerik kayıt olarak bildirildiğinde, öğeye izin verilen veya engellenen eylemlere göre kısıtlamalar uygulanır, öğelerle ilgili ek etkinlikler günlüğe kaydedilir ve öğelerin saklama süresinin sonunda silinmesi durumunda değerlendirme kanıtınız olur.
 
-Eğitilebilir sınıflayıcılar, verilen örneklere göre çeşitli içerik türlerini tanıyan araçlardır. Çeşitli yerleşik seçeneklerden birini seçin veya özel ihtiyaçlarınızı karşılamak için özel bir sınıflandırıcı ayarlayın.
+Eğitilebilir sınıflandırıcılar, verilen örnekler temelinde çeşitli içerik türlerini tanıyan araçlardır. Çeşitli yerleşik seçenekler arasından seçim yapın veya özel gereksinimlerinizi karşılayacak özel bir sınıflandırıcı ayarlayın.
 
-1. İçeriği kayıt veya [mevzuat kaydı olarak bildiren bir bekletme etiketi oluşturma](records-management.md#records)
-1. [Eğitilebilir sınıflayıcıları kullanarak bekletme etiketlerini otomatik olarak içeriğe uygulama](apply-retention-labels-automatically.md#auto-apply-labels-to-content-by-using-trainable-classifiers)
+1. [İçerikleri kayıt veya mevzuat kaydı olarak bildiren bir](records-management.md#records) bekletme etiketi oluşturma
+1. [Eğitilebilir sınıflandırıcıları kullanarak içeriğe bekletme etiketlerini otomatik uygulama](apply-retention-labels-automatically.md#auto-apply-labels-to-content-by-using-trainable-classifiers)
 
-### <a name="more-information-auto-apply-retention-labels--disposition-review"></a>Daha fazla bilgi: Bekletme etiketlerini otomatik olarak uygulama + yok geçirme
+### <a name="more-information-auto-apply-retention-labels--disposition-review"></a>Daha fazla bilgi: Bekletme etiketlerini otomatik uygulama + elden çıkarma incelemesi
 
-**Gerekenleri korumak için etiketleri otomatik olarak uygula...**
-Bekletme etiketleri aşağıdaki içeriği içerdiğinde otomatik olarak içeriğe uygulanabilir:
+**İhtiyacınız olanı korumak için etiketleri otomatik olarak uygula...** Bekletme etiketleri, içeriği içerdiğinde içeriğe otomatik olarak uygulanabilir:
 
-- [Belirli türlerde hassas bilgi](apply-retention-labels-automatically.md#auto-apply-labels-to-content-with-specific-types-of-sensitive-information)
-- [Bir sorguyla eşan belirli anahtar sözcükler veya aranabilir özellikler](apply-retention-labels-automatically.md#auto-apply-labels-to-content-with-keywords-or-searchable-properties)
-- [Eğitilebilir sınıflayıcılar için bir eşleşme](apply-retention-labels-automatically.md#auto-apply-labels-to-content-by-using-trainable-classifiers)
+- [Belirli hassas bilgi türleri](apply-retention-labels-automatically.md#auto-apply-labels-to-content-with-specific-types-of-sensitive-information)
+- [Oluşturduğunuz sorguyla eşleşen belirli anahtar sözcükler veya aranabilir özellikler](apply-retention-labels-automatically.md#auto-apply-labels-to-content-with-keywords-or-searchable-properties)
+- [Eğitilebilir sınıflandırıcılar için eşleşme](apply-retention-labels-automatically.md#auto-apply-labels-to-content-by-using-trainable-classifiers)
 
-**... ardından da sonunda güvenle atabilirsiniz.**
+**... ardından en sonda güvenli bir şekilde atın.**
 
-Bekletme döneminin sonunda bir disposition gözden geçirmesi tetiklendiğinde, seçtiğiniz gözden geçirenler gözden geçirilmesi gereken içerikleri olduğunu haber içeren bir e-posta bildirimi alırlar.
+Bekletme süresinin sonunda bir değerlendirme gözden geçirmesi tetiklendiğinde, seçtiğiniz gözden geçirenler gözden geçirebilecekleri içeriğe sahip olduklarına dair bir e-posta bildirimi alır.
 
-Disposition gözden geçirmesini bekleyen içerik, ancak yorum son aşamasında gözden geçiren kişi içeriği kalıcı olarak silmeyi seçtikten sonra kalıcı olarak silinir.
+Bir değerlendirme gözden geçirmesi bekleyen içerik kalıcı olarak silinir, ancak değerlendirmenin son aşaması için gözden geçiren içeriği kalıcı olarak silmeyi seçtikten sonra silinir.
 
 ## <a name="additional-trials-and-add-ons"></a>Ek denemeler ve eklentiler
 
 ### <a name="compliance-manager-premium-assessments"></a>Uyumluluk Yöneticisi premium değerlendirmeleri
 
-**Riskleri değerlendirin ve etkili bir şekilde yanıt verin**
+**Riskleri değerlendirme ve verimli yanıt verme**
 
-Verilerinizin toplanması ve kullanımını yöneten uluslara, bölgeye ve sektör gereksinimlerine karşı, organizasyonların riskleri değerlendirmesine ve etkin biçimde yanıt vermelerine yardımcı olun.
+Kuruluşunuzun riskleri değerlendirmesine ve verilerin toplanması ve kullanımını yöneten ülkelere, bölgesel ve sektör gereksinimlerine verimli bir şekilde yanıt vermesine yardımcı olun.
 
-[Uyumluluk Yöneticisi premium değerlendirme denemesi hakkında daha fazla bilgi](compliance-easy-trials-compliance-manager-assessments.md).
+[Uyumluluk Yöneticisi premium değerlendirme deneme sürümü hakkında daha fazla bilgi](compliance-easy-trials-compliance-manager-assessments.md).
 
-[Deneme çalışma kitabı: Microsoft Uyumluluk Yöneticisi premium değerlendirmeleri](compliance-easy-trials-compliance-manager-assessment-playbook.md)
+[Deneme playbook'u: Microsoft Compliance Manager premium değerlendirmeleri](compliance-easy-trials-compliance-manager-assessment-playbook.md)
 
 ### <a name="microsoft-priva-privacy-risk-management-and-microsoft-priva-subject-rights-requests"></a>Microsoft Priva Gizlilik Risk Yönetimi ve Microsoft Priva Konu Hakları İstekleri
 
-**Gizlilik & önlemeyi belirleme**
+**Gizlilik risklerini & önlemeyi belirleme**
 
-Veri toplama, veri aktarımları ve verilerin fazla şekillendirimini gibi gizlilik risklerini önceden belirleyerek ve bu risklere karşı korunmaya yardımcı olarak, organizasyon ölçeğinde konu isteklerini otomatikleştirmeye ve yönetmeye yardımcı olun.
+Veri depolama, veri aktarımları ve fazla paylaşım gibi gizlilik risklerini proaktif olarak belirleyin ve koruyun ve kuruluşunuzun büyük ölçekte konu isteklerini otomatikleştirmeye ve yönetmeye yardımcı olun.
 
-[Microsoft Priva hakkında daha fazla bilgi edinmek için](/privacy/solutions/privacymanagement/privacy-management):
+[Microsoft Priva hakkında daha fazla bilgi edinin](/privacy/solutions/privacymanagement/privacy-management).
 
-[Deneme çalışma kitabı: Microsoft Priva](/privacy/solutions/privacymanagement/privacy-management-trial-playbook)
+[Deneme playbook'u: Microsoft Priva](/privacy/solutions/privacymanagement/privacy-management-trial-playbook)
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-**Neler dahildir: Ürün** katmanına göre listelenen uyumluluk Microsoft 365 özelliklerinin tam listesi için Özellik Matrisi'ne [bakın](https://go.microsoft.com/fwlink/?linkid=2139145).
+**Dahil olanlar**: Ürün katmanına göre listelenen Microsoft 365 uyumluluk çözümlerinin ve özelliklerinin tam listesi için [Özellik Matrisi'ni](https://go.microsoft.com/fwlink/?linkid=2139145) görüntüleyin.
 
-**Microsoft Güvenlik Teknik İçerik Kitaplığı**: İhtiyaçlarınızı karşılamak için etkileşimli kılavuzları ve diğer öğrenme içeriğini bulmak için bu kitaplığı keşfedin. [Kitaplık'ı ziyaret edin](/security/content-library).
+**Microsoft Güvenlik Teknik İçerik Kitaplığı**: Etkileşimli kılavuzları ve gereksinimlerinizle ilgili diğer öğrenme içeriğini bulmak için bu kitaplığı keşfedin. [Kitaplığı ziyaret edin](/security).
 
-**Microsoft Güvenlik Kaynakları**: Kötü amaçlı yazılımdan Sıfır Güven'e kadar, kuruma uygun tüm kaynakları ve güvenlik ihtiyaçlarını karşılar. [Kaynaklar'ı ziyaret edin](/security/business/resources).
+**Microsoft Güvenlik Kaynakları**: Kötü amaçlı yazılımdan korumadan Sıfır Güven kuruluşunuzun güvenlik gereksinimlerine uygun tüm kaynakları alın. [Kaynaklar'a bakın](/security/business/resources).

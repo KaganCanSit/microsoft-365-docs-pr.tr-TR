@@ -15,140 +15,140 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Hassas veri eşleşmesi için hassas bilgi kaynağı tablosuna karma kullanın ve hassas bilgi türlerini yükleyin.
+description: Hassas bilgi türleriyle tam olarak eşleşen veriler için hassas bilgi kaynağı tablosunu karma olarak ekleyin ve karşıya yükleyin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: e8726b17a3f87d61c8d63be7137ec8e465a5cd9a
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: 4c40802a76ab09dc86dcada5ebfd17187136f42e
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64568488"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64760239"
 ---
 # <a name="hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types"></a>Tam veri eşleşmeli hassas bilgi türleri için hassas bilgi kaynak tablosu karması oluşturma ve karşıya yükleme
 
-Bu makalede, hassas bilgi kaynağı tablolarınızı karma ve karşıya yükleme konularını bulabilirsiniz.
+Bu makalede hassas bilgi kaynağı tablonuzun karması ve karşıya yüklenmesi gösterilmektedir.
 
-## <a name="hash-and-upload-the-sensitive-information-source-table"></a>Karma sağlama ve hassas bilgiler kaynak tabloyu karşıya yükleme
+## <a name="hash-and-upload-the-sensitive-information-source-table"></a>Hassas bilgi kaynağı tablosunu karma ve karşıya yükleme
 
 Bu aşamada:
 
 1. özel güvenlik grubu ve kullanıcı hesabı ayarlama
-2. EDM Upload aracını ayarlama
-3. EDM Veri Upload aracını bir salt değeriyle, hassas bilgi kaynağı tablosuyla karma kullanmak ve karşıya yüklemek için kullanın.
+2. EDM Upload Aracısı aracını ayarlama
+3. EDM Upload Aracısı aracını kullanarak bir tuz değeri, hassas bilgi kaynağı tablosuyla karma yapın ve karşıya yükleyin.
 
-Karma sağlama ve karşıya yükleme tek bir bilgisayar kullanılarak yapılabilir veya daha yüksek güvenlik için karma sağlama adımını karşıya yükleme adımdan ayırabilirsiniz.
+Karma oluşturma ve karşıya yükleme işlemi bir bilgisayar kullanılarak yapılabilir veya daha fazla güvenlik için karma adımını karşıya yükleme adımından ayırabilirsiniz.
 
-Karma yapmak ve tek bir bilgisayardan karşıya yüklemek için, bunu kendi kiracınıza doğrudan bağlanan bir bilgisayardan Microsoft 365 gerekir. Bunun için, net metin duyarlı bilgi kaynak tablo dosyanız karma için o bilgisayardadır.
+Bir bilgisayardan karma oluşturmak ve karşıya yüklemek istiyorsanız, bunu doğrudan Microsoft 365 kiracınıza bağlanabilen bir bilgisayardan yapmanız gerekir. Bu, düz metin duyarlı bilgi kaynak tablo dosyanızın karma için bu bilgisayarda olmasını gerektirir.
 
-Net metin duyarlı bilgi kaynağı tablo dosyanızı doğrudan erişimli bilgisayarda göstermek istemiyorsanız, karma dosyayı güvenli bir konumdaki bilgisayarda karma olarak yer alan bir bilgisayarda karma olarak yer alan ve sonra da karma dosyayı ve salt dosyayı karşıya yüklemek üzere Microsoft 365 kiracınıza doğrudan bağlanacak bir bilgisayara kopyaabilirsiniz. Ayrılmış karma ve karşıya yükleme senaryosunda, her iki bilgisayarda da EDMUploadAgent değerine ihtiyacınız vardır.
+Düz metin duyarlı bilgi kaynak tablo dosyanızı doğrudan erişim bilgisayarında kullanıma açmak istemiyorsanız, bunu güvenli bir konumdaki bir bilgisayarda karma yapabilir ve ardından karma dosyayı ve tuz dosyasını karşıya yükleme için doğrudan Microsoft 365 kiracınıza bağlanabilen bir bilgisayara kopyalayabilirsiniz. Ayrılmış karma ve karşıya yükleme senaryosunda her iki bilgisayarda da EDMUploadAgent gerekir.
 
 > [!IMPORTANT]
-> Şema dosyanızı oluşturmak için Tam Veri Eşleşme şeması ve hassas bilgi türü sihirbazını kullandıysanız, henüz  bunu yapmadıysanız, bu yordamın şemasını indirmeniz gerekir. Bkz [. EDM şema dosyasını XML biçiminde dışarı aktarma](sit-get-started-exact-data-match-create-schema.md#export-of-the-edm-schema-file-in-xml-format).
+> Şema dosyanızı oluşturmak için Tam Veri Eşleştirme şemasını ve hassas bilgi türü sihirbazını kullandıysanız, henüz yapmadıysanız bu yordam için şemayı indirmeniz ***gerekir*** . Bkz. [EDM şema dosyasını XML biçiminde dışarı aktarma](sit-get-started-exact-data-match-create-schema.md#export-of-the-edm-schema-file-in-xml-format).
 
 > [!NOTE]
-> If your organization has set up [Customer Key for Microsoft 365 at the tenant](customer-key-overview.md) level, Exact data match will make use of its encryption functionality automatically. Bu yalnızca Ticari buluttaki E5 lisanslı kiracılar için kullanılabilir.
+> Kuruluşunuz [kiracı düzeyinde Microsoft 365 için Müşteri Anahtarı](customer-key-overview.md) ayarladıysa, tam veri eşleşmesi otomatik olarak şifreleme işlevini kullanır. Bu yalnızca Ticari buluttaki E5 lisanslı kiracılar tarafından kullanılabilir.
 
 ### <a name="best-practices"></a>En iyi uygulamalar
 
-Hassas verileri karmalama ve karşıya yükleme işlemlerini birbirinden ayırarak süreçteki sorunları daha kolay yalıtabilirsiniz.
+İşlemdeki sorunları daha kolay yalıtabilmeniz için hassas verileri karmalama ve karşıya yükleme işlemlerini birbirinden ayırın.
 
-Üretime başladıktan sonra, çoğu durumda bu iki adımı birbirinden ayrı tutabilirsiniz. Yalıtılmış bir bilgisayarda karma işlemi gerçekleştirdikten sonra dosyayı İnternet'e yönelik bir bilgisayara yüklemek için aktararak, İnternet bağlantısı nedeniyle güvenliği ihlal edilmiş olan bir bilgisayarda gerçek verilerin asla net metin formunda kullanılamaz.
+Üretime geçtikten sonra, çoğu durumda iki adımı ayrı tutun. Karma işlemini yalıtılmış bir bilgisayarda gerçekleştirmek ve ardından dosyayı İnternet'e yönelik bir bilgisayara yüklemek üzere aktarmak, internet bağlantısı nedeniyle güvenliği aşılmış olabilecek bir bilgisayarda gerçek verilerin hiçbir zaman düz metin biçiminde kullanılamamasını sağlar.
 
-### <a name="ensure-your-sensitive-data-table-doesnt-have-formatting-issues"></a>Hassas veri tablonuzda biçimlendirme sorunları olduğundan emin olma.
+### <a name="ensure-your-sensitive-data-table-doesnt-have-formatting-issues"></a>Hassas veri tablonuzda biçimlendirme sorunları olmadığından emin olun
 
-Hassas verilerinizi karmalamadan ve karşıya yüklemeden önce, içeriği ayrıştırmada sorunlara neden olan özel karakterlerin varlığını doğrulamak için bir arama kullanın.
-Aşağıdaki söz dizim ile EDM karşıya yükleme aracılarını kullanarak tablonun EDM ile kullanmaya uygun bir biçimde olduğunu doğruabilirsiniz:
+Hassas verilerinizi karma olarak oluşturup karşıya yüklemeden önce, içeriği ayrıştırmada sorunlara neden olabilecek özel karakterlerin varlığını doğrulamak için bir arama yapın.
+Aşağıdaki söz dizimine sahip EDM karşıya yükleme aracısını kullanarak tablonun EDM ile kullanıma uygun bir biçimde olduğunu doğrulayabilirsiniz:
 
 ```powershell
 EdmUploadAgent.exe /ValidateData /DataFile [data file] /Schema [schema file]
 ```
 
-Araç, sütun sayısıyla ilgili bir yanlışlık olduğunu gösteriyorsa, tablodaki değerlerde virgül veya tırnak karakterleri olması sütun sınırlayıcılarla karıştırılmış olabilir. Bir değerin tamamını çevrelemiyorsanız, tek ve çift tırnaklar tek tek bir sütunun nereden başladığı veya bittiği aracının yanlış tanımlanabilmektedir.
+Araç sütun sayısında uyuşmazlık gösteriyorsa, tablodaki değerlerin içinde sütun sınırlayıcılarıyla karıştırılan virgül veya tırnak karakterlerinin bulunmasından kaynaklanıyor olabilir. Bir değerin tamamını çevrelemedikçe, tek ve çift tırnaklar aracın tek bir sütunun nerede başladığını veya bittiğini yanlış belirlemesine neden olabilir.
 
-**Tam değerleri çevreleyen tek veya çift tırnak karakterleri bulursanız**, bunları olduğu gibi bırakın.
+**Tam değerleri çevreleyen tek veya çift tırnak karakterleri bulursanız**, bunları olduğu gibi bırakabilirsiniz.
 
-Bir değerin **içinde** tek tırnak karakterleri veya virgüller bulursanız: örneğin, kişinin adı Tom O'Neil veya şehir 's-Gravenhage' (kesme işareti karakteriyle başlayan) gibi, hassas bilgi tablosu oluşturmak için kullanılan veri aktarma işlemini değiştirerek bu tür sütunları çift tırnak içine alırsınız.
+**Bir değerin içinde tek tırnak karakterleri veya virgüller bulursanız**: örneğin kişinin adı Tom O'Neil veya kesme işareti karakteriyle başlayan city 's-Gravenhage, bu tür sütunları çift tırnakla çevreleyecek şekilde hassas bilgi tablosu oluşturmak için kullanılan veri dışarı aktarma işlemini değiştirmeniz gerekir.
 
-**Değerlerin içinde çift** tırnak karakterleri bulunursa, tablonun bu tür sorunlar için daha az duyarlı olmayan Sekmeyle ayrılmış biçimini kullanmak daha iyi bir tercih olabilir.
+**Değerlerin içinde çift tırnak karakterleri bulunursa**, tablo için bu tür sorunlara daha az duyarlı olan Sekmeyle sınırlandırılmış biçimin kullanılması tercih edilebilir.
 
 ### <a name="prerequisites"></a>Önkoşullar
 
-- **EDMDataUploaders\_** güvenlik Microsoft 365 için iş veya okul hesabı
-- .NET Windows 10 4.6.2 Windows Server 2016 yüklü bir makine <!--4.7.2 un comment this around 9/29-->EDMUploadAgent'i çalıştırma için
-- aşağıdakiler için karşıya yükleme makinenizin dizininde bir dizin kullanın:
+- **EDMDataUploaders\_** güvenlik grubuna eklenecek Microsoft 365 için bir iş veya okul hesabı
+- .NET sürüm 4.6.2 ile bir Windows 10 veya Windows Server 2016 makinesi <!--4.7.2 un comment this around 9/29-->EDMUploadAgent'ı çalıştırmak için
+- için karşıya yükleme makinenizdeki bir dizin:
   - [EDM Upload Aracısı](#links-to-edm-upload-agent-by-subscription-type)
-  - hassas öğe dosyanız .csv, .tsv veya pipe (|) **biçimindedir vePatientRecords.csv** örneklerde
-  - Bu yordamda oluşturulan çıkış karması ve salt dosyaları
-  - edm.xmlveri **deposu** adı, örneğin `PatientRecords`
+  - hassas öğe dosyanızı .csv, .tsv veya kanal (|) biçiminde **PatientRecords.csv** örneklerimizde bulabilirsiniz
+  - bu yordamda oluşturulan çıkış karması ve tuz dosyaları
+  - **edm.xml** dosyasındaki veri deposu adı, örneğin`PatientRecords`
 
 #### <a name="set-up-the-security-group-and-user-account"></a>Güvenlik grubunu ve kullanıcı hesabını ayarlama
 
-1. Genel yönetici olarak, aboneliğiniz için uygun bağlantıyı kullanarak yönetim merkezine gidin [](sit-get-started-exact-data-match-based-sits-overview.md#portal-links-for-your-subscription) ve **EDMDataUploaders\_ adlı bir güvenlik grubu oluşturun**.[](/office365/admin/email/create-edit-or-delete-a-security-group)
+1. Genel yönetici olarak [, aboneliğiniz için uygun bağlantıyı](sit-get-started-exact-data-match-based-sits-overview.md#portal-links-for-your-subscription) kullanarak yönetim merkezine gidin ve **EDMDataUploaders\_** adlı [bir güvenlik grubu oluşturun](/office365/admin/email/create-edit-or-delete-a-security-group).
 
-2. **EDMDataUploaders\_ güvenlik grubuna bir veya daha fazla kullanıcı** ekleyin. (Bu kullanıcılar hassas bilgilerin veritabanını yönetir.)
+2. **EDMDataUploaders\_** güvenlik grubuna bir veya daha fazla kullanıcı ekleyin. (Bu kullanıcılar hassas bilgi veritabanını yönetir.)
 
-### <a name="hash-and-upload-from-one-computer"></a>Karma sağlama ve tek bir bilgisayardan karşıya yükleme
+### <a name="hash-and-upload-from-one-computer"></a>Bir bilgisayardan karma ve karşıya yükleme
 
-Bu bilgisayarın kiracınıza doğrudan erişimi Microsoft 365 gerekir.
+Bu bilgisayarın Microsoft 365 kiracınıza doğrudan erişimi olmalıdır.
 
 > [!NOTE]
-> Bu yordama başlamadan önce, **EDMDataUploaders\_ güvenlik grubunun üyesi olduğundan** emin olun.
+> Bu yordama başlamadan önce **EDMDataUploaders\_** güvenlik grubunun üyesi olduğunuzdan emin olun.
 
 > [!TIP]
->İsteğe bağlı olarak, karşıya yüklemeden önce hata denetimi yapmak için hassas bilgi kaynağı tablo dosyanız üzerinde doğrulama çalıştırabilirsiniz:
+>İsteğe bağlı olarak, şu komutu çalıştırarak karşıya yüklemeden önce hataları denetlemek için hassas bilgi kaynağı tablo dosyanızda bir doğrulama çalıştırabilirsiniz:
 >
 > `EdmUploadAgent.exe /ValidateData /DataFile [data file] /Schema [schema file]`
 >
-> Desteklenen tüm parametreler EdmUploadAgent.exe daha fazla bilgi için
+> Desteklenen tüm EdmUploadAgent.exe parametreleri hakkında daha fazla bilgi için komutunu çalıştırın
 >
 > `EdmUploadAgent.exe /?`
 
-#### <a name="links-to-edm-upload-agent-by-subscription-type"></a>EDM'nin abonelik türüne göre karşıya yükleme aracısı bağlantıları
+#### <a name="links-to-edm-upload-agent-by-subscription-type"></a>Abonelik türüne göre EDM karşıya yükleme aracısına bağlantılar
 
-- [Ticari + GCC](https://go.microsoft.com/fwlink/?linkid=2088639) - çoğu ticari müşteri bunu kullan
-- [GCC-Yüksek](https://go.microsoft.com/fwlink/?linkid=2137521) - Bu, özel olarak yüksek güvenlikli devlet bulut aboneleri için
-- [DoD](https://go.microsoft.com/fwlink/?linkid=2137807) - Bu özel olarak Birleşik Devletler Department of Defense cloud müşterileri için
+- [Ticari + GCC](https://go.microsoft.com/fwlink/?linkid=2088639) - çoğu ticari müşteri bunu kullanmalıdır
+- [GCC-High](https://go.microsoft.com/fwlink/?linkid=2137521) - Bu özellikle yüksek güvenlikli kamu bulut abonelerine yöneliktir
+- [DoD](https://go.microsoft.com/fwlink/?linkid=2137807) - Bu özellikle Birleşik Devletler Savunma Bakanlığı bulut müşterilerine yöneliktir
 
-1. EDMUploadAgent için bir çalışma dizini oluşturun. Örneğin, **C:\EDM\Data**. Dosyayı **PatientRecords.csv** yere.
+1. EDMUploadAgent için bir çalışma dizini oluşturun. Örneğin, **C:\EDM\Data**. **PatientRecords.csv** dosyasını buraya yerleştirin.
 
-2. 1. adımda oluşturduğunuz [dizine Upload için uygun EDM](#links-to-edm-upload-agent-by-subscription-type) Güvenlik Aracısı aracınızı indirin ve yükleyin.
+2. Aboneliğiniz için uygun [EDM Upload Aracısını](#links-to-edm-upload-agent-by-subscription-type) indirin ve 1. adımda oluşturduğunuz dizine yükleyin.
 
    > [!NOTE]
-   > Yukarıdaki bağlantıların EDMUploadAgent değeri, karma verilere otomatik olarak bir salt değeri eklemek üzere güncelleştirildi. Alternatif olarak, kendi salt değerinizi de s olabilir. Bu sürümü kullandıktan sonra, EDMUploadAgent'ın önceki sürümünü kullanamayacaktır.
+   > Yukarıdaki bağlantılarda yer alan EDMUploadAgent, karma verilere otomatik olarak bir tuz değeri ekleyecek şekilde güncelleştirilmiştir. Alternatif olarak, kendi tuz değerinizi sağlayabilirsiniz. Bu sürümü kullandıktan sonra, EDMUploadAgent'ın önceki sürümünü kullanamazsınız.
    >
-   > EDMUploadAgent ile verileri, veri deposuna günde yalnızca iki kez yükleyebilirsiniz.
+   > EDMUploadAgent ile verileri belirli bir veri deposuna günde yalnızca iki kez yükleyebilirsiniz.
 
-3. EDM Hizmet Upload yetkilendirin, yönetici olarak Komut İstemi penceresini açın, **C:\EDM\Data** dizinine geçin ve sonra aşağıdaki komutu çalıştırın:
+3. EDM Upload Aracısı'nı yetkilendinin, Yönetici olarak Komut İstemi penceresini açın, **C:\EDM\Data** dizinine geçin ve aşağıdaki komutu çalıştırın:
 
    `EdmUploadAgent.exe /Authorize`
 
    > [!IMPORTANT]
-   > **EdmUploadAgent'i** yüklü olduğu klasörden çalıştırmanız ve veri dosyalarınızın tam yolunu belirtebilirsiniz.
+   > **EdmUploadAgent'ı** yüklü olduğu klasörden çalıştırmanız ve veri dosyalarınızın tam yolunu belirtmeniz gerekir.
 
-4. İş veya okul hesabınızla, Microsoft 365 grubuna eklenmiş olan iş veya okul EDM_DataUploaders açın. Bağlantıyı yapmak için kullanıcı hesabından kiracı bilgileri ayıklanır.
+4. EDM_DataUploaders güvenlik grubuna eklenen Microsoft 365 için iş veya okul hesabınızla oturum açın. Bağlantı oluşturmak için kiracı bilgileriniz kullanıcı hesabından ayıklanır.
 
-   İsteğE BAĞLı: Şemanızı oluşturmak için Tam Veri Eşleşme şeması ve hassas bilgi türü sihirbazını kullandıysanız, henüz indirmedıysanız, bunu bu yordamlarda kullanmak için indirmeniz gerekir. Komut İstemi penceresinde bu komutu çalıştırın:
+   İsteğE BAĞLI: Şemanızı oluşturmak için Tam Veri Eşleştirme şemasını ve hassas bilgi türü sihirbazını kullandıysanız, henüz yapmadıysanız bu yordamlarda kullanmak üzere indirmeniz ***gerekir*** . Komut İstemi penceresinde bu komutu çalıştırın:
 
    ```dos
    EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to output folder>
    ```
 
-5. Hassas verileri karma yapmak ve karşıya yüklemek için Komut İstemi penceresinde aşağıdaki komutu çalıştırın:
+5. Hassas verileri karma olarak kullanmak ve karşıya yüklemek için Komut İstemi penceresinde aşağıdaki komutu çalıştırın:
 
    ```dos
    EdmUploadAgent.exe /UploadData /DataStoreName [DS Name] /DataFile [data file] /HashLocation [hash file location] /Schema [Schema file] /ColumnSeparator ["{Tab}"|"|"] /AllowedBadLinesPercentage [value]
    ```
 
    > [!NOTE]
-   > Hassas veri dosyasının varsayılan biçimi virgülle ayrılmış değerlerdir. "{Tab}" seçeneğini /ColumnSeparator parametresiyle belirterek sekmeyle ayrılmış bir dosya belirtebilirsiniz veya "Sekme" seçeneğini belirterek, boruyla ayrılmış bir | belirtebilirsiniz.
+   > Hassas veri dosyasının varsayılan biçimi virgülle ayrılmış değerlerdir. /ColumnSeparator parametresiyle "{Tab}" seçeneğini belirterek sekmeyle ayrılmış bir dosya belirtebilir veya "|" seçeneğini belirterek kanalla ayrılmış bir dosya belirtebilirsiniz.
    >
    > Örnek: `EdmUploadAgent.exe /UploadData /DataStoreName PatientRecords /DataFile C:\Edm\Hash\PatientRecords.csv /HashLocation C:\Edm\Hash /Schema edm.xml /AllowedBadLinesPercentage 5`
 
-   Hassas bilgi tablolarında hatalı biçimlendirilmiş bazı değerler varsa, ancak yine de geçersiz satırları yoksayarken kalan verileri içeri aktarmayı istiyorsanız, komutta */AllowedBadLinesPercentage* parametresini kullanabilirsiniz. Yukarıdaki örnekte yüzde beş eşik belirtir. Bu, satırın en çok beş yüzdesi geçersiz olsa bile aracın karma değerine sahip olduğu ve hassas bilgi tablosu karşıya yükley istediğiniz anlamına gelir.
+   Hassas bilgi tablonuzda bazı yanlış biçimlendirilmiş değerler varsa, ancak yine de geçersiz satırları yoksayarak kalan verileri içeri aktarmak istiyorsanız, komutta */AllowedBadLinesPercentage* parametresini kullanabilirsiniz. Yukarıdaki örnekte yüzde beşlik bir eşik belirtmektedir. Bu, satırların yüzde beşine kadar geçersiz olsa bile aracın hassas bilgi tablosunu karma hale getireceği ve karşıya yükleyeceği anlamına gelir.
 
-   Bu komut daha yüksek güvenlik için karmaya rastgele oluşturulmuş bir salt değeri otomatik olarak ekler. İsteğe bağlı olarak, kendi salt değerinizi kullanmak istediğiniz **/Salt komutunu \<saltvalue\>** komuta ekleyin. Bu değer 64 karakter uzunluğunda olmalı ve yalnızca a-z karakterlerini ve 0-9 karakterlerini içerebilir.
+   Bu komut, daha fazla güvenlik için karmaya otomatik olarak rastgele oluşturulmuş bir tuz değeri ekler. İsteğe bağlı olarak, kendi tuz değerinizi kullanmak istiyorsanız komutuna **/Salt \<saltvalue\>** değerini ekleyin. Bu değer 64 karakter uzunluğunda olmalı ve yalnızca a-z karakterlerini ve 0-9 karakterlerini içerebilir.
 
-6. Şu komutu çalıştırarak karşıya yükleme durumunu kontrol edin:
+6. Şu komutu çalıştırarak karşıya yükleme durumunu denetleyin:
 
    ```dos
    EdmUploadAgent.exe /GetSession /DataStoreName \<DataStoreName\>
@@ -156,22 +156,22 @@ Bu bilgisayarın kiracınıza doğrudan erişimi Microsoft 365 gerekir.
 
    Örnek: `EdmUploadAgent.exe /GetSession /DataStoreName PatientRecords`
 
-   **ProcessingInProgress içinde olmak için durumlara bakın**. Durum, Tamamlandı olarak tamamlanana kadar birkaç dakikada bir yeniden **kontrol edin**. Durum tamamlandıktan sonra EDM verileriniz kullanıma hazır olur. Hassas bilgi kaynağı tablo dosyanın boyutuna bağlı olarak, bu birkaç dakikadan birkaç saate kadar sürebilir.
+   **ProcessingInProgress** içinde durumunu arayın. Durum **Tamamlandı** olarak değişene kadar birkaç dakikada bir yeniden denetleyin. Durum tamamlandıktan sonra EDM verileriniz kullanıma hazırdır. Hassas bilgi kaynağı tablo dosyanızın boyutuna bağlı olarak, bu işlem birkaç dakika ile birkaç saat sürebilir.
 
 > [!TIP]
-> Karşıya yüklenen hassas veriler kullanıma hazır olduğunda size bildirilmesi için Tam veri eşleşme etkinlikleri için bildirimler [oluşturma'daki yordamları izleyin](sit-edm-notifications-activities.md#create-notifications-for-exact-data-match-activities).
+> Karşıya yüklenen hassas veriler kullanıma hazır olduğunda bildirim almak istiyorsanız [, Tam veri eşleştirme etkinlikleri için bildirimler oluşturma](sit-edm-notifications-activities.md#create-notifications-for-exact-data-match-activities) başlığı altında yer alan yordamları izleyin.
 
-### <a name="separate-hash-and-upload"></a>Karma'yı ayırma ve karşıya yükleme
+### <a name="separate-hash-and-upload"></a>Karmayı ayırma ve karşıya yükleme
 
-Karma değeri, güvenli bir ortamda bilgisayarda gerçekleştirin. **EDMUploadAgent her iki bilgisayarda** da yüklü olmalı.
+Karmayı güvenli bir ortamdaki bir bilgisayarda gerçekleştirin. Her iki bilgisayarda **da EDMUploadAgent** yüklü olmalıdır.
 
-İsteğE BAĞLı: Şemanızı oluşturmak için Tam Veri Eşleşme şeması ve hassas bilgi türü sihirbazını kullandıysanız ve henüz indirmedıysanız, komut istemi penceresinde dosyayı XML biçiminde indirmek için aşağıdaki komutu çalıştırın:
+İsteğE BAĞLI: Şemanızı oluşturmak için Tam Veri Eşleştirme şemasını ve hassas bilgi türü sihirbazını kullandıysanız ve henüz indirmediyseniz, dosyayı XML biçiminde indirmek için komut istemi penceresinde aşağıdaki komutu çalıştırın:
 
 ```dos
 EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to output folder>
 ````
 
-1. Güvenli ortamdaki bilgisayarda, Komut İstemi penceresinde aşağıdaki komutu çalıştırın:
+1. Güvenli ortamdaki bilgisayarda, Komut İstemi pencerelerinde aşağıdaki komutu çalıştırın:
 
    ```dos
    EdmUploadAgent.exe /CreateHash /DataFile [data file] /HashLocation [hash file location] /Schema [Schema file] /AllowedBadLinesPercentage [value]
@@ -184,27 +184,27 @@ EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to 
    ```
 
    > [!NOTE]
-   > Hassas veri dosyasının varsayılan biçimi virgülle ayrılmış değerlerdir. "{Tab}" seçeneğini /ColumnSeparator parametresiyle belirterek sekmeyle ayrılmış bir dosya belirtebilirsiniz veya "Sekme" seçeneğini belirterek, boruyla ayrılmış bir | belirtebilirsiniz.
+   > Hassas veri dosyasının varsayılan biçimi virgülle ayrılmış değerlerdir. /ColumnSeparator parametresiyle "{Tab}" seçeneğini belirterek sekmeyle ayrılmış bir dosya belirtebilir veya "|" seçeneğini belirterek kanalla ayrılmış bir dosya belirtebilirsiniz.
 
-   Bu, /Salt seçeneğini belirtmedıyseniz, karma bir dosyanın ve bu uzantılara sahip bir salt dosyanın **çıkışını \<saltvalue\>** alır:
+   **Bu, /Salt \<saltvalue\>** seçeneğini belirtmediyseniz karma dosya ve şu uzantılara sahip bir tuz dosyası oluşturur:
 
    - . EdmHash
    - . EdmSalt
 
-2. Bu dosyaları, hassas bilgi kaynağı tablo dosyanızı (PatientRecords) kiracınıza yüklemek için kullanabileceğiniz bilgisayara güvenli bir şekilde kopyalayın.
+2. Bu dosyaları güvenli bir şekilde hassas bilgi kaynağı tablo dosyanızı (PatientRecords) kiracınıza yüklemek için kullanacağınız bilgisayara kopyalayın.
 
-3. EDM Hizmet Upload yetkilendirin, yönetici olarak Komut İstemi penceresini açın, **C:\EDM\Data** dizinine geçin ve sonra aşağıdaki komutu çalıştırın:
+3. EDM Upload Aracısı'nı yetkilendinin, Yönetici olarak Komut İstemi penceresini açın, **C:\EDM\Data** dizinine geçin ve aşağıdaki komutu çalıştırın:
 
    ```dos
    EdmUploadAgent.exe /Authorize
    ```
 
    > [!IMPORTANT]
-   > **EdmUploadAgent'i** yüklü olduğu klasörden çalıştırmanız ve veri dosyalarınızın tam yolunu belirtebilirsiniz.
+   > **EdmUploadAgent'ı** yüklü olduğu klasörden çalıştırmanız ve veri dosyalarınızın tam yolunu belirtmeniz gerekir.
 
-4. İş veya okul hesabınızla, Microsoft 365 grubuna eklenmiş olan iş veya okul EDM_DataUploaders açın. Bağlantıyı yapmak için kullanıcı hesabından kiracı bilgileri ayıklanır.
+4. EDM_DataUploaders güvenlik grubuna eklenen Microsoft 365 için iş veya okul hesabınızla oturum açın. Bağlantı oluşturmak için kiracı bilgileriniz kullanıcı hesabından ayıklanır.
 
-5. Karma verileri karşıya yüklemek için, Karma Komut İstemi'Windows çalıştırın:
+5. Karma verileri karşıya yüklemek için Windows Komut İsteminde aşağıdaki komutu çalıştırın:
 
    ```dos
    EdmUploadAgent.exe /UploadHash /DataStoreName \<DataStoreName\> /HashFile \<HashedSourceFilePath\ /ColumnSeparator ["{Tab}"|"|"]
@@ -216,15 +216,15 @@ EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to 
    EdmUploadAgent.exe /UploadHash /DataStoreName PatientRecords /HashFile C:\\Edm\\Hash\\**PatientRecords.EdmHash**
    ```
 
-6. Hassas verilerinizin karşıya yük yük doğrulamak için Komut İstemi penceresinde aşağıdaki komutu çalıştırın:
+6. Hassas verilerinizin karşıya yüklendiğini doğrulamak için Komut İstemi penceresinde aşağıdaki komutu çalıştırın:
 
    ```dos
    EdmUploadAgent.exe /GetDataStore
    ```
 
-   Veri depolarının listesini ve en son ne zaman güncelleştirilenleri burada bulabilirsiniz.
+   Veri depolarının listesini ve bunların en son ne zaman güncelleştirildiğini görürsünüz.
 
-7. Belirli bir depoya yüklenen tüm verileri görmek için, Windows komut isteminde aşağıdaki komutu çalıştırarak tüm veri depolarının listesini ve ne zaman güncelleştirilenleri bakın:
+7. Belirli bir depoya yüklenen tüm verileri görmek istiyorsanız, tüm veri depolarının listesini ve ne zaman güncelleştirildiklerini görmek için Windows komut isteminde aşağıdaki komutu çalıştırın:
 
    ```dos
    EdmUploadAgent.exe /GetSession /DataStoreName <DataStoreName>

@@ -1,5 +1,5 @@
 ---
-title: İçerik gezginiyle çalışmaya başlama
+title: İçerik gezginini kullanmaya başlama
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -19,28 +19,28 @@ search.appverid:
 - MOE150
 - MET150
 description: İçerik gezgini etiketli öğeleri yerel olarak görüntülemenizi sağlar.
-ms.openlocfilehash: f402df53c19da78435e22717577b351fc302d0f4
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 0a3b036a60d3ec24533056b38ff1e68be9875aa0
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679972"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64761383"
 ---
-# <a name="get-started-with-content-explorer"></a>İçerik gezginiyle çalışmaya başlama
+# <a name="get-started-with-content-explorer"></a>İçerik gezginini kullanmaya başlama
 
-Veri sınıflandırması içerik gezgini, genel bakış sayfasında özetlenmiş olan öğeleri yerel olarak görüntülemenizi sağlar.
+Veri sınıflandırması içerik gezgini, genel bakış sayfasında özetlenen öğeleri yerel olarak görüntülemenizi sağlar.
 
 ![içerik gezgini daraltılmış ekran görüntüsü.](../media/data-classification-content-explorer-1.png)
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Lisans gereksinimleri için bkz. [Bilgi Koruması: Veri Sınıflandırma Analizi: İçerik Sınıflandırma & Explorer](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-classification-analytics-overview-content--activity-explorer)
+Lisans gereksinimleri için bkz[. Information Protection: Veri Sınıflandırma Analizi: Genel Bakış İçerik & Etkinlik Gezgini](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-classification-analytics-overview-content--activity-explorer)
 
 ### <a name="permissions"></a>İzinler
 
-İçerik gezgini sekmesine erişim elde etmek için, bu rollerden veya rol gruplarından herhangi biri için bir hesaba üyelik atanabilir. 
+İçerik gezgini sekmesine erişim elde etmek için, bu rollerden veya rol gruplarından herhangi birinde bir hesaba üyelik atanmalıdır. 
 
-**Microsoft 365 grupları**
+**rol gruplarını Microsoft 365**
 
 - Genel yönetici
 - Uyumluluk yöneticisi
@@ -48,110 +48,110 @@ Lisans gereksinimleri için bkz. [Bilgi Koruması: Veri Sınıflandırma Analizi
 - Uyumluluk veri yöneticisi
 
 > [!IMPORTANT]
-> Bu rol gruplarında üyelik, içerik gezgininde öğe listesini görüntülemeye veya içerik gezgininde öğelerin içeriğini görüntülemeye izin vermez.
+> Bu rol gruplarındaki üyelik, içerik gezginindeki öğelerin listesini görüntülemenize veya içerik gezginindeki öğelerin içeriğini görüntülemenize izin vermez.
 
 > [!IMPORTANT]
-> Uyumluluk Merkezi'nde yalnızca Genel yöneticiler diğer kullanıcıları yönetebilir veya bu kullanıcılara izin atayabilirsiniz. Diğer ayrıntılar için bkz. [Kullanıcılara Güvenlik ve Uyumluluk Merkezi'& verme](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
+> Uyumluluk Merkezi'ndeki diğer kullanıcıları yalnızca Genel yöneticiler yönetebilir veya bu kullanıcılara izin atayabilir. Diğer ayrıntılar için bkz. [Kullanıcılara Güvenlik & Uyumluluk Merkezi'ne erişim verme](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
 > 
-### <a name="required-permissions-to-access-items-in-content-explorer"></a>İçerik gezgininde öğelere erişim için gerekli izinler
+### <a name="required-permissions-to-access-items-in-content-explorer"></a>İçerik gezginindeki öğelere erişmek için gerekli izinler
 
-Taranan dosyaların içeriğini okumanıza izin olduğundan, içerik gezginine erişim son derece kısıtlıdır.
+Taranan dosyaların içeriğini okumanıza olanak sağladığından içerik gezginine erişim yüksek oranda kısıtlanmıştır.
 
 > [!IMPORTANT]
-> Bu izinler, içeriği görüntülemeye olanak sağlayan, öğelere yerel olarak atanmış olan izinlerin yerine dolar. 
+> Bu izinler, öğelere yerel olarak atanan ve içeriğin görüntülenmesine izin veren izinlerin yerini alır. 
 
-İçerik gezginine erişim izni verilen iki rol vardır ve bu rol aşağıdaki <a href="https://go.microsoft.com/fwlink/p/?linkid=2173597" target="_blank">Microsoft 365 uyumluluk merkezi:</a>
+İçerik gezginine erişim veren iki rol vardır ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2173597" target="_blank">Microsoft 365 uyumluluk merkezi</a> kullanılarak verilir:
 
-- **İçerik Gezgini Liste görüntüleyicisi**: Bu rol grubu üyeliği, her öğeyi ve konumunu liste görünümünde görmenizi sağlar. Rol `data classification list viewer` , bu rol grubuna önceden atanmıştır.
+- **İçerik Gezgini Liste görüntüleyicisi**: Bu rol grubundaki üyelik, liste görünümünde her öğeyi ve konumunu görmenizi sağlar. Rol `data classification list viewer` , bu rol grubuna önceden atanmıştır.
 
-- **İçerik Gezgini İçerik görüntüleyicisi**: Bu rol grubu üyeliği, listeden her öğenin içeriğini görüntülemenizi sağlar. Rol `data classification content viewer` , bu rol grubuna önceden atanmıştır.
+- **İçerik Gezgini İçerik görüntüleyicisi**: Bu rol grubundaki üyelik, listedeki her öğenin içeriğini görüntülemenizi sağlar. Rol `data classification content viewer` , bu rol grubuna önceden atanmıştır.
 
-İçerik gezginine erişmek için kullanabileceğiniz hesap, rol gruplarından birinin veya her ikisinin içinde yer alamaktadır. Bunlar bağımsız rol gruplarıdır ve kümülatif değildir. Örneğin, bir hesaba yalnızca öğeleri ve konumlarını görüntüleme izni vermek için, İçerik Gezgini Listesi görüntüleyici hakları verebilirsiniz. Aynı hesabın aynı zamanda listede yer alan öğelerin içeriğini de görüntüley istemeniz için, İçerik Gezgini İçerik görüntüleyicisi hakları da verebilirsiniz.
+İçerik gezginine erişmek için kullandığınız hesap rol gruplarından birinde veya her ikisinde olmalıdır. Bunlar bağımsız rol gruplarıdır ve kümülatif değildir. Örneğin, bir hesaba öğeleri ve yalnızca konumlarını görüntüleme olanağı vermek istiyorsanız İçerik Gezgini Listesi görüntüleyicisi hakları verin. Aynı hesabın listedeki öğelerin içeriğini de görüntüleyebilmesini istiyorsanız, İçerik Gezgini İçerik görüntüleyicisi haklarını da verin.
 
-Ayrıca, içerik gezginine erişimi uyarlamak için rollerin birini veya her ikisini de özel bir rol grubuna atabilirsiniz.
+Ayrıca, içerik gezginine erişimi uyarlamak için rollerin birini veya her ikisini de özel bir rol grubuna atayabilirsiniz.
 
-Genel yönetici, gerekli İçerik Gezgini Liste Görüntüleyicisi'ni ve İçerik Gezgini İçerik Görüntüleyicisi rol grubu üyeliğini atayabilirsiniz.
+Genel yönetici, gerekli İçerik Gezgini Liste Görüntüleyicisi'ni ve İçerik Gezgini İçerik Görüntüleyicisi rol grubu üyeliğini atayabilir.
 
 #### <a name="roles-and-role-groups-in-preview"></a>Önizlemede Roller ve Rol Grupları
 
-Önizlemede, erişim denetimlerinize ince ayar yapmak için test etmek için deney erişiminiz olan roller ve rol grupları vardır.
+Önizlemede, erişim denetimlerinizde ince ayar yapmak için test yapabileceğiniz roller ve rol grupları vardır.
 
-İşte önizlemede olan Microsoft Bilgi Koruması (MIP) rollerinin listesi. Bu roller hakkında daha fazla bilgi edinmek [için Güvenlik ve Uyumluluk Merkezi'& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
+Önizleme aşamasında olan Microsoft Bilgi Koruması (MIP) rollerinin listesi aşağıdadır. Bunlar hakkında daha fazla bilgi edinmek için bkz [. Güvenlik & Uyumluluk Merkezi'ndeki Roller](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Bilgi Koruması Yöneticisi
-- Bilgi Koruma Analisti
-- Bilgi Koruma Koruma Koruma Koruması
-- Bilgi Koruma Okuyucusu
+- Information Protection Yöneticisi
+- Information Protection Analisti
+- Information Protection Araştırmacısı
+- Information Protection Okuyucu
 
-Önizlemede olan MIP rol gruplarının listesi burada ve ve şekildedir. Daha fazla bilgi edinmek için [Güvenlik ve Uyumluluk Merkezi'nde rol & bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center).
+Önizleme aşamasında olan MIP rol gruplarının listesi aşağıdadır. Daha fazla bilgi için bkz [. Güvenlik & Uyumluluk Merkezi'nde rol grupları](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center)
 
-- Bilgi Koruması
-- Bilgi Koruması Yöneticileri
-- Bilgi Koruma Analistleri
-- Bilgi Koruma Koruma KorumaLarı
-- Bilgi Koruma Okuyucuları
+- Information Protection
+- Information Protection Yöneticileri
+- Information Protection Analistleri
+- Information Protection Araştırmacıları
+- Information Protection Okuyucular
 
 ## <a name="content-explorer"></a>İçerik gezgini
 
-İçerik gezgini duyarlılık etiketi, bekletme etiketi veya kuruluşta hassas bir bilgi türü olarak sınıflandırılmış öğelerin geçerli anlık görüntüsünü gösterir.
+İçerik gezgini duyarlılık etiketine, bekletme etiketine sahip veya kuruluşunuzda hassas bilgi türü olarak sınıflandırılmış öğelerin geçerli anlık görüntüsünü gösterir.
 
 ### <a name="sensitive-information-types"></a>Hassas bilgi türleri
 
-[DLP ilkesi,](dlp-learn-about-dlp.md) hassas bir bilgi türü olarak tanımlanan hassas bilgilerin **korunmasına yardımcı olabilir**. Microsoft 365, [farklı bölgelerden](sensitive-information-type-entity-definitions.md) kullanıma hazır birçok yaygın hassas bilgi türüne ilişkin tanımları içerir. Örneğin, kredi kartı numarası, banka hesabı numaraları, ulusal kimlik numaraları ve canlı Windows numaraları.
+[DLP ilkesi](dlp-learn-about-dlp.md), hassas bilgi türü olarak tanımlanan **hassas bilgilerin** korunmasına yardımcı olabilir. Microsoft 365, birçok farklı bölgeden kullanıma hazır [birçok ortak hassas bilgi türü için tanımlar](sensitive-information-type-entity-definitions.md) içerir. Örneğin, kredi kartı numarası, banka hesap numaraları, ulusal kimlik numaraları ve Windows Canlı Kimlik hizmet numaraları.
 
 ### <a name="sensitivity-labels"></a>Duyarlılık etiketleri
 
-Duyarlılık [etiketi yalnızca](sensitivity-labels.md) , öğenin kuruluş değerine işaret gösteren bir etikettir. El ile veya otomatik olarak uygulanabilir. Uygulandıktan sonra belgeye katıştır olur ve gittiği her yerde belgeyi takip eder. Duyarlılık etiketi zorunlu filigran veya şifreleme gibi çeşitli koruyucu davranışlara olanak sağlar.
+[Duyarlılık etiketi](sensitivity-labels.md), öğenin kuruluşunuzdaki değerini gösteren bir etikettir. El ile veya otomatik olarak uygulanabilir. Uygulandıktan sonra etiket belgeye eklenir ve belgenin gittiği her yerde belgeyi izler. Duyarlılık etiketi, zorunlu filigran veya şifreleme gibi çeşitli koruyucu davranışlar sağlar.
 
-Duyarlılık etiketlerinin, ilgili verilerin veri sınıflandırma sayfasında SharePoint OneDrive için metin veya metin olarak yer alan dosyalar için etkinleştirilmesi gerekir. Daha fazla bilgi için bkz[. Dosya ve klasörlerin Office için duyarlılık SharePoint OneDrive](sensitivity-labels-sharepoint-onedrive-files.md).
+İlgili verilerin veri sınıflandırma sayfasında gösterilmesi için SharePoint ve OneDrive dosyalar için duyarlılık etiketleri etkinleştirilmelidir. Daha fazla bilgi için bkz[. SharePoint ve OneDrive Office dosyaları için duyarlılık etiketlerini etkinleştirme](sensitivity-labels-sharepoint-onedrive-files.md).
 
 ### <a name="retention-labels"></a>Bekletme etiketleri
 
-Bekletme [etiketi,](retention.md) etiketli bir öğenin ne kadar süre tutul tutul olacağını ve silmeden önce atılması gereken adımları tanımlamanız için olanak sağlar. Bunlar ilkeler yoluyla el ile veya otomatik olarak uygulanır. Bu organizasyon, yasal ve mevzuat gereksinimleriyle uyumlu kalmasını sağlarken rol oynayabilir.
+[Bekletme etiketi,](retention.md) etiketlenmiş bir öğenin ne kadar süreyle tutulacağı ve silinmeden önce izlenecek adımları tanımlamanıza olanak tanır. Bunlar, ilkeler aracılığıyla el ile veya otomatik olarak uygulanır. Kuruluşunuzun yasal ve mevzuat gereksinimleriyle uyumlu kalmasına yardımcı olmak için bir rol oynayabilirler.
 
-### <a name="how-to-use-content-explorer"></a>İçerik gezgini nasıl kullanılabilir?
+### <a name="how-to-use-content-explorer"></a>İçerik gezginini kullanma
 
-1.   >  Microsoft 365 uyumluluk merkezi **Data classificationContent** >  **explorer'ı açın**.
-2. Etiketin adını veya hassas bilgi türünü biliyorsanız, filtre kutusuna bunu girebilirsiniz.
-3. Alternatif olarak, etiket türünü genişleterek ve listeden etiketi seçerek öğeye göz atabilirsiniz.
-4. Tüm konumlar altında **bir konum seçin** ve öğenin klasör yapısında detaya gidin.
+1. **Microsoft 365 uyumluluk merkezi**  >  **Data** **classificationContent** >  gezginini açın.
+2. Etiketin adını veya hassas bilgi türünü biliyorsanız, bunu filtre kutusuna yazabilirsiniz.
+3. Alternatif olarak, etiket türünü genişletip listeden etiketi seçerek öğeye göz atabilirsiniz.
+4. **Tüm konumlar'ın** altında bir konum seçin ve öğedeki klasör yapısının detayına gidin.
 5. Öğeyi içerik gezgininde yerel olarak açmak için çift tıklayın.
 
 ### <a name="export"></a>Dışarı aktarma
-Dışarı **aktarma** denetimi, .csv konumları bölmesinde gösterilenlerin listesini içeren bir .csv **dosyası oluşturmanızı** sağlar.
+Dışarı **aktarma** denetimi **, Tüm konumlar** bölmesinde gösterilenlerin listesini içeren bir .csv dosyası oluşturur.
 
 ![veri sınıflandırması dışarı aktarma denetimi.](../media/data_classification_export_control.png)
 
 
 > [!NOTE]
-> Sayımların içerik *gezgininde* güncelleştirilmiş olması yedi gün kadar da olabilir.
+> İçerik gezgininde sayıların güncelleştirilmiş olması *yedi güne* kadar sürebilir.
 
 ### <a name="search"></a>Arama
 
-Exchange veya Teams klasörü ya da SharePoint veya OneDrive gibi bir konuma detaya gidin; **arama aracı görüntülenir**.
+Exchange veya Teams klasörü ya da SharePoint ya da OneDrive sitesi gibi bir konumda detaya gittiğiniz zaman **arama** aracı görüntülenir.
 
 ![içerik gezgini arama aracı.](../media/data_classification_search_tool.png)
 
-Arama aracının kapsamı, Tüm konumlar bölmesinde ne görüntüleniyor  ve ne üzerinde arama seçtiğiniz konuma bağlı olarak değişiklik gösterir. 
+Arama aracının kapsamı **Tüm konumlar** bölmesinde görüntülenen araçtır ve arama yapabileceklerin seçilen konuma bağlı olarak değişir. 
 
-Seçilen **Exchange** posta **Teams** posta `user@domainname.com`kutusunun tam e-posta adresine, örneğin.
+**Seçilen konum Exchange** veya **Teams** olduğunda, örneğin `user@domainname.com`posta kutusunun tam e-posta adresini arayabilirsiniz.
 
-Seçilen **SharePoint** veya **OneDrive** biri seçildiğinde, site adlarına, klasörlerine ve dosyalarına detaya gidin; arama aracı görüntülenir. 
+**konum SharePoint** veya **OneDrive** seçildiğinde, site adları, klasörleri ve dosyalarında detaya gittiğiniz zaman arama aracı görüntülenir. 
 
-Şu adreste arama:
+Arama yapabileceğiniz yer:
 
-|değer|örnek  |
+|Değer|Örnek  |
 |---------|---------|
 |tam site adı    |`https://contoso.onmicrosoft.com/sites/sitename`    |
 |dosya adı    |    `RES_Resume_1234.txt`     |
 |dosya adının başındaki metin| `RES`|
-|dosya adı olarak alt çizgi karakteri ( _ ) sonra gelen metin|`Resume` veya `1234`| 
+|dosya adında bir alt çizgi karakteri ( _ ) sonra gelen metin|`Resume` Veya `1234`| 
 |dosya uzantısı|`txt`|
 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Duyarlılık etiketleri hakkında bilgi edinin](sensitivity-labels.md)
-- [Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi](retention.md)
-- [Hassas bilgi türü varlık definitions.md](sensitive-information-type-entity-definitions.md)
-- [Veri kaybını önleme hakkında bilgi](dlp-learn-about-dlp.md)
+- [Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin](retention.md)
+- [Hassas bilgi türü varlığı definitions.md](sensitive-information-type-entity-definitions.md)
+- [Veri kaybı önleme hakkında daha fazla bilgi edinme](dlp-learn-about-dlp.md)

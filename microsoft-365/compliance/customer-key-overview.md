@@ -1,5 +1,5 @@
 ---
-title: Müşteri Anahtarı ile Hizmet şifrelemesi
+title: Müşteri Anahtarı ile hizmet şifrelemesi
 ms.author: krowley
 author: kccross
 manager: laurawi
@@ -14,92 +14,92 @@ ms.collection:
 - m365solution-mip
 - m365initiative-compliance
 ms.custom: seo-marvel-apr2020
-description: Bu makalede, Hizmet Şifrelemesi'nin Müşteri Anahtarı ile birlikte nasıl çalıştığını Microsoft 365.
-ms.openlocfilehash: 14760bfcb26fa1bf45c54661cbb6fc189bad7d93
-ms.sourcegitcommit: f563b4229760fa099703296d1ad2c1f0264f1647
+description: Bu makalede, hizmet şifrelemenin Microsoft 365'de Müşteri Anahtarı ile nasıl çalıştığı hakkında bilgi edineceğiz.
+ms.openlocfilehash: 65098994a6883fdadd3106b74b25a2251239fb3a
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2022
-ms.locfileid: "63016263"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64761097"
 ---
-# <a name="service-encryption-with-customer-key"></a>Müşteri Anahtarı ile Hizmet şifrelemesi
+# <a name="service-encryption-with-customer-key"></a>Müşteri Anahtarı ile hizmet şifrelemesi
 
-Microsoft 365, BitLocker ve Dağıtılmış Anahtar Yöneticisi (DKM) aracılığıyla etkinleştiren temel, toplu düzey şifreleme sağlar. Microsoft 365, içeriğiniz için ek bir şifreleme katmanı sunar. Bu içerik; Exchange Online, Skype Kurumsal, SharePoint Online, OneDrive İş ve Microsoft Teams.
+Microsoft 365, BitLocker ve Dağıtılmış Anahtar Yöneticisi (DKM) aracılığıyla etkinleştirilen temel, birim düzeyinde şifreleme sağlar. Microsoft 365, içeriğiniz için ek bir şifreleme katmanı sunar. Bu içerik Exchange Online, Skype Kurumsal, SharePoint Online, OneDrive İş ve Microsoft Teams verilerini içerir.
 
-## <a name="how-service-encryption-bitlocker-and-customer-key-work-together"></a>Hizmet şifreleme, BitLocker ve Müşteri Anahtarı birlikte nasıl çalışır?
+## <a name="how-service-encryption-bitlocker-and-customer-key-work-together"></a>Hizmet şifrelemesi, BitLocker ve Müşteri Anahtarı birlikte nasıl çalışır?
 
-BitLocker ve DKM ile aynı hizmette Microsoft 365 verileriniz sabitlenir. Daha fazla bilgi için bkz[. Exchange Online e-posta sırlarınızı nasıl güvence altına alır](exchange-online-secures-email-secrets.md)? Müşteri Anahtarı, verileri yetkisiz sistemlere veya personele göre görüntülemeye karşı ek koruma sağlar ve Microsoft veri merkezlerinde BitLocker disk şifrelemesini tamamlar. Hizmet şifreleme, Microsoft personelinin verilerinize erişmesini engellemek için değildir. Müşteri Anahtarı bunun yerine, kök anahtarların denetlenmeyle ilgili mevzuat veya uyumluluk yükümlülüklerini karşılamanıza yardımcı olur. eBulma, Microsoft 365 dan koruma, istenmeyen posta önleme, arama dizini oluşturma gibi değer ekli bulut hizmetleri sağlamak üzere şifreleme anahtarlarınızı kullanmak için bu hizmetlere açıkça yetki verirsiniz.
+Verileriniz bitLocker ve DKM ile Microsoft 365 hizmetinde bekleme sırasında her zaman şifrelenir. Daha fazla bilgi için bkz. [Exchange Online e-posta gizli dizilerinizin güvenliğini nasıl sağlar](exchange-online-secures-email-secrets.md)? Müşteri Anahtarı, yetkisiz sistemler veya personel tarafından verilerin görüntülenmesine karşı ek koruma sağlar ve Microsoft veri merkezlerinde BitLocker disk şifrelemesini tamamlar. Hizmet şifrelemesi, Microsoft personelinin verilerinize erişmesini engellemeye yönelik değildir. Bunun yerine Müşteri Anahtarı, kök anahtarları denetlemeye yönelik mevzuat veya uyumluluk yükümlülüklerini yerine getirmenize yardımcı olur. eBulma, kötü amaçlı yazılımdan koruma, istenmeyen posta önleme, arama dizini oluşturma vb. gibi katma değerli bulut hizmetleri sağlamak için şifreleme anahtarlarınızı kullanmak üzere Microsoft 365 hizmetlerini açıkça yetkilendirebilirsiniz.
 
-Müşteri Anahtarı hizmet şifrelemesi üzerine yerleşiktir ve şifreleme anahtarlarını sağlama ve denetlemenizi sağlar. Microsoft 365 bu anahtarları, Online Services Koşulları'nda (OST) açıklandığı gibi geri kalanını [şifrelemek için kullanır](https://www.microsoft.com/licensing/product-licensing/products.aspx). Müşteri Anahtarı, verilerin şifresini çözmek ve şifrelerini çözmek için kullandığı şifreleme anahtarlarını Microsoft 365 uyumluluk yükümlülüklerini karşılamanıza yardımcı olur.
+Müşteri Anahtarı, hizmet şifrelemesi üzerine kurulmuştur ve şifreleme anahtarlarını sağlamanıza ve denetlemenize olanak tanır. Microsoft 365, [bekleyen verilerinizi Çevrimiçi Hizmet Koşulları'nda (OST)](https://www.microsoft.com/licensing/product-licensing/products.aspx) açıklandığı gibi şifrelemek için bu anahtarları kullanır. Müşteri Anahtarı, Microsoft 365 verileri şifrelemek ve şifresini çözmek için kullandığı şifreleme anahtarlarını denetlediğinizden uyumluluk yükümlülüklerini karşılamanıza yardımcı olur.
   
-Müşteri Anahtarı, bulut hizmeti sağlayıcısıyla önemli düzenlemeleri belirten uyumluluk gereksinimleri taleplerini karşılama olanağını geliştirmektedir. Müşteri Anahtarı ile, verileriniz için kök şifreleme anahtarlarını uygulama Microsoft 365 düzeyinde sağlar ve kontrol edersiniz. Sonuç olarak, kuruluş anahtarlarının üzerinde denetim alıştırması yapın.
+Müşteri Anahtarı, kuruluşunuzun bulut hizmeti sağlayıcısıyla önemli düzenlemeleri belirten uyumluluk gereksinimleri taleplerini karşılama becerisini geliştirir. Müşteri Anahtarı ile, bekleyen Microsoft 365 verileriniz için kök şifreleme anahtarlarını uygulama düzeyinde sağlar ve denetlersiniz. Sonuç olarak, kuruluşunuzun anahtarları üzerinde denetime sahip olursunuz.
 
-## <a name="customer-key-with-hybrid-deployments"></a>Karma dağıtımlı Müşteri Anahtarı
+## <a name="customer-key-with-hybrid-deployments"></a>Karma dağıtımlarla Müşteri Anahtarı
 
-Müşteri Anahtarı yalnızca buluttaki verileri şifreler. Şirket içi posta kutularınızı ve dosyalarınızı korumak için Müşteri Anahtarı çalışmıyor. BitLocker gibi başka bir yöntem kullanarak şirket içi verilerinizi şifreebilirsiniz.
+Müşteri Anahtarı yalnızca bulutta bekleyen verileri şifreler. Müşteri Anahtarı, şirket içi posta kutularınızı ve dosyalarınızı korumak için çalışmaz. BitLocker gibi başka bir yöntem kullanarak şirket içi verilerinizi şifreleyebilirsiniz.
 
 ## <a name="about-data-encryption-policies"></a>Veri şifreleme ilkeleri hakkında
 
-Veri şifreleme ilkesi (DEP), şifreleme hiyerarşisini tanımlar. Bu hiyerarşi, hizmet tarafından, yönetmekte olduğu her anahtarı ve Microsoft tarafından korunan kullanılabilirlik anahtarını kullanarak verileri şifrelemek için kullanılır. PowerShell cmdlet'lerini kullanarak DEP'ler oluşturabilir ve sonra bu DEP'leri uygulama verilerini şifrelemek için atarsanız. Müşteri Anahtarı tarafından desteklenen üç DEP türü Microsoft 365, her ilke türü farklı cmdlet'ler kullanır ve farklı türde veriler için kapsam sağlar. Tanımladığınız DEP'ler şunlardır:
+Veri şifreleme ilkesi (DEP), şifreleme hiyerarşisini tanımlar. Bu hiyerarşi, yönettiğiniz anahtarların her birini ve Microsoft tarafından korunan kullanılabilirlik anahtarını kullanarak verileri şifrelemek için hizmet tarafından kullanılır. PowerShell cmdlet'lerini kullanarak DEP'ler oluşturur ve ardından uygulama verilerini şifrelemek için bu DEP'leri atarsınız. Microsoft 365 Müşteri Anahtarı tarafından desteklenen üç tür DEP vardır; her ilke türü farklı cmdlet'ler kullanır ve farklı bir veri türü için kapsam sağlar. Tanımlayabileceğiniz DEP'ler şunlardır:
 
-**Birden çok iş Microsoft 365 DEP'ler**, birden çok M365 iş yükü genelinde verileri kiracıdaki tüm kullanıcılar için şifreler. Bu iş yükleri şunlardır:
+**Birden çok Microsoft 365 iş yükü için DEP** Bu DEP'ler, kiracıdaki tüm kullanıcılar için birden çok M365 iş yükünde verileri şifreler. Bu iş yükleri şunlardır:
 
-- Teams mesajları gönderme (bire bir sohbetler, grup sohbetleri, toplantı sohbetleri ve kanal konuşmaları)
-- Teams mesajları (resimler, kod parçacıkları, görüntülü mesajlar, sesli mesajlar, wiki görüntüleri)
-- Teams depolamada depolanan arama ve Teams kaydetmeyi sağlar
-- Teams bildirimlerini geri bildirim olarak kabul edin
-- Teams önerilerini, web Cortana
-- Teams iletilerini gönderme
-- Kullanıcı ve sinyal bilgileri Exchange Online
-- Exchange Online kutusu DEP'leri tarafından şifrelenmeen posta kutularını geri alın
+- sohbet iletilerini Teams (1:1 sohbetler, grup sohbetleri, toplantı sohbetleri ve kanal konuşmaları)
+- Teams medya iletileri (görüntüler, kod parçacıkları, video iletileri, sesli iletiler, wiki görüntüleri)
+- Teams depolama alanında depolanan arama ve toplantı kayıtlarını Teams
+- Sohbet bildirimlerini Teams
+- sohbet önerilerini Cortana Teams
+- durum iletilerini Teams
+- Exchange Online için kullanıcı ve sinyal bilgileri
+- Posta kutusu DEP'leri tarafından henüz şifrelenmemiş posta kutularını Exchange Online
 - Microsoft Bilgi Koruması:
 
-  - Veri dosyası şemaları, kural paketleri ve hassas verileri karma olarak birleştirmek için kullanılan saltlar da dahil olmak üzere tam veri eşleşmesi (EDM) verileri. EDM ve Microsoft Teams için, çok iş yüküne sahip DEP, DEP'yi kiracıya atadığınız zamanla yeni verileri şifreler. Daha Exchange Online için, Customer Key mevcut ve yeni tüm verileri şifreler.
+  - Veri dosyası şemaları, kural paketleri ve hassas verilerin karması için kullanılan tuzlar da dahil olmak üzere tam veri eşleşmesi (EDM) verileri. EDM ve Microsoft Teams için çok iş yükülü DEP, DEP'yi kiracıya atadığınız zamandan itibaren yeni verileri şifreler. Exchange Online için Müşteri Anahtarı tüm mevcut ve yeni verileri şifreler.
 
   - Duyarlılık etiketleri için etiket yapılandırması
 
-Çok iş yüküne sahip DEP'ler aşağıdaki veri türlerini şifrelemez. Bunun Microsoft 365, bu verileri korumak için başka şifreleme türleri kullanır.
+Çok iş yüküLÜ DEP'ler aşağıdaki veri türlerini şifrelemez. Bunun yerine, Microsoft 365 bu verileri korumak için diğer şifreleme türlerini kullanır.
 
-- SharePoint ve OneDrive İş.
-- Microsoft Teams ve OneDrive İş Online'Teams kaydedilen bazı arama ve toplantı kayıtları, SharePoint Online DEP SharePoint şifrelenir.
-- Şu Microsoft 365 Müşteri Anahtarı Yammer Planner gibi diğer iş yükleri.
-- Teams Etkinlik verilerini içerir.
+- verileri SharePoint ve OneDrive İş.
+- Microsoft Teams dosyaları ve OneDrive İş ve SharePoint Online'da kaydedilen bazı Teams arama ve toplantı kayıtları, SharePoint Online DEP kullanılarak şifrelenir.
+- Şu anda Müşteri Anahtarı tarafından desteklenmeyen Yammer ve Planner gibi diğer Microsoft 365 iş yükleri.
+- Canlı Etkinlik verilerini Teams.
 
-Kiracı başına birden çok DEP oluşturabilirsiniz, ancak bir defada yalnızca bir DEP atabilirsiniz. DEP'yi atadığınız zaman, şifreleme otomatik olarak başlar ancak kiracının boyutuna bağlı olarak tamamlanması biraz zaman alır.
+Kiracı başına birden çok DEP oluşturabilir, ancak aynı anda yalnızca bir DEP atayabilirsiniz. DEP'yi atadığınızda şifreleme otomatik olarak başlar ancak kiracınızın boyutuna bağlı olarak tamamlanması biraz zaman alır.
 
-**Posta kutularının Exchange Online DEP'leri**, posta kutusu içinde tek tek posta kutuları üzerinde daha hassas Exchange Online. UserMailbox, MailUser, Group, PublicFolder ve Paylaşılan posta kutuları gibi farklı türlerde OLAN EXO posta kutularında depolanan verileri şifrelemek için posta kutusu DEP'lerini kullanın. Kiracı başına en çok 50 etkin DEP'ye sahip olabilir ve bu DEP'leri tek tek posta kutularına atabilirsiniz. Birden çok posta kutusuna bir DEP atabilirsiniz.
+**Exchange Online posta kutuları için DEP'ler** Posta kutusu DEP'leri, Exchange Online içindeki tek tek posta kutuları üzerinde daha hassas denetim sağlar. UserMailbox, MailUser, Group, PublicFolder ve Paylaşılan posta kutuları gibi farklı türlerdeki EXO posta kutularında depolanan verileri şifrelemek için posta kutusu DEP'lerini kullanın. Kiracı başına en fazla 50 etkin DEP'niz olabilir ve bu DEP'leri tek tek posta kutularına atayabilirsiniz. Birden çok posta kutusuna bir DEP atayabilirsiniz.
 
-Varsayılan olarak, Microsoft tarafından yönetilen anahtarlar kullanılarak posta kutularınız şifrelenir. Posta kutusuna Müşteri Anahtarı DEP'si atadığınız zaman:
+Posta kutularınız varsayılan olarak Microsoft tarafından yönetilen anahtarlar kullanılarak şifrelenir. Bir posta kutusuna Müşteri Anahtarı DEP'i atadığınızda:
 
-- Posta kutusu çok iş yüküne sahip bir DEP kullanılarak şifrelenirse, kullanıcı veya sistem işlemi posta kutusu verilerine eriş olduğu sürece hizmet yeni posta kutusu DEP'i kullanarak posta kutusunu yeniden sarmalar.
+- Posta kutusu çok iş yükülü bir DEP kullanılarak şifrelenirse, kullanıcı veya sistem işlemi posta kutusu verilerine eriştiği sürece hizmet yeni posta kutusu DEP'sini kullanarak posta kutusunu yeniden oluşturur.
 
-- Posta kutusu Zaten Microsoft tarafından yönetilen anahtarlar kullanılarak şifrelenirse, kullanıcı veya sistem işlemi posta kutusu verilerine eriş olduğu sürece hizmet yeni posta kutusu DEP'i kullanarak posta kutusunu yeniden sarmalar.
+- Posta kutusu Microsoft tarafından yönetilen anahtarlar kullanılarak zaten şifrelenmişse, kullanıcı veya sistem işlemi posta kutusu verilerine eriştiği sürece hizmet yeni posta kutusu DEP'sini kullanarak posta kutusunu yeniden oluşturur.
 
-- Posta kutusu henüz varsayılan şifreleme kullanılarak şifrelenmezse, hizmet posta kutusunu taşıma için işaretler. Taşıma tamamlandıktan sonra şifreleme  sürer. Posta kutusu hareketleri, tüm posta kutuları için ayarlanmış önceliklere Microsoft 365. Daha fazla bilgi için bkz[. Müşteri hizmetleri Microsoft 365 taşıma](/exchange/mailbox-migration/office-365-migration-best-practices#move-requests-in-the-microsoft-365-or-office-365-service). Posta kutuları belirtilen süre içinde şifrelenmezse, Microsoft'a ulaşın.
+- Posta kutusu henüz varsayılan şifreleme kullanılarak şifrelenmemişse, hizmet posta kutusunu taşıma için işaretler. Taşıma tamamlandıktan sonra şifreleme gerçekleştirilir. Posta kutusu taşıma işlemleri, tüm Microsoft 365 için ayarlanan öncelikler temelinde yönetilir. Daha fazla bilgi için bkz. [İstekleri Microsoft 365 hizmetinde taşıma](/exchange/mailbox-migration/office-365-migration-best-practices#move-requests-in-the-microsoft-365-or-office-365-service). Posta kutuları belirtilen süre içinde şifrelenmemişse Microsoft'a başvurun.
 
-Daha sonra DEP'yi yenileyin veya Posta Kutusu için Müşteri Anahtarını Yönetme konusunda açıklandığı gibi farklı bir DEP [Office 365](customer-key-manage.md). Her posta kutusuna deP atanacak uygun lisanslar olması gerekir. Lisanslama hakkında daha fazla bilgi için bkz [. Müşteri Anahtarını ayarlamadan önce](customer-key-set-up.md#before-you-set-up-customer-key).
+Daha sonra DEP'yi yenileyebilir veya [Office 365 için Müşteri Anahtarını Yönetme](customer-key-manage.md) bölümünde açıklandığı gibi posta kutusuna farklı bir DEP atayabilirsiniz. Her posta kutusunun bir DEP'ye atanması için uygun lisanslara sahip olması gerekir. Lisanslama hakkında daha fazla bilgi için bkz. [Müşteri Anahtarını ayarlamadan önce](customer-key-set-up.md#before-you-set-up-customer-key).
 
-DEP'ler paylaşılan posta kutusuna, ortak klasör posta kutusuna Microsoft 365 kullanıcı posta kutuları için lisans gereksinimini karşılayacak kiracılar için grup posta kutularına atanabilir. Customer Key DEP'i atamak için kullanıcıya özgü olmayan posta kutuları için ayrı lisanslara ihtiyacınız yoktur.
+DEP'ler, kullanıcı posta kutuları için lisans gereksinimini karşılayan kiracılar için paylaşılan posta kutusuna, ortak klasör posta kutusuna ve Microsoft 365 grup posta kutusuna atanabilir. Müşteri Anahtarı DEP'sini atamak için kullanıcıya özgü olmayan posta kutuları için ayrı lisanslara ihtiyacınız yoktur.
 
-Tek tek posta kutularına atadığınız Müşteri Anahtarı DEP'leri için, hizmetten ayrılarak Microsoft'un belirli DEP'leri temizlemesi için istekte bulundurabilirsiniz. Veri temizleme işlemi ve anahtar iptali hakkında bilgi için bkz. [Anahtarlarınızı iptal etme ve veri temizleme yol işlemini başlatma](customer-key-manage.md#revoke-your-keys-and-start-the-data-purge-path-process).
+Tek tek posta kutularına atadığınız Müşteri Anahtarı DEP'leri için, hizmetten ayrıldığınızda Microsoft'un belirli DEP'leri temizlemesini isteyebilirsiniz. Veri temizleme işlemi ve anahtar iptali hakkında bilgi için bkz. [Anahtarlarınızı iptal etme ve veri temizleme yolu işlemini başlatma](customer-key-manage.md#revoke-your-keys-and-start-the-data-purge-path-process).
 
-Hizmetten ayrılma işleminin bir parçası olarak anahtarlarına erişimi iptal edersiniz, kullanılabilirlik anahtarı silinir ve sonuçta verilerinizin şifreleme silinmesine neden olur. Şifreleme silme, hem güvenlik hem de uyumluluk yükümlülüklerini yerine getirme açısından önemli olan veri yeniden yönetimi riskini azalttı.
+Hizmetten ayrılmanın bir parçası olarak anahtarlarınıza erişimi iptal ettiğinizde kullanılabilirlik anahtarı silinir ve bu da verilerinizin şifrelemeyle silinmesine neden oluyor. Şifreleme silme işlemi, hem güvenlik hem de uyumluluk yükümlülüklerini yerine getirme açısından önemli olan veri yeniden yönetimi riskini azaltır.
 
-SharePoint Online ve OneDrive İş için **DEP Bu DEP**, SPO'da depolanan ve SPO'da depolanan OneDrive İş dosyalar dahil Microsoft Teams içeriği şifrelemek için kullanılır. Multi-geo özelliğini kullanıyorsanız, organizasyonunız için coğrafi olarak tek bir DEP oluşturabilirsiniz. Çok coğrafi özellik kullansanız bile, kiracı başına yalnızca bir DEP oluşturabilirsiniz. Müşteri Anahtarını [Ayarlama'daki ayrıntılara bakın](customer-key-set-up.md).
+**SharePoint Online ve OneDrive İş için DEP** Bu DEP, SPO'da depolanan Microsoft Teams dosyaları da dahil olmak üzere SPO ve OneDrive İş'da depolanan içeriği şifrelemek için kullanılır. Çok coğrafi bölge özelliğini kullanıyorsanız, kuruluşunuz için her coğrafi bölge için bir DEP oluşturabilirsiniz. Multi-geo özelliğini kullanmıyorsanız kiracı başına yalnızca bir DEP oluşturabilirsiniz. [Müşteri Anahtarını Ayarlama](customer-key-set-up.md) makalesindeki ayrıntılara bakın.
 
-### <a name="encryption-ciphers-used-by-customer-key"></a>Customer Key tarafından kullanılan şifreleme şifrelemeleri
+### <a name="encryption-ciphers-used-by-customer-key"></a>Müşteri Anahtarı tarafından kullanılan şifreleme şifreleri
 
-Müşteri Anahtarı, aşağıdaki şekillere gösterildiği gibi anahtarları şifrelemek için çeşitli şifreleme şifrelemeleri kullanır.
+Müşteri Anahtarı, aşağıdaki şekilde gösterildiği gibi anahtarları şifrelemek için çeşitli şifreleme şifreleri kullanır.
 
-Birden çok iş yükünün verilerini şifrelenen DEP'ler için kullanılan anahtar hiyerarşisi Microsoft 365 posta kutuları için ayrı ayrı DEP'ler için kullanılan Exchange Online benzer. Tek fark, Posta Kutusu Anahtarı'nın ilgili Posta Kutusu Anahtarı ile değiştirilmesi Microsoft 365 olur.
+Birden çok Microsoft 365 iş yükü için verileri şifreleyen DEP'ler için kullanılan anahtar hiyerarşisi, tek tek Exchange Online posta kutuları için DEP'ler için kullanılan hiyerarşiye benzer. Tek fark, Posta Kutusu Anahtarının karşılık gelen Microsoft 365 İş Yükü Anahtarı ile değiştirilmesidir.
 
-#### <a name="encryption-ciphers-used-to-encrypt-keys-for-exchange-online-and-skype-for-business"></a>Şifreleme şifrelemesi, şifreleme ve şifreleme için Exchange Online için Skype Kurumsal
+#### <a name="encryption-ciphers-used-to-encrypt-keys-for-exchange-online-and-skype-for-business"></a>Exchange Online ve Skype Kurumsal anahtarlarını şifrelemek için kullanılan şifreleme şifreleri
 
-![Müşteri Anahtarı şifrelemesi için Exchange Online şifreleme.](../media/customerkeyencryptionhierarchiesexchangeskype.png)
+![Exchange Online Müşteri Anahtarı için şifreleme şifreleri.](../media/customerkeyencryptionhierarchiesexchangeskype.png)
 
-#### <a name="encryption-ciphers-used-to-encrypt-keys-for-sharepoint-online-onedrive-for-business-and-teams-files"></a>SharePoint Online, OneDrive İş ve Teams dosyalarını şifrelemek için kullanılan şifreleme şifrelemeleri
+#### <a name="encryption-ciphers-used-to-encrypt-keys-for-sharepoint-online-onedrive-for-business-and-teams-files"></a>SharePoint Online, OneDrive İş ve Teams dosyalarının anahtarlarını şifrelemek için kullanılan şifreleme şifreleri
 
-![Çevrimiçi Müşteri Anahtarı şifrelemesi SharePoint Şifreleme.](../media/customerkeyencryptionhierarchiessharepointonedriveteamsfiles.png)
+![SharePoint Çevrimiçi Müşteri Anahtarı için şifreleme şifreleri.](../media/customerkeyencryptionhierarchiessharepointonedriveteamsfiles.png)
 
 ## <a name="related-articles"></a>İlgili makaleler
 
@@ -107,9 +107,9 @@ Birden çok iş yükünün verilerini şifrelenen DEP'ler için kullanılan anah
 
 - [Müşteri Anahtarını Yönet](customer-key-manage.md)
 
-- [Müşteri Anahtarını veya uygunluk anahtarını döndürme veya döndürme](customer-key-availability-key-roll.md)
+- [Bir Müşteri Anahtarını veya uygunluk anahtarını toplama veya döndürme](customer-key-availability-key-roll.md)
 
-- [Kullanılabilirlik anahtarı hakkında bilgi](customer-key-availability-key-understand.md)
+- [Kullanılabilirlik anahtarı hakkında bilgi edinin](customer-key-availability-key-understand.md)
 
 - [Müşteri Kasası](customer-lockbox-requests.md)
 

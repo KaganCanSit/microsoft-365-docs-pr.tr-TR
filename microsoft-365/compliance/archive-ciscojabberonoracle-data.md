@@ -1,5 +1,5 @@
 ---
-title: Cisco Cisco Ciscober'i oracle veri kaynağında arşivlemek için bir bağlayıcı Microsoft 365
+title: Microsoft 365'da Oracle verilerinin Cisco Jabber'ı arşivlemesini sağlamak için bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,80 +11,80 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Oracle'da Cisco Cisco Ciscober'den verileri içeri aktararak veya arşiv Microsoft 365 uyumluluk merkezi için bağlantıda bağlayıcı ayarlamayı ve kullanmayı Microsoft 365.
-ms.openlocfilehash: d58d015e94050bc82b427ba450314b7bb447d4d1
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Oracle'da Cisco Jabber'dan Microsoft 365 verileri içeri aktarmak ve arşivlemek için Microsoft 365 uyumluluk merkezi bağlayıcı ayarlamayı ve kullanmayı öğrenin.
+ms.openlocfilehash: cf7665542393436ef71889fe755a6339087eeade
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320655"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64761273"
 ---
-# <a name="set-up-a-connector-to-archive-cisco-jabber-on-oracle-data"></a>Cisco Cisco Ciscober'i Oracle verisinde arşivlemek için bağlayıcı ayarlama
+# <a name="set-up-a-connector-to-archive-cisco-jabber-on-oracle-data"></a>Oracle verilerinde Cisco Jabber'ı arşivleme bağlayıcısı ayarlama
 
-Oracle platformunda Cisco Cisco Ciscober platformundan kendi Microsoft 365 uyumluluk merkezi posta kutularına veri içeri aktarma ve arşivlemek için, veri kaynağında bir Veritas Microsoft 365 kullanın. Veritas, üçüncü taraf veri kaynağından (düzenli olarak) öğe yakalamak ve bu öğeleri belirli bir toplama kaynağına aktaracak şekilde yapılandırılan [Oracle](https://www.veritas.com/insights/merge1/jabber) Microsoft 365. Bağlayıcı, dosya ve dosya işlemleri, açıklamalar ve Oracle'daki Cisco Cisco Ciscober'dan paylaşılan içerik gibi içerikleri e-posta iletisi biçimine dönüştürür ve sonra bu öğeleri Microsoft 365'da kullanıcının posta kutusuna aktarır.
+Oracle platformundaki Cisco Jabber'dan Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına verileri içeri aktarmak ve arşivlemek için Microsoft 365 uyumluluk merkezi bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağından öğeleri yakalamak (düzenli olarak) ve bu öğeleri Microsoft 365'e aktarmak için yapılandırılmış oracle bağlayıcısı üzerinde [Cisco Jabber](https://www.veritas.com/insights/merge1/jabber) sağlar. Bağlayıcı, Oracle üzerinde Cisco Jabber'dan dosya ve dosya işlemleri, açıklamalar ve paylaşılan içerik gibi içerikleri e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'da kullanıcının posta kutusuna aktarır.
 
-Cisco Cisco Ciscober'in Oracle verileri kullanıcı posta kutularında depolandığı için Mahkeme Microsoft 365, eBulma, bekletme ilkeleri ve bekletme etiketleri gibi uyumluluk özelliklerini uygulayabilirsiniz. Oracle bağlayıcısı ile Cisco Cisco Ciscober'i kullanarak verileri kendi iş Microsoft 365 ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
+Oracle üzerinde Cisco Jabber verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri gibi Microsoft 365 uyumluluk özelliklerini uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için Oracle'da Cisco Jabber bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
-## <a name="overview-of-archiving-cisco-jabber-on-oracle-data"></a>Oracle verisinde Cisco Ciscober'i arşivlemeye genel bakış
+## <a name="overview-of-archiving-cisco-jabber-on-oracle-data"></a>Oracle verilerinde Cisco Jabber arşivlemesine genel bakış
 
-Aşağıdaki genel bakış, bağlayıcı kullanarak Oracle verilerini aynı dosyada Cisco Cisco Ciscober'e Microsoft 365.
+Aşağıdaki genel bakış, Microsoft 365'da Oracle verilerini arşivleyen bir bağlayıcı kullanma işlemini açıklar.
 
-![Oracle verisinde Cisco Ciscober için arşivleme iş akışı.](../media/CiscoJabberOnOracleConnectorWorkflow.png)
+![Oracle verilerinde Cisco Jabber için arşivleme iş akışı.](../media/CiscoJabberOnOracleConnectorWorkflow.png)
 
-1. Organizasyonun Oracle sitesinde Cisco Cisco Ciscober'i ayarlamak ve yapılandırmak için Oracle'da Cisco Cisco ile çalışır.
+1. Kuruluşunuz Oracle'da Cisco Jabber ile birlikte çalışarak Oracle sitesinde Cisco Jabber'ı ayarlayıp yapılandırabilir.
 
-2. Oracle öğeleri üzerinde Cisco Cisco Ciscober, 24 saatte bir Veritas Merge1 sitesine kopyalanır. Bağlayıcı, Cisco Cisco Ciscober'i oracle öğelerine de e-posta iletisi biçimine dönüştürür.
+2. 24 saatte bir Oracle'da Cisco Jabber öğeleri Veritas Merge1 sitesine kopyalanır. Bağlayıcı ayrıca Oracle öğelerindeki Cisco Jabber'ı e-posta iletisi biçimine dönüştürür.
 
-3. Microsoft 365 uyumluluk merkezi'ta oluşturmakta olduğunu Oracle Cisco Ciscober bağlayıcısı, her gün Veritas Merge1 sitesine bağlanır ve Saatber içeriğini Microsoft bulutunda güvenli bir Azure Depolama konuma aktarıyor.
+3. Microsoft 365 uyumluluk merkezi oluşturduğunuz Oracle üzerinde Cisco Jabber bağlayıcısı her gün Veritas Merge1 sitesine bağlanır ve Jabber içeriğini Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır.
 
-4. Bağlayıcı, dönüştürülmüş öğeleri, 3. Adımda açıklandığı gibi otomatik kullanıcı eşlemesinde *E-posta* özelliğinin değerini kullanarak belirli kullanıcıların posta [kutularına içeri aktarıyor](#step-3-map-users-and-complete-the-connector-setup). Kullanıcı posta kutularında **Oracle'da Cisco Cisco Ciscober** adlı bir Gelen Kutusu klasöründe bir alt klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı bunu, E-posta özelliğinin *değerini kullanarak* yapar. Her Bir Öğe bu özelliği içerir ve bu özellik, öğenin tüm katılımcılarının e-posta adresiyle doldurulur.
+4. Bağlayıcı, [3. Adımda](#step-3-map-users-and-complete-the-connector-setup) açıklandığı gibi otomatik kullanıcı eşlemesinin *Email* özelliğinin değerini kullanarak dönüştürülen öğeleri belirli kullanıcıların posta kutularına aktarır. Kullanıcı posta kutularında **Oracle üzerinde Cisco Jabber** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı bunu *Email* özelliğinin değerini kullanarak yapar. Her Jabber öğesi, öğenin her katılımcısının e-posta adresiyle doldurulan bu özelliği içerir.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- Microsoft bağlayıcıları için bir Merge1 hesabı oluşturun. Bunu yapmak için [Veritas Müşteri Desteği'ne başvurun](https://www.veritas.com/content/support/en_US). Bağlayıcıyı 1. Adımda  oluşturdukta bu hesapta oturum açın.
+- Microsoft bağlayıcıları için bir Merge1 hesabı oluşturun. Bunu yapmak için [Veritas Müşteri Desteği'ne](https://www.veritas.com/content/support/en_US) başvurun. 1. Adımda bağlayıcıyı oluştururken bu hesapta oturum açmanız gerekir.
 
-- 1. Adımda Oracle bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yöneticisi rolü atanabilir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- 1. Adımda Oracle bağlayıcısında Cisco Jabber oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, Microsoft 365 uyumluluk merkezi **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft 365 uyumluluk merkezi İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu Veritas veri bağlayıcısı, ABD Kamu bulutu GCC ortamlarda Microsoft 365 önizlemededir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu Veritas veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir ve bu nedenle Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
-## <a name="step-1-set-up-the-cisco-jabber-on-oracle-connector"></a>1. Adım: Cisco Cisco Ciscober'i Oracle bağlayıcısı üzerinde ayarlama
+## <a name="step-1-set-up-the-cisco-jabber-on-oracle-connector"></a>1. Adım: Oracle bağlayıcısı üzerinde Cisco Jabber'ı ayarlama
 
-İlk adım, bağlantı sayfasındaki **Veri Bağlayıcıları** sayfasına erişmek ve Microsoft 365 uyumluluk merkezi Için Bir Bağlayıcı oluşturmaktır.
+İlk adım, Microsoft 365 uyumluluk merkezi **Veri Bağlayıcıları** sayfasına erişmek ve Jabber verileri için bir bağlayıcı oluşturmaktır.
 
-1. Oracle'da <https://compliance.microsoft.com> **Data connectorsCisco** >  **Oracleber'a gidin ve tıklayın**.
+1. <https://compliance.microsoft.com> Adresine gidin ve Oracle'da **Veri bağlayıcılarıCisco** >  **Jabber'a** tıklayın.
 
-2. **Cisco Cisco Ciscober on Oracle ürün** açıklaması sayfasında Bağlayıcı **ekle'ye tıklayın**.
+2. **Oracle'da Cisco Jabber** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
-3. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+3. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve Ardından Sonraki'ye **tıklayın**.
+4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve **İleri'ye** tıklayın.
 
-5. Bağlayıcıyı yapılandırmak için Merge1 hesabınızla oturum açın.
+5. Bağlayıcıyı yapılandırmak için Merge1 hesabınızda oturum açın.
 
-## <a name="step-2-configure-the-cisco-jabber-on-oracle-on-the-veritas-merge1-site"></a>2. Adım: Veritas Merge1 sitesinde Cisco Cisco Ciscober'i Oracle'da yapılandırma
+## <a name="step-2-configure-the-cisco-jabber-on-oracle-on-the-veritas-merge1-site"></a>2. Adım: Veritas Merge1 sitesinde Oracle'da Cisco Jabber'ı yapılandırma
 
-İkinci adım, Veritas Merge1 sitesinde Oracle bağlayıcısı cisco Cisco Ciscober'i yapılandırmaktır. Cisco Cisco Ciscober bağlayıcıyı Oracle bağlayıcısı üzerinde yapılandırma hakkında bilgi için bkz. [Merge1 Third-Party Connectors Kullanıcı Kılavuzu](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Cisco%20Jabber%20on%20Oracle%20User%20Guide.pdf).
+İkinci adım, Veritas Merge1 sitesinde Oracle bağlayıcısı üzerinde Cisco Jabber'ı yapılandırmaktır. Oracle bağlayıcısı üzerinde Cisco Jabber'ı yapılandırma hakkında bilgi için bkz. [Birleştirme1 Üçüncü Taraf Bağlayıcıları Kullanıcı Kılavuzu](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Cisco%20Jabber%20on%20Oracle%20User%20Guide.pdf).
 
-Son Olarak Kaydet **& e tıklarken**, sihirbazın  Bağlayıcı sihirbazında Kullanıcı eşleme Microsoft 365 uyumluluk merkezi görüntülenir.
+**Kaydet & Son'a** tıkladıktan sonra, Microsoft 365 uyumluluk merkezi bağlayıcı sihirbazındaki **Kullanıcı eşleme** sayfası görüntülenir.
 
 ## <a name="step-3-map-users-and-complete-the-connector-setup"></a>3. Adım: Kullanıcıları eşleme ve bağlayıcı kurulumunu tamamlama
 
-Kullanıcıları eşlemek ve aşağıdaki adımları takip etmek için Microsoft 365 uyumluluk merkezi izleyin:
+Kullanıcıları eşlemek ve Microsoft 365 uyumluluk merkezi bağlayıcı kurulumunu tamamlamak için şu adımları izleyin:
 
-1. **Oracle users to Microsoft 365 Map Cisco Ciscober sayfasında**, otomatik kullanıcı eşlemesini etkinleştirin. Oracle öğelerinde Cisco Cisco Ciscober, kurumdaki *kullanıcıların* e-posta adreslerini içeren E-posta adlı bir özellik içerir. Bağlayıcı bu adresi bir kullanıcıyla Microsoft 365, öğeler o kullanıcının posta kutusuna aktarılır.
+1. **Oracle kullanıcılarını Microsoft 365 için Cisco Jabber** eşleme sayfasında otomatik kullanıcı eşlemesini etkinleştirin. Oracle öğelerindeki Cisco Jabber, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcıyla ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
 
-2. **Sonraki'ye** tıklayın, ayarlarınızı gözden geçirin ve yeni bağlayıcıya yönelik içeri aktarma işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin.
+2. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları** sayfasına gidin.
 
-## <a name="step-4-monitor-the-cisco-jabber-on-oracle-connector"></a>4. Adım: Cisco Cisco Ciscober'i Oracle bağlayıcısı üzerinde izleme
+## <a name="step-4-monitor-the-cisco-jabber-on-oracle-connector"></a>4. Adım: Oracle bağlayıcısı üzerinde Cisco Jabber'ı izleme
 
-Oracle bağlayıcısı üzerinde Cisco Cisco Ciscober'i oluşturdukta, bağlayıcının durumunu hemen Microsoft 365 uyumluluk merkezi.
+Oracle bağlayıcısında Cisco Jabber'ı oluşturduktan sonra bağlayıcının durumunu Microsoft 365 uyumluluk merkezi görüntüleyebilirsiniz.
 
-1. Sol gezinti <https://compliance.microsoft.com/> çubuğunda **Veri bağlayıcıları'na** gidin ve bu bağlayıcılara tıklayın.
+1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** <https://compliance.microsoft.com/> gidin ve tıklayın.
 
-2. Bağlayıcılar **sekmesine** tıklayın ve ardından bağlayıcının özelliklerini ve bilgilerini içeren açılır sayfayı görüntülemek için **Oracle'da Cisco Ciscober** bağlayıcısı seçin.
+2. **Bağlayıcılar** sekmesine tıklayın ve ardından **Oracle'da Cisco Jabber** bağlayıcısını seçerek bağlayıcının özelliklerini ve bilgilerini içeren açılır sayfayı görüntüleyin.
 
-3. **Bağlayıcının kaynak durumunun altında**, **Bağlayıcının durum günlüğünü** açmak (veya kaydetmek) için Günlüğü indir bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan verileri içerir.
+3. Bağlayıcının durum günlüğünü açmak (veya kaydetmek) için **Kaynakla bağlayıcı durumu** altında **Günlüğü indir** bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan verileri içerir.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- Şu anda ekleri veya 10 MB'den büyük öğeleri içeri aktarmayı desteklemez. Daha büyük öğeler için destek daha sonraki bir tarihte kullanılabilir.
+- Şu anda 10 MB'tan büyük eklerin veya öğelerin içeri aktarılmasını desteklemiyoruz. Daha büyük öğeler için destek daha sonraki bir tarihte sağlanacaktır.

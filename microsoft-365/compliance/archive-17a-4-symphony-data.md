@@ -1,5 +1,5 @@
 ---
-title: Verileri tek bir dosyada arşivlemek için bir VeriParser bağlayıcısı Microsoft 365
+title: Microsoft 365'de verileri arşivleyemek için Symphony DataParser bağlayıcısı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,74 +11,74 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: 17a-4 Her Zaman VeriParser bağlayıcısı ayar kullanmayı ve bu bağlayıcıyı kullanarak Verilerinizi Başka bir alanda içeri aktarmayı ve Microsoft 365.
-ms.openlocfilehash: cc4755c3566a25f659d3fd610157b3a6fa29d0a7
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365'da Senfoni verilerini içeri aktarmak ve arşivlemek için 17a-4 Symphony DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
+ms.openlocfilehash: ff1d1d7930a26481a5bd4e13e050214d2b4d688c
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314665"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64762155"
 ---
-# <a name="set-up-a-connector-to-archive-data-from-symphony"></a>Zaman'dan verileri arşivlemek için bağlayıcı ayarlama
+# <a name="set-up-a-connector-to-archive-data-from-symphony"></a>Senfoni'den verileri arşivleye bağlayıcı ayarlama
 
-17a-4 LLC'den [VeriParser'ı](https://www.17a-4.com/Symphony-dataparser/) kullanarak, Veyalçın iletişim verilerini kendi Microsoft 365 aktarın. DataParser'da, üçüncü taraf bir veri kaynağından öğeleri yakalamak ve bu öğeleri başka bir öğeye içeri aktararak üçüncü taraf veri kaynağına aktaran bir Microsoft 365. Sol VeriParser bağlayıcısı, Syk verisini e-posta iletisi biçimine dönüştürür ve sonra bu öğeleri daha sonra da kullanıcı posta kutularına Microsoft 365.
+Senfoni iletişim verilerini Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için 17a-4 LLC'deki [Symphony DataParser'ı](https://www.17a-4.com/Symphony-dataparser/) kullanın. DataParser, üçüncü taraf veri kaynağından öğeleri yakalamak ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir Senfoni bağlayıcısı içerir. Symphony DataParser bağlayıcısı, Symphony verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
 
-Güneş verileri kullanıcı posta kutularında depolanıyorsa, Microsoft 365 Saklama, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi uyumluluk özelliklerini uygulayabilirsiniz. Verileri başka bir kuruluşta içeri aktararak veya arşiv Microsoft 365 bir Öğe bağlayıcısı kullanmak, kurum kuruluş ve mevzuat ilkeleriyle uyumlu kalmalarına yardımcı olabilir.
+Senfoni verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft 365 uyumluluk özelliklerini uygulayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için Bir Senfoni bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
-## <a name="overview-of-archiving-symphony-data"></a>Skpye verilerini arşivlemeye genel bakış
+## <a name="overview-of-archiving-symphony-data"></a>Senfoni verilerini arşivlemeyle ilgili genel bakış
 
-Aşağıdaki genel bakış makalesinde, Açık bir tabloda, Bu verileri arşivlemek için veri bağlayıcısı Microsoft 365.
+Aşağıdaki genel bakış, Microsoft 365'da Senfoni verilerini arşivleyemek için veri bağlayıcısı kullanma işlemini açıklar.
 
-![17a-4'e kadar olan Veri verileri için arşivleme iş akışı.](../media/SymphonyDataParserConnectorWorkflow.png)
+![17a-4'ten Senfoni verileri için arşivleme iş akışı.](../media/SymphonyDataParserConnectorWorkflow.png)
 
-1. Organization works with 17a-4 to set and configure the VeriParser.
+1. Kuruluşunuz, Symphony DataParser'ı ayarlamak ve yapılandırmak için 17a-4 ile çalışır.
 
-2. Düzenli aralıklarla, Her biri DataParser tarafından Mırçın öğeleri toplanır. DataParser, iletinin içeriğini de e-posta iletisi biçimine dönüştürür.
+2. Düzenli olarak Senfoni öğeleri DataParser tarafından toplanır. DataParser ayrıca iletinin içeriğini e-posta iletisi biçimine dönüştürür.
 
-3. Bu dosyada sizin Microsoft 365 uyumluluk merkezi VeriParser bağlayıcısı DataParser'a bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konuma aktarıyor.
+3. Microsoft 365 uyumluluk merkezi oluşturduğunuz Symphony DataParser bağlayıcısı DataParser'a bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır.
 
-4. Kullanıcı posta kutularında **VeriParer** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve Bu Öğeler öğeleri bu klasöre aktarılır. Bağlayıcı, E-posta özelliğinin değerini kullanarak hangi posta kutusuna öğe *aktarılamayacaklarını* belirler. Her Bir Öğe, her katılımcının e-posta adresiyle doldurulan bu özelliği içerir.
+4. Kullanıcı posta kutularında **Symphony DataParser** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve Senfoni öğeleri bu klasöre aktarılır. Bağlayıcı, *E-posta* özelliğinin değerini kullanarak öğelerin hangi posta kutusuna aktarılacağını belirler. Her Senfoni öğesi, her katılımcının e-posta adresiyle doldurulan bu özelliği içerir.
 
 ## <a name="before-you-set-up-a-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-- Microsoft bağlayıcıları için bir DataParser hesabı oluşturun. Bunu yapmak için [17a-4 LLC ile iletişime geçin](https://www.17a-4.com/contact/). Bağlayıcıyı 1. Adımda  oluşturdukta bu hesapta oturum açın.
+- Microsoft bağlayıcıları için bir DataParser hesabı oluşturun. Bunu yapmak için [17a-4 LLC](https://www.17a-4.com/contact/) ile iletişime geçin. 1. Adımda bağlayıcıyı oluştururken bu hesapta oturum açmanız gerekir.
 
-- 1. Adımda HerParser bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanabilir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- 1. Adımda Symphony DataParser bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, Microsoft 365 uyumluluk merkezi **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft 365 uyumluluk merkezi İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu 17a-4 veri bağlayıcısı, ABD GCC tarafından Microsoft 365 ortamlarda kullanılabilir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu 17a-4 veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir ve bu nedenle Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
-## <a name="step-1-set-up-a-symphony-dataparser-connector"></a>1. Adım: Her Zaman VeriParser bağlayıcısı ayarlama
+## <a name="step-1-set-up-a-symphony-dataparser-connector"></a>1. Adım: Symphony DataParser bağlayıcısı ayarlama
 
-İlk adım, dosyanın Veri bağlayıcıları sayfasına erişmek ve Microsoft 365 uyumluluk merkezi Için Bir 17a-4 bağlayıcısı oluşturmaktır.
+İlk adım, Microsoft 365 uyumluluk merkezi Veri bağlayıcıları sayfasına erişmek ve Senfoni verileri için bir 17a-4 bağlayıcısı oluşturmaktır.
 
-1. Veri bağlayıcılarıSym <https://compliance.microsoft.com>  > **öğesinin DataParser'a gidin ve bu öğeye tıklayın**.
+1. **Veri bağlayıcılarıSyphony** >  **DataParser'a**<https://compliance.microsoft.com> gidin ve tıklayın.
 
-2. **VeriParser ürün açıklaması sayfasında** Bağlayıcı **ekle'ye tıklayın**.
+2. **Symphony DataParser** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
-3. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+3. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve Ardından Sonraki'ye **tıklayın**.
+4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve **İleri'ye** tıklayın.
 
-5. 17a-4 hesabınızla oturum açın ve BilgiParser bağlantı sihirbazında adımları tamamlayın.
+5. 17a-4 hesabınızda oturum açın ve Symphony DataParser bağlantı sihirbazındaki adımları tamamlayın.
 
-## <a name="step-2-configure-the-symphony-dataparser-connector"></a>2. Adım: Her Zaman VeriParser bağlayıcısı'nın yapılandırılması
+## <a name="step-2-configure-the-symphony-dataparser-connector"></a>2. Adım: Symphony DataParser bağlayıcısını yapılandırma
 
-Her Bir VeriParser bağlayıcısı yapılandırmak için 17a-4 Desteği ile birlikte çalışabilirsiniz.
+Symphony DataParser bağlayıcısını yapılandırmak için 17a-4 Desteği ile çalışın.
 
 ## <a name="step-3-map-users"></a>3. Adım: Kullanıcıları eşleme
 
-VeriParser bağlayıcısı, verileri veri kaynağına aktarmadan Microsoft 365 otomatik olarak e-posta adresleriyle Microsoft 365.
+Symphony DataParser bağlayıcısı, verileri Microsoft 365 içeri aktarmadan önce kullanıcıları otomatik olarak Microsoft 365 e-posta adresleriyle eşler.
 
-## <a name="step-4-monitor-the-symphony-dataparser-connector"></a>4. Adım: Her Zaman VeriParser bağlayıcısı izleme
+## <a name="step-4-monitor-the-symphony-dataparser-connector"></a>4. Adım: Symphony DataParser bağlayıcısını izleme
 
-Her Zaman VeriParser bağlayıcısı oluşturdukta, bağlayıcının durumunu hemen Microsoft 365 uyumluluk merkezi.
+Symphony DataParser bağlayıcısı oluşturduktan sonra bağlayıcının durumunu Microsoft 365 uyumluluk merkezi görüntüleyebilirsiniz.
 
-1. Sol gezinti <https://compliance.microsoft.com> çubuğunda **Veri bağlayıcıları'na** gidin ve bu bağlayıcılara tıklayın.
+1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** <https://compliance.microsoft.com> gidin ve tıklayın.
 
-2. Bağlayıcılar **sekmesine** tıklayın ve ardından oluşturduğunuz Her VeriParser bağlayıcısı'nın bağlayıcı özellikleriyle ilgili bilgileri içeren açılır sayfayı görüntülemek için bu bağlayıcıyı seçin.
+2. **Bağlayıcılar** sekmesine tıklayın ve ardından bağlayıcı hakkındaki özellikleri ve bilgileri içeren açılır sayfayı görüntülemek için oluşturduğunuz Symphony DataParser bağlayıcısını seçin.
 
-3. **Bağlayıcının kaynak durumunun altında**, **Bağlayıcının durum günlüğünü** açmak (veya kaydetmek) için Günlüğü indir bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan verileri içerir.
+3. Bağlayıcının durum günlüğünü açmak (veya kaydetmek) için **Kaynakla bağlayıcı durumu** altında **Günlüğü indir** bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan verileri içerir.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-Şu anda ekleri veya 10 MB'den büyük öğeleri içeri aktarmayı desteklemez. Daha büyük öğeler için destek daha sonraki bir tarihte kullanılabilir.
+Şu anda 10 MB'tan büyük eklerin veya öğelerin içeri aktarılmasını desteklemiyoruz. Daha büyük öğeler için destek daha sonraki bir tarihte sağlanacaktır.

@@ -1,5 +1,5 @@
 ---
-title: Etiketleri otomatik olarak korumak veya & için saklama ilkeleri hakkında bilgi edinmek için
+title: İçeriği otomatik olarak saklamak veya silmek için bekletme ilkeleri & etiketleri hakkında bilgi edinin
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,543 +17,545 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Size gerekenleri korumanıza ve neye ihtiyacınız olmadığını silmeye yardımcı olan bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinebilirsiniz.
-ms.openlocfilehash: a7498685709dfc24feae61453057d51025ee9168
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+description: İhtiyaç duyduklarınızı korumanıza ve saklamadığınız şeyleri silmenize yardımcı olan bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin.
+ms.openlocfilehash: 61bd82e3b4012e7e191971faf768cf8d7cbba4f2
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63716309"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64758651"
 ---
-# <a name="learn-about-retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi
+# <a name="learn-about-retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 > [!NOTE]
-> Teams'de bekletme ilkeleriyle ilgili iletiler görüyorsanız veya uygulamalarınız içinde bekletme etiketleri hakkında sorularınız varsa, sizin için nasıl yapılandırıldıklarına ilişkin bilgi için IT departmanınıza bakın. Bu arada, aşağıdaki makaleleri yararlı bulabilirsiniz:
-> -  [Teams ilkeleri hakkında ileti gönderme](https://support.microsoft.com/office/teams-messages-about-retention-policies-c151fa2f-1558-4cf9-8e51-854e925b483b)
-> - [SharePoint veya OneDrive'te dosyalara bekletme OneDrive](https://support.microsoft.com/office/apply-retention-labels-to-files-in-sharepoint-or-onedrive-11a6835b-ec9f-40db-8aca-6f5ef18132df)
+> Teams bekletme ilkeleriyle ilgili iletiler görüyorsanız veya uygulamalarınızdaki bekletme etiketleri hakkında sorularınız varsa, bunların sizin için nasıl yapılandırıldığı hakkında bilgi için BT departmanınıza başvurun. Bu arada, aşağıdaki makaleleri yararlı bulabilirsiniz:
 >
-> Bu sayfada yer alan bilgiler, uyumluluk nedenleriyle bekletme ilkeleri ve bekletme etiketleri oluşturabiliyor olan IT yöneticilerine yöneliktir.
+> - [Bekletme ilkeleriyle ilgili iletileri Teams](https://support.microsoft.com/office/teams-messages-about-retention-policies-c151fa2f-1558-4cf9-8e51-854e925b483b)
+> - [SharePoint veya OneDrive dosyalarına bekletme etiketleri uygulama](https://support.microsoft.com/office/apply-retention-labels-to-files-in-sharepoint-or-onedrive-11a6835b-ec9f-40db-8aca-6f5ef18132df)
+>
+> Bu sayfadaki bilgiler, uyumluluk nedeniyle bekletme ilkeleri ve bekletme etiketleri oluşturabilen BT yöneticilerine yöneliktir.
 
-Çoğu kuruluşta e-posta, belgeler, anlık iletiler ve çok daha fazlası gibi verileri hacmi ve karmaşıklığı her gün artmaktadır. Bu bilgileri etkili bir şekilde yönetmek veya yönetmek önemlidir çünkü:
+Çoğu kuruluşta, verilerinin hacmi ve karmaşıklığı her gün artmaktadır: e-posta, belgeler, anlık iletiler ve daha fazlası. Bu bilgilerin etkili bir şekilde yönetilmesi veya yönetilmesi önemlidir çünkü şunlar gerekir:
 
-- **İçeriği minimum** bir süre boyunca tutmanı gerektiren sektör düzenlemelerine ve iç ilkelere önceden uymak; örneğin, Sarbanes-Oxley Yasası belirli içerik türlerini yedi yıl süreyle tutmanı gerekli olabilir.
+- İçeriği en az bir süre saklamanızı gerektiren **sektör düzenlemelerine ve iç politikalara proaktif olarak uyun**; örneğin, Sarbanes-Oxley Yasası belirli içerik türlerini yedi yıl boyunca saklamanızı gerektirebilir.
 
-- **Artık tutmanız gerekmeyecek** eski içerikleri kalıcı olarak silerek mahkeme nedeniyle veya güvenlik ihlali durumunda risklerinizi düşürebilirsiniz.
+- Artık saklamanız gerekmeyen eski içeriği kalıcı olarak silerek **dava açma veya güvenlik ihlali durumunda riskinizi azaltın**.
 
-- **Kullanıcılarının yalnızca geçerli ve onlara uygun içerikle** çalışmalarını sağlayarak, organizasyon kuruluşlarının bilgileri etkili bir şekilde paylaşmalarına ve daha çevik çalışmasına yardımcı olun.
+- Kullanıcılarınızın yalnızca güncel ve ilgili içeriklerle çalıştığından emin olarak **kuruluşunuzun bilgileri etkili bir şekilde paylaşmasına ve daha çevik çalışmasına yardımcı olun**.
 
-Yapılandırılan bekletme ayarları bu hedeflere ulaşmanıza yardımcı olabilir. Genellikle içeriğin yönetilmesi için iki eylem gerekir:
+Yapılandırdığınız bekletme ayarları bu hedeflere ulaşmanıza yardımcı olabilir. İçeriği yönetmek için genellikle iki eylem gerekir:
 
 | Eylem| Amaç |
 |:-----|:-----|
-|İçeriği koruma | Kalıcı silmeyi önleme ve eKbulma için kullanılabilir kalma |
-|İçeriği silme | Kuruluştan kalıcı olarak içerik silme|
+|İçeriği saklama | Kalıcı silmeyi önleme ve eBulma için kullanılabilir durumda kalma |
+|İçerik silme | Kuruluşunuzdan içeriği kalıcı olarak silme|
 
-Bu iki bekletme eylemiyle, aşağıdaki sonuçları elde etmek için bekletme ayarlarını yapılandırabilirsiniz:
+Bu iki bekletme eylemiyle, aşağıdaki sonuçlar için bekletme ayarlarını yapılandırabilirsiniz:
 
-- Yalnızca koruma: İçeriği sonsuza kadar veya belirli bir süre boyunca tutma.
-- Yalnızca silme: belirtilen süre sonunda içeriği kalıcı olarak silin.
-- İçeriği koruma ve silme: İçeriği belirtilen süre boyunca tutma ve sonra kalıcı olarak silme.
+- Yalnızca saklama: İçeriği sonsuza kadar veya belirli bir süre boyunca tutun.
+- Yalnızca silme: Belirli bir süre sonra içeriği kalıcı olarak silin.
+- Saklama ve silme: İçeriği belirli bir süre boyunca tutun ve kalıcı olarak silin.
 
-Bu bekletme ayarları, içeriği uyumluluk nedenleriyle saklamanız gerekirken ek depolama alanı oluşturma ve yapılandırmanın ek yükünü azaltan içerikle birlikte çalışır. Buna ek olarak, bu verileri kopyalamak ve eşitlemek için özelleştirilmiş işlemler uygulamanız da gerekli değildir.
+Bu bekletme ayarları, uyumluluk nedeniyle içeriği saklamanız gerektiğinde ek depolama alanı oluşturma ve yapılandırma ek yüklerinden tasarruf etmenizi sağlayan içerikle çalışır. Ayrıca, bu verileri kopyalamak ve eşitlemek için özelleştirilmiş işlemler uygulamanız gerekmez.
 
-Bekletme ilkelerinin ve bekletme etiketlerinin nasıl çalışması, bunların ne zaman ve nasıl ekli olduğu hakkında daha fazla bilgi edinmek için aşağıdaki bölümleri kullanın. Ancak, bazı yaygın senaryolarda bekletme ayarlarını dağıtmaya hazırsanız, bkz. Bilgi [yönetimiyle çalışmaya başlama](get-started-with-information-governance.md).
+Bekletme ilkelerinin ve bekletme etiketlerinin nasıl çalıştığı, bunların ne zaman kullanılacağı ve bunların birbirini nasıl tamamladıkları hakkında daha fazla bilgi edinmek için aşağıdaki bölümleri kullanın. Ancak bazı yaygın senaryolar için bekletme ayarlarını kullanmaya başlamaya ve dağıtmaya hazırsanız bkz. [bilgi idaresi ile Kullanmaya başlayın](get-started-with-information-governance.md).
 
 ## <a name="how-retention-settings-work-with-content-in-place"></a>Bekletme ayarları içerikle nasıl çalışır?
 
-İçeriğin bekletme ayarları atanmışsa, bu içerik özgün konumda kalır. Çoğu zaman, kişiler hiçbir şey değişmiş gibi belgeleri veya postalarıyla çalışmaya devam eder. Ancak, bekletme ilkesinde yer alan içeriği düzenler veya silerse, içeriğin bir kopyası otomatik olarak korunur.
-  
-- Site SharePoint OneDrive için: Kopya, Koruma Kitaplığı **kitaplığında** korunur.
+İçerikte bekletme ayarları atandığında, bu içerik özgün konumunda kalır. Çoğu zaman, insanlar hiçbir şey değişmemiş gibi belgeleriyle veya postalarıyla çalışmaya devam eder. Ancak bekletme ilkesine dahil edilen içeriği düzenler veya silerlerse içeriğin bir kopyası otomatik olarak korunur.
 
-- Daha Exchange için: Kopya, Kurtarılabilir Öğeler **klasöründe** korunur. 
+- SharePoint ve OneDrive siteleri için: Kopya **, Koruma Bekletme** kitaplığında tutulur.
 
-- İletileri Teams Yammer için: Kopya, Kurtarılabilir Öğeler klasöründe alt klasör olarak **SubstrateHolds** **adlı gizli Exchange** korunur.
+- Exchange posta kutuları için: Kopya **Kurtarılabilir Öğeler** klasöründe tutulur.
+
+- Teams ve Yammer iletileri için: Kopya, **Kurtarılabilir Öğeler** klasöründe alt Exchange klasör olarak **SubstrateHolds** adlı gizli bir klasörde tutulur.
 
 > [!NOTE]
-> Saklama Kitaplığı sitenin depolama kotasının içinde yer alıyor olduğundan, saklama grupları ve depolama grupları için bekletme ayarlarını kullanırken SharePoint Microsoft 365 gerekebilir.
-> 
-Bu güvenli konumlar ve korunan içerik çoğu kişi tarafından görülmeyebilir. Çoğu durumda, kişilerin içeriklerinin bekletme ayarlarına tabi olduğunu haberleri bile olmaz.
+> Koruma Bekletme kitaplığı sitenin depolama kotasına eklendiğinden, SharePoint ve Microsoft 365 grupları için saklama ayarlarını kullandığınızda depolama alanınızı artırmanız gerekebilir.
+>
+Bu güvenli konumlar ve korunan içerik çoğu kişi tarafından görülmeyebilir. Çoğu durumda, kişilerin içeriklerinin saklama ayarlarına tabi olduğunu bilmesi bile gerekmez.
 
-Bekletme ayarlarının farklı iş yükleri için nasıl çalıştığından daha ayrıntılı bilgi için aşağıdaki makalelere bakın:
+Bekletme ayarlarının farklı iş yükleri için nasıl çalıştığı hakkında daha ayrıntılı bilgi için aşağıdaki makalelere bakın:
 
-- [E-SharePoint ve OneDrive](retention-policies-sharepoint.md)
-- [Müşteri için bekletme hakkında bilgi Microsoft Teams](retention-policies-teams.md)
-- [Müşteri için bekletme hakkında bilgi Yammer](retention-policies-yammer.md)
-- [Müşteri için bekletme hakkında bilgi Exchange](retention-policies-exchange.md)
+- [SharePoint ve OneDrive için bekletme hakkında bilgi edinin](retention-policies-sharepoint.md)
+- [Microsoft Teams için bekletme hakkında bilgi edinin](retention-policies-teams.md)
+- [Yammer için bekletme hakkında bilgi edinin](retention-policies-yammer.md)
+- [Exchange için bekletme hakkında bilgi edinin](retention-policies-exchange.md)
 
 ## <a name="retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketleri
 
-Bekletme ayarlarınızı içeriğe atamak için, bekletme ilkelerini **ve bekletme** **etiketlerini etiket ilkeleriyle kullanın**. Bu yöntemlerden yalnızca birini kullanabilir veya bunları birleştirebilirsiniz.
+Saklama ayarlarınızı içeriğe atamak için, **bekletme ilkelerini** ve **etiket ilkeleriyle bekletme etiketlerini** kullanın. Bu yöntemlerden yalnızca birini kullanabilir veya birleştirebilirsiniz.
 
-Bir site veya posta kutusu düzeyindeki içerik için aynı bekletme ayarlarını atamak üzere bir bekletme ilkesi kullanın ve bekletme ayarlarını öğe düzeyinde (klasör, belge, e-posta) atamak için de bekletme etiketi kullanın.
+Site veya posta kutusu düzeyinde içerik için aynı bekletme ayarlarını atamak için bekletme ilkesi kullanın ve bir öğe düzeyinde (klasör, belge, e-posta) bekletme ayarları atamak için bir bekletme etiketi kullanın.
 
-Örneğin, bir SharePoint sitenin tüm belgeleri 5 yıl süreyle tutulacaksa, bir bekletme ilkesiyle bunu yapmak, o sitenin tüm belgelerine aynı bekletme etiketini uygulamaktan daha verimli olur. Bununla birlikte, siteden bazı belgeler 5 yıl süreyle korunur ve diğerleri 10 yıl korunursa, bekletme ilkesi bunu yapmak mümkün olmaz. Bekletme ayarlarını öğe düzeyinde belirtmeniz gerekirken, bekletme etiketlerini kullanın. 
+Örneğin, bir SharePoint sitesindeki tüm belgelerin 5 yıl boyunca saklanması gerekiyorsa, bunu bir bekletme ilkesiyle yapmak, sitedeki tüm belgelere aynı bekletme etiketini uygulamaktan daha verimlidir. Ancak, bu sitedeki bazı belgeler 5 yıl, diğerleri 10 yıl saklanmalıdır, bir saklama ilkesi bunu yapamaz. Öğe düzeyinde bekletme ayarlarını belirtmeniz gerektiğinde bekletme etiketlerini kullanın.
 
-Bekletme ilkelerinden farklı olarak, bekletme etiketlerinden gelen bekletme ayarları, kiracı kiracınız içinde farklı bir konuma taşınırsa içerikle birlikte Microsoft 365 olur. Buna ek olarak, bekletme etiketleri bekletme ilkelerinin destekleme desteklemez özelliklerine sahiptir: 
- 
-- İçeriğin etiketli olduğu veya bir etkinliğe dayalı olduğu zaman ile içeriğin yaşının veya en son ne zaman değiştirildiğinden itibaren bekletme dönemini başlatma seçenekleri.
+Bekletme ilkelerinden farklı olarak, bekletme etiketlerinin bekletme ayarları, Microsoft 365 kiracınızda farklı bir konuma taşınırsa içerikle birlikte taşınır. Ayrıca bekletme etiketleri, bekletme ilkelerinin desteklemediğini aşağıdaki özelliklere sahiptir:
 
-- İçeriği [etiketli olarak tanımlamak için](classifier-learn-about.md) eğitilebilir sınıflayıcıları kullanın.
+- Saklama süresini, içeriğin yaşına veya en son değiştirildiği tarihe ek olarak içeriğin etiketlendiği veya bir olayı temel alarak başlatma seçenekleri.
 
-- Belgeleriniz için varsayılan SharePoint uygulama.
+- Etikete dönüştürülecek içeriği tanımlamak için [eğitilebilir sınıflandırıcıları](classifier-learn-about.md) kullanın.
 
-- İçeriği [kalıcı olarak silinmeden](./disposition.md)  önce gözden geçirmek için incelemeyi destekle.
+- SharePoint belgeler için varsayılan bir etiket uygulayın.
 
-- İçeriği etiket ayarlarının [bir parçası](records-management.md#records) olarak [](disposition.md#disposition-of-records)  kayıt olarak işaretle ve bekletme döneminin sonunda içerik silindiğinde her zaman konumlandırmayı doğrula.
+- İçeriği kalıcı olarak silinmeden önce gözden geçirmek için [değerlendirmeyi](./disposition.md) destekleyin.
+
+- İçeriği etiket ayarlarının bir parçası olarak [bir kayıt](records-management.md#records) olarak işaretleyin ve saklama süresinin sonunda içerik silindiğinde her zaman [kullanımdan kaldırılma kanıtına](disposition.md#disposition-of-records) sahip olun.
 
 ### <a name="retention-policies"></a>Bekletme ilkeleri
 
 Bekletme ilkeleri aşağıdaki konumlara uygulanabilir:
-- Exchange-posta gönderme
-- SharePoint sitesi
-- OneDrive hesapları
+
+- e-postayı Exchange
+- siteyi SharePoint
+- hesapları OneDrive
 - Microsoft 365 Grupları
 - Skype Kurumsal
-- Exchange klasörleri taşıma
-- Teams iletilerini gönderme
-- Teams sohbetleri geri
-- Teams kanal iletilerini gönderme
-- Yammer iletilerini gönderme
-- Yammer iletilerini gönderme
+- Ortak klasörleri Exchange
+- kanal iletilerini Teams
+- sohbetleri Teams
+- Özel kanal iletilerini Teams
+- Topluluk iletilerini Yammer
+- Kullanıcı iletilerini Yammer
 
 > [!NOTE]
-> Teams mesajları artık paylaşılan kanalları (şu [anda](/MicrosoftTeams/shared-channels) önizlemede olan) ve standart kanalları içerir.
+> Teams kanal iletileri artık [paylaşılan kanalları](/MicrosoftTeams/shared-channels) (şu anda önizleme aşamasında) ve standart kanalları içerir.
 
-Birden çok konuma ya da belirli konumlara veya kullanıcılara tek bir ilkeyi çok verimli bir şekilde uygulayabilirsiniz.
+Tek bir ilkeyi birden çok konuma veya belirli konumlara veya kullanıcılara çok verimli bir şekilde uygulayabilirsiniz.
 
-Bekletme döneminin başlangıcı için, içeriğin ne zaman oluşturulacaklarını veya yalnızca dosyaların ve içeriğin son değiştirilme zamanlarının SharePoint, OneDrive ve Microsoft 365 Grupları konumlarında destek olaylarını seçebilirsiniz.
+Saklama süresinin başlangıcı için içeriğin ne zaman oluşturulduğunu veya yalnızca dosyalar ve SharePoint, OneDrive ve Microsoft 365 Grupları konumları için desteklendiğini ve içeriğin en son ne zaman değiştirildiğini seçebilirsiniz.
 
-Öğeler, bekletme ayarlarını bekletme ilkesinde belirtilen kapsayıcılarından devralır. Bundan sonra ilke içeriği korumak üzere yapılandırıldığında kapsayıcının dışına taşınırsa, öğenin bir kopyası iş yükünün güvenli olduğu konumda korunur. Bununla birlikte, bekletme ayarları yeni konumunun içeriğiyle birlikte seyahat etmez. Bu gerekli olursa, bekletme ilkeleri yerine bekletme etiketlerini kullanın.
+Öğeler bekletme ilkesinde belirtilen kapsayıcılarından bekletme ayarlarını devralır. İlke içeriği saklayacak şekilde yapılandırıldığında bu kapsayıcının dışına taşınırlarsa, söz konusu öğenin bir kopyası iş yükünün güvenli konumunda tutulur. Ancak bekletme ayarları içerikle birlikte yeni konumuyla birlikte hareket etmez. Bu gerekiyorsa bekletme ilkeleri yerine bekletme etiketlerini kullanın.
 
 ### <a name="retention-labels"></a>Bekletme etiketleri
 
-Farklı bekletme ayarları gerektiren farklı türde içerikler için bekletme etiketlerini kullanın. Örneğin:
-  
-- Minimum bir süre için tutulacak vergi formları. 
-    
-- Belirli bir yaşa geldiğinde kalıcı olarak silinmesi gereken malzemelere basın. 
-    
-- Belirli bir süre boyunca korunarak kalıcı olarak silinmesi gereken rekabetçi araştırma. 
-    
-- Düzenlenemedik veya silinemez şekilde kayıt olarak işaretlenen çalışma serbestlikleri. 
-    
-Tüm bu durumlarda bekletme etiketleri, öğe düzeyinde yönetim denetimi için bekletme ayarlarını (belge veya e-posta) uygulamanızı sağlar.
-  
-Bekletme etiketleriyle şunları kullanabilirsiniz:
-  
-- **Kuruluş veya grupların Outlook**, site, site veya site Web üzerinde Outlook içeriğine el ile bir bekletme OneDrive SharePoint olanak Microsoft 365. Kullanıcılar hangi içerik türüyle çalıştığını çoğunlukla en iyi  bil ki, bunu sınıflandırarak uygun bekletme ayarları uygulanır. 
-    
-- **İçeriğin belirli koşullarla eşleşmesi**, e-postada veya e-postada paylaşılan bulut ekleri de dahil olması Teams içeriği içerdiğinde, bekletme etiketlerini otomatik olarak uygulama: 
-    - Belirli türlerde hassas bilgiler vardır.
-    - Bir sorguyla eş alan belirli anahtar sözcükler.
-    - Eğitilebilir bir sınıflandırıcı için desen eşleşmeleri.
+Farklı bekletme ayarları gerektiren farklı içerik türleri için bekletme etiketlerini kullanın. Örneğin:
 
-- **İçeriğin sitelerde ve** posta hesaplarında ve e-posta öğelerinde SharePoint için OneDrive bekletme dönemini başlatma.
+- En az bir süre saklanması gereken vergi formları.
 
-- **Çalışanların kuruluştan ayrılması veya sözleşmelerin** sona ermiş olduğu bir olay olduğunda bekletme süresini başlar.
+- Belirli bir yaşa ulaştıklarında kalıcı olarak silinmesi gereken basın malzemeleri.
 
-- **SharePoint'ta** ayarlanmış belge kitaplığına, klasöre veya belge kümesine varsayılan bekletme etiketi uygulayabilirsiniz; böylelikle, bu konumda depolanan tüm belgeler varsayılan bekletme etiketini devralabilir.
+- Belirli bir süre boyunca saklanması ve kalıcı olarak silinmesi gereken rekabetçi araştırmalar.
 
-- **Öğeleri kayıt yönetim stratejinizin** bir parçası olarak [işaretleme](records-management.md) . Bu etiketli içerik geçerli Microsoft 365, mevzuatla ilgili nedenlerle gerekebilecek içerik üzerinde başka kısıtlamalar yerleştirilir. Daha fazla bilgi için bkz [. İzin verilen veya engellenen eylemlerle ilgili kısıtlamaları karşılaştırma](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked).
+- Düzenlenmeleri veya silinememeleri için kayıt olarak işaretlenmesi gereken iş vizeleri.
 
-Duyarlılık etiketlarından [farklı olarak bekletme](sensitivity-labels.md) etiketleri, içerik sitenin dışına taşınırsa Microsoft 365.
+Tüm bu durumlarda bekletme etiketleri, idare denetimi için saklama ayarlarını öğe düzeyinde (belge veya e-posta) uygulamanıza olanak sağlar.
 
-#### <a name="classifying-content-without-applying-any-actions"></a>Hiçbir eylem uygulamadan içeriği sınıflendirme
+Bekletme etiketleriyle şunları yapabilirsiniz:
 
-Bekletme etiketlerinin ana amacı içeriği korumak veya silmek olsa da, bekletme etiketlerini hiçbir bekletmeyi veya başka eylemleri açmadan da kullanabilirsiniz. Bu durumda, hiçbir eylem zorlamadan bekletme etiketini yalnızca metin etiketi olarak kullanabilirsiniz.
-  
-Örneğin, hiçbir eylem göstermeden "Daha sonra gözden geçir" adlı bir bekletme etiketi oluşturabilir ve uygulayabilir, daha sonra bu içeriği bulmak için bu etiketi kullanabilirsiniz.
-  
-![Yalnızca sınıflandırma için etiket ayarları.](../media/retention-label-retentionoff.png)
+- Kuruluşunuzdaki kişilerin Outlook ve Web üzerinde Outlook, OneDrive, SharePoint ve Microsoft 365 gruplarındaki içeriğe **el ile bekletme etiketi uygulamasına olanak tanıyın**. Kullanıcılar genellikle ne tür içerikle çalıştıklarını en iyi bilirler, böylece içeriği sınıflandırabilir ve uygun saklama ayarlarının uygulanmasını sağlayabilirler.
 
-#### <a name="using-a-retention-label-as-a-condition-in-a-dlp-policy"></a>DLP ilkesinde bir bekletme etiketini koşul olarak kullanma
+- E-posta veya Teams paylaşılan bulut eklerini içeren belirli koşullarla eşleşiyorsa veya içerik şunları içeriyorsa içeriğe **bekletme etiketlerini otomatik olarak uygulayın**:
+  - Belirli hassas bilgi türleri.
+  - Oluşturduğunuz sorguyla eşleşen belirli anahtar sözcükler.
+  - Eğitilebilir sınıflandırıcı için desen eşleşmeleri.
 
-Bir bekletme etiketini, bir belge belgesinde veri kaybı önleme (DLP) ilkesinde koşul olarak SharePoint. Örneğin, belirtilen bekletme etiketi uygulanmışsa, belgelerin kuruluş dışında paylaşılmasını önlemek için bir DLP ilkesi yapılandırabilirsiniz.
+- SharePoint sitelerdeki ve OneDrive hesaplarındaki belgeler ve e-posta öğeleri için **içeriğin etiketlendiği saklama süresini başlatın**.
 
-Daha fazla bilgi için bkz [. DLP ilkesinde bir koşul olarak bekletme etiketi kullanma](data-loss-prevention-policies.md#using-a-retention-label-as-a-condition-in-a-dlp-policy).
+- Çalışanların kuruluştan ayrılması veya sözleşmelerin süresi dolması gibi **bir olayın gerçekleştiği saklama süresini başlatın**.
+
+- SharePoint'da **ayarlanmış bir belge kitaplığına, klasöre veya belge kümesine varsayılan bir bekletme etiketi uygulayın**; böylece bu konumda depolanan tüm belgeler varsayılan bekletme etiketini devralır.
+
+- Öğeleri kayıt [yönetimi](records-management.md) stratejinizin bir parçası olarak **kayıt olarak işaretleyin**. Etiketli bu içerik Microsoft 365 kaldığında, yasal nedenlerle gerekebilecek içeriğe başka kısıtlamalar da eklenir. Daha fazla bilgi için bkz. [İzin verilen veya engellenen eylemlerle ilgili kısıtlamaları karşılaştırma](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked).
+
+İçerik Microsoft 365 dışına taşınırsa[, duyarlılık etiketlerinin](sensitivity-labels.md) aksine bekletme etiketleri kalıcı olmaz.
+
+#### <a name="classifying-content-without-applying-any-actions"></a>Herhangi bir eylem uygulamadan içeriği sınıflandırma
+
+Bekletme etiketlerinin ana amacı içeriği saklamak veya silmek olsa da, bekletme etiketlerini bekletmeyi veya başka eylemleri açmadan da kullanabilirsiniz. Bu durumda, bekletme etiketini herhangi bir eylem uygulamadan yalnızca metin etiketi olarak kullanabilirsiniz.
+
+Örneğin, hiçbir eylem olmadan "Daha sonra gözden geçir" adlı bir bekletme etiketi oluşturup uygulayabilir ve ardından bu etiketi kullanarak içeriği daha sonra bulabilirsiniz.
+
+![Yalnızca sınıflandırmak için etiket ayarları.](../media/retention-label-retentionoff.png)
+
+#### <a name="using-a-retention-label-as-a-condition-in-a-dlp-policy"></a>DLP ilkesinde koşul olarak bekletme etiketi kullanma
+
+SharePoint'deki belgeler için veri kaybı önleme (DLP) ilkesinde koşul olarak bir bekletme etiketi belirtebilirsiniz. Örneğin, belgelere belirtilen bir bekletme etiketi uygulanmışsa, belgelerin kuruluş dışında paylaşılmasını önlemek için bir DLP ilkesi yapılandırın.
+
+Daha fazla bilgi için bkz. [DLP ilkesinde koşul olarak bekletme etiketi kullanma](data-loss-prevention-policies.md#using-a-retention-label-as-a-condition-in-a-dlp-policy).
 
 #### <a name="retention-labels-and-policies-that-apply-them"></a>Bunları uygulayan bekletme etiketleri ve ilkeleri
 
-Bekletme etiketlerini yayımlarken, bu etiketler, yöneticilerin  ve kullanıcıların içeriğe uygulayabilecekleri bir bekletme etiketi ilkesine dahil edilirler. Aşağıdaki diyagramda gösterildiği gibi:
+Bekletme etiketlerini yayımladığınızda, bunlar yöneticilerin ve kullanıcıların içeriğe başvurmasını sağlayan bir **bekletme etiketi ilkesine** eklenir. Aşağıdaki diyagramda gösterildiği gibi:
 
-1. Tek bir bekletme etiketi, birden çok bekletme etiketi ilkesine dahil olabilir.
+1. Tek bir bekletme etiketi birden çok bekletme etiketi ilkesine dahil edilebilir.
 
-2. Bekletme etiketi ilkeleri, bekletme etiketlerini yayımlayacak konumları belirtir. Aynı konum, birden çok bekletme etiketi ilkesine dahil olabilir.
+2. Bekletme etiketi ilkeleri, bekletme etiketlerini yayımlayacak konumları belirtir. Aynı konum birden çok bekletme etiketi ilkesine dahil edilebilir.
 
-![Bekletme etiketleri konum belirten etiket ilkelerine nasıl eklenebilir?](../media/retention-labels-and-policies.png)
+![Bekletme etiketlerinin konumları belirten etiket ilkelerine nasıl eklendiği.](../media/retention-labels-and-policies.png)
 
-Ayrıca, her biri tek bir bekletme **etiketine sahip bir veya birden** çok otomatik uygulama bekletme etiketi ilkesi oluşturabilirsiniz. Bu ilkeyle, ilkede belirttiğiniz koşullar karşı karşılaştığında otomatik olarak bir bekletme etiketi uygulanır.
+Ayrıca, her biri tek bir bekletme etiketine sahip bir veya daha fazla **otomatik uygulama bekletme etiketi ilkesi** oluşturabilirsiniz. Bu ilkeyle, ilkede belirttiğiniz koşullar karşılandığında otomatik olarak bir bekletme etiketi uygulanır.
 
 #### <a name="retention-label-policies-and-locations"></a>Bekletme etiketi ilkeleri ve konumları
 
-Bekletme etiketleri, bekletme etiketinin ne yaptığına bağlı olarak farklı konumlarda yayımlanır.
-  
-| Bekletme etiketi aşağıdaki gibi ise... | Daha sonra etiket ilkesi şu ilkeye uygulanabilir: |
+Bekletme etiketleri, bekletme etiketinin ne yaptığına bağlı olarak farklı konumlarda yayımlanabilir.
+
+| Bekletme etiketi... | Ardından etiket ilkesi... |
 |:-----|:-----|
-|Yöneticilere ve son kullanıcılara yayımlanır  |Exchange, SharePoint, OneDrive, Microsoft 365 Grupları  |
-|Hassas bilgi türlerine veya eğitilebilir sınıflayıcılara göre otomatik olarak uygulanır  |Exchange, SharePoint, OneDrive  |
-|Anahtar sözcüklere veya bir sorguya dayalı otomatik uygulama  |Exchange, SharePoint, OneDrive, Microsoft 365 Grupları  |
-|Bulut eklere otomatik olarak uygulanan  |SharePoint Grupları OneDrive, Microsoft 365'i kullanın  |
+|Yöneticilere ve son kullanıcılara yayımlandı  |Exchange, SharePoint, OneDrive, Microsoft 365 Grupları  |
+|Hassas bilgi türlerine veya eğitilebilir sınıflandırıcılara göre otomatik olarak uygulanır  |Exchange, SharePoint, OneDrive  |
+|Anahtar sözcüklere veya sorguya göre otomatik uygulama  |Exchange, SharePoint, OneDrive, Microsoft 365 Grupları  |
+|Bulut eklerine otomatik olarak uygulama  |SharePoint, OneDrive, Microsoft 365 Grupları  |
 
-Exchange klasörleri, klasörleri, Skype Teams Yammer iletileri bekletme etiketlerini desteklemez. Bu konumlardan içeriği korumak ve silmek için, bunun yerine bekletme ilkelerini kullanın.
+Exchange ortak klasörler, Skype, Teams ve Yammer iletileri bekletme etiketlerini desteklemez. Bu konumlardaki içeriği korumak ve silmek için bunun yerine bekletme ilkelerini kullanın.
 
-#### <a name="only-one-retention-label-at-a-time"></a>Bir defada yalnızca bir bekletme etiketi
+#### <a name="only-one-retention-label-at-a-time"></a>Aynı anda yalnızca bir bekletme etiketi
 
-E-posta veya belgeye aynı anda yalnızca tek bir bekletme etiketi uygulanmış olabilir. Bekletme etiketi son kullanıcı veya [yönetici](create-apply-retention-labels.md#manually-apply-retention-labels) tarafından el ile veya aşağıdaki yöntemlerden herhangi biri kullanılarak otomatik olarak uygulanabilir:
+Bir e-posta veya belgenin aynı anda yalnızca tek bir bekletme etiketi uygulanabilir. Bekletme etiketi son kullanıcı veya yönetici tarafından [el ile](create-apply-retention-labels.md#manually-apply-retention-labels) veya aşağıdaki yöntemlerden herhangi biri kullanılarak otomatik olarak uygulanabilir:
 
-- [Etiket ilkesi otomatik olarak uygulama](apply-retention-labels-automatically.md)
-- [Belge anlama modeli SharePoint Syntex](../contentunderstanding/apply-a-retention-label-to-a-model.md)
-- [Etiket veya etiket SharePoint](create-apply-retention-labels.md#applying-a-default-retention-label-to-all-content-in-a-sharepoint-library-folder-or-document-set) varsayılan [Outlook](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
+- [Etiket ilkesini otomatik uygulama](apply-retention-labels-automatically.md)
+- [SharePoint Syntex için belge anlama modeli](../contentunderstanding/apply-a-retention-label-to-a-model.md)
+- [SharePoint veya Outlook için varsayılan etiket](create-apply-retention-labels.md#applying-a-default-retention-label-to-all-content-in-a-sharepoint-library-folder-or-document-set) [](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
 - [Outlook kuralları](create-apply-retention-labels.md#automatically-applying-a-retention-label-to-email-by-using-rules)
 
-Standart bekletme etiketleri için (öğeleri kayıt veya mevzuat kaydı [olarak işaretlemezler](records-management.md#records)):
+Standart saklama etiketleri için (öğeleri [kayıt veya mevzuat kaydı](records-management.md#records) olarak işaretlemez):
 
-- Yöneticiler ve son kullanıcılar, içeriğe uygulanmış olan mevcut bir bekletme etiketini el ile değiştirebilir veya kaldırabilir. 
+- Yöneticiler ve son kullanıcılar, içeriğe uygulanan mevcut bir bekletme etiketini el ile değiştirebilir veya kaldırabilir.
 
-- İçerikte zaten bir bekletme etiketi uygulandığında, var olan etiket otomatik olarak kaldırılamaz veya başka bir bekletme etiketiyle değiştirilirken tek bir özel durum vardır: Var olan etiket varsayılan etiket olarak uygulandı. Varsayılan etiket kullanılırken, başka bir varsayılan etiketle değiştir veya otomatik olarak kaldırıldığı bazı senaryolar vardır. 
-    
-    Varsayılan etiket kullanılarak uygulandığında etiket davranışı hakkında daha fazla bilgi için:
-    - Varsayılan etiket SharePoint: [Varsayılan etiket için varsayılan etiket kullanırken SharePoint](create-apply-retention-labels.md#label-behavior-when-you-use-a-default-label-for-sharepoint)
-    - Outlook için varsayılan etiket: [Outlook klasörüne varsayılan bekletme etiketi uygulama](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
+- İçerikte zaten bir bekletme etiketi uygulandığında, mevcut etiket otomatik olarak kaldırılmaz veya olası bir özel durumla başka bir bekletme etiketiyle değiştirilmez: Mevcut etiket varsayılan etiket olarak uygulandı. Varsayılan bir etiket kullandığınızda, başka bir varsayılan etiketle değiştirilebileceği veya otomatik olarak kaldırılabildiği bazı senaryolar vardır.
 
-- Bekletme etiketi uygulayabilecek birden çok otomatik uygulama etiketi ilkesi varsa ve içerik birden çok ilkenin koşullarına uygunsa, en eski otomatik uygulama etiket ilkesine (oluşturulma tarihine göre) bekletme etiketi uygulanır.
+  Varsayılan etiket kullanılarak uygulandığında etiket davranışı hakkında daha fazla bilgi için:
 
-Bekletme etiketleri öğeleri kayıt veya mevzuat kaydı olarak işaretlese bile, bu etiketler hiçbir zaman otomatik olarak değişmez. Yalnızca kapsayıcının yöneticileri öğeleri kayıt olarak işaretleyebilirsiniz, ancak mevzuat kayıtları olarak işaretleyene kadar bekletme etiketlerini el ile değiştirebilir veya kaldırabilir. Daha fazla bilgi için bkz [. İzin verilen veya engellenen eylemlerle ilgili kısıtlamaları karşılaştırma](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked).
+  - SharePoint için varsayılan etiket: [SharePoint için varsayılan etiket kullandığınızda etiket davranışı](create-apply-retention-labels.md#label-behavior-when-you-use-a-default-label-for-sharepoint)
+  - Outlook için varsayılan etiket: [Outlook klasörüne varsayılan bekletme etiketi uygulama](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
+
+- Bekletme etiketi uygulayabilecek birden çok otomatik uygulama etiketi ilkesi varsa ve içerik birden çok ilkenin koşullarını karşılıyorsa, en eski otomatik uygulama etiket ilkesinin bekletme etiketi (oluşturulma tarihine göre) uygulanır.
+
+Bekletme etiketleri öğeleri kayıt veya mevzuat kaydı olarak işaretlediğinde, bu etiketler hiçbir zaman otomatik olarak değiştirilmez. Yalnızca kapsayıcının yöneticileri öğeleri kayıt olarak işaretleyen bekletme etiketlerini el ile değiştirebilir veya kaldırabilir, ancak mevzuat kayıtlarını değiştiremez. Daha fazla bilgi için bkz. [İzin verilen veya engellenen eylemlerle ilgili kısıtlamaları karşılaştırma](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked).
 
 #### <a name="monitoring-retention-labels"></a>Bekletme etiketlerini izleme
 
-Kiracı Microsoft 365 uyumluluk merkezi, bekletme etiketlerinizin kiracıda nasıl kullanılıyor olduğunu  izlemek ve etiketli öğelerinizin nerede olduğunu belirlemek için Veri sınıflandırması ve Genel Bakış sayfasını seçin. Önemli önkoşullar da dahil olmak üzere daha fazla bilgi için bkz[. Veri sınıflandırması hakkında bilgi.](data-classification-overview.md)
+Microsoft 365 uyumluluk merkezi **Veri sınıflandırması'nı** ve **Genel Bakış** sayfasını seçerek bekletme etiketlerinizin kiracınızda nasıl kullanıldığını izleyin ve etiketlenen öğelerinizin nerede bulunduğunu belirleyin. Önemli önkoşullar da dahil olmak üzere daha fazla bilgi için bkz. [Veri sınıflandırması hakkında bilgi edinin](data-classification-overview.md).
 
-Ardından, içerik gezginini ve etkinlik [gezginini kullanarak ayrıntılara](data-classification-content-explorer.md) [girebilirsiniz](data-classification-activity-explorer.md).
+Ardından [içerik gezginini](data-classification-content-explorer.md) ve [etkinlik gezginini](data-classification-activity-explorer.md) kullanarak ayrıntılara gidebilirsiniz.
 
 > [!TIP]
->Eğitim edilebilir sınıflayıcılar ve hassas bilgi türleri gibi diğer veri sınıflandırma içgörülerini, tutmanız veya silmeniz ya da kayıt olarak yönetmeniz gereken içeriği tanımlamanıza yardımcı olması için kullanmayı göz önünde bulundurabilirsiniz.
+>Saklamanız veya silmeniz veya kayıt olarak yönetmeniz gerekebilecek içeriği belirlemenize yardımcı olmak için eğitilebilir sınıflandırıcılar ve hassas bilgi türleri gibi diğer veri sınıflandırma içgörülerinden bazılarını kullanmayı göz önünde bulundurun.
 
-#### <a name="using-content-search-to-find-all-content-with-a-specific-retention-label"></a>Belirli bir bekletme etiketine sahip tüm içeriği bulmak için İçerik Arama'nın kullanımı
+#### <a name="using-content-search-to-find-all-content-with-a-specific-retention-label"></a>Belirli bir bekletme etiketine sahip tüm içeriği bulmak için İçerik Arama'yı kullanma
 
-Bekletme etiketleri kullanıcılar tarafından veya otomatik olarak uygulanan içeriklere uygulandıktan sonra, belirli bir bekletme etiketinin uygulandığı tüm öğeleri bulmak için içerik arama özelliğini kullanabilirsiniz.
+Kullanıcılar tarafından veya otomatik olarak uygulanan bekletme etiketleri içeriğe uygulandıktan sonra, belirli bir bekletme etiketi uygulanmış olan tüm öğeleri bulmak için içerik aramasını kullanabilirsiniz.
 
-İçerik araması oluşturmak için Bekletme etiketi koşul koşullarını  seçin, ardından tam bekletme etiketi adını veya etiket adının bir bölümünü girin ve joker karakter kullanın. Daha fazla bilgi için bkz [. Anahtar Sözcük sorguları ve İçerik Arama için arama koşulları](keyword-queries-and-search-conditions.md).
-  
+İçerik araması oluşturduğunuzda **Bekletme etiketi** koşulunu seçin ve ardından tam bekletme etiketi adını veya etiket adının bir bölümünü girin ve joker karakter kullanın. Daha fazla bilgi için bkz [. İçerik Arama için anahtar sözcük sorguları ve arama koşulları](keyword-queries-and-search-conditions.md).
+
 ![Bekletme etiketi koşulu.](../media/retention-label-condition.png)
 
+## <a name="compare-capabilities-for-retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketleri için özellikleri karşılaştırma
 
-## <a name="compare-capabilities-for-retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketlerinin özelliklerini karşılaştırma
+Özelliklere göre bekletme ilkesi mi yoksa bekletme etiketi mi kullanacağınızı belirlemenize yardımcı olması için aşağıdaki tabloyu kullanın.
 
-Özelliklere bağlı olarak, bekletme ilkesi mi yoksa bekletme etiketi mi kullanıla belirlemek için aşağıdaki tabloyu kullanın.
-
-|Özellik|Bekletme ilkesi |Bekletme etiketi|
+|Yeteneği|Bekletme ilkesi |Bekletme etiketi|
 |:-----|:-----|:-----|:-----|
-|Silebilir, yalnızca koruma veya yalnızca silmeyi koruyabilirsiniz bekletme ayarları |Evet |Evet |
+|Saklama ayarlarını koruyup silebilen, yalnızca tutabilen veya yalnızca silebilen bekletme ayarları |Evet |Evet |
 |Desteklenen iş yükleri: <br />- Exchange <br />- SharePoint <br />- OneDrive <br />- Microsoft 365 grupları <br />- Skype Kurumsal <br />- Teams<br />- Yammer|<br /> Evet <br /> Evet <br /> Evet <br /> Evet <br /> Evet <br /> Evet <br /> Evet | <br /> Evet, ortak klasörler dışında <br /> Evet <br /> Evet <br /> Evet <br /> Hayır <br /> Hayır <br /> Hayır |
-|Otomatik olarak uygulanan bekletme | Evet | Evet |
-|Koşulları temel alarak uygulanan bekletme <br /> - hassas bilgi türleri, KQL sorguları ve anahtar sözcükler, eğitilebilir sınıflayıcılar, bulut ekleri| Hayır | Evet |
-|El ile uygulanan bekletme | Hayır | Evet |
+|Bekletme otomatik olarak uygulanır | Evet | Evet |
+|Koşullara göre uygulanan bekletme <br /> - hassas bilgi türleri, KQL sorgular ve anahtar sözcükler, eğitilebilir sınıflandırıcılar, bulut ekleri| Hayır | Evet |
+|Bekletme el ile uygulandı | Hayır | Evet |
 |Son kullanıcı etkileşimi | Hayır | Evet |
-|İçerik taşınırsa kalıcı olur | Hayır | Evet, kiracınız Microsoft 365 içinde |
-|Öğeyi kayıt olarak bildir| Hayır | Evet |
-|Bir olay etiketli veya bir etkinliğe dayalı bekletme dönemini başlatma | Hayır | Evet |
-|Disposition review | Hayır| Evet |
-|7 yıl boyunca yok olduğunu kanıtı | Hayır |Evet, disposition review veya item is marked a record|
+|İçerik taşınırsa kalıcı olur | Hayır | Evet, Microsoft 365 kiracınızda |
+|Öğeyi kayıt olarak bildirme| Hayır | Evet |
+|Etiketlendiğinde veya bir olayı temel alarak bekletme süresini başlatma | Hayır | Evet |
+|Değerlendirmeyi bırakma | Hayır| Evet |
+|7 yıla kadar edat kanıtı | Hayır |Evet, değerlendirmeyi kullandığınızda veya öğe bir kayıt olarak işaretlendiğinde|
 |Yönetici etkinliklerini denetleme| Evet | Evet|
-|Bekletme eylemlerini denetleme| Hayır | Evet <sup>\*</sup> |
-|Bekletmeye tabi öğeleri belirleme: <br /> - İçerik Arama <br /> - Veri sınıflandırma sayfası, içerik gezgini, etkinlik gezgini | <br /> Hayır <br /> Hayır | <br /> Evet <br /> Evet|
+|Saklama eylemlerini denetleme| Hayır | Evet <sup>\*</sup> |
+|Bekletmeye tabi öğeleri tanımlama: <br /> - İçerik Arama <br /> - Veri sınıflandırma sayfası, içerik gezgini, etkinlik gezgini | <br /> Hayır <br /> Hayır | <br /> Evet <br /> Evet|
 
 **Dipnot:**
 
-<sup>\*</sup>İçeriği kayıt veya mevzuat kaydı olarak işaretlemeen bekletme etiketleri için, denetleme olayları SharePoint veya OneDrive'daki bir öğenin etiket uygulanması, değişmesi veya kaldırılması ile sınırlıdır. Bekletme etiketlerinin denetim ayrıntıları için bu sayfanın [Bekletme eylemlerini denetleme](#auditing-retention-actions) bölümüne bakın.
+<sup>\*</sup>İçeriği kayıt veya mevzuat kaydı olarak işaretlemeyen bekletme etiketleri için denetim olayları, SharePoint veya OneDrive bir öğenin etiketi uygulandığı, değiştirildiği veya kaldırıldığı durumla sınırlıdır. Bekletme etiketlerinin denetim ayrıntıları için bu sayfadaki [Bekletme eylemlerini denetleme](#auditing-retention-actions) bölümüne bakın.
 
 ### <a name="combining-retention-policies-and-retention-labels"></a>Bekletme ilkelerini ve bekletme etiketlerini birleştirme
 
-Yalnızca bekletme ilkelerini veya yalnızca bekletme etiketlerini kullanma arasında seçim yapmak zorunda değilsiniz. Her iki yöntem de birlikte ve hatta daha kapsamlı bir çözüm için birbirini tamamlayıcı nitelikte kullanılabilir.
+Yalnızca bekletme ilkelerini veya yalnızca bekletme etiketlerini kullanma arasında seçim yapmanız gerekmez. Her iki yöntem birlikte kullanılabilir ve aslında daha kapsamlı bir çözüm için birbirini tamamlayıcı niteliktedir.
 
-Aşağıdaki örnekler, aynı konum için bekletme ilkelerini ve bekletme etiketlerini birleştirmenin yollarından yalnızca bazılarıdır.
+Aşağıdaki örnekler, bekletme ilkelerini ve bekletme etiketlerini aynı konum için birleştirmenin yollarından yalnızca bazılarıdır.
 
-Bekletme ilkelerinin ve bekletme etiketlerinin birlikte nasıl çalışması ve birleştirilmiş sonuçlarının nasıl belirlenecekleri hakkında daha fazla bilgi için, bu sayfada bekletme ilkelerini ve öncelikleri açıklayan [bölüme bakın](#the-principles-of-retention-or-what-takes-precedence).
+Bekletme ilkeleri ve bekletme etiketlerinin birlikte nasıl çalıştığı ve bunların birleştirilmiş sonuçlarının nasıl belirleneceği hakkında daha fazla bilgi için, bu sayfadaki [bekletme ilkelerini ve önceliklerini](#the-principles-of-retention-or-what-takes-precedence) açıklayan bölüme bakın.
 
-**Kullanıcıların otomatik silme işlemini geçersiz k olduğu bir örnek**
+**Kullanıcıların otomatik silmeyi geçersiz kılabilir örneği**
 
-Senaryo: Varsayılan olarak, kullanıcıların hesaplarında yer alan OneDrive beş yıl sonra otomatik olarak silinir, ancak kullanıcıların belirli belgeler için bunu geçersiz kılma seçeneğine sahip olması gerekir.
+Senaryo: Varsayılan olarak, kullanıcıların OneDrive hesaplarındaki içerik beş yıl sonra otomatik olarak silinir, ancak kullanıcıların belirli belgeler için bunu geçersiz kılma seçeneğine sahip olması gerekir.
 
-1. İçeriği son değiştirildikten beş yıl sonra otomatik olarak silen bir bekletme ilkesi oluşturabilir ve yapılandırmış olursunuz ve bu ilkeyi tüm OneDrive uygulayabilirsiniz.
+1. İçeriği son değiştirilmeden beş yıl sonra otomatik olarak silen ve ilkeyi tüm OneDrive hesaplarına uygulayan bir bekletme ilkesi oluşturup yapılandırabilirsiniz.
 
-2. İçeriği sonsuza kadar tutan bir bekletme etiketi oluşturabilir ve yapılandırabilirsiniz ve bunu tüm hesaplarda yayımlay etiketi ilkesine OneDrive gerekir. Bu etiketi, beş yıl sonra değiştirilmezse otomatik silme işleminin dışında tutulacak belirli belgelere nasıl el ile uygulayacaklarını kullanıcılara açıklarsınız.
+2. İçeriği sonsuza kadar saklayan bir bekletme etiketi oluşturup yapılandırıp bunu tüm OneDrive hesaplarında yayımladığınız bir etiket ilkesine eklersiniz. Kullanıcılara bu etiketin beş yıl sonra değiştirilmemesi durumunda otomatik silmenin dışında tutulması gereken belirli belgelere nasıl el ile uygulanacağını açıklarsınız.
 
-**Daha uzun süre öğeleri tutma örneği**
+**Öğeleri daha uzun süre saklama örneği**
 
-Senaryo: Varsayılan olarak, SharePoint öğeleri otomatik olarak korunur ve beş yıl sonra silinir, ancak belirli kitaplıklarda yer alan belgeler on yıl süreyle tutulmelidir.
+Senaryo: Varsayılan olarak, SharePoint öğeler beş yıl sonra otomatik olarak korunur ve silinir, ancak belirli kitaplıklardaki belgeler on yıl boyunca saklanmalıdır.
 
-1. İçeriği beş yıl sonra otomatik olarak alıkoyan ve silen bir bekletme ilkesi oluşturabilir ve yapılandırabilirsiniz, sonra da bu ilkeyi tüm SharePoint grupların Microsoft 365 uygulayabilirsiniz.
+1. Beş yıl sonra içeriği otomatik olarak saklayan ve silecek bir bekletme ilkesi oluşturup yapılandırıp ilkeyi tüm SharePoint ve Microsoft 365 Grupları örneklerine uygularsınız.
 
-2. İçeriği on yıl süreyle otomatik olarak alıkoyan bir bekletme etiketi oluşturabilir ve yapılandırabilirsiniz. Bu etiketi site SharePoint yayımlamanız gerekir; böylelikle, belirli belge kitaplıklarında yer alan tüm öğeler tarafından devralınacak varsayılan etiket olarak uygulayabilirler.
+2. İçeriği otomatik olarak on yıl boyunca saklayan bir bekletme etiketi oluşturup yapılandırabilirsiniz. Bu etiketi, belirli belge kitaplıklarındaki tüm öğeler tarafından devralınacak varsayılan bir etiket olarak uygulayabilmeleri için SharePoint site yöneticilerine yayımlarsınız.
 
-**Daha kısa bir süre içinde öğeleri silme örneği**
+**Daha kısa bir zaman aralığındaki öğeleri silme örneği**
 
-Senaryo: Varsayılan olarak, e-postalar korunur, ancak on yıl sonra otomatik olarak silinir. Ancak, ön e-posta kodu adı olan belirli bir projeyle ilgili e-postalar, bir yıl sonra otomatik olarak silinmelidir.
+Senaryo: Varsayılan olarak, e-postalar korunmaz ancak on yıl sonra otomatik olarak silinir. Ancak, yayın öncesi kod adına sahip belirli bir projeyle ilgili e-postaların bir yıl sonra otomatik olarak silinmesi gerekir.
 
-1. On yıl sonra içeriği otomatik olarak silen bir bekletme ilkesi oluşturabilir ve yapılandırabilirsiniz ve bu ilkeyi tüm alıcıların Exchange uygulayabilirsiniz.
+1. On yıl sonra içeriği otomatik olarak silecek ve ilkeyi tüm Exchange alıcılara uygulayan bir bekletme ilkesi oluşturup yapılandırabilirsiniz.
 
-2. Bir yıl sonra içeriği otomatik olarak senen bir bekletme etiketi oluşturabilir ve yapılandırabilirsiniz. İlgili e-postalara bu etiketi uygulama seçenekleri şunlardır:
-    - Anahtar sözcük olarak proje kodu adını kullanarak içeriği tanımlayan bir otomatik etiketleme ilkesi oluşturabilir ve bu ilkeyi tüm alıcıların Exchange uygulayabilirsiniz
-    - Etiketi yayımlar ve projede yer alan kullanıcılara bu etiketin geçerli olduğu bir Etiket Outlook otomatik kural oluşturma hakkında bilgi
-    - Etiketi yayımlar ve kullanıcılara projeyle ilgili tüm e-postalar için Outlook'de klasör oluşturmalarını ve yayımlanmış etiketi klasöre uygulamalarını ve ardından projeyle ilgili tüm e Outlook leri bu klasöre taşımak için bir Outlook kuralı oluşturmalarını sağlarsınız.
+2. Bir yıl sonra içeriği otomatik olarak silecek bir bekletme etiketi oluşturup yapılandırabilirsiniz. Bu etiketi ilgili e-postalara uygulama seçenekleri şunlardır:
+    - Proje kodu adını anahtar sözcük olarak kullanarak içeriği tanımlayan bir otomatik etiketleme ilkesi oluşturur ve ilkeyi tüm Exchange alıcılara uygularsınız
+    - Etiketi yayımlar ve projede yer alan kullanıcılara bu etiketi uygulayan Outlook otomatik kural oluşturmayı açıklarsınız
+    - Etiketi yayımlar ve kullanıcılara projeyle ilgili tüm e-postalar için Outlook bir klasör oluşturmalarını ve yayımlanmış etiketi klasöre uygulamalarını ve ardından projeyle ilgili tüm e-postaları bu klasöre taşımak için bir Outlook kuralı oluşturmalarını emredersiniz
 
-## <a name="how-long-it-takes-for-retention-settings-to-apply"></a>Bekletme ayarlarının geçerlik süresi
+## <a name="how-long-it-takes-for-retention-settings-to-apply"></a>Bekletme ayarlarının uygulanması ne kadar sürer?
 
-bir bekletme etiketinin otomatik olarak uygulanması için iş yükleri ve etiket ilkeleri için bekletme ilkeleri gönderdiğinizde, bekletme ayarlarının içeriğe uygulanması için 7 gün kadar süre kullanın:
+Bir bekletme etiketini otomatik olarak uygulamak üzere iş yükleri ve etiket ilkeleri için bekletme ilkeleri gönderdiğinizde, bekletme ayarlarının içeriğe uygulanması için 7 güne kadar izin verin:
 
-- [Bekletme ilkelerinin yürürlüğe girecekleri süre](create-retention-policies.md#how-long-it-takes-for-retention-policies-to-take-effect)
-- [Bekletme etiketlerinin etkilisi ne kadar sürer?](apply-retention-labels-automatically.md#how-long-it-takes-for-retention-labels-to-take-effect)
+- [Bekletme ilkelerinin geçerli olması ne kadar sürer?](create-retention-policies.md#how-long-it-takes-for-retention-policies-to-take-effect)
+- [Bekletme etiketlerinin etkili olması ne kadar sürer?](apply-retention-labels-automatically.md#how-long-it-takes-for-retention-labels-to-take-effect)
 
-Benzer şekilde, etiketleri yayımlayan uygulamalarda bekletme etiketlerinin görünür olması için 7 gün kadar süre verin:
+Benzer şekilde, etiketleri yayımladıktan sonra bekletme etiketlerinin uygulamalarda görünür olması için 7 güne kadar izin verin:
 
-- [Bekletme etiketleri uygulanabilecek hale geldiğinde](create-apply-retention-labels.md#when-retention-labels-become-available-to-apply)
+- [Bekletme etiketleri uygulanabilecek duruma geldiğinde](create-apply-retention-labels.md#when-retention-labels-become-available-to-apply)
 
-Genellikle ilkeler etkili olur ve etiketler 7 günden daha hızlı görünür olur. Ancak, bu süreci etkileyecek çok sayıda potansiyel değişken vardır ve en iyisi en çok 7 gün planlamaktır.
+Genellikle ilkeler geçerli olur ve etiketler 7 günden daha hızlı görünür. Ancak bu süreci etkileyebilecek birçok olası değişkenle, en fazla 7 gün planlamak en iyisidir.
 
-## <a name="adaptive-or-static-policy-scopes-for-retention"></a>Bekletme için uyarlanabilir veya statik ilke kapsamları
+## <a name="adaptive-or-static-policy-scopes-for-retention"></a>Bekletme için uyarlamalı veya statik ilke kapsamları
 
-Bir bekletme ilkesi veya bekletme etiketi ilkesi  oluşturmada, ilkenin kapsamını tanımlamak üzere uyarlanabilir ve statik arasında seçim oluşturmanız gerekir.
+Bekletme ilkesi veya bekletme etiketi ilkesi oluşturduğunuzda, ilkenin kapsamını tanımlamak için uyarlamalı ve statik arasında seçim yapmanız gerekir.
 
-- **Uyarlanabilir kapsam** sizin belirttiğiniz bir sorgu kullanır, dolayısıyla üyelik statik değildir ve seçili konumlarda belirttiğiniz öznitelikler veya özelliklerle günlük olarak dinamik olarak çalışan bir sorgudur. Tek bir ilkeyle birden çok uyarlanabilir kapsam kullanabilirsiniz.
-    
-    Örnek: Yöneticiler için OneDrive e-posta ve posta belgelerini saklama süresi standart kullanıcılara göre daha uzun bir bekletme süresi gerektirir. "Executive" Azure AD özniteliği iş unvanını kullanan uyarlanabilir bir kapsam içeren bir bekletme ilkesi oluşturun ve ardından ilke için Exchange e-posta OneDrive hesap konumlarını seçin. Uyarlanabilir kapsam bu değerleri otomatik olarak alır, OneDrive e-posta adreslerini veya URL'leri belirtmenize gerek yoktur. Yeni yöneticiler için bekletme ilkesi yeniden yapılandırılmaya gerek yoktur, çünkü e-posta ve posta için karşılık gelen değerlerine sahip bu OneDrive otomatik olarak seçilir.
+- **Uyarlamalı kapsam**, belirttiğiniz bir sorgu kullanır, bu nedenle üyelik statik değildir ancak seçili konumlar için belirttiğiniz özniteliklere veya özelliklere göre günlük çalıştırılarak dinamiktir. Tek bir ilkeyle birden çok uyarlamalı kapsam kullanabilirsiniz.
 
-- Statik **kapsamlar** sorguları kullanmaz ve belirli bir konumun tüm örneklerine uygulayabilecek şekilde yapılandırmayla sınırlıdır veya bu konum için belirli örneklerde ekleme ve dışlamalar kullanabilir. Bu üç seçim kimi zaman sırasıyla "kuruluş genelinde", "içerir" ve "dışlamalar" olarak adlandırılır.
-    
-    Örnek: Yöneticiler için OneDrive e-posta ve posta belgelerini saklama süresi standart kullanıcılara göre daha uzun bir bekletme süresi gerektirir. İlkenin e-posta ve hesap konumlarını Exchange statik bir kapsam OneDrive bir bekletme ilkesi oluşturabilirsiniz. Exchange e-posta konumu için yalnızca yöneticilere sahip bir grup tanımlayabilirsiniz, dolayısıyla bekletme ilkesi için bu grubu belirtirsiniz ve ilke oluşturulduğunda ilgili e-posta adresleriyle grup üyeliği alınır. Yeni OneDrive konumu için her bir yönetici için tek tek URL'leri OneDrive tanımlamanız ve belirtmeniz gerekir. Yeni yöneticiler için, yeni e-posta adreslerini ve url'leri eklemek için bekletme OneDrive gerekir. Ayrıca, bir OneDrive UPN'sinde değişiklik olduğu her zaman URL'leri de güncelleştirmeniz gerekir.
-    
-    OneDrive güvenilir bir şekilde belirtmek için bu URL'leri oldukça zordur, çünkü varsayılan olarak bu URL'ler kullanıcı veritabanına ilk kez OneDrive için oluşturulmaz. Kullanıcının UPN'si değişirse ve sizin de bilmiyor olabileceğiniz upn, URL'si OneDrive değişir.
+    Örnek: Yöneticilere yönelik e-postalar ve OneDrive belgeleri standart kullanıcılardan daha uzun bir saklama süresi gerektirir. "Yönetici" Azure AD öznitelik iş unvanını kullanan uyarlamalı bir kapsama sahip bir bekletme ilkesi oluşturur ve ardından ilke için Exchange e-posta ve OneDrive hesapları konumlarını seçersiniz. Uyarlamalı kapsam bu değerleri otomatik olarak aldığından, bu kullanıcılar için e-posta adreslerini veya OneDrive URL'lerini belirtmeniz gerekmez. Yeni yöneticiler için bekletme ilkesini yeniden yapılandırmanıza gerek yoktur çünkü bu yeni kullanıcılar e-posta ve OneDrive karşılık gelen değerleriyle otomatik olarak alınır.
 
-Uyarlanabilir kapsamları kullanmanın avantajları:
+- **Statik kapsam** sorguları kullanmaz ve belirtilen bir konum için tüm örneklere uygulanabileceği veya söz konusu konum için belirli örnekler için dahil etme ve dışlamaları kullanabilecek şekilde yapılandırması sınırlıdır. Bu üç seçenek bazen sırasıyla "kuruluş genelinde", "içerir" ve "dışlar" olarak adlandırılır.
 
-- İlke başına [öğe sayısı üzerinde sınır yoktur](retention-limits.md#maximum-number-of-items-per-policy). Uyarlanabilir ilkeler yine de kiracı sınırlamaları [](retention-limits.md#maximum-number-of-policies-per-tenant) başına en fazla ilke sayısına tabi olsa da, daha esnek yapılandırma sonucunda çok daha az ilke ortaya konur.
+    Örnek: Yöneticilere yönelik e-postalar ve OneDrive belgeleri standart kullanıcılardan daha uzun bir saklama süresi gerektirir. İlke için Exchange e-posta ve OneDrive hesapları konumlarını seçen statik kapsamlı bir bekletme ilkesi oluşturursunuz. Exchange e-posta konumu için, yalnızca yöneticileri içeren bir grubu tanımlayabilirsiniz, bu nedenle bekletme ilkesi için bu grubu belirtirsiniz ve ilke oluşturulduğunda ilgili e-posta adresleriyle grup üyeliği alınır. OneDrive hesapları konumu için, her yönetici için ayrı ayrı OneDrive URL'leri belirlemeniz ve belirtmeniz gerekir. Yeni yöneticiler için, yeni e-posta adreslerini eklemek ve URL'leri OneDrive için bekletme ilkesini yeniden yapılandırmanız gerekir. Ayrıca, bir yöneticinin UPN'sinde değişiklik olduğunda OneDrive URL'lerini de güncelleştirmeniz gerekir.
 
-- Bekletme gereksinimleriniz için daha güçlü hedefleme. Örneğin, bu amaç için grupları oluşturma ve korumanın yönetim yükünü oluşturmadan var olan Azure AD özniteliklerini kullanarak, kullanıcılara coğrafi konumlarına göre farklı bekletme ayarları atabilirsiniz.
+    OneDrive URL'lerin güvenilir bir şekilde belirtilmesi özellikle zordur çünkü varsayılan olarak bu URL'ler kullanıcı OneDrive ilk kez erişene kadar oluşturulmaz. Ayrıca, bir kullanıcının UPN'si değişirse ve sizin de haberiniz olmayabilir, OneDrive URL'si otomatik olarak değişir.
 
-- Sorgu tabanlı üyelik, güvenilir bir şekilde grup üyeliğine veya departmanlar arası iletişimi temel alan dış süreçlere güvenilir bir şekilde yansıtılana kadar iş değişikliklerine karşı güvenilirlik sağlar.
+Uyarlamalı kapsamları kullanmanın avantajları:
 
-- Tek bir bekletme ilkesi hem sizin hem de Microsoft Teams Yammer için konumlar içerebilir, ancak statik bir kapsam kullanıyorken, bu konumlar kendi bekletme ilkelerini gerektirir.
-    
-- Yalnızca etkin olmayan posta kutularına belirli bekletme ayarlarını uygulayabilirsiniz. Statik kapsam için bu yapılandırma mümkün değildir, çünkü ilke atandığı sırada, statik kapsamlar etkin olmayan posta kutuları olan alıcıların belirli eklenmesini desteklemez.
+- [İlke başına öğe sayısıyla](retention-limits.md#maximum-number-of-items-per-policy) ilgili sınır yoktur. Uyarlamalı ilkeler kiracı [başına en fazla ilke sayısına](retention-limits.md#maximum-number-of-policies-per-tenant) tabi olsa da, daha esnek yapılandırma büyük olasılıkla çok daha az ilkeyle sonuçlanır.
+
+- Bekletme gereksinimleriniz için daha güçlü hedefleme. Örneğin, mevcut Azure AD özniteliklerini kullanarak bu amaca yönelik grup oluşturma ve bakımını yönetme ek yükü olmadan kullanıcılara coğrafi konumlarına göre farklı bekletme ayarları atayabilirsiniz.
+
+- Sorgu tabanlı üyelik, grup üyeliğine veya departmanlar arası iletişime dayanan dış süreçlere güvenilir bir şekilde yansıtılmayan iş değişikliklerine karşı dayanıklılık sağlar.
+
+- Tek bir bekletme ilkesi hem Microsoft Teams hem de Yammer için konumlar içerebilir, ancak statik bir kapsam kullandığınızda bu konumlar kendi bekletme ilkelerini gerektirir.
+
+- Belirli bekletme ayarlarını yalnızca etkin olmayan posta kutularına uygulayabilirsiniz. İlke atandığı sırada statik kapsamlar etkin olmayan posta kutularına sahip alıcıların eklenmesini desteklemediğinden bu yapılandırma statik kapsamla mümkün değildir.
 
 Statik kapsamları kullanmanın avantajları:
 
-- bir iş yükü için tüm örneklerin otomatik olarak seçili durumda olması için daha basit yapılandırma.
-    
-    "içerir" ve "dışlar" söz konusu olursa, belirtmeniz gereken örneklerin sayısı düşükse ve değişmezse, bu seçenek başlangıçta daha basit bir yapılandırma olabilir. Bununla birlikte, bu sayı artya başlıyorsa ve organizasyonda ilkelerinizi yeniden yapılandırmanızı gerektiren sık değişiklikler oluyorsa, uyarlanabilir kapsamları yapılandırmak daha kolay ve bakımları çok daha kolay olabilir.
+- Bir iş yükü için tüm örneklerin otomatik olarak seçilmesini istiyorsanız daha basit yapılandırma.
 
-- Klasör **Skype Kurumsal** **Exchange klasör konumları** uyarlanabilir kapsamları desteklemez. Bu konumlar için statik bir kapsam kullan gerekir. 
+    "Eklemeler" ve "dışlar" için, belirtmeniz gereken örnek sayısı düşükse ve değişmezse bu seçenek başlangıçta daha basit bir yapılandırma olabilir. Ancak, bu sayıda örnek artmaya başladığında ve kuruluşunuzda ilkelerinizi yeniden yapılandırmanızı gerektiren sık sık değişiklikleriniz olduğunda uyarlamalı kapsamların yapılandırılması daha basit ve bakımı çok daha kolay olabilir.
 
-Yapılandırma bilgileri için bkz. [Uyarlanabilir kapsamları yapılandırma](retention-settings.md#configuration-information-for-adaptive-scopes).
+- **Skype Kurumsal** ve **Exchange ortak klasör** konumları uyarlamalı kapsamları desteklemez. Bu konumlar için statik bir kapsam kullanmanız gerekir.
 
-Kayıtlı bir web projesini izlemek için (kayıt gerektirir), Uyarlanabilir [Kapsamlar'da Deep Dive sayfasını ziyaret edin](https://mipc.eventbuilder.com/event/45703).
+Yapılandırma bilgileri için bkz [. Uyarlamalı kapsamları yapılandırma](retention-settings.md#configuration-information-for-adaptive-scopes).
+
+Kaydedilmiş bir web seminerini izlemek için (kayıt gerektirir), [Uyarlamalı Kapsamlar hakkında Ayrıntılı Bakış sayfasını ziyaret edin](https://mipc.eventbuilder.com/event/45703).
 
 > [!IMPORTANT]
-> Şu anda, uyarlanabilir kapsamlar bekletme ilkeleri ve [bekletme etiketi ilkelerine yönelik değişiklikleri kısıtlamak için Tutma Kilidi'i desteklememektedir](#use-preservation-lock-to-restrict-changes-to-policies).
+> Şu anda uyarlamalı kapsamlar, [bekletme ilkeleri ve bekletme etiketi ilkelerindeki değişiklikleri kısıtlamak için Koruma Kilidi'nin](#use-preservation-lock-to-restrict-changes-to-policies) desteklenmemektedir.
 
 ## <a name="policy-lookup"></a>İlke araması
 
-Yayımlama veya otomatik olarak uygulama Microsoft 365 birçok bekletme etiketi ilkelerinin yanı sıra bu konumlar için birden çok bekletme ilkesi yapılandırabilirsiniz. Belirli kullanıcılara, sitelere ve kullanıcı gruplarına atanan bekletme Microsoft 365 bulmak için, aşağıdaki çözümde Bilgi yönetimi çözümünden  İlke araması Microsoft 365 uyumluluk merkezi:
+Microsoft 365 konumlar için birden çok bekletme ilkesi ve yayımladığınız veya otomatik uyguladığınız birden çok bekletme etiketi ilkesi yapılandırabilirsiniz. Belirli kullanıcılara, sitelere ve Microsoft 365 gruplarına atanan bekletme ilkelerini bulmak için, Microsoft 365 uyumluluk merkezi **Bilgi idaresi** çözümünden **İlke araması'nı** kullanın:
 
-![Belirli kullanıcılara, sitelere ve site gruplarına atanan bekletme ilkelerini bulmak Microsoft 365 arama ](../media/policy-lookup.png)
+![Belirli kullanıcılara, sitelere ve Microsoft 365 gruplarına atanan bekletme ilkelerini bulmak için ilke araması ](../media/policy-lookup.png)
 
-Kullanıcının tam e-posta adresini, sitenin tam URL'sini veya bir grup kullanıcı grubu için tam e-Microsoft 365 belirtebilirsiniz.
+Bir kullanıcının tam e-posta adresini, sitenin tam URL'sini veya Microsoft 365 grubu için tam e-posta adresini belirtmeniz gerekir.
 
-Siteler seçeneği e-OneDrive içerir. Bir kullanıcının iş hesabının URL'sini belirtme hakkında bilgi OneDrive için bkz. Kuruluşta çalışan tüm [OneDrive URL'lerin listesini elde edin](/onedrive/list-onedrive-urls).
+Siteler seçeneği OneDrive hesapları içerir. Kullanıcının OneDrive hesabının URL'sini belirtme hakkında bilgi için bkz. [Kuruluşunuzdaki tüm kullanıcı OneDrive URL'lerinin listesini alma](/onedrive/list-onedrive-urls).
 
-## <a name="the-principles-of-retention-or-what-takes-precedence"></a>Bekletme ilkeleri veya öncelik gerekenler?
+## <a name="the-principles-of-retention-or-what-takes-precedence"></a>Bekletme ilkeleri veya öncelik neleri alır?
 
-Bekletme etiketlerinden farklı olarak, aynı içeriğe birden çok bekletme ilkesi uygulayabilirsiniz. Her bekletme ilkesi bir bekletme eylemine ve silme eylemine neden olabilir. Buna ek olarak, söz konusu öğe bir bekletme etiketinden de bu eylemlere tabi olabilir.
+Bekletme etiketlerinden farklı olarak, aynı içeriğe birden fazla bekletme ilkesi uygulayabilirsiniz. Her bekletme ilkesi bir saklama eylemine ve silme eylemine neden olabilir. Ayrıca, bu öğe bir bekletme etiketinden bu eylemlere de tabi olabilir.
 
-Bu senaryoda, öğeler bir diğerinde çakışmaya neden olan birden çok bekletme ayarına tabi olduğunda sonucu belirlemek için hangi önceliğe sahip olur?
+Bu senaryoda, öğeler birbiriyle çakışabilecek birden çok bekletme ayarına tabi olabileceğinde, sonucu belirlemek için öncelikli olan nedir?
 
-Sonuç, tek bir bekletme ilkesi veya tek bekletme etiketi kazanır, ancak bir öğenin ne kadar süreyle tutul (varsa) ve bir öğe silindiğinde (varsa) sonucu değildir. Bu iki eylem, bir öğeye uygulanan tüm bekletme ayarlarından bağımsız olarak hesaplanır.
+Sonuç, hangi tek bekletme ilkesinin veya tek bekletme etiketinin kazanıldığı değil, bir öğenin ne kadar süreyle korunacak (varsa) ve bir öğenin ne zaman silindiği (varsa) değildir. Bu iki eylem, bir öğeye uygulanan tüm bekletme ayarlarından birbirinden bağımsız olarak hesaplanır.
 
-Örneğin, bir öğe yalnızca silme eylemi için yapılandırılmış bir bekletme ilkesine ve alıkoyma ve sonra da silme işlemiyle yapılandırılan başka bir bekletme ilkesine tabi olabilir. Sonuç olarak, bu öğenin tek bir koruma eylemi, ancak iki silme eylemi vardır. Bekletme ve silme eylemlerinin arasında çakışma olabilir ve iki silme eylemi de çakışan bir tarihe sahip olabilir. Bekletme ilkeleri sonucu açıklar.
+Örneğin, bir öğe yalnızca silme eylemi için yapılandırılan bir bekletme ilkesine ve korunacak ve sonra silinecek şekilde yapılandırılmış başka bir bekletme ilkesine tabi olabilir. Sonuç olarak, bu öğenin yalnızca bir saklama eylemi vardır, ancak iki silme eylemi vardır. Bekletme ve silme eylemleri birbiriyle çakışabilir ve iki silme eylemi çakışan bir tarihe sahip olabilir. Elde tutma ilkeleri sonucu açıklar.
 
-Yüksek bir düzeyde, bekletmenin her zaman kalıcı silme önceliğe ve en uzun bekletme süresine sahip olacağını garanti olabilirsiniz. Bu iki basit kural her zaman bir öğenin ne kadar süreyle tutulacak olduğuna karar verir.
+Yüksek düzeyde saklamanın her zaman kalıcı silmeden öncelikli olduğundan ve en uzun saklama süresinin kazanılacağından emin olabilirsiniz. Bu iki basit kural her zaman bir öğenin ne kadar süre tutulacağını karar verir.
 
-Bir öğenin kalıcı olarak ne zaman silineceklerini belirleyen birkaç etmen daha vardır ve bu eylem bir bekletme ilkesinden silme eylemine her zaman bir bekletme ilkesinden önce gelir.
+Bir öğenin kalıcı olarak ne zaman silineceğini belirleyen birkaç faktör daha vardır. Bu, bekletme etiketinden silme eyleminin bir bekletme ilkesinden silme eyleminden her zaman öncelikli olmasını içerir.
 
-Her düzeyin üst düzeyden alta çakışmalar için bir bağ sonu gibi davranarak tek bir öğe için bekletme ve silme sonuçlarını anlamak üzere aşağıdaki akışı kullanın. Sonuç, başka çakışmalar olduğundan birinci düzeye göre belirlenirse, sonraki düzeye ilerlemek zorunda değildir ve bu şekilde devam etmek zorunda değildir.
+Tek bir öğenin elde tutma ve silme sonuçlarını anlamak için aşağıdaki akışı kullanın. Burada her düzey, yukarıdan aşağıya doğru çakışmalar için bir bağlama kesici görevi görür. Daha fazla çakışma olmadığı için sonuç ilk düzeye göre belirlenirse, bir sonraki düzeye ilerlemeye gerek yoktur ve bu şekilde devam eder.
 
 > [!IMPORTANT]
-> Bekletme etiketleri kullanıyorsanız: Aynı öğede birden çok bekletme ayarlarının sonucunu belirleyen ilkeleri uygulamadan önce, hangi bekletme etiketinin uygulandığını biliyor [olun](#only-one-retention-label-at-a-time).
+> Bekletme etiketleri kullanıyorsanız: Aynı öğedeki birden çok bekletme ayarının sonucunu belirlemek için ilkeleri uygulamadan önce [, hangi bekletme etiketinin uygulandığını](#only-one-retention-label-at-a-time) bildiğinizden emin olun.
 
-![Bekletme ilkeleri diyagramı.](../media/principles-of-retention.png)
+![Bekletme ilkelerinin diyagramı.](../media/principles-of-retention.png)
 
-Her ilkeyi daha ayrıntılı açıklamadan önce, bekletme ilkesi veya bekletme etiketinde belirtilen bekletme süresi ile öğenin bekletme süresi arasındaki farkı anlamak önemlidir. Bunun nedeni, varsayılan yapılandırmanın bir öğe oluşturulduğunda bekletme dönemini başlatmak olmasına rağmen, bekletme süresi sonu öğe için sabit olsa da dosyaların, bekletme dönemini dosya en son değiştirildiğinden itibaren başlatması için yapılandırmasını da desteklemesidir. Bu alternatif yapılandırmayla, dosya her değiştirildiğinde bekletme süresinin başlangıcı sıfırlanır ve bu da öğe için bekletme süresinin sonunu uzatır. Bekletme etiketleri, etiketli olduğu bekletme dönemini olayın başında ve başında başlatmayı da destekler.
+Her ilkeyi daha ayrıntılı bir şekilde açıklamadan önce, öğe için saklama süresi ile bekletme ilkesinde veya bekletme etiketinde belirtilen saklama süresi arasındaki farkı anlamak önemlidir. Bunun nedeni, varsayılan yapılandırma bir öğe oluşturulduğunda bekletme süresini başlatmak olsa da, böylece öğe için saklama süresinin sonu sabitlenmiş olsa da, dosyaların dosyanın en son değiştirildiği zaman bekletme süresini başlatmak için yapılandırmayı da desteklemesidir. Bu alternatif yapılandırmayla, dosya her değiştirildiğinde, saklama süresinin başlangıcı sıfırlanır ve bu da öğenin saklama süresinin sonunu uzatır. Bekletme etiketleri, etiketlendiğinde ve bir olayın başlangıcında bekletme süresinin başlatılmasını da destekler.
 
-İlkeleri bir dizi Evet ve Hayır sorusuyla birlikte uygulamak için bekletme akış çizelgesini [de kullanabilirsiniz](retention-flowchart.md).
+İlkeleri bir dizi Evet ve Hayır sorusuyla uygulamada uygulamak için [bekletme akış çizelgesini](retention-flowchart.md) de kullanabilirsiniz.
 
 Dört farklı ilkenin açıklaması:
-  
-1. **Bekletme, silme işlemini geri kazanır.** İçeriğin saklamayı da istediğiniz bekletme ayarları olduğunda, içerik kalıcı olarak silinmez. Bu ilke, içeriğin uyumluluk nedeniyle korunmasını sağlarken, silme işlemi hala başlat (kullanıcı tarafından başlatılmış veya sistem tarafından başlatılan) ve sonuç olarak da kullanıcıların ana görünümünden içerik kaldırabilirsiniz. Bununla birlikte, kalıcı silme işlemi askıya alınır. İçeriğin nasıl ve nerede tutul olduğu hakkında daha fazla bilgi için, her iş yükü için aşağıdaki bağlantıları kullanın:
-    
-    - [Bekletme, alan ve SharePoint için OneDrive](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive)
-    - [Bekletme, alanla birlikte Microsoft Teams](retention-policies-teams.md#how-retention-works-with-microsoft-teams)
-    - [Bekletme, alanla birlikte Yammer](retention-policies-yammer.md#how-retention-works-with-yammer)
-    - [Müşteri için bekletme nasıl Exchange](retention-policies-exchange.md#how-retention-works-for-exchange)
-    
-    Bu birinci ilkeye **örnek:** E-posta iletisi, oluşturduktan üç yıl sonra öğeleri secek şekilde yapılandırılmış Exchange için bir bekletme ilkesine tabi olur ve ayrıca, öğeleri oluşturulduktan beş yıl sonra alıkoyacak şekilde yapılandırılmış bir bekletme etiketine de sahiptir.
-    
-    E-posta iletisi beş yıl süreyle korunur, çünkü bu bekletme eylemi silinmeye göre öncelikli olur. Bekletme eylemi devam ederken askıya alınan silme eylemi nedeniyle, e-posta iletisi beş yıl sonunda kalıcı olarak silinir.
 
-2. **En uzun bekletme süresi kazanır.** İçerik, içeriği farklı süreler boyunca alıkoyan birden çok bekletme ayarına tabi olursa, içerik öğe için en uzun bekletme döneminin sonuna kadar korunur.
-    
+1. **Bekletme silme işlemine göre kazanır.** İçerik, saklama ayarlarına sahip olduğunda kalıcı olarak silinmez. Bu ilke, içeriğin uyumluluk nedeniyle korunmasını sağlar, ancak silme işlemi yine de başlatılabilir (kullanıcı tarafından başlatılan veya sistem tarafından başlatılan) ve sonuç olarak, içeriği kullanıcıların ana görünümünden kaldırabilir. Ancak kalıcı silme işlemi askıya alınır. İçeriğin nasıl ve nerede tutulacağı hakkında daha fazla bilgi için her iş yükü için aşağıdaki bağlantıları kullanın:
+
+    - [Bekletme SharePoint ve OneDrive için nasıl çalışır?](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive)
+    - [Bekletme Microsoft Teams ile nasıl çalışır?](retention-policies-teams.md#how-retention-works-with-microsoft-teams)
+    - [Bekletme Yammer ile nasıl çalışır?](retention-policies-yammer.md#how-retention-works-with-yammer)
+    - [Bekletme Exchange için nasıl çalışır?](retention-policies-exchange.md#how-retention-works-for-exchange)
+
+    **Bu ilk ilkeye örnek**: E-posta iletisi, oluşturulduktan üç yıl sonra öğeleri silmek üzere yapılandırılmış Exchange için bekletme ilkesine tabidir ve ayrıca öğeleri oluşturulduktan beş yıl sonra saklamak üzere yapılandırılmış bir bekletme etiketi de vardır.
+
+    Bu bekletme eylemi silme işleminden öncelikli olduğundan, e-posta iletisi beş yıl boyunca saklanır. Bekletme eylemi etkinken askıya alınan silme eylemi nedeniyle e-posta iletisi beş yılın sonunda kalıcı olarak silinir.
+
+2. **En uzun saklama süresi kazanır.** İçerik, içeriği farklı süreler boyunca saklayan birden çok bekletme ayarına tabiyse, içerik öğe için en uzun saklama süresinin sonuna kadar korunur.
+
     > [!NOTE]
-    > Bekletme ilkesinde veya etikette 5 yıllık bir bekletme süresi, bekletme ilkesinde veya etikette 7 yıllık bir bekletme süresi elde etmek mümkündür, çünkü 5 yıllık dönem dosyanın en son ne zaman değiştirildiğinden başlayacak şekilde yapılandırılır ve 7 yıllık süre dosya oluşturulduğunda buradan başlayacak şekilde yapılandırılır.
-    
-    **Bu ikinci ilkeye örnek**: Pazarlama Belgeleri SharePoint iki bekletme ilkesine tabidir. İlk bekletme ilkesi, tüm sitelerde SharePoint oluşturulduktan sonra beş yıl boyunca alıkoyacak şekilde yapılandırılır. İkinci bekletme ilkesi, belirli sitelere SharePoint, oluşturduktan sonra on yıl boyunca öğeleri alıkoyacak şekilde yapılandırılır.
-    
-    Bu Pazarlama Pazarlama SharePoint sitenin belgeleri on yıl süreyle korunur, çünkü bu öğe için en uzun bekletme süresidir.
+    > 5 yıllık süre, dosyanın en son ne zaman değiştirildiğine göre başlayacak şekilde yapılandırıldığından ve 7 yıllık süre dosyanın oluşturulduğundan itibaren başlayacak şekilde yapılandırıldığından, bekletme ilkesinde veya etiketinde 5 yıllık bir saklama süresi elde edilir.
 
-3. **Belirtik, silmeler için örtülü olarak kazanır.** Artık bekletme çakışmaları çözüldü, yalnızca silme çakışmaları kalır: 
-    
-    1. Bekletme ayarları kapsayıcıdan örtülü olarak değil de tek bir öğeye uygulandığından, bekletme ilkeleriyle karşılaştırmalı olarak, açık bir bekletme etiketi sağlar. Bu, bekletme etiketinden silme eyleminin her zaman herhangi bir bekletme ilkesinden silme eylemine göre öncelikli olduğu anlamına gelir.
-        
-        **Bu** üçüncü ilke (etiket) örneği: Belge, sırasıyla beş yıl ve on yıllık silme eylemine sahip iki bekletme ilkesine, ayrıca yedi yıllık silme eylemine sahip bir bekletme etiketine tabidir.
-        
-        Bekletme etiketinden silme eylemi öncelikli olduğundan, belge yedi yıl sonra kalıcı olarak silinir.
-    
-    2. Yalnızca bekletme ilkeleriniz olduğunda: Bir konumun bekletme ilkesi uyarlanabilir kapsam veya belirli örnekleri (örneğin Exchange e-postası için belirli kullanıcıları) içeren statik bir kapsam kullanıyorsa, bu bekletme ilkesi aynı konum için tüm örneklerde yapılandırılmış statik kapsamdan öncelikli olur.
-        
-        Bir konumun tüm örnekleri için yapılandırılmış statik kapsam bazen "kuruluş çapında bir ilke" olarak da adlandırılır. Örneğin, **Exchange postayı** ve Tüm alıcılar'ın **varsayılan ayarını seçin**. Ayrıca, **SharePoint ve** Tüm siteler varsayılan ayarını **da değiştirebilirsiniz**. Bekletme ilkeleri kuruluş genelinde değil de uyarlanabilir bir kapsam veya belirli örnekleri içeren statik kapsam ile yapılandırıldığında, bu düzeyde eşit öncelikleri vardır.
-        
-        **Bu üçüncü ilke (ilkeler) için örnek 1**: E-posta iletisi iki bekletme ilkesine tabidir. İlk bekletme ilkesi, on yıl sonra incelenir ve öğeleri siler. İkinci bekletme ilkesi, belirli posta kutularının kapsamındadır ve beş yıl sonra öğeleri siler.
-        
-        Kapsamlı bekletme ilkesinden silme eylemi kuruluş genelindeki bekletme ilkesine göre öncelikli olduğundan, e-posta iletisi beş yıl sonra kalıcı olarak silinir.
-        
-        **Örnek 2. ilke (ilkeler)**: Bir kullanıcının hesaplarında yer alan OneDrive iki bekletme ilkesine tabidir. İlk bekletme ilkesi, bu kullanıcının kullanıcı hesabını içerecek şekilde OneDrive ve 10 yılın ardından silme eylemine sahiptir. İkinci bekletme ilkesi, bu kullanıcının kullanıcı hesabını içerecek şekilde OneDrive ve yedi yıl sonra silme eylemine sahiptir.
-        
-        Her iki bekletme ilkesi de belirli örnekleri içerecek şekilde kapsamında olduğundan, bu belge kalıcı olarak silindiğinde bu düzeyde belirlenemez.
+    **Bu ikinci ilke için örnek**: Pazarlama SharePoint sitesindeki belgeler iki saklama ilkesine tabidir. İlk bekletme ilkesi, tüm SharePoint siteleri için öğeleri oluşturulduktan sonra beş yıl boyunca saklayacak şekilde yapılandırılır. İkinci bekletme ilkesi, belirli SharePoint siteleri için öğeleri oluşturulduktan sonra on yıl boyunca saklayacak şekilde yapılandırılır.
 
-4. **En kısa silme dönemi kazanır.** Öğelerin bekletme ilkelerinden ne zaman silineceklerini ve sonucun önceki düzeyden ne zaman çözümlenemediklerini belirlemek için geçerlidir: İçerik, öğe için en kısa bekletme döneminin sonunda kalıcı olarak silinir.
-    
+    Bu Pazarlama SharePoint sitesindeki belgeler, öğe için en uzun saklama süresi olduğundan on yıl boyunca saklanır.
+
+3. **Silme işlemleri için örtük olarak açıkça kazanır.** Çakışmalar artık bekletme için çözümlenmiş durumdaysa, yalnızca silme işlemleri için çakışmalar kalır:
+
+    1. Bekletme ayarları kapsayıcıdan örtük olarak atanmak yerine tek bir öğeye uygulandığından, bekletme etiketi (ancak uygulandı) bekletme ilkeleriyle karşılaştırıldığında açık saklama sağlar. Bu, bekletme etiketinden silme eyleminin her zaman herhangi bir bekletme ilkesindeki silme eyleminden öncelikli olduğu anlamına gelir.
+
+        **Bu üçüncü ilke (etiket) için örnek**: Belge, sırasıyla beş yıl ve on yıllık silme eylemine ve ayrıca yedi yıllık silme eylemine sahip bir bekletme etiketine sahip iki bekletme ilkesine tabidir.
+
+        Saklama etiketinden silme eylemi öncelikli olduğundan, belge yedi yıl sonra kalıcı olarak silinir.
+
+    2. Yalnızca bekletme ilkeleriniz varsa: Bir konum için bekletme ilkesi uyarlamalı bir kapsam veya belirli örnekleri (Exchange e-posta için belirli kullanıcılar gibi) içeren statik bir kapsam kullanıyorsa, bekletme ilkesi aynı konum için tüm örnekler için yapılandırılmış statik bir kapsamdan önceliklidir.
+
+        Bir konum için tüm örnekler için yapılandırılan statik kapsam bazen "kuruluş genelinde ilke" olarak adlandırılır. Örneğin, **e-postayı ve** **varsayılan Tüm alıcılar** ayarını Exchange. Ya da **siteleri ve** **Varsayılan Tüm siteler** ayarını SharePoint. Bekletme ilkeleri kuruluş genelinde olmadığında ancak uyarlamalı bir kapsamla veya belirli örnekleri içeren statik bir kapsamla yapılandırıldığında, bu düzeyde eşit önceliğe sahiptir.
+
+        **Bu üçüncü ilke (ilkeler) için örnek 1**: E-posta iletisi iki bekletme ilkesine tabidir. İlk bekletme ilkesi kapsam dışıdır ve on yıl sonra öğeleri siler. İkinci bekletme ilkesinin kapsamı belirli posta kutularına göre belirlenmiştir ve beş yıl sonra öğeleri siler.
+
+        Kapsamı belirlenmiş saklama ilkesindeki silme eylemi kuruluş genelinde saklama ilkesinden öncelikli olduğundan, e-posta iletisi beş yıl sonra kalıcı olarak silinir.
+
+        **Bu üçüncü ilke (ilkeler) için örnek 2**: Kullanıcının OneDrive hesabındaki bir belge iki saklama ilkesine tabidir. İlk bekletme ilkesinin kapsamı bu kullanıcının OneDrive hesabını içerecek şekilde belirlenmiştir ve 10 yıl sonra silme eylemi vardır. İkinci bekletme ilkesinin kapsamı bu kullanıcının OneDrive hesabını içerecek şekilde belirlenmiştir ve yedi yıl sonra silme eylemi vardır.
+
+        Her iki bekletme ilkesi de belirli örnekleri içerecek şekilde belirlendiğinden bu belgenin kalıcı olarak silineceği bu düzeyde belirlenemez.
+
+4. **En kısa silme süresi kazanır.** Öğelerin bekletme ilkelerinden ne zaman silineceğini ve sonucun önceki düzeyden çözümlenemeyeceğini belirlemek için geçerlidir: İçerik, öğe için en kısa saklama süresinin sonunda kalıcı olarak silinir.
+
     > [!NOTE]
-    > Bekletme süresi 7 yıl olan bir bekletme ilkesi 5 yıllık bir bekletme ilkesinden sonra elde edilmiş olabilir, çünkü ilk ilke dosyanın ne zaman oluşturulduğunda buna göre bekletme dönemini, ikinci bekletme ilkesi de dosya en son değiştirildiğinden başlayacak şekilde yapılandırılır.
-    
-    **Bu dördüncü ilkeye örnek**: Kullanıcının hesaplarında yer alan bir OneDrive iki bekletme ilkesine tabidir. İlk bekletme ilkesi, bu kullanıcının OneDrive içerir ve dosya oluşturulduktan sonra 10 yıllık bir silme eylemi içerir. İkinci bekletme ilkesi, bu kullanıcının OneDrive içerir ve dosya oluşturulduktan sonra yedi yıl süreyle silme eylemine sahiptir.
-    
-    Bu belge yedi yıl sonra kalıcı olarak silinecek, çünkü bu iki kapsamda bekletme ilkelerinden bir öğe için en kısa bekletme süresidir.
+    > 7 yıllık saklama süresine sahip bir bekletme ilkesi, 5 yıllık bir bekletme ilkesine göre kazanılabilir çünkü ilk ilke, dosyanın oluşturulduğu tarihe ve dosyanın son değiştirildiği ikinci bekletme ilkesine göre bekletme süresini başlatacak şekilde yapılandırılır.
 
-eBulma saklamaya tabi olan öğeler de ilk bekletme ilkesine sahiptir; hiçbir bekletme ilkesi veya bekletme etiketi tarafından kalıcı olarak silinemez. Bu saklama ilkeleri serbest bırakıca, bekletme ilkeleri bu ilkelere uygulanmalıdır. Örneğin, bundan sonra bunlar eldeki bir bekletme süresine veya silme eylemine tabi olabilir.
+    **Bu dördüncü ilke örneği**: Kullanıcının OneDrive hesabındaki bir belge iki bekletme ilkesine tabidir. İlk bekletme ilkesinin kapsamı bu kullanıcının OneDrive hesabını içerecek şekilde belirlenmiştir ve dosya oluşturulduktan sonra 10 yıllık silme eylemine sahiptir. İkinci bekletme ilkesinin kapsamı, bu kullanıcının OneDrive hesabını içerecek şekilde belirlenmiştir ve dosya oluşturulduktan sonra yedi yıllık bir silme eylemine sahiptir.
 
-### <a name="principles-of-retention-examples-that-combine-retain-and-delete-actions"></a>Bekletme ve silme eylemlerini birleştiren bekletme örneklerinin ilkeleri
+    Bu belge yedi yıl sonra kalıcı olarak silinir çünkü bu, bu iki kapsamlı saklama ilkesindeki öğe için en kısa saklama süresidir.
 
-Aşağıdaki örnekler, farklı koruma ve silme eylemleri bir araya geldiğinde bekletme ilkelerini göstermek için daha karmaşıktır. Örneklerin takip kolay olması için, tüm bekletme ilkeleri ve etiketler, öğe oluşturulduğunda bekletme dönemini başlatmaya yönelik varsayılan ayarı kullanır; böylelikle bekletme döneminin sonu öğe için de aynı olur.
+eBulma saklamaya tabi öğeler de ilk saklama ilkesi kapsamındadır; herhangi bir bekletme ilkesi veya bekletme etiketi tarafından kalıcı olarak silinemez. Bu saklama serbest bırakıldığında saklama ilkeleri bunlar için geçerli olacaktır. Örneğin, bunlar daha sonra süresiz saklama süresine veya silme eylemine tabi olabilir.
 
-1. Bir öğeye aşağıdaki bekletme ayarları uygulanmıştır:
-    
+### <a name="principles-of-retention-examples-that-combine-retain-and-delete-actions"></a>Saklama ve silme eylemlerini birleştiren bekletme örnekleri ilkeleri
+
+Aşağıdaki örnekler, farklı saklama ve silme eylemleri birleştirildiğinde elde tutma ilkelerini göstermek için daha karmaşıktır. Örneklerin daha kolay izlenebilmesini sağlamak için, tüm bekletme ilkeleri ve etiketleri, öğe oluşturulduğunda bekletme süresini başlatma varsayılan ayarını kullanır, böylece bekletme döneminin sonu öğe için aynıdır.
+
+1. Bir öğeye aşağıdaki bekletme ayarları uygulanır:
+
     - Beş yıl sonra yalnızca silme için bekletme ilkesi
-    - Üç yıl süreyle tutulan ve sonra silinen bir bekletme ilkesi
-    - Yalnızca yedi yıl süreyle tutulan bir bekletme etiketi
-    
-    **Sonuç**: Bekletme, silinmeden önceliğe sahip olduğundan ve öğe için en uzun bekletme süresi yedi yıl olduğundan, öğe yedi yıl boyunca korunur. Bu bekletme döneminin sonunda, bekletme ilkelerinden silme eylemi nedeniyle öğe kalıcı olarak silinir.
-    
-    İki bekletme ilkesi silme eylemleri için farklı tarihlere sahip olsa da, kalıcı olarak silinebilir en erken öğe, her iki silme döneminden daha uzun olan en uzun bekletme döneminin sonunda olur. 
+    - Üç yıl boyunca saklayan ve ardından silecek bir bekletme ilkesi
+    - Yedi yıl boyunca yalnızca saklamayı sağlayan bir bekletme etiketi
 
-2.  Bir öğeye aşağıdaki bekletme ayarları uygulanmıştır:
-    
-    - Kuruluş genelinde yalnızca on yıl sonra silmeyi ilke edinen bir bekletme ilkesi
-    - Beş yıl süreyle alıkoyan ve sonra s olan belirli örneklerle kapsamı olan bir bekletme ilkesi
-    - Üç yıl süreyle tutulan ve sonra silinen bir bekletme etiketi
-    
-    **Sonuç**: Öğenin en uzun bekletme süresi olduğu için öğe beş yıl boyunca korunur. Bekletme döneminin sonunda, bekletme etiketinden üç yıllık silme eylemi nedeniyle öğe kalıcı olarak silinir. Bekletme etiketlerinden silme, tüm bekletme ilkelerinden silinmeye göre önceliklidir. Bu örnekte, tüm çakışmalar üçüncü düzey tarafından çözülür.
+    **Sonuç**: Saklama, silme işleminden öncelikli olduğundan ve yedi yıl öğe için en uzun saklama süresi olduğundan, öğe yedi yıl boyunca korunur. Bu saklama döneminin sonunda, saklama ilkelerinden silme eylemi nedeniyle öğe kalıcı olarak silinir.
 
-## <a name="use-preservation-lock-to-restrict-changes-to-policies"></a>İlkelerde yapılan değişiklikleri kısıtlamak için Saklama Kilidi'ne
+    İki bekletme ilkesi silme eylemleri için farklı tarihlere sahip olsa da, öğenin kalıcı olarak silinebileceği en erken tarih, her iki silme tarihi de daha uzun olan en uzun saklama süresinin sonundadır.
 
-Bazı kuruluşların, Menkul Değer ve Exchange Komisyonu (SEC) Kuralı 17a-4 gibi yasal düzenlemeler tarafından tanımlanan kurallara uyması gerekir. Bu kurallara uyması için bekletme ilkesi açık olduktan sonra bu ilkenin kapatılamayacak veya daha az kısıtlayıcı hale olabileceği gerekir. 
+2. Bir öğeye aşağıdaki bekletme ayarları uygulanır:
 
-Yasal Koruma Kilidi, bir bekletme ilkesi veya bekletme etiketi politikasını kilitler ve dolayısıyla kimsenin (yönetici dahil) ilkeyi kapatması, ilkeyi silemez veya daha az kısıtlayıcı hale konuy açması için bu tür yasal düzenleme gereksinimlerini karşılamalarını sağlar.
-  
-Bekletme ilkesi veya bekletme etiketi ilkesi oluşturulduktan sonra Saklama Kilidi'ne uygulanır. Daha fazla bilgi ve yönergeler için bkz [. Bekletme ilkeleri ve bekletme etiketi ilkelerine yönelik değişiklikleri kısıtlamak için Saklama Kilidi'i kullanma](retention-preservation-lock.md).
+    - On yıl sonra yalnızca silebilen kuruluş genelinde saklama ilkesi
+    - Kapsamı beş yıl boyunca tutulan ve ardından silen belirli örneklerle kapsamlı bir bekletme ilkesi
+    - Üç yıl boyunca saklayan ve ardından silecek bir bekletme etiketi
 
-## <a name="releasing-a-policy-for-retention"></a>Bekletme ilkesi bırakma
+    **Sonuç**: Bu, öğe için en uzun saklama süresi olduğundan, öğe beş yıl boyunca saklanır. Bu saklama döneminin sonunda, saklama etiketinden üç yıllık silme eylemi nedeniyle öğe kalıcı olarak silinir. Bekletme etiketlerinden silme, tüm bekletme ilkelerinden silme işleminden önceliklidir. Bu örnekte, tüm çakışmalar üçüncü düzey tarafından çözülür.
 
-Bekletme ilkelerinizin Saklama Kilidi yoktur; ilkelerinizi istediğiniz zaman silebilirsiniz; bu da bekletme ilkesi için bekletme ayarlarını etkili bir şekilde kapatamaz ve bekletme etiketleri artık bekletme etiketi ilkelerinden uygulanamaz. Önceden uygulanmış olan tüm bekletme etiketleri yapılandırılmış bekletme ayarlarıyla kalır ve bu etiketler için, öğelerin ne zaman etiketli olduğunu temel alarak bekletme dönemini yine güncelleştirebilirsiniz.
+## <a name="use-preservation-lock-to-restrict-changes-to-policies"></a>İlkelerde yapılan değişiklikleri kısıtlamak için Koruma Kilidi'ni kullanma
 
-Ayrıca bir ilkeyi saklayabilirsiniz, ancak konum durumunu kapalı olarak değiştirebilir veya ilkeyi devre dışı abilirsiniz. Bir diğer seçenek de ilkeyi yeniden yapılandırarak artık belirli kullanıcıları, siteleri, grupları, diğer siteleri ve diğer özellikleri kapsar. 
+Bazı kuruluşların Menkul Kıymetler ve Exchange Komisyonu (SEC) Kuralı 17a-4 gibi düzenleyici kuruluşlar tarafından tanımlanan kurallara uyması gerekebilir. Bu kural, saklama ilkesi açıldıktan sonra kapatılamayacağını veya daha az kısıtlayıcı hale getirilemeyeceğini gerektirebilir.
+
+Koruma Kilidi, kuruluşunuzun bu tür yasal gereksinimleri karşılayabilmesini sağlar çünkü bir bekletme ilkesini veya bekletme etiketi ilkesini kilitler ve böylece yönetici de dahil olmak üzere hiç kimse ilkeyi kapatabilir, ilkeyi silebilir veya daha az kısıtlayıcı hale getiremez.
+
+Saklama ilkesi veya bekletme etiketi ilkesi oluşturulduktan sonra Koruma Kilidi uygularsınız. Daha fazla bilgi ve yönergeler için bkz [. Saklama ilkeleri ve bekletme etiketi ilkelerindeki değişiklikleri kısıtlamak için Koruma Kilidi'ni kullanma](retention-preservation-lock.md).
+
+## <a name="releasing-a-policy-for-retention"></a>Bekletme için ilke yayımlama
+
+Bekletme ilkelerinizin Koruma Kilidi olmadığından, ilkelerinizi istediğiniz zaman silebilirsiniz; bu da bekletme ilkesi için bekletme ayarlarını etkin bir şekilde kapatır ve bekletme etiketleri artık bekletme etiketi ilkelerinden uygulanamaz. Daha önce uygulanan tüm bekletme etiketleri yapılandırılmış bekletme ayarlarıyla kalır ve bu etiketler için, öğelerin etiketlendiği zamanı temel almayan saklama süresini yine güncelleştirebilirsiniz.
+
+Ayrıca bir ilkeyi koruyabilir, ancak konum durumunu kapalı olarak değiştirebilir veya ilkeyi devre dışı bırakabilirsiniz. Bir diğer seçenek de ilkeyi, artık belirli kullanıcıları, siteleri, grupları vb. içeremeyecek şekilde yeniden yapılandırmaktır.
 
 Belirli konumlar için ek bilgiler:
 
-- **SharePoint ve hesap OneDrive seçin:**
-    
-    SharePoint siteleri ve OneDrive hesapları için bir bekletme ilkesi bıraksanız bile, yanlışlıkla veri kaybını önlemek için ilkeden bekletmeye tabi olan tüm içerik 30 gün boyunca korunur. Bu 30 günlük yetkisiz kullanım süresi boyunca silinen dosyalar korunur (dosyalar Saklama kitaplığına eklenmeye devam eder), ancak Bu dosyalar için Düzenli Saklama kitaplığını düzenli aralıklarla temiz alan zamanlayıcı işi bu dosyalar için askıya alınır ve böylelikle gerekirse bunları geri yükleyebilirsiniz.
-    
-    Bu 30 günlük yetkisiz kullanım süresi için bir özel durum, ilkeyi SharePoint'de bir veya daha fazla siteyi veya OneDrive hesaplarını dışarıda tutmak için güncelleştirmenizdir; bu durumda, Süreölçer işi Koruma Kitaplığı'nın bu konumlara yönelik dosyalarını 30 günlük gecikme olmadan siler.
-    
-    Saklama Kitaplığı hakkında daha fazla bilgi için bkz. Koruma Kitaplığı [kitaplığında bekletme SharePoint nasıl OneDrive](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive).
-    
-    yetkisiz kullanım süresi boyuncaki davranış nedeniyle, 30 gün içinde ilkeyi yeniden etkinleştirir veya konum durumunu yeniden etkin hale gelirseniz, ilke bu süre boyunca kalıcı bir veri kaybı olmaksızın sürdürebilirsiniz.
+- **Siteleri ve OneDrive hesaplarını SharePoint:**
 
-- **Exchange-postayı ve grup Microsoft 365 gönderme**
-    
-    İlkenin yayım tarihi geldiğinde etkin olmayan posta [kutuları için](inactive-mailboxes-in-office-365.md) bir bekletme ilkesi yayımlarken:
-    
-    - Bekletme ilkesi açıkça posta kutusuna uygulanmışsa, bekletme ayarları artık geçerli olmaz. Hiçbir bekletme ayarı uygulanmazsa, etkin olmayan posta kutuları her zamanki gibi otomatik silme için uygun hale gelir.
-        
-        Açık bir bekletme ilkesi için uyarlanabilir bir ilke kapsamı veya ilke uygulandığı sırada etkin bir posta kutusunu belirttiğiniz ve daha sonra devre dışı hale gelen bir yapılandırma içeren statik ilke kapsamı gerekir
-    
-    - Bekletme ilkesi bir posta kutusuna örtülü olarak uygulanmışsa ve yapılandırılan bekletme eylemi korumaksa, bekletme ilkesi uygulanmaya devam eder ve etkin olmayan posta kutuları hiçbir zaman otomatik silme için uygun hale gelir. Bekletme süresinin süresi sona erdiğinde bekletme eylemi artık geçerli olmadığı durumda, Exchange yönetici artık etkin olmayan posta kutusunu el [ile silebilir](delete-an-inactive-mailbox.md)
-        
-        Örtülü bir bekletme ilkesi, Tüm **alıcılar (** e-posta için) veya Tüm **gruplar (Exchange** Grupları için) yapılandırmasına sahip statik bir ilke Microsoft 365 gerektirir.
-    
-    Bekletme ilkeleri uygulanmış etkin olmayan posta kutuları hakkında daha fazla bilgi için bkz. [Etkin olmayan posta kutuları ve bekletmeyi Microsoft 365.](inactive-mailboxes-in-office-365.md#inactive-mailboxes-and-microsoft-365-retention)
+    SharePoint siteler ve OneDrive hesapları için bir bekletme ilkesi yayımladığınızda, ilkeden elde tutulması gereken tüm içerikler, yanlışlıkla veri kaybını önlemek için 30 gün boyunca korunmaya devam eder. Bu 30 günlük yetkisiz kullanım süresi boyunca silinen dosyalar hala korunur (dosyalar Koruma Bekletme kitaplığına eklenmeye devam eder), ancak koruma bekletme kitaplığını düzenli aralıklarla temizleyen zamanlayıcı işi bu dosyalar için askıya alınır, böylece gerekirse bunları geri yükleyebilirsiniz.
+
+    bu 30 günlük yetkisiz kullanım süresinin bir istisnası, ilkeyi SharePoint veya OneDrive hesapları için bir veya daha fazla siteyi dışlamak üzere güncelleştirdiğinizdedir; bu durumda zamanlayıcı işi, 30 günlük gecikme olmadan Koruma Bekletme kitaplığındaki bu konumların dosyalarını siler.
+
+    Koruma Bekletme kitaplığı hakkında daha fazla bilgi için bkz. [Bekletme SharePoint ve OneDrive için nasıl çalışır](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive)?
+
+    Yetkisiz kullanım süresindeki davranış nedeniyle, ilkeyi yeniden etkinleştirirseniz veya konum durumunu 30 gün içinde yeniden açarsanız, ilke bu süre boyunca kalıcı bir veri kaybı olmadan devam eder.
+
+- **E-posta ve Microsoft 365 Grupları Exchange**
+
+  İlke yayımlandığında [etkin olmayan](inactive-mailboxes-in-office-365.md) posta kutuları için bir bekletme ilkesi yayımladığınızda:
+
+  - Bekletme ilkesi açıkça bir posta kutusuna uygulanırsa, bekletme ayarları artık geçerli olmaz. Bekletme ayarları uygulanmazsa, etkin olmayan bir posta kutusu her zamanki gibi otomatik silme için uygun hale gelir.
+
+    Açık saklama ilkesi, uyarlamalı bir ilke kapsamı veya ilkenin uygulandığı ve daha sonra etkin olmayan bir posta kutusu belirten bir ekleme yapılandırmasına sahip statik ilke kapsamı gerektirir
+
+  - Bekletme ilkesi bir posta kutusuna örtük olarak uygulanmışsa ve yapılandırılmış bekletme eylemi korunacaksa, bekletme ilkesi uygulanmaya devam eder ve etkin olmayan bir posta kutusu hiçbir zaman otomatik silme için uygun olmaz. Saklama süresi dolduğunda saklama eylemi artık geçerli olmadığında, Exchange yöneticisi [artık etkin olmayan posta kutusunu el ile silebilir](delete-an-inactive-mailbox.md)
+
+        An implicit retention policy requires a static policy scope with the **All recipients** (for Exchange email) or **All groups** (for Microsoft 365 Groups) configuration.
+
+    Bekletme ilkeleri uygulanmış etkin olmayan posta kutuları hakkında daha fazla bilgi için bkz. [Etkin olmayan posta kutuları ve Microsoft 365 bekletme](inactive-mailboxes-in-office-365.md#inactive-mailboxes-and-microsoft-365-retention).
 
 ## <a name="auditing-retention-configuration-and-actions"></a>Bekletme yapılandırmasını ve eylemlerini denetleme
 
-Denetim [etkinleştirildiğinde](turn-audit-log-search-on-or-off.md), bekletme için denetim olayları hem yönetim yapılandırmasında (bekletme ilkeleri ve bekletme etiketleri) hem de bekletme eylemlerini (yalnızca bekletme etiketleri) destekler.
+[Denetim etkinleştirildiğinde](turn-audit-log-search-on-or-off.md), bekletme için denetim olayları hem yönetim yapılandırması (bekletme ilkeleri ve bekletme etiketleri) hem de bekletme eylemleri (yalnızca bekletme etiketleri) için desteklenir.
 
 ### <a name="auditing-retention-configuration"></a>Bekletme yapılandırmasını denetleme
 
-Bekletme ilkeleri ve bekletme etiketleri için yönetici yapılandırması, bir bekletme ilkesi veya etiket oluşturulduğunda, yeniden yapılandırıldıktan veya silindiğinde denetim olayları olarak günlüğe kaydedilir.
+Bekletme ilkeleri ve bekletme etiketleri için yönetici yapılandırması, bir bekletme ilkesi veya etiket oluşturulduğunda, yeniden yapılandırıldığında veya silindiğinde denetim olayları olarak günlüğe kaydedilir.
 
-Denetim olaylarının tam listesi için bkz. [Bekletme ilkesi ve bekletme etiketi etkinlikleri](search-the-audit-log-in-security-and-compliance.md#retention-policy-and-retention-label-activities).
+Denetim olaylarının tam listesi için bkz [. Bekletme ilkesi ve bekletme etiketi etkinlikleri](search-the-audit-log-in-security-and-compliance.md#retention-policy-and-retention-label-activities).
 
 ### <a name="auditing-retention-actions"></a>Bekletme eylemlerini denetleme
 
-Denetim olayları olarak kaydedilen bekletme eylemleri yalnızca bekletme etiketleri için kullanılabilir; bekletme ilkeleri için kullanılamaz:
+Denetim olayları olarak günlüğe kaydedilen bekletme eylemleri yalnızca bekletme etiketleri için kullanılabilir ve bekletme ilkeleri için kullanılamaz:
 
-- Bir bekletme etiketi şirket içinde veya başka bir satırda bir öğeye uygulandığında, SharePoint veya OneDrive:
-    - Dosya **ve sayfa etkinliklerinden, bir** dosya **için Değiştirilmiş bekletme etiketi'ne tıklayın** 
+- SharePoint veya OneDrive bir öğeye bekletme etiketi uygulandığında, değiştirildiğinde veya öğeden kaldırıldığında:
+  - **Dosya ve sayfa etkinlikleri'nden** **Dosya için bekletme etiketi değiştirildi'yi** seçin
 
-- E-postada etiketli SharePoint bir kayıt olarak işaretlenir ve öğenin kilidi açılır veya kullanıcı tarafından kilitlenir:
-    - Dosya **ve sayfa etkinliklerinden,** Kayıt **durumu kilidi açık olarak değiştirildi ve Kayıt** durumu **kilitli olarak değiştirildi'yi seçin**
+- SharePoint etiketli bir öğe kayıt olarak işaretlendiğinde ve bir kullanıcı tarafından kilitlendiğinde veya kilitlendiğinde:
+  - **Dosya ve sayfa etkinlikleri'nden** **Kilitsiz kayıt durumu değiştirildi** ve **Kayıt durumu kilitli olarak değiştirildi'yi** seçin
 
-- İçeriği kayıt veya mevzuat kaydı olarak işaret alan bir bekletme etiketi kayıt veya yasal düzenlemelere uygun olarak Exchange:
-    - Posta **Exchange etkinlikleri için, İleti** **kayıt olarak etiketlenmiş'i seçin**
+- İçeriği kayıt veya mevzuat kaydı olarak işaretleyen bir bekletme etiketi Exchange'daki bir öğeye uygulandığında:
+  - **posta kutusu etkinlikleri Exchange** **etiketli ileti'yi seçin**
 
-- SharePoint, OneDrive veya Exchange etiketli bir öğe kayıt veya mevzuat kaydı olarak işaretlenir ve kalıcı olarak silinir:
-    - Dosya **ve sayfa etkinliklerinden,** Kayıt **olarak işaretlenmiş dosya silindi'yi seçin**
+- SharePoint, OneDrive veya Exchange etiketli bir öğe kayıt veya mevzuat kaydı olarak işaretlendiğinde ve kalıcı olarak silindiğinde:
+  - **Dosya ve sayfa etkinlikleri'nden** **Kayıt olarak işaretlenmiş Silinmiş dosya'yı** seçin
 
-- Disposition reviewer takes action for an item that's reach the end of its retention period:
-    -  **Disposition review activities from**, **select Approved disposal**, **Extended retention period**, **Relabeled item**, or **Added reviewers**
+- Bir değerlendirme gözden geçiren, saklama süresinin sonuna ulaşmış bir öğe için eylem gerçekleştirdiğinde:
+  - **Elden çıkarma gözden geçirme etkinliklerinden** **Onaylı elden çıkarma**, **Genişletilmiş saklama süresi**, **Yeniden etiketlenen öğe** veya **Gözden geçirenler eklendi'yi** seçin
 
 ## <a name="powershell-cmdlets-for-retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketleri için PowerShell cmdlet'leri
 
-Bekletme cmdlet'lerini kullanmak için, önce [Office 365 Güvenlik ve Uyumluluk & PowerShell'e bağlanmanız gerekir](/powershell/exchange/connect-to-scc-powershell). Ardından aşağıdaki cmdlet'lerden herhangi birini kullanın:
+Bekletme cmdlet'lerini kullanmak [için önce Office 365 Güvenlik & Uyumluluk Merkezi PowerShell'e bağlanmanız](/powershell/exchange/connect-to-scc-powershell) gerekir. Ardından aşağıdaki cmdlet'lerden birini kullanın:
 
 - [Get-ComplianceTag](/powershell/module/exchange/get-compliancetag)
 
-- [Yeni-ComplianceTag](/powershell/module/exchange/new-compliancetag)
+- [New-ComplianceTag](/powershell/module/exchange/new-compliancetag)
 
 - [Remove-ComplianceTag](/powershell/module/exchange/remove-compliancetag)
 
 - [Set-ComplianceTag](/powershell/module/exchange/set-compliancetag)
 
-- [Enable-ComplianceTagStorage](/powershell/module/exchange/enable-compliancetagstorage)
+- [Enable-complianceTagStorage](/powershell/module/exchange/enable-compliancetagstorage)
 
 - [Get-ComplianceTagStorage](/powershell/module/exchange/get-compliancetagstorage)
 
 - [Get-RecordReviewNotificationTemplateConfig](/powershell/module/exchange/get-recordreviewnotificationtemplateconfig)
 
-- [Get-retentionCompliancePolicy](/powershell/module/exchange/get-retentioncompliancepolicy)
+- [Get-RetentionCompliancePolicy](/powershell/module/exchange/get-retentioncompliancepolicy)
 
-- [New-retentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy)
+- [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy)
 
 - [Remove-RetentionCompliancePolicy](/powershell/module/exchange/remove-retentioncompliancepolicy)
 
@@ -561,85 +563,84 @@ Bekletme cmdlet'lerini kullanmak için, önce [Office 365 Güvenlik ve Uyumluluk
 
 - [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy)
 
-- [Get-retentionComplianceRule](/powershell/module/exchange/get-retentioncompliancerule)
+- [Get-RetentionComplianceRule](/powershell/module/exchange/get-retentioncompliancerule)
 
-- [New-retentionComplianceRule](/powershell/module/exchange/new-retentioncompliancerule)
+- [New-RetentionComplianceRule](/powershell/module/exchange/new-retentioncompliancerule)
 
 - [Remove-RetentionComplianceRule](/powershell/module/exchange/remove-retentioncompliancerule)
 
-- [Set-retentionComplianceRule](/powershell/module/exchange/set-retentioncompliancerule)
+- [Set-RetentionComplianceRule](/powershell/module/exchange/set-retentioncompliancerule)
 
+## <a name="when-to-use-retention-policies-and-retention-labels-or-ediscovery-holds"></a>Bekletme ilkeleri ve bekletme etiketleri veya eBulma saklamaları ne zaman kullanılır?
 
-## <a name="when-to-use-retention-policies-and-retention-labels-or-ediscovery-holds"></a>Bekletme ilkeleri ve bekletme etiketleri veya eBulma bekletmeleri ne zaman kullanılır?
+[Bir eBulma olayıyla oluşturduğunuz](create-ediscovery-holds.md) bekletme ayarları ve tutmaları her ikisi de verilerin kalıcı olarak silinmesini engelleyebilse de, farklı senaryolar için tasarlanmıştır. Farklılıkları anlamanıza ve hangisini kullanacağınıza karar vermenize yardımcı olmak için aşağıdaki kılavuzu kullanın:
 
-[eBulma durumuyla](create-ediscovery-holds.md) birlikte bir bekletme ayarları ve bekletmeleri, verilerin kalıcı olarak silinmesini de önlese de, bunlar farklı senaryolar için tasarlanmıştır. Farklılıkları anlamanıza ve hangisinin kullanılamayacaklarını anlamanıza yardımcı olmak için aşağıdaki kılavuzu kullanın:
+- Bekletme ilkeleri ve bekletme etiketlerinde belirttiğiniz bekletme ayarları, uyumluluk gereksinimleri için verileri saklamaya veya silmeye yönelik uzun vadeli bir bilgi idare stratejisi için tasarlanmıştır. Kapsam genellikle geniştir ve asıl odak tek tek kullanıcılar yerine konum ve içeriktir. Bekletme süresinin başlangıcı ve sonu yapılandırılabilir ve ek yönetici müdahalesi olmadan içeriği otomatik olarak silme seçeneği sağlanır.
 
-- Bekletme ilkeleri ve bekletme etiketlarında belirttiğiniz bekletme ayarları, uyumluluk gereksinimlerine yönelik verileri tutmak veya silmek için uzun vadeli bilgi yönetim stratejisine yönelik tasarlanmıştır. Kapsam genelde geniştir ve odak, tek tek kullanıcılar yerine konum ve içerikte olur. Bekletme döneminin başlangıcı ve sonu yapılandırılabilir ve ek yönetici müdahalesi olmadan içeriği otomatik olarak silme seçeneği kullanılır.
+- eBulma için ayrı tutmalar (Core eBulma veya Advanced eDiscovery vakaları) yasal araştırma için verileri korumak üzere sınırlı bir süre için tasarlanmıştır. Kapsam belirlidir ve odak, tanımlanan kullanıcıların sahip olduğu içeriktir. Koruma döneminin başlangıcı ve sonu yapılandırılabilir değildir, ancak ayrı ayrı yönetici eylemlerine bağımlıdır; ayrı tutma serbest bırakıldığında içeriği otomatik olarak silme seçeneği yoktur.
 
-- eBulma için 10.01.011.2007 tarihine kadar (Çekirdek eKbulma veya Advanced eDiscovery servisleri) yasal soruşturma verilerini korumak üzere sınırlı bir süre için tasarlanmıştır. Kapsam, odağın tanımlanan kullanıcıların sahip olduğu içeriğe özeldir. Saklama döneminin başlangıç ve bitişi yapılandırılabilir değildir, ancak ayrı ayrı yönetici eylemlerine bağımlıdır ve saklama süresi yayın olduğunda içeriği otomatik olarak silme seçeneği olmadan yapılır.
+Bekletmeyi ayrı tutmalarla karşılaştırmak için özet:
 
-Bekletmelerle bekletmeleri karşılaştırmak için özet:
-
-|Dikkate Alınacak Nokta|Bekletme |eKbulma 1|
+|Dikkate|Saklama |eBulma tutmaları|
 |:-----|:-----|:-----|:-----|
-|İşle ilgili gerekenler: |Uyumluluk |Yasal |
+|İş gereksinimi: |Uyumluluk |Yasal |
 |Zaman kapsamı: |Uzun vadeli |Kısa vadeli |
 |Odak: |Geniş, içerik tabanlı |Belirli, kullanıcı tabanlı |
-|Yapılandırılabilir başlangıç ve bitiş tarihi: |Evet |Hayır |
+|Başlangıç ve bitiş tarihi yapılandırılabilir: |Evet |Hayır |
 |İçerik silme: |Evet (isteğe bağlı) |Hayır |
-|Yönetimsel masraflar: |Düşük |Yüksek |
+|Yönetim ek yükleri: |Düşük |Yüksek |
 
-İçerik hem bekletme ayarlarına hem de eBulma saklama durumuna tabi olursa, eBulma saklama içeriğinin korunması her zaman öncelikli olur. Bu şekilde, [bekletme ilkeleri](#the-principles-of-retention-or-what-takes-precedence) eBulma bekletmesi'ne genişletilir çünkü yöneticiler saklamayı el ile serbest bırakıncaya kadar verileri korurlar. Bununla birlikte, bu önceliğe rağmen, uzun vadeli bilgi idaresi için eKbulma 100'leri kullanmaz. Verilerin otomatik silinmesi konusunda endişeleriniz varsa, bekletme ayarlarını öğeleri sonsuza kadar alıkoyacak şekilde yapılandırabilirsiniz veya bekletme etiketleriyle [incelemeyi](disposition.md#disposition-reviews) kullanabilirsiniz.
+İçerik hem bekletme ayarlarına hem de eBulma saklamaya tabiyse, eBulma saklama için içeriğin korunması her zaman önceliklidir. Bu şekilde, [saklama ilkeleri](#the-principles-of-retention-or-what-takes-precedence) eBulma'ya genişletir, çünkü bir yönetici saklamayı el ile serbest bırakana kadar verileri korurlar. Ancak, bu önceliğe rağmen, uzun vadeli bilgi idaresi için eBulma tutmalarını kullanmayın. Verilerin otomatik olarak silinmesiyle ilgili endişeniz varsa, öğeleri sonsuza kadar saklamak için bekletme ayarlarını yapılandırabilir veya bekletme etiketleriyle [edat incelemesini](disposition.md#disposition-reviews) kullanabilirsiniz.
 
-Verileri korumak için eski eBulma araçlarını kullanıyorsanız, aşağıdaki kaynaklara bakın:
+Verileri korumak için eski eBulma araçlarını kullanıyorsanız aşağıdaki kaynaklara bakın:
 
-- Exchange: 
-    - [Yerinde Tutma ve Mahkeme Tutma](/exchange/security-and-compliance/in-place-and-litigation-holds)
-    - [Exchange Online posta kutusuna yerleştirilen tutma Exchange Online tanımlama](./identify-a-hold-on-an-exchange-online-mailbox.md)
+- Exchange:
+  - [Yerinde Saklama ve Dava Tutma](/exchange/security-and-compliance/in-place-and-litigation-holds)
+  - [Exchange Online posta kutusuna yerleştirilmiş saklama türünü tanımlama](./identify-a-hold-on-an-exchange-online-mailbox.md)
 
-- SharePoint ve OneDrive: 
-    - [eBulma Merkezi'nde vakaya içerik ekleme ve kaynakları yerinde yerinde tutma](/SharePoint/governance/add-content-to-a-case-and-place-sources-on-hold-in-the-ediscovery-center)
+- SharePoint ve OneDrive:
+  - [Bir servis talebine içerik ekleme ve kaynakları eBulma Merkezi'nde beklemeye alma](/SharePoint/governance/add-content-to-a-case-and-place-sources-on-hold-in-the-ediscovery-center)
 
 - [Eski eKeşif araçlarını kullanımdan kaldırma](legacy-ediscovery-retirement.md)
 
 ## <a name="use-retention-policies-and-retention-labels-instead-of-older-features"></a>Eski özellikler yerine bekletme ilkelerini ve bekletme etiketlerini kullanma
 
-Bilgi yönetimi için Microsoft 365'de içeriği önceden korumalı veya silmeniz gerekirse, aşağıdaki eski özellikler yerine bekletme ilkelerini ve bekletme etiketlerini kullanmalarını öneririz.
+Bilgi idaresi için içeriği Microsoft 365'da proaktif olarak saklamanız veya silmeniz gerekiyorsa, aşağıdaki eski özellikler yerine bekletme ilkelerini ve bekletme etiketlerini kullanmanızı öneririz.
 
-Şu anda bu eski özellikleri kullanıyorsanız, bunlar sizin bekletme ilkeleri ve bekletme etiketleriyle Microsoft 365 birlikte çalışmaya devam eder. Bununla birlikte, bundan sonra, Microsoft 365 iş yüklerinde içeriğin hem bekletme hem de silinmesini yönetmek için tek bir çözümden yararlanmak üzere Microsoft 365.
+Şu anda bu eski özellikleri kullanıyorsanız, bunlar Microsoft 365 bekletme ilkeleri ve bekletme etiketleriyle yan yana çalışmaya devam eder. Ancak bundan sonra, Microsoft 365'da birden çok iş yükünde içeriğin hem elde tutulmasını hem de silinmesini yönetmek için tek bir çözümden yararlanmak için Microsoft 365 bekletme ilkelerini ve bekletme etiketlerini kullanmanızı öneririz.
 
-**Bu özelliğin eski Exchange Online:**
+**Exchange Online eski özellikler:**
 
-- [İleti kayıtları yönetimi (](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies)[MRM) olarak da bilinen bekletme etiketleri ve bekletme ilkeleri (](/exchange/security-and-compliance/messaging-records-management/messaging-records-management)yalnızca silme)
-    
-    Bununla birlikte, aşağıdaki MRM özelliklerini kullanıyorsanız, bunların şu anda bazı bekletme ilkeleri tarafından destek Microsoft 365 gerekir:
-    
-    - Belirtilen süre sonrasında [kullanıcının birincil posta kutusundan](enable-archive-mailboxes.md) gelen e-postaları otomatik olarak arşiv posta kutusuna taşımak için arşiv posta kutularına arşiv ilkesi. Arşiv ilkesi (tüm ayarlarla) kullanıcının birincil Microsoft 365 arşiv posta kutusu için geçerli olan bir bekletme ilkesiyle birlikte kullanılabilir.
-    
-    - Yönetici tarafından posta kutusunun içindeki belirli klasörlere uygulanan bekletme ilkeleri. Önemli Microsoft 365 bekletme ilkesi, posta kutusunun tüm klasörleri için geçerlidir. Öte yandan yönetici, bir kullanıcının Outlook'daki klasörlere varsayılan bekletme etiketi olarak uygulayabilecek bekletme etiketlerini kullanarak farklı bekletme [ayarlarını yapılandırabilirsiniz](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder).
+- Mesajlaşma [kayıtları yönetimi (MRM) olarak](/exchange/security-and-compliance/messaging-records-management/messaging-records-management) da bilinen [bekletme etiketleri ve bekletme ilkeleri](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies) (yalnızca silme)
 
-- [Mahkeme tutma](create-a-litigation-hold.md) (yalnızca bekletme)
-    
-   Mahkeme bekletmeleri hala desteklese de, uygun bir şekilde Microsoft 365 bekletmeleri veya eKbulma bekletmeleri [kullanmalarını öneririz](#when-to-use-retention-policies-and-retention-labels-or-ediscovery-holds). 
+  Ancak aşağıdaki MRM özelliklerini kullanıyorsanız, şu anda Microsoft 365 saklama ilkeleri tarafından desteklenmediğini unutmayın:
 
-**Yeni ve farklı SharePoint eski OneDrive:**
+  - Belirli bir süre sonra [kullanıcının birincil posta kutusundan gelen e-postaları](enable-archive-mailboxes.md) otomatik olarak arşiv posta kutusuna taşımaya yönelik arşiv posta kutularına yönelik arşiv ilkesi. Arşiv ilkesi (tüm ayarlarla) kullanıcının birincil ve arşiv posta kutusu için geçerli olan bir Microsoft 365 bekletme ilkesiyle birlikte kullanılabilir.
+
+  - Bir yönetici tarafından posta kutusu içindeki belirli klasörlere uygulanan bekletme ilkeleri. Microsoft 365 bekletme ilkesi, posta kutusundaki tüm klasörler için geçerlidir. Ancak, bir yönetici kullanıcının [varsayılan bekletme etiketi](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder) olarak Outlook klasörlerine uygulayabileceği bekletme etiketlerini kullanarak farklı bekletme ayarları yapılandırabilir.
+
+- [Dava tutma](create-a-litigation-hold.md) (yalnızca saklama)
+
+   Dava tutmaları hala desteklense de, [uygun şekilde](#when-to-use-retention-policies-and-retention-labels-or-ediscovery-holds) Microsoft 365 saklama veya eBulma tutmaları kullanmanızı öneririz.
+
+**SharePoint ve OneDrive eski özellikler:**
 
 - [Belge silme ilkeleri](https://support.office.com/article/Create-a-document-deletion-policy-in-SharePoint-Server-2016-4fe26e19-4849-4eb9-a044-840ab47458ff) (yalnızca silme)
-    
-- [Yerinde kayıt yönetimini yapılandırma](https://support.office.com/article/7707a878-780c-4be6-9cb0-9718ecde050a) (yalnızca bekletme) 
-    
-- [Site kapatma ve silme ilkeleri kullanma](https://support.microsoft.com/en-us/office/use-policies-for-site-closure-and-deletion-a8280d82-27fd-48c5-9adf-8a5431208ba5) (yalnızca silme)
-    
+
+- [Yerinde kayıt yönetimini yapılandırma](https://support.office.com/article/7707a878-780c-4be6-9cb0-9718ecde050a) (yalnızca saklama)
+
+- [Site kapatma ve silme için ilkeleri kullanma](https://support.microsoft.com/en-us/office/use-policies-for-site-closure-and-deletion-a8280d82-27fd-48c5-9adf-8a5431208ba5) (yalnızca silme)
+
 - [Bilgi yönetimi ilkeleri](intro-to-info-mgmt-policies.md) (yalnızca silme)
-     
-Liste veya kitaplığın içeriğini SharePoint için içerik türü ilkeleri veya bilgi yönetimi ilkeleri için yapılandırılmışsa, bekletme ilkesi devam ederken bu ilkeler yoksayılır. 
+
+bir liste veya kitaplık içeriğini korumak için SharePoint siteleri içerik türü ilkeleri veya bilgi yönetimi ilkeleri için yapılandırdıysanız, bekletme ilkesi etkinken bu ilkeler yoksayılır.
 
 ## <a name="related-information"></a>İlgili bilgiler
 
 - [SharePoint Online Sınırları](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits)
-- [Teknik özellikler için sınırlar ve Microsoft Teams](/microsoftteams/limits-specifications-teams) 
-- [Bilgi yönetimi ve kayıt yönetimiyle ilgili mevzuat gereksinimlerini karşılamanıza yardımcı olacak kaynaklar](retention-regulatory-requirements.md)
+- [Microsoft Teams için sınırlar ve belirtimler](/microsoftteams/limits-specifications-teams)
+- [Bilgi idaresi ve kayıt yönetimi için mevzuat gereksinimlerini karşılamanıza yardımcı olacak kaynaklar](retention-regulatory-requirements.md)
 
 ## <a name="configuration-guidance"></a>Yapılandırma kılavuzu
 
-Bkz [. Bilgi yönetimiyle çalışmaya başlama](get-started-with-information-governance.md). Bu makalede abonelikler, izinler ve bekletme senaryoları için  uç  uç yapılandırma kılavuzuna bağlantılar hakkında bilgiler vardır.
+Bkz. [bilgi idaresi ile Kullanmaya başlayın](get-started-with-information-governance.md). Bu makalede abonelikler, izinler ve bekletme senaryoları için uçtan uca yapılandırma kılavuzu bağlantıları hakkında bilgiler yer alır.

@@ -1,5 +1,5 @@
 ---
-title: Hassas bilgi türlerine dayalı tam veri eşleşmesi ile çalışmaya başlama
+title: Tam veri eşleşmesine dayalı hassas bilgi türlerini kullanmaya başlama
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -15,31 +15,31 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Hassas bilgi türlerine göre tam veri eşleşmesi oluşturmaya başlama.
+description: Kullanmaya başlayın tam veri oluşturma, temel hassas bilgi türleriyle eşleşsin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: a75650484368b6ccbaf6f6d39aeead133403f5b8
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 0f221ba0521a50f484bfb9a8d5030e33b495c495
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63526284"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64759755"
 ---
-# <a name="get-started-with-exact-data-match-based-sensitive-information-types"></a>Hassas bilgi türlerine dayalı tam veri eşleşmesi ile çalışmaya başlama
+# <a name="get-started-with-exact-data-match-based-sensitive-information-types"></a>Tam veri eşleşmesine dayalı hassas bilgi türlerini kullanmaya başlama
 
-Veri eşleşmesi (EDM) tabanlı hassas bilgi türünü (SIT) oluşturmak ve tam olarak kullanılabilir yapmak, çok aşamalı bir işlemdir. Bunlar veri kaybı önleme ilkelerinde, eBulma ve bazı içerik yönetim görevlerinde kullanılabilir Bu makalede, iş akışı ana hatlarıyla ve aşamalardan her biri için yordamların bağlantıları ana hatlarıyla açıklanmıştır
+Tam olarak veri eşleşmesi (EDM) tabanlı hassas bilgi türü (SIT) oluşturmak ve kullanıma sunulması çok fazlı bir işlemdir. Veri kaybı önleme ilkeleri, eBulma ve belirli içerik idaresi görevlerinde kullanılabilirler Bu makalede iş akışı ve aşamaların her biri için yordamlara bağlantılar özetlenmiştir
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Bu makalelerde kavramlara ve terminolojiye kendinizi tanıma:
+Bu makalelerdeki kavramlar ve terimler hakkında bilgi edinin:
 
-- [Hassas bilgi türleri hakkında bilgi](sensitive-information-type-learn-about.md#learn-about-sensitive-information-types)
-- [Hassas bilgi türlerine dayalı tam veri eşleşmesi hakkında bilgi](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types)
+- [Hassas bilgi türleri hakkında daha fazla bilgi edinme](sensitive-information-type-learn-about.md#learn-about-sensitive-information-types)
+- [Tam veri eşleşmesine dayalı hassas bilgi türleri hakkında daha fazla bilgi edinme](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types)
 
 ## <a name="required-licenses-and-permissions"></a>Gerekli lisanslar ve izinler
 
-Bu makalede açıklanan görevleri gerçekleştirmek için genel yönetici, Exchange Online veya uyumluluk yöneticisi ya da genel yönetici gerekir. DLP izinleri hakkında daha fazla bilgi edinmek için İzinler'e [bakın](data-loss-prevention-policies.md#permissions).
+Bu makalede açıklanan görevleri gerçekleştirmek için genel yönetici, uyumluluk yöneticisi veya Exchange Online yöneticisi olmanız gerekir. DLP izinleri hakkında daha fazla bilgi edinmek için bkz. [İzinler](data-loss-prevention-policies.md#permissions).
 
-Tam lisans [bilgileri için veri kaybı](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business) önleme hizmet açıklamasına bakın
+Tam lisans bilgileri için [veri kaybı önleme hizmeti açıklamasına](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business) bakın
 
 ## <a name="portal-links-for-your-subscription"></a>Aboneliğiniz için portal bağlantıları
 
@@ -47,22 +47,22 @@ Tam lisans [bilgileri için veri kaybı](/office365/servicedescriptions/microsof
 |---|---|---|---|
 |Office SCC|compliance.microsoft.com|scc.office365.us|scc.protection.apps.mil|
 |Microsoft 365 Defender portalı|security.microsoft.com|security.microsoft.us|security.apps.mil|
-|Microsoft 365 Uyumluluk Merkezi|compliance.microsoft.com|compliance.microsoft.us|compliance.apps.mil|
+|Microsoft 365 Uyumluluk merkezi|compliance.microsoft.com|compliance.microsoft.us|compliance.apps.mil|
 
 ## <a name="the-work-flow-at-a-glance"></a>Bir bakışta iş akışı
 
-![tam veri eşleşmesi iş akışı aşamaları](..\media\swimlane_edm_process.png)
+![tam veri eşleme iş akışı aşamaları](..\media\swimlane_edm_process.png)
 
 
 |Aşama|Gerekenler|
 |---|---|
-|[Aşama 1: Temel alınan hassas bilgi türüne göre tam veri eşleşmesi için kaynak verileri dışarı aktarma](sit-get-started-exact-data-match-export-data.md#export-source-data-for-exact-data-match-based-sensitive-information-type)|- Hassas verilere erişimi okuma|
-|[Aşama 2: Hassas bilgi türlerine göre tam veri eşleşmesi için şema oluşturma](sit-get-started-exact-data-match-create-schema.md#create-the-schema-for-exact-data-match-based-sensitive-information-types)|- Sihirbazda hassas bilgi türü sihirbazına Microsoft 365 yönetim merkezi </br>- Güvenlik Microsoft 365 yönetim merkezi [Uyumluluğu PowerShell aracılığıyla & erişim](/powershell/exchange/connect-to-scc-powershell) |
-|[Aşama 3: Hassas bilgi türleriyle tam olarak eşleşmesi için karma sağlama ve hassas bilgi kaynağı tablosuna yükleme](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types)|- Özel güvenlik grubu ve kullanıcı hesabı </br>- **Karma ve tek bir bilgisayardan karşıya yükleme**: doğrudan İnternet erişimi olan bir bilgisayara yerel yönetici erişimi ve EDM Yönetici Upload barındırma </br>- **Karma** ve ayrı bilgisayarlardan karşıya yükleme: doğrudan internet erişimi olan bir bilgisayara yerel yönetici erişimi ve EDM Upload Aracısı'nın yük yük farklı bir bilgisayara ve EDM Upload Aracısı'nın barındır yer alan güvenli bir bilgisayara yerel yönetici erişimini barındırarak hassas bilgi kaynağı tablolarını karma hale </br>- Hassas bilgi kaynağı tablo dosyasına okuma erişimi </br> şema dosyası |
-|[Aşama 4: Hassas bilgi türü/kural paketiyle tam olarak eşan veriler oluşturma](sit-get-started-exact-data-match-create-rule-package.md#create-exact-data-match-sensitive-information-typerule-package) |- Uyumluluk Merkezi'Microsoft 365 erişim |
-|[Hassas bilgi türüyle tam olarak eşan bir veri sınaması](sit-get-started-exact-data-match-test.md#test-an-exact-data-match-sensitive-information-type)| - Uyumluluk Merkezi'Microsoft 365 erişim
+|[1. Aşama: Tam veri eşleşmesi için kaynak verileri dışarı aktarma tabanlı hassas bilgi türü](sit-get-started-exact-data-match-export-data.md#export-source-data-for-exact-data-match-based-sensitive-information-type)|- Hassas verilere okuma erişimi|
+|[2. Aşama: Tam veri eşleştirme tabanlı hassas bilgi türleri için şema oluşturma](sit-get-started-exact-data-match-create-schema.md#create-the-schema-for-exact-data-match-based-sensitive-information-types)|- Microsoft 365 yönetim merkezi hassas bilgi türü sihirbazına erişim </br>- [Güvenlik & Uyumluluğu PowerShell aracılığıyla Microsoft 365 yönetim merkezi](/powershell/exchange/connect-to-scc-powershell) erişimi |
+|[3. Aşama: Hassas bilgi türleriyle tam eşleşmesi için hassas bilgi kaynağı tablosunu karma ve karşıya yükleme](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types)|- Özel güvenlik grubu ve kullanıcı hesabı </br>- **Karma ve bir bilgisayardan karşıya yükleme**: Doğrudan İnternet erişimi olan bir bilgisayara yerel yönetici erişimi ve EDM Upload Aracısı'nı barındırma </br>- **Karma ve ayrı bilgisayarlardan karşıya yükleme**: Doğrudan İnternet erişimi olan bir bilgisayara yerel yönetici erişimi ve hassas bilgi kaynağı tablosunu karma hale getirmek için EDM Upload Aracısı'nı barındırmak üzere güvenli bir bilgisayara yükleme ve yerel yönetici erişimi için EDM Upload Aracısı'nı barındırma </br>- Hassas bilgi kaynağı tablo dosyasına okuma erişimi </br> şema dosyası |
+|[4. Aşama: Hassas bilgi türü/kural paketiyle tam olarak eşleşen veriler oluşturma](sit-get-started-exact-data-match-create-rule-package.md#create-exact-data-match-sensitive-information-typerule-package) |- Microsoft 365 Uyumluluk Merkezi'ne erişim |
+|[Tam veri eşleşmesi hassas bilgi türünü test etme](sit-get-started-exact-data-match-test.md#test-an-exact-data-match-sensitive-information-type)| - Microsoft 365 Uyumluluk Merkezi'ne erişim
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hassas bilgi türlerine dayalı tam veri eşleşmesi hakkında bilgi](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types)
-- [Hassas bilgi türüne göre tam veri eşleşmesi için kaynak verileri dışarı aktarma](sit-get-started-exact-data-match-export-data.md#export-source-data-for-exact-data-match-based-sensitive-information-type)
+- [Tam veri eşleşmesine dayalı hassas bilgi türleri hakkında daha fazla bilgi edinme](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types)
+- [Tam veri eşleşmesine dayalı hassas bilgi türleri için kaynak verilerini dışa aktarma](sit-get-started-exact-data-match-export-data.md#export-source-data-for-exact-data-match-based-sensitive-information-type)

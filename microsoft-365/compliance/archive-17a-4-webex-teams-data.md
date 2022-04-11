@@ -1,5 +1,5 @@
 ---
-title: Cisco Webex verilerini aynı dosyada arşivlemek için bağlayıcıyı Microsoft 365
+title: Cisco Webex verilerini Microsoft 365 arşivleye bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,74 +11,74 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Cisco Webex verilerini aynı dosyada içeri aktarma ve arşivlemek için 17a-4 Cisco Webex DataParser bağlayıcısı ayarlamayı ve Microsoft 365.
-ms.openlocfilehash: fce025ab86b9c03e1200046750ebfc7f23830f43
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: 17a-4 Cisco Webex DataParser bağlayıcısını ayarlamayı ve kullanarak Cisco Webex verilerini Microsoft 365 içeri aktarmayı ve arşivlemeyi öğrenin.
+ms.openlocfilehash: 8476ce4e6a5c87c02b3dc6dd5d682038256ad8bb
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63329161"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64762133"
 ---
-# <a name="set-up-a-connector-to-archive-cisco-webex-data"></a>Cisco Webex verilerini arşivlemek için bağlayıcı ayarlama
+# <a name="set-up-a-connector-to-archive-cisco-webex-data"></a>Cisco Webex verilerini arşivleye bağlayıcı ayarlama
 
-17a-4 LLC'den [Cisco Webex DataParser'ı](https://www.17a-4.com/webex-dataparser/) kullanarak Cisco Webex platformundan kendi iş yeri veya kuruluşunun kullanıcı posta kutularına veri aktarın Microsoft 365 arşivlendi. DataParser'da, üçüncü taraf bir veri kaynağından öğeleri yakalamak ve bu öğeleri başka bir öğeye içeri aktaran bir Cisco Webex Microsoft 365. Cisco Webex DataParser bağlayıcısı, Cisco Webex verilerini e-posta iletisi biçimine dönüştürür ve sonra bu öğeleri aynı Microsoft 365.
+17a-4 LLC'deki [Cisco Webex DataParser'ı](https://www.17a-4.com/webex-dataparser/) kullanarak Cisco Cisco Webex platformundaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarıp arşivleyebilirsiniz. DataParser, üçüncü taraf veri kaynağından öğeleri yakalamak ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir Cisco Webex bağlayıcısı içerir. Cisco Webex DataParser bağlayıcısı, Cisco Webex verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365 kullanıcı posta kutularına aktarır.
 
-Cisco Webex verileri kullanıcı posta kutularında depolanıyorsa, mahkeme Microsoft 365, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi uyumluluk özelliklerini uygulayabilirsiniz. Web'de verileri içeri aktararak ve arşivlenen Cisco Webex Microsoft 365, kurum kurum ve mevzuat ilkeleriyle uyumlu kalmalarına yardımcı olabilir.
+Cisco Webex verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri ve iletişim uyumluluğu gibi Microsoft 365 uyumluluk özelliklerini uygulayabilirsiniz. Microsoft 365'de verileri içeri aktarmak ve arşivlemek için Cisco Webex bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
-## <a name="overview-of-archiving-cisco-webex-data"></a>Cisco Webex verilerini arşivlemeye genel bakış
+## <a name="overview-of-archiving-cisco-webex-data"></a>Cisco Webex verilerini arşivleme işlemine genel bakış
 
-Aşağıdaki genel bakış makalesinde, Cisco Webex verilerini aynı dosyada arşivlemek için veri bağlayıcısı Microsoft 365.
+Aşağıdaki genel bakış, Cisco Webex verilerini Microsoft 365'de arşivleyemek için veri bağlayıcısı kullanma işlemini açıklar.
 
-![Cisco WebEx verileri için 17a-4 arasında iş akışı arşivleme.](../media/WebexTeamsDataParserConnectorWorkflow.png)
+![17a-4'ten Cisco Webex verileri için arşivleme iş akışı.](../media/WebexTeamsDataParserConnectorWorkflow.png)
 
-1. Your organization works with 17a-4 to set up and configure the Cisco Webex DataParser.
+1. Kuruluşunuz Cisco Webex DataParser'ı ayarlamak ve yapılandırmak için 17a-4 ile çalışır.
 
-2. Düzenli aralıklarla Cisco Webex öğeleri DataParser tarafından toplanır. DataParser, iletinin içeriğini de e-posta iletisi biçimine dönüştürür.
+2. Düzenli olarak Cisco Webex öğeleri DataParser tarafından toplanır. DataParser ayrıca iletinin içeriğini e-posta iletisi biçimine dönüştürür.
 
-3. Dosyada oluştursanız bile Cisco Webex DataParser bağlayıcısı Microsoft 365 uyumluluk merkezi DataParser'a bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konuma aktarıyor.
+3. Microsoft 365 uyumluluk merkezi oluşturduğunuz Cisco Webex DataParser bağlayıcısı DataParser'a bağlanır ve iletileri Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır.
 
-4. Kullanıcı posta kutularında **Cisco Webex DataParser** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve Cisco Webex öğeleri bu klasöre aktarılır. Bağlayıcı, E-posta özelliğinin değerini kullanarak hangi posta kutusuna öğe *aktarılamayacaklarını* belirler. Her Cisco Webex öğesi, her katılımcının e-posta adresiyle doldurulan bu özelliği içerir.
+4. Kullanıcı posta kutularında Gelen Kutusu klasöründe **Cisco Webex DataParser** adlı bir alt klasör oluşturulur ve Cisco Webex öğeleri bu klasöre aktarılır. Bağlayıcı, *E-posta* özelliğinin değerini kullanarak öğelerin hangi posta kutusuna aktarılacağını belirler. Her Cisco Webex öğesi, her katılımcının e-posta adresiyle doldurulan bu özelliği içerir.
 
 ## <a name="before-you-set-up-a-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-- Microsoft bağlayıcıları için bir DataParser hesabı oluşturun. Bunu yapmak için [17a-4 LLC ile iletişime geçin](https://www.17a-4.com/contact/). Bağlayıcıyı 1. Adımda  oluşturdukta bu hesapta oturum açın.
+- Microsoft bağlayıcıları için bir DataParser hesabı oluşturun. Bunu yapmak için [17a-4 LLC](https://www.17a-4.com/contact/) ile iletişime geçin. 1. Adımda bağlayıcıyı oluştururken bu hesapta oturum açmanız gerekir.
 
-- 1. Adımda Cisco WebEx DataParser bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanabilir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- 1. Adımda Cisco Webex DataParser bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, Microsoft 365 uyumluluk merkezi **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft 365 uyumluluk merkezi İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu 17a-4 veri bağlayıcısı, ABD GCC tarafından Microsoft 365 ortamlarda kullanılabilir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu 17a-4 veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir ve bu nedenle Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="step-1-set-up-a-cisco-webex-dataparser-connector"></a>1. Adım: Cisco Webex DataParser bağlayıcısı ayarlama
 
-İlk adım, sayfada Veri bağlayıcıları sayfasına erişmek ve Cisco Webex Microsoft 365 uyumluluk merkezi için bir 17a-4 bağlayıcısı oluşturmaktır.
+İlk adım, Microsoft 365 uyumluluk merkezi Veri bağlayıcıları sayfasına erişmek ve Cisco Webex verileri için bir 17a-4 bağlayıcısı oluşturmaktır.
 
-1. Veri **bağlayıcılarıCisco** > <https://compliance.microsoft.com> **WebEx DataParser'a gidin ve tıklayın**.
+1. **Veri bağlayıcılarıCisco** **Webex DataParser'a**<https://compliance.microsoft.com> >  gidin ve tıklayın.
 
-2. **Cisco Webex DataParser ürün** açıklaması sayfasında Bağlayıcı **ekle'ye tıklayın**.
+2. **Cisco Webex DataParser** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
-3. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+3. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve Ardından Sonraki'ye **tıklayın**.
+4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve **İleri'ye** tıklayın.
 
-5. 17a-4 hesabınızla oturum açın ve Cisco Webex DataParser bağlantı sihirbazında adımları tamamlayın.
+5. 17a-4 hesabınızda oturum açın ve Cisco Webex DataParser bağlantı sihirbazındaki adımları tamamlayın.
 
-## <a name="step-2-configure-the-cisco-webex-dataparser-connector"></a>2. Adım: Cisco Webex DataParser bağlayıcıyı yapılandırma
+## <a name="step-2-configure-the-cisco-webex-dataparser-connector"></a>2. Adım: Cisco Webex DataParser bağlayıcısını yapılandırma
 
-Cisco Webex DataParser bağlayıcıyı yapılandırmak için 17a-4 Desteği ile çalışma.
+Cisco Webex DataParser bağlayıcısını yapılandırmak için 17a-4 Desteği ile çalışın.
 
 ## <a name="step-3-map-users"></a>3. Adım: Kullanıcıları eşleme
 
-Cisco Webex DataParser bağlayıcısı, verileri Microsoft 365 e-posta adreslerine aktarmadan önce kullanıcıları otomatik olarak Microsoft 365.
+Cisco Webex DataParser bağlayıcısı, verileri Microsoft 365 içeri aktarmadan önce kullanıcıları otomatik olarak Microsoft 365 e-posta adresleriyle eşler.
 
-## <a name="step-4-monitor-the-cisco-webex-dataparser-connector"></a>4. Adım: Cisco Webex DataParser bağlayıcılarını izleme
+## <a name="step-4-monitor-the-cisco-webex-dataparser-connector"></a>4. Adım: Cisco Webex DataParser bağlayıcısını izleme
 
-Cisco Webex DataParser bağlayıcısı oluşturdukta, bağlayıcının durumunu hemen Microsoft 365 uyumluluk merkezi.
+Cisco Webex DataParser bağlayıcısı oluşturduktan sonra bağlayıcının durumunu Microsoft 365 uyumluluk merkezi görüntüleyebilirsiniz.
 
-1. Sol gezinti <https://compliance.microsoft.com> çubuğunda **Veri bağlayıcıları'na** gidin ve bu bağlayıcılara tıklayın.
+1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** <https://compliance.microsoft.com> gidin ve tıklayın.
 
-2. Bağlayıcılar **sekmesine** tıklayın ve oluşturduğunuz Cisco Webex DataParser bağlayıcıyı seçerek bağlayıcının özelliklerini ve bilgilerini içeren açılır sayfayı görüntüleyin.
+2. **Bağlayıcılar** sekmesine tıklayın ve ardından bağlayıcı hakkındaki özellikleri ve bilgileri içeren açılır sayfayı görüntülemek için oluşturduğunuz Cisco Webex DataParser bağlayıcısını seçin.
 
-3. **Bağlayıcının kaynak durumunun altında**, **Bağlayıcının durum günlüğünü** açmak (veya kaydetmek) için Günlüğü indir bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan verileri içerir.
+3. Bağlayıcının durum günlüğünü açmak (veya kaydetmek) için **Kaynakla bağlayıcı durumu** altında **Günlüğü indir** bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan verileri içerir.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-Şu anda ekleri veya 10 MB'den büyük öğeleri içeri aktarmayı desteklemez. Daha büyük öğeler için destek daha sonraki bir tarihte kullanılabilir.
+Şu anda 10 MB'tan büyük eklerin veya öğelerin içeri aktarılmasını desteklemiyoruz. Daha büyük öğeler için destek daha sonraki bir tarihte sağlanacaktır.

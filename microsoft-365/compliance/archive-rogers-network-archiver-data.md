@@ -1,5 +1,5 @@
 ---
-title: Rogers Network verilerini aynı dosyada arşivlemek için bir bağlayıcı Microsoft 365
+title: Microsoft 365'da Rogers Network verilerini arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,74 +11,74 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler, Rogers Network verilerini kendi ağ bağlantılarında içeri aktaracak ve arşivacak bir TeleMessage Microsoft 365. Bu, üçüncü taraf veri kaynaklarından verileri Microsoft 365'te arşivlemenize olanak sağlar ve böylece yasal saklama, içerik araması ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanarak kuruluş üçüncü taraf verilerini yönetebilirsiniz.
-ms.openlocfilehash: 7ff260640606a2870cefca0de5e8b833018760cc
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Yöneticiler, Microsoft 365'da Rogers Network verilerini içeri aktarmak ve arşivlemek için bir TeleMessage bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
+ms.openlocfilehash: 54c57c2ddf8d4224884137efb0cfa4679a13b46d
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63328267"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64758717"
 ---
-# <a name="set-up-a-connector-to-archive-rogers-network-data"></a>Rogers Network verilerini arşivlemek için bağlayıcı ayarlama
+# <a name="set-up-a-connector-to-archive-rogers-network-data"></a>Rogers Network verilerini arşivleye bir bağlayıcı ayarlama
 
-Mete'ler mobil Microsoft 365 uyumluluk merkezi SMS ve MMS verilerini içeri aktararak arşivlemek için metin kaynağında TeleMessage bağlayıcıyı kullanın. [Siz Mete](https://www.telemessage.com/mobile-archiver/network-archiver/rogers/) Mete Ağ Arşivleyici bağlayıcısı ayardikten ve yapılandırdıktan sonra, bu bağlayıcı kuruluşun Metesi mobil ağına bağlanır ve SMS ve MMS verilerini Posta Kutuları'nda posta kutularına Microsoft 365.
+Rogers mobil ağından SMS ve MMS verilerini içeri aktarmak ve arşivlemek için Microsoft 365 uyumluluk merkezi TeleMessage bağlayıcısını kullanın. [Rogers Network Archiver bağlayıcısını](https://www.telemessage.com/mobile-archiver/network-archiver/rogers/) ayarlayıp yapılandırdıktan sonra kuruluşunuzun Rogers mobil ağına bağlanır ve SMS ve MMS verilerini Microsoft 365'deki posta kutularına aktarır.
 
-Mete'ler mobil ağına gelen veriler kullanıcı posta kutularında depo kullandıktan sonra, verilere Mahkeme Microsoft 365, İçerik araması ve bekletme Microsoft 365 gibi uyumluluk özelliklerini uygulayabilirsiniz. Örneğin, İçerik arama kullanarak veya Çekirdek eKbulma durumuyla ilişkilendirilmiş bir arama kullanarak Mete'ler mobil ağına gelen SMS ve MMS iletilerini arayabilirsiniz. Verileri başka bir kuruluşta içeri aktararak veya arşivlerken bir Rogers Network Archiver bağlayıcısı kullanmak Microsoft 365 organizasyona kurumsal yönetim düzenlemeleri ve mevzuat ilkeleriyle uyumlu kalmalarına yardımcı olabilir.
+Rogers mobil ağındaki veriler kullanıcı posta kutularında depolandıktan sonra, dava tutma, İçerik arama ve Microsoft 365 bekletme ilkeleri gibi Microsoft 365 uyumluluk özelliklerini verilere uygulayabilirsiniz. Örneğin, İçerik araması veya Core eKeşif olayıyla ilişkilendirilmiş bir arama kullanarak Rogers mobil ağından SMS ve MMS iletilerini arayabilirsiniz. Microsoft 365'da verileri içeri aktarmak ve arşivlemek için Rogers Network Archiver bağlayıcısı kullanmak, kuruluşunuzun kurumsal idare düzenlemeleri ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
-## <a name="overview-of-archiving-rogers-mobile-network-data"></a>Rogers mobil ağ verilerini arşivlemeye genel bakış
+## <a name="overview-of-archiving-rogers-mobile-network-data"></a>Rogers mobil ağ verilerini arşivleme hakkında genel bakış
 
-Aşağıdaki genel bakış makalesinde Mete'nin SMS ve MMS verilerini kendi verilerinizden arşivlemek için bağlayıcı Microsoft 365.
+Aşağıdaki genel bakış, Microsoft 365'de Rogers SMS ve MMS verilerini arşivlerken bağlayıcı kullanma işlemini açıklar.
 
-![Rogers Network arşivleme iş akışı.](../media/RogersNetworkConnectorWorkflow.png)
+![Rogers Ağ arşivleme iş akışı.](../media/RogersNetworkConnectorWorkflow.png)
 
-1. Your organization works with TeleMessage to set a Rogers Network Archiver connector. Daha fazla bilgi için bkz[. Daha fazla bilgi için TeleMessage Rogers Network Archiver'ı etkinleştirme Microsoft 365](https://www.telemessage.com/microsoft-365-activation-for-the-rogers-network-archiver/).
+1. Kuruluşunuz, Rogers Network Archiver bağlayıcısı ayarlamak için TeleMessage ile birlikte çalışır. Daha fazla bilgi için bkz[. Microsoft 365 için TeleMessage Rogers Ağ Arşivleyicisi'ni etkinleştirme](https://www.telemessage.com/microsoft-365-activation-for-the-rogers-network-archiver/).
 
-2. Gerçek zamanlı olarak, kuruluşa ait Rogers mobil ağ verileri TeleMessage sitesine kopyalanır.
+2. Kuruluşunuzun Rogers mobil ağ verileri gerçek zamanlı olarak TeleMessage sitesine kopyalanır.
 
-3. Microsoft 365 uyumluluk merkezi'ta oluşturduktan sonra Rogers Network Archiver bağlayıcısı her gün TeleMessage sitesine bağlanır ve önceki 24 saat içinde gönderilen e-posta iletilerini Microsoft Bulut'un güvenli bir Azure Depolama alanına aktarıyor.
+3. Microsoft 365 uyumluluk merkezi oluşturduğunuz Rogers Ağ Arşivleyicisi bağlayıcısı her gün TeleMessage sitesine bağlanır ve önceki 24 saat içindeki e-posta iletilerini Microsoft Cloud'daki güvenli bir Azure Depolama alanına aktarır.
 
-4. Bağlayıcı, mobil iletişim öğelerini belirli bir kullanıcının posta kutusuna aktarıyor. Belirli bir kullanıcının posta kutusunda Mete'ler SMS/MMS Ağ Arşivleyicisi adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, Eşlemeyi Kullanıcının E-posta *adresi özelliğini kullanarak* yapar. Her e-posta iletisi, e-posta iletisi her katılımcının e-posta adresiyle doldurulan bu özelliği içerir.
+4. Bağlayıcı, mobil iletişim öğelerini belirli bir kullanıcının posta kutusuna aktarır. Belirli bir kullanıcının posta kutusunda Rogers SMS/MMS Ağ Arşivleyicisi adlı yeni bir klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *eşlemeyi Kullanıcının E-posta adresi* özelliğinin değerini kullanarak yapar. Her e-posta iletisi, e-posta iletisinin her katılımcısının e-posta adresiyle doldurulmuş olan bu özelliği içerir.
 
-   Kullanıcının E-posta adresi özelliğinin değerini kullanarak otomatik kullanıcı  eşlemeye ek olarak, CSV eşleme dosyası yükerek özel eşleme de tanımlayabilirsiniz. Bu eşleme dosyası, Kullanıcının mobil Numarasını ve her kullanıcı için Microsoft 365 posta kutusu adresini içermeli. Otomatik kullanıcı eşlemesini etkinleştirir ve özel eşleme sağlarsanız, bağlayıcının önce özel eşleme dosyasına bakacak her e-posta öğesi için özel eşlemesi olur. Kullanıcının cep telefonu numarasına karşılık gelen Microsoft 365 geçerli bir kullanıcı bulamazsa, bağlayıcı kullanıcının e-posta öğesi e-posta adresi özelliğini kullanır. Bağlayıcı, özel eşleme dosyasında veya Microsoft 365 e-posta öğesinin e-posta adresi özelliğinde geçerli bir kullanıcı bulamazsa, öğe aktarılmaz.
+   *Kullanıcının E-posta adresi* özelliğinin değerini kullanarak otomatik kullanıcı eşlemesine ek olarak, csv eşleme dosyasını karşıya yükleyerek özel eşleme de tanımlayabilirsiniz. Bu eşleme dosyası Kullanıcının cep telefonu numarasını ve her kullanıcı için ilgili Microsoft 365 posta kutusu adresini içermelidir. Otomatik kullanıcı eşlemesini etkinleştirir ve özel bir eşleme sağlarsanız, bağlayıcı her e-posta öğesi için önce özel eşleme dosyasına bakar. Kullanıcının cep telefonu numarasına karşılık gelen geçerli bir Microsoft 365 kullanıcısı bulamazsa, bağlayıcı kullanıcının e-posta öğesinin e-posta adresi özelliğini kullanır. Bağlayıcı, özel eşleme dosyasında veya kullanıcının *e-posta öğesinin e-posta adresi* özelliğinde geçerli bir Microsoft 365 kullanıcı bulamazsa, öğe içeri aktarılamaz.
 
 ## <a name="before-you-set-up-a-connector"></a>Bağlayıcıyı ayarlamadan önce
 
-- [TeleMessage'dan Rogers Network Archiver hizmetini](https://www.telemessage.com/mobile-archiver/order-mobile-archiver-for-o365/) sipariş etmek ve organizasyonunız için geçerli bir yönetim hesabı almak. Uyumluluk merkezinde bağlayıcıyı  oluşturmak için bu hesapta oturum açın.
+- [TeleMessage'dan Rogers Network Archiver hizmetini](https://www.telemessage.com/mobile-archiver/order-mobile-archiver-for-o365/) sipariş edin ve kuruluşunuz için geçerli bir yönetim hesabı alın. Uyumluluk merkezinde bağlayıcıyı oluştururken bu hesapta oturum açmanız gerekir.
 
-- Rogers Network arşivlemesi gerektiren tüm kullanıcıları TeleMessage hesabında kaydettirin. Kullanıcıları kaydettirerek, kendi hesaplarında kullanılan e-posta adresinin aynısını Microsoft 365.
+- Rogers Network arşivlemeyi gerektiren tüm kullanıcıları TeleMessage hesabına kaydedin. Kullanıcıları kaydederken, Microsoft 365 hesapları için kullanılan e-posta adresini kullandığınızdan emin olun.
 
-- Çalışanlarınızı O2 mobil ağına kurumsal ve kurumsal olarak sorumlu cep telefonları olmalıdır. İletileri Tek Microsoft 365, çalışana ait "Kendi Cihazlarınızı Getirin (BYOD) cihazlarında kullanılamaz.
+- Çalışanlarınızın O2 mobil ağında şirkete ait ve şirkete ait cep telefonlarına sahip olması gerekir. Microsoft 365'da iletileri arşivleme, çalışana ait veya "Kendi Cihazlarını Getir (KCG) cihazları için kullanılamaz.
 
-- Ekleme formlarını tamamlayan ve ileti arşivleme hizmetini Rogers'tan sipariş etmek için, organizasyon için Rogers hesabını ve fatura kişi ayrıntılarını alın.
+- Ekleme formlarını tamamlayabilmeniz ve rogers'tan ileti arşivleme hizmetini sipariş edebilmeniz için kuruluşunuzun Rogers hesabı ve faturalama iletişim bilgilerini alın.
 
-- 3. Adımda Rogers Ağ Arşivleyicisi bağlayıcısı oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atan olmalıdır. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- 3. Adımda Rogers Ağ Arşivleyici bağlayıcısı oluşturan kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, Microsoft 365 uyumluluk merkezi **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft 365 uyumluluk merkezi İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu TeleMessage veri bağlayıcısı ABD GCC tarafından Microsoft 365 ortamlarda kullanılabilir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu TeleMessage veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda kullanılabilir. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir ve bu nedenle Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
 ## <a name="create-a-rogers-network-archiver-connector"></a>Rogers Network Archiver bağlayıcısı oluşturma
 
-Önceki bölümde açıklanan önkoşulları tamamlandıktan sonra, dosyanın sağ üst kısmında Rogers Network Archiver bağlayıcısı Microsoft 365 uyumluluk merkezi. Bağlayıcı, teleMessage sitesine bağlanmak ve Mete'ler SMS/MMS verilerini kendi posta kutunuzda ilgili kullanıcı posta kutusuna göndermek için Microsoft 365.
+Önceki bölümde açıklanan önkoşulları tamamladıktan sonra, Microsoft 365 uyumluluk merkezi Rogers Ağ Arşivleyicisi bağlayıcısını oluşturabilirsiniz. Bağlayıcı, TeleMessage sitesine bağlanmak ve Rogers SMS/MMS verilerini Microsoft 365 ilgili kullanıcı posta kutusu kutularına aktarmak için sağladığınız bilgileri kullanır.
 
-1. Veri bağlayıcılarıRogers <https://compliance.microsoft.com> **Ağ Arşivleyicisi'ne** >  **gidin ve bu öğeye tıklayın**.
+1. **Veri bağlayıcılarıRogers** >  **Ağ Arşivleyicisi'ne**<https://compliance.microsoft.com> gidin ve tıklayın.
 
-2. **Rogers Network Archiver ürün açıklaması** sayfasında Bağlayıcı **ekle'ye tıklayın**.
+2. **Rogers Ağ Arşivleyicisi** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
-3. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+3. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-4. **TeleMessage'da Oturum Aç** sayfasında, 3. Adım'ın altında aşağıdaki kutulara gerekli bilgileri girin ve ardından Sonraki'ye **tıklayın**.
+4. **TeleMessage'da Oturum Aç** sayfasındaki 3. Adım'ın altında, aşağıdaki kutulara gerekli bilgileri girin ve **İleri'ye** tıklayın.
 
-    - **Kullanıcı adı:** TeleMessage kullanıcı adınız.
+    - **Username:** TeleMessage kullanıcı adınız.
 
     - **Parola:** TeleMessage parolanız.
 
-5. Bağlayıcı oluşturulduktan sonra, açılır pencereyi kapatıp bir sonraki sayfaya gidebilirsiniz.
+5. Bağlayıcı oluşturulduktan sonra açılır pencereyi kapatabilir ve sonraki sayfaya gidebilirsiniz.
 
-6. Kullanıcı eşleme **sayfasında** , otomatik kullanıcı eşlemesini etkinleştirin. Özel eşlemeyi etkinleştirmek için, kullanıcı eşleme bilgilerini içeren bir CSV dosyası yükleyin ve İleri'ye **tıklayın**.
+6. Kullanıcı eşleme sayfasında otomatik kullanıcı **eşlemesini** etkinleştirin. Özel eşlemeyi etkinleştirmek için, kullanıcı eşleme bilgilerini içeren bir CSV dosyasını karşıya yükleyin ve **İleri'ye** tıklayın.
 
-7. Ayarlarınızı gözden geçirip bağlayıcıyı oluşturmak **için Son'a** tıklayın.
+7. Ayarlarınızı gözden geçirin ve ardından **Son'a** tıklayarak bağlayıcıyı oluşturun.
 
-8. Yeni bağlayıcı için içeri aktarma **işleminin ilerlemesini** görmek için Veri bağlayıcıları sayfasındaki Bağlayıcılar sekmesine gidin.
+8. Yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları sayfasındaki Bağlayıcılar** sekmesine gidin.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- Şu anda ekleri veya 10 MB'den büyük öğeleri içeri aktarmayı desteklemez. Daha büyük öğeler için destek daha sonraki bir tarihte kullanılabilir.
+- Şu anda 10 MB'tan büyük eklerin veya öğelerin içeri aktarılmasını desteklemiyoruz. Daha büyük öğeler için destek daha sonraki bir tarihte sağlanacaktır.

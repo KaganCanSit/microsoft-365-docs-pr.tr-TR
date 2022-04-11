@@ -1,5 +1,5 @@
 ---
-title: Bekletme ilkelerine ve bekletme etiketi ilkelerine yönelik değişiklikleri kısıtlamak için Saklama Kilidi'i kullanma
+title: Saklama ilkeleri ve bekletme etiketi ilkelerindeki değişiklikleri kısıtlamak için Koruma Kilidi'ni kullanma
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -14,81 +14,81 @@ ms.localizationpriority: high
 search.appverid:
 - MOE150
 - MET150
-description: Yasal düzenleme gereksinimlerini karşılamanıza ve yönetici yöneticilerini korumanıza yardımcı olmak için Bekletme ilkeleri ve bekletme etiketi ilkeleriyle Yasal Koruma Kilidi'ne başvurun.
-ms.openlocfilehash: 64c2bb8f2718ce0da9d638b5b8b6bd4f89d33668
-ms.sourcegitcommit: f6fff04431d632db02e7bdbf12f691091a30efad
+description: Yasal düzenleme gereksinimlerini karşılamanıza ve dolandırıcı yöneticilere karşı korumanıza yardımcı olması için saklama ilkeleri ve bekletme etiketi ilkeleriyle Koruma Kilidi'ni kullanın.
+ms.openlocfilehash: ac957475474e1d99dff541ac9a208ae5dc681217
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "62988819"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64761737"
 ---
-# <a name="use-preservation-lock-to-restrict-changes-to-retention-policies-and-retention-label-policies"></a>Bekletme ilkelerine ve bekletme etiketi ilkelerine yönelik değişiklikleri kısıtlamak için Saklama Kilidi'i kullanma
+# <a name="use-preservation-lock-to-restrict-changes-to-retention-policies-and-retention-label-policies"></a>Saklama ilkeleri ve bekletme etiketi ilkelerindeki değişiklikleri kısıtlamak için Koruma Kilidi'ni kullanma
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
-
-> [!IMPORTANT]
-> Şu anda, [uyarlanabilir ilke kapsamları](retention.md#adaptive-or-static-policy-scopes-for-retention) Koruma Kilidi'i desteklemez.
-
-Koruma Kilidi, kimsenin (genel yönetici dahil) ilkeyi kapatmasını, silemez veya daha az kısıtlayıcı hale döndüreni bir bekletme ilkesi veya bekletme etiketi ilkesi kilitler. Bu yapılandırma yasal düzenleme gereksinimleri için gerekli olabilir ve yöneticilerini korumaya yardımcı olabilir.
-
-Bekletme ilkesi kilitlenirken:
-
-- Hiç kimse ilkeyi devre dışı bırakama veya silemez
-- Konumlar eklenebilir, ancak kaldırılamaz
-- Bekletme süresini uzatabiliyor, ancak azaltamayabiliyor
-
-Bekletme etiketi ilkesi kilitlenirken:
-
-- Hiç kimse ilkeyi devre dışı bırakama veya silemez
-- Konumlar eklenebilir, ancak kaldırılamaz
-- Etiketler eklenebilir, ancak kaldırılamaz
-
-Özet olarak, kilitli bir ilke artırılabilir veya uzatılabilir ancak indirilemez veya kapatılabilir.
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 > [!IMPORTANT]
-> Bir bekletme ilkesi veya bekletme etiketi ilkesi kilitlemeden önce, etkisini anlamanız ve bunun organizasyonunız için gerekli olup olmadığını onaylamanız çok önemlidir. Örneğin, mevzuat gereksinimlerini karşılamak için bu gerekli olabilir. Koruma kilidi uygulandıktan sonra yöneticiler bu ilkeleri devre dışı bırakamaz veya silemez.
+> Şu anda [uyarlamalı ilke kapsamları](retention.md#adaptive-or-static-policy-scopes-for-retention) Koruma Kilidi'ni desteklememektedir.
 
-Bir bekletme ilkesi veya yayımlayan [veya otomatik olarak](create-retention-policies.md) uygulayan bir bekletme etiketi ilkesi [oluşturduktan sonra Koruma](create-apply-retention-labels.md) [Kilidi'yi yapılandırın](apply-retention-labels-automatically.md).
+Koruma Kilidi bir bekletme ilkesini veya bekletme etiketi ilkesini kilitler, böylece genel yönetici de dahil olmak üzere hiç kimse ilkeyi kapatabilir, ilkeyi silebilir veya daha az kısıtlayıcı hale getiremez. Bu yapılandırma yasal gereksinimler için gerekli olabilir ve düzenbaz yöneticilere karşı korunmaya yardımcı olabilir.
+
+Bekletme ilkesi kilitlendiğinde:
+
+- Hiç kimse ilkeyi devre dışı bırakamıyor veya silemiyor
+- Konumlar eklenebilir ancak kaldırılamaz
+- Saklama süresini uzatabilir ancak azaltmayabilirsiniz
+
+Bekletme etiketi ilkesi kilitlendiğinde:
+
+- Hiç kimse ilkeyi devre dışı bırakamıyor veya silemiyor
+- Konumlar eklenebilir ancak kaldırılamaz
+- Etiketler eklenebilir ancak kaldırılamaz
+
+Özetle, kilitli bir ilke artırılabilir veya uzatılabilir, ancak azaltılamaz veya kapatılamaz.
+
+> [!IMPORTANT]
+> Bekletme ilkesini veya bekletme etiketi ilkesini kilitlemeden önce, etkiyi anlamanız ve kuruluşunuz için gerekli olup olmadığını onaylamanız kritik önem taşır. Örneğin, mevzuat gereksinimlerini karşılamak için gerekli olabilir. Koruma kilidi uygulandıktan sonra yöneticiler bu ilkeleri devre dışı bırakamaz veya silemez.
+
+Bir [bekletme ilkesi](create-retention-policies.md) veya [yayımladığınız](create-apply-retention-labels.md) veya [otomatik olarak uyguladığınız](apply-retention-labels-automatically.md) bir bekletme etiketi ilkesi oluşturduktan sonra Koruma Kilidi'ni yapılandırın.
 
 > [!NOTE]
-> Etiket ilkesi kilitlemek yöneticinin kilitli ilkeye dahil olan bir etikette bekletme süresini azaltmasını engellemez. Bu gereksinim, diğer kısıtlamalarla birlikte, bir etiketi öğeleri mevzuat kaydı olarak işaretlemek üzere yapılandırıldığında [karşı kullanılabilir](records-management.md#records).
+> Bir etiket ilkesini kilitlemek, bir yöneticinin kilitli ilkeye dahil edilen etiketteki saklama süresini azaltmasını engellemez. Bu gereksinim, diğer kısıtlamalarla birlikte, öğeleri [mevzuat kaydı](records-management.md#records) olarak işaretlemek için bir etiket yapılandırdığınızda karşılanabilir.
 
-## <a name="how-to-lock-a-retention-policy-or-retention-label-policy"></a>Bekletme ilkesi veya bekletme etiketi ilkesi nasıl kilitlenebilir?
+## <a name="how-to-lock-a-retention-policy-or-retention-label-policy"></a>Bekletme ilkesini veya bekletme etiketi ilkesini kilitleme
 
-Koruma Kilidi'ne ihtiyacınız varsa PowerShell kullanabilirsiniz. Yöneticiler bu kilit uygulandıktan sonra bekletme için bir ilkeyi devre dışı bırakama veya silemezler, çünkü kullanıcı arabiriminde bu özelliği etkinleştirme özelliği yanlışlıkla yapılan yapılandırmalara karşı korumak için kullanılamaz.
+Koruma Kilidi kullanmanız gerekiyorsa PowerShell'i kullanmanız gerekir. Yöneticiler bu kilit uygulandıktan sonra bekletme için bir ilkeyi devre dışı bırakamadığından veya silemediğinden, yanlışlıkla yapılandırmaya karşı koruma sağlamak için bu özelliği etkinleştirmek kullanıcı arabiriminde kullanılamaz.
 
-Bekletmeye ve tüm yapılandırma desteği olan Saklama Kilidi ilkelerine yönelik tüm ilkeler.
+Saklamaya yönelik ve herhangi bir yapılandırmaya sahip tüm ilkeler Koruma Kilidi'ne sahiptir.
 
-1. [Bağlan ve Uyumluluk & PowerShell'e.](/powershell/exchange/connect-to-scc-powershell)
+1. [Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell).
 
-2. [Get-RetentionCompliancePolicy'i çalıştırarak kilitlemek istediğiniz ilkenin adını bulun](/powershell/module/exchange/get-retentioncompliancepolicy). Örneğin:
+2. [Get-RetentionCompliancePolicy](/powershell/module/exchange/get-retentioncompliancepolicy) komutunu çalıştırarak kilitlemek istediğiniz ilkenin adını bulun. Örneğin:
     
-   ![PowerShell'de bekletme ilkelerinin listesi.](../media/retention-policy-preservation-lock-get-retentioncompliancepolicy.PNG)
+   ![PowerShell'deki bekletme ilkelerinin listesi.](../media/retention-policy-preservation-lock-get-retentioncompliancepolicy.PNG)
 
-3. İlkenize bir Koruma Kilidi ayarlamak için [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) cmdlet'ini ilkenin adıyla ve *RestrictiveRetention* parametresi true olarak ayarlanmış durumda çalıştırın:
+3. İlkenize Bir Koruma Kilidi yerleştirmek için, ilkenin adıyla [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) cmdlet'ini ve *RestrictiveRetention* parametresini true olarak ayarlayın:
     
     ```powershell
-    Set-RetentionCompliancePolicy -Identity "<Name of Policy>" –RestrictiveRetention $true
+    Set-RetentionCompliancePolicy -Identity "<Name of Policy>" -RestrictiveRetention $true
     ```
     
     Örneğin:
     
     ![PowerShell'de RestrictiveRetention parametresi.](../media/retention-policy-preservation-lock-restrictiveretention.PNG)
     
-     İstendiğinde, Y girerek bu yapılandırmayla birlikte gelen kısıtlamaları okuyun ve kabul **edin**:
+     İstendiğinde, **Y** girerek bu yapılandırmayla birlikte gelen kısıtlamaları okuyun ve kabul edin:
     
-   ![PowerShell'de bekletme ilkesi kilitlemek istediğiniz onay istemi.](../media/retention-policy-preservation-lock-confirmation-prompt.PNG)
+   ![PowerShell'de bekletme ilkesini kilitlemek istediğinizi onaylama istemi.](../media/retention-policy-preservation-lock-confirmation-prompt.PNG)
 
-Artık koruma kilidi ilkeye yerleştirilmiştir. Onaylamak için yeniden `Get-RetentionCompliancePolicy` çalıştırın, ancak ilke adını belirtin ve ilke parametrelerini görüntüleme:
+Artık ilkeye bir Koruma Kilidi yerleştirilir. Onaylamak için yeniden çalıştırın `Get-RetentionCompliancePolicy` , ancak ilke adını belirtin ve ilke parametrelerini görüntüleyin:
 
 ```powershell
 Get-RetentionCompliancePolicy -Identity "<Name of Policy>" |Fl
 ```
 
-**RestrictiveRetention true olarak** **ayarlanmıştır**. Örneğin:
+**RestrictiveRetention** değerinin **True** olarak ayarlandığını görmeniz gerekir. Örneğin:
 
-![PowerShell'de gösterilen tüm parametrelerin kullanıldığı kilitli ilkesi.](../media/retention-policy-preservation-lock-locked-policy.PNG)
+![PowerShell'de gösterilen tüm parametrelerle kilitlenmiş ilke.](../media/retention-policy-preservation-lock-locked-policy.PNG)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Bilgi yönetimi ve kayıt yönetimiyle ilgili mevzuat gereksinimlerini karşılamanıza yardımcı olacak kaynaklar](retention-regulatory-requirements.md)
+[Bilgi idaresi ve kayıt yönetimi için mevzuat gereksinimlerini karşılamanıza yardımcı olacak kaynaklar](retention-regulatory-requirements.md)

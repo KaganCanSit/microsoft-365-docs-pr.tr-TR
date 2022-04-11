@@ -15,129 +15,130 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Bu konuda, çözümle ilgili çözüm için yürürlüğe girecek olay sınırları, dizin oluşturma Advanced eDiscovery ve arama Microsoft 365.
-ms.openlocfilehash: 04b0f98286693ef14019b30ab9c8d3a592484d92
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+description: Microsoft 365'da Advanced eDiscovery çözümü için geçerli olan durum sınırları, dizin oluşturma sınırları ve arama sınırları hakkında bilgi edinin.
+ms.openlocfilehash: 0f21a78a90eee6069618e2ab35bb011aa870b62c
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63712806"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64758585"
 ---
-# <a name="limits-in-advanced-ediscovery"></a>Alan Advanced eDiscovery
+# <a name="limits-in-advanced-ediscovery"></a>Advanced eDiscovery sınırları
 
-Bu makalede, Microsoft 365'de Advanced eDiscovery çözüm Microsoft 365.
+Bu makalede, Microsoft 365'daki Advanced eDiscovery çözümündeki sınırlar açıklanmaktadır.
 
-## <a name="case-and-review-set-limits"></a>Vaka ve gözden geçirme kümesi sınırları
+## <a name="case-and-review-set-limits"></a>Servis talebi ve gözden geçirme belirlenen sınırlar
 
-Aşağıdaki tabloda, çalışma sayfalarındaki vakaların ve gözden geçirme kümelarının sınırları Advanced eDiscovery.
+Aşağıdaki tabloda, Advanced eDiscovery'da servis talepleri ve gözden geçirme kümeleri için sınırlar listelemektedir.
 
-| Sınırın açıklaması | Sınır |
-|:-----|:-----|
-|Vakaya eklenecek toplam belge sayısı (bir vakadaki tüm gözden geçirme kümeleri için).  <br/> |3 milyon <br/> |
-|Yükleme kümesi başına toplam dosya boyutu. Bu, gözden geçirme kümesine Office 365 olmayanların yüklenmesini içerir.  <br/> |300 GB <br/> |
-|Kuruluşta her gün tüm gözden geçirme kümelerine yüklenen toplam veri miktarı.<br/> |2 TB <br/> |
-|Vaka başına en fazla yükleme kümesi sayısı.  <br/> |200 <br/> |
-|Vaka başına en fazla gözden geçirme kümesi sayısı.  <br/> |20 <br/> |
-|Vaka başına etiket grubu sayısı üst sayısı.  <br/> |1,000 |
-|Vaka başına en fazla benzersiz etiket sayısı. <br/> |1.0001<sup></sup> |
-|Gözden geçirme kümesine içerik eklemek için, organizasyonda eş zamanlı iş sayısı üst sayısı. Bu işler Gözden **geçirme kümesine veri ekleme olarak** adlandırılmıştır ve **bir davanın İşleri** sekmesinde görüntülenir.| <sup>102</sup> |
-|Kullanıcı başına gözden geçirme kümesine içerik eklemek için eş zamanlı iş sayısı üst sayısı. Bu işler Gözden **geçirme kümesine veri ekleme olarak** adlandırılmıştır ve **bir davanın İşleri** sekmesinde görüntülenir. | 3 |
+|Sınırın açıklaması|Sınırı|
+|---|---|
+|Bir servis talebine eklenebilen toplam belge sayısı (bir servis talebindeki tüm inceleme kümeleri için).|3 milyon|
+|Yük kümesi başına toplam dosya boyutu. Bu, Office 365 olmayanların bir gözden geçirme kümesine yüklenmesini içerir.|300 GB|
+|Kuruluştaki tüm gözden geçirme kümelerine günlük yüklenen toplam veri miktarı.<br/>|2TB|
+|Olay başına en fazla yük kümesi sayısı.|200|
+|Servis talebi başına en fazla gözden geçirme kümesi sayısı.|20|
+|Servis talebi başına en fazla etiket grubu sayısı.|1,000|
+|Servis talebi başına en fazla benzersiz etiket sayısı.|1.0001<sup></sup>|
+|Bir gözden geçirme kümesine içerik eklemek için kuruluşunuzdaki en fazla eşzamanlı iş. Bu işler **Gözden geçirme kümesine veri ekleme** olarak adlandırılır ve bir durumda **İşler** sekmesinde görüntülenir.|<sup>102</sup>|
+|Kullanıcı başına bir gözden geçirme kümesine içerik eklemek için en fazla eşzamanlı iş. Bu işler **Gözden geçirme kümesine veri ekleme** olarak adlandırılır ve bir durumda **İşler** sekmesinde görüntülenir.|3|
 
-## <a name="hold-limits"></a>Tutma sınırları
+## <a name="hold-limits"></a>Ayrı tutma sınırları
 
-Aşağıdaki tabloda, bir davayla ilişkilendirilmiş askıya Advanced eDiscovery listele.
+Aşağıdaki tabloda, bir Advanced eDiscovery servis talebiyle ilişkili ayrı tutma sınırları listelenir.
 
-| Sınırın açıklaması | Sınır |
-|:-----|:-----|
-|Bir kuruluş için en fazla tutma ilkeleri sayısı. Bu sınır, Core eKovery ve Advanced eDiscovery durumlarında birleştirilmiş toplam tutma Advanced eDiscovery içerir. <br/> |10.0003<sup></sup>  <br/> |
-|Tek bir durumdaki posta kutusu sayısı üst sayısı. Bu sınır, birleştirilmiş toplam kullanıcı posta kutusu ve Kullanıcı Grupları, Posta Microsoft 365, Posta Kutusu Microsoft Teams posta Yammer içerir. <br/> |1,000  <br/> |
-|Tek bir vakada en fazla site sayısı. Bu sınır, birleştirilmiş toplam OneDrive İş sitesi, SharePoint sitesi ve Microsoft 365 Grupları, Site Grupları, Microsoft Teams ve Yammer içerir.  <br/> |100  <br/> |
+|Sınırın açıklaması|Sınırı|
+|---|---|
+|Bir kuruluş için en fazla saklama ilkesi sayısı. Bu sınır, Core eBulma ve Advanced eDiscovery durumlarında birleştirilmiş saklama ilkelerinin toplamını içerir.|10.0003<sup></sup>|
+|Tek bir servis talebi ayrı tutmadaki en fazla posta kutusu sayısı. Bu sınır, kullanıcı posta kutularının toplamını ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili posta kutularını içerir.|1,000|
+|Tek bir servis talebi saklamadaki en fazla site sayısı. Bu sınır, OneDrive İş sitelerin, SharePoint sitelerin ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili sitelerin toplamını içerir.|100|
 
 ## <a name="indexing-limits"></a>Dizin oluşturma sınırları
 
-Aşağıdaki tabloda, çalışma sayfalarında dizin oluşturma Advanced eDiscovery.
+Aşağıdaki tabloda, Advanced eDiscovery'deki dizin oluşturma sınırları listelenir.
 
-| Sınırın açıklaması | Sınır |
-|:-----|:-----|
-|Tek bir dosyadan ayıklanan en fazla karakter sayısı.  <br/> |10 <sup>milyon4</sup> <br/> |
-|Tek bir dosyanın boyut üst boyutu.   <br/> |150 <sup>MB4</sup> <br/> |
-|Belgeye en fazla katıştırılmış öğe derinliği.  <br/> |<sup>254</sup> <br/> |
-|Optik Karakter Tanıma (OCR) tarafından işlenen dosyaların boyut üst sayısı.  <br/> |24 <sup>MB4</sup> <br/>  
+|Sınırın açıklaması|Sınırı|
+|---|---|
+|Tek bir dosyadan ayıklanan en fazla karakter sayısı.|10 <sup>milyon4</sup>|
+|Tek bir dosyanın en büyük boyutu.|150 <sup>MB4</sup>|
+|Belgedeki katıştırılmış öğe derinliği üst sınırı.|<sup>254</sup>|
+|Optik Karakter Tanıma (OCR) tarafından işlenen dosyaların maksimum boyutu.|24 <sup>MB4</sup> <br/>  
 
 ## <a name="search-limits"></a>Arama sınırları
 
-Bu bölümde açıklanan sınırlar, Aramalar sekmesindeki arama aracını kullanarak **vakaya** ilişkin verileri toplamakla ilgilidir. Daha fazla bilgi için bkz[. Olayla ilgili verileri toplama Advanced eDiscovery](collecting-data-for-ediscovery.md).
+Bu bölümde açıklanan sınırlar, bir servis talebi için veri toplamak için **Aramalar** sekmesindeki arama aracının kullanılmasıyla ilgilidir. Daha fazla bilgi için bkz. [Advanced eDiscovery bir servis talebi için veri toplama](collecting-data-for-ediscovery.md).
 
-| Sınırın açıklaması | Sınır |
-|:-----|:-----|
-|Tek bir aramada aranacak posta kutusu veya site sayısı üst sayısı. |Sınır yok|
-|Aynı anda çalıştıracak en fazla arama sayısı. |Sınır yok |
-|Tek bir kullanıcının aynı anda başlat birden çok arama başlatması için en fazla sayı. |10 | 
-|Arama sorgusu için karakter sayısı üst sayısı (işleçler ve koşullar dahil). |10.0005<sup></sup>|
-|Siteler ve sitelerde (işleçler ve koşullar dahil) SharePoint OneDrive İş için arama sorgusu karakter sayısı üst sayısı. |10,000<br>4.000 adet Joker <sup>Karakter5</sup>|
-|Ön ek joker karakterleri için en az alfa karakteri sayısı; örneğin, **one\**_ veya _* set\***.|3 |  
-|Tam bir tümcecik aramak için ön ek joker karakteri kullanırken veya bir önek joker karakteri ve **NEAR** Boole işleci kullanırken döndürülen en fazla değişken. |10.0006<sup></sup>|
-|Aramaların önizleme sayfasında görüntülenen kullanıcı posta kutusu başına en fazla öğe sayısı. En yeni öğeler görüntülenir. |100|
+|Sınırın açıklaması|Sınırı|
+|---|---|
+|Tek bir aramada aranabilecek en fazla posta kutusu veya site sayısı.|Sınır yok|
+|Aynı anda çalışabilecek en fazla arama sayısı.|Sınır yok|
+|Tek bir kullanıcının aynı anda başlatabileceği en fazla arama sayısı.|10|
+|Arama sorgusu için karakter sayısı üst sınırı (işleçler ve koşullar dahil).|10.0005<sup></sup>|
+|SharePoint ve OneDrive İş siteleri için arama sorgusu için en fazla karakter sayısı (işleçler ve koşullar dahil).|10,000<br>Joker Karakterli 4.0005<sup></sup>|
+|Ön ek joker karakterleri için en az alfa karakteri sayısı; örneğin, **one\**_ veya _* set\***.|3|
+|Tam bir tümceciği aramak için ön ek joker karakteri kullanılırken veya ön ek joker karakteri ve **NEAR** Boole işleci kullanılırken döndürülen maksimum değişken sayısı.|10.0006<sup></sup>|
+|Aramalar için önizleme sayfasında görüntülenen kullanıcı posta kutusu başına en fazla öğe sayısı. En yeni öğeler görüntülenir.|100|
 |Aramalar için önizleme sayfasında görüntülenen tüm posta kutularından en fazla öğe sayısı.|1,000|
-|Arama sonuçları için önizlemede 2013 posta kutusu sayısı üst araması.  Arama sorgusuyla eşleşmeye uygun öğeler içeren 1.000'den fazla posta kutusu varsa önizleme için yalnızca en çok sonuçları içeren ilk 1.000 posta kutusu kullanılabilir.|1,000|
-|Arama önizleme sayfasında görüntülenen SharePoint ve OneDrive İş en fazla öğe sayısı. En yeni öğeler görüntülenir. |200|
-|Arama sonuçları için SharePoint OneDrive İş site sayısı ve en fazla OneDrive İş site sayısı. Arama sorgusuyla eşleşmeye sahip öğeler içeren 200'den fazla site varsa, önizleme için yalnızca en çok sonuçları içeren ilk 200 site kullanılabilir.|200|
-|Aramaların önizleme sayfasında görüntülenen ortak klasör posta kutusu başına en fazla öğe sayısı. |100|
-|Tüm ortak klasör posta kutusu öğelerinde bulunan ve arama önizleme sayfasında görüntülenen en fazla öğe sayısı. |200|
-|Arama sonuçları için önizlemede 2013'e kadar olan ortak klasör posta kutusu sayısı. Arama sorgusuyla eşleşmeye çalışan öğeler içeren 500'den fazla ortak klasör posta kutusu varsa, önizleme için yalnızca en çok sonuçları içeren ilk 500 posta kutusu kullanılabilir.|500|
-|Taslak koleksiyonunun örnek sayfasında görüntülenen en büyük öğe boyutu.|10.000.000 bayt (yaklaşık 9,5 MB)|
+|Arama sonuçları için önizlenebilen en fazla posta kutusu sayısı.  Arama sorgusuyla eşleşen öğeleri içeren 1.000'den fazla posta kutusu varsa, yalnızca en çok sonuç içeren ilk 1.000 posta kutusu önizleme için kullanılabilir.|1,000|
+|Aramalar için önizleme sayfasında görüntülenen SharePoint ve OneDrive İş sitelerindeki en fazla öğe sayısı. En yeni öğeler görüntülenir.|200|
+|Arama sonuçları için önizlenebilen en fazla SharePoint ve OneDrive İş sitesi sayısı. Arama sorgusuyla eşleşen öğeler içeren 200'den fazla site varsa, önizleme için yalnızca en çok sonuç içeren ilk 200 site kullanılabilir.|200|
+|Aramalar için önizleme sayfasında görüntülenen ortak klasör posta kutusu başına en fazla öğe sayısı.|100|
+|Aramalar için önizleme sayfasında görüntülenen tüm ortak klasör posta kutusu öğelerinde bulunan öğe sayısı üst sınırı.|200|
+|Arama sonuçları için önizlenebilen en fazla ortak klasör posta kutusu sayısı. Arama sorgusuyla eşleşen öğeleri içeren 500'den fazla ortak klasör posta kutusu varsa, yalnızca en çok sonuç içeren ilk 500 posta kutusu önizleme için kullanılabilir.|500|
+|Taslak koleksiyonun örnek sayfasında görüntülenebilen bir öğenin en büyük boyutu.|10.000.000 bayt (yaklaşık 9,5 MB)|
 
-## <a name="search-times"></a>Arama saatleri
+## <a name="search-times"></a>Arama süreleri
 
-Microsoft, tüm kuruluşların yaptığı aramalar için performans bilgilerini toplar. Arama sorgusunun karmaşıklığı arama sürelerini etkileyebilir, ancak aramaların ne kadar süreyle devamyeceğini etkileyen en büyük faktör, arama yapılan posta kutularının sayısıdır. Microsoft, arama süreleri için Bir Hizmet Düzeyi Sözleşmesi sağlamasa da, aşağıdaki tabloda, aramada yer alan posta kutularının sayısına göre koleksiyon aramalarının ortalama arama süreleri listelemektedir.
+Microsoft, tüm kuruluşlar tarafından çalıştırılan aramalar için performans bilgileri toplar. Arama sorgusunun karmaşıklığı arama sürelerini etkileyebilir ancak aramaların ne kadar sürdüğünü etkileyen en büyük faktör, arama yapılan posta kutularının sayısıdır. Microsoft arama süreleri için bir Hizmet Düzeyi Sözleşmesi sağlamasa da, aşağıdaki tabloda aramaya dahil edilen posta kutularının sayısına göre koleksiyon aramaları için ortalama arama süreleri listelenmiştir.
   
-| Posta kutusu sayısı | Ortalama arama süresi |
-|:-----|:-----|
-|100  <br/> |30 saniye  <br/> |
-|1,000  <br/> |45 saniye  <br/> |
-|10,000  <br/> |4 dakika  <br/> |
-|25,000  <br/> |10 dakika  <br/> |
-|50,000  <br/> |20 dakika  <br/> |
-|100,000  <br/> |25 dakika  <br/> |
+|Posta kutusu sayısı|Ortalama arama süresi|
+|---|---|
+|100|30 saniye|
+|1,000|45 saniye|
+|10,000|4 dakika|
+|25,000|10 dakika|
+|50,000|20 dakika|
+|100,000|25 dakika|
 
 ## <a name="viewer-limits"></a>Görüntüleyici sınırları
 
-| Sınırın açıklaması | Sınır |
-|:-----|:-----|
-|Yerel görüntüleyicide Excel dosya boyutu üst sayısı.  <br/> |4 MB  <br/> |
+|Sınırın açıklaması|Sınırı|
+|---|---|
+|Yerel görüntüleyicide görüntülenebilen Excel dosyasının en büyük boyutu.|4 MB|
 
-## <a name="export-limits---final-export-out-of-review-set"></a>Dışarı aktarma sınırları - Gözden Geçirme Kümesi'nin son dışarı aktarması
+## <a name="export-limits---final-export-out-of-review-set"></a>Dışarı aktarma sınırları - Gözden Geçirme Kümesinden son dışarı aktarma
 
-Bu bölümde açıklanan sınırlar, gözden geçirme kümesi dışında belge dışarı aktarmayla ilgilidir.
+Bu bölümde açıklanan sınırlar, belgeleri gözden geçirme kümesinin dışına dışarı aktarmayla ilgilidir.
 
-| Sınırın açıklaması | Sınır |
-|:-----|:-----|
-|Tek bir dışarı aktarma için en büyük boyut.|5 milyon belge veya 500 GB (hangisi daha küçükse)|
-|Gözden geçirme kümesi başına en yüksek eşzamanlı dışarı aktarma. | 1 |
+|Sınırın açıklaması|Sınırı|
+|---|---|
+|Tek bir dışarı aktarmanın en büyük boyutu.|5 milyon belge veya 500 GB (hangisi daha küçükse)|
+|Gözden geçirme kümesi başına en fazla eşzamanlı dışarı aktarma.|1|
 
-## <a name="review-set-download-limits"></a>ayarlanmış indirme sınırlarını gözden geçirme
+## <a name="review-set-download-limits"></a>İndirme sınırlarını ayarlama bölümünü gözden geçirin
 
-| Sınırın açıklaması | Sınır |
-|:-----|:-----|
-|Gözden geçirme kümesinden indirilen toplam dosya boyutu veya en fazla belge sayısı.  <br/> |3 MB veya 50 <sup>belge7</sup>|
+|Sınırın açıklaması|Sınırı|
+|---|---|
+|Bir gözden geçirme kümesinden indirilen toplam dosya boyutu veya en fazla belge sayısı.|3 MB veya 50 <sup>belge7</sup>|
 
 ## <a name="notes"></a>Notlar
 
 > [!NOTE]
-> <sup>1</sup> Bu, bir vakada oluşturabilirsiniz etiket sayısı üst sayısıdır. Bu sınır, etiketlenen belge sayısıyla ilgili değildir.
+> <sup>1</sup> Bu, bir durumda oluşturabileceğiniz en fazla etiket sayısıdır. Bu sınır, etiketlenebilir belge sayısıyla ilgili değildir.
 >
-> <sup>2</sup> Bu sınır, diğer eBulma araçlarında dışarı içerik aktarmayla paylaşılır. Bu, İçerik arama ve Çekirdek eBulma'daki eş zamanlı dışarı aktarmaların (ve Advanced eDiscovery'de gözden geçirme kümelerine içerik eklemenin) hepsi bu sınıra karşı uygulandığı anlamına gelir.
+> <sup>2</sup> Bu sınır, diğer eBulma araçlarındaki içerik dışarı aktarıldığında paylaşılır. Bu, İçerik aramasında ve Çekirdek eBulma'da (ve Advanced eDiscovery kümelerini gözden geçirmek için içerik eklemek) içindeki eşzamanlı dışarı aktarma işlemlerinin tümünün bu sınıra göre uygulandığı anlamına gelir.
 >
-> <sup>3</sup> Tek tutma ilkesinde 1.000'den fazla posta kutusunu veya 100 siteyi yerine koyarak, sistem gerektiğinde tutma için otomatik olarak ölçeklendirilir. Bu, sistemin veri konumlarını tek bir tutma ilkesine eklemek yerine, birden çok tutma ilkesine otomatik olarak ekley sayılır. Bununla birlikte, kuruluş başına 10.000 vaka tutma politikası sınırı yine de geçerlidir.
+> <sup>3</sup> Tek bir ayrı tutma ilkesinde 1.000'den fazla posta kutusunu veya 100'den fazla siteyi beklemeye aldığınızda, sistem saklamayı gerektiği gibi otomatik olarak ölçeklendirir. Bu, sistemin veri konumlarını tek bir ayrı tutma ilkesine eklemek yerine otomatik olarak birden çok ayrı tutma ilkesine ekleyeceği anlamına gelir. Ancak, kuruluş başına 10.000 servis talebi saklama ilkesi sınırı hala geçerlidir.
 >
-> <sup>4</sup> Tek dosya sınırını aşan her öğe işleme hatası olarak karşıda gelir.
+> <sup>4</sup> Tek bir dosya sınırını aşan tüm öğeler işleme hatası olarak gösterilir.
 >
-> <sup>5</sup> Arama SharePoint konumlarda OneDrive İş, arama yapılan sitelerin URL'lerinde bu sınıra göre karakterler sayılır. Toplam karakter sayısı aşağıdakilerden oluşur:<br>
+> <sup>5</sup> SharePoint ve OneDrive İş konumları ararken, aranan sitelerin URL'lerindeki karakterler bu sınıra göre sayılır. Toplam karakter sayısı şunlardan oluşur:
+>
 > - Hem Kullanıcılar hem de Filtreler alanlarındaki tüm karakterler.
-> - Kullanıcıya uygun olan tüm arama izinleri filtreleri.
-> - Aramada herhangi bir konum özelliğinden karakterler; ExchangeLocation,PublicFolderLocation,SharePointLocation,ExchangeLocationExclusion,PublicFolderLocationExclusion,SharePointLocationExclusion, OneDriveLocationExclusion içerir.
->   Örneğin, hem SharePointLocation SharePoint OneDrive OneDriveLocation alanı için "ALL" sözcüğü görüntüılacağı için, aramada tüm SharePoint siteleri ve OneDrive hesapları da altı karakter olarak sayılır.
+> - Kullanıcıya uygulanan tüm arama izinleri filtreleri.
+> - Aramadaki herhangi bir konum özelliğinden karakterler; Buna ExchangeLocation,PublicFolderLocation,SharPointLocation,ExchangeLocationExclusion,PublicFolderLocationExclusion,SharePointLocationExclusion, OneDriveLocationExclusion dahildir.
+>   Örneğin, aramadaki tüm SharePoint siteleri ve OneDrive hesapları dahil olmak üzere, hem SharePointLocation hem de OneDriveLocation alanında "ALL" sözcüğü görüneceğinden altı karakter olarak sayılır.
 >
-> <sup>6</sup> Tümceciksiz sorgular için (çift tırnak işareti kullanmayan bir anahtar sözcük değeri) özel bir ön ek dizini kullanıruz. Bu bize bir sözcüğün belgede oluştuğuni ama belgenin içinde bulunduğu yeri değil, belge içinde yer alan yeri gösterir. Bir tümcecik sorgusu yapmak için (çift tırnak işaretleri içeren bir anahtar sözcük değeri), tümceciğin sözcükleri için belge içindeki konumu karşılaştırmamız gerekir. Bu, tümcecik sorguları için ön ek dizinini kullanalememız anlamına gelir. Bu durumda, sorguyu, ön ekin genişletilen tüm olası sözcüklerle dahili olarak genişleteceğiz; örneğin, **time *_* _\*"time OR timer OR times OR timex OR timeboxed OR ..." değerine kadar genişler**. 10.000 sayısı üst sınırı, sözcüğün sorguyla eşleşen belge sayısıyla değil, genişletilen değişken sayısı üst sınırıdır. Tümcecik olmayan terimler için üst sınır yoktur.
+> <sup>6</sup> Tümcecik olmayan sorgular için (çift tırnak işareti kullanmayan bir anahtar sözcük değeri) özel bir ön ek dizini kullanırız. Bu, bir sözcüğün belgede olduğunu, ancak belgede nerede olduğunu söylemediğini bildirir. Tümcecik sorgusu yapmak için (çift tırnak işaretli bir anahtar sözcük değeri), tümcecikteki sözcüklerin belge içindeki konumunu karşılaştırmamız gerekir. Başka bir deyişle, tümcecik sorguları için ön ek dizinini kullanamayız. Bu durumda, ön ekin genişletilmesi olası tüm sözcüklerle sorguyu dahili olarak genişletiriz; örneğin,  **time\**_ _*"time VEYA timer OR times YA DA timex OR timeboxed OR ..." olarak genişletilebilir**. 10.000 sınırı, sorguyla eşleşen belge sayısı değil, sözcüğün genişletebileceği en fazla değişken sayısıdır. Tümcecik olmayan terimler için üst sınır yoktur.
 >
-> <sup>7</sup> Bu sınır, seçili belgeleri gözden geçirme kümesinden indirmek için geçerlidir. Gözden geçirme kümesinden belgeleri dışarı aktarma için bu geçerli değildir. Belgeleri indirme ve dışarı aktarma hakkında daha fazla bilgi için bkz. Örnek olay [verilerini Advanced eDiscovery](exporting-data-ediscover20.md).
+> <sup>7</sup> Bu sınır, seçilen belgeleri bir gözden geçirme kümesinden indirmek için geçerlidir. Bir gözden geçirme kümesinden belgeleri dışarı aktarmak için geçerli değildir. Belgeleri indirme ve dışarı aktarma hakkında daha fazla bilgi için bkz[. Advanced eDiscovery'da büyük/küçük harf verilerini dışarı aktarma](exporting-data-ediscover20.md).

@@ -1,5 +1,5 @@
 ---
-title: Salesforce Sohbettersi verilerini aynı dosyada arşivlemek için bağlayıcı Microsoft 365
+title: Microsoft 365'de Salesforce Chatter verilerini arşivleye bir bağlayıcı ayarlama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -11,82 +11,82 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Yöneticiler, Salesforce Sohbettersi verilerini Veritas'tan içeri aktaracak ve arşivleyecek bir bağlayıcı Microsoft 365. Bu bağlayıcı, iş yerinde üçüncü taraf veri kaynaklarından verileri Microsoft 365. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal saklama, içerik araması ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: bb52bd95d11a93c2bbb6816ed189ef5e0594ffac
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Yöneticiler, Salesforce Chatter verilerini Veritas'tan Microsoft 365 içeri aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
+ms.openlocfilehash: 8d86b4fcddcdf4a0f9b169b32df152873e8211c7
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63327428"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64758629"
 ---
-# <a name="set-up-a-connector-to-archive-salesforce-chatter-data"></a>Salesforce SohbetTersi verilerini arşivlemek için bağlayıcı ayarlama
+# <a name="set-up-a-connector-to-archive-salesforce-chatter-data"></a>Salesforce Chatter verilerini arşivleye bağlayıcı ayarlama
 
-Salesforce SohbetTersi platformundan Microsoft 365 uyumluluk merkezi kutunuzda kullanıcı posta kutularına veri içeri aktarmak ve arşivlemek için veritas Microsoft 365 kullanın. Veritas, üçüncü [taraf veri](http://globanet.com/chatter/) kaynağından öğeleri yakalayan ve bu öğeleri üçüncü taraf veri kaynağına aktaran bir Salesforce Sohbet Microsoft 365. Bağlayıcı, Salesforce Sohbetter'den sohbetler, ekler ve gönderiler gibi içerikleri bir e-posta iletisi biçimine dönüştürür ve sonra bu öğeleri Microsoft 365'te kullanıcının posta kutusuna dönüştürür.
+Salesforce Chatter platformundaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlerken Microsoft 365 uyumluluk merkezi bir Veritas bağlayıcısı kullanın. Veritas, üçüncü taraf veri kaynağından öğeleri yakalayan ve bu öğeleri Microsoft 365 aktaran bir [Salesforce Chatter](http://globanet.com/chatter/) bağlayıcısı sağlar. Bağlayıcı sohbetler, ekler ve gönderiler gibi içeriği Salesforce Chatter'dan e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'da kullanıcının posta kutusuna aktarır.
 
-Salesforce Sohbetter verileri kullanıcı posta kutularında depolandığı için, Mahkeme Microsoft 365, eBulma, bekletme ilkeleri ve bekletme etiketleri gibi uyumluluk özelliklerini uygulayabilirsiniz. Verileri başka bir kuruluşta içeri aktarmanız ve arşivlemeniz için Salesforce Sohbetter bağlayıcısı kullanmak Microsoft 365 düzenleme ilkeleriyle uyumlu çalışmanıza yardımcı olabilir.
+Salesforce Chatter verileri kullanıcı posta kutularında depolandıktan sonra, Dava Tutma, eBulma, bekletme ilkeleri ve bekletme etiketleri gibi Microsoft 365 uyumluluk özelliklerini uygulayabilirsiniz. Microsoft 365'de verileri içeri aktarmak ve arşivlerken Salesforce Chatter bağlayıcısı kullanmak, kuruluşunuzun kamu ve mevzuat ilkeleriyle uyumlu kalmasına yardımcı olabilir.
 
-## <a name="overview-of-archiving-salesforce-chatter-data"></a>Salesforce Sohbetter verilerini arşivlemeye genel bakış
+## <a name="overview-of-archiving-salesforce-chatter-data"></a>Salesforce Chatter verilerini arşivlemeyle ilgili genel bakış
 
-Aşağıdaki genel bakış makalesinde, satış sırasında Salesforce Sohbetter verilerini arşivlemek için bağlayıcı kullanma Microsoft 365.
+Aşağıdaki genel bakışta, Microsoft 365'da Salesforce Chatter verilerini arşivleyen bir bağlayıcı kullanma işlemi açıklanmaktadır.
 
-![Salesforce Sohbetter verileri için arşivleme iş akışı.](../media/SalesforceChatterConnectorWorkflow.png)
+![Salesforce Chatter verileri için iş akışı arşivleme.](../media/SalesforceChatterConnectorWorkflow.png)
 
-1. Organization works with Salesforce Chatter to set up and configure a Salesforce Chatter site.
+1. Kuruluşunuz bir Salesforce Chatter sitesi ayarlamak ve yapılandırmak için Salesforce Chatter ile birlikte çalışır.
 
-2. Her 24 saatte bir, Salesforce SohbetTeri öğeleri VeriTas Merge1 sitesine kopyalanır. Ayrıca, Salesforce SohbetTersi öğelerini e-posta iletisi biçiminde de bağlayıcı alırsınız.
+2. 24 saatte bir Salesforce Chatter öğeleri Veritas Merge1 sitesine kopyalanır. Bağlayıcı ayrıca Salesforce Chatter öğelerini de e-posta iletisi biçiminde görüntüler.
 
-3. Microsoft 365 uyumluluk merkezi'ta oluşturmakta olduğunuz Salesforce Sohbetter bağlayıcısı, her gün Veritas Merge1 sitesine bağlanır ve Sohbetter içeriğini Microsoft bulutunda güvenli bir Azure Depolama konuma aktarıyor.
+3. Microsoft 365 uyumluluk merkezi oluşturduğunuz Salesforce Chatter bağlayıcısı her gün Veritas Merge1 sitesine bağlanır ve Chatter içeriğini Microsoft bulutunda güvenli bir Azure Depolama konumuna aktarır.
 
-4. Bağlayıcı, dönüştürülmüş öğeleri, 3. Adımda açıklandığı gibi otomatik kullanıcı eşlemesinde *E-posta* özelliğinin değerini kullanarak belirli kullanıcıların posta [kutularına içeri aktarıyor](#step-3-map-users-and-complete-the-connector-setup). Kullanıcı posta kutularında **Salesforce Sohbettersi** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, E-posta özelliğinin değerini kullanarak hangi posta kutusuna öğe *aktarılamayacaklarını* belirler. Her Sohbetter öğesi, öğenin tüm katılımcılarının e-posta adresiyle doldurulan bu özelliği içerir.
+4. Bağlayıcı, [3. Adımda](#step-3-map-users-and-complete-the-connector-setup) açıklandığı gibi otomatik kullanıcı eşlemesinin *Email* özelliğinin değerini kullanarak dönüştürülen öğeleri belirli kullanıcıların posta kutularına aktarır. Kullanıcı posta kutularında **Salesforce Chatter** adlı Gelen Kutusu klasöründe bir alt klasör oluşturulur ve öğeler bu klasöre aktarılır. Bağlayıcı, *E-posta* özelliğinin değerini kullanarak öğelerin hangi posta kutusuna aktarılacağını belirler. Her Chatter öğesi, öğenin her katılımcısının e-posta adresiyle doldurulmuş olan bu özelliği içerir.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- Microsoft bağlayıcıları için bir Merge1 hesabı oluşturun. Hesap oluşturmak için [Veritas Müşteri Desteği'ne başvurun](https://www.veritas.com/content/support/). Bağlayıcıyı 1. Adımda  oluşturdukta bu hesapta oturum açın.
+- Microsoft bağlayıcıları için bir Merge1 hesabı oluşturun. Hesap oluşturmak için [Veritas Müşteri Desteği'ne](https://www.veritas.com/content/support/) başvurun. 1. Adımda bağlayıcıyı oluştururken bu hesapta oturum açmanız gerekir.
 
-- Bir Salesforce uygulaması oluşturun ve uygulamasında bir belirteç alın [https://salesforce.com](https://salesforce.com). Salesforce hesabında yönetici olarak oturum açmalı ve verileri içeri aktarabilirsiniz. Ayrıca, güncelleştirmeleri, silmeleri ve düzenlemeleri yakalamak için Tetikleyicilerin Sohbetter sitesinde yayımlandır olması gerekir. Bu tetikleyiciler bir kanalda bir gönderi oluşturacak ve Merge1 kanaldan bilgileri yakalar. Uygulamayı oluşturma ve belirteci edinme hakkında adım adım yönergeler için bkz. [Birleştirme1 Üçüncü Taraf Bağlayıcılar Kullanıcı Kılavuzu](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20SalesForce%20Chatter%20User%20Guide%20.pdf).
+- Bir Salesforce uygulaması oluşturun ve adresinde [https://salesforce.com](https://salesforce.com)bir belirteç alın. Salesforce hesabında yönetici olarak oturum açmanız ve verileri içeri aktarmak için bir kullanıcı kişisel belirteci almanız gerekir. Ayrıca güncelleştirmeleri, silmeleri ve düzenlemeleri yakalamak için tetikleyicilerin Chatter sitesinde yayımlanması gerekir. Bu tetikleyiciler kanalda bir gönderi oluşturur ve Merge1 kanaldaki bilgileri yakalar. Uygulamayı oluşturma ve belirteci alma hakkında adım adım yönergeler için bkz. [Birleştirme1 Üçüncü Taraf Bağlayıcıları Kullanıcı Kılavuzu](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20SalesForce%20Chatter%20User%20Guide%20.pdf).
 
-- 1. Adımda Salesforce SohbetTersi bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yöneticisi rolü atanabilir. Bu rol, sayfanın en son veri **bağlayıcıları sayfasına bağlayıcı** eklemek Microsoft 365 uyumluluk merkezi. Bu rol varsayılan olarak birden çok rol gruplarına eklenir. Bu rol gruplarının listesi için, Güvenlik ve Uyumluluk Merkezi'nde İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki roller" [& bakın](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). Alternatif olarak, bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolü ata sonrasında uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için aşağıdaki İzinler bölümündeki "Özel bir rol grubu oluşturma" [bölümüne Microsoft 365 uyumluluk merkezi](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- 1. Adımda Salesforce Chatter bağlayıcısını oluşturan (ve 3. Adımda tamamlayan) kullanıcıya Veri Bağlayıcısı Yönetici rolü atanmalıdır. Bu rol, Microsoft 365 uyumluluk merkezi **Veri bağlayıcıları sayfasına bağlayıcı** eklemek için gereklidir. Bu rol varsayılan olarak birden çok rol grubuna eklenir. Bu rol gruplarının listesi için Güvenlik [& Uyumluluk Merkezi'ndeki İzinler bölümündeki "Güvenlik ve uyumluluk merkezlerindeki](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center) roller" bölümüne bakın. Alternatif olarak, kuruluşunuzdaki bir yönetici özel bir rol grubu oluşturabilir, Veri Bağlayıcısı Yönetici rolünü atayabilir ve ardından uygun kullanıcıları üye olarak ekleyebilir. Yönergeler için, [Microsoft 365 uyumluluk merkezi İzinler](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group) bölümündeki "Özel rol grubu oluşturma" bölümüne bakın.
 
-- Bu Veritas veri bağlayıcısı, ABD Kamu bulutu GCC ortamlarda Microsoft 365 önizlemededir. Üçüncü taraf uygulamaları ve hizmetleri, kuruluş müşteri verilerini Microsoft 365 altyapısının dışında olan üçüncü taraf sistemlerde depolamayı, iletip işlemeyi ve bu nedenle de Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, bu ürünün üçüncü taraf uygulamalara bağlanmak için kullanılabileceğiyle ilgili hiçbir beyanda yoktur ve bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu da ima eder.
+- Bu Veritas veri bağlayıcısı, Microsoft 365 ABD Kamu bulutundaki GCC ortamlarda genel önizleme aşamasındadır. Üçüncü taraf uygulamalar ve hizmetler, kuruluşunuzun müşteri verilerinin Microsoft 365 altyapısının dışındaki üçüncü taraf sistemlerde depolanmasını, iletilmesini ve işlenmesini içerebilir ve bu nedenle Microsoft 365 uyumluluk ve veri koruma taahhütleri kapsamında değildir. Microsoft, üçüncü taraf uygulamalara bağlanmak için bu ürünün kullanıldığının, bu üçüncü taraf uygulamaların FEDRAMP uyumlu olduğunu ifade ettiğini ifade etmemektedir.
 
-## <a name="step-1-set-up-the-salesforce-chatter-connector"></a>1. Adım: Salesforce Sohbetter bağlayıcısı ayarlama
+## <a name="step-1-set-up-the-salesforce-chatter-connector"></a>1. Adım: Salesforce Chatter bağlayıcısını ayarlama
 
-İlk adım, site sayfasındaki **Veri Bağlayıcıları** sayfasına erişmek Microsoft 365 uyumluluk merkezi Sohbetter verileri için bir bağlayıcı oluşturmaktır.
+İlk adım, Microsoft 365 uyumluluk merkezi **Veri Bağlayıcıları** sayfasına erişmek ve Chatter verileri için bir bağlayıcı oluşturmaktır.
 
-1. Veri bağlayıcılarıSalesforce [https://compliance.microsoft.com](https://compliance.microsoft.com/) **Sohbetteri'ne** >  gidin **ve bu öğeye tıklayın**.
+1. **Veri bağlayıcılarıSalesforce** >  **Chatter'a**[https://compliance.microsoft.com](https://compliance.microsoft.com/) gidin ve tıklayın.
 
-2. **Salesforce Sohbetter ürün açıklaması** sayfasında Bağlayıcı **ekle'ye tıklayın**.
+2. **Salesforce Chatter** ürün açıklaması sayfasında **Bağlayıcı ekle'ye** tıklayın.
 
-3. Hizmet Koşulları **sayfasında Kabul Et'e** **tıklayın**.
+3. **Hizmet koşulları** sayfasında **Kabul Et'e** tıklayın.
 
-4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve Ardından Sonraki'ye **tıklayın**.
+4. Bağlayıcıyı tanımlayan benzersiz bir ad girin ve **İleri'ye** tıklayın.
 
-5. Bağlayıcıyı yapılandırmak için Merge1 hesabınızla oturum açın.
+5. Bağlayıcıyı yapılandırmak için Merge1 hesabınızda oturum açın.
 
-## <a name="step-2-configure-the-salesforce-chatter-on-the-veritas-merge1-site"></a>2. Adım: Veritas Merge1 sitesinde Salesforce Sohbeti'yi yapılandırma
+## <a name="step-2-configure-the-salesforce-chatter-on-the-veritas-merge1-site"></a>2. Adım: Veritas Merge1 sitesinde Salesforce Chatter'ı yapılandırma
 
-İkinci adım, Veritas Merge1 sitesinde Salesforce Chatter bağlayıcısı yapılandırmaktır. Salesforce Sohbetter bağlayıcısı yapılandırma hakkında bilgi için bkz. [Merge1 Third-Party Connectors User Guide](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20SalesForce%20Chatter%20User%20Guide%20.pdf).
+İkinci adım, Veritas Merge1 sitesinde Salesforce Chatter bağlayıcısını yapılandırmaktır. Salesforce Chatter bağlayıcısını yapılandırma hakkında bilgi için bkz. [Birleştirme1 Üçüncü Taraf Bağlayıcıları Kullanıcı Kılavuzu](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20SalesForce%20Chatter%20User%20Guide%20.pdf).
 
-Son Olarak Kaydet **& i** tıklatmanın ardından, sihirbazın  Bağlayıcı sihirbazında Kullanıcı eşleme Microsoft 365 uyumluluk merkezi sayfası görüntülenir.
+**Son & Kaydet'e** tıkladıktan sonra, Microsoft 365 uyumluluk merkezi bağlayıcı sihirbazındaki **Kullanıcı eşleme** sayfası görüntülenir.
 
 ## <a name="step-3-map-users-and-complete-the-connector-setup"></a>3. Adım: Kullanıcıları eşleme ve bağlayıcı kurulumunu tamamlama
 
-Kullanıcıları eşlemek ve aşağıdaki adımları takip etmek için Microsoft 365 uyumluluk merkezi izleyin:
+Kullanıcıları eşlemek ve Microsoft 365 uyumluluk merkezi bağlayıcı kurulumunu tamamlamak için şu adımları izleyin:
 
-1. **Salesforce Sohbetter kullanıcılarını diğer kullanıcılarla eşleme Microsoft 365**, otomatik kullanıcı eşlemesini etkinleştirin. Salesforce SohbetTersi öğeleri, organizasyondaki kullanıcılar için *e-posta* adreslerini içeren E-posta adlı bir özellik içerir. Bağlayıcı bu adresi bir kullanıcıyla Microsoft 365, öğeler o kullanıcının posta kutusuna aktarılır.
+1. **Salesforce Chatter kullanıcılarını Microsoft 365 kullanıcılarla eşle** sayfasında otomatik kullanıcı eşlemesini etkinleştirin. Salesforce Chatter öğeleri, kuruluşunuzdaki kullanıcıların *e-posta adreslerini içeren E-posta* adlı bir özellik içerir. Bağlayıcı bu adresi bir Microsoft 365 kullanıcıyla ilişkilendirebiliyorsa, öğeler söz konusu kullanıcının posta kutusuna aktarılır.
 
-2. Ardından **,** ayarlarınızı gözden geçirin ve yeni bağlayıcıya yönelik içeri  aktarma işleminin ilerlemesini görmek için Veri bağlayıcıları sayfasına gidin.
+2. **İleri'ye** tıklayın, ayarlarınızı gözden geçirin ve yeni bağlayıcının içeri aktarma işleminin ilerleme durumunu görmek için **Veri bağlayıcıları** sayfasına gidin.
 
-## <a name="step-4-monitor-the-salesforce-chatter-connector"></a>4. Adım: Salesforce SohbetTersi bağlayıcılarını izleme
+## <a name="step-4-monitor-the-salesforce-chatter-connector"></a>4. Adım: Salesforce Chatter bağlayıcısını izleme
 
-Salesforce Sohbetter bağlayıcısı oluşturduk tan sonra, bağlayıcının durumunu geçerli Microsoft 365 uyumluluk merkezi.
+Salesforce Chatter bağlayıcısını oluşturduktan sonra bağlayıcının durumunu Microsoft 365 uyumluluk merkezi görüntüleyebilirsiniz.
 
-1. Sol gezinti [https://compliance.microsoft.com](https://compliance.microsoft.com/) çubuğunda **Veri bağlayıcıları'na** gidin ve bu bağlayıcılara tıklayın.
+1. Sol gezinti bölmesinde **Veri bağlayıcıları'na** [https://compliance.microsoft.com](https://compliance.microsoft.com/) gidin ve tıklayın.
 
-2. Bağlayıcılar **sekmesine** tıklayın ve ardından **Salesforce Sohbetter** bağlayıcısı'ne tıklarsanız bağlayıcının özelliklerini ve bilgilerini içeren açılır sayfayı görüntüleyebilirsiniz.
+2. **Bağlayıcılar** sekmesine tıklayın ve ardından **Salesforce Chatter** bağlayıcısına tıklayarak bağlayıcı hakkındaki özellikleri ve bilgileri içeren açılır sayfayı görüntüleyin.
 
-3. **Bağlayıcının kaynak durumunun altında**, **Bağlayıcının durum günlüğünü** açmak (veya kaydetmek) için Günlüğü indir bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan verileri içerir.
+3. Bağlayıcının durum günlüğünü açmak (veya kaydetmek) için **Kaynakla bağlayıcı durumu** altında **Günlüğü indir** bağlantısına tıklayın. Bu günlük, Microsoft buluta aktarılan verileri içerir.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-- Şu anda ekleri veya 10 MB'den büyük öğeleri içeri aktarmayı desteklemez. Daha büyük öğeler için destek daha sonraki bir tarihte kullanılabilir.
+- Şu anda 10 MB'tan büyük eklerin veya öğelerin içeri aktarılmasını desteklemiyoruz. Daha büyük öğeler için destek daha sonraki bir tarihte sağlanacaktır.

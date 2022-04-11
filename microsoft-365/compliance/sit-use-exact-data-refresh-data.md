@@ -1,5 +1,5 @@
 ---
-title: Tam veri duyarlıksız bilgi kaynak tablo dosyanızı yenileme
+title: Tam veri eşleştirme duyarlı bilgi kaynak tablo dosyanızı yenileyin
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -17,37 +17,37 @@ search.appverid:
 - MET150
 description: Hassas bilgi kaynağı tablo dosyanızı yenileyin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 347ff88391a19cb3d8688b1142e524a163159b6f
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: fe72fac43d3cc9a568d8aa1c5d985d34f8477a4d
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525494"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64760855"
 ---
-# <a name="refresh-your-exact-data-match-sensitive-information-source-table-file"></a>Hassas bilgiler kaynak tablo dosyasıyla tam olarak eşlene verilerinizi yenileme 
+# <a name="refresh-your-exact-data-match-sensitive-information-source-table-file"></a>Hassas bilgi kaynağı tablo dosyasıyla tam olarak eşleşen verilerinizi yenileyin 
 
-Hassas bilgi veritabanınızı her 24 saatte bir 5 kez yenileyin. Hassas bilgi kaynağı tabloyu yeniden yüklemek ve yeniden yüklemek zorundasınız.
+Hassas bilgi veritabanınızı her 24 saat içinde en fazla 5 kez yenileyebilirsiniz. Hassas bilgi kaynağı tablonuzu yeniden oluşturmanız ve karşıya yüklemeniz gerekir.
 
-1. Hassas verileri Microsoft Excel gibi bir uygulamaya yeniden aktarın ve dosyayı .csv, .tsv biçiminde veya boru (|) ayrılmış biçimde kaydedin. Daha önce karmata bulundurarak dosyayı karşıya yüklerken, aynı dosya adını ve konumunu kullanın. Hassas verilerinizi [dışarı aktarma ve doğru](sit-get-started-exact-data-match-export-data.md#export-source-data-for-exact-data-match-based-sensitive-information-type) biçime dönüştürmeyle ilgili ayrıntılar için Bkz. Temel alınan hassas bilgi türüyle tam olarak eşleşiyor veri için kaynak verileri dışarı aktarma.
+1. Hassas verileri Microsoft Excel gibi bir uygulamaya yeniden aktarın ve dosyayı .csv, .tsv biçiminde veya kanal (|) sınırlandırılmış biçimde kaydedin. Dosyayı daha önce karma ve karşıya yüklerken kullandığınız dosya adını ve konumunu koruyun. Hassas verilerinizi dışarı aktarma ve doğru biçime alma ayrıntıları [için bkz. Tam veri eşleşmesi için kaynak verileri dışarı aktarma, hassas bilgi türüyle eşleşmektedir](sit-get-started-exact-data-match-export-data.md#export-source-data-for-exact-data-match-based-sensitive-information-type) .
 
       > [!NOTE]
-      > Hassas bilgi kaynağı tablo dosyasının yapısında (alan adları) hiçbir değişiklik yoksa, verileri yenilerken veritabanı şema dosyanız üzerinde herhangi bir değişiklik yapmak zorunda olmazsınız. Ancak değişiklik yapmak zorundaysanız, veritabanı şemasını ve kural paketinizi buna uygun şekilde düzenlemeyi de sağlarsınız. Bir [şemayı düzenleme veya kaldırma adımları için](sit-use-exact-data-manage-schema.md#manage-your-exact-data-match-schema) bkz. Tam veri eşleşme şemanızı yönetme. EDM SIT/rule paketinizi düzenleme veya kaldırma adımları için bkz. Hassas bilgi [türüne/](sit-get-started-exact-data-match-create-rule-package.md#create-exact-data-match-sensitive-information-typerule-package) kural paketine tam olarak uygun veri oluşturma.
+      > Hassas bilgi kaynağı tablo dosyasının yapısında (alan adları) hiçbir değişiklik yoksa, verileri yenilerken veritabanı şema dosyanızda herhangi bir değişiklik yapmanız gerekmez. Ancak, değişiklik yapmanız gerekiyorsa veritabanı şemasını ve kural paketinizi uygun şekilde düzenlediğinizden emin olun. Bkz. Şemayı düzenleme veya kaldırma adımları için [tam veri eşleştirme şemanızı yönetme](sit-use-exact-data-manage-schema.md#manage-your-exact-data-match-schema) . EDM SIT/rule paketinizi düzenleme veya kaldırma adımları için bkz. [Hassas bilgi türü/kural paketiyle tam veri eşleştirmesi oluşturma](sit-get-started-exact-data-match-create-rule-package.md#create-exact-data-match-sensitive-information-typerule-package) .
 
-2. Karma'daki [yordamları kullanın ve hassas bilgiler tablosu kaynak](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types) dosyanızı karşıya yüklemek üzere hassas bilgiler kaynağı tablosuna hassas bilgilerle tam olarak uygun olan bilgiler için kaynak tabloyu karşıya yükleyin.
+2. Karma'daki yordamları kullanın [ve hassas bilgi tablonuzun kaynak dosyasını karşıya yüklemek üzere hassas bilgi türleriyle tam eşleşmesi için hassas](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types) bilgi kaynağı tablosunu karşıya yükleyin.
 
-2. Görev [Zamanlayıcı'yı kullanarak Karma'yı](/windows/desktop/TaskSchd/task-scheduler-start-page) otomatik hale yükleyebilir ve hassas bilgi türleri yordamı için hassas bilgi kaynağı tablosuna [tam olarak uygun olan bilgileri karşıya yükleyebilirsiniz](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types) . Çeşitli yöntemler kullanarak görevleri zamanabilirsiniz:
+3. Karmayı otomatikleştirmek [ve hassas bilgi türleri yordamıyla tam veri eşleştirmesi için hassas bilgi kaynağı tablosunu karşıya yüklemek için](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types) [Görev Zamanlayıcı'yı](/windows/desktop/TaskSchd/task-scheduler-start-page) kullanabilirsiniz. Çeşitli yöntemler kullanarak görevleri zamanlayabilirsiniz:
 
-   |Yöntem|Ne yapmalı?|
+   |Yöntem|Yapılması gerekenler|
    |---|---|
-   |Windows PowerShell|Bu makalede [scheduledTasks belgelerine](/powershell/module/scheduledtasks/) [ve örnek PowerShell](#example-powershell-script-for-task-scheduler) betiğine bakın|
-   |Görev Zamanlayıcı API'si|Görev Zamanlayıcı [belgelerine](/windows/desktop/TaskSchd/using-the-task-scheduler) bakın|
-   |Windows arabirimi|Görev Windows'de **Başlat'a** tıklayın ve Görev Zamanlayıcı yazın. Ardından sonuç listesinde Görev Zamanlayıcı'ya **sağ tıklayın ve** Yönetici olarak **çalıştır'ı seçin**.|
+   |Windows PowerShell|Bu makaledeki [ScheduledTasks](/powershell/module/scheduledtasks/) belgelerine ve [örnek PowerShell betiğine](#example-powershell-script-for-task-scheduler) bakın|
+   |Görev Zamanlayıcı API'si|[Görev Zamanlayıcı](/windows/desktop/TaskSchd/using-the-task-scheduler) belgelerine bakın|
+   |kullanıcı arabirimini Windows|Windows **, Başlat'a** tıklayın ve Görev Zamanlayıcı yazın. Ardından, sonuç listesinde **Görev Zamanlayıcı'ya** sağ tıklayın ve **Yönetici olarak çalıştır'ı** seçin.|
 
-### <a name="example-powershell-script-for-task-scheduler"></a>Görev Zamanlayıcı için Örnek PowerShell betiği 
+### <a name="example-powershell-script-for-task-scheduler"></a>Görev Zamanlayıcı için örnek PowerShell betiği 
 
-Bu bölümde, verilerinize karma oluşturma ve karma veri yükleme görevlerini zamanlamayı gerçekleştirmek için kullanabileceğiniz örnek bir PowerShell betiği yer almaktadır:
+Bu bölüm, verileri karmalama ve karma verileri karşıya yükleme görevlerinizi zamanlamak için kullanabileceğiniz örnek bir PowerShell betiği içerir:
 
-#### <a name="schedule-hashing-and-upload-in-a-combined-step"></a>Karma sağlama ve karşıya yükleme adımlarını birleştirilmiş bir adımda zamanlama
+#### <a name="schedule-hashing-and-upload-in-a-combined-step"></a>Karma oluşturma ve birleştirilmiş adımda karşıya yükleme zamanlama
 
 ```powershell
 param(\[string\]$dataStoreName,\[string\]$fileLocation)
@@ -82,7 +82,7 @@ $taskName = 'EDMUpload\_' + $dataStoreName
 Register-ScheduledTask -TaskName $taskName -InputObject $scheduledTask -User $user -Password $password
 ```
 
-#### <a name="schedule-hashing-and-upload-as-separate-steps"></a>Karma sağlama ve karşıya yükleme adımlarını ayrı adımlar olarak zamanlama
+#### <a name="schedule-hashing-and-upload-as-separate-steps"></a>Karmayı zamanlama ve ayrı adımlar olarak karşıya yükleme
 
 ```powershell
 param(\[string\]$dataStoreName,\[string\]$fileLocation)

@@ -1,5 +1,5 @@
 ---
-title: Bir vakaya koruyucular ekleme Advanced eDiscovery ekleme
+title: Advanced eDiscovery servis talebine koruyucu ekleme
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,101 +15,101 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: İş akışlarınızı koordine etmek ve bir olayda ilgili veri kaynaklarını tanımlamak için Advanced eDiscovery koruyucu yönetim aracını nasıl kullanabileceğinizi öğrenin.
+description: İş akışlarınızı koordine etmek ve bir durumda ilgili veri kaynaklarını tanımlamak için Advanced eDiscovery'daki yerleşik koruyucu yönetim aracını kullanmayı öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: b0a15610c84c9e1142cd1afa6ebf121f387ce807
-ms.sourcegitcommit: 2e05865beeb2051fd9ece212a46179310b946a46
+ms.openlocfilehash: bbd5bb1955fc0c8ee5917a6827b35a6688928571
+ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2021
-ms.locfileid: "62973864"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "64759379"
 ---
-# <a name="add-custodians-to-an-advanced-ediscovery-case"></a>Bir vakaya koruyucular ekleme Advanced eDiscovery ekleme
+# <a name="add-custodians-to-an-advanced-ediscovery-case"></a>Advanced eDiscovery servis talebine koruyucu ekleme
 
-Advanced eDiscovery'te yerleşik koruyucu yönetim aracını kullanarak, iş akışlarınızı koruyucuları yönetme ve vakayla ilişkili ilişkili, özel durumlu veri kaynaklarını belirleme arasında eşgüdüm elde edin. Bir custo custo bir Exchange ve OneDrive İş tutabilir. Araştırmanızı bulma işlemi sırasında, bir özel kullanıcıya erişen veya katkıda bulunan diğer veri kaynaklarını da (posta kutuları, siteler veya Teams) tanımlayabilirsiniz. Bu durumda, özel koruyucu yönetim aracını kullanarak bu veri kaynaklarını belirli bir custo ortak kullanabilirsiniz. Bir vakaya koruyucular ekdikten ve diğer veri kaynağını bu veri kaynağıyla ilişkilendirmenin ardından, verileri hızla koruyabilirsiniz ve özel veriler üzerinde aramaabilirsiniz.
+Advanced eDiscovery'deki yerleşik koruyucu yönetim aracını kullanarak, koruyucuları yönetme ve bir olayla ilişkili ilgili, gözetim veri kaynaklarını belirleme konusunda iş akışlarınızı koordine edin. Bir koruyucu eklediğinizde, sistem Exchange posta kutusunu ve OneDrive İş hesabını otomatik olarak tanımlayabilir ve ayrı tutabilir. Araştırmanızın bulma işlemi sırasında, bir koruyucunun eriştiği veya katkıda bulunduğu diğer veri kaynaklarını (posta kutuları, siteler veya Teams gibi) de tanımlayabilirsiniz. Bu durumda, söz konusu veri kaynaklarını ilişkilendirmek için koruyucu yönetim aracını kullanabilirsiniz. Bir olaya koruyucular ekledikten ve diğer veri kaynaklarını bunlarla ilişkilendirdikten sonra, verileri hızla koruyabilir ve gözaltı verilerini arayabilirsiniz.
 
-Dört adımda, özel durumlar için özel Advanced eDiscovery ekleyebilir ve yönetebilirsiniz:
+dört adımda Advanced eDiscovery durumlarda koruyucu ekleyebilir ve yönetebilirsiniz:
 
-1. Koruyucuları tanımlama.
+1. Koruyucuları belirleyin.
 
-2. Özel veri konumlarını seçin.
+2. Koruyucu veri konumlarını seçin.
 
-3. Tutma ayarlarını yapılandırma.
+3. Ayrı tutma ayarlarını yapılandırın.
 
-4. Koruyucuları gözden geçirme ve işlemi tamamlama.
+4. Koruyucuları gözden geçirin ve işlemi tamamlayın.
 
-## <a name="make-sure-you-have-the-necessary-permissions"></a>Gerekli izinlere sahip olduğundan emin olun
+## <a name="make-sure-you-have-the-necessary-permissions"></a>Gerekli izinlere sahip olduğunuzdan emin olun
 
-Bir vakaya koruyucular eklemek için, eBulma Yöneticisi rol grubunun üyesi olmak gerekir. Bu size, bir vakaya koruyucuları eklemek ve özel veri kaynaklarını yerinde tutmak için gerekli izinleri sağlar. Daha fazla bilgi için bkz [. eBulma izinleri atama](get-started-with-advanced-ediscovery.md#step-2-assign-ediscovery-permissions).
+Bir servis talebine koruyucu eklemek için eBulma Yöneticisi rol grubunun üyesi olmanız gerekir. Bu, bir olaya koruyucu eklemek ve koruyucu veri kaynaklarını ayrı tutmanız için gerekli izinleri sağlar. Daha fazla bilgi için bkz. [eBulma izinleri atama](get-started-with-advanced-ediscovery.md#step-2-assign-ediscovery-permissions).
 
 ## <a name="step-1-identify-custodians"></a>1. Adım: Koruyucuları belirleme
 
-1. [https://compliance.microsoft.com](https://compliance.microsoft.com) Uygun eBulma izinleri atanmış bir kullanıcı hesabına gidip oturum açın.
+1. [https://compliance.microsoft.com](https://compliance.microsoft.com) adresine gidin ve uygun eBulma izinlerine atanmış bir kullanıcı hesabıyla oturum açın.
 
-2. Gezinti bölmesinin sol bölmesinde eK **Microsoft 365 uyumluluk merkezi'ı** >  **Advanced eDiscovery** Durumlar [**sekmesini**](https://go.microsoft.com/fwlink/p/?linkid=2173764) seçin.
+2. Microsoft 365 uyumluluk merkezi sol gezinti bölmesinde **eBulma** >  **Advanced eDiscovery** öğesini seçin ve [**Servis Talepleri**](https://go.microsoft.com/fwlink/p/?linkid=2173764) sekmesini seçin.
 
-3. Koruyucu eklemek istediğiniz vakayı seçin.
+3. Koruyucu eklemek istediğiniz servis talebini seçin.
 
-4. Veri kaynakları **sekmesini seçin** ve ardından Veri kaynağı **ekleYeni** >  **koruyucular ekle'yi seçin**.
+4. **Veri kaynakları** sekmesini ve ardından **Veri kaynağı** >  **ekleYeni koruyucu** ekle'yi seçin.
 
-5. Bir kişinin adının veya diğer adının ilk kısmını yazarak, kurumda bir veya birden çok kişiyi koruyucu olarak ekleyin. Doğru kişiyi buktan sonra listeye eklemek için adını seçin.
+5. Bir kişinin adının veya diğer adının ilk bölümünü yazarak kuruluşunuzdaki bir veya daha fazla kullanıcıyı servis talebine koruyucu olarak ekleyin. Doğru kişiyi buldukta adını seçerek listeye ekleyin.
 
-## <a name="step-2-choose-custodian-data-locations"></a>2. Adım: Özel veri konumlarını seçme
+## <a name="step-2-choose-custodian-data-locations"></a>2. Adım: Koruyucu veri konumlarını seçme
 
-Siz koruyucuları seçdikten sonra, sistem otomatik olarak bu kullanıcıları ve onların veri kaynaklarını tanımlamaya ve doğrulamaya çalışır. Listeye koruyucular ekledikten sonra, araç otomatik olarak birincil posta kutusunu ve her custo custo custo verisi OneDrive posta kutusunu içerir. Vakaya koruyucular eklerken bu veri kaynaklarını eklemeyebilirsiniz.
+Siz koruyucuları seçtikten sonra sistem otomatik olarak bu kullanıcıları ve veri kaynaklarını tanımlamaya ve doğrulamaya çalışır. Listeye koruyucular eklendikten sonra, araç otomatik olarak her koruyucu için birincil posta kutusunu ve OneDrive hesabını içerir. Olaya koruyucu eklerken bu veri kaynaklarını dahil etmemeyi seçebilirsiniz.
 
-Bir custo custo her iki posta kutusunun ve OneDrive hesabının yanı sıra, SharePoint sitesi veya Microsoft Team the custo ya da custo ya da bir Microsoft Team gibi bir custo custo bir üyesiyle de ilişkilendirmeniz gerekir. Bu, davanın koruyucuları ile ilişkilendirilmiş diğer veri kaynaklarında içeriği korumanız, toplamanız, çözümlemeniz ve gözden geçirmenizi sağlar.
+Bir koruyucunun posta kutusuna ve OneDrive hesabına ek olarak, diğer veri konumlarını da SharePoint sitesi veya koruyucunun üyesi olduğu bir Microsoft Ekibi gibi bir koruyucuyla ilişkilendirebilirsiniz. Bu, davanın koruyucularıyla ilişkili diğer veri kaynaklarındaki içeriği korumanıza, toplamanıza, analiz etmenizi ve gözden geçirmenizi sağlar.
 
-Bir custo custo custo bir OneDrive posta kutusunun seçimini kaldırmak için:
+Bir koruyucunun birincil posta kutusunun ve OneDrive hesabının seçimini kaldırmak için:
 
-1. Her custo ortak ile otomatik olarak ilişkilendirilmiş birincil veri konumlarını görüntülemek için custo custo ortaklarını genişletin.
+1. Her bir koruyucuyla otomatik olarak ilişkilendirilen birincil veri konumlarını görüntülemek için koruyucuyu genişletin.
 
-2. Bir **custo** OneDrive  posta kutusunu veya **OneDrive** hangi hesabın bu custo ortak için veri konumu olarak ilişkilendirilen öğesini kaldırmak için Posta Kutusu veya Posta Kutusu'nun yanındaki Temizle'yi seçin.
+2. **Posta Kutusu'nun** yanındaki **Temizle'yi** veya **OneDrive'ı** seçerek bir koruyucuya ait posta kutusunun veya OneDrive hesabının bu koruyucu için veri konumu olarak ilişkilendirildiğini kaldırın.
 
-   ![Bir custo cust ile ilişkilendirmek için konumları yapılandırma.](../media/ConfigureCustodianLocations.png)
+   ![Konumları bir koruyucuyla ilişkilendirilecek şekilde yapılandırın.](../media/ConfigureCustodianLocations.png)
 
-Diğer posta kutularını, siteleri, siteleri, Teams veya Yammer özel bir koruyucuyla ilişkilendirmek için:
+Diğer posta kutularını, siteleri, Teams veya Yammer gruplarını belirli bir koruyucuyla ilişkilendirmek için:
 
-1. Veri konumlarını custo custo custo ortaklarını ilişkilendirmek için aşağıdaki hizmetleri görüntülemek için bir custo custo ortak kullanın. Veri **konumu** eklemek için hizmetin yanındaki Düzenle'ye tıklayın.
+1. Veri konumlarını koruyucuyla ilişkilendirmek için aşağıdaki hizmetleri görüntülemek için bir koruyucuyu genişletin. Veri konumu eklemek için hizmetin yanındaki **Düzenle'ye** tıklayın.
 
-   - **Exchange**: Diğer posta kutularını özel dosyayla ilişkilendirmek için kullanın. Arama kutusuna, kullanıcı posta kutularının veya dağıtım gruplarının adını veya diğer adını (en az üç karakter) yazın. Özel kişi'ye atamak istediğiniz posta kutularını seçin ve Ekle'ye **tıklayın**.
+   - **Exchange**: Diğer posta kutularını koruyucuyla ilişkilendirmek için kullanın. Arama kutusuna kullanıcı posta kutularının veya dağıtım gruplarının adını veya diğer adını (en az üç karakter) yazın. Koruyucuya atanacak posta kutularını seçin ve **ekle'ye** tıklayın.
 
-   - **SharePoint**: Özel siteleri SharePoint custo custo ortaklarını kullanmak için kullanın. Listeden bir site seçin veya arama kutusuna bir URL yazarak siteyi arayın. Custo custo bir siteyi seçin ve Ekle'ye **tıklayın**.
+   - **SharePoint**: SharePoint siteleri koruyucuyla ilişkilendirmek için kullanın. Listeden bir site seçin veya arama kutusuna bir URL yazarak siteyi arayın. Koruyucuya atanacak siteleri seçin ve **ekle'ye** tıklayın.
 
-   - **Teams**: Custo belirli bir Microsoft Teams atamak için kullanın. Özel belgeye atamak istediğiniz ekipleri seçin ve Ekle'ye **tıklayın**. Bir ekip eklemenizden sonra sistem, o ekiple ilişkilendirilmiş SharePoint posta kutusunu otomatik olarak tanımlar ve bu siteyi ve grup posta kutusunu tanımlar ve custo custo custo ayrıcalarına atar.
+   - **Teams**: Koruyucunun şu anda üyesi olduğu Microsoft Teams atamak için kullanın. Koruyucuya atanacak ekipleri seçin ve **ekle'ye** tıklayın. Bir ekip ekledikten sonra sistem, bu ekiple ilişkili SharePoint sitesini ve grup posta kutusunu otomatik olarak tanımlar ve bulur ve bunları koruyucuya atar.
 
-   - **Yammer**: Custo belirli Yammer şu anda üyesi olan kullanıcı gruplarını atamak için kullanın. Custo custo ve add seçeneğine **tıklayın**. Bir ekip eklemenizden sonra, sistem bu grupla ilişkilendirilmiş SharePoint posta kutusunu otomatik olarak tanımlar ve bu siteyi ve grup posta kutusunu tanımlar ve custo belgeye atar.
-
-   > [!NOTE]
-   > Exchange ve **SharePoint** posta kutusu veya siteyi  bir custo custo ortak olarak ilişkilendirmek için posta kutusu ve konum seçicilerini kullanabilirsiniz. , Bu, bir Microsoft Team veya Yammer olan ve custo custo custo bir üyesi olmadığını belirten posta kutusu ve siteyi birleçer. Bunu yapmak için, hem posta kutusunu hem de her ekiple ilişkili siteyi veya bir grup Yammer gerekir.
-
-2. Tablodaki her koruyucuyu genişleterek, her özel Teams ve Yammer posta kutusu, site, posta kutusu ve Yammer gruplarının toplam sayısını görüntüebilirsiniz. Her custo Advanced eDiscovery custo bir iş akışında aşamalar top, işleme ve gözden geçirme sırasında korunur ve kullanılır.
-
-3. Koruyucular ekledikten ve veri konumlarını yapılandırdikten sonra, **Tutma ayarları sayfasına** gitmek için **Sonraki'ne** tıklayın.  
-
-## <a name="step-3-configure-hold-settings"></a>3. Adım: Tutma ayarlarını yapılandırma
-
- Koruyucuları ve bunların veri konumlarını sonuçlaştırdikten sonra, koruyucuların bir veya hepsini tutabilirsiniz. Bir custo custo ortaklarını yerinde tutabilirsiniz; bu şekilde tutma kaldırana veya koruyucuları tutmadan çıkarıncaya kadar, tüm içerik konumlarında bu içerik korunur. Bazı durumlarda, bir vakaya özel koruyucular eklemek ve onları tutmadan eklemek iyi olabilir.
-
-Koruyucuları ve veri kaynaklarını yerinde tutmak için:
-
-1. Tutma **ayarları sayfasında** , Ayrı tutma sütununu içeren onay kutusunu seçerek tek tek koruyuculara tutma **uygulayabilirsiniz** .
-
-   Alternatif olarak, sütunun üst kısmında yer alan Tut onay kutusunu seçerek tüm koruyucuları yerinde tutebilirsiniz.
-
-2. Koruyucuları tutma seçimlerini doğrulayın ve ardından Sonraki'ye **tıklayın**.
+   - **Yammer**: Koruyucunun şu anda üyesi olduğu Yammer gruplarını atamak için kullanın. Koruyucuya atanacak grupları seçin ve **ekle'ye** tıklayın. Bir ekip ekledikten sonra sistem, bu grupla ilişkilendirilmiş SharePoint siteyi ve grup posta kutusunu otomatik olarak tanımlar ve bulur ve bunları koruyucuya atar.
 
    > [!NOTE]
-   > Bir custo custo ve bunların ilişkili veri kaynakları vakaya eklenir, ancak bu veri kaynaklarında yer alan içerik, durumla ilişkilendirilmiş olan tutma tarafından korunmaz.
+   > Kuruluşunuzdaki herhangi bir posta kutusunu veya siteyi bir koruyucuyla ilişkilendirmek için **Exchange** ve **SharePoint** konum seçicilerini kullanabilirsiniz. , Bu, bir koruyucunun üyesi olmadığı bir Microsoft Ekibi veya Yammer grubu için posta kutusuyla siteyi ilişkilendirmeyi içerir. Bunu yapmak için, her ekip veya Yammer grubuyla ilişkili hem posta kutusunu hem de siteyi eklemeniz gerekir.
 
-## <a name="step-4-review-the-custodians-and-complete-the-process"></a>4. Adım: Koruyucuları gözden geçirme ve işlemi tamamlama
+2. Tablodaki her koruyucuyu genişleterek her bir koruyucuya atanan posta kutularının, sitelerin, Teams ve Yammer gruplarının toplam sayısını görüntüleyebilirsiniz. Her koruyucu için atanan veri konumlarını son haline getirdiğinizde, bu ilişkilendirmeler Advanced eDiscovery iş akışındaki toplama, işleme ve gözden geçirme aşamalarında korunur ve kullanılır.
 
-Bu vakaya koruyucuları gerçekten eklemeden önce, koruyucu listesini, onlara atanmış veri konumlarını ve tutma ayarlarını gözden geçirebilirsiniz.
+3. Koruyucuları ekledikten ve veri konumlarını yapılandırdıktan sonra, **Ayrı Tutma ayarları** sayfasına gitmek için **İleri'ye** tıklayın.  
 
-1. Tablodaki her koruyucuyla ilişkili tüm veri kaynakları sayısını ve tutma ayarını doğrulayın ve gözden geçirin. Gerekirse, herhangi bir değişiklik yapmak **için Custo cust veya** **Hold settings** sayfalarına geri gidin.
+## <a name="step-3-configure-hold-settings"></a>3. Adım: Ayrı tutma ayarlarını yapılandırma
 
-2. **Vakaya** koruyucuları ve onların veri konumlarını eklemek ve tüm özel tutma ayarlarını uygulamak için Gönder'e tıklayın.
+ Koruyucuları ve veri konumlarını son haline getirdikten sonra, koruyucuların bazılarını veya tümünü beklemeye alabilirsiniz. Bir koruyucuyu beklemeye aldığınızda, saklamayı kaldırana veya koruyucuyu ayrı tutmadan serbest bırakana kadar, koruyucuyla ilişkili tüm içerik konumlarındaki tüm içerik korunur. Bazı durumlarda, bir servis talebine saklamadan koruyucu eklemek isteyebilirsiniz.
 
-   Yeni koruyucular vakaya eklenir ve Veri kaynakları **sekmesinde** görüntülenir.
+Koruyucuları ve veri kaynaklarını beklemeye almak için:
+
+1. **Ayrı tutma ayarları** sayfasında Ayrı tutma sütununun altındaki onay kutusunu seçerek tek tek koruyuculara **ayrı saklama** uygulayabilirsiniz.
+
+   Alternatif olarak, sütunun üst kısmındaki **Ayrı Tut** onay kutusunu seçerek tüm koruyucuları beklemeye alabilirsiniz.
+
+2. Koruyucunun seçimleri tuttuğunu doğrulayın ve **İleri'ye** tıklayın.
+
+   > [!NOTE]
+   > Bir koruyucuya saklamazsanız, koruyucu ve ilişkili veri kaynakları servis talebine eklenir, ancak söz konusu veri kaynaklarındaki içerik, servis talebiyle ilişkili ayrı tutma tarafından korunmaz.
+
+## <a name="step-4-review-the-custodians-and-complete-the-process"></a>4. Adım: Koruyucuları gözden geçirin ve işlemi tamamlayın
+
+Olaya koruyucuları eklemeden önce, koruyucuların listesini, kendilerine atanan veri konumlarını ve saklama ayarlarını gözden geçirebilirsiniz.
+
+1. Tablodaki her koruyucuyla ilişkili tüm veri kaynakları sayısını ve saklama ayarını doğrulayın ve gözden geçirin. Gerekirse, değişiklik yapmak için **Koruyucuyu tanımla** veya **Ayarları tut** sayfalarına geri dönün.
+
+2. Olaya koruyucuları ve veri konumlarını eklemek ve tüm saklama saklama ayarlarını uygulamak için **Gönder'e** tıklayın.
+
+   Yeni koruyucular servis talebine eklenir ve **Veri kaynakları** sekmesinde görüntülenir.
 
    [![Veri kaynakları sekmesinde listelenen koruyucular.](../media/DataSourcesTab.png) ](../media/DataSourcesTab.png#lightbox)
