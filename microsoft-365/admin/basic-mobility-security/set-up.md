@@ -18,117 +18,117 @@ ms.custom:
 - AdminTemplateSet
 search.appverid:
 - MET150
-description: Bir cihazı uzaktan silen gibi eylemler gerçekleştirerek kullanıcılarının mobil cihazlarını güvenlik altına almak ve yönetmek için Temel Mobil Kullanım ve Güvenlik'i ayarlayın.
-ms.openlocfilehash: bbf7cf84dd996a0e548a76978e8fbba58f40c070
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Bir cihazı uzaktan silme gibi eylemler gerçekleştirerek kullanıcılarınızın mobil cihazlarının güvenliğini sağlamak ve yönetmek için Basic Mobility ve Security'yi ayarlayın.
+ms.openlocfilehash: b26906c0f374f5dc103fe26e4619663195da6ebd
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983995"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64780841"
 ---
 # <a name="set-up-basic-mobility-and-security"></a>Temel Hareketlilik ve Güvenlik'i ayarlama
 
-Microsoft 365 için yerleşik Temel Mobil Kullanım ve Güvenlik, kullanıcıların iPhone, iPad, Android ve telefon gibi mobil cihazlarını güvenlik altına alır ve Windows olur. Cihaz güvenlik ilkelerini oluşturabilir ve yönetebilir, cihazı uzaktan temizleyebilirsiniz ve ayrıntılı cihaz raporlarını görüntüleyebilirsiniz.
+Microsoft 365 için yerleşik Temel Mobilite ve Güvenlik, kullanıcıların iPhone, iPad, Android ve Windows telefonları gibi mobil cihazlarının güvenliğini sağlamanıza ve yönetmenize yardımcı olur. Cihaz güvenlik ilkeleri oluşturup yönetebilir, bir cihazı uzaktan silebilir ve ayrıntılı cihaz raporlarını görüntüleyebilirsiniz.
 
-Sorularınız mı var? Sık sorulan sorulara yardımcı olacak SSS'ler için bkz. [Temel Hareketlilik ve Güvenlik Hakkında Sık Sorulan Sorular (SSS)](frequently-asked-questions.yml). Temel Hareketlilik ve Güvenlik'i yönetmek için yönetici temsilcisi hesabı kullanamayabilirsiniz. Daha fazla bilgi için bkz. [İş Ortakları: Temsili yönetim teklif edin](https://support.microsoft.com/office/partners-offer-delegated-administration-26530dc0-ebba-415b-86b1-b55bc06b073e). 
+Sorularınız mı var? Sık sorulan soruların ele alınmasına yardımcı olacak bir SSS için bkz. [Temel Mobilite ve Güvenlik Hakkında Sık Sorulan Sorular (SSS)](frequently-asked-questions.yml). Basic Mobility ve Security'yi yönetmek için yönetici temsilcisi hesabı kullanamayacağınızı unutmayın. Daha fazla bilgi için bkz [. İş Ortakları: Temsilcili yönetim teklifi](https://support.microsoft.com/office/partners-offer-delegated-administration-26530dc0-ebba-415b-86b1-b55bc06b073e). 
 
-Cihaz yönetimi, Güvenlik ve & Merkezi'nin bir bölümü olduğu için Temel Mobil Kullanım ve Güvenlik kurulumunun başlatın.
+Cihaz yönetimi, Güvenlik & Uyumluluk Merkezi'nin bir parçasıdır, bu nedenle Temel Mobilite ve Güvenlik kurulumuna başlamak için oraya gitmeniz gerekir.
 
-## <a name="activate-the-basic-mobility-and-security-service"></a>Temel Hareketlilik ve Güvenlik hizmetini etkinleştirme
+## <a name="activate-the-basic-mobility-and-security-service"></a>Basic Mobility ve Security hizmetini etkinleştirme
 
 1. Genel yönetici hesabınızla Microsoft 365 oturum açın.
 
-2. Temel Mobil Kullanım [ve Güvenlik'i Etkinleştirme'ye gidin](https://admin.microsoft.com/EAdmin/Device/IntuneInventory.aspx).
+2. [Temel Hareketliliği ve Güvenliği Etkinleştirme'ye](https://admin.microsoft.com/EAdmin/Device/IntuneInventory.aspx) gidin.
 
-   Temel Hareketlilik ve Güvenlik'i etkinleştirmek biraz zaman alıyor. E-postanız tamam olduğunda, sonraki adımları açıklayan bir e-posta alırsınız.
+   Basic Mobility ve Security'yi etkinleştirmek biraz zaman alabilir. Tamamlandığında, atılması gereken sonraki adımları açıklayan bir e-posta alırsınız.
 
-## <a name="set-up-mobile-device-management"></a>Mobil Cihaz Yönetimi'i ayarlama
+## <a name="set-up-mobile-device-management"></a>Mobil Cihaz Yönetimi ayarlama
 
-Hizmet hazır olduğunda, kurulumu bitirmek için aşağıdaki adımları tamamlayın.
+Hizmet hazır olduğunda kurulumu tamamlamak için aşağıdaki adımları tamamlayın.
 
 ### <a name="step-1-required-configure-domains-for-basic-mobility-and-security"></a>1. Adım: (Gerekli) Temel Hareketlilik ve Güvenlik için etki alanlarını yapılandırma
 
-Microsoft 365 ile ilişkilendirilmiş özel bir etki alanınız yoksa veya Windows yönet noktada değilsanız, bu bölümü atlayabilirsiniz. Aksi takdirde, DNS ana dınıza etki alanı için DNS kayıtlarını eklemeniz gerekir. Kayıtları zaten eklediyseniz, etki alanınızı bu kayıtla ayarlamanın Microsoft 365, hazır olursanız. Kayıtları ekledikten sonra, Microsoft 365 etki alanınızı kullanan bir e-posta adresiyle Windows cihazlarında oturum alan tüm kullanıcılar, Basic Mobility ve Security'ye kaydolmaları için yeniden yönlendirildi.
+Microsoft 365 ile ilişkilendirilmiş özel bir etki alanınız yoksa veya Windows cihazları yönetmiyorsanız bu bölümü atlayabilirsiniz. Aksi takdirde, DNS ana bilgisayarınızda etki alanı için DNS kayıtları eklemeniz gerekir. Kayıtları zaten eklediyseniz, etki alanınızı Microsoft 365 ayarlamanın bir parçası olarak hazırsınız demektir. Kayıtları ekledikten sonra, kuruluşunuzdaki Windows cihazında özel etki alanınızı kullanan bir e-posta adresiyle oturum açan Microsoft 365 kullanıcılar Temel Mobilite ve Güvenlik'e kaydolmak üzere yönlendirilir.
 
-Kayıtları ayarlamayla ilgili yardıma mı ihtiyacınız var? Etki alanı kayıt şirketinizi bulun ve etki alanınıza bağlanmak için DNS kayıtları ekleme altında sağlanan listede DNS kaydını oluşturmak için adım adım yardıma gitmek için etki alanı kayıt şirketi  [adını seçin](/office365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider). Bu yönergeleri kullanarak, CNAME kaydı oluşturmadan CNAME [Windows basitleştirme konusunda Azure AD Premium](/mem/intune/enrollment/windows-enroll#simplify-windows-enrollment-without-azure-ad-premium).
+Kayıtları ayarlamayla ilgili yardıma mı ihtiyacınız var? Etki alanı kayıt şirketinizi bulun ve [etki alanınıza bağlanmak için DNS kayıtları ekleme](/office365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider) bölümünde sağlanan listede DNS kaydı oluşturmak için adım adım yardıma gitmek için kayıt şirketi adını seçin. Azure AD Premium [olmadan kaydı basitleştirme Windows](/mem/intune/enrollment/windows-enroll#simplify-windows-enrollment-without-azure-ad-premium) bölümünde açıklanan CNAME kayıtlarını oluşturmak için bu yönergeleri kullanın.
 
-İki CNAME kaydından sonra, Güvenlik ve Uyumluluk Merkezi'ne &  >  sonraki adımı tamamlamak için Veri kaybı **önlemeDevice yönetimi'ne**  gidin.
+İki CNAME kaydını ekledikten sonra Güvenlik & Uyumluluk Merkezi'ne dönün ve sonraki adımı tamamlamak için **Veri kaybı önlemeCihaz** >  **yönetimi'ne** gidin.
 
 ### <a name="step-2-required-configure-an-apns-certificate-for-ios-devices"></a>2. Adım: (Gerekli) iOS cihazları için APNs Sertifikası yapılandırma
 
-iPhone ve iPad iOS cihazlarını yönetmek için APNs sertifikası oluşturmanız gerekir.
+iPad ve iPhone gibi iOS cihazlarını yönetmek için bir APNs sertifikası oluşturmanız gerekir.
 
 1. Genel yönetici hesabınızla Microsoft 365 oturum açın.
 
-2. Tarayıcı türüne: yazın [https://protection.office.com](https://protection.office.com/).
+2. Tarayıcınıza şunu yazın: [https://protection.office.com](https://protection.office.com/).
 
-3. Veri  **kaybı önlemeSağlama** >  **yönetimi'ne** ve **iOS cihazları için APNs Sertifikası'nın seçeneğini seçin**.
+3. **Veri kaybı** **önlemeCihaz** >  yönetimi'ni ve **ardından iOS cihazları için APNs Sertifikası'nı** seçin.
 
-4. Apple Anında Bildirim Sertifikası Bildirim Ayarlar  **Ekle'yi seçin**.
+4. Apple Anında İletme Bildirimi Sertifikası Ayarlar sayfasında **İleri'yi** seçin.
 
-5.  **SELECTSR dosyanızı yükleyin**  ve Sertifika imzalama isteğini bilgisayarınızda anımsayacak bir yere kaydedin.  **SelectNext**.
+5. **CSR dosyanızı indirin'i** seçin ve Sertifika imzalama isteğini bilgisayarınızda anımsayacağınız bir yere kaydedin. **İleri**'yi seçin.
 
 6. APNs sertifikası oluştur sayfasında:
 
-   - Apple Push Sertifikaları Portalı'nı açmak için Apple APNS Portalı'ı seçin.
-   - Apple ID ile oturum açma.
+   - Apple Anında İletme Sertifikaları Portalı'nı açmak için Apple APNS Portalı'nı seçin.
+   - Apple Kimliği ile oturum açın.
 
      > [!IMPORTANT]
-     > Hesabı yöneten kullanıcı ayrılsa bile, kuruluşta kalacak bir e-posta hesabıyla ilişkilendirilmiş şirket Apple kimliği kullanın. Sertifikayı yenileme zamanı geldiğinde aynı kimliği kullanmak zorunda olduğunuz için bu kimliği kaydedin.
+     > Hesabı yöneten kullanıcı ayrılsa bile kuruluşunuzda kalacak bir e-posta hesabıyla ilişkilendirilmiş bir şirket Apple Kimliği kullanın. Sertifikayı yenileme zamanı geldiğinde aynı kimliği kullanmanız gerektiğinden bu kimliği kaydedin.
 
-   - Sertifika Oluştur'a seçin ve Kullanım Koşullarını kabul et.'i seçin.
-   - Dosyadan bilgisayarınıza indirdiğiniz Sertifika imzalama isteğine göz Microsoft 365'yi seçin.
-   - Apple Push Sertifika Portalı tarafından oluşturulan APN sertifikasını bilgisayarınıza indirin.
+   - Sertifika Oluştur'u seçin ve Kullanım Koşulları'nı kabul edin.
+   - Microsoft 365'dan bilgisayarınıza indirdiğiniz Sertifika imzalama isteğine göz atın ve Yükle'yi seçin.
+   - Apple Anında İletme Sertifikası Portalı tarafından oluşturulan APN sertifikasını bilgisayarınıza indirin.
 
      > [!TIP]
-     > Sertifikayı indirmede sorun ediyorsanız, tarayıcınızı yenileyin.
+     > Sertifikayı indirirken sorun yaşıyorsanız tarayıcınızı yenileyin.
 
-7. Seçeneklere geri dönüp Microsoft 365'ı **seçin**.
+7. Microsoft 365 Geri dön ve **İleri'yi** seçin.
 
-8. Apple Push Sertifikaları Portalı'dan indirdiğiniz APN sertifikasına göz atabilirsiniz.
+8. Apple Anında İletme Sertifikaları Portalı'ndan indirdiğiniz APN sertifikasına göz atın.
 
-9.   **Tamamla'ya seçin**.
+9. **Bitir'i** seçin.
 
 ### <a name="step-3-recommended-set-up-multi-factor-authentication"></a>3. Adım: (Önerilen) Çok faktörlü kimlik doğrulamasını ayarlama
 
-MFA, ikinci bir kimlik doğrulama biçimi Microsoft 365 mobil cihaz kaydı için mobil cihaz kaydında oturum açma işleminin güvenliğini sağlar. Kullanıcıların, iş hesabı parolalarını doğru girdikten sonra mobil cihazlarında bir telefon aramasını, kısa mesajı veya uygulama bildirimini kabulleri gerekir. Ancak bu ikinci kimlik doğrulama işlemi tamamlandıktan sonra cihazlarını kaydedebilirsiniz. Kullanıcı cihazları Temel Hareketlilik ve Güvenlik'e kaydettikten sonra, Microsoft 365 kendi iş hesaplarıyla mobil kaynaklara erişebilirsiniz.
+MFA, ikinci bir kimlik doğrulama biçimi gerektirerek mobil cihaz kaydı için Microsoft 365 oturum açmanın güvenliğini sağlar. Kullanıcıların iş hesabı parolalarını doğru girdikten sonra mobil cihazlarında bir telefon araması, kısa mesaj veya uygulama bildirimini kabul etmeleri gerekir. Cihazlarını ancak bu ikinci kimlik doğrulama biçimi tamamlandıktan sonra kaydedebilirler. Kullanıcı cihazları Basic Mobility ve Security'ye kaydolduktan sonra, kullanıcılar Microsoft 365 kaynaklarına yalnızca iş hesaplarıyla erişebilir.
 
-Azure AD portalında MFA'nın nasıl açılamaz olduğunu öğrenmek için bkz [. Multi-Factor Authentication'i açma](../security-and-compliance/set-up-multi-factor-authentication.md).
+Azure AD portalında MFA'yı açmayı öğrenmek için bkz. [Çok faktörlü kimlik doğrulamasını ayarlama](../security-and-compliance/set-up-multi-factor-authentication.md).
 
-MFA'nın ayarlaması yapıldıktan sonra, Güvenlik & Merkezi'ne gidin  **veData kaybı** >  **önlemeDevice yönetimiDevice** >  **ilkeleri'ne**  gidip bir sonraki adımı tamamlamanız gerekir.
+MFA'yı ayarladıktan sonra Güvenlik & Uyumluluk Merkezi'ne dönün ve sonraki adımı tamamlamak için **Veri kaybı** **önlemeCihaz** >  yönetimiCihaz  > **ilkeleri'ne** gidin.
 
-### <a name="step-4-recommended-manage-device-security-policies"></a>4. Adım: (Önerilen) Cihaz güvenliği ilkelerini yönetme
+### <a name="step-4-recommended-manage-device-security-policies"></a>4. Adım: (Önerilen) Cihaz güvenlik ilkelerini yönetme
 
-Sonraki adım, cihaz güvenliği ilkelerini oluşturmak ve dağıtarak kullanıcı ve kuruluş verilerinizin korunmasına Microsoft 365 olmaktır. Örneğin, bir kullanıcı beş dakika boyunca etkileşimde değilken cihazları kilitleyen ve üç oturum açma hatasının ardından cihazları temizleyen bir ilke oluşturarak, cihazlarını kaybettiğinde veri kaybını önlemeye yardımcı olabilirsiniz.
+Sonraki adım, Microsoft 365 kuruluş verilerinizi korumaya yardımcı olmak için cihaz güvenlik ilkeleri oluşturmak ve dağıtmaktır. Örneğin, beş dakikalık işlem yapılmadığında cihazları kilitlemek ve üç oturum açma hatasından sonra cihazları silmek için bir ilke oluşturarak bir kullanıcı cihazını kaybederse veri kaybını önlemeye yardımcı olabilirsiniz.
 
 1. Genel yönetici hesabınızla Microsoft 365 oturum açın.
 
-2. Mobil  [Cihaz Yönetimini Etkinleştir'i seçin](https://admin.microsoft.com/EAdmin/Device/IntuneInventory.aspx). Hizmet etkinleştirilirse, etkinleştirme adımları yerine CihazlarıYıldız  [bağlantısına ulaşabilirsiniz](https://admin.microsoft.com/adminportal/home#/MifoDevices) .
+2. [Mobil Cihaz Yönetimi Etkinleştir'i](https://admin.microsoft.com/EAdmin/Device/IntuneInventory.aspx) seçin. Hizmet etkinleştirilirse, etkinleştirme adımları yerine [Cihazları Yönet](https://admin.microsoft.com/adminportal/home#/MifoDevices) bağlantısını görürsünüz.
 
-3. Device  **ilkeleri'ne gidin**.
+3. **Cihaz ilkeleri'ne** gidin.
 
-   :::image type="content" source="../../media/basic-mobility-security/bms-4-policy.png" alt-text="Temel Güvenlik ve Mobil Kullanım ilkesi ayarları.":::
+   :::image type="content" source="../../media/basic-mobility-security/bms-4-policy.png" alt-text="Temel Güvenlik ve Hareketlilik ilkesi ayarları.":::
 
-4. Temel Mobil Kullanım ve Güvenlik'te cihaz güvenliği ilkeleri oluşturma'daki adımları takip edin ve bu ilkeleri organizasyonunıza  [uygun şekilde dağıtın](create-device-security-policies.md).
+4. [Temel Mobilite ve Güvenlik'te cihaz güvenlik ilkeleri oluşturma](create-device-security-policies.md) bölümündeki adımları izleyerek kuruluşunuza uygun cihaz güvenlik ilkeleri oluşturun ve dağıtın.
 
 > [!TIP]
 >
-> - Yeni ilke yken, erişime izin vermek ve kullanıcı cihazı ilkeyle uyumlu olmayan ilke ihlallerini bildirmeye izin vermek için ilkeyi ayarlamak istiyor olabilirsiniz. Bu, mobil cihazların erişimini engellemeden kaç mobil cihazı ilkeden etkilemektedir Microsoft 365.
+> - Yeni bir ilke oluşturduğunuzda, kullanıcı cihazının ilkeyle uyumlu olmadığı durumlarda erişime izin vermek ve ilke ihlalini bildirmek için ilkeyi ayarlamak isteyebilirsiniz. Bu, Microsoft 365 erişimi engellemeden ilkeden kaç mobil cihazın etkilendiğini görmenizi sağlar.
 >
-> - Yeni bir ilkeyi kuruluşta yer alan herkese dağıtmadan önce, az sayıda kullanıcının kullandığı cihazlar üzerinde ilkeyi test edin.
+> - Kuruluşunuzdaki herkese yeni bir ilke dağıtmadan önce, bunu az sayıda kullanıcı tarafından kullanılan cihazlarda test etmenizi öneririz.
 >
-> - Ayrıca ilkeleri dağıtmadan önce, Temel Mobil kullanım ve Güvenlik'e cihaz kaydetmenin olası etkilerini organizasyonunıza haber verirsiniz. İlkeleri nasıl ayar kullandığınıza bağlı olarak, ilkelerle uyumlu olmayan cihazlar (uyumlu olmayan cihazlar) bu cihazlara erişimi Microsoft 365. Uyumlu olmayan cihazlarda ayrıca yüklü uygulamalar, fotoğraflar ve diğer kişisel bilgiler olabilir ve bu bilgiler kayıtlı bir cihazda temizlenmişse silinebilir. Daha fazla bilgi için bkz [. Temel Mobil Kullanım ve Güvenlik'te mobil cihazı temizleme](wipe-mobile-device.md).
+> - Ayrıca, ilkeleri dağıtmadan önce kuruluşunuza bir cihazı Temel Mobilite ve Güvenlik'e kaydetmenin olası etkilerini bildirin. İlkeleri nasıl ayarladığınıza bağlı olarak, ilkelerle uyumlu olmayan cihazların (uyumlu olmayan cihazlar) Microsoft 365 erişmesi engellenebilir. Uyumlu olmayan cihazlarda, kayıtlı bir cihazda cihaz silinirse silinebilecek uygulamalar, fotoğraflar ve diğer kişisel bilgiler de yüklü olabilir. Daha fazla bilgi için bkz [. Basic Mobility and Security'de mobil cihazı temizleme](wipe-mobile-device.md).
 
 ## <a name="make-sure-users-enroll-their-devices"></a>Kullanıcıların cihazlarını kaydettiklerinden emin olun
 
-Mobil cihaz yönetim ilkesi oluşturduktan ve dağıtıldıktan sonra, aygıtınızda cihaz ilkesi uygulandığı her lisanslı Microsoft 365 kullanıcısı, mobil cihazlarından Microsoft 365'da bir sonraki oturum açmalarında bir kayıt iletisi alır. E-posta ve belgelerine erişemeden önce kayıt ve Microsoft 365 adımlarını tamamlamaları gerekir. Daha fazla bilgi için bkz [. Temel Mobil Kullanım ve Güvenlik kullanarak mobil cihazınızı kaydetme](enroll-your-mobile-device.md).
+Bir mobil cihaz yönetimi ilkesi oluşturup dağıttıktan sonra, kuruluşunuzdaki cihaz ilkesinin uyguladığı lisanslı Microsoft 365 her kullanıcı, mobil cihazından Microsoft 365 bir sonraki oturum açışında bir kayıt iletisi alır. Microsoft 365 e-posta ve belgelere erişebilmeleri için önce kayıt ve etkinleştirme adımlarını tamamlamaları gerekir. Daha fazla bilgi için bkz. [Mobil cihazınızı Temel Hareketlilik ve Güvenlik kullanarak kaydettirin](enroll-your-mobile-device.md).
 
 > [!IMPORTANT]
-> Kullanıcının tercih ettiği dil kayıt sürecinde desteklenmiyorsa, kullanıcılar mobil cihazlarında farklı bir dilde kayıt bildirimi ve adımları alsalar bile. Microsoft 365'de desteklenen dillerin hepsi, şu anda mobil cihazlardaki kayıt işlemi için desteklemektedir.
+> Kullanıcının tercih ettiği dil kayıt işlemi tarafından desteklenmiyorsa, kullanıcılar mobil cihazlarında kayıt bildirimi ve adımları başka bir dilde alabilir. Microsoft 365'de desteklenen tüm diller şu anda mobil cihazlarda kayıt işlemi için desteklenmemektedir.
 
-Android veya iOS cihazları olan kullanıcıların, kayıt işlemi Şirket Portalı bir parçası olarak Şirket Portalı uygulamasını yüklemeleri gerekir.
+Android veya iOS cihazları olan kullanıcıların kayıt işleminin bir parçası olarak Şirket Portalı uygulamasını yüklemeleri gerekir.
 
 ## <a name="related-content"></a>İlgili içerik
 
 [Temel Hareketlilik ve Güvenlik Özellikleri](capabilities.md) (makale)\
-[Temel Hareketlilik ve Güvenlik makalesinde cihaz güvenliği](create-device-security-policies.md) ilkeleri oluşturma (makale)
+[Temel Mobilite ve Güvenlik'te cihaz güvenlik ilkeleri oluşturma](create-device-security-policies.md) (makale)

@@ -1,5 +1,5 @@
 ---
-title: Temel Mobil Kullanım ve Güvenlik'te cihaz erişim ayarlarını yönetme
+title: Temel Mobilite ve Güvenlik'te cihaz erişim ayarlarını yönetme
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -17,33 +17,33 @@ ms.custom:
 - AdminSurgePortfolio
 search.appverid:
 - MET150
-description: Temel Mobil Kullanım ve Güvenlik, mobil cihazları güvenli hale yönetmenize ve yönetmenize yardımcı olabilir.
-ms.openlocfilehash: ef74aba7398867ad97748feba45647e7cf4aa609
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Basic Mobility ve Security, mobil cihazların güvenliğini sağlamanıza ve yönetmenize yardımcı olabilir.
+ms.openlocfilehash: fbd8df7bff6ffa24d2a951d86a85d699e0b1699f
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973704"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64781039"
 ---
-# <a name="manage-device-access-settings-in-basic-mobility-and-security"></a>Temel Mobil Kullanım ve Güvenlik'te cihaz erişim ayarlarını yönetme
+# <a name="manage-device-access-settings-in-basic-mobility-and-security"></a>Temel Mobilite ve Güvenlik'te cihaz erişim ayarlarını yönetme
 
-Temel Mobil Kullanım ve Güvenlik kullanıyorsanız, Temel Hareketlilik ve Güvenlik ile yönete olmadığınız cihazlar olabilir. Öyleyse, Temel Mobil Exchange ActiveSync güvenliği tarafından Microsoft 365 mobil cihazlar için mobil e-postanıza veya e-postanıza erişimini engellemeniz gerekir. Bu, daha fazla cihaz genelinde kuruluş bilgilerini güvenlik altına a yardımcı olur.
+Temel Mobilite ve Güvenlik kullanıyorsanız, Basic Mobility ve Security ile yönetemediğiniz cihazlar olabilir. Bu durumda, Temel Hareket ve Güvenlik tarafından desteklenmeyen mobil cihazlar için Microsoft 365 e-postaya Exchange ActiveSync uygulama erişimini engellemeniz gerekir. Bu, daha fazla cihaz arasında kuruluş bilgilerinizin güvenliğini sağlar.
 
 Şu adımları kullanın:
 
 1. Genel yönetici hesabınızla Microsoft 365 oturum açın.
 
-2. Tarayıcınızda, : yazın [https://protection.office.com](https://protection.office.com/).
+2. Tarayıcınızda şunu yazın: [https://protection.office.com](https://protection.office.com/).
 
     > [!IMPORTANT]
-    > Bu uygulama için Temel Mobil Kullanım ve Güvenlik'i ilk kez kullanıyorsanız Microsoft 365 İş Standart etkinleştirme: Temel Güvenlik ve Mobil [Kullanım'ı Etkinleştirme](https://admin.microsoft.com/EAdmin/Device/IntuneInventory.aspx). Etkinleştirdikten sonra, cihazlarınızı Güvenlik ve Uyumluluk [Office 365 ile &.](https://protection.office.com/)
+    > Microsoft 365 Business Standard için Basic Mobility ve Security'yi ilk kez kullanıyorsanız buradan etkinleştirin: [Temel Güvenlik ve Mobilite'yi etkinleştirme](https://admin.microsoft.com/EAdmin/Device/IntuneInventory.aspx). Etkinleştirdikten sonra Office 365 [Güvenlik & Uyumluluğu](https://protection.office.com/) ile cihazlarınızı yönetin.
 
-3. Cihaz yönetimiDevice ilkelerini > **önleme'ye** **** > gidin ve Kuruluş genelinde  **cihaz erişim ayarlarını yönet'i seçin**.
+3. **Cihaz yönetimiCihaz** >  **ilkeleri** > Veri kaybı önleme'ye gidin ve **Kuruluş genelinde cihaz erişim ayarlarını yönet'i** seçin.
 
-4. Block öğesini  **seçin**.
+4. **Engelle'yi** seçin.
 
-    :::image type="content" source="../../media/basic-mobility-security/bms-5-block-access.png" alt-text="Temel Hareketlilik ve Güvenlik bloğu erişimi onay kutusu.":::
+    :::image type="content" source="../../media/basic-mobility-security/bms-5-block-access.png" alt-text="Temel Mobilite ve Güvenlik erişimi engelle onay kutusu.":::
 
-5.  **Kaydetme'yi seçin**.
+5. **Kaydet**'i seçin.
 
-Temel Hareketlilik ve Güvenlik'in hangi cihazları desteklediğini öğrenmek için bkz.  [Temel Mobil kullanım ve güvenlik güvenlik bilgileri](capabilities.md).
+Basic Mobility ve Security'nin hangi cihazları desteklediğini öğrenmek için bkz. [Temel Mobilite ve Güvenlik Özellikleri](capabilities.md).

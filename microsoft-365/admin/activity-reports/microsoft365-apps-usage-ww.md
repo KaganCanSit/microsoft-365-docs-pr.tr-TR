@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 yönetim merkezi uygulamaları kullanım raporları
+title: Uygulama kullanım raporlarını Microsoft 365 yönetim merkezi
 ms.author: kwekua
 author: kwekua
 manager: scotv
@@ -17,43 +17,43 @@ search.appverid:
 - MET150
 - MOE150
 - GEA150
-description: Raporlar panosunda Microsoft 365 Uygulamaları Raporları panosu kullanarak kullanım Microsoft 365 hakkında bilgi Microsoft 365 yönetim merkezi.
-ms.openlocfilehash: c7a8e5bbf2fec8450b52b3cbe52e110d97061ed3
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+description: Microsoft 365 yönetim merkezi Microsoft 365 Raporları panosunu kullanarak kullanım raporu için Microsoft 365 应用版 almayı öğrenin.
+ms.openlocfilehash: 229797921de2e24754203efc466f63661eb26bc8
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63400831"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64781621"
 ---
-# <a name="microsoft-365-reports-in-the-admin-center---microsoft-365-apps-usage"></a>Microsoft 365 Merkezinde Rapor Raporları - Microsoft 365 Uygulamaları kullanımı
+# <a name="microsoft-365-reports-in-the-admin-center---microsoft-365-apps-usage"></a>Yönetim merkezinde raporları Microsoft 365 - Microsoft 365 应用版 kullanımı
 
-Rapor Microsoft 365 panosu, kurum kurum genelindeki ürünlerde etkinliğin genel görünümünü gösterir. Bu pano sayesinde her bir üründeki etkinliklerle ilgili daha ayrıntılı bilgi edinmek için ürün düzeyinde raporları ayrıntılı olarak inceleyebilirsiniz. [Raporlara genel bakış konusuna](activity-reports.md) göz atın.
+Microsoft 365 Raporları panosu, kuruluşunuzdaki ürünler genelindeki etkinliğe genel bakışı gösterir. Bu pano sayesinde her bir üründeki etkinliklerle ilgili daha ayrıntılı bilgi edinmek için ürün düzeyinde raporları ayrıntılı olarak inceleyebilirsiniz. [Raporlara genel bakış konusuna](activity-reports.md) göz atın.
 
- Örneğin, Microsoft 365 Uygulamaları uygulamaları kullanma lisansı olan her kullanıcının etkinliğini anlamak için uygulamalar genelindeki etkinliklerine ve platformlar arasında bunların nasıl kullanıldıklarına bakabilirsiniz.
- 
- > [!NOTE]
- > Paylaşılan bilgisayar etkinleştirmeleri bu rapora dahil değildir.
+Örneğin, Microsoft 365 应用版 uygulamalarını kullanma lisansına sahip her kullanıcının etkinliğini, uygulamalar genelindeki etkinliklerine ve platformlarda nasıl kullanıldıklarına bakarak anlayabilirsiniz.
 
-## <a name="how-to-get-to-the-microsoft-365-apps-usage-report"></a>Microsoft 365 Uygulamaları kullanım raporuna nasıl edinebilirsiniz?
+> [!NOTE]
+> Paylaşılan bilgisayar etkinleştirmeleri bu rapora dahil değildir.
+
+## <a name="how-to-get-to-the-microsoft-365-apps-usage-report"></a>Microsoft 365 应用版 kullanım raporuna erişme
 
 1. Yönetim merkezinde, **Raporlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2074756" target="_blank">Kullanımı</a> sayfasına gidin. 
-2. Pano giriş sayfasında, Etkin kullanıcılar - Diğer **kullanıcılar sayfasındaki** Daha fazla görüntüle düğmesine Microsoft 365 Uygulamaları tıklayın.
+2. Pano giriş sayfasında, Etkin kullanıcılar - Microsoft 365 应用版 kartındaki **Daha fazla görüntüle** düğmesine tıklayın.
 
-## <a name="interpret-the-microsoft-365-apps-usage-report"></a>Microsoft 365 Uygulamaları raporunu yorumlama
+## <a name="interpret-the-microsoft-365-apps-usage-report"></a>Microsoft 365 应用版 kullanım raporunu yorumlama
 
-Kullanıcılar ve Platform grafiklerine bakarak Microsoft 365 Uygulamaları etkinliklerini **görüntüebilirsiniz**.
+**Kullanıcılar** ve **Platform** grafiklerine bakarak kullanıcınızın Microsoft 365 应用版 etkinliğine ilişkin bir görünüm elde edebilirsiniz.
 
 > [!div class="mx-imgBorder"]
-> ![Microsoft 365 Uygulamaları raporu.](../../media/0bcf67e6-a6e4-4109-a215-369f9f20ad84.png)
+> ![kullanım raporunu Microsoft 365 应用版.](../../media/0bcf67e6-a6e4-4109-a215-369f9f20ad84.png)
 
 |Öğe|Açıklama|
- |:-----|:-----|
- |1. <br/> |Yeni **Microsoft 365 Uygulamaları raporu**, son 7 gün, 30 gün, 90 gün veya 180 günlük eğilimler için 2012'de 2013'te 2013'ü 2013'e kadar görüntüleyebilirsiniz. Ancak rapordaki belirli bir günü seçersiniz, tablo geçerli tarihten (raporun oluşturulma tarihine değil) itibaren 28 güne kadar olan verileri gösterir. <br/> |
- |2. <br/> |Her raporda yer alan veriler genellikle son iki günü kapsar. Her altı günde bir, veri kalitesini sağlamak için raporu küçük güncelleştirmelerle yenileziz. <br/> |
- |3. <br/> |Kullanıcılar **görünümü** her uygulama için etkin kullanıcı sayısına (Outlook, Word, Excel, PowerPoint, OneNote ve diğer Teams. "Etkin kullanıcılar", bu uygulamalar içinde bilerek yapılan tüm eylemleri gerçekleştiren kullanıcılardır. <br/> |
- |4. <br/> |**Platformlar** görünümü her platform (Platformlar, Mac, Web ve Mobil Windows tüm uygulamalar genelinde etkin kullanıcıların eğilimini gösterir. <br/> |
- |5.<br/>|Kullanıcılar **grafiğinde** , Y ekseni ilgili uygulama için benzersiz etkin kullanıcıların sayısıdır.  **Platformschart'ta**  Y ekseni, ilgili platform için benzersiz kullanıcıların sayısıdır. Her iki grafikte de X ekseni, bir uygulamanın belli bir platformda kullanılan tarihtir.<br/>|
- 6.<br/>|Göstergede bir öğe seçerek grafikte gördüğünüz seriyi filtrenin ekleyebilirsiniz. Örneğin, Kullanıcılar grafiğinde  Outlook ilgili bilgileri görmek için Outlook, Word, Excel, PowerPoint, OneDrive veya Teams'i seçin. Bu seçim değiştir değiştir değiştiriken, altındaki kılavuz tablosunda yer alan bilgiler değişmez.|
- |7.<br/>|Tablo, kullanıcı başına verilerin dökümünü gösterir. Tablodaki sütunları ekleyebilir veya kaldırabilirsiniz.  <br/><br/>**Kullanıcı** adı, etkinlik gerçekleştirilen kullanıcının e-posta adresidir Microsoft Apps.<br><br/>**Son etkinleştirme tarihi (UTC),** kullanıcının paylaşılan bilgisayarda Microsoft 365 Uygulamaları aboneliğini etkinleştirdikten sonra uygulamayı kendi hesabıyla başlatır olduğu en son tarihtir. <br/><br/>**Son etkinlik tarihi (UTC),** kullanıcı tarafından bilerek gerçekleştirilen son etkinlik tarihidir. Belirli bir tarihte gerçekleştirilen etkinliği görmek için, grafikte doğrudan tarihi seçin.<br/><br/>Diğer sütunlar, seçilen dönemde kullanıcının o platformda (Microsoft 365 Uygulamaları içinde) etkin olup olduğunu gösterir. |
- |8.<br/>|Raporda **sütun eklemek veya** kaldırmak için Sütunları seç simgesini seçin.|
- |9.<br/>|Ayrıca, Dışarı Aktar bağlantısını seçerek Excel .csv verilerini bir Excel .csv dosyasına **aktarabilirsiniz**. Bu işlem tüm kullanıcıların verilerini dışarı aktarır ve daha fazla çözümleme yapmak için basit toplama, sıralama ve filtreleme gibi işlemlerde size olanak sağlar. 100'den az kullanıcınız varsa, raporun kendi içindeki tabloda sıralama ve filtre uygulama. 100'den fazla kullanıcınız varsa, filtrelemek ve sıralamak için verileri dışarı aktarmanız gerekir.|
+|---|---|
+|1.|**Microsoft 365 应用版 kullanım** raporu son 7 gün, 30 gün, 90 gün veya 180 günlük eğilimler için görüntülenebilir. Ancak raporda belirli bir gün seçerseniz, tablo geçerli tarihten itibaren (raporun oluşturulduğu tarihten değil) 28 güne kadar olan verileri gösterir.|
+|2.|Her rapordaki veriler genellikle son iki güne kadar kapsar. Altı günde bir, veri kalitesini sağlamak için raporu küçük güncelleştirmelerle yenileyeceğiz.|
+|3.|**Kullanıcılar** görünümü, her uygulama için etkin kullanıcı sayısı (Outlook, Word, Excel, PowerPoint, OneNote ve Teams) eğilimi gösterir. "Etkin kullanıcılar", bu uygulamalar içinde herhangi bir kasıtlı eylem gerçekleştiren kullanıcılardır.|
+|4.|**Platformlar** görünümü, her platform için (Windows, Mac, Web ve Mobil) tüm uygulamalarda etkin kullanıcıların eğilimini gösterir.|
+|5.|**Kullanıcılar** grafiğinde Y ekseni, ilgili uygulamanın benzersiz etkin kullanıcı sayısıdır. **Platformlar** grafiğinde Y ekseni, ilgili platform için benzersiz kullanıcı sayısıdır. Her iki grafikteki X ekseni, belirli bir platformda bir uygulamanın kullanıldığı tarihtir.|
+ 6.|Göstergede bir öğe seçerek grafikte gördüğünüz seriyi filtreleyebilirsiniz. Örneğin, **Kullanıcılar** grafiğinde Outlook, Word, Excel, PowerPoint, OneDrive veya Teams seçerek yalnızca her biriyle ilgili bilgileri görebilirsiniz. Bu seçimin değiştirilmesi, altındaki kılavuz tablosundaki bilgileri değiştirmez.|
+|7.|Tablo, kullanıcı başına verilerin dökümünü gösterir. Tablodaki sütunları ekleyebilir veya kaldırabilirsiniz.  <br/><br/>**Kullanıcı adı**, Microsoft Apps etkinliği gerçekleştiren kullanıcının e-posta adresidir.<br><br/>**Son etkinleştirme tarihi (UTC),** kullanıcının Microsoft 365 应用版 aboneliğini bir makinede etkinleştirdiği veya paylaşılan bilgisayarda oturum açtığı ve uygulamayı kendi hesabıyla başlattığı en son tarihtir. <br/><br/>**Son etkinlik tarihi (UTC),** kullanıcı tarafından kasıtlı bir etkinliğin gerçekleştirildiği son tarihtir. Belirli bir tarihte gerçekleştirilen etkinliği görmek için, grafikte doğrudan tarihi seçin.<br/><br/>Diğer sütunlar, kullanıcının seçilen dönemde o uygulama için (Microsoft 365 应用版 içinde) o platformda etkin olup olmadığını belirler.|
+|8.|**Rapora sütun** eklemek veya rapordan sütun kaldırmak için Sütunları seç simgesini seçin.|
+|9.|Dışarı **Aktar bağlantısını** seçerek rapor verilerini bir Excel .csv dosyasına da aktarabilirsiniz. Bu, tüm kullanıcılar için verileri dışarı aktarır ve daha fazla analiz için basit toplama, sıralama ve filtreleme gerçekleştirmenize olanak tanır. 100'den az kullanıcınız varsa, raporun içindeki tablonun içinde sıralama ve filtreleme yapabilirsiniz. 100'den fazla kullanıcınız varsa, filtrelemek ve sıralamak için verileri dışarı aktarmanız gerekir.|

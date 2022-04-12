@@ -1,7 +1,7 @@
 ---
 title: Uç Nokta için Microsoft Defender’daki yenilikler
-description: Uç Nokta için Microsoft Defender'nin en son sürümünde genel kullanıma sunulan özelliklerin (GA) yanı sıra Windows 10 ve Windows Server'daki güvenlik özelliklerini görün.
-keywords: Uç Nokta için Microsoft Defender, ga, genel kullanıma sunulan, özellikler, kullanılabilir, yeni sürümündeki yenilikler
+description: Pertahanan Microsoft untuk Titik Akhir'ın en son sürümünde genel kullanıma sunulan özelliklerin (GA) yanı sıra Windows 10 ve Windows Server'daki güvenlik özelliklerini görün.
+keywords: Pertahanan Microsoft untuk Titik Akhir, ga, genel kullanıma sunulan, özellikler, kullanılabilir, yeni sürümündeki yenilikler
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -17,12 +17,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 06018eb69e369b06425c9db1f63f22ff97f15eac
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: a3294529a9b86fdc9bdb83de6a3296c9f0d6507d
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664490"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64782841"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender’daki yenilikler
 
@@ -30,13 +30,13 @@ ms.locfileid: "64664490"
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
 
-Aşağıdaki özellikler önizleme aşamasındadır veya Uç Nokta için Microsoft Defender en son sürümünde genel kullanıma sunulmuştur (GA).
+Aşağıdaki özellikler önizleme aşamasındadır veya Pertahanan Microsoft untuk Titik Akhir en son sürümünde genel kullanıma sunulmuştur (GA).
 
 Önizleme özellikleri hakkında daha fazla bilgi için bkz. [Önizleme özellikleri](preview.md).
 
@@ -51,15 +51,17 @@ Diğer Microsoft Defender güvenlik ürünleriyle ilgili yenilikler hakkında da
 
 - [Microsoft 365 Defender'daki yenilikler](../defender/whats-new.md)
 - [Office 365 için Microsoft Defender’daki yenilikler](../office-365-security/whats-new-in-defender-for-office-365.md)
-- [Kimlik için Microsoft Defender'deki yenilikler](/defender-for-identity/whats-new)
+- [Pertahanan Microsoft untuk Identitas'deki yenilikler](/defender-for-identity/whats-new)
 - [Microsoft Cloud App Security'deki yenilikler](/cloud-app-security/release-notes)
 
-Diğer işletim sistemleriyle ilgili Uç Nokta için Microsoft Defender hakkında daha fazla bilgi için:
+Diğer işletim sistemleriyle ilgili Pertahanan Microsoft untuk Titik Akhir hakkında daha fazla bilgi için:
 
 - [macOS'ta Uç Nokta için Defender'daki yenilikler](mac-whatsnew.md)
 - [iOS'ta Uç Nokta için Defender'daki yenilikler](ios-whatsnew.md)
 - [Linux'ta Uç Nokta için Defender'daki yenilikler](linux-whatsnew.md)
 
+## <a name="march-2022"></a>Mart 2022
+- [Windows Server 2012 R2 ve Windows Server 2016) için ekleme ve özellik eşlikleri güncelleştirildi](configure-server-endpoints.md)<br/> Yeni birleşik çözüm paketi genel kullanıma sunuldu ve bağımlılıkları ve yükleme adımlarını kaldırarak sunucuları eklemeyi kolaylaştırıyor. Ayrıca, bu birleşik çözüm paketi birçok yeni özellik geliştirmesi ile birlikte gelir.
 
 ## <a name="january-2022"></a>Ocak 2022
 
@@ -85,19 +87,19 @@ Diğer işletim sistemleriyle ilgili Uç Nokta için Microsoft Defender hakkınd
 
 - [Windows Server 2012 R2 ve Windows Server 2016 için ekleme ve özellik eşlikleri güncelleştirildi (önizleme)](configure-server-endpoints.md)<br/> Yeni birleşik çözüm paketi, bağımlılıkları ve yükleme adımlarını kaldırarak sunucuları eklemeyi kolaylaştırır. Ayrıca, bu birleşik çözüm paketi birçok yeni özellik geliştirmesi ile birlikte gelir.
 
-- Uç Nokta için Microsoft Defender ve Microsoft 365 Defender Windows 11 desteği eklendi.
+- Pertahanan Microsoft untuk Titik Akhir ve Microsoft 365 Defender Windows 11 desteği eklendi.
 
 ## <a name="september-2021"></a>Eylül 2021
 
-- [Web içeriği filtreleme](web-content-filtering.md) <br/>Uç Nokta için Microsoft Defender'daki web koruma özelliklerinin bir parçası olarak, web içeriği filtreleme, kuruluşunuzun güvenlik ekibinin web sitelerine erişimi içerik kategorilerine göre izlemesine ve düzenlemesine olanak tanır. Kategoriler arasında yetişkin içeriği, yüksek bant genişliği, yasal sorumluluk, boş zaman ve kategorilere ayrılmamış yer alır. Bu kategorilerden birine veya daha fazlasına giren birçok web sitesi kötü amaçlı olmasa da uyumluluk düzenlemeleri, bant genişliği kullanımı veya diğer endişeler nedeniyle sorunlu olabilir. [Web içeriği filtreleme hakkında daha fazla bilgi edinin](web-content-filtering.md).
+- [Web içeriği filtreleme](web-content-filtering.md) <br/>Pertahanan Microsoft untuk Titik Akhir'daki web koruma özelliklerinin bir parçası olarak, web içeriği filtrelemesi kuruluşunuzun güvenlik ekibinin web sitelerine erişimi içerik kategorilerine göre izlemesine ve düzenlemesine olanak tanır. Kategoriler arasında yetişkin içeriği, yüksek bant genişliği, yasal sorumluluk, boş zaman ve kategorilere ayrılmamış yer alır. Bu kategorilerden birine veya daha fazlasına giren birçok web sitesi kötü amaçlı olmasa da uyumluluk düzenlemeleri, bant genişliği kullanımı veya diğer endişeler nedeniyle sorunlu olabilir. [Web içeriği filtreleme hakkında daha fazla bilgi edinin](web-content-filtering.md).
 
 ## <a name="august-2021"></a>Ağustos 2021
 
-- (Önizleme) [Uç Nokta için Microsoft Defender Plan 1 ](defender-endpoint-plan-1.md) <br/>Uç Nokta Planı 1 için Defender (önizleme), yeni nesil koruma, saldırı yüzeyini azaltma, merkezi yönetim ve raporlama ve API'leri içeren bir uç nokta koruma çözümüdür. Uç Nokta Için Defender Plan 1 (önizleme), uç nokta koruma özelliklerimizi denemek, Microsoft 365 E3 sahip olmak ve henüz Microsoft 365 E5 sahip olmayan müşteriler için yeni bir tekliftir. 
+- (Önizleme) [Pertahanan Microsoft untuk Titik Akhir Plan 1 ](defender-endpoint-plan-1.md) <br/>Uç Nokta Planı 1 için Defender (önizleme), yeni nesil koruma, saldırı yüzeyini azaltma, merkezi yönetim ve raporlama ve API'leri içeren bir uç nokta koruma çözümüdür. Uç Nokta Için Defender Plan 1 (önizleme), uç nokta koruma özelliklerimizi denemek, Microsoft 365 E3 sahip olmak ve henüz Microsoft 365 E5 sahip olmayan müşteriler için yeni bir tekliftir. 
 
-   Daha fazla bilgi için bkz. [Plan 1 (önizleme) Uç Nokta için Microsoft Defender](defender-endpoint-plan-1.md). Mevcut [Uç Nokta için Defender özellikleri, Uç Nokta](microsoft-defender-endpoint.md) Için Defender Plan 2 olarak bilinir. 
+   Daha fazla bilgi için bkz. [Plan 1 (önizleme) Pertahanan Microsoft untuk Titik Akhir](defender-endpoint-plan-1.md). Mevcut [Uç Nokta için Defender özellikleri, Uç Nokta](microsoft-defender-endpoint.md) Için Defender Plan 2 olarak bilinir. 
 
-- (Önizleme) [Web İçeriği Filtreleme](web-content-filtering.md)<br>  Web içeriği filtreleme, Uç Nokta için Microsoft Defender'daki web koruma özelliklerinin bir parçasıdır. Kuruluşunuzun web sitelerine erişimi içerik kategorilerine göre izlemesine ve düzenlemesine olanak tanır. Bu web sitelerinin çoğu kötü amaçlı olmasa da uyumluluk düzenlemeleri, bant genişliği kullanımı veya diğer endişeler nedeniyle sorunlu olabilir.
+- (Önizleme) [Web İçeriği Filtreleme](web-content-filtering.md)<br>  Web içeriği filtreleme, Pertahanan Microsoft untuk Titik Akhir'deki web koruma özelliklerinin bir parçasıdır. Kuruluşunuzun web sitelerine erişimi içerik kategorilerine göre izlemesine ve düzenlemesine olanak tanır. Bu web sitelerinin çoğu kötü amaçlı olmasa da uyumluluk düzenlemeleri, bant genişliği kullanımı veya diğer endişeler nedeniyle sorunlu olabilir.
 
 ## <a name="july-2021"></a>Temmuz 2021
 
@@ -118,11 +120,11 @@ Diğer işletim sistemleriyle ilgili Uç Nokta için Microsoft Defender hakkınd
 
 - [Cihaz grubu tanımları](/microsoft-365/security/defender-endpoint/machine-groups) artık her koşul için birden çok değer içerebilir. Tek bir cihaz grubunun tanımına birden çok etiket, cihaz adı ve etki alanı ayarlayabilirsiniz.
 
-- [Mobil Uygulama yönetimi desteği](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Bu geliştirme, mobil uygulamaları yönetmek için Intune kullanılırken bir kuruluşun yönetilen uygulama içindeki verilerinin Uç Nokta için Microsoft Defender korunmasını sağlar. Mobil uygulama yönetimi hakkında daha fazla bilgi için [bu belgelere bakın](/microsoft-365/mem/intune/apps/mam-faq).
+- [Mobil Uygulama yönetimi desteği](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Bu geliştirme, mobil uygulamaları yönetmek için Intune kullanılırken bir kuruluşun yönetilen uygulama içindeki verilerinin Pertahanan Microsoft untuk Titik Akhir korunmasını sağlar. Mobil uygulama yönetimi hakkında daha fazla bilgi için [bu belgelere bakın](/microsoft-365/mem/intune/apps/mam-faq).
 
-- [VPN tümleştirmesi Microsoft Tunnel](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Microsoft Tunnel VPN özellikleri artık Android için Uç Nokta için Microsoft Defender uygulamasıyla tümleştirilmiştir. Bu birleştirme, kuruluşların tek bir güvenlik uygulamasıyla basitleştirilmiş bir son kullanıcı deneyimi sunabilmesini sağlar. Bu sayede hem mobil tehdit savunması hem de mobil cihazlarından şirket içi kaynaklara erişim olanağı sunarken, güvenlik ve BT ekipleri de tanıdıkları yönetici deneyimlerini sürdürebiliyor.
+- [VPN tümleştirmesi Microsoft Tunnel](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Microsoft Tunnel VPN özellikleri artık Android için Pertahanan Microsoft untuk Titik Akhir uygulamasıyla tümleştirilmiştir. Bu birleştirme, kuruluşların tek bir güvenlik uygulamasıyla basitleştirilmiş bir son kullanıcı deneyimi sunabilmesini sağlar. Bu sayede hem mobil tehdit savunması hem de mobil cihazlarından şirket içi kaynaklara erişim olanağı sunarken, güvenlik ve BT ekipleri de tanıdıkları yönetici deneyimlerini sürdürebiliyor.
 
-- [iOS'ta jailbreak algılama](/microsoft-365/security/defender-endpoint/ios-configure-features#conditional-access-with-defender-for-endpoint-on-ios) <br> iOS'ta Uç Nokta için Microsoft Defender jailbreak algılama özelliği genel kullanıma sunuldu. Bu, zaten var olan kimlik avı korumasına eklenir.  Daha fazla bilgi için bkz. [Cihaz risk sinyallerine göre Koşullu Erişim İlkesi'ni ayarlama](/microsoft-365/security/defender-endpoint/ios-configure-features).
+- [iOS'ta jailbreak algılama](/microsoft-365/security/defender-endpoint/ios-configure-features#conditional-access-with-defender-for-endpoint-on-ios) <br> iOS'ta Pertahanan Microsoft untuk Titik Akhir jailbreak algılama özelliği genel kullanıma sunuldu. Bu, zaten var olan kimlik avı korumasına eklenir.  Daha fazla bilgi için bkz. [Cihaz risk sinyallerine göre Koşullu Erişim İlkesi'ni ayarlama](/microsoft-365/security/defender-endpoint/ios-configure-features).
 
 
 ## <a name="march-2021"></a>Mart 2021
@@ -131,4 +133,4 @@ Diğer işletim sistemleriyle ilgili Uç Nokta için Microsoft Defender hakkınd
 
 ## <a name="january-2021"></a>Ocak 2021
 
-- [Azure Sanal Masaüstü](https://azure.microsoft.com/services/virtual-desktop/) <br> Uç Nokta için Microsoft Defender artık Azure Sanal Masaüstü için destek ekliyor.
+- [Azure Sanal Masaüstü](https://azure.microsoft.com/services/virtual-desktop/) <br> Pertahanan Microsoft untuk Titik Akhir artık Azure Sanal Masaüstü için destek ekliyor.

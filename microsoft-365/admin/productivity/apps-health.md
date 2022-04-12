@@ -1,5 +1,5 @@
 ---
-title: Microsoft Üretkenlik Puanı - Microsoft 365 durumunu güncelleştirme
+title: Microsoft Üretkenlik Puanı - uygulamaların sistem durumunu Microsoft 365
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -18,105 +18,105 @@ monikerRange: o365-worldwide
 search.appverid:
 - MET150
 - MOE150
-description: Sağlık - Microsoft 365 Uygulamaları deneyimi Üretkenlik puanı ile ilgili ayrıntılar.
-ms.openlocfilehash: 22bc1d503bc177722cb12d54c63adc3869755491
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365 应用版 sistem durumu - teknolojinin üretkenlik puanıyla ilgili ayrıntılar.
+ms.openlocfilehash: 2e8e44c954d8d1d6bacca766bd528c3897b7686b
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63321775"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64782159"
 ---
-# <a name="microsoft-365-apps-health--technology-experiences"></a>Microsoft 365 Uygulamaları durumu – teknoloji deneyimleri
+# <a name="microsoft-365-apps-health--technology-experiences"></a>Microsoft 365 应用版 sağlık – teknoloji deneyimleri
 
-Üretkenlik Puanı, kullanım deneyimi ve bunu destekleyen teknoloji deneyimleri aracılığıyla, Microsoft 365 dijital dönüşüm yolculuğuna içgörüler sağlar. Kuruluş puanı kişi ve teknoloji deneyimi ölçülerini yansıtarak sizinkilere benzer kuruluşların kıyaslamalarına göre karşılaştırabilirsiniz. Uygulamalar durumu kategorisi, teknoloji deneyimleri kapsamındaki ölçülerin bir bölümüdür. Daha fazla bilgi edinmek için Üretkenlik [Puanına genel bakış makalesinde](productivity-score.md) [Microsoft Gizlilik Bildirimi'ne bakın](https://privacy.microsoft.com/privacystatement).
+Üretkenlik Puanı, kuruluşunuzun Microsoft 365 kullanımı ve onu destekleyen teknoloji deneyimleri aracılığıyla dijital dönüşüm yolculuğuna ilişkin içgörüler sağlar. Kuruluşunuzun puanı, kişi ve teknoloji deneyimi ölçümlerini yansıtır ve sizinkine benzer kuruluşların karşılaştırmalarıyla karşılaştırılabilir. Uygulama durumu kategorisi, teknoloji deneyimleri kapsamındaki ölçümlerin bir parçasıdır. Daha fazla bilgi edinmek için [Üretkenlik Puanına genel bakış](productivity-score.md) sayfasına göz atın ve [Microsoft'un Gizlilik Bildirimi'ni](https://privacy.microsoft.com/privacystatement) okuyun.
 
-## <a name="why-your-organization39s-microsoft-365-apps-health-score-matters"></a>Kuruluş kuruluşlarının&#39;uygulamaları Microsoft 365 puanının önemli olduğu
+## <a name="why-your-organizations-microsoft-365-apps-health-score-matters"></a>Kuruluşunuzun Microsoft 365 uygulamalarının sistem durumu puanı neden önemlidir?
 
-Kurumsal üretkenliğiniz sağlıklı uygulama ortamına bağlıdır. Önerilen kanalda yer alan Microsoft 365 uygulamalarının en güncel sürümlerini çalıştıran cihazlar daha güvenlidir ve organizasyon organizasyon cihazlarındaki özelliklerden en iyi şekilde Microsoft 365.
+Kurumsal üretkenliğiniz iyi durumdaki uygulama ortamına bağlıdır. Önerilen kanalda Microsoft 365 uygulamalarının en güncel sürümlerini çalıştıran cihazlar daha güvenlidir ve kuruluşunuzdaki kişilerin Microsoft 365 özelliklerinden en iyi şekilde yararlanmak için yardımcı olur.
 
-## <a name="how-we-calculate-the-microsoft-365-apps-health-score"></a>Uygulama durumu puanı Microsoft 365 hesaplama
+## <a name="how-we-calculate-the-microsoft-365-apps-health-score"></a>Microsoft 365 uygulamalarının sistem durumu puanını hesaplama
 
-Her Microsoft 365 kanalında cihaz sayısını ölçerek, en iyi uygulama durumu puanınızı hesaplarız. Ayrıca cihazların desteklenen bir sürüm çalıştırıp çalıştırmaymayacaklarını ve en güncel sürüm olup olmadığını Microsoft 365 belirleriz.
+Her güncelleştirme kanalındaki cihaz sayısını ölçerek Microsoft 365 uygulamalarınızın sistem durumu puanını hesaplıyoruz. Ayrıca cihazların desteklenen bir sürüm çalıştırıp çalıştırmadığını ve Microsoft 365 uygulamalarının en güncel sürümünü de belirleriz.
 
-Deneyimde, bu kategorinin önemli ölçümlerini içeren birincil bir içgörü sağlaruz. Ardından, aşağıdaki bölümlerde ayrıntılı olarak bir puanlama çerçevesi, puanınızı hesaplamak için kullanılır.
+Bu kategorinin temel ölçümlerini içeren deneyimle ilgili birincil bir içgörü sağlıyoruz. Ardından, puanınızı hesaplamak için aşağıdaki bölümlerde ayrıntılı olarak yer alan bir puanlama çerçevesi kullanılır.
 
 ### <a name="primary-insight"></a>Birincil içgörü
 
-Birincil içgörü, önerilen güncelleştirilmiş kanalda Microsoft 365 Uygulamaları cihazlardan hesaplanır.
+Birincil içgörü, önerilen güncelleştirilmiş kanalda Microsoft 365 应用版 çalıştıran cihazlardan hesaplanır.
 
-:::image type="content" source="../../media/appshealth-primary.png" alt-text="Masaüstü uygulamaları için görme Microsoft 365.":::
+:::image type="content" source="../../media/appshealth-primary.png" alt-text="Microsoft 365 uygulamaları için birincil görünür görselleştirme.":::
 
-Bu durum için düşünülen Microsoft 365, uygulama kanalı, derleme ve cihazda çalışan sürümü içerir.
+Bunun için göz önünde bulundurulan bilgiler arasında cihazda çalışan Microsoft 365 uygulama kanalı, derleme ve sürüm yer alır.
 
-1. **Üst bilgi:**  Önerilen güncelleştirme kanalında cihazların yüzdesini gösterir
-1. **Gövde:**  Önerilen güncelleştirme kanalında cihazları çalıştırmanın en son güncelleştirmeleri alma ve cihazlarda geçerli sürümleri çalıştırmaya nasıl yardımcı olduğu hakkında daha fazla bilgi sağlar.
-1. **Görsel öğe (geçerli durum):**
-    - Mavi renkli bölümlerin önerilen güncelleştirilmiş kanalı çalıştıran cihazların yüzdesini temsil eden yatay çubuklar.
-    - Yatay çubuklarda ifade edilen yüzdeyi hesaplamak için kullanılan kesirin (payda/payda) vurgulayın.
-    - Önerilen güncelleştirilmiş kanalda çalışan cihazlar için Eşler Arası Karşılaştırma değeri de yüzde olarak gösterilir.
+1. **Üstbilgi:**  Önerilen güncelleştirme kanalındaki cihazların yüzdesini gösterir
+1. **Vücut:**  Cihazların önerilen güncelleştirme kanalında çalıştırılmasının cihazlarda en son güncelleştirmeyi almaya ve geçerli sürümleri çalıştırmaya nasıl yardımcı olacağı hakkında daha fazla bilgi sağlar.
+1. **Görselleştirme (geçerli durum):**
+    - Mavi renkli bölümlerin önerilen güncelleştirilmiş kanalı çalıştıran cihazların yüzdesini temsil ettiği yatay çubuklar.
+    - Yatay çubuklarda ifade edilen yüzdeyi hesaplamak için kullanılan kesirin (payda/payda) vurgulanması.
+    - Önerilen güncelleştirilmiş kanalda çalışan cihazlar için Eş Karşılaştırma değeri de yüzde olarak gösterilir.
 
-#### <a name="trend-visualization-of-the-primary-insight"></a>Birincil içgörü eğilim görselleştirmesi
+#### <a name="trend-visualization-of-the-primary-insight"></a>Birincil içgörülerin eğilim görselleştirmesi
 
-Aşağıdaki grafikte, son 180 gün içinde önerilen güncelleştirme kanalında yer alan cihazların sayısı görüntülenir. Çizgi grafikte yer alan veri noktası, son 28 günlük etkinliğin toplam değeridir.
+Aşağıdaki grafikte, son 180 gün içinde önerilen güncelleştirme kanalındaki cihaz sayısı gösterilmektedir. Çizgi grafikteki veri noktası, son 28 güne ait bir etkinlik toplamıdır.
 
-:::image type="content" source="../../media/appshealth-primarytrend.png" alt-text="Önerilen güncelleştirme kanalını çalıştıran cihazlar için eğilimi gösteren grafik.":::
+:::image type="content" source="../../media/appshealth-primarytrend.png" alt-text="Önerilen güncelleştirme kanalını çalıştıran cihazların eğilimini gösteren grafik.":::
 
 ### <a name="scoring-framework"></a>Puanlama çerçevesi
 
-Önerilen Microsoft 365 durumu puanı, cihazların önerilen kanalda Microsoft 365 son sürümlerde uygulamaları çalıştırıp çalıştırma durumunu ölçür.
+Microsoft 365 uygulamaları sistem durumu puanı, cihazların önerilen kanalda ve en son sürümlerde Microsoft 365 uygulamaları çalıştırıp çalıştırmadığını ölçer.
 
-## <a name="explore-your-organization-microsoft-365-app-channels-and-versions"></a>Uygulama kanalları ve Microsoft 365 için organizasyonlarınızı keşfedin
+## <a name="explore-your-organization-microsoft-365-app-channels-and-versions"></a>Uygulamanızın kanallarını ve sürümlerini Microsoft 365 kuruluşunuzu keşfedin
 
-Ayrıca, şu anda kuruma bağlı kanalların ve sürümlerin hangi cihazları çalıştıracağı hakkında daha fazla görünürlük kazanmanıza yardımcı olacak destek bilgileri de sağlaruz. Bu ek ölçümler Üretkenlik Puanınıza katkı sağlamaz, ancak cihazların önerilen kanallarda Microsoft 365 uygulamaları çalıştıracaklarından emin olarak, Microsoft 365 Microsoft 365 uygulamalarının sistem durumu puanınızı artırmak için bir eylem planı oluşturmanıza yardımcı olabilir.
+Ayrıca, kuruluşunuzdaki hangi kanalların ve sürüm cihazlarının şu anda çalıştığına dair ek görünürlük kazanmanıza yardımcı olan destekleyici bilgiler de sağlıyoruz. Bu ek ölçümler Üretkenlik Puanınıza katkıda bulunmaz, ancak cihazların önerilen kanallarda uygulama Microsoft 365 çalıştığından emin olarak Microsoft 365 uygulama sistem durumu puanınızı artırmak için bir eylem planı oluşturmanıza yardımcı olabilir.
 
-### <a name="devices-on-current-channel-and-running-supported-versions"></a>Geçerli kanalda ve desteklenen sürümleri çalıştıran cihazlar
+### <a name="devices-on-current-channel-and-running-supported-versions"></a>Geçerli kanaldaki ve desteklenen sürümleri çalıştıran cihazlar
 
-:::image type="content" source="../../media/devices-current-suppported-channel.png" alt-text="Geçerli, desteklenen kanalda cihaz sayısını gösteren grafik.":::
+:::image type="content" source="../../media/devices-current-suppported-channel.png" alt-text="Geçerli, desteklenen kanaldaki cihaz sayısını gösteren grafik.":::
 
-1. **Üst bilgi:**  Güncel Kanal'da desteklenen yayın sürümlerini çalıştıran cihazların yüzdesini vurgular Microsoft 365 Uygulamaları
-1. **Gövde:**  Önerilen kanalda yer alan ve Microsoft 365 cihazların değeri hakkında bilgi sağlar.
-1. **Görsel Öğe:**  Görsel öğenin çözümlemesi, farklı kanalda yer alan Microsoft 365 uygulamalarının en son ve desteklenen sürümlerindeki cihazların yüzde kaçı olduğunu aşağıdaki gibi gösterir:
-    - **Desteklenen sürümler:** Mavi çubuk, desteklenen uygulama sürümünde çalışan cihazların yüzdesini Microsoft 365 gösterir.
-    - **En son sürümler:** Mavi renk çubuğu, son sürümlerde cihazların yüzdesini temsil eder.
+1. **Üstbilgi:**  Geçerli Kanal'da desteklenen Microsoft 365 应用版 sürümlerini çalıştıran cihazların yüzdesini vurgular
+1. **Vücut:**  Önerilen kanalda Microsoft 365 uygulamaları çalıştıran cihazların değeri hakkında bilgi sağlar.
+1. **Görsel -leştirme:**  Görselleştirmedeki döküm, farklı kanallardaki Microsoft 365 uygulamalarının en son ve desteklenen sürümlerindeki cihazların yüzdesinin kapsamını aşağıda gösterildiği gibi temsil eder:
+    - **Desteklenen sürümler:** Mavi çubuk, Microsoft 365 uygulamalarının desteklenen sürümünde çalışan cihazların yüzdesini temsil eder.
+    - **En son sürümler:** Deniz mavisi renk çubuğu, en son sürümlerdeki cihazların yüzdesini temsil eder.
 1. **Daha fazla bilgi edinin:**   Yardım içeriğini görüntülemek için bu bağlantıyı seçin.
 
 ### <a name="devices-running-latest-and-supported-versions"></a>En son ve desteklenen sürümleri çalıştıran cihazlar
 
-:::image type="content" source="../../media/device-supported-versions.png" alt-text="Uygulamaların en son ve desteklenen sürümlerini çalıştıran cihazların sayısını gösteren grafik.":::
+:::image type="content" source="../../media/device-supported-versions.png" alt-text="Uygulamaların en son ve desteklenen sürümlerini çalıştıran cihaz sayısını gösteren grafik.":::
 
-1. **Üst bilgi:**  Desteklenen sürümleri ve en son sürümleri çalıştıran cihazların yüzdesini vurgular.
-1. **Gövde:**  Önerilen kanallarda ve desteklenen/en son sürümlerde çalışan cihazlar hakkında bilgi sağlar.
-1. **Görsel Öğe:** Görsel öğenin çözümlemesi, desteklenen sürümleri ve Microsoft 365 uygulamalarının en son sürümlerini çalıştıran cihazların boyutunu göstermeyi Microsoft 365 anlamına gelir:
-    - **Desteklenen sürümler:** Çubuğun mavi (renkli) kısmı ve çubukta kesir (pay/payda) bölümü, desteklenen Microsoft 365 cihazların yüzdesini temsil eder.
-        - Pay: Son 28 gün içinde Microsoft 365 sürümlerinin cihaz sayısı
-        - Payda: Son 28 gün Microsoft 365 uygulamaları kullanan cihazların sayısı
-    - **En son sürümler:** Çubuğun mavi (renkli) kısmı ve çubukta bulunan kesir (pay/payda) bölümü, Microsoft 365 uygulamalarının son sürümlerini çalıştıran cihazların yüzdesini temsil eder.
-        - Pay: Son 28 gün içinde Microsoft 365 sürümlerinin cihaz sayısı
-        - Payda: Son 28 gün Microsoft 365 uygulamaları kullanan cihazların sayısı
+1. **Üstbilgi:**  Desteklenen sürümleri çalıştıran cihazların ve en son sürümleri çalıştıran cihazların yüzdesini vurgular.
+1. **Vücut:**  Önerilen kanallarda ve desteklenen/en son sürümlerde cihazları çalıştıran değer hakkında bilgi sağlar.
+1. **Görsel -leştirme:** Görselleştirmedeki döküm, desteklenen sürüm ve Microsoft 365 uygulamalarının en son sürümlerini çalıştıran cihaz sayısını gösterme kapsamını temsil etmek için kullanılır:
+    - **Desteklenen sürümler:** Çubuğun mavi (renkli) kısmı ve çubuk üzerindeki kesir (payda/payda) Microsoft 365 uygulamalarının desteklenen sürümünü çalıştıran cihazların yüzdesini temsil eder.
+        - Pay: Son 28 gün içinde Microsoft 365 uygulamalarının desteklenen sürümlerindeki cihaz sayısı
+        - Payda: Son 28 gün içinde Microsoft 365 uygulamaları kullanan cihaz sayısı
+    - **En son sürümler:** Çubuğun teal (renkli) kısmı ve çubuk üzerindeki kesir (pay/payda) Microsoft 365 uygulamalarının son sürümlerini çalıştıran cihazların yüzdesini temsil eder.
+        - Pay: Son 28 gün içindeki Microsoft 365 uygulamalarının son sürümlerindeki cihaz sayısı
+        - Payda: Son 28 gün içinde Microsoft 365 uygulamaları kullanan cihaz sayısı
 1. **Daha fazla bilgi edinin:**   Yardım içeriğini görüntülemek için bu bağlantıyı seçin.
 
 #### <a name="trend-visualization-of-the-devices"></a>Cihazların eğilim görselleştirmesi
 
-Bu grafikte, son 180 gün boyunca desteklenen sürümleri ve Microsoft 365 sürümlerini çalıştıran cihazların eğilim çizgisi görüntülenir.
+Bu grafik, son 180 gün içinde desteklenen sürümleri ve Microsoft 365 uygulamalarının en son sürümlerini çalıştıran cihazların eğilim çizgisini gösterir.
 
-:::image type="content" source="../../media/trendline-devices-supportedversions.png" alt-text="Kaç cihaz tarafından desteklenen uygulamalar ve zaman içinde uygulamanın en son sürümlerinin çalıştır yer alan grafik.":::
+:::image type="content" source="../../media/trendline-devices-supportedversions.png" alt-text="Zaman içinde kaç cihazın desteklendiğini ve uygulamaların en son sürümlerini çalıştırdığını gösteren grafik.":::
 
-## <a name="devices-in-your-organization"></a>Kuruluş cihazları
+## <a name="devices-in-your-organization"></a>Kuruluşunuzdaki cihazlar
 
-Bu bölüm, uygulama durumu - teknoloji deneyimleri ile ilgili tüm ölçümlere ilgili bilgiler sağlayarak odaklanmak istediğiniz ölçümlere Microsoft 365 yardımcı olur.
+Bu bölüm, Microsoft 365 uygulamaların sistem durumu - teknoloji deneyimleri için tüm ölçümlere ilgili bilgiler sağlayarak odaklanmak istediğiniz ölçümler üzerinde işlem yapmanıza yardımcı olur.
 
-Tabloda kanal/sürüm düzeyinde aşağıdaki sütunlar sunulmaktadır:
+Tabloda kanal/sürüm düzeyinde aşağıdaki sütunlar gösterilir:
 
-- **Kanal**: Microsoft 365 uygulamalar kanalı.
-- **Durum:**   Microsoft 365 uygulamaları geçerli kanala ve sürüme göre cihazların durumunu destekler.
-- **Sürümler:**   Cihazlarda Microsoft 365 uygulamalar sürümü.
-- **Cihaz no:**  Cihaz sayısı.
+- **Kanal**: Cihazlarda geçerli Microsoft 365 uygulamaları kanalı.
+- **Durum**: Microsoft 365 uygulamalar geçerli kanala ve sürüme göre cihazların durumunu destekler.
+- **Sürümler**: Cihazlarda geçerli Microsoft 365 uygulama sürümleri.
+- **cihaz sayısı: Cihaz** sayısı.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[İletişim – Kişiler deneyimleri](communication.md) (makale)\
-[İçerik işbirliği – Kişiler deneyimleri](content-collaboration.md) (makale)\
+[İletişim – Kişi deneyimleri](communication.md) (makale)\
+[İçerik işbirliği – Kişi deneyimleri](content-collaboration.md) (makale)\
 [Toplantılar – Kişi deneyimleri](meetings.md) (makale)\
-[Hareketlilik – Kişiler deneyimleri](mobility.md) (makale)\
+[Mobility – Kişi deneyimleri](mobility.md) (makale)\
 [Üretkenlik Puanı için gizlilik denetimleri](privacy.md) (makale)\
-[Ekip çalışması – Kişiler deneyimleri](teamwork.md) (makale)
+[Ekip çalışması – Kişi deneyimleri](teamwork.md) (makale)

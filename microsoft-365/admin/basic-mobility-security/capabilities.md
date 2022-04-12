@@ -18,199 +18,199 @@ ms.custom:
 - AdminTemplateSet
 search.appverid:
 - MET150
-description: Temel Mobil Kullanım ve Güvenlik, mobil cihazlarınızı güvenli hale yönetmenize yardımcı olabilir.
-ms.openlocfilehash: 04ee7e7dfbc4937d4add2e4c27e7f686b596fadb
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Basic Mobility ve Security, mobil cihazlarınızı güvenli bir şekilde yönetmenize yardımcı olabilir.
+ms.openlocfilehash: 78cfa4582aa2e25a3b47a12d2e067082e8b41d07
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63314889"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64781237"
 ---
 # <a name="capabilities-of-basic-mobility-and-security"></a>Temel Hareketlilik ve Güvenlik Özellikleri
 
-Temel Mobil Kullanım ve Güvenlik, iPhone, iPad, Android ve Windows Gibi mobil cihazları, Microsoft 365 lisanslı kullanıcılar tarafından kullanılan telefonları güvenli Microsoft 365 yardımcı olabilir. Desteklenen mobil cihazlar ve uygulamalar için e-posta ve belgelere erişim Microsoft 365 ayarlarla mobil cihaz yönetimi ilkeleri oluşturabilirsiniz. Bir cihaz kaybolur veya çalınırsa hassas kuruluş bilgilerini kaldırmak için cihazı uzaktan silebilirsiniz.
+Temel Mobilite ve Güvenlik, kuruluşunuzdaki lisanslı Microsoft 365 kullanıcıları tarafından kullanılan iPhone, iPad, Android ve Windows Telefonlar gibi mobil cihazların güvenliğini sağlamanıza ve yönetmenize yardımcı olabilir. Desteklenen mobil cihazlar ve uygulamalar için kuruluşunuzun Microsoft 365 e-postasına ve belgelerine erişimi denetlemeye yardımcı olabilecek ayarlarla mobil cihaz yönetimi ilkeleri oluşturabilirsiniz. Bir cihaz kaybolur veya çalınırsa, hassas kuruluş bilgilerini kaldırmak için cihazı uzaktan silebilirsiniz.
 
 ## <a name="supported-operating-systems"></a>Desteklenen işletim sistemleri
 
-Temel Microsoft Intune ve Güvenlik ile cihazlar için minimum desteklenen işletim sistemleri kılavuzuna bakın. Daha fazla bilgi için [bkz. Intune'da desteklenen işletim sistemleri](/mem/intune/fundamentals/supported-devices-browsers).
+Basic Mobility ve Security tarafından sunulan cihazlar için desteklenen en düşük işletim sistemleri için Microsoft Intune işletim sistemleri kılavuzunu izleyin. Daha fazla bilgi için bkz. [desteklenen Intune işletim sistemleri](/mem/intune/fundamentals/supported-devices-browsers).
 
-Aşağıdaki cihazları güvenlik altına almak ve yönetmek için Temel Mobil Kullanım ve Güvenlik'i kullanabilirsiniz.
+Aşağıdaki cihazların güvenliğini sağlamak ve yönetmek için Basic Mobility ve Security'yi kullanabilirsiniz.
 
 - iOS
 - Android (Samsung Knox dahil)<sup>1</sup>
 - Windows <sup>2, 3</sup>
 
-<sup>1</sup> Haziran 2020'den sonra, 9'dan sonraki Android sürümleri Samsung Knox cihazları dışında parola ayarlarını yönetemedi.
+<sup>1</sup> Haziran 2020'den sonra, 9'dan sonraki Android sürümleri Samsung Knox cihazları dışında parola ayarlarını yönetemez.
 
-<sup>2</sup> RT cihazları için Windows 8.1 denetimi diğer cihazlarla Exchange ActiveSync.
+<sup>2</sup> Windows 8.1 RT cihazları için erişim denetimi Exchange ActiveSync ile sınırlıdır.
 
-<sup>3</sup> Erişim denetimi Windows 10, aboneliği içeren bir Azure AD Premium ve cihazın e-posta hizmetine katılmış Azure Active Directory.
+<sup>3</sup> Windows 10 erişim denetimi, Azure AD Premium içeren bir abonelik gerektirir ve cihazın Azure Active Directory katılması gerekir.
 
 > [!NOTE]
-> Özellikler önceden önceden işletim sistemi sürümleriyle kaydolan cihazlar çalışmaya devam eder, ancak bu özellikler önceden uyarılmadan değişebilir.
+> Daha önceki işletim sistemi sürümlerine önceden kaydedilmiş cihazlar çalışmaya devam eder ancak özellikler bildirimde bulunmadan değişebilir.
 
-Kuruluşta kişiler Temel Mobil Kullanım ve Güvenlik tarafından desteklenen mobil cihazlar kullanıyorsa, bu cihazlarda Exchange ActiveSync uygulamasının Microsoft 365 e-posta erişimine engel olarak, kuruluş verilerinizin daha güvenli hale gelen şekilde erişmelerini engelleyebilirsiniz. Güvenliği engelleme adımları için Exchange ActiveSync Temel Mobil [Kullanım ve Güvenlik'te cihaz erişimi ayarlarını yönetme.](manage-device-access-settings.md)
+Kuruluşunuzdaki kişiler Basic Mobility ve Security tarafından desteklenmeyen mobil cihazlar kullanıyorsa, kuruluşunuzun verilerini daha güvenli hale getirmek için bu cihazlar için Microsoft 365 e-postaya Exchange ActiveSync uygulama erişimini engellemek isteyebilirsiniz. Exchange ActiveSync engelleme adımları için bkz. [Temel Mobilite ve Güvenlik'te cihaz erişim ayarlarını yönetme](manage-device-access-settings.md).
 
-## <a name="access-control-for-microsoft-365-email-and-documents"></a>E-postayı ve Microsoft 365 için erişim denetimi
+## <a name="access-control-for-microsoft-365-email-and-documents"></a>Microsoft 365 e-posta ve belgeler için erişim denetimi
 
-Aşağıdaki tabloda yer alan farklı mobil cihaz türleri için desteklenen uygulamalar, kullanıcılardan, kullanıcının cihazı için geçerli olan ve daha önce cihazı kaydetmemiş yeni bir mobil cihaz yönetim ilkesi olan Basic Mobility ve Security'e kaydolmalarını istenir. Bir kullanıcının cihazı bir ilkeye uymazsa, sizin ilkeyi nasıl ayarlaymanıza bağlı olarak, kullanıcının bu uygulamalarda Microsoft 365 kaynaklarına erişimi engellenmiş olabilir veya bu kullanıcının erişimi olabilir ancak Microsoft 365 bir ilke ihlalsini raporlar.
+Aşağıdaki tabloda yer alan farklı mobil cihaz türleri için desteklenen uygulamalar, kullanıcıların bir kullanıcının cihazı için geçerli olan yeni bir mobil cihaz yönetimi ilkesi olduğu ve daha önce cihazı kaydetmediği Basic Mobility and Security'ye kaydolmalarını ister. Kullanıcının cihazı ilkeyi nasıl ayarladığınıza bağlı olarak bir ilkeyle uyumlu değilse, kullanıcının bu uygulamalardaki Microsoft 365 kaynaklara erişmesi engellenebilir veya erişimi olabilir ancak Microsoft 365 ilke ihlali bildiriyor olabilir.
 
-|**Ürün**|**iOS**|**Android**|
-|:-----|:-----|:-----|
-|**Exchange** Exchange ActiveSync Sürüm 14.1 veya sonraki bir sürümü kullanan yerleşik e-posta ve TouchDown Exchange ActiveSync üçüncü taraf uygulamaları içerir. |Posta |E-posta |
-| Office ve  **OneDrive İş** |Outlook </br>OneDrive </br>Word </br>Excel </br>PowerPoint|**Telefonlarda ve tabletlerde**:<br/>Outlook <br/> OneDrive <br/> Word <br/> Excel <br/> PowerPoint <br/> **Yalnızca telefonlarda:** <br/> Office Mobile |
+|Ürün|iOS|Android|
+|---|---|---|
+|**Exchange** Exchange ActiveSync, Exchange ActiveSync Sürüm 14.1 veya üzerini kullanan yerleşik e-posta ve TouchDown gibi üçüncü taraf uygulamaları içerir.|Posta|E-posta|
+|**Office** ve **OneDrive Entreprise**|Outlook </br>OneDrive </br>Word </br>Excel </br>PowerPoint|**Telefonlarda ve tabletlerde**:<br/>Outlook <br/> OneDrive <br/> Word <br/> Excel <br/> PowerPoint <br/> **Yalnızca telefonlarda:** <br/> Office Mobile|
 
 > [!NOTE]
 >
-> - iOS 10.0 ve sonraki sürümleri için destek, iPhone ve iPad içerir.
-> - BlackBerry işletim sistemi cihazlarının yönetimi Temel Güvenlik ve Mobil Kullanım tarafından desteklenmmektedir. BlackBerry OS cihazlarını yönetmek için BlackBerry Business Cloud Services'i (BBCS) BlackBerry'den kullanın. Android OS çalıştıran Blackberry cihazlar standart Android cihazları olarak de desteklemektedir
-> - Kullanıcılardan kaydolmaları istenmeyecek ve mobil tarayıcıyı kullanarak Microsoft 365 SharePoint sitelerine, Office Online'daki belgelere veya Outlook Web App'te e-postaya erişimleri için mobil tarayıcıyı kullanmaları istenir.
+> - iOS 10.0 ve üzeri sürümler için destek, iPhone ve iPad cihazları içerir.
+> - BlackBerry işletim sistemi cihazlarının yönetimi Basic Security ve Mobility tarafından desteklenmez. BlackBerry işletim sistemi cihazlarını yönetmek için BlackBerry'den BlackBerry Business Cloud Services (BBCS) kullanın. Android işletim sistemi çalıştıran Blackberry cihazları standart Android cihazlar olarak desteklenir
+> - Kullanıcılardan kaydolmaları istenmez ve mobil tarayıcıyı kullanarak Microsoft 365 SharePoint sitelere, Office Online'daki belgelere veya Outlook Web App'daki e-postalara erişim sağlamaları durumunda ilke ihlali nedeniyle engellenmez veya bildirilmez.
 
-Aşağıdaki diyagramda, yeni cihazı olan bir kullanıcı Temel Mobil Kullanım ve Güvenlik ile erişim denetimlerini destekleyen bir uygulamada oturum açınca neler olduğu görünür. Kullanıcının cihazı kaydolana kadar Microsoft 365 kaynakları erişimi engellenir.
+Aşağıdaki diyagramda, yeni cihazı olan bir kullanıcı Temel Mobilite ve Güvenlik ile erişim denetimini destekleyen bir uygulamada oturum açtığında ne olacağı gösterilmektedir. Kullanıcının cihazını kaydedene kadar uygulamadaki Microsoft 365 kaynaklarına erişmesi engellenir.
 
-:::image type="content" source="../../media/basic-mobility-security/bms-1-access-control.png" alt-text="Temel Hareketlilik ve Güvenlik erişim denetimi.":::
+:::image type="content" source="../../media/basic-mobility-security/bms-1-access-control.png" alt-text="Temel Mobilite ve Güvenlik erişim denetimi.":::
 
 > [!NOTE]
-> Microsoft 365 İş Standart için Temel Mobil Kullanım ve Güvenlik ile Exchange ActiveSync ilkeler ve erişim kuralları, Exchange yönetim merkezinde oluşturulmuş mobil cihaz posta kutusu ilkelerini ve cihaz erişim kurallarını geçersiz kılar. Cihaz Microsoft 365 İş Standart için Temel Mobil Kullanım ve Güvenlik'e Exchange ActiveSync, cihaza uygulanan tüm mobil cihaz posta kutusu ilkesi veya cihaz erişim kuralları yoksayılır. Bu konuda daha fazla Exchange ActiveSync için bkz [. Exchange ActiveSync'da Exchange Online](/exchange/clients-and-mobile-in-exchange-online/exchange-activesync/exchange-activesync).
+> Microsoft 365 Business Standard için Basic Mobility ve Security'de oluşturulan ilkeler ve erişim kuralları, Exchange yönetim merkezinde oluşturulan Exchange ActiveSync mobil cihaz posta kutusu ilkelerini ve cihaz erişim kurallarını geçersiz kılar. Bir cihaz Microsoft 365 Business Standard için Temel Hareket ve Güvenlik'e kaydedildikten sonra, cihaza uygulanan tüm Exchange ActiveSync mobil cihaz posta kutusu ilkesi veya cihaz erişim kuralı yoksayılır. Exchange ActiveSync hakkında daha fazla bilgi edinmek için bkz. [Exchange Online'da Exchange ActiveSync](/exchange/clients-and-mobile-in-exchange-online/exchange-activesync/exchange-activesync).
 
 ## <a name="policy-settings-for-mobile-devices"></a>Mobil cihazlar için ilke ayarları
 
-Belirli ayarlar açıkken erişimi engellemek için bir ilke oluşturmanız, kullanıcıların [Microsoft 365](capabilities.md) e-posta ve belgeleri için Access denetiminde listelenen desteklenen bir uygulama kullanırken Microsoft 365 kaynaklarına erişimi engellenir.
+Belirli ayarlar açıkken erişimi engellemek için bir ilke oluşturursanız, kullanıcıların Microsoft 365 [e-posta ve belgeler için Erişim denetiminde](capabilities.md) listelenen desteklenen bir uygulamayı kullanırken Microsoft 365 kaynaklarına erişmesi engellenir.
 
-Kullanıcıların kaynak e-postalara erişimini engel Microsoft 365 ayarlar şu bölümlerde yerlanmıştır:
+Kullanıcıların Microsoft 365 kaynaklarına erişmesini engelleyebilecek ayarlar şu bölümlerdedir:
 
 - Güvenlik
 
 - Şifreleme
 
-- Bir gün önce bir gün içinde iş için
+- Jail broken
 
 - Yönetilen e-posta profili
 
-Örneğin, aşağıdaki diyagramda, kayıtlı cihazı olan bir kullanıcı, cihazına uygulanan mobil cihaz yönetim ilkesinde yer alan bir güvenlik ayarıyla uyumlu değilse neler olduğu görünür. Kullanıcı, Temel Mobil Kullanım ve Güvenlik ile erişim denetimlerini destekleyen bir uygulamada oturum a giriş bilgileri sağlar. Cihaz güvenlik ayarına uygun Microsoft 365 uygulama kaynaklarına erişmeleri engellenir.
+Örneğin, aşağıdaki diyagramda kayıtlı cihazı olan bir kullanıcı, cihazı için geçerli olan mobil cihaz yönetim ilkesindeki bir güvenlik ayarıyla uyumlu olmadığında ne olacağı gösterilmektedir. Kullanıcı, Basic Mobility ve Security ile erişim denetimini destekleyen bir uygulamada oturum açar. Cihazları güvenlik ayarına uygun hale gelene kadar uygulamadaki Microsoft 365 kaynaklarına erişmeleri engellenir.
 
-:::image type="content" source="../../media/basic-mobility-security/bms-2-device-not-compliant.png" alt-text="Temel Mobil Kullanım ve Güvenlik uyumluluk iletisi.":::
+:::image type="content" source="../../media/basic-mobility-security/bms-2-device-not-compliant.png" alt-text="Temel Mobilite ve Güvenlik uyumluluk iletisi.":::
 
-Aşağıdaki bölümlerde, kullanıcı ve kuruluş kaynaklarınıza bağlanan mobil cihazların güvenliğini sağlamada ve yönetmede yardımcı olmak için Microsoft 365 ayarları listelemektedir.
+Aşağıdaki bölümlerde, Microsoft 365 kuruluş kaynaklarınıza bağlanan mobil cihazların güvenliğini sağlamaya ve yönetmeye yardımcı olmak için kullanabileceğiniz ilke ayarları listelenmektedir.
 
 ## <a name="security-settings"></a>Güvenlik ayarları
 
-|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
-|:-----|:-----|:-----|:-----|
-|Parola gerektirme|Evet|Evet|Evet|
-|Basit parolayı engelleme|Evet|Hayır|Hayır|
-|Alfasayısal parola gerektirme|Evet|Hayır|Hayır|
-|Minimum parola uzunluğu |Evet|Evet|Evet|
-|Cihaz silinmeden önce oturum açma hatası sayısı |Evet|Evet|Evet|
-|Cihaz kilitlenmeden önce dakikalar içinde etkileşimde olunma |Evet|Evet|Evet|
-|Parola süre sonu (gün) |Evet|Evet|Evet|
-|Parola geçmişini anımsama ve yeniden kullanımı engelleme |Evet|Evet|Evet|
+|Ayar adı|iOS|Android|Samsung Knox|
+|---|---|---|---|
+|Parola iste|Evet|Evet|Evet|
+|Basit parolayı önleme|Evet|Hayır|Hayır|
+|Alfasayısal parola iste|Evet|Hayır|Hayır|
+|Minimum parola uzunluğu|Evet|Evet|Evet|
+|Cihaz silinmeden önce oturum açma hatası sayısı|Evet|Evet|Evet|
+|Cihaz kilitlenmeden önce işlem yapılmadan geçen dakika sayısı|Evet|Evet|Evet|
+|Parola süre sonu (gün)|Evet|Evet|Evet|
+|Parola geçmişini anımsama ve yeniden kullanılmasını önleme|Evet|Evet|Evet|
 
 ## <a name="encryption-settings"></a>Şifreleme ayarları
 
-|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
-|:-----|:-----|:-----|:-----|
-|Cihazlarda veri şifrelemesi <sup>gerektirme1</sup> |Hayır|Evet|Evet|
+|Ayar adı|iOS|Android|Samsung Knox|
+|---|---|---|---|
+|Cihazlarda veri şifrelemesi <sup>iste1</sup>|Hayır|Evet|Evet|
 
-<sup>1</sup> Samsung Knox ile depolama kartlarında şifreleme de gerekli olabilir.
+<sup>1</sup> Samsung Knox ile depolama kartlarında şifreleme de gerektirebilirsiniz.
 
-## <a name="jail-broken-setting"></a>Güvenlik 2013 ayarları bozuk
+## <a name="jail-broken-setting"></a>Jail broken ayarı
 
-|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
-|:-----|:-----|:-----|:-----|
-|Cihaz bozuk veya kök olarak girilenem |Evet|Evet|Evet|
+|Ayar adı|iOS|Android|Samsung Knox|
+|---|---|---|---|
+|Cihaz jailbreak yapılamaz veya kök erişim izni verilemez|Evet|Evet|Evet|
 
 ## <a name="managed-email-profile-option"></a>Yönetilen e-posta profili seçeneği
 
-Aşağıdaki seçenek, kullanıcıların el ile oluşturulan bir e-Microsoft 365 profili kullanıyorsa e-postalarına erişmelerini engelleyebilir. iOS cihazlarında kullanıcılar e-postalarına erişmek için önce el ile oluşturulan e-posta profillerini silmeleri gerekir. Profili sildikten sonra cihazda otomatik olarak yeni bir profil oluşturulur. Son kullanıcıların uyumlu hale nasıl geldiyle ilgili yönergeler için bkz [. Var olan bir e-posta hesabı bulundu](/intune-user-help/existing-company-email-account-found).
+Aşağıdaki seçenek, el ile oluşturulmuş bir e-posta profili kullanan kullanıcıların Microsoft 365 e-postalarına erişmesini engelleyebilir. iOS cihazlarındaki kullanıcıların e-postalarına erişebilmeleri için önce el ile oluşturulan e-posta profillerini silmeleri gerekir. Profil silindikten sonra cihazda otomatik olarak yeni bir profil oluşturulur. Son kullanıcıların nasıl uyumlu olabileceğine ilişkin yönergeler için bkz. [Mevcut bir e-posta hesabı bulundu](/intune-user-help/existing-company-email-account-found).
 
-|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
-|:-----|:-----|:-----|:-----|
-|E-posta profili yönetiliyor |Evet|Hayır|Hayır|
+|Ayar adı|iOS|Android|Samsung Knox|
+|---|---|---|---|
+|E-posta profili yönetiliyor|Evet|Hayır|Hayır|
 
 ## <a name="cloud-settings"></a>Bulut ayarları
 
-|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
-|:-----|:-----|:-----|:-----|
-|Şifreli yedekleme gerektir |Evet|Hayır|Hayır|
-|Bulut yedeklemeyi engelle |Evet|Hayır|Hayır|
-|Belge eşitlemesini engelleme |Evet|Hayır|Hayır|
-|Fotoğraf eşitlemeyi engelleme  |Evet|Hayır|Hayır|
-|Google yedeklemesine izin ver  |Yok|Hayır|Evet|
-|Google hesabı otomatik eşitlemesine izin ver  |Yok|Hayır|Evet|
+|Ayar adı|iOS|Android|Samsung Knox|
+|---|---|---|---|
+|Şifrelenmiş yedekleme gerektir|Evet|Hayır|Hayır|
+|Bulut yedeklemesini engelleme|Evet|Hayır|Hayır|
+|Belge eşitlemesini engelle|Evet|Hayır|Hayır|
+|Fotoğraf eşitlemeyi engelle|Evet|Hayır|Hayır|
+|Google yedeklemesine izin ver|Yok|Hayır|Evet|
+|Google hesabı otomatik eşitlemesine izin ver|Yok|Hayır|Evet|
 
 ## <a name="system-settings"></a>Sistem ayarları
 
-|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
-|:-----|:-----|:-----|:-----|
-|Ekran yakalamayı engelle |Evet|Hayır|Evet|
-|Cihazdan tanılama verileri göndermeyi engelleme |Evet|Hayır|Evet|
+|Ayar adı|iOS|Android|Samsung Knox|
+|---|---|---|---|
+|Ekran yakalamayı engelle|Evet|Hayır|Evet|
+|Cihazdan tanılama verilerinin gönderilmesini engelleme|Evet|Hayır|Evet|
 
 ## <a name="application-settings"></a>Uygulama ayarları
 
-|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
-|:-----|:-----|:-----|:-----|
-|Cihazda görüntülü konferansları engelleme |Evet|Hayır|Hayır|
-|Uygulama deposuna erişimi engelleme |Evet|Hayır|Evet|
-|Uygulama mağazasına erişirken parola gerektir |Hayır|Evet|Evet|
+|Ayar adı|iOS|Android|Samsung Knox|
+|---|---|---|---|
+|Cihazda görüntülü konferansları engelleme|Evet|Hayır|Hayır|
+|Uygulama deposuna erişimi engelleme|Evet|Hayır|Evet|
+|Uygulama deposuna erişirken parola gerektir|Hayır|Evet|Evet|
 
 ## <a name="device-capabilities-settings"></a>Cihaz özellikleri ayarları
 
-|**Ayar adı**|**iOS** |**Android**|**Samsung Knox**|
-|:-----|:-----|:-----|:-----|
-|Çıkarılabilir depolama alanıyla bağlantıyı engelleme |Evet|Evet|Hayır|
-|Bağlantı Bluetooth engelleme |Evet|Evet|Hayır|
+|Ayar adı|iOS|Android|Samsung Knox|
+|---|---|---|---|
+|Çıkarılabilir depolama birimiyle bağlantıyı engelleme|Evet|Evet|Hayır|
+|Bluetooth bağlantısını engelle|Evet|Evet|Hayır|
 
 ## <a name="additional-settings"></a>Ek ayarlar
 
-Güvenlik ayarları ve Uyumluluk Merkezi PowerShell cmdlet'lerini & ek ilke ayarlarını değiştirebilirsiniz. Daha fazla bilgi için bkz [. Güvenlik & Uyumluluk Merkezi PowerShell](/powershell/exchange/scc-powershell).
+Güvenlik & Uyumluluk Merkezi PowerShell cmdlet'lerini kullanarak aşağıdaki ek ilke ayarlarını yapabilirsiniz. Daha fazla bilgi için bkz [. Güvenlik & Uyumluluk Merkezi PowerShell](/powershell/exchange/scc-powershell).
 
-|**Ayar adı**|**iOS** |**Android**|
-|:-----|:-----|:-----|
+|Ayar adı|iOS|Android|
+|---|---|---|
 |CameraEnabled|Evet|Evet|
 |RegionRatings|Evet|Hayır|
-|MoviesRatings|Evet|Hayır|
-|TVShowsRating |Evet|Hayır|
-|AppsRatings |Evet|Hayır|
-|AllowVoiceDialing |Evet|Hayır|
-|AllowVoiceAssistant |Evet|Hayır|
-|AllowAssistantWhileLocked  |Evet|Hayır|
-|AllowPassbookWhileLocked |Evet|Hayır|
-|MaxPasswordGracePeriod |Evet|Hayır|
-|PasswordQuality |Hayır|Evet|
-|SystemSecurityTLS  |Evet|Hayır|
-|WLANEnabled  |Hayır|Hayır|
+|FilmlerAyrılamalar|Evet|Hayır|
+|TVShowsRating|Evet|Hayır|
+|UygulamalarAyrılamalar|Evet|Hayır|
+|AllowVoiceDialing|Evet|Hayır|
+|AllowVoiceAssistant|Evet|Hayır|
+|AllowAssistantWhileLocked|Evet|Hayır|
+|AllowPassbookWhileLocked|Evet|Hayır|
+|MaxPasswordGracePeriod|Evet|Hayır|
+|PasswordQuality|Hayır|Evet|
+|SystemSecurityTLS|Evet|Hayır|
+|WLANEnabled|Hayır|Hayır|
 
-## <a name="settings-supported-by-windows"></a>Ayarlar tarafından desteklenen Windows
+## <a name="settings-supported-by-windows"></a>Windows tarafından desteklenen Ayarlar
 
-Farklı cihazları Windows 10 cihaz olarak kaydederek yönetebilirsiniz. Geçerli bir ilke dağıtıldıktan sonra, Windows 10 cihazı olan kullanıcıların Microsoft 365 e-postalarına erişmek için yerleşik e-posta uygulamasını ilk kez kullanan Temel Mobil Kullanım ve Güvenlik'e kaydolmaları gerekir (Azure AD premium aboneliği gerektirir).
+Windows 10 cihazları mobil cihaz olarak kaydederek yönetebilirsiniz. Geçerli bir ilke dağıtıldıktan sonra, Windows 10 cihazları olan kullanıcıların Microsoft 365 e-postalarına erişmek için yerleşik e-posta uygulamasını ilk kez kullandıklarında Basic Mobility ve Security'ye kaydolmaları gerekir (Azure AD premium aboneliği gerektirir).
 
-Mobil cihaz olarak Windows 10 cihazlar için aşağıdaki ayarlar desteklemektedir. Bu ayar kullanıcıların kaynak kaynakları erişimi Microsoft 365 engellemez.
+Mobil cihaz olarak kaydedilen Windows 10 cihazlar için aşağıdaki ayarlar desteklenir. Bu ayar kullanıcıların Microsoft 365 kaynaklarına erişmesini engellemez.
 
 ### <a name="security-settings"></a>Güvenlik ayarları
 
-- Alfasayısal parola gerektirme
+- Alfasayısal parola iste
 
 - Minimum parola uzunluğu
 
 - Cihaz silinmeden önce oturum açma hatası sayısı
 
-- Cihaz kilitlenmeden önce dakikalar içinde etkileşimde olunma
+- Cihaz kilitlenmeden önce işlem yapılmadan geçen dakika sayısı
 
 - Parola süre sonu (gün)
 
-- Parola geçmişini anımsama ve yeniden kullanımı engelleme
+- Parola geçmişini anımsama ve yeniden kullanılmasını önleme
 
 > [!NOTE]
-> Aşağıdaki ayarlar parolaları yeniden düzenlemede yalnızca yerel Windows denetimine sahip olur. Windows etki alanına veya hesaba katılma aracılığıyla sağlanan Azure Active Directory hesapları bu ayarlardan etkilenmez.
+> Parolaları düzenleyen aşağıdaki ayarlar yalnızca yerel Windows hesaplarını denetler. Bir etki alanına veya Azure Active Directory katılma yoluyla sağlanan Windows hesapları bu ayarlardan etkilenmez.
 
 ### <a name="system-settings"></a>Sistem ayarları
 
-Cihazdan tanılama verileri gönderilmesini engelin.
+Cihazdan tanılama verilerinin gönderilmesini engelleyin.
 
 ### <a name="additional-settings"></a>Ek ayarlar
 
-PowerShell cmdlet'lerini kullanarak bu ek ilke ayarlarını değiştirebilirsiniz:
+PowerShell cmdlet'lerini kullanarak bu ek ilke ayarlarını yapabilirsiniz:
 
 - AllowConvenienceLogon
 
@@ -228,13 +228,13 @@ PowerShell cmdlet'lerini kullanarak bu ek ilke ayarlarını değiştirebilirsini
 
 - WorkFoldersSyncUrl
 
-## <a name="remotely-wipe-a-mobile-device"></a>Mobil cihazı uzaktan temizleme
+## <a name="remotely-wipe-a-mobile-device"></a>Mobil cihazı uzaktan silme
 
-Bir cihaz kaybolur veya çalınırsa, hassas kuruluş verilerini kaldırabilir ve Güvenlik ve Uyumluluk Merkezi'nde Veri kaybı önlemeDevice yönetimi'Microsoft 365 temizleme yaparak & kaynaklarınıza erişimi >  >  yardımcı **olabilir**. Bir cihazdan tüm bilgileri silip fabrika ayarlarına geri yüklemek için seçmeli temizleme işlemi, yalnızca kuruluş verilerini veya tam temizleme özelliğini kaldırabilirsiniz.
+Bir cihaz kaybolur veya çalınırsa, Güvenlik & Uyumluluk merkezi > **Veri kaybı önlemeCihaz** >  yönetimi bölümünden silme işlemi yaparak hassas kuruluş verilerini kaldırabilir ve Microsoft 365 kuruluş kaynaklarınıza erişimi **engellemeye** yardımcı olabilirsiniz. Bir cihazdan tüm bilgileri silip fabrika ayarlarına geri yüklemek için yalnızca kuruluş verilerini kaldırmak için seçmeli silme veya tam silme işlemi yapabilirsiniz.
 
-Daha fazla bilgi için bkz [. Temel Mobil Kullanım ve Güvenlik'te mobil cihazwipe](wipe-mobile-device.md).
+Daha fazla bilgi için bkz [. Basic Mobility and Security'de mobil cihazı temizleme](wipe-mobile-device.md).
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Kişiler için Temel Hareketlilik ve Güvenlik'e Microsoft 365](overview.md) (makale)\
-[Temel Hareketlilik ve Güvenlik makalesinde cihaz güvenliği](create-device-security-policies.md) ilkeleri oluşturma (makale)
+[Microsoft 365 için Temel Mobilite ve Güvenliğe Genel Bakış](overview.md) (makale)\
+[Temel Mobilite ve Güvenlik'te cihaz güvenlik ilkeleri oluşturma](create-device-security-policies.md) (makale)

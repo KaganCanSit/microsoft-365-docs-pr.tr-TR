@@ -1,7 +1,7 @@
 ---
 title: Web içeriği filtreleme
-description: Web sitelerine erişimi içerik Uç Nokta için Microsoft Defender izlemek ve düzenlemek için Web sitesinde web içeriği filtrelemeyi kullanın.
-keywords: web koruması, web tehdit koruması, web'e gözatma, izleme, raporlar, kartlar, etki alanı listesi, güvenlik, kimlik avı, kötü amaçlı yazılım, exploit, web siteleri, ağ koruması, Edge, Internet Explorer, Chrome, Firefox, web tarayıcısı
+description: web sitelerine erişimi içerik kategorilerine göre izlemek ve düzenlemek için Pertahanan Microsoft untuk Titik Akhir'de web içeriği filtrelemeyi kullanın.
+keywords: web koruması, web tehdit koruması, web'e göz atma, izleme, raporlar, kartlar, etki alanı listesi, güvenlik, kimlik avı, kötü amaçlı yazılım, yararlanma, web siteleri, ağ koruması, Edge, Internet Explorer, Chrome, Firefox, web tarayıcısı
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,81 +15,81 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 2535845c52285b1ce28fbe142709089778503c09
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 01000e08153e96042e6873dc45fcb0627ea82e47
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64469591"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64782995"
 ---
 # <a name="web-content-filtering"></a>Web içeriği filtreleme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > [!TIP]
-> Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
+> Pertahanan Microsoft untuk Titik Akhir mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
 
-Web içeriği filtreleme, Web koruma özellikleri [kapsamında Uç Nokta için Microsoft Defender](web-protection-overview.md). Bu özellik, kuruluşlarının kendi içerik kategorilerine göre web sitelerine erişimi izlemesini ve düzenlemesini sağlar. Kötü amaçlı değilken, bu web sitelerinin birçoğu uyumluluk mevzuatı, bant genişliği kullanımı veya diğer endişelerden dolayı sorun yaratabilir.
+Web içeriği filtreleme, [Pertahanan Microsoft untuk Titik Akhir'daki Web koruma](web-protection-overview.md) özelliklerinin bir parçasıdır. Kuruluşunuzun web sitelerine erişimi içerik kategorilerine göre izlemesine ve düzenlemesine olanak tanır. Bu web sitelerinin çoğu kötü amaçlı olmasa da uyumluluk düzenlemeleri, bant genişliği kullanımı veya diğer endişeler nedeniyle sorunlu olabilir.
 
-Cihaz gruplarınız genelinde ilkeleri belirli kategorileri engellemek üzere yapılandırabilirsiniz. Kategorinin engellenmesi, belirtilen cihaz gruplarında yer alan kullanıcıların kategoriyle ilişkili URL'lere erişmesini sağlar. Engellenmiş durumdaki herhangi bir kategori için URL'ler otomatik olarak denetlenmektedir. Kullanıcılarınız KESINTI olmadan URL'lere erişebilirsiniz ve daha özel bir ilke kararı atayabilirsiniz. Kullanıcılarınız, görüntülemekte olduğu sayfada yer alan bir öğe engellenen bir kaynağı arıyorsa engellenen bir bildirim görebilirler.
+Belirli kategorileri engellemek için cihaz gruplarınız genelinde ilkeleri yapılandırın. Kategorinin engellenmesi, belirtilen cihaz grupları içindeki kullanıcıların kategoriyle ilişkili URL'lere erişmesini engeller. Engellenmeyen tüm kategoriler için URL'ler otomatik olarak denetlenür. Kullanıcılarınız URL'lere kesinti olmadan erişebilir ve daha özel bir ilke kararı oluşturmaya yardımcı olmak için erişim istatistiklerini toplarsınız. Görüntüledikleri sayfadaki bir öğe engellenen bir kaynağa çağrı yapıyorsa kullanıcılarınız bir engelleme bildirimi görür.
 
-Web içeriği filtreleme, başlıca web tarayıcılarında Windows Defender SmartScreen (Microsoft Edge) ve Ağ Koruması (Chrome, Firefox, Doğru ve Opera) tarafından gerçekleştirilen bloklarla kullanılabilir. Tarayıcı desteği hakkında daha fazla bilgi için önkoşullar bölümüne bakın.
+Web içeriği filtreleme, Windows Defender SmartScreen (Microsoft Edge) ve Ağ Koruması (Chrome, Firefox, Brave ve Opera) tarafından gerçekleştirilen bloklarla büyük web tarayıcılarında kullanılabilir. Tarayıcı desteği hakkında daha fazla bilgi için önkoşullar bölümüne bakın.
 
 ## <a name="benefits-of-web-content-filtering"></a>Web içeriği filtrelemenin avantajları
 
-- İster şirket içinde ister uzakta olsunlar, kullanıcıların engellenen kategorilerde web sitelerine erişimi engellenir.
+- Kullanıcıların, ister şirket içinde ister dışarıda gezinirken engellenen kategorilerdeki web sitelerine erişmesi engellenir.
 
-- Güvenlik ekibinin, rol tabanlı erişim denetimi ayarlarında tanımlanan cihaz gruplarını kullanarak kullanıcı [gruplarına Uç Nokta için Microsoft Defender ilkeler dağıtabilirsiniz](/microsoft-365/security/defender-endpoint/rbac).
+- Güvenlik ekibiniz, [Pertahanan Microsoft untuk Titik Akhir rol tabanlı erişim denetimi ayarlarında](/microsoft-365/security/defender-endpoint/rbac) tanımlanan cihaz gruplarını kullanarak kullanıcı gruplarına kolayca ilke dağıtabilir.
 
-- Güvenlik ekibinin aynı merkezi konumdaki web raporlarına erişebilirsiniz ve gerçek bloklar ve web kullanımıyla ilgili görünürlük sağlar.
+- Güvenlik ekibiniz, gerçek bloklar ve web kullanımı üzerinde görünürlük ile web raporlarına aynı merkezi konumda erişebilir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu özelliği denmeden önce, aşağıdaki gereksinimleri karşılamıyor olun:
+Bu özelliği denemeden önce aşağıdaki gereksinimleri karşıladığınızdan emin olun:
 
-- Aboneliğiniz şunları içerir: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Güvenlik, Microsoft 365 E3 + Microsoft 365 E5 Güvenlik eklenti, veya Uç Nokta için Microsoft Defender tek başına lisansa sahip olabilir. 
+- Aboneliğiniz aşağıdakilerden birini içerir: Windows 10 Enterprise E5, Microsoft 365 E5, Microsoft 365 E5 Güvenlik, Microsoft 365 E3 veya Tek başına lisans Pertahanan Microsoft untuk Titik Akhir. 
 
-- Bu portala <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender vardır</a>.
+- <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalına</a> erişiminiz vardır.
 
-- En son virüsten koruma/kötü amaçlı yazılımlardan koruma güncelleştirmeleriyle, Windows 10 Yıldönümü Güncelleştirmesi (sürüm 1607) veya Windows 11 cihazları [çalışıyor](manage-updates-baselines-microsoft-defender-antivirus.md).
+- Kuruluşunuzun cihazları Windows 10 Yıldönümü Güncelleştirmesi (sürüm 1607) veya üzerini çalıştırıyor veya [en son virüsten koruma/kötü amaçlı yazılımdan koruma güncelleştirmeleriyle](manage-updates-baselines-microsoft-defender-antivirus.md) Windows 11.
 
-- Windows Defender SmartScreen ve Ağ Koruması, kuruluş cihazlarında etkindir.
+- Windows Defender SmartScreen ve Ağ Koruması kuruluşunuzun cihazlarında etkinleştirilir.
 
 ## <a name="data-handling"></a>Veri işleme
 
-Veriler, verilerinizi işleme ayarlarınız kapsamında seçilen [Uç Nokta için Microsoft Defender depolanır](data-storage-privacy.md). Verileriniz bu bölgedeki veri merkezinden ayrılmaz. Buna ek olarak, verileriniz veri sağlayıcılarımız da dahil olmak üzere hiçbir üçüncü tarafla paylaşılmaz.
+Veriler, [Pertahanan Microsoft untuk Titik Akhir veri işleme ayarlarınızın](data-storage-privacy.md) bir parçası olarak seçilen bölgede depolanır. Verileriniz o bölgedeki veri merkezinden ayrılmaz. Ayrıca verileriniz, veri sağlayıcılarımız da dahil olmak üzere hiçbir üçüncü tarafla paylaşılmaz.
 
 ## <a name="turn-on-web-content-filtering"></a>Web içeriği filtrelemeyi açma
 
-Web portalında sol gezintiden <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">, Microsoft 365 Defender</a> Genel **Gelişmiş Ayarlar** **Uç** \> **Noktalar'ı** \> \> **seçin**. Web içeriği filtreleme girdisini görene **kadar aşağı kaydırın**. Düğmeyi Açık ve Kaydetme **tercihlerine** **geçiş.**
+<a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> sol taraftaki gezinti bölmesinde **Uç Noktalar** \> **Genel** \> **Gelişmiş** **Özellikler'i Ayarlar** \> seçin. **Web içeriği filtreleme** girdisini görene kadar aşağı kaydırın. İki durumlu düğmeyi **Açık** ve **Kaydet tercihleri** olarak değiştirin.
 
 ### <a name="configure-web-content-filtering-policies"></a>Web içeriği filtreleme ilkelerini yapılandırma
 
-Web içeriği filtreleme ilkeleri, hangi site kategorilerinin hangi cihaz gruplarında engellenmiş olduğunu belirtir. İlkeleri yönetmek için, Uç **Ayarlar** \> **Web içeriği** \> **filtrelemesi'ne** gidin (Kurallar'ın **altında**).
+Web içeriği filtreleme ilkeleri hangi site kategorilerinin hangi cihaz gruplarında engelleneceğini belirtir. İlkeleri yönetmek için Uç **Noktalar** \> **Web içeriği filtreleme** **Ayarlar** \> gidin (**Kurallar'ın** altında).
 
 İlkeler, aşağıdaki üst veya alt kategorilerden herhangi birini engellemek için dağıtılabilir:
 
 <details>
-<summary>Yetişkin içeriği</summary>
+<summary>Yetişkinlere özgü içerik</summary>
 
-**Özelkler**: Üyeleri sosyal olarak kabul edilenlerden farklı bir ima sistemi tutkusunu gösterdiği gruplarla veya hareketlerle ilgili siteler. 
+**Tarikatlar**: Üyeleri sosyal olarak kabul edilenlerden farklı bir inanç sistemine tutku gösteren gruplar veya hareketlerle ilgili siteler. 
 
-**Yaygın**: Çevrimiçi teşvik becerileri ve alıştırmalar geliştiren siteler.
+**Kumar**: Çevrimiçi kumar ve kumar becerilerini ve uygulamalarını teşvik eden siteler.
 
-**Çıplaklık**: Normalde artistik formda, tam ön ve yarı renkli resimler veya videolar sağlayan ve bu tür malzemelerin indir veya satışına izin ver sahne olan siteler.
+**Çıplaklık**: Genellikle artistik biçimde tam ön ve yarı çıplak görüntüler veya videolar sağlayan ve bu tür malzemelerin indirilmesine veya satılmasına izin veren siteler.
 
-**Pornografi / Cinsel olan:** Görüntü tabanlı veya metinsel bir biçimde cinsel içerik içeren siteler. Cinsel yönelimli her tür malzeme burada listelenmiştir.
+**Pornografi / Cinsel açıdan açık**: Görüntü tabanlı veya metin biçiminde cinsel içerik içeren siteler. Cinsel yönelimli her türlü malzeme de burada listelenmiştir.
 
-**Cinsiyet eğitimi**: İnsan yeniden üretme ve hile hakkında eğitim sağlayan siteler, cinsellik bulaşmasını önlemeye yönelik öneriler sunan siteler ve cinsel cinsel sağlık konuları hakkında öneriler sunan siteler ve cinsel sağlık konuları hakkında öneriler sunan, bilgilendirici ve voyeurist olmayan bir şekilde cinsiyeti ve cinselliği tartışan siteler.
+**Seks eğitimi**: Cinsellik ve cinselliği bilgilendirici ve röntgenci olmayan bir şekilde tartışan siteler, insan üremesi ve kontrasepsiyon hakkında eğitim veren siteler, cinsel hastalıklardan korunma tavsiyesi sunan siteler ve cinsel sağlık konuları hakkında tavsiyeler sunan siteler.
 
-**Zevksiz**: Okul çocukları için uygun olmayan içeriklere yönelen siteler ya da işverenin personeline erişmesi ile birlikte, pornografik veya pornografik olması zorunlu değildir.
+**Zevksiz**: Okul çocuklarının görmesi için uygun olmayan içeriğe yönelik siteler veya bir işverenin personelinin erişimi konusunda rahatsız olacağı, ancak mutlaka şiddet içeren veya pornografik olmadığı.
 
-**Şiddet**: İnsanlara veya hayvanlara yönelik şiddet ile ilgili içeriklerin görüntüleniyor veya tanıt yer alıyor siteler.
+**Şiddet**: İnsanlara veya hayvanlara yönelik şiddet ile ilgili içeriği görüntüleyen veya teşvik eden siteler.
 
 </details>
 
@@ -98,62 +98,62 @@ Web içeriği filtreleme ilkeleri, hangi site kategorilerinin hangi cihaz grupla
 
 **Siteleri indirme**: Birincil işlevi kullanıcıların medya içeriğini veya bilgisayar programları gibi programları indirmesine izin vermek olan siteler.
 
-**Resim paylaşımı**: Sosyal açıdan özellikleri olan siteler dahil olmak üzere, öncelikle fotoğraf aramak veya paylaşmak için kullanılan siteler.
+**Görüntü paylaşımı**: Sosyal yönleri olanlar da dahil olmak üzere öncelikli olarak fotoğrafları aramak veya paylaşmak için kullanılan siteler.
 
-**Eşler arası**: Eşler arası (P2P) yazılım barındıran veya P2P yazılımını kullanarak dosya paylaşımını kolaylaştıran siteler.
+**Eşler arası**: Eşler arası (P2P) yazılımları barındıran veya P2P yazılımı kullanarak dosyaların paylaşılmasını kolaylaştıran siteler.
 
-**Medya akışı & indirmeleri**: Birincil işlevi akış medyası dağıtımı olan siteler veya kullanıcıların medya aramasına, izlemesine veya dinlemesine olanak sağlayan siteler.
+**Akış medyası & indirmeleri**: Birincil işlevi akış medyasının dağıtımı olan siteler veya kullanıcıların akış medyasını aramasına, izlemesine veya dinlemesine olanak sağlayan siteler.
   
 </details>
 
 <details>
 <summary>Yasal sorumluluk</summary>
 
-**Çocuğun kötüye kullanımı resimleri**: Çocuğun kötüye kullanımı görüntüleri veya pornografisi içeren siteler. 
+**Çocuk istismarı görüntüleri: Çocuk** istismarı görüntülerini veya pornografiyi içeren siteler. 
 
-**Suç etkinlikleri**: Yasa dışı etkinliklere yönelik yönerge, öneriler veya promosyonda bulunduran siteler.
+**Suç faaliyeti**: Yasa dışı faaliyetler hakkında talimat veren, tavsiyede bulunan veya teşvik eden siteler.
 
-**Hacking**: Bilgisayar yazılımının veya donanımın yasa dışı ya da şüpheli kullanımına yönelik kaynaklar sağlayan siteler ve telif hakkıyla korunan malzemeyi dağıtan siteler de buna dahil.
+**Hacking**: Kırılan telif hakkıyla korunan malzemeleri dağıtan siteler de dahil olmak üzere bilgisayar yazılımı veya donanımının yasa dışı veya sorgulanabilir kullanımı için kaynaklar sağlayan siteler.
 
-**Nefret &** rahatsızlığı: Yarış, din, cinsiyet, yaş, millilik, fiziksel engellilik, ekonomik durum, cinsel tercihler veya diğer yaşam biçimi tercihleri ile belirlenen, popülasyonda herhangi bir bölümü hakkında saldırgan, kötü amaçlı görüşler tanıtan siteler.
+**Nefret & hoşgörüsüzlüğü**: Nüfusun herhangi bir bölümü hakkında ırk, din, cinsiyet, yaş, milliyet, fiziksel engellilik, ekonomik durum, cinsel tercihler veya başka bir yaşam tarzı seçimiyle tanımlanabilecek agresif, aşağılayıcı veya kötüleyici görüşleri teşvik eden siteler.
 
-**Yasa dışı ihlal**: Yasa dışı/denetimli ihlaller satan, tacize teşvik eden veya ilgili paraphernalia satışı yapılan siteler.
+**Yasadışı uyuşturucu: Yasa** dışı/kontrollü maddeler satan, madde kötüye kullanımını teşvik eden veya ilgili parafernalia satan siteler.
 
-**Yasa dışı yazılım**: Kötü amaçlı yazılım, casus yazılım, botnet, kimlik avı dolandırıcılığı veya korsan kullanımı içeren veya telif hakkı hırsızlığını & siteler.
+**Yasa dışı yazılım**: Kötü amaçlı yazılım, casus yazılım, botnet, kimlik avı dolandırıcılığı veya korsanlık & telif hakkı hırsızlığı içeren veya kullanımını teşvik eden siteler.
 
-**Okul hilesi**: Aşıma veya okul hilesi ile ilgili siteler. 
+**Okul hilesi**: İntihal veya okul hilesi ile ilgili siteler. 
 
-**Kendine zarar verme**: Kullanıcılara yönelik kötü amaçlı ve/veya tehdit içeren siber tehdit içeren siteler dahil, kendine zarar veren siteler.
+**Kendine zarar** verme: Kullanıcılara yönelik kötü amaçlı ve/veya tehdit içeren siber zorbalık içeren siteler de dahil olmak üzere kendine zarar vermeyi teşvik eden siteler.
 
-**İşte**: Avukat veya avukat kullanımına sahip olan herhangi bir site; bu, bilgili, özelk ve tirnaklar dahil ancak bunlarla sınırlı değildir.
+**Silahlar: Silah** satan veya silah kullanımını savunan herhangi bir site, silahlar, bıçaklar ve mühimmat dahil ancak bunlarla sınırlı değildir.
 
 </details>
 
 <details>
-<summary>Boş zaman</summary>
+<summary>Eğlence</summary>
 
-**Sohbet**: Temelde web tabanlı sohbet odaları olan siteler.
+**Sohbet**: Öncelikli olarak web tabanlı sohbet odaları olan siteler.
 
-**Oyunlar**: Video veya bilgisayar oyunlarına ilişkin siteler; oyun barındırma ve oyunla ilgili çevrimiçi hizmetler siteler.
+**Oyunlar**: Barındırma çevrimiçi hizmetler veya oyunla ilgili bilgiler aracılığıyla oyunları teşvik eden siteler de dahil olmak üzere video veya bilgisayar oyunlarıyla ilgili siteler.
 
-**Anlık mesajlaşma**: Anlık ileti yazılımını veya istemci tabanlı anlık mesajlaşmayı indirmek için kullanılmaktadır.
+**Anlık ileti: Anlık ileti** yazılımını veya istemci tabanlı anlık iletileri indirmek için kullanılabilecek siteler.
 
-**Professional ağı**: Profesyonel ağ hizmetleri sağlayan siteler.
+**Professional ağ**: Profesyonel ağ hizmetleri sağlayan siteler.
 
-**Sosyal ağ**: Sosyal ağ hizmetleri sağlayan siteler.
+**Sosyal ağ: Sosyal** ağ hizmetleri sağlayan siteler.
 
-**Web tabanlı e-posta**: Web tabanlı posta hizmetleri sunan siteler.
+**Web tabanlı e-posta: Web** tabanlı posta hizmetleri sunan siteler.
   
 </details>
 
 <details>
-<summary>Uncategorized</summary>
+<summary>Kategorilenmemiş</summary>
 
-**Yeni kaydedilen etki** alanları: Son 30 gün içinde yeni kaydedilen ve henüz başka bir kategoriye taşınmamış siteler.
+**Yeni kaydedilen etki alanları**: Son 30 gün içinde yeni kaydedilen ve henüz başka bir kategoriye taşınmamış siteler.
 
-**Park halindeki etki** alanları: İçerikleri yok olan veya daha sonra kullanmak üzere parka alınan siteler.
+**Park edilmiş etki alanları**: İçeriği olmayan veya daha sonra kullanılmak üzere park edilmiş siteler.
   
-**NOT**: Kategorilere kapatılmamış etki alanları yalnızca yeni kayıtlı etki alanlarını ve beklemede olan etki alanlarını içerir ve bu kategorilerin dışındaki tüm diğer siteleri içermemektedir.
+**NOT**: Kategorilere ayrılmamış yalnızca yeni kaydedilen etki alanlarını ve park edilmiş etki alanlarını içerir ve bu kategorilerin dışındaki diğer tüm siteleri içermez.
   
 </details>
 
@@ -161,102 +161,96 @@ Web içeriği filtreleme ilkeleri, hangi site kategorilerinin hangi cihaz grupla
 
 Yeni ilke eklemek için şu adımları izleyin:
 
-1. Web Microsoft 365 Defender <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Web içerik</a> filtreleme **+ İlke ekle Ayarlar** >  >  **yi seçin**.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> **Ayarlar** >  **Web içerik filtreleme** > **+ İlke ekle'yi** seçin.
 
 2. Bir ad belirtin.
 
-3. Engellenecek kategorileri seçin. Her üst kategoriyi tamamen genişletmek ve belirli web içeriği kategorilerini seçmek için genişletme simgesini kullanın.
+3. Engellenmesi gereken kategorileri seçin. Her üst kategoriyi tamamen genişletmek ve belirli web içeriği kategorilerini seçmek için genişlet simgesini kullanın.
 
-4. İlke kapsamını belirtin. İlkenin uygulanacak yeri belirtmek için cihaz gruplarını seçin. Yalnızca seçili cihaz gruplarında yer alan cihazların seçili kategorilerde web sitelerine erişimi engellenebilir.
+4. İlke kapsamını belirtin. İlkenin nereye uygulanacağını belirtmek için cihaz gruplarını seçin. Yalnızca seçili cihaz gruplarındaki cihazların seçilen kategorilerdeki web sitelerine erişmesi engellenir.
 
-5. Özeti gözden geçirme ve ilkeyi kaydetme. İlke yenilemenin seçili cihazlarınıza geçerlik üzere 2 saat kadar sürebilir.
+5. Özeti gözden geçirin ve ilkeyi kaydedin. İlke yenilemesinin seçili cihazlarınıza uygulanması 2 saat kadar sürebilir.
 
 > [!NOTE]
 >
-> - Cihaz grubunda herhangi bir kategori seçmeden ilkeyi dağıtabilirsiniz. Bu eylem, engelleme ilkesi oluşturmadan önce kullanıcı davranışını anlamanıza yardımcı olmak için yalnızca denetim ilkesi oluşturacak.
-> - Aynı anda bir ilkeyi veya cihaz gruplarını değiştiriyorsanız, bu ilke dağıtımının gecikmeye neden olabilir.
-> - "Kategorilere Açık" kategorisinin engellenmesi beklenmedik ve istenmeyen sonuçlara neden olabilir.
+> - Bir cihaz grubunda herhangi bir kategori seçmeden bir ilke dağıtabilirsiniz. Bu eylem, engelleme ilkesi oluşturmadan önce kullanıcı davranışını anlamanıza yardımcı olmak için yalnızca denetim ilkesi oluşturur.
+> - Bir ilkeyi kaldırıyorsanız veya cihaz gruplarını aynı anda değiştiriyorsanız, bu durum ilke dağıtımında gecikmeye neden olabilir.
+> - "Kategorilere Ayrılmamış" kategorisinin engellenmesi beklenmeyen ve istenmeyen sonuçlara yol açabilir.
 
 ## <a name="end-user-experience"></a>Son kullanıcı deneyimi
 
-Üçüncü taraf desteklenen tarayıcılar için engelleme deneyimi Ağ Koruması tarafından sağlanır ve kullanıcıya engellenen bağlantı hakkında bildirim veren sistem düzeyinde bir ileti sağlanır. Daha kullanıcı dostu, tarayıcı deneyimi için bu deneyimi Microsoft Edge.
+Üçüncü taraf tarafından desteklenen tarayıcılar için engelleme deneyimi Ağ Koruması tarafından sağlanır. Bu, kullanıcıya engellenen bir bağlantıyı bildiren sistem düzeyinde bir ileti sağlar. Daha kullanıcı dostu ve tarayıcı içi bir deneyim için Microsoft Edge kullanmayı göz önünde bulundurun.
 
-### <a name="allow-specific-websites"></a>Belirli web sitelerine izin verme
+### <a name="allow-specific-websites"></a>Belirli web sitelerine izin ver
 
-Özel bir gösterge ilkesi oluşturarak tek bir siteye izin vermek için, web içeriği filtrelemesinde engellenen kategoriyi geçersiz kılmak mümkündür. Söz konusu cihaz grubuna uygulanan web içeriği filtreleme ilkesi, özel gösterge ilkesinde yer alır.
+Özel bir gösterge ilkesi oluşturarak tek bir siteye izin vermek için web içeriği filtrelemesinde engellenen kategoriyi geçersiz kılmak mümkündür. Özel gösterge ilkesi, söz konusu cihaz grubuna uygulandığında web içeriği filtreleme ilkesinin yerini alır.
 
 Özel bir gösterge tanımlamak için şu adımları izleyin:
 
-1. Microsoft 365 Defender <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Uç Ayarlar</a> **Url** \> **/** \> Etki Alanı **Öğe** **Ekle'ye** \> \> **gidin**.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalında</a> **Ayarlar** \> **Uç Nokta** \> **Göstergeleri** \> **URL'si/Etki Alanı** \> **Öğe Ekle'ye** gidin.
 
 2. Sitenin etki alanını girin.
 
-3. İlke eyleme İzin **Ver'i ayarlayın**.
+3. İlke eylemini **İzin Ver** olarak ayarlayın.
 
 ### <a name="dispute-categories"></a>İhtilaf kategorileri
 
 Yanlış kategorilere ayrılmış bir etki alanıyla karşılaşırsanız, kategoriye doğrudan portaldan itiraz edebilirsiniz.
 
-Etki alanının kategorisine itiraz etmek için, Raporlar Web  Koruması \> **Web İçeriği** \> **Filtreleme Ayrıntıları Etki Alanları'nın gidin** \> **.** Web İçeriği Filtreleme raporlarının etki alanları sekmesinde, etki alanlarının her biri yanında bir üç nokta görebilirsiniz. Bu üç noktanın üzerine gelin ve İhtilaf **Kategorisi'ne seçin**.
+Bir etki alanının kategorisine itiraz etmek için **Raporlar** \> **Web koruması** \> **Web İçeriği Filtreleme Ayrıntıları** \> **Etki Alanları'na** gidin. Web İçeriği Filtreleme raporlarının etki alanları sekmesinde, etki alanlarının her birinin yanında bir üç nokta görürsünüz. Bu üç noktanın üzerine gelin ve **İtiraz Kategorisi'ne** tıklayın.
 
-Önceliği seçerek ve geri alan için önerilen kategori gibi daha fazla ayrıntı ekleyebilirsiniz. Formu tamamlandıktan sonra Gönder'i **seçin**. Ekibimiz isteği bir iş günü içinde inceler. Hemen engellemeyi kaldırmak için özel bir [izin göstergesi oluşturun](indicator-ip-domain.md).
-
-### <a name="url-category-lookup"></a>URL kategori araması
-
-Web sitesinin kategorisini belirlemek için, Uç Noktalar Araması'nın altındaki Web sitesi portalında (<https://security.microsoft.com>) Microsoft 365 Defender URL **arama işlevini kullanabilirsiniz**\>. URL arama sonuçlarında, web içeriği filtreleme kategorisi **URL/Etki alanı ayrıntıları altında görünür**. Aşağıdaki resimde gösterildiği gibi, yöneticiler doğrudan bu sayfadan etki alanının kategorisine de itiraz edebilirsiniz. Kategori sonucu göster gösterilmezse, URL şu anda var olan bir web içeriği filtreleme kategorisine atanmadı.
-
-:::image type="content" source="../../media/web-content-filtering-category-lookup.png" alt-text="Web içeriği filtreleme kategorisi arama sonuçları" lightbox="../../media/web-content-filtering-category-lookup.png":::
+Önceliği seçebileceğiniz ve yeniden kategorilere ayırmak için önerilen kategori gibi daha fazla ayrıntı ekleyebileceğiniz bir panel açılır. Formu tamamladıktan sonra **Gönder'i** seçin. Ekibimiz bir iş günü içinde isteği gözden geçirecek. Engellemeyi hemen kaldırmak için [özel bir izin verme göstergesi](indicator-ip-domain.md) oluşturun.
 
 ## <a name="web-content-filtering-cards-and-details"></a>Web içeriği filtreleme kartları ve ayrıntıları
 
-Web **içeriği filtreleme** \> **ve web** tehdit koruması hakkında bilgiler olan kartları görüntülemek için Raporlar Web koruması'ı seçin. Aşağıdaki kartlarda, web içeriği filtreleme hakkında özet bilgiler sağlanmaktadır.
+Web içeriği filtreleme ve **web tehdit koruması** hakkındaki bilgileri içeren kartları görüntülemek için **Raporlar** \> Web koruması'na tıklayın. Aşağıdaki kartlar web içeriği filtreleme hakkında özet bilgiler sağlar.
 
 ### <a name="web-activity-by-category"></a>Kategoriye göre web etkinliği
 
-Bu kartta, erişim denemelerinin sayısında en fazla artış veya en az olan üst web içeriği kategorileri liste bulunmaktadır. Son 30 gün, 3 ay veya 6 aydan itibaren, kuruluşta web etkinliği düzenleri içerisinde önemli değişiklikleri anlıyoruz. Daha fazla bilgi görüntülemek için bir kategori adı seçin.
+Bu kart, erişim denemesi sayısındaki en büyük artış veya düşüşe sahip üst web içeriği kategorilerini listeler. Kuruluşunuzda son 30 gün, 3 ay veya 6 aydaki web etkinliği desenlerindeki önemli değişiklikleri anlayın. Daha fazla bilgi görüntülemek için bir kategori adı seçin.
 
-Bu özelliğin kullanımına ilişkin ilk 30 gün içinde, bu bilgileri görüntülemek için yeterli veriniz olmuyor olabilir.
+Bu özelliği kullanmanın ilk 30 gününde, kuruluşunuzda bu bilgileri görüntülemek için yeterli veri olmayabilir.
 
 :::image type="content" source="images/web-activity-by-category600.png" alt-text="Kategori kartına göre web etkinliği" lightbox="images/web-activity-by-category600.png":::
 
 ### <a name="web-content-filtering--summary-card"></a>Web içeriği filtreleme özet kartı
 
-Bu kartta, engellenmiş erişim girişimleri farklı üst web içeriği kategorileri genelinde dağıtıldı. Belirli bir üst web kategorisi hakkında daha fazla bilgi görüntülemek için renkli çubuklardan birini seçin.
+Bu kart, engellenen erişim denemelerinin farklı üst web içeriği kategorileri arasında dağılımını görüntüler. Belirli bir üst web kategorisi hakkında daha fazla bilgi görüntülemek için renkli çubuklardan birini seçin.
 
 :::image type="content" source="images/web-content-filtering-summary.png" alt-text="Web içeriği filtreleme özet kartı" lightbox="images/web-content-filtering-summary.png":::
 
 ### <a name="web-activity-summary-card"></a>Web etkinliği özet kartı
 
-Bu kart, tüm URL'lerde web içeriği isteklerinin toplam sayısını görüntüler.
+Bu kart, tüm URL'lerdeki web içeriği için toplam istek sayısını görüntüler.
 
 :::image type="content" source="images/web-activity-summary.png" alt-text="Web etkinliği özet kartı" lightbox="images/web-activity-summary.png":::
 
 ### <a name="view-card-details"></a>Kart ayrıntılarını görüntüleme
 
-Kartta yer **alan grafikten** bir tablo satırı veya renkli çubuk seçerek her kartın Rapor ayrıntılarına erişebilirsiniz. Her kartın rapor ayrıntıları sayfası web içeriği kategorileri, web sitesi etki alanları ve cihaz grupları hakkında kapsamlı istatistiksel veriler içerir.
+Karttaki grafikten bir tablo satırı veya renkli çubuk seçerek her kartın **Rapor ayrıntılarına** erişebilirsiniz. Her kartın rapor ayrıntıları sayfası web içeriği kategorileri, web sitesi etki alanları ve cihaz grupları hakkında kapsamlı istatistiksel veriler içerir.
 
 :::image type="content" source="images/web-protection-report-details.png" alt-text="Web koruma raporu ayrıntıları" lightbox="images/web-protection-report-details.png":::
 
-- **Web kategorileri**: Kurumda erişim denemelerine sahip olan web içeriği kategorilerini listeler. Özet açılır öğesini açmak için belirli bir kategori seçin.
+- **Web kategorileri**: Kuruluşunuzda erişim denemeleri olan web içeriği kategorilerini listeler. Özet açılır listesini açmak için belirli bir kategoriyi seçin.
 
-- **Etki** alanları: Kurumda erişilen veya engellenen web etki alanlarını listeler. Belirli bir etki alanıyla ilgili ayrıntılı bilgileri görüntülemek için o etki alanını seçin.
+- **Etki alanları**: Kuruluşunuzda erişilen veya engellenen web etki alanlarını listeler. Bu etki alanıyla ilgili ayrıntılı bilgileri görüntülemek için belirli bir etki alanını seçin.
 
-- **Cihaz grupları**: Kurumda web etkinliği oluşturan tüm cihaz gruplarını listeler
+- **Cihaz grupları**: Kuruluşunuzda web etkinliği oluşturan tüm cihaz gruplarını listeler
 
-Bir zaman aralığı seçmek için sayfanın sol üst kısmında yer alan zaman aralığı filtresini kullanın. Bilgileri filtrenin yanı sıra sütunları özelleştirebilirsiniz. Seçili öğe hakkında daha fazla bilgi de olan açılır pencereyi açmak için bir satır seçin.
+Zaman aralığı seçmek için sayfanın sol üst kısmındaki zaman aralığı filtresini kullanın. Ayrıca bilgileri filtreleyebilir veya sütunları özelleştirebilirsiniz. Seçili öğe hakkında daha fazla bilgi içeren bir açılır pencere bölmesi açmak için bir satır seçin.
 
 ### <a name="known-issues-and-limitations"></a>Bilinen sorunlar ve sınırlamalar
 
-Yalnızca Microsoft Edge OS yapılandırması Sunucu (**cmd** \> **SystemInfo** \> **OS Yapılandırması) ise yalnızca bu yapılandırmayı destekler**. Ağ Koruması yalnızca, desteklenen üçüncü taraf tarayıcılarda trafiğin güvenliğini sağlamaktan sorumlu olan Sunucu cihazlarında Denetleme modunda desteklenir.
+Yalnızca cihazınızın işletim sistemi yapılandırması Sunucu (**cmd** \> **Systeminfo** \> **İşletim Sistemi Yapılandırması**) ise Microsoft Edge desteklenir. Ağ Koruması yalnızca Desteklenen üçüncü taraf tarayıcılarda trafiğin güvenliğini sağlamakla sorumlu olan Sunucu cihazlarında İnceleme modunda desteklenir.
 
-Yalnızca Microsoft Edge desteği vardır ve Azure Sanal Masaüstü çoklu oturum Windows 10 ağ üzerinde Ağ Koruması desteklanmaz.
+Azure Sanal Masaüstü çok oturumlu konaklarında yalnızca Microsoft Edge desteklenir ve Ağ Koruması Windows 10 desteklenmez.
 
-Ağ Koruması şu anda SSL incelemesini desteklememektedir ve bunun sonucunda web sitelerine Web İçeriği Filtreleme tarafından izin verilen ve normalde engellenmiş olabilir. TLS el sıkışması gerçekleştikten sonra şifrelenmiş trafikte görünürlüğün olmamasından ve bazı yönlendirmelerin ayrıştırılama kabiliyetinden dolayı sitelere izin verilmeyecektir.  Bu, bazı web tabanlı posta oturum açma sayfalarından posta kutusu sayfasına yeniden yönlendirmeleri içerir. Kabul edilen geçici çözüm olarak, kullanıcıların siteye erişe olduğundan emin olmak için oturum açma sayfası için özel bir engelleme göstergesi oluşturabilirsiniz. Bu, onların aynı web sitesiyle ilişkilendirilmiş diğer hizmetlere erişimini engell olabilir. 
+Ağ Koruması şu anda SSL incelemesini desteklememektedir ve bu da normalde engellenecek bazı sitelerin Web İçeriği Filtrelemesi tarafından izin vermesine neden olabilir. TLS el sıkışması gerçekleştikten ve belirli yeniden yönlendirmelerin ayrıştırılamamasından sonra şifrelenmiş trafiğin görünür olmaması nedeniyle sitelere izin verilir.  Bu, bazı web tabanlı posta oturum açma sayfalarından posta kutusu sayfasına yeniden yönlendirmeleri içerir. Kabul edilen bir geçici çözüm olarak, hiçbir kullanıcının siteye erişemediğinden emin olmak için oturum açma sayfası için özel bir blok göstergesi oluşturabilirsiniz. Bunun aynı web sitesiyle ilişkili diğer hizmetlere erişimini engelleyebileceğini unutmayın. 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Web korumasına genel bakış](web-protection-overview.md)
 - [Web tehdit koruması](web-threat-protection.md)
-- [Web güvenliğini izleme](web-protection-monitoring.md)
-- [Web tehditlerine yanıt verme](web-protection-response.md)
+- [Web güvenliğini izleyin](web-protection-monitoring.md)
+- [Web tehditlerine yanıt verin](web-protection-response.md)
 - [Ağ Koruması gereksinimleri](web-content-filtering.md)

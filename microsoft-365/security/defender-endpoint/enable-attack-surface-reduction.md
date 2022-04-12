@@ -19,12 +19,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.date: 1/18/2022
-ms.openlocfilehash: f8f6865bc65662cbbfd5a9276d95abc405f5a64b
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: dfe5567edbe86279ad5a5b0645cb3ea6c54c1174
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664248"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64783619"
 ---
 # <a name="enable-attack-surface-reduction-rules"></a>Saldırı yüzeyi azaltma kurallarını etkinleştirme
 
@@ -54,7 +54,7 @@ aşağıdaki Windows sürümlerinden herhangi birini çalıştıran cihazlar iç
 
 Saldırı yüzeyi azaltma kurallarının özellik kümesinin tamamını kullanmak için şunları yapmanız gerekir:
 
-- birincil AV olarak Windows Defender Virüsten Koruma (gerçek zamanlı koruma açık)
+- birincil AV olarak Windows Defenderin virustentorjunta (gerçek zamanlı koruma açık)
 - [Üzerinde Bulut Teslim Koruması](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) (bazı kurallar bunu gerektirir)
 - E5 veya E3 Lisansını Windows 10 Enterprise
 
@@ -70,7 +70,7 @@ Her ASR kuralı dört ayardan birini içerir:
 > [!IMPORTANT]
 > Şu anda, Microsoft Endpoint Manager'de (MEM) ASR kurallarını yapılandırırken uyarı modu üç ASR kuralı için desteklenmemektedir. Daha fazla bilgi edinmek için bkz. [Uyarı modunun desteklenmediği durumlar](attack-surface-reduction.md#cases-where-warn-mode-is-not-supported).
 
-Uç Nokta için Microsoft Defender 'de (Uç Nokta için Defender) sağlanan gelişmiş izleme ve raporlama özelliklerinden yararlanmak için ASR kurallarını [Windows](microsoft-defender-endpoint.md) E5 lisansıyla (veya benzer lisanslama SKU'su) kullanmanızı öneririz. Ancak, gelişmiş izleme ve raporlama özellikleri içermeyen Windows Professional veya Windows E3 gibi başka bir lisansınız varsa, ASR kuralları tetiklendiğinde her uç noktada oluşturulan olayların üzerine kendi izleme ve raporlama araçlarınızı geliştirebilirsiniz (örneğin, Olay İletme).
+Pertahanan Microsoft untuk Titik Akhir 'de (Uç Nokta için Defender) sağlanan gelişmiş izleme ve raporlama özelliklerinden yararlanmak için ASR kurallarını [Windows](microsoft-defender-endpoint.md) E5 lisansıyla (veya benzer lisanslama SKU'su) kullanmanızı öneririz. Ancak, gelişmiş izleme ve raporlama özellikleri içermeyen Windows Professional veya Windows E3 gibi başka bir lisansınız varsa, ASR kuralları tetiklendiğinde her uç noktada oluşturulan olayların üzerine kendi izleme ve raporlama araçlarınızı geliştirebilirsiniz (örneğin, Olay İletme).
 
 > [!TIP]
 > Windows lisanslama hakkında daha fazla bilgi edinmek için bkz[. lisanslama Windows 10](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5) ve [Windows 10 için Toplu Lisanslama kılavuzunu](https://download.microsoft.com/download/2/D/1/2D14FE17-66C2-4D4C-AF73-E122930B60F6/Windows-10-Volume-Licensing-Guide.pdf) edinin.
@@ -93,7 +93,7 @@ Ayrıca, belirtilen Uç Nokta için Defender dosya ve sertifika göstergelerine 
 
 > [!IMPORTANT]
 > Dosya veya klasörlerin dışlanması ASR kuralları tarafından sağlanan korumayı ciddi ölçüde azaltabilir. Dışlanan dosyaların çalıştırılmasına izin verilir ve hiçbir rapor veya olay kaydedilmez.
-> ASR kuralları algılanmaması gerektiğini inandığınız dosyaları algılarsa, [kuralı test etmek için önce denetim modunu kullanmanız](evaluate-attack-surface-reduction.md) gerekir.
+> ASR kuralları algılanmaması gerektiğini inandığınız dosyaları algılarsa, [kuralı test etmek için önce denetim modunu kullanmanız](attack-surface-reduction-rules-deployment-test.md#step-1-test-asr-rules-using-audit) gerekir.
 
 Tek tek dosyaları veya klasörleri (klasör yollarını veya tam kaynak adlarını kullanarak) belirtebilirsiniz, ancak dışlamaların hangi kurallara uygulanacağını belirtemezsiniz. Dışlama yalnızca dışlanan uygulama veya hizmet başlatıldığında uygulanır. Örneğin, zaten çalışmakta olan bir güncelleştirme hizmeti için bir dışlama eklerseniz, hizmet durdurulup yeniden başlatılana kadar güncelleştirme hizmeti olayları tetiklemeye devam eder.
 

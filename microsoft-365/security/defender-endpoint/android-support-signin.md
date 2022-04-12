@@ -1,7 +1,7 @@
 ---
-title: Android'de Uç Nokta için Microsoft Defender sorunlarını giderme
-description: Android'de Uç Nokta için Microsoft Defender sorunlarını giderme
-keywords: microsoft, defender, Uç Nokta için Microsoft Defender, mde, android, bulut, bağlantı, iletişim
+title: Android'de Pertahanan Microsoft untuk Titik Akhir sorunlarını giderme
+description: Android'de Pertahanan Microsoft untuk Titik Akhir sorunlarını giderme
+keywords: microsoft, defender, Pertahanan Microsoft untuk Titik Akhir, mde, android, bulut, bağlantı, iletişim
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,23 +15,23 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 3103ab5332045da58609b048d637da30d287ed10
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 0a6f53b0723d7f3e9b4761aa83238e618d947e55
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666580"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64783435"
 ---
-# <a name="troubleshooting-issues-on-microsoft-defender-for-endpoint-on-android"></a>Android'de Uç Nokta için Microsoft Defender sorunlarını giderme
+# <a name="troubleshooting-issues-on-microsoft-defender-for-endpoint-on-android"></a>Android'de Pertahanan Microsoft untuk Titik Akhir sorunlarını giderme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Şunlar için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Pertahanan Microsoft untuk Titik Akhir mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Bir cihazı eklerken, uygulama yüklendikten sonra oturum açma sorunları görebilirsiniz.
 
@@ -67,7 +67,7 @@ Google Play Store'dan en son sürümü ve [Microsoft Authenticator](https://play
 
 **Neden:**
 
-Atanmış Microsoft 365 lisansınız veya kuruluşunuzun Microsoft 365 Kurumsal aboneliği lisansı yok.
+Atanmış Microsoft 365 lisansınız veya kuruluşunuzun Microsoft 365 Enterprise aboneliği lisansı yok.
 
 **Çözüm:**
 
@@ -134,34 +134,35 @@ Kullanıcılar, cihaz ayarlarından aynı izinleri etkinleştirmek için şu ad�
 
    :::image type="content" source="images/show-all-apps-1.png" alt-text="Pil Optimizasyonu bölmesinin altında Tüm Uygulamalar seçeneğini gösteren açılan menü" lightbox="images/show-all-apps-1.png":::
 
-5. "Uç Nokta için Microsoft Defender" öğesini bulun ve **İyileştirme'yi** seçin.
+5. "Pertahanan Microsoft untuk Titik Akhir" öğesini bulun ve **İyileştirme'yi** seçin.
 
-   :::image type="content" source="images/select-dont-optimise.png" alt-text="Seçeneğin konumunu etkinleştiren sayfa Uç Nokta için Microsoft Defender ve İyileştirme" lightbox="images/select-dont-optimise.png":::
+   :::image type="content" source="images/select-dont-optimise.png" alt-text="Pertahanan Microsoft untuk Titik Akhir seçeneğinin konumunu ve İyileştirme seçeneğini etkinleştiren sayfa" lightbox="images/select-dont-optimise.png":::
 
-Uç Nokta için Microsoft Defender ekleme ekranına dönün, **İzin Ver'i** seçin; pano ekranına yönlendirilirsiniz.
+Pertahanan Microsoft untuk Titik Akhir ekleme ekranına dönün, **İzin Ver'i** seçin; pano ekranına yönlendirilirsiniz.
 
 ## <a name="send-in-app-feedback"></a>Uygulama içi geri bildirim gönderme
 
 Bir kullanıcı yukarıdaki bölümlerde henüz ele alınmamış bir sorunla karşılaşıyorsa veya listelenen adımları kullanarak çözülemiyorsa, kullanıcı **tanılama verileriyle** birlikte **uygulama içi geri bildirim** sağlayabilir. Ekibimiz daha sonra doğru çözümü sağlamak için günlükleri araştırabilir. Kullanıcılar aynı işlemi yapmak için aşağıdaki adımları izleyebilir:
 
-1.  Cihazınızda **MDE uygulamasını** açın ve sol üst köşedeki **profil simgesine** tıklayın.
+1. Cihazınızda **MDE uygulamasını** açın ve sol üst köşedeki **profil simgesine** tıklayın.
 
-    :::image type="content" source="images/select-profile-icon-1.jpg" alt-text="Uç Nokta için Microsoft Defender portalındaki profil simgesi" lightbox="images/select-profile-icon-1.jpg":::
+    :::image type="content" source="images/select-profile-icon-1.jpg" alt-text="Pertahanan Microsoft untuk Titik Akhir portalındaki profil simgesi" lightbox="images/select-profile-icon-1.jpg":::
 
-2.  "Geri bildirim & yardım" öğesini seçin.
+2. "Geri bildirim & yardım" öğesini seçin.
 
-    :::image type="content" source="images/selecthelpandfeedback2.png" alt-text="Uç Nokta için Microsoft Defender portalında seçilebilen Yardım & geri bildirim seçeneği" lightbox="images/selecthelpandfeedback2.png":::
+    :::image type="content" source="images/selecthelpandfeedback2.png" alt-text="Pertahanan Microsoft untuk Titik Akhir portalında seçilebilen Yardım & geri bildirim seçeneği" lightbox="images/selecthelpandfeedback2.png":::
 
-3.  "Microsoft'a geri bildirim gönder" seçeneğini belirleyin.
+3. "Microsoft'a geri bildirim gönder" seçeneğini belirleyin.
 
     :::image type="content" alt-text="Microsoft'a geri bildirim gönder'i seçin" source="images/send-feedback-to-microsoft-3.jpg":::
 
-4.  Verilen seçenekler arasından seçim yapın. Bir sorunu bildirmek için "Sorun bildirmek istiyorum" seçeneğini belirleyin.
+4. Verilen seçenekler arasından seçim yapın. Bir sorunu bildirmek için "Sorun bildirmek istiyorum" seçeneğini belirleyin.
 
     :::image type="content" source="images/report-issue-4.jpg" alt-text="Sorun bildirmek istiyorum seçeneği" lightbox="images/report-issue-4.jpg":::
 
-5.  Karşılaştığınız sorunun ayrıntılarını sağlayın ve "Tanılama verilerini gönder" seçeneğini işaretleyin. Ekibin size bir çözüm veya takip ile ulaşabilmesi için "E-posta adresinizi ekleyin" seçeneğini denetlemenizi öneririz.
+5. Karşılaştığınız sorunun ayrıntılarını sağlayın ve "Tanılama verilerini gönder" seçeneğini işaretleyin. Ekibin size bir çözüm veya takip ile ulaşabilmesi için "E-posta adresinizi ekleyin" seçeneğini denetlemenizi öneririz.
 
     :::image type="content" source="images/finalsubmit5.png" alt-text="Ayrıntılar ekleyebileceğiniz ve tanılama verileri ekleyebileceğiniz bölme" lightbox="images/finalsubmit5.png":::
 
-6.  Geri bildirimi başarıyla göndermek için "Gönder"e tıklayın.
+6. Geri bildirimi başarıyla göndermek için "Gönder"e tıklayın.
+

@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft 365 Raporlarından Microsoft Teams uygulama kullanım raporunu alarak kuruluşunuzda kullanılan Microsoft Teams uygulamaları hakkında içgörüler elde edin.
-ms.openlocfilehash: 158c96772a79d6fb3a4b37f9593087661ea88070
-ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
+ms.openlocfilehash: de12133d16cd2b53140ccf2fafafc76abc064776
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64738340"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64781785"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-device-usage"></a>Yönetim merkezinde raporları Microsoft 365 - cihaz kullanımını Microsoft Teams
 

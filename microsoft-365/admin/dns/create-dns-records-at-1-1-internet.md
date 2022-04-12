@@ -1,5 +1,5 @@
 ---
-title: Bağlan IONOS'ta DNS kayıtlarınızı 1'den&'e kadar Microsoft 365
+title: DNS kayıtlarınızı IONOS'ta 1&1 ile Microsoft 365 Bağlan
 f1.keywords:
 - CSH
 ms.author: efrene
@@ -21,329 +21,337 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 5762c3ca-1de2-4999-bfe5-4c5e25a8957e
-description: Microsoft için 1&1 IONOS'ta etki alanlarınızı doğrulamayı ve e-posta, Skype Kurumsal Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
-ms.openlocfilehash: 54e18972fe2d5e2ccd8c3ab266b20241e67f68a9
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft için 1&1 IONOS adresinden etki alanınızı doğrulamayı ve e-posta, Skype for Business Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
+ms.openlocfilehash: 8afdfed0998a262b1df4c95a63e9086e4f71e5b6
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63313615"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64780687"
 ---
-# <a name="connect-your-dns-records-at-ionos-by-11-to-microsoft-365"></a>Bağlan IONOS'ta DNS kayıtlarınızı 1'den&'e kadar Microsoft 365
+# <a name="connect-your-dns-records-at-ionos-by-11-to-microsoft-365"></a>DNS kayıtlarınızı IONOS'ta 1&1 ile Microsoft 365 Bağlan
 
- Aradığınızı bulamazsanız, **[Etki Alanları SSS sayfasını inceleyin](../setup/domains-faq.yml)**. 
+ Aradığınızı bulamazsanız, **[Etki Alanları SSS sayfasını inceleyin](../setup/domains-faq.yml)**.
 
-DNS barındırma sağlayıcınız IONOS 1&1 ise, bu makaledeki adımları kullanarak etki alanlarınızı doğrulayın ve e-posta, Skype Kurumsal Online, gibi dns kayıtlarını ayarlayın.
+DNS barındırma sağlayıcınız 1&1 olan IONOS ise, etki alanınızı doğrulamak ve e-posta, Skype for Business Online vb. için DNS kayıtlarını ayarlamak için bu makaledeki adımları izleyin.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Etki alanınız için DNS kayıtlarını ayarlarken iki seçeneğiniz vardır:
+Etki alanınız için DNS kayıtlarını ayarlamak için iki seçeneğiniz vardır:
 
-- [**Etki Alanı Bağlan**](#use-domain-connect-to-verify-and-set-up-your-domain) Etki alanını başka bir e-posta hizmeti sağlayıcısıyla ayarlamadısanız, yeni etki alanınızı otomatik olarak doğrulamak ve yeni etki alanıyla birlikte kullanmak üzere ayarlamak için Etki alanı Bağlan adımlarını Microsoft 365. 
+- [**Etki Alanı Bağlan'ni kullanma**](#use-domain-connect-to-verify-and-set-up-your-domain) Etki alanınızı başka bir e-posta hizmeti sağlayıcısıyla ayarlamadıysanız, etki alanı Bağlan adımlarını kullanarak yeni etki alanınızı otomatik olarak doğrulayın ve Microsoft 365 ile kullanılacak şekilde ayarlayın.
 
     VEYA
 
-- [**El ile adımları kullanma**](#create-dns-records-with-manual-setup) Aşağıdaki el ile adımları kullanarak etki alanınızı doğrulayın ve etki alanı kayıt şirketine eklemek istediğiniz kayıtların ne zaman ve hangi kayıtları seçeceklerini seçin. Bu sayede, örneğin size uygun bir şekilde yeni MX (posta) kayıtları ayarlanır. 
+- [**El ile uygulanan adımları kullanma**](#create-dns-records-with-manual-setup) Aşağıdaki el ile uygulanan adımları kullanarak etki alanınızı doğrulayın ve etki alanı kayıt şirketinize ne zaman ve hangi kayıtların ekleneceğini seçin. Bu, yeni MX (posta) kayıtlarını( örneğin, uygun zamanda) ayarlamanıza olanak tanır.
 
-## <a name="use-domain-connect-to-verify-and-set-up-your-domain"></a>Etki Bağlan doğrulamak ve ayarlamak için Etki Alanı Yöneticisi'ne
+## <a name="use-domain-connect-to-verify-and-set-up-your-domain"></a>Etki alanınızı doğrulamak ve ayarlamak için Etki Alanı Bağlan kullanma
 
-IONOS'larınızı 1 ile 1 veya 1 etki alanıyla otomatik olarak doğrulamak&için bu Microsoft 365:
+IONOS'unuzu Microsoft 365 ile 1&1 etki alanına göre otomatik olarak doğrulamak ve ayarlamak için şu adımları izleyin:
 
-1. Etki Microsoft 365 yönetim merkezi Etki **Ayarlar** >  seçin ve ardından ayarlamak istediğiniz etki alanını seçin.<a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank"></a>
+1. Microsoft 365 yönetim merkezi **Ayarlar** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki alanları'nı**</a> seçin ve ayarlamak istediğiniz etki alanını seçin.
 
-    :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-1.png" alt-text="Bu listeden etki Microsoft 365.":::
+    :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-1.png" alt-text="Microsoft 365'de etki alanınızı seçin.":::
 
-1. Üç noktayı (diğer eylemler) seçin ve **>'ı seçin**.
+1. Üç noktayı (diğer eylemler) seçin > **Kurulumu başlat'ı** seçin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-2.png" alt-text="Kurulumu başlat'ı seçin.":::
 
-1. Etki alanınızı nasıl bağlamak istiyor musunuz? sayfasında **Devam'ı seçin**.   
+1. Etki alanınızı nasıl bağlamak istiyorsunuz? sayfasında **Devam'ı** seçin.
 
-1. DNS kayıtları ekle sayfasında DNS kayıtları **ekle'yi seçin**.
+1. DNS kayıtları ekle sayfasında **DNS kayıtları ekle'yi** seçin.
 
-1. IONOS'a göre 1&1 oturum açma sayfasında, hesabınızla oturum açın, Oturum **Aç'Bağlan ve İzin Ver'i** **seçin**.
+1. IONOS by 1&1 oturum açma sayfasında hesabınızda oturum açın ve **Bağlan** ve **İzin Ver'i** seçin.
 
-    :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-3.png" alt-text="Seç'Bağlan sonra da İzin Ver'i seçin.":::
+    :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-3.png" alt-text="Bağlan ve ardından İzin Ver'i seçin.":::
 
-    Bu, e-posta için etki alanı Microsoft 365. 
+    Bu, Microsoft 365 için etki alanı kurulumunuzu tamamlar.
 
-## <a name="create-dns-records-with-manual-setup"></a>El ile kurulumla DNS kayıtları oluşturma
+## <a name="create-dns-records-with-manual-setup"></a>El ile kurulum ile DNS kayıtları oluşturma
 
-IONOS'a 1 veya 1&bu kayıtları ekledikten sonra, etki alanınız etki alanınız Microsoft hizmetleri.
-  
+IONOS'ta 1&1'e kadar bu kayıtları ekledikten sonra, etki alanınız Microsoft hizmetleri ile çalışacak şekilde ayarlanır.
+
 > [!CAUTION]
-> 1 veya 1 ile IONOS&1 etki alanının hem MX kaydı hem de en üst düzey Otomatik Bulma CNAME kaydının olmasına izin vermemektedir. Bu, Microsoft için e-postayı yapılandırma Exchange Online sınırlar. Bu sorunun geçici bir çözümü vardır, ancak bu çözümü yalnızca  IONOS'ta 1 veya 1 adede kadar alt etki alanı oluşturma deneyimi&öneririz.
-> Bu hizmet sınırlamasına rağmen IONOS'ta kendi Microsoft DNS kayıtlarınızı 1&1 olarak yönetmeyi seçerseniz, bu makaledeki adımları izleyin ve etki alanını doğrulayın ve e-posta, Skype Kurumsal Online, gibi DNS kayıtlarını ayarlayın.[](../setup/domains-faq.yml)
-  
+> IONOS'un 1&1'e kadar bir etki alanının hem MX kaydına hem de en üst düzey Autodiscover CNAME kaydına sahip olmasına izin vermediğini unutmayın. Bu, Microsoft için Exchange Online yapılandırma yöntemlerinizi sınırlar. Geçici bir çözüm vardır, ancak **yalnızca** IONOS'ta 1&1'e kadar alt etki alanları oluşturma deneyimine sahipseniz kullanmanızı öneririz.
+> Bu [hizmet sınırlamasına](../setup/domains-faq.yml) rağmen IONOS'ta kendi Microsoft DNS kayıtlarınızı 1&1'e kadar yönetmeyi seçerseniz, bu makaledeki adımları izleyerek etki alanınızı doğrulayın ve e-posta, Skype for Business Online vb. için DNS kayıtlarını ayarlayın.
+
 > [!NOTE]
-> Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışı sorunlarıyla veya başka sorunlar ile ilgili sorunlar için bkz. Etki alanınızı veya DNS kayıtlarınızı ekledikten sonra [sorunları bulma ve düzeltme](../get-help-with-domains/find-and-fix-issues.md).
-  
+> Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışıyla veya diğer sorunlarla karşılaşıyorsanız, bkz. [Etki alanınızı veya DNS kayıtlarınızı ekledikten sonra sorunları bulma ve düzeltme](../get-help-with-domains/find-and-fix-issues.md).
+
 ### <a name="add-a-txt-record-for-verification"></a>Doğrulama için bir TXT kaydı ekleme
 
-Etki alanınızı Microsoft ile kullanmadan önce bu etki alanına sahip olduğundan emin olarız. Etki alanı kayıt şirketinizin hesabında oturum açabilme ve DNS kaydı oluşturabilme özelliği, Microsoft'a etki alanının sahibi olduğunu kanıtlar.
-  
+Etki alanınızı Microsoft ile kullanmadan önce, etki alanına sahip olduğunuzdan emin olmamız gerekir. Etki alanı kayıt şirketinizde hesabınızda oturum açıp DNS kaydını oluşturabilmek, Microsoft'a etki alanının sahibi olduğunuzu kanıtlar.
+
 > [!NOTE]
 > Bu kayıt yalnızca etki alanının sahibi olduğunuzu doğrulamak için kullanılır; başka hiçbir şeyi etkilemez. Dilerseniz bu kaydı daha sonra silebilirsiniz.
-  
-1. Kullanmaya devam etmek için bu bağlantıyı kullanarak IONOS'ta 1&1'de etki [alanları sayfanıza gidin](https://my.1and1.com/). Oturum açmanız istenir.
 
-1. **Menü'yü** seçin ve ardından Etki Alanları ve **SSL'yi seçin**.
-  
+1. Başlamak için [bu bağlantıyı](https://my.1and1.com/) kullanarak IONOS by 1&1'deki etki alanları sayfanıza gidin. Oturum açmanız istenir.
+
+1. **Menü'yü** ve ardından **Etki Alanları ve SSL'yi** seçin.
+
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-1.png" alt-text="Etki Alanları ve SSL'yi seçin.":::
-  
-1. Güncelleştirmek **istediğiniz** etki alanına yönelik Eylemler'in altında, dişli denetimine ve sonra **DNS'e seçin**.
+
+1. Güncelleştirmek istediğiniz etki alanı için **eylemler'in** altında dişli denetimini ve ardından **DNS'yi** seçin.
 
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-2.png" alt-text="Açılan listeden DNS'yi seçin.":::
 
-1. Kayıt **ekle'yi seçin**.
+1. **Kayıt ekle'yi** seçin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-domains-3.png" alt-text="Kayıt ekle'yi seçin.":::
 
-1. **TXT bölümünü** seçin.
+1. **TXT** bölümünü seçin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-domains-4.png" alt-text="TXT bölümünü seçin.":::
 
-1. DNS kaydı ekle sayfasında, yeni kayıt kutularına aşağıdaki tabloda yer alan değerleri yazın ya da bu tablodan kopyalayıp yapıştırın.
+1. DNS kaydı ekle sayfasında, yeni kayıt kutularına aşağıdaki tabloda yer alan değerleri yazın veya kopyalayıp yapıştırın.
 
-    |**Ana bilgisayar adı** <br/> |**Değer** <br/> | **TTL**
-    |:-----|:-----|:-----|
-    |(Bu alanı boş bırakın)  <br/> |MS=ms *XXXXXXXX*  <br/> NOT: Bu bir örnektir. Tablodan **, belirli Hedef veya Adres Noktaları** değerinizi burada kullanın. [Bunu nasıl bulabilirim?](../get-help-with-domains/information-for-dns-records.md)          | 1 saat |
+    |Ana bilgisayar adı|Değer|TTL|
+    |---|---|---|
+    |(Bu alanı boş bırakın)|MS=ms *XXXXXXXX*  <br/> NOT: Bu bir örnektir. Burada, tablodan belirli **Hedef veya İşaret Edilen Adres** değerinizi kullanın. [Bunu nasıl bulabilirim?](../get-help-with-domains/information-for-dns-records.md)|1 saat|
 
 1. **Kaydet**'i seçin.
-  
+
     :::image type="content" source="../../media/dns-IONOS/IONOS-domains-5.png" alt-text="Kaydet'i seçin.":::
-  
+
     Yeni oluşturduğunuz kaydın İnternet genelinde güncelleştirilebilmesi için devam etmeden önce birkaç dakika bekleyin.
 
-Kaydı etki alanı kayıt şirketinizin sitesinde eklediknize göre, Microsoft 365'e geri dönüp kaydın Microsoft 365 için istekte bulundurabilirsiniz. Microsoft doğru TXT kaydını bulduğunda, etki alanınız doğrulanır.
+Artık kaydı etki alanı kayıt şirketinizin sitesine eklediğinize göre, Microsoft 365 geri dönüp kaydı aramak için Microsoft 365 istemeniz gerekir. Microsoft doğru TXT kaydını bulduğunda etki alanınız doğrulanır.
 
-Bir dosyada kaydı Microsoft 365:
-  
-1. Yönetim merkezinde Etki Alanları'nın **Ayarlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**gidin**</a>.
+Microsoft 365 kaydı doğrulamak için:
 
-1. Etki Alanları sayfasında, doğrulamakta olduğunuz etki alanını seçin ve sonra da Kurulumu **başlat'ı seçin**.
+1. Yönetim merkezinde **Ayarlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki Alanları'na**</a> gidin.
+
+1. Etki Alanları sayfasında, doğrulamakta olduğunuz etki alanını seçin ve **kurulumu başlat'ı** seçin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-2.png" alt-text="Kurulumu başlat'ı seçin.":::
 
-1. **Devam'ı seçin**.
-  
-1. Etki alanını **doğrulama sayfasında** Doğrula'ya **tıklayın**.
+1. **Devam'ı** seçin.
+
+1. **Etki alanını doğrula** sayfasında **Doğrula'yı** seçin.
 
 > [!NOTE]
 > Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışı sorunlarıyla veya başka sorunlarla karşılaşırsanız, [Etki alanı adınızı veya DNS kayıtlarınızı değiştirdikten sonra sorunları giderme](../get-help-with-domains/find-and-fix-issues.md) konusuna bakın.
-  
-### <a name="add-an-mx-record-so-email-for-your-domain-will-come-to-microsoft"></a>Etki alanınıza gelen e-postanın Microsoft'a göndernsin için MX kaydı ekleme
-  
+
+### <a name="add-an-mx-record-so-email-for-your-domain-will-come-to-microsoft"></a>Etki alanınız için e-postanın Microsoft'a gelmesi için bir MX kaydı ekleyin
+
 > [!NOTE]
-> Kayıtlı kullanıcınız varsa burada 1und1.de [oturum açma](https://go.microsoft.com/fwlink/?linkid=859152). 
+> 1und1.de kaydoldıysanız [burada oturum açın](https://go.microsoft.com/fwlink/?linkid=859152).
 
-1. Kullanmaya devam etmek için bu bağlantıyı kullanarak IONOS'ta 1&1'de etki [alanları sayfanıza gidin](https://my.1and1.com/). Oturum açmanız istenir.
+1. Başlamak için [bu bağlantıyı](https://my.1and1.com/) kullanarak IONOS by 1&1'deki etki alanları sayfanıza gidin. Oturum açmanız istenir.
 
-1. **Menü'yü** seçin ve ardından Etki Alanları ve **SSL'yi seçin**.
-  
+1. **Menü'yü** ve ardından **Etki Alanları ve SSL'yi** seçin.
+
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-1.png" alt-text="Etki Alanları ve SSL'yi seçin.":::
-  
-1. Güncelleştirmek **istediğiniz** etki alanına yönelik Eylemler'in altında, dişli denetimine ve sonra **DNS'e seçin**.
+
+1. Güncelleştirmek istediğiniz etki alanı için **eylemler'in** altında dişli denetimini ve ardından **DNS'yi** seçin.
 
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-2.png" alt-text="Açılan listeden DNS'yi seçin.":::
 
-1. Kayıt **ekle'yi seçin**.
+1. **Kayıt ekle'yi** seçin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-domains-3.png" alt-text="Kayıt ekle'yi seçin.":::
 
-1. **MX bölümünü** seçin.
+1. **MX** bölümünü seçin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-domains-MX.png" alt-text="MX bölümünü seçin.":::
-  
-1. DNS kaydı ekle sayfasında, yeni kayıt kutularına aşağıdaki tabloda yer alan değerleri yazın ya da bu tablodan kopyalayıp yapıştırın.
 
-    | **Ana bilgisayar adı**| **Yönlendirme** |**Öncelik**| **TTL** |
-    |:-----|:-----|:-----| :-----|
-    |  @  | *\<domain-key\>*  .mail.protection.outlook.com  <br/>  NOT: Microsoft hesabınızla \<domain-key\> oturum açın. [How do I find this?](../get-help-with-domains/information-for-dns-records.md)          |10  <br/> Öncelik hakkında daha fazla bilgi için bkz. [MX önceliği nedir?](../setup/domains-faq.yml) | 1 saat |
-  
+1. DNS kaydı ekle sayfasında, yeni kayıt kutularına aşağıdaki tabloda yer alan değerleri yazın veya kopyalayıp yapıştırın.
+
+    |Ana bilgisayar adı|İşaret edilen|Öncelik|TTL|
+    |---|---|---|---|
+    |@|*\<domain-key\>*.mail.protection.outlook.com  <br/>  NOT: Microsoft hesabınızdan alın \<domain-key\> . [How do I find this?](../get-help-with-domains/information-for-dns-records.md)|10  <br/> Öncelik hakkında daha fazla bilgi için bkz. [MX önceliği nedir?](../setup/domains-faq.yml)|1 saat|
+
 1. **Kaydet**'i seçin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-domains-MX-Save.png" alt-text="Kaydet'i seçin.":::
 
-1. Listede zaten başka MX kaydı varsa, Kayıt ekle sayfasında Kayıt çöp kutusu **sil'i** seçerek bunların **her birini** silin.
+1. Zaten listelenen MX kayıtları varsa, **Kayıt ekle** sayfasında **Kaydı sil** çöp kutusunu seçerek bunların her birini silin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-domains-Delete.png" alt-text="Kaydı sil'i seçin.":::
 
 ### <a name="add-the-cname-record-required-for-microsoft"></a>Microsoft için gereken CNAME kaydını ekleme
 
 > [!NOTE]
-> Kayıtlı kullanıcınız varsa burada 1und1.de [oturum açma](https://go.microsoft.com/fwlink/?linkid=859152). 
-  
-1. Kullanmaya devam etmek için bu bağlantıyı kullanarak IONOS'ta 1&1'de etki [alanları sayfanıza gidin](https://my.1and1.com/). Oturum açmanız istenir.
+> 1und1.de kaydoldıysanız [burada oturum açın](https://go.microsoft.com/fwlink/?linkid=859152).
 
-1. **Menü'yü** seçin ve ardından Etki Alanları ve **SSL'yi seçin**.
-  
+1. Başlamak için [bu bağlantıyı](https://my.1and1.com/) kullanarak IONOS by 1&1'deki etki alanları sayfanıza gidin. Oturum açmanız istenir.
+
+1. **Menü'yü** ve ardından **Etki Alanları ve SSL'yi** seçin.
+
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-1.png" alt-text="Etki Alanları ve SSL'yi seçin.":::
-  
-1. Güncelleştirmek **istediğiniz** etki alanına yönelik Eylemler'in altında, dişli denetimine ve sonra **DNS'e seçin**.
+
+1. Güncelleştirmek istediğiniz etki alanı için **eylemler'in** altında dişli denetimini ve ardından **DNS'yi** seçin.
 
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-2.png" alt-text="Açılan listeden DNS'yi seçin.":::
 
-    Şimdi iki alt etki alanı oluşturacak ve her birine **Diğer Ad** değeri ayarlayacaksınız.<br/>(Bu gereklidir çünkü 1&1 IONOS yalnızca bir üst düzey CNAME kaydını destekler, ancak Microsoft için birkaç CNAME kaydı gereklidir.)<br/>İlk olarak, Otomatik Bulma alt etki alanını oluşturacaksınız.
+   Şimdi iki alt etki alanı oluşturacak ve her birine **Diğer Ad** değeri ayarlayacaksınız.
 
-1. Alt **Etki Alanları'ı seçin**.
-  
-   :::image type="content" source="../../media/dns-IONOS/IONOS-domains-Subdomains.png" alt-text="Alt Etki Alanı'ı seçin.":::
-  
-1. Alt **etki alanı ekle'yi seçin**.
+   (1&1 IONOS yalnızca bir üst düzey CNAME kaydını desteklediği, ancak Microsoft'un birkaç CNAME kaydı gerektirdiği için bu gereklidir.)
 
-   :::image type="content" source="../../media/dns-IONOS/IONOS-domains-add-subdomains.png" alt-text="Alt etki alanı ekle'yi seçin.":::
-  
-1. Yeni **alt etki alanı için** Alt etki alanı ekle kutusunda, yalnızca aşağıdaki tabloda yer alan Add **subdomain** değerini yazın veya kopyalayıp yapıştırın. ( **Diğer Ad** değerini sonraki adımlardan birinde ekleyeceksiniz.)
+   İlk olarak, Otomatik Bulma alt etki alanını oluşturacaksınız.
 
-    |**Alt etki alanı ekleme**| **Diğer Ad** |
-    |:-----|:-----|
-    |autodiscover  <br/> | autodiscover.outlook.com |
+1. **Alt Etki Alanları'yı** seçin.
 
-1. Az **önce** oluşturduğunuz **otomatik bulma** alt etki alanı eylemleri'nin altında dişli denetimine tıklayın ve sonra açılan listeden **DNS'yi** seçin. <br/>
+   :::image type="content" source="../../media/dns-IONOS/IONOS-domains-Subdomains.png" alt-text="Alt Etki Alanı'yı seçin.":::
 
-1. Kayıt **ekle'yi** seçin ve ardından **CNAME bölümünü** seçin.
+1. **Alt etki alanı ekle'yi** seçin.
 
-1. **Diğer Ad:** kutusunda, yalnızca aşağıdaki tabloda verilen **Diğer Ad** değerini yazın veya kopyalayıp yapıştırın. <br/>
+   :::image type="content" source="../../media/dns-IONOS/IONOS-domains-add-subdomains.png" alt-text="Alt etki alanları ekle'yi seçin.":::
 
-    |**Alt etki alanı ekleme**| **Diğer Ad** |
-    |:-----|:-----|
-    |autodiscover  <br/> | autodiscover.outlook.com |
-  
+1. Yeni **alt etki alanı için Alt etki alanı ekle** kutusuna aşağıdaki tablodan yalnızca **Alt etki alanı ekle** değerini yazın veya kopyalayıp yapıştırın. ( **Diğer Ad** değerini sonraki adımlardan birinde ekleyeceksiniz.)
+
+    |Alt etki alanı ekleme|Diğer ad|
+    |---|---|
+    |autodiscover|autodiscover.outlook.com|
+
+1. Yeni oluşturduğunuz **otomatik bulma** alt etki alanı için **eylemler'in** altında dişli denetimini seçin ve ardından açılan listeden **DNS'yi** seçin.
+
+1. **Kayıt ekle'yi** ve ardından **CNAME** bölümünü seçin.
+
+1. **Diğer Ad:** kutusunda, yalnızca aşağıdaki tabloda verilen **Diğer Ad** değerini yazın veya kopyalayıp yapıştırın.
+
+    |Alt etki alanı ekleme|Diğer ad|
+    |---|---|
+    |autodiscover|autodiscover.outlook.com|
+
 1. **Kaydet**'i seçin.
 
 ## <a name="add-a-txt-record-for-spf-to-help-prevent-email-spam"></a>SPF'nin gereksiz e-postaları önlemesine yardımcı olmak için TXT kaydı ekleme
 
 > [!IMPORTANT]
-> Bir etki alanına yönelik SPF için birden fazla TXT kaydına sahip olamazsınız. Etki alanınızda birden fazla SPF kaydı varsa bu durum, e-posta hatalarının yanı sıra teslimat ve istenmeyen posta sınıflandırma sorunlarına neden olabilir. Etki alanınız için zaten bir SPF kaydınız varsa Microsoft için yeni bir SPF kaydı oluşturun. Bunun yerine, her iki değer kümesi de içeren tek  *bir SPF*  kaydına sahip olmak için gerekli Microsoft değerlerini geçerli kayda ekleyin. Örneklere mi ihtiyacınız var? Microsoft için bu [Dış Etki Alanı Adı Sistemi kayıtlarına göz atabilirsiniz](../../enterprise/external-domain-name-system-records.md). SPF kaydınızı doğrulamak için şuSPF doğrulama araçlarından [birini kullanabilirsiniz](../setup/domains-faq.yml). 
-  
-> [!NOTE]
-> Kayıtlı kullanıcınız varsa burada 1und1.de [oturum açma](https://go.microsoft.com/fwlink/?linkid=859152). 
-  
-1. Kullanmaya devam etmek için bu bağlantıyı kullanarak IONOS'ta 1&1'de etki [alanları sayfanıza gidin](https://my.1and1.com/). Oturum açmanız istenir.
+> Bir etki alanına yönelik SPF için birden fazla TXT kaydına sahip olamazsınız. Etki alanınızda birden fazla SPF kaydı varsa bu durum, e-posta hatalarının yanı sıra teslimat ve istenmeyen posta sınıflandırma sorunlarına neden olabilir. Etki alanınız için zaten bir SPF kaydınız varsa, Microsoft için yeni bir tane oluşturmayın. Bunun yerine, her iki değer kümesini içeren  *tek*  bir SPF kaydına sahip olmak için gerekli Microsoft değerlerini geçerli kayda ekleyin. Örneklere mi ihtiyacınız var? [Microsoft için bu Dış Etki Alanı Adı Sistemi kayıtlarına](../../enterprise/external-domain-name-system-records.md) göz atın. SPF kaydınızı doğrulamak için [buSPF doğrulama araçlarından](../setup/domains-faq.yml) birini kullanabilirsiniz.
 
-1. **Menü'yü** seçin ve ardından Etki Alanları ve **SSL'yi seçin**.
-  
+> [!NOTE]
+> 1und1.de kaydoldıysanız [burada oturum açın](https://go.microsoft.com/fwlink/?linkid=859152).
+
+1. Başlamak için [bu bağlantıyı](https://my.1and1.com/) kullanarak IONOS by 1&1'deki etki alanları sayfanıza gidin. Oturum açmanız istenir.
+
+1. **Menü'yü** ve ardından **Etki Alanları ve SSL'yi** seçin.
+
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-1.png" alt-text="Etki Alanları ve SSL'yi seçin.":::
-  
-1. Güncelleştirmek **istediğiniz** etki alanına yönelik Eylemler'in altında, dişli denetimine ve sonra **DNS'e seçin**.
+
+1. Güncelleştirmek istediğiniz etki alanı için **eylemler'in** altında dişli denetimini ve ardından **DNS'yi** seçin.
 
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-2.png" alt-text="Açılan listeden DNS'yi seçin.":::
 
-1. Kayıt **ekle'yi seçin**.
+1. **Kayıt ekle'yi** seçin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-domains-3.png" alt-text="Kayıt ekle'yi seçin.":::
 
-1. **SPF (TXT) bölümünü** seçin.
+1. **SPF (TXT)** bölümünü seçin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-domains-SPFTXT.png" alt-text="SPF (TXT) bölümünü seçin.":::
 
-1. Yeni kayıt kutularına, aşağıdaki tablodaki değerleri yazın ya da bu tablodan kopyalayıp yapıştırın. <br/>
+1. Yeni kayıt kutularına, aşağıdaki tablodaki değerleri yazın ya da bu tablodan kopyalayıp yapıştırın.
 
-    |**Tür**|**Ana bilgisayar adı**|**Değer**| **TTL** |
-    |:-----|:-----|:-----|:-----|
-    |SPF (TXT)  <br/> |(Bu alanı boş bırakın.)  <br/> |v=spf1 include:spf.protection.outlook.com -all  <br/> **Not:** Tüm boşlukların doğru kalması için bu girdiyi kopyalayıp yapıştırarak bu dosyayı yapıştırın. | 1 saat |
-  
+    |Tür|Ana bilgisayar adı|Değer|TTL|
+    |---|---|---|---|
+    |SPF (TXT)|(Bu alanı boş bırakın.)|v=spf1 include:spf.protection.outlook.com -all  <br/> **Not:** Tüm aralıkların doğru kalması için bu girdiyi kopyalayıp yapıştırmanızı öneririz.|1 saat|
+
 1. **Kaydet**'i seçin.
 
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-SPFTXT-Save.png" alt-text="Kaydet'i seçin.":::
 
-## <a name="advanced-option-skype-for-business"></a>Gelişmiş seçenek: Skype Kurumsal
+## <a name="advanced-option-skype-for-business"></a>Gelişmiş seçenek: Skype for Business
 
-Bu seçeneği yalnızca, işletmeniz Microsoft Teams'in yanı sıra sohbet, konferans aramaları ve görüntülü aramalar gibi çevrimiçi iletişim hizmetleri için Skype Kurumsal kullanıyorsa belirleyin. Skype için 4 kayıt gerekir: Kullanıcıdan kullanıcıya iletişim için 2 SRV kaydı ve oturum açma ve kullanıcıları hizmete bağlamak için 2 CNAME kaydı.
+Yalnızca kuruluşunuz Microsoft Teams ek olarak sohbet, konferans aramaları ve görüntülü aramalar gibi çevrimiçi iletişim hizmetleri için Skype for Business kullanıyorsa bu seçeneği belirleyin. Skype 4 kayıt gerekir: Kullanıcıdan kullanıcıya iletişim için 2 SRV kaydı ve oturum açıp kullanıcıları hizmete bağlamak için 2 CNAME kaydı.
 
-### <a name="add-two-additional-cname-records"></a>İki CNAME kaydı daha ekleme
-  
-1. Kullanmaya devam etmek için bu bağlantıyı kullanarak IONOS'ta 1&1'de etki [alanları sayfanıza gidin](https://my.1and1.com/). Oturum açmanız istenir.
+### <a name="add-two-additional-cname-records"></a>İki ek CNAME kaydı ekleme
 
-1. **Menü'yü** seçin ve ardından Etki Alanları ve **SSL'yi seçin**.
-  
+1. Başlamak için [bu bağlantıyı](https://my.1and1.com/) kullanarak IONOS by 1&1'deki etki alanları sayfanıza gidin. Oturum açmanız istenir.
+
+1. **Menü'yü** ve ardından **Etki Alanları ve SSL'yi** seçin.
+
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-1.png" alt-text="Etki Alanları ve SSL'yi seçin.":::
-  
-1. Güncelleştirmek **istediğiniz** etki alanına yönelik Eylemler'in altında, dişli denetimine ve sonra **DNS'e seçin**.
+
+1. Güncelleştirmek istediğiniz etki alanı için **eylemler'in** altında dişli denetimini ve ardından **DNS'yi** seçin.
 
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-2.png" alt-text="Açılan listeden DNS'yi seçin.":::
 
-    Şimdi iki alt etki alanı oluşturacak ve her birine **Diğer Ad** değeri ayarlayacaksınız.<br/>(Bu gereklidir çünkü 1&1 IONOS yalnızca bir üst düzey CNAME kaydını destekler, ancak Microsoft için birkaç CNAME kaydı gereklidir.)<br/>İlk olarak, lyncdiscover alt etki alanı oluşturabilirsiniz.
+   Şimdi iki alt etki alanı oluşturacak ve her birine **Diğer Ad** değeri ayarlayacaksınız.
 
-1. Alt **Etki Alanları'ı seçin**.
-  
-   :::image type="content" source="../../media/dns-IONOS/IONOS-domains-Subdomains.png" alt-text="Alt Etki Alanı'ı seçin.":::
-  
-1. Alt **etki alanı ekle'yi seçin**.
+   (1&1 IONOS yalnızca bir üst düzey CNAME kaydını desteklediği, ancak Microsoft'un birkaç CNAME kaydı gerektirdiği için bu gereklidir.)
 
-   :::image type="content" source="../../media/dns-IONOS/IONOS-domains-add-subdomains.png" alt-text="Alt etki alanı ekle'yi seçin.":::
+   İlk olarak, lyncdiscover alt etki alanını oluşturacaksınız.
 
-1. Yeni **alt etki alanı için** Alt etki alanı ekle kutusunda, yalnızca aşağıdaki tabloda yer alan Add **subdomain** değerini yazın veya kopyalayıp yapıştırın. ( **Diğer Ad** değerini sonraki adımlardan birinde ekleyeceksiniz.)<br/> 
+1. **Alt Etki Alanları'yı** seçin.
 
-    |**Alt etki alanı ekleme**|**Diğer Ad**|
-    |:-----|:-----|
+   :::image type="content" source="../../media/dns-IONOS/IONOS-domains-Subdomains.png" alt-text="Alt Etki Alanı'yı seçin.":::
+
+1. **Alt etki alanı ekle'yi** seçin.
+
+   :::image type="content" source="../../media/dns-IONOS/IONOS-domains-add-subdomains.png" alt-text="Alt etki alanları ekle'yi seçin.":::
+
+1. Yeni **alt etki alanı için Alt etki alanı ekle** kutusuna aşağıdaki tablodan yalnızca **Alt etki alanı ekle** değerini yazın veya kopyalayıp yapıştırın. ( **Diğer Ad** değerini sonraki adımlardan birinde ekleyeceksiniz.)
+
+    |Alt etki alanı ekleme|Diğer ad|
+    |---|---|
     |lyncdiscover   |webdir.online.lync.com  |
 
-1. Az **önce** oluşturduğunuz **lyncdiscover** alt etki alanı eylemleri'nin altında dişli denetimine tıklayın ve açılan listeden **DNS'yi** seçin. <br/>
+1. Yeni oluşturduğunuz **lyncdiscover** alt etki alanı için **eylemler'in** altında, dişli denetimini seçin ve ardından açılan listeden **DNS'yi** seçin.
 
-1. Kayıt **ekle'yi** seçin ve ardından **CNAME bölümünü** seçin.
+1. **Kayıt ekle'yi** ve ardından **CNAME** bölümünü seçin.
 
-1. **Diğer Ad:** kutusunda, yalnızca aşağıdaki tabloda verilen **Diğer Ad** değerini yazın veya kopyalayıp yapıştırın. <br/>
+1. **Diğer Ad:** kutusunda, yalnızca aşağıdaki tabloda verilen **Diğer Ad** değerini yazın veya kopyalayıp yapıştırın.
 
-    |**Alt Etki Alanı Oluştur**|**Diğer Ad**|
-    |:-----|:-----|
-    |lyncdiscover  <br/> |webdir.online.lync.com  <br/> |
+    |Alt Etki Alanı Oluştur|Diğer ad|
+    |---|---|
+    |lyncdiscover|webdir.online.lync.com|
 
-1. Başka bir alt etki alanı (SIP) oluşturma: <br/>Alt **etki alanı ekle'yi seçin**.
+1. Başka bir alt etki alanı (SIP) oluşturun: **Alt etki alanı ekle'yi** seçin.
 
-1. Yeni **alt etki alanı için** Alt etki alanı ekle kutusunda, yalnızca aşağıdaki tabloda yer alan Add **subdomain** değerini yazın veya kopyalayıp yapıştırın. ( **Diğer Ad** değerini sonraki adımlardan birinde ekleyeceksiniz.) <br/>
+1. Yeni **alt etki alanı için Alt etki alanı ekle** kutusuna aşağıdaki tablodan yalnızca **Alt etki alanı ekle** değerini yazın veya kopyalayıp yapıştırın. ( **Diğer Ad** değerini sonraki adımlardan birinde ekleyeceksiniz.)
 
-    |**Alt etki alanı ekleme**|**Diğer Ad**|
-    |:-----|:-----|
-    |sip  <br/> |sipdir.online.lync.com  <br/> |
+    |Alt etki alanı ekleme|Diğer ad|
+    |---|---|
+    |sip|sipdir.online.lync.com|
 
-1. Yeni **oluşturduğunuz** alt etki alanı için Eylemler'in altında, dişli denetimi seçin ve sonra da açılan listeden **DNS'yi** seçin. <br/>
+1. Yeni oluşturduğunuz alt etki alanı için **eylemler'in** altında dişli denetimini seçin ve ardından açılan listeden **DNS'yi** seçin.
 
-1. Kayıt **ekle'yi seçin**.
+1. **Kayıt ekle'yi** seçin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-domains-3.png" alt-text="Kayıt ekle'yi seçin.":::
 
-1. **CNAME bölümünü** seçin.
+1. **CNAME** bölümünü seçin.
 
-1. Diğer Ad **: kutusunda** , yalnızca aşağıdaki tabloda yer alan Diğer Ad **değerini yazın** veya kopyalayıp yapıştırın. 
+1. **Diğer Ad:** kutusunda, aşağıdaki tablodan yalnızca **Diğer Ad** değerini yazın veya kopyalayıp yapıştırın.
 
-    |**Alt Etki Alanı Oluştur**|**Diğer Ad**|
-    |:-----|:-----|
-    |sip  <br/> |sipdir.online.lync.com  <br/> |
+    |Alt Etki Alanı Oluştur|Diğer ad|
+    |---|---|
+    |sip|sipdir.online.lync.com|
 
-1. Farkındayım uyarı kutusunun **onay kutusunu seçin ve** sonra da Kaydet'i **seçin**.
+1. **Farkındayım** bildiriminin onay kutusunu seçin ve ardından **Kaydet'i** seçin.
 
-## <a name="add-the-two-srv-records-required-for-microsoft"></a>Microsoft için gereken iki SRV kaydı ekleme
-  
+## <a name="add-the-two-srv-records-required-for-microsoft"></a>Microsoft için gereken iki SRV kaydını ekleme
+
 > [!NOTE]
-> Kayıtlı kullanıcınız varsa burada 1und1.de [oturum açma](https://go.microsoft.com/fwlink/?linkid=859152). 
-  
-1. Kullanmaya devam etmek için bu bağlantıyı kullanarak IONOS'ta 1&1'de etki [alanları sayfanıza gidin](https://my.1and1.com/). Oturum açmanız istenir.
+> 1und1.de kaydoldıysanız [burada oturum açın](https://go.microsoft.com/fwlink/?linkid=859152).
 
-1. **Menü'yü** seçin ve ardından Etki Alanları ve **SSL'yi seçin**.
-  
+1. Başlamak için [bu bağlantıyı](https://my.1and1.com/) kullanarak IONOS by 1&1'deki etki alanları sayfanıza gidin. Oturum açmanız istenir.
+
+1. **Menü'yü** ve ardından **Etki Alanları ve SSL'yi** seçin.
+
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-1.png" alt-text="Etki Alanları ve SSL'yi seçin.":::
-  
-1. Güncelleştirmek **istediğiniz** etki alanına yönelik Eylemler'in altında, dişli denetimine ve sonra **DNS'e seçin**.
+
+1. Güncelleştirmek istediğiniz etki alanı için **eylemler'in** altında dişli denetimini ve ardından **DNS'yi** seçin.
 
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-2.png" alt-text="Açılan listeden DNS'yi seçin.":::
 
-1. Kayıt **ekle'yi seçin**.
+1. **Kayıt ekle'yi** seçin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-domains-3.png" alt-text="Kayıt ekle'yi seçin.":::
 
-1. **SRV bölümünü** seçin.
+1. **SRV** bölümünü seçin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-domains-SRV.png" alt-text="SRV bölümünü seçin.":::
 
-1. Yeni kayıt kutularına, aşağıdaki tablodaki değerleri yazın ya da bu tablodan kopyalayıp yapıştırın. <br/>
+1. Yeni kayıt kutularına, aşağıdaki tablodaki değerleri yazın ya da bu tablodan kopyalayıp yapıştırın.
 
-    |**Tür**|**Hizmet**|**Protokol**|**Ana bilgisayar adı**|**Yönlendirme**|**Öncelik**|**Ağırlık**|**Bağlantı Noktası**|**TTL**|
-    |:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-    |SRV  <br/> |_sip  <br/> |tls  <br/> |(Bu alanı boş bırakın.)  <br/> |sipdir.online.lync.com  <br/> |100  <br/> |1  <br/> |443  <br/> |1 saat  <br/> |
-    |SRV  <br/> |_sipfederationtls  <br/> |tcp  <br/> |(Bu alanı boş bırakın.)  <br/> |sipfed.online.lync.com  <br/> |100  <br/> |1  <br/> |5061  <br/> |1 saat <br/> |  
-  
+    |Tür|Hizmet|Protokol|Ana bilgisayar adı|İşaret edilen|Öncelik|Ağırlık|Bağlantı noktası|TTL|
+    |---|---|---|---|---|---|---|---|---|
+    |SRV|_sip|tls|(Bu alanı boş bırakın.)|sipdir.online.lync.com|100|1|443|1 saat|
+    |SRV|_sipfederationtls|tcp|(Bu alanı boş bırakın.)|sipfed.online.lync.com|100|1|5061|1 saat|
+
 1. **Kaydet**'i seçin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-domains-SRV-Save.png" alt-text="Kaydet'i seçin.":::
@@ -351,73 +359,77 @@ Bu seçeneği yalnızca, işletmeniz Microsoft Teams'in yanı sıra sohbet, konf
 1. Diğer SRV kaydını ekleyin.
 
 > [!NOTE]
-> Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışı sorunlarıyla veya başka sorunlar ile ilgili sorunlar için bkz. Etki alanınızı veya DNS kayıtlarınızı ekledikten sonra [sorunları bulma ve düzeltme](../get-help-with-domains/find-and-fix-issues.md). 
+> Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışıyla veya diğer sorunlarla karşılaşıyorsanız, bkz. [Etki alanınızı veya DNS kayıtlarınızı ekledikten sonra sorunları bulma ve düzeltme](../get-help-with-domains/find-and-fix-issues.md).
 
-## <a name="advanced-option-intune-and-mobile-device-management-for-microsoft-365"></a>Gelişmiş seçenek: Mobil Cihazlar için Intune ve Mobil Microsoft 365
+## <a name="advanced-option-intune-and-mobile-device-management-for-microsoft-365"></a>Gelişmiş seçenek: Microsoft 365 için Intune ve Mobil Cihaz Yönetimi
 
-Bu hizmet, etki alanınıza bağlı mobil cihazların güvenliğini sağlamanıza ve uzaktan yönetmenize yardımcı olur. Mobil Cihaz Yönetimi'nin, kullanıcıların cihazları hizmete kaydedeni için 2 CNAME kaydı olması gerekir.
+Bu hizmet, etki alanınıza bağlanan mobil cihazları güvenli ve uzaktan yönetmenize yardımcı olur. Mobil Cihaz Yönetimi, kullanıcıların cihazları hizmete kaydedebilmesi için 2 CNAME kaydına ihtiyaç duyar.
 
-### <a name="add-the-two-required-cname-records"></a>Gerekli iki CNAME kaydı ekleme
+### <a name="add-the-two-required-cname-records"></a>Gerekli iki CNAME kaydını ekleme
 
 > [!IMPORTANT]
-> Diğer CNAME kayıtları için kullanılan alt etki alanı yordamını izleyin ve değerleri aşağıdaki tablodan girin. 
-  
-1. Kullanmaya devam etmek için bu bağlantıyı kullanarak IONOS'ta 1&1'de etki [alanları sayfanıza gidin](https://my.1and1.com/). Oturum açmanız istenir.
+> Diğer CNAME kayıtları için kullandığınız alt etki alanı yordamını izleyin ve aşağıdaki tablodan değerleri sağlayın.
 
-1. **Menü'yü** seçin ve ardından Etki Alanları ve **SSL'yi seçin**.
-  
+1. Başlamak için [bu bağlantıyı](https://my.1and1.com/) kullanarak IONOS by 1&1'deki etki alanları sayfanıza gidin. Oturum açmanız istenir.
+
+1. **Menü'yü** ve ardından **Etki Alanları ve SSL'yi** seçin.
+
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-1.png" alt-text="Etki Alanları ve SSL'yi seçin.":::
-  
-1. Güncelleştirmek **istediğiniz** etki alanına yönelik Eylemler'in altında, dişli denetimine ve sonra **DNS'e seçin**.
+
+1. Güncelleştirmek istediğiniz etki alanı için **eylemler'in** altında dişli denetimini ve ardından **DNS'yi** seçin.
 
    :::image type="content" source="../../media/dns-IONOS/IONOS-domains-2.png" alt-text="Açılan listeden DNS'yi seçin.":::
 
-    Şimdi iki alt etki alanı oluşturacak ve her birine **Diğer Ad** değeri ayarlayacaksınız.<br/>(Bu gereklidir çünkü 1&1 IONOS yalnızca bir üst düzey CNAME kaydını destekler, ancak Microsoft için birkaç CNAME kaydı gereklidir.)<br/>İlk olarak, lyncdiscover alt etki alanı oluşturabilirsiniz.
+   Şimdi iki alt etki alanı oluşturacak ve her birine **Diğer Ad** değeri ayarlayacaksınız.
 
-1. Alt **Etki Alanları'ı seçin**.
-  
-   :::image type="content" source="../../media/dns-IONOS/IONOS-domains-Subdomains.png" alt-text="Alt Etki Alanı'ı seçin.":::
-  
-1. Alt **etki alanı ekle'yi seçin**.
+   (1&1 IONOS yalnızca bir üst düzey CNAME kaydını desteklediği, ancak Microsoft'un birkaç CNAME kaydı gerektirdiği için bu gereklidir.)
 
-   :::image type="content" source="../../media/dns-IONOS/IONOS-domains-add-subdomains.png" alt-text="Alt etki alanı ekle'yi seçin.":::
+   İlk olarak, lyncdiscover alt etki alanını oluşturacaksınız.
 
-1. Yeni **alt etki alanı için** Alt etki alanı ekle kutusunda, yalnızca aşağıdaki tabloda yer alan Add **subdomain** değerini yazın veya kopyalayıp yapıştırın. ( **Diğer Ad** değerini sonraki adımlardan birinde ekleyeceksiniz.)<br/> 
+1. **Alt Etki Alanları'yı** seçin.
 
-    |**Alt etki alanı ekleme**|**Diğer Ad**|
-    |:-----|:-----|
-    |enterpriseregistration  <br/> |enterpriseregistration.windows.net  <br/> |
+   :::image type="content" source="../../media/dns-IONOS/IONOS-domains-Subdomains.png" alt-text="Alt Etki Alanı'yı seçin.":::
 
-1. Yeni **oluşturduğunuz** **enterpriseregistration** alt etki alanı için Eylemler'in altında, dişli denetimine tıklayın ve sonra açılan listeden **DNS'yi** seçin. <br/>
+1. **Alt etki alanı ekle'yi** seçin.
 
-1. Kayıt **ekle'yi** seçin ve ardından **CNAME bölümünü** seçin.
+   :::image type="content" source="../../media/dns-IONOS/IONOS-domains-add-subdomains.png" alt-text="Alt etki alanları ekle'yi seçin.":::
 
-1. **Diğer Ad:** kutusunda, yalnızca aşağıdaki tabloda verilen **Diğer Ad** değerini yazın veya kopyalayıp yapıştırın. <br/>
+1. Yeni **alt etki alanı için Alt etki alanı ekle** kutusuna aşağıdaki tablodan yalnızca **Alt etki alanı ekle** değerini yazın veya kopyalayıp yapıştırın. ( **Diğer Ad** değerini sonraki adımlardan birinde ekleyeceksiniz.)
 
-    |**Alt etki alanı ekleme**|**Diğer Ad**|
-    |:-----|:-----|
-    |enterpriseregistration  <br/> |enterpriseregistration.windows.net  <br/> |
+    |Alt etki alanı ekleme|Diğer ad|
+    |---|---|
+    |enterpriseregistration|enterpriseregistration.windows.net|
 
-1. Başka bir alt etki alanı oluşturma: <br/>Alt **etki alanı ekle'yi seçin**.
+1. Yeni oluşturduğunuz **enterpriseregistration** alt etki alanı için **eylemler'in** altında dişli denetimini seçin ve ardından açılan listeden **DNS'yi** seçin.
 
-1. Yeni **alt etki alanı için** Alt etki alanı ekle kutusunda, yalnızca aşağıdaki tabloda yer alan Add **subdomain** değerini yazın veya kopyalayıp yapıştırın. ( **Diğer Ad** değerini sonraki adımlardan birinde ekleyeceksiniz.) <br/>
+1. **Kayıt ekle'yi** ve ardından **CNAME** bölümünü seçin.
 
-    |**Alt etki alanı ekleme**|**Diğer Ad**|
-    |:-----|:-----|
-    |enterpriseenrollment  <br/> |enterpriseenrollment-s.manage.microsoft.com  <br/> |
+1. **Diğer Ad:** kutusunda, yalnızca aşağıdaki tabloda verilen **Diğer Ad** değerini yazın veya kopyalayıp yapıştırın.
 
-1. Yeni **oluşturduğunuz** **enterpriseenrollment** alt etki alanı için Eylemler'in altında, dişli denetimine tıklayın ve sonra açılan listeden **DNS'yi** seçin. <br/>
+    |Alt etki alanı ekleme|Diğer ad|
+    |---|---|
+    |enterpriseregistration|enterpriseregistration.windows.net|
 
-1. Kayıt **ekle'yi seçin**.
+1. Başka bir alt etki alanı oluşturun: **Alt etki alanı ekle'yi** seçin.
+
+1. Yeni **alt etki alanı için Alt etki alanı ekle** kutusuna aşağıdaki tablodan yalnızca **Alt etki alanı ekle** değerini yazın veya kopyalayıp yapıştırın. ( **Diğer Ad** değerini sonraki adımlardan birinde ekleyeceksiniz.)
+
+    |Alt etki alanı ekleme|Diğer ad|
+    |---|---|
+    |enterpriseenrollment|enterpriseenrollment-s.manage.microsoft.com|
+
+1. Yeni oluşturduğunuz **enterpriseenrollment** alt etki alanı için **eylemler'in** altında dişli denetimini seçin ve ardından açılan listeden **DNS'yi** seçin.
+
+1. **Kayıt ekle'yi** seçin.
 
     :::image type="content" source="../../media/dns-IONOS/IONOS-domains-3.png" alt-text="Kayıt ekle'yi seçin.":::
 
-1. **CNAME bölümünü** seçin.
+1. **CNAME** bölümünü seçin.
 
-1. Diğer Ad **: kutusunda** , yalnızca aşağıdaki tabloda yer alan Diğer Ad **değerini yazın** veya kopyalayıp yapıştırın. 
+1. **Diğer Ad:** kutusunda, aşağıdaki tablodan yalnızca **Diğer Ad** değerini yazın veya kopyalayıp yapıştırın.
 
-    |**Alt Etki Alanı Oluştur**|**Diğer Ad**|
-    |:-----|:-----|
-    |enterpriseenrollment  <br/> |enterpriseenrollment-s.manage.microsoft.com  <br/> |
+    |Alt Etki Alanı Oluştur|Diğer ad|
+    |---|---|
+    |enterpriseenrollment|enterpriseenrollment-s.manage.microsoft.com|
 
-1. Farkındayım uyarı kutusunun **onay kutusunu seçin ve** sonra da Kaydet'i **seçin**.
+1. **Farkındayım** bildiriminin onay kutusunu seçin ve ardından **Kaydet'i** seçin.

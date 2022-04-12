@@ -1,5 +1,5 @@
 ---
-title: Bağlan godaddy'de DNS kayıtlarınızı Microsoft 365
+title: GoDaddy'deki DNS kayıtlarınızı Microsoft 365 Bağlan
 f1.keywords:
 - CSH
 ms.author: efrene
@@ -22,15 +22,15 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: f40a9185-b6d5-4a80-bb31-aa3bb0cab48a
-description: Microsoft için GoDaddy'de etki alanlarınızı doğrulamayı ve e-posta, Skype Kurumsal Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
-ms.openlocfilehash: 728fd6cc34517213b338e3da07e6a275a1a727d3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft için GoDaddy'de etki alanınızı doğrulamayı ve e-posta, Skype for Business Online ve diğer hizmetler için DNS kayıtlarını ayarlamayı öğrenin.
+ms.openlocfilehash: 6cf110b55c76ce6c857f13dcd5b0075b309b654f
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63313559"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64780357"
 ---
-# <a name="connect-your-dns-records-at-godaddy-to-microsoft-365"></a>Bağlan godaddy'de DNS kayıtlarınızı Microsoft 365
+# <a name="connect-your-dns-records-at-godaddy-to-microsoft-365"></a>GoDaddy'deki DNS kayıtlarınızı Microsoft 365 Bağlan
 
  **Aradığınızı bulamazsanız, [Etki Alanları SSS sayfasını denetleyin](../setup/domains-faq.yml)**.
 
@@ -38,69 +38,69 @@ DNS barındırma sağlayıcınız GoDaddy ise, bu makalede verilen adımları iz
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Etki alanınız için DNS kayıtlarını ayarlarken iki seçeneğiniz vardır:
+Etki alanınız için DNS kayıtlarını ayarlamak için iki seçeneğiniz vardır:
 
-- [**Etki Alanı Bağlan**](#use-domain-connect-to-verify-and-set-up-your-domain) Etki alanını başka bir e-posta hizmeti sağlayıcısıyla ayarlamadısanız, yeni etki alanınızı otomatik olarak doğrulamak ve yeni etki alanıyla birlikte kullanmak üzere ayarlamak için Etki alanı Bağlan adımlarını Microsoft 365.
+- [**Etki Alanı Bağlan'ni kullanma**](#use-domain-connect-to-verify-and-set-up-your-domain) Etki alanınızı başka bir e-posta hizmeti sağlayıcısıyla ayarlamadıysanız, etki alanı Bağlan adımlarını kullanarak yeni etki alanınızı otomatik olarak doğrulayın ve Microsoft 365 ile kullanılacak şekilde ayarlayın.
 
    VEYA
 
-- [**El ile adımları kullanma**](#create-dns-records-with-manual-setup) Aşağıdaki el ile adımları kullanarak etki alanınızı doğrulayın ve etki alanı kayıt şirketine eklemek istediğiniz kayıtların ne zaman ve hangi kayıtları seçeceklerini seçin. Bu sayede, örneğin size uygun bir şekilde yeni MX (posta) kayıtları ayarlanır.
+- [**El ile uygulanan adımları kullanma**](#create-dns-records-with-manual-setup) Aşağıdaki el ile uygulanan adımları kullanarak etki alanınızı doğrulayın ve etki alanı kayıt şirketinize ne zaman ve hangi kayıtların ekleneceğini seçin. Bu, yeni MX (posta) kayıtlarını( örneğin, uygun zamanda) ayarlamanıza olanak tanır.
 
-## <a name="use-domain-connect-to-verify-and-set-up-your-domain"></a>Etki Bağlan doğrulamak ve ayarlamak için Etki Alanı Yöneticisi'ne
+## <a name="use-domain-connect-to-verify-and-set-up-your-domain"></a>Etki alanınızı doğrulamak ve ayarlamak için Etki Alanı Bağlan kullanma
 
-GoDaddy etki alanınızı otomatik olarak doğrulamak ve bu etki alanıyla ayarlamak için şu Microsoft 365:
+GoDaddy etki alanınızı Microsoft 365 ile otomatik olarak doğrulamak ve ayarlamak için şu adımları izleyin:
 
-1. Etki Microsoft 365 yönetim merkezi Etki **Ayarlar** >  seçin ve ardından ayarlamak istediğiniz etki alanını seçin.<a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank"></a>
+1. Microsoft 365 yönetim merkezi **Ayarlar** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki alanları'nı**</a> seçin ve ayarlamak istediğiniz etki alanını seçin.
 
-1. Üç noktayı (diğer eylemler) seçin ve **>'ı seçin**.
+1. Üç noktayı (diğer eylemler) seçin > **Kurulumu başlat'ı** seçin.
 
    :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-2.png" alt-text="Kurulumu başlat'ı seçin.":::
 
-1. Etki alanınızı nasıl bağlamak istiyor musunuz? sayfasında **Devam'ı seçin**.
+1. Etki alanınızı nasıl bağlamak istiyorsunuz? sayfasında **Devam'ı** seçin.
 
-1. DNS kayıtları ekle sayfasında DNS kayıtları **ekle'yi seçin**.
+1. DNS kayıtları ekle sayfasında **DNS kayıtları ekle'yi** seçin.
 
-1. GoDaddy oturum açma sayfasında, hesabınızla oturum açın ve Yetkilendir'i **seçin**.
+1. GoDaddy oturum açma sayfasında hesabınızda oturum açın ve **Yetki ver'i** seçin.
 
-    Bu, e-posta için etki alanı Microsoft 365.
+   Bu, Microsoft 365 için etki alanı kurulumunuzu tamamlar.
 
-## <a name="create-dns-records-with-manual-setup"></a>El ile kurulumla DNS kayıtları oluşturma
+## <a name="create-dns-records-with-manual-setup"></a>El ile kurulum ile DNS kayıtları oluşturma
 
-GoDaddy'ye bu kayıtları ekledikten sonra, etki alanınız Microsoft hizmetleri.
+GoDaddy'de bu kayıtları ekledikten sonra, etki alanınız Microsoft hizmetleri ile çalışacak şekilde ayarlanır.
 
 > [!NOTE]
 > Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışı sorunlarıyla veya başka sorunlarla karşılaşırsanız, [Etki alanı adınızı veya DNS kayıtlarınızı değiştirdikten sonra sorunları giderme](../get-help-with-domains/find-and-fix-issues.md) konusuna bakın.
 
 ### <a name="add-a-txt-record-for-verification"></a>Doğrulama için bir TXT kaydı ekleme
 
-Etki alanınızı Microsoft ile kullanmadan önce bu etki alanına sahip olduğundan emin olarız. Etki alanı kayıt şirketinizin hesabında oturum açabilme ve DNS kaydı oluşturabilme özelliği, Microsoft'a etki alanının sahibi olduğunu kanıtlar.
+Etki alanınızı Microsoft ile kullanmadan önce, etki alanına sahip olduğunuzdan emin olmamız gerekir. Etki alanı kayıt şirketinizde hesabınızda oturum açıp DNS kaydını oluşturabilmek, Microsoft'a etki alanının sahibi olduğunuzu kanıtlar.
 
 > [!NOTE]
 > Bu kayıt yalnızca etki alanının sahibi olduğunuzu doğrulamak için kullanılır; başka hiçbir şeyi etkilemez. Dilerseniz bu kaydı daha sonra silebilirsiniz.
 
 1. Başlamak için [bu bağlantıyı](https://account.godaddy.com/products/?go_redirect=disabled) kullanarak GoDaddy'deki etki alanları sayfanıza gidin.
 
-   Oturum açmanız istenirse, oturum açma kimlik bilgilerinizi kullanın, sağ üst köşedeki oturum açma adı'nızı ve ardından **Ürünlerim'i seçin**.
+   Oturum açmanız istenirse oturum açma kimlik bilgilerinizi kullanın, sağ üstteki oturum açma adınızı ve ardından **Ürünlerim'i** seçin.
 
-1. Etki **Alanları'nın** altında, doğrulamak istediğiniz etki alanının yanındaki üç noktayı seçin ve sonra da **DNS'yi Yönet'i seçin**.
+1. **Etki Alanları'nın** altında, doğrulamak istediğiniz etki alanının yanındaki üç noktayı seçin ve ardından **DNS'yi yönet'i** seçin.
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-1.png" alt-text="Açılan listeden DNS'yi Yönet'i seçin.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-1.png" alt-text="Açılan listeden DNS'yi yönet'i seçin.":::
 
-1. **Kayıtlar'ın** altında **EKLE'yi** seçin (Aşağı kaydırmak zorunda olabilirsiniz).
+1. **Kayıtlar'ın** altında **EKLE'yi** seçin (aşağı kaydırmanız gerekebilir).
 
    :::image type="content" source="../../media/dns/56527673-ffb3b300-651b-11e9-91c2-83dc9fe5ca30.png" alt-text="EKLE'yi seçin.":::
 
-1. Açılan **listeden TXT'yi** seçin.
+1. Açılan listeden **TXT'yi** seçin.
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="Tür açılan listesinden TXT'yi seçin.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="Tür açılan listesinde TXT'yi seçin.":::
 
-1. Yeni kayıt kutularına, tablodaki değerleri yazın veya kopyalayıp yapıştırın.
+1. Yeni kaydın kutularına tablodaki değerleri yazın veya kopyalayıp yapıştırın.
 
-   |**Tür** |**Ana Bilgisayar**|**TXT Değeri**|**TTL** |
-   |:-----|:-----|:-----|:-----|
-   |TXT |@|MS=ms *XXXXXXXX*<br>**Not**: Bu bir örnektir. Tablodan **, belirli Hedef veya Adres Noktaları** değerinizi burada kullanın. [Bunu nasıl bulabilirim?](../get-help-with-domains/information-for-dns-records.md)|1 saat  <br>|
+   |Tür|Ana Bilgisayar|TXT Değeri|TTL|
+   |---|---|---|---|
+   |TXT|@|MS=ms *XXXXXXXX*<br>**Not**: Bu bir örnektir. Burada, tablodan belirli **Hedef veya İşaret Edilen Adres** değerinizi kullanın. [Bunu nasıl bulabilirim?](../get-help-with-domains/information-for-dns-records.md)|1 saat  <br>|
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-TXT-values.png" alt-text="TXT kaydı için tablodan değerleri doldurun.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-TXT-values.png" alt-text="TXT kaydının tablosundaki değerleri doldurun.":::
 
 1. **Kaydet**'i seçin.
 
@@ -108,50 +108,50 @@ Etki alanınızı Microsoft ile kullanmadan önce bu etki alanına sahip olduğu
 
    Yeni oluşturduğunuz kaydın İnternet genelinde güncelleştirilebilmesi için devam etmeden önce birkaç dakika bekleyin.
 
-Kaydı etki alanı kayıt şirketinizin sitesinde eklediknize göre, Microsoft'a geri dönüp kayıt isteğinde bulundurabilirsiniz. Microsoft doğru TXT kaydını bulduğunda, etki alanınız doğrulanır.
+Artık kaydı etki alanı kayıt şirketinizin sitesine eklediğinize göre, Microsoft'a geri dönüp kaydı istemeniz gerekir. Microsoft doğru TXT kaydını bulduğunda etki alanınız doğrulanır.
   
-Bir dosyada kaydı Microsoft 365:
+Microsoft 365 kaydı doğrulamak için:
   
-1. Yönetim merkezinde Etki Alanları'nın **Ayarlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**gidin**</a>.
+1. Yönetim merkezinde **Ayarlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Etki Alanları'na**</a> gidin.
 
-1. Etki Alanları sayfasında, doğrulamakta olduğunuz etki alanını seçin ve sonra da Kurulumu **başlat'ı seçin**.
+1. Etki Alanları sayfasında, doğrulamakta olduğunuz etki alanını seçin ve **kurulumu başlat'ı** seçin.
 
    :::image type="content" source="../../media/dns-IONOS/IONOS-DomainConnects-2.png" alt-text="Kurulumu başlat'ı seçin.":::
 
-1. **Devam'ı seçin**.
+1. **Devam'ı** seçin.
   
-1. Etki alanını **doğrulama sayfasında** Doğrula'ya **tıklayın**.
+1. **Etki alanını doğrula** sayfasında **Doğrula'yı** seçin.
 
 > [!NOTE]
 > Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışı sorunlarıyla veya başka sorunlarla karşılaşırsanız, [Etki alanı adınızı veya DNS kayıtlarınızı değiştirdikten sonra sorunları giderme](../get-help-with-domains/find-and-fix-issues.md) konusuna bakın.
 
-### <a name="add-an-mx-record-so-email-for-your-domain-will-come-to-microsoft"></a>Etki alanınıza gelen e-postanın Microsoft'a göndernsin için MX kaydı ekleme
+### <a name="add-an-mx-record-so-email-for-your-domain-will-come-to-microsoft"></a>Etki alanınız için e-postanın Microsoft'a gelmesi için bir MX kaydı ekleyin
 
 1. Başlamak için [bu bağlantıyı](https://account.godaddy.com/products/?go_redirect=disabled) kullanarak GoDaddy'deki etki alanları sayfanıza gidin.
 
-   Oturum açmanız istenirse, oturum açma kimlik bilgilerinizi kullanın, sağ üst köşedeki oturum açma adı'nızı ve ardından **Ürünlerim'i seçin**.
+   Oturum açmanız istenirse oturum açma kimlik bilgilerinizi kullanın, sağ üstteki oturum açma adınızı ve ardından **Ürünlerim'i** seçin.
 
-2. Etki **Alanları'nın** altında, doğrulamak istediğiniz etki alanının yanındaki üç noktayı seçin ve sonra da **DNS'yi Yönet'i seçin**.
+2. **Etki Alanları'nın** altında, doğrulamak istediğiniz etki alanının yanındaki üç noktayı seçin ve ardından **DNS'yi yönet'i** seçin.
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-1.png" alt-text="Açılan listeden DNS'yi Yönet'i seçin.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-1.png" alt-text="Açılan listeden DNS'yi yönet'i seçin.":::
 
-3. **Kayıtlar'ın altında** **EKLE'yi seçin**.
+3. **Kayıtlar'ın** altında **EKLE'yi** seçin.
 
    :::image type="content" source="../../media/dns/56527673-ffb3b300-651b-11e9-91c2-83dc9fe5ca30.png" alt-text="EKLE'yi seçin.":::
 
-4. Açılan **listeden MX'i** seçin.
+4. Açılan listeden **MX'i** seçin.
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="Tür açılan listesinden MX'i seçin.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="Tür açılan listesindeN MX'i seçin.":::
 
 5. Yeni kayıt kutularına, aşağıdaki tablodaki değerleri yazın ya da bu tablodan kopyalayıp yapıştırın.
 
-    (Tür **ve** **TTL** değerlerini açılan listeden seçin.)
+   (Açılan listeden **Tür** ve **TTL** değerlerini seçin.)
 
-    |**Tür**|**Ana Bilgisayar**|**Yönlendirme**|**Öncelik**|**TTL**|
-    |:-----|:-----|:-----|:-----|:-----|
-    |MX  <br/> |@  <br/> | *\<domain-key\>*  .mail.protection.outlook.com  <br/> **Not:** Microsoft hesabınızla  *\<domain-key\>*  oturum açın.           [How do I find this?](../get-help-with-domains/information-for-dns-records.md)          |10  <br/> Öncelik hakkında daha fazla bilgi için bkz. [MX önceliği nedir?](../setup/domains-faq.yml) <br/> |1 saat  <br/> |
+   |Tür|Ana Bilgisayar|İşaret edilen|Öncelik|TTL|
+   |---|---|---|---|---|
+   |MX|@| *\<domain-key\>*.mail.protection.outlook.com  <br/> **Not:** Microsoft hesabınızdan alın *\<domain-key\>* . [How do I find this?](../get-help-with-domains/information-for-dns-records.md)|10  <br/> Öncelik hakkında daha fazla bilgi için bkz. [MX önceliği nedir?](../setup/domains-faq.yml)|1 saat|
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="MX kaydı için tablodan değerleri doldurun.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="MX kaydının tablosundaki değerleri doldurun.":::
 
 6. **Kaydet**'i seçin.
 
@@ -159,177 +159,177 @@ Bir dosyada kaydı Microsoft 365:
 
 1. Başlamak için [bu bağlantıyı](https://account.godaddy.com/products/?go_redirect=disabled) kullanarak GoDaddy'deki etki alanları sayfanıza gidin.
 
-   Oturum açmanız istenirse, oturum açma kimlik bilgilerinizi kullanın, sağ üst köşedeki oturum açma adı'nızı ve ardından **Ürünlerim'i seçin**.
+   Oturum açmanız istenirse oturum açma kimlik bilgilerinizi kullanın, sağ üstteki oturum açma adınızı ve ardından **Ürünlerim'i** seçin.
 
-2. Etki **Alanları'nın** altında, doğrulamak istediğiniz etki alanının yanındaki üç noktayı seçin ve sonra da **DNS'yi Yönet'i seçin**.
+2. **Etki Alanları'nın** altında, doğrulamak istediğiniz etki alanının yanındaki üç noktayı seçin ve ardından **DNS'yi yönet'i** seçin.
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-1.png" alt-text="Açılan listeden DNS'yi Yönet'i seçin.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-1.png" alt-text="Açılan listeden DNS'yi yönet'i seçin.":::
 
-3. **Kayıtlar'ın altında** **EKLE'yi seçin**.
+3. **Kayıtlar'ın** altında **EKLE'yi** seçin.
 
    :::image type="content" source="../../media/dns/56527673-ffb3b300-651b-11e9-91c2-83dc9fe5ca30.png" alt-text="EKLE'yi seçin.":::
 
-4. Açılan **listeden CNAME'yi** seçin.
+4. Açılan listeden **CNAME'i** seçin.
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="Tür açılan listesinden CNAME'yi seçin.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="Tür açılan listesindeN CNAME'yi seçin.":::
 
 5. CNAME kaydını oluşturun.
 
-    Yeni kayıt kutularına, aşağıdaki tablonun ilk satırındaki değerleri yazın ya da bu tablodan kopyalayıp yapıştırın.
+   Yeni kayıt kutularına, aşağıdaki tablonun ilk satırındaki değerleri yazın ya da bu tablodan kopyalayıp yapıştırın.
 
-    (Açılan **listeden TTL** değerini seçin.)
+   (Açılan listeden **TTL** değerini seçin.)
 
-    |**Tür**|**Ana Bilgisayar**|**Yönlendirme**|**TTL**|
-    |:-----|:-----|:-----|:-----|
-    |CNAME  <br/> |autodiscover <br/> |autodiscover.outlook.com  <br/> |1 saat  <br/> |
+   |Tür|Ana Bilgisayar|İşaret edilen|TTL|
+   |---|---|---|---|
+   |CNAME|autodiscover|autodiscover.outlook.com|1 saat|
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-CNAME-values.png" alt-text="CNAME kaydı için tablodan değerleri doldurun.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-CNAME-values.png" alt-text="CNAME kaydının tablosundaki değerleri doldurun.":::
 
 6. **Kaydet**'i seçin.
 
 ### <a name="add-a-txt-record-for-spf-to-help-prevent-email-spam"></a>SPF'nin gereksiz e-postaları önlemesine yardımcı olmak için TXT kaydı ekleme
 
 > [!IMPORTANT]
-> Bir etki alanına yönelik SPF için birden fazla TXT kaydına sahip olamazsınız. Etki alanınızda birden fazla SPF kaydı varsa bu durum, e-posta hatalarının yanı sıra teslimat ve istenmeyen posta sınıflandırma sorunlarına neden olabilir. Etki alanınız için zaten bir SPF kaydınız varsa Microsoft için yeni bir SPF kaydı oluşturun. Bunun yerine, her iki değer kümesi de içeren tek  *bir SPF*  kaydına sahip olmak için gerekli Microsoft değerlerini geçerli kayda ekleyin.
+> Bir etki alanına yönelik SPF için birden fazla TXT kaydına sahip olamazsınız. Etki alanınızda birden fazla SPF kaydı varsa bu durum, e-posta hatalarının yanı sıra teslimat ve istenmeyen posta sınıflandırma sorunlarına neden olabilir. Etki alanınız için zaten bir SPF kaydınız varsa, Microsoft için yeni bir tane oluşturmayın. Bunun yerine, her iki değer kümesini içeren  *tek*  bir SPF kaydına sahip olmak için gerekli Microsoft değerlerini geçerli kayda ekleyin.
 
 1. Başlamak için [bu bağlantıyı](https://account.godaddy.com/products/?go_redirect=disabled) kullanarak GoDaddy'deki etki alanları sayfanıza gidin.
 
-   Oturum açmanız istenirse, oturum açma kimlik bilgilerinizi kullanın, sağ üst köşedeki oturum açma adı'nızı ve ardından **Ürünlerim'i seçin**.
+   Oturum açmanız istenirse oturum açma kimlik bilgilerinizi kullanın, sağ üstteki oturum açma adınızı ve ardından **Ürünlerim'i** seçin.
 
-2. Etki **Alanları'nın** altında, doğrulamak istediğiniz etki alanının yanındaki üç noktayı seçin ve sonra da **DNS'yi Yönet'i seçin**.
+2. **Etki Alanları'nın** altında, doğrulamak istediğiniz etki alanının yanındaki üç noktayı seçin ve ardından **DNS'yi yönet'i** seçin.
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-1.png" alt-text="Açılan listeden DNS'yi Yönet'i seçin.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-1.png" alt-text="Açılan listeden DNS'yi yönet'i seçin.":::
 
-3. **Kayıtlar'ın altında** **EKLE'yi seçin**.
+3. **Kayıtlar'ın** altında **EKLE'yi** seçin.
 
    :::image type="content" source="../../media/dns/56527673-ffb3b300-651b-11e9-91c2-83dc9fe5ca30.png" alt-text="EKLE'yi seçin.":::
 
-4. Açılan **listeden TXT'yi** seçin.
+4. Açılan listeden **TXT'yi** seçin.
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="Tür açılan listesinden TXT'yi seçin.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="Tür açılan listesinde TXT'yi seçin.":::
 
 5. In the boxes for the new record, type or copy and paste the following values.
 
-    (Açılan **listelerden TTL** değerini seçin.)
+   (Açılan listelerden **TTL** değerini seçin.)
 
-    |**Tür**|**Ana Bilgisayar**|**TXT Değeri**|**TTL**|
-    |:-----|:-----|:-----|:-----|
-    |TXT <br/> |@  <br/> |v=spf1 include:spf.protection.outlook.com -all  <br/> **Not:** Tüm boşlukların doğru kalması için bu girdiyi kopyalayıp yapıştırarak bu dosyayı yapıştırın. |1 saat  <br/> |
+   |Tür|Ana Bilgisayar|TXT Değeri|TTL|
+   |---|---|---|---|
+   |TXT|@|v=spf1 include:spf.protection.outlook.com -all  <br/> **Not:** Tüm aralıkların doğru kalması için bu girdiyi kopyalayıp yapıştırmanızı öneririz.|1 saat|
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-TXT-values.png" alt-text="TXT kaydı için tablodan değerleri doldurun.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-TXT-values.png" alt-text="TXT kaydının tablosundaki değerleri doldurun.":::
 
 6. **Kaydet**'i seçin.
 
-## <a name="advanced-option-skype-for-business"></a>Gelişmiş seçenek: Skype Kurumsal
+## <a name="advanced-option-skype-for-business"></a>Gelişmiş seçenek: Skype for Business
 
-Yalnızca, bu seçeneği yalnızca, Skype Kurumsal yanı sıra sohbet, konferans aramaları ve görüntülü aramalar gibi çevrimiçi iletişim hizmetleri için Microsoft Teams. Skype için 4 kayıt gerekir: Oturum açma ve kullanıcıları hizmete bağlamak için 2 kullanıcı-kullanıcı iletişim için SRV kaydı ve 2 CNAME kaydı.
+Yalnızca kuruluşunuz Microsoft Teams ek olarak sohbet, konferans aramaları ve görüntülü aramalar gibi çevrimiçi iletişim hizmetleri için Skype for Business kullanıyorsa bu seçeneği belirleyin. Skype 4 kayıt gerekir: Kullanıcıdan kullanıcıya iletişim için 2 SRV kaydı ve oturum açıp kullanıcıları hizmete bağlamak için 2 CNAME kaydı.
 
-### <a name="add-the-two-required-srv-records"></a>Gerekli iki SRV kaydı ekleme
+### <a name="add-the-two-required-srv-records"></a>Gerekli iki SRV kaydını ekleme
 
 1. Başlamak için [bu bağlantıyı](https://account.godaddy.com/products/?go_redirect=disabled) kullanarak GoDaddy'deki etki alanları sayfanıza gidin.
 
-   Oturum açmanız istenirse, oturum açma kimlik bilgilerinizi kullanın, sağ üst köşedeki oturum açma adı'nızı ve ardından **Ürünlerim'i seçin**.
+   Oturum açmanız istenirse oturum açma kimlik bilgilerinizi kullanın, sağ üstteki oturum açma adınızı ve ardından **Ürünlerim'i** seçin.
 
-1. Etki **Alanları'nın** altında, doğrulamak istediğiniz etki alanının yanındaki üç noktayı seçin ve sonra da **DNS'yi Yönet'i seçin**.
+1. **Etki Alanları'nın** altında, doğrulamak istediğiniz etki alanının yanındaki üç noktayı seçin ve ardından **DNS'yi yönet'i** seçin.
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-1.png" alt-text="Açılan listeden DNS'yi Yönet'i seçin.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-1.png" alt-text="Açılan listeden DNS'yi yönet'i seçin.":::
 
-1. **Kayıtlar'ın altında** **EKLE'yi seçin**.
+1. **Kayıtlar'ın** altında **EKLE'yi** seçin.
 
    :::image type="content" source="../../media/dns/56527673-ffb3b300-651b-11e9-91c2-83dc9fe5ca30.png" alt-text="EKLE'yi seçin.":::
 
-1. Açılan **listeden SRV'yi** seçin.
+1. Açılan listeden **SRV'yi** seçin.
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="Tür açılan listesinden SRV'yi seçin.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="Tür açılan listesindeN SRV'yi seçin.":::
 
 1. İlk SRV kaydını oluşturun.
 
-    Yeni kayıt kutularına, aşağıdaki tablonun ilk satırındaki değerleri yazın ya da bu tablodan kopyalayıp yapıştırın.
+   Yeni kayıt kutularına, aşağıdaki tablonun ilk satırındaki değerleri yazın ya da bu tablodan kopyalayıp yapıştırın.
 
-    (Açılır **listelerden** **Tür ve TTL** değerlerini seçin.)
+   (Açılan listelerden **Tür** ve **TTL** değerlerini seçin.)
 
-    |**Tür**|**Hizmet**|**Protokol**| **Ad** | **Hedef**|**Öncelik**|**Ağırlık**|**Bağlantı Noktası**|**TTL**|
-    |:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-    |SRV   <br/> |_sip  <br/> |_tls  <br/> |@  <br/> |sipdir.online.lync.com  <br/> |100 <br/> | 1  <br/> |443  <br/> |1 Saat  <br/> |
-    |SRV  <br/> |_sipfederationtls  <br/> |_tcp  <br/> |@  <br/> | sipfed.online.lync.com  <br/> | 100  <br/> |1  <br/> |5061  <br/> |1 Saat  <br/> |
+   |Tür|Hizmet|Protokol|Name|Hedef|Öncelik|Ağırlık|Bağlantı noktası|TTL|
+   |---|---|---|---|---|---|---|---|---|
+   |SRV|_sip|_tls|@|sipdir.online.lync.com|100| 1|443|1 Saat|
+   |SRV|_sipfederationtls|_tcp|@| sipfed.online.lync.com| 100|1|5061|1 Saat|
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-SRV-values.png" alt-text="SRV kaydı için tablodan değerleri doldurun.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-SRV-values.png" alt-text="SRV kaydının tablosundaki değerleri doldurun.":::
 
 1. **Kaydet**'i seçin.
 
-1. Tablonun ikinci satırdan değerleri seçerek diğer SRV kaydını ekleyin.
+1. Tablonun ikinci satırından değerleri seçerek diğer SRV kaydını ekleyin.
 
 > [!NOTE]
 > Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışı sorunlarıyla veya başka sorunlarla karşılaşırsanız, [Etki alanı adınızı veya DNS kayıtlarınızı değiştirdikten sonra sorunları giderme](../get-help-with-domains/find-and-fix-issues.md) konusuna bakın.
 
-### <a name="add-the-two-required-cname-records"></a>Gerekli iki CNAME kaydı ekleme
+### <a name="add-the-two-required-cname-records-for-skype-for-business"></a>Skype for Business için gereken iki CNAME kaydını ekleme
   
 1. Başlamak için [bu bağlantıyı](https://account.godaddy.com/products/?go_redirect=disabled) kullanarak GoDaddy'deki etki alanları sayfanıza gidin.
 
-   Oturum açmanız istenirse, oturum açma kimlik bilgilerinizi kullanın, sağ üst köşedeki oturum açma adı'nızı ve ardından **Ürünlerim'i seçin**.
+   Oturum açmanız istenirse oturum açma kimlik bilgilerinizi kullanın, sağ üstteki oturum açma adınızı ve ardından **Ürünlerim'i** seçin.
 
-2. Etki **Alanları'nın** altında, doğrulamak istediğiniz etki alanının yanındaki üç noktayı seçin ve sonra da **DNS'yi Yönet'i seçin**.
+1. **Etki Alanları'nın** altında, doğrulamak istediğiniz etki alanının yanındaki üç noktayı seçin ve ardından **DNS'yi yönet'i** seçin.
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-1.png" alt-text="Açılan listeden DNS'yi Yönet'i seçin.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-1.png" alt-text="Açılan listeden DNS'yi yönet'i seçin.":::
 
-1. **Kayıtlar'ın altında** **EKLE'yi seçin**.
+1. **Kayıtlar'ın** altında **EKLE'yi** seçin.
 
    :::image type="content" source="../../media/dns/56527673-ffb3b300-651b-11e9-91c2-83dc9fe5ca30.png" alt-text="EKLE'yi seçin.":::
 
-1. Açılan **listeden CNAME'yi** seçin.
+1. Açılan listeden **CNAME'i** seçin.
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="Tür açılan listesinden CNAME'yi seçin.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="Tür açılan listesindeN CNAME'yi seçin.":::
 
-1. Yeni kayıtların boş kutularına, aşağıdaki tablonun ilk satırdaki değerleri yazın veya kopyalayıp yapıştırın.
+1. Yeni kayıtların boş kutularına, aşağıdaki tablonun ilk satırında yer alan değerleri yazın veya kopyalayıp yapıştırın.
 
-    |**Tür**|**Ana Bilgisayar**|**Yönlendirme**|**TTL**|
-    |:-----|:-----|:-----|:-----|
-    |CNAME  <br/> |sip  <br/> |sipdir.online.lync.com.  <br/> **Bu değer nokta (.) ile bitmelidir.** <br/> |1 Saat  <br/> |
-    |CNAME  <br/> |lyncdiscover  <br/> |webdir.online.lync.com.  <br/> **Bu değer nokta (.) ile bitmelidir.** <br/> |1 Saat  <br/> |
+   |Tür|Ana Bilgisayar|İşaret edilen|TTL|
+   |---|---|---|---|
+   |CNAME|sip|sipdir.online.lync.com.  <br/> **Bu değer nokta (.) ile bitmelidir.**|1 Saat|
+   |CNAME|lyncdiscover|webdir.online.lync.com.  <br/> **Bu değer nokta (.) ile bitmelidir.**|1 Saat|
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-CNAME-values.png" alt-text="CNAME kaydı için tablodan değerleri doldurun.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-CNAME-values.png" alt-text="CNAME kaydının tablosundaki değerleri doldurun.":::
   
 1. **Kaydet**'i seçin.
   
-1. Tablonun ikinci satırdan değerleri seçerek diğer CNAME kaydını ekleyin.
+1. Tablonun ikinci satırından değerleri seçerek diğer CNAME kaydını ekleyin.
 
 > [!NOTE]
 > Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışı sorunlarıyla veya başka sorunlarla karşılaşırsanız, [Etki alanı adınızı veya DNS kayıtlarınızı değiştirdikten sonra sorunları giderme](../get-help-with-domains/find-and-fix-issues.md) konusuna bakın.
   
-## <a name="advanced-option-intune-and-mobile-device-management-for-microsoft-365"></a>Gelişmiş seçenek: Mobil Cihazlar için Intune ve Mobil Microsoft 365
+## <a name="advanced-option-intune-and-mobile-device-management-for-microsoft-365"></a>Gelişmiş seçenek: Microsoft 365 için Intune ve Mobil Cihaz Yönetimi
 
-Bu hizmet, etki alanınıza bağlı mobil cihazların güvenliğini sağlamanıza ve uzaktan yönetmenize yardımcı olur. Mobil Cihaz Yönetimi'nin, kullanıcıların cihazları hizmete kaydedeni için 2 CNAME kaydı olması gerekir.
+Bu hizmet, etki alanınıza bağlanan mobil cihazları güvenli ve uzaktan yönetmenize yardımcı olur. Mobil Cihaz Yönetimi, kullanıcıların cihazları hizmete kaydedebilmesi için 2 CNAME kaydına ihtiyaç duyar.
 
-### <a name="add-the-two-required-cname-records"></a>Gerekli iki CNAME kaydı ekleme
+### <a name="add-the-two-required-cname-records-mobile-device-management"></a>Mobil Cihaz Yönetimi gerekli iki CNAME kaydını ekleme
 
 1. Başlamak için [bu bağlantıyı](https://account.godaddy.com/products/?go_redirect=disabled) kullanarak GoDaddy'deki etki alanları sayfanıza gidin.
 
-   Oturum açmanız istenirse, oturum açma kimlik bilgilerinizi kullanın, sağ üst köşedeki oturum açma adı'nızı ve ardından **Ürünlerim'i seçin**.
+   Oturum açmanız istenirse oturum açma kimlik bilgilerinizi kullanın, sağ üstteki oturum açma adınızı ve ardından **Ürünlerim'i** seçin.
 
-1. Etki **Alanları'nın** altında, doğrulamak istediğiniz etki alanının yanındaki üç noktayı seçin ve sonra da **DNS'yi Yönet'i seçin**.
+1. **Etki Alanları'nın** altında, doğrulamak istediğiniz etki alanının yanındaki üç noktayı seçin ve ardından **DNS'yi yönet'i** seçin.
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-1.png" alt-text="Açılan listeden DNS'yi Yönet'i seçin.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-1.png" alt-text="Açılan listeden DNS'yi yönet'i seçin.":::
 
-1. **Kayıtlar'ın altında** **EKLE'yi seçin**.
+1. **Kayıtlar'ın** altında **EKLE'yi** seçin.
 
    :::image type="content" source="../../media/dns/56527673-ffb3b300-651b-11e9-91c2-83dc9fe5ca30.png" alt-text="EKLE'yi seçin.":::
 
-1. Açılan **listeden CNAME'yi** seçin.
+1. Açılan listeden **CNAME'i** seçin.
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="Tür açılan listesinden CNAME'yi seçin.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-Type.png" alt-text="Tür açılan listesindeN CNAME'yi seçin.":::
 
-1. Yeni kayıtların boş kutularına, aşağıdaki tablonun ilk satırdaki değerleri yazın veya kopyalayıp yapıştırın.
+1. Yeni kayıtların boş kutularına, aşağıdaki tablonun ilk satırında yer alan değerleri yazın veya kopyalayıp yapıştırın.
 
-    |**Tür**|**Ana Bilgisayar**|**Yönlendirme**|**TTL**|
-    |:-----|:-----|:-----|:-----|
-    |CNAME  <br/> |enterpriseregistration  <br/> |enterpriseregistration.windows.net.  <br/> **Bu değer nokta (.) ile bitmelidir.** <br/> |1 Saat  <br/> |
-    |CNAME  <br/> |enterpriseenrollment  <br/> |enterpriseenrollment-s.manage.microsoft.com.  <br/> **Bu değer nokta (.) ile bitmelidir.** <br/> |1 Saat  <br/> |
+   |Tür|Ana Bilgisayar|İşaret edilen|TTL|
+   |---|---|---|---|
+   |CNAME|enterpriseregistration|enterpriseregistration.windows.net.  <br/> **Bu değer nokta (.) ile bitmelidir.**|1 Saat|
+   |CNAME|enterpriseenrollment|enterpriseenrollment-s.manage.microsoft.com.  <br/> **Bu değer nokta (.) ile bitmelidir.**|1 Saat|
 
-   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-CNAME-values.png" alt-text="CNAME kaydı için tablodan değerleri doldurun.":::
+   :::image type="content" source="../../media/dns-godaddy/godaddy-domains-CNAME-values.png" alt-text="CNAME kaydının tablosundaki değerleri doldurun.":::
   
 1. **Kaydet**'i seçin.
   
-1. Tablonun ikinci satırdan değerleri seçerek diğer CNAME kaydını ekleyin.
+1. Tablonun ikinci satırından değerleri seçerek diğer CNAME kaydını ekleyin.
 
 > [!NOTE]
 > Genellikle, DNS değişikliklerinin etkili olması yaklaşık 15 dakika sürer. Bununla birlikte, yaptığınız değişikliğin İnternet'in DNS sistemi genelinde güncelleştirilmesi bazen daha uzun sürebilir. DNS kayıtlarını ekledikten sonra posta akışı sorunlarıyla veya başka sorunlarla karşılaşırsanız, [Etki alanı adınızı veya DNS kayıtlarınızı değiştirdikten sonra sorunları giderme](../get-help-with-domains/find-and-fix-issues.md) konusuna bakın.

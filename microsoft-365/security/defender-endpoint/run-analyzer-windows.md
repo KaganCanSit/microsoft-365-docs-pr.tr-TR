@@ -1,7 +1,7 @@
 ---
-title: İstemci çözümleyicisini çözümleyiciyi çalışma Windows
-description: Windows'de Uç Nokta için Microsoft Defender Çözümleyicisi'nin nasıl çalıştır Windows.
-keywords: istemci çözümleyicisi, algılayıcı, çözümleyici, mdeanalyzer, windows sorunlarını giderme
+title: İstemci çözümleyicisini Windows’da çalıştırın
+description: Windows'da Pertahanan Microsoft untuk Titik Akhir İstemci Çözümleyicisi'ni çalıştırmayı öğrenin.
+keywords: istemci çözümleyicisi, sorun giderme algılayıcısı, çözümleyici, mdeanalyzer, windows
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -18,103 +18,103 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 5fa284f5c57214f356bb6b90e12ca60ae019d277
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 5ac27241297b9943f1559653777b8e1668fe7f89
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64467147"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64783039"
 ---
-# <a name="run-the-client-analyzer-on-windows"></a>İstemci çözümleyicisini çözümleyiciyi çalışma Windows
+# <a name="run-the-client-analyzer-on-windows"></a>İstemci çözümleyicisini Windows’da çalıştırın
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-1. [MDE İstemci Çözümleyicisi aracını](https://aka.ms/mdatpanalyzer) araştırmaniz Windows makineye indirin.
+1. [MDE İstemci Çözümleyicisi aracını](https://aka.ms/mdatpanalyzer) araştırmanız gereken Windows makinesine indirin.
 
-2. Makinede MDEClientAnalyzer.zip içeriğini ayıkla.
+2. Makinedeki MDEClientAnalyzer.zip içeriğini ayıklayın.
 
 3. Yükseltilmiş bir komut satırı açın:
-    1. **Başlat'a gidin** ve **cmd yazın**.
-    2. Komut istemi'ne **sağ tıklayın ve** Yönetici olarak **çalıştır'ı seçin**.
+    1. **Başlangıç'a** gidin ve **cmd** yazın.
+    2. **Komut istemi'ne** sağ tıklayın ve **Yönetici olarak çalıştır'ı** seçin.
 
-4. Aşağıdaki komutu girin ve Enter tuşuna **basın**:
+4. Aşağıdaki komutu girin ve **Enter tuşuna** basın:
 
    ```dos
    HardDrivePath\MDEClientAnalyzer.cmd
    ```
 
-   **Örneğin, SabitDrivePath'i aracın ayıklanan yol ile değiştirin:**
+   **HardDrivePath'i aracın ayıklandığı yolla değiştirin, örneğin:**
 
    ```dos
    C:\Work\tools\MDEClientAnalyzer\MDEClientAnalyzer.cmd
    ```
 
-Yukarıdakilere ek olarak, canlı yanıt kullanarak çözümleyici destek [günlüklerini toplama seçeneği de vardır](troubleshoot-collect-support-log.md).
+Yukarıdakilere ek olarak, [canlı yanıt kullanarak çözümleyici destek günlüklerini toplama](troubleshoot-collect-support-log.md) seçeneği de vardır..
 
 > [!NOTE]
-> Modern birleşik çözümün yüklü olduğu Windows 10/11, Windows Server 2019/2022 veya Windows Server 2012R2/2016'da, [](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution-preview) `MDEClientAnalyzer.exe` istemci çözümleyicisi betiği, bulut hizmeti URL'lerine bağlantı testlerini çalıştırmak için adlandırılan bir yürütülebilir dosyaya çağrılar.
+> Windows 10/11, Windows Server 2019/2022 veya modern [birleşik çözüm](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) yüklü Windows Server 2012R2/2016'da istemci çözümleyici betiği, bulut hizmeti URL'lerine bağlantı testlerini çalıştırmak için adlı `MDEClientAnalyzer.exe` yürütülebilir bir dosyaya çağrır.
 >
-> Ekleme Windows 8.1, Microsoft Monitoring Agent Windows Server 2016 (MMA) kullanılan önceki herhangi bir OS sürümü gibi istemci çözümleyicisi betiği, `MDEClientAnalyzerPreviousVersion.exe` Komut ve Denetim (CnC) URL'leri için bağlantı testleri çalıştırmak üzere çağrılmak üzere bir yürütülebilir dosyaya çağrılar. Microsoft Monitoring Agent Veri kanalı `TestCloudConnection.exe` URL'leri için bir bağlantı aracı sağlar.
+> Windows 8.1, Windows Server 2016 veya ekleme için Microsoft Monitoring Agent (MMA) kullanılan önceki işletim sistemi sürümlerinde, istemci çözümleyicisi betiği Komut ve Denetim (CnC) URL'leri için bağlantı testlerini çalıştırmak için adlı `MDEClientAnalyzerPreviousVersion.exe` yürütülebilir bir dosyaya çağrı yaparken Siber Veri kanalı URL'leri için Microsoft Monitoring Agent bağlantı aracı`TestCloudConnection.exe`.
 
 
-Çözümleyicide yer alan tüm PowerShell betikleri ve modülleri Microsoft tarafından imzalanmıştır.
-Dosyalar herhangi bir şekilde değiştirildiyse, çözümleyicinin aşağıdaki hatayla birlikte çıkışı bekleniyor:
+Çözümleyiciye dahil edilen tüm PowerShell betikleri ve modülleri Microsoft tarafından imzalandı.
+Dosyalar herhangi bir şekilde değiştirilmişse çözümleyicinin aşağıdaki hatayla çıkması beklenir:
 
 :::image type="content" source="images/sigerror.png" alt-text="İstemci çözümleyici hatası" lightbox="images/sigerror.png":::
 
 
-Bu hata gösteriliyorsa, hata issuerInfo.txt bu hatanın nedeni ve hangi dosyanın etkilendiği hakkında ayrıntılı bilgi içerir:
+Bu hata gösteriliyorsa, issuerInfo.txt çıkışında bunun neden olduğu ve hangi dosyanın etkilendiği hakkında ayrıntılı bilgiler yer alır:
 
-:::image type="content" source="images/issuerinfo.png" alt-text="Issuer bilgileri" lightbox="images/issuerinfo.png":::
-
-
-Değişiklik yapıldıktan sonra MDEClientAnalyzer.ps1 içeriği:
-
-:::image type="content" source="images/modified-ps1.png" alt-text="Değiştirilmiş ps1 dosyası" lightbox="images/modified-ps1.png":::
+:::image type="content" source="images/issuerinfo.png" alt-text="Veren bilgileri" lightbox="images/issuerinfo.png":::
 
 
+MDEClientAnalyzer.ps1 değiştirildikten sonra örnek içerik:
 
-## <a name="result-package-contents-on-windows"></a>Sonuç paketi içeriği Windows
+:::image type="content" source="images/modified-ps1.png" alt-text="Değiştirilen ps1 dosyası" lightbox="images/modified-ps1.png":::
+
+
+
+## <a name="result-package-contents-on-windows"></a>Windows'da sonuç paketi içeriği
 
 > [!NOTE]
-> Tam olarak yakalanan dosyalar, aşağıdakiler gibi faktörlere bağlı olarak değişebilir:
+> Yakalanan dosyaların tam olarak değişmesi, aşağıdakiler gibi faktörlere bağlı olarak değişebilir:
 >
-> - Çözümleyicinin çalıştır olduğu pencerelerin sürümü.
+> - Çözümleyicinin çalıştırıldığı pencerelerin sürümü.
 > - Makinede olay günlüğü kanalı kullanılabilirliği.
-> - Algılayıcının başlangıç EDR (Makine henüz yerleşik olarak gelmediyse Algı durdurulur).
-> - Çözümleyici komutuyla gelişmiş bir sorun giderme parametresi kullanılmışsa.
+> - EDR algılayıcısının başlangıç durumu (Makine henüz eklenmemişse Akıllı durdurulur).
+> - Çözümleyici komutuyla gelişmiş bir sorun giderme parametresi kullanıldıysa.
 
-Varsayılan olarak, paketsiz MDEClientAnalyzerResult.zip aşağıdaki öğeleri içerir.
+Paketlenmemiş MDEClientAnalyzerResult.zip dosyası varsayılan olarak aşağıdaki öğeleri içerir.
 
 - MDEClientAnalyzer.htm
 
-  Bu, çözümleyici betiğinin makinede çalıştırabildiklerini ve içereyle ilgili bulguları ve kılavuzu içeren ana HTML çıkış dosyasıdır.
+  Bu, çözümleyici betiğinin makinede çalıştırabileceği bulguları ve yönergeleri içeren ana HTML çıkış dosyasıdır.
 
 - SystemInfoLogs \[Klasörü\]
   - AddRemovePrograms.csv
 
-    Açıklama: Kayıt defterinden toplanan x64 işletim sistemi yazılımında x86 yüklü yazılımın listesi.
+    Açıklama: Kayıt defterinden toplanan x64 işletim sistemi yazılımındaki x86 yüklü yazılımların listesi.
 
   - AddRemoveProgramsWOW64.csv
 
-    Açıklama: Kayıt defterinden toplanan x64 işletim sistemi yazılımında x86 yüklü yazılımın listesi.
+    Açıklama: Kayıt defterinden toplanan x64 işletim sistemi yazılımındaki x86 yüklü yazılımların listesi.
 
     - CertValidate.log
 
-      Açıklama: CertUtil'e çağrılarak yürütülen sertifika iptali [sonucunda ayrıntılı sonuç](/windows-server/administration/windows-commands/certutil).
+      Açıklama: [CertUtil'e](/windows-server/administration/windows-commands/certutil) çağrılarak yürütülen sertifika iptalinden ayrıntılı sonuç.
 
     - dsregcmd.txt
 
-      Açıklama: [dsregcmd çalıştırarak çıktı](/azure/active-directory/devices/troubleshoot-device-dsregcmd). Bu işlem, makinenin Azure AD durumu hakkında ayrıntılı bilgi sağlar.
+      Açıklama: [dsregcmd](/azure/active-directory/devices/troubleshoot-device-dsregcmd) çalıştırılan çıktı. Bu, makinenin Azure AD durumuyla ilgili ayrıntıları sağlar.
 
     - IFEO.txt
 
-      Açıklama: [Makinede yapılandırılmış Görüntü Dosyası](/previous-versions/windows/desktop/xperf/image-file-execution-options) Yürütme Seçeneklerinin çıkışı
+      Açıklama: Makinede yapılandırılan [Görüntü Dosyası Yürütme Seçeneklerinin](/previous-versions/windows/desktop/xperf/image-file-execution-options) çıkışı
 
     - MDEClientAnalyzer.txt
 
-      Açıklama: Bu, çözümleyici betiği yürütmenin ayrıntılarını gösteren ayrıntılı metin dosyasıdır.
+      Açıklama: Bu, çözümleyici betiği yürütme ayrıntılarıyla birlikte gösterilen ayrıntılı metin dosyasıdır.
 
     - MDEClientAnalyzer.xml
 
@@ -122,15 +122,15 @@ Varsayılan olarak, paketsiz MDEClientAnalyzerResult.zip aşağıdaki öğeleri 
 
     - RegOnboardedInfoCurrent.Json
 
-      Açıklama: Kayıt defterinden JSON biçiminde toplanmış, yerleşik makine bilgileri.
+      Açıklama: Kayıt defterinden JSON biçiminde toplanan eklenen makine bilgileri.
 
   - RegOnboardingInfoPolicy.Json
 
-    Açıklama: Kayıt defterinden JSON biçiminde toplanmış ekleme ilkesi yapılandırması.
+    Açıklama: Kayıt defterinden JSON biçiminde toplanan ekleme ilkesi yapılandırması.
 
     - SCHANNEL.txt
 
-      Açıklama: Kayıt defterinden toplanmış gibi bir makineye uygulanan [SCHANNEL](/windows-server/security/tls/manage-tls) yapılandırmasıyla ilgili ayrıntılar.
+      Açıklama: Kayıt defterinden toplanan makineye uygulanan [SCHANNEL yapılandırmasıyla](/windows-server/security/tls/manage-tls) ilgili ayrıntılar.
 
     - SessionManager.txt
 
@@ -138,7 +138,7 @@ Varsayılan olarak, paketsiz MDEClientAnalyzerResult.zip aşağıdaki öğeleri 
 
     - SSL_00010002.txt
 
-      Açıklama: Kayıt defterinden [toplanmış](/windows-server/security/tls/manage-tls) makineye uygulanan SSL yapılandırmasıyla ilgili ayrıntılar.
+      Açıklama: Kayıt defterinden toplanan makineye uygulanan [SSL yapılandırmasıyla](/windows-server/security/tls/manage-tls) ilgili ayrıntılar.
 
 - EventLogs [Klasör]
 
@@ -163,7 +163,7 @@ Varsayılan olarak, paketsiz MDEClientAnalyzerResult.zip aşağıdaki öğeleri 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İstemci çözümleyicisi genel bakış](overview-client-analyzer.md)
-- [İstemci çözümleyicisini indirme ve çalıştırma](download-client-analyzer.md)
-- [Windows'da gelişmiş sorun giderme için veri Windows](data-collection-analyzer.md)
-- [Çözümleyici HTML raporunu anlama](analyzer-report.md)
+- [İstemci çözümleyicisine genel bakış](overview-client-analyzer.md)
+- [İstemci çözümleyicisini indirin ve çalıştırın](download-client-analyzer.md)
+- [Windows'da gelişmiş sorun giderme için veri toplama](data-collection-analyzer.md)
+- [Çözümleyici HTML raporunu inceleyin](analyzer-report.md)

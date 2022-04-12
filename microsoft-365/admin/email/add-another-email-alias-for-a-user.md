@@ -23,42 +23,42 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 0b0bd900-68b1-4bf5-808b-5d240a7739f4
-description: 'İş için Microsoft Hesabınızla ilişkilendirilmiş, e-posta diğer adı olarak adlandırılan birden Microsoft 365 e-posta adresinizin nasıl olduğunu öğrenin. '
-ms.openlocfilehash: f5adc9e48110aa1e2a2e6c87f2c2f7847986d741
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+description: 'İşletmeler için Microsoft 365 hesabınızla ilişkilendirilmiş, e-posta diğer adı olarak adlandırılan birden fazla e-posta adresine nasıl sahip olabileceğinizi öğrenin. '
+ms.openlocfilehash: 19303cb2c60455713595dbe23a23bae7e57efb71
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "62973893"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64780225"
 ---
 # <a name="add-another-email-alias-for-a-user"></a>Bir kullanıcı için başka bir e-posta diğer adı ekleme
   
-Bu makale, iş Microsoft 365 yöneticilerine göre hazırlanmıştır. Ev kullanıcılarına yönelik değildir.
+Bu makale, iş abonelikleri olan Microsoft 365 yöneticilere yöneliktir. Ev kullanıcılarına yönelik değildir.
   
-E-posta Microsoft 365 birincil e-posta adresi genellikle kullanıcının hesabı oluşturulurken atanan e-posta adresidir. Kullanıcı başka birine e-posta gönderdiğinde, birincil e-posta adresi normalde e-posta uygulamalarının  *Kimden*  alanında gösterilen adrestir. Ayrıca, iş hesabı için e-posta adresleriyle ilişkilendirilmiş birden Microsoft 365 olabilir. Bu ek adresler, diğer ad olarak adlandırılır. 
+Microsoft 365 birincil e-posta adresi genellikle bir kullanıcının hesabı oluşturulduğunda atanmış olan e-posta adresidir. Kullanıcı başka birine e-posta gönderdiğinde, birincil e-posta adresi normalde e-posta uygulamalarının  *Kimden*  alanında gösterilen adrestir. Ayrıca, iş için Microsoft 365 hesaplarıyla ilişkilendirilmiş birden fazla e-posta adresi de olabilir. Bu ek adresler, diğer ad olarak adlandırılır. 
   
-Örneğin, her Zaman'ın e-posta adresinin Jenna@contosoco.com olduğunu, ancak bazı kişilerin ona bu adı kullanarak başvurdu jen@contosoco.com da e-posta almak istediğini var diyelim. Her iki e-posta adresinin Deha'nın gelen kutusu'na gitmeleri için onun için diğer adlar oluşturabilirsiniz.
+Örneğin Jenna'nın e-posta adresi jenna@contosoco.com olduğunu, ancak bazı kişilerin ona bu adla başvurması nedeniyle jen@contosoco.com de e-posta almak istediğini varsayalım. Her iki e-posta adresinin de Jenna'nın gelen kutusuna gitmesi için onun için diğer adlar oluşturabilirsiniz.
   
 Bir kullanıcı için 400 adede kadar diğer ad oluşturabilirsiniz. Bunun için ek ücret veya lisans gerekmez.
   
 > [!Tip]
-> Birden çok kişinin E-posta gibi tek bir e-posta adresine gönderilen e-info@NodPublishers.com sales@NodPublishers.com, paylaşılan bir posta kutusu oluşturun. Daha fazla bilgi edinmek için bkz [. Paylaşılan posta kutusu oluşturma](create-a-shared-mailbox.md).
+> Birden çok kişinin info@NodPublishers.com veya sales@NodPublishers.com gibi tek bir e-posta adresine gönderilen e-postaları yönetmesini istiyorsanız, paylaşılan bir posta kutusu oluşturun. Daha fazla bilgi için bkz. [Paylaşılan posta kutusu oluşturma](create-a-shared-mailbox.md).
 
 > [!TIP]
-> Bu konudaki adımlarda yardıma ihtiyacınız varsa, [Microsoft küçük işletme uzmanıyla çalışmayı göz önünde bulundurabilirsiniz](https://go.microsoft.com/fwlink/?linkid=2186871). İş Yardımı ile, işe alımtan günlük kullanıma kadar işlerinizi büyüttükçe siz ve çalışanlarınız küçük işletme uzmanlarına 24 saat erişim elde ediyor.
+> Bu konuda verilen adımlarla ilgili yardıma ihtiyacınız varsa, [bir Microsoft küçük işletme uzmanıyla çalışmayı](https://go.microsoft.com/fwlink/?linkid=2186871) göz önünde bulundurun. İşletme Yardımı ile, işletmenizi büyütürken katılımdan gündelik kullanıma kadar her aşamada siz ve çalışanlarınız günün 24 saati küçük işletme uzmanlarına erişebilirsiniz.
   
 ## <a name="add-email-aliases-to-a-user"></a>Bir kullanıcıya e-posta diğer adı ekleme
 
-Bir kullanıcıya e-posta diğer adı eklemek için Genel Yönetici haklarına sahip olmak gerekir.
+Kullanıcıya e-posta diğer adları eklemek için Genel Yönetici haklarına sahip olmanız gerekir.
 
 1. Yönetici merkezinde, **Kullanıcılar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Etkin kullanıcılar</a> sayfasına gidin.
 
-2. Etkin Kullanıcılar **sayfasında Kullanıcı adını** ve e-postayı > **öğesini seçin**. Kişiye atanmış lisansı yoksa bu seçeneği görmeyebilirsiniz. 
+2. **Etkin Kullanıcılar** sayfasında Kullanıcı **adını ve e-postayı yönet** > kullanıcıyı seçin. Kişinin kendisine atanmış bir lisansı yoksa bu seçeneği görmezsiniz. 
     
-3. + **Diğer ad ekle'yi** seçin ve kullanıcı için yeni bir diğer ad girin.   
+3. **+ Diğer ad ekle'yi** seçin ve kullanıcı için yeni bir diğer ad girin.   
     
     > [!Important] 
-    > "**'EmailAddresses**' parametre adıyla eşleşen bir parametre bulunamadı" hata iletisini alırsanız, kiracınızı veya özel etki alanınızı (yakın zamanda bir özel etki alanı eklediyseniz) ayarlamayı bitirmenin biraz uzun sürecek olduğu anlamına gelir. Ayarlama işleminin tamamlanması 4 saat kadar sürebilir. Biraz bekleyerek ayarlama işleminin bitmesi için zaman tanıyın ve sonra yeniden deneyin. Sorun devam ederse sizin için tam eşitleme gerçekleştirecek olan Destek ekibini arayın.
+    > "**'EmailAddresses' parametre adıyla eşleşen bir parametre bulunamıyor**" hata iletisini alırsanız, kiracınızı veya yakın zamanda eklediyseniz özel etki alanınızı ayarlama işleminin bitmesi biraz daha uzun sürer. Ayarlama işleminin tamamlanması 4 saat kadar sürebilir. Biraz bekleyerek ayarlama işleminin bitmesi için zaman tanıyın ve sonra yeniden deneyin. Sorun devam ederse sizin için tam eşitleme gerçekleştirecek olan Destek ekibini arayın.
     
   
     > [!IMPORTANT]
@@ -66,24 +66,24 @@ Bir kullanıcıya e-posta diğer adı eklemek için Genel Yönetici haklarına s
 
 
    > [!IMPORTANT]
-   >  Bu kullanıcı yerel **Active Directory'niz ile eşitlenmiş hata iletisini alırsanız. Bazı ayrıntılar yalnızca yerel Active Directory'niz** üzerinden düzenlenebilir; Bu, eşitlenmiş kullanıcılarda Active Directory'nin öznitelikler için yetkili olduğu anlamına gelir; bunun için şirket içi Active Directory'nizin özniteliklerini değiştirmeniz gerekir.
+   >  **Bu kullanıcı yerel Active Directory'nizle eşitlenir hata iletisini alırsanız. Bazı ayrıntılar yalnızca yerel Active Directory'niz aracılığıyla düzenlenebilir**; Bu, Active Directory'nin eşitlenmiş kullanıcılardaki öznitelikler için yetkili olduğu, şirket içi Active Directory öznitelikleri değiştirmeniz gerektiği anlamına gelir.
   
     > [!TIP]
-    > E-posta diğer adı, açılan listeden bir etki alanıyla bitsin. Listeye başka bir etki alanı adı eklemek için bkz[. Etki alanına etki Microsoft 365](../setup/add-domain.md). 
+    > E-posta diğer adı, açılan listeden bir etki alanıyla bitmelidir. Listeye başka bir etki alanı adı eklemek için bkz. [Microsoft 365 etki alanı ekleme](../setup/add-domain.md). 
   
      
-5. Bitirin ve Değişiklikleri **kaydet'i seçin**.
+5. İşiniz bittiğinde **Değişiklikleri kaydet'i** seçin.
     
-6. Yeni diğer adların tüm adlara doldurmak için 24 Microsoft 365.
+6. Yeni diğer adların Microsoft 365 boyunca doldurulmalarını 24 saat bekleyin.
     
-    Kullanıcının artık bir birincil adresi ve bir diğer adı olur. Örneğin, Aliye Söğer'in birincil adresine, Eliza@NodPublishers.com diğer adı Sales@NodPublishers.com, Ali'nin Gelen Kutusu'na gider.
+    Artık kullanıcının birincil adresi ve diğer adı olacaktır. Örneğin, Eliza Hoffman'ın birincil adresi olan Eliza@NodPublishers.com ve diğer adı Sales@NodPublishers.com gönderilen tüm postalar Eliza'nın Gelen Kutusu'na gider.
     
   
-7. **Kullanıcı yanıt verdi mi? *Adresi*, Yanıt adresi Outlook bağlıdır. Web üzerinde Outlook e-postanın alın aldığı diğer adı kullanacağız (ping-ilke adını kullanacağız). Outlook masaüstü onun birincil e-posta diğer adını kullanacak.** Örneğin, bir iletinin Ali'nin gelen Sales@NodPublishers.com'e gönderildiğini ve bu iletinin gelen kutularına gönderildiğini diyelim. Eliza, masaüstü bilgisayarını kullanarak iletiyi Outlook, birincil e-posta adresi e-posta Eliza@NodPublishers.com olarak Sales@NodPublishers.com.
+7. **Kullanıcı yanıtladığında *Kimden adresi,* Outlook istemcisine bağlıdır. Outlook na Web, e-postanın alındığı diğer adı kullanır (buna ping-pong ilkesi adını vereceğiz). Outlook masaüstü birincil e-posta diğer adını kullanır.** Örneğin, bir iletinin Sales@NodPublishers.com gönderildiğini ve Eliza'nın gelen kutusuna ulaştığını varsayalım. Eliza, Outlook masaüstü kullanarak iletiyi yanıtladığında birincil e-posta adresi Sales@NodPublishers.com değil Eliza@NodPublishers.com olarak görünür.
     
-## <a name="did-you-get-a-parameter-cannot-be-found-that-matches-parameter-name-emailaddresses"></a>"EmailAddresses parametre adıyla eşleşen bir parametre bulunamadı" mı?
+## <a name="did-you-get-a-parameter-cannot-be-found-that-matches-parameter-name-emailaddresses"></a>"EmailAddresses parametre adıyla eşleşen bir parametre bulunamadı" ifadesini aldınız mı?
 
-"**EmailAddresses** parametre adıyla eşleşen bir parametre bulunamadı" hata iletisini alırsanız, kiracınızı veya özel etki alanınızı (yakın zamanda bir özel etki alanı eklediyseniz) ayarlamayı bitirmeniz biraz uzun sürer. Ayarlama işleminin tamamlanması 4 saat kadar sürebilir. Biraz bekleyerek ayarlama işleminin bitmesi için zaman tanıyın ve sonra yeniden deneyin. Sorun devam ederse sizin için tam eşitleme gerçekleştirecek olan Destek ekibini arayın.
+"**EmailAddresses parametre adıyla eşleşen bir parametre bulunamıyor**" hata iletisini alırsanız, kiracınızı veya yakın zamanda eklediyseniz özel etki alanınızı ayarlama işleminin bitmesi biraz daha uzun sürer. Ayarlama işleminin tamamlanması 4 saat kadar sürebilir. Biraz bekleyerek ayarlama işleminin bitmesi için zaman tanıyın ve sonra yeniden deneyin. Sorun devam ederse sizin için tam eşitleme gerçekleştirecek olan Destek ekibini arayın.
   
 ## <a name="did-you-purchase-your-subscription-from-godaddy-or-another-partner"></a>Aboneliğinizi GoDaddy'den veya başka bir iş ortağından mı satın aldınız?
 
@@ -92,7 +92,7 @@ Aboneliğinizi GoDaddy'den veya başka bir iş ortağından satın aldıysanız,
 
 ## <a name="sending-email-from-the-proxy-address-easily"></a>Proxy adresinden kolayca e-posta gönderme
 
-Temmuz 2021'de, kullanıcıların diğer adlarını kullanırken diğer adlarından kolayca göndermelerine olanak sağlayan yeni bir Web üzerinde Outlook. `Set-OrganizationConfig -SendFromAliasEnabled $true` Özellik kiracı yöneticisinin cmdlet'i kullandığı bir kiraya yuvarlansa, kiracı içindeki kullanıcılar her girdinin kendi kiracı ayarlarında bir diğer ada karşılık gelen onay kutuları listesine Outlook. Diğer ad seçmek, bu adın Oluşturma formundaKimlik açılan listesinde görünmesine neden olur.
+Temmuz 2021'de kullanıcıların Outlook na Web kullanırken diğer adlarından kolayca göndermelerini sağlayan yeni bir özellik kullanıma sunulacaktır. Özellik kiracı yöneticisinin cmdlet'ini `Set-OrganizationConfig -SendFromAliasEnabled $true` kullandığı bir kiracıya dağıtıldığında, kiracı içindeki kullanıcılar her girişin Outlook ayarlarındaki diğer adlara karşılık geldiği onay kutuları listesine erişebilir. Diğer ad seçildiğinde, Oluştur formundaki Kimden açılan listesinde görünür.
   
 ## <a name="related-content"></a>İlgili içerik
 
@@ -100,4 +100,4 @@ Temmuz 2021'de, kullanıcıların diğer adlarını kullanırken diğer adların
 
 [Kullanıcı adını ve e-posta adresini değiştirme](../add-users/change-a-user-name-and-email-address.md) (makale)
 
-[E-posta iletmeyi Microsoft 365](configure-email-forwarding.md) yapılandırma (makale)
+[Microsoft 365'de e-posta iletmeyi yapılandırma](configure-email-forwarding.md) (makale)

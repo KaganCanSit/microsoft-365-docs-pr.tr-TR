@@ -1,5 +1,5 @@
 ---
-title: E-posta uygulaması erişimini Microsoft 365 yönetim merkezi
+title: Microsoft 365 yönetim merkezi'de e-posta uygulaması erişimini yönetme
 f1.keywords:
 - CSH
 ms.author: kwekua
@@ -23,45 +23,43 @@ search.appverid:
 ms.assetid: d00b6b83-1f14-4e9c-a2c5-dbd9a92816f4
 ROBOTS: NOINDEX, NOFOLLOW
 description: Kişilerin e-postaya, takvime ve kişilere erişmek için hangi mobil uygulamaları kullanabileceğini seçmeyi öğrenin.
-ms.openlocfilehash: e3a7999900e85bde1bee7bf220b46a74a1151f57
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+ms.openlocfilehash: 5f5a96a0ac44757cfe168db87deb494019759c36
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63018775"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64780247"
 ---
-# <a name="manage-email-app-access-in-the-microsoft-365-admin-center"></a>E-posta uygulaması erişimini mobil Microsoft 365 yönetim merkezi
+# <a name="manage-email-app-access-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi e-posta uygulaması erişimini yönetme
 
-E-postaya, takvime ve kişilere erişmek üzere kuruluşta çalışan kişilerin iş veya okul hesaplarına erişmek için hangi mobil uygulamaları kullanabileceğini seçmek için mobil e-posta erişimi ayarlarını kullanın.
+Kuruluşunuzdaki kişilerin e-posta, takvim ve kişilere erişmek için iş veya okul hesaplarına erişmek için hangi mobil uygulamaları kullanabileceğini seçmek için mobil e-posta erişim ayarlarını kullanın.
   
 > [!IMPORTANT]
-> Microsoft Intune kullanıyorsanız veya yönetim merkezinde mobil cihaz yönetimi ayarlarını yapılandırmadınız sürece, kuruluş bu <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange erişebilirsiniz</a>. 
+> Microsoft Intune kullanmıyorsanız veya Exchange <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">yönetim merkezinde</a> mobil cihaz yönetimi ayarlarını yapılandırmadıysanız kuruluşunuz bu ayara erişebilir.
   
 ## <a name="manage-email-app-options"></a>E-posta uygulaması seçeneklerini yönetme
 
 > [!IMPORTANT]
->  Bu özelliği kullansanız bile, kullanıcı deneyiminde hiçbir değişiklik olmaz. E-posta, takvim ve kişiler için iş veya okul hesaplarına mobil cihazlarından erişmek üzere herhangi bir mobil e-posta uygulamasını kullanabilirler. 
-    
-1. Yönetim merkezinde, **Ayarlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2053743" target="_blank">Hizmetler &amp; eklentiler</a> sayfasına gidin. 
+> Bu özelliği kullanmazsanız, kullanıcılarınızın deneyiminde hiçbir değişiklik olmaz. Mobil cihazlarından e-posta, takvim ve kişiler için iş veya okul hesaplarına erişmek için herhangi bir mobil e-posta uygulamasını kullanabilirler.
 
-2. Mobil **e-posta erişim seçenekleri** sayfasında, onay kutusunu seçin ve sonra da organizasyon cihazlarınız üzerinden kullanıcıların e-posta uygulamalarını nasıl kullanabileceğini seçin:
-  
-Organizasyonlu kullanıcıların mobil cihazlarından iş veya okul hesaplarına nasıl erişeceklerini ayarlama seçeneğini belirleyin
-  
-- **Outlook-** Android için Outlook veya iOS için Outlook uygulamasını mobil cihazlarında kullanmaları gerekir. 
-    
-- **Herhangi bir e-posta** uygulaması- tüm kullanıcılardan E-posta Outlook, ancak herhangi bir e-posta uygulamasını kullanmayı seçebilirler. 
-    
-- **Herhangi bir e-posta** uygulaması - yeni kullanıcılardan veya kuruluşlardan bir kez Outlook, ancak herhangi bir e-posta uygulamasını kullanmayı seçebilirler. 
-    
-Daha fazla ayrıntı için Mobil aygıtınızdan [e-postaya erişim seçenekleri'ne göz atabilirsiniz](access-email-from-a-mobile-device.md).
-  
-## <a name="new-user-or-device-is-activated-in-your-organization"></a>Yeni kullanıcı veya cihaz, kurum içinde etkinleştirildi
+1. Yönetim merkezinde, **Ayarlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2053743" target="_blank">Hizmetler &amp; eklentiler</a> sayfasına gidin.
 
-Bir kullanıcı, iş veya okul e-postalarını üçüncü taraf bir e-posta uygulamasına veya yeni bir cihaza ekler ekleyene kadar, Microsoft'tan sizin cihazınız adına bir **e-posta alır**. Bu e-posta, mobil Outlook kullanmanın avantajlarını onlara haber sağlar ve indirme konumu için bir bağlantı sağlar. Bundan sonra kullanıcılarınız üçüncü taraf uygulamasını kullanmaya devam edip edeceğini veya üçüncü taraf uygulamasını Outlook seçebilirler. Kullanıcı bu e-postayı ilk kez aldığından 24 saat boyunca cihazı karantinaya alınır ve e-posta, takvim ve kişi verileri güncelleştirilmez. Bu kullanıcı mobil uygulamayı Outlook, üçüncü taraf uygulama karantinada kalır ve veriler yalnızca Outlook eşitler. Üçüncü taraf uygulamasını kullanmaya devam olduğuna karar verirse, veriler hemen eşit kullanmaya başlar. İlk 24 saat içinde hiçbir işlem yapılırsa, e-posta onların gelen kutusundan kaldırılır ve veriler sunucudan otomatik olarak eşitlenir.
+2. **Mobil e-posta erişim seçenekleri** sayfasında onay kutusunu seçin ve ardından kuruluşunuzdaki kullanıcıların cihazlarında e-posta uygulamalarını nasıl kullandığını seçin:
   
-## <a name="previously-configured-users-in-your-organization"></a>Organizasyonda daha önceden yapılandırılmış kullanıcılar
-
-Yukarıda yeni kullanıcılar için açıklanan deneyime ek olarak Outlook'i kuruluş içindeki herkese öneririz. Daha önce iş veya okul e-posta hesaplarını bir üçüncü taraf uygulamasına bağladılar, bu ayar etkinleştirildikten sonra 48 saat içinde **kuruluş adına Microsoft'tan** bir e-posta alırlar. Bu e-posta, mobil Outlook kullanmanın avantajlarını onlara haber sağlar ve indirme konumu için bir bağlantı sağlar. Bundan sonra kullanıcılarınız üçüncü taraf uygulamasını kullanmaya devam edip edeceğini veya üçüncü taraf uygulamasını Outlook seçebilirler. Kullanıcı bu e-postayı ilk kez aldığından 24 saat boyunca cihazı karantinaya alınır ve e-posta, takvim ve kişi verileri güncelleştirilmez. Bu kullanıcı mobil uygulamayı Outlook, üçüncü taraf uygulama karantinada kalır ve veriler yalnızca Outlook eşitler. Üçüncü taraf uygulamasını kullanmaya devam olduğuna karar verirse, veriler hemen eşit kullanmaya başlar. İlk 24 saat içinde hiçbir işlem yapılırsa, e-posta onların gelen kutusundan kaldırılır ve veriler sunucudan otomatik olarak eşitlenir. 
+Kuruluşunuzdaki kullanıcıların iş veya okul hesaplarına mobil cihazlarından nasıl erişeceğini ayarlama seçeneğini belirleyin
   
+- **Yalnızca Outlook** - Kuruluşunuzdaki kullanıcıların mobil cihazlarında Android için Outlook veya iOS uygulaması için Outlook kullanmaları gerekir.
 
+- **Herhangi bir e-posta uygulaması**- Kuruluşunuzdaki tüm kullanıcılardan Outlook kullanmaları istenir, ancak herhangi bir e-posta uygulamasını kullanmayı seçebilirler.
+
+- **Herhangi bir e-posta uygulaması** - Kuruluşunuzdaki yeni kullanıcılardan veya cihazlardan bir kez Outlook kullanmaları istenir, ancak herhangi bir e-posta uygulamasını kullanmayı seçebilirler.
+
+Daha fazla ayrıntı [için mobil cihazınızdan e-postaya erişme seçenekleri'ne](access-email-from-a-mobile-device.md) göz atın.
+  
+## <a name="new-user-or-device-is-activated-in-your-organization"></a>Kuruluşunuzda yeni kullanıcı veya cihaz etkinleştirildi
+
+Kuruluşunuzdaki bir kullanıcı iş veya okul e-postasını üçüncü taraf e-posta uygulamasına veya yeni bir cihaza ekler eklemez, **kuruluşunuz adına Microsoft'tan** bir e-posta alır. E-posta, Outlook mobil uygulamasını kullanmanın avantajları hakkında bilgi verir ve indirme konumunun bağlantısını sağlar. Kullanıcılarınız daha sonra üçüncü taraf uygulamasını kullanmaya devam etmeyi veya Outlook mobil uygulamasını kullanmayı seçebilir. Kullanıcı bu e-postayı ilk aldıktan sonraki 24 saat boyunca cihazı karantinaya alınır ve e-posta, takvim ve kişi verileri güncelleştirilmez. Outlook mobil uygulamasını kullanmayı seçerlerse üçüncü taraf uygulama karantinada kalır ve veriler yalnızca Outlook mobil uygulamasıyla eşitlenir. Üçüncü taraf uygulamasını kullanmaya devam etmeye karar verirse veriler anında eşitlenmeye başlar. İlk 24 saat içinde hiçbir işlem yapılmazsa, e-posta gelen kutusundan kaldırılır ve veriler sunucudan otomatik olarak eşitlenmeye başlar.
+  
+## <a name="previously-configured-users-in-your-organization"></a>Kuruluşunuzda önceden yapılandırılmış kullanıcılar
+
+Kuruluşunuzdaki herkese Outlook önermeye karar verirseniz, yeni kullanıcılar için yukarıda açıklanan deneyime ek olarak, daha önce iş veya okul e-posta hesabını üçüncü taraf bir uygulamaya bağlamış olan kullanıcılar, bu ayarın etkinleştirilmesinden sonraki 48 saat içinde **kuruluşunuz adına Microsoft'tan** bir e-posta alır. E-posta, Outlook mobil uygulamasını kullanmanın avantajları hakkında bilgi verir ve indirme konumunun bağlantısını sağlar. Kullanıcılarınız daha sonra üçüncü taraf uygulamasını kullanmaya devam etmeyi veya Outlook mobil uygulamasını kullanmayı seçebilir. Kullanıcı bu e-postayı ilk aldıktan sonraki 24 saat boyunca cihazı karantinaya alınır ve e-posta, takvim ve kişi verileri güncelleştirilmez. Outlook mobil uygulamasını kullanmayı seçerlerse üçüncü taraf uygulama karantinada kalır ve veriler yalnızca Outlook mobil uygulamasıyla eşitlenir. Üçüncü taraf uygulamasını kullanmaya devam etmeye karar verirse veriler anında eşitlenmeye başlar. İlk 24 saat içinde hiçbir işlem yapılmazsa, e-posta gelen kutusundan kaldırılır ve veriler sunucudan otomatik olarak eşitlenmeye başlar.

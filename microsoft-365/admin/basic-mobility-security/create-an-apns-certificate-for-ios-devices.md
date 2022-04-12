@@ -1,5 +1,5 @@
 ---
-title: iOS cihazları için APNs sertifikası oluşturma
+title: iOS cihazları için APN sertifikası oluşturma
 f1.keywords: NOCSH
 ms.author: kwekua
 author: kwekua
@@ -13,50 +13,50 @@ ms.collection:
 - Adm_O365
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
-description: iOS cihazlarını Temel Mobil Kullanım ve Güvenlik'te yönetin.
-ms.openlocfilehash: f2539ac1c27bd63c13766e197fc12fafc3906f07
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Basic Mobility ve Security'de iOS cihazlarını yönetin.
+ms.openlocfilehash: 99aa909bf9adab1464ad3858cfac4a04cc541609
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62973709"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64781171"
 ---
-# <a name="create-an-apns-certificate-for-ios-devices"></a>iOS cihazları için APNs sertifikası oluşturma
+# <a name="create-an-apns-certificate-for-ios-devices"></a>iOS cihazları için APN sertifikası oluşturma
 
-Temel Hareketlilik ve Güvenlik nedeniyle iPad ve iPhone gibi iOS cihazlarını yönetmek için APNs sertifikası oluşturun.
+Basic Mobility ve Security'de iPad ve iPhone gibi iOS cihazlarını yönetmek için bir APNs sertifikası oluşturun.
 
 1. Genel yönetici hesabınızla Microsoft 365 oturum açın.
 
-2. Tarayıcınızda, yazın <https://protection.office.com/>.
+2. Tarayıcınızda yazın <https://protection.office.com/>.
 
-3. Veri  **kaybı önlemeDevice** >  **yönetimi'ne ve** **iOS cihazları için APNs Sertifikası'nın seçeneğini seçin**.
+3. **Veri kaybı önleme** \> **Cihaz yönetimi'ni** ve **ardından iOS cihazları için APNs Sertifikası'nı** seçin.
 
-4. Apple Anında Bildirim Sertifika Sertifikası Ayarlar  **Ekle'yi seçin**.
+4. Apple Anında İletme Bildirimi Sertifikası Ayarlar sayfasında **İleri'yi** seçin.
 
-5. CSR dosyanızı indirin'i seçin ve sertifika imzalama isteğini bilgisayarınızda anımsayacak bir yere kaydedin.   **SelectNext**.
+5. CSR dosyanızı indirin'i seçin ve sertifika imzalama isteğini bilgisayarınızda anımsayacağınız bir yere kaydedin. **İleri**'yi seçin.
 
 6. APNs sertifikası oluştur sayfasında:
 
-    1. Apple Push Sertifikaları Portalı'nı açmak için Apple APNS Portalı'ı seçin.
+    1. Apple Anında İletme Sertifikaları Portalı'nı açmak için Apple APNS Portalı'nı seçin.
 
-    2. Apple ID ile oturum açma.
+    2. Apple Kimliği ile oturum açın.
 
        > [!IMPORTANT]
-       > Hesabı yöneten kullanıcı ayrılsa bile, kuruluşta kalacak bir e-posta hesabıyla ilişkilendirilmiş şirket Apple kimliği kullanın. Sertifikayı yenileme zamanı geldiğinde aynı kimliği kullanmak zorunda olduğunuz için bu kimliği kaydedin.
+       > Hesabı yöneten kullanıcı ayrılsa bile kuruluşunuzda kalacak bir e-posta hesabıyla ilişkilendirilmiş bir şirket Apple Kimliği kullanın. Sertifikayı yenileme zamanı geldiğinde aynı kimliği kullanmanız gerektiğinden bu kimliği kaydedin.
 
-    3.   **SertifikaYıldır'ı**  seçin ve Kullanım Koşullarını kabul et'i seçin.
+    3. **Sertifika Oluştur'u** seçin ve Kullanım Koşulları'nı kabul edin.
 
-    4. Dosyadan bilgisayarınıza indirdiğiniz sertifika imzalama isteğine Microsoft 365 ve **tamam'ı Upload**.
+    4. Microsoft 365 bilgisayarınıza indirdiğiniz sertifika imzalama isteğine göz atın ve **Upload'ı** seçin.
 
-       Apple Push Sertifika Portalı tarafından oluşturulan APNs sertifikasını bilgisayarınıza indirin.
+       Apple Anında İletme Sertifikası Portalı tarafından oluşturulan APNs sertifikasını bilgisayarınıza indirin.
 
        > [!TIP]
-       > Sertifikayı indirmede sorun ediyorsanız, tarayıcınızı yenileyin.
+       > Sertifikayı indirirken sorun yaşıyorsanız tarayıcınızı yenileyin.
 
-7. APNS sertifika Microsoft 365 **gitmek için,**  Seçenekler'e   **Upload'ı**  seçin.
+7. Microsoft 365 Geri dön ve **Upload APNS sertifika** sayfasına ulaşmak için **İleri'yi** seçin.
 
-8. Apple Push Sertifikaları Portalı'dan indirdiğiniz APN sertifikasına göz atabilirsiniz.
+8. Apple Anında İletme Sertifikaları Portalı'ndan indirdiğiniz APN sertifikasına göz atın.
 
-9.   **Tamamla'ya seçin**.
+9. **Bitir'i** seçin.
 
-Kurulumu tamamlamak için Güvenlik ve Uyumluluk Merkezi'ne & gidin > **Device** >  **managementManage** **** > ayarları.
+Kurulumu tamamlamak için Güvenlik & Uyumluluk Merkezi \> **Güvenlik ilkeleri** \> **Cihaz yönetimi** \> **Ayarları yönet'e** geri dönün.

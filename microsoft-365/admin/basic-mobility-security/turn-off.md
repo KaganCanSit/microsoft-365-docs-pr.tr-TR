@@ -13,46 +13,46 @@ ms.collection:
 - Adm_O365
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
-description: Temel Hareketlilik ve Güvenlik'i kapatmak için grupları veya ilkeleri kaldırın.
-ms.openlocfilehash: ff3fe72e1ca3a6445aa29ac18404aae139a70f8a
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Temel Mobilite ve Güvenlik'i kapatmak için grupları veya ilkeleri kaldırın.
+ms.openlocfilehash: c3c82c040e688977a68e06639e87c8f733bc8c38
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983986"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64780775"
 ---
 # <a name="turn-off-basic-mobility-and-security"></a>Temel Hareketlilik ve Güvenlik'i kapatma
 
-Temel Hareketlilik ve Güvenlik'i etkili bir şekilde kapatmak için cihaz yönetim ilkelerinden güvenlik grupları tarafından tanımlanan kişi gruplarını veya ilkelerin kendilerini kaldırırsanız.
+Temel Mobilite ve Güvenlik'i etkin bir şekilde kapatmak için, cihaz yönetimi ilkelerinden güvenlik grupları tarafından tanımlanan kişi gruplarını kaldırırsınız veya ilkeleri kendileri kaldırırsınız.
 
 - Oluşturduğunuz cihaz ilkelerinden kullanıcı güvenlik gruplarını kaldırarak kullanıcı gruplarını kaldırın.
 
-- Tüm Temel Mobil Kullanım ve Güvenlik cihaz ilkelerini kaldırarak herkes için Temel Mobil Kullanım ve Güvenlik'i devre dışı bırakabilirsiniz.
+- Tüm Temel Mobilite ve Güvenlik cihaz ilkelerini kaldırarak Basic Mobility ve Security'yi herkes için devre dışı bırakın.
 
-Bu seçenekler, kuruluşların cihazları için Temel Mobil Kullanım ve Güvenlik zorlamalarını kaldırır. Ne yazık ki, bu ayarlamayı tamamladikten sonra yalnızca "unprovision" Basic Mobility and Security (Temel Mobil Kullanım ve Güvenlik) yok.
+Bu seçenekler, kuruluşunuzdaki cihazlar için Temel Mobilite ve Güvenlik zorlamasını kaldırır. Ne yazık ki, temel mobilite ve güvenliği ayarladıktan sonra yalnızca "sağlamayı kaldıramazsınız".
 
 > [!IMPORTANT]
-> İlkelerden kullanıcı güvenlik gruplarını kaldırırken veya ilkelerin kendilerini kaldırırken, kullanıcıların cihazları üzerindeki etkisine dikkat edin. Örneğin, cihaza bağlı olarak e-posta profilleri ve önbelleğe alınmış e-postalar kaldırılabilir. Daha fazla bilgi için bkz  [. İlkeyi silebilir veya kullanıcı ilkeden kaldırabilirsiniz.](../../admin/basic-mobility-security/create-device-security-policies.md)
+> Kullanıcı güvenlik gruplarını ilkelerden kaldırdığınızda veya ilkeleri kaldırdığınızda, kullanıcıların cihazları üzerindeki etkisini unutmayın. Örneğin, cihaza bağlı olarak e-posta profilleri ve önbelleğe alınmış e-postalar kaldırılabilir. Daha fazla bilgi için bkz. [İlkeyi sildiğinizde veya ilkeden bir kullanıcıyı kaldırdığınızda ne olur?](../../admin/basic-mobility-security/create-device-security-policies.md)
 
-## <a name="remove-user-security-groups-from-basic-mobility-and-security-device-policies"></a>Kullanıcı güvenlik gruplarını Temel Mobil Kullanım ve Güvenlik cihazı ilkelerinden kaldırma
+## <a name="remove-user-security-groups-from-basic-mobility-and-security-device-policies"></a>Temel Mobilite ve Güvenlik cihaz ilkelerinden kullanıcı güvenlik gruplarını kaldırma
 
-1. Tarayıcı türüne: yazın [https://protection.office.com/devicev2](https://protection.office.com/devicev2).
+1. Tarayıcınıza şunu yazın: [https://protection.office.com/devicev2](https://protection.office.com/devicev2).
 
-2. Bir cihaz ilkesi seçin ve İlkeyi **düzenle'yi seçin**.
+2. Bir cihaz ilkesi seçin ve **İlkeyi düzenle'yi** seçin.
 
-3. Dağıtım sayfasında  **Kaldır'ı**  **seçin**.
+3. **Dağıtım** sayfasında **Kaldır'ı** seçin.
 
-4.   **Gruplar'ın** altında bir güvenlik grubu seçin.
+4. **Gruplar'ın** altında bir güvenlik grubu seçin.
 
-5.  **Kaldır'ı** ve ardından Kaydet'i **seçin**.
+5. **Kaldır'ı** ve **ardından Kaydet'i** seçin.
 
-## <a name="remove-basic-mobility-and-security-device-policies"></a>Temel Mobil Kullanım ve Güvenlik cihaz ilkelerini kaldırma
+## <a name="remove-basic-mobility-and-security-device-policies"></a>Temel Mobilite ve Güvenlik cihaz ilkelerini kaldırma
 
-1. Tarayıcı türüne: yazın [https://protection.office.com/devicev2](https://protection.office.com/devicev2).
+1. Tarayıcınıza şunu yazın: [https://protection.office.com/devicev2](https://protection.office.com/devicev2).
 
-2. Bir cihaz ilkesi seçin ve ardından İlkeyi  **sil'i seçin**.
+2. Bir cihaz ilkesi seçin ve ardından **İlkeyi sil'i** seçin.
 
-3. Uyarı iletişim kutusunda Evet'i **seçin**.
+3. Uyarı iletişim kutusunda **Evet'i** seçin.
 
 > [!NOTE]
-> Kuruluş cihazlarınız hala engellenen durumda ise cihazların engellemesini kaldırmaya daha fazla adım için, Erişim Denetimi'nin Engellenenler kategorisinden kaldırılması blog [Office 365 için Mobil Cihaz Yönetimi](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Removing-Access-Control-from-Mobile-Device-Management-for-Office/ba-p/279934).
+> Kuruluş cihazlarınız hala engellenmiş durumdaysa cihazların engellemesini kaldırmaya yönelik daha fazla adım için Access Control [Office 365 için Mobil Cihaz Yönetimi kaldırma](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Removing-Access-Control-from-Mobile-Device-Management-for-Office/ba-p/279934) blog gönderisine bakın.

@@ -1,5 +1,5 @@
 ---
-title: Temel Hareketlilik ve Güvenlik'te gizlilik ve güvenlik
+title: Temel Mobilite ve Güvenlik'te gizlilik ve güvenlik
 f1.keywords: NOCSH
 ms.author: kwekua
 author: kwekua
@@ -13,16 +13,16 @@ ms.collection:
 - Adm_O365
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
-description: Temel Mobil Kullanım ve Güvenlik'i etkinleştirdikten sonra mobil cihaz yönetim ilkeleri oluşturabilirsiniz.
-ms.openlocfilehash: 288ffe44610a68193ca6d96543e97a02e334f57d
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Temel Mobilite ve Güvenlik'i etkinleştirdikten sonra mobil cihaz yönetimi ilkeleri oluşturabilirsiniz.
+ms.openlocfilehash: 713cedb61c8519cf735b47fafa1e58c33170e683
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983994"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64780753"
 ---
-# <a name="privacy-and-security-in-basic-mobility-and-security"></a>Temel Hareketlilik ve Güvenlik'te gizlilik ve güvenlik
+# <a name="privacy-and-security-in-basic-mobility-and-security"></a>Temel Mobilite ve Güvenlik'te gizlilik ve güvenlik
 
-Temel Mobil Kullanım ve Güvenlik, Microsoft Intune tarafından desteklenen ve kurumda mobil cihazları yönetmenize ve güvenliklerini sağlamanıza yardımcı olan bulut tabanlı bir hizmettir. Temel Mobil Kullanım ve Güvenlik'i etkinleştirdikten sonra mobil cihaz yönetim ilkeleri oluşturabilirsiniz. Bu ilkeler daha sonra, kullanıcılar tarafından lisanslı olarak Microsoft 365 mobil cihazlara dağıtılabilir.
+Temel Mobilite ve Güvenlik, kuruluşunuzdaki mobil cihazları yönetmenize ve güvenliğini sağlamanıza yardımcı olan Microsoft Intune tarafından desteklenen bulut tabanlı bir hizmettir. Temel Mobilite ve Güvenlik'i etkinleştirdikten sonra mobil cihaz yönetimi ilkeleri oluşturabilirsiniz. Bu ilkeler daha sonra kuruluşunuzdaki lisanslı Microsoft 365 kullanıcıları tarafından kaydedilmiş mobil cihazlara dağıtılabilir.
 
-Microsoft Intune yönetilen her cihazın uyumluluk Microsoft 365 ilgili bilgileri bu cihaza gönderir ve ardından ayarlanmış ilkelere göre, organizasyonu aşağıdaki yönetilen cihazların uyumlu olup olmadığını göstermek için raporlar hazırlarsiniz. Microsoft'un gizlilik ve güvenlik taahhüdü hakkında daha fazla bilgi edinmek için  [Microsoft Güven Merkezi'ne bakın](https://www.microsoft.com/trust-center).
+Microsoft Intune, Microsoft 365 her yönetilen cihazın uyumluluk durumu hakkında bilgi gönderir ve ardından, ayarlanan ilkelere bağlı olarak kuruluşunuzdaki yönetilen cihazların uyumlu olup olmadığını gösteren raporlar oluşturabilirsiniz. Microsoft'un gizlilik ve güvenlik taahhüdü hakkında daha fazla bilgi edinmek için bkz. [Microsoft Güven Merkezi](https://www.microsoft.com/trust-center).

@@ -1,5 +1,5 @@
 ---
-title: Temel Mobil Kullanım ve Güvenlik Sorunlarını Giderme
+title: Temel Mobilite ve Güvenlik Sorunlarını Giderme
 f1.keywords: NOCSH
 ms.author: kwekua
 author: kwekua
@@ -13,62 +13,62 @@ ms.collection:
 - Adm_O365
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
-description: Temel Mobil Kullanım ve Güvenlik sorunlarını takip etmek için bu adımları deneyin
-ms.openlocfilehash: 2ac25e36fced24e5b50e7e89d36dae3e842fda04
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+description: Temel Hareketlilik ve Güvenlik sorunlarını izlemek için bu adımları deneyin
+ms.openlocfilehash: c8c4fe674ff3a803659223a004e304a5779a83d7
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63400371"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64780747"
 ---
-# <a name="troubleshoot-basic-mobility-and-security"></a>Temel Mobil Kullanım ve Güvenlik Sorunlarını Giderme
+# <a name="troubleshoot-basic-mobility-and-security"></a>Temel Mobilite ve Güvenlik Sorunlarını Giderme
 
-Temel Mobil Kullanım ve Güvenlik'te bir cihazı kaydetmeye çalışmanız sorun oluyorsa, sorunu takip etmek için buradaki adımları deneyin. Genel adımlar sorunu çözeni, cihazınızın türüne özel adımlar için sonraki bölümlerden birini görmenizi sağlar.
+Cihazı Basic Mobility ve Security'ye kaydetmeye çalışırken sorun yaşıyorsanız, sorunu izlemek için buradaki adımları deneyin. Genel adımlar sorunu çözmezse, cihaz türünüz için belirli adımları içeren sonraki bölümlerden birine bakın.
 
-## <a name="steps-to-try-first"></a>İlk önce deneme adımları
+## <a name="steps-to-try-first"></a>Önce deneme adımları
 
-Başlamak için şunları kontrol edin:
+Başlamak için aşağıdakileri denetleyin:
 
-- Cihazın, önceden başka bir mobil cihaz yönetim sağlayıcısına (örneğin Intune) kaydolmamış olduğundan emin olun.
+- Cihazın Intune gibi başka bir mobil cihaz yönetimi sağlayıcısına kayıtlı olmadığından emin olun.
 
-- Cihazın doğru tarih ve saate ayarlanmış olduğundan emin olun.
+- Cihazın doğru tarih ve saate ayarlandığından emin olun.
 
-- Cihazda farklı bir WiFi veya hücresel ağa geçiş.
+- Cihazda farklı bir WIFI'ye veya hücresel ağa geçin.
 
-- Android veya iOS cihazlarda, Intune Şirket Portalı uygulamayı kaldırın ve yeniden yükleyin. 
+- Android veya iOS cihazları için Intune Şirket Portalı uygulamasını kaldırıp cihaza yeniden yükleyin. 
 
 ## <a name="ios-phone-or-tablet"></a>iOS telefon veya tablet
 
-- APNs sertifikası ayar mutlaka ayarlayın. Daha fazla bilgi için bkz [. iOS cihazları için APNs Sertifikası oluşturma](create-an-apns-certificate-for-ios-devices.md).
+- Bir APNs sertifikası ayarladığınızdan emin olun. Daha fazla bilgi için bkz. [iOS cihazları için APNs Sertifikası oluşturma](create-an-apns-certificate-for-ios-devices.md).
 
-- In  **Ayarlar** >  **GeneralProfile** >  **(veya Cihaz Yönetimi)**), önceden bir Yönetim Profili'nin yüklenmemiş olduğundan emin olun. Varsa kaldırın.
+- **Ayarlar** >  **GeneralProfile** >  **(veya Cihaz Yönetimi)** içinde, bir Yönetim Profili'nin zaten yüklü olmadığından emin olun. Varsa kaldırın.
 
-- "Cihaz kaydedemedi" hata iletisini görüyorsanız, Microsoft 365'de oturum açın ve cihazda oturum Exchange Online içeren bir lisansın atanmış olduğundan emin olun.
+- "Cihaz kaydedilemedi" hata iletisini görürseniz Microsoft 365 oturum açın ve cihazda oturum açan kullanıcıya Exchange Online içeren bir lisansın atandığından emin olun.
 
-- "Profil yüklenemedi" hata iletisini görüyorsanız, aşağıdakilerden birini deneyin:
+- "Profil yüklenemedi" hata iletisini görürseniz aşağıdakilerden birini deneyin:
 
-    - Cihazda varsayılan tarayıcının Safari olduğundan ve tanımlama bilgilerinin devre dışı bırakılmış olduğundan emin olun.
+    - Safari'nin cihazdaki varsayılan tarayıcı olduğundan ve tanımlama bilgilerinin devre dışı bırakılmadığından emin olun.
 
-    - Cihazı yeniden başlatın ve ardından Yeniden Başlat'a portal.manage.microsoft.com. E-posta Microsoft 365 kimliği ve parolayla oturum açma ve profili el ile yükleme girişimi.
+    - Cihazı yeniden başlatın ve portal.manage.microsoft.com gidin. Microsoft 365 kullanıcı kimliğiniz ve parolanızla oturum açın ve profili el ile yüklemeyi deneyin.
 
 ## <a name="windows-rt"></a>Windows RT
 
-- Temel Hareketlilik ve Güvenlik ile çalışmak için etki Microsoft 365'de ayarlanmış olduğundan emin olun. Daha fazla bilgi için bkz [. Temel Mobil Kullanım ve Güvenlik'i ayarlama](set-up.md).
+- Etki alanınızın temel mobilite ve güvenlik ile çalışacak şekilde Microsoft 365 ayarlandığından emin olun. Daha fazla bilgi için bkz. [Basic Mobility ve Security'yi ayarlama](set-up.md).
     
-- Kullanıcının, Katılma'yı  **seçmeden,Turn** Onrather'i   **seçtiğinden emin olun**.
+- Kullanıcının **Katıl'ın** yerine **Aç'ın** seçildiğinden emin olun.
 
-## <a name="windows-10-pc"></a>Windows 10 PC'de
+## <a name="windows-10-pc"></a>Windows 10 bilgisayar
 
-- Temel Hareketlilik ve Güvenlik ile çalışmak için etki Microsoft 365'de ayarlanmış olduğundan emin olun. Daha fazla bilgi için bkz [. Temel Mobil Kullanım ve Güvenlik'i ayarlama](set-up.md).
+- Etki alanınızın temel mobilite ve güvenlik ile çalışacak şekilde Microsoft 365 ayarlandığından emin olun. Daha fazla bilgi için bkz. [Basic Mobility ve Security'yi ayarlama](set-up.md).
     
-- Bu seçeneği Azure Active Directory Premium, kullanıcının Cihaz ****  Yönetimi'nin yalnızca Kayıt'Azure Active Directory Premium seçtiğinden  **emin** olun Bağlan.
+- Azure Active Directory Premium yoksa, kullanıcının Bağlan seçmek yerine **yalnızca Cihaz Yönetimi kaydol'ı** seçtiğinden emin olun.
 
 ## <a name="android-phone-or-tablet"></a>Android telefon veya tablet
 
-- Cihazın Android'i çalıştır olduğundan emin olun.
+- Cihazın Android çalıştırdığından emin olun.
 
-- Chrome'un güncel olduğundan ve varsayılan tarayıcı olarak ayar olduğundan emin olun.
+- Chrome'un güncel olduğundan ve varsayılan tarayıcı olarak ayarlandığından emin olun.
 
-- "Bu cihazı kaydettiremedik" hata iletisini görüyorsanız, Microsoft 365'te oturum açın ve cihazda oturum Exchange Online içeren bir lisansın atan olduğundan emin olun.
+- "Bu cihazı kaydedemedik" hata iletisini görürseniz, Microsoft 365 oturum açın ve cihazda oturum açan kullanıcıya Exchange Online içeren bir lisansın atandığından emin olun.
 
-- Cihazda Bildirim Alanı'ne bakarak gerekli son kullanıcı eylemlerinin beklemede olup olduğunu kontrol edin ve varsa eylemleri gerçekleştirin.
+- Gerekli son kullanıcı eylemlerinin beklemede olup olmadığını görmek için cihazdaki Bildirim Alanı'nı denetleyin ve bekliyorsa eylemleri tamamlayın.

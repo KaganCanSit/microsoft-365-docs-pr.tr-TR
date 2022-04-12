@@ -1,5 +1,5 @@
 ---
-title: Etki alanını Microsoft'tan başka bir ana bilgisayara aktarma
+title: Bir etki alanını Microsoft'tan başka bir konağa aktarma
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -21,49 +21,49 @@ search.appverid:
 - MET150
 - MOE150
 - GEA150
-description: "Etki alanını Microsoft'tan başka bir kayıt şirketine aktarma adımlarını burada bulabilirsiniz. "
-ms.openlocfilehash: 192e9c1e14666f80fb670c5c8e268ae54ece0c64
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: "Bir etki alanını Microsoft'tan başka bir kayıt şirketine aktarma adımlarını burada bulabilirsiniz. "
+ms.openlocfilehash: 18f2b6502268b757b651abe08585cc06b63d7129
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63316779"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64782489"
 ---
-# <a name="transfer-a-domain-from-microsoft-to-another-host"></a>Etki alanını Microsoft'tan başka bir ana bilgisayara aktarma
+# <a name="transfer-a-domain-from-microsoft-to-another-host"></a>Bir etki alanını Microsoft'tan başka bir konağa aktarma
 
-Etki alanını Microsoft'tan Microsoft 365 sonra 60 gün boyunca başka bir etki alanı kayıt şirketine aktarabilirsiniz.
+Microsoft 365 etki alanını Microsoft'tan satın aldıktan sonra 60 gün boyunca başka bir kayıt şirketine aktaramazsınız.
 
 > [!NOTE]
-> _Whoisquery_ , Microsoft tarafından satın alınan etki alanı kayıt şirketini Wild West Domains LLC olarak gösterir. Ancak, satın aldığınız etki alanıyla ilgili olarak yalnızca Microsoft 365 Microsoft'a başvurabilirsiniz.
+> _Whois_ sorgusu, Microsoft tarafından satın alınan etki alanı kayıt şirketini Wild West Domains LLC olarak gösterir. Ancak, satın alınan Microsoft 365 etki alanınızla ilgili olarak yalnızca Microsoft ile iletişime geçilmelidir.
 
-Microsoft 365'da bir kod almak için bu adımları izleyin ve ardından diğer etki alanı kayıt şirketi web sitesine gidip etki alanı adınızı yeni kayıt şirketine aktarmayı ayarlayın.
+Microsoft 365 bir kod almak için bu adımları izleyin ve ardından etki alanı adınızı yeni kayıt şirketine aktarmayı ayarlamak için diğer etki alanı kayıt şirketi web sitesine gidin.
 
-## <a name="transfer-a-domain"></a>Etki alanı aktarma
+## <a name="transfer-a-domain"></a>Etki alanını aktarma
 
-1. Yönetim merkezinde Etki   **Alanları'Ayarlar** >  **gidin**.
+1. Yönetim merkezinde **Ayarlar** \> **Etki Alanları'na** gidin.
 
-2. Etki Alanları **sayfasında**, başka bir Microsoft 365 alanı kayıt şirketine aktarımını istediğiniz etki alanını seçin ve sonra da Durumu kontrol **edin'i seçin**.
+2. **Etki Alanları** sayfasında, başka bir etki alanı kayıt şirketine aktarmak istediğiniz Microsoft 365 etki alanını seçin ve ardından **Sistem durumunu denetle'yi** seçin.
 
-3. Sayfanın üst kısmında Etki alanını **aktar'ı seçin**.
+3. Sayfanın üst kısmında **Etki alanını aktar'ı** seçin.
 
-4. Etki **alanınızı aktarın öğesini seçin sayfasında** Farklı bir kayıt **şirketi seçin ve** ardından Sonraki'ye **tıklayın**.
+4. **Etki alanınızın nereye aktarileceğini seçin** sayfasında **Farklı bir kayıt şirketi'ni** seçin ve **İleri'ye** tıklayın.
 
-5. Etki alanı **aktarımının kilidini aç sayfasında** , Etki **alanınız için aktarımın <_ve_>** sonra da Sonraki'yi **seçin**.
+5. **Etki alanı aktarımının kilidini aç** sayfasında, **_etki alanınızı_> <için aktarımın kilidini aç'ı** ve ardından **İleri'yi** seçin.
 
-6. Etki alanı aktarma kişi bilgilerinizi kontrol edin ve ardından Sonraki'yi **seçin**.
+6. Etki alanı aktarımı iletişim bilgilerinizi denetleyin ve **İleri'yi** seçin.
 
-7. Sonraki adımlarla devammeden önce, yetkilendirme kodunu kopyalayın ve etki alanı aktarımı durumunun Kayıt sekmesinde aktarım için **Kilidi** Açılacak şekilde değişmesi için 30 dakika kadar bekleyin.
+7. Sonraki adımlara geçmeden önce yetkilendirme kodunu kopyalayın ve etki alanı aktarım durumunuzun **Kayıt** sekmesinde **aktarım için Kilitsiz** olarak değiştirilmesi için yaklaşık 30 dakika bekleyin.
 
-8. İleride, etki alanı adınızı yönetmek istediğiniz etki alanı kayıt şirketin web sitesine gidin. Etki alanı aktarma yönergelerini izleyin (web sitesinde yardım için arama). Bu genellikle aktarım ücretlerini ödemek ve aktarmayı başlatacakları yeni kayıt şirketine Kimlik Kodu vermek anlamına gelir. Microsoft, aktarım isteğini aldıklarını onaylamak için size e-postayla gönderilir ve etki alanı 5 gün içinde devredilene kadar gönderilir.
+8. Bundan sonra etki alanı adınızı yönetmek istediğiniz etki alanı kayıt şirketinin web sitesine gidin. Etki alanı aktarma yönergelerini izleyin (web sitesinde yardım arayın). Bu genellikle aktarım ücretlerini ödemek ve aktarımı başlatabilmeleri için Kimlik Doğrulama kodunu yeni kayıt şirketine vermek anlamına gelir. Microsoft, aktarım isteğini aldığımızı onaylamak için size e-posta gönderecektir ve etki alanı 5 gün içinde aktarılacaktır.
 
-    Yetkilendirme kodunu **Kayıt sekmesini,**  **Microsoft 365'daki** Etki Alanları sayfasında bulabilirsiniz.
-    
+    Yetkilendirme kodu **Kayıt** sekmesini Microsoft 365 Etki **Alanları** sayfasında bulabilirsiniz.
+
     > [!TIP]
-    > .uk etki alanlarına farklı bir yordam gerekir. Microsoft Desteği'ne başvurun ve **İleride etki alanını yönetmek** istediğiniz kayıt şirketiyle eşleşmesi için IPS Etiketi değişikliği isteğinde bulundurabilirsiniz. Etiket değiştiktan sonra, etki alanı hemen yeni kayıt şirketine aktarılmaktadır. Bu işlemi tamamlamak için büyük olasılıkla aktarım ücretlerini ödemeniz ve aktarılan etki alanını yeni kayıt şirketiyle hesabınıza ekleme işlemlerini tamamlamak için yeni kayıt şirketiyle birlikte çalışmanız gerekir.
+    > .uk etki alanları farklı bir yordam gerektirir. Microsoft Desteği başvurun ve bundan sonra etki alanınızı yönetmek istediğiniz kayıt şirketiyle eşleşecek şekilde bir **IPS Etiketi değişikliği** isteyin. Etiket değiştirildikten sonra etki alanı hemen yeni kayıt şirketine aktarılır. Daha sonra aktarımı tamamlamak için yeni kayıt şirketiyle çalışmanız, büyük olasılıkla aktarım ücretleri ödemeniz ve aktarılan etki alanını yeni kayıt şirketinizle hesabınıza eklemeniz gerekir.
 
-9. Aktarma tamamlandıktan sonra, yeni etki alanı kayıt şirketinde etki alanınızı yenilersiniz.
+9. Aktarım tamamlandıktan sonra, yeni etki alanı kayıt şirketindeki etki alanınızı yenilersiniz.
 
-10. Işlemi tamamlamak için, yönetim merkezinde **Etki Alanları sayfasına** geri gidin ve Etki alanı aktarımını   **tamamla'ya tıklayın**. Bu, etki alanını artık Satın Alma'dan satın Microsoft 365 ve etki alanı aboneliğini devre dışı bırakır. Etki alanı kiracıdan kaldırmaz ve etki alanındaki var olan kullanıcıları ve posta kutularını etkilemez.
+10. İşlemi tamamlamak için yönetim merkezindeki **Etki Alanları** sayfasına dönün ve **Ardından Etki alanı aktarımını tamamla'yı** seçin. Bu işlem etki alanını artık Microsoft 365 satın alınmadı olarak işaretler ve etki alanı aboneliğini devre dışı bırakır. Etki alanını kiracıdan kaldırmaz ve etki alanındaki mevcut kullanıcıları ve posta kutularını etkilemez.
 
 > [!NOTE]
-> Microsoft 365 satın alınan etki alanları, ad sunucusu değişiklikleri için veya etki alanını farklı kuruluşlar arasında Microsoft 365 değildir. Bunlardan biri gerekli olursa, etki alanı kaydı başka bir kayıt şirketine aktar olmalıdır.
+> Microsoft 365 satın alınan etki alanları ad sunucusu değişikliklerine veya etki alanını Microsoft 365 kuruluşlar arasında aktarmaya uygun değildir. Bunlardan biri gerekliyse, etki alanı kaydının başka bir kayıt şirketine aktarılması gerekir.

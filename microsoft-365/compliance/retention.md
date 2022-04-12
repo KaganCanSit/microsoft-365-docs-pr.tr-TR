@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: İhtiyaç duyduklarınızı korumanıza ve saklamadığınız şeyleri silmenize yardımcı olan bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin.
-ms.openlocfilehash: 61bd82e3b4012e7e191971faf768cf8d7cbba4f2
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: e14c438858d5e57dca6ecab0573014171a0c6fb7
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64758651"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64783325"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin
 
@@ -111,7 +111,7 @@ Bekletme ilkeleri aşağıdaki konumlara uygulanabilir:
 - e-postayı Exchange
 - siteyi SharePoint
 - hesapları OneDrive
-- Microsoft 365 Grupları
+- Microsoft 365 组
 - Skype Kurumsal
 - Ortak klasörleri Exchange
 - kanal iletilerini Teams
@@ -125,7 +125,7 @@ Bekletme ilkeleri aşağıdaki konumlara uygulanabilir:
 
 Tek bir ilkeyi birden çok konuma veya belirli konumlara veya kullanıcılara çok verimli bir şekilde uygulayabilirsiniz.
 
-Saklama süresinin başlangıcı için içeriğin ne zaman oluşturulduğunu veya yalnızca dosyalar ve SharePoint, OneDrive ve Microsoft 365 Grupları konumları için desteklendiğini ve içeriğin en son ne zaman değiştirildiğini seçebilirsiniz.
+Saklama süresinin başlangıcı için, içeriğin ne zaman oluşturulduğunu veya yalnızca dosyalar ve SharePoint, OneDrive ve Microsoft 365 组 konumları için desteklenip desteklenmediğini ve içeriğin en son ne zaman değiştirildiğini seçebilirsiniz.
 
 Öğeler bekletme ilkesinde belirtilen kapsayıcılarından bekletme ayarlarını devralır. İlke içeriği saklayacak şekilde yapılandırıldığında bu kapsayıcının dışına taşınırlarsa, söz konusu öğenin bir kopyası iş yükünün güvenli konumunda tutulur. Ancak bekletme ayarları içerikle birlikte yeni konumuyla birlikte hareket etmez. Bu gerekiyorsa bekletme ilkeleri yerine bekletme etiketlerini kullanın.
 
@@ -145,7 +145,7 @@ Tüm bu durumlarda bekletme etiketleri, idare denetimi için saklama ayarların�
 
 Bekletme etiketleriyle şunları yapabilirsiniz:
 
-- Kuruluşunuzdaki kişilerin Outlook ve Web üzerinde Outlook, OneDrive, SharePoint ve Microsoft 365 gruplarındaki içeriğe **el ile bekletme etiketi uygulamasına olanak tanıyın**. Kullanıcılar genellikle ne tür içerikle çalıştıklarını en iyi bilirler, böylece içeriği sınıflandırabilir ve uygun saklama ayarlarının uygulanmasını sağlayabilirler.
+- Kuruluşunuzdaki kişilerin Outlook ve Outlook na Web, OneDrive, SharePoint ve Microsoft 365 gruplarındaki içeriğe **el ile bekletme etiketi uygulamasına olanak tanıyın**. Kullanıcılar genellikle ne tür içerikle çalıştıklarını en iyi bilirler, böylece içeriği sınıflandırabilir ve uygun saklama ayarlarının uygulanmasını sağlayabilirler.
 
 - E-posta veya Teams paylaşılan bulut eklerini içeren belirli koşullarla eşleşiyorsa veya içerik şunları içeriyorsa içeriğe **bekletme etiketlerini otomatik olarak uygulayın**:
   - Belirli hassas bilgi türleri.
@@ -194,10 +194,10 @@ Bekletme etiketleri, bekletme etiketinin ne yaptığına bağlı olarak farklı 
 
 | Bekletme etiketi... | Ardından etiket ilkesi... |
 |:-----|:-----|
-|Yöneticilere ve son kullanıcılara yayımlandı  |Exchange, SharePoint, OneDrive, Microsoft 365 Grupları  |
+|Yöneticilere ve son kullanıcılara yayımlandı  |Exchange, SharePoint, OneDrive Microsoft 365 组  |
 |Hassas bilgi türlerine veya eğitilebilir sınıflandırıcılara göre otomatik olarak uygulanır  |Exchange, SharePoint, OneDrive  |
-|Anahtar sözcüklere veya sorguya göre otomatik uygulama  |Exchange, SharePoint, OneDrive, Microsoft 365 Grupları  |
-|Bulut eklerine otomatik olarak uygulama  |SharePoint, OneDrive, Microsoft 365 Grupları  |
+|Anahtar sözcüklere veya sorguya göre otomatik uygulama  |Exchange, SharePoint, OneDrive Microsoft 365 组  |
+|Bulut eklerine otomatik olarak uygulama  |SharePoint, OneDrive, Microsoft 365 组  |
 
 Exchange ortak klasörler, Skype, Teams ve Yammer iletileri bekletme etiketlerini desteklemez. Bu konumlardaki içeriği korumak ve silmek için bunun yerine bekletme ilkelerini kullanın.
 
@@ -249,7 +249,7 @@ Kullanıcılar tarafından veya otomatik olarak uygulanan bekletme etiketleri i�
 |Yeteneği|Bekletme ilkesi |Bekletme etiketi|
 |:-----|:-----|:-----|:-----|
 |Saklama ayarlarını koruyup silebilen, yalnızca tutabilen veya yalnızca silebilen bekletme ayarları |Evet |Evet |
-|Desteklenen iş yükleri: <br />- Exchange <br />- SharePoint <br />- OneDrive <br />- Microsoft 365 grupları <br />- Skype Kurumsal <br />- Teams<br />- Yammer|<br /> Evet <br /> Evet <br /> Evet <br /> Evet <br /> Evet <br /> Evet <br /> Evet | <br /> Evet, ortak klasörler dışında <br /> Evet <br /> Evet <br /> Evet <br /> Hayır <br /> Hayır <br /> Hayır |
+|Desteklenen iş yükleri: <br />- Exchange <br />- SharePoint <br />- OneDrive <br />- Microsoft 365 grupları <br />- Skype for Business <br />- Teams<br />- Yammer|<br /> Evet <br /> Evet <br /> Evet <br /> Evet <br /> Evet <br /> Evet <br /> Evet | <br /> Evet, ortak klasörler dışında <br /> Evet <br /> Evet <br /> Evet <br /> Hayır <br /> Hayır <br /> Hayır |
 |Bekletme otomatik olarak uygulanır | Evet | Evet |
 |Koşullara göre uygulanan bekletme <br /> - hassas bilgi türleri, KQL sorgular ve anahtar sözcükler, eğitilebilir sınıflandırıcılar, bulut ekleri| Hayır | Evet |
 |Bekletme el ile uygulandı | Hayır | Evet |
@@ -287,7 +287,7 @@ Senaryo: Varsayılan olarak, kullanıcıların OneDrive hesaplarındaki içerik 
 
 Senaryo: Varsayılan olarak, SharePoint öğeler beş yıl sonra otomatik olarak korunur ve silinir, ancak belirli kitaplıklardaki belgeler on yıl boyunca saklanmalıdır.
 
-1. Beş yıl sonra içeriği otomatik olarak saklayan ve silecek bir bekletme ilkesi oluşturup yapılandırıp ilkeyi tüm SharePoint ve Microsoft 365 Grupları örneklerine uygularsınız.
+1. Beş yıl sonra içeriği otomatik olarak saklayan ve silecek bir bekletme ilkesi oluşturup yapılandırabilir ve ilkeyi tüm SharePoint ve Microsoft 365 组 örneklerine uygularsınız.
 
 2. İçeriği otomatik olarak on yıl boyunca saklayan bir bekletme etiketi oluşturup yapılandırabilirsiniz. Bu etiketi, belirli belge kitaplıklarındaki tüm öğeler tarafından devralınacak varsayılan bir etiket olarak uygulayabilmeleri için SharePoint site yöneticilerine yayımlarsınız.
 
@@ -347,7 +347,7 @@ Statik kapsamları kullanmanın avantajları:
 
     "Eklemeler" ve "dışlar" için, belirtmeniz gereken örnek sayısı düşükse ve değişmezse bu seçenek başlangıçta daha basit bir yapılandırma olabilir. Ancak, bu sayıda örnek artmaya başladığında ve kuruluşunuzda ilkelerinizi yeniden yapılandırmanızı gerektiren sık sık değişiklikleriniz olduğunda uyarlamalı kapsamların yapılandırılması daha basit ve bakımı çok daha kolay olabilir.
 
-- **Skype Kurumsal** ve **Exchange ortak klasör** konumları uyarlamalı kapsamları desteklemez. Bu konumlar için statik bir kapsam kullanmanız gerekir.
+- **Skype for Business** ve **Exchange ortak klasör** konumları uyarlamalı kapsamları desteklemez. Bu konumlar için statik bir kapsam kullanmanız gerekir.
 
 Yapılandırma bilgileri için bkz [. Uyarlamalı kapsamları yapılandırma](retention-settings.md#configuration-information-for-adaptive-scopes).
 
@@ -492,7 +492,7 @@ Belirli konumlar için ek bilgiler:
 
     Yetkisiz kullanım süresindeki davranış nedeniyle, ilkeyi yeniden etkinleştirirseniz veya konum durumunu 30 gün içinde yeniden açarsanız, ilke bu süre boyunca kalıcı bir veri kaybı olmadan devam eder.
 
-- **E-posta ve Microsoft 365 Grupları Exchange**
+- **E-posta ve Microsoft 365 组 Exchange**
 
   İlke yayımlandığında [etkin olmayan](inactive-mailboxes-in-office-365.md) posta kutuları için bir bekletme ilkesi yayımladığınızda:
 
@@ -502,7 +502,7 @@ Belirli konumlar için ek bilgiler:
 
   - Bekletme ilkesi bir posta kutusuna örtük olarak uygulanmışsa ve yapılandırılmış bekletme eylemi korunacaksa, bekletme ilkesi uygulanmaya devam eder ve etkin olmayan bir posta kutusu hiçbir zaman otomatik silme için uygun olmaz. Saklama süresi dolduğunda saklama eylemi artık geçerli olmadığında, Exchange yöneticisi [artık etkin olmayan posta kutusunu el ile silebilir](delete-an-inactive-mailbox.md)
 
-        An implicit retention policy requires a static policy scope with the **All recipients** (for Exchange email) or **All groups** (for Microsoft 365 Groups) configuration.
+    Örtük saklama ilkesi, **Tüm alıcılar** (Exchange e-posta için) veya **Tüm gruplar** (Microsoft 365 组 için) yapılandırmasıyla statik bir ilke kapsamı gerektirir.
 
     Bekletme ilkeleri uygulanmış etkin olmayan posta kutuları hakkında daha fazla bilgi için bkz. [Etkin olmayan posta kutuları ve Microsoft 365 bekletme](inactive-mailboxes-in-office-365.md#inactive-mailboxes-and-microsoft-365-retention).
 

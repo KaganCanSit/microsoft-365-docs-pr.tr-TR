@@ -1,5 +1,5 @@
 ---
-title: İş Microsoft Teams bir parçası olarak kaydolma
+title: İş aboneliğinin bir parçası olarak Microsoft Teams kaydolma
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -13,58 +13,58 @@ ms.collection:
 - Adm_TOC
 ms.custom:
 - AdminSurgePortfolio
-description: İş aboneliği kapsamında Microsoft Teams için bu makaledeki adımları izleyin.
-ms.openlocfilehash: 75d1cdd4af19fb9986c034545b345b06401d0f82
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+description: İş aboneliği kapsamında Microsoft Teams kaydolmak için bu makaledeki adımları izleyin.
+ms.openlocfilehash: 9bdf5327de2dc2e542e2c3a37b3cceea83a86b3f
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64568992"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64782973"
 ---
-# <a name="sign-up-for-microsoft-teams-as-part-of-a-business-subscription"></a>İş Microsoft Teams bir parçası olarak kaydolma
+# <a name="sign-up-for-microsoft-teams-as-part-of-a-business-subscription"></a>İş aboneliğinin bir parçası olarak Microsoft Teams kaydolma
 
-Microsoft Teams Başlangıç ve Microsoft 365 İş Temel 365 ticari kullanım için sunulur ve kurumsal müşterilere yöneliktir. Bu makale, müşterilerin ihtiyaçlarına uygun olan seçeneği tercihlerine yardımcı olmak için hazırlanmıştır.  İşletme değil misiniz?
+Microsoft Teams Başlangıç ve Microsoft 365 Business Basic 365 ticari kullanım için sunulur ve iş müşterilerine yöneliktir. Bu makale, müşterilerin ihtiyaçlarına en uygun olanı seçmelerine yardımcı olmak içindir.  İş değil mi?
 
-**İşletme değil misiniz?** [Bir ev veya aile planına kaydol'](https://go.microsoft.com/fwlink/?linkid=2109398)
+**İş değil mi?** [Bir ev veya aile planına kaydolun](https://go.microsoft.com/fwlink/?linkid=2109398).
 
 ## <a name="choosing-the-right-business-subscription"></a>Doğru iş aboneliğini seçme
 
-Premium toplantı ve Microsoft Teams satın almak için arama yapmak için, çalışmaya başlamayla ilgili benzer fiyatla 2 seçeneğiniz vardır: Microsoft Teams Başlangıç ve Microsoft 365 İş Temel. Üç önemli faktörü değerlendirerek, hangi etmenlerin ihtiyaçlarına en uygun olduğunu seçin:
+Microsoft Teams premium toplantı satın almak ve işlevselliği çağırmak istediğinizde, kullanmaya başlamaya yönelik benzer fiyatlı 2 seçeneğiniz vardır: Microsoft Teams Başlangıç ve Microsoft 365 Business Basic. Gereksinimlerinize en uygun olanı seçmek için üç önemli faktörü değerlendirin:
 
-1. Hangi uygulama ve hizmetleri istiyor musunuz?
+1. Hangi uygulamaları ve hizmetleri istiyorsunuz?
 2. Ne kadar teknik beceriniz var?  
-3. Veri sahipliğini ve fikri mülkiyet haklarını göz önünde bulundurarak neleri dikkate alısınız?
+3. Veri sahipliği ve fikri mülkiyet hakları hakkında neleri göz önünde bulundurmanız gerekir?
 
-Kaydolma seçenekleri ve seçiminize uygulanacak hizmetler için aşağıdaki tabloya bakın.
+Kayıt seçenekleri ve seçiminize uygulanacak hizmetler için aşağıdaki tabloya bakın.
 
-|&nbsp;|**1. Seçenek - Microsoft Teams Başlangıç** |**2. Seçenek - Microsoft 365 İş Temel** |
+|&nbsp;|**Seçenek 1 - Microsoft Teams Başlangıç** |**Seçenek 2 - Microsoft 365 Business Basic** |
 |---|---|---|
-|Kullanılabilir uygulamalar ve hizmetler|Yeni İş Standardı kayıt işlemini kullanarak mevcut e-posta hesabınızla (Hotmail, Gmail, Yahoo) oturum açın. Microsoft Teams depolama alanıyla birlikte OneDrive. Word'un ücretsiz web Excel PowerPoint Office.com'da paylaşılan dosyaları düzenlemek için Teams. <br/><br/> **Bu uygulama kümesi, görüntülü toplantılar ve sohbetler üzerinden etkili bir şekilde işbirliği yapmaları gereken çok küçük işletmeler için en iyisidir**. |Microsoft Teams ve OneDrive. Microsoft Exchange, SharePoint, Bookings, Planner ve Listeler'i içerir. Premium Office.com'da Word, Excel PowerPoint web Office. <br/><br/> **Microsoft 365 İş Temel web tabanlı birçok hizmete erişmenizi de sağlar**: <ul><li>Yeni, markalı iş e-posta Outlook, işletmeniz için paylaşılan takvimler.</li><li>Bookings, randevu zamanlama ve Toplantı kayıtları.</li><li>Paylaşılan belge depolama alanı ve SharePoint.</li><li> Microsoft Planner ve Microsoft Listeler.</li></ul> <br/> Microsoft 365 İş Temel Alanına Hesap Kaydolma ile Teams içinde ek hizmetler sunabilirsiniz: <ul><li>Grup görüşmesinde toplantı kayıtları ve anonim Microsoft Teams.</li><li>İşletmeniz içinde daha kolay belge paylaşımı.</li><li>Sektörünize uyumluluk 2013 desteği.</li><li>Çalışanlarınızı hizmet kullanımına erişim ve denetim.</li><li>Microsoft dışından uygulamaların (Salesforce, Adobe gibi) kendi içinde ve iş birliğiyle çalışan en geniş Teams Office.</li></ul>|
-|Gerekli bilgi|Etki alanını çalıştırmak için teknik bilgi gerekmeden işe başlamanız gerekiyor.|Etki alanı satın almanızı veya bir etki alanına sahip olmak gerektirir. Var olan bir etki alanını kullanmak için, etki alanının kimlik bilgilerine erişmeniz gerekir ve sahipliği kanıtlamak için teknik bilgiye ihtiyacınız olabilir.|
-|Yönetim Sözleşmesi ve veri işleme|[Microsoft](https://go.microsoft.com/fwlink/p/?linkid=2180702) Hizmet Sözleşmesi eki altında kullanılabilir ve bazı uzaktan çalışma ve işbirliği araçlarını isteyen ve **Microsoft'un Microsoft** Gizlilik Bildirimi'nin altında verileriniz için denetleyici olarak hareket eden işletmeler için en [iyisidir.](https://go.microsoft.com/fwlink/?LinkId=521839) Aboneler ("siz") bu seçeneği kullanarak hizmetlere davet edilen başka bir kullanıcının ("davet edilen kullanıcılar") içeriğine veya verilerine erişemayacaktır. <br/><br/> Örneğin, kendi hesaplarında depolanan bir belge üzerinde davet edilen diğer kullanıcılarla işbirliğine dayalı olarak çalışıyorsanız, bu belgelere erişilmenizi sağlanabilir hale kendileri seçebilirler. <br/><br> Ayrıca davet edilen kullanıcılar, siz davet ettikten sonra Sign-Up Kendi Basitleştirilmiş E-posta hesaplarına kendi Etki Alanı Hesabı aboneliğinize belge aktarmayı seçebilirler. Bu, siz etki alanı hesabını daha sonra ekleyene bile belgelerine erişilemyil erişim sağlanmayacak anlamına gelir. Bu nedenle, veri sahipliğini ve fikri mülkiyeti dikkate alınacak değerlendirmeleri buna göre değerlendirmelisiniz.|[Microsoft Çevrimiçi Abonelik Sözleşmesi](https://go.microsoft.com/fwlink/p/?linkid=2180430) kapsamında kullanılabilir ve **Microsoft'a** ihtiyaç duyuyor ve Veri Koruma Yasası kapsamında verileri için işlemci gibi çalışması ve uzaktan çalışma ve [](https://go.microsoft.com/fwlink/p/?linkid=2180314) işbirliği araçlarının tam paketine ihtiyacı olan işletmeler için en iyisidir. **Düzenlemeye tabi** sektörlerde yer alan veya hem çalışanlarınız tarafından hizmetlerin kullanımı hem de Microsoft tarafından ilgili verilerin iş süreci üzerinden daha fazla denetim sahibi olmak isteyen aboneler, Microsoft İş İş Temel'e kaydolmayı seçerek Etki Alanı Hesabı'nın kurumsal düzeydeki sözleşmesine kaydolmaları gerekir.|
+|Kullanılabilir uygulamalar ve hizmetler|Yeni İş Standardı kayıt işlemini kullanarak mevcut e-posta hesabınızla (Hotmail, Gmail, Yahoo) oturum açın. OneDrive'da bulut depolama ile Microsoft Teams. Teams'da paylaşılan dosyaları düzenlemek için Office.com'da ücretsiz Word, Excel PowerPoint web sürümleri. <br/><br/> **Bu uygulama kümesi, görüntülü toplantılar ve sohbetler üzerinde etkili bir şekilde işbirliğine ihtiyacı olan çok küçük işletmeler için idealdir**. |Microsoft Teams ve OneDrive. Microsoft Exchange, SharePoint, Bookings, Planner ve Listeler. Office.com'da Word, Excel PowerPoint web sürümlerini Premium Office. <br/><br/> **Microsoft 365 Business Basic ayrıca çok çeşitli web tabanlı hizmetlere erişmenizi sağlar**: <ul><li>İşletmenizde Outlook, paylaşılan takvimler içeren yeni, markalı iş e-posta hesapları.</li><li>Bookings, randevu zamanlama ve Toplantı kayıtları.</li><li>Paylaşılan belge depolama ve SharePoint siteleri.</li><li> Microsoft Planner ve Microsoft ତାଲିକା.</li></ul> <br/> Microsoft 365 Business Basic Etki Alanı Hesabı Kaydolma ile Teams içinde ek hizmetler sunar: <ul><li>toplantı kayıtları ve Microsoft Teams anonim arama erişimi.</li><li>İşletmenizde daha kolay belge paylaşımı.</li><li>Sektörünüz için uyumluluk gereksinimleri için destek.</li><li>Çalışanlarınızın hizmet kullanımına erişim ve denetim.</li><li>Teams ve Office içinde çalışan Microsoft dışı uygulamaların (örneğin Salesforce, Adobe) en geniş tümleştirme yelpazesi.</li></ul>|
+|Gerekli bilgi|Bir etki alanını çalıştırmak için teknik bilgi gerektirmeden çalışmaya başlamanıza olanak tanıyalım.|Etki alanı satın almanız veya bir etki alanına sahip olmanız gerekir. Mevcut bir etki alanını kullanmak istiyorsanız, etki alanı için erişim kimlik bilgilerine ve sahipliği kanıtlamak için teknik bilgiye ihtiyacınız olabilir.|
+|İdare Sözleşmesi ve veri işleme|[Microsoft Hizmet Sözleşmesi](https://go.microsoft.com/fwlink/p/?linkid=2180702) Eki kapsamında sağlanır ve **bazı uzaktan çalışma ve işbirliği araçları isteyen işletmeler için en iyisidir ve Microsoft Gizlilik Bildirimi kapsamında verileriniz için denetleyici olarak hareket etme konusunda Microsoft'un** rahat olmasını sağlar [](https://go.microsoft.com/fwlink/?LinkId=521839). Bu seçeneği kullanan hizmetlere abonelerin ("siz") başka bir davet edilen kullanıcının ("davet edilen kullanıcılar") içeriğine veya verilerine erişimi olmayacaktır. <br/><br/> Örneğin, kendi hesaplarında depolanan bir belge üzerinde davet edilen diğer kullanıcılarla işbirliği içinde çalışıyorsanız, bu belgelere sizin için erişilemez hale gelebilirler. <br/><br> Ayrıca, davet edilen kullanıcılar siz davet ettikten sonra bile Basitleştirilmiş Sign-Up hesaplarındaki belgeleri Etki Alanı Hesabı aboneliğinize aktarmamayı seçebilir. Başka bir deyişle, daha sonra bir etki alanı hesabı ekleseniz bile belgelerine erişemeyebilirsiniz. Bu nedenle, veri sahipliğini ve fikri mülkiyet hakları konularını buna göre değerlendirmeniz gerekir.|[Microsoft Çevrimiçi Abonelik Sözleşmesi](https://go.microsoft.com/fwlink/p/?linkid=2180430) kapsamında kullanılabilir ve Microsoft'un [Veri Koruma Eki](https://go.microsoft.com/fwlink/p/?linkid=2180314) kapsamında verileri için **işlemci olarak davranması ve** tam uzaktan çalışma ve işbirliği araçları paketimize ihtiyacı olan işletmeler için en iyisidir. **Hem çalışanlarınız tarafından hizmetlerin kullanımı hem de Microsoft tarafından ilgili verilerin işlenmesi üzerinde düzenlenmiş sektörlerde bulunan veya daha fazla denetim arayan aboneler, Etki Alanı Hesabı'nı seçerek Microsoft Business Business Basic'e kaydolmalı** ve Etki Alanı Hesabı kurumsal düzey sözleşmesi kapsamında kaydolmalıdır.|
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
-### <a name="what-is-a-business-email-and-what-are-the-advantages-to-setting-one-up"></a>İş e-postası nedir ve e-posta ayarlamanın avantajları nelerdir?
+### <a name="what-is-a-business-email-and-what-are-the-advantages-to-setting-one-up"></a>İş e-postası nedir ve bir e-posta ayarlamanın avantajları nelerdir?
 
-İş e-postası, kendi etki alanı adınızı kullanan bir e-postadır. Örneğin, etki alanı adının sahibiysiniz `contoso.com`, URL'yi `www.contoso.com`kullanarak bir web sitesi oluşturabilirsiniz, ancak etki alanı adı gibi özel bir e-posta yourname@contoso.com. Bu, e-postanıza profesyonel bir görünüm verdiği için markalı iş e-postası olarak adlandırılır.
+İş e-postası, kendi etki alanı adınızı kullanan bir e-postadır. Örneğin, etki alanı adına `contoso.com`sahipseniz url'sini `www.contoso.com`kullanarak bir web sitesi oluşturabilirsiniz, ancak yourname@contoso.com gibi özel bir e-posta adresiniz de olabilir. Bu, e-postanıza profesyonel bir görünüm kazandıran markalı bir iş e-postası olarak adlandırılır.
 
-### <a name="how-do-i-get-a-new-business-email-address"></a>Nasıl yaparım? iş e-posta adresi mi alıysınız?
+### <a name="how-do-i-get-a-new-business-email-address"></a>yeni bir iş e-posta adresi Nasıl yaparım??
 
 İş e-postası almak için üç seçenek vardır.
 
-- Önerilen bir etki onmicrosoft.com ücretsiz (ücretsiz) someone@mybusiness.onmicrosoft.com.
-- Daha küçük bir e-posta adresi (E-posta) için yeni bir etki alanı mybusinessname@contoso.com.
-- Zaten sahip olduğunuz bir etki alanı adı kullanın.
+- Önerilen onmicrosoft.com etki alanını ücretsiz kullanabilirsiniz (someone@mybusiness.onmicrosoft.com).
+- Daha kompakt bir e-posta adresine (mybusinessname@contoso.com) sahip olmak için yeni bir etki alanı satın alabilirsiniz.
+- Zaten sahip olduğunuz bir etki alanı adı kullanırsınız.
 
-### <a name="why-might-i-need-to-verify-my-domain-to-create-a-business-email"></a>Bir iş e-postası oluşturmak için neden etki alanımı doğrulamam gerekiyor?
+### <a name="why-might-i-need-to-verify-my-domain-to-create-a-business-email"></a>İş e-postası oluşturmak için neden etki alanımı doğrulamam gerekebilir?
 
-Zaten sahip olduğunuz bir etki alanını kullanmayı seçerseniz, bu etki alanını e-posta adresiniz ve Microsoft 365. Kaydolma işleminin bir parçası olarak, güvenlik nedeniyle etki alanını doğrulamanız ve hileli etkinliklere karşı korumanız için sizden yardım istememiz gerekir.
+Zaten sahip olduğunuz bir etki alanını kullanmayı seçerseniz, bu etki alanını Microsoft 365 olan e-posta adresiniz için kullanabilirsiniz. Kaydolma işleminin bir parçası olarak, güvenlik amacıyla etki alanını doğrulamanızı ve sahte etkinliklere karşı koruma sağlamanızı istiyoruz.
 
 ### <a name="how-does-recurring-billing-work"></a>Yinelenen faturalama nasıl çalışır?
 
-Yinelenen faturalama açık olduğunda, aboneliğiniz abone olduğunuz gün her ay (veya fatura planınıza bağlı olarak yıl) faturalandır olmaya devam eder. Aboneliğiniz etkinse yönetim merkezinde bu hizmeti kapatabilirsiniz veya yeniden açabilirsiniz. Yinelenen  [faturalamayı kapatma veya kapatma burada daha fazla bilgi bulun.](../../commerce/subscriptions/renew-your-subscription.md#turn-recurring-billing-off-or-on)
+Yinelenen faturalama açık olduğunda aboneliğiniz abone olduğunuz gün her ay (veya faturalama planınıza bağlı olarak yıl) faturalandırılmaya devam eder. Aboneliğiniz etkinse yönetim merkezinde bu özelliği kapatabilir veya yeniden açabilirsiniz. [Yinelenen faturalamayı kapatma veya açma](../../commerce/subscriptions/renew-your-subscription.md#turn-recurring-billing-off-or-on) sayfasından daha fazla bilgi edinin.
 
-### <a name="what-do-i-do-if-i-want-to-change-my-business-name"></a>İşletmemin adını değiştirmek istediğimde ne yapabilirim?
+### <a name="what-do-i-do-if-i-want-to-change-my-business-name"></a>İşletmemin adını değiştirmek istersem ne yapmalıyım?
 
-İşletmenizin adını değiştirmenize yardımcı olacak küçük işletme destek uzmanlarımıza başvurun. Destek almak hakkında daha  [fazla bilgi edinmek için: Destek almak](../get-help-support.md).
+İşletmenizin adını değiştirmenize yardımcı olabilecek küçük işletme destek uzmanlarımıza başvurun. Daha fazla bilgi için [bkz. Destek alma](../get-help-support.md).

@@ -1,5 +1,5 @@
 ---
-title: Dağıtım listelerini Outlook'Microsoft 365 Gruplarına yükseltme
+title: Dağıtım listelerini Outlook'da Microsoft 365 组 yükseltme
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -21,188 +21,198 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 787d7a75-e201-46f3-a242-f698162ff09f
-description: Outlook'ta grup gruplarına bir veya Microsoft 365 dağıtım listelerini yükseltmeyi ve aynı anda birkaç dağıtım listelerini yükseltmek için PowerShell'i kullanmayı öğrenin.
-ms.openlocfilehash: 5394ce52f865d0b9a0383619cb11b9ebf3a94fc8
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+description: Outlook'da bir veya birden çok dağıtım listesini Microsoft 365 组 yükseltmeyi ve aynı anda çeşitli dağıtım listelerini yükseltmek için PowerShell'i kullanmayı öğrenin.
+ms.openlocfilehash: 832d65854a6a18ad28e3d9fca6d1d11c17146c80
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63449211"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64782269"
 ---
-# <a name="upgrade-distribution-lists-to-microsoft-365-groups-in-outlook"></a>Dağıtım listelerini Outlook'Microsoft 365 Gruplarına yükseltme
+# <a name="upgrade-distribution-lists-to-microsoft-365-groups-in-outlook"></a>Dağıtım listelerini Outlook'da Microsoft 365 组 yükseltme
 
-Dağıtım listelerini, aynı Microsoft 365 Gruplarına Outlook. Bu, tüm kuruluş gruplarında yer alan dağıtım listelerinin tüm özelliklerini ve işlevlerini sağlamak için Microsoft 365 birdir. [Neden Outlook'ta dağıtım listelerinizi gruplara yükseltmelisiniz?](https://support.microsoft.com/office/7fb3d880-593b-4909-aafa-950dd50ce188)
+Dağıtım listelerini Outlook'da Microsoft 365 组 yükseltebilirsiniz. Bu, kuruluşunuzun dağıtım listelerine Microsoft 365 组 tüm özelliklerini ve işlevlerini vermenin harika bir yoludur. [Neden Outlook'ta dağıtım listelerinizi gruplara yükseltmelisiniz?](https://support.microsoft.com/office/7fb3d880-593b-4909-aafa-950dd50ce188)
 
-DL'leri tek tek veya aynı anda birkaç DL'ye yükseltebilirsiniz.
+DLL'leri birer birer veya aynı anda birkaç tane yükseltebilirsiniz.
 
-## <a name="upgrade-one-or-many-distribution-list-groups-to-microsoft-365-groups-in-outlook"></a>Bir veya birçok dağıtım listesi listesini farklı bir Microsoft 365 Gruplarına Outlook
+## <a name="upgrade-one-or-many-distribution-list-groups-to-microsoft-365-groups-in-outlook"></a>Bir veya birden çok dağıtım listesi grubunu Outlook'da Microsoft 365 组 yükseltme
 
-Dağıtım listesi grubunu yükseltmek için genel yönetici Exchange yönetici veya yönetici olasınız. Dağıtım Grupları'Microsoft 365 yükseltmek için, dağıtım listesi grubunun posta kutusu olan bir sahibi olması gerekir.
+Dağıtım listesi grubunu yükseltmek için genel yönetici veya Exchange yöneticisi olmanız gerekir. Microsoft 365 组 yükseltmek için dağıtım listesi grubunun posta kutusu olan bir sahibi olmalıdır.
 
-### <a name="use-the-new-eac-to-upgrade-one-or-many-distribution-list-groups-to-microsoft-365-groups-in-outlook"></a>Yeni EAC'i kullanarak bir veya birçok dağıtım listesi listesini aynı Microsoft 365 grupları Outlook
+### <a name="use-the-new-eac-to-upgrade-one-or-many-distribution-list-groups-to-microsoft-365-groups-in-outlook"></a>Outlook'de bir veya birden çok dağıtım listesi grubunu Microsoft 365 组 yükseltmek için yeni EAC'yi kullanın
 
-1. Alıcılar Grupları'Exchange yönetim > **gidin** \> <a href="https://go.microsoft.com/fwlink/?linkid=2183233" target="_blank">.</a>
+1. **Alıcı** \> <a href="https://go.microsoft.com/fwlink/?linkid=2183233" target="_blank">Grupları</a> > yeni Exchange yönetim merkezine gidin.
 
-2. Gruplar sayfasından grup grubuna yükseltmek istediğiniz dağıtım listesi grubunu (dağıtım grubu olarak Microsoft 365 **) seçin.**
+2. **Gruplar** sayfasından Microsoft 365 grubuna yükseltmek istediğiniz dağıtım listesi grubunu (**dağıtım grubu** olarak da adlandırılır) seçin.
 
-3. Araç **çubuğundan Dağıtım grubunu** yükselt'i seçin.
+3. Araç çubuğundan **Dağıtım grubunu yükselt'i** seçin.
 
-4. Yükseltmeye hazır mısınız **? iletişim kutusunda Yükselt'e** **tıklayın**. İşlem hemen başlar. Yükseltmeyi kullandığınız dağıtım listesi gruplarının boyutuna ve sayısına bağlı olarak, işlem dakika veya saat sürebilir.
-
-> [!NOTE]
-> Üst başlıkta yer alan başlık, örneğin Dağıtım grubunun *yükseltil olduğunu gösterir. Değişiklikleri yansıtmak 5 dakika sürer. Yükseltilen dağıtım Microsoft 365 görmek için gruplara göre filtre uygulama*.
-
-### <a name="use-the-classic-eac-to-upgrade-one-or-many-distribution-list-groups-to-microsoft-365-groups-in-outlook"></a>Klasik EAC'i kullanarak bir veya birçok dağıtım listesi gruplarını aynı gruptaki Microsoft 365 için Outlook
-
-1. Alıcı Grupları'Exchange yönetim > **gidin**\>.<a href="https://go.microsoft.com/fwlink/?linkid=2183233" target="_blank"></a><br/>Grup Gruplarında yükseltmeye uygun dağıtım listelerine (dağıtım grupları olarak da **denir) sahip** olduğunu belirten bir Microsoft 365 bakın.<br/> ![Çalışmaya başla düğmesini seçin.](../../media/8cf838b4-2644-401f-a366-08c1eea183eb.png)
-
-1. Gruplar sayfasından bir veya birden çok dağıtım listesi ( **dağıtım grubu** olarak da **adlandırılan)** seçin.<br/>![Bir dağıtım grubu seçin.](../../media/2c303433-d60b-4100-a6ae-5809b03a8cdb.png)
-
-1. Yükseltme simgesini seçin.<br/>![Gruplara Microsoft 365 yükseltin.](../../media/1e28cb3d-bff3-4be3-8329-1902d2d54720.png)
-
-1. Bilgi iletişim kutusunda, yükseltmeyi onaylamak **için Evet'i** seçin. İşlem hemen başlar. Yükseltmekte bulunduğunuz DL'nin boyutuna ve sayısına bağlı olarak, işlem dakika veya saat sürebilir.<br/>Dağıtım listesi yükseltilemiyorsa, bunu söyleyen bir iletişim kutusu görüntülenir. Bkz[. Hangi dağıtım listeleri yükseltilemiyor?](#which-distribution-lists-cant-be-upgraded)
-
-1. Birden çok dağıtım listesini yükseltirken, yükseltilen dağıtım listelerini filtrelemek için açılan listeyi kullanın. Liste tamamlanmadısa, biraz daha bekleyin ve ardından başarıyla yükseltilenleri  görmek için Yenile'yi seçin.<br/>Seçtiğiniz tüm URL'ler için yükseltme işleminin ne zaman tamamlandıktan sonra bunu size söyleyen bir bildirim yoktur. Bunu, Yükseltme için kullanılabilir veya Yükseltilmiş DL'ler altında **nelerin listelenmiş olduğunu** **görerek anabilirsiniz**.
-
-1. Yükseltme için bir DL seçtiysanız, ancak yükseltme için kullanılabilir olarak sayfada hala karşı çıktı ve yükseltme başarısız oldu. Bkz [. Yükseltme işe yaramadı mı](#what-to-do-if-the-upgrade-doesnt-work)?
+4. **Yükseltmeye hazır mısınız?** iletişim kutusunda **Yükselt'e** tıklayın. İşlem hemen başlar. Yükseltmekte olduğunuz dağıtım listesi gruplarının boyutuna ve sayısına bağlı olarak işlem dakika veya saat sürebilir.
 
 > [!NOTE]
-> Grupların özet e-postalarını alıyorsanız, en altta bu e-postanın bazen sahibi olduğunuz uygun dağıtım listelerini yükseltmenizi teklif e-posta olarak farkedebilirsiniz. Özet [e-postaları hakkında daha fazla bilgi Outlook](https://support.microsoft.com/office/a0482e24-a769-4e39-a5ba-a7c56e828b22) için bkz. E-postalarda grup görüşmesi yapmak.
+> En üstteki başlık yükseltmeyi gösterir; örneğin *Dağıtım grupları yükseltilmiştir. Değişiklikleri yansıtmak 5 dakika sürer. Yükseltilen dağıtım gruplarını görmek için Microsoft 365 gruplarına göre filtreleyin*.
 
-## <a name="what-to-do-if-the-upgrade-doesnt-work"></a>Yükseltme işe yaramadı mı?
+### <a name="use-the-classic-eac-to-upgrade-one-or-many-distribution-list-groups-to-microsoft-365-groups-in-outlook"></a>Outlook'da Microsoft 365 组 için bir veya birden çok dağıtım listesi grubunu yükseltmek için Klasik EAC'yi kullanın
 
-Yükseltmesi başarısız olan dağıtım listeleri değişmeden kalır.
+1. Exchange yönetim merkezine > **Alıcı Grupları'na** \> gidin.<a href="https://go.microsoft.com/fwlink/?linkid=2183233" target="_blank"></a><br/>Microsoft 365 组 yükseltilmeye uygun dağıtım listeleriniz (**dağıtım grupları** olarak da adlandırılır) olduğunu belirten bir bildirim görürsünüz.<br/> ![Kullanmaya başlayın düğmesini seçin.](../../media/8cf838b4-2644-401f-a366-08c1eea183eb.png)
 
-Bir veya birden **çok uygun** dağıtım listesi yükseltilenene kadar, 
+1. **Gruplar** sayfasından bir veya daha fazla dağıtım listesi (**dağıtım grubu** olarak da adlandırılır) seçin.<br/>![Bir dağıtım grubu seçin.](../../media/2c303433-d60b-4100-a6ae-5809b03a8cdb.png)
 
-1. Dağıtım [listesinin](https://aka.ms/DLToM365Group) Microsoft 365 grubuna yükseltilmesine engel olacak olası sorunları taramak, betik tarafından bildirilen sorunları düzeltmek ve dağıtım listesini bir kez daha yükseltmeyi denemek için bu betiği kullanın. 
+1. Yükseltme simgesini seçin.<br/>![Microsoft 365 组 simgesine yükseltin.](../../media/1e28cb3d-bff3-4be3-8329-1902d2d54720.png)
 
-2. Yukarıdaki betiğin bir yardımı yoksa veya sorun devam ederse bir Destek [bileti açın](../../business-video/get-help-support.md). Onların sorunu an önce çözmeleri için bu sorunun Gruplar Mühendislik ekibine ednleri gerekir.
+1. Yükseltmeyi onaylamak için bilgi iletişim kutusunda **Evet'i** seçin. İşlem hemen başlar. Yükseltmekte olduğunuz DLL'lerin boyutuna ve sayısına bağlı olarak işlem dakika veya saat sürebilir.<br/>Dağıtım listesi yükseltilemiyorsa, bunu söyleyen bir iletişim kutusu görüntülenir. [Bkz. Hangi dağıtım listeleri yükseltilemiyor?](#which-distribution-lists-cant-be-upgraded).
 
-## <a name="how-to-use-powershell-to-upgrade-several-distribution-lists-at-the-same-time"></a>Aynı anda birkaç dağıtım listelerini yükseltmek için PowerShell kullanma
+1. Birden çok dağıtım listesini yükseltiyorsanız, hangi dağıtım listelerinin yükseltildiğini filtrelemek için açılan listeyi kullanın. Liste tamamlanmamışsa, bir süre daha bekleyin ve ardından başarıyla yükseltilenleri görmek için **Yenile'yi** seçin.<br/>Seçtiğiniz tüm DLL'ler için yükseltme işleminin ne zaman tamamlandığını bildiren bir bildirim yoktur. **Yükseltme için kullanılabilir** veya **Yükseltilen DLL'ler** altında listelenenleri görmek için bunu anlayabilirsiniz.
 
-PowerShell kullanırken deneyimliysiniz, kullanıcı arabirimi yerine bu yönlendirmeye gitmek istiyor olabilirsiniz. Dağıtım listelerini yükseltmeniz için size yardımcı olacak bir dizi cmdlet'imiz var. Aşağıya bakın.
+1. Yükseltme için bir DL seçtiyseniz ancak yükseltme için kullanılabilir olarak sayfada görünmeye devam ediyorsa yükseltme başarısız oldu. Bkz. [Yükseltme işe yaramazsa yapılması gerekenler](#what-to-do-if-the-upgrade-doesnt-work).
 
-### <a name="upgrade-a-single-dl"></a>Tek bir DL'ye yükseltme
+> [!NOTE]
+> Grupların özet e-postalarını alıyorsanız, bazen sahibi olduğunuz uygun dağıtım listelerini yükseltmenizi sağlamanın en altta olduğunu fark edebilirsiniz. Özet e-postalar hakkında daha fazla bilgi için bkz. [Outlook'da grup konuşması yapma](https://support.microsoft.com/office/a0482e24-a769-4e39-a5ba-a7c56e828b22).
 
-Tek bir DL'ye yükseltmek için aşağıdaki komutu çalıştırın:
+## <a name="what-to-do-if-the-upgrade-doesnt-work"></a>Yükseltme işe yaramazsa yapılması gerekenler
+
+Yükseltilemeyen dağıtım listeleri değişmeden kalır.
+
+Bir veya daha fazla **uygun** dağıtım listesi yükseltilemiyorsa, 
+
+1. Dağıtım listesinin Microsoft 365 grubuna yükseltilmesini engelleyebilecek olası sorunları taramak, betik tarafından bildirilen sorunları düzeltmek ve dağıtım listesini bir kez daha yükseltmeyi denemek için [bu](https://aka.ms/DLToM365Group) betiği kullanın. 
+
+2. Yukarıdaki betik işe yaramazsa veya sorun devam ederse bir [Destek bileti](../../business-video/get-help-support.md) açın. Sorunu anlamaları için sorunun Gruplar Mühendisliği ekibine yükseltilmesi gerekir.
+
+## <a name="how-to-use-powershell-to-upgrade-several-distribution-lists-at-the-same-time"></a>Aynı anda çeşitli dağıtım listelerini yükseltmek için PowerShell'i kullanma
+
+PowerShell kullanma konusunda deneyimliyseniz, kullanıcı arabirimini kullanmak yerine bu yola gitmek isteyebilirsiniz. Dağıtım listelerini yükseltmenize yardımcı olacak bir dizi cmdlet'imiz var. Aşağıya bakın.
+
+### <a name="upgrade-a-single-dl"></a>Tek bir DL'i yükseltme
+
+Tek bir DL'yi yükseltmek için aşağıdaki komutu çalıştırın:
 
 ```PowerShell
 Upgrade-DistributionGroup -DlIdentities <Dl SMTP address>
 ```
 
-Örneğin, SMTP adres defterine sahip bir DL'ye yükseltmek dl1@contoso.com aşağıdaki komutu çalıştırın:
+Örneğin, SMTP adresi dl1@contoso.com bir DL'yi yükseltmek istiyorsanız aşağıdaki komutu çalıştırın:
 
 ```PowerShell
 Upgrade-DistributionGroup -DlIdentities dl1@contoso.com
 ```
 
 > [!NOTE]
-> Ayrıca, [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup) PowerShell cmdlet'ini Microsoft 365 dağıtım listesine yükseltebilirsiniz
+> [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup) PowerShell cmdlet'ini kullanarak tek bir dağıtım listesini Microsoft 365 grubuna da yükseltebilirsiniz
 
-### <a name="upgrade-multiple-dls-in-a-batch"></a>Bir toplu işlemde birden çok DL'ye yükseltme
+### <a name="upgrade-multiple-dls-in-a-batch"></a>Toplu işlemde birden çok DLL'i yükseltme
 
-Ayrıca toplu işlem olarak birden çok DL'ye geçiş ve bunları birlikte yükseltebilirsiniz:
+Ayrıca birden çok DLL'i toplu iş olarak geçirip birlikte yükseltebilirsiniz:
 
 ```PowerShell
 Upgrade-DistributionGroup -DlIdentities <DL SMTP address1>, <DL SMTP address2>,
 <DL SMTP address3>, <DL SMTP address4>
 ```
 
-Örneğin, SMTP `dl1@contoso.com` `dl4@contoso.com` `dl2@contoso.com``dl3@contoso.com`adresi ve , ile birlikte beş DL'ye yükseltmek için `dl5@contoso.com`aşağıdaki komutu çalıştırın:
+Örneğin, SMTP adresi `dl1@contoso.com` ve , `dl3@contoso.com``dl4@contoso.com` `dl5@contoso.com`ve `dl2@contoso.com`ile beş DLL'yi yükseltmek istiyorsanız aşağıdaki komutu çalıştırın:
 
-`Upgrade-DistributionGroup -DlIdentities dl1@contoso.com, dl2@contoso.com, dl3@contoso.com, dl4@contoso.com, dl5@contoso.com`
+```powershell
+Upgrade-DistributionGroup -DlIdentities dl1@contoso.com, dl2@contoso.com, dl3@contoso.com, dl4@contoso.com, dl5@contoso.com
+```
 
-### <a name="upgrade-all-eligible-dls"></a>Tüm uygun DL'leri yükseltme
+### <a name="upgrade-all-eligible-dls"></a>Tüm uygun DLL'leri yükseltme
 
-Tüm uygun DL'leri iki şekilde yükseltebilirsiniz.
+Tüm uygun DLL'leri yükseltmenin iki yolu vardır.
 
 > [!NOTE]
-> Upgrade-DistributionGroup cmdlet'i ardışık düzenden veri almaz, bu nedenle başarılı bir şekilde çalıştırmak için "foreach-object{}" işlecinin zorunludur.
+> Upgrade-DistributionGroup cmdlet'i işlem hattından veri almaz, bu nedenle başarıyla çalıştırmak için "foreach-object{}" işlecinin kullanılması gerekir.
 
-1. Kiracıya uygun DL'leri almak ve yükseltme komutunu kullanarak yükseltmek için:
+1. Kiracıdaki uygun DLL'leri alın ve upgrade komutunu kullanarak yükseltin:
 
-```PowerShell
-Get-EligibleDistributionGroupForMigration | Foreach-Object{
-    Upgrade-DistributionGroup -DlIdentities $_.PrimarySMTPAddress
-}
-```
+   ```PowerShell
+   Get-EligibleDistributionGroupForMigration | Foreach-Object{
+       Upgrade-DistributionGroup -DlIdentities $_.PrimarySMTPAddress
+   }
+   ```
 
-2. Tüm DL'lerin listesini al ve yalnızca uygun DL'leri yükselt:
+2. Tüm DLL'lerin listesini alın ve yalnızca uygun DLL'leri yükseltin:
 
-```PowerShell
-Get-DistributionGroup| Foreach-Object{
-    Upgrade-DistributionGroup -DlIdentities $_.PrimarySMTPAddress
-}
-```
+   ```PowerShell
+   Get-DistributionGroup| Foreach-Object{
+       Upgrade-DistributionGroup -DlIdentities $_.PrimarySMTPAddress
+   }
+   ```
 
-## <a name="faq-about-upgrading-distribution-lists-to-microsoft-365-groups-in-outlook"></a>Outlook'de Dağıtım listelerini Microsoft 365 Gruplarına yükseltme hakkında SSS
+## <a name="faq-about-upgrading-distribution-lists-to-microsoft-365-groups-in-outlook"></a>Outlook'da dağıtım listelerini Microsoft 365 组 yükseltme hakkında SSS
 
 ### <a name="which-distribution-lists-cant-be-upgraded"></a>Hangi dağıtım listeleri yükseltilemiyor?
 
-Yalnızca bulut tarafından yönetilen, basit, iç içe olmayan dağıtım listelerini yükseltebilirsiniz. Aşağıdaki tabloda yükseltililemez dağıtım **listeleri** listelenmiştir.
+Yalnızca bulut tarafından yönetilen, basit, iç içe olmayan dağıtım listelerini yükseltebilirsiniz. Aşağıdaki tabloda **yükseltilemeyen** dağıtım listeleri listelenmiştir.
 
-|**Özellik**|**Uygun musunuz?**|
-|:-----|:-----|
-|Şirket içi yönetilen dağıtım listesi.  <br/> |Hayır  <br/> |
-|İç içe dağıtım listeleri. Dağıtım listesinin alt grupları vardır veya başka bir grubun üyesidir.  <br/> |Hayır  <br/> |
-|**UserMailbox, SharedMailbox**, **TeamMailbox**, **MailUser** dışında üye **RecipientTypeDetails** **ile** dağıtım listeleri  <br/> |Hayır  <br/> |
-|100'den fazla sahibi olan dağıtım listesi  <br/> |Hayır  <br/> |
-|Yalnızca üyeleri olan ancak sahibi olmadığınız dağıtım listesi  <br/> |Hayır  <br/> |
-|Özel karakterler içeren diğer ad içeren dağıtım listesi  <br/> |Hayır  <br/> |
-|Dağıtım listesi Paylaşılan Posta Kutusu için bir iletme adresi olacak şekilde yapılandırılmışsa  <br/> |Hayır  <br/> |
-|DL, başka bir **DL'de Gönderen Kısıtlaması'nın** parçası ise.  <br/> |Hayır  <br/> |
-|Güvenlik grupları  <br/> |Hayır  <br/> |
-|Dinamik Dağıtım listeleri  <br/> |Hayır  <br/> |
-|OdaListeleri'ne **dönüştürülmüş dağıtım listeleri**  <br/> |Hayır  <br/> |
+|Özellik|Uygun?|
+|---|---|
+|Şirket içi yönetilen dağıtım listesi.|Hayır|
+|İç içe dağıtım listeleri. Dağıtım listesi alt gruplara sahiptir veya başka bir grubun üyesidir.|Hayır|
+|**UserMailbox, SharedMailbox**, **TeamMailbox**, **MailUser** dışında **recipientTypeDetails** üyesi olan dağıtım listeleri|Hayır|
+|100'den fazla sahibi olan dağıtım listesi|Hayır|
+|Yalnızca üyeleri olan ancak sahibi olmayan dağıtım listesi|Hayır|
+|Özel karakterler içeren diğer adı olan dağıtım listesi|Hayır|
+|Dağıtım listesi Paylaşılan Posta Kutusu için iletme adresi olarak yapılandırılmışsa|Hayır|
+|DL, başka bir DL'deki **Gönderen Kısıtlaması'nın** bir parçasıysa.|Hayır|
+|Güvenlik grupları|Hayır|
+|Dinamik Dağıtım listeleri|Hayır|
+|**RoomLists'e** dönüştürülen dağıtım listeleri|Hayır|
 
-### <a name="check-which-dls-are-eligible-for-upgrade"></a>Hangi DL'lerin yükseltme için uygun olduğunu denetleme
+### <a name="check-which-dls-are-eligible-for-upgrade"></a>Yükseltme için hangi DLL'lerin uygun olduğunu denetleyin
 
-DL'nin uygun olup olmadığını kontrol etmek için aşağıdaki komutu çalıştırabilirsiniz:
+DL'nin uygun olup olmadığını denetlemek istiyorsanız aşağıdaki komutu çalıştırabilirsiniz:
 
-`Get-DistributionGroup <DL SMTP address> | Get-EligibleDistributionGroupForMigration`
+```PowerShell
+Get-DistributionGroup <DL SMTP address> | Get-EligibleDistributionGroupForMigration
+```
 
-Hangi DL'lerin yükseltmeye uygun olduğunu kontrol etmek için aşağıdaki komutu çalıştırın:
+Yükseltme için hangi DLL'lerin uygun olduğunu denetlemek istiyorsanız aşağıdaki komutu çalıştırmanız yeterlidir:
 
-`Get-EligibleDistributionGroupForMigration`
+```PowerShell
+Get-EligibleDistributionGroupForMigration
+```
 
-### <a name="who-can-run-the-upgrade-scripts"></a>Who betiklerini nasıl çalıştırabilirsiniz?
+### <a name="who-can-run-the-upgrade-scripts"></a>Yükseltme betiklerini Who çalıştırabilirsiniz?
 
-Genel yönetici veya yönetici Exchange kişiler.
+Genel yönetici veya Exchange yönetici haklarına sahip kişiler.
 
-### <a name="why-is-the-contact-card-still-showing-a-distribution-list-what-should-i-do-to-prevent-an-upgraded-distribution-list-from-showing-up-in-my-auto-suggest-list"></a>Kişi kartı neden hala bir dağıtım listesi gösteriyor? Yükseltilen bir dağıtım listesinin otomatik öneri listemde  gösterilemesini engellemek için ne yapabilirim?
+### <a name="why-is-the-contact-card-still-showing-a-distribution-list-what-should-i-do-to-prevent-an-upgraded-distribution-list-from-showing-up-in-my-auto-suggest-list"></a>Kişi kartı neden hala bir dağıtım listesi gösteriyor? Yükseltilmiş bir dağıtım listesinin otomatik öneri listemde gösterilmesini önlemek için ne yapmalıyım?
 
-- Örneğin Outlook: Birisi geçiş sonrasında Outlook adını yazarak Microsoft 365 e-posta göndermeye çalıştığında, alıcı grup yerine dağıtım listesi olarak çözümlenir. Alıcının kişi kartı, dağıtım listeleri kişi kartı olur. Bunun nedeni, dosyada alıcı önbelleği veya takma ad önbelleğinin Outlook. E-posta gruba başarıyla gönderilir, ancak gönderende karışıklığa neden olabilir.<br/>Bu makaledeki adımları, önbelleği sıfırlamak [için Outlook](/outlook/troubleshoot/contacts/information-about-the-outlook-autocomplete-list) Otomatik Tamamlama listesi hakkında bilgiler bulabilirsiniz. Bu, sorunu çözecektir.
+- Outlook için: Birisi geçiş sonrasında Microsoft 365 grup adını yazarak Outlook'de e-posta göndermeye çalıştığında, alıcı grup yerine dağıtım listesi olarak çözümlenir. Alıcının kişi kartı, dağıtım listeleri kişi kartı olacaktır. Bunun nedeni, Outlook'deki alıcı önbelleği veya nick adı önbelleğidir. E-posta gruba başarıyla gönderilir, ancak gönderenin kafa karışıklığına neden olabilir.<br/>Önbelleği sıfırlamak için [Outlook Otomatik Tamamlama listesi hakkındaki bilgiler adlı](/outlook/troubleshoot/contacts/information-about-the-outlook-autocomplete-list) bu makaledeki adımları gerçekleştirebilirsiniz ve bu da bu sorunu düzeltir.
 
-- Örneğin Web üzerinde Outlook: Dağıtım listesi Web üzerinde Outlook, dağıtım listesi alıcısı yine de önbellekte kalır. Grup kişi kartını görmek üzere [önbelleği yenilemek için](https://support.microsoft.com/office/9E1419D9-E88F-445B-B07F-F558B8A37C58) , Önerilen adı veya e-posta adresini Otomatik Tamamlama Listesi'den kaldırma'daki adımları izleyin.
+- Outlook na Web için: Outlook na Web durumunda dağıtım listesi alıcısı önbellekte kalmaya devam eder. Grup kişi kartını görmek için önbelleği yenilemek için [Önerilen adı veya e-posta adresini Otomatik Tamamlama Listesinden kaldırma](https://support.microsoft.com/office/9E1419D9-E88F-445B-B07F-F558B8A37C58) başlığındaki adımları izleyebilirsiniz.
 
-### <a name="do-new-group-members-get-a-welcome-email-in-their-inbox"></a>Yeni grup üyeleri gelen kutularında bir karşılama e-postası mı alır?
+### <a name="do-new-group-members-get-a-welcome-email-in-their-inbox"></a>Yeni grup üyeleri gelen kutularına hoş geldiniz e-postası mı alıyor?
 
-Hayır. Hoş geldiniz iletilerini etkinleştirme ayarı varsayılan olarak yanlış değerine ayarlanmıştır. Bu ayar, geçiş tamamlandıktan sonra katıl isteyen mevcut ve yeni grup üyelerini etkiler. Grup sahibi daha sonra konuk kullanıcılara izin verirse, konuk kullanıcılar gelen kutularında bir hoş geldiniz e-postası almaz. Konuk üyeler grupla çalışmaya devam eder.
+Hayır. Karşılama iletilerini etkinleştirme ayarı varsayılan olarak false olarak ayarlanır. Bu ayar, geçiş tamamlandıktan sonra katılabilecek mevcut ve yeni grup üyelerini etkiler. Grup sahibi daha sonra konuk kullanıcılara izin verirse, konuk kullanıcılar gelen kutularına hoş geldiniz e-postası almaz. Konuk üyeler grupla çalışmaya devam edebilir.
 
-### <a name="what-if-one-or-some-of-the-dls-are-not-upgraded"></a>Bir veya bazı DL'ler yükseltilmezse ne olacak?
+### <a name="what-if-one-or-some-of-the-dls-are-not-upgraded"></a>DLL'lerden biri veya bir kısmı yükseltilmediyse ne olur?
 
-Bazı durumlarda DL uygundur ancak yükseltilemez. DL yükseltilmez ve DL olarak kalır.
+DL'nin uygun olmasına rağmen yükseltilemediği bazı durumlar vardır. DL yükseltilmez ve DL olarak kalır.
 
-- Yöneticinin bir kuruluşta **yer** alan gruplara Grup E-posta Adresi İlkesi'ni uygulaması ve ölçütleri karşılamayan DL'leri yükseltmeyi denemesi halinde, DL yükseltilmez
+- Yöneticinin bir kuruluştaki gruplar için **Grup E-posta Adresi İlkesi** uyguladığı ve ölçütleri karşılamayan DLL'leri yükseltmeye çalıştığı durumlarda, DL yükseltilmez
 
-- **MemberJoinRestriction** veya **MemberDepartRestriction** kapalı olarak ayarlanmış DLS'ler yükseltilemdi 
+- **MemberJoinRestriction** veya **MemberDepartRestriction** kapalı olarak ayarlanmış DLL'ler yükseltilemedi 
 
-- Grup Microsoft 365, bu makaledeki adımlar kullanılarak yalnızca birkaç kullanıcıya [izin verilir](/microsoft-365/solutions/manage-creation-of-groups). Bu senaryoda, dağıtım listesinin sahibinin Dağıtım Grubu oluşturmasına izin Microsoft 365, dağıtım listesi Microsoft 365 yükseltmez. Geçici çözüm: Yukarıdaki senaryo için aşağıdaki geçici çözümden birini kullanın:
-1)  DL sahibi olarak sözü geçen tüm kullanıcıların M365 Grubu oluşturmasına izin verili, örneğin, M365 Grubuna izin verilen güvenlik grubunun üyesi olduğundan emin olur.
-VEYA
-2)  Geçici olarak, M365 Grubu oluşturmasına izin verilmiyor DL'nin sahibini M365 Grubu oluşturma izni olan kullanıcıyla değiştirin
+- Microsoft 365 Grubu oluşturmaya, [bu makaledeki](/microsoft-365/solutions/manage-creation-of-groups) adımlar kullanılarak yalnızca birkaç kullanıcı tarafından izin verilir. Bu senaryoda, dağıtım listesinin sahibinin Microsoft 365 Grubu oluşturmasına izin verilmiyorsa, dağıtım listesi Microsoft 365 Grubuna yükseltilmeyecektir.
+Geçici çözüm: Yukarıdaki senaryo için aşağıdaki geçici çözümlerden birini kullanın:
+
+1. DL'nin sahibi olarak bahsedilen tüm kullanıcıların M365 Grubu oluşturmasına izin verildiğinden, yani M365 Grubu'na izin verilen güvenlik grubunun üyesi olduğundan emin olun.
+
+   VEYA
+
+2. Geçici olarak, M365 Grubu oluşturmasına izin verilmeyen DL'nin sahibini M365 Grubu oluşturmasına izin verilen kullanıcıyla değiştirin.
 
 ### <a name="what-happens-to-the-dl-if-the-upgrade-from-eac-fails"></a>EAC'den yükseltme başarısız olursa DL'ye ne olur?
 
-Yükseltme, ancak arama sunucuya gönderilebilir. Yükseltme başarısız olursa, URL'leri korunur. Her zaman olduğu gibi çalışırlar.
+Yükseltme yalnızca çağrı sunucuya gönderildiğinde gerçekleşir. Yükseltme başarısız olursa, DLL'leriniz bozulmaz. Eskiden olduğu gibi çalışacaklar.
 
-### <a name="what-happens-to-message-approval-moderation-settings-on-distribution-groups-after-upgrading"></a>Yükseltme sonrasında dağıtım gruplarında ileti onayı (mode) ayarlarına ne olur?
+### <a name="what-happens-to-message-approval-moderation-settings-on-distribution-groups-after-upgrading"></a>Yükseltmeden sonra dağıtım gruplarında ileti onayı (denetim) ayarlarına ne olur?
 
-İleti onayı (moderation) ayarları korunur ve dağıtım grubu Bir Grup'a yükseltildikten sonra Microsoft 365 devam eder.
+İleti onayı (denetim) ayarları korunur ve dağıtım grubu bir Microsoft 365 Grubuna yükseltildikten sonra düzgün çalışmaya devam eder.
 
 ## <a name="related-content"></a>İlgili içerik
 
 [Grupları karşılaştırma](../create-groups/compare-groups.md) (makale)\
-[Kullanıcılarınıza Microsoft 365 Grupları Açıklama](../create-groups/explain-groups-knowledge-worker.md) (makale)\
-[Yönetim merkezini kullanarak gruplarda Microsoft 365 ekleme veya kaldırma](../create-groups/add-or-remove-members-from-groups.md)
+[Kullanıcılarınıza Microsoft 365 组 açıklama](../create-groups/explain-groups-knowledge-worker.md) (makale)\
+[Yönetim merkezini kullanarak Microsoft 365 gruplarına üye ekleme veya gruptan üye kaldırma](../create-groups/add-or-remove-members-from-groups.md)

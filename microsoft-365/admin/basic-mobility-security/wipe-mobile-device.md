@@ -1,5 +1,5 @@
 ---
-title: Temel Mobil Kullanım ve Güvenlik'te mobil cihazı temizleme
+title: Basic Mobility ve Security'de mobil cihazı silme
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -18,75 +18,75 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid:
 - MET150
-description: Kayıtlı cihazlardan bilgileri kaldırmak için yerleşik Temel Mobil Kullanım ve Güvenlik'i kullanın.
-ms.openlocfilehash: d5f610e2a9180f1d147f68e6aabf4a7291787033
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+description: Kayıtlı cihazlardan bilgileri kaldırmak için yerleşik Basic Mobility ve Security'yi kullanın.
+ms.openlocfilehash: 932380b735e3fea2543832417e7911e9216f70fc
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63400176"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64780809"
 ---
-# <a name="wipe-a-mobile-device-in-basic-mobility-and-security"></a>Temel Mobil Kullanım ve Güvenlik'te mobil cihazı temizleme
+# <a name="wipe-a-mobile-device-in-basic-mobility-and-security"></a>Basic Mobility ve Security'de mobil cihazı silme
 
-Microsoft 365 için yerleşik Temel Mobil Kullanım ve Güvenlik'i kullanarak yalnızca kuruluş bilgilerini kaldırabilir veya bir mobil cihazdan tüm bilgileri silebilir ve fabrika ayarlarına geri yüklemek için fabrika sıfırlaması yapabilirsiniz.
+Yalnızca kuruluş bilgilerini kaldırmak veya bir mobil cihazdan tüm bilgileri silmek ve fabrika ayarlarına geri yüklemek üzere fabrika sıfırlaması gerçekleştirmek için Microsoft 365 için yerleşik Temel Mobilite ve Güvenlik'i kullanabilirsiniz.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Mobil cihazlar hassas kurumsal bilgileri depolar ve kuruluşun güvenlik kaynakları için Microsoft 365 sağlar. Kuruluş bilgilerini korumaya yardımcı olmak için Fabrika sıfırlaması veya Şirket verilerini kaldır'ı yapabilirim:
+Mobil cihazlar hassas kuruluş bilgilerini depolayabilir ve kuruluşunuzun Microsoft 365 kaynaklarına erişim sağlayabilir. Kuruluşunuzun bilgilerinin korunmasına yardımcı olmak için Fabrika ayarlarına sıfırlama veya Şirket verilerini kaldırma işlemi gerçekleştirebilirsiniz:
 
-- **Fabrika sıfırlaması**: Yüklü uygulamalar, fotoğraflar ve kişisel bilgiler de içinde olmak üzere kullanıcının mobil cihazıdaki tüm verileri siler. Temizleme işlemi tamamlandığında, cihaz fabrika ayarlarına geri yüklenir.
+- **Fabrika sıfırlaması**: Yüklü uygulamalar, fotoğraflar ve kişisel bilgiler de dahil olmak üzere kullanıcının mobil cihazındaki tüm verileri siler. Temizleme işlemi tamamlandığında cihaz fabrika ayarlarına geri yüklenir.
 
-- **Şirket verilerini kaldırma**: Kullanıcının mobil cihazında yalnızca kuruluş verilerini kaldırır, yüklü uygulamaları, fotoğrafları ve kişisel bilgileri bırakır.
+- **Şirket verilerini kaldırma**: Yalnızca kuruluş verilerini kaldırır ve yüklü uygulamaları, fotoğrafları ve kişisel bilgileri kullanıcının mobil cihazında bırakır.
 
-- **Bir cihaz temizlenmiş durumdayken (Fabrika Sıfırlaması veya Şirket Verilerini Kaldır)** cihaz, yönetilen cihazlar listesinden kaldırılır.
-    
-- **Cihazı otomatik olarak** sıfırlama: Kullanıcının cihaz parolasını belirli sayıda kez girmeyi denemesi başarısız olduktan sonra cihazı otomatik olarak sıfırlanacak bir Temel Mobil kullanım ve Güvenlik ilkesi oluşturabilirsiniz. Bunu yapmak için Temel mobil kullanım ve güvenlik  [için cihaz güvenliği ilkeleri yapma'daki adımları izleyin](create-device-security-policies.md).
-    
-- **Cihazı temizlerken kullanıcı** deneyimini bilmek için bkz   [. Kullanıcı ve cihazı nasıl etkiler?](#whats-the-user-and-device-impact)
+- **Cihaz silindiğinde (Fabrika Sıfırlaması veya Şirket Verilerini Kaldırma)** cihaz yönetilen cihazlar listesinden kaldırılır.
 
-## <a name="wipe-a-mobile-device"></a>Mobil cihazı temizleme
+- **Cihazı otomatik olarak sıfırla**: Kullanıcı cihaz parolasını belirli bir sayıda girmeye çalıştıktan sonra cihazı otomatik olarak sıfırlayan bir Temel Hareket ve Güvenlik ilkesi ayarlayabilirsiniz. Bunu yapmak için [Temel hareket ve güvenlikte cihaz güvenlik ilkeleri oluşturma bölümündeki](create-device-security-policies.md) adımları izleyin.
 
-1. Büyük/ [yeni Microsoft 365 yönetim merkezi](../../admin/admin-overview/about-the-admin-center.md).
+- Cihazını silerken **kullanıcı deneyimini öğrenmek istiyorsanız** bkz. [Kullanıcı ve cihaz etkisi nedir?](#whats-the-user-and-device-impact).
 
-2. Arama alanına Mobil Cihaz Yönetimi yazın ve sonuç **listesinden Mobil Cihaz** Yönetimi'ne tıklayın.
+## <a name="wipe-a-mobile-device"></a>Mobil cihazı silme
 
-    :::image type="content" source="../../media/basic-mobility-security/bms-6-mobile-device-management-option.png" alt-text="Temel Mobil Kullanım ve Gizlilik mobil cihaz yönetim seçeneği.":::
+1. [Microsoft 365 yönetim merkezi](../../admin/admin-overview/about-the-admin-center.md) gidin.
 
-3. Cihazları **yönet'i seçin**.
+2. Arama alanına Mobile Cihaz Yönetimi yazın ve sonuç listesinden **Mobil Cihaz Yönetimi'ı** seçin.
+
+    :::image type="content" source="../../media/basic-mobility-security/bms-6-mobile-device-management-option.png" alt-text="Temel Hareketlilik ve Gizlilik mobil cihaz yönetimi seçeneği.":::
+
+3. **Cihazları yönet'i** seçin.
 
 4. Silmek istediğiniz cihazı seçin.
 
-5. **Yönet'i seçin**.
+5. **Yönet'i** seçin.
 
 6. Yapmak istediğiniz uzaktan silme türünü seçin.
 
-    - Tam temizleme işlemi yapmak ve cihazı fabrika ayarlarına geri yüklemek için Fabrika **sıfırlaması'yı seçin**.
-    - Seçmeli temizleme yapmak ve yalnızca kuruluş bilgilerini Microsoft 365 için Şirket verilerini **kaldır'ı seçin**.
-    - Cihazı kuruluştan kaldırmak için Cihazı **kaldır'ı seçin**.
+    - Tam silme işlemi yapmak ve cihazı fabrika ayarlarına geri yüklemek için **Fabrika ayarlarına sıfırla'yı** seçin.
+    - Seçmeli silme işlemi yapmak ve yalnızca Microsoft 365 kuruluş bilgilerini silmek için **Şirket verilerini kaldır'ı** seçin.
+    - Cihazı kuruluşunuzdan kaldırmak için **Cihazı kaldır'ı** seçin.
 
 7. Onaylamak için **Evet**'i seçin.
 
-## <a name="how-do-i-know-it-worked"></a>Çalıştığını nasıl bilim?
+## <a name="how-do-i-know-it-worked"></a>Nasıl yaparım? çalıştığını biliyor musun?
 
-Artık yönetilen cihazlar listesinde mobil cihazı görmüyorsanız.
+Mobil cihazı artık yönetilen cihazlar listesinde görmezsiniz.
 
-## <a name="why-would-you-want-to-wipe-a-device"></a>Cihazı neden temizlemek istemeniz gerekir?
+## <a name="why-would-you-want-to-wipe-a-device"></a>Bir cihazı neden silmek istiyorsunuz?
 
-Cihazı temizleme nedenleri:
+Bir cihazı şu nedenlerle silin:
 
-- Akıllı telefon ve tablet gibi mobil cihazlar her zaman daha fazla öne çıkan ürün haline geliyor. Bu da, kullanıcılarının kimlik bilgileri veya gizli iletişimler gibi hassas şirket bilgilerini depolayanın ve ilerlerken bu bilgilere erişmelerini daha kolay hale getirir. Bu mobil cihazlardan biri kaybolur veya çalınırsa, cihazın silin hepsi kuruluşun bilgilerini yanlış ellere bulamanıza yardımcı olabilir.
-- Bir kullanıcı Temel Hareketlilik ve Güvenlik'e kayıtlı kişisel bir cihazla kuruluştan ayrıldığında, fabrika sıfırlaması yaparak kuruluş bilgilerini bu kullanıcıyla birlikte hareket etmeye yardımcı olabilir.
-- Organizasyonunız kullanıcılara mobil cihazlar sunuyorsa, zaman zaman cihazları yeniden atamanız gerekiyor olabilir. Bir cihazı yeni bir kullanıcıya atamadan önce Fabrika Sıfırlaması yapılması, önceki sahibinden gelen hassas bilgilerin silinmesini sağlar.
+- Akıllı telefonlar ve tabletler gibi mobil cihazlar her zaman daha fazla tam özellikli hale geliyor. Bu, kullanıcılarınızın kişisel kimlik veya gizli iletişim gibi hassas kurumsal bilgileri depolamasının ve harekette bunlara erişmesinin daha kolay olduğu anlamına gelir. Bu mobil cihazlardan biri kaybolur veya çalınırsa, cihazın silinmesi kuruluşunuzun bilgilerinin yanlış ellere geçmesini önlemeye yardımcı olabilir.
+- Bir kullanıcı, Temel Mobilite ve Güvenlik'e kayıtlı bir kişisel cihazla kuruluştan ayrıldığında, fabrika sıfırlaması yaparak kuruluş bilgilerinin bu kullanıcıyla birlikte olmasını önlemeye yardımcı olabilirsiniz.
+- Kuruluşunuz kullanıcılara mobil cihazlar sağlıyorsa, zaman zaman cihazları yeniden atamanız gerekebilir. Yeni bir kullanıcıya atamadan önce cihazda Fabrika Sıfırlaması yapmak, önceki sahibin hassas bilgilerinin silinmesine yardımcı olur.
 
-## <a name="whats-the-user-and-device-impact"></a>Kullanıcı ve cihazı nasıl etkiler?
+## <a name="whats-the-user-and-device-impact"></a>Kullanıcı ve cihaz etkisi nedir?
 
-Temizleme hemen mobil cihaza gönderilir ve cihaz Azure Active Directory'de uyumlu değil olarak işaretlenir. Cihaz fabrika varsayılanlara sıfırlana kadar tüm veriler kaldırılırken, aşağıdaki tabloda, şirket verilerini kaldıran bir cihaz için her cihaz türü için hangi içeriğin kaldırıldığı açıklanıyor.
+Temizleme hemen mobil cihaza gönderilir ve cihaz Azure Active Directory'de uyumlu değil olarak işaretlenir. Bir cihaz fabrika varsayılanlarına sıfırlandığında tüm veriler kaldırılsa da, şirket verilerini kaldırdığınızda her cihaz türü için hangi içeriğin kaldırıldığı aşağıdaki tabloda açıklanmaktadır.
 
-|**İçerik üzerindeki etkisi**|**iOS**|**Android**|
-|:-----|:-----|:-----|
-|Microsoft 365 Intune Uygulama Koruması ilkeleri tarafından korundu ise uygulama verileri temizlenmiş olur. Uygulamalar kaldırılamaz. Mobil Uygulama Yönetimi (MAM) ilkeleri tarafından korunmayan cihazlar için, Outlook OneDrive ilkeleri önbelleğe alınmış verileri kaldırmaz.<br/>**Not** Intune Uygulama koruma ilkelerini uygularken Intune lisansınız olmalıdır.|Evet|Evet|
-|Cihazlara Temel Mobil Kullanım ve Güvenlik tarafından uygulanan ilke ayarları artık zorunlu kılınamaz; kullanıcılar ayarları değiştirebilir.|Evet|Evet|
-|Basic Mobility and Security tarafından oluşturulan e-posta profilleri kaldırılır ve cihazda önbelleğe alınan e-posta silinir.|Evet|Yok|
+|İçerik etkisi|iOS|Android|
+|---|---|---|
+|Microsoft 365 uygulama verileri, cihaz Intune Uygulama Koruma ilkeleri tarafından korunuyorsa silinir. Uygulamalar kaldırılmaz. Mobil Uygulama Yönetimi (MAM) ilkeleriyle korunmayan cihazlar için Outlook ve OneDrive önbelleğe alınan verileri kaldırmaz.<br/>**Not** Intune Uygulama koruması ilkeleri uygulamak için Intune lisansına sahip olmanız gerekir.|Evet|Evet|
+|Temel Mobilite ve Güvenlik tarafından cihazlara uygulanan ilke ayarları artık zorunlu değildir; kullanıcılar ayarları değiştirebilir.|Evet|Evet|
+|Basic Mobility ve Security tarafından oluşturulan e-posta profilleri kaldırılır ve cihazdaki önbelleğe alınmış e-posta silinir.|Evet|Yok|
 
 > [!NOTE]
-> Şirket Portalı uygulaması iOS için App Store'da ve Android cihazlar için Play Store'da mevcuttur.
+> Şirket Portalı uygulaması iOS için App Store ve Android cihazlar için Play Store'da kullanılabilir.
