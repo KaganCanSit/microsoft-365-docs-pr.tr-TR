@@ -15,12 +15,12 @@ manager: dansimp
 ms.custom: nextgen
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 04cedfa951387274261c3a7a064cf11a4b97db62
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: 076b445a6ac129c1debd7cba813798f51aa6f86b
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731471"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64789040"
 ---
 # <a name="manage-the-sources-for-microsoft-defender-antivirus-protection-updates"></a>Microsoft Defender Virüsten Koruma güncelleştirmeleri için kaynakları yönetin
 
@@ -28,8 +28,12 @@ ms.locfileid: "64731471"
 
 **Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
+
+**Platform**
+- Windows
 
 <a id="protection-updates"></a>
 <!-- this has been used as anchor in VDI content -->
@@ -280,6 +284,16 @@ Zamanlanmış bir görev kullanarak MMPC sitesinden güvenlik zekası ve platfor
 
     > [!NOTE]
     > Yola x64 (veya x86) klasörünü eklemeyin. mpcmdrun.exe işlemi otomatik olarak ekler.
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
 
 ## <a name="related-articles"></a>İlgili makaleler
 

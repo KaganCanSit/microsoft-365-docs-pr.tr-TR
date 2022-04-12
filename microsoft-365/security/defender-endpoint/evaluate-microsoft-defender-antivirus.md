@@ -1,6 +1,6 @@
 ---
-title: Değerlendirme Microsoft Defender Virüsten Koruma
-description: Her boyuttaki işletmeler, bu kılavuzu kullanarak işletmeniz tarafından sunulan korumayı Microsoft Defender Virüsten Koruma test Windows.
+title: Microsoft Defender Virüsten Koruma’yı değerlendirin
+description: Her büyüklükteki işletmeler, Windows'da Microsoft Defender Virüsten Koruma tarafından sunulan korumayı değerlendirmek ve test etmek için bu kılavuzu kullanabilir.
 keywords: Microsoft Defender Virüsten Koruma, bulut koruması, bulut, kötü amaçlı yazılımdan koruma, güvenlik, defender, değerlendirme, test, koruma, karşılaştırma, gerçek zamanlı koruma
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -15,52 +15,67 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 4dd25a599f144a60bfd2ebeb3e9bb8b1876bd3c6
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 8c7ced9c85ec7c6075b44970d25e34ba5594404e
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015219"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64787648"
 ---
-# <a name="evaluate-microsoft-defender-antivirus"></a>Değerlendirme Microsoft Defender Virüsten Koruma
+# <a name="evaluate-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma’yı değerlendirin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:**
 
-Virüslere, kötü amaçlı yazılımlara Microsoft Defender Virüsten Koruma ve istenmeyen uygulamalara karşı ne kadar iyi koruma olduğunu belirlemek için bu kılavuzu kullanın.
+- Microsoft Defender Virüsten Koruma
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+
+**Platform**
+- Windows
+
+Microsoft Defender Virüsten Koruma sizi virüslerden, kötü amaçlı yazılımlardan ve istenmeyebilecek uygulamalardan ne kadar iyi koruyup korumadığını belirlemek için bu kılavuzu kullanın.
 
 > [!TIP]
->Ayrıca aşağıdaki özelliklerin çalıştığını onaylamak ve nasıl çalıştığını görmek için [demo.wd.microsoft.com'de](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) Uç nokta için Microsoft Defender tanıtım web sitesini ziyaret edebilirsiniz:
+>Ayrıca aşağıdaki özelliklerin çalıştığını onaylamak ve nasıl çalıştıklarını görmek için [demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) Pertahanan Microsoft untuk Titik Akhir tanıtım web sitesini ziyaret edebilirsiniz:
 >
-> - Bulut teslimi koruma
-> - Hızlı öğrenme (ilk görüşte engelle dahil)
-> - İstenmeyen bir uygulama engellemesi olabilir
+> - Bulut tabanlı koruma
+> - Hızlı öğrenme (ilk bakışta engelle dahil)
+> - İstenmeyebilecek uygulama engelleme
 
 > [!NOTE]
 > demo.wd.microsoft.com'daki Uç Nokta için Defender tanıtım sitesi kullanım dışıdır ve gelecekte kaldırılacaktır.
 
-Hem küçük hem de büyük işletmeler için Microsoft Defender Virüsten Koruma yeni nesil koruma özelliklerinin ve bunların ağ üzerinde kötü amaçlı yazılım algılama ve korumayı nasıl artıracaklarını açıklar.
+Hem küçük hem de büyük kuruluşlar için kullanılabilen Microsoft Defender Virüsten Koruma önemli yeni nesil koruma özelliklerini ve ağınızda kötü amaçlı yazılım algılama ve korumayı nasıl artırdıklarını açıklar.
 
-Her ayarı bağımsız olarak veya hepsini bir kerede yapılandırmayı ve değerlendirmeyi seçebilirsiniz. Genel değerlendirme senaryolarına dayalı olarak benzer ayarları gruplamız ve ayarları etkinleştirmek için PowerShell kullanma yönergelerini içeririz.
+Her ayarı bağımsız olarak veya tümünü aynı anda yapılandırmayı ve değerlendirmeyi seçebilirsiniz. Benzer ayarları tipik değerlendirme senaryolarına göre gruplandırdık ve ayarları etkinleştirmek için PowerShell kullanma yönergelerini de dahil ettik.
 
-Kılavuz, çevrimdışı görüntüleme için PDF biçimindedir:
+Kılavuz, çevrimdışı görüntüleme için PDF biçiminde kullanılabilir:
 
-- [Kılavuzu PDF biçiminde indirin](https://www.microsoft.com/download/details.aspx?id=54795)
+- [Kılavuzu PDF biçiminde indirme](https://www.microsoft.com/download/details.aspx?id=54795)
 
-Ayrıca, kılavuzda açıklanan tüm ayarları otomatik olarak etkinleştirecek bir PowerShell de indirebilirsiniz. Yukarıdaki PDF indirmesi ile birlikte betiği veya powershell galerisinden tek tek edinebilirsiniz:
+Ayrıca kılavuzda açıklanan tüm ayarları otomatik olarak etkinleştirecek bir PowerShell indirebilirsiniz. Betiği yukarıdaki PDF indirme işleminin yanı sıra veya PowerShell Galerisi'dan tek tek edinebilirsiniz:
 
-- [Ayarları otomatik olarak yapılandırmak için PowerShell betiği indirme](https://www.powershellgallery.com/packages/WindowsDefender_InternalEvaluationSettings)
+- [Ayarları otomatik olarak yapılandırmak için PowerShell betiğini indirin](https://www.powershellgallery.com/packages/WindowsDefender_InternalEvaluationSettings)
 
 > [!IMPORTANT]
-> Kılavuz şu anda değerlendirmenin tek makineyle değerlendirilmesi için Microsoft Defender Virüsten Koruma. Bu kılavuzda yer alan tüm ayarların etkinleştirilmesi, gerçek zamanlı dağıtım için uygun değildir.
+> Kılavuz şu anda Microsoft Defender Virüsten Koruma tek makineli değerlendirmeye yöneliktir. Bu kılavuzdaki tüm ayarların etkinleştirilmesi gerçek dünya dağıtımı için uygun olmayabilir.
 >
-> Ağ üzerinde gerçek zamanlı dağıtım ve uygulamaları izlemeyle ilgili en Microsoft Defender Virüsten Koruma için bkz. [Microsoft Defender Virüsten Koruma.](deploy-manage-report-microsoft-defender-antivirus.md)
+> Ağ üzerinden Microsoft Defender Virüsten Koruma gerçek dünya dağıtımı ve izlemesine yönelik en son öneriler için bkz[. Dağıtım Microsoft Defender Virüsten Koruma](deploy-manage-report-microsoft-defender-antivirus.md).
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
 
 ## <a name="related-topics"></a>İlgili konular
 
-- [Microsoft Defender Virüsten Koruma'da Windows 10](microsoft-defender-antivirus-in-windows-10.md)
-- [Dağıtım Microsoft Defender Virüsten Koruma](deploy-manage-report-microsoft-defender-antivirus.md)
+- [Windows 10'da Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md)
+- [Microsoft Defender Virüsten Koruma dağıtma](deploy-manage-report-microsoft-defender-antivirus.md)

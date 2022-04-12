@@ -21,12 +21,12 @@ ms.date: 04/07/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: ccf72b1f7e5625f3b3b9599a50d734a7316b8659
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: bcdf933de412a8141f0abc208f06cc55609f12c5
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780269"
+ms.locfileid: "64788952"
 ---
 # <a name="protect-security-settings-with-tamper-protection"></a>Değişiklik korumasıyla güvenlik ayarlarını koruyun
 
@@ -34,6 +34,10 @@ ms.locfileid: "64780269"
 
 - [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
+
+**Platform**
+- Windows
 
 Kurcalama koruması, Windows'nin aşağıdaki sürümlerinden birini çalıştıran cihazlar için kullanılabilir:
 
@@ -312,6 +316,16 @@ Güvenlik operasyonları ekibiniz, aşağıdaki örnek gibi avcılık sorguları
 `AlertInfo|where Title == "Tamper Protection bypass"`
 
 [Kurcalama girişimleri hakkındaki bilgileri görüntüleyin](#view-information-about-tampering-attempts).
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,8 +1,8 @@
 ---
-title: Windows Server'da Microsoft Defender Virüsten Koruma dışlamaları yapılandırma
+title: Windows Sunucusu'nda Microsoft Defender Virüsten Koruma dışlamalarını yapılandırma
 ms.reviewer: pahuijbr
 manager: dansimp
-description: Windows Server, sunucu rolüne bağlı olarak otomatik dışlamalar içerir. Ayrıca, özel dışlamalar da  eklemek gerekir.
+description: Windows Sunucusu, sunucu rolüne göre otomatik dışlamalar içerir. Özel dışlamalar da ekleyebilirsiniz.
 keywords: dışlamalar, sunucu, otomatik dışlamalar, otomatik, özel, taramalar, Microsoft Defender Virüsten Koruma
 ms.prod: m365-security
 ms.technology: mde
@@ -16,40 +16,43 @@ ms.topic: article
 ms.custom: nextgen
 ms.date: 02/04/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 442172afc9caf5dbd2af8c91cda531494fabd05d
-ms.sourcegitcommit: 954c8af658adb270fe843991e048c6a30e86e77c
+ms.openlocfilehash: 487c253adc422d69be5ce011ffef1fc1a014474b
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2022
-ms.locfileid: "63016483"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64789788"
 ---
-# <a name="configure-microsoft-defender-antivirus-exclusions-on-windows-server"></a>Windows Server'da Microsoft Defender Virüsten Koruma dışlamaları yapılandırma
+# <a name="configure-microsoft-defender-antivirus-exclusions-on-windows-server"></a>Windows Sunucusu'nda Microsoft Defender Virüsten Koruma dışlamalarını yapılandırma
 
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
-Microsoft Defender Virüsten Koruma Windows Server 2016 Windows Server 2019 sizi belirtilen sunucu rolünüz tanımlandığı şekilde belirli dışlamalara otomatik olarak kaydeder. Bu dışlamalar, Windows Güvenliği uygulamasında gösterilen standart [dışlama listelerinde görünmez](microsoft-defender-security-center-antivirus.md).
+**Platform**
+- Windows
 
-Sunucu rolü tanımlı otomatik dışlamalara ek olarak, özel dışlamalar ekleyebilir veya kaldırabilirsiniz. Bunu yapmak için şu makalelere bakın:
-- [Dosya adı, uzantı ve klasör konumu temel alarak dışlamaları yapılandırma ve doğrulama](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+Windows Server 2016 ve Windows Server 2019'da Microsoft Defender Virüsten Koruma, belirttiğiniz sunucu rolü tarafından tanımlandığı gibi sizi otomatik olarak belirli dışlamalara kaydeder. Bu dışlamalar[, Windows Güvenliği uygulamasında](microsoft-defender-security-center-antivirus.md) gösterilen standart dışlama listelerinde görünmez.
+
+Sunucu rol tanımlı otomatik dışlamalara ek olarak, özel dışlamalar ekleyebilir veya kaldırabilirsiniz. Bunu yapmak için şu makalelere bakın:
+- [Dosya adı, uzantı ve klasör konumuna göre dışlamaları yapılandırma ve doğrulama](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
 - [İşlemler tarafından açılan dosyalar için dışlamaları yapılandırma ve doğrulama](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
 
-## <a name="a-few-points-to-keep-in-mind"></a>Gözlerde tutma gereken birkaç nokta
+## <a name="a-few-points-to-keep-in-mind"></a>Akılda tutulması gereken birkaç nokta
 
-Aşağıdaki önemli noktaları unutmayın:
+Aşağıdaki önemli noktaları göz önünde bulundurun:
 
-- Özel dışlamalar, otomatik dışlamalara göre önceliklidir.
-- Otomatik dışlamalar yalnızca Gerçek zamanlı koruma (RTP) tarama için geçerlidir. Tam, hızlı veya isteğe bağlı tarama sırasında otomatik dışlamalara devam etmek mümkün değildir.
+- Özel dışlamalar otomatik dışlamalardan önceliklidir.
+- Otomatik dışlamalar yalnızca Gerçek zamanlı koruma (RTP) tarama için geçerlidir. Otomatik dışlamalar tam, hızlı veya isteğe bağlı tarama sırasında kabul edilmez.
 - Özel ve yinelenen dışlamalar otomatik dışlamalarla çakışmaz.
-- Microsoft Defender Virüsten Koruma, bilgisayarınızda hangi rollerin yüklü olduğunu belirlemek için Dağıtım Resmi Servis ve Yönetimi (DISM) araçlarını kullanır.
-- Windows Server 2012 R2'de Microsoft Defender Virüsten Koruma özellik olarak kullanılamaz. Bu sunucuları Uç Nokta için Defender'a işe ayarlarken, Windows Defender Virüsten Koruma ayarları yüklenir ve işletim sistemi dosyaları için varsayılan dışlamalar uygulanır. Bununla birlikte, sunucu rollerinin (aşağıda belirtilen) dışlamaları otomatik olarak geçerli olmaz ve bu dışlamaları uygun şekilde yapılandırmanız gerekir. Daha fazla bilgi edinmek için bkz[. Windows uç nokta hizmeti için Microsoft Defender'a ek sunucu ekleme](configure-server-endpoints.md).
+- Microsoft Defender Virüsten Koruma, bilgisayarınızda hangi rollerin yüklü olduğunu belirlemek için Dağıtım Görüntüsü Bakımı ve Yönetimi (DISM) araçlarını kullanır.
+- Windows Server 2012 R2, yüklenebilir bir özellik olarak Microsoft Defender Virüsten Koruma sahip değildir. Bu sunucuları Uç Nokta için Defender'a eklediğinizde, Windows Defenderin virustentorjunta yüklersiniz ve işletim sistemi dosyaları için varsayılan dışlamalar uygulanır. Ancak, sunucu rolleri için dışlamalar (aşağıda belirtildiği gibi) otomatik olarak uygulanmaz ve bu dışlamaları uygun şekilde yapılandırmanız gerekir. Daha fazla bilgi için bkz. [Windows sunucularını Pertahanan Microsoft untuk Titik Akhir hizmetine ekleme](configure-server-endpoints.md).
 
-Bu makalede, 2013 veya sonraki Microsoft Defender Virüsten Koruma özel Windows Server 2016 genel bir bakış sağlar.
+Bu makalede, Windows Server 2016 veya sonraki sürümlerde Microsoft Defender Virüsten Koruma için dışlamalara genel bir bakış sağlanır.
 
-Dış Microsoft Defender Virüsten Koruma çok daha sonraki bir Windows Server 2016 yerleşik olduğundan, işletim sistemi dosyaları ve sunucu rollerinin dışlamaları otomatik olarak olur. Bununla birlikte, özel dışlamaları tanımlayabilirsiniz. Ayrıca gerekirse otomatik dışlamaları devre dışı  olduğu gibi tercih de oluşturabilirsiniz.
+Microsoft Defender Virüsten Koruma Windows Server 2016 ve sonraki sürümlerde yerleşik olduğundan, işletim sistemi dosyaları ve sunucu rolleri için dışlamalar otomatik olarak gerçekleşir. Ancak özel dışlamalar tanımlayabilirsiniz. Gerekirse otomatik dışlamaları da geri çevirebilirsiniz.
 
 Bu makale aşağıdaki bölümleri içerir:
 
@@ -57,42 +60,42 @@ Bu makale aşağıdaki bölümleri içerir:
 
 |Bölüm|Açıklama|
 |---|---|
-|[Özel ya da sonraki Windows Server 2016 otomatik dışlamalar](#automatic-exclusions-on-windows-server-2016-or-later)|İki ana dışlama türü açıklanmış ve otomatik dışlamaların ayrıntılı bir listesini içerir|
-|[Otomatik dışlamaları devre dışı bırakma](#opting-out-of-automatic-exclusions)|Otomatik dışlamaların nasıl iptal edileceklerini açıklayan önemli noktalar ve yordamlar içerir|
-|[Özel dışlamaları tanımlama](#defining-custom-exclusions)|Özel dışlamaları tanımlamak için nasıl yapılanma bilgilerine bağlantılar sağlar|
+|[Windows Server 2016 veya sonraki sürümlerde otomatik dışlamalar](#automatic-exclusions-on-windows-server-2016-or-later)|İki ana otomatik dışlama türünü açıklar ve otomatik dışlamaların ayrıntılı bir listesini içerir|
+|[Otomatik dışlamaları geri çevirme](#opting-out-of-automatic-exclusions)|Otomatik dışlamaları geri çevirmeyi açıklayan önemli noktalar ve yordamlar içerir|
+|[Özel dışlamaları tanımlama](#defining-custom-exclusions)|Özel dışlamaları tanımlamaya yönelik nasıl yapılır bilgilerine bağlantılar sağlar|
 
-## <a name="automatic-exclusions-on-windows-server-2016-or-later"></a>Özel ya da sonraki Windows Server 2016 otomatik dışlamalar
+## <a name="automatic-exclusions-on-windows-server-2016-or-later"></a>Windows Server 2016 veya sonraki sürümlerde otomatik dışlamalar
 
-Dışlama Windows Server 2016 sonra, aşağıdaki dışlamaları tanımlamanız gerekir:
+Windows Server 2016 veya sonraki sürümlerde aşağıdaki dışlamaları tanımlamanız gerekmez:
 
 - İşletim sistemi dosyaları
-- Sunucu rolleri ve sunucu rolleri aracılığıyla eklenen dosyalar
+- Sunucu rolleri ve sunucu rolleri aracılığıyla eklenen tüm dosyalar
 
-Yerleşik Microsoft Defender Virüsten Koruma olduğundan, çalışma sayfalarındaki veya sonraki işletim sistemi dosyalarında dışlama Windows Server 2016 gerektirmez. Buna ek olarak, Windows Server 2016 veya sonraki bir sürümü çalıştırarak bir rol yüklerken, Microsoft Defender Virüsten Koruma sunucu rolü için otomatik dışlamalar ve rolü yüklerken eklenen tüm dosyalar için de otomatik dışlamalar içerir.
+Microsoft Defender Virüsten Koruma yerleşik olduğundan, Windows Server 2016 veya sonraki sürümlerde işletim sistemi dosyaları için dışlama gerektirmez. Ayrıca, Windows Server 2016 veya üzerini çalıştırıp bir rol yüklediğinizde, Microsoft Defender Virüsten Koruma sunucu rolü için otomatik dışlamaları ve rolü yüklerken eklenen dosyaları içerir.
 
-İşletim sistemi dışlamaları ve sunucu rolü dışlamaları, Windows Güvenliği uygulamasında gösterilen standart [dışlama listelerinde görünmez](microsoft-defender-security-center-antivirus.md).
+İşletim sistemi dışlamaları ve sunucu rolü dışlamaları[, Windows Güvenliği uygulamasında](microsoft-defender-security-center-antivirus.md) gösterilen standart dışlama listelerinde görünmez.
 
 > [!NOTE]
-> Sunucu rollerinin ve işletim sistemi dosyalarının otomatik dışlamaları, dışlamalar Windows Server 2012. R2'de çalışan sunucularınız Uç nokta için Defender Windows Server 2012 a varsa otomatik dışlamalar uygulanabilir. (Bkz[. Windows uç nokta hizmeti için Microsoft Defender'a ek sunucu ekleme](configure-server-endpoints.md).)
+> Sunucu rolleri ve işletim sistemi dosyaları için otomatik dışlamalar Windows Server 2012 için geçerli değildir. R2 Windows Server 2012 çalıştıran sunucularınız Uç Nokta için Defender'a eklendiyse otomatik dışlamalar uygulanabilir. (Bkz[. Pertahanan Microsoft untuk Titik Akhir hizmetine Windows sunucuları ekleme](configure-server-endpoints.md).)
 
 
-### <a name="the-list-of-automatic-exclusions"></a>Otomatik dışlamalar listesi
+### <a name="the-list-of-automatic-exclusions"></a>Otomatik dışlamaların listesi
 
-Aşağıdaki bölümler, otomatik dışlamalar dosya yolları ve dosya türleriyle birlikte teslim edilen dışlamaları içerir.
+Aşağıdaki bölümlerde, otomatik dışlama dosya yolları ve dosya türleriyle birlikte sunulan dışlamalar yer alır.
 
 #### <a name="default-exclusions-for-all-roles"></a>Tüm roller için varsayılan dışlamalar
 
-Bu bölümde Windows Server 2016, Windows Server 2022 ve Windows tüm roller için varsayılan dışlamalar liste almaktadır.
+Bu bölümde Windows Server 2016, Windows Server 2019 ve Windows Server 2022'deki tüm roller için varsayılan dışlamalar listelenmiştir.
 
 > [!NOTE]
 > Varsayılan konumlar bu makalede listelenen konumlardan farklı olabilir.
 
-##### <a name="windows-tempedb-files"></a>Windows "temp.edb" dosyalarını yükleme
+##### <a name="windows-tempedb-files"></a>"temp.edb" dosyalarını Windows
 
 - `%windir%\SoftwareDistribution\Datastore\*\tmp.edb`
 - `%ProgramData%\Microsoft\Search\Data\Applications\Windows\windows.edb`
 
-##### <a name="windows-update-files-or-automatic-update-files"></a>Windows güncelleştirme veya Otomatik Güncelleştirme dosyaları
+##### <a name="windows-update-files-or-automatic-update-files"></a>dosyaları veya Otomatik Güncelleştirme dosyalarını Windows Update
 
 - `%windir%\SoftwareDistribution\Datastore\*\Datastore.edb`
 - `%windir%\SoftwareDistribution\Datastore\*\edb.chk`
@@ -100,7 +103,7 @@ Bu bölümde Windows Server 2016, Windows Server 2022 ve Windows tüm roller iç
 - `%windir%\SoftwareDistribution\Datastore\*\Edb\*.jrs`
 - `%windir%\SoftwareDistribution\Datastore\*\Res\*.log`
 
-##### <a name="windows-security-files"></a>Windows Güvenliği dosya yükleme
+##### <a name="windows-security-files"></a>dosyaları Windows Güvenliği
 
 - `%windir%\Security\database\*.chk`
 - `%windir%\Security\database\*.edb`
@@ -108,7 +111,7 @@ Bu bölümde Windows Server 2016, Windows Server 2022 ve Windows tüm roller iç
 - `%windir%\Security\database\*.log`
 - `%windir%\Security\database\*.sdb`
 
-##### <a name="group-policy-files"></a>Grup İlkesi dosyaları
+##### <a name="group-policy-files"></a>dosyaları grup ilkesi
 
 - `%allusersprofile%\NTUser.pol`
 - `%SystemRoot%\System32\GroupPolicy\Machine\registry.pol`
@@ -134,18 +137,18 @@ Bu bölümde Windows Server 2016, Windows Server 2022 ve Windows tüm roller iç
 
   - `%windir%\Ntfrs\*\Edb\*.log`
 
-- FRS hazırlama klasörü. Kayıt defteri anahtarında hazırlama klasörü belirtilir `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NtFrs\Parameters\Replica Sets\GUID\Replica Set Stage`
+- FRS hazırlama klasörü. Hazırlama klasörü kayıt defteri anahtarında belirtilir `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NtFrs\Parameters\Replica Sets\GUID\Replica Set Stage`
 
   - `%systemroot%\Sysvol\*\Ntfrs_cmp*\`
 
-- FRS ön yükleme klasörü. Bu klasör klasör tarafından belirtilmiştir `Replica_root\DO_NOT_REMOVE_NtFrs_PreInstall_Directory`
+- FRS önyükleme klasörü. Bu klasör, klasör tarafından belirtilir `Replica_root\DO_NOT_REMOVE_NtFrs_PreInstall_Directory`
 
   - `%systemroot%\SYSVOL\domain\DO_NOT_REMOVE_NtFrs_PreInstall_Directory\*\Ntfrs*\`
 
-- Dağıtılmış Dosya Sistemi Çoğaltması (BUR) veritabanı ve çalışma klasörleri. Bu klasörler kayıt defteri anahtarıyla belirtilir `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\DFSR\Parameters\Replication Groups\GUID\Replica Set Configuration File`
+- Dağıtılmış Dosya Sistemi Çoğaltma (DFSR) veritabanı ve çalışma klasörleri. Bu klasörler kayıt defteri anahtarı tarafından belirtilir `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\DFSR\Parameters\Replication Groups\GUID\Replica Set Configuration File`
 
   > [!NOTE]
-  > Özel konumlar için bkz. [Otomatik dışlamaları devre dışı bırakma](#opting-out-of-automatic-exclusions).
+  > Özel konumlar için bkz. [Otomatik dışlamaları geri çevirme](#opting-out-of-automatic-exclusions).
 
   - `%systemdrive%\System Volume Information\DFSR\$db_normal$`
   - `%systemdrive%\System Volume Information\DFSR\FileIDTable_*`
@@ -167,15 +170,15 @@ Bu bölümde Windows Server 2016, Windows Server 2022 ve Windows tüm roller iç
 
 ##### <a name="hyper-v-exclusions"></a>Hyper-V dışlamaları
 
-Aşağıdaki tabloda, Hyper-V rolünü yükleyen dosya türü dışlamaları, klasör dışlamaları ve süreç dışlamaları otomatik olarak teslim edilir.
+Aşağıdaki tabloda, Hyper-V rolünü yüklediğinizde otomatik olarak teslim edilen dosya türü dışlamaları, klasör dışlamaları ve işlem dışlamaları listelenmiştir.
 
 <br><br/>
 
-|Dışlama türü|Specifics|
+|Dışlama türü|Özellikleri|
 |---|---|
 |Dosya türleri|`*.vhd` <br/> `*.vhdx` <br/> `*.avhd` <br/> `*.avhdx` <br/> `*.vsv` <br/> `*.iso` <br/> `*.rct` <br/> `*.vmcx` <br/> `*.vmrs`|
 |Klasörler|`%ProgramData%\Microsoft\Windows\Hyper-V` <br/> `%ProgramFiles%\Hyper-V` <br/> `%SystemDrive%\ProgramData\Microsoft\Windows\Hyper-V\Snapshots` <br/> `%Public%\Documents\Hyper-V\Virtual Hard Disks`|
-|İşlemler|`%systemroot%\System32\Vmms.exe` <br/> `%systemroot%\System32\Vmwp.exe`|
+|Süreç|`%systemroot%\System32\Vmms.exe` <br/> `%systemroot%\System32\Vmwp.exe`|
 
 ##### <a name="sysvol-files"></a>SYSVOL dosyaları
 
@@ -192,7 +195,7 @@ Aşağıdaki tabloda, Hyper-V rolünü yükleyen dosya türü dışlamaları, kl
 
 #### <a name="active-directory-exclusions"></a>Active Directory dışlamaları
 
-Bu bölümde, Active Directory Etki Alanı Hizmetleri'ne (AD DS) yüklemeniz sırasında otomatik olarak teslim edilen dışlamalar listelenir.
+Bu bölümde, Active Directory Domain Services (AD DS) yüklediğinizde otomatik olarak teslim edilen dışlamalar listelenir.
 
 ##### <a name="ntds-database-files"></a>NTDS veritabanı dosyaları
 
@@ -218,14 +221,14 @@ Bu klasör kayıt defteri anahtarında belirtilir `HKEY_LOCAL_MACHINE\System\Cur
 - `%windir%\Ntds\Temp.edb`
 - `%windir%\Ntds\Edb.chk`
 
-##### <a name="process-exclusions-for-ad-ds-and-ad-ds-related-support-files"></a>AD DS ve AD DS ile ilgili destek dosyaları için süreç dışlamaları
+##### <a name="process-exclusions-for-ad-ds-and-ad-ds-related-support-files"></a>AD DS ve AD DS ile ilgili destek dosyaları için işlem dışlamaları
 
 - `%systemroot%\System32\ntfrs.exe`
 - `%systemroot%\System32\lsass.exe`
 
-#### <a name="dhcp-server-exclusions"></a>BUDT Sunucu dışlamaları
+#### <a name="dhcp-server-exclusions"></a>DHCP Sunucusu dışlamaları
 
-Bu bölümde, THE THE SERVER rolünü yüklemenizle otomatik olarak teslim edilen dışlamalar listelenir. WM Server dosya konumları, kayıt defteri anahtarında *DatabasePath*, *WmLogFilePath* ve *BackupDatabasePath* parametreleriyle belirtilir `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\DHCPServer\Parameters`
+Bu bölümde, DHCP Sunucusu rolünü yüklediğinizde otomatik olarak teslim edilen dışlamalar listelenir. DHCP Sunucusu dosya konumları kayıt defteri anahtarındaki *DatabasePath*, *DhcpLogFilePath* ve *BackupDatabasePath* parametreleri tarafından belirtilir `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\DHCPServer\Parameters`
 
 - `%systemroot%\System32\DHCP\*\*.mdb`
 - `%systemroot%\System32\DHCP\*\*.pat`
@@ -235,7 +238,7 @@ Bu bölümde, THE THE SERVER rolünü yüklemenizle otomatik olarak teslim edile
 
 #### <a name="dns-server-exclusions"></a>DNS Sunucusu dışlamaları
 
-Bu bölümde, DNS Sunucusu rolünü yüklemenize göre otomatik olarak teslim edilen dosya ve klasör dışlamaları ve süreç dışlamaları listelenir.
+Bu bölümde, DNS Sunucusu rolünü yüklediğinizde otomatik olarak teslim edilen dosya ve klasör dışlamaları ve işlem dışlamaları listelenir.
 
 ##### <a name="file-and-folder-exclusions-for-the-dns-server-role"></a>DNS Sunucusu rolü için dosya ve klasör dışlamaları
 
@@ -244,21 +247,21 @@ Bu bölümde, DNS Sunucusu rolünü yüklemenize göre otomatik olarak teslim ed
 - `%systemroot%\System32\Dns\*\*.scc`
 - `%systemroot%\System32\Dns\*\BOOT`
 
-##### <a name="process-exclusions-for-the-dns-server-role"></a>DNS Sunucusu rolü için süreç dışlamaları
+##### <a name="process-exclusions-for-the-dns-server-role"></a>DNS Sunucusu rolü için işlem dışlamaları
 
 - `%systemroot%\System32\dns.exe`
 
 #### <a name="file-and-storage-services-exclusions"></a>Dosya ve Depolama Hizmetleri dışlamaları
 
-Bu bölümde, Dosya ve Özel Hizmetler rolünü yük olduğunda otomatik olarak teslim edilen dosya ve klasör Depolama listelenir. Aşağıda listelenen dışlamalar, Kümeleme rolü için dışlamaları içermemektedir.
+Bu bölümde, Dosya ve Depolama Hizmetleri rolünü yüklediğinizde otomatik olarak teslim edilen dosya ve klasör dışlamaları listelenir. Aşağıda listelenen dışlamalar Kümeleme rolü için dışlamalar içermez.
 
 - `%SystemDrive%\ClusterStorage`
 - `%clusterserviceaccount%\Local Settings\Temp`
 - `%SystemDrive%\mscs`
 
-#### <a name="print-server-exclusions"></a>Print Server dışlamaları
+#### <a name="print-server-exclusions"></a>Yazdırma Sunucusu dışlamaları
 
-Bu bölümde, Print Server rolünü yüklemenize göre otomatik olarak teslim edilen dosya türü dışlamaları, klasör dışlamaları ve süreç dışlamaları listelenir.
+Bu bölümde, Yazdırma Sunucusu rolünü yüklediğinizde otomatik olarak teslim edilen dosya türü dışlamaları, klasör dışlamaları ve işlem dışlamaları listelenir.
 
 ##### <a name="file-type-exclusions"></a>Dosya türü dışlamaları
 
@@ -275,9 +278,9 @@ Bu klasör kayıt defteri anahtarında belirtilir `HKEY_LOCAL_MACHINE\SYSTEM\Cur
 
 - `spoolsv.exe`
 
-#### <a name="web-server-exclusions"></a>Web Server dışlamaları
+#### <a name="web-server-exclusions"></a>Web Sunucusu dışlamaları
 
-Bu bölümde, Web Server rolünü yüklemenize göre otomatik olarak teslim edilen klasör dışlamaları ve süreç dışlamaları listelenir.
+Bu bölümde, Web Sunucusu rolünü yüklediğinizde otomatik olarak teslim edilen klasör dışlamaları ve işlem dışlamaları listelenir.
 
 ##### <a name="folder-exclusions"></a>Klasör dışlamaları
 
@@ -293,16 +296,16 @@ Bu bölümde, Web Server rolünü yüklemenize göre otomatik olarak teslim edil
 - `%SystemRoot%\SysWOW64\inetsrv\w3wp.exe`
 - `%SystemDrive%\PHP5433\php-cgi.exe`
 
-##### <a name="turning-off-scanning-of-files-in-the-sysvolsysvol-folder-or-the-sysvol_dfsrsysvol-folder"></a>Sysvol\Sysvol klasöründe veya Sysvol klasöründeki veya SYSVOL_DFSR\Sysvol klasöründe dosya taramayı kapatma
+##### <a name="turning-off-scanning-of-files-in-the-sysvolsysvol-folder-or-the-sysvol_dfsrsysvol-folder"></a>Sysvol\Sysvol klasöründeki veya SYSVOL_DFSR\Sysvol klasöründeki dosyaların taranmalarını kapatma
 
-Veya klasörün ve tüm `Sysvol\Sysvol` alt `SYSVOL_DFSR\Sysvol` klasörlerin geçerli konumu, çoğaltma kümesi kökünün dosya sistemi yenidenparse hedefidir. Ve `Sysvol\Sysvol` klasörler `SYSVOL_DFSR\Sysvol` varsayılan olarak aşağıdaki konumları kullanır:
+veya `SYSVOL_DFSR\Sysvol` klasörünün `Sysvol\Sysvol` ve tüm alt klasörlerin geçerli konumu, çoğaltma kümesi kökünün dosya sistemi yeniden ayrıştırma hedefidir. `Sysvol\Sysvol` ve `SYSVOL_DFSR\Sysvol` klasörleri varsayılan olarak aşağıdaki konumları kullanır:
 
 - `%systemroot%\Sysvol\Domain`
 - `%systemroot%\Sysvol_DFSR\Domain`
 
-Şu anda etkin olan yola `SYSVOL` NETLOGON paylaşımı başvurur ve aşağıdaki alt anahtarda SysVol değer adı tarafından belirlen olabilir: `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Netlogon\Parameters`
+Şu anda etkin `SYSVOL` olan yola NETLOGON paylaşımı tarafından başvurulur ve aşağıdaki alt anahtardaki SysVol değer adıyla belirlenebilir: `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Netlogon\Parameters`
 
-Aşağıdaki dosyaları bu klasörden ve tüm alt klasörlerinden dışla:
+Aşağıdaki dosyaları bu klasörden ve tüm alt klasörlerinden hariç tutun:
 
 - `*.adm`
 - `*.admx`
@@ -317,35 +320,35 @@ Aşağıdaki dosyaları bu klasörden ve tüm alt klasörlerinden dışla:
 
 #### <a name="windows-server-update-services-exclusions"></a>Windows Server Update Services dışlamaları
 
-Bu bölümde, sunucu Sunucu Güncelleştirme Hizmetleri (WSUS) rolünü Windows olarak teslim edilen klasör dışlamaları listelenir. WSUS klasörü kayıt defteri anahtarında belirtilir `HKEY_LOCAL_MACHINE\Software\Microsoft\Update Services\Server\Setup`
+Bu bölümde, Windows Server Update Services (WSUS) rolünü yüklediğinizde otomatik olarak teslim edilen klasör dışlamaları listelenir. WSUS klasörü kayıt defteri anahtarında belirtilir `HKEY_LOCAL_MACHINE\Software\Microsoft\Update Services\Server\Setup`
 
 - `%systemroot%\WSUS\WSUSContent`
 - `%systemroot%\WSUS\UpdateServicesDBFiles`
 - `%systemroot%\SoftwareDistribution\Datastore`
 - `%systemroot%\SoftwareDistribution\Download`
 
-## <a name="opting-out-of-automatic-exclusions"></a>Otomatik dışlamaları devre dışı bırakma
+## <a name="opting-out-of-automatic-exclusions"></a>Otomatik dışlamaları geri çevirme
 
-Daha Windows Server 2016 sonra, Güvenlik zekası güncelleştirmeleri tarafından teslim edilen önceden tanımlanmış dışlamalar yalnızca bir rol veya özelliğin varsayılan yollarını dışarıda bırakmaktadır. Özel bir yola rol veya özellik yüklemiş veya dışlama kümelerini el ile kontrol etmek istiyorsanız, Security Intelligence güncelleştirmelerinde teslim edilen otomatik dışlamaları devre dışı bırakmayı tercih edin. Ama, teslim edilen dışlamaların otomatik olarak en iyi duruma Windows Server 2016 unutmayın. [Dışlama Öneriler tanımlamadan önce dışlamaları](configure-exclusions-microsoft-defender-antivirus.md#recommendations-for-defining-exclusions) tanımlama hakkında daha fazla bilgi için bkz.
+Windows Server 2016 ve sonraki sürümlerde, Güvenlik bilgileri güncelleştirmeleri tarafından sunulan önceden tanımlanmış dışlamalar yalnızca bir rol veya özellik için varsayılan yolları dışlar. Özel bir yola bir rol veya özellik yüklediyseniz veya dışlama kümesini el ile denetlemek istiyorsanız, Güvenlik bilgileri güncelleştirmelerinde sunulan otomatik dışlamaları geri çevirdiğinizden emin olun. Ancak otomatik olarak sunulan dışlamaların Windows Server 2016 ve üzeri için iyileştirildiğini unutmayın. [Dışlama listelerinizi tanımlamadan önce dışlamaları tanımlamak için](configure-exclusions-microsoft-defender-antivirus.md#recommendations-for-defining-exclusions) bkz. Öneriler.
 
 > [!WARNING]
-> Otomatik dışlamaları devre dışı bırakma, performansı olumsuz etkileyebilir veya verilerin bozulmasına neden olabilir. Otomatik olarak teslim edilen dışlamalar Windows Server 2016, Windows Server 2019 ve Windows Server 2022 rolleri için en iyi duruma getirilmiş.
+> Otomatik dışlamaları geri çevirmek performansı olumsuz etkileyebilir veya veri bozulmasına neden olabilir. Otomatik olarak sunulan dışlamalar Windows Server 2016, Windows Server 2019 ve Windows Server 2022 rolleri için iyileştirilmiştir.
 
-Önceden tanımlı dışlamalar yalnızca varsayılan yolları dışla **olduğundan,** NTDS ve SYSVOL klasörlerini özgün yoldan farklı bir başka sürücüye veya yola taşısanız *,* dışlamaları el ile eklemeniz gerekir. Bkz [. Klasör adı veya dosya uzantısına göre dışlama listesini yapılandırma](configure-extension-file-exclusions-microsoft-defender-antivirus.md#configure-the-list-of-exclusions-based-on-folder-name-or-file-extension).
+Önceden tanımlanmış dışlamalar yalnızca **varsayılan yolları** dışladığından, NTDS ve SYSVOL klasörlerini *özgün yoldan farklı* bir sürücüye veya yola taşırsanız, dışlamaları el ile eklemeniz gerekir. Bkz [. Klasör adına veya dosya uzantısına göre dışlama listesini yapılandırma](configure-extension-file-exclusions-microsoft-defender-antivirus.md#configure-the-list-of-exclusions-based-on-folder-name-or-file-extension).
 
-Grup İlkesi, PowerShell cmdlet'leri ve WMI ile otomatik dışlama listelerini devre dışı abilirsiniz.
+otomatik dışlama listelerini grup ilkesi, PowerShell cmdlet'leri ve WMI ile devre dışı bırakabilirsiniz.
 
-### <a name="use-group-policy-to-disable-the-auto-exclusions-list-on-windows-server-2016-windows-server-2019-and-windows-server-2022"></a>Windows Server 2016, Windows Server 2022 ve Windows'da otomatik dışlamalar listesini devre dışı bırakmak için Grup İlkesi kullanma
+### <a name="use-group-policy-to-disable-the-auto-exclusions-list-on-windows-server-2016-windows-server-2019-and-windows-server-2022"></a>Windows Server 2016, Windows Server 2019 ve Windows Server 2022'de otomatik dışlama listesini devre dışı bırakmak için grup ilkesi kullanın
 
-1. Grup İlkesi yönetim bilgisayarınızda Grup İlkesi [Yönetim Konsolu'nu açın](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725752(v=ws.11)). Yapılandırmak istediğiniz Grup İlkesi Nesnesi'ne sağ tıklayın ve Düzenle'yi **seçin**.
+1. grup ilkesi yönetim bilgisayarınızda [grup ilkesi Yönetim Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725752(v=ws.11)) açın. Yapılandırmak istediğiniz grup ilkesi Nesnesine sağ tıklayın ve **düzenle'yi** seçin.
 
-2. Grup İlkesi **Yönetim Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin ve** Yönetim **şablonları'ı seçin**.
+2. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin ve ardından **Yönetim şablonları'nı** seçin.
 
-3. Dışlamalar'da **bileşenleri Windows için** \> **Microsoft Defender Virüsten Koruma** \> **genişletin**.
+3. **Dışlamalar Microsoft Defender Virüsten Koruma bileşenleri** \> **Windows** \> için ağacı genişletin.
 
-4. Otomatik **Dışlamaları Kapat'a çift** tıklayın ve seçeneği Etkin olarak **ayarlayın**. Sonra **Tamam**’ı seçin.
+4. **Otomatik Dışlamaları Kapat'a** çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. Sonra **Tamam**’ı seçin.
 
-### <a name="use-powershell-cmdlets-to-disable-the-auto-exclusions-list-on-windows-server"></a>Windows Server'da otomatik dışlamalar listesini devre dışı bırakmak için PowerShell cmdlet'lerini kullanma
+### <a name="use-powershell-cmdlets-to-disable-the-auto-exclusions-list-on-windows-server"></a>Windows Sunucusu'nda otomatik dışlama listesini devre dışı bırakmak için PowerShell cmdlet'lerini kullanma
 
 Aşağıdaki cmdlet'leri kullanın:
 
@@ -355,12 +358,12 @@ Set-MpPreference -DisableAutoExclusions $true
 
 Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 
-- [PowerShell cmdlet'lerini kullanarak bu cmdlet'leri Microsoft Defender Virüsten Koruma](use-powershell-cmdlets-microsoft-defender-antivirus.md).
-- [PowerShell'i Microsoft Defender Virüsten Koruma](/powershell/module/defender/).
+- [Microsoft Defender Virüsten Koruma yapılandırmak ve çalıştırmak için PowerShell cmdlet'lerini kullanın](use-powershell-cmdlets-microsoft-defender-antivirus.md).
+- [PowerShell'i Microsoft Defender Virüsten Koruma ile kullanın](/powershell/module/defender/).
 
-### <a name="use-windows-management-instruction-wmi-to-disable-the-auto-exclusions-list-on-windows-server"></a>Windows Windows Server'da otomatik dışlamalar listesini devre dışı bırakmak için Dışlama Yönetimi Yönergesi'Windows kullanma
+### <a name="use-windows-management-instruction-wmi-to-disable-the-auto-exclusions-list-on-windows-server"></a>Windows Sunucusu'nda otomatik dışlama listesini devre dışı bırakmak için Windows Yönetim Yönergesi'ni (WMI) kullanın
 
-Aşağıdaki **özellikler** için [sınıf MSFT_MpPreference](/previous-versions/windows/desktop/defender/msft-mppreference) Set yöntemini kullanın:
+Aşağıdaki özellikler için [MSFT_MpPreference](/previous-versions/windows/desktop/defender/msft-mppreference) sınıfının **Set** yöntemini kullanın:
 
 ```WMI
 DisableAutoExclusions
@@ -368,20 +371,30 @@ DisableAutoExclusions
 
 Daha fazla bilgi ve izin verilen parametreler için aşağıdakilere bakın:
 
-- [Windows Defender WMIv2 API'leri](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
+- [WMIv2 API'lerini Windows Defender](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
 
 ## <a name="defining-custom-exclusions"></a>Özel dışlamaları tanımlama
 
-Gerekirse, özel dışlamaları ekleyebilir veya kaldırsanız bile. Bunu yapmak için aşağıdaki makalelere bakın:
+Gerekirse özel dışlamalar ekleyebilir veya kaldırabilirsiniz. Bunu yapmak için aşağıdaki makalelere bakın:
 
-- [Dosya adı, uzantı ve klasör konumu temel alarak dışlamaları yapılandırma ve doğrulama](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+- [Dosya adı, uzantı ve klasör konumuna göre dışlamaları yapılandırma ve doğrulama](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
 - [İşlemler tarafından açılan dosyalar için dışlamaları yapılandırma ve doğrulama](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Taramalar için dışlamaları yapılandırma Microsoft Defender Virüsten Koruma doğrulama](configure-exclusions-microsoft-defender-antivirus.md)
-- [Dosya adı, uzantı ve klasör konumu temel alarak dışlamaları yapılandırma ve doğrulama](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+- [Microsoft Defender Virüsten Koruma taramaları için dışlamaları yapılandırma ve doğrulama](configure-exclusions-microsoft-defender-antivirus.md)
+- [Dosya adı, uzantı ve klasör konumuna göre dışlamaları yapılandırma ve doğrulama](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
 - [İşlemler tarafından açılan dosyalar için dışlamaları yapılandırma ve doğrulama](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
 - [Dışlamaları tanımlarken kaçınılması gereken yaygın hatalar](common-exclusion-mistakes-microsoft-defender-antivirus.md)
-- [Bu taramaları ve düzeltmeleri sonucunda Microsoft Defender Virüsten Koruma, başlatma ve gözden geçirme](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
-- [Microsoft Defender Virüsten Koruma'da Windows 10](microsoft-defender-antivirus-in-windows-10.md)
+- [Microsoft Defender Virüsten Koruma taramalarının ve düzeltmelerinin sonuçlarını özelleştirme, başlatma ve gözden geçirme](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
+- [Windows 10'da Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md)

@@ -1,7 +1,7 @@
 ---
-title: E-postada bulut koruması ve örnek Microsoft Defender Virüsten Koruma
-description: Buluta teslim edilen koruma ve teslim Microsoft Defender Virüsten Koruma
-keywords: Microsoft Defender Virüsten Koruma, yeni nesil teknolojiler, virüsten koruma örnek gönderimi, yeni nesil av, makine öğrenimi, kötü amaçlı yazılımlardan koruma, güvenlik, defender, bulut, buluta teslim edilen koruma
+title: Microsoft Defender Virüsten Koruma'de bulut koruması ve örnek gönderme
+description: Bulut tabanlı koruma ve Microsoft Defender Virüsten Koruma hakkında bilgi edinin
+keywords: Microsoft Defender Virüsten Koruma, yeni nesil teknolojiler, virüsten koruma örnek gönderimi, yeni nesil av, makine öğrenmesi, kötü amaçlı yazılımdan koruma, güvenlik, defender, bulut, bulut tabanlı koruma
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -15,107 +15,110 @@ ms.technology: mde
 ms.topic: article
 ms.date: 02/24/2022
 ms.collection: M365-security-compliance
-ms.openlocfilehash: a647617de3706481c2e12f4e1772f5bc609db6fc
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 9192ecae72156531b0c5dccc360b2e2ea7bd343a
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64470691"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64789062"
 ---
-# <a name="cloud-protection-and-sample-submission-at-microsoft-defender-antivirus"></a>E-postada bulut koruması ve örnek Microsoft Defender Virüsten Koruma
+# <a name="cloud-protection-and-sample-submission-at-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma'de bulut koruması ve örnek gönderme
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
-Microsoft Defender Virüsten Koruma kötü amaçlı yazılımları algılamak için birçok akıllı mekanizma kullanır. En güçlü özelliklerden biri, kötü amaçlı yazılımları tespit etmek ve hızlı çözümleme yapmak için bulutun gücünü uygulayabilme özelliğidir. Bulut koruması ve otomatik örnek gönderim, yeni ve ortaya çıkan tehditlere Microsoft Defender Virüsten Koruma için bulut koruması ve otomatik örnek gönderimle birlikte çalışır. 
+**Platform**
+- Windows
 
-Şüpheli veya kötü amaçlı bir dosya algılanırsa, çözümleme için bulut hizmetine bir örnek gönderilir ve Microsoft Defender Virüsten Koruma engeller. Hızlı bir şekilde yapılan bir belirleme belirlemesi yapılır olmaz dosya yayınlanacak veya bir Microsoft Defender Virüsten Koruma. 
+Microsoft Defender Virüsten Koruma kötü amaçlı yazılımları algılamak için birçok akıllı mekanizma kullanır. En güçlü özelliklerden biri, kötü amaçlı yazılımları algılamak ve hızlı analiz gerçekleştirmek için bulutun gücünü uygulama özelliğidir. Bulut koruması ve otomatik örnek gönderimi, yeni ve yeni tehditlere karşı korunmaya yardımcı olmak için Microsoft Defender Virüsten Koruma birlikte çalışır. 
 
-Bu makalede, microsoft evde bulut koruması ve otomatik örnek gönderime genel Microsoft Defender Virüsten Koruma. Bulut koruması hakkında daha fazla bilgi edinmek için bkz[. Bulut koruması ve Microsoft Defender Virüsten Koruma](cloud-protection-microsoft-defender-antivirus.md).
+Şüpheli veya kötü amaçlı bir dosya algılanırsa, Microsoft Defender Virüsten Koruma dosyayı engellerken analiz için bulut hizmetine bir örnek gönderilir. Hızla gerçekleşen bir belirleme yapılır yapılmaz, dosya Microsoft Defender Virüsten Koruma tarafından serbest bırakılır veya engellenir. 
+
+Bu makalede, Microsoft Defender Virüsten Koruma'da bulut korumasına ve otomatik örnek göndermeye genel bir bakış sağlanır. Bulut koruması hakkında daha fazla bilgi edinmek için bkz. [Bulut koruması ve Microsoft Defender Virüsten Koruma](cloud-protection-microsoft-defender-antivirus.md).
 
 ## <a name="how-cloud-protection-and-sample-submission-work-together"></a>Bulut koruması ve örnek gönderim birlikte nasıl çalışır?
 
-Bulut korumasının örnek gönderimle birlikte nasıl çalıştığını anlamak için, Uç Nokta için Defender'ın tehditlere karşı nasıl korunacı olduğunu anlamak yararlı olabilir. Microsoft Akıllı Güvenlik Graph muazzam bir algılayıcı ağın verilerini tehdit ediyor. Microsoft, istemciden gelen sinyallere ve Akıllı Güvenlik katmanında muazzam algılayıcılar ve veri ağına dayalı olarak dosyaları değerlendiren bulut tabanlı makine öğrenme modellerini Graph. Bu yaklaşım, Uç Nokta için Defender'a önceden olmayan birçok tehdityi engelleme olanağı verir. 
+Bulut korumasının örnek gönderimle birlikte nasıl çalıştığını anlamak için Uç Nokta için Defender'ın tehditlere karşı nasıl koruma koruyabileceğini anlamak yararlı olabilir. Microsoft Intelligent Security Graph, geniş bir algılayıcı ağından gelen tehdit verilerini izler. Microsoft, istemciden gelen sinyallere ve Akıllı Güvenlik Graph geniş algılayıcı ve veri ağına göre dosyaları değerlendirebilen bulut tabanlı makine öğrenmesi modellerini katmanlar. Bu yaklaşım, Uç Nokta için Defender'a daha önce görülmemiş birçok tehdidi engelleme olanağı sağlar. 
 
-Aşağıdaki resimde, bulut korumasının akışı ve aşağıdaki adımları takip eden örnek Microsoft Defender Virüsten Koruma:
+Aşağıdaki görüntüde bulut korumasının akışı ve Microsoft Defender Virüsten Koruma ile örnek gönderim gösterilir:
 
-:::image type="content" source="images/cloud-protection-flow.png" alt-text="Bulut teslimi koruma akışı" lightbox="images/cloud-protection-flow.png":::
+:::image type="content" source="images/cloud-protection-flow.png" alt-text="Bulut tabanlı koruma akışı" lightbox="images/cloud-protection-flow.png":::
 
-Microsoft Defender Virüsten Koruma ve bulut koruması, aşağıdaki yöntemleri kullanarak en yeni, önceden asla görülmeyen tehditlerin çoğunu ilk görüşte otomatik olarak engelleyebilir:
+Microsoft Defender Virüsten Koruma ve bulut koruması, aşağıdaki yöntemleri kullanarak ilk bakışta en yeni, hiç görülmemiş tehditleri otomatik olarak engeller:
 
-1. Yeni ve bilinmeyen kötü amaçlı yazılımları engelleyen basit istemci tabanlı makine öğrenme modelleri.
+1. Yeni ve bilinmeyen kötü amaçlı yazılımları engelleyen basit istemci tabanlı makine öğrenmesi modelleri.
 
-2. Dosya tabanlı ve dosya az saldırılarını durduran yerel davranış çözümlemesi.
+2. Yerel davranış analizi, dosya tabanlı ve dosyasız saldırıları durdurma.
 
-3. Yüksek duyarlıklı virüsten koruma, genel ve heistist tekniklerle yaygın kötü amaçlı yazılımları algılama.
+3. Genel ve buluşsal teknikler aracılığıyla yaygın kötü amaçlı yazılımları algılayan yüksek duyarlıklı virüsten koruma.
 
-4. Şüpheli bir dosyanın amacını doğrulamak için Microsoft Defender Virüsten Koruma uç noktada daha fazla zekaya ihtiyaç duyuyorsanız, gelişmiş bulut tabanlı koruma sağlanır.
+4. Uç noktada çalışan Microsoft Defender Virüsten Koruma şüpheli bir dosyanın amacını doğrulamak için daha fazla zekaya ihtiyaç duyduğu durumlar için gelişmiş bulut tabanlı koruma sağlanır.
 
-   1. Aşağıdaki olay Microsoft Defender Virüsten Koruma belirlemeyi açıkça yapmada, dosya meta verileri bulut koruma hizmetine gönderilir. Bulut koruma hizmeti, çoğu zaman meta verileri temel alarak dosyanın kötü amaçlı olup olmadığını belirler.  
+   1. Microsoft Defender Virüsten Koruma net bir belirleme yapamazsa, dosya meta verileri bulut koruma hizmetine gönderilir. Bulut koruma hizmeti genellikle milisaniye içinde meta verileri temel alarak dosyanın kötü amaçlı olup olmadığını belirleyebilir.  
 
-      - Dosya meta verilerini bulut sorgusu davranışın, web'in işaretinin veya net bir karar alınan kararların belirlen düzenlemenin başka özelliklerinin sonucu olabilir.
-      - Kötü amaçlı yazılım kararına ulaşmak veya bir tehdit değil, küçük bir meta veri yükü gönderilir. Meta veriler, kişisel olarak tanınmayı sağlayacak bilgileri (PII) içermemektedir. Dosya adı gibi bilgiler karma olur.
-      - Zaman uyumlu veya zaman uyumsuz olabilir. Zaman uyumlu olması için, bulut karara varana kadar dosya açılmaz. Zaman uyumsuz ise bulut koruması çözümlemesini yaparken dosya açılır.
-      - Meta veriler PE özniteliklerini, statik dosya özniteliklerini, dinamik ve bağlamsal öznitelikleri ve daha fazlasını içerebilir (bkz. Bulut koruma hizmetine gönderilen meta [veri örnekleri](#examples-of-metadata-sent-to-the-cloud-protection-service)).
+      - Dosya meta verilerinin bulut sorgusu davranış, web işareti veya net bir kararın belirlenmediği diğer özelliklerin bir sonucu olabilir.
+      - Kötü amaçlı yazılım kararına ulaşma veya tehdit oluşturmama hedefiyle küçük bir meta veri yükü gönderilir. Meta veriler kişisel bilgileri (PII) içermez. Dosya adları gibi bilgiler karma olarak sağlanır.
+      - Zaman uyumlu veya zaman uyumsuz olabilir. Zaman uyumlu olarak, bulut bir karar işleyene kadar dosya açılmaz. Zaman uyumsuz olarak, bulut koruması analizini gerçekleştirirken dosya açılır.
+      - Meta veriler PE öznitelikleri, statik dosya öznitelikleri, dinamik ve bağlamsal öznitelikler ve daha fazlasını içerebilir (bkz. [Bulut koruma hizmetine gönderilen meta veriler örnekleri](#examples-of-metadata-sent-to-the-cloud-protection-service)).
 
-   2. Meta verileri inceledikten sonra, Microsoft Defender Virüsten Koruma bulut koruması kesin bir karara ulaşamazsa, ek denetim için dosyanın bir örneğini talep olabilir. Bu istek, örnek gönderim için ayarlar yapılandırmasına uyar:
+   2. Meta verileri inceledikten sonra, Microsoft Defender Virüsten Koruma bulut koruması kesin bir karara ulaşamazsa, daha fazla inceleme için dosyanın bir örneğini isteyebilir. Bu istek, örnek gönderim için ayarlar yapılandırmasını yerine getirmektedir:
 
       1. **Güvenli örnekleri otomatik olarak gönderme** (varsayılan)
-         - Kasa, yaygın olarak PII verileri içerme kabul edilen örneklerdir: .bat, .scr, .dll, .exe.
-         - Dosyanın PII içerme olasılığı varsa, kullanıcıya dosya örnek gönderimi için izin verme isteği olur.
-         - Bu seçenek Windows, macOS ve Linux'ta varsayılandır.
+         - Kasa örneklerin yaygın olarak pii verileri içermediği kabul edilir: .bat, .scr, .dll, .exe.
+         - Dosya büyük olasılıkla PII içeriyorsa, kullanıcı dosya örneği gönderimine izin vermek için bir istek alır.
+         - Bu seçenek Windows, macOS ve Linux'ta varsayılan seçenektir.
 
-      2. **Her Zaman Sor**
-         - Yapılandırıldığında, dosya göndermeden önce kullanıcıdan her zaman izin istenir
-         - Bu ayar macOS bulut koruması için kullanılamaz
+      2. **Her Zaman İste**
+         - Yapılandırılırsa, dosya göndermeden önce kullanıcıdan her zaman onay istenir
+         - Bu ayar macOS bulut korumasında kullanılamaz
 
       3. **Tüm örnekleri otomatik olarak gönderme**
          - Yapılandırılırsa, tüm örnekler otomatik olarak gönderilir
-         - Örnek gönderimin Word belgelerine eklenmiş makrolar içermesi için, "Tüm örnekleri otomatik olarak gönder"
-         - Bu ayar macOS bulut koruması için kullanılamaz
+         - Örnek gönderimin Word belgelerine eklenmiş makrolar içermesini istiyorsanız, "Tüm örnekleri otomatik olarak gönder" seçeneğini belirlemeniz gerekir
+         - Bu ayar macOS bulut korumasında kullanılamaz
 
       4. **Gönderme**
-         - Dosya örnek çözümlemesi temel alınarak "ilk görüşte blok" formüllerini önler
-         - "Do not send", macOS ilkesinde "Devre Dışı" ayarıyla eşdeğerdir
-         - Örnek gönderme devre dışı bırak olsa bile algılamalar için meta veriler gönderilir
+         - Dosya örneği analizine göre "ilk bakışta engelle" ifadesini önler
+         - "Gönderme" macOS ilkesindeki "Devre dışı" ayarıyla eşdeğerdir
+         - Örnek gönderim devre dışı bırakıldığında bile algılamalar için meta veriler gönderilir
 
-   3. Meta veriler ve/veya dosyalar bulut korumasına gönderildikten sonra, karara var etmek için  **örnekleri,** **detonasyonu** veya büyük veri çözümleme makine öğrenme modellerini kullanabilirsiniz. Buluta teslim edilen korumayı kapatarak çözümlemeyi yalnızca istemcinin yerel makine öğrenme modelleri ve benzer işlevler aracılığıyla sağ öğretimde neleri sağlay sınırlaması vardır.
+   3. Meta veriler ve/veya dosyalar bulut korumasına gönderildikten sonra, bir karara ulaşmak için **örnekleri**, **patlamayı** veya **büyük veri analizi** makine öğrenmesi modellerini kullanabilirsiniz. Bulut tabanlı korumayı kapatmak, analizi yalnızca istemcinin yerel makine öğrenmesi modelleri ve benzer işlevler aracılığıyla sağlayabilecekleri ile sınırlandıracaktır.
 
 > [!IMPORTANT]
-> [İlk görüşte engelle (BAFS),](configure-block-at-first-sight-microsoft-defender-antivirus.md) dosya veya sürecin güvenli olup olmadığını belirlemek içintonasyonu ve çözümlemeyi sağlar. BAFS, bir karara varana kadar dosyanın açılmasını anlık olarak geciktirir. Örnek gönderimi devre dışı bıraksanız, BAFS de devre dışı bırakılır ve dosya çözümleme yalnızca meta veriyle sınırlıdır. Örnek gönderimi ve BAFS'yi etkin tutmanız önerilir. Daha fazla bilgi edinmek için bkz [. "İlk görüşte blok" nedir?](configure-block-at-first-sight-microsoft-defender-antivirus.md#what-is-block-at-first-sight)
+> [İlk bakışta engelle (BAFS),](configure-block-at-first-sight-microsoft-defender-antivirus.md) bir dosyanın veya işlemin güvenli olup olmadığını belirlemek için patlama ve analiz sağlar. BAFS, bir karara varılana kadar dosyanın açılmasını bir süre geciktirebilir. Örnek gönderimi devre dışı bırakırsanız BAFS de devre dışı bırakılır ve dosya analizi yalnızca meta veriyle sınırlıdır. Örnek gönderimi ve BAFS'yi etkin tutmanızı öneririz. Daha fazla bilgi edinmek için bkz. ["İlk bakışta engelle" nedir?](configure-block-at-first-sight-microsoft-defender-antivirus.md#what-is-block-at-first-sight)
 
 ## <a name="cloud-protection-levels"></a>Bulut koruma düzeyleri
 
-Bulut koruması bu dosyada varsayılan olarak Microsoft Defender Virüsten Koruma. Kurum için koruma düzeyini yapılandırabilirsiniz, ancak bulut korumasını etkin tutmanızı öneririz. Daha [fazla bilgi için bkz. Bulut teslimi koruma Microsoft Defender Virüsten Koruma](specify-cloud-protection-level-microsoft-defender-antivirus.md).
+Bulut koruması varsayılan olarak Microsoft Defender Virüsten Koruma etkindir. Kuruluşunuz için koruma düzeyini yapılandırabilmenize rağmen bulut korumasını etkin tutmanızı öneririz. Bkz. [Microsoft Defender Virüsten Koruma için bulut tabanlı koruma düzeyini belirtme](specify-cloud-protection-level-microsoft-defender-antivirus.md).
 
-## <a name="sample-submission-settings"></a>Örnek gönderme ayarları
+## <a name="sample-submission-settings"></a>Örnek gönderim ayarları
 
-Bulut koruma düzeyinizi yapılandırmaya ek olarak, örnek gönderme ayarlarınızı da yapılandırabilirsiniz. Birkaç seçenekten birini seçebilirsiniz:
+Bulut koruma düzeyinizi yapılandırmanın yanı sıra örnek gönderim ayarlarınızı da yapılandırabilirsiniz. Çeşitli seçenekler arasından seçim yapabilirsiniz:
 
 - **Güvenli örnekleri otomatik olarak gönderme**  (varsayılan davranış)
 - **Tüm örnekleri otomatik olarak gönderme**  
-- **Örnek göndermeyin**  
+- **Örnek gönderme**  
 
-Intune, Configuration Manager, GPO veya PowerShell kullanarak yapılandırma seçenekleri hakkında bilgi için bkz. [Microsoft Defender Virüsten Koruma.](enable-cloud-protection-microsoft-defender-antivirus.md)
+Intune, Configuration Manager, GPO veya PowerShell kullanan yapılandırma seçenekleri hakkında bilgi için bkz[. Microsoft Defender Virüsten Koruma'de bulut korumasını açma](enable-cloud-protection-microsoft-defender-antivirus.md).
 
 ## <a name="examples-of-metadata-sent-to-the-cloud-protection-service"></a>Bulut koruma hizmetine gönderilen meta veri örnekleri
 
-:::image type="content" source="images/cloud-protection-metadata-sample.png" alt-text="Microsoft Defender Virüsten Koruma portalında bulut korumasına gönderilen meta Microsoft Defender Virüsten Koruma örnekleri" lightbox="images/cloud-protection-metadata-sample.png":::
+:::image type="content" source="images/cloud-protection-metadata-sample.png" alt-text="Microsoft Defender Virüsten Koruma portalında bulut korumasına gönderilen meta veri örnekleri" lightbox="images/cloud-protection-metadata-sample.png":::
 
-Aşağıdaki tabloda, bulut koruması tarafından çözümleme için gönderilen meta veri örnekleri listelemektedir:
+Aşağıdaki tabloda bulut koruması tarafından analiz için gönderilen meta veri örnekleri listeilmektedir:
 
 | Tür | Öznitelik |
 |:---|:---|
 | Makine öznitelikleri | `OS version` <br/> `Processor` <br/> `Security settings` |
-| Dinamik ve bağlamsal öznitelikler | **İşlem ve yükleme** <br/> `ProcessName` <br/> `ParentProcess` <br/> `TriggeringSignature` <br/> `TriggeringFile` <br/> `Download IP and url` <br/> `HashedFullPath` <br/> `Vpath` <br/> `RealPath` <br/> `Parent/child relationships` <br/><br/>**Davranış** <br/> `Connection IPs` <br/> `System changes` <br/> `API calls` <br/> `Process injection` <br/><br/>**Locale** <br/> `Locale setting` <br/> `Geographical location` |
-| Statik dosya öznitelikleri | **Kısmi ve tam karmalar** <br/> `ClusterHash` <br/> `Crc16` <br/> `Ctph` <br/> `ExtendedKcrcs` <br/> `ImpHash` <br/> `Kcrc3n` <br/> `Lshash` <br/> `LsHashs` <br/> `PartialCrc1` <br/> `PartialCrc2` <br/> `PartialCrc3` <br/> `Sha1` <br/> `Sha256` <br/><br/>**Dosya özellikleri** <br/>`FileName` <br/> `FileSize` <br/><br/> **İmzacı bilgileri** <br/> `AuthentiCodeHash` <br/> `Issuer` <br/> `IssuerHash` <br/> `Publisher` <br/> `Signer` <br/> `SignerHash` |
+| Dinamik ve bağlamsal öznitelikler | **İşlem ve yükleme** <br/> `ProcessName` <br/> `ParentProcess` <br/> `TriggeringSignature` <br/> `TriggeringFile` <br/> `Download IP and url` <br/> `HashedFullPath` <br/> `Vpath` <br/> `RealPath` <br/> `Parent/child relationships` <br/><br/>**Davranış** <br/> `Connection IPs` <br/> `System changes` <br/> `API calls` <br/> `Process injection` <br/><br/>**Yerel ayar** <br/> `Locale setting` <br/> `Geographical location` |
+| Statik dosya öznitelikleri | **Kısmi ve tam karmalar** <br/> `ClusterHash` <br/> `Crc16` <br/> `Ctph` <br/> `ExtendedKcrcs` <br/> `ImpHash` <br/> `Kcrc3n` <br/> `Lshash` <br/> `LsHashs` <br/> `PartialCrc1` <br/> `PartialCrc2` <br/> `PartialCrc3` <br/> `Sha1` <br/> `Sha256` <br/><br/>**Dosya özellikleri** <br/>`FileName` <br/> `FileSize` <br/><br/> **İmzalayan bilgileri** <br/> `AuthentiCodeHash` <br/> `Issuer` <br/> `IssuerHash` <br/> `Publisher` <br/> `Signer` <br/> `SignerHash` |
 
-## <a name="samples-are-treated-as-customer-data"></a>Örnekler müşteri verileri olarak kabul edilir
+## <a name="samples-are-treated-as-customer-data"></a>Örnekler müşteri verileri olarak değerlendirilir
 
-Örnek gönderilerde neler olduğunu merak ediyorsanız, Uç Nokta için Defender tüm dosya örneklerini müşteri verileri olarak kabul eder. Microsoft, Uç Nokta için Defender'a ekli olduğunda, kuruluşun seçtiğiniz coğrafi ve veri bekletme seçeneklerine de uygun. 
+Örnek gönderimlerde ne olduğunu merak ediyorsanız Uç Nokta için Defender tüm dosya örneklerini müşteri verileri olarak kabul eder. Microsoft, Uç Nokta için Defender'a eklerken kuruluşunuzun seçtiği coğrafi ve veri saklama seçimlerini yerine getirmektedir. 
 
-Ayrıca, Uç Nokta için Defender birden çok uyumluluk sertifikası aldı ve gelişmiş bir uyumluluk denetimleri kümesine bağlı olmaya devam ediyor:
+Buna ek olarak, Uç Nokta için Defender birden çok uyumluluk sertifikası aldı ve gelişmiş bir uyumluluk denetimleri kümesine sürekli bağlı kalmayı gösterir:
 
 - ISO 27001
 - ISO 27018
@@ -126,19 +129,29 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
 - [Azure Uyumluluk Teklifleri](/azure/storage/common/storage-compliance-offerings) 
 - [Hizmet Güveni Portalı](https://servicetrust.microsoft.com)
-- [Uç Nokta için Microsoft Defender depolamayı ve gizliliği koruma](data-storage-privacy.md#data-storage-location)
+- [veri depolama ve gizliliği Pertahanan Microsoft untuk Titik Akhir](data-storage-privacy.md#data-storage-location)
 
-## <a name="other-file-sample-submission-scenarios"></a>Diğer dosya örnek gönderme senaryoları
+## <a name="other-file-sample-submission-scenarios"></a>Diğer dosya örneği gönderme senaryoları
 
-Uç Nokta için Defender'ın, diğer senaryolarda bulut korumasıyla ilgili bir dosya örneği isteğinde bulun olabileceği iki Microsoft Defender Virüsten Koruma. Bu senaryolar aşağıdaki tabloda açıklanmıştır:
+Uç Nokta için Defender'ın Microsoft Defender Virüsten Koruma bulut korumasıyla ilgili olmayan bir dosya örneği isteyebileceği iki senaryo daha vardır. Bu senaryolar aşağıdaki tabloda açıklanmıştır:
 
 | Senaryo | Açıklama |
 |:---|:---|
-|Microsoft 365 Defender portalında el ile dosya Microsoft 365 Defender koleksiyonu | Uç nokta için Defender'a cihaz eklemeye devam etmek için Cihaz Ayarları'uç noktada algılama ve yanıtlama [(EDR)](overview-endpoint-detection-response.md). Örneğin, cihazdan örnek koleksiyonları etkinleştirmeye olanak sağlayan bir ayar vardır ve bu ayar bu makalede açıklanan örnek gönderme ayarlarıyla kolayca karıştırılabiliyor. <br/><br/>Bu EDR, mobil cihaz portalında istenerek cihazlardan dosya örnek koleksiyonunu kontrol eder Microsoft 365 Defender ve zaten var olan rollere ve izinlere konur. Bu ayar, dosya portalında derin çözümleme gibi özellikler için dosya koleksiyonuna uç noktadan izin Microsoft 365 Defender olabilir. Bu ayar yapılandırılmazsa, varsayılan ayar örnek koleksiyonu etkinleştirmektir. <br/><br/>Uç nokta yapılandırma ayarları için Defender hakkında bilgi edinmek için bkz. Uç nokta için [Defender'da Windows 10 cihazlar için ekleme araçları ve yöntemleri](configure-endpoints.md) |
-| Otomatik araştırma ve yanıt içeriği çözümleme | Cihazlarda [otomatik soruşturmalar](automated-investigations.md) çalıştırıldığında (uyarıya yanıt olarak otomatik olarak çalıştıracak şekilde yapılandırıldığında veya el ile çalıştırıldığında), şüpheli olarak tanımlanan dosyalar daha fazla inceleme için uç noktalardan toplanabilir. Gerekirse, otomatik soruşturmalar için dosya içeriği çözümleme özelliği portalda Microsoft 365 Defender devre dışı bırakılabilir. <br/><br/> Dosya uzantısı adları, otomatik bir soruşturma sırasında otomatik olarak gönderilen diğer dosya türlerinin uzantılarını eklemek veya kaldırmak için de değiştirilebilir. <br/><br/> Daha fazla bilgi edinmek için bkz [. Otomasyon dosyası yüklemelerini yönetme](manage-automation-file-uploads.md). |
+|Microsoft 365 Defender portalında el ile dosya örneği koleksiyonu | Uç Nokta için Defender'a cihaz eklerken[, uç noktada algılama ve yanıtlama (EDR)](overview-endpoint-detection-response.md) ayarlarını yapılandırabilirsiniz. Örneğin, cihazdan örnek koleksiyonları etkinleştirmeye yönelik bir ayar vardır ve bu ayar bu makalede açıklanan örnek gönderim ayarlarıyla kolayca karıştırılabilir. <br/><br/>EDR ayarı, Microsoft 365 Defender portalı üzerinden istendiğinde cihazlardan dosya örneği toplamayı denetler ve önceden oluşturulmuş rollere ve izinlere tabidir. Bu ayar, Microsoft 365 Defender portalında ayrıntılı analiz gibi özellikler için uç noktadan dosya toplamaya izin verebilir veya bunları engelleyebilir. Bu ayar yapılandırılmamışsa, varsayılan değer örnek koleksiyonu etkinleştirmektir. <br/><br/>Uç Nokta için Defender yapılandırma ayarları hakkında bilgi edinin, bkz. [Uç Nokta için Defender'da Windows 10 cihazlar için ekleme araçları ve yöntemleri](configure-endpoints.md) |
+| Otomatik araştırma ve yanıt içeriği analizi | Cihazlarda [otomatik araştırma çalıştırıldığında](automated-investigations.md) (bir uyarıya yanıt olarak otomatik olarak çalışacak veya el ile çalıştırılacak şekilde yapılandırıldığında), şüpheli olarak tanımlanan dosyalar daha fazla inceleme için uç noktalardan toplanabilir. Gerekirse, otomatik araştırmalara yönelik dosya içeriği analizi özelliği Microsoft 365 Defender portalında devre dışı bırakılabilir. <br/><br/> Dosya uzantısı adları, otomatik araştırma sırasında otomatik olarak gönderilecek diğer dosya türleri için uzantı eklemek veya kaldırmak için de değiştirilebilir. <br/><br/> Daha fazla bilgi edinmek için bkz. [Otomasyon dosyası yüklemelerini yönetme](manage-automation-file-uploads.md). |
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Yeni nesil korumaya genel bakış](next-generation-protection.md)
 
-[Düzeltme algılamaları için Microsoft Defender Virüsten Koruma yapılandırma.](configure-remediation-microsoft-defender-antivirus.md)
+[Microsoft Defender Virüsten Koruma algılamaları için düzeltmeyi yapılandırın.](configure-remediation-microsoft-defender-antivirus.md)

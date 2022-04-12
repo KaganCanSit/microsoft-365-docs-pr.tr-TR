@@ -1,7 +1,7 @@
 ---
 title: Bulut koruması ve Microsoft Defender Virüsten Koruma
-description: Bulut koruması ve güvenlik hakkında bilgi Microsoft Defender Virüsten Koruma
-keywords: Microsoft Defender Virüsten Koruma, yeni nesil teknolojiler, yeni nesil av, makine öğrenimi, kötü amaçlı yazılımdan koruma, güvenlik, defender, bulut, bulut koruması
+description: Bulut koruması ve Microsoft Defender Virüsten Koruma hakkında bilgi edinin
+keywords: Microsoft Defender Virüsten Koruma, yeni nesil teknolojiler, yeni nesil av, makine öğrenmesi, kötü amaçlı yazılımdan koruma, güvenlik, defender, bulut, bulut koruması
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -15,58 +15,72 @@ ms.technology: mde
 ms.topic: article
 ms.date: 10/18/2021
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 881ae2de7a6c752c2be9bfc5ccdbe350050f340b
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 0cba725ed27d652366e681adccdec8dbefa68ecd
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64472011"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64788094"
 ---
 # <a name="cloud-protection-and-microsoft-defender-antivirus"></a>Bulut koruması ve Microsoft Defender Virüsten Koruma
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
-Yeni nesil teknolojiler, Microsoft Defender Virüsten Koruma ortaya çıkan tehditlere karşı yakın hızlı, otomatik koruma sağlar. Yeni tehditleri dinamik olarak belirlemek için, yeni nesil teknolojiler Microsoft Akıllı Güvenlik Graph ve gelişmiş makine öğrenme modelleri tarafından yönlendirilen güçlü yapay zeka (AI) sistemlerinde birbirine bağlı büyük veri kümeleriyle çalışır. Bulut koruması doğru, Microsoft Defender Virüsten Koruma ve akıllı koruma sağlamak için bulut korumasıyla birlikte çalışır. 
+**Platform**
+- Windows
 
-[:::image type="content" source="images/mde-cloud-protection.png" alt-text="Bulut korumasının diğer çalışanlarla birlikte nasıl çalıştığını gösteren Microsoft Defender Virüsten Koruma" lightbox="images/mde-cloud-protection.png":::](enable-cloud-protection-microsoft-defender-antivirus.md)
+Microsoft Defender Virüsten Koruma'daki yeni nesil teknolojiler, yeni ve yeni ortaya çıkan tehditlere karşı neredeyse anında, otomatik koruma sağlar. Yeni tehditleri dinamik olarak tanımlamak için yeni nesil teknolojiler, Microsoft Akıllı Güvenlik Graph ve gelişmiş makine öğrenmesi modelleri tarafından yönetilen güçlü yapay zeka (AI) sistemlerindeki büyük bağlantılı veri kümeleriyle çalışır. Bulut koruması doğru, gerçek zamanlı ve akıllı koruma sağlamak için Microsoft Defender Virüsten Koruma ile birlikte çalışır. 
+
+[:::image type="content" source="images/mde-cloud-protection.png" alt-text="Bulut korumasının Microsoft Defender Virüsten Koruma ile birlikte nasıl çalıştığını gösteren diyagram" lightbox="images/mde-cloud-protection.png":::](enable-cloud-protection-microsoft-defender-antivirus.md)
 
 > [!TIP]
-> Bulut korumasının açık tutmasını öneririz. Daha fazla bilgi edinmek için bkz[. Bu bağlantıda bulut korumasının neden Microsoft Defender Virüsten Koruma](why-cloud-protection-should-be-on-mdav.md). 
+> Bulut korumasını açık tutmanızı öneririz. Daha fazla bilgi edinmek için bkz. [Microsoft Defender Virüsten Koruma için bulut korumasının neden etkinleştirilmesi gerekir](why-cloud-protection-should-be-on-mdav.md)? 
 
 ## <a name="how-cloud-protection-works"></a>Bulut koruması nasıl çalışır?
 
-Microsoft Defender Virüsten Koruma, Microsoft bulut hizmetleriyle sorunsuz çalışır. Microsoft Gelişmiş Koruma Hizmeti (HARITALAR) olarak da adlandırılan bu bulut koruma hizmetleri, standart gerçek zamanlı korumayı geliştirin. Bulut korumasıyla, yeni nesil teknolojiler yeni tehditlere hızla karşı koruma sağlar ve bazen tek bir uç nokta virüs bulaşmadan önce bile olabilir. 
+Microsoft Defender Virüsten Koruma, Microsoft bulut hizmetleriyle sorunsuz çalışır. Microsoft Gelişmiş Koruma Hizmeti (MAPS) olarak da adlandırılan bu bulut koruma hizmetleri, standart gerçek zamanlı korumayı geliştirir. Bulut koruması sayesinde yeni nesil teknolojiler, bazen tek bir uç noktaya virüs bulaşmadan önce bile yeni tehditlerin hızla tanımlanmasını sağlar. 
 
-Aşağıdaki blog gönderileri bulut korumanın nasıl çalıştığını göstermektedir:
+Aşağıdaki blog gönderileri, bulut korumasının nasıl çalıştığını göstermektedir:
 
-- [Yeni nesil korumanın temel Uç Nokta için Microsoft Defender teknolojilerle yenileri hakkında bilgi](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/)
+- [Pertahanan Microsoft untuk Titik Akhir yeni nesil korumanın temelindeki gelişmiş teknolojileri tanımaya başlayın](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/)
 
-- [Microsoft Defender Virüsten Koruma kurumsalda en çok dağıtılan uygulama nedendir?](https://www.microsoft.com/security/blog/2018/03/22/why-windows-defender-antivirus-is-the-most-deployed-in-the-enterprise) 
+- [Microsoft Defender Virüsten Koruma neden kuruluşta en çok dağıtılandır?](https://www.microsoft.com/security/blog/2018/03/22/why-windows-defender-antivirus-is-the-most-deployed-in-the-enterprise) 
 
-- [Makine öğrenmesi ile birlikte davranış izlemesi büyük bir para madenciliği kampanyasında bilgi bozıyor](https://www.microsoft.com/security/blog/2018/03/07/behavior-monitoring-combined-with-machine-learning-spoils-a-massive-dofoil-coin-mining-campaign)
+- [Makine öğrenmesi ile birlikte davranış izleme, büyük bir madeni para madenciliği kampanyasını bozuyor](https://www.microsoft.com/security/blog/2018/03/07/behavior-monitoring-combined-with-machine-learning-spoils-a-massive-dofoil-coin-mining-campaign)
 
-- [Yapay zeka "Emotet" salgınını nasıl durdurdu](https://www.microsoft.com/security/blog/2018/02/14/how-artificial-intelligence-stopped-an-emotet-outbreak)
+- [Yapay zeka bir "Emotet" salgınını nasıl durdurdu?](https://www.microsoft.com/security/blog/2018/02/14/how-artificial-intelligence-stopped-an-emotet-outbreak)
 
-- [Kötü bir ekiplerin içini Microsoft Defender Virüsten Koruma ve katmanlı makine eğitimi savunmaları](https://www.microsoft.com/security/blog/2017/12/11/detonating-a-bad-rabbit-windows-defender-antivirus-and-layered-machine-learning-defenses)
+- [Kötü bir tavşanı patlatıyor: Microsoft Defender Virüsten Koruma ve katmanlı makine öğrenmesi savunmaları](https://www.microsoft.com/security/blog/2017/12/11/detonating-a-bad-rabbit-windows-defender-antivirus-and-layered-machine-learning-defenses)
 
-- [Microsoft Defender Virüsten Koruma koruma hizmeti: Önceden olmayan kötü amaçlı yazılımlara karşı gelişmiş gerçek zamanlı savunma](https://www.microsoft.com/security/blog/2017/07/18/windows-defender-antivirus-cloud-protection-service-advanced-real-time-defense-against-never-before-seen-malware) 
+- [Microsoft Defender Virüsten Koruma bulut koruma hizmeti: Daha önce görülmemiş kötü amaçlı yazılımlara karşı gelişmiş gerçek zamanlı savunma](https://www.microsoft.com/security/blog/2017/07/18/windows-defender-antivirus-cloud-protection-service-advanced-real-time-defense-against-never-before-seen-malware) 
 
 
 > [!NOTE]
-> En Microsoft Defender Virüsten Koruma hizmeti, ağınıza ve uç noktalarınıza güncelleştirilmiş koruma teslim etmek için bir mekanizmadır. Bulut hizmeti olarak, yalnızca bulutta depolanan dosyaların korunması değildir; bunun yerine bulut hizmeti, geleneksel güvenlik zekası güncelleştirmelerinden çok daha hızlı olan bir oranda uç noktalarınıza koruma sunmak için dağıtılmış kaynakları ve makine öğrenimini kullanır.
+> Microsoft Defender Virüsten Koruma bulut hizmeti, ağınıza ve uç noktalarınıza güncelleştirilmiş koruma sunmaya yönelik bir mekanizmadır. Bir bulut hizmeti olarak, yalnızca bulutta depolanan dosyalar için koruma değildir; Bunun yerine bulut hizmeti, geleneksel güvenlik bilgileri güncelleştirmelerinden çok daha hızlı bir hızda uç noktalarınıza koruma sağlamak için dağıtılmış kaynakları ve makine öğrenmesini kullanır.
 
-## <a name="how-to-get-cloud-protection"></a>Bulut koruması nasıl edinilen 
+## <a name="how-to-get-cloud-protection"></a>Bulut korumasını alma 
 
-Bulut koruması varsayılan olarak etkindir. Öte yandan, önceki kuruluş ilkelerinin bir parçası olarak devre dışı bırakıldı ise yeniden etkinleştirmeniz gerekir. Daha fazla bilgi edinmek için bkz [. Bulut korumasını açma](enable-cloud-protection-microsoft-defender-antivirus.md).
+Bulut koruması varsayılan olarak etkindir. Ancak, önceki kuruluş ilkelerinin bir parçası olarak devre dışı bırakılmışsa yeniden etkinleştirmeniz gerekebilir. Daha fazla bilgi için bkz. [Bulut korumasını açma](enable-cloud-protection-microsoft-defender-antivirus.md).
 
-Aboneliğiniz E5'Windows 10 varsa, ortaya çıkan tehditlere karşı neredeyse gerçek zamanlı koruma sağlayan acil durum dinamik zeka güncelleştirmelerinden faydalanabilirsiniz. Bulut korumasını açıkken kötü amaçlı yazılım sorunlarının düzeltmeleri bir sonraki güncelleştirmeyi beklemek yerine dakikalar içinde bulut üzerinden teslim edilir. Bulut [hizmetimizi Microsoft Defender Virüsten Koruma temel alan yeni koruma güncelleştirmelerini otomatik olarak alacak şekilde yapılandırma.](manage-event-based-updates-microsoft-defender-antivirus.md#cloud-report-updates)
+Aboneliğiniz Windows 10 E5 içeriyorsa, yeni ortaya çıkan tehditlere karşı neredeyse gerçek zamanlı koruma sağlayan acil durum dinamik zeka güncelleştirmelerinden yararlanabilirsiniz. Bulut korumasını açtığınızda, kötü amaçlı yazılım sorunlarının düzeltmeleri bir sonraki güncelleştirmeyi beklemek yerine birkaç dakika içinde bulut üzerinden teslim edilebilir. Bkz[. Bulut hizmetimizden gelen raporlara göre yeni koruma güncelleştirmelerini otomatik olarak almak için Microsoft Defender Virüsten Koruma yapılandırma](manage-event-based-updates-microsoft-defender-antivirus.md#cloud-report-updates).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Artık 2013'te bulut korumasına genel Microsoft Defender Virüsten Koruma, işte sonraki adımlar:
+Microsoft Defender Virüsten Koruma'da bulut korumasına genel bir bakış elde ettiğinize göre, sonraki adımlardan bazıları şunlardır:
 
-1. Daha [fazla bilgi için bkz. Bulut korumasının neden Microsoft Defender Virüsten Koruma](why-cloud-protection-should-be-on-mdav.md).
+1. Bkz. [Microsoft Defender Virüsten Koruma için bulut korumasının neden etkinleştirilmesi gerektiği](why-cloud-protection-should-be-on-mdav.md).
 
-2. Bulut korumasını [etkinleştir'e devam edin](enable-cloud-protection-microsoft-defender-antivirus.md)
+2. [Bulut korumasını etkinleştirme](enable-cloud-protection-microsoft-defender-antivirus.md) işlemine geçin
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)

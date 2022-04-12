@@ -1,7 +1,7 @@
 ---
-title: İstemci davranışı engelleme
-description: İstemci davranışı engelleme, müşteriyi engelleme ve engellemenin bir Uç Nokta için Microsoft Defender
-keywords: davranış engelleme, hızlı koruma, istemci davranışı, Uç Nokta için Microsoft Defender
+title: İstemci davranışsal engelleme
+description: İstemci davranış engellemesi, Pertahanan Microsoft untuk Titik Akhir davranış engelleme ve kapsama özelliklerinin bir parçasıdır
+keywords: davranış engelleme, hızlı koruma, istemci davranışı, Pertahanan Microsoft untuk Titik Akhir
 ms.pagetype: security
 author: denisebmsft
 ms.author: deniseb
@@ -16,66 +16,80 @@ ms.custom:
 - edr
 ms.collection: m365-security-compliance
 ms.technology: mde
-ms.openlocfilehash: 8da3f04af66568bbe79dd6a74c38b30a8a1ab891
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: f19e354a23af03abd905591993197ff8f484ceff
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64470229"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64788402"
 ---
-# <a name="client-behavioral-blocking"></a>İstemci davranışı engelleme
+# <a name="client-behavioral-blocking"></a>İstemci davranışsal engelleme
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- Microsoft Defender Virüsten Koruma
 
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+**Ortam**
+- Windows
+
+> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 ## <a name="overview"></a>Genel bakış
 
-İstemci davranışı engellemesi, Uç Nokta için [Defender'daki](behavioral-blocking-containment.md) davranış engelleme ve içerirlik yeteneklerinin bir bileşenidir. Cihazlarda (istemci veya uç nokta olarak da adlandırılan) şüpheli davranışlar algılandığından, yapılar (dosyalar veya uygulamalar gibi) engellenir, denetlenir ve otomatik olarak düzeltilir.
+İstemci davranış engellemesi, Uç Nokta için Defender'daki [davranış engelleme ve kapsama özelliklerinin](behavioral-blocking-containment.md) bir bileşenidir. Cihazlarda şüpheli davranışlar algılandığından (istemciler veya uç noktalar olarak da adlandırılır), yapıtlar (dosyalar veya uygulamalar gibi) engellenir, denetlenir ve otomatik olarak düzeltilir.
 
 :::image type="content" source="images/pre-execution-and-post-execution-detection-engines.png" alt-text="Bulut ve istemci koruması" lightbox="images/pre-execution-and-post-execution-detection-engines.png":::
 
-Virüsten koruma, bulut korumasıyla eşleştirilmiş olarak en iyi şekilde çalışır.
+Virüsten koruma, bulut korumasıyla eşleştirildiğinde en iyi şekilde çalışır.
 
-## <a name="how-client-behavioral-blocking-works"></a>İstemci davranışı engelleme nasıl çalışır?
+## <a name="how-client-behavioral-blocking-works"></a>İstemci davranış engellemesi nasıl çalışır?
 
-[Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md) bir cihazda şüpheli davranışı, kötü amaçlı kodu, dosyasız ve bellek içinde saldırılarını ve daha fazlasını algılanabilir. Şüpheli davranışlar algılandığında, Microsoft Defender Virüsten Koruma bu şüpheli davranışları ve işlem ağaçlarını bulut koruma hizmetine izler ve gönderir. Makine öğrenimi, mili saniye cinsinden kötü amaçlı uygulamalarla iyi davranışlar arasında ayrım sağlar ve her yapıyı sınıflara böler. Yapı, zararlı olduğu bulunan yapı, neredeyse gerçek zamanlı olarak cihazda engellenir.
+[Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md) bir cihazda şüpheli davranışı, kötü amaçlı kodu, dosyasız ve bellek içi saldırıları ve daha fazlasını algılayabilir. Şüpheli davranışlar algılandığında, Microsoft Defender Virüsten Koruma bu şüpheli davranışları ve işlem ağaçlarını izler ve bulut koruma hizmetine gönderir. Makine öğrenmesi, kötü amaçlı uygulamalarla iyi davranışları milisaniyeler içinde ayırt eder ve her yapıtı sınıflandırır. Neredeyse gerçek zamanlı olarak, bir yapıt kötü amaçlı olarak bulunduğunda cihazda engellenir.
 
-Şüpheli bir davranış algılandığında bir uyarı oluşturulur ve [](alerts-queue.md) Saldırı algılandığında ve durdurulurken "ilk erişim uyarısı" gibi uyarılar [Microsoft 365 Defender portalında](/microsoft-365/security/defender/microsoft-365-defender) (eski adı Microsoft 365 Defender) tetiklenir ve görünür.
+Şüpheli bir davranış algılandığında bir [uyarı](alerts-queue.md) oluşturulur ve saldırı algılanıp durdurulurken görünür; gibi uyarılar tetiklenir ve [Microsoft 365 Defender portalında](/microsoft-365/security/defender/microsoft-365-defender) (eski adıyla Microsoft 365 Defender) görüntülenir.
 
-İstemci davranış engellemesi, yalnızca bir saldırının başlamasını önlemeye yardımcı olmakla birlikte yürütmeye başlayan bir saldırıyı durdurmanıza da yardımcı olur. Geri bildirim [döngüsü engelleme ile](feedback-loop-blocking.md) de (davranışa yönelik engelleme ve içeren başka bir özellik) saldırılar, organizasyonlu diğer cihazlarda önlenebilir.
+İstemci davranış engellemesi, bir saldırının başlatılmasını önlemeye yardımcı olmakla kalmaz, yürütülmeye başlayan bir saldırının durdurulmasını da sağlayabilir. Geri [bildirim döngüsü engellemesi](feedback-loop-blocking.md) (davranış engelleme ve kapsama özelliğinin başka bir özelliği) sayesinde, kuruluşunuzdaki diğer cihazlarda saldırılar engellenir.
 
 ## <a name="behavior-based-detections"></a>Davranış tabanlı algılamalar
 
-Davranış tabanlı algılamalar, bu algılamalar için [MITRE ATT&CK Matrisi'ne Enterprise](https://attack.mitre.org/matrices/enterprise). Adlandırma kuralı kötü amaçlı davranışın gözlemlenen saldırı aşamalarını belirlemeye yardımcı olur:
+Davranış tabanlı algılamalar, [Enterprise için MITRE ATT&CK Matrisine](https://attack.mitre.org/matrices/enterprise) göre adlandırılır. Adlandırma kuralı, kötü amaçlı davranışın gözlemlendiği saldırı aşamasını belirlemeye yardımcı olur:
 
-|Tactic|Algılama tehdit adı|
+|Taktik|Algılama tehdidi adı|
 |---|---|
-|Initial Access|`Behavior:Win32/InitialAccess.*!ml`|
+|İlk Erişim|`Behavior:Win32/InitialAccess.*!ml`|
 |Yürütme|`Behavior:Win32/Execution.*!ml`|
 |Kalıcılık|`Behavior:Win32/Persistence.*!ml`|
 |Ayrıcalık Yükseltme|`Behavior:Win32/PrivilegeEscalation.*!ml`|
-|Savunma Savunma|`Behavior:Win32/DefenseEvasion.*!ml`|
-|Kimlik Bilgilerine Erişim|`Behavior:Win32/CredentialAccess.*!ml`|
+|Savunma Kaçamak|`Behavior:Win32/DefenseEvasion.*!ml`|
+|Kimlik Bilgisi Erişimi|`Behavior:Win32/CredentialAccess.*!ml`|
 |Keşif|`Behavior:Win32/Discovery.*!ml`|
-|Lateral Movement|`Behavior:Win32/LateralMovement.*!ml`|
+|YanAl Hareket|`Behavior:Win32/LateralMovement.*!ml`|
 |Koleksiyon|`Behavior:Win32/Collection.*!ml`|
 |Komut ve Denetim|`Behavior:Win32/CommandAndControl.*!ml`|
-|Exfiltration|`Behavior:Win32/Exfiltration.*!ml`|
+|Sızdırma|`Behavior:Win32/Exfiltration.*!ml`|
 |Etki|`Behavior:Win32/Impact.*!ml`|
-|Uncategorized|`Behavior:Win32/Generic.*!ml`|
+|Kategorilenmemiş|`Behavior:Win32/Generic.*!ml`|
 
 > [!TIP]
-> Belirli tehditler hakkında daha fazla bilgi edinmek için son **[küresel tehdit etkinliklerine bakın](https://www.microsoft.com/wdsi/threats)**.
+> Belirli tehditler hakkında daha fazla bilgi edinmek için bkz. **[son küresel tehdit etkinliği](https://www.microsoft.com/wdsi/threats)**.
 
 ## <a name="configuring-client-behavioral-blocking"></a>İstemci davranış engellemesini yapılandırma
 
-Kuruluşta Uç Nokta için Defender kullanıyorsa, istemci davranışı engelleme varsayılan olarak etkindir. Öte yandan, davranış engelleme ve dahil olmak üzere Uç Nokta için Defender'ın tüm özelliklerinden yararlanmak [için, Uç](behavioral-blocking-containment.md) Nokta için Defender'ın etkinleştirildiğinden ve yapılandırıldığından emin olun:
+Kuruluşunuz Uç Nokta için Defender kullanıyorsa istemci davranış engellemesi varsayılan olarak etkindir. Ancak davranış [engelleme ve kapsama](behavioral-blocking-containment.md) dahil olmak üzere tüm Uç Nokta için Defender özelliklerinden yararlanmak için Uç Nokta için Defender'ın aşağıdaki özellik ve özelliklerinin etkinleştirildiğinden ve yapılandırıldığından emin olun:
 
-- [Uç nokta taban çizgisi için Defender](configure-machines-security-baseline.md)
-- [Uç Nokta için Defender'a yerleşik cihazlar](onboard-configure.md)
-- [EDR modunda çalışma](edr-in-block-mode.md)
+- [Uç Nokta için Defender temelleri](configure-machines-security-baseline.md)
+- [Uç Nokta için Defender'a eklenen cihazlar](onboard-configure.md)
+- [Engelleme modunda EDR ](edr-in-block-mode.md)
 - [Saldırı yüzeyini azaltma](attack-surface-reduction.md)
 - [Yeni nesil koruma](configure-microsoft-defender-antivirus-features.md) (virüsten koruma, kötü amaçlı yazılımdan koruma ve diğer tehdit koruması özellikleri)
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)

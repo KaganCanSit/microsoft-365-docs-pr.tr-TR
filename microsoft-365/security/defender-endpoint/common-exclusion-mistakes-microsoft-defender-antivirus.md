@@ -1,6 +1,6 @@
 ---
 title: Dışlamaları tanımlarken kaçınılması gereken yaygın hatalar
-description: Dışlamalar ve taramalar için dışlamalar tanımlarken sık Microsoft Defender Virüsten Koruma kaçının.
+description: Microsoft Defender Virüsten Koruma taramaları için dışlamaları tanımlarken yaygın hatalardan kaçının.
 keywords: dışlamalar, dosyalar, uzantı, dosya türü, klasör adı, dosya adı, taramalar
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -16,34 +16,40 @@ ms.technology: mde
 ms.topic: article
 ms.date: 10/19/2021
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 73234fd929406da475455baf21fbbf463216c660
-ms.sourcegitcommit: 2b9d40e888ff2f2b3385e2a90b50d719bba1e653
+ms.openlocfilehash: b5dc8832839c86fee98e9f27264b70e6a63f380c
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2021
-ms.locfileid: "62996991"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64790712"
 ---
 # <a name="common-mistakes-to-avoid-when-defining-exclusions"></a>Dışlamaları tanımlarken kaçınılması gereken yaygın hatalar
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma 
 
-Taramak istediğiniz öğeler için dışlama listesi Microsoft Defender Virüsten Koruma tanımlayabilirsiniz. Bu tür dışarıda bırakılan öğeler cihazınızı zayıf hale zoracak tehditlere neden olabilir. Bu makalede, dışlamaları tanımlarken kaçınılması gereken bazı yaygın hatalar açıklanmıştır.
+**Platform**
+- Windows
+- macOS
+- Linux
 
-Dışlama listelerinizi tanımlamadan önce [dışlamaları Öneriler aşağıdaki seçeneklere bakın](configure-exclusions-microsoft-defender-antivirus.md#recommendations-for-defining-exclusions).
+Microsoft Defender Virüsten Koruma taramasını istemediğiniz öğeler için bir dışlama listesi tanımlayabilirsiniz. Bu tür dışlanan öğeler, cihazınızı savunmasız hale getiren tehditler içerebilir. Bu makalede, dışlamaları tanımlarken kaçınmanız gereken bazı yaygın hatalar açıklanmaktadır.
+
+Dışlama listelerinizi tanımlamadan önce [dışlamaları tanımlamaya yönelik Öneriler](configure-exclusions-microsoft-defender-antivirus.md#recommendations-for-defining-exclusions) bölümüne bakın.
 
 ## <a name="excluding-certain-trusted-items"></a>Belirli güvenilen öğeleri dışlama
 
-Bazı dosyalar, dosya türleri, klasörler veya işlemler kötü amaçlı olmayacak şekilde güvense bile tarama dışında tutulmaz.
+Bazı dosyalar, dosya türleri, klasörler veya işlemler, kötü amaçlı olmadığından emin olsanız bile taramanın dışında tutulmamalıdır.
 
-Aşağıdaki bölümlerde listelenen klasör konumlarında, dosya uzantılarında ve süreçlerde dışlamalar tanımlamayın:
+Aşağıdaki bölümlerde listelenen klasör konumları, dosya uzantıları ve işlemler için dışlamalar tanımlamayın:
 - Klasör konumları
 - Dosya uzantıları
-- İşlemler
+- Süreç
 
 ### <a name="folder-locations"></a>Klasör konumları
 
-Genelde aşağıdaki klasör konumları için dışlamalar tanımlamayın:
+Genel olarak, aşağıdaki klasör konumları için dışlama tanımlamayın:
 
 `%systemdrive%`
 
@@ -75,9 +81,9 @@ Genelde aşağıdaki klasör konumları için dışlamalar tanımlamayın:
 
 `C:\Users\*`
 
-`C:\Users\<UserProfileName>\AppData\Local\Temp\`**Şu özel durumu not SharePoint**: `C:\Users\ServiceAccount\AppData\Local\Temp` SharePoint'te dosya düzeyinde [virüsten koruma kullanıyorsanız, hariç SharePoint](https://support.microsoft.com/office/certain-folders-may-have-to-be-excluded-from-antivirus-scanning-when-you-use-file-level-antivirus-software-in-sharepoint-01cbc532-a24e-4bba-8d67-0b1ed733a3d9).
+`C:\Users\<UserProfileName>\AppData\Local\Temp\`**SharePoint için aşağıdaki özel duruma dikkat edin**: [SharePoint'da dosya düzeyinde virüsten koruma](https://support.microsoft.com/office/certain-folders-may-have-to-be-excluded-from-antivirus-scanning-when-you-use-file-level-antivirus-software-in-sharepoint-01cbc532-a24e-4bba-8d67-0b1ed733a3d9) kullandığınızda hariç tutun`C:\Users\ServiceAccount\AppData\Local\Temp`.
 
-`C:\Users\<UserProfileName>\AppData\LocalLow\Temp\`**Şu özel durumu not SharePoint**: `C:\Users\Default\AppData\Local\Temp` SharePoint'te dosya düzeyinde [virüsten koruma kullanıyorsanız, hariç SharePoint](https://support.microsoft.com/office/certain-folders-may-have-to-be-excluded-from-antivirus-scanning-when-you-use-file-level-antivirus-software-in-sharepoint-01cbc532-a24e-4bba-8d67-0b1ed733a3d9).
+`C:\Users\<UserProfileName>\AppData\LocalLow\Temp\`**SharePoint için aşağıdaki özel duruma dikkat edin**: [SharePoint'da dosya düzeyinde virüsten koruma](https://support.microsoft.com/office/certain-folders-may-have-to-be-excluded-from-antivirus-scanning-when-you-use-file-level-antivirus-software-in-sharepoint-01cbc532-a24e-4bba-8d67-0b1ed733a3d9) kullandığınızda hariç tutun`C:\Users\Default\AppData\Local\Temp`.
 
 `%Windir%\Prefetch`
 
@@ -113,7 +119,7 @@ Genelde aşağıdaki klasör konumları için dışlamalar tanımlamayın:
 
 ### <a name="file-extensions"></a>Dosya uzantıları
 
-Genelde aşağıdaki dosya uzantıları için dışlamalar tanımlamayın:
+Genel olarak, aşağıdaki dosya uzantıları için dışlama tanımlamayın:
 
 `.7z`
 
@@ -191,9 +197,9 @@ Genelde aşağıdaki dosya uzantıları için dışlamalar tanımlamayın:
 
 `.zip`
 
-### <a name="processes"></a>İşlemler
+### <a name="processes"></a>Süreç
 
-Genelde aşağıdaki işlemler için dışlamalar tanımlamayın:
+Genel olarak, aşağıdaki işlemler için dışlama tanımlamayın:
 
 `AcroRd32.exe`
 
@@ -273,25 +279,35 @@ Genelde aşağıdaki işlemler için dışlamalar tanımlamayın:
 
 `sh`
 
-`python` ve `python3`
+`python` Ve `python3`
 
 `java`
 
 `zsh`
 
 > [!NOTE]
-> , veya `.jpeg``.png` gibi dosya türlerini `.gif``.jpg`dışarıda tutabilirsiniz veya ortamınız güvenlik açıklarını işlemek için sıkı bir güncelleştirme ilkesine sahip modern, güncel bir yazılıma sahipse bunu dışarıda tutabilirsiniz.
+> , `.jpg`, `.jpeg`gibi `.gif`dosya türlerini hariç tutabilirsiniz veya `.png` ortamınızda güvenlik açıklarını işlemek için katı bir güncelleştirme ilkesine sahip modern, güncel bir yazılım varsa bunu hariç tutabilirsiniz.
 
-## <a name="using-just-the-file-name-in-the-exclusion-list"></a>Dışlama listesinde yalnızca dosya adını kullanma
+## <a name="using-just-the-file-name-in-the-exclusion-list"></a>Dışlama listesindeki yalnızca dosya adını kullanma
 
-Kötü amaçlı yazılım, güvenilen ve tarama dışında tutmak istediğiniz dosyayla aynı adıya sahip olabilir. Bu nedenle, olası kötü amaçlı yazılım taramalarını dışlamamak için, yalnızca dosya adını kullanmak yerine, hariç tutmak istediğiniz dosyanın tam yollarından kullanın. Örneğin, taramanın dışında tutmak `Filename.exe` istemiyorsanız, dosyanın tam yolunu, örneğin: `C:\program files\contoso\Filename.exe`kullanın.
+Kötü amaçlı yazılım, güvendiğiniz ve taramanın dışında tutmak istediğiniz dosyayla aynı ada sahip olabilir. Bu nedenle, olası kötü amaçlı yazılımları taramanın dışında tutmaktan kaçınmak için, yalnızca dosya adını kullanmak yerine dışlamak istediğiniz dosyanın tam yolunu kullanın. Örneğin, taramanın dışında `Filename.exe` tutmak istiyorsanız, dosyasının tam yolunu kullanın, örneğin `C:\program files\contoso\Filename.exe`.
 
 ## <a name="using-a-single-exclusion-list-for-multiple-server-workloads"></a>Birden çok sunucu iş yükü için tek bir dışlama listesi kullanma
 
-Birden çok sunucu iş yükünün dışlamalarını tanımlamak için tek bir dışlama listesi kullanma. Farklı uygulama veya hizmet iş yükleri için dışlamaları birden çok dışlama listesinde bölün. Örneğin, IIS Server iş yükünün dışlama listesi, iş yükünüz için dışlama SQL Server gerekir.
+Birden çok sunucu iş yükü için dışlamaları tanımlamak için tek bir dışlama listesi kullanmayın. Farklı uygulama veya hizmet iş yükleri için dışlamaları birden çok dışlama listesi olarak bölün. Örneğin, IIS Sunucusu iş yükünüz için dışlama listesi, SQL Server iş yükünüz için dışlama listesinden farklı olmalıdır.
 
-## <a name="using-incorrect-environment-variables-as-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists"></a>Dosya adı ve klasör yolu veya uzantı dışlama listelerinde joker karakter olarak yanlış ortam değişkenleri kullanma
+## <a name="using-incorrect-environment-variables-as-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists"></a>Dosya adı ve klasör yolu veya uzantı dışlama listelerinde joker karakter olarak yanlış ortam değişkenlerini kullanma
 
-Microsoft Defender Virüsten Koruma Hizmeti, sistem bağlamında LocalSystem hesabını kullanarak çalışır; bu da, kullanıcı ortam değişkenlerinden değil sistem ortamı değişkeninden bilgi alır. Dışlama listelerinde ortam değişkenlerinin joker karakter olarak kullanımı sistem değişkenleriyle ve NT AUTHORITY\SYSTEM hesabı olarak çalışan işlemler için geçerli olanlar ile sınırlıdır. Bu nedenle, yeni klasör ve işlem dışlamaları eklerken kullanıcı Microsoft Defender Virüsten Koruma değişkenlerini joker karakter olarak kullanmayın. Sistem ortamı [değişkenlerinin tam listesi için](configure-extension-file-exclusions-microsoft-defender-antivirus.md#system-environment-variables) Sistem ortamı değişkenleri altındaki tabloya bakın.
+Microsoft Defender Virüsten Koruma Hizmeti, LocalSystem hesabını kullanarak sistem bağlamında çalışır. Bu, bilgileri kullanıcı ortam değişkeninden değil sistem ortam değişkeninden aldığı anlamına gelir. Dışlama listelerinde ortam değişkenlerinin joker karakter olarak kullanılması, sistem değişkenleriyle ve NT AUTHORITY\SYSTEM hesabı olarak çalışan işlemler için geçerli olanlarla sınırlıdır. Bu nedenle, Microsoft Defender Virüsten Koruma klasör ve işlem dışlamaları eklerken joker karakter olarak kullanıcı ortamı değişkenlerini kullanmayın. [Sistem ortamı değişkenlerinin tam listesi için Sistem ortamı değişkenleri](configure-extension-file-exclusions-microsoft-defender-antivirus.md#system-environment-variables) altındaki tabloya bakın.
 
-[Dışlama listelerinde joker karakterleri](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists) kullanma hakkında bilgi için bkz. Dosya adı ve klasör yolu veya uzantı dışlama listelerinde joker karakter kullanma.
+Dışlama listelerinde joker karakterleri kullanma hakkında bilgi için bkz. [Dosya adı ve klasör yolu veya uzantı dışlama listelerinde](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists) joker karakterler kullanma.
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)

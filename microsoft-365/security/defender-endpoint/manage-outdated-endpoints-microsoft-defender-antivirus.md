@@ -1,6 +1,6 @@
 ---
-title: Güncel değil uç noktalarına Microsoft Defender AV koruma güncelleştirmelerini uygulama
-description: Bir süre güncelleştirilmiş uç noktalar için güncelleştirmelerin ne zaman ve nasıl uygulanması gerektiğini tanımlayın.
+title: Microsoft Defender AV koruma güncelleştirmelerini güncel dışı uç noktalara uygulama
+description: Bir süredir güncelleştirilmemiş uç noktalar için güncelleştirmelerin ne zaman ve nasıl uygulanacağını tanımlayın.
 keywords: güncelleştirmeler, koruma, güncel olmayan, güncel olmayan, eski, yakalama
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -16,60 +16,64 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: a708bf6ef34767b338c40cf8004e4c497658fc36
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 0f7f42662bf698f6e3a092539e58a8a9de529b24
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998068"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64789480"
 ---
-# <a name="manage-microsoft-defender-antivirus-updates-and-scans-for-endpoints-that-are-out-of-date"></a>Güncel Microsoft Defender Virüsten Koruma uç noktaların güncelleştirmelerini ve taramalarını yönetme
+# <a name="manage-microsoft-defender-antivirus-updates-and-scans-for-endpoints-that-are-out-of-date"></a>Güncel olmayan uç nokta taramalarını ve Microsoft Defender Virüsten Koruma güncelleştirmelerini yönetin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
 
-Microsoft Defender Virüsten Koruma, uç noktanın güncelleştirmeyi ne kadar süreyle önlediğini veya uç noktanın kendisini güncelleştirmek ve taramak için gerekli olmadan önce kaç taramayı kaçıra geçeyle ilgili olduğunu tanımlamanıza olanak sağlar. Bu özellikle, cihazların çoğunlukla şirket veya dış ağa bağlı olduğu ortamlarda veya günlük olarak kullanılmadan kullanılan ortamlarda kullanışlıdır.
+**Platform**
+- Windows
 
-Örneğin, belirli bir bilgisayarı kullanan çalışan üç gün boyunca tatilde olur ve bu süre boyunca kendi bilgisayarınızda oturum açmaz.
+Microsoft Defender Virüsten Koruma, bir uç noktanın bir güncelleştirmeyi ne kadar süreyle önleyebileceğini veya kendisini güncelleştirmek ve taramak için gerekli olmadan önce kaç taramayı kaçırabileceğini tanımlamanızı sağlar. Bu, özellikle cihazların genellikle bir şirket veya dış ağa bağlı olmadığı ortamlarda veya günlük olarak kullanılmayan cihazlarda kullanışlıdır.
 
-Kullanıcı çalışmaya döndüğünde ve kendi bilgisayarınızda oturum açtığında, Microsoft Defender Virüsten Koruma en son koruma güncelleştirmelerini hemen kontrol edin ve indirin, sonra da bir tarama çalıştırın.
+Örneğin, belirli bir bilgisayarı kullanan bir çalışan üç gün boyunca moladadır ve bu süre boyunca bilgisayarında oturum açmaz.
 
-## <a name="set-up-catch-up-protection-updates-for-endpoints-that-havent-updated-for-a-while"></a>Bir süredir güncelleştirilmiş uç noktalar için catch-up protection güncelleştirmeleri ayarlama
+Kullanıcı çalışmaya geri döndüğünde ve bilgisayarında oturum açtığında, Microsoft Defender Virüsten Koruma en son koruma güncelleştirmelerini hemen denetleyecek ve indirecek ve bir tarama çalıştıracaktır.
 
-Daha Microsoft Defender Virüsten Koruma bir süre için koruma güncelleştirmelerini indirmezse, sonraki oturum açma sırasında en son güncelleştirmeyi otomatik olarak kontrol etmek ve indirmek üzere kurabilirsiniz. Başlangıçta otomatik güncelleştirme indirmeleri genel [olarak devre dışı bırakıldı ise bu yararlı olur](manage-event-based-updates-microsoft-defender-antivirus.md).
+## <a name="set-up-catch-up-protection-updates-for-endpoints-that-havent-updated-for-a-while"></a>Bir süredir güncelleştirilmemiş uç noktalar için yakalama koruma güncelleştirmelerini ayarlama
 
-### <a name="use-configuration-manager-to-configure-catch-up-protection-updates"></a>Yakalama koruması güncelleştirmelerini yapılandırmak için Yapılandırma Yöneticisi'ni kullanma
+Microsoft Defender Virüsten Koruma belirli bir süre için koruma güncelleştirmelerini indirmediyse, bir sonraki oturum açmada en son güncelleştirmeyi otomatik olarak denetleyip indirecek şekilde ayarlayabilirsiniz. [Başlangıçta otomatik güncelleştirme indirmelerini genel olarak devre dışı bırakmışsanız](manage-event-based-updates-microsoft-defender-antivirus.md) bu yararlı olur.
 
-1. Microsoft Endpoint Manager konsolunuzun üzerinde, değiştirmek istediğiniz kötü amaçlı yazılımdan koruma ilkelerini açın (sol tarafta gezinti bölmesinde Varlıklar  ve Uyumluluk'a tıklayın,  \>  \> ardından ağacı Genel Bakış veya Kötü Amaçlı Yazılım İlkeleri'ne Endpoint Protection **tıklayın**)
+### <a name="use-configuration-manager-to-configure-catch-up-protection-updates"></a>Yakalama koruma güncelleştirmelerini yapılandırmak için Configuration Manager kullanma
 
-2. Güvenlik zekası **güncelleştirmeleri bölümüne** gidin ve aşağıdaki ayarları yapılandırabilirsiniz:
+1. Microsoft Endpoint Manager konsolunuzda, değiştirmek istediğiniz kötü amaçlı yazılımdan koruma ilkesini açın (soldaki gezinti bölmesinde **Varlıklar ve Uyumluluk'a** tıklayın, sonra ağacı **Genel Bakış** \> **Endpoint Protection** \> **Kötü Amaçlı Yazılımdan Koruma İlkeleri**) olarak genişletin
 
-    1. İstemci **bilgisayar birbirini takip eden ikiden fazla zamanlanmış** güncelleştirme için Evet olarak çevrimdışıysa, güvenlik zekası güncelleştirmesini zorla **güncelleştirmesi ayarlayın**.
-    2. Configuration  **Manager,** güvenlik zekası güncelleştirmeleri için kaynak olarak kullanılıyorsa... için, koruma güncelleştirmelerinin Configuration Manager tarafından teslim edilen süre önce güncel kabul edilecek saatleri belirtin. Bu, tanımlanan geri dönüş kaynağı sırasına bağlı olarak bir sonraki güncelleştirme [konumunun kullanılmaya neden olur](manage-protection-updates-microsoft-defender-antivirus.md#fallback-order).
+2. **Güvenlik bilgileri güncelleştirmeleri** bölümüne gidin ve aşağıdaki ayarları yapılandırın:
+
+    1. **İstemci bilgisayar art arda ikiden fazla zamanlanmış güncelleştirme için çevrimdışıysa Güvenlik bilgileri güncelleştirmesini zorla** seçeneğini **Evet** olarak ayarlayın.
+    2. Güvenlik **bilgileri güncelleştirmeleri için kaynak olarak Configuration Manager kullanılıyorsa...** için, Configuration Manager tarafından sunulan koruma güncelleştirmelerinin güncel olmayan olarak kabul edilmesi gereken saatleri belirtin. Bu, tanımlanan [geri dönüş kaynak sırasına](manage-protection-updates-microsoft-defender-antivirus.md#fallback-order) göre bir sonraki güncelleştirme konumunun kullanılmasına neden olur.
 
 3. **Tamam**'a tıklayın.
 
 4. [Güncelleştirilmiş ilkeyi her zamanki gibi dağıtın](/sccm/protect/deploy-use/endpoint-antimalware-policies#deploy-an-antimalware-policy-to-client-computers).
 
-### <a name="use-group-policy-to-enable-and-configure-the-catch-up-update-feature"></a>Göz alıcı güncelleştirme özelliğini etkinleştirmek ve yapılandırmak için Grup İlkesi kullanma
+### <a name="use-group-policy-to-enable-and-configure-the-catch-up-update-feature"></a>Yakalama güncelleştirme özelliğini etkinleştirmek ve yapılandırmak için grup ilkesi kullanma
 
-1. Grup İlkesi yönetim bilgisayarınızda Grup İlkesi Yönetim [Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz Grup İlkesi Nesnesine sağ tıklayın ve Düzenle'ye **tıklayın**.
+1. grup ilkesi yönetim bilgisayarınızda [grup ilkesi Yönetim Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz grup ilkesi Nesnesine sağ tıklayın ve **Düzenle'ye** tıklayın.
 
-2. Grup İlkesi **Yönetim Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin**.
+2. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin.
 
-3. **İlkeler'e** **ve ardından Yönetim şablonları'ne tıklayın**.
+3. **İlkeler'e** ve ardından **Yönetim şablonları'nı** tıklatın.
 
-4. İmza **Güncelleştirmeleri'Windows bileşenleri > Microsoft Defender Virüsten Koruma > ağacı genişletin**.
+4. **İmza Güncelleştirmeleri > Microsoft Defender Virüsten Koruma > bileşenleri Windows** için ağacı genişletin.
 
-5. Bir yakalama güvenlik **zekası güncelleştirmesi için** gerekli olan gün sayısını tanımla ayarına çift tıklayın ve seçeneği Etkin olarak **ayarlayın**. Microsoft Defender AV'nin en son koruma güncelleştirmesini denetlemesini ve indirmesini istediğiniz gün sayısını girin.
+5. **Yakalama güvenlik bilgileri güncelleştirmesinin gerekli olduğu gün sayısını tanımla** ayarına çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. Microsoft Defender AV'nin en son koruma güncelleştirmesini denetlemesini ve indirmesini istediğiniz gün sayısını girin.
 
 6. **Tamam**'a tıklayın.
 
-### <a name="use-powershell-cmdlets-to-configure-catch-up-protection-updates"></a>Yakala koruma güncelleştirmelerini yapılandırmak için PowerShell cmdlet'lerini kullanma
+### <a name="use-powershell-cmdlets-to-configure-catch-up-protection-updates"></a>Yakalama koruma güncelleştirmelerini yapılandırmak için PowerShell cmdlet'lerini kullanma
 
 Aşağıdaki cmdlet'leri kullanın:
 
@@ -77,11 +81,11 @@ Aşağıdaki cmdlet'leri kullanın:
 Set-MpPreference -SignatureUpdateCatchupInterval
 ```
 
-[PowerShell cmdlet'lerini kullanarak PowerShell cmdlet'lerini](use-powershell-cmdlets-microsoft-defender-antivirus.md) yapılandırma ve çalıştırma hakkında daha fazla bilgi Microsoft Defender Virüsten Koruma [Defender Virüsten Koruma cmdlet'lerini](/powershell/module/defender/) Microsoft Defender Virüsten Koruma.
+[PowerShell'i Microsoft Defender Virüsten Koruma](use-powershell-cmdlets-microsoft-defender-antivirus.md) ile kullanma hakkında daha fazla bilgi için bkz. Microsoft Defender Virüsten Koruma yapılandırmak ve çalıştırmak için PowerShell [cmdlet'lerini kullanma ve Defender Virüsten Koruma cmdlet'leri](/powershell/module/defender/).
 
-### <a name="use-windows-management-instruction-wmi-to-configure-catch-up-protection-updates"></a>Yakalama Windows güncelleştirmelerini yapılandırmak için KULLANıCı Yönetimi Yönergesi'ne (WMI) kullanma
+### <a name="use-windows-management-instruction-wmi-to-configure-catch-up-protection-updates"></a>Yakalama koruma güncelleştirmelerini yapılandırmak için Windows Yönetim Yönergesi'ni (WMI) kullanma
 
-Aşağıdaki [**özellikler** için sınıf **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) Set yöntemini kullanın:
+Aşağıdaki özellikler için [**MSFT_MpPreference** sınıfının **Set** yöntemini](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) kullanın:
 
 ```WMI
 SignatureUpdateCatchupInterval
@@ -89,63 +93,63 @@ SignatureUpdateCatchupInterval
 
 Daha fazla bilgi ve izin verilen parametreler için aşağıdakilere bakın:
 
-- [Windows Defender WMIv2 API'leri](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
+- [WMIv2 API'lerini Windows Defender](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
 
-## <a name="set-the-number-of-days-before-protection-is-reported-as-out-of-date"></a>Korumanın güncel olduğu bildirmeden önceki gün sayısını ayarlama
+## <a name="set-the-number-of-days-before-protection-is-reported-as-out-of-date"></a>Korumanın güncel olmayan olarak bildirildiği gün sayısını ayarlayın
 
-Ayrıca, korumanın eski veya güncel Microsoft Defender Virüsten Koruma kaç gün sonra olduğunu da belirtsiniz. Belirtilen sayıda gün sonra, istemci kendini güncel değil olarak rapor eder ve bilgisayar kullanıcıya bir hata gösterir. Ayrıca, WSUS veya Microsoft Update Microsoft Defender Virüsten Koruma i ilk kaynak olarak ayardikten sonra mmPC'nin ikincil kaynak olarak [](manage-protection-updates-microsoft-defender-antivirus.md#fallback-order)kullanımı gibi durumlarda olduğu gibi, başka kaynaklardan bir güncelleştirme indirmeye çalışmanız da (tanımlı geri dönüş kaynağı sırasına bağlı olarak) neden olabilir.
+Ayrıca, Microsoft Defender Virüsten Koruma korumasının eski veya güncel olmayan olarak kabul edildiği gün sayısını da belirtebilirsiniz. Belirtilen gün sayısından sonra istemci kendisini güncel değil olarak bildirir ve bilgisayarın kullanıcısına bir hata gösterir. Ayrıca, WSUS veya Microsoft Update ilk kaynak olarak ayarlandıktan sonra ikincil kaynak olarak MMPC kullanılırken Microsoft Defender Virüsten Koruma diğer kaynaklardan bir güncelleştirmeyi indirmeye (tanımlanan [geri dönüş kaynak sırasına](manage-protection-updates-microsoft-defender-antivirus.md#fallback-order) göre) neden olabilir.
 
-### <a name="use-group-policy-to-specify-the-number-of-days-before-protection-is-considered-out-of-date"></a>Korumanın güncel olduğu kabul edilen tarihten önceki gün sayısını belirtmek için Grup İlkesi kullanma
+### <a name="use-group-policy-to-specify-the-number-of-days-before-protection-is-considered-out-of-date"></a>Korumanın güncel olmayan olarak kabul edilmesinden önceki gün sayısını belirtmek için grup ilkesi kullanın
 
-1. Grup İlkesi yönetim makinenizin Grup İlkesi Yönetim [Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz Grup İlkesi Nesnesine sağ tıklayın ve Düzenle'ye **tıklayın**.
+1. grup ilkesi yönetim makinenizde [grup ilkesi Yönetim Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz grup ilkesi Nesnesine sağ tıklayın ve **Düzenle'ye** tıklayın.
 
-2. Grup İlkesi **Yönetim Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin**.
+2. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin.
 
-3. **İlkeler'e** **ve ardından Yönetim şablonları'ne tıklayın**.
+3. **İlkeler'e** ve ardından **Yönetim şablonları'nı** tıklatın.
 
-4. İmza **Güncelleştirmeleri'Windows bileşenleri > Microsoft Defender Virüsten Koruma > ağacı genişletin** ve aşağıdaki ayarları yapılandırabilirsiniz:
+4. **İmza Güncelleştirmeleri > Microsoft Defender Virüsten Koruma > bileşenleri Windows** için ağacı genişletin ve aşağıdaki ayarları yapılandırın:
 
-    1. Casus yazılım **tanımlarının güncel kabul edilen gün sayısını tanımla'ya çift tıklayın ve** Seçeneği Etkin olarak **ayarlayın**. Microsoft Defender AV'nin casus yazılım olarak değerlendirisini istediğiniz gün sayısını girin Güvenlik zekası güncel değil.
+    1. **Casus yazılım tanımlarının eski olduğu düşünülmeden önce geçmesi gereken gün sayısını tanımla'ya** çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. Microsoft Defender AV'nin casus yazılım Güvenlik bilgileri'nin güncel olmasını göz önünde bulundurmasını istediğiniz gün sayısını girin.
 
     2. **Tamam**'a tıklayın.
 
-    3. Virüs tanımlarının **güncel kabul edilen gün sayısını tanımla'ya** çift tıklayın ve Seçeneği Etkin olarak **ayarlayın**. Microsoft Defender AV'nin virüs güvenlik zekası'nın güncel olmayan olarak değerlendirisini istediğiniz gün sayısını girin.
+    3. **Virüs tanımlarının eski olduğu düşünülmeden önce geçmesi gereken gün sayısını tanımla'ya** çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. Microsoft Defender AV'nin virüs Güvenlik bilgileri'nin güncel olmasını göz önünde bulundurmasını istediğiniz gün sayısını girin.
 
     4. **Tamam**'a tıklayın.
 
-## <a name="set-up-catch-up-scans-for-endpoints-that-have-not-been-scanned-for-a-while"></a>Bir süredir taranmış uç noktaları yakalama taramaları ayarlama
+## <a name="set-up-catch-up-scans-for-endpoints-that-have-not-been-scanned-for-a-while"></a>Bir süredir taranmayan uç noktalar için yakalama taramaları ayarlama
 
-Bu taramayı zorlamadan önce atlanan art arda Microsoft Defender Virüsten Koruma tarama sayısını ayarlayın.
+Microsoft Defender Virüsten Koruma taramayı zorlamadan önce kaçırılacak ardışık zamanlanmış taramaların sayısını ayarlayabilirsiniz.
 
-Bu özelliği etkinleştirme işlemi şöyledir:
+Bu özelliği etkinleştirme işlemi şu şekildedir:
 
-1. En az bir zamanlanmış tarama ayarlayın (Tarama zamanlama [başlığına](scheduled-catch-up-scans-microsoft-defender-antivirus.md) bakın).
+1. En az bir zamanlanmış tarama ayarlayın ( [Taramaları zamanlama](scheduled-catch-up-scans-microsoft-defender-antivirus.md) konusuna bakın).
 2. Yakalama tarama özelliğini etkinleştirin.
-3. Yakalama taraması öncesinde atlanacak tarama sayısını tanımlayın.
+3. Yakalama taraması gerçekleşmeden önce atlanacak tarama sayısını tanımlayın.
 
-Bu özellik hem tam hem de hızlı taramalarda etkinleştirilebilir.
+Bu özellik hem tam hem de hızlı taramalar için etkinleştirilebilir.
 
-### <a name="use-group-policy-to-enable-and-configure-the-catch-up-scan-feature"></a>Göz alıcı tarama özelliğini etkinleştirmek ve yapılandırmak için Grup İlkesi kullanma
+### <a name="use-group-policy-to-enable-and-configure-the-catch-up-scan-feature"></a>Yakalama tarama özelliğini etkinleştirmek ve yapılandırmak için grup ilkesi kullanma
 
-1. En az bir zamanlanmış tarama ayarlayın.
+1. En az bir zamanlanmış tarama ayarladığınızdan emin olun.
 
-2. Grup İlkesi yönetim makinenizin Grup İlkesi Yönetim [Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz Grup İlkesi Nesnesine sağ tıklayın ve Düzenle'ye **tıklayın**.
+2. grup ilkesi yönetim makinenizde [grup ilkesi Yönetim Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz grup ilkesi Nesnesine sağ tıklayın ve **Düzenle'ye** tıklayın.
 
-3. Grup İlkesi **Yönetim Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin**.
+3. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin.
 
-4. **İlkeler'e** **ve ardından Yönetim şablonları'ne tıklayın**.
+4. **İlkeler'e** ve ardından **Yönetim şablonları'nı** tıklatın.
 
-5. Tarama için bileşenleri **Windows için > Microsoft Defender Virüsten Koruma > ve** aşağıdaki ayarları yapılandırabilirsiniz:
+5. Ağacı genişleterek bileşenleri **Windows > Microsoft Defender Virüsten Koruma > Aşağıdaki ayarları tarayın** ve yapılandırın:
 
-    1. Zamanlanmış hızlı taramaları ayarlarsanız, Hızlı taramayı aç ayarını  çift tıklatın ve seçeneği Etkin olarak **ayarlayın**.
-    2. Zamanlanmış tam taramaları ayarladıysanız, Göz alıcı tam  taramayı aç ayarını çift tıklatın ve seçeneği Etkin olarak **ayarlayın**. **Tamam**'a tıklayın.
-    3. Yakalama **taramasının zorunlu olduğu gün** sayısını tanımla ayarına çift tıklayın ve seçeneği Etkin olarak **ayarlayın**.
-    4. Kullanıcı bir sonraki PC'de oturum açtığında, taramanın otomatik olarak çalıştırılamadan önce kaç tarama çalıştırıla olacağını girin. Çalıştırlanan taramanın türü, Zamanlanmış tarama için kullanmak üzere tarama türünü **belirtme (Tarama** zamanlama [başlığına](scheduled-catch-up-scans-microsoft-defender-antivirus.md) bakın) ile belirlenir. **Tamam**'a tıklayın.
+    1. Zamanlanmış hızlı taramalar ayarladıysanız, **Yakalama hızlı taramasını aç** ayarına çift tıklayın ve seçeneği **Etkin** olarak ayarlayın.
+    2. Zamanlanmış tam taramalar ayarladıysanız, **Yakalama tam taramasını aç** ayarına çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. **Tamam**'a tıklayın.
+    3. **Yakalama taramasının zorlandığı gün sayısını tanımla** ayarına çift tıklayın ve seçeneği **Etkin** olarak ayarlayın.
+    4. Kullanıcı bilgisayarda bir sonraki oturum açtığında tarama otomatik olarak çalıştırılmadan önce kaçırabileceğiniz tarama sayısını girin. Çalıştırılan tarama türü, **Zamanlanmış tarama için kullanılacak tarama türünü belirtin** ( [Taramaları zamanlama](scheduled-catch-up-scans-microsoft-defender-antivirus.md) konusuna bakın) tarafından belirlenir. **Tamam**'a tıklayın.
 
 > [!NOTE]
-> Grup İlkesi ayar başlığı, gün sayısını ifade eder. Ancak bu ayar, taramanın çalıştırılamadan önce günlere değil tarama sayısına uygulanır.
+> grup ilkesi ayarı başlığı gün sayısını ifade eder. Ancak ayar, yakalama taraması çalıştırılmadan önce tarama sayısına (günler değil) uygulanır.
 
-### <a name="use-powershell-cmdlets-to-configure-catch-up-scans"></a>Yakala taramalarını yapılandırmak için PowerShell cmdlet'lerini kullanma
+### <a name="use-powershell-cmdlets-to-configure-catch-up-scans"></a>Yakalama taramalarını yapılandırmak için PowerShell cmdlet'lerini kullanma
 
 Aşağıdaki cmdlet'leri kullanın:
 
@@ -155,11 +159,11 @@ Set-MpPreference -DisableCatchupQuickScan
 
 ```
 
-Microsoft Defender Virüsten Koruma ile PowerShell'in nasıl kullanıldığı hakkında daha fazla bilgi için bkz. Microsoft Defender Virüsten Koruma'ı yönetmek için [PowerShell cmdlet'lerini](use-powershell-cmdlets-microsoft-defender-antivirus.md) kullanma ve Defender Virüsten Koruma [cmdlet'lerini](/powershell/module/defender/) Microsoft Defender Virüsten Koruma.
+[PowerShell'i Microsoft Defender Virüsten Koruma](use-powershell-cmdlets-microsoft-defender-antivirus.md) ile kullanma hakkında daha fazla bilgi için bkz. Microsoft Defender Virüsten Koruma yönetmek için PowerShell [cmdlet'lerini kullanma ve Defender Virüsten Koruma cmdlet'lerini](/powershell/module/defender/) kullanma.
 
-### <a name="use-windows-management-instruction-wmi-to-configure-catch-up-scans"></a>Kayıt Windows (WMI) kullanarak yakalama taramalarını yapılandırma
+### <a name="use-windows-management-instruction-wmi-to-configure-catch-up-scans"></a>Yakalama taramalarını yapılandırmak için Windows Yönetim Yönergesi'ni (WMI) kullanma
 
-Aşağıdaki [**özellikler** için sınıf **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) Set yöntemini kullanın:
+Aşağıdaki özellikler için [**MSFT_MpPreference** sınıfının **Set** yöntemini](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) kullanın:
 
 ```WMI
 DisableCatchupFullScan
@@ -168,23 +172,33 @@ DisableCatchupQuickScan
 
 Daha fazla bilgi ve izin verilen parametreler için aşağıdakilere bakın:
 
-- [Windows Defender WMIv2 API'leri](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
+- [WMIv2 API'lerini Windows Defender](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
 
-### <a name="use-configuration-manager-to-configure-catch-up-scans"></a>Göz alıcı taramaları yapılandırmak için Yapılandırma Yöneticisi'ni kullanma
+### <a name="use-configuration-manager-to-configure-catch-up-scans"></a>Yakalama taramalarını yapılandırmak için Configuration Manager kullanma
 
-1. Microsoft Endpoint Manager konsolunuzun üzerinde, değiştirmek istediğiniz kötü amaçlı yazılımdan koruma ilkelerini açın (sol tarafta gezinti bölmesinde Varlıklar  ve Uyumluluk'a tıklayın,  \>  \> ardından ağacı Genel Bakış veya Kötü Amaçlı Yazılım İlkeleri'ne Endpoint Protection **tıklayın**)
+1. Microsoft Endpoint Manager konsolunuzda, değiştirmek istediğiniz kötü amaçlı yazılımdan koruma ilkesini açın (soldaki gezinti bölmesinde **Varlıklar ve Uyumluluk'a** tıklayın, sonra ağacı **Genel Bakış** \> **Endpoint Protection** \> **Kötü Amaçlı Yazılımdan Koruma İlkeleri**) olarak genişletin
 
-2. Zamanlanmış **taramalar bölümüne gidin** ve **İstemci bilgisayar çevrimdışıysa, seçili tarama türünü taramaya zorla... seçeneğine** **Evet'e gidin**.
+2. **Zamanlanmış taramalar** bölümüne gidin ve **İstemci bilgisayar çevrimdışıysa seçili tarama türünü taramaya zorla...** seçeneğini **Evet** olarak ayarlayın.
 
 3. **Tamam**'a tıklayın.
 
 4. [Güncelleştirilmiş ilkeyi her zamanki gibi dağıtın](/sccm/protect/deploy-use/endpoint-antimalware-policies#deploy-an-antimalware-policy-to-client-computers).
 
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+
 ## <a name="related-articles"></a>İlgili makaleler
 
-- [Dağıtım Microsoft Defender Virüsten Koruma](deploy-manage-report-microsoft-defender-antivirus.md)
-- [Güncelleştirmeleri Microsoft Defender Virüsten Koruma ve taban çizgilerini uygulama](manage-updates-baselines-microsoft-defender-antivirus.md)
-- [Koruma güncelleştirmelerinin ne zaman indirilecek ve uygulanmayacaklarını yönetme](manage-protection-update-schedule-microsoft-defender-antivirus.md)
-- [Olay tabanlı zorunlu güncelleştirmeleri yönetme](manage-event-based-updates-microsoft-defender-antivirus.md)
-- [Mobil cihazlar ve sanal makineler (VM) güncelleştirmelerini yönetme](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
-- [Microsoft Defender Virüsten Koruma'da Windows 10](microsoft-defender-antivirus-in-windows-10.md)
+- [Microsoft Defender Virüsten Koruma dağıtma](deploy-manage-report-microsoft-defender-antivirus.md)
+- [Microsoft Defender Virüsten Koruma güncelleştirmelerini yönetme ve temelleri uygulama](manage-updates-baselines-microsoft-defender-antivirus.md)
+- [Koruma güncelleştirmelerinin ne zaman indirileceğini ve uygulanacağını yönetme](manage-protection-update-schedule-microsoft-defender-antivirus.md)
+- [Olay tabanlı zorunlu güncelleştirmeleri yönetin](manage-event-based-updates-microsoft-defender-antivirus.md)
+- [Mobil cihaz ve sanal makine (VM) güncelleştirmelerini yönetin](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
+- [Windows 10'da Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md)

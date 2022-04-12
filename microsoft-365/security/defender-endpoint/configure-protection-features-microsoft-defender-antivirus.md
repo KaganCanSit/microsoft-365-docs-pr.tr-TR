@@ -1,7 +1,7 @@
 ---
-title: Koruma özelliklerini etkinleştirme Microsoft Defender Virüsten Koruma yapılandırma
-description: Microsoft Defender AV'de davranış tabanlı, heuristic ve gerçek zamanlı korumayı etkinleştirin.
-keywords: uristic, makine öğrenimi, davranış izlemesi, gerçek zamanlı koruma, her zaman açık, Microsoft Defender Virüsten Koruma, kötü amaçlı yazılımdan koruma, güvenlik, defender
+title: Microsoft Defender Virüsten Koruma koruma özelliklerini etkinleştirme ve yapılandırma
+description: Microsoft Defender AV'de davranış tabanlı, buluşsal ve gerçek zamanlı korumayı etkinleştirin.
+keywords: buluşsal, makine öğrenmesi, davranış izleme, gerçek zamanlı koruma, her zaman açık, Microsoft Defender Virüsten Koruma, kötü amaçlı yazılımdan koruma, güvenlik, defender
 ms.prod: m365-security
 ms.technology: mde
 ms.mktglfcycl: manage
@@ -15,36 +15,50 @@ ms.custom: nextgen
 ms.reviewer: ''
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: f949623b7d0647d71f4c665ed2016ee14a765e5f
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 59754ac5186b87045e8126114fd7342f5aa9532c
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63015224"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64788864"
 ---
-# <a name="configure-behavioral-heuristic-and-real-time-protection"></a>Davranışsal, ikill ve gerçek zamanlı korumayı yapılandırma
+# <a name="configure-behavioral-heuristic-and-real-time-protection"></a>Davranışsal, buluşsal ve gerçek zamanlı korumayı yapılandırın
 
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma 
+
+**Platform**
+- Windows
 
 Microsoft Defender Virüsten Koruma tehdit koruması sağlamak için çeşitli yöntemler kullanır:
 
-- Yeni ve yeni ortaya çıkan tehditlerin neredeyse anında algılanması ve engellenmesi için bulut koruması
-- Dosya ve süreç davranışı izleme ve diğer heuristleri kullanarak her zaman tarama ("gerçek zamanlı koruma" olarak da bilinir)
-- Makine öğrenimi, insan ve otomatik büyük veri çözümlemelerine ve derinlemesine tehdit direnci araştırmalarına dayalı özel koruma güncelleştirmeleri
+- Yeni ve yeni tehditlerin neredeyse anında algılanması ve engellenmesi için bulut koruması
+- Dosya ve işlem davranışı izleme ve diğer buluşsal yöntemleri kullanarak ("gerçek zamanlı koruma" olarak da bilinir) her zaman açık tarama
+- Makine öğrenmesi, insan ve otomatik büyük veri analizi ve ayrıntılı tehdit direnci araştırmalarına dayalı ayrılmış koruma güncelleştirmeleri
 
-Microsoft Defender Virüsten Koruma'ın bu yöntemleri Grup İlkesi, System Center Configuration Manage, PowerShell cmdlet'leri ve Windows Araç Kullanımı (WMI) ile nasıl kullandığını yapılandırabilirsiniz.
+Microsoft Defender Virüsten Koruma grup ilkesi, System Center Yapılandırma Yönetimi, PowerShell cmdlet'leri ve Windows Yönetim Araçları (WMI) ile bu yöntemleri nasıl kullandığını yapılandırabilirsiniz.
 
-Bu bölüm, güvenli olmayan olarak kabul edilen, ancak kötü amaçlı yazılım olarak algılanmayacak uygulamaların nasıl algılandığından ve engellenmiş olduğu da dahil olmak üzere, her zaman açık taramanın yapılandırmasını kapsar.
+Bu bölüm, güvenli olmadığı kabul edilen ancak kötü amaçlı yazılım olarak algılanamayan uygulamaları algılama ve engelleme de dahil olmak üzere her zaman açık tarama için yapılandırmayı kapsar.
 
-Bulut [korumasını etkinleştirme ve Microsoft Defender Virüsten Koruma için bkz.](cloud-protection-microsoft-defender-antivirus.md) Bulut koruması aracılığıyla yeni nesil Microsoft Defender Virüsten Koruma kullanma.
+Microsoft Defender Virüsten Koruma bulut korumasını etkinleştirme ve yapılandırma için bkz. [Bulut koruması aracılığıyla yeni nesil Microsoft Defender Virüsten Koruma teknolojilerini kullanma](cloud-protection-microsoft-defender-antivirus.md).
 
 ## <a name="in-this-section"></a>Bu bölümde
 
 | Konu|Açıklama |
 |---|---|
-| [İstenmeyen olabilecek uygulamaları algılama ve engelleme](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)| Adware, tarayıcı değiştiricileri ve araç çubukları ve ya da sahte virüsten koruma uygulamaları gibi ağ telefonunuzda istenmeyen uygulamaları algıla ve engelle |
-| [Veri koruma Microsoft Defender Virüsten Koruma etkinleştirme ve yapılandırma](configure-real-time-protection-microsoft-defender-antivirus.md)|Gerçek zamanlı korumayı, heuristics'i ve her zaman açık diğer her zaman açık Microsoft Defender Virüsten Koruma özellikleri etkinleştirin ve yapılandırın |
+| [İstenmeyen olası uygulamaları tespit edin ve engelleyin](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)| Ağınızda reklam yazılımı, tarayıcı değiştiricileri ve araç çubukları ve sahte veya sahte virüsten koruma uygulamaları gibi istenmeyen uygulamaları algılama ve engelleme |
+| [Microsoft Defender Virüsten Koruma koruma özelliklerini etkinleştirme ve yapılandırma](configure-real-time-protection-microsoft-defender-antivirus.md)|Gerçek zamanlı korumayı, buluşsal yöntemleri ve diğer her zaman açık Microsoft Defender Virüsten Koruma izleme özelliklerini etkinleştirme ve yapılandırma |
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)

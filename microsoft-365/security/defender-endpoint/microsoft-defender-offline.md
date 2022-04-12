@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender Çevrimdışı'da Windows
-description: Microsoft Defender Çevrimdışı'i doğrudan Windows Defender Virüsten Koruma kullanabilirsiniz. Bunun ağ içinde nasıl dağıtılacağı da yönetebilirsiniz.
-keywords: scan, defender, offline
+title: Windows'da Microsoft Defender Çevrimdışı
+description: doğrudan Windows Defenderin virustentorjunta uygulamasından Microsoft Defender Çevrimdışı kullanabilirsiniz. Ayrıca ağınızda nasıl dağıtılacağı da yönetilebilir.
+keywords: tarama, defender, çevrimdışı
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -15,90 +15,94 @@ manager: dansimp
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: ccb65b865afdf2a0ec0210c3593daee1cb5c09b6
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: ea7d316a7fc31724466dcd459ed72792cea817fd
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64476851"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64787698"
 ---
-# <a name="run-and-review-the-results-of-a-microsoft-defender-offline-scan"></a>Hızlı taramanın sonuçlarını çalıştırma Microsoft Defender Çevrimdışı gözden geçirme
+# <a name="run-and-review-the-results-of-a-microsoft-defender-offline-scan"></a>Microsoft Defender çevrimdışı tarama sonuçlarını gözden geçirin ve çalıştırın
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
 
-Microsoft Defender Çevrimdışı, güvenilir bir ortamdan tarama başlatmaya ve çalıştırmaya olanak sağlayan bir kötü amaçlı yazılımdan koruma tarama aracıdır. Tarama normal Windows çekirdek dışından çalışır ve böylelikle virüsler ve ana önyükleme kaydına (M CLIP) bulaşan veya üzerine yazan kök setler gibi Windows kabuğunu atlayan kötü amaçlı yazılımları hedefleyebndir.
+**Platform**
+- Windows
 
-Kötü amaçlı Microsoft Defender Çevrimdışı bulaşmadan şüpheleniyorsanız veya kötü amaçlı yazılım salgınından sonra uç noktanın kapsamlı bir temiz olduğunu onaylamak istiyorsanız, parolayı kullanabilirsiniz.
+Microsoft Defender Çevrimdışı, güvenilir bir ortamdan önyükleme yapmanıza ve tarama çalıştırmanıza olanak tanıyan bir kötü amaçlı yazılımdan koruma tarama aracıdır. Tarama normal Windows çekirdeğinin dışından çalıştırılarak ana önyükleme kaydını (MBR) etkileyen veya üzerine yazan virüsler ve rootkit'ler gibi Windows kabuğu atlama girişiminde bulunan kötü amaçlı yazılımları hedefleyebilir.
 
-Uygulama Windows 10 Windows 11, Microsoft Defender Çevrimdışı doğrudan doğrudan Windows Güvenliği ile [birini Windows Güvenliği çalıştırabilirsiniz](microsoft-defender-security-center-antivirus.md). Windows'Windows önceki sürümlerinde, kullanıcının Microsoft Defender Çevrimdışı önyüklenebilir medyaya yüklemesi, uç noktayı yeniden başlatması ve önyüklenebilir medyayı yüklemesi gerekirdi.
+Kötü amaçlı yazılım bulaştığından şüpheleniyorsanız veya kötü amaçlı yazılım salgınından sonra uç noktanın kapsamlı bir şekilde temizlenip temizlenmediğini onaylamak istiyorsanız Microsoft Defender Çevrimdışı kullanabilirsiniz.
+
+Windows 10 ve Windows 11 Microsoft Defender Çevrimdışı doğrudan [Windows Güvenliği uygulamasından](microsoft-defender-security-center-antivirus.md) tek tıklamayla çalıştırılabilir. Windows önceki sürümlerinde, kullanıcının önyüklenebilir medyaya Microsoft Defender Çevrimdışı yüklemesi, uç noktayı yeniden başlatması ve önyüklenebilir medyayı yüklemesi gerekiyordu.
 
 ## <a name="prerequisites-and-requirements"></a>önkoşullar ve gereksinimler
 
-Microsoft Defender Çevrimdışı ve Windows 10'Windows 11 sistem gereksinimleri ile aynı donanım Windows 10.
+Windows 10 ve Windows 11 Microsoft Defender Çevrimdışı, Windows 10 ile aynı donanım gereksinimlerine sahiptir.
 
-Gereksinimlerin nasıl karşı Windows 10 Windows 11 için aşağıdaki konulara bakın:
+Windows 10 ve Windows 11 gereksinimleri hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
-- [Minimum donanım gereksinimleri](/windows-hardware/design/minimum/minimum-hardware-requirements-overview)
+- [En düşük donanım gereksinimleri](/windows-hardware/design/minimum/minimum-hardware-requirements-overview)
 
 - [Donanım bileşeni yönergeleri](/windows-hardware/design/component-guidelines/components)
 
 > [!NOTE]
-> Microsoft Defender Çevrimdışı işlemcilere sahip makinelerde veya ARM Server Stok Tutma birimleri Windows makinelerde desteklanmaz.
+> Microsoft Defender Çevrimdışı ARM işlemcili makinelerde veya Windows Sunucu Stok Tutma Birimlerinde desteklenmez.
 
-Uç noktadan Microsoft Defender Çevrimdışı için, kullanıcının yönetici ayrıcalıklarıyla oturum açmış olması gerekir.
+Uç noktadan Microsoft Defender Çevrimdışı çalıştırmak için kullanıcının yönetici ayrıcalıklarıyla oturum açması gerekir.
 
-## <a name="microsoft-defender-offline-updates"></a>Microsoft Defender Çevrimdışı güncelleştirmeleri yükleme
+## <a name="microsoft-defender-offline-updates"></a>güncelleştirmeleri Microsoft Defender Çevrimdışı
 
-Microsoft Defender Çevrimdışı, uç nokta üzerinde kullanılabilen en son koruma güncelleştirmelerini kullanır; bu güncelleştirmeler her Windows Defender Virüsten Koruma güncelleştirilir.
+Microsoft Defender Çevrimdışı uç noktada kullanılabilen en son koruma güncelleştirmelerini kullanır; Windows Defenderin virustentorjunta her güncelleştirildiğinde güncelleştirilir.
 
 > [!NOTE]
-> Çevrimdışı taramayı çalıştırmadan önce Microsoft Defender AV korumasını güncelleştirmeyi denemeniz gerekir. Grup ilkesi ile güncelleştirmeyi zorlar veya ancak normalde uç noktalara güncelleştirmeler dağıtır veya en son koruma güncelleştirmelerini Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi'nden el ile [indirip yükleyebilirsiniz](https://www.microsoft.com/security/portal/definitions/adl.aspx).
+> Çevrimdışı taramayı çalıştırmadan önce Microsoft Defender AV korumasını güncelleştirmeye çalışmanız gerekir. bir güncelleştirmeyi grup ilkesi ile zorlayabilirsiniz veya normalde uç noktalara güncelleştirme dağıtabilirsiniz ya da [Microsoft Kötü Amaçlı Yazılımdan Koruma Merkezi'nden](https://www.microsoft.com/security/portal/definitions/adl.aspx) en son koruma güncelleştirmelerini el ile indirip yükleyebilirsiniz.
 
-Daha fazla [bilgi Microsoft Defender Virüsten Koruma için Güvenlik zekası güncelleştirmelerini yönetme](manage-protection-updates-microsoft-defender-antivirus.md) başlığına bakın.
+Daha fazla bilgi için [Microsoft Defender Virüsten Koruma Güvenlik bilgileri güncelleştirmelerini yönetme](manage-protection-updates-microsoft-defender-antivirus.md) konusuna bakın.
 
 ## <a name="usage-scenarios"></a>Kullanım senaryoları
 
-Sürüm Windows 10 1607'de çevrimdışı taramayı el ile zorlayabilirsiniz. Alternatif olarak, Windows Defender uç noktanın Microsoft Defender Çevrimdışı gerektiğini belirlerse, uç nokta üzerinde kullanıcıdan istenir.
+Windows 10 sürüm 1607'de çevrimdışı taramayı el ile zorlayabilirsiniz. Alternatif olarak, Windows Defender Microsoft Defender Çevrimdışı çalıştırılması gerektiğini belirlerse, kullanıcıdan uç noktada istemde bulunur.
 
-Uç noktalarınızı yönetmek için kullanıyorsanız, çevrimdışı tarama Microsoft Endpoint Manager bu taramayı gerçekleştirecek olan kullanıcıda da bu bilgi ortaya çıkar.
+Çevrimdışı tarama gerçekleştirme gereksinimi, uç noktalarınızı yönetmek için kullanıyorsanız Microsoft Endpoint Manager'da da ortaya çıkar.
 
-Bilgi istemi, aşağıdakine benzer bir bildirim aracılığıyla ortaya çıkabilir:
+İstem, aşağıdakine benzer bir bildirim aracılığıyla gerçekleşebilir:
 
-:::image type="content" source="../../media/notification.png" alt-text="Çalışma bildirimi Microsoft Defender Çevrimdışı" lightbox="../../media/notification.png":::
+:::image type="content" source="../../media/notification.png" alt-text="Microsoft Defender Çevrimdışı çalıştırma bildirimi" lightbox="../../media/notification.png":::
 
-Kullanıcıya müşteri içinde de Windows Defender.
+Kullanıcıya Windows Defender istemcisinde de bildirim gönderilir.
 
-Daha Configuration Manager'te, İzleme ve Genel Bakış 'a > Genel Bakış'a giderek **uç noktaların > > Endpoint Protection Durumunu > System Center Endpoint Protection tanımlayabilirsiniz**.
+Configuration Manager'da **İzleme > Genel Bakış > Güvenlik > Endpoint Protection Durumu > System Center Endpoint Protection Durumu'na** giderek uç noktaların durumunu belirleyebilirsiniz.
 
-Microsoft Defender Çevrimdışı taramaları, Çevrimdışı tarama **gerektiğinde Kötü** amaçlı yazılım düzeltme **durumu altında belirtilmiştir**.
+Microsoft Defender Çevrimdışı taramaları **Kötü amaçlı yazılım düzeltme durumu** altında **Çevrimdışı tarama gerekiyor** olarak belirtilir.
 
-:::image type="content" source="../../media/sccm-wdo.png" alt-text="Durum taramasının göstergesi Microsoft Defender Çevrimdışı" lightbox="../../media/sccm-wdo.png":::
+:::image type="content" source="../../media/sccm-wdo.png" alt-text="Microsoft Defender Çevrimdışı için tarama göstergesi" lightbox="../../media/sccm-wdo.png":::
 
 ## <a name="configure-notifications"></a>Bildirimleri yapılandırma
 
-Microsoft Defender Çevrimdışı, diğer Microsoft Defender AV bildirimleriyle aynı ilke ayarında yapılandırılır.
+Microsoft Defender Çevrimdışı bildirimleri, diğer Microsoft Defender AV bildirimleriyle aynı ilke ayarında yapılandırılır.
 
-Bu konu başlığı altında yer alan Windows Defender fazla bilgi için Uç [noktalar konusunda görünen bildirimleri yapılandırma başlığına](configure-notifications-microsoft-defender-antivirus.md) bakın.
+Windows Defender'deki bildirimler hakkında daha fazla bilgi için [Uç noktalarda görünen bildirimleri yapılandırma](configure-notifications-microsoft-defender-antivirus.md) konusuna bakın.
 
 ## <a name="run-a-scan"></a>Tarama çalıştırma
 
 > [!IMPORTANT]
-> Bu Microsoft Defender Çevrimdışı, tüm dosyaları kaydetmeye ve çalışan programları kapatmaya devam etmek için kullanılır. Hızlı Microsoft Defender Çevrimdışı çalıştırmak yaklaşık 15 dakika sürer. Tarama tamamlandığında uç noktayı yeniden başlatacak. Tarama her zamanki çalışma ortamının dışında Windows yapılır. Kullanıcı arabirimi, kullanıcı arabirimi tarafından gerçekleştirilen normal taramadan Windows Defender. Tarama tamamlandıktan sonra, uç nokta yeniden başlatılır ve Windows şekilde yük olur.
+> Microsoft Defender Çevrimdışı kullanmadan önce tüm dosyaları kaydettiğinizden ve çalışan programları kapattığınıza emin olun. Microsoft Defender Çevrimdışı taramasının çalıştırılması yaklaşık 15 dakika sürer. Tarama tamamlandığında uç noktayı yeniden başlatır. Tarama, normal Windows işletim ortamı dışında gerçekleştirilir. Kullanıcı arabirimi, Windows Defender tarafından gerçekleştirilen normal taramadan farklı görünür. Tarama tamamlandıktan sonra uç nokta yeniden başlatılır ve Windows normal şekilde yüklenir.
 
-Aşağıdakini Microsoft Defender Çevrimdışı tarama yapabilirsiniz:
+Aşağıdakilerle bir Microsoft Defender Çevrimdışı taraması çalıştırabilirsiniz:
 
 - PowerShell
-- Windows Yönetim Aracı (WMI)
+- Windows Yönetim Araçları (WMI)
 - Windows Güvenliği uygulaması
 
 
 
-### <a name="use-powershell-cmdlets-to-run-an-offline-scan"></a>PowerShell cmdlet'lerini kullanarak çevrimdışı tarama çalıştırma
+### <a name="use-powershell-cmdlets-to-run-an-offline-scan"></a>Çevrimdışı tarama çalıştırmak için PowerShell cmdlet'lerini kullanma
 
 Aşağıdaki cmdlet'leri kullanın:
 
@@ -106,13 +110,13 @@ Aşağıdaki cmdlet'leri kullanın:
 Start-MpWDOScan
 ```
 
-[PowerShell cmdlet'lerini kullanarak PowerShell cmdlet'lerini](use-powershell-cmdlets-microsoft-defender-antivirus.md) yapılandırma ve çalıştırma hakkında daha fazla bilgi Microsoft Defender Virüsten Koruma [Defender Virüsten Koruma cmdlet'lerini](/powershell/module/defender/) Microsoft Defender Virüsten Koruma.
+[PowerShell'i Microsoft Defender Virüsten Koruma](use-powershell-cmdlets-microsoft-defender-antivirus.md) ile kullanma hakkında daha fazla bilgi için bkz. Microsoft Defender Virüsten Koruma yapılandırmak ve çalıştırmak için PowerShell [cmdlet'lerini kullanma ve Defender Virüsten Koruma cmdlet'leri](/powershell/module/defender/).
 
-### <a name="use-windows-management-instruction-wmi-to-run-an-offline-scan"></a>Çevrimdışı Windows çalıştırmak için YÖNETICI Yönergesi (WMI) kullanma
+### <a name="use-windows-management-instruction-wmi-to-run-an-offline-scan"></a>Çevrimdışı tarama çalıştırmak için Windows Yönetim Yönergesi'ni (WMI) kullanma
 
-Çevrimdışı [**MSFT_MpWDOScan çalıştırmak**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) için Sınıf Sınıfını kullanın.
+Çevrimdışı tarama çalıştırmak için [**MSFT_MpWDOScan**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) sınıfını kullanın.
 
-Aşağıdaki WMI komut dosyası parçacığı, Microsoft Defender Çevrimdışı bir tarama çalıştırın; bu da uç noktanın yeniden başlatılmasına, çevrimdışı taramanın çalışmasına ve ardından yeniden başlatarak Windows.
+Aşağıdaki WMI betik parçacığı hemen bir Microsoft Defender Çevrimdışı taraması çalıştırır ve bu da uç noktanın yeniden başlatılmasına, çevrimdışı taramanın çalıştırılmasına ve ardından yeniden başlatılıp Windows önyüklemesine neden olur.
 
 ```console
 wmic /namespace:\\root\Microsoft\Windows\Defender path MSFT_MpWDOScan call Start
@@ -120,24 +124,34 @@ wmic /namespace:\\root\Microsoft\Windows\Defender path MSFT_MpWDOScan call Start
 
 Daha fazla bilgi için aşağıdakilere bakın:
 
-- [Windows Defender WMIv2 API'leri](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
+- [WMIv2 API'lerini Windows Defender](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
 
-### <a name="use-the-windows-defender-security-app-to-run-an-offline-scan"></a>Windows Defender Security uygulamasını kullanarak çevrimdışı taramayı çalıştırma
+### <a name="use-the-windows-defender-security-app-to-run-an-offline-scan"></a>Çevrimdışı tarama çalıştırmak için Windows Defender Güvenlik uygulamasını kullanma
 
-1. Görev Windows Güvenliği kalkan simgesine tıklayarak veya görev çubuğundaki kalkan simgesi için başlangıç menüsünde arama **Bulut için Defender.**
+1. Görev çubuğundaki kalkan simgesine tıklayarak veya başlangıç menüsünde **Bulut için Defender arayarak Windows Güvenliği** uygulamasını açın.
 
-2. Virüs koruması **& kutucuğuna** (veya sol menü çubuğundaki kalkan simgesine) ve ardından **Gelişmiş tarama etiketine** tıklayın:
+2. **Virüs & tehdit koruması** kutucuğuna (veya sol menü çubuğundaki kalkan simgesine) ve ardından **Gelişmiş tarama** etiketine tıklayın:
 
-3. **Taramayı Microsoft Defender Çevrimdışı şimdi** **tara'ya tıklayın**.
+3. **tarama Microsoft Defender Çevrimdışı** seçin ve **Şimdi tara'ya** tıklayın.
 
     > [!NOTE]
-    > Windows 10 sürüm 1607'de, çevrimdışı tarama **Windows Ayarlar** **Update &** \> güvenlik Windows Defender  \> altında veya Windows Defender istemcisinde çalıştırabilirsiniz.
+    > Windows 10 sürüm 1607'de çevrimdışı tarama, **Windows Ayarlar** **Güncelleştirme &** \> güvenlik \> **Windows Defender** altından veya Windows Defender istemcisinden çalıştırılabilir.
 
 ## <a name="review-scan-results"></a>Tarama sonuçlarını gözden geçirme
 
-Microsoft Defender Çevrimdışı tarama sonuçları, uygulamanın [Tarama geçmişi Windows Güvenliği listelenir](microsoft-defender-security-center-antivirus.md).
+Microsoft Defender Çevrimdışı tarama sonuçları[, Windows Güvenliği uygulamasının Tarama geçmişi bölümünde](microsoft-defender-security-center-antivirus.md) listelenir.
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
 
 ## <a name="related-articles"></a>İlgili makaleler
 
-- [Tarama ve düzeltme sonuçlarını özelleştirme, başlatma ve gözden geçirme](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
-- [Microsoft Defender Virüsten Koruma'da Windows 10](microsoft-defender-antivirus-in-windows-10.md)
+- [Taramaların ve düzeltmelerin sonuçlarını özelleştirme, başlatma ve gözden geçirme](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)
+- [Windows 10'da Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md)

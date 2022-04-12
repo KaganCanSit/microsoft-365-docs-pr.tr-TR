@@ -1,7 +1,7 @@
 ---
-title: Ağ bağlantılarını yapılandırma Microsoft Defender Virüsten Koruma doğrulama
+title: Microsoft Defender Virüsten Koruma ağ bağlantılarını yapılandırın ve doğrulayın
 description: Microsoft Defender Virüsten Koruma bulut koruma hizmetiyle bağlantınızı yapılandırın ve test edin.
-keywords: virüsten Microsoft Defender Virüsten Koruma, kötü amaçlı yazılımdan koruma, güvenlik, defender, bulut, saldırganlık, koruma düzeyi
+keywords: virüsten koruma, Microsoft Defender Virüsten Koruma, kötü amaçlı yazılımdan koruma, güvenlik, defender, bulut, saldırganlık, koruma düzeyi
 ms.prod: m365-security
 ms.technology: mde
 ms.mktglfcycl: manage
@@ -16,106 +16,121 @@ ms.date: 02/03/2022
 ms.reviewer: mkaminska; pahuijbr
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 1029549339d5c54334690bf5577a46f2d2be6bf6
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 70360ac3b9ade0e6039239fe257d83c7ba3a2db0
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64465321"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64787614"
 ---
-# <a name="configure-and-validate-microsoft-defender-antivirus-network-connections"></a>Ağ bağlantılarını yapılandırma Microsoft Defender Virüsten Koruma doğrulama
+# <a name="configure-and-validate-microsoft-defender-antivirus-network-connections"></a>Microsoft Defender Virüsten Koruma ağ bağlantılarını yapılandırın ve doğrulayın
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
 
-Buluta Microsoft Defender Virüsten Koruma korumanın düzgün çalışması için, güvenlik ekibinin uç noktalarınız ve belirli Microsoft sunucuları arasında bağlantılara izin verecek şekilde anızı yapılandırması gerekir. Bu makalede, güvenlik duvarı kurallarını kullanmasına izin verilen bağlantılar listelemektedir. Ayrıca bağlantınızı doğrulama yönergeleri de sağlar. Korumanızı düzgün bir şekilde yapılandırmak, bulut teslimi koruma hizmetlerinden en iyi değeri alamanızı sağlar.
+**Platform**
+- Windows
+
+Microsoft Defender Virüsten Koruma bulut tabanlı korumanın düzgün çalıştığından emin olmak için güvenlik ekibinizin ağınızı uç noktalarınızla belirli Microsoft sunucuları arasında bağlantılara izin verecek şekilde yapılandırması gerekir. Bu makalede, güvenlik duvarı kurallarını kullanmak için izin verilmesi gereken bağlantılar listelenir. Ayrıca bağlantınızı doğrulamaya yönelik yönergeler de sağlar. Korumanızı doğru şekilde yapılandırmak, bulut tabanlı koruma hizmetlerinizden en iyi değeri almanızı sağlar.
 
 > [!IMPORTANT]
-> Bu makale, yalnızca iş bağlantılarının ağ bağlantılarını yapılandırma Microsoft Defender Virüsten Koruma. Uç Nokta için Microsoft Defender kullanıyorsanız (Microsoft Defender Virüsten Koruma için Defender için cihaz ara sunucusunu ve [İnternet bağlantısı ayarlarını yapılandırma.](configure-proxy-internet.md)
+> Bu makale yalnızca Microsoft Defender Virüsten Koruma için ağ bağlantılarını yapılandırma hakkında bilgi içerir. Pertahanan Microsoft untuk Titik Akhir kullanıyorsanız (Microsoft Defender Virüsten Koruma içerir), bkz. [Uç Nokta için Defender için cihaz ara sunucusu ve İnternet bağlantısı ayarlarını yapılandırma](configure-proxy-internet.md).
 
 
 > [!NOTE]
 > demo.wd.microsoft.com'daki Uç Nokta için Defender tanıtım sitesi kullanım dışıdır ve gelecekte kaldırılacaktır.
 
-## <a name="allow-connections-to-the-microsoft-defender-antivirus-cloud-service"></a>Bulut hizmeti için Microsoft Defender Virüsten Koruma izin ver
+## <a name="allow-connections-to-the-microsoft-defender-antivirus-cloud-service"></a>Microsoft Defender Virüsten Koruma bulut hizmetine bağlantılara izin ver
 
-Hızlı Microsoft Defender Virüsten Koruma hizmeti, uç noktalarınız için hızlı ve güçlü koruma sağlar. Bulut teslimi koruma hizmetini etkinleştirmek isteğe bağlıdır. Microsoft Defender Virüsten Koruma ve ağ üzerinde kötü amaçlı yazılımlara karşı önemli bir koruma sağladığı için bu bulut hizmetinin kullanılması önerilir. Daha fazla bilgi için bkz[](enable-cloud-protection-microsoft-defender-antivirus.md). Intune, Microsoft Endpoint Configuration Manager, grup ilkesi, PowerShell cmdlet'leriyle veya Windows Güvenliği uygulamasındaki tek tek istemcilerle hizmeti etkinleştirmek için buluta teslim edilen korumayı etkinleştirme.
+Microsoft Defender Virüsten Koruma bulut hizmeti uç noktalarınız için hızlı ve güçlü koruma sağlar. Bulut tabanlı koruma hizmetini etkinleştirmek isteğe bağlıdır. uç noktalarınızdaki ve ağınızdaki kötü amaçlı yazılımlara karşı önemli koruma sağladığından Microsoft Defender Virüsten Koruma bulut hizmeti önerilir. Daha fazla bilgi için bkz. Windows Güvenliği uygulamasındaki Intune, Microsoft Endpoint Configuration Manager, grup ilkesi, PowerShell cmdlet'leri veya tek tek istemcilerle hizmeti etkinleştirmek için [bulut tabanlı korumayı etkinleştirme](enable-cloud-protection-microsoft-defender-antivirus.md).
 
-Hizmeti etkinleştirdikten sonra, ağ veya güvenlik duvarınızı ağ ile uç noktalarınız arasındaki bağlantılara izin verecek şekilde yapılandırmanız gerekir. Korumanız bir bulut hizmeti olduğundan, bilgisayarların İnternet erişimine sahip olması ve Microsoft bulut hizmetlerine erişmesi gerekir. URL'yi herhangi bir ağ `*.blob.core.windows.net` incelemesi dışında tutmakn.
+Hizmeti etkinleştirdikten sonra ağınızı veya güvenlik duvarınızı ağ ile uç noktalarınız arasındaki bağlantılara izin verecek şekilde yapılandırmanız gerekir. Korumanız bir bulut hizmeti olduğundan bilgisayarların İnternet'e ve Microsoft bulut hizmetlerine erişmesi gerekir. URL'yi `*.blob.core.windows.net` herhangi bir ağ incelemesinin dışında tutmayın.
 
 > [!NOTE]
-> Microsoft Defender Virüsten Koruma bulut hizmeti, ağ ve uç noktalarınız için güncelleştirilmiş koruma sağlar. Bulut hizmeti yalnızca bulutta depolanan dosyalarınız için koruma olarak kabul alınmamalıdır; bunun yerine bulut hizmeti, geleneksel Güvenlik zekası güncelleştirmelerine göre daha hızlı bir oranda uç noktalarınız için koruma sunmak için dağıtılmış kaynakları ve makine öğrenimini kullanır.
+> Microsoft Defender Virüsten Koruma bulut hizmeti ağınıza ve uç noktalarınıza güncelleştirilmiş koruma sağlar. Bulut hizmeti yalnızca bulutta depolanan dosyalarınız için koruma olarak değerlendirilmemelidir; Bunun yerine bulut hizmeti, geleneksel Güvenlik bilgileri güncelleştirmelerinden daha hızlı bir hızda uç noktalarınıza koruma sağlamak için dağıtılmış kaynakları ve makine öğrenmesini kullanır.
 
 ## <a name="services-and-urls"></a>Hizmetler ve URL'ler
 
-Bu bölümdeki tabloda hizmetler ve onun ilişkili web sitesi adresleri (URL'ler) listelanmaktadır.
+Bu bölümdeki tabloda hizmetler ve ilişkili web sitesi adresleri (URL'ler) listelenmektedir.
 
-Bu URL'lere erişimi reddeden güvenlik duvarı veya ağ filtreleme kuralı yoktur. Aksi takdirde, bu URL'ler için özel olarak (URL hariç) bir izin kuralı oluşturmanız gerekir `*.blob.core.windows.net`. Aşağıdaki tabloda yer alan URL'lerde iletişim için bağlantı noktası 443'ü kullanır.
+Bu URL'lere erişimi reddeden güvenlik duvarı veya ağ filtreleme kuralı olmadığından emin olun. Aksi takdirde, özellikle bu URL'ler için bir izin verme kuralı oluşturmanız gerekir (URL `*.blob.core.windows.net`hariç). Aşağıdaki tablodaki URL'ler iletişim için 443 numaralı bağlantı noktasını kullanır.
 
 <br/><br/>
 
 |Hizmet ve açıklama|URL|
 |---|---|
-|Microsoft Defender Virüsten Koruma teslim edilen koruma hizmeti, buluta teslim edilen Microsoft Etkin Koruma Hizmeti (HARITALAR) olarak adlandırılır.<p> Uygulama Microsoft Defender Virüsten Koruma bulut teslimi koruması sağlamak için HARITALAR hizmetini kullanır.|`*.wdcp.microsoft.com` <p> `*.wdcpalt.microsoft.com` <p> `*.wd.microsoft.com`|
-|Microsoft Update Service (MU) ve Windows Update Service (WU) <p>Bu hizmetler, güvenlik zekası ve ürün güncelleştirmelerine olanak sağlar.|`*.update.microsoft.com` <p> `*.delivery.mp.microsoft.com`<p> `*.windowsupdate.com` <p> Daha fazla bilgi için bkz[. Bağlantı uç noktaları Windows Update](/windows/privacy/manage-windows-1709-endpoints#windows-update)|
-|Güvenlik zekası güncelleştirmeleri Alternatif İndirme Konumu (ADL)<p>Bu, yüklü Güvenlik zekası güncelleştirmeleri Microsoft Defender Virüsten Koruma, güvenlik zekası güncelleştirmeleri için alternatif bir konumdur (Yedi veya daha fazla gün geride).|`*.download.microsoft.com` <p> `*.download.windowsupdate.com`<p>  `go.microsoft.com`<p> `https://fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx`|
-|Kötü amaçlı yazılım gönderimi depolaması <p>Bu, Gönderim formu veya otomatik örnek gönderim aracılığıyla Microsoft'a gönderilen dosyalar için bir karşıya yükleme konumudır.|`ussus1eastprod.blob.core.windows.net` <p> `ussus2eastprod.blob.core.windows.net` <p> `ussus3eastprod.blob.core.windows.net` <p> `ussus4eastprod.blob.core.windows.net` <p> `wsus1eastprod.blob.core.windows.net` <p> `wsus2eastprod.blob.core.windows.net` <p> `ussus1westprod.blob.core.windows.net` <p> `ussus2westprod.blob.core.windows.net` <p> `ussus3westprod.blob.core.windows.net` <p> `ussus4westprod.blob.core.windows.net` <p> `wsus1westprod.blob.core.windows.net` <p> `wsus2westprod.blob.core.windows.net` <p> `usseu1northprod.blob.core.windows.net` <p> `wseu1northprod.blob.core.windows.net` <p> `usseu1westprod.blob.core.windows.net` <p> `wseu1westprod.blob.core.windows.net` <p> `ussuk1southprod.blob.core.windows.net` <p> `wsuk1southprod.blob.core.windows.net` <p> `ussuk1westprod.blob.core.windows.net` <p> `wsuk1westprod.blob.core.windows.net`|
-|Sertifika İptal Listesi (CRL) <p> Windows CRL'yi güncelleştirmek için HARITALAR'a SSL bağlantısı oluştururken bu listeyi kullanabilirsiniz.|`http://www.microsoft.com/pkiops/crl/` <p> `http://www.microsoft.com/pkiops/certs` <p> `http://crl.microsoft.com/pki/crl/products` <p> `http://www.microsoft.com/pki/certs`|
-|Symbol Store <p>Microsoft Defender Virüsten Koruma akışları sırasında bazı kritik dosyaları geri yüklemek için Simge Mağazası'nın kullanabilirsiniz.|`https://msdl.microsoft.com/download/symbols`|
-|Evrensel GDPR İstemcisi <p> Windows tanılama verilerini göndermek için bu istemciyi kullanabilirsiniz. <p> Microsoft Defender Virüsten Koruma kalite ve izleme amacıyla Genel Veri Koruma Yönetmeliği'nin kullanımına yöneliktir.|Güncelleştirme, bildirimleri indirmek ve aşağıdaki DNS uç noktalarını kullanan tanılama verilerini Microsoft'a yüklemek için SSL (TCP Bağlantı Noktası 443) kullanır: <p> `vortex-win.data.microsoft.com` <p> `settings-win.data.microsoft.com`|
+|Microsoft Defender Virüsten Koruma bulut tabanlı koruma hizmeti Microsoft Etkin Koruma Hizmeti (MAPS) olarak adlandırılır.<p> Microsoft Defender Virüsten Koruma, bulut tabanlı koruma sağlamak için MAPS hizmetini kullanır.|`*.wdcp.microsoft.com` <p> `*.wdcpalt.microsoft.com` <p> `*.wd.microsoft.com`|
+|Microsoft Update Hizmeti (MU) ve Windows Update Hizmeti (WU) <p>Bu hizmetler güvenlik bilgilerine ve ürün güncelleştirmelerine izin verir.|`*.update.microsoft.com` <p> `*.delivery.mp.microsoft.com`<p> `*.windowsupdate.com` <p> Daha fazla bilgi için bkz[. Windows Update için bağlantı uç noktaları](/windows/privacy/manage-windows-1709-endpoints#windows-update)|
+|Güvenlik bilgileri güncelleştirmeleri Alternatif İndirme Konumu (ADL)<p>Bu, Microsoft Defender Virüsten Koruma Güvenlik bilgileri güncelleştirmeleri için, yüklü Güvenlik zekası güncel değilse (Yedi veya daha fazla gün geride) alternatif bir konumdur.|`*.download.microsoft.com` <p> `*.download.windowsupdate.com`<p>  `go.microsoft.com`<p> `https://fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx`|
+|Kötü amaçlı yazılım gönderme depolama alanı <p>Bu, Gönderme formu veya otomatik örnek gönderimi aracılığıyla Microsoft'a gönderilen dosyalar için bir karşıya yükleme konumudur.|`ussus1eastprod.blob.core.windows.net` <p> `ussus2eastprod.blob.core.windows.net` <p> `ussus3eastprod.blob.core.windows.net` <p> `ussus4eastprod.blob.core.windows.net` <p> `wsus1eastprod.blob.core.windows.net` <p> `wsus2eastprod.blob.core.windows.net` <p> `ussus1westprod.blob.core.windows.net` <p> `ussus2westprod.blob.core.windows.net` <p> `ussus3westprod.blob.core.windows.net` <p> `ussus4westprod.blob.core.windows.net` <p> `wsus1westprod.blob.core.windows.net` <p> `wsus2westprod.blob.core.windows.net` <p> `usseu1northprod.blob.core.windows.net` <p> `wseu1northprod.blob.core.windows.net` <p> `usseu1westprod.blob.core.windows.net` <p> `wseu1westprod.blob.core.windows.net` <p> `ussuk1southprod.blob.core.windows.net` <p> `wsuk1southprod.blob.core.windows.net` <p> `ussuk1westprod.blob.core.windows.net` <p> `wsuk1westprod.blob.core.windows.net`|
+|Sertifika İptal Listesi (CRL) <p> Windows CRL'yi güncelleştirmek için MAPS'e SSL bağlantısı oluştururken bu listeyi kullanın.|`http://www.microsoft.com/pkiops/crl/` <p> `http://www.microsoft.com/pkiops/certs` <p> `http://crl.microsoft.com/pki/crl/products` <p> `http://www.microsoft.com/pki/certs`|
+|Sembol Deposu <p>Microsoft Defender Virüsten Koruma düzeltme akışları sırasında belirli kritik dosyaları geri yüklemek için Sembol Deposu'nı kullanın.|`https://msdl.microsoft.com/download/symbols`|
+|Evrensel GDPR İstemcisi <p> Windows istemci tanılama verilerini göndermek için bu istemciyi kullanın. <p> Microsoft Defender Virüsten Koruma, ürün kalitesi ve izleme amacıyla Genel Veri Koruma Yönetmeliği'ne sahiptir.|Güncelleştirme, bildirimleri indirmek ve aşağıdaki DNS uç noktalarını kullanan tanılama verilerini Microsoft'a yüklemek için SSL (TCP Bağlantı Noktası 443) kullanır: <p> `vortex-win.data.microsoft.com` <p> `settings-win.data.microsoft.com`|
 
 
-## <a name="validate-connections-between-your-network-and-the-cloud"></a>Ağınız ve bulut arasındaki bağlantıları doğrulama
+## <a name="validate-connections-between-your-network-and-the-cloud"></a>Ağınız ile bulut arasındaki bağlantıları doğrulama
 
-Listelenen URL'lere izin verdikten sonra, bu bulut hizmetine bağlı Microsoft Defender Virüsten Koruma test edin. Tam korumalı olduğundan emin olmak için URL'lerin doğru rapor ve bilgi aldığını test edin.
+Listelenen URL'lere izin verdikten sonra Microsoft Defender Virüsten Koruma bulut hizmetine bağlı olup olmadığınızı test edin. Tam olarak korunduğunuzdan emin olmak için URL'lerin doğru şekilde raporlanıp bilgi alınıp alınamediğini test edin.
 
-### <a name="use-the-cmdline-tool-to-validate-cloud-delivered-protection"></a>Bulut teslimi korumasını doğrulamak için cmdline aracını kullanma
+### <a name="use-the-cmdline-tool-to-validate-cloud-delivered-protection"></a>Bulut tabanlı korumayı doğrulamak için cmdline aracını kullanma
 
-Ağ bulut hizmetiyle iletişim Microsoft Defender Virüsten Koruma doğrulamak için Microsoft Defender Virüsten Koruma komut satırı yardımcı programıyla (`mpcmdrun.exe`) aşağıdaki Microsoft Defender Virüsten Koruma kullanın:
+Ağınızın Microsoft Defender Virüsten Koruma bulut hizmetiyle iletişim kurabildiğini doğrulamak için Microsoft Defender Virüsten Koruma komut satırı yardımcı programıyla (`mpcmdrun.exe`) aşağıdaki bağımsız değişkeni kullanın:
 
 ```console
 "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -ValidateMapsConnection
 ```
 
 > [!NOTE]
-> Yönetici olarak Komut İstemi'ne açın. Başlat menüsünde öğeye sağ tıklayın **, Yönetici** olarak çalıştır'a **tıklayın ve** izin isteminde **Evet'e** tıklayın. Bu komut yalnızca dosya, Windows 10 1703 veya daha yeni sürümlerde Windows 11.
+> Yönetici olarak Komut İstemi'ni açın. **Başlat** menüsünde öğeye sağ tıklayın, **Yönetici olarak çalıştır'a** tıklayın ve izin isteminde **Evet'e** tıklayın. Bu komut yalnızca Windows 10, sürüm 1703 veya üzeri ya da Windows 11 üzerinde çalışır.
 
-Daha fazla bilgi için bkz[. Microsoft Defender Virüsten Koruma komut mpcmdrun.exe yönetme](command-line-arguments-microsoft-defender-antivirus.md).
+Daha fazla bilgi için bkz. [mpcmdrun.exe komut satırı aracıyla Microsoft Defender Virüsten Koruma yönetme](command-line-arguments-microsoft-defender-antivirus.md).
 
-### <a name="attempt-to-download-a-fake-malware-file-from-microsoft"></a>Microsoft'tan sahte bir kötü amaçlı yazılım dosyası indirmeye çalışma
+### <a name="attempt-to-download-a-fake-malware-file-from-microsoft"></a>Microsoft'tan sahte kötü amaçlı yazılım dosyası indirme girişimi
 
-Buluta düzgün bir şekilde bağlı Microsoft Defender Virüsten Koruma algılayan ve engellenmiş olan örnek bir dosya indirebilirsiniz. Dosyayı [https://aka.ms/ioavtest](https://aka.ms/ioavtest) indirmek için ziyaret edin.
+Buluta düzgün bir şekilde bağlıysanız Microsoft Defender Virüsten Koruma algılayıp engelleyecek bir örnek dosya indirebilirsiniz. Dosyayı indirmek için ziyaret edin [https://aka.ms/ioavtest](https://aka.ms/ioavtest) .
 
 > [!NOTE]
-> İndirilen dosya tam olarak kötü amaçlı yazılım değildir. Bu sahte bir dosya, buluta düzgün bir şekilde bağlanın mı olduğunu test etmek için tasarlanmıştır.
+> İndirilen dosya tam olarak kötü amaçlı yazılım değildir. Buluta düzgün bir şekilde bağlanıp bağlanmadığınızı test etmek için tasarlanmış sahte bir dosyadır.
 
-Bağlantı düzgünse, bağlantıda bir uyarı ve bildirim Microsoft Defender Virüsten Koruma.
+Düzgün bir şekilde bağlandıysanız bildirim Microsoft Defender Virüsten Koruma bir uyarı görürsünüz.
 
-E-posta Microsoft Edge, şu bildirim mesajlarını da alırsınız:
+Microsoft Edge kullanıyorsanız bir bildirim iletisi de görürsünüz:
 
-:::image type="content" source="../../media/wdav-bafs-edge.png" alt-text="Edge'de kötü amaçlı yazılım bulunduğu bildirimi" lightbox="../../media/wdav-bafs-edge.png":::
+:::image type="content" source="../../media/wdav-bafs-edge.png" alt-text="Edge'de kötü amaçlı yazılım bulunduğuna ilişkin bildirim" lightbox="../../media/wdav-bafs-edge.png":::
 
-Internet Explorer kullanıyorsanız da benzer bir ileti oluşur:
+Internet Explorer kullanıyorsanız benzer bir ileti oluşur:
 
-:::image type="content" source="../../media/wdav-bafs-ie.png" alt-text="Kötü amaçlı yazılım bulunduğuyla ilgili Microsoft Defender AV bildirimi" lightbox="../../media/wdav-bafs-ie.png":::
+:::image type="content" source="../../media/wdav-bafs-ie.png" alt-text="Kötü amaçlı yazılımların bulunduğuna ilişkin Microsoft Defender AV bildirimi" lightbox="../../media/wdav-bafs-ie.png":::
 
-#### <a name="view-the-fake-malware-detection-in-your-windows-security-app"></a>Windows Güvenliği uygulamanız içinde sahte kötü amaçlı yazılım algılamayı görüntüleme
+#### <a name="view-the-fake-malware-detection-in-your-windows-security-app"></a>Windows Güvenliği uygulamanızda sahte kötü amaçlı yazılım algılamasını görüntüleme
 
-1. Görev çubuğunuz üzerinde Kalkan simgesini seçin, **Kalkan Windows Güvenliği açın**. Veya Güvenlik için **Başlat'a** *bakarak da bunu arayabilirsiniz*.
+1. Görev çubuğunuzda Kalkan simgesini seçin, **Windows Güvenliği** uygulamasını açın. Veya *Güvenlik* için **Başlat'ı** arayın.
 
-2. Virüs **koruması'& ve ardından** Koruma **geçmişi'ne seçin**.
+2. **Virüs & tehdit koruması**'& ve ardından **Koruma geçmişi'ne** tıklayın.
 
-3. Karantinaya **alınmış tehditlerden korunma bölümünün** altında Tam geçmişi **gör'e seçerek** sahte kötü amaçlı yazılım algılandı.
+3. **Karantinaya alınan tehditler bölümünde, algılanan** sahte kötü amaçlı yazılımları görmek için **Tam geçmişe bakın'ı** seçin.
 
    > [!NOTE]
-   > Uygulamanın Windows 10 1703'den önceki sürümleri farklı bir kullanıcı arabirimine sahiptir. Uygulama [Microsoft Defender Virüsten Koruma daha fazla Windows Güvenliği bakın](microsoft-defender-security-center-antivirus.md).
+   > sürüm 1703'ün önceki Windows 10 sürümleri farklı bir kullanıcı arabirimine sahiptir. [Windows Güvenliği uygulamasındaki Microsoft Defender Virüsten Koruma](microsoft-defender-security-center-antivirus.md) bakın.
 
-   En Windows günlüğü istemci olay kimliği [1116'Windows Defender da gösterir](troubleshoot-microsoft-defender-antivirus.md).
+   Windows olay günlüğünde [de Windows Defender istemci olay kimliği 1116](troubleshoot-microsoft-defender-antivirus.md) gösterilir.
+
+    > [!TIP]
+    > Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+    > - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+    > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+    > - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+    > - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+    > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+    > - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+    > - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Mobil cihaz için cihaz ara sunucusunu ve İnternet bağlantısı Uç Nokta için Microsoft Defender](configure-proxy-internet.md)
-- [E grup ilkesi i yapılandırmak ve yönetmek için bu Microsoft Defender Virüsten Koruma](use-group-policy-microsoft-defender-antivirus.md)
-- [Microsoft Active Protection Services uç noktasına yapılan önemli değişiklikler](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Important-changes-to-Microsoft-Active-Protection-Service-MAPS/ba-p/274006) 
+- [Pertahanan Microsoft untuk Titik Akhir için cihaz ara sunucusu ve İnternet bağlantı ayarlarını yapılandırma](configure-proxy-internet.md)
+- [Microsoft Defender Virüsten Koruma yapılandırmak ve yönetmek için grup ilkesi ayarlarını kullanma](use-group-policy-microsoft-defender-antivirus.md)
+- [Microsoft Active Protection Services uç noktasında önemli değişiklikler](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Important-changes-to-Microsoft-Active-Protection-Service-MAPS/ba-p/274006) 

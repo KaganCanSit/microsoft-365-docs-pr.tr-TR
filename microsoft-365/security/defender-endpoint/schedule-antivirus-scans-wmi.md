@@ -1,5 +1,5 @@
 ---
-title: Yönetim Aracı'Windows kullanarak virüsten koruma taramaları zamanlama
+title: Windows Yönetim Araçları'nı kullanarak virüsten koruma taramaları zamanlama
 description: WMI kullanarak virüsten koruma taramaları zamanlama
 keywords: hızlı tarama, tam tarama, WMI, zamanlama, virüsten koruma
 ms.prod: m365-security
@@ -16,24 +16,28 @@ manager: dansimp
 ms.technology: mde
 ms.topic: how-to
 ms.collection: M365-security-compliance
-ms.openlocfilehash: be22e59f6d2be30ead354099f2cc168868959752
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 2b25876a43dea3b1598d4bdfa89cf4724c0fca14
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63008088"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64788930"
 ---
-# <a name="schedule-antivirus-scans-using-windows-management-instrumentation-wmi"></a>Yönetim Aracı'Windows (WMI) kullanarak virüsten koruma taramaları zamanlama
+# <a name="schedule-antivirus-scans-using-windows-management-instrumentation-wmi"></a>Windows Yönetim Araçları'nı (WMI) kullanarak virüsten koruma taramaları zamanlama
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
 
-Bu makalede, WMI kullanarak zamanlanmış taramaları yapılandırma işlemi açıklanmıştır. Taramaları zamanlama ve tarama türleri hakkında daha fazla bilgi edinmek için bkz. Zamanlanmış hızlı veya [tam tarama Microsoft Defender Virüsten Koruma yapılandırma](schedule-antivirus-scans.md). 
+**Platform**
+- Windows
 
-## <a name="use-windows-management-instruction-wmi-to-schedule-scans"></a>Taramaları Windows için YÖNETIM Yönergesi(WMI) kullanma
+Bu makalede WMI kullanılarak zamanlanmış taramaların nasıl yapılandırıldığı açıklanır. Taramaları zamanlama ve tarama türleri hakkında daha fazla bilgi edinmek için bkz[. Zamanlanmış hızlı veya tam Microsoft Defender Virüsten Koruma taramalarını yapılandırma](schedule-antivirus-scans.md). 
 
-Aşağıdaki [**özellikler** için sınıf **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) Set yöntemini kullanın:
+## <a name="use-windows-management-instruction-wmi-to-schedule-scans"></a>Taramaları zamanlamak için Windows Yönetim Yönergesi'ni (WMI) kullanma
+
+Aşağıdaki özellikler için [**MSFT_MpPreference** sınıfının **Set** yöntemini](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) kullanın:
 
 ```WMI
 ScanParameters
@@ -42,40 +46,49 @@ ScanScheduleTime
 RandomizeScheduleTaskTimes
 ```
 
-Daha fazla bilgi ve izin verilen parametreler için [WMIv2 API'Windows Defender bakın](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
+Daha fazla bilgi ve izin verilen parametreler için bkz. [Windows Defender WMIv2 API'leri](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
 
-## <a name="wmi-for-scheduling-scans-when-an-endpoint-is-not-in-use"></a>Uç nokta kullanım içinde değilken taramaları zamanlaması için WMI
+## <a name="wmi-for-scheduling-scans-when-an-endpoint-is-not-in-use"></a>Bir uç nokta kullanımda olmadığında taramaları zamanlamak için WMI
 
-Aşağıdaki [özellikler için sınıf MSFT_MpPreference Set](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) yöntemini kullanın:
+Aşağıdaki özellikler için [MSFT_MpPreference sınıfının Set yöntemini](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) kullanın:
 
 ```WMI
 ScanOnlyIfIdleEnabled
 ```
 
-API'ler ve izin verilen parametreler hakkında daha fazla bilgi için bkz[. WINDOWS DEFENDER WMIv2 API'leri](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
+API'ler ve izin verilen parametreler hakkında daha fazla bilgi için bkz. [WMIv2 API'lerini Windows Defender](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
 
 > [!NOTE]
-> Uç noktaların kullanım içinde olmadığınız zamanlarda taramalar zamanlarken, taramalar CPU azaltma yapılandırmasına uygun değildir ve taramayı mümkün olan en hızlı şekilde tamamlamak için mevcut kaynaklardan tam olarak yararlanacak.
+> Uç noktaların kullanımda olmadığı zamanlar için taramalar zamanladığınızda, taramalar CPU azaltma yapılandırmasına uygun değildir ve taramayı mümkün olan en hızlı şekilde tamamlamak için kullanılabilir kaynaklardan tam olarak yararlanır.
 
 
-## <a name="wmi-for-scheduling-scans-to-complete-remediation"></a>Düzeltmeyi tamamlamak için taramaları zamanlayarak WMI
+## <a name="wmi-for-scheduling-scans-to-complete-remediation"></a>Düzeltmeyi tamamlamak için taramaları zamanlamak için WMI
 
-Aşağıdaki [**özellikler** için sınıf **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) Set yöntemini kullanın:
+Aşağıdaki özellikler için [**MSFT_MpPreference** sınıfının **Set** yöntemini](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) kullanın:
 
 ```WMI
 RemediationScheduleDay
 RemediationScheduleTime
 ```
 
-Daha fazla bilgi ve izin verilen parametreler için [WMIv2 API'Windows Defender bakın](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
+Daha fazla bilgi ve izin verilen parametreler için bkz. [Windows Defender WMIv2 API'leri](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
 
-## <a name="wmi-for-scheduling-daily-scans"></a>GÜNLÜK taramaları zamanlayarak WMI
+## <a name="wmi-for-scheduling-daily-scans"></a>Günlük taramaları zamanlamak için WMI
 
-Aşağıdaki [**özellikler** için sınıf **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) Set yöntemini kullanın:
+Aşağıdaki özellikler için [**MSFT_MpPreference** sınıfının **Set** yöntemini](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) kullanın:
 
 ```WMI
 ScanScheduleQuickScanTime
 ```
 
-Daha fazla bilgi ve izin verilen parametreler için [WMIv2 API'Windows Defender bakın](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
+Daha fazla bilgi ve izin verilen parametreler için bkz. [Windows Defender WMIv2 API'leri](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
 
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)

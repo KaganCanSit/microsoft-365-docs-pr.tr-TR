@@ -1,7 +1,7 @@
 ---
 title: Davranışsal engelleme ve kapsama
-description: Aynı anda hem davranış engelleme hem de içeren özellikler hakkında Uç Nokta için Microsoft Defender
-keywords: Uç Nokta için Microsoft Defender, EDR modundayken pasif modunu engelleme
+description: davranış engelleme ve kapsama özellikleri hakkında bilgi edinmek için Pertahanan Microsoft untuk Titik Akhir
+keywords: Pertahanan Microsoft untuk Titik Akhir, blok modunda EDR, pasif mod engelleme
 ms.pagetype: security
 author: denisebmsft
 ms.author: deniseb
@@ -17,112 +17,126 @@ ms.custom:
 - admindeeplinkDEFENDER
 ms.collection: m365-security-compliance
 ms.technology: mde
-ms.openlocfilehash: f919a93768699c573c87b938cea37a05955ab9f2
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 1f598fd1463b6e08c73d7db9ac6d1540a51d6841
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64465343"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64790624"
 ---
 # <a name="behavioral-blocking-and-containment"></a>Davranışsal engelleme ve kapsama
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- Microsoft Defender Virüsten Koruma
 
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+**Platform**
+- Windows
+
+> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 ## <a name="overview"></a>Genel bakış
 
-Günümüzde tehdit ortamı dosyasız kötü amaçlı yazılımlar tarafından [](/windows/security/threat-protection/intelligence/fileless-threats) aşırı taşmaktadır ve topraklarda yer alan ve geleneksel çözümlere göre daha hızlı sessize alan çok polimorphic tehditler ve tehditlere uyan insan tarafından işletilen saldırılar tehditlere uyum sağlar. Geleneksel güvenlik çözümleri bu tür saldırılara engel olmak için yeterli değildir; yapay zeka (AI) ve cihaz öğrenme (ML) ile davranış engelleme ve dahil dahil, Uç Nokta için Defender ile birlikte dahil edilen yapay zekaya ve cihaz öğrenmeye (ML) [sahip olmak gerekir](/windows/security).
+Günümüzün tehdit ortamı [, dosyasız kötü amaçlı yazılımlarla](/windows/security/threat-protection/intelligence/fileless-threats) ve karada yaşayan, geleneksel çözümlerin ayak uyduramadan daha hızlı mutasyona uğrayan yüksek oranda polimorfik tehditler ve saldırganların güvenliği aşılmış cihazlarda bulduklarına uyum sağlayan insan tarafından çalıştırılan saldırılar tarafından gerçekleştirilir. Geleneksel güvenlik çözümleri bu tür saldırıları durdurmak için yeterli değildir; [Uç Nokta için Defender'a](/windows/security) dahil edilen davranış engelleme ve kapsama gibi yapay zeka (AI) ve cihaz öğrenmesi (ML) destekli özelliklere ihtiyacınız vardır.
 
-Davranışsal engelleme ve engelleme özellikleri, tehdit yürütmeye başlamış olsalar bile, davranışlarına ve işlem ağaçlarına dayalı olarak tehditleri belirlemeye ve durdurmaya yardımcı olabilir. Uç nokta bileşenleri ve özellikleri için yeni nesil koruma, EDR ve Defender, davranış engelleme ve içerirken birlikte çalışır.
+Davranış engelleme ve kapsama özellikleri, tehdit yürütmeye başladığında bile davranışlarına ve işlem ağaçlarına bağlı olarak tehditleri tanımlamaya ve durdurmaya yardımcı olabilir. Yeni nesil koruma, EDR ve Uç Nokta için Defender bileşenleri ve özellikleri davranış engelleme ve kapsama özelliklerinde birlikte çalışır.
 
-:::image type="content" source="images/mdatp-next-gen-EDR-behavblockcontain.png" alt-text="Microsoft Defender ATP portalında Davranış engelleme ve engelleme" lightbox="images/mdatp-next-gen-EDR-behavblockcontain.png":::
+:::image type="content" source="images/mdatp-next-gen-EDR-behavblockcontain.png" alt-text="Microsoft Defender ATP portalındaki Davranış engelleme ve kapsama" lightbox="images/mdatp-next-gen-EDR-behavblockcontain.png":::
 
-Davranışsal engelleme ve engelleme özellikleri, birden çok bileşenle ve Uç Nokta için Defender'ın özellikleriyle birlikte çalışır ve saldırının ilerlemesini önler.
+Davranış engelleme ve kapsama özellikleri, saldırıları hemen durdurmak ve saldırıların ilerlemesini önlemek için Uç Nokta için Defender'ın birden çok bileşeni ve özelliğiyle çalışır.
 
-- [Yeni nesil koruma](microsoft-defender-antivirus-in-windows-10.md) (bu korumalar Microsoft Defender Virüsten Koruma) davranışları çözümlayarak tehditleri algılayarak ve çalışmaya başlayan tehditleri durdurabilir.
+- [Yeni nesil koruma](microsoft-defender-antivirus-in-windows-10.md) (Microsoft Defender Virüsten Koruma içerir) davranışları analiz ederek tehditleri algılayabilir ve çalışmaya başlayan tehditleri durdurabilir.
 
-- [Uç nokta algılama ve yanıt](overview-endpoint-detection-response.md) (EDR), ağ, aygıtlar ve çekirdek davranışı genelinde güvenlik sinyalleri alır. Tehdit algılandığında, uyarılar oluşturulur. Aynı türe sahip birden çok uyarı olaylarda bir araya toplanmış ve bu da güvenlik işlemleri ekibimizin incelemelerini ve yanıtlamalarını kolaylaştırır.
+- [Uç nokta algılama ve yanıt](overview-endpoint-detection-response.md) (EDR), ağınız, cihazlarınız ve çekirdek davranışınız genelinde güvenlik sinyalleri alır. Tehditler algılandıktan sonra uyarılar oluşturulur. Aynı türdeki birden çok uyarı olaylar halinde toplanır ve bu da güvenlik operasyonları ekibinizin araştırmasını ve yanıtlamasını kolaylaştırır.
 
-- [Uç nokta için Defender](overview-endpoint-detection-response.md); kimlikler, e-posta, veriler ve uygulamalar genelinde optiklerin yanı sıra, uç nokta ve çekirdek davranışı sinyallerinin yanı sıra EDR. Microsoft 365 Defender, Uç [Nokta](../defender/microsoft-365-defender.md) işlemleri için Defender'ın bir bileşeni ve bu sinyalleri birbiriyle bağlantılı yapıyor, algılama uyarılarını yükselter ve olaylarda ilgili uyarıları bağlar.
+- [Uç Nokta için Defender](overview-endpoint-detection-response.md), EDR aracılığıyla alınan ağ, uç nokta ve çekirdek davranışı sinyallerine ek olarak kimlikler, e-posta, veriler ve uygulamalar arasında çok çeşitli optiklere sahiptir. [Microsoft 365 Defender](../defender/microsoft-365-defender.md) bileşeni olan Uç Nokta için Defender bu sinyalleri işler ve ilişkilendirir, algılama uyarıları oluşturur ve olaylardaki ilgili uyarıları bağlar.
 
-Bu özellikler sayesinde, çalışmaya başlamaları bile daha fazla tehdit önlenebilir veya engellenebilir. Şüpheli davranış algılandığında, tehdit her algılandığında, uyarılar oluşturulur ve tehditlere karşı tehditler durdurulur.
+Bu özelliklerle, çalışmaya başlasalar bile daha fazla tehdit önlenebilir veya engellenebilir. Şüpheli davranış algılandığında, tehdit kapsanıyor, uyarılar oluşturuluyor ve tehditler kendi izlerinde durdurulur.
 
-Aşağıdaki resimde davranış engelleme ve engelleme özellikleri tarafından tetiklenen bir uyarı örneği yer almaktadır:
+Aşağıdaki görüntüde davranış engelleme ve kapsama özellikleri tarafından tetiklenen bir uyarı örneği gösterilmektedir:
 
-:::image type="content" source="images/blocked-behav-alert.png" alt-text="Davranış engelleme ve engelleme yoluyla uyarı içeren Uyarılar sayfası" lightbox="images/blocked-behav-alert.png":::
+:::image type="content" source="images/blocked-behav-alert.png" alt-text="Davranış engelleme ve kapsama yoluyla uyarı içeren Uyarılar sayfası" lightbox="images/blocked-behav-alert.png":::
 
-## <a name="components-of-behavioral-blocking-and-containment"></a>Davranış engelleme ve içeren bileşenleri
+## <a name="components-of-behavioral-blocking-and-containment"></a>Davranış engelleme ve kapsama bileşenleri
 
-- **İstemci için ilke odaklı saldırı [yüzeyini azaltma kuralları](attack-surface-reduction.md)** Saldırı yüzeyini azaltma kurallarınıza göre önceden tanımlanmış yaygın saldırı davranışları yürütülmektedir. Bu tür davranışlar yürütmeye çalışırken, bu davranışlarda bilgi <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> olarak görülebilirler. Saldırı yüzeyini azaltma kuralları varsayılan olarak etkin değildir; portalda ilkelerinizi [Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender).
+- **İstemci üzerinde, ilke temelli [saldırı yüzeyi azaltma kuralları](attack-surface-reduction.md)** Saldırı yüzeyi azaltma kurallarınıza göre önceden tanımlanmış yaygın saldırı davranışlarının yürütülmesi engellenir. Bu tür davranışlar yürütülmeye çalışıldığında, <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> bilgilendirici uyarılar olarak görülebilir. Saldırı yüzeyi azaltma kuralları varsayılan olarak etkin değildir; Microsoft 365 Defender [portalında](/microsoft-365/security/defender/microsoft-365-defender) ilkelerinizi yapılandırabilirsiniz.
 
-- **[İstemci davranışı engelleme](client-behavioral-blocking.md)** Uç noktalara yönelik tehditler makine öğrenimi yoluyla algılanır ve sonra otomatik olarak engellenir ve düzeltilir. (İstemci davranışı engelleme varsayılan olarak etkindir.)
+- **[İstemci davranış engellemesi](client-behavioral-blocking.md)** Uç noktalardaki tehditler makine öğrenmesi aracılığıyla algılanıp engellenir ve otomatik olarak düzeltilir. (İstemci davranış engellemesi varsayılan olarak etkindir.)
 
-- **[Geri bildirim döngüsü engelleme](feedback-loop-blocking.md)** (hızlı koruma olarak da adlandırılır) Tehdit algılamaları davranışsal zeka aracılığıyla gözlemlenir. Tehditler durdurulur ve diğer uç noktaların üzerinde çalıştırılır. (Geri bildirim döngüsü engelleme varsayılan olarak etkindir.)
+- **[Geri bildirim döngüsü engelleme](feedback-loop-blocking.md)** (hızlı koruma olarak da adlandırılır) Tehdit algılamaları davranış zekası aracılığıyla gözlemlenir. Tehditler durdurulur ve diğer uç noktalarda çalıştırılması engellenir. (Geri bildirim döngüsü engelleme varsayılan olarak etkindir.)
 
-- **[Engelleme modunda uç nokta algılama EDR yanıt (EDR)](edr-in-block-mode.md)** İhlal sonrası koruma ile gözlemlenen kötü amaçlı yapılar veya davranışlar engellenir ve uygulanır. EDR modundayken e-Microsoft Defender Virüsten Koruma, birincil virüsten koruma çözümü değilse bile çalışır. (EDR modundayken varsayılan olarak etkinleştirilmez; varsayılan olarak Microsoft 365 Defender.)
+- **[Blok modunda uç nokta algılama ve yanıt (EDR)](edr-in-block-mode.md)** İhlal sonrası koruma aracılığıyla gözlemlenen kötü amaçlı yapıtlar veya davranışlar engellenir ve kapsanmaktadır. Blok modundaki EDR, birincil virüsten koruma çözümü Microsoft Defender Virüsten Koruma olmasa bile çalışır. (Blok modunda EDR varsayılan olarak etkin değildir; Microsoft 365 Defender'da açarsınız.)
 
-Microsoft tehdit koruması özelliklerini ve özelliklerini geliştirmeye devam ederken davranış engelleme ve engelleme alanında daha fazla şey olmasını bekler. Planla ilgili ve şimdi nelerin planlandığına bakın, yol [haritası Microsoft 365 ziyaret edin](https://www.microsoft.com/microsoft-365/roadmap).
+Microsoft tehdit koruma özelliklerini ve özelliklerini geliştirmeye devam ettiğinden davranış engelleme ve kapsama alanında daha fazlasının gelmesini bekleyin. Planlanan ve kullanıma sunulanları görmek için [Microsoft 365 yol haritasını](https://www.microsoft.com/microsoft-365/roadmap) ziyaret edin.
 
-## <a name="examples-of-behavioral-blocking-and-containment-in-action"></a>Davranış engelleme ve eyleme müdahale örnekleri
+## <a name="examples-of-behavioral-blocking-and-containment-in-action"></a>Davranış engelleme ve kapsamanın eyleme geçme örnekleri
 
-Davranışsal engelleme ve engelleme özellikleri, aşağıdakiler gibi tekniklere engellenmiş olur:
+Davranış engelleme ve kapsama özellikleri aşağıdaki gibi saldırgan tekniklerini engelledi:
 
-- LSASS'dan kimlik bilgileri dökümü
-- Çapraz işlem ekleme
-- İşlem boş
+- LSASS'den kimlik bilgisi dökümü
+- İşlemler arası ekleme
+- İşlem içi boşlama
 - Kullanıcı Hesabı Denetimi atlama
-- Virüsten koruma yazılımıyla oynama (devre dışı bırakma veya kötü amaçlı yazılımı dışlama olarak ekleme gibi)
-- Yüklerini indirmek için Komut ve Denetim (C&C) ile bağlantı kurma
-- Para madenciliği
+- Virüsten koruma ile oynama (devre dışı bırakma veya kötü amaçlı yazılımı dışlama olarak ekleme gibi)
+- Yükleri indirmek için Komut ve Denetim 'e (C&C) başvurma
+- Madeni para madenciliği
 - Önyükleme kaydı değişikliği
-- Karma saldırılarını geç
-- Kök sertifikanın yüklenmesi
-- Çeşitli güvenlik açıkları için exploitation attempt
+- Karmayı geçirme saldırıları
+- Kök sertifika yükleme
+- Çeşitli güvenlik açıkları için yararlanma girişimi
 
-Aşağıda, davranışsal engelleme ve önlemi engellemeye örnek olarak iki gerçek yaşam örneği verilmiştir.
+Davranış engelleme ve kapsamanın gerçek hayattaki iki örneği aşağıda verilmiştir.
 
-### <a name="example-1-credential-theft-attack-against-100-organizations"></a>Örnek 1: 100 kuruluşa yönelik kimlik bilgileri hırsızlığı saldırısı
+### <a name="example-1-credential-theft-attack-against-100-organizations"></a>Örnek 1: 100 kuruluşa yönelik kimlik bilgisi hırsızlığı saldırısı
 
-Bu makale de açıklanmıştır [: AI](https://www.microsoft.com/security/blog/2019/10/08/in-hot-pursuit-of-elusive-threats-ai-driven-behavior-based-blocking-stops-attacks-in-their-tracks) tabanlı davranış tabanlı engelleme saldırılarını durdurarak saldırılara son verdi. Dünya'daki 100 kuruluşa yönelik kimlik bilgileri hırsızlığı saldırısı, davranış engelleme ve engelleme özellikleri tarafından durduruldu. Hedefli kuruluşlara, bir kimlik avı belgesi içeren kimlik avı e-posta iletileri gönderildi. Bir alıcı eki açtısa, ilgili uzak belge kullanıcının cihazında kod yürütüp Kimlik bilgilerini çaldıran, çalınmış verileri çaldıran ve komut ve denetim sunucusundan başka yönergeler için bekleyen Lokibot kötü amaçlı yazılımını yükleyemedi.
+Zor tehditlerin sık takip edilmesinde açıklandığı gibi [: Yapay zeka temelli davranış tabanlı engelleme, saldırıları kendi izlerinde durdurur](https://www.microsoft.com/security/blog/2019/10/08/in-hot-pursuit-of-elusive-threats-ai-driven-behavior-based-blocking-stops-attacks-in-their-tracks), davranış engelleme ve engelleme özellikleriyle dünyanın dört bir yanındaki 100 kuruluşa yönelik kimlik bilgisi hırsızlığı saldırısı durduruldu. Hedeflenen kuruluşlara yem belgesi içeren zıpkınla kimlik avı e-posta iletileri gönderildi. Bir alıcı eki açtıysa, ilgili bir uzak belge kullanıcının cihazında kod yürütebildi ve kimlik bilgilerini çalan, çalınan verileri silen ve bir komut ve denetim sunucusundan daha fazla yönerge bekleyen Lokibot kötü amaçlı yazılımını yükleyebildi.
 
-Uç nokta için Defender'daki davranış tabanlı cihaz öğrenme modelleri yakalanırsa ve saldırganın tekniklerini saldırı zincirinin iki yerinden durdurulur:
+Uç Nokta için Defender'daki davranış tabanlı cihaz öğrenmesi modelleri, saldırı zincirinin iki noktasında saldırganın tekniklerini yakaladı ve durdurdu:
 
-- İlk koruma katmanı, exploit davranışını algıladı. Buluttaki cihaz öğrenme sınıflayıcıları tehdidi doğru bir şekilde tanımlandı ve ardından istemci cihazdan saldırıyı engellemesini hemen istedi.
-- Saldırının ilk katmanı geçmiş, boş işlem algılandı, bu işlemi durdurmanıza ve ilgili dosyaları (Lokibot gibi) kaldıran ikinci koruma katmanı.
+- İlk koruma katmanı, yararlanma davranışını algılamıştı. Buluttaki cihaz öğrenmesi sınıflandırıcıları tehdidi doğru bir şekilde tanımladı ve istemci cihaza saldırıyı engellemesi için hemen talimat verdi.
+- Saldırının ilk katmanı geçtiği, işlem boşlama algıladığı, bu işlemi durdurduğu ve karşılık gelen dosyaları (Lokibot gibi) kaldırdığı durumları durdurmaya yardımcı olan ikinci koruma katmanı.
 
-Saldırı algılandığında ve durdurulurken " ilk erişim uyarısı" gibi uyarılar tetiklendi ve [Microsoft 365 Defender portalda görüldü](/microsoft-365/security/defender/microsoft-365-defender).
+Saldırı algılanıp durdurulurken, "ilk erişim uyarısı" gibi uyarılar tetiklendi ve [Microsoft 365 Defender portalında](/microsoft-365/security/defender/microsoft-365-defender) göründü.
 
-:::image type="content" source="images/behavblockcontain-initialaccessalert.png" alt-text="Portalda ilk Microsoft 365 Defender uyarısı" lightbox="images/behavblockcontain-initialaccessalert.png":::
+:::image type="content" source="images/behavblockcontain-initialaccessalert.png" alt-text="Microsoft 365 Defender portalında ilk erişim uyarısı" lightbox="images/behavblockcontain-initialaccessalert.png":::
 
-Bu örnek, buluttaki davranış tabanlı cihaz öğrenme modellerinin çalışmaya başladıktan sonra bile saldırılara karşı yeni koruma katmanları eklemesi gösterir.
+Bu örnekte, buluttaki davranış tabanlı cihaz öğrenmesi modellerinin çalışmaya başladıktan sonra bile saldırılara karşı nasıl yeni koruma katmanları ekledikleri gösterilmektedir.
 
-### <a name="example-2-ntlm-relay---juicy-potato-malware-variant"></a>Örnek 2: NTLM geçişi - Kötü amaçlı Patates kötü amaçlı yazılım değişken
+### <a name="example-2-ntlm-relay---juicy-potato-malware-variant"></a>Örnek 2: NTLM geçişi - Sulu Patates kötü amaçlı yazılım değişkeni
 
-Son blog gönderisinde de açıklandığı gibi Davranışsal engelleme ve engelleme: Optikleri korumaya dönüştürme [Ocak](https://www.microsoft.com/security/blog/2020/03/09/behavioral-blocking-and-containment-transforming-optics-into-protection) 2020'de, Uç Nokta için Defender, kuruluşta bir cihazda ayrıcalık yükseltme etkinliği algıladı. "NTLM geçişi kullanılarak olası ayrıcalık yükseltmesi" adlı bir uyarı tetiklenir.
+Son blog gönderisinde açıklandığı gibi [Davranışsal engelleme ve kapsama: Optikleri korumaya dönüştürme](https://www.microsoft.com/security/blog/2020/03/09/behavioral-blocking-and-containment-transforming-optics-into-protection), Ocak 2020'de Uç Nokta için Defender kuruluştaki bir cihazda ayrıcalık yükseltme etkinliği algılamıştı. "NTLM geçişi kullanılarak olası ayrıcalık yükseltme" adlı bir uyarı tetiklendi.
 
-:::image type="content" source="images/NTLMalertjuicypotato.png" alt-text="Patates Patates kötü amaçlı yazılımları için NTLM uyarısı" lightbox="images/NTLMalertjuicypotato.png":::
+:::image type="content" source="images/NTLMalertjuicypotato.png" alt-text="Sulu Patates kötü amaçlı yazılımı için NTLM uyarısı" lightbox="images/NTLMalertjuicypotato.png":::
 
-Tehdit kötü amaçlı yazılım olduğu ortaya çıktı; bu, saldırganlar tarafından bir cihazda ayrıcalık yükseltmesi elde etmek için kullanılan Veli Patates adlı, kötümser bir korsan aracının önceden görülen olmayan yeni bir çeşitlecidir.
+Tehdit kötü amaçlı yazılım olduğu ortaya çıktı; saldırganlar tarafından bir cihazda ayrıcalık yükseltmesi almak için kullanılan, Sulu Patates adlı kötü bilinen bir hack aracının yeni, daha önce görülmemiş bir çeşidiydi.
 
-Uyarının tetiklendiğinden dakikalar sonra dosya çözümlendi ve kötü amaçlı olarak onaylandı. Aşağıdaki resimde gösterildiği gibi, işlemi durduruldu ve engellendi:
+Uyarı tetiklendikten dakikalar sonra dosya analiz edildi ve kötü amaçlı olduğu onaylandı. Aşağıdaki görüntüde gösterildiği gibi işlemi durduruldu ve engellendi:
 
-:::image type="content" source="images/Artifactblockedjuicypotato.png" alt-text="Yapı engellendi"  lightbox="images/Artifactblockedjuicypotato.png":::
+:::image type="content" source="images/Artifactblockedjuicypotato.png" alt-text="Yapıt engellendi"  lightbox="images/Artifactblockedjuicypotato.png":::
 
-Yapı engellendikten birkaç dakika sonra, aynı dosyanın birden çok örneği aynı cihazda engellenmiş ve bu da cihaza daha fazla saldırgan veya başka kötü amaçlı yazılım dağıtmasını önler.
+Yapıt engellendikten birkaç dakika sonra aynı dosyanın birden çok örneği aynı cihazda engellendi ve daha fazla saldırganın veya diğer kötü amaçlı yazılımların cihaza dağıtılmasını engelledi.
 
-Bu örnekte, davranış engelleme ve engelleme özellikleriyle, tehdit algılandığında, engellenmiş ve otomatik olarak engellenmiş olarak gösterir.
+Bu örnek, davranış engelleme ve kapsama özellikleriyle tehditlerin otomatik olarak algılandığını, kapsandığını ve engellendiğini gösterir.
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Uç Nokta için Defender hakkında daha fazla bilgi](overview-endpoint-detection-response.md)
+- [Uç Nokta için Defender hakkında daha fazla bilgi edinin](overview-endpoint-detection-response.md)
 
-- [Saldırı yüzeyini azaltma kurallarınızı yapılandırma](attack-surface-reduction.md)
+- [Saldırı yüzeyi azaltma kurallarınızı yapılandırma](attack-surface-reduction.md)
 
-- [EDR modunda etkinleştirme](edr-in-block-mode.md)
+- [Blok modunda EDR etkinleştirme](edr-in-block-mode.md)
 
-- [Son küresel tehdit etkinliklerine bakın](https://www.microsoft.com/wdsi/threats)
+- [En son küresel tehdit etkinliğine bakın](https://www.microsoft.com/wdsi/threats)
 
-- [Nasıl olduğunu genel Microsoft 365 Defender](../defender/microsoft-365-defender.md)
+- [Microsoft 365 Defender genel bakışını edinin](../defender/microsoft-365-defender.md)

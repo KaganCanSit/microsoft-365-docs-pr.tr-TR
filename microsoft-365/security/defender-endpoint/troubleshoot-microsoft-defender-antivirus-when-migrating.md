@@ -1,7 +1,7 @@
 ---
-title: Üçüncü Microsoft Defender Virüsten Koruma çözümden ilerlerken sorun giderme
-description: Hata gidermeye kadar yaygın hataları Microsoft Defender Virüsten Koruma
-keywords: olay, hata kodu, günlüğe kaydetme, sorun giderme, microsoft Defender virüsten koruma, windows defender virüsten koruma, geçiş
+title: Üçüncü taraf bir çözümden geçirirken Microsoft Defender Virüsten Koruma sorunlarını giderin
+description: Microsoft Defender Virüsten Koruma geçiş sırasında sık karşılaşılan hataları giderme
+keywords: olay, hata kodu, günlüğe kaydetme, sorun giderme, microsoft defender virüsten koruma, windows defender virüsten koruma, geçiş
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -15,127 +15,141 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: c1b60b66977c4f93591bce20a5cf6ace0b7fc567
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 74843a71131ae8f10628dac96086e68e25acb2b0
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62997521"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64788446"
 ---
-# <a name="troubleshoot-microsoft-defender-antivirus-while-migrating-from-a-third-party-solution"></a>Üçüncü Microsoft Defender Virüsten Koruma çözümden ilerlerken sorun giderme
+# <a name="troubleshoot-microsoft-defender-antivirus-while-migrating-from-a-third-party-solution"></a>Üçüncü taraf bir çözümden geçirirken Microsoft Defender Virüsten Koruma sorunlarını giderin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
 
+**Platform**
+- Windows
 
-Üçüncü taraf bir güvenlik çözümünden başka bir çözümden başka bir çözüme veya başka bir çözüme veya başka bir Microsoft Defender Virüsten Koruma.
+Üçüncü taraf bir güvenlik çözümünden Microsoft Defender Virüsten Koruma geçiş yaparken sorunlarla karşılaşırsanız burada yardım bulabilirsiniz.
 
 ## <a name="review-event-logs"></a>Olay günlüklerini gözden geçirme
 
-1. Görev çubuğunda Ara simgesini seçerek ve olay **görüntüleyicisini** arayarak Olay *görüntüleyicisi uygulamasını açın*.
+1. Görev çubuğunda **Ara simgesini** seçip *olay görüntüleyicisini arayarak Olay görüntüleyicisi* uygulamasını açın.
 
-    Daha fazla Microsoft Defender Virüsten Koruma, Microsoft **Günlüklerini Ve Uygulamaları ve Hizmet** **Günlüklerini** \> \> **Windows** \> Windows Defender.
+    Microsoft Defender Virüsten Koruma hakkındaki bilgileri **Microsoft** \> **Windows Windows Defender** \> **Uygulama ve Hizmet Günlükleri** \> altında **bulabilirsiniz.**
 
-1. Buradan İşlem'in  altında **Aç'ı seçin**.
+1. Buradan **İşletim altında** **Aç'ı** seçin.
 
-    Ayrıntılar bölmesinden bir olay seçerek, alt bölmede Genel ve Ayrıntılar sekmelerinin altında etkinlik hakkında daha **fazla** **bilgi** gösterilir.
+    Ayrıntılar bölmesinden bir olay seçildiğinde, alt bölmedeki **Genel** ve **Ayrıntılar sekmelerinin** altında bir olay hakkında daha fazla bilgi gösterilir.
 
-## <a name="microsoft-defender-antivirus-wont-start"></a>Microsoft Defender Virüsten Koruma başlamaz
+## <a name="microsoft-defender-antivirus-wont-start"></a>Microsoft Defender Virüsten Koruma başlatılamıyor
 
-Bu sorun, hepsinin temel nedeni aynı olan birkaç farklı olay kimlikleri şeklinde yeniden ortaya çıkar.
+Bu sorun, tümü aynı temel nedene sahip olan birkaç farklı olay kimlikleri biçiminde bildirimde bulunabilir.
 
 ### <a name="associated-event-ids"></a>İlişkili olay kimlikleri
 
 Olay Kimliği|Günlük adı|Açıklama|Kaynak
 ---|---|---|---
-15|Uygulama|Güncelleştirme Windows Defender başarıyla güncelleştirildi ve SECURITY_PRODUCT_STATE_OFF.|Güvenlik Merkezi
-5007|Microsoft-Windows-Windows Defender/İşlem|Windows Defender Virüsten Koruma Yapılandırması değişti. Bu beklenmeyen bir olaysa, kötü amaçlı yazılımdan etkilana neden olduğu için ayarları gözden geçirebilirsiniz. <p> **Eski değer:** Default\IsServiceRunning = 0x0 <p> **Yeni değer:** HKLM\SOFTWARE\Microsoft\Windows Defender\IsServiceRunning = 0x1|Windows Defender
-5010|Microsoft-Windows-Windows Defender/İşlem|Windows Defender Virüsten Koruma yazılım tarama ve diğer istenmeyen yazılımlar devre dışı bırakılır.|Windows Defender
+15|Uygulama|Windows Defender durumu başarıyla SECURITY_PRODUCT_STATE_OFF güncelleştirildi.|Güvenlik Merkezi
+5007|Microsoft-Windows-Windows Defender/Operasyonel|Windows Defenderin virustentorjunta Yapılandırması değişti. Bu beklenmeyen bir olaysa, kötü amaçlı yazılımların sonucu olabileceğinden ayarları gözden geçirmeniz gerekir. <p> **Eski değer:** Default\IsServiceRunning = 0x0 <p> **Yeni değer:** HKLM\SOFTWARE\Microsoft\Windows Defender\IsServiceRunning = 0x1|Windows Defender
+5010|Microsoft-Windows-Windows Defender/Operasyonel|casus yazılımlar ve istenmeyebilecek diğer yazılımlar için Windows Defenderin virustentorjunta tarama devre dışı bırakıldı.|Windows Defender
 
-### <a name="how-to-tell-if-microsoft-defender-antivirus-wont-start-because-a-third-party-antivirus-is-installed"></a>Üçüncü taraf virüsten Microsoft Defender Virüsten Koruma yüklü olduğundan e-postanın başlatılamay nasıl olur?
+### <a name="how-to-tell-if-microsoft-defender-antivirus-wont-start-because-a-third-party-antivirus-is-installed"></a>Üçüncü taraf virüsten koruma yazılımı yüklü olduğundan Microsoft Defender Virüsten Koruma başlatılıp başlatılmayacağını nasıl anlarız?
 
-Windows 10 veya Windows 11 cihazında, Uç Nokta için Microsoft Defender kullanmayacaksanız ve yüklü bir üçüncü taraf virüsten koruma varsa, Microsoft Defender Virüsten Koruma otomatik olarak kapatılır. Üçüncü taraf virüsten koruma yazılımının yüklü olduğu Uç Nokta için Microsoft Defender'ı kullanıyorsanız, Microsoft Defender Virüsten Koruma pasif modunda başlar ve işlev azalır.
+Windows 10 veya Windows 11 bir cihazda, Pertahanan Microsoft untuk Titik Akhir kullanmıyorsanız ve üçüncü taraf virüsten koruma yazılımı yüklüyse Microsoft Defender Virüsten Koruma otomatik olarak kapatılır. Pertahanan Microsoft untuk Titik Akhir üçüncü taraf virüsten koruma yazılımı yüklü olarak kullanıyorsanız, Microsoft Defender Virüsten Koruma pasif modda başlar ve işlevselliği azaltılır.
 
 > [!TIP]
-> Az önce açıklanan senaryo yalnızca 11. Windows 10 ve Windows için geçerlidir. Uygulamanın diğer Windows, [üçüncü taraf](microsoft-defender-antivirus-compatibility.md) güvenlik Microsoft Defender Virüsten Koruma birlikte çalıştırıla ilgili farklı yanıtlara sahiptir.
+> Az önce açıklanan senaryo yalnızca Windows 10 ve Windows 11 için geçerlidir. Windows diğer sürümleri, üçüncü taraf güvenlik yazılımıyla birlikte çalıştırılan Microsoft Defender Virüsten Koruma [farklı yanıtlara](microsoft-defender-antivirus-compatibility.md) sahiptir.
 
-#### <a name="use-services-app-to-check-if-microsoft-defender-antivirus-is-turned-off"></a>Hizmet uygulamasını kullanarak kapalı olup Microsoft Defender Virüsten Koruma denetleme
+#### <a name="use-services-app-to-check-if-microsoft-defender-antivirus-is-turned-off"></a>Microsoft Defender Virüsten Koruma kapalı olup olmadığını denetlemek için Hizmetler uygulamasını kullanma
 
-Hizmetler uygulamasını açmak için görev **çubuğundan Ara** simgesini seçin ve hizmetleri *arayın*. Ayrıca, *services.msc* yazarak da komut satırdan uygulamayı açabilirsiniz.
+Hizmetler uygulamasını açmak için görev çubuğundan **Ara** simgesini seçin ve *hizmetleri* arayın. Uygulamayı *, services.msc* yazarak komut satırından da açabilirsiniz.
 
-Hizmet Microsoft Defender Virüsten Koruma, Hizmetler uygulamasında İşlem İşlemleri **altında Windows Defender** \> **listelenir**. Virüsten koruma hizmeti adı *Hizmet Windows Defender Virüsten Koruma adıdır*.
+Microsoft Defender Virüsten Koruma hakkındaki bilgiler Hizmetler uygulamasında **Windows Defender** \> **Operasyonel** altında listelenir. Virüsten koruma hizmetinin adı *Windows Defenderin virustentorjunta Hizmeti'dir*.
 
-Uygulamayı kontrol ederken, *Windows Defender Virüsten Koruma* Hizmeti'nin el ile olarak ayar olduğunu görebilir, ancak bu hizmeti el ile başlatmayı denemelisiniz; Bu, Uygulama Başlatıcı Windows Defender Virüsten Koruma *Yerel Bilgisayarda hizmet hizmeti başlatıldı ve ardından durduruldu. Bazı hizmetler, başka hizmetler veya programlar tarafından kullannmayacaksa otomatik olarak durur.*
+Uygulamayı denetlerken *Windows Defenderin virustentorjunta Hizmeti'nin* el ile olarak ayarlandığını görebilirsiniz, ancak bu hizmeti el Windows Defenderin virustentorjunta ile başlatmayı denediğinizde *Yerel Bilgisayarda hizmet hizmeti başlatıldı ve durduruldu. Bazı hizmetler diğer hizmetler veya programlar tarafından kullanılmadıysa otomatik olarak durduruluyor.*
 
-Bu, Microsoft Defender Virüsten Koruma virüsten koruma yazılımıyla uyumluluğu korumak için otomatik olarak kapatmış olduğunu gösterir.
+Bu, üçüncü taraf virüsten koruma yazılımıyla uyumluluğu korumak için Microsoft Defender Virüsten Koruma otomatik olarak kapatıldığını gösterir.
 
 #### <a name="generate-a-detailed-report"></a>Ayrıntılı rapor oluşturma
 
-Şu anda etkin grup ilkeleri hakkında ayrıntılı bir rapor oluşturmak için, komut istemini Yönetici modunda  çalıştır'da açarak ve aşağıdaki komutu girerek yapabilirsiniz:
+Şu anda etkin olan grup ilkeleri hakkında ayrıntılı bir rapor oluşturmak için **Yönetici olarak çalıştır** modunda bir komut istemi açıp aşağıdaki komutu girebilirsiniz:
 
 ```console
 GPresult.exe /h gpresult.html
 ```
 
-Bu, *./gpresult.html.* Bu dosyayı açın; dosyanın nasıl kapatmış olduğuna bağlı olarak Microsoft Defender Virüsten Koruma sonuçlarıyla karşınıza çıkar.
+Bu, *./gpresult.html* konumunda bulunan bir rapor oluşturur. Bu dosyayı açtığınızda, Microsoft Defender Virüsten Koruma nasıl kapatıldığına bağlı olarak aşağıdaki sonuçları görebilirsiniz.
 
 ##### <a name="group-policy-results"></a>Grup ilkesi sonuçları
 
-##### <a name="if-security-settings-are-implemented-via-group-policy-gpo-at-the-domain-or-local-level-or-though-system-center-configuration-manager-sccm"></a>Güvenlik ayarları etki alanı veya yerel düzeyde grup ilkesi (GPO) aracılığıyla veya System Center Configuration Manager (SCCM) aracılığıyla uygulanırsa
+##### <a name="if-security-settings-are-implemented-via-group-policy-gpo-at-the-domain-or-local-level-or-though-system-center-configuration-manager-sccm"></a>Güvenlik ayarları etki alanı veya yerel düzeyde grup ilkesi (GPO) aracılığıyla uygulanıyorsa ya da System center configuration manager (SCCM)
 
-GPResults raporu içinde, *Windows Bileşenleri/* Windows Defender Virüsten Koruma başlığı altında, aşağıdaki girişe benzer bir şey görebilir ve bu Microsoft Defender Virüsten Koruma kapalıdır.
+GPResults raporundaki *bileşenler/Windows Defenderin virustentorjunta Windows* başlığı altında, Microsoft Defender Virüsten Koruma kapatıldığını gösteren aşağıdaki girişe benzer bir şey görebilirsiniz.
 
-İlke|Ayar|Kazanan GPO
+Ilkesi|Ayar|Kazanan GPO
 ---|---|---
-E-Windows Defender Virüsten Koruma|Etkin|Win10-Workstations
+Windows Defenderin virustentorjunta kapatma|Etkin|Win10-Workstations
 
-###### <a name="if-security-settings-are-implemented-via-group-policy-preference-gpp"></a>Güvenlik ayarları Grup ilkesi tercihi (GPP) aracılığıyla uygulanırsa
+###### <a name="if-security-settings-are-implemented-via-group-policy-preference-gpp"></a>Güvenlik ayarları Grup ilkesi tercihi (GPP) aracılığıyla uygulanıyorsa
 
-Kayıt Defteri öğesi *(Anahtar yolu: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender, Değer adı: DisableAnti Öğe)* başlığı altında, aşağıdaki girişe benzer bir şey görebilir ve bunun Microsoft Defender Virüsten Koruma kapalı olduğunu gösterir.
+*Kayıt defteri öğesi (Anahtar yolu: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender, Değer adı: DisableAntiSpyware)* başlığı altında, Microsoft Defender Virüsten Koruma kapatıldığını belirten aşağıdaki girişe benzer bir şey görebilirsiniz.
 
-DisableAntiCcaware|-
+DisableAntiSpyware|-
 ---|---
 Kazanan GPO|Win10-Workstations
 Sonuç: Başarılı|
 **Genel**|
 Eylem|Güncelleştirme
 **Özellikler**|
-Değilken|HKEY_LOCAL_MACHINE
+Kovan|HKEY_LOCAL_MACHINE
 Anahtar yolu|SOFTWARE\Policies\Microsoft\Windows Defender
-Değer adı|DisableAntiCcaware
+Değer adı|DisableAntiSpyware
 Değer türü|REG_DWORD
-Value data|0x1 (1)
+Değer verileri|0x1 (1)
 
-###### <a name="if-security-settings-are-implemented-via-registry-key"></a>Güvenlik ayarları kayıt defteri anahtarı aracılığıyla uygulanırsa
+###### <a name="if-security-settings-are-implemented-via-registry-key"></a>Güvenlik ayarları kayıt defteri anahtarı aracılığıyla uygulanıyorsa
 
-Rapor, aşağıdaki metni içerebilir ve bu metin Microsoft Defender Virüsten Koruma kapalı olabilir:
+Rapor, Microsoft Defender Virüsten Koruma kapalı olduğunu belirten aşağıdaki metni içerebilir:
 
 > Kayıt Defteri (regedit.exe)
 >
-> HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender DisableAntiSpyware (dword) 1 (hex)
+> HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender DisableAntiSpyware (dword) 1 (onaltılık)
 
-###### <a name="if-security-settings-are-set-in-windows-or-your-windows-server-image"></a>Bu sunucuda veya Windows Server resminde güvenlik Windows ayarları
+###### <a name="if-security-settings-are-set-in-windows-or-your-windows-server-image"></a>Güvenlik ayarları Windows veya Windows Server görüntünüzde ayarlandıysa
 
-Yanlışlayan yöneticiniz, güvenlik ilkesi **[DisableAntiCcaware'ı](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware)***GPEdit.exe*, *LGPO.exe* aracılığıyla yerel olarak veya görev sırasında kayıt defterini değiştirerek ayarla etmiş olabilir. Bir kullanıcı [için Güvenilen Resim Tanımlayıcı'Microsoft Defender Virüsten Koruma](/windows-hardware/manufacture/desktop/configure-a-trusted-image-identifier-for-windows-defender).
+Hayal eden yöneticiniz, *GPEdit.exe*, *LGPO.exe* aracılığıyla veya görev dizisindeki kayıt defterini değiştirerek **[disableAntiSpyware](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware)** güvenlik ilkesini yerel olarak ayarlamış olabilir. Microsoft Defender Virüsten Koruma için [Güvenilen Görüntü Tanımlayıcısı yapılandırabilirsiniz](/windows-hardware/manufacture/desktop/configure-a-trusted-image-identifier-for-windows-defender).
 
-### <a name="turn-microsoft-defender-antivirus-back-on"></a>Microsoft Defender Virüsten Koruma açma
+### <a name="turn-microsoft-defender-antivirus-back-on"></a>Microsoft Defender Virüsten Koruma yeniden açma
 
-Microsoft Defender Virüsten Koruma virüsten koruma yazılımı o anda etkin değilse otomatik olarak açılır. Virüsten koruma yazılımının tüm işlevlerle çalışması için üçüncü taraf virüsten Microsoft Defender Virüsten Koruma tamamen kapatmanız gerekir.
+Microsoft Defender Virüsten Koruma, şu anda etkin başka bir virüsten koruma yazılımı yoksa otomatik olarak açılır. Microsoft Defender Virüsten Koruma tam işlevsellikle çalıştığından emin olmak için üçüncü taraf virüsten koruma yazılımını tamamen kapatmanız gerekir.
 
 > [!WARNING]
-> *HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services'te* *wdboot*, *wdfilter*, *wdnisdrv*, *wdnissvc* ve *windefend* için Windows Defender başlangıç değerlerini düzenlemenizi öneren çözümler desteklenmez ve sisteminizi yeniden görüntüleyemezsiniz.
+> *HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services'da wdboot, wdfilter*, *wdnisdrv*, *wdnissvc* ve *windefend* için *Windows Defender* başlangıç değerlerini düzenlemenizi öneren çözümler desteklenmez ve sisteminizi yeniden görüntülemeye zorlayabilir.
 
-Pasif modu, Uç Nokta için Microsoft Defender'ı ve birlikte bir üçüncü taraf virüsten koruma yazılımı kullanıyorsanız Microsoft Defender Virüsten Koruma. Pasif modu, Microsoft Defender Virüsten Koruma tarama ve güncelleştirme izinlerine izin verir, ancak tehditleri düzeltmez. Buna ek olarak, Uç nokta [veri](configure-real-time-protection-microsoft-defender-antivirus.md) kaybını önleme [(DLP)](/microsoft-365/security/defender-endpoint/information-protection-in-windows-overview) dağıt olmadığı sürece gerçek Zamanlı Koruma yoluyla davranış izleme pasif modu altında kullanılamaz.
+Pertahanan Microsoft untuk Titik Akhir ve üçüncü taraf virüsten koruma yazılımını Microsoft Defender Virüsten Koruma ile birlikte kullanmaya başlarsanız pasif mod kullanılabilir. Pasif mod, Microsoft Defender Virüsten Koruma dosyaları taramasını ve kendisini güncelleştirmesini sağlar, ancak tehditleri düzeltmez. Ayrıca, [Uç nokta veri kaybı önleme (DLP)](/microsoft-365/security/defender-endpoint/information-protection-in-windows-overview) dağıtılmadığı sürece [Gerçek Zamanlı Koruma](configure-real-time-protection-microsoft-defender-antivirus.md) aracılığıyla davranış izleme pasif modda kullanılamaz.
 
-Sınırlı düzenli tarama olarak [bilinen bir başka](limited-periodic-scanning-microsoft-defender-antivirus.md) özellik de, dönemsel tarama Microsoft Defender Virüsten Koruma otomatik olarak kapatacak şekilde ayarlanmış olan son kullanıcılar tarafından kullanılabilir. Bu özellik, Microsoft Defender Virüsten Koruma bir dizi algılama kullanarak üçüncü taraf virüsten koruma yazılımıyla birlikte dosyaları düzenli aralıklarla taramanızı sağlar.
+[Sınırlı düzenli tarama](limited-periodic-scanning-microsoft-defender-antivirus.md) olarak bilinen başka bir özellik, Microsoft Defender Virüsten Koruma otomatik olarak kapatacak şekilde ayarlandığında son kullanıcılar tarafından kullanılabilir. Bu özellik, Microsoft Defender Virüsten Koruma sınırlı sayıda algılama kullanarak üçüncü taraf virüsten koruma ile birlikte dosyaları düzenli aralıklarla taramasını sağlar.
 
 > [!IMPORTANT]
-> Kurumsal ortamlarda sınırlı düzenli tarama önerilmez. Bu modda çalışan tüm özellikleri Microsoft Defender Virüsten Koruma algılama, yönetim ve raporlama özellikleri, etkin modla karşılaştırıldığında azaltıldı.
+> Kurumsal ortamlarda sınırlı düzenli tarama önerilmez. Bu modda Microsoft Defender Virüsten Koruma çalıştırırken kullanılabilen algılama, yönetim ve raporlama özellikleri, etkin moda göre azaltılır.
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+
 
 ### <a name="see-also"></a>Ayrıca bkz.
 
 - [Microsoft Defender Virüsten Koruma uyumluluğu](microsoft-defender-antivirus-compatibility.md)
-- [Microsoft Defender Virüsten Koruma Windows Güvenliği seçin](microsoft-defender-security-center-antivirus.md)
+- [Windows Güvenliği uygulamasında Microsoft Defender Virüsten Koruma](microsoft-defender-security-center-antivirus.md)

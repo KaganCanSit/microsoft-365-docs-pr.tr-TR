@@ -1,7 +1,7 @@
 ---
-title: Mobil cihazların mobil cihazlar tarafından nasıl güncelleştiriliyor Microsoft Defender Virüsten Koruma
-description: Dizüstü bilgisayarlar gibi mobil cihazların güvenlik güncelleştirmeleri ile nasıl güncelleştirileceklerini Microsoft Defender Virüsten Koruma yönetin.
-keywords: güncelleştirmeler, koruma, güncelleştirmeleri zamanlama, pil, mobil cihaz, dizüstü bilgisayar, not defteri, kabul, microsoft update, wsus, geçersiz kılma
+title: Mobil cihazların Microsoft Defender Virüsten Koruma tarafından nasıl güncelleştirildiği tanımlama
+description: Dizüstü bilgisayarlar gibi mobil cihazların Microsoft Defender Virüsten Koruma koruma güncelleştirmeleriyle nasıl güncelleştirilmesi gerektiğini yönetin.
+keywords: güncelleştirmeler, koruma, güncelleştirmeleri zamanlama, pil, mobil cihaz, dizüstü bilgisayar, not defteri, kabul etme, microsoft update, wsus, geçersiz kılma
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -15,90 +15,104 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 3fc6d5a8b8fa7889f65f21111b3af82e124516b4
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: f582e33f2d77c8560b773b79d54026e38bcde8c9
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62997528"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64790382"
 ---
-# <a name="manage-updates-for-mobile-devices-and-virtual-machines-vms"></a>Mobil cihazlar ve sanal makineler (VM) güncelleştirmelerini yönetme
+# <a name="manage-updates-for-mobile-devices-and-virtual-machines-vms"></a>Mobil cihaz ve sanal makine (VM) güncelleştirmelerini yönetin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
 
-Performansın güncelleştirmeler tarafından etkilenmey olduğundan emin olmak için mobil cihazlar ve VM'ler daha fazla yapılandırma gerektirir.
+**Platform**
+- Windows
 
-Bu cihazlar için yararlı iki ayar vardır:
+Performansın güncelleştirmelerden etkilenmediğinden emin olmak için mobil cihazlar ve VM'ler daha fazla yapılandırma gerektirebilir.
+
+Bu cihazlar için yararlı olan iki ayar vardır:
 
 - WSUS bağlantısı olmayan mobil bilgisayarlarda Microsoft Update'e katılma
-- Pil gücüyle çalıştırmaya yönelik Güvenlik zekası güncelleştirmelerini engelleme
+- Pil gücüyle çalışırken güvenlik bilgileri güncelleştirmelerini engelleme
 
-Aşağıdaki makaleler şu durumlarda da yararlı olabilir:
+Aşağıdaki makaleler bu durumlarda da yararlı olabilir:
 - [Zamanlanmış ve yakalama taramalarını yapılandırma](scheduled-catch-up-scans-microsoft-defender-antivirus.md)
-- [Güncel olan uç nokta güncelleştirmelerini yönetme](manage-outdated-endpoints-microsoft-defender-antivirus.md)
-- [Sanal masaüstü Microsoft Defender Virüsten Koruma (VDI) ortamında dağıtım kılavuzu](deployment-vdi-microsoft-defender-antivirus.md)
+- [Güncel olmayan uç noktalar için güncelleştirmeleri yönetme](manage-outdated-endpoints-microsoft-defender-antivirus.md)
+- [Sanal Masaüstü Altyapısı (VDI) ortamında Microsoft Defender Virüsten Koruma için dağıtım klavuzu](deployment-vdi-microsoft-defender-antivirus.md)
 
 ## <a name="opt-in-to-microsoft-update-on-mobile-computers-without-a-wsus-connection"></a>WSUS bağlantısı olmayan mobil bilgisayarlarda Microsoft Update'e katılma
 
-Microsoft Update'i kullanarak, kurumsal ağa Microsoft Defender Virüsten Koruma veya WSUS bağlantısına sahip değilken mobil cihazlarda güvenlik zekası kullanımını güncel tutabilirsiniz.
+Şirket ağına bağlı olmayan veya WSUS bağlantısı olmayan Microsoft Defender Virüsten Koruma çalışan mobil cihazlarda güvenlik bilgilerini güncel tutmak için Microsoft Update'i kullanabilirsiniz.
 
-Bu, WSUS'u Microsoft Update'i geçersiz k olacak şekilde ayarlasanız bile, cihazlara koruma güncelleştirmelerinin (Microsoft Update yoluyla) teslim edile aç olduğu anlamına gelir.
+Bu, WSUS'yi Microsoft Update'i geçersiz kılacak şekilde ayarlamış olsanız bile koruma güncelleştirmelerinin cihazlara (Microsoft Update aracılığıyla) teslim edilebileceği anlamına gelir.
 
-Mobil cihazda Microsoft Update'e katılmayı aşağıdaki yöntemlerden birini kullanarak kabul edebilirsiniz:
+Mobil cihazda Microsoft Update'i aşağıdaki yollardan biriyle kabul edebilirsiniz:
 
-- Ayarı Grup İlkesi ile değiştirme.
-- VBScript kullanarak bir betik oluşturun ve ardından bunu ağ bilgisayarınıza her bilgisayarda çalıştırın.
-- Otomatik Menü menüsünden, ağ bilgisayarınızdan her **Ayarlar** seçin.
+- ayarı grup ilkesi ile değiştirin.
+- Bir betik oluşturmak için VBScript kullanın, ardından bunu ağınızdaki her bilgisayarda çalıştırın.
+- **Ayarlar** menüsü aracılığıyla ağınızdaki her bilgisayarı el ile kabul edin.
 
-### <a name="use-group-policy-to-opt-in-to-microsoft-update"></a>Microsoft Update'e katılmayı kabul etmek için Grup İlkesi kullanma
+### <a name="use-group-policy-to-opt-in-to-microsoft-update"></a>Microsoft Update'i kabul etmek için grup ilkesi kullanma
 
-1. Grup İlkesi yönetim makinenizin Grup İlkesi Yönetim [Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz Grup İlkesi Nesnesine sağ tıklayın ve Düzenle'yi **seçin**.
+1. grup ilkesi yönetim makinenizde [grup ilkesi Yönetim Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz grup ilkesi Nesnesine sağ tıklayın ve **Düzenle'yi** seçin.
 
-2. Grup İlkesi **Yönetim Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin**.
+2. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin.
 
-3. **İlkeler'i** **ve ardından Yönetim şablonları'ı seçin**.
+3. **İlkeler'i** ve ardından **Yönetim şablonları'nı** seçin.
 
-4. İmza **Güncelleştirmeleri'Windows bileşenleri** \> **Microsoft Defender Virüsten Koruma** \> **ağacı genişletin**.
+4. **İmza Güncelleştirmeleri** **Microsoft Defender Virüsten Koruma bileşenleri** \> **Windows** \> için ağacı genişletin.
 
-5. **Microsoft Update güvenlik zekası güncelleştirmelerine izin ver seçeneğini Etkin** **olarak ayarlayın ve** ardından Tamam'ı **seçin**.
+5. **Microsoft Update'ten Güvenlik bilgileri güncelleştirmelerine izin ver** seçeneğini **Etkin** olarak ayarlayın ve **ardından Tamam'ı** seçin.
 
-### <a name="use-a-vbscript-to-opt-in-to-microsoft-update"></a>Microsoft Update'e katılmayı kabul etmek için VBScript kullanma
+### <a name="use-a-vbscript-to-opt-in-to-microsoft-update"></a>Microsoft Update'i kabul etmek için VBScript kullanma
 
-1. VBScript oluşturmak için MSDN'de [Microsoft Update'i Kabul Edin](/windows/win32/wua_sdk/opt-in-to-microsoft-update) makalesinde verilen yönergeleri kullanın.
+1. VBScript'i oluşturmak için MSDN [makalesindeki yönergeleri kullanarak Microsoft Update'i](/windows/win32/wua_sdk/opt-in-to-microsoft-update) kabul edin.
 
-2. Ağ ağınız içinde oluşturduğunuz her bilgisayarda oluşturduğunuz VBScript'i çalıştırın.
+2. Ağınızdaki her bilgisayarda oluşturduğunuz VBScript'i çalıştırın.
 
-### <a name="manually-opt-in-to-microsoft-update"></a>Microsoft Update'e el ile katılma
+### <a name="manually-opt-in-to-microsoft-update"></a>Microsoft Update'i el ile kabul etme
 
-1. Kabul **etmek Windows bilgisayarda** **& güncelleştirme** ve güvenlik ayarlarını güncelleştirme'de Güncelleştir'i açın.
+1. **Windows Update** açmak istediğiniz bilgisayardaki **Güncelleştirme & güvenlik** ayarlarını açın.
 
-2. Gelişmiş **seçenekler'i** seçin.
+2. **Gelişmiş seçenekler'i** seçin.
 
-3. Güncelleştirme tarihime diğer **Microsoft ürünlerinin güncelleştirmelerini de ver onay kutusunu Windows**.
+3. **Windows güncelleştirdiğimde Diğer Microsoft ürünleri için güncelleştirme ver** onay kutusunu seçin.
 
-## <a name="prevent-security-intelligence-updates-when-running-on-battery-power"></a>Pil gücüyle çalıştırmaya yönelik Güvenlik zekası güncelleştirmelerini engelleme
+## <a name="prevent-security-intelligence-updates-when-running-on-battery-power"></a>Pil gücüyle çalışırken güvenlik bilgileri güncelleştirmelerini engelleme
 
-Bir bilgisayarı Microsoft Defender Virüsten Koruma bir güç kaynağına bağlı olduğunda koruma güncelleştirmelerini indirmek için yapılandırabilirsiniz.
+Microsoft Defender Virüsten Koruma yalnızca bilgisayar kablolu bir güç kaynağına bağlı olduğunda koruma güncelleştirmelerini indirecek şekilde yapılandırabilirsiniz.
 
-### <a name="use-group-policy-to-prevent-security-intelligence-updates-on-battery-power"></a>Pil gücüyle ilgili güvenlik zekası güncelleştirmelerini engellemek için Grup İlkesi kullanma
+### <a name="use-group-policy-to-prevent-security-intelligence-updates-on-battery-power"></a>Pil gücünde güvenlik zekası güncelleştirmelerini önlemek için grup ilkesi kullanın
 
-1. Grup İlkesi yönetim makinenizin Grup İlkesi Yönetim [Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz Grup İlkesi Nesnesini seçin ve düzenlemek üzere açın.
+1. grup ilkesi yönetim makinenizde [grup ilkesi Yönetim Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın, yapılandırmak istediğiniz grup ilkesi Nesnesini seçin ve düzenlemek üzere açın.
 
-2. Grup İlkesi **Yönetim Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin**.
+2. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin.
 
-3. **İlkeler'i** **ve ardından Yönetim şablonları'ı seçin**.
+3. **İlkeler'i** ve ardından **Yönetim şablonları'nı** seçin.
 
-4. İmza Güncelleştirmeleri'Windows **bileşenleri Microsoft Defender Virüsten Koruma** \>  \> ağacı genişletin ve Pil gücüyle çalışan güvenlik zekası güncelleştirmelerine izin ver'i Devre **dışı olarak** **ayarlayın**. Sonra **Tamam**’ı seçin.
+4. **İmza** **Güncelleştirmeleri Microsoft Defender Virüsten Koruma bileşenleri** \> **Windows** \> ağacı genişletin ve **pil gücüyle çalışırken güvenlik zekası güncelleştirmelerine izin ver** seçeneğini **Devre Dışı** olarak ayarlayın. Sonra **Tamam**’ı seçin.
 
-Bu eylem, bilgisayar pil gücün olduğunda koruma güncelleştirmelerinin indir indirebilirsiniz.
+Bu eylem, bilgisayar pil gücündeyken koruma güncelleştirmelerinin indirilmesini engeller.
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
 
 ## <a name="related-articles"></a>İlgili makaleler
 
-- [Güncelleştirmeleri Microsoft Defender Virüsten Koruma ve taban çizgilerini uygulama](manage-updates-baselines-microsoft-defender-antivirus.md)
-- [E-posta Microsoft Defender Virüsten Koruma güncelleştirme ve Windows 10](deploy-manage-report-microsoft-defender-antivirus.md)
+- [Microsoft Defender Virüsten Koruma güncelleştirmelerini yönetme ve temelleri uygulama](manage-updates-baselines-microsoft-defender-antivirus.md)
+- [Windows 10'da Microsoft Defender Virüsten Koruma güncelleştirme ve yönetme](deploy-manage-report-microsoft-defender-antivirus.md)

@@ -1,6 +1,6 @@
 ---
-title: E-Microsoft Defender Virüsten Koruma kullanarak Microsoft Endpoint Manager
-description: Microsoft Endpoint Manager ve Microsoft Intune'i yapılandırmak için Microsoft Defender Virüsten Koruma ve Endpoint Protection
+title: Microsoft Endpoint Manager kullanarak Microsoft Defender Virüsten Koruma yapılandırma
+description: Microsoft Defender Virüsten Koruma ve Endpoint Protection yapılandırmak için Microsoft Endpoint Manager ve Microsoft Intune kullanma
 keywords: scep, intune, uç nokta koruması, yapılandırma
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -17,50 +17,64 @@ ms.technology: mde
 audience: ITPro
 ms.topic: how-to
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 1eb126481cc9872c42906e0311d1c771da44c693
-ms.sourcegitcommit: 282f3a58b8e11615b3e53328e6b89a6ac52008e9
+ms.openlocfilehash: b25e57ee28ae0ef3f219a9adda1ff3f860d063db
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "63019056"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64789304"
 ---
-# <a name="use-microsoft-endpoint-manager-to-configure-and-manage-microsoft-defender-antivirus"></a>Microsoft Endpoint Manager'i yapılandırmak ve yönetmek için Microsoft Defender Virüsten Koruma
+# <a name="use-microsoft-endpoint-manager-to-configure-and-manage-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma yapılandırmak ve yönetmek için Microsoft Endpoint Manager kullanma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
 
-[Microsoft Endpoint Manager'i](/mem/endpoint-manager-overview) kullanarak taramaları Microsoft Defender Virüsten Koruma kullanabilirsiniz. [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) [Yapılandırma Yöneticisi artık](/mem/configmgr/core/understand/introduction) yapılandırmanın bir Endpoint Manager.
+**Platform**
+- Windows
 
-## <a name="configure-microsoft-defender-antivirus-scans-in-endpoint-manager"></a>Microsoft Defender Virüsten Koruma'da taramaları Endpoint Manager
+[Microsoft Endpoint Manager kullanarak Microsoft Defender Virüsten Koruma](/mem/endpoint-manager-overview) taramaları yapılandırabilirsiniz. [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) ve [Configuration Manager](/mem/configmgr/core/understand/introduction) artık Endpoint Manager bir parçasıdır.
 
-1. Yönetim merkezine Microsoft Endpoint Manager ()[https://endpoint.microsoft.com](https://endpoint.microsoft.com) ve oturum açma.
+## <a name="configure-microsoft-defender-antivirus-scans-in-endpoint-manager"></a>Endpoint Manager'da Microsoft Defender Virüsten Koruma taramaları yapılandırma
 
-2. Uç Nokta **Güvenliği'ne gidin**.
+1. Microsoft Endpoint Manager yönetim merkezine ()[https://endpoint.microsoft.com](https://endpoint.microsoft.com) gidin ve oturum açın.
 
-3. **Yönet'in altında** Virüsten **Koruma'ya seçin**.
+2. **Endpoint Security'ye** gidin.
 
-4. İlke Microsoft Defender Virüsten Koruma seçin.
+3. **Yönet'in** altında **Virüsten Koruma'yı** seçin.
 
-5. **Yönet'in** altında **Özellikler'i seçin**.
+4. Microsoft Defender Virüsten Koruma ilkenizi seçin.
 
-6. Yapılandırma **ayarları'nın yanında** Düzenle'yi **seçin**.
+5. **Yönet'in** altında **Özellikler'i** seçin.
+
+6. **Yapılandırma ayarları'nın** yanında **Düzenle'yi** seçin.
 
    > [!IMPORTANT]
-   > AllowOnAccessProtection ve AllowIntrusionPreventionSystem virüsten koruma ayarları resmi olarak kullanımdan kullanım dışı bırakılamaz ve bu şekilde yapılandırılamaz. 
+   > AllowOnAccessProtection ve AllowIntrusionPreventionSystem virüsten koruma ayarları resmi olarak kullanım dışı bırakılmıştır ve bu nedenle yapılandırılamaz. 
 
-7. Tarama bölümünü **genişletin** ve tarama ayarlarınızı gözden geçirin veya düzenleyin.
+7. **Tarama** bölümünü genişletin ve tarama ayarlarınızı gözden geçirin veya düzenleyin.
 
-8. Gözden Geçir **+ kaydet'i seçin**.
+8. **Gözden Geçir ve kaydet'i** seçin.
 
 > [!TIP]
-> Yardıma mı ihtiyacınız var? Bkz[. Güvenlik nedeniyle uç nokta Microsoft Intune](/mem/intune/protect/endpoint-security).
+> Yardıma mı ihtiyacınız var? Bkz. [Microsoft Intune'de uç nokta güvenliğini yönetme](/mem/intune/protect/endpoint-security).
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
 
 ## <a name="related-articles"></a>İlgili makaleler
 
-- [Yönetim ve yapılandırma araçlarına başvuru makaleleri](configuration-management-reference-microsoft-defender-antivirus.md)
-- [Microsoft Defender Virüsten Koruma'da Windows 10](microsoft-defender-antivirus-in-windows-10.md)
+- [Yönetim ve yapılandırma araçları için başvuru makaleleri](configuration-management-reference-microsoft-defender-antivirus.md)
+- [Windows 10'da Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md)

@@ -16,22 +16,26 @@ manager: dansimp
 ms.technology: mde
 ms.topic: how-to
 ms.collection: M365-security-compliance
-ms.openlocfilehash: e1cbdd156306d7cc2ee41fd85baadb1fa51cf1ac
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 8961428acee5d166b0cdad4982aa5f9ed48020af
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63008103"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64788842"
 ---
 # <a name="schedule-antivirus-scans-using-powershell"></a>PowerShell kullanarak virüsten koruma taramaları zamanlama
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
 
-Bu makalede, PowerShell cmdlet'lerini kullanarak zamanlanmış taramaları nasıl yapılandırabilirsiniz? Taramaları zamanlama ve tarama türleri hakkında daha fazla bilgi edinmek için bkz. Zamanlanmış hızlı veya [tam tarama Microsoft Defender Virüsten Koruma yapılandırma](schedule-antivirus-scans.md). 
+**Platform**
+- Windows
 
-## <a name="use-powershell-cmdlets-to-schedule-scans"></a>Taramaları zamanlaması için PowerShell cmdlet'lerini kullanma
+Bu makalede, PowerShell cmdlet'lerini kullanarak zamanlanmış taramaların nasıl yapılandırıldığı açıklanır. Taramaları zamanlama ve tarama türleri hakkında daha fazla bilgi edinmek için bkz[. Zamanlanmış hızlı veya tam Microsoft Defender Virüsten Koruma taramalarını yapılandırma](schedule-antivirus-scans.md). 
+
+## <a name="use-powershell-cmdlets-to-schedule-scans"></a>Taramaları zamanlamak için PowerShell cmdlet'lerini kullanma
 
 Aşağıdaki cmdlet'leri kullanın:
 
@@ -43,9 +47,9 @@ Set-MpPreference -RandomizeScheduleTaskTimes
 
 ```
 
-Daha fazla bilgi için [PowerShell cmdlet'lerini](use-powershell-cmdlets-microsoft-defender-antivirus.md) kullanarak Microsoft Defender Virüsten Koruma'ı yapılandırma ve çalıştırma ve PowerShell'i Microsoft Defender Virüsten Koruma.[](/powershell/module/defender/)
+Daha fazla bilgi için bkz. [Microsoft Defender Virüsten Koruma yapılandırmak ve çalıştırmak için PowerShell cmdlet'lerini kullanma ve Microsoft Defender Virüsten Koruma](use-powershell-cmdlets-microsoft-defender-antivirus.md) ile PowerShell'i kullanma hakkında daha fazla bilgi için [Defender Virüsten Koruma cmdlet'leri](/powershell/module/defender/).
 
-## <a name="powershell-cmdlets-for-scheduling-scans-when-an-endpoint-is-not-in-use"></a>Uç nokta kullanımdaki bir yer değilken taramaları zamanlamayı planlamak için PowerShell cmdlet'leri
+## <a name="powershell-cmdlets-for-scheduling-scans-when-an-endpoint-is-not-in-use"></a>Bir uç nokta kullanımda olmadığında taramaları zamanlamak için PowerShell cmdlet'leri
 
 Aşağıdaki cmdlet'leri kullanın:
 
@@ -53,12 +57,12 @@ Aşağıdaki cmdlet'leri kullanın:
 Set-MpPreference -ScanOnlyIfIdleEnabled
 ```
 
-Daha fazla bilgi için bkz[. PowerShell cmdlet'lerini kullanarak PowerShell cmdlet'lerini](use-powershell-cmdlets-microsoft-defender-antivirus.md) yapılandırma ve Microsoft Defender Virüsten Koruma [Defender Virüsten Koruma cmdlet'lerini yapılandırma](/powershell/module/defender/).
+Daha fazla bilgi için bkz. Microsoft Defender Virüsten Koruma ve [Defender Virüsten Koruma cmdlet'lerini](/powershell/module/defender/) [yapılandırmak ve çalıştırmak için PowerShell](use-powershell-cmdlets-microsoft-defender-antivirus.md) cmdlet'lerini kullanma.
 
 > [!NOTE]
-> Uç noktaların kullanım içinde olmadığınız zamanlarda taramalar zamanlarken, taramalar CPU azaltma yapılandırmasına uygun değildir ve taramayı mümkün olan en hızlı şekilde tamamlamak için mevcut kaynaklardan tam olarak yararlanacak.
+> Uç noktaların kullanımda olmadığı zamanlar için taramalar zamanladığınızda, taramalar CPU azaltma yapılandırmasına uygun değildir ve taramayı mümkün olan en hızlı şekilde tamamlamak için kullanılabilir kaynaklardan tam olarak yararlanır.
 
-## <a name="powershell-cmdlets-for-scheduling-scans-to-complete-remediation"></a>Düzeltmeyi tamamlamak için taramaları zamanlamayı planlayan PowerShell cmdlet'leri
+## <a name="powershell-cmdlets-for-scheduling-scans-to-complete-remediation"></a>Düzeltmeyi tamamlamak için taramaları zamanlamak için PowerShell cmdlet'leri
 
 Aşağıdaki cmdlet'leri kullanın:
 
@@ -67,9 +71,9 @@ Set-MpPreference -RemediationScheduleDay
 Set-MpPreference -RemediationScheduleTime
 ```
 
-[PowerShell cmdlet'lerini kullanarak PowerShell cmdlet'lerini](use-powershell-cmdlets-microsoft-defender-antivirus.md) yapılandırma ve çalıştırma hakkında daha fazla bilgi Microsoft Defender Virüsten Koruma [Defender Virüsten Koruma cmdlet'lerini](/powershell/module/defender/) Microsoft Defender Virüsten Koruma.
+[PowerShell'i Microsoft Defender Virüsten Koruma](use-powershell-cmdlets-microsoft-defender-antivirus.md) ile kullanma hakkında daha fazla bilgi için bkz. Microsoft Defender Virüsten Koruma yapılandırmak ve çalıştırmak için PowerShell [cmdlet'lerini kullanma ve Defender Virüsten Koruma cmdlet'leri](/powershell/module/defender/).
 
-## <a name="powershell-cmdlets-for-scheduling-daily-scans"></a>Günlük taramaları zamanlaması için PowerShell cmdlet'leri
+## <a name="powershell-cmdlets-for-scheduling-daily-scans"></a>Günlük taramaları zamanlamak için PowerShell cmdlet'leri
 
 Aşağıdaki cmdlet'leri kullanın:
 
@@ -77,4 +81,14 @@ Aşağıdaki cmdlet'leri kullanın:
 Set-MpPreference -ScanScheduleQuickScanTime
 ```
 
-Microsoft Defender Virüsten Koruma ile PowerShell'in nasıl kullanıldığı hakkında daha fazla bilgi için bkz. Microsoft Defender Virüsten Koruma [ve Defender Virüsten Koruma cmdlet'lerini](/powershell/module/defender/) yapılandırmak ve çalıştırmak için [PowerShell cmdlet'lerini](use-powershell-cmdlets-microsoft-defender-antivirus.md) kullanma.
+PowerShell'i Microsoft Defender Virüsten Koruma ile kullanma hakkında daha fazla bilgi için bkz. Microsoft Defender Virüsten Koruma ve [Defender Virüsten Koruma cmdlet'lerini](/powershell/module/defender/) [yapılandırmak ve çalıştırmak için PowerShell](use-powershell-cmdlets-microsoft-defender-antivirus.md) cmdlet'lerini kullanma.
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)

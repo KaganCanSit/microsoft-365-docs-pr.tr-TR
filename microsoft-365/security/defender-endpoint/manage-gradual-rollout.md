@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender güncelleştirmeleri için aşamalı olarak geçiş işlemini yönetme
-description: Aşamalı güncelleştirme işlemi ve denetimleri hakkında bilgi
-keywords: güncelleştirme, güncelleştirme işlemi, denetimler, sürüm
+title: Microsoft Defender güncelleştirmeleri için aşamalı dağıtım işlemini yönetme
+description: Aşamalı güncelleştirme işlemi ve denetimleri hakkında bilgi edinin
+keywords: güncelleştirme, güncelleştirme işlemi, denetimler, yayın
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -18,60 +18,64 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 177a7965d3e5a2d4ddd2e62bdde95fbc2762645b
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: d8a500babf581cd70b92a39b32a3be0bb5d4acd3
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63329607"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64789392"
 ---
-# <a name="manage-the-gradual-rollout-process-for-microsoft-defender-updates"></a>Microsoft Defender güncelleştirmeleri için aşamalı olarak geçiş işlemini yönetme
+# <a name="manage-the-gradual-rollout-process-for-microsoft-defender-updates"></a>Microsoft Defender güncelleştirmeleri için aşamalı dağıtım işlemini yönetme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
 
-kritik koruma özellikleri sağlamak ve saldırılardan korunmak için istemci bileşenlerinin güncel olduğundan emin olmak önemlidir.
+**Platform**
+- Windows
+
+Kritik koruma özellikleri sunmak ve saldırıları önlemek için istemci bileşenlerinin güncel olduğundan emin olmak önemlidir.
 
 Özellikler çeşitli bileşenler aracılığıyla sağlanır:
 
 - [Uç Nokta Algılama & Yanıtı](overview-endpoint-detection-response.md)
-- [Buluta teslim edilen korumayla](microsoft-defender-antivirus-windows.md) [yeni nesil koruma](cloud-protection-microsoft-defender-antivirus.md)
-- [Saldırı Yüzeyini Azaltma](overview-attack-surface-reduction.md)
+- Bulut [tabanlı koruma ile yeni nesil](microsoft-defender-antivirus-windows.md) [koruma](cloud-protection-microsoft-defender-antivirus.md)
+- [Saldırı Yüzeyi Azaltma](overview-attack-surface-reduction.md)
 
-Güncelleştirmeler, aşamalı bir sürüm işlemi kullanılarak aylık olarak yayımlar. Bu işlem, erken hata algılamanın meydana gelen etkiyi yakalaması ve daha büyük bir rollamadan önce bu etkiyi hızlı bir şekilde ele almalarını sağlar.
+Güncelleştirmeler, aşamalı bir sürüm işlemi kullanılarak aylık olarak yayımlanıyor. Bu işlem, ortaya çıkan etkiyi yakalamak ve daha büyük bir dağıtımdan önce hızlı bir şekilde ele almak için erken hata algılamayı etkinleştirmeye yardımcı olur.
 
 > [!NOTE]
-> Günlük güvenlik zekası güncelleştirmelerini denetleme hakkında daha fazla bilgi için bkz. Koruma [güncelleştirmelerini Microsoft Defender Virüsten Koruma zamanlama](manage-protection-update-schedule-microsoft-defender-antivirus.md). Güncelleştirmeler, bulut teslimi koruması uç noktada sağlanmaz bile olsa yeni nesil korumanın yeni tehditlere karşı savunmada olmasını sağlar.
+> Günlük güvenlik bilgileri güncelleştirmelerini denetleme hakkında daha fazla bilgi için bkz[. Microsoft Defender Virüsten Koruma koruma güncelleştirmelerini zamanlama](manage-protection-update-schedule-microsoft-defender-antivirus.md). Güncelleştirmeler, uç nokta için bulut tabanlı koruma sağlanmıyor olsa bile yeni nesil korumanın yeni tehditlere karşı koruma sağlayabilmesini sağlar.
 
-## <a name="microsoft-gradual-rollout-model"></a>Microsoft aşamalı kademeli kademeli çıkış modeli
+## <a name="microsoft-gradual-rollout-model"></a>Microsoft aşamalı dağıtım modeli
 
-Aylık Defender güncelleştirmeleri için aşağıdaki aşamalı geçiş modeli takip edilecektir:
+Aylık Defender güncelleştirmeleri için aşağıdaki aşamalı dağıtım modeli takip edilir:
 
-1. İlk sürüm Beta kanalı abonelerine sunulacaktır.
-2. Doğrulama, geri bildirim ve düzeltmelerden sonra aşamalı olarak ve kısıtlandıktan sonra önce Kanal abonelerini önizlemek için aşamalı olarak kademeli olarak kademeli olarak geçiş işlemini başlatacağız.
-3. Daha sonra, güncelleştirmeyi genel popülasyonın geri kalanına serbest bırakmak ve %10-100 arasında ölçeklendirme yapmak için devam edeceğiz.
+1. İlk sürüm Beta kanalı abonelerine gönderilir.
+2. Doğrulama, geri bildirim ve düzeltmelerden sonra aşamalı dağıtım sürecini kısıtlanmış bir şekilde başlatıp önce kanal abonelerini önizlemeye alıyoruz.
+3. Ardından güncelleştirmeyi genel popülasyonun geri kalanına yayınlamaya devam ediyoruz ve ölçeği %10-100 oranında artırıyoruz.
 
-Mühendislerimiz gereken etkiyi sürekli izlemektedir ve bir düzeltme oluşturmak için tüm sorunları büyülemektedir.
+Mühendislerimiz, gerektiğinde bir düzeltme oluşturmak için etkileri sürekli olarak izler ve sorunları yükseltir.
 
 ## <a name="how-to-customize-your-internal-deployment-process"></a>İç dağıtım işleminizi özelleştirme
 
-Makineniz Windows Update'Windows Defender güncelleştirmeleri alıyorsa aşamalı olarak kademeli geçiş işlemi, bazı makinenizin Defender güncelleştirmelerini diğerlerine göre daha önce almasine neden olabilir. Aşağıdaki bölümde, güncelleştirme kanalı yapılandırmasından yararlanarak otomatik güncelleştirmelerin belirli cihaz gruplarına farklı aksına izin verecek bir stratejinin nasıl tanımlanacakları açıklanıyor.
+Makineleriniz Windows Update Defender güncelleştirmelerini alıyorsa aşamalı dağıtım işlemi bazı makinelerinizin Defender güncelleştirmelerini diğerlerinden daha erken almasına neden olabilir. Aşağıdaki bölümde, güncelleştirme kanalı yapılandırmasından yararlanarak otomatik güncelleştirmelerin belirli cihaz gruplarına farklı şekilde akmasını sağlayacak bir stratejinin nasıl tanımlanacağı açıklanmaktadır.
 
 > [!NOTE]
-> Kendi aşamalı sürümünizi planken lütfen her zaman önizleme ve aşamalı kanallara abone olan farklı cihazlar seçmeyi unutmayın. Bu, hem organizasyon hem de Microsoft'a ortamınıza özgü sorunları önleme veya bulma ve düzeltme fırsatı sağlar.
+> Kendi aşamalı sürümünüzü planlarken, lütfen her zaman önizlemeye ve hazırlanmış kanallara abone olan cihazların bir seçimine sahip olduğunuzdan emin olun. Bu, hem kuruluşunuza hem de Microsoft'a ortamınıza özgü sorunları engelleme veya bulma ve düzeltme fırsatı sağlar.
 
-Örneğin, Windows Server Update Services (WSUS) veya Microsoft Endpoint Configuration Manager (MECM) aracılığıyla güncelleştirme alan makinelerde, tüm Windows Defender Uç Nokta güncelleştirmeleri de dahil olmak üzere başka seçenekler de vardır.
+Windows Sunucu Güncelleştirme Hizmetleri (WSUS) veya Microsoft Endpoint Configuration Manager (MECM) gibi güncelleştirmeleri alan makineler için, tüm Windows güncelleştirmeleri için seçenekler de dahil olmak üzere daha fazla seçenek sağlanır Pertahanan Microsoft untuk Titik Akhir.
 
-- Daha fazla bilgi için WSUS, MECM gibi bir çözümü kullanarak güncelleştirmelerin dağıtımını ve uygulamasını yönetme konusunda daha fazla bilgi için Microsoft Defender Virüsten Koruma [temelleri yönetme - ve temelleri uygulama - Windows okuyun](manage-updates-baselines-microsoft-defender-antivirus.md#product-updates).
+- Güncelleştirmelerin dağıtımını ve uygulamasını yönetmek için WSUS, MECM gibi bir çözümün nasıl kullanılacağı hakkında daha fazla bilgi için [bkz. Microsoft Defender Virüsten Koruma güncelleştirmeleri yönetme ve temelleri uygulama - Windows güvenlik](manage-updates-baselines-microsoft-defender-antivirus.md#product-updates).
 
 ## <a name="update-channels-for-monthly-updates"></a>Aylık güncelleştirmeler için kanalları güncelleştirme
 
-Makinenin aylık altyapı ve platform güncelleştirmelerini aldığı tempoyu tanımlamak için bir makineyi güncelleştirme kanalına atabilirsiniz.
+Bir makinenin aylık altyapı ve platform güncelleştirmelerini aldığı tempoyu tanımlamak için bir makineyi güncelleştirme kanalına atayabilirsiniz.
 
-Güncelleştirmeleri yapılandırma hakkında daha fazla bilgi için bkz [. Microsoft Defender güncelleştirmeleri için özel bir aşamalı kademeli uygulama işlemi oluşturma](configure-updates.md).
+Güncelleştirmeleri yapılandırma hakkında daha fazla bilgi için bkz. [Microsoft Defender güncelleştirmeleri için özel bir aşamalı dağıtım işlemi oluşturma](configure-updates.md).
 
 Aşağıdaki güncelleştirme kanalları kullanılabilir:
 
@@ -81,17 +85,17 @@ Aşağıdaki güncelleştirme kanalları kullanılabilir:
 
 |Kanal adı|Açıklama|Uygulama|
 |---|---|---|
-|Beta Kanalı - Prerelease|Güncelleştirmeleri diğer kişiden önce test edin|Bu kanal olarak ayarlanmış cihazlar, yeni aylık güncelleştirmeleri ilk alan olacaktır. Sorunları Microsoft'a belirlemek ve raporlamaya katılmak için Beta Kanal'ı seçin. Windows Insider Programı'nın cihazları varsayılan olarak bu kanala abonedir. Yalnızca test ortamlarında kullanım için.|
-|Güncel Kanal (Önizleme)|Aşamalı sürüm sırasında güncel **Kanal güncelleştirmelerini** daha önce alın|Bu kanala ayarlanmış cihazlara, aşamalı sürüm döngüsünde en erken güncelleştirmeler sunulacaktır. Üretim öncesi/doğrulama ortamları için önerilir.|
-|Güncel Kanal (Aşamalı)|Güncel Kanal güncelleştirmelerini daha sonra aşamalı sürüm sırasında alın|Cihazlara aşamalı sürüm döngüsünde daha sonra güncelleştirmeler sunulacaktır. Cihaz popülasyonu içinde küçük, temsili bir bölüme (~%10) uygulama önerilir.|
-|Güncel Kanal (Geniş)|Aşamalı sürüm sonunda güncelleştirmeleri alın|Ancak aşamalı sürüm döngüsü tamamlandıktan sonra cihazlara güncelleştirmeler sunulacaktır. Üretim nüfuslu geniş bir cihaz kümesine (~%10-100) uygulama önerilir.|
-|Kritik: Gecikme Süresi|Defender güncelleştirmelerini geciktirme|Cihazlara 48 saatlik bir gecikme süresiyle güncelleştirmeler sunulacaktır. Yalnızca sınırlı güncelleştirmeler alan veri merkezi makineleri için en iyi. Yalnızca kritik ortamlar için önerilir.|
-|(default)||Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız, cihaz Güncel Kanal'da (Varsayılan) kalır: Aşamalı sürüm döngüsü sırasında otomatik olarak güncel kalın. Çoğu cihaz için uygundur.|
+|Beta Kanalı - Yayın Öncesi|Güncelleştirmeleri diğerlerinden önce test etme|Yeni aylık güncelleştirmeleri ilk alan cihazlar bu kanala ayarlanır. Sorunları tanımlama ve Microsoft'a raporlamaya katılmak için Beta Kanalı'na tıklayın. Windows Insider Programı'ndaki cihazlar varsayılan olarak bu kanala abonedir. Yalnızca test ortamlarında kullanım için.|
+|Geçerli Kanal (Önizleme)|Geçerli Kanal güncelleştirmelerini aşamalı sürüm sırasında **daha önce** alın|Bu kanala ayarlanan cihazlara, aşamalı sürüm döngüsü boyunca en erken güncelleştirmeler sunulacaktır. Ön üretim/doğrulama ortamları için önerilir.|
+|Geçerli Kanal (Aşamalı)|Aşamalı sürüm sırasında Güncel Kanal güncelleştirmelerini daha sonra alın|Cihazlara daha sonra aşamalı sürüm döngüsü sırasında güncelleştirmeler sunulacaktır. Cihaz popülasyonunuzun küçük, temsili bir bölümüne (%10) başvurmanız önerilir.|
+|Geçerli Kanal (Geniş)|Aşamalı sürümün sonunda güncelleştirmeleri alma|Cihazlara yalnızca aşamalı sürüm döngüsü tamamlandıktan sonra güncelleştirmeler sunulacaktır. Üretim popülasyonunuzda (~%10-100) geniş bir cihaz kümesine uygulanması önerilir.|
+|Kritik: Gecikme Süresi|Defender güncelleştirmelerini geciktirme|Cihazlara 48 saat gecikmeli güncelleştirmeler sunulacaktır. Yalnızca sınırlı güncelleştirmeler alan veri merkezi makineleri için en iyi yöntemdir. Yalnızca kritik ortamlar için önerilir.|
+|(varsayılan)||Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız cihaz Geçerli Kanal'da kalır (Varsayılan): Aşamalı yayın döngüsü sırasında otomatik olarak güncel kalın. Çoğu cihaz için uygundur.|
 |
 
 ### <a name="update-channels-for-daily-updates"></a>Günlük güncelleştirmeler için kanalları güncelleştirme
 
-Ayrıca, bir makinenin günlük güncelleştirmeleri aldığı tempoyu tanımlamak için bir kanala da atabilirsiniz. Aylık işlemden farklı olarak, beta kanalı olmadığını ve bu aşamalı sürüm döngüsünün günde birden çok kez tekrarlal olduğunu unutmayın.
+Ayrıca, bir makineyi günlük güncelleştirmeleri aldığı tempoyu tanımlamak için kanala atayabilirsiniz. Aylık işlemden farklı olarak Beta kanalı olmadığını ve bu aşamalı yayın döngüsünün günde birden çok kez gerçekleştiğini unutmayın.
 
 <br>
 
@@ -99,38 +103,48 @@ Ayrıca, bir makinenin günlük güncelleştirmeleri aldığı tempoyu tanımlam
 
 |Kanal adı|Açıklama|Uygulama|
 |---|---|---|
-|Güncel Kanal (Aşamalı)|Güncel Kanal güncelleştirmelerini daha sonra aşamalı sürüm sırasında alın|Cihazlara aşamalı sürüm döngüsünde daha sonra güncelleştirmeler sunulacaktır. Cihaz popülasyonu içinde küçük, temsili bir bölüme (~%10) uygulama önerilir.|
-|Güncel Kanal (Geniş)|Aşamalı sürüm sonunda güncelleştirmeleri alın|Aşamalı sürüm döngüsünde cihazlara güncelleştirmeler sunulacaktır. Yalnızca sınırlı güncelleştirmeler alan veri merkezi makineleri için en iyi. Not: Bu ayar tüm Defender güncelleştirmeleri için geçerlidir.|
-|(default)||Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız, cihaz Güncel Kanal'da (Varsayılan) kalır: Aşamalı sürüm döngüsü sırasında otomatik olarak güncel kalın. Çoğu cihaz için uygun|
+|Geçerli Kanal (Aşamalı)|Aşamalı sürüm sırasında Güncel Kanal güncelleştirmelerini daha sonra alın|Cihazlara daha sonra aşamalı sürüm döngüsü sırasında güncelleştirmeler sunulacaktır. Cihaz popülasyonunuzun küçük, temsili bir bölümüne (%10) başvurmanız önerilir.|
+|Geçerli Kanal (Geniş)|Aşamalı sürümün sonunda güncelleştirmeleri alma|Cihazlara aşamalı sürüm döngüsünden sonra güncelleştirmeler sunulacaktır. Yalnızca sınırlı güncelleştirmeler alan veri merkezi makineleri için en iyi yöntemdir. Not: Bu ayar tüm Defender güncelleştirmeleri için geçerlidir.|
+|(varsayılan)||Bu ilkeyi devre dışı bırakır veya yapılandırmazsanız cihaz Geçerli Kanal'da kalır (Varsayılan): Aşamalı yayın döngüsü sırasında otomatik olarak güncel kalın. Çoğu cihaz için uygundur|
 |
 
 > [!NOTE]
-> Zaman gecikmesi yerine en yeni imzaya güncellemeye zorlamak isterseniz, önce bu ilkeyi kaldırmanız gerekir.
+> Gecikme süresinden yararlanarak yerine en yeni imzaya bir güncelleştirme uygulamak isterseniz, önce bu ilkeyi kaldırmanız gerekir.
 
 ## <a name="update-guidance"></a>Güncelleştirme kılavuzu
 
-Çoğu durumda, Windows Update'i kullanırken önerilen yapılandırma, uç noktaların geldiğinde aylık Defender güncelleştirmelerini almalarına ve uygulamalarına izin vermektir. Bu, aralarındaki koruma ve ortaya olabilecek değişikliklerle ilişkili olası etki arasındaki en iyi dengeyi sağlar.
+Çoğu durumda, Windows Update kullanılırken önerilen yapılandırma uç noktaların geldikçe aylık Defender güncelleştirmelerini almasına ve uygulamasına izin vermektir. Bu, koruma ile ortaya çıkarabilecekleri değişikliklerle ilişkili olası etki arasında en iyi dengeyi sağlar.
 
-Otomatik Defender güncelleştirmelerinin daha fazla denetlenen aşamalı dağıtımına gerek olan ortamlarda, dağıtım gruplarında bir yaklaşımı göz önünde bulundurmalısınız:
+Otomatik Defender güncelleştirmelerinin daha denetimli aşamalı dağıtımına ihtiyaç duyulan ortamlar için dağıtım gruplarıyla ilgili bir yaklaşımı göz önünde bulundurun:
 
-1. Insider programına Windows veya Beta Kanalına bir cihaz grubu attayabilirsiniz.
-2. Yeni güncelleştirmeleri erkenden almak için, Kanalı Önizleme Kanalını (genellikle doğrulama ortamları) kabul ediyor bir pilot grup atama.
-3. Aşamalı kanaldan aşamalı olarak geçiş sırasında güncelleştirmeleri alacak bir makine grubu atatabilirsiniz. Normalde, popülasyonu temsili %10'olacak.
-4. Aşamalı sürüm döngüsü tamamlandıktan sonra güncelleştirmeleri alan bir makine grubu atama. Bunlar genellikle önemli üretim sistemleridir.
+1. Windows Insider programına katılın veya beta kanalına bir cihaz grubu atayın.
+2. Yeni güncelleştirmeleri erken almak için önizleme kanalını (genellikle doğrulama ortamları) kabul eden bir pilot grup belirleyin.
+3. Aşamalı kanaldan aşamalı dağıtım sırasında daha sonra güncelleştirmeleri alan bir makine grubu belirleyin. Genellikle bu, popülasyonun yaklaşık %10'unu temsil eder.
+4. Aşamalı sürüm döngüsü tamamlandıktan sonra güncelleştirmeleri alan bir makine grubu belirleyin. Bunlar genellikle önemli üretim sistemleridir.
 
-Diğer cihazlar için varsayılan ayar, Microsoft aşamalı olarak uygulama işlemi sırasında edinilen yeni güncelleştirmeleri almaktır ve başka yapılandırma gerekmez.
+Cihazların geri kalanı için varsayılan ayar, Microsoft aşamalı dağıtım işlemi sırasında gelen yeni güncelleştirmeleri almaktır ve başka yapılandırma gerekmez.
 
 Bu modeli benimseme:
 
-- Erken sürümler üretim ortamına ulaşmadan önce test olanak sağlar
-- Üretim ortamının düzenli güncelleştirmeleri hala aldığından ve kritik tehditlere karşı koruma sağlamakta olduğundan emin olun.
+- Üretim ortamına ulaşmadan önce erken sürümleri test etmenizi sağlar
+- Üretim ortamının hala düzenli güncelleştirmeler aldığından ve kritik tehditlere karşı koruma sağladığından emin olun.
 
 ## <a name="management-tools"></a>Yönetim araçları
 
-Aylık güncelleştirmeler için kendi özel aşamalı kademeli kademeli uygulama işleminizi oluşturmak için aşağıdaki araçları kullanabilirsiniz:
+Aylık güncelleştirmeler için kendi özel aşamalı dağıtım işleminizi oluşturmak için aşağıdaki araçları kullanabilirsiniz:
 
 - Grup ilkesi
 - Microsoft Endpoint Manager
 - PowerShell
 
-Bu araçların kullanımı hakkında ayrıntılı bilgi için bkz [. Microsoft Defender güncelleştirmeleri için özel bir aşamalı kademeli kademeli uygulama işlemi oluşturma](configure-updates.md).
+Bu araçların nasıl kullanılacağı hakkında ayrıntılı bilgi için bkz. [Microsoft Defender güncelleştirmeleri için özel bir aşamalı dağıtım işlemi oluşturma](configure-updates.md).
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)

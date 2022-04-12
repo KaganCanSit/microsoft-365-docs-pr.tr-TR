@@ -1,7 +1,7 @@
 ---
-title: Ağ korumasını açma
-description: Grup ilkesi, PowerShell veya Mobile Cihaz Yönetimi mobil Configuration Manager.
-keywords: Ağ koruması, exploits, kötü amaçlı web sitesi, ip, etki alanı, etki alanları, etkinleştirmek, etkinleştirme
+title: Ağ korumasını açın
+description: grup ilkesi, PowerShell veya Mobil Cihaz Yönetimi ve Configuration Manager ile ağ korumasını etkinleştirin.
+keywords: Ağ koruması, açıklardan yararlanmalar, kötü amaçlı web sitesi, ip, etki alanı, etki alanları, etkinleştirme, açma
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -15,42 +15,46 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 4c3b74179294d0b028dd07c3a6f4f28e844237d3
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: d37723e45c5c4049e913422b2500b74d36c701eb
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64469943"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64789722"
 ---
-# <a name="turn-on-network-protection"></a>Ağ korumasını açma
+# <a name="turn-on-network-protection"></a>Ağ korumasını açın
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- Microsoft Defender Virüsten Koruma
+
+**Platform**
+- Windows
 
 > [!TIP]
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
-[Ağ koruması,](network-protection.md) çalışanların kimlik avı dolandırıcılığı, açıklardan yararlanma ve diğer zararlı içerikleri barındırmak için herhangi bir uygulamayı kullanarak kimlik avı dolandırıcılığı, açıkları kullanma ve diğer zararlı içeriklere erişmesini önlemeye yardımcı olur. Bir [test ortamında, etkinleştirmeden](evaluate-network-protection.md) önce engellenmiş olan uygulamaları görüntülemek için ağ korumasını denetleyebilirsiniz.
+[Ağ koruması](network-protection.md) , çalışanların internet üzerinde kimlik avı dolandırıcılığı, açıklardan yararlanma ve diğer kötü amaçlı içeriğe ev sahipliği yapabilen tehlikeli etki alanlarına erişmek için herhangi bir uygulama kullanmasını önlemeye yardımcı olur. Etkinleştirmeden önce engellenecek uygulamaları görüntülemek için bir test ortamında [ağ korumasını denetleyebilirsiniz](evaluate-network-protection.md) .
 
-[Ağ filtreleme yapılandırma seçenekleri hakkında daha fazla bilgi edinmek için:](/mem/intune/protect/endpoint-protection-windows-10#network-filtering)
+[Ağ filtreleme yapılandırma seçenekleri hakkında daha fazla bilgi edinin.](/mem/intune/protect/endpoint-protection-windows-10#network-filtering)
 
-## <a name="check-if-network-protection-is-enabled"></a>Ağ korumasının etkin olup olduğunu denetleme
+## <a name="check-if-network-protection-is-enabled"></a>Ağ korumasının etkinleştirilip etkinleştirilmediğini denetleme
 
-Kayıt Defteri Düzenleyicisi'ni kullanarak yerel bir cihazda ağ korumasının etkinleştirildikten sonrasını kontrol edin.
+Kayıt defteri düzenleyicisini kullanarak yerel bir cihazda ağ korumasının etkinleştirilip etkinleştirilmediğini denetleyin.
 
-1. Görev çubuğunda **Başlat** düğmesini seçin ve kayıt defteri düzenleyicisini **açmak için regedit** yazın.
+1. Görev çubuğunda **Başlangıç** düğmesini seçin ve kayıt defteri düzenleyicisini açmak için **regedit** yazın.
 
-2. Yan **HKEY_LOCAL_MACHINE** Seçenekler'i seçin.
+2. Yan **menüden HKEY_LOCAL_MACHINE** seçin.
 
-3. İç içe menülerde,  \> **MICROSOFT** \>  \> Windows Defender **Windows Defender** \> **Exploit Guard** \> **Ağ Koruması'na gidin**.
+3. İç içe menülerde **YAZıLıM** \> **İlkeleri** \> **Microsoft** \> **Windows Defender Windows Defender** \> **Exploit Guard** **Ağ Koruması'na**\> gidin.
 
-Anahtar yoksa, SOFTWARE **Microsoft** \> Windows Defender  \> **Windows Defender** \> **Exploit Guard** **Network Protection'a**\> gidin.
+Anahtar eksikse **SOFTWARE** \> **Microsoft** \> **Windows Defender Windows Defender** \> **Exploit Guard** **Ağ Koruması'na**\> gidin.
 
-4. Cihazda **ağ korumasının geçerli durumunu görmek için EnableNetworkProtection** öğesini seçin:
+4. Cihazdaki ağ korumasının geçerli durumunu görmek için **EnableNetworkProtection** öğesini seçin:
 
    - 0 veya **Kapalı**
    - 1 veya **Açık**
@@ -60,7 +64,7 @@ Anahtar yoksa, SOFTWARE **Microsoft** \> Windows Defender  \> **Windows Defender
 
 ## <a name="enable-network-protection"></a>Ağ korumasını etkinleştirme
 
-Şu yöntemlerden herhangi birini kullanarak ağ korumasını etkinleştirin:
+Aşağıdaki yöntemlerden herhangi birini kullanarak ağ korumasını etkinleştirin:
 
 - [PowerShell](#powershell)
 - [Mobil Cihaz Yönetimi (MDM)](#mobile-device-management-mdm)
@@ -70,7 +74,7 @@ Anahtar yoksa, SOFTWARE **Microsoft** \> Windows Defender  \> **Windows Defender
 
 ### <a name="powershell"></a>PowerShell
 
-1. **PowerShell yazın ve** Başlat menüsü sağ tıklayın ve **Windows PowerShell Yönetici olarak** **çalıştır'ı seçin**.
+1. Başlat menüsü **powershell** yazın, **Windows PowerShell** sağ tıklayın ve **Yönetici olarak çalıştır'ı** seçin.
 
 2. Aşağıdaki cmdlet'i girin:
 
@@ -78,71 +82,71 @@ Anahtar yoksa, SOFTWARE **Microsoft** \> Windows Defender  \> **Windows Defender
     Set-MpPreference -EnableNetworkProtection Enabled
     ```
 
-3. İsteğe Bağlı: Aşağıdaki cmdlet'i kullanarak bu özelliği denetim modunda etkinleştirin:
+3. İsteğe bağlı: Aşağıdaki cmdlet'i kullanarak özelliği denetim modunda etkinleştirin:
 
     ```PowerShell
     Set-MpPreference -EnableNetworkProtection AuditMode
     ```
 
-    Özelliği `Disabled` kapatmak `AuditMode` yerine `Enabled` veya kapatmak için kullanın.
+    Özelliği kapatmak için veya `Enabled` yerine `AuditMode` kullanın`Disabled`.
 
 ### <a name="mobile-device-management-mdm"></a>Mobil cihaz yönetimi (MDM)
 
-Ağ korumasını etkinleştirmek veya devre dışı bırakmak veya denetim modunu etkinleştirmek için [./Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender) yapılandırma hizmet sağlayıcısını (CSP) kullanın.
+Ağ korumasını etkinleştirmek veya devre dışı bırakmak ya da denetim modunu etkinleştirmek için [./Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender) yapılandırma hizmet sağlayıcısını (CSP) kullanın.
 
-[Ağ korumasını etkinleştirmeden veya devre dışı bırakmadan ya da denetim modunu](https://support.microsoft.com/topic/update-for-microsoft-defender-antimalware-platform-92e21611-8cf1-8e0e-56d6-561a07d144cc) etkinleştirmeden önce Microsoft Defender kötü amaçlı yazılımdan koruma platformunu en son sürüme güncelleştirin.
+Ağ korumasını etkinleştirmeden veya devre dışı bırakmadan veya denetim modunu etkinleştirmeden önce [Microsoft Defender kötü amaçlı yazılımdan koruma platformunu en son sürüme güncelleştirin](https://support.microsoft.com/topic/update-for-microsoft-defender-antimalware-platform-92e21611-8cf1-8e0e-56d6-561a07d144cc).
 
 
 ### <a name="microsoft-endpoint-manager"></a>Microsoft Endpoint Manager
 
-1. Microsoft Endpoint Manager yönetim merkezinde ( oturum açmahttps://endpoint.microsoft.com).
+1. Microsoft Endpoint Manager yönetim merkezinde (https://endpoint.microsoft.com).
 
-2. Cihazlar **Yapılandırma** **profilleriCreate** >  **profili'ne** >  gidin.
+2. **CihazlarYapılandırma** >  **profilleriProfil** >  oluştur'a gidin.
 
-3. Profil **oluştur uç menüsünde** **Platform'ı seçin** ve sonra da Şablon **Olarak Profil** **Türü'ne tıklayın**.
+3. **Profil oluştur** açılır penceresinde **Platform'u** ve ardından **Profil Türü'nü** **Şablon** olarak seçin.
 
-4. Şablon **adı'nın** altında, **şablon listesinden** Uç Nokta korumasını seçin ve sonra da Oluştur'a **tıklayın**.
+4. **Şablon adında**, şablon listesinden **Uç nokta koruması'nı** seçin ve ardından **Oluştur'u** seçin.
 
-4. Uç nokta **korumasıBasics** >  **seçeneğine** gidin, profiliniz için bir ad girin ve ardından Sonraki'yi **seçin**.
+4. **Endpoint** **protectionBasics'e** >  gidin, profiliniz için bir ad sağlayın ve **İleri'yi** seçin.
 
-5. Yapılandırma ayarları **bölümünde,** Microsoft Defender Exploit Guard  > **Network filteringNetwork** >  **protectionEnable** >  veya Audit bölümüne gidin. **İleri**'yi seçin.
+5. **Yapılandırma ayarları** bölümünde **Microsoft Defender Exploit Guard** >  **Network filtrelemeSiyaz** >  **korumasıEnable** >  veya **Audit'e** gidin. **İleri**'yi seçin.
 
-6. Kurum için **gereken uygun** **Kapsam etiketlerini**, **Ödevler ve** Uygulanabilirlik kurallarını seçin. Yöneticiler daha fazla gereksinimler ayarlamıyor olabilir.
+6. Kuruluşunuzun gerektirdiği uygun **Kapsam etiketlerini**, **Atamaları** ve **Uygulanabilirlik kurallarını** seçin. Yöneticiler daha fazla gereksinim ayarlayabilir.
 
-7. Tüm bilgileri gözden geçirerek Oluştur'a **seçin**.
+7. Tüm bilgileri gözden geçirin ve **oluştur'u** seçin.
 
 ### <a name="group-policy"></a>Grup İlkesi
 
 Etki alanına katılmış bilgisayarlarda veya tek başına bir bilgisayarda ağ korumasını etkinleştirmek için aşağıdaki yordamı kullanın.
 
-1. Tek başına bir bilgisayarda Başlat'a **gidin** ve ardından Grup ilkesi **düzenle'yi seçin**.
+1. Tek başına bir bilgisayarda **Başlat'a** gidin ve **grup ilkesini düzenle** yazın ve seçin.
 
     *-Veya-*
 
-    Etki alanına katılmış bir grup ilkesi yönetim bilgisayarda, [grup ilkesi](https://technet.microsoft.com/library/cc731212.aspx) Yönetim Konsolu'nu açın, yapılandırmak istediğiniz grup ilkesi Nesne'ye sağ tıklayın ve Düzenle'yi **seçin**.
+    Etki alanına katılmış bir grup ilkesi yönetim bilgisayarında [grup ilkesi Yönetim Konsolu'nu](https://technet.microsoft.com/library/cc731212.aspx) açın, yapılandırmak istediğiniz grup ilkesi Nesnesine sağ tıklayın ve **Düzenle'yi** seçin.
 
-2. Grup ilkesi **Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin ve** Yönetim **şablonları'ı seçin**.
+2. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin ve **Yönetim şablonları'nı** seçin.
 
-3. **Exploit Guard** \> Ağ **koruması Windows bileşenleri** \> **Microsoft Defender Virüsten Koruma Windows Defender** \> **ağacı genişletin**.
+3. **Exploit Guard** \> **Ağ koruması** **Windows Defender Microsoft Defender Virüsten Koruma bileşenleri** \> **Windows** \> için ağacı genişletin.
 
    > [!NOTE]
-   > Grup ilkesi yolunun Windows, "grup ilkesi" yerine "Windows Defender Virüsten Koruma" Microsoft Defender Virüsten Koruma.
+   > Windows'ın eski sürümlerinde, grup ilkesi yolu "Microsoft Defender Virüsten Koruma" yerine "Windows Defenderin virustentorjunta" diyebilir.
 
-4. Kullanıcıların ve uygulamaların tehlikeli **web sitelerine erişmesini engelle ayarına çift tıklayın** ve Seçeneği Etkin olarak **ayarlayın**. Seçenekler bölümünde, aşağıdaki seçeneklerden birini belirtebilirsiniz:
-    - **Engelle** - Kullanıcılar kötü amaçlı IP adreslerine ve etki alanlarına erişebilirsiniz.
-    - **Devre Dışı Bırak (Varsayılan)** - Ağ koruma özelliği çalışmaz. Kullanıcıların kötü amaçlı etki alanlarına erişimi engel olmayacaktır.
-    - **Denetim Modu** - Kullanıcı kötü amaçlı bir IP adresini veya etki alanını ziyaret ettiyse, olay günlüğüne Windows kaydedilir. Bununla birlikte, kullanıcının adresi ziyaret etmeleri engel olmayacaktır.
+4. **Kullanıcıların ve uygulamaların tehlikeli web sitelerine erişmesini engelle** ayarına çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. Seçenekler bölümünde aşağıdaki seçeneklerden birini belirtmeniz gerekir:
+    - **Engelle** - Kullanıcılar kötü amaçlı IP adreslerine ve etki alanlarına erişemez.
+    - **Devre dışı bırak (Varsayılan)** - Ağ koruma özelliği çalışmaz. Kullanıcıların kötü amaçlı etki alanlarına erişimi engellenmez.
+    - **Denetim Modu** - Kullanıcı kötü amaçlı bir IP adresini veya etki alanını ziyaret ederse, olay Windows olay günlüğüne kaydedilir. Ancak, kullanıcının adresi ziyaret etme engellenmez.
 
    > [!IMPORTANT]
-   > Ağ korumasını tümüyle etkinleştirmek için, varsayılan grup ilkesi **seçeneği** Etkin olarak ayar olmalı ve ayrıca seçenekler açılan menüsünde Engelle'yi seçmeniz gerekir.
+   > Ağ korumasını tam olarak etkinleştirmek için, grup ilkesi seçeneğini **Etkin** olarak ayarlamanız ve ayrıca seçenekler açılan menüsünde **Engelle'yi** seçmeniz gerekir.
 
-Kayıt Defteri düzenleyicisini kullanarak yerel bir bilgisayarda ağ korumasının etkinleştirildiğinden onaylayın:
+Kayıt defteri düzenleyicisini kullanarak yerel bir bilgisayarda ağ korumasının etkinleştirildiğini onaylayın:
 
-1. Kayıt **Defteri Düzenleyicisi'ni** açmak için **Başlat'ı seçin ve regedit** **yazın**.
+1. **Kayıt Defteri Düzenleyicisi'ni** açmak için **Başlat'ı** seçin ve **regedit** yazın.
 
-2. Gezintiye **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection\EnableNetworkProtection**
+2. **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection\EnableNetworkProtection'a** gidin
 
-3. **EnableNetworkProtection öğesini seçin** ve değeri onaylayın:
+3. **EnableNetworkProtection'ı** seçin ve değeri onaylayın:
    - 0=Kapalı
    - 1=Açık
    - 2=Denetim
@@ -151,26 +155,26 @@ Kayıt Defteri düzenleyicisini kullanarak yerel bir bilgisayarda ağ korumasın
 
 1. Configuration Manager konsolunu açın.
 
-2. Varlıklar ve **Uyumluluk Endpoint Protection** >  **Windows Defender** >  **Exploit Guard'a gidin**. 
+2. **Varlıklar ve Uyumluluk** >  **Endpoint Protection Windows Defender** >  **Exploit Guard'a** gidin. 
 
-3. Yeni **bir ilke oluşturmak için şeritten Exploit Guard** İlkesi Oluştur'a tıklayın.
-   - Var olan bir ilkeyi düzenlemek için, ilkeyi seçin ve ardından **şeritten** veya sağ tıklama menüsünden Özellikler'i seçin. Ağ Koruması **sekmesinden** Ağ korumasını yapılandır **seçeneğini** düzenleyin.  
+3. Yeni bir ilke oluşturmak için şeritten **Exploit Guard İlkesi Oluştur'u** seçin.
+   - Var olan bir ilkeyi düzenlemek için ilkeyi seçin, ardından şeritten veya sağ tıklama menüsünden **Özellikler'i** seçin. **Ağ Koruması sekmesinden Ağ korumasını yapılandır** seçeneğini düzenleyin.  
 
-4. Genel **sayfasında** , yeni ilke için bir ad belirtin ve Ağ koruma **seçeneğinin etkinleştirildiğinden** emin olun. 
+4. **Genel** sayfasında, yeni ilke için bir ad belirtin ve **Ağ koruması** seçeneğinin etkinleştirildiğini doğrulayın. 
 
-5. Ağ **koruması sayfasında** , Ağ korumasını yapılandır seçeneği için aşağıdaki **ayarlardan birini** seçin:
+5. **Ağ koruması** sayfasında Ağ **korumasını yapılandır** seçeneği için aşağıdaki ayarlardan birini seçin:
    - **Engelle**
    - **Denetim**
    - **Devre dışı**
    
 6. Kalan adımları tamamlayın ve ilkeyi kaydedin. 
 
-7. İlkeyi koleksiyona **dağıtmak için** şeritten Dağıt'ı seçin.
+7. İlkeyi bir koleksiyona dağıtmak için şeritten **Dağıt'ı** seçin.
 
 
 > [!IMPORTANT]
-> Bir Exploit Guard ilkesi Configuration Manager sonra dağıtımı kaldırırsanız, Exploit Guard ayarları istemcilerden kaldırılamaz. `Delete not supported`istemcinin Exploit Guard Configuration Manager, Configuration Manager ExploitGuardHandler.log dosyasına kaydedilir. <!--CMADO8538577-->
-> Bu ayarları kaldırmak için SYSTEM bağlamı altında aşağıdaki PowerShell betiği çalıştırabilirsiniz:<!--CMADO9907132-->
+> bir Exploit Guard ilkesini Configuration Manager dağıttığınızda, dağıtımı kaldırırsanız Exploit Guard ayarları istemcilerden kaldırılmaz. `Delete not supported`, istemcinin Exploit Guard dağıtımını kaldırırsanız Configuration Manager istemcisinin ExploitGuardHandler.log dosyasına kaydedilir. <!--CMADO8538577-->
+> Aşağıdaki PowerShell betiği, bu ayarları kaldırmak için SİSTEM bağlamı altında çalıştırılabilir:<!--CMADO9907132-->
 >
 > ```powershell
 > $defenderObject = Get-WmiObject -Namespace "root/cimv2/mdm/dmmap" -Class "MDM_Policy_Config01_Defender02" -Filter "InstanceID='Defender' and ParentID='./Vendor/MSFT/Policy/Config'"
@@ -191,8 +195,8 @@ Kayıt Defteri düzenleyicisini kullanarak yerel bir bilgisayarda ağ korumasın
 
 - [Ağ koruması](network-protection.md)
 
-- [Ağ koruması ve TCP üç yol el sıkışması](network-protection.md#network-protection-and-the-tcp-three-way-handshake)
+- [Ağ koruması ve TCP üç yönlü el sıkışması](network-protection.md#network-protection-and-the-tcp-three-way-handshake)
 
-- [Ağ korumasını değerlendirme](evaluate-network-protection.md)
+- [Ağ korumasını değerlendirin](evaluate-network-protection.md)
 
 - [Ağ koruması sorunlarını giderme](troubleshoot-np.md)

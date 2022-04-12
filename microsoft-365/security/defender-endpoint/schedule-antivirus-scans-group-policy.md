@@ -1,6 +1,6 @@
 ---
-title: Grup İlkesini kullanarak virüsten koruma taramaları zamanlama
-description: Virüsten koruma taramalarını ayarlamak için Grup İlkesi kullanma
+title: grup ilkesi kullanarak virüsten koruma taramaları zamanlama
+description: Virüsten koruma taramalarını ayarlamak için grup ilkesi kullanma
 keywords: hızlı tarama, tam tarama, zamanlama, grup ilkesi, virüsten koruma
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -16,75 +16,89 @@ manager: dansimp
 ms.technology: mde
 ms.topic: how-to
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 0e5e22b1c3f73f39ad65df39fd25e9b7b6e8a913
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: dbd3f2b4342757509a6440ff87a112b75b663f22
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63008104"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64788050"
 ---
-# <a name="schedule-antivirus-scans-using-group-policy"></a>Grup İlkesini kullanarak virüsten koruma taramaları zamanlama
+# <a name="schedule-antivirus-scans-using-group-policy"></a>grup ilkesi kullanarak virüsten koruma taramaları zamanlama
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Şunlar için geçerlidir:**
 
-Bu makalede, Grup İlkesi kullanılarak zamanlanmış taramaların nasıl yapılandırlandığı açıklanmıştır. Taramaları zamanlama ve tarama türleri hakkında daha fazla bilgi edinmek için bkz. Zamanlanmış hızlı veya [tam tarama Microsoft Defender Virüsten Koruma yapılandırma](schedule-antivirus-scans.md). 
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
 
-## <a name="configure-antivirus-scans-using-group-policy"></a>Grup İlkesini kullanarak virüsten koruma taramalarını yapılandırma
+**Platform**
+- Windows
 
-1. Grup İlkesi yönetim makinenizin Grup İlkesi Düzenleyicisi'nde Bilgisayar **yapılandırması** \>  \> Yönetim Şablonları ve Bileşenleri ve **Windows'Microsoft Defender Virüsten Koruma** \>  \> **gidin**.
+Bu makalede, grup ilkesi kullanarak zamanlanmış taramaların nasıl yapılandırıldığı açıklanır. Taramaları zamanlama ve tarama türleri hakkında daha fazla bilgi edinmek için bkz[. Zamanlanmış hızlı veya tam Microsoft Defender Virüsten Koruma taramalarını yapılandırma](schedule-antivirus-scans.md). 
 
-2. Yapılandırmak istediğiniz Grup İlkesi Nesnesi'ne sağ tıklayın ve Düzenle'yi **seçin**.
+## <a name="configure-antivirus-scans-using-group-policy"></a>grup ilkesi kullanarak virüsten koruma taramalarını yapılandırma
 
-3. Grup İlkesi Nesnesi için ayarları belirtin ve tamam'ı **seçin**. 
+1. grup ilkesi yönetim makinenizdeki grup ilkesi Düzenleyicisi'nde **Bilgisayar yapılandırması** \> **Yönetim Şablonları** \> **Windows Bileşenleri** \> **Microsoft Defender Virüsten Koruma Tarama'ya** \> gidin.
 
-4. Yapılandırmak istediğiniz her ayar için 1-4 adımlarını yinelayın.
+2. Yapılandırmak istediğiniz grup ilkesi Nesnesine sağ tıklayın ve **düzenle'yi** seçin.
 
-5. Grup İlkesi Nesnenizi her zaman olduğu gibi dağıtın. Grup İlkesi Nesneleri hakkında yardım gerekirse bkz. [Grup İlkesi Nesnesi oluşturma](/windows/security/threat-protection/windows-firewall/create-a-group-policy-object).
+3. grup ilkesi Nesnesi için ayarları belirtin ve ardından **Tamam'ı** seçin. 
+
+4. Yapılandırmak istediğiniz her ayar için 1-4 arası adımları yineleyin.
+
+5. grup ilkesi Nesnenizi normal şekilde dağıtın. grup ilkesi Nesneleri ile ilgili yardıma ihtiyacınız varsa bkz. [grup ilkesi Nesnesi Oluşturma](/windows/security/threat-protection/windows-firewall/create-a-group-policy-object).
 
 > [!NOTE]
-> Zamanlanmış taramaları yapılandırken, Zamanlanmış taramayı yalnızca bilgisayar açık olduğunda ama bilgisayarda değilken başlat ayarı varsayılan olarak etkindir ve makine önce boşta durmasını gerekli bulundurarak beklenen zamanlanmış zamanı etkide bırakır.
+> Zamanlanmış taramaları yapılandırırken, **Zamanlanmış taramayı yalnızca bilgisayar açıkken ancak kullanımda değilken başlat** ayarı varsayılan olarak etkindir, makinenin önce boşta olmasını gerektirerek beklenen zamanlanmış süreyi etkileyebilir.
 >
-> Haftalık taramalarda, Windows Server'da varsayılan davranış makine boşta olduğunda otomatik bakım dışında tarama yapmaktır. Varsayılan ayar ve Windows 10, makine boşta olduğunda otomatik bakım sırasında tarama yapmaktır. Bu davranışı değiştirmek için **ScanOnlyIfIdle'i devre dışı bırakarak** ayarları değiştirin ve ardından bir zamanlama tanımlayın.
+> Haftalık taramalar için, Windows Sunucusu'nda varsayılan davranış, makine boştayken otomatik bakımın dışında tarama yapmaktır. Windows 10 ve sonraki sürümlerde varsayılan ayar, makine boştayken otomatik bakım sırasında tarama yapmaktır. Bu davranışı değiştirmek için **ScanOnlyIfIdle'ı** devre dışı bırakarak ayarları değiştirin ve ardından bir zamanlama tanımlayın.
 
-Daha fazla bilgi için Bkz. [Koruma güncelleştirmelerinin ne zaman indirilecek](manage-protection-update-schedule-microsoft-defender-antivirus.md) ve uygulanmalıdır? ve Kullanıcıların ilke ayarları konularını yerel olarak değiştirmesini [engelleme veya bu konular](configure-local-policy-overrides-microsoft-defender-antivirus.md) üzerinde değişiklik olmasına izin verme.
+Daha fazla bilgi için [Koruma güncelleştirmelerinin ne zaman indirilip uygulanacağını yönetme ve](manage-protection-update-schedule-microsoft-defender-antivirus.md) [Kullanıcıların ilke ayarlarını yerel olarak değiştirmesini engelleme veya değiştirmesine izin verme](configure-local-policy-overrides-microsoft-defender-antivirus.md) konularına bakın.
 
-## <a name="group-policy-settings-for-scheduling-scans"></a>Tarama zamanlaması için Grup İlkesi ayarları
+## <a name="group-policy-settings-for-scheduling-scans"></a>Taramaları zamanlamak için grup ilkesi ayarları
 
-| Konum | Ayar | Açıklama | Varsayılan ayar (yapılandırılmamışsa) |
+| Konum | Ayar | Açıklama | Varsayılan ayar (yapılandırılmadıysa) |
 |:---|:---|:---|:---|
-| Tarama | Zamanlanmış taramada kullanmak üzere tarama türünü belirtme | Hızlı tarama |
-| Tarama | Zamanlanmış taramayı çalıştırmak için haftanın günlerini belirtme | Taramayı çalıştıracak günü belirtin (veya hiç belirtme). | Hiçbir zaman |
-| Tarama | Zamanlanmış taramayı çalıştırmak için günün saatlerini belirtme | Gece yarısından sonra kaç dakika sonra olduğunu belirtin (örneğin, **01:00 için 60** girin). | 02:00 |
-| Kök | Zamanlanmış görev zamanlarını rastgeleleştirme |Başka Microsoft Defender Virüsten Koruma, taramanın başlangıç saatlerini 0 ile 23 saat arasında herhangi bir aralara rastgele sırayın. <p>[SCEP'de](/mem/intune/protect/certificates-scep-configure), herhangi bir ara aralığı artı veya eksi 30 dakikayı rastgele tarar. Bu, sanal makinelerde veya VDI dağıtımlarında yararlı olabilir. | Etkin |
+| Tarama | Zamanlanmış tarama için kullanılacak tarama türünü belirtme | Hızlı tarama |
+| Tarama | Zamanlanmış taramanın çalıştırıldığı haftanın gününü belirtme | Tarama çalıştırılacak günü (veya hiçbir zaman) belirtin. | Hiç |
+| Tarama | Zamanlanmış taramanın çalıştırıldığı günün saatini belirtme | Gece yarısından sonraki dakika sayısını belirtin (örneğin, 01: **00 için 60** girin). | 2:00'de. |
+| Kök | Zamanlanmış görev sürelerini rastgele belirleme |Microsoft Defender Virüsten Koruma, taramanın başlangıç saatini 0 ile 23 saat arasında herhangi bir zaman aralığına rastgele olarak ayarlayın. <p>[SCEP'te](/mem/intune/protect/certificates-scep-configure) taramaları herhangi bir aralık artı veya eksi 30 dakikaya rastgele ayarlayın. Bu, sanal makinelerde veya VDI dağıtımlarında yararlı olabilir. | Etkin |
 
-## <a name="group-policy-settings-for-scheduling-scans-for-when-an-endpoint-is-not-in-use"></a>Uç nokta kullanım dışıyken taramaları zamanlamayı kullanan Grup İlkesi ayarları
+## <a name="group-policy-settings-for-scheduling-scans-for-when-an-endpoint-is-not-in-use"></a>Uç nokta kullanımda olmadığında taramaları zamanlamak için grup ilkesi ayarları
 
-| Konum | Ayar | Açıklama | Varsayılan ayar (yapılandırılmamışsa) |
+| Konum | Ayar | Açıklama | Varsayılan ayar (yapılandırılmadıysa) |
 |:---|:---|:---|:---|
-| Tarama | Zamanlanmış taramayı yalnızca bilgisayar üzerindeyken ama kullanımda değilken başlatma | Bilgisayar üzerinde olmadığı ancak kullanımda olmadığı sürece, zamanlanmış taramalar çalışmaz | Etkin |
+| Tarama | Zamanlanmış taramayı yalnızca bilgisayar açıkken ancak kullanımda değilken başlatın | Bilgisayar açık ancak kullanımda olmadığı sürece zamanlanmış taramalar çalıştırılmaz | Etkin |
 
 > [!NOTE]
-> Uç noktaların kullanım içinde olmadığınız zamanlarda taramalar zamanlarken, taramalar CPU azaltma yapılandırmasına uygun değildir ve taramayı mümkün olan en hızlı şekilde tamamlamak için mevcut kaynaklardan tam olarak yararlanacak.
+> Uç noktaların kullanımda olmadığı zamanlar için taramalar zamanladığınızda, taramalar CPU azaltma yapılandırmasına uygun değildir ve taramayı mümkün olan en hızlı şekilde tamamlamak için kullanılabilir kaynaklardan tam olarak yararlanır.
 
-## <a name="group-policy-settings-for-scheduling-remediation-required-scans"></a>Düzeltme için gereken taramaları zamanlama grup ilkesi ayarları
+## <a name="group-policy-settings-for-scheduling-remediation-required-scans"></a>Düzeltme gerektiren taramaları zamanlamak için grup ilkesi ayarları
 
-| Konum | Ayar | Açıklama | Varsayılan ayar (yapılandırılmamışsa) |
+| Konum | Ayar | Açıklama | Varsayılan ayar (yapılandırılmadıysa) |
 |---|---|---|---|
-| Düzeltme | Düzeltmeyi tamamlamak için zamanlanmış bir tam tarama çalıştırmak için haftanın günlerini belirtme | Taramayı çalıştıracak günü belirtin (veya hiç belirtme). | Hiçbir zaman |
-| Düzeltme | Düzeltmeyi tamamlamak için zamanlanmış bir tam tarama çalıştırmak için günün saatlerini belirtme | Gece yarısından sonra kaç dakika sonra olduğunu belirtme (örneğin, **01:00 için 60** girin) | 02:00 |
+| Düzeltme | Düzeltmeyi tamamlamak için zamanlanmış bir tam tarama çalıştırmak için haftanın gününü belirtin | Tarama çalıştırılacak günü (veya hiçbir zaman) belirtin. | Hiç |
+| Düzeltme | Düzeltmeyi tamamlamak için zamanlanmış bir tam tarama çalıştırmak için günün saatini belirtin | Gece yarısından sonraki dakika sayısını belirtin (örneğin, 1 için **60** girin.) | 2:00'de. |
 
-## <a name="group-policy-settings-for-scheduling-daily-scans"></a>Günlük taramaları zamanlamayı grup ilkesi ayarları
+## <a name="group-policy-settings-for-scheduling-daily-scans"></a>Günlük taramaları zamanlamak için grup ilkesi ayarları
 
-| Konum | Ayar | Açıklama | Varsayılan ayar (yapılandırılmamışsa) |
+| Konum | Ayar | Açıklama | Varsayılan ayar (yapılandırılmadıysa) |
 |:---|:---|:---|:---|
-| Tarama | Günde hızlı taramalar çalıştırmak için aralığı belirtme | Bir sonraki hızlı taramadan önce kaç saat gerektir gerektiğini belirtin. Örneğin, her iki saatte bir çalıştırmak için **, 2** girin; günde bir kez **24 girin**. Günlük **hızlı taramayı** hiçbir zaman çalıştırmak için 0 girin. | Hiçbir zaman |
-| Tarama | Günlük hızlı tarama için saati belirtme | Gece yarısından sonra kaç dakika sonra olduğunu belirtme (örneğin, **01:00 için 60** girin) | 02:00 |
+| Tarama | Her gün hızlı tarama çalıştırmak için aralığı belirtin | Sonraki hızlı taramadan önce kaç saat geçmesi gerektiğini belirtin. Örneğin, iki saatte bir çalıştırmak için günde bir kez **olmak üzere 2** girin **, 24** girin. Günlük hızlı taramayı asla çalıştırmamak için **0** girin. | Hiç |
+| Tarama | Günlük hızlı tarama süresini belirtme | Gece yarısından sonraki dakika sayısını belirtin (örneğin, 1 için **60** girin.) | 2:00'de. |
 
-## <a name="group-policy-settings-for-scheduling-scans-after-protection-updates"></a>Koruma güncelleştirmeleri sonrasında taramaları zamanlamayı planlamak için Grup İlkesi ayarları
+## <a name="group-policy-settings-for-scheduling-scans-after-protection-updates"></a>Koruma güncelleştirmelerinden sonra taramaları zamanlamak için grup ilkesi ayarları
 
-| Konum | Ayar | Açıklama | Varsayılan ayar (yapılandırılmamışsa)|
+| Konum | Ayar | Açıklama | Varsayılan ayar (yapılandırılmadıysa)|
 |:---|:---|:---|:---|
-| İmza güncelleştirmeleri | Güvenlik zekası güncelleştirmesi sonrasında taramayı açma | Yeni bir koruma güncelleştirmesi indirildikten hemen sonra tarama işlemi gerçekleşir | Etkin |
+| İmza güncelleştirmeleri | Güvenlik bilgileri güncelleştirmesinin ardından taramayı açma | Yeni bir koruma güncelleştirmesi indirildikten hemen sonra tarama gerçekleşir | Etkin |
 
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)

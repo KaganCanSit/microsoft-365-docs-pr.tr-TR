@@ -1,7 +1,7 @@
 ---
-title: Bildirim Microsoft Defender Virüsten Koruma yapılandırma
-description: Uç noktalarda hem standart hem de diğer kullanıcı bildirimlerini Microsoft Defender Virüsten Koruma ve özelleştirebileceğinizi öğrenin.
-keywords: notifications, defender, antivirus, endpoint, management, admin
+title: Microsoft Defender Virüsten Koruma bildirimlerini yapılandırma
+description: Uç noktalarda hem standart hem de diğer Microsoft Defender Virüsten Koruma bildirimlerini yapılandırmayı ve özelleştirmeyi öğrenin.
+keywords: bildirimler, defender, virüsten koruma, uç nokta, yönetim, yönetici
 ms.prod: m365-security
 ms.technology: mde
 ms.mktglfcycl: manage
@@ -16,100 +16,113 @@ ms.date: 10/18/2021
 ms.reviewer: ''
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 287e49a92032e725153065ef3d996e2b5c14baf9
-ms.sourcegitcommit: dfa9f28a5a5055a9530ec82c7f594808bf28d0dc
+ms.openlocfilehash: e38a8e9de3bef132dfdf3d2a088190a5038a2941
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "62997048"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64790206"
 ---
-# <a name="configure-microsoft-defender-antivirus-notifications-that-appear-on-endpoints"></a>Uç Microsoft Defender Virüsten Koruma görünen kullanıcı bildirimlerini yapılandırma
+# <a name="configure-microsoft-defender-antivirus-notifications-that-appear-on-endpoints"></a>Uç noktalarda görünen Microsoft Defender Virüsten Koruma bildirimlerini yapılandırma
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
 
-Windows 10 ve Windows 11'de, kötü amaçlı yazılım algılama ve düzeltmeyle ilgili uygulama bildirimleri daha güçlü, tutarlı ve kısadır. Microsoft Defender Virüsten Koruma taramalar tamamlandığında ve tehdit algılandığında uç noktalarda bildirim görüntülenir. Bildirimler, zamanlanmış ve elle tetiklenen taramaları takip eder. Bu bildirimler Bildirim Merkezi'nde **de görünür** ve tarama ve tehdit algılamalarının özeti düzenli aralıklarla görüntülenir.
+**Platform**
+- Windows
 
-Kuruluş güvenlik ekibinin bir parçasıysanız, sistemin yeniden başlatılmasını veya bir tehdit algılandığında ve düzeltişini belirten bildirimler gibi uç noktalarda bildirimlerin nasıl görüntülenmiş olduğunu yapılandırabilirsiniz.
+Windows 10 ve Windows 11,kötü amaçlı yazılım algılama ve düzeltme hakkında uygulama bildirimleri daha sağlam, tutarlı ve kısadır. taramalar tamamlandığında ve tehditler algılandığında uç noktalarda Microsoft Defender Virüsten Koruma bildirimleri görüntülenir. Bildirimler hem zamanlanmış hem de el ile tetiklenen taramaları izler. Bu bildirimler **Bildirim Merkezi'nde** de görünür ve taramaların ve tehdit algılamalarının bir özeti düzenli aralıklarla görüntülenir.
 
-## <a name="configure-antivirus-notifications-using-group-policy-or-the-windows-security-app"></a>Grup İlkesi'yi veya Windows Güvenliği uygulamasını kullanarak virüsten koruma Windows Güvenliği yapılandırma
+Kuruluşunuzun güvenlik ekibinin bir parçasıysanız, sistemin yeniden başlatılmasını isteyen veya bir tehdidin algılanıp düzeltildiğini belirten bildirimler gibi bildirimlerin uç noktalarda nasıl görüneceğini yapılandırabilirsiniz.
 
-Windows Güvenliği uygulamasında ve Grup İlkesi ile son tehdit algılama özetleri [gibi ek bildirimlerin](microsoft-defender-security-center-antivirus.md) görüntülenmelerini yapılandırabilirsiniz.
+## <a name="configure-antivirus-notifications-using-group-policy-or-the-windows-security-app"></a>grup ilkesi veya Windows Güvenliği uygulamasını kullanarak virüsten koruma bildirimlerini yapılandırma
+
+Son tehdit algılama özetleri gibi ek bildirimlerin görüntülenmesini [Windows Güvenliği uygulamasında ve grup ilkesi](microsoft-defender-security-center-antivirus.md) ile yapılandırabilirsiniz.
 
 > [!NOTE]
-> Özellik, Windows 10 1607 sürümünde Geliştirilmiş bildirimler olarak adlandırılan özellik, Windows Ayarlar Güncelleştirme  ve Güvenlik **&** \> **altında** \> **Windows Defender**. Grup İlke ve 11'Windows 10 tüm sürümleri için Grup Windows'de, bildirim özelliği Gelişmiş **bildirimler olarak adlandırılan özelliktir**.
+> Windows 10 sürüm 1607'de özellik **Gelişmiş bildirimler** olarak adlandırıldı ve **Windows Ayarlar** \> **Güncelleştirme & güvenlik** \> **Windows Defender** altında yapılandırıldı. tüm Windows 10 ve Windows 11 sürümleri için grup ilkesi ayarlarında, bildirim özelliği **Gelişmiş bildirimler** olarak adlandırılır.
 
-### <a name="use-group-policy-to-disable-additional-notifications"></a>Ek bildirimleri devre dışı bırakmak için Grup İlkesi kullanma
+### <a name="use-group-policy-to-disable-additional-notifications"></a>Ek bildirimleri devre dışı bırakmak için grup ilkesi kullanma
 
-1. Grup İlkesi yönetim bilgisayarınızda Grup İlkesi [Yönetim Konsolu'nu açın](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. grup ilkesi yönetim bilgisayarınızda [grup ilkesi Yönetim Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın.
 
-2. Yapılandırmak istediğiniz Grup İlkesi Nesnesi'ne sağ tıklayın ve Düzenle'yi **seçin**.
+2. Yapılandırmak istediğiniz grup ilkesi Nesnesine sağ tıklayın ve **düzenle'yi** seçin.
 
-3. Grup İlkesi **Yönetim Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin**.
+3. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin.
 
-4. Yönetim **şablonları'ı seçin**.
+4. **Yönetim şablonları'nı** seçin.
 
-5. Ağacı, rapor **Windows bileşenleri** \> **Microsoft Defender Virüsten Koruma** >  **genişletin**.
+5. Microsoft Defender Virüsten Koruma **Reporting** **bileşenlerini** \> **Windows** >  için ağacı genişletin.
 
-6. Gelişmiş bildirimleri **kapat'a çift tıklayın** ve seçeneği Etkin olarak **ayarlayın**. Sonra **Tamam**’ı seçin. Bu, ek bildirimlerin görünmesini önler.
-
-> [!IMPORTANT]
-> Ek bildirimleri devre dışı bırakmak tehdit algılama ve düzeltme uyarıları gibi kritik bildirimleri devre dışı bırakmaz.
-
-### <a name="use-the-windows-security-app-to-disable-additional-notifications"></a>Ek Windows Güvenliği devre dışı bırakmak için Windows Güvenliği uygulamasını kullanma
-
-1. Görev Windows Güvenliği kalkan simgesine tıklayarak veya başlat menüsünde Güvenlik'i arayarak Windows Güvenliği uygulamasını **açın**.
-
-2. Virüs **koruması & kutucuğunu** (veya sol menü çubuğundaki kalkan simgesini) seçin ve ardından Virüs koruması & **ayarlarını seçin**
-
-3. Bildirimler bölümüne kaydırın **ve Bildirim** ayarlarını **değiştir'i seçin**.
-
-4. Ek bildirimleri devre dışı bırakmak **veya** etkinleştirmek **için** anahtarı Kapalı veya Açık olarak kaydırın.
+6. **Gelişmiş bildirimleri kapat'a** çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. Sonra **Tamam**’ı seçin. Bu, ek bildirimlerin görünmesini engeller.
 
 > [!IMPORTANT]
-> Ek bildirimleri devre dışı bırakmak tehdit algılama ve düzeltme uyarıları gibi kritik bildirimleri devre dışı bırakmaz.
+> Ek bildirimleri devre dışı bırakmak, tehdit algılama ve düzeltme uyarıları gibi kritik bildirimleri devre dışı bırakmaz.
 
-## <a name="configure-standard-notifications-on-endpoints-using-group-policy"></a>Grup İlkesini kullanarak uç noktalarda standart bildirimleri yapılandırma
+### <a name="use-the-windows-security-app-to-disable-additional-notifications"></a>Ek bildirimleri devre dışı bırakmak için Windows Güvenliği uygulamasını kullanma
 
-Grup İlkesi'ne kullanarak şunları kullanabilirsiniz:
+1. Görev çubuğundaki kalkan simgesine tıklayarak veya başlangıç menüsünde **Güvenlik** araması yaparak Windows Güvenliği uygulamasını açın.
 
-- Kullanıcının bir eylem gerçekleştirmesi gerekirken uç noktalarda ek, özelleştirilmiş metin görüntüleme
-- Uç noktalarda tüm bildirimleri gizleme
+2. **Virüs & tehdit koruması** kutucuğunu (veya sol menü çubuğundaki kalkan simgesini) ve ardından **Virüs & tehdit koruması ayarları'nı** seçin
+
+3. **Bildirimler** bölümüne gidin ve **Bildirim ayarlarını değiştir'i** seçin.
+
+4. Ek bildirimleri devre dışı bırakmak veya etkinleştirmek için anahtarı **Kapalı** veya **Açık** olarak kaydırın.
+
+> [!IMPORTANT]
+> Ek bildirimleri devre dışı bırakmak, tehdit algılama ve düzeltme uyarıları gibi kritik bildirimleri devre dışı bırakmaz.
+
+## <a name="configure-standard-notifications-on-endpoints-using-group-policy"></a>grup ilkesi kullanarak uç noktalarda standart bildirimleri yapılandırma
+
+grup ilkesi kullanarak:
+
+- Kullanıcının bir eylem gerçekleştirmesi gerektiğinde uç noktalarda ek, özelleştirilmiş metin görüntüleme
+- Uç noktalardaki tüm bildirimleri gizleme
 - Uç noktalarda yeniden başlatma bildirimlerini gizleme
 
-Bildirimleri gizlemek, Microsoft Defender Virüsten Koruma arabiriminin tamamını gizley gizlen Microsoft Defender Virüsten Koruma olabilir. Daha [fazla bilgi için Bkz. Kullanıcıların kullanıcı arabirimini görmelerini Microsoft Defender Virüsten Koruma veya arabirimiyle](prevent-end-user-interaction-microsoft-defender-antivirus.md) etkileşim kurmasını engelleme. Bildirimlerin gizlenilmesi yalnızca ilkenin dağıtıldı olduğu uç noktalarda gerçekleşir. Izlenmesi gereken eylemlerle (örneğin, yeniden başlatma) ilgili bildirimler, pano ve raporları Microsoft Endpoint Manager Endpoint Protection [ekranda görünür](/configmgr/protect/deploy-use/monitor-endpoint-protection). 
+Bildirimleri gizlemek, Microsoft Defender Virüsten Koruma arabiriminin tamamını gizleyememenize neden olan durumlarda yararlı olabilir. Daha fazla bilgi için bkz. [Kullanıcıların Microsoft Defender Virüsten Koruma kullanıcı arabirimini görmesini veya bunlarla etkileşim kurmasını engelleme](prevent-end-user-interaction-microsoft-defender-antivirus.md). Bildirimleri gizleme işlemi yalnızca ilkenin dağıtıldığı uç noktalarda gerçekleşir. Yapılması gereken eylemlerle ilgili bildirimler (yeniden başlatma gibi) [Microsoft Endpoint Manager Endpoint Protection izleme panosunda ve raporlarda görünmeye](/configmgr/protect/deploy-use/monitor-endpoint-protection) devam eder. 
 
-Uç nokta bildirimlerine özel kişi bilgileri eklemek için bkz[. Windows Güvenliği uygulamayı özelleştirme](/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center).
+Uç nokta bildirimlerine özel kişi bilgileri eklemek için bkz. [Kuruluşunuz için Windows Güvenliği uygulamasını özelleştirme](/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center).
 
-### <a name="use-group-policy-to-hide-notifications"></a>Bildirimleri gizlemek için Grup İlkesi kullanma
+### <a name="use-group-policy-to-hide-notifications"></a>Bildirimleri gizlemek için grup ilkesi kullanma
 
-1. Grup İlkesi yönetim bilgisayarınızda Grup İlkesi [Yönetim Konsolu'nu açın](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. grup ilkesi yönetim bilgisayarınızda [grup ilkesi Yönetim Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın.
 
-2. Yapılandırmak istediğiniz Grup İlkesi Nesnesi'ne sağ tıklayın ve Düzenle'yi **seçin**.
+2. Yapılandırmak istediğiniz grup ilkesi Nesnesine sağ tıklayın ve **düzenle'yi** seçin.
 
-3. Grup İlkesi **Yönetim Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin ve** Yönetim **şablonları'ı seçin**.
+3. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin ve **ardından Yönetim şablonları'nı** seçin.
 
-4. İstemci arabiriminin **bileşenlerine Windows ağacı** \> **Microsoft Defender Virüsten Koruma** \> **genişletin**. 
+4. **İstemci arabirimi** **Microsoft Defender Virüsten Koruma bileşenleri** \> **Windows** \> için ağacı genişletin. 
 
-5. Tüm bildirimleri **gizleme'ye çift tıklayın** ve seçeneği Etkin olarak **ayarlayın**. 
+5. **Tüm bildirimleri gizle'ye** çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. 
 
-6. **Tamam**'ı seçin. Bu, ek bildirimlerin görünmesini önler.
+6. **Tamam**'ı seçin. Bu, ek bildirimlerin görünmesini engeller.
 
-### <a name="use-group-policy-to-hide-reboot-notifications"></a>Yeniden başlatma bildirimlerini gizlemek için Grup İlkesi kullanma
+### <a name="use-group-policy-to-hide-reboot-notifications"></a>Yeniden başlatma bildirimlerini gizlemek için grup ilkesi kullanma
 
-1. Grup İlkesi yönetim bilgisayarınızda Grup İlkesi [Yönetim Konsolu'nu açın](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. grup ilkesi yönetim bilgisayarınızda [grup ilkesi Yönetim Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın.
 
-2. Yapılandırmak istediğiniz Grup İlkesi Nesnesi'ne sağ tıklayın ve Düzenle'yi **seçin**.
+2. Yapılandırmak istediğiniz grup ilkesi Nesnesine sağ tıklayın ve **düzenle'yi** seçin.
 
-2. Grup İlkesi **Yönetim Düzenleyicisi'nde Bilgisayar** **yapılandırması'ne gidin**.
+2. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar yapılandırması'na** gidin.
 
-3. Yönetim **şablonları'ne tıklayın**.
+3. **Yönetim şablonları'nı** tıklatın.
 
-4. İstemci arabiriminin **bileşenlerine Windows ağacı** \> **Microsoft Defender Virüsten Koruma** \> **genişletin**.
+4. **İstemci arabirimi** **Microsoft Defender Virüsten Koruma bileşenleri** \> **Windows** \> için ağacı genişletin.
 
-5. Yeniden başlatma **bildirimlerini gizleme'ye çift tıklayın** ve seçeneği Etkin olarak **ayarlayın**. 
+5. **Yeniden başlatma bildirimlerini gizle'ye** çift tıklayın ve seçeneği **Etkin** olarak ayarlayın. 
 
-5. **Tamam**'ı seçin. Bu, ek bildirimlerin görünmesini önler.
+5. **Tamam**'ı seçin. Bu, ek bildirimlerin görünmesini engeller.
 
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)

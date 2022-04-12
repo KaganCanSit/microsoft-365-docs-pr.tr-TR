@@ -1,6 +1,6 @@
 ---
-title: Kullanıcıların bulut koruma düzeyini Microsoft Defender Virüsten Koruma
-description: Bulut koruma düzeyinizi bulut koruması Microsoft Defender Virüsten Koruma.
+title: Microsoft Defender Virüsten Koruma için bulut koruma düzeyini belirtin
+description: Microsoft Defender Virüsten Koruma için bulut koruma düzeyinizi ayarlayın.
 keywords: Microsoft Defender Virüsten Koruma, kötü amaçlı yazılımdan koruma, güvenlik, defender, bulut, saldırganlık, koruma düzeyi
 ms.pagetype: security
 ms.prod: m365-security
@@ -16,77 +16,90 @@ manager: dansimp
 ms.custom: nextgen
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 4723b84e285e508e33ca4b54a1897bbed036a897
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: 6e24be40b4ff9e57d896cf53769b578c482a2c6e
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "62996506"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64787544"
 ---
-# <a name="specify-the-cloud-protection-level"></a>Bulut koruma düzeyini belirtme
+# <a name="specify-the-cloud-protection-level"></a>Bulut koruma düzeyini belirleyin
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - Microsoft Defender Virüsten Koruma
 
-Bulut koruması, geleneksel güvenlik Microsoft Defender Virüsten Koruma güncelleştirmelerinden çok daha hızlı bir şekilde uç noktalarınıza koruma sağlamak için Bulut Koruması ile birlikte çalışır. Bulut koruma düzeyinizi, Önerilen) veya Grup Microsoft Endpoint Manager kullanarak yapılandırabilirsiniz.
+**Platform**
+- Windows
+
+Bulut koruması, geleneksel güvenlik bilgileri güncelleştirmelerinden çok daha hızlı bir şekilde uç noktalarınıza koruma sağlamak için Microsoft Defender Virüsten Koruma ile birlikte çalışır. Microsoft Endpoint Manager (önerilen) veya grup ilkesi kullanarak bulut koruma düzeyinizi yapılandırabilirsiniz.
 
 > [!NOTE]
-> Yüksek, **Yüksek** **+veya Sıfır** olan ile düşük olan **seçim bazı yasal** dosyaların algılandırılamana neden olabilir. Böyle bir durumda, algılanan dosyanın engellemesini kaldırabilirsiniz veya algılama ile ilgili ihtilaf portalında Microsoft 365 Defender.
+> **Yüksek**, **Yüksek +** veya **Sıfır toleransı** seçildiğinde bazı meşru dosyalar algılanabilir. Böyle bir durumda, algılanan dosyanın engelini kaldırabilirsiniz veya Microsoft 365 Defender portalında bu algılamaya itiraz edebilirsiniz.
 
-## <a name="use-microsoft-endpoint-manager-to-specify-the-level-of-cloud-protection"></a>Bulut Microsoft Endpoint Manager düzeyini belirtmek için E-depolamayı kullanma
+## <a name="use-microsoft-endpoint-manager-to-specify-the-level-of-cloud-protection"></a>Bulut koruma düzeyini belirtmek için Microsoft Endpoint Manager kullanma
 
-1. Yönetim merkezine Microsoft Endpoint Manager ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) ve oturum açma.
+1. Microsoft Endpoint Manager yönetim merkezine ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) gidin ve oturum açın.
 
-2. Uç nokta **güvenliği Virüsten Koruma'ya** \> **seçin**.
+2. **Uç nokta güvenliği** \> **Virüsten Koruma'yı** seçin.
 
-3. Virüsten koruma profili seçin. (Henüz profiliniz yoksa veya yeni bir profil oluşturmak için, aşağıdaki Bağlantı sayfasında cihaz kısıtlama [ayarlarını yapılandırma Microsoft Intune](/intune/device-restrictions-configure).
+3. Bir virüsten koruma profili seçin. (Henüz bir profiliniz yoksa veya yeni bir profil oluşturmak istiyorsanız bkz[. Microsoft Intune'de cihaz kısıtlama ayarlarını yapılandırma](/intune/device-restrictions-configure).
 
-4. **Özellikler'i seçin**. Ardından, Yapılandırma **ayarları'nın yanında** Düzenle'yi **seçin**.
+4. **Özellikler**'i seçin. Ardından **Yapılandırma ayarları'nın** yanındaki **Düzenle'yi** seçin.
 
-5. Bulut **koruması'nın** kapsamını genişletin ve **Bulut teslimi koruma düzeyi** listesinde, aşağıdaki seçeneklerden birini seçin:
+5. **Bulut koruması'nı** genişletin ve bulut **tabanlı koruma düzeyi** listesinde aşağıdakilerden birini seçin:
 
     - **Yapılandırılmadı**: Varsayılan durum.
     - **Yüksek**: Güçlü bir algılama düzeyi uygular.
-    - **Yüksek artı**: Yüksek **düzeyi kullanır** ve ek koruma önlemleri uygular (istemci performansını etkileyebilir).
-    - **Sıfır dayanıklılık**: Tüm bilinmeyen yürütülebilir dosyaları engeller.
+    - **Yüksek artı**: **Yüksek** düzeyi kullanır ve ek koruma önlemleri uygular (istemci performansını etkileyebilir).
+    - **Sıfır tolerans**: Tüm bilinmeyen yürütülebilir dosyaları engeller.
 
-6. Gözden **Geçir + kaydet'i** ve sonra Kaydet'i **seçin**.
+6. **Gözden Geçir + kaydet'i** ve ardından **Kaydet'i** seçin.
 
 > [!TIP]
 > Yardıma mı ihtiyacınız var? Aşağıdaki kaynaklara bakın:
 >
-> - [E-Endpoint Protection](/mem/configmgr/protect/deploy-use/endpoint-protection-configure)
-> - [Intune'da uç nokta koruma ayarları ekleme](/mem/intune/protect/endpoint-protection-configure)
+> - [Endpoint Protection yapılandırma](/mem/configmgr/protect/deploy-use/endpoint-protection-configure)
+> - [Intune'de uç nokta koruma ayarları ekleme](/mem/intune/protect/endpoint-protection-configure)
 
-## <a name="use-group-policy-to-specify-the-level-of-cloud-protection"></a>Bulut koruma düzeyini belirtmek için Grup İlkesi kullanma
+## <a name="use-group-policy-to-specify-the-level-of-cloud-protection"></a>Bulut koruma düzeyini belirtmek için grup ilkesi kullanma
 
-1. Grup İlkesi yönetim makinenizin Grup İlkesi Yönetim [Konsolu'nu açın](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. grup ilkesi yönetim makinenizde [grup ilkesi Yönetim Konsolu'nu](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) açın.
 
-2. Yapılandırmak istediğiniz Grup İlkesi Nesnesi'ne sağ tıklayın ve Düzenle'yi **seçin**.
+2. Yapılandırmak istediğiniz grup ilkesi Nesnesine sağ tıklayın ve **düzenle'yi** seçin.
 
-3. Grup İlkesi **Yönetim Düzenleyicisi'nde** Bilgisayar Yapılandırması **Yönetim** **şablonları'ne**\> gidin.
+3. **grup ilkesi Yönetim Düzenleyicisi'nde** **Bilgisayar Yapılandırması** \> **Yönetim şablonları'na** gidin.
 
-4. **MpEngine'in** **Bileşenleri Windows ağacını** \> **Microsoft Defender Virüsten Koruma** \> genişletin.
+4. **MpEngine** **Microsoft Defender Virüsten Koruma Bileşenleri** \> **Windows** \> ağacı genişletin.
 
-5. Bulut koruma düzeyi **seç ayarına çift tıklayın** ve bunu Etkin olarak **ayarlayın**. Koruma düzeyini seçin:
+5. **Bulut koruma düzeyini seçin** ayarına çift tıklayın ve **Etkin** olarak ayarlayın. Koruma düzeyini seçin:
 
     - **Yapılandırılmadı**: Varsayılan durum.
-    - **Varsayılan engelleme düzeyi** , yasal dosyaları algılama riskini artırmadan güçlü algılama sağlar.
-    - **Orta engelleme düzeyi** yalnızca yüksek güven algılamaları için ortalama sağlar
-    - **Yüksek engelleme düzeyi** , istemci performansını en iyi duruma getirerek güçlü bir algılama düzeyi uygular (ancak size hatalı pozitif sonuçlar için daha fazla fırsat da verir).
-    - **Yüksek + engelleme düzeyi** ek koruma önlemleri uygular (istemci performansını etkileyebilir ve hatalı pozitif sonuçlar yapma ihtimalinizi artırır).
-    - **Sıfır olan istenmeyen posta engelleme düzeyi bilinmeyen** tüm yürütülebilir dosyaları engeller.
+    - **Varsayılan engelleme düzeyi** , meşru dosyaları algılama riskini artırmadan güçlü algılama sağlar.
+    - **Orta engelleme düzeyi** yalnızca yüksek güvenilirlik algılamaları için orta düzey sağlar
+    - **Yüksek engelleme düzeyi** , istemci performansını iyileştirirken güçlü bir algılama düzeyi uygular (ancak hatalı pozitifler için size daha fazla şans da verebilir).
+    - **Yüksek + engelleme düzeyi** ek koruma önlemleri uygular (istemci performansını etkileyebilir ve hatalı pozitif sonuç alma şansınızı artırabilir).
+    - **Sıfır tolerans engelleme düzeyi** tüm bilinmeyen yürütülebilir dosyaları engeller.
 
 6. **Tamam**'ı seçin.
 
-7. Güncelleştirilmiş Grup İlkesi Nesnenizi dağıtın. Bkz [. Grup İlkesi Yönetim Konsolu](/windows/win32/srvnodes/group-policy)
+7. Güncelleştirilmiş grup ilkesi Nesnenizi dağıtın. Bkz. [grup ilkesi Yönetim Konsolu](/windows/win32/srvnodes/group-policy)
 
 > [!TIP]
-> Şirket içinde Grup İlkesi Nesneleri mi kullanıyorsunuz? Buluttaki çevirinin nasıl olduğunu öğrenin. [Grup İlkesi çözümlemesini kullanarak şirket içi grup ilkesi nesnelerinizi Çözümleme - Microsoft Endpoint Manager.](/mem/intune/configuration/group-policy-analytics)
+> Şirket içinde grup ilkesi Nesneleri mi kullanıyorsunuz? Bulutta nasıl çeviri yaptıklarını görün. [Microsoft Endpoint Manager - Önizleme'de grup ilkesi analiz kullanarak şirket içi grup ilkesi nesnelerinizi analiz](/mem/intune/configuration/group-policy-analytics) edin.
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Bulut korumasının etkin olması için neden Microsoft Defender Virüsten Koruma](why-cloud-protection-should-be-on-mdav.md)
+[Microsoft Defender Virüsten Koruma için bulut korumasının neden etkinleştirilmesi gerekir?](why-cloud-protection-should-be-on-mdav.md)

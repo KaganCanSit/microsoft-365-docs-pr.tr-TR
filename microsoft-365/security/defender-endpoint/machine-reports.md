@@ -1,7 +1,7 @@
 ---
-title: Uç Nokta için Microsoft Defender'da cihaz durumu ve uyumluluk Uç Nokta için Microsoft Defender
-description: Cihaz durumu algılamalarını, virüsten koruma durumunu, işletim sistemi platformunu ve Windows 10 durumu ve uyumluluk raporunu kullanarak farklı sürümleri izleme
-keywords: health state, antivirus, os platform, windows 10 version, version, health, compliance, state
+title: Pertahanan Microsoft untuk Titik Akhir'de cihaz durumu ve uyumluluk raporu
+description: Cihaz sistem durumu algılamalarını, virüsten koruma durumunu, işletim sistemi platformunu ve Windows 10 sürümlerini cihaz durumu ve uyumluluk raporunu kullanarak izleme
+keywords: sistem durumu, virüsten koruma, işletim sistemi platformu, windows 10 sürümü, sürüm, sistem durumu, uyumluluk, durum
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,27 +14,35 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: bf89c0e57cbe14980b15ecf6f5a88f6db2b83e84
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: d171db0d5009cc32c34c3bf95da907221f275410
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64474035"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64789282"
 ---
-# <a name="device-health-and-compliance-report-in-microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender'da cihaz durumu ve uyumluluk Uç Nokta için Microsoft Defender
+# <a name="device-health-and-compliance-report-in-microsoft-defender-for-endpoint"></a>Pertahanan Microsoft untuk Titik Akhir'de cihaz durumu ve uyumluluk raporu
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
-- [Uç Nokta için Microsoft Defender Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+**Şunlar için geçerlidir:**
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- Microsoft Defender Virüsten Koruma 
 
-Bu deneyimi Uç Nokta için Microsoft Defender? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+**Platform**
+- Windows
+- Mac OS
+- Linux
+- iOS
+- Android
 
-Cihaz durumu raporu, kurum cihazları hakkında üst düzey bilgiler sağlar. Rapor algılayıcı durumu, virüsten koruma durumu, işletim sistemi platformları ve yazılım (ve işletim sistemi) sürümlerini Windows 10 popüler Windows 11 içerir.
+Pertahanan Microsoft untuk Titik Akhir mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Pano iki bölüm halinde yapılandırılmıştır:
+Cihazlar durum raporu, kuruluşunuzdaki cihazlar hakkında üst düzey bilgiler sağlar. Rapor algılayıcı sistem durumu, virüsten koruma durumu, işletim sistemi platformları ve Windows 10 (ve Windows 11) sürümlerini gösteren popüler bilgiler içerir.
+
+Pano iki bölümde yapılandırılmıştır:
 
 :::image type="content" source="images/device-reports.png" alt-text="Cihaz raporu" lightbox="images/device-reports.png":::
 
@@ -51,7 +59,7 @@ Pano iki bölüm halinde yapılandırılmıştır:
 
 ## <a name="device-trends"></a>Cihaz eğilimleri
 
-Varsayılan olarak, cihaz eğilimleri cihaz bilgilerini 30 gün içinde son tam gün içinde sona eriyor. Kuruluşta oluşan eğilimlere daha iyi bir bakış açısı elde etmek için gösterilen zaman dönemini ayarlayarak raporlama dönemine ince ayarlarabilirsiniz. Zaman aralığını ayarlamak için, açılan liste seçeneklerinden bir zaman aralığı seçin:
+Varsayılan olarak, cihaz eğilimleri en son tam gün ile biten 30 günlük dönemdeki cihaz bilgilerini görüntüler. Kuruluşunuzda gerçekleşen eğilimlere daha iyi bir bakış açısı elde etmek için, gösterilen zaman aralığını ayarlayarak raporlama dönemine ince ayar yapabilirsiniz. Zaman aralığını ayarlamak için açılan seçeneklerden bir zaman aralığı seçin:
 
 - 30 gün
 - Üç ay
@@ -63,39 +71,49 @@ Varsayılan olarak, cihaz eğilimleri cihaz bilgilerini 30 gün içinde son tam 
 
 ## <a name="device-summary"></a>Cihaz özeti
 
-Cihaz eğilimleri popüler cihaz bilgilerini gösterirken, cihaz özeti geçerli güne göre cihaz bilgilerini gösterir.
+Cihaz eğilimleri popüler cihaz bilgilerini gösterirken, cihaz özetinde cihaz bilgilerinin kapsamı geçerli güne göre belirlenmiş olarak gösterilir.
 
 > [!NOTE]
-> Özet bölümüne yansıtilen veriler, geçerli tarihten 180 gün önce kapsamdadır. Örneğin, bugünün tarihi 27 Mart 2019 ise, özet bölümündeki veriler 28 Eylül 2018'den 27 Mart 2019'a kadar olan sayıları yansıtacak.
+> Özet bölümüne yansıtılan verilerin kapsamı geçerli tarihten 180 gün öncesine kadar belirlenmiştir. Örneğin bugünün tarihi 27 Mart 2019 ise, özet bölümündeki veriler 28 Eylül 2018 ile 27 Mart 2019 arasında başlayan sayıları yansıtır.
 >
 > Eğilimler bölümüne uygulanan filtre özet bölümüne uygulanmaz.
 
-Cihaz eğilimleri bölümü, ilgili filtrenin uygulandığı cihazlar listesinde detaya gitmelerini sağlar. Örneğin, Algılayıcı durumu kartında Etkin Değil çubuğuna tıklamak, size yalnızca algılayıcı durumu etkin olmayan cihazların sonuçlarının yer alan cihazlar listesini getirir.
+Cihaz eğilimleri bölümü, ilgili filtrenin uygulandığı cihazlar listesinde detaya gitmenizi sağlar. Örneğin, Algılayıcı sistem durumu kartındaki Etkin Değil çubuğuna tıklandığında, yalnızca algılayıcı durumu etkin olmayan cihazları gösteren sonuçların yer aldığı cihazlar listesi görüntülenir.
 
 ## <a name="device-attributes"></a>Cihaz öznitelikleri
 
-Rapor, aşağıdaki cihaz özniteliklerini görüntüleyen kartlardan yapılır:
+Rapor, aşağıdaki cihaz özniteliklerini görüntüleyen kartlardan oluşur:
 
-- **Sağlık durumu**: Cihazlar üzerinde algılayıcı durumu hakkında bilgi gösterir, etkin olan, engelli iletişimlere, etkin olmayan cihazlara ya da algılayıcı verilerini gören cihazların toplu bir görünümünü sağlar.
-- **Etkin cihaz sayısı ve Windows 10 virüsten** koruma durumu: Cihaz sayısını ve cihaz Microsoft Defender Virüsten Koruma.
-- **işletim sistemi platformları**: Kuruluş içinde var olan işletim sistemi platformlarının dağıtımını gösterir.
-- **Windows 10:** Diğer cihazların ve Windows 10 sürümlerinin dağılımını gösterir.
+- **Sistem durumu**: Etkin, iletişim bozukluğu yaşayan, etkin olmayan veya algılayıcı verilerinin görülmediği cihazların toplu bir görünümünü sağlayarak cihazlardaki algılayıcı durumu hakkındaki bilgileri gösterir.
+- **Etkin Windows 10 cihazları için virüsten koruma durumu**: Cihaz sayısını ve Microsoft Defender Virüsten Koruma durumunu gösterir.
+- **İşletim sistemi platformları**: Kuruluşunuzda var olan işletim sistemi platformlarının dağıtımını gösterir.
+- **Windows 10 sürümleri**: Windows 10 cihazların ve bunların kuruluşunuzdaki sürümlerinin dağıtımını gösterir.
 
-## <a name="filter-data"></a>Verilere filtre uygulama
+## <a name="filter-data"></a>Verileri filtreleme
 
-Belirli özniteliklere sahip cihazları eklemek veya dışarıda tutmak için sağlanan filtreleri kullanın.
+Belirli özniteliklere sahip cihazları dahil etmek veya hariç tutmak için sağlanan filtreleri kullanın.
 
-Cihaz özniteliklerinden uygulamak için birden çok filtre seçebilirsiniz.
+Cihaz özniteliklerinden uygulanacak birden çok filtre seçebilirsiniz.
 
 > [!NOTE]
-> Bu filtreler **rapora** tüm kartlar için uygulanır.
+> Bu filtreler rapordaki **tüm** kartlar için geçerlidir.
 
-Örneğin, Etkin algılayıcı durumuna sahip Windows 10 cihazlarla ilgili verileri göstermek için:
+Örneğin, Etkin algılayıcı sistem durumu olan Windows 10 cihazlar hakkındaki verileri göstermek için:
 
-1. Filtreler **altında > Algılayıcı durumu durumu > etkindir**.
-2. Ardından işletim **sistemi platformları ve > Windows 10**.
-3. **Uygula'ya seçin**.
+1. **Filtreler > Algılayıcı sistem durumu > Etkin** altında.
+2. Ardından **> Windows 10 işletim sistemi platformlarını** seçin.
+3. **Uygula'yı** seçin.
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
 
 ## <a name="related-topic"></a>İlgili konu
 
-- [Tehdit koruması raporu](threat-protection-reports.md)
+- [Tehdit koruma raporu](threat-protection-reports.md)

@@ -1,7 +1,7 @@
 ---
-title: Microsoft Defender Virüsten Koruma güvenlik ürünleriyle uyumluluk sorunları
-description: Diğer güvenlik Microsoft Defender Virüsten Koruma ve işletim sistemleriyle nasıl ilgili bilgi edinmek gerekir.
-keywords: windows defender, uç nokta için Defender, yeni nesil, virüsten koruma, uyumluluk, pasif modu
+title: Microsoft Defender Virüsten Koruma diğer güvenlik ürünleriyle uyumluluk
+description: Diğer güvenlik ürünleri ve işletim sistemleriyle Microsoft Defender Virüsten Koruma hakkında bilgi edinin.
+keywords: windows defender, uç nokta için defender, yeni nesil, virüsten koruma, uyumluluk, pasif mod
 ms.pagetype: security
 ms.prod: m365-security
 ms.mktglfcycl: manage
@@ -18,186 +18,198 @@ ms.date: 03/16/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: be29874a087936c7131492bde1a3f541e7d00f43
-ms.sourcegitcommit: 2bbccbcffce3ea6d10ea6d307349874eafb21339
+ms.openlocfilehash: d7e2acf9c0935dcabcace974db009f3c13c6e2ed
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64645088"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64789370"
 ---
-# <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Virüsten Koruma güvenlik ürünleriyle uyumluluk sorunları
+# <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Virüsten Koruma diğer güvenlik ürünleriyle uyumluluk
 
 **Şunlar için geçerlidir:**
 
 - Microsoft Defender Virüsten Koruma
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
+**Platform**
+- Windows
+
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-Microsoft Defender Virüsten Koruma, aşağıdaki sürümlerini çalıştıran uç noktalara otomatik olarak yüklenir Windows:
+Microsoft Defender Virüsten Koruma aşağıdaki Windows sürümlerini çalıştıran uç noktalara otomatik olarak yüklenir:
 
-- Windows 10 veya daha yeni
+- Windows 10 veya daha yenisi
 - Windows Server 2022
 - Windows Server 2019
-- Windows Server, sürüm 1803 veya daha yenisi
+- Windows Server, sürüm 1803 veya üzeri
 - Windows Server 2016
 
-Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü kullanılıyorsa ne olur? Başka bir virüsten Microsoft Defender Virüsten Koruma birlikte bu uygulamaları da çalıştırabilirsiniz mi? Yanıtlar, işletim sisteminiz ve virüsten koruma sisteminiz ile birlikte [Uç Nokta için Microsoft Defender kullandığınız gibi](microsoft-defender-endpoint.md) çeşitli faktörlere bağlıdır.
+Microsoft dışı başka bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü kullanıldığında ne olur? Microsoft Defender Virüsten Koruma başka bir virüsten koruma ürünüyle birlikte çalıştırabilir misiniz? Yanıtlar, işletim sisteminiz ve virüsten korumanızla birlikte [Pertahanan Microsoft untuk Titik Akhir](microsoft-defender-endpoint.md) kullanıp kullanmadığınız gibi çeşitli faktörlere bağlıdır.
 
-Bu makalede, uç nokta için Defender Microsoft Defender Virüsten Koruma birlikte ve Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü ile neler olduğu açıklanmıştır.
+Bu makalede, Uç Nokta için Defender ile ve Uç Nokta için Defender olmadan Microsoft Defender Virüsten Koruma ve Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü ile neler olduğu açıklanmaktadır.
 
 > [!IMPORTANT]
-> - Microsoft Defender Virüsten Koruma Windows 10 ve 11, Windows Server 2022, Windows Server 2019, Windows Server, sürüm 1803 veya daha yeni sürümleri ve Windows Server 2016. 
-> - Microsoft Defender Virüsten Koruma, modern, birleşik Windows Server 2012 çözümü kullanılarak ekli olduğunda [R2'de de kullanılabilir](/microsoft-365/security/defender-endpoint/configure-server-endpoints).
-> - Windows 8.1'te, aracılığıyla yönetilen [System Center Endpoint Protection](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10) olarak kurumsal düzeyde uç nokta virüsten koruma sunulur Microsoft Endpoint Configuration Manager.
-> - Windows Defender, mobil cihazlarda [tüketici cihazlar](/previous-versions/windows/it-pro/windows-8.1-and-8/dn344918(v=ws.11)#BKMK_WindowsDefender) için de Windows 8.1, ancak Windows Defender kurumsal düzeyde yönetim sağlamaz.
+> - Microsoft Defender Virüsten Koruma Windows 10 ve 11, Windows Server 2022, Windows Server 2019, Windows Server, sürüm 1803 veya üzeri ve Windows Server 2016 çalıştıran cihazlarda kullanılabilir. 
+> - Microsoft Defender Virüsten Koruma, [modern, birleşik çözüm](/microsoft-365/security/defender-endpoint/configure-server-endpoints) kullanılarak eklendiğinde Windows Server 2012 R2'de de kullanılabilir.
+> - Windows 8.1'da, kuruluş düzeyinde uç nokta virüsten koruma [System Center Endpoint Protection](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10) olarak sunulur ve bu koruma Microsoft Endpoint Configuration Manager.
+> - Windows Defender kurumsal düzeyde yönetim sağlamasa da [Windows Defender Windows 8.1 üzerindeki tüketici cihazları](/previous-versions/windows/it-pro/windows-8.1-and-8/dn344918(v=ws.11)#BKMK_WindowsDefender) için de sunulur.
 
-## <a name="antivirus-protection-without-defender-for-endpoint"></a>Uç nokta için Defender olmadan virüsten koruma
+## <a name="antivirus-protection-without-defender-for-endpoint"></a>Uç Nokta için Defender olmadan virüsten koruma
 
-Bu bölümde, Uç nokta için Defender Microsoft Defender Virüsten Koruma a ekli olmayan uç noktalarda Microsoft virüsten koruma/kötü amaçlı yazılımdan koruma ürünleriyle birlikte ne olduğu açıklandı. 
+Bu bölümde, Uç Nokta için Defender'a eklenmemiş uç noktalarda Microsoft dışı virüsten koruma/kötü amaçlı yazılımdan koruma ürünlerinin yanı sıra Microsoft Defender Virüsten Koruma kullandığınızda ne olacağı açıklanmaktadır. 
 
 > [!NOTE]
-> Genel olarak Microsoft Defender Virüsten Koruma, Uç Nokta için Defender'a eklemeilen cihazlarda pasif modunda çalışmaz.
+> Genel olarak, uç nokta için Defender'a eklenmemiş cihazlarda Microsoft Defender Virüsten Koruma pasif modda çalışmaz.
 
-Aşağıdaki tabloda nelerin beklemesi gerekenler özetlenmiştir:
+Aşağıdaki tabloda neler bekleyebileceğiniz özetlenmiştir:
 
 |Windows sürümü|Birincil virüsten koruma/kötü amaçlı yazılımdan koruma çözümü|Microsoft Defender Virüsten Koruma durumu|
 |:---|:---|:---|
 |Windows 10 <br/> Windows 11|Microsoft Defender Virüsten Koruma|Etkin mod|
 |Windows 10 <br/> Windows 11|Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü|Devre dışı modu (otomatik olarak gerçekleşir)|
-|Windows Server 2022 <br/> Windows Server 2019<br/> Windows Server, sürüm 1803 veya daha yenisi <br/> Windows Server 2016 |Microsoft Defender Virüsten Koruma|Etkin mod|
-|Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, sürüm 1803 veya daha yenisi <br/> Windows Server 2016  |Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü|Devre dışı (el ile ayarlanmış) <sup>[[1](#fn1)]</sup>|
+|Windows Server 2022 <br/> Windows Server 2019<br/> Windows Server, sürüm 1803 veya üzeri <br/> Windows Server 2016 |Microsoft Defender Virüsten Koruma|Etkin mod|
+|Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, sürüm 1803 veya üzeri <br/> Windows Server 2016  |Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü|Devre dışı (el ile ayarlama) <sup>[[1](#fn1)]</sup>|
 
-(<a id="fn1">1</a>) Windows Server'da Microsoft olmayan bir virüsten koruma ürünü çalıştırıyorsanız, çakışmayı önlemek Microsoft Defender Virüsten Koruma virüsten koruma yazılımını kaldırabilirsiniz. Cihaz pasif moduna Uç Nokta için Microsoft Defender, pasif Microsoft Defender Virüsten Koruma kullanabilirsiniz (aşağıya bakın).
+(<a id="fn1">1</a>) Windows Server'da, Microsoft dışı bir virüsten koruma ürünü çalıştırıyorsanız, çakışmayı önlemek için Microsoft Defender Virüsten Koruma kaldırabilirsiniz. Cihaz Pertahanan Microsoft untuk Titik Akhir ekliyse Microsoft Defender Virüsten Koruma pasif modda kullanabilirsiniz (aşağıya bakın).
 
 > [!TIP]
-> Diğer Windows Server 2016, *geri Windows Defender Virüsten Koruma başka* *bir Microsoft Defender Virüsten Koruma*.
+> Windows Server 2016 Microsoft Defender Virüsten Koruma yerine *Windows Defenderin virustentorjunta* görebilirsiniz.
 
-## <a name="microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions"></a>Microsoft Defender Virüsten Koruma Microsoft dışı virüsten koruma/kötü amaçlı yazılımdan koruma çözümleri
+## <a name="microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions"></a>Microsoft Defender Virüsten Koruma ve Microsoft dışı virüsten koruma/kötü amaçlı yazılımdan koruma çözümleri
 
 > [!NOTE]
-> Genelde, Microsoft Defender Virüsten Koruma için Defender'a kabul edildi uç noktalarda pasif moduna ayarlanabilirsiniz.
+> Genel olarak, Microsoft Defender Virüsten Koruma yalnızca Uç Nokta için Defender'a eklenen uç noktalarda pasif moda ayarlanabilir.
 
-Edil Microsoft Defender Virüsten Koruma modda mı, pasif modda mı yoksa devre dışı bırakılabilir mi gibi çeşitli faktörlere bağlıdır:
+Microsoft Defender Virüsten Koruma etkin modda mı, pasif modda mı yoksa devre dışı mı çalıştırıldığında aşağıdakiler gibi çeşitli faktörlere bağlıdır:
 
-- Uç nokta üzerinde Windows sürümü yüklü
-- Uç Microsoft Defender Virüsten Koruma birincil virüsten koruma/kötü amaçlı yazılımdan koruma çözümü olup olmadığı
-- Uç nokta için Defender'a uç noktanın eklemesi
+- Uç noktaya hangi Windows sürümü yüklü
+- uç noktada birincil virüsten koruma/kötü amaçlı yazılımdan koruma çözümü Microsoft Defender Virüsten Koruma olup olmadığı
+- Uç noktanın Uç Nokta için Defender'a eklenip eklenmediği
 
-Aşağıdaki tabloda, çeşitli senaryolarda Microsoft Defender Virüsten Koruma durum özetlenmiştir. 
+Aşağıdaki tabloda çeşitli senaryolarda Microsoft Defender Virüsten Koruma durumu özetlemektedir. 
 
-| Windows sürümü   | Virüsten koruma/kötü amaçlı yazılımdan koruma çözümü  | Başlangıç <br/> Uç Nokta için Defender? | Microsoft Defender Virüsten Koruma durumu     |
+| Windows sürümü   | Virüsten koruma/kötü amaçlı yazılımdan koruma çözümü  | Ekleme tarihi: <br/> Uç Nokta için Defender mı? | Microsoft Defender Virüsten Koruma durumu     |
 |:------|:------|:-------|:-------|
 | Windows 10 <br/> Windows 11| Microsoft Defender Virüsten Koruma | Evet  | Etkin mod | 
 | Windows 10 <br/> Windows 11 | Microsoft Defender Virüsten Koruma | Hayır   | Etkin mod |
-| Windows 10 <br/> Windows 11  | Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü | Evet  | Pasif modu (otomatik olarak) |
+| Windows 10 <br/> Windows 11  | Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü | Evet  | Pasif mod (otomatik olarak) |
 | Windows 10 <br/> Windows 11  | Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü | Hayır   | Devre dışı modu (otomatik olarak)    |
-| Windows Server 2022 <br/> Windows Server 2019 <br/>Windows, sürüm 1803 veya daha yenisi  | Microsoft Defender Virüsten Koruma  | Evet |         Etkin mod  |
-| Windows Server 2022 <br/> Windows Server 2019 <br/> Windows, sürüm 1803 veya daha yenisi   | Microsoft Defender Virüsten Koruma | Hayır  | Etkin mod |
-| Windows Server 2022 <br/> Windows Server 2019 <p> Windows, sürüm 1803 veya daha yenisi  | Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü | Evet  | Microsoft Defender Virüsten Koruma pasif moduna (el ile) ayar olmalı <sup>[[2](#fn2)]<sup>  | 
-| Windows Server 2022 <br/> Windows Server 2019 <p> Windows, sürüm 1803 veya daha yenisi  | Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü | Hayır  | Microsoft Defender Virüsten Koruma devre dışı bırakmalısınız (el ile) <sup>[[3](#fn3)]<sup></sup>  |
+| Windows Server 2022 <br/> Windows Server 2019 <br/>Windows Server, sürüm 1803 veya üzeri  | Microsoft Defender Virüsten Koruma  | Evet |         Etkin mod  |
+| Windows Server 2022 <br/> Windows Server 2019 <br/> Windows Server, sürüm 1803 veya üzeri   | Microsoft Defender Virüsten Koruma | Hayır  | Etkin mod |
+| Windows Server 2022 <br/> Windows Server 2019 <p> Windows Server, sürüm 1803 veya üzeri  | Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü | Evet  | Microsoft Defender Virüsten Koruma pasif moda ayarlanmalıdır (el ile) <sup>[[2](#fn2)]<sup>  | 
+| Windows Server 2022 <br/> Windows Server 2019 <p> Windows Server, sürüm 1803 veya üzeri  | Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü | Hayır  | Microsoft Defender Virüsten Koruma devre dışı bırakılmalıdır (el ile) <sup>[[3](#fn3)]<sup></sup>  |
 | Windows Server 2016 <br/> Windows Server 2012 R2   | Microsoft Defender Virüsten Koruma | Evet | Etkin mod |
 |Windows Server 2016 <br/> Windows Server 2012 R2  | Microsoft Defender Virüsten Koruma | Hayır | Etkin mod |
-| Windows Server 2016 <br/> Windows Server 2012 R2  | Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü | Evet | Microsoft Defender Virüsten Koruma pasif moduna (el ile) ayar olmalı <sup>[[2](#fn2)]<sup> |
-|Windows Server 2016 <br/> Windows Server 2012 R2  | Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü | Hayır | Microsoft Defender Virüsten Koruma devre dışı bırakmalısınız (el ile) <sup>[[3](#fn3)]<sup> |
+| Windows Server 2016 <br/> Windows Server 2012 R2  | Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü | Evet | Microsoft Defender Virüsten Koruma pasif moda ayarlanmalıdır (el ile) <sup>[[2](#fn2)]<sup> |
+|Windows Server 2016 <br/> Windows Server 2012 R2  | Microsoft dışı bir virüsten koruma/kötü amaçlı yazılımdan koruma çözümü | Hayır | Microsoft Defender Virüsten Koruma devre dışı bırakılmalıdır (el ile) <sup>[[3](#fn3)]<sup> |
 
-(<a id="fn2">2</a>) Windows Server 2019, Windows Server, sürüm 1803 veya daha yenisi, Windows Server 2016 veya Windows Server 2012 R2, Microsoft Defender Virüsten Koruma  Microsoft dışı bir virüsten koruma ürünü yükleytükten sonra pasif moduna otomatik olarak girmez. Böyle durumlarda, sunucuda Microsoft Defender Virüsten Koruma çok virüsten koruma ürünü olması nedeniyle oluşan sorunları önlemek için pasif moduna ayarlayın. PowerShell, Microsoft Defender Virüsten Koruma defteri anahtarı veya kayıt defteri anahtarı kullanarak grup ilkesi modunu pasif moduna grup ilkesi. 
+(<a id="fn2">2</a>) Windows Server 2019'da Windows Server, sürüm 1803 veya üzeri, Windows Server 2016 veya R2 Windows Server 2012 Microsoft Defender Virüsten Koruma  Microsoft dışı bir virüsten koruma ürünü yüklediğinizde pasif moda otomatik olarak girmez. Bu gibi durumlarda, bir sunucuda birden çok virüsten koruma ürününün yüklü olmasından kaynaklanan sorunları önlemek için Microsoft Defender Virüsten Koruma pasif moda ayarlayın. PowerShell, grup ilkesi veya kayıt defteri anahtarı kullanarak Microsoft Defender Virüsten Koruma pasif moda ayarlayabilirsiniz. 
 
-  Aşağıdaki kayıt Microsoft Defender Virüsten Koruma edilgen moduna geçer ve bunu pasif moduna:
-- Yol: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`
+  Aşağıdaki kayıt defteri anahtarını ayarlayarak Microsoft Defender Virüsten Koruma pasif moda ayarlayabilirsiniz:
+- Yolu: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`
 - Ad: `ForceDefenderPassiveMode`
-- Tür: `REG_DWORD`
+- Türü: `REG_DWORD`
 - Değer: `1`
 
  > [!NOTE]
- > Pasif modunun Windows Server 2016 ve R2 Windows Server 2012 uç noktalarında çalışması için, bu uç noktaların Onboard Windows sunucularında açıklanan modern, birleşik [çözümle birlikte Windows gerekir](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016). 
+ > Pasif modun Windows Server 2016 ve Windows Server 2012 R2 çalıştıran uç noktalarda çalışması için bu uç noktaların[, Ekleme Windows sunucularında](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016) açıklanan modern, birleşik çözümle birlikte eklenmelidir. 
 
-(<a id="fn3">3</a>) Microsoft dışı bir virüsten koruma ürünü kullanıyorsanız, Windows Server 2012 Microsoft dışı bir virüsten koruma ürünü kullanıyorsanız, Windows Server 2016 R2, Windows Server sürüm 1803 veya daha yenisi, Windows Server 2019 ve Windows Server 2022  Uç Nokta için Microsoft Defender birçok virüsten koruma Microsoft Defender Virüsten Koruma neden olan sorunları önlemek için bu uygulamaları el ile devre dışı bırak/kaldır.
+(<a id="fn3">3</a>) Windows Server 2016, Windows Server 2012 R2, Windows Server sürüm 1803 veya üzeri, Windows Server 2019 ve Windows Server 2022'de, *eklenmeyen* bir uç noktada Microsoft dışı bir virüsten koruma ürünü kullanıyorsanız Pertahanan Microsoft untuk Titik Akhir, bir sunucuda birden çok virüsten koruma ürününün yüklü olmasından kaynaklanan sorunları önlemek için Microsoft Defender Virüsten Koruma el ile devre dışı bırakın/kaldırın.
 
 > [!TIP]
-> Diğer Windows Server 2016, *geri Windows Defender Virüsten Koruma başka* *bir Microsoft Defender Virüsten Koruma*.
+> Windows Server 2016 Microsoft Defender Virüsten Koruma yerine *Windows Defenderin virustentorjunta* görebilirsiniz.
 
 > [!IMPORTANT]
-> Microsoft Defender Virüsten Koruma yalnızca Windows 10 ve 11, Windows Server 2022, Windows Server 2019, Windows Server, sürüm 1803 veya daha yenisi, Windows Server 2016 çalıştıran cihazlarda kullanılabilir ve Windows Server 2012 R2.
+> Microsoft Defender Virüsten Koruma yalnızca Windows 10 ve 11, Windows Server 2022, Windows Server 2019, Windows Server, sürüm 1803 veya üzeri, Windows Server 2016 ve çalıştıran cihazlarda kullanılabilir ve R2 Windows Server 2012.
 >
-> Genel Windows 8.1, virüsten koruma yazılımı tarafından yönetilen kurumsal düzeyde [System Center Endpoint Protection](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)) virüsten koruma hizmeti Microsoft Endpoint Configuration Manager.
+> Windows 8.1'da kurumsal düzeyde uç nokta virüsten koruma, Microsoft Endpoint Configuration Manager aracılığıyla yönetilen [System Center Endpoint Protection](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)) olarak sunulur.
 >
-> Windows Defender, mobil cihazlarda [tüketici cihazlar](/previous-versions/windows/it-pro/windows-8.1-and-8/dn344918(v=ws.11)#BKMK_WindowsDefender) için de Windows 8.1, ancak Windows Defender kurumsal düzeyde yönetim sağlamaz.
+> Windows Defender kurumsal düzeyde yönetim sağlamasa da [Windows Defender Windows 8.1 üzerindeki tüketici cihazları](/previous-versions/windows/it-pro/windows-8.1-and-8/dn344918(v=ws.11)#BKMK_WindowsDefender) için de sunulur.
 
-Uç nokta için Defender, uç noktanıza yüklenmiş olan virüsten korumayı daha da genişleten özellikler içerir. Başka bir virüsten koruma çözümüyle birlikte Microsoft Defender Virüsten Koruma çalıştırmanın avantajından yararlanabilirsiniz.
+Uç Nokta için Defender, uç noktanıza yüklenen virüsten korumayı daha da genişleten özellikler içerir. Başka bir virüsten koruma çözümünün yanı sıra Microsoft Defender Virüsten Koruma çalıştırma avantajından yararlanabilirsiniz.
 
-Örneğin, Engelleme [modunda Uç nokta algılama ve EDR (Microsoft Defender Virüsten Koruma),](edr-in-block-mode.md) birincil virüsten koruma ürünü değilken bile kötü amaçlı yapıtlara karşı ek koruma sağlar. Bu tür becerilerin Microsoft Defender Virüsten Koruma edilgen modda veya etkin modda yüklenmeleri ve çalıştırılamalarını gerektirir.
+Örneğin, [blok modunda uç nokta algılama ve yanıt (EDR),](edr-in-block-mode.md) Microsoft Defender Virüsten Koruma birincil virüsten koruma ürünü olmasa bile kötü amaçlı yapıtlara karşı ek koruma sağlar. Bu tür özellikler, pasif modda veya etkin modda Microsoft Defender Virüsten Koruma yüklenmesini ve çalıştırılmasını gerektirir.
 
-### <a name="requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode"></a>Edilgen Microsoft Defender Virüsten Koruma modunda çalıştıracak sistem gereksinimleri
+### <a name="requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode"></a>Microsoft Defender Virüsten Koruma pasif modda çalışması için gereksinimler
 
-Uç noktaların Microsoft Defender Virüsten Koruma edilgen modda çalıştırıla çalışması için, uç noktaların aşağıdaki gereksinimleri karşılaması gerekir:
+Microsoft Defender Virüsten Koruma pasif modda çalışması için uç noktaların aşağıdaki gereksinimleri karşılaması gerekir:
 
-- İşletim sistemi: Windows 10 veya daha yenisi; Windows Server 2022, Windows Server 2019 veya Windows Server, sürüm 1803 veya daha yenisi
-- Microsoft Defender Virüsten Koruma yüklü olması gerekir
-- Microsoft dışı başka bir virüsten koruma/kötü amaçlı yazılımdan koruma ürünü, birincil virüsten koruma çözümü olarak yük olmalı ve kullanılmalıdır.
-- Uç noktalar, Uç Nokta için Defender'a eklemeli
+- İşletim sistemi: Windows 10 veya daha yenisi; Windows Server 2022, Windows Server 2019 veya Windows Server, sürüm 1803 veya üzeri
+- Microsoft Defender Virüsten Koruma yüklü olmalıdır
+- Microsoft dışı başka bir virüsten koruma/kötü amaçlı yazılımdan koruma ürünü yüklenmeli ve birincil virüsten koruma çözümü olarak kullanılmalıdır
+- Uç noktalar Uç Nokta için Defender'a eklenmelidir
 
-## <a name="how-microsoft-defender-antivirus-affects-defender-for-endpoint-functionality"></a>Bu Microsoft Defender Virüsten Koruma, Uç nokta işlevi için Defender'ı nasıl etkiler?
+## <a name="how-microsoft-defender-antivirus-affects-defender-for-endpoint-functionality"></a>Microsoft Defender Virüsten Koruma Uç Nokta için Defender işlevselliğini nasıl etkiler?
 
-Uç Nokta için Defender, Microsoft Defender Virüsten Koruma edilgen modda çalıştırıp çalıştırıılamay noktasını etkiler. Microsoft Defender Virüsten Koruma için Defender'daki bazı özellikleri de etkileyebilir. Örneğin, gerçek zamanlı koruma Microsoft Defender Virüsten Koruma veya pasif modundayken çalışır, ancak devre dışı Microsoft Defender Virüsten Koruma kaldırılamaz.
+Uç Nokta için Defender, Microsoft Defender Virüsten Koruma pasif modda çalışıp çalışmayacağını etkiler. Microsoft Defender Virüsten Koruma, Uç Nokta için Defender'daki bazı özellikleri de etkileyebilir. Örneğin, Microsoft Defender Virüsten Koruma etkin veya pasif moddayken gerçek zamanlı koruma çalışır, ancak Microsoft Defender Virüsten Koruma devre dışı bırakıldığında veya kaldırıldığında çalışmaz.
 
-Bu bölümdeki tabloda, "Etkin modda mı, pasif modda mı, yoksa devre dışı mı/kaldırılamaz Microsoft Defender Virüsten Koruma etkin çalışıp çalışmadığınıza bağlı olarak etkin olarak çalışan özellik ve yetenekleri özetlenmiştir.
+Bu bölümdeki tabloda, Microsoft Defender Virüsten Koruma etkin modda mı, pasif modda mı yoksa devre dışı mı yoksa kaldırılmış mı olduğuna göre etkin olarak çalışan veya çalışmayan özellikler ve özellikler özetlenir.
 
 > [!IMPORTANT]
-> Aşağıdaki tablo yalnızca bilgilendirmeyi yapmak üzere tasarlanmıştır. **Gerçek zamanlı** koruma, bulut teslimi koruması veya Microsoft Defender Virüsten Koruma'i pasif modunda kullanıyorsanız sınırlı düzenli tarama gibi özellikleri ya da ihlal sonrası algılayan kötü amaçlı yapıları saptamak ve düzeltmek için perde arkasında çalışan [EDR'i](edr-in-block-mode.md) engelleme modunda kapatmayın.
+> Aşağıdaki tablo yalnızca bilgilendirici olacak şekilde tasarlanmıştır. Pasif modda Microsoft Defender Virüsten Koruma kullanıyorsanız veya engelleme [modunda](edr-in-block-mode.md) EDR kullanıyorsanız, ihlal sonrasında algılanan kötü amaçlı yapıtları algılamak ve düzeltmek için arka planda çalışan gerçek zamanlı koruma, bulut tabanlı koruma veya sınırlı düzenli tarama gibi **özellikleri kapatmayın**.
 
- | Koruma | Microsoft Defender Virüsten Koruma <br/>(*Etkin mod*) | Microsoft Defender Virüsten Koruma <br/>(*Pasif modu*) | Microsoft Defender Virüsten Koruma <br/>(*Devre dışı bırakıldı veya kaldırıldı*) | [Engelleme modunda EDR ](edr-in-block-mode.md) | 
+ | Koruma | Microsoft Defender Virüsten Koruma <br/>(*Etkin mod*) | Microsoft Defender Virüsten Koruma <br/>(*Pasif mod*) | Microsoft Defender Virüsten Koruma <br/>(*Devre dışı veya kaldırıldı*) | [Engelleme modunda EDR ](edr-in-block-mode.md) | 
  |:---|:---|:---|:---|:---| 
- | [Gerçek zamanlı koruma](configure-real-time-protection-microsoft-defender-antivirus.md) | Evet | Nota bakın <sup>[[4](#fn4)]</sup> | Hayır | Hayır | 
- | [Bulut teslimi koruma](enable-cloud-protection-microsoft-defender-antivirus.md) | Evet | Hayır  | Hayır | Hayır | 
+ | [Gerçek zamanlı koruma](configure-real-time-protection-microsoft-defender-antivirus.md) | Evet | Bkz. not <sup>[[4](#fn4)]</sup> | Hayır | Hayır | 
+ | [Bulut tabanlı koruma](enable-cloud-protection-microsoft-defender-antivirus.md) | Evet | Hayır  | Hayır | Hayır | 
  | [Ağ koruması](network-protection.md)  | Evet | Hayır | Hayır | Hayır | 
  | [Saldırı yüzeyini azaltma kuralları](attack-surface-reduction.md)  | Evet | Hayır | Hayır  | Hayır | 
  | [Sınırlı düzenli tarama kullanılabilirliği](limited-periodic-scanning-microsoft-defender-antivirus.md) | Hayır | Hayır | Evet | Hayır | 
  | [Dosya tarama ve algılama bilgileri](review-scan-results-microsoft-defender-antivirus.md) | Evet | Evet<sup>[[5](#fn5)]</sup> | Hayır | Evet | 
- | [Tehdit düzeltmesi](configure-remediation-microsoft-defender-antivirus.md) | Evet | Nota bakın <sup>[[6](#fn6)]</sup> | Hayır | Evet | 
- | [Güvenlik zekası güncelleştirmeleri](manage-updates-baselines-microsoft-defender-antivirus.md) | Evet | Evet | Hayır | Evet | 
+ | [Tehdit düzeltme](configure-remediation-microsoft-defender-antivirus.md) | Evet | Bkz. not <sup>[[6](#fn6)]</sup> | Hayır | Evet | 
+ | [Güvenlik bilgileri güncelleştirmeleri](manage-updates-baselines-microsoft-defender-antivirus.md) | Evet | Evet | Hayır | Evet | 
 
-(<a id="fn4">4</a>) Genel olarak, Microsoft Defender Virüsten Koruma pasif modundayken, gerçek zamanlı koruma etkin ve pasif modunda olsa bile, hiçbir engelleme veya zorlama sağlamaz.
+(<a id="fn4">4</a>) Genel olarak, Microsoft Defender Virüsten Koruma pasif moddayken, gerçek zamanlı koruma etkin ve pasif modda olsa bile herhangi bir engelleme veya zorlama sağlamaz.
 
-(<a id="fn5">5</a>) Microsoft Defender Virüsten Koruma pasif modundayken, taramalar zamanlanmaz.
+(<a id="fn5">5</a>) Microsoft Defender Virüsten Koruma pasif moddayken taramalar zamanlanmaz.
 
-(<a id="fn6">6</a>) Microsoft Defender Virüsten Koruma pasif modundayken, tehditleri düzeltmez. Ancak, tehditleri engelleme modunda Uç nokta algılama [ve yanıt (EDR) ile düzeltebilirsiniz](edr-in-block-mode.md). Bu durumda, edilgen moddayken Microsoft Defender Virüsten Koruma kaynak olarak Microsoft Defender Virüsten Koruma uyarılar görebilirler.
+(<a id="fn6">6</a>) Microsoft Defender Virüsten Koruma pasif moddayken tehditleri düzeltmez. Ancak tehditler[, blok modunda uç nokta algılama ve yanıt (EDR)](edr-in-block-mode.md) ile düzeltilebilir. Bu durumda, Microsoft Defender Virüsten Koruma pasif modda olsa bile kaynak olarak Microsoft Defender Virüsten Koruma gösteren uyarılar görebilirsiniz.
 
 > [!NOTE]
-> [Microsoft 365 uç nokta veri kaybı önleme](/microsoft-365/compliance/endpoint-dlp-learn-about) koruması etkin veya pasif modunda Microsoft Defender Virüsten Koruma şekilde normal çalışmaya devam eder.
+> [Microsoft 365 Uç nokta veri kaybı önleme](/microsoft-365/compliance/endpoint-dlp-learn-about) koruması, Microsoft Defender Virüsten Koruma etkin veya pasif modda olduğunda normal çalışmaya devam eder.
 
 ## <a name="important-notes"></a>Önemli notlar
 
-- Microsoft Defender Virüsten Koruma, Endpoint için Defender veya Windows Güvenliği uygulaması tarafından kullanılan ilişkili hizmetleri devre dışı bırakmayın, durdurmayı veya Windows Güvenliği. Bu öneri *wscsvc*, *SecurityHealthService*, *MsSense*, *Sense*, *WinDefend* veya *MsMpEng* hizmetlerini ve işlemlerini içerir. Bu hizmetlerin el ile değiştirilmesi, cihazlarınız üzerinde ciddi bir soruna neden olabilir ve ağın korunmasına neden olabilir. Bu hizmetlerin devre dışı bırakılması, durdurulması veya değiştirilmesi, Microsoft dışı virüsten koruma çözümlerini kullanırken ve bunların bilgilerin Windows Güvenliği [neden olabilir](microsoft-defender-security-center-antivirus.md).
+- Microsoft Defender Virüsten Koruma, Uç Nokta için Defender veya Windows Güvenliği uygulaması tarafından kullanılan ilişkili hizmetlerden hiçbirini devre dışı bırakmayın, durdurmayın veya değiştirmeyin. Bu öneri *wscsvc*, *SecurityHealthService*, *MsSense*, *Sense*, *WinDefend* veya *MsMpEng* hizmet ve işlemlerini içerir. Bu hizmetleri el ile değiştirmek cihazlarınızda ciddi kararsızlıklara neden olabilir ve ağınızı savunmasız hale getirebilir. Bu hizmetlerin devre dışı bırakılması, durdurulması veya değiştirilmesi, Microsoft dışı virüsten koruma çözümleri kullanılırken ve bilgilerinin [Windows Güvenliği uygulamasında](microsoft-defender-security-center-antivirus.md) nasıl görüntülendiği konusunda da sorunlara neden olabilir.
 
-- Uç nokta için Defender'EDR, birincil virüsten koruma çözümünüz Microsoft Defender Virüsten Koruma engelleme modunda açabilirsiniz. EDR modundayken düzeltme, cihazda bulunan kötü amaçlı öğeleri algılar ve düzeltmek (ihlal sonrası). Daha fazla bilgi için bkz[. EDR modunda çalışma](edr-in-block-mode.md).
+- Uç Nokta için Defender'da Microsoft Defender Virüsten Koruma birincil virüsten koruma çözümünüz olmasa bile EDR blok modunda açın. blok modunda EDR, cihazda bulunan kötü amaçlı öğeleri algılar ve düzelter (ihlal sonrası). Daha fazla bilgi için bkz. [blok modunda EDR](edr-in-block-mode.md).
 
-## <a name="how-to-confirm-the-state-of-microsoft-defender-antivirus"></a>Posta durumunu doğrulama Microsoft Defender Virüsten Koruma
+## <a name="how-to-confirm-the-state-of-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma durumunu onaylama
 
-Aşağıdaki tabloda açıklandığı gibi, posta iletisinin durumunu onaylamak Microsoft Defender Virüsten Koruma yöntemlerden birini kullanabilirsiniz:
+Aşağıdaki tabloda açıklandığı gibi, Microsoft Defender Virüsten Koruma durumunu onaylamak için çeşitli yöntemlerden birini kullanabilirsiniz:
 
  | Yöntem | Yordam | 
  |:---|:---| 
- | Windows Güvenliği uygulaması |  1. Windows cihazda, Windows Güvenliği açın.<br/>2. Virüs koruması **için &'i seçin**.<br/>3. **Sağlayıcılar Who koruma altında Sağlayıcılar'ı** **yönet'i seçin**.<br/>4. Güvenlik **sağlayıcıları sayfasındaki** Virüsten **Koruma'nın** altında Microsoft Defender Virüsten Koruma **olduğunu görebilirsiniz**. | 
- | Görev Yöneticisi |  1. Windows Yöneticisi uygulamasını açın.<br/>2. Ayrıntılar **sekmesini** seçin.<br/>3. Listede **MsMpEng.exe** bir liste seçin. | 
- | Windows PowerShell <br/> (Çalıştır bu Microsoft Defender Virüsten Koruma onaylamak için) |  1. Windows cihazda, Tamam'Windows PowerShell. <br/>2. Aşağıdaki PowerShell cmdlet'ini çalıştırın: `Get-Process`.<br/>3. Sonuçları gözden geçirin. Etkinse **MsMpEng.exe** diğer Microsoft Defender Virüsten Koruma görüyor olun. | 
- | Windows PowerShell <br/>(Virüsten korumanın var olduğunu onaylamak için) |  [Get-MpCompstatus PowerShell cmdlet'ini kullanabilirsiniz](/powershell/module/defender/get-mpcomputerstatus).<br/>1. Windows cihazda, Tamam'Windows PowerShell.<br/>2. Aşağıdaki PowerShell cmdlet'ini çalıştırın:<br/> \|Get-MpComputerStatus AMRunningMode öğesini seçin <br/>3. Sonuçları gözden geçirin. Uç noktada Etkin **değilken Normal** Microsoft Defender Virüsten Koruma Edilgen'i görüyor olun.  | 
- | Komut İstemi |  1. Bir Windows Komut İstemi'ne açın.<br/>2. yazın ve `sc query windefend`Enter tuşuna basın.<br/>3. Pasif modunda çalışma Microsoft Defender Virüsten Koruma için sonuçları gözden geçirebilirsiniz.  | 
+ | Windows Güvenliği uygulaması |  1. Windows bir cihazda Windows Güvenliği uygulamasını açın.<br/>2. **Virüs & tehdit koruması'ı** seçin.<br/>3. **Who beni koruyor?** altında **Sağlayıcıları yönet'i** seçin.<br/>4. **Güvenlik sağlayıcıları** sayfasında, **Virüsten Koruma'nın** altında **Microsoft Defender Virüsten Koruma açık olduğunu** görmeniz gerekir. | 
+ | Görev Yöneticisi |  1. Windows bir cihazda Görev Yöneticisi uygulamasını açın.<br/>2. **Ayrıntılar** sekmesini seçin.<br/>3. Listede **MsMpEng.exe** arayın. | 
+ | Windows PowerShell <br/> (Microsoft Defender Virüsten Koruma çalıştığını onaylamak için) |  1. Windows bir cihazda Windows PowerShell açın. <br/>2. Aşağıdaki PowerShell cmdlet'ini çalıştırın: `Get-Process`.<br/>3. Sonuçları gözden geçirin. **Microsoft Defender Virüsten Koruma** etkinseMsMpEng.exegörmeniz gerekir. | 
+ | Windows PowerShell <br/>(Virüsten korumanın yerinde olduğunu onaylamak için) |  [Get-MpComputerStatus PowerShell cmdlet'ini](/powershell/module/defender/get-mpcomputerstatus) kullanabilirsiniz.<br/>1. Windows bir cihazda Windows PowerShell açın.<br/>2. Aşağıdaki PowerShell cmdlet'ini çalıştırın:<br/> \|Get-MpComputerStatus AMRunningMode öğesini seçin <br/>3. Sonuçları gözden geçirin. Uç noktada Microsoft Defender Virüsten Koruma etkinse **Normal** veya **Pasif** seçeneğini görmeniz gerekir.  | 
+ | Komut |  1. Windows bir cihazda Komut İstemi'ni açın.<br/>2. yazın `sc query windefend`ve Enter tuşuna basın.<br/>3. Microsoft Defender Virüsten Koruma pasif modda çalıştığını onaylamak için sonuçları gözden geçirin.  | 
 
-## <a name="more-details-about-microsoft-defender-antivirus-states"></a>Önemli eyaletler hakkında daha Microsoft Defender Virüsten Koruma bilgi
+## <a name="more-details-about-microsoft-defender-antivirus-states"></a>Microsoft Defender Virüsten Koruma durumları hakkında daha fazla ayrıntı
 
-Bu bölümdeki tabloda, bu makalede gördüğünüz çeşitli eyaletler Microsoft Defender Virüsten Koruma.
+Bu bölümdeki tabloda, Microsoft Defender Virüsten Koruma ile görebileceğiniz çeşitli durumlar açıklanmaktadır.
 
  |  Durum  |  Neler olur?  | 
  |:---|:---| 
- |  Etkin mod  |  Etkin modda, Microsoft Defender Virüsten Koruma makinede virüsten koruma uygulaması olarak kullanılabilir. Ayarlar, posta, Configuration Manager, grup ilkesi, Microsoft Intune veya diğer yönetim ürünleri kullanılarak yapılandırılan diğer ürünler uygulanır. Dosyalar taranır, tehditlere düzeltmeler uygulanır ve yapılandırma aracınıza (uç noktanın kendisinde Configuration Manager veya Microsoft Defender Virüsten Koruma uygulaması gibi) algılama bilgileri gönderilir.  | 
- |  Pasif mod  |  Pasif modunda, Microsoft Defender Virüsten Koruma virüsten koruma uygulaması olarak kullanılamaz ve güvenlik duvarı tarafından düzeltme Microsoft Defender Virüsten Koruma. Öte yandan, tehditlerin düzeltmesi için [Uç nokta algılama ve EDR) engelleme modunda düzeltebilirsiniz](edr-in-block-mode.md). <br/><br/> Dosyalar başka bir EDR tarafından taranır ve uç nokta için Defender hizmetiyle paylaşılan tehdit algılamaları için raporlar sağlanır. Pasif modundayken bile Microsoft Defender Virüsten Koruma olarak e-postaların kaynak olarak Microsoft Defender Virüsten Koruma uyarılar görebilirler. <br/><br/> Microsoft Defender Virüsten Koruma edilgen moddayken, örneğin örneğin Microsoft Defender Virüsten Koruma güncelleştirmelerini yine de [yönetebilirsiniz; bununla](manage-updates-baselines-microsoft-defender-antivirus.md) birlikte, pasif Microsoft Defender Virüsten Koruma  etkin moda girer. Cihazlarınızı, Microsoft virüsten koruma ürünü olmayan ve kötü amaçlı yazılımlara karşı gerçek zamanlı koruma sağlayan bir virüsten koruma yazılımına sahipse etkin moda dönüştürebilirsiniz. <br/><br/> En iyi güvenlik katmanlı savunma ve algılama için, koruma yazılımınız ve kötü amaçlı yazılımlardan koruma güncelleştirmelerinizi edin edinin (Microsoft Defender Virüsten Koruma edilgen modda çalışıyor olsa bile). Bkz[. Microsoft Defender Virüsten Koruma güncelleştirmelerini yönetme ve taban çizgilerini uygulama](manage-updates-baselines-microsoft-defender-antivirus.md). <br/><br/> Makine modern, birleşik çözüm kullanılarak işe Windows Server 2012 R2 & 2016'da pasif modunun yalnızca destek [olara destek olduğunu unutmayın](/microsoft-365/security/defender-endpoint/configure-server-endpoints).  | 
- |  Devre dışı <br/><br/> veya <br/><br/> Kaldırıldı  |  Virüsten koruma uygulaması Microsoft Defender Virüsten Koruma devre dışı bırakılmıştır veya kaldırılmıştır. Dosyalar taranmaz ve tehditlere düzeltme olmaz. <br/><br/> Posta hizmet Microsoft Defender Virüsten Koruma devre dışı bırakma veya kaldırma genel olarak önerilmez; mümkünse, Microsoft dışı bir kötü amaçlı yazılım/virüsten koruma çözümü kullanıyorsanız Microsoft Defender Virüsten Koruma edilgen modda kullanın. <br/><br/> Microsoft dışı virüsten koruma/kötü amaçlı yazılımdan koruma ürününün süresi dolduğunda veya başka bir şekilde virüslere, kötü amaçlı yazılımlara ve diğer tehditlere karşı gerçek zamanlı koruma sağlamayı durdurursa, Microsoft Defender Virüsten Koruma otomatik olarak yeniden etkinleştirilebilir. Virüsten korumanın otomatik olarak Microsoft Defender Virüsten Koruma yeniden etkinleştirilmesi, virüsten korumanın uç noktalarınız üzerinde korunmasına yardımcı olur. <br/><br/> Ayrıca, Microsoft dışı [bir virüsten](limited-periodic-scanning-microsoft-defender-antivirus.md) koruma uygulaması kullanıyorsanız tehditleri düzenli olarak denetlemeniz için Microsoft Defender Virüsten Koruma altyapısıyla birlikte çalışan sınırlı düzenli tarama da kullanabilirsiniz.  | 
+ |  Etkin mod  |  Etkin modda Microsoft Defender Virüsten Koruma makinede virüsten koruma uygulaması olarak kullanılır. Configuration Manager, grup ilkesi, Microsoft Intune veya diğer yönetim ürünleri kullanılarak yapılandırılan Ayarlar uygulanır. Dosyalar taranır, tehditler giderilir ve algılama bilgileri yapılandırma aracınızda (uç noktanın kendisindeki Configuration Manager veya Microsoft Defender Virüsten Koruma uygulaması gibi) bildirilir.  | 
+ |  Pasif mod  |  Pasif modda, virüsten koruma uygulaması olarak Microsoft Defender Virüsten Koruma kullanılmaz ve tehditler Microsoft Defender Virüsten Koruma tarafından *düzeltılmaz*. Ancak tehditler[, blok modunda Uç nokta algılama ve yanıt (EDR)](edr-in-block-mode.md) ile düzeltilebilir. <br/><br/> Dosyalar EDR tarafından taranır ve Uç Nokta için Defender hizmetiyle paylaşılan tehdit algılamaları için raporlar sağlanır. Microsoft Defender Virüsten Koruma pasif modda olsa bile kaynak olarak Microsoft Defender Virüsten Koruma gösteren uyarılar görebilirsiniz. <br/><br/> Microsoft Defender Virüsten Koruma pasif moddayken Microsoft Defender Virüsten Koruma [güncelleştirmelerini yönetmeye](manage-updates-baselines-microsoft-defender-antivirus.md) devam edebilirsiniz; ancak Microsoft Defender Virüsten Koruma  cihazlarınızın kötü amaçlı yazılımlara karşı gerçek zamanlı koruma sağlayan Microsoft dışı bir virüsten koruma ürünü varsa etkin moda geçin. <br/><br/> En iyi güvenlik katmanlı savunma ve algılama etkinliği için, Microsoft Defender Virüsten Koruma pasif modda çalışıyor olsa bile virüsten koruma ve kötü amaçlı yazılımdan koruma güncelleştirmelerinizi aldığınızdan emin olun. Bkz. [Microsoft Defender Virüsten Koruma güncelleştirmelerini yönetme ve temelleri uygulama](manage-updates-baselines-microsoft-defender-antivirus.md). <br/><br/> Pasif modun yalnızca makine [modern, birleşik çözüm](/microsoft-365/security/defender-endpoint/configure-server-endpoints) kullanılarak eklendiğinde Windows Server 2012 R2 & 2016'da desteklendiğini unutmayın.  | 
+ |  Devre dışı <br/><br/> veya <br/><br/> Kaldırıldı  |  Devre dışı bırakıldığında veya kaldırıldığında, virüsten koruma uygulaması olarak Microsoft Defender Virüsten Koruma kullanılmaz. Dosyalar taranmıyor ve tehditler düzeltilmiyor. <br/><br/> Microsoft Defender Virüsten Koruma devre dışı bırakmak veya kaldırmak genel olarak önerilmez; mümkünse, Microsoft dışı bir kötü amaçlı yazılımdan koruma/virüsten koruma çözümü kullanıyorsanız Microsoft Defender Virüsten Koruma pasif modda tutun. <br/><br/> Microsoft Defender Virüsten Koruma otomatik olarak devre dışı bırakıldığı durumlarda, Microsoft dışı virüsten koruma/kötü amaçlı yazılımdan koruma ürününün süresi dolarsa veya virüslere, kötü amaçlı yazılımlara veya diğer tehditlere karşı gerçek zamanlı koruma sağlamayı durdurursa otomatik olarak yeniden etkinleştirilebilir. Microsoft Defender Virüsten Koruma otomatik olarak yeniden etkinleştirilmesi, uç noktalarınızda virüsten korumanın korunmasına yardımcı olur. <br/><br/> Microsoft dışı bir virüsten koruma uygulaması kullanıyorsanız tehditleri düzenli aralıklarla denetlemek için Microsoft Defender Virüsten Koruma altyapısıyla birlikte çalışan [sınırlı düzenli tarama](limited-periodic-scanning-microsoft-defender-antivirus.md) da kullanabilirsiniz.  | 
 
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Microsoft Defender Virüsten Koruma istemci Windows'i](microsoft-defender-antivirus-in-windows-10.md)
-- [Microsoft Defender Virüsten Koruma Server'da Windows'i seçin](microsoft-defender-antivirus-on-windows-server.md)
+- [Windows istemcilerinde Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md)
+- [Windows Server'da Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-on-windows-server.md)
 - [Engelleme modunda EDR ](edr-in-block-mode.md)
-- [Uç nokta Microsoft 365 kaybı önleme hakkında bilgi](/microsoft-365/compliance/endpoint-dlp-learn-about)
+- [uç nokta veri kaybı önleme Microsoft 365 hakkında bilgi edinin](/microsoft-365/compliance/endpoint-dlp-learn-about)

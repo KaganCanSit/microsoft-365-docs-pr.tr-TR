@@ -15,12 +15,12 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: c1fcf71aa91e944e36050dae85f0c31a316df344
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 6a9b346d4e423d46244eeedbb8136b91a165473a
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665458"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64788578"
 ---
 # <a name="review-event-logs-and-error-codes-to-troubleshoot-issues-with-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma ile ilgili sorunları gidermek için olay günlüklerini ve hata kodlarını inceleyin
 
@@ -29,6 +29,10 @@ ms.locfileid: "64665458"
 
 **Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
+
+**Platform**
+- Windows
 
 Microsoft Defender Virüsten Koruma ile ilgili bir sorunla karşılaşırsanız, eşleşen bir sorunu ve olası çözümü bulmak için bu konudaki tablolarda arama yapabilirsiniz.
 
@@ -39,7 +43,7 @@ Tablo listesi:
 - [İç Microsoft Defender Virüsten Koruma istemcisi hata kodları (Geliştirme ve test sırasında Microsoft tarafından kullanılır)](#internal-error-codes)
 
 > [!TIP]
-> Aşağıdaki özelliklerin çalıştığını onaylamak için [demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) Uç Nokta için Microsoft Defender tanıtım web sitesini de ziyaret edebilirsiniz:
+> Aşağıdaki özelliklerin çalıştığını onaylamak için [demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) Pertahanan Microsoft untuk Titik Akhir tanıtım web sitesini de ziyaret edebilirsiniz:
 >
 > - Bulut tabanlı koruma
 > - Hızlı öğrenme (ilk bakışta engelle dahil)
@@ -3196,6 +3200,17 @@ Bu bir iç hatadır. Tarama tamamlanamadıktan sonra tetiklenmiş olabilir.
 </td>
 </tr>
 </table>
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
+
 
 ## <a name="related-topics"></a>İlgili konular
 

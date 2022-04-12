@@ -1,7 +1,7 @@
 ---
-title: Dağıtım ve etkinleştirme Microsoft Defender Virüsten Koruma
-description: Microsoft Defender Virüsten Koruma, Microsoft Endpoint Configuration Manager, PowerShell cmdlet'Microsoft Intune leri veya WMI ile uç noktalarınızı korumak için Microsoft Endpoint Configuration Manager'yi dağıtın.
-keywords: dağıtma, etkinleştirme, devre dışı Microsoft Defender Virüsten Koruma
+title: Microsoft Defender Virüsten Koruma’yı dağıtın ve etkinleştirin
+description: Microsoft Intune, Microsoft Endpoint Configuration Manager, grup ilkesi, PowerShell cmdlet'leri veya WMI ile uç noktalarınızın korunması için Microsoft Defender Virüsten Koruma dağıtın.
+keywords: dağıtma, etkinleştirme, Microsoft Defender Virüsten Koruma
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -15,33 +15,47 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 9baa4fe5318bf21d73b3c79e719895fb9c492ea7
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: fe84fa4df958ea42304531defc4810edf332b3a3
+ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "62998045"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64790536"
 ---
-# <a name="deploy-and-enable-microsoft-defender-antivirus"></a>Dağıtım ve etkinleştirme Microsoft Defender Virüsten Koruma
+# <a name="deploy-and-enable-microsoft-defender-antivirus"></a>Microsoft Defender Virüsten Koruma’yı dağıtın ve etkinleştirin
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 
-- [Uç Nokta Planı 1 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Uç Nokta Planı 2 için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Pertahanan Microsoft untuk Titik Akhir Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Uç Nokta için Microsoft Defender Planı 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- Microsoft Defender Virüsten Koruma
 
-Kullandığınız yönetim aracına bağlı olarak, güvenlik korumasını özel olarak etkinleştirmeniz veya Microsoft Defender Virüsten Koruma gerekir. 
+**Platform**
+- Windows
 
-Microsoft Intune[, Microsoft Endpoint Configuration Manager,](deploy-manage-report-microsoft-defender-antivirus.md#ref2) Group Policy, Active Directory ile korumayı etkinleştirme yönergeleri için, Microsoft Defender Virüsten Koruma, yönetme ve rapor Microsoft Intune'daki tabloya bakın. Microsoft Azure, PowerShell cmdlet'leri ve WINDOWS Yönergesi'ne (WMI) sahip olur.
+Kullandığınız yönetim aracına bağlı olarak, Microsoft Defender Virüsten Koruma korumasını özel olarak etkinleştirmeniz veya yapılandırmanız gerekebilir. 
 
-Bazı senaryolar, Sanal Masaüstü Altyapısı (VDI) ortamları gibi veri korumasını Microsoft Defender Virüsten Koruma başarıyla dağıtma veya yapılandırma konusunda Sanal Masaüstü Altyapısı kılavuz gerektirir.
+Microsoft Intune, Microsoft Endpoint Configuration Manager ile korumayı etkinleştirme yönergeleri için [Microsoft Defender Virüsten Koruma dağıtma, yönetme ve raporlama başlığı altında](deploy-manage-report-microsoft-defender-antivirus.md#ref2) yer alan tabloya bakın. grup ilkesi, Active Directory, Microsoft Azure, PowerShell cmdlet'leri ve Windows Yönetim Yönergesi (WMI).
 
-Bu bölümün kalan makalesinde, VDI veya Uzak Masaüstü Hizmetleri [(RDS) ortamında sanal makinelerde (VMs)](deployment-vdi-microsoft-defender-antivirus.md) Microsoft Defender Virüsten Koruma uç öneriler ve en iyi yöntemler yer almaktadır.
+Bazı senaryolar, Sanal Masaüstü Altyapısı (VDI) ortamları gibi Microsoft Defender Virüsten Koruma korumayı başarıyla dağıtma veya yapılandırma konusunda daha fazla kılavuz gerektirir.
+
+Bu bölümdeki diğer makale, [VDI veya Uzak Masaüstü Hizmetleri (RDS) ortamındaki sanal makinelerde (VM) Microsoft Defender Virüsten Koruma ayarlamak](deployment-vdi-microsoft-defender-antivirus.md) için uçtan uca öneriler ve en iyi yöntemleri sağlar.
 
 ## <a name="related-articles"></a>İlgili makaleler
 
-- [Microsoft Defender Virüsten Koruma'da Windows 10](microsoft-defender-antivirus-in-windows-10.md)
-- [Güncelleştirmeleri ve raporu diğer ağlarda dağıtma Microsoft Defender Virüsten Koruma](deploy-manage-report-microsoft-defender-antivirus.md)
-- [Sanal masaüstü Microsoft Defender Virüsten Koruma (VDI) ortamında dağıtım kılavuzu](deployment-vdi-microsoft-defender-antivirus.md)
+- [Windows 10'da Microsoft Defender Virüsten Koruma](microsoft-defender-antivirus-in-windows-10.md)
+- [Microsoft Defender Virüsten Koruma güncelleştirmeleri dağıtma, yönetme ve raporlama](deploy-manage-report-microsoft-defender-antivirus.md)
+- [Sanal Masaüstü Altyapısı (VDI) ortamında Microsoft Defender Virüsten Koruma için dağıtım klavuzu](deployment-vdi-microsoft-defender-antivirus.md)
+
+> [!TIP]
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
+> - [macOS'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](mac-preferences.md)
+> - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
+> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Pertahanan Microsoft untuk Titik Akhir tercihlerini ayarlama](linux-preferences.md)
+> - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
+> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
+> - [iOS özelliklerinde Pertahanan Microsoft untuk Titik Akhir yapılandırma](ios-configure-features.md)
