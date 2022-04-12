@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Cihaz güvenlik ilkelerini ve erişim kurallarını ayarlamak için Temel Hareketlilik ve Güvenlik'i kullanın.
-ms.openlocfilehash: 4fb1b8ca467d86259f2608af5140510a2a88b23a
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: b4752a6f1b71c453b3d1b89adeb25f337a65c255
+ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983996"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "64780863"
 ---
 # <a name="overview-of-basic-mobility-and-security-for-microsoft-365"></a>Microsoft 365 için Temel Hareketlilik ve Güvenlik'e genel bakış
 
@@ -36,7 +36,7 @@ Temel Hareketlilik ve Güvenlik’i kullanarak, Microsoft 365 kuruluşunuza bağ
 
 Temel Hareketlilik ve Güvenlik'i kullanarak Windows Phone, Android, iPhone ve iPad gibi birçok mobil cihaz türlerini yönetebilirsiniz. Kuruluşunuzdaki kişiler tarafından kullanılan mobil cihazları yönetmek için her kişinin geçerli bir Microsoft 365 lisansına sahip olması ve cihazlarının Temel Hareketlilik ve Güvenlik'e kayıtlı olması gerekir.
 
-Temel Hareketlilik ve Güvenlik’in her bir cihaz türü için neleri desteklediğini görmek için, bkz.  [Temel Hareketlilik ve Güvenlik Özellikleri](capabilities.md).
+Temel Hareketlilik ve Güvenlik’in her bir cihaz türü için neleri desteklediğini görmek için, bkz. [Temel Hareketlilik ve Güvenlik Özellikleri](capabilities.md).
 
 ## <a name="setup-steps-for-basic-mobility-and-security"></a>Temel Hareketlilik ve Güvenlik için kurulum adımları
 
@@ -44,7 +44,7 @@ Bir Microsoft 365 genel yöneticisinin Temel Hareketlilik ve Güvenlik’i etkin
 
 Adımların özeti şöyledir:
 
-**1. Adım:**  [Temel Hareketlilik ve Güvenlik’i Ayarlama](set-up.md)’daki adımları izleyerek Temel Hareketlilik ve Güvenlik’i etkinleştirin.
+**1. Adım:** [Temel Hareketlilik ve Güvenlik’i Ayarlama](set-up.md)’daki adımları izleyerek Temel Hareketlilik ve Güvenlik’i etkinleştirin.
 
 **2. Adım:** Örneğin, iOS cihazlarını yönetmek için bir APNs sertifikası oluşturarak ve etki alanınız için Windows telefonlarını desteklemek üzere bir Etki Alanı Adı Sistemi (DNS) kaydı ekleyerek Temel Hareketlilik ve Güvenlik’i ayarlayın.
 
@@ -58,7 +58,7 @@ Temel Hareketlilik ve Güvenlik ayarını yaptıktan ve kullanıcılarınız cih
 
 ## <a name="other-ways-to-manage-devices-and-apps"></a>Cihazları ve uygulamaları yönetmenin diğer yolları
 
-Yalnızca kendi cihazlarında iş projelerini güncelleştiren kişiler için mobil uygulama yönetimine (MAM) ihtiyacınız varsa, Intune cihazları kaydetmenin ve yönetmenin yanı sıra başka bir seçenek sunar. Intune aboneliği, kullanıcıların cihazları Intune'a kayıtlı olmasa bile Azure portalını kullanarak MAM ilkeleri ayarlamanıza olanak sağlar. Daha fazla bilgi için bkz. [Uygulama koruması ilkelerine genel bakış](/mem/intune/apps/app-protection-policy).
+Yalnızca kendi cihazlarında iş projelerini güncelleştiren kişiler için mobil uygulama yönetimine (MAM) ihtiyacınız varsa, Intune cihazları kaydetmenin ve yönetmenin yanı sıra başka bir seçenek sunar. Intune aboneliği, kullanıcıların cihazları Intune'a kayıtlı olmasa bile Azure portalını kullanarak MAM ilkeleri ayarlamanıza olanak sağlar. Daha fazla bilgi için bkz.[Uygulama koruması ilkelerine genel bakış](/mem/intune/apps/app-protection-policy).
 
 ## <a name="related-content"></a>İlgili içerik
 
