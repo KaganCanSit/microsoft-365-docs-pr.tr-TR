@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: ad9cb5e69585f0c014050b51b719e539111cf9fa
-ms.sourcegitcommit: 2f6a0096038d09f0e43e1231b01c19e0b40fb358
+ms.openlocfilehash: 8c8d79313ee858ebcac8754b96046b517a3f614a
+ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64687195"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64835984"
 ---
 # <a name="shared-devices"></a>Paylaşılan cihazlar
 
@@ -31,7 +31,7 @@ Microsoft Managed Desktop'da kayıt noktasında paylaşılan cihaz modunu kullan
 
 ## <a name="when-to-use-shared-device-mode"></a>Paylaşılan cihaz modu ne zaman kullanılır?
 
-Kullanıcıların cihazları sık sık değiştirdiği durumlar.
+Kullanıcıların cihazları sık sık değiştirdiği durumlarda paylaşılan cihaz modunu kullanın.
 
 Örneğin, banka vezneleri, depozitoları yöneten tek bir konumda olabilir, ancak müşterilere ipotek konusunda yardımcı olmak için bir arka ofise geçebilir. Bu konumların her birinde cihaz farklı uygulamalar çalıştırır ve bu görevler için iyileştirilmiştir ancak bunlar birden çok kişi tarafından kullanılır.
 
@@ -41,13 +41,31 @@ Hemşirelik personeli genellikle hastalarla etkileşime geçtikçe odalar ve ofi
 
 Paylaşılan cihaz modu şu durumlarda iyi bir seçenek değildir:
 
-- Kullanıcının dosyalarının bulutta değil yerel olarak depolanması gerektiğinde
-- Cihazdaki farklı kullanıcılar için kullanıcı deneyiminin farklı olması gerekiyorsa
-- Her kullanıcının ihtiyaç duyduğu uygulama kümesi büyük ölçüde farklıysa
+- Kullanıcının dosyalarının bulutta değil yerel olarak depolanması gerektiğinde.
+- Cihazdaki farklı kullanıcılar için kullanıcı deneyiminin farklı olması gerekiyorsa.
+- Her kullanıcının ihtiyaç duyduğu uygulama kümesi büyük ölçüde farklıysa.
 
-## <a name="register-new-devices-in-shared-device-mode"></a>Yeni cihazları paylaşılan cihaz moduna kaydetme
+## <a name="register-new-devices-using-the-windows-autopilot-self-deploying-mode-profile-in-microsoft-managed-desktop"></a>Microsoft Managed Desktop'da Windows Autopilot kendi kendine dağıtım modu profilini kullanarak yeni cihazları kaydetme
 
-2203 yılından itibaren, cihaz kaydını siz veya iş ortağınız işlemeye devam edin, [Microsoft Managed Desktop'da Windows Autopilot kendi kendine dağıtım modu](/mem/autopilot/self-deploying) profilini kullanmayı seçebilirsiniz.
+İster siz ister bir iş ortağı cihaz kaydını işleyin, [Microsoft Managed Desktop'da Windows Autopilot kendi kendine dağıtım modu](/mem/autopilot/self-deploying) profilini kullanmayı seçebilirsiniz.
+
+### <a name="before-you-begin"></a>Başlamadan önce
+
+Windows Autopilot kendi kendine dağıtım modu gereksinimlerini gözden geçirin:
+
+> [!IMPORTANT]
+> Kendi kendine dağıtım modunda ilk dağıtımdan sonra autopilot aracılığıyla bir cihazı otomatik olarak yeniden kaydedemezsiniz. Bunun yerine[, Microsoft Endpoint Manager yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) cihaz kaydını silin. Cihaz kaydını yönetim merkezinden silmek için **CihazlarTüm**  >  cihazlar'ı seçin > silmek istediğiniz cihazları seçin > **Sil'i seçin**.  Daha fazla bilgi için bkz[. Windows Autopilot oturum açma ve dağıtım deneyimi güncelleştirmeleri](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
+
+#### <a name="trusted-platform-module"></a>Güvenilir Platform Modülü
+
+Kendi kendine dağıtım modu, bir kuruluşun Azure Active Directory kiracısına cihazın kimliğini doğrulamak için cihazın TPM 2.0 donanımını kullanır. Bu nedenle, TPM 2.0 olmayan cihazlar bu modu kullanamaz. Cihazların TPM cihaz kanıtlamayı da desteklemesi gerekir. Tüm yeni Windows cihazlar bu gereksinimleri karşılamalıdır. TPM kanıtlama işlemi, her TPM sağlayıcısı için benzersiz olan bir dizi HTTPS URL'sine de erişim gerektirir. Daha fazla bilgi için Ağ gereksinimleri bölümünde Autopilot kendi kendine dağıtım modu ve Autopilot ön sağlama [girdisine](/mem/autopilot/self-deploying#requirements) bakın. Windows Autopilot yazılım gereksinimleri hakkında daha fazla bilgi için bkz. [Autopilot yazılım gereksinimleri Windows](/mem/autopilot/software-requirements).
+
+> [!TIP]
+> TPM 2.0 desteği olmayan veya bir sanal makinede bulunan bir cihazda kendi kendine dağıtım modunu dağıtmayı denerseniz, cihaz doğrulanırken şu hatayla başarısız olur: 0x800705B4 zaman aşımı hatası (Hyper-V sanal TPM'leri desteklenmez). Ayrıca, Windows 10 sürüm 1903 veya sonraki sürümlerin, Windows 10 sürüm 1809'da TPM cihaz kanıtlaması ile ilgili sorunlar nedeniyle kendi kendine dağıtım modunu kullanması gerektiğini unutmayın. Windows 10 Enterprise 2019 LTSC Windows 10 sürüm 1809'a dayandığından, Windows 10 Enterprise 2019 LTSC'de kendi kendine dağıtım modu da desteklenmez.
+>
+> Diğer bilinen sorunlar hakkında daha fazla bilgi edinmek ve çözümleri gözden geçirmek için bkz. [Windows Autopilot bilinen sorunları](/mem/autopilot/known-issues) ve [Autopilot cihazı içeri aktarma ve kayıt sorunlarını giderme](/mem/autopilot/troubleshoot-device-enrollment).
+
+### <a name="steps-to-register-devices-to-use-the-windows-autopilot-self-deploying-mode-profile"></a>Windows Autopilot kendi kendine dağıtım modu profilini kullanmak için cihazları kaydetme adımları
 
 Cihazları kendiniz kaydediyorsanız, yeni cihazları Windows Autopilot Cihazları dikey penceresine aktarmanız gerekir.
 
@@ -76,7 +94,7 @@ Cihazları kendiniz kaydediyorsanız, yeni cihazları Windows Autopilot Cihazlar
 
 ### <a name="device-storage"></a>Cihaz depolama
 
-Paylaşılan cihazların kullanıcılarının verilerinin diğer cihazlara kadar takip edebilmesi için verilerinin buluta yedeklenmiş olması gerekir. Cihazları paylaşılan cihaz moduna kaydettikten sonra, OneDrive [İsteğe Bağlı Dosyalar](https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-10-0e6860d3-d9f3-4971-b321-7092438fb38e#:~:text=%20Turn%20on%20Files%20On-Demand%20%201%20Make,files%20as%20you%20use%20them%20box.%20More%20) ve [bilinen klasör yeniden yönlendirme](/onedrive/redirect-known-folders) özelliklerini etkinleştirdiğinizden emin olun. Bu yaklaşım, her kullanıcı profilinin cihaz depolaması üzerindeki etkisini en aza indirir. Paylaşılan cihaz modundaki cihazlar, boş disk alanı %25'in altına düşerse kullanıcı profillerini otomatik olarak siler. Depolama kritik düzeyde sınırlanmadığı sürece bu etkinlik cihazın yerel saatinde gece yarısı için zamanlanır.
+Paylaşılan cihazların kullanıcılarının verilerinin diğer cihazlara kadar takip edebilmesi için buluta yedeklenmiş olması gerekir. Cihazları paylaşılan cihaz moduna kaydettikten sonra, OneDrive [İsteğe Bağlı Dosyalar](https://support.microsoft.com/office/save-disk-space-with-onedrive-files-on-demand-for-windows-10-0e6860d3-d9f3-4971-b321-7092438fb38e#:~:text=%20Turn%20on%20Files%20On-Demand%20%201%20Make,files%20as%20you%20use%20them%20box.%20More%20) ve [bilinen klasör yeniden yönlendirme](/onedrive/redirect-known-folders) özelliklerini etkinleştirdiğinizden emin olun. Bu yaklaşım, her kullanıcı profilinin cihaz depolaması üzerindeki etkisini en aza indirir. Paylaşılan cihaz modundaki cihazlar, boş disk alanı %25'in altına düşerse kullanıcı profillerini otomatik olarak siler. Depolama kritik düzeyde sınırlanmadığı sürece bu etkinlik cihazın yerel saatinde gece yarısı için zamanlanır.
 
 Microsoft Managed Desktop bu işlemleri yapmak için [SharedPC](/mem/intune/configuration/shared-user-device-settings-windows) CSP kullanır, bu nedenle bu CSP'leri kendiniz kullanmadığınızdan emin olun.
 

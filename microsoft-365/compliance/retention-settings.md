@@ -1,5 +1,5 @@
 ---
-title: Bekletme ayarlarını içeriği otomatik olarak korumak veya silmek üzere yapılandırma
+title: İçeriği otomatik olarak saklamak veya silmek için bekletme ayarlarını yapılandırma
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -16,404 +16,418 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Bir bekletme ilkesinde veya bekletme etiketi ilkesinde, istediğiniz şeyi saklayarak ve istemediklerden kurtulmak için yapılandırabilirsiniz ayarları anlıyoruz.
-ms.openlocfilehash: 3b2833b2b6293845379f9f5aeffd3bd46610e2a8
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+description: İstediğinizi korumak ve istemediğinizden kurtulmak için bekletme ilkesinde veya bekletme etiketi ilkesinde yapılandırabileceğiniz ayarları anlayın.
+ms.openlocfilehash: 0ec9ace6d2a2205996baed8cd64ca0e29ac83ed3
+ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63713085"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64836094"
 ---
-# <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için ortak ayarlar
+# <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Bekletme ilkeleri ve bekletme etiketi ilkeleri için yaygın ayarlar
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](https://aka.ms/ComplianceSD)*
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](https://aka.ms/ComplianceSD).*
 
-Bekletmeye yönelik birçok ayar, hem bekletme ilkeleri hem de bekletme etiketi ilkeleri için yaygındır. İçeriği önceden korumak, içeriği veya her ikisini birden silmek üzere bu ayarları yapılandırmanıza yardımcı olmak için aşağıdaki bilgileri kullanın; bunları korur ve sonra da silersiniz.
+Bekletme için birçok ayar hem bekletme ilkeleri hem de bekletme etiketi ilkeleri için ortaktır. Bu ayarları içeriği proaktif olarak korumak, içeriği silmek veya her ikisini birden korumak ve sonra silmek üzere yapılandırmanıza yardımcı olması için aşağıdaki bilgileri kullanın.
 
 Bekletme için bu ilkeleri destekleyen senaryolar için bkz:
 
-- [Bekletme ilkeleri oluşturun ve yapılandıryın](create-retention-policies.md).
+- [Bekletme ilkeleri oluşturun ve yapılandırın](create-retention-policies.md).
 - [Bekletme etiketleri oluşturma ve bunları uygulamalarda uygulama](create-apply-retention-labels.md)
-- [İçeriği otomatik olarak bekletme etiketi uygulama](apply-retention-labels-automatically.md)
+- [İçeriğe otomatik olarak bekletme etiketi uygulama](apply-retention-labels-automatically.md)
 
-Ayarlar senaryoya özgü olan senaryolar ilgili belgelerinde açıklanmıştır.
+Her senaryoya özgü Ayarlar ilgili belgelerinde açıklanmıştır.
 
-Bekletme ilkeleri ve bekletmenin çalışma yöntemleri hakkında genel bilgiler Microsoft 365 bkz. Bekletme ilkeleri [ve bekletme etiketleri hakkında bilgi edinebilirsiniz](retention.md).
+Bekletme ilkeleri ve bekletmenin Microsoft 365 nasıl çalıştığı hakkında genel bakış bilgileri için bkz. [Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin](retention.md).
 
-## <a name="scopes---adaptive-and-static"></a>Kapsamlar - uyarlanabilir ve statik
+## <a name="scopes---adaptive-and-static"></a>Kapsamlar - uyarlamalı ve statik
 
-Uyarlanabilir ve statik kapsamları kullanmaya yabancı değilseniz ve bekletme için bir ilke yapılandırken hangisinin kullanıca yardımcı olması için bkz. Bekletme için uyarlanabilir veya statik ilke [kapsamları](retention.md#adaptive-or-static-policy-scopes-for-retention). 
+Uyarlamalı ve statik kapsamları bilmiyorsanız ve bekletme için bir ilke yapılandırırken hangisini kullanacağınızı seçmenize yardımcı olmak için bkz. [Bekletme için uyarlamalı veya statik ilke kapsamları](retention.md#adaptive-or-static-policy-scopes-for-retention). 
 
-Uyarlanabilir veya statik bir kapsam kullanmaya karar verdiyken, yapılandırmanıza yardımcı olması için aşağıdaki bilgileri kullanın:
-- [Uyarlanabilir kapsamlar için yapılandırma bilgileri](#configuration-information-for-adaptive-scopes)
+Uyarlamalı veya statik bir kapsam kullanmaya karar verdiyseniz, yapılandırmanıza yardımcı olması için aşağıdaki bilgileri kullanın:
+- [Uyarlamalı kapsamlar için yapılandırma bilgileri](#configuration-information-for-adaptive-scopes)
 - [Statik kapsamlar için yapılandırma bilgileri](#configuration-information-for-static-scopes)
 
 > [!TIP]
-> Statik kapsamlar kullanan ilkeleriniz varsa ve bunları uyarlanabilir kapsamlara dönüştürmek istiyorsanız, aynı bekletme ayarlarına sahip uyarlanabilir kapsamlar kullanan yeni ilkeler hazırken var olan ilkelerinizi olduğu gibi bırakın. Statik kapsamları olan eski ilkeleri devre dışı bırakmadan veya smeden önce, bu yeni ilkelerin doğru kullanıcıları, siteleri ve grupları hedeflemektedir.
+> Statik kapsamlar kullanan ilkeleriniz varsa ve bunları uyarlamalı kapsamlara dönüştürmek istiyorsanız, aynı bekletme ayarlarına sahip uyarlamalı kapsamlar kullanan yeni ilkeler oluştururken mevcut ilkelerinizi yerinde bırakın. Statik kapsamlara sahip eski ilkeleri devre dışı bırakmadan veya silmeden önce bu yeni ilkelerin doğru kullanıcıları, siteleri ve grupları hedeflediklerini doğrulayın.
 
-### <a name="configuration-information-for-adaptive-scopes"></a>Uyarlanabilir kapsamlar için yapılandırma bilgileri
+### <a name="configuration-information-for-adaptive-scopes"></a>Uyarlamalı kapsamlar için yapılandırma bilgileri
 
-Uyarlanabilir kapsamları kullanmayı tercih ettiyken, hangi tür uyarlanabilir kapsam kullanmak istediğiniz sorarak seçmeniz istenir. Üç farklı tür uyarlanabilir kapsam vardır ve bunlardan her biri farklı öznitelikleri veya özellikleri destekler:
+Uyarlamalı kapsamları kullanmayı seçtiğinizde, istediğiniz uyarlamalı kapsam türünü seçmeniz istenir. Uyarlamalı kapsamların üç farklı türü vardır ve her biri farklı öznitelikleri veya özellikleri destekler:
 
-| Uyarlanabilir kapsam türü | Desteklenen öznitelikler veya özellikler şunları içerir: |
+| Uyarlamalı kapsam türü | Desteklenen öznitelikler veya özellikler şunlardır: |
 |:-----|:-----|
-|**Kullanıcılar** - aşağıdakiler için geçerlidir:  <br/> - Exchange-postayı gönderme <br/> - OneDrive hesapları <br/> - Teams sohbetler <br/> - Teams kanal iletilerini gönderme <br/> - Yammer iletilerini gönderme| Ad <br/> Soyadı    <br/>Görünen ad <br/> İş unvanı <br/> Bölüm <br/> Office <br/>Sokak adresi    <br/> Şehir <br/>Eyalet veya il <br/>Posta kodu <br/> Ülke veya bölge <br/> E-posta adresleri <br/> Diğer Ad <br/> Exchange öznitelikleriyle birlikte: CustomAttribute1 - CustomAttribute15|
-|**SharePoint siteleri** - aşağıdakiler için geçerlidir:  <br/> - SharePoint siteleri <br/> - OneDrive hesapları |Site URL'si <br/>Site adı <br/> SharePoint özellikleri görüntüleme: RefinableString00 - RefinableString99 |
-|**Microsoft 365 Grupları** - aşağıdakiler için geçerlidir:  <br/> - Microsoft 365 Grupları <br/> - Teams iletilerini (standart ve paylaşılan) içerir <br/> - Yammer iletilerini gönderme |Name <br/> Görünen ad <br/> Açıklama <br/> E-posta adresleri <br/> Diğer Ad <br/> Exchange öznitelikleriyle birlikte: CustomAttribute1 - CustomAttribute15 |
+|**Kullanıcılar** - şunlar için geçerlidir:  <br/> - Exchange e-posta <br/> - OneDrive hesapları <br/> - Teams sohbetleri <br/> - Özel kanal iletilerini Teams <br/> - kullanıcı iletilerini Yammer| Ad <br/> Soyadı    <br/>Görünen ad <br/> İş unvanı <br/> Bölüm <br/> Office <br/>Sokak adresi    <br/> Şehir <br/>Eyalet veya bölge <br/>Posta kodu <br/> Ülke veya bölge <br/> E-posta adresleri <br/> Diğer ad <br/> özel öznitelikleri Exchange: CustomAttribute1 - CustomAttribute15|
+|**SharePoint siteler** - şunlar için geçerlidir:  <br/> - SharePoint siteleri <br/> - OneDrive hesapları |Site URL'si <br/>Site adı <br/> SharePoint özel özellikleri: RefinableString00 - RefinableString99 |
+|**Microsoft 365 Grupları** - şunlar için geçerlidir:  <br/> - Microsoft 365 Grupları <br/> - Teams kanal iletileri (standart ve paylaşılan) <br/> - topluluk iletilerini Yammer |Name <br/> Görünen ad <br/> Açıklama <br/> E-posta adresleri <br/> Diğer ad <br/> özel öznitelikleri Exchange: CustomAttribute1 - CustomAttribute15 |
 
-Sitelerin özellik adları, site tarafından yönetilen SharePoint temel almaktadır. Özel öznitelikler hakkında bilgi için bkz. Uyarlanabilir İlke Kapsamları ile SharePoint Bekletmeyi Uygulamak için [Microsoft 365 Site Özelliklerini Kullanma](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-custom-sharepoint-site-properties-to-apply-microsoft-365/ba-p/3133970).
+Sitelerin özellik adları, site tarafından yönetilen SharePoint özellikleri temel alır. Özel öznitelikler hakkında bilgi için bkz. [Uyarlamalı İlke Kapsamlarıyla Microsoft 365 Elde Tutma Uygulamak için Özel SharePoint Site Özelliklerini Kullanma](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-custom-sharepoint-site-properties-to-apply-microsoft-365/ba-p/3133970).
 
-Kullanıcıların ve grupların öznitelik adları, Azure AD [öznitelikleriyle](/powershell/exchange/recipientfilter-properties#filterable-recipient-properties) eşen filtrelenebilir alıcı özelliklerine dayalıdır. Örneğin:
+Kullanıcıların ve grupların öznitelik adları, Azure AD öznitelikleriyle [eşlenebilen filtrelenebilir alıcı özelliklerini](/powershell/exchange/recipientfilter-properties#filterable-recipient-properties) temel alır. Örneğin:
 
-- **Diğer** ad, Azure AD yönetim **merkezinde E-posta olarak gösterilen mailNickname** LDAP adıyla eşler.
-- **E-posta** adresleri, Azure AD yönetim merkezinde Proxy adresi olarak gösterilen **LDAP adı proxyAddresses** ile eşler.
+- **Diğer ad**, Azure AD yönetim merkezinde **E-posta** olarak görüntülenen **mailNickname** LDAP adıyla eşler.
+- **E-posta adresleri**, Azure AD yönetim merkezinde **Ara Sunucu adresi** olarak görüntülenen **proxyAddresses** LDAP adıyla eşlenir.
 
-Tabloda listelenen öznitelikler ve özellikler, basit sorgu oluşturucusunu kullanarak uyarlanabilir bir kapsam yapılandırıldığında kolayca belirtilebilir. Ek öznitelikler ve özellikler, aşağıdaki bölümde açıklandığı gibi, gelişmiş sorgu oluşturucusu tarafından de destekler.
+Basit sorgu oluşturucusu kullanılarak uyarlamalı bir kapsam yapılandırdığınızda tabloda listelenen öznitelikler ve özellikler kolayca belirtilebilir. Aşağıdaki bölümde açıklandığı gibi gelişmiş sorgu oluşturucusu ile ek öznitelikler ve özellikler desteklenir.
 
 > [!TIP]
-> Gelişmiş sorgu oluşturucusunu kullanma hakkında ek bilgi için aşağıdaki web seminerine bakın: 
-> - [Uyarlanabilir İlke Kapsamlarına Sahip Kullanıcılar ve Gruplar için Gelişmiş Sorgular Oluşturmak](https://mipc.eventbuilder.com/event/52683/occurrence/49452/recording?rauth=853.3181650.1f2b6e8b4a05b4441f19b890dfeadcec24c4325e90ac492b7a58eb3045c546ea)
-> - [Uyarlanabilir İlke Kapsamları olan SharePoint Siteleri için Gelişmiş Sorgular Oluşturmak](https://aka.ms/AdaptivePolicyScopes-AdvancedSharePoint)
+> Gelişmiş sorgu oluşturucusunu kullanma hakkında ek bilgi için aşağıdaki web seminerlerine bakın: 
+> - [Uyarlamalı İlke Kapsamları ile Kullanıcılar ve Gruplar için Gelişmiş Sorgular Oluşturma](https://mipc.eventbuilder.com/event/52683/occurrence/49452/recording?rauth=853.3181650.1f2b6e8b4a05b4441f19b890dfeadcec24c4325e90ac492b7a58eb3045c546ea)
+> - [Uyarlamalı İlke Kapsamlarıyla SharePoint Siteleri için Gelişmiş Sorgular Oluşturma](https://aka.ms/AdaptivePolicyScopes-AdvancedSharePoint)
 
-Tek bir bekletme ilkesi bir veya birden çok uyarlanabilir kapsamına sahip olabilir.
+Bekletme için tek bir ilkenin bir veya birden çok uyarlamalı kapsamı olabilir.
 
-#### <a name="to-configure-an-adaptive-scope"></a>Uyarlanabilir bir kapsamı yapılandırmak için
+#### <a name="to-configure-an-adaptive-scope"></a>Uyarlamalı kapsam yapılandırmak için
 
-Uyarlanabilir kapsamınızı yapılandırmadan önce, hangi kapsam türünü oluşturacağız ve hangi öznitelikleri ve değerleri kullanacağız belirlemek için önceki bölümü kullanın. Bu bilgileri onaylamak için diğer yöneticilerle birlikte çalışmanız gerekiyor olabilir. 
+Uyarlamalı kapsamınızı yapılandırmadan önce, oluşturulacak kapsam türünü ve hangi öznitelikleri ve değerleri kullanacağınızı belirlemek için önceki bölümü kullanın. Bu bilgileri onaylamak için diğer yöneticilerle birlikte çalışmanız gerekebilir. 
 
-Özel olarak SharePoint site özelliklerini kullanmayı planlıyorsanız SharePoint ek yapılandırma [gerekmektedir](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-custom-sharepoint-site-properties-to-apply-microsoft-365/ba-p/3133970).
+Özellikle SharePoint siteler için[, özel site özelliklerini](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-custom-sharepoint-site-properties-to-apply-microsoft-365/ba-p/3133970) kullanmayı planlıyorsanız ek SharePoint yapılandırması gerekebilir.
 
-1. Gezinti [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/) konumlardan birini seçin:
+1. [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com/) aşağıdaki konumlardan birine gidin:
     
     - Kayıt yönetimi çözümünü kullanıyorsanız:
-        - **Çözümler** >  **Kayıt yönetimi** >  **Uyarlanabilir kapsamlar** sekmesi > + **Kapsam oluştur**
+        - **Çözümleri** >  **Kayıt yönetimi** >  **Uyarlamalı kapsamlar** sekmesi > + **Kapsam oluştur**
         
-    - Bilgi yönetimi çözümünü kullanıyorsanız:
-       - **Çözümler** >  **Bilgi yönetimi** >  **Uyarlanabilir kapsamlar** sekmesi > + **Kapsam oluştur**
+    - Bilgi idaresi çözümünü kullanıyorsanız:
+       - **Çözümleri** >  **Bilgi idaresi** >  **Uyarlamalı kapsamlar** sekmesi > + **Kapsam oluştur**
     
-    Çözümlerinizi gezinti bölmesinde hemen görmüyor musunuz? Önce, Hepsini **göster'i seçin**. 
+    Gezinti bölmesinde çözümünüzü hemen görmüyor musunuz? İlk olarak **Tümünü göster'i** seçin. 
 
-2. Önce kapsamın türünü seçmek için yapılandırmada istemleri izleyin, sonra dinamik üyeliği oluşturmak için kullanmak istediğiniz öznitelikleri veya özellikleri seçin, sonra öznitelik veya özellik değerlerini yazın.
+2. Önce kapsam türünü seçmek için yapılandırmadaki istemleri izleyin ve ardından dinamik üyeliği oluşturmak için kullanmak istediğiniz öznitelikleri veya özellikleri seçin ve öznitelik veya özellik değerlerini yazın.
     
-    Örneğin, Avrupa'daki kullanıcıları tanımlamak için kullanılacak uyarlanabilir bir kapsam yapılandırmak için, önce kapsam türü olarak  Kullanıcılar'ı seçin, ardından Ülke veya bölge özniteliğini seçin ve Avrupa'da **yazın**:
+    Örneğin, Avrupa'daki kullanıcıları tanımlamak için kullanılacak uyarlamalı bir kapsam yapılandırmak için önce kapsam türü olarak **Kullanıcılar'ı** seçin ve ardından **Ülke veya bölge** özniteliğini seçin ve **Avrupa'ya** yazın:
     
-    ![Örnek uyarlanabilir kapsam yapılandırması.](../media/example-adaptive-scope.png)
+    ![Örnek uyarlamalı kapsam yapılandırması.](../media/example-adaptive-scope.png)
     
-    Bu sorgu, günde bir kez Azure AD'de çalıştırarak, Ülke veya bölge özniteliğine yönelik  hesaplarında Avrupa değeri belirtilen tüm **kullanıcıları** tanımlayabilir.
+    Günde bir kez, bu sorgu Azure AD'de çalıştırılır ve **Ülke veya bölge** özniteliği için hesaplarında **Avrupa'nın** belirtilen değerine sahip olan tüm kullanıcıları tanımlar.
     
     > [!IMPORTANT]
-    > Sorgu hemen çalışmay olduğundan, değere doğru şekilde yazarak doğrulamanız olmaz.
+    > Sorgu hemen çalışmadığından, değere doğru yazdığınız bir doğrulama yoktur.
     
-    Sorgu **oluşturmak üzere mantıksal** işleçlerle birlikte, kapsam türlerinde desteklenen öznitelik veya özelliklerin herhangi bir bileşimini kullanmak için Öznitelik ekle (kullanıcılar ve gruplar için) veya **Add** özelliği (siteler için) seçeneğini seçin. Desteklenen işleçler **eşittir****, eşit** **değildir, başlangıç** ile başlar, başlamaz ve seçilen öznitelikleri veya özellikleri grupabilirsiniz. Örneğin:
+    Sorgu oluşturmak üzere mantıksal işleçlerle birlikte kapsam türleri için desteklenen özniteliklerin veya özelliklerin herhangi bir bileşimini kullanmak için **Öznitelik ekle** (kullanıcılar ve gruplar için) veya **Özellik ekle** (siteler için) seçeneğini belirleyin. Desteklenen işleçler **eşittir**, **eşit değildir**, **ile başlar** ve **ile başlamaz** ve seçili öznitelikleri veya özellikleri gruplandırabilirsiniz. Örneğin:
     
-    ![Öznitelik gruplamaları ile örnek uyarlanabilir kapsam yapılandırması.](../media/example-adaptive-scope-grouping.png)
+    ![Öznitelik gruplandırmalarıyla örnek uyarlamalı kapsam yapılandırması.](../media/example-adaptive-scope-grouping.png)
     
-    Alternatif olarak, kendi sorgularınızı **belirtmek için** Gelişmiş sorgu oluşturucusu'nu da kullanabilirsiniz:
+    Alternatif olarak, gelişmiş **sorgu oluşturucusu'nu** seçerek kendi sorgularınızı belirtebilirsiniz:
     
-    - Kullanıcı **ve** Kullanıcı **Microsoft 365 kapsamları** için, [OPATH filtreleme söz dizimi kullanın](/powershell/exchange/recipient-filters). Örneğin, üyeliğini departmana, ülkeye ve eyalete göre tanımlayan bir kullanıcı kapsamı oluşturmak için:
+    - **Kullanıcı** ve **Microsoft 365 Grubu** kapsamları için [OPATH filtreleme söz dizimlerini](/powershell/exchange/recipient-filters) kullanın. Örneğin, üyeliğini departmana, ülkeye ve eyalete göre tanımlayan bir kullanıcı kapsamı oluşturmak için:
     
-        ![Gelişmiş sorguyla örnek uyarlanabilir kapsam.](../media/example-adaptive-scope-advanced-query.png)
+        ![Gelişmiş sorgu ile örnek uyarlamalı kapsam.](../media/example-adaptive-scope-advanced-query.png)
         
-        Bu kapsamlar için gelişmiş sorgu oluşturucusunu kullanmanın avantajlarından biri, daha geniş bir sorgu işleci seçeneğidir:
+        Bu kapsamlar için gelişmiş sorgu oluşturucu kullanmanın avantajlarından biri, daha geniş bir sorgu işleçleri seçimidir:
         - **ve**
         - **veya**
-        - **not**
+        - **Değil**
         - **eq** (eşittir)
         - **ne** (eşit değildir)
-        - **lt** (küçükten küçük)
+        - **lt** (küçüktür)
         - **gt** (büyüktür)
         - **like** (dize karşılaştırması)
         - **notlike** (dize karşılaştırması)
     
-    - Site **SharePoint için** Anahtar Sözcük Sorgu Dili'yi (KQL) kullanın. Dizinli site özelliklerini kullanarak arama yapmak için KQL SharePoint zaten biliyor olabileceğiniz gibi görünüyor. Bu KQL sorgularını belirtmenize yardımcı olmak için bkz. [Anahtar Sözcük Sorgu Dili (KQL) söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
+    - **SharePoint site** kapsamları için Anahtar Sözcük Sorgu Dili (KQL) kullanın. Dizine alınmış site özelliklerini kullanarak SharePoint aramak için KQL kullanmayı zaten biliyor olabilirsiniz. Bu KQL sorgularını belirtmenize yardımcı olmak için bkz[. Anahtar Sözcük Sorgu Dili (KQL) söz dizimi başvurusu](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
         
-        Örneğin, SharePoint sitelerin kapsamları Microsoft 365 bağlantılı ve OneDrive sitelerini içeren tüm SharePoint site türlerini otomatik olarak dahil olduğundan, belirli site türlerini eklemek veya dışarıda tutmak için **SiteTemplate** dizinli site özelliğini kullanabilirsiniz. Belirtebilirsiniz şablonlar:
+        Örneğin, SharePoint site kapsamları, grup bağlantılı ve OneDrive siteleri içeren tüm Microsoft 365 SharePoint site türlerini otomatik olarak içerdiğinden, belirli site türlerini dahil etmek veya hariç tutmak için **SiteTemplate** dizinli site özelliğini kullanabilirsiniz. Belirtebileceğiniz şablonlar:
         - Modern iletişim siteleri için SITEPAGEPUBLISHING
-        - Grup bağlantılı Microsoft 365 için GROUP
-        - Özel kanal siteleri için MICROSOFT TEAMS TEAMCHANNEL
-        - Klasik bir ekip sitesi SharePoint STS
-        - Web siteleri için SPSPERS OneDrive siteleri
+        - Gruba bağlı Microsoft 365 siteler için GROUP
+        - Microsoft Teams özel kanal siteleri için TEAMCHANNEL
+        - Klasik bir SharePoint ekip sitesi için STS
+        - OneDrive siteler için SPSPERS
         
-        Dolayısıyla, yalnızca modern iletişim sitelerini içeren ve goup bağlantılı ve Microsoft 365 sitelerini hariç OneDrive uyarlanabilir kapsam oluşturmak için, aşağıdaki KQL sorgusunu belirtin:
+        Bu nedenle, yalnızca modern iletişim sitelerini içeren ve Microsoft 365 bağlı ve OneDrive siteleri dışlayan uyarlamalı bir kapsam oluşturmak için aşağıdaki KQL sorguyu belirtin:
         ````console
         SiteTemplate=SITEPAGEPUBLISHING
         ````
     
-    Bu gelişmiş [sorguları, kapsam yapılandırmasından](#validating-advanced-queries) bağımsız olarak doğruabilirsiniz.
+    [Bu gelişmiş sorguları](#validating-advanced-queries) kapsam yapılandırmasından bağımsız olarak doğrulayabilirsiniz.
     
     > [!TIP]
-    > Etkin olmayan posta kutularını dışarıda tutmak için gelişmiş sorgu oluşturucusunu kullanabilirsiniz. Veya tersine, yalnızca etkin olmayan posta kutularını hedef alın. Bu yapılandırmada, *IsInactiveMailbox OPATH özelliğini kullanın*:
+    > Etkin olmayan posta kutularını dışlamak istiyorsanız gelişmiş sorgu oluşturucusunu kullanmanız gerekir. Alternatif olarak, yalnızca etkin olmayan posta kutularını hedefle. Bu yapılandırma için *IsInactiveMailbox* OPATH özelliğini kullanın:
     > 
-    > - Etkin olmayan posta kutularını dışarıda tutmak için, sorgunun şunları içerir: `(IsInactiveMailbox -eq "False")`
+    > - Etkin olmayan posta kutularını dışlamak için sorgunun şunları içerdiğinden emin olun: `(IsInactiveMailbox -eq "False")`
     > - Yalnızca etkin olmayan posta kutularını hedeflemek için şunları belirtin: `(IsInactiveMailbox -eq "True")`
 
-3. Size gereken sayıda uyarlanabilir kapsam oluşturun. Bekletme ilkenizi  hazırlarken bir veya birden çok uyarlanabilir kapsam da kullanabilirsiniz.
+3. İhtiyacınız olan sayıda uyarlamalı kapsam oluşturun. Bekletme için ilkenizi oluştururken bir veya daha fazla uyarlamalı kapsam seçebilirsiniz.
 
 > [!NOTE]
-> Sorguların tümüyle dolu olması beş gün kadar sürer ve değişiklikler anında olmaz. Bekletme ilkesine yeni oluşturulmuş bir kapsam eklemeden birkaç gün önce bekleerek, bu gecikmede faktör.
+> Sorguların tam olarak doldurulması beş güne kadar sürebilir ve değişiklikler hemen yapılmaz. Bekletme için ilkeye yeni oluşturulan kapsamı eklemeden önce birkaç gün bekleyerek bu gecikmeyi dikkate alırsınız.
 
-Uyarlanabilir bir kapsamda geçerli üyelik ve üyelik değişikliklerini onaylamak için:
+Uyarlamalı kapsam için geçerli üyelik ve üyelik değişikliklerini onaylamak için:
 
-1. Uyarlanabilir kapsamlar sayfasında kapsamı çift tıklatın (veya seçin ve Enter **tuşuna basın** )
+1. **Uyarlamalı kapsamlar** sayfasında kapsama çift tıklayın (veya seçin ve Enter tuşuna basın)
 
-2. Uçarak **Çıkış Ayrıntıları bölmesinde** Kapsam ayrıntıları'nın **seçin**. 
+2. Açılır öğe **Ayrıntıları** bölmesinde **Kapsam ayrıntıları'nı** seçin. 
     
-    Otomatik olarak eklenmiş veya kaldırılmışsa, o kapsamda bulunan tüm kullanıcıları, siteleri veya grupları tanımlayan bilgileri ve bu üyelik değişikliğinin tarihi ve saatiyle ilgili bilgileri gözden geçirebilirsiniz.
+    Otomatik olarak eklenip eklenmediğini veya kaldırıldığını ve bu üyeliğin tarih ve saatinin değiştirildiği kapsamdaki tüm kullanıcıları, siteleri veya grupları tanımlayan bilgileri gözden geçirin.
 
 > [!TIP]
-> Şu anda [belirli kullanıcılara](retention.md#policy-lookup), sitelere ve site gruplarına atanmış olan ilkeleri tanımlamanıza yardımcı olacak ilke arama Microsoft 365 kullanın.
+> Belirli kullanıcılara, sitelere ve Microsoft 365 gruplarına atanmış olan ilkeleri belirlemenize yardımcı olması için ilke [arama](retention.md#policy-lookup) seçeneğini kullanın.
 
 #### <a name="validating-advanced-queries"></a>Gelişmiş sorguları doğrulama
 
-Gelişmiş sorguları PowerShell kullanarak el ile doğrulayan ve arama SharePoint yapabilirsiniz:
-- PowerShell'i Kullanıcılar **ve Kullanıcı Grupları** Microsoft 365 **kullanma**
-- Sitelerin SharePoint türünü aramak için **SharePoint kullanma**
+PowerShell'i kullanarak gelişmiş sorguları el ile doğrulayabilir ve arama SharePoint:
+- **Kullanıcılar** ve **Microsoft 365 Grupları** kapsam türleri için PowerShell kullanma
+- Kapsam türü SharePoint **siteleri için arama SharePoint** kullanın
 
 PowerShell kullanarak sorgu çalıştırmak için:
 
-1. [Bağlan izinlerine Exchange Online bir hesap kullanarak PowerShell'i](/powershell/exchange/connect-to-exchange-online-powershell) [Exchange Online seçin](/powershell/exchange/find-exchange-cmdlet-permissions#use-powershell-to-find-the-permissions-required-to-run-a-cmdlet).
+1. Uygun [Exchange Online Yönetici izinlerine](/powershell/exchange/connect-to-exchange-online-powershell) sahip bir hesap kullanarak [PowerShell'i Exchange Online Bağlan](/powershell/exchange/find-exchange-cmdlet-permissions#use-powershell-to-find-the-permissions-required-to-run-a-cmdlet).
 
-2. -Filter [parametresiyle Get-Recipient](/powershell/module/exchange/get-recipient) veya [Get-Mailbox'ı](/powershell/module/exchange/get-mailbox) ve kıvrımlı ayraç (`{`,) içine alınmış uyarlanabilir kapsam için [OPATH](/powershell/exchange/filter-properties) sorgunuz kullanın.`}` Öznitelik değerleriniz dize ise, bu değerleri çift veya tek tırnak içine alın.  
+2. Küme ayraçları (`{`,`}`) içine alınmış uyarlamalı kapsam için *-Filter* parametresi ve [OPATH sorgunuzla](/powershell/exchange/filter-properties) [Get-Recipient](/powershell/module/exchange/get-recipient) veya [Get-Mailbox](/powershell/module/exchange/get-mailbox) kullanın. Öznitelik değerleriniz dizeyse, bu değerleri çift veya tek tırnak içine alın.  
 
-    Sorgunuz için seçtiğiniz `Get-Mailbox` `Get-Recipient` [OPATH](/powershell/exchange/filter-properties) özelliği tarafından desteklenen cmdlet'in hangi cmdlet'i kullanıp desteklemediğini belirleyerek, doğrulama için mi kullan belirleyebilirsiniz.
+    Sorgunuz için seçtiğiniz [OPATH özelliği](/powershell/exchange/filter-properties) tarafından hangi cmdlet'in desteklendiğini belirleyerek doğrulama için mi `Get-Recipient` kullanılacağını `Get-Mailbox` belirleyebilirsiniz.
 
     > [!IMPORTANT]
-    > `Get-Mailbox`*MailUser* alıcı türünü desteklemez, bu `Get-Recipient` nedenle karma bir ortamda şirket içi posta kutuları içeren sorguları doğrulamak için kullanılmalıdır.
+    > `Get-Mailbox`*MailUser* alıcı türünü desteklemez, bu nedenle `Get-Recipient` karma bir ortamda şirket içi posta kutularını içeren sorguları doğrulamak için kullanılmalıdır.
 
-    Kullanıcı kapsamını **doğrulamak için** , aşağıdaki iki işlemden birini kullanın:
-    - `Get-Mailbox`veya `-RecipientTypeDetails UserMailbox`
-    - `Get-Recipient` ile `-RecipientTypeDetails UserMailbox,MailUser`
+    **Kullanıcı** kapsamını doğrulamak için aşağıdakilerden birini kullanın:
+    - `Get-Mailbox`veya ile `-RecipientTypeDetails UserMailbox`
+    - `Get-Recipient` Ile `-RecipientTypeDetails UserMailbox,MailUser`
     
-    Bir Grup Microsoft 365 **doğrulamak** için şunları kullanın:
+    **Microsoft 365 Grubu** kapsamını doğrulamak için şunu kullanın:
     - `Get-Mailbox`veya `Get-Recipient``-RecipientTypeDetails GroupMailbox`
 
-    Örneğin, bir Kullanıcı kapsamını **doğrulamak** için şunları kullanabilirsiniz:
+    Örneğin, **bir Kullanıcı** kapsamını doğrulamak için şunları kullanabilirsiniz:
     
     ````PowerShell
     Get-Recipient -RecipientTypeDetails UserMailbox,MailUser -Filter {Department -eq "Marketing"} -ResultSize Unlimited
     ````
     
-    Bir Grup **Microsoft 365 doğrulamak** için şunları kullanabilirsiniz:
+    **Microsoft 365 Grubu** kapsamını doğrulamak için şunları kullanabilirsiniz:
     
     ```PowerShell
     Get-Mailbox -RecipientTypeDetails GroupMailbox -Filter {CustomAttribute15 -eq "Marketing"} -ResultSize Unlimited
     ```
 
-3. Çıkışın uyarlanabilir kapsamınız için beklenen kullanıcılarla veya gruplarla eşleni olduğunu doğrulayın. Yoksa, sorgunuza ve Değerleri Azure AD veya Azure AD için ilgili yöneticiye Exchange.
+3. Çıkışın uyarlamalı kapsamınız için beklenen kullanıcı veya gruplara eşleştiğinden emin olun. Aksi takdirde sorgunuzu ve değerleri Azure AD veya Exchange için ilgili yöneticiye danışın.
  
-Aramanızı kullanarak sorgu SharePoint için:
+SharePoint arama kullanarak sorgu çalıştırmak için:
 
-1. Genel yönetici hesabı veya yönetici rolüne sahip SharePoint hesabı kullanarak, 'a gidin`https://<your_tenant>.sharepoint.com/search`.
+1. Genel yönetici hesabı veya SharePoint yönetici rolüne sahip bir hesap kullanarak adresine `https://<your_tenant>.sharepoint.com/search`gidin.
 
-2. KQL sorgunuz belirtmek için arama çubuğunu kullanın.
+2. KQL sorgunuzu belirtmek için arama çubuğunu kullanın.
 
-3. Arama sonuçlarının uyarlanabilir kapsamınız için beklenen site URL'leri ile eş olduğunu doğrulayın. Böyle bir şey yoksa, sorgunuza ve URL'leri ilgili yöneticiye danışın ve SharePoint.
+3. Arama sonuçlarının uyarlamalı kapsamınız için beklenen site URL'leri ile eşleştiğinden emin olun. Aksi takdirde sorgunuzu ve URL'leri SharePoint için ilgili yöneticiye danışın.
 
 ### <a name="configuration-information-for-static-scopes"></a>Statik kapsamlar için yapılandırma bilgileri
 
-Statik kapsamları kullanmayı tercih ettiyseniz, bundan sonra ilkenin seçili konumun tüm örneklerine mi (tüm konum) uygulanıp uygulanmayacakna yoksa belirli örnekleri (belirli eklemeler veya dışlamalar) dahil edip etme mi yoksa hariç tutmaya karar vermeniz gerekir.
+Statik kapsamları kullanmayı seçtiğinizde, ilkenin seçili konum (konumun tamamı) için tüm örneklere uygulanıp uygulanmayacağına veya belirli örneklerin (belirli eklemeler veya dışlamalar) dahil edilip edilmeyeceğine karar vermeniz gerekir.
 
-#### <a name="a-policy-that-applies-to-entire-locations"></a>Konumların tamamına uygulanan ilke
+#### <a name="a-policy-that-applies-to-entire-locations"></a>Konumların tamamı için geçerli olan ilke
 
-Varsayılan ayar, Skype Kurumsal konumlar için olan tüm örneklerin, siz bunları dahil olarak belirtmek zorunda kalmadan ilkeye otomatik olarak dahil olmasıdır.
+Skype Kurumsal dışında, varsayılan ayar, seçili konumların tüm örneklerinin ilkeye otomatik olarak dahil edilmeleridir ve bunları dahil etmek zorunda kalmadan ilkeye eklenir.
 
-Örneğin, **E-posta** konumu için **Exchange alıcılar**. Bu varsayılan ayarla, var olan tüm kullanıcı posta kutuları ilkeye eklenir ve ilke uygulandıktan sonra oluşturulan tüm yeni posta kutuları ilkeyi otomatik olarak devralacaktır.
+Örneğin, **Exchange e-posta** konumu için **tüm alıcılar**. Bu varsayılan ayarda, ilkeye tüm mevcut kullanıcı posta kutuları eklenir ve ilke uygulandıktan sonra oluşturulan tüm yeni posta kutuları ilkeyi otomatik olarak devralır.
 
-#### <a name="a-policy-with-specific-inclusions-or-exclusions"></a>Belirli eklemelerin veya dışlamaların olduğu bir ilke
+#### <a name="a-policy-with-specific-inclusions-or-exclusions"></a>Belirli eklemeler veya dışlamalar içeren bir ilke
 
-İsteğe bağlı yapılandırmayı kullanarak bekletme ayarlarınızın kapsamını belirli kullanıcılara, belirli Microsoft 365 gruplarına veya belirli sitelere doğru kullanırsanız, ilke başına dikkat etmek gereken bazı sınırlamalar olduğunu unutmayın. Daha fazla bilgi için bkz. [Bekletme ilkeleri ve bekletme etiketi ilkeleri için sınırlar](retention-limits.md). 
+Bekletme ayarlarınızı belirli kullanıcılara, belirli Microsoft 365 gruplarına veya belirli sitelere kapsamak için isteğe bağlı yapılandırmayı kullanırsanız, ilke başına dikkat etmeniz gereken bazı sınırlar olduğunu unutmayın. Daha fazla bilgi için bkz. [Bekletme ilkeleri ve bekletme etiketi ilkeleri için sınırlar](retention-limits.md). 
 
-Bekletme ayarlarınızın kapsamını isteğe bağlı yapılandırmada kullanmak için, Bu konumun durumu Açık olduğundan emin olun ve sonra belirli kullanıcıları, kullanıcı gruplarını veya siteleri dahil etmek veya dışarıda Microsoft 365 için bağlantıları kullanın.
+Bekletme ayarlarınızı kapsamak için isteğe bağlı yapılandırmayı kullanmak için, o konumun **Durumunun** **Açık** olduğundan emin olun ve ardından bağlantıları kullanarak belirli kullanıcıları, Microsoft 365 grupları veya siteleri dahil edin veya hariç tutun.
 
 > [!WARNING]
-> Örnekleri son birini içerecek ve sonra kaldır olacak şekilde yapılandırıyorsanız, yapılandırma konum için **All** olarak geri döner.  İlkeyi kaydetmeden önce bunun sizin için tam olarak doğru yapılandırma olduğundan emin olun.
+> Örnekleri son örneği içerecek ve kaldıracak şekilde yapılandırıyorsanız, yapılandırma konum için **Tümü'ne** geri döner.  İlkeyi kaydetmeden önce amaçladığınız yapılandırmanın bu olduğundan emin olun.
 >
-> Örneğin, verileri silmek üzere yapılandırılmış bekletme ilkenize dahil etmek üzere bir SharePoint sitesi belirtirseniz ve sonra da tek siteyi kaldırırsanız, varsayılan olarak tüm SharePoint siteleri verileri kalıcı olarak silen bekletme ilkesine tabi olur. Aynı durum yalnızca e-Exchange alıcılar, OneDrive hesapları, sohbet Teams gibi diğer kullanıcılar için de geçerlidir.
+> Örneğin, verileri silmek üzere yapılandırılmış bekletme ilkenize eklenecek bir SharePoint site belirtir ve ardından tek siteyi kaldırırsanız, varsayılan olarak tüm SharePoint siteler verileri kalıcı olarak silen bekletme ilkesine tabi olur. Aynı durum, Exchange alıcılar, OneDrive hesapları, Teams sohbet kullanıcıları vb. için de geçerlidir.
 >
-> Bu senaryoda, konum için Tüm ayarının bekletme ilkesine tabi tutulmasını istemiyorsanız  konumu kapatın. Alternatif olarak, ilkeden muaf tutulacak örnekleri belirtin.
+> Bu senaryoda, konumun **Tümü** ayarının bekletme ilkesine tabi olmasını istemiyorsanız konumu kapatın. Alternatif olarak, ilkeden muaf tutulacak dışlama örneklerini belirtin.
 
-## <a name="locations"></a>Konumlar
+## <a name="locations"></a>Konum
 
-Bekletme ilkelerinde yer alan konumlar, Microsoft 365-posta ve site saklamayı destekleyen Exchange hizmet SharePoint kullanır. İlkeniz için seçimlerinizi yapmak üzere yapılandırma ayrıntılarına ve olası özel durumlara sahip konumlar için aşağıdaki bölümü kullanın.
+Bekletme ilkelerindeki konumlar, Exchange e-posta ve SharePoint siteleri gibi bekletme ayarlarını destekleyen belirli Microsoft 365 hizmetlerini tanımlar. İlkeniz için seçerken bilmeniz gereken yapılandırma ayrıntıları ve olası özel durumlara sahip konumlar için aşağıdaki bölümü kullanın.
 
-### <a name="configuration-information-for-exchange-email-and-exchange-public-folders"></a>E-postayı Exchange ortak klasörleri Exchange yapılandırma bilgileri
+### <a name="configuration-information-for-exchange-email-and-exchange-public-folders"></a>Exchange e-posta ve Exchange ortak klasörler için yapılandırma bilgileri
 
-Varsayılan **Exchange posta konumu**, bekletme ayarlarını bir posta kutusu düzeyinde uygulayarak kullanıcıların e-posta, takvim ve diğer posta kutusu öğeleri için bekletmeyi destekler. Paylaşılan posta kutuları da de kullanılabilir.
+**Exchange e-posta** konumu, bir posta kutusu düzeyinde bekletme ayarları uygulayarak kullanıcıların e-posta, takvim ve diğer posta kutusu öğeleri için bekletmeyi destekler. Paylaşılan posta kutuları da desteklenir.
 
-Kaynak posta kutuları, Microsoft 365 ve grup posta kutuları bu e-posta Exchange desteklemez. Grup Microsoft 365 kutularını değiştirmek için, bunun **Microsoft 365 Grupları konumunu** seçin. Farklı Exchange, statik bir kapsam için grup posta kutusunun seçili olmasına izin verir ama bekletme ilkesi kaydetmeye denemişseniz, "RemoteGroupMailbox" bu konum için geçerli bir seçim olmadığının hatasını alırsınız.
+Kaynak posta kutuları, kişiler ve Microsoft 365 grup posta kutuları Exchange e-posta için desteklenmez. Microsoft 365 grup posta kutuları için bunun yerine **Microsoft 365 Grupları** konumu seçin. Exchange konumu başlangıçta statik kapsam için bir grup posta kutusunun seçilmesine izin veriyor olsa da, bekletme ilkesini kaydetmeye çalıştığınızda "RemoteGroupMailbox" bu konum için geçerli bir seçim değil hatasını alırsınız.
 
-İlke yapılandırmanıza bağlı olarak, [etkin olmayan posta kutuları](inactive-mailboxes-in-office-365.md) dahil olabilir veya hiç yer almayan posta kutuları:
+İlke yapılandırmanıza bağlı olarak [, etkin olmayan posta kutuları](inactive-mailboxes-in-office-365.md) dahil edilebilir veya eklenmeyebilir:
 
-- Statik ilke kapsamları, varsayılan Tüm alıcılar yapılandırmasını kullanıyor ancak belirli eklemeler  veya dışlamalar için desteklenmiyor olduğunda etkin olmayan [posta kutularını içerir](#a-policy-with-specific-inclusions-or-exclusions). Bununla birlikte, ilke uygulandığı sırada etkin posta kutusu olan bir alıcıyı dahil eder veya hariç ayarlarsanız ve posta kutusu daha sonra devre dışı bırakılırsa, bekletme ayarları uygulanmaya veya dışarıda bırakılır.
+- Statik ilke kapsamları, varsayılan **Tüm alıcılar** yapılandırmasını kullandığınızda etkin olmayan posta kutularını içerir, ancak [belirli eklemeler veya dışlamalar](#a-policy-with-specific-inclusions-or-exclusions) için desteklenmez. Ancak, ilke uygulandığı sırada etkin posta kutusu olan bir alıcıyı dahil ederseniz veya dışlarsanız ve posta kutusu daha sonra devre dışı kalırsa, bekletme ayarları uygulanmaya veya dışlamaya devam eder.
 
-- Varsayılan olarak, uyarlanabilir ilke kapsamları, kapsamın sorgusuna geldiğinde etkin olmayan posta kutularını içerir. Gelişmiş sorgu oluşturucusunu ve *IsInactiveMailbox* OPATH özelliğini kullanarak bunları hariç tutabilirsiniz:
+- Uyarlamalı ilke kapsamları varsayılan olarak, kapsamın sorgusunu karşıladığında etkin olmayan posta kutularını içerir. Gelişmiş sorgu oluşturucusunu ve *IsInactiveMailbox* OPATH özelliğini kullanarak bunları dışlayabilirsiniz:
     
     ```console
     (IsInactiveMailbox -eq "False")
     ```
 
-Statik bir ilke kapsamı kullanıyorsanız ve eklemek veya dışlamak için alıcıları seçerseniz, dağıtım gruplarını ve e-posta etkin güvenlik gruplarını, tek tek seçmek yerine birden çok alıcı seçmek için verimli bir yol olarak seçebilirsiniz. Bu seçeneği kullanırsanız, sahne gerisinde bu gruplar yapılandırma sırasında gruptaki kullanıcıların posta kutularını seçerek otomatik olarak genişletilir. Daha sonra bu grupların üyeliği değişirse, uyarlanabilir ilke kapsamlarından farklı olarak var olan bekletme ilkeniz otomatik olarak güncelleştirilmez.
+Statik bir ilke kapsamı kullanır ve dahil etmek veya dışlamak için alıcıları seçerseniz, dağıtım gruplarını ve e-posta etkin güvenlik gruplarını tek tek seçmek yerine birden çok alıcıyı seçmenin verimli bir yolu olarak seçebilirsiniz. Bu seçeneği kullandığınızda, arka planda bu gruplar, gruptaki kullanıcıların posta kutularını seçmek için yapılandırma sırasında otomatik olarak genişletilir. Bu grupların üyeliği daha sonra değişirse, uyarlamalı ilke kapsamlarından farklı olarak mevcut bekletme ilkeniz otomatik olarak güncelleştirilmez.
 
-Bekletme ayarlarını bekletme ayarları yapılandırıldığında hangi posta kutusu öğelerinin dahil olduğu ve dışarıda bırakıldığında Exchange ayrıntılı bilgi için bkz. Bekletme ve silme işlemiyle [ilgili öğeler.](retention-policies-exchange.md#whats-included-for-retention-and-deletion)
+Exchange için bekletme ayarlarını yapılandırırken dahil edilen ve dışlanan posta kutusu öğeleri hakkında ayrıntılı bilgi için bkz. [Bekletme ve silme için eklenenler](retention-policies-exchange.md#whats-included-for-retention-and-deletion).
 
-Ortak **Exchange konumu**, bekletme ayarlarını tüm ortak klasörlere uygular ve klasör veya posta kutusu düzeyinde uygulanamaz.
-
-#### <a name="exceptions-for-auto-apply-policies-configured-for-sensitive-information-types"></a>Hassas bilgi türleri için yapılandırılmış otomatik uygulama ilkeleri için özel durumlar
-
-Hassas bilgi türleri kullanan bir otomatik uygulama ilkesi yapılandırsanız ve e-posta **Exchange seçin**:
-
-- Microsoft 365 posta kutuları da dahil edilir.
-
-- Belirli posta kutularını tanımlamak üzere uyarlanabilir bir kapsam yapılandırsanız bile, tüm posta kutuları otomatik olarak eklenir. Statik bir ilke kapsamı seçtiyseniz, dahil etmek veya dışarıda tutmak için alıcıları belirtemezseniz.
-
-### <a name="configuration-information-for-sharepoint-sites-and-onedrive-accounts"></a>Site ve hesap SharePoint yapılandırma OneDrive bilgileri
-
-SharePoint sitelerin konumunu  seçtiğiniz zaman, bekletme ilkesi SharePoint iletişim sitelerinde, Microsoft 365 gruplarıyla bağlantılı olmayan ekip sitelerinde ve klasik sitelerde belgeleri alıkoyarak silebilir. Uyarlanabilir ilke kapsamlarını kullanmadıysanız [, Microsoft 365](#exceptions-for-adaptive-policy-scopes) grupları tarafından bağlanan ekip siteleri bu seçenekte destek desteklemez ve bunun yerine, grubun posta kutusu, site ve dosyalarına uygulanan **Microsoft 365** Grupları konumunu kullanın.
-
-yeni ve otomatik bekletme ayarları yapılandırıldığında nelerin dahil olduğu ve dışarıda bırakıldıkları hakkında ayrıntılı bilgi SharePoint OneDrive bkz. Bekletme ve silme işlemi için [neler dahil edilir](retention-policies-sharepoint.md#whats-included-for-retention-and-deletion)?
-
-Belirli sitelerin veya SharePoint hesaplarının OneDrive belirttiğinizde, sitelere erişim için izinlere ihtiyacınız yok. Statik kapsamlar için, Konumları düzenle sayfasında URL'yi belirttiğiniz sırada **doğrulama yapılmaz** . Bununla birlikte SharePoint tüm sitelerde, yapılandırmanın son sayfasında var olduğu denetlenir. Bu denetim başarısız olursa, girdiğiniz URL için doğrulamanın başarısız olduğunu ve doğrulama denetimi geçinceye kadar bekletme ilkesi oluşturulamaz. Bu iletiyi görüyorsanız, URL'yi değiştirmek veya siteyi bekletme ilkesinden kaldırmak için yapılandırma sürecine geri gidin.
-
-Tek tek hesap OneDrive için bkz[. Tüm kullanıcı kimlik OneDrive listesi elde görme](/onedrive/list-onedrive-urls).
-
-> [!NOTE]
-> Tek tek OneDrive hesapları belirtirken, OneDrive hesapları önceden sağlamadıkça[, kullanıcı](/onedrive/pre-provision-accounts) OneDrive hesaplarına ilk kez erişene kadar URL'nin oluşturulmay olacağını unutmayın.
->
-> Ayrıca, OneDrive [UPN'sinde](/onedrive/upn-changes) değişiklik varsa URL otomatik olarak değişir. Örneğin, bir kuruluşun yeniden adlandırın veya yeniden yapılandırınması için etki alanı adı değişikliği gibi ad değiştirme olayı. UPN değişirse, bekletme ayarları için OneDrive URL'leri güncelleştirmeniz gerekir.
->
-> Tek tek kullanıcıların statik kapsamları dahil etmesini veya dışında tutacaklarını güvenilir bir şekilde belirtmenin güçlükleri [nedeniyle, Kullanıcı](retention.md#adaptive-or-static-policy-scopes-for-retention) kapsamı türüne göre uyarlanabilir kapsamlar bu amaç için daha uygun olur.
-
-#### <a name="exceptions-for-adaptive-policy-scopes"></a>Uyarlanabilir ilke kapsamları için özel durumlar
-
-Uyarlanabilir ilke kapsamlarını kullanan bir bekletme ilkesi yapılandırıyor ve SharePoint **konumu** seçin:
-
-- OneDrive ve Microsoft 365 bağlantılı sitelere ek olarak, SharePoint siteleri, Microsoft 365 grupları ile bağlantılı olmayan ekip siteleri ve klasik siteler dahil edilir.
-
-### <a name="configuration-information-for-microsoft-365-groups"></a>Grup yapılandırma Microsoft 365 bilgileri
-
-Bir grup (eski adı Microsoft 365 grup) için içeriği korumak veya Office 365 için Grup grubunun **Microsoft 365** kullanın. Bekletme ilkeleri için, bu konum grup posta kutusunu ve ekipler SharePoint içerir. Bekletme etiketleri için, bu konum yalnızca SharePoint siteyi içerir.
-
-> [!NOTE]
-> Microsoft 365 grubunda Exchange posta kutusu olsa da, **Exchange e-posta** konumu için bekletme ilkesi grup posta kutularına Microsoft 365 içermez.
-
-Statik kapsamlar kullanıyorsanız: Statik kapsam için **Exchange** e-posta konumu başlangıçta dahil edilecek veya hariç tutulacak bir grup posta kutusu belirtmenize izinse de, bekletme ilkesi kaydetmeyi deneerek, "RemoteGroupMailbox" değerinin posta kutusunun konumu için geçerli bir seçim olmadığını belirten bir hata Exchange alırsınız.
-
-Varsayılan olarak, bir Microsoft 365 grubuna Microsoft 365 bekletme ilkesi grup posta kutusunu ve SharePoint sitesini içerir. ekipler sitesinde depolanan SharePoint bu konum kapsamındadır, ancak kendi bekletme ilkesi konumları olan Teams sohbetler veya Teams iletileri göndermez.
-
-Bekletme ilkesi yalnızca Microsoft 365 posta kutularına veya yalnızca bağlantılı SharePoint ekipleri sitelerine uygulanacak olduğundan varsayılanı değiştirmek için [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell cmdlet'ini aşağıdaki değerlerden birini kullanarak *Applications* parametresini kullanın:
-
-- `Group:Exchange`yalnızca Microsoft 365 bağlı posta kutuları için.
-- `Group:SharePoint`yalnızca SharePoint bağlı siteler için.
-
-Seçili posta kutusu gruplarının hem posta kutusunun hem de SharePoint sitenin varsayılan Microsoft 365 için, belirtin`Group:Exchange,SharePoint`.
+**ortak klasörlerin Exchange** konumu tüm ortak klasörlere bekletme ayarları uygular ve klasör veya posta kutusu düzeyinde uygulanamaz.
 
 #### <a name="exceptions-for-auto-apply-policies-configured-for-sensitive-information-types"></a>Hassas bilgi türleri için yapılandırılmış otomatik uygulama ilkeleri için özel durumlar
 
-Hassas bilgi türleri kullanan bir otomatik uygulama ilkesi yapılandırıldığında ve Gruplarda geçerli **Microsoft 365 seçin**:
+Hassas bilgi türlerini kullanan bir otomatik uygulama ilkesi yapılandırdığınızda ve **Exchange e-posta** konumunu seçtiğinizde:
 
-- Microsoft 365 posta kutuları dahil değildir. Bu posta kutularını ilkenize eklemek için, bunun yerine **Exchange posta** kutusunu seçin.
+- Microsoft 365 grup posta kutuları dahil edilir.
 
-#### <a name="what-happens-if-a-microsoft-365-group-is-deleted-after-a-policy-is-applied"></a>İlke uygulandıktan Microsoft 365 grup silinirse ne olur?
+- Belirli posta kutularını tanımlamak için uyarlamalı bir kapsam yapılandırsanız bile tüm posta kutuları otomatik olarak eklenir. Statik bir ilke kapsamı seçtiyseniz, dahil edilecek veya dışlanacak alıcıları belirtemezsiniz.
 
-Bekletme ilkesi (statik ilke kapsamı veya uyarlanabilir) bir Microsoft 365 grubuna uygulandığında ve bu grup bir başka Azure Active Directory:
+### <a name="configuration-information-for-sharepoint-sites-and-onedrive-accounts"></a>SharePoint siteleri ve OneDrive hesapları için yapılandırma bilgileri
 
-- Grup bağlantılı SharePoint sitesi korunur ve bekletme ilkesi tarafından Grup konumunun Microsoft 365 **devam** eder. Siteye, grup silinmeden önce erişmiş olan kişiler için hala erişilebilir ve yeni izinlerin şimdi Tüm Kullanıcılar tarafından SharePoint.
+**SharePoint sitelerin** konumunu seçtiğinizde, bekletme ilkesi SharePoint iletişim sitelerindeki, Microsoft 365 grupları tarafından bağlı olmayan ekip sitelerindeki ve klasik sitelerdeki belgeleri koruyabilir ve silebilir. [Uyarlamalı ilke kapsamları](#exceptions-for-adaptive-policy-scopes) kullanmıyorsanız, Microsoft 365 grupları tarafından bağlanan ekip siteleri bu seçenekte desteklenmez ve bunun yerine grubun posta kutusu, sitesi ve dosyalarındaki içerik için geçerli **olan Microsoft 365 Grupları** konumunu kullanın.
+
+SharePoint ve OneDrive için bekletme ayarlarını yapılandırırken dahil edilen ve dışlananlar hakkında ayrıntılı bilgi için bkz. [Bekletme ve silme için eklenenler](retention-policies-sharepoint.md#whats-included-for-retention-and-deletion).
+
+SharePoint siteler veya OneDrive hesapları için konumlarınızı belirttiğinizde, sitelere erişmek için izinlere ihtiyacınız yoktur. Statik kapsamlar için, **KONUMları düzenle** sayfasında URL'yi belirttiğiniz sırada doğrulama yapılmaz. Ancak, belirttiğiniz SharePoint sitelerin yapılandırmanın son sayfasında mevcut olup olmadığını kontrol eder. Bu denetim başarısız olursa, girdiğiniz URL için doğrulamanın başarısız olduğunu ve doğrulama denetimi geçene kadar bekletme ilkesinin oluşturulamadığını belirten bir ileti görürsünüz. Bu iletiyi görürseniz URL'yi değiştirmek veya siteyi bekletme ilkesinden kaldırmak için yapılandırma işlemine geri dönün.
+
+Tek tek OneDrive hesapları belirtmek için bkz. [Kuruluşunuzdaki tüm kullanıcı OneDrive URL'lerinin listesini alma](/onedrive/list-onedrive-urls).
+
+> [!NOTE]
+> Tek tek OneDrive hesapları belirttiğinizde, OneDrive hesapları [önceden sağlanmadığı](/onedrive/pre-provision-accounts) sürece, kullanıcı OneDrive ilk kez erişene kadar URL'nin oluşturulmadığını unutmayın.
+>
+> Ayrıca, kullanıcının UPN'sinde bir değişiklik olduğunda OneDrive [URL'si otomatik olarak değişir](/onedrive/upn-changes). Örneğin, evlilik gibi bir ad değiştirme olayı veya bir kuruluşun yeniden adlandırmasını veya iş yeniden yapılandırılmasını desteklemek için etki alanı adı değişikliği. UPN değişirse, bekletme ayarları için belirttiğiniz OneDrive URL'lerini güncelleştirmeniz gerekir.
+>
+> Tek tek kullanıcıların statik kapsamları dahil etmek veya dışlamak için URL'leri güvenilir bir şekilde belirtme zorlukları nedeniyle, **Kullanıcı** kapsam türüne sahip [uyarlamalı kapsamlar](retention.md#adaptive-or-static-policy-scopes-for-retention) bu amaç için daha uygundur.
+
+#### <a name="exceptions-for-adaptive-policy-scopes"></a>Uyarlamalı ilke kapsamları için özel durumlar
+
+Uyarlamalı ilke kapsamları kullanan bir ilkeyi bekletme için yapılandırdığınızda ve **sitelerin SharePoint** konumunu seçtiğinizde:
+
+- OneDrive siteler ve Microsoft 365 grup bağlantılı siteler, SharePoint iletişim sitelerine, Microsoft 365 grupları tarafından bağlı olmayan ekip sitelerine ve klasik sitelere ek olarak eklenir.
+
+### <a name="configuration-information-for-microsoft-365-groups"></a>Microsoft 365 Grupları için yapılandırma bilgileri
+
+bir Microsoft 365 grubunun (eski adıyla Office 365 grubu) içeriğini korumak veya silmek için **Microsoft 365 Grupları** konumunu kullanın. Bekletme ilkeleri için bu konum grup posta kutusunu ve SharePoint ekip sitesini içerir. Bekletme etiketleri için bu konum yalnızca SharePoint ekip sitesini içerir.
+
+> [!NOTE]
+> bir Microsoft 365 grubunun Exchange posta kutusu olsa da, **Exchange e-posta** konumu için bekletme ilkesi Microsoft 365 grup posta kutularına içerik içermez.
+
+Statik kapsamlar kullanıyorsanız: Statik kapsamın **Exchange e-posta** konumu başlangıçta dahil edilecek veya hariç tutulacak bir grup posta kutusu belirtmenize izin veriyor olsa da, bekletme ilkesini kaydetmeye çalıştığınızda "RemoteGroupMailbox" öğesinin Exchange konumu için geçerli bir seçim olmadığını belirten bir hata görürsünüz.
+
+Varsayılan olarak, bir Microsoft 365 grubuna uygulanan bekletme ilkesi grup posta kutusunu ve SharePoint ekip sitesini içerir. SharePoint ekipler sitesinde depolanan dosyalar bu konumla kapsanmaktadır ancak kendi bekletme ilkesi konumlarına sahip Teams sohbetleri veya Teams kanal iletilerini kapsamaz.
+
+Bekletme ilkesinin yalnızca Microsoft 365 posta kutularına veya yalnızca bağlı SharePoint teams sitelerine uygulanmasını istediğiniz için varsayılanı değiştirmek için, Aşağıdaki değerlerden biriyle *Uygulamalar* parametresiyle [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell cmdlet'ini kullanın:
+
+- `Group:Exchange`yalnızca gruba bağlı Microsoft 365 posta kutuları için.
+- `Group:SharePoint`yalnızca gruba bağlı SharePoint siteler için.
+
+Seçili Microsoft 365 grupları için hem posta kutusunun hem de SharePoint sitesinin varsayılan değerine dönmek için belirtin`Group:Exchange,SharePoint`.
+
+#### <a name="exceptions-for-auto-apply-policies-configured-for-sensitive-information-types"></a>Hassas bilgi türleri için yapılandırılmış otomatik uygulama ilkeleri için özel durumlar
+
+Hassas bilgi türlerini kullanan bir otomatik uygulama ilkesi yapılandırdığınızda ve **Microsoft 365 Grupları** konumunu seçtiğinizde:
+
+- Microsoft 365 grup posta kutuları dahil değildir. Bu posta kutularını ilkenize eklemek için bunun yerine **Exchange e-posta** konumunu seçin.
+
+#### <a name="what-happens-if-a-microsoft-365-group-is-deleted-after-a-policy-is-applied"></a>İlke uygulandıktan sonra bir Microsoft 365 grubu silinirse ne olur?
+
+Bekletme ilkesi (statik ilke kapsamı veya uyarlamalı) bir Microsoft 365 grubuna uygulandığında ve bu grup Azure Active Directory silindiğinde:
+
+- Grup bağlantılı SharePoint sitesi korunur ve **Microsoft 365 Grupları** konumuyla bekletme ilkesi tarafından yönetilmeye devam eder. Site, grup silinmeden önce siteye erişimi olan kişiler tarafından hala erişilebilir durumdadır ve yeni izinler artık SharePoint aracılığıyla yönetilmelidir.
     
-    Bu noktada, silinmiş grubu belirtemezseniz, Microsoft 365 Grupları konumunun dışında tutabilirsiniz. Bekletme İlkesini bu siteden bırakmanız gerekirse, Microsoft Desteği'ne başvurun. Örneğin, [Merkezi'nde bir hizmet Microsoft 365 Yönetici açın](https://admin.microsoft.com/Adminportal/Home#/support).
+    Bu noktada, silinen grubu belirtemediğinizden siteyi Microsoft 365 Grupları konumundan dışlayamazsınız. Bekletme ilkesini bu siteden serbest bırakmanız gerekiyorsa Microsoft Desteği başvurun. Örneğin, [Microsoft 365 Yönetici Merkezi'nde bir hizmet isteği](https://admin.microsoft.com/Adminportal/Home#/support) açın.
 
-- Silinmiş grubun posta kutusu devre dışı olur ve aynı site SharePoint, bekletme ayarlarına tabi kalır. Daha fazla bilgi için bkz[. Etkin olmayan posta kutuları Exchange Online](inactive-mailboxes-in-office-365.md).
+- Silinen grubun posta kutusu etkin değil olur ve SharePoint site gibi saklama ayarlarına tabidir. Daha fazla bilgi için bkz. [Exchange Online'da etkin olmayan posta kutuları](inactive-mailboxes-in-office-365.md).
 
-### <a name="configuration-information-for-skype-for-business"></a>İletişim için yapılandırma Skype Kurumsal
+### <a name="configuration-information-for-skype-for-business"></a>Skype Kurumsal için yapılandırma bilgileri
 
 > [!NOTE]
-> Skype Kurumsal [31 Temmuz 2021'de](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/skype-for-business-online-to-be-retired-in-2021/ba-p/777833) de kaldırıldı ve müşterilerin Microsoft Teams. Bununla birlikte, var olan Skype Kurumsal için bekletme ilkeleri destekmaya devam eder.
+> Skype Kurumsal [31 Temmuz 2021'de kullanımdan kaldırıldı](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/skype-for-business-online-to-be-retired-in-2021/ba-p/777833) ve müşterilerin Microsoft Teams geçişlerini öneririz. Ancak, Skype Kurumsal için bekletme ilkeleri mevcut müşteriler için desteklenmeye devam eder.
 
-Exchange e-postanın aksine, Skype konumunun durumunu tüm kullanıcıları otomatik olarak içerecek şekilde açabilirsiniz, ancak bu konumu açık durumdayken konuşmalarını korumak istediğiniz kullanıcıları kendiniz seçmeniz gerekir:
+Exchange e-postadan farklı olarak, tüm kullanıcıları otomatik olarak dahil etmek için Skype konumunun durumunu değiştiremezsiniz, ancak bu konumu açtığınızda konuşmalarını tutmak istediğiniz kullanıcıları el ile seçmeniz gerekir:
 
-![Bekletme Skype için konum seçin.](../media/skype-location-retention-policies.png)
+![Bekletme ilkeleri için Skype konumu seçin.](../media/skype-location-retention-policies.png)
 
-Bu Düzenle seçeneğini **kullandıktan** sonra, **Skype Kurumsal** bölmesinde Ad sütunundan önce gizli kutuyu seçerek tüm **kullanıcıları hızla ekleyebilirsiniz**. Bununla birlikte, her kullanıcının ilkeye dahil olan belirli bir kullanıcı sayısı olarak saymak önemlidir. Dolayısıyla, bu kutuyu seçerek 1.000 kullanıcı dahil etmek, dahil etmek üzere 1.000 kullanıcıyla el ile seçilmiş olmasıyla aynıdır. Bu, kullanıcı sayısı için desteklenen en Skype Kurumsal.
+Bu **Düzenle** seçeneğini seçtikten sonra **, Skype Kurumsal** bölmesinde **, Ad** sütunundan önceki gizli kutuyu seçerek tüm kullanıcıları hızla ekleyebilirsiniz. Ancak, her kullanıcının ilkeye belirli bir ekleme olarak sayıldığını anlamak önemlidir. Bu nedenle, bu kutuyu seçerek 1.000 kullanıcı eklerseniz, dahil etmek üzere 1.000 kullanıcıyı el ile seçmiş olmanızla aynıdır. Bu, Skype Kurumsal için desteklenen en yüksek değerdir.
 
-konuşma geçmişini **arşivlemeyle hiçbir** ilgisi Outlook Konuşma Geçmişi klasörüdür ve Skype vardır. **Konuşma Geçmişi** son kullanıcı tarafından kapatılabilir, ancak Skype için arşivleme, Skype konuşmalarının bir kopyasını kullanıcının erişilemeyen ancak eBulma tarafından kullanılabilen gizli bir klasörde depolanmasıyla yapılır.
+Outlook'daki bir klasör olan **Konuşma Geçmişi'nin** Skype arşivlemeyle ilgisi olmayan bir özellik olduğunu unutmayın. **Konuşma Geçmişi** son kullanıcı tarafından kapatılabilir, ancak Skype için arşivleme, Skype konuşmalarının bir kopyasını kullanıcının erişemeyeceği ancak eBulma'nın kullanabileceği gizli bir klasörde depolayarak yapılır.
 
-## <a name="settings-for-retaining-and-deleting-content"></a>Ayarlar tutma ve silme hakkında daha fazla bilgi
+## <a name="settings-for-retaining-and-deleting-content"></a>İçeriği saklamak ve silmek için Ayarlar
 
-İçeriği koruma ve silme ayarlarını seçerek, bekletme ilkeniz belirli bir süre için aşağıdaki yapılandırmalardan biri olur:
+İçeriği saklama ve silme ayarlarını seçerek bekletme ilkeniz belirli bir süre için aşağıdaki yapılandırmalardan birine sahip olur:
 
-- Yalnızca koruma
+- Yalnızca saklama
+    
+    Bu yapılandırma için aşağıdaki seçenekleri belirleyin:
+    
+    - Bekletme ilkeleri için: **İçeriği korumak mı, silmek mi yoksa her ikisini birden mi yapmak istediğinize karar verin** sayfasında **Öğeleri belirli bir süre için tut'u** seçin, bekletme süresini belirtin ve **bekletme süresinin sonunda bekletme ayarlarının** kaldırılması için **Hiçbir şey yapma'yı** seçin.  Veya bitiş tarihi olmadan saklamak için Bu sayfada **öğeleri sonsuza kadar koru'ya** da tıklayabilirsiniz.
+    
+    - Bekletme etiketleri için: **Etiket ayarlarını tanımla sayfasında** **Öğeleri süresiz olarak veya belirli bir süre boyunca tut'u** seçin ve sonra:
+        - Bekletme ayarlarının belirli bir süre sonra etiketlenmiş içerikte artık geçerli olmaması için: **Bekletme süresini tanımla** sayfasında, **Öğeleri saklama için** zaman aralığını belirtin. Ardından **Bekletme süresinden sonra ne olacağını seçin** sayfasında **Bekletme ayarlarını devre dışı bırak'ı** seçin. Etiket içerikte kalır ancak herhangi bir kısıtlama olmadan yalnızca [sınıflandırır](retention.md#classifying-content-without-applying-any-actions).
+        - Bitiş tarihi olmadan saklamak için: **Bekletme dönemini tanımla** sayfasında **, Öğeleri saklama için** **Süresiz bir dönem'i** seçin. Etiket [, mevcut kısıtlamalarla](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked ) birlikte içerikte kalır.
 
-    Bu yapılandırma için Öğeleri belirli **bir süre boyunca alıkoy'a ve** **Bekletme döneminin sonunda: Hiçbir şey yapma'ya seçin**. Ya da Öğeleri sonsuza **kadar koruy'ı seçin**.
+- Saklama ve silme
 
-- Koruma ve silme
+    Bu yapılandırma için aşağıdaki seçenekleri belirleyin:
+    
+    - Bekletme ilkeleri için: **İçeriği korumak mı, silmek mi yoksa her ikisini birden mi yapmak istediğinize karar verin** sayfasında **Öğeleri belirli bir süre için tut'u** seçin, bekletme süresini belirtin ve **bekletme süresinin sonunda** **Öğeleri otomatik olarak sil'i** seçin.
+    
+    - Bekletme etiketleri için: **Etiket ayarlarını tanımla** sayfasında **Öğeleri süresiz olarak veya belirli bir süre boyunca tut'u** seçin, bekletme süresini belirtin ve ardından **Bekletme döneminden sonra ne olacağını seçin** için **Öğeleri otomatik olarak sil'i** veya **Değerlendirmeyi başlat'ı** seçin. Değerlendirme gözden geçirmeleri hakkında daha fazla bilgi için bkz [. Disposition gözden geçirmesi](disposition.md#disposition-reviews).
 
-    Bu yapılandırma için Öğeleri belirli **bir süre boyunca alıkoy'a ve** Bekletme döneminin **sonunda: Öğeleri otomatik olarak sil'e tıklayın**.
+- Yalnızca sil
 
-- Yalnızca silme
+    Bu yapılandırma için aşağıdaki seçenekleri belirleyin:
+    
+    - Bekletme ilkeleri için: **İçeriği korumak mı, silmek mi yoksa her ikisini birden mi yapmak istediğinize karar verin** sayfasında **Yalnızca belirli bir yaşa ulaşan öğeleri sil'i** seçin ve zaman aralığını belirtin.
+    
+    - Bekletme etiketleri için: **Etiket ayarlarını tanımla** sayfasında **Belirli bir dönemden sonra eylemleri zorla'yı** seçin ve saklama süresi olarak da adlandırılan süreyi belirtin. Dönem otomatik olarak Öğeleri otomatik olarak **sil** olarak **ayarlandıktan sonra ne olacağını seçin** seçeneği.
 
-    Bu yapılandırma için, Yalnızca **belirli bir yaşa ulaştıklarda öğeleri sil'i seçin**.
+### <a name="retaining-content-for-a-specific-period-of-time"></a>İçeriği belirli bir süre boyunca saklama
 
-### <a name="retaining-content-for-a-specific-period-of-time"></a>İçeriği belirli bir süre tutma
+İçeriği korumak için bir bekletme etiketi veya ilkesi yapılandırdığınızda, öğeleri belirli sayıda gün, ay veya yıl boyunca saklamayı seçersiniz. Alternatif olarak, öğeleri sonsuza kadar tutun. Bekletme süresi, ilkenin atandığı zamandan değil, belirtilen saklama süresinin başlangıcına göre hesaplanır.
 
-İçeriği korumak üzere bir bekletme etiketi veya ilkesi yapılandırıldığında, öğeleri belirli sayıda gün, ay veya yıl boyunca saklamayı seçersiniz. Alternatif olarak, öğeleri sonsuza kadar koruyabilirsiniz. Bekletme süresi, ilkenin atandığı süreden itibaren hesaplanmaz, ancak belirtilen bekletme döneminin başlangıcına göre hesaplanır.
-
-Bekletme döneminin başlangıcı için, içeriğin ne zaman oluşturulacaklarını veya yalnızca dosyalar ve içeriğin en son ne zaman değiştirildiğinde SharePoint, OneDrive ve Microsoft 365 Grupları için destek olaylarını seçebilirsiniz. Bekletme etiketleri için, bekletme dönemini içeriğin etiketli olduğu ve bir olayın oluştuğu zaman başlatabilirsiniz.
+Saklama süresinin başlangıcı için içeriğin ne zaman oluşturulduğunu veya yalnızca dosyalar ve SharePoint, OneDrive ve Microsoft 365 Grupları için desteklenip desteklenmediğini ve içeriğin en son ne zaman değiştirildiğini seçebilirsiniz. Bekletme etiketleri için, içerik etiketlendiğinden ve bir olay gerçekleştiğinde bekletme süresini başlatabilirsiniz.
 
 Örnekler:
 
-- SharePoint: Bu içerik en son değiştirildikten sonra site koleksiyonunda bulunan öğeleri yedi yıl süreyle tutmak ve bu site koleksiyonunda bulunan bir belge altı yıl içinde değiştirilmemişse, belge değiştirilmezse yalnızca bir yıl daha korunur. Belge yeniden düzenlenmişse, belgenin yaşı yeni değiştirme tarihine göre hesaplanır ve yedi yıl daha korunur.
+- SharePoint: Bu içerik son değiştirildikten sonra bir site koleksiyonundaki öğeleri yedi yıl boyunca saklamak istiyorsanız ve bu site koleksiyonundaki bir belge altı yıl içinde değiştirilmediyse, belge değiştirilmezse yalnızca bir yıl daha saklanır. Belge yeniden düzenlenirse, belgenin yaşı yeni son değiştirme tarihinden hesaplanır ve yedi yıl daha saklanır.
 
-- Exchange: Posta kutusunda öğeleri yedi yıl süreyle tutmak ister ve altı yıl önce bir ileti gönderilmişse, ileti yalnızca bir yıl süreyle korunur. Daha Exchange için yaş, gelen e-posta için alınan tarihe veya giden e-posta için gönderme tarihine dayalıdır. Öğelerin en son ne zaman değiştirildiğinden bağlı olarak tutma, yalnızca Site ve OneDrive Site SharePoint.
+- Exchange: Öğeleri yedi yıl boyunca posta kutusunda tutmak istiyorsanız ve altı yıl önce bir ileti gönderildiyse, ileti yalnızca bir yıl boyunca saklanır. Exchange öğeler için yaş, gelen e-posta için alınan tarihi veya giden e-posta için gönderilen tarihi temel alır. Öğeleri en son ne zaman değiştirildiğine göre saklamak yalnızca OneDrive ve SharePoint site içeriğine uygulanır.
 
-Bekletme döneminin sonunda, içeriğin kalıcı olarak silinmesini isteyip istemeyebilirsiniz:
+Saklama süresinin sonunda, içeriğin kalıcı olarak silinmesini isteyip istemediğinizi seçersiniz. Örneğin, bekletme ilkeleri için:
 
-![Bekletme ayarları sayfasına gidin.](../media/b05f84e5-fc71-4717-8f7b-d06a29dc4f29.png)
+![Bekletme ayarları sayfası.](../media/b05f84e5-fc71-4717-8f7b-d06a29dc4f29.png)
 
-Bekletmeyi yapılandırmadan önce, ilgili iş yükleri için kapasite ve depolama sınırlarını tanımanız gerekir:
+Bekletmeyi yapılandırmadan önce, önce ilgili iş yükleri için kapasite ve depolama sınırları hakkında bilgi edinin:
 
-- Site SharePoint OneDrive için, saklanan öğeler sitenin depolama kotasına dahil olan Saklama Kitaplığı'nın saklama kitaplığında saklanır. Daha fazla bilgi için bkz[. Site depolama alanı sınırlarını](/sharepoint/manage-site-collection-storage-limits) belgeler SharePoint yönetme.
+- SharePoint ve OneDrive için, korunan öğeler sitenin depolama kotasında yer alan Koruma Saklama kitaplığında depolanır. Daha fazla bilgi için SharePoint belgelerinde [site depolama sınırlarını yönetme](/sharepoint/manage-site-collection-storage-limits) bölümüne bakın.
 
-- Daha Exchange, Teams ve Yammer depolanmış iletilerin posta kutularında depolandığı alan hakkında bilgi için bkz. Exchange Online sınırlarına bakın ve otomatik [](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits) genişleyen [arşivlemeyi etkinleştirin](autoexpanding-archiving.md).
+- Tutulan iletilerin posta kutularında depolandığı Exchange, Teams ve Yammer için bkz. [Exchange Online sınırları](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits) ve [otomatik genişletme arşivlemeyi](autoexpanding-archiving.md) etkinleştirme.
     
-    Çok büyük hacimli e-postanın kısa bir süre içinde kullanıcılar tarafından veya ilke ayarlarından otomatik olarak silindiğinde, öğeleri kullanıcının birincil posta kutusunun Kurtarılabilir Öğeler klasöründen arşiv posta kutusunun Kurtarılabilir Öğeler klasörüne daha sık taşımak için Exchange'yi yapılandırmanız da gerekebilir. Adım adım yönergeler için bkz. [Posta kutuları için Kurtarılabilir Öğe kotasını artırma](increase-the-recoverable-quota-for-mailboxes-on-hold.md).
+    Kullanıcılar tarafından veya ilke ayarlarından otomatik olarak kısa bir süre içinde yüksek miktarda e-postanın silindiği aşırı durumlarda, Exchange kullanıcının birincil posta kutusunda bulunan Kurtarılabilir Öğeler klasöründeki öğeleri arşiv posta kutusunda kurtarılabilir öğeler klasörüne daha sık taşımak için de yapılandırmanız gerekebilir. Adım adım yönergeler için bkz. [Bekleyen posta kutuları için Kurtarılabilir Öğeler kotasını artırma](increase-the-recoverable-quota-for-mailboxes-on-hold.md).
 
-### <a name="deleting-content-thats-older-than-a-specific-age"></a>Belirli bir yaştan daha eski içeriği silme
+### <a name="deleting-content-thats-older-than-a-specific-age"></a>Belirli bir yaştan eski içeriği silme
 
-Bekletme ilkesi öğeleri alıkoydurarak silebilir veya eski öğeleri bekletmeden silebilir.
+Bekletme ayarları öğeleri koruyup silebilir veya eski öğeleri saklamadan silebilir.
 
-Her iki durumda da, ilkeniz öğeleri silerse, belirttiğiniz sürenin ilkenin atandığı süreden değil, belirtilen bekletme döneminin başlangıcına göre hesaplanmadığı anlamanız önemlidir. Örneğin, öğenin oluşturulma veya değiştirilme ya da etiketli olduğu zaman.
+Her iki durumda da bekletme ayarlarınız öğeleri silerse, belirttiğiniz zaman aralığının ilkenin atandığı zamandan değil, belirtilen saklama süresinin başlangıcına göre hesaplandığını anlamanız önemlidir. Örneğin, öğenin oluşturulduğu, değiştirildiği veya etiketlendiği zamandan itibaren.
 
-Bu nedenle, öncelikle mevcut içeriğin yaşını ve ilkenin bu içeriği nasıl etkiley kullanılabilir olduğunu düşünün. Ayrıca, yeni ilkeyi atamadan önce kullanıcılarınıza bu ilkeyi haber vermek ve olası etkiyi değerlendirmek için onlara zaman vermek de istiyor olabilirsiniz.
+Bu nedenle, önce mevcut içeriğin yaşını ve ayarların bu içeriği nasıl etkileyebileceklerini göz önünde bulundurun. Ayarlar içeriğe uygulanmadan önce, seçtiğiniz ayarları kullanıcılarınıza ve yardım masasına iletmeyi göz önünde bulundurun ve bu da onlara olası etkiyi değerlendirmek için zaman verir.
 
-### <a name="a-policy-that-applies-to-entire-locations"></a>Konumların tamamına uygulanan ilke
+### <a name="a-policy-that-applies-to-entire-locations"></a>Konumların tamamı için geçerli olan ilke
 
-Konumları seçerseniz, konumun durumu Skype Kurumsal dışında, varsayılan ayar  **Tüm'tir**.
+Konumları seçtiğinizde, Skype Kurumsal dışında, konumun durumu **Açık** olduğunda varsayılan ayar **Tümü'dür**.
 
-Bekletme ilkesi konumların tamamının herhangi bir bileşimine uygulandığında, ilkenin dahil olduğu alıcı, site, hesap, grup, vb. sayısında bir sınırlama yoktur.
+Bekletme ilkesi tüm konumların herhangi bir birleşimine uygulandığında, ilkenin içerebileceği alıcı, site, hesap, grup vb. sayısıyla ilgili bir sınır yoktur.
 
-Örneğin, bir ilke tüm e-Exchange e-postayı ve tüm SharePoint sitelerini içerirse, kaç tane olursa olsun tüm siteler ve alıcılar dahil edilir. Diğer Exchange, ilke uygulandıktan sonra oluşturulan tüm yeni posta kutuları ilkeyi otomatik olarak devralacaktır.
+Örneğin, bir ilke tüm Exchange e-postayı ve tüm SharePoint sitelerini içeriyorsa, kaç tane olursa olsun tüm siteler ve alıcılar dahil olur. Exchange için, ilke uygulandıktan sonra oluşturulan tüm yeni posta kutuları ilkeyi otomatik olarak devralır.
 
-### <a name="a-policy-with-specific-inclusions-or-exclusions"></a>Belirli eklemelerin veya dışlamaların olduğu bir ilke
+### <a name="a-policy-with-specific-inclusions-or-exclusions"></a>Belirli eklemeler veya dışlamalar içeren bir ilke
 
-İsteğe bağlı yapılandırmayı kullanarak bekletme ayarlarınızın kapsamını belirli kullanıcılara, belirli Microsoft 365 gruplarına veya belirli sitelere doğru kullanırsanız, ilke başına dikkat etmek gereken bazı sınırlamalar olduğunu unutmayın. Daha fazla bilgi için bkz. [Bekletme ilkeleri ve bekletme etiketi ilkeleri için sınırlar](retention-limits.md). 
+Bekletme ayarlarınızı belirli kullanıcılara, belirli Microsoft 365 gruplarına veya belirli sitelere kapsamak için isteğe bağlı yapılandırmayı kullanırsanız, ilke başına dikkat etmeniz gereken bazı sınırlar olduğunu unutmayın. Daha fazla bilgi için bkz. [Bekletme ilkeleri ve bekletme etiketi ilkeleri için sınırlar](retention-limits.md). 
 
-Bekletme ayarlarınızın kapsamını isteğe bağlı yapılandırmada kullanmak için, Bu konumun durumu Açık olduğundan emin olun ve sonra belirli kullanıcıları, kullanıcı gruplarını veya siteleri dahil etmek veya dışarıda Microsoft 365 için bağlantıları kullanın.
+Bekletme ayarlarınızı kapsamak için isteğe bağlı yapılandırmayı kullanmak için, o konumun **Durumunun** **Açık** olduğundan emin olun ve ardından bağlantıları kullanarak belirli kullanıcıları, Microsoft 365 grupları veya siteleri dahil edin veya hariç tutun.
 
 > [!WARNING]
-> Yapılandırsanız, son yapılandırmayı içerir ve sonra kaldırırsanız, yapılandırma konum için **All** olarak geri döner.  İlkeyi kaydetmeden önce bunun sizin için tam olarak doğru yapılandırma olduğundan emin olun.
+> Eklemeleri yapılandırıp sonuncuyu kaldırırsanız, yapılandırma konum için **Tümü'ne** geri döner.  İlkeyi kaydetmeden önce amaçladığınız yapılandırmanın bu olduğundan emin olun.
 >
-> Örneğin, verileri silmek üzere yapılandırılmış bekletme ilkenize dahil etmek üzere bir SharePoint sitesi belirtirseniz ve sonra da tek siteyi kaldırırsanız, varsayılan olarak tüm SharePoint siteleri verileri kalıcı olarak silen bekletme ilkesine tabi olur. Aynı durum yalnızca e-posta Exchange, OneDrive sohbet kullanıcıları vb. Teams için de geçerlidir.
+> Örneğin, verileri silmek üzere yapılandırılmış bekletme ilkenize eklenecek bir SharePoint site belirtir ve ardından tek siteyi kaldırırsanız, varsayılan olarak tüm SharePoint siteler verileri kalıcı olarak silen bekletme ilkesine tabi olur. Aynı durum, Exchange alıcılar, OneDrive hesapları, Teams sohbet kullanıcıları vb. için de geçerlidir.
 >
-> Bu senaryoda, konum için Tüm ayarının bekletme ilkesine tabi tutulmasını istemiyorsanız  konumu kapatın. Alternatif olarak, ilkeden muaf olmak için hariç tutulacakları belirtme.
+> Bu senaryoda, konumun **Tümü** ayarının bekletme ilkesine tabi olmasını istemiyorsanız konumu kapatın. Alternatif olarak, ilkeden muaf tutulacak dışlamaları belirtin.
 
-## <a name="updating-policies-for-retention"></a>Bekletme ilkelerini güncelleştirme
+## <a name="updating-policies-for-retention"></a>Bekletme için ilkeleri güncelleştirme
 
-Bazı ayarlar, bekletme ilkesi oluşturulduktan ve kaydedildikten sonra değiştirilemez. Bu ayarlar şunlardır:
-- Bekletme süresi ve bekletme döneminin ne zaman başlayacağı dışında ilke adı ve bekletme ayarları.
+Bekletme ilkesi oluşturulduktan ve kaydedildikten sonra bazı ayarlar değiştirilemez ve bunlar şunlardır:
+- İlke adı ve bekletme süresi ve saklama süresinin ne zaman başlatılıp başlatılmayacakları hariç tutma ayarları.
 
-Bir bekletme ilkesi düzenlerseniz ve öğeler zaten bekletme ilkenizin özgün ayarlarına tabi olursa, güncelleştirilmiş ayarlarınız yeni tanımlanan öğelere ek olarak bu öğelere otomatik olarak uygulanır.
+Bir bekletme ilkesini düzenlerseniz ve öğeler zaten bekletme ilkenizdeki özgün ayarlara tabiyse, güncelleştirilmiş ayarlarınız yeni tanımlanan öğelere ek olarak bu öğelere otomatik olarak uygulanır.
 
-Bu güncelleştirme genellikle oldukça hızlıdır, ancak birkaç gün de sürer. Veritabanı konumlar arasında ilke çoğaltması Microsoft 365 tamamlandığında, bekletme ilkesi durumunun On (Beklemede **)** Microsoft 365 uyumluluk merkezi **(Başarılı) olarak değiştir olduğunu görmenizi sağlar**.
+Genellikle bu güncelleştirme oldukça hızlıdır ancak birkaç gün sürebilir. Microsoft 365 konumlarınız arasında ilke çoğaltması tamamlandığında, bekletme ilkesinin durumunu Açık **(Beklemede) yerine Açık (****Başarılı**) olarak Microsoft 365 uyumluluk merkezi görürsünüz.
 
 ## <a name="locking-the-policy-to-prevent-changes"></a>Değişiklikleri önlemek için ilkeyi kilitleme
 
-Hiç kimsenin ilkeyi kapatamaya, ilkeyi silene veya ilkeyi daha az kısıtlayıcı hale döndürene emin olmak için bkz. Bekletme ilkeleri ve bekletme etiketi ilkelerine yönelik değişiklikleri kısıtlamak için Koruma [Kilidi'ne bakın](retention-preservation-lock.md).
+Kimsenin ilkeyi kapatamadığını, ilkeyi silemediğini veya daha az kısıtlayıcı hale getiremediğini güvence altına almanız gerekiyorsa bkz [. Bekletme ilkeleri ve bekletme etiketi ilkelerindeki değişiklikleri kısıtlamak için Koruma Kilidi'ni kullanma](retention-preservation-lock.md).

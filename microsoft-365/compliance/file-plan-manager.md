@@ -1,5 +1,5 @@
 ---
-title: İçerik yaşam döngüsü boyunca bekletme etiketlerini yönetmek için dosya planı kullanma
+title: İçerik yaşam döngüsü boyunca bekletme etiketlerini yönetmek için dosya planını kullanma
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -15,177 +15,181 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
-description: Dosya planı, bekletme etiketleri için gelişmiş yönetim özellikleri sağlar.
+description: Dosya planı bekletme etiketleri için gelişmiş yönetim özellikleri sağlar.
 ms.custom: seo-marvel-may2020
-ms.openlocfilehash: 2e028bae676b949c662a86178bac5e8ccdc557bf
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 40c395d609a9a02637b937cafae988578dc6e14f
+ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63317717"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64836182"
 ---
-# <a name="use-file-plan-to-create-and-manage-retention-labels"></a>Bekletme etiketlerini oluşturmak ve yönetmek için dosya planını kullanma
+# <a name="use-file-plan-to-create-and-manage-retention-labels"></a>Bekletme etiketleri oluşturmak ve yönetmek için dosya planını kullanma
 
->*[Microsoft 365 uyumluluğu için lisans & kılavuzu.](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
+>*[Güvenlik & uyumluluğu için lisanslama yönergelerini Microsoft 365](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-İlk e-postada Bilgi yönetiminden bekletme  etiketleri oluşturabiliyor Microsoft 365 uyumluluk merkezi, ancak Kayıt yönetiminden dosya planı **ek** yönetim özelliklerine sahiptir:
+Microsoft 365 uyumluluk merkezi **Bilgi idaresinden** bekletme etiketleri oluşturup yönetebilirsiniz, ancak **Kayıtlar yönetiminden** dosya planı ek yönetim özelliklerine sahiptir:
 
-- Bir elektronik tablodan ilgili bilgileri içeri aktararak bekletme etiketlerini toplu olarak oluşturabilirsiniz.
+- İlgili bilgileri bir elektronik tablodan içeri aktararak bekletme etiketlerini toplu olarak oluşturabilirsiniz.
 
-- Çözümleme ve çevrimdışı işbirliği yapmak için var olan bekletme etiketlerinden bilgileri dışarı aktarabilirsiniz.
+- Analiz ve çevrimdışı işbirliği için mevcut bekletme etiketlerinden bilgileri dışarı aktarabilirsiniz.
 
-- Tüm bekletme etiketlerinizin ayarlarını tek bir görünümde görmenizi kolaylaştırmak için bekletme etiketleri hakkında daha fazla bilgi görüntülenir.
+- Bekletme etiketleri hakkında daha fazla bilgi, tüm bekletme etiketlerinizin ayarlarını tek bir görünümden görmenizi ve bunları daha kolay görebilmenizi sağlamak için görüntülenir.
 
-- Dosya planı tanımlayıcıları, her etiket için ek ve isteğe bağlı bilgileri destekler.
+- Dosya planı tanımlayıcıları her etiket için ek ve isteğe bağlı bilgileri destekler.
 
 Dosya planı, içeriği kayıt olarak işaretlemeseler bile tüm bekletme etiketleri için kullanılabilir.
 
-Bekletme etiketlerinin ne olduğu ve nasıl kullanılırları hakkında bilgi için bkz. Bekletme ilkeleri [ve bekletme etiketleri hakkında bilgi.](retention.md)
+Bekletme etiketlerinin ne olduğu ve nasıl kullanılacağı hakkında bilgi için bkz. [Bekletme ilkeleri ve bekletme etiketleri hakkında bilgi edinin](retention.md).
 
 ## <a name="accessing-file-plan"></a>Dosya planına erişme
 
-Dosya planına erişmek için, aşağıdaki yönetici rollerinden biri gerekir:
+Dosya planına erişmek için aşağıdaki yönetici rollerinden birine sahip olmanız gerekir:
     
 - Bekletme Yöneticisi
 
-- Yalnızca görüntüleme Bekletme Yöneticisi
+- Yalnızca görüntüleme bekletme yöneticisi
 
-Aşağıdaki Microsoft 365 uyumluluk merkezi **SolutionsRecords** >  **managementFile plan'a** >  **gidin**:
+Microsoft 365 uyumluluk merkezi **ÇözümlerKayıt** >  **yönetimiDosya** >  **planı'na** gidin:
 
 ![Dosya planı sayfası](../media/compliance-file-plan.png). 
 
-Gezinti **bölmesinde** Kayıt yönetimi görüntülenmezse, önce aşağı kaydırın ve Hepsini **göster'i seçin**.
+**Kayıt yönetimi** gezinti bölmesinde görüntülenmiyorsa, önce aşağı kaydırın ve **Tümünü göster'i** seçin.
 
-## <a name="navigating-your-file-plan"></a>Dosya planında gezinme
+## <a name="navigating-your-file-plan"></a>Dosya planınızda gezinme
 
-İlk gün içinde Bilgi idaresi'ne göre **önceden bekletme** etiketleri oluşturdu Microsoft 365 uyumluluk merkezi, bu etiketler otomatik olarak dosya planınız içinde görüntülenir. 
+Microsoft 365 uyumluluk merkezi **Bilgi idaresinden** bekletme etiketleri oluşturduysanız, bu etiketler dosya planınızda otomatik olarak görüntülenir. 
 
-Benzer şekilde, dosya planında artık bekletme etiketleri oluşturmanıza benzer şekilde, etiketler içeriği kayıt olarak  işaretlemek üzere yapılandırılmamışsa, Bilgi yönetimi tarafından da kullanılabilir.
+Benzer şekilde, artık dosya planında bekletme etiketleri oluşturursanız, etiketler içeriği kayıt olarak işaretlemek üzere yapılandırılmadıysa **Bilgi idaresi'nden** de kullanılabilir.
 
-Dosya **planı** sayfasında, etiketlerinizin durum ve ayarlarıyla birlikte tüm etiketlerinizi, isteğe bağlı dosya planı tanımlayıcılarını, etiketlerinizin çevrimdışı incelemelerini çözümlemeye veya etkinleştirmeye yönelik dışarı aktarma seçeneğini ve bekletme etiketleri oluşturma seçeneğini de görebilirsiniz. 
+**Dosya planı** sayfasında, durum ve ayarlarıyla birlikte tüm etiketlerinizi, isteğe bağlı dosya planı tanımlayıcılarını, etiketlerinizin çevrimdışı gözden geçirmelerini analiz etmek veya etkinleştirmek için bir dışarı aktarma seçeneği ve bekletme etiketleri oluşturmak için içeri aktarma seçeneğini görürsünüz. 
 
 ### <a name="label-settings-columns"></a>Etiket ayarları sütunları
 
-Sütunları özelleştir **seçeneği seçerek** Ad etiketi dışındaki tüm sütunlar görüntülenebilir **veya gizlenir** . Ancak varsayılan olarak, ilk birkaç sütunda etiket durumu ve ayarlarıyla ilgili bilgiler görüntülenir: 
+Sütunları özelleştir seçeneği seçilerek **Etiket Adı** dışındaki tüm **sütunlar** görüntülenebilir veya gizlenebilir. Ancak varsayılan olarak, ilk birkaç sütun etiket durumu ve ayarları hakkındaki bilgileri görüntüler: 
 
-- **Durum**, etiketin bir etiket ilkesine mi yoksa otomatik uygulama ilkesine mi (**Etkin**) dahil olup olmadığını tanımlar. (Etkin **Değil)**
+- **Durum** , etiketin bir etiket ilkesine mi yoksa otomatik uygulama ilkesine mi (**Etkin**) eklenip eklenmediğini (**Etkin değil**) tanımlar.
 
-- **Bekletme döneminin** nasıl veya ne zaman başladığını tanımlar. Geçerli değerler:
+- **Saklama** süresinin nasıl veya ne zaman başladığını tanımlar. Geçerli değerler:
     - Olay
     - Oluşturulduğunda
     - Son değiştirme
-    - Etiketli olduğunda
+    - Etiketlendiğinde
 
-- **Kayıt,** etiket uygulandığında öğenin kayıt olarak işaretlenirse bunu tanımlar. Geçerli değerler:
+- **Kayıt,** etiket uygulandığında öğenin kayıt olarak işaretlenip işaretlenmediğini tanımlar. Geçerli değerler:
     - Hayır
     - Evet
     - Evet(Mevzuat)
 
-- **Bekletme süresi** , bekletme süresini tanımlar. Geçerli değerler:
+- **Varsayılan olarak kilidinin açık olması** (şu anda kullanıma sunılıyor), etiket uygulandığında kayıt olarak işaretlenmiş öğenin kilidinin açık olup olmadığını belirler. Geçerli değerler:
+    - Hayır
+    - Evet
+
+- **Bekletme süresi** , saklama süresini tanımlar. Geçerli değerler:
     - Gün
     - Ay
     - Yıl
     - Sonsuza kadar
     - Yok
 
-- **Disposition type** , bekletme döneminin sonunda içeriğe ne olduğunu tanımlar. Geçerli değerler:
+- **Değerlendirme türü** , saklama süresinin sonunda içeriğe ne olduğunu tanımlar. Geçerli değerler:
     - Eylem yok
     - Otomatik silme
-    - İnceleme gerekli
+    - Gözden geçirme gerekli
 
 ### <a name="file-plan-descriptors-columns"></a>Dosya planı tanımlayıcıları sütunları
 
-Dosya planı, bekletme etiketlerinizin bir parçası olarak daha fazla bilgi eklemenizi sağlar. Bu dosya planı tanımlayıcıları, etiketlemeniz gereken içeriğin yönetilebilirliğini ve kuruluşuni geliştirmek için daha fazla seçenek sağlar.
+Dosya planı, bekletme etiketlerinizin bir parçası olarak daha fazla bilgi eklemenize olanak tanır. Bu dosya planı tanımlayıcıları, etiketlemeniz gereken içeriğin yönetilebilirliğini ve düzenlenmesini geliştirmek için daha fazla seçenek sağlar.
 
-Varsayılan olarak, Başvuru **Kimliği'den** başlayarak, sonraki birkaç sütunda bekletme etiketi ekleyebilirsiniz veya var olan bir etiketi düzenlerken belirtebilirsiniz bu isteğe bağlı dosya planı tanımlayıcıları görüntülenir. 
+Varsayılan olarak, **Başvuru Kimliği** ile başlayarak, sonraki birkaç sütunda bekletme etiketi oluşturduğunuzda veya var olan bir etiketi düzenlerken belirtebileceğiniz bu isteğe bağlı dosya planı tanımlayıcıları görüntülenir. 
 
-Başlamanız için, aşağıdaki dosya planı tanımlayıcılarının bazı hazır değerleri vardır: 
-- İş işlevi/bölümü
+Başlamak için aşağıdaki dosya planı tanımlayıcıları için kullanıma hazır bazı değerler vardır: 
+- İş işlevi/departman
 - Kategori
 - Yetkili türü
 - Sağlama/alıntı 
 
-Bekletme etiketi ekleyebilirsiniz veya bu etiketi düzenlerken dosya planı tanımlayıcıları örneği:
+Bekletme etiketi oluştururken veya düzenlerken dosya planı tanımlayıcıları örneği:
 
-![Bekletme etiketi ekleyebilirsiniz veya bu etiketi düzenlerken dosya planı tanımlayıcıları.](../media/file-plan-descriptors.png)
+![Bekletme etiketi oluştururken veya düzenlerken dosya planı tanımlayıcıları.](../media/file-plan-descriptors.png)
 
-Bu **isteğe bağlı** tanımlayıcıların her biri için Seç'i seçerseniz, ilk hazır değerlerden birini seçebilir veya kendi tanımlayıcınızı oluşturabilir ve sonra da bunu seçebilirsiniz. Örneğin: 
+Bu isteğe bağlı tanımlayıcıların her biri için **Seç'i** seçtiğinizde, kullanıma hazır değerlerden birini seçebilir veya kendi değerlerinizi oluşturup seçebilirsiniz. Örneğin: 
 
-![Sağlama/alıntı için yeni dosya planı tanımlayıcıları oluşturma.](../media/file-plan-descriptors-create.png)
+![Sağlama/alıntı için yeni dosya planı tanımlayıcısı oluşturun.](../media/file-plan-descriptors-create.png)
 
 ## <a name="create-retention-labels"></a>Bekletme etiketleri oluşturma
 
-1. Dosya planı **sayfasında +** Etiket **oluşturRetention etiketi'ne tıklayın**  > 
+1. **Dosya planı** sayfasında **+ Etiket** >  **oluşturYeni etiket oluştur'u** seçin
 
-2. Yapılandırma işleminin yönergelerini izleyin. Hangi adı seçtiğinize dikkat edin, çünkü etiket kaydedildikten sonra bu değiştirilemez.
+2. Yapılandırma işlemi istemlerini izleyin. Etiket kaydedildikten sonra değiştirilemediğinden, hangi adı seçtiğinize dikkat edin.
     
-    Bekletme ayarları hakkında daha fazla bilgi için bkz[. Ayarlar saklama ve silme hakkında daha fazla bilgi.](retention-settings.md#settings-for-retaining-and-deleting-content)
+    Bekletme ayarları hakkında daha fazla bilgi için bkz. [İçeriği saklama ve silme Ayarlar](retention-settings.md#settings-for-retaining-and-deleting-content).
     
-    Kayıtları beyan etmek üzere bekletme etiketini kullanmak için **Öğeleri kayıt olarak** işaretle veya Öğeleri mevzuat kaydı **olarak işaretle'yi seçin**. Daha fazla bilgi için bkz [. Bekletme etiketlerini kayıtları bildir olacak şekilde yapılandırma](declare-records.md#configuring-retention-labels-to-declare-records).
+    Kayıtları bildirmek için bekletme etiketini kullanmak için **Öğeleri kayıt olarak işaretle'yi** veya **Öğeleri mevzuat kayıtları olarak işaretle'yi** seçin. Daha fazla bilgi için bkz [. Kayıtları bildirmek için bekletme etiketlerini yapılandırma](declare-records.md#configuring-retention-labels-to-declare-records).
 
-3. Etiketi oluşturduktan ve etiketi yayımlama seçeneklerini gördüğünüzde, etiketi otomatik olarak uygulama veya yalnızca etiketi kaydetme: Yalnızca şimdilik kaydet'i ve sonra Bitti'yi **seçin**.
+3. Etiketi oluşturduktan ve etiketi yayımlama seçeneklerini gördükten sonra etiketi otomatik olarak uygulayın veya yalnızca etiketi kaydedin: **Yalnızca şimdilik etiketi kaydet'i** ve ardından **Bitti'yi** seçin.
 
-4. Daha fazla etiket oluşturmak için bu adımları yinele.
+4. Daha fazla etiket oluşturmak için bu adımları yineleyin.
 
 ## <a name="edit-retention-labels"></a>Bekletme etiketlerini düzenleme
 
-Mevcut bir bekletme etiketini düzenlemek için, Dosya Planı sayfasından  etiketi seçin ve ardından Etiket açıklamasını ve uygun  ayarları değiştirmenizi sağlayan bekletmeyi düzenleme işlemini başlatmak için Etiketi düzenle seçeneğini belirleyin.
+Mevcut bir bekletme etiketini düzenlemek için **Dosya Planı** sayfasından etiketi seçin ve ardından **etiketi düzenle** seçeneğini belirleyerek etiket açıklamasını ve uygun ayarları değiştirmenize olanak tanıyan bekletmeyi düzenleme işlemini başlatın.
 
-Etiket oluşturulduktan ve kaydedildikten sonra bazı ayarlar değiştirilemez. Bu ayarlar şunlardır:
-- Bekletme süresi dışında bekletme etiketi adı ve bekletme ayarları. Bununla birlikte, bekletme süresi öğelerin etiketli olduğu zamanların dayandır olduğu bekletme dönemini değiştiremezsiniz.
+Etiket oluşturulduktan ve kaydedildikten sonra bazı ayarlar değiştirilemez; bunlar şunlardır:
+- Bekletme süresi dışında bekletme etiketi adı ve bekletme ayarları. Ancak, bekletme süresinin öğelerin etiketlendiği zamanlara göre olduğu saklama süresini değiştiremezsiniz.
 - Öğeleri kayıt olarak işaretleme seçeneği.
 
 ## <a name="delete-retention-labels"></a>Bekletme etiketlerini silme
 
-Olay tabanlı bekletme için yapılandırılmamış, yayımlanmış veya otomatik olarak uygulama bekletme [](create-apply-retention-labels.md) etiketi ilkeleri [](apply-retention-labels-automatically.md) arasında yer alan bekletme etiketlerini silebilir veya öğeleri yasal düzenleme kayıtları olarak işaretebilirsiniz.
+Şu anda [yayımlanmış](create-apply-retention-labels.md) veya [otomatik uygulama](apply-retention-labels-automatically.md) bekletme etiketi ilkelerine dahil olmayan, olay tabanlı saklama için yapılandırılmamış bekletme etiketlerini silebilir veya öğeleri mevzuat kayıtları olarak işaretleyebilirsiniz.
 
-Öğelere uygulanmışsa silebilirsiniz bekletme etiketleri için silme işlemi başarısız olur ve etiketli öğeleri tanımlamak için içerik gezginine bir bağlantı elde edersiniz.
+Silebileceğiniz bekletme etiketleri için, öğelere uygulanmışsa silme işlemi başarısız olur ve etiketlenmiş öğeleri tanımlamak için içerik gezgininin bağlantısını görürsünüz.
 
-Bununla birlikte, içerik gezgininin etiketlenmiş öğeleri göstermesi iki gün kadar zaman alır. Bu senaryoda, bekletme etiketi içerik gezgininin bağlantısını göstermeden silinebilir.
+Ancak, içerik gezgininin etiketlenmiş öğeleri göstermesi iki gün kadar sürebilir. Bu senaryoda, bekletme etiketi içerik gezgini bağlantısını göstermeden silinebilir.
 
-## <a name="export-all-retention-labels-to-analyze-or-enable-offline-reviews"></a>Çevrimdışı incelemeleri çözümlemek veya etkinleştirmek için tüm bekletme etiketlerini dışarı aktarma
+## <a name="export-all-retention-labels-to-analyze-or-enable-offline-reviews"></a>Çevrimdışı incelemeleri analiz etmek veya etkinleştirmek için tüm bekletme etiketlerini dışarı aktarma
 
-Dosya planınızdan, tüm bekletme etiketlerinin ayrıntılarını bir .csv dosyasına aktararak, düzenli olarak uyumluluk incelemelerini kurum içinde veri yönetimi katılımcıları ile kolaylaştırabilirsiniz.
+Dosya planınızdan, kuruluşunuzdaki veri idaresi paydaşlarıyla düzenli uyumluluk gözden geçirmelerini kolaylaştırmanıza yardımcı olmak için tüm bekletme etiketlerinin ayrıntılarını bir .csv dosyasına aktarabilirsiniz.
 
-Tüm bekletme etiketlerini dışarı aktarma: Dosya **planı sayfasında Dışarı Aktar'a** **tıklayın**:
+Tüm bekletme etiketlerini dışarı aktarmak için: **Dosya planı** sayfasında **Dışarı Aktar'a** tıklayın:
 
-![Dosya planı dışarı aktarma seçeneği.](../media/compliance-file-plan-export-labels.png)
+![Dosya planını dışarı aktarma seçeneği.](../media/compliance-file-plan-export-labels.png)
 
-Var .csv bekletme etiketlerini içeren bir *dosya açılır. Örneğin:
+Tüm mevcut bekletme etiketlerini içeren bir *.csv dosyası açılır. Örneğin:
 
 ![Tüm bekletme etiketlerini gösteren CSV dosyası.](../media/file-plan-csv-file.png)
 
 ## <a name="import-retention-labels-into-your-file-plan"></a>Bekletme etiketlerini dosya planınıza aktarma
 
-Dosya planında, belirli bir biçime sahip bir .csv kullanarak yeni bekletme etiketlerini toplu olarak içeri aktarabilirsiniz: 
+Dosya planında, belirli bir biçime sahip bir .csv dosyası kullanarak yeni bekletme etiketlerini toplu olarak içeri aktarabilirsiniz: 
 
-1. Dosya planı **sayfasında İçeri** Aktar: ![Dosya **planı içeri** aktarma seçeneği'ne tıklayın](../media/compliance-file-plan-import-labels.png)
+1. **Dosya planı** sayfasında **İçeri Aktar**: ![Dosya planını içeri aktarma seçeneğine tıklayın](../media/compliance-file-plan-import-labels.png)
 
-2. Dosya **planınızı doldur ve içeri aktar bölmesinde** Boş şablon **indir'i seçin**:
+2. **Dosya planınızı doldur ve içeri aktar** bölmesinde **Boş şablon indir'i** seçin:
 
    ![Boş bir dosya planı şablonu indirme seçeneği](../media/file-plan-blank-template-option.png)
 
-3. Şablon indirildikten sonra, her etiket için bir satır ekleyin ve dosyayı kaydedin. Her [özelliğin](#information-about-the-label-properties-for-import) özelliklerini ve geçerli değerlerini açıklayan bilgiler için bir sonraki bölüme bakın.
+3. Şablon indirildikten sonra her etiket için bir satır ekleyin ve dosyayı kaydedin. Her özelliğin özelliklerini ve geçerli değerlerini açıklayan bilgiler için [sonraki bölüme](#information-about-the-label-properties-for-import) bakın.
     
-    Dolu şablon örneği:
+    Doldurulmuş şablon örneği:
     
-    ![Bilgileri doldurulmuş dosya planı şablonu.](../media/file-plan-filled-out-template.png)
+    ![Bilgilerin doldurulduğu dosya planı şablonu.](../media/file-plan-filled-out-template.png)
 
-4. **Doldurulan Upload karşıya** yüklemek için Dosya Seç'i seçin.
+4. Doldurulmuş şablonu karşıya yüklemek için **bir dosya Upload** seçin.
     
    Dosya planı dosyayı karşıya yükler ve girişleri doğrular.
 
 5. Doğrulama sonuçlarına bağlı olarak:
     
-    - Doğrulama başarısız olursa: İçeri aktarma dosyasında düzeltilmiş satır numarasına ve sütun adına dikkat edin. Dosyada hataları düzeltin ve kaydedin ve sonra 4. adımı yinelayın.
+    - Doğrulama başarısız olursa: İçeri aktarma dosyasında düzeltilen satır numarasını ve sütun adını not edin. Dosyadaki hataları düzeltip kaydedin ve 4. adımı yineleyin.
     
-    - Doğrulama başarılı olursa: Bir dosya **planını başarıyla aktardınız** ve girişler bekletme etiketlerine başarıyla dönüştürülecek. **Bölmeyi** kapatmak ve yeni etiketlerinizi görüntülemek için **Dosya planı sayfasını otomatik** olarak yenilemek için Bitti'yi seçin.
+    - Doğrulama başarılı olursa: Bir **dosya planını başarıyla içeri aktardığınız** ve girdilerin başarıyla bekletme etiketlerine dönüştürüldüğünü görürsünüz. **Bitti'yi** seçerek bölmeyi kapatın ve yeni etiketlerinizi görüntülemek için **Dosya planı** sayfasını otomatik olarak yenileyin.
 
-Artık yeni bekletme etiketlerinizi yayımlar veya bunları otomatik olarak uygulayabilirsiniz. Etiketleri yayımla'yı **veya Etiketi** otomatik uygula'yı **seçerek** her ikisini de Etiket ilkeleri **sekmesinden de uygulayabilirsiniz**.
+Artık yeni bekletme etiketlerinizi yayımlayabilir veya otomatik olarak uygulayabilirsiniz. **Etiket ilkeleri sekmesinde Etiketleri** **yayımla'yı** veya **Etiketi otomatik olarak uygula'yı** seçerek her ikisini de yapabilirsiniz.
 
 ### <a name="information-about-the-label-properties-for-import"></a>İçeri aktarma için etiket özellikleri hakkında bilgi
 
-İndirilen şablonu yeni bekletme etiketlerini içeri aktarmaya yardımcı olmak için aşağıdaki bilgileri kullanın. Bazı değerlerin içeri aktarma için uzunluk üst uzunluğu vardır:
+yeni bekletme etiketlerini içeri aktarmak için indirilen şablonu doldurmanıza yardımcı olması için aşağıdaki bilgileri kullanın. Bazı değerlerin içeri aktarma için uzunluk üst sınırı vardır:
 
 - **LabelName**: En fazla 64 karakter uzunluğunda
 - **Açıklama** ve **Notlar**: En fazla 1024 karakter uzunluğunda
@@ -194,28 +198,34 @@ Artık yeni bekletme etiketlerinizi yayımlar veya bunları otomatik olarak uygu
 
 |Özellik|Tür|Gerekli|Geçerli değerler|
 |:-----|:-----|:-----|:-----|
-|LabelName|Dize|Evet|Bu özellik bekletme etiketinin adını belirtir ve kiracınıza benzersiz olması gerekir. İçeri aktarmada desteklenen karakterler: a-z, A-Z, 0-9, kısa çizgi (-) ve boşluk karakteri.|
-|Açıklama ekleme|Dize|Hayır|Yöneticilere bekletme etiketi hakkında bir açıklama eklemek için bu özelliği kullanın. Bu açıklama yalnızca uyumluluk merkezinde bekletme etiketini yöneten yöneticilere görünür.|
-|Notlar|Dize|Hayır|Kullanıcılara bekletme etiketiyle ilgili bir açıklama eklemek için bu özelliği kullanın. Bu açıklama, kullanıcılar etiket, etiket ve etiket etiketleri gibi Outlook SharePoint üzerine geldiğinde OneDrive. Bu özelliği boş bırakırsanız, bir varsayılan açıklama görüntülenir ve bu açıklama etiketin bekletme ayarlarını açıklar. |
-|IsRecordLabel|Dize|Hayır, Mevzuat **DOĞRU** olmadığı **sürece**|Bu özellik, etiketin içeriği kayıt olarak işaret edip edip olmadığını belirtir. Geçerli değerler: </br>**DOĞRU**: Etiket öğeyi kayıt olarak işaretler ve bunun sonucunda öğe silinemez. </br>**YANLIŞ**: Etiket, içeriği kayıt olarak işaretlemez. Bu, varsayılan değerdir. </br> </br> Grup bağımlılıkları: Bu özellik belirtilirken, retentionaction, retentionDuration ve retentionType da belirtilmelidir.|
-|RetentionAction|Dize|Hayır, **RetentionDuration**, **RetentionType** veya **Gözden GeçirenEmail belirtilmemişse**|Bu özellik, retentionDuration özelliği tarafından belirtilen değerin süresi dolduktan (belirtilirse) sonra hangi eylemin geçerli olaralları belirtmektedir. Geçerli değerler: </br>**Sil**: RetentionDuration özelliğinde belirtilen değerden daha eski öğeler silinir.</br>**Saklama**: BekletmeDuration özelliği tarafından belirtilen süre boyunca öğeleri alıkoyun ve süre süresi dolduğunda hiçbir şey yapma. </br>**KeepAndDelete**: BekletmeDuration özelliğiyle belirtilen süre boyunca öğeleri alıkoyun ve sürenin süresi dolduğunda bunları silin. </br> </br> Grup bağımlılıkları: Bu özellik belirtilirken, retentionDuration ve retentionType da belirtilmelidir. |
-|retentionDuration|Dize|Hayır, **retentionAction veya** **retentionType belirtilmemişse**|Bu özellik, içeriğin korunacak gün sayısını belirtir. Geçerli değerler: </br>**Sınırsız**: Öğeler süresiz olarak korunur. </br>**_n_*: Günlere pozitif bir tamsayı; örneğin, **365**. Desteklenen en fazla sayı 24.855'tir ve bu da 68 yıldır. Bu üst değerden daha uzun süreye ihtiyacınız varsa, bunun yerine Sınırsız kullanın.</br> </br> Grup bağımlılıkları: Bu özellik belirtilirken, RetentionAction ve RetentionType da belirtilmelidir.
-|retentionType|Dize|Hayır, **BekletmeAction veya** **BekletmeDuration belirtilmemişse**|Bu özellik, bekletme süresinin (belirtilirse) içerik oluşturma tarihi, olay tarihi, etiket tarihi veya son değiştirme tarihinden hesaplanarak hesaplanma süresinin belirtilmez. Geçerli değerler: </br>**CreationAgeInDays**</br>**EventAgeInDays**</br>**TaggedAgeInDays**</br>**ModificationAgeInDays** </br> </br> Grup bağımlılıkları: Bu özellik belirtilirken, RetentionAction ve RetentionDuraction da belirtilmelidir.|
-|Gözden GeçirenEmail|SmtpAddress|Hayır|Bu özellik belirtilirse, bekletme süresi sona erdiğinde bir konumlandırma gözden geçirmesi tetiklenir. Bu özellik **KeepAndDelete** bekletme eylemi için kiracınıza gözden geçirenin e-posta adresini belirtir. </br> </br> Kiracınıza tek tek kullanıcıların, dağıtım gruplarının veya güvenlik gruplarının e-posta adresini ebilirsiniz. Birden çok e-posta adresini noktalı virgülle ayırarak belirtin. </br> </br> Grup bağımlılıkları: Bu özellik belirtilirken, **RetentionAction** ( **KeepAndDelete** olmalı), **RetentionDuration** ve **RetentionType** da belirtilmelidir.|
-|ReferenceId|Dize|Hayır|Bu özellik, benzersiz bir değer olarak kullanabileceğiniz Başvuru Kimliği dosya  planı tanımlayıcısını görüntülenen değeri belirtir.| 
-|DepartmentName|Dize|Hayır|Bu özellik, İşlev/bölüm dosya planı **tanımlayıcıda görüntülenen** değeri belirtir.|
-|Kategori|Dize|Hayır|Bu özellik, Kategori dosya planı tanımlayıcıda **görüntülenen** değeri belirtir.|
-|Alt Kategori|Dize|Hayır|Bu özellik, Alt kategori dosya planı tanımlayıcıda **görüntülenen** değeri belirtir.|
-|AuthorityType|Dize|Hayır|Bu özellik, Yetkili türü dosya planı tanımlayıcısını **görüntülenen** değeri belirtir.|
-|CitationName|Dize|Hayır|Bu özellik, Sağlama/alıntı dosyası plan tanımlayıcılarında **görüntülenen alıntının** adını belirtir. Örneğin, "Sarbanes-Oxley Act of 2002". |
-|CitationUrl|Dize|Hayır|Bu özellik, Sağlama/alıntı dosya planı tanımlayıcıda **görüntülenen** URL'yi belirtir.|
-|CitationJurisdiction|Dize|Hayır|Bu özellik, Sağlama/alıntı dosyası planı tanımlayıcı alanında **görüntülenen yargı yetkisini veya** daireyi belirtir. Örneğin, "U.S. Securities and Exchange Commission (SEC)".|
-|Mevzuat|Dize|Hayır|Bu özellik, etiketin bir kayıttan daha kısıtlayıcı olan bir yasal düzenleme kaydı [olarak işaret edip](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked) olmadığını belirtir. Bu etiket yapılandırmasını kullanmak için kiracının içeriği yasal düzenleme kaydı olarak işaretleme seçeneğini görüntüecek şekilde yapılandırılması [gerekir, yoksa](declare-records.md#how-to-display-the-option-to-mark-content-as-a-regulatory-record) içeri aktarma doğrulaması başarısız olur. Geçerli değerler: </br>**DOĞRU**: Etiket, öğeyi bir yasal düzenleme kaydı olarak işaretler. **IsRecordLabel özelliğini TRUE olarak** da ayarlayabilirsiniz.</br>**YANLIŞ**: Etiket, içeriği bir yasal düzenleme kaydı olarak işaretlemez. Bu, varsayılan değerdir.|
-|EventType|Dize|Hayır, **retentionType** **EventAgeInDays olmadığı sürece**|Bu özellik, olay tabanlı bekletme için kullanılan [olay türünü belirtir](event-driven-retention.md). Kayıt **yönetimiEventsManage** olay **türleri'nin içinde** >  gösterilen mevcut  > **bir olay türünü belirtin**. Alternatif olarak, kullanılabilir olay [türlerini görüntülemek için Get-ComplianceRetentionEventType](/powershell/module/exchange/get-complianceretentioneventtype) cmdlet'ini kullanın. Çalışan etkinliği ve Ürün yaşam süresi gibi bazı yerleşik etkinlik türleri olsa  **da kendi etkinlik** türlerinizi de oluşturabilirsiniz. </br> </br> Kendi olay türlerinizi belirtirsiniz, ad içeri aktarma işleminin bir parçası olarak doğrulanır ve içeri aktarma öncesinde var olması gerekir.|
-|||
+|LabelName|Dize|Evet|Bu özellik, bekletme etiketinin adını belirtir ve kiracınızda benzersiz olmalıdır. İçeri aktarma için desteklenen karakterler: a-z, A-Z, 0-9, kısa çizgi (-) ve boşluk karakteri.|
+|Açıklama ekleme|Dize|Hayır|Yöneticiler için bekletme etiketi hakkında bir açıklama eklemek için bu özelliği kullanın. Bu açıklama yalnızca uyumluluk merkezinde bekletme etiketini yöneten yöneticilere görünür.|
+|Notlar|Dize|Hayır|Kullanıcılar için bekletme etiketi hakkında bir açıklama eklemek için bu özelliği kullanın. Kullanıcılar Outlook, SharePoint ve OneDrive gibi uygulamalarda etiketin üzerine geldiğinde bu açıklama görüntülenir. Bu özelliği boş bırakırsanız, etiketin bekletme ayarlarını açıklayan varsayılan bir açıklama görüntülenir. |
+|IsRecordLabel|Dize|**Hayır, Mevzuat** **DOĞRU** değilse|Bu özellik, etiketin içeriği kayıt olarak işaretleyip işaretlemediğini belirtir. Geçerli değerler şunlardır: </br>**DOĞRU**: Etiket öğeyi kayıt olarak işaretler ve sonuç olarak öğe silinemez. </br>**YANLIŞ**: Etiket içeriği kayıt olarak işaretlemez. Bu, varsayılan değerdir. </br> </br> Grup bağımlılıkları: Bu özellik belirtildiğinde RetentionAction, RetentionDuration ve RetentionType da belirtilmelidir.|
+|RetentionAction|Dize|Hayır, **RetentionDuration**, **RetentionType** veya **ReviewerEmail** belirtilmediği sürece|Bu özellik, RetentionDuration özelliği (belirtildiyse) tarafından belirtilen değerin süresi dolduktan sonra hangi eylemin gerçekleştireceğini belirtir. Geçerli değerler şunlardır: </br>**Sil**: RetentionDuration özelliği tarafından belirtilen değerden eski öğeler silinir.</br>**Koru**: Öğeleri RetentionDuration özelliği tarafından belirtilen süre boyunca tutun ve süre dolduğunda hiçbir şey yapma. </br>**KeepAndDelete**: Öğeleri RetentionDuration özelliği tarafından belirtilen süre boyunca tutun ve süre dolduğunda silin. </br> </br> Grup bağımlılıkları: Bu özellik belirtildiğinde, RetentionDuration ve RetentionType da belirtilmelidir. |
+|RetentionDuration|Dize|Hayır, **RetentionAction** veya **RetentionType** belirtilmediği sürece|Bu özellik, içeriğin tutulacak gün sayısını belirtir. Geçerli değerler şunlardır: </br>**Sınırsız**: Öğeler süresiz olarak korunur. </br>**_n_*: Gün olarak pozitif bir tamsayı; örneğin, **365**. Desteklenen maksimum sayı 68 yıl olan 24.855'tir. Bu üst sınırdan daha uzun bir süreye ihtiyacınız varsa, bunun yerine Sınırsız'ı kullanın.</br> </br> Grup bağımlılıkları: Bu özellik belirtildiğinde, RetentionAction ve RetentionType da belirtilmelidir.
+|RetentionType|Dize|Hayır, **RetentionAction** veya **RetentionDuration** belirtilmediği sürece|Bu özellik, bekletme süresinin (belirtildiyse) içerik oluşturma tarihi, olay tarihi, etiketlenme tarihi veya son değiştirme tarihinden hesaplanıp hesaplanmadığını belirtir. Geçerli değerler şunlardır: </br>**CreationAgeInDays**</br>**EventAgeInDays**</br>**TaggedAgeInDays**</br>**ModificationAgeInDays** </br> </br> Grup bağımlılıkları: Bu özellik belirtildiğinde RetentionAction ve RetentionDuraction da belirtilmelidir.|
+|Gözden GeçirenE-posta|SmtpAddress|Hayır|Bu özellik belirtildiğinde, bekletme süresi dolduğunda bir değerlendirme gözden geçirmesi tetiklenir. Bu özellik **, Kiracınızda KeepAndDelete** bekletme eylemi için gözden geçirenin e-posta adresini belirtir. </br> </br> Kiracınıza tek tek kullanıcıların, dağıtım gruplarının veya güvenlik gruplarının e-posta adresini ekleyebilirsiniz. Birden çok e-posta adresini noktalı virgülle ayırarak belirtin. </br> </br> Grup bağımlılıkları: Bu özellik belirtildiğinde **RetentionAction** ( **KeepAndDelete**, **RetentionDuration** ve **RetentionType** da belirtilmelidir.|
+|ReferenceId|Dize|Hayır|Bu özellik, kuruluşunuz için benzersiz bir değer olarak kullanabileceğiniz **Başvuru Kimliği** dosya planı tanımlayıcısında görüntülenen değeri belirtir.| 
+|DepartmentName|Dize|Hayır|Bu özellik **, İşlev/departman** dosya planı tanımlayıcısında görüntülenen değeri belirtir.|
+|Kategori|Dize|Hayır|Bu özellik **, Kategori** dosya planı tanımlayıcısında görüntülenen değeri belirtir.|
+|Alt kategori|Dize|Hayır|Bu özellik **, Alt kategori** dosya planı tanımlayıcısında görüntülenen değeri belirtir.|
+|AuthorityType|Dize|Hayır|Bu özellik **, Yetkili türü** dosya planı tanımlayıcısında görüntülenen değeri belirtir.|
+|CitationName|Dize|Hayır|Bu özellik **, Sağlama/** alıntı dosya planı tanımlayıcısında görüntülenen alıntının adını belirtir. Örneğin, "Sarbanes-Oxley Act of 2002". |
+|CitationUrl|Dize|Hayır|Bu özellik **, Sağlama/alıntı** dosya planı tanımlayıcısında görüntülenen URL'yi belirtir.|
+|CitationJurisdiction|Dize|Hayır|Bu özellik **, Sağlama/alıntı** dosya planı tanımlayıcısında görüntülenen yargı yetkisini veya kuruluşu belirtir. Örneğin, "ABD Menkul Kıymetler ve Exchange Komisyonu (SEC)".|
+|Düzenleyici|Dize|Hayır|Bu özellik, etiketin içeriği bir kayıttan [daha kısıtlayıcı](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked) olan bir düzenleme kaydı olarak işaretleyip işaretlemediğini belirtir. Bu etiket yapılandırmasını kullanmak için kiracınızın [içeriği yasal kayıt olarak işaretleme seçeneğini görüntüleyecek şekilde yapılandırılması](declare-records.md#how-to-display-the-option-to-mark-content-as-a-regulatory-record) gerekir, aksi takdirde içeri aktarma doğrulaması başarısız olur. Geçerli değerler şunlardır: </br>**DOĞRU**: Etiket, öğeyi yasal kayıt olarak işaretler. **IsRecordLabel** özelliğini DE TRUE olarak ayarlamanız gerekir.</br>**YANLIŞ**: Etiket içeriği düzenleyici kayıt olarak işaretlemez. Bu, varsayılan değerdir.|
+|Eventtype|Dize|**Hayır, RetentionType** **EventAgeInDays** değilse|Bu özellik, olay [tabanlı saklama](event-driven-retention.md) için kullanılan bir olay türünü belirtir. **Kayıt** **yönetimiEventsManage** >  >  olay türleri bölümünde görüntülenen mevcut **bir olay türünü** belirtin. Alternatif olarak, kullanılabilir olay türlerini görüntülemek için [Get-ComplianceRetentionEventType](/powershell/module/exchange/get-complianceretentioneventtype) cmdlet'ini kullanın. **Çalışan etkinliği** ve **Ürün ömrü** gibi bazı yerleşik olay türleri olsa da, kendi olay türlerinizi de oluşturabilirsiniz. </br> </br> Kendi olay türünüzü belirtirseniz, ad içeri aktarma işleminin bir parçası olarak doğrulandığından içeri aktarma işleminden önce var olması gerekir.|
+
+Şu anda içeri aktarma için desteklenmeyen etiket ayarları:
+
+- Çok aşamalı değerlendirme: Bekletme etiketlerini bir şablonla içeri aktardığınızda tek bir değerlendirme gözden geçirme aşamasının ayarlarını yapılandırabilirsiniz ancak ek gözden geçirme aşamaları belirtemezsiniz. Bunun yerine, içeri aktarma başarılı olduktan sonra bunları uyumluluk merkezinde yapılandırın.
+
+- Bu kaydın kilidini varsayılan olarak açın (şu anda önizleme aşamasında): Bu ayar şablonda içeri aktarılamaz ve içeri aktarma işlemi başarılı olduktan sonra uyumluluk merkezinde bu ayarı seçemezsiniz.
+
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Artık bekletme etiketleri oluşturduktan sonra, bunlar etiketleri yayımarak veya otomatik olarak uygulayarak öğelere eklenmeye hazırdır:
+Artık bekletme etiketleri oluşturdunuz, etiketleri yayımlayarak veya otomatik olarak uygulayarak öğelere eklenmeye hazırlar:
 - [Bekletme etiketlerini yayımlama ve uygulamalarda uygulama](create-apply-retention-labels.md)
-- [İçeriği otomatik olarak bekletme etiketi uygulama](apply-retention-labels-automatically.md)
+- [İçeriğe otomatik olarak bekletme etiketi uygulama](apply-retention-labels-automatically.md)

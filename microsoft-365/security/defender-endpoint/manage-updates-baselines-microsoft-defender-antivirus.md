@@ -6,7 +6,7 @@ ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.pagetype: security
-ms.localizationpriority: medium
+ms.localizationpriority: high
 audience: ITPro
 ms.topic: article
 author: denisebmsft
@@ -19,12 +19,12 @@ ms.date: 04/11/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 596616328a02182b39c67f58137d43ab626e1756
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: cc2032c547cbd9c75a73da2f47f7baed21e7438e
+ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823322"
+ms.locfileid: "64835941"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Microsoft Defender Virüsten Koruma güncelleştirmelerini yönetme ve temelleri uygulama
 
@@ -992,11 +992,11 @@ Daha fazla bilgi için bkz. [Windows işletim sistemi yükleme görüntüleri i�
 | [EDR Algılayıcısı için Uç Nokta için Microsoft Defender güncelleştirme](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) | 2021'de yayımlanan yeni Uç Nokta için Microsoft Defender birleşik çözüm paketinde bulunan EDR algılayıcısını (MsSense.exe) güncelleştirebilirsiniz.   |
 
 > [!TIP]
-> Diğer platformlar için Virüsten Koruma ile ilgili bilgileri arıyorsanız bkz:
-> - [macOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlama](mac-preferences.md)
+> Diğer platformlar için Virüsten Koruma ile ilgili bilgi edinmek isterseniz, bkz:
+> - [MacOS'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](mac-preferences.md)
 > - [Mac'te Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-mac.md)
-> - [Intune için Microsoft Defender Virüsten Koruma macOS Virüsten Koruma ilkesi ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlama](linux-preferences.md)
+> - [Intune için Microsoft Defender için macOS Virüsten Koruma ilke ayarları](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [Linux'ta Uç Nokta için Microsoft Defender tercihlerini ayarlayın](linux-preferences.md)
 > - [Linux'ta Uç Nokta için Microsoft Defender](microsoft-defender-endpoint-linux.md)
-> - [Android'de Uç Nokta için Defender özelliklerini yapılandırma](android-configure.md)
-> - [iOS özelliklerinde Uç Nokta için Microsoft Defender yapılandırma](ios-configure-features.md)
+> - [Android özelliklerinde Uç Nokta için Defender’ı yapılandırın](android-configure.md)
+> - [iOS özelliklerinde Uç Nokta için Microsoft Defender’ı yapılandırın](ios-configure-features.md)

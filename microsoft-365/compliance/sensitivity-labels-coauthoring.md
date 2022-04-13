@@ -13,12 +13,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: article
 description: SharePoint ve OneDrive etiketlenmiş ve şifrelenmiş belgeler için masaüstü uygulamalarında birlikte yazma ve Otomatik Kaydetme'yi etkinleştiren bir ayarı açın.
-ms.openlocfilehash: baa2236915d37917e4ed69e5356db31262795d57
-ms.sourcegitcommit: 2f6a0096038d09f0e43e1231b01c19e0b40fb358
+ms.openlocfilehash: 0fee934af5e2dfb01c681c9b2e415ef538312367
+ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64687217"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64836116"
 ---
 # <a name="enable-co-authoring-for-files-encrypted-with-sensitivity-labels"></a>Duyarlılık etiketleriyle şifrelenmiş dosyalar için birlikte yazmayı etkinleştirme
 
@@ -74,7 +74,7 @@ Bu özelliği açmadan önce aşağıdaki önkoşulları anladığınızdan emin
 - Kiracı [için SharePoint ve OneDrive Office dosyaları](sensitivity-labels-sharepoint-onedrive-files.md) için duyarlılık etiketleri etkinleştirilmelidir. Bu özellik henüz etkinleştirilmemişse, duyarlılık etiketlerine sahip dosyalar için birlikte yazmayı açma ayarını seçtiğinizde otomatik olarak etkinleştirilir.
 
 - Kurumlar için Microsoft 365 Uygulamaları:
-    - **Windows**: Geçerli Kanal veya Aylık Enterprise Kanalı'ndan en düşük sürüm 2107 veya Semi-Annual Enterprise Kanalı'ndan en düşük sürüm 2202
+    - **Windows**: Geçerli Kanal veya Aylık Enterprise Kanalı'ndan en düşük sürüm 2107 veya Semi-Annual Enterprise Kanalından en düşük sürüm 2202 (Önizleme)
     - **macOS**: En düşük sürüm 16.51
     - **iOS**: En düşük sürüm 2.58'i [kabul](#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) ettiğinizde önizlemede
     - **Android**: En düşük sürüm 16.0.14931'i [kabul](#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) ettiğinizde önizlemede
