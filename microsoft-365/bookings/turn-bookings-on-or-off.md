@@ -10,12 +10,12 @@ ms.custom: admindeeplinkMAC
 ms.localizationpriority: medium
 ms.assetid: 5382dc07-aaa5-45c9-8767-502333b214ce
 description: Microsoft 365'da Microsoft Bookings erişmeyi öğrenin.
-ms.openlocfilehash: a2ab25b3b187ba45dfe460991b91e77d70a2bb70
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 28398faba7c21b6d3cce84063934268dad11fd64
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64715285"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64823090"
 ---
 # <a name="turn-microsoft-bookings-on-or-off"></a>Microsoft Bookings’i açma veya kapatma
 
@@ -33,7 +33,7 @@ Bookings, kuruluşunuzun tamamı veya belirli kullanıcılar için açılıp kap
 
 1. Microsoft 365 yönetim merkezi genel yönetici olarak oturum açın.
 
-2. Yönetim merkezinde  **Ayarlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2053743" target="_blank">**Kuruluş ayarları'na**</a> gidin.
+2. Yönetim merkezinde **Ayarlar** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2053743" target="_blank">**Kuruluş ayarları'na**</a> gidin.
 
 3. Kuruluşunuzda Bookings etkinleştirmek veya devre dışı bırakmak için **Kuruluşunuzun Bookings kullanmasına izin ver** onay kutusunu seçin.
 

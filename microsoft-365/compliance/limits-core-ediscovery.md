@@ -1,5 +1,5 @@
 ---
-title: Temel eKbulma durumunda sınırlar
+title: Çekirdek eBulma durumundaki sınırlar
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -16,33 +16,32 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Bu makalede, Microsoft 365'de çekirdek eKbulma durumundaki sınırlar açık Microsoft 365.
-ms.openlocfilehash: 28db179aea27bfff2520199d89b93c8260b7f089
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+description: Bu makalede, Microsoft 365'daki temel eBulma durumundaki sınırlar açıklanmaktadır.
+ms.openlocfilehash: 2d920fbe5973d07b7da656d6247038ab785bbe5c
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63033343"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64822660"
 ---
-# <a name="limits-in-core-ediscovery"></a>Çekirdek eKbulma sınırlamaları
+# <a name="limits-in-core-ediscovery"></a>Çekirdek eBulma sınırları
 
-Aşağıdaki tabloda, çekirdek eBulma servis durumlarının ve temel bir eKbulma durumuyla ilişkilendirilmiş askıyaların sınırları listelemektedir. Core eKovery hakkında daha fazla bilgi için bkz. [Core eKover'a Genel Bakış](./get-started-core-ediscovery.md).
+Aşağıdaki tabloda, temel eBulma durumlarının sınırları ve temel eBulma olayıyla ilişkili tutmalar listeleniyor. Core eBulma hakkında daha fazla bilgi için bkz. [Core eKeşif'e Genel Bakış](./get-started-core-ediscovery.md).
     
-  | Sınırın açıklaması | Sınır |
+  | Sınırın açıklaması | Sınırı |
   |:-----|:-----|
-  |Bir kuruluş için en fazla vaka sayısı.  <br/> |Sınır yok  <br/> |
-  |Bir kuruluş için en fazla büyük büyük//veya daha fazla 12/sn.  <br/> |10,000  <br/> |
-  |Tek bir durumdaki posta kutusu sayısı üst sayısı. Bu sınır, birleştirilmiş toplam kullanıcı posta kutusu ve Kullanıcı Grupları, Posta Microsoft 365, Posta Kutusu Microsoft Teams posta Yammer içerir.  <br/> |1,000  <br/> |
-  |Tek bir vakada en fazla site sayısı. Bu sınır, birleştirilmiş toplam OneDrive İş sitesi, SharePoint sitesi ve Microsoft 365 Grupları, Site Grupları, Microsoft Teams ve Yammer içerir.  <br/> |100  <br/> |
-  |Çekirdek eBulma giriş sayfasında görüntülenen vaka sayısı üst sayısı ve olaydaki 10/1000 ve Üzerinde Arama ve Dışarı Aktar sekmelerinde görüntülenen en fazla öğe sayısı. <sup>1</sup> |1,000|
-  |||
+  |Bir kuruluş için en fazla servis talebi sayısı.  <br/> |Sınır yok  <br/> |
+  |Bir kuruluş için en fazla servis talebi tutma sayısı.  <br/> |10,000  <br/> |
+  |Tek bir servis talebi ayrı tutmadaki en fazla posta kutusu sayısı. Bu sınır, kullanıcı posta kutularının toplamını ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili posta kutularını içerir.  <br/> |1,000  <br/> |
+  |Tek bir servis talebi saklamadaki en fazla site sayısı. Bu sınır, OneDrive İş sitelerin, SharePoint sitelerin ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili sitelerin toplamını içerir.  <br/> |100  <br/> |
+  |Çekirdek eBulma giriş sayfasında görüntülenen en fazla servis talebi sayısı ve servis talebi içindeki Ayrı Tutmalar, Aramalar ve Dışarı Aktarma sekmelerinde görüntülenen en fazla öğe sayısı. <sup>1</sup> |1,000|
 
    > [!NOTE]
-   > <sup>1</sup> 1.000'den fazla olay, 1000'den fazla olay, arama veya dışarı aktarmanın listesini görüntülemek için ilgili Office 365 Güvenlik ve Uyumluluk PowerShell & cmdlet'lerini kullanabilirsiniz:
+   > <sup></sup> 1.000'den fazla servis talebi, ayrı tutma, arama veya dışarı aktarma listesini görüntülemek için ilgili Office 365 Güvenlik & Uyumluluğu PowerShell cmdlet'lerini kullanabilirsiniz:
    > 
    > - [Get-ComplianceCase](/powershell/module/exchange/get-compliancecase)
    > - [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy)
    > - [Get-ComplianceSearch](/powershell/module/exchange/get-compliancesearch)
    > - [Get-ComplianceSearchAction](/powershell/module/exchange/get-compliancesearchaction)
 
-Çekirdek eBulma durumuyla ilişkilendirilmiş aramalar ve dışarı aktarmalarla ilgili sınırlar hakkında daha fazla bilgi için bkz. İçerik arama ve [Çekirdek eBulma sınırları](limits-for-content-search.md).
+Core eBulma olayıyla ilişkili aramalar ve dışarı aktarmalarla ilgili sınırlar hakkında daha fazla bilgi için bkz. [İçerik arama ve Çekirdek eBulma sınırları](limits-for-content-search.md).

@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkSPO
 description: Microsoft 365 uyumluluk merkezi bir eBulma olayıyla ilişkili yeni bir ayrı tutmaya posta kutuları & OneDrive İş siteleri eklemek için bir betik çalıştırmayı öğrenin.
-ms.openlocfilehash: a678649ebd15a34bdfe5765449d41feae1b14901
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 10a605b422178e5006d8a027a697ca6745f82b98
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761251"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824498"
 ---
 # <a name="use-a-script-to-add-users-to-a-hold-in-a-core-ediscovery-case"></a>Core eBulma örneğinde bir ayrı tutmaya kullanıcı eklemek için betik kullanma
 
@@ -47,7 +47,7 @@ Bunun gerçekleşmesi için adımlar şunlardır:
 
 - 3. Adımda betiği çalıştırmak için Microsoft 365 uyumluluk merkezi eBulma Yöneticisi rol grubunun üyesi ve SharePoint Online yöneticisi olmanız gerekir. Daha fazla bilgi için bkz[. Office 365 Güvenlik & Uyumluluk Merkezi'nde eBulma izinleri atama](assign-ediscovery-permissions.md).
 
-- Microsoft 365 uyumluluk merkezi bir eBulma olayıyla ilişkili bir ayrı tutmaya en fazla 1.000 posta kutusu ve 100 site eklenebilir. Beklemeye almak istediğiniz her kullanıcının bir OneDrive İş sitesi olduğunu varsayarsak, bu makaledeki betiği kullanarak ayrı tutmaya en fazla 100 kullanıcı ekleyebilirsiniz.
+- Microsoft 365 uyumluluk merkezi Core eBulma olayıyla ilişkili bir ayrı tutmaya en fazla 1.000 posta kutusu ve 100 site eklenebilir. Beklemeye almak istediğiniz her kullanıcının bir OneDrive İş sitesi olduğunu varsayarsak, bu makaledeki betiği kullanarak ayrı tutmaya en fazla 100 kullanıcı ekleyebilirsiniz.
 
 - 2. Adımda oluşturduğunuz kullanıcıların listesini ve 3. Adım'daki betiği aynı klasöre kaydettiğinizden emin olun. Bu, betiği çalıştırmayı kolaylaştırır.
 

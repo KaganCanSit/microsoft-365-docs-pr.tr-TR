@@ -1,6 +1,6 @@
 ---
-title: Ağ oluşturma (buluta) — One Architect'in görünüm noktası
-description: En yaygın hatalardan kaçınarak ağın bulut bağlantısı için nasıl en iyi duruma getirmek olduğunu öğrenin.
+title: Ağ oluşturma (buluta)—Bir mimarın bakış açısı
+description: En yaygın tuzaklardan kaçınarak ağınızı bulut bağlantısı için iyileştirmeyi öğrenin.
 ms.author: bcarter
 author: brendacarter
 manager: bcarter
@@ -13,129 +13,129 @@ ms.collection:
 - M365-security-compliance
 ms.custom: ''
 f1.keywords: NOCSH
-ms.openlocfilehash: 519f3035040f563a6f3663198be3952830cb21cb
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 5f90e4616edd3534baefd64bba5a2eec640f6366
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983614"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64823948"
 ---
-# <a name="networking-up-to-the-cloudone-architects-viewpoint"></a>Ağ oluşturma (buluta) — One Architect'in görünüm noktası
+# <a name="networking-up-to-the-cloudone-architects-viewpoint"></a>Ağ oluşturma (buluta)—Bir mimarın bakış açısı
 
-Bu makalede, Microsoft'ta Güvenlik & Uyumluluk Mimarı [Ed Fisher](https://www.linkedin.com/in/edfisher/), en yaygın hatalardan kaçınarak bulut bağlantısı için ağın nasıl en iyi duruma getirmekte olduğunu açıklar. 
+Bu makalede, Microsoft'ta Güvenlik & Uyumluluk Mimarı [Ed Fisher](https://www.linkedin.com/in/edfisher/), en yaygın tuzaklardan kaçınarak ağınızı bulut bağlantısı için iyileştirmeyi açıklar.
 
 ## <a name="about-the-author"></a>Yazar hakkında
 
-![Ed Fisher fotoğrafı.](../media/solutions-architecture-center/ed-fisher-networking.jpg) 
+![Ed Fisher'ın fotoğrafı.](../media/solutions-architecture-center/ed-fisher-networking.jpg)
 
-Şu anda Perakende ve Tüketici Ürünleri ekibimizde Güvenlik ve Uyumluluk üzerine odaklanan Ana Teknik & sahibiyim. Son on yıldır Office 365 müşterilerle çalıştım. Dünyanın her yanında dağıtılmış milyonlarca kullanıcılı kamu kuruluşları ve kuruluşlar için birkaç konumun ve arasında, çoğunluğu on binlerce kullanıcıya, dünyanın çeşitli yerlerinde birden fazla konuma sahip olan, çok sayıda başka müşteriyle, yüksek derecede güvenlik gereksinimlerine ve çok sayıda uyumluluk gereksinimlerine ihtiyacı olan küçük mağazalarla çalıştım. Yüzlerce kuruluşa ve milyonlarca kullanıcıya güvenli bir şekilde buluta taşımaya yardımcı oldum.
+Şu anda Perakende ve Tüketici Ürünleri ekibimizde Güvenlik & Uyumluluğuna odaklanan Baş Teknik Uzmanıyım. Son on yıldır Office 365 taşınan müşterilerle çalıştım. Dünyanın dört bir yanında milyonlarca kullanıcı dağıtılan devlet kurumları ve kuruluşlara birkaç farklı konumdan oluşan küçük mağazalarla ve aralarında birçok başka müşteriyle çalıştım, çoğunluğu on binlerce kullanıcıya, dünyanın çeşitli yerlerinde birden çok konuma, daha yüksek güvenlik düzeyine ve çok sayıda uyumluluk gereksinimine ihtiyaç duyuyordu. Yüzlerce kuruluşun ve milyonlarca kullanıcının güvenli ve güvenli bir şekilde buluta taşınmasına yardımcı oldu.
 
-Son 25 yılı güvenlik, altyapı ve ağ mühendisliğini içeren bir arka planla ve Microsoft'a katılmadan önce önceki iki işverenimi Office 365'e taşıdım, ben bu tabloda pek çok kez sizin yanındayım ve bunun nasıl bir şey olduğunu hatırlamıyorum. İki müşteri her zaman aynı olmazken, çoğu müşteri benzer ihtiyaçlara sahip olur ve herhangi bir SaaS veya PaaS platformu gibi standartlaştırılmış bir hizmeti tüketirken en iyi yaklaşımlar aynı olur.
+Son 25 yılda güvenlik, altyapı ve ağ mühendisliğini içeren bir geçmişe sahip olan ve Microsoft'a katılmadan önce önceki iki işverenimi Office 365 taşıyarak, birçok kez masanın sizin tarafınızda bulundum ve bunun nasıl bir şey olduğunu hatırlıyorum. Hiçbir iki müşteri aynı olmasa da, çoğu benzer gereksinimlere sahiptir ve herhangi bir SaaS veya PaaS platformu gibi standartlaştırılmış bir hizmeti kullanırken en iyi yaklaşımlar aynı olma eğilimindedir.
 
-## <a name="its-not-the-network--its-how-youre-misusing-it"></a>Ağ değil, nasıl (yanlış) kullanıyorsanız o şekildedir!
+## <a name="its-not-the-network--its-how-youre-misusing-it"></a>Ağ değil, bu şekilde kullanıyorsunuz!
 
-Ne kadar çok olursa olsun, hiçbir zaman yaratıcı güvenlik ekiplerinin ve ağ ekiplerinin  Microsoft bulut hizmetleriyle nasıl bağlantı kuracaklarını düşünmelerine ne kadar yardımcı olamayan bir durumla karşıma çıkamaz. Her zaman, ne yapmaya çalıştığı veya neleri daha iyi, daha kolay, daha düşük maliyetli ve daha iyi performansa sahip yolların sözlerine yer vermek zorunda kalmadan kullanmaya karar vermek için bir  güvenlik ilkesi, uyumluluk standardı veya daha iyi bir yol vardır. 
+Kaç kez olursa olsun, *yaratıcı* güvenlik ekiplerinin ve ağ ekiplerinin Microsoft bulut hizmetlerine bağlanmaları gerektiğini düşündükleri şekilde çalışmaya nasıl çalıştıkları beni hiçbir zaman şaşırtamıyor. Neyi gerçekleştirmeye çalıştıkları veya bunu yapmanın *daha* iyi, daha kolay, daha uygun maliyetli ve daha yüksek performanslı yolları hakkında bir konuşmaya katılmak istemeden her zaman bazı güvenlik ilkeleri, uyumluluk standardı veya kullanma konusunda ısrar ettikleri daha iyi bir yol vardır.
 
-Bu tür bir şey bana artmış durumdayken, genellikle bu zor işi almaya ve nasıl ve nedenlerin üzerinden geçerek onları olması gereken yere götürmeye hazır olurum. Ancak, tamamen Frank olursam, bazen onların yapacaklarını yapmalarına izin vermenizi istiyorum ve sonunda bunu kabul etmelerine izin verdim demek istiyorum. Bazen bunu yapmak istediğimde, bunu *yapmak istemiyorum*. Bu gönderiye eklayacağım her şeyi açıklamaya çalışmam. Rolünüz ne olursa olsun, organizasyonunız Microsoft bulut hizmetlerini kullanmak istiyorsa, muhtemelen aşağıdaki durumlarda size yardımcı olacak bazı güzel şeyler vardır.
+Bu tür şeyler bana yükseltildiğinde, genellikle meydan okumayı kabul ederim ve onlara nasıl ve nedenler konusunda yol gösteririm ve onları olmaları gereken yere götürürüm. Ama tamamen açık sözlü olursam, bazen ne yapacaklarını yapmalarına izin vermek istediğimi ve sonunda işe yaramadığını söylediklerinde sana söylediğimi söylemek istediğimi paylaşmalıyım. Bazen bunu yapmak isteyebilirim ama *istemiyorum*. Yaptığım şey, bu gönderiye neleri dahil edeceğimi açıklamaya çalışmak. Rolünüz ne olursa olsun, kuruluşunuz Microsoft bulut hizmetlerini kullanmak istiyorsa, size yardımcı olabilecek bazı bilgeliklerden yararlanabilirsiniz.
 
 ## <a name="guiding-principles"></a>Yol gösteren ilkeler
 
-Burada ne yapıyoruz? ile ilgili bazı temel kurallarla başlayalım. Gerçek güvenliği koruyarak en düşük karmaşıklığı ve en yüksek performansı sağlamak için bulut hizmetleriyle güvenli bir şekilde nasıl bağlantı kur üzerinden tartışırken, bu konu hakkında konuşuyoruz. Aşağıdakilerin hiçbiri, siz veya müşteriniz her şey için favori proxy sunucularınızı kullanamasanız bile bunların hiçbirinin tersini yapmaktır.
+Burada yaptığımız işlerle ilgili bazı temel kurallarla başlayalım. Gerçek güvenliği korurken en düşük karmaşıklığı ve maksimum performansı sağlamak için bulut hizmetlerine nasıl güvenli bir şekilde bağlanabileceğinizi ele alıyoruz. Siz veya müşteriniz her şey için en sevdiğiniz proxy sunucusunu kullanamayacak olsanız bile, aşağıdakilerden hiçbiri bunların hiçbirine karşı değildir.
 
-- **Bunun nedeni, bunu** yapmak anlamına da gelen bir şey değil: Ya da Ahuassic Park filmi'den Dr. Ian Zaman'ı yardım etmek için "... Evet, evet, ama güvenlik ekibinin içinde o kadar çok sorun oldu ki, öyle olup olmadığını düşünmekten vazgeçerler."
-- **Güvenlik karmaşıklık anlamına değildir**: Yalnızca daha fazla para harcadığınız, daha fazla cihaza yönlendirerek veya daha fazla düğmeyi tıklatmanız nedeniyle daha güvenli olmaznız.
-- **Office 365 İnternet üzerinden erişilir**: Ancak bu İnternet'i Office 365 olanla aynı şey değildir. Bu, Microsoft tarafından yönetilen ve sizin yönetiminizi yapan bir SaaS hizmetidir. İnternet'te ziyaret ettiğiniz web sitelerinden farklı olarak, aslında perdenin arkasına göz atabilirsiniz ve amaçlarınıza ulaşabilirsiniz ve amaçlarınıza uygun olduğunu anlıyoruz ki, ilkelerinize ve uyumluluk standartlarına uymanız için gereken denetimleri uygulayabilirsiniz.
-- **Hızlı** erişim kötü, yerelleştirilmiş ara erişimler iyidir: Herkes her zaman tüm İnternet trafiklerini merkezi bir noktaya geri almak ister; bu nedenle genellikle ilkeyi izleyebilir ve zorunlu hale gelirler, ancak çoğu durumda tüm konumlarında İnternet erişimi sağlamadan daha düşük olabilir veya böyle yapmaları gerekir. Ancak bu tiryaklar tam olarak böyledir... trafik yoğunluğu olan noktalar. Kullanıcılarınızı Gözatma veya kedi videoları akışına engel olan hiçbir sorun yoktur, ancak iş açısından kritik iş uygulaması trafiğinizi aynı şekilde kabul etmeyin.
-- **DNS mutlu değilse,** hiçbir şey mutlu olmaz: En iyi tasarlanmış ağ kötü DNS tarafından (dünyanın diğer alanlarındaki sunuculara yönelik istekler ister ISS'nizin DNS sunucularını veya DNS çözümleme bilgilerini önbelleğe alan diğer genel DNS sunucularını kullanarak) daha küçük bir DNS tarafından iş için kullanılabilir.
-- **Bunu önceden yaptığınız** için, şu anda bunu böyle yapmak demek değildir: Teknoloji sürekli değişir ve Office 365 bir istisna değildir. Şirket içi hizmetler için geliştirilen ve dağıtılan güvenlik önlemleri uygulamak veya web'de gezinmeyi kontrol etmek aynı güvenlik güvencesi düzeyini sağlamaz ve performansı önemli ölçüde olumsuz etkileyebilir.
-- **Office 365 İnternet üzerinden erişilacak şekilde inşa** edilmiş olması: Bir kısaca bu kadar. Kullanıcılarınız ile kenarınız arasında ne yapmak istediğinize bakmadan, trafik ağınıza ve ağımıza başlamadan önce İnternet üzerinden yine gider. Ağ gecikmeye duyarlı bazı trafiği doğrudan kendi ağımıza yönlendiren Azure ExpressRoute kullansanız bile, İnternet bağlantısı kesinlikle gereklidir. Kabul et. Fazla gözden geçirmeyin.
+- **Sadece bunu yapasın diye, şu anlama gelmez**: Ya da Jurassic Park filminden Dr. Ian Malcolm'un "... Evet, evet, ama güvenlik ekibiniz o kadar meşgul ki.
+- **Güvenlik karmaşıklık anlamına gelmez**: Daha fazla para harcadığınız, daha fazla cihazdan yönlendirdiğiniz veya daha fazla düğmeye tıkladığınız için daha güvenli olmazsınız.
+- **Office 365 İnternet üzerinden erişilir**: Ancak bu, Office 365 İnternet ile aynı şey değildir. Microsoft tarafından yönetilen ve sizin tarafınızdan yönetilen bir SaaS hizmetidir. İnternet'te ziyaret ettiğiniz web sitelerinden farklı olarak, perdenin arkasına göz atabilir ve ilkelerinizi ve uyumluluk standartlarınızı karşılamak için ihtiyacınız olan denetimleri uygulayabilirsiniz, ancak hedeflerinize ulaşabildiğiniz sürece, bunları farklı bir şekilde yapmanız gerekebilir.
+- **Boğma noktaları kötü, yerelleştirilmiş tartışmalar iyidir**: Herkes her zaman tüm kullanıcıları için İnternet trafiğini merkezi bir noktaya geri almak ister, bu sayede genellikle bunu izleyebilir ve ilke uygulayabilirler, ancak genellikle tüm konumlarında İnternet erişimi sağlamaktan daha ucuz olduğu için ya da sadece bunu nasıl yaptıklarıdır. Ama bu boğulma noktaları tam olarak... trafiğin boğulduğu yere işaret eder. Kullanıcılarınızın Instagram'a veya akış kedi videolarına göz atmasını engellemenin yanlış bir tarafı yoktur, ancak görev açısından kritik iş uygulaması trafiğinize aynı şekilde davranmayın.
+- **DNS mutlu değilse, hiçbir şey mutlu değil**: En iyi tasarlanmış ağ, dünyanın diğer bölgelerindeki sunuculara istekleri yinelemek veya ISS'nizin DNS sunucularını veya DNS çözümleme bilgilerini önbelleğe alan diğer genel DNS sunucularını kullanarak kötü DNS tarafından silinebilir.
+- Eskiden böyle **yapıyor olmanız, şu anda bunu yapmanız gerektiği anlamına gelmez**: Teknoloji sürekli değişir ve Office 365 bir istisna değildir. Şirket içi hizmetler için geliştirilen ve dağıtılan güvenlik önlemlerinin uygulanması veya web'de gezinmeyi denetlemek aynı güvenlik güvencesi düzeyini sağlamaz ve performansı önemli ölçüde olumsuz etkileyebilir.
+- **Office 365 İnternet üzerinden erişilecek şekilde oluşturulmuştu**: Özetle bu kadar. Kullanıcılarınız ve uçlarınız arasında ne yapmak isterseniz yapın, trafiğin ağınızdan çıkıp bizim ağımıza girmeden önce İnternet üzerinden geçmesine neden olur. Ağınızdan gelen gecikmeye duyarlı trafiği doğrudan bizimkine yönlendirmek için Azure ExpressRoute kullanıyor olsanız bile İnternet bağlantısı kesinlikle gereklidir. Kabul edin. Fazla düşünme.
 
-## <a name="where-bad-choices-are-often-made"></a>Kötü seçimlerin sık yapılan yeri
+## <a name="where-bad-choices-are-often-made"></a>Kötü seçimlerin sıklıkla yapıldığı yerler
 
-Güvenlik adı altında hatalı kararlar alınan birçok yer varken, müşterilerle en sık karşılaştığım yer bunlardır. Birçok müşteri görüşmesi, bunların hepsini bir kerede içerir.
+Güvenlik adına kötü kararların alındığı birçok yer olsa da, müşterilerle en sık karşılaştığım yerler bunlardır. Birçok müşteri konuşması aynı anda bunların tümünü içerir.
 
-### <a name="insufficient-resources-at-the-edge"></a>Edge'de yetersiz kaynaklar
+### <a name="insufficient-resources-at-the-edge"></a>Uçta yetersiz kaynak
 
-Çok az müşteri yeşil alan ortamlarının dağıtımında yer aldı ve kullanıcılarının çalışma ve İnternet çıkışlarının nasıl olduğuyla ilgili yıl deneyimine sahiptir. Müşterilerin ara sunucularının olması veya doğrudan erişime izin vermeleri ve yalnızca NAT giden trafiğine izin vermeleri gibi, bunu yıllar boyunca yapıyor ve geleneksel iç uygulamaları buluta taşıarak kenarlarına ne kadar daha bağlanacaklarını düşünmezler.
+Çok az müşteri yeşil alan ortamları dağıtıyor ve kullanıcılarının nasıl çalıştığı ve İnternet çıkışlarının nasıl olduğu konusunda yılların deneyimine sahip. Müşterilerin proxy sunucuları olsun veya doğrudan erişime izin versin ve yalnızca NAT giden trafiği olsun, bunu yıllardır yapıyorlar ve geleneksel olarak iç uygulamaları buluta taşırken uçlarından ne kadar daha fazla pompalamaya başlayacaklarını düşünmediler.
 
-Bant genişliği her zaman önemli bir konudur, ancak NAT cihazlarının artan yükü işlemek için yeterli beygir gücüne sahip olamayabilirsiniz ve kaynakları serbest etmek için bağlantıları hemen kapatmaya başlayabilirler. Office 365'a bağlanan istemci yazılımlarının çoğu kalıcı bağlantılar olmasını ve tam olarak kullanan kullanıcıların Office 365 32 veya daha fazla eş zamanlı bağlantı olmasını bekler. NAT cihazı onları bir şekilde bırakıyorsa, artık orada olmayan bağlantıları kullanmaya çalışılan uygulamalar yanıt vermemeye devam ediyor olabilir. Bu yeni bağlantıdan vazgeçer ve yeni bağlantılar kurmayı deneseler, ağ dişlinize daha da fazla yük sağlarlar.
+Bant genişliği her zaman sorun oluşturur, ancak NAT cihazları artan yükü işlemek için yeterli beygir gücüne sahip olmayabilir ve kaynakları boşaltmak için bağlantıları erken kapatmaya başlayabilir. Office 365 bağlanan istemci yazılımlarının çoğu kalıcı bağlantılar bekler ve Office 365 kullanan bir kullanıcının 32 veya daha fazla eşzamanlı bağlantısı olabilir. NAT cihazı bunları erken bırakıyorsa, artık orada olmayan bağlantıları kullanmaya çalıştıkları için bu uygulamalar yanıt vermemeye başlayabilir. Pes edip yeni bağlantılar kurmaya çalıştıklarında, ağ dişlinize daha da fazla yük bindiriyorlar.
 
-### <a name="localized-breakout"></a>Yerelleştirilmiş kesme
+### <a name="localized-breakout"></a>Yerelleştirilmiş tartışma
 
-Bu listede yer alan diğer her şey tek bir yere, yani ağdan ve mümkün olduğunca hızlı bir şekilde ağımıza geliyor. Kullanıcı trafiğinizi merkezi bir çıkış noktasına geri alma, özellikle de bu çıkış noktası kullanıcılarınızı kullananlardan başka bir bölgede olduğunda gereksiz gecikmeye neden olur ve hem istemci deneyimini hem de indirme hızlarını etkiler. Microsoft, her büyük ISS'ye göre her temel ISS'yi temel alan tüm hizmetlerimiz ve eşliğimiz için ön uçlarla dünyanın her yerinde iletişim durumu noktalarını bulundurarak, kullanıcılarının trafiğini yerel olarak dışarı yönlendirmenin minimum gecikme süresiyle ağımıza hızlı bir şekilde girilesini sağlar.
+Bu listedeki diğer her şey, ağınızdan ve bizim ağınızdan mümkün olan en kısa sürede çıkmak gibi tek bir şeye iner. Özellikle bu çıkış noktası kullanıcılarınızdan başka bir bölgedeyse, kullanıcılarınızın trafiğini merkezi bir çıkış noktasına geri döndürmek gereksiz gecikme süresine neden olur ve hem istemci deneyimini hem de indirme hızlarını etkiler. Microsoft, tüm hizmetlerimiz ve neredeyse tüm büyük ISS'lerle kurulan eşleme için ön uçları olan tüm iletişim noktalarına sahiptir, bu nedenle kullanıcılarınızın trafiğini *yerel olarak* dışarı yönlendirmek, ağımıza minimum gecikme süresiyle hızlı bir şekilde girilmesini sağlar.
 
-### <a name="dns-resolution-traffic-should-follow-the-internet-egress-path"></a>DNS çözümleme trafiği İnternet çıkış yolunu izlemeli
+### <a name="dns-resolution-traffic-should-follow-the-internet-egress-path"></a>DNS çözümleme trafiği İnternet çıkış yolunu izlemelidir
 
-Elbette bir istemcinin uç noktaları bulması için DNS'yi kullanması gerekir. Microsoft'un DNS sunucuları, isteğin kaynağına en yakın İnternet terimleriyle yanıtın geri dönmesi için DNS isteklerinin kaynağını değerlendirir. Ad çözümleme isteklerinin kullanıcı trafiğiyle aynı yola gitmeleri için DNS'inizin yapılandırıldığından emin olun; çünkü bu istekleri onlara yerel çıkış ancak başka bir bölgedeki uç nokta üzerinden vermenizi sağlar. Bu, yerel DNS sunucularının uzak veri merkezlerindeki DNS sunucularına iletilme yerine "köke gitmesine" izin verdiğiniz anlamına gelir. Ayrıca, dünyanın bir kısmından sonuçları önbelleğe alan ve dünyanın diğer kısımlarından gelen isteklere hizmet eden genel ve özel DNS hizmetlerini de izleyebilirsiniz.
+Tabii ki, bir istemcinin herhangi bir uç noktayı bulması için DNS kullanması gerekir. Microsoft'un DNS sunucuları, isteğin kaynağına en yakın olan yanıtı İnternet terimleriyle döndürmek için DNS isteklerinin kaynağını değerlendirir. DNS'nizin, ad çözümleme isteklerinin kullanıcılarınızın trafiğiyle aynı yoldan gitmesi için yapılandırıldığından emin olun; bu sayede onlara yerel çıkış verirsiniz ancak başka bir bölgedeki bir uç noktaya gidersiniz. Bu, uzak veri merkezlerindeki DNS sunucularına iletmek yerine yerel DNS sunucularının "köke gitmesine" izin vermek anlamına gelir. Ayrıca, dünyanın bir yerinden gelen sonuçları önbelleğe alabilen ve bunları dünyanın diğer bölgelerinden gelen isteklere sunabilen genel ve özel DNS hizmetlerine dikkat edin.
 
-### <a name="to-proxy-or-not-to-proxy-that-is-the-question"></a>Proxy'ye gerek yok veya proxy'ye gerek yok, bu soru
+### <a name="to-proxy-or-not-to-proxy-that-is-the-question"></a>Ara sunucuya veya ara sunucuya değil, asıl soru bu
 
-Dikkate alınmanız gereken ilk şeylerden biri, ara sunucu kullanıcılarının ara sunucu bağlantılarının Office 365. Bunu kolayca, proxy yok. Office 365 İnternet üzerinden erişilir, ancak İnternet değildir. Bu, temel hizmetlerinizin bir uzantısıdır ve bu şekilde işlem edilmelidir. DLP veya kötü amaçlı yazılımlardan koruma veya içerik incelemesi gibi bir proxy'nin yapmak istemeniz gereken her şey, hizmette zaten kullanılabilir ve ÖLÇEK'te kullanılabilir ve TLS şifreli bağlantıları kırmak zorunda kalmadan kullanılabilir. Ancak, başka türlü denetlemeyilen bir ara sunucu trafiğine gerçekten sahip olmak istemiyorsanız, [https://aka.ms/pnc](../enterprise/microsoft-365-network-connectivity-principles.md) 'da ve 'da yer alan trafik kategorileri üzerinden kılavuzlarımıza dikkat etmek gerekir [https://aka.ms/ipaddrs](../enterprise/urls-and-ip-address-ranges.md). Üç kategori trafiğimiz var ve Office 365. İyileştir ve İzin Ver gerçekten doğrudan gidip proxy'nizi atlalı. Varsayılan, proxied olabilir. Ayrıntılar bu belgelerde... okuyabilirsiniz.
+Dikkate alınması gereken ilk şeylerden biri, kullanıcıların Office 365 bağlantılarını ara sunucuya alıp almamaktır. Bu çok kolay; ara sunucu kullanmayın. Office 365 İnternet üzerinden erişilir, ancak İnternet değildir. Bu, temel hizmetlerinizin bir uzantısıdır ve bu şekilde ele alınmalıdır. DLP, kötü amaçlı yazılımdan koruma veya içerik denetimi gibi bir proxy'nin yapmak isteyebileceğiniz her şey hizmette zaten kullanılabilir ve büyük ölçekte ve TLS ile şifrelenmiş bağlantıların kırılmasına gerek kalmadan kullanılabilir. Ancak, başka türlü denetleyemeyeceğiniz trafiği gerçekten ara sunucu olarak kullanmak istiyorsanız, konumundaki kılavuzumuza [https://aka.ms/pnc](../enterprise/microsoft-365-network-connectivity-principles.md) ve konumundaki [https://aka.ms/ipaddrs](../enterprise/urls-and-ip-address-ranges.md)trafik kategorilerine dikkat edin. Office 365 için üç trafik kategorimiz var. İyileştir ve İzin Ver gerçekten doğrudan gitmeli ve proxy'nizi atlamalıdır. Varsayılan değer proksid edilebilir. Ayrıntılar bu belgelerde... bunları okuyun.
 
-Proxy kullanmaya sahip olan çoğu müşteri, aslında ne yaptığına bakarken, istemci ara sunucuya HTTP CONNECT isteğinde geldiğinde, proxy'nin artık fazladan pahalı bir yönlendirici olduğunu fark eder. MAPI ve RTC gibi kullanım protokolleri, webx'leri anlıyoruz protokoller değildir, dolayısıyla TLS ile kırılasa bile fazladan güvenlik elde olmazsınız. Fazladan *gecikme* süresiyle karşılanıyoruz. Daha [https://aka.ms/pnc](../enterprise/microsoft-365-network-connectivity-principles.md) fazla bilgi için bkz. Trafiğin en iyi duruma getirme, İzin Ver ve Varsayılan Microsoft 365.
+Ara sunucu kullanmakta ısrar eden müşterilerin çoğu, gerçekte ne yaptıklarına baktıklarında, istemci ara sunucuya HTTP CONNECT isteği yaptığında, proxy'nin artık yalnızca pahalı bir ek yönlendirici olduğunu fark eder. MAPI ve RTC gibi kullanımdaki protokoller, web proxy'lerinin anladığı protokoller bile değildir, bu nedenle TLS'yi kırsa bile fazladan güvenlik elde edemeyebilirsiniz. *Ek gecikme* süresi alıyorsunuz. Microsoft 365 trafiği için İyileştir, İzin Ver ve Varsayılan kategorileri de dahil olmak üzere bu konuda daha fazla bilgi için bkz[https://aka.ms/pnc](../enterprise/microsoft-365-network-connectivity-principles.md).
 
-Son olarak, proxy'ye ve ona karşılık gelen yanıt üzerinde bu etkiyi bir bütün olarak düşünün. Ara sunucu aracılığıyla daha fazla bağlantı yapılırken, TCP Ölçek Faktörü'dür ve böylece çok fazla trafiği arabelleğe almaları gerekmeyen şekilde azaltabilirsiniz. Prox'larının Ölçek Faktörü 0'ı kullanmaları nedeniyle fazla yüklerinin olduğu müşterileri gördüm. Ölçek Faktörü üstel bir değer olduğu için 8 kullanmakla birlikte, Ölçek Faktörü değerinin azaltılması işlem hacmine büyük olumsuz etkiyi verir.
+Son olarak, bu etkiyle başa çıkmak için ara sunucu üzerindeki genel etkiyi ve buna karşılık gelen yanıtı göz önünde bulundurun. Ara sunucu üzerinden giderek daha fazla bağlantı yapıldığından, tcp ölçek faktörünü azaltabilir, böylece çok fazla trafiği arabelleğe almak zorunda kalmayabilir. Proxy'lerinin aşırı yüklendiği ve 0'lık bir Ölçek Faktörü kullandıkları müşterileri gördüm. Ölçek Faktörü üstel bir değer olduğundan ve 8'i kullanmayı tercih ettiğimizden, Ölçek Faktörü değerindeki her azalma aktarım hızı üzerinde büyük bir olumsuz etki oluşturur.
 
-TLS İncelemesi, GÜVENLİ! Aslında değil! Ara araca sahip birçok müşteri tüm trafiği incelemek için bunları kullanmak istiyor; bu da TLS "kesme ve denetleme" anlamına geliyor. BUNU HTTPS üzerinden erişilen bir web sitesi için yapmaya devam edersiniz (gizlilik kaygıları dikkate alınmadan) proxy'nizin bunu birkaç yüz milisaniye için 10, hatta 20 eş zamanlı akış için yapmak zorunda olabilir. Büyük bir indirme veya belki de ilgili bir video söz konusu olursa, söz konusu bağlantıların bir veya birden çoğu çok daha uzun sürebilir, ancak bir bütün olarak, söz konusu bağlantıların çoğu çok hızlı bir şekilde bağlantı kuramaz, aktaramaz ve kapatır. Ara sunucu çift çalışmak ve incelemek, proxy'nin iki kez çalışması gerektiğini anlamına gelir. İstemciden proxy'ye her bağlantı için, proxy'nin uç noktayla ayrı bir bağlantı olması gerekir. Dolayısıyla, 1 olur 2 olur, 2 olur 4 olur, 32 olur 64 olur...nereye gidiyorum? Büyük olasılıkla proxy çözümünüz normal web gezinmesi için uygun boyutlandırdınız ama Office 365'a istemci bağlantıları için de aynı şeyi yapmaya çalışıyorken, eş zamanlı, uzun yaşanan bağlantı sayısı boyutuna göre büyük boyutlu olan siparişler olabilir.
+TLS İnceleme, GÜVENLİk anlamına gelir! Ama gerçekten değil! Proxy'leri olan birçok müşteri tüm trafiği incelemek için bunları kullanmak ister ve bu da TLS'nin "kesme ve inceleme" anlamına gelir. HTTPS üzerinden erişilen bir web sitesi için bunu yaptığınızda (gizlilikle ilgili endişeler olmasa da) proxy'nizin bunu birkaç yüz milisaniye boyunca 10 veya hatta 20 eşzamanlı akış için yapması gerekebilir. Büyük bir indirme veya belki de bir video söz konusuysa, bu bağlantılardan biri veya daha fazlası çok daha uzun sürebilir, ancak tüm bu bağlantıların çoğu çok hızlı bir şekilde kurulur, aktarılır ve kapatılabilir. Kesme ve inceleme yapmak, proxy'nin işi iki katına alması gerektiği anlamına gelir. İstemciden ara sunucuya yapılan her bağlantı için, ara sunucu da uç noktaya ayrı bir bağlantı yapmalıdır. Yani, 1 2 olur, 2 4 olur, 32 64 olur... Nereye gittiğimi görüyor musunuz? Proxy çözümünüzü büyük olasılıkla normal web'de gezinmek için uygun boyutlandırmış olabilirsiniz, ancak Office 365 istemci bağlantıları için de aynı şeyi yapmaya çalıştığınızda eşzamanlı, uzun süreli bağlantı sayısı, boyutlandırdığınız boyuttan daha büyük bir sipariş olabilir.
 
-### <a name="streaming-isnt-important-except-that-it-is"></a>Akış, akışla ilgili önemli bir şey *değil*;
+### <a name="streaming-isnt-important-except-that-it-is"></a>Akış önemli değildir, ancak *önemli değildir*
 
-UDP kullanan tek Office 365 UDP kullanan hizmetler Skype (yakında kullanımdan kaldıracak) ve Microsoft Teams. Teams, ses, video ve sunu paylaşımı gibi akış trafiği için UDP kullanır. Ses, görüntü ve sunum desteleri ile çevrimiçi bir toplantı gerçekleştirerek veya tanıtım yaparken olduğu gibi trafiğin akışı canlıdır. Bunlar UDP kullanır çünkü paketler bırakılır veya sipariş dışında bırakılırsa, bu durum kullanıcı tarafından kolay bir şekilde ortaya çıkar ve akış devam edeebilir.
+Office 365'da UDP kullanan tek hizmetler Skype (yakında kullanımdan kaldırılacak) ve Microsoft Teams. Teams ses, video ve sunu paylaşımı gibi akış trafiği için UDP kullanır. Akış trafiği, örneğin ses, video ve sunum desteleriyle çevrimiçi toplantı yaparken veya tanıtımlar yaparken canlı olarak gerçekleştirilir. Paketler bırakıldığında veya sıra dışı geldiğinde kullanıcı tarafından neredeyse fark edilemediğinden ve akış devam ettiğinden, bunlar UDP kullanır.
 
-İstemcilerden hizmete giden UDP trafiğine izin vermezsiniz, TCP kullanmaya geri dönebilir. Ancak bir TCP paketi bırakılırsa *, Yeniden* Iletim Zaman Aşımı (RTO) süresi dolana ve eksik paket yeniden aktarılabilir. Bir paket sipariş dışında gelirse, diğer paketler gelene ve sırayla yeniden birleşinceye kadar her şey durur. Her ikisi de ses (Max Headroom?) ve video (bir şeye tıkladı mı... İşte bu kadar) ve kötü performansa ve kötü bir kullanıcı deneyimine yol açıyor. Yukarıda,x'ler hakkında neleri hatırlatır musunuz? Bir ara sunucu Teams ara sunucu kullanmaya zorlarken, TCP kullanmaya zorlarlar. Dolayısıyla, şimdi iki kez performans üzerindeki olumsuz etkilere neden oluyoruz.
+İstemcilerden hizmete giden UDP trafiğine izin vermediğinizde tcp kullanmaya geri dönebilirler. Ancak bir TCP paketi bırakılırsa, Yeniden İletim Zaman Aşımı (RTO) süresi dolana ve eksik paket yeniden aktarılana kadar *her şey durur* . Bir paket sırayla ulaşırsa, diğer paketler gelene kadar her şey durur ve sırayla yeniden birleştirilebilir. Her ikisi de ses (Max Headroom'u hatırlıyor musunuz?) ve videoda algılanabilir hatalara yol açar (bir şeye tıkladığınızda... oh, işte orada) ve düşük performansa ve kötü bir kullanıcı deneyimine yol açar. Ve proxy'ler hakkında yukarıda ne koyduğumu hatırlıyor musun? bir Teams istemcisini ara sunucu kullanmaya zorladığınızda, tcp kullanmaya zorlarsınız. Şimdi iki kez olumsuz performans etkisine neden oluyorsunuz.
 
-### <a name="split-tunneling-may-seem-scary"></a>Bölünmüş bölme ürkütücü olabilir
+### <a name="split-tunneling-may-seem-scary"></a>Bölünmüş tünel korkutucu görünebilir
 
-Ancak değil. Veri bağlantılarının Office 365 TLS üzerindendir. Uzun zamandır TLS 1.2'yi teklif ediyor ve eski istemciler bunları kullanmaya devam ederken bu risk nedeniyle yakında eski sürümleri devre dışı bırakacağız.
+Ama değil. Office 365 tüm bağlantılar TLS üzerinden yapılır. Uzun süredir TLS 1.2'yi sunuyoruz ve eski istemciler bunları kullanmaya devam ettiğinden eski sürümleri yakında devre dışı bırakacağız ve bu bir risktir.
 
-TLS bağlantısına veya 32'nize VPN üzerinden gitmek için bu bağlantıdan daha sonra hizmete gitmek zorunda olmak güvenlik eklemez. Bu işlem gecikme süresi ekler ve genel performansı azaltır. Bazı VPN çözümlerinde UDP'yi TCP üzerinden iş açmaya bile zorlar ve bu da akış trafiği üzerinde çok olumsuz bir etki sağlar. TLS incelemesi yapmıyorsanız terslik yok. İş gücü çalışanlarının büyük bir oranı uzak olduğu için müşteriler arasında çok yaygın bir tema, en iyi duruma getirme kategorisine ve uç noktalarına erişim için bölünmüş şifreleme yapılandırmak yerine tüm kullanıcılarının [Office 365](../enterprise/microsoft-365-network-connectivity-principles.md#new-office-365-endpoint-categories) VPN kullanarak bağlanmalarını sağlamaktan önemli bant genişliği ve performans etkisi görüyorlar.
+BIR TLS bağlantısını veya 32'sini hizmete gitmeden önce VPN üzerinden geçmek için zorlamak güvenlik eklemez. Gecikme süresi ekler ve genel aktarım hızını azaltır. Bazı VPN çözümlerinde, UDP'yi TCP üzerinden tünel yapmaya zorlar ve bu da akış trafiğini çok olumsuz etkiler. AYRıCA, TLS denetimi yapmıyorsanız, bunun bir ters tarafı yoktur. İş gücünün çoğu uzak olduğu için müşteriler arasında çok yaygın bir tema, [optimize kategorisi Office 365 uç noktalarına](../enterprise/microsoft-365-network-connectivity-principles.md#new-office-365-endpoint-categories) erişim için bölünmüş tünel yapılandırmak yerine tüm kullanıcılarının VPN kullanarak bağlanmasını sağlamaktan önemli bant genişliği ve performans etkileri görüyor olmalarıdır.
 
-Bu, bölünmüş bölme yapmak için kolay bir düzeltmedir ve bunu da sizin düzeltmelidir. Daha fazla bilgi için VPN bölünmüş [bölmeyi kullanan uzak Office 365 için en iyi duruma getirme bağlantısını gözden geçirmeyi denetleyin](../enterprise/microsoft-365-vpn-split-tunnel.md).
+Bu, bölünmüş tünel oluşturmanın kolay bir düzeltmesi ve bunu yapmanız gerekir. Daha fazla bilgi [için VPN bölünmüş tünel kullanarak uzak kullanıcılar için Office 365 bağlantısını iyileştirme'yi](../enterprise/microsoft-365-vpn-split-tunnel.md) gözden geçirin.
 
-## <a name="the-sins-of-the-past"></a>Geçmiştekilerden olan bir o kadar da önemli değil
+## <a name="the-sins-of-the-past"></a>Geçmişin günahları
 
-Çoğu zaman, kötü seçimlerin nedeni (1) hizmetin nasıl çalıştığını bilmeme, (2) bulutu benimsemeden önce yazılmış şirket ilkelerine uymaya çalışma ve (3) hedeflerini gerçekleştirmenin birden fazla yolu olduğunu kolayca kabul  etmeyen güvenlik ekiplerinden (3) gelir. Umarız yukarıdakiler ve aşağıdaki bağlantılar ilk bağlantıda yardımcı olur. İkinciyi geride geride etmek için yönetime destek gerekebilir. Güvenlik ilkelerinin hedeflerine, yöntemleri yerine 3. ilkeye yönelik hedefler, üçüncüye yardımcı olur. Koşullu erişimden içerik denetimine, DLP'den bilgi korumasına, uç nokta doğrulamasından sıfır günlük tehditlere kadar her uç amaç, makul bir güvenlik ilkesi Office 365'te bulunanlarla gerçek edilebilir ve şirket içi ağ dişlilerine, zorlamalı VPN geçişlerine ve TLS'ye bağımlı kalmadan gerçek edilebilir ve inceler.
+Çoğu zaman, kötü seçimlerin olmasının nedeni (1) hizmetin nasıl çalıştığını bilmemenin, (2) bulutu benimsemeden önce yazılmış şirket ilkelerine uymaya çalışmanın ve (3) hedeflerini gerçekleştirmenin birden fazla yolu olduğuna kolayca ikna edilemeyen güvenlik ekiplerinin birleşiminden kaynaklanmaktadır. Umarım yukarıdakiler ve aşağıdaki bağlantılar ilkinde yardımcı olur. İkinci aşamayı geçmek için yönetici sponsorluğu gerekebilir. Güvenlik ilkelerinin yöntemlerini değil hedeflerini ele almak, üçüncü ilkeye yardımcı olur. Koşullu erişimden içerik denetimine, DLP'den bilgi korumasına, uç nokta doğrulamadan sıfır günlük tehditlere kadar makul bir güvenlik ilkesi, Office 365'da sağlananlarla ve şirket içi ağ dişlisine, zorlamalı VPN tünellerine ve TLS kesme ve incelemeye bağımlı olmadan gerçekleştirilebilir.
 
-Diğer zamanlarda, kuruluşun buluta taşınmaya başlamadan önce boyutlandıran ve satın alınan donanımlar, yeni trafik düzenlerini ve yüklerini işlemek için ölçeklendirimeden önce ölçek olamaz. Tüm trafiği tek bir çıkış noktası ve/veya ara sunucu üzerinden gerçekten yönlendirmeniz gerekirse, ağ donanımı ve bant genişliğini buna uygun olarak yükseltmeye hazır olun. Her ikisinde de kullanımını dikkatle izleyin, çünkü deneyim daha fazla kullanıcı kullansınca yavaş yavaş azalttı. Her şey yolundadır; o zaman herkes seğirecek.
+Diğer zamanlarda, kuruluş buluta taşınmaya başlamadan önce boyutlandırılan ve satın alınan donanımlar, yeni trafik düzenlerini ve yüklerini işleyecek şekilde ölçeklendirilemez. Tüm trafiği tek bir çıkış noktası üzerinden yönlendirmeniz ve/veya ara sunucu kullanmanız gerekiyorsa, ağ ekipmanını ve bant genişliğini uygun şekilde yükseltmeye hazır olun. Her ikisinde de kullanımı dikkatle izleyin çünkü deneyim daha fazla kullanıcı eklendiği kadar yavaş azalmaz. Devrilme noktasına ulaşılana kadar her şey iyi olacak, o zaman herkes acı çeker.
 
 ## <a name="exceptions-to-the-rules"></a>Kurallar için özel durumlar
 
-Organizasyonunız kiracı [kısıtlamaları](/azure/active-directory/manage-apps/tenant-restrictions) gerektiriyorsa TLS molası olan bir ara sunucu kullanın ve ara sunucu üzerinden bazı trafiği zorlamak için incelemeniz gerekir, ancak tüm trafiği bu ara sunucu üzerinden zorlamanız gerekli değildir.  Bu, her şeyi açık bir şekilde ifade etmek değildir; bu nedenle proxy tarafından nelerin değiştirilmesi gerekenlere dikkat etmek gerekir.
+Kuruluşunuz [kiracı kısıtlamaları](/azure/active-directory/manage-apps/tenant-restrictions) gerektiriyorsa, ara sunucu üzerinden bazı trafiği zorlamak için TLS kesmesi olan bir ara sunucu kullanmanız ve denetlemeniz gerekir, ancak tüm trafiği zorlamanız gerekmez.  Bu bir ya hep ya hiç teklifi değildir, bu nedenle proxy tarafından değiştirilmesi gerekenlere dikkat edin.
 
-Bölünmüş trafiğin izin veremeyecek, aynı zamanda genel web trafiği için ara sunucu kullanmaya devam ediyorsanız, PAC dosyanız hem doğrudan hem de VPN yolundan geçen trafik için ilginç trafik tanımlamanız gerekenleri tanımladığından emin olun. Bu noktada, bunu yönetmenizi kolaylaştıracak [https://aka.ms/ipaddrs](../enterprise/urls-and-ip-address-ranges.md) örnek PAC dosyaları sunuyoruz.
+Bölünmüş tünele izin verecek ancak genel web trafiği için bir ara sunucu da kullanacaksanız, PAC dosyanızın neyin doğrudan gitmesi gerektiğini tanımladığından ve VPN tünelinden geçenler için ilginç trafiği nasıl tanımladığınızdan emin olun. Bunu yönetmeyi kolaylaştıracak örnek PAC dosyaları [https://aka.ms/ipaddrs](../enterprise/urls-and-ip-address-ranges.md) sunuyoruz.
 
 ## <a name="conclusion"></a>Sonuç
 
-Fortune 500'in neredeyse hepsi de dahil olmak üzere on binlerce kuruluş, iş açısından kritik Office 365 işlevler için her gün yeni bir gün kullanır. Bunu İnternet üzerinden güvenli bir şekilde yapar.
+Neredeyse tüm Fortune 500 dahil olmak üzere on binlerce kuruluş, görev açısından kritik işlevleri için her gün Office 365 kullanıyor. Bunu güvenli bir şekilde ve İnternet üzerinden yapıyorlar.
 
-Hangi güvenlik hedeflerini kullanıyor olursanız olun, kullanıcılarınızı ağdan ve mümkün olan en kısa sürede almak için VPN bağlantıları, ara sunucular, TLS sonu ve incelemesi veya merkezi İnternet çıkışını gerektirmeyen, bu hedefleri gerçekleştirmenin yolları vardır. Bu da ağınız şirketin genel merkezi olsa da en iyi performansı sağlar  uzak bir ofis veya evde çalışan bir kullanıcı. Bizim kılavuzumuz, kullanıcı hizmetlerinin Office 365 ve güvenli ve iyi performansta bir kullanıcı deneyimi sağlamaya dayalıdır.
+Hangi güvenlik hedeflerine sahip olursanız olun, vpn bağlantıları, ara sunucu, TLS kesme ve inceleme ya da kullanıcılarınızın trafiğini ağınızdan ve bizim ağınızdan olabildiğince hızlı bir şekilde çıkarmak için merkezi İnternet çıkışı gerektirmeyen ve ağınız şirket genel merkezi olsun en iyi performansı sağlayan yöntemler vardır.  bir uzak ofis veya evde çalışan kullanıcı. Kılavuzumuz, Office 365 hizmetlerinin nasıl oluşturulduğuna ve güvenli ve performanslı bir kullanıcı deneyimi sağlamaya dayalıdır.
 
 ## <a name="further-reading"></a>Daha fazla okuma
 
-[Office 365 Ağ Bağlantısı İlkeleri](../enterprise/microsoft-365-network-connectivity-principles.md)
+[Office 365 Ağ Bağlantı İlkeleri](../enterprise/microsoft-365-network-connectivity-principles.md)
 
 [Office 365 URL'leri ve IP adresi aralıkları](../enterprise/urls-and-ip-address-ranges.md)
 
-[Kullanıcı Office 365 yönetme](../enterprise/managing-office-365-endpoints.md)
+[Office 365 uç noktalarını yönetme](../enterprise/managing-office-365-endpoints.md)
 
 [Office 365 IP Adresi ve URL Web hizmeti](../enterprise/microsoft-365-ip-web-service.md)
 
-[Ağ Office 365 değerlendirme](../enterprise/assessing-network-connectivity.md)
+[Office 365 ağ bağlantısını değerlendirme](../enterprise/assessing-network-connectivity.md)
 
-[Office 365 ve performans ayarını yapılandırma](../enterprise/network-planning-and-performance.md)
+[ağ ve performans ayarlamayı Office 365](../enterprise/network-planning-and-performance.md)
 
-[Ağ Office 365 değerlendirme](../enterprise/assessing-network-connectivity.md)
+[Office 365 ağ bağlantısını değerlendirme](../enterprise/assessing-network-connectivity.md)
 
-[Office 365 ve performans geçmişini kullanarak performans ayarlamayı ayarlama](../enterprise/performance-tuning-using-baselines-and-history.md)
+[Temelleri ve performans geçmişini kullanarak performans ayarlamayı Office 365](../enterprise/performance-tuning-using-baselines-and-history.md)
 
-[Destek için performans sorunlarını giderme Office 365](../enterprise/performance-troubleshooting-plan.md)
+[Office 365 için performans sorunlarını giderme planı](../enterprise/performance-troubleshooting-plan.md)
 
 [İçerik Teslim Ağları](../enterprise/content-delivery-networks.md)
 
 [Microsoft 365 bağlantı testi](https://connectivity.office.com/)
 
-[Microsoft hızlı ve güvenilir küresel ağına nasıl sahip olur?](https://azure.microsoft.com/blog/how-microsoft-builds-its-fast-and-reliable-global-network/)
+[Microsoft hızlı ve güvenilir küresel ağını nasıl oluşturur?](https://azure.microsoft.com/blog/how-microsoft-builds-its-fast-and-reliable-global-network/)
 
-[Office 365 Ağı blogu](https://techcommunity.microsoft.com/t5/office-365-networking/bd-p/Office365Networking)
+[Office 365 Ağ blogu](https://techcommunity.microsoft.com/t5/office-365-networking/bd-p/Office365Networking)
 
-[Office 365 VPN bölünmüş şifreleme kullanarak uzak kullanıcılar için hızlı bağlantı](../enterprise/microsoft-365-vpn-split-tunnel.md)
+[VPN bölünmüş tünel kullanarak uzak kullanıcılar için Office 365 bağlantısı](../enterprise/microsoft-365-vpn-split-tunnel.md)

@@ -15,79 +15,79 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse, riskli kullanıcıları görüntülemeyi ve yönetmeyi öğrenin.
-ms.openlocfilehash: 708fc0576c85d9b8511ac6b31ed0398fae1b20d3
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için riskli kullanıcıları görüntülemeyi ve yönetmeyi öğrenin.
+ms.openlocfilehash: 0b7567404b909927a80b69184299baae131f8eb7
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63704922"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824278"
 ---
 # <a name="view-and-manage-risky-users"></a>Riskli kullanıcıları görüntüleme ve yönetme
 
-Microsoft, kullanıcı oturum açma işaretlerini her gün toplar ve analiz eder. Bu sinyaller, iyi kullanıcı oturum açma davranışı düzenleri oluşturmak ve olası riskli oturum açma girişimlerini tanımlamak için kullanılır. Azure Active Directory (Azure AD) Kimlik Koruması bu sinyalleri kullanarak kullanıcı oturum açma girişimlerini gözden geçirer ve şüpheli etkinlikler varsa önlem alır.
+Microsoft, her gün trilyonlarca kullanıcı oturum açma sinyali toplar ve analiz eder. Bu sinyaller, iyi kullanıcı oturum açma davranışı desenleri oluşturmaya ve olası riskli oturum açma girişimlerini belirlemeye yardımcı olmak için kullanılır. Azure Active Directory (Azure AD) Kimlik Koruması, bu sinyalleri kullanarak kullanıcı oturum açma girişimlerini gözden geçirir ve şüpheli bir etkinlik varsa işlem gerçekleştirir.
 
-Microsoft 365 Lighthouse kiracılar genelinde tek bir riskli kullanıcı görünümü sağlayarak Azure AD Kimlik Koruması tarafından algılanan riskleri yönetmenize yardımcı olur. Riskli kullanıcıların parolalarını sıfırlayarak veya kullanıcı hesaplarının kendi hesaplarında oturum açmalarını engelleyerek hızlı bir Microsoft 365 edinebilirsiniz. Ayrıca, bir kullanıcının riskini daha iyi anlamak ve sonraki adımları belirlemek için içgörüleri görüntüebilirsiniz.
+Microsoft 365 Lighthouse, tüm yönetilen kiracılarınızda riskli kullanıcıların tek bir görünümünü sağlayarak Azure AD Kimlik Koruması tarafından algılanan riskleri yönetmeye yardımcı olur. Parolalarını sıfırlayarak veya Microsoft 365 hesaplarında oturum açmalarını engelleyerek riskli kullanıcıların güvenliğini hızla sağlayabilirsiniz. Ayrıca bir kullanıcının riskini daha iyi anlamak ve sonraki adımları belirlemek için içgörüleri görüntüleyebilirsiniz.
 
-Azure AD Kimlik Koruması, çeşitli türler için riskler tanımlar. Bu riskler:
+Azure AD Kimlik Koruması, aşağıdakiler de dahil olmak üzere birçok türün risklerini tanımlar:
 
 - Sızdırılan kimlik bilgileri
 - Anonim IP kullanımı
 - Atipik seyahat
-- Virüs bulaşmış cihazlardan oturum açma
-- IP adreslerinden şüpheli etkinliklerle oturum açma
-- Yabancı konumlardan oturum açma
+- Virüslü cihazlardan oturum açma
+- Şüpheli etkinlikle IP adreslerinden oturum açma
+- Tanıdık olmayan konumlardan oturum açma
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Kullanıcılar riskli kullanıcılar listesinde görünmeden önce aşağıdaki koşulların karşılanıyor olması gerekir:
+Kullanıcıların riskli kullanıcılar listesinde görünebilmesi için aşağıdaki koşulların karşılanması gerekir:
 
-- Müşteri kiracısı, her kullanıcı Azure AD Premium lisansına sahip olması gerekir. Hangi lisansların Azure AD Identity Protection'i desteklemesi hakkında daha fazla bilgi için bkz [. Kimlik Koruması nedir?](/azure/active-directory/identity-protection/overview-identity-protection)
+- Müşteri kiracısının her kullanıcı için bir Azure AD Premium lisansı olmalıdır. Azure AD Kimlik Koruması'nın desteklendiği lisanslar hakkında daha fazla bilgi için bkz. [Kimlik Koruması nedir?](/azure/active-directory/identity-protection/overview-identity-protection)
 
-- Müşteri kiracısı, kiracı kiracı içinde Microsoft 365 Lighthouse. Kiracının etkin olup olmadığını belirlemek için Kiracılar [sayfasına Microsoft 365 Lighthouse bakın](m365-lighthouse-tenant-list-overview.md).
+- Müşteri kiracısının Microsoft 365 Lighthouse içinde etkin olması gerekir. Kiracının etkin olup olmadığını belirlemek için bkz. [Microsoft 365 Lighthouse Kiracılar sayfasına genel bakış](m365-lighthouse-tenant-list-overview.md).
 
-## <a name="review-detected-risks-and-take-action"></a>Algılanan riskleri gözden geçirme ve önlem alma
+## <a name="review-detected-risks-and-take-action"></a>Algılanan riskleri gözden geçirin ve işlem yapın
 
-Azure AD Kimlik Koruması'da, risk algılamaları Azure AD'de kullanıcı hesaplarıyla ilgili tanımlanan şüpheli eylemleri içerir.
+Azure AD Kimlik Koruması'nda risk algılamaları, Azure AD'deki kullanıcı hesaplarıyla ilgili olarak tanımlanan şüpheli eylemleri içerir.
 
-1. Deniz Feneri'nin sol gezinti bölmesinde Kullanıcılar'ı **seçin**.
+1. Lighthouse'un sol gezinti bölmesinde **Kullanıcılar'ı** seçin.
 
-2. Riskli **Kullanıcılar sekmesini** seçin.
+2. **Riskli Kullanıcılar** sekmesini seçin.
 
-3. Listede Risk durumu Risk altında olan kullanıcıları **gözden geçirebilirsiniz**.
+3. Risk durumu **Risk** altında olan kullanıcıları listede gözden geçirin.
 
-4. Her **kullanıcı için algılanan riskler** hakkında ayrıntılı bilgi almak için Risk algılamalarını görüntüle'yi seçin. Risk türleri ve algılama hakkında daha fazla bilgi için bkz. [Risk nedir?](/azure/active-directory/identity-protection/concept-identity-protection-risks).
+4. Her kullanıcı için algılanan riskler hakkında ayrıntılı bilgi almak için **Risk algılamalarını görüntüle'yi** seçin. Risk türleri ve algılama hakkında daha fazla bilgi için bkz. [Risk nedir?](/azure/active-directory/identity-protection/concept-identity-protection-risks).
 
-5. Her kullanıcı için, risk algılamalarını değerlendirin ve uygun şekilde aşağıdaki eylemlerden birini seçin:
+5. Her kullanıcı için risk algılamalarını değerlendirin ve aşağıdaki eylemlerden birini uygun şekilde seçin:
 
-    - Parolayı sıfırlama – kullanıcı parolasını değiştirme veya sıfırlama.
+    - Parolayı sıfırla – kullanıcı parolasını değiştirin veya sıfırlayın.
 
-    - Oturum açmasını engelle: Bu kullanıcı olarak herkesin oturum açmasını önle.
+    - Oturum açmayı engelle - herkesin bu kullanıcı olarak oturum açmasını engelleyin.
 
-    - Güvenliğin ihlal edilmiş olduğunu onaylayın – risk durumunu güvenliği ihlal edilmiş olarak ayarlayın.
+    - Kullanıcının güvenliğinin aşıldığını onaylayın – risk durumunu güvenliği aşıldığını onaylayacak şekilde ayarlayın.
 
-    - Kullanıcı riskini yok say - risk durumunu yok say olacak şekilde ayarlayın.
+    - Kullanıcı riskini kapatma - Risk durumunu kapatılmış olarak ayarlayın.
 
-## <a name="take-action-on-multiple-user-accounts-at-once"></a>Bir kerede birden çok kullanıcı hesabı üzerinde işlem
+## <a name="take-action-on-multiple-user-accounts-at-once"></a>Aynı anda birden çok kullanıcı hesabı üzerinde eylem gerçekleştirme
 
-Etkilenen birden çok kullanıcı üzerinde aynı anda işlem yapmak için:
+Aynı anda birden çok etkilenen kullanıcı üzerinde işlem yapmak için:
 
-1. Riskli **Kullanıcılar sekmesinde** , üzerinde işlem yapmak istediğiniz kullanıcı kümelerini seçin.
+1. **Riskli Kullanıcılar** sekmesinde, üzerinde işlem yapmak istediğiniz kullanıcı kümesini seçin.
 
-2. Gerçekleştirmek için aşağıdaki eylemlerden birini seçin:
+2. Gerçekleştirilecek aşağıdaki eylemlerden birini seçin:
 
     - Parolayı sıfırlayın
 
-    - Oturum açma engelleme
+    - Oturum açmayı engelle
 
-    - Güvenliğin ihlal edilmiş olduğunu onaylama
+    - Kullanıcının güvenliğinin aşıldığını onaylayın
 
-    - Kullanıcı riskini yok sayma
+    - Kullanıcı riskini kapatma
 
 > [!NOTE]
-> Yönetmekte olduğu kuruluşun hızlı erişim Azure AD Premium P2 varsa, Kullanıcı risk tabanlı koşullu erişim ilkelerini etkinleştirmeniz önerilir. Daha fazla bilgi için bkz [. Koşullu Erişim: Kullanıcı risk tabanlı Koşullu Erişim](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk-user).
+> Yönettiğiniz kuruluşun Azure AD Premium P2 lisansı varsa, Kullanıcı risk tabanlı koşullu erişim ilkelerini etkinleştirmeniz önerilir. Daha fazla bilgi için bkz [. Koşullu Erişim: Kullanıcı risk tabanlı Koşullu Erişim](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk-user).
 
 ## <a name="related-content"></a>İlgili içerik
-[Öğretici: Azure AD Multi-Factor Authentication](/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa) veya parola değişikliklerini tetiklemek için kullanıcı oturum açmalarında risk algılamaları kullanma (makale)\
-[Risk nedir?](/azure/active-directory/identity-protection/concept-identity-protection-risks) (article) \
+[Öğretici: Azure AD Multi-Factor Authentication veya parola değişikliklerini tetikleme amacıyla kullanıcı oturum açma işlemleri için risk algılamalarını kullanma](/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa) (makale)\
+[Risk nedir?](/azure/active-directory/identity-protection/concept-identity-protection-risks) (makale) \
 [Riskleri düzeltme ve kullanıcıların engellemesini kaldırma](/azure/active-directory/identity-protection/howto-identity-protection-remediate-unblock) (makale)

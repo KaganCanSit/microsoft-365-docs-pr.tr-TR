@@ -1,5 +1,5 @@
 ---
-title: Çevrimiçi toplantılar ayarlama
+title: Çevrimiçi toplantıları ayarlama
 f1.keywords:
 - NOCSH
 ms.author: twerner
@@ -24,28 +24,28 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Diğerleriyle çevrimiçi toplantılar Microsoft Teams.
-ms.openlocfilehash: cb19649da667c7c9317ca240162ac3e42e991806
-ms.sourcegitcommit: 6e90baef421ae06fd790b0453d3bdbf624b7f9c0
+description: Microsoft Teams ile çevrimiçi toplantılar ayarlayın.
+ms.openlocfilehash: d945d5526e3cdd06bc0a7c7a80ef7cff0160d07d
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "63011976"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64823112"
 ---
-# <a name="set-up-meetings"></a>Toplantı ayarlama
+# <a name="set-up-meetings"></a>Toplantıları ayarlama
 
-Toplantılar Microsoft Teams, görüntü ve paylaşım içerir. Personeliniz coğrafi olarak dağıtılmış veya uzaktan çalışıyor olsa bile, çevrimiçi olduğundan her zaman bir toplantı alanınız olur (odaya veya projektöre gerek kalmadan!). Microsoft Teams toplantıları, hem kuruluş içinde hem de dışında personeliniz ile birlikte olmak için harika bir yol sağlar. Bir toplantıya katılmak için, kuruma üye olması veya bir hesabınız olması bile zorunda değil. Çevrimiçi toplantıları zamanlamayı ve çalıştırmayı kendi Microsoft Teams. Toplantı sırasında ekranınızı paylaşabilir, dosya paylaşabilir, görev atayabilirsiniz ve daha fazlasını gerçekleştirebilirsiniz. Kampanyalara, toplantıda kurum dışından personel, gönüllüler ve konuklar dahildir. Küçük firma veya uygulamalar, eğitim personeliyle bir araya veya şirket üzerinden müşteriler veya iş ortaklarıyla Microsoft Teams.
+Microsoft Teams toplantılar ses, video ve paylaşım içerir. Çevrimiçi oldukları için, personeliniz coğrafi olarak dağıtılmış veya uzaktan çalışıyor olsa bile her zaman bir toplantı alanınız (oda veya projektöre gerek kalmadan!) olur. Microsoft Teams toplantıları, kuruluşunuzun içinde ve dışında personelinizle bir araya gelmek için harika bir yoldur. Bir toplantıya katılmak için kuruluşunuzun bir üyesi olmanıza veya hesabınıza sahip olmanıza gerek yoktur. Microsoft Teams kullanarak çevrimiçi toplantılar zamanlayabilir ve çalıştırabilirsiniz. Toplantı sırasında ekranınızı paylaşabilir, dosyaları paylaşabilir, görev atayabilir ve daha fazlasını yapabilirsiniz. Siyasi kampanyalar, toplantıya personeli, gönüllüleri ve kuruluşunuzun dışındaki konukları içerebilir. Küçük firmalar veya uygulamalar personeliyle görüşebilir veya Microsoft Teams üzerinden müşteriler veya iş ortaklarıyla toplantı yapabilir.
 
-[![Bir toplantıda iki kullanıcının resmi.](../media/HostOnlineMeeting-thumb-358x201.png)](https://go.microsoft.com/fwlink/?linkid=2078712)
+[![Toplantıdaki iki kullanıcının çizimi.](../media/HostOnlineMeeting-thumb-358x201.png)](https://go.microsoft.com/fwlink/?linkid=2078712)
 
-toplantıyla çevrimiçi toplantılara katılma veya [PowerPoint](https://go.microsoft.com/fwlink/?linkid=2079515) hızlı bir genel bakış için [PDF](https://go.microsoft.com/fwlink/?linkid=2078712) veya Microsoft Teams.
+[Microsoft Teams](https://go.microsoft.com/fwlink/?linkid=2079515) ile çevrimiçi toplantıya katılma veya toplantı düzenleme hakkında hızlı bir genel bakış elde etmek için [PDF](https://go.microsoft.com/fwlink/?linkid=2078712) veya PowerPoint bir bilgi grafiği indirin.
 
 ## <a name="best-practices"></a>En iyi uygulamalar
 
-Çevrimiçi toplantılarınız için aşağıdaki en iyi yöntemleri izleyin:
+Çevrimiçi toplantılarınız için şu en iyi yöntemleri izleyin:
 
-- Çevrimiçi toplantılarınızı hemen bu Microsoft Teams. Bir ekip ve kanal seçebilirsiniz ve Teams otomatik olarak bu ekip veya kanalda yer alan katılımcıları davet eder.
-- Zamansız bir toplantıya mı ihtiyacınız var? Bire bir sohbet ediyorsanız, sohbet ederken sohbet ederken kişi ile görüntülü  veya sesli çağrı başlatmak için Şimdi buluş'a tıklayın.
+- Çevrimiçi toplantılarınızı doğrudan Microsoft Teams zamanlayın. Bir ekip ve kanal seçebilirsiniz ve Teams bu ekipteki veya kanaldaki katılımcıları otomatik olarak davet eder.
+- Ani bir toplantıya mı ihtiyacınız var? Bire bir sohbetteyseniz sohbet ettiğiniz kişiyle görüntülü veya sesli arama başlatmak için **Şimdi toplantı yap'ı** seçin.
 
 ## <a name="schedule-a-meeting"></a>Toplantı planlama
 
@@ -55,6 +55,6 @@ toplantıyla çevrimiçi toplantılara katılma veya [PowerPoint](https://go.mic
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FYWn]
 
-Toplantı hakkında daha fazla bilgi Microsoft Teams:
+Microsoft Teams'de toplantı hakkında daha fazla bilgi edinin:
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWeokQ]

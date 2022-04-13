@@ -1,5 +1,5 @@
 ---
-title: Kiracı hizmet durumunu görüntüleme
+title: Hizmet durumu geçmişini görüntüleme
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -15,50 +15,51 @@ ms.custom:
 - AdminSurgePortfolib
 - M365-Lighthouse
 search.appverid: MET150
-description: Yönetilen Hizmet Sağlayıcıları (MSP) için Microsoft 365 Lighthouse hizmet durumunu görüntülemeyi öğrenin.
-ms.openlocfilehash: 21315d0ea616fcd2865879d9d8aec66b17830208
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için kiracı hizmet durumunu görüntülemeyi öğrenin.
+ms.openlocfilehash: 5c15e004108606ce00a90e0fa3d675d00806b430
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63324613"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64822726"
 ---
-# <a name="view-tenant-service-health"></a>Kiracı hizmet durumunu görüntüleme
+# <a name="view-tenant-service-health"></a>Hizmet durumu geçmişini görüntüleme
 
-Aynı kiracıda, yönetmekte olduğu kiracıların hizmet durumunu Microsoft 365 Lighthouse. Hizmet durumu; Microsoft Intune, Azure Active Directory (Azure AD) kimlik hizmetleri ve mobil cihaz yönetimi (MDM) bulut hizmetleri gibi çeşitli hizmetlere yönelik olayları ve tavsiyeleri içerir. Ayrıca, yönetilen kiracılardan kaç tanenizin olaylardan etkilendiğini de görebilirsiniz. Örneğin, kiracılardan biri sorun yaşıyorsa, Hizmet durumu sayfasını kontrol edip bunun çözüm için devam eden bilinen bir sorun mu yoksa yakın zamanda yapılan bir değişikliğin onları etki edip e-postayla ilgili bir sorun olup olmadığını öğrenebilirsiniz. Bu, sorun giderme ve destek aramalarını azaltma zamandan tasarruf sağlar.
+Microsoft 365 Lighthouse'de yönettiğiniz kiracıların hizmet durumunu görüntüleyebilirsiniz. Hizmet durumu Microsoft Intune, Azure Active Directory (Azure AD) kimlik hizmetleri ve mobil cihaz yönetimi (MDM) bulut hizmetleri gibi çeşitli hizmetler için olaylar ve öneriler içerir. Yönetilen kiracılarınızdan kaçının olaylardan etkilendiğini de görebilirsiniz. Örneğin, kiracılarınızdan biri sorun yaşıyorsa, Hizmet durumu sayfasını denetleyebilir ve bunun devam eden bir çözümle ilgili bilinen bir sorun olup olmadığını veya son bir değişikliğin bunları etkileyip etkilemediğini belirleyebilirsiniz. Bu, sorun giderme ve destek çağrılarını azaltma konusunda size zaman kazandırabilir.
 
-Deniz Feneri'nde oturum aasanız, [Microsoft 365](https://status.office365.com/) hizmet durumu sayfasını kullanarak iş ortağı kiracınıza oturum açmanızı engelleyen bilinen sorunları kontrol edebilirsiniz. Ayrıca, belirli hizmet olayları [@MSFT365status](https://twitter.com/MSFT365Status) görmek için Twitter'da takip etmek için oturum açma.
+Lighthouse'da oturum açamıyorsanız, iş ortağı kiracınızda oturum açmanızı engelleyen bilinen sorunları denetlemek için [Microsoft 365 hizmet durumu sayfasını](https://status.office365.com/) kullanabilirsiniz. Ayrıca, belirli hizmet olaylarıyla ilgili bilgileri görmek için Twitter'da [@MSFT365status](https://twitter.com/MSFT365Status) takip etmek için kaydolun.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Hizmet durumunu görüntülemek için, iş ortağı kiracısında şu özellik kümesine sahip bir Azure AD rolüne ihtiyacınız vardır: **microsoft.office365.serviceHealth/allEntities/allTasks**. Azure AD rollerinin listesi için bkz. [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
+Hizmet durumunu görüntülemek için iş ortağı kiracısında şu özellik kümesine sahip bir Azure AD rolüne sahip olmanız gerekir: **microsoft.office365.serviceHealth/allEntities/allTasks**. Azure AD rollerinin listesi için bkz. [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
 
-## <a name="view-service-health-status-for-all-tenants"></a>Tüm kiracıların hizmet durumunu görüntüleme
+## <a name="view-service-health-status-for-all-tenants"></a>Tüm kiracılar için hizmet durumunu görüntüleme
 
-1. Deniz Feneri'nin sol gezinti bölmesinde Hizmet **durumu'ni seçin**.
+1. Lighthouse'un sol gezinti bölmesinde **Hizmet durumu'ı** seçin.
 
-2. Hizmet **durumu sayfasında** , geçerli hizmet durumunu gözden geçirin; şöyle:
+2. **Hizmet durumu** sayfasında, aşağıdakiler de dahil olmak üzere geçerli hizmet durumunu gözden geçirin:
 
-   -   Olay sayısı toplamı
-   -   Yönetilen kiracılardan herhangi birini etkileyen tavsiyelerin toplam sayısı
-   -   Etkin olayları olan hizmetlerin sayısı.
+   - Toplam olay sayısı
+   - Yönetilen kiracılardan herhangi birini etkileyen toplam öneri sayısı
+   - Etkin olay içeren hizmet sayısı.
 
-3. Tüm hizmetler **sekmesinde,** hizmetlere göre sorunları gözden geçirebilirsiniz.
+3. **Tüm hizmetler** sekmesinde hizmete göre sorunları gözden geçirin.
 
-4. Tüm sorunlar **sekmesinde,** tüm geçerli sorunları gözden geçirebilirsiniz.
+4. **Tüm sorunlar** sekmesinde tüm geçerli sorunları gözden geçirin.
 
 ## <a name="review-issue-details"></a>Sorun ayrıntılarını gözden geçirme
 
-1. Deniz Feneri'nin sol gezinti bölmesinde Hizmet **durumu'ni seçin**.
+1. Lighthouse'un sol gezinti bölmesinde **Hizmet durumu'ı** seçin.
 
-2. Hizmet durumu **sayfasında Tüm** hizmetler veya **Tüm sorunlar** **sekmesini** seçin.
+2. **Hizmet durumu** sayfasında **Tüm hizmetler** veya **Tüm sorunlar** sekmesini seçin.
 
 3. Listeden bir sorun seçin.
 
-4. Sorun ayrıntıları bölmesinde, sorun türü, etkilenen kiracılar, kullanıcı etkisi ve sorun geçmişi gibi ayrıntılı bilgileri gözden geçirebilirsiniz.
+4. Sorun ayrıntıları bölmesinde sorun türü, etkilenen kiracılar, kullanıcı etkisi ve sorun geçmişi gibi ayrıntılı bilgileri gözden geçirin.
 
-Kiracı **etkilenenler sekmesinde** , etkilenen kiracıların listesini bir virgülle ayrılmış değerler (.csv) dosyasına aktarabilir ve böylelikle bu dosyayı destek ekipleriyle paylaşabilirsiniz.
+**Etkilenen kiracılar** sekmesinde, etkilenen kiracıların listesini virgülle ayrılmış değerler (.csv) dosyasına aktararak bunu destek ekiplerinizle paylaşabilirsiniz.
 
 ## <a name="related-content"></a>İlgili içerik
-[Hizmet durumunu denetleme Microsoft 365](/microsoft-365/enterprise/view-service-health) (makale)\
-[E-Microsoft 365 Lighthouse](m365-lighthouse-known-issues.md) bilinen sorunlar (makale)
+
+[Microsoft 365 hizmet durumunu denetleme](/microsoft-365/enterprise/view-service-health) (makale)\
+[Microsoft 365 Lighthouse ile ilgili bilinen sorunlar](m365-lighthouse-known-issues.md) (makale)

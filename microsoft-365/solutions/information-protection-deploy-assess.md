@@ -1,5 +1,5 @@
 ---
-title: Veri gizliliği risklerini değerlendirin ve hassas öğeleri doğru Microsoft 365
+title: veri gizliliği risklerini değerlendirme ve Microsoft 365 ile hassas öğeleri tanımlama
 ms.author: bcarter
 author: brendacarter
 f1.keywords:
@@ -16,219 +16,219 @@ ms.collection:
 - m365solution-infoprotection
 - m365solution-scenario
 ms.custom: ''
-description: Veri gizliliği düzenlemelerini, ilgili senaryoları, hazırlıklarınızı ve çalışma ortamınıza ilişkin hassas bilgi türlerini Microsoft 365.
-ms.openlocfilehash: 5f8b5844ad3db4152a6144f9506a0267fa3af8f2
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+description: Veri gizliliği düzenlemelerini, ilgili senaryoları, hazır olma durumunuzu ve Microsoft 365 ortamınızdaki hassas bilgi türlerini belirleyin.
+ms.openlocfilehash: ea151577f31ad8ea9454addf171c1079f334d377
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63010153"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64822704"
 ---
-# <a name="assess-data-privacy-risks-and-identify-sensitive-items-with-microsoft-365"></a>Veri gizliliği risklerini değerlendirin ve hassas öğeleri doğru Microsoft 365
+# <a name="assess-data-privacy-risks-and-identify-sensitive-items-with-microsoft-365"></a>veri gizliliği risklerini değerlendirme ve Microsoft 365 ile hassas öğeleri tanımlama
 
-Verilerinizin tabi olduğu veri gizliliği düzenlemelerini ve risklerini değerlendirmek, proje özellikleri ve hizmetleriyle ilgili gerçekleştirilebilir eylemler de dahil olmak üzere ilgili iyileştirme eylemlerini hayata Microsoft 365 bir adımdır.
+Kuruluşunuzun tabi olduğu veri gizliliği düzenlemelerini ve risklerini değerlendirmek, Microsoft 365 özellikleri ve hizmetleriyle ulaşılabilir eylemler de dahil olmak üzere ilgili iyileştirme eylemlerini uygulamadan önce ilk adımdır.
 
-## <a name="potentially-applicable-data-privacy-regulations"></a>Geçerli olabilecek veri gizliliği düzenlemeleri
+## <a name="potentially-applicable-data-privacy-regulations"></a>Olası geçerli veri gizliliği düzenlemeleri
 
-Veri gizliliği düzenlemelerine ilişkin daha geniş bir yasal düzenleme çerçevesi hakkında iyi bir referans için [, Microsoft Hizmetleri](https://servicetrust.microsoft.com/) Güven Portalı'na ve Genel Veri Koruma Yönetmeliği [(GDPR) yönetmeliğiyle ilgili makalelere bakın](/compliance/regulatory/gdpr). Ayrıca, endüstriniz veya bölgeniz için tabi olacağınız düzenlemelere ilişkin malzemeleri de gözden geçirin.
+Veri gizliliği düzenlemeleri için daha geniş bir mevzuat çerçevesi hakkında iyi bir başvuru için [Microsoft Hizmetleri Güven Portalı'na](https://servicetrust.microsoft.com/) ve [Genel Veri Koruma Yönetmeliği (GDPR) yönetmeliğine ilişkin makale serisine](/compliance/regulatory/gdpr) bakın. Ayrıca, sektörünüzde veya bölgenizde tabi olabileceğiniz düzenlemelere ilişkin malzemeleri gözden geçirin.
 
 ### <a name="gdpr"></a>GDPR
 
-GDPR, veri gizliliği yasal düzenlemelerinin en iyi bilinen ve adı olandır. Avrupa Birliği'nde (AB) ikamet eden, tanımlanabilen veya tanımlanabilen bir doğal kişiyle ilgili tüm kişisel verilerin toplanması, depolanması, işlanması ve paylaşımına düzenlemeye devam ediyor.
+GDPR, veri gizliliği düzenlemelerinin en iyi bilinen ve alıntısı olandır. Avrupa Birliği'nin (AB) ikamet eden kimliği belirlenmiş veya tanımlanabilir bir gerçek kişiyle ilgili tüm kişisel verilerin toplanmasını, depolanmasını, işlenmesini ve paylaşıldığını düzenler.
 
-GDPR Makalesine göre 4:
+GDPR Madde 4'e göre:
 
-- 'kişisel veriler', tanımlanabilen veya tanımlanabilen bir doğal kişiyle ('veri konusu' ilgili tüm bilgiler) anlamına gelir; Tanımlanabilen doğal kişi, özellikle ad, tanımlama numarası, konum verileri, çevrimiçi tanımlayıcı veya bu doğal kişinin fiziksel, genetik, zihinsel, ekonomik, kültürel veya sosyal kimliğine özgü bir veya birden çok faktöre başvuru olarak tanımlanabilen, doğrudan veya dolaylı olarak tanımlanabilen kişidir.
+- 'kişisel veriler', tanımlanan veya tanımlanabilir bir gerçek kişiyle ('veri sahibi') ilgili herhangi bir bilgi anlamına gelir; tanımlanabilir bir gerçek kişi, özellikle ad, kimlik numarası, konum verileri, çevrimiçi tanımlayıcı gibi bir tanımlayıcıya veya o gerçek kişinin fiziksel, fizyolojik, genetik, zihinsel, ekonomik, kültürel veya sosyal kimliğine özgü bir veya daha fazla faktöre başvurularak, doğrudan veya dolaylı olarak tanımlanabilen kişidir.
 
 ### <a name="iso-27001"></a>ISO 27001
 
-ISO 27001 gibi diğer standartlara bağlı kalma ayrıca, çeşitli Avrupa denetim yetkilileri tarafından kişiler, süreçler ve teknoloji yelpazesinde geçerli bir amacın proxy'si olarak tanındı. ÖRTÜşme ve ISO-27001 odaklı koruma mekanizmalarına bağlı olacağını belirten standartlar, bazı durumlarda bazı gizlilik yükümlülüklerini yerine getiren bir proxy olarak kabul edilir.
+ISO 27001 gibi diğer standartlara uygunluk, çeşitli Avrupa denetim otoriteleri tarafından insanlar, süreç ve teknoloji spektrumu genelinde geçerli bir amaç proxy'si olarak kabul edilmiştir. ISO-27001 temelli koruma mekanizmalarına çakışma ve uymayı belirttiği standartlar, belirli durumlarda bazı gizlilik yükümlülüklerini yerine getiren bir proxy olarak kabul edilebilir.
 
 ### <a name="other-data-privacy-regulations"></a>Diğer veri gizliliği düzenlemeleri
 
-Diğer dikkat çeken veri gizliliği düzenlemeleri de kişisel verilerin işlenmesiyle ilgili gereksinimleri belirtir.
+Diğer önemli veri gizliliği düzenlemeleri de kişisel verilerin işlenmesine yönelik gereksinimleri belirtir.
 
-Amerika Birleşik Devletleri'nde, bunlar California Tüketici Koruma Yasası ([CCPA](/compliance/regulatory/ccpa-faq)), HIPAA-HITECH (AMERIKA Birleşik Devletleri sağlık bakımı gizlilik yasası) ve Graham Leach Bliley Yasası'dır (GLBA). Devlete özgü diğer düzenlemeler de yerindedir veya geliştirme aşamasındadır.
+Birleşik Devletler bunlar California Tüketici Koruma Yasası ([CCPA](/compliance/regulatory/ccpa-faq)), HIPAA-HITECH (Birleşik Devletler sağlık hizmetleri gizlilik yasası) ve Graham Leach Bliley Yasası (GLBA) içerir. Devlete özgü ek düzenlemeler de yerinde veya geliştirme aşamasındadır.
 
-Dünya geneline, Almanya'nın Ulusal GDPR Uygulama Yasası (BDSG), Brezilya Veri Koruma Yasası (LGPD) ve daha birçok örnek daha vardır.
+Diğer örnekler arasında Almanya'nın Ulusal GDPR Uygulama Yasası (BDSG), Brezilya Veri Koruma Yasası (LGPD) ve diğerleri sayılabilir.
 
-## <a name="regulation-mapping-to-microsoft-365-technical-control-categories"></a>Teknik denetim kategorilerinin Microsoft 365 eşlemesi
+## <a name="regulation-mapping-to-microsoft-365-technical-control-categories"></a>Microsoft 365 teknik denetim kategorilerine düzenleme eşlemesi
 
-Veri gizliliğiyle ilgili düzenlemelerin birçoğu gereksinimleri çakışıyor, dolayısıyla herhangi bir teknik denetim düzenini geliştirmeden önce hangi yasal düzenlemelere tabi olduklarını anlamanız gerekir.
+Veri gizliliğiyle ilgili düzenlemelerin çoğu çakışan gereksinimlere sahiptir, bu nedenle herhangi bir teknik denetim şeması geliştirmeden önce hangi düzenlemelere tabi olduklarını anlamalısınız.
 
-Bu genel çözümün makalelerine daha sonra başvuru için, bu tabloda veri gizliliğiyle ilgili düzenlemelere ilişkin alıntılar ve alıntılar bulunmaktadır.
+Bu genel çözümün makalelerinde daha sonra başvurmak için, bu tabloda veri gizliliği düzenlemelerinin örneklemesinden alıntılar sağlanır.
 
 |Düzenleme|Makale/bölüm|Alıntı|Geçerli teknik denetim kategorileri|
 |---|---|---|---|
-|GDPR|Makale 5(1)(f)|Kişisel veriler, yetkisiz veya yasa dışı işlemeye karşı koruma ve yanlışlıkla kayıp, zarar görme veya zarara karşı uygun teknik veya kurumsal ölçüler ('bütünlük ve gizlilik') kullanılarak kişisel verilerin uygun güvenliğini sağlayan bir şekilde işlenir.|(All) <br> Kimlik <br> Cihaz <br> Tehdit Koruması <br> Bilgileri koruma <br> Geçerli bilgiler <br> Keşfetme ve yanıtlama|
-||Makale (32)(1)(a)|Doğal kişilerin hakları ve serbestlik hakları ve önem düzeyine yönelik farklı olasılık ve önem riski ile birlikte, sanat eserinin durumunu, uygulama maliyetlerini ve doğasını, kapsamını, bağlamını ve amaçlarını, ayrıca doğal kişilerin haklarını ve önem derecesini hesaba bağlı olarak dikkate alarak, denetleyici ve işlemci risk için uygun teknik ve kurumsal önlemleri uygulayacak,  uygun olduğu şekilde interlia da dahil: (a) takma ad ve kişisel verilerin şifreleştirilmesi.|Bilgileri koruma|
-||Makale (13)(2)(a)|"... denetleyici, kişisel verilerin alınca adil ve saydam işlem sağlamak için gerekli olan diğer bilgileri veri konusuyla birlikte sağlar: (a) kişisel verilerin depolandığı dönem veya bu mümkün değilse, bu dönemi belirlemek için kullanılan ölçütler.|Geçerli bilgiler|
-||Makale (15)(1)(e)|Veri konusu, ilgili kişisel verilerin işleniyor olup olmadığı ve bu durumda kişisel verilere ve şu bilgilere erişim ile ilgili olarak denetleyici onay kutusundan alma hakkı elde eder: (e) denetleyiciden kişisel verileri düzeltme veya silme hakkının varlığı ya da veri konusuyla ilgili kişisel verilerin işlenmesi ya da bu tür bir nesneye nesne ekleme hakkının var olması işleme|Keşfetme ve yanıtlama|
-|LGPD|Makale 46|İşleme aracıları, kişisel verileri yetkisiz erişimlere, yanlışlıkla veya yasa dışı durumlara karşı yasal olmayan, kayıp, değiştirme, iletişim ya da uygunsuz veya yasa dışı herhangi bir tür işlemeye karşı koruyabilecek güvenlik, teknik ve yönetim önlemleri benimsemektedir.|Bilgileri koruma <br> Geçerli bilgiler <br> Keşfetme ve yanıtlama|
-||Makale 48|Denetleyici, ulusal yetkiliye ve veri konularına risk veya ilgili zararlar oluşturabilecek bir güvenlik olayı oluşması durumuyla ilgili olarak veri konusuyla ilgili iletişim kurmalı.|Keşfetme ve yanıtlama|
-|HIPPA-HITECH|45 CFR 164.312(e)(1)|Bir elektronik iletişim ağı üzerinden iletilen elektronik korumalı sağlık bilgilerine yetkisiz erişimi engellemek için teknik güvenlik önlemleri alın.|Bilgileri koruma|
-||45 C.F.R. 164.312(e)(2)(ii)|Elektronik korumalı sağlık bilgilerini uygun görüldüğü her an şifrelemek için bir mekanizma uygulama.|Bilgileri koruma|
-||45 CFR 164.312(c)(2)|Elektronik korumalı sağlık bilgisinin yetkisiz biçimde değiştirilmedi veya yok edilmeyen durum bilgilerini parolayla değiştirmek için elektronik mekanizmalar uygulama.|Geçerli bilgiler|
-||45 CFR 164.316(b)(1)(i)|Bu alt bölüm için bir eylemin, etkinliğin veya değerlendirmenin belgeye uygun olması gerekirse, eylemin, etkinliğin veya değerlendirmenin yazılı (elektronik olabilir) kaydının korunmasını sağlar|Geçerli bilgiler|
-||45 CFR 164.316(b)(1)(ii)|Bu bölümün paragraf (b)(1) tarafından oluşturulmasından sonraki 6 yıl veya en son yürürlüğe girecek tarih (hangisi daha sonra olursa) için gerekli belgeleri tutma.|Geçerli bilgiler|
-||45 C.F.R. 164.308(a)(1)(ii)(D)|Denetim günlükleri, erişim raporları ve güvenlik olayı izleme raporları gibi bilgi sistemi etkinliğinin kayıtlarını düzenli olarak gözden geçirmek için yordamlar uygulama|Keşfetme ve yanıtlama|
-||45 C.F.R. 164.308(a)(6)(ii)|Şüpheli veya bilinen güvenlik olaylarını tanımlama ve yanıtlama; kapsanacak varlık veya iş ortaklarının bilinen güvenlik olaylarının izin verdiği ölçüde zararlı etkiyi azaltmak; ve belge güvenlik olayları ve bunların sonuçları.|Keşfetme ve yanıtlama|
-||45 C.F.R. 164.312(b)|Elektronik koruma durumu bilgileri içeren veya kullanan bilgi sistemlerindeki etkinliği kaydeden ve inceleyen donanım, yazılım ve yordam mekanizmaları kullanın.|Keşfetme ve yanıtlama|
-|CCPA|1798.105(c)|Bu bölümün alt bölümü (a) uyarınca tüketicinin kişisel bilgilerini silmek için tüketiciden doğrulanabilir bir istek alan bir işletme, tüketicinin kişisel bilgilerini kayıtlarından silebilir ve tüm hizmet sağlayıcılarını, tüketicinin kişisel bilgilerini kayıtlarından silebilir|Keşfetme ve yanıtlama|
-||1798.105(d)|(1798.105(c) <br> İşletmenin veya hizmet sağlayıcının, ticari veya hizmet sağlayıcının kişisel bilgilerini şu şekilde bulundurdu: (ek bilgiler için geçerli düzenlemeye bakın) gerekirse, tüketicinin kişisel bilgilerini silme talebine uyması gerekmez.|Keşfetme ve yanıtlama|
+|GDPR|Madde 5(1)(f)|Kişisel veriler, yetkisiz veya yasa dışı işlemeye karşı koruma ve uygun teknik veya kurumsal önlemler ('bütünlük ve gizlilik' kullanılarak yanlışlıkla kaybedilme, imha veya hasara karşı koruma dahil olmak üzere kişisel verilerin uygun güvenliğini sağlayacak şekilde işlenecektir.|(Tümü) <br> Kimlik <br> Cihaz <br> Tehdit Koruması <br> Bilgileri koruma <br> İdare bilgileri <br> Keşfetme ve yanıtlama|
+||Makale (32)(1)(a)|Sanat durumunu, uygulama maliyetlerini ve doğasını, kapsamını, bağlamını ve işleme amaçlarını ve gerçek kişilerin hak ve özgürlükleri için değişken olasılık ve önem derecesini göz önünde bulundurarak, denetleyici ve işlemci riske uygun bir güvenlik düzeyi sağlamak için uygun teknik ve kurumsal önlemler uygulayacaktır,  uygun şekilde inter alia dahil: (a) kişisel verilerin takma adlandırılması ve şifrelenmesi.|Bilgileri koruma|
+||Makale (13)(2)(a)|"... denetleyici, kişisel veriler elde edildiğinde, veri sahibine adil ve şeffaf bir şekilde işlenmesini sağlamak için gereken aşağıdaki ek bilgileri sağlayacaktır: (a) kişisel verilerin depolanacağı süre veya mümkün değilse, bu süreyi belirlemek için kullanılan ölçütler.|İdare bilgileri|
+||Makale (15)(1)(e)|Veri sahibi, kendisiyle ilgili kişisel verilerin işlenip işlenmediği ve bu durumda kişisel verilere erişim ve aşağıdaki bilgilerle ilgili olarak denetleyici onayı alma hakkına sahip olacaktır: (e) denetleyiciden kişisel verilerin düzeltilmesini veya silinmesini isteme hakkının varlığı ya da kişisel verilerin ilgili verilerle ilgili işlenmesinin kısıtlanması ya da buna itiraz etme hakkı Işleme|Keşfetme ve yanıtlama|
+|LGPD|Madde 46|İşleme aracıları, kişisel verileri yetkisiz erişimlerden ve yanlışlıkla veya yasa dışı imha, kayıp, değiştirme, iletişim ya da herhangi bir uygunsuz veya yasa dışı işleme türünden koruyabilen güvenlik, teknik ve idari önlemleri benimseyecektir.|Bilgileri koruma <br> İdare bilgileri <br> Keşfetme ve yanıtlama|
+||Makale 48|Denetleyicinin ulusal yetkiliye ve veri sahibine, veri öznelerinde risk veya ilgili hasar oluşturabilecek bir güvenlik olayının meydana geldiğini bildirmesi gerekir.|Keşfetme ve yanıtlama|
+|HIPPA-HITECH|45 CFR 164.312(e)(1)|Elektronik iletişim ağı üzerinden iletilen elektronik korumalı sistem durumu bilgilerine yetkisiz erişime karşı korunmak için teknik güvenlik önlemleri uygulayın.|Bilgileri koruma|
+||45 C.F.R. 164.312(e)(2)(ii)|Uygun görüldüğünde elektronik korumalı sistem durumu bilgilerini şifrelemek için bir mekanizma uygulayın.|Bilgileri koruma|
+||45 CFR 164.312(c)(2)|Elektronik korumalı sistem durumu bilgilerinin yetkisiz bir şekilde değiştirilmediğini veya yok edilmediğini doğrulayan elektronik mekanizmalar uygulayın.|İdare bilgileri|
+||45 CFR 164.316(b)(1)(i)|Bu alt bölümün belgelenmiş olması için bir eylem, etkinlik veya değerlendirme gerekiyorsa, eylemin, etkinliğin veya değerlendirmenin yazılı (elektronik olabilir) kaydını koruyun|İdare bilgileri|
+||45 CFR 164.316(b)(1)(ii)|Bu bölümün paragrafı (b)(1) için gereken belgeleri, oluşturulduğu tarihten veya en son yürürlüğe giren tarihten (hangisi daha sonraysa) itibaren 6 yıl boyunca saklayın.|İdare bilgileri|
+||45 C.F.R. 164.308(a)(1)(ii)(D)|Denetim günlükleri, erişim raporları ve güvenlik olayı izleme raporları gibi bilgi sistemi etkinliğinin kayıtlarını düzenli olarak gözden geçirmek için yordamlar uygulayın|Keşfetme ve yanıtlama|
+||45 C.F.R. 164.308(a)(6)(ii)|Şüpheli veya bilinen güvenlik olaylarını belirleme ve yanıtlama; kapsamına alınan varlık veya iş ortağı tarafından bilinen güvenlik olaylarının uygulanabilir, zararlı etkilerini azaltmak; ve güvenlik olaylarını ve bunların sonuçlarını belgelemektedir.|Keşfetme ve yanıtlama|
+||45 C.F.R. 164.312(b)|Elektronik korumalı sistem durumu bilgilerini içeren veya kullanan bilgi sistemlerinde etkinliği kaydeden ve inceleyen donanım, yazılım ve yordam mekanizmaları uygulayın.|Keşfetme ve yanıtlama|
+|CCPA|1798.105(c)|Bir tüketiciden, bu bölümün (a) bölümü uyarınca tüketicinin kişisel bilgilerini silmek için doğrulanabilir bir istek alan bir işletme, tüketicinin kişisel bilgilerini kayıtlarından silecek ve tüm hizmet sağlayıcılarını tüketicinin kişisel bilgilerini kayıtlarından silmeye yönlendirecektir|Keşfetme ve yanıtlama|
+||1798.105(d)|(1798.105(c) özel durumları <br> bir işletmenin veya hizmet sağlayıcısının, tüketicinin kişisel bilgilerini şu şekilde tutması gerekiyorsa, bir işletmenin veya hizmet sağlayıcısının tüketicinin kişisel bilgilerini silme isteğine uyması gerekmeyecektir: (ek bilgi için geçerli yönetmeliğe bakın).|Keşfetme ve yanıtlama|
 |||||
 
 > [!IMPORTANT]
-> Bunun çok kapsamlı bir liste olması hedefle değildir. Listelenen [teknik denetim](../compliance/compliance-manager.md) kategorilerine başvurulan bölümlerin uygulanabilirliği hakkında daha fazla bilgi için Uyumluluk Yöneticisi'ne veya yasal ya da uyumluluk danışmanınıza bakın.
+> Bu, kapsamlı bir liste olarak tasarlanmamıştır. Belirtilen bölümlerin listelenen teknik denetim kategorilerine uygulanabilirliği hakkında daha fazla bilgi için [Uyumluluk Yöneticisi'ne](../compliance/compliance-manager.md) veya yasal veya uyumluluk danışmanınıza başvurun.
 
-## <a name="knowing-your-data"></a>Verilerinizi bilme
+## <a name="knowing-your-data"></a>Verilerinizi öğrenme
 
-Tabi olduğunuz düzenlemelere bakılmaksızın, kuruluş içinde ve dışında farklı kullanıcı veri türlerinin sistemleriniz ile etkileşim kurduğu tüm önemli faktörler, genel kişisel veri koruma stratejinizi etkileyabilecek önemli faktörlerdir; bu faktörler, organizasyonunıza uygun endüstri ve kamu düzenlemelere tabidir. Kişisel verilerin nerede depolandığı, ne tür olduğu, ne kadar kişisel veri bulunduğu ve hangi koşullarda toplandığı bu tür bilgileri kapsar.
+Tabi olduğunuz düzenlemelere bakılmaksızın, kuruluşunuzun içindeki ve dışındaki farklı kullanıcı veri türlerinin sistemlerinizle etkileşime geçtiği durumlarda, kuruluşunuz için geçerli olan sektör ve kamu düzenlemelerine tabi olarak, genel kişisel veri koruma stratejinizi etkileyebilecek tüm önemli faktörlerdir. Bu, kişisel verilerin nerede depolandığını, ne tür olduğunu, ne kadarının bulunduğunu ve hangi koşullarda toplandığını içerir.
 
-![Verilerinizi bilme: Ne tür olduğu, ne kadarı olduğu ve hangi koşullarda toplanmış olduğu.](../media/information-protection-deploy-assess/information-protection-deploy-assess-knowing-data.png)
+![Verilerinizi öğrenme: Ne tür olduğunu, ne kadarının bulunduğunu ve hangi koşullar altında toplandığını öğrenin.](../media/information-protection-deploy-assess/information-protection-deploy-assess-knowing-data.png)
 
 ### <a name="data-portability"></a>Veri taşınabilirliği
 
-Veriler işlendiğinde, zariflendiklerinden ve diğer sürümlerden türetildiklerinden zaman içinde hareket eder. İlk anlık görüntü hiçbir zaman yeterli değildir. Verilerinizi bilmek için devam eden bir işlem yapılması gerekir. Bu, önemli hacimli kişisel verileri işlemekte olan büyük kuruluşların en büyük zorluklarından birini temsil eder. "Verilerinizi biliyor" sorununa çözüm bulmayan kuruluşlar, büyük olasılıkla çok yüksek risklere ve yasal düzenlemelere karşı olası ince bilgilerle sonuçlanabilecektir.
+Veriler ayrıca işlendikçe, iyileştirilirken ve diğer sürümler ondan türetildikçe zaman içinde hareket eder. İlk anlık görüntü hiçbir zaman yeterli olmaz. Verilerinizi bilmek için devam eden bir süreç olmalıdır. Bu, önemli hacimlerde kişisel verileri işleyen büyük kuruluşlar için en büyük zorluklardan birini temsil eder. "Verilerinizi bilin" sorununu gidermeyen kuruluşlar büyük olasılıkla çok yüksek risklere ve düzenleyici kurumlardan olası para cezalarına neden olabilir.
 
 ![Veri yaşam döngüsü.](../media/information-protection-deploy-assess/information-protection-deploy-assess-data-lifecycle.png)
 
-### <a name="where-the-personal-data-is"></a>Kişisel verilerin nerede olduğu
+### <a name="where-the-personal-data-is"></a>Kişisel verilerin bulunduğu yer
 
-Veri gizliliği düzenlemelerine yönelik olarak, kişisel verilerin şu anda veya gelecekte var olabileceğini düşünmeniz gereken genel notlara güvenebilirsiniz. Veri gizliliği düzenlemeleri, kuruluşların kişisel verilerin nerede olduğunu sürekli olarak biliyor olduklarını kanıtlamalarını gerektirir. Bu, Microsoft 365 ortamınız da dahil olmak üzere kişisel bilgilerin olası depolanması için tüm veri kaynaklarınızı içeren ilk anlık görüntüyü almanızı ve sürekli izleme ve algılama için mekanizmalar oluşturmanızı önemli yapar.
+Veri gizliliği düzenlemelerini ele almak için, kişisel verilerin şu anda veya gelecekte nerede mevcut olabileceğini düşündüğünüze ilişkin genel düşüncelere güvenemezsiniz. Veri gizliliği düzenlemeleri, kuruluşların kişisel verilerin nerede olduğunu sürekli olarak bildiklerini kanıtlamalarını gerektirir. Bu, Microsoft 365 ortamınız da dahil olmak üzere olası kişisel bilgilerin depolanması için tüm veri kaynaklarınızın ilk anlık görüntüsünü almayı ve sürekli izleme ve algılama mekanizmaları oluşturmanızı önemli kılar.
 
-Veri gizliliği düzenlemeleriyle ilişkili genel hazırlık ve risklerinizi henüz değerlendirmedıysanız, kullanmaya başlamanız için aşağıdaki 3 adımlık çerçeveyi kullanın.
+Veri gizliliği düzenlemeleriyle ilişkili genel hazırlığınızı ve riskinizi henüz değerlendirmediyseniz, başlamak için aşağıdaki 3 adımlı çerçeveyi kullanın.
 
-![Veri gizliliği düzenlemeleriyle ilişkili genel hazırlık ve risklerinizi değerlendirme adımları.](../media/information-protection-deploy-assess/information-protection-deploy-assess-grid.png)
+![Veri gizliliği düzenlemeleriyle ilişkili genel hazırlığınızı ve riskinizi değerlendirme adımları.](../media/information-protection-deploy-assess/information-protection-deploy-assess-grid.png)
 
 > [!NOTE]
-> Bu makalenin ve içeriğinin yasal danışmanlık hizmetlerini yerine götürmesi gerekli değildir. Yalnızca değerlendirmenizin ilk aşamalarında yardımcı olacak bazı temel rehberlik ve araçlara bağlantılar sağlar.
+> Bu makalenin ve içeriğinin yasal danışmanlık hizmetlerinin yerini alması amaçlanmamaktadır. Yalnızca değerlendirmenizin ilk aşamalarında yardımcı olabilecek bazı temel yönergeler ve araçlara bağlantılar sağlar.
 
-## <a name="step-1-develop-a-foundational-understanding-of-your-organizations-personal-data-scenarios"></a>1. Adım: Kuruluş kişisel veri senaryolarını temelden anlama
+## <a name="step-1-develop-a-foundational-understanding-of-your-organizations-personal-data-scenarios"></a>1. Adım: Kuruluşunuzun kişisel veri senaryoları hakkında temel bir anlayış geliştirme
 
-Şu anda yönetmekte olduğu kişisel verilerin türüne, nerede depolandığına, hangi koruyucu denetimlerin yerleştiril aralığına, yaşam döngüsünün nasıl yönetillandığına ve bu verilere kimlerin erişimi olduğuna bağlı olarak, veri gizliliği riskine maruz kalmaktan korunmayı ölçmeniz gerekir.
+Şu anda yönettiği kişisel verilerin türüne, nerede depolandığına, hangi koruyucu denetimlerin yerleştirildiğine, yaşam döngüsünün nasıl yönetildiğine ve kimlerin eriştiğine bağlı olarak veri gizliliği riskine maruz kalma riskini ölçmeniz gerekir.
 
-Başlangıç noktası olarak, bu ortamda kişisel verilerin türlerinde bulunan kişisel verilerin envanterini Microsoft 365 önemlidir. Şu kategorileri kullanın:
+Başlangıç noktası olarak, Microsoft 365 ortamınızda ne tür kişisel verilerin mevcut olduğunu envantere kaydetmek önemlidir. Şu kategorileri kullanın:
 
-- Günlük iş işlevlerini yerine taşımak için gereken çalışan verileri
-- Kuruluşun, işletmelere ilişkin (B2B) senaryolarında iş müşterileri, iş ortakları ve diğer ilişkileriyle ilgili verileri var
-- Kuruluşun, kurumsal müşteri (B2C) senaryosunda yöneten çevrimiçi hizmetlere bilgi sağlayan tüketicilerle ilgili verileri
+- Günlük iş işlevlerini gerçekleştirmek için gereken çalışan verileri
+- Kuruluşun işletmeden işletmeye (B2B) senaryosundaki iş müşterileri, iş ortakları ve diğer ilişkileri hakkında sahip olduğu veriler
+- Kuruluşun işletmeden müşteriye (B2C) senaryosunda yönettiği çevrimiçi hizmetler bilgi sağlayan tüketiciler hakkında sahip olduğu veriler
 
-Burada, bir kuruluşun tipik departmanları için farklı veri türleri örneği ve almaktadır.
+Burada, bir kuruluşun tipik bölümleri için farklı veri türlerinin bir örneği verilmiştir.
 
 ![Kişisel veri türleri.](../media/information-protection-deploy-assess/information-protection-deploy-assess-data-types.png)
 
-Veri gizlilik düzenlemeye tabi olan kişisel verilerin büyük bir çoğu normalde verilerin dışında toplanır ve Microsoft 365. Tüketiciye yönelik web veya mobil uygulamalardan gelen tüm kişisel verilerin, kişisel verilerin Microsoft 365 gizlilik incelemesine tabi olması için söz konusu uygulamalardan Microsoft 365.
+Veri gizliliği düzenlemesine tabi olan kişisel verilerin çoğu genellikle Microsoft 365 dışında toplanır ve depolanır. Tüketiciye yönelik web veya mobil uygulamalardan gelen tüm kişisel verilerin Microsoft 365 içinde veri gizliliği incelemesine tabi olması için bu tür uygulamalardan Microsoft 365'a aktarılmış olması gerekir.
 
-Bu çözümün karşı kullanma Microsoft 365, web uygulamalarınıza ve CRM sistemlerinize göre daha sınırlı olabilir.
+Microsoft 365'de verilerinizin gizliliğine maruz kalmanız web uygulamalarınıza ve CRM sistemlerinize göre daha sınırlı olabilir ve bu çözüm bu çözümle ilgili değildir.
 
-Risk profilinizi değerlendirirken aşağıdaki yaygın veri gizliliği uyumluluğu güçlüklerini düşünmek de önemlidir:
+Risk profilinizi değerlendirirken aşağıdaki yaygın veri gizliliği uyumluluk güçlükleri hakkında düşünmek de önemlidir:
 
-- **Kişisel veri dağıtımı.** Dağılımlı bir konu hakkında ne kadar bilgi var? Mevzuat gövdelerini düzgün denetimlerin yerine konul olduğuna ikna etmek için iyi bilinen bir bilgi mi var? Gerekirse araştırma ve düzeltme olabilir mi?
-- **Sızıntıya karşı koruma.** Verili bir türün veya kaynağın kişisel verilerini güvenliği ihlallerden nasıl korursunuz ve varsa nasıl yanıt verirsiniz?
-- **Koruma ve risk.** Hangi bilgi koruma mekanizmaları risklere göre uygun olup, iş sürekliliğini ve üretkenliğini nasıl sürdürecek ve son kullanıcı müdahalesi gerekli olduğunda son kullanıcı etkisini en aza indirecektir? Örneğin elle sınıflandırma veya şifreleme kullanılmalı mı?
-- **Kişisel veri bekletme.** Kişisel verileri içeren bilgilerin geçerli iş nedenleriyle ne kadar süreyle korunması ve geçmiş kalıcı saklama uygulamalarından nasıl kaçınılması gerekir ve iş sürekliliği için bekletme ihtiyaçlarıyla dengelemek gerekir?
-- **Veri konusu isteklerini işleme.** Veri konusu isteklerini (DSR) ve anonimleştirme, yeniden işleme ve silme gibi düzeltme işlemlerini işlemek için hangi mekanizmalara ihtiyaç duyulacak?
-- **Sürekli izleme ve raporlama.** Farklı veri türleri ve kaynakları için hangi tür günlük izleme, yatırım teknikleri ve raporlama teknikleri vardır?
-- **Veri işlemeyle ilgili sınırlamalar.** Kuruluşun gizlilik denetimlerine yansıtması gereken bu yöntemler aracılığıyla toplanan veya depolanan bilgiler için veri kullanımında sınırlamalar var mı? Örneğin, kişisel verilerin satış personeli tarafından kullanılamayacak taahhütleri, satış kuruluşuyla ilişkili sistemlerde söz konusu bilgilerin aktarımını veya depolanmasını önleyen mekanizmalar koymasını gerekli bulundurabilirsiniz.
+- **Kişisel veri dağıtımı.** Belirli bir konu hakkındaki bilgiler ne kadar dağınıktır? Yasal kuruluşları uygun denetimlerin gerçekleştiğine ikna edecek kadar iyi biliniyor mu? Gerekirse araştırılabilir ve düzeltilebilir mi?
+- **Sızdırmaya karşı koruma.** Belirli bir tür veya kaynağın kişisel verilerini tehlikeye atılmaktan nasıl korursunuz ve varsa nasıl yanıt verirsiniz?
+- **Koruma ve risk karşılaştırması.** Riskle ilgili olarak hangi bilgi koruma mekanizmaları uygundur ve son kullanıcı müdahalesi gerekiyorsa iş sürekliliğini ve üretkenliği nasıl sürdürür ve son kullanıcı etkisini en aza indirir? Örneğin, el ile sınıflandırma veya şifreleme kullanılmalı mı?
+- **Kişisel veri saklama.** Geçerli iş nedenleriyle kişisel verileri içeren bilgilerin ne kadar süreyle saklanması gerekiyor ve iş sürekliliği için saklama gereksinimleriyle dengelenmiş, geçmişteki sonsuza kadar saklama uygulamalarından nasıl kaçınılır?
+- **Veri sahibi isteklerini işleme.** Veri sahibi isteklerini (DSR) ve anonimleştirme, yeniden düzenleme ve silme gibi herhangi bir düzeltme eylemini işlemek için hangi mekanizmalar gerekir?
+- **Sürekli izleme ve raporlama.** Farklı veri türleri ve kaynakları için günlük izleme, araştırma ve raporlama teknikleri ne tür kullanılabilir?
+- **Veri işlemeyle ilgili sınırlamalar.** Kuruluşun gizlilik denetimlerinde yansıtması gereken bu yöntemler aracılığıyla toplanan veya depolanan bilgiler için veri kullanımıyla ilgili sınırlamalar var mı? Örneğin, satış personeli tarafından kişisel verilerin kullanılmayacağı taahhütleri, kuruluşunuzun bu bilgilerin satış kuruluşuyla ilişkili sistemlerde aktarılmasını veya depolanmasını önlemek için mekanizmalar koymasını gerektirebilir.
 
-### <a name="employee-data-required-to-carry-out-day-to-day-business-functions"></a>Günlük iş işlevlerini yerine taşımak için gereken çalışan verileri
+### <a name="employee-data-required-to-carry-out-day-to-day-business-functions"></a>Günlük iş işlevlerini gerçekleştirmek için gereken çalışan verileri
 
-Doğaya göre kuruluşların, çalışan sözleşmelerinde kabul edildiklerine bağlı olarak elektronik kimlik ve İk amaçlarına uygun olarak çalışanlar üzerinde veri toplaması gerekir. Bir şirket için çalışan kişiler olduğu sürece, bu normalde bir sorun değildir. Kuruluş, çalışan kişisel verilerine sızıntı veya sızdırma amaçlı kötü amaçlı etkiyi önleyen mekanizmalar koymak istiyor olabilir.
+Doğası gereği kuruluşların, çalışan sözleşmelerinde kabul ettiklerine bağlı olarak elektronik kimlik ve İk amaçları için çalışanlar hakkında veri toplaması gerekir. Bir kişi bir şirkette çalıştığı sürece, bu genellikle bir sorun değildir. Kuruluş, kötü amaçlı aktörlerin çalışan kişisel verilerini sızdırmasını veya sızdırmasını önlemek için mekanizmalar koymak isteyebilir.
 
-Bir kişi şirketten ayrılırsa, kuruluşların normalde kullanıcı hesaplarını kaldırma, posta kutularını ve kişisel sürücüleri kaldırma ve insan kaynakları sistemleri gibi sistemlerde çalışan durumunu değiştirmeyle ilgili süreçler, yordamlar, bekletme ve silme zamanlamaları olur. Davanın söz konusu olduğu durumlarda, bir çalışan veya başka bir taraf yasal soruşturma için geçerli nedenler kuruluşun sistemlerinde depolanan kişisel veriler hakkında bilgi almak için geçerli nedenlere sahip olabilir. Bazı durumlarda, taraf bu tür verilerin kaldırılmasını veya anonim hale getirildirildiğini talep ediyor olabilir.
+Bir kişi şirketten ayrılırsa kuruluşların genellikle kullanıcı hesaplarını kaldırma, posta kutularının ve kişisel sürücülerin yetkisini alma ve insan kaynakları sistemleri gibi durumlarda çalışan durumunu değiştirme işlemleri, yordamları ve saklama ve silme zamanlamaları vardır. Davanın söz konusu olduğu durumlarda, bir çalışanın veya yasal soruşturmanın başka bir tarafı, kuruluşun sistemlerinde depolanan kişisel veriler hakkında bilgi almak için geçerli nedenlere sahip olabilir. Bazı durumlarda, söz konusu taraf bu tür verilerin kaldırılmasını veya anonim olmasını isteyebilir.
 
-Bu tür ihtiyaçları karşılamak için kuruluşların, bu tür istekleri kolaylaştıracak önlem ve yordamlara sahip olması gerekir. Bir çalışanla ilgili bazı bilgilerin makul bir şekilde iş sürekliliği açısından kritik öneme sahip olduğunu göz önüne alınmalıdır. Örneğin, bir kişinin bir dosya yazması veya bir işlev gerçekleştirilen bilgiler.
+Kuruluşların bu tür ihtiyaçları karşılamak için, bu tür istekleri kolaylaştırmaya yönelik önleyici, dedektif ve düzeltici ihtiyaçları ele alan süreçler ve yordamlar olması gerekir ve bir çalışan hakkındaki bazı bilgilerin iş sürekliliği açısından makul bir şekilde önemli olarak değerlendirilebileceğini unutmayın. Örneğin, bir kişinin bir dosya yazdığını veya bir işlev gerçekleştirdiğini gösteren bilgiler.
 
 > [!NOTE]
-> Bu makaledeki kişisel verilere yatırım ve düzeltme teknikleri Microsoft 365, makaleyi izleme [ve yanıtlama makalesine bakın](information-protection-deploy-monitor-respond.md). Ayrıca, kişisel verilerin kuruluş içindeyken denetlenmakta olduğundan emin olmak ve kötü niyetli kuruluşlarda kuruluştan ayrılarak bu verilerin denetim altında olduğundan emin olmak için otomatik sınıflandırma ve koruma düzenlerini de kullanırabilirsiniz. Daha fazla [bilgi için koruma bilgileri](information-protection-deploy-protect-information.md) makalesine bakın.
+> Microsoft 365'daki kişisel verilere yönelik araştırma ve düzeltme teknikleri için [izleme ve yanıtlama makalesine](information-protection-deploy-monitor-respond.md) bakın. Ayrıca, kişisel verilerin kuruluş içindeyken denetlendiğinden emin olmak ve kötü amaçlı aktör durumlarında kuruluştan ayrılmasını önlemek için otomatik sınıflandırma ve koruma şemaları kullanmak isteyebilirsiniz. Daha fazla [bilgi için bilgileri koruma makalesine](information-protection-deploy-protect-information.md) bakın.
 
-### <a name="data-the-organization-has-about-its-business-customers-in-the-b2b-scenario"></a>B2B senaryosunda kuruluşun iş müşterileri hakkında sahip olduğu veriler
+### <a name="data-the-organization-has-about-its-business-customers-in-the-b2b-scenario"></a>B2B senaryosunda kuruluşun işletme müşterileri hakkında sahip olduğu veriler
 
-B2B bilgilerini toplama da çok zor olabilir, çünkü kuruluş müşteri adlarının ve işlemlerin kayıtlarını iş sürekliliği amacıyla çeşitli sistemlerde tutması, ancak bu bilgilerin yanlışlıkla veya kötü amaçlı sızıntılara karşı korunmasına ihtiyaç olabilir. Kuruluşların, çalışan verileri gibi, bu tür verileri korumak için ilkeleri, yordamları ve teknik denetimleri olması ve bu verileri tanımlı bekletme ve silme zamanlamaları göre yaşlarını ayamaları gerekir.
+B2B bilgilerinin toplanması da zor bir durumdur çünkü kuruluşunuzun iş sürekliliği amacıyla çeşitli sistemlerinde müşteri adlarının ve işlemlerinin kayıtlarını tutması gerekebilir ancak bu bilgiler yanlışlıkla veya kötü amaçlı sızdırmaya karşı korunur. Çalışanların verileri gibi kuruluşların da bu tür verileri korumak için ilkeleri, yordamları ve teknik denetimleri olması ve tanımlanan saklama ve silme zamanlamalarına göre eskimesi gerekir.
 
-Normalde, dış müşteriler, ortaklar ve kuruluşun iş yaptığı diğer varlıklarla sözleşmeler, kuruluşun kuruluşla bir ilişkisi olduğu zaman ve sonrasında koruma, bekletme ve silme de dahil olmak üzere bu verilerin işlenmesine çözüm olarak dil bilgilerine sahip olur.
+Genellikle dış müşteriler, iş ortakları ve kuruluşun iş yaptığı diğer varlıklarla yapılan sözleşmelerde koruma, saklama ve silme dahil olmak üzere kuruluşun kuruluşla ilişkisi olduğu sırada ve sonrasında bu verilerin işlenmesini ele alan bir dil bulunur.
 
-### <a name="data-the-organization-has-about-consumers-who-provide-information-to-online-services-that-the-organization-manages-in-the-b2c-scenario"></a>Kuruluşun B2C senaryosunda yöneten çevrimiçi hizmetlere bilgi sağlayan tüketiciler hakkında sahip olduğu veriler
+### <a name="data-the-organization-has-about-consumers-who-provide-information-to-online-services-that-the-organization-manages-in-the-b2c-scenario"></a>Kuruluşun B2C senaryosunda yönettiği çevrimiçi hizmetler bilgi sağlayan tüketiciler hakkında sahip olduğu veriler
 
-Bu kategori, birçok genel müşteri veri sızıntıları nedeniyle veri gizliliği hakkında en çok insanların düşünmesi gereken kategoridir. Bu, sağlayıcıya yapılan bir sözleşmenin üçüncü taraf olması veya kötü niyetli bir ifadeyle ortaya alınması gibi bilerek yapılan bir durum olabilir. Tüketici verileri koruması, AB ve diğerlerinde bu düzenlemelerin başlıca nedenlerinden biridir. GDPR ve CCPA gibi veri gizliliğiyle ilgili düzenlemeler için planlama yapmayı gerektirir:
+Bu kategori, birçok genel müşteri veri sızıntısı örneği nedeniyle çoğu kişinin veri gizliliği için düşündüğü kategoridir. Bu, sağlayıcıyla sözleşme kapsamındaki üçüncü bir taraf gibi kasıtlı veya kötü amaçlı bir aktör tarafından sızma gibi kasıtsız olabilir. Tüketici verilerinin korunması, AB ve diğerlerinin bu düzenlemeleri düzenlemesinin başlıca nedenlerinden biridir. GDPR ve CCPA gibi veri gizliliği düzenlemeleri için planlama yapmanız gerekir:
 
-- [Eylem planları](/compliance/regulatory/gdpr-action-plan) [ve sorumluluk hazırlığı denetim listeleri](/compliance/regulatory/gdpr-arc-Office365)
-- [Veri Koruması Değerlendirmeleri Etkiliyor](/compliance/regulatory/gdpr-data-protection-impact-assessments)
+- [Eylem planları](/compliance/regulatory/gdpr-action-plan) ve [sorumluluk hazırlığı denetim listeleri](/compliance/regulatory/gdpr-arc-Office365)
+- [Veri Koruma Etki Değerlendirmeleri](/compliance/regulatory/gdpr-data-protection-impact-assessments)
 - [İhlal bildirimleri](/compliance/regulatory/gdpr-breach-Office365)
-- [Veri konusu istekleri](/compliance/regulatory/gdpr-dsr-Office365)
+- [Veri sahibi istekleri](/compliance/regulatory/gdpr-dsr-Office365)
 
-If your organization does do çok fazla doğrudan-from-consumer data collection, this category may be less of an issue. Bununla birlikte, uyumluluğu elde etmek için yine de bu makalelerde ana hatları verilen işlemlerin üzerinden geçerek devam edin.
+Kuruluşunuz çok fazla doğrudan tüketiciden veri toplama işlemi gerçekleştirmiyorsa, bu kategori daha az sorun olabilir. Ancak, uyumluluk elde etmek için bu makalelerde özetlenen işlemleri yine de yapmanız gerekebilir.
 
-### <a name="step-1-summary"></a>Adım 1 özeti
+### <a name="step-1-summary"></a>1. Adım özeti
 
-Riske maruz kalmanızı ve veri gizlilik düzenlemelerini anlamanız, kurum verilerinizle ilgili senaryoları temelden anlamak temel öneme sahip bir adımdır.
+Risk ve veri gizliliği düzenlemelerine maruz kalma durumunuzu anlamak, kuruluşunuzun kişisel veri senaryolarını temel alan önemli bir ilk adımdır.
 
-Microsoft 365 ortamınıza tüketicilerden gelen kişisel verileriniz yoksa veya bu veriler ortamın belirli bölümleriyle sınırlı kalacaksa ve teknik denetime gerek kalmaları, tüketici türünde verilerin maruz kalma olarak maruz kalmalarına neden oluyorsa, bu teknik denetimin her yerde değil, yalnızca ortamın yüksek riskli bölümlerine yer olması gerekir.
+Microsoft 365 ortamınızda tüketicilerden gelen kişisel verileriniz yoksa veya ortamın belirli bölümleriyle sınırlıysa ve teknik denetim gereksinimi, tüketici türündeki verilerin açığa çıkarıldığına göre önceden belirtiliyorsa, bu teknik denetimin her yerde değil, yalnızca ortamın yüksek riskli bölümlerinde çalıştırılması gerekebilir.
 
-Microsoft 365'ta Uyumluluk Yöneticisi'nin önerisini gibi bir dış kuruluş veya standart denetim kümesi önerisi denetim stratejinizi bilgilendirmeye yardımcı olabilir, ancak gerçek riskin ne kadar açık olacağını ölçmek için uygulama seçiminiz veri stoku farkındalığıyla yönlendirildi.
+Microsoft 365'daki Uyumluluk Yöneticisi gibi bir dış kuruluş veya standart denetim kümesi önerisi denetim stratejinizi bilgilendirmeye yardımcı olabilir ancak gerçek risk kapsamınızı belirlemek için uygulama seçiminiz veri envanteri farkındalığı tarafından yönlendirilmelidir.
 
-Çoğu kuruluş, yukarıdaki senaryolardan birinin maruz kalmak zorunda kalma süresine sahip olur. Değerlendirmeye holist bir yaklaşım benimser almak önemlidir.
+Çoğu kuruluş, yukarıdaki senaryolardan birine maruz kalacaktır. Değerlendirmeye bütüncül bir yaklaşım benimsemek önemlidir.
 
-## <a name="step-2-assess-your-readiness-for-complying-with-data-privacy-regulations"></a>2. Adım: Veri gizliliği düzenlemelerine uyumlu olmak için hazırlığınızı değerlendirin
+## <a name="step-2-assess-your-readiness-for-complying-with-data-privacy-regulations"></a>2. Adım: Veri gizliliği düzenlemelerine uymaya hazır olma durumunuzu değerlendirme
 
-GDPR'ye özgü olsa da, ücretsiz [Microsoft GDPR](https://clouddamcdnprodep.azureedge.net/gdc/1863571/original) değerlendirme aracında yer alan sorular, genel veri gizliliği hazırlığınızı anlama yolunda iyi bir başlangıç sağlar.
+GDPR'ye özgü olsa da, ücretsiz [Microsoft GDPR değerlendirme aracında](https://clouddamcdnprodep.azureedge.net/gdc/1863571/original) sunulan sorular, genel veri gizliliği hazırlığınızı anlamak için iyi bir başlangıç sağlar.
 
-Kuruluşlar, ABD'deki CCPA veya Brazil's LGPD gibi diğer veri gizlilik düzenlemelerine tabidirler, GDPR ile birlikte, bu aracın hazırlık nedeniyle örtüşen hazırlık hükümlerinin envanteri de yararlanabilir.
+Birleşik Devletler CCPA veya Brezilya'nın LGPD'si gibi diğer veri gizliliği düzenlemelerine tabi olan kuruluşlar, bu aracın GDPR ile çakışan hükümlerden dolayı hazır olma envanterinden de yararlanabilir.
 
 GDPR değerlendirmesi şu bölümlerden oluşur:
 
 |Bölüm|Açıklama|
 |:-------|:-----|
-|İdare|<ol><li>Gizlilik ilkeniz hangi veri bilgisinin işleniyor olduğunu açıkça belirtir mi? </li><li>Gizlilik Üzerinde Etki Değerlendirmelerini (PIA) düzenli olarak mı çalıştırıyorsunuz? </li><li> Kişisel bilgileri (Pİ) yönetmek için araç kullanıyor musunuz? </li><li> Herhangi bir bir kişide Pİ verilerini kullanarak iş yapmaya yasal yetkiniz var mı? Veriler için onayı izley var mı? </li><li> Denetim denetimlerini izleme, uygulama ve yönetme Veri sızıntılarını mı izleylisiniz? </li></ol>|
-|Silme ve bildirim|<ol><li>Kullanıcıların verilerine nasıl erişilebilir olduğuyla ilgili açık yönergeler mi sunuyorsunuz? </li><li> Geri almayı iptal iznini işlemeye devam etmek için belgelenmiş işlemleriniz var mı? </li><li> Veriler için otomatik silme işleminiz mi var? </li><li> Bir müşteriyle cazip hale getirirken kimliği doğrulama işleminiz mi var? </li></ol>|
-|Risk azaltma ve bilgi güvenliği|<ol><li>Yapılandırılmamış verileri taramak için araçlar kullanıyor musunuz? </li><li>Tüm sunucular güncel mi ve bunları korumak için güvenlik duvarı kullanıyor musunuz? </li><li>Sunucularınızı düzenli aralıklarla mı çalıştırıyorsunuz? </li><li>Veri sızıntılarını etkin olarak mı izleylisiniz? </li><li>İletim devam ettir yerinde ve iletimde verilerinizi şifreler misiniz? </li></ol>|
-|İlke yönetimi|<ol><li>Bağlayıcı Şirket Kurallarınızı (BCR) nasıl yönetirsiniz? </li><li>Veriler için onayı izley var mı? </li><li> 1 ile 5 arasında bir ölçekte, 5'in tamamen kapsaması konusunda sözleşmeniz veri sınıflandırmalarını ve gereksinimlerini karşılar mı? </li><li>Bir olay yanıt planınız var ve düzenli olarak test ediyor musunuz? </li><li>Erişimi yönetmek için hangi ilkeyi kullanırsınız? </li></ol>|
+|İdare|<ol><li>Gizlilik ilkeniz hangi veri bilgilerinin işlendiğini açıkça belirtir mi? </li><li>Gizlilik Etkisi Değerlendirmelerini (PIA) düzenli olarak çalıştırıyor musunuz? </li><li> Kişisel bilgileri (PI) yönetmek için bir araç kullanıyor musunuz? </li><li> Belirli bir kişi üzerinde PI verilerini kullanarak iş yapma konusunda yasal yetkiniz var mı? Veriler için onayı izliyor musunuz? </li><li> Denetim denetimlerini izliyor, uyguluyor ve yönetiyor musunuz? Veri sızıntılarını izliyor musunuz? </li></ol>|
+|Silme ve bildirim|<ol><li>Kullanıcıların verilerine nasıl erişilebileceği hakkında açık yönergeler veriyor musunuz? </li><li> Onay almayı geri çevirme işlemini işlemek için belgelenmiş süreçleriniz var mı? </li><li> Veriler için Otomatik Silme işleminiz var mı? </li><li> Müşteriyle etkileşime geçtiğinde kimliği doğrulama işleminiz var mı? </li></ol>|
+|Risk azaltma ve bilgi güvenliği|<ol><li>Yapılandırılmamış verileri taramak için araçlar kullanıyor musunuz? </li><li>Tüm sunucular güncel mi ve bunları korumak için güvenlik duvarlarından yararlanıyor musunuz? </li><li>Sunucularınızın düzenli yedeklemelerini çalıştırıyor musunuz? </li><li>Veri sızıntılarını etkin bir şekilde izliyor musunuz? </li><li>Bekleyen ve iletimdeki verilerinizi şifreler misiniz? </li></ol>|
+|İlke yönetimi|<ol><li>Bağlama Şirket Kurallarınızı (BCR) nasıl yönetirsiniz? </li><li>Veriler için onayı izliyor musunuz? </li><li> Tamamen kapsanan 1 ile 5 arasında bir ölçekte sözleşmeleriniz veri sınıflandırmalarını ve işleme gereksinimlerini kapsıyor mu? </li><li>Bir olay yanıt planınız var mı ve düzenli olarak test mi edindiniz? </li><li>Erişimi yönetmek için hangi ilkeyi kullanırsınız? </li></ol>|
 |||
 
-## <a name="step-3-identify-sensitive-information-types-that-occur-in-your-microsoft-365-environment"></a>3. Adım: Çalışma ortamınıza gelen hassas bilgi Microsoft 365 belirleme
+## <a name="step-3-identify-sensitive-information-types-that-occur-in-your-microsoft-365-environment"></a>3. Adım: Microsoft 365 ortamınızda gerçekleşen hassas bilgi türlerini belirleme
 
-Bu adım, belirli mevzuat denetimlerine tabi olan belirli hassas bilgi türlerinin tanımlanması ve bu tür bilgilerin ortamınıza Microsoft 365 içerir.
+Bu adım, belirli yasal denetimlere tabi olan belirli hassas bilgi türlerinin tanımlanmasını ve bunların Microsoft 365 ortamınızda oluşumunu içerir.
 
-Kişisel içerik içeren ortamınıza içerik bulmak, önceden Uyumluluk Araması, eKbulma, Advanced eDiscovery, DLP ve denetim gibi içeriklerin bir bileşimini içeren formlara uygun bir görev olabilir.
+Ortamınızda kişisel içerik içeren içerik bulmak, daha önce Uyumluluk Arama, eBulma, Advanced eDiscovery, DLP ve denetimin bir birleşimini içeren, zor bir görev olabilir.
 
-Microsoft Uyumluluk yönetim  merkezinde yer alan yeni Veri Sınıflandırma çözümüyle, kişisel verilerle ilgili olanlar da dahil olmak [](../compliance/data-classification-content-explorer.md) üzere yerleşik veya özel hassas bilgi türleriyle çalışan İçerik Gezgini özelliği sayesinde bu özellik çok daha kolay hale geldi.
+Microsoft Uyumluluk yönetim merkezindeki yeni **Veri Sınıflandırma** çözümü ile bu, kişisel verilerle ilgili olanlar da dahil olmak üzere yerleşik veya özel hassas bilgi türleriyle çalışan [İçerik Gezgini](../compliance/data-classification-content-explorer.md) özelliğiyle çok daha kolay hale gelmiştir.
 
 ### <a name="sensitive-information-types"></a>Hassas bilgi türleri
 
-Microsoft Uyumluluk yönetim merkezi, büyük bir çoğu kişisel verileri tanımlama ve bulma ile ilgili olarak 100'den fazla hassas bilgi türü önceden yüklenmiş olarak gelir. Bu yerleşik hassas bilgi türleri, normal ifade (regex) veya işlev tarafından tanımlanan desenlere bağlı olarak kredi kartı numaralarını, banka hesap numaralarını, pasaport numaralarını ve daha fazlasını tanımlamanıza ve korumanıza yardımcı olabilir. Daha fazla bilgi edinmek için [bkz. Hassas bilgi türleri nasıl görünüyor](../compliance/sensitive-information-type-entity-definitions.md)?
+Microsoft Uyumluluk yönetim merkezi, çoğu kişisel verileri tanımlama ve bulma ile ilgili 100'den fazla hassas bilgi türüyle önceden yüklenmiş olarak gelir. Bu yerleşik hassas bilgi türleri, normal ifade (regex) veya işlev tarafından tanımlanan desenlere göre kredi kartı numaralarını, banka hesap numaralarını, pasaport numaralarını ve daha fazlasını tanımlamaya ve korumaya yardımcı olabilir. Daha fazla bilgi edinmek için bkz [. Hassas bilgi türleri ne arar](../compliance/sensitive-information-type-entity-definitions.md)?
 
-Çalışan kimlikleri için özel biçim veya yerleşik hassas bilgi türünde ele henüz kapsamış olmayan diğer kişisel bilgiler gibi, kuruluşa özgü veya bölgesel bir hassas öğe türünü tanımlamanız ve korumanız gerekirse, şu yöntemlerle özel bir hassas bilgi türü oluşturabilirsiniz:
+Çalışan kimlikleri için özel biçim veya yerleşik hassas bilgi türü kapsamında olmayan diğer kişisel bilgiler gibi kuruluşa özgü veya bölgesel türde hassas öğeleri tanımlamanız ve korumanız gerekiyorsa, şu yöntemlerle özel bir hassas bilgi türü oluşturabilirsiniz:
 
 - PowerShell
-- Tam veri eşleşmesi olan özel kurallar (EDM)
-- Uyumluluk Puanı ve Uyumluluk Yöneticisi'ni Kullanma makalesinde vurgulanan [Uyumluluk Merkezi yönetici arabirimi aracılığıyla](information-protection-deploy-compliance.md)
+- Tam veri eşleşmesi (EDM) ile özel kurallar
+- [Uyumluluk Puanı ve Uyumluluk Yöneticisi'ni Kullanma makalesinde](information-protection-deploy-compliance.md) vurgulandığı gibi Uyumluluk Merkezi yönetici kullanıcı arabirimi aracılığıyla
 
-Ayrıca, var olan ve yerleşik hassas bilgi türünü özelleştirebilirsiniz.
+Ayrıca mevcut, yerleşik hassas bilgi türünü özelleştirebilirsiniz.
 
 Daha fazla bilgi için şu makalelere bakın:
 
 - [Yerleşik hassas bilgi türünü özelleştirme](../compliance/customize-a-built-in-sensitive-information-type.md)
-- [Hassas bilgi türleri hakkında bilgi](../compliance/sensitive-information-type-learn-about.md)
-- [Güvenlik ve Uyumluluk Merkezi'nde özel ve hassas & oluşturma](../compliance/create-a-custom-sensitive-information-type.md)
-- [Güvenlik ve Uyumluluk Merkezi PowerShell'de özel & bilgi türü oluşturma](../compliance/create-a-custom-sensitive-information-type-in-scc-powershell.md)
-- [Tam Veri Eşleşmesi tabanlı sınıflandırmayla özel hassas bilgi türleri oluşturma](../compliance/create-custom-sensitive-information-types-with-exact-data-match-based-classification.md)
+- [Hassas bilgi türleri hakkında daha fazla bilgi edinme](../compliance/sensitive-information-type-learn-about.md)
+- [Güvenlik & Uyumluluk Merkezi'nde özel hassas bilgi türü oluşturma](../compliance/create-a-custom-sensitive-information-type.md)
+- [Güvenlik & Uyumluluk Merkezi PowerShell'de özel hassas bilgi türü oluşturma](../compliance/create-a-custom-sensitive-information-type-in-scc-powershell.md)
+- [Tam Veri Eşleşmesi tabanlı sınıflandırma ile özel hassas bilgi türleri oluşturma](../compliance/create-custom-sensitive-information-types-with-exact-data-match-based-classification.md)
 
 ### <a name="content-explorer"></a>İçerik Gezgini
 
-Ortamınıza hassas öğelerin tekrarını belirlemeye yardımcı olan önemli bir araç, Uyumluluk Yönetim Merkezi'nde bulunan yeni Microsoft 365 aracıdır.[](../compliance/data-classification-content-explorer.md) Bu, hassas bilgi türlerinin ortaya çıkmasını ve sonuçların  görüntülenmesini Microsoft 365 ve tüm Microsoft 365 tarama için otomatik bir araçtır.
+Ortamınızda hassas öğelerin oluşumunu belirlemek için Microsoft 365 Uyumluluk yönetim merkezindeki yeni [İçerik Gezgini'nin](../compliance/data-classification-content-explorer.md) önemli bir aracıdır. Hassas bilgi türlerinin ortaya çıkması ve sonuçların görüntülenmesi için Microsoft 365 aboneliğinizin tamamının ilk ve devam eden taraması için otomatikleştirilmiş bir araçtır.
 
-Yeni İçerik Gezgini aracı, yerleşik hassas bilgi türlerini veya özel bilgileri kullanarak ortamınıza hassas öğelerin konumlarını hızla tanımlamanıza olanak sağlar. Bu, hassas öğelerin iletişim durumu ve konumunu düzenli olarak araştırmak üzere bir işlem ve sorumluluk atamayı içerir.
+Yeni İçerik Gezgini aracı, yerleşik hassas bilgi türlerini veya özel bilgileri kullanarak ortamınızdaki hassas öğelerin konumlarını hızla tanımlamanızı sağlar. Bu, hassas öğelerin varlığını ve konumunu düzenli olarak araştırmak için bir süreç oluşturmayı ve sorumluluk atamayı içerebilir.
 
-Bu makalede vurgulanan diğer adımların yanı sıra, bu genel risk maruz kalmak, hazırlık ve planlanan güvenlik yapılandırması ve izlemesi aracılığıyla hassas öğelerin konumunu belirlemek için bir Microsoft 365 sağlar.
+Bu makalede vurgulanan diğer adımlarla birlikte, planlı Microsoft 365 yapılandırması ve izlemesi aracılığıyla korunacak hassas öğelerin genel risklere maruz kalma, hazır olma durumu ve konumunu belirlemeye yönelik bir başlangıç noktası sağlar.
 
-### <a name="other-methods-to-identify-personal-data-in-your-environment"></a>Ortamınıza kişisel verileri tanımlamak için diğer yöntemler
+### <a name="other-methods-to-identify-personal-data-in-your-environment"></a>Ortamınızdaki kişisel verileri tanımlamak için diğer yöntemler
 
-Kuruluşlar, İçerik Gezgini'ne ek olarak, İçerik Arama özelliğine de sahiptir ve gelişmiş arama ölçütleri ve özel filtreler kullanarak kendi ortamında kişisel verileri bulmak için özel aramalar oluşturabilir.
+kuruluşlar İçerik Gezgini'ne ek olarak, ortamlarında gelişmiş arama ölçütleri ve özel filtreler kullanarak kişisel verileri bulmak için özel aramalar oluşturmak için İçerik Arama özelliğine erişebilir.
 
-Kişisel verileri bulmak için İçerik Arama'nın kullanımı hakkında ayrıntılı kılavuz bu makalede [sağlanmaktadır](/compliance/regulatory/gdpr). [GDPR ve CCPA için DSR'lerde İçerik Arama ve diğer keşif tekniklerini de incelemektedir](/compliance/regulatory/gdpr-dsr-Office365#introduction-to-dsrs).
+Bu [makalede](/compliance/regulatory/gdpr) kişisel verileri bulmak için İçerik Arama'nın kullanımıyla ilgili ayrıntılı yönergeler sağlanmıştır. İçerik Arama ve diğer bulma teknikleri de [GDPR ve CCPA için DSR'lerde](/compliance/regulatory/gdpr-dsr-Office365#introduction-to-dsrs) incelenir.
 
-Kişisel veriler için Microsoft 365 ve düzeltme teknikleri hakkında ek içgörüler izleme [ve yanıt makalesinde sağlanır](information-protection-deploy-monitor-respond.md).
+Microsoft 365'daki kişisel veriler için araştırma ve düzeltme teknikleri hakkında ek içgörüler [izleyici ve yanıt makalesinde](information-protection-deploy-monitor-respond.md) sağlanır.
 
 > [!NOTE]
-> Şirket içinde depolanan dosyalarda hangi hassas bilgileri bulmak için, lütfen [Azure Information Protection'a bakın](/azure/information-protection/quickstart-findsensitiveinfo).
+> Şirket içinde depolanan dosyalarda hangi hassas bilgilere sahip olduğunuzu bulmak için bkz. [Azure Information Protection](/azure/information-protection/quickstart-findsensitiveinfo).

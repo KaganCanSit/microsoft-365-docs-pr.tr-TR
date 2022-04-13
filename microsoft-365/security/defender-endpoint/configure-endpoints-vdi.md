@@ -1,7 +1,7 @@
 ---
 title: Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarının katılımı
-description: Yapılandırma paketini sanal masaüstü altyapısı (VDI) cihazında dağıtın, böylece bu hizmette Uç Nokta için Microsoft Defender edin.
-keywords: sanal masaüstü altyapısını (VDI) cihazı, vdi'yi, cihaz yönetimini yapılandırma, Uç Nokta için Microsoft Defender uç noktaları yapılandırma
+description: Yapılandırma paketini sanal masaüstü altyapısı (VDI) cihazına dağıtarak Uç Nokta için Microsoft Defender hizmetine eklenmelerini sağlayın.
+keywords: sanal masaüstü altyapısını yapılandırma (VDI) cihazı, vdi, cihaz yönetimi, Uç Nokta için Microsoft Defender yapılandırma, uç noktalar
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -18,18 +18,18 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.date: 02/14/2022
 ms.technology: mde
-ms.openlocfilehash: e292c2f1e0d01e51e3962b71a940927078ab95ad
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+ms.openlocfilehash: fe86b09588f08a05183de146092b50b5cb530d0e
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634723"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64825024"
 ---
-# <a name="onboard-non-persistent-virtual-desktop-infrastructure-vdi-devices-in-microsoft-365-defender"></a>Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını mobil cihaza Microsoft 365 Defender
+# <a name="onboard-non-persistent-virtual-desktop-infrastructure-vdi-devices-in-microsoft-365-defender"></a>Microsoft 365 Defender kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını ekleme
 
-Sanal masaüstü altyapısı (VDI), son kullanıcıların neredeyse her cihazdan (kişisel bilgisayarınız, akıllı telefonunuz veya tabletiniz gibi) kurumsal sanal masaüstlerine erişmelerini sağlayan bir IT altyapısı kavramıdır ve kuruluşun kullanıcılara fiziksel makine sağlama ihtiyacı ortadan kaldırıyor. VDI cihazlarının kullanımı maliyeti azaltır çünkü IT departmanları artık fiziksel uç noktaları yönetmek, onarmak ve değiştirmekle sorumlu değildir. Yetkili kullanıcılar, güvenli bir masaüstü istemcisi veya tarayıcısı aracılığıyla aynı şirket sunucularına, dosyalarına, uygulamalarına ve hizmetlerine onaylanmış herhangi bir cihazdan erişim s sağlar.
+Sanal masaüstü altyapısı (VDI), son kullanıcıların neredeyse tüm cihazlardan (kişisel bilgisayarınız, akıllı telefonunuz veya tabletiniz gibi) kurumsal sanal masaüstleri örneklerine erişmesini sağlayan ve kuruluşa fiziksel makineler sağlama gereksinimini ortadan kaldıran bir BT altyapısı kavramıdır. BT departmanları artık fiziksel uç noktaları yönetmek, onarmak ve değiştirmekle sorumlu olmadığından VDI cihazlarının kullanılması maliyeti düşürür. Yetkili kullanıcılar, güvenli bir masaüstü istemcisi veya tarayıcısı aracılığıyla onaylanan herhangi bir cihazdan aynı şirket sunucularına, dosyalarına, uygulamalarına ve hizmetlerine erişebilir.
 
-Bir IT ortamındaki diğer sistemlerde olduğu gibi, bunların da gelişmiş tehditlere ve saldırılara karşı korunması için bir Uç Nokta Algılama ve Yanıt (EDR) ve Virüsten Koruma çözümü olmalıdır.
+Bt ortamındaki diğer sistemlerde olduğu gibi, bunlar da gelişmiş tehditlere ve saldırılara karşı koruma sağlamak için bir Uç Nokta Algılama ve Yanıt (EDR) ve Virüsten Koruma çözümüne sahip olmalıdır.
 
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
@@ -40,149 +40,114 @@ Bir IT ortamındaki diğer sistemlerde olduğu gibi, bunların da gelişmiş teh
 - Sanal masaüstü altyapısı (VDI) cihazları
 - Windows 10, Windows 11, Windows Server 2019, Windows Server 2022, Windows Server 2008R2/2012R2/2016
 
-> Uç Nokta için Defender'ı deneyimli yapmak mı istiyor musunuz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configvdi-abovefoldlink)
+> Uç Nokta için Defender'ı deneyimlemek mi istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configvdi-abovefoldlink)
 
  > [!NOTE]
-  > **Kalıcı VDI'ler** -  [Uç Nokta için Microsoft Defender'a kalıcı bir VDI](configure-endpoints.md) makinesi ekleme, masaüstü veya dizüstü bilgisayar gibi fiziksel bir makineye sahip olacağınız gibi ele alındır. Grup ilkesi, Microsoft Endpoint Manager ve diğer yöntemler kalıcı bir makineyi eklemede kullanılabilir. Microsoft 365 Defender portalında, (https://security.microsoft.com)ekleme'nin altında tercih ettiğiniz ekleme yöntemini seçin ve bu türle ilgili yönergeleri izleyin. 
+  > **Kalıcı VDI'lar** -  [Kalıcı bir VDI makinesini](configure-endpoints.md) Uç Nokta için Microsoft Defender ekleme işlemi, masaüstü veya dizüstü bilgisayar gibi fiziksel bir makineyi eklediğiniz şekilde işlenir. Kalıcı bir makine eklemek için grup ilkesi, Microsoft Endpoint Manager ve diğer yöntemler kullanılabilir. Microsoft 365 Defender portalında (https://security.microsoft.com) ekleme altında tercih ettiğiniz ekleme yöntemini seçin ve bu tür için yönergeleri izleyin. 
 
 ## <a name="onboarding-non-persistent-virtual-desktop-infrastructure-vdi-devices"></a>Kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını ekleme
 
 Uç Nokta için Defender kalıcı olmayan VDI oturumu eklemeyi destekler.
 
-VDI örneklerini eklemeye yönelik zorluklarla ilgili sorunlar olabilir. Aşağıda, bu senaryoyla ilgili tipik güçlükler ve sorunlar yermaktadır:
+VDI örneklerini eklerken ilgili zorluklar olabilir. Bu senaryo için tipik zorluklar şunlardır:
 
-- Gerçek sağlama öncesinde Uç Nokta için Defender'a sağlanması gereken, kısa vadeli bir oturumun anında erken eklemesi.
-- Cihaz adı normalde yeni oturumlar için yeniden kullanılır.
+- Gerçek sağlamadan önce Uç Nokta için Defender'a eklenmesi gereken kısa süreli bir oturumun anında erken eklemesi.
+- Cihaz adı genellikle yeni oturumlar için yeniden kullanılır.
 
-VDI ortamında VDI örnekleri kısa ömürlere sahip olabilir. VDI cihazları Uç nokta portalı için Defender'da şu şekilde görünebilir:
+VDI ortamında, VDI örneklerinin ömrü kısa olabilir. VDI cihazları Uç Nokta için Defender portalında şu şekilde görünebilir:
 
 
-- Her VDI örneği için tek portal girdisi. VDI örneği Uç Nokta için Microsoft Defender'a önceden oluşturulmuşsa ve bir noktada silindikten sonra aynı ana bilgisayar adıyla yeniden oluşturulduktan sonra portalda bu VDI örneğini temsil eden yeni bir nesne OLUŞTURULMAZ. 
+- Her VDI örneği için tek portal girişi. VDI örneği zaten Uç Nokta için Microsoft Defender eklendiyse ve bir noktada silindikten sonra aynı ana bilgisayar adıyla yeniden oluşturulduysa, portalda bu VDI örneğini temsil eden yeni bir nesne OLUŞTURULMAZ. 
 
 
   > [!NOTE]
-  > Bu durumda, *oturum* oluşturulduğunda örneğin katılımsız yanıt dosyası kullanılarak aynı cihaz adının yapılandırılması gerekir.
+  > Bu durumda, oturum oluşturulduğunda *,* örneğin katılımsız yanıt dosyası kullanılarak aynı cihaz adı yapılandırılmalıdır.
 
-- Her cihaz için birden çok giriş - her VDI örneği için bir girdi.
+- Her cihaz için birden çok giriş - her VDI örneği için bir giriş.
 
-Aşağıdaki adımlar, VDI cihazlarını ekleme adımlarını size yönlendirecek ve tek ve birden çok giriş için adımları vurgular.
+Aşağıdaki adımlar VDI cihazlarını ekleme konusunda size yol gösterir ve tek ve birden çok giriş için adımları vurgular.
 
 > [!WARNING]
-> Düşük kaynak yapılandırmalarının olduğu ortamlarda VDI önyükleme yordamı Uç nokta algılayıcısı kullanımı için Defender'ı yavaşlatabilir.
+> Düşük kaynak yapılandırmalarının olduğu ortamlarda, VDI önyükleme yordamı Uç Nokta için Defender algılayıcısı ekleme işlemini yavaşlatabilir.
 
-### <a name="for-windows-10-or-windows-11-or-windows-server-2012-r2-and-later"></a>R2 Windows 10, Windows 11 veya daha Windows Server 2012 için
+### <a name="for-windows-10-or-windows-11-or-windows-server-2012-r2-and-later"></a>Windows 10, Windows 11 veya R2 ve üzeri Windows Server 2012 için
 
 > [!NOTE]
-> Windows Server 2016 ve Windows Server 2012 R2'nin bu özelliğin çalışması için önce [Onboard Windows sunucularında](/microsoft-365/security/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016) verilen yönergeleri kullanarak yükleme paketinin uygulanmasıyla hazır olması gerekir.
+> Windows Server 2016 ve Windows Server 2012 R2'nin, bu özelliğin çalışması için Windows [sunucuları ekleme](/microsoft-365/security/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016) yönergeleri kullanılarak önce yükleme paketi uygulanarak hazırlanması gerekir.
 
-1.  Hizmet ekleme sihirbazından indirdiğiniz .zip dosyası *(WindowsDefenderATPOnboardingPackage.zip*) VDI yapılandırma paketini açın. Paketi şu portaldan da <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a>:
+1.  Hizmet ekleme sihirbazından indirdiğiniz VDI yapılandırma paketini .zip dosyasını (*WindowsDefenderATPOnboardingPackage.zip*) açın. Paketi <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalından</a> da alabilirsiniz:
 
-    1. Gezinti bölmesinde, Gezinti **Bölmesi'Ayarlar** >  **EndpointsDevice** >  **managementOnboarding** >  öğesini seçin.
+    1. Gezinti bölmesinde **Ayarlar** >  **EndpointsCihaz** >  **yönetimiOnboarding'i** >  seçin.
 
     1. İşletim sistemini seçin.
 
-    1.  Dağıtım yöntemi **alanında** , kalıcı olmayan uç noktalar **için VDI ekleme betikleri'ne seçin**.
+    1.  **Dağıtım yöntemi** alanında **, kalıcı olmayan uç noktalar için VDI ekleme betikleri'ni** seçin.
 
-    1. Paketi **indir'e** tıklayın ve .zip kaydedin.
+    1. **Paketi indir'e** tıklayın ve .zip dosyasını kaydedin.
 
-2. .zip dosyasından ayıklanan WindowsDefenderATPOnboardingPackage klasöründeki dosyaları yol altındaki golden/master görüntüye kopyalayın `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup`.
-    1. Her cihaz için birden çok giriş uygulayıyorsanız ( her oturum için bir girdi) WindowsDefenderATPOnboardingScript.cmd'yi kopyalayın.
-    2. Her cihaz için tek bir giriş uygulayıyorsanız, hem Onboard-NonPersistentMachine.ps1 hem de WindowsDefenderATPOnboardingScript.cmd'yi kopyalayın.
+2. .zip dosyasından ayıklanan WindowsDefenderATPOnboardingPackage klasöründeki dosyaları yolunun `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup`altındaki altın/ana görüntüye kopyalayın.
+    1. Her cihaz için birden çok girdi uyguluyorsanız ( her oturum için bir tane), WindowsDefenderATPOnboardingScript.cmd dosyasını kopyalayın.
+    2. Her cihaz için tek bir giriş uyguluyorsanız hem Onboard-NonPersistentMachine.ps1 hem de WindowsDefenderATPOnboardingScript.cmd dosyasını kopyalayın.
 
     > [!NOTE]
-    > Klasörü görmüyorsanız `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup` gizlenmiş olabilir. Diğer seçeneklerden Gizli dosya **ve klasörleri göster seçeneğini Dosya Gezgini**.
+    > Klasörü görmüyorsanız `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup` , gizli olabilir. Dosya Gezgini **Gizli dosya ve klasörleri göster** seçeneğini belirlemeniz gerekir.
 
-3. Yerel Dosya Düzenleyicisi grup ilkesi açın ve Betik Başlatma'da  **Bilgisayar** **Yapılandırması'Windows Ayarlar** \> \> \> **gidin**.
+3. Yerel grup ilkesi Düzenleyicisi penceresini açın ve **Bilgisayar Yapılandırması** \> **Windows Ayarlar** \> **Betik** \> **Başlatma'ya** gidin.
 
    > [!NOTE]
-   > Etki grup ilkesi alanı adı, kalıcı olmayan VDI cihazlarının eklemesi için de kullanılabilir.
+   > Etki alanı grup ilkesi, kalıcı olmayan VDI cihazlarının eklenmesi için de kullanılabilir.
 
-4. Uygulamak için kullandığınız yönteme bağlı olarak, uygun adımları izleyin:
-    - Her cihaza tek bir giriş için:
+4. Uygulamak istediğiniz yönteme bağlı olarak uygun adımları izleyin:
+    - Her cihaz için tek giriş için:
 
-         **PowerShell Betikleri** sekmesini seçin, ardından **Ekle'ye** tıklayın (Windows Explorer, ekleme betiğinin daha önce kopya bulunduğu yolda açılır). PowerShell betiği eklemeye gidin `Onboard-NonPersistentMachine.ps1`. Diğer dosyayı belirtmenize gerek yok, çünkü otomatik olarak tetiklenir.
+         **PowerShell Betikleri** sekmesini seçin, ardından **Ekle'ye** tıklayın (Windows Explorer daha önce ekleme betiğini kopyaladığınız yolda açılır). PowerShell betiğini `Onboard-NonPersistentMachine.ps1`ekleme bölümüne gidin. Otomatik olarak tetiklendiğinden, diğer dosyayı belirtmeniz gerekmez.
 
     - Her cihaz için birden çok giriş için:
 
-         **Betikler sekmesini** seçin ve **Ekle'Windows** tıklayın (Windows Explorer, ekleme betiğinin daha önce kopya bulunduğu yolda açılır). Ekleme bash betiğine gidin `WindowsDefenderATPOnboardingScript.cmd`.
+         **Betikler** sekmesini seçin, ardından **Ekle'ye** tıklayın (Windows Gezgin daha önce ekleme betiğini kopyaladığınız yolda doğrudan açılır). Ekleme bash betiğine `WindowsDefenderATPOnboardingScript.cmd`gidin.
 
-5. Çözümlerinizi test etmek için:
+5. Çözümünüzü test edin:
    1. Tek bir cihazla havuz oluşturun.
    2. Cihazda oturum açın.
    3. Cihazdan oturumu kapatın.
-   4. Başka bir kullanıcıyla cihazda oturum açın.
-   5. Uygulamak için kullandığınız yönteme bağlı olarak, uygun adımları izleyin:
-      - Her cihaza tek bir giriş için: Portalda tek bir Microsoft 365 Defender denetleme.
-      - Her cihaza birden çok giriş için: Bir portalda birden çok Microsoft 365 Defender kontrol edin.
+   4. Cihazda başka bir kullanıcıyla oturum açın.
+   5. Uygulamak istediğiniz yönteme bağlı olarak uygun adımları izleyin:
+      - Her cihaz için tek giriş için: Microsoft 365 Defender portalında yalnızca bir girişi denetleyin.
+      - Her cihaz için birden çok giriş için: Microsoft 365 Defender portalında birden çok girişi denetleyin.
 
-6. Gezinti **bölmesinde Cihazlar** listesine tıklayın.
+6. Gezinti bölmesinde **Cihazlar listesi'ne** tıklayın.
 
-7. Cihazın adını girerek arama işlevini kullanın ve arama türü olarak **Cihaz'ı** seçin.
+7. Cihaz adını girerek arama işlevini kullanın ve arama türü olarak **Cihaz'ı** seçin.
 
-## <a name="for-downlevel-skus-windows-server-2008-r2"></a>Aşağı düzey SU'lar için (Windows Server 2008 R2)
-
-> [!NOTE]
-> Diğer Windows sunucu sürümleri için, MMA gerektiren Windows Server 2016 ve R2 için önceki sürümü Uç Nokta için Microsoft Defender Windows Server 2012 için de geçerlidir. Yeni birleşik çözüme geçiş yönergeleri Aşağıdaki sunucu [geçiş senaryolarında ve](/microsoft-365/security/defender-endpoint/server-migration) Uç Nokta için Microsoft Defender.
+## <a name="for-downlevel-skus-windows-server-2008-r2"></a>Alt düzey SKU'lar için (Windows Server 2008 R2)
 
 > [!NOTE]
-> Aşağıdaki kayıt defteri yalnızca hedef "Her cihaz için tek girdi" elde etmek olduğunda ilgili kayıt defteridir.
+> Diğer Windows sunucu sürümlerine yönelik bu yönergeler, MMA gerektiren Windows Server 2016 ve Windows Server 2012 R2 için önceki Uç Nokta için Microsoft Defender çalıştırıyorsanız da geçerlidir. Yeni birleştirilmiş çözüme geçiş yönergeleri[, Uç Nokta için Microsoft Defender'daki Sunucu geçiş senaryolarında yer alır](/microsoft-365/security/defender-endpoint/server-migration).
 
-1. Kayıt defteri değerini aşağıdaki şekilde ayarlayın:
+> [!NOTE]
+> Aşağıdaki kayıt defteri yalnızca amaç 'Her cihaz için tek bir giriş' elde etmek olduğunda geçerlidir.
+
+1. Kayıt defteri değerini şu şekilde ayarlayın:
 
     ```console
    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\DeviceTagging]
     "VDI"="NonPersistent"
     ```
 
-    veya komut satırı kullanarak:
+    veya komut satırını kullanarak:
 
     ```console
     reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\DeviceTagging" /v VDI /t REG_SZ /d "NonPersistent" /f
     ```
 
-2. Sunucu [ekleme işlemini izleyin](configure-server-endpoints.md). 
+2. [Sunucu ekleme işlemini](configure-server-endpoints.md) izleyin. 
 
 ## <a name="updating-non-persistent-virtual-desktop-infrastructure-vdi-images"></a>Kalıcı olmayan sanal masaüstü altyapısı (VDI) görüntülerini güncelleştirme
 
-En iyi uygulama olarak, altın yaması/asıl resimlere yama yapmak için çevrimdışı hizmet araçlarının kullanılması önerilir.
+Güncelleştirmeleri VDI'lerde çalışan VM'lere kolayca dağıtabilme özelliği sayesinde, makinelerinizde güncelleştirmeleri hızlı ve kolay bir şekilde nasıl edinebileceğinize odaklanmak için bu kılavuzu kısaltdık. Güncelleştirmeler konak sunucusundaki bileşen bitlerine genişletildiğinden ve açıldığında doğrudan VM'ye indirildiğinden, artık düzenli aralıklarla altın renkli görüntüler oluşturmanız ve mühürlemeniz gerekmez.
 
-Örneğin, resim çevrimdışıyken bir güncelleştirme yüklemek için aşağıdaki komutları kullanabilirsiniz:
+Daha fazla bilgi [için, sanal masaüstü altyapısı (VDI) ortamında Microsoft Defender Virüsten Koruma için dağıtım kılavuzundaki yönergeleri](/security/defender-endpoint/deployment-vdi-microsoft-defender-antivirus) izleyin.
 
-```console
-DISM /Mount-image /ImageFile:"D:\Win10-1909.vhdx" /index:1 /MountDir:"C:\Temp\OfflineServicing"
-DISM /Image:"C:\Temp\OfflineServicing" /Add-Package /Packagepath:"C:\temp\patch\windows10.0-kb4541338-x64.msu"
-DISM /Unmount-Image /MountDir:"C:\Temp\OfflineServicing" /commit
-```
-
-DISM komutları ve çevrimdışı hizmet hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
-
-- [DISM Windows resim değiştirme](/windows-hardware/manufacture/desktop/mount-and-modify-a-windows-image-using-dism)
-- [DISM Image Management Command-Line Options](/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14)
-- [Çevrimdışı Depolama Alanı'nın Bileşen Mağazası'nın Boyutunu Windows Resmi](/windows-hardware/manufacture/desktop/reduce-the-size-of-the-component-store-in-an-offline-windows-image)
-
-Çevrimdışı hizmet, kalıcı olmayan VDI ortamınız için uygun bir seçenek değilse tutarlılık ve algılayıcı sağlığı sağlamak için aşağıdaki adımlar atılacaktır:
-
-1. Çevrimiçi bakım veya düzeltme eki için ana resmi önyükledikten sonra, Uç nokta algılayıcısı için Defender'ı kapatmak için bir offboard betiği çalıştırın. Daha fazla bilgi için bkz [. Yerel betik kullanarak çıkartan cihazlar](configure-endpoints-script.md#offboard-devices-using-a-local-script).
-
-2. CmD penceresinde aşağıdaki komutu çalıştırarak algılayıcının durdurulurken durdurulur:
-
-   ```console
-   sc query sense
-   ```
-
-3. Görüntüyü gereken şekilde servise alın.
-
-4. Önyüklemeden bu yana algılayıcının PsExec.exe siber klasör içeriğini temizlemeye kadar indirilebilen e-postayı ( https://download.sysinternals.com/files/PSTools.zip) PsExec.exe) kullanarak aşağıdaki komutları çalıştırın:
-
-    ```console
-    PsExec.exe -s cmd.exe
-    cd "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Cyber"
-    del *.* /f /s /q
-    REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection" /v senseGuid /f
-    exit
-    ```
-
-5. Altın/ana resmi normalde olduğu gibi yeniden kullanın.
 
 ## <a name="related-topics"></a>İlgili konular
 - [Windows araçlarını Grup İlkesi kullanarak ekleyin](configure-endpoints-gp.md)

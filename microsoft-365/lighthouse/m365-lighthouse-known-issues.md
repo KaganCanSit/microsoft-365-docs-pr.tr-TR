@@ -1,5 +1,5 @@
 ---
-title: Güvenlikle ilgili bilinen Microsoft 365 Lighthouse
+title: Microsoft 365 Lighthouse ile ilgili bilinen sorunlar
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -13,83 +13,83 @@ ms.collection:
 - Adm_O365
 ms.custom:
 - AdminSurgePortfolib
-- M365-Lighthouse
+- M365-Lighthous
 search.appverid: MET150
-description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse Özellik alanına göre Deniz Feneri ile ilgili bilinen sorunların bir listesine bakın.
-ms.openlocfilehash: 3151937d4552da09c9cfd6808db2bad8bafbbc46
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için, Özellik alanına göre Lighthouse ile ilgili bilinen sorunların listesine bakın.
+ms.openlocfilehash: 3be71d225f1aa9974bb73e3b2e9d421ea81e16fa
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64594675"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824366"
 ---
-# <a name="known-issues-with-microsoft-365-lighthouse"></a>Güvenlikle ilgili bilinen Microsoft 365 Lighthouse
+# <a name="known-issues-with-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse ile ilgili bilinen sorunlar
 
-Bu makalede, özellik alanına göre Microsoft 365 Lighthouse sorunları listelemektedir. Deniz Feneri hakkında daha fazla bilgi için bkz. Deniz [Feneri'Microsoft 365 Lighthouse](m365-lighthouse-overview.md).
+Bu makalede, özellik alanına göre Microsoft 365 Lighthouse ile ilgili bilinen sorunlar listelenir. Lighthouse hakkında daha fazla bilgi için bkz. [Microsoft 365 Lighthouse genel bakış](m365-lighthouse-overview.md).
 
 ## <a name="users"></a>Kullanıcılar
 
 | Sorun | Açıklama | Çözüm |
 | ---------------- | ---------------- | ---------------- |
-| **Yardım masası Aracısı kullanıcı parolasını sıfırlayamıyor** | Yardım masası Aracısı grubunun üyesi olan Yönetilen Hizmet Sağlayıcısı (MSP) teknisyenleri, müşteri kiracılarında yer alan kullanıcıların parolalarını sıfırlayamıyor. Kullanıcı parolasını sıfırlamaya geldiğinde şu hata iletisini alır: "Bunu yapma izniniz yok. [Daha fazla bilgi"](m365-lighthouse-configure-portal-security.md) | İzin sorununa yardımcı olmak için Yardım masası Aracılarının parolaları, kullanıcı kimliklerini veya kimlik Microsoft 365 yönetim merkezi Azure Active Directory. |
+| **Yardım Masası Aracısı kullanıcı parolasını sıfırlayamıyor** | Yardım Masası Aracısı grubunun üyesi olan Yönetilen Hizmet Sağlayıcısı (MSP) teknisyenleri, müşteri kiracılarındaki kullanıcıların parolalarını sıfırlayamaz. Kullanıcı parolasını sıfırlamaya çalıştığında şu hata iletisini alır: "Bunu yapma izniniz yok. [Daha fazla bilgi edinin](m365-lighthouse-configure-portal-security.md)" | İzin sorununu geçici olarak çözmek için Yardım Masası Aracıları Microsoft 365 yönetim merkezi veya Azure Active Directory kullanarak parolaları sıfırlamalıdır. |
 
-## <a name="devices"></a>Cihazlar
+## <a name="devices"></a>Aygıtları
 
 | Sorun | Açıklama | Çözüm |
 | ---------------- | ---------------- | ---------------- |
-| **Silinmiş ilke görüntülenir** | Bir cihaz uyumluluk ilkesi Posta'dan Intune, geçici olarak Deniz Feneri'nde görünmeye devam eder. MSP teknisyenleri silinmiş bir ilke içeren bir ilke karşılaştırması yapmaya çalışsalar, teknisyenler şu hatayı alır: "Bir sorun oluştu. Lütfen sayfayı yenileyin ve yeniden deneyin." | Hatayı çözmek için, silinen ilkeyi ilke karşılaştırmadan silin ve yalnızca var olan ilkeleri karşılaştırın. |
+| **Silinen ilke görüntüleniyor** | Cihaz uyumluluk ilkesi Intune silindikten sonra Lighthouse'da geçici olarak görünür olmaya devam eder. MSP teknisyenleri silinmiş bir ilke içeren bir ilke karşılaştırması yapmaya çalışırsa teknisyenler şu hatayı alır: "Bir sorun oluştu. Lütfen sayfayı yenileyin ve yeniden deneyin." | Hatayı çözmek için, ilke karşılaştırmasından silinen ilkeyi temizleyin ve yalnızca mevcut ilkeleri karşılaştırın. |
 
 ## <a name="threat-management"></a>Tehdit yönetimi
 
 | Sorun | Açıklama | Çözüm |
 | ---------------- | ---------------- | ---------------- |
-| **Tehdit adı eksik** | MSP teknisyenleri Tehdit Yönetimi sayfasındaki tehdit listesini görüntüleyseler, tehdit adı bazı tehdit olarak eksik olabilir. Tehdit olarak algılanan cihaz yakın zamanda Diğer Kişilerden kaldırıldığı zaman bu Intune. | Sorun 48 saat içinde çözülecek. Ek adım gerekmez. |
+| **Tehdit adı eksik** | MSP teknisyenleri Tehdit Yönetimi sayfasından tehdit listesini görüntülediğinde, bazı tehditlerde tehdidin adı eksik olabilir. Tehdit algılanan cihaz yakın zamanda Intune'dan kaldırıldığında bu durum ortaya çıkar. | Sorun 48 saat içinde çözülecektir. Ek adım gerekmez. |
 
-## <a name="baselines"></a>Taban çizgisi
+## <a name="baselines"></a>Temel
 
 | Sorun | Açıklama | Çözüm |
 | ---------------- | ---------------- | ---------------- |
-| **Eski kimlik doğrulamayı ve MFA dağıtım adımlarını karşılaştırırken çakışan ayarlar** | Bir müşteri kiracısı eski kimlik doğrulamasını ve MFA dağıtım adımlarından birini engelle dağıtmışsa, karşılaştırma testi bu ayarları hatalı bir şekilde çakışan olarak tanımlar. | Geçici bir çözüm gerekmez. Ayarlar aslında çakışmaz ve müşteri kiracısı kullanıcıları etkilenmez. |
+| **Eski kimlik doğrulamasını engelleme ve MFA dağıtım adımlarını karşılaştırırken çakışan ayarlar** | Müşteri kiracısı eski kimlik doğrulamasını engelle ve MFA dağıtım adımlarından birini dağıttıysa, karşılaştırma testi hatalı bir şekilde bu ayarları çakışıyor olarak tanımlar. | Geçici çözüm gerekmez. Ayarlar aslında çakışmaz ve müşteri kiracısında kullanıcılar etkilenmez. |
 
 ## <a name="windows-365"></a>Windows 365
 
 | Sorun | Açıklama | Çözüm |
 | ---------------- | ---------------- | ---------------- |
-| **Sağlama hatasını yeniden deneme** | MSP teknisyenleri, Bir Bulut Bilgisayarı sağlamayı yeniden denemeye çalışırken "Bunu yapmak için izniniz yok" hata iletisini alır. | Bu sorunu gidermek için, müşteri kiracıda oturum açma ve ardından Microsoft Endpoint Manger yönetim merkezinden Bulut PC'leri yeniden bölüme açma. Yönergeler için bkz [. Bulut bilgisayarı yeniden bölüme yükleme](/windows-365/enterprise/reprovision-cloud-pc). |
+| **Sağlamayı yeniden deneme hatası** | MSP teknisyenleri, Bulut bilgisayar sağlamayı yeniden denemeyi denerken "Bunu yapma izniniz yok" hata iletisini alır. | Bu sorunu geçici olarak çözmek için müşteri kiracısında oturum açın ve ardından Microsoft Endpoint Manger yönetim merkezinden Bulut bilgisayarları yeniden sağlayın. Yönergeler için bkz. [Bulut bilgisayarı yeniden sağlama](/windows-365/enterprise/reprovision-cloud-pc). |
 
 ## <a name="audit-logs"></a>Denetim günlükleri
 
 
 | Sorun | Açıklama | Çözüm |
 |--|--|--|
-| **Denetim günlüklerinde Devre Dışı Bırak ve Yeniden Etkinleştir eylemleri listelenmiyor** | Şu anda Deniz Feneri'nin Denetim günlükleri sayfasında aşağıdaki etkinlikler bildir değildir: <ul><li>Ad: Çıkar eylemi \| : Müşteriyi devre dışı bırakma</li> <li>Ad: resetTenantOnboardingStatus \| Eylemi: Reactive customer</li></ul> | Geçici bir çözüm yok, ancak bir çözüm üzerinde çalışıyoruz. Düzeltme hizmette dağıtıldıktan sonra bu etkinlikler denetim günlüklerinde görüntülenir. |
-| **Filtre tüm kullanıcıları göster görünmüyor** | MSP teknisyenleri Başlatan'ı kullanarak filtrelemeye **geldiğinde, denetim** günlükleri oluşturma eylemlerini başlatan teknisyenlerin e-posta kimliklerine karşılık gelen tüm Kullanıcı Asıl Adları (UPN) listesi filtre altında tam olarak görüntülenmez.<br><br>Denetim günlüklerinin kendilerinin tümüyle görüntülendiğinden; Yalnızca Başlatan'ı kullanarak bunları **filtreleme** özelliği etkiler. | Geçici bir çözüm yok, ancak bir çözüm üzerinde çalışıyoruz. Düzeltme hizmette dağıtıldıktan sonra, filtre beklenen davranışa döner (filtreye göre filtre ekleyebilirsiniz UPN'lerin tam listesi görüntülenir). |
+| **Devre dışı bırakma ve Yeniden etkinleştirme eylemleri denetim günlüklerinde listelenmiyor** | Aşağıdaki etkinlikler şu anda Lighthouse'un Denetim günlükleri sayfasında bildirilmiyor: <ul><li>Ad: offboardTenant \| Action: Müşteriyi devre dışı bırakma</li> <li>Ad: resetTenantOnboardingStatus \| Action: Reactive customer</li></ul> | Geçici bir çözüm yoktur, ancak bir düzeltme üzerinde çalışıyoruz. Düzeltme hizmete dağıtıldıktan sonra bu etkinlikler denetim günlüklerinde görünür. |
+| **Filtre tüm kullanıcıları göstermiyor** | MSP teknisyenleri **Tarafından Başlatılan'ı** kullanarak filtrelemeye çalıştığında, denetim günlükleri oluşturan eylemleri başlatan teknisyenlerin e-posta kimliklerine karşılık gelen tüm Kullanıcı Asıl Adlarının (UPN) listesi filtre altında tam olarak görüntülenmez.<br><br>Denetim günlüklerinin tamamen görüntüleneceğini unutmayın; yalnızca **Tarafından Başlatılarak** filtrelenebilme özelliği etkilenir. | Geçici bir çözüm yoktur, ancak bir düzeltme üzerinde çalışıyoruz. Düzeltme hizmete dağıtıldıktan sonra filtre, filtrelenecek UPN'lerin tam listesini görüntüleyerek beklenen davranışına geri döner. |
 
-## <a name="delegated-admin-privilegesdap"></a>Temsilcili Yönetici Ayrıcalıkları (DAP)
+## <a name="delegated-admin-privileges-dap"></a>Yönetici Ayrıcalıkları Temsilcisi (DAP)
 
 | Sorun | Açıklama | Çözüm |
 | ---------------- | ---------------- | ---------------- |
-| **DAP rollerini değiştirirken izinlerin gecikmesi** | MSP teknisyeni Yönetici Temsilcisi veya Yardım masası Aracısı grubuna eklenir veya gruptan kaldırılırsa, Deniz Feneri içindeki uygun izinleri yansıtmada gecikme olabilir. | Sorun 30 dakika içinde çözülecek. Ek adım gerekmez. |
+| **DAP rollerini değiştirirken izin gecikmesi** | Yönetici Aracısı veya Yardım Masası Aracısı grubuna bir MSP teknisyeni eklenirse veya gruptan kaldırılırsa Lighthouse'da uygun izinlerin yansıtılmasında gecikme olabilir. | Sorun 30 dakika içinde çözülecektir. Ek adım gerekmez. |
 
-## <a name="granular-delegated-admin-privilegesgdap"></a>Ayrıntılı Temsilci Yönetici Ayrıcalıkları (GDAP)
+## <a name="granular-delegated-admin-privileges-gdap"></a>Ayrıntılı Yönetici Ayrıcalıkları (GDAP)
 
 > [!NOTE]
-> GDAP, iş [ortaklarının](/partner-center/announcements/2022-february#6) GDAP genel olarak kullanıma hazır olmadan önce ayrıntılı izinler atamasına olanak vermek için şu anda teknik önizlemededir.
+> GDAP, genel kullanıma sunulmadan önce iş ortaklarının ayrıntılı izinler atamasına izin vermek için şu anda [teknik önizleme](/partner-center/announcements/2022-february#6) aşamasındadır (genel önizleme).
 
-Şu anda DAP'nin Deniz Feneri'ne müşterileri eklemesi gerekiyor. Ayrıca daha güvenli, temsilcili erişim sağlamak için müşterilerinizle birlikte GDAP kurmanızı da öneririz. DAP ve GDAP birlikte çalışırken, her iki modelin de bulunduğu müşteriler için GDAP öncelik olacaktır. Kısa süre içinde yalnızca GDAP'ye (ve DAP) sahip olan müşteriler Deniz Feneri'ne yerabilecek.<br><br>
-
-| Sorun | Açıklama | Çözüm |
-| ---------------- | ---------------- | ---------------- |
-| **Deniz Feneri'nde çeşitli GDAP izin sorunları** | Bazı GDAP rolleri tek bir kiracılı deneyimde olduğu gibi, Deniz Feneri'nde müşteri verilerine erişim düzeyine sahip değildir. Aşağıdaki rollerden herhangi biri MSP teknisyenlerine tek tek atanırsa (bu, diğer GDAP rolleriyle birlikte değil) MSP teknisyenlerine tek tek atanırsa, aşağıdakiler gibi hatalarla karşılaşabilir:<ul><li>GDAP Güvenlik Yöneticileri, Deniz Feneri'nde riskli kullanıcıları görüntüleyemiyor, riskleri yok sayamaz veya risk altında olan kullanıcıları onay yapamaz.</li><li>GDAP Güvenlik Okuyucuları Deniz Feneri'nin içindeki riskli kullanıcıları görüntüde yapamaz.</li><li>GDAP Genel Yöneticileri, Deniz Feneri'nde hizmet durumunu görüntülemeye çalışırken bir hata iletisi görmektedir.</li><li>GDAP Genel Yöneticileri, Deniz Feneri'nde dağıtım planı adımlarını dağıtırken sorun yaşanıyor.</li></ul> | Bunun geçici çözümü, ihtiyaç olan müşteri verilerine erişim düzeyine bağlı olarak MSP teknisyenlerine GDAP rolleri birleşimi atamaktır. Deniz Feneri'nin kullanımı için önerilen GDAP rollerinin listesi için bkz. Deniz [Feneri'nde izinlere Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md).<br><br>GDAP Genel Yönetici izinlerinin bile Deniz Feneri'nde bir özelliğin kullanımına izin vermeyecek sorunlar için geçici çözüm, müşteriyi yönetmek için müşteri kiracılarından uygun yönetim merkezine erişmektir (örneğin, hizmet durumunu kontrol etmek için Microsoft 365 yönetim merkezi'e müşteri kiracıdan erişin). GDAP ilişkisini değiştirme yönergeleri için bkz. Müşteri hizmetini yönetmek için ayrıntılı yönetici izinleri alma [- İş Ortağı Merkezi](/partner-center/gdap-obtain-admin-permissions-to-manage-customer). |
-
-## <a name="localization"></a>Yerelleştirme
+Şu anda, Lighthouse'a müşteri eklemek için DAP gereklidir. Ayrıca daha güvenli temsilci erişimi sağlamak için müşterilerinizle GDAP oluşturmanızı öneririz. DAP ve GDAP birlikte bulunurken, her iki modelin de bulunduğu müşteriler için GDAP öncelikli olacaktır. Yakında yalnızca GDAP (ve DAP olmayan) müşteriler Lighthouse'a eklenecek.<br><br>
 
 | Sorun | Açıklama | Çözüm |
 | ---------------- | ---------------- | ---------------- |
-| **Çeviri sorunları** | Tarayıcılarının dili veya Lighthouse'daki dil seçimi İngilizce dışında bir dil seçimi olduğunda, kullanıcılar dil çeviri sorunlarıyla bu sorunu yaşayabilirsiniz. | Deniz Feneri'nde çeviri sorunlarını en aza indirmek için tarayıcının dil seçiminin, Deniz Feneri portalında yer alan dil ayarıyla aynı olduğundan emin olun. Deniz Feneri'nde dil seçimini değiştirmek için, Deniz Feneri'nde oturum açın ve sayfanın üst kısmında bulunan dişli simgesini seçerek Portal ayarları sayfasını açın, Dil **+** bölge'yi seçin ve ardından uygun dil ve bölgesel biçimleri seçin. |
+| **Lighthouse genelinde çeşitli GDAP izin sorunları** | Bazı GDAP rolleri, Lighthouse'daki müşteri verilerine tek kiracılı bir deneyimde olduğu gibi aynı düzeyde erişim vermez. Aşağıdaki rollerden herhangi biri MSP teknisyenlerine ayrı ayrı atanırsa (bu, diğer GDAP rolleriyle birlikte değil) aşağıdakiler de dahil olmak üzere hatalarla karşılaşabilir:<ul><li>GDAP Güvenlik Yöneticileri, Lighthouse'da riskli kullanıcıları görüntüleyemiyor, riskleri kapatamıyor veya güvenliği aşılmış kullanıcıları onaylayamıyor.</li><li>GDAP Güvenlik Okuyucuları Lighthouse'da riskli kullanıcıları görüntüleyemez.</li><li>GDAP Genel Yöneticileri Lighthouse'da hizmet durumunu görüntülemeye çalışırken bir hata iletisi görür.</li><li>GDAP Genel Yöneticileri Lighthouse'da dağıtım planı adımlarını dağıtırken sorunlarla karşılaşır.</li></ul> | Geçici çözüm, MSP teknisyenlerine ihtiyaç duydukları müşteri verilerine erişim düzeyine göre GDAP rollerinin bir birleşimini atamaktır. Lighthouse'un kullanılması önerilen GDAP rollerinin listesi için bkz. [Microsoft 365 Lighthouse'de izinlere genel bakış](m365-lighthouse-overview-of-permissions.md).<br><br>GDAP Genel Yönetici izinlerinin bile Lighthouse'da bir özelliğin kullanımına izin vermediği sorunlar için geçici çözüm, müşteriyi yönetmek için müşteri kiracısından uygun yönetim merkezine erişmektir (örneğin, hizmet durumunu denetlemek için müşteri kiracısından Microsoft 365 yönetim merkezi erişin). GDAP ilişkisini değiştirme yönergeleri için bkz. [Müşterinin hizmetini yönetmek için ayrıntılı yönetici izinleri alma - İş Ortağı Merkezi](/partner-center/gdap-obtain-admin-permissions-to-manage-customer). |
+
+## <a name="localization"></a>Yerel -leştirme
+
+| Sorun | Açıklama | Çözüm |
+| ---------------- | ---------------- | ---------------- |
+| **Çeviri sorunları** | Kullanıcılar, tarayıcılarının dili veya Lighthouse'daki dil seçimleri İngilizce dışında bir şey olduğunda dil çevirisi sorunlarıyla karşılaşabilir. | Lighthouse'da çeviri sorunlarını en aza indirmek için tarayıcının dil seçiminin Lighthouse portalındaki dil ayarıyla eşleştiğinden emin olun. Lighthouse'da dil seçimini değiştirmek için Lighthouse'da oturum açın ve sayfanın üst kısmındaki dişli simgesini seçerek Portal ayarları sayfasını açın, **Dil + bölge'yi** seçin ve ardından uygun dil ve bölgesel biçimleri seçin. |
 
 ## <a name="related-content"></a>İlgili içerik
 
 [Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)\
-[E-postada sorunları ve hata iletilerini Microsoft 365 Lighthouse](m365-lighthouse-troubleshoot.md) (makale)\
-[Destek almak için yardım ve Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md) (makale)
+[Microsoft 365 Lighthouse sorunları ve hata iletilerini giderme ve çözme](m365-lighthouse-troubleshoot.md) (makale)\
+[Microsoft 365 Lighthouse için yardım ve destek alma](m365-lighthouse-get-help-and-support.md) (makale)

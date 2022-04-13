@@ -1,5 +1,5 @@
 ---
-title: Adım 1. Güvenlik taban çizgilerini yapılandırma
+title: Adım 1. Güvenlik temel hatlarını yapılandırın
 author: dansimp
 f1.keywords:
 - NOCSH
@@ -15,77 +15,76 @@ ms.collection:
 - ransomware
 - m365solution-ransomware
 ms.custom: seo-marvel-jun2020
-keywords: fidye yazılımı, insan tarafından işletilen fidye yazılımı, insan tarafından işletilen fidye yazılımı, HumOR, extortion saldırısı, fidye yazılımı saldırı, şifreleme, cryptovirology, sıfır güven
-description: Önemli kaynaklarınızı fidye yazılımı saldırılarından Microsoft 365 için güvenlik taban çizgilerini kullanın.
-ms.openlocfilehash: 22092994765e9015421c21f2ee057c63463d594d
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+keywords: fidye yazılımı, insan tarafından çalıştırılan fidye yazılımı, insan tarafından çalıştırılan fidye yazılımı, HumOR, gasp saldırısı, fidye yazılımı saldırısı, şifreleme, kriptoviroloji, sıfır güven
+description: Microsoft 365 kaynaklarınızı fidye yazılımı saldırılarına karşı korumak için güvenlik temellerini kullanın.
+ms.openlocfilehash: 925a64e1d7852aeed6f596e99b20dbff8b34d1be
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63320193"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64825112"
 ---
-# <a name="step-1-configure-security-baselines"></a>Adım 1. Güvenlik taban çizgilerini yapılandırma
+# <a name="step-1-configure-security-baselines"></a>Adım 1. Güvenlik temel hatlarını yapılandırın
 
-Fidye yazılımı fidye yazılımlarına karşı bir ilk adım olarak, aşağıdaki Microsoft tarafından tanımlanan güvenlik taban çizgilerini yapılandırmalı:
+Fidye yazılımı saldırganlarına karşı ilk adım olarak, aşağıdaki Microsoft tanımlı güvenlik temellerini yapılandırmanız gerekir:
 
 - [Microsoft 365 güvenliği](#microsoft-365-security-baseline)
-- [Exchange-posta yönetimi](#exchange-email-management-baseline)
-- [Mobil cihazlar ve istemci Windows için ek taban çizgisi](#additional-baselines)
+- [E-posta yönetimini Exchange](#exchange-email-management-baseline)
+- [Windows cihazlar ve istemci yazılımı için ek temeller](#additional-baselines)
 
-Bu taban çizgisi, saldırganlar tarafından iyi bilinen yapılandırma ayarları ve kurallar içerir; bunların olmaması hızla dikkati çekmez ve yaygın olarak istismarlanır.
+Bu temeller, saldırganlar tarafından iyi bilinen yapılandırma ayarlarını ve kurallarını içerir; bunların yokluğu hızla fark edilir ve yaygın olarak kötüye kullanılır.
 
-## <a name="microsoft-365-security-baseline"></a>Microsoft 365 temeli
+## <a name="microsoft-365-security-baseline"></a>Microsoft 365 güvenlik temeli
 
-İlk olarak, Microsoft Güvenli Puan'ı kullanarak güvenlik nedenlerinizi [değerlendirin ve ölçün](/microsoft-365/security/defender/microsoft-secure-score) ve gerektiğinde geliştirmek için yönergeleri izleyin.
+İlk olarak [, Microsoft Güvenli Puanını](/microsoft-365/security/defender/microsoft-secure-score) kullanarak güvenlik duruşunuzu değerlendirin ve ölçün ve gerektiğinde geliştirmek için yönergeleri izleyin.
 
-Ardından, şüpheli [etkinlikleri ve korumasız içeriği](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-deployment) engellemeye yardımcı olmak için saldırı yüzeyini azaltma kurallarını kullanın. Bu kurallar şunları engellemeyi içerir:
+Ardından, şüpheli etkinlikleri ve savunmasız içeriği engellemeye yardımcı olmak için [saldırı yüzeyi azaltma kurallarını](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-deployment) kullanın. Bu kurallar şunları önlemeyi içerir:
 
-- Alt Office tüm uygulama ve uygulamalar
-- E-posta istemcisi ve web postası yürütülebilir içeriği
-- Yürütülebilir dosyaların yaygın bir hale gelen, yaş veya güvenilir liste ölçütüne uygun olmadığı sürece çalıştırılamaları
-- Obfusced olabilecek betikleri yürütme
-- İndirilen yürütülebilir içeriği başlatmadan JavaScript veya VBScript
-- Office yürütülebilir içerik oluşturmadan önce uygulama yükleme
-- Office işlemlere kod eklemeden uygulama ekleme
-- Office işlemleri oluşturmadan iletişim uygulamasını uygulama
-- USB'den çalıştıran güvenilmeyen ve imzalanmamış işlemler
-- Windows Management Interface (WMI) olay aboneliği aracılığıyla kalıcılık
-- Yerel güvenlik yetkilisi alt sisteminden (Windows) çalan kimlik lsass.exe
-- PSExec ve WMI komutlarından kaynaklanan süreç oluşturma
+- Tüm Office uygulamalarının alt işlemler oluşturması
+- E-posta istemcisinden ve web postasından yürütülebilir içerik
+- Bir yaygınlık, yaş veya güvenilir liste ölçütüne uymayan yürütülebilir dosyaların çalıştırılması
+- Karartılmış olabilecek betiklerin yürütülmesi
+- JavaScript veya VBScript'in indirilen yürütülebilir içeriği başlatması
+- Uygulamaların yürütülebilir içerik oluşturmalarını Office
+- Uygulamaların diğer işlemlere kod eklemesini Office
+- alt işlemler oluşturmadan iletişim uygulamasını Office
+- USB'den çalışan güvenilmeyen ve imzalanmamış işlemler
+- Windows Yönetim Arabirimi (WMI) olay aboneliği aracılığıyla kalıcılık
+- Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalma (lsass.exe)
+- PSExec ve WMI komutlarından kaynaklanan işlem oluşturma işlemleri
 
-## <a name="exchange-email-management-baseline"></a>Exchange-posta yönetimi temeli 
+## <a name="exchange-email-management-baseline"></a>Exchange e-posta yönetimi temeli
 
-Bu e-posta taban çizgisi ayarları ile kiracınıza ilk erişimin e-posta tabanlı Exchange engellemeye yardımcı olun:
+Şu Exchange e-posta temeli ayarlarıyla kiracınıza e-posta tabanlı bir saldırıdan ilk erişimi önlemeye yardımcı olun:
 
-- [E-Microsoft Defender Virüsten Koruma taramayı etkinleştirin](/microsoft-365/security/defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus).
-- Gelişmiş kimlik avı koruması için Office 365 ve [yeni](/microsoft-365/security/office-365-security/anti-phishing-protection) tehditlere ve polimorphic çeşitlemelere karşı kapsam için Microsoft Defender'ı kullanın.
-- Kimlik e Office 365, istenmeyen posta ve kötü amaçlı yazılım içeren e-postaları engellemiş olmak için e-posta filtreleme ayarlarınızı kontrol edin. Gelişmiş kimlik avı Office 365 ve yeni tehditlere ve polimorphic çeşitlemelere karşı kapsam için Defender'ı kullanın. Yeni alınan tehdit Office 365 [tıkla ve](/microsoft-365/security/office-365-security/atp-safe-links) sil seçeneğinde bağlantıları yeniden kontrol etmek için [](/microsoft-365/security/office-365-security/zero-hour-auto-purge) Defender'ı Yapılandır.
-- EOP ve Defender için güvenlik  [ayarlarını gözden geçirin ve en son Office 365 güncelleştirin](/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365-atp).
-- Yeni alınan tehdit Office 365 tıkla [ve](/microsoft-365/security/office-365-security/set-up-safe-links-policies) sil seçeneğinde bağlantıları yeniden kontrol etmek için Defender'ı Yapılandır.
+- [Microsoft Defender Virüsten Koruma e-posta taramasını](/microsoft-365/security/defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus) etkinleştirin.
+- Yeni tehditlere ve polimorfik değişkenlere karşı [gelişmiş kimlik avı koruması](/microsoft-365/security/office-365-security/anti-phishing-protection) ve kapsamı için Office 365 için Microsoft Defender kullanın.
+- Sahte e-postaları, istenmeyen postaları ve kötü amaçlı yazılım içeren e-postaları engellediğinizden emin olmak için Office 365 e-posta filtreleme ayarlarınızı denetleyin. Yeni tehditlere ve polimorfik değişkenlere karşı gelişmiş kimlik avı koruması ve kapsamı için Office 365 için Defender kullanın. Yeni alınan tehdit bilgilerine yanıt olarak, [Office 365 için Defender tıklayarak bağlantıları yeniden](/microsoft-365/security/office-365-security/atp-safe-links) [denetleyecek ve teslim edilen postaları silecek](/microsoft-365/security/office-365-security/zero-hour-auto-purge) şekilde yapılandırın.
+- [EOP ve Office 365 için Defender güvenliği için önerilen](/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365-atp) en son ayarları gözden geçirin ve güncelleştirin.
+- Yeni alınan tehdit bilgilerine yanıt olarak, [Office 365 için Defender tıklayarak bağlantıları yeniden denetleyecek](/microsoft-365/security/office-365-security/set-up-safe-links-policies) ve teslim edilen postaları silecek şekilde yapılandırın.
 
-## <a name="additional-baselines"></a>Ek taban çizgisi
+## <a name="additional-baselines"></a>Ek temeller
 
-Güvenlik [taban çizgilerini şu özellikler için](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines) uygula:
+Güvenlik [temellerini](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines) uygulama:
 
 - Microsoft Windows 11 veya 10
-- Microsoft 365 Uygulamaları için Enterprise
+- Enterprise için Microsoft 365 Uygulamaları
 - Microsoft Edge
 
-## <a name="impact-on-users-and-change-management"></a>Kullanıcılar üzerindeki etkisi ve değişiklik yönetimi
+## <a name="impact-on-users-and-change-management"></a>Kullanıcılar ve değişiklik yönetimi üzerindeki etkisi
 
-Saldırı yüzeyini azaltma kuralı için en iyi uygulama olarak, bir kuralın ilgili kuralla ilgili güvenlik önerisini Bu kuralın güvenlik önerisini Yakın Zaman'da açarak ağınızı nasıl etkiley Tehdit ve Güvenlik Açığı Yönetimi. Öneri ayrıntıları bölmesi, kullanıcı etkisini açıklar. Cihazlarınızı yüzde kaçının, kullanıcı üretkenliğini olumsuz etkilemeden engelleme modunda kuralı etkinleştiren yeni bir ilkeyi kabul edebilir.
+Saldırı yüzeyini azaltma kuralı için en iyi yöntem olarak, kuralın ağınızı nasıl etkileyebileceklerini değerlendirmek için Tehdit ve Güvenlik Açığı Yönetimi'da bu kural için güvenlik önerisini açın. Öneri ayrıntıları bölmesi, kullanıcı etkisini açıklar. Bu etkiyi, cihazlarınızın yüzde kaçının kullanıcı üretkenliğini olumsuz etkilemeden engelleme modunda etkinleştiren yeni bir ilkeyi kabul edebileceğini belirlemek için kullanabilirsiniz.
 
-Buna ek Exchange e-posta taban çizgisi ayarlarını kullanarak gelen e-postayı engelleyebilir ve e-postanın gönderilmesini veya e-posta içindeki bağlantıların tık tıklatması önlenebilir. Çalışanlarınızı bu davranış konusunda eğitin ve bu önlemlerin alınma nedeni konusunda eğitin.
+Ayrıca Exchange e-posta temel ayarları gelen e-postayı engelleyebilir ve e-postanın gönderilmesini veya e-posta içindeki bağlantıların tıklanmasını engelleyebilir. Çalışanlarınızı bu davranış ve bu önlemlerin alınma nedeni konusunda eğitin.
 
 ## <a name="resulting-configuration"></a>Sonuçta elde edilen yapılandırma
 
-İşte bu adımdan sonra kiracınız için fidye yazılımı koruması.
+Bu adımdan sonra kiracınız için fidye yazılımı koruması aşağıdadır.
 
-![1. Adım'dan Microsoft 365 kiracınız için fidye yazılımı koruması](../media/ransomware-protection-microsoft-365/ransomware-protection-microsoft-365-architecture-step1.png)
-
+![1. Adımdan sonra Microsoft 365 kiracınız için fidye yazılımı koruması](../media/ransomware-protection-microsoft-365/ransomware-protection-microsoft-365-architecture-step1.png)
 
 ## <a name="next-step"></a>Sonraki adım
 
-[![Yazılım yazılımlarını ve fidye yazılımlarını koruma için 2. Microsoft 365](../media/ransomware-protection-microsoft-365/ransomware-protection-microsoft-365-step2.png)](ransomware-protection-microsoft-365-attack-detection-response.md)
+[![Microsoft 365 ile fidye yazılımı koruması için 2. Adım](../media/ransomware-protection-microsoft-365/ransomware-protection-microsoft-365-step2.png)](ransomware-protection-microsoft-365-attack-detection-response.md)
 
-Kiracınız [için saldırı algılama](ransomware-protection-microsoft-365-attack-detection-response.md) ve yanıt özelliklerini dağıtmak için 2. Adımdan Microsoft 365 devam edin.
+Microsoft 365 kiracınız için saldırı algılama ve yanıt özelliklerini dağıtmak için [2. Adımla](ransomware-protection-microsoft-365-attack-detection-response.md) devam edin.

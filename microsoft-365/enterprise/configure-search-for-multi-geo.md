@@ -1,5 +1,5 @@
 ---
-title: Multi-Geo Microsoft 365 arama yapılandırma
+title: Microsoft 365 Multi-Geo için aramayı yapılandırma
 ms.reviewer: adwood
 ms.author: tlarsen
 author: tklarsen
@@ -12,55 +12,55 @@ ms.collection: Strat_SP_gtc
 ms.localizationpriority: medium
 f1.keywords:
 - NOCSH
-description: Çok coğrafi bir ortamda arama yapılandırmayı öğrenin. Çok coğrafi bir ortamda OneDrive bazı istemciler sonuç geri getir olabilir.
-ms.openlocfilehash: d6d6895c6dc393bb1f28dff60dea996bf80aad5a
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Çok coğrafi bir ortamda aramayı yapılandırmayı öğrenin. Yalnızca OneDrive gibi bazı istemciler sonuçları çok coğrafi bir ortamda döndürebilir.
+ms.openlocfilehash: a6f152a3f226befa8bc060dadd0eed1c0952523c
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988183"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824936"
 ---
-# <a name="configure-search-for-microsoft-365-multi-geo"></a>Multi-Geo Microsoft 365'i yapılandırma
+# <a name="configure-search-for-microsoft-365-multi-geo"></a>Microsoft 365 Multi-Geo için Aramayı Yapılandırma
 
-Çok coğrafi bir ortamda, her coğrafi konumun kendi arama dizini ve Arama Merkezi vardır. Kullanıcı aramalarında, sorgu tüm dizinlere işaret ediyor ve döndürülen sonuçlar birleştirilir.
+Çok coğrafi bir ortamda her coğrafi konumun kendi arama dizini ve Arama Merkezi vardır. Kullanıcı arama yaparken, sorgu tüm dizinlere yönlendirilir ve döndürülen sonuçlar birleştirilir.
 
-Örneğin, bir coğrafi konumdaki kullanıcı başka bir coğrafi konumda depolanan içeriği veya farklı bir coğrafi konumla sınırlı SharePoint bir Coğrafi Konum sitesinde içerik arayabilir. Kullanıcının bu içeriğe erişimi varsa, arama sonucu gösterir.
+Örneğin, bir coğrafi konumdaki bir kullanıcı başka bir coğrafi konumda depolanan içeriği veya farklı bir coğrafi konumla kısıtlanmış bir SharePoint sitesindeki içeriği arayabilir. Kullanıcının bu içeriğe erişimi varsa, arama sonucu gösterir.
 
-## <a name="which-search-clients-work-in-a-multi-geo-environment"></a>Çok coğrafi ortamda hangi arama istemcileri çalışır?
+## <a name="which-search-clients-work-in-a-multi-geo-environment"></a>Hangi arama istemcileri çok coğrafi bir ortamda çalışır?
 
-Bu istemciler tüm coğrafi konumlardan sonuçlar geri getirebilirsiniz:
+Bu istemciler tüm coğrafi konumlardan sonuçlar döndürebilir:
 
 - OneDrive
 - Delve
-- Sayfa SharePoint sayfası
+- SharePoint giriş sayfası
 - Arama Merkezi
-- Arama API'sini kullanan SharePoint arama uygulamaları
+- SharePoint Arama API'sini kullanan özel arama uygulamaları
 
 ### <a name="onedrive"></a>OneDrive
 
-Çok coğrafi ortam ayar hemen ayarlanır ayarlamaz, kaynakta arama OneDrive tüm coğrafi konumlardan sonuçlar elde eder.
+Çok coğrafi ortam ayarlanır kurulmaz, OneDrive'de arama yapılan kullanıcılar tüm coğrafi konumlardan sonuçlar alır.
 
 ### <a name="delve"></a>Delve
 
-Çok coğrafi ortam ayar hemen ayarlanır ayarlamaz, kaynakta arama Delve tüm coğrafi konumlardan sonuçlar elde eder.
+Çok coğrafi ortam ayarlanır ayarlanmaz, Delve'de arama Delve kullanıcılar tüm coğrafi konumlardan sonuçlar alır.
 
-Sayfa Delve ve profil kartı yalnızca merkezi konumda depolanan dosyaların önizlemelerini gösterir. Uydu konumlarında depolanan dosyalar için bunun yerine dosya türünün simgesi gösterilir.
+Delve akışı ve profil kartı yalnızca merkezi konumda depolanan dosyaların önizlemelerini gösterir. Uydu konumlarında depolanan dosyalar için bunun yerine dosya türü simgesi gösterilir.
 
-### <a name="the-sharepoint-home-page"></a>Sayfa SharePoint sayfası
+### <a name="the-sharepoint-home-page"></a>SharePoint giriş sayfası
 
-Multi-geo ortamı ayarlanmaz, kullanıcılar ana sayfalarında birden çok coğrafi konumdaki haberleri, son ve takip edilen siteleri SharePoint görebilirler. Ana sayfada yer alan arama kutusunu SharePoint, birden çok coğrafi konumdan birleştirilmiş sonuçlar elde olur.
+Çok coğrafi ortam ayarlanır kurulmaz, kullanıcılar SharePoint giriş sayfasında birden çok coğrafi konumdan gelen haberleri, son ve takip edilen siteleri görür. SharePoint giriş sayfasındaki arama kutusunu kullanırlarsa, birden çok coğrafi konumdan birleştirilmiş sonuçlar alır.
 
 ### <a name="the-search-center"></a>Arama Merkezi
 
-Çok coğrafi ortam ayarlandıktan sonra, her Arama Merkezi yalnızca kendi coğrafi konumlarından sonuçları göstermeye devam eder. Yöneticilerin tüm [coğrafi konumlardan sonuç almak için](#_Set_up_a_1) her Arama Merkezi'nin ayarlarını değiştirmesi gerekir. Bundan sonra, Arama Merkezi'nde arama kullanan kullanıcılar tüm coğrafi konumlardan sonuçlar elde ediyor.
+Çok coğrafi ortam ayarlandıktan sonra, her Arama Merkezi yalnızca kendi coğrafi konumlarından sonuçları göstermeye devam eder. Yöneticilerin tüm coğrafi konumlardan sonuç almak için [her Arama Merkezi'nin ayarlarını değiştirmesi](#_Set_up_a_1) gerekir. Daha sonra Arama Merkezi'nde arama yapılan kullanıcılar tüm coğrafi konumlardan sonuçlar alır.
 
 ### <a name="custom-search-applications"></a>Özel arama uygulamaları
 
-Özel arama uygulamaları her zamanki gibi, var olan ARAMA REST API'lerini kullanarak arama SharePoint etkileşimde kullanılmaktadır. Tüm konumlardan veya bazı coğrafi konumlardan sonuç almak için uygulamanın API'yi araması ve yeni [Multi-Geo](#_Get_custom_search) sorgu parametrelerini istekte içermesi gerekir. Bu, sorgunun tüm coğrafi konumlara doğru bir fanı tetikler.
+Her zamanki gibi, özel arama uygulamaları mevcut SharePoint Arama REST API'lerini kullanarak arama dizinleriyle etkileşim kurar. Tüm veya bazı coğrafi konumlardan sonuç almak için uygulamanın [API'yi çağırması ve isteğe yeni Multi-Geo sorgu parametrelerini eklemesi](#_Get_custom_search) gerekir. Bu, sorgudan tüm coğrafi konumlara giden bir fan tetikler.
 
-## <a name="whats-different-about-search-in-a-multi-geo-environment"></a>Çok coğrafi bir ortamda arama arasında ne fark vardır?
+## <a name="whats-different-about-search-in-a-multi-geo-environment"></a>Çok coğrafili bir ortamda aramanın farkı nedir?
 
-Biliyor olabileceğiniz bazı arama özellikleri, çok coğrafi bir ortamda farklı çalışır.
+Aşina olabileceğiniz bazı arama özellikleri, çok coğrafi bir ortamda farklı çalışır.
 
 <table>
 <thead>
@@ -72,42 +72,42 @@ Biliyor olabileceğiniz bazı arama özellikleri, çok coğrafi bir ortamda fark
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Yükseltildi sonuçları</td>
-<td align="left">Farklı düzeylerde yükselten sonuçlarla, sorgu kuralları oluşturabilirsiniz: tüm kiracı, bir site koleksiyonu veya bir site için. Çok coğrafi bir ortamda, sonuçları tüm coğrafi konumlarda Arama Merkezlerine tanıtmak için, yükseltilen sonuçları kiracı düzeyinde tanımlayın. Yalnızca site koleksiyonunun veya sitenin coğrafi konumu olan Arama Merkezi'nde sonuçların tanıtımını yapmak için, yükseltilen sonuçları site koleksiyonu veya site düzeyinde tanımlayın. Bu sonuçlar, diğer coğrafi konumlarda yükseltlanmaz.</td>
-<td align="left">Coğrafi konum başına farklı yükseltilecek sonuçlara, örneğin seyahat için farklı kurallara ihtiyacınız yoksa, yükseltilecek sonuçları kiracı düzeyinde tanımlamanız önerilir.</td>
+<td align="left">Yükseltilen sonuçlar</td>
+<td align="left">Yükseltilen sonuçlarla farklı düzeylerde sorgu kuralları oluşturabilirsiniz: kiracının tamamı, site koleksiyonu veya site için. Çok coğrafi bir ortamda, tüm coğrafi konumlarda sonuçları Arama Merkezlerine yükseltmek için kiracı düzeyinde yükseltilen sonuçları tanımlayın. Sonuçları yalnızca site koleksiyonunun veya sitenin coğrafi konumundaki Arama Merkezi'nde yükseltmek istiyorsanız, yükseltilen sonuçları site koleksiyonu veya site düzeyinde tanımlayın. Bu sonuçlar diğer coğrafi konumlarda yükseltilmemiştir.</td>
+<td align="left">Coğrafi konum başına farklı yükseltilen sonuçlara ihtiyacınız yoksa (örneğin seyahat için farklı kurallar) kiracı düzeyinde yükseltilen sonuçları tanımlamanızı öneririz.</td>
 </tr>
 <tr class="even">
-<td align="left">İyileştiricileri arama</td>
-<td align="left">Arama, bir kiracının tüm coğrafi konumlarından iyileştiricileri döndürür ve sonra bunları bir araya döndürür. Toplama en iyi çalışmadır; başka bir ifadeyle, iyileştirici sayıları %100 doğru olmayabilir. Arama güdümlü senaryoların çoğu için bu doğruluk yeterli olacaktır. 
+<td align="left">Arama iyileştiricileri</td>
+<td align="left">Arama, bir kiracının tüm coğrafi konumlarından iyileştiriciler döndürür ve sonra bunları toplar. Toplama en iyi çabadır, yani iyileştirici sayıları %100 doğru olmayabilir. Çoğu arama temelli senaryo için bu doğruluk yeterlidir.
 </td>
-<td align="left">İyileştiricinin eksiksizliğine bağımlı arama odaklı uygulamalar için, her coğrafi konumu birbirinden bağımsız olarak sorgular.</td>
+<td align="left">İyileştiricinin eksiksizliğine bağlı arama temelli uygulamalar için her coğrafi konumu bağımsız olarak sorgulayabilirsiniz.</td>
 </tr>
 <tr class="odd">
 <td align="left"></td>
-<td align="left">Çok coğrafi arama, sayısal iyileştiriciler için dinamik demetleri desteklemez.</td>
-<td align="left">Sayısal <a href="/sharepoint/dev/general-development/query-refinement-in-sharepoint">iyileştiriciler için "Ayrık"</a> parametresini kullanın.</td>
+<td align="left">Çok coğrafi arama, sayısal iyileştiriciler için dinamik demeti desteklemez.</td>
+<td align="left">Sayısal iyileştiriciler için <a href="/sharepoint/dev/general-development/query-refinement-in-sharepoint">"Discretize" parametresini</a> kullanın.</td>
 </tr>
 <tr class="even">
 <td align="left">Belge Kimlikleri</td>
-<td align="left">Arama odaklı, belge kimliklarına dayalı bir uygulama geliştiriyorsanız, çok coğrafi bir ortamdaki belge kimliklerin coğrafi konumlar arasında benzersiz olmadığını, coğrafi konumlar başına benzersiz olduğunu unutmayın.</td>
-<td align="left">Coğrafi konumu tanımlayan bir sütun ekledik. Benzersizlik elde etmek için bu sütunu kullanın. Bu sütunun adı "GeoLocationSource".</td>
+<td align="left">Belge kimliklerine bağlı arama temelli bir uygulama geliştiriyorsanız, çok coğrafi bir ortamdaki belge kimliklerinin coğrafi konumlar arasında benzersiz olmadığını, coğrafi konum başına benzersiz olduğunu unutmayın.</td>
+<td align="left">Coğrafi konumu tanımlayan bir sütun ekledik. Benzersizliğe ulaşmak için bu sütunu kullanın. Bu sütun "GeoLocationSource" olarak adlandırılır.</td>
 </tr>
 <tr class="odd">
 <td align="left">Sonuç sayısı</td>
-<td align="left">Arama sonuçları sayfası coğrafi konumlardan birleştirilmiş sonuçları gösterir, ancak 500 sonucun ötesinde sonuçlar almak mümkün değildir.</td>
+<td align="left">Arama sonuçları sayfasında coğrafi konumlardan elde edilen birleşik sonuçlar gösterilir, ancak 500'den fazla sonucu sayfaya eklemek mümkün değildir.</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left">Karma arama</td>
-<td align="left">Bulut karma SharePoint karma <a href="/sharepoint/hybrid/learn-about-cloud-hybrid-search-for-sharepoint">bir</a> ortamda, şirket içi içerik merkezi konumun Microsoft 365 dizine eklenir.</td>
+<td align="left"><a href="/sharepoint/hybrid/learn-about-cloud-hybrid-search-for-sharepoint">Bulut karma aramalı</a> karma SharePoint ortamında, şirket içi içerik merkezi konumun Microsoft 365 dizinine eklenir.</td>
 <td align="left"></td>
 </tr>
 </tbody>
 </table>
 
-## <a name="whats-not-supported-for-search-in-a-multi-geo-environment"></a>Çok coğrafi bir ortamda arama için neler desteklenmiyor?
+## <a name="whats-not-supported-for-search-in-a-multi-geo-environment"></a>Çok coğrafili bir ortamda arama için ne desteklenmez?
 
-Aşina olabileceğiniz arama özelliklerinin bazıları çok coğrafi bir ortamda desteklenmiyor.
+Aşina olabileceğiniz bazı arama özellikleri çok coğrafi bir ortamda desteklenmez.
 
 <table>
 <thead>
@@ -119,69 +119,69 @@ Aşina olabileceğiniz arama özelliklerinin bazıları çok coğrafi bir ortamd
 <tbody>
 <tr class="odd">
 <td align="left">Yalnızca uygulama kimlik doğrulaması</td>
-<td align="left">Yalnızca uygulama kimlik doğrulaması (hizmetlerden ayrıcalıklı erişim) birden fazla coğrafi konumda arama.</td>
+<td align="left">Yalnızca uygulama kimlik doğrulaması (hizmetlerden ayrıcalıklı erişim) birden fazla coğrafi konumda arama desteklenmez.</td>
 </tr>
 <tr class="even">
 <td align="left">Konuklar</td>
-<td align="left">Konuklar yalnızca arayarak katıldıkları coğrafi konumdan sonuçlar elde ediyor.</td>
+<td align="left">Konuklar yalnızca aradıkları coğrafi konumdan sonuçlar alır.</td>
 </tr>
 </tbody>
 </table>
 
-## <a name="how-does-search-work-in-a-multi-geo-environment"></a>Çok coğrafi ortamda arama nasıl çalışır?
+## <a name="how-does-search-work-in-a-multi-geo-environment"></a>Çok coğrafi bir ortamda arama nasıl çalışır?
 
-Tüm arama istemcileri, arama dizinleriyle SharePoint Search REST API'leri için mevcut verileri kullanır.
+Tüm arama istemcileri, arama dizinleriyle etkileşime geçmek için mevcut SharePoint Arama REST API'lerini kullanır.
 
-![Search REST API'SharePoint arama dizinleriyle nasıl etkileşim kurduğu gösteren diyagram.](../media/configure-search-for-multi-geo-image1-1.png)
+![SharePoint Arama REST API'lerinin arama dizinleriyle nasıl etkileşime geçtiğini gösteren diyagram.](../media/configure-search-for-multi-geo-image1-1.png)
 
-1. Arama istemcisi, EnableMultiGeoSearch= true sorgu özelliğiyle REST Ara uç noktasını arar.
-2. Sorgu, kiracının tüm coğrafi konumlara gönderilir.
-3. Her coğrafi konumdan gelen arama sonuçları birleştirilir ve dereceleştirilir.
-4. İstemci, birleşik arama sonuçlarını alır.
+1. Arama istemcisi Search REST uç noktasını EnableMultiGeoSearch= true sorgu özelliğiyle çağırır.
+2. Sorgu kiracıdaki tüm coğrafi konumlara gönderilir.
+3. Her coğrafi konumdan gelen arama sonuçları birleştirilir ve derecelendirilir.
+4. İstemci birleşik arama sonuçları alır.
 
-<span id="_Set_up_a" class="anchor"><span id="_Ref501388384" class="anchor"></span></span>Tüm coğrafi konumlardan sonuç alınana kadar arama sonuçlarını birleştirmeyimize dikkat edin. Bu, çok coğrafi aramaların tek bir coğrafi konumu olan bir ortamda yapılan aramalara göre ek gecikme süresine sahip olduğu anlamına gelir.
+<span id="_Set_up_a" class="anchor"><span id="_Ref501388384" class="anchor"></span></span>Tüm coğrafi konumlardan sonuçlar alınana kadar arama sonuçlarını birleştirmediğimize dikkat edin. Bu, çok coğrafi konumlu aramaların yalnızca bir coğrafi konuma sahip bir ortamdaki aramalara kıyasla ek gecikme süresine sahip olduğu anlamına gelir.
 
 <span id="_Set_up_a_1" class="anchor"><span id="_Ref505252370" class="anchor"></span></span>
-## <a name="get-a-search-center-to-show-results-from-all-geo-locations"></a>Tüm coğrafi konumlardan sonuçları göstermek için bir Arama Merkezi'ne sahip olur
+## <a name="get-a-search-center-to-show-results-from-all-geo-locations"></a>Tüm coğrafi konumlardan sonuçları göstermek için arama merkezi alma
 
-Her Arama Merkezi'nin birçok dikey dikey konumu vardır ve her dikey konumu tek tek ayarlamalısiniz.
+Her Arama Merkezi'nin birkaç dikey ayarı vardır ve her dikeyi ayrı ayrı ayarlamanız gerekir.
 
-1. Arama sonuçları sayfasını ve Arama Sonucu Web Bölümünü düzenleme izni olan bir hesap ile bu adımları gerçekleştirin.
+1. Bu adımları, arama sonuçları sayfasını ve Arama Sonucu Web Bölümünü düzenleme izni olan bir hesapla gerçekleştirdiğinizden emin olun.
 
-2. Arama sonuçları sayfasına gidin (arama [sonuçları sayfalarının](https://support.office.com/article/174d36e0-2f85-461a-ad9a-8b3f434a4213) listesine bakın)
+2. Arama sonuçları sayfasına gidin (arama sonuçları sayfalarının [listesine](https://support.office.com/article/174d36e0-2f85-461a-ad9a-8b3f434a4213) bakın)
 
-3. Ayarlamak için dikey simgesini seçin, sağ **üst Ayarlar** dişli simgesine tıklayın ve sonra da Sayfayı Düzenle'ye **tıklayın**. Arama sonuçları sayfası Düzenleme modunda açılır.
+3. Ayarlamak için dikey öğeyi seçin, sağ üst köşedeki **Ayarlar** dişli simgesine ve ardından **Sayfayı Düzenle'ye** tıklayın. Arama sonuçları sayfası Düzenleme modunda açılır.
 
-   ![Çalışma sayfasında sayfa seçimini Ayarlar.](../media/configure-search-for-multi-geo-image2.png)
+   ![Ayarlar'de sayfa seçimini düzenleyin.](../media/configure-search-for-multi-geo-image2.png)
 
-4. Arama Sonuçları Web Bölümünde, işaretçiyi web adının sağ üst köşesine hareket ettirin, oka tıklayın ve ardından menüde **Web Bölümünü Düzenle'ye** tıklayın. Arama Sonuçları Web Bölümü araç bölmesi, sayfanın sağ üst kısmında şeridin altında açılır.
+4. Arama Sonuçları Web Bölümü'nde, işaretçiyi web bölümünün sağ üst köşesine getirin, oka tıklayın ve ardından menüde **Web Bölümünü Düzenle'ye** tıklayın. Arama Sonuçları Web Bölümü araç bölmesi, sayfanın sağ üst kısmındaki şeridin altında açılır.
 
-   ![Web Bölümünü Düzenle seçimi.](../media/configure-search-for-multi-geo-image3.png)
+   ![Web Bölümü seçimini düzenleyin.](../media/configure-search-for-multi-geo-image3.png)
 
-5. Tüm coğrafi konumlardan sonuçları göstermek için Web Bölümü araç bölmesindeki Arama **Ayarlar** Kontrol ayarları'nın altında **Multi-Geo** Sonuçlarını Göster'i seçerek Arama Sonuçları Web Bölümü'ne gidin.
+5. Web Bölümü araç bölmesindeki **Ayarlar** bölümündeki **Sonuçlar denetim ayarları'nın** altında **Multi-Geo sonuçlarını göster'i** seçerek Arama Sonuçları Web Bölümü'nü seçerek tüm coğrafi konumlardaki sonuçları görüntüleyin.
 
-6. **Değişikliğinizi** kaydetmek ve Web Bölümü araç bölmesini kapatmak için Tamam'a tıklayın.
+6. Değişikliğinizi kaydetmek ve Web Bölümü araç bölmesini kapatmak için **Tamam'a** tıklayın.
 
-7. Ana menenin Sayfa sekmesindeki Iade **Edin'e** tıklayarak Arama Sonuçları Web Bölümü'ne yaptığınız değişiklikleri kontrol edin.
+7. Ana menünün Sayfa sekmesinde **İade Et'e** tıklayarak Arama Sonuçları Web Bölümü'nde yaptığınız değişiklikleri denetleyin.
 
-8. Sayfanın en üstünde yer alan notta sağlanan bağlantıyı kullanarak değişiklikleri yayımlayın.
+8. Sayfanın üst kısmındaki notta sağlanan bağlantıyı kullanarak değişiklikleri yayımlayın.
 
 <span id="_Get_custom_search" class="anchor"><span id="_Ref501388387" class="anchor"></span></span>
-## <a name="get-custom-search-applications-to-show-results-from-all-or-some-geo-locations"></a>Tüm konumlardan veya bazı coğrafi konumlardan sonuçları göstermek için özel arama uygulamaları elde
+## <a name="get-custom-search-applications-to-show-results-from-all-or-some-geo-locations"></a>Tüm veya bazı coğrafi konumlardaki sonuçları göstermek için özel arama uygulamaları alma
 
-Özel arama uygulamaları, REST API'sini ara isteğiyle birlikte sorgu parametreleri belirterek sonuçları SharePoint elde edin. Sorgu parametrelerine bağlı olarak, sorgu tüm coğrafi konumlara veya bazı coğrafi konumlara yakın olur. Örneğin, ilgili bilgileri bulmak için yalnızca coğrafi konumların bir alt kümesini sorgulamanız yeterli olacaksa, bunları sadece bunlara yakın bir şekilde kontrol edin. İstek başarılı olursa, REST API'SharePoint Arama API'si yanıt verilerini döndürür.
+Özel arama uygulamaları, SharePoint Arama REST API'sine yönelik istekle sorgu parametrelerini belirterek tüm coğrafi konumlardan veya bazı coğrafi konumlardan sonuç alır. Sorgu parametrelerine bağlı olarak, sorgu tüm coğrafi konumlara veya bazı coğrafi konumlara yönlendirilir. Örneğin, ilgili bilgileri bulmak için yalnızca coğrafi konumların bir alt kümesini sorgulamanız gerekiyorsa, fanı yalnızca bunlara göre denetleyebilirsiniz. İstek başarılı olursa, SharePoint Arama REST API'si yanıt verilerini döndürür.
 
 ### <a name="requirement"></a>Gereksinim
 
-Her coğrafi konum için, kuruluşta tüm kullanıcılara kök web sitesi için Okuma izin düzeyinin verilmiş  olduğundan emin olmak gerekir (örneğin, **contosoAPAC.sharepoint.com/** ve **contosoEU.sharepoint.com/**). [İzinler hakkında bilgi edinmek için](https://support.office.com/article/understanding-permission-levels-in-sharepoint-87ecbb0e-6550-491a-8826-c075e4859848):
+Her coğrafi konum için kuruluştaki tüm kullanıcılara kök web sitesi (örneğin **contosoAPAC.sharepoint.com/** ve **contosoEU.sharepoint.com/**) için **Okuma** izni verildiğinden emin olmanız gerekir. [İzinler hakkında bilgi edinin](https://support.office.com/article/understanding-permission-levels-in-sharepoint-87ecbb0e-6550-491a-8826-c075e4859848).
 
 ### <a name="query-parameters"></a>Sorgu parametreleri
 
-EnableMultiGeoSearch - Bu, sorgunun multi-geo kiracının diğer coğrafi konumlarının dizinleri için fantale olup olmadığını belirten Boole değeridir. Sorguyu **fani olarak** true olarak ayarlayın; **sorguyu** fan out out için false. Bu parametreyi dahil etmek yoksa, Enterprise Arama Merkezi şablonunu kullanan bir siteye karşı REST API çağrısı yaparken varsayılan değer false olur, ancak bu durumda varsayılan değer **true olur**. Parametreyi birden çok coğrafi olmayan bir ortamda kullanırsanız, parametre göz ardı edilir.
+EnableMultiGeoSearch - Bu, sorgunun çok coğrafi kiracının diğer coğrafi konumlarının dizinlerine aktarılıp aktarılmayacağını belirten bir Boole değeridir. Sorguyu yaymak için **true** olarak ayarlayın; **false** değerini sunun. Bu parametreyi eklemezseniz, Enterprise Arama Merkezi şablonunu kullanan bir sitede REST API çağrısı yapmak dışında varsayılan değer **false** olur; bu durumda varsayılan değer **true** olur. parametresini çok coğrafi olmayan bir ortamda kullanırsanız, parametre yoksayılır.
 
-ClientType - Bu bir dizedir. Her arama uygulaması için benzersiz bir istemci adı girin. Bu parametreyi dahil etmeyebilirsiniz, sorgu diğer coğrafi konumlara bağlı değildir.
+ClientType - Bu bir dizedir. Her arama uygulaması için benzersiz bir istemci adı girin. Bu parametreyi eklemezseniz, sorgu diğer coğrafi konumlara eklenmez.
 
-MultiGeoSearchConfiguration - Bu, **EnableMultiGeoSearch'un** ne zaman doğru olduğunu takip etmek için çok coğrafi kiracıda coğrafi konumların yer alan isteğe bağlı bir **listesidir**. Bu parametreyi dahil etmek veya boş bırakmak zorunda kalırsanız, sorgu tüm coğrafi konumlara yakın görünür. Her coğrafi konum için JSON biçiminde aşağıdaki öğeleri girin:
+MultiGeoSearchConfiguration - Bu, **EnableMultiGeoSearch** **true** olduğunda sorguyu hayran kılmak için çok coğrafi kiracıdaki coğrafi konumların isteğe bağlı bir listesidir. Bu parametreyi dahil etmez veya boş bırakırsanız, sorgu tüm coğrafi konumlara yönlendirilir. Her coğrafi konum için JSON biçiminde aşağıdaki öğeleri girin:
 
 <table>
 <thead>
@@ -193,24 +193,24 @@ MultiGeoSearchConfiguration - Bu, **EnableMultiGeoSearch'un** ne zaman doğru ol
 <tbody>
 <tr class="odd">
 <td align="left">DataLocation</td>
-<td align="left">Coğrafi konum (örneğin NAM).</td>
+<td align="left">Coğrafi konum, örneğin NAM.</td>
 </tr>
 <tr class="even">
-<td align="left">EndPoint</td>
-<td align="left">Bağlanıla uç nokta, örneğin https://contoso.sharepoint.com</td>
+<td align="left">Bitiş noktası</td>
+<td align="left">Bağlanacak uç nokta, örneğin https://contoso.sharepoint.com</td>
 </tr>
 <tr class="odd">
 <td align="left">SourceId</td>
-<td align="left">Sonuç kaynağının GUID'si; örneğin B81EAB55-3140-4312-B0F4-9459D1B4FFEE.</td>
+<td align="left">Sonuç kaynağının GUID değeri, örneğin B81EAB55-3140-4312-B0F4-9459D1B4FFEE.</td>
 </tr>
 </tbody>
 </table>
 
-DataLocation veya EndPoint'i atlarsanız veya bir DataLocation çoğaltılmışsa, istek başarısız olur. [Microsoft Graph kullanarak kiracının coğrafi konumlarının bitiş noktası hakkında bilgi Graph](/sharepoint/dev/solution-guidance/multigeo-discovery).
+DataLocation veya EndPoint'i atlarsanız veya bir DataLocation yineleniyorsa istek başarısız olur. [Microsoft Graph kullanarak kiracının coğrafi konumlarının uç noktası hakkında bilgi alabilirsiniz](/sharepoint/dev/solution-guidance/multigeo-discovery).
 
 ### <a name="response-data"></a>Yanıt verileri
 
-MultiGeoSearchStatus – Bu özellik, SharePoint Search API'sinde bir ima yanıt olarak döndüren bir özelliktir. Özelliğin değeri bir dizedir ve Ara API'sinde döndüren sonuçlar SharePoint verir:
+MultiGeoSearchStatus : Bu, SharePoint Arama API'sinin bir isteğe yanıt olarak döndürdüğü bir özelliktir. özelliğinin değeri bir dizedir ve SharePoint Arama API'sinin döndürdüğü sonuçlar hakkında aşağıdaki bilgileri verir:
 
 <table>
 <thead>
@@ -222,20 +222,20 @@ MultiGeoSearchStatus – Bu özellik, SharePoint Search API'sinde bir ima yanıt
 <tbody>
 <tr class="odd">
 <td align="left">Tam</td>
-<td align="left">Tüm coğrafi <strong>konumlardan</strong> tam sonuçlar.</td>
+<td align="left"><strong>Tüm</strong> coğrafi konumlardan tam sonuçlar.</td>
 </tr>
 <tr class="even">
 <td align="left">Kısmi</td>
-<td align="left">Bir veya birden çok coğrafi konumdan kısmi sonuçlar. Geçici bir hata nedeniyle sonuçlar eksik.</td>
+<td align="left">Bir veya daha fazla coğrafi konumdan kısmi sonuçlar. Geçici bir hata nedeniyle sonuçlar tamamlanmadı.</td>
 </tr>
 </tbody>
 </table>
 
-### <a name="query-using-the-rest-service"></a>REST hizmetini kullanan sorgu
+### <a name="query-using-the-rest-service"></a>REST hizmetini kullanarak sorgulama
 
-GET isteğiyle, sorgu parametrelerini URL'de belirtirsiniz. POST isteğiyle, sorgu parametrelerini JavaScript Nesne Notasyonu (JSON) biçiminde gövdeye geçersiniz.
+GET isteğiyle, URL'de sorgu parametrelerini belirtirsiniz. POST isteğiyle, gövdedeki sorgu parametrelerini JavaScript Nesne Gösterimi (JSON) biçiminde geçirirsiniz.
 
-#### <a name="request-headers"></a>Üstbilgi isteği
+#### <a name="request-headers"></a>İstek üst bilgileri
 
 <table>
 <thead>
@@ -252,22 +252,22 @@ GET isteğiyle, sorgu parametrelerini URL'de belirtirsiniz. POST isteğiyle, sor
 </tbody>
 </table>
 
-#### <a name="sample-get-request-thats-fanned-out-to-all-geo-locations"></a>Tüm coğrafi konumlara fanenenen **örnek GET** isteği
+#### <a name="sample-get-request-thats-fanned-out-to-all-geo-locations"></a>**Tüm** coğrafi konumlara giden örnek GET isteği
 
 ```http
 https:// \<tenant\>/\_api/search/query?querytext='sharepoint'&Properties='EnableMultiGeoSearch:true'&ClientType='my\_client\_id'
 ```
 
-#### <a name="sample-get-request-to-fan-out-to-some-geo-locations"></a>Bazı coğrafi konumlara fan yapmak **için örnek** GET isteği
+#### <a name="sample-get-request-to-fan-out-to-some-geo-locations"></a>**Bazı** coğrafi konumlara giden örnek GET isteği
 
 ```http
 https:// \<tenant\>/\_api/search/query?querytext='site'&ClientType='my_client_id'&Properties='EnableMultiGeoSearch:true, MultiGeoSearchConfiguration:[{DataLocation\\:"NAM"\\,Endpoint\\:"https\\://contosoNAM.sharepoint.com"\\,SourceId\\:"B81EAB55-3140-4312-B0F4-9459D1B4FFEE"}\\,{DataLocation\\:"CAN"\\,Endpoint\\:"https\\://contosoCAN.sharepoint-df.com"}]'
 ```
 
 > [!NOTE]
-> MultiGeoSearchConfiguration özelliğinin coğrafi konumlar listesinde virgül ve iki nokta üst üste, ters eğik çizgi **karakteri vardır** . Bunun nedeni, GET isteklerinin özellikleri birbirinden ayırmak için iki nokta üst üste ve virgül kullanarak özellik bağımsız değişkenlerini birbirinden ayırmasıdır. Ters eğik çizgi bir çıkış karakteri olarak olmadan, MultiGeoSearchConfiguration özelliği yanlış yorumlanır.
+> MultiGeoSearchConfiguration özelliği için coğrafi konumlar listesindeki virgüller ve iki nokta üst üsteler **ters eğik çizgi** karakterinden önce gelir. Bunun nedeni GET isteklerinin özellikleri ayırmak için iki nokta üst üste ve özelliklerin bağımsız değişkenlerini ayırmak için virgül kullanmasıdır. Kaçış karakteri olarak ters eğik çizgi olmadan MultiGeoSearchConfiguration özelliği yanlış yorumlanır.
 
-#### <a name="sample-post-request-thats-fanned-out-to-all-geo-locations"></a>Tüm coğrafi konumlara yazılan örnek **POSTA** isteği
+#### <a name="sample-post-request-thats-fanned-out-to-all-geo-locations"></a>**Tüm** coğrafi konumlara giden örnek POST isteği
 
 ```http
     {
@@ -292,7 +292,7 @@ https:// \<tenant\>/\_api/search/query?querytext='site'&ClientType='my_client_id
     }
 ```
 
-#### <a name="sample-post-request-thats-fanned-out-to-some-geo-locations"></a>Bazı coğrafi konumlara yazılan örnek POST isteği 
+#### <a name="sample-post-request-thats-fanned-out-to-some-geo-locations"></a>**Bazı** coğrafi konumlara giden örnek POST isteği
 
 ```http
     {
@@ -321,9 +321,9 @@ https:// \<tenant\>/\_api/search/query?querytext='site'&ClientType='my_client_id
     }
 ```
 
-### <a name="query-using-csom"></a>CSOM kullanan sorgu
+### <a name="query-using-csom"></a>CSOM kullanarak sorgulama
 
-Tüm coğrafi konumlara yakın olan örnek bir CSOM **sorgusu** şöyledir:
+Tüm **coğrafi** konumlara giden örnek bir CSOM sorgusu aşağıda verilmişti:
 
 ```CSOM
 var keywordQuery = new KeywordQuery(ctx);

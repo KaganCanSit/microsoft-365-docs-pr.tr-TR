@@ -1,5 +1,5 @@
 ---
-title: Posta için güvenlik varsayılanlarını Microsoft 365 İş Ekstra
+title: Microsoft 365 İş Ekstra için güvenlik varsayılanlarını açma
 f1.keywords:
 - NOCSH
 ms.author: sharik
@@ -23,69 +23,69 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Güvenlik varsayılanlarının, güvenlik ayarları için önceden yapılandırılmış güvenlik ayarları sağlayarak kimlikle ilgili saldırılardan korunmasına nasıl yardımcı Microsoft 365 İş Ekstra.
-ms.openlocfilehash: 9684dc2be113d6f511f1a84e8865ac04a6881ecc
-ms.sourcegitcommit: adea59259a5900cad5de29ddf46d1ca9e9e1c82f
+description: Güvenlik varsayılanlarının, Microsoft 365 İş Ekstra için önceden yapılandırılmış güvenlik ayarları sağlayarak kuruluşunuzun kimlikle ilgili saldırılara karşı korunmasına nasıl yardımcı olabileceğini öğrenin.
+ms.openlocfilehash: 58477da3d44844c763dff95d35fc71753afc7ce2
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "64634679"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824520"
 ---
-# <a name="turn-on-security-defaults-for-microsoft-365-business-premium"></a>Posta için güvenlik varsayılanlarını Microsoft 365 İş Ekstra
+# <a name="turn-on-security-defaults-for-microsoft-365-business-premium"></a>Microsoft 365 İş Ekstra için güvenlik varsayılanlarını açma
 
-Güvenlik varsayılanları, Microsoft'un sizin organizasyonunız adına yönetmesi için önceden yapılandırılmış güvenlik ayarları sağlayarak kimliğinizin korunmasına yardımcı olur. Bu ayarlar arasında, tüm yöneticiler ve kullanıcı hesapları için Multi-Factor Authentication'ın (MFA) etkinleştirilmesi yer almaktadır. Çoğu kuruluş için, güvenlik varsayılanları iyi düzeyde ek oturum açma güvenliği sağlar.
+Güvenlik varsayılanları, Microsoft'un kuruluşunuz adına yönettiği önceden yapılandırılmış güvenlik ayarları sağlayarak kuruluşunuzu kimlikle ilgili saldırılara karşı korumaya yardımcı olur. Bu ayarlar, tüm yöneticiler ve kullanıcı hesapları için çok faktörlü kimlik doğrulamasını (MFA) etkinleştirmeyi içerir. Çoğu kuruluş için güvenlik varsayılanları iyi bir düzeyde ek oturum açma güvenliği sunar.
 
-Güvenlik varsayılanları ve zorunlu kılınan ilkeler hakkında daha fazla bilgi için bkz [. Güvenlik varsayılanları nedir?](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults)
+Güvenlik varsayılanları ve uyguladıkları ilkeler hakkında daha fazla bilgi için bkz. [Güvenlik varsayılanları nedir?](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults)
 
-Aboneliğiniz 22 Ekim 2019'da veya daha sonra oluşturuldu ise sizin için güvenlik varsayılanları otomatik olarak etkinleştirildiyse,&mdash; onaylamak için ayarlarınızı denetlemeniz gerekir.
+Aboneliğiniz 22 Ekim 2019 veya sonrasında oluşturulduysa, güvenlik varsayılanları sizin için otomatik olarak etkinleştirilmiş olabilir, onaylamak için&mdash; ayarlarınızı denetlemeniz gerekir.
 
-Ağ bağlantınız (Azure AD) Azure Active Directory varsayılanları etkinleştirmek veya etkin olup olduklarını görmek için:
+Azure Active Directory 'nizde (Azure AD) güvenlik varsayılanlarını etkinleştirmek veya bunların zaten etkin olup olmadığını denetlemek için:
 
-1. Güvenlik yöneticisi, <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> Yöneticisi veya Genel yönetici kimlik bilgileriyle oturum açın.
+1. güvenlik yöneticisi, Koşullu Erişim yöneticisi veya Genel yönetici kimlik bilgileriyle <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> oturum açın.
 
-2. Sol bölmede, Her Şeyi **Göster'i seçin ve** Yönetim **merkezleri'nin altında Genel Azure Active Directory****.**
+2. Sol bölmede **Tümünü Göster'i** seçin ve ardından **Yönetim merkezleri'nin** altında **Azure Active Directory'ı** seçin.
 
-3. Yönetim merkezinin sol bölmesinde **Azure Active Directory'yi** **Azure Active Directory**.
+3. **Azure Active Directory yönetim merkezinin** sol bölmesinde **Azure Active Directory'ı** seçin.
 
-4. Pano'daki sol menüden Yönet bölümünde **Özellikler'i** **seçin**.
+4. Panonun sol menüsündeki **Yönet** bölümünde **Özellikler'i** seçin.
 
-    :::image type="content" source="../media/m365-campaigns-conditional-access/azure-ad-properties.png" alt-text="Özellikler menü Azure Active Directory gösteren yönetim merkezinin ekran görüntüsü.":::
+    :::image type="content" source="../media/m365-campaigns-conditional-access/azure-ad-properties.png" alt-text="Özellikler menü öğesinin konumunu gösteren Azure Active Directory yönetim merkezinin ekran görüntüsü.":::
 
-5. Özellikler sayfasının en altında **, Güvenlik** varsayılanlarını **Yönet'i seçin**.
+5. **Özellikler** sayfasının en altında **Güvenlik varsayılanlarını yönet'i** seçin.
 
-6. Sağ bölmede, Güvenlik varsayılanlarını **Etkinleştir ayarını** görebilirsiniz. Evet **seçiliyse** , güvenlik varsayılanları zaten etkindir ve başka eylem gerekmez. Güvenlik varsayılanları şu anda etkin değilse, etkinleştirmek **için Evet'i** seçin ve sonra da Kaydet'i **seçin**.
+6. Sağ bölmede **Güvenlik varsayılanlarını etkinleştir** ayarını görürsünüz. **Evet** seçiliyse, güvenlik varsayılanları zaten etkindir ve başka bir eylem gerekmez. Güvenlik varsayılanları şu anda etkin değilse, etkinleştirmek için **Evet'i** ve ardından **Kaydet'i** seçin.
 
 > [!NOTE]
-> Koşullu Erişim ilkelerini daha önce kullandıysanız, güvenlik varsayılanlarını kullanmadan önce ilkeleri kapatmanız gerekir.
+> Koşullu Erişim ilkelerini kullanıyorsanız, güvenlik varsayılanlarını kullanmadan önce bunları kapatmanız gerekir.
 >
-> Güvenlik varsayılanlarını veya Koşullu Erişim ilkelerini kullanabilirsiniz, ancak ikisini de aynı anda kullanabilirsiniz.
+> Güvenlik varsayılanlarını veya Koşullu Erişim ilkelerini kullanabilirsiniz, ancak ikisini de aynı anda kullanamazsınız.
 
-## <a name="consider-using-conditional-access"></a>Koşullu Erişim'i kullanmayı düşünün
+## <a name="consider-using-conditional-access"></a>Koşullu Erişim kullanmayı göz önünde bulundurun
 
-Kuruluşta karmaşık güvenlik gereksinimleri varsa veya güvenlik ilkeleriniz üzerinde daha ayrıntılı denetime ihtiyacınız varsa, benzer veya daha yüksek güvenlik sonrası bir gönderiyi elde etmek için güvenlik varsayılanları yerine Koşullu Erişim'i kullanmayı düşünmelisiniz. 
+Kuruluşunuzun karmaşık güvenlik gereksinimleri varsa veya güvenlik ilkeleriniz üzerinde daha ayrıntılı denetime ihtiyacınız varsa, benzer veya daha yüksek bir güvenlik duruşu elde etmek için güvenlik varsayılanları yerine Koşullu Erişim'i kullanmayı düşünmelisiniz. 
 
-Koşullu Erişim, oturum açma olaylarına tepki veren ilkeler oluşturmanıza ve tanımlamanıza olanak sağlar ve kullanıcıya uygulama veya hizmete erişim izni verilmeden önce ek eylemler ister. Koşullu Erişim ilkeleri ayrıntılı ve özel olabilir; kullanıcıların her zaman ve her yerde üretken olması için güç sağlar, ancak aynı zamanda organizasyonlarınızı da korur.
+Koşullu Erişim, oturum açma olaylarına tepki veren ve kullanıcıya uygulama veya hizmete erişim verilmeden önce ek eylemler isteyen ilkeler oluşturmanıza ve tanımlamanıza olanak tanır. Koşullu Erişim ilkeleri ayrıntılı ve belirli olabilir, kullanıcıları her yerde ve her zaman üretken olmaya teşvik edebilir, aynı zamanda kuruluşunuzu koruyabilir.
 
-Tüm müşteriler güvenlik varsayılanlarını kullanabilirken, Koşullu Erişim için aşağıdaki planlardan biri için lisans gerekir:
+Güvenlik varsayılanları tüm müşteriler tarafından kullanılabilirken Koşullu Erişim aşağıdaki planlardan biri için lisans gerektirir:
 
 - Azure Active Directory Premium P1 veya P2
 - Microsoft 365 Business Premium
-- Microsoft 365 E3 E5
-- Enterprise Mobil & E3 veya E5
+- Microsoft 365 E3 veya E5
+- Enterprise Mobility & Security E3 veya E5
 
-Koşullu Erişim'i kullanarak güvenlik varsayılanları tarafından etkinleştirilen ilkelerle eşdeğer ilkeler yapılandırmak için, aşağıdaki adım adım kılavuzlara göz atabilirsiniz:
+Koşullu Erişim'i kullanarak güvenlik varsayılanları tarafından etkinleştirilen ilkelerle eşdeğer ilkeler yapılandırmak istiyorsanız aşağıdaki adım adım kılavuzlara göz atın:
 
-- [Yöneticiler için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa)
+- [Yöneticiler için MFA gerektir](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa)
 
 - [Azure yönetimi için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-azure-management)
 
-- [Eski kimlik doğrulamayı engelle](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)
+- [Eski kimlik doğrulamasını engelle](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)
 
-- [Tüm kullanıcılar için MFA gerektirme](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa)
+- [Tüm kullanıcılar için MFA gerektir](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa)
 
-- [Azure AD MFA kaydı gerektirme](/azure/active-directory/identity-protection/howto-identity-protection-configure-mfa-policy) - Kimlik doğrulama işleminin bir parçası olan Azure AD Identity Protection Azure Active Directory Premium P2
+- [Azure AD MFA kaydını gerektir](/azure/active-directory/identity-protection/howto-identity-protection-configure-mfa-policy) - Azure Active Directory Premium P2 parçası olan Azure AD Kimlik Koruması gerektirir
 
-Koşullu Erişim hakkında daha fazla bilgi edinmek için bkz [. Koşullu Erişim nedir?](/azure/active-directory/conditional-access/overview) Koşullu Erişim ilkeleri oluşturma hakkında daha fazla bilgi için bkz [. Koşullu Erişim ilkesi oluşturma](/azure/active-directory/authentication/tutorial-enable-azure-mfa#create-a-conditional-access-policy).
+Koşullu Erişim hakkında daha fazla bilgi edinmek için bkz. [Koşullu Erişim nedir?](/azure/active-directory/conditional-access/overview) Koşullu Erişim ilkeleri oluşturma hakkında daha fazla bilgi için bkz. [Koşullu Erişim ilkesi oluşturma](/azure/active-directory/authentication/tutorial-enable-azure-mfa#create-a-conditional-access-policy).
 
 > [!NOTE]
-> Koşullu Erişim sağlayan, ancak henüz hiçbir Koşullu Erişim ilkesi oluşturmamış bir planınız veya lisansınız varsa, güvenlik varsayılanlarını kullanabilirsiniz. Bununla birlikte, Koşullu Erişim ilkelerini kullanamadan önce güvenlik varsayılanlarını kapatmanız gerekir.
+> Koşullu Erişim sağlayan bir planınız veya lisansınız varsa ancak henüz herhangi bir Koşullu Erişim ilkesi oluşturmadıysanız, güvenlik varsayılanlarını kullanabilirsiniz. Ancak, Koşullu Erişim ilkelerini kullanabilmeniz için önce güvenlik varsayılanlarını kapatmanız gerekir.

@@ -13,12 +13,12 @@ ms.collection: M365-modern-desktop
 ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
 description: Tuval için yeni Microsoft OneDrive Learning Araçları Birlikte Çalışabilirlik Uygulaması ile ödevler oluşturun ve notlayın, kurs içeriğini derleyin ve dosyalar üzerinde gerçek zamanlı olarak işbirliği yapın.
-ms.openlocfilehash: ce02be23d98d1dc54ae02a21f9bf1678d06c3d8f
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.openlocfilehash: 5de027c9d7606ebe546a8dc8e087b91da7f0400e
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64747236"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824574"
 ---
 # <a name="integrate-microsoft-onedrive-lti-with-canvas"></a>Microsoft OneDrive LTI'yi Tuval ile tümleştirme
 
@@ -30,6 +30,7 @@ Microsoft OneDrive LTI'yi Tuval ile tümleştirmek iki adımlı bir işlemdir. �
 - Açılır pencereler Microsoft OneDrive için engellenmemelidir.
 
 > [!NOTE]
+>
 > - Tanımlama bilgileri Chrome tarayıcı gizli modunda varsayılan olarak etkin değildir ve etkinleştirilmesi gerekir.
 > - Microsoft OneDrive LTI, Microsoft Edge tarayıcıdaki özel modda çalışır. Tanımlama bilgilerini engellemediğinizden emin olun (varsayılan olarak etkindir).
 
@@ -39,25 +40,25 @@ Microsoft OneDrive LTI'yi Tuval ile tümleştirmek iki adımlı bir işlemdir. �
 > Bu tümleştirmeyi gerçekleştiren kişi Tuval yöneticisi ve Microsoft 365 kiracısının yöneticisi olmalıdır.
 
 1. <a href="https://onedrivelti.microsoft.com/admin" target="_blank">Microsoft OneDrive LTI Kayıt Portalı'na oturum</a> açın
-1. **Yönetici Onayı** düğmesini seçin ve izinleri kabul edin.
+2. **Yönetici Onayı** düğmesini seçin ve izinleri kabul edin.
 
-> [!CAUTION]
-> Bu adım gerçekleştirilmezse, aşağıdaki adım size bir hata verir ve hatayı aldıktan sonra bu adımı bir saat boyunca gerçekleştiremezsiniz.
+   > [!CAUTION]
+   > Bu adım gerçekleştirilmezse, aşağıdaki adım size bir hata verir ve hatayı aldıktan sonra bu adımı bir saat boyunca gerçekleştiremezsiniz.
 
 3. **Yeni LTI Kiracısı oluştur** düğmesini seçin. LTI Kaydı sayfasında açılan **listeden Tuval'i** seçin ve Tuval örneğinizin temel URL'sini girin.
 
-> [!NOTE]
-> Tuval örneğininiz https://contoso.test.instructure.com](https://contoso.test.instructure.com) ise, url'nin tamamı girilmelidir.
+   > [!NOTE]
+   > Tuval örneğininiz ise, `https://contoso.test.instructure.com`tam URL girilmelidir.
 
-:::image type="content" source="media/OneDrive-LTI-07.png" alt-text="LTI tüketici platformunu ve URL metin alanını seçmek için açılan alan içeren LTI kiracı yönetimi sayfası.":::
+   :::image type="content" source="media/OneDrive-LTI-07.png" alt-text="LTI tüketici platformunu ve URL metin alanını seçmek için açılan alan içeren LTI kiracı yönetimi sayfası.":::
 
 4. **Kopyala** düğmesini (sağdaki iki sayfayı üst üste gösteren bir simge) seçerek JSON'yi kopyalayın. Bu, Tuval'de anahtarı oluşturmak için kullanılır.
 
-:::image type="content" source="media/OneDrive-LTI-08.png" alt-text="Görüntülenen JSON metnini kopyalayacak ve Tuval'de anahtar oluşturma için kullanılabilir hale getiren kopyala düğmesini gösteren resim.":::
+   :::image type="content" source="media/OneDrive-LTI-08.png" alt-text="Görüntülenen JSON metnini kopyalayacak ve Tuval'de anahtar oluşturma için kullanılabilir hale getiren kopyala düğmesini gösteren resim.":::
 
 5. Tuval örneğinizde yönetici olarak oturum açın ve sayfanın sol tarafındaki menüden **Geliştirici Anahtarları'nı** seçin. Açılan listeden, sayfanın sağ üst kısmındaki açılan **listedeN LTI Anahtarı'nı** seçerek bir geliştirici anahtarı oluşturun.
 
-:::image type="content" source="media/OneDrive-LTI-14.png" alt-text="Geliştirici Anahtarları'nın seçili olduğu sol gezinti çubuğunu ve sayfanın sağındaki açılan listeden LTI anahtarı girişini gösteren ekran görüntüsü.":::
+   :::image type="content" source="media/OneDrive-LTI-14.png" alt-text="Geliştirici Anahtarları'nın seçili olduğu sol gezinti çubuğunu ve sayfanın sağındaki açılan listeden LTI anahtarı girişini gösteren ekran görüntüsü.":::
 
 6. Yapılandır sayfasındaki **Yöntem** açılan menüsünde, yöntem olarak **JSON Yapıştır'ı** seçin ve 4. Adımda kopyaladığınız JSON metnini görüntülenen metin alanına yapıştırın.
 
@@ -68,11 +69,11 @@ Microsoft OneDrive LTI'yi Tuval ile tümleştirmek iki adımlı bir işlemdir. �
 
 7. Anahtarı kaydettiğinizde Tuval'de **Kapalı** durumda kullanılabilir duruma gelir. Anahtarı **Açık** duruma getirin ve sonraki adımda kullanılacak **Ayrıntılar** sütununda verilen anahtarı kopyalayın.
 
-:::image type="content" source="media/OneDrive-LTI-19.png" alt-text="Anahtarı kapalı durumda ayarlanmış Tuval sayfası. Bu özelliğin açık olması ve anahtarın bu sayfadaki ayrıntılar sütunundan kopyalanması gerekir.":::
+   :::image type="content" source="media/OneDrive-LTI-19.png" alt-text="Anahtarı kapalı durumda ayarlanmış Tuval sayfası. Bu özelliğin açık olması ve anahtarın bu sayfadaki ayrıntılar sütunundan kopyalanması gerekir.":::
 
 8. Microsoft OneDrive LTI Kayıt portalına dönün ve anahtarı **Tuval İstemci Kimliği** alanına yapıştırın. Hazır olduğunuzda **İleri'yi** seçin.
 
-:::image type="content" source="media/OneDrive-LTI-20.png" alt-text="Anahtarın kopyalanması gereken JSON metnini ve metin kutusunu gösteren LTI kiracı kaydı sayfası.":::
+   :::image type="content" source="media/OneDrive-LTI-20.png" alt-text="Anahtarın kopyalanması gereken JSON metnini ve metin kutusunu gösteren LTI kiracı kaydı sayfası.":::
 
 9. Değişikliklerinizi gözden geçirin ve kaydedin. Başarılı kayıtta bir ileti görüntülenir.
 10. Kayıt ayrıntılarınız, giriş sayfasındaki **LTI Kiracılarını Görüntüle** düğmesi seçilerek de gözden geçirilebilir.

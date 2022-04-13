@@ -1,5 +1,5 @@
 ---
-title: E-posta iletileriyle ilgili sorunları ve hata iletilerini Microsoft 365 Lighthouse
+title: Microsoft 365 Lighthouse sorunları ve hata iletilerini giderme ve çözme
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -15,126 +15,125 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: Yönetilen Servis Sağlayıcıları (MSP) Microsoft 365 Lighthouse, hata iletilerini ve sorunlarını giderme konusunda yardım alır.
-ms.openlocfilehash: 24f282420bb69188106178cefc6fb89968f4fcf6
-ms.sourcegitcommit: 2bbccbcffce3ea6d10ea6d307349874eafb21339
+description: Microsoft 365 Lighthouse kullanan Yönetilen Hizmet Sağlayıcıları (MSP) için hata iletilerini ve sorunlarını giderme ve çözme konusunda yardım alın.
+ms.openlocfilehash: 1126db76129a0f3cf6b65921a6e731f02d7311d3
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64645044"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824080"
 ---
-# <a name="troubleshoot-and-resolve-problems-and-error-messages-in-microsoft-365-lighthouse"></a>E-posta iletileriyle ilgili sorunları ve hata iletilerini Microsoft 365 Lighthouse
+# <a name="troubleshoot-and-resolve-problems-and-error-messages-in-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse sorunları ve hata iletilerini giderme ve çözme
 
-Bu makalede, E-posta iletileri kullanılırken karşılaşabilirsiniz hata iletileri ve Microsoft 365 Lighthouse sorunları çözmek için atılması gereken sorun giderme adımları ve sağlar.
+Bu makalede, Microsoft 365 Lighthouse kullanırken karşılaşabileceğiniz hata iletileri ve sorunlar açıklanır ve bunları çözmek için atabileceğiniz sorun giderme adımları sağlanır.
 
 ## <a name="partner-onboarding"></a>İş ortağı ekleme
 
-### <a name="message-when-trying-to-access-lighthouse-microsoft-365-lighthouse-doesnt-support-indirect-providers-at-this-time-you-must-be-an-indirect-reseller-or-direct-bill-partner-to-use-this-service"></a>Deniz Feneri'ne erişmeye çalışırken ileti: "Microsoft 365 Lighthouse şu anda dolaylı sağlayıcıları desteklememektedir, bu hizmeti kullanmak için dolaylı bir satıcı veya doğrudan fatura ortağı olmak gerekir"
+### <a name="message-when-trying-to-access-lighthouse-microsoft-365-lighthouse-doesnt-support-indirect-providers-at-this-time-you-must-be-an-indirect-reseller-or-direct-bill-partner-to-use-this-service"></a>Lighthouse'a erişmeye çalışırken ileti: "Microsoft 365 Lighthouse şu anda dolaylı sağlayıcıları desteklemez, bu hizmeti kullanmak için dolaylı satıcı veya doğrudan fatura iş ortağı olmanız gerekir"
 
-**Neden:** Deniz Feneri'ne dolaylı fatura iş ortağı olarak erişmeye çalıştınız. Şu anda, Deniz Feneri yalnızca dolaylı satıcıları ve doğrudan fatura ortaklarını desteklemektedir.
+**Neden:** Lighthouse'a dolaylı fatura iş ortağı olarak erişmeye çalıştınız. Şu anda Lighthouse yalnızca dolaylı bayileri ve doğrudan fatura iş ortaklarını destekler.
 
-**Çözüm:** Nitelikleri ve gereksinimlerin tam listesi için bkz. Sistem [Microsoft 365 Lighthouse](m365-lighthouse-requirements.md). Dolaylı sağlayıcı değilsanız ve bu iletiyi hatayla aldıklarını inanıyorsanız, Destek'e başvurun. Daha fazla bilgi için bkz[. Destek almak için Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+**Çözünürlük:** Niteliklerin ve gereksinimlerin tam listesi için bkz [. Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md). Dolaylı bir sağlayıcı değilseniz ve bu iletiyi hatayla aldığınıza inanıyorsanız Desteğe başvurun. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse için yardım ve destek alma](m365-lighthouse-get-help-and-support.md).
 
-### <a name="message-when-trying-to-access-lighthouse-you-must-be-an-indirect-reseller-or-direct-bill-partner-to-use-this-service"></a>Deniz Feneri'ne erişmeye çalışırken ileti: "Bu hizmeti kullanmak için dolaylı bir satıcı veya doğrudan fatura ortağınız olmalı"
+### <a name="message-when-trying-to-access-lighthouse-you-must-be-an-indirect-reseller-or-direct-bill-partner-to-use-this-service"></a>Lighthouse'a erişmeye çalışırken ileti: "Bu hizmeti kullanmak için dolaylı bayi veya doğrudan fatura iş ortağı olmanız gerekir"
 
-**Neden:** Deniz Feneri'ne erişmeye çalıştınız ve Microsoft iş ortağı değilsiniz. Deniz Feneri'i kullanmak Bulut Çözümü Sağlayıcısı kurumsal (CSP) programına dolaylı bayi veya doğrudan fatura ortağı olarak kaydolmanız gerekir.
+**Neden:** Lighthouse'a erişmeye çalıştınız ve Bir Microsoft iş ortağı değilsiniz. Lighthouse kullanmak için Bulut Çözümü Sağlayıcısı (CSP) programına dolaylı bayi veya doğrudan fatura iş ortağı olarak kaydolmanız gerekir.
 
-**Çözüm:** Nitelikleri ve gereksinimlerin tam listesi için bkz. Sistem [Microsoft 365 Lighthouse](m365-lighthouse-requirements.md). Deniz Feneri'ne erişmek için uygunsanız ve bu iletiyi hatayla aldıklarını inanıyorsanız, Destek'e başvurun. Daha fazla bilgi için bkz[. Destek almak için Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+**Çözünürlük:** Niteliklerin ve gereksinimlerin tam listesi için bkz [. Microsoft 365 Lighthouse gereksinimleri](m365-lighthouse-requirements.md). Lighthouse'a erişmeye uygunsanız ve bu iletiyi hatayla aldığınıza inanıyorsanız Desteğe başvurun. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse için yardım ve destek alma](m365-lighthouse-get-help-and-support.md).
 
-### <a name="message-when-signing-in-to-lighthouse-accept-the-partner-amendment"></a>Deniz Feneri'nde oturum aken ileti: "İş Ortağı Değişikliğini Kabul Et"
+### <a name="message-when-signing-in-to-lighthouse-accept-the-partner-amendment"></a>Lighthouse'da oturum açarken ileti: "İş Ortağı Değişikliğini Kabul Et"
 
-**Neden:** İş ortağı kiracısı genel yöneticisi iş ortağı değişikliğini imzalamadan önce Deniz Feneri'ne erişmeye çalıştınız.
+**Neden:** İş ortağı kiracısında genel yönetici iş ortağı değişikliğini imzalamadan önce Lighthouse'a erişmeye çalıştınız.
 
-**Çözüm:** Bir Genel yöneticinin, Deniz Feneri'ne erişmek ve burada çalışmak için önce Deniz Feneri'nde oturum açması ve iş ortağı değişikliğini kabul etmiş olması gerekir. Genel yönetici düzeltmeyi imzaladikten sonra hata devam ederse Destek'e başvurun. Daha fazla bilgi için bkz[. Destek almak için Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+**Çözünürlük:** Lighthouse'a erişebilmeniz ve lighthouse'da çalışabilmeniz için önce Genel yöneticinin Lighthouse'da oturum açması ve iş ortağı değişikliğini kabul etmesi gerekir. Genel yönetici değişikliği imzaladıktan sonra hata devam ederse Destek'e başvurun. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse için yardım ve destek alma](m365-lighthouse-get-help-and-support.md).
 
 ## <a name="customer-tenant-onboarding"></a>Müşteri kiracısı ekleme  
 
-### <a name="customer-tenants-show-a-status-other-than-active-in-the-tenant-list"></a>Müşteri kiracıları, kiracı listesinde "Etkin" dışında bir durum gösterir  
+### <a name="customer-tenants-show-a-status-other-than-active-in-the-tenant-list"></a>Müşteri kiracıları kiracı listesinde "Etkin" dışında bir durum gösteriyor  
 
-**Neden:** Müşteri kiracınız aşağıdaki ölçütlere uygun değil:
+**Neden:** Müşteri kiracılarınız aşağıdaki ölçütleri karşılamıyor:
 
-  - Müşteri kiracısı yönetimi için Yönetilen Hizmet Sağlayıcısı (MSP) için temsilci olarak ayarlanmış erişime sahip olmak*
-  - En az bir lisans Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business lisansa sahip olmalı
-  - 1000'den fazla lisanslı kullanıcıya sahip olmalı 
+- Müşteri kiracısını yönetebilmek için Yönetilen Hizmet Sağlayıcısı (MSP) için temsilci erişimi ayarlanmış olmalıdır*
+- En az bir Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business lisansı olmalıdır
+- En fazla 1000 lisanslı kullanıcı olmalıdır 
 
-**Çözüm:** Aşağıdaki tabloda, eylem gerektiren farklı kiracı durumları açıkladığı gibi, bunları nasıl çözeceklerini de açıklar.
+**Çözünürlük:** Aşağıdaki tabloda eylem gerektiren farklı kiracı durumları ve bunların nasıl çözümlendiği açıklanmaktadır.
 
-*Temsilci Yönetici Ayrıcalıkları (DAP), müşterileri Deniz Feneri'ne ekleme için gereklidir. Ayrıca, daha güvenli ve temsilcili erişim sağlamak için müşterilerinizle Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) kurmanızı öneririz. DAP ve GDAP birlikte çalışırken, her iki modelin de bulunduğu müşteriler için GDAP öncelik olacaktır. Kısa süre içinde yalnızca GDAP'ye (ve DAP) sahip olan müşteriler Deniz Feneri'ne yerabilecek.
-
+*Müşterileri Lighthouse'a eklemek için Temsilci Yönetici Ayrıcalıkları (DAP) gerekir. Daha güvenli temsilci erişimi sağlamak için müşterilerinizle Ayrıntılı Yönetici Ayrıcalıkları (GDAP) oluşturmanızı da öneririz. DAP ve GDAP birlikte bulunurken, her iki modelin de bulunduğu müşteriler için GDAP öncelikli olacaktır. Yakında yalnızca GDAP (ve DAP olmayan) müşteriler Lighthouse'a eklenecek.
 
 | Durum | Açıklama | Çözüm |
 |--|--|--|
-| Etkin değil | Kiracı MSP'nin isteği üzerine çıkarıldı ve artık Deniz Feneri'nde yönetilmiyor. | Kiracıyı yeniden etkinleştirmeniz gerekir. Kiracılar **sayfasında** , yeniden etkinleştirmek istediğiniz kiracının yanındaki üç noktayı (diğer eylemler) seçin ve sonra da Kiracıyı **etkinleştir'i seçin**. İlk müşteri verilerinizin Deniz Feneri'nde görünmesi 24-48 saat sürebilir. |
-| Uygun değil - DAP veya GDAP ayarlanmaz | Kiracıyla ayarlanmış OLAN DAP veya GDAP yönetici ayrıcalıklarınız yoktur ve bu, Deniz Feneri için gereklidir. | Microsoft İş Ortağı Merkezi'nde DAP veya GDAP yönetici ayrıcalıklarını ayarlayın. |
-| Uygun değil - Gerekli lisans eksik | Kiracının gerekli bir lisansı yok. En az bir lisans Microsoft 365 İş Ekstra, Microsoft 365 E3 veya lisans Windows 365 Business gerekir. | Kiracının en az bir kiracıya Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business sahip olduğundan emin olun. |
-| Uygun değil - Kullanıcı sayısı aşıldı | Kiracı, Deniz Feneri tarafından izin verilen en fazla 1000 lisanslı kullanıcıya sahip. | Kiracının 1000'den fazla lisanslı kullanıcısı olmadığını doğrulayın. |
-| Uygun değil - Coğrafi denetim başarısız oldu | Siz ve müşteriniz, Deniz Feneri'nin ihtiyaç olduğu coğrafi bölgede ikamet yok. | Müşterinin coğrafi bölgenize yerdığını doğrulayın. Yönete değil, o zaman Deniz Feneri'nde kiracıyı yönete değildir. |
-| İşlemde | Deniz Feneri kiracıyı keşfetti ancak hala kiracıyı ekleme sürecinde. | Deniz Feneri'nin kiracıyı ekleme işlemini tamamlamasına 48 saat izin ver. |
+| Etkin olmayan | Kiracı, MSP'nin isteği üzerine kapatıldı ve artık Lighthouse'da yönetilmedi. | Kiracıyı yeniden etkinleştirmeniz gerekir. **Kiracılar** sayfasında, yeniden etkinleştirmek istediğiniz kiracının yanındaki üç noktayı (daha fazla eylem) seçin ve ardından **Kiracıyı etkinleştir'i** seçin. İlk müşteri verilerinin Lighthouse'da görünmesi 24-48 saat sürebilir. |
+| Uygun değil - DAP veya GDAP ayarlanmadı | Lighthouse'un gerektirdiği kiracıyla ayarlanmış DAP veya GDAP yönetici ayrıcalıklarınız yoktur. | Microsoft İş Ortağı Merkezi'nde DAP veya GDAP yönetici ayrıcalıklarını ayarlayın. |
+| Uygun değil - Gerekli lisans eksik | Kiracıda gerekli bir lisans eksik. En az bir Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business lisansı gerekir. | Kiracıya en az bir Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business lisansı atandığından emin olun. |
+| Uygun değil - Kullanıcı sayısı aşıldı | Kiracı, Lighthouse tarafından izin verilen en fazla 1000 lisanslı kullanıcıya sahiptir. | Kiracının 1000'den fazla lisanslı kullanıcısı olmadığını doğrulayın. |
+| Uygun değil - Coğrafi denetim başarısız oldu | Siz ve müşteriniz Lighthouse'un gerektirdiği aynı coğrafi bölgede ikamet etmezsiniz. | Müşterinin coğrafi bölgenizde bulunduğunu doğrulayın. Aksi takdirde, Lighthouse'da kiracıyı yönetemezsiniz. |
+| İşlemde | Lighthouse kiracıyı keşfetti ama hala ekleme aşamasında. | Lighthouse'un kiracıyı ekleme işlemini tamamlaması için 48 saat bekleyin. |
 
-Müşteri kiracının işe ekleme ölçütlerine uygun olduğunu onaylarsanız ve kiracınız Hala Deniz Feneri'nde **Etkin** olarak görünmüyorsa, Destek'e başvurun. Daha fazla bilgi için bkz[. Destek almak için Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+Müşteri kiracınızın ekleme ölçütlerini karşıladığını ve hala Lighthouse'da **Etkin** olarak gösterilmediğini doğruladıysanız Destek'e başvurun. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse için yardım ve destek alma](m365-lighthouse-get-help-and-support.md).
 
 ## <a name="access-and-permissions"></a>Erişim ve izinler
 
-### <a name="message-when-trying-to-access-lighthouse-not-authorized-or-insufficient-privileges-or-access-restriction-insufficient-or-lack-of-permissions-is-causing-access-restriction"></a>Deniz Feneri'ne erişmeye çalışırken ileti: "Yetkili Değil" veya "Yetersiz ayrıcalıklar" veya "Erişim Kısıtlaması: İzinlerin yetersiz olması veya olmaması erişim kısıtlamasına neden oluyor" 
+### <a name="message-when-trying-to-access-lighthouse-not-authorized-or-insufficient-privileges-or-access-restriction-insufficient-or-lack-of-permissions-is-causing-access-restriction"></a>Lighthouse'a erişmeye çalışırken ileti: "Yetki yok" veya "Yetersiz ayrıcalıklar" veya "Erişim Kısıtlaması: Erişim kısıtlamasına izin yetersiz veya eksik neden oluyor" 
 
-**Neden:** Azure AD'de doğru güvenlik grubuna üyesi değilsiniz veya Deniz Feneri'ne erişim için İş Ortağı Merkezi'nde size doğru rol atanmamış.
+**Neden:** Azure AD'de doğru güvenlik grubuna ait değilsiniz veya Lighthouse'a erişebilmek için İş Ortağı Merkezi'nde doğru rol size atanmadı.
 
-**Çözüm:** İş ortağı kiracınıza uygun izinlere sahip bir yöneticinin sizi Azure AD'de doğru GDAP güvenlik grubuna atadığı ve İş Ortağı Merkezi'nde size doğru rolü atadığından emin olun. Ayrıca, Deniz Feneri'nde bazı işlemlerin Genel yönetici olmak zorunda olduğunu unutmayın. GDAP rolleri ve her rolün neler yapılası hakkında daha fazla bilgi edinmek için bkz. Rol [rollerinde izinlere Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md). Tüm Azure AD yerleşik rollerinin ve GDAP izinlerinin ayrıntılı açıklaması için bkz. [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
+**Çözünürlük:** İş ortağı kiracınızdan uygun izinlere sahip bir yöneticinin sizi Azure AD'deki doğru GDAP güvenlik grubuna atadığından ve size İş Ortağı Merkezi'nde doğru rolü atadığından emin olun. Ayrıca Lighthouse'daki bazı eylemlerin Genel yönetici olmanız gerektiğini unutmayın. GDAP rolleri ve her rolün yapabilecekleri hakkında daha fazla bilgi edinmek için bkz. [Microsoft 365 Lighthouse'de izinlere genel bakış](m365-lighthouse-overview-of-permissions.md). Tüm Azure AD yerleşik rollerinin ve GDAP izinlerinin ayrıntılı açıklaması için bkz. [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
 
-DAP ilişkileri olan müşteriler için, iş ortağı yöneticisinin sizi İş Ortağı Merkezi'nde Yönetici temsilcisine veya Yardım masası aracısı rolüne ataması gerekir. Tüm İş Ortağı Merkezi rollerinin ve izinlerinin ayrıntılı açıklaması için bkz. [Kullanıcılara rol ve izin atama](/partner-center/permissions-overview).
+DAP ilişkileri olan müşteriler için, iş ortağı yöneticisinin sizi İş Ortağı Merkezi'ndeki Yönetici aracısı veya Yardım masası aracısı rolüne ataması gerekir. Tüm İş Ortağı Merkezi rollerinin ve izinlerinin ayrıntılı açıklaması için bkz. [Kullanıcılara rol ve izin atama](/partner-center/permissions-overview).
 
-### <a name="i-dont-see-complete-data-in-certain-areas-of-lighthouse-or-i-cant-perform-certain-tasks-or-i-cant-access-certain-tenants"></a>Deniz Feneri'nin belirli alanlarında tam veriler göremiyorum veya bazı görevleri gerçekleştir göremiyorum veya belirli kiracılara erişe bilmiyorum
+### <a name="i-dont-see-complete-data-in-certain-areas-of-lighthouse-or-i-cant-perform-certain-tasks-or-i-cant-access-certain-tenants"></a>Lighthouse'un belirli alanlarında tam veri görmüyorum veya belirli görevleri gerçekleştiremiyorum veya belirli kiracılara erişemiyorum
 
-**Neden:** Var olan Azure AD güvenlik grubuna atanan rollere bağlı olarak, sınırlı bir GDAP erişiminiz var.
+**Neden:** GDAP erişiminiz, içinde olduğunuz Azure AD güvenlik grubuna atanan rollere göre sınırlıdır.
 
-**Çözüm:** İş ortağı kiracınıza uygun izinlere sahip bir yöneticinin sizi Azure AD'de doğru GDAP güvenlik grubuna ata olduğundan emin olun. Ayrıca, Deniz Feneri'nde bazı işlemlerin Genel yönetici olmak zorunda olduğunu unutmayın. GDAP rolleri ve her rolün neler yapılası hakkında daha fazla bilgi edinmek için bkz. Rol [rollerinde izinlere Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md). Tüm Azure AD yerleşik rollerinin ve GDAP izinlerinin ayrıntılı açıklaması için bkz. [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
+**Çözünürlük:** İş ortağı kiracınızdan uygun izinlere sahip bir yöneticinin sizi Azure AD'de doğru GDAP güvenlik grubuna atadığından emin olun. Ayrıca Lighthouse'daki bazı eylemlerin Genel yönetici olmanız gerektiğini unutmayın. GDAP rolleri ve her rolün yapabilecekleri hakkında daha fazla bilgi edinmek için bkz. [Microsoft 365 Lighthouse'de izinlere genel bakış](m365-lighthouse-overview-of-permissions.md). Tüm Azure AD yerleşik rollerinin ve GDAP izinlerinin ayrıntılı açıklaması için bkz. [Azure AD yerleşik rolleri](/azure/active-directory/roles/permissions-reference).
 
 ## <a name="customer-tenant-management"></a>Müşteri kiracı yönetimi  
 
-### <a name="customer-tenant-has-no-data-showing-in-lighthouse"></a>Deniz Feneri'nde müşteri kiracısı hiçbir veri gösteremdi
+### <a name="customer-tenant-has-no-data-showing-in-lighthouse"></a>Müşteri kiracısında Lighthouse'da gösterilen veri yok
 
-**Neden:** Kiracı ekleme işlemi tamamlamadan önce Deniz Feneri'nde verileri görüntülemeye çalışabilirsiniz.
+**Neden:** Kiracı ekleme işlemi tamamlanmadan önce Lighthouse'da verileri görüntülemeye çalışıyorsunuz.
 
-**Çözüm:** İlk müşteri verilerinizin Deniz Feneri'nde görünmesi 24-48 saat sürebilir. Kiracıyı eklemenin bu yana 48 saati geçen bir süredir devam ediyor ve kiracı verilerini görüntüemiyor veya yükleyemiyorsanız ya da daha önce mümkün olan verileri görüntüleyemiyor veya yükleyemiyorsanız, Destek'e başvurun. Daha fazla bilgi için bkz[. Destek almak için Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md). İlgili ağ günlüklerini ve değiştirilmiş olan seçeneklerin listesini sağlamak için hazır olun.
+**Çözünürlük:** İlk müşteri verilerinin Lighthouse'da görünmesi 24-48 saat sürebilir. Kiracıyı eklemenin üzerinden 48 saatten uzun bir süre geçtiyse ve kiracı verilerini hala görüntüleyemiyor veya yükleyemiyorsanız ya da daha önce görüntüleyemediğiniz veya yükleyemediğiniz durumda Desteğe başvurun. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse için yardım ve destek alma](m365-lighthouse-get-help-and-support.md). İlgili ağ günlüklerini ve değiştirilmiş olabilecek seçeneklerin listesini sağlamaya hazır olun.
 
-### <a name="customer-tenant-data-isnt-updating-after-making-changes-in-the-customer-tenant"></a>Müşteri kiracıda değişiklik sonrasında müşteri kiracı verileri güncelleştiriliyor
+### <a name="customer-tenant-data-isnt-updating-after-making-changes-in-the-customer-tenant"></a>Müşteri kiracısında değişiklik yaptıktan sonra müşteri kiracı verileri güncelleştirilmiyor
 
-**Neden:** Müşteri kiracısı içinde yaptığınız değişikliklerin Deniz Feneri'nde müşteri kiracı verileriyle eşitlenmesi 4 saat kadar sürebilir.
+**Neden:** Müşteri kiracısında yaptığınız değişikliklerin Lighthouse'daki müşteri kiracı verileriyle eşitlenmesi 4 saat kadar sürebilir.
 
-**Çözüm:** 4 saati geçse ve Deniz Feneri'nde müşteri kiracı verileri hala güncelleştirilmediyse, Destek'e başvurun. Daha fazla bilgi için bkz[. Destek almak için Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md). Müşteri kiracı bilgilerini sağlamak için hazır olun.
+**Çözünürlük:** 4 saatten uzun bir süre geçtiyse ve müşteri kiracı verileri Lighthouse'da hala güncelleştirilmediyse Destek'e başvurun. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse için yardım ve destek alma](m365-lighthouse-get-help-and-support.md). Müşteri kiracı bilgilerini sağlamaya hazır olun.
 
-### <a name="message-when-applying-a-baseline-to-a-customer-tenant-process-error-occurred"></a>Müşteri kiracısına taban çizgisi uygularken şu ileti: "süreç hatası oluştu"  
+### <a name="message-when-applying-a-baseline-to-a-customer-tenant-process-error-occurred"></a>Müşteri kiracısına temel uygulama iletisi: "İşlem hatası oluştu"  
 
-**Neden:** Müşteri kiracısı içindeki kullanıcı yapılandırmayı Microsoft Intune tamamlamadınız.
+**Neden:** Müşteri kiracısı içindeki Microsoft Intune yapılandırmasını başarıyla tamamlamadınız.
 
-**Çözüm:** Müşteri kiracısı içindeki kiracının temel yapılandırma Intune tamamlamış olduğunu doğrulayın. Müşteri kiracısı için kimlik yapılandırmasının Intune doğrulandıktan sonra sorun devam ederse Destek'e başvurun. Daha fazla bilgi için bkz[. Destek almak için Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+**Çözünürlük:** Müşteri kiracısı içindeki Intune için temel yapılandırma adımlarını tamamladığınızdan emin olun. Müşteri kiracısı için Intune yapılandırmasının tamamlandığını doğruladıktan sonra sorun devam ederse Destek'e başvurun. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse için yardım ve destek alma](m365-lighthouse-get-help-and-support.md).
 
-### <a name="cant-access-partner-tenant-data-in-lighthouse"></a>Deniz Feneri'nde iş ortağı kiracı verilerine erişlanamıyor
+### <a name="cant-access-partner-tenant-data-in-lighthouse"></a>Lighthouse'da iş ortağı kiracı verilerine erişemiyorum
 
-**Neden**: Deniz Feneri, yalnızca müşteri kiracılarını *görüntülemeyi ve* yönetmeyi destekler. Şu anda iş ortağı kiracıları görüntülemeyi ve *yönetmeyi* desteklemez.
+**Neden**: Lighthouse yalnızca *müşteri* kiracılarının görüntülenmesini ve yönetilmesini destekler. Şu anda *iş ortağı* kiracılarının görüntülenmesini ve yönetilmesini desteklememektedir.
 
-**Çözüm:** İş ortağı kiracınızı görüntülemek ve yönetmek için hangi yöntemi kullanıyor olursanız olun kullanmaya devam olun.
+**Çözünürlük:** İş ortağı kiracınızı görüntülemek ve yönetmek için kullandığınız yöntemi kullanmaya devam edin.
 
 ## <a name="device-and-threat-management"></a>Cihaz ve tehdit yönetimi 
 
-### <a name="i-dont-see-any-customer-tenant-data-on-the-device-compliance-and-threat-management-pages-of-lighthouse"></a>Deniz Feneri'nin Cihaz uyumluluğu ve Tehdit yönetimi sayfalarında müşteri kiracısı verilerini göremiyorum
+### <a name="i-dont-see-any-customer-tenant-data-on-the-device-compliance-and-threat-management-pages-of-lighthouse"></a>Lighthouse'un Cihaz uyumluluğu ve Tehdit yönetimi sayfalarında müşteri kiracısı verileri görmüyorum
 
-**Neden 1:** Müşteri kiracısı kiracı bu kiracıya ekleme Intune. Müşteri kiracısı Deniz Feneri'nin Cihaz uyumluluğu veya Tehdit yönetimi sayfalarında kullanılamaz, ancak müşteri kiracı kiracısı kiracıya Intune.
+**Neden 1:** Müşteri kiracısı Intune ekleme işlemini tamamlamadı. Müşteri kiracı verileri, müşteri kiracısının Intune ekleme işlemini tamamlayana kadar Lighthouse'un Cihaz uyumluluğu veya Tehdit yönetimi sayfalarında kullanılamaz.
 
-**Çözüm:** Verilerini görüntülemeye çalışırken müşteri kiracısına kullanıcı eklemesi tamamlandığından emin Intune. Deniz Feneri'nde Intune, cihaz verilerinizin Deniz Feneri'nde görünmesi için 4 saat bekleyin.
+**Çözünürlük:** Verilerini görüntülemeye çalıştığınız müşteri kiracısının Intune ekleme işleminin tamamlandığını doğrulayın. Intune'da ekleme tamamlandıktan sonra, cihaz verilerinin Lighthouse'da görünmesi için 4 saat bekleyin.
 
-**Neden 2:** Müşteri kiracısı kısa süre önce Deniz Feneri'ne alındı ve veriler Deniz Feneri'ne yükleniyor.
+**Neden 2:** Müşteri kiracısı kısa süre önce Lighthouse'a eklendi ve veriler Lighthouse'da yüklenmeye devam ediyor.
 
-**Çözüm:** Bir müşteri kiracısı Deniz Feneri'ne alındıktan sonra ilk müşteri verilerinizin görünmesi için 24-48 saat izin kullanın.
+**Çözünürlük:** Bir müşteri kiracısı Lighthouse'a eklendikten sonra, ilk müşteri verilerinin görünmesi için 24-48 saat bekleyin.
 
-**Neden 3:** Müşteri kiracı cihazı yenidir ve cihaz verileri hala Deniz Feneri'ne yükleniyor.
+**Neden 3:** Müşteri kiracı cihazı yeni ve cihaz verileri Lighthouse'da yüklenmeye devam ediyor.
 
-**Çözüm:** Bir kiracı cihazı ekli olduğunda, deniz fenerinde cihaz verilerin görünmesi için 4 saat izin kullanın.
+**Çözünürlük:** Bir kiracı cihazı eklendiğinde, cihaz verilerinin Lighthouse'da görünmesi için 4 saat bekleyin.
 
-Çözüm yönergelerini takipdikten sonra Cihaz uyumluluğu ve Tehdit yönetimi sayfalarında veriler hala görünmüyorsa, Destek'e başvurun. Daha fazla bilgi için bkz[. Destek almak için Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+Çözüm yönergelerini takip ettikten sonra veriler Cihaz uyumluluğu ve Tehdit yönetimi sayfalarında görünmeye devam ediyorsa Destek'e başvurun. Daha fazla bilgi için bkz. [Microsoft 365 Lighthouse için yardım ve destek alma](m365-lighthouse-get-help-and-support.md).
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Dosyanın bilinen Microsoft 365 Lighthouse](m365-lighthouse-known-issues.md) sorunları (makale)\
+[Microsoft 365 Lighthouse ile ilgili bilinen sorunlar](m365-lighthouse-known-issues.md) (makale)\
 [Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)\
-[Destek almak için yardım ve Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md) (makale)
+[Microsoft 365 Lighthouse için yardım ve destek alma](m365-lighthouse-get-help-and-support.md) (makale)

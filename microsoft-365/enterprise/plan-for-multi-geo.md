@@ -1,5 +1,5 @@
 ---
-title: Multi-Geo Microsoft 365 planlama
+title: multi-geo Microsoft 365 için planlama
 ms.reviewer: adwood
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -14,71 +14,71 @@ ms.collection:
 - Strat_SP_gtc
 - SPO_Content
 ms.localizationpriority: medium
-description: Multi-Geo Microsoft 365, multi-geo'nın nasıl çalıştığını ve veri depolama için kullanılabilen coğrafi konumları öğrenin.
-ms.openlocfilehash: 5c079d5cf5f093be2c942a53468494044913fbd7
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Multi-Geo Microsoft 365, çok coğrafi konumun nasıl çalıştığı ve veri depolama için hangi coğrafi konumların kullanılabilir olduğu hakkında bilgi edinin.
+ms.openlocfilehash: bda48f14b14840eed03d456ef66e7d86df890619
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62984326"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64822804"
 ---
-# <a name="plan-for-microsoft-365-multi-geo"></a>Multi-Geo Microsoft 365 planlama
+# <a name="plan-for-microsoft-365-multi-geo"></a>multi-geo Microsoft 365 için planlama
 
-Bu kılavuz, Microsoft 365 kiracılarını hazırlayan çok uluslu şirketlerin (MCS) yöneticilerine, veri ikamet gereksinimlerini karşılamak üzere şirketin iletişim durumuna uygun olarak ek coğrafyalara genişletilecek şekilde tasarlanmıştır.
+Bu kılavuz, Microsoft 365 kiracılarını, veri yerleşimi gereksinimlerini karşılamak üzere şirketin varlığına uygun olarak ek coğrafyalara genişletilecek şekilde hazırlayan çok uluslu şirketlerin (MNC) yöneticileri için tasarlanmıştır.
 
-Çok coğrafi yapılandırmada, kiracınız Microsoft 365 bir merkezi konumdan ve bir veya daha fazla uydu konumdan oluşur. Bu, birden çok coğrafi konuma yayılan tek bir kiracıdır. Coğrafi konumlar da dahil olmak üzere kiracı bilgileri ana Azure Active Directory (Azure AD) içindedir.
+Çok coğrafi bir yapılandırmada, Microsoft 365 kiracınız merkezi bir konumdan ve bir veya daha fazla uydu konumundan oluşur. Bu, birden çok coğrafi konuma yayılan tek bir kiracıdır. Coğrafi konumlar da dahil olmak üzere kiracı bilgileriniz Azure Active Directory (Azure AD) içinde ana kaynak olarak bulunur.
 
-Yapılandırmanın temel kavramlarını anlamanıza yardımcı olacak bazı önemli multi-geo terimleri:
+Yapılandırmanın temel kavramlarını anlamanıza yardımcı olacak çok coğrafi terimlerden bazıları şunlardır:
 
--   **Kiracı** – Normalde bir veya daha fazla Microsoft 365 etki alanı (örneğin, ) olan kuruluş temsilihttps://contoso.sharepoint.com). 
+- **Kiracı**: Bir kuruluşun Microsoft 365'da temsilidir ve genellikle kendisiyle ilişkilendirilmiş bir veya daha fazla etki alanı vardır (örneğin, https://contoso.sharepoint.com).
 
--   **Coğrafi konumlar** – Verileri bir kiracıda barındırmak için kullanılabilen Microsoft 365.
+- **Coğrafi konumlar** : Verileri Microsoft 365 kiracıda barındırmak için kullanılabilen coğrafi konumlar.
 
--   **Uydu konumları** – Verileri bu kiracıda barındırmak üzere yapılandırmış olduğunuz ek coğrafi Microsoft 365 vardır. Çok coğrafi kiracılar birden çok coğrafi konuma (örneğin, Kuzey Amerika ve Avrupa) yayılanıdır.
+- **Uydu konumları** – verileri Microsoft 365 kiracınızda barındıracak şekilde yapılandırdığınız ek coğrafi konumlar. Çok coğrafi kiracılar, Kuzey Amerika ve Avrupa gibi birden fazla coğrafi konuma yayılmıştır.
 
--   **Tercih Edilen Veri Konumu (PDL)** – Tek bir kullanıcının veri kaynağı ve Exchange OneDrive konum. Bu, yönetici tarafından kiracı için yapılandırılmış olan coğrafi konumlardan herhangi biri olarak ayarlanabilirsiniz. PDL'de zaten bir OneDrive sitesi olan bir kullanıcının PDL'sini değiştirirsiniz, OneDrive verileri otomatik olarak yeni coğrafi konuma taşınmaz. Daha [fazla OneDrive için bkz. Bir kitaplık kitaplığını farklı bir coğrafi](move-onedrive-between-geo-locations.md) konuma taşıma. Posta kutuları Exchange, posta kutusu otomatik olarak yeni tercih edilen veri konuma taşınır.
+- **Tercih Edilen Veri Konumu (PDL)** – Tek bir kullanıcının Exchange ve OneDrive verilerinin depolandığı coğrafi konum. Bu, yönetici tarafından kiracı için yapılandırılmış coğrafi konumlardan herhangi birine ayarlanabilir. Zaten bir OneDrive sitesi olan bir kullanıcının PDL'sini değiştirirseniz, OneDrive verilerinin otomatik olarak yeni coğrafi konuma taşınmadığını unutmayın. Daha fazla bilgi için bkz. [OneDrive kitaplığını farklı bir coğrafi konuma taşıma](move-onedrive-between-geo-locations.md). Exchange posta kutuları varsa, posta kutusu otomatik olarak yeni tercih edilen veri konumuna taşınır.
 
-Multi-Geo'ların etkinleştirilmesi için dört temel adım gerekir:
+Multi-Geo'ya olanak sağlamak için dört temel adım gerekir:
 
-1.  Multi-Geo Özelliklerini bu hizmet _planına eklemek için hesap Microsoft 365_ üzerinde çalışabilirsiniz.
+1. Microsoft 365 hizmet planında _Multi-Geo Özelliklerini_ eklemek için hesap ekibinizle birlikte çalışın.
 
-2.  İstediğiniz uydu konumlarını seçin ve bunları kiracınıza ekleyin.
+2. İstediğiniz uydu konumlarını seçin ve bunları kiracınıza ekleyin.
 
-3.  Kullanıcılarınızı tercih edilen veri konumunu istenen uydu konumu olarak ayarlayın. Kullanıcıya OneDrive posta Exchange posta kutusu sağlandı ise, PDL'lerine sağlandı.
+3. Kullanıcılarınızın tercih edilen veri konumunu istenen uydu konumuna ayarlayın. Bir kullanıcı için yeni bir OneDrive sitesi veya Exchange posta kutusu sağlandığında, bu site PDL'sine sağlanır.
 
-4.  Kullanıcılarınızı merkezi konumdan OneDrive olan veri konumlarına ve gerektiğinde tercih edilen veri konumlarına geçirme. (Exchange PDL'lerini ayarsız olarak posta kutuları otomatik olarak geçirilir.)
+4. Kullanıcılarınızın mevcut OneDrive sitelerini merkezi konumdan tercih ettikleri veri konumuna gerektiği gibi geçirin. (Exchange posta kutuları, kullanıcının PDL'sini ayarladığınızda otomatik olarak geçirilir.)
 
-Bu [adımların Microsoft 365 için bkz. Multi-Geo'da](multi-geo-tenant-configuration.md) Yapılandırma.
+Bu adımların her biri hakkında ayrıntılı bilgi için bkz[. Multi-Geo Microsoft 365 yapılandırma](multi-geo-tenant-configuration.md).
 
 > [!IMPORTANT]
-> Multi-Geo Microsoft 365 performans iyileştirme için tasarlanmasa da, verilerin ikamet gereksinimlerini karşılamak için tasarlanmamaktadır. E-posta için performans iyileştirme Microsoft 365 için bkz. E-posta için ağ [Microsoft 365](https://support.office.com/article/e5f1228c-da3c-4654-bf16-d163daee8848) performans ayarı veya destek grubunuzla iletişime geçin.
+> multi-geo Microsoft 365 performans iyileştirme için tasarlanmamıştır, veri yerleşimi gereksinimlerini karşılamak için tasarlanmıştır. Microsoft 365 için performans iyileştirmesi hakkında bilgi için bkz. [Microsoft 365 için ağ planlaması ve performans ayarlaması](https://support.office.com/article/e5f1228c-da3c-4654-bf16-d163daee8848) veya destek grubunuzla iletişime geçin.
 
-Aşağıdaki konumlardan herhangi birini uydu konumları olarak yapılandırabilirsiniz ve bu konumlarda OneDrive SharePoint ve posta Exchange kullanabilirsiniz. Multi-geo'ya uygun olarak, kiracınıza eklemek istediğiniz konumların listesini Microsoft 365 kullanın. Bir veya iki uydu konumuyla başlamayı ve ardından gerekirse aşamalı olarak daha fazla coğrafi konuma genişletmenizi öneririz.
+Aşağıdaki konumlardan herhangi birini, OneDrive ve SharePoint siteleri barındırabileceğiniz ve posta kutularını Exchange uydu konumları olacak şekilde yapılandırabilirsiniz. Çok coğrafi alanı planladığınızda, Microsoft 365 kiracınıza eklemek istediğiniz konumların listesini yapın. Bir veya iki uydu konumuyla başlamanızı ve gerekirse kademeli olarak daha fazla coğrafi konuma genişletmenizi öneririz.
 
 [!INCLUDE [Microsoft 365 Multi-Geo locations](../includes/microsoft-365-multi-geo-locations.md)]
 
-Multi-geo'yu yapılandırırken, kaynak yapısına ilerlerken şirket içi altyapınızı birleştirme Microsoft 365. Örneğin, Singapur ve Malezya'da şirket içi grup varsa, bunları APC uydu konumu olarak birleştirebilirsiniz ve bu şekilde veri yerleşim gereksinimleri sağlanır.
+Multi-geo'yı yapılandırırken, Microsoft 365 geçiş yaparken şirket içi altyapınızı birleştirme fırsatını değerlendirin. Örneğin, Singapur ve Malezya'da şirket içi çiftlikleriniz varsa, veri yerleşimi gereksinimlerinin bunu yapmanıza olanak sağlaması koşuluyla bunları APC uydu konumunda birleştirebilirsiniz.
 
 ## <a name="best-practices"></a>En iyi uygulamalar
 
-Bazı ilk testler yapmak için Microsoft 365 bir test kullanıcısı oluşturmanızı öneririz. Üretim kullanıcılarını Microsoft 365 Multi-Geo'ya eklemeye devam başlamadan önce bu kullanıcıyla bazı test ve doğrulama adımlarını tamamlaacağız.
+bazı ilk testleri yapmak için Microsoft 365'de bir test kullanıcısı oluşturmanızı öneririz. Üretim kullanıcılarını Microsoft 365 Multi-Geo'ya eklemeye devam etmeden önce bu kullanıcıyla bazı test ve doğrulama adımlarını inceleyeceğiz.
 
-Test kullanıcısına test etme tamamlandıktan sonra, yeni coğrafi konumda test etmek üzere ilk kullanan ve en iyi OneDrive olmak üzere bir pilot grubu (belki de IT departmanından) OneDrive Exchange seçin. Bu ilk grup için, henüz 2. grubu olan OneDrive. Bu ilk grupta beşten fazla kişi önerilmez ve toplu bir geçiş yaklaşımının ardından aşamalı olarak genişletilmez.
+Test kullanıcısıyla testi tamamladıktan sonra, yeni bir coğrafi konumda OneDrive ve Exchange ilk kullanan olmak için bt departmanınızdan bir pilot grup seçin. Bu ilk grup için, henüz OneDrive olmayan kullanıcıları seçin. Bu ilk grupta beşten fazla kişi olmamasını ve toplu dağıtım yaklaşımını izleyerek aşamalı olarak genişletmenizi öneririz.
 
-Her kullanıcının tercih edilen *bir veri* konumu (PDL) ayarlanmış olması gerekir ve böylelikle Microsoft 365 hangi coğrafi konumda konum sağlanarak OneDrive. Kullanıcının tercih ettiği veri konumu, seçtiğiniz uydu konumlarından veya merkezi konumunuzla eşleşmeli. PDL alanı zorunlu değildir ama tüm kullanıcılar için bir PDL ayarlamayı öneririz. PDL olmayan bir kullanıcının iş yükleri merkezi konumda sağlandı.
+Microsoft 365 OneDrive hangi coğrafi konumda sağlandığını belirleyebilmesi için her kullanıcının *tercih edilen bir veri* konumu (PDL) ayarlanmış olmalıdır. Kullanıcının tercih ettiği veri konumu seçtiğiniz uydu konumlarından biriyle veya merkezi konumunuzla eşleşmelidir. PDL alanı zorunlu olmasa da, tüm kullanıcılar için bir PDL'nin ayarlanmasını öneririz. PDL olmayan bir kullanıcının iş yükleri merkezi konumda sağlanır.
 
-Kullanıcılarınızı içeren bir liste oluşturun ve bunların kullanıcı asıl adını (UPN) ve uygun tercih edilen veri konumu için konum kodunu ekleyin. Başlangıç olarak test kullanıcınızı ve ilk pilot grubunızı da dahil etmek. Yapılandırma yordamları için bu listeye ihtiyacınız vardır.
+Kullanıcılarınızın listesini oluşturun ve kullanıcı asıl adlarını (UPN) ve tercih edilen uygun veri konumu için konum kodunu ekleyin. Başlamak için test kullanıcınızı ve ilk pilot grubunuzu ekleyin. Yapılandırma yordamları için bu listeye ihtiyacınız olacaktır.
 
-Kullanıcılarınız şirket içi Active Directory sisteminden active directory Azure Active Directory için eşitlenmişse, tercih edilen veri konumunu bir Active Directory özniteliği olarak ayarlamalı ve Azure Active Directory Bağlan. Azure AD PowerShell kullanarak eşitlenmiş kullanıcılar için tercih edilen veri konumunu doğrudan yapılandıramazsanız. Active Directory'de PDL'yi ayarlama ve Eşitleme adımları, eşitlemeyi eşitleme Azure Active Directory Bağlan: Kullanıcı kaynakları için tercih edilen [veri Microsoft 365 yapılandırma](/azure/active-directory/connect/active-directory-aadconnectsync-feature-preferreddatalocation).
+Kullanıcılarınız bir şirket içi Active Directory sisteminden Azure Active Directory eşitlenmişse, tercih edilen veri konumunu Active Directory özniteliği olarak ayarlamanız ve Azure Active Directory Bağlan kullanarak eşitlemeniz gerekir. Azure AD PowerShell kullanarak eşitlenmiş kullanıcılar için tercih edilen veri konumunu doğrudan yapılandıramazsınız. Active Directory'de PDL'yi ayarlama ve Eşitleme adımları [Azure Active Directory Bağlan eşitleme: Microsoft 365 kaynaklar için tercih edilen veri konumunu yapılandırma bölümünde ele alınmıştır](/azure/active-directory/connect/active-directory-aadconnectsync-feature-preferreddatalocation).
 
-Çok coğrafi kiracının yönetimi, çok coğrafi olmayan bir kiracıdan farklı olabilir; bunun için, SharePoint ve OneDrive çok coğrafi olarak farkındadır. Yapılandırmanıza devam etmek [için, çok coğrafi bir](administering-a-multi-geo-environment.md) ortamı yönetmeyi gözden geçirmenizi öneririz.
+Çok coğrafi kiracının yönetimi, çok coğrafi olmayan bir kiracıdan farklı olabilir, SharePoint ve OneDrive ayarlarının ve hizmetlerinin çoğu çok coğrafi kullanıma duyarlıdır. Yapılandırmanıza devam etmeden önce [Çok coğrafi ortamı yönetme'yi](administering-a-multi-geo-environment.md) gözden geçirmenizi öneririz.
 
-Çok [coğrafi bir ortamda son kullanıcı deneyimiyle](multi-geo-user-experience.md) ilgili ayrıntılar için, Çok coğrafi bir ortamda kullanıcı deneyimi makalesinde okuyabilirsiniz.
+Son kullanıcılarınızın [çok coğrafi ortamdaki](multi-geo-user-experience.md) deneyimi hakkında ayrıntılı bilgi için Çok coğrafi ortamda kullanıcı deneyimi makalesini okuyun.
 
-Multi-Geo'da Microsoft 365 için bkz. [Multi-Geo Microsoft 365 yapılandırma](multi-geo-tenant-configuration.md).
+Microsoft 365 Multi-Geo'Microsoft 365 yapılandırmaya başlamak için bkz. [Multi-Geo'Microsoft 365 yapılandırma](multi-geo-tenant-configuration.md).
 
-Yapılandırmayı tamamlandıktan sonra, [kullanıcılarınızı tercih edilen veri konumlarından OneDrive](move-onedrive-between-geo-locations.md) için gerektiğinde kullanıcılarınızı ve kitaplıklarınızı geçirmeyi unutmayın.
+Yapılandırmayı tamamladıktan sonra, kullanıcılarınızın tercih ettikleri veri konumlarından çalışmasını sağlamak için [kullanıcılarınızın OneDrive kitaplıklarını gerektiği gibi geçirmeyi](move-onedrive-between-geo-locations.md) unutmayın.
 
 ## <a name="related-topics"></a>İlgili konular
 
-[Microsoft 365 Multi-Geo eK bulma yapılandırması](./multi-geo-ediscovery-configuration.md)
+[Multi-Geo eBulma yapılandırması Microsoft 365](./multi-geo-ediscovery-configuration.md)

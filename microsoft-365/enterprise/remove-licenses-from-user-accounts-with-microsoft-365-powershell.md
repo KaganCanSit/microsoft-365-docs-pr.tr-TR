@@ -1,5 +1,5 @@
 ---
-title: PowerShell Microsoft 365 hesaplarından kullanıcı lisanslarını kaldırma
+title: PowerShell ile kullanıcı hesaplarından Microsoft 365 lisanslarını kaldırma
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
@@ -19,33 +19,85 @@ ms.custom:
 - LIL_Placement
 - O365ITProTrain
 ms.assetid: e7e4dc5e-e299-482c-9414-c265e145134f
-description: PowerShell kullanarak daha önce kullanıcılara Microsoft 365 lisansları kaldırmayı açıklar.
-ms.openlocfilehash: 4aa40b4405dda07eea34151bd2fddcde0030e8b8
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Daha önce kullanıcılara atanmış Microsoft 365 lisansları kaldırmak için PowerShell'in nasıl kullanılacağını açıklar.
+ms.openlocfilehash: c3317c651c561da4c8650e45ba3b64a135a1f6ce
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988784"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64823156"
 ---
-# <a name="remove-microsoft-365-licenses-from-user-accounts-with-powershell"></a>PowerShell Microsoft 365 hesaplarından kullanıcı lisanslarını kaldırma
+# <a name="remove-microsoft-365-licenses-from-user-accounts-with-powershell"></a>PowerShell ile kullanıcı hesaplarından Microsoft 365 lisanslarını kaldırma
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
 >[!Note]
->[Kullanıcı hesaplarından lisansları kaldırmayı öğrenmek için](../admin/manage/remove-licenses-from-users.md) Microsoft 365 yönetim merkezi. Ek kaynakların listesi için bkz. [Kullanıcıları ve grupları yönetme](/admin).
+>Microsoft 365 yönetim merkezi ile [kullanıcı hesaplarından lisansları kaldırmayı öğrenin](../admin/manage/remove-licenses-from-users.md). Ek kaynakların listesi için bkz. [Kullanıcıları ve grupları yönetme](/admin).
 >
 
-## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>Graph modülü için Azure Active Directory PowerShell'i kullanma
+## <a name="use-the-microsoft-graph-powershell-sdk"></a>Microsoft Graph PowerShell SDK'sını kullanma
 
-İlk olarak[, kiracınıza bağlan Microsoft 365 bağlanin](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).
+İlk olarak [Microsoft 365 kiracınıza bağlanın](/graph/powershell/get-started#authentication).
 
-Ardından, bu komutla kiracınıza uygun lisans planlarını listelenin.
+Bir kullanıcıya lisans atama ve kaldırma için User.ReadWrite.All izin kapsamı veya ['Lisans ata' Graph API başvuru sayfasında](/graph/api/user-assignlicense) listelenen diğer izinlerden biri gerekir.
+
+Kiracıda bulunan lisansları okumak için Organization.Read.All izin kapsamı gereklidir.
+
+```powershell
+Connect-Graph -Scopes User.ReadWrite.All, Organization.Read.All
+```
+
+Kuruluşunuzdaki lisans planı bilgilerini görüntülemek için aşağıdaki konulara bakın:
+
+- [PowerShell ile lisansları ve hizmetleri görüntüleme](view-licenses-and-services-with-microsoft-365-powershell.md)
+
+- [PowerShell ile hesap lisansı ve hizmet ayrıntılarını görüntüleme](view-account-license-and-service-details-with-microsoft-365-powershell.md)
+
+### <a name="removing-licenses-from-user-accounts"></a>Kullanıcı hesaplarından lisansları kaldırma
+
+Mevcut bir kullanıcı hesabından lisansları kaldırmak için aşağıdaki söz dizimini kullanın:
+  
+```powershell
+Set-MgUserLicense -UserId "<Account>" -RemoveLicenses @("<AccountSkuId1>") -AddLicenses @{}
+```
+
+Bu **örnek,** **kullanıcı BelindaN@litwareinc.com SPE_E5** (Microsoft 365 E5) lisans planını kaldırır:
+
+```powershell
+$e5Sku = Get-MgSubscribedSku -All | Where SkuPartNumber -eq 'SPE_E5'
+Set-MgUserLicense -UserId "belindan@litwareinc.com" -RemoveLicenses @($e5Sku.SkuId) -AddLicenses @{}
+```
+
+Mevcut lisanslı kullanıcılar grubundan tüm lisansları kaldırmak için aşağıdaki söz dizimini kullanın:
+
+```powershell
+$licensedUsers = Get-MgUser -Filter 'assignedLicenses/$count ne 0' `
+    -ConsistencyLevel eventual -CountVariable licensedUserCount -All `
+    -Select UserPrincipalName,DisplayName,AssignedLicenses
+
+foreach($user in $licensedUsers)
+{
+    $licencesToRemove = $user.AssignedLicenses | Select -ExpandProperty SkuId
+    $user = Set-MgUserLicense -UserId $user.UserPrincipalName -RemoveLicenses $licencesToRemove -AddLicenses @{} 
+}
+```
+
+Lisans boşaltmanın bir diğer yolu da kullanıcı hesabını silmektir. Daha fazla bilgi için bkz. [PowerShell ile kullanıcı hesaplarını silme ve geri yükleme](delete-and-restore-user-accounts-with-microsoft-365-powershell.md).
+
+## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>Graph için Azure Active Directory PowerShell modülünü kullanma
+
+>Set-AzureADUserLicense cmdlet'i kullanımdan kaldırılacak şekilde zamanlanmıştır. Lütfen betiklerinizi yukarıda açıklandığı gibi Microsoft Graph SDK'sının Set-MgUserLicense cmdlet'ine geçirin. Daha fazla bilgi için bkz[. Microsoft Graph lisans yönetimi API'lerine erişmek için uygulamalarınızı geçirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/migrate-your-apps-to-access-the-license-managements-apis-from/ba-p/2464366).
+>
+
+İlk olarak [Microsoft 365 kiracınıza bağlanın](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).
+
+Ardından, bu komutla kiracınızın lisans planlarını listeleyin.
 
 ```powershell
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
-Ardından, kullanıcı asıl adı (UPN) olarak da bilinen lisansı kaldırmak istediğiniz hesabın oturum açma adını alın.
+Ardından, lisansını kaldırmak istediğiniz hesabın oturum açma adını (kullanıcı asıl adı (UPN) olarak da bilinir) alın.
 
 Son olarak, kullanıcı oturum açma ve lisans planı adlarını belirtin, "<" ve ">" karakterlerini kaldırın ve bu komutları çalıştırın.
 
@@ -79,43 +131,47 @@ if($userList.Count -ne 0) {
 }
 ```
 
-## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>Kaynak için Microsoft Azure Active Directory Modülü'Windows PowerShell
+## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>Windows PowerShell için Microsoft Azure Active Directory Modülünü kullanma
 
-İlk olarak[, kiracınıza bağlan Microsoft 365 bağlanin](connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
+>[!Note]
+>Set-MsolUserLicense ve New-MsolUser (-LicenseAssignment) cmdlet'leri kullanımdan kaldırılacak şekilde zamanlanmıştır. Lütfen betiklerinizi yukarıda açıklandığı gibi Microsoft Graph SDK'sının Set-MgUserLicense cmdlet'ine geçirin. Daha fazla bilgi için bkz[. Microsoft Graph lisans yönetimi API'lerine erişmek için uygulamalarınızı geçirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/migrate-your-apps-to-access-the-license-managements-apis-from/ba-p/2464366).
+>
+
+İlk olarak [Microsoft 365 kiracınıza bağlanın](connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
    
-Kuruluş lisans planı (**AccountSkuID**) bilgilerini görüntülemek için aşağıdaki konulara bakın:
+Kuruluşunuzdaki lisans planı (**AccountSkuID**) bilgilerini görüntülemek için aşağıdaki konulara bakın:
     
   - [PowerShell ile lisansları ve hizmetleri görüntüleme](view-licenses-and-services-with-microsoft-365-powershell.md)
     
-  - [PowerShell ile hesap lisansını ve hizmet ayrıntılarını görüntüleme](view-account-license-and-service-details-with-microsoft-365-powershell.md)
+  - [PowerShell ile hesap lisansı ve hizmet ayrıntılarını görüntüleme](view-account-license-and-service-details-with-microsoft-365-powershell.md)
     
-**Get-MsolUser** cmdlet'ini _-All_ parametresini kullanmadan kullanırsanız, yalnızca ilk 500 hesap döndürülür.
+_-All_ parametresini kullanmadan **Get-MsolUser** cmdlet'ini kullanırsanız, yalnızca ilk 500 hesap döndürülür.
     
 ### <a name="removing-licenses-from-user-accounts"></a>Kullanıcı hesaplarından lisansları kaldırma
 
-Var olan kullanıcı hesabından lisansları kaldırmak için aşağıdaki söz dizimi kullanın:
+Mevcut bir kullanıcı hesabından lisansları kaldırmak için aşağıdaki söz dizimini kullanın:
   
 ```powershell
 Set-MsolUserLicense -UserPrincipalName <Account> -RemoveLicenses "<AccountSkuId1>", "<AccountSkuId2>"...
 ```
 
 >[!Note]
->PowerShell Core, **Msol'Microsoft Azure Active Directory Msol** Windows PowerShell cmdlet'leri için Modül Adını Desteklemez. Bu cmdlet'leri kullanmaya devam etmek için, tüm cmdlet'leri Windows PowerShell.
+>PowerShell Core, Windows PowerShell modülü için Microsoft Azure Active Directory Modülünü ve adında **Msol** bulunan cmdlet'leri desteklemez. Bu cmdlet'leri kullanmaya devam etmek için bunları Windows PowerShell çalıştırmanız gerekir.
 >
 
-Bu örnekte, kullanıcı hesabı **lisansından litwareinc:ENTERPRISEPACK** (Office 365 Kurumsal E3) lisansı BelindaN@litwareinc.com.
+Bu örnek, kullanıcı hesabı BelindaN@litwareinc.com **litwareinc:ENTERPRISEPACK** (Office 365 Kurumsal E3) lisansını kaldırır.
   
 ```powershell
 Set-MsolUserLicense -UserPrincipalName belindan@litwareinc.com -RemoveLicenses "litwareinc:ENTERPRISEPACK"
 ```
 
 >[!Note]
->Cmdlet'i `Set-MsolUserLicense` kullanarak iptal edilen lisansların kullanıcı *atamasını açamazsiniz* . Bunu aşağıdaki hesapta yer alan her kullanıcı hesabı için ayrı Microsoft 365 yönetim merkezi.
+>Kullanıcıların *iptal edilmiş* lisans atamalarını kaldırmak için cmdlet'ini kullanamazsınız`Set-MsolUserLicense`. Bunu Microsoft 365 yönetim merkezi her kullanıcı hesabı için ayrı ayrı yapmanız gerekir.
 >
 
-Var olan lisanslı kullanıcılar grubundan tüm lisansları kaldırmak için, aşağıdaki yöntemlerden birini kullanın:
+Mevcut lisanslı kullanıcılar grubundan tüm lisansları kaldırmak için aşağıdaki yöntemlerden birini kullanın:
   
-- **Hesapları mevcut bir hesap özniteliğine göre filtreleme** Bunu yapmak için aşağıdaki söz dizimlerini kullanın:
+- **Hesapları mevcut bir hesap özniteliğine göre filtreleme** Bunu yapmak için aşağıdaki söz dizimini kullanın:
     
 ```powershell
 $userArray = Get-MsolUser -All <FilterableAttributes> | where {$_.isLicensed -eq $true}
@@ -125,7 +181,7 @@ Set-MsolUserLicense -UserPrincipalName $userArray[$i].UserPrincipalName -RemoveL
 }
 ```
 
-Bu örnek, ABD'de Satış departmanında yer alan tüm kullanıcı hesaplarından tüm lisansları kaldırır.
+Bu örnek, Birleşik Devletler Satış departmanındaki tüm kullanıcı hesaplarından tüm lisansları kaldırır.
     
 ```powershell
 $userArray = Get-MsolUser -All -Department "Sales" -UsageLocation "US" | where {$_.isLicensed -eq $true}
@@ -135,9 +191,9 @@ Set-MsolUserLicense -UserPrincipalName $userArray[$i].UserPrincipalName -RemoveL
 }
 ```
 
-- **Belirli bir lisans için belirli hesapların listesini kullanma** Bunu yapmak için aşağıdaki adımları izleyin:
+- **Belirli bir lisans için belirli hesapların listesini kullanma** Bunu yapmak için aşağıdaki adımları uygulayın:
     
-1. Her satırda bir hesap içeren bir metin dosyası oluşturun ve kaydedin:
+1. Her satırda aşağıdaki gibi bir hesap içeren bir metin dosyası oluşturun ve kaydedin:
     
   ```powershell
 akol@contoso.com
@@ -154,7 +210,7 @@ kakers@contoso.com
   Set-MsolUserLicense -UserPrincipalName $x[$i] -RemoveLicenses "<AccountSkuId1>","<AccountSkuId2>"...
   }
   ```
-Bu örnekte, C:\My Documents\Accounts.txt metin dosyasında tanımlanan kullanıcı hesaplarından **litwareinc:ENTERPRISEPACK** (Office 365 Kurumsal E3) lisansı kaldırılmış Documents\Accounts.txt.
+Bu örnek, C:\My Documents\Accounts.txt metin dosyasında tanımlanan kullanıcı hesaplarından **litwareinc:ENTERPRISEPACK** (Office 365 Kurumsal E3) lisansını kaldırır.
     
   ```powershell
   $x=Get-Content "C:\My Documents\Accounts.txt"
@@ -164,7 +220,7 @@ Bu örnekte, C:\My Documents\Accounts.txt metin dosyasında tanımlanan kullanı
   }
   ```
 
-Var olan tüm kullanıcı hesaplarından tüm lisansları kaldırmak için aşağıdaki söz dizimi kullanın:
+Tüm mevcut kullanıcı hesaplarından tüm lisansları kaldırmak için aşağıdaki söz dizimini kullanın:
   
 ```powershell
 $userArray = Get-MsolUser -All | where {$_.isLicensed -eq $true}
@@ -174,12 +230,12 @@ Set-MsolUserLicense -UserPrincipalName $userArray[$i].UserPrincipalName -RemoveL
 }
 ```
 
-Lisansı serbest uygulamanın bir diğer yolu da kullanıcı hesabını silmektir. Daha fazla bilgi için bkz [. PowerShell'de kullanıcı hesaplarını silme ve geri yükleme](delete-and-restore-user-accounts-with-microsoft-365-powershell.md).
+Lisans boşaltmanın bir diğer yolu da kullanıcı hesabını silmektir. Daha fazla bilgi için bkz. [PowerShell ile kullanıcı hesaplarını silme ve geri yükleme](delete-and-restore-user-accounts-with-microsoft-365-powershell.md).
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[PowerShell Microsoft 365 hesaplarını, lisanslarını ve gruplarını yönetme](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365 kullanıcı hesaplarını, lisanslarını ve gruplarını yönetme](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md)
   
-[PowerShell Microsoft 365'i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365’i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
   
-[Microsoft 365 için PowerShell ile çalışmaya Microsoft 365](getting-started-with-microsoft-365-powershell.md)
+[Microsoft 365 için PowerShell'i kullanmaya başlama](getting-started-with-microsoft-365-powershell.md)

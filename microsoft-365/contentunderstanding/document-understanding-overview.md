@@ -1,5 +1,5 @@
 ---
-title: Microsoft SharePoint Syntex'da belgeyi anlama genel bakış
+title: Microsoft SharePoint Syntex'de belge anlamaya genel bakış
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -13,106 +13,110 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Microsoft SharePoint Syntex'da belgeyi anlama hakkında bilgi SharePoint Syntex.
-ms.openlocfilehash: c7488fcb44116f030d538b416af1f04b33382519
-ms.sourcegitcommit: bcbcbd4ddc72ad2fed629619d23fac5827d072bf
+description: Microsoft SharePoint Syntex'da belge anlama hakkında bilgi edinin.
+ms.openlocfilehash: 639decf383e534253b014366d9d8c51a83a76675
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2022
-ms.locfileid: "64507333"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64822748"
 ---
-# <a name="document-understanding-overview-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da belgeyi anlama genel bakış
+# <a name="document-understanding-overview-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'de belge anlamaya genel bakış
 
 
 </br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4CSu7] 
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4CSu7]
 
 </br>
 
-Belge kullanımı yapay zeka (AI) modellerini, dosyaların sınıflandırması ve bilgi ayıklamayı otomatikleştirmek için kullanır. Mektuplar veya sözleşmeler gibi yapılandırılmamış belgelerle en iyi şekilde çalışır. Bu belgelerde, tümceciklere veya desenlere göre tanım edilemeyen metinler olması gerekir. Tanımlanan metin, hem dosyanın türünü (sınıflandırması) hem de ayıklamak istediğiniz dosyayı (ayıklar) belirtir.
+Belge anlama, dosya sınıflandırmasını ve bilgilerin ayıklamasını otomatikleştirmek için yapay zeka (AI) modellerini kullanır. Mektuplar veya sözleşmeler gibi yapılandırılmamış belgelerle en iyi şekilde çalışır. Bu belgelerde tümceciklere veya desenlere göre tanımlanabilen metinler olmalıdır. Tanımlanan metin hem dosyanın türünü (sınıflandırması) hem de ayıklamak istediklerinizi (ayıklayıcıları) tanımlar.
 
 > [!NOTE]
-> Senaryo örneklerini [SharePoint Syntex: Kullanmaya başlayın hakkında daha](./adoption-getstarted.md) fazla bilgi edinmek için bu kılavuza bakın.
+> Belge anlama senaryosu örnekleri hakkında daha fazla bilgi için [SharePoint Syntex benimseme: Kullanmaya başlayın kılavuzuna](./adoption-getstarted.md) bakın.
 
-Belge anlama modelleri, içerik merkezi olarak adlandırılan bir SharePoint site içinde *oluşturulur ve yönetilir*. Bir belge kitaplığına SharePoint, modelin ayıklanan bilgileri depolamak için sütunları olan bir içerik türüyle ilişkilendirildi. Kendi oluşturtuz içerik türü, SharePoint galerisinde depolanır. Şemalarını kullanmak için mevcut içerik türlerini de kullanabilirsiniz.
+Belge anlama modelleri *, içerik merkezi* adı verilen bir SharePoint sitesinde oluşturulur ve yönetilir. bir SharePoint belge kitaplığına uygulandığında, model ayıklanan bilgileri depolamak için bir içerik türünün sütunlarıyla ilişkilendirilir. Oluşturduğunuz içerik türü, SharePoint içerik türü galerisinde depolanır. Ayrıca, şemalarını kullanmak için mevcut içerik türlerini kullanmayı da seçebilirsiniz.
 
 > [!NOTE]
-> Salt okunur veya gizli içerik türleri güncelleştirilemez, dolayısıyla bir modelde kullanılamaz.
+> Salt okunur veya korumalı içerik türleri güncelleştirilemediği için modelde kullanılamaz.
 
-Aşağıdaki *eylemleri yapmak için* *belgenize sınıflayıcılar* ve ayıklayıcılar ekleyin, modelleri anlama: 
+Aşağıdaki eylemleri gerçekleştirmek için belge anlama modellerinize *sınıflandırıcılar* ve *ayıklayıcılar* ekleyin:
 
-- Sınıflayıcılar, belge kitaplığına yüklenen belgeleri tanımlamak ve sınıflandırmak için kullanılır. Örneğin, bir sınıflandırıcı kitaplı kitaplıya yüklenen tüm *sözleşme yenileme* belgelerini tanımlamak için "eğitimli" olabilir. Sınıflandırıcınızı  oluşturma işlemi, sözleşme yenileme içerik türü sizin tarafından tanımlanır.
+- Sınıflandırıcılar, belge kitaplığına yüklenen belgeleri tanımlamak ve sınıflandırmak için kullanılır. Örneğin, sınıflandırıcı kitaplığa yüklenen tüm *sözleşme yenileme* belgelerini tanımlamak için "eğitilebilir". Sınıflandırıcınızı oluşturduğunuzda sözleşme yenileme içerik türü sizin tarafınızdan tanımlanır.
 
-- Ayıklar bu belgelerden bilgi çeker. Örneğin, belge kitaplığında tanımlanan her sözleşme yenileme belgesi için, her belge için Hizmet *Başlangıç Tarihi ve İstemcisi'nin* *görüntüleniyor* olduğu sütunlar görüntülenir. 
+- Ayıklayıcılar bu belgelerden bilgi çeker. Örneğin, belge kitaplığınızda tanımlanan her sözleşme yenileme belgesi için, her belge için *Hizmet Başlangıç Tarihi* ve *İstemci'yi* gösteren sütunlar görüntülenir. 
 
-Modelde sınıflayıcılarınızı ve ayıklayıcılarınızı eğitmek ve test etmek için örnek dosyalar kullanabilirsiniz. Örnek dosyalar, dosyalardan verileri tanımlamaya ve ayıklamaya çalışırken ne bulmaya çalışabilirsiniz modelinize örnekler sağlar. Örneğin, sözleşme yenileme sınıflayıcılarınızı ve ayıklayıcılarınızı, şirketinizin birlikte çalıştığını sözleşme yenileme belgeleri örnekleriyle eğitebilirsiniz. Modelinizin ne kadar etkili olduğunu test etmek için örnek dosyalar da kullanabilirsiniz.
+Modelinizde sınıflandırıcılarınızı ve ayıklayıcılarınızı eğitmek ve test etmek için örnek dosyaları kullanabilirsiniz. Örnek dosyalar, dosyalardan verileri tanımlamaya ve ayıklamaya çalışırken neleri aramanız gerektiğinde model örnekleri sağlar. Örneğin, sözleşme yenileme sınıflandırıcılarınızı ve ayıklayıcılarınızı şirketinizin birlikte çalıştığı sözleşme yenileme belgelerinin örnekleriyle eğitebilirsiniz. Modelinizin verimliliğini test etmek için örnek dosyaları da kullanabilirsiniz.
 
-Modelinizi yayımlandıktan sonra, erişiminiz olan herhangi bir belge kitaplığına SharePoint için içerik merkezini kullanın.  
+Modelinizi yayımladıktan sonra, erişiminiz olan herhangi bir SharePoint belge kitaplığına uygulamak için içerik merkezini kullanın.  
 
 ## <a name="file-limitations"></a>Dosya sınırlamaları
 
-Modelleri kullanan belgelerde PDF'leri, resimleri ve TIFF dosyalarını taramak için Optik Karakter Tanıma (OCR) teknolojisi kullanılır. Bir modeli örnek dosyalarla eğitip, modeli belge kitaplığında dosyalara karşı çalıştırdığında dosyalar taranır.
+Belge anlama modelleri PDF'leri, görüntüleri ve TIFF dosyalarını taramak için Optik Karakter Tanıma (OCR) teknolojisini kullanır. Bir modeli örnek dosyalarla eğittiğinizde ve modeli belge kitaplığındaki dosyalara karşı çalıştırdığınızda dosyalar taranır.
 
-Metin tabanlı dosyalar ve OCR taranmış Microsoft Office (PDF, resim veya TIFF) ilgili olarak aşağıdaki farklara dikkat edin:
+metin tabanlı dosyalar ve OCR ile taranan dosyalar (PDF, görüntü veya TIFF) Microsoft Office aşağıdaki farklara dikkat edin:
 
-- Office: 64.000 karakterde kesilmiş (eğitimde ve belge kitaplığında dosyalarda çalıştırılırken).
+- Office dosyaları: 64.000 karakterde kesilir (eğitimde ve belge kitaplığındaki dosyalarda çalıştırıldığında).
 
-- OCR taranan dosyalar: 20 sayfalık bir sınır vardır.  
+- OCR ile taranan dosyalar: 20 sayfalık bir sınır vardır.  
 
 ### <a name="requirements"></a>Gereksinimler
 
-OCR işleme, aşağıdaki gereksinimleri karşıleyen belgeler üzerinde en iyi şekilde çalışır:
+OCR işleme, aşağıdaki gereksinimleri karşılayan belgelerde en iyi sonucu sağlar:
 
-- JPG, PNG veya PDF biçimi (metin veya taranmış). Metin ekli PDF'ler daha iyidir, çünkü karakter ayıklama ve konumda hata olmayacaktır.
+- JPG, PNG veya PDF biçimi (metin veya taranmış). Karakter ayıklama ve konumda hata olmayacağından, metin eklenmiş PDF'ler daha iyidir.
 
-- PDF'lerinizi parola kilitliyse, göndermeden önce kilidi kaldırmanız gerekir.
+- PDF'leriniz parola kilitliyse, göndermeden önce kilidi kaldırmanız gerekir.
 
-- Koleksiyon başına eğitim için kullanılan belgelerin birleştirilmiş dosya boyutu 50 MB'yi geçmemektedir ve PDF belgelerinin 500'den fazla sayfası olmaması gerekir.
+- Koleksiyon başına eğitim için kullanılan belgelerin birleştirilmiş dosya boyutu 50 MB'ı aşmamalı ve PDF belgelerinde 500'den fazla sayfa olmamalıdır.
 
-- Resimler için boyutların 50 ile 50 × 10.000 × 10.000 piksel arasında olması gerekir.
+- Görüntüler için boyutlar 50 x 50 ile 10.000 x 10.000 piksel arasında olmalıdır.
    > [!NOTE]
-   > Çok geniş olan veya tek boyutları olan resimler (örneğin, kat planları) OCR işlemi içinde kesilebilir ve doğruluğu kaybedebilir.
- 
-- PDF dosyaları için, boyutların Yasal veya A3 kağıt boyutlarına karşılık gelen en fazla 17 x 17 inç ve daha küçük olması gerekir.
+   > Çok geniş veya tek boyutlu görüntüler (örneğin, kat planları) OCR işleminde kesilebilir ve doğruluğu kaybolabilir.
 
-- Kağıt belgelerden taranmışsa, taramaların yüksek kaliteli resimler olması gerekir.
+- PDF dosyaları için boyutların Yasal veya A3 kağıt boyutlarına karşılık gelen en fazla 17 x 17 inç ve daha küçük olması gerekir.
 
-- Latin alfabesi (İngilizce karakterler) kullanmalıdır.
+- Kağıt belgelerden taranıyorsa taramalar yüksek kaliteli görüntüler olmalıdır.
+
+- Latin alfabesini (İngilizce karakterler) kullanmalıdır.
 
 > [!NOTE]
-> AI Builder şu anda aşağıdaki form işleme giriş verilerini desteklememektedir:<br>- Onay kutuları veya radyo düğmeleri<br>- İmzalar<br>- Doldurulabilir PDF'ler
+> AI Builder şu anda aşağıdaki form işleme giriş verilerini desteklemez:
+>
+> - Onay kutuları veya radyo düğmeleri
+> - Imza
+> - Doldurulabilir PDF'ler
 
 ### <a name="supported-file-types"></a>Desteklenen dosya türleri
 
 Belge anlama modelleri aşağıdaki dosya türlerini destekler:
 
-- belge
-- docx
-- eml
-- heic
+- Doktor
+- Docx
+- Eml
+- heik
 - heif
 - htm
-- html
-- jpeg
-- jpg
+- Html
+- Jpeg
+- Jpg
 - markdown
 - md
-- msg
-- pdf
-- png
-- ppt
-- pptx
-- rtf
-- tif
-- tiff
-- txt
-- xls
+- Msg
+- Pdf
+- Png
+- Ppt
+- Pptx
+- Rtf
+- Tıf
+- Tıff
+- Txt
+- Xls
 - xlsx
 
 ### <a name="supported-languages"></a>Desteklenen diller
 
-Belge anlama modelleri *, aşağıdakiler* de dahil olmak üzere Latin tabanlı tüm dilleri destekler:
+Belge anlama modelleri, aşağıdakiler de dahil olmak üzere *tüm* Latin tabanlı dilleri destekler:
 
 - English
 - French
@@ -120,20 +124,20 @@ Belge anlama modelleri *, aşağıdakiler* de dahil olmak üzere Latin tabanlı 
 - Italian
 - Spanish
 
-
 ## <a name="see-also"></a>Ayrıca Bkz
+
 [Sınıflandırıcı oluşturma](create-a-classifier.md)
 
-[Ayıklaıcı oluşturma](create-an-extractor.md)
+[Ayıklayıcı oluşturma](create-an-extractor.md)
 
 [İçerik merkezi oluşturma](create-a-content-center.md)
 
 [Form işleme modeli oluşturma](create-a-form-processing-model.md)
 
-[Model uygulama](apply-a-model.md)   
+[Model uygulama](apply-a-model.md)
 
-[Belgeyi anlama ve form işleme modeli arasındaki fark](difference-between-document-understanding-and-form-processing-model.md)
+[Belge anlama ile form işleme modeli arasındaki fark](difference-between-document-understanding-and-form-processing-model.md)
   
 [Form işlemeye genel bakış](form-processing-overview.md)
 
-[SharePoint Syntex Modu](accessibility-mode.md)
+[erişilebilirlik modunu SharePoint Syntex](accessibility-mode.md)

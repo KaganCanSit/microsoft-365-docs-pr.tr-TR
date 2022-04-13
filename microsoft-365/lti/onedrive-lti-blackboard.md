@@ -1,5 +1,5 @@
 ---
-title: LTI'Microsoft OneDrive Blackboard ile tümleştirin
+title: Microsoft OneDrive LTI'yi Blackboard ile tümleştirme
 ms.author: danismith
 author: DaniEASmith
 manager: serdars
@@ -12,62 +12,62 @@ f1.keywords:
 ms.collection: M365-modern-desktop
 ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
-description: Yeni Blackboard için Microsoft OneDrive Learning Araçları Birlikte Çalışabilirliği ile ödev oluşturun ve not edin, ders içeriğini oluşturun ve sergiyi oluşturun, dosyalar üzerinde gerçek zamanlı olarak işbirliği yapın.
-ms.openlocfilehash: 94e77181244bbf02115bd706e86751a9382b906b
-ms.sourcegitcommit: a9266e4e7470e8c1e8afd31fef8d266f7849d781
+description: Yeni Microsoft OneDrive Learning Tools Interoperability for Blackboard ile ödevler oluşturun ve notlayın, kurs içeriğini derleyin ve dosyalar üzerinde gerçek zamanlı olarak işbirliği yapın.
+ms.openlocfilehash: 7e43ff51a069db55be06236fb0318aa4453d8feb
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63705302"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824662"
 ---
-# <a name="integrate-microsoft-onedrive-lti-with-blackboard"></a>LTI'Microsoft OneDrive Blackboard ile tümleştirin
+# <a name="integrate-microsoft-onedrive-lti-with-blackboard"></a>Microsoft OneDrive LTI'yi Blackboard ile tümleştirme
 
-LTI Microsoft OneDrive Blackboard ile tümleştirme, iki adımlı bir işlemdir. İlk adım tüm LTI'Microsoft OneDrive Blackboard kurslarının içinde kullanılabilir olduğunu ve ikinci adım da Microsoft OneDrive Blackboard için kullanılabilir.
+Microsoft OneDrive LTI'yi Blackboard ile tümleştirmek iki adımlı bir işlemdir. İlk adım, Microsoft OneDrive LTI'yi Blackboard kurslarında kullanılabilir hale getirir ve ikinci adım Blackboard için Microsoft OneDrive açar.
 
 > [!IMPORTANT]
-> Bu tümleştirmeyi gerçekleştiren kişi Blackboard yöneticisi ve kullanıcı kiracısı yöneticisi Microsoft 365 gerekir.
+> Bu tümleştirmeyi gerçekleştiren kişi Blackboard yöneticisi ve Microsoft 365 kiracısının yöneticisi olmalıdır.
 
 ## <a name="recommended-browser-settings"></a>Önerilen tarayıcı ayarları
 
-- Tanımlama bilgilerine izin ver Microsoft OneDrive.
-- Açılır pencerelerin, açılan pencerelerin bir Microsoft OneDrive.
+- Microsoft OneDrive için tanımlama bilgilerine izin verilmelidir.
+- Açılır pencereler Microsoft OneDrive için engellenmemelidir.
 
 > [!NOTE]
 >
-> - Chrome tarayıcı gizli modunda tanımlama bilgilerine varsayılan olarak izin verilmez ve bu moda izin verilmeleri gerekir.
-> - Microsoft OneDrive LTI, tarayıcıda özel modda Microsoft Edge çalışır. Tanımlama bilgilerini engellememenizin (varsayılan olarak izin verilen tanımlama bilgileri) olduğundan emin olur.
+> - Chrome tarayıcı gizli modunda tanımlama bilgilerine varsayılan olarak izin verilmez ve buna izin verilmelidir.
+> - Microsoft OneDrive LTI, Microsoft Edge tarayıcıdaki özel modda çalışır. Tanımlama bilgilerini engellemediğinizden emin olun (varsayılan olarak izin verilir).
 
-## <a name="register-the-onedrive-lti-13-tool-in-blackboard"></a>Blackboard'OneDrive LTI 1.3 aracını kaydetme
+## <a name="register-the-onedrive-lti-13-tool-in-blackboard"></a>OneDrive LTI 1.3 aracını Blackboard'a kaydetme
 
-1. Blackboard'un Yönetici Paneli'den,LTI  **Araç Sağlayıcıları'nı seçin**.
-2.  **SelectRegister LTI 1.3 Tool**.
-3. İstemci Kimliği alanında, şu kimliği yazın veya kopyalayıp yapıştırın: ``78cd1b1c-ccbd-4318-9f90-22241f63b1f5``
+1. Blackboard'un Yönetici Paneli'nden **LTI Araç Sağlayıcıları'nı** seçin.
+2. **LTI 1.3 Aracını Kaydet'i** seçin.
+3. İstemci Kimliği alanına şu kimliği yazın veya kopyalayıp yapıştırın: ``78cd1b1c-ccbd-4318-9f90-22241f63b1f5``
 
-  > [!NOTE]
-  > Bu istemci kimliği, Blackboard'da iki farklı yerleşim yapılandıracak: Bunlardan biri İçerik Marketi, Kitaplar ve Araçlar ile Zengin metin düzenleyicisinden ara sunucuya erişim sağlar, diğeri ise Ultra dersler için çevrimiçi kursta bulunan İçerik Ekle menüsünden aracida erişim sağlar.
+   > [!NOTE]
+   > Bu istemci kimliğinin eklenmesi, Blackboard'da iki farklı yerleşim yapılandıracaktır: biri İçerik Pazarı, Kitaplar ve Araçlar ve Zengin metin düzenleyicisinden aracı erişime izin veren, diğeri ise Ultra kursları için çevrimiçi kurstaki İçerik Ekle menüsünden aracı erişim sağlar.
 
-4. **Gönder'i seçin**.
-5. Araç Durumu görünümü'ne önceden doldurulmuş tüm  **ayarları gözden**  geçirip Araç Durumu yuvarlak düğmesinin Seçili  **olduğundan emin olun**.
-6.  **InStitution Policies,** select the **Role in course** and **the Name** onay kutularını da in user fields to send. Diğer tüm kullanıcı alanları isteğe bağlıdır, ancak gelecekte bu alanları yeniden yüklemenizi denetlemeleri için OneDrive önerilir.
-7. **Sınıf hizmeti erişimine izin ver**   **andAllow üyelik hizmeti erişimi** de şu anda isteğe bağlıdır, ancak LTI aracının gelecek güncelleştirmeleri için gerekli olabilir.
-8. Dağıtım **Kimliğini kopyalayın**. Microsoft LTI Aracını yapılandırmak için ona ihtiyacınız vardır.
-9. Bitirmek **için Gönder** düğmesini seçin.
+4. **Gönder'i** seçin.
+5. **Araç Durumu** görünümünde önceden doldurulmuş tüm ayarları gözden geçirin ve **Araç Durumu** yuvarlak düğmesinin **Onaylandı** olduğundan emin olun.
+6. **Kurum İlkeleri'nde**, gönderilecek kullanıcı **alanlarındaki Kurstaki rol** ve **Ad** onay kutularını seçin. Diğer tüm kullanıcı alanları isteğe bağlıdır, ancak OneDrive yüklemenizin gelecekteki kanıtı için bunları açık bırakmanız önerilir.
+7. **Sınıf hizmet erişimine izin ver** ve **Üyelik hizmeti erişimine izin ver** de şu anda isteğe bağlıdır, ancak LTI aracında gelecekteki güncelleştirmeler için gerekli olabilir.
+8. **Dağıtım Kimliğini** kopyalayın. Microsoft LTI Aracı'nı yapılandırmak için buna ihtiyacınız olacaktır.
+9. Bitirmek için **Gönder** düğmesini seçin.
 
-## <a name="configure-the-microsoft-lti-tool-to-work-with-blackboard"></a>Microsoft LTI Aracını Blackboard ile çalışacak şekilde yapılandırma
+## <a name="configure-the-microsoft-lti-tool-to-work-with-blackboard"></a>Microsoft LTI Aracı'nı Blackboard ile çalışacak şekilde yapılandırma
 
-1. [Portalda LTI Microsoft OneDrive oturum açın](https://onedrivelti.microsoft.com/admin).
-2. Yönetici Onayı **düğmesini seçin** ve izinleri kabul edin.
+1. [Microsoft OneDrive LTI Kayıt Portalı'na giriş](https://onedrivelti.microsoft.com/admin) yapın.
+2. **Yönetici Onayı** düğmesini seçin ve izinleri kabul edin.
 
 > [!CAUTION]
-> Bu adım gerçekleştirile değilse, aşağıdaki adım size bir hata verir ve hatayı alırsanız bu adımı bir saat süreyle aşamazsınız.
+> Bu adım gerçekleştirilmezse, aşağıdaki adım size bir hata verir ve hatayı aldıktan sonra bu adımı bir saat boyunca gerçekleştiremezsiniz.
 
-3. Yeni **LTI Kiracısı Oluştur düğmesini** seçin.
-4. LTI Kayıt sayfasında, LTI Tüketici **Platformu açılan listesinden Blackboard'ı** seçin ve sonra da Sonraki **düğmesini** seçin.
-5. Aracı **Blackboard'a** kaydettirirken kopyalanan Dağıtım Kimliği'ne yapıştırın ve Ardından Sonraki'yi **seçin**.
-6. Değişikliklerinizi gözden geçirin ve kaydedin. Başarılı kayıt işlemi sırasında bir ileti görüntülenir.
-7. Kayıt ayrıntılarınız, giriş sayfasında **LTI** Kiracıları Görüntüle düğmesi seçerek de inceleyebilirsiniz.
+3. **Yeni LTI Kiracısı oluştur** düğmesini seçin.
+4. LTI Kaydı sayfasında, LTI Tüketici Platformu açılan **listesinden Kara Tahta'yı** seçin ve ardından **İleri** düğmesini seçin.
+5. Aracı Blackboard'a kaydederken kopyaladığınız **Dağıtım Kimliğini** yapıştırın ve **İleri'yi** seçin.
+6. Değişikliklerinizi gözden geçirin ve kaydedin. Kayıt başarılı olduktan sonra bir ileti görüntülenir.
+7. Kayıt ayrıntılarınız, giriş sayfasındaki **LTI Kiracılarını Görüntüle** düğmesi seçilerek de gözden geçirilebilir.
 
-Bu adımları tamamlandıktan sonra, eğitmeniniz Ders İçeriği sayfasındaki 'OneDrive' menüsünü kullandıktan sonra belgeleri OneDrive'den açabilirler.
+Bu adımları tamamladıktan sonra eğitmenleriniz, Kurs İçeriği sayfasındaki 'artı' menüsünü kullandıklarında OneDrive belgeleri açabilir.
 
 ## <a name="recommended-content"></a>Önerilen içerik
 

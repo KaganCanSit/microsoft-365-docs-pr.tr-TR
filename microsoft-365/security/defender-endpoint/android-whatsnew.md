@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 48d6ef27e71f89f6a81ac3c77ea17cf60dc90ee1
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 95c4d77014e31c748cc4bd6662a148810c01f79a
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664578"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64825200"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-android"></a>Android'de Uç Nokta için Microsoft Defender'deki yenilikler
 
@@ -31,9 +31,18 @@ ms.locfileid: "64664578"
 
 Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
+>[!NOTE]
+>Microsoft Defender artık 1.0.3011.0302'nin altındaki sürümler için desteklenmiyor. Kullanıcıların cihazlarının güvenliğini sağlamak için en son sürümlere yükseltmeleri istenir.
+Güncelleştirmek için kullanıcılar aşağıdaki adımları kullanabilir:
+>1. İş profilinizde Yönetilen Play Store'a gidin.
+>2. Sağ üst köşedeki profil simgesine dokunun ve "Uygulamaları ve cihazı yönet" seçeneğini belirleyin.
+>3. Kullanılabilir güncelleştirmeler altında MDE'yi bulun ve güncelleştir'i seçin.
+>
+>Herhangi bir sorunla karşılaşırsanız [uygulama içi geri bildirim gönderin](/security/defender-endpoint/android-support-signin#send-in-app-feedback).
+
 ## <a name="microsoft-defender-for-endpoint-is-now-microsoft-defender-in-the-play-store"></a>Uç Nokta için Microsoft Defender artık Play store'da Microsoft Defender'dır
 
-Uç Nokta için Microsoft Defender artık play store'da **Microsoft Defender** olarak kullanılabilir. Bu güncelleştirmeyle, uygulama **ABD bölgesindeki Tüketiciler** için önizleme olarak kullanıma sunulacaktır. Uygulamada iş veya kişisel hesabınızla nasıl oturum açtığınıza bağlı olarak, Uç Nokta için Microsoft Defender özelliklerine veya kişiler için Microsoft Defender özelliklerine erişebilirsiniz. Daha fazla ayrıntı için [lütfen bu bloga](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals) bakın.
+Uç Nokta için Microsoft Defender artık play store'da **Microsoft Defender** olarak kullanılabilir. Bu güncelleştirmeyle, uygulama **ABD bölgesindeki Tüketiciler** için önizleme olarak kullanıma sunulacaktır. Uygulamada iş veya kişisel hesabınızla nasıl oturum açtığınıza bağlı olarak, Uç Nokta için Microsoft Defender özelliklerine veya kişiler için Microsoft Defender özelliklerine erişebilirsiniz. Daha fazla ayrıntı için [lütfen bu bloga](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals) bakın.
 
 ## <a name="threat-and-vulnerability-management"></a>Tehdit ve Güvenlik Açığı Yönetimi
 

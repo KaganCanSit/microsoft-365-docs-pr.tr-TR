@@ -1,5 +1,5 @@
 ---
-title: Sistem gereksinimleri Microsoft 365 Lighthouse
+title: Microsoft 365 Lighthouse için gereksinimler
 f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
@@ -15,55 +15,54 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: Yönetilen Hizmet Sağlayıcıları (MSP)'ler için, Hizmet Sağlayıcılarını (MSP) kullanmak Microsoft 365 Lighthouse.
-ms.openlocfilehash: b26eb34c728121b4c6f2474dd52aa2a6824d92d6
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+description: Yönetilen Hizmet Sağlayıcıları (MSP' ler) için Microsoft 365 Lighthouse kullanmak için gereksinimlerin listesini alın.
+ms.openlocfilehash: d5f04c39cbce9726fefa4b410be63cd5ee4e959d
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775422"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64823684"
 ---
-# <a name="requirements-for-microsoft-365-lighthouse"></a>Sistem gereksinimleri Microsoft 365 Lighthouse
+# <a name="requirements-for-microsoft-365-lighthouse"></a>Microsoft 365 Lighthouse için gereksinimler
 
-Microsoft 365 Lighthouse Küçük ve orta ölçekli işletme (SMB) müşterileri için, Yönetilen Hizmet Sağlayıcılarının (MSP) cihazları, verileri ve kullanıcıları güvenli ve yönetmeye yardımcı olan bir yönetici portalıdır.  
+Microsoft 365 Lighthouse, Yönetilen Hizmet Sağlayıcılarının (MSP' ler) küçük ve orta ölçekli işletme (SMB) müşterileri için cihazları, verileri ve kullanıcıları uygun ölçekte güvenli hale gelip yönetmelerine yardımcı olan bir yönetici portalıdır.
 
-MSP'ler, Deniz Bulut Çözümü Sağlayıcısı'ı kullanmak için Bulut Çözümü Sağlayıcısı (CSP) programına Dolaylı Bayi veya Doğrudan Fatura iş ortağı olarak kaydolmaları gerekir.  
+MSP'lerin Lighthouse kullanmak için Bulut Çözümü Sağlayıcısı (CSP) programına Dolaylı Bayi veya Doğrudan Fatura iş ortağı olarak kaydedilmesi gerekir.
 
-Buna ek olarak, her MSP müşteri kiracısı aşağıdaki gereksinimleri karşıerek Deniz Feneri'ne hak kazanmakla hak kazanmakla da gerekir:
- 
-- Müşteri kiracısı yönetimi için Yönetilen Hizmet Sağlayıcısı (MSP) için temsilci olarak ayarlanmış erişime sahip olmak*
-- 365 İş lisansınız Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows lisansa sahip olmalı
-- 1000'den fazla lisanslı kullanıcıya sahip olmalı
+Ayrıca, her MSP müşteri kiracısının aşağıdaki gereksinimleri karşılayarak Lighthouse'a uygun olması gerekir:
 
-*Temsilci Yönetici Ayrıcalıkları (DAP), müşterileri Deniz Feneri'ne ekleme için gereklidir. Ayrıca, daha güvenli ve temsilcili erişim sağlamak için müşterilerinizle Ayrıntılı Temsilcili Yönetici Ayrıcalıkları (GDAP) kurmanızı öneririz. DAP ve GDAP birlikte çalışırken, her iki modelin de bulunduğu müşteriler için GDAP öncelik olacaktır. Kısa süre içinde yalnızca GDAP'ye (ve DAP) sahip olan müşteriler Deniz Feneri'ne yerabilecek.
+- Müşteri kiracısını yönetebilmek için Yönetilen Hizmet Sağlayıcısı (MSP) için temsilci erişimi ayarlanmış olmalıdır*
+- En az bir Microsoft 365 İş Ekstra, Microsoft 365 E3 veya Windows 365 Business lisansı olmalıdır
+- En fazla 1000 lisanslı kullanıcı olmalıdır
 
-## <a name="requirements-for-enablingdevice-management"></a>Cihaz yönetimini etkinleştirme gereksinimleri
+*Müşterileri Lighthouse'a eklemek için Temsilci Yönetici Ayrıcalıkları (DAP) gerekir. Daha güvenli temsilci erişimi sağlamak için müşterilerinizle Ayrıntılı Yönetici Ayrıcalıkları (GDAP) oluşturmanızı da öneririz. DAP ve GDAP birlikte bulunurken, her iki modelin de bulunduğu müşteriler için GDAP öncelikli olacaktır. Yakında yalnızca GDAP (ve DAP olmayan) müşteriler Lighthouse'a eklenecek.
 
-Cihaz yönetimi sayfalarında müşteri kiracı cihazlarını görüntülemek için MSP'nin şunları yapmalıdır:
+## <a name="requirements-for-enabling-device-management"></a>Cihaz yönetimini etkinleştirme gereksinimleri
 
-- Tüm müşteri cihazlarını Microsoft Endpoint Manager (MEM) olarak kaydettir.Daha fazla bilgi için bkz[. Cihazları Microsoft Intune](/mem/intune/enrollment/).
-- Tüm müşteri cihazlarına uyumluluk ilkeleri attayabilirsiniz.Daha fazla bilgi için bkz[. 2013'te uyumluluk Microsoft Intune](/mem/intune/protect/create-compliance-policy).
+Cihaz yönetimi sayfalarında müşteri kiracı cihazlarını görüntülemek için bir MSP şunları yapmalıdır:
 
-## <a name="requirements-for-enabling-usermanagement"></a>Kullanıcı yönetimini etkinleştirme gereksinimleri
+- Tüm müşteri cihazlarını Microsoft Endpoint Manager'a (MEM) kaydedin. Daha fazla bilgi için bkz[. Cihazları Microsoft Intune kaydetme](/mem/intune/enrollment/).
+- Tüm müşteri cihazlarına uyumluluk ilkeleri atayın. Daha fazla bilgi için bkz. [Microsoft Intune'da uyumluluk ilkesi oluşturma](/mem/intune/protect/create-compliance-policy).
 
-Müşteri verilerini, Risky kullanıcıları, Çok Faktörlü kimlik doğrulaması ve Parola sıfırlama gibi kullanıcı yönetimi sayfalarında gösteriymleri için, müşteri kiracılarının Azure Active Directory Premium P1 veya sonrası için lisansları olmalıdır. Azure AD Premium P1, e-Microsoft 365 İş Ekstra ve Microsoft 365 E3.
+## <a name="requirements-for-enabling-user-management"></a>Kullanıcı yönetimini etkinleştirme gereksinimleri
 
-## <a name="requirements-for-enablingthreat-management"></a>Tehdit yönetimini etkinleştirme gereksinimleri
+Müşteri verilerinin Riskli kullanıcılar, Çok Faktörlü kimlik doğrulaması ve Parola sıfırlama dahil olmak üzere kullanıcı yönetimi sayfalarındaki raporlarda gösterilmesi için, müşteri kiracılarının Azure Active Directory Premium P1 veya üzeri için lisansları olmalıdır. Azure AD Premium P1 Microsoft 365 İş Ekstra ve Microsoft 365 E3 dahildir.
 
-Müşteri kiracı cihazlarını ve tehdit sayfalarını görüntülemek için, tüm müşteri kiracı cihazlarını Microsoft Endpoint Manager'a (MEM) kaydetmeniz ve diğer cihazlara çalıştırarak onları korumanız Microsoft Defender Virüsten Koruma.  
+## <a name="requirements-for-enabling-threat-management"></a>Tehdit yönetimini etkinleştirme gereksinimleri
 
-Daha fazla bilgi için bkz[. Cihazları Microsoft Intune](/mem/intune/enrollment/).  
+Müşteri kiracı cihazlarını ve tehditlerini tehdit yönetimi sayfalarında görüntülemek için tüm müşteri kiracı cihazlarını Microsoft Endpoint Manager'a (MEM) kaydetmeniz ve Microsoft Defender Virüsten Koruma çalıştırarak korumanız gerekir.
 
-Microsoft Defender Virüsten Koruma, Windows sisteminin bir parçasıdır ve işletim sistemini çalıştıran cihazlarda varsayılan olarak Windows 10.  
+Daha fazla bilgi için bkz[. Cihazları Microsoft Intune kaydetme](/mem/intune/enrollment/).
+
+Microsoft Defender Virüsten Koruma Windows işletim sisteminin bir parçasıdır ve Windows 10 çalıştıran cihazlarda varsayılan olarak etkinleştirilir.
 
 > [!NOTE]
-> Microsoft dışı bir virüsten koruma çözümü kullanıyor ve herhangi bir çözüm Microsoft Defender Virüsten Koruma, Microsoft Defender Virüsten Koruma devre dışı bırakılır. Microsoft olmayan virüsten koruma çözümünü kaldırdığınız zaman, Microsoft Defender Virüsten Koruma cihazlarınızı tehditlere karşı korumak için Windows etkinleştirilir.
+> Microsoft dışı bir virüsten koruma çözümü kullanıyorsanız ve Microsoft Defender Virüsten Koruma kullanmıyorsanız, Microsoft Defender Virüsten Koruma otomatik olarak devre dışı bırakılır. Microsoft dışı virüsten koruma çözümünü kaldırdığınızda, Windows cihazlarınızı tehditlere karşı korumak için Microsoft Defender Virüsten Koruma otomatik olarak etkinleştirilir.
 
 ## <a name="related-content"></a>İlgili içerik
 
-[Portal Microsoft 365 Lighthouse yapılandırma](m365-lighthouse-configure-portal-security.md) (makale)\
-[Microsoft 365 Lighthouse Uyumluluk sayfasına genel bakış](m365-lighthouse-device-compliance-page-overview.md) (makale)\
-[Microsoft 365 Lighthouse sayfasına genel bakış](m365-lighthouse-users-page-overview.md) (makale)\
-[Microsoft 365 Lighthouse yönetimi sayfasına genel bakış](m365-lighthouse-threat-management-page-overview.md) (makale)\
-[Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)
-
+[Microsoft 365 Lighthouse portal güvenliğini yapılandırma](m365-lighthouse-configure-portal-security.md) (makale)\
+[Microsoft 365 Lighthouse Cihaz uyumluluğu sayfasına genel bakış](m365-lighthouse-device-compliance-page-overview.md) (makale)\
+[Microsoft 365 Lighthouse Kullanıcılar sayfasına genel bakış](m365-lighthouse-users-page-overview.md) (makale)\
+[Microsoft 365 Lighthouse Tehdit yönetimi sayfasına genel bakış](m365-lighthouse-threat-management-page-overview.md) (makale)\
+[Microsoft 365 Lighthouse SSS](m365-lighthouse-faq.yml) (makale)

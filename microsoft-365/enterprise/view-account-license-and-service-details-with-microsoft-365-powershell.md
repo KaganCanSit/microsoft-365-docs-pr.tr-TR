@@ -1,5 +1,5 @@
 ---
-title: PowerShell Microsoft 365 lisansı ve hizmet ayrıntılarını görüntüleme
+title: PowerShell ile Microsoft 365 hesabı lisansı ve hizmet ayrıntılarını görüntüleme
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
@@ -18,33 +18,105 @@ ms.custom:
 - Ent_Office_Other
 - LIL_Placement
 ms.assetid: ace07d8a-15ca-4b89-87f0-abbce809b519
-description: Kullanıcılara atanmış olan her hizmet için Microsoft 365 PowerShell'in nasıl kullanıldığı açıklarıdır.
-ms.openlocfilehash: c02d3ffe2fff330f46adfc6b6dd49e553f69ad86
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Kullanıcılara atanmış Microsoft 365 hizmetlerini belirlemek için PowerShell'in nasıl kullanılacağını açıklar.
+ms.openlocfilehash: 2789026e2e22bbae3e84e91ada7ad21af2252f03
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62988725"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64823970"
 ---
-# <a name="view-microsoft-365-account-license-and-service-details-with-powershell"></a>PowerShell Microsoft 365 lisansı ve hizmet ayrıntılarını görüntüleme
+# <a name="view-microsoft-365-account-license-and-service-details-with-powershell"></a>PowerShell ile Microsoft 365 hesabı lisansı ve hizmet ayrıntılarını görüntüleme
 
-*Bu makale hem son hem de Microsoft 365 Kurumsal hem de Office 365 Kurumsal.*
+*Bu makale hem Microsoft 365 Kurumsal hem de Office 365 Kurumsal için geçerlidir.*
 
-Lisans Microsoft 365 lisans planlarının lisansları (SKU'lar veya Microsoft 365 planları olarak da adlandırılan), kullanıcılara bu planlar için tanımlanmış Microsoft 365 hizmetleri için erişim sağlar. Bununla birlikte, kullanıcı o anda ona atanmış olan lisansta bulunan tüm hizmetlere erişim sahibi olamabilir. Kullanıcı hesaplarından hizmetlerin durumunu Microsoft 365 için PowerShell for Microsoft 365'i kullanabilirsiniz. 
+Microsoft 365'de lisans planlarından (SKU'lar veya Microsoft 365 planları olarak da adlandırılır) lisanslar, kullanıcılara bu planlar için tanımlanan Microsoft 365 hizmetlerine erişim sağlar. Ancak, bir kullanıcının şu anda kendisine atanmış bir lisansta bulunan tüm hizmetlere erişimi olmayabilir. Kullanıcı hesaplarında hizmetlerin durumunu görüntülemek için Microsoft 365 için PowerShell'i kullanabilirsiniz.
 
-Lisans planları, lisanslar ve hizmetler hakkında daha fazla bilgi için bkz [. PowerShell ile lisansları ve hizmetleri görüntüleme](view-licenses-and-services-with-microsoft-365-powershell.md).
+Lisans planları, lisans ve hizmetler hakkında daha fazla bilgi için bkz. [PowerShell ile lisansları ve hizmetleri görüntüleme](view-licenses-and-services-with-microsoft-365-powershell.md).
 
-## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>Graph modülü için Azure Active Directory PowerShell'i kullanma
+## <a name="use-the-microsoft-graph-powershell-sdk"></a>Microsoft Graph PowerShell SDK'sını kullanma
 
-İlk olarak[, kiracınıza bağlan Microsoft 365 bağlanin](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).
+İlk olarak [Microsoft 365 kiracınıza bağlanın](/graph/powershell/get-started#authentication).
+
+Lisans ayrıntıları dahil olmak üzere kullanıcı özelliklerinin okunması için User.Read.All izin kapsamı veya ['Kullanıcı edinin' Graph API başvuru sayfasında](/graph/api/user-get) listelenen diğer izinlerden biri gerekir.
+
+```powershell
+Connect-Graph -Scopes User.Read.All
+```
+
+Ardından, bu komutla kiracınızın lisans planlarını listeleyin.
+
+```powershell
+Get-MgSubscribedSku
+```
+
+Her lisans planında kullanılabilen hizmetleri listelemek için bu komutları kullanın.
+
+```powershell
+
+$allSKUs = Get-MgSubscribedSku -Property SkuPartNumber, ServicePlans 
+$allSKUs | ForEach-Object {
+    Write-Host "Service Plan:" $_.SkuPartNumber
+    $_.ServicePlans | ForEach-Object {$_}
+}
+
+```
+
+Bir kullanıcı hesabına atanan lisansları listelemek için bu komutları kullanın.
+
+```powershell
+Get-MgUserLicenseDetail -UserId "<user sign-in name (UPN)>"
+```
+
+Örneğin:
+
+```powershell
+Get-MgUserLicenseDetail -UserId "belindan@litwareinc.com"
+```
+
+### <a name="to-view-services-for-a-user-account"></a>Kullanıcı hesabının hizmetlerini görüntülemek için
+
+Kullanıcının erişimi olan tüm Microsoft 365 hizmetlerini görüntülemek için aşağıdaki söz dizimini kullanın:
   
-Ardından, bu komutla kiracınıza uygun lisans planlarını listelenin.
+```powershell
+(Get-MgUserLicenseDetail -UserId <user account UPN> -Property ServicePlans)[<LicenseIndexNumber>].ServicePlans
+```
+
+Bu örnekte, kullanıcının BelindaN@litwareinc.com erişime sahip olduğu hizmetler gösterilir. Bu, hesabına atanan tüm lisanslarla ilişkili hizmetleri gösterir.
+  
+```powershell
+(Get-MgUserLicenseDetail -UserId belindan@litwareinc.com -Property ServicePlans).ServicePlans
+```
+
+Bu örnekte, kullanıcının BelindaN@litwareinc.com hesabına atanan ilk lisanstan erişim sahibi olduğu hizmetler gösterilir (dizin numarası 0'dır).
+  
+```powershell
+(Get-MgUserLicenseDetail -UserId belindan@litwareinc.com -Property ServicePlans)[0].ServicePlans
+```
+
+*Birden çok lisans* atanmış bir kullanıcının tüm hizmetlerini görüntülemek için aşağıdaki söz dizimini kullanın:
+
+```powershell
+$userUPN="<user account UPN>"
+$allLicenses = Get-MgUserLicenseDetail -UserId $userUPN -Property SkuPartNumber, ServicePlans
+$allLicenses | ForEach-Object {
+    Write-Host "License:" $_.SkuPartNumber
+    $_.ServicePlans | ForEach-Object {$_}
+}
+
+```
+
+## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>Graph için Azure Active Directory PowerShell modülünü kullanma
+
+İlk olarak [Microsoft 365 kiracınıza bağlanın](connect-to-microsoft-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).
+  
+Ardından, bu komutla kiracınızın lisans planlarını listeleyin.
 
 ```powershell
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
-Her lisans planında bulunan hizmetleri liste için bu komutları kullanın.
+Her lisans planında kullanılabilen hizmetleri listelemek için bu komutları kullanın.
 
 ```powershell
 $allSKUs=Get-AzureADSubscribedSku
@@ -58,7 +130,7 @@ $licArray +=  ""
 $licArray
 ```
 
-Kullanıcı hesabına atanan lisansları liste için bu komutları kullanın.
+Bir kullanıcı hesabına atanan lisansları listelemek için bu komutları kullanın.
 
 ```powershell
 $userUPN="<user account UPN, such as belindan@contoso.com>"
@@ -67,26 +139,26 @@ $userList = Get-AzureADUser -ObjectID $userUPN | Select -ExpandProperty Assigned
 $userList | ForEach { $sku=$_.SkuId ; $licensePlanList | ForEach { If ( $sku -eq $_.ObjectId.substring($_.ObjectId.length - 36, 36) ) { Write-Host $_.SkuPartNumber } } }
 ```
 
-## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>Kaynak için Microsoft Azure Active Directory Modülü'Windows PowerShell
+## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>Windows PowerShell için Microsoft Azure Active Directory Modülünü kullanma
 
-İlk olarak[, kiracınıza bağlan Microsoft 365 bağlanin](connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
+İlk olarak [Microsoft 365 kiracınıza bağlanın](connect-to-microsoft-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).
 
-Ardından, bu komutu çalıştırarak, kurumda kullanılabilen lisans planlarını listelenin. 
+Ardından, kuruluşunuzda kullanılabilen lisans planlarını listelemek için bu komutu çalıştırın. 
 
 ```powershell
 Get-MsolAccountSku
 ```
 >[!Note]
->PowerShell Core, **Msol'Microsoft Azure Active Directory Msol** Windows PowerShell cmdlet'leri için Modül Adını Desteklemez. Bu cmdlet'leri kullanmaya devam etmek için, tüm cmdlet'leri Windows PowerShell.
+>PowerShell Core, Windows PowerShell modülü için Microsoft Azure Active Directory Modülünü ve adında **Msol** bulunan cmdlet'leri desteklemez. Bu cmdlet'leri kullanmaya devam etmek için bunları Windows PowerShell çalıştırmanız gerekir.
 >
 
-Ardından, bu komutu çalıştırarak her lisans planında bulunan hizmetleri ve bunların liste sırası (dizin numarası) listelenin.
+Ardından, her lisans planında kullanılabilen hizmetleri ve bunların listelenme sırasını (dizin numarası) listelemek için bu komutu çalıştırın.
 
 ```powershell
 (Get-MsolAccountSku | where {$_.AccountSkuId -eq "<AccountSkuId>"}).ServiceStatus
 ```
   
-Bir kullanıcıya atanan lisansları ve bunların liste sırası (dizin numarası) için bu komutu kullanın.
+Kullanıcıya atanan lisansları ve bunların listelenme sırasını (dizin numarası) listelemek için bu komutu kullanın.
 
 ```powershell
 Get-MsolUser -UserPrincipalName <user account UPN> | Format-List DisplayName,Licenses
@@ -94,25 +166,25 @@ Get-MsolUser -UserPrincipalName <user account UPN> | Format-List DisplayName,Lic
 
 ### <a name="to-view-services-for-a-user-account"></a>Kullanıcı hesabının hizmetlerini görüntülemek için
 
-Kullanıcının erişimi olan Microsoft 365 tüm hizmetlerde görüntülemek için, aşağıdaki söz dizimi kullanın:
+Kullanıcının erişimi olan tüm Microsoft 365 hizmetlerini görüntülemek için aşağıdaki söz dizimini kullanın:
   
 ```powershell
 (Get-MsolUser -UserPrincipalName <user account UPN>).Licenses[<LicenseIndexNumber>].ServiceStatus
 ```
 
-Bu örnekte, kullanıcının hangi hizmetlere BelindaN@litwareinc.com olduğu gösterir. Bu, hesabına atanan tüm lisanslarla ilişkilendirilmiş hizmetleri gösterir.
+Bu örnekte, kullanıcının BelindaN@litwareinc.com erişime sahip olduğu hizmetler gösterilir. Bu, hesabına atanan tüm lisanslarla ilişkili hizmetleri gösterir.
   
 ```powershell
 (Get-MsolUser -UserPrincipalName belindan@litwareinc.com).Licenses.ServiceStatus
 ```
 
-Bu örnekte, kullanıcıya BelindaN@litwareinc.com hesabına atanan ilk lisanstan erişim izni olan hizmetler (dizin numarası 0'dır) gösterir.
+Bu örnekte, kullanıcının BelindaN@litwareinc.com hesabına atanan ilk lisanstan erişim sahibi olduğu hizmetler gösterilir (dizin numarası 0'dır).
   
 ```powershell
 (Get-MsolUser -UserPrincipalName belindan@litwareinc.com).Licenses[0].ServiceStatus
 ```
 
-Birden çok lisans atanmış bir kullanıcının tüm hizmetlerini görüntülemek *için aşağıdaki söz* dizimi kullanın:
+*Birden çok lisans* atanmış bir kullanıcının tüm hizmetlerini görüntülemek için aşağıdaki söz dizimini kullanın:
 
 ```powershell
 $userUPN="<user account UPN>"
@@ -126,11 +198,11 @@ $licArray +=  ""
 }
 $licArray
 ```
- 
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[PowerShell Microsoft 365 hesaplarını, lisanslarını ve gruplarını yönetme](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365 kullanıcı hesaplarını, lisanslarını ve gruplarını yönetme](manage-user-accounts-and-licenses-with-microsoft-365-powershell.md)
   
-[PowerShell Microsoft 365'i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
+[PowerShell ile Microsoft 365’i yönetme](manage-microsoft-365-with-microsoft-365-powershell.md)
   
-[Microsoft 365 için PowerShell ile çalışmaya Microsoft 365](getting-started-with-microsoft-365-powershell.md)
+[Microsoft 365 için PowerShell'i kullanmaya başlama](getting-started-with-microsoft-365-powershell.md)

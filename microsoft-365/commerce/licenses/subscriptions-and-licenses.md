@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 İş'te abonelikleri ve lisansları anlama
+title: Microsoft 365 İş'teki abonelikleri ve lisansları anlama
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -20,26 +20,26 @@ ms.custom:
 - manage_licenses
 - AdminTemplateSet
 search.appverid: MET150
-description: Aldığınız uygulamalar ve hizmetler, satın aldığınız Microsoft 365 ürüne bağlıdır (örneğin, İş için Microsoft 365 Uygulamaları.
+description: Aldığınız uygulamalar ve hizmetler, İş için Microsoft 365 Uygulamaları gibi satın aldığınız Microsoft 365 ürüne bağlıdır.
 ms.date: 07/01/2020
-ms.openlocfilehash: fefdca1b1321e19d76a227ecd313708e700b9c01
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 984b46954ab57391d5f7c1e48e42527e5c95b412
+ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63313321"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64824454"
 ---
-# <a name="understand-subscriptions-and-licenses-in-microsoft-365-for-business"></a>Microsoft 365 İş'te abonelikleri ve lisansları anlama
+# <a name="understand-subscriptions-and-licenses-in-microsoft-365-for-business"></a>Microsoft 365 İş'teki abonelikleri ve lisansları anlama
 
-Microsoft 365 İş aboneliği satın alırken, aylık veya yıllık olarak ödemesi yapmak istediğiniz bir dizi uygulama ve hizmet için kaydolabilirsiniz. Aboneliğiniz kapsamında aldığınız uygulamalar ve hizmetler, satın aldığınız ürüne (örneğin, satın aldığınız ürüne) İş için Microsoft 365 Uygulamaları veya Microsoft 365 İş Standart. Küçük ve orta ölçekli işletmeler için küçük ve orta [ölçekli işletmeler Microsoft 365 ürünler sayfasında her ürünle neler olduğunu](https://products.office.com/compare-all-microsoft-office-products?&activetab=tab:primaryr1) görebilirsiniz.
+İşletmeler için Microsoft 365 aboneliği satın aldığınızda, aylık veya yıllık olarak ödeme yaptığınız bir dizi uygulama ve hizmet için kaydolabilirsiniz. Aboneliğinizin bir parçası olarak aldığınız uygulamalar ve hizmetler, İş için Microsoft 365 Uygulamaları veya Microsoft 365 İş Standart gibi satın aldığınız ürüne bağlıdır. [Küçük ve orta ölçekli işletmeler için Microsoft 365](https://products.office.com/compare-all-microsoft-office-products?&activetab=tab:primaryr1) sayfasında her ürünle birlikte gelenleri görebilirsiniz.
 
-Abonelik satın alırken, kuruluşunuzdaki kişi sayısına bağlı olarak ihtiyacınız olan lisans sayısını belirtirsiniz. Abonelik satın aldıktan sonra, kuruluşta kişilerin hesaplarını oluşturabilir ve sonra da her bir kişiye lisans atabilirsiniz. Kurumsal ihtiyaçlar değiştiklerinde, yeni kişiler için daha fazla lisans satın alabilir veya birisi kuruluştan ayrıldığında diğer kullanıcılara lisansları yeniden asın.
+Abonelik satın alırken, kuruluşunuzdaki kişi sayısına bağlı olarak ihtiyacınız olan lisans sayısını belirtirsiniz. Abonelik satın aldıktan sonra, kuruluşunuzdaki kişiler için hesaplar oluşturur ve ardından her kişiye bir lisans atarsınız. Kuruluş gereksinimleriniz değiştikçe, yeni kişileri barındırmak için daha fazla lisans satın alabilir veya birisi kuruluşunuzdan ayrıldığında diğer kullanıcılara lisansları yeniden atayabilirsiniz.
 
-Birden fazla aboneliğiniz varsa, her abonelik için farklı kullanıcılara lisans atabilirsiniz. Örneğin, kullanıcılarınızı bir abonelik kapsamında tüm Microsoft 365 uygulamalarına ve hizmetlerine Microsoft 365 İş Standart atabilirsiniz. Ayrıca, ayrı bir abonelik aracılığıyla kullanıcıların alt kümesini Visio Online'a Visio atabilirsiniz.
+Birden fazla aboneliğiniz varsa, her abonelik için farklı kişilere lisans atayabilirsiniz. Örneğin, bir Microsoft 365 İş Standart aboneliğinin parçası olarak tüm kullanıcılarınızı tüm Microsoft 365 uygulamalara ve hizmetlere atayabilirsiniz. Ayrıca, ayrı bir Visio aboneliği aracılığıyla Visio Online'a kullanıcıların bir alt kümesini atayabilirsiniz.
 
 ## <a name="how-many-devices-can-people-install-office-on"></a>Kişiler Office'i kaç cihaza yükleyebilir?
 
-Aboneliğiniz aşağıdaki ürünlerden herhangi birini içerirse, her bir kişi Office çok beş PC veya Mac'e, beş tablete ve beş telefona yüklemenizi sağlar.
+Aboneliğiniz aşağıdaki ürünlerden herhangi birini içeriyorsa, her kişi en fazla beş pc veya Mac bilgisayara, beş tablete ve beş telefona Office yükleyebilir.
 
 :::row:::
    :::column span="":::
@@ -50,16 +50,16 @@ Aboneliğiniz aşağıdaki ürünlerden herhangi birini içerirse, her bir kişi
    :::column-end:::
 :::row-end:::
 
-## <a name="what-happens-when-you-assign-a-license-to-someone"></a>Birine lisans atadığınız zaman ne olur?
+## <a name="what-happens-when-you-assign-a-license-to-someone"></a>Birine lisans atadığınızda ne olur?
 
 Aşağıdaki tabloda birine lisans atadığınızda otomatik olarak nelerin gerçekleştiği listelenir:
   
-|**Aboneliğe bu hizmet dahilse**|**Bu işlem otomatik olarak yapılır**|
+|Aboneliğe bu hizmet dahilse|Bu işlem otomatik olarak yapılır|
 |:-----|:-----|
-|Exchange Online  <br/> |O kişi için bir posta kutusu oluşturulur. <br/> Bu görevin tamamlanması gereken SLA hakkında bilgi edinmek için bkz. ["..." iletileri Microsoft 365 yönetim merkezi](https://support.microsoft.com/help/2635238/setting-up-messages-in-the-office-365-admin-center). |
-|SharePoint Online  <br/> |Kişiye varsayılan SharePoint Online ekip sitesi üzerinde düzenleme izinleri atanır.  <br/> |
-|Skype Kurumsal Çevrimiçi  <br/> |Kişinin lisansla ilişkilendirilmiş özelliklere erişimi vardır.  <br/> |
-|Kurumlar için Microsoft 365 Uygulamaları ve İş için Microsoft 365 Uygulamaları  <br/> |Kişi en Office Mac veya PC'ye, beş tablete ve beş akıllı telefona en çok beş uygulama indirebilir.  <br/> |
+|Exchange Online|O kişi için bir posta kutusu oluşturulur. <br/> Bu görevin tamamlanması için SLA hakkında bilgi edinmek için bkz. ["Ayarlanıyor..." Microsoft 365 yönetim merkezi iletileri](https://support.microsoft.com/help/2635238/setting-up-messages-in-the-office-365-admin-center). |
+|SharePoint Online|Kişiye varsayılan SharePoint Online ekip sitesi üzerinde düzenleme izinleri atanır.|
+|Skype Kurumsal Çevrimiçi|Kişinin lisansla ilişkili özelliklere erişimi vardır.|
+|Kurumlar için Microsoft 365 Uygulamaları ve İş için Microsoft 365 Uygulamaları|Kişi en fazla beş Mac bilgisayara veya bilgisayara, beş tablete ve beş akıllı telefona Office uygulamaları indirebilir.|
 
 ## <a name="understand-licenses-for-non-user-mailboxes"></a>Kullanıcıya ait olmayan posta kutularına yönelik lisansları anlama
 
@@ -67,23 +67,23 @@ Kaynak posta kutuları, oda posta kutuları ve paylaşılan posta kutuları 50 g
   
 - [Paylaşılan posta kutusu oluşturma](../../admin/email/create-a-shared-mailbox.md)
 - [Paylaşılan posta kutusundan lisans kaldırma](../../admin/email/remove-license-from-shared-mailbox.md)
-- [Diğer tüm planlara Exchange Online](/exchange/collaboration-exo/shared-mailboxes) için Posta Kutuları Microsoft 365.
+- Diğer tüm Microsoft 365 planları için [Exchange Online paylaşılan Posta Kutuları](/exchange/collaboration-exo/shared-mailboxes).
 
-## <a name="who-can-assign-licenses"></a>Who ataysun mu?
+## <a name="who-can-assign-licenses"></a>Who lisans atayabilirsiniz?
 
 Farklı türdeki yöneticiler, rollerine bağlı olarak lisanslarla farklı şekillerde çalışabilir. Aşağıdaki tabloda en yaygın seçenekler listelenmiştir. Yönetici rollerinin ve ayrıcalıklarının tam listesi için bkz. [Yönetici rolleri hakkında](../../admin/add-users/about-admin-roles.md).
   
-|**Yönetici rolü**|**Lisans atama**|**Lisans atamasını iptal et**|**Daha fazla lisans satın alma**|**Hesabı silme**|
+|Yönetici rolü|Lisans atama|Lisansın atamasını kaldırma|Daha fazla lisans satın alma|Hesabı silme|
 |:-----|:-----|:-----|:-----|:-----|
-|Faturalama yöneticisi  <br/> |Hayır  <br/> |Hayır  <br/> |Evet  <br/> |Hayır  <br/> |
-|Genel yönetici  <br/> |Evet  <br/> |Evet  <br/> |Evet  <br/> |Evet  <br/> |
-|Lisans yöneticisi <br/> |Evet <br/>|Evet <br/> |Hayır <br/> |Hayır <br/> |
-|Hizmet Desteği yöneticisi  <br/> |Hayır  <br/> |Hayır  <br/> |Hayır  <br/> |Hayır  <br/> |
-|Kullanıcı yöneticisi  <br/> |Evet  <br/> |Evet  <br/> |Hayır  <br/> |Evet  <br/> |
+|Faturalama yöneticisi|Hayır|Hayır|Evet|Hayır|
+|Genel yönetici|Evet|Evet|Evet|Evet|
+|Lisans yöneticisi|Evet|Evet|Hayır|Hayır|
+|Hizmet Desteği yöneticisi|Hayır|Hayır|Hayır|Hayır|
+|Kullanıcı yöneticisi|Evet|Evet|Hayır|Evet|
 
 ## <a name="related-content"></a>İlgili içerik
 
-[İş aboneliğiniz için lisans satın alma veya kaldırma](buy-licenses.md) (makale)\
+[İş aboneliğinizin lisanslarını satın alma veya kaldırma](buy-licenses.md) (makale)\
 [Kullanıcılara lisans atama](../../admin/manage/assign-licenses-to-users.md) (makale)\
-[Kullanıcılardan lisans atamalarını iptal et](../../admin/manage/remove-licenses-from-users.md) (makale)\
+[Kullanıcılardan lisans atamalarını kaldırma](../../admin/manage/remove-licenses-from-users.md) (makale)\
 [Paylaşılan posta kutusundan lisans kaldırma](../../admin/email/remove-license-from-shared-mailbox.md) (makale)
