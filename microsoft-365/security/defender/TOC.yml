@@ -66,7 +66,7 @@
               href: eval-defender-endpoint-enable-eval.md
             - name: Uç Nokta için Pilot Defender
               href: eval-defender-endpoint-pilot.md
-        - name: Adım 5. Bulut Uygulamaları için Microsoft Defender
+        - name: 5. Adım. Microsoft Defender for Cloud Apps
           items:
             - name: Genel bakış
               href: eval-defender-mcas-overview.md
@@ -84,7 +84,7 @@
               href: eval-defender-investigate-respond-simulate-attack.md
             - name: Özellikleri deneyin
               href: eval-defender-investigate-respond-additional.md
-        - name: 7. Adım. Deneme sürümünü üretime yükseltin
+        - name: 7. Adım. Deneme sürümünü üretim sürümüne yükseltin
           href: eval-defender-promote-to-production.md
     - name: Kullanmaya başlayın
       items:
@@ -108,8 +108,6 @@
               href: microsoft-secure-score-improvement-actions.md
             - name: Puan geçmişinizi izleyin ve hedefleri karşılayın
               href: microsoft-secure-score-history-metrics-trends.md
-            - name: Yapılacak yenilikler
-              href: microsoft-secure-score-whats-coming.md
             - name: Yenilikler
               href: microsoft-secure-score-whats-new.md
         - name: Uç noktalarınızı koruyun
@@ -332,9 +330,9 @@
           href: integrate-microsoft-365-defender-secops.md
         - name: Adım 1. Faaliyete hazır olma durumu
           href: integrate-microsoft-365-defender-secops-plan.md
-        - name: Adım 2. Sıfır Güven kullanarak hazırlık değerlendirmesi
+        - name: 2. Adım. Sıfır Güven kullanarak hazır olma durumu değerlendirmesi
           href: integrate-microsoft-365-defender-secops-readiness.md
-        - name: Adım 3. SOC hizmetleriniz ile tümleştirme
+        - name: 3. Adım. SOC hizmetleriniz ile tümleştirme
           href: integrate-microsoft-365-defender-secops-services.md
         - name: 'Adım 4. Roller, sorumluluklar ve gözetim'
           href: integrate-microsoft-365-defender-secops-roles.md
