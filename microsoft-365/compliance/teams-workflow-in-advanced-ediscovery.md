@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Advanced eDiscovery'da Microsoft Teams içeriği korumayı, toplamayı, gözden geçirmeyi ve dışarı aktarmayı öğrenin.
-ms.openlocfilehash: ecd114f9ea68cefb03e55453176a0c8b323620cc
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 90c3ece3f6e8218771da9dbbb88fe5c32d9d7d94
+ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64758805"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64847025"
 ---
 # <a name="advanced-ediscovery-workflow-for-content-in-microsoft-teams"></a>Microsoft Teams içeriği için iş akışı Advanced eDiscovery
 
@@ -298,6 +298,10 @@ Bir inceleme kümesinde Teams içeriği görüntülemeye yönelik bazı ipuçlar
 - Teams içeriği gözden geçirmenize yardımcı olacak yararlı sütunlar **arasında Koruyucu**, **Alıcılar** ve **Dosya türü** veya **İleti türü bulunur**.
 
 - Teams içeriği hızla görüntülemek için Teams ilgili özellikler için [filtreleri](review-set-search.md) kullanın. Önceki bölümde açıklanan meta veri özelliklerinin çoğu için filtreler vardır.
+
+## <a name="deleting-teams-chat-messages"></a>Teams sohbet iletilerini silme
+
+Gizli veya kötü amaçlı bilgiler içeren içerik Teams sohbet iletileri aracılığıyla yayınlandığında veri taşması olaylarına yanıt vermek için Advanced eDiscovery ve Microsoft Graph Gezgini'ni kullanabilirsiniz. Kuruluşunuzdaki yöneticiler Microsoft Teams sohbet iletilerini arayabilir ve silebilir. Bu, Teams sohbet iletilerindeki hassas bilgileri veya uygunsuz içeriği kaldırmanıza yardımcı olabilir. Daha fazla bilgi için bkz[. Teams sohbet iletilerini arama ve temizleme](search-and-delete-Teams-chat-messages.md).
 
 ## <a name="reference-guide"></a>Başvuru kılavuzu
 

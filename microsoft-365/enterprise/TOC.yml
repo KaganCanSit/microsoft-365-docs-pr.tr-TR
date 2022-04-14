@@ -375,6 +375,8 @@
       items:
         - name: Hazırlanın
           href: configure-services-and-applications.md
+        - name: Dış işbirliği
+          href: external-guest-access.md
         - name: Exchange Online
           href: /Exchange/exchange-online
         - name: SharePoint

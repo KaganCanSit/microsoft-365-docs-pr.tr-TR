@@ -22,12 +22,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Kullanıcıların SharePoint sitelerde kaç dosya depolayıp kaç tane etkin olarak kullanıldığını ve toplam depolama alanını öğrenmek için SharePoint site kullanım raporunu alın.
-ms.openlocfilehash: afcaa6cd087948c635604dbadeb9d56c6d48c1a9
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: a99884863db3ffc1f2577358abef6d287d01e2d1
+ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781511"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64847003"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---sharepoint-site-usage"></a>Yönetim merkezinde raporları Microsoft 365 - site kullanımını SharePoint
 
@@ -76,7 +76,7 @@ Dışarı **Aktar bağlantısını** seçerek rapor verilerini bir Excel .csv do
 |Site sahibi asıl adı  |Site sahibinin e-posta adresi. |
 |Son etkinlik tarihi (UTC)  | Dosya etkinliğinin algılandığı veya sitede bir sayfanın görüntülendiği son tarih.  |
 |Site duyarlılık etiketi kimliği  | Sitedeki duyarlılık etiketi.  |
-|Dış paylaşım  | Sitedeki dış paylaşılabilir ayarlar.  |
+|Dış paylaşım  | Site için dış paylaşım ayarının değeri. Bu değer, site duyarlılık etiketleri tarafından yapılan etkin ayarda yapılan değişiklikleri yansıtmaz. Duyarlılık etiketleri kullanıyorsanız, doğru değerleri almak için [veri erişimi idare raporlarını](/sharepoint/data-access-governance-reports) kullanın.|
 |Yönetilmeyen cihaz ilkesi  | Yönetilmeyen cihazlar için site erişim ilkesi.  |
 |Coğrafi konum  | Sitenin Coğrafi konumu.  |
 |Dosyaları  |Sitedeki dosya sayısı. |

@@ -19,12 +19,12 @@ ms.custom:
 description: Yöneticiler, Exchange Online Protection (EOP) içinde giden istenmeyen posta ilkelerini görüntülemeyi, oluşturmayı, değiştirmeyi ve silmeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 15dc850046e74c3b42477998fa24a608d0fd0af8
-ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
+ms.openlocfilehash: 9ab8585a0671f9c62ec2015d91486539c84004db
+ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/14/2022
-ms.locfileid: "64841722"
+ms.locfileid: "64847475"
 ---
 # <a name="configure-outbound-spam-filtering-in-eop"></a>EOP'de giden istenmeyen posta filtrelemeyi yapılandırma
 
@@ -101,9 +101,11 @@ Microsoft 365 Defender portalında özel bir giden istenmeyen posta ilkesi oluş
 
    İşiniz bittiğinde **İleri'ye** tıklayın.
 
-4. Görüntülenen **Kullanıcılar, gruplar ve etki alanları sayfasında,** ilkenin geçerli olduğu iç gönderenleri tanımlayın (gönderen koşulları):
-   - **Kullanıcılar**: Kuruluşunuzdaki belirtilen posta kutuları, posta kullanıcıları veya posta kişileri.
-   - **Gruplar**: Kuruluşunuzda belirtilen dağıtım grupları, posta etkin güvenlik grupları veya Microsoft 365 Grupları.
+4. Görüntülenen **Kullanıcılar, gruplar ve etki alanları sayfasında,** ilkenin geçerli olduğu iç gönderenleri tanımlayın (alıcı koşulları):
+   - **Kullanıcılar**: Belirtilen posta kutuları, posta kullanıcıları veya posta kişileri.
+   - **Gruplar**:
+     - Belirtilen dağıtım gruplarının veya posta özellikli güvenlik gruplarının üyeleri.
+     - Belirtilen Microsoft 365 Grupları.
    - **Etki alanları**: Kuruluşunuzda belirtilen [kabul edilen etki alanlarındaki](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) tüm gönderenler.
 
    Uygun kutuya tıklayın, bir değer yazmaya başlayın ve sonuçlardan istediğiniz değeri seçin. Bu işlemi gerektiği kadar tekrarlayın. Mevcut bir değeri kaldırmak için Kaldır'a tıklayın ![Kaldır simgesi.](../../media/m365-cc-sc-remove-selection-icon.png) öğesini seçin.

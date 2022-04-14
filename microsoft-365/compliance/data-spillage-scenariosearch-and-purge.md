@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.assetid: d945f7dd-f62f-4ca7-b3e7-469824cfd493
 description: Kuruluşunuzdaki bir veri sızıntısı olayını yönetmek ve yanıtlamak için eBulma ve arama araçlarını kullanın.
-ms.openlocfilehash: 55bed2461d48d77e7dbb756402439f394ac55270
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 106a67bff07f76d3ac40798d8bb4e28a254b923d
+ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760921"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64847343"
 ---
 # <a name="ediscovery-solution-series-data-spillage-scenario---search-and-purge"></a>eBulma çözüm serisi: Veri taşması senaryosu - Arama ve temizleme
 
@@ -50,16 +50,18 @@ Veri taşması olayının nasıl yönetileceğini aşağıda bulabilirsiniz:
 
 ## <a name="things-to-know-before-you-start"></a>Başlamadan önce bilmeniz gerekenler
 
+- Bu makalede açıklanan veri taşması iş akışı, Microsoft Teams sohbet iletilerini silmez. Teams sohbet iletilerini aramak ve silmek için bkz[. Teams sohbet iletilerini arama ve temizleme](search-and-delete-Teams-chat-messages.md).
+
 - Bir posta kutusu beklemede olduğunda, saklama süresi dolana veya saklama serbest bırakılana kadar silinmiş bir ileti Kurtarılabilir Öğeler klasöründe kalır. [6. adım](#step-6-prepare-the-mailboxes) , posta kutularından ayrı tutmanın nasıl kaldırılacağını açıklar. Saklamayı kaldırmadan önce kayıt yönetiminize veya hukuk departmanlarınıza danışın. Kuruluşunuzun beklemedeki posta kutusunun mı yoksa veri taşması olayının mı öncelikli olduğunu tanımlayan bir ilkesi olabilir. 
-    
+
 - Veri taşması araştırmacısının servis talebine kimlerin erişebileceğini arayıp yönetebileceği kullanıcı posta kutularını denetlemek için uyumluluk sınırları ayarlayabilir ve [1. Adım'da](#optional-step-1-manage-who-can-access-the-case-and-set-compliance-boundaries) açıklanan özel bir rol grubu oluşturabilirsiniz. Bunu yapmak için Kuruluş Yönetimi rol grubunun bir üyesi olmanız veya rol yönetimi rolüne atanmış olmanız gerekir. Siz veya kuruluşunuzdaki bir yönetici uyumluluk sınırlarını zaten ayarladıysanız, 1. Adımı atlayabilirsiniz.
-    
+
 - Servis talebi oluşturmak için eBulma Yöneticisi rol grubunun üyesi olmanız veya Servis Talebi Yönetimi rolüne atanmış özel bir rol grubunun üyesi olmanız gerekir. Üye değilseniz, Microsoft 365 yöneticisinden [sizi eBulma yöneticisi rol grubuna eklemesini](assign-ediscovery-permissions.md) isteyin.
-    
+
 - İçerik Araması oluşturmak ve çalıştırmak için eBulma Yöneticisi rol grubunun üyesi olmanız veya Uyumluluk Araması yönetim rolüne atanmış olmanız gerekir. İletileri silmek için Kuruluş Yönetimi rol grubunun üyesi olmanız veya Arama ve Temizleme yönetimi rolüne sahip olmanız gerekir. Rol grubuna kullanıcı ekleme hakkında bilgi için bkz. [eBulma izinleri atama](./assign-ediscovery-permissions.md).
-    
-- 8. Adım'da denetim günlüğü eBulma etkinliklerinde arama yapmak için, kuruluşunuzda denetimin açık olması gerekir. Son 90 gün içinde gerçekleştirilen etkinlikleri arayabilirsiniz. Denetimi etkinleştirme ve kullanma hakkında daha fazla bilgi edinmek için 8. [Adım'daki Veri taşması araştırma işlemini](#auditing-the-data-spillage-investigation-process) denetleme bölümüne bakın. 
-    
+
+- 8. Adım'da denetim günlüğü eBulma etkinliklerinde arama yapmak için, kuruluşunuzda denetimin açık olması gerekir. Son 90 gün içinde gerçekleştirilen etkinlikleri arayabilirsiniz. Denetimi etkinleştirme ve kullanma hakkında daha fazla bilgi edinmek için 8. [Adım'daki Veri taşması araştırma işlemini](#auditing-the-data-spillage-investigation-process) denetleme bölümüne bakın.
+
 ## <a name="optional-step-1-manage-who-can-access-the-case-and-set-compliance-boundaries"></a>(İsteğe bağlı) 1. Adım: Servis talebine kimlerin erişebileceğini yönetme ve uyumluluk sınırlarını ayarlama
 
 Kuruluş uygulamanıza bağlı olarak, veri taşması olayını araştırmak ve uyumluluk sınırlarını ayarlamak için kullanılan eBulma olayına kimlerin erişebileceğini denetlemeniz gerekir. Bunu yapmanın en kolay yolu, araştırmacıları Microsoft 365 uyumluluk merkezi mevcut bir rol grubunun üyesi olarak eklemek ve ardından rol grubunu eBulma olayının bir üyesi olarak eklemektir. Yerleşik eBulma rol grupları ve eBulma olayına üye ekleme hakkında bilgi için bkz. [eBulma izinleri atama](assign-ediscovery-permissions.md).

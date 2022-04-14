@@ -171,6 +171,8 @@
               href: create-groups/restore-deleted-group.md
             - name: Gruplara konuk erişimini yönetme
               href: create-groups/manage-guest-access-in-groups.md
+            - name: Sahipsiz grupları ve ekipleri yönetme
+              href: create-groups/ownerless-groups-teams.md
         - name: Parolalar
           items:
             - name: Parolaları sıfırlama

@@ -1,5 +1,5 @@
 ---
-title: EBulma izinleri atama Microsoft 365 uyumluluk merkezi
+title: Microsoft 365 uyumluluk merkezi eBulma izinleri atama
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -16,170 +16,170 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 5b9a067b-9d2e-4aa5-bb33-99d8c0d0b5d7
-description: eBulma ile ilgili görevleri gerçekleştirmek için gereken izinleri, çalışma Microsoft 365 uyumluluk merkezi.
+description: Microsoft 365 uyumluluk merkezi kullanarak eBulma ile ilgili görevleri gerçekleştirmek için gereken izinleri atayın.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 129363fe614bafef653fe65b39fa15d50a3b1c8a
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 2dc2e10206fd90dd1ec10cbfed2d76e429990467
+ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63034264"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64847365"
 ---
-# <a name="assign-ediscovery-permissions-in-the-microsoft-365-compliance-center"></a>EBulma izinleri atama Microsoft 365 uyumluluk merkezi
+# <a name="assign-ediscovery-permissions-in-the-microsoft-365-compliance-center"></a>Microsoft 365 uyumluluk merkezi eBulma izinleri atama
 
-Kişilerin eBulma ile ilgili [araçlardan](ediscovery.md) herhangi birini Microsoft 365 uyumluluk merkezi, onlara uygun izinleri atamanız gerekir. Bunu yapmanın en kolay yolu, uyumluluk merkezi'nin İzinler sayfasında ilgili **kişiyi** rol grubuna eklemektir. Bu konuda, eBulma görevlerini gerçekleştirmek için gereken izinler açıklanmıştır.
+Kişilerin Microsoft 365 uyumluluk merkezi [eBulma ile ilgili araçlardan](ediscovery.md) herhangi birini kullanmasını istiyorsanız, onlara uygun izinleri atamanız gerekir. Bunu yapmanın en kolay yolu, kişiyi uyumluluk merkezindeki **İzinler** sayfasında uygun rol grubuna eklemektir. Bu konuda, eBulma görevlerini gerçekleştirmek için gereken izinler açıklanmaktadır.
   
-EBulma ile ilgili birincil rol grubu Microsoft 365 uyumluluk merkezi **, eBulma Yöneticisi olarak adlandırılan bir gruptır**. Bu rol grubunun içinde iki alt grup vardır.
+Microsoft 365 uyumluluk merkezi'daki birincil eBulma ile ilgili rol grubu **eBulma Yöneticisi** olarak adlandırılır. Bu rol grubu içinde iki alt grup vardır.
   
-- **eBulma Yöneticisi** - eBulma Yöneticisi, kuruluşta içerik konumlarında arama yapmak ve arama sonuçlarını önizleme ve dışarı aktarma gibi aramayla ilgili çeşitli eylemler gerçekleştirmek için eBulma Yöneticisi'ni kullanabilir. Üyeler ayrıca Çekirdek eKbulma ve Servis Advanced eDiscovery'da vakalar oluşturabilir ve yönetebilir, bir vakaya üye ekleyebilir ve kaldırabilir, servislarına yönelik arama oluşturabilir ve vaka verilerine erişim sağlarlar. eBulma Yöneticileri yalnızca oluşturdukları vakalara erişim iznine sahip olabilir ve bu vakaları yönetebilir. Diğer eBulma Yöneticileri tarafından oluşturulan vakalara erişemeksizin veya bu vakaları yöneterek erişemmektedir.
+- **eBulma Yöneticisi** - eBulma Yöneticisi, kuruluştaki içerik konumlarında arama yapmak ve arama sonuçlarını önizleme ve dışarı aktarma gibi aramayla ilgili çeşitli eylemleri gerçekleştirmek için eBulma arama araçlarını kullanabilir. Üyeler ayrıca Core eBulma ve Advanced eDiscovery servis talepleri oluşturabilir ve yönetebilir, servis talebine üye ekleyip kaldırabilir, servis talebi ayrı tutmaları oluşturabilir, servis talebiyle ilişkili aramaları çalıştırabilir ve servis talebi verilerine erişebilir. eBulma Yöneticileri yalnızca oluşturdukları servis taleplerine erişebilir ve bu servis taleplerini yönetebilir. Diğer eBulma Yöneticileri tarafından oluşturulan servis taleplerini erişemez veya yönetemezler.
   
-- **eBulma** Yöneticisi - eBulma Yöneticisi eBulma Yöneticisi rol grubunun bir üyesidir ve eBulma Yöneticisi'nin gerçekleştirebilir olduğu içerik arama ve olay yönetimiyle ilgili görevlerle aynı görevleri gerçekleştirebilir. Buna ek olarak, eBulma Yöneticisi şunları da olabilir:
+- **eBulma Yöneticisi** - eBulma Yöneticisi, eBulma Yöneticisi rol grubunun bir üyesidir ve eBulma Yöneticisi'nin gerçekleştirebileceği içerik arama ve servis talebi yönetimiyle ilgili görevleri gerçekleştirebilir. Ayrıca, eBulma Yöneticisi şunları yapabilir:
   
-  - Çalışma sayfalarındaki Core **eKbulma** ve **Advanced eDiscovery servis Microsoft 365 uyumluluk merkezi**.
+  - **Microsoft 365 uyumluluk merkezi Çekirdek eBulma** ve **Advanced eDiscovery** sayfalarında listelenen tüm servis taleplerine erişin.
 
-  - Kuruluşta herhangi bir Advanced eDiscovery için örnek olay verilerine erişin.
+  - Kuruluştaki her durum için Advanced eDiscovery servis talebi verilerine erişin.
   
-  - eBulma olaylarını, kendilerini davanın üyesi olarak ekledikten sonra yönetin.
+  - Kendilerini servis talebine üye olarak ekledikten sonra herhangi bir eBulma servis talebini yönetin.
   
-  - eBulma durumundan üyeleri kaldırma. Yalnızca eBulma Yöneticisi vakadan üyeleri kaldırabilir. eBulma Yöneticisi alt grubu üyesi olan kullanıcılar, durumu kullanıcı oluşturduğunda bile vakadan üye kaldıramıyor.
+  - eBulma durumundan üyeleri kaldırma. Bir servis talebinin üyelerini yalnızca eBulma Yöneticisi kaldırabilir. eBulma Yöneticisi alt grubunun üyesi olan kullanıcılar, olayı kullanıcı oluşturmuş olsa bile bir servis talebinin üyelerini kaldıramaz.
   
-  eBulma Yöneticilerinin kurum içinde yer istemenizi nedenleriyle, daha fazla [bilgi'ye bakın](#more-information).
+  Kuruluşunuzda eBulma Yöneticileri istemenizin nedenleri için bkz. [Daha fazla bilgi](#more-information).
 
 > [!NOTE]
-> Advanced eDiscovery kullanarak kullanıcının verilerini çözümlemek için, kullanıcıya (verilerin koruyucu) bir Office 365 E5 veya Microsoft 365 E5 atanabilir. Alternatif olarak, Office 365 E1 ya da Office 365 veya Microsoft 365 E3 lisansı olan kullanıcılara Microsoft 365 E5 Uyumluluk veya Microsoft 365 eKbulma ve Denetim eklenti lisansı atanabilir. Davalara üye olarak atanan ve E5 lisansına gerek yoktur ve verileri toplamak, görüntülemek ve çözümlemek için Advanced eDiscovery'i kullanan yöneticiler, uyumluluk görevlileri veya yasal personel. Lisanslama hakkında daha fazla Advanced eDiscovery için bkz. [Web'de abonelikler ve Advanced eDiscovery](overview-ediscovery-20.md#subscriptions-and-licensing).
+> Advanced eDiscovery kullanarak kullanıcının verilerini analiz etmek için kullanıcıya (verilerin koruyucusunun) bir Office 365 E5 veya Microsoft 365 E5 lisansı atanmış olması gerekir. Alternatif olarak, Office 365 E1 veya Office 365 ya da Microsoft 365 E3 lisansına sahip kullanıcılara Microsoft 365 E5 Uyumluluk veya Microsoft 365 eBulma ve Denetim eklentisi lisansı atanabilir. Olaylara üye olarak atanan ve verileri toplamak, görüntülemek ve analiz etmek için Advanced eDiscovery kullanan yöneticilerin, uyumluluk görevlilerinin veya yasal personelin E5 lisansına ihtiyacı yoktur. Advanced eDiscovery lisanslama hakkında daha fazla bilgi için bkz. [Advanced eDiscovery abonelikler ve lisanslama](overview-ediscovery-20.md#subscriptions-and-licensing).
   
 ## <a name="before-you-assign-permissions"></a>İzinleri atamadan önce
 
-- Kuruluş Yönetimi rol grubunun bir üyesi olmalı veya kuruluşta eBulma izinleri atamak için Rol Yönetimi rolüne Microsoft 365 uyumluluk merkezi.
+- Microsoft 365 uyumluluk merkezi eBulma izinleri atamak için Kuruluş Yönetimi rol grubunun üyesi olmanız veya Rol Yönetimi rolüne atanmış olmanız gerekir.
 
-- Posta özellikli bir güvenlik grubunu eBulma Yöneticisi rol grubunda eBulma Yöneticileri alt grubuna üye olarak eklemek için Güvenlik & Uyumluluk Merkezi PowerShell'de [Add-RoleGroupMember](/powershell/module/exchange/Add-RoleGroupMember) cmdlet'ini kullanabilirsiniz. Bununla birlikte, eBulma Yöneticileri alt grubuna posta özelliği etkin bir güvenlik grubu eke değildir. Ayrıntılar için daha fazla [bilgi'ye bakın](#more-information).
+- eBulma Yöneticisi rol grubundaki eBulma Yöneticileri alt grubunun üyesi olarak posta özellikli bir güvenlik grubu eklemek için Güvenlik & Uyumluluk Merkezi PowerShell'deki [Add-RoleGroupMember](/powershell/module/exchange/Add-RoleGroupMember) cmdlet'ini kullanabilirsiniz. Ancak, eBulma Yöneticileri alt grubuna posta özellikli bir güvenlik grubu ekleyemezsiniz. Ayrıntılar için bkz. [Daha fazla bilgi](#more-information).
   
-## <a name="assign-ediscovery-permissions"></a>eBulma izinleri atama
+## <a name="assign-ediscovery-permissions"></a>eKeşif izinleri atama
 
-1. Oturum açma <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> ve izin atayabilirsiniz bir hesap kullanarak oturum açın.
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> gidin ve izin atayabilen bir hesap kullanarak oturum açın.
   
-2. Sol bölmede İzinler'i **seçin**.
+2. Sol bölmede **İzinler'i** seçin.
 
-3. İzinler **Merkezi & Uyumluluk** merkezi altında **Roller'e** **tıklayın**.
+3. **İzinler & Rolleri** sayfasında, **Uyumluluk merkezi'nin** altında **Roller'e** tıklayın.
 
-4. Uyumluluk merkezi **rolleri sayfasında eBulma** **Yöneticisi'ni seçin**.
+4. **Uyumluluk merkezi rolleri** sayfasında **eBulma Yöneticisi'ni** seçin.
   
-5. **eBulma Yöneticisi** uç uç sayfasında, atamak istediğiniz eBulma izinlerine bağlı olarak aşağıdakilerden birini yapın.
+5. **eBulma Yöneticisi** açılır sayfasında, atamak istediğiniz eBulma izinlerine göre aşağıdakilerden birini yapın.
   
-    **Bir kullanıcıya eBulma Yöneticisi yapmak için:** **eBulma Yöneticisi'nin yanında** Düzenle'yi **seçin**. **eBulma Yöneticisi Seç sihirbazı sayfasında** Simge Ekle'ye ![tıklayın.](../media/ITPro-EAC-AddIcon.gif) **ekle'yi seçin**. eBulma yöneticisi olarak eklemek istediğiniz kullanıcı (veya kullanıcıları) seçin ve sonra da Ekle'yi **seçin**. Kullanıcı eklemeyi bitirdikten sonra Bitti'yi **seçin**. Ardından,  **eBulma Yöneticisi Seç sihirbazı** sayfasında, değişiklikleri eBulma Yöneticisi üyeliğine kaydetmek için Kaydet'i seçin.
+    **Kullanıcıyı eBulma Yöneticisi yapmak için:** **eBulma Yöneticisi'nin** yanında **Düzenle'yi** seçin. **eBulma Yöneticisi Seç** sihirbazı sayfasında Simge Ekle'ye tıklayın![.](../media/ITPro-EAC-AddIcon.gif) **Ekle'yi seçin**. eBulma yöneticisi olarak eklemek istediğiniz kullanıcıyı (veya kullanıcıları) ve ardından **Ekle'yi** seçin. Kullanıcı eklemeyi bitirdiğinizde **Bitti'yi** seçin. Ardından, **eBulma Yöneticisi'ni Seçin** sihirbazı sayfasında **Kaydet'i** seçerek değişiklikleri eBulma Yöneticisi üyeliğine kaydedin.
   
-    **Bir kullanıcıya eBulma Yöneticisi yapmak için:** **eBulma Yöneticisi'nin yanında Düzenle'yi** **seçin**. **eBulma Yöneticisi Seç sayfasında Simge** Ekle'ye ![tıklayın.](../media/ITPro-EAC-AddIcon.gif) **ekle'yi seçin**. eBulma Yöneticisi olarak eklemek istediğiniz kullanıcı (veya kullanıcıları **) seçin ve sonra da**  **Ekle'yi seçin**. Kullanıcı eklemeyi bitirdikten sonra Bitti'yi **seçin**. Ardından,  **eBulma Yöneticisi Seç** sihirbazı sayfasında, değişiklikleri eBulma Yöneticisi üyeliğine kaydetmek için Kaydet'i seçin.
+    **Kullanıcıyı eBulma Yöneticisi yapmak için:** **eBulma Yöneticisi'nin** yanındaki **Düzenle'yi** seçin. **eBulma Yöneticisi Seç** sayfasında Simge Ekle'ye tıklayın![.](../media/ITPro-EAC-AddIcon.gif) **Ekle'yi seçin**. **eBulma Yöneticisi** olarak eklemek istediğiniz kullanıcıyı (veya kullanıcıları) seçin ve ardından **Ekle'yi** seçin. Kullanıcı eklemeyi bitirdiğinizde **Bitti'yi** seçin. Ardından, **eBulma Yöneticisi'ni Seçin** sihirbazı sayfasında, eBulma Yöneticisi üyeliğindeki değişiklikleri kaydetmek için **Kaydet'i** seçin.
   
 > [!NOTE]
-> Ayrıca, kullanıcıya **eBulma Yöneticisi yapmak için Add-eDiscoveryCaseAdmin** cmdlet'ini de kullanabilirsiniz. Bununla birlikte, bu cmdlet'i kullanarak onu eBulma Yöneticisi yapmak için önce kullanıcıya Olay Yönetimi rolü atanabilir. Daha fazla bilgi için [bkz. Add-eDiscoveryCaseAdmin](/powershell/module/exchange/add-ediscoverycaseadmin). 
+> Bir kullanıcıyı **eBulma Yöneticisi yapmak için Add-eDiscoveryCaseAdmin** cmdlet'ini de kullanabilirsiniz. Ancak, bu cmdlet'i kullanarak eBulma Yöneticisi haline getirebilmeniz için önce kullanıcıya Servis Talebi Yönetimi rolü atanmalıdır. Daha fazla bilgi için bkz. [Add-eDiscoveryCaseAdmin](/powershell/module/exchange/add-ediscoverycaseadmin). 
   
-İzinler **sayfasının** Microsoft 365 uyumluluk merkezi, kullanıcıları Uyumluluk Yöneticisi, Kuruluş Yönetimi ve Gözden Geçiren rol gruplarına ekleyerek, eBulma ile ilgili izinler atabilirsiniz. Bu rol gruplarının her biri için atanmış eBulma ile ilgili RBAC rollerinin açıklaması için bkz. [eKbulma ile ilgili RBAC rolleri](#rbac-roles-related-to-ediscovery).
+Microsoft 365 uyumluluk merkezi **İzinler** sayfasında, kullanıcılara eBulma ile ilgili izinleri Uyumluluk Yöneticisi, Kuruluş Yönetimi ve Gözden Geçiren rol gruplarına ekleyerek de atayabilirsiniz. Bu rol gruplarının her birine atanan eBulma ile ilgili RBAC rollerinin açıklaması için bkz. [eBulma ile ilgili RBAC rolleri](#rbac-roles-related-to-ediscovery).
 
-## <a name="rbac-roles-related-to-ediscovery"></a>eKbulma ile ilgili RBAC rolleri
+## <a name="rbac-roles-related-to-ediscovery"></a>eBulma ile ilgili RBAC rolleri
 
-Aşağıdaki tabloda, çalışma sayfalarında eKbulma ile ilgili RBAC rolleri liste Microsoft 365 uyumluluk merkezi ve her bir rolün varsayılan olarak atandığı yerleşik rol gruplarını gösterir.
+Aşağıdaki tabloda, Microsoft 365 uyumluluk merkezi eBulma ile ilgili RBAC rolleri listelenir ve her rolün varsayılan olarak atandığı yerleşik rol grupları gösterilir.
   
-| Rol | Uyumluluk Yöneticisi | eBulma Yöneticisi & Yönetici | Kuruluş Yönetimi | Gözden geçiren |
+| Rol | Uyumluluk Yöneticisi | eBulma Yöneticisi & Yöneticisi | Kuruluş Yönetimi | Inceleme |
 |:-----|:-----:|:-----:|:-----:|:-----:|
-|Vaka Yönetimi <br/> |![Onay işareti.](../media/checkmark.png) <br/> |![Onay işareti.](../media/checkmark.png) <br/> |![Onay işareti.](../media/checkmark.png) <br/> | <br/> |
+|Olay Yönetimi <br/> |![Onay işareti.](../media/checkmark.png) <br/> |![Onay işareti.](../media/checkmark.png) <br/> |![Onay işareti.](../media/checkmark.png) <br/> | <br/> |
 |İletişim <br/> | <br/> |![Onay işareti.](../media/checkmark.png) <br/> | <br/> | <br/> |
 |Uyumluluk Araması <br/> |![Onay işareti.](../media/checkmark.png) <br/> |![Onay işareti.](../media/checkmark.png) <br/> |![Onay işareti.](../media/checkmark.png) <br/> | <br/> |
-|Custo bire bir <br/> | <br/> |![Onay işareti.](../media/checkmark.png) <br/> | <br/> | <br/> |
+|Veli <br/> | <br/> |![Onay işareti.](../media/checkmark.png) <br/> | <br/> | <br/> |
 |Dışarı aktarma <br/> | <br/> |![Onay işareti.](../media/checkmark.png) <br/> | <br/> | <br/> |
-|Bekle <br/>  |![Onay işareti.](../media/checkmark.png) <br/> |![Onay işareti.](../media/checkmark.png) <br/> |![Onay işareti.](../media/checkmark.png) <br/> | <br/> |
+|Tutun <br/>  |![Onay işareti.](../media/checkmark.png) <br/> |![Onay işareti.](../media/checkmark.png) <br/> |![Onay işareti.](../media/checkmark.png) <br/> | <br/> |
 |Önizleme <br/>  | <br/> |![Onay işareti.](../media/checkmark.png) <br/> | <br/> | <br/> |
-|Gözden Geçir <br/>  | <br/> |![Onay işareti.](../media/checkmark.png) <br/> | <br/> |![Onay işareti](../media/checkmark.png) <br/> |
+|Gözden geçirin <br/>  | <br/> |![Onay işareti.](../media/checkmark.png) <br/> | <br/> |![Onay işareti](../media/checkmark.png) <br/> |
 |RMS Şifre Çözme <br/>  ||![Onay işareti](../media/checkmark.png) <br/> |||
-|Arama ve Temizleme <br/> | <br/> | <br/> |![Onay işareti](../media/checkmark.png)           <br/> | <br/> |
-||||
+|Arama ve Temizleme <br/> | <br/> | <br/> |![Onay işareti](../media/checkmark.png)<br/> | <br/> |
+||||||
   
-Aşağıdaki bölümlerde, önceki tabloda listelenen eKbulma ile ilgili RBAC rollerinin her biri açıklanmaktadır.
+Aşağıdaki bölümlerde, önceki tabloda listelenen eBulma ile ilgili RBAC rollerinin her biri açıklanmaktadır.
 
-### <a name="case-management"></a>Vaka Yönetimi
+### <a name="case-management"></a>Olay Yönetimi
 
-Bu rol, kullanıcıların aynı dosyalarda Çekirdek eKbulma ve temel Advanced eDiscovery oluşturmalarına, düzenlemelerine, silmelerine ve denetim Microsoft 365 uyumluluk merkezi. Daha önce de belirtildiği gibi, **eBulma Yöneticisi yapmak üzere Add-eDiscoveryCaseAdmin** cmdlet'ini kullanamadan önce bir kullanıcıya Olay Yönetimi rolü atanabilir.
+Bu rol, kullanıcıların Microsoft 365 uyumluluk merkezi Temel eBulma ve Advanced eDiscovery durumlarına erişimi oluşturmasına, düzenlemesine, silmesine ve denetlemesine olanak tanır. Daha önce açıklandığı gibi, **add-eDiscoveryCaseAdmin cmdlet'ini kullanarak eBulma** Yöneticisi yapabilmeniz için önce kullanıcıya Olay Yönetimi rolü atanmalıdır.
 
 Daha fazla bilgi için bkz.:
 
-- [Core eDiscovery ile çalışmaya başlama](get-started-core-ediscovery.md)
+- [Temel eKeşif kullanmaya başlama](get-started-core-ediscovery.md)
 
-- [Advanced eDiscovery'i Advanced eDiscovery](get-started-with-advanced-ediscovery.md)
+- [Advanced eDiscovery ile Kullanmaya başlayın](get-started-with-advanced-ediscovery.md)
 
 ### <a name="communication"></a>İletişim
 
-Bu rol, kullanıcıların herhangi bir durumda tanımlanan koruyucularla olan tüm iletişimi yönetme Advanced eDiscovery sağlar. Bu, tutma bildirimleri, anımsatıcılar tutma ve yönetime yükseltmeleri içerir. Kullanıcı ayrıca, custo custo cust bildirimlerinin bildirimini izleyebilir ve custo bir olarak tanımlanlan durumlar için iletişimleri izlemek için her custo cust portalında erişimi yönetebilir.
+Bu rol, kullanıcıların bir Advanced eDiscovery olayda tanımlanan koruyucularla tüm iletişimleri yönetmesine olanak tanır. Bu, ayrı tutma bildirimleri oluşturmayı, anımsatıcıları saklamayı ve yönetime yükseltmeleri içerir. Kullanıcı ayrıca saklama bildirimlerini onaylayan koruyucuyu izleyebilir ve her koruyucu tarafından koruyucu olarak tanımlandığı durumlarla ilgili iletişimleri izlemek için kullanılan koruyucu portalına erişimi yönetebilir.
 
-Daha fazla bilgi için bkz[. E-postada iletişim Advanced eDiscovery](managing-custodian-communications.md).
+Daha fazla bilgi için bkz[. Advanced eDiscovery'de iletişimlerle çalışma](managing-custodian-communications.md).
 
 ### <a name="compliance-search"></a>Uyumluluk Araması
 
-Bu rol kullanıcıların posta kutularını ve ortak klasörleri, SharePoint Çevrimiçi siteleri, OneDrive İş sitelerini, Skype Kurumsal konuşmalarını veya diğer klasörleri aramak için Microsoft 365 uyumluluk merkezi'te İçerik Arama aracını Microsoft 365 grupları, Microsoft Teams ve Yammer. Bu rol, kullanıcının arama sonuçlarıyla ilgili bir tahminde bulundurarak dışarı aktarma raporları oluşturmasine olanak sağlar, ancak arama sonuçlarını önizleme, dışarı aktarma veya silme gibi içerik arama eylemlerini başlatmak için başka roller de gereklidir.
+Bu rol, kullanıcıların posta kutuları ve ortak klasörler, SharePoint Çevrimiçi siteler, OneDrive İş siteler, Skype Kurumsal konuşmalar Microsoft 365 arama yapmak için Microsoft 365 uyumluluk merkezi İçerik Arama aracını çalıştırmasına olanak tanır ve Microsoft Teams ve Yammer grupları. Bu rol kullanıcının arama sonuçlarıyla ilgili bir tahmin almasına ve dışarı aktarma raporları oluşturmasına olanak tanır, ancak arama sonuçlarını önizleme, dışarı aktarma veya silme gibi içerik arama eylemlerini başlatmak için başka roller gereklidir.
 
-İçerik aramasında ve Çekirdek eKbulma'da, Uyumluluk Araması rolüne atanmış olan ancak Önizleme rolüne sahip olan kullanıcılar önizleme eyleminin başlatıldığı aramanın sonuçlarını önizler. Önizleme rolüne sahip olmayan kullanıcı, ilk önizleme eylemi oluşturulduktan sonra en fazla iki hafta boyunca sonuçları önizler.
+İçerik arama ve Çekirdek eBulma'da, Uyumluluk Araması rolüne atanan ancak Önizleme rolüne sahip olmayan kullanıcılar, Önizleme rolü atanmış bir kullanıcı tarafından önizleme eyleminin başlatıldığı aramanın sonuçlarının önizlemesini görebilir. Önizleme rolü olmayan kullanıcı, ilk önizleme eylemi oluşturulduktan sonra iki haftaya kadar sonuçları önizleyebilir.
 
-Benzer şekilde, İçerik aramasında ve Çekirdek eBulma'da yer alan ve Uyumluluk Araması rolüne atanmış olan ancak Dışarı Aktarma rolüne sahip olan kullanıcılar, Dışarı Aktarma rolüne atanmış bir kullanıcı tarafından dışarı aktarma eyleminin başlatıldığı aramanın sonuçlarını indirebilir. Dışarı Aktarma rolü olmayan kullanıcı, ilk dışarı aktarma eylemi oluşturulduktan sonra en fazla iki hafta boyunca aramanın sonuçlarını indirebilir. Bundan sonra, Dışarı Aktarma rolüne sahip biri dışarı aktarmayı yeniden başlatmadıkça sonuçları indireler.
+Benzer şekilde, İçerik arama ve Çekirdek eBulma'da Uyumluluk Araması rolüne atanmış ancak Dışarı Aktarma rolüne sahip olmayan kullanıcılar, dışarı aktarma eyleminin Dışarı Aktarma rolü atanmış bir kullanıcı tarafından başlatıldığı aramanın sonuçlarını indirebilir. Dışarı Aktarma rolü olmayan kullanıcı, ilk dışarı aktarma eylemi oluşturulduktan sonra iki haftaya kadar aramanın sonuçlarını indirebilir. Bundan sonra, Dışarı Aktarma rolüne sahip biri dışarı aktarmayı yeniden başlatmadığı sürece sonuçları indiremezler.
 
-Arama sonuçlarının önizlemesi ve dışarı aktarması için (ilgili arama ve dışarı aktarma rolleri olmadan) iki haftalık yetkisiz kullanım süresi, Advanced eDiscovery. Kullanıcıların, aynı dosyada içeriği önizlemek ve dışarı aktarması için Önizleme ve Dışarı Aktarma rollerine Advanced eDiscovery.
+Arama sonuçlarını önizlemek ve dışarı aktarmak için iki haftalık yetkisiz kullanım süresi (karşılık gelen arama ve dışarı aktarma rolleri olmadan) Advanced eDiscovery için geçerli değildir. Advanced eDiscovery'da içeriği önizlemek ve dışarı aktarmak için kullanıcılara Önizleme ve Dışarı Aktarma rolleri atanmalıdır.
 
-### <a name="custodian"></a>Custo bire bir
+### <a name="custodian"></a>Veli
 
-Bu rol, kullanıcıların özel durumlar için koruyucuları tanımlamalarına ve yönetmelarına Advanced eDiscovery koruyucularla ilişkilendirilmiş veri kaynaklarını bulmak için Azure Active Directory ve diğer kaynaklardan gelen bilgileri kullanmalarına olanak sağlar. Kullanıcı posta kutuları, posta kutuları ve site SharePoint diğer veri kaynaklarını Teams bir durumda koruyucularla iş ortağı olabilir. Ayrıca kullanıcı, bir dava bağlamında içeriği korumak için koruyucularla ilişkilendirilmiş veri kaynaklarını yasal olarak tutabilir.
+Bu rol, kullanıcıların Advanced eDiscovery vakalar için koruyucuları tanımlamasına ve yönetmesine ve Azure Active Directory ve diğer kaynaklardan gelen bilgileri, koruyucularla ilişkili veri kaynaklarını bulmak için kullanmasına olanak tanır. Kullanıcı posta kutuları, SharePoint siteler ve Teams gibi diğer veri kaynaklarını bir durumda koruyucularla ilişkilendirebilir. Kullanıcı, bir olay bağlamında içeriği korumak için koruyucularla ilişkili veri kaynaklarına yasal bir saklama da yapabilir.
 
-Daha fazla bilgi için bkz[. Bu çalışma sayfalarında koruyucularla Advanced eDiscovery](managing-custodians.md).
+Daha fazla bilgi için bkz[. Advanced eDiscovery'da koruyucularla çalışma](managing-custodians.md).
 
 ### <a name="export"></a>Dışarı aktarma
 
-Rol, kullanıcıların İçerik Arama sonuçlarını yerel bir bilgisayara aktarmalarına olanak sağlar. Ayrıca, kullanıcıların kendi içinde arama sonuçlarını çözümleme için hazırlamalarına da Advanced eDiscovery.
+Rol, kullanıcıların İçerik Aramasının sonuçlarını yerel bir bilgisayara dışarı aktarmasına olanak tanır. Ayrıca arama sonuçlarını Advanced eDiscovery analiz için hazırlamalarına da olanak tanır.
 
-Arama sonuçlarını dışarı aktarma hakkında daha fazla bilgi için bkz. Arama [sonuçlarını dışarı aktarma Microsoft 365 uyumluluk merkezi](export-search-results.md).
+Arama sonuçlarını dışarı aktarma hakkında daha fazla bilgi için bkz. [Arama sonuçlarını Microsoft 365 uyumluluk merkezi dışarı aktarma](export-search-results.md).
 
-### <a name="hold"></a>Bekle
+### <a name="hold"></a>Tutun
 
-Bu rol kullanıcıların posta kutularına, ortak klasörlere, sitelere, sitelere ve Skype Kurumsal gruplara içerik Microsoft 365 sağlar. İçerik tutmada olduğunda, içerik sahipleri özgün içeriği değiştirmeye veya silebilir, ancak içerik, tutma kaldırılana kadar veya tutma süresi dolana kadar korunur.
+Bu rol, kullanıcıların posta kutularına, ortak klasörlere, sitelere, Skype Kurumsal konuşmalara ve Microsoft 365 gruplarına ayrı tutmalarına olanak tanır. İçerik ayrı tutulduğunda içerik sahipleri özgün içeriği değiştirmeye veya silmeye devam edebilir, ancak ayrı tutma kaldırılana veya saklama süresi dolana kadar içerik korunur.
 
-1. 1. Dakikalar hakkında daha fazla bilgi için bkz:
+Ayrı tutmalar hakkında daha fazla bilgi için bkz:
 
-- [Core eDiscovery'de ayrı tutma oluşturma](create-ediscovery-holds.md) 
+- [Core eBulma'da ayrı tutma oluşturma](create-ediscovery-holds.md) 
 
-- [E-Advanced eDiscovery](add-custodians-to-case.md)
+- [Advanced eDiscovery ayrı tutma oluşturma](add-custodians-to-case.md)
 
 ### <a name="preview"></a>Önizleme
 
-Bu rol, kullanıcıların İçerik Arama'dan döndürülen öğelerin listesini görüntülemelerini sağlar. Ayrıca, içeriği görüntülemek için listeden her öğeyi açabilir ve  bakabilirsiniz.
+Bu rol, kullanıcıların İçerik Aramasından döndürülen öğelerin listesini görüntülemesine olanak tanır. Ayrıca, içindekileri görüntülemek için listedeki her öğeyi açabilir ve görüntüleyebilir.
 
-### <a name="review"></a>Gözden Geçir
+### <a name="review"></a>Gözden geçirin
 
-Bu rol, kullanıcıların gözden geçirme kümelerine aynı [Advanced eDiscovery.](overview-ediscovery-20.md) Bu role atanan kullanıcılar, üyesi olduğu **eBulma sayfasındaki eBulma > Gelişmiş** sayfasında vakaların listesini Microsoft 365 uyumluluk merkezi ve açabilirler. Kullanıcı çalışma durumuna erişdikten Advanced eDiscovery büyük/harfe erişmek için **Kümeleri gözden geçir'i** seçer. Bu rol, kullanıcının olayla ilişkilendirilmiş koleksiyon aramalarının sonuçlarını önizlemesine veya başka arama ya da olay yönetimi görevleri gerçekleştirmesine izin vermez. Bu role sahip kullanıcılar yalnızca gözden geçirme kümesinde yer alan verilere erişim sağlar.
+Bu rol, kullanıcıların [Advanced eDiscovery'da](overview-ediscovery-20.md) gözden geçirme kümelerine erişmesini sağlar. Bu role atanan kullanıcılar, üyesi oldukları Microsoft 365 uyumluluk merkezi **eBulma > Gelişmiş** sayfasında servis taleplerinin listesini görebilir ve açabilir. Kullanıcı bir Advanced eDiscovery servis talebine eriştiğinde, olay verilerine erişmek için **Kümeleri gözden geçir'i** seçebilir. Bu rol, kullanıcının servis talebiyle ilişkili bir koleksiyon aramasının sonuçlarını önizlemesine veya diğer arama veya servis talebi yönetim görevlerini gerçekleştirmesine izin vermez. Bu role sahip kullanıcılar yalnızca bir gözden geçirme kümesindeki verilere erişebilir.
 
 ### <a name="rms-decrypt"></a>RMS Şifre Çözme
 
-Bu rol, kullanıcıların arama sonuçlarının önizlemesini görüntülerken ve şifreleri çözülmüş hak korunan e-posta iletilerini dışarı aktararak hakları korunan e-posta iletilerini görüntülemelerine olanak sağlar. Bu rol, şifrelenmiş dosya bir eBulma aramasında bulunan bir e-posta iletisine ekli olduğunda, kullanıcıların [Microsoft](encryption.md) şifreleme teknolojisiyle şifrelenmiş bir dosyayı görüntülemesine (ve dışarı aktarmalarına) da olanak sağlar. Buna ek olarak, bu rol kullanıcıların e-posta içinde bir gözden geçirme kümesine eklenen şifrelenmiş e-posta eklerini gözden geçirmelerine ve sorgulamalarına Advanced eDiscovery. eBulma'da şifre çözme hakkında daha fazla bilgi için bkz. [eBulma araçlarında Microsoft 365 çözme](ediscovery-decryption.md).
+Bu rol, kullanıcıların arama sonuçlarının önizlemesini görüntülerken ve şifresi çözülmüş hak korumalı e-posta iletilerini dışarı aktarırken hakları korunan e-posta iletilerini görüntülemesini sağlar. Bu rol ayrıca, şifrelenmiş dosya eBulma aramasının sonuçlarına eklenmiş bir e-posta iletisine eklendiğinde kullanıcıların [Microsoft şifreleme teknolojisiyle](encryption.md) şifrelenmiş bir dosyayı görüntülemesine (ve dışarı aktarmasına) olanak tanır. Ayrıca, bu rol kullanıcıların Advanced eDiscovery'da bir gözden geçirme kümesine eklenen şifrelenmiş e-posta eklerini gözden geçirmesine ve sorgulamasına olanak tanır. eBulma'da şifre çözme hakkında daha fazla bilgi için bkz. [Microsoft 365 eKeşif araçlarında şifre çözme](ediscovery-decryption.md).
 
 ### <a name="search-and-purge"></a>Arama ve Temizleme
 
-Bu rol, kullanıcıların içerik arama ölçütleriyle eşleşen verileri toplu olarak kaldırma işlemi gerçekleştirmelerini sağlar. Daha fazla bilgi için bkz [. Kurumda e-posta iletilerini arama ve silme](search-for-and-delete-messages-in-your-organization.md).
+Bu rol, kullanıcıların içerik arama ölçütlerine uyan verileri toplu olarak kaldırmasını sağlar. Daha fazla bilgi için bkz [. Kuruluşunuzda e-posta iletilerini arama ve silme](search-for-and-delete-messages-in-your-organization.md).
 
-## <a name="adding-role-groups-as-members-of-ediscovery-cases"></a>eBulma olaylarının üyeleri olarak rol grupları ekleme
+## <a name="adding-role-groups-as-members-of-ediscovery-cases"></a>eBulma servis taleplerinin üyesi olarak rol grupları ekleme
 
-Rol gruplarının üyelerinin atanan vakalarda görevlere erişmesi ve görevleri gerçekleştirmesi için Çekirdek eKbulma ve proje Advanced eDiscovery örneklerine üye olarak rol grupları ebilirsiniz. Rol grubuna atanan roller, rol grubunun üyelerinin neler yapa bir şeyler yapa bir şeyler yapa bir tanımlaması yapar. Ardından bir rol grubunu vakanın üyesi olarak eklemek, üyelerin bu görevlere belirli bir durumda erişmelerine ve gerçekleştirmelerine olanak sağlar. Vakaların üyeleri olarak rol grupları ekleme hakkında daha fazla bilgi için bkz:
+Rol gruplarını Temel eBulma ve Advanced eDiscovery servis taleplerinin üyesi olarak ekleyebilirsiniz; böylece rol gruplarının üyeleri atanan servis talepleri için görevlere erişebilir ve görevleri gerçekleştirebilir. Rol grubuna atanan roller, rol grubunun üyelerinin neler yapabileceğini tanımlar. Ardından bir rol grubunu servis talebinin üyesi olarak eklemek, üyelerin belirli bir durumda bu görevlere erişmesine ve bunları gerçekleştirmesine olanak tanır. Rol gruplarını servis taleplerinin üyesi olarak ekleme hakkında daha fazla bilgi için bkz:
 
-- [Core eDiscovery ile çalışmaya başlama](get-started-core-ediscovery.md#step-4-optional-add-members-to-a-core-ediscovery-case)
+- [Temel eKeşif kullanmaya başlama](get-started-core-ediscovery.md#step-4-optional-add-members-to-a-core-ediscovery-case)
 
-- [Olayda üye ekleme veya Advanced eDiscovery kaldırma](add-or-remove-members-from-a-case-in-advanced-ediscovery.md)
+- [Advanced eDiscovery servis talebine üye ekleme veya kaldırma](add-or-remove-members-from-a-case-in-advanced-ediscovery.md)
 
-Bu nedenle, bir rol bir rol grubuna eklenir veya gruptan kaldırılırsa, rol grubunun herhangi bir üye olarak otomatik olarak kaldırılacak olması gerekir. Bunun nedeni, kurumlarınızı bir davanın üyelerine yanlışlıkla ek izinler sağlamaktan korumaktır. Benzer şekilde, bir rol grubu silinirse, üyesi olduğu tüm durumlarda gruptan kaldırılır.
+Bunu göz önünde bulundurarak, rol grubuna bir rol eklendiğinde veya bir rol grubundan kaldırıldığında, rol grubunun üyesi olduğu herhangi bir durumun üyesi olarak bu rol grubunun otomatik olarak kaldırılacağını bilmek önemlidir. Bunun nedeni, kuruluşunuzun bir olayın üyelerine yanlışlıkla ek izinler sağlamasını korumaktır. Benzer şekilde, bir rol grubu silinirse, üyesi olduğu tüm durumlardan kaldırılır.
 
-eBulma çalışmasına üye olan bir rol grubuna rol eklemeden veya kaldırmadan önce, rol grubunun üyesi olduğu durumların listesini almak için Güvenlik [& Compliance PowerShell'de](/powershell/exchange/connect-to-scc-powershell) aşağıdaki komutları çalıştırabilirsiniz. Rol grubunu güncelleştirdikten sonra, rol grubunu bu durumlarda tekrar üye olarak eklersiniz.
+eBulma olayının üyesi olabilecek bir rol grubuna rol eklemeden veya kaldırmadan önce, rol grubunun üyesi olduğu servis taleplerinin listesini almak için [Güvenlik & Uyumluluk PowerShell'de](/powershell/exchange/connect-to-scc-powershell) aşağıdaki komutları çalıştırabilirsiniz. Rol grubunu güncelleştirdikten sonra, rol grubunu bu servis taleplerinin bir üyesi olarak geri eklersiniz.
 
-### <a name="get-a-list-of-core-ediscovery-cases-a-role-group-is-assigned-to"></a>Bir rol grubunun atandığı Çekirdek eKbulma durumlarının listesini al
+### <a name="get-a-list-of-core-ediscovery-cases-a-role-group-is-assigned-to"></a>Rol grubunun atandığı Temel eBulma servis taleplerinin listesini alma
 
 ```powershell
 Get-ComplianceCase -RoleGroup "Name of role group"
 ```
 
-### <a name="get-a-list-of-advanced-ediscovery-cases-a-role-group-is-assigned-to"></a>Bir rol Advanced eDiscovery ilgili durumların listesini al
+### <a name="get-a-list-of-advanced-ediscovery-cases-a-role-group-is-assigned-to"></a>Rol grubunun atandığı Advanced eDiscovery servis taleplerinin listesini alma
 
 ```powershell
 Get-ComplianceCase -RoleGroup "Name of role group" -CaseType AdvancedEdiscovery
@@ -187,20 +187,20 @@ Get-ComplianceCase -RoleGroup "Name of role group" -CaseType AdvancedEdiscovery
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- **eBulma Yöneticisi neden oluşturulsun?** Daha önce de belirtildiği gibi, eBulma Yöneticisi, eBulma Yöneticisi rol grubunun üyesidir ve bu grup, kuruluşta tüm eBulma olaylarını  görüntüp bu vakalara erişim sağlar. Bu özelliğin tüm eBulma olaylarına erişmenin iki önemli amacı vardır:
+- **Neden eBulma Yöneticisi oluşturasın?** Daha önce açıklandığı gibi, bir eBulma Yöneticisi, kuruluşunuzdaki tüm eBulma servis taleplerini görüntüleyebilen ve erişebilen eBulma Yöneticisi rol grubunun üyesidir. Tüm eBulma olaylarına erişme özelliğinin iki önemli amacı vardır:
 
-  - eBulma davalarının tek üyesi olan bir kişi sizin kuruluşundan ayrılırsa, kimse (Kuruluş Yönetimi rol grubunun üyeleri veya eBulma Yöneticisi rol grubunun başka bir üyesi de dahil) bu eBulma durumuna erişemz çünkü onlar bir davanın üyesi değildir. Bu durumda, bu durumda verilere erişmenin hiçbir yolu yoktu. Ancak eBulma Yöneticisi kuruluşta tüm eBulma olaylarına erişim iznine sahip olduğundan, kendilerini veya başka bir eBulma yöneticisini davanın üyesi olarak ekleyebilir.
+  - Bir eBulma olayının tek üyesi olan bir kişi kuruluşunuzdan ayrılırsa, hiç kimse (Kuruluş Yönetimi rol grubunun üyeleri veya eBulma Yöneticisi rol grubunun başka bir üyesi dahil) bu eBulma olayına erişemez çünkü bir servis talebinin üyesi değildir. Bu durumda, bu durumda verilere erişmenin hiçbir yolu yoktur. Ancak bir eBulma Yöneticisi kuruluştaki tüm eBulma olaylarına erişebildiğinden, olayı görüntüleyebilir ve kendisini veya başka bir eBulma yöneticisini davanın üyesi olarak ekleyebilir.
 
-  - eBulma Yöneticisi tüm Çekirdek eBulma ve Erişim durumlarını görüntüleye Advanced eDiscovery, tüm vakaları ve ilişkili uyumluluk aramalarını denetleyebilir ve denetleyebilir. Bu, uyumluluk aramalarının veya eBulma olaylarının kötüye kullanılmasını önlemeye yardımcı olabilir. Ayrıca eBulma Yöneticileri, uyumluluk aramalarının sonuçlarında hassas olabilecek bilgilere erişeler olduğundan, eBulma Yöneticisi olan kişi sayısını sınırlandırmanız gerekir.
+  - Bir eBulma Yöneticisi tüm Temel eBulma ve Advanced eDiscovery servis taleplerini görüntüleyebilir ve bunlara erişebildiğinden, tüm servis taleplerini ve ilişkili uyumluluk aramalarını denetleyebilir ve denetleyebilir. Bu, uyumluluk aramalarının veya eBulma durumlarının kötüye kullanılmasını önlemeye yardımcı olabilir. eBulma Yöneticileri uyumluluk aramasının sonuçlarında hassas olabilecek bilgilere erişebildiğinden, eBulma Yöneticisi olan kişi sayısını sınırlamanız gerekir.
 
-- **Bir grubu eBulma Yöneticisi rol grubunun bir üyesi olarak ekleyebilir miyim?** Daha önce de belirtildiği gibi, Güvenlik & Uyumluluk Merkezi PowerShell'inde **Add-RoleGroupMember** cmdlet'ini kullanarak eBulma Yöneticisi rol grubuna eBulma Yöneticileri alt grubunun üyesi olarak posta etkin bir güvenlik grubu eklersiniz. Örneğin, eBulma Yöneticisi rol grubuna posta özelliği etkin bir güvenlik grubu eklemek için aşağıdaki komutu çalıştırabilirsiniz. 
+- **eBulma Yöneticisi rol grubunun üyesi olarak bir grup ekleyebilir miyim?** Daha önce açıklandığı gibi, Güvenlik & Uyumluluk Merkezi PowerShell'de **Add-RoleGroupMember** cmdlet'ini kullanarak eBulma Yöneticisi rol grubundaki eBulma Yöneticileri alt grubunun üyesi olarak posta etkin bir güvenlik grubu ekleyebilirsiniz. Örneğin, eBulma Yöneticisi rol grubuna posta özellikli bir güvenlik grubu eklemek için aşağıdaki komutu çalıştırabilirsiniz. 
 
   ```powershell
   Add-RoleGroupMember "eDiscovery Manager" -Member <name of security group>
   ```
 
-    Exchange grupları Microsoft 365 grupları destek desteklemez. 'i çalıştırarak, PowerShell'de oluşturabilirsiniz ve posta Exchange Online bir güvenlik grubu kullan gerekir`New-DistributionGroup -Type Security`. Ayrıca, yönetim merkezinde veya posta merkezinde posta özellikli bir güvenlik <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">grubu Exchange</a> (ve üye [ekleme) Microsoft 365 yönetim merkezi](https://go.microsoft.com/fwlink/p/?linkid=2024339). Yeni posta özelliği etkin bir güvenlik grubunun eBulma Yöneticileri rol grubuna eklen kullanılabilir olması, 60 dakika kadar sürebilir.
+    Exchange dağıtım grupları ve Microsoft 365 Grupları desteklenmez. Exchange Online PowerShell'de komutunu çalıştırarak `New-DistributionGroup -Type Security`oluşturabileceğiniz posta özellikli bir güvenlik grubu kullanmanız gerekir. Ayrıca, <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange yönetim merkezinde veya Microsoft 365 yönetim merkezi</a> posta özellikli bir güvenlik grubu oluşturabilir (ve üye ekleyebilirsiniz[).](https://go.microsoft.com/fwlink/p/?linkid=2024339) Yeni posta özellikli bir güvenlik grubunun eBulma Yöneticileri rol grubuna eklenmesi 60 dakika kadar sürebilir.
 
-    Ayrıca, daha önce de belirtildiği gibi, Güvenlik ve Uyumluluk Merkezi PowerShell'de **Add-eDiscoveryCaseAdmin** cmdlet'ini kullanarak posta etkin bir güvenlik grubunu eBulma Yöneticisi &. eBulma Yöneticileri olarak yalnızca tek tek kullanıcılar  eklemeniz gerekir.
+    Daha önce belirtildiği gibi, Güvenlik & Uyumluluk Merkezi PowerShell'de **Add-eDiscoveryCaseAdmin** cmdlet'ini kullanarak posta özellikli bir güvenlik grubunu eBulma Yöneticisi yapamazsınız. Tek tek kullanıcıları yalnızca eBulma Yöneticileri olarak ekleyebilirsiniz.
 
-    Ayrıca posta etkin bir güvenlik grubunu vakanın üyesi olarak ekeyesiniz.
+    Posta özellikli bir güvenlik grubunu da servis talebinin üyesi olarak ekleyemezsiniz.
