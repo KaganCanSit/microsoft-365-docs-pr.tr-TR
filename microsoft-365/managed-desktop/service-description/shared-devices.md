@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 manager: dougeby
 ms.topic: article
-ms.openlocfilehash: 8c8d79313ee858ebcac8754b96046b517a3f614a
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 5cb1f14f8f9dc8c645621c1a12c651db8a790b71
+ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64835984"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64841929"
 ---
 # <a name="shared-devices"></a>Paylaşılan cihazlar
 
@@ -45,7 +45,7 @@ Paylaşılan cihaz modu şu durumlarda iyi bir seçenek değildir:
 - Cihazdaki farklı kullanıcılar için kullanıcı deneyiminin farklı olması gerekiyorsa.
 - Her kullanıcının ihtiyaç duyduğu uygulama kümesi büyük ölçüde farklıysa.
 
-## <a name="register-new-devices-using-the-windows-autopilot-self-deploying-mode-profile-in-microsoft-managed-desktop"></a>Microsoft Managed Desktop'da Windows Autopilot kendi kendine dağıtım modu profilini kullanarak yeni cihazları kaydetme
+## <a name="register-new-devices-using-the-windows-autopilot-self-deploying-mode-profile"></a>Windows Autopilot kendi kendine dağıtım modu profilini kullanarak yeni cihazları kaydetme
 
 İster siz ister bir iş ortağı cihaz kaydını işleyin, [Microsoft Managed Desktop'da Windows Autopilot kendi kendine dağıtım modu](/mem/autopilot/self-deploying) profilini kullanmayı seçebilirsiniz.
 

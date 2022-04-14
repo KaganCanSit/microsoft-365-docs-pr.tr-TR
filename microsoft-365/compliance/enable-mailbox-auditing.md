@@ -19,17 +19,17 @@ ms.assetid: aaca8987-5b62-458b-9882-c28476a66918
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-description: Posta kutusu denetim günlüğü Microsoft 365 varsayılan olarak açıktır (varsayılan posta kutusu denetimi veya posta kutusu denetimi varsayılan olarak açıktır). Bu, posta kutusu sahipleri, temsilciler ve yöneticiler tarafından gerçekleştirilen belirli eylemlerin otomatik olarak posta kutusu denetim günlüğüne kaydedildiği ve burada posta kutusunda gerçekleştirilen etkinlikleri arayabileceğiniz anlamına gelir.
-ms.openlocfilehash: 9b3c08850ff0cce14fdce13d496642239e817096
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+description: Posta kutusu denetim günlüğü varsayılan olarak Microsoft 365 ('varsayılan posta kutusu denetimi' veya 'posta kutusu denetimi varsayılan olarak açık' olarak da adlandırılır) etkindir. Bu yapılandırma, posta kutusu sahipleri, temsilciler ve yöneticiler tarafından gerçekleştirilen belirli eylemlerin otomatik olarak posta kutusu denetim günlüğüne kaydedildiği ve burada posta kutusunda gerçekleştirilen etkinlikleri arayabileceğiniz anlamına gelir.
+ms.openlocfilehash: e869c705df2943c1781c02362c2c38b6713affc5
+ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714339"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64841894"
 ---
 # <a name="manage-mailbox-auditing"></a>Posta kutusu denetimini yönetme
 
-Ocak 2019'dan itibaren Microsoft, tüm kuruluşlar için posta kutusu denetim günlüğünü varsayılan olarak açmalıdır. Bu, posta kutusu sahipleri, temsilciler ve yöneticiler tarafından gerçekleştirilen belirli eylemlerin otomatik olarak günlüğe kaydedileceği ve posta kutusu denetim günlüğünde bunları aradığınızda ilgili posta kutusu denetim kayıtlarının kullanılabilir olacağı anlamına gelir. Posta kutusu denetimi varsayılan olarak açılmadan önce, bunu kuruluşunuzdaki her kullanıcı posta kutusu için el ile etkinleştirmeniz gerekiyordu.
+Ocak 2019'da Microsoft, tüm kuruluşlar için posta kutusu denetim günlüğünü varsayılan olarak etkinleştirdi. Bu yapılandırma, posta kutusu sahiplerinin, temsilcilerin ve yöneticilerin belirli eylemlerinin otomatik olarak günlüğe kaydedildiği anlamına gelir. Ayrıca, posta kutusu denetim günlüğünde arama yaptığınızda ilgili posta kutusu denetim kayıtlarının da kullanılabilir olacağı anlamına gelir. Posta kutusu denetimi varsayılan olarak açılmadan önce, bunu kuruluşunuzdaki her kullanıcı posta kutusu için el ile etkinleştirmeniz gerekiyordu.
 
 Posta kutusu denetiminin varsayılan olarak bazı avantajları şunlardır:
 
@@ -41,7 +41,8 @@ Posta kutusu denetiminin varsayılan olarak bazı avantajları şunlardır:
 > [!NOTE]
 >
 > - Posta kutusu denetiminin varsayılan olarak açık olarak yayımlanması hakkında hatırlamanız gereken önemli şey şudur: Posta kutusu denetimini yönetmek için hiçbir şey yapmanız gerekmez. Ancak, daha fazla bilgi edinmek, posta kutusu denetimini varsayılan ayarlardan özelleştirmek veya tamamen kapatmak için bu makale size yardımcı olabilir.
-> - Varsayılan olarak, Microsoft 365 uyumluluk merkezi veya Office 365 Yönetim Etkinliği API'sinde denetim günlüğü aramalarında yalnızca E5 kullanıcıları için posta kutusu denetim olayları kullanılabilir. Daha fazla bilgi için bu makalenin [Daha fazla bilgi](#more-information) bölümüne bakın.
+> - Varsayılan olarak, Microsoft 365 uyumluluk merkezi veya Office 365 Yönetim Etkinliği API'sinde denetim günlüğü aramalarında yalnızca [Gelişmiş Denetim](advanced-audit.md) özelliğini içeren lisanslara sahip kullanıcılar için posta kutusu denetim olayları kullanılabilir. Bu lisanslar [burada](auditing-solutions-overview.md#advanced-audit-1) açıklanmıştır. Bu makale, kısaca Gelişmiş Denetim'i *E5/A5/G5 lisansları olarak içeren lisanslara* topluca başvuracaktır.
+>   Lisanslamanın M365 uyumluluk merkezinde posta kutusu denetim olaylarını nasıl etkilediği hakkında daha fazla bilgi için, bu makalenin devamında yer alan [Daha fazla bilgi](#more-information) bölümüne bakın.
 
 ## <a name="verify-mailbox-auditing-on-by-default-is-turned-on"></a>Posta kutusu denetiminin varsayılan olarak açık olduğunu doğrulama
 
@@ -53,7 +54,7 @@ Get-OrganizationConfig | Format-List AuditDisabled
 
 **False** değeri, kuruluş için varsayılan olarak üzerinde posta kutusu denetiminin etkinleştirildiğini gösterir. Bu, varsayılan olarak kuruluş değeri belirli posta kutularında posta kutusu denetim ayarını geçersiz kılar. Örneğin, posta kutusu denetimi bir posta kutusu için devre dışı bırakıldıysa (posta kutusunda *AuditEnabled* özelliği **False** ise), kuruluş için varsayılan olarak açık posta kutusu denetimi etkinleştirildiğinden, posta kutusu için varsayılan posta kutusu eylemleri denetlenecektir.
 
-Belirli posta kutuları için posta kutusu denetimini devre dışı tutmak için, posta kutusu sahibi ve posta kutusuna erişim yetkisi verilmiş diğer kullanıcılar için posta kutusu denetimi atlamasını yapılandırabilirsiniz. Daha fazla bilgi için bu makaledeki [Posta kutusu denetim günlüğünü atlama](#bypass-mailbox-audit-logging) bölümüne bakın.
+Belirli posta kutuları için posta kutusu denetimini devre dışı tutmak için, posta kutusu sahibi ve posta kutusuna erişim yetkisi verilmiş diğer kullanıcılar için posta kutusu denetimi atlamasını yapılandırabilirsiniz. Daha fazla bilgi için bu makalenin devamında [posta kutusu denetim günlüğünü atlama](#bypass-mailbox-audit-logging) bölümüne bakın.
 
 > [!NOTE]
 > Kuruluş için posta kutusu denetimi varsayılan olarak açık olduğunda, etkilenen posta kutularının *AuditEnabled* özelliği **False** yerine **True** olarak değiştirilmez. Başka bir deyişle, üzerinde posta kutusu denetimi varsayılan olarak posta kutularındaki *AuditEnabled* özelliğini yoksayar.
@@ -102,15 +103,15 @@ Aşağıdaki tabloda, kullanıcı posta kutuları ve paylaşılan posta kutular�
 |**FolderBind**|Bir posta kutusu klasörüne erişildi. Yönetici veya temsilci posta kutusunu açtığında da bu eylem günlüğe kaydedilir. <br/><br/> **Not**: Temsilciler tarafından gerçekleştirilen klasör bağlama eylemleri için denetim kayıtları bir araya getirilir. 24 saatlik bir süre içinde tek tek klasör erişimi için bir denetim kaydı oluşturulur.|![Onay işareti.](../media/checkmark.png)|![Onay işareti.](../media/checkmark.png)||
 |**HardDelete**|Kurtarılabilir Öğeler klasöründen bir ileti temizlendi.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|
 |**MailboxLogin**|Kullanıcı posta kutusunda oturum açtı.|||![Onay işareti](../media/checkmark.png)|
-|**MailItemsAccessed**|**Not**: Bu değer yalnızca E5 veya E5 Uyumluluğu eklenti aboneliği kullanıcıları için kullanılabilir. Daha fazla bilgi için bkz. [Microsoft 365'de Gelişmiş Denetimi Ayarlama](set-up-advanced-audit.md). <br/><br/> Posta verilerine posta protokolleri ve istemciler tarafından erişilir.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti](../media/checkmark.png)<sup>\*</sup>|
-|**MessageBind**|**Not**: Bu değer yalnızca E3 kullanıcıları (E5 veya E5 Uyumluluğu eklenti abonelikleri olmayan kullanıcılar) için kullanılabilir. <br/><br/> Önizleme bölmesinde bir ileti görüntülendi veya bir yönetici tarafından açıldı.|![Onay işareti](../media/checkmark.png)|||
+|**MailItemsAccessed**|**Not**: Bu değer yalnızca E5/A5/G5 lisansına sahip kullanıcılar için kullanılabilir. Daha fazla bilgi için bkz. [Microsoft 365'de Gelişmiş Denetimi Ayarlama](set-up-advanced-audit.md). <br/><br/> Posta verilerine posta protokolleri ve istemciler tarafından erişilir.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti](../media/checkmark.png)<sup>\*</sup>|
+|**MessageBind**|**Not**: Bu değer yalnızca E5/A5/G5 lisansı *olmayan* kullanıcılar için kullanılabilir. <br/><br/> Önizleme bölmesinde bir ileti görüntülendi veya bir yönetici tarafından açıldı.|![Onay işareti](../media/checkmark.png)|||
 |**ModifyFolderPermissions**|Bu değer bir posta kutusu eylemi olarak kabul edilmiş olsa da, **UpdateFolderPermissions** eylemine zaten dahil edilmiş ve ayrı olarak denetlenmiyor. Başka bir deyişle, bu değeri kullanmayın.||||
 |**Hareket**|İleti başka bir klasöre taşındı.|![Onay işareti.](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|
 |**MoveToDeletedItems**|Bir ileti silindi ve Silinmiş Öğeler klasörüne taşındı.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti](../media/checkmark.png)<sup>\*</sup>|
 |**RecordDelete**|Kayıt olarak etiketlenmiş bir öğe geçici olarak silindi (Kurtarılabilir Öğeler klasörüne taşındı). Kayıt olarak etiketlenen öğeler kalıcı olarak silinemez (Kurtarılabilir Öğeler klasöründen temizlenir).|![Onay işareti.](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|![Onay işareti](../media/checkmark.png)|
 |**RemoveFolderPermissions**|Bu değer bir posta kutusu eylemi olarak kabul edilmiş olsa da, **UpdateFolderPermissions** eylemine zaten dahil edilmiş ve ayrı olarak denetlenmiyor. Başka bir deyişle, bu değeri kullanmayın.||||
-|**SearchQueryInitiated**|**Not**: Bu değer yalnızca E5 veya E5 Uyumluluğu eklenti aboneliği kullanıcıları için kullanılabilir. Daha fazla bilgi için bkz. [Microsoft 365'de Gelişmiş Denetimi Ayarlama](set-up-advanced-audit.md). <br/><br/> Bir kişi posta kutusunda öğeleri aramak için Outlook (Windows, Mac, iOS, Android veya Web üzerinde Outlook) veya Windows 10 için Posta uygulamasını kullanır.|||![Onay işareti](../media/checkmark.png)|
-|**Gönderin**|**Not**: Bu değer yalnızca E5 veya E5 Uyumluluğu eklenti aboneliği kullanıcıları için kullanılabilir. Daha fazla bilgi için bkz. [Microsoft 365'de Gelişmiş Denetimi Ayarlama](set-up-advanced-audit.md). <br/><br/> Kullanıcı bir e-posta iletisi gönderir, e-posta iletisini yanıtlar veya e-posta iletisini iletir.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>||![Onay işareti](../media/checkmark.png)<sup>\*</sup>|
+|**SearchQueryInitiated**|**Not**: Bu değer yalnızca E5/A5/G5 lisansına sahip kullanıcılar için kullanılabilir. Daha fazla bilgi için bkz. [Microsoft 365'de Gelişmiş Denetimi Ayarlama](set-up-advanced-audit.md). <br/><br/> Bir kişi posta kutusunda öğeleri aramak için Outlook (Windows, Mac, iOS, Android veya Web üzerinde Outlook) veya Windows 10 için Posta uygulamasını kullanır.|||![Onay işareti](../media/checkmark.png)|
+|**Gönderin**|**Not**: Bu değer yalnızca E5/A5/G5 lisansına sahip kullanıcılar için kullanılabilir. Daha fazla bilgi için bkz. [Microsoft 365'de Gelişmiş Denetimi Ayarlama](set-up-advanced-audit.md). <br/><br/> Kullanıcı bir e-posta iletisi gönderir, e-posta iletisini yanıtlar veya e-posta iletisini iletir.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>||![Onay işareti](../media/checkmark.png)<sup>\*</sup>|
 |**GöndermeLer**|SendAs izni kullanılarak bir ileti gönderildi. Bu, başka bir kullanıcının iletiyi posta kutusu sahibinden gelmiş gibi gönderdiği anlamına gelir.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti](../media/checkmark.png)<sup>\*</sup>||
 |**SendOnBehalf**|SendOnBehalf izni kullanılarak bir ileti gönderildi. Bu, başka bir kullanıcının iletiyi posta kutusu sahibi adına gönderdiği anlamına gelir. İleti, iletinin kimin adına gönderildiğini ve iletiyi gerçekten kimin gönderdiğini alıcıya gösterir.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti](../media/checkmark.png)<sup>\*</sup>||
 |**SoftDelete**|İleti kalıcı olarak silinmiş veya Silinmiş Öğeler klasöründen silinmiş. Geçici olarak silinen öğeler Kurtarılabilir Öğeler klasörüne taşınır.|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti.](../media/checkmark.png)<sup>\*</sup>|![Onay işareti](../media/checkmark.png)<sup>\*</sup>|
@@ -320,11 +321,11 @@ Get-MailboxAuditBypassAssociation -Identity <MailboxIdentity> | Format-List Audi
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- Posta kutusu denetim günlüğü tüm kuruluşlar için varsayılan olarak etkin olsa da, yalnızca E5 lisansına sahip kullanıcılar Microsoft 365 uyumluluk merkezi veya [Office 365 Yönetim Etkinliği](/office/office-365-management-api/office-365-management-activity-api-reference) [API'sindeki denetim günlüğü aramalarında posta kutusu denetim günlüğü olaylarını](search-the-audit-log-in-security-and-compliance.md) **varsayılan olarak** döndürür.
+- Posta kutusu denetim günlüğü tüm kuruluşlar için varsayılan olarak etkin olsa da, yalnızca [Gelişmiş Denetim özelliğini içeren lisanslara](auditing-solutions-overview.md#advanced-audit-1) sahip kullanıcılar (topluca *E5/A5/G5 lisansları* olarak adlandırılır) Microsoft 365 uyumluluk merkezi veya [Office 365 Yönetim Etkinliği](/office/office-365-management-api/office-365-management-activity-api-reference) [API'sini](search-the-audit-log-in-security-and-compliance.md) **kullanarak denetim günlüğü aramalarında posta kutusu denetim günlüğü olaylarını döndürür varsayılan olarak**.
 
-  E5 lisansı olmayan kullanıcıların posta kutusu denetim günlüğü girdilerini almak için şunları yapabilirsiniz:
+  E5/A5/G5 lisansı olmayan kullanıcıların posta kutusu denetim günlüğü girdilerini almak için aşağıdaki geçici çözümlerden birini kullanabilirsiniz:
 
-  - Tek tek posta kutularında posta kutusu denetimini el ile etkinleştirin (komutunu çalıştırın). `Set-Mailbox -Identity <MailboxIdentity> -AuditEnabled $true` Bunu yaptıktan sonra, Microsoft 365 uyumluluk merkezi veya Office 365 Yönetim Etkinliği API'sini kullanarak denetim günlüğü aramalarını kullanabilirsiniz.
+  - Aşağıdaki komutu çalıştırarak etkilenen kullanıcı posta kutularında posta kutusu denetimini el ile etkinleştirin: `Set-Mailbox -Identity <MailboxIdentity> -AuditEnabled $true`. Posta kutusunda posta kutusu denetimini etkinleştirdikten sonra, Microsoft 365 uyumluluk merkezi veya Office 365 Yönetim Etkinliği API'sini kullanarak denetim günlüğü aramalarını kullanabilirsiniz.
 
     > [!NOTE]
     > Posta kutusu denetimi posta kutusunda zaten etkin görünüyorsa ancak aramalarınız sonuç döndürmezse *AuditEnabled* parametresinin `$false` değerini olarak değiştirin ve sonra öğesine geri dönün `$true`.

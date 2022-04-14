@@ -5,7 +5,7 @@ f1.keywords:
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: micurn, nicholak
+ms.reviewer: shegu, nicholak
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -22,12 +22,12 @@ ms.custom:
 search.appverid: MET150
 description: Aldığınız uygulamalar ve hizmetler, İş için Microsoft 365 Uygulamaları gibi satın aldığınız Microsoft 365 ürüne bağlıdır.
 ms.date: 07/01/2020
-ms.openlocfilehash: 984b46954ab57391d5f7c1e48e42527e5c95b412
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: fca1e5239745e28c32c200c76cc229aedeccf2a4
+ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64824454"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64841684"
 ---
 # <a name="understand-subscriptions-and-licenses-in-microsoft-365-for-business"></a>Microsoft 365 İş'teki abonelikleri ve lisansları anlama
 

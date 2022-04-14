@@ -21,12 +21,12 @@ description: Kuruluşunuzdaki kullanıcı ve yönetici etkinliğini görüntüle
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: edf5bfd91313c621707d1bdc35074bfe7fe9585c
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 1a10bf738562f8fd9a263252d4a56eddf8acee9d
+ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759931"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64841951"
 ---
 # <a name="search-the-audit-log-in-the-compliance-center"></a>Uyumluluk merkezinde denetim günlüğünde arama yapma
 
@@ -128,29 +128,7 @@ Denetim günlüğünde arama yapmaya başlamadan önce aşağıdaki öğeleri ok
 
 - Azure Active Directory (Azure AD), Microsoft 365 için dizin hizmetidir. Birleşik denetim günlüğü, <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> veya Azure yönetim portalında gerçekleştirilen kullanıcı, grup, uygulama, etki alanı ve dizin etkinliklerini içerir. Azure AD olaylarının tam listesi için bkz. [Denetim Raporu Olayları Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
-- İlgili denetim günlüğü kaydının bir denetim günlüğü aramasının sonuçlarında döndürüldükten sonra bir olayın gerçekleşmesi 30 dakika veya 24 saate kadar sürebilir. Aşağıdaki tabloda, Microsoft 365'deki farklı hizmetler için gereken süre gösterilmektedir.
-
-  |Microsoft 365 hizmeti veya özelliği|30 dakika|24 saat|
-  |---|:---:|:---:|
-  |Microsoft 365 ve Tehdit Bilgileri için Defender|![Onay işareti.](../media/checkmark.png)||
-  |Azure Active Directory (kullanıcı oturum açma olayları)||![Onay işareti.](../media/checkmark.png)|
-  |Azure Active Directory (yönetici olayları)||![Onay işareti.](../media/checkmark.png)|
-  |Veri Kaybı Önleme|![Onay işareti.](../media/checkmark.png)||
-  |Dynamics 365 CRM||![Onay işareti.](../media/checkmark.png)|
-  |Ediscovery|![Onay işareti.](../media/checkmark.png)||
-  |Exchange Online|![Onay işareti.](../media/checkmark.png)||
-  |Microsoft Power Automate||![Onay işareti.](../media/checkmark.png)|
-  |Microsoft Stream|![Onay işareti.](../media/checkmark.png)||
-  |Microsoft Teams|![Onay işareti.](../media/checkmark.png)||
-  |Power Apps||![Onay işareti.](../media/checkmark.png)|
-  |Power BI|![Onay işareti.](../media/checkmark.png)||
-  |Microsoft 365 uyumluluk merkezi|![Onay işareti.](../media/checkmark.png)||
-  |Duyarlılık etiketleri||![Onay işareti.](../media/checkmark.png)|
-  |SharePoint Online ve OneDrive İş|![Onay işareti.](../media/checkmark.png)||
-  |Workplace Analytics|![Onay işareti.](../media/checkmark.png)||
-  |Yammer||![Onay işareti.](../media/checkmark.png)|
-  |Microsoft Forms|![Onay işareti.](../media/checkmark.png)||
-  ||||
+- Microsoft, ilgili denetim kaydının bir denetim günlüğü aramasının sonuçlarında döndürülmesi için bir olay gerçekleştikten sonra belirli bir süreyi garanti etmez. Temel hizmetler (Exchange, SharePoint, OneDrive ve Teams gibi) için denetim kaydı kullanılabilirliği genellikle bir olay gerçekleştikten sonra 60 ile 90 dakika arasındadır. Diğer hizmetler için denetim kaydı kullanılabilirliği daha uzun olabilir. Ancak, kaçınılmaz olan bazı sorunlar (sunucu kesintisi gibi) denetim kayıtlarının kullanılabilirliğini geciktiren denetim hizmetinin dışında oluşabilir. Bu nedenle, Microsoft belirli bir zamana bağlanmaz.
 
 - Power BI için denetim günlüğü varsayılan olarak etkin değildir. Denetim günlüğünde Power BI etkinlik aramak için, Power BI yönetici portalında denetimi etkinleştirmeniz gerekir. Yönergeler için Power BI [yönetici portalındaki](/power-bi/service-admin-portal#audit-logs) "Denetim günlükleri" bölümüne bakın.
 

@@ -13,12 +13,12 @@ f1.keywords:
 ms.author: tiaraquan
 ms.article: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 99ed659ceae21901deb1625c0b9e65a9a82ea1b4
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: abaca30b4de2638b0c1f7d0522b96fac469760a9
+ms.sourcegitcommit: e13c8fc28c68422308c9d356109797cfcf6f77be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64704746"
+ms.lasthandoff: 04/14/2022
+ms.locfileid: "64841806"
 ---
 # <a name="change-history-for-microsoft-managed-desktop-documentation"></a>Microsoft Managed Desktop belgeleri için değişiklik geçmişi
 
@@ -28,7 +28,7 @@ Bu makalede[, Microsoft Managed Desktop belgelerinde](index.yml) yeni ve güncel
 
 Yeni veya değiştirilmiş makale | Açıklama
 --- | ---
-| [Paylaşılan cihazlar](service-description/shared-devices.md) | Yeni cihazları paylaşılan moda kaydetme bölümü eklendi |
+| [Paylaşılan cihazlar](service-description/shared-devices.md) | Windows Autopilot kendi kendine dağıtım modu profilini kullanarak yeni cihazları kaydetme eklendi |
 | [Teams](get-started/teams.md) | Güncelleştirilmiş Microsoft Intune değişiklikler bölümü |
 
 ## <a name="march-2022"></a>Mart 2022
