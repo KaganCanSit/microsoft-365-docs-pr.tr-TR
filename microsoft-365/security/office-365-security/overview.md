@@ -6,22 +6,22 @@ manager: dansimp
 ms.date: 07/21/2021
 audience: Admin
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 search.appverid:
 - MET150
 - MOE150
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Office 365'te Güvenlik, EOP'den Office 365 için Defender Plan 1 ve 2’ye, Standart ve Katı güvenlik yapılandırmaları ve daha fazlası için. Neye sahip olduğunuzu ve özelliklerinizi nasıl güvence altına alacağınızı anlayın.
+description: Office 365'te güvenlik, EOP’den Office 365 için Defender Plan 1 ve 2’ye, Standart ve Katı güvenlik yapılandırmaları ve daha fazlası. Neye sahip olduğunuzu ve özelliklerinizi nasıl güvence altına alacağınızı anlayın.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8ddf81e038b4c055134498ee0a26751b735d786a
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: a9f480575c712488a17dc7e9e91320edc11d0e50
+ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64472187"
+ms.lasthandoff: 04/13/2022
+ms.locfileid: "64835919"
 ---
 # <a name="microsoft-defender-for-office-365-security-overview"></a>Office 365 için Microsoft Defender güvenliğine genel bakış
 
@@ -53,7 +53,7 @@ Bu üç bileşenin şu şekilde tartışıldığını görmeye alışmış olabi
 |---|---|---|
 |Geniş kapsamlı, birim tabanlı, bilinen saldırıları önler.|E-postayı ve işbirliğini sıfırı gün kötü amaçlı yazılımlarından, kimlik avından ve iş e-postası güvenliğinin tehlikeye atılmasından korur.|İhlal sonrası araştırma, arama ve müdahalenin yanı sıra otomasyon ve simülasyon (eğitim için) ekler.|
 
-Ancak mimari açısından, her bir parçayı, her biri bir güvenlik vurgusu olan kümülatif güvenlik katmanları olarak düşünerek başlayalım. Daha çok şuna benzer:
+Ancak mimari açısından, her bir parçayı, her biri bir güvenlik vurgusu olan kümülatif güvenlik katmanları olarak düşünerek başlayalım. Buna benzer daha fazla:
 
 :::image type="content" source="../../media/tp_GraphicEOPATPP1P2_2.png" alt-text="Office 365 için Microsoft Defender ve EOP, e-posta kimlik doğrulaması için bir not da dahil olmak üzere hizmet vurgusu ile birbirleriyle ilişkileri" lightbox="../../media/tp_GraphicEOPATPP1P2_2.png":::
 
@@ -61,7 +61,7 @@ Bu hizmetlerin her biri, Koruma, Algılama, Araştırma ve Yanıtlama arasından
 
 Office 365 güvenliğinin temeli EOP korumasıdır. Office 365 P1 için Microsoft Defender EOP içerir. Office 365 P2 için Defender, P1 ve EOP’yi içerir. Yapı kümülatiftir. Bu nedenle, bu ürünü yapılandırırken EOP ile başlamalı ve Office 365 için Defender ile çalışmalısınız.
 
-E-posta kimlik doğrulaması yapılandırması genel DNS’de gerçekleşse de, kimlik sahtekarlığına karşı savunmaya yardımcı olmak için bu özelliği yapılandırmak önemlidir. *EOP’niz varsa,* ***e-posta kimlik [doğrulamasını yapılandırmanız gerekir](email-validation-and-authentication.md)***.
+E-posta kimlik doğrulaması yapılandırması genel DNS'de gerçekleşse de, kimlik sahtekarlığına karşı savunmaya yardımcı olmak için bu özelliği yapılandırmak önemlidir. *EOP'niz varsa*, ***[e-posta kimlik doğrulamasını yapılandırmalısınız](email-validation-and-authentication.md)***.
 
 Office 365 E3 veya daha düşük bir sürüme sahipseniz, EOP'ye sahipsinizdir, ancak yükseltme yoluyla Office 365 P1 için bağımsız Defender satın alma seçeneğine sahipsiniz. Office 365 E5'iniz varsa, Office 365 P2 için Defender'ınız zaten vardır.
 
@@ -108,14 +108,14 @@ Office 365 P1 için Microsoft Defender, araştırmalar için **Gerçek zamanlı 
 |---|---|---|
 |Teknolojiler, EOP’de bulunan her şeyi ve Office 365 P1 için Microsoft Defender'ı ve ayrıca şunları içerir:<ul><li>Aynı</li>|<li>**Tehdit Gezgini**</li><li>Tehdit İzleyiciler</li><li>Kampanya görünümleri</li>|<li>Otomatik Araştırma ve Yanıt (AIR)</li><li>Tehdit Gezgini’nden AIR</li><li>Risk altındaki kullanıcılar için AIR</li><li>Otomatik Araştırmalar için SIEM Tümleştirme API'si</li>
 
-Dolayısıyla, Office 365 P2 için Microsoft Defender, evin ***araştırma ve yanıt*** tarafını genişletir ve yeni bir avlanma gücü ekler. Otomasyon.
+Dolayısıyla, Office 365 için Microsoft Defender P2, evin ***araştırma ve yanıt*** tarafını genişletir ve yeni bir avlanma gücü ekler. Otomasyon.
 
 Office 365 P2 için Microsoft Defender'da birincil arama aracına Gerçek zamanlı algılamalar yerine **Tehdit Gezgini** adı verilir. Microsoft 365 Defender portalına gittiğinizde Tehdit Gezgini'ni görüyorsanız, Office 365 P2 için Microsoft Defender'dasınız demektir.
 
 Office 365 P1 ve P2 için Microsoft Defender'ın ayrıntılarına girmek için **[bu makaleye bakın](defender-for-office-365.md)**.
 
 > [!TIP]
-> EOP ve Office 365 için Microsoft Defender, son kullanıcılar söz konusu olduğunda da farklıdır. Office 365 P1 için EOP ve Defender'da odak noktası *farkındalıktır* ve bu nedenle bu iki hizmet, kullanıcıların şüpheli buldukları e-postaları daha fazla analiz ile rapor edebilmeleri için *Mesajı bildir Outlook eklentisini* içerir. <p> Office 365 Defender P2'de (EOP ve P1'deki her şeyi içerir), odak son kullanıcılar için *daha fazla eğitime* kayar ve böylece Güvenlik Operasyonları Merkezi, güçlü bir *Tehdit Simülatörü* aracına ve sağladığı son kullanıcı ölçümlerine erişebilir.
+> EOP ve Office 365 için Microsoft Defender, son kullanıcılar söz konusu olduğunda da farklıdır.Office 365 P1 için Defender ve EOP'de odak noktası *farkındalıktır* ve bu nedenle bu iki hizmet, kullanıcıların şüpheli buldukları e-postaları daha fazla analiz için rapor edebilmeleri için *Rapor iletisi Outlook eklentisi*’ni içerir. <p> Office 365 Defender P2'de (EOP ve P1'deki her şeyi içerir), odak son kullanıcılar için *daha fazla eğitime* kayar ve böylece Güvenlik Operasyonları Merkezi, güçlü bir *Tehdit Simülatörü* aracına ve sağladığı son kullanıcı ölçümlerine erişebilir.
 
 ## <a name="microsoft-defender-for-office-365-plan-1-vs-plan-2-cheat-sheet"></a>Office 365 için Microsoft Defender Plan 1 ve Plan 2 hızlı başvuru kılavuzu
 
