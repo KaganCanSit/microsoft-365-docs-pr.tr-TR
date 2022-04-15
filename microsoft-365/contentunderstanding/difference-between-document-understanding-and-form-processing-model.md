@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Belge anlama modeli ile form işleme modeli arasındaki temel farklar hakkında bilgi edinin.
-ms.openlocfilehash: a3f36adbf261ef290aada8efe1c0643ee1ce570f
-ms.sourcegitcommit: 46e796c6b76a01516c48977335bbf5076ca74a06
+ms.openlocfilehash: f6fe6e821e41b47bcce6ef157d971245fdd072b8
+ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64738397"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64882296"
 ---
 # <a name="differences-between-document-understanding-and-form-processing-models"></a>Belge anlama ve form işleme modelleri arasındaki farklar 
 
@@ -87,7 +87,7 @@ Form işlemenin ne zaman kullanılacağını ve belge anlamanın ne zaman kullan
 | Desteklenen diller| [Daha fazla 73 dil için dil](/power-platform-release-plan/2021wave2/ai-builder/form-processing-new-language-support) desteği. | Modeller tüm Latin alfabesi dillerinde çalışır. İngilizceye ek olarak: Almanca, İsveççe, Fransızca, İspanyolca, İtalyanca ve Portekizce.|
 
 
-## <a name="see-also"></a>Ayrıca Bkz
+## <a name="see-also"></a>Ayrıca bkz.
 
 [Eğitim: AI Builder ile iş performansını geliştirme](/learn/paths/improve-business-performance-ai-builder/?source=learn)
 

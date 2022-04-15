@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Microsoft Teams kullanıcı etkinliği raporunu almayı ve kuruluşunuzdaki Teams etkinliğiyle ilgili içgörüler elde etmeyi öğrenin.
-ms.openlocfilehash: a5261261a1a1cb7b2039b646c3dbbd92c5f43688
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: cbd9bdb73dc69da5e36e0fb9c3ff2ff15b5269a4
+ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781665"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64882274"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-user-activity"></a>Yönetim merkezinde raporları Microsoft 365 - Microsoft Teams kullanıcı etkinliği
 
@@ -71,7 +71,7 @@ Veri kalitesini sağlamak için son üç güne ilişkin günlük veri doğrulama
 |Toplantılara katılan zamanlanmış yinelenen toplantılar  <br/> |Kullanıcının belirtilen zaman aralığında katıldığı yinelenen toplantıların sayısı.  <br/> |
 |Lisanslıdır  <br/> |Kullanıcı Teams kullanma lisansına sahipse seçilir. <br/>|
 |Diğer etkinlikler  <br/>|Kullanıcı etkindir ancak raporda sunulan eylem türlerinden (kanal iletilerini ve sohbet iletilerini gönderme veya yanıtlama, 1:1 aramaları ve toplantılarını zamanlama veya katılma) dışında başka etkinlikler gerçekleştirmiştir. Örnek eylemler, kullanıcı Teams durumunu veya Teams durum iletisini değiştirdiğinde veya kanal iletisi gönderisini açtığında ancak yanıt vermediğinde güncelleştirilir.  <br/>|
-|Sınıflandırılmamış toplantılar <br/>|Zamanlama, yinelenen veya geçici olarak sınıflandırılamayan. Bunlar sayı olarak kısadır ve çoğunlukla üzerinde oynanmış telemetri bilgileri nedeniyle tanımlanamaz. |
+
 
 ## <a name="make-the-user-specific-data-anonymous"></a>Kullanıcıya özgü verileri anonim hale getirme
 

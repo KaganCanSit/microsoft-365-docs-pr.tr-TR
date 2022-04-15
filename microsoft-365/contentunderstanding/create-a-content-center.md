@@ -1,5 +1,5 @@
 ---
-title: Microsoft SharePoint Syntex'da içerik merkezi oluşturma
+title: Microsoft SharePoint Syntex'de içerik merkezi oluşturma
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -13,15 +13,15 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Microsoft SharePoint Syntex'da içerik merkezi oluşturma hakkında bilgi SharePoint Syntex.
-ms.openlocfilehash: 0bab102ae440b8cf2c797458e7602c61794d0d06
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft SharePoint Syntex'da içerik merkezi oluşturmayı öğrenin.
+ms.openlocfilehash: c630bba8bafad8bcbf9749e7a4d08ae1e86f4d68
+ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63311599"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64882230"
 ---
-# <a name="create-a-content-center-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da içerik merkezi oluşturma
+# <a name="create-a-content-center-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'de içerik merkezi oluşturma
 
 
 </br>
@@ -30,61 +30,62 @@ ms.locfileid: "63311599"
 
 </br>
 
-Belge anlama modellerini oluşturmak ve yönetmek için, önce bir içerik merkezine ihtiyacınız vardır. İçerik merkezi, model oluşturma arabirimidir ve ayrıca yayımlanmış modellerin hangi belge kitaplıklarına uygulandığı hakkında bilgi içerir.
+Belge anlama modelleri oluşturmak ve yönetmek için önce bir içerik merkezi gerekir. İçerik merkezi model oluşturma arabirimidir ve ayrıca hangi belge kitaplıklarına yayımlanan modellerin uygulandığı hakkında bilgi içerir.
 
    ![Bir belge kitaplığı seçin.](../media/content-understanding/content-center-page.png)
 
-Kurulum sırasında varsayılan bir içerik merkezi [oluşturabilirsiniz](set-up-content-understanding.md). Ancak bir SharePoint yöneticisi gerektiğinde ek merkezler de oluşturabilir. Tek bir içerik merkezi tüm model etkinliğinin biriktirimini istediğiniz ortamlar için uygun olabilir, ancak modelleriyle ilgili farklı ihtiyaçları ve izin gereksinimleri olan, kurum içindeki birden çok bölüm için ek merkezleriniz olabilir.
+[Kurulum](set-up-content-understanding.md) sırasında varsayılan bir içerik merkezi oluşturursunuz. Ancak SharePoint yöneticisi gerektiğinde ek merkezler oluşturmayı da seçebilir. Tüm model etkinliklerinin toplanmasını istediğiniz ortamlar için tek bir içerik merkezi uygun olsa da, kuruluşunuzdaki birden çok departman için, modelleri için farklı gereksinimlere ve izin gereksinimlerine sahip olabilecek ek merkezleriniz olmasını isteyebilirsiniz.
 
-Buna ek olarak, bu içeriği SharePoint Syntex lisans satın almadan bu makaledeki yönergeleri kullanarak bir içerik merkezi oluşturabilirsiniz. Lisanssız kullanıcılar belge anlama modelleri oluşturabilir, ancak bunları belge kitaplığına uygulayamaz.
+Ayrıca, SharePoint Syntex denemek istiyorsanız, lisans satın almadan bu makaledeki yönergeleri kullanarak bir içerik merkezi oluşturabilirsiniz. Lisanssız kullanıcılar belge anlama modelleri oluşturabilir ancak bunları belge kitaplığına uygulayamaz.
 
 > [!NOTE]
-> Bir [Microsoft 365 Multi-Geo](../enterprise/microsoft-365-multi-geo.md) ortamında, merkezi konumunuz içinde tek bir varsayılan içerik merkeziniz varsa, modelin yalnızca o konumdan bir yuvarlanma etkinliği sebilirsiniz. Multi-Geo ortamında, şu anda grup sınırları genelinde model etkinliğinin bir rulosu alayamamaktadır. 
+> [Microsoft 365 Multi-Geo ortamında](../enterprise/microsoft-365-multi-geo.md), merkezi konumunuzda tek bir varsayılan içerik merkeziniz varsa, yalnızca bu konumdan model etkinliğinin bir toplu işlemini sağlayabilirsiniz. Şu anda Multi-Geo ortamında grup sınırları boyunca model etkinliğinin bir toplu işlemini alamazsınız. 
 
 ## <a name="create-a-content-center"></a>İçerik merkezi oluşturma
 
-Bir SharePoint yöneticisi, yönetim merkezi site hazırlama paneli aracılığıyla herhangi bir SharePoint sitesi oluşturacaktır gibi bir içerik merkezi sitesi oluşturabilir.[](/sharepoint/create-site-collection)
+bir SharePoint yöneticisi, yönetim merkezi sitesi sağlama paneli aracılığıyla [başka bir SharePoint sitesi oluşturmak](/sharepoint/create-site-collection) gibi bir içerik merkezi sitesi oluşturabilir.
 
-Yeni içerik merkezi oluşturmak için:
+Yeni bir içerik merkezi oluşturmak için:
 
-1. Microsoft 365 yönetim merkezi Yönetim Merkezi'nde <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">etkin SharePoint'> **gidin**</a>.
+1. Microsoft 365 yönetim merkezi <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**etkin siteler** > SharePoint yönetim merkezine</a> gidin.
 
-2. Etkin Siteler **sayfasında Oluştur'a** **tıklayın ve** Diğer seçenekler'i **seçin**.
+2. **Etkin Siteler** sayfasında **Oluştur'a** tıklayın ve **ardından Diğer seçenekler'i** seçin.
 
-3. Şablon **seçin menüsünde İçerik** **Merkezi'ne tıklayın**.
+3. **Şablon seçin** menüsünde **İçerik Merkezi'ni** seçin.
 
-4. Yeni site için bir Site Adı, **Birincil** yönetici **ve** Dil **girin**.</br>
+4. Yeni site için bir **Site Adı**, **Birincil yönetici** ve bir **Dil** sağlayın.</br>
 
    > [!NOTE] 
-   > Kullanılabilir dillerden herhangi birini işlemek için bir içerik merkezi sitesi seçin, ancak şu anda modellerin yalnızca İngilizce dosyalar için oluşturulana dikkat edin. Site oluşturulduktan sonra, diğer site şablonları gibi varsayılan site dilinin de düzenlenemez olduğunu unutmayın.
+   > Kullanılabilir dillerden herhangi birinde işlenecek bir içerik merkezi sitesi seçebilirsiniz, ancak şu anda modellerin yalnızca İngilizce dosyalar için oluşturulabileceğini unutmayın. Ayrıca, diğer site şablonları gibi varsayılan site dilinin de site oluşturulduktan sonra düzenlenemez olduğunu unutmayın.
 
-5. **Bitti'yi seçin**.
+5. **Bitti'yi** seçin.
  
-İçerik merkezi sitesi oluşturdukta, bu sitenin Site Yönetim <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**Merkezi'nde**</a> Etkin SharePoint gösterilir. 
+bir içerik merkezi sitesi oluşturduktan sonra, SharePoint yönetim merkezindeki <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**Etkin sitelerde**</a> listelendiğini görürsünüz. 
 
 ### <a name="give-access-to-additional-users"></a>Ek kullanıcılara erişim verme
  
-Siteyi oluşturdukktan sonra, ek kullanıcılara standart site izinleri modeli üzerinden [SharePoint veebilirsiniz](/sharepoint/modern-experience-sharing-permissions).
+Siteyi oluşturduktan sonra, standart [SharePoint site izinleri modeli](/sharepoint/modern-experience-sharing-permissions) aracılığıyla ek kullanıcılara siteye erişim verebilirsiniz.
 
-### <a name="roll-up-of-models-in-the-default-content-center"></a>Varsayılan içerik merkezinde modellerin yuvarlanma
+### <a name="roll-up-of-models-in-the-default-content-center"></a>Varsayılan içerik merkezinde modellerin toplu olarak alınması
 
-İçerik SharePoint Syntex, kurulum sırasında oluşturulan ilk içerik merkezi varsayılan *içerik merkezidir*. Sonraki içerik merkezleri oluşturulduktan sonra, modelleri varsayılan içerik merkezi görünümünde gösterilir.
+SharePoint Syntex'da, kurulum sırasında oluşturulan ilk *içerik merkezi varsayılan içerik merkezidir*. Sonraki içerik merkezleri oluşturulursa, modelleri varsayılan içerik merkezi görünümünde gösterilir.
 
-![Varsayılan içerik merkezinde Model kitaplığının ekran görüntüsü.](../media/content-understanding/model-library-default-content-center.png)
+![Varsayılan içerik merkezindeki Model kitaplığının ekran görüntüsü.](../media/content-understanding/model-library-default-content-center.png)
 
-Varsayılan **içerik** merkezi görünümündeki Modeller kitaplığı, oluşturulmuş modelleri ve form işleme modellerini anlamayla ilgili tüm belgenin özet görünümü için içerik merkezine göre oluşturulmuş modelleri gruplar.
+Varsayılan içerik merkezi görünümündeki **Modeller** kitaplığı, oluşturulan modelleri içerik merkezine göre gruplandırarak oluşturulan tüm belge anlama modellerinin ve form işleme modellerinin özet görünümünü oluşturur.
 
 > [!NOTE]
-> Belirlenen varsayılan içerik merkezini değiştiremezsiniz. Her zaman, kurulum sırasında oluşturulan ilk içerik merkezidir. 
+> Belirlenen varsayılan içerik merkezini değiştiremezsiniz. Her zaman kurulum sırasında oluşturulan ilk içerik merkezidir. 
 
-## <a name="see-also"></a>Ayrıca Bkz
+## <a name="see-also"></a>Ayrıca bkz.
+
 [Sınıflandırıcı oluşturma](create-a-classifier.md)
 
-[Ayıklaıcı oluşturma](create-an-extractor.md)
+[Ayıklayıcı oluşturma](create-an-extractor.md)
 
 [İçerik merkezi oluşturma](create-a-content-center.md)
 
-[Belgeyi anlamaya genel bakış](document-understanding-overview.md)
+[Belge anlamaya genel bakış](document-understanding-overview.md)
 
 [Form işleme modeli oluşturma](create-a-form-processing-model.md)
 

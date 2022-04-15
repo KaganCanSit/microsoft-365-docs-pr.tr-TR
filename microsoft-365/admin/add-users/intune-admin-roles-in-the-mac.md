@@ -1,5 +1,5 @@
 ---
-title: Intune yönetici rolleri Microsoft 365 yönetim merkezi
+title: Microsoft 365 yönetim merkezi Intune yönetici rolleri hakkında
 f1.keywords:
 - CSH
 ms.author: kwekua
@@ -17,33 +17,33 @@ ms.custom:
 - AdminTemplateSet
 - admindeeplinkMAC
 description: Yönetici rolleri, işletme işlevlerine eşlenir ve Yönetim merkezinde belirli görevleri yerine getirmek için izinler verir. Örneğin, Hizmet yöneticisi Microsoft’a destek bileti açar.
-ms.openlocfilehash: 650a46c20acaf207f757ebbbe8f8b7179c29158f
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 6ee5c8410b64bffe66ee69e5c4468a9eda601cd8
+ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983733"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64882208"
 ---
-# <a name="intune-admin-roles-in-the-microsoft-365-admin-center"></a>Intune yönetici rolleri Microsoft 365 yönetim merkezi
+# <a name="intune-admin-roles-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezi yönetici rollerini Intune
 
-Microsoft 365 veya Office 365 aboneliğiniz, Microsoft 365 yönetim merkezi kullanarak kuruluşta kullanıcılara atayabilirsiniz bir dizi <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">yönetici rolüyle Microsoft 365 yönetim merkezi</a>. Her bir yönetici rolü, işletme ile ilgili genel işlevlere yöneliktir ve kuruluşunuzdaki kişilere, yönetim merkezlerinde belirli görevler yapma izni verir.
+Microsoft 365 veya Office 365 aboneliğiniz, <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 yönetim merkezi</a> kullanarak kuruluşunuzdaki kullanıcılara atayabileceğiniz bir dizi yönetici rolüyle birlikte gelir. Her bir yönetici rolü, işletme ile ilgili genel işlevlere yöneliktir ve kuruluşunuzdaki kişilere, yönetim merkezlerinde belirli görevler yapma izni verir.
 
-Bu Microsoft 365 yönetim merkezi, bazı önemli rolleri yönetmenize Microsoft Intune sağlar. Bununla birlikte, bu roller Intune yönetim merkezinde kullanılabilen rollerin bir alt kümesidir. Bu program için ayrıntılı rol açıklamalarını Microsoft Intune? Daha fazla [bilgi için rol tabanlı erişim denetimi (RBAC) Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
+Microsoft 365 yönetim merkezi bazı Microsoft Intune rolleri yönetmenize olanak tanır. Ancak bu roller, Intune yönetim merkezinde bulunan rollerin bir alt kümesidir. Microsoft Intune için ayrıntılı rol açıklamalarını mı arıyorsunuz? [Microsoft Intune ile Rol tabanlı erişim denetimine (RBAC)](/mem/intune/fundamentals/role-based-access-control) göz atın.
 
-Kaynakta rol atama hakkında daha fazla bilgi <a href="https://go.microsoft.com/fwlink/p/?linkid=2097861" target="_blank">Microsoft 365 yönetim merkezi</a> bkz. [Yönetici rolleri atama](assign-admin-roles.md).
+<a href="https://go.microsoft.com/fwlink/p/?linkid=2097861" target="_blank">Microsoft 365 yönetim merkezinde</a> rol atama hakkında daha fazla bilgi için bkz. [Yönetici rolleri atama](assign-admin-roles.md).
 
-Ayrıntılar Microsoft 365 yönetim merkezi Roller'e **gidip** herhangi bir rolü seçerek ayrıntı bölmesini açabilirsiniz. Bu **rolü ataan** yöneticilerin yapma iznine sahip olduğu yöneticilerin ayrıntılı listesini görüntülemek için İzinler sekmesini seçin. Atanan **veya Atanan** yöneticiler **sekmesini seçerek** kullanıcıları rollere ekleyin.
+Microsoft 365 yönetim merkezi **Roller'e** gidip herhangi bir rolü seçerek ayrıntı bölmesini açabilirsiniz. Bu role atanan yöneticilerin neler yapmaya izninin olduğu ayrıntılı listeyi görüntülemek için **İzinler** sekmesini seçin. **Atanan** veya **Atanan yöneticiler** sekmesini seçerek kullanıcıları rollere ekleyin.
 
-## <a name="microsoft-intune-roles-available-in-the-microsoft-365-admin-center"></a>Microsoft Intune Microsoft 365 yönetim merkezi
+## <a name="microsoft-intune-roles-available-in-the-microsoft-365-admin-center"></a>Microsoft Intune Rolleri Microsoft 365 yönetim merkezi
 
 |Yönetici rolü     |Bu role kim atanmalıdır?  |
 |---------|---------|
-|Uygulama yöneticisi     |   Mobil uygulamalar için uygulama yaşam döngüsünü kullanan kullanıcılara Uygulama yöneticisi rolü ata, ilke tarafından yönetilen uygulamaları yapılandırarak cihaz bilgilerini ve yapılandırma profillerini görüntüler.  |
-|Yardım masası işleci     |   Kullanıcılara ve cihazlara uygulama ve ilke ataan kullanıcılara yardım masası operatörü rolü attayabilirsiniz. |
-|Intune rol yöneticisi    |   Intune rol yöneticisini, Intune izinlerini diğer yöneticilere atayacak ve özel ve yerleşik Intune rollerini yönetecek kullanıcılara attayabilirsiniz.   |
-|İlke ve profil yöneticisi     |   Kullanıcılara uyumluluk ilkesi, yapılandırma profilleri ve Apple kaydı yönetimi için ilke ve profil yöneticisi rolü attayabilirsiniz.   |
-|Salt okunur işleci     |   Kullanıcıları, cihazları, kayıt ayrıntılarını ve yapılandırmaları yalnızca görüntüley kullanıcılara salt okunur işleç rolü attayabilirsiniz.   |
-|Okul yöneticisi     |   Eğitim için Intune'da okul yöneticisi rolünü Windows 10 iOS cihazlarını, uygulamalarını ve yapılandırmalarını yönetmek için kullanıcılara tam erişim verin.   |
+|Uygulama yöneticisi     |   Uygulama yöneticisi rolünü mobil uygulamalar için uygulama yaşam döngüsünü yöneten, ilkeyle yönetilen uygulamaları yapılandıran ve cihaz bilgilerini ve yapılandırma profillerini görüntüleyen kullanıcılara atayın.  |
+|Yardım masası operatörü     |   Kullanıcılara ve cihazlara uygulama ve ilke atayan kullanıcılara yardım masası operatörü rolünü atayın. |
+|Intune rol yöneticisi    |   Intune rol yöneticisini, diğer yöneticilere Intune izinleri atayabilen ve özel ve yerleşik Intune rollerini yönetebilen kullanıcılara atayın.   |
+|İlke ve profil yöneticisi     |   Uyumluluk ilkesini, yapılandırma profillerini ve Apple kaydını yöneten kullanıcılara ilke ve profil yöneticisi rolünü atayın.   |
+|Salt okunur işleç     |   Salt okunur işleç rolünü yalnızca kullanıcıları, cihazları, kayıt ayrıntılarını ve yapılandırmaları görüntüleyebilen kullanıcılara atayın.   |
+|Okul yöneticisi     |   Eğitim için Intune'da Windows 10 ve iOS cihazlarını, uygulamalarını ve yapılandırmalarını yönetmek için kullanıcılara tam erişim için okul yöneticisi rolünü atayın.   |
 
 ## <a name="delegated-administration-for-microsoft-partners"></a>Microsoft İş ortakları için temsilci yönetim
 
@@ -59,6 +59,6 @@ Bir iş ortağı şu rolleri atayabilir:
   
 ## <a name="related-content"></a>İlgili içerik
 
-[Yönetici Microsoft 365 hakkında](about-admin-roles.md) (makale)\
+[Microsoft 365 yönetici rolleri hakkında](about-admin-roles.md) (makale)\
 [Yönetici rollerini atama](assign-admin-roles.md) (makale)\
-[Çalışma Microsoft 365 yönetim merkezi](../activity-reports/activity-reports.md) raporları (makale)
+[Microsoft 365 yönetim merkezi etkinlik raporları](../activity-reports/activity-reports.md) (makale)

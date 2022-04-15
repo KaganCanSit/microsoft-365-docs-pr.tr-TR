@@ -1,5 +1,5 @@
 ---
-title: SharePoint Syntex'da bir modele bekletme SharePoint Syntex
+title: SharePoint Syntex'da modele bekletme etiketi uygulama
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -12,15 +12,15 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: yeni bir e-SharePoint Syntex'de modele bekletme SharePoint Syntex.
-ms.openlocfilehash: 112b48af5e07d09faab61bd656c5629b449d9a1c
-ms.sourcegitcommit: 400ef9ac34247978e3de7ecc0b376c4abb6c99d8
+description: SharePoint Syntex'da bir modele bekletme etiketi uygulamayı öğrenin.
+ms.openlocfilehash: 17bfc0121d18f30b03cc42585cb214b649597ff6
+ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "63010879"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64882516"
 ---
-# <a name="apply-a-retention-label-to-a-model-in-sharepoint-syntex"></a>SharePoint Syntex'da bir modele bekletme SharePoint Syntex
+# <a name="apply-a-retention-label-to-a-model-in-sharepoint-syntex"></a>SharePoint Syntex'da modele bekletme etiketi uygulama
 
 </br>
 
@@ -29,107 +29,108 @@ ms.locfileid: "63010879"
 </br>
 
 
-Microsoft web sitesinde bir [modele](../compliance/retention.md) kolayca bekletme etiketi SharePoint Syntex. Bunu hem belge anlama hem de form işleme modelleri için yapabilirsiniz.
+Microsoft SharePoint Syntex'da modele kolayca [bekletme etiketi](../compliance/retention.md) uygulayabilirsiniz. Bunu hem belge anlama hem de form işleme modelleri için yapabilirsiniz.
 
-Bekletme etiketleri, modellerinizi tanımları olan belgelere bekletme ayarları uygulamanıza izin sağlar.  Örneğin, modelinizin yalnızca belge kitaplığınıza yüklenen Sigorta bildirimi belgelerini  tanımlamasını değil, ayrıca bu belgeler belirtilen süre boyunca (örneğin, sonraki beş ay)  belge kitaplığından silinemez.
+Bekletme etiketleri, modellerinizin tanımladığınız belgelere bekletme ayarları uygulamanıza olanak tanır.  Örneğin, modelinizin yalnızca belge kitaplığınıza yüklenen *Sigorta bildirimi* belgelerini tanımlamasını değil, aynı zamanda bu belgelerin belirtilen süre boyunca belge kitaplığından silinememesi için (örneğin, sonraki beş ay) onlara bir *İş* saklama etiketi uygulamasını istiyorsunuz.
 
-Modelinizin giriş sayfasındaki model ayarları aracılığıyla modelinize önceden var olan bir bekletme etiketi uygulayabilirsiniz. 
+Modelinizin giriş sayfasındaki model ayarlarınızdan modelinize önceden var olan bir bekletme etiketi uygulayabilirsiniz. 
 
 > [!Important]
-> Bekletme etiketlerinin belgenize uygulanabilecek anlama modellerinin olması için, etiketlerin belge kitaplığında [](../compliance/file-plan-manager.md#create-retention-labels) [oluşturularak](../compliance/create-apply-retention-labels.md#how-to-publish-retention-labels) Microsoft 365 uyumluluk merkezi.
+> Bekletme etiketlerinin belge anlama modellerinize uygulanabilmek için Microsoft 365 uyumluluk merkezi [oluşturulması](../compliance/file-plan-manager.md#create-retention-labels) ve [yayımlanması](../compliance/create-apply-retention-labels.md#how-to-publish-retention-labels) gerekir.
 
 ## <a name="to-add-a-retention-label-to-a-document-understanding-model"></a>Belge anlama modeline bekletme etiketi eklemek için
 
-1. Model giriş sayfasında Model **ayarları'ı seçin**.</br>
-2. **Model ayarları'nın** **Güvenlik** ve uyumluluk bölümünde, modele uygulayabilecek  bekletme etiketlerinin listesini görmek için Bekletme etiketi menüsünü seçin.</br>
+1. Model giriş sayfasında **Model ayarları'nı** seçin.</br>
+2. **Model ayarları'ndaki** **Güvenlik ve uyumluluk** bölümünde **Bekletme etiketi** menüsünü seçerek modele uygulayacağınız bekletme etiketlerinin listesini görebilirsiniz.</br>
  ![Bekletme etiketi menüsü.](../media/content-understanding/retention-labels-menu.png)</br> 
-3. Modele uygulamak istediğiniz bekletme etiketini seçin ve ardından Kaydet'i **seçin**.</br>
+3. Modele uygulamak istediğiniz bekletme etiketini seçin ve ardından **Kaydet'i** seçin.</br>
 
-Bekletme etiketini modelinize kaydettikten sonra, aşağıdakilere uygulayabilirsiniz:
+Bekletme etiketini modelinize uyguladıktan sonra şunun için uygulayabilirsiniz:
 - Yeni belge kitaplığı
 - Modelin zaten uygulandığı belge kitaplığı
  
 ## <a name="apply-the-retention-label-to-a-document-library-to-which-the-model-is-already-applied"></a>Bekletme etiketini modelin zaten uygulandığı belge kitaplığına uygulama
 
-Belge anlama modeliniz bir belge kitaplığına zaten uygulanmışsa, bekletme etiketi güncelleştirmenizi belge kitaplığına uygulamak için şunları yapabilirsiniz:</br>
+Belge anlama modeliniz bir belge kitaplığına zaten uygulanmışsa, bekletme etiketi güncelleştirmenizi belge kitaplığına uygulamak üzere eşitlemek için aşağıdakileri yapabilirsiniz:</br>
 
-1. Model giriş sayfasında, Bu **modelin** olduğu kitaplıklar bölümünde, bekletme etiketi güncelleştirmesini uygulamak istediğiniz belge kitaplığını seçin. </br> 
-2. **Eşitle'yi seçin**. </br>
+1. Modelinizin giriş sayfasındaki **Bu modelle kitaplıklar** bölümünde, bekletme etiketi güncelleştirmesini uygulamak istediğiniz belge kitaplığını seçin. </br> 
+2. **Eşitle'yi** seçin. </br>
  ![Eşitleme modeli.](../media/content-understanding/sync-model.png)</br> 
 
 
-Güncelleştirmeyi uyguladıktan ve modelinize eşitledikten sonra, aşağıdaki işlemi yaparak bunun uygulandığını onaylayın:
+Güncelleştirmeyi uyguladıktan ve modelinizle eşitledikten sonra, aşağıdakileri yaparak uygulandığını onaylayabilirsiniz:
 
-1. İçerik merkezinde, Bu **modelin** uygulandığı kitaplıklar bölümünde, güncelleştirilmiş modelinizin uygulandığı kitaplıma tıklayın. </br>
-2. Belge kitaplığı görünümde, model özelliklerini kontrol etmek için bilgi simgesini seçin.</br>  
-3. Etkin **modeller listesinde** güncelleştirilmiş modelinizi seçin.</br>
-4. Bekletme **etiketi bölümünde** , uygulanan bekletme etiketinin adını göreceğiz.</br>
-
-
-Modelinizin belge kitaplığınıza gelen görünüm sayfasında yeni bir **Bekletme etiketi** sütunu görüntülenir.  Modeliniz, ait olduğu içerik türüne ait olarak tanımları dosyaları sınıflandırarak kitaplık görünümünde listeleye kadar, Bekletme etiketi sütunu model üzerinden etikete uygulanmış olan bekletme etiketinin adını da gösterir.
+1. İçerik merkezindeki **Bu modelle kitaplıklar** bölümünde, güncelleştirilmiş modelinizin uygulandığı kitaplığa tıklayın. </br>
+2. Belge kitaplığı görünümünüzde, model özelliklerini denetlemek için bilgi simgesini seçin.</br>  
+3. **Etkin modeller** listesinde güncelleştirilmiş modelinizi seçin.</br>
+4. **Bekletme etiketi** bölümünde, uygulanan bekletme etiketinin adını görürsünüz.</br>
 
 
-Örneğin, *modelin tanımları* olan tüm Sigorta bildirimi belgelerine İş bekletme etiketi  de uygulanır ve bu şekilde beş ay süreyle belge kitaplığından silinmeleri önlenmiş olur. Belge kitaplığından dosyayı silebilir bir girişimde bulunsa, uygulanan bekletme etiketi nedeniyle dosyaya izin verilme olmadığını söyleyen bir hata görüntülenir.
+Belge kitaplığınızdaki modelinizin görünüm sayfasında yeni bir **Bekletme etiketi** sütunu görüntülenir.  Modeliniz, tanımladığı dosyaları içerik türüne ait olarak sınıflandırır ve kitaplık görünümünde listelerken, Bekletme etiketi sütunu model aracılığıyla uygulanan bekletme etiketinin adını da görüntüler.
+
+
+Örneğin, modelinizin belirlediği tüm *Sigorta bildirimi* belgelerinde de *İş* saklama etiketi uygulanır ve bu da belge kitaplığından beş ay boyunca silinmesini önler. Dosyayı belge kitaplığından silme girişiminde bulunulması durumunda, uygulanan bekletme etiketi nedeniyle dosyaya izin verilmediğini belirten bir hata görüntülenir.
 
 ## <a name="to-add-a-retention-label-to-a-form-processing-model"></a>Form işleme modeline bekletme etiketi eklemek için
 
 > [!Important]
-> Bekletme etiketlerinin form işleme modelinize uygulanabilecek olması için, etiketlerin oluşturması ve yazdırması [](../compliance/file-plan-manager.md#create-retention-labels) Microsoft 365 uyumluluk merkezi.[](../compliance/create-apply-retention-labels.md#how-to-publish-retention-labels)
+> Bekletme etiketlerinin form işleme modelinize uygulanabilmek için Microsoft 365 uyumluluk merkezi [oluşturulması](../compliance/file-plan-manager.md#create-retention-labels) ve [yayımlanması](../compliance/create-apply-retention-labels.md#how-to-publish-retention-labels) gerekir.
 
-Bir model oluştururken bir form işleme modeline bekletme etiketi uygulayabilir veya bunu var olan bir modele uygulayabilirsiniz.
+Bir model oluştururken form işleme modeline bekletme etiketi uygulayabilir veya var olan bir modele uygulayabilirsiniz.
 
-### <a name="to-add-a-retention-label-when-you-create-a-form-processing-model"></a>Form işleme modeli  oluşturma sırasında bekletme etiketi eklemek için
+### <a name="to-add-a-retention-label-when-you-create-a-form-processing-model"></a>Form işleme modeli oluştururken bekletme etiketi eklemek için
 
-1. Yeni bir [form işleme modeli oluştururken Gelişmiş ayarlar'ı](./create-a-form-processing-model.md) <b>seçin.</b>
-2. Gelişmiş <b>ayarlar'da</b>, <b>Bekletme etiketi</b> bölümünde, menüyü seçin ve sonra modele uygulamak istediğiniz bekletme etiketini seçin.</b>
+1. [Yeni bir form işleme modeli oluştururken](./create-a-form-processing-model.md) <b>Gelişmiş ayarlar'ı seçin.</b>
+2. <b>Gelişmiş ayarlar'daki</b> <b>Bekletme etiketi</b> bölümünde menüyü ve ardından modele uygulamak istediğiniz bekletme etiketini seçin.</b>
 
  
-     ![Yeni form işleme modeline ekleyin.](../media/content-understanding/retention-label-forms.png)</br>
+     ![Yeni bir form işleme modeline ekleyin.](../media/content-understanding/retention-label-forms.png)</br>
 
-3.  Kalan model ayarlarınızı tamamlandıktan sonra modelinizi oluşturmak için <b>Oluştur'a</b> tıklayın.
+3.  Kalan model ayarlarınızı tamamladıktan sonra modelinizi oluşturmak için <b>Oluştur'u</b> seçin.
 
 ### <a name="to-add-a-retention-label-to-an-existing-form-processing-model"></a>Mevcut form işleme modeline bekletme etiketi eklemek için
 
-Mevcut form işleme modeline farklı şekillerde bekletme etiketi  ekleyebilirsiniz:
-- Belge kitaplığında Otomatikleştir menüsü aracılığıyla
-- Belge kitaplığında Etkin model ayarları aracılığıyla 
+Mevcut form işleme modeline bekletme etiketi eklemek için farklı yöntemler kullanabilirsiniz:
+- Belge kitaplığındaki Otomatikleştir menüsü aracılığıyla
+- Belge kitaplığındaki Etkin model ayarları aracılığıyla 
 
 
-#### <a name="to-add-a-retention-label-to-an-existing-form-processing-model-through-the-automate-menu"></a>Var olan form işleme modeline Otomatikleştir menüsü aracılığıyla bekletme etiketi eklemek için
+#### <a name="to-add-a-retention-label-to-an-existing-form-processing-model-through-the-automate-menu"></a>Otomatikleştir menüsü aracılığıyla mevcut form işleme modeline bekletme etiketi eklemek için
 
-Modelin uygulandığı belge kitaplığında Otomatikleştir menüsü aracılığıyla sahip olduğunuz mevcut form işleme modeline bir bekletme etiketi ekleyebilirsiniz.
+Sahip olduğunuz mevcut form işleme modeline, modelin uygulandığı belge kitaplığındaki Otomatikleştir menüsü aracılığıyla bekletme etiketi ekleyebilirsiniz.
 
 
-1. Form işleme modelinin uygulandığı belge kitaplığında Otomatik başlat menüsünü seçin, <b>AI Oluşturucusu'nu</b> seçin ve sonra da Form işleme modeli ayrıntılarını <b>görüntüle'yi seçin</b>.<b></b>
+1. Form işleme modelinin uygulandığı belge kitaplığınızda <b>Otomatikleştir</b> menüsünü, <b>AI Builder'ı</b> ve ardından <b>Form işleme modeli ayrıntılarını görüntüle'yi</b> seçin.
 
-   ![Menüyü otomatikleştir'i seçin.](../media/content-understanding/automate-menu.png)</br>
+   ![Otomatikleştir menüsü.](../media/content-understanding/automate-menu.png)</br>
 
-2. Model ayrıntılarında, <b>Bekletme Etiketi bölümünde</b> , uygulamak istediğiniz bekletme etiketini seçin.  Ardından <b>Kaydet'i seçin</b>.
+2. Model ayrıntılarındaki <b>Bekletme Etiketi</b> bölümünde, uygulamak istediğiniz bekletme etiketini seçin.  Ardından <b>Kaydet'i</b> seçin.
 
-     ![Varolan bir form işleme modeline ekleme.](../media/content-understanding/retention-label-model-details.png)</br> 
+     ![Varolan bir form işleme modeline ekleyin.](../media/content-understanding/retention-label-model-details.png)</br> 
 
 #### <a name="to-add-a-retention-label-to-an-existing-form-processing-model-in-the-active-model-settings"></a>Etkin model ayarlarında mevcut form işleme modeline bekletme etiketi eklemek için
 
-Modelin uygulandığı belge kitaplığında Etkin model ayarlarıyla sahip olduğunuz mevcut form işleme modeline bekletme etiketi ekleyebilirsiniz.
+Sahip olduğunuz mevcut form işleme modeline, modelin uygulandığı belge kitaplığındaki Etkin model ayarları aracılığıyla bekletme etiketi ekleyebilirsiniz.
 
-1. Modelin SharePoint olan belge kitaplığında, Etkin modelleri görüntüle simgesini seçin <b>ve ardından Etkin</b> modelleri <b>görüntüle'yi seçin</b>.</b>
+1. Modelin uygulandığı SharePoint belge kitaplığında <b>Etkin modelleri görüntüle</b> simgesini ve ardından <b>Etkin modelleri görüntüle'yi</b> seçin.</b>
 
    ![Etkin modelleri görüntüleme.](../media/content-understanding/info-du.png)</br> 
 
-2. Etkin <b>modellerde</b>, bekletme etiketini uygulamak istediğiniz form işleme modelini seçin.
+2. <b>Etkin modeller'de</b>, bekletme etiketini uygulamak istediğiniz form işleme modelini seçin.
 
      ![Model ayrıntıları.](../media/content-understanding/retention-label-model-details.png)</br> 
 
 
-3. Model ayrıntılarında, <b>Bekletme Etiketi bölümünde</b> , uygulamak istediğiniz bekletme etiketini seçin.  Ardından <b>Kaydet'i seçin</b>.
+3. Model ayrıntılarındaki <b>Bekletme Etiketi</b> bölümünde, uygulamak istediğiniz bekletme etiketini seçin.  Ardından <b>Kaydet'i</b> seçin.
 
 > [!NOTE]
-> Düzenlenebilir olması için model ayarları bölmesinin model sahibi siz olun. 
+> Model ayarları bölmesinin düzenlenebilir olması için model sahibi olmanız gerekir. 
 
 
-## <a name="see-also"></a>Ayrıca Bkz
+## <a name="see-also"></a>Ayrıca bkz.
+
 [Sınıflandırıcı oluşturma](create-a-classifier.md)
 
-[Ayıklaıcı oluşturma](create-an-extractor.md)
+[Ayıklayıcı oluşturma](create-an-extractor.md)
 
-[Belge Anlama'ya genel bakış](document-understanding-overview.md)
+[Document Understanding'e genel bakış](document-understanding-overview.md)

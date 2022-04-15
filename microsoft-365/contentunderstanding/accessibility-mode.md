@@ -1,5 +1,5 @@
 ---
-title: Erişilebilirlik modu'SharePoint Syntex
+title: SharePoint Syntex'de erişilebilirlik modu
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -8,60 +8,60 @@ ms.topic: article
 ms.prod: microsoft-365-enterprise
 search.appverid: ''
 ms.localizationpriority: medium
-description: Eğitim ve çalışma zamanlarında eğitim ve çalışma modelleriyle çalışırken erişilebilirlik özellikleri modunu SharePoint Syntex.
-ms.openlocfilehash: 09fd16259a44a2aa4d1b82dca49fffa76065690b
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+description: SharePoint Syntex modellerini eğitirken ve modellerle çalışırken erişilebilirlik özellikleri modunu kullanmayı öğrenin.
+ms.openlocfilehash: 567abb862af27457c1eb9395e32bf68d98446887
+ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63419065"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64882340"
 ---
-# <a name="accessibility-mode-in-sharepoint-syntex"></a>Erişilebilirlik modu'SharePoint Syntex
+# <a name="accessibility-mode-in-sharepoint-syntex"></a>SharePoint Syntex'de erişilebilirlik modu
 
-Diğer [SharePoint Syntex](index.md), kullanıcılar örnek belgelerle çalışırken tüm model eğitimi aşamalarında (etiket, eğit, test) erişilebilirlik modunu açabilirsiniz. Erişilebilirlik modunu kullanmak, görme zoru olan kullanıcıların, belge görüntüleyicisinde gezinen ve öğeleri etiketleyene kadar daha kolay klavye erişilebilirliğine sahip olmasına yardımcı olabilir.
+[SharePoint Syntex'da](index.md) kullanıcılar örnek belgelerle çalışırken model eğitiminin (etiket, eğit, test) tüm aşamalarında erişilebilirlik modunu açabilir. Erişilebilirlik modunu kullanmak, görme bozukluğu olan kullanıcıların belge görüntüleyicisinde gezinirken ve öğeleri etiketlediklerinde klavye erişilebilirliğini kolaylaştırmalarına yardımcı olabilir.
 
-Bu, kullanıcıların klavyelerini kullanarak belge görüntüleyicisinde metin içinde gezinmelerine ve yalnızca seçili değerlerin değil, aynı zamanda seçili metinden etiket kullanımının veya tahmini etiket değerlerinin anlatımını dinlemek için, modeli ek örnek belgelerle eğitmelerine yardımcı olur. 
+Bu, kullanıcıların klavyelerini kullanarak belge görüntüleyicisindeki metinlerde gezinmelerine ve yalnızca seçili değerlerin değil, aynı zamanda eylemlerin (seçili metinden etiketleme veya kaldırma gibi) anlatımını veya siz modeli ek örnek belgelerle eğitirken tahmin edilen etiket değerlerini duymalarına yardımcı olur. 
 
 
-![Erişilebilirlik modu'dur.](../media/content-understanding/accessibility-mode.png)
+![Erişilebilirlik modu.](../media/content-understanding/accessibility-mode.png)
 
 ## <a name="requirements"></a>Gereksinimler
 
-Anlatım sesini duymak için ekran okuyucusu ayarlarınıza bağlı olarak Ekran Okuyucusu [](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) uygulamasını Windows 10.
+Anlatımın sesini duymak için, Windows 10 sisteminizdeki [Ekran Okuyucusu](https://support.microsoft.com/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) ayarlarınızda Ekran Okuyucusu Uygulamasını açtığınızdan emin olun.
 
-![Ekran Okuyucusu'mu açma.](../media/content-understanding/narrator-settings.png)
+![Ekran Okuyucusu'nu açın.](../media/content-understanding/narrator-settings.png)
 
 ## <a name="labeling-for-keyboard-users"></a>Klavye kullanıcıları için etiketleme
 
-Erişilebilirlik modunu kullanan klavye kullanıcıları için, görüntüleyicide örnek bir belgede metin etiketliyebilirsiniz, aşağıdaki tuşları kullanabilirsiniz:
+Erişilebilirlik modunu kullanan klavye kullanıcıları için, görüntüleyicideki örnek bir belgede metin etiketlediyseniz aşağıdaki tuşları kullanabilirsiniz:
 
-- Sekme: Sizi ileri taşır ve bir sonraki sözcüğü seçer.
+- Sekme: Sizi ileri taşır ve sonraki sözcüğü seçer.
 - Sekme + Shift: Sizi geriye taşır ve önceki sözcüğü seçer.
-- Enter: Seçili sözcükten bir etiket kaldırır veya etiket kaldırır.
-- Sağ ok: Seçili bir sözcükte tek tek karakterler arasında ilerlersiniz.
-- Sol ok: Seçili bir sözcükte tek tek karakterler arasında geriye doğru ilerlersiniz.
+- Enter: Seçili sözcükten bir etiketi etiketle veya kaldırır.
+- Sağ ok: Seçili sözcükteki tek tek karakterler arasında ilerlemenizi sağlar.
+- Sol ok: Seçili sözcükteki tek tek karakterler arasında geriye doğru hareket eder.
 
 > [!NOTE]
-> Tek bir etiket için birden çok sözcük etiketliysiniz, her sözcüğü etiketlemelisiniz.
+> Tek bir etiket için birden çok sözcüğü etiketlediyseniz, her sözcüğü etiketlemeniz gerekir.
 
 
 ## <a name="narration"></a>Anlatım
 
-Erişilebilirlik modunu kullanan Ekran Okuyucusu kullanıcıları için, klavye kullanıcılarının görüntüleyicide örnek belgede gezinmeleri için açıklanan klavye gezintisini kullanın.
+Erişilebilirlik modunu kullanan Ekran Okuyucusu kullanıcıları için, klavye kullanıcıları için açıklanan klavye gezintisinin aynısını kullanarak görüntüleyicideki örnek belgeyi gözden geçirin.
 
-Örnek belgelerde ve etiket dizesi değerleri arasında gezinken Ekran Okuyucusu kullanıcıya aşağıdaki ses istemlerini verir:
+Örnek belgeler ve etiket dizesi değerleri arasında gezinirken Ekran Okuyucusu kullanıcıya aşağıdaki ses istemlerini verir:
 
-- Belge görüntüleyicisi arasında gezinmek için klavyeyi kullanırsanız, Ekran Okuyucusu sesi seçilen dizeyi gösterir.
-- Seçili bir dizede, siz sol veya sağ ok tuşlarını kullanarak seçtiğiniz zaman Ekran Okuyucusu sesi dizedeki her karakterin durumunu gösterir.
-- Etiketlenmiş bir dizeyi alırsanız, Ekran Okuyucusu değeri ve "etiketli" olarak okur.  Örneğin, etiket değeri "Contoso" ise, "Maliyetoso etiketli" olur. 
-- Eğitim sekmesinde, belge görüntüleyicisinde yalnızca öngörülen bir dizeyi seçersiniz, Ekran Okuyucusu sesi değeri ve "tahmin edilen" durumuna döndürür. Bu durum, eğitim dosyada kullanıcı tarafından etiketlenmiş olan değerle eşleşmez.
-- Eğitim sekmesinde, belge görüntüleyicisinde etiketlenmiş ve öngörülen bir dize seçersiniz, Ekran Okuyucusu sesi değeri belirtir ve ardından "etiketli ve tahmini" olur. Bu durum, eğitim başarılı olduğunda ve öngörülen değerle kullanıcı etiketi arasında bir eşleşme olduğunda ortaya çıkar.
+- Belge görüntüleyicisinde gezinmek için klavyeyi kullandığınızda Ekran Okuyucusu sesi seçili dizeyi belirtir.
+- Seçili dizede Ekran Okuyucusu sesi, siz seçerken sol veya sağ ok tuşlarını kullanarak dizedeki her karakteri belirtir.
+- Etiketlenmiş bir dize seçerseniz Ekran Okuyucusu değeri belirtir ve ardından "etiketlenir".  Örneğin, etiket değeri "Contoso" ise , "Costoso etiketli" durumunu belirtir. 
+- Eğitim sekmesinde, belge görüntüleyicisinde yalnızca tahmin edilen bir dize seçerseniz Ekran Okuyucusu sesi değeri belirtir ve ardından "tahmin edilir". Bu durum, eğitim dosyada kullanıcı tarafından etiketlenen değerle eşleşmeyen bir değeri tahmin ettiğinde oluşur.
+- Eğitim sekmesinde, belge görüntüleyicisinde etiketlenmiş ve tahmin edilmiş bir dize seçerseniz Ekran Okuyucusu sesi değeri belirtir ve ardından "etiketlenir ve tahmin edilir". Eğitim başarılı olduğunda ve tahmin edilen değerle kullanıcı etiketi arasında bir eşleşme olduğunda bu durum oluşur.
 
-Görüntüleyicide bir dize etiketli veya bir etiket kaldırıldıktan sonra, Ekran Okuyucusu siz çıkmadan önce değişikliklerinizi kaydetmeniz için sizi uyaracak.
+Bir dize etiketlendikten veya görüntüleyicide bir etiket kaldırıldıktan sonra Ekran Okuyucusu sesi, çıkmadan önce değişikliklerinizi kaydetmeniz için sizi uyarır.
 
-## <a name="see-also"></a>Ayrıca Bkz
+## <a name="see-also"></a>Ayrıca bkz.
 
-[Ayıklaıcı oluşturma](create-an-extractor.md)
+[Ayıklayıcı oluşturma](create-an-extractor.md)
 
 [Sınıflandırıcı oluşturma](create-a-classifier.md)
 

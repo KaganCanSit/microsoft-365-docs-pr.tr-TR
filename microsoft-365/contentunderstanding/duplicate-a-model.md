@@ -1,5 +1,5 @@
 ---
-title: Microsoft SharePoint Syntex'da modeli çoğaltma
+title: Microsoft SharePoint Syntex'da modeli yineleme
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -12,57 +12,58 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: medium
-description: Microsoft SharePoint Syntex'da bir belge anlama modelini nasıl ve neden SharePoint Syntex.
-ms.openlocfilehash: 979d5b2cddfa7c565abade7ac66c06e3053bbe4d
-ms.sourcegitcommit: 40f89c46032ea33de25417106f39cbeebef5a049
+description: Microsoft SharePoint Syntex'da belge anlama modelini nasıl ve neden çoğaltacağınızı öğrenin.
+ms.openlocfilehash: 56e05389cad4ad9010324a3efd48bf679700be76
+ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2022
-ms.locfileid: "63419051"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64882252"
 ---
-# <a name="duplicate-a-model-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da modeli çoğaltma
+# <a name="duplicate-a-model-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da modeli yineleme
 
-Belgeyi anlama modelini çoğaltmak, yeni bir model oluşturmanız gerekirse size zaman ve emek tasarrufu sağlar ve var olan bir modelin size gerekenlere çok ben ben olduğunu bilirsiniz.
+Yeni bir model oluşturmanız gerekiyorsa ve mevcut bir modelin ihtiyacınız olan modele çok benzer olduğunu biliyorsanız, belge anlama modelinin çoğaltılarak zaman ve çabadan tasarruf etmenize neden olabilir.
 
-Örneğin, "Sözleşmeler" adında var olan bir model, üzerinde çalışmak zorunda olduğunuz dosyaları sınıflara sınıflardır. Yeni modeliniz var olan verilerin bir'ini ayıklar, ancak bazı ek verileri ayıklamak için güncelleştirilmiş olması gerekir. Sıfırdan yeni bir model oluşturmak ve bu modeli eğitime vermek yerine, yinelenen model özelliğini kullanarak Sözleşmeler modelinin bir kopyasını elde edersiniz. Bu, örnek dosyalar ve varlık ayıklama öğeleri gibi tüm ilişkili eğitim öğelerini de kopyalar.
+Örneğin, "Sözleşmeler" adlı mevcut bir model, çalışmanız gereken dosyaları sınıflandırır. Yeni modeliniz mevcut verilerin bir kısmını ayıklar, ancak bazı ek verileri ayıklamak için güncelleştirilmiş olması gerekir. Sıfırdan yeni bir model oluşturup eğitmek yerine, yinelenen model özelliğini kullanarak Sözleşmeler modelinin bir kopyasını oluşturabilirsiniz. Bu kopya, örnek dosyalar ve varlık ayıklayıcıları gibi tüm ilişkili eğitim öğelerini de kopyalar.
 
-Modeli yineledikten sonra yeniden adlandırdıktan (örneğin, "Sözleşme Yenilemeleri" olarak) sonra modelin güncelleştirmelerini de abilirsiniz. Örneğin, ihtiyaç olmadığınız mevcut ayıklanan alanlardan bazılarını kaldırmayı seçebilir ve modeli yenisini ayıkla (örneğin, "Yenileme tarihi") için eğitebilirsiniz.
+Modeli çoğalttığınızda, modeli yeniden adlandırdıktan sonra (örneğin, "Sözleşme Yenilemeleri" olarak), bu modelde güncelleştirmeler yapabilirsiniz. Örneğin, ihtiyacınız olmayan mevcut ayıklanan alanlardan bazılarını kaldırmayı seçebilir ve ardından modeli yenisini ayıklamak için eğitebilirsiniz (örneğin, "Yenileme tarihi").
 
-## <a name="duplicate-a-model"></a>Modeli çoğaltma
+## <a name="duplicate-a-model"></a>Modeli yineleme
 
-Belge anlama modelini çoğaltmak için bu adımları izleyin.
+Belge anlama modelini yinelemek için bu adımları izleyin.
 
-1. Model listenizi görmek için içerik **merkezinde** Modeller'i seçin.
+1. model listenizi görmek için içerik merkezinde **Modeller'i** seçin.
 
-2. Modeller **sayfasında** , çoğaltmak istediğiniz modeli seçin.
+2. **Modeller** sayfasında, çoğaltmak istediğiniz modeli seçin.
 
-3. Şeridi veya Eylemleri göster düğmesini **kullanarak** (model adının yanında) Çoğalt'ı **seçin**.</br>
+3. Şeridi veya **Eylemleri göster** düğmesini (model adının yanında) kullanarak **Çoğalt'ı** seçin.</br>
 
-    ![Yinele seçenekleri vurgulanmış seçili bir modeli gösteren Modeller sayfasının ekran görüntüsü.](../media/content-understanding/select-model-duplicate-both.png) </br>
+    ![Yinelenen seçenekler vurgulanmış olarak seçili modeli gösteren Modeller sayfasının ekran görüntüsü.](../media/content-understanding/select-model-duplicate-both.png) </br>
 
-4. Çoğalt **modeli panelinde** :
+4. **Yinelenen model** panelinde:
 
    a. **Ad'ın** altında, çoğaltmak istediğiniz modelin yeni adını girin.</br>
 
-    ![Çoğalt modeli panelini gösteren ekran görüntüsü.](../media/content-understanding/duplicate-model-panel.png) </br>
+    ![Yinelenen model panelini gösteren ekran görüntüsü.](../media/content-understanding/duplicate-model-panel.png) </br>
 
-   b. **Açıklama'nın** altında, yeni modelinizin açıklamasını ekleyin.
+   b. **Açıklama'nın** altında yeni modelinizin açıklamasını ekleyin.
 
-   c. (İsteğe bağlı) Gelişmiş **ayarlar'ın** altında, var olan bir içerik türünü ilişkilendirmek isteyip [istemiyorsanız bunu seçin](/sharepoint/governance/content-type-and-workflow-planning#content-type-overview).
+   c. (İsteğe bağlı) **Gelişmiş ayarlar'ın** altında mevcut [bir içerik türünü](/sharepoint/governance/content-type-and-workflow-planning#content-type-overview) ilişkilendirmek isteyip istemediğinizi seçin.
 
-5. **Çoğalt'ı seçin**.
+5. **Çoğalt'ı** seçin.
 
-## <a name="see-also"></a>Ayrıca Bkz
+## <a name="see-also"></a>Ayrıca bkz.
+
 [Sınıflandırıcı oluşturma](create-a-classifier.md)
 
 [Modeli yeniden adlandırma](rename-a-model.md)
 
-[Ayıklaıcı oluşturma](create-an-extractor.md)
+[Ayıklayıcı oluşturma](create-an-extractor.md)
 
-[Belge Anlama'ya genel bakış](document-understanding-overview.md)
+[Document Understanding'e genel bakış](document-understanding-overview.md)
 
 [Açıklama türleri](explanation-types-overview.md)
 
 [Model uygulama](apply-a-model.md) 
 
-[SharePoint Syntex Modu](accessibility-mode.md)
+[erişilebilirlik modunu SharePoint Syntex](accessibility-mode.md)

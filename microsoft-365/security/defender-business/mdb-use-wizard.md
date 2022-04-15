@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 04/12/2022
+ms.date: 04/15/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-get-started
-ms.openlocfilehash: 1f128a48e8ee2939b4bfcc270c110e0ec63d6ebe
-ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
+ms.openlocfilehash: 697dfc567eb2719a6e81a7b57df321ba2af40911
+ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/15/2022
-ms.locfileid: "64862598"
+ms.locfileid: "64882318"
 ---
 # <a name="use-the-setup-wizard-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da kurulum sihirbazını kullanma
 
@@ -36,6 +36,11 @@ ms.locfileid: "64862598"
 > **Bir dakikan var mı?**
 > Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
+
+> [!TIP]
+> Kurulum sihirbazını kullanmak isteğe bağlıdır. Kurulum ve yapılandırma işlemi boyunca el ile çalışmayı seçebilirsiniz. Daha fazla bilgi için şu makalelere bakın:
+> - [Sihirbazı kullanmazsam ne olur?](#what-happens-if-i-dont-use-the-wizard)
+> - [İş için Microsoft Defender ayarlama ve yapılandırma](mdb-setup-configuration.md)
 
 ## <a name="how-to-start-the-setup-wizard"></a>Kurulum sihirbazını başlatma
 
@@ -60,7 +65,7 @@ Kurulum sihirbazı, İş için Defender'ı hızlı ve verimli bir şekilde ayarl
    
    - **Genel Yönetici**: Genel yönetici, Microsoft 365 kiracınızdaki tüm ayarları görüntüleyebilir ve düzenleyebilir. Şirketinizin Microsoft 365 aboneliği için ilk kurulum ve yapılandırmayı genel yönetici yapar. 
    - **Güvenlik Yöneticisi: Güvenlik** yöneticisi güvenlik ayarlarını görüntüleyebilir ve düzenleyebilir ve tehditler algılandığında eylem gerçekleştirebilir.
-   - **Güvenlik Okuyucusu: Güvenlik** okuyucusu raporlardaki bilgileri görüntüleyebilir ancak güvenlik ayarlarını değiştiremez. 
+   - **Güvenlik Okuyucusu: Güvenlik** okuyucusu raporlardaki bilgileri görüntüleyebilir, ancak hiçbir güvenlik ayarlarını değiştiremez. 
 
    [Roller ve izinler hakkında daha fazla bilgi edinin](mdb-roles-permissions.md). 
 

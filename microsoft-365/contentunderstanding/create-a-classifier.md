@@ -13,13 +13,13 @@ ms.collection:
 - m365initiative-syntex
 ms.custom: admindeeplinkSPO
 ms.localizationpriority: medium
-description: Microsoft SharePoint Syntex'da sınıflandırıcının nasıl oluşturul SharePoint Syntex.
-ms.openlocfilehash: 5e9be6065e0328a412e73680a0200ea7929c8011
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft SharePoint Syntex'da sınıflandırıcı oluşturmayı öğrenin.
+ms.openlocfilehash: 6c47d2fe2f7f2b67533587f0956281c2b577dbe0
+ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63324879"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64882384"
 ---
 # <a name="create-a-classifier-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'de sınıflandırıcı oluşturma
 
@@ -30,45 +30,45 @@ ms.locfileid: "63324879"
 
 </br>
 
-Sınıflandırıcı, belge türünü tanımlama ve sınıflandırmayı otomatikleştirmek için kullanabileceğiniz bir tür modeldir. Örneğin, aşağıdaki çizimde *gösterildiği gibi,* belge kitaplığınıza eklenen tüm Sözleşme Yenileme belgelerini tanımlamak istiyor olabilir.
+Sınıflandırıcı, belge türünün tanımlanmasını ve sınıflandırmasını otomatikleştirmek için kullanabileceğiniz bir model türüdür. Örneğin, aşağıdaki çizimde gösterildiği gibi, belge kitaplığınıza eklenen tüm *Sözleşme Yenileme* belgelerini tanımlamak isteyebilirsiniz.
 
 ![Sözleşme Yenileme belgesi.](../media/content-understanding/contract-renewal.png)
 
-Sınıflandırıcı oluşturmak, modelle ilişkili SharePoint [yeni bir](/sharepoint/governance/content-type-and-workflow-planning#content-type-overview) sınıf türü oluşturmanıza olanak sağlar.
+Sınıflandırıcı oluşturmak, modelle ilişkilendirilecek yeni bir [SharePoint içerik türü](/sharepoint/governance/content-type-and-workflow-planning#content-type-overview) oluşturmanıza olanak tanır.
 
-Sınıflandırıcıyı oluştururken, modeli tanımlamak *için açıklamalar* oluşturmanız gerekir. Bu, bu belge türünü tutarlı bir şekilde bulmayı beklediğiniz yaygın verileri not alamana olanak sağlar. 
+Sınıflandırıcıyı oluştururken modeli tanımlamak için *açıklamalar* oluşturmanız gerekir. Bu, bu belge türünü tutarlı bir şekilde bulmayı beklediğiniz ortak verileri not etmenizi sağlar. 
 
-Aynı içerik türüne sahip dosyaları tanımlamak üzere modelinizi "eğitmek" için belge türü örneklerini ("örnek dosyalar") kullanın.
+Modelinizi aynı içerik türüne sahip dosyaları tanımlamak üzere "eğitmek" için belge türü örneklerini ("örnek dosyalar") kullanın.
 
-Sınıflandırıcı oluşturmak için şunları gerekir:
-1. Modelinizi adlayın.
+Sınıflandırıcı oluşturmak için şunları yapmanız gerekir:
+1. Modelinize bir ad verin.
 2. Örnek dosyalarınızı ekleyin.
-3. Örnek dosyalarınızı etiketlenin.
-4. Açıklama oluşturma.
-5. Modelinizi test etmek.
+3. Örnek dosyalarınızı etiketle.
+4. Bir açıklama oluşturun.
+5. Modelinizi test edin.
 
 > [!NOTE]
-> Modeliniz belge türlerini tanımlamak ve sınıflandırmak için bir sınıflandırıcı kullandığında, model tarafından tanımlanan her dosyadan belirli bilgi parçalarını çekmeyi de seçebilirsiniz. Bunu yapmak için **modelinize bir ayıklaıcı** ekleyin. Bkz [. Ayıklaıcı oluşturma](create-an-extractor.md).
+> Modeliniz belge türlerini tanımlamak ve sınıflandırmak için bir sınıflandırıcı kullanıyor olsa da, model tarafından tanımlanan her dosyadan belirli bilgi parçalarını çekmeyi de seçebilirsiniz. Bunu yapmak için modelinize eklenecek bir **ayıklayıcı** oluşturabilirsiniz. Bkz. [Ayıklayıcı oluşturma](create-an-extractor.md).
 
-## <a name="name-your-model"></a>Modelinizi adla
+## <a name="name-your-model"></a>Modelinizi adlandır
 
 Modelinizi oluşturmanın ilk adımı, modelinize bir ad vermektir:
 
-1. İçerik merkezinde Yeni'yi **ve ardından** Model **oluştur'a seçin**.
-2. Yeni **belge anlama modeli bölmesindeki** **Ad alanına** modelin adını yazın. Örneğin, sözleşme yenileme belgelerini tanımlamak istiyorsanız, Modeli Sözleşme Yenileme olarak *anabilirsiniz*.
-3. **Oluştur**'u seçin. Bu işlem model için bir giriş sayfası oluşturur.</br>
+1. İçerik **merkezinden Yeni'yi** ve ardından **Model oluştur'u** seçin.
+2. **Yeni belge anlama modeli** bölmesindeki **Ad** alanına modelin adını yazın. Örneğin, sözleşme yenileme belgelerini tanımlamak istiyorsanız modeli *Sözleşme Yenileme* olarak adlandırabilirsiniz.
+3. **Oluştur**'u seçin. Bu, model için bir giriş sayfası oluşturur.</br>
 
     ![Sınıflandırıcı modeli giriş sayfası.](../media/content-understanding/model-home.png)
 
-Bir model oluştururken, aynı zamanda yeni bir site içerik türü de oluşturuyor oluruz. İçerik türü, ortak özelliklere sahip olan ve bu belirli içerik için sütun veya meta veri özellikleri koleksiyonunu paylaşan bir belge kategorisini temsil eder. SharePoint türleri İçerik Türleri galerisi [aracılığıyla yönetilir](https://support.microsoft.com/office/create-or-customize-a-site-content-type-27eb6551-9867-4201-a819-620c5658a60f). Bu örnek için, modeli oluştururken yeni bir Sözleşme Yenileme içerik *türü oluşturuyoruz* .
+Model oluşturduğunuzda, yeni bir site içerik türü de oluşturursunuz. İçerik türü, ortak özelliklere sahip bir belge kategorisini temsil eder ve söz konusu içerik için bir sütun veya meta veri özellikleri koleksiyonunu paylaşır. SharePoint içerik türleri [İçerik türleri galerisi](https://support.microsoft.com/office/create-or-customize-a-site-content-type-27eb6551-9867-4201-a819-620c5658a60f) aracılığıyla yönetilir. Bu örnekte, modeli oluşturduğunuzda yeni bir *Sözleşme Yenileme* içerik türü oluşturacaksınız.
 
-Bu **modeli,** şemasını kullanmak üzere İçerik Türü galerisinde var olan bir kurumsal içerik türüyle <a href="https://go.microsoft.com/fwlink/?linkid=2185074" target="_blank">eşlemek</a> SharePoint Gelişmiş ayarlar'ı seçin. Enterprise türleri İçerik Türü Merkezi'nde, SharePoint yönetim merkezinde depolanır ve kiracının tüm sitelerine dağıtımda kullanılır. Tanımlama ve sınıflandırmaya yardımcı olmak üzere şemasından yararlanan mevcut bir içerik türünü kullansanız da modelinizi tanımları olan dosyalardan bilgi ayıklayması için eğitin.</br>
+Bu modeli, şemasını kullanmak üzere SharePoint <a href="https://go.microsoft.com/fwlink/?linkid=2185074" target="_blank">İçerik türü galerisindeki</a> mevcut bir kurumsal içerik türüyle eşlemek istiyorsanız **Gelişmiş ayarlar'ı** seçin. Enterprise içerik türleri, SharePoint yönetim merkezindeki İçerik Türü Hub'ında depolanır ve kiracıdaki tüm sitelere dağıtılır. Tanımlama ve sınıflandırma konusunda yardımcı olması için şemasından yararlanmak için mevcut bir içerik türünü kullanabilirsiniz ancak modelinizi yine de tanımlamış olduğu dosyalardan bilgi ayıklamak için eğitmeniz gerektiğini unutmayın.</br>
 
-![Gelişmiş ayarlar'a tıklayın.](../media/content-understanding/advanced-settings.png)
+![Gelişmiş ayarlar.](../media/content-understanding/advanced-settings.png)
 
 ## <a name="add-your-example-files"></a>Örnek dosyalarınızı ekleme
 
-Model giriş sayfasında, modeli belge türlerinizi tanımlamaya yardımcı olmak için ihtiyacınız olacak örnek dosyalarınızı ekleyin. </br>
+Modelin giriş sayfasında, modeli belge türünüzü tanımlayacak şekilde eğitmek için ihtiyacınız olacak örnek dosyalarınızı ekleyin. </br>
 </br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4D0iX] 
@@ -76,19 +76,19 @@ Model giriş sayfasında, modeli belge türlerinizi tanımlamaya yardımcı olma
 </br>
 
 > [!NOTE]
-> Hem sınıflandırıcı hem de ayıklayıcı eğitimi için [aynı dosyaları kullanabilirsiniz](create-an-extractor.md). Daha sonra her zaman daha fazla ekleme seçeneğiniz olur, ancak normalde eksiksiz bir örnek dosya kümesi eklersiniz. Modellerinizi eğitmek için bazı modellerinizi etiketlenin ve model uygunluğu değerlendirmesini yapmak için kalan etiketsizleri test edin. 
+> Hem sınıflandırıcı hem de [ayıklayıcı eğitimi](create-an-extractor.md) için aynı dosyaları kullanmanız gerekir. Her zaman daha sonra daha fazlasını ekleme seçeneğiniz vardır, ancak genellikle tam bir örnek dosya kümesi eklersiniz. Modelinizi eğitmek için bazılarını etiketleyip kalan etiketsiz olanları test ederek model uygunluklarını değerlendirin. 
 
-Eğitim kümeniz için, hem pozitif hem de negatif örnekler kullanın:
-- Pozitif örnek: Belge türünü temsil eden belgeler. Bunlar her zaman bu belge türünde olacak dizeler ve bilgiler içerir.
-- Negatif örnek: Sınıflandırmak istediğiniz belgeyi temsil etmeyen diğer tüm belge. 
+Eğitim kümeniz için hem olumlu hem de olumsuz örnekler kullanmak istiyorsunuz:
+- Pozitif örnek: Belge türünü temsil eden belgeler. Bunlar her zaman bu tür belgelerde yer alan dizeleri ve bilgileri içerir.
+- Negatif örnek: Sınıflandırmak istediğiniz belgeyi temsil etmeyen diğer tüm belgeler. 
 
-Modelinizi eğitmek için en az beş pozitif ve en az bir negatif örnek kullanın.  Eğitim sürecinden sonra modelinizi test etmek için eklerini oluşturmak istiyor.
+Modelinizi eğitmek için en az beş pozitif örnek ve en az bir negatif örnek kullandığınızdan emin olun.  Eğitim işleminden sonra modelinizi test etmek için eklerini oluşturmak istiyorsunuz.
 
 Örnek dosyalar eklemek için:
 
-1. Model giriş sayfasındaki Örnek dosyalar ekle **kutucuğunun Dosya** **ekle'ye tıklayın**.
-2. **Modeliniz için örnek dosyaları seçin sayfasında**, içerik merkezinde bulunan Eğitim dosyaları kitaplığından örnek dosyalarınızı seçin. Daha önce oraya yüklemedıysanız, Eğitim dosyaları kitaplığına kopyalamak için Upload'e  tıklayarak bunları şimdi karşıya yükleyebilirsiniz.
-3. Modeli eğitmek için örnek dosyalarınızı seçdikten sonra Ekle'ye **tıklayın**.
+1. Model giriş sayfasındaki **Örnek dosya ekle** kutucuğunda **Dosya ekle'ye** tıklayın.
+2. **Modelinizin örnek dosyalarını seçin** sayfasında, içerik merkezindeki Eğitim dosyaları kitaplığından örnek dosyalarınızı seçin. Bunları henüz oraya yüklemediyseniz, eğitim dosyaları kitaplığına kopyalamak için **Upload** tıklayarak şimdi karşıya yüklemeyi seçin.
+3. Modeli eğitmek için kullanılacak örnek dosyalarınızı seçtikten sonra **Ekle'ye** tıklayın.
 
     ![Örnek dosyaları seçin.](../media/content-understanding/select-sample.png) 
 
@@ -96,63 +96,64 @@ Modelinizi eğitmek için en az beş pozitif ve en az bir negatif örnek kullan�
 
 Örnek dosyalarınızı ekledikten sonra, bunları pozitif veya negatif örnekler olarak etiketlemeniz gerekir.
 
-1. Model giriş sayfasında, Dosyaları sınıflandır **ve eğitim kutucuğunu çalıştırın,** Sınıflandırıcıyı **eğit'e tıklayın**.
-   Bu, örnek dosyalarınızın listesini gösteren etiket sayfasını görüntüler ve ilk dosya görüntüleyicide görünür durumda olur.
-2. İlk örnek dosyanın en üstünde yer alan görüntüleyicide, dosyanın az önce oluşturduğunuz modele örnek olup olduğunu soran bir metin görüyor olun. Bu pozitif bir örnekse Evet'i **seçin**. Bu negatif bir örnekse Hayır'ı **seçin**.
-3. Sol **tarafta etiketli** örnekler listesinde, örnek olarak kullanmak istediğiniz ek dosyaları seçin ve bunları etiketlenin. 
+1. Model giriş sayfasındaki **Dosyaları sınıflandır ve eğitim çalıştır** kutucuğunda **Sınıflandırıcıyı eğit'e** tıklayın.
+   Bu, örnek dosyalarınızın listesini gösteren etiket sayfasını görüntüler ve ilk dosya görüntüleyicide görünür.
+2. İlk örnek dosyanın en üstündeki görüntüleyicide, dosyanın yeni oluşturduğunuz modelin bir örneği olup olmadığını soran bir metin görmeniz gerekir. Olumlu bir örnekse **Evet'i** seçin. Negatif bir örnekse **Hayır'ı** seçin.
+3. Soldaki **Etiketli örnekler** listesinden örnek olarak kullanmak istediğiniz ek dosyaları seçin ve bunları etiketleyin. 
 
     ![Sınıflandırıcı giriş sayfası.](../media/content-understanding/classifier-home-page.png) 
 
 
 > [!NOTE]
-> Etikete en az beş pozitif örnek. En az bir negatif örneği de etiketlemelisiniz. 
+> Etiket en az beş olumlu örnek. Ayrıca en az bir negatif örneği etiketlemeniz gerekir. 
 
 ## <a name="create-an-explanation"></a>Açıklama oluşturma
 
-Sonraki adım, Tren sayfasında bir açıklama oluşturmanızdır. Açıklama, modelin belgeyi nasıl tanıyacaklarını anlamalarına yardımcı olur. Örneğin, Sözleşme Yenileme belgesinde her zaman ek açıklama *metin dizesi için bir İstek* yer alır.
+Sonraki adım, Eğit sayfasında bir açıklama oluşturmanızdır. Açıklama, modelin belgeyi nasıl tanıyacaklarını anlamasına yardımcı olur. Örneğin, Sözleşme Yenileme belgeleri her zaman *ek açıklama isteği* metin dizesi içerir.
 
 > [!Note]
-> Ayıklar ile birlikte kullanılırken, bir açıklama belgeden ayıklamak istediğiniz dizeyi tanımlar. 
+> Ayıklayıcılarla kullanıldığında, belgeden ayıklamak istediğiniz dizeyi bir açıklama tanımlar. 
 
 Açıklama oluşturmak için:
 
-1. Model giriş sayfasında, Tren **sayfasına gitmek** için Tren sekmesini seçin.
-2. Eğitim sayfasındaki Eğitim dosyaları **bölümünde** , daha önce etiketlemiş olduğunuz örnek dosyaların listesini görebilirsiniz. Listeden pozitif dosyalardan birini seçin ve görüntüleyicide görüntülenir.
-3. Açıklama bölümünde Yeni'yi ve **ardından** Boş'a **tıklayın**.
-4. Açıklama **oluştur sayfasında** :</br>
-    a. Ad **yazın (** örneğin, "Açıklama Bloğu").</br>
-    b. **Tür'leri seçin**. Örnek için Tümcecik **listesi'ne tıklayın** (bir metin dizesi ekleyin).</br>
-    c. Buraya **yazın kutusuna** dizeyi yazın. Örnek için "Ek açıklama talebi" ekleyin. Dizenin büyük **/büyük/harfe** duyarlı olması gerekirse Büyük/harfe duyarlı'ı seçin.</br>
+1. Modelin giriş sayfasında Eğit sekmesini seçerek **Eğit** sayfasına gidin.
+2. Eğitme sayfasındaki **Eğitilen dosyalar** bölümünde daha önce etiketlediğiniz örnek dosyaların listesini görmeniz gerekir. Listeden pozitif dosyalardan birini seçtiğinizde, bu dosya görüntüleyicide görüntülenir.
+3. Açıklama bölümünde **Yeni'yi** ve ardından **Boş'ı** seçin.
+4. **Açıklama oluştur** sayfasında:</br>
+    a. **Adı** yazın (örneğin, "Açıklama Bloğu").</br>
+    b. **Tür'e** tıklayın. Örnek için, metin dizesi eklediğinizden **Tümcecik listesi'ni** seçin.</br>
+    c. **Buraya yazın** kutusuna dizeyi yazın. Örnek için "Ek açıklama isteği" ekleyin. Dizenin büyük **/küçük harfe duyarlı olması gerekiyorsa Büyük/** küçük harfe duyarlı seçeneğini belirleyebilirsiniz.</br>
     d. **Kaydet**'e tıklayın.
 
-    ![Açıklama oluşturma.](../media/content-understanding/explanation.png) 
+    ![Açıklama oluşturun.](../media/content-understanding/explanation.png) 
     
-5. İçerik merkezi artık, oluşturduğunuz açıklamanın, kalan etiketlenmiş örnek dosyaları doğru tanımlanacak kadar eksiksiz olup olmadığını denetler ve bu şekilde pozitif ve negatif örneklerdir. Eğitim **tamamlandıktan sonra** Eğitim dosyaları **bölümünde** Değerlendirme sütununu kontrol edin ve sonuçları bulun. Oluşturduğunuz açıklamalar pozitif veya **negatif** olarak etiketleni aynı değere yettiyse dosyalar Eşleşme değerini gösterir.
+5. İçerik merkezi artık oluşturduğunuz açıklamanın, etiketlenmiş diğer örnek dosyaları doğru şekilde tanımlayacak kadar eksiksiz olup olmadığını pozitif ve negatif örnekler olarak denetler. **Eğitilen dosyalar** bölümünde, sonuçları görmek için eğitim tamamlandıktan sonra **Değerlendirme** sütununu denetleyin. Oluşturduğunuz açıklamalar pozitif veya negatif olarak etiketlediğiniz açıklamalarla eşleşecek kadar yeterliyse dosyalar **Match** değerini gösterir.
 
-    ![Değer eşle.](../media/content-understanding/match.png) 
+    ![Değeri eşleştirin.](../media/content-understanding/match.png) 
 
-    Etiketli **dosyalarda bir Eşleşme** eşleşmesi alırsanız, belge türünü tanımlamak için modele daha fazla bilgi sağlamak için ek bir açıklama oluşturmanız gerekir. Bu durumda, eşleşmeyen bilgilerin neden olduğu hakkında daha fazla bilgi almak için dosyaya tıklayın.
+    Etiketli **dosyalarda Uyuşmazlık** alırsanız, belge türünü tanımlamak için modele daha fazla bilgi sağlamak için ek bir açıklama oluşturmanız gerekebilir. Bu durumda, uyuşmazlık neden oluştuğu hakkında daha fazla bilgi edinmek için dosyaya tıklayın.
 
-Bir ayıklayı eğitime tamamlanın, o eğitimli ayıklaıcı açıklama olarak kullanılabilir. Açıklamalar **bölümünde** , bu bir Model başvurusu olarak **gösterilir**.
+Bir ayıklayıcı eğitildikten sonra, bu eğitilen ayıklayıcı açıklama olarak kullanılabilir. **Açıklamalar** bölümünde, bu bir **Model başvurusu** olarak gösterilir.
 
 ![Model başvurusu türünü gösteren Açıklamalar bölümünün ekran görüntüsü.](../media/content-understanding/explanations-model-reference.png)
 
-## <a name="test-your-model"></a>Modelinizi test etmek
+## <a name="test-your-model"></a>Modelinizi test etme
 
-Etiketli örnek dosyalarınız için bir eşleşme aldısanız, artık modelinizi daha önce hiç görene kadar etiketsiz kalan örnek dosyalarınız üzerinde test edin. Bu isteğe bağlıdır, ancak modeli daha önce kullanmadan önce fitness'i veya hazırlığı değerlendirmek için, modeli daha önce kullanmamış olduğu dosyalar üzerinde test etmek için yararlı bir adımdır.
+Etiketli örnek dosyalarınızda bir eşleşme aldıysanız, artık modelinizi modelin daha önce görmediği etiketlenmemiş kalan örnek dosyalarınızda test edebilirsiniz. Bu isteğe bağlıdır, ancak modeli kullanmadan önce modelin daha önce görmediği dosyalarda test ederek "uygunluk" veya hazır olma durumunu değerlendirmek için kullanışlı bir adımdır.
 
-1. Model giriş sayfasından Test **sekmesini** seçin. Bu, modeli etiketsiz örnek dosyalarınız üzerinde çalıştırır.
-2. **Sına dosyaları listesinde**, örnek dosyalarınız görüntülenir ve modelin bunları pozitif veya negatif olarak tahmin verip öngördüğü gösterilir. Belgelerinizi belirlemede sınıflandırıcının ne kadar etkili olduğunu belirlemenize yardımcı olması için bu bilgileri kullanın.
+1. Model giriş sayfasında **Test** sekmesini seçin. Bu, modeli etiketlenmemiş örnek dosyalarınızda çalıştırır.
+2. **Test dosyaları** listesinde, örnek dosyalarınız görüntülenir ve modelin bunların pozitif mi yoksa negatif mi olacağını tahmin edip etmediğini gösterir. Sınıflandırıcınızın belgelerinizi tanımlamadaki etkinliğini saptamaya yardımcı olması için bu bilgileri kullanın.
 
-    ![Etiketsiz dosyalar testi.](../media/content-understanding/test-on-files.png) 
+    ![Etiketlenmemiş dosyaların testi.](../media/content-understanding/test-on-files.png) 
 
-## <a name="see-also"></a>Ayrıca Bkz
-[Ayıklaıcı oluşturma](create-an-extractor.md)
+## <a name="see-also"></a>Ayrıca bkz.
 
-[Belge Anlama'ya genel bakış](document-understanding-overview.md)
+[Ayıklayıcı oluşturma](create-an-extractor.md)
+
+[Document Understanding'e genel bakış](document-understanding-overview.md)
 
 [Açıklama türleri](explanation-types-overview.md)
 
 [Model uygulama](apply-a-model.md) 
 
-[SharePoint Syntex Modu](accessibility-mode.md)
+[erişilebilirlik modunu SharePoint Syntex](accessibility-mode.md)

@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Microsoft SharePoint Syntex'da ayıklayıcı oluşturmayı öğrenin.
-ms.openlocfilehash: 2089a5a52148ed4c00294895cd15e8af9c473cdb
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 7d9e04b26e04a3145f5008121bfde162387a9f6b
+ms.sourcegitcommit: 23e186b46b27a6a4863f507a52a11105afae9726
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823134"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64882538"
 ---
 # <a name="create-an-extractor-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'de ayıklayıcı oluşturma
 
@@ -176,7 +176,7 @@ Yinelenen varlıklarınız varsa ve yalnızca bir değeri veya belirli sayıda d
 
 6. Ayıklayıcıdaki bir iyileştirme kuralını silmek istiyorsanız, kuralı kaldırmak istediğiniz ayıklayıcıyı seçin, **Ayıklanan bilgileri daralt'ı** ve ardından **Sil'i** seçin.
 
-## <a name="see-also"></a>Ayrıca Bkz
+## <a name="see-also"></a>Ayrıca bkz.
 
 [Sınıflandırıcı oluşturma](create-a-classifier.md)
 
