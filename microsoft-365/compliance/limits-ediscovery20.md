@@ -16,12 +16,12 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Microsoft 365'da Advanced eDiscovery çözümü için geçerli olan durum sınırları, dizin oluşturma sınırları ve arama sınırları hakkında bilgi edinin.
-ms.openlocfilehash: 0f21a78a90eee6069618e2ab35bb011aa870b62c
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 93f0a988cb5a5321c8a725a1d678079174eba923
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64758585"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64861322"
 ---
 # <a name="limits-in-advanced-ediscovery"></a>Advanced eDiscovery sınırları
 
@@ -49,9 +49,9 @@ Aşağıdaki tabloda, bir Advanced eDiscovery servis talebiyle ilişkili ayrı t
 
 |Sınırın açıklaması|Sınırı|
 |---|---|
-|Bir kuruluş için en fazla saklama ilkesi sayısı. Bu sınır, Core eBulma ve Advanced eDiscovery durumlarında birleştirilmiş saklama ilkelerinin toplamını içerir.|10.0003<sup></sup>|
-|Tek bir servis talebi ayrı tutmadaki en fazla posta kutusu sayısı. Bu sınır, kullanıcı posta kutularının toplamını ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili posta kutularını içerir.|1,000|
-|Tek bir servis talebi saklamadaki en fazla site sayısı. Bu sınır, OneDrive İş sitelerin, SharePoint sitelerin ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili sitelerin toplamını içerir.|100|
+|Bir kuruluş için en fazla saklama ilkesi sayısı. Bu sınır, Core eBulma ve Advanced eDiscovery durumlarında birleştirilmiş saklama ilkelerinin toplamını içerir.|10,000|
+|Tek bir servis talebi ayrı tutmadaki en fazla posta kutusu sayısı. Bu sınır, kullanıcı posta kutularının toplamını ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili posta kutularını içerir.|1.0003<sup></sup>|
+|Tek bir servis talebi saklamadaki en fazla site sayısı. Bu sınır, OneDrive İş sitelerin, SharePoint sitelerin ve Microsoft 365 Grupları, Microsoft Teams ve Yammer Grupları ile ilişkili sitelerin toplamını içerir.|1003<sup></sup>|
 
 ## <a name="indexing-limits"></a>Dizin oluşturma sınırları
 

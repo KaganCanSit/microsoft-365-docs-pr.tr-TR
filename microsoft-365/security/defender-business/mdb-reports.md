@@ -1,13 +1,13 @@
 ---
-title: İş için Microsoft Defender'da Raporlar
-description: İş için Microsoft Defender'da bulunan raporlara genel bir bakış elde edin
+title: İş için Microsoft Defender raporları
+description: İş için Microsoft Defender'da bulunan raporlara genel bakış elde edin
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/15/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -16,43 +16,37 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 68b5c15b69c1f485bb9ed90bab06c2ceaa2978d9
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 3e2b6c8258f6a08c4cbb727c234871788242c6c2
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63527092"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862158"
 ---
-# <a name="reports-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da Raporlar
+# <a name="reports-in-microsoft-defender-for-business"></a>İş için Microsoft Defender raporları
 
-> [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
-> 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> [!NOTE]
+> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
-Web portalına () Microsoft 365 Defender raporları bulabilirsiniz[https://security.microsoft.com](https://security.microsoft.com). Bu makalede bu raporlar, bunları nasıl kullanabileceğiniz ve nasıl bulun olduğu açıklanmıştır.
+Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com)) çeşitli raporlar mevcuttur. Bu makalede bu raporlar, bunları nasıl kullanabileceğiniz ve nasıl bulabileceğiniz açıklanmaktadır.
 
-<br/><br/>
-
-## <a name="reports-in-defender-for-business"></a>İş için Defender'da Raporlar
+## <a name="reports-in-defender-for-business"></a>İş için Defender'daki raporlar
 
 |Rapor  |Açıklama  |
 |---------|---------|
-| **Güvenlik raporu**  | Güvenlik raporu, şirketinizin kimlikleri, cihazları ve uygulamaları hakkında bilgi sağlar. Bu rapora erişmek için gezinti bölmesinde **ReportsGeneralSecurity report'ı** >  >  **seçin**. <br/><br/>**İpucu** Benzer bilgileri, web portalınız portalında () Microsoft 365 Defender görüntüleyebilirsiniz [https://security.microsoft.com](https://security.microsoft.com). |
-| **Tehdit koruması**  | Tehdit koruması raporu, uyarılar ve uyarı eğilimleri hakkında bilgi sağlar. Son 30 **gün içinde** tetiklenen uyarılar hakkında bilgileri görüntülemek için Uyarı eğilimleri sütununu kullanın. Çözümlenmemiş **uyarı** kategorileri ve bunların sınıflandırması gibi uyarılar hakkında geçerli anlık görüntü bilgilerini görüntülemek için Uyarı durumu sütununu kullanın. Bu rapora erişmek için gezinti bölmesinde **ReportsEndpointsThreat** >  >  **protection'ı seçin**. <br/><br/>**İpucu**: Uyarılar hakkında bilgileri **görüntülemek için** Olaylar listesini de kullanabilirsiniz. Geçerli olayları görüntülemek ve yönetmek **için gezinti bölmesinde** Olaylar'ı seçin. Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md). |
-| **Cihaz durumu ve uyumluluğu** | Cihaz durumu ve uyumluluk raporu, cihaz durumu ve eğilimleri hakkında bilgi sağlar. Bu raporu, Defender for Business algılayıcılarının cihazlarda düzgün çalışıp çalışmadı veya algılayıcıların geçerli durumunu Microsoft Defender Virüsten Koruma. Bu rapora erişmek için gezinti bölmesinde **ReportsEndpointsDevice** >  >  **durum ve uyumluluk'u seçin**. <br/><br/>**İpucu**: Cihazınızın cihazları **hakkında** bilgileri görüntülemek için Cihaz envanteri listesini kullanabilirsiniz. Gezinti bölmesinde Cihaz **envanteri'ni seçin**. Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da cihazları yönetme](mdb-manage-devices.md). |
-| **Korumasız cihazlar** | Zayıf cihazlar raporu, cihazlar ve eğilimler hakkında bilgi sağlar. Son 30 gün içinde uyarı içeren cihazlarla ilgili bilgileri görüntülemek için Eğilimler sütununu kullanın. Uyarı içeren **cihazlarla** ilgili geçerli anlık görüntü bilgilerini görüntülemek için Durum sütununu kullanın. Bu rapora erişmek için gezinti bölmesinde **ReportsEndpointsYullanabilir** >  >  **cihazlar'ı seçin**.<br/><br/>**İpucu**: Cihazınızın cihazları **hakkında** bilgileri görüntülemek için Cihaz envanteri listesini kullanabilirsiniz. Gezinti bölmesinde Cihaz **envanteri'ni seçin**. Daha fazla bilgi edinmek için bkz [. İş için Microsoft Defender'da cihazları yönetme](mdb-manage-devices.md). |
-| **Web koruması** | Web koruma raporu kimlik avı sitelerine, kötü amaçlı yazılım vektörlerine, açıklarından yararlanma sitelerine, güvenilmeyen veya itibarsız sitelere ve açıkça engellenen sitelere erişme denemelerini gösterir. Engellenen site kategorileri yetişkin içeriği, boş zaman siteleri, yasal sorumluluk siteleri ve daha fazlasını içerir. Bu rapora erişmek için gezinti bölmesinde **ReportsEndpointsWeb** >  **protection'ı** >  seçin.<br/><br/>**İpucu**: Henüz şirketin web korumasını yapılandırmadınız, rapor **Ayarlar** Web Koruma düğmesini seçin. Sonra, **Kurallar'ın** altında **Web içeriği filtreleme'yi seçin**. Web içeriği filtreleme hakkında daha fazla bilgi edinmek için bkz [. Web içeriği filtreleme](../defender-endpoint/web-content-filtering.md). |
+| **Güvenlik raporu**  | Güvenlik raporu şirketinizin kimlikleri, cihazları ve uygulamaları hakkında bilgi sağlar. Bu rapora erişmek için gezinti bölmesinde **RaporlarGenelGüvenlik** >  >  **raporu'na** tıklayın. <br/><br/>**IPUCU** Benzer bilgileri Microsoft 365 Defender portalınızın ([https://security.microsoft.com](https://security.microsoft.com)) giriş sayfasında görüntüleyebilirsiniz. |
+| **Tehdit koruması**  | Tehdit koruması raporu, uyarılar ve uyarı eğilimleri hakkında bilgi sağlar. Son 30 gün içinde tetiklenen uyarılar hakkındaki bilgileri görüntülemek için **Uyarı eğilimleri** sütununu kullanın. Çözümlenmemiş uyarı kategorileri ve bunların sınıflandırması gibi uyarılar hakkındaki geçerli anlık görüntü bilgilerini görüntülemek için **Uyarı durumu** sütununu kullanın. Bu rapora erişmek için gezinti bölmesinde **RaporlarEndpointsThreat** >  >  **koruması'nı** seçin. <br/><br/>**İpucu**: Uyarılar hakkındaki bilgileri görüntülemek için **Olaylar** listesini de kullanabilirsiniz. Geçerli olayları görüntülemek ve yönetmek için gezinti bölmesinde **Olaylar'ı** seçin. Daha fazla bilgi için bkz. [İş için Microsoft Defender olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md). |
+| **Cihaz durumu ve uyumluluğu** | Cihaz durumu ve uyumluluk raporu, cihaz durumu ve eğilimleri hakkında bilgi sağlar. İş için Defender algılayıcılarının cihazlarda düzgün çalışıp çalışmadığını ve Microsoft Defender Virüsten Koruma geçerli durumunu belirlemek için bu raporu kullanabilirsiniz. Bu rapora erişmek için gezinti bölmesinde **RaporlarEndpointsCihaz** >  >  **durumu ve uyumluluğu'na** tıklayın. <br/><br/>**İpucu**: Şirketinizin cihazları hakkındaki bilgileri görüntülemek için **Cihaz envanter** listesini kullanabilirsiniz. Gezinti bölmesinde **Cihaz envanteri'ni** seçin. Daha fazla bilgi için bkz. [İş için Microsoft Defender cihazları yönetme](mdb-manage-devices.md). |
+| **Güvenlik açığı olan cihazlar** | Güvenlik açığı bulunan cihazlar raporu, cihazlar ve eğilimler hakkında bilgi sağlar. Son 30 gün içinde uyarıları olan cihazlar hakkındaki bilgileri görüntülemek için **Eğilimler** sütununu kullanın. Uyarı içeren cihazlar hakkındaki geçerli anlık görüntü bilgilerini görüntülemek için **Durum** sütununu kullanın. Bu rapora erişmek için gezinti bölmesinde **RaporlarEndpointsVulnerable** >  >  **cihazlar'ı** seçin.<br/><br/>**İpucu**: Şirketinizin cihazları hakkındaki bilgileri görüntülemek için **Cihaz envanter** listesini kullanabilirsiniz. Gezinti bölmesinde **Cihaz envanteri'ni** seçin. Daha fazla bilgi için bkz. [İş için Microsoft Defender cihazları yönetme](mdb-manage-devices.md). |
+| **Web koruması** | Web koruma raporu kimlik avı sitelerine, kötü amaçlı yazılım vektörlerine, güvenlik açığından yararlanma sitelerine, güvenilmeyen veya saygınlığı düşük sitelere ve açıkça engellenen sitelere erişme girişimlerini gösterir. Engellenen sitelerin kategorileri yetişkin içeriği, boş zaman siteleri, yasal sorumluluk siteleri ve daha fazlasını içerir. Bu rapora erişmek için gezinti bölmesinde **RaporlarEndpointsWeb** >  >  **koruması'nı** seçin.<br/><br/>**İpucu**: Şirketiniz için henüz web koruması yapılandırmadıysanız rapor görünümünde **Ayarlar** düğmesini seçin. Ardından, **Kurallar'ın** altında **Web içeriği filtreleme'yi** seçin. Web içeriği filtreleme hakkında daha fazla bilgi edinmek için bkz. [Web içeriği filtreleme](../defender-endpoint/web-content-filtering.md). |
 
 >
-> **Bir dakika mı kaldı?**
-> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+> **Bir dakikan var mı?**
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İş için Microsoft Defender'ı kullanmaya başlama](mdb-get-started.md)
-
+- [İş için Microsoft Defender kullanarak Kullanmaya başlayın](mdb-get-started.md)
 - [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)
-
-- [İş için Microsoft Defender'da cihazları yönetme](mdb-manage-devices.md)
+- [İş için Microsoft Defender'de cihazları yönetme](mdb-manage-devices.md)

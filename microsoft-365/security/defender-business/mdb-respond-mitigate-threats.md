@@ -1,13 +1,13 @@
 ---
-title: İş için Microsoft Defender'da tehditleri yanıtlama ve azaltmak
-description: Tehdit algılandığında, bu tehditlere yanıt vermek ve onları azaltmak için eylem gerçekleştirabilirsiniz.
+title: İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma
+description: Tehditler algılandıkçe, bu tehditlere yanıt vermek ve tehditleri azaltmak için eylemler gerçekleştirebilirsiniz.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 03/15/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,55 +17,51 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: f57774f993c0044878655713202d6835a2a69173
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 730dc448eb360528a0c45da70f6da6ce32ab5ef4
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525297"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862246"
 ---
-# <a name="respond-to-and-mitigate-threats-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da tehditleri yanıtlama ve azaltmak
+# <a name="respond-to-and-mitigate-threats-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma
 
-> [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
-> 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> [!NOTE]
+> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
-Bu Microsoft 365 Defender portalı, güvenlik ekibimizin algılanan tehditlere yanıt vermelerini ve bu tehditleri azaltmak için olanak sağlar. Bu makalede, İş için Defender'ı nasıl kullanabileceğiniz örnek olarak açıklanmıştır.
+Microsoft 365 Defender portalı, güvenlik ekibinizin algılanan tehditlere yanıt vermesini ve tehditleri azaltmasını sağlar. Bu makalede, İş için Defender'ı nasıl kullanabileceğinize ilişkin bir örnek açıklanabilir.
 
 >
-> **Bir dakika mı kaldı?**
-> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+> **Bir dakikan var mı?**
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
 ## <a name="view-detected-threats"></a>Algılanan tehditleri görüntüleme
 
-1. Erişim portalına Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com) ) ve oturum açın.
+1. Microsoft 365 Defender portalına ([https://security.microsoft.com](https://security.microsoft.com)) gidin ve oturum açın.
 
-2. Giriş sayfasındaki bildirim kartları. Kartlar, size kaç tehdit algılandığından ve kaç kullanıcı hesabının, uç noktaların (cihazların) ve diğer varlıkların etkilendiğini bir bakışta gösterir. Aşağıdaki resim, gördüğünüz kartlara bir örnektir:
+2. Giriş sayfasındaki kartlara dikkat edin. Kartlarda kaç tehdit algılandığı ve kaç kullanıcı hesabının, uç noktanın (cihazın) ve diğer varlıkların etkilendiği bir bakışta gösterilir. Aşağıdaki görüntüde görebileceğiniz bir kart örneği verilmiştir:
 
-   :::image type="content" source="../../media/defender-business/mdb-examplecards.png" alt-text="Microsoft 365 Defender portalında kartların ekran görüntüsü":::
+   :::image type="content" source="../../media/defender-business/mdb-examplecards.png" alt-text="Microsoft 365 Defender portalındaki kartların ekran görüntüsü":::
 
-3. Daha fazla bilgi görüntülemek ve işlem yapmak için karttan bir düğme veya bağlantı seçin. Örnek olarak, Risk **kartında yer** alan Cihazlar düğmesi, Ayrıntıları **görüntüle düğmesi** içerir. Bu düğmeyi seçmek, aşağıdaki **resimde gösterildiği gibi** bizi Cihaz envanteri sayfasına alır:
+3. Daha fazla bilgi görüntülemek ve işlem yapmak için kartta bir düğme veya bağlantı seçin. Örnek olarak, **Risk altındaki cihazlar** kartımızda **Ayrıntıları görüntüle** düğmesi bulunur. Bu düğmeyi seçmek, aşağıdaki görüntüde gösterildiği gibi bizi **Cihaz envanteri** sayfasına götürür:
 
-   :::image type="content" source="../../media/defender-business/mdb-deviceinventory.png" alt-text="Cihaz stoku ekran görüntüsü":::
+   :::image type="content" source="../../media/defender-business/mdb-deviceinventory.png" alt-text="Cihaz envanterinin ekran görüntüsü":::
 
-   Cihaz **envanteri sayfasında** , şirket cihazlarının yanı sıra risk düzeyi ve pozlama düzeyi de listeleyebilirsiniz.
+   **Cihaz envanteri** sayfası, şirket cihazlarının yanı sıra risk düzeylerini ve maruz kalma düzeylerini listeler.
 
-4. Cihaz gibi bir öğeyi seçin. Açılır bölme açılır ve aşağıdaki resimde gösterildiği gibi, bu öğe için oluşturulan uyarılar ve olaylar hakkında daha fazla bilgi görüntüler:  
+4. Cihaz gibi bir öğe seçin. Bir açılır pencere bölmesi açılır ve aşağıdaki görüntüde gösterildiği gibi bu öğe için oluşturulan uyarılar ve olaylar hakkında daha fazla bilgi görüntüler:  
 
-   :::image type="content" source="../../media/defender-business/mdb-deviceinventory-selecteddeviceflyout.png" alt-text="Seçili bir cihaz için uçarak çıkış bölmesinin ekran görüntüsü":::
+   :::image type="content" source="../../media/defender-business/mdb-deviceinventory-selecteddeviceflyout.png" alt-text="Seçili cihaz için açılır pencere bölmesinin ekran görüntüsü":::
 
-5. Uçarak çıkışta, görüntülenen bilgileri görüntüleme. Aşağıdaki resimde gösterildiği gibi kullanılabilir eylemleri listeleyen bir menü açmak için üç noktayı (...) seçin: 
+5. Açılır öğede görüntülenen bilgileri görüntüleyin. Aşağıdaki görüntüde gösterildiği gibi kullanılabilir eylemlerin listelendiğini belirten bir menü açmak için üç noktayı (...) seçin: 
 
    :::image type="content" source="../../media/defender-business/mdb-deviceinventory-selecteddeviceflyout-menu.png" alt-text="Seçili cihaz için kullanılabilir eylemlerin ekran görüntüsü":::
 
-6. Kullanılabilir bir eylemi seçin. Örneğin, Virüsten koruma taraması **çalıştır'ı seçebilirsiniz** ve Microsoft Defender Virüsten Koruma hızlı tarama başlatmak için bu işlemi başlatabilirsiniz. Öte ya da cihazda otomatik **bir soruşturmayı tetiklemek** için Otomatik Araştırma Başlat'ı da seçebilirsiniz.
+6. Kullanılabilir bir eylem seçin. Örneğin **Virüsten koruma taraması çalıştır'ı** seçebilirsiniz ve bu da Microsoft Defender Virüsten Koruma cihazda hızlı bir tarama başlatmasına neden olur. Alternatif olarak, cihazda otomatik bir araştırma tetikleme için **Otomatik Araştırma Başlat'ı** da seçebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [İşlem merkezinde düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
-
-- [İş için Microsoft Defender'da cihazları yönetme](mdb-manage-devices.md)
-
+- [İşlem merkezindeki düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
+- [İş için Microsoft Defender'de cihazları yönetme](mdb-manage-devices.md)
 - [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)

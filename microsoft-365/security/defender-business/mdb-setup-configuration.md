@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/15/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,28 +17,34 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 5fbf56b4b3c3fc76b863a6839902ad108d1cf8d5
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.openlocfilehash: e832a06a27d479bcd9ffecaf00e07b20f55d1042
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64746590"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862664"
 ---
 # <a name="set-up-and-configure-microsoft-defender-for-business"></a>İş için Microsoft Defender ayarlama ve yapılandırma
 
-> [!IMPORTANT]
-> İş için Microsoft Defender, 1 Mart 2022'de başlayarak [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşterilerine dağıtılıyor. Tek başına abonelik olarak İş için Defender önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşterilere ve BT İş Ortaklarına aşamalı olarak dağıtılacaktır. Önizleme, [bir dizi ilk senaryo](mdb-tutorials.md#try-these-preview-scenarios) içerir ve düzenli olarak özellikler ekleyeceğiz.
-> 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> [!NOTE]
+> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
-İş için Microsoft Defender, özellikle küçük ve orta ölçekli işletmeler için tasarlanmış kolaylaştırılmış kurulum ve yapılandırma deneyimi sağlar. Bu makaleyi kılavuz olarak kullanın.
+İş için Microsoft Defender, özellikle küçük ve orta ölçekli işletmeler için tasarlanmış kolaylaştırılmış kurulum ve yapılandırma deneyimi sağlar. Bu makaleyi genel süreç için kılavuz olarak kullanın.
+
+> [!TIP]
+> [Kurulum sihirbazını](mdb-use-wizard.md) kullandıysanız, temel kurulum işleminizin birkaç adımını tamamladınız demektir. Bu durumda şunları yapabilirsiniz:
+> - [Daha fazla cihaz ekleme](mdb-onboard-devices.md)
+> - [Güvenlik ilkelerinizi ve ayarlarınızı yapılandırma](mdb-configure-security-settings.md)
+> - [güvenlik açığı yönetimi panonuzu ziyaret edin](mdb-view-tvm-dashboard.md)
 
 >
 > **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">İş için Microsoft Defender hakkındaki kısa anketimize</a> katılın. Sizden haber almak isteriz!
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
 ## <a name="the-setup-and-configuration-process"></a>Kurulum ve yapılandırma işlemi
+
+Aşağıdaki diyagramda, İş için Defender için genel kurulum ve yapılandırma işlemi gösterilmiştir. Kurulum sihirbazını kullandıysanız, büyük olasılıkla 1-3 arası adımları ve muhtemelen 4. adımı tamamladınız demektir. 
 
 :::image type="content" source="media/mdb-setup-process-2.png" alt-text="İş için Microsoft Defender için kurulum ve yapılandırma işlemi.":::
 

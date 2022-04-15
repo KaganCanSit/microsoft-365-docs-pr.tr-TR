@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/15/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,35 +17,30 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 6f8ad1bd1f77bd3e53a1686674984155a7dc8525
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: ba7f6846809009b8bb9df258b8ac18536a910b6d
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665106"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862136"
 ---
 # <a name="view-or-edit-policies-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'de ilkeleri görüntüleme veya düzenleme
 
-> [!IMPORTANT]
-> İş için Microsoft Defender, 1 Mart 2022'de başlayarak [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşterilerine dağıtılıyor. Tek başına abonelik olarak İş için Defender önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşterilere ve BT İş Ortaklarına aşamalı olarak dağıtılacaktır. Önizleme, [bir dizi ilk senaryo](mdb-tutorials.md#try-these-preview-scenarios) içerir ve düzenli olarak özellikler ekleyeceğiz.
-> 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> [!NOTE]
+> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 İş için Microsoft Defender'da, güvenlik ayarları cihazlara uygulanan ilkeler aracılığıyla yapılandırılır. İş için Defender, kurulum ve yapılandırma deneyiminizi basitleştirmeye yardımcı olmak için şirketinizin cihazlarının eklendikleri anda korunmasına yardımcı olmak için önceden yapılandırılmış ilkeler içerir. Varsayılan ilkeleri kullanabilir, ilkeleri düzenleyebilir veya kendi ilkelerinizi oluşturabilirsiniz.
 
 **Bu makalede şunların nasıl yapılacağını açıklar**:
 
 - [Varsayılan ilkelerinize genel bakış elde edin](#default-policies-in-defender-for-business)
-
 - [Mevcut ilkelerinizi görüntüleme](#view-your-existing-policies)
-
 - [Var olan bir ilkeyi düzenleme](#edit-an-existing-policy)
-
 - [Yeni ilke oluşturma](#create-a-new-policy)
 
 >
 > **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">İş için Microsoft Defender hakkındaki kısa anketimize</a> katılın. Sizden haber almak isteriz!
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
 ## <a name="default-policies-in-defender-for-business"></a>İş için Defender'da varsayılan ilkeler
@@ -53,7 +48,6 @@ ms.locfileid: "64665106"
 İş için Defender'da, şirketinizin cihazlarını korumaya yönelik iki ana ilke türü vardır:
 
 - Microsoft Defender Virüsten Koruma ve diğer tehdit koruma özelliklerinin nasıl yapılandırıldığını belirleyen **yeni nesil koruma ilkeleri**
-
 - Şirketinizin cihazlarına hangi ağ trafiğinin akışına izin verileceğini belirleyen **güvenlik duvarı ilkeleri**
 
 
@@ -138,11 +132,7 @@ ms.locfileid: "64665106"
 Aşağıdaki görevlerden birini veya daha fazlasını seçin:
 
 - [Cihazları yönetme](mdb-manage-devices.md)
-
 - [İş için Microsoft Defender'da yeni ilke oluşturma](mdb-create-new-policy.md)
-
 - [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)
-
 - [İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma](mdb-respond-mitigate-threats.md)
-
 - [İşlem merkezindeki düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)

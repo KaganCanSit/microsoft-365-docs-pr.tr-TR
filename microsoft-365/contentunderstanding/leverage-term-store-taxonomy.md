@@ -1,5 +1,5 @@
 ---
-title: Microsoft SharePoint Syntex'ta bir ayıklaıcı oluştururken terim deposu taksonomisini SharePoint Syntex
+title: Microsoft SharePoint Syntex'da ayıklayıcı oluştururken terim deposu taksonomisini kullanma
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -13,15 +13,15 @@ ms.collection:
 - m365initiative-syntex
 ms.custom: admindeeplinkSPO
 ms.localizationpriority: medium
-description: Microsoft web sitesinde belgenizin anlama modelinde bir ayıklaıcı oluştururken terim deposu taksonomisini SharePoint Syntex.
-ms.openlocfilehash: 909f26026ddf26163a12e1d14c1790f4af93a160
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Microsoft SharePoint Syntex belge anlama modelinizde ayıklayıcı oluştururken terim deposu taksonomisini kullanın.
+ms.openlocfilehash: d3f2acf32231558f9f56a62b18c6dd7ffbc4e20f
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63328813"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64861498"
 ---
-# <a name="leverage-term-store-taxonomy-when-creating-an-extractor-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'ta bir ayıklaıcı oluştururken terim deposu taksonomisini SharePoint Syntex
+# <a name="leverage-term-store-taxonomy-when-creating-an-extractor-in-microsoft-sharepoint-syntex"></a>Microsoft SharePoint Syntex'da ayıklayıcı oluştururken terim deposu taksonomisini kullanma
 
 </br>
 
@@ -29,32 +29,34 @@ ms.locfileid: "63328813"
 
 </br>
 
-SharePoint Syntex kullanarak belgenizin anlama modelinde bir ayıklaıcı ekleyebilirsiniz ve ayıklanan veriler için tercih edilen terimleri görüntülemek için terim deposu'daki genel [](/sharepoint/managed-metadata) terim kümelerinden yararlanabilirsiniz.  
+SharePoint Syntex kullanarak belge anlama modelinizde bir ayıklayıcı oluşturduğunuzda, ayıkladığınız verilerin tercih edilen terimlerini görüntülemek için [terim deposundaki genel terim](/sharepoint/managed-metadata) kümelerinden yararlanabilirsiniz.  
 
-Örnek olarak, modeliniz belge kitaplığına yüklenen tüm **Sözleşme** belgelerini tanımlar ve sınıflar.  Buna ek olarak, model **her sözleşmeden** bir Sözleşme Hizmeti değeri de ayıklar ve bunu kitaplık görünümde bir sütunda görüntüler. Sözleşmelerde yer alan çeşitli Sözleşme Hizmetleri değerleri arasında, şirketinizin artık kullanmayta kullandığı ve yeniden adlandırılmalarınıta olan birkaç eski değer vardır. Örneğin, Tasarım, Grafik veya Topografi *sözleşme* hizmetlerinin tüm *başvurularını artık* Yaratıcı olarak ifade *etmek gerekir*. Modeliniz bir sözleşme belgesinde güncel olmayan terimlerden birini ayıklasa, kitaplık görünümde geçerli terimi - Creative - görüntülemesini istersiniz. Aşağıdaki örnekte, modele eğitim yaparken, örnek belgelerden birinin Tasarım'ın süresi öncemiş terimini içerdiğini *görüyoruz*.
+Örneğin, modeliniz belge kitaplığına yüklenen tüm **Sözleşme** belgelerini tanımlar ve sınıflandırır.  Ayrıca model, her sözleşmeden bir **Sözleşme Hizmeti** değeri ayıklar ve bunu kitaplık görünümünüzdeki bir sütunda görüntüler. Sözleşmelerdeki çeşitli Sözleşme Hizmetleri değerleri arasında, şirketinizin artık kullanmadığını ve yeniden adlandırıldığı birkaç eski değer vardır. Örneğin *Tasarım,* Grafik veya *Topografi* sözleşme hizmetleri *terimlerine yapılan tüm başvurular* artık *Creative* olarak adlandırılmalıdır. Modeliniz bir sözleşme belgesinden güncel olmayan terimlerden birini ayıklasa, geçerli creative terimini kitaplık görünümünüzde görüntülemesini istersiniz. Aşağıdaki örnekte, modeli eğitirken bir örnek belgenin *eski Tasarım* terimini içerdiğini görüyoruz.
 
    ![Terim deposu.](../media/content-understanding/design.png)</br>
 
-## <a name="use-a-managed-metadata-column-in-your-extractor"></a>Ayıklaıcıda Yönetilen meta veri sütunu kullanma
+## <a name="use-a-managed-metadata-column-in-your-extractor"></a>Ayıklayıcınızda Yönetilen meta veri sütunu kullanma
 
-Terim kümeleri, yönetim merkezinin Yönetilen Meta Veri hizmetleri (MMS) <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">terim SharePoint yapılandırılır</a>. Aşağıdaki örnekte, Sözleşme *Hizmetleri* [terim kümesi](/sharepoint/managed-metadata#term-set) Creative gibi çeşitli terimleri içerecek şekilde *yapılandırılmıştır*.  Terimin üç eş anlamlısı *(Tasarım**, Grafik* ve *Topografi*) olduğunu ve eş anlamlıların Yaratıcı olarak çevril olması gerektiğini *ayrıntılarıyla gösterir*. 
+Terim kümeleri, <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint yönetim merkezindeki</a> Yönetilen Meta Veri hizmetleri (MMS) terim deposunda yapılandırılır. Aşağıdaki örnekte *Sözleşme Hizmetleri* [terim kümesi](/sharepoint/managed-metadata#term-set)*, Creative* dahil olmak üzere çeşitli terimler içerecek şekilde yapılandırılmıştır.  Bunun ayrıntıları, terimin üç eş anlamlıya (*Tasarım*, *Grafik* ve *Topografi*) sahip olduğunu ve eş anlamlıların *Creative'e* çevrilmesi gerektiğini gösterir. 
 
    ![Terim kümesi.](../media/content-understanding/term-store.png)</br>
 
-Terim kümeniz içinde eş anlamlı kullanmak istemenizin birçok nedeni olabilir. Örneğin, eski terimler, yeniden adlandırılmış terimler veya adlandırmayla ilgili kuruluş bölümlerinizi farklı kullanabilirsiniz.
+Terim kümenizde eş anlamlı kullanmak istemenizin birçok nedeni olabilir. Örneğin, eski terimler, yeniden adlandırılmış terimler veya adlandırma konusunda kuruluşunuzun departmanları arasında çeşitlemeler olabilir.
 
-Ayıklayıcınızı modelde 2013'te 7000 yer alan yönetilen meta veri alanını seçen bir hale çıkarmak için, bunu bir yönetilen meta [veri sitesi sütunu olarak eklemeniz gerekir](https://support.microsoft.com/office/8fad9e35-a618-4400-b3c7-46f02785d27f). Site sütununu ekledikten sonra, modeliniz için ayıklaıcıyı 2013'e eklerken sütunu da seçebilirsiniz.
+Modelinizde ayıklayıcınızı oluştururken yönetilen meta veri alanını seçilebilir hale getirmek için, [bunu yönetilen meta veri site sütunu olarak eklemeniz](https://support.microsoft.com/office/8fad9e35-a618-4400-b3c7-46f02785d27f) gerekir. Site sütununu ekledikten sonra, modeliniz için ayıklayıcıyı oluştururken bunu seçebilirsiniz.
 
    ![Sözleşme hizmeti.](../media/content-understanding/contract-services.png)</br>
 
-Modelinizi belge kitaplığına yükledikten sonra, belgeler kitaplı kitaplara karşıya yüklendikten sonra, ayıklaıcı eş anlamlı değerlerden (*Tasarım, Grafik* ve *Topography*) herhangi birini bulduğunda *Creative Services* sütunu tercih edilen terimi (*Creative*) görüntüler.
+Modelinizi belge kitaplığına uyguladıktan sonra, belgeler kitaplığa yüklendiğinde, ayıklayıcı eş anlamlı değerlerden herhangi birini (*Tasarım*, *Grafikler* ve *Topografi*) bulduğunda *Creative Services* sütunu tercih edilen terimi (*Creative*) görüntüler.
 
-   ![Sözleşmeli hizmet sütunu.](../media/content-understanding/creative.png)</br>
+   ![Sözleşme hizmeti sütunu.](../media/content-understanding/creative.png)</br>
 
+> [!NOTE]
+> Terim kümesi açıksa, tercih edilen terim veya eş anlamlı değerle eşleşmeyen ayıklanan değerler terim kümesinin köküne yeni bir terim olarak eklenir. Bu yeni terimler terim kümesinin bulunduğu terim deposunda taşınabilir, birleştirilebilir veya eş anlamlılar oluşturulabilir.
 
-## <a name="see-also"></a>Ayrıca Bkz
+## <a name="see-also"></a>Ayrıca bkz.
 [Yönetilen Meta Verilere Giriş](/sharepoint/managed-metadata#terms)
 
-[Ayıklaıcı oluşturma](create-an-extractor.md)
+[Ayıklayıcı oluşturma](create-an-extractor.md)
 
 [Yönetilen meta veri sütunu oluşturma](https://support.microsoft.com/office/create-a-managed-metadata-column-8fad9e35-a618-4400-b3c7-46f02785d27f?redirectSourcePath=%252farticle%252fc2a06717-8105-4aea-890d-3082853ab7b7&ui=en-US&rs=en-US&ad=US)

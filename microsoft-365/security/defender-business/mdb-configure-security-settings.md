@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 03/15/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,19 +17,17 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 3d6ef3a7bc3ae9b7556041cedc88df354421f885
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.openlocfilehash: ff24d246172337923b145a8dbd64db58a671aa9e
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64746502"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64861806"
 ---
 # <a name="view-and-edit-your-security-policies-and-settings-in-microsoft-defender-for-business"></a>güvenlik ilkelerinizi ve ayarlarınızı İş için Microsoft Defender görüntüleme ve düzenleme
 
-> [!IMPORTANT]
-> İş için Microsoft Defender, 1 Mart 2022'de başlayarak [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşterilerine dağıtılıyor. Tek başına abonelik olarak İş için Defender önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşterilere ve BT İş Ortaklarına aşamalı olarak dağıtılacaktır. Önizleme, [bir dizi ilk senaryo](mdb-tutorials.md#try-these-preview-scenarios) içerir ve düzenli olarak özellikler ekleyeceğiz.
-> 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> [!NOTE]
+> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 ## <a name="overview"></a>Genel bakış
 
@@ -38,6 +36,7 @@ ms.locfileid: "64746502"
 - Şirketinizin cihazları için virüsten koruma ve kötü amaçlı yazılımdan korumayı belirleyen **[yeni nesil koruma ilkeleri](#view-or-edit-your-next-generation-protection-policies)**
 - Şirketinizin cihazlarına hangi ağ trafiğinin akışına izin verileceğini belirleyen **[güvenlik duvarı koruması ve kuralları](#view-or-edit-your-firewall-policies-and-custom-rules)**
 - Kullanıcıların yetişkinlere **[yönelik içerik](#set-up-web-content-filtering)** veya yasal sorumluluk gibi kategorilere göre belirli web sitelerini (URL' ler) ziyaret etmesini engelleyen web içeriği filtreleme.
+- Otomatik araştırma ve yanıt gibi **[gelişmiş özellikler](#review-settings-for-advanced-features)** ve blok modunda uç noktada algılama ve yanıtlama (EDR).
 
 İş için Defender'da güvenlik ilkeleri cihaz [grupları](mdb-create-edit-device-groups.md#what-is-a-device-group) aracılığıyla cihazlara uygulanır. 
 
@@ -55,13 +54,15 @@ Güvenlik ilkelerinizi ve ayarlarınızı yönetmek için bu makaleyi kılavuz o
 
 4. [Web içeriği filtrelemeyi ayarlayın](#set-up-web-content-filtering).
 
-5. [Microsoft 365 Defender portalında diğer ayarları görüntüleyin ve düzenleyin](#view-and-edit-other-settings-in-the-microsoft-365-defender-portal). 
+5. [Gelişmiş özellikler için ayarları gözden geçirin](#review-settings-for-advanced-features).
 
-6. [Sonraki adımlarınıza geçin](#next-steps).
+6. [Microsoft 365 Defender portalında diğer ayarları görüntüleyin ve düzenleyin](#view-and-edit-other-settings-in-the-microsoft-365-defender-portal). 
+
+7. [Sonraki adımlarınıza geçin](#next-steps).
 
 >
 > **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">İş için Microsoft Defender hakkındaki kısa anketimize</a> katılın. Sizden haber almak isteriz!
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
 ## <a name="choose-where-to-manage-security-policies-and-devices"></a>Güvenlik ilkelerinin ve cihazların nerede yönetileceğini seçme
@@ -80,7 +81,7 @@ Aşağıdaki tablo, güvenlik ilkelerinizi ve cihazlarınızı yöneteceğiniz y
 
 ## <a name="view-or-edit-your-next-generation-protection-policies"></a>Yeni nesil koruma ilkelerinizi görüntüleme veya düzenleme
 
-Yeni nesil koruma ilkelerinizi yönetmek için Microsoft 365 Defender portalını mı yoksa Microsoft Endpoint Manager mi kullandığınıza bağlı olarak, aşağıdaki tabloda yer alan yordamlardan birini kullanın: <br/><br/>
+Yeni nesil koruma ilkelerinizi yönetmek için Microsoft 365 Defender portalını mı yoksa Microsoft Endpoint Manager mi kullandığınıza bağlı olarak, aşağıdaki tabloda yer alan yordamlardan birini kullanın:
 
 | Portal | Yordam |
 |:---|:---|
@@ -89,7 +90,7 @@ Yeni nesil koruma ilkelerinizi yönetmek için Microsoft 365 Defender portalın�
 
 ## <a name="view-or-edit-your-firewall-policies-and-custom-rules"></a>Güvenlik duvarı ilkelerinizi ve özel kurallarınızı görüntüleme veya düzenleme
 
-Güvenlik duvarı korumanızı yönetmek için Microsoft 365 Defender portalını mı yoksa Microsoft Endpoint Manager mi kullandığınıza bağlı olarak, aşağıdaki tabloda yer alan yordamlardan birini kullanın: <br/><br/>
+Güvenlik duvarı korumanızı yönetmek için Microsoft 365 Defender portalını mı yoksa Microsoft Endpoint Manager mi kullandığınıza bağlı olarak, aşağıdaki tabloda yer alan yordamlardan birini kullanın:
 
 | Portal | Yordam |
 |:---|:---|
@@ -101,13 +102,9 @@ Güvenlik duvarı korumanızı yönetmek için Microsoft 365 Defender portalın�
 Web içeriği filtreleme, güvenlik ekibinizin web sitelerine erişimi aşağıdaki gibi içerik kategorilerine göre izlemesine ve düzenlemesine olanak tanır:
 
 - Yetişkin içeriği: Tarikatlar, kumar, çıplaklık, pornografi, cinsel içerikli malzeme veya şiddet ile ilgili siteler
-
 - Yüksek bant genişliği: Siteleri, görüntü paylaşım sitelerini veya eşler arası konakları indirme
-
 - Yasal sorumluluk: Çocuk istismarı görüntülerini içeren, yasa dışı etkinlikleri teşvik eden, intihal veya okul dolandırıcılığına teşvik eden veya zararlı etkinlikleri teşvik eden siteler
-
 - Boş zaman: Web tabanlı sohbet odaları, çevrimiçi oyun, web tabanlı e-posta veya sosyal ağ sağlayan siteler
-
 - Kategorilere ayrılmamış: İçeriği olmayan veya yeni kaydedilen siteler
 
 Bu kategorilerdeki web sitelerinin tümü kötü amaçlı değildir, ancak uyumluluk düzenlemeleri, bant genişliği kullanımı veya diğer endişeler nedeniyle şirketiniz için sorunlu olabilir. Ayrıca, güvenlik ekibinizin herhangi bir web sitesi kategorisini engellemesi gerekip gerekmediğini daha iyi anlamak için yalnızca denetim ilkesi oluşturabilirsiniz.
@@ -133,6 +130,32 @@ Web içeriği filtreleme, Windows Defender SmartScreen (Microsoft Edge) ve Ağ K
 > [!TIP]
 > Web içeriği filtreleme hakkında daha fazla bilgi edinmek için bkz. [Web içeriği filtreleme](../defender-endpoint/web-content-filtering.md).
 
+## <a name="review-settings-for-advanced-features"></a>Gelişmiş özellikler için ayarları gözden geçirme
+
+Yeni nesil koruma, güvenlik duvarı ve web içeriği filtreleme ilkelerine ek olarak, İş için Defender gelişmiş güvenlik özellikleri içerir. Bu özellikler önerilen ayarlar kullanılarak önceden yapılandırılmış; ancak bunları gözden geçirebilir ve gerekirse ayarları iş gereksinimlerinize uyacak şekilde düzenleyebilirsiniz.
+
+Gelişmiş özelliklerin ayarlarına erişmek için Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com) ) **Ayarlar** >  EndpointsGeneralAdvanced >  >  **özellikler'e** gidin.
+
+Aşağıdaki tabloda gelişmiş özelliklerin ayarları açıklanmaktadır:
+
+| Ayar | Açıklama |
+|:---|:---|
+| Otomatik Araştırma <br/>(varsayılan olarak açıktır) | Uyarılar oluşturuldukçe otomatik araştırma yapılabilir. Her otomatik araştırma, algılanan bir tehdidin eylem gerektirip gerektirmediğini belirler ve ardından düzeltme eylemleri (karantinaya dosya gönderme, işlemi durdurma, cihazı yalıtma veya URL'yi engelleme gibi) gerçekleştirir (veya önerir). Bir araştırma çalışırken, ortaya çıkan diğer ilgili uyarılar tamamlanana kadar araştırmaya eklenir. Etkilenen bir varlık başka bir yerde görülürse, otomatik araştırma kapsamını bu varlığı içerecek şekilde genişletir ve araştırma işlemi yinelenir.<br/><br/>Araştırmalara **Olaylar** sayfasından bakabilirsiniz. Bir olay seçin ve ardından **Araştırmalar** sekmesini seçin.<br/><br/>[Otomatik araştırma hakkında daha fazla bilgi edinin](../defender-endpoint/automated-investigations.md).   |
+| Canlı Yanıt <br/>(varsayılan olarak açıktır) | İş için Defender aşağıdaki el ile yanıt eylemi türlerini içerir: <br/>- Virüsten koruma taraması çalıştırma<br/>- Cihazı yalıtma<br/>- Dosyayı durdurma ve karantinaya al<br/>- Bir dosyayı engellemek veya dosyaya izin vermek için gösterge ekleme <br/><br/>[Yanıt eylemleri hakkında daha fazla bilgi edinin](../defender-endpoint/respond-machine-alerts.md). |
+| Sunucular için Canlı Yanıt | (Bu ayar şu anda İş için Defender'da kullanılamıyor)   |
+| Canlı Yanıt imzasız betik yürütme | (Bu ayar şu anda İş için Defender'da kullanılamıyor)  | 
+| Blok modunda EDR etkinleştirme<br/>(varsayılan olarak açıktır) | Microsoft Defender Virüsten Koruma birincil virüsten koruma ürünü olmadığında ve bir cihazda pasif modda çalıştığında kötü amaçlı yapıtlara karşı ek koruma sağlar. Blok modundaki EDR, EDR özellikleri tarafından algılanan kötü amaçlı yapıtları düzeltmek için arka planda çalışır. Bu tür yapıtlar birincil, Microsoft dışı virüsten koruma ürünü tarafından kaçırılmış olabilir. Microsoft Defender Virüsten Koruma birincil virüsten koruma yazılımı olarak çalıştıran cihazlar için blok modundaki EDR, Microsoft Defender Virüsten Koruma ihlal sonrası, davranışsal EDR algılamalarında otomatik eylemler gerçekleştirmesine izin vererek ek bir savunma katmanı sağlar.<br/><br/>[Blok modunda EDR hakkında daha fazla bilgi edinin](../defender-endpoint/edr-in-block-mode.md). |
+| Dosyaya izin verme veya dosyayı engelleme <br/>(varsayılan olarak açıktır) | [Göstergeleri](../defender-endpoint/indicator-file.md) kullanarak bir dosyaya izin vermenizi veya dosyayı engellemenizi sağlar. Bu özellik, Microsoft Defender Virüsten Koruma etkin modda olmasını ve [bulut korumasının](../defender-endpoint/cloud-protection-microsoft-defender-antivirus.md) açılmasını gerektirir.<br/><br/>Bir dosyanın engellenmesi, dosyanın kuruluşunuzdaki cihazlarda okunmasını, yazılmasını veya yürütülmesini engeller. <br/><br/>[Dosyalar için göstergeler hakkında daha fazla bilgi edinin](../defender-endpoint/indicator-file.md).  |
+| Özel ağ göstergeleri<br/>(varsayılan olarak açıktır) | [Ağ göstergelerini](../defender-endpoint/indicator-ip-domain.md) kullanarak BIR IP adresine, URL'ye veya etki alanına izin vermenizi veya engellemenizi sağlar. Bu özellik, Microsoft Defender Virüsten Koruma etkin modda olmasını ve [ağ korumasının](../defender-endpoint/enable-network-protection.md) açılmasını gerektirir.<br/><br/>Kendi tehdit bilgilerinize göre IP'lere, URL'lere veya etki alanlarına izin verebilir veya bunları engelleyebilirsiniz. Riskli bir uygulama açtıklarında kullanıcıları bir istemle de uyarabilirsiniz. İstem, uygulamayı kullanmalarını engellemez, ancak kullanıcılar için bir uyarı sağlayabilirsiniz.<br/><br/>[Ağ koruması hakkında daha fazla bilgi edinin](../defender-endpoint/network-protection.md). |
+| Kurcalama koruması<br/>(bu ayarı açmanızı öneririz) | Kurcalama koruması, kötü amaçlı uygulamaların aşağıdaki gibi eylemler gerçekleştirmesini önler:<br/>- Virüs ve tehdit korumasını devre dışı bırakma<br/>- Gerçek zamanlı korumayı devre dışı bırakma<br/>- Davranış izlemeyi kapatma<br/>- Bulut korumasını devre dışı bırakma<br/>- Güvenlik bilgileri güncelleştirmelerini kaldırma<br/>- Algılanan tehditlerde otomatik eylemleri devre dışı bırakma<br/><br/>Kurcalama koruması temelde Microsoft Defender Virüsten Koruma güvenli, varsayılan değerlerine kilitler ve güvenlik ayarlarınızın uygulamalar ve yetkisiz yöntemler tarafından değiştirilmesini önler. <br/><br/>[Kurcalama koruması hakkında daha fazla bilgi](../defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection.md).  |
+| Kullanıcı ayrıntılarını göster<br/>(varsayılan olarak açıktır) | Kuruluşunuzdaki kişilerin çalışanların resmi, adı, unvanı ve departmanı gibi ayrıntıları görmesini sağlar. Bu ayrıntılar Azure Active Directory (Azure AD) içinde depolanır.<br/><br/>[Azure AD'de kullanıcı profilleri hakkında daha fazla bilgi edinin](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal).  |
+| Skype Kurumsal tümleştirmesi<br/>(varsayılan olarak açıktır) | Skype Kurumsal Temmuz 2021'de kullanımdan kaldırıldı. Henüz Microsoft Teams taşınmadıysanız bkz. [Küçük işletmenizde Microsoft Teams ayarlama](/microsoftteams/deploy-small-business). <br/><br/>Microsoft Teams (veya eski Skype Kurumsal) ile tümleştirme, işletmenizdeki kişiler arasında tek tıklamayla iletişime olanak tanır.   |
+| Web içeriği filtreleme<br/>(varsayılan olarak açıktır) | İstenmeyen içerik içeren web sitelerine erişimi engelleyin ve tüm etki alanlarındaki web etkinliğini izleyin. Bkz. [Web içeriği filtrelemeyi ayarlama](#set-up-web-content-filtering). |
+| Microsoft Intune bağlantısı<br/>(Intune varsa bu ayarı açmanızı öneririz) | Kuruluşunuzun aboneliği Microsoft Intune (Microsoft Endpoint Manager parçası ve [Microsoft 365 İş Ekstra](../../business/index.yml) dahil) içeriyorsa, bu ayar İş için Defender'ın cihazlar hakkındaki bilgileri Intune ile paylaşmasını sağlar.  |
+| cihaz keşfi<br/>(varsayılan olarak açıktır) | Güvenlik ekibinizin şirket ağınıza bağlı yönetilmeyen cihazları bulmasını sağlar. Bilinmeyen ve yönetilmeyen cihazlar ağınıza önemli riskler getirir. Bu, eşleşmeyen bir yazıcı, zayıf güvenlik yapılandırmalarına sahip ağ cihazları veya güvenlik denetimleri olmayan bir sunucu olabilir. <br/><br/>Cihaz bulma, yönetilmeyen cihazları bulmak için eklenen cihazları kullanır, böylece güvenlik ekibiniz yönetilmeyen cihazları ekleyebilir ve güvenlik açığınızı azaltabilir. <br/><br/>[Cihaz bulma hakkında daha fazla bilgi edinin](../defender-endpoint/device-discovery.md).    |
+| Özellikleri önizleyin | Microsoft, yeni özellik geliştirmeleri ve özellikleri dahil etmek için İş için Defender gibi hizmetleri sürekli güncelleştirmektedir. Önizleme özelliklerini almayı kabul ederseniz, önizleme deneyiminde yaklaşan özellikleri ilk deneyenler arasında yer alırsınız. <br/><br/>[Önizleme özellikleri hakkında daha fazla bilgi edinin](../defender-endpoint/preview.md).  |
+
+
 ## <a name="view-and-edit-other-settings-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında diğer ayarları görüntüleme ve düzenleme
 
 Cihazlara uygulanan güvenlik ilkelerine ek olarak, İş için Defender'da görüntüleyebileceğiniz ve düzenleyebileceğiniz başka ayarlar da vardır. Örneğin, kullanılacak saat dilimini belirtirsiniz ve cihazları ekleyebilir (veya devre dışı bırakabilirsiniz). 
@@ -142,9 +165,7 @@ Cihazlara uygulanan güvenlik ilkelerine ek olarak, İş için Defender'da gör�
 
 ### <a name="settings-to-review-for-defender-for-business"></a>İş için Defender'ı gözden geçirmek Ayarlar
 
-Aşağıdaki tabloda, İş için Defender'da görüntüleme (ve gerekirse düzenleme) ayarları açıklanmaktadır.
-
-<br/><br/>
+Aşağıdaki tabloda, İş için Defender'da görüntüleme (ve gerekirse düzenleme) ayarları açıklanmaktadır:
 
 | Kategori | Ayar | Açıklama |
 |:---|:---|:---|
@@ -153,7 +174,7 @@ Aşağıdaki tabloda, İş için Defender'da görüntüleme (ve gerekirse düzen
 | **Microsoft 365 Defender**  | **Özellikleri önizleyin**  | Yaklaşan özellikleri ve yeni özellikleri denemek için önizleme özelliklerini açın. Yeni özellikleri ilk önizleyip geri bildirim sağlayanlar arasında olabilirsiniz. |
 | **Bitiş noktası**  | **E-posta bildirimleri** | E-posta bildirim kurallarınızı ayarlayın veya düzenleyin. Güvenlik açıkları algılandığında veya bir uyarı oluşturulduğunda, e-posta bildirim kurallarınızda belirtilen alıcılar bir e-posta alır. [E-posta bildirimleri hakkında daha fazla bilgi edinin](mdb-email-notifications.md). |
 | **Bitiş noktası**   | **Cihaz yönetimi** >  **Ekleme** | İndirilebilir bir betik kullanarak cihazları İş için Defender'a ekleyin. Daha fazla bilgi edinmek için bkz[. Cihazları İş için Microsoft Defender ekleme](mdb-onboard-devices.md).   |  
-| **Bitiş noktası**  |  **Cihaz yönetimi** >  **Çıkarma** | Cihazları İş için Defender'dan çıkarın (kaldırın). Bir cihazı kullanıma aldığınızda, bu cihaz artık İş için Defender'a veri göndermez, ancak kullanıma alınmadan önce alınan veriler korunur. Daha fazla bilgi için bkz. [Cihazı çıkarma](mdb-onboard-devices.md#offboarding-a-device).  |
+| **Bitiş noktası**  |  **Cihaz yönetimi** >  **Çıkarma** | Cihazları İş için Defender'dan çıkarın (kaldırın). Bir cihazı kullanıma aldığınızda, bu cihaz artık İş için Defender'a veri göndermez, ancak kullanıma alınmadan önce alınan veriler korunur. Daha fazla bilgi için bkz. [Cihazı çıkarma](mdb-offboard-devices.md).  |
 
 ### <a name="access-your-settings-in-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında ayarlarınıza erişme
 
@@ -162,7 +183,6 @@ Aşağıdaki tabloda, İş için Defender'da görüntüleme (ve gerekirse düzen
 2. **Ayarlar'ı** seçin ve ardından bir kategori (**Güvenlik merkezi**, **Microsoft 365 Defender** veya **Uç Noktalar** gibi) seçin.
 
 3. Ayarlar listesinde, görüntülemek veya düzenlemek için bir öğe seçin.
-
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

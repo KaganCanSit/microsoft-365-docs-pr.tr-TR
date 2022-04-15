@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 03/15/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 98ead4a77c275e0e4aeeab90e87e0b468a9b7bb8
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 42d7acb4512928a32ac99c486a231d7891102208
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665986"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64861344"
 ---
 # <a name="tutorials-and-simulations-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'deki öğreticiler ve simülasyonlar
 
@@ -34,18 +34,16 @@ ms.locfileid: "64665986"
 
 >
 > **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">İş için Microsoft Defender hakkındaki kısa anketimize</a> katılın. Sizden haber almak isteriz!
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
 ## <a name="try-these-preview-scenarios"></a>Bu önizleme senaryolarını deneyin
 
-Aşağıdaki tabloda, İş için Defender ile deneyebileceğiniz çeşitli senaryolar özetlemektedir. 
-<br/><br/>
-
+Aşağıdaki tabloda, İş için Defender ile deneyebileceğiniz çeşitli senaryolar özetlemektedir:
 
 | Senaryo  | Açıklama  |
 |---------|---------|
-| Yerel betik kullanarak cihazları ekleme <br/>(*üretim dağıtımı için değil*)     | İş için Defender'da, indirdiğiniz ve her cihazda çalıştırdığınız bir betik kullanarak on Windows 10 ve 11 cihaz ekleyebilirsiniz. İş için Defender'ın ortamınızda nasıl çalışacağını değerlendirmek için uygun olan betik, Azure Active Directory (Azure AD) ile bir güven oluşturur ve cihazı Microsoft Intune ile kaydeder. Daha fazla bilgi için bkz. [İş için Defender'da yerel betik](mdb-onboard-devices.md#local-script-in-defender-for-business).         |
+| Yerel betik kullanarak cihazları ekleme <br/>(*üretim dağıtımı için değil*)     | İş için Defender'da, indirdiğiniz ve her cihazda çalıştırdığınız bir betik kullanarak on Windows 10 ve 11 cihaz ekleyebilirsiniz. İş için Defender'ın ortamınızda nasıl çalışacağını değerlendirmek için uygun olan betik, Azure Active Directory (Azure AD) ile bir güven oluşturur ve cihazı Microsoft Intune ile kaydeder. Daha fazla bilgi edinmek için bkz[. Cihazları İş için Microsoft Defender ekleme](mdb-onboard-devices.md).         |
 | Microsoft Intune kullanarak cihazları ekleme     | Uç Nokta için Defender'ı almadan önce zaten Microsoft Intune kullanıyorsanız cihazları eklemek için Microsoft Intune kullanmaya devam edebilirsiniz. Microsoft Intune ile macOS, iOS ve Android cihazları eklemeyi deneyin. Daha fazla bilgi için bkz. [Microsoft Intune'de cihaz kaydı](/mem/intune/enrollment/device-enrollment).        |
 | Güvenlik ilkelerini düzenleme     | İş için Defender'da güvenlik ilkelerinizi yönetiyorsanız, ilkelerinizi görüntülemek ve düzenlemek için **Cihaz yapılandırma** sayfasını kullanın. Daha fazla bilgi için bkz. [İş için Microsoft Defender'de ilkeleri görüntüleme veya düzenleme](mdb-view-edit-policies.md).        |
 | Sanal saldırı yürütme   | İş için Defender'da çeşitli öğreticiler ve simülasyonlar mevcuttur. Bu öğreticiler ve simülasyonlar, İş için Defender'ın tehdit koruması özelliklerinin şirketiniz için nasıl çalışabileceğini ilk elden gösterecek şekilde tasarlanmıştır. Öğreticilerden birini veya daha fazlasını denemek için bkz. [İş için Microsoft Defender için önerilen öğreticiler](#recommended-tutorials-for-defender-for-business).         |
@@ -55,8 +53,6 @@ Aşağıdaki tabloda, İş için Defender ile deneyebileceğiniz çeşitli senar
 ## <a name="recommended-tutorials-for-defender-for-business"></a>İş için Defender için önerilen öğreticiler
 
 Aşağıdaki tabloda, İş için Defender müşterileri için önerilen öğreticiler açıklanmaktadır:
-<br/><br/>
-
 
 | Öğretici  | Açıklama  |
 |---------|---------|
@@ -84,9 +80,6 @@ Her öğreticide senaryoyu, nasıl çalıştığını ve ne yapılacağını aç
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [İş için Microsoft Defender'de cihazları yönetme](mdb-manage-devices.md)
-
 - [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)
-
 - [İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma](mdb-respond-mitigate-threats.md)
-
 - [İşlem merkezindeki düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)

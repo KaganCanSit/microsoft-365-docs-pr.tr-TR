@@ -1,13 +1,13 @@
 ---
-title: İş için Microsoft Defender'da düzeltme eylemlerini gözden geçirme
-description: İşlem merkezinde otomatik olarak alınan veya onay bekleyen düzeltmeleri görüntüleme
+title: İş için Microsoft Defender'de düzeltme eylemlerini gözden geçirme
+description: otomatik olarak alınan veya İşlem merkezinde onay bekleyen düzeltmeleri görüntüleme
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 03/10/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,59 +17,55 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: b5bb61d4a0b8f3cb0732633463fbf2c96ec258e9
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 15a64491f6e97137d1e919aa126d4bf134c47999
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525522"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862224"
 ---
-# <a name="review-remediation-actions-in-the-action-center"></a>İşlem merkezinde düzeltme eylemlerini gözden geçirme
+# <a name="review-remediation-actions-in-the-action-center"></a>İşlem merkezindeki düzeltme eylemlerini gözden geçirme
 
-> [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
-> 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> [!NOTE]
+> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
-Tehdit algılandığında düzeltme eylemleri ortaya çıktı. Belirli tehdide ve güvenlik ayarlarınızın nasıl yapılandırılana bağlı olarak, düzeltme eylemleri otomatik olarak veya yalnızca onay üzerine gerçek olabilir. Düzeltme eylemlerine örnek olarak, dosyayı karantinaya gönderme, bir işlemi çalıştırmayı durdurma ve zamanlanmış görevi kaldırma işlemleri örnek olarak verilmiştir. Tüm düzeltme eylemleri İşlem merkezinde iz izdedir.
+Tehditler algılandıkçe düzeltme eylemleri devreye girer. Belirli bir tehdide ve güvenlik ayarlarınızın nasıl yapılandırıldığına bağlı olarak, düzeltme eylemleri otomatik olarak veya yalnızca onaylandığında gerçekleştirilebilir. Karantinaya dosya gönderme, işlemin çalışmasını durdurma ve zamanlanmış görevi kaldırma gibi düzeltme eylemlerine örnek olarak verilebilir. Tüm düzeltme eylemleri İşlem merkezinde izlenir.
 
-:::image type="content" source="../../media/defender-business/mdb-actioncenter.png" alt-text="İşlem merkezi ekran görüntüsü":::
+:::image type="content" source="../../media/defender-business/mdb-actioncenter.png" alt-text="İşlem merkezinin ekran görüntüsü":::
 
-**Bu makalede şu açıklanmıştır**:
+**Bu makalede şunlar açıklanmaktadır**:
 
 - [İşlem merkezini kullanma](#how-to-use-the-action-center)
-
 - [Düzeltme eylemleri](#remediation-actions)
 
 >
-> **Bir dakika mı kaldı?**
-> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+> **Bir dakikan var mı?**
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
 ## <a name="how-to-use-the-action-center"></a>İşlem merkezini kullanma
 
-1. Microsoft 365 Defender portalına () gidin[https://security.microsoft.com](https://security.microsoft.com) ve oturum açın.
+1. Microsoft 365 Defender portalına ()[https://security.microsoft.com](https://security.microsoft.com) gidin ve oturum açın.
 
-2. Gezinti bölmesinde İşlem **merkezi'ni seçin**.
+2. Gezinti bölmesinde **İşlem merkezi'ni** seçin.
 
-3. Bekleyen eylemleri **görüntülemek** ve onaylamak (veya reddetmek) için Beklemede sekmesini seçin. Bu tür eylemler virüsten koruma/kötü amaçlı yazılımlardan koruma, otomatik soruşturmalar, el ile yanıt etkinlikleri veya canlı yanıt oturumlarından oluşabilir.
+3. Bekleyen eylemleri görüntülemek ve onaylamak (veya reddetmek) için **Beklemede** sekmesini seçin. Bu tür eylemler virüsten koruma/kötü amaçlı yazılımdan koruma, otomatik araştırma, el ile yanıt etkinlikleri veya canlı yanıt oturumlarından kaynaklanabilir.
 
-4. Tamamlanmış **eylemlerin** listesini görüntülemek için Geçmiş sekmesini seçin. 
+4. Tamamlanan eylemlerin listesini görüntülemek için **Geçmiş** sekmesini seçin. 
 
 ## <a name="remediation-actions"></a>Düzeltme eylemleri
 
-İş için Microsoft Defender çeşitli düzeltme eylemleri içerir. Bu eylemler, el ile yanıt eylemlerini, otomatik soruşturmayı takip eden eylemleri ve canlı yanıt eylemlerini içerir.
+İş için Microsoft Defender çeşitli düzeltme eylemleri içerir. Bu eylemler el ile yanıt eylemlerini, otomatik araştırmadan sonraki eylemleri ve canlı yanıt eylemlerini içerir.
 
-Aşağıdaki tabloda, kullanılabilir düzeltme eylemleri listele:
+Aşağıdaki tabloda, kullanılabilen düzeltme eylemleri listelenir:
 
-| Kaynak  | Eylemler  |
+| Kaynak  | Eylem  |
 |---------|---------|
-| [Otomatik soruşturmalar](../defender-endpoint/automated-investigations.md)      | - Dosyayı karantinaya alın <br/>- Kayıt defteri anahtarını kaldırma <br/>- Süreci kill <br/>- Hizmeti durdurma <br/>- Sürücüyü devre dışı bırakma <br/>- Zamanlanmış görevi kaldırma        |
-| [El ile yanıt eylemleri](../defender-endpoint/respond-machine-alerts.md)   | - Virüsten koruma taraması çalıştırma <br/>- Cihazı yalıt <br/>- Durdurma ve karantina <br/>- Dosyayı engellemek veya dosyaya izin vermek için bir gösterge ekleyin       |
-| [Canlı yanıt](../defender-endpoint/live-response.md)   | - Bilgi toplama <br/>- Dosyayı çözümleme <br/>- Betik çalıştırma <br/>- Çözümleme için Microsoft'a şüpheli bir varlık gönderin <br/>- Dosyayı düzeltme <br/>- Tehditlere karşı önceden önlem almak         |
+| [Otomatik araştırma](../defender-endpoint/automated-investigations.md)      | - Dosyayı karantinaya al <br/>- Kayıt defteri anahtarını kaldırma <br/>- Bir işlemi sonlandırma <br/>- Hizmeti durdurma <br/>- Sürücüyü devre dışı bırakma <br/>- Zamanlanmış görevi kaldırma        |
+| [El ile yanıt eylemleri](../defender-endpoint/respond-machine-alerts.md)   | - Virüsten koruma taraması çalıştırma <br/>- Cihazı yalıtma <br/>- Durdurma ve karantinaya al <br/>- Bir dosyayı engellemek veya dosyaya izin vermek için gösterge ekleme       |
+| [Canlı yanıt](../defender-endpoint/live-response.md)   | - Adli veri toplama <br/>- Bir dosyayı analiz etme <br/>- Betik çalıştırma <br/>- Şüpheli bir varlığı analiz için Microsoft'a gönderme <br/>- Dosyayı düzeltme <br/>- Tehditleri proaktif olarak avlama         |
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [İş için Microsoft Defender'da tehditleri yanıtlama ve azaltmak](mdb-respond-mitigate-threats.md)
-
-- [İş için Microsoft Defender'da cihazları yönetme](mdb-manage-devices.md)
+- [İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma](mdb-respond-mitigate-threats.md)
+- [İş için Microsoft Defender'de cihazları yönetme](mdb-manage-devices.md)

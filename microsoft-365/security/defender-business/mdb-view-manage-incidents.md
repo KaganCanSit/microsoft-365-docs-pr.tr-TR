@@ -1,13 +1,13 @@
 ---
 title: İş için Microsoft Defender'da olayları görüntüleme ve yönetme
-description: Uyarıları yönetmeyi, & yönetmeyi, cihazları yönetmeyi ve düzeltme eylemlerini gözden geçirmeyi öğrenin
+description: Uyarıları görüntülemeyi & yönetmeyi, tehditlere yanıt vermeyi, cihazları yönetmeyi ve düzeltme eylemlerini gözden geçirmeyi öğrenin
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 03/15/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,66 +17,60 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: a814aa4ad002672fa3451ef1bcc524d9b03d4eb5
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: ec1d85b72cfbe17e182d3aed573476e4fadfdef6
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63527078"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64861454"
 ---
 # <a name="view-and-manage-incidents-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da olayları görüntüleme ve yönetme
 
-> [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
-> 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> [!NOTE]
+> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
-Tehdit algılandığında ve uyarılar tetiklendiğinden, olaylar oluşturulur. Şirketinizin güvenlik ekibi portalında olayları 2013 Microsoft 365 Defender yönetebilir.
+Tehditler algılandığında ve uyarılar tetiklendiğinde olaylar oluşturulur. Şirketinizin güvenlik ekibi olayları Microsoft 365 Defender portalında görüntüleyebilir ve yönetebilir.
 
 **Bu makale şunları içerir**:
 
 - [Olaylarınızı ve uyarılarınızı izleme](#monitor-your-incidents--alerts)
-
-- [Önem derecesine dikkat](#alert-severity)
-
+- [Uyarı önem derecesi](#alert-severity)
 - [Sonraki adımlar](#next-steps)
 
 >
-> **Bir dakika mı kaldı?**
-> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+> **Bir dakikan var mı?**
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
-## <a name="monitor-your-incidents--alerts"></a>Olaylarınızı veya & izleme
+## <a name="monitor-your-incidents--alerts"></a>Olaylarınızı & uyarılarınızı izleme
 
-1. Gezinti Microsoft 365 Defender ()[https://security.microsoft.com](https://security.microsoft.com) içinde **Olaylar'ı seçin**. Oluşturulan tüm olaylar sayfada listelenir.
+1. Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com) ) gezinti bölmesinde **Olaylar'ı** seçin. Oluşturulan tüm olaylar sayfada listelenir.
 
    :::image type="content" source="../../media/defender-business/mdb-incidents-list.png" alt-text="Olaylar listesinin ekran görüntüsü":::
 
-2. Uyarı hakkında daha fazla bilgi edinmek istediğiniz açılır pencereyi açmak için bir uyarı seçin. 
+2. Uyarı hakkında daha fazla bilgi edinebileceğiniz açılır pencere bölmesini açmak için bir uyarı seçin. 
 
-   :::image type="content" source="../../media/defender-business/mdb-incident-flyout.png" alt-text="Açılır uygulama açık olarak seçilen olayın ekran görüntüsü":::
+   :::image type="content" source="../../media/defender-business/mdb-incident-flyout.png" alt-text="Açılır öğe açıkken seçilen olayın ekran görüntüsü":::
 
-3. Açılır bölmede uyarı başlığını görebilir, etkilenen varlıkların listesini (uç noktalar veya kullanıcı hesapları gibi) ekleyebilirsiniz, kullanılabilir eylemler gerçekleştirabilir ve daha fazla bilgi görüntülemek, hatta seçili uyarının ayrıntılar sayfasını açmak için bağlantıları kullanabilirsiniz. 
+3. Açılır bölmede uyarı başlığını görebilir, etkilenen varlıkların (uç noktalar veya kullanıcı hesapları gibi) listesini görüntüleyebilir, kullanılabilir eylemler gerçekleştirebilir ve daha fazla bilgi görüntülemek ve hatta seçili uyarının ayrıntılar sayfasını açmak için bağlantıları kullanabilirsiniz. 
 
 > [!TIP]
-> İş için Microsoft Defender, önerilen eylemleri önererek algılanan tehditlere karşı size yardımcı olacak şekilde tasarlanmıştır. Uyarıyı görüntülediğiniz zaman, gerçekleştirilecek önerilen eylemlerin ne olduğunu bakın. Ayrıca, yalnızca tehdit önem düzeyine göre değil, aynı zamanda şirketinize yönelik risk düzeyine göre de belirlenen uyarı önem derecesine de dikkatin. 
+> İş için Microsoft Defender, önerilen eylemleri sunarak algılanan tehditleri gidermenize yardımcı olmak için tasarlanmıştır. Bir uyarıyı görüntülediğinizde, yapılması önerilen eylemleri arayın. Ayrıca, yalnızca tehdit önem derecesine değil, aynı zamanda şirketiniz için risk düzeyine göre belirlenen uyarı önem derecesini de not edin. 
 
-## <a name="alert-severity"></a>Önem derecesine dikkat
+## <a name="alert-severity"></a>Uyarı önem derecesi
 
-Bu Microsoft Defender Virüsten Koruma bir uyarı önem derecesi, algılanan bir tehdidin (kötü amaçlı yazılım) mutlak önem düzeyine ve tek bir uç nokta için olası risklere (virüs bulaşmışsa) dayalı olarak bir uyarı önem düzeyi atar.
-İş için Microsoft Defender, algılanan davranışın önem düzeyine, uç nokta (cihaz) için gerçek riske ve daha önemlisi, şirketinize olası risklere dayalı bir uyarı önem düzeyi atar. Aşağıdaki tabloda birkaç örnek listele: <br/><br/>
+Microsoft Defender Virüsten Koruma algılanan tehdidin (kötü amaçlı yazılım) mutlak önem derecesine ve tek bir uç noktaya (virüs bulaşmışsa) olası riski temel alan bir uyarı önem derecesi atadığında.
+İş için Microsoft Defender algılanan davranışın önem derecesine, bir uç noktaya (cihaza) gerçek risk ve daha da önemlisi şirketiniz için olası risk temelinde bir uyarı önem derecesi atar. Aşağıdaki tabloda birkaç örnek verilmiştir:
 
-| Senaryo | Önem derecesine dikkat | Neden |
+| Senaryo | Uyarı önem derecesi | Neden |
 |:---|:---|:---|
-| Microsoft Defender Virüsten Koruma bir hasar algılamadan önce tehdide son verir. | Bilgilendirme | Herhangi bir hasar yapılmadan önce tehdit durduruldu. |
-| Microsoft Defender Virüsten Koruma içinde yürütülen kötü amaçlı yazılım algılayan bir yazılım algılayan bir yazılımdır. Kötü amaçlı yazılım durduruldu ve düzeltildi. | Düşük | Tek bir uç noktada bazı zararlar olsa da, kötü amaçlı yazılım artık şirketiniz için tehdit oluşturmaz. |
-| Yürüten kötü amaçlı yazılım, İş için Microsoft Defender tarafından algılanır. Kötü amaçlı yazılım neredeyse hemen engellenir. | Orta veya Yüksek | Kötü amaçlı yazılım, tek tek uç noktalar ve sizin şirketiniz için tehdit oluşturur. |
-| Şüpheli davranış algılanır, ancak henüz hiçbir düzeltme eylemi gerçekleştir alınmaz. | Düşük, Orta veya Yüksek | Önem derecesi, davranışın şirketiniz için tehdit oluşturduğu dereceye bağlıdır. |
+| Microsoft Defender Virüsten Koruma herhangi bir hasara neden olmadan önce bir tehdidi algılar ve durdurur. | Bilgi | Herhangi bir hasar verilmeden önce tehdit durduruldu. |
+| Microsoft Defender Virüsten Koruma, şirketinizde yürütülen kötü amaçlı yazılımları algılar. Kötü amaçlı yazılım durduruldu ve düzeltildi. | Düşük | Tek bir uç noktaya zarar verilmiş olsa da, kötü amaçlı yazılım artık şirketiniz için bir tehdit oluşturmaz. |
+| Yürütülen kötü amaçlı yazılımlar İş için Microsoft Defender tarafından algılanır. Kötü amaçlı yazılım neredeyse hemen engellenir. | Orta veya Yüksek | Kötü amaçlı yazılım, tek tek uç noktalar ve şirketiniz için bir tehdit oluşturur. |
+| Şüpheli davranış algılanır ancak henüz düzeltme işlemi yapılmaz. | Düşük, Orta veya Yüksek | Önem derecesi, davranışın şirketiniz için tehdit oluşturma derecesine bağlıdır. |
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [İş için Microsoft Defender'da tehditleri yanıtlama ve azaltmak](mdb-respond-mitigate-threats.md)
-
-- [İşlem merkezinde düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
-
-- [Microsoft Defender İş'te cihaz ilkelerini görüntüleme veya düzenleme](mdb-view-edit-policies.md)
+- [İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma](mdb-respond-mitigate-threats.md)
+- [İşlem merkezindeki düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
+- [İş için Microsoft Defender'de cihaz ilkelerini görüntüleme veya düzenleme](mdb-view-edit-policies.md)

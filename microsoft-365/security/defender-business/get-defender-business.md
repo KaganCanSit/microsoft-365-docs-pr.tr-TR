@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 04/08/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -16,31 +16,29 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security-compliance
-ms.openlocfilehash: 830149a1592aa2985b603d2e9f317250c7c2606a
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.openlocfilehash: d0364a26fab9e2c496e1208eb5ac4e4275bab3b2
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64746546"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64861850"
 ---
 # <a name="get-microsoft-defender-for-business"></a>İş için Microsoft Defender alma
 
-> [!IMPORTANT]
-> İş için Microsoft Defender, 1 Mart 2022'de başlayarak [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşterilerine dağıtılıyor. Tek başına abonelik olarak İş için Defender önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşterilere ve BT İş Ortaklarına aşamalı olarak dağıtılacaktır. Önizleme, [bir dizi ilk senaryo](mdb-tutorials.md#try-these-preview-scenarios) içerir ve düzenli olarak özellikler ekleyeceğiz.
-> 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> [!NOTE]
+> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 Henüz İş için Microsoft Defender yoksa, çeşitli seçenekler arasından seçim yapabilirsiniz:
 
 - [Microsoft çözüm sağlayıcısıyla çalışma](#work-with-a-microsoft-solution-provider)
 - [Microsoft 365 İş Ekstra’yı edinin](#get-microsoft-365-business-premium)
-- [Önizleme programına kaydolma](#sign-up-for-the-preview-program)
+- [İş için Defender önizleme programına kaydolma](#sign-up-for-the-preview-program)
 
 Deneme sürümüne kaydolmuşsanız, kabul e-postanızı aldıktan sonra [denemenizi etkinleştirebilir ve kullanıcı lisansları atayabilir](#activate-your-trial) ve [sonraki adımlarınıza](#next-steps) geçebilirsiniz.
 
 >
 > **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">İş için Microsoft Defender hakkındaki kısa anketimize</a> katılın. Sizden haber almak isteriz!
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
 ## <a name="work-with-a-microsoft-solution-provider"></a>Microsoft Çözüm Sağlayıcısı ile çalışma
@@ -119,7 +117,7 @@ Kabul e-postanızı aldığınızda deneme aboneliğinizi şu şekilde etkinleş
 
    | Senaryo | Yordam |
    |:---|:---|
-   | İlk kez bir Microsoft 365 aboneliği ayarlıyorsunuz. | **Kılavuzlu kuruluma git'i** seçin ve aşağıdaki adımları tamamlayın:<br/><br/>1. Office uygulamalarınızı şimdi yükleyin veya bu adımı atlamak için **Devam'ı** seçin. (Office uygulamalarınızı daha sonra yükleyebilirsiniz.)<br/><br/>2. Şirketinizin bir etki alanı varsa, şimdi ekleyebilirsiniz (bu seçenek önerilir). Alternatif olarak, şimdilik varsayılan `.onmicrosoft.com` etki alanınızı kullanmayı seçebilirsiniz.<br/><br/>3. Kullanıcı ekleyin ve lisans atayın. Listelediğiniz her kullanıcıya otomatik olarak bir lisans atanır. Bkz. [Kullanıcıları ekleme ve lisansları aynı anda atama](../../admin/add-users/add-users.md). |
+   | İlk kez bir Microsoft 365 aboneliği ayarlıyorsunuz. | **Kılavuzlu kuruluma git'i** seçin ve aşağıdaki adımları tamamlayın:<br/><br/>1. Office uygulamalarınızı şimdi yükleyin veya bu adımı atlamak için **Devam'ı** seçin. (Office uygulamalarınızı daha sonra yükleyebilirsiniz.)<br/><br/>2. Şirketinizin bir etki alanı varsa, şimdi ekleyebilirsiniz (bu seçenek önerilir). Alternatif olarak, şimdilik varsayılan `.onmicrosoft.com` etki alanınızı kullanmayı seçebilirsiniz.<br/><br/>3. Kullanıcı ekleyin ve lisans atayın. Listelediğiniz her kullanıcıya otomatik olarak bir lisans atanır. Bkz. [Kullanıcıları ekleme ve lisansları aynı anda atama](mdb-add-users.md). |
    | Mevcut bir Microsoft 365 kiracısına deneme sürümü ekliıyorsunuz. | 1. Microsoft 365 yönetim merkezi ([https://admin.microsoft.com/](https://admin.microsoft.com/)) gidin ve oturum açın.<br/><br/>2. Gezinti bölmesinde **KullanıcılarEtkin** >  kullanıcılar'ı seçin. Kullanıcı listesini gözden geçirin. <br/><br/>3. Lisansları atamak için [Kullanıcılara lisans atama](../../admin/manage/assign-licenses-to-users.md) başlığı altında yer alan yönergeleri izleyin. |
 
 

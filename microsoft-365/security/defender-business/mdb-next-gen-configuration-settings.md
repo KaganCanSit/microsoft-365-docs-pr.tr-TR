@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 02/24/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -16,33 +16,29 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: a39a0a55592ba8f76403f9e8d9aaf7416cb35228
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: eee272798be5396ad9ad15177fcd29a0180bc448
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714251"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862730"
 ---
 # <a name="understand-next-generation-configuration-settings-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da yeni nesil yapılandırma ayarlarını anlama
 
-> [!IMPORTANT]
-> İş için Microsoft Defender, 1 Mart 2022'de başlayarak [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşterilerine dağıtılıyor. Tek başına abonelik olarak İş için Defender önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşterilere ve BT İş Ortaklarına aşamalı olarak dağıtılacaktır. Önizleme, [bir dizi ilk senaryo](mdb-tutorials.md#try-these-preview-scenarios) içerir ve düzenli olarak özellikler ekleyeceğiz.
-> 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> [!NOTE]
+> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
 İş için Defender'daki yeni nesil koruma, güçlü virüsten koruma ve kötü amaçlı yazılımdan koruma içerir. Varsayılan ilkeleriniz, üretkenliği engellemeden cihazlarınızı ve kullanıcılarınızı korumak için tasarlanmıştır; ancak, ilkelerinizi iş gereksinimlerinize uyacak şekilde de özelleştirebilirsiniz. Microsoft Endpoint Manager kullanıyorsanız, güvenlik ilkelerinizi yönetmek için bunu kullanabilirsiniz.
 
 **Bu makalede şunlar açıklanmaktadır**:
 
 - [Yeni nesil koruma ayarları ve seçenekleri](#next-generation-protection-settings-and-options)
-
 - [İş için Defender'da önceden yapılandırılmış diğer ayarlar](#other-preconfigured-settings-in-defender-for-business) 
-
 - [İş için Defender varsayılan ayarları ve Microsoft Endpoint Manager](#defender-for-business-default-settings-and-microsoft-endpoint-manager)
 
 ## <a name="next-generation-protection-settings-and-options"></a>Yeni nesil koruma ayarları ve seçenekleri
 
-Aşağıdaki tabloda ayarlarınız ve seçenekleriniz listelenmiştir:<br/><br/>
+Aşağıdaki tabloda ayarlarınız ve seçenekleriniz listelenmiştir:
 
 | Ayar | Açıklama |
 |:---|:---|
@@ -69,17 +65,13 @@ Aşağıdaki tabloda ayarlarınız ve seçenekleriniz listelenmiştir:<br/><br/>
 İş için Defender'da aşağıdaki güvenlik ayarları önceden yapılandırılmış:
 
 - Çıkarılabilir sürücülerin taranması açık ([AllowFullScanRemovableDriveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning))
-
 - Günlük hızlı taramaların önceden ayarlanmış zamanı yoktur ([ScheduleQuickScanTime](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime))
-
 - Güvenlik bilgileri güncelleştirmeleri virüsten koruma taraması çalışmadan önce [denetleniyor (CheckForSignaturesBeforeRunningScan](/windows/client-management/mdm/policy-csp-defender#defender-checkforsignaturesbeforerunningscan))
-
 - Güvenlik bilgileri denetimleri dört saatte bir gerçekleşir ([SignatureUpdateInterval](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval))
 
 ## <a name="defender-for-business-default-settings-and-microsoft-endpoint-manager"></a>İş için Defender varsayılan ayarları ve Microsoft Endpoint Manager
 
 Aşağıdaki tabloda, İş için Defender için önceden yapılandırılmış ayarlar ve bu ayarların Microsoft Endpoint Manager (veya Microsoft Intune) içinde görebileceğiniz ayarlara nasıl karşılık geldiğini açıklar. [İş için Defender'da (önizleme) basitleştirilmiş yapılandırma işlemini](mdb-simplified-configuration.md) kullanıyorsanız, bu ayarları düzenlemeniz gerekmez.
-<br/><br/>
 
 | Ayar  | Açıklama  |
 |---------|---------|
@@ -98,16 +90,12 @@ Aşağıdaki tabloda, İş için Defender için önceden yapılandırılmış ay
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)
-
 - [İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma](mdb-respond-mitigate-threats.md)
-
 - [İşlem merkezindeki düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Microsoft 365 Defender portalını ziyaret edin](mdb-get-started.md)
-
 - [İş için Microsoft Defender'de güvenlik duvarı ayarlarını yönetme](mdb-custom-rules-firewall.md)
-
 - [İlke CSP - Defender](/windows/client-management/mdm/policy-csp-defender)

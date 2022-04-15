@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Defender portalını kullanarak Kullanmaya başlayın
+title: Microsoft 365 Defender portalını ziyaret edin
 description: Microsoft 365 Defender portalını kullanmaya başlamayı öğrenin. Portalda gezinmeyi ve geçerli güvenlik durumunuzu ve önerilerinizi görüntülemeyi öğrenin
 search.appverid: MET150
 author: denisebmsft
@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: article
-ms.date: 03/15/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -18,42 +18,29 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-get-started
-ms.openlocfilehash: c5a940676eab6ae3a07c526ecb1bd910ed8751fe
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 4af2986a3c1c726e9bf963752d53fe6ef098c19e
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64667152"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64861476"
 ---
-# <a name="get-started-using-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalını kullanarak Kullanmaya başlayın
+# <a name="visit-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalını ziyaret edin
 
-> [!IMPORTANT]
-> İş için Microsoft Defender, 1 Mart 2022'de başlayarak [Microsoft 365 İş Ekstra](../../business-premium/index.md) müşterilerine dağıtılıyor. Tek başına abonelik olarak İş için Defender önizleme aşamasındadır ve istekte bulunmak için [buraya kaydolan](https://aka.ms/mdb-preview) müşterilere ve BT İş Ortaklarına aşamalı olarak dağıtılacaktır. Önizleme, [bir dizi ilk senaryo](mdb-tutorials.md#try-these-preview-scenarios) içerir ve düzenli olarak özellikler ekleyeceğiz.
-> 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürülmeden önce önemli ölçüde değiştirilebilen önceden yayımlanmış ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> [!NOTE]
+> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
-İş için Microsoft Defender kaydolduktan sonra Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)) ile tanışmak istersiniz. Bu makale aşağıdaki bölümleri içerir:
-
-- [Microsoft 365 Defender portalında gezinme](#navigate-the-microsoft-365-defender-portal)
-
-- [Olaylar ve yanıt eylemleriyle ilgili modülleri Learning](#complete-a-learning-module-about-incidents-and-response-actions) 
-
-- [Sonraki adımlar](#next-steps)
-
->
-> **Bir dakikan var mı?**
-> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">İş için Microsoft Defender hakkındaki kısa anketimize</a> katılın. Sizden haber almak isteriz!
->
-
-## <a name="navigate-the-microsoft-365-defender-portal"></a>Microsoft 365 Defender portalında gezinme
-
-Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)) İş için Microsoft Defender kullanmak ve yönetmek için tek adresinizdir. Başlamanıza yardımcı olacak bir karşılama başlığı ve açıklama balonları, ilgili bilgileri ortaya çıkartan kartlar ve çeşitli özelliklere ve özelliklere kolayca erişmenizi sağlayan bir gezinti çubuğu içerir.
- 
-Microsoft 365 Defender portalınızla tanışmak için bir dakikanızı ayırın.
+Microsoft 365 Defender portalı ([https://security.microsoft.com](https://security.microsoft.com)) İş için Microsoft Defender kullanmak ve yönetmek için tek adresinizdir. Başlamanıza yardımcı olacak bir karşılama başlığı ve açıklama balonları, ilgili bilgileri ortaya çıkartan kartlar ve çeşitli özelliklere ve özelliklere kolayca erişmenizi sağlayan bir gezinti çubuğu içerir. 
 
 :::image type="content" source="../../media/defender-business/mdb-portal-home.png" alt-text="Microsoft 365 Defender portalı":::
 
-### <a name="use-the-navigation-bar"></a>Gezinti çubuğunu kullanma
+ 
+>
+> **Bir dakikan var mı?**
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
+>
+
+## <a name="the-navigation-bar"></a>Gezinti çubuğu
 
 Olaylarınıza erişmek, raporları görüntülemek ve güvenlik ilkelerinizi yönetmek için ekranın sol tarafındaki gezinti çubuğunu kullanın. Aşağıdaki tabloda, gezinti çubuğunuzda göreceğiniz öğeler açıklanmaktadır.
 
@@ -76,25 +63,7 @@ Olaylarınıza erişmek, raporları görüntülemek ve güvenlik ilkelerinizi y�
 | **Ayarlar** | Microsoft 365 Defender portalı ve İş için Microsoft Defender ayarlarını düzenlemenizi sağlar. Örneğin, şirketinizin cihazlarını (uç nokta olarak da adlandırılır) ekleyebilir (veya çıkarabilirsiniz). Ayrıca uyarı engelleme kuralları gibi kurallar tanımlayabilir ve belirli dosyaları veya işlemleri engelleyecek veya izin verecek göstergeleri ayarlayabilirsiniz.  |
 | **Diğer kaynaklar** | Azure Active Directory gibi diğer portallara gidin. Microsoft 365 Defender portalının diğer portallara gitmenize gerek kalmadan gereksinimlerinizi karşılaması gerektiğini unutmayın. |
 
-## <a name="complete-a-learning-module-about-incidents-and-response-actions"></a>Olaylar ve yanıt eylemleri hakkında öğrenme modülünü tamamlama
-
-Olaylara ve yanıt eylemlerine genel bir bakış elde [etmek için Güvenlik sorunlarını algılama ve yanıtlama](/learn/modules/m365-detect-respond-security-issues-defender-endpoint/) öğrenme modülüne bakın. Gerçekleştirebileceğiniz olay kuyruğu, uyarılar ve yanıt eylemleri hakkında bilgi edineceksiniz. Bu kurs, İş için Defender'daki olaylarla çalışmaya başlamanıza yardımcı olur.
-
-> [!NOTE]
-> Öğrenme modülü ([Güvenlik sorunlarını algılama ve yanıtlama](/learn/modules/m365-detect-respond-security-issues-defender-endpoint/)) aslında Uç Nokta için Microsoft Defender için olsa da, temel kavramlar ve genel akış, İş için Defender'da gördüklerinize benzer.
-
 ## <a name="next-steps"></a>Sonraki adımlar
 
-İş için Defender'a genel bir bakış elde ettiğinize göre, aşağıdaki görevlerden birini veya birkaçını deneyin:
-
-- [İş için Microsoft Defender'de öğreticileri ve simülasyonları deneyin](mdb-tutorials.md)
-
-- [İş için Microsoft Defender'de cihazları yönetme](mdb-manage-devices.md)
-
-- [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)
-
-- [İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma](mdb-respond-mitigate-threats.md)
-
-- [İşlem merkezindeki düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
-
-- [İş için Microsoft Defender'de ilkeleri görüntüleme veya düzenleme](mdb-view-edit-policies.md)
+- [İş için Microsoft Defender'da kurulum sihirbazını kullanma](mdb-use-wizard.md)
+- [Kurulum ve yapılandırma işlemine bakın](mdb-setup-configuration.md)

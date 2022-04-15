@@ -1,7 +1,7 @@
 ---
 title: Uç Nokta için Microsoft Defender
 description: Uç Nokta için Microsoft Defender, gelişmiş kalıcı tehditlere karşı savunmaya yardımcı olan bir kurumsal uç nokta güvenlik platformudur.
-keywords: Uç nokta için Microsoft Defender'a giriş, Uç nokta için Microsoft Defender, siber güvenlik, gelişmiş kalıcı tehdit, kurumsal güvenlik, makine davranışı algılayıcısı, bulut güvenliği, çözümleme, tehdit zekası, saldırı yüzeyini azaltma, yeni nesil koruma, otomatik araştırma ve düzeltme, Microsoft tehdit uzmanları, güvenli puan, gelişmiş tarama, Microsoft 365 Defender, siber tehdit avı
+keywords: Uç Nokta için Microsoft Defender giriş, Uç Nokta için Microsoft Defender giriş, siber güvenlik, gelişmiş kalıcı tehdit, kurumsal güvenlik, makine davranış sensörü, bulut güvenliği, analiz, tehdit zekası, saldırı yüzeyi azaltma, yeni nesil koruma, otomatik araştırma ve düzeltme, microsoft tehdit uzmanları, güvenli puan, gelişmiş avcılık, Microsoft 365 Defender, siber tehdit avcılığı
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -17,40 +17,40 @@ ms.collection:
 ms.custom: intro-overview
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: c4308c203093d2170cc1a6316db824ee9935363f
-ms.sourcegitcommit: 355ab75eb7b604c6afbe9a5a1b97ef16a1dec4fc
+ms.openlocfilehash: 3a67d73475301096df8be691f2c5e0dc6db23db8
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2022
-ms.locfileid: "63019497"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862202"
 ---
 # <a name="microsoft-defender-for-endpoint"></a>Uç Nokta için Microsoft Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
-**Aşağıdakiler için geçerlidir:**
+**Şunlar için geçerlidir:**
 - [Uç Nokta için Microsoft Defender](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Uç Nokta için Microsoft Defender'ı mı deneyimliysiniz? [Ücretsiz deneme için kaydol'](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Uç Nokta için Microsoft Defender mı yaşamak istiyorsunuz? [Ücretsiz deneme için kaydolun.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Uç Nokta için Microsoft Defender, kurumsal ağların gelişmiş tehditleri engellemesini, algılamasını, araştırmasını ve yanıtlamasını önlemeye yardımcı olmak için tasarlanmış bir kurumsal uç nokta güvenlik platformudur.
+Uç Nokta için Microsoft Defender, kurumsal ağların gelişmiş tehditleri engellemesine, algılamasına, araştırmasına ve yanıtlamasına yardımcı olmak için tasarlanmış bir kurumsal uç nokta güvenlik platformudur.
 
 > [!TIP]
-> Yakında, Uç Nokta için Microsoft Defender iki plan olarak kullanılabilir olacak. Bu makalede, Uç Nokta Planı 2 için Microsoft Defender'da bulunan özellikler ve özellikler açıklanmıştır. [Uç Nokta Plan 1 ve Plan 2 için Microsoft Defender hakkında daha fazla bilgi öğrenin](defender-endpoint-plan-1-2.md).
+> Yakında Uç Nokta için Microsoft Defender iki planda kullanıma sunulacaktır. Bu makalede, Uç Nokta için Microsoft Defender Plan 2'de yer alan özellikler ve özellikler açıklanmaktadır. [Uç Nokta için Microsoft Defender Plan 1 ve Plan 2 hakkında daha fazla bilgi edinin](defender-endpoint-plan-1-2.md).
 > 
 
 <p><p>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4wDob]
 
-Uç Nokta için Defender, Windows 10'de ve Microsoft'un güçlü bulut hizmetinin yerleşik teknolojisini aşağıdaki birleşimini kullanır:
+Uç Nokta için Defender, Windows 10 ve Microsoft'un sağlam bulut hizmetinde yerleşik olarak bulunan aşağıdaki teknoloji bileşimini kullanır:
 
-- **Uç nokta** davranış algılayıcıları: Windows 10'a yerleştirilmiş olan bu algılayıcılar, işletim sisteminden davranışsal sinyaller toplar ve bu algılayıcı verilerini Uç Nokta için Microsoft Defender'ın özel, yalıtılmış bulut örneğine gönderir.
+- **Uç nokta davranış algılayıcıları**: Windows 10 eklenmiş olan bu algılayıcılar işletim sisteminden davranış sinyallerini toplar ve işler ve bu algılayıcı verilerini özel, yalıtılmış, bulut Uç Nokta için Microsoft Defender örneğine gönderir.
 
-- Bulut güvenlik **analizi**: Windows ekosistemi, kurumsal bulut ürünleri (Office 365 gibi) ve çevrimiçi varlıklar genelinde büyük verilerden, cihaz öğrenmeden ve benzersiz Microsoft optik bağlantılardan yararlanarak davranışsal sinyaller içgörülere, algılamalara ve gelişmiş tehditlere karşı önerilen yanıtlara çevrilir.
+- **Bulut güvenlik analizi**: Windows ekosistemi, kurumsal bulut ürünleri (Office 365 gibi) ve çevrimiçi varlıklar genelinde büyük veri, cihaz öğrenmesi ve benzersiz Microsoft optiklerinden yararlanma, davranış sinyalleri içgörülere, algılamalara ve gelişmiş tehditlere yönelik önerilen yanıtlara çevrilir.
 
-- **Tehdit zekası**: Microsoft ekipleri, güvenlik ekipleri tarafından oluşturulan ve iş ortakları tarafından sağlanan tehdit zekası tarafından geliştirilmiş tehdit zekası, tehdit zekası ile toplanan algılayıcı verilerinde gözlemlenen saldırgan araçları, teknikler ve yordamları belirlemek ve uyarılar oluşturmak için Uç Nokta için Defender'ı sağlar.
+- **Tehdit bilgileri**: Microsoft avcıları, güvenlik ekipleri tarafından oluşturulan ve iş ortakları tarafından sağlanan tehdit zekası tarafından geliştirilen tehdit bilgileri, Uç Nokta için Defender'ın saldırgan araçlarını, tekniklerini ve yordamlarını tanımlamasını ve toplanan algılayıcı verilerinde gözlemlendiğinde uyarılar oluşturmasını sağlar.
 
 <center><h2>Uç Nokta için Microsoft Defender</center></h2>
 <table>
@@ -77,68 +77,71 @@ Uç Nokta için Defender, Windows 10'de ve Microsoft'un güçlü bulut hizmetini
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vnC4?rel=0]
 
 > [!TIP]
->
-> - Uç nokta için Defender'daki en son iyileştirmeler: Uç nokta için [Microsoft Defender'daki yenilikleri öğrenin](whats-new-in-microsoft-defender-endpoint.md).
-> - Uç Nokta için Microsoft Defender, son MITRE değerlendirmesinde endüstri lideri optikleri ve algılama özelliklerini gösteriyor. Okuma: [Analizler CK tabanlı değerlendirmede MITRE ATT&okuma](https://cloudblogs.microsoft.com/microsoftsecure/2018/12/03/insights-from-the-mitre-attack-based-evaluation-of-windows-defender-atp/).
+> - Uç Nokta için Defender: [Uç Nokta için Microsoft Defender'deki yenilikler](whats-new-in-microsoft-defender-endpoint.md) konusundaki en son iyileştirmeler hakkında bilgi edinin.
+> - Uç Nokta için Microsoft Defender son MITRE değerlendirmesinde sektör lideri optik ve algılama özelliklerini göstermiştir. Okuma: [MITRE ATT&CK tabanlı değerlendirmeden Analizler](https://cloudblogs.microsoft.com/microsoftsecure/2018/12/03/insights-from-the-mitre-attack-based-evaluation-of-windows-defender-atp/).
+
+
+>[!IMPORTANT]
+>Windows olmayan platformlardaki özellikler, Windows için olandan farklı olabilir. Windows olmayan platformlarda kullanılabilen özellikler hakkında daha fazla bilgi için bkz. [Windows olmayan platformlar için Uç Nokta için Microsoft Defender](/security/defender-endpoint/non-windows).
 
 <a name="tvm"></a>
 
 **[Tehdit & Güvenlik Açığı Yönetimi](next-gen-threat-and-vuln-mgt.md)**
 
-Bu yerleşik özellik, uç nokta güvenlik açıklarının ve hatalı yapılandırmaların bulunması, önceliklendirmesi ve düzeltmesi için oyun değiştirme risk tabanlı bir yaklaşım kullanır.
+Bu yerleşik özellik, uç nokta güvenlik açıklarının ve yanlış yapılandırmalarının keşfi, önceliklendirilmesi ve düzeltilmesi için oyun değiştiren risk tabanlı bir yaklaşım kullanır.
 
 <a name="asr"></a>
 
 **[Saldırı yüzeyini azaltma](overview-attack-surface-reduction.md)**
 
-Saldırı yüzeyini azaltma özellik kümesi yığındaki ilk savunma hattını sağlar. Yapılandırma ayarlarının doğru bir şekilde ayar olmasını ve risk azaltma tekniklerinin uygulandığını garanti ederek, bu özellikler saldırılara ve sömürüye karşı koyar. Bu özellik kümesi, kötü amaçlı [IP adreslerine](network-protection.md) , etki alanlarına ve [URL'lere](web-protection-overview.md) erişimi düzenleyen ağ koruması ve web koruması da içerir.
+Saldırı yüzeyi azaltma özellikleri kümesi, yığındaki ilk savunma hattını sağlar. Yapılandırma ayarlarının düzgün ayarlandığından ve güvenlik açığından yararlanma azaltma tekniklerinin uygulandığından emin olarak, özellikler saldırılara ve kötüye kullanıma karşı dayanıklıdır. Bu özellik kümesi, kötü amaçlı IP adreslerine, etki alanlarına ve URL'lere erişimi düzenleyen [ağ korumasını](network-protection.md) ve [web korumasını](web-protection-overview.md) da içerir.
 
 <a name="ngp"></a>
 
 **[Yeni nesil koruma](next-generation-protection.md)**
 
-Ağın güvenlik çevresini daha da güçlendirmek için, Uç Nokta için Microsoft Defender yeni nesil koruma kullanarak ortaya çıkan her türlü tehdityi yakalayacak şekilde tasarlanmıştır.
+Ağınızın güvenlik çevresini daha da güçlendirmek için Uç Nokta için Microsoft Defender her türlü yeni tehdidi yakalamak için tasarlanmış yeni nesil korumayı kullanır.
 
 <a name="edr"></a>
 
 **[Uç nokta algılama ve yanıt](overview-endpoint-detection-response.md)**
 
-Uç nokta algılama ve yanıt özellikleri, bunu ilk iki güvenlik sütununa yapıştıran gelişmiş tehditleri algılamak, araştırmak ve yanıtlamak için kullanılır. [Gelişmiş av](advanced-hunting-overview.md) , ihlalleri önceden bulmanızı ve özel algılamalar oluşturmanıza olanak sağlayan sorgu tabanlı bir tehdit arama aracı sağlar.
+Uç nokta algılama ve yanıt özellikleri, ilk iki güvenlik sütununu geçmiş olabilecek gelişmiş tehditleri algılamak, araştırmak ve yanıtlamak için kullanılır. [Gelişmiş tehdit avcılığı](advanced-hunting-overview.md) , ihlalleri proaktif olarak bulmanıza ve özel algılamalar oluşturmanıza olanak tanıyan sorgu tabanlı bir tehdit avcılığı aracı sağlar.
 
 <a name="ai"></a>
 
 **[Otomatik araştırma ve düzeltme](automated-investigations.md)**
 
-Gelişmiş saldırılara hızlı yanıt ver özelliğiyle birlikte, Uç Nokta için Microsoft Defender dakikalar ölçeğinde uyarı hacmini azaltmaya yardımcı olan otomatik araştırma ve düzeltme özellikleri sunar.
+Uç Nokta için Microsoft Defender, gelişmiş saldırılara hızlı bir şekilde yanıt verebilmekle birlikte, uyarı hacmini dakikalar içinde azaltmaya yardımcı olan otomatik araştırma ve düzeltme özellikleri sunar.
 
 <a name="ss"></a>
 
-**[Cihazlar için Microsoft Güvenli Puan](tvm-microsoft-secure-score-devices.md)**
+**[Cihazlar için Microsoft Güvenlik Puanı](tvm-microsoft-secure-score-devices.md)**
 
-Uç nokta için Defender, kurumsal ağcının güvenlik durumunu dinamik olarak değerlendirmenize, korumasız sistemleri tanımlamanıza ve genel olarak kurum güvenliğinizi iyileştirmeye yardımcı olmak için önerilen işlemlere yardımcı olmak için Cihazlar için Microsoft Güvenli Puanı içerir.
+Uç Nokta için Defender, kurumsal ağınızın güvenlik durumunu dinamik olarak değerlendirmenize, korumasız sistemleri belirlemenize ve kuruluşunuzun genel güvenliğini geliştirmek için önerilen eylemleri gerçekleştirmenize yardımcı olan Cihazlar için Microsoft Güvenli Puanı içerir.
 
 <a name="mte"></a>
 
 **[Microsoft Tehdit Uzmanları](microsoft-threat-experts.md)**
 
-Uç noktanın yeni yönetilen tehdit arama hizmeti için Microsoft Defender önceden arama, öncelik belirleme ve güvenlik işlemi merkezlerinin (SOC) tehditlere hızla ve doğru biçimde yanıt vermesini sağlayan ek bağlam ve öngörüler sağlar.
+Uç Nokta için Microsoft Defender'ın yeni yönetilen tehdit avcılığı hizmeti proaktif avcılık, öncelik belirleme ve Güvenlik operasyon merkezlerinin (SOC' ler) tehditleri hızla ve doğru bir şekilde tanımlayıp yanıtlamasını daha da güçlendiren ek bağlam ve içgörüler sağlar.
 
 > [!IMPORTANT]
-> Uç nokta müşterileri için Defender'ın önceden Microsoft Tehdit Uzmanları Hedefli Saldırı Bildirimleri almak ve isteğe bağlı uzmanlarla işbirliği yapmak için önceden yönetilen tehdit arama hizmetine başvurması gerekir. Talep Üzerine Uzmanlar bir eklenti hizmetidir. Hedefli Saldırı Bildirimleri her zaman, siz bu hizmetlere kabul edildikten sonra Microsoft Tehdit Uzmanları tehdit arama hizmetine dahil edilir.
+> Uç Nokta için Defender müşterilerinin proaktif Hedefli Saldırı Bildirimleri almak ve isteğe bağlı uzmanlarla işbirliği yapmak için Microsoft Tehdit Uzmanları yönetilen tehdit avcılığı hizmetine başvurmaları gerekir. İsteğe Bağlı Uzmanlar bir eklenti hizmetidir. Microsoft Tehdit Uzmanları yönetilen tehdit avcılığı hizmetine kabul edildikten sonra hedeflenen Saldırı Bildirimleri her zaman dahil edilir.
 >
-> Henüz kaydolmadısanız ve  \> bu avantajdan yararlanan özelliklerden yararlanan bir deneyim Ayarlar **için** \>  \> Genel **Gelişmiş Microsoft Tehdit Uzmanları** gidin. Kabul edildiktan sonra Hedefli Saldırı Bildirimleri'nin avantajlarından faydalanacak ve Talep Edilen Uzmanlar için 90 günlük bir deneme başlatacaksınız. Tam Uzman On Demand aboneliği almak için Microsoft temsilcinize başvurun.
+> Henüz kaydolmadıysanız ve avantajlarını yaşamak istiyorsanız, uygulamak **Microsoft Tehdit Uzmanları Ayarlar** \> **Genel** \> **Gelişmiş özellikler'e** \> **gidin**. Kabul edildikten sonra, Hedefli Saldırı Bildirimleri'nin avantajlarından yararlanır ve İsteğe Bağlı Uzmanlar'ın 90 günlük denemesini başlatırsınız. tam bir İsteğe Bağlı Uzmanlar aboneliği almak için Microsoft temsilcinize başvurun.
 
 <a name="apis"></a>
 
 **[Merkezi yapılandırma ve yönetim, API'ler](management-apis.md)**
 
-Uç Nokta için Microsoft Defender'ı var olan iş akışlarınıza tümleştirin.
+Uç Nokta için Microsoft Defender mevcut iş akışlarınızla tümleştirin.
 
 <a name="mtp"></a>
 
 **[Microsoft çözümleriyle tümleştirme](threat-protection-integration.md)**
 
-Uç nokta için Defender, aşağıdakiler gibi çeşitli Microsoft çözümleriyle doğrudan tümleştirilmiştir:
+Uç Nokta için Defender, aşağıdakiler de dahil olmak üzere çeşitli Microsoft çözümleriyle doğrudan tümleştirilir:
 
 - Bulut için Microsoft Defender
 - Microsoft Sentinel
@@ -150,16 +153,16 @@ Uç nokta için Defender, aşağıdakiler gibi çeşitli Microsoft çözümleriy
 
 **[Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender)**
 
-Microsoft 365 Defender ile Uç Nokta için Defender ve çeşitli Microsoft güvenlik çözümleri, gelişmiş saldırıları algılayan, önleyen, araştıran ve otomatik olarak yanıt veren uç nokta, kimlik, e-posta ve uygulamalar arasında yerel olarak tümleştirilmiş birleşik bir ihlal öncesi ve ihlal sonrası kurumsal savunma paketi sağlar.
+Microsoft 365 Defender ile Uç Nokta için Defender ve çeşitli Microsoft güvenlik çözümleri gelişmiş saldırıları algılamak, önlemek, araştırmak ve otomatik olarak yanıtlamak için uç nokta, kimlik, e-posta ve uygulamalar arasında yerel olarak tümleşen birleşik bir ihlal öncesi ve sonrası kurumsal savunma paketi oluşturur.
 
 
 ## <a name="training-for-security-analysts"></a>Güvenlik analistleri için eğitim
 
-Microsoft Learn'in bu öğrenme yolu ile, Uç Nokta için Defender'ı ve uç noktaların cihazlarınız ve sistemleriniz genelinde tehditlere karşı nasıl yardımcı olduğunu, algılamanıza, araştırmanıza ve bu tehditlere nasıl yanıt ver genelinde yardımcı olduğunu öğrenebilirsiniz.
+Microsoft Learn'ün bu öğrenme yolu ile Uç Nokta için Defender'ı ve kuruluşunuzun uç noktaları (cihazlarınız ve sistemleriniz) genelindeki tehditleri önlemeye, algılamaya, araştırmaya ve yanıtlamaya nasıl yardımcı olabileceğini anlayabilirsiniz.
 
-|Eğitim:|Siber saldırıları algıla ve bu saldırılara Microsoft 365 Defender|
+|Eğitim:|Microsoft 365 Defender ile siber saldırıları algılama ve yanıtlama|
 |---|---|
-|![Microsoft 365 Defender simgesi.](../../media/microsoft-365-defender/m365-defender-secure-organization.svg)|Uç nokta için Defender, tek, birleşik bir platformda güvenlik açığı yönetimi, uç nokta koruması, uç noktada algılama ve yanıtlama, mobil tehdit savunması ve yönetilen hizmetler sunan bir uç nokta güvenlik çözümüdür.<p> 2 sa 25 dak . Learning Yol - 9 Modüller|
+|![Microsoft 365 Defender eğitim simgesi.](../../media/microsoft-365-defender/m365-defender-secure-organization.svg)|Uç Nokta için Defender, tek, birleşik bir platformda güvenlik açığı yönetimi, uç nokta koruması, uç noktada algılama ve yanıtlama, mobil tehdit savunması ve yönetilen hizmetler sunan bir uç nokta güvenlik çözümüdür.<p> 2 sa 25 dk - Learning Yolu - 9 Modül|
 
 > [!div class="nextstepaction"]
 > [Başlangıç >](/learn/paths/defender-endpoint-fundamentals/)

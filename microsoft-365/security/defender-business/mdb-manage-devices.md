@@ -1,13 +1,13 @@
 ---
-title: İş için Microsoft Defender'da cihazları yönetme
-description: İş için Microsoft Defender'da cihazları yönetmeyi öğrenin
+title: İş için Microsoft Defender'de cihazları yönetme
+description: İş için Microsoft Defender'de cihazları yönetmeyi öğrenin
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 02/24/2022
+ms.date: 04/12/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
@@ -17,73 +17,65 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: f47e72b3651b4a86eed4001fc51f051f47e2f3c7
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 453cce2c52902116bc3eaa71f5e6c998ab4164a1
+ms.sourcegitcommit: e3bc6563037bd2cce2abf108b3d1bcc2ccf538f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63527026"
+ms.lasthandoff: 04/15/2022
+ms.locfileid: "64862840"
 ---
-# <a name="manage-devices-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'da cihazları yönetme
+# <a name="manage-devices-in-microsoft-defender-for-business"></a>İş için Microsoft Defender'de cihazları yönetme
 
-> [!IMPORTANT]
-> İş için Microsoft Defender 1 Mart 2022 [Microsoft 365 İş Ekstra'den](../../business-premium/index.md) itibaren tüm müşterilere sunulmaktadır. Tek başına bir abonelik olarak İş için Defender önizlemededir ve istekte etmek için buraya kaydolan müşterilere ve IT İş Ortaklarına [aşamalı](https://aka.ms/mdb-preview) olarak tüm müşterilere aşamalı olarak tüm müşterilere aşamalı olarak ve tek başına bir abonelik sunar. Önizleme bir [dizi senaryo içerir ve](mdb-tutorials.md#try-these-preview-scenarios) düzenli olarak özellikler ekleycek.
-> 
-> Bu makaledeki bazı bilgiler, ticari olarak piyasaya sürmeden önce önemli ölçüde değiştirilmiş olabileceği önceden satın alınan ürünler/hizmetlerle ilgilidir. Microsoft, burada sağlanan bilgiler için açık veya zımni hiçbir garanti vermez. 
+> [!NOTE]
+> İş için Microsoft Defender artık [Microsoft 365 İş Ekstra](../../business-premium/index.md) dahil edilir. 
 
-İş için Microsoft Defender'da cihazları aşağıdaki gibi yönetebilirsiniz:
+İş için Microsoft Defender cihazları aşağıdaki gibi yönetebilirsiniz:
 
-- [Risk düzeyini, pozlama düzeyini ve](#view-the-list-of-onboarded-devices) sağlık durumunu görmek için, yerleşik cihazların listesini görüntüleme
-
-- [Tehdit algılamaları olan](#take-action-on-a-device-that-has-threat-detections) bir cihazda eyleme geç
-
-- [İş için Defender'a bir cihaz ekleme](#onboard-a-device)  
-
-- [İş için Defender'dan bir cihaz çıkartan](#offboard-a-device)
+- Risk düzeylerini, maruz kalma düzeylerini ve sistem durumunu görmek için [eklenen cihazların listesini görüntüleme](#view-the-list-of-onboarded-devices)
+- Tehdit algılamaları olan [bir cihazda işlem gerçekleştirme](#take-action-on-a-device-that-has-threat-detections)
+- [İş için Defender'a cihaz ekleme](#onboard-a-device)  
+- [İş için Defender'dan cihaz çıkarma](#offboard-a-device)
 
 >
-> **Bir dakika mı kaldı?**
-> Lütfen İş için <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">Microsoft Defender ile ilgili kısa ankete göz atyın</a>. Ne olduğunu duymaktan çok büyük bir habermiz var!
+> **Bir dakikan var mı?**
+> Lütfen <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">güvenlikle ilgili kısa anketimize</a> katılın. Sizden haber almak isteriz!
 >
 
 ## <a name="view-the-list-of-onboarded-devices"></a>Eklenen cihazların listesini görüntüleme
 
-:::image type="content" source="../../media/defender-business/mdb-deviceinventory.png" alt-text="Cihaz stoku ekran görüntüsü":::
+:::image type="content" source="../../media/defender-business/mdb-deviceinventory.png" alt-text="Cihaz envanterinin ekran görüntüsü":::
 
-1. Erişim portalına Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com) ) ve oturum açın.
+1. Microsoft 365 Defender portalına ([https://security.microsoft.com](https://security.microsoft.com)) gidin ve oturum açın.
 
-2. Gezinti bölmesinde Cihaz **envanteri'ni seçin**.
+2. Gezinti bölmesinde **Cihaz envanteri'ni** seçin.
 
-3. Bir cihazı seçerek çıkış panelini açın. Bu panelden, cihazın durumu hakkında daha fazla bilgi edinebilirsiniz ve harekete geçebilirsiniz. 
+3. Durumu hakkında daha fazla bilgi edinebileceğiniz ve eylem gerçekleştirebileceğiniz açılır panelini açmak için bir cihaz seçin. 
 
-   Henüz hiç cihaz listelenmiyorsa cihazları İş için [Microsoft Defender'a ekleme](mdb-onboard-devices.md)
+   Henüz listelenen herhangi bir cihazınız yoksa cihazları [İş için Microsoft Defender](mdb-onboard-devices.md)
 
-## <a name="take-action-on-a-device-that-has-threat-detections"></a>Tehdit algılamaları olan bir cihazda eyleme geç
+## <a name="take-action-on-a-device-that-has-threat-detections"></a>Tehdit algılamaları olan bir cihazda işlem gerçekleştirme
 
-:::image type="content" source="../../media/defender-business/mdb-selected-device.png" alt-text="Ayrıntıları ve eylemlerin mevcut olduğu seçili cihazın ekran görüntüsü":::
+:::image type="content" source="../../media/defender-business/mdb-selected-device.png" alt-text="Ayrıntıları ve eylemleri içeren seçili bir cihazın ekran görüntüsü":::
 
-1. Mobil Microsoft 365 Defender () gezinti [https://security.microsoft.com](https://security.microsoft.com) bölmesinde Cihaz **envanteri'ni seçin**. 
+1. Microsoft 365 Defender portalında ([https://security.microsoft.com](https://security.microsoft.com) ) gezinti bölmesinde **Cihaz envanteri'ni** seçin. 
 
 2. Açılır panelini açmak için bir cihaz seçin ve görüntülenen bilgileri gözden geçirin.
 
-3. Eylemler menüsünü açmak için üç **noktayı (...**) seçin. 
+3. Eylemler menüsünü açmak için üç noktayı (**...**) seçin. 
 
-4. Virüsten koruma taraması çalıştırma **veya Otomatik Araştırmayı** **Başlatma gibi bir eylem seçin**. 
+4. **Virüsten koruma taraması çalıştır** veya **Otomatik Araştırma Başlat** gibi bir eylem seçin. 
 
-## <a name="onboard-a-device"></a>Bir cihaz ekleme
+## <a name="onboard-a-device"></a>Cihaz ekleme
 
-Bkz [. Cihazları İş için Microsoft Defender'a ekleme](mdb-onboard-devices.md).
+Bkz[. cihazları İş için Microsoft Defender ekleme](mdb-onboard-devices.md).
 
-## <a name="offboard-a-device"></a>Cihaz çıkartan
+## <a name="offboard-a-device"></a>Cihazı çıkarma
 
-Bkz [. Cihaz çıkarma](mdb-onboard-devices.md#offboarding-a-device).
+Bkz. [Cihazı çıkarma](mdb-offboard-devices.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [İş için Microsoft Defender'da olayları görüntüleme ve yönetme](mdb-view-manage-incidents.md)
-
-- [İş için Microsoft Defender'da tehditleri yanıtlama ve azaltmak](mdb-respond-mitigate-threats.md)
-
-- [İşlem merkezinde düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
-
-- [Cihaz grupları oluşturma veya düzenleme](mdb-create-edit-device-groups.md)
+- [İş için Microsoft Defender'da tehditlere yanıt verme ve tehditleri azaltma](mdb-respond-mitigate-threats.md)
+- [İşlem merkezindeki düzeltme eylemlerini gözden geçirme](mdb-review-remediation-actions.md)
+- [Cihaz gruplarını oluşturma veya düzenleme](mdb-create-edit-device-groups.md)
