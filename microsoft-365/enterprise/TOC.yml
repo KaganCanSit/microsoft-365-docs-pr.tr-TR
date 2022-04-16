@@ -383,6 +383,10 @@
           href: /sharepoint/sharepoint-online
         - name: Microsoft Teams
           href: /MicrosoftTeams/Teams-overview
+        - name: Toplantılar ve konferans
+          href: /microsoftteams/deploy-meetings-microsoft-teams-landing-page
+        - name: Teams ses
+          href: /microsoftteams/cloud-voice-landing-page
         - name: Yammer
           href: 'https://support.office.com/article/e1464355-1f97-49ac-b2aa-dd320b179dbe'
         - name: Hak yönetimini etkinleştirme
@@ -402,7 +406,7 @@
         - name: SharePoint
           href: /sharepoint/introduction
         - name: Microsoft Teams
-          href: /microsoftteams/upgrade-monitor-quality
+          href: /microsoftteams/manage-teams-overview
         - name: Yammer
           href: 'https://support.office.com/article/e1464355-1f97-49ac-b2aa-dd320b179dbe'
         - name: Performans ve ayarlama
