@@ -15,12 +15,12 @@
       items:
         - name: İş için Defender'ı edinin
           href: get-defender-business.md
+        - name: Kullanıcı ekleme ve lisans atama
+          href: mdb-add-users.md
+        - name: Microsoft 365 Defender portalını ziyaret edin
+          href: mdb-get-started.md
         - name: Kurulum sihirbazını kullanın
           href: mdb-use-wizard.md
-        - name: Portalı kullanmaya başlayın
-          href: mdb-get-started.md
-        - name: Güvenlik açığı yönetimi panonuzu görüntüleyin
-          href: mdb-view-tvm-dashboard.md
         - name: Öğreticileri ve simülasyonları deneyin
           href: mdb-tutorials.md
     - name: İş için Defender'ı ayarlama ve yapılandırma
@@ -39,6 +39,8 @@
           href: mdb-configure-security-settings.md
     - name: Algılanan tehditleri görüntüleme ve tehditlere karşılık verme
       items:
+        - name: Güvenlik açığı yönetimi panonuzu görüntüleyin
+          href: mdb-view-tvm-dashboard.md
         - name: Olayları görüntüleme ve yönetme
           href: mdb-view-manage-incidents.md
         - name: Tehditlere yanıt verme ve tehditleri azaltma
@@ -65,6 +67,8 @@
           href: mdb-manage-devices.md
         - name: Cihaz etiketleri veya grupları oluşturma ve yönetme
           href: mdb-create-edit-device-groups.md
+        - name: Cihazları çıkarma
+          href: mdb-offboard-devices.md
     - name: Başvuru bilgileri
       items:
         - name: Yardım almak veya de destek ile iletişim kurma
