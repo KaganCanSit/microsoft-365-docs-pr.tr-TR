@@ -17,12 +17,12 @@ ms.custom: ''
 description: Yöneticiler, Office 365 için Microsoft Defender Plan 2'de kullanıcı etiketleri olan belirli kullanıcı gruplarını tanımlamayı öğrenebilir. Etiket filtreleme, etiketlenen kullanıcıları hızlı bir şekilde tanımlamak için Office 365 için Microsoft Defender uyarılarda, raporlarda ve araştırmalarda kullanılabilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 9da17b2dfb20746bb48b1ba737968873d4151595
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: 1f045e5dcb590c36fd0f3768c472057b07b12b21
+ms.sourcegitcommit: dba1a846ae78ea14240d28efa8d4934fe303f308
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731624"
+ms.lasthandoff: 04/16/2022
+ms.locfileid: "64891830"
 ---
 # <a name="user-tags-in-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender kullanıcı etiketleri
 
@@ -41,6 +41,7 @@ Kullanıcılara sistem etiketleri veya özel etiketler uyguladıktan sonra, bu e
 - [Uyarılar](alerts.md)
 - [Özel uyarı ilkeleri](../../compliance/alert-policies.md#viewing-alerts)
 - [Tehdit Gezgini ve gerçek zamanlı algılamalar](threat-explorer.md)
+- [Güvenliği aşılmış kullanıcı raporu](view-email-security-reports.md#compromised-users-report)
 - [E-posta varlık sayfası](mdo-email-entity-page.md#other-innovations)
 - [Tehdit koruması durum raporu](view-email-security-reports.md#threat-protection-status-report)
 - [Saldırı benzetimi](attack-simulation-training.md#target-users)
@@ -146,4 +147,4 @@ Kullanıcı etiketlerinin yüksek etkili kullanıcı hesaplarını korumaya yard
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- [Office 365 için Microsoft Defender'da öncelik hesaplarını yapılandırma ve gözden geçirme](configure-review-priority-account.md)
+[Office 365 için Microsoft Defender'da öncelik hesaplarını yapılandırma ve gözden geçirme](configure-review-priority-account.md)

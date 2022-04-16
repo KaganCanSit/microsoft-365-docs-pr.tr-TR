@@ -16,14 +16,14 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
-ms.date: 02/14/2022
+ms.date: 04/15/2022
 ms.technology: mde
-ms.openlocfilehash: fe86b09588f08a05183de146092b50b5cb530d0e
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 78d22772ccc9713b968347de5dee4c3a9699fe26
+ms.sourcegitcommit: dba1a846ae78ea14240d28efa8d4934fe303f308
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64825024"
+ms.lasthandoff: 04/16/2022
+ms.locfileid: "64891876"
 ---
 # <a name="onboard-non-persistent-virtual-desktop-infrastructure-vdi-devices-in-microsoft-365-defender"></a>Microsoft 365 Defender kalıcı olmayan sanal masaüstü altyapısı (VDI) cihazlarını ekleme
 
@@ -146,7 +146,7 @@ Aşağıdaki adımlar VDI cihazlarını ekleme konusunda size yol gösterir ve t
 
 Güncelleştirmeleri VDI'lerde çalışan VM'lere kolayca dağıtabilme özelliği sayesinde, makinelerinizde güncelleştirmeleri hızlı ve kolay bir şekilde nasıl edinebileceğinize odaklanmak için bu kılavuzu kısaltdık. Güncelleştirmeler konak sunucusundaki bileşen bitlerine genişletildiğinden ve açıldığında doğrudan VM'ye indirildiğinden, artık düzenli aralıklarla altın renkli görüntüler oluşturmanız ve mühürlemeniz gerekmez.
 
-Daha fazla bilgi [için, sanal masaüstü altyapısı (VDI) ortamında Microsoft Defender Virüsten Koruma için dağıtım kılavuzundaki yönergeleri](/security/defender-endpoint/deployment-vdi-microsoft-defender-antivirus) izleyin.
+Daha fazla bilgi [için Sanal Masaüstü Altyapısı (VDI) ortamında Microsoft Defender Virüsten Koruma için dağıtım kılavuzundaki yönergeleri](/microsoft-365/security/defender-endpoint/deployment-vdi-microsoft-defender-antivirus) izleyin.
 
 
 ## <a name="related-topics"></a>İlgili konular
