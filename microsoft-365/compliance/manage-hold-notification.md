@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Yasal tutma bildirimlerinizin durumunu izlemek ve gerekirse bunları güncelleştirip yeniden göndermek için eBulma (Premium) içindeki iletişim iş akışını kullanın.
-ms.openlocfilehash: 3e0ab93b469d2ae80d9416137425b7f2876442c1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 83e5331aaea59893f06cfa0629d627e500cfe1b1
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946143"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996184"
 ---
 # <a name="manage-hold-notifications"></a>Bekletme bildirimlerini yönetme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Yasal tutma bildirimi iş akışınızı başlattıktan sonra, iletişimlerinizin durumunu izlemek için Microsoft Purview eKeşif 'teki (Premium) iletişim iş akışını kullanabilirsiniz. İletişimler sekmesi, eBulma (Premium) servis talebinizdeki tüm bildirimlerin listesini içerir. Atanmış veya bildirimi kabul etmiş olan koruyucuların sayısı gibi ayrıntıları görebilirsiniz.
 

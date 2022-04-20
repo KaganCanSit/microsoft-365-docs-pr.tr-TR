@@ -1,5 +1,5 @@
 ---
-title: Microsoft Uyumluluk Yöneticisi ile çalışmaya başlama
+title: Microsoft Purview Uyumluluk Yöneticisi ile Kullanmaya başlayın
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,379 +17,381 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Uyumluluk Yöneticisi kullanıcı izinlerini ve rollerini ayarlayın ve eylemlerin otomatik testlerini ayarlayın. Kullanıcı geçmişini yönetin ve pano görünümlerinizi filtreleyin.
-ms.openlocfilehash: a6a0d7c12b0f798b88d460517866c55862c56740
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+description: Microsoft Purview Uyumluluk Yöneticisi kullanıcı izinlerini ve rollerini ayarlayın ve eylemlerin otomatik testini yapılandırın. Kullanıcı geçmişini yönetin ve pano görünümünüzü filtreleyin.
+ms.openlocfilehash: e691aefdeaf3c2e1c1398bf71b74006aff4d1f6f
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63525023"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973651"
 ---
-# <a name="get-started-with-compliance-manager"></a>Uyumluluk Yöneticisi'ni çalışmaya başlama
+# <a name="get-started-with-compliance-manager"></a>Uyumluluk Yöneticisini kullanmaya başlama
 
-**Bu makalede:** Bu makale Uyumluluk Yöneticisi'ni ayarlamanıza yardımcı olur. Uyumluluk **Yöneticisi'ne erişmeyi** , rolleri **ve** izinleri ayarlamayı ve geliştirme **eylemlerini otomatik olarak yapılandırmayı öğrenin**. Uyumluluk Yöneticisi **panonıza** gidin ve ana sayfaları anleyin: geliştirme eylemleri sayfası, çözüm sayfası, değerlendirmeler sayfası ve değerlendirme şablonları sayfası.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-## <a name="who-can-access-compliance-manager"></a>Who Yöneticisi'ne erişenin
+**Bu makalede:** Bu makale, Uyumluluk Yöneticisi'nin ayarlanmasına yardımcı olur. Uyumluluk Yöneticisi'ne **erişmeyi** , **rolleri ve izinleri ayarlamayı ve** **iyileştirme eylemlerinin otomatik testini yapılandırmayı** öğrenin. **Uyumluluk Yöneticisi panonuzda** ilerleyin ve ana sayfaları anlayın: iyileştirme eylemleri sayfası, çözümler sayfası, değerlendirmeler sayfası ve değerlendirme şablonları sayfası.
 
-Uyumluluk Yöneticisi Office 365 ve Microsoft 365 lisansına sahip kuruluşların ve ABD Government Community Cloud (GCC) Orta, GCC Yüksek ve Savunma Bölümü (DoD) müşterileri tarafından kullanılabilir. Değerlendirmenin kullanılabilirliği ve yönetim özellikleri lisans sözleşmenize bağlıdır.  [Hizmet açıklaması ayrıntılarını görüntüleme](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+## <a name="who-can-access-compliance-manager"></a>Who Uyumluluk Yöneticisi'ne erişebilir
+
+Uyumluluk Yöneticisi, Office 365 ve Microsoft 365 lisansları olan kuruluşlar ve ABD Government Community Cloud (GCC) Orta, GCC Yüksek ve Savunma Bakanlığı (DoD) müşterileri tarafından kullanılabilir. Değerlendirme kullanılabilirliği ve yönetim özellikleri lisans sözleşmenize bağlıdır.  [Hizmet açıklaması ayrıntılarını görüntüleyin](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-compliance-manager).
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Büyük Microsoft 365 uyumluluk Yöneticisi'ne erişen ilk kullanıcı, büyük olasılıkla kuruluşun genel yöneticisi olur. Genel yöneticinin oturum açmasını ve uyumluluk yöneticisini ilk kez ziyaret ederken aşağıda belirtilen şekilde kullanıcı izinlerini ayarlamasını öneririz.
+Kuruluşunuzun Microsoft 365 genel yöneticisi büyük olasılıkla Uyumluluk Yöneticisi'ne erişen ilk kullanıcı olacaktır. Genel yöneticinin, Uyumluluk Yöneticisi'ni ilk kez ziyaret ederken aşağıda açıklandığı gibi oturum açmasını ve kullanıcı izinlerini ayarlamasını öneririz.
 
 ## <a name="sign-in"></a>Oturum açın
 
-1. Genel yönetici <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 uyumluluk merkezi</a> **gidin ve** hesabınızla Microsoft 365 açın.
-2. Sol **gezinti bölmesinde** Uyumluluk Yöneticisi'ni seçin. Uyumluluk Yöneticisi [panonıza gelirsiniz](#understand-the-compliance-manager-dashboard).
+1. <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview uyumluluk portalına</a> gidin ve Microsoft 365 genel yönetici hesabınızla **oturum açın**.
+2. Sol gezinti bölmesinde **Uyumluluk Yöneticisi'ni** seçin. [Uyumluluk Yöneticisi panonuza](#understand-the-compliance-manager-dashboard) ulaşırsınız.
 
-Uyumluluk Yöneticisi'ne erişim doğrudan bağlantısıdır [https://compliance.microsoft.com/compliancemanager](https://compliance.microsoft.com/compliancemanager).
+Uyumluluk Yöneticisi'ne erişmek için doğrudan bağlantı şeklindedir [https://compliance.microsoft.com/compliancemanager](https://compliance.microsoft.com/compliancemanager).
 
-## <a name="set-user-permissions-and-assign-roles"></a>Kullanıcı izinlerini ayarlama ve rol atama
+## <a name="set-user-permissions-and-assign-roles"></a>Kullanıcı izinlerini ayarlama ve rolleri atama
 
-Uyumluluk Yöneticisi rol tabanlı bir erişim denetimi (RBAC) izin modeli kullanır. Yalnızca rol atanmış kullanıcılar Uyumluluk Yöneticisi'ne erişebilirsiniz ve her kullanıcı tarafından izin verilen eylemler rol türüne [göre kısıtlanır](#role-types).
+Uyumluluk Yöneticisi rol tabanlı erişim denetimi (RBAC) izin modeli kullanır. Yalnızca rol atanmış kullanıcılar Uyumluluk Yöneticisi'ne erişebilir ve her kullanıcının izin verdiği eylemler [rol türüne](#role-types) göre kısıtlanır.
 
-### <a name="where-to-set-permissions"></a>İzinlerin ayar bulunduğu yer
+### <a name="where-to-set-permissions"></a>İzinlerin ayarlanacağı yer
 
-Kuruluş için genel yönetici rolünü tutan kişi Uyumluluk Yöneticisi için kullanıcı izinlerini ayarlamasını sağlar. İzinler alan içinde ve Microsoft 365 uyumluluk merkezi (Azure AD) Azure Active Directory ayarlanır.
+Kuruluşunuz için genel yönetici rolüne sahip olan kişi, Uyumluluk Yöneticisi için kullanıcı izinleri ayarlayabilir. İzinler Microsoft Purview uyumluluk portalında ve Azure Active Directory (Azure AD) içinde ayarlanabilir.
 
 > [!NOTE]
-> US Government Community (GCC) High and Department of Defense (DoD) ortamlarındaki müşteriler yalnızca Azure AD'de Uyumluluk Yöneticisi için kullanıcı izinlerini ve rollerini ayarlayabilir. Azure AD yönergeleri ve rol türü tanımları için aşağıya bakın.
+> US Government Community (GCC) Yüksek ve Savunma Bakanlığı (DoD) ortamlarındaki müşteriler yalnızca Azure AD'de Uyumluluk Yöneticisi için kullanıcı izinleri ve rolleri ayarlayabilir. Azure AD yönergeleri ve rol türü tanımları için aşağıya bakın.
 
-Kaynak dosyada izinleri ayarlamak ve rol Microsoft 365 uyumluluk merkezi aşağıdaki adımları izleyin:
+Microsoft Purview uyumluluk portalında izinleri ayarlamak ve roller atamak için aşağıdaki adımları izleyin:
 
-1. Erişim iznine gidin Microsoft 365 uyumluluk merkezi İzinler'i <a href="https://go.microsoft.com/fwlink/p/?linkid=2173597" target="_blank">**seçin**</a>.
+1. Microsoft Purview uyumluluk portalına gidin ve <a href="https://go.microsoft.com/fwlink/p/?linkid=2173597" target="_blank">**İzinler'i**</a> seçin.
 
-2. Uyumluluk merkezi **açılan listesinde** Roller'i **seçin**.
+2. Uyumluluk portalı açılan listesinde **Roller'i** seçin.
 
-3. Bir veya birden çok kullanıcı eklemek istediğiniz rol grubunu bulun ve grup adının sol onay kutusunu işaretleyin. (Rollerin [ve ilgili işlevlerin aşağıdaki listesine bakın](#role-types). Rol grubu adları, rol adını taklit ediyor.)
+3. Bir veya daha fazla kullanıcı eklemek istediğiniz rol grubunu bulun ve grup adının solundaki kutuyu işaretleyin. ( [Aşağıdaki rollerin ve ilgili işlevlerin listesine bakın](#role-types). Rol grubu adları rol adını taklit eden bir addır.)
 
-4. Bu grubun uç uç bölmesinde, Üyeler üst bilgisi **altında Düzenle'yi** seçin.
+4. Bu grubun açılır bölmesinde **Üyeler** üst bilgisi altında **Düzenle'yi** seçin.
 
-5. Üye **seç'i seçin**. Başka bir açılır pencere görüntülenir.
+5. **Üye seç'i** seçin. Başka bir açılır pencere görüntülenir.
 
-6. Gruba **eklemek istediğiniz** bir veya daha fazla kullanıcı seçmek için + Ekle'yi seçin.
+6. Gruba eklenecek bir veya daha fazla kullanıcıyı seçmek için **+ Ekle'yi** seçin.
 
-7. Eklemek istediğiniz adların yanındaki onay kutusunu seçin ve ardından **alttaki Ekle** düğmesini seçin.
+7. Eklemek istediğiniz adların yanındaki onay kutusunu seçin ve ardından alt kısımdaki **Ekle** düğmesini seçin.
 
-8. Kullanıcı atamayı bitirin, Bitti'yi, ardından **Kaydet'i** ve **Kapat'ı** **seçin**.
+8. Kullanıcıları atamayı bitirdiğinizde **Bitti'yi** ve ardından **Kaydet'i** ve ardından **Kapat'ı** seçin.
 
 #### <a name="more-about-azure-ad"></a>Azure AD hakkında daha fazla bilgi
 
-Rolleri atamak ve Azure AD'de izinleri ayarlamak için bkz. Yönetici rolüne sahip olan [kullanıcılara yönetici ve yönetici Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).
+Azure AD'de rol atamak ve izinleri ayarlamak için bkz. [Azure Active Directory sahip kullanıcılara yönetici ve yönetici olmayan roller atama](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).
 
-Azure AD kimlikleri olmayan ve abonelikler Office 365 Microsoft 365, uyumluluk yöneticisine erişim izni Microsoft 365 uyumluluk merkezi. Uyumluluk Yöneticisi'ne erişim konusunda yardım almak için Uyumluluk [Yöneticisi'cmresearch@microsoft.com](mailto:cmresearch@microsoft.com).
+Office 365 veya Microsoft 365 abonelikleri olmayan Azure AD kimliklerine sahip kullanıcılar Microsoft Purview uyumluluk portalında Uyumluluk Yöneticisi'ne erişemez. Uyumluluk Yöneticisi'ne erişim konusunda yardım almak için [cmresearch@microsoft.com](mailto:cmresearch@microsoft.com) başvurun.
 
 ### <a name="role-types"></a>Rol türleri
 
-Aşağıdaki tabloda, Uyumluluk Yöneticisi'nde her rol tarafından izin verilen işlevler gösterilmiştir. Tabloda, her [Bir Azure AD rolüyle Uyumluluk](/azure/active-directory/roles/permissions-reference) Yöneticisi rollerinin nasıl eş adı olduğu da yer alır. Kullanıcıların Uyumluluk Yöneticisi'ne erişmek için en azından Uyumluluk Yöneticisi okuyucu rolüne veya Azure AD genel okuyucu rolüne ihtiyacı olur.
+Aşağıdaki tabloda, Uyumluluk Yöneticisi'ndeki her rolün izin verdiği işlevler gösterilmektedir. Tabloda ayrıca her [Azure AD rolünün Uyumluluk Yöneticisi rolleriyle](/azure/active-directory/roles/permissions-reference) nasıl eşlenmiş olduğu da gösterilir. Kullanıcıların Uyumluluk Yöneticisi'ne erişmek için en azından Uyumluluk Yöneticisi okuyucu rolüne veya Azure AD genel okuyucu rolüne sahip olması gerekir.
 
-| Kullanıcı şunları şunları olabilir: | Uyumluluk Yöneticisi rolü | Azure AD rolü | 
+| Kullanıcı yapabilecekleri: | Uyumluluk Yöneticisi rolü | Azure AD rolü | 
 | :------------- | :-------------: | :------------: |
-| **Verileri okuma ancak düzenleme**| Uyumluluk Yöneticisi Okuyucu  | Azure AD Global okuyucu, Güvenlik okuyucu |
-| **Verileri düzenleme**| Uyumluluk Yöneticisi Katkı | Uyumluluk Yöneticisi |
-| **Test sonuçlarını düzenleme**| Uyumluluk Yöneticisi Değerlendiren | Uyumluluk Yöneticisi |
-| **Değerlendirmeleri yönetme, şablon ve kiracı verilerini yönetme**| Uyumluluk Yöneticisi Yönetimi | Uyumluluk Yöneticisi, Uyumluluk Veri Yöneticisi, Güvenlik Yöneticisi  |
-| **Kullanıcı atama**| Genel Yönetici | Genel Yönetici |
+| **Verileri okuma ama düzenlememe**| Uyumluluk Yöneticisi Okuyucusu  | Azure AD Genel okuyucusu, Güvenlik okuyucusu |
+| **Verileri düzenleme**| Uyumluluk Yöneticisi Katkısı | Uyumluluk Yöneticisi |
+| **Test sonuçlarını düzenleme**| Uyumluluk Yöneticisi Değerlendiricisi | Uyumluluk Yöneticisi |
+| **Değerlendirmeleri, şablon ve kiracı verilerini yönetme**| Uyumluluk Yöneticisi Yönetimi | Uyumluluk Yöneticisi, Uyumluluk Verileri Yöneticisi, Güvenlik Yöneticisi  |
+| **Kullanıcıları atama**| Genel Yönetici | Genel Yönetici |
 
 ## <a name="start-a-premium-assessments-trial"></a>Premium değerlendirme denemesi başlatma
 
-Uyumluluk Yöneticisi premium değerlendirmeleri denemesi, organizasyonuyla en ilgili değerlendirmeleri hızla ayarlamak için mükemmel bir yoludur. 300'den fazla şablondanlık kitaplığımız, dünya üzerinde devlet yönetmeliklerini ve endüstri standartlarıyla uyumludur.
-Premium değerlendirme denemesi hakkında [daha fazla bilgi edinmek için:](compliance-easy-trials-compliance-manager-assessments.md)
+Uyumluluk Yöneticisi premium değerlendirme deneme sürümü, kuruluşunuza en uygun değerlendirmeleri hızla ayarlamanın harika bir yoludur. 300'den fazla şablondan oluşan kitaplığımız, dünyanın dört bir yanındaki kamu düzenlemelerine ve endüstri standartlarına karşılık gelmektedir.
+[Premium değerlendirme deneme sürümü](compliance-easy-trials-compliance-manager-assessments.md) hakkında daha fazla bilgi edinin.
 
-Denemenizi doğrudan Uyumluluk Yöneticisi'ni kullanarak başlatabilirsiniz ve aşağıdaki adımları kullanarak önerilen değerlendirmeleri yapabilirsiniz:
+Deneme sürümünüzü doğrudan Uyumluluk Yöneticisi'nden başlatabilir ve aşağıdaki adımları izleyerek önerilen değerlendirmeleri ayarlayabilirsiniz:
 
-1. Uyumluluk Yöneticisine Genel **Bakış sayfasında** Denemeyi **başlat'ı seçin**. Bir deneme etkinleştirme sihirbazı girersiniz ve bu sihirbaz, organizasyonunız için değerlendirmeleri bize öneririz.
+1. Uyumluluk Yöneticisi'ne **Genel Bakış** sayfasında **Denemeyi başlat'ı** seçin. Kuruluşunuz için değerlendirmeleri önermemize yardımcı olacak sorular soran bir deneme etkinleştirme sihirbazı girersiniz.
 
-2. Denemeyi **etkinleştir sayfasında**, ücretsiz 90 günlük premium değerlendirme denemenize başlamak ve değerlendirmeleri oluşturmaya devam etmek için Sonraki'yi seçin.
+2. **Deneme sürümünü etkinleştir** sayfasında **İleri'yi** seçerek ücretsiz 90 günlük premium değerlendirme denemenize başlayın ve değerlendirme oluşturmaya devam edin.
 
-3. Organizasyonlarınızı tanımlamak için bir veya daha fazla endüstriyi seçin ve sonra da Sonraki'yi **seçin**.
+3. Kuruluşunuzu tanımlayan bir veya daha fazla sektör seçin ve ardından **İleri'yi** seçin.
 
-4. Kuruluş konumunuz için bir veya daha fazla bölge seçin ve sonra da Sonraki'yi **seçin**.
+4. Kuruluşunuzun konumu için bir veya daha fazla bölge seçin ve ardından **İleri'yi** seçin.
 
-5. Değerlendirmeleri **seçin ekranında** , Önerilen **şablonlar'ın** yanındaki açılan oku seçerek, organizasyonunız için geçerli olduğunu düşünüyoruz değerlendirmelerin listesini görebilirsiniz. Değerlendirme oluşturmak için kullanmak istediğiniz şablonların yanındaki kutuları işaretleyin ve sonra Sonraki'yi **seçin**.
+5. Değerlendirmeleri **seçin** ekranında, kuruluşunuz için geçerli olduğunu düşündüğümüz değerlendirmelerin listesini görmek için **Önerilen şablonlar'ın** yanındaki açılan oku seçin. Değerlendirme oluşturmak için kullanmak istediğiniz şablonların yanındaki kutuları işaretleyin ve **İleri'yi** seçin.
 
-6. Son seçimlerinizi gözden geçirerek yeni **değerlendirmelerinizi oluşturmak için Önerilen** Değerlendirmeleri Ekle'yi seçin.
+6. Yeni değerlendirmelerinizi oluşturmak için son seçimlerinizi gözden geçirin ve **Önerilen Değerlendirmeler Ekle'yi** seçin.
 
-Aşağıdaki Değerlendirmeler sayfası bölümünü ziyaret ederek değerlendirmelerle [çalışmaya başlama hakkında daha fazla](#assessments-page) bilgi edinebilirsiniz.
+Aşağıdaki [Değerlendirmeler sayfası](#assessments-page) bölümünü ziyaret ederek değerlendirmeleri kullanmaya başlama hakkında daha fazla bilgi edinin.
 
-## <a name="settings-for-automated-testing-and-user-history"></a>Ayarlar test ve kullanıcı geçmişi için en iyi nedenler
+## <a name="settings-for-automated-testing-and-user-history"></a>Otomatik test ve kullanıcı geçmişi için Ayarlar
 
-Uyumluluk Yöneticisi ayarları, Microsoft 365 uyumluluk merkezi eylemlerini otomatik olarak test etme özelliğini etkinleştirmeniz ve devre dışı bırakmanızı sağlar. Ayarlar aynı zamanda geliştirme eylemlerini farklı bir kullanıcıya yeniden atama olanağı da dahil olmak üzere geliştirme eylemleriyle ilişkilendirilmiş kullanıcıların verilerini yönetmenize olanak sağlar.  Yalnızca genel yönetici veya Uyumluluk Yöneticisi Yöneticisi rolüne sahip olan kişiler Uyumluluk Yöneticisi ayarlarına erişim iznine sahip olabilir.
+Microsoft Purview uyumluluk portalındaki Uyumluluk Yöneticisi ayarları, iyileştirme eylemlerinin otomatik testini etkinleştirmenize ve devre dışı bırakmanıza olanak tanır. Bu ayarlar, iyileştirme eylemleriyle ilişkilendirilmiş kullanıcıların verilerini yönetmenize de olanak tanır ve iyileştirme eylemlerini farklı bir kullanıcıya yeniden atayabilirsiniz.  Uyumluluk Yöneticisi ayarlarına yalnızca genel yönetici veya Uyumluluk Yöneticisi Yöneticisi rolüne sahip kişiler erişebilir.
 
 > [!NOTE]
-> Otomatik test özelliği, bu ortamlarda Güvenli GCC ve DoD ortamlarındaki müşteriler tarafından kullanılamaz. GCC ve DoD müşterilerinin geliştirme eylemlerini el ile uygulamaları ve testleri gerekir.
+> Güvenli Puan bu ortamlarda kullanılamadığından otomatik test özelliği GCC Yüksek ve DoD ortamlarındaki müşteriler tarafından kullanılamaz. GCC Yüksek ve DoD müşterilerinin iyileştirme eylemlerini el ile uygulaması ve test etmeleri gerekir.
 
-### <a name="set-up-automated-testing"></a>Otomatik test ayarlama
+### <a name="set-up-automated-testing"></a>Otomatik testi ayarlama
 
-Uyumluluk Yöneticisi, bilgi idaresi, bilgi koruma Microsoft 365 veri kaybını önleme, iletişim uyumluluğu ve insider risk yönetimi dahil olmak üzere, diğer uyumluluk çözümlerinden gelen sinyalleri algılar. Her geliştirme eyleminin ayrıntılar sayfasında, Test sekmesindeki  Test mantığı alanı, eylemin uyumluluk puanınızı geçmesi ve bu puandan puan kazan olması için diğer çözümde nelerin gerekli olduğunu gösterir.
+Uyumluluk Yöneticisi, veri yaşam döngüsü yönetimi, bilgi koruması, Microsoft Purview Veri Kaybı Önleme, iletişim uyumluluğu ve iç risk yönetimi gibi kuruluşunuzun abone olduğu diğer Microsoft Purview çözümlerinden gelen sinyalleri algılar. Her geliştirme eyleminin ayrıntılar sayfasında, **Test** sekmesindeki **Test mantığı** alanı, eylemin uyumluluk puanınıza doğru puan geçirmesi ve puan kazanması için diğer çözümde nelerin gerekli olduğunu gösterir.
 
-Uyumluluk Yöneticisi, Microsoft Güvenli Puanı tarafından da izlenen tamamlayıcı geliştirme eylemlerinden [sinyaller de algılar](../security/defender/microsoft-secure-score.md). Uyumluluk Yöneticisi bu sinyalleri kullanarak sizin için bazı geliştirme eylemlerini otomatik olarak test eder ve bu da uyumluluk etkinliklerinizin verimliliğini en üst düzeye çıkarmanıza yardımcı olur. Geliştirme eylemi başarıyla test edilmiş ve uygulanmışsa, genel uyumluluk puanınıza kredi uygulanan tam puan alırsınız.
+Uyumluluk Yöneticisi ayrıca [Microsoft Güvenli Puanı](../security/defender/microsoft-secure-score.md) tarafından da izlenen tamamlayıcı iyileştirme eylemlerinden gelen sinyalleri algılar. Uyumluluk Yöneticisi bu sinyalleri kullanarak sizin için belirli iyileştirme eylemlerini otomatik olarak test edebilir ve bu da uyumluluk etkinliklerinizde verimliliği en üst düzeye çıkarmanıza yardımcı olur. İyileştirme eylemi başarıyla test edildiğinde ve uygulandığında, genel uyumluluk puanınıza alacak olan puan miktarının tamamını alırsınız.
 
-Otomatik test, Uyumluluk Yöneticisi'ni yeni edinen kuruluşlar için varsayılan olarak açıktır. Verilerinizi veya verilerinizi ilk Microsoft 365 Office 365, verileri tümüyle toplamak ve uyumluluk puanınıza faktörünü almak yaklaşık yedi gün sürer. Otomatik test açık olduğunda, eylemin test tarihi güncelleştirilmez, ancak test durumu güncelleştirilir. Yeni değerlendirmeler oluşturulduğunda, puanlar otomatik olarak Microsoft denetim puanlarını ve Güvenli Puan tümleştirmesini içerir.
+Otomatik test, Uyumluluk Yöneticisi'ne yeni yeni eklenen kuruluşlar için varsayılan olarak açıktır. Microsoft 365 veya Office 365 ilk dağıttığınızda, verilerin tam olarak toplanması ve uyumluluk puanınıza katılması yaklaşık yedi gün sürer. Otomatikleştirilmiş test açıldığında eylemin test tarihi güncelleştirilmez, ancak test durumu güncelleştirilir. Yeni değerlendirmeler oluşturulduğunda puanlar otomatik olarak Microsoft denetim puanlarını ve Güvenli Puan tümleştirmesini içerir.
 
 #### <a name="manage-automated-testing-settings"></a>Otomatik test ayarlarını yönetme
 
-Organizasyon genel yöneticisi otomatik test ayarlarını istediğiniz zaman değiştirebilir. Genel geliştirme eylemleri için otomatik sınamayı kapatabilirsiniz veya tek tek eylemler için açabilirsiniz. Otomatik test ayarlarınızı değiştirmek için aşağıdaki yönergeleri izleyin.
+Kuruluşunuzun genel yöneticisi, otomatik test ayarlarını istediği zaman değiştirebilir. Yaygın iyileştirme eylemleri için otomatik testi kapatabilir veya tek tek eylemler için etkinleştirebilirsiniz. Otomatik test ayarlarınızı değiştirmek için aşağıdaki yönergeleri izleyin.
 
-1. Arama <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> Seçenekler'Microsoft 365 uyumluluk merkezi.
+1. Microsoft Purview uyumluluk portalında <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
 
-2. Ayarlar sayfasında Uyumluluk **Yöneticisi'ni seçin**.
+2. Ayarlar sayfasında **Uyumluluk Yöneticisi'ni** seçin.
 
-3. Sol **gezintiden Otomatik** test'i seçin.
+3. Sol gezinti **bölmesinden Otomatik test'i** seçin.
 
-4. Tüm geliştirme eylemleri için otomatik sınamayı açmak, tüm eylemler için kapatmak veya tek tek eylemlerle açmak için ilgili düğmeyi seçin.
+4. Tüm iyileştirme eylemleri için otomatik testi açmak, tüm eylemler için kapatmak veya tek tek eylemlere göre açmak için uygun düğmeyi seçin.
 
-5. Geliştirme eylemi **başına aç'ı seçerseniz**, bir liste seçim yapmak için kullanılabilir tüm geliştirme eylemlerini gösterir.  Otomatik olarak sınandırmalarını istediğiniz eylemin yanındaki kutuyu işaretleyin.
+5. **İyileştirme eylemi başına aç'ı** seçerseniz, aralarından seçim yapabileceğiniz tüm iyileştirme eylemleri bir listeyle gösterilir.  Otomatik olarak test etmek istediğiniz herhangi bir eylemin yanındaki kutuyu işaretleyin.
 
-6. Ayarlarınızı **kaydetmek için** Kaydet'i seçin. Ekrannizin en üstünde, seçiminizin kaydedldığını haber alan bir onay iletisi alırsınız. Bir hata bildirimi alırsanız yeniden deneyin.
+6. Ayarlarınızı kaydetmek için **Kaydet'i** seçin. Ekranınızın üst kısmında seçiminizin kaydedildiğini belirten bir onay iletisi alırsınız. Hata bildirimi alırsanız yeniden deneyin.
 
-**Not:** Tüm eylemler için otomatik güncelleştirmeleri yalnızca genel yönetici açamaz veya kapatabilirsiniz. Uyumluluk Yöneticisi Yöneticisi tek tek eylemler için otomatik güncelleştirmeleri açabilirsiniz, ancak genel olarak tüm eylemler için açamaz.
+**Not:** Tüm eylemler için otomatik güncelleştirmeleri yalnızca genel yönetici açabilir veya kapatabilir. Uyumluluk Yöneticisi Yöneticisi tek tek eylemler için otomatik güncelleştirmeleri açabilir, ancak genel olarak tüm eylemler için etkinleştiremez.
 
 **Daha fazla bilgi edinin**
-- [Sürekli izlemenin uyumluluk puanınıza nasıl katkıda olduğu hakkında daha fazla bilgi edinin](compliance-score-calculation.md#how-compliance-manager-continuously-assesses-controls).
-- [Geliştirme eylemi için test kaynağı atama hakkında daha fazla bilgi öğrenin](compliance-manager-improvement-actions.md#update-testing-source).
+- [Sürekli izlemenin uyumluluk puanınıza nasıl katkıda bulunduğu hakkında daha fazla bilgi edinin](compliance-score-calculation.md#how-compliance-manager-continuously-assesses-controls).
+- [İyileştirme eylemi için test kaynağı belirleme hakkında daha fazla bilgi edinin](compliance-manager-improvement-actions.md#update-testing-source).
 
 ### <a name="manage-user-history"></a>Kullanıcı geçmişini yönetme
 
-Kullanıcı **geçmişini yönetme ayarları** , Uyumluluk Yöneticisi'nde geliştirme eylemleriyle hangi kullanıcıların çalıştığını hızla tanımlamanıza yardımcı olur. Geliştirme eylemleriyle ilişkilendirilmiş tanınmaya neden olan kullanıcı verileri, yapılan tüm uygulama ve testlerden, karşıya yüklendikten belgelerden ve girdikleri notlardan içerir. Bu tür verilerin anlaşılması ve alınması, kuruluşun kendi uyumluluk ihtiyaçları için gerekli olabilir.
+**Kullanıcı geçmişini yönet** ayarları, Uyumluluk Yöneticisi'nde hangi kullanıcıların iyileştirme eylemleriyle çalıştığını hızla belirlemenize yardımcı olur. İyileştirme eylemleriyle ilişkili tanımlanabilir kullanıcı verileri, yapılan tüm uygulama ve test çalışmalarını, karşıya yükledikleri belgeleri ve girdikleri notları içerir. Bu tür verileri anlamak ve almak, kuruluşunuzun kendi uyumluluk gereksinimleri için gerekli olabilir.
 
-Kullanıcı geçmişi ayarları, tüm geliştirme eylemlerini bir kullanıcıdan diğerine yeniden atamayı da sağlar.
+Kullanıcı geçmişi ayarları, tüm iyileştirme eylemlerini bir kullanıcıdan diğerine yeniden atamanıza da olanak tanır.
 
 **Kullanıcı geçmişi ayarlarını bulmak için:**
 
-1. Arama <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> Seçenekler'Microsoft 365 uyumluluk merkezi.
+1. Microsoft Purview uyumluluk portalında <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
 
-2. Ayarlar sayfasında Uyumluluk **Yöneticisi'ni seçin**.
+2. Ayarlar sayfasında **Uyumluluk Yöneticisi'ni** seçin.
 
-3. Sol **gezintiden Kullanıcı geçmişini** yönet'i seçin.
+3. Sol gezinti **bölmesinden Kullanıcı geçmişini yönet'i** seçin.
 
-Kullanıcı **geçmişini yönet** sayfası, geliştirme eylemine atanan e-posta adresine göre tüm kullanıcıların listesini gösterir. Belirli bir **kullanıcıyı** e-posta adresine yazarak hızla bulmak için Ara düğmesini kullanın.
+**Kullanıcı geçmişini yönet** sayfasında, bir iyileştirme eylemine atanan e-posta adresine göre tüm kullanıcıların listesi gösterilir. E-posta adresini yazarak belirli bir kullanıcıyı hızla bulmak için **Ara** düğmesini kullanın.
 
-Her kullanıcının e-posta adresinin sağ tarafından, Seç açılan  menüsü raporu dışarı aktarma, geliştirme eylemlerini yeniden atama veya geçmişi silme seçenekleri sağlar. Her seçenekle ilgili ayrıntılar için aşağıdaki bölüme bakın.
+Her kullanıcının e-posta adresinin sağındaki **Seç** açılan menüsünde raporu dışarı aktarma, iyileştirme eylemlerini yeniden atama veya geçmişi silme seçenekleri sağlanır. Her seçenekle ilgili ayrıntılar için aşağıdaki her bölüme bakın.
 
-#### <a name="export-a-report-of-user-history-data"></a>Kullanıcı geçmişi verileri raporunu dışarı aktarma
+#### <a name="export-a-report-of-user-history-data"></a>Kullanıcı geçmişi verilerinin raporunu dışarı aktarma
 
-Kullanıcıya atanmış Excel geliştirme eylemlerinin listesini içeren bir çalışma dosyasını dışarı aktarabilirsiniz.  Ayrıca rapor, o kullanıcı tarafından karşıya yüklenen kanıt dosyalarını da listeler. Bu bilgiler açık geliştirme eylemlerini yeniden atamanıza yardımcı olabilir.
+Şu anda kullanıcıya atanmış iyileştirme eylemlerinin listesini içeren bir Excel dosyasını dışarı aktarabilirsiniz.  Raporda ayrıca bu kullanıcı tarafından karşıya yüklenen tüm kanıt dosyaları listelenir. Bu bilgiler, açık geliştirme eylemlerini yeniden atamanıza yardımcı olabilir.
 
-Rapor, geliştirme eyleminin oluşturma tarihi olarak durumunu yansıtıyor. Bu, durumu veya ataması için yapılan önceki tüm değişikliklerin geçmiş bir raporu değildir (geliştirme eylemleri sayfanıza bir raporun [nasıl dışarı aktarılasını öğrenin](compliance-manager-improvement-actions.md#export-a-report)).
+Rapor, geliştirme eyleminin oluşturma tarihi itibariyle durumunu yansıtır. Durumu veya ataması ile ilgili önceki tüm değişikliklerin geçmiş raporu değildir ( [geliştirme eylemleri sayfanızdan bir raporu dışarı aktarmayı](compliance-manager-improvement-actions.md#export-a-report) öğrenin).
 
-**Kullanıcıya göre rapor dışarı aktarma için aşağıdaki adımları izleyin:**
+**Bir raporu kullanıcıya göre dışarı aktarmak için aşağıdaki adımları izleyin:**
 
-1. Arama <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> Seçenekler'Microsoft 365 uyumluluk merkezi.
+1. Microsoft Purview uyumluluk portalında <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
 
-2. Ayarlar sayfasında Uyumluluk **Yöneticisi'ni seçin**.
+2. Ayarlar sayfasında **Uyumluluk Yöneticisi'ni** seçin.
 
-3. Sol **gezintiden Kullanıcı geçmişini** yönet'i seçin.
+3. Sol taraftaki gezinti **bölmesinden Kullanıcı geçmişini yönet'i** seçin.
 
-4. Hedef kullanıcınızı bulmak için, liste e-posta adreslerinde arama veya Ara'ya tıklayın ve kullanıcının e-posta adresini girin.
+4. Liste e-posta adreslerini arayarak veya **Ara'yı** seçip kullanıcının e-posta adresini girerek hedeflenen kullanıcıyı bulun.
 
-5. Seç **açılan menüsünde** Raporu dışarı aktar'ı **seçin**.
+5. **Seç** açılan menüsünde **Raporu dışarı aktar'ı** seçin.
 
-6. Rapor Excel dosyanız oluşturulsa, bunu açabilir ve yerel makinenize kaydedebilirsiniz.
+6. Raporunuzun Excel dosyası oluşturulduktan sonra dosyayı açabilir ve yerel makinenize kaydedebilirsiniz.
 
 #### <a name="reassign-improvement-actions-to-another-user"></a>Geliştirme eylemlerini başka bir kullanıcıya yeniden atama
 
-Geliştirme eylemlerini bir kullanıcıdan diğerine yeniden atabilirsiniz. Bir eylemi yeniden imzalarken belge yükleme geçmişi değişmez, ancak geliştirme eylemi içinde artık belgeleri karşıya yük eden kullanıcının adı değişmez.
+Geliştirme eylemlerini bir kullanıcıdan diğerine yeniden atayabilirsiniz. Bir eylemi yeniden atadığınızda, belge yükleme geçmişi değişmez, ancak belgeleri ilk karşıya yükleyen kullanıcının adı artık geliştirme eyleminde görünmez.
 
-**Geliştirme eylemlerini başka bir kullanıcıya yeniden atama için aşağıdaki adımları izleyin:**
+**Geliştirme eylemlerini başka bir kullanıcıya yeniden atamak için aşağıdaki adımları izleyin:**
 
-1. Arama <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> Seçenekler'Microsoft 365 uyumluluk merkezi.
+1. Microsoft Purview uyumluluk portalında <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
 
-2. Ayarlar sayfasında Uyumluluk **Yöneticisi'ni seçin**.
+2. Ayarlar sayfasında **Uyumluluk Yöneticisi'ni** seçin.
 
-3. Sol **gezintiden Kullanıcı geçmişini** yönet'i seçin.
+3. Sol taraftaki gezinti **bölmesinden Kullanıcı geçmişini yönet'i** seçin.
 
-4. Liste e-posta adreslerini arayarak veya Ara'ya **seçerek** ve bu kullanıcının e-posta adresini girerek bir kullanıcı bulun.
+4. Liste e-posta adreslerini arayarak veya **Ara'yı** seçip kullanıcının e-posta adresini girerek bir kullanıcıyı bulun.
 
-5. Seç **açılan menüsünde** Geliştirme eylemlerini **yeniden at'ı seçin**. Geliştirme **eylemlerini yeniden atama** uç bölmesi görüntülenir.
+5. **Seç** açılan menüsünde **İyileştirme eylemlerini yeniden ata'yı** seçin. **İyileştirme eylemlerini yeniden ata** açılır bölmesi görüntülenir.
 
-6. Kullanıcı **ara alanına** , geliştirme eylemlerini atamak istediğiniz kullanıcının adını veya e-posta adresini *girin*.
+6. **Kullanıcı ara** alanına, *geliştirme eylemlerini* atamak istediğiniz kullanıcının adını veya e-posta adresini girin.
 
-7. Geliştirme eylemleri altında hedeflenen kullanıcınızı adını gördüğünüzde **, o** kullanıcıyı seçin ve sonra da Eylemler ata'ya **seçin**.
+7. **Geliştirme eylemlerinin atanacağı** yer altında hedeflenen kullanıcınızın adını gördüğünüzde kullanıcıyı ve ardından **Eylem ata'yı** seçin.
 
-8. Yeniden atama tamamlandığında, çıkış bölmesinde önceki kullanıcıdan gelen tüm iyileştirme eylemlerinin yeni kullanıcıya yeniden atandığı onay iletisi görüntülenir. Yeniden atama başarısızlığı bildirimi alırsanız, pencereyi kapatın ve yeniden deneyin. Uçarak çıkış bölmesini kapatmak için Bitti'yi **seçin**.
+8. Yeniden atama tamamlandığında, açılır bölmede önceki kullanıcının tüm iyileştirme eylemlerinin yeni kullanıcıya yeniden atandığını onaylayan bir onay iletisi görürsünüz. Yeniden atama hatası bildirimi alırsanız pencereyi kapatın ve yeniden deneyin. Açılır pencere bölmesini kapatmak için **Bitti'yi** seçin.
 
-Yeni atanan kullanıcı, geliştirme eylemine atandığı bir e-posta alır. E-posta, geliştirme eyleminin ayrıntılar sayfasına doğrudan bir bağlantı içerir.
+Yeni atanan, bir iyileştirme eylemine atandığını belirten bir e-posta alır. E-posta, iyileştirme eyleminin ayrıntılar sayfasına doğrudan bir bağlantı içerir.
 
  > [!NOTE]
-> Bekleyen bir güncelleştirmeyi içeren bir eylemi yeniden asınıyorsanız, yeniden atama e-postası içinde yer alan eyleme doğrudan bağlantı, güncelleştirme yeniden atamadan sonra kabul edilirse boz olur. Güncelleştirme kabul edildikten sonra eylemi kullanıcıya yeniden ataarak bu sorunu düzeltebilirsiniz. Geliştirme eylemleri [güncelleştirmeleri hakkında daha fazla bilgi alın](compliance-manager-improvement-actions.md#accepting-updates-to-improvement-actions).
+> Bekleyen bir güncelleştirmeyi içeren bir eylemi yeniden atadığınızda, güncelleştirme yeniden atandıktan sonra kabul edilirse, yeniden atama e-postasında eylemin doğrudan bağlantısı kesilecektir. Güncelleştirme kabul edildikten sonra eylemi kullanıcıya yeniden atayarak bunu düzeltebilirsiniz. [İyileştirme eylemlerine yönelik güncelleştirmeler](compliance-manager-improvement-actions.md#accepting-updates-to-improvement-actions) hakkında daha fazla bilgi edinin.
 
 #### <a name="delete-user-history"></a>Kullanıcı geçmişini silme
 
-Kullanıcının geçmişinin silinmesi geliştirme eylemlerinin sahibi olarak bu geçmişi kaldırır ve Uyumluluk Yöneticisi'nde diğer tüm alanlardan bu kullanıcının adını kaldırır. Bir kullanıcının geçmişini silene kadar, sahip olduğu geliştirme eylemleri yeni bir kullanıcı atanana kadar Atanan  değerini görüntülemez. Geliştirme eylemine yüklenen tüm belgeler, silinen **kullanıcının adı** yerine Kullanıcı kaldırılmış olarak gösterir. Kullanıcı geçmişini silme kalıcıdır.
+Kullanıcının geçmişi silindiğinde, geliştirme eylemlerinin sahibi olarak kaldırılır ve kullanıcının adı Uyumluluk Yöneticisi'ndeki diğer tüm alanlardan kaldırılır. Kullanıcının geçmişini sildiğinizde, sahip oldukları geliştirme eylemleri yeni bir kullanıcı **atanana kadar Atanan** değerini görüntülemez. İyileştirme eylemine yüklenen tüm belgeler, silinen kullanıcının adının yerine **Kullanıcı kaldırıldı** ifadesini gösterir. Kullanıcı geçmişinin silinmesi kalıcıdır.
 
 Kullanıcının geçmişini silmek için aşağıdaki adımları izleyin:
 
-1. Arama <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar**</a> Seçenekler'Microsoft 365 uyumluluk merkezi.
+1. Microsoft Purview uyumluluk portalında <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Ayarlar'ı**</a> seçin.
 
-2. Ayarlar sayfasında Uyumluluk **Yöneticisi'ni seçin**.
+2. Ayarlar sayfasında **Uyumluluk Yöneticisi'ni** seçin.
 
-3. Sol **gezintiden Kullanıcı geçmişini** yönet'i seçin.
+3. Sol taraftaki gezinti **bölmesinden Kullanıcı geçmişini yönet'i** seçin.
 
-4. Liste e-posta adreslerini arayarak veya Ara'ya **seçerek** ve bu kullanıcının e-posta adresini girerek bir kullanıcı bulun.
+4. Liste e-posta adreslerini arayarak veya **Ara'yı** seçip kullanıcının e-posta adresini girerek bir kullanıcıyı bulun.
 
-5. Seç **açılan menüsünde** Geçmişi sil'i **seçin**.
+5. **Seç** açılan menüsünde **Geçmişi sil'i** seçin.
 
-6. Kullanıcı geçmişinin kalıcı olarak silinmesini onaylamanızı isteyen bir pencere görüntülenir. Silmeye devam etmek için Geçmişi **sil'i seçin**. Geçmişi silmeden ayrılmak için İptal'i **seçin**.
+6. Kullanıcı geçmişinin kalıcı olarak silinmesini onaylamanızı isteyen bir pencere görüntülenir. Silme işlemine devam etmek için **Geçmişi sil'i** seçin. Geçmişi silmeden gitmek için **İptal'i** seçin.
 
-7. Kullanıcı geçmişini yönet sayfasına en **üstte,** kullanıcıyla ilgili geçmişin silindikten sonra bir onay iletisiyle geri dönersiniz.
+7. **Kullanıcı geçmişini yönet** sayfasına geri dönersiniz ve en üstte kullanıcı geçmişinin silindiğini belirten bir onay iletisi görürsünüz.
 
-## <a name="understand-the-compliance-manager-dashboard"></a>Uyumluluk Yöneticisi panosunun ne olduğunu anlama
+## <a name="understand-the-compliance-manager-dashboard"></a>Uyumluluk Yöneticisi panosunu anlama
 
-Uyumluluk Yöneticisi panosu, geçerli uyumluluk nedenlerinizi tek bakışta görüntülemenizi sağlamak için tasarlanmıştır.
+Uyumluluk Yöneticisi panosu, geçerli uyumluluk duruşunuzun bir bakışta görünümünü sağlayacak şekilde tasarlanmıştır.
 
 :::image type="content" alt-text="Uyumluluk Yöneticisi - pano." source="../media/compliance-manager-dashboard.png" lightbox="../media/compliance-manager-dashboard.png":::
 
 ### <a name="overall-compliance-score"></a>Genel uyumluluk puanı
 
-Uyumluluk puanınız göze çarpan bir şekilde en üstte yer alıyor. Önemli veri koruma standartları ve düzenlemelerine uygun geliştirme işlemlerinin tamamlanması için ulaşılabilir puanlara dayalı bir yüzdeyi gösterir. Microsoft tarafından [yönetilen Microsoft](compliance-manager-assessments.md#microsoft-actions-tab) eylemlerinden puanlar, uyumluluk puanınıza da sayılır.
+Uyumluluk puanınız en üstte öne çıkıyor. Önemli veri koruma standartlarını ve düzenlemelerini ele alan iyileştirme eylemlerini tamamlamak için ulaşılabilir noktaları temel alan bir yüzde gösterir. [Microsoft'umu yönetilen Microsoft eylemlerinden](compliance-manager-assessments.md#microsoft-actions-tab) alınan puanlar da uyumluluk puanınıza göre sayılır.
 
-Uyumluluk Yöneticisi'ne ilk kez geldiğinde, ilk puanınız veri koruma temeli [Microsoft 365 temel aya dayalıdır](compliance-manager-assessments.md#data-protection-baseline-default-assessment). Tüm kuruluşların da dahil olduğu bu temel değerlendirme, yaygın endüstri düzenlemelerini ve standartlarını içeren bir dizi denetimdir. Uyumluluk Yöneticisi mevcut gizlilik Microsoft 365 çözümlerinizi tarar ve size geçerli gizlilik ve güvenlik ayarlarınıza göre bir ilk değerlendirme verir. Organizasyonu konuyla ilgili değerlendirmeler eklenizse de puanınız sizin için daha anlamlı hale gelir.
+Uyumluluk Yöneticisi'ne ilk kez geldiğinizde, ilk puanınız [Microsoft 365 veri koruma temelini](compliance-manager-assessments.md#data-protection-baseline-default-assessment) temel alır. Tüm kuruluşların kullanımına sunulan bu temel değerlendirme, ortak endüstri düzenlemelerini ve standartlarını içeren bir dizi denetimdir. Uyumluluk Yöneticisi mevcut Microsoft 365 çözümlerinizi tarar ve geçerli gizlilik ve güvenlik ayarlarınıza göre size bir ilk değerlendirme sağlar. Kuruluşunuzla ilgili değerlendirmeler eklediğinizde puanınız sizin için daha anlamlı hale gelir.
 
-**Daha fazla bilgi:** [Uyumluluk puanının nasıl hesaplanmış olduğunu anlıyoruz](compliance-score-calculation.md).
+**Daha fazla bilgi edinin:** [Uyumluluk puanınızın nasıl hesaplanmış olduğunu anlama](compliance-score-calculation.md).
 
-### <a name="key-improvement-actions"></a>Önemli geliştirme eylemleri
+### <a name="key-improvement-actions"></a>Önemli iyileştirme eylemleri
 
-Bu bölümde, genel uyumluluk puanınız üzerinde en büyük olumlu etkiyi sağlamak için şu anda gerçekleştirebilirsiniz. Geliştirme **eylemleri sayfanıza gitmek için** Tüm geliştirme eylemlerini görüntüle'yi seçin.
+Bu bölümde, genel uyumluluk puanınız üzerinde en büyük olumlu etkiyi sağlamak için şu anda gerçekleştirebileceğiniz en iyi iyileştirme eylemleri listelenir. İyileştirme eylemleri sayfanıza gitmek için **Tüm iyileştirme eylemlerini görüntüle'yi** seçin.
 
 ### <a name="solutions-that-affect-your-score"></a>Puanınızı etkileyen çözümler
 
-Bu bölümde, puanınızı olumlu olarak etki yönde etkilemesine neden olan iyileştirme eylemleri ve bu çözümlerde bekleyen geliştirme eylemlerinin sayısı vurgulanır. Çözüm **sayfanızı ziyaret etmek** için Tüm çözümleri görüntüle'yi seçin.
+Bu bölümde puanınızı olumlu yönde etkileyebilecek iyileştirme eylemleri içeren çözümler ve bu çözümlerdeki bekleyen iyileştirme eylemlerinin sayısı vurgulanmaktadır. Çözümler sayfanızı ziyaret etmek için **Tüm çözümleri görüntüle'yi** seçin.
 
 ### <a name="compliance-score-breakdown"></a>Uyumluluk puanı dökümü
 
-Bu bölümde, puanınızı iki farklı şekilde daha ayrıntılı bir şekilde görüntüleyebilirsiniz:
+Bu bölüm, puanınızı iki farklı yolla daha ayrıntılı bir şekilde görüntülemenizi sağlar:
 
-- **Kategoriler**: veri koruma kategorileri içindeki "bilgileri koruma" veya "cihazları yönetme" gibi genel puanın yüzdesini gösterir.
-- **Değerlendirmeler**: GDPR veya NIST 800-53 gibi belirli uyumluluk ve veri koruma standartları, yasal düzenlemeler veya yasalar için değerlendirmeleri yönetmede ilerlemenizin yüzdesini gösterir.
+- **Kategoriler**: "bilgileri koruma" veya "cihazları yönetme" gibi veri koruma kategorilerinde toplam puanınızın yüzdesini gösterir.
+- **Değerlendirmeler**: GDPR veya NIST 800-53 gibi belirli uyumluluk ve veri koruma standartları, düzenlemeleri veya yasaları için değerlendirmeleri yönetmedeki ilerlemenizin yüzdesini gösterir.
 
-### <a name="filtering-your-dashboard-view"></a>Pano görünümlerinizi filtreleme
+### <a name="filtering-your-dashboard-view"></a>Pano görünümünüzü filtreleme
 
-Pano görünümlerinizi filtreleyebilirsiniz ve yalnızca belirli düzenlemeler ve standartlarla, çözümlerle, eylem türüyle, değerlendirme gruplarıyla veya veri koruma kategorileriyle ilgili öğeleri görebilirsiniz. Görünüme bu şekilde filtre uygulamanız, panodaki puanı da filtre ölçütlerinize göre toplam olası puanlardan kaç puan elde ettiklerinizi göstererek filtreleecektir.
+Pano görünümünüzü yalnızca belirli düzenleme ve standartlara, çözümlere, eylem türüne, değerlendirme gruplarına veya veri koruma kategorilerine ilişkin öğeleri görmek için filtreleyebilirsiniz. Görünümünüzü bu şekilde filtrelemek de panonuzdaki puanı filtreleyerek, filtre ölçütlerinize göre toplam olası puandan kaç puan elde ettiğinizi gösterir.
 
-Filtre uygulamak için:
+Filtreleri uygulamak için:
 
-1. **Panonun** sağ üst tarafından Filtrele'yi seçin.
-2. Filtreler uç uç bölmesinde filtre **ölçütlerinizi** seçin ve sonra da Uygula'ya **tıklayın**.
+1. Panonun sağ üst tarafında **Filtre'yi** seçin.
+2. **Filtreler** açılır bölmesinden filtre ölçütlerinizi seçin ve ardından **Uygula'yı** seçin.
 
-Filtreyi uyguladikten sonra, puanınızı gerçek zamanlı olarak düzeltilir. Uyumluluk puanı yüzdesi, döküm bilgileri, iyileştirme eylemleri ve çözümleri, artık yalnızca filtre ölçütleriniz kapsamında yer alan verilere yöneliktir. Uyumluluk Yöneticisi'nin oturumlarını imzalarsanız, yeniden oturum asanız filtrelenmiş görünümünüz kalır.
+Filtre uyguladıktan sonra puanınızın gerçek zamanlı olarak ayarlı olduğunu görürsünüz. Uyumluluk puanı yüzdesi ve döküm bilgileri ile iyileştirme eylemleri ve çözümleri artık yalnızca filtre ölçütlerinizin kapsadığı verilerle ilgili. Uyumluluk Yöneticisi oturumunu kapattığınızda, yeniden oturum açtığınızda filtrelenmiş görünümünüz kalır.
 
 Filtreleri kaldırmak için:
 
-- Uyumluluk **puanının** üzerindeki Uygulanan filtreler başlığında, kaldırmak istediğiniz tek tek filtrenin yanındaki **X'i** seçin; veya
-- **Panonun** sağ üst kısmında Filtre'yi seçin, ardından Filtreler uçarak çıkış **bölmesinde** Filtreleri **temizle'yi seçin**.
+- Uyumluluk puanınızın üzerindeki **Uygulanan filtreler** başlığında, kaldırmak istediğiniz tek tek filtrenin yanındaki **X** işaretini seçin; Veya
+- Panonuzun sağ üst tarafında **Filtre'yi** seçin, ardından **Filtreler** açılır bölmesinde **Filtreleri temizle'yi** seçin.
 
-## <a name="improvement-actions-page"></a>Geliştirme eylemleri sayfası
+## <a name="improvement-actions-page"></a>İyileştirme eylemleri sayfası
 
-[Geliştirme eylemleri](compliance-manager-improvement-actions.md) , kurum tarafından yönetilen eylemlerdir. Geliştirme eylemleriyle çalışmak, uyumluluk etkinliklerinizi merkezileştirmeye ve veri koruma düzenlemeleriyle standartlara uyum içinde çalışmaya yardımcı olur. Her geliştirme eylemi, ayrıntılı uygulama kılavuzu ve sizi uygun çözüme başlatmanız için bir bağlantı verir. Geliştirme eylemleri, uygulama ve test çalışması gerçekleştirmek için kuruluş kullanıcılarınıza atanabilir. Ayrıca geliştirme işlemi içinde belgeleri, notları depolar ve durum güncelleştirmelerini de kayda alabilirsiniz.
+[İyileştirme eylemleri](compliance-manager-improvement-actions.md) , kuruluşunuz tarafından yönetilen eylemlerdir. İyileştirme eylemleriyle çalışmak, uyumluluk etkinliklerinizi merkezi hale getirmenize ve veri koruma düzenlemeleri ve standartlarıyla uyumlu hale getirmenize yardımcı olur. Her geliştirme eylemi, ayrıntılı uygulama kılavuzu ve sizi uygun çözüme başlatmaya yönelik bir bağlantı sağlar. Uygulama ve test çalışmalarını gerçekleştirmek için kuruluşunuzdaki kullanıcılara iyileştirme eylemleri atanabilir. Ayrıca belgeleri, notları ve kayıt durumu güncelleştirmelerini iyileştirme eylemi içinde depolayabilirsiniz.
 
 ### <a name="view-your-improvement-actions"></a>Geliştirme eylemlerinizi görüntüleme
 
-Uyumluluk Yöneticisi panosu önemli geliştirme işlemlerinizi gösterir. Geliştirme eylemlerinizin hepsini görüntülemek için panoda geliştirme eylemleri  sekmesini seçin. Bu sekme sizi geliştirme eylemleri sayfasına getirir. Geliştirme eylemleri sayfanıza **almak için Pano'da** bulunan önemli geliştirme eylemleri listesinin altındaki Tüm geliştirme eylemlerini görüntüle'yi de seçebilirsiniz.
+Uyumluluk Yöneticisi panosu, önemli iyileştirme eylemlerinizi gösterir. Tüm iyileştirme eylemlerinizi görüntülemek için, panonuzda **geliştirme eylemleri** sekmesini seçin; bu da sizi iyileştirme eylemleri sayfanıza getirir. Ayrıca **, iyileştirme eylemleri** sayfanıza ulaşmak için panonuzdaki önemli iyileştirme eylemleri listesinin altındaki Tüm iyileştirme eylemlerini görüntüle'yi de seçebilirsiniz.
 
-Geliştirme eylemleri sayfası, kurum tarafından yönetilen tüm geliştirme eylemlerini gösterir. Microsoft tarafından yönetilen eylemler her değerlendirme içinde bunlardan bakabilirsiniz (Microsoft eylemleri hakkında daha [fazla bilgi).](compliance-manager-assessments.md#microsoft-actions-tab)
+İyileştirme eylemleri sayfası, kuruluşunuz tarafından yönetilen tüm iyileştirme eylemlerini gösterir. Microsoft tarafından yönetilen eylemler her değerlendirmede görüntülenebilir ( [Microsoft eylemleri](compliance-manager-assessments.md#microsoft-actions-tab) hakkında daha fazla bilgi edinin).
 
-Geliştirme eylemleri sayfasındaki uzun bir eylem listesi varsa, görünüme filtre uygulamanız yararlı olabilir. Eylemler **listesinin** sağ üst köşesindeki Filtre'yi seçin. Filtreler **açılır** bölmesi görüntülendiğinde, kullanılabilir seçeneklerden ölçütlerinizi seçin. Sağ üst köşedeki Grup'a **seçerek** de görünümlerinizi özelleştirebilirsiniz. Açılan menüden gruba, çözüme, kategoriye, eylem türüne veya duruma göre görüntülemek için öğesini seçin.
+İyileştirme eylemleri sayfanızda eylemlerin uzun bir listesi varsa, görünümünüzü filtrelemek yararlı olabilir. Eylemler listesinin sağ üst köşesindeki **Filtre'yi** seçin. **Filtreler** açılır penceresi görüntülendiğinde, kullanılabilir seçenekler arasından ölçütlerinizi seçin. Sağ üst köşedeki **Gruplandır'ı** seçerek de görünümünüzü özelleştirebilirsiniz. Açılan menüden gruba, çözüme, kategoriye, eylem türüne veya duruma göre görüntülemek için öğesini seçin.
 
-Bu sayfanın varsayılan görünümü, Geçirilen test durumu ile geliştirme eylemleri **görüntülemez**. Sınamayı geçmiş eylemleri görüntülemek için, Filtreler **uçarak** çıkış bölmesinde Geçirilen kutusunu işaretleyin. Yalnızca puanınıza doğru Geçirilen **sayımın test** durumuna sahip eylemler. Bazı eylemler bekleyen bir güncelleştirme **etiketi gösterebilir.** Geliştirme eylemleri [güncelleştirmeleri hakkında daha fazla bilgi alın](compliance-manager-improvement-actions.md#accepting-updates-to-improvement-actions).
+Bu sayfanın varsayılan görünümü, test durumu **Başarılı** olan iyileştirme eylemlerini göstermez. Testi geçen eylemleri görüntülemek için Filtreler açılır **bölmesindeki Geçirildi** kutusunu işaretleyin. Yalnızca puanınıza doğru test durumu **Başarılı** sayısı olan eylemler. Bazı eylemler **bekleyen bir güncelleştirme etiketi gösterebilir.** [İyileştirme eylemlerine yönelik güncelleştirmeler](compliance-manager-improvement-actions.md#accepting-updates-to-improvement-actions) hakkında daha fazla bilgi edinin.
 
-Geliştirme eylemleri sayfası, her geliştirme işlemi için aşağıdaki veri noktalarını gösterir:
+İyileştirme eylemleri sayfası, her iyileştirme eylemi için aşağıdaki veri noktalarını gösterir:
 
-- **Ürünler**: değerlendirilen ürün.
-- **Elde edilen** puanlar: eylemi tamamlayarak elde edilen toplamdan elde edilen puan sayısı
-- **Yasal** düzenlemeler: Eylemle ilgili düzenlemeler veya standartlar
-- **Grup**: eylemi atadığı grup
-- **Çözümler**: Eylemi gerçekleştirmek için nereye gidebilirsiniz?
-- **Değerlendirmeler**: Eylemi içeren değerlendirmeler
-- **Kategoriler**: ilgili veri koruma kategorisi (örneğin, bilgileri koruma, cihazları yönetme vb.)
+- **Ürünler**: Değerlendirilen ürün.
+- **Elde edilen puanlar**: Eylemi tamamlayarak toplamdan elde edilen puan sayısı
+- **Düzenlemeler**: eylemle ilgili düzenlemeler veya standartlar
+- **Grup**: Eylemi atadığınız grup
+- **Çözümler**: Eylemi gerçekleştirmek için gidebileceğiniz çözüm
+- **Değerlendirmeler**: eylemi içeren değerlendirmeler
+- **Kategoriler**: ilgili veri koruma kategorisi (bilgileri koruma, cihazları yönetme vb.)
 - **Test durumu**:
-  - **Yok** – durum güncelleştirmesi kaydedildi
-  - **Değerlendirildi** - test başlamadı
+  - **Hiçbiri** – hiçbir durum güncelleştirmesi kaydedilmedi
+  - **Değerlendirilmedi** - test başlatılmadı
   - **Başarılı** - uygulama başarıyla test edildi
-  - **Düşük risk başarısız** oldu - test başarısız oldu, düşük risk
-  - **Orta risk başarısız** oldu - test başarısız oldu, orta risk
-  - **Yüksek risk başarısız oldu** - test başarısız oldu, yüksek risk
-  - **Kapsam dışında** – eylem değerlendirme kapsamına değildir ve puanınızı etkilemez
-  - **Algılanmaz-** el ile test için bir eylemin uygulanmış olduğunu, ancak test edile olmadığını gösterir; otomatik test için, bir eylemin otomasyon sonucu için beklediğini gösterir
-  - **Algılanamadı** - otomatik durum belirlenemedi
-  - **Kısmen test edildi** – kısmi puanlama ile otomatik puanlama
-- **Eylem türü**: geliştirme eyleminin teknik bir işlem olup olmadığını gösterir; yani bir çözüm veya ürün içinde uygulanıp uygulanamayacaktır ya da teknik çözüm dışında uygulanacak teknik olmayan bir eylemdir
-- **Atanan**: Bu eylemin atandığı kişi (varsa)
-- **Test kaynağı**: Eylem için test kaynağının el ile mi yoksa otomatik olarak mı yoksa üst öğeden mi devralınan olduğunu gösterir
+  - **Başarısız düşük risk** - test başarısız, düşük riskli
+  - **Başarısız orta risk** - test başarısız, orta riskli
+  - **Başarısız yüksek risk** - test başarısız, yüksek risk
+  - **Kapsam dışında** – eylem değerlendirme kapsamında değildir ve puanınızı etkilemez
+  - **Algılanacak -** el ile test için, bir eylemin uygulandığını ancak test edilmediğini gösterir; otomatikleştirilmiş test için, bir eylemin otomasyon sonucunu beklediğini gösterir
+  - **Algılanamadı** - otomatik durum belirlenemiyor
+  - **Kısmen test edilmiş** – kısmi puan veren otomatik puanlama
+- **Eylem türü**: geliştirme eyleminin teknik olup olmadığını gösterir; yani bir çözüm veya ürün içinde veya teknik olmayan bir çözüm dışında uygulanabilir
+- **Atandığı** kişi: Bu eylemin atandığı kişi (varsa)
+- **Test kaynağı**: Eylemin test kaynağının el ile mi, otomatik mi yoksa üst öğeden mi devralındığını gösterir
 
-**Daha fazla bilgi:** [Geliştirme eylemleri atama ve üzerinde çalışma yapmayı öğrenin](compliance-manager-improvement-actions.md).
+**Daha fazla bilgi edinin:** [Geliştirme eylemleri atama ve üzerinde çalışma gerçekleştirme hakkında bilgi edinin](compliance-manager-improvement-actions.md).
 
 ## <a name="solutions-page"></a>Çözümler sayfası
 
-Çözümler sayfasında, kazanılan ve olası noktaların paylaşımı çözüme göre düzenleniyor olarak görüntülenir. Bu görünümde kalan noktalarınızı ve geliştirme eylemlerinizi görüntülemek, hangi çözümlerin daha acil dikkat çekmesi gerektiğini anlamanıza yardımcı olur.
+Çözümler sayfasında, kazanılan puanların ve olası puanların çözümüne göre düzenlenmiş olarak payı gösterilir. Kalan noktalarınızı ve iyileştirme eylemlerini bu görünümden görüntülemek, hangi çözümlerin daha acil bir şekilde ilgilenilmesi gerektiğini anlamanıza yardımcı olur.
 
-Uyumluluk Yöneticisi pano üzerinde Çözümler sekmesini **seçerek** çözümler sayfasını bulun. Ayrıca Panonun **sağ üst kısmında** , **Puanınızı etkileyen** Çözümler altındaki Tüm çözümleri görüntüle'yi de seçin.
+Uyumluluk Yöneticisi panonuzda **Çözümler** sekmesini seçerek çözümler sayfasını bulun. Ayrıca, panonuzun sağ üst kısmındaki **Puanınızı etkileyen Çözümler'in** altında **Tüm çözümleri görüntüle'yi** de seçebilirsiniz.
 
-### <a name="filtering-your-solutions-view"></a>Çözüm görünümlerinizi filtreleme
+### <a name="filtering-your-solutions-view"></a>Çözüm görünümünüzü filtreleme
 
-Çözüm görünümlerinizi filtrelemek için:
+Çözüm görünümünüzü filtrelemek için:
 
-1. Değerlendirme **listenizin** sol üst köşesindeki Filtre'yi seçin.
-2. Filtreler **giriş bölmesinde** , istediğiniz ölçütlerin (düzenlemeler, çözümler, eylem türleri, gruplar, kategoriler) yanına bir denetim ekleyin.
-3. Uygula **düğmesini** seçin. Filtre bölmesi kapanır ve filtrelenmiş görünüm gösterilir.
+1. Değerlendirme listenizin sol üst köşesindeki **Filtre'yi** seçin.
+2. **Filtreler** açılır penceresinde, istenen ölçütlerin (düzenlemeler, çözümler, eylem türleri, gruplar, kategoriler) yanına bir denetim yerleştirin.
+3. **Uygula** düğmesini seçin. Filtre bölmesi kapatılır ve filtrelenmiş görünümünüzü görürsünüz.
 
-Ayrıca, değerlendirme listenizin üstündeki Grup açılır menüsünden gruplama türünü seçerek gruba, ürüne veya düzenlemeye göre değerlendirmeleri görmek için  görünümde değişiklik yapabilirsiniz.
+Değerlendirme listenizin üst kısmındaki **Grup** açılan menüsünden gruplandırma türünü seçerek değerlendirmeleri gruba, ürüne veya düzenlemeye göre görmek için görünümünüzü de değiştirebilirsiniz.
 
-### <a name="taking-action-from-the-solution-page"></a>Çözüm sayfasından işlem alma
+### <a name="taking-action-from-the-solution-page"></a>Çözüm sayfasından eylem gerçekleştirme
 
-Çözümler sayfasında, geliştirme eylemleriyle bağlantılı olarak kuruma yönelik çözümler görüntülenir. Tabloda her çözümün genel puanınıza katkısı, bu çözümde elde edilen ve mümkün olan puanlar ve bu çözümde grup edilen geri kalan geliştirme eylemlerinin puanınızı artırabilirsiniz.
+Çözümler sayfasında, kuruluşunuzun iyileştirme eylemlerine bağlı çözümleri görüntülenir. Tabloda her çözümün genel puanınıza katkıları, bu çözüm içinde elde edilen ve mümkün olan puanlar ve bu çözümde gruplandırılmış kalan ve puanınızı artırabilecek geliştirme eylemleri listelenir.
 
-Bu ekrandan iki şekilde işlem yapabilirsiniz:
+Bu ekrandan işlem yapmanın iki yolu vardır:
 
-1. Amaçlanan çözüm sıranız üzerinde, Kalan eylemler **sütunu altında** köprülü numarayı seçin. Bu çözümün test edilmemiş geliştirme eylemlerini gösteren geliştirme eylemleri ekranına filtre uygulanmış bir görünüm görürsünüz.
+1. Hedeflenen çözümünüzün satırındaki **Kalan eylemler** sütununun altında köprülenmiş sayıyı seçin. Bu çözüm için test edilmemiş iyileştirme eylemlerini gösteren iyileştirme eylemleri ekranının filtrelenmiş bir görünümünü görürsünüz.
 
-2. Amaçlanan çözüm sırada, Çözüm aç **sütununu altında** Aç'ı **seçin**. Çözüm veya konumu, önerilen eylemi Microsoft 365 Office 365 güvenlik ve uyumluluk merkezlerinde gördüğünüzde.
+2. Hedeflenen çözümünüzün satırındaki **Çözümü aç** sütununun altında **Aç'ı** seçin. Çözümü veya konumu, önerilen eylemi gerçekleştirebileceğiniz Microsoft 365 ve Office 365 güvenlik ve uyumluluk merkezlerinde görürsünüz.
 
 ## <a name="assessments-page"></a>Değerlendirmeler sayfası
 
-Değerlendirmeler sayfasında, kurum [için ayar](compliance-manager-assessments.md) all değerlendirmeleri listeledik. Uyumluluk puanı paydanız, tüm takip edilen değerlendirmeleriniz tarafından belirlenir. Daha fazla değerlendirme ekleytıkça, geliştirme eylemleri sayfanız üzerinde daha fazla geliştirme eylemi listelenir ve uyumluluk puanı paydanız artar.
+Değerlendirmeler sayfasında, kuruluşunuz için ayarladığınız tüm [değerlendirmeler](compliance-manager-assessments.md) listelenir. Uyumluluk puanı paydanız, izlenen tüm değerlendirmeleriniz tarafından belirlenir. Daha fazla değerlendirme ekledikçe, geliştirme eylemleri sayfanızda daha fazla geliştirme eyleminin listelendiğini ve uyumluluk puanı paydanızın arttığını görürsünüz.
 
-Sayfanın **üst kısmında** bulunan etkinleştirilmiş şablonlar sayaçları, şu anda kurumda etkinleştirilmiş olan toplam şablon sayısının dışında kullanmakta olan etkin değerlendirme şablonlarının sayısını gösterir. Daha [fazla bilgi için bkz. Şablon kullanılabilirliği](compliance-manager-templates.md#template-availability-and-licensing) ve lisanslama.
+Sayfanın üst kısmındaki **etkinleştirilmiş şablonlar** sayacı, kuruluşunuzun kullanabileceği toplam şablon sayısının dışında kullanılmakta olan etkin değerlendirme şablonlarının sayısını gösterir. Daha fazla bilgi için bkz. [Şablon kullanılabilirliği ve lisanslama](compliance-manager-templates.md#template-availability-and-licensing) .
 
-Değerlendirmeler sayfasında her değerlendirmeyle ilgili önemli bilgiler özetlenmiştir:
+Değerlendirmeler sayfası, her değerlendirmeyle ilgili önemli bilgileri özetler:
 
 - **Değerlendirme**: Değerlendirmenin adı
 - **Durum**:
-  - **Tamamlandı** - tüm denetimlerin durumu "geçti" veya en az bir denetim geçirildi ve geri kalanı "kapsam dışında" olur
-  - **Eksik** – en az bir denetim "başarısız" durumuna sahip
-  - **Yok** - tüm denetimler sınanmamıştır
-  - **Sürüyor** - geliştirme eylemleri "devam ediyor", "kısmi kredi" veya "algılanmadı" gibi başka durumlara da sahip
-- **Değerlendirme ilerleme** durumu: Başarıyla test edilen denetim sayısıyla ölçülerek tamamlanmaya yönelik yapılan çalışma yüzdesi
-- **Geliştirme eylemleriniz**: denetimlerinizin uygulanmasını karşılayan tamamlanmış eylemlerin sayısı
-- **Microsoft eylemleri**: Microsoft denetimlerinin uygulanmasını karşılayan tamamlanmış eylem sayısı
+  - **Tamamlandı** - tüm denetimlerin durumu "geçti" veya en az bir denetim geçirilir ve geri kalanı "kapsam dışı" olur
+  - **Tamamlanmadı** – en az bir denetimin durumu "başarısız"
+  - **Hiçbiri** - tüm denetimler test edilmedi
+  - **Devam ediyor** - geliştirme eylemlerinin "devam ediyor", "kısmi kredi" veya "algılanmamış" dahil olmak üzere başka bir durumu vardır
+- **Değerlendirme ilerleme durumu**: Başarıyla test edilen denetimlerin sayısıyla ölçüldükçe tamamlanmaya doğru yapılan işin yüzdesi
+- **Geliştirme eylemleriniz**: Denetimlerinizin uygulanmasını sağlamak için tamamlanan eylemlerin sayısı
+- **Microsoft eylemleri**: Microsoft denetimlerinin uygulanmasını karşılamak için tamamlanan eylemlerin sayısı
 - **Grup**: Değerlendirmenin ait olduğu grubun adı
-- **Ürün**: Değerlendirme için tanımlanmış ürün Microsoft 365 ürün gibi ilişkili ürün
-- **Düzenleme**: Değerlendirme için geçerli olan mevzuat standardı, politikası veya yasaları
+- **Ürün**: Microsoft 365 veya değerlendirme için tanımlanan başka bir ürün gibi ilişkili ürün
+- **Düzenleme**: Değerlendirme için geçerli olan mevzuat standardı, ilke veya yasa
 
-### <a name="filtering-your-assessments-view"></a>Değerlendirmeler görünümlerinizi filtreleme
+### <a name="filtering-your-assessments-view"></a>Değerlendirmeler görünümünüzü filtreleme
 
-Değerlendirme görünümlerinizi filtrelemek için:
+Değerlendirme görünümünüzü filtrelemek için:
 
-1. Değerlendirme **listenizin** sol üst köşesindeki Filtre'yi seçin.
-2. Filtreler **uç giriş** bölmesinde istediğiniz ölçütleri kontrol edin.
-3. Uygula **düğmesini** seçin. Filtre bölmesi kapanır ve filtrelenmiş görünüm gösterilir.
+1. Değerlendirme listenizin sol üst köşesindeki **Filtre'yi** seçin.
+2. **Filtreler** açılır bölmesinde istediğiniz ölçütleri denetleyin.
+3. **Uygula** düğmesini seçin. Filtre bölmesi kapatılır ve filtrelenmiş görünümünüzü görürsünüz.
 
-Ayrıca, değerlendirme listenizin üstündeki Grup açılır menüsünden gruplama türünü seçerek gruba, ürüne veya düzenlemeye göre değerlendirmeleri görmek için  görünümde değişiklik yapabilirsiniz.
+Değerlendirme listenizin üst kısmındaki **Grup** açılan menüsünden gruplandırma türünü seçerek değerlendirmeleri gruba, ürüne veya düzenlemeye göre görmek için görünümünüzü de değiştirebilirsiniz.
 
 ### <a name="default-assessment"></a>Varsayılan değerlendirme
 
-Varsayılan olarak, değerlendirmeler [sayfasında Veri Koruma Temeli](compliance-manager-assessments.md#data-protection-baseline-default-assessment) değerlendirmesini görebilirsiniz. Uyumluluk Yöneticisi, değerlendirme oluşturmak için önceden [hazır](compliance-manager-templates-list.md) çeşitli şablonlar da sağlar.
+Varsayılan olarak, değerlendirmeler sayfasında [Veri Koruma Temeli](compliance-manager-assessments.md#data-protection-baseline-default-assessment) değerlendirmesini görürsünüz. Uyumluluk Yöneticisi ayrıca değerlendirme oluşturmak için önceden oluşturulmuş birkaç [şablon](compliance-manager-templates-list.md) sağlar.
 
 ## <a name="assessment-templates-page"></a>Değerlendirme şablonları sayfası
 
-Şablon, Uyumluluk Yöneticisi'nde değerlendirme oluşturmaya ilişkin bir çerçevedir. Değerlendirme şablonları sayfasında şablonların listesi ve önemli ayrıntılar görüntülenir. Bu liste Uyumluluk Yöneticisi tarafından sağlanan şablonların yanı sıra, kurum tarafından değiştirilen veya oluşturulan tüm şablonları da içerir. Sertifika, ürün kapsamı, ülke, endüstri ve bunu oluşturan kişi temel alan bir şablonu bulmak için filtreler uygulayabilirsiniz.
+Şablon, Uyumluluk Yöneticisi'nde değerlendirme oluşturmaya yönelik bir çerçevedir. Değerlendirme şablonları sayfasında şablonların ve önemli ayrıntıların listesi görüntülenir. Liste, Uyumluluk Yöneticisi tarafından sağlanan şablonların yanı sıra kuruluşunuzun değiştirdiği veya oluşturduğu şablonları içerir. Sertifikasyon, ürün kapsamı, ülke, sektör ve şablonu oluşturan kişiyi temel alan bir şablon bulmak için filtreler uygulayabilirsiniz.
 
-Sayfanın **üst kısmında** bulunan etkinleştirilmiş şablonlar sayaçları, şu anda kurumda etkinleştirilmiş olan toplam şablon sayısının dışında kullanmakta olan etkin değerlendirme şablonlarının sayısını gösterir. Daha [fazla bilgi için bkz. Şablon kullanılabilirliği](compliance-manager-templates.md#template-availability-and-licensing) ve lisanslama.
+Sayfanın üst kısmındaki **etkinleştirilmiş şablonlar** sayacı, kuruluşunuzun kullanabileceği toplam şablon sayısının dışında kullanılmakta olan etkin değerlendirme şablonlarının sayısını gösterir. Daha fazla bilgi için bkz. [Şablon kullanılabilirliği ve lisanslama](compliance-manager-templates.md#template-availability-and-licensing) .
 
-Şablonun açıklamasını ve sertifika, kapsam ve denetim ayrıntıları hakkında daha fazla bilgi içeren ayrıntıları sayfasını getirmek için satırından bir şablon seçin. Bu sayfadan değerlendirme oluşturmak, şablon verilerini kendi verilerinize dışarı aktararak veya şablonu Excel için uygun düğmeleri seçin.
+Şablonun açıklamasını ve sertifikasyon, kapsam ve denetim ayrıntıları hakkında daha fazla bilgi içeren ayrıntılar sayfasını açmak için satırından bir şablon seçin. Bu sayfadan değerlendirme oluşturmak için uygun düğmeleri seçebilir, şablon verilerini Excel dışarı aktarabilir veya şablonu değiştirebilirsiniz.
 
-**Daha fazla bilgi:** [Değerlendirme şablonlarıyla çalışma hakkında bilgi okuyun](compliance-manager-templates.md).
+**Daha fazla bilgi edinin:** [Değerlendirme şablonlarıyla çalışma hakkında bilgi edinin](compliance-manager-templates.md).
 
 ## <a name="next-step"></a>Sonraki adım
 
-Değerlendirmeleri ayararak [Uyumluluk Yöneticisi'ni özelleştirin](compliance-manager-assessments.md).
+[Değerlendirmeleri ayarlayarak](compliance-manager-assessments.md) Uyumluluk Yöneticisi'nin özelleştirin.

@@ -12,7 +12,7 @@
       items:
         - name: Genel bakış
           href: testoverview.md
-        - name: İkili Dosyalar paketini Test Base üzerinde test edin
+        - name: İkili Dosyalarınızı Test Base üzerinde test edin
           href: testapplication.md
         - name: Intune uygulamanızı Test Base üzerinde test edin
           href: testintuneapplication.md

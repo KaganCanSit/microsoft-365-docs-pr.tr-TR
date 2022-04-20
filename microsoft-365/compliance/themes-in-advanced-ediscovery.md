@@ -17,16 +17,14 @@ search.appverid:
 ms.assetid: ''
 description: Her belgede baskın temayı bularak gözden geçirme kümelerini düzenlemek için eBulma'da (Premium) Temalar'ı kullanın.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: e019c103114630411a7d13ae619827a2e83a890c
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 8067048c1dedeb6c70a887ec1fb41094bad35666
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64991764"
+ms.locfileid: "64970393"
 ---
 # <a name="themes-in-ediscovery-premium"></a>eBulma'da temalar (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bir kişi nasıl belge yazar? Genellikle belgede iletmek istedikleri bir veya daha fazla fikirle başlar ve fikirlerle uyumlu sözcükler kullanarak oluştururlar. Bir fikir ne kadar yaygın olursa, bu fikirle ilgili sözcükler de o kadar sık olur. Bu, kişilerin belgeleri nasıl tükettiği konusunda da bilgi sağlar. Belgeyi okurken anlaşılması gereken önemli nokta, belgenin iletmeye çalıştığı fikirler, hangi fikirlerin nerede göründüğü ve fikirler arasındaki ilişkilerin ne olduğudur.
 

@@ -17,14 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: eBulma (Standart) olayıyla ilgili olabilecek içeriği arayın.
-ms.openlocfilehash: d97acf066914a7dee0059f27aa0127efe52ea5f3
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 00a7c7bdd565a5fc184281fa467db3c56b1c6288
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971615"
+ms.locfileid: "64995348"
 ---
 # <a name="search-for-content-in-a-ediscovery-standard-case"></a>eBulma (Standart) durumunda içerik arama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bir Microsoft Purview eKeşif (Standart) servis talebi oluşturulduktan ve servis talebiyle ilgili kişiler beklemeye alındıktan sonra, servis talebiyle ilgili içerik için bir veya daha fazla arama oluşturabilir ve çalıştırabilirsiniz. eBulma (Standart) olayıyla ilişkili aramalar, Microsoft Purview uyumluluk portalındaki **İçerik arama** sayfasında listelenmez. Bu aramalar, **aramaların ilişkili** olduğu Core eDiscover servis talebinin Aramalar sayfasında listelenir. Bu aynı zamanda bir servis talebiyle ilişkili aramalara yalnızca servis talebi üyeleri tarafından erişilebileceği anlamına gelir.
 

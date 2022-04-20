@@ -14,14 +14,16 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: eBulma'da (Premium) tahmine dayalı kodlama modeli oluşturmayı öğrenin. Bu, bir inceleme kümesindeki ilgili ve ilgili olmayan içeriği belirlemenize yardımcı olmak için eBulma(Premium) içindeki makine öğrenmesi özelliklerini kullanmanın ilk adımıdır.
-ms.openlocfilehash: 86fc72ae73faf25184c5b137a0e433af8125eb54
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f5636defbd4bc004a4732ff1d956f8b879daea2d
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64942281"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994050"
 ---
 # <a name="create-a-predictive-coding-model-preview"></a>Tahmine dayalı kodlama modeli oluşturma (önizleme)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 eBulma'da (Premium) tahmine dayalı kodlamanın makine öğrenmesi özelliklerini kullanmanın ilk adımı, tahmine dayalı bir kodlama modeli oluşturmaktır. Modeli oluşturduktan sonra, bir inceleme kümesindeki ilgili ve ilgili olmayan içeriği tanımlamayı eğitebilirsiniz.
 

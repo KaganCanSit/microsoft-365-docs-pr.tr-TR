@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, TeleMessage Enterprise Number Archiver'dan SMS ve MMS verilerini içeri aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için Microsoft Purview'daki üçüncü taraf veri kaynaklarından verileri arşivlemenizi sağlar.
-ms.openlocfilehash: f1353e0140e1411d2cac79fc4d59043046df302d
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: b3f429af6caa4d650688b27f5157a212e348ffe8
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944117"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995062"
 ---
 # <a name="set-up-a-connector-to-archive-enterprise-number-data"></a>Enterprise Sayı verilerini arşivleye bir bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kısa Mesajlaşma Hizmeti (SMS) ve Multimedya Mesajlaşma Hizmeti (MMS) iletilerini, sohbet iletilerini, sesli arama kayıtlarını ve sesli arama günlüklerini Enterprise Numara Arşivleyicisi'nden içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir TeleMessage bağlayıcısı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun TeleMessage hesabına bağlanır ve TeleMessage Enterprise Numara Arşivleyicisi'ni kullanarak çalışanların mobil iletişim verilerini Microsoft 365'deki posta kutularına aktarır.
 

@@ -1,5 +1,5 @@
 ---
-title: Gönderileri yönetme
+title: Gönderimleri yönetme
 f1.keywords:
 - NOCSH
 ms.author: dansimp
@@ -14,146 +14,145 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: seo-marvel-apr2020
-description: Yöneticiler yenidencanlama için şüpheli e-postalar, şüpheli kimlik avı postaları, istenmeyen postalar ve diğer zararlı olabilecek iletiler, URL'ler ve e-posta ekleri göndermek için Microsoft 365 Defender portalında Gönderimler portalını kullanmayı öğrenebilir.
+description: Yöneticiler, Microsoft 365 Defender portalında Gönderiler portalını kullanarak şüpheli e-postalar, şüpheli kimlik avı postaları, istenmeyen postalar ve diğer zararlı olabilecek iletileri, URL'leri ve e-posta eklerini yeniden tarama amacıyla Microsoft'a göndermeyi öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d0d699c3344cc16f3e15996139f1d2d8b608ba50
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: a21c9e6655c01e2d2229e957f79b2342895ac4e4
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64477159"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64971979"
 ---
-# <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Gönderimler portalını kullanarak şüpheli istenmeyen posta, kimlik avı, URL'ler ve dosyaları Microsoft'a gönderme
+# <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Şüpheli istenmeyen postaları, kimlik avı, URL'leri ve dosyaları Microsoft'a göndermek için Gönderimler portalını kullanın
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 
+Exchange Online posta kutusu olan Microsoft 365 kuruluşlarda, yöneticiler Microsoft 365 Defender portalındaki Gönderimler portalını kullanarak e-posta iletilerini, URL'leri ve ekleri tarama için Microsoft'a gönderebilir.
 
-Microsoft 365 posta kutuları Exchange Online kuruluşlarda, yöneticiler tarama yapmak üzere Microsoft'a e-posta iletileri, URL'ler ve ekleri göndermek için Microsoft 365 Defender portalında Gönderiler portalını kullanabilirler.
+Analiz için bir e-posta iletisi gönderdiğinizde şunları alırsınız:
 
-Çözümleme için bir e-posta iletisi gönderdiğinizde şunları alırsınız:
-
-- **E-posta kimlik** doğrulaması denetimi: E-posta kimlik doğrulamasının teslim edilirken geçirip geçiri olmadığıyla ilgili ayrıntılar.
-- **İlke isabetleri**: Hizmet filtresi kararlarını geçersiz kılma yoluyla gelen e-postaya kiracınıza izin etmiş veya bunu engellemış olan tüm ilkeler hakkında bilgiler.
-- **Itibar/detonasyonu yükü**: İletide url'leri ve ekleri içeren güncel bir sorun vardır.
-- **Noter çözümlemesi**: İletilerin kötü amaçlı olup olmadığını onaylamak için insan noterleri tarafından yapılan incelemeleri gözden geçirebilirsiniz.
+- **E-posta kimlik doğrulaması denetimi: E-posta** kimlik doğrulamasının teslim edildiğinde geçirilip geçirilmediğine veya başarısız olmasına ilişkin ayrıntılar.
+- **İlke isabetleri**: Hizmet filtresi kararlarımızı geçersiz kılarak kiracınıza gelen e-postaya izin veren veya engelleyen ilkeler hakkında bilgiler.
+- **Payload reputation/detonation**: İletideki URL'lerin ve eklerin güncel incelemesi.
+- **Not veren analizi**: İletilerin kötü amaçlı olup olmadığını onaylamak için insan not verenler tarafından yapılan gözden geçirme.
 
 > [!IMPORTANT]
-> Tüm kiracılarda itibar/detonasyonu ve notlayıcı çözümlemesi yapılmaz. Verilerin uyumluluk amacıyla kiracı sınırını terkması gerekirken, bilgilerin kuruluş dışından olması engellenir.
+> Payload reputation/detonation ve grader analizi tüm kiracılarda yapılmaz. Verilerin uyumluluk amacıyla kiracı sınırından ayrılması gerekmediğinde bilgilerin kuruluş dışına çıkışı engellenir.
 
-Microsoft'a e-posta iletileri, URL'ler ve ekleri göndermenin diğer yolları için bkz. İletileri [ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).
+E-posta iletilerini, URL'leri ve ekleri Microsoft'a göndermenin diğer yolları için bkz. [İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Başlamadan önce bilmeniz gerekenler
 
-- Microsoft 365 Defender portalını açın<https://security.microsoft.com/>. Doğrudan Gönderiler **sayfasına gitmek için** kullanın <https://security.microsoft.com/reportsubmission>.
+- Microsoft 365 Defender portalını adresinde <https://security.microsoft.com/>açarsınız. Doğrudan **Gönderimler** sayfasına gitmek için kullanın <https://security.microsoft.com/reportsubmission>.
 
-- Microsoft'a ileti ve dosya göndermek için, aşağıdaki rollerden biri gerekir:
-  - **Güvenlik Yöneticisi** veya **Güvenlik Okuyucusu'Microsoft 365 Defender** [seçin](permissions-microsoft-365-security-center.md).
-  
-    Bu makalenin devamlarında açıklandığı gibi, özel posta kutusuna kullanıcı gönderimlerini görüntüleme için [bu](#view-user-submissions-to-microsoft) rollerden birinin gerekli olduğunu unutmayın.
+- Microsoft'a ileti ve dosya göndermek için aşağıdaki rollerden birine sahip olmanız gerekir:
+  - [Microsoft 365 Defender portalında](permissions-microsoft-365-security-center.md) **Güvenlik Yöneticisi** veya **Güvenlik Okuyucusu**.
 
-- Yöneticiler, posta kutusunda hala kullanılabilir ve kullanıcı veya başka bir yönetici tarafından temizlen iletileri yine sağlanacaksa, 30 günlük olarak gönderebilirsiniz.
+    Bu rollerden birinin, bu makalenin sonraki bölümlerinde açıklandığı gibi [özel posta kutusuna kullanıcı gönderimlerini görüntülemek için](#view-user-submissions-to-microsoft) gerekli olduğunu unutmayın.
 
-- Yönetici gönderimleri aşağıdaki fiyatlarda kısıtlandı:
-  - Herhangi 15 dakika içerisinde en fazla gönderim: 150 gönderi
-  - 24 saat içerisinde aynı gönderiler: 3 gönderi
-  - 15 dakikalık bir dönemde aynı gönderiler: 1 gönderi
-  
-- Kullanıcıların Microsoft'a ileti ve dosya gönderme hakkında daha fazla bilgi için bkz [. İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).
+- Posta kutusunda hala kullanılabiliyorsa ve kullanıcı veya başka bir yönetici tarafından temizlenmediyse, yöneticiler 30 gün kadar eski iletiler gönderebilir.
+
+- Yönetici gönderimleri aşağıdaki fiyatlarla kısıtlanır:
+  - Herhangi bir 15 dakika içinde en fazla gönderim: 150 gönderim
+  - 24 saatlik bir süre içinde aynı gönderimler: 3 gönderim
+  - 15 dakikalık bir süre içinde aynı gönderimler: 1 gönderim
+
+- Kullanıcıların iletileri ve dosyaları Microsoft'a nasıl gönderebileceği hakkında daha fazla bilgi için bkz. [İletileri ve dosyaları Microsoft'a bildirme](report-junk-email-messages-to-microsoft.md).
 
 ## <a name="report-suspicious-content-to-microsoft"></a>Şüpheli içeriği Microsoft'a bildirme
 
-1. Microsoft 365 Defender portalında, <https://security.microsoft.com>Eylemler ve **Gönderiler'de** **Gönderiler &** \> **gidin**. Doğrudan Gönderiler **sayfasına gitmek için** kullanın <https://security.microsoft.com/reportsubmission>.
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**Eylemler & Gönderimler sayfasındaki Gönderimler** \> **sayfasına gidin**. Doğrudan **Gönderimler** sayfasına gitmek için kullanın <https://security.microsoft.com/reportsubmission>.
 
-2. Gönderiler **sayfasında**, rapor etmek istediğiniz içeriğin türüne göre  E-posta veya E-posta ekleri veya **URL'ler** ![sekmesinin seçili olduğunu doğrulayın ve ardından çözümleme simgesi için Microsoft'a Gönder'e tıklayın.](../../media/m365-cc-sc-create-icon.png) **Çözümleme için Microsoft'a gönderin**.
+2. **Gönderimler** sayfasında, raporlamak istediğiniz içerik türüne göre **E-postalar** veya **E-posta ekleri** veya **URL'ler** sekmesinin seçili olduğunu doğrulayın ve analiz için Microsoft'a gönder simgesine tıklayın![.](../../media/m365-cc-sc-create-icon.png) **Analiz için Microsoft'a gönderin**.
 
-3. Aşağıdaki bölümlerde **açıklandığı gibi** ilgili içerik türünü (e-posta, URL veya e-posta eki) göndermek üzere görüntülenen çözümleme açılır için Microsoft'a Gönder açılır eklentisini kullanın.
+3. Aşağıdaki bölümlerde açıklandığı gibi ilgili içerik türünü (e-posta, URL veya e-posta eki) göndermek **için görünen Analiz için Microsoft'a gönder** açılır penceresini kullanın.
 
    > [!NOTE]
-   > Dosya ve URL gönderimleri bulutlarda kullanılamaz ve verilerin ortamdan ayrılmasına izin vermez. Dosya veya URL'yi seçme özelliği gri olur.
+   > Verilerin ortamdan ayrılmasına izin verilmeyen bulutlarda dosya ve URL gönderimleri kullanılamaz. Dosya veya URL'yi seçme özelliği gri görünür.
 
-### <a name="notify-users-from-within-the-portal"></a>Kullanıcıları portalın içinde bilgilendirin
+### <a name="notify-users-from-within-the-portal"></a>Portaldan kullanıcılara bildirme
 
-1. Microsoft 365 Defender portalında, E-posta <https://security.microsoft.com>ve **işbirliği** Gönderileri'nin **Gönderiler &** \> **gidin**. Doğrudan Gönderiler **sayfasına gitmek için** kullanın <https://security.microsoft.com/reportsubmission>.
+1. konumundaki Microsoft 365 Defender portalında<https://security.microsoft.com>**, E-posta & işbirliği** \> **Gönderimleri sayfasındaki Gönderimler** **sayfasına gidin**. Doğrudan **Gönderimler** sayfasına gitmek için kullanın <https://security.microsoft.com/reportsubmission>.
 
-2. Gönderiler **sayfasında** Kullanıcı tarafından **bildirilen iletiler sekmesine** tıklayın, ardından işaretlemek ve bildirmek istediğiniz iletiyi seçin.
+2. **Gönderimler** sayfasında **, Kullanıcı tarafından bildirilen iletiler** sekmesini ve ardından işaretlemek ve bildirmek istediğiniz iletiyi seçin.
 
-3. Farklı işaretle **ve bildir açılan liste'yi** seçin ve ardından Tehdit bulunamadı Kimlik avı **veya Gereksiz** \> **öğesini** **seçin**.
+3. **Farklı işaretle ve bildir** açılan listesini seçin ve ardından **Tehdit bulunamadı** \> **Kimlik Avı** veya **Gereksiz'i** seçin.
 
-   :::image type="content" source="../../media/unified-submission-user-reported-message.png" alt-text="Gönderiler sayfası" lightbox="../../media/unified-submission-user-reported-message.png":::
+   :::image type="content" source="../../media/unified-submission-user-reported-message.png" alt-text="Gönderimler sayfası" lightbox="../../media/unified-submission-user-reported-message.png":::
 
-Bildirilen ileti, hatalı pozitif veya hatalı negatif olarak işaretlenir. Portal içerisinden iletiyi bildiren kullanıcıya otomatik olarak bir e-posta bildirimi gönderilir.
+Bildirilen ileti hatalı pozitif veya hatalı negatif olarak işaretlenir. Portalın içinden iletiyi bildiren kullanıcıya otomatik olarak bir e-posta bildirimi gönderilir.
 
-### <a name="submit-a-questionable-email-to-microsoft"></a>Microsoft'a şüpheli bir e-posta gönderme
+### <a name="submit-a-questionable-email-to-microsoft"></a>Microsoft'a sorgulanabilir bir e-posta gönderme
 
-1. Gönderim **türünü seçin kutusunda**, açılan listede E-posta'nın seçili olduğunu doğrulayın.
+1. **Gönderim türünü seçin** kutusunda, açılan listede **E-posta'nın** seçili olduğunu doğrulayın.
 
-2. Ağ **iletisi kimliğini ekleme veya e-posta dosyasını karşıya yükleme** bölümünde, aşağıdaki seçeneklerden birini kullanın:
-   - **E-posta** ağ iletisi kimliğini ekleyin: Bu, iletide veya karantinaya alınan iletilerde **X-MS-Exchange-Organization-Network-Message-Id** üst bilgisinde veya **X-MS-Office365-Filtering-Correlation-Id** üst bilgisinde kullanılabilen bir GUID değeridir.
-   - **Upload-posta dosyasını (.msg veya .eml) tıklatın**: Dosyalara **gözat'a tıklayın**. Açılan iletişim kutusunda .eml veya .msg dosyasını bulup seçin ve aç'a **tıklayın**.
+2. **Ağ iletisi kimliğini ekleyin veya e-posta dosyasını karşıya yükleyin** bölümünde aşağıdaki seçeneklerden birini kullanın:
+   - **E-posta ağ iletisi kimliğini ekleyin**: Bu, karantinaya alınan iletilerde **X-MS-Exchange-Organization-Network-Message-Id** üst bilgisinde veya **X-MS-Office365-Filtering-Correlation-Id** üst bilgisinde bulunan bir GUID değeridir.
+   - **E-posta dosyasını (.msg veya .eml) Upload**: **Dosyalara gözat'a** tıklayın. Açılan iletişim kutusunda .eml veya .msg dosyasını bulup seçin ve **aç'a** tıklayın.
 
-3. Sorunu **olan bir alıcı seçin kutusunda** , ilke denetimi çalıştırmak istediğiniz alıcıyı belirtin. İlke denetimi, kullanıcı veya kuruluş ilkeleri nedeniyle e-postanın taramayı atlayarak atlayarak belirleme.
+3. **Sorun yaşayan bir alıcı seçin** kutusunda, ilke denetimini çalıştırmak istediğiniz alıcıyı belirtin. İlke denetimi, e-postanın kullanıcı veya kuruluş ilkeleri nedeniyle taramayı atlayıp atlamadığını belirler.
 
-4. **Microsoft'a gönderme nedenini seçin bölümünde**, aşağıdaki seçeneklerden birini belirleyin:
-   - **Engellenmiş olmalı (Hatalı pozitif)**
-   - **Engellenmiş olmalı (** Yanlış negatif): E-posta görünen  bölüm olarak kategorilere ayrılmış olmalı bölümünde, aşağıdaki değerlerden birini seçin (emin değilsanız, en iyi kararlarınızı kullanın):
-     - **Kimlik avı**
-     - **Kötü amaçlı yazılım**
-     - **İstenmeyen posta**
+4. **Microsoft'a göndermek için bir neden seçin** bölümünde aşağıdaki seçeneklerden birini belirleyin:
+   - **Engellenmemesi gerekir (Hatalı pozitif)**
+   - **Engellenmiş olmalıdır (Hatalı negatif)**: **E-posta görüntülenen olarak kategorilere ayrılmış olmalıdır** bölümünde aşağıdaki değerlerden birini seçin (emin değilseniz en iyi kararınızı kullanın):
+     - **Phish**
+     - **Malware**
+     - **Spam**
 
-5. Bitirdikten sonra Gönder'e **tıklayın**.
+5. İşiniz bittiğinde **Gönder'e** tıklayın.
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="../../media/submission-flyout-email.png" alt-text="Yeni URL gönderme işlemi" lightbox="../../media/submission-flyout-email.png":::
 
-### <a name="send-a-suspect-url-to-microsoft"></a>Şüpheli bir URL'yi Microsoft'a gönderme
+### <a name="send-a-suspect-url-to-microsoft"></a>Şüpheli URL'yi Microsoft'a gönderme
 
-1. Gönderim **türünü seçin kutusunda** , açılan **listeden URL'yi** seçin.
+1. **Gönderim türünü seçin** kutusunda açılan listeden **URL'yi** seçin.
 
 2. Görüntülenen **URL** kutusuna tam URL'yi girin (örneğin, `https://www.fabrikam.com/marketing.html`).
 
-3. **Microsoft'a gönderme nedenini seçin bölümünde**, aşağıdaki seçeneklerden birini belirleyin:
-   - **Engellenmiş olmalı (Hatalı pozitif)**
-   - **Engellenmiş olmalıdır (** Yanlış negatif): Bu **URL** görünen bölüm olarak kategorilere ayrılmış olmalıdır, aşağıdaki değerlerden birini seçin (emin değilsanız, en iyi kararlarınızı kullanın):
-     - **Kimlik avı**
-     - **Kötü amaçlı yazılım**
+3. **Microsoft'a göndermek için bir neden seçin** bölümünde aşağıdaki seçeneklerden birini belirleyin:
+   - **Engellenmemesi gerekir (Hatalı pozitif)**
+   - **Engellenmiş olmalıdır (Hatalı negatif)**: **Bu URL görüntülenen bölüm olarak kategorilere ayrılmış olmalıdır** bölümünde aşağıdaki değerlerden birini seçin (emin değilseniz en iyi kararınızı kullanın):
+     - **Phish**
+     - **Malware**
 
-4. Bitirdikten sonra Gönder'e **tıklayın**.
+4. İşiniz bittiğinde **Gönder'e** tıklayın.
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="../../media/submission-url-flyout.png" alt-text="Yeni E-posta gönderme işlemi" lightbox="../../media/submission-url-flyout.png":::
 
-### <a name="submit-a-suspected-email-attachment-to-microsoft"></a>Şüpheli bir e-posta eklerini Microsoft'a gönderme
+### <a name="submit-a-suspected-email-attachment-to-microsoft"></a>Şüpheli e-posta eklerini Microsoft'a gönderme
 
-1. Gönderim türünü **seçin kutusunda,** açılan listeden Eki **e-posta** ile gönder'i seçin.
+1. **Gönderim türünü seçin** kutusunda açılan listeden **E-posta eki'ni** seçin.
 
-2. Görüntülenen Dosya **bölümünde** Dosyalara **gözat'a tıklayın**. Açılan iletişim kutusunda dosyayı bulup seçin ve Aç'a **tıklayın**.
+2. Görüntülenen **Dosya** bölümünde **Dosyalara gözat'a** tıklayın. Açılan iletişim kutusunda dosyayı bulun ve seçin ve **aç'a** tıklayın.
 
-3. **Microsoft'a gönderme nedenini seçin bölümünde**, aşağıdaki seçeneklerden birini belirleyin:
-   - **Engellenmiş olmalı (Hatalı pozitif)**
-   - **Engellenmiş olmalı (** Yanlış negatif): Bu dosya görünen bölüm  olarak kategorilere ayrılmış olmalı bölümünde, aşağıdaki değerlerden birini seçin (emin değilsanız, en iyi kararlarınızı kullanın):
-     - **Kimlik avı**
-     - **Kötü amaçlı yazılım**
+3. **Microsoft'a göndermek için bir neden seçin** bölümünde aşağıdaki seçeneklerden birini belirleyin:
+   - **Engellenmemesi gerekir (Hatalı pozitif)**
+   - **Engellenmiş olmalıdır (Hatalı negatif)**: **Bu dosya görüntülenen bölüm olarak kategorilere ayrılmış olmalıdır** bölümünde aşağıdaki değerlerden birini seçin (emin değilseniz en iyi kararınızı kullanın):
+     - **Phish**
+     - **Malware**
 
-4. Bitirdikten sonra Gönder'e **tıklayın**.
+4. İşiniz bittiğinde **Gönder'e** tıklayın.
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="../../media/submission-file-flyout.png" alt-text="Yeni Ek gönderme işlemi" lightbox="../../media/submission-file-flyout.png":::
 
 > [!NOTE]
-> Kötü amaçlı yazılım filtrelemesi ileti eklerini Kötü Amaçlı Yazılım Uyarısı Text.txt dosyasıyla değiştirirse, özgün iletiyi özgün ekleri içeren karantinadan göndermeniz gerekir. İletileri karantinaya almak ve kötü amaçlı yazılım hatalı pozitif sonuçlarla serbest bırakmak hakkında daha fazla bilgi için bkz. Karantinaya alınmış [iletileri ve dosyaları yönetici olarak yönetme](manage-quarantined-messages-and-files.md).
+> Kötü amaçlı yazılım filtreleme, ileti eklerini Kötü Amaçlı Yazılım Uyarısı Text.txt dosyasıyla değiştirdiyse, özgün ekleri içeren özgün iletiyi karantinadan göndermeniz gerekir. Karantinaya alma ve kötü amaçlı yazılım hatalı pozitifleri içeren iletilerin nasıl serbest bırakıldığı hakkında daha fazla bilgi için bkz. [Karantinaya alınan iletileri ve dosyaları yönetici olarak yönetme](manage-quarantined-messages-and-files.md).
 
-## <a name="view-admin-submissions-to-microsoft"></a>Microsoft'a yapılan yönetici gönderimlerini görüntüleme
+## <a name="view-admin-submissions-to-microsoft"></a>Microsoft'a yönetici gönderimlerini görüntüleme
 
-1. Microsoft 365 Defender portalında, <https://security.microsoft.com>Eylemler ve **Gönderiler'de** **Gönderiler &** \> **gidin**. Doğrudan Gönderiler **sayfasına gitmek için** kullanın <https://security.microsoft.com/reportsubmission>.
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**Eylemler & Gönderimler sayfasındaki Gönderimler** \> **sayfasına gidin**. Doğrudan **Gönderimler** sayfasına gitmek için kullanın <https://security.microsoft.com/reportsubmission>.
 
-2. Gönderiler **sayfasında**, E-postalar, **URL** **veya E-posta** eki **sekmesinin seçili** olduğunu doğrulayın.
+2. **Gönderimler** sayfasında **E-postalar**, **URL** veya **E-posta eki** sekmesinin seçili olduğunu doğrulayın.
 
-   - Kullanılabilir bir sütun başlığına tıklayarak girişleri sıraabilirsiniz. En **çok yedi sütun** göstermek için Sütunları özelleştir'e tıklayın. Varsayılan değerler yıldız işaretiyle () işaretlenir<sup>\*</sup>:
+   - Kullanılabilir bir sütun üst bilgisine tıklayarak girişleri sıralayabilirsiniz. En fazla yedi sütunu göstermek için **Sütunları özelleştir'e** tıklayın. Varsayılan değerler yıldız işaretiyle (<sup>\*</sup>):
      - **Gönderim adı**<sup>\*</sup>
      - **Gönderen**<sup>\*</sup>
      - **Alıcı**
@@ -164,40 +163,40 @@ Bildirilen ileti, hatalı pozitif veya hatalı negatif olarak işaretlenir. Port
      - **Filtre kararı**
      - **Teslim/Engelleme nedeni**
      - **Gönderim Kimliği**
-     - **Ağ İleti Kimliği/Nesne Kimliği**
+     - **Ağ İletisi Kimliği/Nesne Kimliği**
      - **Yön**
-     - **Gönderen IP'si**
+     - **Gönderen IP'i**
      - **Toplu uyumlu düzey (BCL)**
      - **Hedef**
      - **İlke eylemi**
-     - **Gönderilen**
+     - **Gönderen**
      - **Kimlik avı benzetimi**
      - **Etiketler**<sup>\*</sup>
      - **İzin ver**
 
-     Bitirdikten sonra Uygula'ya **tıklayın**.
+     İşiniz bittiğinde **Uygula'ya** tıklayın.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/admin-submission-customize-columns.png" alt-text="Yönetici gönderileri için Yeni Özelleştir sütun seçenekleri" lightbox="../../media/admin-submission-customize-columns.png":::
+     > :::image type="content" source="../../media/admin-submission-customize-columns.png" alt-text="Yönetici gönderimleri için Yeni Özelleştir sütun seçenekleri" lightbox="../../media/admin-submission-customize-columns.png":::
 
-   - Girdileri filtrelemek için Filtre'ye **tıklayın**. Kullanılabilir filtreler:
-     - **Gönderilme tarihi**: **Başlangıç tarihi ve** **Bitiş tarihi**.
-     - **Gönderim Kimliği**: Her gönderiye atanan GUID değeri.
+   - Girişleri filtrelemek için **Filtre'ye** tıklayın. Kullanılabilir filtreler şunlardır:
+     - **Gönderilme tarihi**: **Başlangıç tarihi** ve **Bitiş tarihi**.
+     - **Gönderme Kimliği**: Her gönderime atanan bir GUID değeri.
      - **Ağ İletisi Kimliği**
      - **Gönderen**
      - **Alıcı**
      - **Ad**
-     - **Gönderilen**
+     - **Gönderen**
      - **Gönderme nedeni**
      - **Durum**
      - **Etiketler**
 
-     Bitirdikten sonra Uygula'ya **tıklayın**.
+     İşiniz bittiğinde **Uygula'ya** tıklayın.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/admin-submission-filters.png" alt-text="Yönetici gönderileri için Yeni Filtre seçenekleri" lightbox="../../media/admin-submission-filters.png":::
+     > :::image type="content" source="../../media/admin-submission-filters.png" alt-text="Yönetici gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/admin-submission-filters.png":::
 
-   - Girdileri gruplay etmek için **, Grup'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
+   - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
      - **Yok**
      - **Tür**
      - **Neden**
@@ -205,97 +204,97 @@ Bildirilen ileti, hatalı pozitif veya hatalı negatif olarak işaretlenir. Port
      - **Sonuç**
      - **Etiketler**
 
-   - Girdileri dışarı aktarma için Dışarı Aktar'a **tıklayın**. Görüntülenen iletişim kutusunda, dosyanın .csv kaydedin.
+   - Girdileri dışarı aktarmak için **Dışarı Aktar'a** tıklayın. Görüntülenen iletişim kutusunda .csv dosyasını kaydedin.
 
 ### <a name="admin-submission-result-details"></a>Yönetici gönderimi sonuç ayrıntıları
 
-Yönetici gönderimleri içinde gönderilen iletiler gözden geçir gösterilir ve gönderilerin ayrıntı uç iletisinde sonuçları gösterilir:
+Yönetici gönderimlerinde gönderilen iletiler gözden geçirilir ve sonuçlar gönderim ayrıntıları açılır öğesinde gösterilir:
 
 - Teslim sırasında gönderenin e-posta kimlik doğrulamasında hata olup olmadığı.
 - İletiyle ilgili kararı etkilemiş veya geçersiz kılmış olabilecek bir ilke eşleşmesi hakkında bilgi.
 - İletide yer alan URL’lerin veya dosyaların kötü amaçlı olup olmadığını görmek için geçerli etkisizleştirme sonuçları.
-- Noterlerin geri bildirimi.
+- Not verenlerden geri bildirim.
 
-Geçersiz kılma bulunursa, sonuç birkaç dakika içinde kullanılabilir olur. E-posta kimlik doğrulaması veya teslimte sorun yoksa ve teslim geçersiz kılmadan etkilenmezse, noterlerin geri bildirimleri bir gün kadar zaman alsa bile.
+Geçersiz kılma bulunduysa, sonucun birkaç dakika içinde kullanılabilir olması gerekir. E-posta kimlik doğrulamasında bir sorun yoksa veya teslim bir geçersiz kılmadan etkilenmediyse, not verenlerin geri bildirimleri bir gün kadar sürebilir.
 
 ## <a name="view-user-submissions-to-microsoft"></a>Microsoft'a kullanıcı gönderimlerini görüntüleme
 
-Rapor İletisi eklentisinde [, Rapor](enable-the-report-message-add-in.md) Kimlik Avında Rapor eklentisinde veya [](enable-the-report-phish-add-in.md)kullanıcılar [Web üzerinde Outlook'te](report-junk-email-and-phishing-scams-in-outlook-on-the-web-eop.md) yerleşik raporlamayı kullanıyorsa, Kullanıcı tarafından bildirilen ileti sekmesinde kullanıcıların nelerin rapor **yaptığını görebilirsiniz.**
+[Rapor İletisi eklentisini](enable-the-report-message-add-in.md), [Rapor Kimlik Avı eklentisini](enable-the-report-phish-add-in.md) dağıttıysanız veya kişiler [Web üzerinde Outlook'da yerleşik raporlamayı](report-junk-email-and-phishing-scams-in-outlook-on-the-web-eop.md) kullanıyorsa, **kullanıcının bildirdiği ileti** sekmesinde kullanıcıların ne bildirdiğini görebilirsiniz.
 
-1. Microsoft 365 Defender portalında, <https://security.microsoft.com>Eylemler ve **Gönderiler'de** **Gönderiler &** \> **gidin**. Doğrudan Gönderiler **sayfasına gitmek için** kullanın <https://security.microsoft.com/reportsubmission>.
+1. konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**Eylemler & Gönderimler sayfasındaki Gönderimler** \> **sayfasına gidin**. Doğrudan **Gönderimler** sayfasına gitmek için kullanın <https://security.microsoft.com/reportsubmission>.
 
-2. Gönderiler **sayfasında** Kullanıcı tarafından bildirilen **iletiler sekmesini** seçin.
+2. **Gönderimler** sayfasında **Kullanıcı tarafından bildirilen iletiler** sekmesini seçin.
 
-   - Kullanılabilir bir sütun başlığına tıklayarak girişleri sıraabilirsiniz. Seçenekleri **göstermek için Sütunları** özelleştir'e tıklayın. Varsayılan değerler yıldız işaretiyle () işaretlenir<sup>\*</sup>:
+   - Kullanılabilir bir sütun üst bilgisine tıklayarak girişleri sıralayabilirsiniz. Seçenekleri göstermek için **Sütunları özelleştir'e** tıklayın. Varsayılan değerler yıldız işaretiyle (<sup>\*</sup>):
 
      - **E-posta konusu**<sup>\*</sup>
-     - **Rapor**<sup>\*</sup>
+     - **Rapor eden**<sup>\*</sup>
      - **Bildirilen tarih**<sup>\*</sup>
      - **Gönderen**<sup>\*</sup>
      - **Bildirilen neden**<sup>\*</sup>
      - **Sonuç**<sup>\*</sup>
      - **İleti bildirilen kimlik**
      - **Ağ İletisi Kimliği**
-     - **Gönderen IP'si**
-     - **Raporlandığı yer**
+     - **Gönderen IP'i**
+     - **Bildirilen kaynak**
      - **Kimlik avı benzetimi**
-     - **Yönetici gönderime dönüştürülen**
+     - **Yönetici gönderimine dönüştürüldü**
      - **Etiketler**<sup>\*</sup>
-     - **Farklı işaretlenmiş**<sup>\*</sup>
+     - **olarak işaretlendi**<sup>\*</sup>
      - **İşaretlenen**
      - **İşaretlenen tarih**
 
-     Bitirdikten sonra Uygula'ya **tıklayın**.
+     İşiniz bittiğinde **Uygula'ya** tıklayın.
 
-   - Girdileri filtrelemek için Filtre'ye **tıklayın**. Kullanılabilir filtreler:
+   - Girişleri filtrelemek için **Filtre'ye** tıklayın. Kullanılabilir filtreler şunlardır:
      - **Bildirilen tarih**: **Başlangıç tarihi** ve **Bitiş tarihi**.
-     - **Rapor**
+     - **Rapor eden**
      - **E-posta konusu**
      - **İleti bildirilen kimlik**
      - **Ağ İletisi Kimliği**
      - **Gönderen**
-     - **Bildirilen neden**: **Gereksiz**, Kimlik **avı veya İstenmeyen** **posta değil**
-     - **Şu kişi** tarafından bildirildi: **Microsoft eklenti** **veya Üçüncü taraf eklenti**
+     - **Bildirilen neden**: **Gereksiz**, **Kimlik Avı** veya **İstenmeyen Posta** değil
+     - **Bildirilen kaynak**: **Microsoft eklentisi** veya **Üçüncü taraf eklentisi**
      - **Kimlik avı benzetimi**: **Evet** veya **Hayır**
-     - **Yönetici gönderime dönüştürülen**: **Evet** veya **Hayır**
+     - **Yönetici gönderimine dönüştürüldü**: **Evet** veya **Hayır**
      - **Etiketler**
 
-     Bitirdikten sonra Uygula'ya **tıklayın**.
+     İşiniz bittiğinde **Uygula'ya** tıklayın.
 
      > [!div class="mx-imgBorder"]
      > :::image type="content" source="../../media/admin-submission-reported-messages.png" alt-text="Kullanıcı gönderimleri için Yeni Filtre seçenekleri" lightbox="../../media/admin-submission-reported-messages.png":::
 
-   - Girdileri gruplay etmek için **, Grup'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
+   - Girişleri gruplandırmak için **Gruplandır'a** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
      - **Yok**
      - **Neden**
      - **Gönderen**
-     - **Rapor**
+     - **Rapor eden**
      - **Sonuç**
-     - **Raporlandığı yer**
+     - **Bildirilen kaynak**
      - **Kimlik avı benzetimi**
-     - **Yönetici gönderime dönüştürülen**
+     - **Yönetici gönderimine dönüştürüldü**
      - **Etiketler**
-   
-   - Girdileri dışarı aktarma için Dışarı Aktar'a **tıklayın**. Görüntülenen iletişim kutusunda, dosyanın .csv kaydedin.
+
+   - Girdileri dışarı aktarmak için **Dışarı Aktar'a** tıklayın. Görüntülenen iletişim kutusunda .csv dosyasını kaydedin.
 
 > [!NOTE]
-> Kuruluşlar kullanıcıya bildirilen iletileri yalnızca özel posta kutusuna gönderecek şekilde yapılandırılmışsa, bildirilen iletiler yeniden gönderme için gönderilmez ve **Kullanıcı** tarafından bildirilen ileti sonuçları her zaman boş olur.
+> Kuruluşlar kullanıcı tarafından bildirilen iletileri yalnızca özel posta kutusuna gönderecek şekilde yapılandırılmışsa, bildirilen iletiler yeniden tarama için gönderilmez ve **Kullanıcı tarafından bildirilen iletiler** içindeki sonuçlar her zaman boş olur.
 
 ### <a name="undo-user-submissions"></a>Kullanıcı gönderimlerini geri alma
 
-Kullanıcı özel posta kutusuna şüpheli bir e-posta gönderdi mi, kullanıcı ve yöneticinin gönderiyi geri alma seçeneği yoktur. Kullanıcı e-postayı kurtarmak isterse, Silinmiş Öğeler veya Gereksiz E-posta klasörlerini kullanarak kurtarılabilir.
+Kullanıcı özel posta kutusuna şüpheli bir e-posta gönderdikten sonra, kullanıcı ve yöneticinin gönderimi geri alma seçeneği yoktur. Kullanıcı e-postayı kurtarmak isterse, Silinmiş Öğeler veya Gereksiz E-posta klasörlerinde kurtarma için kullanılabilir.
 
-### <a name="converting-user-reported-messages-from-the-custom-mailbox-into-an-admin-submission"></a>Kullanıcı, özel posta kutusundan yönetici gönderisine ileti bildirdi 
+### <a name="converting-user-reported-messages-from-the-custom-mailbox-into-an-admin-submission"></a>Kullanıcı tarafından bildirilen iletileri özel posta kutusundan yönetici gönderimine dönüştürme
 
-Özel posta kutusunu, kullanıcı tarafından bildirilen iletileri Microsoft'a göndermeden kesişim noktası olarak yapılandırdısanız, çözümleme için belirli iletileri bulabilir ve Microsoft'a gönderebilirsiniz.
+Özel posta kutusunu, iletileri Microsoft'a göndermeden kullanıcı tarafından bildirilen iletileri kesecek şekilde yapılandırdıysanız, analiz için belirli iletileri bulabilir ve Microsoft'a gönderebilirsiniz.
 
-Kullanıcı tarafından **bildirilen iletiler** sekmesinde, listeden bir ileti seçin, çözümleme için **Microsoft'a** Gönder'e tıklayın ve sonra açılan listeden aşağıdaki değerlerden birini seçin:
+**Kullanıcı tarafından bildirilen iletiler** sekmesinde listeden bir ileti seçin, **analiz için Microsoft'a gönder'e** tıklayın ve açılan listeden aşağıdaki değerlerden birini seçin:
 
 - **Rapor temizleme**
-- **Kimlik avını bildirme**
-- **Kötü amaçlı yazılım bildir**
-- **İstenmeyen posta bildir**
-- **Tetik araştırma**
+- **Kimlik avı bildirme**
+- **Kötü amaçlı yazılımları bildirme**
+- **İstenmeyen posta bildirme**
+- **Araştırmayı tetikleme**
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="../../media/admin-submission-main-action-button.png" alt-text="Eylem düğmesi üzerinde Yeni seçenekler" lightbox="../../media/admin-submission-main-action-button.png":::
+> :::image type="content" source="../../media/admin-submission-main-action-button.png" alt-text="Eylem düğmesindeki Yeni seçenekler" lightbox="../../media/admin-submission-main-action-button.png":::

@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: BlackBerry verilerini Microsoft 365 içeri aktarmak ve arşivlemek için 17a-4 BlackBerry DataParser bağlayıcısı ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: c0818b1a9d7d16debbeb2be799d4a8717ada6f74
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: b75d91db9458a31156e9508cc2ddb8cc0da46076
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941027"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995810"
 ---
 # <a name="set-up-a-connector-to-archive-blackberry-data"></a>BlackBerry verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 BlackBerry kurumsal verilerini Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için 17a-4 LLC'deki BlackBerry [DataParser'ı](https://www.17a-4.com/BlackBerry-dataparser/) kullanın. DataParser, üçüncü taraf veri kaynağındaki öğeleri yakalamak ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir BlackBerry bağlayıcısı içerir. BlackBerry DataParser bağlayıcısı, BlackBerry verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
 

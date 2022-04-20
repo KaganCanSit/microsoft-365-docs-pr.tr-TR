@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Mobil iletişim verilerini içeri aktarmak ve arşivlemek için CellTrust SL2 veri bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: 286546950c29732e1d33738ffbe7a74f2f6dcca2
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: a4cbfc9dccd2541de0a9dca1a3791d5f213aa73d
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940697"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996404"
 ---
 # <a name="archive-data-from-celltrust-sl2-to-microsoft-365"></a>CellTrust SL2'den Microsoft 365 verileri arşivle
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 CellTrust SL2 mobil iletişim verilerini yakalar ve FINRA, HIPAA, FOIA ve TCPA gibi düzenlemelere yönelik elektronik keşif gereksinimlerini karşılamak için önde gelen arşivleme teknolojileriyle tümleşir. SL2 Veri Bağlayıcısı mobil iletişim öğelerini Microsoft 365 aktarır. Bu makalede, arşivleme için CellTrust SL2 Veri Bağlayıcısı'nı kullanarak SL2'yi Microsoft 365 ile tümleştirme işlemi açıklanmaktadır. Bu işlemi tamamladığınızda CellTrust SL2 hizmetine abone olduğunuz ve SL2 mimarisi hakkında bilgi sahibi olduğunuz varsayılır. CellTrust SL2 hakkında bilgi için bkz <https://www.celltrust.com>. .
 

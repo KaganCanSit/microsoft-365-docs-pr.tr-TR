@@ -17,14 +17,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Salesforce Chatter, Yahoo Messenger veya Yammer gibi veri kaynaklarından üçüncü taraf verileri içeri aktarmak için özel bağlayıcı ayarlamayı öğrenin.
-ms.openlocfilehash: 72159d88cdeb8c573f1a71342ca7cbd015099568
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: eb557f43b97f343c45a7eaf21268ac6218d2e1c0
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944513"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995326"
 ---
 # <a name="work-with-a-partner-to-archive-third-party-data"></a>Üçüncü taraf verilerini arşivlemek için bir iş ortağıyla çalışma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Üçüncü taraf veri kaynağındaki verileri Microsoft 365 içeri aktarmak ve arşivlemek için bir Microsoft İş Ortağı ile çalışabilirsiniz. İş ortağı, üçüncü taraf veri kaynağından öğeleri ayıklamak (düzenli olarak) ve ardından bu öğeleri içeri aktarmak için yapılandırılmış özel bir bağlayıcı sağlayabilir. İş ortağı bağlayıcısı, bir öğenin içeriğini veri kaynağından e-posta iletisi biçimine dönüştürür ve sonra öğeleri posta kutularında depolar. Üçüncü taraf verileri içeri aktarıldıktan sonra, bu verilere Dava Tutma, eBulma, In-Place Arşivleme, Denetim ve Microsoft 365 bekletme ilkeleri gibi Microsoft Purview özelliklerini uygulayabilirsiniz.
 

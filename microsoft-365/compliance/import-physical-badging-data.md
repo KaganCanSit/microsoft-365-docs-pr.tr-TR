@@ -15,14 +15,16 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: Yöneticiler, kuruluşlarının fiziksel badging sisteminden Microsoft 365 verileri içeri aktarmak için bir veri bağlayıcısı ayarlayabilir. Bu, bu verileri, kuruluşunuz için olası bir iç tehdit oluşturabilecek belirli kullanıcılar tarafından fiziksel binalarınıza erişimi algılamanıza yardımcı olmak için şirket içi risk yönetimi ilkelerinde kullanmanıza olanak tanır.
-ms.openlocfilehash: 7b6161cfc8f712082303641f9da7345edf5e24df
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: a55874b9f920919c16a094d32c4edcde394600d4
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937949"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994886"
 ---
 # <a name="set-up-a-connector-to-import-physical-badging-data-preview"></a>Fiziksel badging verilerini içeri aktarmak için bağlayıcı ayarlama (önizleme)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Çalışanın ham fiziksel erişim olayları veya kuruluşunuzun badging sistemi tarafından oluşturulan fiziksel erişim alarmları gibi fiziksel badging verilerini içeri aktarmak için Microsoft Purview uyumluluk portalında bir veri bağlayıcısı ayarlayabilirsiniz. Fiziksel erişim noktalarına örnek olarak bir bina veya sunucu odası ya da veri merkezine giriş verilebilir. Fiziksel badging verileri, kuruluşunuzun kuruluşunuzdaki kötü amaçlı etkinliklerden veya veri hırsızlığından korunmasına yardımcı olmak için Microsoft 365 [insider risk yönetimi çözümü](insider-risk-management.md) tarafından kullanılabilir.
 

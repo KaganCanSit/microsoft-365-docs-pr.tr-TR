@@ -16,12 +16,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.collection:
 - M365-subscription-management
-ms.openlocfilehash: c66c0c60002b67642a2cf8eb8e1a66dc5db140ff
-ms.sourcegitcommit: a06bb81fbd727a790a8fe6a3746b8a3cf62a6b24
+ms.openlocfilehash: 00ded796cb0fc8878b3eee3f656afac426cd0f35
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64651443"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64974003"
 ---
 # <a name="cross-tenant-mailbox-migration-preview"></a>Kiracılar arası posta kutusu geçişi (önizleme)
 
@@ -644,7 +644,7 @@ Hayır, kiracılar arası posta kutusu geçişinin ardından, geçirilen kullan�
 
       | Name                                             |
       | ------------------------------------------------ |
-      | Advanced eDiscovery Depolama (500 GB)             |
+      | eBulma (Premium) Depolama (500 GB)             |
       | Müşteri Kasası                                 |
       | Veri Kaybı Önleme                             |
       | Exchange Enterprise CAL Hizmetleri (EOP, DLP)      |
@@ -669,7 +669,7 @@ Hayır, kiracılar arası posta kutusu geçişinin ardından, geçirilen kullan�
       | Microsoft Kayıtları                               |
       | Microsoft İş Merkezi                        |
       | Microsoft MyAnalytics (Tam)                     |
-      | Office 365 Gelişmiş eKeşif                    |
+      | Office 365 eBulma (Premium)                   |
       | Office 365 için Microsoft Defender (Plan 1)       |
       | Office 365 için Microsoft Defender (Plan 2)       |
       | Ayrıcalıklı Erişim Yönetimi'ni Office 365          |

@@ -16,14 +16,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview eKeşif'te (Premium) bir gözden geçirme kümesine kaydedilmiş taslak koleksiyonlar ve koleksiyonlar için istatistiklere ve raporlara erişmeyi ve bunları kullanmayı öğrenin.
-ms.openlocfilehash: 12152e0b81df6c61732fda068c593a91578861ee
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 140a6aa2ac0a0ebbff7cf2ab2ee8618cd45cdf07
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940323"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995766"
 ---
 # <a name="collection-statistics-and-reports-in-microsoft-purview-ediscovery-premium"></a>Microsoft Purview eKeşif'te (Premium) toplama istatistikleri ve raporları
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Taslak koleksiyonu oluşturduktan sonra, arama ölçütleriyle eşleşen en çok öğeyi içeren içerik konumları ve arama sorgusu tarafından döndürülen öğe sayısı gibi alınan öğelerle ilgili istatistikleri görüntüleyebilirsiniz. Sonuçların bir alt kümesini de önizleyebilirsiniz.
 

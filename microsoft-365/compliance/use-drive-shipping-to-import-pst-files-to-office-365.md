@@ -19,14 +19,16 @@ search.appverid:
 ms.assetid: 40829b57-793c-4d41-b171-e9270129173d
 ms.custom: seo-marvel-apr2020
 description: Yönetici, PST dosyalarını bir sabit sürücüye kopyalayıp Microsoft'a göndererek PST dosyalarını Microsoft 365 posta kutularına toplu olarak aktarmayı öğrenebilir.
-ms.openlocfilehash: 53022477b034c0620177b00c0c171c8d6c36e250
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: d2255a01c49e3837365735e1c3300b7f6b34c42c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934653"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996030"
 ---
 # <a name="use-drive-shipping-to-import-your-organizations-pst-files"></a>Kuruluşunuzun PST dosyalarını içeri aktarmak için sürücü gönderimini kullanma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **Bu makale yöneticilere yöneliktir. PST dosyalarını kendi posta kutunuza aktarmaya mı çalışıyorsunuz? Bkz [. Outlook .pst dosyasından e-postayı, kişileri ve takvimi içeri aktarma](https://go.microsoft.com/fwlink/p/?LinkID=785075)**
    

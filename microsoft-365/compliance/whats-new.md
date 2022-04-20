@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 description: Uyumluluk merkezine yeni çözümler eklemek, mevcut özellikleri geri bildiriminize göre güncelleştirmek veya yeni ve güncelleştirilmiş belgeler kullanıma sunarken Microsoft 365 sürekli değişen uyumluluk ortamını takip etme konusunda size yardımcı olur. Bu ay neler yaptığımıza bakın.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 5c1e48f1cd9d4a73e703e4d5d93d6d1354d57366
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: b5f231abfbfe943f0b2ab0cf33a14267f0940820
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953727"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972485"
 ---
 # <a name="whats-new-in-microsoft-purview"></a>Microsoft Purview'daki yenilikler
 
@@ -51,7 +51,7 @@ Günümüzün merkezi olmayan, veri açısından zengin çalışma alanının zo
 
 | **Eski Ad** | **Yeni Ad** | **Açıklama** |
 |:----------------|:-------------|:----------------|
-| gelişmiş denetim Microsoft 365 | Microsoft Purview Denetimi (Premium) | Denetim çözümleri, kuruluşların güvenlik olaylarına, adli araştırmalara, iç araştırmalara ve uyumluluk yükümlülüklerine etkili bir şekilde yanıt vermelerine yardımcı olmak için tümleşik bir çözüm sağlar. Daha fazla bilgi için bkz. [Microsoft Purview Gelişmiş Denetimi (Premium)](advanced-audit.md). |
+| gelişmiş denetim Microsoft 365 <br><br> Microsoft 365 Temel Denetimi | Microsoft Purview Denetimi (Premium) <br><br> Microsoft Purview Denetimi (Standart)| Denetim çözümleri, kuruluşların güvenlik olaylarına, adli araştırmalara, iç araştırmalara ve uyumluluk yükümlülüklerine etkili bir şekilde yanıt vermelerine yardımcı olmak için tümleşik bir çözüm sağlar. Daha fazla bilgi için bkz. [Microsoft Purview Gelişmiş Denetim (Premium)](advanced-audit.md) ve [Microsoft Purview Gelişmiş Denetim (Standart)](set-up-basic-audit.md). |
 | Microsoft 365 İletişim Uyumluluğu | Microsoft Purview İletişim Uyumluluğu | İletişim Uyumluluğu, şirket iletişim kanalları ve ilke ihlallerini hızla algılamanıza, yakalamanıza ve düzeltme eylemleri gerçekleştirmenize yardımcı olarak riskleri en aza indirmenize yardımcı olur. Daha fazla bilgi edinmek için bkz. [Microsoft Purview İletişim Uyumluluğu](communication-compliance-solution-overview.md). |
 | Microsoft Uyumluluk Yöneticisi | Microsoft Purview Uyumluluk Yöneticisi | Uyumluluk Yöneticisi, veri koruma risklerinizin envanterini almaktan denetimleri uygulama, düzenlemeler ve sertifikalarla güncel kalma ve denetçilere raporlama gibi karmaşıklıkları yönetmeye kadar uyumluluk yolculuğunuz boyunca size yardımcı olabilir. Daha fazla bilgi için bkz. [Microsoft Purview Uyumluluk Yöneticisi](compliance-manager.md). |
 | müşteri anahtarını Microsoft 365 | Microsoft Purview Müşteri Anahtarı | Müşteri Anahtarı, yetkisiz sistemler veya personel tarafından verilerin görüntülenmesine karşı ek koruma sağlar ve Microsoft veri merkezlerinde BitLocker disk şifrelemesini tamamlar. Daha fazla bilgi için bkz. [Microsoft Purview Müşteri Anahtarı](customer-key-overview.md). |
@@ -65,15 +65,15 @@ Günümüzün merkezi olmayan, veri açısından zengin çalışma alanının zo
 | Office 365 İleti Şifrelemesi | Microsoft Purview İleti Şifrelemesi | İleti Şifreleme ile kuruluşunuz, kuruluşunuzun içindeki ve dışındaki kişiler arasında şifreli e-posta iletileri gönderebilir ve alabilir. Daha fazla bilgi için bkz. [Microsoft Purview İleti Şifrelemesi](ome.md). |
 | Microsoft 365'da Ayrıcalıklı Erişim Yönetimi | Microsoft Purview Privileged Access Management | Privileged Access Management, kuruluşunuzun ihlallere karşı korunmasına yardımcı olur ve hassas verilere veya kritik yapılandırma ayarlarına erişimi sınırlayarak uyumluluk en iyi yöntemlerini karşılamaya yardımcı olur. Daha fazla bilgi için bkz. [Microsoft Purview Privileged Access Management](privileged-access-management-solution-overview.md). |
 | Microsoft veri bağlayıcıları | Microsoft Purview veri bağlayıcıları | Microsoft 365, yöneticilerin Microsoft dışı üçüncü taraf verileri sosyal medya platformlarından, anlık ileti platformlarından ve belge işbirliği platformlarından Microsoft 365 kuruluşunuzdaki posta kutularına aktarmak ve arşivlemek için veri bağlayıcılarını kullanmasına olanak tanır. Daha fazla bilgi için bkz. [Microsoft Purview veri bağlayıcıları](compliance-extensibility.md). |
-| Microsoft 365 Gelişmiş eKeşif | Microsoft Purview eKeşif Premium | Elektronik bulma veya eBulma, yasal davalarda kanıt olarak kullanılabilecek elektronik bilgileri tanımlama ve teslim etme işlemidir. Daha fazla bilgi için bkz. [Microsoft Purview eKeşif Premium](overview-ediscovery-20.md). |
+| Microsoft 365 Gelişmiş eKeşif <br><br> Microsoft 365 Core eKeşif | Microsoft Purview eKeşif (Premium) <br><br> Microsoft Purview eKeşif (Standart) | Elektronik bulma veya eBulma, yasal davalarda kanıt olarak kullanılabilecek elektronik bilgileri tanımlama ve teslim etme işlemidir. Daha fazla bilgi için bkz. [Microsoft Purview eKeşif (Premium)](overview-ediscovery-20.md) ve [Microsoft Purview eKeşif (Standart)](get-started-core-ediscovery.md). |
 | Microsoft 365 uyumluluk merkezi | Microsoft Purview uyumluluk portalı | Microsoft 365 E5 Uyumluluk paketindeki çözümlere ve çözüm kataloğuna erişmek için yönetici portalı. Daha fazla bilgi için bkz. [Microsoft Purview uyumluluk portalı](microsoft-365-compliance-center.md). |
 
 ## <a name="february-2022"></a>Şubat 2022
 
 ### <a name="ediscovery"></a>Ediscovery
 
-- [Advanced eDiscovery'da koruyucu iletişim şablonlarını yönetme](advanced-ediscovery-communications-library.md) - eKeşif yöneticileri artık kuruluştaki herhangi bir Advanced eDiscovery durumda kullanılabilecek koruyucu iletişim şablonları oluşturabilir.
-- [Advanced eDiscovery'da veren memurları yönetme](advanced-ediscovery-issuing-officers.md) - eBulma yöneticileri, kuruluştaki herhangi bir Advanced eDiscovery durumda koruyucu iletişimlere atanabilecek veren memurların listesini ekleyebilir.
+- [eKeşif 'te (Premium) koruyucu iletişim şablonlarını yönetme](advanced-ediscovery-communications-library.md) - eKeşif yöneticileri artık kuruluştaki herhangi bir eBulma (Premium) durumunda kullanılabilecek koruyucu iletişim şablonları oluşturabilir.
+- [eKeşif 'te (Premium) veren memurları yönetme](advanced-ediscovery-issuing-officers.md) - eKeşif yöneticileri, kuruluştaki herhangi bir eBulma (Premium) durumunda koruyucu iletişimlere atanabilecek veren memurların listesini ekleyebilir.
 
 ### <a name="data-lifecycle-management-and-records-management"></a>Veri yaşam döngüsü yönetimi ve kayıt yönetimi
 
@@ -120,7 +120,7 @@ Günümüzün merkezi olmayan, veri açısından zengin çalışma alanının zo
 
 ### <a name="ediscovery"></a>Ediscovery
 
-- [Microsoft Teams içeriği için Advanced eDiscovery iş akışı - Advanced eDiscovery'da](teams-workflow-in-advanced-ediscovery.md#reference-guide) Teams içeriği yönetmek için yeni bir indirilebilir hızlı başvuru kılavuzuyla güncelleştirildi
+- [Microsoft Teams içeriği için eBulma (Premium) iş akışı](teams-workflow-in-advanced-ediscovery.md#reference-guide) - eBulma'da (Premium) Teams içeriği yönetmeye yönelik yeni bir indirilebilir hızlı başvuru kılavuzuyla güncelleştirildi
 
 ### <a name="data-lifecycle-management"></a>Veri yaşam döngüsü yönetimi
 
@@ -152,14 +152,14 @@ Yeni içerik güncelleştirmeleri [Microsoft Purview Uyumluluk Yöneticisi'ndeki
 Cihaz ekleme için aşağıdaki makaleler eklendi:
 
 - [macOS cihazlarının Microsoft 365'e katılımına genel bakış (önizleme)](device-onboarding-macos-overview.md)
-- [Intune (önizleme) kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune.md)
+- [Intune kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma (önizleme)](device-onboarding-offboarding-macos-intune.md)
 - [macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)](device-onboarding-offboarding-macos-intune-mde.md)
 - [JAMF Pro (önizleme) kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-jamfpro.md)
 - [macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)](device-onboarding-offboarding-macos-jamfpro-mde.md)
 
 ### <a name="ediscovery"></a>Ediscovery
 
-- [Yeni servis talebi biçimini Advanced eDiscovery](advanced-ediscovery-new-case-format.md) yeni servis talebi biçimi genel kullanıma sunuldu ve "büyük harf biçiminden" yeniden adlandırıldı
+- [Yeni servis talebi biçimini eBulma (Premium) içinde kullan](advanced-ediscovery-new-case-format.md) Yeni servis talebi biçimi genel kullanıma sunuldu ve "büyük harf biçimi" olarak yeniden adlandırıldı
 
 ### <a name="retention-and-records-management"></a>Bekletme ve kayıt yönetimi
 - Kullanıma sunulma: SharePoint ve OneDrive etiketli öğelerin kullanıcılar tarafından silinip silinemeyeceğini denetleyebilen yeni kayıt yönetimi ayarları. Daha önce, içeriği korumak için yapılandırılmış ve öğeleri kayıt olarak işaretlememiş olan bekletme etiketleri, kullanıcıların OneDrive'da bu eyleme izin verildiğinde SharePoint etiketli içeriği silmesini engelliyordu. Daha fazla bilgi için bkz. [SharePoint ve OneDrive için bekletme nasıl çalışır](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive)?
@@ -206,15 +206,15 @@ Aşağıdaki yeni makaleler eklendi:
 - [Veri Kaybı Önleme ilkesi ipuçları başvurusu](dlp-policy-tips-reference.md) macOS desteği ve gelişmiş sınıflandırma için güncelleştirildi.
 - [macOS cihazlarını Microsoft 365(önizleme) içine ekleme](device-onboarding-macos-overview.md), macOS desteği ve gelişmiş sınıflandırma için güncelleştirildi.
 - Cihaz ekleme için aşağıdaki yeni sayfalar eklendi:
-  - [Intune (önizleme) kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-intune.md)
+  - [Intune kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma (önizleme)](device-onboarding-offboarding-macos-intune.md)
   - [macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için Intune kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)](device-onboarding-offboarding-macos-intune-mde.md)
   - [JAMF Pro (önizleme) kullanarak macOS cihazlarını Microsoft Purview çözümlerine ekleme ve çıkarma](device-onboarding-offboarding-macos-jamfpro.md)
   - [macOS cihazlarının Uç Nokta için Microsoft Defender müşterileri için JAMF Pro kullanarak Uyumluluk çözümlerine katılımı ve çıkarılması (önizleme)](device-onboarding-offboarding-macos-jamfpro-mde.md)
 
 ### <a name="ediscovery"></a>Ediscovery
 
-- [Bulut eklerini Advanced eDiscovery](advanced-ediscovery-cloud-attachments.md) toplamanın yanı sıra bir bulut ekinin en son sürümünü toplamanın yanı sıra, bir e-posta iletisinde veya sohbet konuşmasında Teams paylaşılan sürümü toplayabilirsiniz; paylaşılan sürümü toplamak, bulut eklerine otomatik olarak bekletme etiketi uygulama özelliğiyle mümkün hale getirilebilir.
-- Arama için bir SharePoint sitesinde depolanan belgelerin tüm sürümlerini dizinleyen Advanced eDiscovery yeni işlevsellikte [geçmiş sürümleri ayarlayın](advanced-ediscovery-historical-versions.md); bu, bir koleksiyon sorgusuyla eşleşen içerik içeren belge sürümlerinin arama sonuçlarında döndürüldiği anlamına gelir.
+- [Bulut eklerini eBulma'da (Premium)](advanced-ediscovery-cloud-attachments.md) toplamaya ek olarak, bir bulut ekinin en son sürümünü toplamanın yanı sıra, bir e-posta iletisinde veya sohbet konuşmasında paylaşılan sürümü toplayabilir veya sohbet konuşması Teams; paylaşılan sürümü toplamak, bulut eklerine otomatik olarak bekletme etiketi uygulama özelliğiyle mümkün hale getirilebilir.
+- [eBulma (Premium) içinde,](advanced-ediscovery-historical-versions.md) arama için bir SharePoint sitesinde depolanan belgelerin tüm sürümlerini dizinleyen yeni işlevlerde geçmiş sürümleri ayarlayın; bu, koleksiyon sorgusuyla eşleşen içerik içeren belge sürümlerinin arama sonuçlarında döndürüldiği anlamına gelir.
 
 ### <a name="encryption"></a>Şifreleme
 
@@ -275,7 +275,7 @@ Aşağıdaki yeni makaleler eklendi:
 
 ### <a name="ediscovery"></a>Ediscovery
 
-- İçerik arama, Temel eBulma ve Advanced eDiscovery arama sorguları oluşturmanın yeni bir yolunun arama sorguları genel önizlemesini [oluşturmak için KQL düzenleyicisini kullanın](ediscovery-kql-editor.md); KQL düzenleyicisi desteklenen aranabilir özellikler ve koşullar için otomatik uyumluluk sağlar ve standart özellikler ve koşullar için desteklenen değerlerin listesini görüntüler; KQL  düzenleyici ayrıca hata algılama ve arama sorgularındaki olası hataların düzeltmeleri için öneriler sağlar
+- İçerik arama, eBulma (Standart) ve eBulma (Premium) içinde arama sorguları oluşturmanın yeni bir yolunun arama sorguları genel önizlemesini oluşturmak için KQL [düzenleyicisini kullanın](ediscovery-kql-editor.md); KQL düzenleyicisi, desteklenen aranabilir özellikler ve koşullar için otomatik uyumluluk sağlar ve standart özellikler ve koşullar için desteklenen değerlerin listesini görüntüler; KQL  düzenleyici ayrıca hata algılama ve arama sorgularındaki olası hataların düzeltmeleri için öneriler sağlar
 
 ### <a name="information-barriers"></a>Bilgi engelleri
 

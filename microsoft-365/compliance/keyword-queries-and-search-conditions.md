@@ -22,14 +22,16 @@ ms.assetid: c4639c2e-7223-4302-8e0d-b6e10f1c3be3
 ms.custom:
 - seo-marvel-apr2020
 description: Microsoft 365'daki eBulma arama araçlarını kullanarak arama yapabileceğiniz e-posta ve belge özellikleri hakkında bilgi edinin.
-ms.openlocfilehash: 09c939f7d92bf06a9eab89d8ac45fec78bd424a8
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f00d257a558d252ca0176166d42d02cd72dad0aa
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936653"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995392"
 ---
 # <a name="keyword-queries-and-search-conditions-for-ediscovery"></a>eBulma için anahtar sözcük sorguları ve arama koşulları
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makalede, e-posta öğelerinde arayabileceğiniz e-posta ve belge özellikleri ve Exchange Online sohbet konuşmaları Microsoft Teams ve Microsoft Purview uyumluluk portalındaki eBulma arama araçlarını kullanarak SharePoint ve OneDrive İş sitelerinde depolanan belgeler açıklanmaktadır. Buna İçerik arama, Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium) dahildir (eBulma'daki (Premium) eBulma aramalarına *koleksiyon* adı verilir). Bu özellikleri aramak için Güvenlik & Uyumluluk Merkezi PowerShell'deki -ComplianceSearch cmdlet'lerini de kullanabilirsiniz **\***. Makalede ayrıca şunlar açıklanmaktadır:
 

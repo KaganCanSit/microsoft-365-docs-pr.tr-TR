@@ -21,14 +21,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Farklı Microsoft 365 hizmetlerindeki içeriği aramak için uyumluluk merkezindeki İçerik arama eBulma aracını kullanın.
-ms.openlocfilehash: 374a9ce119c0e4563c14ae4eda15ce562dc8643d
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f5d8a398f36c1ab3c0f83234718346e8dd20434e
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64938389"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994524"
 ---
 # <a name="create-a-content-search"></a>İçerik araması oluşturma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kuruluşunuzda e-posta, belgeler ve anlık ileti konuşmaları gibi yerinde içerik aramak için Microsoft Purview uyumluluk portalındaki İçerik arama eBulma aracını kullanabilirsiniz. Bu bulut tabanlı Microsoft 365 veri kaynaklarında içerik aramak için bu aracı kullanın:
   

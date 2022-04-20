@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yakınlaştırma verilerini Microsoft 365 içeri aktarmak ve arşivlemek için 17a-4 Zoom DataParser bağlayıcısını ayarlamayı ve kullanmayı öğrenin.
-ms.openlocfilehash: f03ec1e9c23f8fefbe7e6ecb478565034f197d3c
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: b03afa1271b15a27a025c16b05174c14466f65f1
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64938807"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996382"
 ---
 # <a name="set-up-a-connector-to-archive-zoom-data"></a>Yakınlaştırma verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 17a-4 LLC'deki [Zoom DataParser'ı](https://www.17a-4.com/dataparser/) kullanarak Verileri Yakınlaştırma platformundan Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarıp arşivleyebilirsiniz. DataParser, üçüncü taraf veri kaynağındaki öğeleri yakalamak ve bu öğeleri Microsoft 365 aktarmak için yapılandırılmış bir Yakınlaştırma bağlayıcısı içerir. Zoom DataParser bağlayıcısı, Yakınlaştırma verilerini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'deki kullanıcı posta kutularına aktarır.
 

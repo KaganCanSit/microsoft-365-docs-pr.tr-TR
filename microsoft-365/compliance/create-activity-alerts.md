@@ -19,14 +19,16 @@ search.appverid:
 ms.assetid: 72bbad69-035b-4d33-b8f4-549a2743e97d
 ROBOTS: NOINDEX, NOFOLLOW
 description: Kullanıcılar belirli etkinlikleri gerçekleştirdiğinde Microsoft 365 size e-posta bildirimleri göndermesi için Microsoft Purview uyumluluk portalında etkinlik uyarıları ekleme ve yönetme
-ms.openlocfilehash: 7826a09bff1dd17febc3f621b50ed32129e21a37
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 43991eaf0f80957b0d72a2f16a2021f24194f2d6
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946495"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995040"
 ---
 # <a name="create-activity-alerts"></a>Etkinlik uyarıları oluşturma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kullanıcılar Office 365'da belirli etkinlikler gerçekleştirdiğinde size e-posta bildirimi gönderecek bir etkinlik uyarısı oluşturabilirsiniz. Etkinlik uyarıları, denetim günlüğündeki olayları aramaya benzer, ancak uyarı oluşturduğunuz bir etkinlik için bir olay gerçekleştiğinde size e-posta iletisi gönderilir.
 

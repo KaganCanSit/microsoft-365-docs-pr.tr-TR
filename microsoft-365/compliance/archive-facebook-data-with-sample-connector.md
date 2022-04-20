@@ -15,14 +15,16 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
 description: Microsoft Purview uyumluluk portalında bağlayıcıyı ayarlamayı & facebook iş sayfalarından Microsoft 365 & arşiv verilerini içeri aktarmayı öğrenin.
-ms.openlocfilehash: 6db2bd474cd2920b4b067563377bbe85084aeeaf
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 58d1f0efd26d892a4bf206c71dc5ee55c653abfb
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947241"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994952"
 ---
 # <a name="set-up-a-connector-to-archive-facebook-data-preview"></a>Facebook verilerini arşivleme (önizleme) için bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Facebook business sayfalarından Microsoft 365 verileri içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir bağlayıcı kullanın. Bağlayıcıyı ayarladıktan ve yapılandırdıktan sonra, Facebook İş sayfasına bağlanır (zamanlanmış olarak), Facebook öğelerinin içeriğini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365 bir posta kutusuna aktarır.
 

@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  title: Karantinaya alınmış iletiler hakkında SSS
+  title: Karantinaya alınan iletiler hakkında SSS
   f1.keywords:
   - NOCSH
   ms.author: chrisda
@@ -16,109 +16,109 @@ metadata:
   ms.collection:
   - M365-security-compliance
   - m365initiative-defender-office365
-  description: Yöneticiler, Exchange Online Protection'da (EOP) karantinaya alınan iletiler hakkında sık Exchange Online Protection yanıtları  bakabilirsiniz.
+  description: Yöneticiler, karantinaya alınan iletiler hakkında sık sorulan soruları ve yanıtları Exchange Online Protection 'de (EOP) görüntüleyebilir.
   ms.custom: seo-marvel-apr2020
   ms.technology: mdo
   ms.prod: m365-security
-  ms.openlocfilehash: ff5b1e7367491e307df0468b49ba8891558275e9
-  ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+  ms.openlocfilehash: ee026c7d4f66ae1fea9cae51027f1a143de43597
+  ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/20/2022
-  ms.locfileid: "63680940"
-title: Karantinaya alınmış iletiler hakkında SSS
+  ms.lasthandoff: 04/20/2022
+  ms.locfileid: "64972441"
+title: Karantinaya alınan iletiler hakkında SSS
 summary: >
   [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 
-  **Geçerli olduğu yer:**
+  **Uygulandığı öğe**
 
   - [Exchange Online Protection](exchange-online-protection-overview.md)
 
-  - [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+  - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 
   - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 
-  Bu konu başlığı altında, Exchange Online'te posta kutusu olan Microsoft 365 kuruluşların veya posta kutuları olmayan tek başına Exchange Online Protection (EOP) kuruluşlarının e-posta iletileri karantinaya alınmış Exchange Online yanıtlar sağlar.
+  Bu konu başlığı altında, posta kutuları Exchange Online veya Exchange Online posta kutusu olmayan tek başına Exchange Online Protection (EOP) kuruluşlara Microsoft 365 kuruluşlar için karantinaya alınan e-posta iletileri hakkında sık sorulan sorular ve yanıtlar sağlanır.
 
 
-  İstenmeyen posta koruması hakkında sorular ve yanıtlar için bkz. [İstenmeyen posta koruması hakkında SSS](anti-spam-protection-faq.yml).
+  İstenmeyen postadan koruma hakkında sorular ve yanıtlar için bkz. [İstenmeyen postadan koruma hakkında SSS](anti-spam-protection-faq.yml).
 
 
-  Kötü amaçlı yazılımdan koruma hakkında sorular ve yanıtlar için bkz. Kötü amaçlı [yazılımdan koruma hakkında SSS](anti-malware-protection-faq-eop.yml).
+  Kötü amaçlı yazılımdan koruma hakkında sorular ve yanıtlar için bkz. [Kötü amaçlı yazılımdan koruma hakkında SSS](anti-malware-protection-faq-eop.yml).
 
 
-  E-postayla mücadele koruması hakkında sorular ve yanıtlar için bkz. [Yanlışlık önleme koruması hakkında SSS](anti-spoofing-protection-faq.yml).
+  Kimlik sahtekarlığı önleme koruması hakkında sorular ve yanıtlar için bkz. Kimlik [sahtekarlığı önleme koruması SSS](anti-spoofing-protection-faq.yml).
 sections:
 - name: Yok sayıldı
   questions:
   - question: >
-      Kötü amaçlı yazılım için karantinaya alınmış iletileri nasıl yönetebilirim?
+      Kötü amaçlı yazılım için karantinaya alınan iletileri Nasıl yaparım? yönetiyorsunuz?
     answer: >
-      Varsayılan olarak, kötü amaçlı yazılım için karantinaya alınmış iletileri yalnızca yöneticiler yönetebilir. Daha fazla bilgi için bkz [. Karantinaya alınmış iletileri ve dosyaları yönetici olarak yönetme](manage-quarantined-messages-and-files.md).
+      Varsayılan olarak, kötü amaçlı yazılım için karantinaya alınan iletileri yalnızca yöneticiler yönetebilir. Daha fazla bilgi için bkz. [Karantinaya alınan iletileri ve dosyaları yönetici olarak yönetme](manage-quarantined-messages-and-files.md).
 
 
-      Ancak yöneticiler, kullanıcılar için daha fazla özellik _tanımlayan kötü_ amaçlı yazılımdan koruma ilkeleri oluşturabilir ve karantina ilkeleri uygulayabilir. Daha fazla bilgi için bkz. [Karantina ilkeleri](quarantine-policies.md).
+      Ancak yöneticiler, kullanıcılar için daha fazla özellik tanımlayan kötü amaçlı yazılımdan koruma ilkeleri oluşturabilir ve bu ilkelere _karantina_ ilkeleri uygulayabilir. Daha fazla bilgi için bkz [. Karantina ilkeleri](quarantine-policies.md).
   - question: >
-      İstenmeyen postayı nasıl karantinaya alım?
+      İstenmeyen postaları karantinaya Nasıl yaparım??
     answer: >
-      Varsayılan olarak, istenmeyen posta veya toplu e-posta olarak sınıflandırılmış iletiler istenmeyen posta filtresiyle kullanıcının posta kutusuna teslim edilir ve Gereksiz E-posta klasörüne taşınır. Ancak, istenmeyen posta veya toplu e-posta iletilerini karantinaya almak için istenmeyen posta önleme ilkelerini yapılandırabilirsiniz. Daha fazla bilgi için bkz. [EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).
+      Varsayılan olarak, istenmeyen posta filtresi tarafından istenmeyen veya toplu e-posta olarak sınıflandırılan iletiler kullanıcının posta kutusuna teslim edilir ve Gereksiz E-posta klasörüne taşınır. Ancak istenmeyen posta veya toplu e-posta iletilerini karantinaya almak için istenmeyen posta önleme ilkelerini yapılandırabilirsiniz. Daha fazla bilgi için bkz. [EOP'de istenmeyen posta önleme ilkelerini yapılandırma](configure-your-spam-filter-policies.md).
   - question: >
-      Kullanıcılara karantinaya nasıl erişim ve yapabilirim?
+      Kullanıcılara karantinaya erişim izni Nasıl yaparım??
     answer: >
-      Bir kullanıcının karantinada kendi iletilerine erişmek için geçerli bir hesabı olmalıdır. Tek başına EOP için, kullanıcıların EOP'de posta kullanıcıları olarak temsil edildiklerini (el ile oluşturulan veya dizin eşitlemesi ile oluşturulan) gerekir. Tek başına EOP ortamlarında kullanıcıları yönetme hakkında daha fazla bilgi için bkz. [Posta kullanıcılarını tek başına EOP'de yönetme](/exchange/standalone-eop/manage-mail-users-in-eop).
+      Kullanıcının karantinadaki kendi iletilerine erişebilmesi için geçerli bir hesabı olmalıdır. Tek başına EOP, kullanıcıların EOP'de posta kullanıcısı olarak gösterilmesini gerektirir (dizin eşitlemesi aracılığıyla el ile oluşturulur veya oluşturulur). Tek başına EOP ortamlarındaki kullanıcıları yönetme hakkında daha fazla bilgi için bkz. [Tek başına EOP'de posta kullanıcılarını yönetme](/exchange/standalone-eop/manage-mail-users-in-eop).
   - question: >
-      Son kullanıcılar karantinada hangi iletilere erişim sağlar?
+      Son kullanıcılar karantinada hangi iletilere erişebilir?
     answer: >
-      Karantina ilkeleri, kullanıcıların karantinaya alınmış iletilere, iletinin neden karantinaya alınıp [erişene erişe olmadığını tanımlar (desteklenen özellikler için](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features)). Daha fazla bilgi için bkz. [Karantina ilkeleri](quarantine-policies.md).
+      Karantina ilkeleri, kullanıcıların karantinaya alınan iletilere neden karantinaya alındığına göre erişip erişemeyeceğini tanımlar ( [desteklenen özellikler](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features) için). Daha fazla bilgi için bkz [. Karantina ilkeleri](quarantine-policies.md).
 
 
-      Varsayılan olarak, kullanıcılar alıcısı olduğu aşağıdaki karantinaya alınmış ileti türlerine erişim sağlar:
+      Varsayılan olarak, kullanıcılar alıcı oldukları aşağıdaki karantinaya alınmış ileti türlerine erişebilir:
 
 
-      - **İstenmeyen posta önleme ilkeleri**: İstenmeyen posta, toplu e-posta ve kimlik avı iletileri (kimlik avı iletileri yüksek düzeyde değildir).
+      - **İstenmeyen posta önleme ilkeleri**: İstenmeyen posta, toplu e-posta ve kimlik avı iletileri (yüksek güvenilirlikli kimlik avı iletileri değil).
 
-      - **Kimlik avı önleme ilkeleri: Sahte e-posta** gönderenler, kullanıcı kimliğe bürünme koruması (Office 365 için Defender), etki alanı kimliğe bürünme koruması (Office 365 için Defender) ve posta kutusu zekası koruması (Office 365 için Defender).
-
-
-      Daha fazla bilgi için bkz [. Kullanıcı olarak karantinaya alınmış iletileri bulma ve serbest bırakma](find-and-release-quarantined-messages-as-a-user.md).
+      - **Kimlik avı önleme ilkeleri: Kimlik sahtekarlığı** yapan gönderenler, kullanıcı kimliğe bürünme koruması (Office 365 için Defender), etki alanı kimliğe bürünme koruması (Office 365 için Defender) ve posta kutusu zeka koruması (Office 365 için Defender).
 
 
-      Varsayılan olarak, son kullanıcılar alıcı olduğu aşağıdaki karantinaya alınmış ileti türlerine erişebilirsiniz:
+      Daha fazla bilgi için bkz. [Karantinaya alınan iletileri kullanıcı olarak bulma ve bırakma](find-and-release-quarantined-messages-as-a-user.md).
 
 
-      - **İstenmeyen posta önleme ilkeleri**: Yüksek güven kimlik avı.
+      Varsayılan olarak, son kullanıcılar alıcı oldukları aşağıdaki karantinaya alınmış ileti türlerine erişemez:
+
+
+      - **İstenmeyen posta önleme ilkeleri**: Yüksek güvenilirlikli kimlik avı.
 
       - **Kötü amaçlı yazılımdan koruma ilkeleri**
 
-      - **Kasa (Office 365 için Defender)**: Kasa Ekler ilkelerinden ve Kasa Eklerinden gelen e-posta iletileri SharePoint, OneDrive ve Microsoft Teams.
+      - **Kasa Ekler (Office 365 için Defender):** Kasa Ekler ilkelerinden gelen e-posta iletileri ve SharePoint, OneDrive ve Microsoft Teams için Kasa Eklerden gelen dosyalar.
 
-      - **Posta akış kuralları (aktarım kuralları)**: Posta akışı kurallarında iletiyi barındırılan karantinaya teslim **e-posta** eylemi nedeniyle karantinaya alınmış iletiler.
+      - **Posta akışı kuralları (aktarım kuralları):Posta akışı kurallarında** **İletiyi barındırılan karantinaya al eylemi nedeniyle karantinaya** alınan iletiler.
 
 
-      Daha fazla bilgi için bkz [. Karantinaya alınmış iletileri ve dosyaları yönetici olarak yönetme](manage-quarantined-messages-and-files.md).
+      Daha fazla bilgi için bkz. [Karantinaya alınan iletileri ve dosyaları yönetici olarak yönetme](manage-quarantined-messages-and-files.md).
   - question: >
-      İletiler ne kadar süre karantinada tutulur?
+      İletiler ne kadar süreyle karantinada tutulur?
     answer: >
-      İletinin neden karantinaya alındığına bağlıdır. Daha fazla bilgi için bkz. [EOP'de karantinaya alınmış iletiler ve Office 365](quarantine-email-messages.md).
+      İletinin neden karantinaya alındığına bağlıdır. Daha fazla bilgi için bkz. [EOP'de karantinaya alınan iletiler ve Office 365 için Defender](quarantine-email-messages.md).
   - question: >
-      Bir defada birden çok karantinaya alınmış iletiyi serbest bırakarak veya rapor musunuz?
+      Bir kerede birden fazla karantinaya alınmış iletiyi yayımlayabilir veya bildirebilir miyim?
     answer: >
-      Microsoft 365 Defender portalında, bir defada en çok 100  ileti seçer ve yayımlarsınız.
+      Microsoft 365 Defender portalında bir kerede en fazla 100 ileti seçip serbest bırakabilirsiniz.
 
 
-      Yöneticiler, karantinaya alınmış iletileri toplu olarak bulup serbest bırakmak ve toplu olarak hatalı pozitif sonuçlar rapor etmek için Exchange Online PowerShell'de [veya](/powershell/module/exchange/get-quarantinemessage) tek başına EOP PowerShell'de [Get-QuarantineMessage ve Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage) cmdlet'lerini kullanabilir.
+      Yöneticiler Exchange Online PowerShell veya tek başına EOP PowerShell'deki [Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage) ve [Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage) cmdlet'lerini kullanarak karantinaya alınan iletileri toplu olarak bulabilir ve yayımlayabilir ve hatalı pozitifleri toplu olarak bildirebilir.
   - question: >
-      Karantinaya alınmış iletiler için aramalarda joker karakterler destek var mı? Belirli bir etki alanı için karantinaya alınmış iletileri arayabilir miyim?
+      Karantinaya alınan iletileri ararken joker karakterler destekleniyor mu? Belirli bir etki alanı için karantinaya alınmış iletileri arayabilir miyim?
     answer: >-
-      Joker karakterler portalda Microsoft 365 Defender. Örneğin, bir göndereni ararken tam e-posta adresini belirtmeniz gerekir. Ancak, aynı PowerShell veya tek Exchange Online EOP PowerShell'de joker karakter kullanabilirsiniz.
+      Joker karakterler Microsoft 365 Defender portalında desteklenmez. Örneğin, bir göndereni ararken tam e-posta adresini belirtmeniz gerekir. Ancak, Exchange Online PowerShell'de veya tek başına EOP PowerShell'de joker karakterler kullanabilirsiniz.
 
 
-      Örneğin, aşağıdaki PowerShell kodunu Not Defteri'ne kopyalayın ve .ps1 kolayca bulunabilirsiniz (örneğin, C:\Data\QuarantineRelease.ps1).
+      Örneğin, aşağıdaki PowerShell kodunu Not Defteri'ne kopyalayın ve dosyayı bulmanızı kolay bir konuma (örneğin, C:\Data\QuarantineRelease.ps1) .ps1 olarak kaydedin.
 
 
-      Ardından, [PowerShell veya Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) Exchange Online Protection bağlanın ve betiği çalıştırmak için aşağıdaki komutu çalıştırın:[](/powershell/exchange/connect-to-exchange-online-protection-powershell)
+      Ardından[, Exchange Online PowerShell'e](/powershell/exchange/connect-to-exchange-online-powershell) bağlandıktan veya [PowerShell'i Exchange Online Protection](/powershell/exchange/connect-to-exchange-online-protection-powershell) sonra betiği çalıştırmak için aşağıdaki komutu çalıştırın:
 
 
       ```powershell
@@ -128,14 +128,14 @@ sections:
       ```
 
 
-      Betik aşağıdaki eylemleri yapar:
+      Betik aşağıdaki eylemleri gerçekleştirir:
 
 
-      - Fabrikam etki alanındaki tüm gönderenlerden istenmeyen posta olarak karantinaya alınmış, işaretlenmemiş iletileri bulun. En fazla 50.000 sonuç (50 sayfa, 1000 sonuç) olabilir.
+      - Fabrikam etki alanındaki tüm gönderenlerden gelen istenmeyen posta olarak karantinaya alınan yayınlanmamış iletileri bulun. En fazla sonuç sayısı 50.000'dir (50 sayfa 1000 sonuç).
 
       - Sonuçları bir CSV dosyasına kaydedin.
 
-      - Eşleşen karantinaya alınmış iletileri tüm özgün alıcılara bırakın.
+      - Eşleşen karantinaya alınan iletileri tüm özgün alıcılara bırakın.
 
 
       ```powershell
@@ -174,4 +174,4 @@ sections:
       ```
 
 
-      Bir iletiyi yayımladıktan sonra, yeniden yayımlanamazsınız.
+      Bir iletiyi yayımladıktan sonra yeniden yayımlayamazsınız.

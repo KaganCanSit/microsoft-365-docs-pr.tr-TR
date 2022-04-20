@@ -1,5 +1,5 @@
 ---
-title: Multi-Geo Microsoft 365 Bulma'yi yapılandırma
+title: Multi-Geo Microsoft 365 eKeşif'i yapılandırma
 ms.reviewer: adwood
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -12,32 +12,32 @@ f1.keywords:
 ms.custom: seo-marvel-apr2020
 ms.localizationpriority: medium
 ms.collection: Strat_SP_gtc
-description: eKover'ı Multi-Geo'da uydu konumlarında kullanmak üzere yapılandırmak için Region Microsoft 365 kullanmayı öğrenin.
-ms.openlocfilehash: b0366470984abbdc0ed0b3e407ca8ef6b5a5743f
-ms.sourcegitcommit: cdb90f28e59f36966f8751fa8ba352d233317fc1
+description: Microsoft 365 Multi-Geo'daki uydu konumlarında kullanılmak üzere eBulma'nın yapılandırılması için Region parametresini kullanmayı öğrenin.
+ms.openlocfilehash: 6160087006e77de085f6a28614b95d1136890fd3
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "63400944"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973299"
 ---
-# <a name="microsoft-365-multi-geo-ediscovery-configuration"></a>Microsoft 365 Multi-Geo eK bulma yapılandırması
+# <a name="microsoft-365-multi-geo-ediscovery-configuration"></a>Multi-Geo eBulma yapılandırması Microsoft 365
 
-[Advanced eDiscovery özellikleri](../compliance/overview-ediscovery-20.md), çok coğrafi eBulma yöneticisinin "Bölge" güvenlik filtresi kullanmak zorunda kalmadan tüm coğrafi verileri aramasına olanak sağlar. Veriler, çok coğrafi kiracının merkezi konumunun Azure örneğine dışarı aktarıldı. Ayrıca, custo cust (Özel tutma) için de aynı durum ortaya çıkar; ancak, tutma içindeki Tutma istatistikleri "Bölge" güvenlik filtresi olmadan görünmez. 0 gösteren tutma istatistikleri, tutma durumu Açık (başarılı) olarak gösterilen sürece tutmanın başarısız olduğu anlamına değildir.
+[eBulma (Premium) özellikleri](../compliance/overview-ediscovery-20.md), çok coğrafi bölgeli bir eBulma yöneticisinin "Bölge" güvenlik filtresi kullanmak zorunda kalmadan tüm coğrafi bölgeleri aramasına olanak sağlar. Veriler, çok coğrafi kiracının merkezi konumunun Azure örneğine aktarılır. Aynı durum, bir koruyucuya ayrı tutma uygulanmasında da geçerlidir, ancak ayrı tutmanın içindeki Ayrı Tutma istatistikleri "Bölge" güvenlik filtresi olmadan görünmez. 0 değerini gösteren ayrı tutma istatistikleri, bekletme durumu Açık (başarılı) olarak gösterildiği sürece ayrı tutmanın başarısız olduğu anlamına gelmez.
 
-Gelişmiş eBulma özellikleri olmadan, eBulma yöneticisi veya çok coğrafi bir kiracı yöneticisi eKbulma'ı yalnızca o kiracının merkezi konumda yürütebilirsiniz. Uydu konumları için eKbulma'nın yönetilebilme olanağını desteklemek için PowerShell üzerinden "Bölge" adlı yeni bir uyumluluk güvenlik filtresi parametresi kullanılabilir. Bu parametre, merkezi konumu Kuzey Amerika, Avrupa veya Asya Pasifik'te olan kiracılar tarafından kullanılabilir. Advanced eDiscovery konumu Kuzey Amerika, Avrupa veya Asya Pasifik'te olmayan ve uydu coğrafi konumlarında eK bağlantısı gerçekleştirmesi gereken kiracılar için önerilen bir öneridir. 
+eBulma (Premium) özellikleri olmadan, çok coğrafili bir kiracının eBulma yöneticisi veya yöneticisi eKeşif'i yalnızca bu kiracının merkezi konumunda gerçekleştirebilecektir. Uydu konumları için eBulma özelliğinin yürütülmesini desteklemek için PowerShell aracılığıyla "Region" adlı yeni bir uyumluluk güvenlik filtresi parametresi kullanılabilir. Bu parametre, merkezi konumu Kuzey Amerika, Avrupa veya Asya Pasifik'te olan kiracılar tarafından kullanılabilir. Merkezi konumu Kuzey Amerika, Avrupa veya Asya Pasifik'te olmayan ve uydu coğrafi konumlarında eBulma gerçekleştirmesi gereken kiracılar için eBulma (Premium) önerilir. 
 
-Microsoft 365 genel yöneticisinin, diğer kullanıcıların eBulma gerçekleştirmesine izin vermek ve eKbulma'nın uydu konumu olarak gerçekleştirecek bölgeyi belirtmek üzere geçerli Uyumluluk Güvenlik Filtrelerinde bir "Bölge" parametresi ataması gerekir; aksi takdirde, uydu konumu için eBulma yapılmaz. Kullanıcı başına tek bir "Bölge" güvenlik filtresi desteklenmiş olduğu için tüm bölgelerin aynı güvenlik filtresi içinde olması gerekir.
+Microsoft 365 genel yöneticisinin, başkalarının eBulma gerçekleştirmesine izin vermek için eBulma Yöneticisi izinleri ataması ve eBulma işleminin uydu konumu olarak yürütüleceği bölgeyi belirtmek üzere ilgili Uyumluluk Güvenlik Filtrelerinde bir "Bölge" parametresi ataması gerekir; aksi takdirde, uydu konumu için eBulma gerçekleştirilmeyecektir. Kullanıcı başına yalnızca bir "Bölge" güvenlik filtresi desteklenir, bu nedenle tüm bölgelerin aynı güvenlik filtresi içinde olması gerekir.
 
-eBulma Yöneticisi veya Yönetici rolü belirli bir uydu konumu için ayarlanmışsa, eBulma Yöneticisi veya Yönetici, bu uydu konumu içinde bulunan SharePoint siteleri ve OneDrive sitelerinde yalnızca eBulma arama eylemleri gerçekleştirebilirsiniz. eBulma Yöneticisi veya Yönetici belirtilen uydu konumu SharePoint ya da OneDrive herhangi bir konumda arama yapmak isterse, hiçbir sonuç döndürülilmez. Ayrıca, uydu konumu için eBulma Yöneticisi veya Yöneticisi bir dışarı aktarmayı tetiklese, veriler o bölgenin Azure örneğine dışarı aktarıldı. Bu, kuruluşların denetimli kenarlıklar arasında içerik dışarı aktarılamalarına izin vermelerine yardımcı olur.
+eBulma Yöneticisi veya Yönetici rolü belirli bir uydu konumu için ayarlandığında, eBulma Yöneticisi veya Yönetici yalnızca o uydu konumunda bulunan SharePoint siteleri ve OneDrive sitelerinde eBulma arama eylemleri gerçekleştirebilir. Bir eBulma Yöneticisi veya Yönetici belirtilen uydu konumu dışındaki SharePoint veya OneDrive siteleri aramayı denerse hiçbir sonuç döndürülmeyecektir. Ayrıca, uydu konumunun eBulma Yöneticisi veya Yöneticisi dışarı aktarmayı tetiklediğinde veriler o bölgenin Azure örneğine aktarılır. Bu, içeriğin denetimli kenarlıklar arasında dışarı aktarılmasına izin vermeyerek kuruluşların uyumlu kalmasına yardımcı olur.
 
 > [!NOTE]
-> eBulma Yöneticisi'nin birden çok SharePoint uydu konumda araması gerekiyorsa, OneDrive veya SharePoint uydularının bulunduğu alternatif uydu konumunu belirten eBulma Yöneticisi için başka bir kullanıcı hesabı oluşturulyacaktır.
+> Bir eBulma Yöneticisinin birden çok SharePoint uydu konumu arasında arama gerçekleştirmesi gerekiyorsa, eBulma Yöneticisi için OneDrive veya SharePoint sitelerin bulunduğu alternatif uydu konumunu belirten başka bir kullanıcı hesabı oluşturulması gerekir.
 
 [!INCLUDE [Microsoft 365 Multi-Geo locations](../includes/microsoft-365-multi-geo-locations.md)]
 
-Bir Bölgenin Uyumluluk Güvenlik Filtresini ayarlamak için:
+Bir Bölge için Uyumluluk Güvenlik Filtresi'ni ayarlamak için:
 
-1. [Bağlan ve Uyumluluk Microsoft 365 PowerShell& i ziyaret edin](/powershell/exchange/connect-to-scc-powershell)
+1. [Microsoft 365 Güvenlik & Uyumluluk Merkezi PowerShell'e Bağlan](/powershell/exchange/connect-to-scc-powershell)
 
 2. Aşağıdaki sözdizimini kullanın:
 
@@ -51,4 +51,4 @@ Bir Bölgenin Uyumluluk Güvenlik Filtresini ayarlamak için:
    New-ComplianceSecurityFilter -Action All -FilterName "NAM eDiscovery Managers" -Region NAM -Users adwood@contoso.onmicrosoft.com
    ```
 
-Ek parametreler [ve söz dizimi için New-ComplianceSecurityFilter](/powershell/module/exchange/new-compliancesecurityfilter) makalesine bakın.
+Ek parametreler ve söz dizimi için [New-ComplianceSecurityFilter](/powershell/module/exchange/new-compliancesecurityfilter) makalesine bakın.

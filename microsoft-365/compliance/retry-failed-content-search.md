@@ -1,5 +1,5 @@
 ---
-title: İçerik konumu hatasını çözmek için İçerik Aramasını yeniden deneyin
+title: İçerik konumu hatasını çözmek için İçerik Arama'yı yeniden deneyin
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -14,18 +14,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Araştırma sırasında, içerik konumu hataları olan İçerik Aramalarını çözümlemek için Yeniden Dene düğmesini kullanabilirsiniz.
+description: Araştırma sırasında, içerik konumu hataları olan İçerik Aramalarını çözmek için Yeniden Dene düğmesini kullanabilirsiniz.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 3c433dfa6bf842f1d62350e3b518177d1bdca6d7
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 9ded77dedc2c304e8a51b165ab6b5324cc5e78e3
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62985027"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994028"
 ---
-# <a name="retry-a-content-search-to-resolve-a-content-location-error"></a>İçerik konumu hatasını çözmek için İçerik Aramasını yeniden deneyin
+# <a name="retry-a-content-search-to-resolve-a-content-location-error"></a>İçerik konumu hatasını çözmek için İçerik Arama'yı yeniden deneyin
 
-Güvenlik ve uyumluluk merkezinde çok fazla sayıda posta kutusunda arama yapmak için İçerik Arama'ya baksanız, hataya benzer arama hataları alabilirsiniz:
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Çok sayıda posta kutusunda arama yapmak için güvenlik ve uyumluluk merkezinde İçerik Arama'yı kullandığınızda, hataya benzer arama hataları alabilirsiniz:
 
 ```text
 Error
@@ -38,35 +40,35 @@ User1@contoso.com: Problem in processing the request. Please try again later. If
 User2@contoso.com: Application error occurred. Please try again later. (CS012-002)
 ```
 
-Bu hatalar (CS001-002, CS003-002, CS008-009, CS012-002 hatalarının ve CS0XX-0XX formunun diğer hataları, İçerik Arama'nın belirli içerik konumlarında arama başarısız olduğunu gösterir; bu örnekte, iki posta kutusunda arama yoktu. Bu hatalar, İçerik Arama'nın durum ayrıntıları uç sayfasında görüntülenir.
+Bu hatalar (CS001-002, CS003-002, CS008-009, CS012-002 ve CS0XX-0XX formunun diğer hatalarıyla) İçerik Arama'nın belirli içerik konumlarını aramada başarısız olduğunu gösterir; bu örnekte iki posta kutusu aranmadı. Bu hatalar, İçerik Arama'nın durum ayrıntıları açılır sayfasında görüntülenir.
 
 ## <a name="cause-of-content-location-errors"></a>İçerik konumu hatalarının nedeni
 
-Çok fazla sayıda posta kutusu aranıyorsa, arama bir Microsoft veri merkezinde binlerce sunucuya dağıtılır. Herhangi bir zamanda, belirli sunucular yeniden başlatma durumuna veya artıklı kopyalara başarısız olurken olabilir. Bu durumlardan herhangi biri, İçerik Arama'nın verileri alma isteğinin zaman zaman dışında olur. Önceki örnekte, başarısız olan posta kutularının hataları arama zamanlamasının sonucudur.
+Çok sayıda posta kutusu aranırken, arama bir Microsoft veri merkezinde binlerce sunucuya dağıtılır. Belirli sunucular herhangi bir zamanda yeniden başlatma durumunda veya yedekli kopyalara yük devretme sürecinde olabilir. Bu iki durumda da İçerik Arama'nın veri alma isteği zaman aşımına uğradı. Önceki örnekte, başarısız olan posta kutularının hataları arama zaman aşımına uğradı.
 
 ## <a name="resolving-content-location-errors"></a>İçerik konumu hatalarını çözme
 
-Aramanın yeniden başlatılması çoğunlukla farklı sunucularda benzer hatalara neden olur. Aramanızı yeniden başlatmak yerine, **arama** sonuçları sayfasının en üstünde görüntülenen Yeniden Dene düğmesine tıklayın.
+Aramanın yeniden başlatılması genellikle farklı sunucularda benzer hatalara neden olur. Aramayı yeniden başlatmak yerine, arama sonuçları sayfasının üst kısmında görüntülenen **Yeniden Dene** düğmesine tıklayın.
 
 ![İçerik konumu hatalarını çözmek için Yeniden Dene düğmesine tıklayın.](../media/retrycontentsearch3.png)
 
-Böylece yalnızca başarısız olan posta kutuları için arama yeniden denenecek. Arama işlemini yeniden deneyken, başarıyla döndürülen diğer sonuçlar korunur.
+Bu, aramanın yalnızca başarısız olan posta kutuları için yeniden denenerek sonuçlanır. Aramayı yeniden denediğinizde, başarıyla döndürülen diğer sonuçlar korunur.
 
-## <a name="tips-to-avoid-content-location-errors"></a>İpuçları konumu hatalarını önlemeyi sağlar
+## <a name="tips-to-avoid-content-location-errors"></a>İçerik konumu hatalarını önlemek için İpuçları
 
-Burada, içerik konumu hatalarının bazı ek nedenleri ve çok fazla sayıda posta kutusunda arama yapmaktan kaçınmanıza yardımcı olacak bazı ipuçları yer alın.
+burada, içerik konumu hatalarının bazı ek nedenleri ve çok sayıda posta kutusu ararken bunlardan kaçınmanıza yardımcı olacak bazı ipuçları yer alır.
 
-- Kullanıcı etkinliği nedeniyle arama yapılan posta kutusu meşgul olabilir. Bu durumda, arama hizmeti posta kutusunun kullanılamaz duruma ulaşması için kendisinde kısıtlamaya neden olabilir. Bunu önlemek için, iş dışı saatler boyunca arama çalıştırmayı deneyin.
+- Aranan posta kutusu kullanıcı etkinliği nedeniyle meşgul olabilir. Bu durumda, arama hizmeti posta kutusunun kullanılamaz duruma gelmesini önlemek için kendini kısıtlayabilir. Bunu önlemek için, iş dışı saatlerde arama çalıştırmayı deneyin.
 
-- Arama sorgusu posta kutusundan çok fazla içerik geliyor olabilir. Mümkünse anahtar sözcükleri, tarih aralıklarını ve arama koşullarını kullanarak aramanın kapsamını daraltmayı deneyin.
+- Arama sorgusu posta kutusundan çok fazla içerik almakta olabilir. Mümkünse anahtar sözcükleri, tarih aralıklarını ve arama koşullarını kullanarak arama kapsamını daraltmayı deneyin.
 
-- Anahtar sözcükler listesini kullanarak bir arama sorgusu ekleyebilirsiniz.[](view-keyword-statistics-for-content-search.md#get-keyword-statistics-for-searches) Anahtar sözcükler listesini kullanan bir arama sorgusu çalıştırırken, hizmet temelde anahtar sözcük listesinin her satırı için ayrı bir arama çalıştırır ve böylece istatistikler oluşturulur. Arama sorgularında anahtar sözcükler listesini kullanıyorsanız, anahtar sözcük listesinde satır sayısını en aza bölün veya anahtar sözcükleri daha küçük listelere bölün ve her anahtar sözcük listesi için farklı bir arama oluşturun.
+- Anahtar sözcükler listesini kullanarak bir arama sorgusu oluşturduğunuzda çok fazla [anahtar sözcük veya anahtar sözcük](view-keyword-statistics-for-content-search.md#get-keyword-statistics-for-searches) tümceciği. Anahtar sözcükler listesini kullanan bir arama sorgusu çalıştırdığınızda, hizmet temelde anahtar sözcük listesindeki her satır için ayrı bir arama çalıştırarak istatistiklerin oluşturulabilmesini sağlar. Arama sorgularında anahtar sözcükler listesini kullanıyorsanız, anahtar sözcük listesindeki satır sayısını en aza indirin veya sayı anahtar sözcüklerini daha küçük listelere bölün ve her anahtar sözcük listesi için farklı bir arama oluşturun.
 
   > [!NOTE]
-  > Büyük anahtar sözcük listelerinin neden olduğu sorunları azaltmaya yardımcı olmak için, artık arama sorgusunun anahtar sözcük listesinde en çok 20 satırla sınırlandırabilirsiniz.
+  > Büyük anahtar sözcük listelerinin neden olduğu sorunları azaltmaya yardımcı olmak için artık arama sorgusunun anahtar sözcük listesinde en fazla 20 satırla sınırlısınız.
 
-- Aynı posta kutusunda aynı anda çok fazla arama yapılıyor. Mümkünse, herhangi bir posta kutusunda bir defada tek bir arama çalıştırmayı deneyin.
+- Aynı posta kutusunda aynı anda çok fazla arama yapılıyor. Mümkünse, herhangi bir posta kutusunda bir kerede bir arama çalıştırmayı deneyin.
 
-- Tek bir aramada çok fazla posta kutusu arama. Çok fazla sayıda posta kutusunda arama sırasında içerik konumu hataları olasılığı artar. Mümkünse, birden çok arama çalıştırmayı deneyin; böylece her aramada, kuruluşta posta kutularının bir alt kümesi vardır.
+- Tek bir aramada çok fazla posta kutusu aranıyor. Çok sayıda posta kutusu aranırken içerik konumu hatalarının olasılığı artar. Mümkünse, her aramanın kuruluşunuzdaki posta kutularının bir alt kümesini içermesi için birden çok arama çalıştırmayı deneyin.
 
-- Posta kutusunda gerekli bakım yapılıyor. Bu neden büyük olasılıkla seyrek ortaya çıkar, ancak içerik konumu hatası aldıktan sonra biraz bekleyin ve sonra arama işlemini yeniden deneyin.
+- Posta kutusunda gerekli bakım gerçekleştiriliyor. Bu neden büyük olasılıkla seyrek gerçekleşse de, içerik konumu hatasını aldıktan sonra biraz bekleyin ve aramayı yeniden deneyin.

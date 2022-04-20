@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: eBulma 'da (Premium) içeriğin düzgün işlenmesini engelleyebilecek veri sorunlarını düzeltmek için hata düzeltmeyi kullanmayı öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: d1331e595f661e1e69f114058579ab9163074b41
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 1f56ad34cb295103178c5f244ccd78d7ad3757b0
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64932188"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994556"
 ---
 # <a name="error-remediation-when-processing-data"></a>Verileri işlerken hata düzeltme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Hata düzeltme, eBulma yöneticilerinin Microsoft Purview eBulma'nın (Premium) içeriği düzgün bir şekilde işlemesini engelleyen veri sorunlarını düzeltmesine olanak tanır. Örneğin, parola korumalı dosyalar kilitli veya şifrelenmiş olduğundan işlenemez. Hata düzeltmeyi kullanan eBulma yöneticileri bu tür hatalara sahip dosyaları indirebilir, parola korumasını kaldırabilir ve ardından düzeltilmiş dosyaları karşıya yükleyebilir.
 

@@ -16,14 +16,16 @@ search.appverid:
 ms.assetid: 88898874-e262-4c5c-b6d2-4e697497fc74
 ms.custom: seo-marvel-apr2020
 description: Aramayı çalıştırmadan önce eBulma aramaları için anahtar sözcük sorgunuzdaki hataları ve yazım hatalarını algılamayı öğrenin.
-ms.openlocfilehash: 440cd9c54d839173e8eeb6022a840f90305a1a92
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: dd09efd162ce8647fecbd7d5c4740588ada4a396
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64938543"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996310"
 ---
 # <a name="check-your-search-query-for-errors"></a>Arama sorgunuzda hata olup olmadığını kontrol etme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
 İçerik arama ve Microsoft Purview eKeşif (Standart) için arama sorgularında denetlediğimiz desteklenmeyen karakterlerin listesi aşağıdadır. Desteklenmeyen karakterler genellikle gizlenir ve genellikle bir arama hatasına neden olur veya istenmeyen sonuçlar döndürür.
   

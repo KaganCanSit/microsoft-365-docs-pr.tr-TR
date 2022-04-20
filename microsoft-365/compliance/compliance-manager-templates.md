@@ -1,5 +1,5 @@
 ---
-title: Microsoft Compliance Manager'da değerlendirme şablonlarıyla çalışma
+title: Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirme şablonlarıyla çalışma
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,20 +17,22 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Uyumluluk Yöneticisi'nde değerlendirme oluşturmak için şablonların nasıl kullanılacağını ve yönetileceğini anlayın. Biçimlendirilmiş bir Excel dosyası kullanarak şablonlar oluşturun ve değiştirin.
-ms.openlocfilehash: 0dc28eb3058e3b929da47d947b29c7ba7be41111
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirme oluşturmak için şablonların nasıl kullanılacağını ve yönetileceğini anlama. Biçimlendirilmiş bir Excel dosyası kullanarak şablonlar oluşturun ve değiştirin.
+ms.openlocfilehash: 009b2d742ab135abcde7c3ab73f9ec15c05c8f29
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759003"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972793"
 ---
 # <a name="learn-about-assessment-templates-in-compliance-manager"></a>Uyumluluk Yöneticisi'nde değerlendirme şablonları hakkında bilgi edinin
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **Bu makalede:** **Şablonların nasıl çalıştığını** ve değerlendirme şablonları sayfanızdan **nasıl yönetileceğini** anlayın. Yeni şablonlar **oluşturma**, mevcut şablonları **genişletme** ve **değiştirme**, **şablon verilerinizi Excel ile biçimlendirme** ve şablon **raporlarını** dışarı aktarma yönergelerini alın.
 
 > [!IMPORTANT]
-> Kuruluşunuzun kullanabileceği değerlendirme şablonları lisans sözleşmenize bağlıdır. [Ayrıntıları gözden geçirin](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+> Kuruluşunuzun kullanabileceği değerlendirme şablonları lisans sözleşmenize bağlıdır. [Ayrıntıları gözden geçirin](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-compliance-manager).
 
 ## <a name="templates-overview"></a>Şablonlara genel bakış
 
@@ -78,7 +80,7 @@ GCC Yüksek ve DOD hesapları [toplu lisanslama](https://www.microsoft.com/licen
 
 Satın alma işlemi yapmadan önce premium şablonları denemek için lisansların deneme sürümlerini de alabilirsiniz. Deneme lisansları, 90 gün boyunca 25 şablona kadar kullanılabilir. Deneme lisansınızı aldıktan sonra şablonlar 48 saat içinde kiracınızda kullanılabilir duruma gelir.
 
-Kuruluşunuzun Uyumluluk Yöneticisi için ticari lisansı varsa, [Microsoft Compliance Manager premium değerlendirmeleri için ücretsiz deneme sürümü hakkında](compliance-easy-trials-compliance-manager-assessments.md) makalesinde denemenizi nasıl başlatacağınızı öğrenebilirsiniz.
+Kuruluşunuzun Uyumluluk Yöneticisi için ticari lisansı varsa, [Microsoft Purview Compliance Manager premium değerlendirmeleri için ücretsiz deneme sürümü hakkında](compliance-easy-trials-compliance-manager-assessments.md) makalesinde deneme sürümünüzü nasıl başlatacağınızı öğrenebilirsiniz.
 
 Kuruluşunuz GCC veya DOD lisansı altındaysa, kuruluşunuz için uygun deneme bağlantısını seçin:
 

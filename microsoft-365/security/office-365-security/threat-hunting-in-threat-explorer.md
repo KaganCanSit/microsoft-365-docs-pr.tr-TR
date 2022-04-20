@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: bcbacc886c57257e5c4b067b278c7736ae403390
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: d8515ce2bccb90478f11fa4a1813c7cb4ab7fb7d
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945527"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973849"
 ---
 # <a name="threat-hunting-in-threat-explorer-for-microsoft-defender-for-office-365"></a>Office 365 için Microsoft Defender için Tehdit Gezgini'nde tehdit avcılığı
 
@@ -36,12 +36,11 @@ Bu makalede:
 > [!NOTE]
 > Bu, **Tehdit Gezgini (Gezgin)**, **e-posta güvenliği**, **Gezgin ve Gerçek zamanlı algılamalar** (araçlar arasındaki farklar ve bunları çalıştırmak için gereken izinler gibi) ile ilgili **3 makalelik bir serinin** parçasıdır. Bu serideki diğer iki makale, [Tehdit Gezgini ve Tehdit Gezgini ile E-posta güvenliği](email-security-in-microsoft-defender.md) [ve Gerçek zamanlı algılamalardır](real-time-detections.md).
 
-
 **Uygulandığı öğe**
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Kuruluşunuzun [Office 365 için Microsoft Defender](defender-for-office-365.md) varsa ve [izinleriniz varsa, tehditleri](#required-licenses-and-permissions) algılamak ve düzeltmek için **Gezgin** veya **Gerçek zamanlı algılamaları** kullanabilirsiniz.
+[Kuruluşunuzda Office 365 için Microsoft Defender](defender-for-office-365.md) varsa ve [izinleriniz varsa, tehditleri](#required-licenses-and-permissions) algılamak ve düzeltmek için **Gezgin** veya **Gerçek zamanlı algılamaları** kullanabilirsiniz.
 
 konumundaki Microsoft 365 Defender portalında <https://security.microsoft.com>**E-posta & işbirliği'ne** gidin ve **Ardından Gezgin** veya **Gerçek zamanlı algılamalar'ı** seçin. Doğrudan sayfaya gitmek için veya <https://security.microsoft.com/realtimereports>kullanın<https://security.microsoft.com/threatexplorer>.
 
@@ -56,9 +55,9 @@ Daha fazla bilgi için bkz. [Tehdit Gezgini ile e-posta güvenliği](email-secur
 
 ## <a name="threat-explorer-walk-through"></a>Tehdit Gezgini kılavuzu
 
-Office 365 için Microsoft Defender iki abonelik planı vardır: Plan 1 ve Plan 2. El ile çalıştırılan Tehdit avcılığı araçları her iki planda da, farklı adlar altında ve farklı özelliklere sahiptir.
+Office 365 için Microsoft Defender'da iki abonelik planı vardır: Plan 1 ve Plan 2. El ile çalıştırılan Tehdit avcılığı araçları her iki planda da, farklı adlar altında ve farklı özelliklere sahiptir.
 
-Office 365 için Defender Plan 1, Plan 2'deki *Tehdit Gezgini* (*Gezgin* olarak da adlandırılır) avcılık aracının bir alt kümesi olan *Gerçek zamanlı algılamaları* kullanır. Bu makale dizisinde, örneklerin çoğu tam Tehdit Gezgini kullanılarak oluşturulmuştur. Yöneticiler, nereye başvuracaklarını görmek için gerçek zamanlı algılamalardaki tüm adımları test etmelidir.
+Office 365 Plan 1 için Defender, Plan 2'deki *Tehdit Gezgini* (*Gezgin* olarak da adlandırılır) avcılık aracının bir alt kümesi olan *Gerçek zamanlı algılamaları* kullanır. Bu makale dizisinde, örneklerin çoğu tam Tehdit Gezgini kullanılarak oluşturulmuştur. Yöneticiler, nereye başvuracaklarını görmek için gerçek zamanlı algılamalardaki tüm adımları test etmelidir.
 
 **Explorer'a** gittikten sonra, varsayılan olarak **Kötü Amaçlı Yazılım** sayfasına ulaşırsınız, ancak seçeneklerinizi tanımak için **Görünüm** açılan listesini kullanırsınız. Kimlik Avı avlıyorsanız veya bir tehdit kampanyasına girişiyorsanız bu görünümleri seçin.
 
@@ -69,7 +68,6 @@ Güvenlik işlemleri (Sec Ops) kişisi görmek istediği verileri seçtikten son
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="../../media/sender-drop-down.png" alt-text="Tehdit Gezgini'ndeki Gönderen düğmesi" lightbox="../../media/sender-drop-down.png":::
-
 
 Gezgin'de veya Gerçek zamanlı algılamada odağı iyileştirme katmanlar halinde düşünülebilir. İlki **Görünüm'dür**. İkincisi *, filtrelenmiş bir odak* olarak düşünülebilir. Örneğin, kararlarınızı şu şekilde kaydederek tehdit bulma konusunda attığınız adımları yeniden izleyebilirsiniz: Explorer'da sorunu bulmak için **Alıcı filtresi odağına sahip Kötü Amaçlı Yazılım Görünümü'nü seçtim**. Bu, adımlarınızı geri çekmeyi kolaylaştırır.
 
@@ -158,7 +156,7 @@ Tehdit Gezgini'nden dışarı aktarılabilen E-posta kayıtlarının sayısı ş
 > [!NOTE]
 > Kullanıcı etiketleri özelliği Önizleme aşamasındadır ve herkes tarafından kullanılamayabilir. Ayrıca Önizlemeler değiştirilebilir. Yayın zamanlaması hakkında bilgi için Microsoft 365 yol haritasına göz atın.
 
-Kullanıcı etiketleri, Office 365 için Microsoft Defender'daki belirli kullanıcı gruplarını tanımlar. Lisanslama ve yapılandırma dahil olmak üzere etiketler hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
+Kullanıcı etiketleri, Office 365 için Microsoft Defender'da belirli kullanıcı gruplarını tanımlar. Lisanslama ve yapılandırma dahil olmak üzere etiketler hakkında daha fazla bilgi için bkz. [Kullanıcı etiketleri](user-tags.md).
 
 Tehdit Gezgini'nde aşağıdaki deneyimlerde kullanıcı etiketleri hakkındaki bilgileri görebilirsiniz.
 
@@ -237,10 +235,10 @@ Bağlayıcı arama bir CONTAINS sorgusudur ve kısmi anahtar sözcük aramaları
 
 ## <a name="required-licenses-and-permissions"></a>Gerekli lisanslar ve izinler
 
-Explorer veya Gerçek zamanlı algılamaları kullanmak için [Office 365 için Microsoft Defender](defender-for-office-365.md) sahip olmanız gerekir.
+Explorer veya Gerçek zamanlı algılamaları kullanmak [için Office 365 için Microsoft Defender'a](defender-for-office-365.md) sahip olmanız gerekir.
 
-- Explorer, Office 365 için Defender Plan 2'ye dahildir.
-- Gerçek zamanlı algılamalar raporu Office 365 için Defender Plan 1'e dahildir.
+- Explorer, Office 365 Plan 2 için Defender'a dahildir.
+- Gerçek zamanlı algılamalar raporu, Office 365 Plan 1 için Defender'a dahildir.
 - Office 365 için Defender tarafından korunması gereken tüm kullanıcılara lisans atamayı planlayın. Explorer ve Gerçek zamanlı algılamalar, lisanslı kullanıcılar için algılama verilerini gösterir.
 
 Explorer veya Gerçek zamanlı algılamaları görüntülemek ve kullanmak için aşağıdaki izinlere sahip olmanız gerekir:

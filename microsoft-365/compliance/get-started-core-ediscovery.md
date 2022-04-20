@@ -18,14 +18,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview'da eKeşif (Standart) kullanmaya başlamayı açıklar. eBulma izinlerini atadıktan ve bir servis talebi oluşturduktan sonra, üyeleri ekleyebilir, eBulma tutmaları oluşturabilir ve ardından araştırmanızla ilgili içeriği arayabilir ve dışarı aktarabilirsiniz.
-ms.openlocfilehash: bf49ebd886a85005166f07b1a3d6c97e10412e20
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 90470d0128fd15bf295b1c8fa2cd15ef6d5cc384
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934741"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994160"
 ---
 # <a name="get-started-with-ediscovery-standard-in-microsoft-purview"></a>Microsoft Purview'da eBulma (Standart) ile Kullanmaya başlayın
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview'daki Microsoft Purview eKeşif (Standart), kuruluşların Microsoft 365 ve Office 365 içeriği aramak ve dışarı aktarmak için kullanabileceği temel bir eBulma aracı sağlar. eBulma (Standart) özelliğini, Exchange posta kutuları, SharePoint siteleri, OneDrive hesapları ve Microsoft Teams gibi içerik konumlarına eBulma bekletmesi yapmak için de kullanabilirsiniz. eKeşif 'i (Standart) dağıtmak için hiçbir şey gerekmez, ancak kuruluşunuzun içeriği aramak, dışarı aktarmak ve korumak için eKeşif 'i (Standart) kullanmaya başlayabilmesi için bt yöneticisinin ve eBulma yöneticisinin tamamlaması gereken bazı önkoşul görevleri vardır.
 
@@ -142,7 +144,7 @@ Sonraki adım, bir servis talebi oluşturmak ve eBulma (Standart) kullanmaya ba�
 
 ## <a name="explore-the-ediscovery-standard-workflow"></a>eBulma (Standart) iş akışını keşfetme
 
-Temel eBulma'yı kullanmaya başlamanız için, ilgilendiğiniz kişiler için eBulma tutmaları oluşturma, araştırmanızla ilgili içeriği arama ve daha fazla inceleme için bu verileri dışarı aktarma gibi basit bir iş akışı aşağıda açıklanmaktadır. Bu adımların her birinde, keşfedebileceğiniz bazı genişletilmiş eBulma (Standart) işlevlerini de vurgulayacağız.
+eKeşif 'i (Standart) kullanmaya başlamanız için, ilgilendiğiniz kişiler için eBulma tutmaları oluşturma, araştırmanızla ilgili içeriği arama ve daha fazla inceleme için bu verileri dışarı aktarma gibi basit bir iş akışı aşağıda açıklanmaktadır. Bu adımların her birinde, keşfedebileceğiniz bazı genişletilmiş eBulma (Standart) işlevlerini de vurgulayacağız.
 
 ![eBulma (Standart) iş akışı.](../media/CoreEdiscoveryWorkflow.png)
 

@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, SMS ve MMS verilerini Microsoft 365'da O2 mobil ağından içeri aktarmak ve arşiv etmek için bir TeleMessage bağlayıcısı ayarlayabilir. Bu, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: 5e802aab643fc795191344f22512f073bd1785fc
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: eb8bec7aa81963d9bdd1617f022a9352378d8f08
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944095"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994622"
 ---
 # <a name="set-up-a-connector-to-archive-o2-network-data"></a>O2 Ağ verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 O2 mobil ağından Kısa Mesajlaşma Hizmeti (SMS) iletilerini ve sesli çağrılarını içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir TeleMessage bağlayıcısı kullanın. Bağlayıcıyı ayarlayıp yapılandırdıktan sonra, her gün bir kez kuruluşunuzun O2 Ağına bağlanır ve Microsoft 365'daki posta kutularına SMS ve sesli çağrıları içeri aktarır.
 

@@ -17,14 +17,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: bir Microsoft Desteği olayı için eBulma tanılama bilgilerini toplama hakkında bilgi edinin.
-ms.openlocfilehash: 13d3967adc6eddb6f0fc5a5b57119eb6c47114de
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6077df8f0a014b9e3356d8f520ddbaf0b2378983
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64932210"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994465"
 ---
 # <a name="collect-ediscovery-diagnostic-information"></a>eKeşif tanılama bilgilerini toplama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bazen Microsoft Desteği mühendisleri, Microsoft Purview eKeşif (Standart) veya Microsoft Purview eKeşif (Premium) ile ilgili bir destek olayı açtığınızda sorununuz hakkında belirli bilgiler gerektirir. Bu makalede, destek mühendislerinin sorunları araştırmasına ve çözmesine yardımcı olmak için tanılama bilgilerini toplama konusunda rehberlik sağlanır. Genellikle, bir Microsoft Desteği mühendisi tarafından isteninceye kadar bu bilgileri toplamanız gerekmez.
 

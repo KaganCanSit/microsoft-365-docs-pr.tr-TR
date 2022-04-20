@@ -16,14 +16,16 @@ search.appverid:
 - MOE150
 - MET150
 description: eBulma (Premium) içindeki koleksiyonları kullanarak olay veya araştırmanıza göre içerik arayın ve toplayın.
-ms.openlocfilehash: 8831508260d48dc270a5e4b7a15cecf894656ff6
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f57748d54bc177812fd89eca13252311d4ab269f
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64940279"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996250"
 ---
 # <a name="learn-about-collections-in-ediscovery-premium"></a>eBulma'daki koleksiyonlar hakkında bilgi edinin (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kuruluşlar bir soruşturma veya olası dava ile ilgili olabilecek iletişimleri ve içerikleri toplamayla karşı karşıya kaldıklarında, en iyi koşullarda önemli bir zorlukla karşı karşıya kalırlar. Günümüzün modern çalışma alanında, içeriğin hacmi, çeşitliliği ve hızı yeniliklere ve uzaktan çalışmaya olanak tanırken, eBulma araştırmalarına yönelik koleksiyonları yönetme gereksinimlerini ve sürecini de genişletmektedir.
 

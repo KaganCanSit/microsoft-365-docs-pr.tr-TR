@@ -19,17 +19,16 @@ search.appverid:
 description: Kişisel veri sızıntılarını izlemek için kullanabileceğiniz üç araç hakkında bilgi edinin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3b16e96e85d6ee154912535ecf0bac4ac5ba6fac
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 13b8aa5699c3d4031a364ceaf62b70e6b7236fda
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947769"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973013"
 ---
 # <a name="monitor-for-leaks-of-personal-data"></a>Kişisel verilerin sızıntılarını izleme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
-
 
 Kişisel verilerin kullanımını ve taşınmasını izlemek için kullanılabilecek birçok araç vardır. Bu konuda, iyi çalışan üç araç açıklanmaktadır.
 
@@ -39,7 +38,7 @@ Kişisel verilerin kullanımını ve taşınmasını izlemek için kullanılabil
 
 - SharePoint Online, OneDrive İş ve aktarımdaki e-postada kişisel verileri izlemek için Microsoft Purview veri kaybı önleme raporlarıyla başlayın. Bu raporlar, kişisel verileri izlemek için en yüksek ayrıntı düzeyini sağlar. Ancak bu raporlar Office 365'deki tüm hizmetleri içermez.
 
-- Ardından, hizmetler genelinde etkinliği izlemek için uyarı ilkelerini ve denetim günlüğünü kullanın. Bir olayı araştırmak için sürekli izleme ayarlayın veya denetim günlüğünde arama yapın. Denetim günlüğü hizmetler arasında çalışır: Sway, Power BI, eBulma, Dynamics 365, Power Automate, Microsoft Teams, Yönetici etkinliği, OneDrive İş, SharePoint Online, aktarımdaki postalar ve bekleyen posta kutuları. Skype konuşmalar bekleyen posta kutularına eklenir.
+- Ardından, hizmetler genelinde etkinliği izlemek için uyarı ilkelerini ve denetim günlüğünü kullanın. Bir olayı araştırmak için sürekli izleme ayarlayın veya denetim günlüğünde arama yapın. Denetim günlüğü Sway, Power BI, eKeşif, Dynamics 365, Power Automate, Microsoft Teams, Yönetici etkinliği, OneDrive İş, SharePoint Online, aktarımdaki postalar ve bekleyen posta kutuları gibi hizmetler arasında çalışır. Skype konuşmalar bekleyen posta kutularına eklenir.
 
 - Son olarak, diğer SaaS sağlayıcılarında hassas verilerle dosyaları izlemek için Microsoft Defender for Cloud Apps kullanın. Yakında hassas bilgi türlerini ve birleşik etiketleri Azure Information Protection ve Bulut için Defender Uygulamaları ile Office kullanabilme özelliği sunulacaktır. Tüm SaaS uygulamalarınıza veya belirli uygulamalarınıza (Box gibi) uygulanan ilkeler ayarlayabilirsiniz. Bulut için Defender Uygulamalar, e-postaya eklenmiş dosyalar da dahil olmak üzere Exchange Online dosyaları bulmaz.
 
@@ -66,7 +65,7 @@ Daha fazla bilgi için bkz. [Veri kaybı önleme raporlarını görüntüleme](.
 
 ## <a name="audit-log-and-alert-policies"></a>Denetim günlüğü ve uyarı ilkeleri
 
-Denetim günlüğü Exchange Online, SharePoint Online, OneDrive İş, Azure Active Directory, Microsoft Teams, Power BI, Sway ve diğer hizmetlerden olayları içerir.
+Denetim günlüğü Exchange Online, SharePoint Online, OneDrive İş, Azure Active Directory, Microsoft Teams, Power BI, Sway ve diğer hizmetlerden olaylar içerir.
 
 Microsoft 365 Defender portalı ve Microsoft Purview uyumluluk portalı, denetim günlüğünü izlemek ve raporlamak için iki yol sağlar:
 
@@ -140,7 +139,7 @@ Onaylanan bir bulut uygulamasından kredi kartı numarası içeren bir dosya pay
 |Uygulama:|Tüm dosyalar, tüm sahipler|
 |İçerik denetimi|Mevcut ifadeyle eşleşen dosyaları içerir: Tüm ülkeler: Finans: Kredi kartı numarası <p> İlgili bağlam gerektirmez: işaretlenmemiş (bu ayar hem anahtar sözcüklerle hem de regex ile eşleşecektir) <p> En az 1 eşleşmesi olan dosyaları içerir <p> İhlalin son 4 karakterinin maskesini kaldırın: işaretli|
 |Uyarılar|Eşleşen her dosya için bir uyarı oluşturun: işaretli <p> Günlük uyarı sınırı: 1000 <p> E-posta olarak bir uyarı seçin: işaretli <p> Son: infosec@contoso.com|
-|İdare|Microsoft OneDrive İş <p> Özel yap: Dış Kullanıcıları Kaldır'ı işaretleyin <p> Diğer tüm ayarlar: işaretlenmemiş <p> Microsoft Office SharePoint Online <p> Özel yap: Dış Kullanıcıları Kaldır'ı işaretleyin <p> Diğer tüm ayarlar: işaretlenmemiş|
+|İdare|İş İçin Microsoft OneDrive <p> Özel yap: Dış Kullanıcıları Kaldır'ı işaretleyin <p> Diğer tüm ayarlar: işaretlenmemiş <p> Microsoft Office SharePoint Online <p> Özel yap: Dış Kullanıcıları Kaldır'ı işaretleyin <p> Diğer tüm ayarlar: işaretlenmemiş|
 
 Benzer ilkeler:
 
@@ -163,7 +162,7 @@ Notlar:
 |İlke önem derecesi|Yüksek|
 |Kategori|Paylaşım Denetimi|
 |Üzerinde işlem yapma|Tek etkinlik|
-|Filtre ayarları|Etkinlik türü = Upload Dosyası <p> Uygulama = Microsoft OneDrive İş ve Kutu <p> Sınıflandırma Etiketi (şu anda özel önizlemede): Azure Information Protection = Müşteri Verileri, İnsan Kaynakları—Maaş Verileri, İnsan Kaynakları—Çalışan Verileri|
+|Filtre ayarları|Etkinlik türü = Upload Dosyası <p> Uygulama = İş ve Kutu için Microsoft OneDrive <p> Sınıflandırma Etiketi (şu anda özel önizlemede): Azure Information Protection = Müşteri Verileri, İnsan Kaynakları—Maaş Verileri, İnsan Kaynakları—Çalışan Verileri|
 |Uyarılar|Uyarı oluşturma: işaretli <p> Günlük uyarı sınırı: 1000 <p> E-posta olarak bir uyarı seçin: işaretli <p> Son: infosec@contoso.com|
 |İdare|Tüm uygulamalar <p> Kullanıcıyı karantinaya alma: check <p> Diğer tüm ayarlar: işaretlenmemiş <p> Office 365 <p> Kullanıcıyı karantinaya alma: check <p> Diğer tüm ayarlar: işaretlenmemiş|
 

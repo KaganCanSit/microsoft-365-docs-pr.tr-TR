@@ -13,12 +13,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: ''
 f1.keywords: NOCSH
-ms.openlocfilehash: 64d1284b315b7d565a924499ef5af2b815263dac
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 0aee30dff19f6d1127e63d14fa69e5d72232e305
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945207"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972543"
 ---
 # <a name="microsoft-365-productivity-illustrations"></a>Microsoft 365 üretkenlik çizimleri
 
@@ -38,7 +38,7 @@ Hangi yöntemin (veya yöntem bileşimlerinin) ve bunların ne zaman kullanılac
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Contoso kurumsal iletişim senaryosu posteri.](../media/solutions-architecture-center/contoso-corporate-communication-thumb.png)](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) <br/> [PDF](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) \| [Visio](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.vsdx)  <br>Ocak 2022'de güncelleştirildi   |Bu posterde Contoso'nun popüler iletişim senaryolarında çalışanları nasıl bilgilendirip etkileşimde tuttuğu gösterilmektedir. Contoso, yeni teklif Viva Bağlantılar dahil olmak üzere çeşitli M365 uygulamaları kullanır.<br/><br/>**İlgili çözüm kılavuzları** <br/> <ul><li>[Kurumsal iletişimler: Rehberlik, yöntemler ve ürünler](/sharepoint/corporate-communications-overview)|
+|[![Contoso kurumsal iletişim senaryosu posteri.](../media/solutions-architecture-center/contoso-corporate-communication-thumb.png)](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) <br/> [PDF](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) \| [Visio](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.vsdx)  <br>Ocak 2022'de güncelleştirildi   |Bu posterde Contoso'nun popüler iletişim senaryolarında çalışanları nasıl bilgilendirip etkileşimde tuttuğu gösterilmektedir. Contoso, Viva Connections adlı yeni bir teklif de dahil olmak üzere çeşitli M365 uygulamaları kullanır.<br/><br/>**İlgili çözüm kılavuzları** <br/> <ul><li>[Kurumsal iletişimler: Rehberlik, yöntemler ve ürünler](/sharepoint/corporate-communications-overview)|
 
 ## <a name="groups-in-microsoft-365-for-it-architects"></a>BT Mimarları için Microsoft 365 grupları
 Bu çizim, BT mimarlarına Microsoft 365 Grupları hakkında bilgi içerir. Kuruluşunuzda işbirliği için Microsoft 365 Grupları ve ekipleri yapılandırma ve yönetme hakkında bilgi edinmek için bkz. [Microsoft 365 ile güvenli işbirliği ayarlama](/microsoft-365/solutions/setup-secure-collaboration-with-teams) ve [İşbirliği idaresi nedir?](/microsoft-365/solutions/collaboration-governance-overview).
@@ -107,13 +107,13 @@ Recommended Zero Trust capabilities for protecting identities and devices that a
 --> 
 <a name="BKMK_ediscovery"></a>
 
-## <a name="advanced-ediscovery-architecture-in-microsoft-365"></a>Microsoft 365'da Advanced eDiscovery mimarisi
+## <a name="ediscovery-premium-architecture-in-microsoft-365"></a>Microsoft 365'de eBulma (Premium) mimarisi
 
-Microsoft 365 Multi-Geo ortamları dahil olmak üzere uçtan uca iş akışını ve veri akışını Advanced eDiscovery.
+Microsoft 365 Multi-Geo ortamları da dahil olmak üzere eBulma (Premium) uçtan uca iş akışı ve veri akışı.
 
 | Öğe | Açıklama |
 |:-----|:-----|
-|[![Model posteri: Microsoft 365'de Advanced eDiscovery Mimarisi.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) <br/> [Resim](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) \| olarak görüntüle [PDF](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.pdf)\| olarak indirme [Visio olarak indirme](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.vsdx)   <br/> Ekim 2020 güncelleştirildi|Içerir: <ul><li>  Tek bir ortamda uçtan uca iş akışı</li><li>Microsoft 365 Multi-Geo ortamında uçtan uca iş akışı </li><li>EDRM iş akışını destekleyen uçtan uca veri akışı</li> |
+|[![Model posteri: Microsoft 365'de eBulma (Premium) Mimarisi.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) <br/> [Resim](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) \| olarak görüntüle [PDF](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.pdf)\| olarak indirme [Visio olarak indirme](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.vsdx)   <br/> Ekim 2020 güncelleştirildi|Içerir: <ul><li>  Tek bir ortamda uçtan uca iş akışı</li><li>Microsoft 365 Multi-Geo ortamında uçtan uca iş akışı </li><li>EDRM iş akışını destekleyen uçtan uca veri akışı</li> |
 
 ## <a name="microsoft-telephony-solutions"></a>Microsoft Telefon Çözümleri
 

@@ -19,14 +19,16 @@ description: Microsoft Purview eKeşif (Premium) durumunda bir gözden geçirme 
 ms.custom:
 - seo-marvel-mar2020
 - seo-marvel-apr2020
-ms.openlocfilehash: deb0389a4f4bd9bafedd3b2a8dd6c367c6e78fbb
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: b87c9278b5009f6873414f8fc53d434c458c62ad
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941181"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995854"
 ---
 # <a name="add-data-to-a-review-set-from-another-review-set"></a>Başka bir gözden geçirme kümesinden bir gözden geçirme kümesine veri ekleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bazı durumlarda, bir gözden geçirme kümesinden belge seçmek ve başka bir gözden geçirme kümesinde ayrı ayrı çalışmak gerekebilir. Bu, özellikle bir gözden geçirme kümesindeki içeriği dolandırdıysanız ve verilerin alt kümesinde analiz çalıştırmak istiyorsanız kullanışlıdır.
 

@@ -1,5 +1,5 @@
 ---
-title: Güvenliği aşılmış hesapları araştırmak için Denetim (Premium) kullanma
+title: Risk altındaki hesapları araştırmak için Denetimi (Premium) kullanın
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Güvenliği aşılmış kullanıcı hesaplarının adli araştırmalarını gerçekleştirmek için MailItemsAccessed posta kutusu denetim eylemini kullanın.
-ms.openlocfilehash: 658a4b079bd7909f8436867efd86d3ac04d61aa2
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2256e331075074348e2a72d6528bed1944567b94
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946209"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64996206"
 ---
 # <a name="use-microsoft-purview-audit-premium-to-investigate-compromised-accounts"></a>Güvenliği aşılmış hesapları araştırmak için Microsoft Purview Denetimi'ni (Premium) kullanma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Güvenliği aşılmış kullanıcı hesabı ( *hesap devralma* olarak da adlandırılır), bir saldırganın bir kullanıcı hesabına erişim kazanması ve kullanıcı olarak çalışması bir saldırı türüdür. Bu tür saldırılar bazen saldırganın hedefleyenden daha fazla hasara neden olur. Güvenliği aşılmış e-posta hesaplarını araştırırken, saldırganın gerçek iletişim durumunu izleyerek belirtilebilenden daha fazla posta verisinin gizliliğinin ihlal edildiği varsayılmalıdır. E-posta iletilerindeki verilerin türüne bağlı olarak, hassas bilgilerin açığa çıkmadığını kanıtlayamadığınız sürece hassas bilgilerin gizliliğinin ihlal edildiği veya yasal düzenleme cezalarıyla karşı karşıya kalındığını varsaymanız gerekir. Örneğin HIPAA tarafından düzenlenen kuruluşlar, hasta sağlığı bilgilerinin (PHI) açığa çıkarıldığına dair kanıt varsa önemli para cezalarıyla karşı karşıya kalır. Bu gibi durumlarda saldırganların PHI ile ilgilenme olasılığı düşüktür ancak aksini kanıtlayamadığı sürece kuruluşların yine de veri ihlallerini bildirmesi gerekir.
 

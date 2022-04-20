@@ -17,14 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Bu makalede, Microsoft 365'deki eBulma (Standart) durumundaki sınırlar açıklanmaktadır.
-ms.openlocfilehash: 4eb43687e92d90179ff24d69827c3c2889d82b47
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 29d1ef4d017ebf26a0c5ed1cc03fcf4361266e94
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971548"
+ms.locfileid: "64994116"
 ---
 # <a name="limits-in-ediscovery-standard"></a>eBulma sınırları (Standart)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Aşağıdaki tabloda, eBulma (Standart) durumlarının ve eBulma (Standart) servis talebiyle ilişkili tutmaların sınırları listeleniyor. Microsoft Purview eKeşif (Standart) hakkında daha fazla bilgi için bkz. [eKeşif'e Genel Bakış (Standart)](./get-started-core-ediscovery.md).
     

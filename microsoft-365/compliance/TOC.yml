@@ -318,7 +318,7 @@
               href: sit-learn-about-exact-data-match-based-sits.md
             - name: Belge Parmak İzi
               href: document-fingerprinting.md
-            - name: Adlandırılmış varlıklar hakkında daha fazla bilgi edinme (önizleme)
+            - name: Adlandırılmış varlıklar hakkında bilgi edinme
               href: named-entities-learn.md
         - name: Hassas bilgi türünü kullanmaya başlama
           items:
@@ -362,7 +362,7 @@
               href: sit-use-exact-data-manage-schema.md
             - name: Hassas bilgi kaynak tablosu dosyanızı yenileme
               href: sit-use-exact-data-refresh-data.md
-            - name: Veri kaybı önleme ilkelerinizde adlandırılmış varlıkları kullanma (önizleme)
+            - name: Veri kaybını önleme ilkelerinizde adlandırılmış varlıkları kullanma
               href: named-entities-use.md
             - name: Hassas bilgi türleri için ortak kullanım senaryoları
               href: sit-common-scenarios.md
@@ -441,7 +441,7 @@
         - name: E-posta şifreleme
           href: email-encryption.md
           items:
-            - name: 'İleti şifrelemesi '
+            - name: İleti şifreleme
               href: ome.md
             - name: Microsoft Purview İleti Şifreleme'yi ayarlama
               href: set-up-new-message-encryption-capabilities.md
@@ -744,7 +744,7 @@
               href: clone-a-content-search.md
     - name: eKeşif (Standart)
       items:
-        - name: eKeşif’i (Standart) kullanmaya başlayın
+        - name: eKeşif’i (Standart) kullanmaya başlama
           href: get-started-core-ediscovery.md
         - name: eKeşif bekletmeleri oluşturma
           href: create-ediscovery-holds.md
@@ -989,7 +989,7 @@
       href: auditing-solutions-overview.md
     - name: Denetim (Standart)
       items:
-        - name: Denetim’i (Standart) Ayarlama
+        - name: Denetimi (Standart) Ayarlama
           href: set-up-basic-audit.md
         - name: Denetim günlüğünde arama yapma
           href: search-the-audit-log-in-security-and-compliance.md
@@ -1015,13 +1015,13 @@
               href: /office/office-365-management-api/troubleshooting-the-office-365-management-activity-api
     - name: Denetim (Premium)
       items:
-        - name: Denetim’e (Premium) Genel Bakış
+        - name: Denetime (Premium) Genel Bakış
           href: advanced-audit.md
-        - name: Denetim’i (Premium) Ayarlama
+        - name: Denetimi (Premium) Ayarlama
           href: set-up-advanced-audit.md
         - name: Denetim günlüğü saklama ilkelerini yönetme
           href: audit-log-retention-policies.md
-        - name: Risk altındaki hesapları araştırmak için Denetim’i (Premium) kullanın
+        - name: Risk altındaki hesapları araştırmak için Denetimi (Premium) kullanın
           href: mailitemsaccessed-forensics-investigations.md
     - name: Posta kutusu denetimi
       href: enable-mailbox-auditing.md

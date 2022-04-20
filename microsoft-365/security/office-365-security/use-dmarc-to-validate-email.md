@@ -15,39 +15,39 @@ ms.assetid: 4a05898c-b8e4-4eab-bd70-ee912e349737
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
-description: Kuruluştan gönderilen iletileri doğrulamak için Etki Alanı Tabanlı İleti Kimlik Doğrulaması, Raporlama ve Uyumluluk'ı (DMARC) yapılandırmayı öğrenin.
+description: Kuruluşunuzdan gönderilen iletileri doğrulamak için Etki Alanı Tabanlı İleti Kimlik Doğrulaması, Raporlama ve Uyumluluk (DMARC) yapılandırmayı öğrenin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: cae3f007cc046bfc2afd6bb7322c65fe047816d5
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: c10b1cc94f23e96d11a495b9b176d605cb2f3183
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64465893"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972859"
 ---
 # <a name="use-dmarc-to-validate-email"></a>E-postayı doğrulamak için DMARC kullanma
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 - [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Etki Alanı Tabanlı İleti Kimlik Doğrulaması, Raporlama ve Uyumluluk ([DMARC](https://dmarc.org)), posta gönderenlerin kimliklerini doğrulamak ve hedef e-posta sistemlerinin etki alanınız üzerinden gönderilen iletilere güven olduğundan emin olmak için Sender Policy Framework (SPF) ve DomainKeys Identified Mail (DKIM) ile çalışır. DMARC'ın SPF ve DKIM ile uygulanması kimlik avı ve kimlik avı e-postalarına karşı ek koruma sağlar. DMARC, posta sistemlerinin SPF veya DKIM denetimlerini başarısız olan etki alanınız üzerinden gönderilen iletilerle ne olacağını belirlemesine yardımcı olur.
+Etki Alanı Tabanlı İleti Kimlik Doğrulaması, Raporlama ve Uyumluluk ([DMARC](https://dmarc.org)), posta gönderenlerin kimliğini doğrulamak ve hedef e-posta sistemlerinin etki alanınızdan gönderilen iletilere güvenmesini sağlamak için Sender Policy Framework (SPF) ve DomainKeys Identified Mail (DKIM) ile birlikte çalışır. SPF ve DKIM ile DMARC uygulamak, kimlik sahtekarlığına ve kimlik avı e-postalarına karşı ek koruma sağlar. DMARC, posta sistemlerinin SPF veya DKIM denetimleri başarısız olan etki alanınızdan gönderilen iletilerle ne yapacağını belirlemesine yardımcı olur.
 
 > [!TIP]
-> Microsoft Akıllı [Güvenlik Birliği (MISA) kataloğunu ziyaret](https://www.microsoft.com/misapartnercatalog) edin ve daha fazla bilgi için DMARC raporlaması sunan üçüncü taraf satıcıları Microsoft 365.
+> Microsoft 365 için DMARC raporlaması sunan üçüncü taraf satıcıları görüntülemek için [Microsoft Akıllı Güvenlik Birliği (MISA)](https://www.microsoft.com/misapartnercatalog) kataloğunu ziyaret edin.
 
-## <a name="how-do-spf-and-dmarc-work-together-to-protect-email-in-microsoft-365"></a>SPF ve DMARC, aynı anda e-postaları korumak için Microsoft 365?
+## <a name="how-do-spf-and-dmarc-work-together-to-protect-email-in-microsoft-365"></a>MICROSOFT 365'da e-postayı korumak için SPF ve DMARC birlikte nasıl çalışır?
 
- E-posta iletisi birden çok kaynak veya gönderen adresi içerebilir. Bu adresler farklı amaçlar doğrultusunda kullanılır. Örneğin, şu adresleri düşünün:
+ E-posta iletisi birden çok gönderen veya gönderen adresi içerebilir. Bu adresler farklı amaçlar için kullanılır. Örneğin, şu adresleri göz önünde bulundurun:
 
-- **"Posta Gönderen"** adresi: Göndereni tanımlar ve iletinin teslimi sırasında herhangi bir sorun oluşursa (teslime ilgili olmayan bildirimler gibi) iade bildirimlerinin nereye göndern adres olduğunu belirtir. Bu, e-posta iletinin zarf bölümünde gösterilir ve e-posta uygulamanız tarafından görüntülenmez. Bu bazen 5321.MailFrom adresi veya ters yol adresi olarak da adlandırılan bir adrestir.
+- **"Posta Kaynağı" adresi**: Göndereni tanımlar ve iletinin tesliminde herhangi bir sorun oluşursa ( teslim edilemedi bildirimleri gibi) iade bildirimlerinin gönderileceği yeri belirtir. Bu, e-posta iletisinin zarf bölümünde görünür ve e-posta uygulamanız tarafından görüntülenmez. Buna bazen 5321.MailFrom adresi veya ters yol adresi adı verilir.
 
-- **"From" adresi**: Posta uygulamanız tarafından From adresi olarak görüntülenen adres. Bu adres e-postanın yazarını tanımlar. Yani, iletiyi yazmaktan sorumlu kişinin veya sistemin posta kutusudur. Buna bazen 5322.From adresi denir.
+- **"Kimden" adresi**: Posta uygulamanız tarafından Kimden adresi olarak görüntülenen adres. Bu adres, e-postanın yazarını tanımlar. Yani, iletiyi yazmaktan sorumlu kişinin veya sistemin posta kutusudur. Buna bazen 5322.Kimden adresi adı verilir.
 
-SPF, belirli bir etki alanının yetkili IP adreslerinin listesini sağlamak için bir DNS TXT kaydı kullanır. Normalde, SPF denetimleri yalnızca 5321.MailFrom adresiyle gerçekleştirilir. Bu, SPF'yi kendi başına kullanırken 5322.From adresinin kimliği doğrulanmamış demektir. Bu, kullanıcının bir iletiyi alsa bile SPF denetimi geçtikten sonra 5322.Gönderen adresine kimlik bilgisi olan bir senaryoya olanak sağlar. Örneğin, şu SMTP döküm örneğini düşünün:
+SPF, belirli bir etki alanı için yetkili gönderen IP adreslerinin listesini sağlamak için bir DNS TXT kaydı kullanır. Normalde SPF denetimleri yalnızca 5321.MailFrom adresinde gerçekleştirilir. Bu, SPF'yi tek başına kullandığınızda 5322.From adresinin kimliğinin doğrulanmadığı anlamına gelir. Bu, kullanıcının SPF denetiminden geçen ancak kimlik sahtekarlığına sahip 5322.Gönderen adresinden ileti alabildiği bir senaryoya olanak tanır. Örneğin, şu SMTP transkriptlerini göz önünde bulundurun:
 
 ```console
 S: Helo woodgrovebank.com
@@ -70,37 +70,37 @@ S: Woodgrove Bank
 S: .
 ```
 
-Bu dökümde, gönderenin adresleri aşağıdaki gibidir:
+Bu transkriptte gönderen adresleri aşağıdaki gibidir:
 
-- Posta adresi (5321.MailFrom): phish@phishing.contoso.com
+- Adresten posta (5321.MailFrom): phish@phishing.contoso.com
 
-- Adresten (5322.From): security@woodgrovebank.com
+- Kimden adresi (5322.Kimden): security@woodgrovebank.com
 
-SPF'yi yapılandırdıysanız, alıcı sunucu Adres defteri posta kutusu üzerinde bir phish@phishing.contoso.com. İleti, etki alanı için geçerli bir kaynaktan phishing.contoso.com, SPF denetimi geçer. E-posta istemcisi yalnızca From adresini görüntüleyene kadar, kullanıcı bu iletinin postadan geldiğini security@woodgrovebank.com. Tek başına SPF ile, kimlik woodgrovebank.com hiçbir zaman kimlik doğrulamasılanmamıştır.
+SPF'yi yapılandırdıysanız, alıcı sunucu Posta adresi phish@phishing.contoso.com karşı bir denetim gerçekleştirir. İleti, etki alanı phishing.contoso.com için geçerli bir kaynaktan geldiyse SPF denetimi geçer. E-posta istemcisi yalnızca Kimden adresini görüntülediğinden, kullanıcı bu iletinin security@woodgrovebank.com geldiğini görür. Yalnızca SPF ile woodgrovebank.com geçerliliği hiçbir zaman doğrulanamadı.
 
-DMARC kullanırken, alıcı sunucu da Kaynak adresine yönelik bir denetim gerçekleştirir. Yukarıdaki örnekte, bu kayıt için bir DMARC TXT kaydı woodgrovebank.com, From adresine yönelik denetim başarısız olur.
+DMARC kullandığınızda, alıcı sunucu Da kimden adresi üzerinde bir denetim gerçekleştirir. Yukarıdaki örnekte, woodgrovebank.com için bir DMARC TXT kaydı varsa Kimden adresiyle ilgili denetim başarısız olur.
 
 ## <a name="what-is-a-dmarc-txt-record"></a>DMARC TXT kaydı nedir?
 
-SPF için DNS kayıtları gibi, DMARC kaydı da kimlik sahtecisini ve kimlik avını önlemeye yardımcı olan bir DNS metni (TXT) kaydıdır. DMARC TXT kayıtlarını DNS'de yayımlarsiniz. DMARC TXT kayıtları e-posta iletilerinin kaynağını doğrulamak için, e-postanın yazarının IP adresini gönderen etki alanının iddia edilen sahibine karşı doğrular. DMARC TXT kaydı, yetkili giden e-posta sunucularını tanımlar. Bundan sonra, hedef e-posta sistemleri iletilerin yetkili giden e-posta sunucularından geldiğini doğrular.
+SPF'nin DNS kayıtları gibi, DMARC kaydı da kimlik sahtekarlığı ve kimlik avının önlenmesine yardımcı olan bir DNS metni (TXT) kaydıdır. DMARC TXT kayıtlarını DNS'de yayımlarsınız. DMARC TXT kayıtları, e-posta yazarının IP adresini gönderen etki alanının iddia edilen sahibine karşı doğrulayarak e-posta iletilerinin kaynağını doğrular. DMARC TXT kaydı, yetkili giden e-posta sunucularını tanımlar. Hedef e-posta sistemleri daha sonra aldıkları iletilerin yetkili giden e-posta sunucularından geldiğini doğrulayabilir.
 
-Microsoft'un DMARC TXT kaydı aşağıdakine benzer:
+Microsoft'un DMARC TXT kaydı şuna benzer:
 
 ```console
 _dmarc.microsoft.com.   3600    IN      TXT     "v=DMARC1; p=none; pct=100; rua=mailto:d@rua.contoso.com; ruf=mailto:d@ruf.contoso.com; fo=1"
 ```
 
-DMARC raporlama hizmeti sunan diğer üçüncü taraf satıcıları Microsoft 365[, MISA kataloğunu ziyaret edin](https://www.microsoft.com/misapartnercatalog?IntegratedProducts=DMARCReportingforOffice365).
+Microsoft 365 için DMARC raporlaması sunan diğer üçüncü taraf satıcılar için [MISA kataloğunu](https://www.microsoft.com/misapartnercatalog?IntegratedProducts=DMARCReportingforOffice365) ziyaret edin.
 
-## <a name="set-up-dmarc-for-inbound-mail"></a>DMARC'ı gelen posta için ayarlama
+## <a name="set-up-dmarc-for-inbound-mail"></a>Gelen posta için DMARC'i ayarlama
 
-DMARC'ı posta için ayarlamak ve posta yoluyla göndermek için hiçbir şey Microsoft 365. Hepsi bu kadar. DMARC denetimlerimizi geçiramayan postalara ne olduğunu öğrenmek için bkz. Microsoft 365, [DMARC'de](#how-microsoft-365-handles-inbound-email-that-fails-dmarc) başarısız olan gelen e-postaları işleme.
+Microsoft 365 aldığınız postalar için DMARC'yi ayarlamak için hiçbir şey yapmanız gerekmez. Her şey halledildi. DMARC denetimlerimizi geçemedi postaya ne olduğunu öğrenmek istiyorsanız bkz. [Microsoft 365 DMARC'de başarısız olan gelen e-postaları işleme](#how-microsoft-365-handles-inbound-email-that-fails-dmarc).
 
-## <a name="set-up-dmarc-for-outbound-mail-from-microsoft-365"></a>Postadan giden posta için DMARC'Microsoft 365
+## <a name="set-up-dmarc-for-outbound-mail-from-microsoft-365"></a>Microsoft 365 giden posta için DMARC'i ayarlama
 
-Microsoft 365 kullanıyorsanız ancak özel bir etki alanı kullanmıyorsanız, yani onmicrosoft.com kullanıyorsanız, DMARC'yi organizasyonunız için yapılandırmak veya uygulamak için başka bir şey yapmaya gerek yok. SPF sizin için zaten ayarlanmıştır ve Microsoft 365 postanız için otomatik olarak DKIM imzası üretir. Bu imza hakkında daha fazla bilgi için bkz. [DKIM ve MICROSOFT 365](use-dkim-to-validate-outbound-email.md#DefaultDKIMbehavior).
+Microsoft 365 kullanıyorsanız ancak özel bir etki alanı kullanmıyorsanız, yani onmicrosoft.com kullanıyorsanız, kuruluşunuz için DMARC'yi yapılandırmak veya uygulamak için başka bir şey yapmanız gerekmez. SPF sizin için zaten ayarlanmıştır ve Microsoft 365 giden postanız için otomatik olarak bir DKIM imzası oluşturur. Bu imza hakkında daha fazla bilgi için bkz. [DKIM ve Microsoft 365 için varsayılan davranış](use-dkim-to-validate-outbound-email.md#DefaultDKIMbehavior).
 
- Özel bir etki alanınız varsa veya bu etki alanına ek olarak Exchange şirket içi Microsoft 365 kullanıyorsanız, giden postanız için DMARC'ı el ile uygulamanız gerekir. Özel etki alanınız için DMARC uygulamak şu adımları içerir:
+ Özel etki alanınız varsa veya Microsoft 365 ek olarak şirket içi Exchange sunucuları kullanıyorsanız, giden postanız için DMARC'yi el ile uygulamanız gerekir. Özel etki alanınız için DMARC uygulamak şu adımları içerir:
 
 - [1. Adım: Etki alanınız için geçerli posta kaynaklarını belirleme](#step-1-identify-valid-sources-of-mail-for-your-domain)
 
@@ -112,170 +112,169 @@ Microsoft 365 kullanıyorsanız ancak özel bir etki alanı kullanmıyorsanız, 
 
 ### <a name="step-1-identify-valid-sources-of-mail-for-your-domain"></a>1. Adım: Etki alanınız için geçerli posta kaynaklarını belirleme
 
-SPF'yi önceden kurdıysanız, bu alıştırmanın üzerinden zaten geçiyorsanız. Öte yandan, DMARC için dikkate alınması gereken başka noktalar da vardır. Etki alanınız için posta kaynaklarını belirtirken, yanıtlamanız gereken iki soru vardır:
+SPF'yi zaten ayarladıysanız, bu alıştırmayı zaten yapmışsınız demektir. Ancak DMARC için dikkat edilmesi gereken ek noktalar vardır. Etki alanınız için posta kaynaklarını tanımlarken, yanıtlamanız gereken iki soru vardır:
 
-- Etki alanımdan hangi IP adresleri ileti gönderiyor?
+- Hangi IP adresleri etki alanımdan ileti gönderir?
 
-- Üçüncü taraflara benim adıma gönderilen posta için, 5321.MailFrom ve 5322.From etki alanları aynı olacak mı?
+- Benim adıma üçüncü taraflardan gönderilen postalar için 5321.MailFrom ve 5322.From etki alanları eşleşecek mi?
 
 ### <a name="step-2-set-up-spf-for-your-domain"></a>2. Adım: Etki alanınız için SPF'yi ayarlama
 
-Artık tüm geçerli gönderenlerin listenize sahip olduğunuuza göre, kimlik doğrulamasını önlemeye yardımcı olmak için [SPF'yi ayarlama adımlarını takip edin](set-up-spf-in-office-365-to-help-prevent-spoofing.md).
+Artık tüm geçerli gönderenlerinizin listesini oluşturduğunuza göre, kimlik [sahtekarlıklarını önlemeye yardımcı olmak için SPF'yi ayarlama](set-up-spf-in-office-365-to-help-prevent-spoofing.md) adımlarını izleyebilirsiniz.
 
-Örneğin, contoso.com'Exchange Online'den posta gönderdiğini varsayarak, IP adresi 192.168.0.1 olan şirket içi bir Exchange sunucusu ve IP adresi 192.168.100.100 olan bir web uygulaması varsa, SPF TXT kaydı aşağıdakine benzer olur:
+Örneğin, contoso.com Exchange Online posta gönderdiği varsayıldığında, IP adresi 192.168.0.1 olan şirket içi Exchange sunucusu ve IP adresi 192.168.100.100 olan bir web uygulaması, SPF TXT kaydı şöyle görünür:
 
 ```console
 contoso.com  IN  TXT  " v=spf1 ip4:192.168.0.1 ip4:192.168.100.100 include:spf.protection.outlook.com -all"
 ```
 
-En iyi uygulama olarak, SPF TXT kaydınızı üçüncü taraf gönderenleri hesaba katıldıklarından emin olun.
+En iyi uygulama olarak, SPF TXT kaydınızın üçüncü taraf gönderenleri dikkate aldığından emin olun.
 
 ### <a name="step-3-set-up-dkim-for-your-custom-domain"></a>3. Adım: Özel etki alanınız için DKIM'i ayarlama
 
-SPF'yi ayarlaytktan sonra DKIM'yi ayarlaym gerekir. DKIM, ileti üst bilgisinde yer alan e-posta iletilerine dijital imza eklemenize olanak sağlar. DKIM'i ayarlamıyorsanız ve bunun yerine Microsoft 365 alanınız için varsayılan DKIM yapılandırmasını kullanmasına izin vermezse, DMARC başarısız olabilir. Bunun nedeni, varsayılan DKIM yapılandırmasının ilk onmicrosoft.com alanınızı özel etki alanınız olarak değil 5322.From adresi olarak kullanmasıdır. Bu, etki alanınıza gönderilen tüm e-postalarda 5321.MailFrom ile 5322.From adresleri arasında bir eşleşmesi güçler.
+SPF'yi ayarladıktan sonra DKIM'i ayarlamanız gerekir. DKIM, ileti üst bilgisindeki e-posta iletilerine dijital imza eklemenizi sağlar. DKIM'yi ayarlamaz ve bunun yerine Microsoft 365 etki alanınız için varsayılan DKIM yapılandırmasını kullanmasına izin verirseniz, DMARC başarısız olabilir. Bunun nedeni, varsayılan DKIM yapılandırmasının ilk onmicrosoft.com etki alanınızı özel etki alanınız değil 5322.From adresi olarak kullanmasıdır. Bu, etki alanınızdan gönderilen tüm e-postalardaki 5321.MailFrom ile 5322.From adresleri arasında bir uyuşmazlık zorlar.
 
-Sizin adına posta gönderen üçüncü taraf gönderenler varsa ve onların göndermekte olduğu posta eşleşmez 5321.MailFrom ve 5322.From adreslerinde ise, DMARC bu e-posta için başarısız olur. Bunu önlemek için, özel olarak bu üçüncü taraf gönderenle etki alanınız için DKIM'i ayarlanız gerekir. Bu, Microsoft 365 üçüncü taraf hizmetten gelen e-postanın kimliğini doğrulamanızı sağlar. Bununla birlikte, yahoo, Gmail ve Comcast gibi diğer kullanıcıların, üçüncü taraf tarafından gönderilmiş e-postaları sizin e-postanız gibi doğrulamalarına da olanak sağlar. Bu özellik, müşterilerinize posta kutularının nerede olursa olsun etki alanınıza güven oluşturmasını sağlar ve kimlik doğrulaması nedeniyle Microsoft 365 bir iletiyi kimlik doğrulaması kimlik doğrulaması geçişini geçtiğinden aynı anda istenmeyen posta olarak işaretlemez.
+Sizin yerinize posta gönderen üçüncü taraf gönderenleriniz varsa ve gönderdikleri posta 5321.MailFrom ve 5322.From adreslerinde eşleşmiyorsa, DMARC bu e-posta için başarısız olur. Bunu önlemek için etki alanınız için DKIM'i özellikle üçüncü taraf gönderenle ayarlamanız gerekir. Bu, Microsoft 365 bu üçüncü taraf hizmetten gelen e-postaların kimliğini doğrulamasını sağlar. Bununla birlikte, yahoo, gmail ve comcast gibi diğer kişilerin üçüncü taraf tarafından gönderilen e-postayı sizin tarafınızdan gönderilmiş gibi doğrulamalarına da olanak tanır. Bu, müşterilerinizin posta kutusu nerede olursa olsun etki alanınızla güven oluşturmasına olanak sağladığından ve aynı zamanda Microsoft 365 etki alanınız için kimlik doğrulama denetimlerinden geçtiği için kimlik sahtekarlığına bağlı olarak bir iletiyi istenmeyen posta olarak işaretlemediğinden yararlıdır.
 
-Etki alanınız için DKIM'i ayarlama yönergeleri için, örneğin üçüncü taraf gönderenler için DKIM'i etki alanınıza kimliklerini doğru şekilde ayarlama hakkında yönergeler için bkz. Özel etki alanınıza gönderilen giden e-postayı doğrulamak için [DKIM kullanma](use-dkim-to-validate-outbound-email.md).
+Etki alanınızda kimlik sahtekarlığına neden olabilecek üçüncü taraf gönderenler için DKIM'i ayarlama da dahil olmak üzere etki alanınız için DKIM'i ayarlama yönergeleri için bkz. [Özel etki alanınızdan gönderilen giden e-postayı doğrulamak için DKIM kullanma](use-dkim-to-validate-outbound-email.md).
 
 ### <a name="step-4-form-the-dmarc-txt-record-for-your-domain"></a>4. Adım: Etki alanınız için DMARC TXT kaydını oluşturma
 
-Burada bahsed yer alsa da, bu seçenekler söz dizimleri için en sık kullanılan Microsoft 365. Etki alanınız için DMARC TXT kaydını şu biçimde biçimlendirin:
+Burada belirtilmeyen başka söz dizimi seçenekleri olsa da, Microsoft 365 için en sık kullanılan seçenekler bunlardır. Etki alanınız için DMARC TXT kaydını şu biçimde oluşturun:
 
 ```console
 _dmarc.domain  TTL  IN  TXT  "v=DMARC1; p=policy; pct=100"
 ```
 
-Burada:
+Nerede:
 
-- *etki* alanı, korumak istediğiniz etki alanıdır. Varsayılan olarak, kayıt postayı etki alanı ve tüm alt etki alanlarından korur. Örneğin, etki alanı \_dmarc.contoso.com, DMARC postayı etki alanına ve posta posta iletisi veya etki alanı gibi tüm alt etki housewares.contoso.com plumbing.contoso.com.
+- *etki alanı* , korumak istediğiniz etki alanıdır. Varsayılan olarak, kayıt postayı etki alanından ve tüm alt etki alanından korur. Örneğin, dmarc.contoso.com belirtirseniz \_, DMARC postayı etki alanından ve housewares.contoso.com veya plumbing.contoso.com gibi tüm alt etki alanından korur.
 
-- *TTL* her zaman bir saat eşdeğeri olmalı. TTL için kullanılan birim saat (1 saat), dakika (60 dakika) veya saniye (3600 saniye), etki alanı kayıt şirketine bağlı olarak değişir.
+- *TTL* her zaman bir saatin eşdeğeri olmalıdır. TTL için saat (1 saat), dakika (60 dakika) veya saniye (3600 saniye) için kullanılan birim, etki alanınızın kayıt şirketine bağlı olarak değişir.
 
-- *pct=100* , bu kuralın e-postanın %100'i için kullanılmaları gerektiğini gösterir.
+- *pct=100* , bu kuralın e-postanın %100'ünün kullanılması gerektiğini gösterir.
 
-- *ilke* , DMARC başarısız olursa alıcı sunucunun hangi ilkeyi izlemesi istediğini belirtir. İlkeyi yok, karantinaya alı veya reddeden olarak ayarlayın.
+- *policy* , DMARC başarısız olursa alıcı sunucunun hangi ilkeyi izlemesini istediğinizi belirtir. İlkeyi yok, karantinaya alabilir veya reddedebilirsiniz.
 
-Hangi seçeneklerin kullanıla ilgili bilgi için, MICROSOFT 365'de [DMARC](#best-practices-for-implementing-dmarc-in-microsoft-365) uygulamaya yönelik en iyi yöntemler konusunda yer alan kavramları Microsoft 365.
+Hangi seçeneklerin kullanılacağı hakkında bilgi için Microsoft 365'da [DMARC'yi uygulamaya yönelik en iyi yöntemler başlığı altında](#best-practices-for-implementing-dmarc-in-microsoft-365) verilen kavramlar hakkında bilgi sahibi olun.
 
 Örnekler:
 
-- Yok olarak ayarlanmış ilke
+- İlke yok olarak ayarlandı
 
     ```console
     _dmarc.contoso.com 3600 IN  TXT  "v=DMARC1; p=none"
     ```
 
-- Karantinaya alınmış ilke
+- İlke karantinaya alındı
 
     ```console
     _dmarc.contoso.com 3600 IN  TXT  "v=DMARC1; p=quarantine"
     ```
 
-- Reddedilen ilke kümesi
+- İlke reddedecek şekilde ayarlandı
 
     ```console
     _dmarc.contoso.com  3600 IN  TXT  "v=DMARC1; p=reject"
     ```
 
-Kaydınızı kurduktan sonra, etki alanı kayıt şirketinizin kaydını güncelleştirmeniz gerekir.
+Kaydınızı oluşturduktan sonra, etki alanı kayıt şirketinizde kaydı güncelleştirmeniz gerekir.
 
 ## <a name="dmarc-mail-public-preview-feature"></a>DMARC Mail (Genel Önizleme özelliği)
 
 > [!CAUTION]
-> Posta her gün gönderilmeyebilirsiniz ve genel önizleme sırasında raporun kendisi değişebilir. DMARC toplam rapor e-postaları Tüketici hesaplarından (örneğin, hotmail.com, outlook.com veya posta live.com beklİr.
+> Postalar günlük olarak gönderilmeyebilir ve genel önizleme sırasında raporun kendisi değişebilir. DMARC toplu rapor e-postaları Tüketici hesaplarından (hotmail.com, outlook.com veya live.com hesapları gibi) beklenebilir.
 
-Bu örnekte DMARC TXT kaydı: `dmarc.microsoft.com.   3600    IN      TXT     "v=DMARC1; p=none; pct=100; rua=mailto:d@rua.agari.com; ruf=mailto:d@ruf.agari.com; fo=1"`*rua* adresini, bu örnekte üçüncü taraf şirket Agari tarafından işlenmiş olarak bulabilirsiniz. Bu adres çözümleme için 'toplama geri bildirimi' göndermek için kullanılır ve rapor oluşturmak için kullanılır.
+Bu örnekte DMARC TXT kaydı: `dmarc.microsoft.com.   3600    IN      TXT     "v=DMARC1; p=none; pct=100; rua=mailto:d@rua.agari.com; ruf=mailto:d@ruf.agari.com; fo=1"`, bu örnekte üçüncü taraf şirket Agari tarafından işlenen *rua* adresini görebilirsiniz. Bu adres analiz için 'toplu geri bildirim' göndermek için kullanılır ve rapor oluşturmak için kullanılır.
 
 > [!TIP]
-> DMARC raporlaması sunan diğer üçüncü taraf satıcıları görüntülemek için [MISA](https://www.microsoft.com/misapartnercatalog) kataloğunu ziyaret Microsoft 365. DMARC 'rua' adresleri hakkında daha fazla bilgi için [bkz. IETF.org'un '](https://datatracker.ietf.org/doc/html/rfc7489) Etki Alanı Tabanlı İleti Kimlik Doğrulaması, Raporlama ve Uyum (DMARC)'.
+> Microsoft 365 için DMARC raporlaması sunan daha fazla üçüncü taraf satıcıyı görüntülemek için [MISA kataloğunu](https://www.microsoft.com/misapartnercatalog) ziyaret edin. DMARC 'rua' adresleri hakkında daha fazla bilgi için [IETF.org'un 'Etki Alanı Tabanlı İleti Kimlik Doğrulaması, Raporlama ve Uyumluluk (DMARC)](https://datatracker.ietf.org/doc/html/rfc7489) ' bölümüne bakın.
 
+## <a name="best-practices-for-implementing-dmarc-in-microsoft-365"></a>Microsoft 365'da DMARC uygulamak için en iyi yöntemler
 
-## <a name="best-practices-for-implementing-dmarc-in-microsoft-365"></a>DMARC'ı Microsoft 365'de uygulamak için en Microsoft 365
+DMARC'yi posta akışınızın geri kalanını etkilemeden aşamalı olarak uygulayabilirsiniz. Bu adımları izleyen bir dağıtım planı oluşturun ve uygulayın. Sonraki adıma geçmeden önce bu adımların her birini önce bir alt etki alanıyla, sonra diğer alt etki alanlarıyla ve son olarak da kuruluşunuzdaki en üst düzey etki alanıyla gerçekleştirin.
 
-DMARC'ı, posta akışınızı kalan sürelerden etkilenmeden aşamalı olarak gerçekleştirebilirsiniz. Bu adımları izleyen bir uygulama planı oluşturun ve uygulayın. Bir sonraki adıma ilerlemeden önce, bu adımlardan her biri önce bir alt etki alanı, sonra da diğer alt etki alanları ve son olarak da kuruluşta en üst düzey etki alanı ile uygulayın.
+1. DMARC'yi uygulamanın etkisini izleme
 
-1. DMARC uygulamanın etkisini izleme
+    DMARC alıcılarının bu etki alanını kullanarak gördükleri iletiler hakkında size istatistik göndermesini isteyen bir alt etki alanı veya etki alanı için basit bir izleme modu kaydıyla başlayın. İzleme modu kaydı, ilkesi yok (p=yok) olarak ayarlanmış bir DMARC TXT kaydıdır. Birçok şirket, daha kısıtlayıcı bir DMARC ilkesi yayımlayarak ne kadar e-posta kaybedecekleri konusunda emin olmadıkları için p=none ile bir DMARC TXT kaydı yayımlar.
 
-    DMARC alıcılarının, bu etki alanını kullanırken size ileti göndermelerini talep etmek üzere bir alt etki alanı veya etki alanı için basit bir izleme modu kaydıyla başlayabilirsiniz. İzleme modu kaydı, ilkesi yok (p=none) olarak ayarlanmış bir DMARC TXT kaydıdır. Birçok şirket P=none içeren bir DMARC TXT kaydı yayımlar, çünkü daha kısıtlayıcı bir DMARC ilkesi yayımlayan e-postanın ne kadarlık bir soruna neden olduğundan emin değildirler.
+    Bunu, mesajlaşma altyapınıza SPF veya DKIM uygulamadan önce bile yapabilirsiniz. Ancak, SPF ve DKIM uygulayana kadar DMARC kullanarak postaları etkili bir şekilde karantinaya alamaz veya reddedemezsiniz. SPF ve DKIM'yi tanıttıkça, DMARC aracılığıyla oluşturulan raporlar bu denetimleri geçen ve olmayan iletilerin sayılarını ve kaynaklarını sağlar. Geçerli trafiğinizin ne kadarının bu trafiğin kapsamına alınıp alına olmadığını kolayca görebilir ve sorunları giderebilirsiniz. Ayrıca kaç sahte ileti gönderildiğini ve bunların nereden gönderildiğini de görmeye başlayacaksınız.
 
-    Bunu ileti altyapınıza SPF veya DKIM'yi uygulamaya başlamadan önce bile gerçekleştirin. Bununla birlikte, SPF ve DKIM uygulayana kadar DMARC kullanarak postayı etkili bir şekilde karantinaya alama veya reddedebilirsiniz. Siz SPF ve DKIM'yi tanıtacakken, DMARC aracılığıyla oluşturulan raporlar, bu denetimleri geçiren ve geçiremediklerinden ileti sayılarını ve kaynaklarını sağlar. Yasal trafiğinizin ne kadarı olduğunu veya bu trafik kapsamında olmadığını kolayca görebilir ve sorunları giderebilirsiniz. Ayrıca, dolandırıcılık amaçlı iletilerin kaç kez gönderildiğini ve bunların nereden gönderildiğini de görmeye başlarsınız.
+2. Dış posta sistemlerinin DMARC'de başarısız olan postaları karantinaya almalarını isteme
 
-2. DMARC'da başarısız olan dış posta sistemlerinin postayı karantinaya alınmasını talep eder
+    Geçerli trafiğinizin tamamının veya çoğunun SPF ve DKIM tarafından korunduğunu düşünüyorsanız ve DMARC'yi uygulamanın etkisini anladığınızda, bir karantina ilkesi uygulayabilirsiniz. Karantina ilkesi, ilkesi karantinaya (p=karantina) olarak ayarlanmış bir DMARC TXT kaydıdır. Bunu yaparak, DMARC alıcılarından etki alanınızdan DMARC'den başarısız olan iletileri müşterilerinizin gelen kutuları yerine bir istenmeyen posta klasörünün yerel eşdeğerine yerleştirmelerini istiyorsunuz.
 
-    Yasal trafiğinizin çoğunun veya bir çoğunun SPF ve DKIM tarafından korun olduğuna inanıyor ve DMARC'yi uygulamanın etkisini anlıyoruzsa, karantina ilkesi de  uygulanır. Karantina ilkesi, ilkesi karantina (p=karantina) olarak ayarlanmış bir DMARC TXT kaydıdır. Bunu yaparak, DMARC alıcılarından, etki alanınıza gelen ve DMARC'de başarısız olan iletileri, müşterilerin gelen kutuları yerine istenmeyen posta klasörünün yerel eşdeğerlerine koymalarını istiyor olursunuz.
+3. Dış posta sistemlerinin DMARC'de başarısız olan iletileri kabul etmemesi isteği
 
-3. Dış posta sistemlerinin DMARC başarısız olan iletileri kabul etmelerini talep etme
-
-    Son adım, reddetme ilkesi uygulamaktır. Reddetme ilkesi, ilkesinde reddetme ayarı (p=reddet) olan bir DMARC TXT kaydıdır. Bunu yapmak için, DMARC alıcıların DMARC denetimlerini başarısız olan iletileri kabul etmelerini istemeye devam edersiniz.
+    Son adım bir reddetme ilkesi uygulamaktır. Reddetme ilkesi, ilkesi reddedecek (p=reddet) olarak ayarlanmış bir DMARC TXT kaydıdır. Bunu yaptığınızda DMARC alıcılarından DMARC denetimlerinde başarısız olan iletileri kabul etmelerini istemeniz gerekir.
 
 4. Alt etki alanı için DMARC nasıl ayarlanır?
 
-   DMARC, DNS'de TXT kaydı olarak bir ilke yayımlar ve hiyerarşik olur (örneğin, contoso.com için yayımlanan bir ilke, alt etki alanı için açık olarak farklı bir ilke tanımlanmamışsa sub.domain.contonos.com'e uygulanır). Kuruluşlar daha geniş kapsam için daha az sayıda yüksek düzeyli DMARC kaydı belirteci olarak bu yararlı olur. Alt etki alan adlarının en üst düzey etki alanının DMARC kaydını devralmalarını istemiyorken, açık alt etki alanı DMARC kayıtlarını yapılandırmak için dikkat gerekir.
+   DMARC, DNS'de bir ilkeyi TXT kaydı olarak yayımlayarak uygulanır ve hiyerarşiktir (örneğin, alt etki alanı için farklı bir ilke açıkça tanımlanmadığı sürece sub.domain.contonos.com için contoso.com için yayımlanan bir ilke geçerli olur). Kuruluşlar daha geniş kapsamlı bir kapsama için daha az sayıda üst düzey DMARC kaydı belirtebildiğinden bu yararlı olur. Alt etki alanının en üst düzey etki alanının DMARC kaydını devralmasını istemediğiniz açık alt etki alanı DMARC kayıtlarını yapılandırmaya özen gösterilmelidir.
 
-   Ayrıca, alt etki alanları değeri ekleyerek e-posta göndermeleri gerekmaması gereken bir zamanda DMARC için joker karakter türünde bir ilke de `sp=reject` eklersiniz. Örneğin:
+   Ayrıca, değeri ekleyerek alt etki alanları e-posta göndermemesi gerektiğinde DMARC için joker karakter türü ilkesi `sp=reject` ekleyebilirsiniz. Örneğin:
 
    ```text
    _dmarc.contoso.com. TXT "v=DMARC1; p=reject; sp=reject; ruf=mailto:authfail@contoso.com; rua=mailto:aggrep@contoso.com"
    ```
 
-## <a name="how-microsoft-365-handles-outbound-email-that-fails-dmarc"></a>DMARC Microsoft 365 başarısız olan giden e-postayı nasıl işleyebilirsiniz?
+## <a name="how-microsoft-365-handles-outbound-email-that-fails-dmarc"></a>Microsoft 365, DMARC'de başarısız olan giden e-postaları nasıl işler?
 
-Bir ileti Microsoft 365'den gidense ve DMARC'de başarısız olursa ve ilkeyi p=karantina veya p=reddet olarak ayardınız, ileti giden iletiler için Yüksek riskli teslim havuzu üzerinden [yönlendirildi](high-risk-delivery-pool-for-outbound-messages.md). Giden e-posta için geçersiz kılmaz.
+bir ileti Microsoft 365 giden ve DMARC başarısız olursa ve ilkeyi p=quarantine veya p=reject olarak ayarladıysanız, ileti [giden iletiler için Yüksek riskli teslim havuzu](high-risk-delivery-pool-for-outbound-messages.md) üzerinden yönlendirilir. Giden e-posta için geçersiz kılma yoktur.
 
-DMARC reddetme ilkesi yayımlarsanız (p=reject), Microsoft 365'daki başka hiçbir müşteri etki alanınızı doğrulayamaz, çünkü iletiler hizmet üzerinden giden bir iletiyi geçişte etki alanınız için SPF veya DKIM'yi geçemez. Öte yandan, DMARC reddetme ilkesi yayımlarsanız ancak tüm e-postanız Microsoft 365 aracılığıyla kimliği doğrulanmamışsa, bir bazıları gelen e-posta için istenmeyen posta olarak işaretlenir (yukarıda açıklandığı gibi) veya SPF yayımlamaz ve bu ilkeyi hizmet üzerinden dışarı aktarmayı denerseniz reddedilir. Örneğin, DMARC TXT kaydınızı ekleyebilirsiniz ve etki alanınız adına posta gönderecek sunucuların ve uygulamaların IP adreslerinden bir birini ekleyebilirsiniz.
+Bir DMARC reddetme ilkesi yayımlarsanız (p=reddet), Microsoft 365 başka hiçbir müşteri etki alanınızı yanıltamaz çünkü iletiler hizmetten giden bir ileti geçirirken etki alanınız için SPF veya DKIM geçiremez. Ancak bir DMARC reddetme ilkesi yayımlarsanız ancak e-postanızın tamamı Microsoft 365 aracılığıyla doğrulanmamışsa, bazıları gelen e-posta için istenmeyen posta olarak işaretlenebilir (yukarıda açıklandığı gibi) veya SPF'yi yayımlamaz ve hizmet üzerinden giden geçiş yapmaya çalışırsanız reddedilir. Örneğin, DMARC TXT kaydınızı oluştururken etki alanınız adına posta gönderen sunucular ve uygulamalar için BAZı IP adreslerini eklemeyi unutursanız bu durum ortaya çıkar.
 
-## <a name="how-microsoft-365-handles-inbound-email-that-fails-dmarc"></a>DMARC Microsoft 365 başarısız olan gelen e-postayı nasıl işleyebilirsiniz?
+## <a name="how-microsoft-365-handles-inbound-email-that-fails-dmarc"></a>Microsoft 365, DMARC'de başarısız olan gelen e-postaları nasıl işler?
 
-Gönderen sunucunun DMARC `p=reject`ilkesi ise, [Exchange Online Protection](exchange-online-protection-overview.md) (EOP) iletiyi reddetmek yerine kimlik işareti olarak işaretler. Başka bir deyişle, gelen e-posta için Microsoft 365 ve `p=reject` aynı `p=quarantine` şekilde davranabilirsiniz. Yöneticiler, kimlik avı önleme ilkesi içinde kimlik sahtesi olarak sınıflandırılmış [iletilerde eylemi tanımlayabilir](set-up-anti-phishing-policies.md).
+Gönderen sunucunun DMARC ilkesi ise`p=reject`[, Exchange Online Protection](exchange-online-protection-overview.md) (EOP) iletiyi reddetmek yerine sahte olarak işaretler. Başka bir deyişle, gelen e-posta için Microsoft 365 ve aynı şekilde davranır `p=reject` `p=quarantine`. Yöneticiler [, kimlik avı önleme ilkesi](set-up-anti-phishing-policies.md) içinde kimlik sahtekarlığı olarak sınıflandırılan iletilere yönelik eylemi tanımlayabilir.
 
-Microsoft 365 e-posta DMARC başarısız olabilir, çünkü böyle yapılandırılır. Örneğin, bir ileti bir posta listesine gönderilirse ve bu da iletiyi tüm liste katılımcılarına iletirse, DMARC başarısız olabilir. Bu Microsoft 365 reddedilirse, insanlar yasal e-postayı kaybedebilir ve e-postayı alma yolu yoktur. Bunun yerine, bu iletiler yine de DMARC başarısız olur, ancak istenmeyen posta olarak işaretlenir ve reddedilir. İsterseniz, kullanıcılar şu yöntemlerle bu iletileri gelen kutularına almaya devam edebilirsiniz:
+Microsoft 365, bazı geçerli e-postalar DMARC'de başarısız olabileceği için bu şekilde yapılandırılır. Örneğin, bir ileti tüm liste katılımcılarına ileti gönderen bir posta listesine gönderilirse DMARC başarısız olabilir. Microsoft 365 bu iletileri reddederse, kişiler geçerli e-postayı kaybedebilir ve bu e-postayı almalarının hiçbir yolu yoktur. Bunun yerine, bu iletiler DMARC'de başarısız olmaya devam eder, ancak istenmeyen posta olarak işaretlenir ve reddedılmaz. İstenirse, kullanıcılar bu iletileri şu yöntemlerle gelen kutularına almaya devam edebilir:
 
 - Kullanıcılar, e-posta istemcilerini kullanarak güvenilir gönderenleri tek tek ekler.
 
-- Yöneticiler, kimliği [doğrun burada yer alan](learn-about-spoof-intelligence.md) gönderenden gelen iletilere izin vermek için bilgi oturumları veya Kiracı İzin/Engelleme Listesi'ni kullanabilir.[](tenant-allow-block-list.md)
+- Yöneticiler kimlik sahtekarlığına sahip gönderenden gelen iletilere izin vermek için kimlik [sahtekarlığına ilişkin bilgi sahtekarlık içgörülerini](learn-about-spoof-intelligence.md) veya [Kiracı İzin Ver/Engelle Listesi'ni](tenant-allow-block-list.md) kullanabilir.
 
-- Yöneticiler, bu Exchange gönderenler için iletilere izin veren tüm kullanıcılar için bir posta akışı kuralı (aktarım kuralı olarak da bilinir) oluşturabilir.
+- Yöneticiler, söz konusu gönderenler için iletilere izin veren tüm kullanıcılar için bir Exchange posta akışı kuralı (taşıma kuralı olarak da bilinir) oluşturur.
 
-Daha fazla bilgi için bkz [. Güvenilir gönderen listeleri oluşturma](create-safe-sender-lists-in-office-365.md).
+Daha fazla bilgi için bkz. [Güvenilir gönderen listeleri oluşturma](create-safe-sender-lists-in-office-365.md).
 
-## <a name="how-microsoft-365-utilizes-authenticated-received-chain-arc"></a>Kimliği Microsoft 365 Alınan Zinciri (ARC) nasıl kullanır?
+## <a name="how-microsoft-365-utilizes-authenticated-received-chain-arc"></a>Microsoft 365 Kimliği Doğrulanmış Alınan Zincir 'i (ARC) nasıl kullanır?
 
-Bu çalışma Microsoft 365 barındırılan tüm posta kutuları, artık iletilerin daha iyi teslim edilebilirliği ve gelişmiş anti-spoofing korumasıyla ARC avantajından yararlanabilir. E-posta kaynak sunucudan alıcı posta kutusuna yönlendirilen zaman, ARC tüm katılımcı aracılardan veya atlamalardan gelen e-posta kimlik doğrulama sonuçlarını korur. ARC'dan önce, iletme kuralları veya otomatik imzalar gibi e-posta yönlendirme aracıları tarafından yapılan değişiklikler, e-posta alıcı posta kutusuna ulaşana kadar DMARC hatalarına neden olabilir. ARC ile, kimlik doğrulama sonuçlarının şifreleme özelliği, Microsoft 365 e-posta gönderenin kimlik doğrulamasını doğrulamaya olanak sağlar.
+Microsoft 365'da barındırılan tüm posta kutuları artık iletilerin daha iyi teslim edilebilirliği ve gelişmiş kimlik sahtekarlığı önleme koruması ile ARC'ın avantajından yararlanacaktır. ARC, bir e-posta kaynak sunucudan alıcı posta kutusuna yönlendirildiğinde tüm katılan aracıların veya atlamaların e-posta kimlik doğrulama sonuçlarını korur. ARC'ın öncesinde, iletme kuralları veya otomatik imzalar gibi e-posta yönlendirmedeki aracılar tarafından gerçekleştirilen değişiklikler, e-posta alıcı posta kutusuna ulaştığında DMARC hatalarına neden olabilir. ARC ile kimlik doğrulama sonuçlarının şifrelemeyle korunması, Microsoft 365 bir e-postayı gönderenin orijinalliğini doğrulamasını sağlar.
 
-Microsoft 365 şu anda Microsoft ARC Sealer olduğunda kimlik doğrulama sonuçlarını doğrulamak için ARC kullansa da, gelecekte üçüncü taraf ARC kapaticileri için destek eklemeyi planlıyoruz.
+Microsoft 365 şu anda MICROSOFT ARC Sealer olduğunda kimlik doğrulama sonuçlarını doğrulamak için ARC kullanıyor ancak gelecekte üçüncü taraf ARC sızdırmazları için destek eklemeyi planlıyor.
 
-## <a name="troubleshooting-your-dmarc-implementation"></a>DMARC uygulama sorun giderme
+## <a name="troubleshooting-your-dmarc-implementation"></a>DMARC uygulamanızın sorunlarını giderme
 
-Etki alanınıza yapılan MX kayıtlarını ilk girdi EOP değilken yapılandırdıysanız, etki alanınız için DMARC hataları zorlanmaz.
+EOP'nin ilk giriş olmadığı durumlarda etki alanınızın MX kayıtlarını yapılandırdıysanız, etki alanınız için DMARC hataları uygulanmaz.
 
-Müşteriysiniz ve etki alanınıza ek olarak etki alanının birincil MX kaydı EOP'ye işaret etse bile, DMARC'nin avantajlarından yararlanamayacaktır. Örneğin, MX kaydını şirket içi posta sunucunuza işaret ediyor ve sonra e-postayı bir bağlayıcı kullanarak EOP'ye yönlendiriyorsanız, DMARC çalışmayacaktır. Bu senaryoda, alıcı etki alanı birincil MX Accepted-Domains EOP değildir. Örneğin, örneğin, contoso.com MX'in kendisine göre olduğunu ve EOP'i ikincil MX kaydı olarak kullandığını varsayalım; contoso.com'un MX kaydı aşağıdaki gibi olur:
+Müşteriyseniz ve etki alanınızın birincil MX kaydı EOP'ye işaret etmiyorsa DMARC'nin avantajlarından yararlanamıyabilirsiniz. Örneğin, MX kaydını şirket içi posta sunucunuza yönlendirir ve ardından bağlayıcı kullanarak e-postayı EOP'ye yönlendirirseniz DMARC çalışmaz. Bu senaryoda, alıcı etki alanı Accepted-Domains biridir ancak EOP birincil MX değildir. Örneğin, contoso.com MX'in kendisine işaret edip ikincil MX kaydı olarak EOP kullandığını varsayalım; contoso.com'un MX kaydı aşağıdaki gibi görünür:
 
 ```console
 contoso.com     3600   IN  MX  0  mail.contoso.com
 contoso.com     3600   IN  MX  10 contoso-com.mail.protection.outlook.com
 ```
 
-E-postanın çoğu veya çoğu birincil MX mail.contoso.com EOP'ye yönlendirilen e-posta olur. Bazı durumlarda, EOP'leri hiç MX kaydı olarak listeleyem ve e-postanızı yönlendiren bağlayıcıları bağlayın. DMARC doğrulamasının yapılması için EOP'nin ilk girdisi olması gerekir. Yalnızca doğrulamayı sağlar; tüm şirket içi/O365 olmayan sunucuların DMARC denetimleri yapmalarını sağlar.  DMARC TXT kaydını ayar takımınız, müşterinin etki alanı için zorunlu tutul almaya (sunucu için değil) uygundur, ancak bu zoru aslında alıcı sunucuya uygulanır.  Alıcı sunucu olarak EOP'i ayardısanız, DMARC zorlaması EOP tarafından esnetir.
+Birincil MX olduğundan, e-postaların tümü veya çoğu önce mail.contoso.com yönlendirilir ve ardından posta EOP'ye yönlendirilir. Bazı durumlarda, EOP'yi MX kaydı olarak listelemeyebilir ve e-postanızı yönlendirmek için bağlayıcıları bağlamanız yeterlidir. DMARC doğrulamasının yapılması için EOP'nin ilk giriş olması gerekmez. Tüm şirket içi/O365 dışı sunucuların DMARC denetimleri yapacağından emin olmak için doğrulamayı güvence altına alır.  DMARC TXT kaydını ayarladığınızda DMARC, bir müşterinin etki alanı (sunucu için değil) için zorunlu tutulmaya uygundur, ancak uygulamayı gerçekten yapmak alıcı sunucuya aittir.  EOP'yi alıcı sunucu olarak ayarlarsanız EOP, DMARC zorlamasını yapar.
 
 :::image type="content" source="../../media/Tp_DMARCTroublehoot.png" alt-text="DMARC için sorun giderme grafiği" lightbox="../../media/Tp_DMARCTroublehoot.png":::
 
 ## <a name="for-more-information"></a>Daha fazla bilgi için
 
-DMARC hakkında daha fazla bilgi mi istiyor musunuz? Bu kaynaklar yardımcı olabilir.
+DMARC hakkında daha fazla bilgi mi istiyorsunuz? Bu kaynaklar yardımcı olabilir.
 
-- [İstenmeyen posta önleme ileti üst bilgileri](anti-spam-message-headers.md), DMARC denetimleri için Microsoft 365 dizimi ve üst bilgi alanlarını içerir.
+- [İstenmeyen postadan koruma iletisi üst bilgileri](anti-spam-message-headers.md), DMARC denetimleri için Microsoft 365 tarafından kullanılan söz dizimi ve üst bilgi alanlarını içerir.
 
-- M3AAWG (Mesajlaşma,<sup></sup> Kötü Amaçlı Yazılım, Mobil Kötü Amaçlı Yazılımdan Koruma Çalışma Grubu) ile [DMARC](https://www.m3aawg.org/activities/training/dmarc-training-series) Eğitim Serisini edin.
+- M3AAWG'den (Mesajlaşma<sup></sup>, Kötü Amaçlı Yazılım, Mobil Kötüye Kullanımı Önleme Çalışma Grubu) [DMARC Eğitim Serisi'ni](https://www.m3aawg.org/activities/training/dmarc-training-series) alın.
 
-- Denetim listesini [dmarcian'da kullanın](https://space.dmarcian.com/deployment/).
+- [Dmarcian'daki](https://space.dmarcian.com/deployment/) denetim listesini kullanın.
 
-- Doğrudan dosyanın [kaynağına DMARC.org](https://dmarc.org).
+- [Doğrudan DMARC.org'daki](https://dmarc.org) kaynağa gidin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[How Microsoft 365 uses Sender Policy Framework (SPF) to prevent spoofing](how-office-365-uses-spf-to-prevent-spoofing.md)
+[Microsoft 365 sahtekarlık önlemek için Sender Policy Framework'i (SPF) nasıl kullanır?](how-office-365-uses-spf-to-prevent-spoofing.md)
 
-[**SPF'yi Microsoft 365 spoofing'i önlemeye yardımcı olmak için ayarlama**](set-up-spf-in-office-365-to-help-prevent-spoofing.md)
+[**Sahtekarlık önlemeye yardımcı olmak için spf'yi Microsoft 365'de ayarlama**](set-up-spf-in-office-365-to-help-prevent-spoofing.md)
 
-[**Aynı adreste özel etki alanınıza gönderilen giden e-postayı doğrulamak için DKIM Microsoft 365**](use-dkim-to-validate-outbound-email.md)
+[**Microsoft 365'de özel etki alanınızdan gönderilen giden e-postayı doğrulamak için DKIM kullanma**](use-dkim-to-validate-outbound-email.md)

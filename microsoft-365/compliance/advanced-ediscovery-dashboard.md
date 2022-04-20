@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Gözden geçirme stratejinizi geliştirmenize yardımcı olacak eğilimleri veya önemli istatistikleri belirlemek üzere corpus'unuzu hızla analiz etmek üzere gözden geçirme kümeleri için Microsoft Purview eBulma (Premium) panosunu kullanın.
-ms.openlocfilehash: 8814bbf645686529aec43f710519c1bd4891c1b3
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 1412df381fff228c37052a6d75113c3a4c4cfcba
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943117"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995898"
 ---
 # <a name="ediscovery-premium-dashboard-for-review-sets"></a>Gözden geçirme kümeleri için eBulma (Premium) panosu
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eKeşif 'te (Premium) bazı durumlarda, gözden geçirilmesi gereken çok sayıda belgeniz ve e-posta iletileriniz olabilir. Gözden geçirme işlemine başlamadan önce, gözden geçirme stratejinizi geliştirmenize yardımcı olacak eğilimleri veya önemli istatistikleri belirlemek için corpus'unuzu hızla analiz etmek isteyebilirsiniz. Bunu yapmak için, corpus'unuzu hızla analiz etmek üzere gözden geçirme kümeleri için eBulma (Premium) panosunu kullanabilirsiniz.
 

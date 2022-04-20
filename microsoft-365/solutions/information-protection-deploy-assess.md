@@ -17,12 +17,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 description: Veri gizliliği düzenlemelerini, ilgili senaryoları, hazır olma durumunuzu ve Microsoft 365 ortamınızdaki hassas bilgi türlerini belirleyin.
-ms.openlocfilehash: 967c64dee2d99f41b3c2a1b6a193730dcd75811a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: e2d87599315e7bb43b289d74b5f192b29aecd965
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947527"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973484"
 ---
 # <a name="assess-data-privacy-risks-and-identify-sensitive-items-with-microsoft-365"></a>veri gizliliği risklerini değerlendirme ve Microsoft 365 ile hassas öğeleri tanımlama
 
@@ -190,7 +190,7 @@ GDPR değerlendirmesi şu bölümlerden oluşur:
 
 Bu adım, belirli yasal denetimlere tabi olan belirli hassas bilgi türlerinin tanımlanmasını ve bunların Microsoft 365 ortamınızda oluşumunu içerir.
 
-Ortamınızda kişisel içerik içeren içerik bulmak, daha önce Uyumluluk Arama, eBulma, Advanced eDiscovery, DLP ve denetimin bir birleşimini içeren, zor bir görev olabilir.
+Ortamınızda kişisel içerik içeren içerik bulmak, daha önce Uyumluluk Arama, eBulma, eBulma (Premium), DLP ve denetim kullanmanın bir birleşimini içeren önemli bir görev olabilir.
 
 Microsoft Purview uyumluluk portalındaki yeni **Veri Sınıflandırma** çözümü ile bu, kişisel verilerle ilgili olanlar da dahil olmak üzere yerleşik veya özel hassas bilgi türleriyle çalışan [İçerik Gezgini](../compliance/data-classification-content-explorer.md) özelliğiyle çok daha kolay hale gelmiştir.
 

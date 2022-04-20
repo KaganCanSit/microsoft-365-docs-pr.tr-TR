@@ -16,14 +16,16 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Microsoft 365 eBulma araçlarının e-posta iletilerine eklenmiş ve SharePoint Online ve OneDrive İş'da depolanan şifrelenmiş belgeleri nasıl işlediğini öğrenin.
-ms.openlocfilehash: 91eef14c1cb4dc91657a1d9a26ab00b1eb6f6d92
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: e010ef1ff169467b442e137bc31d3640aa5a8cb4
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948781"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994468"
 ---
 # <a name="decryption-in-microsoft-365-ediscovery-tools"></a>Microsoft 365 eBulma araçlarında şifre çözme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Şifreleme, dosya koruma ve bilgi koruma stratejinizin önemli bir parçasıdır. Her türden kuruluş, kuruluş içindeki hassas içeriği korumak ve yalnızca doğru kişilerin bu içeriğe erişmesini sağlamak için şifreleme teknolojisini kullanır.
 
@@ -44,7 +46,7 @@ Microsoft eKeşif araçları, Microsoft şifreleme teknolojileriyle şifrelenmi�
 
 Aşağıdaki tabloda, SharePoint ve OneDrive e-posta iletilerine ve şifrelenmiş belgelere eklenmiş şifrelenmiş dosyalar üzerinde Microsoft 365 eBulma araçlarında gerçekleştirilebilecek desteklenen görevler tanımlanır. Bu desteklenen görevler, arama ölçütlerine uyan şifrelenmiş dosyalar üzerinde gerçekleştirilebilir. değeri `N/A` , işlevselliğin ilgili eBulma aracında kullanılamadiğini gösterir.
 
-|eBulma görevi  |İçerik arama  |eBulma (Standart)  |eBulma (Premium)  |
+|eBulma görevi  |İçerik arama  |eKeşif (Standart)  |eKeşif (Premium)  |
 |:---------|:---------|:---------|:---------|
 |Sitelerde ve e-posta eklerinde şifrelenmiş dosyalarda içerik <sup>arama1</sup>     |Hayır      |Hayır      |Evet      |
 |E-postaya eklenmiş şifrelenmiş dosyaların önizlemesini görüntüleme     |Evet      |Evet     |Evet       |

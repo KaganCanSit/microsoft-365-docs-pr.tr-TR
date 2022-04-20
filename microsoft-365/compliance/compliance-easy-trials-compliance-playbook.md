@@ -15,12 +15,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview çözümleri deneme playbook'u.
-ms.openlocfilehash: 5136ceb33f4fb09345ee942b8d411d14952befc5
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 4544e07baa5b8d2b89991d9a31c84a2d7cefb7f8
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952786"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973783"
 ---
 # <a name="trial-playbook-microsoft-purview-solutions"></a>Deneme playbook'u: Microsoft Purview çözümleri
 
@@ -225,9 +225,9 @@ Kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği korumak, t
 > [!TIP]
 > Deneme için en iyi uygulama: 1. Gün
 
-Advanced eDiscovery erişmek veya bir Advanced eDiscovery servis talebinin üyesi olarak eklemek için kullanıcıya uygun izinlerin atanması gerekir.
+eBulma 'ya (Premium) erişmek veya bir eBulma (Premium) olayının üyesi olarak eklemek için, kullanıcıya uygun izinlerin atanması gerekir.
 
-1. [Advanced eDiscovery ayarlama – eBulma izinlerini atama](get-started-with-advanced-ediscovery.md#step-2-assign-ediscovery-permissions)
+1. [eBulma ayarlama (Premium) – eBulma izinlerini atama](get-started-with-advanced-ediscovery.md#step-2-assign-ediscovery-permissions)
 1. [Bir vakaya üye ekleme veya kaldırma](add-or-remove-members-from-a-case-in-advanced-ediscovery.md)
 
 ### <a name="step-2-required-create-a-case"></a>2. Adım (gerekli): Servis Talebi Oluşturma
@@ -235,9 +235,9 @@ Advanced eDiscovery erişmek veya bir Advanced eDiscovery servis talebinin üyes
 > [!TIP]
 > Deneme için en iyi uygulama: İlk 30 gün içinde oluşturma
 
-Daha fazla kuruluş, kritik eBulma işlemleri için Microsoft 365'da Advanced eDiscovery çözümünü kullanır. Bu, mevzuat isteklerine, araştırmalara ve davalara yanıt vermeyi içerir.
+Daha fazla kuruluş eBulma (Premium) çözümünü kritik eBulma işlemleri için Microsoft 365 kullanır. Bu, mevzuat isteklerine, araştırmalara ve davalara yanıt vermeyi içerir.
 
-1. Advanced eDiscovery yönetme: [Güvenlik & Uyumluluk Merkezi'ni kullanarak Advanced eDiscovery yapılandırmayı, servis taleplerini yönetmeyi, Advanced eDiscovery iş akışını yönetmeyi ve Advanced eDiscovery arama sonuçlarını analiz etmeyi öğrenin](/learn/modules/manage-advanced-ediscovery).
+1. eBulmayı Yönetme (Premium) – [eBulma (Premium) yapılandırmayı, Güvenlik & Uyumluluk Merkezi'ni kullanarak servis taleplerini yönetmeyi, eBulma'da (Premium) bir iş akışını yönetmeyi ve eBulma (Premium) arama sonuçlarını analiz etmeyi öğrenin](/learn/modules/manage-advanced-ediscovery).
 1. [Advance eDiscovery'nin yeni servis talebi biçimini kullanarak eBulma olayı oluşturma](advanced-ediscovery-new-case-format.md)
 1. [Bir olayı kapatma veya silme](close-or-delete-case.md) - Yasal dava veya araştırma tamamlandığında, kapatabilir veya silebilirsiniz. Kapatılan bir olayı da yeniden açabilirsiniz.
 
@@ -245,9 +245,9 @@ Daha fazla kuruluş, kritik eBulma işlemleri için Microsoft 365'da Advanced eD
 
 Kuruluşunuzdaki kişilerin örnek oluşturmaya ve kullanmaya başlamasına izin vermek için, kuruluşunuzdaki tüm durumlar için geçerli olan genel ayarları yapılandırmanız gerekir. Şu anda tek genel ayar **avukat-istemci ayrıcalık algılamadır** (gelecekte daha fazla genel ayar sağlanacaktır).
 
-1. [Advanced eDiscovery ayarlama – Genel Ayarlar](get-started-with-advanced-ediscovery.md#step-3-configure-global-settings-for-ediscovery-premium)
+1. [eBulma ayarlama (Premium) – Genel Ayarlar](get-started-with-advanced-ediscovery.md#step-3-configure-global-settings-for-ediscovery-premium)
 1. [Arama ve analiz ayarlarını yapılandırma](configure-search-and-analytics-settings-in-advanced-ediscovery.md)
-1. [Advanced eDiscovery'da işleri yönetme](managing-jobs-ediscovery20.md)
+1. [eBulma'da işleri yönetme (Premium)](managing-jobs-ediscovery20.md)
 
 ### <a name="step-4-optional-compliance-boundaries"></a>4. Adım (isteğe bağlı): [Uyumluluk Sınırları](set-up-compliance-boundaries.md)
 
@@ -266,7 +266,7 @@ eBulma araştırmaları için uyumluluk sınırlarını ayarlayın:
 
 Exchange posta kutularında e-postayı, SharePoint sitelerdeki ve OneDrive konumlardaki belgeleri ve Skype Kurumsal anlık ileti konuşmalarını hızla bulmak için Microsoft Purview uyumluluk portalındaki İçerik arama aracını kullanın. Microsoft Teams ve Microsoft 365 Grupları gibi işbirliği araçlarında e-posta, belge ve anlık ileti konuşmalarını aramak için içerik arama aracını kullanabilirsiniz.
 
-- [Advanced eDiscovery arama hakkında daha fazla bilgi edinin](search-for-content.md#search-for-content)
+- [eBulma (Premium) araması hakkında daha fazla bilgi edinin](search-for-content.md#search-for-content)
 
 ## <a name="information-protection"></a>Information Protection
 

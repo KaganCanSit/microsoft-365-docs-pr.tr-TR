@@ -1,7 +1,7 @@
 ---
-title: Insider risk yönetimi vakaları
-description: Risk yönetimiyle ilgili Insider risk Microsoft 365
-keywords: Microsoft 365, insider risk yönetimi, risk yönetimi, uyumluluk
+title: Insider risk yönetimi durumları
+description: Microsoft Purview'da insider risk yönetimi durumları hakkında bilgi edinin
+keywords: Microsoft 365, Microsoft Purview, insider riski, risk yönetimi, uyumluluk
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -13,229 +13,231 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 59933705bb113e4ad23b12fe8bf00e8d0ca2e701
-ms.sourcegitcommit: 9c8eca862a2f0fdca7a66c641e382e37fcaefa10
+ms.openlocfilehash: 687eb92693d3343fb0ef5b2392d4622d9af4bb9d
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2022
-ms.locfileid: "63775818"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64971957"
 ---
-# <a name="insider-risk-management-cases"></a>Insider risk yönetimi vakaları
+# <a name="insider-risk-management-cases"></a>Insider risk yönetimi durumları
 
-Durumlar, insider risk yönetiminin merkezindedir ve ilkeleriniz içinde tanımlanmış risk göstergeleri tarafından oluşturulan sorunları derinden incelemenize ve üzerinde çalışmanıza olanak sağlar. Olaylar, kullanıcının uyumlulukla ilgili bir sorunu gidermek için başka bir işlem gerektirebilecek durumlarda uyarılardan el ile oluşturulur. Her olay tek bir kullanıcıya yöneliktir ve kullanıcı için mevcut bir vakaya veya yeni bir vakaya birden çok uyarı eklenebilir.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Olayın ayrıntılarını araştırdikten sonra, aşağıdakiler ile eyleme geçebilirsiniz:
+Vakalar, içeriden risk yönetiminin merkezidir ve ilkelerinizde tanımlanan risk göstergeleri tarafından oluşturulan sorunları derinlemesine araştırmanıza ve üzerinde işlem yapmanızı sağlar. Servis talepleri, kullanıcının uyumlulukla ilgili bir sorunu gidermek için başka bir eyleme ihtiyaç duyulduğu durumlarda uyarılardan el ile oluşturulur. Her servis talebinin kapsamı tek bir kullanıcı olarak belirlenmiştir ve mevcut bir servis talebine veya yeni bir servis talebine kullanıcı için birden çok uyarı eklenebilir.
+
+Bir olayın ayrıntılarını araştırdıktan sonra şunları yaparak işlem yapabilirsiniz:
 
 - kullanıcıya bildirim gönderme
-- durum olarak çözümleme
-- ServiceNow örneğiniz veya bir e-posta alıcısı ile vakayı paylaşma
-- davanın bir iş araştırmasından Advanced eDiscovery yükseltme
+- olayı iyi huylu olarak çözümleme
+- servis talebini ServiceNow örneğinle veya bir e-posta alıcısıyla paylaşma
+- eBulma (Premium) araştırması için olayı yükseltme
 
-[Insider risk yönetimiyle ilgili davaların nasıl](https://www.youtube.com/watch?v=UONUSmkRC8s) araştırıldığına ve yönetilişine genel bir bakış için Insider Risk Yönetimi soruşturması ve yükseltme videosunu gözdenın.
+Insider risk yönetiminde vakaların nasıl araştırıldığını ve yönetildiğini gösteren bir genel bakış için [Insider Risk Yönetimi Araştırması ve Yükseltme videosunu](https://www.youtube.com/watch?v=UONUSmkRC8s) gözden geçirin.
 
-## <a name="cases-dashboard"></a>Vakalar panosu
+## <a name="cases-dashboard"></a>Servis Talepleri panosu
 
-Insider risk yönetimi **Vakalar panosu** , vakaları görüntüleme ve bu vakalara göre işlem görüntülemeye olanak sağlar. Panoda yer alan her rapor pencere öğesi, son 30 günle ilgili bilgileri görüntüler.
+Insider risk yönetimi **Servis Talepleri panosu** , servis taleplerini görüntülemenize ve üzerinde işlem yapmanızı sağlar. Panodaki her rapor pencere öğesi son 30 güne ilişkin bilgileri görüntüler.
 
-- **Etkin durumlar**: soruşturma kapsamındaki etkin vakaların toplam sayısıdır.
-- **Son 30 gün içinde vakalar**: Etkin ve Kapalı durumuna göre sıralanmış, oluşturulan *toplam* *vaka* sayısı.
-- **İstatistikler**: Saat, gün veya ay olarak listelenen etkin vakaların ortalama süresi.
+- **Etkin vakalar**: Araştırma kapsamındaki etkin vakaların toplam sayısı.
+- **Son 30 gün içindeki servis talepleri**: Oluşturulan toplam servis talebi sayısı, *Etkin* ve *Kapalı* durumuna göre sıralanır.
+- **İstatistikler**: Etkin servis taleplerinin saat, gün veya ay olarak listelenen ortalama süresi.
 
-Servis durumu sırası, aşağıdaki olay özniteliklerinin geçerli durumuna ek olarak, tüm etkin ve kapalı durumdaki kuruluş durumlarını da listeler:
+Servis talebi kuyruğu, aşağıdaki servis talebi özniteliklerinin geçerli durumuna ek olarak kuruluşunuz için tüm etkin ve kapalı servis taleplerini listeler:
 
-- **Vaka adı**: Bir uyarının onaylandığı ve oluşturulduğunda tanımlanan vakanın adı.  
-- **Durum**: Etkin veya *Kapalı durumdadır**.*
-- **Kullanıcı**: Olay için kullanıcı. Kullanıcı adları için anonimleştirme etkinleştirilirse, anonimleştirilmiş bilgiler görüntülenir.
-- **Büyük/küçük** harf açma zamanı: Vakanın açılmasından bu yana geçen zaman.
-- **Toplam ilke uyarıları**: İlkenin olayla eşleşme sayısı. Bu sayı, vakaya yeni uyarılar eklenirse artabilir.
-- **Büyük/küçük** harf son güncelleştirme: Olay durumunda bir büyük/küçük harf notu veya değişiklik oldu, bu yana geçen zaman.
-- **Son güncelleştirme**: Insider risk yönetimi analisti veya bu vakayı son güncelleştirmede tercihen tercihlerinin adı.
+- **Servis talebi adı**: Bir uyarı onaylandığında ve servis talebi oluşturulduğunda tanımlanan servis talebi adı.  
+- **Durum**: Servis talebinin durumu( *Etkin* veya *Kapalı*).
+- **Kullanıcı**: Servis talebi için kullanıcı. Kullanıcı adları için anonimleştirme etkinleştirilirse anonimleştirilmiş bilgiler görüntülenir.
+- **Büyük/küçük harf açma zamanı**: Servis talebi açıldığından bu yana geçen süre.
+- **Toplam ilke uyarısı**: Servis talebine dahil edilen ilke eşleşmelerinin sayısı. Servis talebine yeni uyarılar eklenirse bu sayı artabilir.
+- **Servis talebi son güncelleştirildi**: Servis talebi durumunda bir büyük/küçük harf notu veya değişiklik eklendikten sonra geçen süre.
+- **Son güncelleştirme:** Olayı en son güncelleştiren insider risk yönetimi analistinin veya araştırmacının adı.
 
-![Insider risk yönetimi Vakalar panosu.](../media/insider-risk-cases-dashboard.png)
+![Insider risk yönetimi Servis Talepleri panosu.](../media/insider-risk-cases-dashboard.png)
 
-Belirli bir **metinde** büyük/harf adlarını aramak için Ara denetimlerini kullanın ve vakaları aşağıdaki özniteliklere göre sıralamak için büyük/harf filtresini kullanın:
+Arama **denetimini kullanarak** belirli bir metin için büyük/küçük harf adlarını arayın ve servis talebi filtresini kullanarak servis taleplerini aşağıdaki özniteliklere göre sıralayın:
 
 - Durum
-- Açılmış saat durumu, başlangıç tarihi ve bitiş tarihi
+- Servis talebinin açıldığı saat, başlangıç tarihi ve bitiş tarihi
 - Son güncelleştirme, başlangıç tarihi ve bitiş tarihi
 
-## <a name="filter-cases"></a>Vakaları filtreleme
+## <a name="filter-cases"></a>Durumlara filtre uygulama
 
-Kuruluşta etkin Insider risk yönetimi ilkelerinin sayısına ve türüne bağlı olarak, büyük bir dava sırasına gözden geçirmek zor olabilir. Vaka filtrelerinin kullanımı, analistlerin ve tahminlerin vakaları çeşitli özniteliklere göre sıralamanıza yardımcı olabilir. Vakalar panosunda uyarıları **filtrelemek için** Filtre **denetimi'ne** seçin. Vakaları bir veya birden çok öznitelike göre filtreleysiniz:
+Kuruluşunuzdaki etkin insider risk yönetimi ilkelerinin sayısına ve türüne bağlı olarak, büyük bir servis talebi kuyruğunun gözden geçirilmesi zor olabilir. Olay filtrelerini kullanmak analistlerin ve araştırmacıların servis taleplerini çeşitli özniteliklere göre sıralamalarına yardımcı olabilir. **Servis Talepleri panosundaki** uyarıları filtrelemek için **Filtre** denetimini seçin. Servis taleplerini bir veya daha fazla özniteliğe göre filtreleyebilirsiniz:
 
-- **Durum**: Vaka listesini filtrelemek için bir veya birden çok durum değeri seçin. Seçenekler Etkin ve  *Kapalı'dır*.
-- **Açılmış saat durumu**: Vakanın açl olduğu tarihin başlangıç ve bitiş tarihlerini seçin.
-- **Son güncelleştirme**: Vakanın güncelleştirilmiş olduğu tarihin başlangıç ve bitiş tarihlerini seçin.
+- **Durum**: Servis talebi listesini filtrelemek için bir veya daha fazla durum değeri seçin. Seçenekler *Etkin* ve *Kapalı'dır*.
+- **Servis talebinin açıldığı zaman: Servis talebinin** ne zaman açıldığına ilişkin başlangıç ve bitiş tarihlerini seçin.
+- **Son güncelleştirme**: Servis talebinin ne zaman güncelleştirildiğinin başlangıç ve bitiş tarihlerini seçin.
 
-## <a name="investigate-a-case"></a>Vakayı araştırma
+## <a name="investigate-a-case"></a>Bir olayı araştırma
 
-Insider risk yönetimi uyarıları hakkında daha derin araştırma yapmak, doğru düzeltme eylemleri yapmak için çok önemlidir. Insider risk yönetimi örnekleri, kullanıcı risk etkinliği geçmişini, uyarı ayrıntılarını, risk olaylarının sırasını incelemenin, risklere açık olan içeriği ve iletileri incelemenin merkezi yönetim aracıdır. Risk analistleri ve tahminler, geri bildirimleri ve notları merkezi bir şekilde gözden geçirmek ve dava çözümlerini süreç etmek için vakaları da kullanır.
+Insider risk yönetimi uyarılarına yönelik daha ayrıntılı araştırma, doğru düzeltici eylemler gerçekleştirme açısından kritik öneme sahiptir. Insider risk yönetimi örnekleri, kullanıcı riski etkinlik geçmişini, uyarı ayrıntılarını, risk olaylarının sırasını daha ayrıntılı incelemeye ve risklere maruz kalan içeriği ve iletileri keşfetmeye yönelik merkezi yönetim aracıdır. Risk analistleri ve araştırmacıları ayrıca gözden geçirme geri bildirimlerini ve notlarını merkezileştirmek ve olay çözümünü işlemek için örnekleri kullanır.
 
-Vakayı seçmek, olay yönetim araçlarını açar ve analistlerin ve tahminlere vakaların ayrıntılarını ayrıntılarıyla açmalarını sağlar.
+Bir servis talebi seçildiğinde olay yönetimi araçları açılır ve analistlerin ve araştırmacıların vakaların ayrıntılarını incelemesine olanak tanır.
 
-### <a name="case-overview"></a>Büyük/harfe genel bakış
+### <a name="case-overview"></a>Servis talebine genel bakış
 
-Vaka **genel bakış sekmesi** , risk analistleri ve tahminlere ilişkin olay ayrıntılarını özetler. Bu vaka hakkında alanında **aşağıdaki bilgileri içerir**
+**Olaya genel bakış** sekmesi, risk analistleri ve araştırmacıları için servis talebi ayrıntılarını özetler. **Bu durum hakkında** alanında aşağıdaki bilgileri içerir
 
-- **Durum**: Etkin veya Kapalı durumda olan vakanın geçerli durumu.
-- **Vaka oluşturma tarihi**: Vakanın oluşturulma tarihi ve saati.
-- **Kullanıcının risk puanı**: Olay için kullanıcının geçerli hesaplanan risk düzeyidir. Bu puan her 24 saatte bir hesaplanır ve kullanıcıyla ilişkili tüm etkin uyarılardan uyarı riski puanlarını kullanır.
-- **E-posta**: Olay için kullanıcının e-posta diğer adı.
-- **Kuruluş veya** bölüm: Kullanıcının atandığı kuruluş veya bölüm.
+- **Durum**: Etkin veya Kapalı durumdaki servis talebinin geçerli durumu.
+- **Olay oluşturma tarihi**: Servis talebinin oluşturulduğu tarih ve saat.
+- **Kullanıcının risk puanı**: Kullanıcının servis talebi için geçerli hesaplanan risk düzeyi. Bu puan 24 saatte bir hesaplanır ve kullanıcıyla ilişkili tüm etkin uyarılardan alınan uyarı riski puanlarını kullanır.
+- **E-posta**: Kullanıcının servis talebi için e-posta diğer adı.
+- **Kuruluş veya departman**: Kullanıcının atandığı kuruluş veya departman.
 - **Yönetici adı**: Kullanıcının yöneticisinin adı.
 - **Yönetici e-postası**: Kullanıcının yöneticisinin e-posta diğer adı.
 
-![Insider risk yönetimi olay ayrıntıları.](../media/insider-risk-case-details.png)
+![Insider risk yönetimi servis talebi ayrıntıları.](../media/insider-risk-case-details.png)
 
-**Vakaya genel** bakış sekmesi ayrıca **, olayla** ilişkili ilke eşleşme uyarıları hakkında aşağıdaki bilgileri içeren Uyarılar bölümünü de içerir:
+**Olaya genel bakış** sekmesi, servis talebiyle ilişkili ilke eşleştirme uyarıları hakkında aşağıdaki bilgileri içeren bir **Uyarılar** bölümü de içerir:
 
-- **İlke eşleşmeleri**: Kullanıcı etkinliğine yönelik eşleşme uyarıları ile ilişkilendirilmiş insider risk yönetimi ilkesi adı.
+- **İlke eşleşmeleri**: Kullanıcı etkinliği için eşleştirme uyarılarıyla ilişkili insider risk yönetimi ilkesinin adı.
 - **Durum**: Uyarının durumu.
 - **Önem Derecesi**: Uyarının önem derecesi.
-- **Algılanan saat**: Uyarının oluşturulmadan bu yana geçen zaman.
+- **Algılanan zaman**: Uyarının oluşturulmasından bu yana geçen süre.
 
 ### <a name="alerts"></a>Uyarılar
 
-Uyarılar **sekmesi** olayla birlikte gelen geçerli uyarıları özetler. Mevcut bir vakaya yeni uyarılar eklenebilir ve bunlar atandığı sırada Uyarı kuyruğuna eklenir. Aşağıdaki uyarı öznitelikleri sıraya göre listelenir:
+**Uyarılar** sekmesi, servis talebine dahil edilen geçerli uyarıları özetler. Mevcut bir servis talebine yeni uyarılar eklenebilir ve atandıkları sırada **Uyarı** kuyruğuna eklenirler. Aşağıdaki uyarı öznitelikleri kuyrukta listelenir:
 
 - Durum
-- Önem Derecesi
-- Algılanan saat
+- Önem
+- Algılanan süre
 
-Uyarı ayrıntı sayfasını görüntülemek için kuyruktan bir **uyarı** seçin.
+**Uyarı ayrıntı** sayfasını görüntülemek için kuyruktan bir uyarı seçin.
 
-Belirli metinlerin uyarı adlarında arama yapmak için arama denetimi kullanın ve aşağıdaki özniteliklere göre vakaları sıralamak için uyarı filtresini kullanın:
+Belirli bir metin için uyarı adlarını aramak için arama denetimini kullanın ve servis taleplerini aşağıdaki özniteliklere göre sıralamak için uyarı filtresini kullanın:
 
 - Durum
-- Önem Derecesi
+- Önem
 - Algılanan saat, başlangıç tarihi ve bitiş tarihi
 
-Uyarıları aşağıdakiler gibi çeşitli özniteliklere göre filtrelemek için filtre denetimi kullanın:
+Uyarıları aşağıdakiler gibi çeşitli özniteliklere göre filtrelemek için filtre denetimini kullanın:
 
-- **Durum**: Uyarı listesini filtrelemek için bir veya birden çok durum değeri seçin. Seçenekler Onaylandı, *Reddedildi*, *Gözden geçirilsin* *mi ve* *Çözümlendi seçenekleridir*.
-- **Önem derecesi**: Uyarı listesini filtrelemek için bir veya daha fazla uyarı riski önem düzeyi seçin. Seçenekler *Yüksek, Orta* *ve* *Düşük'tür*.
-- **Algılanan saat**: Uyarının ne zaman oluşturulduğunda başlangıç ve bitiş tarihlerini seçin.
-- **İlke**: Seçili ilkeler tarafından oluşturulan uyarıları filtrelemek için bir veya birden çok ilke seçin.
+- **Durum**: Uyarı listesini filtrelemek için bir veya daha fazla durum değeri seçin. Seçenekler *Onaylandı*, *Kapatıldı*, *Gözden geçirilmesi gerekiyor* ve *Çözümlendi şeklindedir*.
+- **Önem derecesi**: Uyarı listesini filtrelemek için bir veya daha fazla uyarı riski önem düzeyi seçin. Seçenekler *Yüksek*, *Orta* ve *Düşük'tir*.
+- **Algılanan zaman**: Uyarının oluşturulduğu zaman için başlangıç ve bitiş tarihlerini seçin.
+- **İlke**: Seçili ilkeler tarafından oluşturulan uyarıları filtrelemek için bir veya daha fazla ilke seçin.
 
 ### <a name="user-activity"></a>Kullanıcı etkinliği
 
-Kullanıcı **etkinliği sekmesi** , risk analistlerinin ve tahminlerin etkinlik ayrıntılarını gözden geçirmelerine ve risk uyarıları ve durumlarla ilişkilendirilmiş tüm etkinliklerin görsel bir temsilini kullanmalarına olanak sağlar. Örneğin, uyarı değerlendirme sürecinin bir parçası olarak, analistlerin daha ayrıntılı bilgi için durumla ilişkilendirilmiş tüm risk etkinliklerini gözden geçirmeleri gerekir. Bazı durumlarda risk ayrıntıları, davayla ilişkili etkinliklerin genel kapsamını anlamak için kullanıcı etkinliği ayrıntılarını ve kabarcık grafiği gözden geçirebilir. Kullanıcı etkinliği grafiği hakkında daha fazla bilgi için [Insider risk yönetimi etkinlikleri makalesine](insider-risk-management-activities.md#user-activity) bakın.
+**Kullanıcı etkinliği** sekmesi, risk analistlerinin ve araştırmacıların etkinlik ayrıntılarını gözden geçirmesine ve risk uyarıları ve vakalarıyla ilişkili tüm etkinliklerin görsel bir gösterimini kullanmasına olanak tanır. Örneğin, uyarı önceliklendirme sürecinin bir parçası olarak analistlerin daha fazla ayrıntı için servis talebiyle ilişkili tüm risk etkinliklerini gözden geçirmeleri gerekebilir. Böyle durumlarda risk araştırmacıları, olayla ilişkili etkinliklerin genel kapsamını anlamanıza yardımcı olmak için kullanıcı etkinliği ayrıntılarını ve kabarcık grafiğini gözden geçirebilir. Kullanıcı etkinlik grafiği hakkında daha fazla bilgi için [Insider risk yönetimi etkinlikleri](insider-risk-management-activities.md#user-activity) makalesine bakın.
 
 ### <a name="activity-explorer-preview"></a>Etkinlik gezgini (önizleme)
 
-Etkinlik **gezgini sekmesi,** risk analistlerine ve tahminlere, risk uyarıları ile ilişkili etkinlik ayrıntılarını gözden geçirmelerine olanak sağlar. Örneğin, olay yönetimi eylemlerinin bir parçası olarak, analistlerin ve analistlerin daha ayrıntılı bilgi için olayla ilişkili tüm risk etkinliklerini gözden geçirmeleri gerekir. Etkinlik **gezginiyle**, gözden geçirenler algılanan riskli etkinliğin zaman çizelgesini hızla gözden geçirebilirsiniz ve uyarılarla ilişkilendirilmiş tüm risk etkinliklerini tanımlayabilir ve filtreleyebilirsiniz.
+**Etkinlik gezgini** sekmesi, risk analistlerinin ve araştırmacıların risk uyarılarıyla ilişkili etkinlik ayrıntılarını gözden geçirmesine olanak tanır. Örneğin, olay yönetimi eylemleri kapsamında araştırmacıların ve analistlerin daha fazla ayrıntı için olayla ilişkili tüm risk etkinliklerini gözden geçirmeleri gerekebilir. **Etkinlik gezgini** ile gözden geçirenler algılanan riskli etkinliğin zaman çizelgesini hızla gözden geçirebilir ve uyarılarla ilişkili tüm risk etkinliklerini tanımlayıp filtreleyebilir.
 
-Etkinlik gezgini hakkında daha fazla bilgi için [Insider risk yönetimi etkinlikleri makalesine](insider-risk-management-activities.md#activity-explorer) bakın.
+Etkinlik gezgini hakkında daha fazla bilgi için [Insider risk yönetimi etkinlikleri](insider-risk-management-activities.md#activity-explorer) makalesine bakın.
 
 ### <a name="content-explorer"></a>İçerik gezgini
 
-İçerik **gezgini sekmesi** , risk uyarıları ile ilişkilendirilmiş tüm tek tek dosyaların ve e-posta iletilerinin kopyalarını gözden geçirme riski sağlar. Örneğin, bir kullanıcı SharePoint Online'dan yüzlerce dosya indirirken uyarı oluşturulursa ve etkinlik bir ilke uyarısı tetiklerse, uyarıyla ilgili olarak indirilen tüm dosyalar özgün depolama kaynaklarından insider risk yönetimi durumuna yakalanır ve kopyalanır.
+**İçerik gezgini** sekmesi, risk araştırmacılarının risk uyarılarıyla ilişkili tüm dosyaların ve e-posta iletilerinin kopyalarını gözden geçirmesine olanak tanır. Örneğin, bir kullanıcı SharePoint Online'dan yüzlerce dosya indirdiğinde ve etkinlik bir ilke uyarısı tetiklediğinde bir uyarı oluşturulursa, uyarı için indirilen tüm dosyalar yakalanır ve özgün depolama kaynaklarından insider risk yönetimi olayına kopyalanır.
 
-İçerik gezgini, temel ve gelişmiş arama ve filtreleme özelliklerine sahip güçlü bir araçtır. İçerik gezginini kullanma hakkında daha fazla bilgi edinmek için bkz. [Insider risk yönetimi İçerik gezgini](insider-risk-management-content-explorer.md).
+İçerik gezgini, temel ve gelişmiş arama ve filtreleme özelliklerine sahip güçlü bir araçtır. İçerik gezginini kullanma hakkında daha fazla bilgi edinmek için bkz [. Insider risk yönetimi İçerik gezgini](insider-risk-management-content-explorer.md).
 
-![Insider risk yönetimi durumu İçerik gezgini.](../media/insider-risk-content-explorer.png)
+![Insider risk yönetimi olayı İçerik gezgini.](../media/insider-risk-content-explorer.png)
 
 ### <a name="case-notes"></a>Olay notları
 
-**Olayda Örnek Olay** notları sekmesi, risk analistleri ve tahminlerinin olayla ilgili görüşlerini, geri bildirimleri ve içgörüleri paylaştığı durumtur. Notlar, bir vakaya kalıcı eklemedir; not kaydedildikten sonra düzenlenemez veya silinemez. Uyarıdan olay oluşturulduğunda, Uyarıyı onayla ve **Insider risk** durumu oluştur iletişim kutusuna girilen açıklamalar, otomatik olarak olay notu olarak eklenir.
+**Olay notları** sekmesi, risk analistlerinin ve araştırmacıların olayla ilgili çalışmaları hakkında yorum, geri bildirim ve içgörü paylaştığı yerdir. Notlar bir servis talebine kalıcı eklemelerdir ve not kaydedildikten sonra düzenlenemez veya silinemez. Uyarıdan bir servis talebi oluşturulduğunda Uyarıyı **onayla ve iç risk olayı oluştur** iletişim kutusuna girilen açıklamalar otomatik olarak servis talebi notu olarak eklenir.
 
-Büyük/küçük harf notları panosu, notu oluşturan kullanıcının notları ve not kaydedildiktan sonra geçen zamanı görüntüler. Büyük/küçük harf notu metin alanında belirli bir anahtar sözcüğü aramak için,  büyük/küçük harf panosunda Ara düğmesini kullanın ve belirli bir anahtar sözcüğü girin.
+Servis talebi notları panosu, notu oluşturan kullanıcının notlarını ve not kaydedildikten sonra geçen süreyi görüntüler. Servis talebi notu metin alanında belirli bir anahtar sözcüğü aramak için servis talebi panosundaki **Ara** düğmesini kullanın ve belirli bir anahtar sözcük girin.
 
-Vakaya not eklemek için:
+Bir servis talebine not eklemek için:
 
-1. Giriş [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimi'ne gidin ve** Vakalar **sekmesini** seçin.
-2. Bir vaka seçin ve ardından Büyük/küçük **harf notları sekmesini** seçin.
-3. Büyük/ **harf notu ekle'yi seçin**.
-4. Büyük **/harf notu ekle** iletişim kutusunda, vakayla ilgili notunu yazın. Notu **vakaya** eklemek için Kaydet'i seçin veya **notu büyük/** harfe kaydetmeden kapat'ı seçin.
+1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
+2. Bir servis talebi seçin ve ardından **Servis Talebi notları** sekmesini seçin.
+3. **Büyük/küçük harf notu ekle'yi** seçin.
+4. **Servis talebi notu ekle** iletişim kutusunda, servis talebi için notunuzu yazın. Notu servis talebine eklemek için **Kaydet'i** veya notu servis talebine kaydetmeden Kapatmayı **iptal et'i** seçin.
 
-### <a name="contributors"></a>Katkıda Bulunanlar
+### <a name="contributors"></a>Katkıda bulunan
 
-**Olayda Katkıda** Bulunanlar sekmesi, risk analistleri ve güvenlikçilerin vakaya başka gözden geçirenler ekleyt olduğu durumtur. Varsayılan olarak, **Insider Risk Yönetimi** Analistleri'ne atanan tüm kullanıcılar ve **Insider Risk** Yönetimi Tahminleri rolleri her etkin ve kapalı vaka için katkıda bulunanlar olarak listelenir. Yalnızca **Insider Risk Yönetimi Güvenlik rolüne** atanan kullanıcıların İçerik gezgininde dosyaları ve iletileri görüntüleme izni vardır.
+Olaydaki **Katkıda Bulunanlar** sekmesi, risk analistlerinin ve araştırmacıların olaya başka gözden geçirenler ekleyebileceği yerdir. Varsayılan olarak, **Insider Risk Management Analysts** ve **Insider Risk Management Investigators rollerini** atamış olan tüm kullanıcılar, etkin ve kapalı her olay için katkıda bulunanlar olarak listelenir. Yalnızca **Insider Risk Yönetimi Araştırmacıları** rolüne atanan kullanıcıların İçerik gezginindeki dosyaları ve iletileri görüntüleme izni vardır.
 
-Bir kullanıcı katkıda bulunan olarak ek tarafından vakaya geçici erişim ve verilmek. Katkıda bulunanların, aşağıdakiler dışında belirli bir vaka üzerinde tüm olay yönetimi denetimi vardır:
+Bir kullanıcıyı katkıda bulunan olarak ekleyerek bir servis talebine geçici erişim verilebilir. Katkıda bulunanlar, aşağıdakiler dışında belirli bir servis talebi üzerinde tüm servis talebi yönetimi denetimine sahiptir:
 
-- Uyarıları onaylama veya yok sayma izni
-- Vakalara katkıda bulunanları düzenleme izni
-- İçerik Gezgini'nde dosya ve iletileri görüntüleme izni
+- Uyarıları onaylama veya kapatma izni
+- Vakalar için katkıda bulunanları düzenleme izni
+- İçerik gezgininde dosya ve iletileri görüntüleme izni
 
-Vakaya katkıda bulunan eklemek için:
+Bir servis talebine katkıda bulunan eklemek için:
 
-1. Giriş [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimi'ne gidin ve** Vakalar **sekmesini** seçin.
-2. Bir vaka seçin ve ardından Katkıda **Bulunanlar sekmesini** seçin.
-3. Katılımcı **ekle'yi seçin**.
-4. Katılımcı **ekle iletişim** kutusunda, eklemek istediğiniz kullanıcının adını yazmaya başlayın ve ardından önerilen kullanıcı listesinden bir kullanıcı seçin. Bu liste, kiracı Azure Active Directory en son oluşturulan listedir.
-5. Katılımcı **olarak** kullanıcı eklemek için Ekle'yi seçin veya katılımcı **olarak** kullanıcı eklemeden iletişim kutusunu kapat'ı seçin.
+1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
+2. Bir servis talebi seçin ve katkıda **bulunanlar** sekmesini seçin.
+3. **Katkıda bulunan ekle'yi** seçin.
+4. **Katkıda bulunan ekle** iletişim kutusunda, eklemek istediğiniz kullanıcının adını yazmaya başlayın ve ardından önerilen kullanıcı listesinden kullanıcıyı seçin. Bu liste, kiracı aboneliğinizin Azure Active Directory oluşturulur.
+5. Kullanıcıyı katkıda bulunan olarak eklemek için **Ekle'yi** seçin veya **İptal'i** seçerek kullanıcıyı katkıda bulunan olarak eklemeden iletişim kutusunu kapatın.
 
-## <a name="case-actions"></a>Büyük/harf eylemleri
+## <a name="case-actions"></a>Servis talebi eylemleri
 
-Risk risklerini almak için, durumun önem düzeyine, kullanıcının riski geçmişine ve kuruluş risk yönergelerine bağlı olarak çeşitli yöntemlerden birini kullanarak bir dava üzerinde işlem risklerini kabul edersiniz. Bazı durumlarda, kuruluşun diğer alanlarıyla işbirliği yapmak ve risk etkinliklerini daha derine indirmak için bir durumu kullanıcıya veya veri araştırmaya yükseltmeniz gerekiyor olabilir. Insider risk yönetimi,  end-end çözüm Microsoft 365 uyumluluk çözümleriyle sıkı bir şekilde tümleştirilmiştir.
+Risk araştırmacıları olayın önem derecesine, kullanıcının risk geçmişine ve kuruluşunuzun risk yönergelerine bağlı olarak birkaç yöntemden birinde bir olay üzerinde işlem yapabilir. Bazı durumlarda, kuruluşunuzun diğer alanlarıyla işbirliği yapmak ve risk etkinliklerini daha ayrıntılı incelemek için bir olayı bir kullanıcıya veya veri araştırmasına aktarmanız gerekebilir. Insider risk yönetimi, uçtan uca çözüm yönetimi konusunda size yardımcı olmak için diğer Microsoft Purview çözümleriyle sıkı bir şekilde tümleşiktir.
 
 ### <a name="send-email-notice"></a>E-posta bildirimi gönderme
 
-Çoğu durumda, insider risk uyarıları oluşturan kullanıcı eylemleri yanlışlıkla veya yanlışlıkla olur. Kullanıcıya e-postayla anımsatıcı bildirimi göndermek, büyük/küçük harf incelemesini ve eylemlerini belgelemenin etkili bir yöntemidir ve kurumsal ilkeleri kullanıcılara anımsatma veya onları yenileme eğitimine işaret eden bir yöntemdir. Bildirimler, insider risk [yönetim altyapınız için sizin oluştur](insider-risk-management-notices.md) oluşturursanız, bildirim şablonlarından oluşturulur.
+Çoğu durumda, iç risk uyarıları oluşturan kullanıcı eylemleri yanlışlıkla veya yanlışlıkla olur. Kullanıcıya e-posta yoluyla anımsatıcı bildirimi göndermek, olay incelemesini ve eylemi belgelemenin etkili bir yöntemidir ve kullanıcılara şirket ilkelerini anımsatmak veya onları daha yenileyici eğitime yöneltmek için bir yöntemdir. Bildirimler, insider risk yönetimi [altyapınız için oluşturduğunuz bildirim şablonlarından](insider-risk-management-notices.md) oluşturulur.
 
-Bir kullanıcıya ***** e-posta bildirimi göndermenin, sorunu çözemezse' hatanın kabul _Closed*. Bazı durumlarda, kullanıcıya yeni vakayı açmaya gerek kalmadan daha fazla risk etkinliklerine bakmak için bildirim gönderdikten sonra dosyayı açık bırakmak iyi olabilir. Bir bildirim gönderdikten sonra bir vakayı çözmek için, bildirimi verdikten sonra devam  eden bir adım olarak Vakayı çöz seçeneğini seçmeniz gerekir.
+Bir kullanıcıya e-posta bildirimi göndermenin * sorunu _Closed* olarak **çözmediğini** unutmayın. Bazı durumlarda, kullanıcıya yeni bir servis talebi açmadan daha fazla risk etkinliği araması için bildirim gönderdikten sonra servis talebini açık bırakmak isteyebilirsiniz. Bildirim gönderdikten sonra bir olayı çözmek istiyorsanız, bildirim gönderdikten sonra servis **talebi çözümle** adımını izleme adımı olarak seçmeniz gerekir.
 
-Vakaya atanan kullanıcıya bildirim göndermek için:
+Servis talebine atanan kullanıcıya bildirim göndermek için:
 
-1. Giriş [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimi'ne gidin ve** Vakalar **sekmesini** seçin.
-2. Bir vaka seçin ve ardından vaka eylem **araç çubuğundaki** E-posta bildirimini gönder düğmesini seçin.
-3. **E-posta bildirimi gönder iletişim kutusunda**, Bildirimin bildirim **şablonunu seçmek** için Bildirim şablonu seç açılan kutusunu seçin. Bu seçim, bildirimle ilgili diğer alanları önceden doldurur.
-4. Bildirim alanlarını gözden geçirebilirsiniz ve uygun şekilde güncelleştirebilirsiniz. Buraya girilen değerler, şablonda yer alan değerleri geçersiz kılar.
-5. Bildirimi **kullanıcıya** göndermek için Gönder'i seçin veya bildirimi  kullanıcıya göndermeden İptal'i seçerek iletişim kutusunu kapatın. Tüm gönderilmiş bildirimler, Büyük/harf notları panosunda vaka notları **kuyruğuna** eklenir.
+1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
+2. Bir servis talebi seçin ve servis talebi eylem araç çubuğunda **e-posta bildirimi gönder** düğmesini seçin.
+3. **E-posta bildirimi gönder** iletişim kutusunda Bildirim **şablonu seçin** açılan denetimini seçerek bildirimin bildirim şablonunu seçin. Bu seçim, bildirimdeki diğer alanları önceden doldurur.
+4. Bildirim alanlarını gözden geçirin ve uygun şekilde güncelleştirin. Buraya girilen değerler şablondaki değerleri geçersiz kılar.
+5. Bildirimi kullanıcıya göndermek için **Gönder'i** veya **İptal'i** seçerek bildirimi kullanıcıya göndermeden iletişim kutusunu kapatın. Gönderilen tüm bildirimler Servis Talebi notları panosundaki servis **talebi notları** kuyruğuna eklenir.
 
-### <a name="escalate-for-investigation"></a>soruşturma için yükseltme
+### <a name="escalate-for-investigation"></a>Araştırma için yükseltme
 
-Kullanıcının risk etkinliği için ek yasal inceleme gerektirebilecek durumlarda, kullanıcı soruşturması için durumu en iyi duruma getirin. Bu yükseltme, Advanced eDiscovery başka bir Microsoft 365 açar. Advanced eDiscovery, kurum içi ve dış yasal soruşturmalarına yanıt veren içerikleri korumak, toplamak, gözden geçirmek, çözümlemek ve dışarı aktarmak için  uç uç iş akışı sağlar. Ayrıca, hukuk ekibimizin bir olaya dahil olan koruyucularla iletişim kurması için yasal tutma bildirimi iş akışının tamamını yönetmesini sağlar. Insider risk yönetimi durumundan oluşturulan bir Advanced eDiscovery durumunda bir gözden geçirene koruyucu olarak atamak, yasal ekibimizin uygun önlemleri almalarını ve içeriğin korunmasını yönetmelerini sağlar. Bu tür durumlar hakkında daha Advanced eDiscovery fazla bilgi edinmek için bu konuda [daha fazla bilgi Advanced eDiscovery' Microsoft 365](overview-ediscovery-20.md).
+Kullanıcının risk etkinliği için ek yasal inceleme gerektiren durumlarda kullanıcı araştırması için olayı yükseltin. Bu yükseltme, Microsoft 365 kuruluşunuzda yeni bir Microsoft Purview eKeşif (Premium) olayı açar. eBulma (Premium), kuruluşunuzun iç ve dış yasal araştırmalarına yanıt veren içeriği korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Ayrıca, yasal ekibinizin bir olaya dahil olan koruyucularla iletişim kurmak için yasal tutma bildirimi iş akışının tamamını yönetmesine olanak tanır. Bir iç risk yönetimi olayından oluşturulan bir eBulma (Premium) olayında bir gözden geçireni koruyucu olarak atamak, hukuk ekibinizin uygun eylemi gerçekleştirmesine ve içerik korumayı yönetmesine yardımcı olur. eBulma (Premium) durumları hakkında daha fazla bilgi edinmek için bkz. [Microsoft Purview eKeşif'e Genel Bakış (Premium)](overview-ediscovery-20.md).
 
-Vakayı kullanıcı araştırmaya yükseltme:
+Bir olayı kullanıcı araştırmasına ilerletmek için:
 
-1. Giriş [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimi'ne gidin ve** Vakalar **sekmesini** seçin.
-2. Bir vaka seçin ve ardından olay eylem **araç çubuğundaki** Araştırma için yükseltme düğmesini seçin.
-3. Araştırma için **yükseltme iletişim kutusunda** , yeni kullanıcı soruşturması için bir ad girin. Gerekirse olayla ilgili notları girin ve İlerle'yi **seçin**.
-4. Bildirim alanlarını gözden geçirebilirsiniz ve uygun şekilde güncelleştirebilirsiniz. Buraya girilen değerler, şablonda yer alan değerleri geçersiz kılar.
-5. Kullanıcı **araştırma vakası** oluşturmak için Onayla'ya veya yeni **bir** kullanıcı soruşturması durumu oluşturmadan iletişim kutusunu kapatmak için İptal'e seçin.
+1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
+2. Bir servis talebi seçin ve ardından servis talebi eylem araç çubuğunda **araştırma için yükselt** düğmesini seçin.
+3. **Araştırma için yükselt** iletişim kutusunda, yeni kullanıcı araştırması için bir ad girin. Gerekirse servis talebiyle ilgili notlar girin ve **Yükselt'i** seçin.
+4. Bildirim alanlarını gözden geçirin ve uygun şekilde güncelleştirin. Buraya girilen değerler şablondaki değerleri geçersiz kılar.
+5. Kullanıcı araştırma olayı oluşturmak için **Onayla'yı** seçin veya yeni bir kullanıcı araştırma olayı oluşturmadan iletişim kutusunu kapatmak için **İptal'i** seçin.
 
-Insider risk yönetimi durumu yeni bir kullanıcı soruşturması durumuna getirildikten sonra, ilk incelemede eKbulmaAdvanced  >  alanında yeni vakayı Microsoft 365 uyumluluk merkezi.
+Insider risk yönetimi olayı yeni bir kullanıcı araştırma olayına yükseltildikten sonra, yeni olayı Microsoft Purview uyumluluk portalındaki **eKeşifGelişmiş** >  alanında gözden geçirebilirsiniz.
 
-### <a name="run-automated-tasks-with-power-automate-flows-for-the-case"></a>Olayla ilgili otomatik Power Automate akışlarını kullanarak otomatik görevleri çalıştırma
+### <a name="run-automated-tasks-with-power-automate-flows-for-the-case"></a>Servis talebi için Power Automate akışlarıyla otomatik görevleri çalıştırma
 
-Önerilen güvenlik Power Automate kullanarak risk tahminleri ve analistleri şunları yapmak için hızlı bir şekilde işlem tamamlar:
+Önerilen Power Automate akışlarını kullanarak risk araştırmacıları ve analistler aşağıdaki işlemleri hızla gerçekleştirebilir:
 
-- İk veya işletmeden insider risk durumundaki bir kullanıcı hakkında bilgi talep edin
-- Kullanıcının insider risk uyarısı olduğunda yöneticiye bildirme
-- ServiceNow'da insider risk yönetimi durumu için kayıt oluşturma
-- Insider risk ilkesine eklenen kullanıcıları bilgilendirme
+- şirket içi risk durumundaki bir kullanıcı hakkında İk'dan veya işletmeden bilgi isteme
+- Kullanıcının içeriden risk uyarısı olduğunda yöneticiye bildirme
+- ServiceNow'da insider risk yönetimi olayı için kayıt oluşturma
+- Insider risk ilkesine eklendiklerinde kullanıcılara bildirme
 
-Insider risk yönetimi durumuna yönelik Power Automate akışlarını çalıştırmak, yönetmek veya oluşturmak için:
+Insider risk yönetimi olayı için Power Automate akışları çalıştırmak, yönetmek veya oluşturmak için:
 
-1. Olay **eylemi araç** çubuğunda Otomatikleştir'i seçin. 
-2. Çalıştıracak Power Automate seçin ve ardından Akışı **çalıştır'ı seçin**. 
-3. Akış tamamlandıktan sonra Bitti'yi **seçin**.
+1. Servis talebi eylem araç çubuğunda **Otomatikleştir'i** seçin. 
+2. Çalıştırılacak Power Automate akışını seçin ve ardından **Akışı çalıştır'ı** seçin. 
+3. Akış tamamlandıktan sonra **Bitti'yi** seçin.
 
-Insider risk yönetimine Power Automate hakkında daha fazla bilgi edinmek için bkz[. Insider risk yönetimi ayarlarıyla çalışmaya başlama](insider-risk-management-settings.md#power-automate-flows-preview).
+Insider risk yönetimine yönelik Power Automate akışları hakkında daha fazla bilgi edinmek için bkz. [Insider risk yönetimi ayarlarını kullanmaya başlama](insider-risk-management-settings.md#power-automate-flows-preview).
 
-### <a name="view-or-create-a-microsoft-teams-team-for-the-case"></a>Olay için Microsoft Teams ekibi görüntüleme veya oluşturma
+### <a name="view-or-create-a-microsoft-teams-team-for-the-case"></a>Servis talebi için bir Microsoft Teams ekibi görüntüleme veya oluşturma
 
-Ayarlar Microsoft Teams Insider risk yönetimiyle ilgili tümleştirme etkinleştirildiğinde, her uyarı onaylandıktan ve bir olay oluşturulduğunda Microsoft Teams bir ekip otomatik olarak oluşturulur. Risk risklerine sahipler ve analistler, Microsoft Teams araç çubuğundaki Ekip görüntüle'yi seçerek Microsoft Teams ekipte hemen açabilir ve  dava için doğrudan ekipte gezinebilirsiniz.
+Ayarlarda insider risk yönetimi için Microsoft Teams tümleştirme etkinleştirildiğinde, bir uyarı onaylandığında ve servis talebi oluşturulduğunda otomatik olarak bir Microsoft Teams ekibi oluşturulur. Risk araştırmacıları ve analistleri Microsoft Teams hızla açabilir ve servis talebi eylem araç çubuğundan Ekibi görüntüle Microsoft Teams seçerek servis talebi için doğrudan **takıma** gidebilir.
 
-Microsoft Team tümleştirmesini etkinleştirmeden önce açılan vakalar için, risk tahminleri ve analistleri dava eylem araç çubuğunda Microsoft Teams bir ekip oluştur'u seçerek yeni bir **Microsoft Teams** ekibi oluşturabilir.
+Microsoft Team tümleştirmesini etkinleştirmeden önce açılan servis talepleri için risk araştırmacıları ve analistler, servis talebi eylem araç çubuğunda Microsoft Teams **ekip oluştur'u** seçerek bir servis talebi için yeni bir Microsoft Teams ekibi oluşturabilir.
 
-Bir olay çözülürse, ilişkili Microsoft Team otomatik olarak arşivlenir (gizli ve salt okunur olarak açılır).
+Bir servis talebi çözümlendiğinde, ilişkili Microsoft Ekibi otomatik olarak arşivlenir (gizlenir ve salt okunur duruma gelir).
 
-Insider risk yönetimine Microsoft Teams fazla bilgi edinmek için bkz[. Insider risk yönetimi ayarlarıyla çalışmaya başlama](insider-risk-management-settings.md#microsoft-teams-preview).
+Insider risk yönetimi Microsoft Teams hakkında daha fazla bilgi edinmek için bkz. [Insider risk yönetimi ayarlarını kullanmaya başlama](insider-risk-management-settings.md#microsoft-teams-preview).
 
-### <a name="resolve-the-case"></a>Vakayı çözme
+### <a name="resolve-the-case"></a>Servis talebini çözme
 
-Risk analistleri ve güvenlik analistleri incelemelerini ve incelemelerini tamamlandıktan sonra, bir dava o anda davaya dahil olan tüm uyarılar üzerinde hareket etmek üzere çözümlenebilir. Bir vakayı çözümlemek bir çözüm sınıflandırması ekler, servis durumunu Kapalı olarak değiştirir ve çözüm eylemi nedenleri, Büyük/küçük harf notları panosunda servis sorunu notları kuyruğuna otomatik **olarak** eklenir. Vakalar şu şekilde çözülür:
+Risk analistleri ve araştırmacılar incelemelerini ve araştırmalarını tamamladıktan sonra, şu anda olaya dahil olan tüm uyarılar üzerinde işlem yapmak için bir dava çözümlenebilir. Bir servis talebini çözümlemek bir çözüm sınıflandırması ekler, servis talebi durumunu *Kapalı* olarak değiştirir ve çözüm eylemi nedenleri **servis talebi notları** panosundaki servis talebi notları kuyruğuna otomatik olarak eklenir. Servis talepleri şunlardan biri olarak çözümlenir:
 
-- **İşte**: İlke eşleşme uyarılarının düşük risk, ciddi olmayan veya hatalı pozitif olarak değerlendirilen durumlar için sınıflandırma.
-- **Onaylandı ilke** ihlali: İlke eşleşme uyarılarının riskli, önemli veya kötü niyetli amacın sonucu olarak değerlendirilen durumlar için sınıflandırma.
+- **Zararsız**: İlke eşleştirme uyarılarının düşük riskli, ciddi olmayan veya hatalı pozitif olarak değerlendirildiği durumlar için sınıflandırma.
+- **Onaylanan ilke ihlali: İlke** eşleştirme uyarılarının riskli, ciddi veya kötü amaçlı bir amaç sonucu olarak değerlendirildiği durumlar için sınıflandırma.
 
 Bir sorunu çözmek için:
 
-1. Giriş [Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) **Insider risk yönetimi'ne gidin ve** Vakalar **sekmesini** seçin.
-2. Bir vaka seçin ve ardından büyük **/küçük harf eylemi** araç çubuğundaki Büyük/küçük harfe çöz düğmesini seçin.
-3. Vakayı **çöz iletişim** kutusunda, **vakanın çözüm sınıflandırması** seçmek için Farklı çöz açılan kutusunu seçin. Seçenekler, **Onaylandı veya** **Onaylandı ilke ihlalleridir**.
-4. Büyük/ **düşük harfe** çöz iletişim kutusunda, Alınan eylem metin alanına çözüm **sınıflandırması nedenlerini** girin.
-5. **Vakayı kapatmak** için Çöz'e veya sorunu **çözmeden** İletişim kutusunu kapatmayı iptal et'i seçin.
+1. [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) **Insider risk yönetimi'ne** gidin ve **Servis Talepleri** sekmesini seçin.
+2. Bir servis talebi seçin, ardından servis talebi eylem araç çubuğunda servis **talebini çöz** düğmesini seçin.
+3. **Servis talebini çözümle** iletişim kutusunda, servis talebi için çözüm sınıflandırmasını seçmek üzere **Farklı çözümle** açılan denetimini seçin. Seçenekler **Zararsız** veya **Onaylanan ilke ihlalidir**.
+4. **Servis talebini çöz** iletişim kutusunda, **Eylem gerçekleştirilen** metin alanına çözüm sınıflandırmasının nedenlerini girin.
+5. Olayı kapatmak için **Çözümle'yi** seçin veya **İptal'i** seçerek servis talebini çözmeden iletişim kutusunu kapatın.

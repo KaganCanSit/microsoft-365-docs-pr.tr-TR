@@ -15,14 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview eKeşif'teki (Premium) bir olaya hızla birden çok koruyucu ve ilişkili veri kaynağı eklemek için toplu içeri aktarma aracını kullanın.
-ms.openlocfilehash: 7913c8674dc5560539196f34e323f05955a6850e
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: a6ad413c65b3b8afaa0cbf10df1a595730914405
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64950367"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994534"
 ---
 # <a name="import-custodians-to-an-ediscovery-premium-case"></a>Koruyucuları eBulma (Premium) olayına aktarma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Birçok koruyucu içeren Microsoft Purview eKeşif (Premium) vakalarında, bir servis talebine eklemek için gerekli bilgileri içeren bir CSV dosyası kullanarak birden çok koruyucuyu aynı anda içeri aktarabilirsiniz. İçeri aktarma koruyucuları aracı, içeri aktarma işi oluşturulmadan önce CSV dosyasını da doğrular. Bu, bir koruyucunun olaya eklenmesini engelleyen hatalar olduğunu öğrenmeden önce içeri aktarma işinin tamamlanmasını beklemek yerine CSV dosyasındaki hataları düzeltebileceğiniz anlamına gelir.
 

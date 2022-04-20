@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 description: Donanım tabanlı yalıtımda en son bilgileri edinin. Açıklardan yararlanmalar veya kötü amaçlı bağlantılar gibi mevcut ve yeni ortaya çıkan saldırıların çalışanların üretkenliğini ve kurumsal güvenliğini kesintiye uğratmasını önleyin.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c8e24b61b7f800b7c27a57bcec5c127adb032bf5
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 98d23a814ac2af8d9dedc4f163923e67c9ca7dc2
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64939267"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973255"
 ---
 # <a name="application-guard-for-office-for-admins"></a>Yöneticiler için Office için Application Guard
 
@@ -39,7 +39,7 @@ Office için Microsoft Defender Application Guard (Office için Application Guar
 
 ### <a name="minimum-software-requirements"></a>En düşük yazılım gereksinimleri
 
-* **Windows**: Windows 10 Enterprise sürümü, İstemci Derlemesi sürüm 2004 (20H1) derleme 19041 veya üzeri. Windows 11 tüm sürümleri desteklenir. 
+* **Windows**: Windows 10 Enterprise sürümü, İstemci Derlemesi sürüm 2004 (20H1) derleme 19041 veya üzeri. Windows 11 tüm sürümleri desteklenir.
 * **Office**: Office Geçerli Kanal ve Aylık Enterprise Kanalı, Derleme sürümü 2011 16.0.13530.10000 veya üzeri. Office Semi-Annual Enterprise Kanal, Derleme sürümü 2108 veya üzeri. Office hem 32 bit hem de 64 bit sürümleri desteklenir.
 * **Güncelleştirme paketi**: Windows 10 toplu aylık güvenlik güncelleştirmesi [KB4571756](https://support.microsoft.com/help/4571756/windows-10-update-KB4571756)
 
@@ -124,7 +124,6 @@ Dosya açıldıktan sonra, dosyanın Application Guard'da Office için açıldı
 
 Office, Application Guard'ın özelliklerini Office yapılandırmanıza olanak tanımak için aşağıdaki ilkeleri destekler. Bu ilkeler Grup ilkeleri veya [Office bulut ilkesi hizmeti](/DeployOffice/overview-office-cloud-policy-service) aracılığıyla yapılandırılabilir.
 
-
 > [!NOTE]
 > Bu ilkelerin yapılandırılması, Office için Application Guard'da açılan dosyalar için bazı işlevleri devre dışı bırakabilir.
 
@@ -194,11 +193,11 @@ Office için Application Guard, yalıtılmış ortamda gerçekleşen kötü ama�
 
 Uç Nokta için Microsoft Defender, kurumsal ağların gelişmiş tehditleri önlemesine, algılamasına, araştırmasına ve yanıtlamasına yardımcı olmak için tasarlanmış bir güvenlik platformudur. Bu platform hakkında daha fazla ayrıntı için bkz. [Uç Nokta için Microsoft Defender](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp). Cihazları bu platforma ekleme hakkında daha fazla bilgi için bkz. [Cihazları Uç Nokta için Microsoft Defender hizmetine ekleme](/windows/security/threat-protection/microsoft-defender-atp/onboard-configure).
 
-Ayrıca Office 365 için Microsoft Defender Uç Nokta için Defender ile çalışacak şekilde yapılandırabilirsiniz. Daha fazla bilgi için bkz. [Office 365 için Defender Uç Nokta için Microsoft Defender ile tümleştirme](integrate-office-365-ti-with-mde.md).
+Ayrıca Office 365 için Microsoft Defender'ı Uç Nokta için Defender ile çalışacak şekilde yapılandırabilirsiniz. Daha fazla bilgi için bkz. [Office 365 için Defender'ı Uç Nokta için Microsoft Defender ile tümleştirme](integrate-office-365-ti-with-mde.md).
 
 ## <a name="limitations-and-considerations"></a>Sınırlamalar ve dikkat edilmesi gerekenler
 
-* Office için Application Guard güvenilmeyen belgeleri, güvenilen şirket kaynaklarına, intranete, kullanıcının kimliğine ve bilgisayardaki rastgele dosyalara erişemeyecek şekilde yalıtan korumalı bir moddur. Sonuç olarak, bir kullanıcı disk üzerindeki yerel bir dosyadan resim ekleme gibi bu tür erişime bağımlılığı olan bir özelliğe erişmeye çalışırsa, erişim başarısız olur ve aşağıdaki örneğe benzer bir istem üretir. Güvenilmeyen bir belgenin güvenilen kaynaklara erişmesini sağlamak için, kullanıcıların belgeden Application Guard korumasını kaldırması gerekir. 
+* Office için Application Guard güvenilmeyen belgeleri, güvenilen şirket kaynaklarına, intranete, kullanıcının kimliğine ve bilgisayardaki rastgele dosyalara erişemeyecek şekilde yalıtan korumalı bir moddur. Sonuç olarak, bir kullanıcı disk üzerindeki yerel bir dosyadan resim ekleme gibi bu tür erişime bağımlılığı olan bir özelliğe erişmeye çalışırsa, erişim başarısız olur ve aşağıdaki örneğe benzer bir istem üretir. Güvenilmeyen bir belgenin güvenilen kaynaklara erişmesini sağlamak için, kullanıcıların belgeden Application Guard korumasını kaldırması gerekir.
 
   :::image type="content" source="../../media/ag09-confirm.png" alt-text="Güvenlik iletisini ve özellik durumunu belirten iletişim kutusu" lightbox="../../media/ag09-confirm.png":::
 
@@ -206,7 +205,7 @@ Ayrıca Office 365 için Microsoft Defender Uç Nokta için Defender ile çalı�
   > Kullanıcılara yalnızca dosyaya ve kaynağına veya nereden geldiğine güveniyorlarsa korumayı kaldırmalarını önerin.
 
 * Güvenilmeyen bir belge güvenilir bir konumda depolandığında, konumdaki güven belge tarafından devralınır. Genellikle bir kuruluşun bulut depolama alanı güvenilir bir konum olarak tanımlanır.
-  
+
 * Makrolar ve ActiveX denetimleri gibi belgelerdeki etkin içerik, Office için Application Guard'da devre dışı bırakılır. Kullanıcıların etkin içeriği etkinleştirmek için Application Guard korumasını kaldırması gerekir.
 
 * Ağ paylaşımlarındaki güvenilmeyen dosyalar veya farklı bir kuruluştan OneDrive, OneDrive İş veya SharePoint Online'dan paylaşılan dosyalar Application Guard'da salt okunur olarak açılır. Kullanıcılar kapsayıcıda çalışmaya devam etmek için bu tür dosyaların yerel bir kopyasını kaydedebilir veya doğrudan özgün dosyayla çalışmak için korumayı kaldırabilir.
@@ -242,4 +241,4 @@ Bu buluşsal durum karşılandığında, Office Windows oturum açtıktan sonra 
 * CSV ve HTML dosyaları şu anda desteklenmiyor.
 * Office için Application Guard şu anda NTFS sıkıştırılmış birimleriyle çalışmıyor. "ERROR_VIRTUAL_DISK_LIMITATION" hatası görüyorsanız lütfen birimin sıkıştırmasını kaldırmayı deneyin.
 * .NET güncelleştirmeleri, dosyaların Application Guard'da açılmamasına neden olabilir. Geçici bir çözüm olarak, kullanıcılar bu hatayla karşılaşınca cihazlarını yeniden başlatabilir. Sorun hakkında daha fazla bilgi için bkz[. Windows Defender Application Guard veya Windows Korumalı Alanı açmaya çalışırken hata iletisi alma](https://support.microsoft.com/help/4575917/receiving-an-error-message-when-attempting-to-open-windows-defender-ap).
-* [Daha fazla bilgi için lütfen sık sorulan sorular - Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard) bölümüne bakın. 
+* [Daha fazla bilgi için lütfen sık sorulan sorular - Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard) bölümüne bakın.

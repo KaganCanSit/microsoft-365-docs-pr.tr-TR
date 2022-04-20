@@ -1,5 +1,5 @@
 ---
-title: E-posta kimlik doğrulaması Microsoft 365
+title: Microsoft 365'de e-posta kimlik doğrulaması
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -16,80 +16,79 @@ ms.collection:
 - Strat_O365_IP
 ms.custom: TopSMBIssues
 ms.localizationpriority: high
-description: Yöneticiler kimlik avı, kimlik avı ve istenmeyen postayı önlemeye yardımcı olmak için EOP'nin e-posta kimlik doğrulamasını (SPF, DKIM ve DMARC) nasıl kullandığını öğrenebilir.
+description: Yöneticiler, kimlik sahtekarlığı, kimlik avı ve istenmeyen postaları önlemeye yardımcı olmak için EOP'nin e-posta kimlik doğrulamasını (SPF, DKIM ve DMARC) nasıl kullandığını öğrenebilir.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c0e7bc2ddd620b454979418735fb6982b71501c3
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 5368be5bbecde45d341a737a283a7461a2302dc4
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63021752"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973387"
 ---
 # <a name="email-authentication-in-eop"></a>EOP'de e-posta kimlik doğrulaması
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
-**Geçerli olduğu yer:**
+**Uygulandığı öğe**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [1. plan Office 365 plan 2 için Microsoft Defender](defender-for-office-365.md)
+- [Office 365 için Microsoft Defender plan 1 ve plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-
-E-posta kimlik doğrulaması (e-posta doğrulaması olarak da bilinir), kimlik sahtelerini (sahte gönderenlerden gelen e-posta iletileri) engellemeye çalışan bir grup standarttır. EOP, Microsoft 365 e-postayı doğrulamak için aşağıdaki standartları kullanır:
+E-posta kimlik doğrulaması (e-posta doğrulaması olarak da bilinir), kimlik sahtekarlığına son vermeye çalışan bir standartlar grubudur (sahte gönderenlerden gelen e-posta iletileri). Tüm Microsoft 365 kuruluşlarda EOP, gelen e-postayı doğrulamak için şu standartları kullanır:
 
 - [SPF](set-up-spf-in-office-365-to-help-prevent-spoofing.md)
 - [DKIM](use-dkim-to-validate-outbound-email.md)
 - [DMARC](use-dmarc-to-validate-email.md)
 
-E-posta kimlik doğrulaması, gönderenden gelen e-posta iletilerinin (örneğin, laura@contoso.com) geçerli olduğunu ve bu e-posta etki alanının beklenen kaynaklarından (örneğin, contoso.com.)
+E-posta kimlik doğrulaması, gönderenden gelen e-posta iletilerinin (örneğin, laura@contoso.com) geçerli olduğunu ve bu e-posta etki alanı için beklenen kaynaklardan (örneğin, contoso.com) geldiğini doğrular.
 
-Bu makalenin kalan bölümü bu teknolojilerin nasıl çalışır ve EOP'nin gelen e-postayı kontrol etmek için bunları nasıl kullandığını açıklar.
+Bu makalenin geri kalanında bu teknolojilerin nasıl çalıştığı ve EOP'nin gelen e-postayı denetlemek için bunları nasıl kullandığı açıklanmaktadır.
 
-## <a name="use-email-authentication-to-help-prevent-spoofing"></a>Kimlik doğrulamasının önlenmesine yardımcı olmak için e-posta kimlik doğrulamasını kullanma
+## <a name="use-email-authentication-to-help-prevent-spoofing"></a>Kimlik sahtekarlıklarını önlemeye yardımcı olmak için e-posta kimlik doğrulamasını kullanma
 
-DMARC, iletilerde Yer alan From adresini inceleerek **, düzeçlemi** önlemeye yardımcı olur. Gönderen **adresi** , kullanıcıların e-posta istemcisinde göreceği gönderenin e-posta adresidir. Hedef e-posta kuruluşları da e-posta etki alanının SPF veya DKIM'yi geçir olduğunu doğrular. Başka bir deyişle, etki alanının kimliği doğrulanmış ve dolayısıyla gönderenin e-posta adresi kimlik doğrulamasılanmamıştır.
+DMARC, iletilerde **Kimden** adresini inceleyerek kimlik sahtekarlığına engel olur. **Kimden** adresi, kullanıcıların e-posta istemcilerinde gördüğü gönderenin e-posta adresidir. Hedef e-posta kuruluşları, e-posta etki alanının SPF veya DKIM'yi geçtiğini de doğrulayabilir. Başka bir deyişle, etki alanının kimliği doğrulanmıştır ve bu nedenle gönderenin e-posta adresi sahte değildir.
 
-Bununla birlikte, SPF, DKIM ve DMARC için DNS kayıtları (toplu olarak e-posta kimlik doğrulaması ilkeleri olarak bilinir) isteğe bağlıdır. E-posta kimlik doğrulaması ilkeleri güçlü microsoft.com etki skype.com kimlik doğrulamasından korunur. Ancak, zayıf e-posta kimlik doğrulama ilkelerine sahip veya hiç ilkesi yok olan etki alanları, kimlik doğrulamasının en önemli hedefleridir.
+Ancak SPF, DKIM ve DMARC (toplu olarak e-posta kimlik doğrulama ilkeleri olarak bilinir) için DNS kayıtları isteğe bağlıdır. microsoft.com ve skype.com gibi güçlü e-posta kimlik doğrulama ilkelerine sahip etki alanları kimlik sahtekarlığına karşı korunur. Ancak, daha zayıf e-posta kimlik doğrulama ilkelerine sahip olan veya hiç ilke içermeyen etki alanları sahte kimlik sahtekarlığı için temel hedeflerdir.
 
-Mart 2018'den sonra Fortune 500'de yer alan şirketlerin etki alanlarının yalnızca %9'si güçlü e-posta kimlik doğrulama ilkeleri yayımlar. Şirketlerin geri kalan %91'i bir saldırgan tarafından yanlış ifade edebiliyor. Başka bir e-posta filtreleme mekanizması yerinde değilse, bu etki alanlarındaki kimliği doğru olmayan gönderenlerden gelen e-posta kullanıcılara teslim edilir.
+Mart 2018 itibarıyla Fortune 500'deki şirketlerin etki alanlarının yalnızca %9'u güçlü e-posta kimlik doğrulama ilkeleri yayımlar. Şirketlerin kalan %91'i bir saldırgan tarafından sahte olabilir. Başka bir e-posta filtreleme mekanizması yerinde değilse, bu etki alanlarındaki sahte gönderenlerden gelen e-postalar kullanıcılara teslim edilebilir.
 
-![Fortune 500 şirketlerin DMARC ilkeleri.](../../media/84e77d34-2073-4a8e-9f39-f109b32d06df.jpg)
+![Fortune 500 şirketlerinin DMARC ilkeleri.](../../media/84e77d34-2073-4a8e-9f39-f109b32d06df.jpg)
 
-Güçlü e-posta kimlik doğrulama ilkeleri yayımlayan küçük ve orta ölçekli şirketlerin oranı daha küçüktür. Kuzey Amerika ve batı Avrupa dışındaki e-posta etki alanları için de bu sayı daha küçüktür.
+Güçlü e-posta kimlik doğrulama ilkeleri yayımlayan küçük ve orta ölçekli şirketlerin oranı daha küçüktür. Ayrıca Kuzey Amerika ve batı Avrupa dışındaki e-posta etki alanları için sayı daha da küçüktür.
 
-Güçlü e-posta kimlik doğrulama ilkelerinin olmaması büyük bir sorundur. Kuruluşlar e-posta kimlik doğrulamasının nasıl çalıştığını anlamasa da, saldırganlar tam olarak anlar ve avantajdan faydalanlar. Kimlik avı kaygıları ve güçlü e-posta kimlik doğrulama ilkelerinin sınırlı benimsenmesi  nedeniyle, Microsoft gelen e-postaları kontrol etmek için örtülü e-posta kimlik doğrulaması kullanır.
+Güçlü e-posta kimlik doğrulama ilkelerinin olmaması büyük bir sorundur. Kuruluşlar e-posta kimlik doğrulamasının nasıl çalıştığını anlamayabilir, ancak saldırganlar tam olarak anlar ve bundan yararlanırlar. Kimlik avı endişeleri ve güçlü e-posta kimlik doğrulama ilkelerinin sınırlı benimsenmesi nedeniyle, Microsoft gelen *e-postayı denetlemek için örtük e-posta kimlik doğrulamasını* kullanır.
 
-Örtülü e-posta kimlik doğrulaması, normal e-posta kimlik doğrulama ilkelerinin bir uzantısıdır. Bu uzantılar şunları içerir: gönderen itibarı, gönderen geçmişi, alıcı geçmişi, davranış çözümlemesi ve diğer gelişmiş teknikler. Bu uzantılardan gelen başka sinyaller olmaması durumuyla, e-posta kimlik doğrulama ilkelerini kullanmayan etki alanlarından gönderilen iletiler kimlik doğrulaması olarak işaretlenir.
+Örtük e-posta kimlik doğrulaması, normal e-posta kimlik doğrulama ilkelerinin bir uzantısıdır. Bu uzantılar şunlardır: gönderenin itibarı, gönderen geçmişi, alıcı geçmişi, davranış analizi ve diğer gelişmiş teknikler. Bu uzantılardan gelen diğer sinyallerin olmaması durumunda, e-posta kimlik doğrulama ilkelerini kullanmayan etki alanlarından gönderilen iletiler sahte olarak işaretlenir.
 
-Microsoft'un genel duyurularını görmek için bkz. Kimlik Avı Bölümü 2 - Kimlik AvıNda İyileştirilmiş [Kimlik Microsoft 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Schooling-A-Sea-of-Phish-Part-2-Enhanced-Anti-spoofing/ba-p/176209).
+Microsoft'un genel duyurusunu görmek için bkz. [A Sea of Phish Part 2 - Enhanced Anti-spoofing in Microsoft 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Schooling-A-Sea-of-Phish-Part-2-Enhanced-Anti-spoofing/ba-p/176209).
 
 ## <a name="composite-authentication"></a>Bileşik kimlik doğrulaması
 
-Etki alanının geleneksel SPF, DKIM ve DMARC kayıtları yoksa, bu kayıt denetimleri yeterli kimlik doğrulama durumu bilgilerini iletmiyor. Bu nedenle, Microsoft örtülü e-posta kimlik doğrulaması için bir algoritma geliştirdi. Bu algoritma, birden çok sinyali bileşik kimlik doğrulaması adı verilen veya kısa süreli _olarak_ tek bir değerde `compauth` birleştirir. Değer `compauth` , ileti üst **bilgisinde Kimlik Doğrulama Sonuçları** üst bilgisine damgalanır.
+Bir etki alanında geleneksel SPF, DKIM ve DMARC kayıtları yoksa, bu kayıt denetimleri yeterli kimlik doğrulama durumu bilgilerini iletmez. Bu nedenle, Microsoft örtük e-posta kimlik doğrulaması için bir algoritma geliştirmiştir. Bu algoritma, birden çok sinyali _bileşik kimlik doğrulaması_ adı verilen tek bir değerde veya `compauth` kısaca birleştirir. Değer, `compauth` ileti üst bilgilerinde **Authentication-Results** üst bilgisine damgalanır.
 
 ```text
 Authentication-Results:
    compauth=<fail | pass | softpass | none> reason=<yyy>
 ```
 
-Bu değerler, Kimlik doğrulama [sonuçları ileti üst bilgisinde açıklanmıştır](anti-spam-message-headers.md#authentication-results-message-header).
+Bu değerler [Kimlik doğrulama sonuçları ileti üst bilgisinde](anti-spam-message-headers.md#authentication-results-message-header) açıklanmıştır.
 
-Yöneticiler ve hatta son kullanıcılar ileti üst bilgilerini inceerek gönderenin nasıl Microsoft 365 olduğunu nasıl belirleyecek.
+yöneticiler ve hatta son kullanıcılar ileti üst bilgilerini inceleyerek Microsoft 365 gönderenin sahte olduğunu nasıl saptadığını belirleyebilir.
 
-## <a name="why-email-authentication-is-not-always-enough-to-stop-spoofing"></a>Neden e-posta kimlik doğrulaması kimlik doğrulamayı durdurmak için her zaman yeterli değildir?
+## <a name="why-email-authentication-is-not-always-enough-to-stop-spoofing"></a>E-posta kimlik doğrulaması neden sahtekarlık yapmayı durdurmak için her zaman yeterli değildir?
 
-Gelen iletinin kimlik doğrulamasının doğru olup olmadığını belirlemek için yalnızca e-posta kimlik doğrulama kayıtlarına güvenmek üzere aşağıdaki sınırlamalara sahiptir:
+Gelen bir iletinin sahte olup olmadığını belirlemek için yalnızca e-posta kimlik doğrulama kayıtlarına güvenmek aşağıdaki sınırlamalara sahiptir:
 
-- Gönderen etki alanı gerekli DNS kayıtlarını eksik olabilir veya kayıtlar yanlış yapılandırılmış olabilir.
+- Gönderen etki alanında gerekli DNS kayıtları eksik olabilir veya kayıtlar yanlış yapılandırılmış olabilir.
 
-- Kaynak etki alanı DNS kayıtlarını doğru yapılandırmış ancak bu etki alanı, Kaynak adresli etki alanıyla eşleşmez. SPF ve DKIM, Etki alanının From adresi içinde kullanılmaktadır. Saldırganlar veya yasal hizmetler etki alanını kaydedebiliyor, etki alanı için SPF ve DKIM yapılandırıyor ve Kaynak adreste tamamen farklı bir etki alanı kullanıyor olabilir. Bu etki alanındaki gönderenlerden gelen iletiler SPF ve DKIM'yi geçecektir.
+- Kaynak etki alanı DNS kayıtlarını doğru yapılandırdı, ancak bu etki alanı Kimden adresindeki etki alanıyla eşleşmiyor. SPF ve DKIM, etki alanının Kimden adresinde kullanılmasını gerektirmez. Saldırganlar veya meşru hizmetler bir etki alanı kaydedebilir, etki alanı için SPF ve DKIM yapılandırabilir ve Kimden adresinde tamamen farklı bir etki alanı kullanabilir. Bu etki alanındaki gönderenlerden gelen iletiler SPF ve DKIM'den geçer.
 
-Bileşik kimlik doğrulaması, aksi halde e-posta kimlik doğrulaması denetimlerini geçerek bu sınırlamalara neden olabilir.
+Bileşik kimlik doğrulaması, aksi takdirde e-posta kimlik doğrulaması denetimlerinde başarısız olacak iletiler geçirerek bu sınırlamaları giderebilir.
 
-Basitlik açısından, aşağıdaki örnekler e-posta kimlik doğrulama sonuçlarına odaklanarak devam ediyor. Diğer arka uç zekası etmenleri e-posta kimlik doğrulamasını kimlik doğrulaması olarak geçen iletileri veya kimlik doğrulaması yasal olarak başarısız olan iletileri tanımlayabilir.
+Kolaylık olması için aşağıdaki örnekler e-posta kimlik doğrulaması sonuçlarına odaklanır. Diğer arka uç zekası faktörleri, e-posta kimlik doğrulamasını sahte olarak geçiren iletileri veya e-posta kimlik doğrulamasında başarısız olan iletileri meşru olarak tanımlayabilir.
 
-Örneğin, etki fabrikam.com SPF, DKIM veya DMARC kaydı yoktur. Etki alanındaki gönderenlerden gelen fabrikam.com bileşik kimlik doğrulaması başarısız olabilir (değer ve nedenini `compauth` not edin):
+Örneğin, fabrikam.com etki alanının SPF, DKIM veya DMARC kaydı yoktur. fabrikam.com etki alanındaki gönderenlerden gelen iletiler bileşik kimlik doğrulamasında başarısız olabilir (değeri ve nedeni not edin `compauth` ):
 
 ```text
 Authentication-Results: spf=none (sender IP is 10.2.3.4)
@@ -100,7 +99,7 @@ From: chris@fabrikam.com
 To: michelle@contoso.com
 ```
 
-BIRDEN fabrikam.com DKIM kaydı olmayan bir SPF yapılandırıyorsa, ileti bileşik kimlik doğrulamayı geçecektir. SPF denetimlerini geçen etki alanı, İlk adreste yer alan etki alanıyla hizalanır:
+fabrikam.com bir SPF'yi DKIM kaydı olmadan yapılandırırsa, ileti bileşik kimlik doğrulamasını geçirebilir. SPF denetimlerini geçen etki alanı, Kimden adresindeki etki alanıyla hizalanır:
 
 ```text
 Authentication-Results: spf=pass (sender IP is 10.2.3.4)
@@ -111,7 +110,7 @@ From: chris@fabrikam.com
 To: michelle@contoso.com
 ```
 
-SPF fabrikam.com olmayan bir DKIM kaydı yapılandırıyorsa, ileti bileşik kimlik doğrulamayı geçecektir. DKIM imzası içinde yer alan etki alanı, From adresine göre etki alanıyla hizalanır:
+fabrikam.com SPF kaydı olmayan bir DKIM kaydı yapılandırırsa, ileti bileşik kimlik doğrulamasını geçirebilir. DKIM imzasında etki alanı, Kimden adresindeki etki alanıyla hizalanır:
 
 ```text
 Authentication-Results: spf=none (sender IP is 10.2.3.4)
@@ -123,7 +122,7 @@ From: chris@fabrikam.com
 To: michelle@contoso.com
 ```
 
-SPF veya DKIM imzası'daki etki alanı, From adresi'deki etki alanıyla hizalanmamışsa, ileti bileşik kimlik doğrulaması başarısız olabilir:
+SPF'deki etki alanı veya DKIM imzası Kimden adresindeki etki alanıyla uyumlu değilse, ileti bileşik kimlik doğrulamasında başarısız olabilir:
 
 ```text
 Authentication-Results: spf=none (sender IP is 192.168.1.8)
@@ -137,77 +136,77 @@ To: michelle@fabrikam.com
 
 ## <a name="solutions-for-legitimate-senders-who-are-sending-unauthenticated-email"></a>Kimliği doğrulanmamış e-posta gönderen geçerli gönderenler için çözümler
 
-Microsoft 365, kimlerin kimliği doğrulanmamış e-postayı kuruluşa gönderdiğini takip eder. Hizmet, gönderenin yasal olmadığını düşünüyorsa, bu gönderenden gelen iletileri bileşik kimlik doğrulama hatası olarak işaretlemektedir. Bu karara engel olmak için bu bölümdeki önerileri kullanabilirsiniz.
+Microsoft 365 kuruluşunuza kimlerin kimliği doğrulanmamış e-posta gönderdiğini izler. Hizmet, gönderenin meşru olmadığını düşünüyorsa, bu gönderenden gelen iletileri bileşik kimlik doğrulama hatası olarak işaretler. Bu kararı önlemek için bu bölümdeki önerileri kullanabilirsiniz.
 
 ### <a name="configure-email-authentication-for-domains-you-own"></a>Sahip olduğunuz etki alanları için e-posta kimlik doğrulamasını yapılandırma
 
-Birden çok kiracıya sahip olduğunuz veya kiracılarla etkileşim kurduğunız durumlarda, bu yöntemi kullanarak kuruluş içi kimlik doğrulamayı ve etki alanı çapraz kimlik doğrulamalarını çözebilirsiniz. Ayrıca, iş yeriz veya başka sağlayıcılar tarafından barındırılan diğer müşterilere veya üçüncü taraflara Microsoft 365 etki alanı adları arasında yapılan ve nerede olduğunu çözümlemeye yardımcı olur.
+Birden çok kiracıya sahip olduğunuz veya kiracılarla etkileşimde olduğunuz durumlarda kuruluş içi kimlik sahtekarlığına ve etki alanları arası kimlik sahtekarlığına çözüm getirmek için bu yöntemi kullanabilirsiniz. Ayrıca, Microsoft 365 veya diğer sağlayıcılar tarafından barındırılan üçüncü taraflardaki diğer müşterilere gönderdiğiniz etki alanları arası kimlik sahtekarlıklarının çözülmesine yardımcı olur.
 
-- [Etki alanlarınız için SPF](set-up-spf-in-office-365-to-help-prevent-spoofing.md) kayıtlarını yapılandırma.
-- [Birincil etki alanlarınız için DKIM](use-dkim-to-validate-outbound-email.md) kayıtlarını yapılandırma.
-- [Geçerli gönderenlerinizi belirlemek üzere etki alanınız için DMARC](use-dmarc-to-validate-email.md) kayıtlarını ayarlamayı düşünebilirsiniz.
+- Etki alanlarınız için [SPF kayıtlarını yapılandırın](set-up-spf-in-office-365-to-help-prevent-spoofing.md).
+- Birincil etki alanlarınız için [DKIM kayıtlarını yapılandırın](use-dkim-to-validate-outbound-email.md).
+- Geçerli gönderenlerinizi belirlemek için etki alanınız için [DMARC kayıtlarını ayarlamayı göz önünde bulundurun](use-dmarc-to-validate-email.md).
 
-Microsoft, SPF, DKIM ve DMARC kayıtları için ayrıntılı uygulama yönergeleri sağlamaz. Bununla birlikte, çevrimiçi olarak birçok bilgi edinebilirsiniz. Ayrıca, kuruluşun e-posta kimlik doğrulama kayıtlarını ayarlamalarına yardımcı olmak için ayrılmış üçüncü taraf şirketler de yer alır.
+Microsoft SPF, DKIM ve DMARC kayıtları için ayrıntılı uygulama yönergeleri sağlamaz. Ancak, çevrimiçi ortamda birçok bilgi sağlanır. Ayrıca kuruluşunuzun e-posta kimlik doğrulama kayıtlarını ayarlamasına yardımcı olmak için ayrılmış üçüncü taraf şirketler de vardır.
 
-#### <a name="you-dont-know-all-sources-for-your-email"></a>E-postanız için tüm kaynakları bilmiyorsanız
+#### <a name="you-dont-know-all-sources-for-your-email"></a>E-postanızın tüm kaynaklarını bilmiyorsunuz
 
-Birçok etki alanı SPF kayıtlarını yayımlamaz, çünkü etki alanlarındaki iletilerin tüm e-posta kaynaklarını bilmiyor. Hakkında bilginiz olan tüm e-posta kaynaklarını içeren bir SPF kaydı yayımlayın (özellikle şirket trafiğinizin bulunduğu yerde) ve nötr SPF ilkesi yayımlayın `?all`. Örneğin:
+Birçok etki alanı, etki alanlarındaki iletilerin tüm e-posta kaynaklarını bilmediğinden SPF kayıtlarını yayımlamaz. Bildiğiniz tüm e-posta kaynaklarını içeren bir SPF kaydı yayımlayarak (özellikle şirket trafiğinizin bulunduğu yerde) ve nötr SPF ilkesini `?all`yayımlayarak başlayın. Örneğin:
 
 ```text
 fabrikam.com IN TXT "v=spf1 include:spf.fabrikam.com ?all"
 ```
 
-Bu örnek, şirket altyapınıza gelen e-postanın e-posta kimlik doğrulamasını geçeceği, ancak bilinmeyen kaynaklardan gelen e-postanın belirsiz olduğu anlamına gelir.
+Bu örnek, kurumsal altyapınızdan gelen e-postanın e-posta kimlik doğrulamasını geçireceği, ancak bilinmeyen kaynaklardan gelen e-postaların etkisiz hale getirileceği anlamına gelir.
 
-Microsoft 365, şirket altyapıdan gelen e-postayı kimliği doğrulanmış olarak kabul eder. Tanımlanamayan kaynaklardan gelen e-posta, örtülü kimlik doğrulamayı başarısız olursa kimliksiz olarak işaretlenir. Bununla birlikte, bu durum tüm e-postanın e-posta tarafından varsayılan adres olarak işaretlenirken Microsoft 365.
+Microsoft 365, kurumsal altyapınızdan gelen e-postaları kimliği doğrulanmış olarak kabul eder. Kimliği belirlenemeyen kaynaklardan gelen e-postalar, örtük kimlik doğrulaması başarısız olursa kimlik sahtekarı olarak işaretlenebilir. Ancak bu, Microsoft 365 tarafından sahte olarak işaretlenen tüm e-postalardan hala bir gelişmedir.
 
-'ın SPF `?all`geri dönüş ilkesiyle çalışmaya başladıktan sonra, iletileriniz için daha fazla e-posta kaynağı bulmak ve eklemek için aşamalı olarak spf kaydınızı daha sıkı bir ilkeyle güncelleştirebilirsiniz.
+spf geri dönüş ilkesini `?all`kullanmaya başladıktan sonra iletileriniz için daha fazla e-posta kaynağını aşamalı olarak bulabilir ve ekleyebilir ve ardından SPF kaydınızı daha katı bir ilkeyle güncelleştirebilirsiniz.
 
-### <a name="configure-permitted-senders-of-unauthenticated-email"></a>Kimliği doğrulanmamış e-postaların izin verilen gönderenlerini yapılandırma
+### <a name="configure-permitted-senders-of-unauthenticated-email"></a>Kimliği doğrulanmamış e-postanın izin verilen gönderenlerini yapılandırma
 
-Ayrıca, gönderenlerin kimliği [doğrulanmamış iletileri](learn-about-spoof-intelligence.md) kuruluşa iletmesine izin vermek için kimliksiz kimlik doğrulaması içgörü ve Kiracı İzinLeri [/](tenant-allow-block-list.md) Engelleme Listesi'ne de izin veebilirsiniz.
+Ayrıca, gönderenlerin kuruluşunuza kimliği doğrulanmamış iletiler iletmesine izin vermek için kimlik sahtekarlık [bilgileri içgörülerini](learn-about-spoof-intelligence.md) ve [Kiracı İzin Ver/Engelle Listesi'ni](tenant-allow-block-list.md) de kullanabilirsiniz.
 
-Dış etki alanları için kimlik doğrulu kullanıcı Kaynak adresi'nin etki alanıdır; bu sırada gönderme altyapısı kaynak IP adresidir (/24 CIDR aralıklarına ayrılmıştır) veya ters DNS (PTR) kaydının kuruluş etki alanıdır.
+Dış etki alanları için kimlik sahtekarlığı yapılan kullanıcı Kimden adresindeki etki alanıdır, gönderen altyapı ise kaynak IP adresi (/24 CIDR aralıklarına ayrılmıştır) veya ters DNS (PTR) kaydının kuruluş etki alanıdır.
 
-### <a name="create-an-allow-entry-for-the-senderrecipient-pair"></a>Gönderen/alıcı çifti için izin girdisi oluşturma
+### <a name="create-an-allow-entry-for-the-senderrecipient-pair"></a>Gönderen/alıcı çifti için izin verme girdisi oluşturma
 
-İstenmeyen posta filtrelemesini atlamak, kimlik avı için filtrelemenin bazı bölümleri (ancak belirli gönderenler için kötü amaçlı yazılım filtrelemesi) atlamak için bkz. Kimlik avı için [Microsoft 365.](create-safe-sender-lists-in-office-365.md)
+belirli gönderenler için kötü amaçlı yazılım filtreleme yerine kimlik avı filtrelemesinin bazı bölümleri olan istenmeyen posta filtrelemesini atlamak için bkz. [Microsoft 365'da güvenilir gönderen listeleri oluşturma](create-safe-sender-lists-in-office-365.md).
 
-### <a name="ask-the-sender-to-configure-email-authentication-for-domains-you-dont-own"></a>Gönderenden, sahip olmadığınız etki alanları için e-posta kimlik doğrulamasını yapılandırmasını isteme
+### <a name="ask-the-sender-to-configure-email-authentication-for-domains-you-dont-own"></a>Sahibi olmadığınız etki alanları için gönderenden e-posta kimlik doğrulamasını yapılandırmasını isteyin
 
-İstenmeyen posta ve kimlik avı sorunu nedeniyle, Microsoft tüm e-posta kuruluşları için e-posta kimlik doğrulaması önerir. Kurumda elle geçersiz kılmaları yapılandırmak yerine, gönderen etki alanındaki bir yöneticiden e-posta kimlik doğrulama kayıtlarını yapılandırmasını istemeniz gerekir.
+İstenmeyen posta ve kimlik avı sorunu nedeniyle Microsoft, tüm e-posta kuruluşları için e-posta kimlik doğrulaması önerir. Kuruluşunuzda el ile geçersiz kılmaları yapılandırmak yerine, gönderen etki alanındaki bir yöneticiden e-posta kimlik doğrulama kayıtlarını yapılandırmasını isteyebilirsiniz.
 
-- Geçmişte e-posta kimlik doğrulama kayıtlarını yayımlamaları gerekmasa da, Microsoft'a e-posta gönderirken bu kayıtları yayımlamaları gerekir.
+- Geçmişte e-posta kimlik doğrulama kayıtlarını yayımlamaları gerekmese bile, Microsoft'a e-posta gönderiyorlarsa bunu yapmalıdır.
 
-- Etki alanının gönderen IP adreslerini yayımlayacak şekilde SPF'yi ayarlayın ve iletileri dijital olarak imzalamak için DKIM (varsa) ayarlayın. DMARC kayıtlarını ayarlamayı da göz önünde bulunduracaklarını düşünebilirsiniz.
+- Etki alanının gönderen IP adreslerini yayımlamak için SPF'yi ayarlayın ve iletileri dijital olarak imzalamak için DKIM'i (varsa) ayarlayın. Ayrıca DMARC kayıtlarını ayarlamayı da göz önünde bulundurmalıdır.
 
-- Toplu gönderenleri kendi adına e-posta göndermek için kullanırsa, Kaynak adreste yer alan etki alanının (onlara aitse) SPF veya DMARC'dan geçen etki alanıyla uyumlu olduğunu doğrulayın.
+- Onlar adına e-posta göndermek için toplu gönderenler kullanıyorsa, Kimden adresindeki etki alanının (onlara aitse) SPF veya DMARC geçen etki alanıyla uyumlu olduğunu doğrulayın.
 
-- SPF kaydına şu konumların dahil olduğunu (kullanıyorsa) doğrulayın:
+- SPF kaydına aşağıdaki konumların (kullanıyorlarsa) dahil olduğunu doğrulayın:
 
   - Şirket içi e-posta sunucuları.
-  - Hizmet olarak yazılım sağlayıcısından (SaaS) gönderilen e-posta.
-  - Bulut barındırma hizmetlerinden (Microsoft Azure, GoDaddy, Raf Al, Amazon Web Hizmetleri vb.) gönderilen e-posta.
+  - Hizmet olarak yazılım (SaaS) sağlayıcısından gönderilen e-posta.
+  - Bulut barındırma hizmetinden (Microsoft Azure, GoDaddy, Rackspace, Amazon Web Services vb.) gönderilen e-posta.
 
-- ISS tarafından barındırılan küçük etki alanları için SPF kaydını ISS'deki yönergelere göre yapılandırabilirsiniz.
+- ISS tarafından barındırılan küçük etki alanları için SPF kaydını ISS'nin yönergelerine göre yapılandırın.
 
-İlk başta etki alanlarını kimlik doğrulamasına göndermek zor olsa da, zamanla, daha fazla e-posta filtresi gereksiz postaya, hatta e-postalarını reddetmeye başlarken, daha iyi teslim sağlamak için doğru kayıtları ayarlamalarına neden olur. Ayrıca, katılımları kimlik avına karşı mücadeleye yardımcı olabilir ve kuruluşunda veya e-posta göndermekte olduğu kuruluşlarda kimlik avı olasılığını düşürebilirsiniz.
+İlk başta etki alanlarını kimlik doğrulaması için göndermek zor olsa da, zaman içinde daha fazla e-posta filtresi gereksiz olarak çalışmaya ve hatta e-postalarını reddetmeye başladığından, daha iyi teslim sağlamak için uygun kayıtları ayarlamalarına neden olur. Ayrıca, katılımları kimlik avına karşı mücadeleye yardımcı olabilir ve kuruluşlarında veya e-posta gönderdikleri kuruluşlarda kimlik avı olasılığını azaltabilir.
 
 #### <a name="information-for-infrastructure-providers-isps-esps-or-cloud-hosting-services"></a>Altyapı sağlayıcıları (ISS'ler, ESP'ler veya bulut barındırma hizmetleri) için bilgiler
 
-Etki alanının e-postalarını barındır ediyorsanız veya e-posta gönderen bir barındırma altyapısı sağlarsanız, aşağıdaki adımları gerçekleştirin:
+Bir etki alanının e-postasını barındırdıysanız veya e-posta gönderebilen barındırma altyapısı sağlıyorsanız, aşağıdaki adımları uygulamanız gerekir:
 
-- Müşterilerinize, müşterilerin SPF kayıtlarını nasıl yapılandırmaları gerektiğini açıklayan belgelere sahip olduğundan emin olmak
+- Müşterilerinizin SPF kayıtlarını nasıl yapılandırmaları gerektiğini açıklayan belgelere sahip olduğundan emin olun
 
-- Müşteri bunu açıkça ayarlamasa bile, giden e-postada DKIM imzaları imzalamayı göz önünde bulundurabilirsiniz (varsayılan etki alanıyla oturum açma). Hatta e-postayı DKIM imzaları ile çift imza atabilirsiniz (e-postayı ayarlasa müşterinin etki alanıyla bir kez ve bir kez de şirketin DKIM imzasıyla)
+- Müşteri bunu açıkça ayarlamasa bile (varsayılan etki alanıyla oturum açın) giden e-postada DKIM imzalarını imzalamayı göz önünde bulundurun. E-postayı DKIM imzalarıyla (ayarladıysa müşterinin etki alanıyla bir kez ve şirketinizin DKIM imzası ile ikinci kez) çift imzalayabilirsiniz
 
-Platformdan kaynaklanan e-postanın kimliğini doğrulasanız bile Microsoft'a teslim edilebilirlik garanti değildir, ancak en azından kimliği doğrulanmamış olduğundan Microsoft'un e-postanızı gereksiz olarak göndermesini sağlamaz.
+Platformunuzdan gelen e-postaların kimliğini doğrulasanız bile Microsoft'a teslim edilebilirlik garanti değildir, ancak en azından microsoft'un kimlik doğrulaması yapılmadığı için e-postanızı gereksiz hale getirememesini sağlar.
 
 ## <a name="related-links"></a>İlgili bağlantılar
 
-Hizmet sağlayıcılarının en iyi yöntemleri hakkında daha fazla bilgi için bkz. [Hizmet Sağlayıcıları için En İyi M3AAWG Mobil Mesajlaşma Yöntemleri](https://www.m3aawg.org/sites/default/files/m3aawg-mobile-messaging-best-practices-service-providers-2015-08_0.pdf).
+Hizmet sağlayıcılarının en iyi yöntemleri hakkında daha fazla bilgi için bkz. [Hizmet Sağlayıcıları için M3AAWG Mobil Mesajlaşma En İyi Yöntemleri](https://www.m3aawg.org/sites/default/files/m3aawg-mobile-messaging-best-practices-service-providers-2015-08_0.pdf).
 
-SPF'nin Office 365 DKIM doğrulamasını nasıl desteklediğini öğrenin:
+Office 365 SPF'yi nasıl kullandığını ve DKIM doğrulamasını nasıl desteklediğini öğrenin:
 
 - [SPF hakkında daha fazla bilgi](how-office-365-uses-spf-to-prevent-spoofing.md)
 

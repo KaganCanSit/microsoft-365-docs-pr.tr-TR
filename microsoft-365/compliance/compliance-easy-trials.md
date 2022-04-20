@@ -1,5 +1,5 @@
 ---
-title: Uyumluluk Microsoft 365 deneme sürümü hakkında
+title: Microsoft Purview çözümleri deneme sürümü hakkında
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -13,96 +13,127 @@ ms.localizationpriority: high
 search.appverid:
 - MOE150
 - MET150
-description: Uyumluluk çözümleri denemeleri hakkında.
-ms.openlocfilehash: 247080c374cd99c93e538e46ed0894ad24e501cd
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+description: Microsoft Purview çözümleri deneme sürümü ve nasıl kaydolacağınızı öğrenin.
+ms.openlocfilehash: a019ac3a2e16dfd6ae83ba1564f0031f77757b62
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63679840"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972001"
 ---
-# <a name="about-the-compliance-solutions-trial"></a>Uyumluluk çözümleri deneme sürümü hakkında
+# <a name="about-the-microsoft-purview-solutions-trial"></a>Microsoft Purview çözümleri deneme sürümü hakkında
 
-Microsoft uyumluluk çözümleri, dosyalarınızın ve e-postaların uygunsuz izinlerinden yükselen iç tehditlere karşı korunmanıza yardımcı olur ve düzenleme ve ilke gerekliliklerine uymalarına yardımcı olur.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Uyumluluk Microsoft 365 deneme sürümü, Microsoft uyumluluk çözümlerinin tüm özelliklerini denemenin ve bunu ayarlamanın en kolay yolu, yalnızca birkaç dakika sürer. Deneme kurulumu tamamlandıktan sonra, Microsoft E5 lisans paketinin tüm özellikleri 90 gün boyunca kullanabilirsiniz.
+Microsoft Purview çözümleri, kuruluşunuzun dosya ve e-postalardaki uygunsuz izinlerden kaynaklanan iç tehditlere karşı korunmasına yardımcı olur ve kuruluşunuzun mevzuat ve şirket içi iş gereksinimlerine uymasına yardımcı olur.
+
+Microsoft Purview çözümleri deneme sürümü, Microsoft Purview çözümlerinin tüm özelliklerini denemenin en kolay yoludur ve kurulumu yalnızca birkaç dakika sürer. Deneme kurulumu tamamlandıktan sonra, Microsoft E5 lisans paketinin tüm özellikleri 90 güne kadar kullanabilirsiniz.
 
 ## <a name="terms-and-conditions"></a>Hüküm ve koşullar
 
-Uyumluluk [denemeleri için hüküm](terms-conditions.md) ve Microsoft 365 bakın.
+Microsoft Purview denemelerinin [hüküm ve koşullarına](terms-conditions.md) bakın.
 
-## <a name="set-up-a-compliance-trial"></a>Uyumluluk denemesi ayarlama
+## <a name="eligibility"></a>Uygunluk
 
-Sol gezinti bölmesindeki Denemeler bağlantısını [Microsoft 365 uyumluluk merkezi](https://go.microsoft.com/fwlink/p/?linkid=2077149) **deneme sürümüne** kaydolabilirsiniz.
+Microsoft E5 lisans paketi olmayan Microsoft 365 E3 ve Office 365 E3 müşterileri Purview çözümleri deneme sürümü için uygundur. Deneme sürümü Microsoft 365 Kamu müşterileri tarafından kullanılamaz.
 
 ## <a name="licensing"></a>Lisanslama
 
-Deneme kurulumu kapsamında, Microsoft E5 uyumluluk lisansları otomatik olarak organizasyona uygulanır. Lisanslar 90 gün boyunca etkindir.
+Deneme kurulumu kapsamında kuruluşunuza otomatik olarak 300 Microsoft 365 E5 uyumluluk lisansı uygulanır. Lisanslar 90 gün boyunca etkindir.
 
-## <a name="permissions"></a>İzinler
+## <a name="required-roles-for-starting-the-trial"></a>Denemeyi başlatmak için gerekli roller
 
-Denemeyi başlatmak veya sona erdir olmak için, genel yönetici veya okul ailesinde Genel Yönetici veya Güvenlik Yöneticisi rollerinin Azure Active Directory. Ayrıntılar için bkz. [Yönetici rolleri hakkında](../admin/add-users/about-admin-roles.md).
+Kullanıcıların bir deneme sürümüne kaydolmak veya bu denemeyi sonlandırmak için aşağıdaki yönetici rollerinden birine sahip olması gerekir:
+- Faturalama Yöneticisi
+- Uyumluluk Yöneticisi
+- Genel Yönetici
 
-## <a name="additional-information"></a>Ek bilgiler
+[Rollerle ilgili ayrıntıları yönetici rolleri hakkında](../admin/add-users/about-admin-roles.md) sayfasından edinebilirsiniz.
 
-Deneme sürümüne kaydettikten sonra, değişikliklerin ve güncelleştirmelerin kullanılabilir olması 2 saat kadar sürebilir. Ayrıca yöneticilerin değişiklikleri görmek için oturum açması ve yeniden oturum açması gerekir.
+## <a name="how-to-sign-up-for-the-trial"></a>Deneme sürümüne kaydolma
 
-Deneme süresini, deneme süresinin son 15 günü içinde uzatarak devam ettiysiniz. En fazla iki deneme süresiyle sınırlıdırsiniz. Deneme süreniz sona erdiğinde uzatmıyorsanız, ikinci deneme sürümüne kaydolmadan önce en az 30 gün beklemeniz gerekir.
+Deneme sürümüne kaydolmak için [Microsoft 365 deneme merkezini](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) ziyaret edin. Aşağıdaki adımları da izleyebilirsiniz:
 
-## <a name="ending-the-trial"></a>Denemeyi sonlandırma
+1. [Microsoft Purview uyumluluk portalında](https://go.microsoft.com/fwlink/p/?linkid=2077149) sol gezinti **bölmesinden Denemeler'i** seçerek Microsoft 365 deneme sürümü hub'ına gidin.
+2. **Uyumluluk denemeleri'nin** altında **Microsoft Purview çözümleri** kartını bulun ve **Şimdi deneyin'i** seçin.
+3. **Microsoft Purview çözümleri deneme sürümü** açılır öğesi bölmesinde, deneme sürümünü başlattığınızda nelerin dahil olduğu ve neler bekleyebileceğiniz hakkındaki bilgileri gözden geçirin, ardından **Denemeyi başlat'ı seçin.**
 
-Yöneticiler herhangi bir noktada uyumluluk kartına gidip denemeyi devre dışı  olabilir.
+Deneme sürümünüz 90 gün boyunca hemen geçerli olacaktır. Tüm Purview çözümlerinin sol gezintinizde görünmesi iki saat kadar sürebilir. Güncelleştirmeleri görmek için oturumu kapatın ve yeniden oturum açın.
 
-Çözüm için aksi belirtilmedikçe, uyumluluk çözümleri denemesi kapsamında yer alan bir özelikle kaydolmaya karar verirsiniz, deneme verileriniz kalıcı olarak silinmeden önce genellikle 180 gün süreyle korunur. Bu zamana kadar, deneme süresi boyunca toplanmış verilere erişmeye devamabilirsiniz.
+## <a name="getting-started-finding-support-and-ending-the-trial"></a>Başlarken, destek bulma ve denemeyi sonlandırma
 
-## <a name="availability"></a>Kullanılabilirlik
+#### <a name="getting-started"></a>Başlarken
 
-Uyumluluk Microsoft 365 denemesi, Microsoft E5 lisans paketine sahip değilken belirli ölçütlere (coğrafya dahil) uyan mevcut müşterilere aşamalı olarak sunulmaktadır.
+Purview çözümlerini Microsoft Purview uyumluluk portalında gördüğünüz anda kullanmaya başlayabilirsiniz. Hiçbir şey otomatik olarak oluşturulmaz ve kullanıcılar etkilenmez. Her çözüme gittiğinizde, özellikleri kullanmaya başlamak için ek kurulum yapılandırmaları yapmanız için size yol gösterilebilir.
 
-## <a name="learn-more-about-compliance-solutions"></a>Uyumluluk çözümleri hakkında daha fazla bilgi
+Başlamanıza yardımcı olması için [deneme playbook'umuzu](compliance-easy-trials-compliance-playbook.md) kullanın.
 
-Ücretsiz denemede neler deneyimleycenizi merak ediyor musunuz? Uyumluluk çözümleri denemesi aşağıdaki çözümleri içerir:
+#### <a name="finding-support"></a>Destek bulma
+
+Kiracının en az 150 lisansı varsa kuruluşlar deneme dağıtımı desteği için FastTrack kullanabilir. [FastTrack hakkında](https://docs.microsoft.com/fasttrack/introduction) daha fazla bilgi edinin.
+
+#### <a name="extending-the-trial"></a>Deneme süresini uzatma
+
+Deneme süresini, deneme süresinin son 15 günü içinde uzatabilirsiniz. En fazla iki deneme süresiyle sınırlısınız. Deneme sürenizin sonuna kadar uzatmazsanız, ikinci bir deneme sürümüne kaydolmadan önce en az 30 gün beklemeniz gerekir.
+
+#### <a name="ending-the-trial"></a>Deneme sürümünü sonlandırma
+
+Yöneticiler, Microsoft 365 denemeler hub'ında **Purview çözümleri deneme** kartına giderek (bkz. [Deneme sürümüne kaydolma](#how-to-sign-up-for-the-trial)) ve **Denemeyi sonlandır'ı** seçerek deneme sürümünü istediğiniz zaman devre dışı bırakabilir.
+
+Çözüm için aksi belirtilmedikçe E5 düzeyi çözümlere yükseltmemeye karar verirseniz deneme verileriniz kalıcı olarak silinmeden önce genellikle 180 gün boyunca korunur. Deneme süresince toplanan verilere o zamana kadar erişmeye devam edebilirsiniz.
+
+## <a name="learn-more-about-purview-solutions"></a>Purview çözümleri hakkında daha fazla bilgi edinin
+
+Ücretsiz denemenizde neler deneyimleyebileceğinizi mi merak ediyorsunuz? Purview çözümleri deneme sürümü aşağıdaki çözümleri içerir:
 
 - **Denetim**
 
-  Gelişmiş Denetim, araştırma yapmak için gereken denetim günlüğü bekletmesini artırarak, güvenlik ve uyumluluk kapsamını belirlemeye yardımcı olan önemli olaylara erişim sağlayarak ve güvenlik güvenliğinin kapsamını daha hızlı bir şekilde belirleyerek yönetim günlüğü tutma Office 365 yardımcı olur. [Denetim hakkında daha fazla bilgi](advanced-audit.md)
+  Microsoft Purview Audit (Premium), kuruluşların araştırma yürütmek için gereken denetim günlüğü saklama süresini artırarak, risk kapsamını belirlemeye yardımcı olan önemli olaylara erişim sağlayarak ve Office 365 Yönetim Etkinliği API'sine daha hızlı erişim sağlayarak, kuruluşların adli ve uyumluluk araştırmaları gerçekleştirmesine yardımcı olur. [Denetim](advanced-audit.md) hakkında daha fazla bilgi edinin
 
 - **İletişim Uyumluluğu**
 
-  İletişim Uyumluluğu, uygunsuz iletileri otomatik olarak yakalamanıza, olası ilke ihlallerini araştırmanıza ve düzeltmek için gerekli adımları atarak, iç ve dış iletişimlerle ilişkili modern uyumluluk güçlüklerini aşmanıza yardımcı olur. İletişim Uyumluluğu hakkında daha [fazla bilgi](communication-compliance.md)
+  Microsoft Purview İletişim Uyumluluğu, uygunsuz iletileri otomatik olarak yakalamanıza, olası ilke ihlallerini araştırmanıza ve düzeltme adımları gerçekleştirmenize yardımcı olarak iç ve dış iletişimlerle ilişkili modern uyumluluk güçlüklerinin üstesinden gelmenize yardımcı olur. [İletişim Uyumluluğu](communication-compliance.md) hakkında daha fazla bilgi edinin
 
 - **Uyumluluk Yöneticisi**
 
-  Uyumluluk Yöneticisi, veri koruma risklerinizi envanterini almaktan denetimleri uygulamanın karmaşıklıklarını yönetmeye, yasal düzenlemeler ve sertifikalarla güncel kalmanıza ve denetçilere bildirmeye kadar uyumluluk yolculuğunuz boyunca size yardımcı olabilir. [Uyumluluk Yöneticisi hakkında daha fazla bilgi](compliance-manager.md)
+  Microsoft Purview Uyumluluk Yöneticisi, veri koruma risklerinizin envanterini almaktan denetimleri uygulama, düzenlemeler ve sertifikalarla güncel kalma ve denetçilere raporlama gibi karmaşıklıkları yönetmeye kadar uyumluluk yolculuğunuz boyunca size yardımcı olabilir. [Uyumluluk Yöneticisi](compliance-manager.md) hakkında daha fazla bilgi edinin
 
-- **eKbulma**
+- **Veri Kaybı Önleme**
 
-  Kuruluşun iç ve dış soruşturmalarına yanıt veren içerikleri korumak, toplamak, çözümlemek ve dışarı aktarmak için  uç iş akışılardan faydalanın. Yasal ekipler, bir olaya dahil olan koruyucularla iletişim kurarak yasal tutma bildirimi işleminin tamamını yönetebilir. [eBulma hakkında daha fazla bilgi](ediscovery.md)
+  Microsoft Purview Veri Kaybı Önleme (DLP), cihazlarda, uygulamalarda ve hizmetlerde hassas bilgilerin paylaşımını ve kullanımını denetlemenize yardımcı olur. Denemeler sayesinde DLP ilkelerinin kapsamını Teams ve cihazlara genişletebilir, eğitilebilir sınıflandırıcıları ve tam veri eşleşmesini (EDM) kullanarak daha da hassas içerikleri koruyabilir ve önerilen DLP ilkelerimizle hızlı bir şekilde çalışmaya başlayabilirsiniz.  [Veri Kaybı Önleme hakkında daha fazla bilgi edinin](dlp-learn-about-dlp.md)
 
-- **Bilgi Yönetimi**
+   Deneme süresi sona erdiğinde:
 
-  Uyarlanabilir İlke Kapsamlarını kullanarak bekletme ilkesi kapsamınızı otomatikleştirin. Bu özellik, belirli kullanıcılara, gruplara veya sitelere dinamik olarak hedef bekletme ilkelerine olanak sağlar. Bu ilkeler, kurumda değişiklik olduğunda otomatik olarak güncelleştirmesi gerekir. Buna ek olarak, uyarlanabilir kapsamlar kullanan bekletme ilkeleri konum sınırlarına tabi değildir. [Uyarlanabilir İlke Kapsamları hakkında daha fazla bilgi edinin](create-retention-policies.md).
+  - Siz kapatmadığınız sürece mevcut ilkeleriniz açık kalır.
+  - Deneme süresi sona erdikten sonra Teams veya Cihazlar konumlarını içeren DLP ilkelerini düzenlerseniz, bu konumlar ilkeden kaldırılır.
 
-- **Bilgi Koruması**
+- **Veri Yaşam Döngüsü Yönetimi**
 
-  Hassas Microsoft Bilgi Koruması veya [seyahat her yerde](sensitivity-labels.md) bu içeriği bulamanıza, sınıflandırmanıza ve korumanıza yardımcı olması için duyarlılık etiketleri ve veri kaybı önleme ilkeleri içeren bir uygulama uygulama.[](dlp-learn-about-dlp.md)
+  Uyarlamalı ilke kapsamlarını kullanarak bekletme kapsamınızı otomatikleştirin. Bu özellik, bekletme ilkelerini belirli kullanıcılara, gruplara veya sitelere dinamik olarak hedeflemenizi sağlar. Kuruluşunuzda değişiklikler olduğunda bu ilkeler otomatik olarak güncelleştirilir. Buna ek olarak, uyarlamalı kapsamlar kullanan ilkeler konum sınırlarına tabi değildir. [Uyarlamalı ilke kapsamları](retention.md#adaptive-or-static-policy-scopes-for-retention) hakkında daha fazla bilgi edinin.
 
-  Bilgi Koruması denemesi size varsayılan etiketler, belgeler ve e-postalar için otomatik etiketleme ve hem şirket içinde hem de cihazlara göre paylaşılan kredi kartı numaralarını korumak için veri Teams önleme sağlar. Sizin için oluşturmamız olan varsayılan ilkeler, hızlı bir şekilde çalışmanızı sağlar, ancak bunları istediğiniz gibi tamamen özelleştirebilirsiniz.
+- **Ediscovery**
 
-    Deneme süresi sona erdiğinde, sizi şu şekilde bilgilendiren bir e-posta alırsınız:
+  Kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği korumak, toplamak, analiz etmek ve dışarı aktarmak için uçtan uca iş akışından yararlanın. Yasal ekipler, bir davaya dahil olan koruyucularla iletişim kurarak yasal tutma bildirim sürecinin tamamını da yönetebilir. [eBulma](ediscovery.md) hakkında daha fazla bilgi edinin
 
-  - Denemeniz sırasında etiketlenmiş tüm dosya ve e-postalar etiketlenmiş olarak kalır. Etiketleri el ile kaldırabilirsiniz.
-  - Otomatik etiketlemeyi ve veri kaybını önlemeyi desteklemeen önceki Microsoft E3 lisans paketinize indirersiniz. Var olan ilkeleriniz, siz kapatmadıkça açık kalır.
-  - Deneme süresi sona erdikten sonra tüm otomatik etiket ilkeleri düzenlenemez, ancak silinebilir.
-  - Deneme süresi sona erdikten sonra Teams cihazlar konumlarını içeren DLP ilkelerini düzenlerseniz, bu konumlar ilkeden kaldırılır.
+- **Information Protection**
 
-  Bu önceden yapılandırılmış özelliklerin her biri ve bunların kullanıcıları nasıl etkileleri hakkında daha fazla bilgi için bkz. Önceden yapılandırılmış bu özelliklerin [ücretsiz Microsoft Bilgi Koruması](mip-easy-trials.md).
+  Microsoft Purview Information Protection [duyarlılık etiketleriyle](sensitivity-labels.md) uygulayarak hassas içeriğinizi nerede yaşarsa yaşasın veya nereye giderse gitsin keşfetmenize, sınıflandırmanıza ve korumanıza yardımcı olur. Denemeler sayesinde kullanıcıların e-postalarına ve belgelerine duyarlılık etiketleri uygulamasını, hassas içeriği bulup otomatik olarak etiketlemesini, makine öğrenmesi tabanlı sınıflandırıcılardan yararlanmasını ve önerilen etiketleri ve ilkelerimizi hızlı bir şekilde kullanmaya başlamasını önerebilirsiniz.
 
-  Özelliklere ilişkin tüm özellikler hakkında daha fazla bilgi Microsoft Bilgi Koruması bkz[. Microsoft Bilgi Koruması özellikleri Microsoft 365](information-protection.md).
+  Information Protection deneme sürümü, Teams ve cihazlar tarafından paylaşılan kredi kartı numaralarını korumak için size varsayılan etiketler, belgeler ve e-postalar için otomatik etiketleme ve veri kaybı önleme sağlar. Sizin için oluşturduğumuz varsayılan ilkeler hızlı bir şekilde çalışmaya başlamanızı sağlar, ancak bunları istediğiniz gibi tamamen özelleştirebilirsiniz.
 
-- **Insider Risk Yönetimi**
+    Deneme süresi sona erdiğinde:
 
-  şirket içi riskleri hızlı bir şekilde tanımlamanıza, dengelemeye ve düzeltmeye yardımcı olacak yapay zekadan faydalanabilirsiniz. Microsoft 365 Azure hizmetlerinden günlükler kullanarak, risk sinyallerini izleten ilkeler tanımlayabilir ve sonra kullanıcı eğitiminin tanıtımını alma veya bir araştırmanın başlatıldığı gibi düzeltme eylemleri gerçekleştirebilirsiniz. [Insider Risk Yönetimi hakkında daha fazla bilgi](insider-risk-management-solution-overview.md)
+  - Denemeniz sırasında etiketlenen tüm dosyalar ve e-postalar etiketlenmiş olarak kalır. Etiketleri el ile kaldırabilirsiniz.
+  - Siz kapatmadığınız sürece mevcut ilkeleriniz açık kalır.
+  - Deneme süresi sona erdikten sonra otomatik etiketleme ilkeleri düzenlenemez, ancak silinebilir.
+  
+  Önceden yapılandırılmış bu özelliklerin her biri ve kullanıcıları nasıl etkileyecekleri hakkında daha fazla bilgi için bkz. [Microsoft Purview Information Protection için ücretsiz deneme](mip-easy-trials.md) sürümü hakkında bilgi edinin.
+
+  Microsoft Purview Information Protection için tüm özellikler hakkında daha fazla bilgi için bkz. [Microsoft Purview Information Protection](information-protection.md).
+
+- **Insider Risk Management**
+
+  İç riskleri hızla belirlemenize, önceliklendirmenize ve düzeltmenize yardımcı olmak için yapay zekadan yararlanın. Microsoft 365 ve Azure hizmetlerindeki günlükleri kullanarak risk sinyallerini izleyen ilkeler tanımlayabilir, ardından kullanıcı eğitimini yükseltme veya araştırma başlatma gibi düzeltme eylemleri gerçekleştirebilirsiniz. [Insider Risk Management](insider-risk-management-solution-overview.md) hakkında daha fazla bilgi edinin
 
 <!--
 - **privacy management**
@@ -112,10 +143,10 @@ Uyumluluk Microsoft 365 denemesi, Microsoft E5 lisans paketine sahip değilken b
 
 - **Kayıt Yönetimi**
 
-  Tümleşik Kayıt Yönetimi özelliklerini kullanarak:
-  - Kullanıcıların yasal düzenlemeler, yasalar veya kuruluş ilkelerinde gerekli olduğu şekilde düzenlemesini engellemek için içeriği kayıt olarak sınıflandır
-  - Otomatik olarak etiket uygulama ilkelerini kullanarak, belirttiğiniz ölçütle eşlenirken bekletme etiketlerini içeriğe otomatik olarak uygulama
-  - Bekletme etiketi ilkelerinizi konumlara dinamik olarak hedeflemek için uyarlanabilir kapsam ilkelerini kullanma (dahil edilen konum sayısıyla ilgili sınır yoktur)
-  - Kalıcı olarak silinmeden önce içerik üzerinde inceleme yapma olanağı da dahil olmak üzere, tam içerik yaşam döngüsü desteği alma
+  Şunları yapmak için tümleşik Microsoft Purview Kayıt Yönetimi özelliklerini kullanın:
+  - Düzenlemelerin, yasaların veya kuruluş ilkesinin gerektirdiği şekilde kullanıcıların düzenlemesini önlemek için içeriği kayıt olarak sınıflandırma
+  - Etiket ilkelerini otomatik uygulama kullanarak belirttiğiniz ölçütlere uygun olduğunda içeriğe bekletme etiketlerini otomatik olarak uygulama
+  - Bekletme etiketi ilkelerinizi konumlara dinamik olarak hedeflemek için uyarlamalı kapsam ilkelerini kullanın ve dahil edilen konum sayısıyla ilgili bir sınır yoktur
+  - İçeriklerin sonunda kalıcı olarak silinmeden önce içerik üzerinde ayrıştırma gözden geçirmesi gerçekleştirme de dahil olmak üzere tam içerik yaşam döngüsü desteği alın
 
-  Microsoft Kayıt Yönetimi'nin tüm özellik aralığı hakkında daha fazla bilgi için, Kayıt [Yönetimi hakkında daha fazla bilgi](records-management.md)
+  Microsoft Kayıt Yönetimi'nin tüm özellik yelpazesi hakkında daha fazla bilgi için [Kayıt Yönetimi](records-management.md) hakkında daha fazla bilgi edinin

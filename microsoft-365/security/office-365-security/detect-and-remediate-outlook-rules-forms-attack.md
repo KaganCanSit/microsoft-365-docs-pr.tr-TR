@@ -1,5 +1,5 @@
 ---
-title: Geçerli kuralları ve özel form ekleme Outlook saldırılarını algıla ve düzeltmek.
+title: Outlook kurallarını ve özel form ekleme saldırılarını algılayın ve düzeltin.
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -14,248 +14,247 @@ ms.collection:
 ms.localizationpriority: medium
 search.appverid:
 - MET150
-description: Yeni kural ve özel form ekleme saldırılarını Outlook ve düzeltmeyi Office 365
+description: Office 365'de Outlook kurallarını ve özel form ekleme saldırılarını tanımayı ve düzeltmeyi öğrenin
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 6c715552fedeefeb87206d889aa448609e8d7f60
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: c15046d43a1f2a48cf9f4ef4ccc79c060d18b156
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62983497"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972815"
 ---
-# <a name="detect-and-remediate-outlook-rules-and-custom-forms-injections-attacks"></a>Kuralları ve Özel Form Eklemeleri Outlook Algılama ve Düzeltme
+# <a name="detect-and-remediate-outlook-rules-and-custom-forms-injections-attacks"></a>Outlook Kurallarını ve Özel Form Ekleme Saldırılarını Algılama ve Düzeltme
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
+**Özet** Office 365'da Outlook kurallarını ve özel Forms ekleme saldırılarını tanıyıp düzeltmeyi öğrenin.
 
-**Özet** Yeni kural ve özel Forms ekleme saldırılarını Outlook ve düzeltmeyi Office 365.
+## <a name="what-is-the-outlook-rules-and-custom-forms-injection-attack"></a>Outlook Kuralları ve Özel Form ekleme saldırısı nedir?
 
-## <a name="what-is-the-outlook-rules-and-custom-forms-injection-attack"></a>En son Outlook ve Özel Formlar ekleme saldırısı nedir?
+Bir saldırgan kuruluşunuza erişim elde ettikten sonra, bulunduğu yerde kalmak veya bulunduktan sonra geri dönmek için bir koruma alanı oluşturmaya çalışır. Bu etkinliğe *kalıcılık mekanizması oluşturma* adı verilir. Bir saldırganın kalıcılık mekanizması oluşturmak için Outlook kullanabileceği iki yol vardır:
 
-Bir saldırgan organizasyona erişim elde ettikten sonra, kalmak veya bulunduktan sonra geri dönmek için bir dipnot yapmaya dener. Bu etkinlik, *kalıcılık mekanizması kurma olarak adlandırılan bir etkinliktir*. Bir saldırganın kalıcılık mekanizması Outlook iki şekilde kullanabilir:
+- Outlook kuralları kullanarak.
+- Outlook özel formlar ekleyerek.
 
-- Kuralları kullanarak Outlook.
-- Şekillerin içine özel formlar Outlook.
+Outlook yeniden yüklemek ve hatta etkilenen kişiye yeni bir bilgisayar vermek yardımcı olmaz. yeni Outlook yüklemesi posta kutusuna bağlandığında, tüm kurallar ve formlar buluttan eşitlenir. Kurallar veya formlar genellikle uzak kod çalıştırmak ve yerel makineye kötü amaçlı yazılım yüklemek için tasarlanmıştır. Kötü amaçlı yazılım kimlik bilgilerini çalar veya diğer yasadışı etkinlikleri gerçekleştirir.
 
-Etki Outlook yeniden yüklemek veya etkilenen kişiye yeni bilgisayar vermek bile size yardımcı olmaz. Yeni dosya yüklemesi Outlook posta kutusuna bağlandığında, tüm kurallar ve formlar buluttan eşitlenir. Kurallar veya formlar normalde uzak kodu çalıştırmak ve yerel makinede kötü amaçlı yazılım yüklemek için tasarlanmıştır. Kötü amaçlı yazılım kimlik bilgilerini çalar veya başka bir zararlı etkinlik gerçekleştirir.
+İyi haber şudur: Outlook istemcilerinize en son sürüme düzeltme eki uygulamazsanız, geçerli Outlook istemci varsayılanları her iki mekanizmayı da engellediğinden tehditlere karşı savunmasız olmazsınız.
 
-Ancak, istemcilerinizi en son Outlook yaması olarak bırakırsanız, mevcut Outlook istemci varsayılanları her iki mekanizmayı da engellesin diye tehditlere karşı açık değildirsiniz.
-
-Saldırılar genellikle şu desenleri takip eder:
+Saldırılar genellikle şu desenleri izler:
 
 **Kurallardan Yararlanma**:
 
 1. Saldırgan bir kullanıcının kimlik bilgilerini çalar.
 
-2. Saldırgan, o kullanıcının posta kutusunda (Exchange şirket içi Exchange Online posta kutusunda oturum Exchange.
+2. Saldırgan, kullanıcının Exchange posta kutusunda (Exchange Online veya şirket içi Exchange) oturum açar.
 
-3. Saldırgan posta kutusunda bir iletme Gelen Kutusu kuralı oluşturur. Posta kutusu saldırgandan kuralın koşullarına uygun belirli bir ileti aldığında iletme kuralı tetiklenir. Kural koşulları ve ileti biçimi birbirinin için ayrı ayrı yapılır.
+3. Saldırgan, posta kutusunda bir iletme Gelen Kutusu kuralı oluşturur. posta kutusu saldırgandan kuralın koşullarıyla eşleşen belirli bir ileti aldığında iletme kuralı tetikler. Kural koşulları ve ileti biçimi, birbirlerine göre uyarlanmıştır.
 
-4. Saldırgan tetik e-postayı güvenliği tehlikeye atılmış posta kutusuna gönderir ve bu durumdan bağımsız kullanıcı normalde olduğu gibi kullanılır.
+4. Saldırgan, güvenliği aşılmış olan posta kutusuna tetikleyici e-postasını gönderir ve bu e-posta, hala istenmeyen kullanıcı tarafından normal olarak kullanılmaktadır.
 
-5. Posta kutusu kuralın koşullarına uygun bir ileti aldığında, kural eylemi uygulanır. Normalde, kural eylemi bir uygulamayı uzak (WebDAV) sunucusunda başlatmaktır.
+5. Posta kutusu kural koşullarıyla eşleşen bir ileti aldığında, kuralın eylemi uygulanır. Kural eylemi genellikle bir uygulamayı uzak (WebDAV) sunucusunda başlatmaktır.
 
-6. Normalde, uygulama kullanıcının makinesine kötü amaçlı yazılım yükleyebilir (örneğin, [PowerShell İmparatorluğu](https://www.powershellempire.com/)).
+6. Genellikle uygulama kullanıcının makinesine kötü amaçlı yazılım yükler (örneğin, [PowerShell Empire](https://www.powershellempire.com/)).
 
-7. Kötü amaçlı yazılım, saldırganin yerel makineden kullanıcı adını ve parolasını veya diğer kimlik bilgilerini çalmasına (veya yeniden çalmasına) ve diğer kötü amaçlı etkinlikleri gerçekleştirmesına olanak sağlar.
+7. Kötü amaçlı yazılım, saldırganın kullanıcının kullanıcı adını ve parolasını veya diğer kimlik bilgilerini yerel makineden çalmasına (veya tekrar çalmasına) ve diğer kötü amaçlı etkinlikleri gerçekleştirmesine olanak tanır.
 
-**Forms Exploit**:
+**Formların Açıkları**:
 
 1. Saldırgan bir kullanıcının kimlik bilgilerini çalar.
 
-2. Saldırgan, o kullanıcının posta kutusunda (Exchange şirket içi Exchange Online posta kutusunda oturum Exchange.
+2. Saldırgan, kullanıcının Exchange posta kutusunda (Exchange Online veya şirket içi Exchange) oturum açar.
 
-3. Saldırgan kullanıcının posta kutusuna özel bir posta formu şablonu eklemektedir. Posta kutusu saldırgandan, posta kutusunun özel formu yüklemesi için gereken belirli bir ileti aldığında özel form tetiklenir. Özel form ve ileti biçimi birbirinin için uyarlanmış biçimdedir.
+3. Saldırgan, kullanıcının posta kutusuna özel bir posta formu şablonu ekler. Özel form, posta kutusu saldırgandan özel formun yüklenmesini gerektiren belirli bir ileti aldığında tetikler. Özel form ve ileti biçimi, birbirlerine göre uyarlanmıştır.
 
-4. Saldırgan tetik e-postayı güvenliği tehlikeye atılmış posta kutusuna gönderir ve bu durumdan bağımsız kullanıcı normalde olduğu gibi kullanılır.
+4. Saldırgan, güvenliği aşılmış olan posta kutusuna tetikleyici e-postasını gönderir ve bu e-posta, hala istenmeyen kullanıcı tarafından normal olarak kullanılmaktadır.
 
-5. Posta kutusu iletiyi aldığında, posta kutusu gerekli formu yükler. Form, uzak (WebDAV) sunucusunda bir uygulama başlatıyor.
+5. Posta kutusu iletiyi aldığında, posta kutusu gerekli formu yükler. Form, uzak (WebDAV) sunucusunda bir uygulama başlatır.
 
-6. Normalde, uygulama kullanıcının makinesine kötü amaçlı yazılım yükleyebilir (örneğin, [PowerShell İmparatorluğu](https://www.powershellempire.com/)).
+6. Genellikle uygulama kullanıcının makinesine kötü amaçlı yazılım yükler (örneğin, [PowerShell Empire](https://www.powershellempire.com/)).
 
-7. Kötü amaçlı yazılım, saldırganin yerel makineden kullanıcı adını ve parolasını veya diğer kimlik bilgilerini çalmasına (veya yeniden çalmasına) ve diğer kötü amaçlı etkinlikleri gerçekleştirmesına olanak sağlar.
+7. Kötü amaçlı yazılım, saldırganın kullanıcının kullanıcı adını ve parolasını veya diğer kimlik bilgilerini yerel makineden çalmasına (veya tekrar çalmasına) ve diğer kötü amaçlı etkinlikleri gerçekleştirmesine olanak tanır.
 
-## <a name="what-a-rules-and-custom-forms-injection-attack-might-look-like-office-365"></a>Kurallar ve Özel Form Ekleme saldırısı nasıl Office 365?
+## <a name="what-a-rules-and-custom-forms-injection-attack-might-look-like-office-365"></a>Kurallar ve Özel Form Ekleme saldırısı Office 365 nasıl görünebilir?
 
-Bu kalıcılık mekanizmaları büyük bir soruna neden olmaz ve bazı durumlarda onlar için görünmez bile olabilir. Bu makalede, aşağıda listelenen yedi işaretten (Güvenlik Göstergeleri) nasıl bakabilirsiniz? Bu düzeltmelerden herhangi birini bulursanız, düzeltme adımları atılması gerekir.
+Bu kalıcılık mekanizmalarının kullanıcılarınız tarafından fark edilme olasılığı düşüktür ve bazı durumlarda bunlar için görünmez bile olabilir. Bu makalede, aşağıda listelenen yedi işaretin (Uzlaşma Göstergeleri) nasıl aranacakları açıklanır. Bunlardan herhangi birini bulursanız, düzeltme adımlarını uygulamanız gerekir.
 
-- **Kuralların tehlikeye at olduğu göstergeler**:
-  - Kural Eylemi, bir uygulama başlatmaktır.
-  - Kural EXE, ZIP veya URL'ye başvurur.
-  - Yerel makinede, PID'den gelen yeni Outlook bakın.
+- **Kuralların tehlikeye atılmasına ilişkin göstergeler**:
+  - Kural Eylemi, bir uygulamayı başlatmaktır.
+  - Kural Exe, ZIP veya URL'ye başvurur.
+  - Yerel makinede, Outlook PID'den kaynaklanan yeni işlem başlangıçlarını arayın.
 
-- **Özel formların güvenliği tehlikeye atacak göstergeler**:
-  - Kendi ileti sınıfı olarak kaydedilmiş özel formlar vardır.
+- **Özel formların güvenliğinin aşılmasına ilişkin göstergeler**:
+  - Kendi ileti sınıfı olarak kaydedilen özel formlar var.
   - İleti sınıfı yürütülebilir kod içerir.
-  - Kötü amaçlı formlar genellikle Kişisel Formlar Kitaplığı veya Gelen Kutusu klasörlarında depolanır.
-  - Form IPM olarak adlandırılmıştır. Not. [özel ad].
+  - Genellikle, kötü amaçlı formlar Kişisel Formlar Kitaplığı'nda veya Gelen Kutusu klasörlerinde depolanır.
+  - Form IPM olarak adlandırılır. Not. [özel ad].
 
 ## <a name="steps-for-finding-signs-of-this-attack-and-confirming-it"></a>Bu saldırının işaretlerini bulma ve onaylama adımları
 
 Saldırıyı onaylamak için aşağıdaki yöntemlerden birini kullanabilirsiniz:
 
-- Outlook istemcisini kullanarak, her posta kutusu için kuralları ve formları Outlook inceleyebilirsiniz. Bu yöntem kapsamlıdır, ancak bir defada yalnızca bir posta kutusunu kontrol edin. Denetlemeniz gereken çok sayıda kullanıcınız varsa bu yöntem çok zaman alabilir ve bu da kullanmakta olduğunu bilgisayara bulaşacak olabilir.
+- Outlook istemcisini kullanarak her posta kutusu için kuralları ve formları el ile inceleyin. Bu yöntem kapsamlıdır, ancak aynı anda yalnızca bir posta kutusunu deleyebilirsiniz. Denetlemeniz gereken çok sayıda kullanıcı varsa bu yöntem çok zaman alabilir ve kullandığınız bilgisayara da bulaşabilir.
 
-- Get-AllTenantRulesAndForms.ps1[ tüm posta ](https://github.com/OfficeDev/O365-InvestigationTooling/blob/master/Get-AllTenantRulesAndForms.ps1) iletme kurallarını ve özel formlarını kira alanınıza otomatik olarak dökümü içinGet-AllTenantRulesAndForms.ps1PowerShell betiği kullanın. Bu, en düşük yük miktarına sahip en hızlı ve en güvenli yöntemdir.
+- [ kiracınızdaki ](https://github.com/OfficeDev/O365-InvestigationTooling/blob/master/Get-AllTenantRulesAndForms.ps1) tüm kullanıcılar için posta iletme kurallarını ve özel formları otomatik olarak dökümünü almak içinGet-AllTenantRulesAndForms.ps1PowerShell betiğini kullanın. Bu, en az ek yüke sahip en hızlı ve en güvenli yöntemdir.
 
-### <a name="confirm-the-rules-attack-using-the-outlook-client"></a>Outlook istemcisini Kullanarak Kural Saldırılarını Onaylayın
+### <a name="confirm-the-rules-attack-using-the-outlook-client"></a>Outlook istemcisini kullanarak Kural Saldırısını Onaylama
 
-1. Kullanıcı olarak Outlook istemcisini açın. Kullanıcı posta kutusuyla ilgili kuralları incelemeniz için sizin yardıma ihtiyacı olabilir.
+1. kullanıcı Outlook istemcisini kullanıcı olarak açın. Kullanıcının posta kutularındaki kuralları inceleme konusunda yardımınıza ihtiyacı olabilir.
 
-2. Aynı [dosyada kural arabirimini açma yordamları](https://support.microsoft.com/office/c24f5dea-9465-4df4-ad17-a50704d66c59) için kurallar makalesine kullanarak e-posta iletilerini yönetme Outlook.
+2. Outlook'da kural arabirimini açma yordamları için Kural [kullanarak e-posta iletilerini yönetme](https://support.microsoft.com/office/c24f5dea-9465-4df4-ad17-a50704d66c59) makalesine bakın.
 
-3. Kullanıcının oluşturmadiği kuralları veya şüpheli adlarla ilgili beklenmedik kuralları veya kuralları bakın.
+3. Kullanıcının oluşturmadığı kuralları veya şüpheli adlara sahip beklenmeyen kuralları veya kuralları arayın.
 
-4. Başlangıç ve uygulama kural eylemleri için kural açıklamasına bakın veya .EXE, .ZIP veya BIR URL başlatmaya bakın.
+4. Başlatan ve uygulamaya yönelik kural eylemleri için kural açıklamasına bakın veya bir .EXE, .ZIP dosyasına veya url başlatmaya bakın.
 
-5. Kullanıcı adı ve işlem kimliğini kullanmaya başlamak için Outlook bakın. süreç [kimliğini bulma'ya bakın](/windows-hardware/drivers/debugger/finding-the-process-id).
+5. Outlook işlem kimliğini kullanmaya başlayan tüm yeni işlemleri arayın. [İşlem Kimliğini Bulma bölümüne](/windows-hardware/drivers/debugger/finding-the-process-id) bakın.
 
-### <a name="steps-to-confirm-the-forms-attack-using-the-outlook-client"></a>Outlook istemcisini kullanarak Forms saldırılarını onaylama adımları
+### <a name="steps-to-confirm-the-forms-attack-using-the-outlook-client"></a>Outlook istemcisini kullanarak Forms saldırısını onaylama adımları
 
-1. Kullanıcı olarak Outlook istemcisini açın.
+1. kullanıcı Outlook istemcisini kullanıcı olarak açın.
 
-2. Kullanıcının kullanıcı [sürümünün Geliştirici sekmesini](https://support.microsoft.com/office/e1192344-5e56-4d45-931b-e5fd9bea2d45) gösterme altında yer alan adımları Outlook.
+2. Kullanıcının Outlook [sürümünün Geliştirici sekmesini gösterme](https://support.microsoft.com/office/e1192344-5e56-4d45-931b-e5fd9bea2d45) bölümünde yer alan adımları izleyin.
 
-3. Yeni Görünüm'de artık görünür olan geliştirici Outlook ve form **tasarla'ya tıklayın**.
+3. Outlook'da görünür durumdaki geliştirici sekmesini açın ve **form tasarla'ya** tıklayın.
 
-4. Bak **listesinden** Gelen **Kutusu'na** tıklayın. Özel formlara bakın. Özel formlar nadiren de olsa, özel formlar varsa daha derine bakmanız yeterlidir.
+4. Bak listesinden **Gelen** **Kutusu'nu** seçin. Herhangi bir özel form arayın. Özel formlar, özel formlarınız varsa daha derin bir görünüme değer olacak kadar nadirdir.
 
-5. Özel formları (özellikle de gizli olarak işaretli formları) araştıryın.
+5. Özel formları, özellikle de gizli olarak işaretlenmiş formları araştırın.
 
-6. Herhangi bir özel formu açın ve **Form** **grubunda Kodu** Görüntüle'ye tıklar ve form yüklendiğinde nelerin çalıştır yaptığını bakın.
+6. Herhangi bir özel formu açın ve **Form** grubunda **Kodu Görüntüle'ye** tıklayarak form yüklendiğinde nelerin çalıştığını görün.
 
-### <a name="steps-to-confirm-the-rules-and-forms-attack-using-powershell"></a>PowerShell kullanarak Kurallar ve Formlar saldırılarını onaylama adımları
+### <a name="steps-to-confirm-the-rules-and-forms-attack-using-powershell"></a>PowerShell kullanarak Kurallar ve Formlar saldırısını onaylama adımları
 
-Kurallara veya özel formlara yönelik saldırıyı doğrulamanın en basit yolu, [Get-AllTenantRulesAndForms.ps1PowerShell ](https://github.com/OfficeDev/O365-InvestigationTooling/blob/master/Get-AllTenantRulesAndForms.ps1) betiği çalıştırmaktır. Bu betik kiracınız içinde yer alan tüm posta kutularına bağlanır ve tüm kuralları ve formları iki ayrı .csv oluşturur.
+Kuralları veya özel form saldırılarını doğrulamanın en basit yolu [ ,Get-AllTenantRulesAndForms.ps1](https://github.com/OfficeDev/O365-InvestigationTooling/blob/master/Get-AllTenantRulesAndForms.ps1) PowerShell betiğini çalıştırmaktır. Bu betik, kiracınızdaki her posta kutusuna bağlanır ve tüm kuralları ve formları iki .csv dosyasına döker.
 
 #### <a name="pre-requisites"></a>Önkoşullar
 
-Betiği çalıştırmak için genel yönetici haklarınız olması gerekir, çünkü betik kira dosyasındaki tüm posta kutularına kuralları ve formları okumak için bağlanır.
+Betik, kuralları ve formları okumak için kiracıdaki her posta kutusuna bağlandığından, betiği çalıştırmak için genel yönetici haklarına sahip olmanız gerekir.
 
-1. Betiği çalıştıracak makinede yerel yönetici haklarıyla oturum açın.
+1. Betiği çalıştıracağınız makinede yerel yönetici haklarıyla oturum açın.
 
-2. Bu betiği Get-AllTenantRulesAndForms.ps1 betiği GitHub çalıştıracak bir klasöre indirin veya kopyalayın. Betik, bu klasöre iki tarih damgasılı dosya oluşturur; MailboxFormsExport-yyyy-mm-dd.csv dosya MailboxRulesExport-yyyy-mm-dd.csv.
+2. Get-AllTenantRulesAndForms.ps1 betiğini GitHub'dan çalıştıracağınız klasöre indirin veya kopyalayın. Betik, bu klasöre MailboxFormsExport-yyyy-mm-dd.csv ve MailboxRulesExport-yyyy-mm-dd.csv olmak üzere iki tarih damgalı dosya oluşturur.
 
-3. Bir PowerShell örneğini yönetici olarak açın ve betiği kayıtlı klasörü açın.
+3. Bir PowerShell örneğini yönetici olarak açın ve betiği kaydettiğiniz klasörü açın.
 
-4. Bu PowerShell komut satırı `.\Get-AllTenantRulesAndForms.ps1`.\Get-AllTenantRulesAndForms.ps1
+4. Bu PowerShell komut satırını aşağıdaki `.\Get-AllTenantRulesAndForms.ps1`gibi çalıştırın.\Get-AllTenantRulesAndForms.ps1
 
 #### <a name="interpreting-the-output"></a>Çıkışı yorumlama
 
-- ***MailboxRulesExport-yyyy-mm-dd*.csv**: Uygulamaları veya yürütülebilir dosyaları içeren eylem koşulları için kuralları (satır başına bir) incele:
+- ***MailboxRulesExport-yyyy-mm-dd*.csv**: Uygulamaları veya yürütülebilir dosyaları içeren eylem koşulları için kuralları (satır başına bir tane) inceleyin:
 
-  - **ActionType (A sütunu)**: "Özel" değerini ID_ACTION_CUSTOM, kural büyük olasılıkla kötü amaçlıdır.
+  - **ActionType (A sütunu):**"ID_ACTION_CUSTOM" değerini görüyorsanız, kural büyük olasılıkla kötü amaçlıdır.
 
-  - **IsPotentiallyMalicious (D sütunu)**: Bu değer "DOĞRU" ise, kural büyük olasılıkla kötü amaçlıdır.
+  - **IsPotentiallyMalicious (D sütunu):** Bu değer "DOĞRU" ise, kural büyük olasılıkla kötü amaçlıdır.
 
-  - **ActionCommand (G sütunu)**: Bu sütunda .exe veya .zip uzantılara sahip bir uygulama ya da dosya ya da URL'ye başvuran bilinmeyen bir giriş listeıyorsa, kural büyük olasılıkla kötü amaçlıdır.
+  - **ActionCommand (G sütunu):** Bu sütunda bir uygulama veya .exe ya da .zip uzantıları olan herhangi bir dosya ya da URL'ye başvuran bilinmeyen bir giriş listeleniyorsa, kural büyük olasılıkla kötü amaçlıdır.
 
-- ***MailboxFormsExport-yyyy-aa-.csv***: Genelde özel formların kullanımı enderdir. Bu çalışma kitabında herhangi bir şey bulursanız, o kullanıcının posta kutusunu açar ve formun kendisini incelersiniz. If your organization did not put it in intentionally, it is likely malicious.
+- ***MailboxFormsExport-yyyy-mm-dd*.csv**: Genel olarak, özel formların kullanımı nadirdir. Bu çalışma kitabında herhangi bir posta kutusu bulursanız, kullanıcının posta kutusunu açar ve formun kendisini incelersiniz. Kuruluşunuz bunu kasıtlı olarak koymadıysa, büyük olasılıkla kötü amaçlıdır.
 
-## <a name="how-to-stop-and-remediate-the-outlook-rules-and-forms-attack"></a>Kurallar ve Formlar saldırılarını durdurma Outlook düzeltme
+## <a name="how-to-stop-and-remediate-the-outlook-rules-and-forms-attack"></a>Outlook Kuralları ve Formları saldırısını durdurma ve düzeltme
 
-Bu saldırılardan herhangi biri için kanıt bulursanız, düzeltme basit bir işlemdir, yalnızca posta kutusundan kuralı veya formu silin. Bunu Outlook istemcide veya uzak PowerShell kullanarak kuralları kaldırabilirsiniz.
+Bu saldırılardan herhangi biriyle ilgili herhangi bir kanıt bulursanız, düzeltme basittir, kuralı veya formu posta kutusundan silmeniz gerekir. Bunu Outlook istemcisiyle veya kuralları kaldırmak için uzak PowerShell kullanarak yapabilirsiniz.
 
-### <a name="using-outlook"></a>Outlook'i kullanma
+### <a name="using-outlook"></a>Outlook kullanma
 
-1. Kullanıcının diğer kullanıcılarla birlikte kullandığı tüm cihazları Outlook. Tüm olası kötü amaçlı yazılımların temizlenmesi gerekir. Tüm cihazlar temizleninceye kadar kullanıcının oturum açmasına ve e-posta kullanmasına izin verme.
+1. Kullanıcının Outlook ile kullandığı tüm cihazları tanımlayın. Bunların tümünün olası kötü amaçlı yazılımlardan temizlenmesi gerekir. Tüm cihazlar temizlenene kadar kullanıcının oturum açmasına ve e-posta kullanmasına izin verme.
 
-2. Her cihaz için [kural silme'de](https://support.microsoft.com/office/2f0e7139-f696-4422-8498-44846db9067f) adımları izleyin.
+2. Her cihaz için [kural silme'deki](https://support.microsoft.com/office/2f0e7139-f696-4422-8498-44846db9067f) adımları izleyin.
 
-3. Başka bir kötü amaçlı yazılıma sahip olup olmadığınız konusunda emin değilseniz, tüm yazılımı cihaza biçimlendirin ve yeniden yükleyin. Mobil cihazlarda, cihazı fabrika görüntüsüne sıfırlamak için üreticilerin adımlarını izleyin.
+3. Diğer kötü amaçlı yazılımların varlığından emin değilseniz, tüm yazılımı cihaza biçimlendirebilir ve yeniden yükleyebilirsiniz. Mobil cihazlar için üretici adımlarını izleyerek cihazı fabrika görüntüsüne sıfırlayabilirsiniz.
 
-4. Office 365'in en güncel sürümlerini Outlook. Outlook'in geçerli sürümünün her iki tür saldırıyı da varsayılan olarak engeller.
+4. Outlook en güncel sürümlerini yükleyin. Outlook geçerli sürümünün bu saldırının her iki türünü de varsayılan olarak engellediğini unutmayın.
 
-5. Posta kutusunun çevrimdışı kopyalarının hepsi kaldırıldıktan sonra, kullanıcının parolasını sıfırlayın (yüksek kaliteli bir parola kullanın) ve MFA daha önce etkinleştirilmemişse kullanıcılar [](../../admin/security-and-compliance/set-up-multi-factor-authentication.md) için çok faktörlü kimlik doğrulamasını ayarlama'daki adımları izleyin. Bu, kullanıcının kimlik bilgilerinin başka bir araçla (kimlik avı veya parola yeniden kullanımı gibi) açık kalmalarını sağlar.
+5. Posta kutusunun tüm çevrimdışı kopyaları kaldırıldıktan sonra, kullanıcının parolasını sıfırlayın (yüksek kaliteli bir parola kullanın) ve MFA henüz etkinleştirilmemişse [kullanıcılar için çok faktörlü kimlik doğrulamasını ayarlama](../../admin/security-and-compliance/set-up-multi-factor-authentication.md) başlığı altında yer alan adımları izleyin. Bu, kullanıcının kimlik bilgilerinin başka yollarla (kimlik avı veya parola yeniden kullanımı gibi) gösterilmemesini sağlar.
 
-### <a name="using-powershell"></a>PowerShell'i kullanma
+### <a name="using-powershell"></a>PowerShell kullanma
 
-Tehlikeli kuralları kaldırmak veya devre dışı bırakmak için kullanabileceğiniz iki uzak PowerShell cmdlet'i vardır. Adımları takip edin.
+Tehlikeli kuralları kaldırmak veya devre dışı bırakmak için kullanabileceğiniz iki uzak PowerShell cmdlet'i vardır. Adımları izlemen yeter.
 
 #### <a name="steps-for-mailboxes-that-are-on-an-exchange-server"></a>Exchange sunucusundaki posta kutuları için adımlar
 
-1. Bağlan PowerShell Exchange sunucuya bağlanın. Uzak [PowerShell kullanarak Bağlan'Exchange aşağıdaki adımları izleyin](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell).
+1. uzak PowerShell kullanarak Exchange sunucusuna Bağlan. [Uzak PowerShell kullanarak sunucuları Exchange için Bağlan'deki](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell) adımları izleyin.
 
-2. Bir posta kutusundan tek bir kuralı, birden çok kuralı veya tüm kuralları tamamen kaldırmak için [Gelen KutusuRule](/powershell/module/exchange/Remove-InboxRule) cmdlet'ini kullanın.
+2. Bir posta kutusundan tek bir kuralı, birden çok kuralı veya tüm kuralları tamamen kaldırmak istiyorsanız [Remove-InboxRule cmdlet'ini](/powershell/module/exchange/Remove-InboxRule) kullanın.
 
-3. Kuralı ve içeriğini daha fazla araştırma yapmak için korumak için Gelen Kutusu Kuralını [Devre Dışı Bırak cmdlet'ini](/powershell/module/exchange/disable-inboxrule) kullanın.
+3. Kuralı ve içeriğini daha fazla araştırma için korumak istiyorsanız [Disable-InboxRule cmdlet'ini](/powershell/module/exchange/disable-inboxrule) kullanın.
 
-#### <a name="steps-for-mailboxes-in-exchange-online"></a>Posta kutuları için Exchange Online
+#### <a name="steps-for-mailboxes-in-exchange-online"></a>Exchange Online'da posta kutuları için adımlar
 
-1. [PowerShell kullanarak Bağlan Exchange Online adımları izleyin](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [PowerShell kullanarak Exchange Online için Bağlan'deki](/powershell/exchange/connect-to-exchange-online-powershell) adımları izleyin.
 
-2. Bir posta kutusundan tek bir kuralı, birden çok kuralı veya tüm kuralları tamamen kaldırmak için Gelen Kutusu Kuralını [Kaldır](/powershell/module/exchange/Remove-InboxRule) cmdlet'ini kullanın.
+2. Bir posta kutusundan tek bir kuralı, birden çok kuralı veya tüm kuralları tamamen kaldırmak istiyorsanız [Gelen Kutusu Kuralını Kaldır cmdlet'ini](/powershell/module/exchange/Remove-InboxRule) kullanın.
 
-3. Kuralı ve içeriğini daha fazla araştırma yapmak için korumak için Gelen Kutusu Kuralını [Devre Dışı Bırak cmdlet'ini](/powershell/module/exchange/disable-inboxrule) kullanın.
+3. Kuralı ve içeriğini daha fazla araştırma için korumak istiyorsanız [Disable-InboxRule cmdlet'ini](/powershell/module/exchange/disable-inboxrule) kullanın.
 
-## <a name="how-to-minimize-future-attacks"></a>Gelecekteki saldırılar nasıl en aza indirger
+## <a name="how-to-minimize-future-attacks"></a>Gelecekteki saldırıları en aza indirme
 
-### <a name="first-protect-your-accounts"></a>İlk olarak, hesaplarınızı koruyun
+### <a name="first-protect-your-accounts"></a>İlk olarak: Hesaplarınızı koruma
 
-Kurallar ve Formlar istismarları ancak kullanıcı hesaplarından birini çalınırsa veya ihlal edildikten sonra bir saldırgan tarafından kullanılır. Bu nedenle, bu istismarların organizasyona karşı kullanımını önlemenin ilk adımı, kullanıcı hesaplarınızı saldırgan bir şekilde korumaktır. Hesapların ihlal etmenin en yaygın yollarından bazıları kimlik avı veya parola parola [saldırılarındandır](https://www.microsoft.com/security/blog/2020/04/23/protecting-organization-password-spray-attacks/).
+Kurallar ve Formlar açıklarından yararlanma işlemleri, bir saldırgan tarafından yalnızca kullanıcı hesaplarınızdan birini çaldıktan veya ihlal ettikten sonra kullanılır. Bu nedenle, bu açıkların kuruluşunuza karşı kullanılmasını önlemenin ilk adımı, kullanıcı hesaplarınızı agresif bir şekilde korumaktır. Hesapların ihlal edilmesi için en yaygın yollardan bazıları kimlik avı veya [parola spreyi saldırılarıdır](https://www.microsoft.com/security/blog/2020/04/23/protecting-organization-password-spray-attacks/).
 
-Kullanıcı hesaplarınızı ve özellikle de yönetici hesaplarınızı korumanın en iyi yolu, kullanıcılar için [çok faktörlü kimlik doğrulamasını ayarlamaktır](../../admin/security-and-compliance/set-up-multi-factor-authentication.md). Ayrıca şunları da gerekir:
+Kullanıcı hesaplarınızı ve özellikle de yönetici hesaplarınızı korumanın en iyi yolu [, kullanıcılar için çok faktörlü kimlik doğrulamasını ayarlamaktır](../../admin/security-and-compliance/set-up-multi-factor-authentication.md). Ayrıca şunları da yapmalısınız:
 
-- Kullanıcı hesaplarınıza nasıl erişil olduğunu [ve nasıl kullanıldıklarını takip etmek](/azure/active-directory/active-directory-view-access-usage-reports). İlk ihlali önlemeyin, ancak daha önce tespit edersiniz ve ihlalin süresini ve etkisini kısaltmış oluruz. Hesaplarınız ve olağan [Office 365 Bulut Uygulamaları Güvenliği izlemek](/cloud-app-security/what-is-cloud-app-security) için bu yardım ilkelerini kullanabilirsiniz:
+- Kullanıcı hesaplarınıza nasıl [erişilip kullanıldığını](/azure/active-directory/active-directory-view-access-usage-reports) izleyin. İlk ihlali önleyemeyebilirsiniz, ancak daha erken algılayarak ihlalin süresini ve etkisini kısaltırsınız. Hesaplarınızı izlemek ve olağan dışı etkinliklerle ilgili uyarı vermek için bu [Office 365 Bulut Uygulamaları Güvenliği ilkelerini](/cloud-app-security/what-is-cloud-app-security) kullanabilirsiniz:
 
-  - **Birden çok başarısız** oturum açma girişimi: Bu ilke ortamınızı profiller ve kullanıcılar tek oturumda birden fazla başarısız oturum açma işlemi gerçekleştirildiğinde, öğrenilen temele göre uyarılar tetikler; bu da bir ihlal girişimlerine neden olabilir.
+  - **Birden çok başarısız oturum açma girişimi**: Bu ilke ortamınızın profilini oluşturur ve kullanıcılar öğrenilen temele göre tek bir oturumda birden çok başarısız oturum açma etkinliği gerçekleştirdiğinde uyarı tetikler ve bu da ihlal girişimine işaret edebilir.
 
-  - **Imkansız seyahat**: Bu ilke ortamınızı profiller ve iki konum arasındaki beklenen seyahat süresinden daha kısa bir süre içinde aynı kullanıcıdan farklı konumlarda etkinlikler algılandığında uyarıları tetikler. Bu, farklı bir kullanıcının aynı kimlik bilgilerini kullanıyor olduğunu gösteriyor olabilir. Bu anormal davranışı algılamak, yeni bir kullanıcının etkinlik desenini öğrenmesi için yedi günlük bir başlangıç öğrenme dönemi gerekir.
+  - **İmkansız seyahat**: Bu ilke ortamınızın profilini oluşturur ve iki konum arasındaki beklenen seyahat süresinden daha kısa bir süre içinde farklı konumlarda aynı kullanıcıdan etkinlikler algılandığında uyarıları tetikler. Bu, farklı bir kullanıcının aynı kimlik bilgilerini kullandığını gösterebilir. Bu anormal davranışın algılanması, yeni bir kullanıcının etkinlik desenini öğrendiği yedi günlük ilk öğrenme süresini gerektirmektedir.
 
-  - **Olağan dışı kimliğe** bürünülen etkinlik (kullanıcıya göre): Bu ilke ortamınızı profiller ve kullanıcılar öğrenilen taban çizgisine göre tek oturumda birden çok kimliğe bürünülen etkinlik gerçekleştirildiğinde uyarılar tetikler; bu da ihlale neden olabilir.
+  - **Olağan dışı kimliğe bürünülen etkinlik (kullanıcı tarafından)**: Bu ilke ortamınızın profilini oluşturur ve kullanıcılar öğrenilen temele göre tek bir oturumda birden çok kimliğine bürünülen etkinlik gerçekleştirdiğinde uyarı tetikler ve bu da ihlal girişimine işaret edebilir.
 
-- Hesap güvenliği yapılandırmalarını [ve Office 365 yönetmek için](https://securescore.office.com/) Güvenli Puan'a sahip olmak gibi bir araç kullanın.
+- Hesap güvenlik yapılandırmalarını ve davranışlarını yönetmek için [Office 365 Güvenli Puan](https://securescore.office.com/) gibi bir araç kullanın.
 
-### <a name="second-keep-your-outlook-clients-current"></a>İkinci: Outlook istemcilerinizi güncel tutma
+### <a name="second-keep-your-outlook-clients-current"></a>İkinci: Outlook istemcilerinizi güncel tutun
 
-Outlook 2013 ve 2016'nın tümüyle güncelleştirilmiş ve yamalı sürümleri, "Uygulamayı Başlat" kuralı/formu eylemini varsayılan olarak devre dışı bırak. Bu şekilde, bir saldırgan hesap ihlal edese bile kural ve form eylemleri engellenir. En son güncelleştirmeleri ve güvenlik yamalarını yüklemek için Bu Güncelleştirmeleri Yükleme Office [edinebilirsiniz](https://support.microsoft.com/office/2ab296f3-7f03-43a2-8e50-46de917611c5).
+Outlook 2013 ve 2016'nın tam olarak güncelleştirilmiş ve düzeltme eki eklenmiş sürümleri varsayılan olarak "Uygulamayı Başlat" kuralı/form eylemini devre dışı bırakır. Bu, bir saldırgan hesabı ihlal ederse bile kural ve form eylemlerinin engellenmesini sağlar. Güncelleştirmeleri yükleme Office adımlarını izleyerek en son güncelleştirmeleri ve güvenlik düzeltme [eklerini](https://support.microsoft.com/office/2ab296f3-7f03-43a2-8e50-46de917611c5) yükleyebilirsiniz.
 
-Outlook 2013 ve 2016 istemcileriniz için düzeltme eki sürümleri:
+Outlook 2013 ve 2016 istemcileriniz için düzeltme eki sürümleri şunlardır:
 
-- **Outlook 2016**: 16.0.4534.1001 veya üzerinde.
+- **Outlook 2016**: 16.0.4534.1001 veya üzeri.
 
-- **Outlook 2013**: 15.0.4937.1000 veya daha büyük.
+- **Outlook 2013**: 15.0.4937.1000 veya üzeri.
 
-Tek tek güvenlik yamaları hakkında daha fazla bilgi için bkz:
+Tek tek güvenlik düzeltme ekleri hakkında daha fazla bilgi için bkz:
 
-- [Outlook 2016 Düzeltme Eki](https://support.microsoft.com/help/3191883)
+- [Outlook 2016 Güvenlik Düzeltme Eki](https://support.microsoft.com/help/3191883)
 
 - [Outlook 2013 Güvenlik Düzeltme Eki](https://support.microsoft.com/help/3191938)
 
 ### <a name="third-monitor-your-outlook-clients"></a>Üçüncü: Outlook istemcilerinizi izleme
 
-Düzeltme ekleri ve güncelleştirmeler yüklü olsa bile, bir saldırganın yerel makine yapılandırmasında "Başlangıç Uygulaması" davranışını yeniden etkinleştirmesi mümkündür. İstemcilerinize [yerel makine ilkelerini izlemek](/microsoft-desktop-optimization-pack/agpm/) ve uygulamak için Gelişmiş Grup İlkesi Yönetimi'ne kullanabilirsiniz.
+Düzeltme ekleri ve güncelleştirmeler yüklü olsa bile, bir saldırganın "Uygulamayı Başlat" davranışını yeniden etkinleştirmek için yerel makine yapılandırmasını değiştirmesinin mümkün olduğunu unutmayın. İstemcilerinizde yerel makine ilkelerini izlemek ve zorunlu kılmak için [Gelişmiş grup ilkesi Yönetimi'ni](/microsoft-desktop-optimization-pack/agpm/) kullanabilirsiniz.
 
-Uygulamanın 64 bit sürümlerini kullanarak sistem kayıt defterini görüntüleme makalesinde yer alan bilgileri kullanarak, "Başlangıç Uygulaması" değerinin kayıt defterinde geçersiz kılınarak yeniden [etkinleştiril olup Windows](https://support.microsoft.com/help/305097). Şu alt anahtarları kontrol edin:
+Windows'nin [64 bit sürümlerini kullanarak sistem kayıt defterini görüntüleme'deki](https://support.microsoft.com/help/305097) bilgileri kullanarak kayıt defterindeki bir geçersiz kılma aracılığıyla "Uygulamayı Başlat" özelliğinin yeniden etkinleştirilip etkinleştirilmediğini görebilirsiniz. Şu alt anahtarları denetleyin:
 
 - **Outlook 2016**:`HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Security\`
 
 - **Outlook 2013**:`HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Outlook\Security\`
 
-EnableUnsafeClientMailRules anahtarına bakın. Varsa ve 1 olarak ayarlanırsa, Outlook düzeltme eki geçersiz kılınır ve bilgisayar Form/Kurallar saldırılarına açık kalır. Değer 0 ise, "Uygulamayı Başlat" eylemi devre dışı bırakılır. Bu güvenlik defteri anahtarının güncelleştirilmiş ve yama Outlook yüklüyse ve bu kayıt defteri anahtarı yoksa, sistem bu saldırılara açık değildir.
+EnableUnsafeClientMailRules anahtarını arayın. Oradaysa ve 1 olarak ayarlandıysa, Outlook güvenlik düzeltme eki geçersiz kılınmıştır ve bilgisayar Form/Kurallar saldırısına karşı savunmasızdır. Değer 0 ise, "Uygulamayı Başlat" eylemi devre dışı bırakılır. Outlook güncelleştirilmiş ve düzeltme eki uygulanmış sürümü yüklüyse ve bu kayıt defteri anahtarı yoksa, sistem bu saldırılara karşı savunmasız değildir.
 
-Şirket içi yüklemeleri olan Exchange, kullanılabilir yamaları olmayan Outlook sürümlerini engellemeyi göz önünde bulundurmalı. Bu işlemle ilgili ayrıntıları İstemci engellemeyi [yapılandırma makalesinde Outlook bulunabilir](/exchange/configure-outlook-client-blocking-exchange-2013-help).
+Şirket içi Exchange yüklemeleri olan müşteriler, düzeltme ekleri bulunmayan eski Outlook sürümlerini engellemeyi düşünmelidir. Bu işlemle ilgili ayrıntılara [Outlook istemci engellemeyi yapılandırma](/exchange/configure-outlook-client-blocking-exchange-2013-help) makalesinde bulunabilir.
 
-## <a name="secure-microsoft-365-like-a-cybersecurity-pro"></a>Siber Microsoft 365 gibi güvenliği sağlama
+## <a name="secure-microsoft-365-like-a-cybersecurity-pro"></a>Siber güvenlik uzmanı gibi güvenli Microsoft 365
 
-Microsoft 365 aboneliğiniz, verilerinizi ve kullanıcılarınızı korumak için kullanabileceğiniz güçlü bir güvenlik özellikleri kümesiyle gelir. Güvenlik [Microsoft 365 kullanın - İlk 30 gün, 90](security-roadmap.md) gün ve bundan sonra Microsoft'un kiracı kiracının güvenliğini sağlamak için önerilen en iyi yöntemleri uygulamak için Microsoft 365 vardır.
+Microsoft 365 aboneliğiniz, verilerinizi ve kullanıcılarınızı korumak için kullanabileceğiniz güçlü bir güvenlik özellikleri kümesiyle birlikte gelir. microsoft'un Microsoft 365 kiracınızın güvenliğini sağlamaya yönelik önerilen en iyi yöntemleri uygulamak [için Microsoft 365 güvenlik yol haritası - İlk 30 gün, 90 gün ve sonrasındaki en önemli öncelikleri](security-roadmap.md) kullanın.
 
-- İlk 30 gün içinde yerine gelen görevler. Bunlar hemen etkili olur ve kullanıcılarınız için düşük etki sağlar.
+- İlk 30 günde gerçekleştirecek görevler. Bunlar hemen etkili olur ve kullanıcılarınız için düşük etkiye sahiptir.
 
-- 90 gün içinde yapılacak görevler. Bunlar planlamak ve uygulamak için biraz daha zaman alır ama güvenlik performansını büyük ölçüde geliştirin.
+- 90 gün içinde gerçekleştirecek görevler. Bunların planlanıp uygulanması biraz daha zaman alır ancak güvenlik duruşunuzu büyük ölçüde geliştirir.
 
-- 90 gün dışında. Bu iyileştirmeler ilk 90 gün çalışmanıza dahil.
+- 90 günden fazla. Bu geliştirmeler ilk 90 günlük çalışmanızda derlemektedir.
 
 ## <a name="see-also"></a>Ayrıca bkz:
 
-- [Kurallar Outlook SilentBreak](https://silentbreaksecurity.com/malicious-outlook-rules/) Güvenlik Gönderisi'nin Kötü Amaçlı Kullanıcı Kuralları, Kullanıcı Kuralları'nın nasıl ayrıntılı Outlook sağlar.
+- Kurallar Vektör hakkında SilentBreak Güvenlik Gönderisi'nin [Kötü Amaçlı Outlook Kuralları](https://silentbreaksecurity.com/malicious-outlook-rules/), Outlook Kurallarının nasıl yapıldığını ayrıntılı bir şekilde gözden geçirmenizi sağlar.
 
-- MAILrule Pwnage hakkında Sensepost blog'gönderisi üzerinden [MAPI ve Mailrule Pwnage](https://sensepost.com/blog/2016/mapi-over-http-and-mailrule-pwnage/), Cetvel adlı aracı tartışarak posta kutularını Outlook tartışır.
+- Mailrule Pwnage hakkındaki Sensepost blogundaki [HTTP ve Mailrule Pwnage üzerinden MAPI](https://sensepost.com/blog/2016/mapi-over-http-and-mailrule-pwnage/), Outlook kuralları aracılığıyla posta kutularında yararlanmanıza olanak tanıyan Cetvel adlı bir aracı ele alır.
 
-- [Outlook Posta blog'sinde](https://sensepost.com/blog/2017/outlook-forms-and-shells/) Forms Threat Vector hakkında form ve kabukları kontrol edin.
+- Formlar Tehdit Vektörüne ilişkin Sensepost bloguna [formlar ve kabuklar Outlook](https://sensepost.com/blog/2017/outlook-forms-and-shells/).
 
 - [Cetvel Kod Tabanı](https://github.com/sensepost/ruler)
 
-- [CetvelIn Güvenliği Ile Ilgili Göstergeler](https://github.com/sensepost/notruler/blob/master/iocs.md)
+- [Ele Geçirilenin Cetvel Göstergeleri](https://github.com/sensepost/notruler/blob/master/iocs.md)

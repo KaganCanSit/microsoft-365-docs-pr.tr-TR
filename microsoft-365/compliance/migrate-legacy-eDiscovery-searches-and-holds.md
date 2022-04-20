@@ -15,16 +15,14 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkEXCHANGE
 ROBOTS: NOINDEX, NOFOLLOW
 description: ''
-ms.openlocfilehash: 28f110c6b236721debdb5585263dd835f2a5a658
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 07740a6569f67b04db22351f4b4e1214ccfbc787
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/20/2022
-ms.locfileid: "64993150"
+ms.locfileid: "64973717"
 ---
 # <a name="migrate-legacy-ediscovery-searches-and-holds-to-the-compliance-portal"></a>Eski eBulma aramalarını ve tutmalarını uyumluluk portalına geçirme
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview uyumluluk portalı, eKeşif kullanımı için gelişmiş bir deneyim sağlar: daha yüksek güvenilirlik, daha iyi performans ve içeriğinizi maddeye göre düzenleme örnekleri dahil olmak üzere eBulma iş akışlarına uyarlanmış birçok özellik, içeriği gözden geçirmek için inceleme kümeleri ve analizler de dahil olmak üzere, verileri gözden geçirmek üzere neredeyse yinelenen gruplandırma, e-posta iş parçacığı oluşturma, tema analizi ve tahmine dayalı kodlama gibi birçok özellik.
 

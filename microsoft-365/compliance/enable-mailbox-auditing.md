@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Posta kutusu denetim günlüğü varsayılan olarak Microsoft 365 ('varsayılan posta kutusu denetimi' veya 'posta kutusu denetimi varsayılan olarak açık' olarak da adlandırılır) etkindir. Bu yapılandırma, posta kutusu sahipleri, temsilciler ve yöneticiler tarafından gerçekleştirilen belirli eylemlerin otomatik olarak posta kutusu denetim günlüğüne kaydedildiği ve burada posta kutusunda gerçekleştirilen etkinlikleri arayabileceğiniz anlamına gelir.
-ms.openlocfilehash: bb8170b603bc72459e3bbd55fa256df188f42f65
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: d5d966cf4d5b7c58c15df4ce8d4039331ebca8c4
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952896"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972639"
 ---
 # <a name="manage-mailbox-auditing"></a>Posta kutusu denetimini yönetme
 
@@ -83,7 +83,7 @@ Oturum açma türleri, posta kutusunda denetlenen eylemleri gerçekleştirmiş o
 - **Yönetici**:
   - Posta kutusu aşağıdaki Microsoft eBulma araçlarından biriyle arandı:
     - Uyumluluk merkezinde İçerik Arama.
-    - Uyumluluk merkezinde eBulma veya Advanced eDiscovery.
+    - Uyumluluk merkezinde eBulma veya eBulma (Premium).
     - Exchange Online'da eKeşif'i In-Place.
   - Posta kutusuna MAPI Düzenleyicisi Microsoft Exchange Server kullanılarak erişilir.
 

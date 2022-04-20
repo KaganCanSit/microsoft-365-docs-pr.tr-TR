@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Microsoft 365'da Veritas'tan XSLT/XML verilerini içeri aktarmak ve arşivlerken kullanmak için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, kuruluşunuzun üçüncü taraf verilerini yönetmek için yasal saklama, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilmeniz için üçüncü taraf veri kaynaklarından verileri Microsoft 365 arşivleyebilmenizi sağlar.
-ms.openlocfilehash: e1537bce351c2dd98286f82e134cb5779742b1f2
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 92932e3e18c8f43c46cf71e43ec02306d78a2f60
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936895"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995744"
 ---
 # <a name="set-up-a-connector-to-archive-xsltxml-data"></a>XSLT/XML verilerini arşivleye bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Web sayfası kaynağındaki verileri Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas size XSLT (Genişletilebilir Stil Sayfası Dil Dönüştürmeleri) kullanılarak oluşturulan dosyaların, XML dosyalarını Microsoft 365 aktarılabilir diğer dosya biçimlerine (HTML veya metin gibi) dönüştürmeye olanak tanıyan bir XSLT[/XML bağlayıcısı](https://globanet.com/xslt-xml) sağlar. Bağlayıcı, XSLT/XML kaynağındaki bir öğenin içeriğini e-posta iletisi biçimine dönüştürür ve ardından dönüştürülen öğeyi Microsoft 365 posta kutularına aktarır.
 

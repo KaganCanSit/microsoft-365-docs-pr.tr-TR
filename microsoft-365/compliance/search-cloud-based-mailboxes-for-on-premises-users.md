@@ -18,14 +18,16 @@ search.appverid:
 ms.assetid: 3f7dde1a-a8ea-4366-86da-8ee6777f357c
 description: Yöneticiler, Exchange karma dağıtımdaki şirket içi kullanıcılar için Teams sohbet verilerini aramak ve dışarı aktarmak için Microsoft 365'deki eBulma araçlarını kullanabilir.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 7b77a5178237e7ae25f710c8cc9574449f67a4f2
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: e1f15922e84a68538e20ccb3ad0030bd5c2bd5f1
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945879"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995370"
 ---
 # <a name="search-for-teams-chat-data-for-on-premises-users"></a>Şirket içi kullanıcılar için Teams sohbet verilerini arama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Kuruluşunuzun Exchange karma dağıtımı varsa (veya kuruluşunuz şirket içi Exchange kuruluşunu Office 365 ile eşitlediyse) ve Microsoft Teams etkinleştirdiyse, şirket içi kullanıcılar anlık ileti için Teams sohbet uygulamasını kullanabilir. Bulut tabanlı bir kullanıcı için, Teams sohbet verileri (*1x1 veya 1xN sohbetleri* olarak da adlandırılır) birincil bulut tabanlı posta kutusuna kaydedilir. Şirket içi kullanıcı Teams sohbet uygulamasını kullandığında, sohbet iletileri şirket içinde bulunan birincil posta kutusunda depolanamaz. Bu sınırlamayı geçici olarak çözmek için Microsoft, şirket içi kullanıcılar için Teams sohbet verilerini aramak ve dışarı aktarmak için eBulma araçlarını kullanmanız için bulut tabanlı bir depolama alanının oluşturulduğu yeni bir özellik yayımladı.
   

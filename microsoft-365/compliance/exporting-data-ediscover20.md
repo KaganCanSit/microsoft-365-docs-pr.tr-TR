@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: eBulma (Premium) durumunda sunular veya dış incelemeler için bir gözden geçirme kümesinden içeriği dışarı aktarmayı veya indirmeyi öğrenin.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: f94062bee378a408e1a04240b09c5ae05f53c5f8
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 322b2c97d554ef917034afc261652a8150d23fbc
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948649"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994138"
 ---
 # <a name="export-case-data-in-ediscovery-premium"></a>eBulma'da büyük/küçük harf verilerini dışarı aktarma (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Gözden geçirme kümesinden verileri dışarı aktarmanın üç yolu vardır:
 

@@ -20,14 +20,16 @@ search.appverid:
 ms.assetid: 1adffc35-38e5-4f7d-8495-8e0e8721f377
 description: eBulma yöneticilerinin kuruluşunuzdaki posta kutularının ve sitelerin yalnızca bir alt kümesini aramasına izin vermek için arama izinleri filtrelemesini kullanın.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 5c746c5a608c06adab92f98b1bf4790675659fdc
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 20a13b99e7ec851669aaab483a049bdea95973bd
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64942237"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994094"
 ---
 # <a name="configure-permissions-filtering-for-ediscovery"></a>eBulma için izin filtrelemeyi yapılandırma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 EBulma yöneticisinin kuruluşunuzdaki posta kutularının ve sitelerin yalnızca bir alt kümesini aramasına izin vermek için arama izinleri filtrelemesini kullanabilirsiniz. Ayrıca, aynı eBulma yöneticisinin yalnızca belirli bir arama ölçütünü karşılayan posta kutusu veya site içeriği için arama yapmasına izin vermek için izin filtrelemeyi de kullanabilirsiniz. Örneğin, eBulma yöneticisinin yalnızca belirli bir konum veya departmandaki kullanıcıların posta kutularını aramasına izin vekleyebilirsiniz. Bunu, belirli bir kullanıcının veya kullanıcı grubunun hangi posta kutularını arayabileceğini sınırlamak için desteklenen bir alıcı filtresi kullanan bir filtre oluşturarak yaparsınız. Ayrıca, kullanıcının hangi posta kutusu içeriğini arayabileceğini belirten bir filtre de oluşturabilirsiniz. Bu işlem, aranabilir bir ileti özelliği kullanan bir filtre oluşturularak yapılır. Benzer şekilde, bir eBulma yöneticisinin kuruluşunuzdaki yalnızca belirli SharePoint siteleri aramasına izin vekleyebilirsiniz. Bunu, aranabilecek siteyi sınırlayan bir filtre oluşturarak yaparsınız. Ayrıca, hangi site içeriğinin aranabileceğini belirten bir filtre de oluşturabilirsiniz. Bu işlem, aranabilir bir site özelliği kullanan bir filtre oluşturularak yapılır.
 

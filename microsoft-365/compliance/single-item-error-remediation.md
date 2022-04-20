@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Toplu hata düzeltme işlemini izlemek zorunda kalmadan eBulma (Premium) içindeki bir gözden geçirme kümesindeki bir belgedeki işleme hatasını düzeltebilirsiniz.
-ms.openlocfilehash: fa4a595a967935241e67b9a88ed158c789075102
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: d3b90f0f2d396b6304bb85b46bc5b018802101eb
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935664"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994006"
 ---
 # <a name="single-item-error-remediation-in-ediscovery-premium"></a>eBulma'da tek öğe hatası düzeltmesi (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Hata düzeltme, Microsoft Purview eBulma (Premium) kullanıcılarına eBulma'nın (Premium) içeriği düzgün işlemesini engelleyen veri sorunlarını düzeltme olanağı verir. Örneğin, parola korumalı dosyalar kilitli veya şifrelenmiş olduğundan işlenemez. Daha önce bu [iş akışını](error-remediation-when-processing-data-in-advanced-ediscovery.md) kullanarak hataları yalnızca toplu olarak düzeltebiliyorsunuz. Ancak bazen, bu dosyalardan herhangi birinin araştırdığınız olaya yanıt vermediğinden emin olmadığınız durumlarda birden çok dosyadaki hataları düzeltmek mantıklı değildir. Yanıt verme konusunda önceden karar vermenize yardımcı olmak için dosya meta verilerini (dosya konumu veya erişimi olan kişiler gibi) gözden geçirme fırsatınız olmadan önce hataları düzeltmeniz de mantıklı olmayabilir. *Tek öğe hatasını düzeltme* adlı yeni bir özellik, eBulma yöneticilerine işleme hatası olan dosyaların meta verilerini görüntüleme ve gerekirse hatayı doğrudan gözden geçirme kümesinde düzeltme olanağı sağlar. Makalede, bir gözden geçirme kümesindeki işleme hatalarıyla dosyaları tanımlama, yoksayma ve düzeltme işlemleri açıklanır.
 

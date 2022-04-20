@@ -20,14 +20,16 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 - admindeeplinkDEFENDER
 description: Olası tehditleri, veri kaybını ve izin sorunlarını izlemek için Microsoft Purview uyumluluk portalında veya Microsoft 365 Defender portalında uyarı ilkeleri oluşturun.
-ms.openlocfilehash: ad7099ddcbc99fd6cf852b1bb7f564c0caf444a7
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: beecaf86a013480e0c5546e07189e8be5b622b17
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944271"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995920"
 ---
 # <a name="alert-policies-in-microsoft-365"></a>Microsoft 365 uyarı ilkeleri
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Uyarı ilkelerini ve uyarı panosunu Microsoft Purview uyumluluk portalında veya Microsoft 365 Defender portalında kullanarak uyarı ilkeleri oluşturabilir ve kullanıcılar uyarı ilkesinin koşullarıyla eşleşen etkinlikler gerçekleştirdiğinde oluşturulan uyarıları görüntüleyebilirsiniz. Exchange Online yönetici ayrıcalıkları atama, kötü amaçlı yazılım saldırıları, kimlik avı kampanyaları ve olağan dışı dosya silme ve dış paylaşım düzeyleri gibi etkinlikleri izlemenize yardımcı olan çeşitli varsayılan uyarı ilkeleri vardır.
 

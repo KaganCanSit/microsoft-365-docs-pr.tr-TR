@@ -1,5 +1,5 @@
 ---
-title: Ücretsiz Azure Active Directory kullanın
+title: Ücretsiz Azure Active Directory aboneliğinizi kullanma
 f1.keywords:
 - NOCSH
 ms.author: markjjo
@@ -15,43 +15,45 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: d104fb44-1c42-4541-89a6-1f67be22e4ad
-description: Kuruluş ücretli Azure Active Directory bir posta hizmetine nasıl erişebilirsiniz?
+description: Kuruluşunuzun ücretli aboneliğine dahil olan Azure Active Directory erişmeyi öğrenin.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 8d41d507cc1d732b0994466ffb8f33a171a2d94e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: aef6aa77e8889f8dc386558db77feef093b4e240
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "62986532"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994842"
 ---
-# <a name="use-your-free-azure-active-directory-subscription"></a>Ücretsiz Azure Active Directory kullanın
+# <a name="use-your-free-azure-active-directory-subscription"></a>Ücretsiz Azure Active Directory aboneliğinizi kullanma
 
-Kuruluşta Microsoft 365, Microsoft Dynamics CRM Online, Enterprise Mobility Suite veya diğer Microsoft hizmetleri ücretli bir aboneliği varsa Microsoft Azure Active Directory. Siz ve diğer yöneticiler, kullanıcı ve grup hesaplarını oluşturmak ve yönetmek için Azure AD'i kullanabilirsiniz. Azure AD'i kullanmak için Azure portalına gidip hesabınızla oturum açın.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-## <a name="open-a-private-browsing-session"></a>Gizli gözatma oturumu açma
+Kuruluşunuzun ücretli Microsoft 365, Microsoft Dynamics CRM Online, Enterprise Mobility Suite veya diğer Microsoft hizmetleri aboneliği varsa, Microsoft Azure Active Directory. Siz ve diğer yöneticiler, kullanıcı ve grup hesaplarını oluşturmak ve yönetmek için Azure AD'yi kullanabilirsiniz. Azure AD'yi kullanmak için Azure portal gidin ve hesabınızda oturum açın.
 
-Azure portalına erişmek için gizli gözatma oturumu (normal oturum değil) kullanın (aşağıdaki 1. adımda). Bu, şu anda oturum açmış durumda olan kimlik bilgilerinin Azure'a geçirile engel olur. Gizli gözatma oturumu açmak için:
+## <a name="open-a-private-browsing-session"></a>Özel gözatma oturumu açma
 
-- Önceki Microsoft Edge), Internet Explorer veya Mozilla FireFox'ta, tuşuna basın`CTRL+SHIFT+P`.
+Azure portal erişmek için özel gözatma oturumu (normal oturum değil) kullanın (aşağıdaki 1. adımda). Bu, şu anda oturum açtığınız kimlik bilgilerinin Azure'a geçirilmesini önler. Özel gözatma oturumu açmak için:
 
-- Başka Microsoft Edge (en yeni sürüm) veya Google Chrome'da, tuşuna basın`CTRL+SHIFT+N`.
+- Microsoft Edge (eski sürüm), Internet Explorer veya Mozilla FireFox'ta tuşuna basın`CTRL+SHIFT+P`.
+
+- Microsoft Edge (en yeni sürüm) veya Google Chrome'da tuşuna basın`CTRL+SHIFT+N`.
 
 ## <a name="access-azure-active-directory"></a>Access Azure Active Directory
 
-1. Oturum açma [portal.azure.com](https://portal.azure.com) gidin ve iş veya öğrenci hesabınızla oturum açın.
+1. [portal.azure.com](https://portal.azure.com) gidin ve iş veya öğrenci hesabınızla oturum açın.
 
-2. Azure portalında sol gezinti bölmesinde Ekle'ye **Azure Active Directory**.
+2. Azure portal sol gezinti bölmesinde **Azure Active Directory'e** tıklayın.
 
-    ![Azure Azure Active Directory sol gezinti bölmesinde Ekle'ye tıklayın.](../media/97d2d72f-ac20-46ab-898c-851f6009b453.png)
+    ![Azure portal sol gezinti bölmesinde Azure Active Directory'e tıklayın.](../media/97d2d72f-ac20-46ab-898c-851f6009b453.png)
 
-    Yönetim **Azure Active Directory** merkezi görüntülenir.
+    **Azure Active Directory** yönetim merkezi görüntülenir.
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-- Ücretsiz Azure Active Directory abonelik, Oturum açma etkinliği raporunu içermemektedir. Oturum açma etkinliğini (veri ihlalinde kullanışlı olabilir) kaydetmek için, bir Azure Active Directory Premium gerekir. Daha fazla bilgi için bkz. [Azure AD verileri ne kadar süreyle depolar?](/azure/active-directory/reports-monitoring/reference-reports-data-retention#how-long-does-azure-ad-store-the-data)
+- Ücretsiz Azure Active Directory aboneliği, Oturum açma işlemleri etkinlik raporunu içermez. Oturum açma etkinliğini kaydetmek için (veri ihlalinde yararlı olabilir), bir Azure Active Directory Premium aboneliğiniz olmalıdır. Daha fazla bilgi için bkz. [Azure AD verileri ne kadar süreyle depolar?](/azure/active-directory/reports-monitoring/reference-reports-data-retention#how-long-does-azure-ad-store-the-data).
 
-- Ayrıca, genel yönetim **Azure Active Directory** merkezinden de Microsoft 365 yönetim merkezi. Gezinti bölmesinin sol bölmesinde, Microsoft 365 yönetim merkezi **merkezleri'ne Azure Active Directory**\>.[](https://go.microsoft.com/fwlink/p/?linkid=2067268)
+- **ayrıca Azure Active Directory** yönetim merkezine Microsoft 365 yönetim merkezi erişebilirsiniz. Microsoft 365 yönetim merkezi sol gezinti bölmesinde **Yönetim merkezleri** \> [**Azure Active Directory'e**](https://go.microsoft.com/fwlink/p/?linkid=2067268) tıklayın.
 
-- Kullanıcıları ve grupları yönetme ve diğer dizin yönetim görevlerini gerçekleştirme hakkında bilgi için bkz [. Azure AD dizininizi yönetme](/azure/active-directory/active-directory-administer).
+- Kullanıcıları ve grupları yönetme ve diğer dizin yönetimi görevlerini gerçekleştirme hakkında bilgi için bkz. [Azure AD dizininizi yönetme](/azure/active-directory/active-directory-administer).

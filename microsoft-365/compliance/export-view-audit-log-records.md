@@ -18,14 +18,16 @@ search.appverid:
 ms.assetid: 0d4d0f35-390b-4518-800e-0c7ec95e946c
 ms.custom: seo-marvel-apr2020
 description: Bu makalede, Microsoft 365 denetim günlüğü kayıtlarını dışarı aktarmayı, yapılandırmayı ve görüntülemeyi öğreneceksiniz.
-ms.openlocfilehash: ed9844ac7a5b7dc62b4d0ba8eb7311f76d28aace
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 9403ead4c7fd6bd27bcc3848d367749e00beed3c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948759"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994402"
 ---
 # <a name="export-configure-and-view-audit-log-records"></a>Denetim günlüğü kayıtlarını dışa aktarma, yapılandırma ve görüntüleme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Denetim günlüğünde arama yaptıktan ve arama sonuçlarını bir CSV dosyasına indirdikten sonra, dosya her olay hakkında ek bilgiler içeren **AuditData** adlı bir sütun içerir. Bu sütundaki veriler, virgülle ayrılmış *property:value* çiftleri olarak yapılandırılan birden çok özellik içeren bir JSON nesnesi olarak biçimlendirilir. Excel'daki Power Query Düzenleyicisi JSON dönüştürme özelliğini kullanarak **AuditData** sütunundaki JSON nesnesindeki her özelliği birden çok sütuna bölerek her özelliğin kendi sütununa sahip olmasını sağlayabilirsiniz. Bu, aradığınız denetim verilerini hızla bulmanıza yardımcı olabilecek bu özelliklerden birini veya daha fazlasını sıralamanıza ve filtrelemenize olanak tanır.
 

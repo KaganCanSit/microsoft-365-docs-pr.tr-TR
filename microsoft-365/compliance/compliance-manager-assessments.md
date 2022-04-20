@@ -1,5 +1,5 @@
 ---
-title: Microsoft Compliance Manager'da değerlendirme oluşturma ve yönetme
+title: Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirme oluşturma ve yönetme
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -16,15 +16,17 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Kuruluşunuz için önemli olan düzenlemelerin ve sertifikaların gereksinimlerini karşılamanıza yardımcı olmak için Microsoft Uyumluluk Yöneticisi'nde değerlendirmeler oluşturun.
-ms.openlocfilehash: 9fbea59eae103e2ce9715fda6c7b7a97d38eb855
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Kuruluşunuz için önemli olan düzenlemelerin ve sertifikaların gereksinimlerini karşılamanıza yardımcı olmak için Microsoft Purview Uyumluluk Yöneticisi'nde değerlendirmeler oluşturun.
+ms.openlocfilehash: 841d48951eebf0d04bf5c97a708a250218b44c65
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759025"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64972573"
 ---
 # <a name="build-and-manage-assessments-in-compliance-manager"></a>Uyumluluk Yöneticisi'nde değerlendirme oluşturma ve yönetme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **Bu makalede:** **Değerlendirmeler** oluşturup yöneterek Kuruluşunuz için Uyumluluk Yöneticisi'nin nasıl özelleştirileceği hakkında bilgi edinin. Bu makalede değerlendirme oluşturma, bunları **gruplar** halinde düzenleme, **denetimlerle** çalışma, **güncelleştirmeleri** kabul etme ve değerlendirme **raporlarını** dışarı aktarma konusunda size yol gösterilir.
 
@@ -35,7 +37,7 @@ Uyumluluk Yöneticisi, kuruluşunuz için geçerli olan sektör ve bölgesel dü
 Tüm değerlendirmeleriniz Uyumluluk Yöneticisi'nin değerlendirmeler sekmesinde listelenir. [Değerlendirmelerinizin görünümünü filtreleme ve durum durumlarını yorumlama](compliance-manager-setup.md#assessments-page) hakkında daha fazla bilgi edinin.
 
 > [!IMPORTANT]
-> Değerlendirme oluşturmak için kuruluşunuzun kullanabileceği şablonlar lisans sözleşmenize bağlıdır. [Lisanslama ayrıntılarını gözden geçirin](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+> Değerlendirme oluşturmak için kuruluşunuzun kullanabileceği şablonlar lisans sözleşmenize bağlıdır. [Lisanslama ayrıntılarını gözden geçirin](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-compliance-manager).
 
 ## <a name="data-protection-baseline-default-assessment"></a>Veri Koruma Temeli varsayılan değerlendirmesi
 

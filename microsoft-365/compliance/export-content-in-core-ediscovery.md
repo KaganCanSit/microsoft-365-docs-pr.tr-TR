@@ -18,14 +18,16 @@ search.appverid:
 - MET150
 ms.custom: admindeeplinkCOMPLIANCE
 description: Microsoft 365'da eBulma (Standart) durumundan içerik dışarı aktarmayı ve indirmeyi açıklar.
-ms.openlocfilehash: a0ea33d599ed609c24cf63f1df4c68b882364b1b
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2a63d22c8b4cb20e2c0f1317a8496e1cf517b2da
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937971"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995458"
 ---
 # <a name="export-content-from-a-ediscovery-standard-case"></a>eBulma (Standart) durumundan içeriği dışarı aktarma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eKeşif (Standart) olayıyla ilişkilendirilmiş bir arama başarıyla çalıştırıldıktan sonra, arama sonuçlarını dışarı aktarabilirsiniz. Arama sonuçlarını dışarı aktardığınızda, posta kutusu öğeleri PST dosyalarına veya tek tek iletiler olarak indirilir. SharePoint ve OneDrive İş sitelerdeki içeriği dışarı aktardığınızda, yerel Office belgelerin ve diğer belgelerin kopyaları dışarı aktarılır. Dışarı aktarılan her öğe hakkında bilgi içeren bir Results.csv dosyası ve her arama sonucu hakkında bilgi içeren bir bildirim dosyası (XML biçiminde) de dışarı aktarılır.
   

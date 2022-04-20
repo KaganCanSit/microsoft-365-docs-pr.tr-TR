@@ -17,14 +17,16 @@ search.appverid:
 ms.assetid: 67cc7f42-a53d-4751-b929-6005c80798f7
 description: Kullanıcılara eBulma izinleri atanan kullanıcılar Microsoft Purview uyumluluk portalında İçerik arama, eBulma (Standart) ve eBulma (Premium) görevlerini gerçekleştirdiğinde hangi olayların günlüğe kaydedileceklerini öğrenin.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 519347ed8f074fc15c8618f6ceb84159314c5915
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 1e21fcff71d050e09a60a6708678d46f2b894bdc
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941841"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995876"
 ---
 # <a name="search-for-ediscovery-activities-in-the-audit-log"></a>Denetim günlüğünde eKeşif etkinliklerini ara
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview uyumluluk portalında veya ilgili PowerShell cmdlet'leri çalıştırılarak gerçekleştirilen İçerik Arama ve eBulma ile ilgili etkinlikler (Microsoft Purview eKeşif (Standart) ve Microsoft Purview eKeşif (Premium)) için denetim günlüğüne kaydedilir. Yöneticiler veya eBulma yöneticileri (veya eBulma izinleri atanmış herhangi bir kullanıcı) uyumluluk portalında aşağıdaki İçerik Arama ve eBulma (Standart) görevlerini gerçekleştirdiğinde olaylar günlüğe kaydedilir:
   

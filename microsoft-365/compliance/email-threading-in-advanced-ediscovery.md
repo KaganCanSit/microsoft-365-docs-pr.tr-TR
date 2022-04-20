@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 description: eBulma (Premium) analizi yaparken, e-posta yazışması bir e-posta konuşmasını ayrıştırıp her iletiyi farklı kategorilere ayırır.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 51cc9ce09f1f2c9c95c3ab5a7f2175516c9ed199
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f2cdd3a10250a256179ce3fe959a88e0cbef01ba
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948715"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995502"
 ---
 # <a name="email-threading-in-ediscovery-premium"></a>eBulma'da e-posta yazışması oluşturma (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bir süredir devam eden bir e-posta konuşmasını düşünün. Çoğu durumda, e-posta yazışmasının son iletisi önceki tüm iletilerin içeriğini içerir. Bu nedenle, son ileti gözden geçirilirken yazışmada gerçekleşen konuşmanın tam bir bağlamı gösterilir. E-posta yazışması, gözden geçirenlerin herhangi bir bağlamı kaybetmeden toplanan belgelerin bir bölümünü gözden geçirebilmesi için bu tür iletileri tanımlar.
 

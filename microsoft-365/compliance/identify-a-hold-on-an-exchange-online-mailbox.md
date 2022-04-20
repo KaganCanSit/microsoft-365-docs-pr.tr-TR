@@ -18,14 +18,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Microsoft 365'da bir Exchange Online posta kutusuna yerleştirilebilen farklı saklama türlerini tanımlamayı öğrenin.
-ms.openlocfilehash: 27b6b616bfa3fac01ae93c3ee8270855bed559d3
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2e62d8f6fd0dc6352b4bf6fc5766b9cd33f8ffb4
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64949751"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994182"
 ---
 # <a name="how-to-identify-the-type-of-hold-placed-on-an-exchange-online-mailbox"></a>Exchange Online posta kutusuna yerleştirilmiş saklama türünü tanımlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Bu makalede, Microsoft 365 Exchange Online posta kutularına yerleştirilmiş ayrı tutmaların nasıl belirlendiği açıklanır.
 

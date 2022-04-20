@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 ms.custom: seo-marvel-mar2020
 description: Microsoft 365'de eBulma (Premium) kullanarak veri ararken arama kapsamını daraltmak için anahtar sözcükleri ve koşulları kullanın.
-ms.openlocfilehash: 7a3c3747e38667eca40032511209af964ffb165a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: cceac6974bacb066201120ac4972393f2323353c
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64950345"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995018"
 ---
 # <a name="build-search-queries-for-collections-in-ediscovery-premium"></a>eBulma'da koleksiyonlar için arama sorguları oluşturma (Premium)
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 eBulma (Premium) durumunda [koleksiyon](collections-overview.md) oluştururken arama sorgusunu yapılandırırken, yasal araştırmanızla en ilgili öğeleri döndürmek için arama kapsamını daraltmak üzere belirli içeriği ve koşulları bulmak için anahtar sözcükleri kullanabilirsiniz.
 

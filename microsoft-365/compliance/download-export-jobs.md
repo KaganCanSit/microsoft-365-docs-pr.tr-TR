@@ -16,14 +16,16 @@ search.appverid:
 - MET150
 ms.custom: seo-marvel-mar2020
 description: Gözden geçirme kümesindeki belgeleri Azure Depolama hesabına aktarın ve ardından Azure Depolama Gezgini kullanarak bunları yerel bir bilgisayara indirin.
-ms.openlocfilehash: babac7d0289eee2384c12acfe05223bfceba1ce1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 6c8709fe1540393164e00222b728b10d5f809012
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934851"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994908"
 ---
 # <a name="export-documents-in-a-review-set-to-an-azure-storage-account"></a>Gözden geçirme kümesindeki belgeleri Azure Depolama hesabına aktarma
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 eBulma (Premium) durumundaki bir gözden geçirme kümesinden belgeleri dışarı aktardığınızda, bunları kuruluşunuz tarafından yönetilen bir Azure Depolama hesabına dışarı aktarma seçeneğiniz vardır. Bu seçeneği kullanırsanız belgeler Azure Depolama konumunuza yüklenir. Dışarı aktarıldıktan sonra, Azure Depolama Gezgini kullanarak belgelere erişebilir (ve bunları yerel bir bilgisayara veya başka bir konuma indirebilirsiniz). Bu makalede, belgeleri Azure Depolama hesabınıza dışarı aktarma ve dışarı aktarılan belgeleri indirmek üzere azure Depolama konumuna bağlanmak için Azure Depolama Gezgini kullanma yönergeleri sağlanır. Azure Depolama Gezgini hakkında daha fazla bilgi için bkz. [Azure Depolama Gezgini kullanma](/azure/storage/blobs/storage-quickstart-blobs-storage-explorer).
 

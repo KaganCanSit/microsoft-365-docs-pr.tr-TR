@@ -14,18 +14,20 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: mapatel
 f1.keywords: NOCSH
-ms.openlocfilehash: 9ee299c0972ed4e286e5a660f5082dd5632167e4
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: cd0d463e234c439d8b57576375fd6a91e512f753
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934279"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64995292"
 ---
 # <a name="upload-your-test-base-package-zip"></a>Test Temeli paketinizi (Zip) Upload 
 
-Test Temeli portalı sayfasında, aşağıda gösterildiği gibi sol gezinti **çubuğundaki yeni paket Upload** seçeneğine gidin:
+Test Temeli portalı sayfasında, sol gezinti **çubuğundaki Yeni paket** seçeneğine gidin ve ardından Aşağıda gösterildiği gibi Zip **karşıya yükleme deneyimini etkinleştirmek için Eski karşıya yükleme deneyimi'ne** tıklayın:
 
-:::image type="content" alt-text="Yeni bir paket Upload." source="Media/Upload-New-Package.png" lightbox="Media/Upload-New-Package.png":::
+:::image type="content" alt-text="Yeni bir paket Upload." source="Media/testapplication01.png" lightbox="Media/testapplication01.png":::
+
+:::image type="content" alt-text="İşlemi uygulayın." source="Media/testapplication21.png" lightbox="Media/testapplication21.png":::
 
 Oraya vardıktan sonra, yeni bir paketi karşıya yüklemek için aşağıdaki adımları izleyin.
 

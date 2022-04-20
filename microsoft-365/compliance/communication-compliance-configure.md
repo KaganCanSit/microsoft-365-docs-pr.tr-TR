@@ -1,6 +1,7 @@
 ---
 title: İletişim uyumluluğunu kullanmaya başlama
-description: Kullanıcı iletişimini gözden geçirmek üzere yapılandırmak için iletişim uyumluluk ilkelerini ayarlayın.
+description: Kullanıcı iletişimlerini gözden geçirmek üzere yapılandırmak için iletişim uyumluluk ilkelerini ayarlayın.
+keywords: Microsoft 365, Microsoft Purview, uyumluluk, iletişim uyumluluğu
 f1.keywords:
 - NOCSH
 ms.author: robmazz
@@ -21,162 +22,164 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: d9d418cee35976e621c173b3563b04ee8bdce7ca
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+ms.openlocfilehash: b5752d0ebeb0095defe47f52529392e4b9c01212
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64595328"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973739"
 ---
 # <a name="get-started-with-communication-compliance"></a>İletişim uyumluluğunu kullanmaya başlama
 
-İç veya dış gözden geçirenlerin kullanıcı iletişimlerini incelemeye yönelik tanımlamak için iletişim uyumluluk ilkelerini kullanın. İletişim uyumluluğu ilkelerinin, kurum içinde iletişimi izlemenize nasıl yardımcı olduğu hakkında daha fazla bilgi için, [Microsoft 365.](communication-compliance.md) Contoso'nın Microsoft Teams, Exchange Online ve Yammer iletişim bağlantılarında uygunsuz içeriği izlemek üzere bir iletişim uyumluluk ilkesi nasıl yapılandırdı diye gözden geçirmek Yammer bu örnek olay [incelemesine göz atabilirsiniz](communication-compliance-case-study.md).
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-## <a name="subscriptions-and-licensing"></a>Abonelikler ve lisanslar
+İç veya dış gözden geçirenler tarafından incelenmek üzere kullanıcı iletişimlerini tanımlamak için iletişim uyumluluk ilkelerini kullanın. İletişim uyumluluk ilkelerinin kuruluşunuzdaki iletişimleri izlemenize nasıl yardımcı olabileceği hakkında daha fazla bilgi için bkz. [iletişim uyumluluk ilkeleri](communication-compliance.md). Contoso'nun Microsoft Teams, Exchange Online ve Yammer iletişimlerdeki uygunsuz içeriği izlemek için iletişim uyumluluk ilkesini nasıl hızlı bir şekilde yapılandırmış olduğunu gözden geçirmek istiyorsanız bu [örnek olay incelemesine](communication-compliance-case-study.md) göz atın.
 
-İletişim uyumluluğunu başlamadan önce, Microsoft 365 [aboneliğinizi ve](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) tüm eklentileri onaylamanız gerekir. İletişim uyumluluğuna erişmek ve bu uyumluluğu kullanmak için, organizasyon aşağıdaki aboneliklerden veya eklentilerden birini kullanıyor olması gerekir:
+## <a name="subscriptions-and-licensing"></a>Abonelikler ve lisanslama
+
+İletişim uyumluluğunu kullanmaya başlamadan önce [Microsoft 365 aboneliğinizi](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) ve tüm eklentileri onaylamanız gerekir. İletişim uyumluluğuna erişmek ve bu uyumluluğu kullanmak için kuruluşunuzun aşağıdaki aboneliklerden veya eklentilerden birine sahip olması gerekir:
 
 - Microsoft 365 E5/A5/F5/G5 aboneliği (ücretli veya deneme sürümü)
-- Microsoft 365 E3/A3/F3/G5 aboneliği + Microsoft 365 E5/A5/F5/G5 Uyumluluk eklentiniz
-- Microsoft 365 E3/A3/F3/G5 aboneliği + Microsoft 365 E5/A5/F5/G5 Insider Risk Yönetimi eklentisi
+- Microsoft 365 E3/A3/F3/G5 aboneliği + Microsoft 365 E5/A5/F5/G5 Uyumluluk eklentisi
+- Microsoft 365 E3/A3/F3/G5 aboneliği + Microsoft 365 E5/A5/F5/G5 Insider Risk Management eklentisi
 - Office 365 Kurumsal E5 aboneliği (ücretli veya deneme sürümü)
-- Office 365 A5 (ücretli veya deneme sürümü)
-- Office 365 Kurumsal E3 aboneliği + Office 365 Gelişmiş Uyumluluk eklentiyi içerir (artık yeni abonelikler için kullanılamaz, nota bakın)
+- Office 365 A5 aboneliği (ücretli veya deneme sürümü)
+- Office 365 Kurumsal E3 aboneliği + Office 365 Gelişmiş Uyumluluk eklentisi (artık yeni aboneliklerde kullanılamaz, nota bakın)
 
-İletişim uyumluluk ilkelerine dahil olan kullanıcılara yukarıdaki lisanslardan biri atanmalıdır. Abonelikler ve lisanslar hakkında daha fazla bilgi için, [güvenlik Microsoft 365 uyumluluğu için yol & bakın](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#communication-compliance).
+İletişim uyumluluk ilkelerine dahil olan kullanıcılara yukarıdaki lisanslardan biri atanmalıdır. Abonelikler ve lisanslama hakkında daha fazla bilgi için bkz. [güvenlik & uyumluluğu için Microsoft 365 kılavuzu](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#communication-compliance).
 
 > [!IMPORTANT]
-> İletişim uyumluluğu şu anda, Azure hizmet bağımlılıkları tarafından desteklenen coğrafi bölgelerde ve ülkelerde barındırılan kiracılarda kullanılabilir. İletişim uyumluluğunun organizasyonunız için destek olduğunu doğrulamak için bkz. [Ülkeye/bölgeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
+> İletişim uyumluluğu şu anda coğrafi bölgelerde ve Azure hizmet bağımlılıkları tarafından desteklenen ülkelerde barındırılan kiracılarda kullanılabilir. Kuruluşunuzda iletişim uyumluluğunu desteklediğini doğrulamak için bkz. [Ülkeye/bölgeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
 
-Mevcut bir Office 365 Kurumsal E5 planınız yoksa ve iletişim uyumluluğunu denemek için mevcut aboneliğinize [Microsoft 365](/office365/admin/try-or-buy-microsoft-365) ekleyebilir veya Office 365 Kurumsal'in deneme sürümüne kaydolabilirsiniz.[](https://www.microsoft.com/microsoft-365/enterprise)
+Mevcut bir Office 365 Kurumsal E5 planınız yoksa ve iletişim uyumluluğunu denemek istiyorsanız, mevcut aboneliğinize [Microsoft 365 ekleyebilir](/office365/admin/try-or-buy-microsoft-365) veya E5 Office 365 Kurumsal [deneme sürümüne kaydolabilirsiniz](https://www.microsoft.com/microsoft-365/enterprise).
 
 > [!NOTE]
-> Office 365 Gelişmiş Uyumluluk artık tek başına abonelik olarak satılmaz. Geçerli aboneliklerin süresi dolduğunda, müşteriler aynı veya ek uyumluluk özelliklerini içeren yukarıdaki aboneliklerden birini kullanmalı.
+> Office 365 Gelişmiş Uyumluluk artık tek başına abonelik olarak satılmaz. Geçerli aboneliklerin süresi dolduğunda, müşterilerin aynı veya ek uyumluluk özelliklerini içeren yukarıdaki aboneliklerden birine geçiş yapması gerekir.
 
 ## <a name="recommended-actions-preview"></a>Önerilen eylemler (önizleme)
 
-Önerilen eylemler, iletişim uyumluluğu özellikleriyle çalışmaya başlamanıza ve var olan ilkeleriniz arasında en iyi şekilde çalışmanıza yardımcı olabilir. İlkeler **sayfasında** yer alan önerilen eylemler içgörüler sağlar ve kuruluş iletişimlerinde hassas bilgi türlerini ve uygunsuz içerik etkinliklerini özetler. Analizler sınıflandırması [ve duyarlılık](data-classification-overview.md) etiketleri, bekletme etiketleri ve hassas bilgi türü sınıflandırması uygulaması tarafından desteklenen bir uygulamadır. Bu içgörüler, organizasyonu kullanan kullanıcılar için kişisel olarak tanınmayı sağlayacak hiçbir bilgiyi (PII) içermemektedir.
+Önerilen eylemler, kuruluşunuzun iletişim uyumluluk özelliklerini kullanmaya başlamasına ve mevcut ilkelerinizden en iyi şekilde yararlanmak için yardımcı olabilir. **İlkeler** sayfasına eklenen önerilen eylemler içgörüler sağlar ve kuruluşunuzdaki iletişimlerdeki hassas bilgi türlerini ve uygunsuz içerik etkinliklerini özetler. Analizler[, veri sınıflandırması](data-classification-overview.md) ve duyarlılık etiketlerinin, bekletme etiketlerinin ve hassas bilgi türü sınıflandırmasının uygulanması tarafından desteklenir. Bu içgörüler, kuruluşunuzdaki kullanıcılar için kişisel bilgileri (PII) içermez.
 
-![İletişim uyumluluğu için önerilen eylemler.](../media/communication-compliance-recommended-actions.png)
+![İletişim uyumluluğu önerilen eylemler.](../media/communication-compliance-recommended-actions.png)
 
-Uygunsuz içerik içeren iletilerde etkinlik, uygunsuz içerik için [](/microsoft-365/compliance/communication-compliance-policies#classifiers) sınıflandırıcıları kullanan mevcut ilkelerden veya uygunsuz içerik için sınıflayıcıları kullanan özel ilkelerden sınıflandırıcı türle toplanır. İlkelerinize yönelik uyarı panosunda bu iletiler için uyarıları araştırabilirsiniz.
+Uygunsuz içerik içeren iletilerdeki etkinlik, uygunsuz içerik şablonunu veya uygunsuz içerik için [sınıflandırıcıları](/microsoft-365/compliance/communication-compliance-policies#classifiers) kullanan özel ilkeleri kullanan mevcut ilkelerden sınıflandırıcı türüne göre toplanır. İlkeleriniz için Uyarı panosunda bu iletilere yönelik uyarıları araştırın.
 
-Var olan [ilkelerde ele](/microsoft-365/compliance/communication-compliance-policies#sensitive-information-types) alınan iletilerde ve var olan ilkeler kapsamında olmayan iletilerde hassas bilgi türlerinin yer aldığı etkinlikler algılanır. Analizler, daha önce var olan bir iletişim uyumluluk ilkesinde tanımlanmamış olanlar da dahil olmak üzere tüm hassas bilgi türleri için veriler toplanır. Yeni bir iletişim uyumluluk ilkesi oluşturmak veya var olan ilkeleri güncelleştirmek için bu içgörüleri kullanın.
+[Hassas bilgi türlerini](/microsoft-365/compliance/communication-compliance-policies#sensitive-information-types) içeren etkinlik, mevcut ilkelerde kapsanan iletilerde ve mevcut ilkeler kapsamında olmayan iletiler için algılanır. Analizler, kuruluşunuzun daha önce mevcut bir iletişim uyumluluk ilkesinde tanımlamadığı bilgiler de dahil olmak üzere tüm hassas bilgi türleri için toplanır. Yeni bir iletişim uyumluluk ilkesi oluşturmak veya mevcut ilkeleri güncelleştirmek için bu içgörüleri kullanın.
 
 ## <a name="step-1-required-enable-permissions-for-communication-compliance"></a>1. Adım (gerekli): İletişim uyumluluğu için izinleri etkinleştirme
 
 > [!IMPORTANT]
-> Rol gruplarınızı yapılandırdikten sonra, rol grubu izinlerin kuruluş genelinde atanan kullanıcılara uygulamak 30 dakika kadar sürebilir.
+> Rol gruplarınızı yapılandırdıktan sonra, rol grubu izinlerinin kuruluşunuz genelinde atanan kullanıcılara uygulanması 30 dakika kadar sürebilir.
 
-İletişim uyumluluğu özelliklerini yönetmek için başlangıç izinlerini yapılandırmak için kullanılan altı rol grubu vardır. İletişim **uyumluluğunun** E-Microsoft 365 uyumluluk merkezi menü seçeneği olarak kullanılabilir olması ve bu yapılandırma adımlarına devam etmek için, aşağıdaki rollerden veya rol gruplarından biri size atanmış olması gerekir:
+İletişim uyumluluk özelliklerini yönetmek için ilk izinleri yapılandırmak için kullanılan altı rol grubu vardır. **İletişim uyumluluğunu** Microsoft Purview uyumluluk portalında menü seçeneği olarak kullanılabilir hale getirmek ve bu yapılandırma adımlarına devam etmek için aşağıdaki rol veya rol gruplarından birine atanmalısınız:
 
-- Azure Active Directory [*Yönetici rolü*](/azure/active-directory/roles/permissions-reference#global-administrator)
-- Azure Active Directory [*Uyumluluk Yöneticisi*](/azure/active-directory/roles/permissions-reference#compliance-administrator) rolü
-- Microsoft 365 uyumluluk merkezi [*Yönetimi*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) rol grubu
-- Microsoft 365 uyumluluk merkezi [*Yöneticisi rol*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) grubu
+- Genel [*Yönetici*](/azure/active-directory/roles/permissions-reference#global-administrator) rolünü Azure Active Directory
+- [*uyumluluk yöneticisi*](/azure/active-directory/roles/permissions-reference#compliance-administrator) rolünü Azure Active Directory
+- Microsoft Purview uyumluluk portalı [*Kuruluş Yönetimi*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) rol grubu
+- Microsoft Purview uyumluluk portalı [*Uyumluluk Yöneticisi*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center) rol grubu
 - *İletişim Uyumluluğu* rol grubu
 - *İletişim Uyumluluğu Yöneticisi* rol grubu
 
-Aşağıdaki rollerin üyeleri, İletişim Uyumluluğu Yöneticisi rol grubuyla *aynı çözüm izinlerine* sahip olur:
+Aşağıdaki rollerin üyeleri *, İletişim Uyumluluğu Yöneticisi* rol grubuna dahil edilen çözüm izinlerine sahiptir:
 
-- Azure Active Directory *Yönetici*
-- Azure Active Directory *Uyumluluk Yöneticisi*
-- Microsoft 365 uyumluluk merkezi *Yönetimi*
-- Microsoft 365 uyumluluk merkezi *Uyumluluk Yöneticisi*
+- Azure Active Directory *Genel Yöneticisi*
+- *Azure Active Directory Uyumluluk Yöneticisi*
+- Microsoft Purview uyumluluk portalı *Kuruluş Yönetimi*
+- Microsoft Purview uyumluluk portalı *Uyumluluk Yöneticisi*
 
 > [!IMPORTANT]
-> İletişim Uyumluluğu veya İletişim Uyumluluğu Yöneticisi rol gruplarında her zaman  en az bir  kullanıcınız olduğundan emin olun (seçtiğiniz seçen bağlı olarak), iletişim uyumluluk yapılandırmanız belirli kullanıcılar kuruluşlarından ayrılırsa 'sıfır yönetici' senaryosuna uymaz.
+> İletişim *uyumluluk* yapılandırmanızın kuruluşunuzdan ayrılması durumunda iletişim uyumluluk yapılandırmanızın 'sıfır yönetici' senaryosunda yer almaması için İletişim *Uyumluluğu veya İletişim Uyumluluğu Yöneticisi* rol gruplarında her zaman en az bir kullanıcınız olduğundan emin olun (belirlediğiniz seçeneğe bağlı olarak).
 
-İletişim uyumluluk ilkelerini ve uyarılarını nasıl yönetmek istediğinize bağlı olarak, farklı iletişim uyumluluk özellikleri kümelerini yönetmek için kullanıcıları belirli rol gruplarına atamanız gerekir. Farklı iletişim uyumluluk özellikleri alanlarını yönetmek için, farklı uyumluluk sorumluluklarına sahip kullanıcıları belirli rol gruplarına atama seçeneğiniz vardır. Ya da belirli yöneticiler, analistler, analistler ve izleyiciler için tüm kullanıcı hesaplarını İletişim Uyumluluğu *rol grubuna atamaya karar* veabilirsiniz. Uyumluluk yönetimi gereksinimlerinize en uygun şekilde tek bir rol grubu veya birden çok rol grubu kullanın.
+İletişim uyumluluk ilkelerini ve uyarılarını nasıl yönetmek istediğinize bağlı olarak, farklı iletişim uyumluluk özellikleri kümelerini yönetmek için kullanıcıları belirli rol gruplarına atamanız gerekir. Farklı uyumluluk özellikleri alanlarını yönetmek için farklı uyumluluk sorumluluklarına sahip kullanıcıları belirli rol gruplarına atama seçeneğiniz vardır. Ya da belirlenen yöneticiler, analistler, araştırmacılar ve görüntüleyiciler için tüm kullanıcı hesaplarını *İletişim Uyumluluğu* rol grubuna atamaya karar vekleyebilirsiniz. Uyumluluk yönetimi gereksinimlerinize en uygun tek bir rol grubu veya birden çok rol grubu kullanın.
 
-İletişim uyumluluğunu yapılandıran ve yöneten şu çözüm rol grubu seçeneklerinden birini belirleyin:
+İletişim uyumluluğunu yapılandırırken ve yönetirken şu çözüm rol grubu seçeneklerinden birini belirleyin:
 
 | Rol | Rol izinleri |
 |:-----|:-----------------|
-| **İletişim Uyumluluğu** | Tek bir grupta, organizasyona iletişimi uyumluluğu yönetmek için bu rol grubunu kullanın. Belirlenen yöneticiler, analistler, analistler ve görüntüleyiciler için tüm kullanıcı hesaplarını ekleyerek, iletişim uyumluluk izinlerini tek bir grupta yapılandırabilirsiniz. Bu rol grubu tüm iletişim uyumluluğu izin rollerini içerir. bu yapılandırma, iletişim uyumluluğuyla hızla çalışmaya başlamanın en kolay yoludur ve ayrı kullanıcı grupları için tanımlanmış ayrı izinlere gerekmayan kuruluşlara iyi uyum sağlar. İletişim uyumluluk yöneticisi olarak ilkeler oluşturmaları için, posta kutularının Posta Kutusu'Exchange Online.|
-| **İletişim Uyumluluğu Yöneticisi** | Bu rol grubunu ilk başta iletişim uyumluluğunu yapılandırmak ve daha sonra iletişim uyumluluk yöneticilerini tanımlı bir grup haline çekmek için kullanın. Bu rol grubuna atanan kullanıcılar, iletişim uyumluluk ilkelerini, genel ayarları ve rol grubu atamalarını oluşturabilir, okuyabilir, güncelleştirabilir ve silebilir. Bu rol grubuna atanan kullanıcılar ileti uyarılarını görüntüleyem. İletişim uyumluluk yöneticisi olarak ilkeler oluşturmaları için, posta kutularının Posta Kutusu'Exchange Online.|
-| **İletişim Uyumluluğu Analisti** | İletişim uyumluluğu analistleri olarak görevecek kullanıcılara izin atamak için bu grubu kullanın. Bu rol grubuna atanmış olan kullanıcılar, Gözden Geçiren olarak atandığı ilkeleri abilir, ileti meta verilerini (ileti içeriğine değil)  bakabilir, ek gözden geçirenlere gönderebilir veya kullanıcılara bildirim gönderebilir. Analistler bekleyen uyarıları çözümleyemezse. |
-| **İletişim Uyumluluğu Uyumluluk Uyumlulukları** | İletişim uyumluluğu uyumluluk uyumluluk uyumlulukları gibi davranacak kullanıcılara izinler atamak için bu grubu kullanın. Bu rol grubuna atanan kullanıcılar ileti meta verilerini ve içeriğini  neleri iletiyi gözden geçirenlere iletir, Advanced eDiscovery durumuna iyileştirmeyi, kullanıcılara bildirim gönderebilir ve uyarıyı çözebilir. |
-| **İletişim Uyumluluğu Görüntüleyicisi** | İletişim raporlarını yönetecek kullanıcılara izin atamak için bu grubu kullanın. Bu rol grubuna atanan kullanıcılar, iletişim uyumluluğu giriş sayfasında tüm raporlama pencere öğelerine erişim sağlar ve tüm iletişim uyumluluk raporlarını  görebilirsiniz. |
+| **İletişim Uyumluluğu** | Kuruluşunuz için iletişim uyumluluğunu tek bir grupta yönetmek için bu rol grubunu kullanın. Belirlenen yöneticiler, analistler, araştırmacılar ve görüntüleyiciler için tüm kullanıcı hesaplarını ekleyerek, iletişim uyumluluk izinlerini tek bir grupta yapılandırabilirsiniz. Bu rol grubu tüm iletişim uyumluluk izni rollerini içerir. Bu yapılandırma, iletişim uyumluluğunu hızlı bir şekilde kullanmaya başlamanın en kolay yoludur ve ayrı kullanıcı grupları için ayrı izinlere ihtiyaç duymayan kuruluşlar için uygundur. İletişim uyumluluk yöneticisi olarak ilke oluşturan kullanıcıların posta kutuları Exchange Online barındırılmalıdır.|
+| **İletişim Uyumluluğu Yöneticisi** | İletişim uyumluluğunu başlangıçta yapılandırmak ve daha sonra iletişim uyumluluk yöneticilerini tanımlı bir gruba ayırmak için bu rol grubunu kullanın. Bu rol grubuna atanan kullanıcılar iletişim uyumluluk ilkelerini, genel ayarları ve rol grubu atamalarını oluşturabilir, okuyabilir, güncelleştirebilir ve silebilir. Bu rol grubuna atanan kullanıcılar ileti uyarılarını görüntüleyemez. İletişim uyumluluk yöneticisi olarak ilke oluşturan kullanıcıların posta kutuları Exchange Online barındırılmalıdır.|
+| **İletişim Uyumluluğu Analisti** | İletişim uyumluluğu analistleri olarak görev yapacak kullanıcılara izin atamak için bu grubu kullanın. Bu rol grubuna atanan kullanıcılar, Gözden Geçiren olarak atandıkları ilkeleri görüntüleyebilir, ileti meta verilerini görüntüleyebilir (ileti içeriği değil), ek gözden geçirenlere iletebilir veya kullanıcılara bildirim gönderebilir. Analistler bekleyen uyarıları çözümleyemez. |
+| **İletişim Uyumluluğu Araştırmacısı** | İletişim uyumluluk araştırmacısı olarak görev yapacak kullanıcılara izin atamak için bu grubu kullanın. Bu rol grubuna atanan kullanıcılar ileti meta verilerini ve içeriğini görüntüleyebilir, ek gözden geçirenlere iletebilir, eBulma (Premium) olayına iletebilir, kullanıcılara bildirim gönderebilir ve uyarıyı çözebilir. |
+| **İletişim Uyumluluğu Görüntüleyicisi** | İletişim raporlarını yönetecek kullanıcılara izin atamak için bu grubu kullanın. Bu rol grubuna atanan kullanıcılar, iletişim uyumluluğu giriş sayfasındaki tüm raporlama pencere öğelerine erişebilir ve tüm iletişim uyumluluk raporlarını görüntüleyebilir. |
 
-### <a name="option-1-assign-all-compliance-users-to-the-communication-compliance-role-group"></a>1. Seçenek: Tüm uyumluluk kullanıcılarını İletişim Uyumluluğu rol grubuna atama
+### <a name="option-1-assign-all-compliance-users-to-the-communication-compliance-role-group"></a>Seçenek 1: Tüm uyumluluk kullanıcılarını İletişim Uyumluluğu rol grubuna atama
 
-1. Bir yönetici [https://compliance.microsoft.com/permissions](https://compliance.microsoft.com/permissions) hesabının kimlik bilgilerini kullanarak oturum Microsoft 365.
+1. [https://compliance.microsoft.com/permissions](https://compliance.microsoft.com/permissions) Microsoft 365 kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak oturum açın.
 
-2. Güvenlik Uyumluluk Merkezi'nde &amp; İzinler'e **gidin**. Aynı dosyada rolleri görüntülemek ve yönetmek için Office 365.
+2. Güvenlik &amp; Uyumluluk Merkezi'nde **İzinler'e** gidin. Office 365 rolleri görüntülemek ve yönetmek için bağlantıyı seçin.
 
-3. İletişim Uyumluluğu *rol grubunu* seçin ve sonra da Rol grubunu **düzenle'yi seçin**.
+3. *İletişim Uyumluluğu* rol grubunu ve ardından **Rol grubunu düzenle'yi** seçin.
 
-4. Sol **gezinti bölmesinde Üye** seç'i, ardından Düzenle'yi **seçin**.
+4. Sol gezinti **bölmesinden Üyeleri seç'i** ve ardından **Düzenle'yi** seçin.
 
-5. **Ekle'yi** seçin ve sonra İletişim Uyumluluğu rol grubuna eklemek istediğiniz tüm kullanıcıların *onay kutusunu* seçin.
+5. **Ekle'yi** seçin ve ardından *İletişim Uyumluluğu* rol grubuna eklemek istediğiniz tüm kullanıcılar için onay kutusunu seçin.
 
-6. **Ekle'yi** ve ardından **Bitti'yi seçin**.
+6. **Ekle'yi** ve ardından **Bitti'yi** seçin.
 
-7. Kullanıcıları **rol** grubuna eklemek için Kaydet'i seçin. Adımları **tamamlamak için** Kapat'ı seçin
+7. Kullanıcıları rol grubuna eklemek için **Kaydet'i** seçin. Adımları tamamlamak için **Kapat'ı** seçin
 
-### <a name="option-2-assign-users-to-specific-communication-compliance-role-groups"></a>2. Seçenek: Kullanıcıları belirli iletişim uyumluluk rol gruplarına atama
+### <a name="option-2-assign-users-to-specific-communication-compliance-role-groups"></a>2. Seçenek: Kullanıcıları belirli iletişim uyumluluğu rol gruplarına atama
 
-Kullanıcıları belirli rol gruplarına atamak için bu seçeneği kullanarak, kuruluşta yer alan farklı kullanıcılar arasında iletişim uyumluluğu erişimini ve sorumluluklarını bölüme belirleyin.
+Kuruluşunuzdaki farklı kullanıcılar arasında iletişim uyumluluğu erişimini ve sorumluluklarını segmentlere ayırmak için kullanıcıları belirli rol gruplarına atamak için bu seçeneği kullanın.
 
-1. [E-Microsoft 365 uyumluluk merkezi](https://compliance.microsoft.com) yönetici hesabının kimlik bilgilerini kullanarak Microsoft 365 ve ardından İzinler'e **gidin**</a>.
+1. Microsoft 365 kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) oturum açın ve **İzinler'e**</a> gidin.
 
-2. Aynı dosyada rolleri görüntülemek ve yönetmek için Office 365.
+2. Office 365 rolleri görüntülemek ve yönetmek için bağlantıyı seçin.
 
-3. İletişim uyumluluk rol gruplarından birini seçin ve sonra da Rol grubunu **düzenle'yi seçin**.
+3. İletişim uyumluluğu rol gruplarından birini ve ardından **Rol grubunu düzenle'yi** seçin.
 
-4. Sol **gezinti bölmesinde Üye** seç'i, ardından Düzenle'yi **seçin**.
+4. Sol gezinti **bölmesinden Üyeleri seç'i** ve ardından **Düzenle'yi** seçin.
 
-5. **Ekle'yi** seçin ve ardından rol grubuna eklemek istediğiniz tüm kullanıcıların onay kutusunu seçin.
+5. **Ekle'yi** seçin ve ardından rol grubuna eklemek istediğiniz tüm kullanıcılar için onay kutusunu seçin.
 
-6. **Ekle'yi** ve ardından **Bitti'yi seçin**.
+6. **Ekle'yi** ve ardından **Bitti'yi** seçin.
 
-7. Kullanıcıları **rol** grubuna eklemek için Kaydet'i seçin.
+7. Kullanıcıları rol grubuna eklemek için **Kaydet'i** seçin.
 
-8. Sonraki iletişim uyumluluk rol grubunu seçin ve sonra 4-7 arasındaki adımları gerekli her rol grubu için yineler.
+8. Sonraki iletişim uyumluluk rol grubunu seçin, ardından gerekli her rol grubu için 4-7 arası adımları yineleyin.
 
-9. Adımları **tamamlamak** için Kapat'ı seçin.
+9. Adımları tamamlamak için **Kapat'ı** seçin.
 
 Rol grupları ve izinler hakkında daha fazla bilgi için bkz. [Uyumluluk Merkezi'nde İzinler](../security/office-365-security/protect-against-threats.md).
 
 ## <a name="step-2-required-enable-the-audit-log"></a>2. Adım (gerekli): Denetim günlüğünü etkinleştirme
 
-İletişim uyumluluğu, uyarıları göstermek ve gözden geçirenlerin sındırma eylemlerini izlemek için denetim günlükleri gerektirir. Denetim günlükleri, tanımlı bir kuruluş ilkesiyle ilişkilendirilmiş tüm etkinliklerin özetidir veya bir iletişim uyumluluk ilkesi her değiştiklerinde özetler.
+İletişim uyumluluğu için denetim günlüklerinin uyarıları göstermesi ve gözden geçirenler tarafından gerçekleştirilen düzeltme eylemlerini izlemesi gerekir. Denetim günlükleri, tanımlı bir kuruluş ilkesiyle ilişkili tüm etkinliklerin özetidir veya iletişim uyumluluk ilkesi her değiştiğinde.
 
-Bu kuruluşlarda denetim Microsoft 365 varsayılan olarak etkinleştirilir. Bazı kuruluşlar belirli nedenlerle denetimi devre dışı bırakmıştır. If auditing is disabled for your organization, it might be because another administrator has turned it. Bu adımı tamamlarken denetimi yeniden açmanın bir sorun olduğunu doğrulamanızı öneririz.
+Denetim, Microsoft 365 kuruluşlar için varsayılan olarak etkindir. Bazı kuruluşlar belirli nedenlerle denetimi devre dışı bırakmış olabilir. Kuruluşunuzda denetim devre dışı bırakıldıysa, bunun nedeni başka bir yöneticinin kapatması olabilir. Bu adımı tamamlarken denetimi yeniden açmanın uygun olduğunu onaylamanızı öneririz.
 
-Denetimi açma adım adım yönergeler için bkz. [Denetim günlüğü aramalarını açma veya kapatma](turn-audit-log-search-on-or-off.md). Denetimi açmak için denetim günlüğünün hazır olduğunu ve birkaç saat içinde hazırlık tamamlandıktan sonra arama çalıştırabilirsiniz iletisi görüntülenir. Bu eylemi yalnızca bir kez yapmak gerekir. Denetim günlüğünü kullanma hakkında daha fazla bilgi için bkz. [Denetim günlüğünde arama.](search-the-audit-log-in-security-and-compliance.md)
+Denetimi açmak için adım adım yönergeler için bkz. [Denetim günlüğü aramasını açma veya kapatma](turn-audit-log-search-on-or-off.md). Denetimi açtıktan sonra, denetim günlüğünün hazırlandığını ve hazırlık tamamlandıktan birkaç saat sonra bir arama çalıştırabileceğinizi belirten bir ileti görüntülenir. Bu eylemi yalnızca bir kez yapmanız gerekir. Denetim günlüğünü kullanma hakkında daha fazla bilgi için bkz [. Denetim günlüğünde arama](search-the-audit-log-in-security-and-compliance.md) yapma.
 
 ## <a name="step-3-optional-set-up-groups-for-communication-compliance"></a>3. Adım (isteğe bağlı): İletişim uyumluluğu için grupları ayarlama
 
- Bir iletişim uyumluluk ilkesi seniz, kimlerin iletişimleri gözden geçir olduğunu ve kimin incelemeler yapanı tanımlarsiniz. İlkede, tek tek veya kişi gruplarını tanımlamak için e-posta adreslerini kullanırsınız. Kurulumlarınızı basitleştirmek için, iletişimleri gözden geçirilen kişiler için gruplar ve bu iletişimleri gözden geçiren kişiler için gruplar oluşturabilirsiniz. Grupları kullanıyorsanız, birkaç gruba ihtiyacınız olabilir. Örneğin, iki ayrı kişi grubu arasındaki iletişimi izlemek veya denetlenecek bir grup belirtmek istemiyorsanız.
+ İletişim uyumluluk ilkesi oluşturduğunuzda, kimlerin iletişimlerinin gözden geçirilmiş olduğunu ve kimin incelemeler gerçekleştirdiğini tanımlarsınız. İlkede, kişileri veya kişi gruplarını tanımlamak için e-posta adreslerini kullanacaksınız. Kurulumunuzu basitleştirmek için, iletişimleri gözden geçirilmiş kişiler için gruplar ve bu iletişimleri gözden geçiren kişiler için gruplar oluşturabilirsiniz. Grupları kullanıyorsanız, birkaç gruba ihtiyacınız olabilir. Örneğin, iki ayrı kişi grubu arasındaki iletişimi izlemek istiyorsanız veya denetlenmeyecek bir grup belirtmek istiyorsanız.
 
-Aşağıdaki grafiği kullanarak, iletişim uyumluluk ilkeleri için organizasyonu grupları yapılandırmanıza yardımcı olun:
+Kuruluşunuzdaki grupları iletişim uyumluluk ilkeleri için yapılandırmanıza yardımcı olması için aşağıdaki grafiği kullanın:
 
 | **İlke Üyesi** | **Desteklenen Gruplar** | **Desteklenmeyen Gruplar** |
 |:-----|:-----|:-----|
-|Denetimli kullanıcılar <br> Dışlanan kullanıcılar | Dağıtım grupları <br> Microsoft 365 Grupları | Dinamik dağıtım grupları <br> İç içe dağıtım grupları <br> Posta özellikli güvenlik grupları <br> Microsoft 365 üyeliği olan gruplarla çalışma |
-| Gözden Geçirenler | Yok | Dağıtım grupları <br> Dinamik dağıtım grupları <br> İç içe dağıtım grupları <br> Posta özellikli güvenlik grupları |
+|Denetimli kullanıcılar <br> Dışlanan kullanıcılar | Dağıtım grupları <br> Microsoft 365 Grupları | Dinamik dağıtım grupları <br> İç içe dağıtım grupları <br> Posta özellikli güvenlik grupları <br> Dinamik üyeliği olan grupları Microsoft 365 |
+| Yorumcu -lar | Yok | Dağıtım grupları <br> Dinamik dağıtım grupları <br> İç içe dağıtım grupları <br> Posta özellikli güvenlik grupları |
 
-İlkede bir *dağıtım grubu atadığınız* zaman, ilke tüm e-postaları Teams ve dağıtım grubunda yer alan her kullanıcının *sohbetlerini izler*. İlkede *bir Microsoft 365* grubu atadığınız zaman, ilke her grup üyesinin aldığı tek tek e-postaları ve sohbetleri değil, * Microsoft 365 grubuna gönderilen tüm e-postaları ve *Teams* sohbetlerini izler. Her kullanıcıdan gelen tek tek e-postaların ve sohbetlerin otomatik olarak izlen Teams dağıtım gruplarının iletişim uyumluluk ilkeleri içinde kullanılması önerilir.
+İlkeye bir *dağıtım grubu* atadığınızda, ilke dağıtım *grubundaki* her kullanıcının tüm e-postalarını ve Teams sohbetlerini izler. İlkeye *bir Microsoft 365 grubu* atadığınızda, ilke her grup üyesi tarafından alınan e-postaları ve sohbetleri değil *, Microsoft 365 grubuna* gönderilen tüm e-postaları ve Teams sohbetleri izler. Her kullanıcıdan gelen tek tek e-postaların ve Teams sohbetlerinin otomatik olarak izlenmesi için iletişim uyumluluk ilkelerinde dağıtım gruplarının kullanılması önerilir.
 
-Exchange şirket içi dağıtımına veya dış e-posta sağlayıcısına sahip bir kuruluşsanız ve kullanıcılarınız için Microsoft Teams sohbetlerini izlemek için, şirket içi veya dış posta kutuları olan kullanıcılar için bir dağıtım grubu oluşturmanız gerekir. Bu adımların devamlarında, bu dağıtım grubunu ilke sihirbazında Denetimli kullanıcılar **ve** gruplar seçimi olarak atarsınız. Bulut tabanlı depolamayı etkinleştirme gereksinimleri ve sınırlamaları hakkında daha fazla bilgi Teams için bkz. Şirket içi kullanıcılar için [Teams sohbet verilerini arama](search-cloud-based-mailboxes-for-on-premises-users.md).
+Exchange şirket içi dağıtımı veya dış e-posta sağlayıcısı olan bir kuruluşsanız ve kullanıcılarınız için Microsoft Teams sohbetleri izlemek istiyorsanız, şirket içi veya dış posta kutuları olan kullanıcıların izleyebilecekleri bir dağıtım grubu oluşturmanız gerekir. Bu adımların ilerleyen bölümlerinde, ilke sihirbazında bu dağıtım grubunu **Denetimli kullanıcılar ve gruplar** seçimi olarak atayacaksınız. Bulut tabanlı depolamayı etkinleştirme gereksinimleri ve sınırlamaları ve şirket içi kullanıcılar için Teams desteği hakkında daha fazla bilgi için bkz. [Şirket içi kullanıcılar için Teams sohbet verilerini arama](search-cloud-based-mailboxes-for-on-premises-users.md).
 
-Büyük kurumsal kuruluşlarda denetlenen kullanıcıları yönetmek için, büyük gruplarda tüm kullanıcıları izlemeniz gerekiyor olabilir. PowerShell kullanarak atanan gruba genel iletişim uyumluluk ilkesi için bir dağıtım grubu yapılandırabilirsiniz. Bu, binlerce kullanıcıyı tek bir ilkeyle izlemenizi ve yeni çalışanların kuruluşa katılmasını sağlayan iletişim uyumluluk ilkesi güncelleştirmelerini tutmanıza olanak sağlar.
+Büyük kurumsal kuruluşlardaki denetimli kullanıcıları yönetmek için büyük gruplardaki tüm kullanıcıları izlemeniz gerekebilir. PowerShell'i kullanarak, atanan grup için genel iletişim uyumluluk ilkesi için bir dağıtım grubu yapılandırabilirsiniz. Bu, tek bir ilkeyle binlerce kullanıcıyı izlemenize ve kuruluşunuza yeni çalışanlar katıldığında iletişim uyumluluk ilkesini güncel tutmanıza olanak tanır.
 
-1. Aşağıdaki özelliklerle[, genel](/powershell/module/exchange/new-distributiongroup) iletişim uyumluluk ilkeniz için ayrılmış bir dağıtım grubu oluşturun: Bu dağıtım grubunun başka amaçlar veya diğer hizmetlerde kullanılma Office 365 olun.
+1. Aşağıdaki özelliklerle genel iletişim uyumluluk ilkeniz için ayrılmış bir [dağıtım grubu](/powershell/module/exchange/new-distributiongroup) oluşturun: Bu dağıtım grubunun başka amaçlar veya diğer Office 365 hizmetleri için kullanılmadığından emin olun.
 
-    - **MemberDepartRestriction = Closed**. Kullanıcıların kendilerini dağıtım grubundan çıkarmalarını sağlar.
-    - **MemberJoinRestriction = Closed**. Kullanıcıların kendilerini dağıtım grubuna ekleyemalarını sağlar.
-    - **ModerationEnabled = True**. Bu gruba gönderilen tüm iletilerin onaya tabi olduğunu ve grubun iletişim uyumluluk ilkesi yapılandırması dışında iletişim kurmak için kullanılmamalarını sağlar.
+    - **MemberDepartRestriction = Kapalı**. Kullanıcıların kendilerini dağıtım grubundan kaldıramamalarını sağlar.
+    - **MemberJoinRestriction = Kapalı**. Kullanıcıların kendilerini dağıtım grubuna ekleyememelerini sağlar.
+    - **ModerationEnabled = True**. Bu gruba gönderilen tüm iletilerin onaya tabi olmasını ve grubun iletişim uyumluluk ilkesi yapılandırması dışında iletişim kurmak için kullanılmamasını sağlar.
 
     ```PowerShell
     New-DistributionGroup -Name <your group name> -Alias <your group alias> -MemberDepartRestriction 'Closed' -MemberJoinRestriction 'Closed' -ModerationEnabled $true
     ```
 
-2. Kullanılmayan bir özel [Exchange öznitelik seçerek](/Exchange/recipients/mailbox-custom-attributes), kurum içinde iletişim uyumluluğu ilkesine eklenen kullanıcıları izleyebilirsiniz.
+2. Kuruluşunuzdaki iletişim uyumluluk ilkesine eklenen kullanıcıları izlemek için kullanılmayan [bir Exchange özel özniteliği](/Exchange/recipients/mailbox-custom-attributes) seçin.
 
-3. İletişim uyumluluğu ilkesine kullanıcı eklemek için, yinelenen bir zamanlamada aşağıdaki PowerShell betiği çalıştırın:
+3. İletişim uyumluluk ilkesine kullanıcı eklemek için aşağıdaki PowerShell betiğini yinelenen bir zamanlamada çalıştırın:
 
     ```PowerShell
     $Mbx = (Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited -Filter {CustomAttribute9 -eq $Null})
@@ -194,81 +197,81 @@ Büyük kurumsal kuruluşlarda denetlenen kullanıcıları yönetmek için, büy
 Grupları ayarlama hakkında daha fazla bilgi için bkz:
 
 - [Dağıtım grupları oluşturma ve yönetme](/Exchange/recipients-in-exchange-online/manage-distribution-groups/manage-distribution-groups)
-- [Genel bakış Microsoft 365 Grupları](/office365/admin/create-groups/office-365-groups)
+- [Microsoft 365 Grupları genel bakış](/office365/admin/create-groups/office-365-groups)
 
-## <a name="step-4-optional-verify-your-yammer-tenant-is-in-native-mode"></a>4. Adım (isteğe bağlı): Yammer Yerel Modda olduğunu doğrulama
+## <a name="step-4-optional-verify-your-yammer-tenant-is-in-native-mode"></a>4. Adım (isteğe bağlı): Yammer kiracınızın Yerel Modda olduğunu doğrulayın
 
-Yerel Modda, Yammer tüm kullanıcılar Azure Active Directory (Azure AD), tüm gruplar Office 365 Grupları olarak ve tüm dosyalar da SharePoint Online'da depolanır. İletişim Yammer uyumluluk Yammer ilkelerinin, özel iletilerde ve topluluk konuşmalarında riskli konuşmaları taray tanımlay için Yerel Modda olması gerekir.
+Yerel Modda, tüm Yammer kullanıcılar Azure Active Directory (Azure AD), tüm gruplar Office 365 Grupları ve tüm dosyalar SharePoint Online'da depolanır. Yammer kiracınızın, özel iletilerdeki riskli konuşmaları ve Yammer'daki topluluk konuşmalarını taramak ve tanımlamak için iletişim uyumluluk ilkelerinin Yerel Modda olması gerekir.
 
-Yerel Modda yeni bir Yammer daha fazla bilgi için bkz:
+yerel modda Yammer yapılandırma hakkında daha fazla bilgi için bkz:
 
-- [Microsoft 365'Yammer Yerel Mod'a genel Microsoft 365](/yammer/configure-your-yammer-network/overview-native-mode)
-- [Yerel Yammer için Yerel Mod için yerel ağına Microsoft 365](/yammer/configure-your-yammer-network/native-mode)
+- [Microsoft 365'da yerel mod Yammer genel bakış](/yammer/configure-your-yammer-network/overview-native-mode)
+- [Yammer ağınızı Microsoft 365 için Yerel Mod için yapılandırma](/yammer/configure-your-yammer-network/native-mode)
 
 ## <a name="step-5-required-create-a-communication-compliance-policy"></a>5. Adım (gerekli): İletişim uyumluluk ilkesi oluşturma
 
 >[!IMPORTANT]
->İletişim uyumluluk ilkeleri oluşturmak ve yönetmek için PowerShell kullanımı desteklenemektedir. Bu ilkeleri oluşturmak ve yönetmek için, uyumluluk çözümünde ilke yönetim [Microsoft 365 kullanmalıdır](https://compliance.microsoft.com/supervisoryreview).
+>İletişim uyumluluk ilkeleri oluşturmak ve yönetmek için PowerShell kullanılması desteklenmez. Bu ilkeleri oluşturmak ve yönetmek için [, iletişim uyumluluk çözümünde](https://compliance.microsoft.com/supervisoryreview) ilke yönetimi denetimlerini kullanmanız gerekir.
 
 >[!TIP]  
->Yeni bir iletişim uyumluluk ilkesi ayarlama ve uyarı düzeltme hakkında ayrıntılı bir yol mu görmeksiniz? İletişim uyumluluk ilkelerinin uygunsuz iletileri algılamanıza, olası ihlalleri araştırmanıza ve uyumluluk sorunlarını düzeltmeye nasıl yardımcı olduğunu göstermeyi görmek için [bu 15 dakikalık videoyu](communication-compliance-plan.md#creating-a-communication-compliance-policy-walkthrough) izleyin.
+>Yeni bir iletişim uyumluluk ilkesi ayarlama ve uyarıyı düzeltme konusunda ayrıntılı bir izlenecek yol görmek ister misiniz? İletişim uyumluluk ilkelerinin uygunsuz iletileri algılamanıza, olası ihlalleri araştırmanıza ve uyumluluk sorunlarını düzeltmenize nasıl yardımcı olabileceğini gösteren bir tanıtım görmek için [bu 15 dakikalık videoya](communication-compliance-plan.md#creating-a-communication-compliance-policy-walkthrough) göz atın.
 
-1. Bir [Microsoft 365 uyumluluk merkezi yönetici hesabının](https://compliance.microsoft.com) kimlik bilgilerini kullanarak oturum Microsoft 365.
+1. Microsoft 365 kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) oturum açın.
 
-2. Uyumluluk iletişim **Microsoft 365 uyumluluk merkezi'yi seçin**.
+2. Microsoft Purview uyumluluk portalında **İletişim uyumluluğu'na** tıklayın.
 
-3. **İlkeler sekmesini** seçin.
+3. **İlkeler** sekmesini seçin.
 
-4. **Şablondan yeni** ilke oluşturmak ve yapılandırmak veya özel bir ilke oluşturmak ve yapılandırmak için İlke oluştur'a seçin.
+4. Şablondan yeni ilke oluşturup yapılandırmak veya özel ilke oluşturup yapılandırmak için İlke oluştur'u **seçin.**
 
-    İlke oluşturmak için bir ilke şablonu seçerseniz, şunları da oluşturursunuz:
+    İlke oluşturmak için bir ilke şablonu seçerseniz şunları yapacaksınız:
 
     - İlke adını onaylayın veya güncelleştirin. İlke oluşturulduktan sonra ilke adları değiştirilemez.
 
-    - Denetleme için, hariç tutmak istediğiniz kullanıcıları veya grupları seçme dahil olmak üzere kullanıcıları veya grupları seçin. İlgi alanı çakışması şablonunu kullanırken, iç iletişimleri izlemek için iki grup veya iki kullanıcı seçersiniz.
+    - Dışlamak istediğiniz kullanıcıları veya grupları seçmek de dahil olmak üzere denetlenecek kullanıcıları veya grupları seçin. İlgi alanı çakışması şablonunu kullanırken, iç iletişimleri izlemek için iki grup veya iki kullanıcı seçersiniz.
 
-    - İlke için gözden geçirenleri seçin. Gözden geçirenler bireysel kullanıcılardır ve tüm gözden geçirenlerin e-posta kutusunda barındırılan posta Exchange Online. Buraya eklenen gözden geçirenler, araştırma ve düzeltme iş akışında uyarıyı yukarıya ilerlerken seçerek seçebilirsiniz. Gözden geçirenler bir ilkeye ekli olduğunda, otomatik olarak ilkeye atamayı haber veren ve gözden geçirme işlemiyle ilgili bilgilerin bağlantılarını veren bir e-posta iletisi alırlar.
+    - İlke için gözden geçirenleri seçin. Gözden geçirenler tek tek kullanıcılardır ve tüm gözden geçirenlerin Exchange Online'da barındırılan posta kutuları olmalıdır. Buraya eklenen gözden geçirenler, araştırma ve düzeltme iş akışında uyarıyı yükseltirken aralarından seçim yapabileceğiniz gözden geçirenlerdir. Gözden geçirenler bir ilkeye eklendiğinde, ilkeye atamayı bildiren ve gözden geçirme işlemiyle ilgili bilgilerin bağlantılarını sağlayan bir e-posta iletisini otomatik olarak alır.
 
-    - İlkeye uygulamak için sınırlı bir koşul alanı, genellikle hassas bir bilgi türü veya anahtar sözcük sözlüğü seçin.
+    - İlkeye uygulanacak sınırlı bir koşul alanı (genellikle hassas bir bilgi türü veya anahtar sözcük sözlüğü) seçin.
 
     > [!NOTE]
-    > Optik karakter tanımanın (OCR) iletilerde, ilke koşullarına uygun, yazdırılmış veya el yazısıyla yazılmış metinleri taramasını sağlamak için Optik karakter [tanımayı (OCR)](communication-compliance-policies.md#optical-character-recognition-ocr)  >  etkinleştirmek ve Değerlendirme için görüntülerden yazdırılan veya el yazısıyla yazılmış metinleri ayıkla seçeneğini **etkinleştirin.**
+    > İletilerdeki eklenmiş veya eklenmiş görüntüleri, ilke koşullarıyla eşleşen yazdırılmış veya el yazısı metinler için taramak üzere [optik karakter tanımayı (OCR)](communication-compliance-policies.md#optical-character-recognition-ocr) etkinleştirmek istiyorsanız, **policyConditions** >  ve **yüzdeyi özelleştir'i** seçin ve **Görüntülerden yazdırılan veya el yazısı metinleri değerlendirme için ayıkla'yı** etkinleştirin.
 
-    Özel bir ilke oluşturmak için ilke sihirbazını kullanmayı seçerseniz, şunları da kullanırsınız:
+    Özel bir ilke oluşturmak için ilke sihirbazını kullanmayı seçerseniz şunları yapacaksınız:
 
-    - İlkeye bir ad ve açıklama girin. İlke oluşturulduktan sonra ilke adları değiştirilemez.
+    - İlkeye bir ad ve açıklama verin. İlke oluşturulduktan sonra ilke adları değiştirilemez.
 
-    - Denetlemek istediğiniz kullanıcıları veya grupları seçin; bunlar, kuruluş dahil tüm kullanıcılar, belirli kullanıcılar ve gruplar ya da dışarıda tutmak istediğiniz diğer kullanıcılar ve gruplar olabilir.
+    - Kuruluşunuzdaki tüm kullanıcılar, belirli kullanıcılar ve gruplar veya dışlamak istediğiniz diğer kullanıcılar ve gruplar dahil olmak üzere denetlenecek kullanıcıları veya grupları seçin.
 
-    - İlke için gözden geçirenleri seçin. Gözden geçirenler bireysel kullanıcılardır ve tüm gözden geçirenlerin e-posta kutusunda barındırılan posta Exchange Online. Buraya eklenen gözden geçirenler, araştırma ve düzeltme iş akışında uyarıyı yukarıya ilerlerken seçerek seçebilirsiniz. Gözden geçirenler bir ilkeye ekli olduğunda, otomatik olarak ilkeye atamayı haber veren ve gözden geçirme işlemiyle ilgili bilgilerin bağlantılarını veren bir e-posta iletisi alırlar.
+    - İlke için gözden geçirenleri seçin. Gözden geçirenler tek tek kullanıcılardır ve tüm gözden geçirenlerin Exchange Online'da barındırılan posta kutuları olmalıdır. Buraya eklenen gözden geçirenler, araştırma ve düzeltme iş akışında uyarıyı yükseltirken aralarından seçim yapabileceğiniz gözden geçirenlerdir. Gözden geçirenler bir ilkeye eklendiğinde, ilkeye atamayı bildiren ve gözden geçirme işlemiyle ilgili bilgilerin bağlantılarını sağlayan bir e-posta iletisini otomatik olarak alır.
 
-    - Taramak için, taramak istediğiniz iletişim Exchange, Microsoft Teams, Yammer, bağlantı Skype Kurumsal. Ayrıca, bu bağlantıda bir bağlayıcı yapılandırdınız üçüncü taraf kaynaklarını taramayı Microsoft 365.
+    - Exchange, Microsoft Teams, Yammer veya Skype Kurumsal gibi taranacak iletişim kanallarını seçin. Ayrıca, Microsoft 365'de bir bağlayıcı yapılandırdıysanız üçüncü taraf kaynakları taramayı da seçebilirsiniz.
 
-    - Gelen, giden veya iç iletişim de dahil olmak üzere izlecek iletişim yönünü seçin.
+    - Gelen, giden veya iç iletişimler dahil olmak üzere izlenecek iletişim yönünü seçin.
 
-    - İletişim uyumluluğu ilkesi koşullarını [tanımlayın](communication-compliance-policies.md#ConditionalSettings). İleti adresi, anahtar sözcük, dosya türleri ve boyut eşleşme koşulları arasında seçim seçebilirsiniz.
+    - İletişim uyumluluk ilkesi [koşullarını](communication-compliance-policies.md#ConditionalSettings) tanımlayın. İleti adresi, anahtar sözcük, dosya türleri ve boyut eşleştirme koşulları arasından seçim yapabilirsiniz.
 
-    - Hassas bilgi türlerini eklemek mi istediğinize seçin. Bu adım, varsayılan ve özel hassas bilgi türlerini seç alanıdır. İletişim uyumluluk ilkesi sihirbazında var olan özel hassas bilgi türlerinden veya özel anahtar sözcük sözlüklerinden birini seçin. Gerekirse, sihirbazı çalıştırmadan önce bu öğeleri oluşturabilirsiniz. Ayrıca, iletişim uyumluluk ilkesi sihirbazından yeni hassas bilgi türleri de oluşturabilirsiniz.
+    - Hassas bilgi türlerini dahil etmek isteyip istediğinizi seçin. Bu adım, varsayılan ve özel hassas bilgi türlerini seçebileceğiniz yerdir. İletişim uyumluluk ilkesi sihirbazında var olan özel hassas bilgi türlerinden veya özel anahtar sözcük sözlüklerinden seçim yapın. Gerekirse sihirbazı çalıştırmadan önce bu öğeleri oluşturabilirsiniz. İletişim uyumluluk ilkesi sihirbazından yeni hassas bilgi türleri de oluşturabilirsiniz.
 
-    - Sınıflayıcıları etkinleştirmek istediğinize seçin. Sınıflayıcılar, e-posta iletilerinin gövdesinde veya diğer metin türlerinde gönderilen veya alınan uygunsuz dili ve resimleri algılanabilir. Şu yerleşik sınıflayıcıları seçebilirsiniz: *Tehdit*, *Küfür**,* Hedefli taciz, *Yetişkin* resimleri, *Racy* resimleri ve *Gory resimleri*.
+    - Sınıflandırıcıları etkinleştirmek isteyip istediğinizi seçin. Sınıflandırıcılar, e-posta iletilerinin veya diğer metin türlerinin gövdesinde gönderilen veya alınan uygunsuz dil ve görüntüleri algılayabilir. Şu yerleşik sınıflandırıcıları seçebilirsiniz: *Tehdit*, *Küfür*, *Hedeflenen taciz*, *Yetişkin görüntüleri*, *Racy görüntüleri* ve *Gory görüntüleri*.
 
-    - [İlke koşullarına uygun yazdırılan veya el yazısıyla](communication-compliance-policies.md#optical-character-recognition-ocr) yazılmış metinler için iletilerde eklenmiş veya eklenmiş resimleri taramak için optik karakter tanımayı (OCR) etkinleştirin. Özel ilkeler için, metinle, anahtar sözcüklerle, sınıflayıcılarla veya hassas bilgi türleriyle ilişkilendirilmiş bir veya birden çok koşullu ayarın, optik karakter tanıma taramasının seçimini etkinleştirmek üzere ilke içinde yapılandırılması gerekir.
+    - İlke koşullarıyla eşleşen yazdırılmış veya el yazısı metinler için iletilerdeki eklenmiş veya eklenmiş görüntüleri taramak için [optik karakter tanımayı (OCR)](communication-compliance-policies.md#optical-character-recognition-ocr) etkinleştirin. Özel ilkeler için, optik karakter tanıma taramasının seçilmesini sağlamak için ilkede metin, anahtar sözcükler, sınıflandırıcılar veya hassas bilgi türleriyle ilişkili bir veya daha fazla koşullu ayar yapılandırılmalıdır.
 
-    - Gözden geçirlecek iletişim yüzdesini tanımlayın.
+    - Gözden geçirecek iletişim yüzdesini tanımlayın.
 
-    - İlke seçimlerinizi gözden geçirme ve ilkeyi oluşturma.
+    - İlke seçimlerinizi gözden geçirin ve ilkeyi oluşturun.
 
-5. Şablonları **kullanırken İlke** oluştur'ı veya özel **ilke sihirbazını** kullanırken Gönder'i seçin.
+5. Şablonları kullanırken **ilke oluştur'u** veya özel ilke sihirbazını kullanırken **gönder'i** seçin.
 
-6. **İlkeniz oluşturuldu sayfası**, ilkenin ne zaman etkinleştirildikten ve hangi iletişimlerin yakalanır yönergeleriyle görüntülenir.
+6. **İlkeniz oluşturuldu sayfası, ilkenin** ne zaman etkinleştirileceğine ve hangi iletişimlerin yakalanacağını gösteren yönergelerle birlikte görüntülenir.
 
 ## <a name="step-6-optional-update-compliance-boundaries-for-communication-compliance-policies"></a>6. Adım (isteğe bağlı): İletişim uyumluluk ilkeleri için uyumluluk sınırlarını güncelleştirme
 
-[Uyumluluk sınırları](/microsoft-365/compliance/set-up-compliance-boundaries), eBulma yöneticilerinin aray kontrolü yaptığı kullanıcı içerik konumlarını (posta kutuları, OneDrive hesapları ve site SharePoint gibi) denetimi altına alan bir kuruluş içinde mantıksal sınırlar oluşturabilir.
+[Uyumluluk sınırları](/microsoft-365/compliance/set-up-compliance-boundaries), eBulma yöneticilerinin arayabileceği kullanıcı içerik konumlarını (posta kutuları, OneDrive hesapları ve SharePoint siteleri gibi) denetleyebilen bir kuruluş içinde mantıksal sınırlar oluşturur.
 
-Kuruluşta uyumluluk sınırlarını yapılandırdınız, bazı kullanıcıların iletişim uyumluluk ilkelerini destekleyen posta kutularına erişmesine izin vermek için uyumluluk sınırlarını güncelleştirmeniz gerekir. İlke yönetiminiz ve araştırmanız ve düzeltme eylemlerinizin düzgün çalışması için, iletişim uyumluluğu yöneticilerine ve iletişim uyumluluğu gözden geçirenlerine erişim izni verseniz gerekir.
+Kuruluşunuzda uyumluluk sınırlarını yapılandırdıysanız, uyumluluk sınırlarını belirli kullanıcıların iletişim uyumluluk ilkelerini destekleyen posta kutularına erişmesine izin verecek şekilde güncelleştirmeniz gerekir. İlke yönetimi ve araştırma ve düzeltme eylemlerinizin düzgün çalışması için iletişim uyumluluk yöneticilerine ve iletişim uyumluluğu gözden geçirenlerine erişim izni vermeniz gerekir.
 
-İletişim uyumluluğu yöneticilerine ve gözden geçirenlere erişim izni vermek için, aşağıdaki PowerShell komutlarını çalıştırın. Gelecekte yeni iletişim uyumluluk ilkeleri eklese bile bu komutları yalnızca bir kez çalıştırmanıza gerek vardır:
+İletişim uyumluluğu yöneticilerine ve gözden geçirenlere erişim izni vermek için aşağıdaki PowerShell komutlarını çalıştırın. Gelecekte yeni iletişim uyumluluk ilkeleri ekleseniz bile bu komutları yalnızca bir kez çalıştırmanız gerekir:
 
 ```powershell
 Import-Module ExchangeOnlineManagement
@@ -277,57 +280,57 @@ Connect-IPPSSession -Credential $UserCredential
 New-ComplianceSecurityFilter -FilterName "CC_mailbox" -Users <list your communication compliance admins and reviewers user alias or email address> -Filters "Mailbox_Name -like 'SupervisoryReview{*'" -Action All
 ```
 
-cmdlet söz dizimi hakkında daha fazla bilgi için bkz [. New-ComplianceSecurityFilter](/powershell/module/exchange/new-compliancesecurityfilter).
+Cmdlet söz dizimi hakkında daha fazla bilgi için bkz. [New-ComplianceSecurityFilter](/powershell/module/exchange/new-compliancesecurityfilter).
 
-## <a name="step-7-optional-create-notice-templates-and-configure-user-anonymization"></a>7. Adım (isteğe bağlı): Bildirim şablonları oluşturma ve kullanıcı anonimliğini yapılandırma
+## <a name="step-7-optional-create-notice-templates-and-configure-user-anonymization"></a>7. Adım (isteğe bağlı): Bildirim şablonları oluşturma ve kullanıcı anonimleştirmeyi yapılandırma
 
-İlişkili kullanıcıya bir anımsatıcı bildirimi göndererek ilke uyarılarını yanıtla seçeneğine sahip olmak için, kurumda en az bir bildirim şablonu oluşturmanız gerekir. Uyarı düzeltme işlemi kapsamında gönderilmeden önce bildirim şablonu alanları düzenlenebilir ve her iletişim uyumluluk ilkesi için özelleştirilmiş bir bildirim şablonu oluşturulması önerilir.
+İlişkili kullanıcıya anımsatıcı bildirimi göndererek bir ilke uyarısına yanıt verme seçeneğine sahip olmak istiyorsanız, kuruluşunuzda en az bir bildirim şablonu oluşturmanız gerekir. Uyarı şablonu alanları uyarı düzeltme işleminin bir parçası olarak gönderilmeden önce düzenlenebilir ve her iletişim uyumluluk ilkesi için özelleştirilmiş bir bildirim şablonu oluşturulması önerilir.
 
-ayrıca, ilke eşleşmelerini araştırırken ve iletiler üzerinde eyleme ilerlerken görüntülenen kullanıcı adları için anonimliği etkinleştirmeyi de seçebilirsiniz.
+İlke eşleşmelerini araştırırken ve iletilerde işlem yaparken görüntülenen kullanıcı adları için anonimleştirmeyi etkinleştirmeyi de seçebilirsiniz.
 
-1. Bir [Microsoft 365 uyumluluk merkezi yönetici hesabının](https://compliance.microsoft.com) kimlik bilgilerini kullanarak oturum Microsoft 365.
+1. Microsoft 365 kuruluşunuzdaki bir yönetici hesabının kimlik bilgilerini kullanarak [Microsoft Purview uyumluluk portalında](https://compliance.microsoft.com) oturum açın.
 
-2. aşağıdaki Microsoft 365 uyumluluk merkezi **uyumluluğu'ne gidin**.
+2. Microsoft Purview uyumluluk portalında **İletişim uyumluluğu'na** gidin.
 
-3. Kullanıcı adları anonimleştirmeyi yapılandırmak için Gizlilik **sekmesini** seçin.
+3. Kullanıcı adları için anonimleştirmeyi yapılandırmak için **Gizlilik** sekmesini seçin.
 
-4. Anonimliği etkinleştirmek için Kullanıcı **adlarının anonimleştirilmiş sürümlerini göster'i seçin**.
+4. Anonimleştirmeyi etkinleştirmek için **Kullanıcı adlarının anonimleştirilmiş sürümlerini göster'i** seçin.
 
 5. **Kaydet**'i seçin.
 
-6. Bildirim şablonları **sekmesine gidin ve** Bildirim şablonu **oluştur'a tıklayın**.
+6. **Bildirim şablonları** sekmesine gidin ve **bildirim şablonu oluştur'u** seçin.
 
-7. Bildirim **şablonunu değiştirme sayfasında** aşağıdaki alanları doldurun:
+7. **Bildirim şablonunu değiştir** sayfasında aşağıdaki alanları doldurun:
 
     - Şablon adı (gerekli)
-    - Gönderme : (gerekli)
+    - Gönderme kimden (gerekli)
     - Bilgi ve Gizli (isteğe bağlı)
     - Konu (gerekli)
     - İleti gövdesi (gerekli)
 
-8. Bildirim **şablonunu** oluşturmak ve kaydetmek için Kaydet'i seçin.
+8. Bildirim şablonunu oluşturmak ve kaydetmek için **Kaydet'i** seçin.
 
 ## <a name="step-8-optional-test-your-communication-compliance-policy"></a>8. Adım (isteğe bağlı): İletişim uyumluluk ilkenizi test edin
 
-İletişim uyumluluk ilkesi oluşturdukktan sonra, tanımlandığı koşulların ilke tarafından düzgün bir şekilde zorunlu kılın olduğundan emin olmak için ilkeyi test etmek iyi bir fikirdir. ayrıca, iletişim uyumluluk [ilkeleriniz hassas bilgi türleri de içermesi durumlarında veri kaybı önleme (DLP)](create-test-tune-dlp-policy.md) ilkelerinizi test etmek de istiyor olabilir. Test etmek istediğiniz iletişimlerin yakalanması için ilkelerinize etkinleştirmek için zaman vermeye emin olun.
+İletişim uyumluluk ilkesi oluşturduktan sonra, tanımladığınız koşulların ilke tarafından düzgün bir şekilde uygulandığından emin olmak için bunu test etmek iyi bir fikirdir. İletişim uyumluluk ilkeleriniz hassas bilgi türleri içeriyorsa [Microsoft Purview Veri Kaybı Önleme (DLP)](create-test-tune-dlp-policy.md) ilkelerinizi de test etmek isteyebilirsiniz. Test etmek istediğiniz iletişimlerin yakalanması için ilkelerinize etkinleştirilmesi için zaman verdiğinizden emin olun.
 
 İletişim uyumluluk ilkenizi test etmek için şu adımları izleyin:
 
-1. Test etmek istediğiniz ilkede Microsoft Teams denetimli bir kullanıcı olarak oturum açıkken bir e-posta istemcisi, kimlik bilgileri veya Yammer açın.
+1. Test etmek istediğiniz ilkede tanımlanmış denetimli kullanıcı olarak oturum açmış durumdayken bir e-posta istemcisi, Microsoft Teams veya Yammer açın.
 
-2. İletişim uyumluluğu Microsoft Teams ölçütlerine uyan bir Yammer e-posta gönderin, sohbet edin veya Yammer iletisi gönderin. Bu test bir anahtar sözcük, ek boyutu, etki alanı vb. olabilir. İlkede yapılandırılan koşullu ayarlarınızın çok kısıtlayıcı mı yoksa çok uygun olup olmadığını belirlemeye emin olun.
+2. İletişim uyumluluk ilkesinde tanımladığınız ölçütleri karşılayan bir e-posta, Microsoft Teams sohbet veya Yammer iletisi gönderin. Bu test anahtar sözcük, ek boyutu, etki alanı vb. olabilir. İlkedeki yapılandırdığınız koşullu ayarların çok kısıtlayıcı mı yoksa çok mu yumuşak olduğunu saptadığınızdan emin olun.
 
     > [!NOTE]
-    > E-posta iletilerinin bir ilkede tam olarak işlemesi 24 saat kadar sürebilir. Dış Microsoft Teams, Yammer üçüncü taraf platformlarda iletişimlerin ilkelerde tam olarak işlemesi 48 saate kadar sürebilir.
+    > E-posta iletilerinin bir ilkede tam olarak işlenmesi 24 saat kadar sürebilir. Microsoft Teams, Yammer ve üçüncü taraf platformlardaki iletişimlerin bir ilkede tam olarak işlenmesi 48 saate kadar sürebilir.
 
-3. İletişim uyumluluk Microsoft 365 bir gözden geçiren olarak oturum açma. **İlkelerinize yönelik** >  **uyarıları görüntülemek için İletişim uyumluluğuAlerts'leri'ne** gidin.
+3. İletişim uyumluluk ilkesinde belirlenen gözden geçiren olarak Microsoft 365 oturum açın. İlkelerinizin uyarılarını görüntülemek için **İletişim** **uyumluluğuAlerts** >  bölümüne gidin.
 
-4. Düzeltme denetimlerini kullanarak uyarıyı düzeltin ve uyarının düzgün bir şekilde çözümlenmiş olduğunu doğrulayın.
+4. Düzeltme denetimlerini kullanarak uyarıyı düzeltin ve uyarının düzgün şekilde çözümlendiğini doğrulayın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-İlk iletişim uyumluluk ilkenizi oluşturmak için bu adımları tamamlandıktan sonra, 24-48 saat sonra etkinlik göstergelerinden uyarı almaya başlarsınız. Bu makalenin 5. Adım'daki kılavuzu kullanarak ek ilkeleri gerektiğinde yapılandırabilirsiniz.
+İlk iletişim uyumluluk ilkenizi oluşturmak için bu adımları tamamladıktan sonra, 24-48 saat sonra etkinlik göstergelerinden uyarılar almaya başlarsınız. Bu makalenin 5. Adımındaki yönergeleri kullanarak ek ilkeleri gerektiği gibi yapılandırın.
 
-İletişim uyumluluğu uyarılarını inceleme hakkında daha fazla bilgi edinmek için, bkz [. İletişim uyumluluk uyarılarını araştırma ve düzeltme](communication-compliance-investigate-remediate.md).
+İletişim uyumluluğu uyarılarını araştırma hakkında daha fazla bilgi edinmek için bkz. [İletişim uyumluluk uyarılarını araştırma ve düzeltme](communication-compliance-investigate-remediate.md).
 
-En son iletişim uyumluluk güncelleştirmelerini takip etmek için, **Organizasyonun iletişim uyumluluğu** [ile ilgili tüm gelişmeleri](https://compliance.microsoft.com/) seçin.
+En son iletişim uyumluluk güncelleştirmelerini takip etmek için Kuruluşunuz için [iletişim uyumluluğundaki](https://compliance.microsoft.com/) **yenilikler'i** seçin.

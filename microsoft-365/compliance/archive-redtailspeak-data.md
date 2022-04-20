@@ -12,14 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Yöneticiler, Red tail Speak verilerini Veritas'tan Microsoft 365 içeri aktarmak ve arşivlemek için bir bağlayıcı ayarlayabilir. Bu bağlayıcı, Microsoft 365'da üçüncü taraf veri kaynaklarından verileri arşivleyabilmenizi sağlar. Bu verileri arşivledikten sonra, üçüncü taraf verilerini yönetmek için yasal tutma, içerik arama ve bekletme ilkeleri gibi uyumluluk özelliklerini kullanabilirsiniz.
-ms.openlocfilehash: af568495cd7ee8b1bf003da71a4582462fbd5c4c
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 46b9646fee78fa0589a9af41db35cf79a71e508f
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64950661"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994578"
 ---
 # <a name="set-up-a-connector-to-archive-redtail-speak-data"></a>Redtail Speak verilerini arşivleye bir bağlayıcı ayarlama
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft 365 kuruluşunuzdaki kullanıcı posta kutularına Redtail Speak'dan verileri içeri aktarmak ve arşivlemek için Microsoft Purview uyumluluk portalında bir Veritas bağlayıcısı kullanın. Veritas, öğelerin [Redtail'ten](https://globanet.com/redtail/) alındığı kuruluşunuzun SFTP sunucusundan öğeleri yakalamak için yapılandırılmış bir Redtail Speak bağlayıcısı sağlar. Bağlayıcı, Redtail Speak içeriğini e-posta iletisi biçimine dönüştürür ve ardından bu öğeleri Microsoft 365'de kullanıcının posta kutusuna aktarır.
 

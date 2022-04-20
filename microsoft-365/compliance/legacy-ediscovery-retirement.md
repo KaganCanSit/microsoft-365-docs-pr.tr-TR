@@ -14,12 +14,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: Exchange Online In-Place eBulma ve In-Place Tutma (ve ilgili PowerShell cmdlet'leri) 2020'nin ilk yarısında kullanımdan kaldırılacaktır. Search-Mailbox cmdlet'i ve Microsoft Purview eKeşif (Premium) v1.0 da aynı süre içinde kullanımdan kaldırılıyor.
-ms.openlocfilehash: 228827ec405165bf8308d89fba350eb2192f6723
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 0a5a5c5a22aefbb0ad5abe6846915e1da653ee6b
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64936609"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973277"
 ---
 # <a name="retirement-of-legacy-ediscovery-tools"></a>Eski eKeşif araçlarını kullanımdan kaldırma
 
@@ -102,7 +102,7 @@ Aşağıdaki tabloda, kullanımdan kaldırılmakta olan mevcut işlevselliği de
 <tr class="odd">
 <td>Yasal amaçlarla arama, dışarı aktarma ve saklama</td>
 <td>Uyumluluk portalında eBulma (Standart) durumları </td>
-<td><p>Temel eBulma örneklerinin özelliklerini kullanmak, eBulma ve In-Place Tutma In-Place işlevsel eşlik sağlar. Bu, aşağıdakileri içerir:</p>
+<td><p>eBulma (Standart) durumlarının özelliklerini kullanmak, eBulma ve In-Place Tutma In-Place işlevsel eşlik sağlar. Bu, aşağıdakileri içerir:</p>
 <ul>
 <li>
 <p>Arama, milyonlarca konuma ölçeklendirilir</p>
@@ -208,9 +208,9 @@ Aşağıdaki tabloda, kullanımdan kaldırılmakta olan mevcut işlevselliği de
 <p><a href="/powershell/module/exchange/get-compliancesearchaction"><span class="underline">*-ComplianceSearchAction</span></a></p>
 <p><a href="/powershell/module/exchange/get-compliancecase"><span class="underline">*-ComplianceCase</span></a></p>
 <p> </p></td>
-<td><p>ComplianceSearch ve ComplianceSearchAction cmdlet'leri, içeriği aramanıza ve dışarı aktarmanıza yardımcı olmak için birlikte çalışır. <strong>New-, Get-ve</strong> <strong>Start-ComplianceSearch</strong> cmdlet'lerini kullanarak <strong></strong>yeni bir arama oluşturabilir ve arama tahminini görüntüleyebilirsiniz. Ardından Arama sonuçlarını dışarı aktarmak için <strong>New-ComplianceSearchAction</strong> cmdlet'ini kullanabilirsiniz. Bu arama sonuçlarını yerel bilgisayarınıza indirmek için uyumluluk portalındaki temel eBulma aracını kullanmanız gerekir.</p>
+<td><p>ComplianceSearch ve ComplianceSearchAction cmdlet'leri, içeriği aramanıza ve dışarı aktarmanıza yardımcı olmak için birlikte çalışır. <strong>New-, Get-ve</strong> <strong>Start-ComplianceSearch</strong> cmdlet'lerini kullanarak <strong></strong>yeni bir arama oluşturabilir ve arama tahminini görüntüleyebilirsiniz. Ardından Arama sonuçlarını dışarı aktarmak için <strong>New-ComplianceSearchAction</strong> cmdlet'ini kullanabilirsiniz. Bu arama sonuçlarını yerel bilgisayarınıza indirmek için uyumluluk portalında eBulma (Standart) aracını kullanmanız gerekir.</p>
 <p>
-<p><strong>Not:</strong> Bu cmdlet'leri temel bir eBulma olayıyla ilişkilendirilmemiş aramalar oluşturmak için kullanırsanız, bu aramalar uyumluluk portalındaki <strong>İçerik arama</strong> sayfasında yer alır.</p></td>
+<p><strong>Not:</strong> Bu cmdlet'leri bir eBulma (Standart) olayıyla ilişkilendirilmemiş aramalar oluşturmak için kullanırsanız, bu aramalar uyumluluk portalındaki <strong>İçerik arama</strong> sayfasında yer alır.</p></td>
 </tr>
 <tr class="even">
 <td>Posta kutusunda içerik tutma</td>
@@ -286,7 +286,7 @@ Aşağıdaki tabloda, kullanımdan kaldırılmakta olan mevcut işlevselliği de
 <td><p><a href="/powershell/module/exchange/get-compliancesearch"><span class="underline">*-ComplianceSearch</span></a></p>
 <p><a href="/powershell/module/exchange/get-compliancesearchaction"><span class="underline">*-ComplianceSearchAction</span></a></p>
 <p></a></p></td>
-<td><p>ComplianceSearch ve ComplianceSearchAction cmdlet'leri, içeriği aramanıza ve dışarı aktarmanıza yardımcı olmak için birlikte çalışır. <strong>New-, Get-ve</strong> <strong>Start-ComplianceSearch</strong> cmdlet'lerini kullanarak <strong></strong>yeni bir arama oluşturabilir ve arama tahminini görüntüleyebilirsiniz. Ardından Arama sonuçlarını dışarı aktarmak için <strong>New-ComplianceSearchAction -Export</strong> komutunu kullanabilirsiniz. Bu arama sonuçlarını yerel bilgisayarınıza indirmek için uyumluluk portalındaki temel eBulma aracını kullanmanız gerekir.</p></p>
+<td><p>ComplianceSearch ve ComplianceSearchAction cmdlet'leri, içeriği aramanıza ve dışarı aktarmanıza yardımcı olmak için birlikte çalışır. <strong>New-, Get-ve</strong> <strong>Start-ComplianceSearch</strong> cmdlet'lerini kullanarak <strong></strong>yeni bir arama oluşturabilir ve arama tahminini görüntüleyebilirsiniz. Ardından Arama sonuçlarını dışarı aktarmak için <strong>New-ComplianceSearchAction -Export</strong> komutunu kullanabilirsiniz. Bu arama sonuçlarını yerel bilgisayarınıza indirmek için uyumluluk portalında eBulma (Standart) aracını kullanmanız gerekir.</p></p>
 </td>
 </tr>
 <tr class="even">
@@ -342,7 +342,7 @@ Exchange Web Hizmetleri API'sindeki bu işlemler, Exchange yönetim merkezindeki
 
 ## <a name="ediscovery-premium-v10"></a>eBulma (Premium) v1.0
 
-eBulmaya Geç (Premium) seçeneğine tıklayarak temel eBulma durumunda kullanılabilen eBulma (Premium) sürümü olan **eBulma (Premium**) v1.0 kullanımdan kaldırılıyor. İşlevselliği, uyumluluk portalındaki yeni [eBulma (Premium) çözümüyle](./ediscovery.md) değiştirilmiştir.
+eKeşif(Premium) v1.0, eBulma (Standart) durumunda eBulmaya Geç (Premium) seçeneğine tıklayarak kullanılabilen **eBulma (Premium)** sürümüdür. İşlevselliği, uyumluluk portalındaki yeni [eBulma (Premium) çözümüyle](./ediscovery.md) değiştirilmiştir.
 
 Kuruluşunuzun eBulma (Premium) v1.0 kullanıp kullanmadığını belirlemek için:
 

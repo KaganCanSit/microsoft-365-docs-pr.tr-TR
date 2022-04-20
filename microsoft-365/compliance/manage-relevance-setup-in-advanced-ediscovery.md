@@ -16,14 +16,16 @@ search.appverid:
 ms.assetid: fd6be6d3-2e8d-449d-9851-03ab7546e6aa
 ROBOTS: NOINDEX, NOFOLLOW
 description: EBulma'da (Premium) ilgili dosyaları puanlama ve analiz sonuçları oluşturma ile ilgili ilgi eğitimi ayarlama önerilerini okuyun.
-ms.openlocfilehash: 66afbb3b8e7d8c2a4e266aa7fb63dc8434f9c8a6
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f1a4f1ca9ad9fbf2b63439d463e83723dc2a0e0a
+ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64946033"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64994864"
 ---
 # <a name="manage-relevance-setup-in-ediscovery-premium-classic"></a>eBulma (Premium) (klasik) içinde İlgi ayarlarını yönetme
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!NOTE]
 > Microsoft Purview eKeşif (Premium), kuruluşunuz için Gelişmiş Uyumluluk eklentisi veya E5 aboneliğine sahip bir Office 365 E3 gerektirir. Bu plana sahip değilseniz ve eKeşif 'i (Premium) denemek istiyorsanız[, E5 Office 365 Kurumsal deneme sürümüne kaydolabilirsiniz](https://go.microsoft.com/fwlink/p/?LinkID=698279). 

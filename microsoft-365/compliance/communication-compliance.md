@@ -1,6 +1,7 @@
 ---
 title: İletişim uyumluluğu hakkında daha fazla bilgi edinme
-description: E-Microsoft 365'de iletişim uyumluluğu hakkında bilgi Microsoft 365
+description: Microsoft Purview'da iletişim uyumluluğu hakkında bilgi edinin
+keywords: Microsoft 365, Microsoft Purview, uyumluluk, iletişim uyumluluğu
 f1.keywords:
 - NOCSH
 ms.author: robmazz
@@ -20,169 +21,171 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 7690b93646c9b60467ca898c6167d72a7e819bb4
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+ms.openlocfilehash: 17f0cbbd62d45a3e9b2b41d1baf72224b9433d70
+ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64594806"
+ms.lasthandoff: 04/20/2022
+ms.locfileid: "64973673"
 ---
-# <a name="learn-about-communication-compliance-in-microsoft-365"></a>E-Microsoft 365'de iletişim uyumluluğu hakkında bilgi Microsoft 365
+# <a name="learn-about-communication-compliance"></a>İletişim uyumluluğu hakkında daha fazla bilgi edinme
 
-İletişim uyumluluğu, Microsoft 365 iletileri algılamanıza, yakalamanıza ve bu iletilere uymanıza yardımcı olarak iletişim risklerini en aza indirmeye yardımcı olan bir Insider risk çözümüdür. Önceden tanımlanmış ve özel ilkeler, iç ve dış iletişimleri ilke eşleşmeleri için taramanızı sağlar ve böylelikle bunlar belirlenen gözden geçirenler tarafından inceleştirilebilir. Gözden geçirenler, kuruluş içinde taranan e-postayı, Microsoft Teams, Yammer veya üçüncü taraf iletişimlerini inceler ve kuruluşlarının ileti standartlarına uyumlu olduğundan emin olmak için uygun eylemler gerçekleştirebilirsiniz.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-E-posta'daki iletişim Microsoft 365 ilkeleri, uyumlulukla ve iç ve dış iletişimle ilgili birçok modern zorluğu aşmanıza yardımcı olur. Bu sorunlar:
+Microsoft Purview İletişim Uyumluluğu, kuruluşunuzdaki uygunsuz iletileri algılamanıza, yakalamanıza ve üzerinde işlem yapmanıza yardımcı olarak iletişim risklerini en aza indirmenize yardımcı olan bir iç risk çözümüdür. Önceden tanımlanmış ve özel ilkeler, belirlenen gözden geçirenler tarafından incelenebilmeleri için ilke eşleşmeleri için iç ve dış iletişimleri taramanıza olanak sağlar. Gözden geçirenler, kuruluşunuzdaki taranmış e-posta, Microsoft Teams, Yammer veya üçüncü taraf iletişimlerini araştırabilir ve kuruluşunuzun ileti standartlarıyla uyumlu olduklarından emin olmak için uygun eylemleri gerçekleştirebilir.
+
+Microsoft 365'daki iletişim uyumluluk ilkeleri, uyumluluk ve iç ve dış iletişimlerle ilişkili birçok modern zorluğun üstesinden gelmenize yardımcı olur, örneğin:
 
 - Artan iletişim kanalı türlerini tarama
-- İleti verisinde artan hacim
-- Mevzuat zorlaması ve ince güvenlik riski
+- İleti verilerinin artan hacmi
+- Mevzuat uygulaması ve para cezası riski
 
-Buna ek olarak, IT yöneticileriniz ile uyumluluk yönetim takımınız arasında bir ayrım olabilir. İletişim uyumluluğu, ilkelerin yapılandırmasıyla iletilerin ince olay ve gözden geçirmesi arasındaki ayrımı destekler. Örneğin, ileti değerlendirme, gözden geçirme ve risk azaltma eylemlerini, iletişim uyumluluğu rol izinlerini, gruplarını, ilkelerini, ilkelerini ve gözden geçirenlerin ve gözden geçirenlerin sorumlu olduğunu varsayalır.
+Buna ek olarak, BT yöneticilerinizle uyumluluk yönetimi ekibiniz arasında bir görev ayrımı olabilir. İletişim uyumluluğu, ilkelerin yapılandırılması ile iletilerin araştırılıp gözden geçirilmesi arasındaki ayrımı destekler. Örneğin, kuruluşunuzun BT grubu iletişim uyumluluk rolü izinlerini, gruplarını ve ilkelerini ayarlamakla sorumlu olabilir ve araştırmacı ve gözden geçirenler ileti önceliklendirme, gözden geçirme ve risk azaltma eylemlerinden sorumlu olabilir.
 
 İletişim uyumluluğu için en son Ignite sunuları için aşağıdaki videolara bakın:
 
-- [İletişim uyumluluğuyla güvenlik kültürünü teşvik etme ve dahil etme](https://www.youtube.com/watch?v=oLVzxcaef3w)
-- [Kuruluş içindeki iletişim risklerini azaltmayı öğrenin](https://www.youtube.com/watch?v=vzARb1YaxGo)
-- [İletişim uyumluluğu ile mevzuat uyumluluğu gereksinimlerini karşılamak](https://www.youtube.com/watch?v=gagOhtCBfgU)
-- [İletişim özellikleri Microsoft Teams daha iyi - İletişim uyumluluğu için en son yerel Teams özellikleri hakkında daha fazla bilgi](https://www.youtube.com/watch?v=m4jukD5Fh-o)
+- [İletişim uyumluluğu ile güvenlik ve kapsayıcılık kültürünü teşvik etme](https://www.youtube.com/watch?v=oLVzxcaef3w)
+- [Kuruluşunuzdaki iletişim risklerini azaltmayı öğrenin](https://www.youtube.com/watch?v=vzARb1YaxGo)
+- [İletişim uyumluluğu ile mevzuat uyumluluğu gereksinimlerini karşılama](https://www.youtube.com/watch?v=gagOhtCBfgU)
+- [Microsoft Teams ile daha iyi - İletişim uyumluluğunda en son yerel Teams tümleşik özellikler hakkında daha fazla bilgi edinin](https://www.youtube.com/watch?v=m4jukD5Fh-o)
 
-İletişim uyumluluğuna hızlı bir genel bakış için[, Microsoft Mechanics](https://www.youtube.com/user/OfficeGarageSeries) kanalında İş yeri tiryağini algılama ve İletişim Uyumluluğu ile [Microsoft 365'e](https://youtu.be/z33ji7a7Zho) bakın.
+İletişim uyumluluğuna hızlı bir genel bakış için [Microsoft Mechanics kanalındaki](https://www.youtube.com/user/OfficeGarageSeries) [İş yeri tacizini algılama ve İletişim Uyumluluğu ile yanıt verme](https://youtu.be/z33ji7a7Zho) videosuna bakın.
 
-[TD Securities'in yasal yükümlülüklerine karşı uyumluluk](https://customers.microsoft.com/story/1391545301764211731-td-securities-banking-capital-markets-compliance) sağlamak, güvenlik ve kararlılık ihtiyaçlarını karşılamak için nasıl iletişim olduğunu kontrol edin.
+[TD Securities'in](https://customers.microsoft.com/story/1391545301764211731-td-securities-banking-capital-markets-compliance) yasal yükümlülüklerini yerine getirmek ve güvenlik ve kararlılık gereksinimlerini karşılamak için iletişim uyumluluğunu nasıl kullandığına göz atın.
 
-En son iletişim uyumluluk güncelleştirmelerini takip etmek için, **Organizasyonun iletişim uyumluluğu** [ile ilgili tüm gelişmeleri](https://compliance.microsoft.com/) seçin.
+En son iletişim uyumluluk güncelleştirmelerini takip etmek için Kuruluşunuz için [iletişim uyumluluğundaki](https://compliance.microsoft.com/) **yenilikler'i** seçin.
 
 > [!IMPORTANT]
-> İletişim uyumluluğu şu anda, Azure hizmet bağımlılıkları tarafından desteklenen coğrafi bölgelerde ve ülkelerde barındırılan kiracılarda kullanılabilir. İletişim uyumluluğunun organizasyonunız için destek olduğunu doğrulamak için bkz. [Ülkeye/bölgeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
+> İletişim uyumluluğu şu anda coğrafi bölgelerde ve Azure hizmet bağımlılıkları tarafından desteklenen ülkelerde barındırılan kiracılarda kullanılabilir. Kuruluşunuzda iletişim uyumluluğunu desteklediğini doğrulamak için bkz. [Ülkeye/bölgeye göre Azure bağımlılığı kullanılabilirliği](/troubleshoot/azure/general/dependency-availability-by-country).
 
 ## <a name="scenarios-for-communication-compliance"></a>İletişim uyumluluğu senaryoları
 
-İletişim uyumluluğu ilkeleri, bazı önemli uyumluluk alanlarında kuruluş iletilerin gözden geçir 2007'ye göre gözden geçir 2007'ye yardımcı olabilir:
+İletişim uyumluluk ilkeleri, kuruluşunuzdaki iletilerin birkaç önemli uyumluluk alanında gözden geçirilmesine yardımcı olabilir:
 
-- **Kurumsal ilkeler**
+- **Şirket ilkeleri**
 
-    Kullanıcılar, işle ilgili tüm iletişimlerinde kabul edilebilir kullanım, standartlara ve diğer kurumsal ilkelere uymalıdır. İletişim uyumluluk ilkeleri ilke eşleşmelerini algılar ve bu tür olayları azaltmak için düzeltme eylemlerine yardımcı olabilir. Örneğin, olası insan kaynakları için uygunsuz veya rahatsız edici dil kullanımı gibi taciz veya rahatsız edici dil kullanımı gibi endişeler için kuruluş içinde kullanıcı iletişimlerini tarayebilirsiniz.
+    Kullanıcılar, işle ilgili tüm iletişimlerinde kabul edilebilir kullanıma, etik standartlara ve diğer şirket ilkelerine uymalıdır. İletişim uyumluluk ilkeleri ilke eşleşmelerini algılayabilir ve bu tür olayları azaltmaya yardımcı olmak için düzeltici eylemler gerçekleştirmenize yardımcı olabilir. Örneğin, kuruluşunuzdaki kullanıcı iletişimlerini taciz veya uygunsuz veya rahatsız edici dil kullanımı gibi olası insan kaynakları endişeleri için tarayabilirsiniz.
 
 - **Risk yönetimi**
 
-    Kuruluşlar, altyapıları ve şirket ağ sistemleri genelinde dağıtılan tüm iletişimlerden sorumlu olur. Olası yasal açıklandırma ve riski belirlemeye ve yönetmeye yardımcı olmak için iletişim uyumluluk ilkelerini kullanmak, şirket işlemlerine zarar verebilirler için riskleri en aza indirmeye yardımcı olabilir. Örneğin, yaklaşan alımlar, birleşmeler, gelir açıklamaları, yeniden düzenleme veya liderlik ekibi değişiklikleri gibi gizli projeler hakkında yetkisiz iletişimler ve faiz çakışmaları için kuruluş iletileri tarayabilirsiniz.
+    Kuruluşlar, altyapıları ve kurumsal ağ sistemleri boyunca dağıtılan tüm iletişimlerden sorumludur. Olası yasal maruz kalma ve riski tanımlamaya ve yönetmeye yardımcı olmak için iletişim uyumluluk ilkelerini kullanmak, kurumsal operasyonlara zarar verebilmek için riskleri en aza indirmeye yardımcı olabilir. Örneğin, kuruluşunuzdaki iletileri yetkisiz iletişimler ve yaklaşan alımlar, birleşmeler, kazanç açıklamaları, yeniden düzenlemeler veya liderlik ekibi değişiklikleri gibi gizli projelerle ilgili ilgi çekici çakışmalar için tarayabilirsiniz.
 
 - **Mevzuat uyumluluğu**
 
-    Çoğu kuruluş normal işletim yordamlarının bir parçası olarak bazı yasal düzenlemelere uyumluluk standartlarına uymalıdır. Bu düzenlemeler çoğu zaman kuruluşların sektörleri için uygun olan mesajlaşma için bir türde gözetmen veya gözetim sürecini uygulamalarını gerektirir. Finansal Sektör Mevzuat Yetkilisi (FINRA) Kuralı 3110, kuruluşların kullanıcı iletişimlerini ve etkileşimde olduğu iş türlerini taramak için gözetmen yordamlarına sahip olması için iyi bir gereksinimdir. Başka bir örnek olarak, olası para tekliflerine, Insider alım satımlarına, iş birliği veya açık görüş etkinliklerine karşı korumak için, aracılar açısından iletişimleri gözden geçirmeniz gerekiyor olabilir. İletişim uyumluluğu ilkeleri, kurumsal iletişimleri hem tarama hem de bildirme süreci sağlayarak bu gereksinimleri karşılamanıza yardımcı olabilir. Finansal kuruluşlara destek hakkında daha fazla bilgi için bkz. ABD bankacılık ve büyük pazarları için [önemli uyumluluk ve güvenlik konuları](../solutions/financial-services-secure-collaboration.md).
+    Çoğu kuruluş, normal çalışma yordamlarının bir parçası olarak bir tür mevzuat uyumluluğu standartlarına uymak zorundadır. Bu düzenlemeler genellikle kuruluşların kendi sektörlerine uygun mesajlaşma için bir tür denetim veya gözetim süreci uygulamasını gerektirir. Finansal Endüstri Düzenleme Kurumu (FINRA) Kuralı 3110, kuruluşların kullanıcı iletişimlerini ve faaliyette bulunduğu işletme türlerini taramak için denetim yordamları kullanmaları için iyi bir gereksinim örneğidir. Bir diğer örnek de olası para aklama, içeriden alım satım, harmanlama veya rüşvet faaliyetlerine karşı korunmak için kuruluşunuzdaki aracı-satıcı iletişimlerini gözden geçirmeniz gerekebilir. İletişim uyumluluk ilkeleri, kuruluşunuzun kurumsal iletişimleri taramak ve raporlamak için bir süreç sağlayarak bu gereksinimleri karşılamasına yardımcı olabilir. Finansal kuruluşlara yönelik destek hakkında daha fazla bilgi için bkz. [ABD bankacılık ve sermaye piyasaları için temel uyumluluk ve güvenlik konuları](../solutions/financial-services-secure-collaboration.md).
 
-## <a name="key-feature-areas"></a>Temel özellik alanları
+## <a name="key-feature-areas"></a>Önemli özellik alanları
 
-E-posta iletişim Microsoft 365, mesajlaşma platformlar ile ilgili uyumluluk kaygılarına yardımcı olacak çeşitli önemli özellikler sunar:
+İletişim uyumluluğu, mesajlaşma platformlarınızdaki uyumluluk sorunlarını gidermeye yardımcı olacak çeşitli önemli özellikler sunar:
 
-- Akıllı, özelleştirilebilir şablonlar
+- Akıllı özelleştirilebilir şablonlar
 - Esnek düzeltme iş akışları
-- İşlem edilebilir içgörüler
+- Eyleme dönüştürülebilir içgörüler
 
 ![İletişim uyumluluğu giriş sayfası.](../media/communication-compliance-home.png)
 
-### <a name="intelligent-customizable-templates"></a>Akıllı, özelleştirilebilir şablonlar
+### <a name="intelligent-customizable-templates"></a>Akıllı özelleştirilebilir şablonlar
 
-İletişim uyumluluğunun akıllı özelleştirilebilir şablonları, kuruluş içinde iletişim ihlallerini akıllı bir şekilde algılayan makine öğrenimi uygulamanıza olanak sağlar.
+İletişim uyumluluğundaki akıllı özelleştirilebilir şablonlar, kuruluşunuzdaki iletişim ihlallerini akıllı bir şekilde algılamak için makine öğrenmesi uygulamanızı sağlar.
 
-- **Özelleştirilebilir önceden yapılandırılmış şablonlar**: İlke şablonları en yaygın iletişim risklerine yönelik olarak yardımcı olur. İlk ilke oluşturma ve takip güncelleştirmeleri artık önceden tanımlanmış uygunsuz içerik, hassas bilgiler, ilgi çakışması ve mevzuat uyumluluğu şablonlarıyla daha hızlı bir şekilde tamamlanmalıdır.
-- **Yeni makine** öğrenme desteği: Yerleşik tehdit, tehdit, şiddet, küfür ve görüntü sınıflayıcısı taranmış içeriği [](classifier-get-started-with.md) azaltmaya yardımcı olarak gözden geçirenlerin araştırma ve düzeltme sürecinde zaman kaydetmesini sağlar.
-- **İyileştirilmiş koşul oluşturucusu**: İlke koşullarını yapılandırma, ilke sihirbazında artık tek, tümleşik bir deneyime göre akıcı hale geldi ve ilkelere koşulların nasıl uygulandığı konusunda karışıklığı azalttı.
+- **Özelleştirilebilir önceden yapılandırılmış şablonlar**: İlke şablonları en yaygın iletişim risklerini gidermeye yardımcı olur. İlk ilke oluşturma ve takip güncelleştirmeleri artık önceden tanımlanmış uygunsuz içerik, hassas bilgiler, çıkar çatışması ve mevzuat uyumluluğu şablonlarıyla daha hızlıdır.
+- **Yeni makine öğrenmesi desteği**: Yerleşik ayrımcılık, tehdit, taciz, küfür ve görüntü [sınıflandırıcıları](classifier-get-started-with.md) taranan iletilerde yanlış sınıflandırılmış içeriği azaltmaya yardımcı olur ve inceleme ve düzeltme işlemi sırasında gözden geçirenlere zaman kazandırır.
+- **Geliştirilmiş koşul oluşturucusu**: İlke koşullarının yapılandırılması artık ilke sihirbazında tek bir tümleşik deneyime dönüştürülerek ilkelerin koşulların nasıl uygulandığındaki karışıklığı azaltır.
 
 ### <a name="flexible-remediation-workflows"></a>Esnek düzeltme iş akışları
 
-Yerleşik düzeltme iş akışları, kuruluş ilke eşleşmeleri olan iletileri hızla tanımlamanıza ve bu iletiler üzerinde eylemde çalışmanıza olanak sağlar. Aşağıdaki yeni özellikler araştırma ve düzeltme etkinliklerinin verimliliğini artırır:
+Yerleşik düzeltme iş akışları, kuruluşunuzda ilke eşleşmeleri olan iletileri hızla tanımlamanıza ve üzerinde işlem yapmanıza olanak tanır. Aşağıdaki yeni özellikler araştırma ve düzeltme etkinlikleri için verimliliği artırır:
 
-- **Esnek düzeltme iş** akışı: Yeni düzeltme iş akışı, ilke eşleşmeleri üzerinde hızlı bir işlem (iletileri diğer gözden geçirenlere yükseltme ve ilke eşleşmeleri olan kullanıcılara e-posta bildirimleri gönderme gibi) hızlı bir şekilde işlem alamanıza yardımcı olur.
-- **Konuşma ilkesi eşleştirmesi**: Konuşmaların iletişim ilkeleriyle nasıl ilişkili olduğu konusunda daha fazla görünürlük için konuşmalar, ilke eşleşmeleri ile grup gruplandı. Örneğin, Bekleyen Uyarılar görünümünde eşleşen konuşma ilkesi, Uygunsuz İçerik ilkeniz ile eşleşen Teams bir kanalda yer alan tüm iletileri otomatik olarak gösterir. Konuşmada Uygunsuz İçerik ilkesine uygun olmayan diğer iletiler görüntülenmez.
-- **Anahtar sözcük vurgulama**: Gözden geçirenlerin ilke uyarılarını hızla bulup düzeltmelerine yardımcı olmak için, ileti metni görünümünde terim eşleştirme ilkesi koşulları vurgulanır.
-- **Tam ve yinelenen algılamaya** yakın: Tam olarak eşleşen iletişim uyumluluk ilkelerini taramaya ek olarak, yinelenen algılamaya yakın gruplar inceleme sürecinizi hızlandırmak için metin açısından benzer terimleri ve iletileri bir arada kullanır.
-- **Optik karakter tanıma (OCR) (önizleme)**: E-posta veya sohbet iletilerine eklenen veya eklenen resimlerdeki yazdırılan ve el yazısı metinleri tarayın, Microsoft Teams araştıryın.
-- **Yeni filtreler**: Gönderen, alıcı, tarih, etki alanları ve daha birçok alan için ileti filtreleriyle ilke uyarılarını daha hızlı araştırın ve düzeltme.
-- **Geliştirilmiş ileti görünümleri**: Araştırma ve düzeltme eylemleri, yeni ileti kaynağı ve metin görünümleriyle artık daha hızlı. Düzeltme eylemleri sürerken ileti ekleri tam bağlam sağlamak üzere artık değiştirilebilir.
-- **Kullanıcı geçmişi**: Geçmiş bildirimler ve ilke eşleşmelerine yönelik yükseltmeler gibi tüm kullanıcı iletisi düzeltme etkinliklerinin geçmiş görünümü, gözden geçirenlere düzeltme iş akışı işlemi sırasında daha fazla bağlam sağlar. Kullanıcılar için ilk kez veya yinelenen ilke eşleşmeleri artık arşivlenir ve kolayca değiştirilebilir.
-- **Desen algılanan bildirim**: Birçok taciz ve rahatsız etme eylemi zaman içinde lanır ve kullanıcı tarafından aynı davranışın tekrar tekrar gerçekleştirilmesi gerekir. Uyarı ayrıntılarında görüntülenen yeni bildirim deseni, bu uyarılara ve bu tür davranışlara dikkat çekmeye yardımcı olur.
-- **Çeviri**: Düzeltme iş akışında çeviri desteğini kullanarak sekiz dilde ileti ayrıntılarını hızla araştırabilirsiniz. Diğer dillerdeki iletiler otomatik olarak gözden geçirenin görüntü diline dönüştürülür.
-- **Ek algılama**: Bağlantılı içeriği (Modern ekler) iletilerin ilke sınıflandırıcıları ve koşullarıyla OneDrive ve Microsoft Teams bağlantılarından tarayın, Microsoft Teams araştıryın. Ek içeriği, ayrıntılı inceleme ve eylem için metin dosyasına otomatik olarak ayıklanır.
+- **Esnek düzeltme iş akışı**: Yeni düzeltme iş akışı, iletileri diğer gözden geçirenlere iletme ve ilke eşleşmeleri olan kullanıcılara e-posta bildirimleri gönderme gibi yeni seçenekler de dahil olmak üzere ilke eşleşmeleri üzerinde hızla işlem yapmanıza yardımcı olur.
+- **Konuşma ilkesi eşleştirme**: Konuşmalardaki iletiler, konuşmaların iletişim ilkelerinizle ilişkisi hakkında daha fazla görünürlük sağlamak için ilke eşleşmelerine göre gruplandırılır. Örneğin, *Bekleyen Uyarılar* görünümünde eşleşen konuşma ilkesi, uygunsuz içerik ilkenizle eşleşen tüm iletileri otomatik olarak bir Teams kanalında gösterir. Konuşmadaki Uygunsuz İçerik ilkesiyle eşleşmeyen diğer iletiler görüntülenmez.
+- **Anahtar sözcük vurgulama**: Terim eşleştirme ilkesi koşulları, gözden geçirenlerin ilke uyarılarını hızla bulmasına ve düzeltmesine yardımcı olmak için ileti metni görünümünde vurgulanır.
+- **Tam ve neredeyse yinelenen algılama**: İletişim uyumluluk ilkeleriyle eşleşen tam terimleri taramaya ek olarak, yakın yinelenen algılama grupları gözden geçirme sürecinizi hızlandırmaya yardımcı olmak için kısa süre içinde benzer terimler ve iletiler oluşturur.
+- **Optik karakter tanıma (OCR) (önizleme)**: E-posta veya Microsoft Teams sohbet iletilerine eklenmiş veya eklenmiş görüntülerdeki basılı ve el yazısı metinleri tarayın, algılayın ve araştırın.
+- **Yeni filtreler**: Gönderen, alıcı, tarih, etki alanları ve daha birçok alan için ileti filtreleri ile ilke uyarılarını daha hızlı araştırın ve düzeltin.
+- **geliştirilmiş ileti görünümleri**: Araştırma ve düzeltme eylemleri artık yeni ileti kaynağı ve metin görünümleri ile daha hızlıdır. Düzeltme eylemleri yapılırken tam bağlam sağlamak için artık ileti ekleri görüntülenebilir.
+- **Kullanıcı geçmişi**: İlke eşleşmeleri için geçmiş bildirimler ve yükseltmeler gibi tüm kullanıcı iletisi düzeltme etkinliklerinin geçmiş görünümü artık gözden geçirenlere düzeltme iş akışı işlemi sırasında daha fazla bağlam sağlar. Kullanıcılar için ilke eşleşmelerinin ilk kez veya tekrarlanan örnekleri artık arşivlenir ve kolayca görüntülenebilir.
+- **Desen algılandı bildirimi**: Zaman içinde birçok taciz ve zorbalık eylemi gerçekleşir ve bir kullanıcı tarafından aynı davranışın örneklerinin yinelenmesi gerekir. Uyarı ayrıntılarında görüntülenen yeni desen algılanan bildirim, bu uyarılara ve bu tür davranışlara dikkat etmeye yardımcı olur.
+- **Çeviri**: Düzeltme iş akışındaki çeviri desteğini kullanarak sekiz dilde ileti ayrıntılarını hızla araştırın. Diğer dillerdeki iletiler otomatik olarak gözden geçirenin görüntüleme diline dönüştürülür.
+- **Ek algılama**: OneDrive ve Microsoft Teams iletileri için ilke sınıflandırıcıları ve koşullarıyla eşleşen Microsoft Teams bağlı içeriği (Modern ekler) tarayın, algılayın ve araştırın. Ek içeriği, ayrıntılı inceleme ve eylem için otomatik olarak bir metin dosyasına ayıklanır.
 
-### <a name="actionable-insights"></a>İşlem edilebilir içgörüler
+### <a name="actionable-insights"></a>Eyleme dönüştürülebilir içgörüler
 
-Uyarılar, ilke eşleşmeleri, eylemler ve eğilimler için yeni etkileşimli panolar, kurumda bekleyen ve çözümlenmiş uyarıların durumunu hızla görüntülemenize yardımcı olur.
+Uyarılar, ilke eşleşmeleri, eylemler ve eğilimler için yeni etkileşimli panolar, kuruluşunuzda bekleyen ve çözümlenen uyarıların durumunu hızla görüntülemenize yardımcı olur.
 
-- **Öngörülü akıllı uyarılar**: Acil dikkat gerektiren ilke eşleşmelerine yönelik uyarılar, önem derecesine göre sıralanmış bekleyen öğeler için yeni panolar ve belirlenen gözden geçirenlere gönderilen yeni otomatik e-posta bildirimleridir.
-- **Etkileşimli panolar**: Yeni panolar ilke eşleşmelerini, bekleyen ve çözümlenmiş eylemleri, kullanıcılar ve ilke eğilimlerini görüntüler.
-- **Denetim desteği**: İlke ve gözden geçirme etkinliklerinin tam günlüğü, denetim gözden geçirme isteklerini desteklemeye yardımcı Microsoft 365 uyumluluk merkezi şekilde gözden geçirme günlüğünden kolayca dışarı aktarıldı.
+- **Proaktif akıllı uyarılar**: İlke eşleşmeleri için hemen dikkat gerektiren uyarılar, önem derecesine göre sıralanmış bekleyen öğeler için yeni panolar ve belirlenen gözden geçirenlere gönderilen yeni otomatik e-posta bildirimleri içerir.
+- **Etkileşimli panolar**: Yeni panolar ilke eşleşmelerini, bekleyen ve çözümlenen eylemleri ve kullanıcılara ve ilkeye göre eğilimleri görüntüler.
+- **Denetim desteği: Denetim** gözden geçirme isteklerini desteklemeye yardımcı olmak için ilke ve gözden geçirme etkinliklerinin tam günlüğü Microsoft Purview uyumluluk portalından kolayca dışarı aktarılır.
 
 ## <a name="integration-with-microsoft-365-services"></a>Microsoft 365 hizmetleriyle tümleştirme
 
-Çeşitli iletişim kanallarında ileti tarama ve yakalama, uyumluluk sorunlarını hızla gözden geçirme ve düzeltmeye yardımcı olmak için iletişim uyumluluğu ilkeleri:
+İletişim uyumluluk ilkeleri, uyumluluk sorunlarını hızla gözden geçirmenize ve düzeltmenize yardımcı olmak için çeşitli iletişim kanallarında iletileri tarar ve yakalar:
 
-- **Microsoft Teams**: Ortak ve özel [Microsoft Teams](/MicrosoftTeams/Teams-overview) iletişimleri ve bireysel sohbetler, tek başına bir kanal kaynağı olarak veya diğer grup hizmetleriyle iletişim uyumluluğunu Microsoft 365 destekler. bir iletişim uyumluluğu ilkesinde denetleme yapmak için kullanıcıları ve grupları Microsoft Teams, dağıtım gruplarını veya belirli kullanıcı gruplarını el ile eklemeniz gerekir. Teams özel kanallarda ve grup kanallarında uygunsuz iletileri kendi kendine bildirerek gözden geçirme ve düzeltme için sohbetleri de bildirebilirsiniz.
-- **Exchange Online**: E-posta [kutunuzda Exchange Online](/Exchange/exchange-online) posta Microsoft 365 tüm posta kutuları taramaya uygundur. İletişim uyumluluğu ilkesi koşullarıyla eşleşen e-postalar ve ekler, anında uyumluluk raporlarını izlemek ve almak için kullanılabilir. Exchange Online artık isteğe bağlı bir kaynak kanaldır ve iletişim uyumluluk ilkelerinde artık gerekli değildir.
-- **Yammer**: E-posta'daki özel iletiler [Yammer](/yammer/yammer-landing-page) genel topluluk konuşmaları iletişim uyumluluğu ilkelerde de desteklemektedir. Yammer, isteğe bağlı bir kanaldır ve [iletilerin ve](/yammer/configure-your-yammer-network/overview-native-mode) eklerin taranmalarını desteklemek için yerel modda çalışır.
-- **Skype Kurumsal Online**: İletişim uyumluluk ilkeleri, Skype Kurumsal Online'da sohbet iletişimlerini ve [ilişkili ekleri taramayı destekler](/SkypeForBusiness/skype-for-business-online).
-- **Üçüncü taraf kaynakları**: Üçüncü taraf kaynaklarından gelen, [](archiving-third-party-data.md) kendi iş yeri veya kuruluşta posta kutularına aktarılan veriler için Microsoft 365 tarayabilirsiniz. İletişim uyumluluğu, Instant Bloomberg ve diğerleri de dahil olmak üzere çeşitli popüler platformlara bağlantıları destekler.
+- **Microsoft Teams**: Ortak ve özel [Microsoft Teams](/MicrosoftTeams/Teams-overview) kanalları ve tek tek sohbetler için sohbet iletişimleri, tek başına kanal kaynağı olarak veya diğer Microsoft 365 hizmetleriyle iletişim uyumluluğunda desteklenir. İletişim uyumluluk ilkesinde denetlemek üzere kullanıcıları ve grupları seçtiğinizde tek tek kullanıcıları, dağıtım gruplarını veya belirli Microsoft Teams kanallarını el ile eklemeniz gerekir. Teams kullanıcılar ayrıca gözden geçirme ve düzeltme amacıyla özel ve grup kanallarında ve sohbetlerde uygunsuz iletileri kendi kendilerine bildirebilir.
+- **Exchange Online**: Microsoft 365 kuruluşunuzdaki [Exchange Online](/Exchange/exchange-online) barındırılan tüm posta kutuları tarama için uygundur. İletişim uyumluluk ilkesi koşullarıyla eşleşen e-postalar ve ekler, izleme ve uyumluluk raporlarında anında kullanılabilir. Exchange Online artık isteğe bağlı bir kaynak kanalıdır ve iletişim uyumluluk ilkelerinde artık gerekli değildir.
+- **Yammer**: [Yammer'deki](/yammer/yammer-landing-page) özel iletiler ve genel topluluk konuşmaları, iletişim uyumluluk ilkelerinde desteklenir. Yammer isteğe bağlı bir kanaldır ve iletilerin ve eklerin taranması için [yerel modda](/yammer/configure-your-yammer-network/overview-native-mode) olmalıdır.
+- **Skype Kurumsal Online**: İletişim uyumluluk ilkeleri [, Skype Kurumsal Online'da](/SkypeForBusiness/skype-for-business-online) sohbet iletişimlerini ve ilişkili ekleri taramayı destekler.
+- **Üçüncü taraf kaynaklar**: Microsoft 365 kuruluşunuzdaki posta kutularına aktarılan veriler için [üçüncü taraf kaynaklardan](archiving-third-party-data.md) gelen iletileri tarayabilirsiniz. İletişim uyumluluğu, Instant Bloomberg ve diğerleri dahil olmak üzere çeşitli popüler platformlarla bağlantıları destekler.
 
-İletişim uyumluluğu ilkeleri içinde mesajlaşma kanalı desteği hakkında daha fazla bilgi edinmek için, bkz [. İletişim uyumluluğunu olan kanal sinyallerini algılama](communication-compliance-channels.md).
+İletişim uyumluluk ilkelerindeki mesajlaşma kanalı desteği hakkında daha fazla bilgi edinmek için bkz. [İletişim uyumluluğu ile kanal sinyallerini algılama](communication-compliance-channels.md).
 
-## <a name="workflow"></a>İş Akışı
+## <a name="workflow"></a>Iş akışı
 
-İletişim uyumluluğu, iç ilkelere ve mevzuat uyumluluğu gereksinimlerine uyumlulukla ilişkilendirilmiş yaygın sorunlara karşı size yardımcı olur. Odaklanmış ilke şablonları ve esnek bir iş akışıyla, algılanan uyumluluk sorunlarını hızla çözmek için işlem yapılabilir içgörüleri kullanabilirsiniz.
+İletişim uyumluluğu, iç ilkelere ve mevzuat uyumluluğu gereksinimlerine uymayla ilişkili yaygın sorun noktalarını gidermenize yardımcı olur. Odaklanmış ilke şablonları ve esnek bir iş akışı ile algılanan uyumluluk sorunlarını hızla çözmek için eyleme dönüştürülebilir içgörüler kullanabilirsiniz.
 
-Microsoft 365'ta iletişim uyumluluğuyla ilgili uyumluluk sorunlarını tanımlama ve çözme aşağıdaki iş akışını kullanır:
+İletişim uyumluluğuyla ilgili uyumluluk sorunlarını tanımlama ve çözme aşağıdaki iş akışını kullanır:
 
 ![İletişim uyumluluğu iş akışı.](../media/communication-compliance-workflow.png)
 
 ### <a name="configure"></a>Yapılandırın
 
-Bu iş akışı adımlarında, uyumluluk gereksinimlerinizi tanımlayabilir ve geçerli iletişim uyumluluk ilkelerini yapılandırmış oluruz. İlke şablonları, yeni bir uyumluluk ilkesi yapılandırmanın yanı sıra gereksinimleriniz değiştiklerine göre ilkeleri hızla değiştirmek ve güncelleştirmek için de mükemmel bir yol sağlar. Örneğin, küçük bir grup kullanıcının iletişiminde uygunsuz içerik için bir ilkeyi, organizasyonlu tüm kullanıcılar için bir ilke yapılandırmadan önce hızla test etmek istiyor olabilir.
+Bu iş akışı adımında uyumluluk gereksinimlerinizi belirler ve geçerli iletişim uyumluluk ilkelerini yapılandırabilirsiniz. İlke şablonları, yeni bir uyumluluk ilkesini hızlı bir şekilde yapılandırmakla kalmaz, gereksinimleriniz değiştikçe ilkeleri hızla değiştirmek ve güncelleştirmek için de harika bir yoldur. Örneğin, kuruluşunuzdaki tüm kullanıcılar için bir ilke yapılandırmadan önce, küçük bir kullanıcı grubu için iletişimlerde uygunsuz içerik için bir ilkeyi hızla test etmek isteyebilirsiniz.
 
 >[!IMPORTANT]
->Varsayılan olarak, Genel Yöneticilerin iletişim uyumluluk özelliklerine erişimi olmaz. İletişim uyumluluğu özellikleri için izinleri etkinleştirmek için bkz[. İletişim uyumluluğunun kurum içinde kullanılabilir olarak kullanılabilir hale geldi.](communication-compliance-configure.md#step-1-required-enable-permissions-for-communication-compliance)
+>Varsayılan olarak, Genel Yöneticilerin iletişim uyumluluk özelliklerine erişimi yoktur. İletişim uyumluluk özelliklerine yönelik izinleri etkinleştirmek için bkz. [İletişim uyumluluğunu kuruluşunuzda kullanılabilir hale getirme](communication-compliance-configure.md#step-1-required-enable-permissions-for-communication-compliance).
 
-Aşağıdaki ilke şablonlarından birini Microsoft 365 uyumluluk merkezi:
+Microsoft Purview uyumluluk portalında aşağıdaki ilke şablonları arasından seçim yapabilirsiniz:
 
-- **Uygun olmayan metni izleme**: Kısa sürede, iletilerde uygunsuz, rahatsız edici veya rahatsız edici kabul edilen metinleri algılayan yerleşik sınıflayıcıları kullanan bir ilke oluşturmak için bu şablonu kullanın.
-- **Uygunsuz resimleri** izleme: Bu şablonu, kuruluşta uygunsuz kabul edilen yetişkin ve ralik resimleri içeren içeriği otomatik olarak algılayan yerleşik sınıflayıcıları kullanan bir ilke oluşturmak için kullanın.
-- Hassas **bilgileri izleme**: Bu şablonu kullanarak, tanımlı hassas bilgi türleri veya anahtar sözcükler içeren iletişimleri tarayın ve önemli verilerin erişimi olmaması gereken kişilerle paylaşılmaması için hızla bir ilke oluşturun.
-- **Finansal düzenlemelere uyumluluğu izleme**: Yasal düzenlemelerle ilişkili standart mali şartlara başvurular için iletişimi taramak üzere hızla bir ilke oluşturmak için bu şablonu kullanın.
-- **İlgi çakışması durumunu izleme**: İlgi çakışmalarını önlemeye yardımcı olmak için, iki grup veya iki kullanıcı arasındaki iletişimi izlemek üzere hızla bir ilke oluşturmak için bu şablonu kullanın.
-- **Özel ilke**: Belirli iletişim kanallarını, tek tek algılama koşullarını ve kurumda izlenir ve gözden geçirilen içerik miktarını yapılandırmak için bu şablonu kullanın.
+- **Uygunsuz metinleri izleme**: Uygunsuz, uygunsuz veya rahatsız edici olarak kabul edilebilecek iletilerdeki metinleri otomatik olarak algılamak için yerleşik sınıflandırıcıları kullanan bir ilkeyi hızla oluşturmak için bu şablonu kullanın.
+- **Uygunsuz görüntüleri izleme**: Kuruluşunuzda uygunsuz olarak kabul edilebilecek yetişkinlere yönelik ve müstehcen görüntüler içeren içeriği otomatik olarak algılamak için yerleşik sınıflandırıcıları kullanan bir ilkeyi hızla oluşturmak için bu şablonu kullanın.
+- **Hassas bilgileri izleme**: Bu şablonu kullanarak, önemli verilerin erişimi olmaması gereken kişilerle paylaşılmadığından emin olmak için tanımlı hassas bilgi türleri veya anahtar sözcükler içeren iletişimleri taramaya yönelik bir ilke oluşturun.
+- **Finansal mevzuat uyumluluğunu izleme**: Mevzuat standartlarıyla ilişkili standart finansal terimlere başvurular için iletişimleri taramak üzere hızla bir ilke oluşturmak için bu şablonu kullanın.
+- **İlgi çakışmasını izleme: İlgi çakışmalarını** önlemeye yardımcı olmak için iki grup veya iki kullanıcı arasındaki iletişimi izlemek üzere hızla bir ilke oluşturmak için bu şablonu kullanın.
+- **Özel ilke**: Belirli iletişim kanallarını, bireysel algılama koşullarını ve kuruluşunuzda izlenecek ve gözden geçirecek içerik miktarını yapılandırmak için bu şablonu kullanın.
 - **Kullanıcı tarafından bildirilen iletiler ilkesi**: Bu sistem ilkesi kanal, grup ve özel sohbet iletilerinden kullanıcı tarafından bildirilen iletileri destekler. Teams yönetim merkezinde varsayılan olarak etkindir.
 
 >[!TIP]
->Hassas [bir bilgi türü](communication-compliance-configure.md#recommended-actions-preview) ilkesine ihtiyacınız olup olmadığını veya var olan uygunsuz içerik ilkelerini güncelleştirmeniz gerek olup olmadığını belirlemenize yardımcı olması için önerilen eylemleri kullanın.
+>Hassas bir bilgi türü ilkesine ihtiyacınız olup olmadığını veya mevcut uygunsuz içerik ilkelerini güncelleştirmeniz gerekip gerekmediğini belirlemenize yardımcı olması için [önerilen eylemleri](communication-compliance-configure.md#recommended-actions-preview) kullanın.
 
 ### <a name="investigate"></a>Araştır
 
-Bu adımda, iletişim uyumluluk ilkelerinize uyması olarak algılanan sorunların daha derine inersiniz. Bu adım, aşağıdaki eylemleri içerir Microsoft 365 uyumluluk merkezi:
+Bu adımda, iletişim uyumluluk ilkelerinizle eşleşerek algılanan sorunları daha ayrıntılı bir şekilde inceleyebilirsiniz. Bu adım, Microsoft Purview uyumluluk portalında sağlanan aşağıdaki eylemleri içerir:
 
-- **Uyarılar**: İleti bir ilke koşuluyla eş olduğunda, otomatik olarak bir uyarı oluşturulur. Her uyarı için, durumu, önem derecesini, algılanan saati ve bir durum Advanced eDiscovery durumunu görebilirsiniz. Yeni uyarılar, iletişim uyumluluğu giriş sayfasında ve **Uyarılar** sayfasında görüntülenir ve önem derecesine göre listelenir.
-- **Sorun yönetimi**: Her uyarı için, iletide algılanan sorunu düzeltmek için yeni işlemler gerçekleştirebilirsiniz.
-- **Belge gözden** geçirme: Bir sorun incelenme sırasında, algılanan sorunu düzgün değerlendirmeye yardımcı olması için iletinin çeşitli görünümlerini kullanabilirsiniz. Görünümler konuşma özetini, yalnızca metinleri ve iletişim konuşmanın ayrıntılı görünümlerini içerir.
-- **Kullanıcı etkinlik geçmişini gözden** geçirme: İlke eşleşmeleri için kullanıcı iletisi etkinliklerinin geçmişini ve geçmiş bildirimler ve yükseltmeler gibi düzeltme eylemlerini görüntüleme.
+- **Uyarılar**: İleti bir ilke koşuluyla eşleştiğinde, otomatik olarak bir uyarı oluşturulur. Her uyarı için durumu, önem derecesini, algılanan saati ve bir eBulma (Premium) olayı atanıp atanmadığını ve durumunu görebilirsiniz. İletişim uyumluluğu giriş sayfasında ve **Uyarılar** sayfasında yeni uyarılar görüntülenir ve önem derecesine göre listelenir.
+- **Sorun yönetimi**: Her uyarı için, iletide algılanan sorunu düzeltmeye yardımcı olmak için araştırma eylemleri gerçekleştirebilirsiniz.
+- **Belge gözden geçirme**: Bir sorunun araştırması sırasında, algılanan sorunun düzgün bir şekilde değerlendirilmesine yardımcı olmak için iletinin çeşitli görünümlerini kullanabilirsiniz. Görünümler konuşma özetini, yalnızca metinleri ve iletişim konuşmasının ayrıntılı görünümlerini içerir.
+- **Kullanıcı etkinlik geçmişini gözden geçirme**: İlke eşleşmeleri için kullanıcı iletisi etkinliklerinin geçmişini ve geçmiş bildirimler ve yükseltmeler gibi düzeltme eylemlerini görüntüleyin.
 - **Filtreler**: Gözden geçirmek istediğiniz ileti uyarılarını hızla daraltmak için gönderen, alıcı, tarih ve konu gibi filtreleri kullanın.
 
 ### <a name="remediate"></a>Düzeltin
 
-Sonraki adım, aşağıdaki seçenekleri kullanarak araştırılan iletişim uyumluluk sorunlarını düzeltmektir:
+Sonraki adım, aşağıdaki seçenekleri kullanarak araştırdığınız iletişim uyumluluğu sorunlarını düzeltmektir:
 
-- **Çözümle**: Bir sorunu gözden geçirdikten sonra, uyarıyı çözerek düzeltmeniz de olabilir. Uyarıyı çözme, uyarıyı beklemedeki uyarı kuyruğundan kaldırır ve bu eylem eşleşen ilke için Çözümlendi kuyruğunda *bir girdi* olarak korunur. Uyarılar, uyarıyı yanlış sınıflandırıldı olarak işaretledikten, kullanıcıya uyarı hakkında bir bildirim gönderdikten veya uyarı için yeni bir durum açtıktan sonra otomatik olarak çözülür.
-- **İletiyi** etiketleme: Sorunun çözümü kapsamında, algılanan iletiyi uyumlu, uyumlu olmayan veya kuruma ilişkin ilkeler ve standartlarla ilgili olarak şüpheli olarak etiket alabilirsiniz. Etiketleme, yükseltmeler için mikro filtre ilke uyarılarını veya diğer iç inceleme işlemlerinin bir parçası olarak size yardımcı olabilir.
-- **Kullanıcıya bildirim**: Çoğunlukla, kullanıcılar yanlışlıkla veya yanlışlıkla iletişim uyumluluk ilkesi ihlal etmiş olur. Bildirim özelliğini kullanarak kullanıcıya uyarı bildirimi sağlamak ve sorunu çözmek için kullanabilirsiniz.
-- **Başka bir gözden geçirene yükseltme**: Bazen, bir sorunun ilk gözden geçirenine, olayı çözmede yardımcı olması için diğer gözden geçirenlerin görüşlerine ihtiyacı olur. Çözüm işleminin bir parçası olarak ileti sorunlarını kolayca gözden geçirenlere, kuruluşun diğer alanlarındaki gözden geçirenlere de gönderebilirsiniz.
-- **Yanlış sınıflandırılmamış olarak rapor** edin: Uyumluluk ilkeleriyle eşleşme olarak algılanan iletiler zaman zaman gözden geçirme sürecine kayabilir. Bu tür uyarıları yanlış sınıflandırılmış olarak işaret edebilir, genel sınıflayıcıları iyileştirmeye yardımcı olmak için yanlış sınıflama hakkında Microsoft'a geri bildirim gönderebilirsiniz ve sorunu otomatik olarak çözebilirsiniz.
-- **E-posta Teams mesajı kaldırma)**: Uygunsuz iletiler kanallarda veya kişisel Microsoft Teams grup sohbeti iletisinde görüntülenmesinden kaldırılabilir. Kaldırılan uygunsuz iletiler, ilke ihlali nedeniyle iletinin kaldırıldığına bildirimiyle değiştirilir.
-- **Soruşturma için yükseltme**: En ciddi durumlarda, iletişim uyumluluk bilgilerini kuruluş içinde diğer gözden geçirenlerle paylaşmanız gerekiyor olabilir. İletişim uyumluluğu,  uç uç risk Microsoft 365 yardımcı olmak için diğer uyumluluk özellikleriyle sıkı bir şekilde tümleştirilmiştir. Vakayı soruşturmaya yükseltme, verileri ve vakanın yönetimini aynı zamanda başka bir Advanced eDiscovery aktarmaya Microsoft 365. Advanced eDiscovery, kurum içi ve dış araştırmalarında yanıt veren içerikleri korumak, toplamak, gözden geçirmek, çözümlemek ve dışarı aktarmak için  uç uç iş akışı sağlar. Yasal ekiplere yasal tutma bildirimi iş akışının tamamını yönetmesini sağlar. Bu tür durumlar hakkında daha Advanced eDiscovery fazla bilgi edinmek için bu konuda [daha fazla bilgi Advanced eDiscovery' Microsoft 365](overview-ediscovery-20.md).
+- **Çözüm**: Bir sorunu gözden geçirdikten sonra uyarıyı çözerek düzeltebilirsiniz. Bir uyarıyı çözümlemek uyarıyı bekleyen uyarı kuyruğundan kaldırır ve eylem eşleşen ilke için *Çözümlenmiş kuyruğunda* bir girdi olarak korunur. Uyarılar yanlış sınıflandırılmış olarak işaretlendikten, kullanıcıya uyarı hakkında bildirim gönderdikten veya uyarı için yeni bir servis talebi açıldıktan sonra otomatik olarak çözülür.
+- **İletiyi etiketleme**: Sorunun çözümünün bir parçası olarak, algılanan iletiyi uyumlu, uyumlu olmayan veya kuruluşunuz için ilkeler ve standartlar ile ilgili olduğu kadar sorgulanabilir olarak etiketleyebilirsiniz. Etiketleme, yükseltmeler için veya diğer iç gözden geçirme işlemlerinin bir parçası olarak ilke uyarılarını mikro filtrelemenize yardımcı olabilir.
+- **Kullanıcıya bildirme**: Kullanıcılar genellikle yanlışlıkla veya yanlışlıkla bir iletişim uyumluluk ilkesini ihlal eder. Kullanıcıya bir uyarı bildirimi sağlamak ve sorunu çözmek için bildirim özelliğini kullanabilirsiniz.
+- **Başka bir gözden geçirene yükseltin**: Bazen, bir sorunun ilk gözden geçireninin, olayın çözülmesine yardımcı olması için diğer gözden geçirenlerden giriş yapması gerekir. Çözüm sürecinin bir parçası olarak ileti sorunlarını kuruluşunuzun diğer alanlarındaki gözden geçirenlere kolayca iletebilirsiniz.
+- **Yanlış sınıflandırılmış olarak bildir**: Uyumluluk ilkelerinin eşleşmeleri olarak yanlış algılanan iletiler zaman zaman gözden geçirme işlemine geçecektir. Bu tür uyarıları yanlış sınıflandırılmış olarak işaretleyebilir, genel sınıflandırıcıların geliştirilmesine yardımcı olmak için yanlış sınıflandırma hakkında Microsoft'a geri bildirim gönderebilir ve sorunu otomatik olarak çözebilirsiniz.
+- **Teams (önizleme) içinde iletiyi kaldırma**: Uygunsuz iletilerin Microsoft Teams kanallarda veya kişisel ve grup sohbet iletilerinde görüntülenmesi kaldırılabilir. Kaldırılan uygunsuz iletiler, ilke ihlali için iletinin kaldırıldığını belirten bir bildirimle değiştirilir.
+- **Araştırma için yükseltme**: En ciddi durumlarda, iletişim uyumluluk bilgilerini kuruluşunuzdaki diğer gözden geçirenlerle paylaşmanız gerekebilir. İletişim uyumluluğu, uçtan uca risk çözümünde size yardımcı olmak için diğer Microsoft Purview özellikleriyle sıkı bir şekilde tümleşiktir. Araştırma için bir olayı yükseltme, verileri ve servis talebinin yönetimini Microsoft Purview eKeşif'e (Premium) aktarmanıza olanak tanır. eBulma (Premium), kuruluşunuzun iç ve dış araştırmalarına yanıt veren içeriği korumak, toplamak, gözden geçirmek, analiz etmek ve dışarı aktarmak için uçtan uca bir iş akışı sağlar. Yasal ekiplerin yasal tutma bildirimi iş akışının tamamını yönetmesine olanak tanır. eBulma (Premium) durumları hakkında daha fazla bilgi edinmek için bkz. [Microsoft Purview eKeşif'e Genel Bakış (Premium)](overview-ediscovery-20.md).
 
 ### <a name="monitor"></a>Monitör
 
-İletişim uyumluluk ilkeleri tarafından tanımlanan uyumluluk sorunlarını izlemek ve yönetmek, iş akışı işleminin tamamına yayılan bir süreçtir. Uyarılar oluşturulur, araştırma ve düzeltme eylemleri uygulanırken, var olan ilkelerin gözden geçirmesi ve güncelleştirmeleri gerekli olabilir ve yeni ilkeler de oluşturulmalıdır.
+İletişim uyumluluk ilkeleri tarafından tanımlanan uyumluluk sorunlarının izlenmesi ve yönetilmesi, iş akışı sürecinin tamamına yayılmıştır. Uyarılar oluşturulduktan ve araştırma ve düzeltme eylemleri uygulandıkça, mevcut ilkelerin gözden geçirilmesi ve güncelleştirilmesi ve yeni ilkelerin oluşturulması gerekebilir.
 
-- **İzleme ve rapor**: Uyumluluk sonrası sonrası için iletişim uyumluluk panosu pencere öğelerini, dışarı aktarma günlüklerini ve birleşik denetim günlüklerinde kaydedilen olayları kullanın.
+- **İzleme ve rapor**: Uyumluluk duruşunuzu sürekli değerlendirmek ve iyileştirmek için iletişim uyumluluk panosu pencere öğelerini, dışarı aktarma günlüklerini ve birleşik denetim günlüklerine kaydedilen olayları kullanın.
 
 ## <a name="ready-to-get-started"></a>Başlamaya hazır mısınız?
 
 - Planlama bilgileri için bkz. [İletişim uyumluluğunu planlama](communication-compliance-plan.md).
-- Contoso için örnek olay incelemesini göz atarak[, Microsoft Teams](communication-compliance-case-study.md), Exchange Online ve Yammer'da uygunsuz içeriği izlemek üzere bir iletişim uyumluluk ilkesi nasıl yapılandırıldılarına bakın.
-- Bir kuruma göre iletişim Microsoft 365 yapılandırmak için bkz. Uyumluluk [için iletişim Microsoft 365](communication-compliance-configure.md).
+- [Contoso için örnek olay incelemesine](communication-compliance-case-study.md) göz atın ve Microsoft Teams, Exchange Online ve Yammer iletişimlerindeki uygunsuz içeriği izlemek için iletişim uyumluluk ilkesini nasıl hızlı bir şekilde yapılandırdıklarını görün.
+- Microsoft 365 kuruluşunuz için iletişim uyumluluğunu yapılandırmak için bkz. [İletişim uyumluluğunu yapılandırma](communication-compliance-configure.md).
